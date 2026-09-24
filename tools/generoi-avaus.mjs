@@ -3,7 +3,7 @@
  *
  * Tekstit hyväksyi omistaja 10.8.2026 ("Tee kaikki suosituksiesi
  * mukaan"). RUUDULLA näkyvien tekstien on vastattava näitä sanasta
- * sanaan: INTRO_RUUTU = js/ui.js INTRO_TEXT, LENTO_RUUTU =
+ * sanaan: INTRO_RUUTU = js/ui-tekstit.js INTRO_TEXT, LENTO_RUUTU =
  * js/packs/maailma.js flightFirst[0]. Luenta saa poiketa vain
  * kirjoitusasussa (tagit, tauot), ei sanoissa.
  *
@@ -65,7 +65,7 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
 /*
  * V4 25.8.2026 (omistajan tilaus, etusivu-uudistus): ohjerivi
  * "Valitse kohde kartalta" POIS tekstistä. Sen tilalle tuli
- * KLIKATTAVA VIIMEINEN LAUSE (js/ui.js INTRO_VALINTA, "Aloitan
+ * KLIKATTAVA VIIMEINEN LAUSE (js/ui-tekstit.js INTRO_VALINTA, "Aloitan
  * sieltä, mistä hänkin — Lontoosta."), joka on nappi eikä
  * kerrontaa — eikä sitä lueta ääneen sen paremmin kuin vanhaa
  * ohjettakaan. INTRO_RUUTU päättyy siis nyt täsmälleen siihen,

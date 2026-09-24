@@ -267,10 +267,11 @@ async function siirtovaiheSelvana(sivu, kaupunki, korkeus) {
  * Mitat ruudulta. Helmen halkaisija luetaan PIIRRETYSTÄ geometriasta:
  * levyn paikallinen kärki (1, 0, −1) muunnetaan maailmaan ja
  * projisoidaan kameralla, jolloin saadaan sama luku, jonka silmä näkee.
- * Kohdemerkin ympyrä luetaan svg:n ruutu-CTM:stä.
+ * Kohdemerkin ympyrä luetaan svg:n ruutu-CTM:stä (CSS2D) tai rungon
+ * rasterin säteestä (GL, ks. GL-RUNGON KOHDEMERKIT).
  */
 async function mittaa(sivu) {
-  return sivu.evaluate(() => {
+  return sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     const l = ui.pallolauta;
     const koti = l.kotelo.getBoundingClientRect();
@@ -296,6 +297,32 @@ async function mittaa(sivu) {
         viiva: getComputedStyle(ymp).stroke,
         x: laatikko.left + laatikko.width / 2 - koti.left,
         y: laatikko.top + laatikko.height / 2 - koti.top,
+      });
+    }
+    /*
+     * GL-RUNGON KOHDEMERKIT (22.9.2026 lähtien, sovitin jaaPeli erä A):
+     * DOMissa on vain huomiokohde ja CSS2D-varapolku. Rungon merkki on
+     * rasteroitu (js/pallolauta/nimiorasterit.js haeKohteenOsa) säteellä,
+     * joka on sen avaimessa `kohdemerkki|far|säde|…` CSS-pikseleinä ja
+     * ruutuvakio (skaala 1/dpr) — halkaisija on siis 2 × säde. Katkoviiva
+     * tulee samasta CSS-asusta kuin DOM-merkillä (lueKohteenAsu).
+     */
+    const sov = l.glSovitin?.() ?? null;
+    const rungolla = sov?.rungolla?.() ?? new Set();
+    const { lueKohteenAsu } = await import('/js/pallolauta/nimiorasterit.js');
+    for (const d of sov?.viimeisetPeli?.() ?? []) {
+      if (d.laji !== 'kohde') continue;
+      const t = d.avain ?? ('kohde:' + d.id);
+      if (![...rungolla].some((x) => x.startsWith(t + ':'))) continue;
+      const osa = sov.lahde().haeKohde(d).find((sp) => sp.osa === 'merkki');
+      const m = /^kohdemerkki\|(\d)\|([\d.]+)\|/.exec(osa?.avain ?? '');
+      const q = l.pallo.getScreenCoords(d.lat, d.lng, 0);
+      if (!m || !q) continue;
+      const far = m[1] === '1';
+      const asu = lueKohteenAsu(l.kotelo, document, far);
+      kohteet.push({
+        far, gl: true, halkaisija: 2 * Number(m[2]),
+        katko: (asu.katko ?? []).join(' '), viiva: asu.viiva, x: q.x, y: q.y,
       });
     }
     /*

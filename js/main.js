@@ -8,7 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
-  suoraanKartallePaalla, asetaSuoraanKartalle,
+  suoraanKartallePaalla, asetaSuoraanKartalle, poltetutNostotPaalla, asetaPoltetutNostot,
   PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
@@ -155,7 +155,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2148';
+const APP_VERSION = '2026-09-21.2173';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -702,6 +702,41 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
+
+  /*
+   * KARTTA → KALLISTUS (Fable 23.9.2026, omistaja: "en näe kallistusta"):
+   * pysyvä kamerakallistus tuntuman arviointiin (js/pallolauta/kallistus.js
+   * PYSYVÄ KALLISTUS). Ei oletus. Kallistus asennetaan laudan luonnissa,
+   * joten valinta lataa sivun kuten Syötekoe; peli on tallessa.
+   */
+  const kallistusRivi = document.createElement('button');
+  kallistusRivi.type = 'button';
+  kallistusRivi.className = 'aanikytkin';
+  kallistusRivi.dataset.kytkin = 'kallistus';
+  kallistusRivi.setAttribute('role', 'switch');
+  kallistusRivi.title = 'Kamera katsoo karttaa loivasti viistosta, myös vedossa ja zoomissa (koe)';
+  kallistusRivi.setAttribute('aria-label', 'Kallistus — kamera katsoo karttaa loivasti viistosta (koe)');
+  kallistusRivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M3 17l6-9h9l3 9z"/><path d="M9 8l2 9"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Kallistus</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  // Sama avain kuin js/pallolauta/kallistus.js KALLISTUS_AVAIN (ei tuontia:
+  // pallon moduulit latautuvat laiskasti; tests/kallistus.test.mjs vartioi).
+  const KALLISTUS_AVAIN = 'matkakirja-kallistus';
+  const kallistusPaalla = () => { try { return localStorage.getItem(KALLISTUS_AVAIN) === '1'; } catch { return false; } };
+  const naytaKallistus = () => {
+    const paalla = kallistusPaalla();
+    kallistusRivi.classList.toggle('valittu', paalla);
+    kallistusRivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  kallistusRivi.addEventListener('click', () => {
+    try { localStorage.setItem(KALLISTUS_AVAIN, kallistusPaalla() ? '0' : '1'); } catch { return; }
+    naytaKallistus();
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = 'ladataan…';
+    setTimeout(() => location.reload(), 250);
+  });
+  naytaKallistus();
+  karttaValikko.appendChild(kallistusRivi);
 }
 
 /*
@@ -857,6 +892,35 @@ if (profiiliValikko) {
   suoraan.addEventListener('click', () => { asetaSuoraanKartalle(!suoraanKartallePaalla()); naytaSuoraan(); });
   naytaSuoraan();
   profiiliValikko.appendChild(suoraan);
+
+  /*
+   * POLTETUT NOSTOT (Fable 23.9.2026, koe `poltetutnostot`): kohdemaan
+   * nostojen pisteet laatasta, elävänä vain nimi — omistaja vertaa dc:n
+   * ja tuntuman ennen oletukseksi ottoa. Lataa sivun kuten Syötekoe.
+   */
+  const poltetut = document.createElement('button');
+  poltetut.type = 'button';
+  poltetut.className = 'aanikytkin';
+  poltetut.dataset.kytkin = 'poltetut-nostot';
+  poltetut.setAttribute('role', 'switch');
+  poltetut.title = 'Koe: nostojen pisteet poltetusta laatasta, nimet elävinä (vähemmän piirtokutsuja)';
+  poltetut.setAttribute('aria-label', 'Poltetut nostot — pisteet laatasta, nimet elävinä (koe)');
+  poltetut.innerHTML = `<span class="viiva-ikoni">${svg('<circle cx="8" cy="12" r="2.5"/><path d="M13 12h6"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Poltetut nostot</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const naytaPoltetut = () => {
+    const paalla = poltetutNostotPaalla();
+    poltetut.classList.toggle('valittu', paalla);
+    poltetut.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    poltetut.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  poltetut.addEventListener('click', () => {
+    asetaPoltetutNostot(!poltetutNostotPaalla());
+    naytaPoltetut();
+    koevaihto.muuttui();
+  });
+  naytaPoltetut();
+  profiiliValikko.appendChild(poltetut);
 }
 
 for (const tiedot of AANIKYTKIMET) {

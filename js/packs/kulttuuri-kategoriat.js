@@ -99281,6 +99281,29 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vikebe, Wikimedia Commons (CC0)',
           wiki: 'University of Greenland',
         },
+        {
+          otsikko: 'Kymmenenneksi vähiten jäätä satelliittiajassa',
+          teksti: 'Grönlannin edustalla ei jää sula yksin: koko '
+            + 'Jäämeren kesäjää mitataan joka syksy. Syyskuun 12. '
+            + 'päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia. Se on mittaushistorian '
+            + 'kymmenenneksi vähiten, saman verran kuin vuosina 2008, '
+            + '2010 ja 2025 — silti viimeisten kahdenkymmenen vuoden '
+            + 'minimit ovat koko satelliittiajan kaksikymmentä '
+            + 'pienintä. Tutkija Linette Boisvert kuvaili tilannetta '
+            + 'NASA:lle: jää on "tasaantunut mutta yhä matalalla '
+            + 'verrattuna sarjan alkupäähän".',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677).png',
+          lyhyt: 'NASA:n visualisointi näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion kuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
   ],
@@ -102601,19 +102624,19 @@ export const KULTTUURI_KATEGORIAT = {
        */
       kansikuvat: [
         {
-          tiedosto: 'St. John’s, Newfoundland and Labrador, 2023.jpg',
+          tiedosto: 'St. John\'s, Newfoundland and Labrador, 2023.jpg',
           selite: 'Signal Hillin rinteeltä näkyy koko satama ja sen '
             + 'takana kaupunki, joka jatkuu kukkuloille asti.',
           lahde: 'CyberDetroit, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'City of St. John’s, Newfoundland.jpg',
+          tiedosto: 'City of St. John\'s, Newfoundland.jpg',
           selite: 'Kalastusaluksia laiturissa, ja rinteen päällä '
             + 'erottuvat basilikan kaksi tornia.',
           lahde: 'Sallyledrew, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: '1998-08-01 St. John’s, Blick vom Signal Hill zum Hafen1.jpg',
+          tiedosto: '1998-08-01 St. John\'s, Blick vom Signal Hill zum Hafen1.jpg',
           selite: 'Rannikkovartioston jäänmurtaja kääntyy altaassa, ja '
             + 'takana nousee kaupunki rinnettä ylös.',
           lahde: 'Eduard47, Wikimedia Commons (CC BY-SA 4.0)',
@@ -102626,7 +102649,7 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          tiedosto: 'Aerial view of Signal Hill, St. John’s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
+          tiedosto: 'Aerial view of Signal Hill, St. John\'s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
           selite: 'Satamansuu ilmasta: kaksi kalliota jättää väliinsä '
             + 'kapean portin, ja kukkulan laella erottuu torni.',
           lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
@@ -102638,7 +102661,7 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kenny Louie from Vancouver, Canada, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Basilica of St. John the Baptist, St. John’s, Newfoundland.jpg',
+          tiedosto: 'Basilica of St. John the Baptist, St. John\'s, Newfoundland.jpg',
           selite: 'Basilikan kaksi tornia hallitsevat harjannetta, ja '
             + 'niiden alapuolella kaupunki laskeutuu satamaan.',
           lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
@@ -102738,7 +102761,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nuorempia: kivihiilinoki teki vaaleat maalit '
             + 'mahdottomiksi, ja kirkkaat sävyt tulivat vasta '
             + '1970-luvulla, kun hiilestä luovuttiin.',
-          tiedosto: 'Typical steeply graded street in St. John’s, Nfl (26984982184).jpg',
+          tiedosto: 'Typical steeply graded street in St. John\'s, Nfl (26984982184).jpg',
           selite: 'Jyrkkä asuinkatu, jonka puutalot on maalattu '
             + 'punaiseksi, keltaiseksi ja siniseksi.',
           lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
@@ -102838,7 +102861,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Harbour Symphonyn soittavat sataman laivojen torvet '
                 + 'keskipäivällä.',
               kuva: {
-                tiedosto: 'Regatta Start, St. John’s, Newfoundland.jpg',
+                tiedosto: 'Regatta Start, St. John\'s, Newfoundland.jpg',
                 selite: 'Kuuden hengen kilpaveneet lähtevät liikkeelle '
                   + 'Quidi Vidin järvellä, ja rannalla seisoo väkeä.',
                 lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
@@ -107910,6 +107933,8055 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vuoden 2007 nukke oli Guinnessin mukaan maailman suurin '
             + 'marionetti, 15,21 metriä.',
           wiki: 'Zozobra',
+        },
+      ],
+    },
+  ],
+  kilimandzaro: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kilimanjaro',
+      johdanto: 'Kilimanjaro kohoaa Tansaniassa aivan päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi ja jää. Se on Afrikan korkein vuori ja maailman korkein yksinäinen tulivuori.',
+      nostot: [
+        {
+          otsikko: 'Vuori savannin yllä',
+          teksti: 'Kilimanjaro näkyy kirkkaalla säällä jopa sadan kilometrin päähän, ja sen lumihuippu kohoaa usein pilvikerroksen yläpuolelle niin, että vuori näyttää leijuvan taivaalla. Vuori on 5895 metriä korkea ja nousee ympäröivästä savannista lähes 4900 metriä – enemmän kuin mikään muu yksittäinen tulivuori maailmassa. Akaasiapuiden reunustama tasanko ja lumihuippu samassa maisemassa hämmästyttää yhä matkailijoita, aivan kuten se hämmästytti 1800-luvun eurooppalaisia tutkimusmatkailijoita, jotka pitivät moista näkyä päiväntasaajalla lähes mahdottomana.',
+          tiedosto: 'Kilimanjaro_from_Amboseli.jpg',
+          lyhyt: 'Kilimanjaron lumihuippu kohoaa usein savannin pilvien yläpuolelle.',
+          selite: 'Valokuvassa Kilimanjaron pyöreä, lumipeitteinen huippu kohoaa paksun pilvikerroksen yläpuolelle aamuvalossa, ja etualalla erottuu Amboselin savannin kuivaa maata sekä matalia akaasiapuita.',
+          lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Kolme tulivuorikartiota',
+          teksti: 'Kilimanjaro ei ole yksi vuori vaan kolmen tulivuorikartion muodostama massiivi: korkein ja nuorin on Kibo, jonka huippu kohoaa 5895 metriin ja joka on yhä uinuva – sen kraatterissa purkautuu edelleen rikkikaasuja. Mawenzi on Kibon itäpuolella jyrkkäpiirteinen ja sammunut, ja lännempänä kohoava Shira on kolmesta matalin ja vanhin. Kaikki kolme syntyivät samalla Itä-Afrikan hautavajoaman alueella miljoonien vuosien aikana, ja Kibon viimeisin purkaus ajoittuu noin 150 000–200 000 vuoden taakse.',
+          tiedosto: 'Kibo_and_Mawenzi_Mt._Kilimanjaro.JPG',
+          lyhyt: 'Kilimanjaro koostuu kolmesta tulivuorikartiosta: Kibosta, Mawenzista ja Shirasta.',
+          selite: 'Kuvassa erottuvat illan hämärässä sekä pyöreä, lumihuippuinen Kibo että sen oikealla puolella jyrkkäpiirteinen, hammasmainen Mawenzin huippu; etualalla on puutarhamainen kasvillisuus.',
+          lahde: 'Chris 73, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Rebmannin lumihavainto',
+          teksti: 'Saksalais-sveitsiläinen lähetyssaarnaaja Johannes Rebmann näki Kilimanjaron ensimmäisenä eurooppalaisena vuonna 1848 ja kirjasi päiväkirjaansa marraskuussa, ettei huipulla hohtava valkoinen voinut olla mitään muuta kuin lunta. Väite julkaistiin 1849, mutta Lontoon maantieteellinen seura piti sitä mahdottomana: lumen ei uskottu voivan pysyä päiväntasaajan tuntumassa, ja Rebmannin havainnon arveltiin johtuvan malarian aiheuttamista harhoista. Vasta 1861, kun saksalaiset tutkimusmatkailijat vahvistivat näkemänsä, epäily lopulta hälveni.',
+          tiedosto: 'Johannes_rebmann.gif',
+          lyhyt: 'Rebmann näki Kilimanjaron lumen 1848, mutta Eurooppa ei uskonut häntä.',
+          selite: 'Kuvassa on 1800-luvun litografiaan perustuva muotokuva nuoresta, tummaan takkiin ja solmukkeeseen pukeutuneesta Johannes Rebmannista; kuvatekstissä lukevat hänen syntymä- ja kuolinvuotensa sekä lähtö Itä-Afrikkaan.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+          wiki: 'Johannes Rebmann',
+        },
+        {
+          otsikko: 'Ensimmäinen huipulle',
+          teksti: 'Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.',
+          tiedosto: 'Kibo_Summit,_Mount_Kilimanjaro,_Tanzania_(30819102678).jpg',
+          lyhyt: 'Hans Meyer ja Ludwig Purtscheller saavuttivat Kibon huipun 6.10.1889.',
+          selite: 'Kuvassa Kibon huipun kraatterin karu, ruskea kivireuna kohoaa aavikkomaisena kirkasta taivasta vasten, ja reunoilla näkyy vielä ohuita lumi- ja jääjuovia.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hans Meyer (geographer)',
+        },
+        {
+          otsikko: 'Saksan Itä-Afrikka',
+          teksti: 'Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.',
+          tiedosto: "German_Moshi_Boma_Built_in_1893_on_the_former_site_of_Mangi_Meli's_Boma.jpg",
+          lyhyt: 'Kilimanjaro kuului Saksan Itä-Afrikkaan vuosina 1885–1918.',
+          selite: 'Vanhassa sepiansävyisessä valokuvassa on suuri, valkoseinäinen ja harjakattoinen hallintorakennus muurin ympäröimänä, pihalla pieni katettu kaivorakennelma, ja taustalla erottuu himmeästi Kilimanjaron kaksi huippua.',
+          lahde: 'Halidtz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'German East Africa',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Kilimanjaron luonto',
+      johdanto: 'Muutaman vuorokauden kiipeilyllä Kilimanjarolla kulkee savannin kuumuudesta arktiseen pakkaseen viiden ilmastovyöhykkeen läpi, ja jokaisella vyöhykkeellä elää omanlaisiaan kasveja ja eläimiä.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osa Kilimanjaron jääpeitteestä suli vuosien 1912 ja 2011 välillä?',
+        vaihtoehdot: ['Noin 35 prosenttia', 'Noin 60 prosenttia', 'Lähes 85 prosenttia', 'Yli 95 prosenttia'],
+        oikea: 2,
+        fakta: 'Jääpeitteestä suli lähes 85 prosenttia vuosina 1912–2011, ja tutkijoiden mukaan loputkin jäätiköt voivat kadota vuosisadan puoliväliin mennessä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Viisi ilmastovyöhykettä',
+          teksti: 'Kilimanjaron rinteillä matkustaa muutamassa päivässä läpi viiden ilmastovyöhykkeen, jotka muualla maailmassa vaatisivat matkan päiväntasaajalta navalle. Noin 800–1800 metrin korkeudessa on pensaikkoista savannia, ja 1800–2800 metrissä alkaa sateinen vuoristosademetsä, jossa etelärinteillä sataa jopa 2000–3000 millimetriä vuodessa. Sitä seuraa 2800–4000 metrissä kanervikkoinen nummivyöhyke, sitten karu korkeavuoriston aavikko 4000–5000 metrissä, ja aivan huipulla, yli 5000 metrissä, alkaa lähes elotonna oleva arktinen vyöhyke jäineen.',
+          tiedosto: 'Naremoru_river_in_the_rainforest_near_Mt_Kilimanjaro.JPG',
+          lyhyt: 'Kilimanjarolla on viisi ilmastovyöhykettä savannista arktiseen huippuun.',
+          selite: 'Kuvassa sammaltunutta ja jäkälän peittämää vuoristosademetsää: puron kirkas vesi virtaa kivikkoisessa uomassa, ja puiden oksilta riippuu pitkiä, vaaleanvihreitä jäkälätupsuja.',
+          lahde: 'Chris 73, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Jättiläismäiset ruusukoivut',
+          teksti: 'Kanervikko- ja aavikkovyöhykkeillä kasvaa kasveja, jotka eivät muistuta mitään tavallista pensasta: Dendrosenecio kilimanjari eli jättiruusukoivu kasvattaa paksun, palmumaisen rungon, jonka latvassa on tiivis lehtiruusuke. Laji on sopeutunut vuorokauden äärimmäisiin lämpötilanvaihteluihin, joissa yö voi olla pakkasella ja päivä helteinen; kuolleet lehdet jäävät rungon ympärille suojaamaan sitä kylmältä. Kasvi on endeeminen eli sitä ei tavata missään muualla luonnossa kuin Kilimanjaron ja sitä ympäröivien vuorten korkeilla rinteillä.',
+          tiedosto: 'Dendrosenecio_kilimanjari_in_front_of_Kilimanjaro_(16432052644).jpg',
+          lyhyt: 'Jättiruusukoivu kasvaa vain Kilimanjaron ja sen naapurivuorten korkeilla rinteillä.',
+          selite: 'Kuvassa kasvaa joukko tummanvihreitä, palmumaisia jättiruusukoivuja kivikkoisella rinteellä, ja taustalla kohoaa Kilimanjaron lumihuippuinen Kibo kirkasta taivasta vasten.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dendrosenecio kilimanjari',
+        },
+        {
+          otsikko: 'Jättiloopelia',
+          teksti: 'Toinen Kilimanjarolle ja muutamalle naapurivuorelle ominainen kasvi on jättiloopelia, joka kasvaa 3800–4300 metrin korkeudessa. Sen tiivis, piikikkäiden lehtien muodostama ruusuke pystyy sulkeutumaan yöksi suojaksi pakkaselta, ja rungon sisällä oleva geelimäinen neste toimii eristeenä. Yksittäinen ruusuke elää vuosikymmeniä ennen kuin se tuottaa yhden ainoan, valtavan kukintovarren ja satojatuhansia siemeniä – ja kuolee sen jälkeen. Kasvi on sopeutunut samaan äärimmäiseen vuorokausivaihteluun kuin jättiruusukoivu.',
+          tiedosto: 'Riesenlobelien_1.jpg',
+          lyhyt: 'Jättiloopelian ruusuke kukkii vain kerran elämässään ja kuolee sitten.',
+          selite: 'Kuvassa on lähikuva jättiloopeliasta: sen latvassa on tiivis, käpymäinen silmu, jota ympäröi piikikkäiden, harmaanvihreiden lehtien ruusuke kivisellä rinteellä.',
+          lahde: 'Hochschwab, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lobelia deckenii',
+        },
+        {
+          otsikko: 'Norsut alarinteillä',
+          teksti: 'Kilimanjaron alimmilla, savannimaisilla rinteillä ja niitä ympäröivillä tasangoilla elää suuria nisäkkäitä, kuten afrikannorsuja, päiväntasaajan puhveleita ja monia muita eläinlajeja. Naapurissa sijaitseva Amboselin kansallispuisto Keniän puolella on yksi maailman tunnetuimmista paikoista seurata vapaana eläviä norsulaumoja aivan Kilimanjaron juurella. Korkeammalla vuorella eläimistö vaihtuu: sademetsässä tavataan muun muassa apinoita ja kameleontteja, ja aivan huipun tuntumassa elää enää harvoja hyönteisiä sekä Kilimanjaron oma, endeeminen päästäislaji.',
+          tiedosto: 'African_Bush_Elephants,_Amboseli_National_Park_(32312286377).jpg',
+          lyhyt: 'Amboselin norsulaumat laiduntavat aivan Kilimanjaron juurella.',
+          selite: 'Kuvassa aikuinen norsu kävelee kohti kameraa korvat levällään, ja sen takana on kaksi norsunvasaa sekä toinen aikuinen norsu kellastuneella heinikkoalueella.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'African bush elephant',
+        },
+        {
+          otsikko: 'Sulava jäätikkö',
+          teksti: 'Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.',
+          tiedosto: 'Furtwangler_Glacier_Mount_Kilimanjaro_Tanzania.jpg',
+          lyhyt: 'Lähes 85 prosenttia Kilimanjaron jääpeitteestä suli vuosina 1912–2011.',
+          selite: 'Kuvassa auringonlaskun värjäämä, useiden metrien korkuinen jäätikköseinämä kohoaa lumikentältä; sen edessä seisova ihminen näyttää pieneltä verrattuna jään mittasuhteisiin.',
+          lahde: 'Altezzatravel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+      ],
+    },
+  ],
+  viktorianputoukset: [
+    {
+      id: 'kaupunki',
+      nimi: 'Viktorian putoukset',
+      johdanto:
+        'Isoisän matkapäiväkirjan sivuilla möyryää Zambezi: joki, joka putoaa Sambian ja Zimbabwen rajalla jylisevänä vesiseinänä ja jonka paikalliset tunsivat kauan ennen kuin yksikään eurooppalainen sitä näki.',
+      nostot: [
+        {
+          otsikko: 'Jylisevä savu saa eurooppalaisen nimen',
+          teksti:
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16. marraskuuta 1855 matkatessaan kanootilla Zambezi-jokea kohti Intian valtamerta. Seuraavana päivänä hän kiipesi joen keskellä olevalle saarelle ja katsoi, kuinka vesimassa syöksyi rotkoon valtavana sumupilvenä — hän nimesi näyn kuningatar Viktorian mukaan. Paikalliset lozi- ja tonga-kansat olivat kuitenkin tunteneet putoukset kauan ennen häntä ja kutsuivat niitä nimellä Mosi-oa-Tunya, "jylisevä savu", joka on virallinen nimi yhä Sambian puolella.',
+          tiedosto: 'Victoria Falls, Zimbabwe 05.jpg',
+          lyhyt: 'Zambezi-joki syöksyy putouksena rotkoon, jonka rinteillä kasvaa vihreää sademetsää.',
+          selite:
+            'Kuva näyttää putouksen viistosti sivulta: vesi syöksyy kapeaan rotkoon paksuna sumupilvenä, ja rotkon molemmilla reunoilla kasvaa tiheää vihreää sademetsää kuivan ylängön keskellä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Maailman suurin vesiverho',
+          teksti:
+            'Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.',
+          tiedosto: 'Aerial view of Victoria Falls, August 2018.jpg',
+          lyhyt: 'Ilmakuva Viktorian putouksista, joiden sumu nousee syvästä rotkosta korkealle.',
+          selite:
+            'Ilmakuva ylhäältä näyttää koko putouksen leveän linjan: Zambezi-joki virtaa vasemmalta saarten välistä ja putoaa suorassa kulmassa kapeaan, vihreän kasvillisuuden reunustamaan rotkoon, jonka poikki näkyy pieni silta.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Victoria Falls',
+        },
+        {
+          otsikko: 'Isoisän matkavuosi ja löytäjän viimeinen matka',
+          teksti:
+            'Samana vuonna 1873, kun isoisä matkasi Zambeziä pitkin, kuoli David Livingstone kaukana putouksilta pohjoisessa, Bangweulun suoseudun laidalla nykyisessä Sambiassa. Hän oli etsinyt vuosia Niilin lähteitä, sairastui malariaan ja sisäiseen verenvuotoon eikä enää jaksanut kävellä. Palvelijat Susi ja Chuma löysivät hänet 1. toukokuuta 1873 polvillaan sängyn vierestä, ikään kuin rukoilemassa. He hautasivat Livingstonen sydämen paikalliseen maahan puun juurelle, muumioivat ruumiin ja kantoivat sitä yli tuhannen mailin matkan rannikolle — matka kesti lähes viisi kuukautta.',
+          tiedosto: 'David Livingstone by Thomas Annan.jpg',
+          lyhyt: 'David Livingstonen valokuva vuodelta 1864, yhdeksän vuotta ennen hänen kuolemaansa.',
+          selite:
+            'Muotokuvassa vanhempi, viiksekäs David Livingstone istuu tuolissa kädet sauvan varassa, tumma takki yllään — vakava valokuva otettiin vuonna 1864, yhdeksän vuotta ennen hänen kuolemaansa Afrikassa.',
+          lahde: 'Thomas Annan / Adam Cuerden, Wikimedia Commons (Public domain)',
+          wiki: 'Livingstone Memorial',
+        },
+        {
+          otsikko: 'Patsas joka muistaa löytäjän',
+          teksti:
+            'Zimbabwen puolella putousten rannalla seisoo pronssinen Livingstone-patsas, joka pystytettiin vuonna 1934 muistoksi hänen löytöretkestään. Patsaan jalustaan on kaiverrettu vuosiluvut 1813–1873 sekä sanat Missionary, Explorer, Liberator eli lähetyssaarnaaja, tutkimusmatkailija, vapauttaja. Jälkimmäinen vuosiluku on juuri se, jolloin isoisä kirjoitti omaa matkapäiväkirjaansa toisella puolella maailmaa: samana vuonna kun Livingstone kuoli Afrikan sisämaassa, hänen löytämänsä putoukset olivat jo tulleet tunnetuksi kaukana Euroopassa hänen omien matkakertomustensa ansiosta.',
+          tiedosto: 'Livingstone statue at Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Livingstone-patsas, jonka jalustaan on kaiverrettu vuosiluvut 1813–1873.',
+          selite:
+            'Pronssipatsas esittää Livingstonea seisomassa lippalakki päässä ja käsi lantiolla kivijalustan päällä; jalustaan on kaiverrettu hänen nimensä ja vuosiluvut, joista jälkimmäinen, 1873, on isoisän matkavuosi.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Statue of David Livingstone, Victoria Falls',
+        },
+        {
+          otsikko: 'Silta joka toi radan putousten partaalle',
+          teksti:
+            'Kaivosmiljonääri Cecil Rhodes halusi Kapkaupungista Kairoon kulkevan rautatien niin lähelle putouksia, että matkustajat tuntisivat sumun junan ikkunasta. Hänen toiveensa mukaisesti Zambezin ylittävä rautatiesilta rakennettiin Englannissa osina, kuljetettiin laivalla Afrikkaan ja koottiin paikan päällä suoraan putousten alapuolelle avautuvan rotkon yli. Silta valmistui vuonna 1905 ja oli tuolloin maailman korkein rautatiesilta: kaarisilta kohoaa 128 metriä joen yläpuolelle ja on 198 metriä pitkä. Rhodes ei koskaan nähnyt siltaa valmiina, sillä hän kuoli samana vuonna.',
+          tiedosto: 'Victoria Falls Bridge and Zambezi river.jpg',
+          lyhyt: 'Victoria Falls -silta ylittää rotkon, jonka pohjalla näkyy sateenkaari sumussa.',
+          selite:
+            'Kuvassa teräksinen kaarisilta ylittää syvän, kasvillisuuden reunustaman rotkon; rotkon pohjalla virtaa Zambezi-joki koskena, ja kuvan vasempaan reunaan piirtyy sateenkaari nousevasta sumusta.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Falls Bridge',
+        },
+        {
+          otsikko: 'Uinti putouksen partaalla',
+          teksti:
+            'Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil\'s Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.',
+          tiedosto: "Devil's Pool on Livingstone Island.jpg",
+          lyhyt: 'Uimari lepää Devil\'s Poolin reunalla aivan putouksen partaalla, sateenkaari sumussa.',
+          selite:
+            'Kuvassa mies seisoo vyötäröään myöten vedessä aivan putouksen reunalla; hänen vasemmalla puolellaan avautuu syvä rotko täynnä sumua, ja sumusta kaartuu sateenkaari, kun oikealla vesi kaatuu koskena ohitse.',
+          lahde: 'Rudolph.A.furtado, Wikimedia Commons (CC BY 4.0)',
+          wiki: "Devil's Pool (Victoria Falls)",
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sumun synnyttämä sademetsä',
+      johdanto:
+        'Putouksen alta nouseva vesisumu kastelee vierellään pientä metsäkaistaletta joka ainoa päivä ympäri vuoden, vaikka koko muu seutu on kuivaa savannia — sademetsä, joka elää yksin putouksen omasta hengityksestä.',
+      tehtava: {
+        kysymys:
+          'Kuinka korkealle Viktorian putousten synnyttämä vesisumu voi parhaimmillaan kohota ilmaan?',
+        vaihtoehdot: ['50 metriä', '150 metriä', '400 metriä', '900 metriä'],
+        oikea: 2,
+        fakta:
+          'Sumu voi runsasvetisenä aikana kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sademetsä jota sade ei koskaan jätä',
+          teksti:
+            'Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.',
+          tiedosto: 'Rainforest, Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Aurinko siivilöityy Viktorian putousten sumumetsän tiheän lehvästön läpi.',
+          selite:
+            'Kuva näyttää tiheän, vehreän metsikön: korkeiden puiden alla kasvaa palmuja ja pensaita, ja auringonvalo pilkottaa lehvästön läpi täplinä — juuri tällainen kasvillisuus elää putouksen jatkuvasta sumusta.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Falls National Park',
+        },
+        {
+          otsikko: 'Kuunvalon sateenkaari',
+          teksti:
+            'Kun kuu on täysi tai lähes täysi ja putouksen sumupilvi riittävän tiheä, öisin taivaalle voi ilmestyä moonbow eli kuunkaari: kuunvalon taittumisesta syntyvä sateenkaari, joka näkyy silmälle vaaleana, hopeanhohtoisena kaarena. Viktorian putoukset ovat yksi harvoista paikoista maailmassa, joissa ilmiön voi nähdä säännöllisesti, sillä siihen tarvitaan sekä riittävän voimakas sumupilvi että tarpeeksi pimeä taivas. Parhaat kuukaudet kuunkaarelle ovat huhti–heinäkuu, jolloin Zambezi virtaa runsaimmillaan ja sumua riittää sekä päivisin auringolle että öisin kuulle taittua.',
+          tiedosto: 'Moonbow at Victoria Falls.jpg',
+          lyhyt: 'Kuunvalon synnyttämä vaalea kaari nousee putouksen yön sumupilvestä.',
+          selite:
+            'Yökuvassa tähtitaivasta vasten kaartuu vaaleanhohtoinen sateenkaari nousevasta sumupilvestä; sumu erottuu vaaleana pilvenä tummaa taivasta vasten, ja etualalla virtaa joki.',
+          lahde: 'Scolopendra33, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Moonbow',
+        },
+        {
+          otsikko: 'Veitsenterää pitkin sumun sisään',
+          teksti:
+            'Zimbabwen puolen sademetsäpolulta erkanee kapea jalankulkusilta, jota kutsutaan Veitsenterä-sillaksi (Knife-Edge Bridge): se vie rotkon poikki näköalakalliolle aivan putouksen toisen haaran viereen. Sillalta putousta katsova jää lähes aina läpimäräksi, sillä sumu leviää sieltä joka suuntaan kuin jatkuva sade, ja moni kävijä pukee sadeviitan ennen sillalle astumista. Vastapäätä avautuva näkymä Itäiseen putoukseen ja alla kuohuvaan rotkoon on yksi koko kansallispuiston näyttävimmistä, ja sumun määrä kertoo parhaiten, kuinka paljon vettä joessa kulloinkin virtaa.',
+          tiedosto: 'Knife edge bridge over a chasm at the Victoria Falls.jpg',
+          lyhyt: 'Kävelijät ylittävät sumuisen Veitsenterä-sillan lähellä putouksen reunaa.',
+          selite:
+            'Kuvassa sadeviittoihin pukeutuneet kävelijät ylittävät kapean, kaiteellisen jalankulkusillan; sillan oikealla puolella nousee paksu valkoinen sumupilvi, joka peittää näkymän putoukseen lähes kokonaan.',
+          lahde: 'Hans Hillewaert, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Zambezi',
+        },
+        {
+          otsikko: '"Jylisevä savu" ennen Livingstonea',
+          teksti:
+            'Kauan ennen kuin yksikään eurooppalainen oli kuullutkaan putouksista, Batoka-ylängön tonga- ja lozi-kansat tunsivat ne nimellä Mosi-oa-Tunya, "jylisevä savu", ja pitivät paikkaa pyhänä: lähistöllä oli uhripaikkoja, ja kertomusten mukaan joessa asui voimakas jokihenki, jota piti lepytellä ennen ylitystä. Nimi elää yhä virallisena Sambian puolella, jossa myös kansallispuisto on nimetty Mosi-oa-Tunyaksi, kun taas Zimbabwen puolella käytetään edelleen Livingstonen antamaa nimeä. Kahden nimen rinnakkaiselo muistuttaa, että paikka oli osa paikallista maailmaa kauan ennen kuin siitä tuli osa eurooppalaisten karttoja.',
+          tiedosto: 'Victoria falls, zambia.jpg',
+          lyhyt: 'Rotkon partaalla kasvaa vehreää sademetsää putouksen sumun ansiosta.',
+          selite:
+            'Kuva Sambian puolelta näyttää putouksen leveän vesiverhon syöksymässä rotkoon; etualalla ja rotkon reunoilla kasvaa vehreää puustoa, jonka juuri putouksen oma sumu pitää elossa ympäri vuoden.',
+          lahde: 'Someone35, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lozi people',
+        },
+      ],
+    },
+  ],
+  sitka: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sitka',
+      johdanto:
+        'Isoisän saapuessa 1873 Sitka oli yhä sekakielinen rajakaupunki: Venäjän Amerikan entinen pääkaupunki Novoarhangelsk oli myyty Yhdysvalloille vain kuusi vuotta aiemmin, ja kupolikirkot muistuttivat vielä kaikkialla tsaarin ajasta.',
+      nostot: [
+        {
+          otsikko: 'Lippu joka vaihtui Linnamäellä',
+          teksti:
+            'Lokakuun 18. päivänä 1867 Sitkan Linnamäellä laskettiin Venäjän lippu ja nostettiin Yhdysvaltain tähtilippu: Venäjä myi koko Alaskan, noin 375 miljoonaa eekkeriä maata, Yhdysvalloille 7,2 miljoonalla dollarilla eli suunnilleen kahdella sentillä eekkeriltä. Kauppaa ajoi sitkeästi Yhdysvaltain ulkoministeri William Seward, joka piti aluetta tärkeänä maan laajenemiselle, vaikka moni aikalainen piti hankintaa hyödyttömänä jäätikkömaana. Sitkasta tuli luovutuksen jälkeen Alaskan departementin hallintokaupunki, ja isoisä saapui sinne vain kuusi vuotta myöhemmin, jolloin venäläinen aika näkyi kaduilla yhä kaikkialla.',
+          tiedosto: 'Colina del Castillo de Baranof..jpg',
+          lyhyt: 'Vanha tykki ja lipputangot Sitkan Linnamäellä, jossa Alaska vaihtoi omistajaa 1867.',
+          selite:
+            'Kuvassa on Linnamäen (Castle Hill) näköalatasanne: kivimuurin sisäpuolella seisoo vanha tykki pyörillään, kolme tyhjää lipputankoa ja penkkejä, ja taustalla avautuu näkymä Sitkan salmelle ja vuorille — juuri tällä paikalla Venäjän lippu laskettiin ja Yhdysvaltain lippu nostettiin lokakuussa 1867.',
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alaska Purchase',
+        },
+        {
+          otsikko: 'Kupolit jotka jäivät katoille',
+          teksti:
+            'Pappi Innokenti Veniaminov suunnitteli Pyhän Mikaelin katedraalin venäläiseen kirkolliseen tyyliin, ja se valmistui 20.11.1848 hirsistä ja lautavuorauksesta — Uuden maailman ensimmäinen ortodoksinen katedraali, jonka kellotapulissa ja sipulikupolissa kimalsivat kultaiset ristit. Osa ikoneista oli maalattu jo 1600-luvun puolivälissä, ja kaksi niistä oli hovimaalari Vladimir Borovikovskin käsialaa. Tammikuun 2. päivän vastaisena yönä 1966 tulipalo tuhosi koko alkuperäisen rakennuksen kelloineen ja venäjän-, tlingitin- ja aleutinkielisine kirjastoineen; nykyinen katedraali rakennettiin vanhoja mittoja noudattaen ja vihittiin uudelleen käyttöön 1978.',
+          tiedosto: 'St Michaels Cathedral - Sitka - front.JPG',
+          lyhyt: 'Pyhän Mikaelin katedraalin harmaa tapuli ja vihreä sipulikupoli kohoavat pilvitaivasta vasten.',
+          selite:
+            'Lähikuva näyttää katedraalin harmaaksi maalatun puutapulin kellotorneineen ja kellotauluineen sekä sen edessä kohoavan vihreän sipulikupolin, jonka huipulla kimaltaa kultainen ortodoksiristi.',
+          lahde: 'Barek, Wikimedia Commons (Public domain)',
+          wiki: "St. Michael's Cathedral (Sitka, Alaska)",
+        },
+        {
+          otsikko: 'Piispantalo hirsistä',
+          teksti:
+            'Suomalaiset työmiehet pystyttivät Sitkaan vuosina 1841–1843 kaksikerroksisen hirsirakennuksen Venäjän-Amerikan-yhtiön palveluksessa: siitä tuli Alaskan ensimmäisen piispan, Innokenti Veniaminovin, koti ja hallintokeskus. Rakennuksessa asui myöhemmin myös pappeja, ja se toimi välillä jopa majatalona, kunnes Sitkan hiippakunta siirrettiin San Franciscoon 1872. Piispantalo on yksi harvoista Venäjän-Amerikan ajalta säilyneistä rakennuksista koko Alaskassa, ja se rauhoitettiin kansallismuistomerkiksi 1962. Nykyisin se on osa Sitkan kansallista historiallista puistoa ja avoinna yleisölle opastetuilla kierroksilla museona.',
+          tiedosto: 'Casa del Obispo Ruso..jpg',
+          lyhyt: 'Keltainen Piispantalo ja opastaulu muistuttavat Sitkan venäläisestä hallintokeskuksesta.',
+          selite:
+            "Kuvassa näkyy puistonvartijan opastaulu 'Russian Bishop's House' aidan takana, ja sen takana kohoaa keltainen, punakattoinen kaksikerroksinen hirsirakennus sekä sen vieressä pienempi valkoinen rakennus, entinen venäläinen orpokoti.",
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Russian Bishop's House",
+        },
+        {
+          otsikko: 'Tulivuori joka vartioi salmea',
+          teksti:
+            'Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.',
+          tiedosto:
+            "Sitka Sound, Mt. Edgecumbe and John O'Connell Bridge as seen from the park. (ce381fa9-3f33-4d74-be3b-0d4391fa3b6d).JPG",
+          lyhyt: 'Kalastusveneitä Sitkan salmella, taustalla sammuneen Mount Edgecumben tulivuoren kartio.',
+          selite:
+            'Kuvassa kaksi kalastusalusta kulkee tyynellä salmella kohti rantakylää, ja taustalla kohoaa Mount Edgecumben symmetrinen, lumitäpläinen tulivuorenhuippu kirkkaan sinistä taivasta vasten.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Sitka, Alaska',
+        },
+        {
+          otsikko: 'Pääkaupungista sivuraiteelle',
+          teksti:
+            'Alaskan oston jälkeen Sitkasta tuli ensin Alaskan departementin ja vuodesta 1884 alkaen Alaskan piirikunnan hallintokaupunki — asema, jota se piti aina vuoteen 1906 saakka. Silloin hallintokaupungin arvo siirrettiin pohjoisemmas Juneauhun, joka oli kasvanut nopeasti Klondiken kultaryntäyksen ansiosta, kun taas Sitkan taloudellinen merkitys oli hiipunut. Venäläinen katedraali jäi silti kaupungin sydämeksi ja maamerkiksi, joka näkyy yhä metsäisten vuorten ja sumun keskeltä kauas rantaan asti, vaikka valta oli jo aikoja sitten siirtynyt muualle.',
+          tiedosto: "Sitka, AK - St. Michael's Cathedral from Castle Hill 01.jpg",
+          lyhyt: 'Katedraalin torni pilkottaa puiden ja sumuisten vuorten keskeltä kaupungin ylle.',
+          selite:
+            'Kuva on otettu etäältä puiden lehvästön läpi: katedraalin vihreä huippu ja sipulikupoli kohoavat kattojen yläpuolelle, ja taustalla sumu verhoaa havumetsäistä vuorenrinnettä.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sitka, Alaska',
+        },
+      ],
+    },
+    {
+      id: 'tlingit',
+      nimi: 'Tlingit ja Sitkan taistelu',
+      johdanto:
+        'Kuusi vuotta ennen isoisän matkaa Sitka oli yhä sotanäyttämön muisto: paikan Tlingit-kansa oli taistellut alueestaan venäläisiä vastaan vuonna 1804, ja sen suvut kertoivat historiaansa yhä totemipylväiden kuvakielellä.',
+      tehtava: {
+        kysymys: 'Minä vuonna presidentti William H. Taft rauhoitti Sitkan taistelupaikan kansallismonumentiksi?',
+        vaihtoehdot: ['1867', '1892', '1910', '1943'],
+        oikea: 2,
+        fakta:
+          'Presidentti Taft rauhoitti alueen Sitkan kansallismonumentiksi 23. maaliskuuta 1910 suojellakseen sekä taistelupaikkaa että totemipylväskokoelmaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Linnoitus jota ei voitu murtaa hyökkäyksellä',
+          teksti:
+            "Kesäkuussa 1802 Kiksʼádi-suvun soturit tuhosivat Sitkaan pystytetyn venäläisen kauppa-aseman ja tappoivat suurimman osan sen asukkaista. Kaksi vuotta myöhemmin, 1.–4. lokakuuta 1804, venäläisten kuvernööri Aleksandr Baranov palasi laivasto-osaston kanssa takaisin ja piiritti Kiksʼádin uuden linnoituksen, Shísʼgi Nooŵ'n, jonka noin 1 000 kuusenrungon paalumuuri suojasi 750–800 soturia päällikkö Katlianin johdolla. Venäläisten alkuhyökkäys torjuttiin ja Baranov haavoittui vakavasti, mutta laivan tykkitulen murrettua puolustuksen Kiksʼádi-suku vetäytyi öisin metsään säilyttääkseen kansansa hengissä. Katlianin soturikypärä on säilynyt näihin päiviin asti.",
+          tiedosto: 'Raven helmet worn by Katlian in conflict of 1804.jpg',
+          lyhyt: 'Katlianin päällikkökypärä muistuttaa Sitkan taistelusta vuonna 1804.',
+          selite:
+            'Lähikuva museossa esillä olevasta tummasta, kiiltävästä puisesta soturikypärästä: se on veistetty linnun pään muotoiseksi terävine nokkineen, ja sen reunoja koristaa punaruskea turkis.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+          wiki: 'Battle of Sitka',
+        },
+        {
+          otsikko: 'Puisto joka syntyi taistelukentälle',
+          teksti:
+            'Venäläisten voiton jälkeen Sitkasta tuli heidän uusi linnoituksensa Linnamäelle, mutta paikka jäi elämään myös Tlingit-suvun historiassa taistelupaikkana. Presidentti William H. Taft rauhoitti alueen Sitkan kansallismonumentiksi 23. maaliskuuta 1910 nimenomaan suojellakseen sekä vuoden 1804 linnoituksen paikkaa että sinne koottua totemipylväskokoelmaa — siitä kasvoi myöhemmin nykyinen Sitkan kansallinen historiallinen puisto. Puisto kattaa noin 45 hehtaaria rannikkometsää, jonka läpi kulkee kaksi kilometriä polkuja Itäisen kanavan rantaviivaa myötäillen aina taistelupaikalle asti.',
+          tiedosto: 'Centennial Pole as seen from the beach (480f12eb-984a-4db6-9617-4cc04abe2352).JPG',
+          lyhyt: 'Presidentti Taft rauhoitti taistelupaikan puistoksi vuonna 1910.',
+          selite:
+            'Kuvassa värikäs, tuoreelta näyttävä totemipylväs seisoo sorarannalla tumman kuusimetsän reunassa iltavalossa — tällaisia pylväitä puisto on perustamisestaan asti suojellut yhdessä taistelupaikan kanssa.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Sitka National Historical Park',
+        },
+        {
+          otsikko: 'Pylväät jotka kertovat suvusta',
+          teksti:
+            'Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.',
+          tiedosto: 'Native Alaskan Totem Pole.JPG',
+          lyhyt: 'Värikkäästi maalattu totemipylväs kertoo veistoksin suvun tarinaa.',
+          selite:
+            'Kuvassa on korkea, kirkkain värein — turkoosilla, mustalla ja punaisella — maalattu totemipylväs metsäpolun varressa; siihen on veistetty päällekkäin useita eläin- ja ihmishahmoja.',
+          lahde: 'Lordkinbote, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Tlingit',
+        },
+        {
+          otsikko: 'Kielen ja väen paluu',
+          teksti:
+            'Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.',
+          tiedosto: 'Wolf Pole (72f2e9ca-b680-4942-8228-563fb8b81ea5).jpg',
+          lyhyt: 'Vanha, säänkuluttama totemipylväs metsäpolun varressa Sitkan puistossa.',
+          selite:
+            'Kuvassa harmaaksi kuluneen puun sävyinen, osin maalinsa menettänyt totemipylväs seisoo soratien varrella vehreän havumetsän keskellä; pylvään huipulla on hattupäinen ihmishahmo.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Tlingit',
+        },
+      ],
+    },
+  ],
+  bermuda: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bermuda',
+      johdanto:
+        'Isoisän matkavuonna 1873 Bermuda oli brittiläinen siirtomaa, jonka vaaralliset koralliriutat olivat tehneet siitä merenkulkijoiden pelkäämät Paholaisten saaret ja jonka talous eli purjelaivoista ja sipulikaupasta.',
+      nostot: [
+        {
+          otsikko: 'Haaksirikko joka synnytti siirtokunnan',
+          teksti:
+            'Heinäkuussa 1609 brittiläinen laivue matkasi kohti Virginian siirtokuntaa, kun myrsky erotti lippulaiva Sea Venturen muista ja ajoi sen karille Bermudan riuttoihin. Kaikki 150 matkustajaa ja miehistön jäsentä selvisivät hengissä rannalle, ja amiraali George Somers päätti jäädä saarille rakentamaan kaksi uutta laivaa hylyn osista. Vasta toukokuussa 1610 selviytyjät purjehtivat lopulta Virginiaan, mutta osa jäi pysyvästi Bermudalle: näin syntyi tahattomasti Britannian ensimmäinen pysyvä siirtokunta saarilla, kolme vuotta ennen kuin yhtään virallista siirtolaista oli lähetetty paikalle.',
+          tiedosto: 'Somers runs his ship on shore of Bermuda, 1609.jpg',
+          lyhyt: 'Vanha kaiverrus kuvaa lippulaiva Sea Venturen ajautumista myrskyssä karille Bermudalla 1609.',
+          selite:
+            'Kaiverrus näyttää suuren purjelaivan kallistuneena jättiaalloissa lähellä jyrkkiä rantakallioita, kun pieni soutuvene miehistöineen yrittää päästä turvaan – kohtaus muistuttaa Sea Venturen haaksirikosta Bermudan riutoilla heinäkuussa 1609.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Sea Venture',
+        },
+        {
+          otsikko: 'Paholaisten saaret',
+          teksti:
+            'Bermudaa ympäröivät koralliriutat upottivat vuosisatojen aikana satoja purjelaivoja, ja merenkulkijat alkoivat kutsua saaria pelokkaasti Paholaisten saariksi. Öisin riutoilta kuului kummallisia ääniä, joiden uskottiin todistavan pahojen henkien läsnäolosta – todellisuudessa äänet syntyivät merilinnuista ja saarille tuoduista villisioista. Vaara oli silti aito: matalat riutat ulottuvat kilometrien päähän rannasta ja ovat yhä nykyaikaisillekin aluksille uhka. Vuonna 1846 kukkulalle valmistui Gibbs Hillin majakka opastamaan laivoja turvallisesti riuttojen ohi; sen valo näkyy parhaimmillaan yli 40 meripeninkulman päähän.',
+          tiedosto: 'Gibbs Hill Lighthouse.jpg',
+          lyhyt: 'Gibbs Hillin majakka kohoaa valkoisena kukkulalla lähellä majakanvartijan taloa.',
+          selite:
+            'Valokuvassa näkyy korkea, valkoiseksi maalattu valurautainen majakkatorni ja sen vieressä vihreäluukkuinen majakanvartijan talo sekä kiviportaat rinteessä – majakka rakennettiin 1846 varoittamaan laivoja Bermudan vaarallisista riutoista.',
+          lahde: 'dbking, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gibbs Hill Lighthouse',
+        },
+        {
+          otsikko: 'Vanhin brittiläinen kaupunki Uudessa maailmassa',
+          teksti:
+            "Sea Venturen selviytyjien perustama St. George's sai virallisen asemansa 1612, kun Lontoon Virginia-yhtiö lähetti saarille kuusikymmentä uutta siirtolaista. Kaupungista tuli Bermudan pääkaupunki ja tärkein satama aina vuoteen 1815 asti, ja se tunnetaan yhä vanhimpana yhtäjaksoisesti asuttuna brittiläisenä kaupunkina koko Uudessa maailmassa. Kapeat kujat ja vanhat kivitalot ovat säilyneet niin hyvin, että Unesco otti St. Georgen ja sitä ympäröivät linnoitukset maailmanperintöluetteloonsa vuonna 2000. Kaupungin keskellä seisoo yhä Pyhän Pietarin kirkko, jota pidetään vanhimpana yhä käytössä olevana anglikaanisena kirkkona läntisellä pallonpuoliskolla.",
+          tiedosto: "St. Peter's Church, Bermuda, Front.jpg",
+          lyhyt: 'Pyhän Pietarin kirkko St. Georgessa on vanhimpia yhä käytössä olevia kirkkoja lännessä.',
+          selite:
+            'Valokuva näyttää vaaleaksi rapatun kirkon päädyn pyöreine ikkunoineen ja vihreine luukkuineen, kellotornin sekä edustalla liehuvan Pyhän Yrjön ristilipun – Pyhän Pietarin kirkko on ollut käytössä 1600-luvulta lähtien St. Georgen kaupungissa.',
+          lahde: 'JoeyBagODonuts, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "St. George's, Bermuda",
+        },
+        {
+          otsikko: 'Setripuiset purjehtijat',
+          teksti:
+            'Kun siirtomaayhtiön monopoli purkautui 1684, bermudalaiset kääntyivät maanviljelystä laivanrakennukseen ja alkoivat hyödyntää saarten omaa setripuuta. Kevyt mutta kestävä setri sopi nopeisiin, yksimastoisiin aluksiin, joita alettiin kutsua Bermudan sluupeiksi: parhaimmillaan ne kulkivat viiden solmun nopeutta ja olivat ylivoimaisia luovimaan vastatuuleen. Kolmenkymmenen tonnin aluksen pystyi rakentamaan vain muutamassa kuukaudessa, ja saarelaiset omistivat pian tuhansia tonneja laivastoa. Osa aluksista purjehti kaapparikirjeen turvin ryöstelemässä vihollismaiden kauppalaivoja, mikä toi saarille huomattavaa vaurautta 1700- ja 1800-luvuilla.',
+          tiedosto: 'The Spirit of Bermuda of the Bermuda Sloop Foundation.jpeg',
+          lyhyt: 'Nykyaikainen kolmimastoinen Spirit of Bermuda ankkurissa Hamiltonin edustalla.',
+          selite:
+            'Valokuvassa kolmimastoinen puuvenhe on ankkurissa illanhämärässä Hamiltonin edustalla, taustalla kaupungin rakennuksia ja mäkiä – alus on 2000-luvulla rakennettu koulutuspurjehtija, joka noudattaa perinteistä Bermudan sluupimallia.',
+          lahde: 'Seán Pòl Ó Creachmhaoil, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda sloop',
+        },
+        {
+          otsikko: 'Sipulisaari',
+          teksti:
+            '1800-luvun puolivälistä lähtien bermudalaiset viljelivät makeaa, nopeasti kypsyvää sipulilajiketta, jonka he ehtivät New Yorkin markkinoille ennen kilpailijoitaan. Kauppa kasvoi vuosikymmen vuosikymmeneltä niin suureksi, että amerikkalaiset alkoivat kutsua saarta Sipulilaikuksi ja sen asukkaita Sipuleiksi – lempinimi, joka on elänyt tähän päivään asti. Isoisän matkavuoden 1873 tienoilla vientiä lastattiin viikoittain kymmeniätuhansia laatikoita, ja kauppa huipentui 1899, jolloin saarilta lähti lähes 450 000 laatikollista sipulia. Myöhemmin yhdysvaltalaiset tulliesteet ja Texasin oma "Bermuda-sipuli" tekivät lopun vientimenestyksestä.',
+          tiedosto: 'N.E. Lusher - Packing Onions, Bermuda 3339541392.jpg',
+          lyhyt: 'Työntekijät pakkaavat sipuleita puulaatikoihin setripuiden varjossa Bermudalla.',
+          selite:
+            'Vanha valokuva näyttää joukon miehiä, naisia ja lapsia istumassa ja työskentelemässä setripuiden katveessa, ympärillään täysiä sipulilaatikoita ja kasoja irtosipuleita – tällaista sipulinlajittelua ja -pakkaamista tehtiin Bermudalla vientikaupan kukoistusaikana.',
+          lahde: 'Nicholas Ethelbert Lusher, Wikimedia Commons (Public domain)',
+          wiki: 'Bermuda onion',
+        },
+        {
+          otsikko: 'Vaaleanpunaiset hiekkarannat',
+          teksti:
+            'Bermudan etelärannikon hiekka näyttää lähietäisyydeltä vaaleanpunertavalta, sillä joukossa on miljoonia mikroskooppisen pieniä punertavia kuoria, jotka ovat peräisin Homotrema rubrum -nimisestä yksisoluisesta eliöstä. Kun aallot ja aika murskaavat näitä kuoria valkoisen korallihiekan ja simpukankuorten kanssa, syntyy hienojakoinen hiekka, jonka sävy vaihtelee vaaleasta vaaleanpunaisesta lähes valkoiseen valaistuksesta riippuen. Suosituimmat rannat sijaitsevat saaren eteläpuolella, missä koralliriutta suojaa uimareita Atlantin isoilta aalloilta. Isoisän aikana rannat olivat vielä lähes autioita – matkailu löysi Bermudan hiekkarannat vasta 1900-luvulla.',
+          tiedosto: 'Elbow Beach, Bermuda - view looking east.jpg',
+          lyhyt: 'Jalanjäljet kulkevat vaaleassa hiekassa kohti turkoosia merta Bermudalla.',
+          selite:
+            'Valokuva näyttää autiotun, hienojakoisen hiekkarannan, jonka poikki kulkee yksinäinen jalanjälkien jono kohti turkoosina hohtavaa merta – kauempaa katsottuna hiekan vaaleanpunertava sävy erottuu selvimmin.',
+          lahde: 'LeeG~commonswiki, Wikimedia Commons (Public domain)',
+          wiki: 'Elbow Beach, Bermuda',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Cahow, riutat ja luolat',
+      johdanto:
+        'Bermudan luonto kätkee mullistavan pelastustarinan, maailman pohjoisimmat koralliriutat ja vuosituhansien aikana muotoutuneet kalkkikiviluolat – kaiken tämän saman pienen saariryhmän sisällä.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta pesivää cahow-paria löytyi tammikuussa 1951, kun lintu löydettiin uudelleen 300 vuoden jälkeen?',
+        vaihtoehdot: ['3', '18', '47', '132'],
+        oikea: 1,
+        fakta:
+          'Tutkijat löysivät tammikuussa 1951 täsmälleen 18 pesivää cahow-paria Castle Harbourin pikkusaarilta – lintu jonka luultiin kuolleen sukupuuttoon jo 1620-luvulla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lintu joka katosi',
+          teksti:
+            "1500-luvulla espanjalaiset merimiehet pyydystivät Bermudan pesimäsaarilta jopa 4000 cahow-lintua yhtenä yönä ruoaksi, ja englantilaisten asuttua saaret 1609 mukana tulleet siat ja rotat tuhosivat lintujen maakoloihin tehdyt pesät. Vuoteen 1620 mennessä cahow'ta pidettiin jo sukupuuttoon kuolleena, eikä yhtään elävää yksilöä nähty yli kolmeen vuosisataan. Tammikuun 28. päivänä 1951 tutkijat Robert Cushman Murphy, Louis Mowbray ja viisitoistavuotias David Wingate löysivät Castle Harbourin pikkusaarilta kuitenkin 18 pesivää paria – yksi luonnonhistorian kuuluisimmista \"ylösnousemuksista\". Wingatesta tuli myöhemmin lintulajin pelastustyön elämäntehtävä.",
+          tiedosto: 'Bermuda Petrel From The Crossley ID Guide Eastern Birds.jpg',
+          lyhyt: 'Neljä eri höyrylintulajia, niiden joukossa cahow, liitää meren yllä.',
+          selite:
+            "Kuvassa liitää useita ulkonäöltään toisiaan muistuttavia merilintuja matalalla aaltojen yllä eri kulmista kuvattuna – tunnistusoppaan kuva havainnollistaa, miten vaikeaa cahow'ta on erottaa muista samankokoisista petreleistä merellä.",
+          lahde: 'Richard Crossley, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda petrel',
+        },
+        {
+          otsikko: 'Pohjoisimmat koralliriutat maailmassa',
+          teksti:
+            'Bermuda on ainoa paikka maailmassa, jossa koralliriuttoja kasvaa näin kaukana päiväntasaajalta: saaret sijaitsevat noin 32 leveysasteella, mutta lämmin Golfvirta pitää meriveden riittävän lämpimänä koralleille ympäri vuoden. Riutat muodostavat saaren ympärille laajan, matalan alustan, jonka päällä vesi hohtaa avaruudesta asti vaaleanturkoosina tummaa merta vasten. Samat riutat, jotka suojaavat saarta suurilta aalloilta, upottivat aikoinaan satoja purjelaivoja. Nykyisin riutta-alue on suojeltu, ja siellä elää kymmeniä kovan korallin lajeja sekä satoja kalalajeja – eliöyhteisö, joka ei kasva missään muualla yhtä pohjoisessa.',
+          tiedosto: 'ISS017-E-10695 - View of Bermuda.jpg',
+          lyhyt: 'Avaruudesta kuvattu Bermuda erottuu vaaleana turkoosina laikkuna tummansinisellä merellä.',
+          selite:
+            'Kansainvälisen avaruusaseman ottama valokuva näyttää Bermudan saariryhmän vaaleanturkoosin matalikon ympäröimänä tummansinisellä valtamerellä, mikä paljastaa saarta reunustavan koralliriutan laajuuden ylhäältä katsottuna.',
+          lahde: 'NASA Earth Science and Remote Sensing Unit, Wikimedia Commons (Public domain)',
+          wiki: 'Bermuda',
+        },
+        {
+          otsikko: 'Madon rakentamat pikkuriutat',
+          teksti:
+            'Bermudan matalissa lahdissa esiintyy harvinainen ilmiö: pieni putkimato rakentaa kalkkisia putkiaan tiiviisti toistensa päälle, kunnes muodostuu matala, rengasmainen riutta kuin pienoiskoossa oleva koralliatolli. Luonnontutkija Alpheus Hyatt Verrill kuvasi näitä "serpuliiniatolleja" 1900-luvun alussa, ja osa niistä kohoaa yhä ajoittain näkyviin matalan veden aikaan aaltojen halkoessa niiden ympärillä. Ilmiö on erikoinen, sillä tavallisesti riuttoja rakentavat korallieläimet, eivät madot: Bermudan lämmin vesi, suojaisat lahdet ja runsas kalkkiaines ovat yhdistelmä, joka mahdollistaa pienoisriutan synnyn vain harvoissa paikoissa maailmassa.',
+          tiedosto: 'FMIB 49263 Serpuline atolls at Bermuda.jpeg',
+          lyhyt: 'Vanha valokuva näyttää kaksi matalaa, pitkänomaista riuttaa aaltojen keskellä.',
+          selite:
+            'Vuosisadan alun valokuvassa näkyy kaksi tummaa, pitkänomaista ja rengasmaista muodostumaa aivan meren pinnan tasalla aaltojen lyödessä niitä vasten – kyseessä ovat putkimatojen kalkista rakentamat pienet riutat eli "serpuliiniatollit".',
+          lahde: 'Alpheus Hyatt Verrill, Wikimedia Commons (Public domain)',
+          wiki: 'Serpulidae',
+        },
+        {
+          otsikko: 'Kalkkikivestä syntyneet luolat',
+          teksti:
+            'Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.',
+          tiedosto: 'Crystal Cave (199858407).jpeg',
+          lyhyt: 'Tippukivet riippuvat kattoa kohti Crystal Cavesin luolastossa Bermudalla.',
+          selite:
+            'Valokuvassa näkyy luolan kattoa peittävät lukuisat vaaleat stalaktiitit, jotka riippuvat alas kohti tummaa vedenpintaa, sekä lattialta kohoavia paksumpia kivipatsaita – näky Bermudan tunnetuimmasta luolastosta, Crystal Cavesista.',
+          lahde: 'Andrew Currie, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Crystal Caves of Bermuda',
+        },
+      ],
+    },
+  ],
+  falkland: [
+    {
+      id: 'kaupunki',
+      nimi: 'Falklandinsaaret',
+      johdanto:
+        'Isoisän vuoden 1873 päiväkirjassa Falklandinsaaret olivat kaukainen ja tuulinen etuvartio: Britannia oli palauttanut hallinnon niille jo 1833, ja pieni Port Stanley eli haaksirikkojen, lampaiden ja Kap Hornin purjelaivojen varassa.',
+      nostot: [
+        {
+          otsikko: 'Valaanpyytäjien pysähdyspaikka Kap Hornin kupeessa',
+          teksti:
+            'Falklandinsaaret sijaitsevat Kap Hornin luoteispuolella, reitillä, jota valaanpyytäjät ja hylkeenpyytäjät kulkivat Tyynellemerelle ja takaisin 1800-luvulla. Saarten suojaisat lahdet tarjosivat purjelaivoille turvapaikan ennen raskasta Kap Hornin kiertämistä ja sen jälkeen, kun myrskyt olivat repineet purjeita ja katkoneet mastoja. Hallinnon keskus siirrettiin avoimelta Port Louisilta suojaisampaan Port Stanleyhin 1840-luvun puolivälissä, ja vuonna 1849 amiraali Edward Fanshawe maalasi satamakylästä akvarellin, joka näyttää vasta muutaman valkoisen mökin rannalla. Isoisän matkalla 1873 kylä oli jo kasvanut suuremmaksi.',
+          tiedosto: 'Edward Gennys Fanshawe, Settlement at Port Stanley, Falkland Islands, May 1849.jpg',
+          lyhyt: 'Amiraali Fanshawen akvarelli Port Stanleyn pienestä satamakylästä vuonna 1849.',
+          selite:
+            'Akvarellissa näkyy kourallinen valkoisia mökkejä Stanleyn sataman rannalla, yksi laiva ankkurissa ja puuttomat kukkulat taustalla - kuva ajalta, jolloin kylä oli vasta muutaman vuoden ikäinen.',
+          lahde: 'Edward Gennys Fanshawe, Wikimedia Commons (Public domain)',
+          wiki: 'Stanley, Falkland Islands',
+        },
+        {
+          otsikko: 'Haaksirikkojen satama',
+          teksti:
+            'Port Stanleyn maine 1800-luvulla ei ollut mairitteleva: kaupunki tunnettiin paikkana, jonne pahoin vaurioituneet purjelaivat ajautuivat Kap Hornin kiertämisen jälkeen ja jäivät usein korjauskelvottomina makaamaan satamaan. Paikallinen talous eli pitkälti näiden hylkyjen ja niiden lastien myynnistä ja ostosta, ja monet asukkaat vaurastuivat purjelaivojen onnettomuuksien varassa. Kauppa hiipui vasta 1870-luvun jälkeen, kun höyrylaivat alkoivat syrjäyttää purjelaivoja halvan eteläamerikkalaisen hiilen ansiosta, ja loppui käytännössä kokonaan, kun Panaman kanava avattiin vuonna 1914 ja tarve kiertää Kap Hornia väheni ratkaisevasti.',
+          tiedosto: 'Stanley (Falkland Islands) - Wrack der Jhelum.jpg',
+          lyhyt: 'Purjelaiva Jhelumin lahonnut hylky makaa yhä Stanleyn sataman rannassa.',
+          selite:
+            'Kuvassa näkyy vanhan purjelaivan pahoin lahonnut puurunko matalassa vedessä, ikkunan kehyksen ja keltaisten kukkien kautta kuvattuna - yksi monista Stanleyn satamaan jääneistä 1800-luvun hylyistä.',
+          lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Stanley, Falkland Islands',
+        },
+        {
+          otsikko: 'Lady Elizabeth makaa yhä satamassa',
+          teksti:
+            'Sunderlandissa Englannissa vuonna 1879 rakennettu rautarunkoinen parkkilaiva Lady Elizabeth purjehti maailman merillä yli kolmekymmentä vuotta ennen kohtaloaan. Joulukuussa 1912 se lähti Vancouverista kohti Mosambikia lastinaan puutavaraa, mutta ankara myrsky lähellä Kap Hornia repi kannelta osan lastista ja vei mukanaan neljä merimiestä. Vaurioitunut laiva ajautui Port Stanleyhin, jossa se todettiin merikelvottomaksi ja myytiin Falklandinsaarten yhtiölle varastolaivaksi. Vuonna 1936 raju myrsky repi Lady Elizabethin irti kiinnityksistään ja ajoi sen matalikolle Whalebone Coveen, jossa hylky lepää edelleen näkyvissä Stanleyn satamassa.',
+          tiedosto: 'Wreck of Lady Elizabeth on Falkland Islands - Islas Malvinas - panoramio.jpg',
+          lyhyt: 'Kolmimastoinen Lady Elizabeth -laivan hylky Stanleyn satamassa myrskytaivasta vasten.',
+          selite:
+            'Dramaattisessa kuvassa tumma, pilvinen taivas kohoaa kolmimastoisen Lady Elizabethin siluetin yllä, laiva makaa matalikolla keskellä Stanleyn satamaa, jossa se on levännyt vuodesta 1936.',
+          lahde: 'Alex Petrenko, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lady Elizabeth (1879)',
+        },
+        {
+          otsikko: 'Lampaat valtaavat saaret',
+          teksti:
+            'Kun purjelaivakauppa oli vielä kukoistava elinkeino, saarille alkoi nousta myös toinen, pysyvämpi talouden muoto: lampaanhoito. Falklandinsaarten yhtiö perustettiin vuonna 1851, ja se toi saarille cheviot-rotuisia lampaita villantuotantoa varten. Karu, puuton ja tuulinen maasto sopi lampaille yllättävän hyvin, sillä laajat ruohoniityt riittivät laumojen laiduntamiseen ympäri vuoden. Malli osoittautui menestykseksi, ja pian muutkin tilalliset perustivat omia lammastiloja saarten eri kolkkiin. Villasta tuli vuosikymmeniksi saarten tärkein vientituote, ja lampaanhoito muovasi maisemaa ja elinkeinorakennetta pitkälle 1900-luvulle asti.',
+          tiedosto: 'Sheep on Saunders Island in the Falkland Islands.jpg',
+          lyhyt: 'Lampaita laiduntamassa ruohoisella rinteellä Saundersin saarella.',
+          selite:
+            'Kuvassa lampaita laiduntaa loivalla, ruohoisella rinteellä kapean merenlahden yllä - juuri tällaista karua mutta laidunkelpoista maastoa Falklandinsaarten yhtiö alkoi valjastaa lampaanhoitoon 1850-luvulta lähtien.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Falkland Islands Company',
+        },
+        {
+          otsikko: 'Alituinen tuuli',
+          teksti:
+            'Falklandinsaarten ilmasto on kylmä, kostea ja lähes taukoamatta tuulinen: Etelä-Atlantilta puuskittava länsituuli pyyhkii yli saarten lähes joka päivä, eikä juuri mikään suojaa sitä vastaan, sillä saarilla ei kasva luontaisesti yhtään puuta. Sen sijaan maisemaa hallitsevat matalat ruohoniityt, kovat kivikkoalueet ja paikoin kolme metriä korkeaksi kasvava tuussakkiheinä, joka muodostaa tiheitä, melkein metsämäisiä kasvustoja rannikoilla. Purjelaivan kannelta katsottuna saaret näyttivät usein pelkiltä matalilta, ruskeanvihreiltä kukkuloilta sumun keskellä, ja moni 1800-luvun matkalainen piti niitä maailman ankarimpina asuttuina paikkoina.',
+          tiedosto: 'Landscape Falkland Islands.jpg',
+          lyhyt: 'Puuton, tuulen kuluttama rantamaisema ja kallioinen kukkula Falklandinsaarilla.',
+          selite:
+            'Kuvassa avautuu tyypillinen falklandilainen maisema: tumma merenlahti, loivat ja puuttomat, ruohon peittämät rinteet sekä kaukana kohoava kallioinen kukkula - maisema, jota ainuttakaan puuta ei riko.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Climate of the Falkland Islands',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Pingviinit ja kadonnut susi',
+      johdanto:
+        'Falklandinsaarilla pesii viisi pingviinilajia ja maailman suurimpia albatrossiyhdyskuntia, mutta ainoa alkuperäinen maanisäkäs, kesy susi nimeltä varra, hävisi ihmisen käsissä sukupuuttoon isoisän matkan aikoihin.',
+      tehtava: {
+        kysymys:
+          'Minä vuonna Falklandinsaarten ainoa alkuperäinen maanisäkäs, varra, hävisi lopullisesti sukupuuttoon?',
+        vaihtoehdot: ['1833', '1865', '1876', '1901'],
+        oikea: 2,
+        fakta:
+          'Varra hävisi sukupuuttoon vuonna 1876 eli vain kolme vuotta isoisän vuoden 1873 matkan jälkeen, turkismetsästyksen ja myrkytyksen seurauksena.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuninkaanpingviinien paluu',
+          teksti:
+            'Volunteer Pointin hiekkarannalla Itä-Falklandilla pesii saarten suurin kuninkaanpingviiniyhdyskunta. Vielä vuonna 1971 siellä laskettiin vain 31 pesivää paria, sillä 1800- ja 1900-luvun metsästys oli harventanut kantaa rajusti höyhenpeitteen ja rasvan vuoksi. Suojelu kuitenkin käänsi kehityksen: nykyisin samalla rannalla pesii yli 1500 paria, ja yhdyskunta on kasvanut vuosikymmen toisensa jälkeen yhdeksi maailman suurimmista ja helppopääsyisimmistä kuninkaanpingviinikeskittymistä. Täysikasvuinen kuninkaanpingviini tuntee rantaveden houkuttelevana kalastuspaikkana ja seisoo usein pitkään aallokon reunalla ennen sukellustaan.',
+          tiedosto: 'Facing forward looking into the water King Penguin Falkland Islands.jpg',
+          lyhyt: 'Kuninkaanpingviini seisoo kivikkoisella rannalla katsoen veteen.',
+          selite:
+            'Kuvassa yksinäinen kuninkaanpingviini seisoo matalassa, kirkkaassa rantavedessä pyöreiden kivien keskellä ja katsoo tarkkaavaisesti eteensä ennen sukellustaan.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Volunteer Point',
+        },
+        {
+          otsikko: 'Kalliolla hyppivä pingviini',
+          teksti:
+            'Falklandinsaarten viidestä pesivästä pingviinilajista pienin on kalliopingviini, joka on saanut nimensä tavastaan kiivetä jyrkkiä rantakallioita molemmilla jaloilla yhtä aikaa hyppien sen sijaan, että se kävelisi. Lajin tuntee helposti keltaisista, piikkimäisistä höyhentöyhdöistä silmien yläpuolella sekä räikeän oranssista nokasta. Kalliopingviinit pesivät suurina, meluisina yhdyskuntina tuulisilla rannikkokallioilla, usein samoilla alueilla kuin mustakulmikkaat albatrossit, ja molemmat lajit sietävät hyvin toistensa läheisyyttä. Falklandinsaaret ovat edelleen yksi lajin tärkeimmistä pesimäalueista koko eteläisellä pallonpuoliskolla.',
+          tiedosto: 'Falkland Islands Penguins 87.jpg',
+          lyhyt: 'Kalliopingviinien ryhmä keltaisine höyhentöyhtöineen ja oransseine nokkineen.',
+          selite:
+            'Lähikuvassa näkyy joukko kalliopingviinejä, joiden silmien yläpuolella heiluu keltaisia, piikkimäisiä höyhentöyhtöjä ja joiden nokat hehkuvat kirkkaan oransseina.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Southern rockhopper penguin',
+        },
+        {
+          otsikko: 'Gentoopingviinien hiekkarannat',
+          teksti:
+            'Gentoopingviinit suosivat Falklandinsaarilla laajoja, tasaisia hiekkarantoja, joilta matka kalastusvesille on lyhyt ja loiva. Toisin kuin kalliopingviini, laji ei juurikaan kiipeile, vaan kävelee pystyasennossa hitaasti mutta vakaasti pesimäalueensa ja rantaviivan väliä. Sen tuntee oranssinpunaisesta nokasta ja jaloista sekä valkoisesta, silmien yläpuolelle ulottuvasta höyhenkuviosta. Falklandinsaarilla elää maailman suurin gentoopingviinikanta, ja lajin poikaset kasvavat nopeasti isoiksi ja tummanharmaiksi ennen kuin ne saavat aikuisten selvän mustavalkoisen puvun. Rannoilla pesivät yhdyskunnat näkyvät jo kaukaa mustina ja valkoisina täplinä hiekalla.',
+          tiedosto: 'Gentoo-Colony.jpg',
+          lyhyt: 'Gentoopingviinejä oransseine jalkoineen valkoisella hiekkarannalla.',
+          selite:
+            'Kuvassa suuri joukko gentoopingviinejä seisoo ja kävelee valkoisella hiekkarannalla, oranssinpunaiset jalat ja nokat selvästi erottuen, vuoret ja meri taustalla.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gentoo penguin',
+        },
+        {
+          otsikko: 'Maailman suurin albatrossiyhdyskunta',
+          teksti:
+            'Falklandinsaaret ovat mustakulmikasalbatrossin tärkein pesimäalue koko maailmassa: saarilla pesii arviolta kaksi kolmasosaa lajin koko maailmankannasta, satojatuhansia pareja. Lintu tunnistaa jopa yli kahden metrin siipivälistään sekä tummasta, kulmakarvamaisesta silmänympärysjuovastaan, josta laji on saanut suomenkielisen nimensä. Toisin kuin monet sukulaislajit, jotka pesivät jyrkillä, tuussakkiheinän peittämillä rinteillä, Falklandinsaarten albatrossit pesivät usein avoimella rantatasangolla lähellä merta. Linnut ovat uskollisia pesäpaikoilleen ja palaavat samalle kalliolle vuodesta toiseen munimaan yhden ainoan munan.',
+          tiedosto: 'Black-browed-albatross-Colony.jpg',
+          lyhyt: 'Mustakulmikasalbatrosseja pesimässä jäkäläisellä rantakalliolla.',
+          selite:
+            'Kuvassa valkoisia mustakulmikasalbatrosseja lepää keltajäkäläisen rantakallion pesäpaikoillaan aivan meren äärellä, aallot pärskyvät kallioita vasten.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Black-browed albatross',
+        },
+        {
+          otsikko: 'Varra - Darwinin kesy susi',
+          teksti:
+            'Kun Charles Darwin vieraili Falklandinsaarilla vuonna 1833, hän tapasi saarten ainoan alkuperäisen maanisäkkään, sudenkaltaisen ketun eli varran, jota ei tavattu muualla. Darwin hämmästeli eläimen pelottomuutta: asukkaat saattoivat houkutella sen lihanpalalla toisessa kädessä ja veitsellä toisessa, ja eläin saattoi kävellä telttaan varastamaan lihaa nukkuvan merimiehen pään alta. Darwin ennusti eläimen häviävän sukupuuttoon muutamassa vuodessa, ja niin kävikin: turkismetsästys ja myrkytys - osin siksi, että pelästyneet lampaat luultiin sen saalistamiksi - hävittivät varran Itä-Falklandilta 1860-luvulla, ja viimeinen tunnettu yksilö kuoli vuonna 1876.',
+          tiedosto: 'Falkland Island wolf, Dusicyon australis OMNZVT2369 !1pub.jpg',
+          lyhyt: 'Varran täytetty museonäyttely, sudenkaltainen kettu Falklandinsaarilta.',
+          selite:
+            'Kuvassa on Otago-museon täytetty varra-näyttelykappale, jonka jalustassa lukee "Canis Antarcticus, Falkland Island" - ainoa tapa nähdä laji nykyään, sillä se hävisi sukupuuttoon jo 1800-luvulla.',
+          lahde: 'Kane Fleury / MothmanNZ, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Warrah',
+        },
+      ],
+    },
+  ],
+  caphorn: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kap Horn',
+      johdanto:
+        'Kap Horn on Etelä-Amerikan eteläisin niemi, jonka ohi purjehtiminen oli isoisän matkavuonna 1873 lähes ainoa tie Atlantilta Tyynelle valtamerelle. Merimiehet kutsuivat sitä kunnioittaen ja kauhulla "purjelaivojen hautausmaaksi".',
+      nostot: [
+        {
+          otsikko: 'Nimi joka syntyi Hoornin kaupungista',
+          teksti:
+            'Tammikuussa 1616 hollantilaiset Willem Schouten ja Jacob Le Maire purjehtivat Tulimaan itäpuolitse ja löysivät uuden salmen Magellaninsalmen eteläpuolelta. Retkikunnan rahoitti Le Maire vanhempi, entinen Itä-Intian kauppakomppanian johtaja, joka riitaantui yhtiön kanssa ja halusi avata sille uuden reitin ohi sen Magellaninsalmeen perustuvan kauppamonopolin. Uuden niemen miehet ristivät Kaap Hooniksi Schoutenin kotikaupungin Hoornin mukaan. Voitto jäi kuitenkin lyhytaikaiseksi: kauppakomppania ei tunnustanut uutta reittiä omakseen, vaan takavarikoi laivan ja pidätti Schoutenin palattua Jaavalle.',
+          tiedosto:
+            "Portraits de Fern. Magellan et de Willem C. Schouten en buste aux deux côtés d'une sphère - estampe - btv1b8400273n.jpg",
+          lyhyt:
+            'Willem Schouten ja Jacob Le Maire nimesivät Kap Hornin kotikaupunkinsa Hoornin mukaan vuonna 1616.',
+          selite:
+            'Vanha kaiverrus näyttää kaksi muotokuvarintakuvaa, Ferdinand Magellanin ja Willem Schoutenin, taivaanpallon kahdella puolen; ylänurkissa purjelaivat Victoria ja Eendracht, alla kaksi pallonpuoliskon karttaa ja reunoilla neljä muiden löytöretkeilijöiden pienoismuotokuvaa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Willem Schouten',
+        },
+        {
+          otsikko: 'Purjelaivojen hautausmaa',
+          teksti:
+            'Kap Hornin ympärillä puhaltavat lähes taukoamatta "pauhaavat neljäkymmentä", "raivoisat viisikymmentä" ja "kiljuvat kuusikymmentä" -nimillä tunnetut länsituulet, joita Andit ja Etelämantereen niemimaa vielä voimistavat suppilomaisesti. Matalikoilla tuuli ja virtaukset nostavat aaltoja, jotka voivat äityä yli 30 metrin korkuisiksi jättiaalloiksi, ja jäävuoret ajautuvat alueelle etenkin talvikuukausina. Charles Darwin kirjoitti rannikosta nähtyään sen: pelkkä näky riittäisi saamaan maakravun näkemään viikon painajaisia haaksirikoista. Satojen vuosien aikana Kap Hornin edustalle onkin uponnut lukemattomia laivoja.',
+          tiedosto: 'Cape Horn (js) 1.jpg',
+          lyhyt:
+            'Kap Hornin raivoisat tuulet ja jättiaallot ovat upottaneet lukemattomia laivoja vuosien varrella.',
+          selite:
+            'Valokuva näyttää Kap Hornin niemen tummana siluettina merenpinnan takana; taivaalla vyöryy raskas sadepilvi, ja etualan meri on tummaa ja kuohuvaa.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Isoisän aikana ainoa laaja reitti',
+          teksti:
+            'Panaman kanava avattiin vasta vuonna 1914, joten isoisän matkavuonna 1873 purjelaivoilla oli käytännössä kaksi tapaa päästä Atlantilta Tyynelle merelle: ahdas ja oikukas Magellaninsalmi tai avoin mutta myrskyinen Kap Hornin reitti. Suurille kolmimastoisille täysiluokan laivoille Magellaninsalmi oli usein liian kapea ja tuuleton, joten villa-, vilja- ja kultalastit kuljetettiin mieluummin Kap Hornin kautta, vaikka se merkitsi viikkoja kestävää taistelua vastatuulta ja jättiaaltoja vastaan. Vasta höyrylaivat ja myöhemmin kanava tekivät reitistä tarpeettoman.',
+          tiedosto: 'Monumento Albatros Cabo de Hornos.JPG',
+          lyhyt:
+            'Ennen Panaman kanavaa 1914 Kap Horn oli purjelaivojen tärkein reitti Atlantilta Tyynelle merelle.',
+          selite:
+            'Kaukokuva Hornosin saaresta merellä: kalliorannan ja ruohoisen mäen takana näkyy Chilen laivaston asemarakennuksia ja lipputanko Chilen lipulla, vasemmalla kallionkielekkeellä erottuu tumma muistomerkin siluetti.',
+          lahde: 'Mariebel, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Saaret jotka löytyvät vain tarkasta kartasta',
+          teksti:
+            'Runsaat sata kilometriä lounaaseen Kap Hornista kohoavat merestä pienet ja karut Diego Ramírezin saaret, jotka espanjalainen Garcia de Nodalin retkikunta löysi helmikuussa 1619 ja nimesi matkan kosmografin mukaan. Saaret olivat pitkään maailman eteläisin tunnettu maa-alue, kunnes Etelä-Sandwichsaaret löydettiin 156 vuotta myöhemmin. Brittiläisen laivaston Beaglen mittaukset vuosilta 1830–1834 painettiin merikartaksi 1841, ja sitä korjattiin vielä vuonna 1871 – juuri sellaista karttaa isoisän aikalaiset merimiehet olisivat käyttäneet purjehtiessaan näiden vaarallisten saarten ohi.',
+          tiedosto:
+            'Admiralty Chart No 1373 The South-Eastern Part of Tierra Del Fuego with Staten Island, Cape Horn and Diego Ramirez Islands Surveyed By Captn. Robert Fitz Roy R.N. and The Officers of H.M.S. Beagle 1836, Published 1841, Corrections to 1871.jpg',
+          lyhyt:
+            'Diego Ramírezin saaret olivat kauan maailman eteläisin tunnettu maa-alue Kap Hornin lounaispuolella.',
+          selite:
+            'Vanha, ruskeansävyinen merikartta esittää Tulimaan rannikkoa; oikeassa alakulmassa Kap Horn ja Diego Ramírezin saariryhmä, ympärillä kompassiruusuja, syvyyslukemia ja rannikon ääriviivapiirroksia kartan alareunassa.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (Public domain)',
+          wiki: 'Diego Ramírez Islands',
+        },
+        {
+          otsikko: 'Maailman eteläisin majakka',
+          teksti:
+            'Kap Hornin läheisellä Hornosin saarella toimii Chilen laivaston pieni asema, jota merivoimat ovat miehittäneet vuosikymmenten ajan kaikista mahdollisista tuulista huolimatta. Aseman punavalkoinen majakka opastaa nykyään aluksia niemen ohi, ja niemellä itsellään on lisäksi pieni, vain nelimetrinen lasikuituinen valotorni – maailman eteläisin perinteinen majakka. Isoisän aikana 1873 tällaista turvaa ei purjelaivoille vielä ollut: kapteenien piti luottaa täysin omiin mittauksiinsa, tähtiin ja onneen löytääkseen oikean reitin sumun ja myrskyjen keskeltä.',
+          tiedosto: 'Cape-horn-phare.jpg',
+          lyhyt:
+            'Hornosin saaren pieni majakka on maailman eteläisimpiä, mutta isoisän aikana sitä ei vielä ollut.',
+          selite:
+            'Lähikuva punavalkoisesta majakasta, jonka lasisen lyhtyhuoneen yläpuolella on punainen kupu; majakka kohoaa pienen tiilirakennuksen katolta harmaan, pilvisen taivaan alla.',
+          lahde: 'Luis Alejandro Bernal Romero, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Albatrossin muistomerkki',
+          teksti:
+            'Vuonna 1992 Kap Hornin kiertäneiden kapteenien Chilen osasto pystytti niemelle kuvanveistäjä José Balcellsin suunnitteleman muistomerkin: teräksestä leikatun albatrossin siluetin, joka on omistettu kaikille reitillä hukkuneille merimiehille. Paikallisen perimätiedon mukaan albatrossit kantavat hukkuneiden purjehtijoiden sieluja, minkä vuoksi lintua ei koskaan saanut vahingoittaa. Muistomerkki on joutunut alueen raakojen tuulten koettelemaksi: vuonna 2014 myrsky kaatoi koko teräsveistoksen kumoon niemen kalliolta.',
+          tiedosto: '00 4479 Cape Horn.jpg',
+          lyhyt:
+            'José Balcellsin albatrossimuistomerkki kunnioittaa Kap Hornilla hukkuneita merimiehiä.',
+          selite:
+            'Valokuva näyttää mustan, siivekkään muistomerkin siluetin ruohoisella niemenkärjellä; taustalla häämöttää sumuisia Tulimaan vuoria, ja etualalla tumma meri lyö vaahtoavia aaltoja kallioita vasten.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Horn',
+        },
+      ],
+    },
+    {
+      id: 'merenkulku',
+      nimi: 'Kap Hornin kiertäjät',
+      johdanto:
+        '1800-luvun purjelaivat eivät vain kiertäneet Kap Hornia – merimiehille kierto oli myös kunnia-asia, jolle kuului omat tavat ja uskomukset. Osa laivoista käytti reittiä koko maailman ympäri, osa kiersi mieluummin Toivonniemen kautta.',
+      tehtava: {
+        kysymys:
+          'Minkä metallin korvarengasta merimies sai perinteen mukaan kantaa kierrettyään Kap Hornin purjelaivalla?',
+        vaihtoehdot: ['hopeaa', 'kultaa', 'pronssia', 'tinaa'],
+        oikea: 1,
+        fakta:
+          'Kultainen korvarengas kertoi kantajansa kiertäneen Kap Hornin – ja sen arvo riitti tarpeen tullen jopa hautajaisten maksamiseen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Klipperien kiertoreitti maailman ympäri',
+          teksti:
+            '1800-luvun jälkipuoliskolla monet Britanniasta Australiaan ja Uuteen-Seelantiin purjehtineet villa-, vilja- ja kultaklipperit eivät kääntyneet takaisin samaa reittiä, vaan jatkoivat itään ja kiersivät koko maapallon. Menomatka kulki Toivonniemen kautta Etelämantereen tuntumassa puhaltavien länsituulten työntämänä, ja paluumatka jatkui samoja "pauhaavia" tuulia hyödyntäen aina Kap Hornin ohi Atlantille asti. Kap Horn oli tällä maailmanympärysreitillä suunnilleen puolimatkan kohta, ja sen onnistunut kiertäminen kertoi, että pahin osuus koko matkasta oli jo takana.',
+          tiedosto:
+            'Jack Spurling - The square-rigged wool clipper „Argonaut“ under full sail.jpg',
+          lyhyt:
+            'Villa- ja kultaklipperit kiersivät koko maapallon Toivonniemen ja Kap Hornin kautta 1800-luvulla.',
+          selite:
+            'Maalaus näyttää kolmimastoisen täysin takiloidun purjelaivan Argonaut kaikki purjeet nostettuna suurten sinisten aaltojen keskellä; taustalla toinen laiva ja laivan ympärillä lentää merilintuja.',
+          lahde: 'Jack Spurling, Wikimedia Commons (Public domain)',
+          wiki: 'Clipper route',
+        },
+        {
+          otsikko: 'Teeklipperit kulkivat toista kautta',
+          teksti:
+            'Kaikki klipperit eivät nähneet Kap Hornia lainkaan. Kiinasta Lontooseen kilpaa purjehtineet teeklipperit, kuten vuoden 1866 kuuluisassa kisassa toisensa vain 28 minuutilla voittaneet Taeping ja Ariel, kulkivat yli 14 000 mailin matkansa Intian valtameren ja Toivonniemen kautta – ei koskaan Etelä-Amerikan puolelle asti. Vuonna 1869 avattu Suezin kanava teki teereitistä höyrylaivoille vielä nopeamman, ja teeklipperien kulta-aika päättyi nopeasti sen jälkeen. Villa- ja viljalaivat pysyivät sen sijaan uskollisina Kap Hornin reitille vielä vuosikymmeniä.',
+          tiedosto: "'Taeping' and 'Ariel' in the Great Tea Race of 1866.jpg",
+          lyhyt:
+            'Teeklipperit kuten Taeping ja Ariel purjehtivat Kiinasta Lontooseen Toivonniemen kautta, ei Hornin.',
+          selite:
+            'Mustavalkoinen 1800-luvun sanomalehtikaiverrus näyttää kaksi täysin takiloitua teeklipperiä, Taepingin ja Arielin, purjehtimassa rinnakkain avomerellä kaikki purjeet nostettuina; taustalla kolmas laiva.',
+          lahde: 'Edwin Weedon, Wikimedia Commons (Public domain)',
+          wiki: 'Great Tea Race of 1866',
+        },
+        {
+          otsikko: 'Kultainen korvarengas ja täysi laiva ihossa',
+          teksti:
+            'Merimiehellä, joka oli kiertänyt Kap Hornin täysiluokan purjelaivassa, oli oikeus kutsua itseään "Kap Hornin kiertäjäksi" ja käyttää kultaista korvarengasta siinä korvassa, joka matkalla oli osoittanut kohti mannerta. Korun arvon piti riittää tarvittaessa jopa haltijansa hautajaisiin, jos hän kuolisi merellä kaukana kotoa. Toinen tunnusmerkki oli iholle piirretty täysin takiloitu laiva, jonka saattoi ansaita vain todistetusti Hornin kiertänyt purjehtija. Kunniaan kuului perimätiedon mukaan myös oikeus syödä pöydässä toinen jalka pöydällä.',
+          tiedosto: "T G Purvis - 'Port Stanley', a four masted barque in a heavy sea.jpg",
+          lyhyt:
+            'Kap Hornin kiertänyt merimies ansaitsi kultaisen korvarenkaan ja takiloidun laivan tatuoinnin.',
+          selite:
+            'Maalaus näyttää nelimastoisen parkkilaivan Port Stanley kallellaan raskaassa, tummansinisessä merenkäynnissä harmaan myrskytaivaan alla; suuri osa purjeista on reivattu ja aallot lyövät kannelle.',
+          lahde: 'T. G. Purvis, Wikimedia Commons (Public domain)',
+          wiki: 'Cape Horner',
+        },
+        {
+          otsikko: 'Albatrossi jota ei saanut tappaa',
+          teksti:
+            'Kap Hornin ja Diego Ramírezin saarten ympärillä pesii useita albatrossilajeja, jotka seuraavat laivoja tunti- ja päiväkausia liitäen tuulen mukana siipeäkään räpäyttämättä. Merimiesten keskuudessa lintua pidettiin pyhänä: sen näkeminen tiesi onnea, mutta sen tappaminen toisi laivalle kirouksen. Uskomus tuli tunnetuksi laajalle yleisölle Samuel Taylor Coleridgen vuonna 1798 julkaisemasta runosta "Vanhan merimiehen tarina", jossa laivan onni kääntyy, kun päähenkilö ampuu albatrossin. Kap Hornin tuulissa liitävä lintu muistutti purjehtijoita siitä, kuinka vähän he pystyivät hallitsemaan omaa kohtaloaan.',
+          tiedosto: 'Diomedea exulans -Southern Ocean, Drakes Passage -flying-8.jpg',
+          lyhyt:
+            'Albatrossin tappaminen toi uskomuksen mukaan laivalle kirouksen, sen näkeminen sen sijaan onnea.',
+          selite:
+            'Lähikuva valkoisesta albatrossista, jonka siivet ovat levällään sen liitäessä matalalla tummansinisten meriaaltojen yllä Drakensalmella; siipien yläpinnat ovat ruskeankirjavat.',
+          lahde:
+            'Lieutenant Elizabeth Crapo, NOAA Corps / NOAA Photo Library, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Snowy albatross',
+        },
+        {
+          otsikko: 'Kolme suurta niemeä, yksi sitkeä laiva',
+          teksti:
+            'Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.',
+          tiedosto: 'Sailing ship Balclutha (San Francisco).jpg',
+          lyhyt:
+            'Purjelaiva Balclutha kiersi Kap Hornin 17 kertaa kolmessatoista vuodessa vain 26 hengen miehistöllä.',
+          selite:
+            'Mustavalkoinen valokuva näyttää kolmimastoisen purjelaiva Balcluthan takiloinnin laiturissa San Franciscossa; taustalla kaupungin siluetti pilvenpiirtäjineen.',
+          lahde: 'Jet Lowe, Wikimedia Commons (Public domain)',
+          wiki: 'Balclutha (1886)',
+        },
+      ],
+    },
+  ],
+  namib: [
+    {
+      id: 'kaupunki',
+      nimi: 'Namib',
+      johdanto:
+        'Namib on maailman vanhin aavikko, yli 55 miljoonan vuoden ikäinen hiekka- ja sorameri Afrikan lounaisrannikolla. Isoisän matkavuonna 1873 sen sisämaa oli eurooppalaisille yhä lähes täysin tuntematon alue.',
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin aavikko',
+          teksti:
+            'Namib on pysynyt kuivana tai puolikuivana arviolta 55–80 miljoonan vuoden ajan, kauan ennen kuin Alpit tai Himalaja olivat kohonneet nykymuotoonsa. Pitkä eristyneisyys on synnyttänyt aavikolle enemmän omia, muualla tuntemattomia lajeja kuin millään muulla aavikolla. Suuri osa hiekasta on peräisin kaukaa etelästä Oranje-joesta, josta tuuli ja merivirrat ovat vuosimiljoonien kuluessa kuljettaneet sen pohjoiseen pitkin rannikkoa – aavikkoa on kutsuttu jopa "tuulen siirtämäksi Oranje-joen suistoksi". Namib-Naukluftin kansallispuiston kivinen Kuunlaakso, jonka Swakop-joki on kaivertanut, näyttää veden hitaan työn ikivanhassa kalliossa.',
+          tiedosto: 'Vallée de la Lune - Namib-Naukluft National Park 02.jpg',
+          lyhyt: 'Swakop-joen veistämä kivinen Kuunlaakso Namib-Naukluftin kansallispuistossa.',
+          selite:
+            'Kuva näyttää karun, kivisen aavikkomaaston, jonka Swakop-joen vesi on vuosituhansien saatossa uurtanut syviksi, varjoisiksi rotkoiksi lähes kasvittomaan kallioperään.',
+          lahde: 'Lidine Mia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib',
+        },
+        {
+          otsikko: 'Maa jonka Jumala teki vihassaan',
+          teksti:
+            'Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.',
+          tiedosto: 'Laika ac Skeleton Coast (8419496570).jpg',
+          lyhyt: 'Sumu leijuu Luurankorannikon yllä Namibin pohjoisosassa.',
+          selite:
+            'Valokuva näyttää Luurankorannikon peittävän paksun merisumun, joka nousee lähes päivittäin kylmän Benguela-virran yllä ja teki alueesta merenkulkijoille pelätyn.',
+          lahde: 'Laika ac, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Skeleton Coast',
+        },
+        {
+          otsikko: 'Hylky joka vaelsi sisämaahan',
+          teksti:
+            'Rannikon yli tuhannesta hylystä kuuluisin lienee saksalainen rahtilaiva Eduard Bohlen, joka ajoi karille sumussa syyskuussa 1909. Haaksirikon hetkellä laiva makasi vain reilut 500 metriä rannasta, mutta aavikko on sittemmin hivuttautunut kohti merta: nykyään ruostunut hylky lojuu kuivalla hiekalla lähes 400 metrin päässä rantaviivasta, keskellä autiota dyynimaisemaa. Samanlainen kohtalo on odottanut satoja muitakin aluksia, joita sumu, karikot ja Benguela-virran voimakkaat aallot ovat ajaneet karille vuosisatojen ajan. Monista hylyistä on jäljellä enää hajanaisia rautaosia, jotka pilkistävät hiekasta muistutuksena rannikon vaarallisuudesta.',
+          tiedosto: 'Eduoard Bohlen shipwreck.jpg',
+          lyhyt: 'Eduard Bohlenin hylky makaa nykyään syvällä aavikon hiekassa.',
+          selite:
+            'Ilmakuva näyttää ruosteisen laivanhylyn keskellä autiota hiekka-aavikkoa, kaukana nykyisestä rantaviivasta – todiste siitä, miten aavikko on vuosikymmenten aikana vallannut alaa mereltä.',
+          lahde: 'WiPhi267, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Skeleton Coast',
+        },
+        {
+          otsikko: 'Sossusvlein punaiset dyynit',
+          teksti:
+            'Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.',
+          tiedosto: '006 Dune 45 in Sossusvlei at sunrise Photo by Giles Laurent.jpg',
+          lyhyt: 'Dune 45 hehkuu punaisena auringonnousun valossa Sossusvleissa.',
+          selite:
+            'Kuva näyttää Dune 45:n jyrkän harjanteen, jonka toinen rinne hohtaa auringonnousussa oranssinpunaisena ja toinen jää tummaan varjoon – rautapitoisen hiekan värit erottuvat selvästi.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sossusvlei',
+        },
+        {
+          otsikko: 'Deadvlei — kuolleiden puiden tasanko',
+          teksti:
+            'Parin kilometrin päässä Sossusvleistä sijaitsee Deadvlei, valkoinen savitasanne, jolla seisoo mustia, kuolleita kameelipiikkipuita. Puut versoivat noin 900 vuotta sitten, kun Tsauchab-joki tulvi ajoittain ja loi tasangolle hetkellisen kosteikon. Etenevät hiekkadyynit tukkivat lopulta joen reitin, ja puut kuolivat 600–700 vuotta sitten – mutta aavikon äärimmäinen kuivuus on estänyt niitä lahoamasta, joten mustunut puu on säilynyt lähes koskemattomana vuosisatojen ajan. Tulos on omalaatuinen näky: sysimustat rungot kohoavat valkoisesta savesta, ja niitä ympäröivät jyrkät, punaiset dyynit joka puolella horisonttia.',
+          tiedosto: '054e Dead camel thorn tree in Deadvlei Photo by Giles Laurent.jpg',
+          lyhyt: 'Musta, satoja vuosia kuollut kameelipiikkipuu Deadvlein savitasangolla.',
+          selite:
+            'Kuvassa yksinäinen, hiiltyneen musta kameelipiikkipuu seisoo vaalealla savitasangolla, ja taustalla kohoavat Sossusvlein korkeat punaiset dyynit.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sossusvlei',
+        },
+        {
+          otsikko: 'Kuiseb-joen näkymätön raja',
+          teksti:
+            'Kuiseb-joki on Namibin näkymätön raja: sen eteläpuolella leviää valtava hiekkameri punertavine dyyneineen, kun taas pohjoispuolella maasto muuttuu karuksi soratasangoksi. Joki itse virtaa harvoin pintavettä – suurimman osan vuodesta sen uoma on kuiva hiekkajuova syvän kanjonin pohjalla – mutta maan alla kulkeva vesi riittää ylläpitämään kapean vihreän käytävän akaasioita joen varrella. Vuosisatojen ajan alueen paimentolaiset, topnaar-namat, ovat laiduntaneet karjaansa juuri tällä kapealla vyöhykkeellä, ainoalla paikalla, jossa aavikko tarjoaa edes vähän vettä ja varjoa.',
+          tiedosto: 'Kuiseb-Canyon-anagoria.JPG',
+          lyhyt: 'Kuiseb-joen kaivama syvä kanjoni halkoo Namibin karua tasankoa.',
+          selite:
+            'Kuva näyttää Kuiseb-joen kaivaman jyrkkäseinäisen kanjonin, jonka pohjalla mutkitteleva kuiva uoma erottaa pohjoisen soratasangon ja etelän hiekkameren toisistaan.',
+          lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kuiseb River',
+        },
+        {
+          otsikko: 'Valkoinen läiskä kartalla',
+          teksti:
+            'Kun isoisä matkusti maailmalla vuonna 1873, Namibin sisämaa oli eurooppalaisille käytännössä valkoinen läiskä kartalla. Alueella ei ollut siirtomaavaltaa eikä juuri teitä, ja harvat lähetyssaarnaajat ja kauppiaat olivat nähneet vain rannikon tuntumaa. Vasta viisi vuotta isoisän matkan jälkeen, 1878, Britannia liitti Walvis Bayn satamakaupungin alueeseensa, ja varsinainen eurooppalainen siirtomaavalta – Saksan Lounais-Afrikka – syntyi vasta 1884. Sitä ennen hiekka-aallot, kivikkoiset tasangot ja vuoret olivat tuntemattomia kaikille paitsi alkuperäisväestölle, joka oli oppinut elämään sen äärimmäisissä oloissa jo vuosituhansien ajan.',
+          tiedosto: 'Namib-Naukluft National Park (above Namib Desert Lodge).jpg',
+          lyhyt: 'Namibin autio aavikkomaisema, jollaisena eurooppalaiset tunsivat sen 1800-luvulla vain huhuina.',
+          selite:
+            'Kuva näyttää laajan, asumattoman aavikkomaiseman ylhäältä vuorenrinteeltä kuvattuna – juuri tällainen kartoittamaton erämaa levittäytyi isoisän matkavuonna 1873 Namibin sisämaassa.',
+          lahde: 'Rüdiger Wenzel, Wikimedia Commons (CC BY-SA 3.0 DE)',
+          wiki: 'German South West Africa',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Aavikon selviytyjät',
+      johdanto:
+        'Namibin äärioloissa eläimet ja kasvit ovat kehittäneet keinoja, joita ei löydy muualta: sumusta juovia kovakuoriaisia, kahden lehden ikivanhoja kasveja ja antilooppeja, jotka sietävät polttavan päivän ilman varjoa.',
+      tehtava: {
+        kysymys: 'Miten Namibin sumusta vettä keräävä kovakuoriainen juo?',
+        vaihtoehdot: [
+          'Se kaivaa syvän kuopan hiekkaan ja odottaa pohjaveden nousua',
+          'Se kiipeää dyynin harjalle ja antaa sumun tiivistyä kohotettuun kuoreensa',
+          'Se imee kastetta kasvien lehdiltä yöllä',
+          'Se juo ainoastaan saaliinsa ruumiinnesteitä',
+        ],
+        oikea: 1,
+        fakta:
+          'Kovakuoriainen kiipeää dyynin harjalle, kääntyy tuulta vasten noin 45 asteen kulmaan ja antaa sumun pisaroiden tiivistyä kuorensa kohoumiin, joista vesi valuu suoraan sen suuhun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kovakuoriainen joka juo sumusta',
+          teksti:
+            'Namibin rannikkoalueella elää mustia kovakuoriaisia, jotka ovat oppineet juomaan suoraan ilmasta. Kun aamuinen merisumu vyöryy dyynien yli, kovakuoriainen kiipeää dyynin harjalle, kääntyy noin 45 asteen kulmaan tuulta vasten ja seisoo lähes pystyssä pidennettyjen jalkojensa varassa. Sen koveran selkäkuoren pinnalla on pieniä, vettä puoleensa vetäviä kohoumia ja niiden välissä vettä hylkiviä uurteita: sumun pisarat tiivistyvät kohoumiin, kasvavat ja vierivät lopulta uurteita pitkin suoraan suuhun. Menetelmä on niin tehokas, että insinöörit ovat kopioineet sen sumukeräimien ja jopa ikkunapinnoitteiden suunnittelussa.',
+          tiedosto: 'Onymacris unguicularis MHNT.jpg',
+          lyhyt: 'Sumusta vettä keräävän Namibin kovakuoriaisen selkäpuoli lähikuvassa.',
+          selite:
+            'Tarkkuusvalokuva näyttää museonäytteenä säilytetyn kovakuoriaisen selkäkuoren yksityiskohtaisesti ylhäältä päin – juuri tällaisen kuoren kohoumiin sumun pisarat tiivistyvät.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib Desert beetle',
+        },
+        {
+          otsikko: 'Welwitschia — kahden lehden ikivanha selviytyjä',
+          teksti:
+            'Welwitschia mirabilis on elävä fossiili, joka kasvaa vain Namibin ja Angolan rannikkoaavikolla. Koko elämänsä ajan sillä on vain kaksi lehteä, jotka työntyvät hitaasti kasvupisteestä ja repeytyvät tuulessa ajan myötä nauhamaisiksi suikaleiksi – silti ne voivat venyä yli neljän metrin pituisiksi. Kasvi selviää lähes sateettomalla rannikolla, koska se ottaa kosteutta suoraan merestä nousevasta sumusta. Vanhimpien yksilöiden arvioidaan olevan jopa 2 000 vuotta vanhoja, mikä tekee niistä joitakin maailman pitkäikäisimpiä kasveja. Itävaltalainen kasvitieteilijä Friedrich Welwitsch polvistui ihmetellen ensimmäisen löytämänsä yksilön eteen vuonna 1859.',
+          tiedosto: 'Welwitschia mirabilis kz03.jpg',
+          lyhyt: 'Welwitschia mirabilis -kasvin nauhamaiset, revenneet lehdet levittäytyvät maahan.',
+          selite:
+            'Kuvassa welwitschian kaksi ainoaa lehteä ovat vuosikymmenten mittaan repeytyneet ja rispaantuneet lukuisiksi nauhamaisiksi suikaleiksi, jotka lepäävät kasvin ympärillä maassa.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Welwitschia',
+        },
+        {
+          otsikko: 'Oryx joka sietää polttavan päivän',
+          teksti:
+            'Aavikko-oryx eli gemsbok on Namibin tunnetuin nisäkäs, ja se selviää paikoissa, joissa vettä ei näy viikkoihin. Se saa suurimman osan nesteestään kasveista ja pystyy nostamaan ruumiinlämpönsä jopa noin 40 asteeseen ilman, että sen tarvitsee hikoilla pois kallista vettä – ylimääräinen lämpö varastoituu hetkeksi kehoon ja säteilee pois vasta yön viilentyessä. Erityinen verisuoniverkko nenäontelon lähellä jäähdyttää aivoihin virtaavan veren, joten eläin kestää polttavan päivän ilman lämpöhalvausta. Pitkät, suorat sarvet erottuvat kaukaa dyynien harjalla, ja niitä on pidetty jopa yksisarvistarun yhtenä innoittajana.',
+          tiedosto: 'Oryx in the Namib desert.JPG',
+          lyhyt: 'Yksinäinen oryx seisoo Namibin hiekkadyynillä varhain aamulla.',
+          selite:
+            'Kuvassa yksi oryx-antilooppi seisoo aamuvalossa hiekkadyynin harjalla, pitkät suorat sarvet pystyssä ja karu dyynimaisema ympärillään.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gemsbok',
+        },
+        {
+          otsikko: 'Afrikan suurin suojelualue',
+          teksti:
+            'Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.',
+          tiedosto: 'Namib-Naukluft National Park - désert 01.jpg',
+          lyhyt: 'Karua soratasankoa Namib-Naukluftin kansallispuiston vuoristoisella alueella.',
+          selite:
+            'Kuva näyttää aavan, kivisen aavikkotasangon Namib-Naukluftin kansallispuiston vuoristoalueella – yhden puiston monista, keskenään hyvin erilaisista maisematyypeistä.',
+          lahde: 'Lidine Mia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib-Naukluft National Park',
+        },
+        {
+          otsikko: 'Sumu joka pitää aavikon hengissä',
+          teksti:
+            'Namibin rannikolla ei sada juuri koskaan, mutta sumu korvaa sadetta yli 180 päivänä vuodessa. Kylmä Benguela-merivirta jäähdyttää lämpimän ilman, ja syntyvä sumupatja työntyy öisin ja aamuisin kymmeniä kilometrejä sisämaahan päin ennen kuin aurinko haihduttaa sen. Tämä näkymätön kosteuslähde pitää elossa kokonaisen ekosysteemin – jäkälistä welwitschioihin ja sumusta juoviin kovakuoriaisiin – alueella, jossa varsinaista sadetta saattaa tulla vain muutaman millimetrin verran vuodessa. Monet tutkijat pitävät sumua koko Namibin eliöstön tärkeimpänä vedenlähteenä, tärkeämpänä kuin harvinaiset joen tulvat.',
+          tiedosto: 'Oceanic fog sossusvlei4.jpg',
+          lyhyt: 'Atlantilta nouseva sumu vyöryy aamulla Namibin dyynien yli.',
+          selite:
+            'Kuvassa aamuinen merisumu leviää paksuna kerroksena aavikon dyynien ja niukan kasvillisuuden ylle, peittäen kauempana olevat maastonmuodot näkyvistä.',
+          lahde: 'Moongateclimber, Wikimedia Commons (Public domain)',
+          wiki: 'Namib',
+        },
+      ],
+    },
+  ],
+  robinsoncrusoe: [
+    {
+      id: 'kaupunki',
+      nimi: 'Robinson Crusoe',
+      johdanto:
+        'Isoisän matkavuonna 1873 saarta kutsuttiin vielä nimellä Más a Tierra – vasta 1966 Chile nimesi sen virallisesti Robinson Crusoen saareksi kunniaksi tarinalle, jonka todellinen tapahtuma synnytti kaukana Tyynellämerellä.',
+      nostot: [
+        {
+          otsikko: 'Nimi joka vaihtui vasta 1966',
+          teksti:
+            'Espanjalainen merenkulkija Juan Fernández löysi saariryhmän vuonna 1574, ja se tunnettiin pitkään nimellä Más a Tierra, "lähempänä mannerta". Isoisän vieraillessa Tyynellämerellä vuonna 1873 saarella ei virallisesti ollut vielä mitään tekemistä Daniel Defoen romaanihahmon kanssa: Chilen hallitus nimesi sen Robinson Crusoen saareksi vasta vuonna 1966, houkutellakseen matkailijoita kirjan maineella. Nykyinen pääkylä San Juan Bautista sijaitsee Cumberland-lahden rannalla, ja sen kaduilla seisoo puusta veistetty patsas muistuttamassa nimen alkuperästä.',
+          tiedosto: 'Robinson Crusoe Island statue of Robinson Crusoe in the town of San Juan Bautista.jpg',
+          lyhyt: 'Puusta veistetty Robinson Crusoe -patsas San Juan Bautistan kylässä.',
+          selite:
+            'Valokuva näyttää suuren, vuorille katsovan puuveistoksen partaisesta merimiehestä keihäs kädessään San Juan Bautistan kylän raitilla – patsas muistuttaa saaren nimestä, joka vaihtui vasta 1966.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Tulivuorten synnyttämä saaristo',
+          teksti:
+            'Juan Fernándezin saaristo kohosi Tyynestämerestä tulivuoritoiminnan seurauksena, kun Nazca-laatta liikkui niin sanotun Juan Fernándezin kuuman pisteen yli. Saaren korkein huippu El Yunque kohoaa 915 metriin, ja jyrkät vuorenselänteet syöksyvät suoraan mereen. Manner on kaukana: lähimpään Chilen rannikkoon on matkaa noin 670 kilometriä, mikä teki saaresta 1800-luvulla viikkojen purjehduksen päässä olevan erämaan – juuri sellaisen paikan, jonne haaksirikkoutunut tai hylätty merimies saattoi jäädä vuosiksi kenenkään löytämättä.',
+          tiedosto: 'CI-Robinson-pano.jpg',
+          lyhyt: 'Vuoristoinen Robinson Crusoen saari kohoaa jyrkästi Cumberland-lahden rannalta.',
+          selite:
+            'Panoraamakuva näyttää San Juan Bautistan kylän pienten talojen kirjon lahden rannalla ja niiden takana kohoavat jyrkät, tulivuoriperäiset vuorenhuiput.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Kylä lahden rannalla',
+          teksti:
+            'Saaren ainoa taajama San Juan Bautista on rakentunut kapealle rantakaistaleelle Cumberland-lahden ympärille, jyrkkien vuorten ja avomeren väliin. Kylässä asuu nykyisin reilut 800 ihmistä, ja lähes kaikki elävät joko merestä tai matkailusta – tietä muualle saarelle ei juuri ole, joten pieni satama on koko yhteisön elinehto. Vuoden 2010 tsunami tuhosi suuren osan rantarakennuksista ja vaati useita ihmishenkiä, minkä jälkeen kylään rakennettiin uudet evakuointitiet ylemmäs vuorenrinteille. Ahtaudestaan huolimatta paikka on ainoa asutuskeskus koko saaristossa.',
+          tiedosto: 'Robinson Crusoe Island bayside view of the town of San Juan Bautista.jpg',
+          lyhyt: 'San Juan Bautistan kylä kapealla rantakaistaleella Cumberland-lahden vieressä.',
+          selite:
+            'Kuva näyttää pienen kalastajakylän matalat talot ja veneet lahdella, jyrkkien, puuttomien vuorenrinteiden ympäröimänä.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan Bautista, Chile',
+        },
+        {
+          otsikko: 'Langustinpyytäjien saari',
+          teksti:
+            'Saaren talous nojaa lähes kokonaan yhteen saaliiseen: Juan Fernándezin langustiin, jota pyydetään puuveneillä ympäri vuoden lukuun ottamatta muutaman kuukauden rauhoitusaikaa. Langusti on paikallisille niin tärkeä, että sen hinta ja saalismäärät ovat kylän keskeisimpiä puheenaiheita, ja suurin osa saaliista lennätetään tuoreena mantereelle ravintoloihin. Kalastus on säädelty tarkoin kiintiöin, jotta kanta ei ehtyisi pienellä, eristyneellä saarella – toisin kuin monilla muilla merialueilla, jotka on kalastettu tyhjiin. Ammatti kulkee usein suvussa polvesta toiseen.',
+          tiedosto: 'Isla Juan Fernandez- Langostas (Lobsters).jpg',
+          lyhyt: 'Kalastajat esittelevät tuoreita Juan Fernándezin langusteja veneen kannella.',
+          selite:
+            'Valokuvassa kolme kalastajaa puuveneessä nimeltä "Crusoe": yksi heistä pitää molemmissa käsissään suuria oranssinpunaisia langusteja, taustalla saaren paljaat vuorenrinteet.',
+          lahde: 'Serpentus~commonswiki, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Juan Fernández Islands',
+        },
+        {
+          otsikko: 'Maailman harvinaisin kolibri',
+          teksti:
+            'Juan Fernándezin saaristo on Unescon biosfäärialue vuodesta 1977, ja sen tunnetuin asukas on Juan Fernándezin liekkikolibri – pieni, tulipunainen lintu, jota ei tavata missään muualla maailmassa. Laji pesii ainoastaan Robinson Crusoen saarella ja on erittäin uhanalainen: villikissat, rotat ja elinympäristön häviäminen ovat pudottaneet kannan vain muutamaan sataan yksilöön. Saaren kasvilajeista 63 prosenttia yli kahdestasadasta lajista kasvaa vain täällä eikä missään muualla maapallolla, mikä tekee tästä pienestä ja kaukaisesta saaresta yhden maailman biologisesti ainutlaatuisimmista paikoista.',
+          tiedosto: 'Sephanoides Fernandensis Male (178788293).jpeg',
+          lyhyt: 'Juan Fernándezin liekkikolibri lentää punaisten kukkien joukossa.',
+          selite:
+            'Kuvassa punaruskea, siivet levällään leijuva kolibri syöttää pitkällä nokallaan oranssinpunaisten kukkien mettä.',
+          lahde: 'Fraenerys, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Juan Fernández firecrown',
+        },
+        {
+          otsikko: 'Kaalipuu jota ei kasva muualla',
+          teksti:
+            'Robinson Crusoen saarella kasvaa runsaasti kasvilajeja, jotka ovat kehittyneet eristyksissä miljoonien vuosien aikana eikä niitä tavata missään muualla – yksi näistä on Dendroseris litoralis, paikallisesti "kaalipuuksi" kutsuttu pensasmainen kasvi, jonka suuret lehdet ja riippuvat kukat muistuttavat etäisesti kaalia. Saariston kasvillisuutta uhkaavat kuitenkin vakavasti tuodut vieraslajit: villit vadelmapensaat ja maqui-pensaat ovat vallanneet jo 80–90 prosenttia saaren alkuperäismetsästä, ja monet endeemiset lajit ovat siksi äärimmäisen uhanalaisia.',
+          tiedosto: 'Robinson Crusoe Island Dendroseris litoralis – Juan Fernández Cabbage Tree.jpg',
+          lyhyt: 'Dendroseris litoralis eli "kaalipuu" kukkii pensaana saaren rinteellä.',
+          selite:
+            'Kuva näyttää tuuheaa, suurilehtistä pensasta, jonka oksilta riippuu keltaisenoranssiin kukintoihin päättyviä varsia – kasvi tunnetaan vain Robinson Crusoen saarelta.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Juan Fernández Islands',
+        },
+        {
+          otsikko: 'Muistolaatta joka odotti isoisää',
+          teksti:
+            'Vuonna 1868 brittiläisen fregatti HMS Topazen upseerit kiipesivät saaren korkealle harjanteelle ja kiinnittivät kallioon pronssisen muistolaatan Alexander Selkirkin kunniaksi – paikkaa kutsutaan nykyisin Selkirkin näköalapaikaksi. Laatassa kerrotaan, että skotlantilainen merimies eli saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta. Kun isoisä matkusti ohitse vuonna 1873, laatta oli ollut paikallaan jo viisi vuotta, ja saari tunnettiin vielä virallisesti nimellä Más a Tierra – Robinson Crusoen tarina eli tuolloin vasta merimiesten kertomuksissa, ei kartoissa.',
+          tiedosto:
+            'Gedenksteen voor Alexander Selkirk 1676 - 1723 opgericht op het onbewoonde eiland in de Stille, SFA005001311.jpg',
+          lyhyt: 'Vuonna 1868 kallioon kiinnitetty pronssinen muistolaatta Alexander Selkirkille.',
+          selite:
+            'Vanha mustavalkoinen valokuva näyttää kallioon kiinnitetyn, kulahtaneen pronssilaatan, jonka kohokirjaimet kertovat Alexander Selkirkin neljän vuoden ja neljän kuukauden yksinäisyydestä saarella.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Selkirk',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Selkirk, Crusoe ja kadonnut aarre',
+      johdanto:
+        'Skotlantilaisen merimiehen aito selviytymistarina synnytti maailman kuuluisimman haaksirikkoromaanin – ja samalle saarelle syntyi myös legenda espanjalaisesta jättiaarteesta, jota etsijät kaivavat yhä tänäkin päivänä.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuotta ja kuukautta Alexander Selkirk eli yksin saarella?',
+        vaihtoehdot: ['2 vuotta 3 kuukautta', '3 vuotta 6 kuukautta', '4 vuotta 4 kuukautta', '6 vuotta 2 kuukautta'],
+        oikea: 2,
+        fakta:
+          'Pelastuslaiva Duke löysi Selkirkin 2. helmikuuta 1709 – siihen mennessä hän oli elänyt saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä vuotta ja neljä kuukautta yksin',
+          teksti:
+            'Syyskuussa 1704 skotlantilainen perämies Alexander Selkirk riitaantui laivansa kunnosta kapteeninsa kanssa ja pyysi itse päästä maihin autiolle saarelle – päätöksen hän katui heti laivan lähdettyä. Selkirk selvisi aluksi rannalla merileijonien häiritsemänä, mutta siirtyi sisämaahan, missä hän metsästi vuohia, rakensi kaksi majaa pippuripuista, valmisti vaatteet vuohennahasta ja kesytti villejä kissoja pitämään rotat loitolla öisin. Pelastuslaiva Duke löysi hänet 2. helmikuuta 1709 – Selkirk oli tuolloin elänyt saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta.',
+          tiedosto:
+            "Scene of the story of Robinson Crusoe. Selkirk's Cave. Side view looking up the valley. \"Crusoe's Quibedrada\" LCCN2006687056.jpg",
+          lyhyt: 'Selkirkin luolamainen turvapaikka kapeassa laaksossa saarella.',
+          selite:
+            'Vanha valokuva näyttää kaksi miestä istumassa ison, luolamaisen kivilohkareen suulla kapeassa, kuivassa laaksossa – paikka tunnetaan tarinan mukaan yhtenä Selkirkin turvapaikoista saarella.',
+          lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Selkirk',
+        },
+        {
+          otsikko: 'Kirja joka teki tarinasta kuolemattoman',
+          teksti:
+            'Daniel Defoe julkaisi huhtikuussa 1719 romaanin "The Life and Strange Adventures of Robinson Crusoe", jonka päähahmo joutuu haaksirikkoon ja elää vuosikausia yksin autiolla saarella – Defoe ammensi ideansa osin Selkirkin tositarinasta, vaikka sijoittikin oman kertomuksensa Karibialle Tyynenmeren sijaan. Kirja oli välitön menestys, ja siitä uutisoitiin samana syksynä myös lehdistössä, kuten lontoolaisessa Original London Postissa lokakuussa 1719. Selkirkin oikea saari sai kuitenkin virallisesti Robinson Crusoen nimen vasta lähes kaksisataa vuotta myöhemmin, vuonna 1966.',
+          tiedosto: '1719-heathcot-robinson-crusoe.jpg',
+          lyhyt: 'Lontoolaisen lehden etusivu lokakuulta 1719 esittelee Robinson Crusoen tarinan.',
+          selite:
+            'Kuvassa on vanhan englantilaisen "The Original London Post" -lehden etusivu 7. lokakuuta 1719, jonka pääotsikko kertoo juuri ilmestyneen kirjan Robinson Crusoen elämästä ja seikkailuista.',
+          lahde: 'Daniel Defoe, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe',
+        },
+        {
+          otsikko: 'Amiraali ja aarrelaiva',
+          teksti:
+            'Vuonna 1741 englantilainen komentaja George Anson pysähtyi laivastoineen Juan Fernándezin saarille toivuttaakseen miehistönsä keripukista sen jälkeen, kun myrskyt olivat runnelleet aluksia Kap Hornin kiertämisen aikana ja sadat merimiehet olivat kuolleet matkalla. Pari vuotta myöhemmin Ansonin lippulaiva Centurion valtasi espanjalaisen aarrelaivan Filippiinien edustalla, yhden Britannian laivaston historian arvokkaimmista saaliista. Samasta Ansonista tuli myöhemmin myös saaren toisen aarrelegendan vastaanottaja, kun englantilainen Cornelius Webb lähetti hänelle vuonna 1761 salakirjoitetun kirjeen kätketystä aarteesta.',
+          tiedosto: 'Map-juan-fernandez-island-1753.jpg',
+          lyhyt: 'Ranskalainen 1700-luvun kartta amiraali Ansonin matkan pohjalta.',
+          selite:
+            'Käsin väritetty ranskalainen kartta esittää saaren rantaviivan ylhäältä sekä sen jyrkän vuorijonon merenpuolelta katsottuna – kartta on tehty amiraali Ansonin 1740-luvun matkan tietojen pohjalta.',
+          lahde: 'Jacques Nicolas Bellin, Wikimedia Commons (Public domain)',
+          wiki: "George Anson's voyage around the world",
+        },
+        {
+          otsikko: 'Limasta haudattu aarre',
+          teksti:
+            'Perimätiedon mukaan espanjalainen upseeri Juan Esteban Ubilla y Echeverría kätki saarelle 1710-luvun puolivälissä valtavan aarteen: kahdeksansataa tynnyriä täynnä kultakolikoita, koruja ja jalokiviä, jotka oli kerätty Liman siirtokunnasta. Legendan mukaan englantilainen Cornelius Webb löysi aarteen myöhemmin ja kätki sen uudelleen toiseen paikkaan saarella, minkä hän paljasti vain koodatussa kirjeessä amiraali Ansonille vuonna 1761. Kirje löytyi Englannista vasta vuonna 1950 ja lähetettiin Chileen, mikä käynnisti uuden aallon aarteenetsintöjä – tuloksetta.',
+          tiedosto:
+            'A plan of Juan Fernandes Island in the South Sea, lying in the Latitude of 33d 40m South, and West from the Continent of Chili 110 Leagues - Variation of the COmpass 10d 00m E. (BM 1918,0423.41).jpg',
+          lyhyt: 'Vanha englantilainen kartta saaren lahdista ja rannikosta 1700-luvulta.',
+          selite:
+            'Kartassa näkyy saaren ääriviivat, Cumberland-lahti, Vuohisaari ja kompassiruusu – tällaisten karttojen avulla 1700-luvun merenkulkijat ja aarteenetsijät yrittivät paikantaa saaren lahdet ja legendaarisen kätkön.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Etsintä joka jatkuu yhä',
+          teksti:
+            'Vuonna 1994 hollantilaissyntyinen liikemies Bernard Keiser saapui saarelle ensimmäistä kertaa etsimään Liman aarretta Cornelius Webbin kirjeen vihjeiden pohjalta, ja hän on jatkanut kaivauksia saarella vuosikymmenten ajan Chilen kansallispuistoviranomaisten valvonnassa. Legendan mukaan kätkössä olisi kultaa, koruja ja jopa useampi paavillinen sormus – yhteisarvoltaan miljardeja dollareita. Mitään aarretta ei ole koskaan löydetty, ja monet historioitsijat pitävät koko tarinaa liioiteltuna, mutta se houkuttelee yhä uusia aarteenetsijöitä saarelle.',
+          tiedosto: 'Descripción de la Ysla Grande de Juan Fernández.JPG',
+          lyhyt: 'Espanjalainen 1700-luvun kartta kuvailee saaren muotoa ja vuohilaumoja.',
+          selite:
+            'Käsin väritetty espanjalainen kartta esittää saaren pitkänomaisen muodon ja sisältää tekstiselityksen, joka mainitsee saarella laiduntavat vuohilaumat ("ganado cabrio").',
+          lahde: 'Antonio Ulloa, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe Island',
+        },
+      ],
+    },
+  ],
+  norfolk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Norfolk',
+      johdanto:
+        'Norfolkinsaari oli isoisän matkavuonna 1873 nuori mutta jo värikäs paikka: rangaistussiirtolan pahamaineinen historia oli päättynyt vasta 1855, ja sen tyhjät kasarmit asutti nyt kokonainen yhteisö Bounty-kapinallisten jälkeläisiä.',
+      nostot: [
+        {
+          otsikko: 'Löytöretkeläisen mäntyerhe',
+          teksti:
+            'Kapteeni James Cook näki Norfolkinsaaren lokakuussa 1774 purjehtiessaan toiselle Tyynenmeren löytöretkelleen, ja nimesi sen Norfolkin herttuattaren mukaan. Rannalta pilkottavat suorarunkoiset männyt saivat hänet innostumaan: hän arvioi niiden sopivan mainiosti laivaston mastopuiksi, sillä osa rungoista oli paksumpia kuin kaksi miestä saisi sylissään ympäröityä. Kun Norfolkille perustettiin ensimmäinen brittiläinen siirtokunta jo 1788, unelma murskaantui nopeasti: puu osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin, ja koko idea haudattiin yhtä äkkiä kuin se oli syntynyt.',
+          tiedosto: 'Interior of Norfolk Island mutineersofbount00belcuoft 0292.jpg',
+          lyhyt: 'Piirros Norfolkinsaaren sisämaasta männyn ja puumaisten saniaisten keskellä 1870-luvulta.',
+          selite:
+            'Vuoden 1871 piirroksessa näkyy korkea norfolkinmänty ja puumaisia saniaisia kukkulaisessa maastossa, jonka poikki kaksi ratsastajaa kulkee polkua pitkin.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'Norfolk Island',
+        },
+        {
+          otsikko: 'Helvetti Tyynellämerellä',
+          teksti:
+            'Vuonna 1825 Norfolkille perustettiin uusi, aiempaa ankarampi rangaistussiirtola pahimmille uusintarikollisille. Komentaja Morissetin kaudella 1829–1834 ruoskarangaistuksia käytettiin niin häikäilemättömästi, että saaren maine "helvettinä maan päällä" tunnettiin jo 1830-luvulla kautta Britannian. Vankeja oli enimmillään lähes 700, ja monet heistä oli tuomittu pelkistä omaisuusrikoksista, ei väkivallasta. Kapinoita puhkesi useita vuosina 1826–1846, ja selviytyneiden kertomukset ankarista oloista tekivät Norfolkista pelätyimmän rangaistuspaikan koko brittiläisessä siirtomaajärjestelmässä.',
+          tiedosto: 'Norfolk Island convict buildings.jpg',
+          lyhyt: 'Kingstonin vankisiirtolan kaksikerroksinen kasarmirakennus nykyisin.',
+          selite:
+            'Valokuvassa näkyy Kingstonin entinen vankikasarmi: vaalea, kaksikerroksinen kivirakennus pylväskuistilla ja tummalla liuskekivikatolla kirkkaan sinistä taivasta vasten.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: "Kingston and Arthur's Vale Historic Area",
+        },
+        {
+          otsikko: 'Maconochien armeliaisuuskoe ja siirtolan loppu',
+          teksti:
+            'Vuosina 1840–1844 komentajana toiminut Alexander Maconochie yritti mullistaa Norfolkin rangaistuskäytännön: hänen ansiojärjestelmässään vanki saattoi lyhentää tuomiotaan ahkeruudella ja hyvällä käytöksellä, ei pelkällä ruoskalla. Esimiehet pitivät uudistusta liian lempeänä, ja Maconochien lähdön jälkeen seuraaja Joseph Childs palautti ankarat oikeudet nopeasti. Kuljetukset Norfolkille hiipuivat 1840-luvun lopulla, ja viimeiset vangit lähtivät saarelta toukokuussa 1855. Sen jälkeen Norfolk seisoi asumattomana runsaan vuoden, ennen kuin sinne saapui aivan uudenlaisia asukkaita.',
+          tiedosto: 'Government House, Norfolk Island Wilson AUTAS001125294850.jpg',
+          lyhyt: 'Kynäpiirros komentajan virka-asunnosta Government Housesta vuodelta 1855.',
+          selite:
+            'James Glen Wilsonin vuonna 1855 tekemä kynäpiirros näyttää Government Housen pitkän, kuistillisen puurakennuksen, lipputangon Union Jackineen sekä kaksi ratsastajaa edustan nurmikolla.',
+          lahde: 'James Glen Wilson (1827-1863), Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Maconochie',
+        },
+        {
+          otsikko: 'Pitcairnilaisten pitkä purjehdus',
+          teksti:
+            'Pitcairnsaaren pieni yhteisö, Bounty-kapinallisten ja heidän tahitilaisten kumppaniensa jälkeläiset, oli 1850-lukuun mennessä kasvanut lähes 200 hengen mittaiseksi kahden neliökilometrin saarella — liian ahtaaksi kaikille. Britannian hallitus ja kuningatar Viktoria itse hyväksyivät siirron, ja 8. kesäkuuta 1856 laiva HMS Morayshire toi 194 pitcairnilaista Norfolkinsaarelle. Aluksi he asuivat hylätyn rangaistussiirtolan tyhjissä kasarmeissa, ennen kuin saivat omat 50 eekkerin maatilkkunsa. Saapumispäivästä tuli saaren tärkein juhla, Bounty Day, jota vietetään yhä joka vuosi.',
+          tiedosto: 'Pitcairn Settlement Norfolk Island mutineersofbount00belcuoft 0279.jpg',
+          lyhyt: 'Yleiskuva pitcairnilaisten Kingstonin siirtokunnasta Sydney Bayn rannalla 1871.',
+          selite:
+            'Vuoden 1871 puupiirros näyttää linnunperspektiivistä Kingstonin siirtokunnan rakennukset ja puutarhat Sydney Bayn rantaviivalla, taustalla lahti ja kukkulat.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'Pitcairn Islanders',
+        },
+        {
+          otsikko: 'Bountyn jälkeläiset isoisän aikaan',
+          teksti:
+            'Kun isoisä purjehti ohi vuonna 1873, pitcairnilaisyhteisö oli asuttanut Norfolkia jo lähes seitsemäntoista vuotta. Osa perheistä oli katunut muuttoa ja palannut Pitcairnille — muun muassa suuri Youngin suku vuosina 1858 ja 1863 — mutta suurin osa jäi ja raivasi tiluksia entisen siirtolan raunioiden keskelle. Yhteisön hengellisenä johtajana ja tuomarina toimi pastori George Hunn Nobbs, joka oli tullut Pitcairnilta laivan mukana ja jonka arvovalta piti pientä saarta koossa vuosikymmenten ajan siirron jälkeen.',
+          tiedosto: 'Rev. G.H. Nobbs mutineersofbount00belcuoft 0183.jpg',
+          lyhyt: 'Pastori George Hunn Nobbsin muotokuva 1800-luvun valokuvan pohjalta.',
+          selite:
+            'Piirretty muotokuva esittää tummaan takkiin pukeutuneen pastori George Hunn Nobbsin, pitcairnilaisyhteisön hengellisen johtajan, rintakuvana.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'George Hunn Nobbs',
+        },
+        {
+          otsikko: 'Kingstonin jäljet nykypäivänä',
+          teksti:
+            'Vankityövoimalla 1800-luvulla pystytetyt tiiliset ja kivestä muuratut rakennukset Kingstonin kaupunginosassa selvisivät sekä siirtolan sulkemisesta että pitcairnilaisten asutuksesta lähes vahingoittumattomina, sillä uudet asukkaat ottivat ne suoraan omaan käyttöönsä. Samaa laituria, jolle pitcairnilaiset nousivat maihin 1856, käytetään yhä: koska Norfolkilla ei ole suojaisaa satamaa, kaikki tavara nostetaan edelleen nostureilla veneistä kivijalustalle. Alue tunnetaan nykyisin nimellä Kingston and Arthur\'s Vale Historic Area, ja se on osa Australian rangaistussiirtoloiden Unescon maailmanperintökohdetta.',
+          tiedosto: 'Norfolk Island jetty.jpg',
+          lyhyt: 'Nosturi purkaa venettä Kingstonin laiturilla nykyaikana.',
+          selite:
+            'Nykyvalokuvassa oranssi nosturi nostaa venettä kivetylle laiturille aallokkoisella rannalla, taustalla mäntyinen niemi ja avomeri.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kingston, Norfolk Island',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Selviytyjät',
+      johdanto:
+        'Pieni ja eristynyt Norfolkinsaari on kasvattanut lajeja, joita ei tavata missään muualla maailmassa — osa niistä pelasti ensimmäiset siirtokuntalaiset nälänhädältä, osa selvisi sukupuuton partaalta vain muutaman yksilön turvin.',
+      tehtava: {
+        kysymys:
+          'Minkä linnun ansiosta Norfolkinsaaren ensimmäiset brittiläiset siirtokuntalaiset eivät kuolleet nälkään vuonna 1790?',
+        vaihtoehdot: ['Albatrossi', 'Providence-liitäjä', 'Norfolkinpapukaija', 'Merikotka'],
+        oikea: 1,
+        fakta:
+          'Providence-liitäjiä eli Mount Pitt -lintuja metsästettiin jopa 5000 yksilöä yössä, kunnes siirtokunta selvisi omavaraiseksi vuoteen 1793 mennessä — laji hävisi saarelta kokonaan vuoteen 1800 mennessä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Norfolkinmänty — ei mänty eikä mastopuu',
+          teksti:
+            'Norfolkinmänty ei ole tieteellisesti mänty lainkaan, vaan araukaria-suvun havupuu, joka kasvaa luonnostaan vain Norfolkilla ja sen naapurisaarella Phillip Islandilla. Kapteeni Cook piti puiden suoria, jopa yli 60 metriä kohoavia runkoja täydellisinä laivaston mastoiksi, mutta kun ensimmäiset siirtokuntalaiset kokeilivat puuta 1788, se osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin. Puu jäi silti saaren tunnusmerkiksi: se komeilee yhä Norfolkin lipussa, ja sen luontainen levinneisyys on niin suppea, että laji on nykyisin luokiteltu silmälläpidettäväksi.',
+          tiedosto: 'Araucaria heterophylla Norfolk Island 13.jpg',
+          lyhyt: 'Korkeita norfolkinmäntyjä kehystämässä näkymää saaren rannikolle.',
+          selite:
+            'Valokuvassa korkeat norfolkinmännyt reunustavat vihreää rinnettä, joka laskeutuu pienen lahden rantaan; merellä näkyy risteilyalus.',
+          lahde: 'bertknot from scarborough, australia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Araucaria heterophylla',
+        },
+        {
+          otsikko: 'Providence-liitäjä pelasti siirtokunnan',
+          teksti:
+            'Maaliskuussa 1790 laiva HMS Sirius haaksirikkoutui Norfolkin riutalle, ja saarelle jäi lähes 500 brittiä ilman kunnollisia varastoja tai toivoa avusta. Pelastus löytyi Mount Pittin rinteiltä, jonne pesi valtava Providence-liitäjien parvi: siirtokuntalaiset metsästivät lintuja jopa 5000 yötä kohti, munineen ja poikasineen, kunnes puutarhat alkoivat tuottaa satoa vuoteen 1793 mennessä. Pelastustyö vaati kuitenkin hirvittävän hinnan — laji, jota kutsuttiin kiitollisuudesta "Providence-linnuksi", oli metsästetty Norfolkilta sukupuuttoon jo vuoteen 1800 mennessä.',
+          tiedosto: 'Providence Petrel.JPG',
+          lyhyt: 'Providence-liitäjä istumassa maassa saniaisten katveessa.',
+          selite:
+            'Lähikuvassa ruskea Providence-liitäjä istuu metsän pohjalla lehtikarikkeen ja saniaisten keskellä, siipi hieman levällään.',
+          lahde: 'EmGer7, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Providence petrel',
+        },
+        {
+          otsikko: 'Norfolkinpapukaija selvisi kuoleman partaalta',
+          teksti:
+            'Norfolkinpapukaija eli Norfolkinsaaren vihreä papukaija oli vielä 1700-luvun lopulla saaren tavallisimpia metsälintuja, mutta metsien raivaus ja tuotuina saapuneet kissat ja rotat ajoivat sen lähes sukupuuttoon: 1970-luvulla yksilöitä arvioitiin olevan enää alle viisikymmentä. Tiukka pesäpönttöjen suojelu, petoeläinten torjunta ja kilpailevan puistopapukaijan kannan hallinta ovat auttaneet lajin verkkaista toipumista, vaikka se on yhä luokiteltu äärimmäisen uhanalaiseksi. Vahvasti punaista otsaa kantava lintu elää enää tällä yhdellä pienellä saarella eikä missään muualla maailmassa.',
+          tiedosto: 'Cyanoramphus cookii -Palm Glen, Norfolk Island, Australia-8.jpg',
+          lyhyt: 'Norfolkinpapukaija oksalla punaisine otsatäplineen.',
+          selite:
+            'Kuvassa kirkkaanvihreä norfolkinpapukaija istuu oksalla, sen otsa on punainen ja nokan juuressa vaalea täplä, taustalla sumeana kasvillisuutta.',
+          lahde: 'Paul Gear, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Norfolk parakeet',
+        },
+        {
+          otsikko: 'Phillip Islandin hibiskus — kaksi pensasta koko maailmassa',
+          teksti:
+            'Norfolkin eteläpuolella kohoava pieni Phillip Island oli vielä 1850-luvulla lähes täysin paljas: 1790-luvulta lähtien saarelle päästetyt siat, vuohet ja kanit olivat syöneet kasvillisuuden loppuun ja jättäneet jäljelle vain punertavan, eroosion kalvaman kallioperän. Eläimet hävitettiin vasta 1980-luvun lopulla, minkä jälkeen saari on vihertynyt uudelleen. Yksi harvinaisimmista selviytyjistä on Phillip Islandin hibiskus, jonka koko luonnonvarainen kanta koostuu edelleen vain kahdesta pensaasta samalla kalliolla — laji kasvaa nykyisin varmuuden vuoksi myös Norfolkin kasvitieteellisessä puutarhassa.',
+          tiedosto: 'Hibiscus insularis Osaka.jpg',
+          lyhyt: 'Phillip Islandin hibiskuksen kaksi vaaleaa kukkaa lähikuvassa.',
+          selite:
+            'Lähikuvassa kaksi vaaleanpunertavaa, tummanpunaisella keskustalla varustettua Phillip Islandin hibiskuksen kukkaa tummanvihreiden lehtien keskellä.',
+          lahde: 'YockeyT, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hibiscus insularis',
+        },
+      ],
+    },
+  ],
+  angola: [
+    {
+      id: 'kaupunki',
+      nimi: 'Angola',
+      johdanto:
+        'Angola oli isoisän matkavuonna 1873 Portugalin vanha siirtomaa Atlantin rannikolla: satamakaupunki Luanda oli perustettu jo 1575, ja sen historiaan kuuluivat sekä orjakauppa että tutkimusmatkailijoiden kulku sisämaahan.',
+      nostot: [
+        {
+          otsikko: 'Kivipylväs rannikon merkkinä',
+          teksti:
+            'Portugalilainen merenkulkija Diogo Cão saapui Kongojoen suulle vuonna 1482 – ensimmäisenä eurooppalaisena, joka tapasi mahtavan Kongon kuningaskunnan hallitsijan. Seuraavalla matkallaan hän purjehti yhä etelämmäksi ja pystytti rannikolle kivisiä padrão-pylväitä Portugalin vaakunoin merkiksi maihinnoususta. Yksi niistä seisoo yhä Cabo Negron niemellä nykyisen Angolan rannikolla, satojen kilometrien päässä siitä, minne isoisä matkusti vuosisatoja myöhemmin. Pylväät olivat aikansa merkkipaaluja: niiden avulla seuraavat purjehtijat tiesivät, kuinka pitkälle edelliset olivat päässeet.',
+          tiedosto: 'Padrão de Diogo Cão no Cabo Negro.jpg',
+          lyhyt: 'Portugalilaisia virkamiehiä Diogo Cãon pystyttämän kivipylvään luona Cabo Negrolla vuonna 1931.',
+          selite:
+            'Mustavalkoisessa vuoden 1931 valokuvassa neljä pukeutunutta miestä – siirtomaahallinnon virkamies, pappi ja kaksi muuta – seisoo kivisen padrão-pylvään ympärillä Cabo Negron niemellä. Pylvään yläosassa on risti ja Portugalin kuninkaallinen vaakuna, joka merkitsi 1480-luvulla Diogo Cãon purjehtineen tälle rannikolle.',
+          lahde: 'Victorcouto, Wikimedia Commons (Public domain)',
+          wiki: 'Diogo Cão',
+        },
+        {
+          otsikko: 'Luanda, kolmesataa vuotta vanha satama',
+          teksti:
+            'Paulo Dias de Novais perusti São Paulo de Loandan eli nykyisen Luandan vuonna 1575 sadan portugalilaisperheen ja nelisadan sotilaan voimin. Kaupungin yllä kohoavalle kalliolle nousi jo seuraavana vuonna Fortaleza de São Miguel, tähdenmuotoinen linnoitus, josta tuli myöhemmin koko siirtokunnan hallintokeskus. Vuoteen 1873 mennessä Luanda oli jo lähes kolmesataa vuotta vanha satamakaupunki – yksi Portugalin vanhimmista ja suurimmista merentakaisista kaupungeista, jonka valkoiset muurit isoisän aikalaiset matkakertomuksissaan mainitsivat.',
+          tiedosto: 'AspectoAereodaFortalezadeSMiguel.JPG',
+          lyhyt: 'Ilmakuva Fortaleza de São Miguelin tähdenmuotoisesta linnoituksesta Luandan lahden rannalla.',
+          selite:
+            'Vanha, kellastunut ilmakuva näyttää Fortaleza de São Miguelin: tähdenmuotoisen, valkoiseksi kalkitun linnoituksen, joka kohoaa kalliolla Luandan lahden yllä. Muurien sisällä erottuvat hallintorakennukset ja niitä ympäröivät maavallit.',
+          lahde: 'Xavier Lopes, Wikimedia Commons (Public domain)',
+          wiki: 'Luanda',
+        },
+        {
+          otsikko: 'Orjasatamasta vientikaupan keskukseksi',
+          teksti:
+            'Vuosisatojen ajan Luandan tärkein vientituote oli ihminen: Angolasta kuljetettiin Atlantin yli enemmän orjia kuin mistään muusta Afrikan alueesta, etenkin Brasiliaan. Portugali kielsi kaupan laillisesti vuonna 1836, mutta salakuljetus jatkui vuosikymmeniä. Kun satamat avattiin viralliselle ulkomaankaupalle 1844, vienti kääntyi vähitellen palmuöljyyn, maapähkinäöljyyn, vahaan, norsunluuhun, puuvillaan, kahviin ja kaakaoon. Vuoteen 1850 mennessä Luanda oli kasvanut yhdeksi Portugalin suurimmista merentakaisista kaupungeista tämän uuden kaupan varassa – muutos, joka näkyi isoisän matkavuonna 1873 jo vakiintuneena arkena.',
+          tiedosto: 'AFR V4 D080 Coffee growing region of Angola.png',
+          lyhyt: 'Vanha reliefikartta Kuanza-joen laakson kukkuloista lähellä Dondoa ja Cambambea.',
+          selite:
+            '1800-luvun lopun reliefikartta esittää Kuanza-joen laakson kukkuloita ja rinteitä lähellä Dondon, Cambamben ja Massanganon kyliä – aluetta, jonka kautta kulki reitti rannikolta ylängön kahvi- ja maanviljelysalueille.',
+          lahde: 'Élisee Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'History of Angola',
+        },
+        {
+          otsikko: 'Livingstone saapuu rannalle nääntyneenä',
+          teksti:
+            'Tutkimusmatkailija David Livingstone lähti marraskuussa 1852 Linyantista, nykyisen Sambian alueelta, mukanaan 27 kololo-heimon miestä oppaina ja tulkkeina. Matka luoteeseen kohti Atlanttia osoittautui äärimmäisen raskaaksi: kuumetaudit veivät Livingstonen lähes hengiltä ennen kuin retkikunta saapui Luandaan toukokuussa 1854. Portugalilaiset hoivasivat hänet kuntoon ja antoivat uudet vaatteet riekaleiden tilalle, mutta Livingstone päätti silti kääntyä takaisin: reitti oli liian vaikea kauppareitiksi, ja hän oli luvannut viedä kololo-miehensä turvallisesti kotiin.',
+          tiedosto: 'Portrait of David Livingstone, Esqre. LL.D (4671613).jpg',
+          lyhyt: 'Aikalaislehden kaiverruskuva David Livingstonesta Englannin konsulina Itä-Afrikassa.',
+          selite:
+            'Vanhassa aikakauslehden kaiverruksessa Livingstone seisoo puvussaan pöydän vieressä, käsi hattunsa päällä – kuvateksti kertoo hänen olleen tuolloin Englannin konsuli Quelimanessa Itä-Afrikassa, muutama vuosi ennen Luandan-matkaansa.',
+          lahde: 'D. J. Pound (kaiverrus valokuvasta, kuvaaja J. J. E. Mayall), Wikimedia Commons (Public domain)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Isoisän matkavuonna alkanut ylitys',
+          teksti:
+            'Samana vuonna 1873, kun isoisä kirjoitti matkapäiväkirjaansa, Britannian maantieteellinen seura lähetti luutnantti Verney Lovett Cameronin Afrikkaan avuksi Livingstonelle. Matkalla Cameron sai tiedon, että Livingstone oli jo kuollut, ja jatkoi silti yksin mantereen halki: Tanganjika-järveltä Kongon ja Sambesin vedenjakajaa pitkin kohti länsirannikkoa. Marraskuun 28. päivänä 1875 hän saapui Atlantin rannalle Benguelan lähellä Angolassa – ensimmäisenä eurooppalaisena, joka oli ylittänyt koko päiväntasaajan Afrikan mereltä merelle.',
+          tiedosto: 'Tanganjika-Loanda.JPG',
+          lyhyt: 'Vuoden 1876 kartta Cameronin reitistä Tanganjika-järveltä Angolan rannikolle.',
+          selite:
+            'Värillisessä vuoden 1876 kartassa näkyvät Verney Lovett Cameronin reitti Tanganjika-järveltä länteen sekä alueen nimet Kongo, Angola ja Benguela – Cameronin matkan päätepiste Atlantin rannikolla.',
+          lahde: 'J. Perthes, Gotha, Wikimedia Commons (Public domain)',
+          wiki: 'Verney Lovett Cameron',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Savanni ja sen joet',
+      johdanto:
+        'Angolan sydämessä kohoava Bié-ylänkö on Afrikan salainen vesitorni: sen sateista syntyvät viisi suurta jokea, ja sen savanneilla elää maailman harvinaisimpiin lukeutuva jättiläisantilooppi.',
+      tehtava: {
+        kysymys: 'Miltä ylängöltä saavat alkunsa viisi Afrikan suurta jokea, muun muassa Kongo ja Sambesi?',
+        vaihtoehdot: ['Bié-ylänkö', 'Etiopian ylänkö', 'Atlas-vuoret', 'Drakensberg-vuoristo'],
+        oikea: 0,
+        fakta:
+          'Bié-ylänkö kattaa suuren osan Keski-Angolaa, ja sen sateista syntyvät sekä Kongo, Sambesi, Kuanza, Okavango että Cunene-joki.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ylänkö, josta viisi jokea saa alkunsa',
+          teksti:
+            'Angolan keskiosaa hallitsee Bié-ylänkö, laaja ja sateinen tasanko noin 1500–1800 metrin korkeudessa merenpinnasta. Sen savannien alta kumpuavat viiden Afrikan suuren joen latvavedet: Kongo, Sambesi, Kuanza, Okavango ja Cunene. Tutkijat kutsuvat aluetta osuvasti Angolan ylängön vesitorniksi, sillä se on ainoa Okavango-suistoon virtaavan veden lähde – suisto tunnetaan nykyään Unescon maailmanperintökohteena Botswanassa. Sadekausi kestää syyskuusta huhtikuuhun, ja juuri tuolloin ylängön purot muuttuvat jokien alkulähteiksi.',
+          tiedosto: 'Lwange river valley.jpg',
+          lyhyt: 'Kultaisen heinikon peittämä savannirinne Angolan sisämaan laaksossa.',
+          selite:
+            'Valokuvassa avautuu Angolan sisämaan laakso, jonka etualalla kultainen heinikko taipuu tuulessa ja taustalla vihreät, metsäiset kukkulat rajaavat näkymää – tyypillistä Bié-ylängön savannimaisemaa.',
+          lahde: 'Michl-beneriamba, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bié Plateau',
+        },
+        {
+          otsikko: 'Kuanza – maan pisin joki',
+          teksti:
+            'Kuanza-joki saa alkunsa Bié-ylängöltä lähellä Chitemboa ja virtaa lähes tuhat kilometriä luoteeseen ennen laskuaan Atlantille aivan Luandan eteläpuolella. Se on Angolan pisin joki ja oli 1800-luvulla tärkeä kulkuväylä sisämaahan: kanootit ja myöhemmin höyrylaivat kuljettivat sitä pitkin niin ihmisiä kuin kauppatavaraakin. Joen suulla sijaitsevat vanhat linnoituskaupungit Massangano ja Cambambe olivat jo 1600-luvulla portugalilaisten etappeja matkalla kohti ylängön viljelysalueita.',
+          tiedosto: 'Kwanza River.jpg',
+          lyhyt: 'Näkymä veneen keulalta Kuanza-joelle, jonka rantoja reunustavat tiheät puut.',
+          selite:
+            'Veneen keulasta kuvattu näkymä Kuanza-joelle: leveä, tyyni vesiuoma kiemurtelee tiheän puuston reunustamana kirkkaan sinisen taivaan alla.',
+          lahde: 'Patyfessora, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cuanza River',
+        },
+        {
+          otsikko: 'Kalandula – Afrikan toiseksi suurin putous',
+          teksti:
+            'Malanjen maakunnassa Lucala-joki syöksyy 105 metriä alas hevosenkengän muotoisena putouksena, joka on 400 metriä leveä. Vesimäärältään Kalandula on yksi Afrikan suurimmista putouksista, toiseksi suurin heti Victorian putousten jälkeen, mutta se on pysynyt harvinaisen tuntemattomana matkailijoiden keskuudessa syrjäisen sijaintinsa vuoksi. Paikalliset ovat pitäneet putousta pyhänä paikkana, jossa tehtiin rituaaleja hyvinvoinnin ja terveyden toivossa jo kauan ennen kuin ensimmäiset eurooppalaiset matkailijat löysivät sen.',
+          tiedosto: 'Kalandula Falls C.jpg',
+          lyhyt: 'Kalandulan putous syöksyy leveänä verhona sumun peittämään kuiluun.',
+          selite:
+            'Kalandulan putous syöksyy hevosenkengän muotoisena vyöhykkeenä alas kallioseinämää, ja nouseva vesisumu peittää kuilun alaosan – puusto reunustaa putouksen yläreunaa.',
+          lahde: 'Zorglub, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kalandula Falls',
+        },
+        {
+          otsikko: 'Jättiläissapeliantilooppi – kadonneeksi luultu kansallissymboli',
+          teksti:
+            'Vain Angolassa luonnonvaraisena elävä jättiläissapeliantilooppi kuvattiin tieteelle vasta 1916, kun brittiläisen rautatieinsinöörin Frank Varianin löytämä näyte päätyi Lontooseen tutkittavaksi. Uroksen mustaa turkkia, valkoista poskijuovaa ja pitkiä kaarevia sarvia on kuvattu vuoden 1953 postimerkissä. Vuosikymmenten ajan lajista ei saatu varmoja havaintoja, ja monet pitivät sitä sukupuuttoon kuolleena elinympäristön tuhoutumisen vuoksi, kunnes riistakamerat kuvasivat naaraslauman Cangandalan kansallispuistossa 2004. Vuonna 2009 lantanäytteiden DNA johti sadan kilometrin päässä eläneen uroksen jäljille, ja se lennätettiin helikopterilla naaraiden luo.',
+          tiedosto: 'Giant Sable Antelope (22018702922).jpg',
+          lyhyt: 'Luonnontieteellisen museon diorama jättiläissapeliantilooppilaumasta savannimaisemassa.',
+          selite:
+            'Museodioraamassa neljä täytettyä jättiläissapeliantilooppia seisoo ja lepää korkean ruohikon keskellä maalattua savannimaisemaa vasten; oikealla seisova uros kohottaa pitkät, kaarevat sarvensa.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Giant sable antelope',
+        },
+      ],
+    },
+  ],
+  karthago: [
+    {
+      id: 'kaupunki',
+      nimi: 'Karthago',
+      johdanto:
+        'Isoisän vuonna 1873 Karthago ei ollut avoin muistomerkkipuisto: suurin osa muinaisesta suurkaupungista lepäsi hiekan ja oliivitarhojen alla Tunisinlahden rannalla, odottaen ensimmäisiä järjestelmällisiä kaivauksia.',
+      nostot: [
+        {
+          otsikko: 'Kylpylä hiekan alla',
+          teksti:
+            'Antoninus Pius rakennutti Karthagoon 140-luvulla jaa. Afrikan mantereen suurimmat roomalaiset kylpylät: yli 200 metriä pitkä ja 100 metriä leveä rakennus kohosi 40 metrin korkeuteen ja peitti yli kolme ja puoli hehtaaria. Isoisän matkavuonna 1873 näistä jättiläismäisistä termeistä pilkisti hiekkakumpujen seasta lähinnä muutama pystyssä oleva pylväs: tanskalainen konsuli Christian Tuxen Falbe oli kartoittanut aluetta jo 1830, ja ranskalainen Charles Ernest Beulé oli kaivanut Byrsan kukkulaa 1860, mutta laajempi tutkimustyö alkoi vasta vuonna 1875 – kaksi vuotta isoisän vierailun jälkeen.',
+          tiedosto: '01996 Ruins of Antonine Baths at Carthage.jpg',
+          lyhyt: 'Antoninus Piuksen kylpylän pylväitä ja Tunisinlahti taustalla.',
+          selite:
+            'Kuvassa erottuu Antonine-kylpylöiden yksinäinen korinttilaispylväs ja rauniomuureja, taustalla Tunisinlahden sininen vesi – isoisän aikaan suurin osa rakennuksesta oli vielä hiekan peitossa.',
+          lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baths of Antoninus',
+        },
+        {
+          otsikko: 'Puunilaisten kaupunkikortteli',
+          teksti:
+            'Byrsan kukkulan laelta on kaivettu esiin 200-luvulla eaa. rakennettu puunilaiskortteli: kivijalustojen päälle nousi kerrostaloja, joiden pohjakerroksessa oli kauppoja ja yläkerroksissa asuntoja, kaikki ryhmiteltynä suorakulmaisten katujen ruudukkoon. Kun roomalaiset myöhemmin tasoittivat kukkulan huipun oman fooruminsa alle, he hautasivat koko puunilaiskorttelin paksun täyttömaan sisään sen sijaan, että olisivat purkaneet sen – niin kadut, kynnykset ja porraskivet säilyivät yllättävän ehjinä lähes 2200 vuoden ajan, kunnes arkeologit löysivät ne uudelleen 1900-luvulla.',
+          tiedosto: 'Quartier Punique.JPG',
+          lyhyt: 'Byrsan kukkulan puunilaiskorttelin raunioita ja näkymä merelle.',
+          selite:
+            'Kuva näyttää Byrsan kukkulan puunilaiskorttelin matalat kivimuurit ja etualan puun, taustalla Tunisin esikaupunkeja ja Välimeri – roomalaiset hautasivat nämä kadut oman fooruminsa alle yli 2000 vuodeksi.',
+          lahde: 'BishkekRocks, Wikimedia Commons (Public domain)',
+          wiki: 'Byrsa',
+        },
+        {
+          otsikko: 'Kaksi satamaa muurien sisällä',
+          teksti:
+            'Karthagon kauppasatama oli suorakulmainen allas, mutta sen takana piileskeli sotasatama Cothon: pyöreä allas, jonka keskellä olevalle saarelle mahtui laivavajoja noin 220 sotalaivalle kerrallaan. Molemmat altaat kaivettiin muurien sisäpuolelle ja suljettiin raskailla ketjuilla, jotta vihollinen ei pääsisi yllättämään laivastoa. Nykyisin altaiden paikalla on vain pieniä lampia keskellä Karthagon Salammbön kaupunginosaa, mutta vuonna 1922 otetusta ilmakuvasta erottuu yhä altaiden tarkka pyöreä ja suorakulmainen muoto – todiste siitä, miten tarkkaan koko satamakompleksi oli aikoinaan suunniteltu.',
+          tiedosto: 'Carthage - Punic port.jpg',
+          lyhyt: 'Karthagon puunilaisen sotasataman jäänteitä nurmikentällä.',
+          selite:
+            'Kuvassa näkyy ruohottunut kenttä, jolla seisoo kivipylväitä ja matalia muurinjäänteitä – näitä pylväitä kannattelivat aikoinaan sotasataman laivavajat, joihin mahtui parisataa alusta.',
+          lahde: 'Neil Rickards, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Carthage Punic Ports',
+        },
+        {
+          otsikko: 'Englantilaisen kaivajan mosaiikit',
+          teksti:
+            'Marraskuussa 1856 englantilainen matkakirjailija ja pastori Nathan Davis aloitti Britannian ulkoministeriön rahoittamat kaivaukset Karthagossa. Tammikuussa 1857 hän löysi ensimmäisen suuren löytönsä, kuukausia ja vuodenaikoja kuvaavan mosaiikkilattian, ja kehitti samalla menetelmän, jolla herkät mosaiikit voitiin irrottaa maasta rikkomatta niitä – tekniikka on käytössä yhä. Vuosina 1857–1860 Lontoon British Museumiin saapui Karthagosta kymmeniä laatikollisia löytöjä, ja isoisän matkavuoteen 1873 mennessä osa kaupungin kauneimmista roomalaisista lattiakuvioista oli jo asetettu näytteille Englannissa, kaukana omalta rannaltaan.',
+          tiedosto: 'Dolphin mosaic from Carthage, British Museum.jpg',
+          lyhyt: 'Roomalaisajan delfiinimosaiikki British Museumin kokoelmasta.',
+          selite:
+            'Valokuvassa on kehystetty mosaiikkipaneeli, jossa kaksi tyyliteltyä delfiiniä uiskentelee vastakkain – tällaisia Karthagon roomalaisista huviloista löytyneitä lattiakuvioita Nathan Davis irrotti ja lähetti Lontooseen 1850-luvulla.',
+          lahde: '14GTR, Wikimedia Commons (CC0)',
+          wiki: 'Nathan Davis (traveller)',
+        },
+        {
+          otsikko: 'Katedraali Byrsan huipulle',
+          teksti:
+            'Vain runsas vuosikymmen isoisän vierailun jälkeen Byrsan kukkulan laelle nousi täysin uusi rakennus: Pyhän Ludvigin katedraali, jonka arkkitehti Joseph Pougnet suunnitteli vanhan puunilaisen parannusjumala Eshmunin temppelin paikalle. Rakennustyöt alkoivat 1884 ja valmistuivat 1890, ja lopputulos yhdisti bysanttilaisia kupoleita maurilaisiin kaariin ja koristeikkoihin. Kirkko lakkautettiin jumalanpalveluskäytöstä 1993 ja sai uuden nimen Acropolium; nykyisin sen holvien alla järjestetään konsertteja eikä messuja, ja rakennus on yhä yksi Karthagon korkeimmista maamerkeistä merelle päin katsottaessa.',
+          tiedosto: 'Acropolium de Carthage 01.jpg',
+          lyhyt: 'Byrsan kukkulan huipulla kohoava entinen Pyhän Ludvigin katedraali.',
+          selite:
+            'Kuvassa auringonlaskun valaisema Acropolium-rakennus kaksine torneineen ja kupoleineen; edustalla pysäköidyt autot muistuttavat, että rakennus palvelee nykyisin konserttisalina, ei kirkkona.',
+          lahde: 'Seif Allah Bouneb, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Acropolium of Carthage',
+        },
+        {
+          otsikko: 'Kristityn Afrikan suurin basilika',
+          teksti:
+            'Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.',
+          tiedosto: 'Basilica Damous El Karita - view from the side of the semi- circular atrium.jpg',
+          lyhyt: 'Damous el Karitan basilikan pylväskenttää ja taustalla moskeija.',
+          selite:
+            'Kuvassa avautuu laaja, autio kenttä täynnä matalia pylväänkatkelmia ja muurinpohjia – jäljellä olevat pylväät merkitsevät entisen valtavan kristillisen basilikan yhdeksää tai yhtätoista pylväsriviä, taustalla nykyinen moskeija.',
+          lahde: 'Aymen FANTAR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Basilica of Damous El Karita',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Karthagon nousu ja tuho',
+      johdanto:
+        'Karthago syntyi legendan mukaan pakolaiskuningattaren siirtokunnasta ja kasvoi Rooman pahimmaksi kilpailijaksi, kunnes kolme raskasta sotaa päättyivät kaupungin täydelliseen tuhoon vuonna 146 eaa.',
+      tehtava: {
+        kysymys:
+          'Minä vuonna tarina Karthagon raunioiden suolaamisesta painettiin ensimmäisen kerran – yli 2000 vuotta itse tuhon jälkeen?',
+        vaihtoehdot: ['146 eaa.', '44 eaa.', '1858', '1930'],
+        oikea: 2,
+        fakta:
+          'Väite Karthagon raunioiden suolaamisesta ilmestyi painettuna vasta yhdysvaltalaisessa tietosanakirjassa vuonna 1858, eikä yksikään antiikin ajan lähde mainitse asiaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Härännahan kokoinen valtakunta',
+          teksti:
+            'Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.',
+          tiedosto: 'Turner Dido Building Carthage.jpg',
+          lyhyt: 'Turnerin maalaus kuvitteellisesta Karthagon rakentamisesta iltahämärässä.',
+          selite:
+            'Maalauksessa auringonlasku heijastuu satama-altaan veteen, jonka reunoja koristavat kuvitteelliset marmoripalatsit; etualalla seisoskelevat hahmot kuvaavat Karthagon rakentajia kuningatar Didon uudessa kaupungissa.',
+          lahde: 'J. M. W. Turner, Wikimedia Commons (Public domain)',
+          wiki: 'Dido building Carthage',
+        },
+        {
+          otsikko: 'Norsut yli Alppien',
+          teksti:
+            'Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.',
+          tiedosto: 'Buste Hannibal Barca.jpg',
+          lyhyt: 'Perinteisesti Hannibaliksi tulkittu marmorinen rintakuva Bardon museossa.',
+          selite:
+            'Rintakuva esittää parrakasta, päähineeseen puettua miestä; taustalla erottuu roomalaisajan mosaiikin reunus – patsas on perinteisesti yhdistetty Hannibaliin, vaikka varmaa tunnistusta ei ole.',
+          lahde: 'Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hannibal',
+        },
+        {
+          otsikko: 'Kaupunki joka ei noussut enää',
+          teksti:
+            'Kolmas puunilaissota (149–146 eaa.) päättyi lähes kolme vuotta kestäneeseen piiritykseen ja Karthagon täydelliseen tuhoon: roomalaiset polttivat kaupungin ja myivät noin 50 000 eloonjäänyttä orjiksi. Kun sotapäällikkö Gaius Marius pakeni Roomasta vuonna 88 eaa., hänet tavattiin istumasta yksin raunioiden keskellä – lähes sata vuotta tuhon jälkeen kivikasat muistuttivat yhä entisestä suurkaupungista. Legenda raunioiden suolaamisesta on sekin vain tarina: väite painettiin ensimmäisen kerran yhdysvaltalaisessa tietosanakirjassa vasta vuonna 1858, eikä yksikään antiikin lähde mainitse suolaa.',
+          tiedosto: 'John Vanderlyn - Caius Marius Amid the Ruins of Carthage - Google Art Project.jpg',
+          lyhyt: 'Vanderlynin maalaus Gaius Mariuksesta Karthagon raunioilla.',
+          selite:
+            'Maalauksessa punaviittainen mies istuu ajatuksissaan pylväänpätkän vieressä autiossa maisemassa – kohtaus kuvaa perimätietoa, jonka mukaan pakolainen Marius löysi lohtua vuosikymmeniä aiemmin tuhotun Karthagon raunioista.',
+          lahde: 'John Vanderlyn, Wikimedia Commons (Public domain)',
+          wiki: 'Gaius Marius',
+        },
+        {
+          otsikko: 'Vesi sadan mailin päästä',
+          teksti:
+            'Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.',
+          tiedosto: 'Zaghouan Aqueduct, built by Hadrian from Zaghouan to Carthage, Tunisia - 52764374311.jpg',
+          lyhyt: 'Hadrianuksen aikaisen Zaghouan–Karthago-vesijohdon holvikaarikatkelma.',
+          selite:
+            'Kuvassa erottuu yksittäinen hiekkakivinen holvikaari mäntyjen keskellä – tällaisia kaaria seurasi peräkkäin kymmenien kilometrien matkalla, kun vesijohto kuljetti vettä Zaghouanin vuorilta aina Karthagoon saakka.',
+          lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Zaghouan Aqueduct',
+        },
+      ],
+    },
+  ],
+  tanganjika: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tanganjika',
+      johdanto:
+        'Tanganjikajärven itärannalla sijaitseva kauppakylä Ujiji oli 1800-luvulla karavaanien päätepiste — ja marraskuussa 1871 näyttämö kohtaamiselle, josta tuli yksi löytöretkien historian tunnetuimmista hetkistä.',
+      nostot: [
+        {
+          otsikko: 'Järvi jota Eurooppa ei tuntenut',
+          teksti:
+            '14. helmikuuta 1858 brittiläiset upseerit Richard Burton ja John Hanning Speke saapuivat Ujijin kylään ensimmäisinä eurooppalaisina, jotka näkivät Tanganjikajärven. He olivat lähteneet etsimään Niilin lähdettä Sansibarilta kuukausia aiemmin, ja matka oli ollut raskas: molemmat sairastuivat vakavasti. Burton uskoi löytäneensä Niilin alkulähteen, mutta erehtyi — todellinen lähde löytyi vasta myöhemmin toisesta järvestä, jonka Speke nimesi kuningatar Viktorian mukaan. Kiista miesten välillä jatkui vuosia.',
+          tiedosto: 'Burton and Speke Monument in Ujiji.jpg',
+          lyhyt: 'Muistolaatta Ujijissa merkitsee päivää, jolloin Burton ja Speke löysivät järven 1858.',
+          selite:
+            'Valokuva näyttää kuluneen kivisen muistolaatan Ujijissa; sen teksti kertoo englanniksi ja swahiliksi, että Burton ja Speke saapuivat paikalle 14. helmikuuta 1858 ja tutkivat sieltä käsin Tanganjikajärveä.',
+          lahde: 'Michael Branz, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'John Hanning Speke',
+        },
+        {
+          otsikko: 'Kauppakylä järven rannalla',
+          teksti:
+            'Ujiji oli 1800-luvun puolivälissä yksi Itä-Afrikan vilkkaimmista kauppapaikoista: Sansibarin sulttaanin alaisuudessa toimineet arabikauppiaat kuljettivat sen kautta norsunluuta ja orjia sisämaasta rannikolle saakka. Kylän kivitaloja rakennettiin swahilityyliin, ja sen kadut täyttyivät karavaanien kantajista, kauppiaista ja matkaajista. Isoisän matkavuonna 1873 Ujiji oli jo tunnettu koko Itä-Afrikassa juuri kaksi vuotta aiemmin tapahtuneesta kuuluisasta tapaamisesta rannallaan.',
+          tiedosto: 'Swahili House in Kasingirima Ward, Ujiji.jpg',
+          lyhyt: 'Swahilityylinen talo Ujijissa muistuttaa kylän menneisyydestä vilkkaana kauppapaikkana.',
+          selite:
+            'Valokuva esittää valkoiseksi rapatun swahilityylisen talon kuistia aaltopeltikatoksineen ja kaksoisovineen Ujijin Kasingiriman kaupunginosassa.',
+          lahde: 'Halidtz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ujiji',
+        },
+        {
+          otsikko: 'Kadonnut lähetyssaarnaaja',
+          teksti:
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone oli etsinyt Niilin lähdettä Keski-Afrikassa vuodesta 1866 lähtien, eikä hänestä ollut kuulunut mitään vuosiin. Lääkkeet olivat loppuneet, ja hän saapui lokakuussa 1871 Ujijiin nääntyneenä ja sairaana punatautiin. Euroopassa häntä pidettiin jo lähes kuolleena. Yhdysvaltalainen sanomalehti New York Herald oli kuitenkin lähettänyt toimittaja Henry Morton Stanleyn etsimään kadonnutta miestä — retkikunta, joka lähestyi Ujijiä juuri samoihin aikoihin.',
+          tiedosto: 'Lake Tanganyika.jpg',
+          lyhyt: 'Näkymä Tanganjikajärvelle Kongon puolelta, ei kaukana Livingstonen 1871 reitiltä.',
+          selite:
+            'Valokuva on otettu Kongon puoleiselta kukkulalta: etualalla kasvaa palmuja ja peltikattoisia taloja, ja niiden takana avautuu Tanganjikajärvi ja Tansanian puoleiset vuoret sumuisessa etäisyydessä.',
+          lahde: 'Orrling, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: '"Tohtori Livingstone, oletan?"',
+          teksti:
+            '10. marraskuuta 1871 Stanley saapui karavaaninsa kanssa Ujijiin ja näki väkijoukossa harmaapartaisen valkoisen miehen. Hän astui esiin, nosti hattuaan ja lausui myöhemmin maailmankuuluksi tulleet sanat: "Tohtori Livingstone, oletan?" Stanley jäi Ujijiin neljäksi kuukaudeksi ja pyysi lopuksi Livingstonea palaamaan kanssaan Eurooppaan, mutta tämä kieltäytyi jatkaakseen tutkimustyötään. He eivät tavanneet enää koskaan: Livingstone kuoli puolitoista vuotta myöhemmin nykyisen Sambian alueella.',
+          tiedosto: 'Henry Morton Stanley meeting David Livingstone at Ujiji, in Wellcome V0006855.jpg',
+          lyhyt: 'Stanleyn tilaama kaiverrus kuvaa hetkeä, jolloin hän löysi Livingstonen Ujijistä 1871.',
+          selite:
+            'Väritetty puupiirros näyttää Stanleyn nostavan hattuaan harmaapartaiselle Livingstonelle keskellä olkia kantavien arabikauppiaiden ja kantajien joukkoa; taustalla liehuu Yhdysvaltain lippu ja olkikattoisia majoja.',
+          lahde: 'H. Hall (Wellcome Collection), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Henry Morton Stanley',
+        },
+        {
+          otsikko: 'Mangopuu joka muisti tapaamisen',
+          teksti:
+            'Livingstone ja Stanley istuttivat tapaamisensa muistoksi mangopuun Ujijin rantaan. Vuosikymmeniä myöhemmin paikalle rakennettiin kivinen muistomerkki puun ympärille — työn tekivät belgialaiset joukot ensimmäisen maailmansodan Itä-Afrikan sotanäyttämön aikana, kun ne miehittivät kylän. 1900-luvun alussa otettu valokuva muistomerkistä päätyi National Geographic -lehteen saakka, ja se muistuttaa yhä siitä, kuinka pieni kyläkohtaus kasvoi maailmanlaajuiseksi tarinaksi.',
+          tiedosto:
+            'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
+          lyhyt: 'Vanha valokuva Livingstonen ja Stanleyn tapaamispaikan muistomerkistä mangopuun juurella.',
+          selite:
+            'Vanha mustavalkoinen valokuva National Geographic -lehden sivulta näyttää ison puunrungon ympärille rakennetun kivimuistomerkin, jonka kylkeen on kaiverrettu "LIVINGSTONE STANLEY 1871"; vieressä istuu paikallisia lapsia.',
+          lahde: 'Albert Percy Godber, Wikimedia Commons (Public domain)',
+          wiki: 'Livingstone–Stanley Monument',
+        },
+        {
+          otsikko: 'Vanha höyrylaiva purjehtii yhä',
+          teksti:
+            'Ujijin kaksoiskaupungissa Kigomassa satamassa lepää yhä laiva, jonka historia ulottuu maailmansotiin: MV Liemba rakennettiin Saksassa 1913 sota-alukseksi nimellä Graf von Goetzen ja tuotiin osina Tanganjikajärvelle. Saksalaiset upottivat sen itse vuonna 1916 brittien tieltä, mutta laiva nostettiin myöhemmin pintaan ja otettiin uudelleen käyttöön. Yli sata vuotta myöhemmin se kuljettaa yhä matkustajia ja rahtia järven rannoilla — yksi maailman vanhimmista edelleen liikennöivistä laivoista.',
+          tiedosto: 'MV.Liemba.jpg',
+          lyhyt: 'MV Liemba, entinen saksalainen sota-alus, purjehtii Tanganjikajärvellä yhä tänään.',
+          selite:
+            'Valokuva Kigoman satamasta näyttää valkoisen ja punaisen matkustaja-aluksen laiturissa vanhemman, ruosteisen laivanrungon vieressä; taustalla siintää järvi ja rantakylän rakennuksia.',
+          lahde: 'Erasmus Kamugisha, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'MV Liemba',
+        },
+      ],
+    },
+    {
+      id: 'kirjoahvenet',
+      nimi: 'Tanganjikan kirjoahvenet',
+      johdanto:
+        'Tanganjikajärvi on yksi maailman vanhimmista ja syvimmistä järvistä, ja miljoonien vuosien eristys on synnyttänyt siihen satoja kirjoahvenlajeja, joita ei tavata missään muualla maapallolla.',
+      tehtava: {
+        kysymys:
+          'Kuinka suuri osa Tanganjikajärven kirjoahvenlajeista elää vain tässä yhdessä järvessä eikä muualla maailmassa?',
+        vaihtoehdot: [
+          'Noin joka kymmenes laji',
+          'Noin puolet lajeista',
+          'Lähes kaikki, noin 98 prosenttia',
+          'Ei yksikään laji',
+        ],
+        oikea: 2,
+        fakta:
+          'Järven ikä ja eristyneisyys ovat tehneet siitä evoluutiotutkijoiden suosikkikohteen, jossa uusia lajeja on syntynyt jatkuvasti miljoonien vuosien ajan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Toiseksi syvin, lähes vanhin',
+          teksti:
+            'Tanganjikajärvi syntyi Itä-Afrikan hautavajoamaan tektonisten liikkeiden muovaamana ja on iältään 9–12 miljoonaa vuotta — yksi vain paristakymmenestä järvestä maailmassa, jotka ovat yli miljoonan vuoden ikäisiä. Se on tilavuudeltaan maailman toiseksi suurin ja syvyydeltään toiseksi syvin makean veden järvi heti Siperian Baikaljärven jälkeen: syvimmillään vettä on lähes 1 500 metriä. Järvi venyy 673 kilometrin matkalta neljän maan — Tansanian, Kongon demokraattisen tasavallan, Burundin ja Sambian — rajojen halki.',
+          tiedosto: 'Sunset over Lake Tanganyika (5943082022).jpg',
+          lyhyt: 'Iltahämärässä otettu valokuva Tanganjikajärvestä, jonka horisontissa näkyy veneiden valoja.',
+          selite:
+            'Valokuva on otettu hämärän laskeuduttua järven rannalta: taivas ja vesi hehkuvat tummansinisinä, ja horisontissa näkyy muutamia pieniä valopisteitä, jotka ovat kongolaisten kalastajaveneiden lyhtyjä.',
+          lahde: 'Felix Dance, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lake Tanganyika',
+        },
+        {
+          otsikko: 'Sadat lajit, jotka syntyivät samassa järvessä',
+          teksti:
+            'Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.',
+          tiedosto: 'Tropheus duboisi Schoenbrunn2008.jpg',
+          lyhyt: 'Nuori Tropheus duboisi -kirjoahven kalliokivikossa.',
+          selite:
+            'Lähikuva harmaanvalkoisesta Tropheus duboisi -kirjoahvenesta, jonka kyljessä näkyy vaalea poikkijuova; taustalla erottuu sammaloitunut kivi, jollaisia laji suosii luonnossa levän kaapimiseen.',
+          lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tropheus duboisi',
+        },
+        {
+          otsikko: 'Järven jättiläinen',
+          teksti:
+            'Boulengerochromis microlepis on maailman suurin tunnettu kirjoahvenlaji: se voi kasvaa lähes metrin mittaiseksi ja saalistaa muita kaloja. Molemmat vanhemmat kaivavat pohjaan suuren pesäkuopan ja vartioivat siinä satoja poikasiaan yhdessä, kunnes nämä ovat tarpeeksi isoja pärjätäkseen omillaan. Poikaset pysyttelevät tiiviinä parvena suojautuakseen saalistajilta, ja sukeltajat ovat kuvanneet öisin, kuinka uteliaat nuoret kalat tulevat tarkastelemaan valoja lähempää vanhempiensa pysytellessä taka-alalla.',
+          tiedosto: 'Curious young cichlids.jpg',
+          lyhyt: 'Nuorten jättiläiskirjoahventen parvi liikkuu tiiviisti hiekkapohjan yllä yöllä.',
+          selite:
+            'Yöllinen sukellusvalokuva näyttää sadoittain pieniä raidallisia Boulengerochromis microlepis -poikasia tiiviinä parvena hiekkapohjan yläpuolella; sukeltajan valo heijastuu niiden kyljistä.',
+          lahde: 'Cethuyghe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Giant cichlid',
+        },
+        {
+          otsikko: 'Kalat jotka syövät suomuja',
+          teksti:
+            'Perissodus microlepis on ainutlaatuinen kirjoahven, joka on erikoistunut syömään muiden kalojen suomuja eikä juuri muuta. Sen suu on epäsymmetrinen: puolella yksilöistä leuka kääntyy vasemmalle ja puolella oikealle, mikä helpottaa hyökkäämistä saaliin vastakkaiselta kyljeltä yllättäen. Tämä jako pysyy luonnossa lähes tasan puolessa ja puolessa, koska saalis oppii varomaan sitä puolta, josta hyökkäyksiä tulee eniten — harvinaisempi suunta on aina hetkellisesti tehokkaampi.',
+          tiedosto: 'Perissodus microlepis 1.jpg',
+          lyhyt: 'Villinä pyydystetty Perissodus microlepis -koiras, suomuja syövä kirjoahven.',
+          selite:
+            'Valokuva näyttää sivuttain kuvatun, vaaleansinisillä pilkuilla kuvioidun Perissodus microlepis -kalan; sen pitkänomainen ruumis ja terävät evät erottuvat selvästi vaaleaa taustaa vasten.',
+          lahde: 'Henrik Kusche, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Perissodus microlepis',
+        },
+        {
+          otsikko: 'Etana antoi kodin',
+          teksti:
+            'Neolamprologus multifasciatus on luultavasti maailman pienin tunnettu kirjoahvenlaji: villinä elävä koiraskin kasvaa vain noin kolme senttimetriä pitkäksi. Se asuttaa niin sanottuja simpukkapenkkoja, joille on kertynyt tuhansien vuosien aikana miljoonia tyhjiä Neothauma-etanankuoria järven pohjalle. Jokainen kala kaivaa itselleen oman kuorensa ja puolustaa sitä ja pientä reviiriään kiivaasti jopa itseään suurempia tunkeilijoita vastaan, vaikka koko reviiri saattaa olla vain kämmenen levyinen.',
+          tiedosto: 'Neolamprologus multifasciatus male.JPG',
+          lyhyt: 'Neolamprologus multifasciatus -kirjoahvenia etanankuorten lomassa akvaariossa.',
+          selite:
+            'Valokuvassa uiskentelee muutama pieni, vaaleanruskea Neolamprologus multifasciatus -kala kasvien ja kivien peittämän pohjan yllä; villinä laji asuttaa vastaavanlaisia tyhjiä etanankuoria järven pohjassa.',
+          lahde: 'Richard A. Ingebrigtsen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Neolamprologus multifasciatus',
+        },
+      ],
+    },
+  ],
+  churchill: [
+    {
+      id: 'kaupunki',
+      nimi: 'Churchill',
+      johdanto:
+        'Churchill oli isoisän matkavuonna 1873 pieni turkiskauppa-asema Hudsoninlahden rannalla, jota vartioi kivilinnoitus — Manitoba oli liittynyt Kanadaan vasta kolme vuotta aiemmin, eikä rautatietä ollut vielä lainkaan.',
+      nostot: [
+        {
+          otsikko: 'Turkiskauppa-asema Hudsoninlahdella',
+          teksti:
+            'Vuonna 1717 Hudson’s Bay Company pystytti Churchillin joen suulle hirsisen kauppa-aseman, jota johti James Knight ja jonka nimi tuli yhtiön silloisen kuvernöörin John Churchillin mukaan. Paikalle virtasi vuosittain chipewyan- ja cree-metsästäjien tuomia turkiksia, jotka vaihdettiin veitsiin, kattiloihin ja huopiin. Isoisän matkavuonna 1873 Churchill oli yhä pieni turkiskauppa-asema: Manitoba oli liittynyt Kanadaan provinssina vasta kolme vuotta aiemmin, heinäkuussa 1870, eikä alueelle johtanut vielä ainuttakaan rautatietä.',
+          tiedosto: 'Prince of Wales Fort - Churchill, Manitoba (26426158577).jpg',
+          lyhyt: 'Prince of Wales Fortin kulmabastioni Hudsoninlahden rannalla.',
+          selite:
+            'Valokuva näyttää linnoituksen kivisen kulmabastionin ja sen takana avautuvan Hudsoninlahden — tälle rannalle Hudson’s Bay Company perusti ensimmäisen kauppapaikkansa vuonna 1717.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+        {
+          otsikko: 'Linnoitus jota rakennettiin kymmenen vuotta',
+          teksti:
+            'Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.',
+          tiedosto: 'Prince of Wales Fort - Churchill, Manitoba (40402156465).jpg',
+          lyhyt: 'Prince of Wales Fortin muuri tykkien ampuma-aukkoineen.',
+          selite:
+            'Kuvassa näkyy linnoituksen matala kivimuuri, jonka aukoista tykit aikanaan tähtäsivät merelle; taustalla erottuu vielä muutama alkuperäinen tykki muurin päällä.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Prince of Wales Fort',
+        },
+        {
+          otsikko: 'Kivimuuriin kaiverrettu nimi',
+          teksti:
+            'Linnoituksen kivimuuriin on kaiverrettu pieni, siisti teksti: "H. ROBINSON 1733". Kuka tahansa rakennustöissä ollut mies saattoi jättää tällaisen jäljen työstään kiveen, ja Robinsonin nimikirjoitus on säilynyt luettavana lähes 300 vuotta, vaikka suuri osa linnoituksen historiasta tunnetaan vain asiakirjoista. Se muistuttaa, että kivimuurit eivät nousseet itsestään: jokainen lohkare piti louhia, kuljettaa ja muurata paikalleen ihmisvoimin subarktisen kesän lyhyinä kuukausina. Tällaisia nimikirjoituksia on löydetty muureista useita, ja ne ovat tavallisten rakentajien ainoa säilynyt jälki suurhankkeesta.',
+          tiedosto: 'H Robinson 1733 Graffiti at Prince of Wales Fort - Churchill, Manitoba (40402090835).jpg',
+          lyhyt: 'Kivimuuriin vuonna 1733 kaiverrettu rakentajan nimikirjoitus.',
+          selite:
+            'Lähikuva linnoituksen kivimuuriin kaiverretusta tekstistä "H. ROBINSON 1733" — yhden rakennustöissä olleen miehen jättämä nimikirjoitus.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Prince of Wales Fort',
+        },
+        {
+          otsikko: 'Samuel Hearne kohti Jäämerta',
+          teksti:
+            'Fort Prince of Walesin kauppias Samuel Hearne lähti joulukuussa 1770 kolmannelle yritykselleen löytää kuparia pohjoisesta — kahden aiemman, oppaattoman matkan epäonnistuttua. Nyt mukana kulki chipewyan-päällikkö Matonabbee, jonka taidot pitivät retkikunnan hengissä. Heinäkuun 14. päivänä 1771 miehet saapuivat Coppermine-joen suulle, ja Hearnesta tuli ensimmäinen eurooppalainen, joka saavutti Jäämeren rannikon maitse. Matka oli raskas: Hearne käveli retkellään arviolta 8 000 kilometriä ja palasi Fort Prince of Walesiin vasta kesäkuussa 1772. Kuparia löytyi lopulta pettymykseksi vain yksi nelikiloinen kimpale.',
+          tiedosto: 'Discovery of Coppermine River by Samuel Hearne, 1771, by Frank Johnston, ca. 1922.jpg',
+          lyhyt: 'Frank Johnstonin maalaus Matonabbeen ja Samuel Hearnen retkikunnasta 1771.',
+          selite:
+            'Frank Johnstonin 1920-luvun maalaus kuvaa hetkeä, jolloin opas Matonabbee osoittaa nuorelle Samuel Hearnelle suuntaa kohti Coppermine-jokea vuonna 1771.',
+          lahde: 'Frank Johnston, Wikimedia Commons (Public domain)',
+          wiki: 'Samuel Hearne',
+        },
+        {
+          otsikko: 'Linnake antautuu ilman taistelua',
+          teksti:
+            'Elokuun 8. päivänä 1782 kolme ranskalaista sotalaivaa ja noin 290 sotilasta komentaja Jean-François de La Pérousen johdolla ilmestyi Hudsoninlahdelle. Fort Prince of Walesin kuvernöörinä tuolloin toiminut Samuel Hearne komensi vain kourallista miehiä eikä nähnyt järkeä puolustautua toivottomia lukuja vastaan: hän antautui ilman yhtään laukausta. Ranskalaiset yrittivät tuhota linnoituksen räjäyttämällä sen muureja, mutta paksu kivi kesti pahimman, ja rauniot seisovat paikallaan yhä tänäänkin. Turkiskaupasta riippuvaiset alkuperäiskansat kärsivät pahiten: kun kauppatavaraa ei enää saapunut, monet joutuivat nälänhätään sinä talvena.',
+          tiedosto: 'Vue du fort prince de Walles dans la baie d’Hudson en 1782.jpg',
+          lyhyt: '1700-luvun kaiverrus Prince of Wales Fortista talvisessa maisemassa.',
+          selite:
+            'Vanha kaiverrus näyttää Prince of Wales Fortin talvisena, brittilipun vielä liehuessa muurien yllä ennen linnoituksen antautumista ranskalaisille elokuussa 1782.',
+          lahde: 'Lieutenant de frégate Lefebvre, Wikimedia Commons (Public domain)',
+          wiki: 'Jean-François de Galaup, comte de Lapérouse',
+        },
+        {
+          otsikko: 'Rautatien pääteasema',
+          teksti:
+            'Vielä vuosikymmeniä isoisän matkan jälkeen Churchilliin ei johtanut rautatietä: viljankasvattajat halusivat oman satamansa Hudsoninlahdelle murtaakseen Canadian Pacific -rautatien yksinvallan, ja ensin valittiin Port Nelson vuonna 1912. Hanke osoittautui liian vaikeaksi, ja työt siirrettiin Churchilliin, jonne rata valmistui vasta vuonna 1929 — yli 200 vuotta sen jälkeen, kun Hudson’s Bay Company oli pystyttänyt paikalle ensimmäisen kauppa-asemansa. Radasta tuli mantereen pohjoisin rautatieyhteys, joka päättyy suoraan Churchilliin: sen jälkeen ei ole enää kiskoja, vain jäätyvä lahti.',
+          tiedosto: 'End of the line, Churchill Manitoba (30352378547).jpg',
+          lyhyt: 'Hudson Bay Railwayn kiskot päättyvät Churchilliin Hudsoninlahden rannalla.',
+          selite:
+            'Valokuva näyttää kiskot, jotka kapenevat kohti horisonttia ja päättyvät Churchilliin — kaukana erottuu kaupungin viljasiilo, radan rakentamisen 1929 alkuperäinen syy.',
+          lahde: 'Mike Beauregard, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hudson Bay Railway',
+        },
+      ],
+    },
+    {
+      id: 'jaakarhut',
+      nimi: 'Jääkarhujen pääkaupunki',
+      johdanto:
+        'Joka syksy satoja jääkarhuja kerääntyy Churchillin edustalle odottamaan Hudsoninlahden jäätymistä, sillä juuri täällä jää muodostuu myöhemmin kuin muualla arktisella alueella — siksi kaupunkia kutsutaan jääkarhujen pääkaupungiksi.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuorokautta jääkarhu voi tutkimusten mukaan uida keskimäärin yhtäjaksoisesti?',
+        vaihtoehdot: ['Noin yhden vuorokauden', 'Noin 3,4 vuorokautta', 'Noin 10 vuorokautta', 'Noin kolme viikkoa'],
+        oikea: 1,
+        fakta:
+          'GPS-pannoilla tehtyjen mittausten mukaan jääkarhu voi uida keskimäärin 3,4 vuorokautta yhtäjaksoisesti ja edetä samalla noin 154 kilometriä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jääkarhujen pääkaupunki',
+          teksti:
+            'Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista "jääkarhujen pääkaupungin", ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.',
+          tiedosto: 'Polar Bear and Tundra Buggy - Churchill, Manitoba (26427267077).jpg',
+          lyhyt: 'Tundrabussi ja jääkarhu kohtaavat Churchillin rannikolla syksyllä.',
+          selite:
+            'Kuvassa suurpyöräinen tundrabussi kohtaa jääkarhun rannan tuntumassa — tällaisilla ajoneuvoilla matkailijat pääsevät katsomaan karhuja turvallisesti syksyn kokoontumisen aikaan.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+        {
+          otsikko: 'Karhut odottavat rannalla',
+          teksti:
+            'Odotusaika on karhuille raskasta paastoa: ne eivät voi metsästää hylkeitä ennen kuin jää kantaa, joten energiaa on säästettävä. Monet karhut makaavat suurimman osan päivästä paikoillaan pensaikkojen tai kivien suojassa, liikkuen vain vähän ja hidastaen aineenvaihduntaansa lähes horrosta muistuttavalla tavalla. Emo saattaa levätä samalla alueella viikkoja poikastensa kanssa, sillä turha liikkuminen kuluttaisi rasvavarastoja, joiden varassa koko perhe on elänyt jo useita kuukausia. Kun ensimmäinen kunnollinen jää vihdoin muodostuu, karhut lähtevät liikkeelle lähes saman tien ja suuntaavat hylkeenpyyntiin.',
+          tiedosto: 'Polar bears in Churchill, Manitoba, October 2013 (11811743773).jpg',
+          lyhyt: 'Jääkarhu lepää lumisella rannalla odottaen lahden jäätymistä.',
+          selite:
+            'Lokakuinen kuva näyttää jääkarhun lepäämässä lumisella rannalla pensaikon suojassa — tyypillinen näky odotusaikana ennen lahden jäätymistä.',
+          lahde: 'Josh Campbell, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Jää joka viipyy',
+          teksti:
+            'Hudsoninlahti on valtava, matala merialue, jonka rannikolla useat joet — niiden joukossa Churchill-joki — laskevat mereen makeaa vettä. Makea vesi jäätyy suolaista merivettä hitaammin, ja rannikon virtaukset pitävät veden liikkeessä pidempään kuin ulompana lahdella. Yhdessä nämä tekijät viivästyttävät jään muodostumista juuri Churchillin edustalla verrattuna moniin muihin arktisiin rannikkoihin. Karhuille tämä tarkoittaa pidempää odotusta, mutta myös sitä, että ne kerääntyvät tälle kapealle rannikkokaistaleelle poikkeuksellisen tiheästi — ja siksi tutkijatkin ovat seuranneet Churchillin jääkarhuja pidempään kuin lähes minkään muun populaation.',
+          tiedosto: 'Sea ice finally starting to form (6375063163).jpg',
+          lyhyt: 'Ohutta sohjojäätä muodostumassa Hudsoninlahden rantavedessä.',
+          selite:
+            'Kuva näyttää Hudsoninlahden rantaa, jolla ohut, sohjoinen jää on vasta alkamassa muodostua vedenpintaan — tällaista jäätä jääkarhut odottavat voidakseen lähteä hylkeenpyyntiin.',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hudson Bay',
+        },
+        {
+          otsikko: 'Uimari joka ei väsy',
+          teksti:
+            'Jääkarhu on erinomainen uimari: sen eturaajat toimivat lähes airojen tavoin, ja paksu rasvakerros pitää sen kelluvana kylmässä vedessä. Tutkijoiden GPS-pannoilla mittaamana karhu voi uida keskimäärin peräti 3,4 vuorokautta yhtäjaksoisesti ja edetä samalla noin 154 kilometriä ilman lepotaukoa, nopeuden ollessa noin 6 kilometriä tunnissa. Pitkät uinnit ovat karhulle silti raskaita, ja etenkin emojen on täytynyt viime vuosikymmeninä uida yhä pidempiä matkoja jään vetäytyessä yhä kauemmas rannikosta. Osa tutkijoista pitää pitkittyviä uintimatkoja yhtenä merkkinä siitä, miten ilmaston lämpeneminen muuttaa karhujen elinympäristöä.',
+          tiedosto: 'Polar Bear in Hudson Bay - Churchill, Manitoba (27426282558).jpg',
+          lyhyt: 'Jääkarhu uimassa Hudsoninlahden matalassa rantavedessä.',
+          selite:
+            'Ilmakuvassa jääkarhu ui matalassa, kirkkaassa rantavedessä jättäen jälkeensä selvän vanaveden.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Karhujen vankila',
+          teksti:
+            'Kun nälkäinen jääkarhu eksyy liian lähelle asutusta, Churchillin viranomaiset eivät tapa sitä vaan siirtävät sen usein niin sanottuun "karhujen vankilaan" — virallisesti Polar Bear Holding Facilityyn. Vanhasta lentotukikohdan hallista muutettu rakennus toimii väliaikaisena säilönä, jossa ongelmakarhu odottaa parhaimmillaan viikkoja, kunnes lahti jäätyy tarpeeksi ja se voidaan kuljettaa helikopterilla takaisin luontoon kauas kaupungista. Karhuille ei anneta ruokaa vankilan aikana, jotta ne eivät opi yhdistämään ihmisiä ruokaan. Järjestelmä on osa Polar Bear Alert -ohjelmaa, joka on siirtänyt kaupunkiin eksyneitä karhuja jo vuosikymmenten ajan.',
+          tiedosto: 'Polar Bear Jail (6360633055).jpg',
+          lyhyt: 'Churchillin Polar Bear Holding Facility eli kansanomaisesti "karhujen vankila".',
+          selite:
+            'Kuvassa matala, kaareviin katonmuotoihin rakennettu halli, jonka kylkeen kiinnitetty kyltti kertoo sen olevan Polar Bear Holding Facility — Churchillin "karhujen vankila".',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Karhuhälytys kaupungissa',
+          teksti:
+            'Churchillissa jääkarhu voi kävellä kadulle keskellä päivää, joten kaupungissa on tiukat säännöt: luonnonvaraisen eläimen ruokkiminen on laitonta, ja rikkomuksesta voi seurata syyte. Polar Bear Alert -ohjelman partiot kiertävät kaupunkia ympäri vuorokauden etenkin syksyisin, ja monet paikalliset jättävät autonsa lukitsematta, jotta joku voisi hätätilanteessa piiloutua sisään karhua pakoon. Havaituista karhuista ilmoitetaan puhelimitse, ja tarvittaessa ne karkotetaan äänipommeilla tai kumiluodeilla ennen vangitsemista. Näin ihmiset ja maailman suurimmat maapedot elävät samalla kapealla rannikolla ilman jatkuvia kuolemantapauksia.',
+          tiedosto: 'Polar bear alert (6357573595).jpg',
+          lyhyt: 'Churchillin varoituskyltti: luonnonvaraisten eläinten ruokkiminen on laitonta.',
+          selite:
+            'Kyltti varoittaa: "Polar Bear Alert — luonnonvaraisen eläimen ruokkiminen on laitonta, rikkomuksesta seuraa syyte" — tällaisia varoituksia on ympäri Churchillia.',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+      ],
+    },
+  ],
+  sierraleone: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sierra Leone',
+      johdanto:
+        'Isoisän matkavuonna 1873 Freetown oli Britannian Länsi-Afrikan siirtomaan pääkaupunki ja laivaston tukikohta, jonka kaduilla kohtasivat orjuudesta vapautettujen jälkeläiset, brittiupseerit ja kauppiaat kaikkialta maailmasta.',
+      nostot: [
+        {
+          otsikko: 'Puu, jonka alle vapaus istutettiin',
+          teksti:
+            'Maaliskuussa 1792 noin 1 196 entistä orjaa saapui Nova Scotiasta laivoilla Länsi-Afrikan rannikolle. Abolitionisti John Clarkson johti heidät maihin, ja uudisasukkaat raivasivat rantametsää, kunnes löysivät valtavan puuvillapuun: sen alla pidettiin kiitosjumalanpalvelus, josta tuli kaupungin syntyhetki. Paikalle oli yritetty perustaa siirtokuntaa jo 1787, mutta paikallinen päällikkö Jimmy poltti sen 1789. Toisin kuin edeltäjänsä, uusi asutus sai nimen, joka kertoi tarkoituksestaan suoraan: Freetown, vapaiden kaupunki. Puu seisoi keskustassa vielä isoisän aikana ja kauan sen jälkeenkin.',
+          tiedosto: 'Cotton Tree (Sierra Leone).jpg',
+          lyhyt: 'Freetownin tunnuspuu, jonka alla ensimmäiset vapaat uudisasukkaat kokoontuivat 1792.',
+          selite:
+            'Valokuva näyttää korkean, tuuheaoksaisen puuvillapuun keskellä vehreää kaupunkia — Freetownin vanhan keskustan maamerkin, jonka juurelle kaupungin perustajat kokoontuivat.',
+          lahde: 'Christian Trede, Wikimedia Commons (CC BY-SA 2.0 de)',
+          wiki: 'Cotton Tree (Sierra Leone)',
+        },
+        {
+          otsikko: 'Länsi-Afrikan vanhin korkeakoulu',
+          teksti:
+            'Englannin kirkon lähetysseura perusti Freetowniin vuonna 1827 Fourah Bay Collegen, josta tuli koko Saharan eteläpuolisen Afrikan ensimmäinen korkeakoulu. Sen ensimmäinen oppilas oli poika, joka oli itse vapautettu orjalaivalta ja josta kasvoi myöhemmin Afrikan ensimmäinen anglikaaninen piispa. 1800-luvun puoliväliin mennessä oppilaitos veti opiskelijoita ympäri Länsi-Afrikan rannikkoa, ja Freetownia alettiin kutsua "Länsi-Afrikan Ateenaksi". Isoisän vierailun aikaan 1873 koulu oli jo tunnettu oppineisuuden keskus keskellä siirtomaakaupunkia, jonka kaduilla kulki yhtä lailla kauppiaita kuin pappisopiskelijoita.',
+          tiedosto: 'Old building of Fourah Bay College. Cline Town, Freetown, Sierra Leone.jpg',
+          lyhyt: 'Fourah Bay Collegen vanha rakennus Cline Townissa Freetownissa.',
+          selite:
+            'Vanha valokuva näyttää korkean tiilirakennuksen kaarikuisteineen ja parvekkeineen, ympärillä palmuja — yhden Fourah Bay Collegen historiallisista rakennuksista.',
+          lahde: 'Jared & Melanie & Huxley Ponchot, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fourah Bay College',
+        },
+        {
+          otsikko: 'Lääkäri, joka piirsi Afrikan uudelleen',
+          teksti:
+            'James Africanus Beale Horton syntyi noin 1835 Freetownissa vanhemmille, jotka brittilaivasto oli vapauttanut orjalaivalta. Stipendin turvin hän opiskeli lääketiedettä Edinburghissa ja väitteli tohtoriksi 1859 — ensimmäisenä afrikkalaisena Britanniassa. Armeijan lääkärinä Länsi-Afrikassa palvellessaan hän kirjoitti 1868 teoksen "West African Countries and Peoples", jossa hän kumosi aikansa rotuoppeja ja vaati afrikkalaisille itsehallintoa. Samana vuonna hän julkaisi teoksen liitteenä kartan koko Länsi-Afrikan rannikosta, viisi vuotta ennen isoisän matkaa.',
+          tiedosto: '(1868) MAP OF THE WEST COAST OF AFRICA, by Africanus Horton, Sierra Leone.jpg',
+          lyhyt: 'Africanus Hortonin vuonna 1868 julkaisema kartta Länsi-Afrikan rannikosta.',
+          selite:
+            'Vanha painettu kartta esittää koko Länsi-Afrikan rannikkoseudun Saharasta Guineanlahdelle asti, allekirjoituksena "Africanus Horton, M.D., Sierra Leone".',
+          lahde: 'The British Library, Wikimedia Commons (Public domain)',
+          wiki: 'James Africanus Beale Horton',
+        },
+        {
+          otsikko: 'Leijonavuorten satama',
+          teksti:
+            'Portugalilainen merenkulkija Pedro de Sintra purjehti rannikolle 1462 ja nimesi vuoret "Serra Leoa" eli leijonavuoriksi — perimätiedon mukaan joko niiden hammasmaisen muodon tai ukkosen jylinän vuoksi. Vuorten juurelle avautuu valtava suistolahti, jota pidetään yhtenä maailman suurimmista luonnonsatamista: juuri siksi Britannian laivasto valitsi Freetownin Länsi-Afrikan tukikohdakseen. Sademetsän peittämät rinteet nousevat suoraan meren rannasta, ja isoisän aikaan höyrylaivat ankkuroituivat samaan lahteen, jonka muodon portugalilaiset olivat piirtäneet karttoihinsa jo neljäsataa vuotta aiemmin.',
+          tiedosto: 'Freetown-aerialview.jpg',
+          lyhyt: 'Ilmakuva Freetownin lahdesta ja sitä ympäröivistä metsäisistä vuorista.',
+          selite:
+            'Ilmakuva näyttää laajan sinisen lahden, jonka ympärillä kaupunki levittäytyy rannalle metsäisten vuorten juurelle — samat "leijonavuoret", jotka antoivat koko maalle nimen.',
+          lahde: 'David Hond, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Freetown',
+        },
+        {
+          otsikko: 'Kerhotalo kuvalehden sivulla',
+          teksti:
+            'Tammikuussa 1883 lontoolainen kuvalehti The Graphic julkaisi kokonaisen sivun piirroksia matkasta Madeiralta Sierra Leoneen: palmurantoja, tulivuorenhuippuja ja lentäviä kaloja. Sivun oikeassa alakulmassa on kuva "The Club Housesta" Freetownissa — siirtomaan brittiläisten kokoontumispaikasta palmujen keskellä. Vain kymmenen vuotta isoisän matkan jälkeen tällaiset piirrokset olivat yhä yleisölle eksotiikkaa: kotisohvalla istuva lukija näki niiden kautta ensimmäistä kertaa, millaiselta Länsi-Afrikan rannikkokaupunki näytti.',
+          tiedosto: 'The Graphic 1883, p. 52.jpg',
+          lyhyt: 'The Graphic -lehden sivu 1883 Länsi-Afrikan matkakuvista, alhaalla Freetownin kerhotalo.',
+          selite:
+            'Vanhan kuvalehden sivulla on viisi puupiirrosta: Madeiran ja Teneriffan maisemia, lentokala sekä oikeassa alakulmassa Freetownin "Club House" -rakennus palmujen keskellä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Freetown',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Vapautettujen kaupunki',
+      johdanto:
+        'Britannia kielsi orjakaupan 1807, ja Freetownista tuli laivaston partioinnin tukikohta: seuraavien vuosikymmenien aikana kaupunkiin tuotiin kymmeniätuhansia orjalaivoilta vapautettuja ihmisiä aloittamaan elämänsä uudelleen.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta orjaa Britannian laivaston Länsi-Afrikan partio vapautti orjalaivoilta vuosina 1808–1860?',
+        vaihtoehdot: ['15 000', '50 000', '150 000', '400 000'],
+        oikea: 2,
+        fakta:
+          'Partio-osasto takavarikoi noin 1 600 orjalaivaa ja vapautti niiltä yhteensä noin 150 000 ihmistä vuosien 1808 ja 1860 välillä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saari, joka myi ihmisiä',
+          teksti:
+            'Bunce-saari Freetownin lahdella toimi orjalinnakkeena noin vuodesta 1670 lähtien: brittiläiset kauppahuoneet lastasivat sen laitureilta tuhansia ihmisiä laivoihin, jotka veivät heidät Etelä-Carolinan ja Georgian plantaaseille. Kun Britannia kielsi orjakaupan 1807, saaren tarkoitus romahti yhdessä yössä — omistajat yrittivät vielä puuvillaviljelyä ja sahaa, mutta molemmat epäonnistuivat, ja saari autioitui 1840 mennessä. Jäljellä ovat vain sortuneet muurit ja tykkiaukot, joiden ikkunanaukoista kasvaa nyt sademetsän köynnöksiä.',
+          tiedosto: 'Bunce Island Fortress Wall 01.jpg',
+          lyhyt: 'Bunce-saaren orjalinnakkeen rauniomuuri sademetsän valtaamana.',
+          selite:
+            'Valokuva näyttää mustuneen, sammaloituneen kivimuurin tyhjine ikkuna-aukkoineen rehevän vihreän kasvillisuuden keskellä — Bunce-saaren orjalinnakkeen jäljellä olevat rauniot.',
+          lahde: 'Pierre Chrzanowski, Wikimedia Commons (CC0)',
+          wiki: 'Bunce Island',
+        },
+        {
+          otsikko: 'Portti vapauteen',
+          teksti:
+            'Kun brittilaivasto pysäytti orjalaivan merellä, se toi vapautetut ihmiset Freetowniin rekisteröitäväksi ja uudelleenasutettavaksi. Vuonna 1817 kaupunkiin pystytettiin sairaala ja turvakoti, jonka porttikaareen kiinnitetty kivilaatta kertoo yhä tehtävästä: koti "orjuudesta pelastetuille afrikkalaisille". Saapujat olivat kotoisin kymmenistä eri kansoista — joruboja, igboja, akaneja, wolofeja — eivätkä he jakaneet yhteistä kieltä. Vuosikymmenten kuluessa heidän jälkeläisistään ja aiemmista uudisasukkaista kasvoi oma kansanryhmänsä, krio, jolla on tänäkin päivänä oma kielensä.',
+          tiedosto: 'Asylum for Liberated Africans in Freetown, Sierra Leone.jpg',
+          lyhyt: 'Vuonna 1817 pystytetyn Freetownin turvakodin porttikaari ja kivilaatta.',
+          selite:
+            'Valokuva näyttää harmaan kivikaaren, jonka yläpuolelle on kiinnitetty vaalea laatta; laatan haalistunut teksti kertoo rakennuksen olleen orjuudesta pelastettujen afrikkalaisten sairaala ja turvakoti vuodelta 1817.',
+          lahde: 'Caupolicaningles, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sierra Leone Creole people',
+        },
+        {
+          otsikko: 'Pieni laiva, joka jahtasi orjalaivoja',
+          teksti:
+            'Vuonna 1808 perustettu Länsi-Afrikan partio-osasto tukeutui vuodesta 1819 alkaen Freetowniin; parhaimmillaan sillä oli noin 25 alusta ja 2 000 miestä. Yksi sen tunnetuimmista laivoista oli pieni, vain kaksi tykkiä kantanut prikki Black Joke, joka löi helmikuussa 1829 itseään paljon suuremman espanjalaisen orjalaivan El Almirante 80 minuutin taistelussa ja vapautti sen kyydistä 466 ihmistä. Koko partio-osasto takavarikoi toimintansa aikana noin 1 600 orjalaivaa ja vapautti niiltä yhteensä noin 150 000 ihmistä ennen kuin osaston toiminta lakkautettiin 1860-luvulla.',
+          tiedosto: 'HMS Black Joke firing on the Spanish Slaver El Almirante.webp',
+          lyhyt: 'Maalaus laivasto-priki Black Jokesta ampumassa orjalaiva El Almirantea 1829.',
+          selite:
+            'Maalaus näyttää kaksi purjelaivaa avomerellä: pienempi alus ampuu suurempaa kohti, ja savua nousee laukausten kohdalta — kuvaus Black Jokesta taistelemassa orjalaiva El Almirantea vastaan.',
+          lahde: 'Nicholas Matthews Condy, Wikimedia Commons (Public domain)',
+          wiki: 'HMS Black Joke',
+        },
+        {
+          otsikko: 'Kapteeni, joka rahoitti oman laivansa matkan',
+          teksti:
+            'Paul Cuffee oli varakas afroamerikkalainen kveekari ja laivanvarustaja Massachusettsista, joka uskoi vapautettujen mustien tulevaisuuden olevan Afrikassa. Vuonna 1815 hän rahoitti omista varoistaan matkan, jolla hänen laivansa Traveller kuljetti 38 vapaata siirtolaista Yhdysvalloista Freetowniin — ensimmäinen tällainen yksityisrahoitteinen paluumuutto. Cuffee kuoli jo 1817 eikä nähnyt hankettaan jatkuvan suuressa mittakaavassa, mutta hänen esimerkkinsä innoitti myöhempiä siirtolaisliikkeitä, jotka toivat Freetowniin lisää vapaita afroamerikkalaisia asukkaita vuosikymmenten kuluessa.',
+          tiedosto: 'Paul Cuffee.jpg',
+          lyhyt: 'Kapteeni Paul Cuffeen muotokuva vuodelta 1812, taustalla hänen laivansa.',
+          selite:
+            'Vanha kaiverrus näyttää mustana siluettina kapteeni Paul Cuffeen pään ja hartiat koristeellisen kehyksen sisällä; kehyksen alaosassa on kuva kaksimastoisesta purjelaivasta rannikon edustalla.',
+          lahde: 'Mason & Maas, Wikimedia Commons (Public domain)',
+          wiki: 'Paul Cuffe',
+        },
+        {
+          otsikko: 'Orjalaivasta piispaksi',
+          teksti:
+            'Noin 12-vuotias joruba-poika Ajayi joutui fulani-ratsastajien vangiksi 1821 ja myytiin portugalilaisille orjakauppiaille. Ennen kuin laiva ehti lähteä Amerikkaan, brittilaivaston alus pysäytti sen ja vapautti kaikki matkustajat; poika tuotiin Freetowniin, kastettiin nimellä Samuel Ajayi Crowther ja hänestä tuli Fourah Bay Collegen ensimmäinen oppilas. Vuonna 1864 hänet vihittiin ensimmäiseksi afrikkalaiseksi anglikaanipiispaksi. Isoisän matkavuonna 1873 Crowther oli jo tunnettu Nigerin piispa, joka oli kääntänyt Raamattua joruban kielelle — entinen orjalaivan matkustaja, josta oli tullut kirkon johtaja.',
+          tiedosto: 'Bishop Samuel Ajayi Crowther.png',
+          lyhyt: 'Piispa Samuel Ajayi Crowtherin muotokuva, entisen orjalaivan matkustajan.',
+          selite:
+            'Vanha kaiverrus esittää silmälasipäistä, tummaihoista miestä pappispuvussa ja valkoisessa kauluksessa — piispa Samuel Ajayi Crowtherin, joka lapsena vapautettiin orjalaivalta.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Samuel Ajayi Crowther',
+        },
+      ],
+    },
+  ],
+  appalakit: [
+    {
+      id: 'kaupunki',
+      nimi: 'Appalakit',
+      johdanto:
+        'Appalakit ovat Pohjois-Amerikan itälaidan ikivanha vuorijono, joka kohosi kauan ennen dinosauruksia ja kului metsäisiksi, pyöreiksi harjanteiksi. Isoisän matkavuonna 1873 ne olivat yhä harvaan asuttua rajaseutua.',
+      nostot: [
+        {
+          otsikko: 'Vuoret jotka olivat jo vanhoja ennen dinosauruksia',
+          teksti:
+            'Appalakkien tarina alkoi jo lähes miljardi vuotta sitten mannerten yhteentörmäyksissä: viimeisin niistä, noin 270 miljoonaa vuotta sitten tapahtunut Alleghenyn vuorenpoiminta, syntyi kun Pohjois-Amerikka ja Afrika törmäsivät toisiinsa ja kohottivat kertaalleen Himalajan veroisia huippuja. Sen jälkeen 240 miljoonaa vuotta vesi, tuuli, jää ja painovoima ovat kuluttaneet piikit pyöreiksi selänteiksi. Puiden ilmaan päästämä isopreeni verhoaa rinteet vielä tänäkin päivänä siniseen usvaan, josta Blue Ridge -vuoret saivat aikoinaan nimensä.',
+          tiedosto: 'View of Blue Ridge Mountains from Sassafras Mountain, Pickens County SC 20160701 1.jpg',
+          lyhyt: 'Appalakkien metsäiset harjanteet häviävät siniseen usvaan Sassafras-vuorelta katsottuna.',
+          selite:
+            'Valokuva näyttää Appalakkien peräkkäisiä metsäisiä harjanteita, jotka häviävät kauempana sinertävään usvaan – juuri sellaiseen, jonka puiden vapauttama isopreeni saa aikaan.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Appalachian Mountains',
+        },
+        {
+          otsikko: 'Vuorijono joka ulottuu mantereen halki',
+          teksti:
+            'Appalakit venyvät lähes 3 300 kilometrin matkan Alabaman eteläosista aina Newfoundlandin saarelle Kanadaan asti ja halkovat matkallaan kymmeniä osavaltioita ja provinsseja. Vuorijonon korkein huippu, Pohjois-Carolinassa kohoava Mount Mitchell, yltää 2 037 metriin merenpinnasta, mikä tekee siitä koko Mississippi-joen itäpuolisen Yhdysvaltain korkeimman kohdan. Huipulle vievää polkua reunustavat tummat kuuset ja vanha lautaportti, ja selkeällä säällä näköala kantaa kymmenien kilometrien päähän toisiin poimuisiin selänteisiin.',
+          tiedosto: 'Panorama on the Mount Mitchell Summit Trail (March 2023).jpg',
+          lyhyt: 'Näköalapolku Mount Mitchellin huipulla, Appalakkien korkeimmalla kohdalla.',
+          selite:
+            'Kuva näyttää Mount Mitchellin huipulle vievän polun vanhaa lautaporttia ja tummia kuusia, joiden takaa avautuu laaja, usvainen näkymä ympäröiviin vuoriin.',
+          lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Mitchell',
+        },
+        {
+          otsikko: 'Enemmän puulajeja kuin koko Euroopassa',
+          teksti:
+            'Appalakkien vuorimetsät kuuluvat maailman monimuotoisimpiin lauhkean vyöhykkeen metsiin: eteläisillä rinteillä kasvaa enemmän puulajeja kuin koko Euroopan mantereella, ja alueelta tunnetaan lähes 10 000 eliölajia. Korkeimmilla huipuilla kuusi- ja pihtakuusimetsät muistuttavat kaukaista Kanadaa, ja niiden vihreiden latvusten seassa seisoo usein harmaita, lehdettömiä pystyyn kuolleita runkoja. Puron- ja lähdevesissä piileskelee myös maailman lajirikkain salamanteriyhteisö, joka viihtyy juuri tällaisessa kosteassa vuoristometsässä.',
+          tiedosto: 'Blue Ridge with spruce-fir forest (Great Smoky Mountains, Tennessee, USA) 1.jpg',
+          lyhyt: 'Kuusi- ja pihtakuusimetsää vuorenrinteellä osana Appalakkien monimuotoista metsää.',
+          selite:
+            'Kuva näyttää havumetsäistä vuorenrinnettä, jossa vihreiden puiden seassa seisoo harmaita, lehdettömiä pystyyn kuolleita runkoja kirkasta taivasta vasten.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Appalachian mixed mesophytic forests',
+        },
+        {
+          otsikko: 'Joki joka on vanhempi kuin vuoret ympärillään',
+          teksti:
+            'New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.',
+          tiedosto: 'New River Gorge Bridge Overlook.jpg',
+          lyhyt: 'New River Gorge -silta kaartuu syvän, metsäisen kanjonin yli Länsi-Virginiassa.',
+          selite:
+            'Kuva näyttää New Riverin kanjonin ylhäältä käsin: joki kimmeltää kapeana nauhana laakson pohjalla, ja oikealla kaartuu teräksinen New River Gorge -silta metsäisten rinteiden yllä.',
+          lahde: 'Gabor Eszes (UED77), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'New River (Kanawha River tributary)',
+        },
+        {
+          otsikko: 'Mustakarhu, vuorten oma tunnuseläin',
+          teksti:
+            'Appalakkien metsät ovat Pohjois-Amerikan mustakarhun vahvinta aluetta, ja etenkin Great Smoky Mountainsin kansallispuistossa karhutiheys kuuluu koko maanosan suurimpiin. Kesän ja syksyn mittaan karhut kiipeävät villimarjapensaisiin ja jopa puiden latvoihin syömään kirsikoita ja muita marjoja ennen talviunta, ja nuori karhu saattaa viettää tunteja yhden puun oksistossa täyttäen vatsaansa. Karhusta on tullut koko vuoriston tunnuseläin: sen kuva koristaa puistojen opasteita, ja moni turisti tulee kauas nähdäkseen villin karhun luonnossa.',
+          tiedosto: 'Bear in Cherry Tree - Flickr - Kevin Crosby.jpg',
+          lyhyt: 'Nuori mustakarhu kiipeää marjaiseen kirsikkapuuhun Great Smoky Mountainsissa.',
+          selite:
+            'Kuva näyttää nuoren mustakarhun kiipeämässä marjaiseen puuhun, ympärillään tuuheat lehdet ja punaiset kirsikanmarjat, joita se syö.',
+          lahde: 'Kevin Crosby, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'American black bear',
+        },
+        {
+          otsikko: 'Yhdysvaltain suosituin kansallispuisto',
+          teksti:
+            'Sumuiset harjanteet kuuluvat Great Smoky Mountains -kansallispuistoon, joka ulottuu Tennesseen ja Pohjois-Carolinan puolelle Appalakkien Blue Ridge -vyöhykkeellä. Puisto on Yhdysvaltain kansallispuistoista kävijämäärältään ylivoimaisesti suosituin: se houkuttelee vuosittain yli 11 miljoonaa kävijää, moninkertaisesti enemmän kuin mikään muu maan kansallispuisto. Suosion taustalla on muun muassa maksuton sisäänpääsy sekä sijainti alle päivämatkan päässä yli puolesta Yhdysvaltain väestöstä, minkä vuoksi sumuiset harjanteet täyttyvät retkeilijöistä etenkin kesäisin ja syksyn ruskassa.',
+          tiedosto:
+            'View of Great Smoky Mountains from Crest of Newfound Gap Road, Great Smoky Mountains National Park at North Carolina-Tennessee Border (5810389499).jpg',
+          lyhyt: 'Sumuiset metsäharjanteet Great Smoky Mountainsissa, USA:n suosituimmassa kansallispuistossa.',
+          selite:
+            'Kuva näyttää sumuisia, tiheän lehtimetsän peittämiä vuorenharjanteita Newfound Gap Roadin varrelta Great Smoky Mountainsin kansallispuistossa.',
+          lahde: 'Ken Lund, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Great Smoky Mountains National Park',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Cumberlandin sola ja vuorten kansa',
+      johdanto:
+        'Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.',
+      tehtava: {
+        kysymys:
+          'Kuka johti vuonna 1775 miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun siirtokuntalaisille kulkukelpoiseksi tieksi?',
+        vaihtoehdot: ['Thomas Walker', 'Daniel Boone', 'Nathaniel Langford', 'David Ansted'],
+        oikea: 1,
+        fakta:
+          'Transylvania-yhtiö palkkasi erämies Daniel Boonen vuonna 1775 raivaamaan Cumberlandin solan läpi kulkevasta polusta Erämaantien, jota pitkin tuhannet uudisasukkaat kulkivat Kentuckyyn.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sola joka avasi tien länteen',
+          teksti:
+            'Appalakkien läpi kulkeva matala solakohta oli alkuperäiskansojen ja bisonilaumojen vuosisatoja käyttämä reitti, mutta virginialainen lääkäri ja tutkimusmatkailija Thomas Walker toi sen siirtokuntien tietoisuuteen retkikuntansa mukana vuonna 1750. Walker nimesi solan Cumberlandin herttuan mukaan, joka oli Britannian kuningas Yrjö II:n poika. Vuorijonon molemmin puolin kohoavat jyrkät harjanteet tekivät sivummalta kulkemisen lähes mahdottomaksi, joten juuri tästä kapeasta aukosta tuli 1700-luvun lopulla koko Kentuckyyn suuntautuvan liikenteen solmukohta.',
+          tiedosto: 'Cumberland Gap Pinnacles Overlook 2025a.jpg',
+          lyhyt: 'Näkymä Cumberlandin solaan Pinnacles-näköalapaikalta, josta Thomas Walker sen löysi 1750.',
+          selite:
+            'Kuva näyttää näkymän Pinnacles-näköalapaikalta alas Cumberlandin solaan ja sen tuntumassa kasvavaan pikkukaupunkiin, jota ympäröivät metsäiset vuorenharjanteet.',
+          lahde: 'Antony-22, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cumberland Gap',
+        },
+        {
+          otsikko: 'Daniel Boone raivaa Erämaantien',
+          teksti:
+            'Vuonna 1775 Transylvania-yhtiö palkkasi metsästäjä ja erämies Daniel Boonen johtamaan miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun kulkukelpoiseksi reitiksi siirtokuntalaisille. Reitti sai nimen Erämaantie, ja 1790-luvulle tultaessa sitä oli levennetty niin, että sitä pitkin pääsivät kulkemaan jo hevoskärrytkin. Aikalaismaalauksissa Boone kuvataan usein oppaana, joka johdattaa hevosen kyydissä matkaavia naisia ja aseistautuneita miehiä kapean, kivisen vuorisolan läpi kohti tuntematonta Kentuckya.',
+          tiedosto: 'George Caleb Bingham - Daniel Boone escorting settlers through the Cumberland Gap.jpg',
+          lyhyt: 'Binghamin 1850-luvun maalaus Daniel Boonesta johtamassa siirtokuntalaisia solan läpi.',
+          selite:
+            'Maalauksessa Daniel Boone johtaa hevosen kyydissä istuvaa naista sekä aseistautuneita miehiä ja koiraa kapean, kivisen vuorisolan läpi kohti Kentuckya.',
+          lahde: 'George Caleb Bingham, Wikimedia Commons (Public domain)',
+          wiki: 'Daniel Boone',
+        },
+        {
+          otsikko: 'Kaksisataatuhatta kulkijaa',
+          teksti:
+            'Ennen vuotta 1810 Cumberlandin solan läpi arvioidaan vaeltaneen 200 000–300 000 eurooppalaista uudisasukasta matkalla kohti Kentuckyn ja Ohionjokilaakson uusia asuinsijoja. Aikakauden reittikartta paljastaa, miten Erämaantie yhtyi solan tuntumassa Suureen laaksotiehen, joka jatkui aina Philadelphiaan asti – näin syntyi yhtenäinen kulkuväylä itärannikolta Kentuckyn erämaahan asti. Suurin osa kulkijoista matkasi jalan tai hevosen selässä, sillä polku oli pitkään liian kapea ja kivikkoinen raskaalle rahtiliikenteelle.',
+          tiedosto: 'NPS cumberland-gap-wilderness-road-map.jpg',
+          lyhyt: 'Kartta Erämaantiestä ja Suuresta laaksotiestä, jotka veivät uudisasukkaat Kentuckyyn.',
+          selite:
+            'Kartassa punainen viiva kuvaa Erämaantietä Cumberlandin solan kautta Kentuckyyn ja violetti viiva Suurta laaksotietä, joka jatkuu aina Philadelphiaan asti.',
+          lahde: 'U.S. National Park Service / National Park Maps, Wikimedia Commons (Public domain)',
+          wiki: 'Wilderness Road',
+        },
+        {
+          otsikko: 'Vuorten eristäytynyt kansa',
+          teksti:
+            'Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.',
+          tiedosto:
+            'Log Cabin, Humpback Rocks Pioneer Farm, Bldg No. 279 (cd54fcc1c5aa43f2a7f0770ba2a3f90d).tif',
+          lyhyt: 'Yksihuoneinen hirsimökki kivipiipuineen Blue Ridge Parkwayn Humpback Rocksin tilalla.',
+          selite:
+            'Arkistokortin valokuvassa näkyy pieni, kattopäreillä katettu hirsimökki kivisine piippuineen ja kuistin katoksineen, tyypillinen 1800-luvun vuoristoasumus.',
+          lahde: 'F. A. Ketterson Jr. / National Park Service, Wikimedia Commons (Public domain)',
+          wiki: 'Appalachia',
+        },
+        {
+          otsikko: 'Hiili nousee vuoren uumenista',
+          teksti:
+            'Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.',
+          tiedosto: 'Coal miner (Polish). Capels, West Virginia.jpg',
+          lyhyt: 'Hiilikaivosmies nojaa aitaan kaivoskylässä Länsi-Virginiassa, kasvot nokeen mustuneina.',
+          selite:
+            'Kuva näyttää hymyilevän kaivosmiehen, jonka kasvot ovat mustuneet hiilipölystä ja jonka kypärässä on karbidilamppu; taustalla erottuu kaivoskylän puutaloja.',
+          lahde: 'Marion Post Wolcott, Wikimedia Commons (Public domain)',
+          wiki: 'Coal mining in the United States',
+        },
+      ],
+    },
+  ],
+  sthelena: [
+    {
+      id: 'kaupunki',
+      nimi: 'St. Helena',
+      johdanto: 'St. Helena on pieni tulivuorisaari keskellä eteläistä Atlanttia, yli 1800 kilometrin päässä lähimmästä mantereesta. Isoisän matkan aikaan 1873 saari oli yhä laivaliikenteen tärkeä välietappi ja Napoleonin kohtalon leimaama.',
+      nostot: [
+        {
+          otsikko: 'Jamestown ahtaassa laaksossa',
+          teksti: 'Saaren ainoa kaupunki Jamestown on rakennettu kapeaan, jyrkkien kallioseinämien väliin puristuvaan laaksoon aivan meren rannalla. Itä-Intian kauppakomppania perusti asutuksen 1600-luvulla, ja 1700-luvulla satamaan pysähtyi vuosittain jopa tuhat laivaa täydentämään vesi- ja ruokavarastojaan matkalla Aasiaan tai sieltä pois. Kapeat kadut, siirtomaa-ajan rakennukset ja jyrkät rinteet ovat säilyneet lähes ennallaan isoisän vuoden 1873 vierailusta lähtien: kaupunki on yhä ainoa tapa nousta laivasta kuivalle maalle satojen kilometrien säteellä.',
+          tiedosto: 'St-Helena-Jamestown-from-above.jpg',
+          lyhyt: 'Jamestown on saaren ainoa kaupunki, puristuksissa jyrkkien kallioiden välissä.',
+          selite: 'Ilmakuva näyttää Jamestownin ahtaassa laaksossa meren rannalla, ympärillä jyrkät ja paljaat kallioseinämät sekä satama-allas veneineen.',
+          lahde: 'Andrew Neaum, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jamestown, Saint Helena',
+        },
+        {
+          otsikko: 'Eteläisen pallonpuoliskon vanhin anglikaanikirkko',
+          teksti: 'Jamestownin harmaa kivikirkko St. James on eteläisen pallonpuoliskon vanhin yhä käytössä oleva anglikaaninen kirkkorakennus: nykyinen rakennus valmistui 1774, edeltäjänsä paikalle vuodelta 1671. Kirkko seisoo yhä samalla paikalla kuin isoisän vieraillessa saarella 1873, kapean pääkadun varrella laakson pohjalla. Napoleonin aikana kirkko oli brittiupseerien ja siirtolaisten kokoontumispaikka; sen kellotapuli purettiin turvallisuussyistä 1980 ja rakennettiin uudelleen vasta vuonna 2020, yli neljäsataa vuotta ensimmäisen kirkon jälkeen.',
+          tiedosto: 'Saint James Church in Jamestown Saint Helena.jpg',
+          lyhyt: 'St. James on eteläisen pallonpuoliskon vanhin yhä toimiva anglikaanikirkko.',
+          selite: 'Kuvassa harmaaksi rapattu kivikirkko harjakattoineen ja korkeine torneineen, edessä pieni parkkipaikka autoineen ja taustalla paljas kallioseinämä.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Saint James' Church, Jamestown",
+        },
+        {
+          otsikko: '699 porrasta ylös kallioon',
+          teksti: "Jacob's Ladder on 699 portaan suora kiviportaikko, joka kiipeää Jamestownista Ladder Hillin linnoitukseen. Alun perin vuonna 1829 rakennettu köysirata kuljetti kiskoilla lantaa ja maataloustuotteita laakson ja ylängön väliä; portaat kulkivat kiskojen vieressä jalankulkijoille. Termiittien syömät puiset ratapölkyt johtivat siihen, että vaunut ja kiskot purettiin 1871 – jäljelle jäivät vain portaat, joita isoisänkin olisi pitänyt kiivetä noustessaan varuskuntaan asti. Museo, jonka edustalla vanha tykki yhä seisoo, sijaitsee portaikon juurella.",
+          tiedosto: "Jacob's Ladder in Jamestown just behind the Saint Helena Museum.jpg",
+          lyhyt: '699 porrasta nousee suoraan kalliota pitkin Jamestownista ylängölle.',
+          selite: 'Kuvassa jyrkkä, suora porrasrivistö nousee kalliorinnettä ylös, edessä museorakennus ja vanha tykki telineellään.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Jacob's Ladder (Saint Helena)",
+        },
+        {
+          otsikko: 'Napoleon-kadun siirtomaatalo',
+          teksti: 'Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.',
+          tiedosto: 'Consulate Hotel in Jamestown Saint Helena.jpg',
+          lyhyt: 'Napoleon Streetin siirtomaatalo on nimetty keisarin mukaan Jamestownissa.',
+          selite: 'Kuvassa vaaleaksi rapattu kaksikerroksinen talo, jossa mustat rautaparvekkeet ja kyltti Consulate Hotel; parvekkeella erottuu valkoinen patsashahmo.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jamestown, Saint Helena',
+        },
+        {
+          otsikko: 'Linnoitus Jamestownin yllä',
+          teksti: 'Jyrkän High Knoll -kukkulan laella kohoava linnoitus vartioi Jamestownia lähes 600 metrin korkeudesta. Itä-Intian kauppakomppania rakensi paikalle pyöreän tornin vuonna 1799 suojaamaan saarta mahdolliselta ranskalaiselta hyökkäykseltä – pelko ei ollut turha, sillä Napoleon oli tuolloin Euroopan mahtavin sotapäällikkö. Isoisän vieraillessa saarella 1873 kukkulalla seisoi vielä tuo vanhempi torni; nykyinen muurien rengas rakennettiin vasta vuotta myöhemmin, 1874, kuninkaallisten insinöörien toimesta. Myöhemmin linnoitukseen suljettiin muun muassa buurisotavankeja.',
+          tiedosto: 'High Knoll Fort on Saint Helena Island, March 2020.jpg',
+          lyhyt: 'Linnoitus vartioi Jamestownia kukkulalta lähes 600 metrin korkeudesta.',
+          selite: 'Kuvassa vihreän kasvillisuuden takaa kohoava harmaa kivilinnoitus muurihammastuksineen sinistä taivasta vasten.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'High Knoll Fort',
+        },
+        {
+          otsikko: 'Lankalintu, jota ei löydy muualta',
+          teksti: 'St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.',
+          tiedosto: 'Saint Helena plover, locally known as the wirebird.jpg',
+          lyhyt: 'Lankalintu elää luonnossa vain St. Helenalla eikä missään muualla maailmassa.',
+          selite: 'Kuvassa ruskehtava ja valkorintainen kahlaajalintu seisoo paksulehtisten sukkulakasvien keskellä hiekkaisella maalla.',
+          lahde: 'Adrien37, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Saint Helena plover',
+        },
+      ],
+    },
+    {
+      id: 'napoleon',
+      nimi: 'Keisari kalliosaaren vankina',
+      johdanto: 'Napoleon karkotettiin St. Helenalle 1815 Waterloon tappion jälkeen, toista kertaa maanpakoon Elban jälkeen. Keisari eli saarella kuolemaansa asti, ja hänen muistonsa oli isoisän 1873 vierailun aikaan yhä saaren tärkein puheenaihe.',
+      tehtava: {
+        kysymys: 'Minä vuonna Napoleonin maalliset jäänteet siirrettiin takaisin Ranskaan St. Helenalta?',
+        vaihtoehdot: ['1821', '1830', '1840', '1858'],
+        oikea: 2,
+        fakta: 'Napoleonin ruumis kaivettiin esiin ja siirrettiin Ranskaan vuonna 1840 prinssi de Joinvillen johtamalla retkikunnalla – tapahtumaa kutsutaan nimellä Retour des Cendres.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ensimmäiset viikot puutarhamajassa',
+          teksti: 'Saavuttuaan St. Helenalle lokakuussa 1815 Napoleon ei päässyt heti Longwoodiin, joka ei ollut vielä valmis hänen vastaanottamiseensa. Hän asui ensin kauppias William Balcomben tilan pienessä puutarhamajassa, Briarsissa, lähes kaksi kuukautta. Napoleon viihtyi paikassa ja ystävystyi erityisesti Balcomben tyttären Betsyn kanssa – tästä ajasta on säilynyt useita muistelmia. Joulukuussa 1815 hän muutti lopulta Longwood Houseen, joka jäi hänen kodikseen kuuden vuoden ajaksi loppuelämänsä loppuun saakka.',
+          tiedosto: 'Briars pavilion (40164448305).jpg',
+          lyhyt: 'Napoleon asui ensin Briarsin puutarhamajassa ennen Longwoodiin muuttoa.',
+          selite: 'Kuvassa pieni vihreäluukkuinen valkoinen talo vehreän kasvillisuuden keskellä, taustalla paljas ja jyrkkä kallioseinämä.',
+          lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Briars, Saint Helena',
+        },
+        {
+          otsikko: 'Longwood House – vankila puutarhan keskellä',
+          teksti: 'Longwood House oli alun perin Itä-Intian kauppakomppanian maatila, joka muutettiin kiireesti Napoleonin asunnoksi. Rakennus oli kostea, tuulinen ja täynnä rottia, ja keisari valitti siitä usein brittiläiselle vartiostolleen. Siellä hän saneli muistelmansa ja eli tarkkaan vartioituna kuolemaansa 5. toukokuuta 1821 asti. Ranskan valtio osti Longwoodin ympäristöineen vuonna 1858 seitsemästä tuhannesta sadasta punnasta, ja rakennus toimii yhä Ranskan omistamana museona – yksi harvoista Ranskan alueista keskellä eteläistä Atlanttia.',
+          tiedosto: 'Longwood House le 12 janvier 2008.jpg',
+          lyhyt: 'Longwood House oli Napoleonin koti ja vankila vuoteen 1821 asti.',
+          selite: 'Kuvassa vaaleanpunakattoinen pitkä siirtomaatalo kukkivan puutarhan keskellä, edustalla Ranskan lippu tangossa.',
+          lahde: 'Michel Dancoisne-Martineau, Wikimedia Commons (CC0)',
+          wiki: 'Longwood House',
+        },
+        {
+          otsikko: 'Keisarin viimeiset hetket',
+          teksti: 'Napoleon kuoli Longwood Housessa 5. toukokuuta 1821 vain 51-vuotiaana; ruumiinavauksessa löytyi merkkejä mahalaukun sairaudesta. Saksalaissyntyinen ranskalaistaiteilija Charles de Steuben maalasi vuosikymmeniä myöhemmin tämän tunnetuksi tulleen kuvauksen kuolinvuoteesta, jota ympäröivät keisarin uskolliset seuralaiset ja upseerit. Maalauksesta tuli niin suosittu, että siitä otettiin lukuisia toisintoja, ja se muovasi pitkäksi aikaa käsitystä siitä, miltä Napoleonin viimeiset hetket näyttivät – vaikka taiteilija ei itse ollut paikalla.',
+          tiedosto: 'Napoleon death-Charles von Steuben-IMG 1512.JPG',
+          lyhyt: 'Napoleon kuoli Longwoodissa 5. toukokuuta 1821, 51-vuotiaana.',
+          selite: 'Maalauksessa Napoleon makaa vuoteella verhotun katoksen alla, ympärillä suruun vaipuneita upseereita ja siviilejä tummissa asuissa.',
+          lahde: 'Charles de Steuben, Wikimedia Commons (public domain)',
+          wiki: 'Death of Napoleon',
+        },
+        {
+          otsikko: 'Tyhjä hauta Geraniumilaaksossa',
+          teksti: "Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.",
+          tiedosto: "Napoleon's Tomb on Saint Helena 2020.jpg",
+          lyhyt: 'Napoleonin tyhjä hauta on yhä paikallaan, vaikka ruumis vietiin Ranskaan 1840.',
+          selite: 'Kuvassa nurmikentän keskellä pieni mustan rautaisen aidan ympäröimä tasainen hauta-alue vehreän puutarhan ja kivimuurin keskellä.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valley of the Tomb',
+        },
+        {
+          otsikko: 'Keisari palaa kotiin 1840',
+          teksti: 'Vuonna 1840 Ranskan kuningas Louis-Philippe lähetti poikansa, prinssi de Joinvillen, laivueella noutamaan Napoleonin jäänteet takaisin Ranskaan – tapahtumaa kutsutaan Retour des Cendresiksi. Prinssi itse maalasi tämän akvarellin ruumiin kaivamisen jälkeisistä hetkistä St. Helenan satamassa: ranskalaiset merimiehet kantavat arkkua veneeseen Ranskan lippu liehuen, kun brittisotilaat seisovat rivissä rannalla. Matka päättyi Pariisiin, jossa Napoleon haudattiin lopulta Invalidien kirkkoon suureen valtiolliseen seremoniaan joulukuussa 1840.',
+          tiedosto: "François d'Orléans - Retour des cendres de Napoléon, Sainte Hélène, 1840.jpg",
+          lyhyt: 'Vuonna 1840 Napoleonin jäänteet noudettiin takaisin Ranskaan St. Helenalta.',
+          selite: 'Akvarellissa vene täynnä ranskalaisia merimiehiä ja Ranskan lippu lähestyy rantaa, taustalla jyrkät vuoret ja rivissä seisovia sotilaita.',
+          lahde: "François d'Orléans, Wikimedia Commons (public domain)",
+          wiki: 'Retour des cendres',
+        },
+      ],
+    },
+  ],
+  kimberley: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kimberley',
+      johdanto:
+        'Isoisän saapuessa Etelä-Afrikkaan 1873 uusi kaivoskaupunki sai sinä vuonna nimensä brittiläisen siirtomaaministerin mukaan – kaksi vuotta aiemmin löydetyt timantit olivat tehneet savannikummusta maailman kuuluisimman kaivoksen.',
+      nostot: [
+        {
+          otsikko: 'Löytö Colesbergin kummulla',
+          teksti:
+            'Heinäkuussa 1871 löysi etsintäretkikunnan kokki Esau Damoense timantteja pienellä kummulla, joka sijaitsi veljesten Nicolaas ja Diederik de Beersin tilalla. Tieto levisi kulovalkean tavoin, ja paikalle syntyi välitön ryntäys, jota jälkipolvet kutsuivat nimellä New Rush. Jo kuukaudessa kumpuun oli hakattu 900 erillistä kaivosvaltausta, joita työsti kiivaasti kaksi–kolmetuhatta miestä yhtä aikaa: jokainen kaivoi omaa pientä ruutuaan kirveellä ja lapiolla siinä toivossa, että seuraava lapiollinen paljastaisi timantin.',
+          tiedosto: "DF1873 Old DeBeer's.jpg",
+          lyhyt: 'Vuoden 1873 kuva Old De Beersin tilasta, josta tuli timanttiryntäyksen keskus.',
+          selite:
+            'Vuoden 1873 kuva näyttää Old De Beersin avaraa savannimaisemaa: muutama teltta ja hökkeli, harvat akaasiapuut, hevosen vetämä kärry ja pari ihmistä istumassa hiekkaisella polulla – rauhallinen näky juuri ennen kuin paikasta tuli timanttiryntäyksen keskus.',
+          lahde: 'Tuntematon tekijä 1873 (British Library), Wikimedia Commons (Public domain)',
+          wiki: 'Kimberley, Northern Cape',
+        },
+        {
+          otsikko: 'Nimi jonka lordi osasi lausua',
+          teksti:
+            'Nopeasti kasvaneen kaivosleirin nimi New Rush ei kelvannut siirtomaahallinnolle pitkäksi aikaa. Siirtomaasihteeri J. B. Currey halusi kunnianosoituksen Britannian silloiselle siirtomaaministerille, kreivi Kimberleylle – osin siksi, että tämä pystyisi ainakin kirjoittamaan ja ääntämään oman vaalipiirinsä nimen oikein. Käskykirjeellä 5. heinäkuuta 1873, täsmälleen samana vuonna kun isoisä matkusti Etelä-Afrikassa, New Rushista tuli virallisesti Kimberley. Nimi periytyi näin kaupungille mieheltä, joka ei koskaan itse käynyt kaivoskuopan reunalla.',
+          tiedosto: 'Portrait of John Wodehouse, 1st Earl of Kimberley.jpg',
+          lyhyt: 'John Wodehouse, 1. Kimberleyn kreivi, jonka mukaan kaupunki nimettiin 1873.',
+          selite:
+            'Kaiverrettu muotokuva esittää iäkkäänä kuvatun John Wodehousea, 1. Kimberleyn kreiviä: kalju päälaki, harmaa täysparta, tumma puku ja valkoinen rusetti – mies, jonka mukaan kaivoskaupunki nimettiin heinäkuussa 1873.',
+          lahde: 'E. Passingham, Wikimedia Commons (Public domain)',
+          wiki: 'John Wodehouse, 1st Earl of Kimberley',
+        },
+        {
+          otsikko: 'Maailman suurin käsin kaivettu kuoppa',
+          teksti:
+            'Heinäkuusta 1871 aina vuoteen 1914 asti jopa 50 000 kaivosmiestä louhi kumpua hakulla ja lapiolla, kunnes tuloksena oli 17 hehtaarin laajuinen ja 463 metriä leveä kuilu – Big Hole, Suuri kuoppa. Syvimmillään se ulottui 240 metrin syvyyteen, ennen kuin kuoppaa osittain täytettiin louheella ja pohjavesi nousi peittämään alimmat kymmenet metrit. Koko urakan aikana maasta nostettiin noin 2 722 kilogrammaa eli 13,6 miljoonaa karaattia timantteja – pelkillä käsityökaluilla kaivettuna sitä on pidetty maailman suurimpana ihmiskäsin louhittuna kuoppana, vaikka osa tutkijoista on myöhemmin kyseenalaistanut ennätyksen.',
+          tiedosto: 'The Big Hole (45394589474).jpg',
+          lyhyt: 'Tänään vedellä täyttynyt Big Hole, maailman suurimmaksi mainittu käsin kaivettu kuoppa.',
+          selite:
+            'Ilmakuva näyttää tänä päivänä vedellä täyttyneen Big Holen: pystysuorat, raidalliset kalliojyrkänteet syöksyvät turkoosinvihreään veteen, jonka reunoja kehystävät vehreät pensaat ja kuivunut ruohikko.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Rhodesin timanttivalta syntyy',
+          teksti:
+            'Vuosikymmenten mittaan satojen pienten valtausten sekamelska alkoi haitata tehokasta louhintaa, kun kilpailevat yhtiöt söivät toistensa voittoja. Nuori brittiläinen siirtolainen Cecil Rhodes osti kumppaninsa Charles Ruddin kanssa vähitellen haltuunsa yhä useampia valtauksia entisellä De Beersin tilalla. 13. maaliskuuta 1888 kilpailevat yhtiöt sulautuivat Rhodesin johdolla yhdeksi jättiläiseksi, De Beers Consolidated Mines -yhtiöksi, jonka elinikäisiin johtajiin kuului myös Rhodesin entinen kilpailija Barney Barnato. Yhtiöstä tuli vuosikymmeniksi maailman timanttikaupan monopoli, joka säänteli sekä tuotantoa että hintoja.',
+          tiedosto: 'Washing plant of De Beers Consolidated Mines, Kimberley 1900.jpg',
+          lyhyt: 'De Beers Consolidated Minesin pesulaitos vuonna 1900, monopoliyhtiön teollista mittakaavaa.',
+          selite:
+            'Vanha valokuva vuodelta 1900 näyttää De Beersin timanttikaivosten pesulaitosta: korkeita puisia nostotorneja, pyöriviä seulapyöriä ja pieniä malminkuljetusvaunuja, joiden edessä seisoo hevonen kärryineen.',
+          lahde: 'Tuntematon tekijä 1900, Wikimedia Commons (Public domain)',
+          wiki: 'De Beers',
+        },
+        {
+          otsikko: 'Timantit pöydällä',
+          teksti:
+            'Kaivetusta soralouheesta vain murto-osa oli timantteja, joten suuri osa työstä tehtiin lopulta pöytien ääressä, ei kuopan pohjalla. Louhe murskattiin, pestiin ja seulottiin, minkä jälkeen lajittelijat kävivät läpi jäljelle jääneen rakeisen aineksen käsin, poimien esiin kiiltävät kivet yksi kerrallaan. Työ vaati tarkkuutta: samalla pöydällä saattoi liikkua päivässä omaisuuksia, joita mikään vartija ei pystynyt täysin valvomaan. Lajitellut timantit lähetettiin Kimberleystä edelleen Lontooseen, ja juuri tämä kauppaketju teki savannin keskelle nousseesta kaivoskaupungista yhden Etelä-Afrikan vauraimmista paikoista.',
+          tiedosto:
+            'Diamantsorteerders bij een mijn van De Beers in Kimberley, Zuid-Afrika Sorting the rough Diamonds, De Beers Mines, Kimberley, South Africa, RP-F-F09044.jpg',
+          lyhyt: 'De Beersin kaivosten työntekijät lajittelevat raakoja timantteja pöydän ääressä.',
+          selite:
+            'Sepiansävyinen stereokuvakortti esittää kahta miestä pöydän ääressä lajittelemassa raakoja timantteja pienistä kasoista; taustalla kolmas mies kumartuu toisen kasan yli De Beersin kaivosten lajittelusuojassa.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'De Beers',
+        },
+      ],
+    },
+    {
+      id: 'timantit',
+      nimi: 'Timanttiryntäys',
+      johdanto:
+        'Big Holen ympärillä eli tuhansia kaivosmiehiä, joiden arkeen kuuluivat käsin kaivetut valtaukset, tauteja levittävä ahtaus ja lopulta syvälle maan alle ulottuvat kuilut – tarina, joka jatkui kauan isoisän vierailun jälkeenkin.',
+      tehtava: {
+        kysymys:
+          'Minkä nimen sai kivilaji, jonka piippumaisista muodostumista löytyi timantteja Kimberleyn seudulla?',
+        vaihtoehdot: ['Graniitti', 'Kimberliitti', 'Basaltti', 'Marmori'],
+        oikea: 1,
+        fakta:
+          'Kivilaji sai nimensä kimberliitti, koska sen tunnetuimmat timanttipitoiset esiintymät löytyivät juuri Kimberleyn seudulta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Uuden rynnistyksen shakkilauta',
+          teksti:
+            'Colesbergin kummun päälle piirrettiin heti alkuvaiheessa tiheä ruudukko, jossa jokaisella löytäjällä oli oikeus vain yhteen pieneen valtaukseen. Kuukaudessa ruudukkoon oli hakattu 900 erillistä valtausta, joita työsti kahdesta kolmeen tuhatta miestä samanaikaisesti – jokainen kaivoi omaa ruutuaan naapureistaan erillään, hakulla ja lapiolla, ilman yhteistä suunnitelmaa. Kun valtaukset syvenivät eri tahtiin, syntyi sekava, jyrkkäseinäinen sokkelo, jossa louhetta jouduttiin nostamaan köysillä ja koreilla yhä korkeammalta reunalle asti. Vasta kun yhtiöt sulautuivat De Beersiksi 1888, alueesta tuli yksi hallittu louhos.',
+          tiedosto: 'South Africa; an open works mine at De Beers diamond mine. P Wellcome V0037952.jpg',
+          lyhyt: 'Avolouhoksen portaikkomainen seinämä De Beersin kaivoksella 1890-luvulla.',
+          selite:
+            'Käsin väritetty valokuva 1890-luvulta on nimetty "Open Works De Beers Mine": se näyttää avolouhoksen portaikkomaisen, viistoihin kerrostuneen seinämän, jonka yläreunalla erottuu puisia nostotorneja ja matalia rakennuksia.',
+          lahde: 'J.E.M., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Kivi joka sai nimensä kaupungista',
+          teksti:
+            'Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.',
+          tiedosto: 'Diamond in kimberlite (Cretaceous; Kimberley, South Africa) 1 (32832594347).jpg',
+          lyhyt: 'Kimberliittikivi, jonka sisään on jäänyt kaksi timanttikidettä.',
+          selite:
+            'Lähikuva harmaasta, huokoisesta kimberliittikivestä, jonka pinnalla erottuu ainakin kaksi kirkasta, viistopintaista timanttikidettä ruudukolla merkityn mittapohjan päällä.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kimberlite',
+        },
+        {
+          otsikko: 'Syvemmälle maan alle',
+          teksti:
+            'Kun avolouhoksen seinät alkoivat sortua ja pintavaltaukset kävivät vaarallisiksi, De Beers siirtyi kaivamaan timantteja maan alle pystykuiluja pitkin. 1890-luvulla yhtiön kaivosmiehet työskentelivät jo 900 jalan eli lähes 275 metrin syvyydessä, missä hissikorit ja kiskoilla kulkevat malmivaunut korvasivat vanhat köysi- ja korikuljetukset. Myöhemmin maanalaiset käytävät ulottuivat yli tuhannen metrin syvyyteen asti, kauas alkuperäisen Colesbergin kummun alle. Pinnalta katsottuna kaivos näytti yhä samalta valtavalta kuopalta, mutta sen todellinen laajuus jatkui näkymättömissä moninkertaisesti syvemmälle kuin kukaan pystyi kuopan reunalta arvioimaan.',
+          tiedosto: 'PSM V41 D474 In the rock shaft of the de beers diamond mine at 900 feet.jpg',
+          lyhyt: 'Herrasmiehiä De Beersin kaivoksen maanalaisessa käytävässä 900 jalan syvyydessä.',
+          selite:
+            'Kynäpiirros esittää kolmea hienosti pukeutunutta herrasmiestä keskustelemassa maanalaisessa kaivoskäytävässä pienten, kiskoilla kulkevien malmivaunujen vierellä; yläpuolella näkyy köysi ja taljapyörä.',
+          lahde: 'Tuntematon tekijä 1892 (Popular Science Monthly), Wikimedia Commons (Public domain)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Ahtaus ja taudit rynnistyksen kaupungissa',
+          teksti:
+            'Kaivoskaupungin arki ei ollut vain jännittävää aarteenetsintää. Vesi oli niukkaa, kesät polttavan kuumia, ja telttoihin sekä hökkeleihin ahtautunut väestö altisti itsensä tarttuville taudeille. Kimberleyn sairaalan omista tiedoista käy ilmi, että vuosina 1897–1899 hoidettiin 5 368 mustaa potilasta, joista 1 144 kuoli – syinä muun muassa tuberkuloosi, keuhkokuume, keripukki, ripuli ja kaivosonnettomuudet. Suurin osa kaivosten mustista työntekijöistä asui erillisissä, valvotuissa työläisleireissä, joista käsin heidät kuljetettiin päivittäin louhokselle ja takaisin, usein ilman mahdollisuutta poistua alueelta koko sopimuskauden aikana.',
+          tiedosto: 'South Africa; bread carried on trolleys for the African work Wellcome V0038004.jpg',
+          lyhyt: 'Leipää kuljetetaan vaunulla De Beersin kaivoksen työläisleirille noin vuonna 1905.',
+          selite:
+            'Valokuva näyttää joukon afrikkalaisia kaivostyöläisiä pienen, kiskoilla kulkevan vaunun ympärillä; vaunuun on pinottu kymmeniä leipiä työläisten ruokintaa varten De Beersin kaivoksen työläisleirin edustalla.',
+          lahde: 'Hugh Marshall, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kimberley, Northern Cape',
+        },
+      ],
+    },
+  ],
+  labrador: [
+    {
+      id: 'kaupunki',
+      nimi: 'Labrador',
+      johdanto:
+        'Labrador on Kanadan koillisin ja karuin maakolkka: jylhiä vuoria, jäisiä vuonoja ja satojen vuosien takaisia inuittikyliä. Isoisän matkavuonna 1873 se oli jo vanha tuttu paikka valaanpyytäjille ja turkiskauppiaille.',
+      nostot: [
+        {
+          otsikko: 'Kirkko joka ehti sata vuotta ennen isoisää',
+          teksti:
+            'Herrnhutilainen lähetyssaarnaaja Jens Haven perusti Nainiin lähetysaseman vuonna 1771 – yli sata vuotta ennen isoisän matkaa. Moravian veljeskunta oli tullut Labradoriin kääntämään inuiitteja kristinuskoon, ja jo pari vuotta perustamisen jälkeen Nainissa asui ja kävi kastettavana yli 250 inuittia, jotka olivat saapuneet kauempaakin etelän rannikolta. Nain oli aikanaan yksi Kanadan vanhimmista pysyvistä inuittiyhteisöistä, ja lähetysasemien verkosto laajeni pian myös Hopedaleen, Hebroniin ja Okakiin. 1870-luvulla asema oli jo osa rannikon arkea, ei mikään uutuus.',
+          tiedosto: 'Nain Moravian Church, Labrador, July 2023.jpg',
+          lyhyt: 'Nainin valkoinen puukirkko, jonka kyltti kertoo perustamisvuoden 1771.',
+          selite:
+            'Valokuva Nainin Moravian-kirkosta: valkoiseksi maalattu puukirkko vihreine listoineen ja tornin kellotapuli, edessä kyltti "Nain Moravian Church Established 1771".',
+          lahde: 'Quincylvania, Wikimedia Commons (CC0)',
+          wiki: 'Nain, Newfoundland and Labrador',
+        },
+        {
+          otsikko: 'Vuoret joita jää veisti vuosituhansia',
+          teksti:
+            'Labradorin pohjoiskärkeä hallitsevat Torngatin vuoret, joiden nimi tulee inuktitutin sanasta Torngarsuk – henkiolento, joka uskottiin asuvan huipuilla. Jäätiköt kaivoivat vuoriin syviä, U:n muotoisia laaksoja ja vuonoja, kuten Nachvakin vuonon, jonka rannoilla ei kasva juuri muuta kuin jäkälää ja matalaa pensaikkoa. Alueella elää ainoana paikkana maailmassa tundralla viihtyviä mustakarhuja, ja samat rinteet ovat myös jääkarhujen ja karibujen laidunmaita. Isoisän aikaan seutu oli lähes kokonaan kartoittamaton erämaa.',
+          tiedosto: 'Nachvak Fjord Labrador 2008.JPG',
+          lyhyt: 'Nachvakin vuono viiltää Torngatin vuoriston kallioita Pohjois-Labradorissa.',
+          selite:
+            'Valokuva Nachvakin vuonosta: jyrkät, lumitäpläiset kalliorinteet laskeutuvat tummansiniseen veteen, etualalla ruskeaa syyskasvillisuutta peittävää kalliota.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Torngat Mountains',
+        },
+        {
+          otsikko: 'Baskit keittivät valasta öljyksi',
+          teksti:
+            'Kauan ennen brittiläisiä tai ranskalaisia siirtokuntia Red Bayn satamassa kiehuivat baskien valaanpyytäjien padat: 1530-luvulta 1600-luvun alkuun baskilaiset laivastot pyysivät alueella grönlanninvalaita ja sulattivat rasvan öljyksi Euroopan lamppuihin. Arkeologit ovat löytäneet paikalta uponneita laivoja ja baskityylisiä punaisia kattotiiliä, jotka todistavat asutuksen olleen aikanaan Pohjois-Amerikan suurin eurooppalainen teollisuuslaitos. Red Bay julistettiin Kanadan kansalliseksi historialliseksi kohteeksi 1979 ja Unescon maailmanperintökohteeksi 2013 parhaiten säilyneenä todisteena eurooppalaisesta valaanpyyntiperinteestä.',
+          tiedosto: 'Red Bay Labrador 01.jpg',
+          lyhyt: 'Red Bayn kylä, jossa baskit pyysivät valaita jo 1500-luvulla.',
+          selite:
+            'Valokuva Red Bayn rannikkokylästä: valkoisia ja punakattoisia taloja matalalla niemellä sataman ympärillä, kaukana oikealla siintää valkoinen jäävuori.',
+          lahde: 'Cephas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Red Bay',
+        },
+        {
+          otsikko: 'Jäävuorten kuja',
+          teksti:
+            'Labradorinvirta kuljettaa joka kevät Grönlannin ja Baffininsaaren jäätiköiltä irronneita jäävuoria etelään Labradorin rannikkoa pitkin niin säännöllisesti, että reittiä kutsutaan "jäävuorten kujaksi". Kylmä virtaus pitää meriveden lämpötilan usein nollan tuntumassa kesälläkin ja on yksi syy siihen, miksi Labradorin edustan kalavedet olivat pitkään niin runsaat: kylmä, hapekas vesi sopi turskalle ja katkaravulle mainiosti. Ajelehtivat jäävuoret tarjosivat isoisän aikaan myös lepopaikan meripäivälinnuille, jotka istuivat jään harjalla kymmenien parvina.',
+          tiedosto: 'Iceberg (Red Bay harbour).jpg',
+          lyhyt: 'Jäävuori Red Bayn satamassa, sen laella lepää lintuparvi.',
+          selite:
+            'Valokuva sinertävästä jäävuoresta meren pinnalla: sen harjalla ja rinteillä istuu kymmenien lintujen parvi, taustalla usvainen keltertävä taivas.',
+          lahde: 'Wiegee, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador Current',
+        },
+        {
+          otsikko: 'Turkkia kruunulle',
+          teksti:
+            'Hudson\'s Bay -yhtiö perusti kauppapaikan Rigolet\'in kylään vuonna 1836 ostaakseen inuiteilta ja rannikon asukkailta turkiksia – erityisesti kettua, saukkoa ja nahkiaishylkeen taljaa – brittiläisten hattutehtaiden tarpeisiin. Postille rakennettiin varastoja, asuinrakennuksia ja lopulta myös verkkovaja, ja se pysyi seudun tärkeimpänä kauppapaikkana vuosikymmenien ajan. Isoisän matkavuonna 1873 tällaiset postit olivat rannikon ainoa yhteys ulkomaailman rahatalouteen: turkiksilla maksettiin jauhoista, ammuksista ja työkaluista, käteistä nähtiin harvoin.',
+          tiedosto:
+            "Emil Brass, Im Reiche der Pelze, Seite 299, Leutehaus des Hudson's Bay Postens in Rigolet, Labrador.jpg",
+          lyhyt: 'Hudson’s Bay -yhtiön työläisten talo Rigolet’n kauppapostilla.',
+          selite:
+            'Vanha mustavalkoinen valokuva pitkästä, valkoiseksi maalatusta hirsitalosta: univormuun pukeutunut mies kävelee rakennuksen edessä kulkevaa polkua pitkin.',
+          lahde: 'Emil Brass, Wikimedia Commons (Public domain)',
+          wiki: "Hudson's Bay Company",
+        },
+        {
+          otsikko: '"Labradorin pääkaupunki"',
+          teksti:
+            'Battle Harbourin saarelle perusti englantilainen Poolen kauppahuone suolakalan käsittelyyn erikoistuneen kauppa-aseman jo 1770-luvulla. Vuoden 1820 jälkeen paikasta tuli niin vakiintunut kesäkalastuksen keskus, että sitä alettiin kutsua "Labradorin pääkaupungiksi". Satoja kalastajia saapui joka kesä Newfoundlandista pyytämään turskaa, joka suolattiin ja kuivattiin telineillä vientiin Eurooppaan. Isoisän aikaan Battle Harbour oli koko rannikon vilkkain paikka juuri kesäkuukausina; talvisin väki väheni murto-osaan. Paikka nimettiin kansalliseksi historialliseksi kohteeksi 1996.',
+          tiedosto: 'BattleHarbour Labrador 2008.JPG',
+          lyhyt: 'Battle Harbourin kalastusasema sumun peittämänä syksyisenä päivänä.',
+          selite:
+            'Valokuva sumuisesta Battle Harbourista: valkoisia, punakattoisia varastorakennuksia rannalla, edessä laitureita ja telineitä, tausta katoaa usvaan.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Battle Harbour',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Labradorinsorsa – lintu joka katosi',
+      johdanto:
+        'Labradorin nimeä kantoi myös lintu: labradorinsorsa, joka ui rannikon matalikoilla vielä isoisän lapsuudessa. Se hävisi todistetusti isoisän omana aikana, ilman selitystä sille, miksi se oli aina ollut niin harvinainen.',
+      tehtava: {
+        kysymys: 'Missä ja milloin ammuttiin viimeinen varmasti tunnettu labradorinsorsa?',
+        vaihtoehdot: [
+          'Long Islandilla New Yorkissa syksyllä 1875',
+          'Nainin edustalla Labradorissa 1800',
+          'Grönlannin rannikolla 1920',
+          'Torngatin vuoristossa 1750',
+        ],
+        oikea: 0,
+        fakta:
+          'Viimeinen säilynyt näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, vain kaksi vuotta isoisän matkan jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lintu jota kukaan ei tuntenut kunnolla',
+          teksti:
+            'Labradorinsorsa (Camptorhynchus labradorius) oli sukupuuttoon kuollut jo ennen kuin kukaan ehti tutkia sen elintapoja kunnolla. Koiraan puvussa vuorottelivat musta ja valkoinen eiderin tapaan, naaras oli vaatimattoman harmaanruskea. Molemmilla oli erikoinen, leveäksi ja litteäksi levittynyt nokka, jonka sisäreunoilla oli tiheä rivi ohuita lamelleja – luultavasti sopeuma, jolla lintu suodatti pientä saalista mudasta tai hiekasta. Laji oli tiedemiesten mukaan aina ollut harvinainen, eikä kukaan osannut edes 1800-luvulla sanoa varmasti miksi juuri tämä sorsa oli niin harvassa muihin vesilintuihin verrattuna.',
+          tiedosto: 'Extinctbirds1907 P36 Camptolaemus labradorius0363AA.jpg',
+          lyhyt: 'Labradorinsorsan naaras ja koiras John Gerrard Keulemansin maalauksessa 1907.',
+          selite:
+            'Vanha lintumaalaus kahdesta sorsasta kalliota vasten: vasemmalla ruskea naaras, oikealla mustavalkoinen, tummapäinen koiras, jonka nokka on leveä ja litteä.',
+          lahde: 'John Gerrard Keulemans, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Pesät joita kukaan ei löytänyt',
+          teksti:
+            'Labradorinsorsan uskottiin pesivän juuri Labradorin ja Pohjois-Québecin rannikoilla, ja luonnontutkija John James Audubonin poika kertoi nähneensä yhden pesän Labradorissa 1800-luvun puolivälissä. Kukaan muu ei kuitenkaan koskaan varmuudella löytänyt lajin pesää tai munaa, vaikka linnusta kerättiin näytekappaleita museoihin ympäri maailmaa. Osa tutkijoista arveli lajin pesineen myös Pyhän Laurin lahden ulkosaarilla. Tämä tietokatko teki labradorinsorsasta arvoituksen jo eläessään: kukaan ei tiennyt, kuinka moni lintu oikeasti pesi Labradorin karuilla rannoilla isoisän aikaan.',
+          tiedosto: 'Saglek Fjord Labrador 2008.JPG',
+          lyhyt: 'Saglekin vuono Pohjois-Labradorissa, arvioitua labradorinsorsan pesimäseutua.',
+          selite:
+            'Valokuva Saglekin vuonon jyrkästä, kerroksellisesta kalliorinteestä tyynen sinisen veden yllä, taivas kirkas ja pilvetön.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Ruokaa simpukoista',
+          teksti:
+            'Erikoinen litteä nokka paljastaa labradorinsorsan ruokavalion: se sukelsi matalissa rannikkovesissä ja suodatti pohjamudasta pieniä simpukoita ja muita nilviäisiä. Kalastajat pystyivät jopa pyytämään lintuja ongella, kun koukun syöttinä käytettiin simpukkaa – lintu tarttui siihen yhtä innokkaasti kuin oikeaan ravintoonsa. Kun rannikoiden simpukkapenkkejä alettiin 1800-luvulla hävittää rakentamisen ja ruoppauksen myötä erityisesti lajin talvehtimisalueilla etelämpänä, ravinto väheni juuri sillä hetkellä kun lintukanta oli jo entuudestaan hauras. Kapea erikoisruokavalio teki sopeutumisesta lähes mahdotonta.',
+          tiedosto: 'Redbay001.jpg',
+          lyhyt: 'Matala, simpukkapohjainen rantavesi Labradorin rannikolla.',
+          selite:
+            'Valokuva matalasta lahdenpoukamasta laskuveden aikaan: kivikkoinen ja mutainen ranta paljastuu veden alta, taustalla kylän valkoisia taloja.',
+          lahde: 'Wiegee, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Viimeinen lintu ammutaan',
+          teksti:
+            'Labradorinsorsan kanta romahti nopeasti vuosien 1850 ja 1870 välillä: munia kerättiin, höyhenkauppa verotti kantaa ja talvehtimisalueiden simpukkapenkit hupenivat. Viimeinen Kanadassa nähty yksilö havaittiin New Brunswickin Grand Mananissa vuonna 1874 – isoisän matkavuonna. Viimeinen tunnettu ja museoon säilötty näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, ja viimeinen väitetty havainto tehtiin vielä 1878 Elmirassa. Kansainvälinen luonnonsuojeluliitto IUCN pitää lajia sukupuuttoon kuolleena virallisesti vuodesta 1875 – ensimmäisenä pohjoisamerikkalaisena vesilintulajina, jonka ihminen hävitti.',
+          tiedosto: 'Camptorhynchus labradorius (Labrador duck) (8365390008).jpg',
+          lyhyt: 'Labradorinsorsan täytetty näytekappale, yksi noin 55 säilyneestä.',
+          selite:
+            'Lähikuva täytetystä labradorinsorsasta kivellä: pää ja niska valkoiset, musta myssymäinen laikku päälaella, siivet ja selkä mustavalkokuvioiset.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Serkku joka selvisi',
+          teksti:
+            'Toisin kuin labradorinsorsa, sen sukulaislaji haahka pesii Labradorin rannikolla yhä nykyäänkin miljoonapäisenä kantana. Haahka syö samantyyppistä simpukkaravintoa mutta on huomattavasti yleistaitoisempi ja kykenee pesimään monenlaisilla rannikoilla eri puolilla pohjoista pallonpuoliskoa, ei vain kapealla erikoisalueella. Tutkijat pitävät juuri tätä eroa yhtenä syynä siihen, miksi haahka säilyi ja labradorinsorsa ei: kun toisen ruokavalio ja pesimäalue olivat äärimmäisen suppeat, toinen pystyi joustamaan olosuhteiden muuttuessa. Ero muistuttaa siitä, miten hento raja erikoistumisen ja sukupuuton välillä joskus on.',
+          tiedosto: 'Common Eider (29671831526).jpg',
+          lyhyt: 'Haahka uimassa – labradorinsorsan lähisukulainen, joka ei kuollut sukupuuttoon.',
+          selite:
+            'Valokuva tummasta, valkosiipisestä haahkasta uimassa tyynellä sinisellä merellä, nokka vaaleankeltainen ja pitkä.',
+          lahde: "Mike's Birds, Wikimedia Commons (CC BY-SA 2.0)",
+          wiki: 'Common eider',
+        },
+      ],
+    },
+  ],
+  kappalmas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kap Palmas',
+      johdanto:
+        'Kap Palmas on Liberian kaakkoiskärjen kalliopilkka, jonka isoisä näki vuonna 1873 jo osana Liberiaa – vain kuusitoista vuotta aiemmin niemi oli ollut oman pienen tasavallan, Marylandin, pääkaupunki.',
+      nostot: [
+        {
+          otsikko: 'Grebot asuivat niemellä ennen siirtolaisia',
+          teksti:
+            'Kap Palmasin niemellä ja sitä ympäröivällä rannikolla asui grebo-kansa kauan ennen kuin ensimmäiset siirtolaislaivat saapuivat vuonna 1834. Grebot elivät kalastuksesta, öljypalmuviljelystä ja rannikkokaupasta, ja heidän kylänsä koostuivat pyöreistä, olkikattoisista majoista palmujen katveessa. Siirtolaisten saapuessa grebot suostuivat aluksi luovuttamaan maata sillä ehdolla, että perinteiset kalastusoikeudet ja kylät säilyisivät koskemattomina – sopimus, joka rapautui vuosikymmenten kuluessa uudisasukkaiden määrän kasvaessa ja johti lopulta aseellisiin yhteenottoihin.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 06 - 042 - Traditional huts with high thatched pointed roofs among palm trees - Half Graway, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Grebojen perinteinen olkikattoinen maja palmujen keskellä Half Grawayn kylässä.',
+          selite:
+            'Valokuvassa näkyy korkea, terävähuippuinen olkikattoinen maja palmupuiden siimeksessä Half Grawayn kylässä vuonna 1978 – samantyyppisiä majoja grebot rakensivat jo kauan ennen siirtolaisten saapumista.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grebo people',
+        },
+        {
+          otsikko: 'Marylandin oma siirtokunta',
+          teksti:
+            'Yhdysvaltain Marylandin osavaltiolla oli oma siirtomaayhdistyksensä, joka halusi perustaa vapautetuille orjille ja vapaana syntyneille mustille amerikkalaisille asutuksen erillään muusta Liberiasta. Maryland State Colonization Society valitsi kohteeksi Kap Palmasin kallioisen niemen, ja ensimmäiset siirtolaiset nousivat maihin 12. helmikuuta 1834 kuvernööri James Hallin johdolla. Toisin kuin Monrovian ympärille syntynyt Liberia, Marylandin siirtokunta pysyi hallinnollisesti täysin omanaan lähes neljännesvuosisadan ajan.',
+          tiedosto: 'Cape Palmas etch.jpg',
+          lyhyt: 'Kap Palmasin ranta ja niemi litografiassa vuodelta 1853.',
+          selite:
+            'Vuonna 1853 painettu litografia näyttää Kap Palmasin kalliorannan, palmuja, kanootteja ja ihmisiä hiekkarannalla sekä siirtokunnan rakennuksia niemen harjanteella taustalla.',
+          lahde: 'Wagner & C., Lith., Philadelphia, Wikimedia Commons (Public domain)',
+          wiki: 'Maryland in Africa',
+        },
+        {
+          otsikko: 'Kalliokärki ja majakka',
+          teksti:
+            'Kap Palmas on kapea, kivikkoinen niemi, joka yhdistyy mantereeseen kapealla hiekkakannaksella – muoto, joka teki siitä 1830-luvulla ihanteellisen paikan uudisasutukselle ja satamalle. Niemen kärkeen rakennettiin majakka opastamaan laivoja karikkoisen rannikon ohi kohti Harperin satamaa, ja se seisoo yhä paikallaan palmujen keskellä, vaikka moni sitä ympäröinyt siirtokunnan aikainen rakennus on sittemmin rapistunut. Cavallajoki, joka nykyään erottaa Liberian Norsunluurannikosta, laskee mereen vain parinkymmenen kilometrin päässä niemestä.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 15 - 37 - The lighthouse Cape Palmas Light on a peninsula in the Atlantic Ocean - Harper city, Maryland County, Liberia - 1979.tif',
+          lyhyt: 'Kap Palmasin majakka niemenkärjessä auringonlaskun aikaan vuonna 1979.',
+          selite:
+            'Valokuva vuodelta 1979 näyttää valkoisen majakkatornin ja sen vieressä matalia rakennuksia vihreällä niemenkärjellä, palmu edessä ja aurinko laskemassa mereen taustalla.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Palmas Lighthouse',
+        },
+        {
+          otsikko: 'Lahti, laguuni ja hiekkaranta',
+          teksti:
+            'Harperin edustalla Atlantin vedet ovat ympäri vuoden lämpimiä, ja niissä riittää kalaa, delfiinejä, satunnaisia valaita ja ostereita täynnä olevia simpukkapenkkejä. Kaupungin takana kapea hiekkaharju erottaa meren matalasta laguunista, jonka rannalla olkikattoiset kylät ovat sijainneet sukupolvien ajan. Kalastajat lähtevät edelleen pitkillä kanooteilla aaltojen läpi avomerelle, samaan tapaan kuin isoisän aikana 1870-luvulla, jolloin rannikon laivaliikenne kulki juuri tätä samaa hiekkarantaa pitkin kohti Harperin satamaa.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 02 - 044 - Harper bay and shore. Traditional huts. Lagoon - Harper, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Harperin hiekkaranta, laguuni ja kyläasutus rannikon puuston takana.',
+          selite:
+            'Valokuvassa aallot lyövät hiekkarantaan, jonka takana puiden ja palmujen keskellä erottuu muutama olkikattoinen maja sekä laaja laguuni ja rehevä rannikkometsä horisontissa.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Harper, Liberia',
+        },
+        {
+          otsikko: 'Raunioitunut vapaamuurarien maja',
+          teksti:
+            'Harperin vanhimmat korttelit muistuttavat arkkitehtuuriltaan Yhdysvaltain New Orleansia, sillä siirtolaiset rakensivat kotikaupunkinsa tyyliin plantaasimaisia taloja pylväineen ja parvekkeineen. Yksi näyttävimmistä oli Morning Star -niminen vapaamuurarien maja, jonka pylväsjulkisivu ja leveät portaat kertoivat siirtokunnan johtavien sukujen vauraudesta. Vapaamuurariloosit olivat 1800-luvulla tärkeitä americo-liberialaisen eliitin kokoontumispaikkoja, joissa siirtolaisten jälkeläiset pitivät yllä perinteitään. Nykyään rakennus seisoo kattoa vailla, mustuneena ja pensaikon valtaamana.',
+          tiedosto: 'Masonic Lodge in Harper, Liberia.jpg',
+          lyhyt: 'Morning Star -vapaamuurarilodgen rauniot Harperissa, pylväät ja portaat yhä pystyssä.',
+          selite:
+            'Nykyvalokuva näyttää kaksikerroksisen rakennuksen mustuneet, katottomat seinät, pylväiden reunustaman sisäänkäynnin ja niitä kohti nousevat leveät kiviportaat korkean heinikon keskellä.',
+          lahde: 'Sophieroad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Americo-Liberians',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Marylandin oma tasavalta',
+      johdanto:
+        'Kap Palmas ei ollut vain osa Liberiaa: vuosina 1834–1857 se oli oman siirtokuntansa, Marylandin, keskus – kolme viimeistä vuotta jopa itsenäisenä tasavaltana omine lippuineen ja perustuslakeineen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Marylandin tasavalta Kap Palmasissa liittyi osaksi Liberiaa?',
+        vaihtoehdot: ['1841', '1854', '1857', '1871'],
+        oikea: 2,
+        fakta:
+          'Maryland liittyi Liberiaan vuonna 1857 sen jälkeen, kun se ei kyennyt yksin puolustautumaan grebojen ja krun kapinalta.',
+      },
+      nostot: [
+        {
+          otsikko: 'John Brown Russwurm, kuvernööri joka uskoi siirtokuntaan',
+          teksti:
+            'John Brown Russwurm oli vuonna 1826 ensimmäinen afroamerikkalainen, joka valmistui yhdysvaltalaisesta korkeakoulusta, ja vuotta myöhemmin hän oli perustamassa Freedom’s Journalia, ensimmäistä mustien omistamaa sanomalehteä Yhdysvalloissa. Pettyneenä orjuuden vastustajien hitaisiin voittoihin hän muutti itse Liberiaan vuonna 1829 ja nousi vuonna 1836 Marylandin siirtokunnan kuvernööriksi Kap Palmasissa. Viisitoista vuotta kestäneen kautensa aikana hän kannusti maanviljelyä ja kauppaa, ja siirtokunnan väkiluku kasvoi lähelle tuhatta asukasta neljine kirkkoineen ja kuutena kouluineen ennen hänen kuolemaansa virassaan vuonna 1851.',
+          tiedosto: 'John B. Russwurm.png',
+          lyhyt: 'John Brown Russwurmin muotokuva, Marylandin siirtokunnan kuvernööri 1836–1851.',
+          selite:
+            'Kaiverrettu muotokuva näyttää tummaan pukuun ja rusettiin pukeutuneen miehen kasvokuvana – John Brown Russwurmin, joka johti Marylandin siirtokuntaa Kap Palmasissa viisitoista vuotta.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'John Brown Russwurm',
+        },
+        {
+          otsikko: 'Oma lippu ja perustuslaki',
+          teksti:
+            'Marylandin siirtokunta julisti itsensä ensin osavaltioksi helmikuussa 1841 ja lopulta täysin itsenäiseksi tasavallaksi 29. toukokuuta 1854 – nimellä Maryland Liberiassa, pääkaupunkinaan Harper. Tasavallalla oli oma lippu, jonka mustat ja keltaiset raidat viittasivat Marylandin osavaltion väreihin, sekä vuonna 1847 laadittu perustuslaki, joka noudatti pitkälti Yhdysvaltain perustuslain mallia. Itsenäisyys jäi kuitenkin lyhytaikaiseksi: jo kolme vuotta myöhemmin, vuonna 1857, tasavalta liittyi naapurinsa Liberian osaksi Marylandin piirikunnaksi.',
+          tiedosto: 'Flag of the Republic of Maryland.svg',
+          lyhyt: 'Marylandin tasavallan lippu vuosilta 1854–1857, mustia ja keltaisia raitoja.',
+          selite:
+            'Lipussa on mustia ja keltaisia vaakaraitoja sekä vasemmassa yläkulmassa sininen kenttä, jossa on valkoinen risti – Marylandin lyhytikäisen tasavallan virallinen tunnus.',
+          lahde:
+            'Government of the Republic of Maryland/Liberia, digitointi Jaume Ollé, Wikimedia Commons (Public domain)',
+          wiki: 'Republic of Maryland',
+        },
+        {
+          otsikko: 'Uudisraivaajien muistomerkki',
+          teksti:
+            'Harperin niemen kärjessä, joen suulla, seisoo pieni valkoinen muistomerkki, joka on omistettu Marylandin siirtokunnan perustajille – naisille ja miehille, jotka nousivat maihin helmikuussa 1834 kuvernööri James Hallin johdolla. Muistomerkki on pystytetty paikalle, josta avautuu näkymä sekä Atlantille että joelle, samalle kannakselle jolle ensimmäiset siirtolaiset rakensivat majansa. Se on säilynyt yhtenä siirtokunnan harvoista alkuperäisistä muistomerkeistä, vaikka suuri osa muusta 1800-luvun Harperista on sittemmin tuhoutunut tai rapistunut ajan saatossa.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 02 - 041 - Peninsula Harper City with the Pioneer Monument - Harper, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Uudisraivaajien muistomerkki Harperin niemellä, joen suulla vuonna 1978.',
+          selite:
+            'Valokuvassa puun lehvästö kehystää näkymää joen suulle, jonka rannalla vasemmalla erottuu kapea valkoinen muistomerkki – Marylandin siirtokunnan perustajille pystytetty monumentti.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maryland in Africa',
+        },
+        {
+          otsikko: 'Sota joka päätti tasavallan',
+          teksti:
+            'Kap Palmasin ympäristön grebo- ja kru-kansat eivät koskaan hyväksyneet siirtokunnan laajenemista täysin, ja vuonna 1856 jännitteet puhkesivat aseelliseksi kapinaksi maata ja kauppaoikeuksia vastaan. Pieni ja huonosti varustautunut Marylandin tasavalta ei kyennyt puolustautumaan yksin, joten sen johto pyysi apua naapuriltaan Liberialta. Liberian presidentti Joseph Jenkins Roberts lähetti sotilasapua, ja liberialaisten ja marylandilaisten yhteisjoukot kukistivat lopulta kapinan. Voitto osoitti kuitenkin karulla tavalla, ettei pieni tasavalta pystyisi selviytymään yksin, ja vuonna 1857 Maryland äänesti liittymisestä Liberiaan omaksi piirikunnakseen.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 06 - 037 - ceremonial War Dances of the Grebo people commemorating those who died in the past year - Half Graway, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Grebojen perinteinen sotatanssi Half Grawayn kylässä vuonna 1978, kuolleita muistaen.',
+          selite:
+            'Valokuvassa vuodelta 1978 grebomiehet tanssivat höyhen- ja raffia-asuisina hiekkaisella kylänraitilla olkikattoisen talon edessä katselijoiden ympäröiminä – perinteinen tanssi kunnioittaa kuolleita, ei kuvaa itse 1856–57 sotaa.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Joseph Jenkins Roberts',
+        },
+      ],
+    },
+  ],
+  boavista: [
+    {
+      id: 'kaupunki',
+      nimi: 'Boa Vista',
+      johdanto:
+        'Boa Vista sai alkunsa vuonna 1830 karjatilana Rio Brancon rannalla — isoisän matkavuonna 1873 se oli yhä pieni savanniasutus, ei osavaltion pääkaupunki eikä edes virallinen kaupunki, vaan seurakunta nimeltä Nossa Senhora do Carmo.',
+      nostot: [
+        {
+          otsikko: 'Karjatilasta seurakunnaksi',
+          teksti:
+            'Vuonna 1830 entinen Forte São Joaquimin komendantti, kapteeni Inácio Lopes de Magalhães, perusti Boa Vistan karjatilan Rio Brancon oikealle rannalle noin 30 kilometrin päähän vanhasta linnoituksesta. Kaunis niemeke joen varrella houkutteli vähitellen ympärilleen muita tilallisia ja kauppiaita, jotka hakivat suojaa ja vaihdantamahdollisuuksia. Vuonna 1858 asutus sai seurakunnan aseman ja nimen Nossa Senhora do Carmo — isoisän matkavuonna 1873 se oli siis yhä nimenomaan pieni seurakuntakylä, ei kaupunki, keskellä laajaa savannia.',
+          tiedosto: 'Centro cívico de Boa Vista, RR.jpg',
+          lyhyt: 'Boa Vistan viuhkamainen keskusta ja Rio Branco -joki ilmakuvassa.',
+          selite:
+            'Ilmakuva näyttää Boa Vistan viuhkamaisen siviilikeskuksen pyöreine kiertoliittymineen, valkoisine hallintorakennuksineen ja puistoalueineen; taustalla erottuu leveä Rio Branco -joki hiekkarantoineen ja siltoineen.',
+          lahde: 'Dieny Portinanni Araujo Cavalcante, Wikimedia Commons (CC0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+        {
+          otsikko: 'Rio Branco kantoi kylän elämää',
+          teksti:
+            'Rio Branco on Amazonin altaan pohjoisosan valtaväylä: se saa alkunsa Guayanan ylängön tepui-vuorilta virtaavista puroista ja laskee lopulta Rio Negroon, joka puolestaan yhtyy Amazon-jokeen Manausin kohdalla. Isoisän aikaan joki oli seudun ainoa käytännöllinen kulkuyhteys ulkomaailmaan: karjatilan asukkaat, kauppiaat ja lähetyssaarnaajat kulkivat kanooteilla ja proomuilla satojen kilometrien matkoja, sillä maanteitä alueelle ei vielä ollut. Joen sade- ja kuivakausien voimakas vaihtelu tahditti koko yhteisön elämää vuodesta toiseen.',
+          tiedosto: 'Rio Branco norte.JPG',
+          lyhyt: 'Rio Branco -joki Boa Vistan kohdalla, alueen ainoa kulkuväylä 1800-luvulla.',
+          selite:
+            'Näkymä rakennuksen katolta yli Rio Brancon leveän, sameanruskean vesialueen pilvisenä iltapäivänä; joen toisella rannalla siintää yhtenäinen metsäkaista.',
+          lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Branco River',
+        },
+        {
+          otsikko: 'Kaupunki tuulettimen muodossa',
+          teksti:
+            'Kun Boa Vistasta suunniteltiin 1900-luvulla osavaltion pääkaupunkia, sille piirrettiin poikkeuksellinen asemakaava: kaupunginosat levittäytyvät kuin auki taitettu viuhka joen rannalta, ja niitä yhdistää kuusitoista säteittäistä pääkatua. Malli lainattiin samantyyppisistä suunnitelluista kaupungeista kuten Pariisista, Belo Horizontesta ja Goiânialta. Satelliittikuvasta viuhkamainen keskusta erottuu selvästi joen mutkan vierestä — aivan toisenlainen näky kuin isoisän aikainen pieni rantaseurakunta, josta koko kaupunki lopulta kasvoi.',
+          tiedosto: 'Imagem de satélite de Boa Vista, Roraima em 2017.jpg',
+          lyhyt: 'Satelliittikuva Boa Vistan viuhkamaisesta katuverkosta joen mutkan vieressä.',
+          selite:
+            'Väriltään käsitelty satelliittikuva näyttää Boa Vistan kaupunkialueen säteittäisen, viuhkamaisen katuverkon sekä sitä idässä rajaavan Rio Branco -joen leveän mutkan.',
+          lahde: 'Coordenação-Geral de Observação da Terra/INPE, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+        {
+          otsikko: 'Hiekkasärkät keskellä kuivaa kautta',
+          teksti:
+            'Boa Vistan sää kääntyy ylösalaisin verrattuna muuhun Amazonin alueeseen: sadekausi kestää huhtikuusta marraskuuhun, mutta joulukuusta maaliskuuhun taivas pysyy lähes pilvettömänä. Kuivan kauden aikana Rio Brancon vedenpinta laskee niin paljon, että joen keskelle ja rannoille paljastuu laajoja hiekkasärkkiä, joista on tullut suosittuja uinti- ja kokoontumispaikkoja koko kaupungille. Samat vuodenaikojen ääripäät vaikeuttivat aikanaan myös isoisän sukupolven jokimatkoja: kuivana kautena matalikot pakottivat kanootit kiertämään pitkiä mutkia, sateisena kautena virta taas saattoi nousta useita metrejä.',
+          tiedosto: 'Praia no rio Branco.JPG',
+          lyhyt: 'Hiekkasärkkä Rio Brancolla — kuivan kauden suosittu uimaranta.',
+          selite:
+            'Rio Brancon keskelle kuivana kautena paljastunut pitkä hiekkasärkkä täynnä aurinkovarjoja, veneitä ja uimareita, kuvattuna palmunlehden takaa joen rannalta.',
+          lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Branco River',
+        },
+        {
+          otsikko: 'Kulta ja timantit toivat asukkaita',
+          teksti:
+            'Pitkään Boa Vistan ja koko seudun talous nojasi karjatalouteen, mutta 1900-luvulla alueelle virtasi uusia asukkaita kullan ja timanttien perässä. Garimpeiroiksi kutsutut itsenäiset kaivostyöläiset seuloivat jokien hiekkaa käsin ja yksinkertaisin välinein, ja monet heistä asettuivat lopulta pysyvästi kasvavaan kaupunkiin. Myöhemmin koneellinen kaivostoiminta kiellettiin, koska se aiheutti pahoja tuhoja joki- ja metsäalueille. Kaupungin keskustassa seisova patsas kumartuneesta kullankaivajasta muistuttaa yhä tästä Boa Vistan historian vaiheesta.',
+          tiedosto: 'Monumento aos Garimpeiros Boa Vista RR.jpg',
+          lyhyt: 'Patsas kultaa seulovasta garimpeirosta Boa Vistan keskustassa.',
+          selite:
+            'Patsas kumartuneesta miehestä, jolla on lieriömäinen hattu ja kädessään kultaa seulova vati — Boa Vistan muistomerkki kaupungin kultakaivostyöläisille eli garimpeiroille.',
+          lahde: 'Jorge Brazil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Roraima',
+        },
+        {
+          otsikko: 'Ainoa pääkaupunki päiväntasaajan pohjoispuolella',
+          teksti:
+            'Vuonna 1943, toisen maailmansodan aikana, Boa Vistasta tuli vastaperustetun Rio Branco -liittovaltion alueen pääkaupunki; alue muuttui myöhemmin osavaltioksi ja sai nimen Roraima. Boa Vista on ainoa Brasilian osavaltion pääkaupunki, joka sijaitsee kokonaan päiväntasaajan pohjoispuolella — kaikki muut suuret kaupungit jäävät eteläiselle pallonpuoliskolle. Nykyisin joen rantaa reunustaa pitkä promenadi näkötorneineen ja puistoineen, aivan toisenlainen näky kuin isoisän aikainen pieni karjakylä samalla paikalla.',
+          tiedosto: 'Orla de Boa Vista-RR.jpg',
+          lyhyt: 'Boa Vistan jokirantainen promenadi näkötorneineen nykyään.',
+          selite:
+            'Ilmakuva Boa Vistan jokirantaisesta promenadista: korkea näköalatorni, pitkä laituri ja puistoalueet Rio Brancon rannalla, kaupungin rakennukset taustalla.',
+          lahde: 'Andrezza Mariot, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Lavrado ja Roraima-vuori',
+      johdanto:
+        'Boa Vistan ympärillä leviää lavrado, Amazonin altaan ainoa laaja savanni, ja sen reunalla kohoaa yksinäinen pöytävuori Roraima, jonka luoksepääsemättömät seinämät innoittivat pitkään sekä tutkimusmatkailijoita että kirjailijoita.',
+      tehtava: {
+        kysymys: 'Minä vuonna Everard im Thurn ja Harry Perkins nousivat ensimmäisinä tunnettuina ihmisinä Roraima-vuoren huipulle?',
+        vaihtoehdot: ['1775', '1858', '1884', '1943'],
+        oikea: 2,
+        fakta: 'Englantilainen Everard im Thurn saavutti apulaisensa Harry Perkinsin ja paikallisten oppaiden kanssa Roraiman huipun 18. joulukuuta 1884.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lavrado — savanniaukio keskellä sademetsää',
+          teksti:
+            'Lavrado on Amazonin altaan pohjoisosan laaja savanni, joka poikkeaa jyrkästi ympäröivästä sademetsästä: matalaa ruohikkoa, hajanaisia puuryhmiä ja lähes täysin tasaista maastoa. Suurin osa koko Guayanan savannivyöhykkeestä — noin 43 000 neliökilometriä — sijaitsee juuri Roraiman osavaltiossa, ja loput levittäytyvät naapurimaihin Guyanaan ja Venezuelaan. Silmiinpistävin piirre ovat lukemattomat termiittikeot: eräät termiittilajit pystyttävät jopa parimetrisiä kekoja, jotka toimivat hedelmällisyyssaarekkeina köyhässä savannimaassa ja näkyvät maisemassa säännöllisinä täplinä kilometrien päähän.',
+          tiedosto: 'Termiteros Gran Sabana.jpg',
+          lyhyt: 'Lavrado-savannia täplittävät lukuisat termiittikeot ja palmuryhmät.',
+          selite:
+            'Vanhahtavassa värivalokuvassa avautuu vihreä savannilaakso, jota täplittävät sadat säännöllisin välein sijaitsevat termiittikeot sekä pieni palmuryhmä laakson pohjalla.',
+          lahde: 'Fev, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Guianan savanna',
+        },
+        {
+          otsikko: 'Sadekausi hukuttaa tasangon',
+          teksti:
+            'Lavradon sää on äärimmäinen: syyskuusta maaliskuuhun kestävä kuiva kausi polttaa ruohikon ja tekee tulipaloista arkipäivää, mutta huhtikuusta marraskuuhun kestävä sadekausi voi peittää poikkeuksellisen sateisina vuosina jopa kolmanneksen koko tasangosta matalilla, tilapäisillä järvillä. Tasainen maasto ja tiheä puronverkosto saavat veden leviämään laajalle sen sijaan, että se virtaisi nopeasti pois. Kun ilta-aurinko heijastuu näihin hetkellisiin järviin, koko savanni näyttää hetkeksi sulautuvan taivaaseen — näky, joka teki vaikutuksen moneen alueella matkanneeseen.',
+          tiedosto: 'Raposa Serra do Sol Nascer do sol.jpg',
+          lyhyt: 'Auringonnousu heijastuu lavradon sadekauden tilapäiseen tulvajärveen.',
+          selite:
+            'Auringonnousu heijastuu savannin tulva-ajan matalaan järveen; tulenvärinen, pilvinen taivas ja puurivin tumma siluetti peilautuvat tyynestä vedenpinnasta.',
+          lahde: 'Antonio Cruz/ABr, Wikimedia Commons (CC BY 3.0 BR)',
+          wiki: 'Guianan savanna',
+        },
+        {
+          otsikko: 'Roraima — vuori joka nousee tasangosta pilviin',
+          teksti:
+            'Roraima on tepui: jyrkkäseinäinen pöytävuori, jonka lakea peittävä hiekkakivi on kertynyt jo 1,7–2 miljardia vuotta sitten, kauan ennen kuin elämä siirtyi maalle. Vuori kohoaa yli 2 800 metrin korkeuteen, ja sen huipulla kohtaavat kolme valtiota: Brasilia, Venezuela ja Guyana. Pemón-kansa antoi vuorelle nimen, joka tarkoittaa suunnilleen "suurta sinivihreää" — nimi viittaa etäältä nähtyyn, usein pilvien peittämään sinertävään huippuun. Sadan metrin mittaiset pystysuorat kalliot tekivät vuoresta vuosisatojen ajan lähes mahdottoman kiivetä, mikä ruokki tarinoita sen huipulla piilevästä tuntemattomasta maailmasta.',
+          tiedosto: 'Monte Roraima e Kukenan Tepui no retorno a casa.jpg',
+          lyhyt: 'Roraima ja Kukenan-tepui kohoavat savannin yllä Gran Sabanassa.',
+          selite:
+            'Hiekkatie kulkee vihreän ylätasangon halki kohti kahta jyrkkäseinäistä pöytävuorta, Roraimaa ja Kukenania, jotka kohoavat kirkkaan sinisen taivaan alla savannin yläpuolelle.',
+          lahde: 'Neygfilho, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Roraima',
+        },
+        {
+          otsikko: 'Ensimmäinen nousu huipulle',
+          teksti:
+            'Vuonna 1838 tutkimusmatkailija Robert Schomburgk piti Roraiman jyrkkiä seiniä täysin kiipeämättöminä. Vasta 18. joulukuuta 1884 englantilainen Everard im Thurn ja hänen apulaisensa Harry Perkins löysivät paikallisten pemón-oppaiden avulla loivemman reitin ja saavuttivat huipun ensimmäisinä tunnettuina ihmisinä. Im Thurn keräsi matkallaan kasvinäytteitä, joista Lontoon Kew Gardensin tutkijat tunnistivat myöhemmin peräti 53 tieteelle uutta lajia ja kolme uutta sukua — osoitus siitä, kuinka eristyksissä vuoren huipun oma elämä oli vuosimiljoonien aikana kehittynyt.',
+          tiedosto: 'Everard Ferdinand Im Thurn - Norton - btv1b8453038t (1 of 2).jpg',
+          lyhyt: 'Everard im Thurnin muotokuva vuodelta 1884, Roraiman ensikiipeäjä.',
+          selite:
+            'Vanha sivuprofiilivalokuva parrakkaasta miehestä 1800-luvun asussa; kuvan reunaan on käsin kirjoitettu Everard im Thurnin nimi ja tieto Roraiman ensinoususta joulukuussa 1884.',
+          lahde: 'Norton (valokuvaaja), Wikimedia Commons (Public domain)',
+          wiki: 'Everard im Thurn',
+        },
+        {
+          otsikko: 'Kadonnut maailma syntyy tarinana',
+          teksti:
+            'Palattuaan Lontooseen Everard im Thurn piti retkestään esitelmän, jota kerrotaan seuranneen myös nuori kirjailija Arthur Conan Doyle. Vuosikymmeniä myöhemmin, vuonna 1912, Conan Doyle julkaisi seikkailuromaanin "Kadonnut maailma", jossa tutkimusretkikunta löytää eristyneeltä pöytävuorelta esihistoriallisten eläinten asuttaman maailman. Roraiman ja sitä ympäröivien tepui-vuorten kerrotaan olleen yksi romaanin innoittajista: todellinen, vaikeapääsyinen ylätasanko oli tiedeyhteisölle vuosikymmenten ajan lähes yhtä salaperäinen kuin kirjan kuvitteellinen ylänkö.',
+          tiedosto: 'Great Savanna 2014.JPG',
+          lyhyt: 'Savanni ja etäinen ylätasanko — maisema joka innoitti Kadonnutta maailmaa.',
+          selite:
+            'Panoraamanäkymä aaltoilevasta savannista, jonka laaksoa reunustaa metsäkaistale ja jonka takana siintää etäinen, sumuinen ylätasanko horisontissa.',
+          lahde: 'Emmanuelst7, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'The Lost World (Doyle novel)',
+        },
+      ],
+    },
+  ],
+  viktoria: [
+    {
+      id: 'kaupunki',
+      nimi: 'Viktoria Nyanza',
+      johdanto:
+        'Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi, jonka rannoilla asuu nykyään yli 45 miljoonaa ihmistä kolmessa maassa. Sen löytöhistoria kesti lähes 20 vuotta ja synnytti Lontoossa kiivaan tiedekiistan.',
+      nostot: [
+        {
+          otsikko: 'Speke näkee unelmansa järven',
+          teksti:
+            'Elokuussa 1858 nuori englantilaisupseeri John Hanning Speke saapui yksin suuren sisäjärven rannalle nykyisen Tansanian puolella, sillä hänen matkatoverinsa Richard Burton oli sairastunut eikä jaksanut jatkaa mukana. Speke nimesi järven kuningatar Viktorian mukaan ja vakuuttui heti, ilman minkäänlaisia mittauksia, että hän oli löytänyt kauan etsityn Niilin lähteen. Burton piti väitettä älyttömän hätiköitynä, ja miesten ystävyys mureni riidaksi, joka jatkui vuosikausia ja päättyi lopulta julkiseen kiistelyyn Lontoon tiedeseuroissa. Isoisän matkaan asti, vuoteen 1873, kysymys järven ja Niilin yhteydestä oli yhä osin auki.',
+          tiedosto: 'John Hanning Speke (1827-64) RMG F8616 (cropped).jpg',
+          lyhyt: 'John Hanning Speke, joka näki ja nimesi Viktorianjärven vuonna 1858.',
+          selite:
+            'Muotokuva näyttää Speken kokovartalossa tummassa 1800-luvun puvussa hänen vierellään seisova sekstantti viittaa hänen työhönsä tutkimusmatkailijana ja mittaajana.',
+          lahde: 'S. Hollyer; Southwell Brothers, Wikimedia Commons (Public domain)',
+          wiki: 'John Hanning Speke',
+        },
+        {
+          otsikko: 'Todiste Ripon Putouksilla',
+          teksti:
+            'Speke ei luovuttanut, vaikka Burton epäili häntä yhä. Vuosina 1860–1863 hän palasi alueelle toverinsa James Grantin kanssa uudella retkellä, jonka tarkoitus oli todistaa väite kiistattomasti. Heinäkuussa 1862 Speke saapui järven pohjoisrannalle nykyisen Jinjan tienoille ja näki, kuinka valtava vesimassa syöksyi järvestä putouksena kohti pohjoista — hän nimesi näyn Ripon Putouksiksi Kuninkaallisen maantieteellisen seuran silloisen puheenjohtajan mukaan. Speke julisti nyt nähneensä omin silmin paikan, jossa Niili sai alkunsa. Moni Lontoossa piti todistusta yhä puutteellisena, mutta löytö oli merkittävin askel kohti Niilin arvoituksen ratkaisua.',
+          tiedosto: 'Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg',
+          lyhyt: 'Ripon Putoukset, joilla Speke totesi Niilin saavan alkunsa järvestä.',
+          selite:
+            'Vuoden 1913 kuvitus näyttää Ripon Putoukset sellaisina kuin ne näyttivät ennen kuin pato 1900-luvulla peitti ne alleen — juuri tätä näkyä Speke katseli heinäkuussa 1862.',
+          lahde: 'Jules Leclercq (oletettu), Wikimedia Commons (Public domain)',
+          wiki: 'Ripon Falls',
+        },
+        {
+          otsikko: 'Stanley purjehtii ympäri järven',
+          teksti:
+            'Kiista Niilin lähteestä jatkui vielä vuosia, sillä kukaan ei ollut varmistanut, oliko Viktorianjärvi yksi yhtenäinen allas vai ryhmä toisiinsa kytkeytymättömiä lampia. Helmikuussa 1875 toimittaja ja tutkimusmatkailija Henry Morton Stanley saapui rannalle mukanaan Lady Alice, osiin purettava puuvene, jonka hän oli kuljettanut kantajien selässä satojen kilometrien päähän sisämaahan. Stanley purjehti veneellään järven ympäri lähes 1 000 mailin matkan ja todisti sen olevan yksi ainoa suunnaton järvi, jolla on vain yksi laskuaukko: sama Ripon Putous, jonka Speke oli löytänyt 13 vuotta aiemmin. Kiista oli vihdoin ratkennut.',
+          tiedosto: 'Sir Henry Morton Stanley, GCB.jpg',
+          lyhyt: 'Henry Morton Stanley, joka purjehti Viktorianjärven ympäri vuonna 1875.',
+          selite:
+            'Kaiverrettu muotokuva perustuu Kairossa vuonna 1890 otettuun valokuvaan Stanleysta hienostuneessa asussa — samasta miehestä, joka 15 vuotta aiemmin oli purjehtinut osiin purettavalla veneellä järven ympäri.',
+          lahde: 'Waterlow and Sons, Wikimedia Commons (Public domain)',
+          wiki: 'Henry Morton Stanley',
+        },
+        {
+          otsikko: 'Kolmen maan järvi',
+          teksti:
+            'Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi pinta-alaltaan, lähes 60 000 neliökilometriä — enemmän kuin monen Euroopan pikkuvaltion koko maa-ala. Sen rannat jakautuvat kolmen maan kesken: Tansania omistaa lähes puolet rantaviivasta, Uganda toisen ison siivun ja Kenia pienimmän kaistaleen pohjoisrannalla. Järvi on silti yllättävän matala, keskisyvyydeltään vain noin 40 metriä ja syvimmilläänkin alle 100 metriä, mikä tekee siitä herkän tuulten nostattamille äkillisille myrskyille. Valuma-alueella asuu nykyään yli 45 miljoonaa ihmistä, jotka saavat järvestä juomaveden, kulkuväylän ja suuren osan ruokaisasta proteiinistaan.',
+          tiedosto: 'Sunset on the Victoria lake.JPG',
+          lyhyt: 'Auringonlasku Viktorianjärven ylle, jonka rannat jakautuvat kolmen maan kesken.',
+          selite:
+            'Kuvassa aurinko laskee tyynen järvenselän taakse kultaisin ja oranssein sävyin, ja rantaviiva erottuu tummana siluettina taivasta vasten.',
+          lahde: 'Damiano Luchetti, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Victoria',
+        },
+        {
+          otsikko: 'Saarien meri',
+          teksti:
+            'Viktorianjärven pinnalta pistää esiin lähes tuhat saarta — tarkkaan ottaen 985 — joista suurin osa sijaitsee Ugandan puolella. Näyttävin ryhmä on Ssese-saaristo, 84 metsäisen saaren ketju järven luoteisosassa: paikalliset kertoivat isoisän ajan matkalaisille tarinoita saarilla asuvista hengistä, jotka piti tyynnyttää ennen kalastusmatkalle lähtöä. Saarilla kasvaa yhä alkuperäistä sademetsää, kun taas mantereen rannoilla metsät on suurelta osin raivattu maanviljelylle. Kalastajakylät elävät edelleen samalla rytmillä kuin vuosisata sitten: veneet lähtevät aamuyöllä ja palaavat saaliineen ennen puolenpäivän hellettä.',
+          tiedosto: 'The Shore at Ssese Islands, on Lake Victoria.jpg',
+          lyhyt: 'Ssese-saariston hiekkaranta Viktorianjärven luoteisosassa.',
+          selite:
+            'Kuva näyttää Ssese-saariston rauhallisen hiekkarannan ja sen editse siintävän järven, joka ympäröi saaristoa joka puolelta.',
+          lahde: 'Jiame Josh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ssese Islands',
+        },
+        {
+          otsikko: 'Elanto verkoilla ja koukuilla',
+          teksti:
+            'Kalastus on Viktorianjärven rannoilla yhä tärkein elinkeino, ja saalis ruokkii miljoonia ihmisiä kolmessa maassa. Perinteiset puuveneet lähtevät rannasta jo pimeän aikaan, ja kalastajat palaavat aamun tunteina lastissa tilapiaa ja niiliahventa, joka kattaa nykyisin noin 60 prosenttia kaupallisista saaliista. Isoisän matkan aikaan 1870-luvulla verkot olivat vielä käsin punottuja ja veneet ilman moottoria, mutta kalastuksen perusrytmi — yö vedellä, aamu rannassa myymässä saalista — on säilynyt yllättävän samanlaisena. Rantakylien torit täyttyvät päivittäin tuoreesta kalasta heti veneiden saavuttua rantaan.',
+          tiedosto: 'Ugandan fishing boats.jpg',
+          lyhyt: 'Kalastusveneitä palaamassa saaliineen Ggaban rantaan Ugandassa.',
+          selite:
+            'Kuvassa perinteisiä puuveneitä on ajettu rantaan Ggaban kalasatamassa Ugandassa; veneet ovat juuri tuoneet tilapiasaaliin myyntiin.',
+          lahde: 'sarahemcc, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Tilapia',
+        },
+      ],
+    },
+    {
+      id: 'jarvielama',
+      nimi: 'Evoluution laboratorio',
+      johdanto:
+        'Viktorianjärvi kätkee vedenalaisen ihmeen: sadat ainutlaatuiset kirjoahvenlajit syntyivät järvessä vain muutamassa tuhannessa vuodessa. Yksi ihmisen istuttama peto lähes pyyhkäisi koko ihmeen pois 1900-luvun jälkipuoliskolla.',
+      tehtava: {
+        kysymys:
+          'Minä vuosikymmenellä niiliahven istutettiin Viktorianjärveen ja käynnisti satojen kirjoahvenlajien tuhon?',
+        vaihtoehdot: ['1920-luvulla', '1950-luvulla', '1980-luvulla', '2000-luvulla'],
+        oikea: 1,
+        fakta:
+          'Niiliahventa alettiin istuttaa Viktorianjärveen 1950-luvulla, ja se ajoi vuosikymmenien kuluessa satoja endeemisiä kirjoahvenlajeja sukupuuttoon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satojen lajien parvi',
+          teksti:
+            'Kun edellinen kuivakausi noin 15 000 vuotta sitten päättyi ja Viktorianjärvi täyttyi uudelleen vedellä, järveen jäi vain kourallinen kirjoahvenlajien esi-isiä. Evoluutio teki tehtävänsä huimaa vauhtia: tutkijoiden mukaan järvessä ehti kehittyä yli 500 endeemistä kirjoahvenlajia, jotka jakoivat keskenään lähes jokaisen kuviteltavissa olevan ravintolähteen — osa söi vain kotiloita, osa toisten kalojen suomuja, osa toisten kalojen munia suoraan emokalan suusta. Tämä oli nopein tunnettu selkärankaisten lajiutumistapahtuma koko maapallolla, ja se tapahtui geologisessa mittakaavassa silmänräpäyksessä, vain muutamassa tuhannessa vuodessa.',
+          tiedosto: 'Pundamilia nyererei.jpg',
+          lyhyt: 'Pundamilia nyererei, yksi Viktorianjärven sadoista kirjoahvenlajeista.',
+          selite:
+            'Kuvassa punaoranssiin hehkuva uroskala on kuvattu sivuprofiilista vedessä — väri on tyypillinen tavalle, jolla lajit erottuvat toisistaan Viktorianjärvessä.',
+          lahde: 'Oliver Selz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pundamilia nyererei',
+        },
+        {
+          otsikko: 'Vieraslaji joka mullisti järven',
+          teksti:
+            '1950-luvulla siirtomaahallinto ja kalastusviranomaiset istuttivat Viktorianjärveen niiliahventa (Lates niloticus), jättimäistä petokalaa, jonka toivottiin kasvattavan kalansaaliita ja synnyttävän vientiteollisuutta. Yksikään endeeminen kirjoahven ei ollut koskaan kohdannut näin suurta ja tehokasta saalistajaa. Niiliahven levisi hitaasti mutta varmasti, ja 1980-luvulle tultaessa se oli ajanut sadat kirjoahvenlajit sukupuuttoon tai lähelle sitä — tutkijat arvioivat menetyksen suuruudeksi yli 200 lajia. Samalla veden sameus lisääntyi, mikä hämärsi kalojen värisignaaleja ja johti lajien risteytymiseen entistä enemmän.',
+          tiedosto: 'Lates niloticus by DaijuAzuma.jpg',
+          lyhyt: 'Niiliahven, joka istutettiin järveen 1950-luvulla vientikalaksi.',
+          selite:
+            'Kuvassa pitkänomainen, vahvarakenteinen niiliahven on kuvattu sivulta neutraalia taustaa vasten — samanlainen kala kasvaa Viktorianjärvessä jopa parimetriseksi jättiläiseksi.',
+          lahde: 'Daiju Azuma, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nile perch',
+        },
+        {
+          otsikko: 'Kalasääski, järven ilmavartija',
+          teksti:
+            'Viktorianjärven taivaalla kiertelee usein kalasääski, tumma ja valkorintainen petolintu, jonka kimeä huuto kantaa kauas veden yli. Se istuu mielellään rantapuiden latvoissa ja syöksyy äkkiä alaspäin havaitessaan kalan lähellä pintaa — terävät kynnet lävistävät saaliin, jota linnun karheat, piikikkäät varpaat pitävät tiukasti kiinni liukkaastakin pinnasta. Kalasääski on yksi Afrikan suurten järvien tunnetuimmista symboleista, ja sen kuva löytyy useiden alueen valtioiden vaakunoista ja seteleistä. Se pärjää hyvin myös nykyisessä, niiliahvenen muokkaamassa järvessä, sillä sekä ahven että jäljellä olevat kirjoahvenet kelpaavat sille ravinnoksi.',
+          tiedosto: 'African Fish Eagle (Haliaeetus vocifer) (11802366844).jpg',
+          lyhyt: 'Kalasääski, Afrikan suurten järvien tunnetuimpia petolintuja.',
+          selite:
+            'Kuvassa kalasääski lepää oksalla tumma selkä ja valkoinen pää ja rinta erottuvat selvästi — samanlaisia lintuja tavataan runsaasti myös Viktorianjärven rannoilla.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'African fish eagle',
+        },
+        {
+          otsikko: 'Papyrusviidakko suodattaa vettä',
+          teksti:
+            'Suuri osa Viktorianjärven rantaviivasta on tiheän papyrusviidakon reunustamaa: kolmemetrisiksi kasvavat, tupsupäiset kaislat muodostavat kelluvia soita, jotka toimivat järven luonnollisina suodattimina. Papyrus imee itseensä ravinteita ja saastetta ennen kuin vesi ehtii avoveteen, ja samalla se tarjoaa suojan kymmenille lintu- ja kalalajeille, jotka eivät selviäisi avoimella rannalla. Isoisän aikaan 1870-luvulla papyrusviidakot olivat huomattavasti laajemmat kuin nykyään, sillä väestönkasvu ja maanviljely ovat sittemmin kaventaneet niitä monin paikoin. Paikalliset ovat perinteisesti punoneet papyruksesta mattoja, kattoja ja jopa kokonaisia veneitä.',
+          tiedosto: 'Papyrus (Cyperus papyrus) (7079214073).jpg',
+          lyhyt: 'Papyrusta kasvaa runsaasti Viktorianjärven rantasoilla.',
+          selite:
+            'Kuvassa korkeat, tupsupäiset papyruskasvit kasvavat tiheänä ryhmänä kosteikossa — samanlaiset kasvustot reunustavat laajoja osia Viktorianjärven rannoista.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cyperus papyrus',
+        },
+        {
+          otsikko: 'Saalis joka ruokkii ja jakaa',
+          teksti:
+            'Niiliahvenen tulo mullisti myös ihmisten elämän järven rannoilla: kalasta tuli yhtäkkiä paljon suurempaa ja arvokkaampaa, ja sen ympärille syntyi tehtaita, jotka fileoivat kalan pakastettavaksi ja lennätettäväksi Euroopan markkinoille asti. Monet kalastajakylät vaurastuivat, mutta samalla paikallinen ruokaturva heikkeni, kun arvokkain saalis alkoi kulkea vientiin sen sijaan, että se olisi jäänyt lähiruokapöytiin. Perinteiset puuveneet lähtevät yhä joka ilta vedelle lyhtyjen valossa, sillä niiliahventa kalastetaan usein yöllä, jolloin kala nousee lähemmäs pintaa syömään pienempiä kaloja valon houkuttelemana.',
+          tiedosto: 'Men fishing on lake Victoria in Uganda.jpg',
+          lyhyt: 'Kalastajia veneessä Viktorianjärvellä nykyaikana.',
+          selite:
+            'Kuvassa kaksi miestä istuu puuveneessä keskellä järveä pyydystämässä kalaa — samanlaisia veneitä liikkuu vedellä niin päivällä kuin yölläkin.',
+          lahde: 'Geossegawa, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Fishing in Uganda',
+        },
+      ],
+    },
+  ],
+  gao: [
+    {
+      id: 'kaupunki',
+      nimi: 'Gao',
+      johdanto:
+        'Gao oli Songhain valtakunnan pääkaupunki, jonka vaurauden takasi Saharan yli kulkeva kulta- ja suolakauppa. Isoisän matkavuonna 1873 kerran mahtavasta kaupungista oli jäljellä vain köyhtynyt Nigerjoen varren kylä.',
+      nostot: [
+        {
+          otsikko: 'Songhain valtakunnan sydän',
+          teksti:
+            'Gao syntyi joen mutkaan jo 600-700-luvulla ajanlaskumme jälkeen: kaivoksista saatu rauta ja pitkän matkan kauppa tekivät siitä merkittävän työpajan ja markkinapaikan kauan ennen keskiajan suurvaltaa. Arabialainen maantieteilijä kuvasi kaupunkia 800-luvulla yhdeksi Sudanin alueen mahtavimmista valtakunnista. Vuonna 1464 valtaan noussut soturikuningas Sonni Ali teki Gaosta pääkaupunkinsa ja laajensi sen ympärille imperiumin, joka ohitti vauraudessa ja koossa aiemman Malin valtakunnan. Niin syntyi Songhain valtakunta, jonka sydämeksi Gao jäi yli sadaksi vuodeksi.',
+          tiedosto: 'Vue du ciel à Gao.jpg',
+          lyhyt: 'Ilmakuva Gaon kaupungista Nigerjoen mutkassa.',
+          selite:
+            'Ilmakuva näyttää Gaon rakennusryhmän ja viljellyt palstat aivan Nigerjoen rannalla, autiomaan reunustaessa asutusta joka puolelta.',
+          lahde: 'Cheic D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gao',
+        },
+        {
+          otsikko: 'Askian mausoleumi',
+          teksti:
+            'Askia Muhammad, joka nousi valtaan 1493, rakennutti oman hautamonumenttinsa Gaohon: paikallinen kyltti muistomerkillä kertoo sen valmistuneen jo vuonna 1495. Perimätiedon mukaan osa savesta ja puuaineksesta tuotiin tuhansien kamelien karavaanilla aina Mekasta asti, kun hallitsija palasi pyhiinvaellukseltaan. Pyramidin muotoinen, 17 metriä korkea rakennelma on Gaon suurin esikolonialistinen monumentti, ja sen tasakattoiset uloketangot ovat tyypillisiä Sahelin savirakentamiselle. Kompleksiin kuuluu myös kaksi moskeijaa, hautausmaa ja kokoontumisalue. Unesco liitti sen maailmanperintöluetteloon vuonna 2004.',
+          tiedosto: 'Tombeau askia.jpg',
+          lyhyt: 'Askian mausoleumin savipyramidi ja sen rakennusvuoden kertova kyltti.',
+          selite:
+            'Valokuvassa näkyy Askian mausoleumin pyramidinmuotoinen, puutankojen peittämä savirakennelma sekä sen edessä kyltti, joka kertoo ranskaksi monumentin valmistuneen vuonna 1495 Askia Mohamedin toimesta.',
+          lahde: 'Gio53, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tomb of Askia',
+        },
+        {
+          otsikko: 'Yhä elävä pyhäkkö',
+          teksti:
+            'Askian mausoleumi ei ole pelkkä muistomerkki menneisyydestä: se toimii yhä rukouspaikkana, ja gaolaiset kutsuvat sitä myös nimellä Askia djira, "Askian moskeija". Savirakennuksia on rapattu uudelleen säännöllisin väliajoin jo vuosikymmenten ajan, sillä sadekaudet kuluttavat pintaa jatkuvasti. Nykyisin pihapiirissä vietetään päivittäisten rukousten lisäksi häitä sekä Malin itsenäisyyspäivän juhlaa 22. syyskuuta. Karjaa kuljetetaan yhä muurien ohi samalla hiekkaisella aukiolla, jolla vuosisatoja sitten kulkivat kultaa ja suolaa kuljettaneet karavaanit.',
+          tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
+          lyhyt: 'Karjaa ja lapsia kulkemassa Askian mausoleumin muurien ohitse.',
+          selite:
+            'Kuvassa lapset ohjaavat lehmiä ja vuohia hiekkaisella aukiolla Askian mausoleumin muurien edustalla - pyhäkkö on yhä osa gaolaisten arkea.',
+          lahde: 'David Sessoms, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tomb of Askia',
+        },
+        {
+          otsikko: 'Marokon tykit kaatoivat valtakunnan',
+          teksti:
+            'Vuonna 1583 kuollut Askia Daoud oli valtakunnan viimeinen vahva hallitsija: hänen jälkeensä seuranneet valtataistelut heikensivät Songhain puolustusta juuri kun Marokon sulttaani Ahmad al-Mansur päätti iskeä. Vuonna 1591 komentaja Judar Pasha johti pienen mutta tuliaseilla varustetun armeijan halki Saharan Gaon pohjoispuolelle Tondibiin. Songhain moninkertaisesti suurempi joukko hyökkäsi tykkien ja arkebuusien tuleen laumoittamiensa härkien turvin, mutta paniikkiin ajautunut karja käännähti omia joukkoja vastaan. Tappio murskasi Songhain sotilaallisen ylivallan lopullisesti, ja Gao menetti asemansa alueen mahtavimpana kaupunkina.',
+          tiedosto: 'Bataille de tondibi.png',
+          lyhyt: 'Kaavio Tondibin taistelusta 1591, jossa Marokon armeija kukisti Songhain.',
+          selite:
+            'Nelivaiheinen kaavio esittää Tondibin taistelun kulun: Marokon (Saadien) tykein ja arkebuusein varustettu pieni armeija voitti moninkertaisesti suuremman Songhain joukon vuonna 1591.',
+          lahde: 'Monsieur Fou, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Battle of Tondibi',
+        },
+        {
+          otsikko: 'Saksalainen tutkija löysi rauniot',
+          teksti:
+            'Kaksikymmentä vuotta ennen isoisän omaa matkaa saksalainen tutkimusmatkailija Heinrich Barth saapui Gaohon vuonna 1854 pitkän Saharan- ja Sahelin-matkansa varrella. Kerran mahtavan imperiumin pääkaupungista oli jäljellä vaatimaton kylä, jossa Barth laski noin 300 mattokatteista majaa. Ranskalaiset eivät vielä tuolloin hallinneet aluetta - siihen kului vielä nelisenkymmentä vuotta - joten Gao eli tuareghallinnan reunalla kaukana eurooppalaisten ulottumattomissa. Barthin matkapäiväkirjat jäivät vuosikymmeniksi tärkeimmäksi eurooppalaiseksi tietolähteeksi koko Nigerjoen mutkan alueesta.',
+          tiedosto: 'Portret van Heinrich Barth, RP-P-1915-724.jpg',
+          lyhyt: 'Saksalaisen tutkimusmatkailijan Heinrich Barthin muotokuva 1800-luvulta.',
+          selite:
+            'Litografiakuva esittää tutkimusmatkailija Heinrich Barthin, joka vieraili Gaossa vuonna 1854 kartoittaessaan laajoja alueita Saharan eteläpuolelta.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: "Piroket ja markkinat rannalla",
+          teksti:
+            'Songhain valtakunnan vaurauden pohjana oli aina Nigerjoki: kulta ja suola vaihtoivat omistajaa kamelinselästä puuveneisiin juuri sellaisilla rannoilla, joita Gaossa näkyy yhä. Kapeat, kaiverretut piroque-veneet kuljettavat kalastajia ja tavaraa, ja rannalla kokoontuu markkinaväkeä, aaseja ja kauppatavaraa samaan tapaan kuin vuosisatoja sitten. Jokea pitkin kulki myös keskiajan tieto ja uskonto: islamilaiset oppineet, kauppiaat ja pyhiinvaeltajat liikkuivat samoja reittejä pitkin Timbuktusta Gaohon ja edelleen kohti Sahelin muita kaupunkeja. Nigerjoki on Malin pisin vesireitti ja edelleen Gaon tärkein kulkuväylä aavikon keskellä.',
+          tiedosto: 'GaoPirogeNiger1990.jpg',
+          lyhyt: 'Piirogeveneitä ja markkinaväkeä Nigerjoen rannalla Gaossa.',
+          selite:
+            'Valokuva vuodelta 1990 näyttää lukuisia piiroque-veneitä ja vilkasta markkinaväkeä Nigerjoen rannalla Gaossa - samalla joella, joka kantoi kultaa ja suolaa jo keskiajalla.',
+          lahde: 'Albert Backer, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Niger River',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Songhain kultainen valtakunta',
+      johdanto:
+        '1400-1500-luvuilla Gaosta hallittu Songhain valtakunta oli aikansa mahtavin Länsi-Afrikassa: sen alue ulottui Atlantilta lähelle Nigeriaa, ja sen vaurauden takasivat kulta, suola ja Saharan yli kulkeva karavaanikauppa.',
+      tehtava: {
+        kysymys: 'Kuinka monta kultarahaa Askia Muhammad otti mukaansa pyhiinvaellukselleen Mekkaan?',
+        vaihtoehdot: ['30 000', '100 000', '300 000', '1 000 000'],
+        oikea: 2,
+        fakta:
+          'Askia Muhammad kuljetti mukanaan 300 000 kultarahaa ja tuhansien kamelien saattueen, kun hän matkusti Mekkaan vuosina 1497-1498.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sonni Ali valloitti kauppakaupungit',
+          teksti:
+            'Sonni Ali nousi Songhain valtaistuimelle vuonna 1464 ja aloitti sarjan valloitusretkiä, jotka tekivät hänen valtakunnastaan Länsi-Afrikan mahtavimman. Vuonna 1468 hän valtasi Timbuktun paikallisten pyydettyä apua tuaregien vallan kukistamiseen, ja vuonna 1473 kaupunki Djenné antautui seitsemän vuoden piirityksen jälkeen. Djennén suuri savimoskeija, jonka nykyinen hahmo on myöhempää perua, seisoo yhä samalla paikalla, jonka hallinta toi Songhaille pääsyn tärkeille kauppareiteille. Sonni Alin valloitusten myötä Songhai ohitti vauraudessa, koossa ja voimassa aiemman Malin valtakunnan, jonka rauniolle uusi imperiumi osin rakentui.',
+          tiedosto: 'Djenne great mud mosque.jpg',
+          lyhyt: 'Djennén suuri savimoskeija, kaupunki jonka Sonni Ali valtasi 1473.',
+          selite:
+            'Kuva näyttää Djennén suuren savimoskeijan pinnakkeineen ja ulkonevine puutankoineen; mies polkupyörineen ja vuohineen seisoo aukiolla rakennuksen edessä.',
+          lahde: 'Ruud Zwart, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sonni Ali',
+        },
+        {
+          otsikko: 'Askia Muhammad uudisti valtakunnan',
+          teksti:
+            'Askia Muhammad Ture kaappasi vallan sotilasvallankaappauksella vuonna 1493 ja hallitsi Songhaita seuraavat 35 vuotta. Hän perusti ammattimaisen, pysyvän armeijan aiempien tilapäisten heimojoukkojen tilalle ja järjesti valtakunnan hallinnon maakunniksi luotettavien käskynhaltijoiden alle. Askia otti käyttöön yhtenäisen painojen ja mittojen järjestelmän koko valtakuntaan, mikä helpotti kaukokauppaa Gaon, Timbuktun ja Djennén välillä. Kartalla näkyvä valtakunta ulottui parhaimmillaan Atlantin rannikolta lähelle nykyistä Nigeriaa, yli 1,4 miljoonan neliökilometrin alueelle - suunnilleen läntisen Euroopan kokoiselle alueelle.',
+          tiedosto: 'Map of the Songhay Empire.png',
+          lyhyt: 'Kartta Songhain valtakunnan laajimmasta ulottuvuudesta.',
+          selite:
+            'Kartta esittää Songhain valtakunnan (vihreä alue) laajimman ulottuvuuden Länsi-Afrikassa, Gao merkittynä pääkaupungiksi lähellä valtakunnan itäreunaa.',
+          lahde: 'HetmanTheResearcher, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Askia Muhammad I',
+        },
+        {
+          otsikko: 'Pyhiinvaellus, joka toi kultaa Kairoon',
+          teksti:
+            'Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.',
+          tiedosto: 'La Dune Rose.jpg',
+          lyhyt: 'Vaaleanpunertava hiekkadyyni Gaon liepeillä, aavikon reunalla.',
+          selite:
+            'Kuvassa kohoaa vaaleanpunertava hiekkadyyni vehreiden viljelysten takana - samanlaista autiomaata Askia Muhammadin saattue ylitti matkallaan Mekkaan.',
+          lahde: 'Jonathon Hicks, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Askia Muhammad I',
+        },
+        {
+          otsikko: 'Kulta ja suola kulkivat jokea pitkin',
+          teksti:
+            'Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.',
+          tiedosto: 'Fleuve du desert de Gao.jpg',
+          lyhyt: 'Ilmakuva Nigerjoesta kapeana vihreänä nauhana aavikon keskellä.',
+          selite:
+            'Ilmakuvassa Nigerjoki virtaa kapeana, sinivihreänä nauhana kuivan aavikkomaiseman halki - juuri tämä jokinauha teki mahdolliseksi Songhain kaltaisen valtakunnan synnyn.',
+          lahde: 'Cheic D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Niger River',
+        },
+        {
+          otsikko: 'Nigerin ylityspaikka',
+          teksti:
+            'Gaon kohdalla Nigerjoki on aina ollut luonnollinen solmukohta, jossa pohjois-eteläsuuntainen karavaanireitti kohtasi joen omat kulkuväylät. Vuosisatojen ajan kauppiaat, sotilaat ja pyhiinvaeltajat ylittivät joen tällä kohdalla veneillä, ja sama ylityspaikka on käytössä edelleen - nykyisin lautoilla, jotka kuljettavat kuorma-autoja ja matkustajia rannalta toiselle. Kun Songhain valtakunta romahti 1591, moni kauppareitti hiipui vuosikymmeniksi, mutta ylityspaikka säilytti merkityksensä paikallisliikenteelle. Sama kohta joesta kulki tärkeänä reittinä myös, kun eurooppalaiset alkoivat 1800-luvulla kartoittaa Länsi-Afrikan sisämaata.',
+          tiedosto: 'The ferry of Gao city (Mali).jpg',
+          lyhyt: 'Lautta ylittämässä Nigerjokea kuorma-autoineen Gaon kohdalla.',
+          selite:
+            'Kuvassa pieni lautta kuljettaa kuorma-autoja Nigerjoen yli Gaon kohdalla - samalla ylityspaikalla, jota kauppiaat ja pyhiinvaeltajat käyttivät jo vuosisatoja sitten.',
+          lahde: 'Komalick, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Niger River',
+        },
+      ],
+    },
+  ],
+  kamerun: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kamerun',
+      johdanto:
+        'Kamerunvuori kohoaa yli 4000 metriä suoraan Guineanlahden rannasta – tulivuori, jonka purkaukset ovat muokanneet koko rannikkoa jo yli 2000 vuoden ajan ja synnyttäneet legendan jumalten vaunusta.',
+      nostot: [
+        {
+          otsikko: 'Jumalten vaunu',
+          teksti:
+            'Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen "jumalten vaunu", Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.',
+          tiedosto: 'Le Mont Cameroun depuis Limbé.JPG',
+          lyhyt: 'Kamerunvuori kohoaa pilvien seasta palmujen takana Limbén rannalta kuvattuna.',
+          selite:
+            'Valokuvassa Kamerunvuoren lumeton, pilvien verhoama huippu kohoaa rantapalmujen ja pienen kahvilakatoksen yläpuolelle Limbén rannalta kuvattuna – juuri tällaisen näyn matkalaiset merellä ovat nähneet vuosituhansien ajan.',
+          lahde: 'PRA, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Katkarapujoki antaa nimen maalle',
+          teksti:
+            'Vuonna 1472 portugalilaiset merenkulkijat purjehtivat Wouri-joen suulle ja huomasivat vedessä valtavan määrän pieniä äyriäisiä. He nimesivät joen Rio dos Camarões, "Katkarapujoki". Nimi levisi vähitellen ensin koko rannikkoseutuun ja lopulta koko maahan: siitä syntyivät sekä Kamerun että englanninkielinen Cameroon. Isoisän aikaan 1800-luvulla katkarapujen mukaan nimetty maa oli eurooppalaisille kartoille jo vakiintunut nimi, vaikka harva tiesi enää miksi se niin oli saanut nimensä.',
+          tiedosto: 'River Wouri Douala Cameroon.jpg',
+          lyhyt: 'Wouri-joen leveä suisto lähellä Doualaa, josta koko maa sai nimensä.',
+          selite:
+            'Kuvassa avautuu Wouri-joen tyyni, sininen suisto pilvisen taivaan alla, taustalla Doualan kaupungin ääriviivat ja satamarakenteita – tämä joki sai portugalilaisilta nimen Rio dos Camarões vuonna 1472.',
+          lahde: 'Blaizo 237, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wouri River',
+        },
+        {
+          otsikko: 'Mongo ma Ndemi ja Victorian synty',
+          teksti:
+            'Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.',
+          tiedosto: 'Down Beach Limbe vue aerienne - Ndongere - Sud-Ouest - Cameroun.jpg',
+          lyhyt: 'Ilmakuva Limbén rannikkokaupungista ja kalastajavenelaiturista.',
+          selite:
+            'Ilmakuva näyttää Limbén (entisen Victorian) rantaviivan: tumma hiekkaranta, rivi puisia kalastusveneitä ankkurissa ja tiheään rakennettu kaupunki mäen rinteellä tulivuoren juurella.',
+          lahde: 'Eric Joel MAMA NKE, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Limbe, Cameroon',
+        },
+        {
+          otsikko: 'Kaksi miestä huipulla',
+          teksti:
+            "Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.",
+          tiedosto: 'Gustav Mann. Photograph, 1905. Wellcome V0026803.jpg',
+          lyhyt: 'Kasvitieteilijä Gustav Mannin muotokuva vuodelta 1905.',
+          selite:
+            'Muotokuva esittää iäkkäämmän Gustav Mannin pyöreäsankaisissa silmälaseissaan ja viiksineen – neljä vuosikymmentä sen jälkeen, kun hän nuorena kasvitieteilijänä nousi Burtonin kanssa Kamerunvuoren huipulle.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Gustav Mann',
+        },
+        {
+          otsikko: 'Elävä tulivuori',
+          teksti:
+            'Kamerunvuori on tilavuudeltaan suurin tulivuori koko Saharan eteläpuolisessa Afrikassa, ja se purkautuu keskimäärin 10–20 vuoden välein. Isoisän omana aikana vuori oli erityisen levoton: purkauksia tallennettiin vuosina 1865, 1866, 1868 ja 1871 – siis vain kaksi vuotta ennen isoisän 1873 matkaa. Vuoden 1909 purkaus pelotti myöhemmin jopa Saksan siirtomaahallinnon hetkeksi pois Bueasta Doualaan, ja vuoden 1999 purkauksessa laavavirta pysähtyi vain 200 metrin päähän merestä.',
+          tiedosto: 'Lava Flow from Mt Cameroon 1999 eruption (21562945615).jpg',
+          lyhyt: 'Mustaa, jähmettynyttä laavakenttää vuoden 1999 purkauksesta.',
+          selite:
+            'Kuvassa karu, tummanharmaa jähmettyneen laavan kenttä ulottuu vehreää sademetsää ja viljelyalueita vasten – jäljet vuoden 1999 purkauksesta, jonka laavavirta pysähtyi lähelle rantaviivaa.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Mustat rannat',
+          teksti:
+            'Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.',
+          tiedosto: 'Limbé (Cameroun) - plage volcanique.JPG',
+          lyhyt: 'Uimareita mustien laavakivien reunustamalla rannalla Limbéssä.',
+          selite:
+            'Kuvassa kolme uimaria kahlaa mereen mustien, pyöristyneiden laavakivien peittämällä rannalla – Kamerunvuoren purkausten synnyttämä tumma kivikko on tyypillinen näky koko Ambas-lahden rannikolla.',
+          lahde: 'PRA, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ambas Bay',
+        },
+      ],
+    },
+    {
+      id: 'sademetsa',
+      nimi: 'Kamerunvuoren sademetsä',
+      johdanto:
+        'Kamerunvuoren rinteillä sademetsä muuttuu muutamassa tunnin vaelluksessa pilvimetsäksi ja lopulta tuulen pieksemäksi ruohoylängöksi – ja koko matkalla asuu eläimiä ja kasveja, joita ei tavata missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Kuinka monta millimetriä sadetta Kamerunvuoren länsirinteelle voi sataa vuodessa?',
+        vaihtoehdot: ['1 000 mm', '4 000 mm', '10 000 mm', '20 000 mm'],
+        oikea: 2,
+        fakta:
+          'Kamerunvuoren länsirinne voi saada jopa 10 000 millimetriä sadetta vuodessa, mikä tekee siitä yhden koko maailman sateisimmista paikoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vyöhyke toisensa jälkeen',
+          teksti:
+            'Kamerunvuoren kansallispuisto ulottuu merenrannan sademetsästä aina yli 3000 metrin korkeuteen asti, ja matkan varrella kasvillisuus vaihtuu useaan kertaan: alavan sademetsän jättiläispuut väistyvät ylempänä sumuisen pilvimetsän saniaisille ja mättäille avoimelle ruohoylängölle. Vuoren länsirinne voi saada jopa 10 000 millimetriä sadetta vuodessa, mikä tekee siitä yhden koko maailman sateisimmista paikoista. Runsas sade ja moninaiset vyöhykkeet ovat synnyttäneet ainutlaatuisen eliöyhteisön, jossa elää lajeja, joita ei tavata missään muualla maapallolla.',
+          tiedosto: 'Tropical rain forest Mount Cameroon.jpg',
+          lyhyt: 'Sademetsän tiheä, vehreä kasvillisuus Kamerunvuoren alarinteillä.',
+          selite:
+            'Kuvassa sademetsän hämärä, kosteudesta kiiltävä aluskasvillisuus – ohuita runkoja, saniaisia ja sammalta niin tiheässä, että aurinko pääsee latvuston läpi vain paikoin.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon National Park',
+        },
+        {
+          otsikko: 'Uhanalainen otsa-apina',
+          teksti:
+            'Otsa-apina eli drilli on yksi maailman uhanalaisimmista kädellisistä: sitä tavataan luonnossa enää Nigeriassa, Kamerunissa ja Bioko-saarella, ja koko lajin kanta on enää noin 4000 yksilöä. Kamerunvuoren kansallispuisto on yksi sen harvoista turvapaikoista metsästystä ja elinympäristön häviämistä vastaan. Uroksen kirkkaanväriset takapuolen ihoalueet muistuttavat läheistä sukulaista mandrilliä, mutta drilli on tummempi ja sen turkki matalampi vuoristometsän viileyteen sopivaksi.',
+          tiedosto: 'Drill (Mandrillus leucophaeus).jpg',
+          lyhyt: 'Otsa-apinan eli drillin kasvokuva lähikuvassa.',
+          selite:
+            'Lähikuva näyttää drillin tumman, uurteisen kuonon, ruskeat silmät ja harmaanruskean turkin – piirteet, joiden ansiosta laji tunnistetaan helposti lähisukulaisestaan mandrillista.',
+          lahde: 'Clément Bardot, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Drill (animal)',
+        },
+        {
+          otsikko: 'Metsänorsut sademetsän suojissa',
+          teksti:
+            'Kamerunvuoren kansallispuistossa elää yli sata afrikkalaista metsänorsua, pienintä kolmesta nykyisin tunnustetusta norsulajista. Metsänorsu on savanninorsua pienempi, sen korvat ovat pyöreämmät ja syöksyhampaat osoittavat suoraan alaspäin tiheässä aluskasvillisuudessa liikkumisen helpottamiseksi. Vuosikymmenten salametsästys on ajanut lajin vuodesta 2021 lähtien äärimmäisen uhanalaiseksi, ja koko Kamerunissa metsänorsuja arvioidaan olevan jäljellä enää muutama sata.',
+          tiedosto: 'African forest elephant emerging from rainforest at Dzanga Bai.jpg',
+          lyhyt: 'Metsänorsu seisoo ruohikossa metsäaukion reunalla.',
+          selite:
+            'Kuvassa metsänorsu seisoo korkeassa ruohikossa joen rannalla metsän reunalla, korvat levällään – laji jonka pienempi koko ja suorat syöksyhampaat erottavat sen savanninorsusta.',
+          lahde: 'JosepMGracia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'African forest elephant',
+        },
+        {
+          otsikko: 'Puut jotka seisovat tukijaloilla',
+          teksti:
+            'Kamerunvuoren alarinteiden sademetsässä monet jättiläispuut kannattelevat itseään leveillä, seinämäisillä tukijuurilla, jotka voivat levitä useiden metrien päähän rungosta. Sademetsän maaperä on yllättävän ohutta ja ravinneköyhää, joten juuret eivät ehdi kasvaa syvälle – tukijuuret antavat vakautta tuulta ja rankkasateita vastaan ja auttavat samalla keräämään ravinteita laajalta alueelta aivan maanpinnan tuntumasta. Sammalen peittämät tukijuuret ovat samalla oma pieni elinympäristönsä saniaisille ja hyönteisille.',
+          tiedosto: 'Tree with buttress roots, Mount Cameroon.jpg',
+          lyhyt: 'Sammaleinen jättiläispuu levittäytyvine tukijuurineen sademetsässä.',
+          selite:
+            'Kuvassa sammaleen peittämä puunrunko levittäytyy alaosastaan leveiksi, seinämäisiksi tukijuuriksi saniaisten ympäröimänä – tyypillinen näky Kamerunvuoren alarinteiden sademetsässä.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Buttress root',
+        },
+        {
+          otsikko: 'Ruohikko myrskyjen yllä',
+          teksti:
+            'Yli 3000 metrin korkeudessa sademetsä on jäänyt kauas alas, ja tilalle nousee avoin ruohoylänkö, jossa kasvaa vain mättäikkömäisiä heiniä ja jäkäliä. Yöt voivat olla lähellä nollaa, kun taas päivällä aurinko paahtaa suojattomasti – ääripäät joita mikään vuoren alaosien kasvi ei kestäisi. Tuuli pieksee rinnettä lakkaamatta, minkä vuoksi puut eivät tälle korkeudelle enää yletä lainkaan. Näkymä huipulta avautuu toisinaan aina merelle ja naapurisaari Bioolle asti.',
+          tiedosto: 'Mount Cameroon grassland field.jpg',
+          lyhyt: 'Tuulinen ruohoylänkö korkealla Kamerunvuoren rinteellä.',
+          selite:
+            'Kuvassa auringon valaisema, kellastunut heinikko ja saniaiset peittävät avointa rinnettä sumuisessa valossa – ylängön kasvillisuus jää mataliksi jatkuvan tuulen ja viileyden vuoksi.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Kukkia laavan reunalla',
+          teksti:
+            'Kamerunvuoren toistuvat purkaukset eivät ole tuhonneet elämää pysyvästi: tuore laava ja tuhka rikastavat maaperää, ja vuosien kuluessa sen päälle tunkeutuu ensin sammalta ja sitten kukkivia kasveja. Vuorelta tunnetaan useita kasvilajeja, joita ei kasva luonnossa missään muualla maailmassa, muun muassa pieniä balsamikasveja. Kirjavat kukat houkuttelevat hyönteisiä pölyttämään keskellä muuten mustaa ja karua laavakenttää – elävä muistutus siitä, miten nopeasti sademetsä valtaa takaisin tuhon jäljet.',
+          tiedosto: 'Beautiful wild flower on Mt Cameroon.jpg',
+          lyhyt: 'Keltainen villikukka kukkii Kamerunvuoren kasvillisuuden keskellä.',
+          selite:
+            'Lähikuvassa kirkkaankeltainen viisilehtinen kukka avautuu tummanpunertavien silmujen ja pistävänvihreiden lehtien keskellä – yksi lukuisista kukkivista kasveista, jotka värittävät vuoren rinteitä laavakenttienkin tuntumassa.',
+          lahde: 'Josephine Lifanje, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon National Park',
+        },
+      ],
+    },
+  ],
+  suakin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Suakin',
+      johdanto:
+        'Suakin oli vuosisatoja Punaisenmeren tärkein satama Sudanin rannikolla ja pyhiinvaeltajien portti Mekkaan; isoisän matkavuonna 1873 se oli osa khediivi Ismailin uudistuvaa Egyptiä, jonka Suezin kanava oli juuri avannut maailmalle.',
+      nostot: [
+        {
+          otsikko: 'Saari ja manner — kaksoiskaupunki',
+          teksti:
+            'Suakin mainitaan kirjallisissa lähteissä jo 900-luvulla, mutta kaupunki nousi Punaisenmeren tärkeimmäksi satamaksi vasta 1400-luvulla, kun vanha pyhiinvaellussatama Aydhab hieman pohjoisempana hylättiin. Sen jälkeen kaupunki rakentui kahdesta osasta: linnoitetusta saarikaupungista, jossa asuivat kauppiaat ja virkamiehet, ja mantereen puoleisesta El-Geyfin kaupunginosasta, jonne karavaanit saapuivat sisämaasta. Kapea salmi erotti nämä kaksi puoliskoa toisistaan, ja pieni lossi kuljetti väkeä ja tavaraa niiden välillä päivittäin.',
+          tiedosto: 'AFR V1 D322 Suakin in 1882.jpg',
+          lyhyt: 'Piirros Suakinista vuodelta 1882, teoksesta Élisée Reclusin Africa.',
+          selite:
+            'Piirros on peräisin Élisée Reclusin maantieteellisestä teoksesta Africa (1882) ja näyttää Suakinin kaupunkinäkymän rannikolta: matalia koralirakennuksia ja veneitä, sellaisena kuin kaupunki näyttäytyi vain vuosikymmenen isoisän matkan jälkeen.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Khediivi Ismailin satama',
+          teksti:
+            'Ottomaanit hallitsivat Suakinia vuodesta 1555 lähtien, mutta kaupunki oli 1800-luvun alussa raunioitunut niin pahoin, että sveitsiläinen matkustaja Johann Ludwig Burckhardt kuvasi kahden kolmasosan taloista olevan asumiskelvottomia. Vuonna 1865 Egyptin khediivi Ismail sai kaupungin tiukempaan hallintaansa ja käynnisti sen elvytyksen: uusia taloja, myllyjä, moskeijoita ja sairaaloita rakennettiin. Isoisän matkavuonna 1873 Suakin oli siis osa Ismailin nykyaikaistuvaa Egyptiä, samaa valtakuntaa, joka oli neljä vuotta aiemmin avannut Suezin kanavan ja laajentanut valtaansa syvälle Sudaniin.',
+          tiedosto: 'Die Gartenlaube (1884) b 181 2.jpg',
+          lyhyt: 'Suakin nähtynä mantereen puolelta, saksalaisen aikakauslehden piirros vuodelta 1884.',
+          selite:
+            'Saksalaisen Die Gartenlaube -aikakauslehden vuonna 1884 julkaisema piirros näyttää Suakinin mantereen puolelta kuvattuna: kaupungin matalat rakennukset ja taustalla siintävä meri.',
+          lahde: 'Rudolf Cronau, Wikimedia Commons (Public domain)',
+          wiki: "Isma'il Pasha of Egypt",
+        },
+        {
+          otsikko: 'Koralliarkkitehtuuri',
+          teksti:
+            'Suakinin talot rakennettiin madreporista eli meren pohjasta louhitusta koralliaineksesta, joka kovetettiin ja siloteltiin valkoiseksi kalkkirapatuksi seinäksi. Parhaimmillaan rakennukset kohosivat neljään kerrokseen ja niissä oli koristeellisia puuparvekkeita ja ristikkoikkunoita, jotka päästivät ilmaa sisään auringolta suojassa. Materiaali oli kaunis mutta hauras: ilman jatkuvaa huoltoa ja rapatusta suojaa koralli murenee kosteudessa nopeasti, minkä vuoksi monet kaupungin rakennukset alkoivat rapistua heti, kun asukasmäärä alkoi vähentyä 1900-luvun alussa.',
+          tiedosto: 'Suakin,el-Geyf mosque.jpg',
+          lyhyt: 'El-Geyfin moskeija, rakennettu koralliaineksesta mantereen puolella Suakinia.',
+          selite:
+            'Valokuva näyttää El-Geyfin moskeijan Suakinin mantereen puolella: vaalean rapatun koraliseinän ja moskeijalle tyypillisen minareetin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Muurit ja portit',
+          teksti:
+            'Kaksoiskaupunkia suojasivat muurit ja portit, joista yksi tunnetaan nykyisin Kitchenerin porttina mantereen puoleisen kaupunginosan ulkoreunalla. Portit ja muurit rakennettiin turvaamaan kaupunkia sisämaasta tulevilta hyökkäyksiltä ja valvomaan karavaanien kulkua sisään ja ulos: jokainen tavarakuorma ja matkustaja kulki jonkin portin kautta, mikä teki tullien keräämisestä ja kaupungin valvonnasta helppoa hallinnolle. Muurien sisäpuolella kaupunki tunsi olonsa turvalliseksi öisin, vaikka portit avattiin joka aamu jälleen karavaaneille ja kauppiaille, jotka jatkoivat matkaansa sisämaahan päin.',
+          tiedosto: 'Suakin,Kitcheners gate.jpg',
+          lyhyt: 'Kitchenerin portti, yksi Suakinin mantereen puoleisen kaupunginosan muurin porteista.',
+          selite:
+            'Valokuva näyttää Kitchenerin portin rauniot Suakinin mantereen puoleisen kaupunginosan ulkomuurissa: kaarevan porttiaukon ja sitä ympäröivän rapistuneen muurin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'El-Geyf, mantereen kaupunginosa',
+          teksti:
+            'Saarikaupungin kivitalot olivat varakkaiden kauppiaiden ja virkamiehien aluetta, mutta suurin osa väestöstä asui mantereen puolella El-Geyfin kaupunginosassa yksinkertaisemmissa oljista ja puusta tehdyissä majoissa. El-Geyf oli myös se paikka, jonne sisämaasta saapuvat kamelikaravaanit pysähtyivät ennen kuin niiden lasti kuljetettiin salmen yli saarelle punnittavaksi ja verotettavaksi. Aasinvetoiset kärryt kuljettivat tavaraa ja ihmisiä kaupunginosan kapeilla, hiekkaisilla kaduilla vielä vuosikymmeniä Suakinin kulta-ajan jälkeenkin.',
+          tiedosto: 'Suakin,Beja town.jpg',
+          lyhyt: 'Katunäkymä El-Geyfistä, Suakinin mantereen puoleisesta kaupunginosasta.',
+          selite:
+            'Valokuva näyttää katunäkymän Suakinin mantereen puoleisesta El-Geyfin kaupunginosasta: hiekkaisen kadun ja aasinvetoisen kärryn, joilla tavaraa ja ihmisiä kuljetettiin vielä vuosikymmeniä kaupungin kulta-ajan jälkeenkin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+      ],
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Karavaanit, kauppa ja pyhiinvaeltajat',
+      johdanto:
+        'Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta orjaksi myytyä ihmistä arvioidaan kulkeneen Suakinin kautta vuosittain 1800-luvun puolivälissä?',
+        vaihtoehdot: ['Muutama kymmenen', '200–300', '2 000–3 000', '20 000–30 000'],
+        oikea: 2,
+        fakta:
+          'Historioitsijoiden arvion mukaan Suakinin kautta kulki 1800-luvun puolivälissä vuosittain noin 2 000–3 000 orjaksi myytyä ihmistä matkalla Arabian niemimaalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tullitalo ja kaupan varjopuoli',
+          teksti:
+            'Suakinin tullitalo rekisteröi ja verotti kaiken kaupungin läpi kulkevan tavaran: Etiopian ja Jemenin kahvia, kumiarabikumia, norsunluuta, strutsinsulkia ja helmiäiskuoria, jotka karavaanit toivat sisämaasta laivattavaksi Arabiaan ja edelleen Intiaan. Kauppa oli vilkasta, mutta sen varjopuoli oli synkkä: historioitsijoiden arvioiden mukaan Suakinin kautta kulki 1800-luvun puolivälissä vuosittain noin 2 000–3 000 orjaksi myytyä ihmistä matkalla Arabian niemimaalle, ennen kuin brittiläinen painostus sai orjakaupan vähitellen hiipumaan vuosisadan loppua kohti.',
+          tiedosto: 'Suakin,custom office.jpg',
+          lyhyt: 'Sudanin entisen tullirakennuksen rauniot Suakinissa.',
+          selite:
+            'Valokuva näyttää Suakinin entisen tullirakennuksen raunioita: kaarikäytäviä ja rapistuneita koraliseiniä, joiden läpi kaikki kaupungin tavaraliikenne aikoinaan kulki.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Red Sea slave trade',
+        },
+        {
+          otsikko: 'Egyptin pankki rantautuu',
+          teksti:
+            'Khediivi Ismailin hallintokaudella Suakinista kehittyi Egyptin Punaisenmeren rannikon hallinnollinen ja taloudellinen etuvartio, jonka kautta kulkivat sekä tullitulot että alueen kauppaa rahoittava pääoma. Myöhemmin kaupunkiin rakennettiin jopa oma sivukonttori Egyptin kansallispankille — todiste siitä, että Suakin pysyi tärkeänä rahaliikenteen solmukohtana vielä vuosikymmenten ajan, vaikka sen suuruudenajan huippu oli jo isoisän vierailun aikoihin ohitettu.',
+          tiedosto: 'Suakin,national bank.jpg',
+          lyhyt: 'Egyptin kansallispankin sivukonttorin rauniot Suakinissa.',
+          selite:
+            'Valokuva näyttää Egyptin kansallispankin entisen sivukonttorin raunioita Suakinissa: sortuneita seiniä ja tyhjiä ikkuna-aukkoja, jotka todistavat kaupungin entisestä taloudellisesta merkityksestä.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'National Bank of Egypt',
+        },
+        {
+          otsikko: 'Minareetti joka kutsui pyhiinvaeltajia',
+          teksti:
+            "Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.",
+          tiedosto: 'Suakin,Schafai minaret.jpg',
+          lyhyt: "Shafi'in moskeijan minareetti, joka kutsui pyhiinvaeltajia Suakinissa.",
+          selite:
+            "Valokuva näyttää Shafi'in moskeijan minareetin Suakinissa: hoikan, kerroksittain kapenevan tornin, josta rukouskutsu kuului yli kaupungin pyhiinvaeltajille ja asukkaille.",
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'ʿAydhab',
+        },
+        {
+          otsikko: 'Rukousnišši Mekkaa kohti',
+          teksti:
+            "Shafi'in moskeijan sisällä mihrab eli rukousnišši osoittaa qiblan suunnan, Mekan puoleen, johon jokainen rukoileva kääntyy. Vierellä seisoo minbar, korotettu saarnatuoli, josta imaami johti perjantairukouksia ja piti puheita myös lähtevälle tai saapuvalle pyhiinvaeltajajoukolle. Näiden kahden koristellun rakenteen äärellä kohtasivat paikalliset asukkaat ja kaukaa saapuneet matkalaiset, joita yhdisti sama määränpää: pyhä kaupunki Punaisenmeren toisella puolella.",
+          tiedosto: 'Suakin,Schafia mihrab.jpg',
+          lyhyt: "Shafi'in moskeijan mihrab ja minbar Suakinissa.",
+          selite:
+            "Valokuva näyttää Shafi'in moskeijan sisätilan Suakinissa: koristellun mihrab-rukousnišsin ja sen vieressä kohoavan minbar-saarnatuolin.",
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Mihrab',
+        },
+      ],
+    },
+  ],
+  ahaggar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ahaggar',
+      johdanto:
+        'Ahaggarin vuoristo kohoaa keskellä Saharaa tulivuorenpurkausten muovaamana kalliomaisemana. Isoisän matkavuonna 1873 ranskalainen Henri Duveyrier oli vasta äskettäin kartoittanut nämä seudut eläen tuaregien keskuudessa.',
+      nostot: [
+        {
+          otsikko: 'Ranskalainen joka eli tuaregien keskuudessa',
+          teksti:
+            'Vuonna 1857, 17-vuotiaana, ranskalainen Henri Duveyrier tapasi ensimmäistä kertaa tuareg-paimentolaisia Algerian aavikon reunalla ja kiehtoutui heidän tavoistaan. Toukokuussa 1859 hän lähti tutkimusmatkalle ja vietti seuraavien 27 kuukauden aikana yli seitsemän kuukautta tuaregien keskuudessa alueilla Ahaggarin vuoristosta Fessaniin. Duveyrier palasi 1861 näännyksissä ja kuumeessa, mutta julkaisi 1864 teoksensa "Les Touareg du Nord", aikansa tärkeimmän länsimaisen kuvauksen tuaregien elämästä. Kun isoisä aloitti oman matkansa 1873, kirja oli jo yhdeksän vuotta vanha ja Ahaggarin vuoret olivat vasta äskettäin ilmestyneet eurooppalaisille kartoille.',
+          tiedosto: 'Duveyrier 1864.jpg',
+          lyhyt: 'Henri Duveyrier eli tuaregien keskuudessa ja kartoitti Ahaggaria 1857–1861.',
+          selite:
+            'Kaiverrus vuodelta 1864 kuvaa nuorta Henri Duveyrieria, joka eli seitsemän kuukautta tuaregien keskuudessa ja julkaisi saman vuonna löydöistään kertovan teoksensa.',
+          lahde: 'Nimetön kaiverrus M. Bertalin valokuvasta (1864), Wikimedia Commons (Public domain)',
+          wiki: 'Henri Duveyrier',
+        },
+        {
+          otsikko: 'Tulivuorten muovaama aavikko',
+          teksti:
+            'Ahaggarin kallioperän pohja on lähes kaksi miljardia vuotta vanhaa peruskalliota, mutta vuoristomainen hahmo syntyi paljon myöhemmin: noin 300 miljoonaa vuotta sitten alue kohosi, ja tulivuorenpurkaukset peittivat sen laavakerroksilla. Keskeisin näistä on Atakorin tulivuorialue, noin 2 150 neliökilometrin sokkelo laavakupuja, tuhkakartioita ja jähmettyneiden purkauskanavien paljastamia kivipylväitä. Eroosiossa pehmeämpi kivi on kulunut pois ja jäljelle on jäänyt vain purkauskanavia täyttänyt kova laava — Ahaggarin maisema näyttää yhä paikoin siltä kuin tulivuoret olisivat sammuneet vasta äsken, vaikka viimeisimmästä purkauksesta on jo miljoonia vuosia.',
+          tiedosto:
+            "ASC Leiden - van Achterberg Collection - 14 - 16 - Un massif rocheux érodé du massif volcanique d'Atakor - Ahaggar, Algérie - 1984.jpg",
+          lyhyt: 'Eroosion paljastama kalliomassiivi Atakorin tulivuorialueella Ahaggarissa.',
+          selite:
+            'Vaalean sävyinen vanha valokuva näyttää jyrkkäreunaisen, eroosion muovaaman kalliomassiivin aavikon keskellä — jäänteen laavakupusta, jonka ympäriltä pehmeämpi kivi on kulunut pois.',
+          lahde: 'Angeline A. van Achterberg / ASC Leiden, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atakor volcanic field',
+        },
+        {
+          otsikko: 'Tahat — Saharan katto',
+          teksti:
+            'Ahaggarin vuoriston laella kohoava Tahat on paitsi koko massiivin myös koko Algerian korkein huippu: 2 908 metriä merenpinnasta ja yli 2 300 metriä paikallista korkeuseroa ympäröivään aavikkoon nähden. Huippu on vulkaanista alkuperää ja sijaitsee Atakorin tulivuorialueen sydämessä, missä kivinen, mustan laavan peittämä ylänkö nousee vähitellen kohti taivasta. Karavaanit ovat kulkeneet Tahatin juurella vuosisatojen ajan matkalla pohjoisen Välimeren rannikon ja eteläisemmän Saharan reunan välillä, sillä Ahaggarin vuoristo tarjosi ainoat käytettävissä olevat vesipaikat satojen kilometrien laajuisella hiekka- ja kivialueella.',
+          tiedosto: 'Tahat - Hoggar.jpg',
+          lyhyt: 'Tahat, Algerian ja koko Saharan korkein huippu, 2 908 metriä.',
+          selite:
+            'Valokuva näyttää Tahatin piikikkään huipun taustalla ja mustan kivikkoisen tasangon poikki kulkevan kamelikaravaanin etualalla — samankaltaisilla reiteillä karavaanit ovat ylittäneet Ahaggarin vuosisatojen ajan.',
+          lahde: 'Yshak6.9, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Tahat',
+        },
+        {
+          otsikko: 'Assekrem — näköala pilvien tasalla',
+          teksti:
+            'Assekremin tasanko kohoaa Ahaggarin sydämessä 2 726 metrin korkeuteen, ja sieltä avautuu näkymä kymmeniin tulivuoren muovaamiin huippuihin, jotka työntyvät esiin ympäröivästä aavikosta kuin hampaat. Auringonlaskun aikaan tasangolla kasvavat niukat aavikkokasvit piirtyvät mustina siluetteina hehkuvaa taivasta vasten, ja ilta kirkastaa ilman niin läpinäkyväksi, että kaukaisimmatkin vuorenhuiput erottuvat terävinä ääriviivoina. Korkeus ja kuivuus tekevät paikasta myös yhden aavikon parhaista tähtienkatselupaikoista, sillä valosaastetta ei ole satojen kilometrien säteellä.',
+          tiedosto: 'Assekrem sunset.jpg',
+          lyhyt: 'Assekremin tasangon auringonlasku lähes 2 730 metrin korkeudessa.',
+          selite:
+            'Valokuvassa aavikon niukkoja, kukkivia kasveja siluetteina hehkuvaa auringonlaskua ja etäisen vuoren ääriviivaa vasten Assekremin tasangolla.',
+          lahde: 'Ismail Harkat, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Assekrem',
+        },
+        {
+          otsikko: 'Piikkikivien metsä',
+          teksti:
+            'Ahaggarin maisemaa hallitsevat pystyt, piikkimäiset kivipylväät, jotka nousevat tasaisesta aavikosta kymmeniä tai jopa yli sata metriä ilmaan. Ne ovat vanhojen tulivuorten sisäisiä syöttökanavia: kun laava jähmettyi kanavan sisällä, siitä tuli ympäröivää kiveä huomattavasti kovempaa, ja miljoonien vuosien eroosio on sittemmin kuluttanut pehmeämmän kiven pois ja jättänyt jäljelle vain kovan ytimen. Tällaisia pystykiviä on Atakorin alueella kymmenittäin, ja monet niistä ovat saaneet oman nimensä paikallisilta asukkailta, jotka ovat käyttäneet niitä maamerkkeinä vuosisatojen ajan aavikon yli kulkiessaan.',
+          tiedosto: 'Adrian Massif, Hoggar National Park.jpg',
+          lyhyt: 'Vanhan tulivuoren syöttökanavasta jäljelle jäänyt kivipiikki Ahaggarissa.',
+          selite:
+            'Valokuva näyttää terävän, kymmeniä metrejä korkean kivipiikin sinistä taivasta vasten — vanhan tulivuoren jähmettyneen syöttökanavan, jonka ympäriltä pehmeämpi kivi on kulunut pois eroosiossa.',
+          lahde: 'Abderrehmann H. Dribat, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hoggar Mountains',
+        },
+        {
+          otsikko: 'Kalliokaiverrukset kertovat vihreästä Saharasta',
+          teksti:
+            'Ahaggarin kallioihin on kaiverrettu tuhansia vuosia vanhoja kuvia ja kuvioita, jotka todistavat alueen olleen joskus aivan toisenlainen kuin nykyinen kuiva aavikko. Vanhimmat kaiverrukset ajoittuvat noin 6000 vuoden taakse ajalle, jolloin Sahara oli vihreä ja sinne mahtui järviä, jokia ja laiduntavia karjalaumoja. Tikemtinen kaltaisilla kaiverruspaikoilla Atakorin alueella kivipintoihin on piirretty sekä eläinhahmoja että abstrakteja spiraali- ja verkkokuvioita, joiden tarkkaa merkitystä ei enää tunneta. Kaiverrukset ovat säilyneet, koska Saharan kuivuus on suojellut niitä vuosituhansien ajan sateen ja kasvillisuuden aiheuttamalta kulumiselta.',
+          tiedosto: 'Ahaggar Prehistoric rock carvings.png',
+          lyhyt: 'Tuhansia vuosia vanhoja kalliokaiverruksia Atakorin tulivuorialueelta.',
+          selite:
+            'Lähikuva kuluneesta kivilaatasta, johon on kaiverrettu toisiinsa kietoutuvia spiraalikuvioita ja pienempiä geometrisia merkkejä — muinaista kalliotaidetta Atakorin alueelta.',
+          lahde: 'Heribertus2, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hoggar Mountains',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Huivin ja teltan kansa',
+      johdanto:
+        'Ahaggarin aavikkoa asuttavat Kel Ahaggarin tuaregit, joiden tavat kääntävät monta totuttua käsitystä ylösalaisin: miehet peittävät kasvonsa huivilla, naiset eivät, ja teltan sekä sen sisällön omistaa perinteisesti perheen äiti.',
+      tehtava: {
+        kysymys: 'Kuinka pitkä tuareg-miehen sininen huivi, tagelmust, voi parhaimmillaan olla?',
+        vaihtoehdot: ['Alle metrin', 'Noin kolme metriä', 'Yli kymmenen metriä', 'Yli viisikymmentä metriä'],
+        oikea: 2,
+        fakta:
+          'Tagelmust-huivi kiedotaan pään ja kasvojen ympäri monta kertaa, ja kangasta voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tagelmust — sininen huivi ja miehuuden merkki',
+          teksti:
+            'Tuareg-miehet peittävät kasvonsa ja päänsä pitkällä, tummansinisellä kankaalla nimeltä tagelmust jo teini-iästä lähtien: huivin ottaminen käyttöön on merkki siitä, että pojasta on tullut mies. Kangas kiedotaan pään ja kasvojen ympäri monta kertaa, ja sitä voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän ja suojaa samalla auringolta, kuumuudelta ja hiekkamyrskyiltä. Perinteisesti kangas värjättiin indigolla, jonka väriaine hiertyi ajan myötä ihoon ja antoi tuaregeille lempinimen "siniset ihmiset". Toisin kuin muissa kulttuureissa, tuareg-naiset eivät peitä kasvojaan lainkaan — huivi on nimenomaan miesten tapa.',
+          tiedosto: 'Targui.jpg',
+          lyhyt: 'Tuareg-mies tummansinisessä tagelmust-huivissa Ahaggarin kalliomaisemassa.',
+          selite:
+            'Valokuvassa tuareg-mies tummansinisessä tagelmust-huivissa, joka peittää suun ja nenän, punertavia aavikon kallioita vasten.',
+          lahde: 'Florence Devouard, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tagelmust',
+        },
+        {
+          otsikko: 'Nainen omistaa teltan',
+          teksti:
+            'Tuareg-yhteisössä valta ja omaisuus kulkevat usein naisten kautta: teltta ja sen sisältö kuuluvat perinteisesti avioituneelle naiselle, ei hänen miehelleen, ja avioerossa mies poistuu teltasta vaimon jäädessä kotiinsa. Myös yhteisön johtajan eli amgharin asema periytyy äidinpuoleisesti: seuraaja on usein hallitsijan sisaren poika, ei oma poika. Naiset huolehtivat perinteisesti karjasta ja kaivoilta haetusta vedestä, jotka ovat aavikon elämän kannalta yhtä tärkeitä kuin miesten hoitamat kamelikaravaanit. Tällaista äitilinjaan nojaavaa yhteiskuntaa kutsutaan matrilineaariseksi, ja se erottaa tuaregit naapurikulttuureistaan.',
+          tiedosto:
+            'ASC Leiden - van Achterberg Collection - 15 - 76 - Une femme chez un puits carré - Terhaouhaout, Ahaggar, Algérie - Fin des années 1980 ?.jpg',
+          lyhyt: 'Kel Ahaggarin naiset kaivolla, jonka äärellä myös vuohet juovat.',
+          selite:
+            'Valokuvassa kaksi naista aavikon kaivolla: toinen nostaa vettä köydellä, toinen nojaa kivialtaan reunaan, ja mustia vuohia juo vieressä olevasta kaukalosta — taustalla kaksi miestä ja lapsi.',
+          lahde: 'Angeline A. van Achterberg / ASC Leiden, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tuareg people',
+        },
+        {
+          otsikko: 'Tifinagh — kirjoitus joka on elänyt tuhansia vuosia',
+          teksti:
+            'Tuaregit kirjoittavat yhä tifinagh-aakkosilla, jotka periytyvät muinaisesta libyko-berberiläisestä kirjoitusjärjestelmästä. Merkit koostuvat yksinkertaisista pisteistä, viivoista ja ympyröistä, ja niitä on perinteisesti kaiverrettu kallioihin tai piirretty hiekkaan pikaviestien tapaan. Samoille kallioseinämille on usein kaiverrettu myös paljon vanhempia, esihistoriallisia kuvioita, kuten spiraaleja ja geometrisia verkkoja, joten yhdellä kalliopinnalla voi näkyä tuhansien vuosien kirjoittamisen perinne päällekkäin. Nykyisin tifinagh on virallinen kirjoitusjärjestelmä useissa Pohjois-Afrikan maissa, joissa berberikielten asema on vahvistunut.',
+          tiedosto: 'Tifinagh Algeria.jpg',
+          lyhyt: 'Tifinagh-kirjoitusta ja vanhoja spiraalikuvioita samalla kalliopinnalla.',
+          selite:
+            'Valokuva kalliopinnasta, johon on kaiverrettu sekä tifinagh-aakkosten merkkejä että niitä vanhempia, toisiinsa kietoutuvia spiraalikuvioita.',
+          lahde: 'Patrick Gruban, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tifinagh',
+        },
+        {
+          otsikko: 'Tin Hinan — tuaregien tarunhohtoinen kantaäiti',
+          teksti:
+            'Monet Kel Ahaggarin tuaregisuvut jäljittävät juurensa Tin Hinaniin, legendaariseen naiseen, jonka kerrotaan saapuneen Ahaggariin karavaanin kanssa satoja vuosia sitten ja perustaneen siellä oman sukunsa. Vuonna 1925 ranskalaiset arkeologit kaivoivat Abalessan kylän lähellä esiin suuren kivisen hautakumpelun, jonka sisältä löytyi nainen kultakoruineen ja jota pidettiin todisteena Tin Hinanin olemassaolosta. Tarina sopii saumattomasti tuaregien matrilineaariseen maailmaan, jossa nainen ei ole vain kodin vaan koko suvun alkuperän symboli. Hauta on yhä nähtävissä Abalessassa.',
+          tiedosto: 'Tin Hinan Tomb 05.jpg',
+          lyhyt: 'Tin Hinanin haudaksi tulkittu kivikumpu Abalessan kylän lähellä.',
+          selite:
+            'Valokuvassa kivistä ladottu, rapautunut hautakumpu aavikon keskellä, taustalla vehreitä puita ja kylän rakennuksia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Tin Hinan',
+        },
+      ],
+    },
+  ],
+  mosambik: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mosambik',
+      johdanto:
+        'Mosambik-saari on kapea koralliriutta Itä-Afrikan rannikolla: isoisän matkavuonna 1873 se oli yhä Portugalin Itä-Afrikan pääkaupunki, jossa kivinen linnoituskaupunki ja Makuti-kaupunginosa elivät rinnakkain.',
+      nostot: [
+        {
+          otsikko: 'São Sebastiãon linnoitus',
+          teksti:
+            'Portugalilaiset aloittivat São Sebastiãon linnoituksen rakentamisen vuonna 1558 suojaamaan syvää laivaväylää saaren ja mantereen välissä – reittiä, jota portugalilaiset alukset purjehtivat kohti Intiaa. Korallikivestä muuratut muurit ja bastionit valmistuivat vasta noin viidenkymmenen vuoden työn jälkeen, 1600-luvun ensimmäisellä vuosikymmenellä. Linnoitus on nykyisin vanhin kokonaisena säilynyt eurooppalainen linnoitus koko Saharan eteläpuolisessa Afrikassa. Isoisän matkavuonna 1873 se oli yhä varuskuntalinnoitus, joka vartioi Portugalin Itä-Afrikan silloista pääkaupunkia.',
+          tiedosto: 'São_Sebastião_Fortress_-_View.jpg',
+          lyhyt: 'Tykki ja turistit São Sebastiãon linnoituksen muurilla saaren kärjessä.',
+          selite:
+            'Valokuva näyttää linnoituksen muurilla vanhan tykin ja pyöreän vartiotornin; taustalla siintää mereen ulottuva bastioni ja rannalla valkoinen rakennus.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: 'Kirkko muurien sisällä',
+          teksti:
+            'Linnoituksen muurien sisällä oli oma kirkko, kaivo ja varastot, sillä varuskunnan piti kestää pitkiäkin piirityksiä ilman apua mantereelta. Puolustus oli niin vahva, että Alankomaiden laivastot yrittivät vallata saaren kahdesti, vuosina 1607 ja 1608, mutta molemmat hyökkäykset torjuttiin muurien takaa. Epäonnistumisten jälkeen hollantilaiset hakivat tukikohtia muualta, ja Mosambikin saaresta tuli entistä tärkeämpi Portugalin ainoa pysyvä tukikohta Itä-Afrikan rannikolla vuosisadoiksi eteenpäin.',
+          tiedosto: 'Forte_de_São_Sebastião_-_Igreja.jpg',
+          lyhyt: 'Linnoituksen sisäpihalla seisova valkoiseksi kalkittu kirkko meren äärellä.',
+          selite:
+            'Valokuva näyttää linnoituksen sisäpihalla olevan kalkitun kirkkorakennuksen, jonka takana avautuu meri ja kannaksen kapea muuri.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: 'Vasco da Gama pysähtyy saarella',
+          teksti:
+            'Portugalilainen purjehtija Vasco da Gama pysähtyi saarella maaliskuussa 1498 matkallaan kohti Intiaa – Portugalin ensimmäinen kosketus koko Itä-Afrikan rannikkoon. Saarella hallitsi tuolloin swahilikauppiaiden sulttaani, jonka nimi tunnettiin muodossa Musa Mbiki; portugalilaiset vääntivät nimen ajan mittaan muotoon Moçambique, ja siitä tuli lopulta koko nykyisen valtion nimi. Da Gaman patsas seisoo nykyään entisen kuvernöörinpalatsin, São Paulon palatsin, edessä – rakennuksessa, joka toimi 1600-luvulla jesuiittojen oppilaitoksena ja myöhemmin siirtomaahallinnon ytimenä.',
+          tiedosto: 'Palácio de São Paulo, Ilha de Moçambique.jpg',
+          lyhyt: 'Vasco da Gaman patsas São Paulon palatsin edessä saaren pääaukiolla.',
+          selite:
+            'Valokuva näyttää tummapatinaisen Vasco da Gaman patsaan aukiolla, taustalla punainen São Paulon palatsi ja valkotorninen kirkko.',
+          lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vasco da Gama',
+        },
+        {
+          otsikko: 'Vihreä moskeija ja swahilikulttuuri',
+          teksti:
+            'Ennen Vasco da Gaman saapumista 1498 saarella kävivät kauppaa swahilinkieliset ja arabikauppiaat jo 900-luvulta lähtien, ja he toivat mukanaan islamin, joka on yhä tänäkin päivänä suuren osan saarelaisista uskonto. Vihreä väri on islamissa pyhä väri, ja se toistuu saaren moskeijoiden julkisivuissa – tämä moskeija sijaitsee Makuti-kaupunginosassa, tavallisten asukkaiden puolella saarta, toisin kuin Portugalin ajan kivirakennukset saaren pohjoiskärjessä. Swahilikulttuurin ja Portugalin siirtomaakulttuurin kerrostumat näkyvät saarella yhä rinnakkain, samaan tapaan kuin isoisän aikana 1870-luvulla.',
+          tiedosto:
+            '23 Moschee auf der Ilha de Moçambique Mosque on Ilha de Moçambique (36259242923).jpg',
+          lyhyt: 'Vihreä moskeija kadunvarrella Makuti-kaupunginosassa.',
+          selite:
+            'Valokuva näyttää vihreäksi maalatun moskeijan minareetteineen kadun varrella, ja kadulla kävelee paikallisia asukkaita ja lapsia.',
+          lahde: 'Cornelius Kibelka from Berlin, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Swahili coast',
+        },
+        {
+          otsikko: 'Makuti-kaupunginosa ja kalastajat',
+          teksti:
+            'Kolme kilometriä pitkä saari jakautuu kahtia: pohjoiskärjessä on kivikaupunki eli Stone Town, jossa seisovat linnoitus ja Portugalin ajan hallintorakennukset, ja eteläosassa Makuti-kaupunginosa, joka on saanut nimensä makuti-nimisistä palmunlehtikatoista. Makuti-kaupunginosaan asettuivat aikanaan orjuudesta vapautetut ja saaren työläiset, ja siellä asuu nykyään suurin osa saaren noin 14 000 asukkaasta. Kalastus on yhä tärkein elinkeino: perinteiset purjeveneet vedetään hiekkarannalle laskuveden aikaan, aivan kuten kuvassa näkyvien ruokokattoisten talojen edustalla.',
+          tiedosto: 'Island_of_Mozambique-111412.jpg',
+          lyhyt: 'Kalastusveneitä ja ruokokattoisia taloja Makuti-kaupunginosan rannalla.',
+          selite:
+            'Valokuva näyttää hiekkarannalle vedettyjä puuveneitä ja niiden takana ruokokattoisia taloja sekä palmuja Makuti-kaupunginosassa.',
+          lahde: 'Lazare Eloundou Assomo, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Silta joka päätti eristyksen',
+          teksti:
+            'Vuosisatojen ajan Mosambikin saarelle pääsi vain veneellä – juuri tämä teki siitä niin helposti puolustettavan linnoituskaupungin. Sillan rakentamisesta järjestettiin tarjouskilpailu vuonna 1962, ja lähes 3,4 kilometriä pitkä silta valmistui vuonna 1969, sata vuotta isoisän vierailun jälkeen. Silta yhdisti saaren vihdoin mantereeseen autolla ja jalan kuljettavaksi, ja nykyään sitä pitkin kulkee sekä paikallisten arkiliikenne että Unescon maailmanperintökohteeksi vuonna 1991 nimetyllä saarella vierailevat matkailijat.',
+          tiedosto: 'Mozambique_Island_Bridge.jpg',
+          lyhyt: 'Auringonlasku pitkän Mosambikin saaren sillan yllä.',
+          selite:
+            'Valokuva näyttää pitkän, matalan sillan mantereelta saarelle auringonlaskun aikaan, veden pinnan heijastaessa taivaan värejä.',
+          lahde: 'Michael Jack, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mozambique Island Bridge',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Orjakauppa ja unohdettu pääkaupunki',
+      johdanto:
+        'Vuosisatojen ajan Mosambikin saari oli sekä Portugalin tärkein Itä-Afrikan tukikohta että yksi Intian valtameren vilkkaimmista orjakaupan solmukohdista – kunnes pääkaupunki siirrettiin mantereelle ja saari vaipui hiljaiseksi.',
+      tehtava: {
+        kysymys: 'Minä vuonna orjuus lakkautettiin lopullisesti Portugalin Afrikan-siirtomaissa?',
+        vaihtoehdot: ['1836', '1869', '1878', '1898'],
+        oikea: 2,
+        fakta:
+          'Portugali kielsi orjakaupan lailla jo 1836, mutta orjuus itsessään päättyi sen Afrikan-siirtomaissa vasta 1878 – Mosambikin saarella se oli yhä arkea isoisän vierailun aikaan 1873.',
+      },
+      nostot: [
+        {
+          otsikko: 'Piirustus vuodelta 1655',
+          teksti:
+            'Tämä vuonna 1655 piirretty akvarellikartta näyttää São Sebastiãon linnoituksen kolmiomaisen pohjapiirustuksen ja edustan, jossa purjelaivat ankkuroivat syvässä kanavassa saaren ja mantereen välissä. Vahva linnoitus teki saaresta niin turvallisen sataman, että siitä tuli jo 1500-luvun alussa koko Portugalin Itä-Afrikan hallintokeskus. Isoisän matkavuonna 1873 saari oli yhä sama pääkaupunki kuin kartanpiirtäjän aikana kaksi vuosisataa aiemmin: tärkeät päätökset tehtiin edelleen tällä kapealla koralliriutalla, ennen kuin pääkaupunki siirrettiin mantereelle vasta vuonna 1898.',
+          tiedosto:
+            'Planta_da_fortaleza_da_ilha_de_Moçambique,_Leonardo_de_Ferrari,_1655.jpg',
+          lyhyt: 'Käsinmaalattu kartta São Sebastiãon linnoituksesta vuodelta 1655.',
+          selite:
+            'Vanha akvarellikartta näyttää linnoituksen kolmiomaisen muodon ylhäältä sekä edustalla purjehtivan laivan lippuineen.',
+          lahde: 'Leonardo de Ferrari, Wikimedia Commons (Public domain)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: "Dhow'lla yli Intian valtameren",
+          teksti:
+            "Tällaiset dhow-purjeveneet kuljettivat vuosisatojen ajan sekä kauppatavaraa että orjia Mosambikin saaren ja Intian valtameren rannikon välillä. Saaresta tuli 1500-luvulta lähtien yksi Itä-Afrikan vilkkaimmista orjakaupan solmukohdista: ihmisiä vietiin niin arabikauppiaiden reittejä kuin portugalilaisilla laivoilla Brasiliaan asti. Joulukuussa 1794 orjalaiva São José Paquete de Africa lastasi saarelta 512 orjaksi otettua ihmistä – laiva haaksirikkoutui jo Etelä-Afrikan rannikolla. Portugali kielsi orjakaupan lailla 1836, mutta orjuus itsessään lakkautettiin sen Afrikan-siirtomaissa vasta 1878, viisi vuotta isoisän vierailun jälkeen.",
+          tiedosto: 'Boats_outside_Island_of_Mozambique.jpg',
+          lyhyt: "Kaksi dhow'ta matalassa vedessä Mosambikin saaren edustalla.",
+          selite:
+            'Valokuva näyttää kaksi perinteistä dhow-purjevenettä matalassa rantavedessä, purjeet ylhäällä ja miehiä veneissä ja niiden vieressä vedessä.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Arab slave trade',
+        },
+        {
+          otsikko: 'Pääkaupungin jälkeinen hiljaisuus',
+          teksti:
+            'Kun pääkaupunki siirrettiin vuonna 1898 mantereen Lourenço Marquesiin, nykyiseen Maputoon, Mosambikin saari menetti nopeasti merkityksensä. Kauppa hiipui, väki muutti pois, ja monet kivikaupungin komeat rakennukset jäivät vaille käyttöä ja huoltoa vuosikymmeniksi. Rannalla seisoo yhä tällaisia pylväikköllisiä raunioita, jotka kertovat ajasta, jolloin saarella riitti sekä rahaa että väkeä komeisiin rakennushankkeisiin. Vasta Unesco otti raunioituneen mutta ainutlaatuisen kaupunkikokonaisuuden maailmanperintöluetteloon vuonna 1991, minkä jälkeen osaa rakennuksista on alettu korjata.',
+          tiedosto: 'Pasado_colonial_(624531296).jpg',
+          lyhyt: 'Romahtanut pylväikkörakennus meren rannalla saaren kärjessä.',
+          selite:
+            'Valokuva näyttää sortuneen pylväikköterassin ja katottoman rakennuksen rannalla, pylväät kaatuneina hiekalle ja meri taustalla.',
+          lahde: 'bachmont, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Saharan eteläpuolen suurin sairaala',
+          teksti:
+            'Portugalilaiset rakensivat saarelle uuden sairaalan vuonna 1877 – vain neljä vuotta isoisän matkan jälkeen. Uusklassillinen rakennus puutarhoineen ja suihkulähteineen oli aikanaan koko Saharan eteläpuolisen Afrikan suurin sairaala, ja se osoitti, että Portugali yhä panosti saareen suurhankkeisiin, vaikka pääkaupungin siirto mantereelle oli jo näköpiirissä. Nykyisin rakennus rapistuu pylväineen ja portaineen, mutta osa siitä toimii edelleen paikallisena sairaalana – yksi harvoista siirtomaa-ajan suurrakennuksista, joita yhä käytetään alkuperäiseen tarkoitukseensa.',
+          tiedosto: 'Hospital Novo, Ilha de Moçambique, Moçambique (1).jpg',
+          lyhyt: 'Rapistunut uusklassillinen sairaalarakennus pylväineen ja leveine portaineen.',
+          selite:
+            'Valokuva näyttää entisen sairaalan pylväikköjulkisivun ja leveän kiviportaikon, seinät säiden kuluttamina ja ikkunat tyhjinä.',
+          lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Island of Mozambique',
+        },
+      ],
+    },
+  ],
+  darfur: [
+    {
+      id: 'kaupunki',
+      nimi: 'Darfur',
+      johdanto:
+        'Kun isoisä matkusti maailmalla 1873, Darfurin sulttaanikunta Länsi-Sudanissa eli viimeisiä itsenäisiä kuukausiaan: jo seuraavana vuonna egyptiläinen kauppias-sotapäällikkö kaatoi Keira-suvun vuosisataisen Fur-valtakunnan.',
+      nostot: [
+        {
+          otsikko: 'Jebel Marra — sulttaanikunnan vuoristosydän',
+          teksti:
+            'Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.',
+          tiedosto: 'Jebel Marra, landscape.jpg',
+          lyhyt: 'Jebel Marran vuoret kohoavat sinisenä taustalla vehreän jokilaakson yllä.',
+          selite:
+            'Valokuva näyttää kivisen puron ja vehreän kasvillisuuden Jebel Marran juurella; kaksi ihmistä kahlaa vedessä, ja sulttaanikunnan ydinalueen vuoret kohoavat sinisinä taustalla.',
+          lahde: 'Wlyeldeen Abkar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jebel Marra',
+        },
+        {
+          otsikko: 'Deriban kaksoisjärvet',
+          teksti:
+            'Jebel Marran laella, sammuneen tulivuoren huipulla, kimaltavat Deriban kaksoisjärvet noin 3000 metrin korkeudessa – toinen makean, toinen rikkipitoisen happaman veden täyttämä. Kraatterijärvet syntyivät viimeisimmän purkauksen jälkeen, ja Fur-kansa piti niitä pyhinä paikkoina, joihin liittyi lukuisia uskomuksia. Vuoristoinen, vaikeakulkuinen ylänkö toimi samalla luonnollisena linnoituksena: se auttoi Keira-suvun sulttaaneja, jotka olivat nousseet valtaan 1500-luvun lopulla ja tehneet islamista valtionuskonnon 1600-luvulla, pitämään valtakuntansa itsenäisenä lähes kolmen vuosisadan ajan naapurien paineesta huolimatta.',
+          tiedosto: 'Sudan Jebel Marra Deriba Lakes edited.jpg',
+          lyhyt: 'Ilmakuva Jebel Marran huipulla kimaltavasta Deriban kraatterijärvestä.',
+          selite:
+            'Kuva näyttää sammuneen tulivuoren kraatteriin syntyneen siniharmaan järven ja sen ympärillä kohoavat jyrkät kraatterinreunat Jebel Marran huipulla.',
+          lahde: 'J Williams (Hammy07), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jebel Marra',
+        },
+        {
+          otsikko: 'Khedivi Ismail Pasha ja idän uhka',
+          teksti:
+            'Egyptin khedivi Ismail Pasha, joka hallitsi vuosina 1863–1879, pyrki laajentamaan valtaansa Niilin yläjuoksulle ja Sudaniin asti tavoitellen sekä kauppareittejä että arvovaltaa Euroopan silmissä. Hänen aikanaan Egyptin armeijaa nykyaikaistettiin eurooppalaisten upseerien avulla, ja katseet kääntyivät myös länteen, kohti riippumatonta Darfurin sulttaanikuntaa. Kun rajaseudun heimoriita levisi sodaksi vuonna 1873, khedivi näki tilaisuuden: hän liittoutui vaikutusvaltaisen kauppias Zubayr Rahma Mansurin kanssa ja lähetti tämän joukot valtaamaan Darfurin – hanke, joka isoisän matkavuonna oli vasta alkamassa.',
+          tiedosto: "Khedive Isma'il Pasha.png",
+          lyhyt: 'Khedivi Ismail Pasha muotokuvassa täydessä univormussaan kunniamerkkeineen.',
+          selite:
+            'Valokuva näyttää khedivi Ismail Pashan juhla-asussa: turkkilaistyylinen lakki, koruompeluinen univormutakki, lukuisat kunniamerkit ja koristeellinen miekka kädessä.',
+          lahde: 'Gustave Le Gray, Wikimedia Commons (Public domain)',
+          wiki: 'Isma\'il Pasha',
+        },
+        {
+          otsikko: 'Kauppias joka rakensi oman valtakunnan',
+          teksti:
+            'Al-Zubayr Rahma Mansur aloitti norsunluu- ja orjakauppiaana vuonna 1856 Bahr el-Ghazalin alueella, nykyisen Etelä-Sudanin puolella. Hän perusti sinne verkoston linnoitettuja kauppa-asemia, zaribia, joista yksi, Deim Zubeir, kasvoi omaksi pikkukaupungikseen keskelle savannia. Parhaimmillaan Zubayrilla oli komennossaan noin kolmekymmentä tällaista asemaa ja niin vahva yksityisarmeija, että hän löi Egyptin lähettämät palkkasotilaat, kun nämä yrittivät kukistaa hänet. Käytännössä Zubayr oli oma itsenäinen vallanpitäjänsä kauan ennen kuin hänestä tuli khedivin liittolainen Darfurin valloituksessa.',
+          tiedosto: 'DeimZubeir-ByFlorentColmant-LeMouvementGeographique07101899.jpg',
+          lyhyt: 'Belgialaisupseerin 1894 piirtämä näkymä Zubayrin Deim Zubeirin kauppa-asemasta.',
+          selite:
+            'Piirros näyttää rivin savitiilistä rakennettuja, osin raunioituneita kauppa-aseman rakennuksia palmupuineen – tällaisia zaribia Zubayr perusti kymmeniä Bahr el-Ghazalin alueelle.',
+          lahde: 'Florent Colmant, Wikimedia Commons (Public domain)',
+          wiki: 'Al-Zubayr Rahma Mansur',
+        },
+        {
+          otsikko: 'Sota 1873–1874 ja sulttaani Ibrahimin kaatuminen',
+          teksti:
+            'Sota syttyi vuonna 1873 rajaseudun Rizayqat-heimon kahden ryhmittymän kiistasta, kun myös Zubayrin kauppakaravaani joutui hyökkäyksen kohteeksi. Zubayr liittoutui khedivin kanssa, ja Turkin-Egyptin joukkoja komensi Ismail Ayyub Pasha, jonka ja Zubayrin yhteinen sotajoukko käsitti noin 7000 miestä. Helmikuussa 1874 he valtasivat Daran kaupungin, ja syksyllä 1874 sulttaani Ibrahim kaatui taistelussa al-Manawashissa. Hänen setänsä Hassab Allah yritti vielä jatkaa itsenäisyystaistelua, mutta hänet vangittiin seuraavana vuonna ja vietiin perheineen Kairoon – ja viisisataavuotinen Keira-suvun sulttaanikunta lakkasi olemasta.',
+          tiedosto: 'Ismail Eyub Pasha.png',
+          lyhyt: 'Turkin-Egyptin komentaja Ismail Ayyub Pasha muotokuvassa, tarbuusi päässään.',
+          selite:
+            'Kuvassa on puolivartalokuva viiksekkäästä miehestä tummassa univormutakissa ja punaisessa tarbuusissa – Ismail Ayyub Pasha, joka johti yhdessä Zubayrin kanssa Darfurin valloitusta 1873–74.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Conquest of Darfur (1873–1874)',
+        },
+        {
+          otsikko: 'Saksalainen tutkija näki loppunäytöksen',
+          teksti:
+            'Saksalainen lääkäri ja tutkimusmatkailija Gustav Nachtigal saapui Darfuriin tammikuussa 1874 keskellä sotaa ja asettui pääkaupunki El Fasheriin maaliskuusta heinäkuuhun samana vuonna. Hän näki omin silmin, kuinka itsenäinen sulttaanikunta muuttui Egyptin maakunnaksi, ja kirjasi matkakertomukseensa yksityiskohtaisia tietoja Fur-valtion historiasta, hallinnosta ja asukkaista. Isoisän matkatessa Euroopassa vuonna 1873 Darfur eli siis vielä viimeisiä itsenäisiä kuukausiaan – ja juuri kun isoisän oma matka jo lähestyi loppuaan, Nachtigal todisti paikan päällä sulttaanikunnan lopullisen sortumisen.',
+          tiedosto: 'Gustav Nachtigal (1834-1885).jpg',
+          lyhyt: 'Saksalainen tutkimusmatkailija Gustav Nachtigal kaiverruksessa 1880-luvulta.',
+          selite:
+            'Kaiverrus näyttää puolivartalokuvan kiharatukkaisesta, viiksekkäästä miehestä puvussa ja rusetissa – Gustav Nachtigal, joka oleskeli El Fasherissa keväällä ja kesällä 1874.',
+          lahde: 'Albert Fränkel, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+      ],
+    },
+    {
+      id: 'karavaanireitti',
+      nimi: 'Neljänkymmenen päivän tie',
+      johdanto:
+        'Neljänkymmenen päivän tie eli Darb al-Arbain yhdisti Darfurin Egyptiin vuosisatojen ajan: kamelikaravaanit kuljettivat pohjoiseen norsunluuta, strutsinsulkia ja orjia, etelään kankaita ja aseita.',
+      tehtava: {
+        kysymys: 'Kuinka pitkä Neljänkymmenen päivän tien matka oli kilometreinä?',
+        vaihtoehdot: ['900 km', '1 800 km', '2 700 km', '3 600 km'],
+        oikea: 1,
+        fakta:
+          'Neljänkymmenen päivän tie oli noin 1 800 kilometriä pitkä, vaikka matka kesti nimestä huolimatta lähempänä 60 päivää kuin 40.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aavikon valtaväylät',
+          teksti:
+            'Darb al-Arbain eli Neljänkymmenen päivän tie oli itäisin ja tunnetuin Saharan halki kulkevista suurista kauppareiteistä, ja se yhdisti Darfurin pohjoisen Kobbein Egyptin Asyutiin noin 1 800 kilometrin matkalla. Nimestään huolimatta matka kesti todellisuudessa lähempänä 60 päivää, sillä karavaanien piti pysähtyä lepäämään ja juottamaan eläimiä pitkin matkaa. Reitti tunnettiin jo satoja vuosia ennen isoisän aikaa – osa tutkijoista jäljittää sen käytön aina muinaisen Egyptin aikaan asti – ja se pysyi tärkeänä kauppaväylänä aina 1800-luvun loppuun saakka.',
+          tiedosto: 'Great Trading Routes of the Sahara WDL100.png',
+          lyhyt: 'Ranskalaistutkija E. Blancin vuoden 1889 kartta Saharan kauppareiteistä.',
+          selite:
+            'Kartta näyttää Saharan aavikon kauppareitit Marokosta Egyptiin ja Darfouriin (Darfur) asti; reittiviivat ja karavaanien pysähdyspaikat on merkitty kartan selitteeseen.',
+          lahde: 'Édouard Blanc, Wikimedia Commons (Public domain)',
+          wiki: "Darb El Arba'in",
+        },
+        {
+          otsikko: 'Kharga — portti aavikon halki',
+          teksti:
+            'Matkalla Darfurista Egyptiin karavaanit kulkivat oaasiketjun kautta, johon kuuluivat muun muassa Selima- ja Kharga-oaasit sekä Bir Natrunin kaivot – ilman näitä pysähdyspaikkoja koko matka olisi ollut mahdoton kamelien ja ihmisten hengissä pysymiselle. Kharga-solan kaltaiset kapeat kulkuväylät veivät karavaanit Libyan ylängön reunalta alas kohti Niilin laaksoa ja lopulta Asyutin kaupunkiin, jossa tavarat siirtyivät jokiveneisiin. Aavikkoreitti oli hitaudestaan huolimatta usein nopeampi, halvempi ja turvallisempi kuin matkustaminen Niiliä pitkin, jonka kosket ja mutkat hidastivat kuljetuksia.',
+          tiedosto: 'KhargaPass.jpg',
+          lyhyt: 'Nykyinen tie kiemurtelee Kharga-solan halki Egyptin länsiaavikolla.',
+          selite:
+            'Valokuva näyttää kalliopaljastumien halkoman aavikkosolan, jonka pohjalla mutkitteleva tie kulkee kohti autiota tasankoa – samaa reittiä, jota Neljänkymmenen päivän tien karavaanit kulkivat.',
+          lahde: 'Roland Unger, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kharga Oasis',
+        },
+        {
+          otsikko: 'Kamelikaravaani matkalla',
+          teksti:
+            'Pohjoiseen suuntautuvissa karavaaneissa kulki kultaa, norsunluuta, sarvikuonon sarvia, strutsinsulkia ja -munia, eebenpuuta, kumiarabikumia sekä orjia – 1700-luvun eurooppalaisten arvioiden mukaan vuosittain jopa 3000–12 000 orjaa kuljetettiin tätä reittiä pitkin. Etelään päin kamelit kantoivat puolestaan kankaita, aseita, mausteita ja viiniä Egyptistä ja Välimeren rannikolta. Darfurin sulttaani sääti kamelinomistajaheimoille, kuten fazaralaisille, vuosittaisen veron osana karavaanikauppaa – kamelit olivat sekä kulkuneuvo että verotettava omaisuus, ilman jota koko kauppajärjestelmä olisi pysähtynyt.',
+          tiedosto: 'PSM V53 D189 A caravan on its march.jpg',
+          lyhyt: 'Kamelikaravaani matkalla aavikon halki 1890-luvun valokuvassa.',
+          selite:
+            'Valokuvassa kulkee jono kuormattuja kameleita opastajineen aavikkotietä pitkin, palmuja siintää taustalla – samankaltaisia karavaaneja kulki Neljänkymmenen päivän tietä vuosisatojen ajan.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: "Darb El Arba'in",
+        },
+        {
+          otsikko: 'Kauppias joka valloitti sulttaanikunnan',
+          teksti:
+            'Al-Zubayr Rahma Mansur rakensi 1850–60-luvuilla norsunluu- ja orjakaupasta niin vahvan omaisuuden ja yksityisarmeijan, ettei Egyptin hallitus kyennyt häntä kukistamaan. Vuonna 1873 hänen kauppakaravaaninsa joutui hyökkäyksen kohteeksi Darfurin rajaseudulla, ja seuranneessa sodassa hän liittoutui khedivi Ismail Pashan kanssa Darfurin valloittamiseksi. Voiton jälkeen 1874 khedivi palkitsi hänet beyn ja pashan arvonimillä sekä Bahr el-Ghazalin kuvernöörin virasta. Kauppatie, jota pitkin hän oli aiemmin kuljettanut norsunluuta ja orjia, kuljetti nyt myös hänen sanomiaan uuden vallan keskukseen El Fasheriin.',
+          tiedosto: 'SLATIN(1896) p079 ZUBEIR PASHA.jpg',
+          lyhyt: 'Al-Zubayr Rahma Mansur eli Zubeir Pasha juhla-asussaan, käsi miekan kahvalla.',
+          selite:
+            'Kuvassa vanheneva parrakas mies tarbuusissa ja koruommellussa univormussa nojaa miekkaansa – Zubeir Pasha, orjakauppiaasta Darfurin valloittajaksi noussut kauppias-sotapäällikkö.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Al-Zubayr Rahma Mansur',
+        },
+        {
+          otsikko: 'Tien loppu',
+          teksti:
+            'Vuonna 1877 kenraali Charles Gordon nimitettiin Sudanin egyptiläishallinnon kenraalikuvernööriksi, ja hänen päätehtäväkseen tuli orjakaupan tukahduttaminen koko alueella, myös Neljänkymmenen päivän tiellä. Zubayrin valta murtui, ja hänet pidätettiin lopulta Kairossa. Brittiläis-egyptiläinen hallinto tehosti orjakaupan vastaisia partioita 1800-luvun viimeisellä vuosikymmenellä, mikä yhdessä uusien höyrylaivareittien kanssa vei vähitellen pohjan koko ikivanhalta karavaanitieltä. Reitti, joka oli kukoistanut vuosisatoja, vaipui unohduksiin vuosisadan vaihteessa.',
+          tiedosto: 'Portrait of General C. G. Gordon, C.B., R.E (4670780).jpg',
+          lyhyt: 'Kenraali Charles Gordon, joka pyrki tukahduttamaan orjakaupan Sudanissa.',
+          selite:
+            'Kaiverrettu muotokuva viiksekkäästä univormupukuisesta miehestä; kuvatekstin mukaan hän oli Sudanin rauhoittaja vuosina 1874–79 ja Khartumin puolustaja.',
+          lahde: 'Henry Sigismund Uhlrich, Wikimedia Commons (Public domain)',
+          wiki: 'Charles George Gordon',
+        },
+      ],
+    },
+  ],
+  tshadjarvi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tšad-järvi',
+      johdanto:
+        'Isoisän matkavuonna 1873 Tšad-järvi oli Keski-Afrikan sisämeri, jonka rannoille saksalaiset Barth ja Nachtigal olivat juuri raivanneet eurooppalaisille tien – ja jonka koko on sittemmin kutistunut murto-osaan entisestä.',
+      nostot: [
+        {
+          otsikko: 'Barth saapuu järvelle',
+          teksti:
+            'Huhtikuun 2. päivänä 1851 saksalainen tutkimusmatkailija Heinrich Barth saapui brittiläisen Richardsonin retkikunnan mukana Tšad-järven rannalle ensimmäisten eurooppalaisten joukossa vuosikymmeniin. Hänen matkatoverinsa Adolf Overweg oli tuonut mukanaan Tripolista puretun veneen ja purjehti järvellä viisi viikkoa – ensimmäisenä eurooppalaisena koskaan. Barth ja Overweg viipyivät alueella viisitoista kuukautta, mittasivat järven vaihtelevaa rantaviivaa ja kirjasivat muistiin seudun kansoja ja valtakuntia. Heidän havaintonsa loivat pohjan sille tiedolle, jonka varaan myös isoisän aikalainen Gustav Nachtigal myöhemmin rakensi oman matkansa.',
+          tiedosto: 'H. Barth - Otto Speckter lith. - btv1b105015633.jpg',
+          lyhyt: 'Otto Speckterin litografia tutkimusmatkailija Heinrich Barthista 1850-luvulta.',
+          selite:
+            'Litografia näyttää Heinrich Barthin muodollisessa istuvassa asennossa: tumma puku, valkoinen kaulaliina, kädet ristissä sylissä – tyypillinen 1850-luvun tutkimusmatkailijan muotokuva, jonka Otto Speckter piirsi kivipiirroksena.',
+          lahde: 'Otto Speckter, Wikimedia Commons (Public domain)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: 'Kartta isoisän ajalta',
+          teksti:
+            'Vuonna 1876 Lontoon kuninkaallinen maantieteellinen seura julkaisi kartan, joka perustui saksalaisen Gustav Nachtigalin 1870-luvun alun matkahavaintoihin Tšad-järven seudulla – samaan aikaan kun isoisä kirjoitti omaa matkapäiväkirjaansa. Kartografi Edward Weller piirsi Nachtigalin muistiinpanojen pohjalta järven rantaviivan, Kanemin ja Bornun alueet sekä Budduma-kansan asuttamat saaret. Kartassa näkyy myös Nachtigalin oma reitti pohjoisesta Tibestin vuoristosta järven rannalle asti. Tällaiset kartat olivat 1870-luvulla ainoa tapa hahmottaa Keski-Afrikan sisäosia eurooppalaisille, joille alue oli yhä suurelta osin valkoinen läiskä kartalla.',
+          tiedosto: 'Map Lake Chad 1876 B002.png',
+          lyhyt: 'Vuonna 1876 julkaistu kartta Tšad-järvestä Nachtigalin matkatietojen pohjalta.',
+          selite:
+            'Vanha painettu kartta otsikolla "Map of Lake Chad and Neighbouring Regions" näyttää järven, sitä ympäröivät alueet Kanemista Bagirmiin sekä ohuen viivan Nachtigalin kulkemasta reitistä pohjoisesta järvelle; kartan on julkaissut Lontoon maantieteellinen seura 1876.',
+          lahde: 'Gustav Nachtigal, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Chad',
+        },
+        {
+          otsikko: 'Joki joka ruokkii järveä',
+          teksti:
+            'Tšad-järveen ei laske vain yksi joki vaan kokonainen jokijärjestelmä: Chari-joki ja sen suurin sivujoki Logone tuovat yhdessä noin 95 prosenttia kaikesta järveen virtaavasta vedestä. Joet saavat alkunsa satojen kilometrien päässä eteläisemmän Afrikan sademetsistä ja savanneilta ja yhtyvät nykyisen N’Djamenan kohdalla ennen laskuaan järveen. Tšad-järvellä itsellään ei ole lainkaan pysyvää laskujokea, joten suurin osa siihen virtaavasta vedestä joko haihtuu polttavassa kuumuudessa tai imeytyy hiekkaan – ainoa poikkeus on ajoittainen Bahr-el-Ghazalin uoma, joka voi sateisimpina vuosina kuljettaa vettä koilliseen.',
+          tiedosto: 'Fleuve chari, vu de Kousseri, qui se jette au lac Tchad.jpg',
+          lyhyt: 'Chari-joki tuo suurimman osan Tšad-järveen virtaavasta vedestä.',
+          selite:
+            'Valokuva näyttää leveän, savisamean Chari-joen Kousserin rannalta: veden toisella puolella siintää N’Djamenan siluetti, ja lähirannalla on kaadettu ruokovene sekä hiekkaista, ruohottunutta rantatörmää.',
+          lahde: 'Nelson_djoub, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chari River',
+        },
+        {
+          otsikko: 'Vihreä ranta savannin keskellä',
+          teksti:
+            'Tšad-järvi sijaitsee Sahelissa, kapealla vyöhykkeellä Saharan autiomaan ja eteläisemmän Afrikan kosteiden savannien välissä, ja sen rannat vaihtelevat rajusti vuodenaikojen mukaan. Sadekauden jälkeen vesi tulvii laajoille ruovikko- ja heinäalueille, ja kun tulva vetäytyy, paljastuneelle mudalle kylvetään nopeasti kasvavia satoja – tätä kutsutaan vetäytymisviljelyksi. Samat rantaniityt toimivat myös karjapaimenten laidunmaina: karja käy juomassa aivan veden äärellä ja laiduntaa tulvan jättämällä vihreällä kaistaleella, joka pysyy rehevänä silloinkin, kun ympäröivä savanni on kuivunut ruskeaksi.',
+          tiedosto: 'An evergreen lake chad shore (detilt).jpg',
+          lyhyt: 'Karjaa laiduntamassa Tšad-järven rehevällä, ruohoisella rannalla.',
+          selite:
+            'Valokuvassa avautuu tyyni järvenselkä, jonka rannalla kasvaa korkeaa heinikkoa ja pensaikkoa; heinikossa näkyy sarvipäisiä nautoja laiduntamassa, ja taustalla kohoaa tiheä puurivi kirkasta taivasta vasten.',
+          lahde: 'Coolthoom1, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lake Chad',
+        },
+        {
+          otsikko: 'Ruokovene ja luonnonsuola',
+          teksti:
+            'Järven saarilla ja rannoilla asuva Buduma-kansa on vuosisatoja elänyt kalastuksesta ja karjanhoidosta, ja sen tunnusmerkki on paksusta järviruo\'osta sidottu vene, jonka keula kaartuu jyrkästi ylöspäin. Isompia veneitä käytettiin karjan ja kokonaisten perheiden kuljettamiseen, pienempiä kalastukseen. Yksi tärkeä rahtilasti oli luonnonsuola eli potaska, jota kerättiin järven pohjasedimenteistä ja kuivuneista altaista ja kuljetettiin näillä ruokoveneillä kauppapaikoille myytäväksi ja käytettäväksi muun muassa saippuan valmistuksessa ja karjan ruokinnassa.',
+          tiedosto: 'Potash boat on the Lake Chad.jpg',
+          lyhyt: 'Vanha valokuva ruo\'osta tehdystä potaskaveneestä Tšad-järvellä.',
+          selite:
+            'Mustavalkoinen postikorttivalokuva "Potash boat, Chad" näyttää pitkän, jyrkästi ylöspäin kaartuvakeulaisen ruokoveneen, jonka kannella on pyöreitä potaskakimppuja ja kolme miestä seisomassa; etualalla kaareutuu palmunrunko.',
+          lahde: 'Steve Bittinger, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Buduma people',
+        },
+        {
+          otsikko: 'Järvi joka katoaa',
+          teksti:
+            'Tšad-järvi oli 1960-luvulla maailman kuudenneksi suurin järvi, noin 25 000 neliökilometrin laajuinen sisämeri neljän maan rajalla. Sen jälkeen järvi on kutistunut rajusti: 2000-luvulla avovettä on ollut jäljellä enää noin 1 350 neliökilometriä, alle kymmenesosa entisestä laajuudesta. Syynä on sekä muuttunut sademäärä että kasvaneen väestön kastelu- ja karjatalousveden käyttö joet ylävirrassa. Satelliittikuvissa erottuu nykyään laaja vihreä, matalan tulvaveden ja ruovikon peittämä alue, jonka keskellä varsinainen avovesi näkyy tummana täplänä – suurin osa entisestä järvestä on jo kuivunutta maata tai kosteikkoa.',
+          tiedosto: 'Lake Chad (MODIS 2024-03-03).jpg',
+          lyhyt: 'Satelliittikuva näyttää Tšad-järven kutistuneen avovesialueen.',
+          selite:
+            'Väärävärinen satelliittikuva näyttää järven tumman sinisen avoveden pienenä läiskänä keskellä paljon laajempaa vaaleanvihreää, kosteikkokasvillisuuden peittämää aluetta, jota ympäröi vaaleanruskea aavikko.',
+          lahde: 'MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Chad',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Bornun valtakunta',
+      johdanto:
+        'Tšad-järveä hallitsi vuosisatojen ajan Bornun valtakunta, joka oli yhä pystyssä isoisän matkavuonna 1873 – samaan aikaan kun saksalainen Gustav Nachtigal vieraili sen pääkaupungissa Kukawassa sheikki Umarin vieraana.',
+      tehtava: {
+        kysymys:
+          'Missä kaupungissa Gustav Nachtigal tapasi Bornun hallitsijan sheikki Umarin vuonna 1870?',
+        vaihtoehdot: ['Kukawassa', 'Timbuktussa', 'Tripolissa', 'Agadezissa'],
+        oikea: 0,
+        fakta:
+          'Nachtigal saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, ja sheikki Umar otti hänet ystävällisesti vastaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhatvuotinen valtakunta syntyy',
+          teksti:
+            'Kanem-Bornun valtakunta syntyi todennäköisesti 800-luvun puolivälissä, kun paimentolaisheimojen liittouma järjestäytyi Sefuwa-suvun johtamaksi kuningaskunnaksi Tšad-järven koillispuolella. Ensimmäinen pääkaupunki Njimi sijaitsi kauppareittien risteyksessä, mutta sen tarkkaa paikkaa ei ole koskaan pystytty varmuudella löytämään – nykyiset arviot perustuvat vanhoihin kronikoihin ja perimätietoon. Järven keskeinen sijainti Saharan ja Sudanin kauppareittien solmukohdassa toi valtakunnalle vaurautta jo ensimmäisiltä vuosisadoilta lähtien, ja siitä kasvoi lopulta yksi Afrikan pisimpään säilyneistä valtakunnista.',
+          tiedosto: 'Kanem–Bornu, 1300.png',
+          lyhyt: 'Kartta Kanem-Bornun valtakunnan alueesta noin vuonna 1300.',
+          selite:
+            'Kartassa vihreä alue kuvaa Kanem-Bornun valtakunnan laajuutta 1300-luvulla: kapea, pohjoiseen venyvä alue ulottuu Tšad-järven pohjoispuolelta kohti Saharaa, ja kartalle on merkitty ensimmäisen pääkaupungin Njimin oletettu sijainti.',
+          lahde: 'Megartonius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanem–Bornu Empire',
+        },
+        {
+          otsikko: 'Uusi pääkaupunki ja kulta-aika',
+          teksti:
+            '1300-luvun lopulla Bulala-kansa ajoi Sefuwa-suvun pois Kanemista, ja hallitsijat siirsivät pääkaupunkinsa järven länsipuolelle Borniin, uuteen Birni Ngazargamun kaupunkiin – tästä kaksoisnimestä syntyi koko valtakunnan nimi Kanem-Bornu. Valtakunta saavutti mahtinsa huipun 1500-luvun lopulla hallitsija Idris Aloomen aikana, joka uudisti armeijaa muun muassa tuliaseilla ja laajensi valtakunnan rajoja joka suuntaan. Idris Alooma vahvisti myös hallintoa ja tuomioistuinlaitosta, ja hänen aikanaan Kanem-Bornusta tuli koko Tšad-järven alueen kiistaton mahtivaltio, joka hallitsi seutua vielä isoisän matkavuonna 1873.',
+          tiedosto: 'KanemBornuEmpire-NewMap.png',
+          lyhyt: 'Kartta Kanem-Bornun valtakunnasta laajimmillaan, kahden pääkaupungin kanssa.',
+          selite:
+            'Kartassa tummanvihreä alue kuvaa valtakunnan vakiintunutta ydinaluetta kahden pääkaupungin, Njimin ja Ngazargamun, ympärillä, kun taas vaaleampi vihreä osoittaa laajimman ulottuvuuden pohjoiseen kohti Saharaa.',
+          lahde: 'Megartonius, Wikimedia Commons (CC0)',
+          wiki: 'Idris Alooma',
+        },
+        {
+          otsikko: 'Preussin lahjat sheikille',
+          teksti:
+            'Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.',
+          tiedosto: 'Gustav Nachtigal by Hanfstaengl (cropped).jpg',
+          lyhyt: 'Muotokuva saksalaisesta tutkimusmatkailijasta Gustav Nachtigalista.',
+          selite:
+            'Sepiansävyinen ateljeevalokuva näyttää keski-ikäisen miehen, jolla on tuuhea kihara tukka ja suuret ylöspäin kiertyvät viikset; hänellä on tumma puku, valkoinen paita ja rusetti, ja katse on suunnattu suoraan kameraan.',
+          lahde: 'Erwin Hanfstaengl, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Kartanpiirtäjän Kukawa',
+          teksti:
+            'Kukawa oli suhteellisen nuori kaupunki: uskonnollinen johtaja Muhammad al-Amin al-Kanemi perusti sen 1800-luvun alussa, ja siitä tuli Bornun pääkaupunki vuosina 1846–1893 – juuri se kaupunki, jonka Nachtigal näki vierailullaan. Kaupunki ei ollut yhtenäinen muurin ympäröimä kokonaisuus vaan koostui useista erillisistä, väljästi sijoitetuista kortteleista: keskellä oli kauppatori ja hallitsijan palatsikompleksi, ja niiden ympärillä hajallaan asuinkortteleita sekä hautausmaa. Tällainen väljä kaupunkirakenne oli tyypillinen Bornun alueen kaupungeille ja erosi selvästi tiiviisti muurattujen Pohjois-Afrikan kaupunkien rakenteesta.',
+          tiedosto: 'AFR V3 D431 Kuka (Kukawa), Nigeria.jpg',
+          lyhyt: 'Kukawan kaupungin pohjapiirros 1800-luvun lopulta.',
+          selite:
+            'Vanha pohjapiirros mittakaavassa 1:72 000 näyttää Kukawan hajanaisen kaupunkirakenteen: keskellä on merkitty Market Place (kauppatori) ja Palace (palatsi) suurina rakennusryhminä, niiden ympärillä pienempiä kyläryhmiä sekä erillinen Cemetery (hautausmaa).',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'Kukawa',
+        },
+        {
+          otsikko: 'Panssaroitu ratsuväki',
+          teksti:
+            'Kanem-Bornun sotilaallinen mahti nojasi vuosisatojen ajan raskaaseen ratsuväkeen: sekä hevonen että ratsastaja saatettiin verhota paksuun, tikattuun suojavaatetukseen, joka toimi eräänlaisena panssarina nuolia ja keihäitä vastaan. Perinne periytyi keskiajalta ja oli yhä elossa 1900-luvun alun valokuvissa, jotka siirtomaavirkailijat ottivat Bornun alueella. Tällaisilla raskailla ratsujoukoilla Bornun hallitsijat pystyivät sekä puolustamaan valtakuntaansa että hallitsemaan laajoja alueita ja niiden kauppareittejä, ja juuri tämä sotilaallinen voima piti Kanem-Bornun pystyssä kauemmin kuin yhdenkään toisen läntisen Sudanin valtakunnan.',
+          tiedosto: 'A Bornu cavalryman.jpg',
+          lyhyt: 'Bornulainen ratsumies pehmustetuin panssaroidun hevosensa kanssa.',
+          selite:
+            'Valokuvassa mies turbaanissa ja raidallisessa viitassa seisoo hevosensa vieressä; hevosen ylle on sidottu paksu, tikattu suojapeite kaulan ja rungon ympärille, ja hevonen on kuvattu takajaloillaan seisten, etujalat koholla.',
+          lahde: 'Ernst von Raben, Wikimedia Commons (Public domain)',
+          wiki: 'Kanem–Bornu Empire',
+        },
+      ],
+    },
+  ],
+  rashafun: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ras Hafun',
+      johdanto: 'Ras Hafun on Afrikan mantereen itäisin niemi Somalian rannikolla, kapean hiekkakannaksen päässä. Sen suojaisassa lahdessa on purjehdittu jo yli kaksituhatta vuotta ennen isoisän matkaa.',
+      nostot: [
+        { otsikko: 'Mantereen itäisin kärki',
+          teksti: 'Ras Hafun on sirpinmuotoinen niemi, joka työntyy Guardafui-salmeen Somalian koillisosassa Barin alueella. Se on koko Afrikan mantereen itäisin kohta. Niemi liittyy mantereeseen noin kaksikymmentä kilometriä pitkän ja vain yhdestä kolmeen kilometriä leveän hiekkakannaksen kautta lähellä Foarin kylää. Kalastajakylä sijaitsee itse niemellä, parin kilometrin päässä kannaksesta. Ilmakuvasta paikka näyttää ohuelta, mereen työntyvältä sormelta kahden vedenalueen välissä – juuri tällaista muotoa isoisän kartatkin yrittivät vuonna 1873 tavoittaa.',
+          tiedosto: 'ISS-57 Kenya and Somalia, Indian Ocean coastline.jpg',
+          lyhyt: 'Ras Hafun on koko Afrikan mantereen itäisin kohta.',
+          selite: 'Avaruusasemalta otettu kuva näyttää kapean, tummansävyisen niemekkeen työntyvän siniseen mereen paksujen pilvijonojen keskellä; taustalla erottuu maapallon kaareutuva ilmakehä.',
+          lahde: 'NASA, Wikimedia Commons (Public domain)', wiki: 'Ras Hafun' },
+        { otsikko: 'Antiikin Opone',
+          teksti: 'Muinaiset kreikkalaiset ja roomalaiset merenkulkijat tunsivat tämän rannikon Oponen kauppakaupunkina. Se mainitaan noin ensimmäisellä vuosisadalla jaa. kirjoitetussa merenkulkuoppaassa Periplus Maris Erythraei, joka luetteloi Egyptistä lähtevien kauppareittien satamat aina Intiaan asti. Oppaan mukaan Oponesta vietiin suuria määriä kanelia ja erityisen hienoa kilpikonnankuorta, ja nykyarkeologit yhdistävät kuvauksen juuri Ras Hafunin niemeen. Kaupunki kukoisti vuosisatoja ennen ajanlaskun alkua ja vielä pitkään sen jälkeenkin, kunnes toiminta hiipui noin 500-luvulla jaa.',
+          tiedosto: 'Map of the Periplus of the Erythraean Sea.jpg',
+          lyhyt: 'Ras Hafun tunnistetaan antiikin kauppakaupungiksi Oponeksi.',
+          selite: 'Vanha piirretty kartta esittää Egyptin, Arabian, Itä-Afrikan ja Intian rannikoita väritettyinä; kartalle on merkitty pisteviivoin muinaisia laiva- ja maareittejä sekä satamakaupunkien nimiä Erythraean-meren alueella.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 4.0)', wiki: 'Periplus of the Erythraean Sea' },
+        { otsikko: 'Kauppiaita joka ilmansuunnalta',
+          teksti: 'Periplus-oppaan mukaan Oponeen ja sen naapurisatamiin saapui kauppiaita joka ilmansuunnalta: Foinikiasta, Egyptistä, Kreikasta, Persiasta ja Arabian niemimaalta, myöhemmin myös suoraan Rooman valtakunnasta. Kaukaisimmat kauppiaat tulivat Intiasta ja jopa nykyisen Indonesian ja Malesian seudulta asti. Kunkin alueen laivat toivat mukanaan omia tuotteitaan – silkkiä idästä, jalokiviä Intiasta, viiniä ja metalliesineitä Rooman alueelta – ja veivät mukanaan Afrikan sarven aarteita: mausteita, norsunluuta, suitsuketta ja kilpikonnankuorta. Ras Hafun oli siis paitsi vientisatama, myös vilkas kansainvälinen kohtauspaikka.',
+          tiedosto: 'Periplous of the Erythraean Sea.svg',
+          lyhyt: 'Oponeen saapui kauppiaita Egyptistä, Persiasta ja Intiasta asti.',
+          selite: 'Värillinen kartta esittää pisteviivoin meri- ja maareittejä Rooman valtakunnasta Arabian ja Itä-Afrikan kautta Intiaan ja Kiinaan, sekä värikoodatun selitteen kaupatuista tuotteista kuten mausteista, norsunluusta, kullasta ja silkistä.',
+          lahde: 'George Tsiagalakis, Wikimedia Commons (CC BY-SA 4.0)', wiki: 'Periplus of the Erythraean Sea' },
+        { otsikko: 'Monsuuni aikataulun tekijänä',
+          teksti: 'Purjehdus Egyptistä Oponeen ei olisi onnistunut ilman monsuunituulia. Noin sata vuotta ennen ajanlaskun alkua kreikkalaiset merenkulkijat oppivat, että Intian valtamerellä tuulet kääntyvät säännöllisesti: kesällä ne puhaltavat lounaasta koilliseen ja talvella toiseen suuntaan. Kun tämä rytmi opittiin, laivat saattoivat purjehtia suoraan aavan meren yli sen sijaan, että olisivat kulkeneet hitaasti rannikkoa pitkin. Roomalaisajalla satoja laivoja lähti vuosittain Punaisenmeren satamista kohti Intiaa ja Afrikan sarvea, ja juuri tämä tuulten aikataulu toi kauppiaat Oponeen kerran vuodessa.',
+          tiedosto: 'Monsoon & trade wind chart of the Indian Ocean LOC 2009575919.jpg',
+          lyhyt: 'Monsuunituulet mahdollistivat suoran purjehduksen yli aavan meren.',
+          selite: 'Vanha 1800-luvun merikartta esittää Intian valtamerta ruutuina, joihin on piirretty aaltomaisia värivyöhykkeitä ja nuolia kuvaamaan tuulten suuntaa eri kuukausina ja leveysasteilla.',
+          lahde: 'Matthew Fontaine Maury, US Hydrographic Office / Library of Congress, Wikimedia Commons (Public domain)', wiki: 'Monsoon' },
+        { otsikko: 'Puiset alukset satamassa',
+          teksti: 'Kauppiaiden alukset olivat todennäköisesti nykyisten dhow-veneiden esi-isiä: puurunkoisia, kolmionmuotoisella latinalaispurjeella varustettuja aluksia, jotka soveltuivat hyvin Intian valtameren tuuliin. Samantyyppisiä veneitä nähtiin Somalian rannikolla vielä isoisän matkan aikaan 1800-luvulla. Ras Hafunin alue kuului 1800-luvulla Majeerteenin sulttaanikuntaan, joka oli hallinnut tätä rannikkoa jo 1300-luvulta lähtien ja jonka arvovaltaisin satamakaupunki lähistöllä oli Alula. Antiikin kauppasatamasta oli siis kulunut jo lähes kaksi vuosituhatta, mutta puiset purjeveneet toivat kauppiaita samalle rannikolle yhä uudelleen.',
+          tiedosto: 'Dhow boat Zanzibar.jpg',
+          lyhyt: 'Samantyyppisiä puuveneitä purjehti rannikolla vielä 1800-luvulla.',
+          selite: 'Puinen purjevene kolmionmuotoisella purjeella on ankkuroitu matalaan, tyyneen rantaveteen; keulassa istuu yksi henkilö, ja taivas on pilvinen.',
+          lahde: 'Anton Zelenov, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Dhow' },
+      ],
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Antiikin suitsukekauppa',
+      johdanto: 'Roomalaisajan purjehtijat tunsivat tämän rannikon suitsukkeen, kanelin ja kilpikonnankuoren satamana. Monsuunituulet toivat kauppa-alukset tänne Egyptistä, Arabiasta ja Intiasta asti.',
+      tehtava: { kysymys: 'Minkä tuotteen Periplus-merenkulkuopas mainitsee erikseen Oponen tärkeimmäksi vientitavaraksi?',
+        vaihtoehdot: ['Kaneli', 'Sahrami', 'Vanilja', 'Inkivääri'], oikea: 0,
+        fakta: 'Antiikin merenkulkuopas Periplus mainitsee, että Oponesta vietiin suuria määriä kanelia sekä laadukasta kilpikonnankuorta.' },
+      nostot: [
+        { otsikko: 'Suitsukepuu kalliolla',
+          teksti: 'Suitsukepuut kasvavat kuivilla, kivikkoisilla rinteillä Somaliassa, Jemenissä ja Omanissa, usein näennäisen mahdottomissa paikoissa paljaan kallion raoissa. Puun kaarnaan tehdään viilto, josta tihkuu maitomaista pihkaa; ilmassa se kovettuu muutamassa päivässä kellertäviksi paakuiksi. Somaliassa kasvaa useita lajeja, joista Boswellia frereana ja Boswellia sacra olivat jo antiikin aikaan arvostetuimpia. Paikalliset nimitykset, kuten yagcar, periytyvät sukupolvien ketjussa kerääjiltä toisille, sillä puiden kerääminen ja pihkan tuottaminen vaativat vuosien kokemuksen eivätkä onnistu kiireellä.',
+          tiedosto: 'Boswellia sacra in Wadi Dowkah (Dhofar).JPG',
+          lyhyt: 'Suitsukepuu tuottaa pihkaa, joka kovettuu kellertäviksi paakuiksi.',
+          selite: 'Kivisellä aavikkotasangolla kasvaa matala, monihaarainen suitsukepuu, jonka harmaat, vääntyneet oksat levittäytyvät sateenvarjomaisesti kirkasta sinistä taivasta vasten.',
+          lahde: 'Mauro Raffaelli, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Boswellia sacra' },
+        { otsikko: 'Yhtä arvokasta kuin hopea',
+          teksti: 'Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.',
+          tiedosto: 'Frankincense IMG 9780.JPG',
+          lyhyt: 'Suitsuke oli antiikissa niin arvokasta kuin hopea painoltaan.',
+          selite: 'Lasimaljassa on kymmeniä kellertäviä ja vaaleanruskeita pihkakimpaleita eli suitsukkeen kyyneleitä, valokuvattuna suoraan ylhäältä puisella pöydällä.',
+          lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Frankincense' },
+        { otsikko: 'Oponen kuuluisin vientitavara',
+          teksti: 'Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.',
+          tiedosto: 'Cinnamomum verum spices.jpg',
+          lyhyt: 'Periplus mainitsee Oponen tärkeimmäksi vientituotteeksi kanelin.',
+          selite: 'Kolme rullalle käärittyä kanelitankoa lepää valkoisella pohjalla, edessä kasa kanelijauhetta ja pieni kasa tummia, pyöreitä mausteenpalasia.',
+          lahde: 'Simon A. Eugster (LivingShadow), Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Cinnamon' },
+        { otsikko: 'Merikilpikonnan arvokas kuori',
+          teksti: 'Oponen toinen mainesatu oli kilpikonnankuori, jota Periplus kehuu alueen parhaaksi koko Punaisenmeren ja Intian valtameren rannikolla. Kuori saatiin merikilpikonnista, erityisesti kauniisti kuvioidusta karettikilpikonnasta, ja siitä valmistettiin Roomassa ja Intiassa kampoja, koruja sekä huonekalujen koristekuvioita. Kuorta kerättiin myös naapurisatamista, mutta Oponen kilpikonnankuorta pidettiin erityisen laadukkaana. Yhdessä kanelin ja suitsukkeen kanssa se teki tästä vaatimattomasta niemestä yhden Intian valtameren kauppaverkoston tärkeimmistä pysähdyspaikoista antiikin aikana.',
+          tiedosto: 'Hawksbill Turtle (Eretmochelys imbricata) (8477697277).jpg',
+          lyhyt: 'Oponen kilpikonnankuorta pidettiin antiikissa erityisen laadukkaana.',
+          selite: 'Kirjavakuorinen merikilpikonna ui koralliriutan liepeillä syvässä sinivihreässä vedessä, etutassut levällään ja pää käännettynä sivulle.',
+          lahde: 'Bernard Dupont, Wikimedia Commons (CC BY-SA 2.0)', wiki: 'Hawksbill sea turtle' },
+      ],
+    },
+  ],
+  cayenne: [
+    {
+      id: 'kaupunki',
+      nimi: 'Cayenne',
+      johdanto:
+        'Cayenne oli isoisän matkavuonna 1873 jo kaksisataavuotias siirtomaakaupunki: sen satamasta lähtivät rangaistussiirtolan laivat sademetsän reunaan, ja sen nimi oli antanut maailmalle tulisimman mausteensa.',
+      nostot: [
+        {
+          otsikko: 'Linnake Cépéroun kukkulalla',
+          teksti:
+            'Ranskalaiset kauppiaat pystyttivät linnoituksen alkuperäiskansan päällikön, Cépéroun, mukaan nimetylle kukkulalle vuonna 1643, ja sen juurelle kasvoi Cayennen kaupunki. Paikka vaihtoi omistajaa yhä uudelleen: Alankomaiden Länsi-Intian kauppakomppania valtasi sen 1658, Ranska palautti otteensa 1664, Englanti pyyhkäisi ohi 1667 ja Portugalikin miehitti kaupungin vuosina 1809–1815. Vasta 1600-luvun lopulla Ranska vakiinnutti asemansa pysyvästi, ja kaupunki sai virallisen Cayenne-nimensä vasta 1777. Isoisän saapuessa 1873 kukkulan linnoitus oli jo lähes kaksisataavuotias muistomerkki lukuisista vallanvaihdoista.',
+          tiedosto: 'Fort Cépérou 01.JPG',
+          lyhyt: 'Cépéroun kukkulan linnoitusraunio, jonka juurelle Cayennen kaupunki kasvoi 1600-luvulla.',
+          selite:
+            'Valokuvassa on Cépéroun kukkulan vihreä töyräs: laella näkyy vanhoja kivi- ja betonirakenteita sekä pieni kattoinen näköalapaikka, ja taustalla kohoaa nykyaikainen radiomasto.',
+          lahde: 'Chatsam, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne',
+        },
+        {
+          otsikko: 'Kivi- ja tiilikatedraali',
+          teksti:
+            'Cayennen vanha Saint-Nicolas-kirkko käytiin ahtaaksi, ja pappi Nicolas Guiller sekä siirtokunnan hallintomies Pierre Bernard Milius päättivät 1823 rakentaa tilalle uuden kirkon. Peruskivi muurattiin 9. elokuuta 1823, ja rakennustyöt kestivät aina vuoteen 1833 asti kivestä ja tiilestä. Kirkko vihittiin käyttöön 1861, mutta se toimi tavallisena seurakuntakirkkona vielä vuosikymmeniä ennen kuin siitä tuli virallisesti katedraali 1934. Isoisän vieraillessa kaupungissa 1873 kivi- ja tiilirakennus oli jo neljäkymmentä vuotta vanha ja koko siirtokunnan suurin kirkkorakennus.',
+          tiedosto: 'Cathédrale Saint-Sauveur de Cayenne 01.JPG',
+          lyhyt: 'Cayennen katedraalin sisätila kaarikattoineen ja värillisine lasimaalauksineen.',
+          selite:
+            'Kuva näyttää kirkkosalin sisältä: keltaiset kaaripilarit reunustavat käytävää, värilliset lasimaalausikkunat päästävät valoa sisään, ja alttari erottuu salin perällä puisten penkkirivien takana.',
+          lahde: 'Chatsam, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne Cathedral',
+        },
+        {
+          otsikko: 'Kuningaspalmujen aukio',
+          teksti:
+            'Kun Cayennea ympäröinyt vanha puolustusmuuri purettiin 1810-luvulla, sen paikalle raivattiin avoin aukio, jonka tarkoitus oli yksinkertaisesti tuulettaa ahdasta kaupunkia. Aukiolle istutettiin komeita kuningaspalmuja, joiden ranskankielisen nimen palmiste mukaan paikka tunnettiin pian nimellä Place des Palmistes. Isoisän matkavuonna 1873 palmut olivat jo kasvaneet kookkaiksi, ja aukiosta oli muodostunut siirtokunnan tärkein kohtaamispaikka: siellä kuljettiin, kaupattiin ja vietettiin iltaa palmujen varjossa kaukana Euroopan kylmyydestä.',
+          tiedosto: 'Cayenne Place des palmistes from NNE 2013.jpg',
+          lyhyt: 'Place des Palmistes -aukio kuningaspalmurivistöineen Cayennen keskustassa.',
+          selite:
+            'Kuva näyttää nurmikkoisen aukion, jota reunustaa korkeiden kuningaspalmujen rivistö; taustalla erottuu punakattoinen siirtomaa-arkkitehtuurin rakennus ja pieni kioski.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cayenne',
+        },
+        {
+          otsikko: 'Mausteen mukaan nimetty kaupunki',
+          teksti:
+            'Sana cayenne juontuu Etelä-Amerikan tupikielten sanasta kyynha, joka tarkoitti yksinkertaisesti chiliä eli capsicum-lajin hedelmää. Englantilainen kasvitieteilijä Nicholas Culpeper käytti ilmausta cayenne pepper jo vuonna 1652 — yli sata vuotta ennen kuin kaupunki sai virallisen Cayenne-nimensä 1777. Todennäköisesti siis kaupunki nimettiin mausteen mukaan eikä toisin päin, vaikka mikään cayennepippureiksi kutsutuista chileistä ei alun perin kasvanut juuri tämän kaupungin liepeillä. Isoisän aikana 1870-luvulla nimen alkuperä oli jo unohtunut, ja maailmalla puhuttiin cayennepippurista ikään kuin se olisi aina kuulunut kaupungille.',
+          tiedosto: 'Jardin botanique Henri Gaussen - Piment de cayenne.jpg',
+          lyhyt: 'Punainen cayennepippuri kasvamassa varrellaan, lehdet ja vihreä varsi näkyvissä.',
+          selite:
+            'Kuvassa on kypsä, punainen cayennepippuri vielä kiinni kasvin vihreässä varressa, ympärillä vihreitä lehtiä.',
+          lahde: 'PierreSelim, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne pepper',
+        },
+        {
+          otsikko: 'Sademetsän portilla',
+          teksti:
+            'Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.',
+          tiedosto: 'Morpho Butterfly (Morpho menelaus) resting at night ... (38899467752).jpg',
+          lyhyt: 'Morpho-perhonen lepäämässä lehdellä yöllä, siivet suljettuina ja ruskea alapinta näkyvissä.',
+          selite:
+            'Kuvassa perhonen lepää lehden päällä siivet pystyssä ja suljettuina; näkyvissä on siipien ruskea alapinta, jossa on useita pyöreitä, silmää muistuttavia täpliä.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Morpho menelaus',
+        },
+        {
+          otsikko: 'Kaupunki meren, joen ja metsän välissä',
+          teksti:
+            'Cayennen ilmasto on trooppinen monsuuni-ilmasto: sadetta kertyy vuodessa keskimäärin noin 3500 millimetriä, ja kuiva kausi elo–lokakuussa on lyhyt poikkeus muuten sateisesta vuodesta. Kaupunki on rakennettu Cayenne-joen suistoon entiselle saarelle, ja meri, joki ja sademetsä puristavat sitä joka suunnalta. Isoisän 1873 saapuessa laivalla kaupunki näyttäytyi ensin kosteana usvana ja vasta sitten kattojen ja tornien siluettina rannikolla — näky, joka toistui lähes samanlaisena vielä vuosikymmeniä myöhemmin ilmakuvissa.',
+          tiedosto: 'Cayenne town (8331178717).jpg',
+          lyhyt: 'Ilmakuva Cayennen rannikkokaupungista sumuisessa, kosteassa ilmassa.',
+          selite:
+            'Ilmakuvassa näkyy Cayennen kaupunki rannikolla usvaisen ilman läpi: matalia rakennuksia ja katuja rannan tuntumassa, meri edessä ja tummempi maasto taustalla.',
+          lahde: 'Spotting973, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cayenne',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Bagne — rangaistussiirtolan verkosto',
+      johdanto:
+        'Cayennen satama oli koko Ranskan rangaistussiirtolajärjestelmän portti: sieltä vangit lähetettiin edelleen joen taakse ja saarille, joista harva enää koskaan palasi kotiin Ranskaan.',
+      tehtava: {
+        kysymys: 'Minä vuonna Napoleon III:n laki teki Ranskan Guayanan rangaistussiirtolasta virallisen?',
+        vaihtoehdot: ['1852', '1854', '1858', '1868'],
+        oikea: 1,
+        fakta:
+          'Napoleon III:n laki annettiin 30. toukokuuta 1854, vaikka ensimmäiset vangit oli lähetetty Cayenneen jo kaksi vuotta aiemmin, 1852.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhannet vapaaehtoiset vangit',
+          teksti:
+            'Napoleon kutsui vuonna 1852 hulkkilaivoilla säilytettyjä vankeja vapaaehtoisiksi uuteen rangaistussiirtolaan Ranskan Guayanaan, ja peräti 3000 vankia ilmoittautui. Kaksi vuotta myöhemmin, 30. toukokuuta 1854, Napoleon III:n laki teki järjestelmästä virallisen: siitä lähtien osa raskaimpiin rikoksiin tuomituista lähetettiin määräajaksi tai koko loppuiäkseen Cayenneen ja sen ympäristöön. Cayennessa sijaitsi kirjaamo eli depot, jonne saapuvat vangit ensin tuotiin rekisteröitäviksi ennen kuin heidät jaettiin eri leireille. Isoisän matkavuonna 1873 järjestelmä oli jo lähes kaksikymmentä vuotta vanha ja tunnettu koko Euroopassa.',
+          tiedosto: 'Cayenne - Site pénitencier - Depot 001.jpg',
+          lyhyt: 'Entinen vankien vastaanottorakennus eli depot Cayennessa, nykyisin asuinkäytössä.',
+          selite:
+            'Kuvassa on matala, valkoiseksi ja oranssiksi maalattu siirtomaa-arkkitehtuurin rakennus punatiilisen aidan takana, kadun varrella pysäköidyn auton vieressä.',
+          lahde: 'Ayshka Sene, Sophie Fuggle, Claire Reddleman, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bagne (penal establishment)',
+        },
+        {
+          otsikko: 'Portti joen rannalla',
+          teksti:
+            "Vuonna 1858 avattiin Maroni-joen rannalle Saint-Laurent-du-Maronin kuljetusleiri, josta tuli koko rangaistussiirtolajärjestelmän keskus. Kaikki Ranskasta laivalla saapuneet vangit tuotiin ensin tähän leiriin, jossa heidät lajiteltiin ja jaettiin edelleen eri työleireille tai ankarampaan vankeuteen, kuten Îles du Salut'n saarille. Leirillä oli yli kymmenen rakennusta: selliosastoja pihan ympärillä, sairaala, keittiöt, pesula ja jopa kirjasto. Isoisän matkan aikaan 1873 leiri oli toiminut jo viisitoista vuotta ja käsitellyt tuhansia vankeja, jotka kaikki kulkivat saman portin kautta joelta sisään.",
+          tiedosto: 'Camp de la Transportation, Saint-Laurent-du-Maroni, French Guiana 001.jpg',
+          lyhyt: 'Valkoinen vartiokoju Saint-Laurent-du-Maronin kuljetusleirin portilla joen rannalla.',
+          selite:
+            'Kuvassa on pieni, valkoiseksi maalattu tiilirakennus kaltereineen ja puisine harjakattoineen joen rannalla, vieressä katulyhty ja taustalla leveä jokimaisema.',
+          lahde: 'Ayshka Sene, Sophie Fuggle, Claire Reddleman, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Prison of St-Laurent-du-Maroni',
+        },
+        {
+          otsikko: 'Pelastuksen saaret',
+          teksti:
+            'Cayennen edustan pienet saaret sai ironisen nimensä Îles du Salut, Pelastuksen saaret, jo 1600-luvulla, kun siirtolaiset pakenivat sinne mannermaan kuumetauteja. Vuodesta 1852 saarista tuli osa rangaistussiirtolaa: sinne perustettiin varastoja, laituri ja asuinrakennuksia, ja sieltä käsin hallittiin muun muassa lähellä sijaitsevaa Paholaissaarta. Île Royale toimi koko järjestelmän hallinnollisena keskuksena saarilla, ja sinne saapuivat sekä hallinnon virkamiehet että pahimmat vangit samalla laiturilla. Postikorttien mukaan saarilta lähetettiin kirjeitä Ranskaan vielä vuosikymmeniä isoisän matkan jälkeenkin.',
+          tiedosto: "Vincent Jermolière - 6 - Iles du Salut - L'ile Royale, Magasins et Débarcadère.jpg",
+          lyhyt: 'Vanha postikortti Île Royalen laiturista ja varastorakennuksista 1900-luvun alusta.',
+          selite:
+            'Sepiavärisessä postikortissa näkyy pieni höyrylaiva rannan edustalla, matalia varastorakennuksia rantaviivalla ja palmuja niiden takana; kortissa on vuoden 1907 postileimoja.',
+          lahde: 'Vincent Jermolière, Wikimedia Commons (Public domain)',
+          wiki: "Devil's Island",
+        },
+        {
+          otsikko: 'Ei paluuta kotiin',
+          teksti:
+            'Rangaistussiirtolan olot olivat tunnetusti raskaat: trooppiset taudit ja uupumus nostivat kuolleisuuden pahimmillaan noin 75 prosenttiin vangeista. Vuodesta 1868 lähtien vapautuneen vangin piti itse maksaa paluumatkansa Ranskaan, mutta koska töitä ja rahaa ei siirtokunnasta juuri löytynyt, harva pystyi koskaan maksamaan lipun kotiin. Moni jäi siksi pysyvästi Ranskan Guayanaan vapautumisensa jälkeenkin. Tänään monet leirien selliosastot ovat luhistumassa, ja sademetsä on hitaasti vallannut takaisin niiden kivi- ja betoniseinät, joiden sisällä satojen tuhansien vankien elämä joskus kului.',
+          tiedosto: 'ILES et BAGNE 046.JPG',
+          lyhyt: 'Sademetsän valtaama, luhistuva selliraunio kalterin ja kasvillisuuden peitossa.',
+          selite:
+            'Kuvassa on kostean, sammaloituneen sellin sisäosa: katossa on rautaristikko, josta kasvaa läpi vehreitä köynnöksiä, ja seinät ovat tummuneet kosteudesta ja ajasta.',
+          lahde: 'davric, Wikimedia Commons (Public domain)',
+          wiki: 'History of French Guiana',
+        },
+      ],
+    },
+  ],
+  orjarannikko: [
+    {
+      id: 'kaupunki',
+      nimi: 'Orjarannikko',
+      johdanto:
+        'Ouidah oli Länsi-Afrikan tärkein orjasatama, jonka kaduilla python-jumalan temppeli ja katolinen basilika seisovat yhä vierekkäin. Kaupunki syntyi maatilasta ja kasvoi Dahomeyn kuningaskunnan tärkeimmäksi ikkunaksi merelle.',
+      nostot: [
+        {
+          otsikko: 'Kolme linnaketta yhden rannan varrella',
+          teksti:
+            "Ouidah'n rannalle nousi 1700-luvulla kolme kilpailevaa eurooppalaista linnaketta: portugalilainen, ranskalainen ja englantilainen, kaikki samaa kauppaa tavoittelemassa. Portugalilaisten São João Baptista de Ajudá valmistui vuonna 1721 kuningas Haffonin lahjoittamalle maalle, ja se pysyi Lissabonin hallinnassa peräti vuoteen 1961 asti, vaikka koko ympäröivä alue oli jo vuosikymmeniä kuulunut ensin Dahomeylle ja sitten Ranskan siirtomaahan. Linnake oli aikanaan yksi orjakaupan solmukohdista; nykyisin sen tiloissa toimii Ouidah'n historiallinen museo, joka kertoo kaupungin menneisyydestä valokuvin ja esinein.",
+          tiedosto: 'Fort Ouidah Benin.JPG',
+          lyhyt: 'Portugalilaisen linnakkeen paikalle rakennettu Ouidah’n historiallinen museo.',
+          selite:
+            "Valokuvassa on Ouidah'n historiallisen museon kaksikerroksinen, vaaleaksi rapattu päärakennus tummine ikkunaluukkuineen ja museon pihalle nouseva leveä ulkoportaikko – rakennus seisoo vanhan portugalilaisen São João Baptista de Ajudá -linnakkeen paikalla.",
+          lahde: 'Tienstwatrankil, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fort of São João Baptista de Ajudá',
+        },
+        {
+          otsikko: 'Käärmejumala joka ei koskaan pure',
+          teksti:
+            "Temple des Pythons on Ouidah'n vodun-uskonnon näkyvin pyhäkkö: sen sisäpihalla asuu kymmeniä kesyjä kuninkaanpythonia, jotka saavat liikkua vapaasti eivätkä ne ole ihmiselle vaarallisia. Käärmeen symboliikka juontuu jumala Dagbesta, jota pidetään tasapainon ja hedelmällisyyden ruumiillistumana. Legendan mukaan pythonit pelastivat kaupungin perustajakuninkaan hänen paetessaan vihollista 1700-luvun alussa, minkä jälkeen käärmeistä tuli koko yhteisölle pyhiä eläimiä. Temppeli sijaitsee vain parinsadan metrin päässä katolisesta basilikasta, ja monet ouidahlaiset harjoittavat molempia uskontoja rinnakkain.",
+          tiedosto: 'Entrée du Temple des Pythons (Ouidah).jpg',
+          lyhyt: 'Temple des Pythonsin portti, josta pyhät käärmeet pääsevät liikkumaan vapaasti.',
+          selite:
+            'Kuvassa on Temple des Pythonsin sinivalkoinen porttirakennelma, jonka kyltissä lukee "Temple des Pythons"; edustalla myydään puuveistoksia ja naamioita, sisäänkäynnin luona istuu vastaanottopöydän ääressä temppelin työntekijä ja pihalla on pysäköity moottoripyörä.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kuningas joka muuttui puuksi',
+          teksti:
+            "Ouidah'n keskustassa säilynyt Kpasséen pyhä metsä on jäänne alkuperäisestä sademetsästä, joka kerran peitti koko rannikkoseudun. Legendan mukaan kaupungin perustajakuningas Kpasse pakeni tänne vihollisiaan ja muuttui iäkkääksi iroko-puuksi välttyäkseen kiinniottamiselta – puu seisoo yhä metsän keskellä ja sitä pidetään pyhänä. Metsän varjoisilla poluilla on kymmeniä patsaita, jotka esittävät vodun-uskonnon jumaluuksia ja esi-isiä, ja paikka toimii yhä sekä uskonnollisena pyhäkkönä että avoimena ulkoilmamuseona kaupungin vieraille.",
+          tiedosto: 'Sacred Forest Ouidah Benin Jan 2018.jpg',
+          lyhyt: 'Kpasséen pyhä metsä, jonne legendan mukaan kuningas Kpasse muuttui puuksi.',
+          selite:
+            'Kuva näyttää pyhän metsän varjoisan polun, joka johtaa ison, tukijuurisen puun juurelle; puun vieressä istuu pieni patsas ja maassa on kaatuneita runkoja – näkymä metsästä, joka on säilynyt keskellä nykyistä Ouidah’ta.',
+          lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Atlantin ranta, jonne kaikki tiet johtivat',
+          teksti:
+            "Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.",
+          tiedosto: 'Plage de Ouidah.jpg',
+          lyhyt: 'Ouidah’n hiekkaranta, jonne Atlantin aallot rantautuvat suoraan avomereltä.',
+          selite:
+            'Kuvassa on Ouidah’n autio hiekkaranta: etualalla leviää vaalea hiekkakenttä, keskellä seisoo pieni valkoinen, olkikattoinen maja lipputankoineen, ja taustalla siintää turkoosinsininen Atlantin valtameri kirkkaan taivaan alla.',
+          lahde: 'jbdodane, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kirkkotorni käärmetemppelin naapurissa',
+          teksti:
+            "Vain parinsadan metrin päässä Temple des Pythonsista kohoaa Ouidah'n katolinen basilika, Notre-Dame de l'Immaculée Conception, joka valmistui 1900-luvun alussa ranskalaisten lähetyssaarnaajien aloitteesta. Kirkon ja käärmetemppelin läheisyys ei ole sattumaa: ranskalaiset lähetyssaarnaajat tietoisesti rakensivat kirkkonsa vanhan uskonnon keskuksen viereen. Silti kilpailu jäi lopulta näennäiseksi, sillä suuri osa asukkaista omaksui molemmat uskonnot rinnakkain sen sijaan, että toinen olisi syrjäyttänyt toisen – ilmiö joka näkyy kaupunkikuvassa edelleen.",
+          tiedosto: 'Basilica of Ouidah.jpg',
+          lyhyt: 'Ouidah’n harmaa basilika seisoo vain parinsadan metrin päässä python-temppelistä.',
+          selite:
+            'Kuvassa on Ouidah’n basilikan harmaa, uusgoottilainen julkisivu: kapea, hammastettu kellotorni kohoaa keskellä, sen alla kaksi suippokaarista ikkunaa, ja tornin huipulla on pieni Neitsyt Marian patsas.',
+          lahde: 'MVN, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ouidah',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Orjakauppa',
+      johdanto:
+        'Ouidah oli Länsi-Afrikan vilkkain orjasatama Dahomeyn kuningaskunnan vallan alla; sen kautta kuljetettiin Atlantin yli satojatuhansia ihmisiä. Isoisän matkavuonna 1873 laillinen kauppa oli juuri loppunut, mutta jäljet näkyivät yhä.',
+      tehtava: {
+        kysymys: "Minä vuonna Ouidah'sta lähti viimeinen tunnettu orjalaiva kohti Amerikkaa?",
+        vaihtoehdot: ['1807', '1820', '1860', '1873'],
+        oikea: 2,
+        fakta:
+          "Clotilda-niminen laiva lähti Ouidah'sta salaa vuonna 1860, yli 50 vuotta sen jälkeen kun Britannia oli kieltänyt orjakaupan omilta alamaisiltaan.",
+      },
+      nostot: [
+        {
+          otsikko: 'Unohduksen portti',
+          teksti:
+            "Ouidah'n rannalta lähti vuosisatojen aikana laivalasteittain ihmisiä kohti Amerikkaa, ja 1990-luvulla rannalle pystytettiin Unohduksen portti muistuttamaan siitä, mitä täällä tapahtui. Monumentti on nykyaikainen, mutta se merkitsee todellisen reitin päätepistettä: noin neljän kilometrin mittaista Orjien tietä, jota pitkin vangit marssitettiin kahlittuina kaupungin torilta rantaan. Reitin varrella oli pysähdyspaikkoja, joissa vankeja pakotettiin kiertämään pyhää puuta muistin unohtamiseksi – uskottiin, että kierros saisi heidät unohtamaan kotinsa eivätkä he siksi enää yrittäisi paeta tai kostaa.",
+          tiedosto: 'La porte du non retour à ouidah.jpg',
+          lyhyt: 'Unohduksen portti Ouidah’n rannalla muistuttaa orjakaupan uhreista.',
+          selite:
+            'Yöllä kuvattu valokuva näyttää Unohduksen portin alhaalta ylöspäin: valaistu kaari nousee pimeää taivasta vasten, ja portin yläreunassa kulkee pronssinen reliefikuva kahlituista ihmishahmoista jonossa.',
+          lahde: 'Antoine MIASSI, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Door of No Return, Ouidah',
+        },
+        {
+          otsikko: 'Chachan tori',
+          teksti:
+            "Torilla, jota kutsuttiin Chachan toriksi, käytiin Ouidah'n orjakaupan huutokauppoja. Nimi tulee Francisco Félix de Sousasta, brasilialais-portugalilaisesta kauppiaasta, jonka lempinimi oli \"Chacha\": kuningas Ghezo nimitti hänet 1820-luvulla Dahomeyn viralliseksi orjakaupan välittäjäksi ja myönsi hänelle käytännössä yksinoikeuden koko sataman kauppaan. De Sousasta tuli yksi aikansa rikkaimmista miehistä Länsi-Afrikassa, ja hänen jälkeläisensä hallitsivat Ouidah'n kauppaa vielä vuosikymmeniä hänen kuolemansa jälkeen 1849.",
+          tiedosto: 'Marché des esclaves.jpg',
+          lyhyt: 'Chachan tori, jossa orjakaupan hinnat neuvoteltiin ja ihmiset huutokaupattiin.',
+          selite:
+            'Kuvassa on laatoitettu aukio, jonka poikki kulkee rivi tummia, palloa muistuttavia pronssipylväitä; taustalla näkyy palmuja ja matalia rakennuksia kirkkaassa päivänvalossa.',
+          lahde: 'Gbehlon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Francisco Félix de Sousa',
+        },
+        {
+          otsikko: 'Dahomeyn naissoturit',
+          teksti:
+            'Dahomeyn kuninkaan armeijaan kuului ainutlaatuinen naissotilaiden joukko-osasto, jota eurooppalaiset kutsuivat amatsoneiksi ja paikalliset agojieksi. Kuningas Ghezo ja hänen poikansa Glele tekivät 1800-luvulla agojiesta vakinaisen, jopa 6 000 naisen sotajoukon, joka vastasi kolmasosasta koko armeijaa. Glele hallitsi vuosina 1858–1889, joten isoisän matkavuonna 1873 agojiet olivat yhä aktiivinen ja pelätty voima, joka piti yllä kuninkaan valtaa myös Ouidah’n satamassa ja sen kauppareiteillä. Eurooppalaiset vierailijat pitivät heitä toistuvasti kurinalaisempina ja rohkeampina kuin miespuolisia sotilaita.',
+          tiedosto: 'Dahomey Amazons 1793.png',
+          lyhyt: 'Dahomeyn hovin kulkue lippuineen ja rumpuineen 1790-luvun kaiverruksessa.',
+          selite:
+            'Mustavalkoinen kaiverrus 1790-luvulta näyttää marssivan kulkueen, joka kantaa suuria pyöreitä päivänvarjoja, isoa rumpua ja liehuvia lippuja kohti muurattua kylää palmujen keskellä – yksi varhaisimmista painetuista kuvista Dahomeyn hovin joukoista.',
+          lahde: 'Archibald Dalziel, Wikimedia Commons (Public domain)',
+          wiki: 'Dahomey Amazons',
+        },
+        {
+          otsikko: 'Zoungbodjin hiljainen paikka',
+          teksti:
+            'Kaikki orjiksi otetut eivät selvinneet edes rannalle asti. Zoungbodjin kylän liepeillä sijaitsee joukkohauta, johon haudattiin marssin aikana kuolleet tai liian heikoiksi todetut vangit, jotka kauppiaat hylkäsivät ennen laivaan nousua. Monille vangeille pakotettiin suuhun puinen kapula, joka esti puhumisen ja syömisen sekä teki itsemurhan kielen nielaisemalla mahdottomaksi. Paikka on nykyisin rauhoitettu muistoalue, jolla kylttien mukaan vieraita pyydetään pitämään hiljaisuutta kunnioituksesta uhreja kohtaan.',
+          tiedosto: 'Mémorial de Zoungbodji (1).jpg',
+          lyhyt: 'Zoungbodjin muistopatsas esittää suukapulaan pakotettua vankia.',
+          selite:
+            'Kuvassa on tummanvihreä pronssipatsas polvistuneesta miehestä, jonka suuhun on kiinnitetty puinen kapula ja jonka lantiolla on sininen vaate; taustalla on muuri, jossa on kyltti "Ouidah 92" ja teksti muistopaikan hiljaisuudesta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kielletty mutta jatkuva kauppa',
+          teksti:
+            "Britannia kielsi orjakaupan omilta alamaisiltaan jo vuonna 1807 ja alkoi partioida Länsi-Afrikan rannikkoa laivastollaan pysäyttääkseen muidenkin maiden orjalaivoja. Silti salakuljetus jatkui Ouidah'sta vuosikymmeniä kiellon jälkeen, sillä kysyntä Amerikan mantereella ei loppunut lakien myötä. Viimeinen tunnettu orjalaiva, Clotilda, lähti Ouidah'sta vuonna 1860 ja toi yli sata ihmistä salaa Alabamaan – yli 50 vuotta Britannian kiellon jälkeen. Isoisän matkavuonna 1873 tuo viimeinen matka oli vain 13 vuoden takainen muisto, ja monet sen selviytyjät elivät vielä Amerikassa.",
+          tiedosto: 'Brookes slave ship, British Library.jpg',
+          lyhyt: 'Piirros 1700-luvun orjalaivan ahtaasta ruumasta, jollaisia myös Ouidah’sta lähti.',
+          selite:
+            'Vanha englanninkielinen piirros "Description of a Slave Ship" näyttää laivan pohjapiirroksena ja poikkileikkauksina: kannen alle on merkitty riveittäin makaavia ihmishahmoja ahtaasti vierekkäin koko ruuman pituudelta.',
+          lahde: 'James Phillips, Wikimedia Commons (Public domain)',
+          wiki: 'Clotilda (slave ship)',
+        },
+      ],
+    },
+  ],
+  bahrelghazal: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bahr el Ghazal',
+      johdanto:
+        'Bahr el Ghazal, arabiaksi "gasellien meri", on Etelä-Sudanin luoteisosan suoinen ja rautakivitasankoinen alue. Isoisän matkavuonna 1873 se oli Samuel Bakerin orjakaupan vastaisen sotaretken näyttämö ja hänen kautensa päätepiste.',
+      nostot: [
+        {
+          otsikko: 'Gasellien meri',
+          teksti:
+            'Bahr el Ghazal tarkoittaa arabiaksi "gasellien meri", vaikka kyseessä on joki eikä meri: se kokoaa yhteen useita pienempiä jokia, kuten Jur- ja Lol-joen, ja laskee lopulta Bahr al Jabaliin Lake Non luona, mistä yhdistynyt vesi jatkaa Valkoisena Niilinä pohjoiseen. Ympäröivä yli 200 000 neliökilometrin alue on tasaista rautakivitasankoa, joka tulva-aikaan muuttuu laajaksi suoksi — samaa vesistöä, jota paikalliset dinkakalastajat ovat hyödyntäneet vuosisatoja. Vielä 1950-luvulla Lol-joen matalassa vedessä saattoi nähdä kerralla satoja kanootteja, kun kokonaiset kylät kokoontuivat yhteiskalastukseen.',
+          tiedosto:
+            'Photo View of the Lol River in Bahr al-Ghazal, with hundreds of boats belonging to Dinka fishermen 1958 - Touring Club Italiano BBT 127.jpg',
+          lyhyt: 'Satoja dinkakalastajien kanootteja Lol-joella vuonna 1958.',
+          selite:
+            'Mustavalkoinen valokuva vuodelta 1958 näyttää Lol-joen matalassa vedessä kymmeniä kanootteja ja kalastajia keihäineen, rannalla katselijoita hiekkarannalla.',
+          lahde: 'Touring Club Italiano -arkisto, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bahr el Ghazal River',
+        },
+        {
+          otsikko: 'Ilmakuva suosta ja pyöreistä kylistä',
+          teksti:
+            'Bahr el Ghazal laskee lopulta Sudd-suohon, joka tulva-aikaan kasvaa yli 130 000 neliökilometrin laajuiseksi ja nielee haihdunnassaan noin 55 prosenttia siihen virtaavasta vedestä — yksi syy, miksi Niilin lähteiden etsijät joutuivat vuosisatojen ajan kiertämään sen maitse. Jo keisari Neron lähettämät roomalaissotilaat pysähtyivät suohon vuonna 61 jaa. eivätkä päässeet sitä pidemmälle Afrikan sisäosiin. Sveitsiläisen lento-uranuurtajan Walter Mittelholzerin vuosien 1929–1930 Kilimanjaro-lennolla otettu ilmakuva paljastaa, miltä seudun asutus näyttää ylhäältä: pyöreät majat ja karjatarhat ryhmittyvät ympyröiksi joen mutkan ja lammikon tuntumaan.',
+          tiedosto:
+            'ETH-BIB-Sudd, das grüne Pflanzen- und Vogelparadies am Nil-Kilimanjaroflug 1929-30-LBS MH02-07-0018.tif',
+          lyhyt: 'Ilmakuva pyöreistä kyläasutuksista joen mutkan lähellä vuodelta 1929.',
+          selite:
+            'Ilmakuva näyttää pyöreät majaryhmät ja karjatarhat, jotka kiertyvät ympyröiksi joen mutkan ja pienen lammikon ympärille avoimessa savannimaisemassa.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (Public domain)',
+          wiki: 'Sudd',
+        },
+        {
+          otsikko: 'Baker-pasha ja orjakaupan tukahduttaminen',
+          teksti:
+            'Khediivi Ismail nimitti brittiläisen tutkimusmatkailijan Samuel Bakerin huhtikuussa 1869 vasta perustetun Ekvatorian provinssin kenraalikuvernööriksi pashan arvolla: tehtävänä oli ulottaa Egyptin valta Gondokoron eteläpuolelle ja tukahduttaa orjakauppa Ylä-Niilin ja Bahr el Ghazalin alueella. Baker johti noin 1 700 egyptiläisen sotilaan joukkoa — moni heistä oli vapautettu vankilasta armeijaan — höyrylaivoineen ja purjealuksineen. Huhtikuussa 1870 hänen partionsa pysäytti orjaveneen ja vapautti siitä 150 orjaa, yhden harvoista konkreettisista voitoista taistelussa, jota paikalliset kauppiasruhtinaat vastustivat aseellisesti joka käänteessä.',
+          tiedosto: 'Sir Samuel White Baker. Photograph by E. Kelley. Wellcome V0025986.jpg',
+          lyhyt: 'Samuel Baker, Bahr el Ghazalin alueen egyptiläishallinnon rakentaja.',
+          selite:
+            'Muotokuvassa parrakas Samuel Baker istuu valokuvaajan ateljeessa 1800-luvun tapaan pukeutuneena, ja kuvan alle on kirjoitettu hänen oma nimikirjoituksensa "Sam W Baker".',
+          lahde: 'E. Kelley, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Samuel Baker',
+        },
+        {
+          otsikko: 'Bakerin kausi päättyy, Gordon jatkaa',
+          teksti:
+            'Bakerin nelivuotinen kausi Ekvatorian kenraalikuvernöörinä päättyi elokuussa 1873 — juuri samana vuonna, kun isoisä kirjoitti matkapäiväkirjaansa. Hän palasi Kairoon jättäen työnsä jatkajaksi eversti Charles George Gordonin, joka omaksui saman kaksoistehtävän: hallinnon vakiinnuttamisen ja orjakaupan kitkemisen. Bahr el Ghazalin sisäosissa todellista valtaa piti norsunluu- ja orjakauppias, jonka linnoitetut zariba-kauppa-asemat hallitsivat aluetta niin tehokkaasti, että khediivi tunnusti hänet virallisesti alueen kuvernööriksi samana vuonna 1873 — Egypti ei niinkään voittanut kauppiasruhtinaita kuin teki heistä virkamiehiä.',
+          tiedosto: 'General C. G. Gordon.jpg',
+          lyhyt: 'Kenraali Charles Gordon, Bakerin seuraaja Ekvatorian kuvernöörinä.',
+          selite:
+            'Kaiverruksessa harmaapartainen Gordon seisoo tummaan viittaan kietoutuneena katolla kiikari ja kirja kädessään, taustalla Britannian lippu ja palmu.',
+          lahde:
+            'Lowes Cato Dickinson / Samuel Cousins / Thomas Lewis Atkinson, Wikimedia Commons (Public domain)',
+          wiki: 'Charles George Gordon',
+        },
+        {
+          otsikko: 'Jur-joki ja Waun kaupunki',
+          teksti:
+            'Yksi Bahr el Ghazalin vesistön tärkeimmistä sivujoista on Jur-joki, jonka rannalle syntyi alueen suurin asutuskeskus, nykyinen Wau. Samuel Bakerin ja hänen seuraajiensa aikaan 1870-luvulla joen varsi oli täynnä kauppiaiden zaribaa eli piikkipensasaitauksia, joihin norsunluuta ja muita kauppatavaroita koottiin ennen kuljetusta pohjoiseen kohti Niiliä. Jur virtaa edelleen samaa reittiä kohti Bahr el Ghazalia ja lopulta Valkoista Niiliä, ja sen rannat ovat yhä paikallisten tärkein vesilähde: samalla joella, jonka varrella orjakauppiaiden aitaukset kerran seisoivat, pestään nykyään pyykkiä ja kastellaan peltoja.',
+          tiedosto: 'River Jur in Wau city, South Sudan.jpg',
+          lyhyt: 'Jur-joki virtaa Waun kaupungin läpi Bahr el Ghazalissa.',
+          selite:
+            'Valokuvassa Jur-joki virtaa vihreiden rantapensaiden välissä, ylittävän betonisillan alla, ja vedessä lojuu iso kaatunut puunrunko.',
+          lahde: 'Rejoice Martin Kubaya, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wau, South Sudan',
+        },
+        {
+          otsikko: 'Elämä rautakivitasangolla',
+          teksti:
+            'Bahr el Ghazalin maisema vaihtelee sään mukaan jyrkästi: sadekaudella suuret alueet muuttuvat läpipääsemättömäksi suoksi, kun taas kuivana kautena paljastuu kovaa, punaista rautakivimaata. Kylät rakennetaan aina tulvarajan yläpuolelle mataloille harjanteille, ja tyypillinen talo on pyöreä, savesta muurattu ja ruokohatulla katettu tukul-maja, jonka vieressä kasvaa maissia, okraa ja maapähkinää. Sama perusratkaisu — pyöreä maja korkealla kohdalla, viljelyspalsta vieressä — on pitänyt alueen asukkaat kuivalla jalalla jo kauan ennen kuin kukaan piirsi siitä karttaa Bakerin retkikunnalle.',
+          tiedosto: 'Traditional dinka homestead.jpg',
+          lyhyt: 'Perinteinen dinkatalo maissipellon keskellä Bahr el Ghazalissa.',
+          selite:
+            'Valokuvassa kaksi lasta seisoo maissipellon reunalla pyöreän, ruokokattoisen savimajan edessä; taustalla näkyy toisen samanlaisen majan kattoa.',
+          lahde: 'Jayyeass, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dinka people',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Karjapaimentolaisten maailma',
+      johdanto:
+        'Bahr el Ghazalin dinka- ja nuerpaimentolaisille karja ei ole pelkkä elinkeino vaan koko maailmankuvan keskus: sen ympärille rakentuvat nimet, avioliitot ja uskonto, eikä yhtäkään nautaa teurasteta koskaan pelkän huvin vuoksi.',
+      tehtava: {
+        kysymys: 'Minkä värinen helmikorsetti kertoi dinkamiehen olevan valmis avioliittoon?',
+        vaihtoehdot: ['Punainen', 'Keltainen', 'Sininen', 'Valkoinen'],
+        oikea: 1,
+        fakta:
+          'Keltainen malual-korsetti kertoi miehen olevan yli 30-vuotias ja avioliittoon valmis, kun taas punainen merkitsi 15–25-vuotiasta nuorukaista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Karja identiteetin ytimessä',
+          teksti:
+            'Antropologi E. E. Evans-Pritchard tiivisti nuerien suhteen karjaan yhdellä lauseella: nauta on lanka, joka kulkee koko yhteisön kielen, uskonnon ja politiikan läpi. Käytännössä mikään osa eläimestä ei mene hukkaan: nahasta tehdään vaatteita ja kilpiä, ja poltettu lehmänlanta toimii sekä hammastahnana että hyönteiskarkotteena. Nautaa ei koskaan teurasteta pelkän lihan vuoksi — uskomuksen mukaan väärin tapetun härän henki voi kirota tekijänsä — vaan vain vanhat tai kuolevat eläimet syödään, ja silloinkin seremonian ja laulujen saattelemana.',
+          tiedosto: 'Cattle of the Dinka people, Juba, South Sudan - 20101230-04.jpg',
+          lyhyt: 'Pitkäsarvista dinkakarjaa laitumella lähellä Jubaa.',
+          selite:
+            'Kuvassa tummaa ja valkopilkullista karjaa, joiden pitkät, kaartuvat sarvet erottuvat selvästi vihreää kasvillisuutta vasten.',
+          lahde: 'Ranjit Bhaskar / Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Nuer people',
+        },
+        {
+          otsikko: 'Lehmänvärinimi ja aikuistuminen',
+          teksti:
+            'Sekä dinka- että nuerpojat siirtyvät aikuisuuteen initiaatioriitissä, jossa otsaan viilletään teräväkärkisellä esineellä pysyvät arvet — nuereilla tavallisesti kuusi vaakasuoraa viiltoa, dinkoilla useita viiltoja kulmakarvojen yläpuolelle. Seremonian jälkeen nuorukainen saa toisen, niin kutsutun lehmänvärinimen, joka on peräisin hänen perheensä karjasta: nimi voi viitata häränsä turkin väriin, sarvien muotoon tai pilkkujen kuvioon. Nimi ei ole pelkkä lempinimi, vaan se seuraa miestä lopun elämää yhtä vakavasti kuin syntymänimi.',
+          tiedosto: 'Dinka Bull, Wau. Sudan - panoramio.jpg',
+          lyhyt: 'Tällaisen härän väritys voi antaa dinkapojalle hänen aikuisnimensä.',
+          selite:
+            'Kuvassa tumma härkä, jonka valkoiset, korkealle kaartuvat sarvet nousevat pystyyn; taustalla toinen härkä ja tiilirakennus.',
+          lahde: 'Michael Walsh, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Karja morsiamen hintana',
+          teksti:
+            'Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.',
+          tiedosto: 'Cattle of the Dinka people, Juba, South Sudan - 20101230-02.jpg',
+          lyhyt: 'Dinkakarjaa lähikuvassa — samanlaisilla eläimillä maksettiin morsiamen hinta.',
+          selite:
+            'Lähikuvassa mustan ja valkopilkullisen härän päät sarvineen, taustalla kolmas eläin ja punaruskea hiekkatie.',
+          lahde: 'Ranjit Bhaskar / Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Helminauhakorsetti joka kertoi iän',
+          teksti:
+            'Nuoret dinkamiehet kantoivat tiukkaa, rautalangalla ja tuhansilla lasihelmillä koristeltua korsettia nimeltä malual lähes yötä päivää. Korsetin väri kertoi katsojalle heti kantajan iän ja aseman: punainen merkitsi 15–25-vuotiasta nuorukaista, keltainen yli 30-vuotiasta ja avioliittoon valmista miestä. Korkea, selässä kohoava piikki puolestaan ilmaisi suvun vaurautta, sillä tuontihelmet ja -lanka olivat kalliita. Kun mies vihdoin meni naimisiin, hän riisui korsetin lopullisesti, siveli ihonsa tuhalla ja pukeutui sen sijaan venetsialaisista kauppahelmistä tehtyihin nauhoihin.',
+          tiedosto:
+            "Man's corset, Dinka people, South Sudan, 20th century, beads, fiber, wire - Brooklyn Museum - Brooklyn, NY - DSC08550.JPG",
+          lyhyt: 'Keltainen helmikorsetti kertoi kantajansa olevan naimisiinmenoiässä.',
+          selite:
+            'Museonäyttelyssä valokuvattu keltainen, turkoosein, punaisin ja tummansinisin raidoin koristeltu helmikorsetti riippuu esittelytelineessä.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Keihäät jotka puolustivat karjaa',
+          teksti:
+            'Karjan suojaaminen niin villieläimiltä kuin karjarosvoilta vaati aseita, ja dinka- ja nuerseppien takomat rautakeihäät olivat perinteisen paimentolaiskulttuurin tärkein työkalu heti karjakepin jälkeen. Keihäänkärjet taottiin eri käyttötarkoituksiin: leveä lehtimäinen terä sopi lähitaisteluun, kun taas piikikäs, sahalaitainen kärki oli tarkoitettu kalastukseen tai haavoittuneen saaliin varmistamiseen, ettei se pääsisi irtoamaan. Waun kaupungin ympäristöstä on säilynyt useita tällaisia 1900-luvun keihäänkärkiä, jotka todistavat saman sepäntaidon jatkuneen sukupolvesta toiseen.',
+          tiedosto: 'Sudan Dinka Spearheads.jpg',
+          lyhyt: 'Kolme dinkojen takomaa rautaista keihäänkärkeä Wausta.',
+          selite:
+            'Kuvassa kolme erilaista rautaista keihäänkärkeä puuvarsineen: ylimpänä sahalaitainen, keskellä leveä lehtimäinen ja alimmaisena väkäsellinen kärki.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dinka people',
+        },
+      ],
+    },
+  ],
+  sepik: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sepik',
+      johdanto:
+        'Sepik on Uuden-Guinean pisin joki: yli tuhat kilometriä sademetsää ja hylättyjä jokimutkia. Isoisän 1873 matkassa kaikuu tuore huhu miehestä, joka asui rannikolla aseettomana jo kaksi vuotta aiemmin.',
+      nostot: [
+        {
+          otsikko: 'Mies joka tuli kaksi vuotta aiemmin',
+          teksti:
+            'Syyskuussa 1871 venäläinen tiedemies Nikolai Miklouho-Maclay nousi maihin Uuden-Guinean koillisrannikolla, lähellä Sepik-joen suistoa – vain kaksi vuotta ennen isoisän omaa matkaa. Hän rakensi majan Astrolabe-lahden rannalle ja asui pariisa-kansan keskuudessa yli vuoden ilman aseita ja tulkkia, ensimmäisenä eurooppalaisena joka teki niin rauhanomaisesti. Miklouho-Maclay oppi paikallisen kielen, piirsi muistiin kasveja ja ihmisiä ja nimesi vuoria karttoihinsa. Hänen tarkat muistiinpanonsa olivat aikansa harvoja luotettavia kuvauksia koko alueesta.',
+          tiedosto: 'Миклухо Маклай 1870е.JPG',
+          lyhyt: 'Nikolai Miklouho-Maclay asui Uuden-Guinean rannikolla ilman aseita vuodesta 1871.',
+          selite:
+            'Vanha painokuva Miklouho-Maclaysta 1870-luvulta: tuuhea kihara tukka, täysparta ja tumma takki, sellaisena kuin hänet julkaistiin venäläisessä Vokrug sveta -aikakauslehdessä.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+          wiki: 'Nicholas Miklouho-Maclay',
+        },
+        {
+          otsikko: 'Kylä joka seisoo vedessä',
+          teksti:
+            'Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.',
+          tiedosto: 'Sepik river IMG 3665.jpg',
+          lyhyt: 'Kambaraman kylän katolinen kirkko seisoo paalujen varassa keskellä Sepik-jokea.',
+          selite:
+            'Valokuvassa Kambaraman kylän St Josephin katolinen kirkko ja sen ympärillä olevat olkikattoiset talot seisovat korkeiden puupaalujen varassa suoraan joen pinnan yläpuolella.',
+          lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Bensatynnyrit Pagwin rannassa',
+          teksti:
+            'Pagwin kylä on koko Keski-Sepikin tärkein portti: sinne asti pääsee vielä maanteitse, mutta siitä eteenpäin kaikki liikkuu vain vettä pitkin. Miehet kantavat rannalla tynnyreitä, joissa on polttoainetta moottorikanooteille – ilman niitä kymmenet joen varren kylät jäisivät käytännössä eristyksiin. Alueella ei ole juuri lainkaan tieverkkoa, joten joki toimii yhtä aikaa valtatienä ja markkinapaikkana. Kanootit kuljettavat sagojauhoa, kalaa ja veistoksia myyntiin ja tuovat tilalle polttoainetta, suolaa ja rakennustarvikkeita kyliin, joihin mikään muu reitti ei johda.',
+          tiedosto: 'Sepik 01835.jpg',
+          lyhyt: 'Miehet purkavat polttoainetynnyreitä Pagwin rantaan Keski-Sepikillä.',
+          selite:
+            'Valokuvassa miehet kantavat ja purkavat isoja polttoainetynnyreitä Pagwin kylän rannassa – tynnyrit on tarkoitettu joella liikkuvien moottorikanoottien polttoaineeksi.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Lasti joen selässä',
+          teksti:
+            'Sepikin varrella ei ole juuri lainkaan teitä, joten suurin osa tavarasta ja ihmisistä liikkuu edelleen veneillä ja pienillä rahtilaivoilla. Tässä alus ylittää joen keskiosan matkustajineen, ympärillä rehottaa sokeriruokoa ja muuta rantakasvillisuutta. Joki on leveä ja ruskea, virtaus tuntuu hitaalta mutta on sadekaudella voimakas: vedenpinta voi nousta useita metrejä ja tulva peittää laajoja alueita viikoiksi. Ilman jokea koko keskiosan talous – kalastus, sagontuotanto ja käsityökauppa – pysähtyisi käytännössä kokonaan, sillä mikään muu kulkuväylä ei korvaa sitä.',
+          tiedosto: 'Sepik 0266.jpg',
+          lyhyt: 'Pieni rahtialus ylittää Sepik-jokea matkustajineen keskiosan lakeudella.',
+          selite:
+            'Valokuvassa matkustajia kuljettava pieni rahtialus ylittää leveän, ruskean Sepik-joen; rannoilla kasvaa tiheää sokeriruokoa ja muuta rehevää kasvillisuutta.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Arkea joen rannalla',
+          teksti:
+            'Sepikin varren kylät rakennetaan yleensä tulva-alueen paaluille, ja suuri osa arjesta tapahtuu silti rannalla: pyykinpesu, kalastus, kanoottien korjaus ja lasten leikit. Tässä kuvassa kyläläiset kokoontuvat rantaan aivan tavallisena päivänä – näky joka on toistunut sukupolvesta toiseen jo kauan ennen kuin kukaan eurooppalainen näki jokea. Ravinto tulee pääosin sagopalmun ydinjauhosta ja joen kalasta, ei pelloilta, sillä tulva-alue soveltuu huonosti viljelyyn. Joen varren sadan kylän asukkaat puhuvat kymmeniä eri kieliä, vaikka asuvat vain muutaman kanoottimatkan päässä toisistaan.',
+          tiedosto: 'Sepik 0057.jpg',
+          lyhyt: 'Kyläläisiä Sepik-joen rannalla tavallisen arkipäivän askareissa.',
+          selite:
+            'Valokuvassa kyläläisiä on kokoontunut Sepik-joen hiekkarannalle arkisten askareiden pariin, taustalla joen tyyni vedenpinta ja rantakasvillisuutta.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+      ],
+    },
+    {
+      id: 'henkihuoneet',
+      nimi: 'Henkien talot',
+      johdanto:
+        'Sepikin miesten uskonnollinen elämä keskittyy henkien taloon eli haus tambaraniin, jonne vain vihityt pääsevät. Sen katossa asuvat esi-isät, ja pojista tulee siellä miehiä krokotiilin arpien kautta.',
+      tehtava: {
+        kysymys: 'Mitä Sepikin nuorten miesten rintaan ja selkään viillettävät arvet symboloivat?',
+        vaihtoehdot: [
+          'Sotilasarvoa',
+          'Krokotiilin nielemää ja uudestisyntymää',
+          'Naimisiinmenokelpoisuutta',
+          'Metsästystaitoja',
+        ],
+        oikea: 1,
+        fakta:
+          'Arvet jäljittelevät krokotiilin nahkaa ja hampaiden jälkiä, sillä iatmulit uskovat esi-isiensä polveutuvan krokotiilista ja initioitavan symbolisesti sen nielemäksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo jossa henget asuvat',
+          teksti:
+            'Haus tambaran on tok pisin -kielinen nimitys henkien talolle, Itä-Sepikin kylien yhteiselle rakennukselle, jossa asuvat esi-isien henget ja jota käytetään kokouksiin, rituaaleihin ja poikien initiaatioon. Rakennus on lähes yksinomaan miesten aluetta: naiset osallistuvat vain juhla-aterioiden valmistajina ja ulkopuolisina katsojina. Katto kohoaa jyrkkänä terävään huippuun ja laskeutuu takaosassa lähes maahan asti – muoto joka toistuu jopa Papua-Uuden-Guinean parlamenttitalon arkkitehtuurissa. Kristinuskon leviäminen on tehnyt perinteisistä henkien taloista harvinaisempia kuin ennen.',
+          tiedosto: 'Haus Tambaran, Apangai.jpg',
+          lyhyt: 'Korkea, jyrkkäkattoinen haus tambaran eli henkien talo Apangain kylässä.',
+          selite:
+            'Valokuvassa jyrkkäharjainen, olkikattoinen haus tambaran kohoaa palmujen keskellä; rakennuksen etuseinässä on värikäs maalattu kuvio ja sen juurella seisoo kaksi ihmistä katsomassa taloa.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Esi-isien kasvot päädyssä',
+          teksti:
+            'Haus tambaranin räystäänalustaa hallitsee suuri, maalattu pääty, joka on täynnä rivi riviltä toistuvia tyylitellyistä kasvoista – esi-isien ja suojelevien henkien, kuten päähengeksi kutsutun Nggwalin, kuvia. Kylän taitavimmat miehet maalaavat kuvion luonnonväreillä, punamullalla, keltamullalla ja mustalla noella, ja kuvio uusitaan säännöllisin väliajoin. Henkien uskotaan asuvan rakennuksessa ja ilmoittavan läsnäolostaan sisältä kuuluvina ääninä, joita naiset ja initioimattomat eivät saa nähdä syntyvän. Maalaus ei siis ole pelkkää koristelua vaan osa rakennuksen pyhyyttä.',
+          tiedosto: 'Haus Tambaran, Apangai - Giebel.jpg',
+          lyhyt: 'Haus tambaranin päätyä koristavat rivit maalattuja esi-isien kasvoja.',
+          selite:
+            'Lähikuva näyttää henkien talon kolmiomaisen päädyn, joka on täynnä punaisia, keltaisia, mustia ja valkoisia maalattuja kasvokuvioita sekä alareunassa rivin veistettyjä ihmishahmoja.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Ei kenen tahansa taloon',
+          teksti:
+            'Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.',
+          tiedosto: 'Sepik 0133.jpg',
+          lyhyt: 'Valokuvaaja kuvaa kunnioittavan etäisyyden päästä haus tambaran -rakennusta.',
+          selite:
+            'Valokuvassa mies kuvaa kaukaa korkeaa, kaksikerroksista haus tambaran -rakennusta, jonka sisällä erottuu tikapuita ja pylväässä veistetty ihmishahmo katon rajassa.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Krokotiilin lapset',
+          teksti:
+            'Iatmul-kansan uskomuksen mukaan heidän esi-isänsä polveutuvat krokotiilista, joka loi maailman – siksi nuorten miesten initiaatioon kuuluu ihon leikkaaminen satoja kertoja rinnasta, selästä ja pakaroista bambuveitsellä. Parantuessaan viillot muodostavat koholla olevia arpia, jotka muistuttavat krokotiilin karheaa nahkaa ja hampaiden jälkiä. Poikia pidetään tätä varten eristyksissä haus tambaranissa jopa kaksi kuukautta, ja seremonia toistuu vain noin 4–5 vuoden välein. Arpien uskotaan todistavan, että nuorukainen on symbolisesti krokotiilin nielemä ja syntyy rituaalin päätteeksi uudestaan täysivaltaisena klaanin jäsenenä.',
+          tiedosto: 'Haus Tambaran - nahe Apangai.jpg',
+          lyhyt: 'Haus tambaran lähellä Apangain kylää, initiaatioiden perinteinen näyttämö.',
+          selite:
+            'Valokuvassa toinen korkea, olkikattoinen haus tambaran seisoo puiden keskellä lähellä Apangain kylää – tällaisissa rakennuksissa pojat vietetään eristyksessä initiaatioon valmistautuessaan.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Scarification',
+        },
+        {
+          otsikko: 'Kauppatavaraa esivanhempien kasvoista',
+          teksti:
+            'Sepikin veistoperinne on yksi Uuden-Guinean tunnetuimmista: kylien veistäjät tekevät naamioita, esi-isien patsaita ja pitkänomaisia henkilautoja, joita koristellaan simpukankuorilla, siemenillä ja luonnonväreillä. Perinteisesti veistokset olivat osa haus tambaranin pyhää sisustusta, mutta 1900-luvulta lähtien niitä on myyty myös matkailijoille, keräilijöille ja museoihin ympäri maailmaa. Monet veistäjät oppivat taidon isältään tai enoltaan, vaikka osa teoksista päätyy nykyään kauas Sepikistä koteihin ja gallerioihin. Kierteiset silmät ja pitkä, terävä nenä ovat tyypillisiä keskisepikiläiselle veistostyylille.',
+          tiedosto: '塞皮克河流域木雕面具.jpg',
+          lyhyt: 'Sepikiläistyylinen puuveistos, jossa kaksi kasvokuviota ja simpukkakoristelu.',
+          selite:
+            'Kuvassa pitkänomainen puuveistos, jonka yläosassa on avosuinen, koloksi veistetty kasvo ja alaosassa kierteisin silmin ja terävällä nokalla varustettu toinen kasvo; reunoja koristavat simpukankuoret.',
+          lahde: '丘崈 (Qiu Chong), Wikimedia Commons (CC0)',
+          wiki: 'Oceanic art',
+        },
+      ],
+    },
+  ],
+  broome: [
+    {
+      id: 'kaupunki',
+      nimi: 'Broome',
+      johdanto:
+        'Broome kasvoi 1880-luvulla satamaksi, kun helmiäissimpukka teki siitä hetkeksi maailman johtavan helmikaupungin. Kauan ennen sitä rannikkoa asutti Yawuru-kansa, jolle helmiäinen oli pyhää jo ennen "Broome"-nimen syntyä.',
+      nostot: [
+        {
+          otsikko: 'Helmiäinen ennen Broomea',
+          teksti:
+            'Kauan ennen kuin kukaan kutsui tätä rannikkoa Broomeksi, alueen Yawuru-kansa keräsi matalikoilta helmiäissimpukoita ja kaiversi niiden kuorista rijejä, ockrilla värjättyjä koruja, jotka kulkivat kauppareittejä pitkin satojen, jopa yli tuhannen kilometrin päähän sisämaahan ja etelään asti. Kun isoisä matkusti maailmalla vuonna 1873, tätä paikkaa ei ollut vielä olemassa minään "Broomena" – vain rantaviivaa, jota Yawuru oli asuttanut ja hoitanut sukupolvien ajan, ja helmiäissimpukka oli jo silloin rannikon arvokkainta ainesta.',
+          tiedosto: 'Riji.JPG',
+          lyhyt: 'Yawuru-kansan kaivertama riji eli helmiäiskoru, ockrilla värjätty.',
+          selite:
+            'Valokuva näyttää ockrilla koristellun, helmiäissimpukan kuoresta veistetyn rijin, jonka reunaan on kiinnitetty hiuksista punottu vyönauha.',
+          lahde: 'Schomynv, Wikimedia Commons (Public domain)',
+          wiki: 'Riji',
+        },
+        {
+          otsikko: 'Merirosvo joka purjehti ohi',
+          teksti:
+            'Englantilainen merirosvo ja tutkimusmatkailija William Dampier purjehti Broomen edustan ohi kahdesti, ensin vuonna 1688 laivalla Cygnet ja uudelleen 1699 laivalla HMS Roebuck, jonka mukaan lähellä sijaitseva Roebuck Bay on myöhemmin nimetty. Dampier kartoitti rannikkoa Shark Baystä La Grange Bayhin asti ja kirjasi muistiin kasveja, eläimiä ja tuulia tarkemmin kuin kukaan eurooppalainen ennen häntä, mutta ei koskaan noussut maihin juuri tällä kohdalla. Isoisän matkavuoteen 1873 mennessä Dampierin käynneistä oli kulunut jo lähes kaksi vuosisataa, eikä rannikolle ollut silti syntynyt yhtäkään eurooppalaista asutusta.',
+          tiedosto: "William Dampier (1652-1715) Buccaneer and Explorer of Australia's West and North..jpg",
+          lyhyt: 'William Dampier, merirosvo ja tutkimusmatkailija, purjehti rannikon ohi 1688 ja 1699.',
+          selite:
+            'Muotokuva esittää William Dampieriä, englantilaista merirosvoa ja tutkimusmatkailijaa, jonka kaksi purjehdusta Länsi-Australian rannikolle 1600-luvun lopulla olivat ensimmäisiä eurooppalaisten käyntejä alueella.',
+          lahde: 'Biodiversity Heritage Library, Wikimedia Commons (Public domain)',
+          wiki: 'William Dampier',
+        },
+        {
+          otsikko: 'Kaupunki jonka nimesi kuvernööri',
+          teksti:
+            'Karjatilallinen Charles Harper ehdotti jo 1879, että rannikolle perustettaisiin virka-asema tukemaan kasvavaa helmiäissimpukan pyyntiä. Vasta 1883 tutkimusmatkailija John Forrest valitsi tarkan paikan ja nimesi sen Länsi-Australian silloisen kuvernöörin Sir Frederick Broomen mukaan – kymmenen vuotta isoisän matkan jälkeen. Satama sai lempinimen "Port of Pearls", helmisatama, koska sen laitureilta lastattiin vuosikymmenten ajan maailman arvokkainta helmiäistä laivoihin, jotka veivät saaliin aina Lontooseen ja Pariisiin asti.',
+          tiedosto: 'Port of Pearls House, Broome, September 2025.jpg',
+          lyhyt: 'Port of Pearls -rakennus Broomen satamassa, kaupungin helmiäishistorian muistona.',
+          selite:
+            'Nykyvalokuva näyttää Port of Pearls -nimisen rakennuksen Broomen satama-alueella, joka muistuttaa kaupungin synnystä helmiäissimpukan pyynnin ympärille 1880-luvulla.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Broome, Western Australia',
+        },
+        {
+          otsikko: 'Sukeltajat jotka tekivät kaupungin',
+          teksti:
+            'Vuoteen 1887 mennessä koko Broomen helmilaivasto oli siirtynyt kangaspukuihin, kuparikypäriin ja ilmaletkuihin, jotka mahdollistivat sukelluksen yli 20 metrin syvyyteen. Puvut olivat raskaita ja vieraita, joten pearlerit alkoivat värvätä ammattitaitoisia sukeltajia Japanista sekä Kiinasta, Malesiasta ja Timorilta; vuoteen 1920 mennessä joka kolmas Broomen sukeltaja oli japanilainen ja toisen maailmansodan kynnyksellä lähes joka toinen. Liian nopea nousu pinnalle sai typpikaasun kuplimaan sukeltajan veressä ja aiheutti sukellustaudin eli "taivutuksen"; satama-alueelle rakennettu painekammio oli monelle ainoa toivo selvitä hengissä.',
+          tiedosto: 'Early diving recompression chamber at Broome, Western Australia.jpg',
+          lyhyt: 'Broomen vanha painekammio, jolla hoidettiin sukeltajien sukellustautia.',
+          selite:
+            'Valokuva näyttää vanhan painekammion, jota käytettiin hoitamaan helmisukeltajia, kun sukellustauti eli typen kuplien aiheuttama halvaus iski heidän kehoonsa liian nopean pintaan nousun jälkeen.',
+          lahde: 'Haymanj, Wikimedia Commons (Public domain)',
+          wiki: 'Pearling in Western Australia',
+        },
+        {
+          otsikko: 'Nainen joka nousi merestä',
+          teksti:
+            'Ennen kuin Broomeen tuotiin ammattisukeltajia Aasiasta, ensimmäiset helmiäissimpukan sukeltajat 1860–1880-luvuilla olivat paikallisia aboriginaaleja – miehiä, naisia ja jopa lapsia, joita niin sanotussa "blackbirding"-käytännössä siepattiin väkisin laivoille sukeltamaan alasti jopa 12 metrin syvyyteen ilman minkäänlaista korvausta. Bedford Parkiin, paikkaan jossa perheet aikoinaan odottivat lugger-veneiden palaavan merten takaa, pystytettiin vuonna 2010 kolmimetrinen pronssipatsas aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka kädessään – muistomerkki naisille, joiden työtä pearling-teollisuuden alkuvuodet harvoin mainitsevat.',
+          tiedosto: 'Women of Pearling monument, Bedford Park, Broome, WA, Australia.jpg',
+          lyhyt: 'Bedford Parkin pronssipatsas muistaa naisia, jotka pakotettiin sukeltamaan simpukoita.',
+          selite:
+            'Kolmimetrinen pronssipatsas Bedford Parkissa kuvaa aboriginaalinaista nousemassa merestä helmiäissimpukka kädessään; veistäjät Joan Walsh-Smith ja Charles Smith pystyttivät sen vuonna 2010 naisten muistoksi.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Pearling in Western Australia',
+        },
+        {
+          otsikko: 'Kaupunki jossa kaikki kielet kaikuivat',
+          teksti:
+            'Helmiäissatama veti Broomeen sukeltajia ja kauppiaita Japanista, Kiinasta, Malesiasta, Filippiineiltä ja silloisesta Alankomaiden Itä-Intiasta, ja satamalaitureiden ympärille kasvanut kortteli sai vuorotellen nimet Aasialaiskortteli ja Japanilaiskortteli, kunnes siitä tuli lopulta Chinatown, kun kiinalaisten kauppiaiden osuus kasvoi suurimmaksi. Vuoteen 1910 mennessä noin 3 500 kaupungin 5 000 asukkaasta sai leipänsä pearling-teollisuudesta, ja kapeat kujat pursusivat kauppoja ja ravintoloita kymmenillä eri kielillä – sekoitus, jota ei tuolloin nähnyt missään muualla Australiassa.',
+          tiedosto: 'Johnny Chi Lane, Chinatown, Broome, WA, Australia 01.jpg',
+          lyhyt: 'Johnny Chi Lane, kapea kuja Broomen monikulttuurisessa Chinatownissa.',
+          selite:
+            'Valokuva Johnny Chi Lanesta Chinatownissa näyttää kapean, matalien puurakennusten reunustaman kujan, joka syntyi 1900-luvun alussa helmiäiskauppiaiden ja -sukeltajien kortteriksi.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Broome, Western Australia',
+        },
+        {
+          otsikko: 'Kaapeli joka yhdisti mantereet',
+          teksti:
+            'Vuonna 1889 merenalainen lennätinkaapeli laskettiin Broomesta noin 1 650 kilometrin päähän Banyuwangiin Jaavalle, ja siitä eteenpäin viesti kulki maayhteyksiä pitkin aina Lontooseen asti – matka, joka isoisän 1873 purjehtineelle laivalle olisi vienyt kuukausia, kutistui parissa tunnissa. Kaapelin rantautumispaikka länsipuolella sai nimen Cable Beach, ja siitä tuli myöhemmin 22 kilometrin pituinen valkohiekkainen ranta, joka on nykyään Broomen tunnetuin maamerkki ja suosittu kamelisafarien näyttämö auringonlaskun aikaan.',
+          tiedosto: 'Dusk at Cable Beach, Broome, WA, Australia 01.jpg',
+          lyhyt: 'Cable Beach auringonlaskussa, nimetty vuoden 1889 lennätinkaapelin mukaan.',
+          selite:
+            'Valokuva Cable Beachin auringonlaskusta näyttää loputtoman valkoisen hiekkarannan ja Intian valtameren, paikan josta lennätinkaapeli laskettiin Jaavalle vuonna 1889.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Cable Beach',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Dinosaurukset ja vuorovesi',
+      johdanto:
+        'Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Kuinka monta miljoonaa vuotta sitten Gantheaume Pointin dinosaurusten jalanjäljet arvioidaan syntyneen?',
+        vaihtoehdot: [
+          '13 miljoonaa vuotta sitten',
+          '130 miljoonaa vuotta sitten',
+          '500 miljoonaa vuotta sitten',
+          '4 600 miljoonaa vuotta sitten',
+        ],
+        oikea: 1,
+        fakta:
+          'Jäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, ja ne näkyvät vain harvinaisen alhaisen vuoroveden aikaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jäljet jotka näkyvät vain hetken',
+          teksti:
+            'Gantheaume Pointin liuskekivessä säilyneet dinosaurusten jalanjäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, jolloin alue oli jokisuiston peittämä rantatasanko eikä lainkaan merta. Jäljet löydettiin uudelleen 1960-luvulla, mutta ne paljastuvat edelleen vain muutaman kerran vuodessa, kun vuorovesi vetäytyy poikkeuksellisen alas ja paljastaa noin 30 metrin päässä rannasta piilevän kivilaatan. Jälkien joukossa on tunnistettu useiden eri dinosauruslajien painaumia, mukaan lukien yksi harvoista tunnetuista sauropodin eli pitkäkaulaisen jättiläisen jäljistä koko maailmassa.',
+          tiedosto: 'Dinosaur footprints Broome Australia.jpg',
+          lyhyt: 'Dinosauruksen jalanjälki liuskekivessä Gantheaume Pointissa Broomen rannikolla.',
+          selite:
+            'Valokuva näyttää liuskekiveen painuneen dinosauruksen jalanjäljen Gantheaume Pointissa, paikassa jossa jäljet paljastuvat vain harvinaisen alhaisen vuoroveden aikaan.',
+          lahde: 'Sixcherries, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gantheaume Point',
+        },
+        {
+          otsikko: 'Maailman suurin helmisimpukka',
+          teksti:
+            'Broomen edustan vesissä elää Pinctada maxima, maailman suurin helmiä tuottava simpukkalaji, jonka kuori voi kasvaa yli 20 senttimetrin levyiseksi. Juuri tämän simpukan hopeanhohtoinen tai kullankeltainen helmiäiskerros teki Broomesta 1900-luvun alussa maailman johtavan helmiäissataman, sillä sen kuorista valmistettiin napeista huonekaluihin kaikkea, mihin hienoin helmiäinen kelpasi. Nykyisin samaa lajia kasvatetaan hallitusti helmitiloilla Eighty Mile Beachin edustalla, ja Australia tuottaa sen ansiosta yhä suurimman osan maailman valkoisista etelänmerien helmistä.',
+          tiedosto: 'Views of Broome Historical Museum, Broome, WA, Australia 05.jpg',
+          lyhyt: 'Helmiäissimpukan kuoria näytteillä Broomen historiallisessa museossa.',
+          selite:
+            'Museonäyttelyn valokuva esittelee useita suuria, kiiltäväpintaisia helmiäissimpukan kuoria, joiden sisäpinta hohtaa hopeanvalkoisena – juuri tällaisia kuoria Broomen pearling-teollisuus keräsi vuosikymmenten ajan.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Pinctada maxima',
+        },
+        {
+          otsikko: 'Portaikko joka nousee kuuhun',
+          teksti:
+            'Muutaman illan kuukaudessa, kun täysikuu nousee Roebuck Bayn paljastuneiden mutatasankojen yllä ja vuorovesi on juuri vetäytynyt äärimmilleen, kuun valo heijastuu jäljelle jääneistä vesilammikoista niin, että syntyy illuusio hopeisesta portaikosta, joka näyttää nousevan suoraan taivaalle. Ilmiötä kutsutaan nimellä Staircase to the Moon, ja se toistuu maaliskuusta lokakuuhun muutamana iltana kuukaudessa, aina suurimpien kevätvuorovesien aikaan. Roebuck Bay on ilmiölle poikkeuksellisen suotuisa, koska Broome sijaitsee kapealla niemellä ja lahti avautuu juuri itään, samaan suuntaan josta kuu nousee.',
+          tiedosto: 'Staircasetothemoon.jpg',
+          lyhyt: 'Staircase to the Moon -ilmiö Roebuck Bayn vuorovesitasangolla.',
+          selite:
+            'Valokuva näyttää täysikuun heijastuksen Roebuck Bayn matalassa vedessä hämärän aikaan – juuri tällaisesta näkymästä syntyy Staircase to the Moon -ilmiön hopeinen portaikko.',
+          lahde: 'Johnorchard, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Roebuck Bay',
+        },
+        {
+          otsikko: 'Lahti joka ruokkii sata tuhatta lintua',
+          teksti:
+            'Roebuck Bayn laajat mutatasangot ovat yksi harvoista paikoista maailmassa, joissa pohjaeläimiä elää niin tiheästi, että ne riittävät ruokkimaan kansainvälisesti merkittäviä määriä muuttolintuja. Lahdella on havaittu yli 120 vesilintulajia, joista lähes 40 on Itä-Aasian ja Australasian muuttoreitillä liikkuvia kahlaajia, ja joka vuosi noin 100 000 lintua kerääntyy sinne ennen paluulentoaan pohjoisen pesimäalueille Siperiaan ja Alaskaan asti. Satelliittikuvissa lahden vuorovesitasangot näkyvät laajoina, veden peittäminä tai paljaina alueina sen mukaan, missä vaiheessa vuorovesi kulloinkin on.',
+          tiedosto: 'Bountiful Roebuck Bay (1274788 - oli 20260318 lrg).jpg',
+          lyhyt: 'Satelliittikuva Roebuck Bayn vuorovesitasangoista, muuttolintujen ruokailualueesta.',
+          selite:
+            'Landsat-satelliitin kuva maaliskuulta 2026 näyttää Roebuck Bayn laajat vuorovesitasangot, joiden pohjaeläimet ruokkivat vuosittain kymmeniätuhansia muuttolintuja.',
+          lahde: 'NASA Earth Observatory / Lauren Dauphin, Wikimedia Commons (Public domain)',
+          wiki: 'Roebuck Bay',
+        },
+        {
+          otsikko: 'Metsä joka elää vedessä',
+          teksti:
+            'Broomea ympäröi laaja mangrovevyöhyke, joka tulvii korkean vuoroveden aikaan ja paljastuu jälleen matalan veden aikana – juuri tämä rytmi tekee alueesta niin ravinnerikkaan, että se pystyy ruokkimaan Roebuck Bayn valtavat lintumäärät. Roebuck Bayn ympäristössä kasvaa ainakin 11 eri mangrovelajia, ja koko Kimberleyn rannikolla lajimäärä nousee paikoin jopa 14:ään, mikä tekee alueesta yhden Länsi-Australian monimuotoisimmista mangrovealueista. Sokkeloiset juuristot suojaavat rantaviivaa eroosiolta ja toimivat kalojen ja äyriäisten poikasten kasvupaikkana; lentokoneesta laskeutuessa Broomeen matkustaja lentää usein suoraan vihreiden metsiköiden yli.',
+          tiedosto: 'Mangroves under the flight path to Broome airport, WA, Australia 04.jpg',
+          lyhyt: 'Mangrovemetsikkö Broomen lentoaseman lähellä, vuoroveden muovaamaa rantaa.',
+          selite:
+            'Ilmakuva näyttää tiheän mangrovemetsikön Broomen lentoaseman lähellä, alueen jonka vuorovesi tulvii säännöllisesti ja joka on osa Roebuck Bayn ravinnerikasta rannikkoekosysteemiä.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Mangrove',
+        },
+      ],
+    },
+  ],
+  santarem: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santarém',
+      johdanto:
+        'Santarém syntyi vuonna 1661 jesuiittalähetysasemana Tapajós-joen suulle, '
+        + 'mutta sen tunnetuin näky on Vesien kohtaaminen: kaksi eriväristä jokea '
+        + 'virtaa vierekkäin kilometrien matkan sekoittumatta.',
+      nostot: [
+        {
+          otsikko: 'Lähetysasema Tapajós-joen suulla',
+          teksti:
+            'Kesäkuun 22. päivänä 1661 portugalilainen jesuiittapappi João Felipe '
+            + 'Bettendorff perusti Tapajós-kansan vanhalle asuinsijalle lähetysaseman '
+            + 'nimeltä Aldeia do Tapajós, ja tätä päivää pidetään Santarémin virallisena '
+            + 'syntyhetkenä. Alueella oli asunut alkuperäiskansaa jo satoja vuosia ennen '
+            + 'eurooppalaisten saapumista, ja lähetysasema rakennettiin pienen kappelin '
+            + 'ympärille. Vasta lähes sata vuotta myöhemmin, vuonna 1758, siirtokunta sai '
+            + 'vilan aseman ja uuden nimensä Santarém, Portugalin samannimisen kaupungin '
+            + 'mukaan; kaupungin arvon se sai 1848.',
+          tiedosto: 'TiagoSilveira CasarioHistorico Santarem Para (40064994385).jpg',
+          lyhyt: 'Jesuiitta Bettendorff perusti Santarémin lähetysasemana vuonna 1661.',
+          selite:
+            'Kuvassa on lähikuva keltaisista ja valkoisista koristeaiheisista '
+            + 'atsulejo-kaakeleista, jollaisilla Santarémin vanhan kaupunginosan '
+            + 'portugalilaistyyliset talot on perinteisesti päällystetty.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Santarém, Pará',
+        },
+        {
+          otsikko: 'Vesien kohtaaminen',
+          teksti:
+            'Santarémin edustalla Amazon-joen sameanruskea, kiintoainesta täynnä oleva '
+            + 'vesi kohtaa Tapajós-joen tumman sinertävän, kirkkaan veden, ja tulos on outo '
+            + 'näky: kaksi väriä virtaa vierekkäin useiden kilometrien matkan sekoittumatta '
+            + 'juuri lainkaan. Syynä ovat jokien erilainen lämpötila, tiheys ja '
+            + 'virtausnopeus: Amazonin lämpimämpi ja kevyempi vesi liukuu Tapajósin '
+            + 'viileämmän ja tiheämmän veden päällä. Paikallisesti ilmiötä kutsutaan '
+            + 'nimellä Encontro das Águas, Vesien kohtaaminen, ja se on yksi koko '
+            + 'Santarémin seudun tunnetuimmista matkailunähtävyyksistä.',
+          tiedosto: 'Santarém 01.jpg',
+          lyhyt: 'Amazonin ja Tapajósin erivärinen vesi virtaa vierekkäin sekoittumatta.',
+          selite:
+            'Kuvassa nähdään korkealta terassilta Santarémin rannan yli avautuva näkymä, '
+            + 'jossa vaaleampi Tapajós-joen vesi ja kauempana vaalean ruskea Amazon-joen '
+            + 'vesi erottuvat selvänä rajana toisistaan.',
+          lahde: 'Redbaobab, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Meeting of Waters (Amazon River)',
+        },
+        {
+          otsikko: 'Tapajós-kansan hautaurna',
+          teksti:
+            'Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui '
+            + 'Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen '
+            + 'eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui '
+            + 'laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla '
+            + 'kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti '
+            + 'taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, '
+            + 'joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään '
+            + 'esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet '
+            + 'lisää muinaisia asuinjälkiä sademetsän alta.',
+          tiedosto: 'TiagoSilveira Ceramica Santarem Para (40249314934).jpg',
+          lyhyt:
+            'Tapajós-kansa asui alueella jo kauan ennen eurooppalaisia ja teki taidokasta '
+            + 'keramiikkaa.',
+          selite:
+            'Kuvassa on museossa esillä oleva punaruskea savista hautaurna, jonka '
+            + 'vierellä oleva kyltti kertoo sen olevan Tapajós-kansan urna mortuária eli '
+            + 'hautausurna.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Tapajós (tribe)',
+        },
+        {
+          otsikko: 'Vilasta kaupungiksi',
+          teksti:
+            'Pitkään pieni Aldeia do Tapajós eli hiljaiseloa jesuiittojen lähetysasemana, '
+            + 'eikä sillä ollut juuri muuta merkitystä kuin paikallinen kauppapaikka joen '
+            + 'varrella. Vuonna 1758 siirtokunta korotettiin vilan asemaan ja se sai nimen '
+            + 'Santarém, ja lopulta 24. lokakuuta 1848 se julistettiin viralliseksi '
+            + 'kaupungiksi. Kasvu jatkui hitaasti mutta varmasti, sillä sijainti kahden '
+            + 'suuren joen risteyskohdassa teki paikasta luontevan levähdys- ja '
+            + 'kauppapaikan kaikelle liikenteelle, joka kulki Amazonia pitkin sisämaahan '
+            + 'tai takaisin merelle päin. Isoisän matkavuonna 1873 Santarém oli jo vilkas, '
+            + 'muutaman tuhannen asukkaan jokikaupunki.',
+          tiedosto: 'Observando o encontro das águas (42070272564).jpg',
+          lyhyt: 'Santarém sai vilan aseman 1758 ja kaupungin arvon 1848.',
+          selite:
+            'Kuvassa nainen istuu rannan penkillä selin katsomassa joelle, jossa on '
+            + 'ankkuroitu pieni puuvenhe; taustalla erottuu vaalea, sameampi vyöhyke veden '
+            + 'pinnassa.',
+          lahde: 'Wellington-stm, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Santarém, Pará',
+        },
+        {
+          otsikko: 'Kumikuume nostaa Santarémin',
+          teksti:
+            '1870-luvulla Amazonin alueella alkoi kumikuume, kun eurooppalaiset ja '
+            + 'pohjoisamerikkalaiset tehtaat tarvitsivat yhä enemmän luonnonkumia '
+            + 'polkupyörien ja myöhemmin autojen renkaisiin. Kumipuuta, hevea '
+            + 'brasiliensistä, kasvoi luonnonvaraisena juuri Santarémin ja Tapajós-joen '
+            + 'seudulla, ja kaupungista tuli nopeasti vilkas satama, josta raakakumia '
+            + 'lastattiin höyrylaivoihin Eurooppaan ja Yhdysvaltoihin. Kumikuume teki '
+            + 'monista paikallisista kauppiaista äkkirikkaita, ja jokirannan kauppahuoneet '
+            + 'ja tulliasemat kasvoivat vuosikymmenen aikana huomattavasti. Todellinen '
+            + 'huippukausi koettiin vasta 1880–1910, mutta nousu oli käynnissä jo isoisän '
+            + 'matkan aikoihin.',
+          tiedosto: 'TiagoSilveira Orla Santarem Para (39148974680).jpg',
+          lyhyt: 'Kumikuume alkoi 1870-luvulla ja teki Santarémista vilkkaan satamakaupungin.',
+          selite:
+            'Kuvassa on Santarémin jokirannan kauppasatama: keltainen kolonialtyylinen '
+            + 'rakennus, rantakatu ja useita pieniä puisia veneitä ankkuroituna tyyneen '
+            + 'veteen.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Amazon rubber boom',
+        },
+        {
+          otsikko: 'Henry Wickhamin varastetut siemenet',
+          teksti:
+            'Vuoden 1876 huhti–toukokuussa englantilainen Henry Wickham keräsi Boimin '
+            + 'kylästä Tapajós-joen varrelta, aivan Santarémin läheltä, noin 70 000 '
+            + 'kumipuun siementä. Hän ilmoitti Brasilian tulliviranomaisille kuljettavansa '
+            + 'vain arkoja kasvitieteellisiä näytteitä Britannian kuninkaalliselle '
+            + 'kasvitieteelliselle puutarhalle, ja vain murto-osa siemenistä, noin 2400, '
+            + 'itikin lopulta Kew Gardensissa. Näistä taimista kasvatettiin istutuksia '
+            + 'Britannian Aasian siirtomaihin, ja muutamassa vuosikymmenessä Aasian '
+            + 'kumiplantaasit murskasivat Brasilian monopolin. Isoisän matkasta oli '
+            + 'tuolloin kulunut vain kolme vuotta.',
+          tiedosto: '“Henry Wickham, who in 1876 directed an operation smuggling 70,000 rubber tree seeds”.jpg',
+          lyhyt: 'Wickham vei 70 000 kumipuun siementä Santarémin seudulta Britanniaan 1876.',
+          selite:
+            'Vanhassa mustavalkoisessa valokuvassa hattupäinen, viiksekäs mies nojaa '
+            + 'keppiin ja koskettaa toisella kädellään suuren kumipuun rungon kaarnaa '
+            + 'sademetsässä.',
+          lahde: 'Biblioteca Nacional Digital Brasil, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Henry Wickham (explorer)',
+        },
+        {
+          otsikko: 'Katedraali kertoo vauraudesta',
+          teksti:
+            'Santarémin keskustaa hallitsee vaaleansininen ja valkoinen Katedraali, jonka '
+            + 'kaksi torneja kohoaa korkealle puiden latvuston yläpuolelle keskustan '
+            + 'puiston laidalla. Kirkko on rakennettu ja laajennettu useassa vaiheessa sitä '
+            + 'mukaa kun kaupungin varallisuus kasvoi ensin joenrannan kauppatulojen ja '
+            + 'myöhemmin kumikuumeen myötä. Kirkon edustalla oleva pieni sininen ja '
+            + 'valkoinen paviljonki, koreto, on ollut vuosikymmeniä paikallisten '
+            + 'iltakävelijöiden ja soittokuntien kokoontumispaikka. Yhä nykyään keskustan '
+            + 'puisto ja katedraali ovat Santarémin sydän, josta kadut haarautuvat kohti '
+            + 'jokirantaa.',
+          tiedosto: 'Catedral Metropolitana de Santarém, Santarém, Pará, 2007.jpg',
+          lyhyt: 'Santarémin keskustan katedraali kohoaa kaupungin puiston laidalla.',
+          selite:
+            'Kuvassa on Santarémin katedraalin kaksi vaaleansinistä, valkoisin listoin '
+            + 'koristeltua tornia, joiden edessä näkyy pieni sininen ja valkoinen '
+            + 'paviljonki puiston keskellä.',
+          lahde: 'Lopmed, Wikimedia Commons (Public domain)',
+          wiki: 'Santarém, Pará',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sademetsä ja joet',
+      johdanto:
+        'Santarémin ympärillä sademetsä, joet ja valkoiset hiekkarannat kietoutuvat '
+        + 'yhteen: lähellä uivat vaaleanpunaiset jokidelfiinit ja tulvametsän vesi '
+        + 'kätkee sekä perhosia että muinaisia asuinjälkiä.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta vuotta luonnontutkija Henry Walter Bates käytti Santarémia '
+          + 'tukikohtanaan hyönteistutkimuksissaan?',
+        vaihtoehdot: [
+          'Yhden vuoden.',
+          'Kolme vuotta.',
+          'Seitsemän vuotta.',
+          'Yksitoista vuotta.',
+        ],
+        oikea: 1,
+        fakta:
+          'Bates saapui Santarémiin lokakuussa 1849 ja piti kaupunkia tukikohtanaan '
+          + 'kolme vuotta osana pidempää Amazon-matkaansa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Amazonin Karibia',
+          teksti:
+            'Vain reilun kolmenkymmenen kilometrin päässä Santarémistä sijaitsee Alter do '
+            + 'Chãon kylä, jota kutsutaan usein Amazonin Karibiaksi sen valkoisten '
+            + 'hiekkarantojen ja kirkkaan Tapajós-joen veden vuoksi. Kylän edustalla '
+            + 'sijaitseva hiekkasärkkä Ilha do Amor eli Rakkauden saari nousee joesta '
+            + 'keskelle vettä, ja sen ympärille on syntynyt rantabaareja ja telttakatoksia. '
+            + 'Alter do Chãon perustivat 1620-luvulla Borari-kansan asuttamalle alueelle '
+            + 'portugalilaiset, ja kylä kuului pitkään Santarémin hallintoalueeseen. '
+            + 'Nykyään paikka on suosituin retkikohde koko seudulla.',
+          tiedosto: 'Ilha do Amor, Álter do Chão.JPG',
+          lyhyt: 'Alter do Chãon valkoiset hiekkarannat tekivät siitä Amazonin Karibian.',
+          selite:
+            'Kuvassa auringonlaskun väreissä lipuu valkoinen vene kohti hiekkaista '
+            + 'särkkää, jonka rannalla on olkikattoisia katoksia ja ihmisiä; taustalla '
+            + 'kohoaa metsäinen rantaviiva.',
+          lahde: 'Lais Castro, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alter do Chão, Pará',
+        },
+        {
+          otsikko: 'Kuivakausi kutsuu esiin hiekan',
+          teksti:
+            'Tapajós-joen hiekkarannat eivät näy ympäri vuoden, sillä ne paljastuvat '
+            + 'vasta kuivan kauden aikana elokuusta tammikuuhun, kun joen vedenpinta laskee '
+            + 'huomattavasti. Parhaimmillaan rannat ovat syys- ja lokakuussa, jolloin esiin '
+            + 'nousee jopa yli sata kilometriä valkoista hiekkaa joen molemmin puolin '
+            + 'Santarémin seudulla. Sadekauden aikana, marraskuusta heinäkuuhun, sama '
+            + 'hiekka jää metrien syvyisen veden alle ja rantaviiva vetäytyy takaisin '
+            + 'puiden juurelle. Paikalliset kalastajat suunnittelevat usein koko vuotensa '
+            + 'tämän veden vaihtelun mukaan.',
+          tiedosto: 'TiagoSilveira AlterDoChao Santarem Para (40249393044).jpg',
+          lyhyt: 'Tapajósin hiekkarannat paljastuvat parhaiten syys-lokakuun kuivalla kaudella.',
+          selite:
+            'Kuvassa auringonlasku heijastuu Tapajós-joen tyyneen veteen, jonka matalassa '
+            + 'rannassa on rivi pieniä puuveneitä ankkuroituna puiden siluettien alla.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Alter do Chão, Pará',
+        },
+        {
+          otsikko: 'Vaaleanpunainen jokidelfiini',
+          teksti:
+            'Tapajós- ja Amazon-jokien vesissä ui boto, Amazonin jokidelfiini, joka voi '
+            + 'kasvaa yli kaksi ja puoli metriä pitkäksi ja painaa yli 150 kiloa. Sen pitkä '
+            + 'kapea kuono ja notkea kaula erottavat sen merissä elävistä delfiineistä, ja '
+            + 'iän myötä sen iho muuttuu yhä vaaleanpunaisemmaksi. Lähellä Alter do Chãota '
+            + 'sijaitseva Ponta do Cururú on tunnettu paikka, jossa botoja ja harmaita '
+            + 'tucuxi-delfiinejä kokoontuu iltaisin syömään matalikoille. Paikallisessa '
+            + 'Sairé-juhlassa, jonka jesuiitat toivat alueelle jo 1600-luvulla, juhlitaan '
+            + 'yhä sekä botoa että tucuxia.',
+          tiedosto: 'Boto cor-de-rosa - Pink dolphin (46314897644).jpg',
+          lyhyt: 'Boto on Amazonin jokidelfiini, joka muuttuu iän myötä vaaleanpunaiseksi.',
+          selite:
+            'Kuvassa jokidelfiinin pitkä, hampainen kuono kohoaa veden pinnalle suu '
+            + 'raollaan; delfiinin vaaleanpunertava iho erottuu tumman ruskeasta '
+            + 'jokivedestä.',
+          lahde: 'Just a Brazilian man, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Boto',
+        },
+        {
+          otsikko: 'Perhonen joka paljasti valheasun',
+          teksti:
+            'Englantilainen luonnontutkija Henry Walter Bates saapui Santarémiin '
+            + 'lokakuussa 1849 ja piti pientä jokikaupunkia tukikohtanaan peräti kolme '
+            + 'vuotta osana yhdentoista vuoden Amazon-matkaansa. Bates keräsi alueelta '
+            + 'kaikkiaan noin 14 000 hyönteislajia, joista lähes 8 000 oli tiedolle '
+            + 'ennestään tuntemattomia. Tutkiessaan sademetsän perhosia hän huomasi, että '
+            + 'monet syötäväksi kelpaavat lajit olivat kehittyneet muistuttamaan '
+            + 'väritykseltään myrkyllisiä sukulaislajejaan välttyäkseen linnuilta. Ilmiö '
+            + 'tunnetaan nykyään nimellä Batesin mimikry, ja se oli aikansa vahvimpia '
+            + 'todisteita Charles Darwinin luonnonvalinnan puolesta.',
+          tiedosto: 'Numata Longwing with Red Postman.jpg',
+          lyhyt: 'Bates asui Santarémissa kolme vuotta ja löysi perhosten jäljittelyilmiön.',
+          selite:
+            'Kuvassa on lepäävä liekkiperhonen (Heliconius numata), jonka mustan, '
+            + 'oranssin ja keltaisen kirjava siipikuvio muistuttaa muiden Amazonin '
+            + 'myrkyllisten perhoslajien väritystä.',
+          lahde: 'D. Gordon E. Robertson, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Henry Walter Bates',
+        },
+        {
+          otsikko: 'Tulvametsän kätketty kulttuuri',
+          teksti:
+            'Santarémin eteläpuolella leviää Tapajós-kansallismetsä, jonka '
+            + 'igapó-tulvametsät jäävät vuosittain kuukausiksi joen alle ja kuivuvat sitten '
+            + 'taas. Metsän alla piilee myös arkeologinen yllätys: LiDAR-laserkartoitus on '
+            + 'paljastanut Belterran ylängöllä satoja pieniä maakuoppia, poços de água, '
+            + 'jotka liittyvät Tapajós-kansan vuosisatoja vanhaan asutukseen sademetsän '
+            + 'katveessa. Tulvametsän kasvillisuus ja eläimistö ovat sopeutuneet elämään '
+            + 'sekä veden alla että sen yläpuolella, ja monet lajit tunnetaan tästä '
+            + 'metsästä ainoastaan täältä.',
+          tiedosto: 'Floresta Nacional do Tapajós André de Souza 01.jpg',
+          lyhyt: 'Tapajós-kansallismetsän tulvametsän alta on löytynyt muinaisia asuinjälkiä.',
+          selite:
+            'Kuvassa tumma metsälampi on täynnä pyöreitä, vihreän- ja punansävyisiä '
+            + 'lehtiä, jotka kelluvat veden pinnalla ja heijastavat yllä olevaa puustoa.',
+          lahde: 'André de Castro Souza, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tapajós National Forest',
+        },
+      ],
+    },
+  ],
+  murzuk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Murzuk',
+      johdanto:
+        'Murzuk oli satoja vuosia Fezzanin pääkaupunki ja Saharan halki kulkevien karavaanien tärkein risteysasema – eurooppalaiset matkalaiset kutsuivat hiekkalinnoineen kaupunkia jopa "Saharan Pariisiksi".',
+      nostot: [
+        {
+          otsikko: 'Qala at Turk — turkkilaisten linna',
+          teksti:
+            'Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.',
+          tiedosto: 'Murzuq - Festung Qala at Turk über dem Ort.jpg',
+          lyhyt: 'Murzukin savitiilistä muurattu ottomaaniaikainen linnoitus Qala at Turk kohoaa kukkulalla.',
+          selite:
+            'Valokuva näyttää auringonlaskun valaiseman, savitiilistä muuratun linnoituksen jyrkät hammastetut muurit ja niiden juurelle kasautuneen hiekan – rakennus on nykyisin raunioitunut mutta yhä pystyssä.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Murzuk',
+        },
+        {
+          otsikko: 'Karavaanien risteys jo Garamantien ajoista',
+          teksti:
+            'Murzukin oaasi oli karavaanikaupungin risteysasemana jo kauan ennen islamin tuloa: viidennestä vuosisadasta eaa. viidennelle vuosisadalle jaa. seudulla vaikuttanut Garamantien valtakunta hallitsi samoja pohjois-etelä-reittejä, joita myöhemmät karavaanit käyttivät. Ottomaanivallan aikana 1500-luvulta 1900-luvun alkuun Murzuk toimi toistuvasti koko Fezzanin maakunnan pääkaupunkina ja karavaanien tärkeimpänä levähdys- ja kauppapaikkana Tripolin ja Sudanin väliä kulkevalla reitillä. Vaurauden ja vilkkaan kaupan ansiosta eurooppalaiset matkakirjailijat antoivat sille liikanimen "Saharan Pariisi", vaikka kaupunki oli tosiasiassa pieni ja karu aavikko-oaasi.',
+          tiedosto: 'AFR V2 D101 General view of Murzuk.jpg',
+          lyhyt: 'Vanha kaivertajan kuva Murzukista palmuineen, kameleineen ja hautausmaineen 1890-luvulta.',
+          selite:
+            'Mustavalkoinen kaiverrus kuvaa palmupuiden reunustamaa tietä, joka johtaa kohti Murzukin muureja ja kukkulalla kohoavaa linnoitusta; edessä kulkee kaksi kuormattua kamelia ja tien vieressä näkyy hautakivien rivistö.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'Garamantes',
+        },
+        {
+          otsikko: 'Brittitutkijoiden vakiotukikohta',
+          teksti:
+            'Tammikuussa 1822 brittiläinen Denhamin, Oudneyn ja Clappertonin retkikunta saapui Murzukiin hankkimaan muonaa ja suojelua ennen jatkoaan tuntemattomille alueille kohti Tšad-järveä. Murzukista tuli seuraavina vuosikymmeninä brittitutkijoiden vakiotukikohta: James Richardson pysähtyi siellä sekä 1846 että lähtiessään viimeiselle matkalleen 1850 Heinrich Barthin ja Adolf Overwegin kanssa. Richardson kuvaili Murzukia "kuumetaudin maaksi", sillä hänen mukaansa kolme neljästä sinne saapuneesta eurooppalaisesta sairastui. Hän kuoli tuntemattomaan tautiin 4. maaliskuuta 1851 lähellä Kukawaa Tšad-järven seudulla, vain 22 vuotta ennen isoisän matkaa.',
+          tiedosto:
+            'The Clapperton expedition at Murzuk (Hugh Clapperton), from 1892 book The Story of Africa and its Explorers.jpg',
+          lyhyt: 'Vuoden 1892 kirjankuvitus Clappertonin retkikunnan pysähdyksestä Murzukissa.',
+          selite:
+            'Kuvituspiirros näyttää eurooppalaisia univormupukuisia tutkimusmatkailijoita kamelin ja paikallisten viittoihin pukeutuneiden miesten seurassa Murzukin kadulla valmistautumassa jatkamaan matkaa etelään.',
+          lahde: 'Robert Brown, Wikimedia Commons (CC0)',
+          wiki: 'Hugh Clapperton',
+        },
+        {
+          otsikko: 'Nachtigalin pakkotalvi Murzukissa',
+          teksti:
+            'Saksalainen lääkäri ja tutkimusmatkailija Gustav Nachtigal lähti helmikuussa 1869 Tripolista kohti Bornun sulttaanikuntaa viemään Preussin kuninkaan lahjoja. Fezzanin eteläpuoliset tiet osoittautuivat niin levottomiksi, että Nachtigal joutui pysähtymään Murzukiin talvehtimaan pitkäksi aikaa. Odotellessaan hän teki yllättävän päätöksen ja suuntasi sen sijaan tuntemattomalle Tibestin ylängölle, josta yksikään eurooppalainen ei ollut aiemmin palannut kertomaan. Nachtigal palasi Murzukiin lokakuussa 1869 lähes vaatteettomana mutta hengissä, ja jatkoi matkaansa Bornuun vasta seuraavana keväänä – kolme vuotta ennen isoisän matkaa 1873.',
+          tiedosto: 'PSM V27 D596 Gustav Nachtigal.jpg',
+          lyhyt: 'Tutkimusmatkailija Gustav Nachtigal, joka talvehti Murzukissa vuonna 1869.',
+          selite:
+            'Vanha kaiverrus esittää tuuheakiharaisen, viiksekkään miehen puolivartalokuvana tummassa puvussa ja rusetissa – Gustav Nachtigalin, joka joutui viettämään yli puoli vuotta Murzukissa ennen kuin pääsi jatkamaan matkaansa Tibestin kautta Bornuun.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Alexandrine Tinnén viimeinen matka',
+          teksti:
+            'Alkuvuodesta 1869 hollantilainen tutkimusmatkailija Alexandrine Tinné saapui Murzukiin aikeenaan ylittää Sahara ensimmäisenä eurooppalaisena naisena. Kaupungissa hän tapasi Gustav Nachtigalin ja toivoi jatkavansa matkaa tämän kanssa, mutta kun Nachtigal suuntasikin ensin Tibestiin, Tinné lähti omalla karavaanillaan yksin kohti Ghatia. Elokuussa 1869 hänen saattueensa tuhoutui matkalla: oppaiksi palkatut tuaregit surmasivat Tinnén ja kaksi hollantilaista merimiestä, luultavasti uskoen naisen vesitynnyreiden kätkevän kultaa. Murzukista lähtenyt matka jäi Tinnén viimeiseksi, vain neljä vuotta ennen isoisän saapumista samoille reiteille.',
+          tiedosto: 'Murzuk in Fezzan, from 1892 book The Story of Africa and its Explorers.png',
+          lyhyt: 'Kaivertajan 1890-luvun näkymä Murzukin kaupungista karavaaneineen.',
+          selite:
+            'Kaiverruksessa näkyy palmujen ympäröimä Murzuk pylväskäytävineen ja taustalla kohoavine torneineen, kun kamelikaravaani kulkee kaupungin muurien vierellä kohti aavikkoa – samaa reittiä, jota Alexandrine Tinné seurasi viimeisellä matkallaan.',
+          lahde: 'Robert Brown, Wikimedia Commons (CC0)',
+          wiki: 'Alexine Tinne',
+        },
+        {
+          otsikko: 'Berberikorut ja karavaanien tuomat aarteet',
+          teksti:
+            'Fezzanin väestö on vuosisatojen ajan ollut arabien, berbereiden, tubujen ja hausojen sekoitus – karavaanikaupan muovaamia yhteisöjä. Berberinaisten koruperinne yhdisti paikallista hopeasepäntaitoa Saharan yli kulkeneisiin kauppatavaroihin: karavaanit toivat pohjoisesta böömiläistä lasihelmeä ja meripihkaa, jotka sepät yhdistivät koruissa hopeahelmiin ja perinteisiin riipuksiin. Tällaiset korut kulkivat perintönä äidiltä tyttärelle ja kertoivat kantajansa perhesuhteista ja asemasta yhteisössä. Koruperinne elää Fezzanissa yhä, vaikka monet vanhat mallit periytyvät suoraan 1800-luvun karavaanikaupan kukoistuskaudelta.',
+          tiedosto: 'Murzuq - Berberschmuck.jpg',
+          lyhyt: 'Böömiläisistä lasihelmistä ja hopeasta tehty perinteinen berberikoru.',
+          selite:
+            'Lähikuva näyttää kaulassa roikkuvan korun, jossa vihreitä ja keltaisia lasihelmiä sekä hopeisia koristehelmiä on yhdistetty suureen, koristeelliseen hopeariipukseen.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Berbers',
+        },
+        {
+          otsikko: 'Italian lippu nousee, ja jälleen laskee',
+          teksti:
+            'Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.',
+          tiedosto: 'Bandiera italiana a Murzuk.jpg',
+          lyhyt: 'Joukko paikallisia miehiä juhlistaa lipunnostoa Murzukin linnoituksen edustalla.',
+          selite:
+            'Vanha mustavalkoinen valokuva näyttää suuren ihmisjoukon viittoihin ja turbaaneihin pukeutuneita miehiä kokoontuneena savitiilisen linnoitusmuurin eteen, tangon huipulla liehuu lippu.',
+          lahde: 'Luigi Giambelli, Wikimedia Commons (Public domain)',
+          wiki: 'Long Range Desert Group',
+        },
+      ],
+    },
+    {
+      id: 'orjakauppa',
+      nimi: 'Orjakaravaanien risteysasema',
+      johdanto:
+        'Murzuk oli 1800-luvulla keskisen Saharan vilkkaimman orjakauppareitin tärkein risteysasema, jonka kautta tuhannet Sudanista ja Bornusta siepatut ihmiset kuljetettiin karavaaneissa kohti Välimeren rannikon markkinoita.',
+      tehtava: {
+        kysymys: 'Minä vuonna Britannia avasi Murzukiin varakonsulaatin seuraamaan orjakaravaanien liikettä?',
+        vaihtoehdot: ['1800', '1840', '1870', '1900'],
+        oikea: 1,
+        fakta:
+          'Britannian ulkoministeriö avasi Murzukiin varakonsulaatin vuonna 1840, koska kaupunki oli tuolloin keskisen Saharan vilkkaimman orjakaravaanireitin tärkein välipysäkki Sudanin ja Tripolin välillä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saharan suuret kauppareitit',
+          teksti:
+            'Murzukin kautta kulki 1800-luvulla useita Saharan halki johtavia karavaanireittejä, jotka yhdistivät Kukawan, Kanon ja muiden Sudanin kaupunkien markkinat Tripolin satamaan. Karavaanit kulkivat myös Ghatin, Ghadamesin ja Bilman oaasien kautta, ja samoja reittejä oli käytetty tavaran ja ihmisten kuljetukseen jo Garamantien ajoista lähtien. Ranskalainen maantieteilijä Edouard Blanc kartoitti nämä "Saharan suuret kauppareitit" vuonna 1889. Murzuk pysyi pitkään reitin solmukohtana, koska aavikon yli oli mahdotonta kulkea ilman sen kaivoja ja majataloja.',
+          tiedosto: 'Commerce transsaharien.jpg',
+          lyhyt: 'Nykyaikainen kartta Saharan kauppareiteistä ja niiden kuljettamista tavaroista.',
+          selite:
+            'Käsin piirretyn näköinen ranskankielinen kartta esittää koko Saharan alueen kauppareitteineen Marokosta Egyptiin ja Länsi-Afrikasta Fezzaniin; punaiset viivat yhdistävät kaupunkeja, ja tekstit kertovat kuljetetuista tavaroista kuten suolasta, kullasta ja orjista.',
+          lahde: 'Critias, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Trans-Saharan trade',
+        },
+        {
+          otsikko: 'Matka kuolettavan hiekkameren yli',
+          teksti:
+            'Karavaanimatka Sudanista Fezzaniin kesti orjiksi siepatuille ihmisille usein kuukausia ja kulki vedettömien hiekkamerien halki, joissa päivälämpötila saattoi nousta yli 45 asteeseen. Kuljetettavat joutuivat kävelemään suurimman osan matkasta jalan kahlittuina toisiinsa, kun kamelit kantoivat vettä, ruokaa ja kauppatavaraa. Aikalaisarvioiden mukaan huomattava osa karavaanien mukana lähteneistä ei koskaan saavuttanut rannikkoa, vaan kuoli janoon tai sairauksiin matkalla. Murzukin oaasi oli usein ensimmäinen paikka, jossa selviytyneet pääsivät lepäämään ylitettyään Saharan laajimmat hiekkasaret.',
+          tiedosto: 'Libya 5230 Wan Caza Dunes Luca Galuzzi 2007.jpg',
+          lyhyt: 'Fezzanin hiekkameren korkeat dyynit lähellä Murzukin oaasia.',
+          selite:
+            'Valokuva näyttää loivasti aaltoilevan hiekkameren korkeine, tuulen muovaamine dyyneineen aina horisonttiin asti – samankaltaista maastoa orjakaravaanit joutuivat ylittämään matkallaan kohti Murzukin oaasia.',
+          lahde: 'Luca Galuzzi, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Trans-Saharan slave trade',
+        },
+        {
+          otsikko: 'Karavaanipihat ja torit',
+          teksti:
+            'Murzukin keskustassa oli pylväskäytävin reunustettuja pihoja ja majataloja, joissa saapuvat karavaanit pysähtyivät lastaamaan ja purkamaan kuormaa. Pihoissa käytiin kauppaa suolalla, taateleilla, kankailla ja kullalla, mutta samoissa tiloissa tarkastettiin ja myytiin myös orjiksi siepattuja ihmisiä osana muuta karavaanin lastia. Kaupungin kauppiaat elivät vauraasti näiden pihojen ympärillä samalla, kun karavaanien mukana kulkeneet vangit odottivat jatkoa matkalle kohti rannikon markkinoita. Murzukin asema kauppa- ja orjareitin risteyksessä teki siitä yhden Fezzanin vauraimmista kaupungeista.',
+          tiedosto: 'Meyers Universum Band 20 32.jpg',
+          lyhyt: 'Kaivertajan näkymä Murzukin pylväskäytävistä ja pihoista 1800-luvulta.',
+          selite:
+            'Kaiverruksessa näkyy avara sisäpiha, jota reunustavat pylväskäytävät ja palmupuut; pihalla kulkee kameleita ja etualalla kaksi miestä istuu matolla, kun taustalla erottuu kaupungin muurin torni.',
+          lahde: 'Bibliographisches Institut Hildburghausen, Wikimedia Commons (Public domain)',
+          wiki: 'Murzuk',
+        },
+        {
+          otsikko: 'Brittiläinen varakonsuli laskee orjia',
+          teksti:
+            'Vuonna 1840 Britannian ulkoministeriö avasi Murzukiin varakonsulaatin, jonka yhtenä tehtävänä oli seurata ja hillitä keskisen Saharan orjakauppaa – kaupunki oli tuolloin sen vilkkaimman reitin tärkein välipysäkki Sudanin ja Tripolin välillä. Varakonsuli Giambattista Gagliuffi raportoi 1843–1854 Lontooseen vuosittaisia tilastoja karavaanien mukana kuljetetuista orjista, ja raporteista on tullut ainutlaatuinen lähde ajalta, jolloin kauppa oli vilkkaimmillaan. Vanha ottomaanilinnoitus toimi samaan aikaan paikallishallinnon tukikohtana, ja sen varjossa varakonsuli seurasi karavaanien tuloa ja lähtöä vuosikymmenten ajan.',
+          tiedosto: 'The Castle and old mosque of Murzuq, Libya 3.jpg',
+          lyhyt: 'Murzukin vanha linnoitus, jonka juurella varakonsuli seurasi karavaaneja.',
+          selite:
+            'Valokuva näyttää alhaalta ylöspäin kuvatun savitiilisen linnoituksen hammastettuine muureineen kirkasta sinistä taivasta vasten – rakennus toimi ottomaanihallinnon tukikohtana samaan aikaan kun Britannia seurasi kaupungin orjakaravaaneja varakonsulaattinsa kautta.',
+          lahde: 'Syed Wali Peeran, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Slavery in Libya',
+        },
+      ],
+    },
+  ],
+  nullarbor: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nullarbor',
+      johdanto:
+        'Nullarbor on maailman suurin yhtenäinen kalkkikivitasanko Etelä- ja Länsi-Australian rajalla: puuton, lähes asumaton aavikko, jonka ensimmäinen eurooppalainen ylitti kävellen vuonna 1841 – lähes hengellään.',
+      nostot: [
+        {
+          otsikko: 'Mies joka uskoi rantaan lännessä',
+          teksti:
+            'Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.',
+          tiedosto: 'Portrait of Edward John Eyre(GN12306).jpg',
+          lyhyt: 'Vanhemmalla iällä otettu valokuva tutkimusmatkailija Edward John Eyrestä.',
+          selite:
+            'Valokuva näyttää iäkkään, pitkäpartaisen Edward John Eyren tummassa puvussa istumassa sivuttain, sanomalehti kädessään – miehen, joka nuorempana ylitti Nullarborin kävellen ensimmäisenä eurooppalaisena.',
+          lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
+          wiki: 'Edward John Eyre',
+        },
+        {
+          otsikko: 'Baxterin kuolema autiolla rannikolla',
+          teksti:
+            '29. huhtikuuta 1841 leiri hiljeni ikuisiksi ajoiksi kahden miehen osalta. Kaksi retkikunnan aboriginaalioppaista, Joey ja Yarri, olivat jo viikkoja vaatineet paluuta, mutta Eyre kieltäytyi. Kun Baxter jäi hetkeksi yksin vartioimaan leiriä, miehet ampuivat hänet, veivät suurimman osan ruoasta ja vedestä sekä kaksi haulikkoa ja katosivat aavikolle. Koska maa oli liian kovaa haudan kaivamiseen, Eyre ja jäljelle jäänyt opas Wylie kääriivät Baxterin ruumiin peitteeseen ja jättivät sen rannikon kalkkikivijyrkänteiden juurelle. Kaksikko jatkoi matkaa nälkiintyneenä, elossa lähinnä kuoren keräämien kastepisaroiden ja Wylien metsästämien lintujen varassa.',
+          tiedosto: 'Great Australian Bight, Eyre Highway scenic lookout no. 3 - 1.jpg',
+          lyhyt: 'Great Australian Bightin autio, pensaikkoinen rantajyrkänne Nullarborin reunalla.',
+          selite:
+            'Valokuva näyttää karun, matalan pensaikon peittämän kalkkikivijyrkänteen, joka putoaa suoraan turkoosiin mereen – samankaltaista autiota rannikkoa Eyren retkikunta seurasi viikkokausia.',
+          lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'John Baxter (explorer)',
+        },
+        {
+          otsikko: 'Pelastus meren rannalta',
+          teksti:
+            'Kuukauden nälkäisen vaelluksen jälkeen Eyre ja Wylie näkivät toukokuussa 1841 jotain, mitä eivät olleet uskaltaneet toivoa: purjelaivan ankkurissa lahdessa lähellä nykyistä Esperancea. Alus oli ranskalainen valaanpyyntilaiva Mississippi, jota komensi englantilaissyntyinen kapteeni Thomas Rossiter. Rossiter otti uupuneet miehet laivaan, ruokki ja lepuutti heitä ennen kuin he jatkoivat viimeistä osuutta kohti Albanya. Wylie, joka oli koko matkan ajan löytänyt vettä ja ruokaa kuolevalta näyttävästä maasta, sai myöhemmin elinikäisen eläkkeen Länsi-Australian siirtokunnalta kiitokseksi uskollisuudestaan.',
+          tiedosto: 'Etching of John Eyre and Wylie when first sighting a ship(GN03284).jpg',
+          lyhyt: 'Kaiverrus Eyrestä ja Wyliestä hetkellä, jolloin he näkivät pelastavan laivan.',
+          selite:
+            'Kaiverrus näyttää kaksi riutunutta, ryysyistä miestä rannalla – toinen kantaa vesiastiaa, toinen asetta – kuvatekstin mukaan juuri sillä hetkellä, kun he ensi kertaa näkivät heidät pelastaneen laivan.',
+          lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
+          wiki: 'Wylie (Australian explorer)',
+        },
+        {
+          otsikko: 'Neljä vuotta isoisän jälkeen: lanka halki tyhjyyden',
+          teksti:
+            'Kun isoisä kirjoitti matkapäiväkirjaansa vuonna 1873, Nullarborin poikki ei kulkenut vielä yhtään pysyvää yhteyttä – vain Eyren 30 vuotta vanha, lähes unohdettu reitti oli tiedossa. Muutos tuli vasta 9. joulukuuta 1877, kun Adelaiden ja Perthin yhdistävä lennätinlinja valmistui kahden vuoden raadannan jälkeen. Linjalla oli kahdeksan toistoasemaa, joista suurin rakennettiin Euclaan: puinen asema, jossa työskenteli aluksi neljä lennätinvirkailijaa. Rakennus laajennettiin 1898 kivestä, mutta hiekkadyynit alkoivat 1890-luvulla peittää koko kylää, kun kaniiniparvet söivät dyynikasvillisuuden paljaaksi – tänään rauniot pilkistävät yhä hiekan alta.',
+          tiedosto: 'Old Telegraph Station, Eucla SA. Main homestead slowly being buried by the sand dunes.jpg',
+          lyhyt: 'Euclan lennätinaseman rauniot hiekkadyynien keskellä Nullarborin länsireunalla.',
+          selite:
+            'Valokuva näyttää vaaleankeltaisista kivistä muuratun rakennuksen raunion, jonka seiniä valkoinen hiekka on vallannut puoliksi – Euclan lennätinasema, joka avattiin 1877 ja hylättiin myöhemmin dyynien alle.',
+          lahde: 'MaryWShields, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Eucla, Western Australia',
+        },
+        {
+          otsikko: "Nimi joka tarkoittaa 'ei puuta'",
+          teksti:
+            "Nullarbor-nimi juontuu latinan sanoista nullus arbor, 'ei puuta' – ja nimi pitää yhä paikkansa. Tasanko on noin 1 100 kilometriä leveä ja kattaa lähes 200 000 neliökilometriä puutonta kalkkikiveä. Kun Eyre Highway vihdoin valmistui vuonna 1941 ja päällystettiin kokonaan 1976, siitä tuli osa reittiä, jolla on Australian pisin suora tieosuus, 146 kilometriä. Vieressä kulkeva Trans-Australian-rautatie menee vielä pidemmälle: sen suorin osuus on 478 kilometriä, maailman pisin suora rautatie. Kuljettaja voi ajaa tunteja ilman yhtään mutkaa – täsmälleen sellaista autiutta, jonka läpi Eyre ja Wylie kerran raahautuivat jalan.",
+          tiedosto: 'Eyre Highway, South Australia (on Nullarbor Plain).jpg',
+          lyhyt: 'Suora, puuton tie katoaa horisonttiin Nullarbor-tasangolla.',
+          selite:
+            'Kuva autonikkunan läpi näyttää täysin suoran, kapean tien, joka jatkuu näkyvissä olevaan horisonttiin asti matalan pensaikon keskellä – ei yhtään puuta eikä mutkaa niin pitkälle kuin silmä kantaa.',
+          lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Eyre Highway',
+        },
+      ],
+    },
+    {
+      id: 'geologia',
+      nimi: 'Kalkkikivitasanko elää maan alla',
+      johdanto:
+        'Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta neliökilometriä Nullarbor-tasanko, maailman suurin yhtenäinen kalkkikivialue, kattaa noin?',
+        vaihtoehdot: ['20 000 km²', '90 000 km²', '197 000 km²', '500 000 km²'],
+        oikea: 2,
+        fakta:
+          'Nullarbor-tasanko kattaa noin 197 000 neliökilometriä entistä merenpohjaa – Maan suurin yhtenäinen kalkkikivialue.',
+      },
+      nostot: [
+        {
+          otsikko: 'Meren pohja joka nousi ilmaan',
+          teksti:
+            'Nullarbor ei ole aina ollut aavikkoa: kalkkikivi, jonka päällä nyt kävellään, kertyi meren pohjaan kerroksittain miljoonien vuosien aikana, kun matala meri peitti alueen. Mioseenikaudella, noin 14 miljoonaa vuotta sitten, merenpohja alkoi kohota, ja vesi vetäytyi paljastaen laakean, lähes täysin tasaisen kalkkikivilevyn. Nykyään tasanko kattaa noin 197 000 neliökilometriä – Maan suurin yhtenäinen kalkkikiviesiintymä, noin 1 100 kilometriä leveä Etelä- ja Länsi-Australian rajan molemmin puolin. Avaruudesta katsottuna tasanko erottuu ympäröivästä punaisesta aavikosta vaaleampana, lähes puuttomana kaistaleena rannikkoa myöten.',
+          tiedosto: 'Australia.A2002231.0145.250m NASA Nullarbor.jpg',
+          lyhyt: 'Satelliittikuva näyttää Nullarborin vaaleana kaistaleena Etelä-Australian rannikolla.',
+          selite:
+            'Kuvassa erottuu tummanpunaisen aavikon keskellä vaaleampi, tasainen kaistale rannikkoa myöten – se on puuton Nullarbor-tasanko, joka näkyy avaruudesta omana väriläikkänään ennen sinistä merta.',
+          lahde: 'NASA, Wikimedia Commons (Public domain)',
+          wiki: 'Nullarbor Plain',
+        },
+        {
+          otsikko: 'Jyrkänne joka paljastaa kerrokset',
+          teksti:
+            'Siellä missä tasanko päättyy äkisti mereen, syntyvät Bunda Cliffsin kalkkikivijyrkänteet: yli 80 kilometriä pitkä, paikoin yli 100 metriä korkea seinämä, joka putoaa suoraan Etelämeren aaltoihin. Jyrkänteen poikkileikkauksesta erottuu selvästi vaaleita kerroksia, jotka kertovat vuosimiljoonien aikana kertyneestä merenpohjan kalkkikivestä – jokainen raita oma aikakautensa. Tuuli ja meri kalvavat jyrkännettä yhä: lohkareita putoaa ajoittain veteen, ja rantaviiva siirtyy hitaasti sisämaahan päin. Samasta kalkkikivestä koostuu koko tasangon pinta, mutta vain täällä sen sisus paljastuu kokonaisena leikkauksena.',
+          tiedosto: 'Bunda Cliffs, 2017 (03).jpg',
+          lyhyt: 'Bunda Cliffsin kalkkikivijyrkänne putoaa suoraan turkoosiin mereen.',
+          selite:
+            'Valokuva näyttää pitkän, tasaisen kalkkikivijyrkänteen, joka jatkuu suorana viivana horisonttiin ja putoaa pystysuorasti kymmenien metrien korkeudesta aaltoilevaan mereen.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bunda Cliffs',
+        },
+        {
+          otsikko: 'Pimeä maailma kalkkikiven alla',
+          teksti:
+            'Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.',
+          tiedosto: 'Thampana cave enterance.png',
+          lyhyt: 'Tutkijat kiipeävät tikkailla Thampana-luolan pyöreästä kattoaukosta.',
+          selite:
+            'Kuva on otettu luolan pohjalta ylöspäin: pyöreästä kattoaukosta lankeaa kirkas valokeila, ja sitä kohti nousee pitkä tikapuu, jonka juurella näkyy kypäräpäisiä tutkijoita.',
+          lahde: 'Cborgey, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Koonalda Cave',
+        },
+        {
+          otsikko: 'Aavikon maanalainen kaivaja',
+          teksti:
+            'Etelänkarvakuonowombatti on ainoa suurikokoinen nisäkäs, joka on tehnyt Nullarborin kalkkikivimaaperästä kotinsa: se kaivaa jopa kaksi metriä syviä ja 30 metriä pitkiä käytäväverkostoja, joissa lämpötila pysyy tasaisena 14–26 asteessa ulkona vallitsevasta helteestä tai yöpakkasesta huolimatta. Laji selviää äärimmäisen niukalla vedellä: sen uloste on niin kuivaa, että vesipitoisuus voi olla vain 40 prosenttia, ja aineenvaihdunta on yksi hitaimmista koko nisäkäskunnassa. Kuivien vuosien jälkeen kannat voivat silti räjähtää: vuoden 2022 laskennassa tutkijat löysivät paikoin jopa 200 wombattia neliökilometriltä sadekausien palattua.',
+          tiedosto: 'A southern hairy-nosed wombat at Brookfield Conservation Park, South Australia.jpg',
+          lyhyt: 'Etelänkarvakuonowombatti lepää iltavalossa Nullarborin kivikkoisella maalla.',
+          selite:
+            'Kuvassa istuu paksuturkkinen, harmaanruskea wombatti kivikkoisella, niukkakasvillisella maalla auringonlaskun valossa – tyypillinen näky Nullarborin reunamilla.',
+          lahde: 'Andrew Katsis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Southern hairy-nosed wombat',
+        },
+      ],
+    },
+  ],
+  geraldton: [
+    {
+      id: 'kaupunki',
+      nimi: 'Geraldton',
+      johdanto:
+        'Geraldton on Länsi-Australian Keskilännen satamakaupunki, jonka kuvernööri Charles Fitzgerald perusti vuonna 1850 lyijynviennin tarpeisiin. Vuonna 1873 se oli jo vakiintunut pieni satamakaupunki Intian valtamerellä.',
+      nostot: [
+        {
+          otsikko: 'Lyijyä ja lahden satama',
+          teksti:
+            'Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.',
+          tiedosto: 'Geraldton harbor.JPG',
+          lyhyt: 'Perinteinen puuvene ankkurissa Geraldtonin satamassa Champion Bayllä.',
+          selite:
+            'Valokuva näyttää perinteisen puisen purjeveneen ankkurissa Geraldtonin nykyisessä marinassa, taustalla kaupungin rantarakennuksia ja purjeveneitä.',
+          lahde: 'Dinkum, Wikimedia Commons (CC0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Rautatie avaa sisämaan',
+          teksti:
+            'Vuonna 1879 valmistui Länsi-Australian ensimmäinen valtion omistama rautatie, joka yhdisti Geraldtonin sataman pohjoisempana sijaitsevaan Northamptonin kaivosseutuun. Ennen rataa malmi ja villa oli kuljetettava satamaan hevosvankkureilla hitaasti ja kalliisti, mikä rajoitti koko seudun kasvua. Rautatie muutti tilanteen käytännössä yhdessä yössä: tavaramäärät satamassa moninkertaistuivat, ja Geraldtonista tuli kiistatta koko Keskilännen alueen talouden ja liikenteen keskus. Nykyinen komea asemarakennus kaupungin keskustassa on rakennettu myöhemmin samalle paikalle, ja se toimii yhä matkailijoiden lähtöpisteenä.',
+          tiedosto: 'OIC geraldton railway stn front.jpg',
+          lyhyt: 'Geraldtonin rautatieaseman julkisivu, joka yhä muistuttaa 1879 rautatiestä.',
+          selite:
+            'Valokuva näyttää Geraldtonin rautatieaseman koristeellisen etujulkisivun, jonka päädyssä lukee kohokirjaimin GERALDTON RAILWAY STATION.',
+          lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Geraldton railway station',
+        },
+        {
+          otsikko: 'Punavalkoinen majakka',
+          teksti:
+            'Geraldtonin rannikko oli 1800-luvulla merenkulkijoille vaarallinen: matalikkoja ja äkkinäisiä tuulia riitti, ja moni laiva ajoi karille ennen kuin valoa saatiin pystyyn. Point Mooren majakka valmistui vuonna 1878 opastamaan laivat turvallisesti satamaan, ja se on nykyisin Länsi-Australian vanhin yhä pystyssä oleva liittovaltion majakka. Kartiomainen terästorni maalattiin punaisin ja valkoisin vaakaraidoin, jotta se erottuisi selvästi sekä päivänvalossa että hämärässä. Torni on lähes 35 metriä korkea, ja sen valo näkyy avomerelle kymmenien kilometrien päähän vielä tänäkin iltana.',
+          tiedosto: 'Point Moore Lighthouse October 2023 01.jpg',
+          lyhyt: 'Point Mooren majakka, Länsi-Australian vanhin yhä toimiva liittovaltion majakka.',
+          selite:
+            'Valokuva näyttää Point Mooren korkean, punavalkoraidallisen majakkatornin Geraldtonissa vaaleaa pilvistä taivasta vasten.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Kaupunki jota tuuli ei jätä rauhaan',
+          teksti:
+            'Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.',
+          tiedosto: '2026 Wave Rally Championship Final.jpg',
+          lyhyt: 'Purjelautailijoita Geraldtonin lähirannikon voimakkaissa iltatuulissa ja aalloissa.',
+          selite:
+            'Valokuva näyttää useita värikkäitä purjelautoja ja niiden ratsastajia kilpailemassa korkeissa aalloissa Geraldtonin lähellä sijaitsevalla Coronation Beachilla.',
+          lahde: 'Waverally, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Läntinen piikkihummeri',
+          teksti:
+            'Geraldton on Australian suurin läntisen piikkihummerin purkusatama, ja koko lajin kalastus on maan arvokkain yksittäisen lajin kalastuselinkeino. Punaruskea, pitkäviiksinen äyriäinen elää matalilla riutoilla ja kallioilla Länsi-Australian rannikolla, ja sitä pyydetään puisista tai muovisista riu\'uista tehdyillä pyydyksillä. Osa saaliista pyydetään kauempana avomerellä, muun muassa Houtman Abrolhosin saarilla, joissa kalastajat asuvat kausiluonteisilla leireillä. Suurin osa saaliista lastataan lopulta Geraldtonin satamaan ja lähetetään sieltä tuoreena tai pakastettuna etenkin Aasian markkinoille.',
+          tiedosto: 'Panulirus cygnus juv 01 gnangarra.jpg',
+          lyhyt: 'Läntinen piikkihummeri, jonka pyynti tekee Geraldtonista Australian suurimman hummerisataman.',
+          selite:
+            'Lähikuva näyttää nuoren läntisen piikkihummerin merenpohjalla pitkine tuntosarvineen, ympärillään merileviä ja pieni meriruusuke.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 3.0 AU)',
+          wiki: 'Panulirus cygnus',
+        },
+      ],
+    },
+    {
+      id: 'batavia',
+      nimi: 'Houtman Abrolhosin haaksirikko',
+      johdanto:
+        'Geraldtonin edustalla, noin 80 kilometriä ulkona merellä, kohoaa Houtman Abrolhosin saariryhmä – paikka, jossa hollantilaisen Batavia-laivan haaksirikko vuonna 1629 johti Australian historian julmimpiin tapahtumiin.',
+      tehtava: {
+        kysymys:
+          'Missä alkuperäinen, Batavian hylystä pelastettu ja VOC:n linnoitukseen tarkoitettu hiekkakivinen holvikaariportaali on nykyään esillä?',
+        vaihtoehdot: [
+          'Amsterdamin merihistoriallisessa museossa',
+          'Geraldtonin Länsi-Australian merenkulkumuseossa',
+          'Fremantlen lentokentän aulassa',
+          'Sydneyn oopperatalon edustalla',
+        ],
+        oikea: 1,
+        fakta:
+          'Alkuperäinen holvikaariportaali on esillä juuri Geraldtonin omassa merenkulkumuseossa; Fremantlen laivanhylkymuseossa nähtävä on siitä tehty jäljennös.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vaarallinen saariryhmä',
+          teksti:
+            'Noin 80 kilometriä Geraldtonin edustalla avomerellä kohoaa Houtman Abrolhos, 122 saaren ja riutan ryhmä, joka on eteläisin aito koralliriuttajärjestelmä Intian valtamerellä. Hollantilainen laivuri Frederick de Houtman havaitsi saariryhmän ensimmäisenä eurooppalaisena vuonna 1619 ja varoitti tulevia purjehtijoita: matala, riuttojen ympäröimä rannikko oli erittäin vaarallinen laivoille. Varoituksesta huolimatta 1600-luvun kartat olivat epätarkkoja, ja Alankomaiden Itä-Intian kauppakomppanian eli VOC:n laivat kulkivat silti usein juuri tätä reittiä kohti nykyistä Indonesiaa. Yksikään kartta ei kuitenkaan pelastanut laivaa, joka ajoi karille kesällä 1629.',
+          tiedosto: 'Admiralty Chart No 1723 The Houtman Rocks, Published 1845.jpg',
+          lyhyt: 'Brittiläinen merikartta Houtman Abrolhosin vaarallisista riutoista ja saarista.',
+          selite:
+            'Vanha brittiläinen merikartta vuodelta 1845 esittää Houtman Abrolhosin saariryhmän riuttoineen ja saariryhmineen Länsi-Australian rannikon edustalla.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (Public domain)',
+          wiki: 'Houtman Abrolhos',
+        },
+        {
+          otsikko: 'Batavian haaksirikko',
+          teksti:
+            'VOC:n uusi lippulaiva Batavia lähti neitsytmatkalleen Amsterdamista kohti Itä-Intiaa lokakuussa 1628, ja se oli aikansa suurimpia ja arvokkaimpia kauppalaivoja. Aamuyöllä 4. kesäkuuta 1629 laiva ajoi karille Morning Reefille Houtman Abrolhosin Wallabi-saariryhmässä. Suurin osa yli 300 matkustajasta ja miehistöstä, joukossa useita naisia ja lapsia, onnistui pelastautumaan pienelle hiekkasaarelle, jota alettiin pian kutsua synkällä nimellä Batavian hautausmaa. Komentaja Francisco Pelsaert lähti pian tämän jälkeen avoveneellä hakemaan apua lähes 3 000 kilometrin päässä sijaitsevasta Batavian kaupungista, ja matka kesti 33 päivää.',
+          tiedosto: 'Beacon Island Abrolhos.jpg',
+          lyhyt: 'Beacon Island eli entinen Batavian hautausmaa, kuvattuna ilmasta.',
+          selite:
+            'Ilmakuva näyttää pienen, kapean hiekkasaaren kirkkaan turkoosin riuttaveden keskellä – tämä Beacon Island tunnettiin aikanaan nimellä Batavian hautausmaa.',
+          lahde: 'Guy de la Bedoyere, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Beacon Island (Houtman Abrolhos)',
+        },
+        {
+          otsikko: 'Kapina ja verinen kesä',
+          teksti:
+            'Pelsaertin lähdettyä hakemaan apua jäljelle jääneiden noin 250 haaksirikkoutuneen johtoon nousi kauppias Jeronimus Cornelisz, joka pelkäsi oman osuutensa laivan väärinkäytöksestä paljastuvan. Turvatakseen asemansa hän järjesti seuraajineen kuukausien väkivallan kierteen, jonka aikana surmattiin ainakin 110 miestä, naista ja lasta – yksi Australian historian julmimmista tapahtumista. Kun Pelsaert lokakuussa 1629 palasi pelastuslaivalla, kapina oli jo osittain kukistettu, ja Cornelisz sekä pahimmat rikoskumppaninsa tuomittiin ja hirtettiin lähisaarella samana kuukautena – Australian ensimmäiset tunnetut oikeuden määräämät teloitukset.',
+          tiedosto: 'Batavia 01 gnangarra.jpg',
+          lyhyt: 'Batavian pelastetun rungon osia esillä Länsi-Australian laivanhylkymuseossa.',
+          selite:
+            'Valokuva näyttää Batavian hylystä pelastetun rungon kaarevat, tummuneet puuosat sekä taustalla kivisen holvikaariportaalin jäljennöksen Fremantlen laivanhylkymuseon galleriassa.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+          wiki: 'Batavia (1628 ship)',
+        },
+        {
+          otsikko: 'Sankarit Vasikkasaarella',
+          teksti:
+            'Cornelisz oli aiemmin lähettänyt noin 20 sotilaan ryhmän Wiebbe Hayesin johdolla naapurisaarelle, jota nykyisin kutsutaan West Wallabiksi, siinä uskossa että miehet kuolisivat janoon vailla vettä. Miehet löysivätkin makeaa vettä ja onnistuivat rakentamaan kalkkikivestä ja korallilohkareista matalan puolustusmuurin. Kun Hayes sai tietää saarilla tapahtuneista murhista, hänen ryhmänsä torjui menestyksekkäästi useita Corneliszin miesten hyökkäyksiä alkeellisin asein. Muurin ja siihen liittyvän kaivon jäänteet ovat säilyneet tähän päivään asti, ja niitä pidetään Australian vanhimpana tunnettuna eurooppalaisten rakentamana rakennelmana.',
+          tiedosto: 'The Fort - West Wallabi Island - Colour.JPG',
+          lyhyt: 'Wiebbe Hayesin miesten vuonna 1629 rakentaman linnakkeen rauniot West Wallabilla.',
+          selite:
+            'Valokuva näyttää matalan, rapistuneen kalkkikivimuurin rauniot kuivassa pensaikossa West Wallabi -saarella – Wiebbe Hayesin miesten 1629 rakentaman puolustusaseman jäänteet.',
+          lahde: 'Rupert Gerritsen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wiebbe Hayes',
+        },
+        {
+          otsikko: 'Portaali joka palasi kotiin',
+          teksti:
+            'Batavian ruumaan oli lastattu myös valmiiksi veistetty hiekkakivinen holvikaariportaali, joka oli tarkoitus pystyttää VOC:n uuden linnoituksen sisäänkäynniksi nykyisessä Indonesiassa. Haaksirikon jälkeen kivet vajosivat mereen laivan mukana, mutta sukeltajat löysivät ja nostivat ne esiin vasta 1970-luvun hylkytutkimuksissa. Kokoon ladottu, koristeltu holvikaari on nykyisin uudelleen pystytettynä esillä Geraldtonin omassa Länsi-Australian merenkulkumuseossa, lähellä paikkaa, jonne haaksirikkoutuneet aikoinaan tuotiin turvaan. Fremantlen suuremmassa laivanhylkymuseossa on esillä siitä valmistettu tarkka jäljennös.',
+          tiedosto: 'Batavia 05 gnangarra.jpg',
+          lyhyt: 'Batavian lastista pelastetun holvikaariportaalin jäljennös; alkuperäinen on Geraldtonissa.',
+          selite:
+            'Valokuva näyttää uudelleen kootun hiekkakivisen holvikaariportaalin, jonka pinnassa on veistettyjä koristekuvioita – tämä on Fremantlen museon jäljennös, alkuperäinen on esillä Geraldtonissa.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+          wiki: 'Batavia (1628 ship)',
+        },
+        {
+          otsikko: 'Hummerileirit riutalla tänään',
+          teksti:
+            'Houtman Abrolhos ei ole vain haaksirikkojen historiaa, vaan myös elävä työpaikka: saarilla toimii yhä kausiluonteisia kalastusleirejä, joissa sadat kalastajat asuvat maalis-kesäkuun pyyntikauden ajan mökeissä keskellä hiekkaa ja pensaikkoa. Leireissä pyydetään läntistä piikkihummeria, jonka saalis puretaan lopulta Geraldtonin satamaan. Samalla saaristo on yksi maailman tärkeimmistä merilintujen pesimäalueista, jossa pesii muun muassa yli miljoona paria kiitäjäliitoruokkeja, joten kalastus ja luonnonsuojelu on täytynyt sovittaa yhteen tarkoin säännöin. Vanhat kalastajamökit ja pinotut hummeripyydykset ovat osa saariston maisemaa jo vuosikymmenten takaa.',
+          tiedosto:
+            "Crayfisherman's shack with big kerosene fridge & little else. North Island Abrolhos W.A. north of Geraldton. Coral Island. (26539019529).jpg",
+          lyhyt: 'Kalastajan mökki ja pinotut hummeripyydykset Houtman Abrolhosilla vuonna 1959.',
+          selite:
+            'Vanha valokuva vuodelta 1959 näyttää pinottuja puisia hummeripyydyksiä, tynnyreitä ja pienen peltikatoksen valkoisella koralliittihiekalla North Islandilla Houtman Abrolhosilla.',
+          lahde: 'Dr Mary Gillham Archive Project, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Houtman Abrolhos',
+        },
+      ],
+    },
+  ],
+  joaopessoa: [
+    {
+      id: 'kaupunki',
+      nimi: 'João Pessoa',
+      johdanto:
+        'João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.',
+      nostot: [
+        {
+          otsikko: 'Kolmanneksi vanhin kaupunki',
+          teksti:
+            'João Pessoa syntyi 5. elokuuta 1585, kun portugalilaiset siirtomaaherrat solmivat rauhan alueella asuneen tabajara-heimon kanssa ja saivat luvan perustaa siirtokunnan Paraíban joen suulle. Ensimmäiset asukkaat asettuivat lokakuun lopussa Porto do Capimin rantaan, ja kaupunki sai nimekseen Cidade Real de Nossa Senhora das Neves – Lumen Neitsyen kuninkaallinen kaupunki. Tästä tuli aikanaan Brasilian kolmanneksi vanhin kaupunki: vain Salvador ja Rio de Janeiro olivat sitä vanhempia. Isoisän matkavuonna 1873 kaupunki oli jo lähes 300-vuotias, mutta yhä samalla joenmutkalla kuin ensimmäiset asukkaat olivat kerran valinneet.',
+          tiedosto: 'Catedral Basílica de Nossa Senhora das Neves.jpg',
+          lyhyt: 'Katedraali kohoaa João Pessoan kattojen ja Paraíban joen yllä.',
+          selite:
+            'Mustavalkoinen ilmakuva näyttää Nossa Senhora das Nevesin katedraalin kaksoistornit kaupungin kattojen ja taustalla siintävän Paraíban joen yllä.',
+          lahde: 'Rogerio121402, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+        {
+          otsikko: 'Filipeiasta Parahybaksi',
+          teksti:
+            'Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.',
+          tiedosto: 'Centro Histórico de João Pessoa - PB.JPG',
+          lyhyt: 'João Pessoan historiallinen keskusta kohoaa Paraíban joen mutkan yllä.',
+          selite:
+            'Valokuva näyttää João Pessoan historiallisen keskustan kirkontorneineen ja punakattoisine taloineen Paraíban joen mutkan yllä.',
+          lahde: 'Jailsoncoutinho, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+        {
+          otsikko: 'Hollantilaisten Frederikstad',
+          teksti:
+            'Vuonna 1585 – samana vuonna kuin kaupunki itse – valmistui Paraíban joen suulle Forte de Santa Catarina, joka puolusti siirtokuntaa ranskalaisten ja hollantilaisten hyökkäyksiltä. Ranskalaiset ja potiguara-intiaanit polttivat linnakkeen jo 1597, mutta se rakennettiin uudelleen ja kesti hollantilaisten hyökkäykset vielä 1630-luvulla. Alankomaiden kauppakomppania valtasi lopulta koko kaupungin 1634 ja nimesi sen Frederikstadiksi; miehityksen aikana hollantilaiset ottivat haltuunsa noin 19 alueen sokerimyllyä. Portugalilaiset karkottivat hollantilaiset 1654, ja linnake seisoo yhä jokisuulla – isoisänkin matka-aikaan jo lähes 300-vuotiaana vartijana.',
+          tiedosto: 'CacioMurilo Forteleza Sta Catarina Cabedelo PB (27018396028).jpg',
+          lyhyt: 'Forte de Santa Catarinan pihapiiri kappeleineen Cabedelon jokisuulla.',
+          selite:
+            'Valokuva näyttää Forte de Santa Catarinan sisäpihan: valkoiseksi kalkitun kappelin ja pitkän rakennussiiven nurmikentän reunalla, linnoituksen muurin siintäessä oikealla.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Forte de Santa Catarina',
+        },
+        {
+          otsikko: 'São Franciscon kultainen luostari',
+          teksti:
+            'Fransiskaanimunkit aloittivat São Franciscon luostarin ja kirkon rakentamisen 1589 auttaakseen jesuiittoja alkuperäiskansojen käännytystyössä. Kirkon pääosat valmistuivat parissa vuodessa, mutta koko kokonaisuus – luostari, kappelit ja pihamaa – täydentyi vasta 1788. Sisätiloja koristavat kullatut puuveistokset, joiden joukossa on Unescon maailmanlaajuisesti ainutlaatuiseksi nostama saarnastuoli, sekä atsulejo-laatat, jotka kuvaavat muun muassa Joosefin tarinaa Egyptissä. Hollantilaismiehitys vaurioitti rakennusta ja karkotti munkit 1636, mutta luostari seisoo yhä – Etelä-Amerikan suurimpana barokkimonumenttina, jonka läpi isoisäkin olisi kulkenut.',
+          tiedosto: 'Igreja São Francisco Paraíba 02.jpg',
+          lyhyt: 'São Franciscon kirkon kullattu alttarikoru ja pyhimyspatsas.',
+          selite:
+            'Valokuva näyttää São Franciscon kirkon kullatun sivukappelin: runsaasti kultakoristellun alttarikehyksen pyhimyspatsaineen sekä seinillä pyhimysmaalauksia.',
+          lahde: 'Monalisa Duarte dos Reis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'São Francisco Cultural Center',
+        },
+        {
+          otsikko: 'Amerikan mantereen aamun ensimmäinen piste',
+          teksti:
+            'Muutaman kilometrin päässä kaupungin keskustasta työntyy mereen Ponta do Seixas, koko Amerikan mantereen itäisin kärki – kaksoismantereen kummallakaan puoliskolla ei ole yhtään pistettä idempänä. Brasilian laivasto vahvisti aseman virallisesti vasta vuonna 1941, mutta maantiede ei ollut muuttunut miksikään: aamuaurinko oli noussut juuri tälle kalliolle ensimmäisenä koko Amerikassa jo isoisän matkavuonna 1873 ja kaikkina aamuina sitä ennen. Nykyään paikkaa merkitsee vuonna 1972 avattu Farol do Cabo Branco -majakka, ja sen vieressä siivekkään näköinen kompassiruusumonumentti osoittaa tarkalleen itään avautuvaa merta.',
+          tiedosto: 'Farol do Cabo Branco (8275471588).jpg',
+          lyhyt: 'Siivekäs kompassiruusumonumentti Amerikan mantereen itäisimmällä kärjellä.',
+          selite:
+            'Valokuva näyttää korkean, kapenevan tornin, jonka alaosasta työntyy kaksi siipimäistä betonilipaa vastakkaisiin suuntiin; torni kohoaa puuston keskellä myrskyisää taivasta vasten, edessä ketjuaita ja pieni ankkuripatsas.',
+          lahde: 'Rafael Vianna Croffi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ponta do Seixas',
+        },
+        {
+          otsikko: 'Sokerin vuosisadat ja kasvava kaupunki',
+          teksti:
+            'Isoisän matkavuonna 1873 Parahyba oli sokerin kaupunki: ruokopellot ja niitä pyörittävät engenho-myllyt olivat hallinneet seudun taloutta jo kolmen vuosisadan ajan perustamisesta lähtien. Väestönlaskennassa vuotta aiemmin, 1872, kaupungissa asui 24 714 henkeä, mikä teki siitä maakunnan neljänneksi väkirikkaimman paikkakunnan. Seuraavina vuosikymmeninä kaupunki vaurastui, ja näkyvin merkki siitä oli 3. marraskuuta 1889 avattu Teatro Santa Roza, Parahyban maakunnan tärkein teatteri. Vaaleanpunainen rakennus seisoo yhä samalla paikalla, muutaman korttelin päässä joenrannasta, jonka varrelle isoisän aikainen sokerikaupunki oli kasvanut.',
+          tiedosto: 'Teatro Santa Roza.jpg',
+          lyhyt: 'Teatro Santa Rozan vaaleanpunainen neoklassinen julkisivu aukiolla.',
+          selite:
+            'Valokuva näyttää Teatro Santa Rozan vaaleanpunaisen, uusklassisen julkisivun aukiolta käsin – rakennuksen otsikkokentässä lukee Theatro Santa Roza.',
+          lahde: 'Rogerio121402, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Riutat, kalliot ja sademetsä',
+      johdanto:
+        'João Pessoan liepeillä luonto tarjoaa vastakohtia: punertava hiekkakivijyrkänne syöksyy mereen, matalan veden riutat nostavat esiin väliaikaisen hiekkasaaren, ja keskellä kaupunkia kasvaa yhä 515 hehtaarin sademetsän jäänne.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta hehtaaria Mata do Buraquinhon sademetsän jäännöstä suojellaan keskellä João Pessoan kaupunkia?',
+        vaihtoehdot: ['120 hehtaaria', '515 hehtaaria', '1 200 hehtaaria', '3 000 hehtaaria'],
+        oikea: 1,
+        fakta:
+          'Mata do Buraquinho eli Jardim Botânico Benjamin Maranhão on 515 hehtaarin suojelualue keskellä João Pessoan kaupunkia – yksi maailman suurimmista tasaisista, luonnontilaisina säilyneistä sademetsän jäänteistä kaupunkialueella.',
+      },
+      nostot: [
+        {
+          otsikko: 'Cabo Brancon punainen kalliojyrkänne',
+          teksti:
+            'Kaupungin eteläreunalla meri on kaivertanut lähes 40 metriä korkean kalliojyrkänteen, jonka punaruskeat kerrostumat kuuluvat niin sanottuun Barreiras-muodostumaan – hiekka- ja savikivikerroksiin, jotka ovat huuhtoutuneet mantereen vanhoista kivilajeista miljoonien vuosien aikana. Kerrostumat ovat pehmeitä ja sortuvat helposti, joten jyrkänne syö itseään taaksepäin: rantaan on aseteltu suuria lohkareita hidastamaan sortumia ja suojaamaan rannan tuntumassa kulkevaa tietä. Jyrkänteen päällä kohoaa Oscar Niemeyerin suunnittelema valkoinen tiedekeskus, ja sen tuntumassa sijaitsee koko Amerikan mantereen itäisin kärki, josta avautuu näkymä turkoosiin mereen.',
+          tiedosto: 'Falésia do Cabo Branco, João Pessoa (PB).jpg',
+          lyhyt: 'Ilmakuva Cabo Brancon punaisesta jyrkänteestä ja rannikkotiestä.',
+          selite:
+            'Ilmakuva näyttää Cabo Brancon punertavan kalliojyrkänteen, sen päällä kohoavan valkoisen tiedekeskuksen sekä alla siintävän turkoosin meren ja riuttakuvioita.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Cabo Branco Lighthouse',
+        },
+        {
+          otsikko: 'Hiekkasärkkä joka nousee merestä',
+          teksti:
+            'Cabedelon edustalla, muutaman kilometrin päässä João Pessoan pohjoispuolella, nousee laskuveden aikaan esiin Areia Vermelha – noin kaksi kilometriä pitkä ja kilometrin levyinen hiekkasärkkä, joka on suurimman osan ajasta veden alla. Riutat suojaavat särkkää avomereltä koko Paraíban rannikon mitalta, ja niiden sisäpuolelle jää lämpimiä, kirkasvetisiä luonnonaltaita, joissa uiskentelee värikkäitä riuttakaloja. Alue rauhoitettiin 28. elokuuta 2000 osavaltion merelliseksi puistoksi, ja suojelualueen pinta-ala on 231 hehtaaria. Veneillä sinne pääsee vain muutamaksi tunniksi laskuveden aikaan, ennen kuin nouseva meri peittää hiekan jälleen näkyvistä.',
+          tiedosto: 'Areia Vermelha, Cabedelo (PB).jpg',
+          lyhyt: 'Ilmakuva Areia Vermelhan hiekkasärkästä ja riutta-altaista.',
+          selite:
+            'Ilmakuva näyttää Areia Vermelhan hiekkasärkän, joka on noussut esiin laskuveden aikana, ja sen ympärillä ihmisiä sekä veneitä matalassa vedessä.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Areia Vermelha Marine State Park',
+        },
+        {
+          otsikko: 'Sademetsä keskellä kaupunkia',
+          teksti:
+            'Kaupungin sisällä, muutaman kilometrin päässä rannikolta, kasvaa Mata do Buraquinho – Atlantin sademetsän jäänne, joka on säilynyt lähes koskemattomana keskellä kasvavaa suurkaupunkia. Suojeltua aluetta on yhteensä 515 hehtaaria, ja siitä 343 hehtaaria on avattu kävijöille Jardim Botânico Benjamin Maranhão -kasvitieteellisenä puutarhana, jossa kulkee kaksitoista opastettua polkua. Metsässä kasvaa yli 540 kasvilajia, muun muassa keltakukkaista ipê-puuta, joiden varjossa viihtyvät lukuisat linnut ja hyönteiset. Tutkijoiden mukaan se on maailman laajin tasainen, luonnontilainen sademetsä, joka on säilynyt yhtenäisenä keskellä kaupunkialuetta.',
+          tiedosto: 'Jardim Botânico Benjamin Maranhão (JBBM), João Pessoa (PB).jpg',
+          lyhyt: 'Lampi heijastaa huvimajaa ja tiheää sademetsää Jardim Botânicossa.',
+          selite:
+            'Valokuva näyttää tyynen lammen, joka heijastaa pientä huvimajaa ja sitä ympäröivää tiheää sademetsää Jardim Botânico Benjamin Maranhãossa.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Atlantic Forest',
+        },
+        {
+          otsikko: 'Riutat jotka rakentavat rannikon',
+          teksti:
+            'João Pessoan rantaviivaa suojaa lähes koko matkaltaan luonnollinen hiekkakivi- ja koralliriuttojen linja, joka kulkee muutaman sadan metrin päässä rannasta. Laskuveden aikaan riutat paljastuvat ja niiden sisäpuolelle jää matalia, lämpimiä vesialtaita, joissa lapset ja aikuiset kahlaavat rauhassa aaltojen ulottumattomissa. Samat riutat hidastavat aaltoja ja hillitsevät rannikkoeroosiota, minkä ansiosta kaupungin hiekkarannat ovat pysyneet leveinä vuosikymmenestä toiseen. Ponta do Seixasin edustalla vesi vaihtaa väriään turkoosista syvänsiniseksi juuri riuttalinjan kohdalla, ja paikalliset kalastajat tuntevat nämä vedet edelleen parhaina kalapaikkoinaan.',
+          tiedosto: 'Ponta do Seixas, João Pessoa (PB).jpg',
+          lyhyt: 'Rauhallinen merinäkymä Ponta do Seixasin rannalta pienine veneineen.',
+          selite:
+            'Valokuva näyttää tyynen meren Ponta do Seixasin edustalla; vedessä on pieni kalastusvene ja etualalla rantakasvillisuutta.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Coral reef',
+        },
+      ],
+    },
+  ],
+  bananal: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ilha do Bananal',
+      johdanto:
+        'Ilha do Bananal on maailman suurin sisämaan jokisaari Araguaia-joen keskellä Keski-Brasiliassa – karajá- ja javaé-kansojen koti jo kauan ennen kuin ulkopuoliset edes tiesivät koko saaren olemassaolosta.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin jokisaari',
+          teksti:
+            'Ilha do Bananal syntyy, kun Araguaia-joki haarautuu kahtia: läntinen haara säilyttää Araguaia-nimen, itäinen tunnetaan Javaés-jokena, ja nämä kaksi virtaa yhtyvät jälleen vasta 320 kilometrin päässä. Väliin jää maa-alue, joka on lähes 20 000 neliökilometrin kokoinen – enemmän kuin Israel kokonaisuudessaan – ja jota pidetään maailman suurimpana sisämaan jokisaarena, jolla ei ole lainkaan merenrantaa. Saarelle ei vieläkään johda yhtään siltaa: matka tehdään veneellä tai kuivana kautena kahlaten, aivan kuten isoisän aikana 1870-luvulla.',
+          tiedosto: 'Ilha bananal.jpg',
+          lyhyt: 'Aamuvalossa kuvattu hiekkasärkkä Araguaia-joella lähellä Ilha do Bananalia.',
+          selite:
+            'Kuva näyttää auringon värjäämän hiekkarannan ja matalan joen, jonka toisella puolella kasvaa tiheää rantametsää – tyypillisen näkymän saaren ympärillä virtaavasta Araguaia-joesta.',
+          lahde: 'Amanda Leite, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bananal Island',
+        },
+        {
+          otsikko: 'Vielä 1873 tuntematon aarremaa',
+          teksti:
+            'Sertanista José Pinto Fonseca merkitsi saaren löydetyksi jo vuonna 1773, mutta ”löytäminen” tarkoitti käytännössä vain sitä, että sen olemassaolo kirjattiin ylös. Koko 1800-luvun ajan saaren sisäosat pysyivät virallisilla kartoilla tyhjänä läikkänä: sinne tunkeutuivat lähinnä orjametsästäjien retkikunnat, jotka karkottivat karajá- ja javaé-kyliä mutta eivät piirtäneet mitään muistiin. Vasta 1940-luvulla, kun Villas Bôas -veljesten retkikunta lähti Araguaia-joen rannalta Aragarçasista kartoittamaan Keski-Brasilian sisämaata kohti Xingua, alue alkoi vähitellen aueta ulkopuolisen maailman kartoille – lähes 170 vuotta isoisän matkan jälkeen.',
+          tiedosto: 'Rio Araguaia, Aruanã, fronteira entre Goiás e Mato Grosso, agosto de 2025 (19).jpg',
+          lyhyt: 'Leveä Araguaia-joki ja sen rannalle rakennetut pienet mökit.',
+          selite:
+            'Valokuvassa avautuu leveä Araguaia-joki, jonka kaukaisella rannalla erottuu pieniä puumökkejä – joki on edelleen alueen tärkein, usein ainoa kulkuväylä.',
+          lahde: 'Fronteira, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Villas-Bôas brothers',
+        },
+        {
+          otsikko: 'Suojeltu maa vuodesta 1959',
+          teksti:
+            'Brasilian valtio suojeli koko saaren joulukuun viimeisenä päivänä 1959: pohjoisosaan perustettiin Parque Nacional do Araguaia, noin 5 600 neliökilometrin kansallispuisto, kun taas keski- ja eteläosa, noin 13 600 neliökilometriä, varattiin alkuperäiskansojen kulttuurialueeksi vuoden 1973 intiaanilain nojalla. Unesco lisäsi koko saaren biosfäärialueiden verkostoonsa vuonna 1993. Nykyisin saaren koko väestö on alkuperäiskansoja – karajá, javaé, avá-canoeiro ja tapirapé – eikä yksikään ulkopuolinen voi asettua saarelle omin päin.',
+          tiedosto: 'Vista do Parque Nacional do Araguaia.jpg',
+          lyhyt: 'Iltahämärässä kuvattu jokiuoma kansallispuiston sademetsän keskellä.',
+          selite:
+            'Kuva näyttää kapean, puiden reunustaman jokiuoman ja sen pinnalla kelluvia vesikasveja kansallispuiston alueella iltahämärässä.',
+          lahde: 'Rodrigo José Fernandes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Araguaia National Park',
+        },
+        {
+          otsikko: 'Tulvasavannin rytmi',
+          teksti:
+            'Ilha do Bananal elää joen tahdissa. Kuivana kautena, kesä-elokuussa, vedenpinta laskee niin paljon, että joen voi ylittää ajoneuvolla kahlaamalla, ja hiekkarannat paljastuvat laajoina särkkinä. Sadekautena samat alueet peittyvät tulvaveden alle, ja savannin, babassupalmumetsien ja tulvametsien mosaiikki muuttuu järvien ja soiden verkostoksi. Tämä vuosittainen tulvapulssi on koko saaren ekosysteemin ja sen asukkaiden elämän perusta: se täyttää kalavedet, kastelee viljelysmaat ja tarjoaa kilpikonnille ja linnuille pesimäpaikkoja, kun vesi vetäytyy.',
+          tiedosto: 'Rio Javaés.jpg',
+          lyhyt: 'Hiekkaranta Javaés-joen varrella Ilha do Bananalin sisällä, Aldeia Txuirin kohdalla.',
+          selite:
+            'Valokuva on otettu Javaés-joen rannalta saaren sisältä, Aldeia Txuirin kylän kohdalta – rauhallinen vesi ja hiekkaranta paljastuvat kuivana kautena.',
+          lahde: 'Arthur to, Wikimedia Commons (Public domain)',
+          wiki: 'Araguaia River',
+        },
+        {
+          otsikko: 'Jättiläissaukot naapurikosteikossa',
+          teksti:
+            'Naapurissa sijaitsevan Cantãon suojelualueen kosteikoilla, aivan Ilha do Bananalin rajalla, tutkijat ovat seuranneet samaa jättiläissaukkolaumaa (Pteronura brasiliensis) vuodesta 2010 lähtien. Jättiläissaukko on Etelä-Amerikan suurin saukkolaji: aikuinen voi kasvaa yli 1,7-metriseksi ja painaa yli 30 kiloa, ja perhe metsästää yhdessä kalaparvia joen mutkissa. Samoilla vesillä elää myös jaguaari, tunnetusti kissaeläimistä vesiharrastunein: se ui mielellään yli jokien ja saalistaa jopa kaimaaneja rannan tuntumassa.',
+          tiedosto: 'Four Giant Otters.JPG',
+          lyhyt: 'Neljä jättiläissaukkoa nousemassa rantatörmälle juurakon seassa.',
+          selite:
+            'Kuvassa neljä jättiläissaukkoa kiipeää mutaista rantatörmää pitkin puiden juurien seassa, yksi vielä puolittain vedessä.',
+          lahde: 'Rio Cicica, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Giant otter',
+        },
+        {
+          otsikko: 'Oma jokidelfiinilaji',
+          teksti:
+            'Vuonna 2014 tutkijat julistivat Araguaia-joen delfiinit omaksi lajikseen, Inia araguaiaensis, aiemmin Amazonin jokidelfiinin alalajina pidetyn populaation sijaan. Laji elää vain Araguaia–Tocantins-joen vesistössä, ja sitä on havaittu muun muassa Ilha do Bananalin eteläpuolella aina Santa Isabelin koskille asti. Harmaanpunertava, pitkäkuonoinen delfiini nousee pintaan hengittämään muutaman sekunnin välein ja on koko olemassaolonsa ajan elänyt uhanalaisena: patoja, kalastusverkkoja ja saastumista riittää sen ainoalla kotivedellä.',
+          tiedosto: 'Inia araguaiensis.jpg',
+          lyhyt: 'Araguaian jokidelfiini pulpahtaa pintaan hengittämään.',
+          selite:
+            'Kuva näyttää delfiinin harmaanpunertavan selän ja pitkän kuonon veden pinnalla juuri sen noustessa hengittämään.',
+          lahde: 'Rio Cicica, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Araguaian river dolphin',
+        },
+        {
+          otsikko: 'Maailman suurin kilpikonnien pesimäranta',
+          teksti:
+            'Araguaia-joen hiekkasärkät, myös Bananalin sisällä virtaavan Javaés-joen varrella, muodostavat yhden maailman suurimmista jättiläisten amazoninkilpikonnien (Podocnemis expansa) pesimäalueista. Naaraat kaivavat munapesänsä kuivan kauden paljastamille hiekkarannoille, ja tutkijat ovat havainneet, että pesäpaikan valinta ei ole sattumaa: rannan kaltevuus ja hiekkatason korkeus ratkaisevat, mihin kohtaan munat kaivetaan. Kilpikonnat jakavat rannat pienemmän Podocnemis unifilis -lajin kanssa, joka pesii samoilla särkillä ylempänä.',
+          tiedosto: 'Podocnemis expansa INPA.jpg',
+          lyhyt: 'Amazoninkilpikonna kurkottaa kuoreltaan kameraan.',
+          selite:
+            'Lähikuvassa amazoninkilpikonna kurottaa kaulaansa esiin kilvestään, toisen kilpikonnan pää näkyy vasemmassa yläkulmassa.',
+          lahde: 'Whaldener Endo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arrau turtle',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Iny-kansat: karajá ja javaé',
+      johdanto:
+        'Karajá ja javaé kutsuvat itseään yhteisesti inyiksi. He ovat kalastaneet Araguaialla ja Ilha do Bananalilla sukupolvien ajan ja muovanneet savesta pieniä maailmoja jo kauan ennen kuin ulkopuoliset matkustivat heidän luokseen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Ritxoko-savinuket julistettiin Brasilian aineettomaksi kulttuuriperinnöksi?',
+        vaihtoehdot: ['1998', '2005', '2012', '2020'],
+        oikea: 2,
+        fakta:
+          'Ritxoko-nuket kirjattiin Brasilian aineettomaksi kulttuuriperinnöksi vuonna 2012, ja karajá-naisten taito tunnustettiin sellaisenaan vaalimisen arvoiseksi tiedoksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksi kansaa, yksi virta',
+          teksti:
+            'Karajá asuu saaren länsiosan kylissä ja javaé Javaés-joen varrella; molemmat puhuvat samaan makro-jé-kieliperheeseen kuuluvaa kieltä, jossa naisten ja miesten puhetavat eroavat toisistaan selvästi. Väkiluku on vaihdellut rajusti: 1770-luvulla alueella arvioitiin asuvan 7 000–8 000 inyä, mutta tautien ja väkivaltaisten kohtaamisten seurauksena luku romahti vain noin 815 henkeen vuoteen 1908 mennessä. Vuoteen 2020 mennessä väestö oli elpynyt jo 4 373 henkeen lähes 30 kylässä – hidas mutta selvä paluu joen rannoille.',
+          tiedosto: 'Canoa de los indios karajá con personas pescando. Siglo XX. Museo de América 01.jpg',
+          lyhyt: 'Savista muovailtu kanootti, jossa kaksi maalattua hahmoa ja kaimaani.',
+          selite:
+            'Keraaminen pienoismalli näyttää kaksi vartaloonsa maalattua hahmoa istumassa kanootissa, niiden välissä pitkänomainen kaimaanihahmo.',
+          lahde: 'Dorieo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+        {
+          otsikko: 'Ritxoko — savi joka opettaa',
+          teksti:
+            'Ritxoko-nuket ovat karajá-naisten savesta muovaamia hahmoja, jotka esittävät kylän ihmisiä eri elämänvaiheissa: raidat, pisteet ja vyöt kertovat iästä, sukupuolesta ja yhteisön asemasta. Perinteisesti niitä on annettu lapsille leikkeihin, joissa opitaan perheen roolit ja yhteisön säännöt jo ennen kuin niitä osataan sanoin selittää. Vuonna 2012 Ritxoko-nuket kirjattiin viralliseksi osaksi Brasilian aineetonta kulttuuriperintöä, ja karajá-naisten taito tunnustettiin sellaisenaan vaalimisen arvoiseksi tiedoksi.',
+          tiedosto: 'Boneca carajá em barro cozido 01.jpg',
+          lyhyt: 'Ritxoko-nukke, jonka vartaloon on maalattu raidoituksia.',
+          selite:
+            'Kuvassa istuva savinukke, jonka kasvoihin, vartaloon ja jalkoihin on maalattu mustavalkoisia raitakuvioita, korvissa punaiset sulkakoristeet.',
+          lahde: 'Uèriko Oexaro (Karajá artisan), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+        {
+          otsikko: 'Jaguaari savenvalajan käsissä',
+          teksti:
+            'Kaikki ritxoko-hahmot eivät esitä ihmisiä: savenvalajat muovaavat myös eläinhahmoja, joissa toistuvat joen ja savannin tutut asukkaat. Pilkullinen turkki ja valpas ilme tekevät jaguaarista yhden suosituimmista aiheista – eläimestä, joka jakaa saman elinympäristön inyjen kanssa ja esiintyy myös heidän kertomuksissaan voimakkaana hahmona. Eläinhahmot syntyvät samalla tekniikalla kuin ihmisfiguurit: savi kuivataan ja poltetaan, minkä jälkeen kuviot maalataan käsin luonnonväreillä ennen kuin figuuri on valmis.',
+          tiedosto: 'Statuette Karajà MHNT.ETH.2010.24.90.jpg',
+          lyhyt: 'Savesta muovailtu ja pilkuin maalattu jaguaarihahmo.',
+          selite:
+            'Kuvassa nelijalkainen savihahmo, jonka vaaleaan pintaan on maalattu mustia pilkkuja ja raitoja jaguaarin turkin tapaan.',
+          lahde: 'Roger Culos, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jaguar',
+        },
+        {
+          otsikko: 'Sulka, siima ja peili',
+          teksti:
+            'Sulista, siimasta ja pienestä peilistä koottu koriste kerää yhteen inyjen juhlaperinteen monta ainesta: ara- ja papukaijalintujen höyhenet tuotiin usein kauppateitse muilta alueilta, kudonta tehtiin käsin kasvikuiduista, ja lopputulos ripustettiin osaksi juhla-asua. Tämä nimenomainen koriste kerättiin Aldeia Fontouran kylästä Ilha do Bananalin sisältä vuonna 1979, samalta saarelta jolla javaé ja karajá edelleen asuvat. Koristeiden tekeminen vaatii kärsivällisyyttä: yhden sulkakoristeen valmistaminen voi viedä useita päiviä.',
+          tiedosto: 'Testeira - Carajá MN 03.jpg',
+          lyhyt: 'Sulista ja pienestä peilistä koottu juhlakoriste.',
+          selite:
+            'Kuva näyttää pyöreän, kudotun koristeen, jonka keskellä on pieni peili ja reunoilla vihreitä sulkia, alaosassa timantinmuotoinen riipus ja sulkatupsuja.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+      ],
+    },
+  ],
+  alkufra: [
+    {
+      id: 'kaupunki',
+      nimi: 'Al Kufra',
+      johdanto:
+        'Al Kufra on viiden oaasin ryppäs syvällä Kaakkois-Libyan Saharassa, satojen kilometrien päässä lähimmästä naapuristaan. Isoisän matkavuonna 1873 se oli eurooppalaisille yhä täysin tuntematon paikka.',
+      nostot: [
+        {
+          otsikko: 'Al Jawf – oaasiryhmän sydän',
+          teksti:
+            'Kufran oaasiryhmä on soikea, noin 50 kilometriä pitkä ja 20 kilometriä leveä allas, jota reunustavat sata metriä korkeat hiekkakukkulat. Altaan pohjalla on viisi erillistä asutuskeskittymää: suurin niistä, Al Jawf, on runsaat viisi kilometriä pitkä ja kahdesta kolmeen kilometriä leveä, ja sen keskellä kimmeltää suolajärvi. Muualla altaassa vuorottelevat punertava hiekka, palmulehdot ja pienet suolapainanteet. Isoisän aikana tänne ei johtanut yhtään merkittyä tietä — vain karavaanien jättämät jäljet hiekassa kertoivat, että joku oli kulkenut samaa reittiä ennenkin.',
+          tiedosto: 'Kufra SPOT 1301.jpg',
+          lyhyt: 'Al Jawf ja sen ympärillä kaartuvat kastelukehät ilmakuvassa.',
+          selite:
+            'Satelliittikuva näyttää Kufran oaasiryhmän pääkylän Al Jawfin harmaine kortteleineen ja suolajärvineen sekä sen ympärillä hiekkaan piirtyvät kuusikulmaiset ja pyöreät kastelupellot.',
+          lahde: 'CNES – Spot Image, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: 'Zuwayya valtaa oaasin',
+          teksti:
+            'Kufran alkuperäisasukkaita olivat toubut, joilla oli oaasissa linnoitettuja kyliä jo vuosisatoja ennen arabiheimojen tuloa. 1800-luvun alussa arabialainen zuwayya-heimo hyökkäsi alueelle saatuaan Tripolin ottomaanipashalta aseita ja sotilaita, ja vuoteen 1840 mennessä zuwayyat hallitsivat koko oaasiryhmää; moni toubu joutui pakenemaan tai alistumaan voittajille. Valloittajat kutsuivat alkuperäisasukkaita halventavasti nimellä ”kuffar”, uskottomat — ja tästä sanasta koko oaasi sai lopulta nimensä, Kufra. Zuwayyoista tuli oaasin uusi isäntäheimo, joka hallitsi sen kaivoja ja palmulehtoja seuraavat vuosikymmenet.',
+          tiedosto: 'Kufra 1930-1.jpg',
+          lyhyt: 'Savimuurinen linnoitus ja yksinäinen palmu Kufrassa vuonna 1930.',
+          selite:
+            'Vuonna 1930 otettu valokuva näyttää paksun savimuurin ja sen suojissa kasvavan yksinäisen palmun — tällaisia linnoitettuja muureja sekä toubut että myöhemmin zuwayyat rakensivat oaasin kyliin.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (Public domain)',
+          wiki: 'Zuwayya',
+        },
+        {
+          otsikko: 'Karavaanien risteysasema',
+          teksti:
+            'Kufra makasi juuri siinä kohtaa Saharaa, jossa pohjois-eteläsuuntainen reitti Bengazista Vadai-valtakuntaan risteytyi itä-länsisuuntaisiin karavaaniteihin. Kauppiaat pysähtyivät oaasissa täyttämään vesisäkkinsä ja lepäyttämään kameleitaan ennen seuraavaa, viikkoja kestävää autiomaataivalta. Karavaanien mukana kulki taateleita, strutsinsulkia ja norsunluuta pohjoiseen, kangasta ja aseita etelään — ja koska reitti oli ainoa käytännöllinen tapa ylittää tämä osa Saharaa, kuka tahansa hallitsi Kufraa, hallitsi myös kauppaa. Se teki oaasista sekä haluttavan että vaarallisen paikan: hyvin harva ulkopuolinen pääsi sinne ilman paikallisten lupaa.',
+          tiedosto: 'Caravan in the desert.jpg',
+          lyhyt: 'Kamelikaravaani ylittää hiekkadyynejä Saharassa.',
+          selite:
+            'Nykyvalokuva Marokon Saharasta näyttää kamelikaravaanin ylittämässä dyynejä — samanlaisia näkyjä koki jokainen, joka kulki Kufran kautta kulkeneita karavaanireittejä.',
+          lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Trans-Saharan trade',
+        },
+        {
+          otsikko: 'Rohlfsin vaarallinen matka Kufraan',
+          teksti:
+            'Vain kuusi vuotta isoisän oman matkan jälkeen, joulukuusta 1878 lokakuuhun 1879, saksalainen tutkimusmatkailija Gerhard Rohlfs yritti kulkijatoverinsa Anton Steckerin kanssa Tripolista Kufran kautta Vadai-valtakuntaan. Rohlfs oli ensimmäinen eurooppalainen, joka saapui Kufraan asti — mutta vastaanotto oli kylmä: epäluuloiset zuwayyat ryöstivät retkikunnan karavaanin, ja miehet olisivat tuskin selvinneet hengissä, ellei viestintuoja olisi ehtinyt kertoa, että Suur-Senussi itse oli neuvotellut heille turvan Tripolin ottomaanikuvernöörin kanssa. Rohlfs joutui silti perääntymään saavuttamatta Vadaita ja pääsi rannikolle Bengaziin lokakuussa 1879.',
+          tiedosto:
+            "Übersichtskarte von G. Rohlfs' Expedition in Tripolitanien, Barka und der Oasengruppe von Kufra, Dec. 1878 bis Oct. 1879.png",
+          lyhyt: 'Kartta Rohlfsin Kufran-retkikunnan reitistä vuosilta 1878-1879.',
+          selite:
+            'Vuonna 1880 julkaistu kartta näyttää punaisella Gerhard Rohlfsin retkikunnan reitin Tripolista Kyrenaikan kautta Kufran oaasiryhmään ja takaisin rannikolle Bengaziin.',
+          lahde: 'Bruno Hassenstein, Wikimedia Commons (Public domain)',
+          wiki: 'Friedrich Gerhard Rohlfs',
+        },
+        {
+          otsikko: 'Rebiana – hiekkameri Kufran ympärillä',
+          teksti:
+            'Kufran itä- ja eteläpuolella leviää Rebianan hiekkameri, noin 65 000 neliökilometrin laajuinen dyynialue, joka on yksi koko Saharan autioimmista kolkista. Tuulen muovaamat dyyniharjanteet voivat kohota useita kymmeniä metrejä, ja niiden välissä ei kasva juuri mitään satojen kilometrien matkalla. Juuri tämä äärimmäinen eristyneisyys teki Kufrasta vuosisatojen ajan turvapaikan: hiekkameren ylittäminen vaati niin paljon aikaa ja varusteita, että vain päättäväisimmät karavaanit ja myöhemmin pakolaiset uskalsivat yrittää sitä. Vasta 1900-luvun teknologia, lentokoneet ja moottoriajoneuvot, mursi lopulta tämän suojan.',
+          tiedosto: 'Kufra District, Libya (34446934481).jpg',
+          lyhyt: 'Rebianan hiekkameren dyyniharjanteet Kufran laidalla.',
+          selite:
+            'Landsat-satelliittikuva näyttää Rebianan hiekkameren tuulen muovaamat dyyniharjanteet, jotka työntyvät kohti Kufran oaasin reunaa kuvan oikeassa alakulmassa.',
+          lahde:
+            'O.V.E.R.V.I.E.W. (Landsat 8 / USGS, käsittely Paul Quast), Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Rebiana Sand Sea',
+        },
+      ],
+    },
+    {
+      id: 'senussit',
+      nimi: 'Senussi-veljeskunta',
+      johdanto:
+        'Kufran teki 1800-luvun lopulla kuuluisaksi Senussi-veljeskunta, islamilainen uskonnollinen liike, joka pakeni tänne ottomaanien painostusta ja teki oaasista koko liikkeen uuden pyhän pääkaupungin.',
+      tehtava: {
+        kysymys: 'Minä vuonna Senussien johto pakeni Jaghbubista Kufraan?',
+        vaihtoehdot: ['1873', '1885', '1895', '1902'],
+        oikea: 2,
+        fakta:
+          'Senussien johto siirtyi Jaghbubista Kufraan vuonna 1895 ottomaanien painostuksen vuoksi, ja Muhammad al-Mahdi as-Senussi perusti sinne uuden pyhän kylän, El Tagin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suur-Senussi ja erämaan veljeskunta',
+          teksti:
+            'Algerialaissyntyinen Muhammad ibn Ali as-Senussi, jota kutsuttiin myös Suur-Senussiksi, perusti oman sufilaisen veljeskuntansa Mekassa vuonna 1837, kaksi vuotta sen jälkeen kun hän oli rakentanut ensimmäisen opinahjonsa lähelle kaupunkia. Wahhabien painostus ajoi hänet pian takaisin Pohjois-Afrikkaan, ja Kyrenaikaan hän rakensi uuden päämajan, Zawiya al-Baidan eli ”Valkoisen luostarin”. Sieltä käsin liike levitti zawija-verkostoaan aina Siwan oaasista Kufran kautta Borkuhun asti ja kannusti samalla kauppaa Tripoliin ja Bengaziin — uskonto ja kauppareitit kulkivat Saharassa käsi kädessä.',
+          tiedosto: 'Senussi Map3.png',
+          lyhyt: 'Kartta Senussi-veljeskunnan vaikutusalueesta noin vuonna 1880.',
+          selite:
+            'Jälkikäteen laadittu kartta esittää Senussi-veljeskunnan zawija-verkoston ja vaikutusalueen laajuuden Kyrenaikassa ja Saharassa noin vuonna 1880.',
+          lahde: 'AbdurRahman & Retf, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Senusiyya',
+        },
+        {
+          otsikko: 'Zawiya – erämaan opinahjo',
+          teksti:
+            'Zawiya oli Senussien liikkeen perusyksikkö: samaan pihapiiriin mahtuivat moskeija, koraanikoulu, vierasmaja ja usein myös perustajansa hauta. Zawijoissa opetettiin paitsi islamin oppia ja arabian kieltä, myös käytännön taitoja kuten kirjanpitoa ja kivääreiden käyttöä, ja niissä saatettiin isännöidä satapäisiäkin heimoedustajien kokouksia, kun naapuriheimojen välejä piti sopia. Verkosto teki Senusseista paljon enemmän kuin pelkän uskonlahkon: se oli koko Saharan laajuinen koulutus-, väestönhallinta- ja kauppajärjestelmä, joka piti yllä järjestystä siellä, missä mikään valtio ei ulottunut.',
+          tiedosto: 'Entrée zaouïa Darqawiyya à Salé (Maroc).jpg',
+          lyhyt: 'Zawiyan koristeltu sisäänkäynti Marokon Salésta.',
+          selite:
+            'Valokuva Marokon Salésta näyttää perinteisen zawiyan koristellun sisäänkäyntioven — samantyyppisiä opinahjoja ja rukoushuoneita Senussit rakensivat myös Kufraan ja Jaghbubiin.',
+          lahde: 'Ismael Zniber, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Zawiya (institution)',
+        },
+        {
+          otsikko: 'Pako Jaghbubista Kufraan',
+          teksti:
+            'Vuonna 1895 ottomaanien painostus ajoi Senussien johdon pakenemaan pyhästä kaupungistaan Jaghbubista yhä syvemmälle autiomaahan, Kufraan. Liikkeen uusi johtaja Muhammad al-Mahdi as-Senussi perusti oaasiryhmän pohjoisreunalle uuden kylän, El Tagin, jonne hän rakennutti zawijan, moskeijan ja sukunsa hautapaikan — myöhemmin myös oman hautansa. Aikalaiskartat merkitsivät alueen zawijoita omalla nimellään, kuten tässä vuoden 1891 kartassa näkyvä Zaouya el-Istat, ja samalla ne piirsivät rajan eteläpuolella asuvien tibbujen alueelle — muistutuksena siitä, että Kufra oli yhä kahden maailman raja-aluetta.',
+          tiedosto: 'AFR V2 D049 Kufra oasis.jpg',
+          lyhyt: 'Vuoden 1891 kartta Kufran oaasista ja sen zawijoista.',
+          selite:
+            'Vuodelta 1891 peräisin oleva käsinpiirretty kartta merkitsee Kufran oaasiryhmän asutukset, siellä sijainneen Zaouya el-Istatin zawijan sekä eteläpuolella asuvien tibbujen alueen.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'El Tag',
+        },
+        {
+          otsikko: 'Perintö joka jatkui 1900-luvulle',
+          teksti:
+            'Senussien perustajasuvun perintö ei kadonnut minnekään, vaikka veljeskunta joutuikin pakenemaan yhä syvemmälle autiomaahan. Perustajan pojanpoika Idris as-Senussi kuvattiin tässä lehtikuvassa vuonna 1923, kun hän johti liikettä nuorena miehenä — samaa sukua, joka oli kerran hakenut turvaa Kufran hiekasta. Vuosikymmeniä myöhemmin, vuonna 1951, hänestä tuli itsenäisen Libyan ensimmäinen kuningas: erämaahan paennut uskonnollinen veljeskunta oli lopulta noussut hallitsemaan koko maata, jonka rajojen sisällä Kufrakin sijaitsi.',
+          tiedosto: 'Sheik el Senussi - btv1b53098289v.jpg',
+          lyhyt: 'Idris as-Senussi lehtikuvassa vuonna 1923.',
+          selite:
+            'Vuonna 1923 otettu lehtikuva näyttää nuoren Idris as-Senussin, Senussi-veljeskunnan perustajan pojanpojan, joka nousi myöhemmin itsenäisen Libyan ensimmäiseksi kuninkaaksi.',
+          lahde: 'Agence Rol / Bibliothèque nationale de France, Wikimedia Commons (Public domain)',
+          wiki: 'Idris of Libya',
+        },
+      ],
+    },
+  ],
+  macapa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Macapá',
+      johdanto:
+        'Macapá on ainoa Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja kulkee: se syntyi 1700-luvulla Amazonin suiston rajavartiopaikaksi ja on nykyisin lähes 490 000 asukkaan portti sademetsään.',
+      nostot: [
+        {
+          otsikko: 'Rajalinnake syntyy',
+          teksti:
+            'Portugalilaiset perustivat São José de Macapán 4. helmikuuta 1758 entisen, jo vuodesta 1738 toimineen sotilasvartion paikalle Amazonin suiston pohjoisrannalla. Alue oli kiistanalainen: Ranska hallitsi lähialueita Ranskan Guyanassa, ja myös Alankomaat oli kiinnostunut suistosta. Vuonna 1764 italialainen insinööri Henrique António Galuzzi aloitti Fortaleza de São José de Macapán rakentamisen; tähdenmuotoinen, nelibastioninen linnoitus valmistui vasta 1782, kun kuumeet ja orjien pakenemiset hidastivat 18 vuotta kestänyttä urakkaa. Linnoitusta pidetään nykyisin kaupungin symbolisena syntymäpaikkana.',
+          tiedosto: 'Canhão da Fortaleza de São José de Macapá.JPG',
+          lyhyt: 'Vanha tykki tähtää linnoituksen muuriaukosta kohti Amazon-jokea.',
+          selite:
+            'Kuvassa vanha rautatykki lepää puisilla lavetilla kahden tiilimuurin välisessä aukossa; aukon läpi näkyy leveä, sameanruskea Amazon-joki ja pieni valkoinen vartiotorni muurin kulmassa.',
+          lahde: 'Alécio Cezar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fortaleza de São José de Macapá',
+        },
+        {
+          otsikko: 'Vartiotorni joka tuijotti jokea',
+          teksti:
+            'Fortaleza de São José de Macapán vartiotornista näkyy Amazon-joki niin leveänä, ettei vastarantaa erota: linnoitus seisoo pienellä tasangolla suiston pohjoishaaran partaalla, ja virta kuljettaa mukanaan niin paljon liejua, että vesi näyttää kellanruskealta kymmenien kilometrien päähän rannasta. Isoisän matkavuonna 1873 linnoitus oli seisonut paikallaan jo yli yhdeksänkymmentä vuotta: sen tykit eivät enää vartioineet hyökkääjää, mutta höyrylaivat ja kanootit kulkivat yhä sen ohi kohti sisämaata ja takaisin merelle.',
+          tiedosto: 'Guarita da Fortaleza de São José de Macapá com a vista do Rio Amazonas.JPG',
+          lyhyt: 'Amazon on suistossaan niin leveä, ettei vastarantaa erota linnoituksen tornista.',
+          selite:
+            'Kuvassa valkoiseksi rapattu vartiotorni (garita) linnoituksen muurilla, ja sen takana avautuu näköalattoman leveä, ruskeanharmaa Amazon-joki, jolla kelluu pieni vene; alhaalla kulkee valkokaiteinen rantareitti.',
+          lahde: 'Alécio Cezar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amazon River',
+        },
+        {
+          otsikko: 'Nollapiiri keskellä kaupunkia',
+          teksti:
+            'Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".',
+          tiedosto: 'Linha do Equador Macapá AP,Brasil - panoramio.jpg',
+          lyhyt: 'Marco Zero -muistomerkki merkitsee tarkan kohdan, jossa päiväntasaaja halkoo Macapán.',
+          selite:
+            'Kuva näyttää alhaalta kuvattuna korkean, kapean betoniobeliskin sinistä taivasta vasten: tornin yläosassa on pyöreä aukko ja sivussa kapea tikapuu, keltavihreä pystyraita jakaa tornin kahtia.',
+          lahde: 'Jose Donizetti Dias, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Macapá',
+        },
+        {
+          otsikko: 'Jalkapalloa kahdella pallonpuoliskolla',
+          teksti:
+            'Macapán jalkapallostadion valmistui vuonna 1990 nimellä Estádio Ayrton Senna suoraan päiväntasaajan päälle: kentän keskiviiva osuu tarkalleen nollaleveyspiirille. Se nimettiin uudelleen vuonna 1994 amapálaisen urheilujohtajan Milton de Souza Corrêan mukaan, mutta kaupunkilaiset kutsuvat sitä yhä lempinimellä Zerão, "Iso nolla". Ottelun aikana toinen joukkue puolustaa maalia pohjoisella pallonpuoliskolla ja toinen eteläisellä. Stadion suljettiin vuonna 2007 ja avattiin seitsemän vuoden peruskorjauksen jälkeen uudelleen 2014; katsomoon mahtuu nykyisin 13 680 katsojaa.',
+          tiedosto: 'Estádio Milton Corrêa 2014.jpg',
+          lyhyt: 'Zerão-stadionin keskiviiva osuu tarkalleen päiväntasaajalle.',
+          selite:
+            'Kuvassa on tyhjä jalkapallokenttä ja maalin verkko etualalla; taustalla kohoaa katettu katsomo, jonka istuimet on maalattu vihreiksi, keltaisiksi ja sinisiksi, ja taivas on pilvinen.',
+          lahde: 'Fabián Berrío, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Zerão',
+        },
+        {
+          otsikko: 'Kävely joen rannalla',
+          teksti:
+            'Macapán ilmasto on tasaisen kostea läpi vuoden: lämpötila pysyttelee aamuisin noin 23 asteessa ja iltapäivisin lähes 31 asteessa, ja sadekausi kestää joulukuusta heinäkuuhun. Kaupungin suosituin kävelyreitti, Orla de Macapá, kiemurtelee puiden varjossa pitkin joen rantaa aivan Fortaleza de São José de Macapán kupeessa. Nykyisin kaupungissa asuu jo lähes 490 000 ihmistä — huomattavasti enemmän kuin isoisän aikana, jolloin Macapá oli vasta pieni, muutaman tuhannen asukkaan satamapaikka suiston reunalla.',
+          tiedosto: 'Orla de Macapá, Amapá.jpg',
+          lyhyt: 'Orla de Macapá on suosittu kävelyreitti joen rannalla lähellä linnoitusta.',
+          selite:
+            'Kuvassa puiden varjostama, kaarteleva kävelytie kulkee valkokaiteisen rantamuurin vieressä; taustalla siintää leveä joki ja vaaleaa linnoitusrakennusta, ja taivaalla on pilviä illan valossa.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Macapá',
+        },
+      ],
+    },
+    {
+      id: 'suisto',
+      nimi: 'Suisto ja sademetsä',
+      johdanto:
+        'Macapán edustalla Amazon ei ole enää yksi joki vaan satojen kilometrien levyinen sokkelo kanavia, jotka työntävät liejuista makeaa vettä kauas Atlantille ja ruokkivat suistoa ympäröivää sademetsää.',
+      tehtava: {
+        kysymys: 'Kuinka monta prosenttia Amapán osavaltion pinta-alasta kuuluu suojelualueiden verkostoon?',
+        vaihtoehdot: ['12 %', '35 %', '72 %', '95 %'],
+        oikea: 2,
+        fakta:
+          'Amapán biodiversiteettikäytävä kattaa 72 prosenttia osavaltion pinta-alasta kahdentoista suojelualueen ja viiden alkuperäiskansojen alueen verkostona.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suisto joka näkyy avaruudesta',
+          teksti:
+            'Amazon tyhjentää suistossaan valtavan vesimäärän mereen: keskimäärin noin 224 000 kuutiometriä sekunnissa, tulva-aikaan jopa 330 000. Joen suu haarautuu kymmeniksi kanaviksi, joiden yhteisleveys kasvaa parhaimmillaan 340 kilometriin, ja satelliittikuvissa ruskea, liejuinen vesi erottuu selvästi sinisestä valtamerestä kymmenien kilometrien päähän rannikosta. Ilmiö oli tuttu jo kauan ennen satelliitteja: espanjalainen merenkulkija Vicente Yáñez Pinzón maistoi makeaa vettä avomerellä vuonna 1500, kaukana ennen kuin mannerta näkyi horisontissa.',
+          tiedosto: 'Cloud and Sediment in the Amazon River Delta (MODIS 2022-06-20).jpg',
+          lyhyt: 'Amazonin suun kanavat levenevät parhaimmillaan 340 kilometriin.',
+          selite:
+            'Satelliittikuva näyttää tummanvihreää sademetsää, jonka keskeltä ruskea, liejuinen vesi virtaa kohti sinistä merta; kuvan päällä leijuu valkoisia pilvenhattaroita.',
+          lahde: 'MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (Public domain)',
+          wiki: 'Amazon River',
+        },
+        {
+          otsikko: 'Pororoca — aalto joka kulkee ylävirtaan',
+          teksti:
+            'Kun Atlantin vuorovesi nousee suiston edustalla, se voi työntyä jokia vastavirtaan yhtenä jyrkkänä aaltoseinänä: ilmiötä kutsutaan pororocaksi, ja aallot voivat kohota jopa neljän metrin korkuisiksi ja kulkea satoja kilometrejä sisämaahan päin. Parhaiten pororocan näkee kevät- ja syystasauksien tienoilla maalis- ja syyskuussa, kun vuorovesi on voimakkaimmillaan. Amapán Araguari-joella pororoca oli vuosikymmeniä tunnettu nähtävyys, kunnes se katosi vuonna 2014: yläjuoksulle rakennetut vesivoimapadot liettivät joen suun niin, ettei aalto enää pääse muodostumaan.',
+          tiedosto: 'Undular bore Araguari River-Brazil-USGS-bws00026.jpg',
+          lyhyt: 'Pororoca-aalto voi kohota jopa neljän metrin korkeuteen suiston joissa.',
+          selite:
+            'Mustavalkoinen ilmakuva pienkoneen siiven alta näyttää leveän joen pinnalla etenevän pyöreähkön aaltorenkaan, jonka reunat kaartuvat kauas vesipinnalla; horisontissa erottuu tumma metsäraja.',
+          lahde: 'Susan Bartsch-Winkler ja David K. Lynch, USGS, Wikimedia Commons (Public domain)',
+          wiki: 'Pororoca',
+        },
+        {
+          otsikko: 'Tulvametsät ja tulipunaiset linnut',
+          teksti:
+            'Macapán ympärillä maisema vaihtelee mangrovemetsien, makeanveden kosteikkojen ja kausittain tulvivien metsien välillä. Aivan kaupungin kupeessa sijaitseva Rio Curiaún suojelualue kattaa yli 20 000 hehtaaria tulvaniittyjä, tulvametsää ja savannia, ja se on rauhoitettu myös alueen perinteisen väestön elämäntavan turvaamiseksi. Kosteikkojen tunnetuin asukas on guará eli tulipunainen ibis, jonka räikeän punainen höyhenpuku erottuu kauas mangrovepuiden ja mutavallien keskeltä; samat vesialueet ovat myös suiston kalastajien tärkeimpiä pyyntipaikkoja.',
+          tiedosto: 'Guarás no Bosque Rodrigues Alves (2025-03-22) 01.jpg',
+          lyhyt: 'Guará eli tulipunainen ibis viihtyy Amapán mangrovekosteikoilla.',
+          selite:
+            'Lehtien ja palmunlehvien raosta näkyy kaksi kirkkaanpunaista ibistä seisomassa metallisella penkillä ja kaiteella vehreän, tiheän kasvillisuuden keskellä.',
+          lahde: 'Avelludo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Scarlet ibis',
+        },
+        {
+          otsikko: 'Maailman suurin sademetsäkansallispuisto',
+          teksti:
+            'Amapán osavaltiosta yli kaksi kolmasosaa kuuluu jonkinlaisen suojelun piiriin: vuonna 2003 perustettu Amapán biodiversiteettikäytävä yhdistää 12 suojelualuetta ja viisi alkuperäiskansojen aluetta yhtenäiseksi, 72 prosenttia osavaltiosta kattavaksi verkostoksi. Käytävän sydämessä on Tumucumaquen vuorten kansallispuisto, joka perustettiin 2002 ja on pinta-alaltaan noin 39 000 neliökilometriä eli maailman suurin trooppisen sademetsän kansallispuisto. Puiston latvuston alta katsottuna aurinko siivilöityy tuhansien lehtien läpi eikä maan pintaa juuri näy.',
+          tiedosto: 'Dossel do Parque Nacional Montanhas do Tumucumaque.jpg',
+          lyhyt: 'Tumucumaquen kansallispuisto on maailman suurin trooppisen sademetsän puisto.',
+          selite:
+            'Kuva on otettu sademetsän pohjalta suoraan ylöspäin: tummien puunrunkojen ja -latvojen lomasta siivilöityy kirkas auringonvalo sinistä taivasta vasten.',
+          lahde: 'Brenda Cunha Pereira, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tumucumaque Mountains National Park',
+        },
+      ],
+    },
+  ],
+  campogrande: [
+    {
+      id: 'kaupunki',
+      nimi: 'Campo Grande',
+      johdanto:
+        'Vuonna 1873 nykyisen Campo Granden seutu ei ollut kenenkään eurooppalaisen kartalla: laajaa cerrado-savannia asuttivat vuosisatoja Terena- ja Guató-kansat, kaupungin perustamista vailla vielä 26 vuotta.',
+      nostot: [
+        {
+          otsikko: 'Cerrado - maailman rikkain savanni',
+          teksti:
+            'Cerrado on Etelä-Amerikan laajin savannialue, lähes kaksi miljoonaa neliökilometriä keskisessä Brasiliassa - myös nykyisen Campo Granden ympäristö kuuluu siihen. Se on maailman lajirikkain savanni: alueella elää yli 160 000 kasvi-, eläin- ja sienilajia, muun muassa noin 200 nisäkäslajia ja lähes 860 lintulajia. Kasvillisuus on sopeutunut jyrkästi vaihteleviin kuiva- ja sadekausiin sekä toistuviin luonnontulipaloihin: puiden paksu, korkkimainen kuori ja väännelty runko suojaavat niitä palolta. Isoisän matkavuonna 1873 tämä savanni oli eurooppalaisille lähes tuntematon erämaa.',
+          tiedosto: 'Vegetação do cerrado no Parque Nacional da Chapada dos Guimarães em Mato Grosso.jpg',
+          lyhyt: 'Väännelty, paksukuorinen puu cerrado-savannin tiheässä kasvillisuudessa.',
+          selite:
+            'Valokuva näyttää cerradolle tyypillistä väännellyttä, paksukuorista puustoa Chapada dos Guimarãesin kansallispuistossa Mato Grossossa - samankaltaista savannimetsää kasvoi myös nykyisen Campo Granden ympäristössä 1870-luvulla.',
+          lahde: 'Attilio Zolin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cerrado',
+        },
+        {
+          otsikko: 'Terena - cerradon maanviljelijät',
+          teksti:
+            'Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.',
+          tiedosto: 'Terena005.jpg',
+          lyhyt: 'Terena-mies perinteisessä sulkapäähineessä ja kasvomaalauksessa.',
+          selite:
+            'Kuva näyttää Terena-miehen perinteisessä sulkapäähineessä ja kasvomaalauksessa Brasilian alkuperäiskansojen kisoissa vuonna 2007 - koristeet kertovat kulttuurista, joka on säilynyt sukupolvien yli.',
+          lahde: 'Valter Campanato/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Terena people',
+        },
+        {
+          otsikko: 'Guató - Pantanalin kanoottikansa',
+          teksti:
+            'Guató-kansa tunnettiin Pantanalin parhaina kanoottisoutajina: he veistivät veneensä yhdestä puunrungosta ja elivät suuren osan vuodesta vedellä, siirtyen kuivalle maalle vain sadekauden tulvien aikana. Ranskalaissyntyinen taiteilija Hercule Florence kuvasi Guató-perheen joulukuussa 1826 osana Langsdorffin tiederetkikuntaa - piirroksessa näkyvät perheen olkikattoinen maja sekä korit ja keihäät, joilla he kalastivat ja metsästivät. Isoisän matkavuonna 1873 Guató eli yhä samaa vesillä liikkuvaa elämää, vuosikymmeniä ennen kuin karjatilat ja taudit ajoivat heidät lähes sukupuuttoon 1900-luvulla.',
+          tiedosto: 'Famille de Nation Guato. Décembre 1826. Hercule Florence, fecit, do acervo do Instituto Hercule Florence.jpg',
+          lyhyt: 'Hercule Florencen vuonna 1826 piirtämä Guató-perhe majansa edessä.',
+          selite:
+            'Hercule Florencen vuonna 1826 tekemä piirros esittää Guató-perheen - isän, äidin ja kaksi lasta - olkikattoisen majansa edessä palmujen katveessa, korit ja keihäät vierellään.',
+          lahde: 'Instituto Hercule Florence, Wikimedia Commons (Public domain)',
+          wiki: 'Guató people',
+        },
+        {
+          otsikko: 'Maracaju-vuoret - tasangon raja',
+          teksti:
+            'Campo Granden länsipuolella kohoaa Serra de Maracaju, hiekkakivestä muodostunut ylänkö, joka jakaa nykyisen Mato Grosso do Sulin kahtia: idässä avautuu Cerrado-savanni, lännessä alkaa Pantanalin kosteikko. Jyrkät, punertavat kalliojyrkänteet nousevat tasaisen tasangon yllä satojen metrien korkeuteen, ja korkeimmat kohdat lähellä Aquidauanaa yltävät noin 750 metriin. Vuorijono tarjosi vuosisatoja seudun alkuperäiskansoille luonnollisen suoja-alueen, jonne muun muassa Terenat vetäytyivät myös Paraguayn sodan miehitysvuosina 1860-luvulla. Isoisän 1873 matkareitti olisi kulkenut tämän ylängön tuntumassa.',
+          tiedosto: 'Serra de Maracaju.jpg',
+          lyhyt: 'Serra de Maracajun punertava kalliojyrkänne kohoaa vihreän tasangon yllä.',
+          selite:
+            'Valokuva näyttää Serra de Maracajun jyrkän, punertavan kalliojyrkänteen kohoamassa vihreän tasangon yllä Aquidauanan seudulla - tyypillistä ylängön maisemaa Campo Granden länsipuolella.',
+          lahde: 'Hectorhhugo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mato Grosso do Sul',
+        },
+        {
+          otsikko: 'Hyökkäys Coimbran linnakkeeseen',
+          teksti:
+            'Joulukuun 27.-29. päivänä 1864 paraguaylaiset joukot hyökkäsivät Coimbran linnakkeeseen Paraguayn joen varrella lähellä Corumbáa - se oli sodan ensimmäisiä taisteluita ja avasi hyökkäyksen koko Mato Grosson provinssiin. Vain noin 190 hengen varuskunta, jossa palveli myös alkuperäiskansojen sotilaita, kesti ylivoimaisen hyökkäyksen kaksi vuorokautta ennen järjestäytynyttä evakuointiaan höyrylaiva Anhambaíssa; hyökkääjät menettivät noin 200 miestä, puolustajat ei yhtään. Paraguaylaiset miehittivät seutua aina vuoteen 1868 asti. Rio de Janeiroon pystytettiin myöhemmin sotasankareille muistomerkki, jonka pronssireliefi kuvaa hyökkäystä.',
+          tiedosto: 'Ataque ao Forte Coimbra.jpg',
+          lyhyt: 'Kulunut pronssireliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen.',
+          selite:
+            "Kuva näyttää kuluneen pronssireliefin Rio de Janeiron sotasankarimuistomerkistä - reliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen, otsikkona 'Ataque ao Forte Coimbra'.",
+          lahde: 'Picture Master, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'New Coimbra Fort',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Pantanal - maailman suurin kosteikko',
+      johdanto:
+        'Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.',
+      tehtava: {
+        kysymys: 'Kuinka monta jacaré-kaimaania Pantanalissa arvioidaan elävän?',
+        vaihtoehdot: ['noin 100 000', 'noin 1 miljoona', 'noin 10 miljoonaa', 'noin 50 miljoonaa'],
+        oikea: 2,
+        fakta:
+          'Pantanalissa arvioidaan elävän noin 10 miljoonaa kaimaania - suurin krokotiilieläinten tiheys koko maailmassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuosittainen tulva-aalto',
+          teksti:
+            'Pantanal on maailman suurin trooppinen kosteikkoalue, 140 000-195 000 neliökilometriä Brasiliassa, Boliviassa ja Paraguayssa - suurin osa siitä Mato Grosso do Sulissa. Sadekaudella Paraguayn joen vedenpinta nousee kahdesta viiteen metriin ja tulva etenee hitaasti loivan maaston vuoksi, kunnes noin 80 prosenttia koko tasangosta on veden alla. Kuivalla kaudella vesi vetäytyy ja paljastaa laajoja ruohotasankoja, joilla laiduntavat muun muassa pampashirvet (Ozotoceros bezoarticus) - arka, isokorvainen hirvieläin, joka väistyy piiloon korkeaan heinikkoon. Tämä vuosittainen tulvarytmi tekee Pantanalista yhden maailman eläinrikkaimmista elinympäristöistä.',
+          tiedosto: 'Mato Grosso do Sul - Pantanal 01.jpg',
+          lyhyt: 'Pampashirvi piiloutuu korkeaan heinikkoon Pantanalin kuivan kauden tasangolla.',
+          selite:
+            'Valokuva näyttää arka pampashirven kurkistamassa korkeasta heinikosta aidan takaa Pantanalin maatilalla - kuivan kauden ruohotasangoilla laji löytää suojaa ja ravintoa.',
+          lahde: 'Anderson Momesso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pantanal',
+        },
+        {
+          otsikko: 'Kapybara - maailman suurin jyrsijä',
+          teksti:
+            'Kapybara on maailman suurin jyrsijä: aikuinen yksilö painaa jopa 65 kilogrammaa ja muistuttaa kookkaalla ruumiillaan pientä sikaa, vaikka on sukua marsulle. Pantanalin runsaat vesistöt ja ravinteikkaat ruohotasangot tarjoavat sille ihanteellisen elinympäristön, ja laumat voivat kasvaa kymmenien yksilöiden suuruisiksi. Kapybara viihtyy vedessä erinomaisesti: sillä on räpyläjalat, ja se pystyy sukeltamaan useiksi minuuteiksi paetakseen jaguaaria tai muuta petoa. Se laiduntaa lähes yksinomaan ruohoa ja vesikasveja, ja sen elinkierto on kietoutunut tiiviisti Pantanalin vuotuiseen tulvarytmiin.',
+          tiedosto: 'Capybara (Hydrochoerus hydrochaeris) alpha male.JPG',
+          lyhyt: 'Kapybara, maailman suurin jyrsijä, laiduntaa ruohikossa Pantanalissa.',
+          selite:
+            'Valokuva näyttää kapybaran laiduntamassa ruohikolla Pantanalissa - maailman suurimman jyrsijän tunnistaa sen kookkaasta, pyöreähköstä ruumiista ja lyhyistä jaloista.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Capybara',
+        },
+        {
+          otsikko: 'Jaguaari - suokissan valtakunta',
+          teksti:
+            'Pantanalissa elää yksi maailman terveimmistä ja tiheimmistä jaguaarikannoista. Jaguaari on Amerikan mantereen suurin kissaeläin, ja toisin kuin useimmat kissaeläimet se ui mielellään ja saalistaa myös vedessä: sen tehokas purenta murtaa jopa kaimaanin tai valtavan vesikäärmeen panssarin. Pantanalin avoin maasto ja tiheä saalistarjonta - kapybaroista kaimaaneihin - tekevät alueesta poikkeuksellisen paikan tarkkailla muuten arkaa ja vaikeasti nähtävää eläintä päivänvalossa. Paikallinen alalaji tunnetaan nimellä Panthera onca palustris, "suokissa".',
+          tiedosto: 'Jaguar (Panthera onca palustris) female Piquiri River 2.JPG',
+          lyhyt: 'Jaguaari kyyristyy valmiina hyökkäykseen Pantanalin kasvillisuudessa.',
+          selite:
+            'Valokuva näyttää jaguaarin kyyristyneenä matalaan hyökkäysasentoon Pantanalin aluskasvillisuudessa, katse suoraan kameraan - laji saalistaa alueella jopa kaimaaneja.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jaguar',
+        },
+        {
+          otsikko: 'Hyasinttiaara - sininen jättiläinen',
+          teksti:
+            'Hyasinttiaara on maailman suurin lentävä papukaijalaji, jopa metrin pituinen ja kokonaan syvän sinisen värinen lukuun ottamatta silmien ja nokan ympärillä olevaa keltaista ihoa. Pantanalissa elää arviolta noin 3 000 yksilöä, jotka pesivät luonnollisissa koloissa manduvi-puissa ja syövät lähinnä palmupähkinöitä, joiden kuoren vain niiden voimakas nokka pystyy murtamaan. Laji oli 1900-luvulla ajautua sukupuuttoon laittoman lemmikkikaupan vuoksi, kun tuhansia lintuja salakuljetettiin pesistään ulkomaille. Pantanal on nykyään yksi harvoista paikoista, joissa laji on elpynyt suojelutyön ansiosta.',
+          tiedosto: 'Hyacinth macaw (Anodorhynchus hyacinthinus) in flight.JPG',
+          lyhyt: 'Hyasinttiaara, maailman suurin papukaija, lentää matalalla Pantanalissa.',
+          selite:
+            'Valokuva näyttää hyasinttiaaran lennossa siivet levällään - maailman suurimman papukaijalajin tunnistaa sen läpikotaisin sinisestä höyhenpuvusta ja keltaisesta silmänympäryksestä.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hyacinth macaw',
+        },
+        {
+          otsikko: 'Kaimaani - kymmenen miljoonan kanta',
+          teksti:
+            'Pantanalissa arvioidaan elävän noin 10 miljoonaa jacaré-kaimaania - suurin krokotiilieläinten tiheys koko maailmassa. Laji on sopeutunut elämään sekä sadekauden tulva-alueilla että kuivan kauden kutistuvissa vesialtaissa, joihin kalat ja muut saaliseläimet ajautuvat tiiviiksi joukoiksi - kaimaanille katetun pöydän ääreen. Aikuinen yksilö kasvaa yleensä noin kahden metrin mittaiseksi, ja sen tärkein saalis on kala, mutta se ei kaihda myöskään vesilintuja tai pieniä nisäkkäitä. Runsas kaimaanikanta on yksi tärkeimmistä syistä, miksi Pantanal pystyy elättämään myös maailman tiheimmän jaguaaripopulaation.',
+          tiedosto: 'Jacaré do pantanal.jpg',
+          lyhyt: 'Jacaré-kaimaani nousee vedestä saaliinsa kanssa Pantanalissa.',
+          selite:
+            'Valokuva näyttää jacaré-kaimaanin kohottautumassa vedestä saalis leuoissaan Pantanal Matogrossensen kansallispuistossa - laji on yksi Pantanalin noin kymmenestä miljoonasta kaimaanista.',
+          lahde: 'Jairmoreirafotografia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Yacare caiman',
+        },
+      ],
+    },
+  ],
+  exmouth: [
+    {
+      id: 'kaupunki',
+      nimi: 'Exmouth',
+      johdanto:
+        'Exmouthin edustalla kiemurtelee Ningaloo, maailman suurin rantariutta: yli 260 kilometriä koralleja niin lähellä mannerta, että sen reunalle pääsee usein kahlaamalla. Takana kohoavassa kalkkikivessä piilee miljoonien vuosien tarina.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin rantariutta',
+          teksti:
+            'Ningaloo on maailman suurin rantariutta: se seuraa Länsi-Australian rannikkoa yli 260 kilometrin matkan Exmouthista etelään. Toisin kuin useimmat suuret koralliriutat, jotka kasvavat kaukana avomerellä, Ningaloo kiertyy lähes kiinni mantereeseen — paikoin riutan harjalle pääsee jo alle 500 metrin päästä rannasta kahlaamalla. Läheisyys tekee riutasta poikkeuksellisen helposti tavoitettavan: veneen sijaan riittää usein pelkkä uimapuku ja snorkkeli. Alue suojeltiin Ningaloo Marine Parkiksi vuonna 1987, kun rannikon ainutlaatuinen luonto haluttiin turvata pysyvästi tulevillekin sukupolville.',
+          tiedosto: 'Cape Range National Park and Ningaloo Reef from the air.jpg',
+          lyhyt: 'Lentokoneen ikkunasta kuvattu näkymä Ningaloon riutasta ja Cape Rangen rannikosta.',
+          selite:
+            'Ilmakuva näyttää turkoosin koralliriutan kaartuvan aivan kiinni ruskeaan, kuivaan rannikkoon — riutta ja hiekkaranta erottuvat toisistaan vain kapealla aaltoviivalla.',
+          lahde: 'Andrew Turner, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Reef',
+        },
+        {
+          otsikko: 'Muinainen riutta nousi vuoriksi',
+          teksti:
+            'Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.',
+          tiedosto: 'Charles Knife Canyon, Cape Range National Park, Exmouth 2.jpg',
+          lyhyt: 'Charles Knife Canyonin punertavat kalkkikiviseinämät Cape Rangen kansallispuistossa.',
+          selite:
+            'Kuva näyttää syvän, jyrkkäseinäisen rotkon, jonka kerroksellinen kalkkikivi paljastaa muinaisen koralliriutan rakenteen; taustalla siintää meri.',
+          lahde: 'Joshua Tagicakibau, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Range National Park',
+        },
+        {
+          otsikko: 'Maailmanperintöä vuodesta 2011',
+          teksti:
+            'Vuonna 2011 Ningaloo Coast liitettiin Unescon maailmanperintöluetteloon ainoana paikkana Australiassa, jossa mannerta reunustava koralliriutta ja sen takana kohoava karstivuoristo suojellaan yhtenä kokonaisuutena. Suojelualue kattaa yli 700 000 hehtaaria merta ja rannikkoa, mukaan lukien Cape Rangen kansallispuisto ja ulompana meressä sijaitsevat Muiron-saaret. Päätös tuli vasta reilut kaksikymmentä vuotta sen jälkeen, kun riutan ympärille perustettiin ensimmäinen suojelualue vuonna 1987 — silloin moni piti seutua liian syrjäisenä varsinaiseksi matkailukohteeksi.',
+          tiedosto: 'Ningaloo Coast, Western Australia.jpg',
+          lyhyt: 'Auringonlasku Ningaloon rannalla, jonka hiekalle on ajautunut kuivunutta merilevää.',
+          selite:
+            'Kuva näyttää tyynen rantaviivan auringonlaskun aikaan; etualalla hiekalla lojuu tummaa, kuivunutta merilevää ja taustalla siintää matala riutan reuna.',
+          lahde: 'Lizzy5, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Coast',
+        },
+        {
+          otsikko: 'Aallot murtuvat riutan reunalla',
+          teksti:
+            'Ningaloon rannalta näkee harvinaisen näyn: valkoisena kuohuva aaltoviiva, joka merkitsee riutan ulkoreunaa, kulkee usein vain parin sadan metrin päässä hiekasta. Aallot murtuvat koralliharjanteeseen ja menettävät voimansa ennen kuin ehtivät rantaan asti — niinpä riutan ja mantereen väliin jää tyyni, matala laguuni, jossa vesi voi olla lähes tyventä silloinkin, kun ulompana avomeri kuohuu voimakkaasti. Tämä luonnollinen suoja on yksi syy siihen, miksi laguunista on tullut turvallinen kasvupaikka lukemattomille kalanpoikasille ja muille riutan pienille asukkaille.',
+          tiedosto: '.00 0975 Ningaloo Reef (Australia) - Surf on the coral reef.jpg',
+          lyhyt: 'Aallot murtuvat valkoisena viivana Ningaloon riutan ulkoreunalla.',
+          selite:
+            'Panoraamakuva näyttää aaltojen murtuvan riutan ulkoreunalla vaahtoavana viivana, jonka takana avomeri jatkuu, ja edessä levittäytyy tyyni, turkoosi laguuni.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Reef',
+        },
+        {
+          otsikko: 'Merilehmät suojaisessa laguunissa',
+          teksti:
+            'Ningaloon suojaisissa, meriruohoa kasvavissa laguuneissa laiduntavat dugongit eli merilehmät, jotka ovat manaatin sukulaisia ja ainoita täysin kasvinsyöjiä meren nisäkkäitä. Ne voivat painaa yli 400 kiloa, mutta liikkuvat hitaasti ja rauhallisesti pohjaa myöten kasvavien merikasvien seassa, joita ne syövät kymmeniä kiloja päivässä. Dugongeja näkee usein pieninä perheryhminä aivan veden pinnan tuntumassa, kun ne nousevat säännöllisin väliajoin hengittämään. Riutan tarjoama suoja avomeren aalloilta on yksi syy siihen, miksi Ningaloon vesillä elää yksi Länsi-Australian merkittävimmistä dugong-kannoista.',
+          tiedosto: 'Dugong family cruising the Ningaloo reef.jpg',
+          lyhyt: 'Kolme dugongia uimassa riutan matalassa, vihertävässä laguunivedessä ilmakuvattuna.',
+          selite:
+            'Ilmakuva näyttää kolme dugongia — yhden aikuisen ja kaksi pienempää — uimassa peräkkäin läpinäkyvässä, vihreässä laguunivedessä merikasvien yllä.',
+          lahde: 'Nicocolll, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dugong',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Valashait — riutan jättiläiset',
+      johdanto:
+        'Joka kevät Ningaloolle kokoontuu maailman suurin kala: valashai. Jättiläinen ei saavu paikalle sattumalta, vaan riutan oma vuosittainen korallien kukoistus kutsuu koolle koko rannikon vaikuttavimman eläinjoukon.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osuus Ningaloolle kokoontuvista valashaista on tutkimusten mukaan nuoria uroksia?',
+        vaihtoehdot: ['noin 25 %', 'noin 50 %', 'noin 85 %', 'noin 99 %'],
+        oikea: 2,
+        fakta: 'Valokuvatunnistuksella kerätty aineisto on paljastanut, että noin 85 prosenttia Ningaloon valashaista on nuoria, alle yhdeksänmetrisiä uroksia, kun taas täysikasvuisia naaraita näkyy riutalla harvoin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman suurin kala',
+          teksti:
+            'Valashai eli Rhincodon typus on maailman suurin nyt elävä kala, ja se voi kasvaa yli 18 metrin mittaiseksi — pidemmäksi kuin linja-auto kahdesti peräkkäin. Silti tämä valtava kalastaja ei ole vaarallinen: sillä ei ole hampaita ruoan pureskeluun, vaan se ui hitaasti suu ammollaan ja suodattaa vedestä pienravintoa. Tutkijat mittasivat vuonna 2001 naarasyksilön, jonka pituudeksi arvioitiin 15 metriä, ja sitä pidetään yhä yhtenä tarkimmin dokumentoiduista jättiläisistä. Ningaloolle kokoontuvat yksilöt jäävät yleensä tätä ennätyskokoa pienemmiksi, mutta ovat silti ihmiseen verrattuna käsittämättömän suuria.',
+          tiedosto: 'Whale-Shark-Scale-Chart-SVG-Steveoc86.svg',
+          lyhyt: 'Kaavio, joka vertaa valashain eri kokoluokkia sukeltajan silhuettiin.',
+          selite:
+            'Kaavio asettaa rinnakkain valashain eri kokoluokkien ääriviivat vastasyntyneestä poikasesta 15-metriseen naaraaseen, ja oikealla pienenä vertailukohtana näkyy ihmisen silhuetti.',
+          lahde: 'Steveoc 86, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Riutan suurin kokoontuma',
+          teksti:
+            'Ningaloolle kokoontuu maalis-elokuussa satoja valashaita — arvioiden mukaan jopa 300–500 yksilöä samaan aikaan, mikä tekee siitä yhden maailman suurimmista tunnetuista valashaikokoontumisista. Syy löytyy riutalta itseltään: maalis-huhtikuun täysikuun jälkeisinä öinä korallit vapauttavat samanaikaisesti miljardeja muna- ja siittiösoluja veteen. Tapahtuma ravitsee valtavia eläinplanktonin ja pikkukatkojen parvia, ja juuri tämä ravintoähky houkuttelee valashait rannikon tuntumaan syömään. Ilman koralleja ei siis olisi valashaitakaan — koko kokoontuminen riippuu riutan omasta vuosittaisesta kukoistuksesta.',
+          tiedosto: 'Whale shark Australia.jpg',
+          lyhyt: 'Valashai ui sinisessä vedessä pienempien kalojen seuratessa sen kylkeä.',
+          selite:
+            'Kuva näyttää pilkullisen valashain sivulta uimassa syvänsinisessä vedessä; sen kupeella ja allapäin ui useita pienempiä kaloja hyötymässä jättiläisen seurasta.',
+          lahde: 'Mbz1, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Suulla joka suodattaa, ei pureskele',
+          teksti:
+            'Valashain suu voi olla lähes 1,5 metriä leveä, mutta sen sisällä ei ole puruhampaita vaan sihdin tapaan toimivat kidusarret. Ui-dessaan suu auki eläin suodattaa vettä läpi yli 6 000 litraa tunnissa, ja sihti pidättää eläinplanktonin, pienet katkaravut, kalanmunat ja pikkukalat, kuten sardiinit, samalla kun vesi virtaa kiduksista ulos. Tätä kutsutaan poikittaisvirtaussuodatukseksi: ravinto kulkeutuu suoraan kurkkuun, kun taas vesi ohjautuu sivuun. Menetelmä on niin tehokas, ettei jättiläisen tarvitse koskaan jahdata saalistaan — riittää, että se ui hitaasti ravinnontäyteisen veden läpi.',
+          tiedosto: 'Whale Shark AdF.jpg',
+          lyhyt: 'Valashai nousee pystyasennossa suu auki kohti pintaa ammentamaan ravintoa yöllä.',
+          selite:
+            'Kuva näyttää valashain uivan pystyasennossa pintaa kohti suu ammollaan yöaikaan; ammottavan suuaukon ympärillä risteilee pieniä kaloja ja vedessä leijuu runsaasti pikkuravintoa.',
+          lahde: 'Arturo de Frias Marques, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Vaaraton jättiläinen',
+          teksti:
+            'Kokonsa vuoksi valashai voisi näyttää pelottavalta, mutta se on yksi meren rauhallisimmista eläimistä. Se ei metsästä eikä puolusta reviiriään, vaan ui tasaisesti eteenpäin välittämättä juuri mitään ympärillä uivista sukeltajista tai kaloista, jotka usein seuraavat sen mukana hyötyen sen liikkeen nostattamista pienemmistä eliöistä. Tämä lauhkeus mahdollistaa sen, että ihminen voi uida jättiläisen rinnalla aivan lähietäisyydeltä ilman että eläin osoittaa merkkejä stressistä tai pakenemisesta. Ainoa todellinen riski syntyy, jos ihminen tulee liian lähelle voimakasta pyrstöä, joka liikkuu hitaastikin valtavalla voimalla.',
+          tiedosto: 'Whale shark Maldives.jpg',
+          lyhyt: 'Valashai ui rauhallisesti, kun snorklaajat uivat aivan sen yläpuolella.',
+          selite:
+            'Kuva näyttää valashain koko pituudeltaan sivulta uimassa, ja aivan sen yläpuolella pinnalla ui useita snorklaajia lähietäisyydeltä ilman että eläin näyttää häiriintyvän.',
+          lahde: 'Tchami, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Vuosirenkaat paljastavat iän',
+          teksti:
+            'Valashain ikää on pitkään ollut vaikea määrittää, koska sillä ei ole samanlaisia selviä vuosirenkaita kuin puulla. Selkärangan nikamista löytyy kuitenkin kasvuvöitä, ja vuonna 2020 julkaistu tutkimus vahvisti radiohiiliajoituksen avulla, että uusi vyö muodostuu nikamaan kerran vuodessa aivan kuin puun vuosirengas. Menetelmä paljasti, että valashait voivat elää 80–130-vuotiaiksi, mikä tekee niistä yhden pisimpään elävistä kalalajeista ylipäätään. Ningaloolle vuosittain palaavat yksilöt saattavatkin viettää koko pitkän elämänsä kiertäen samaa riuttaa kevät toisensa jälkeen.',
+          tiedosto: 'Whale Shark Ningaloo.jpg',
+          lyhyt: 'Valashai lähestyy kameraa edestäpäin Ningaloon vedessä.',
+          selite:
+            'Kuva näyttää valashain edestäpäin uimassa suoraan kuvaajaa kohti; pilkkukuvioinen pää ja kidusraot erottuvat selvästi sinertävässä vedessä.',
+          lahde: 'NeilsPhotography, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Nuorten urosten kokoontumispaikka',
+          teksti:
+            'Tutkijat ovat vuosikymmenten ajan valokuvanneet ja tunnistaneet Ningaloolle saapuvia valashaita niiden ainutlaatuisen pilkkukuvion perusteella, aivan kuin sormenjälkien avulla. Aineisto paljastaa selvän kaavan: noin 85 prosenttia Ningaloon valashaista on nuoria, alle yhdeksänmetrisiä uroksia, kun taas täysikasvuiset naaraat näkyvät riutalla harvoin. Koko laji on silti maailmanlaajuisesti vaarantunut — kanta on pienentynyt yli 50 prosenttia viimeisten 75 vuoden aikana kalastuksen sivusaaliin ja laivojen töytäisyjen vuoksi. Juuri siksi Ningaloon kaltaiset suojellut kokoontumispaikat ovat lajille elintärkeitä.',
+          tiedosto: 'Whale shark (Rhincodon typus) (16222515872).jpg',
+          lyhyt: 'Valashai ui sivuttain, sukeltaja näkyy sen yläpuolella pinnan tuntumassa.',
+          selite:
+            'Kuva näyttää suuren valashain kylkeä sivulta lähietäisyydeltä, ja veden pinnan tuntumassa erottuu sukeltajan siluetti seuraamassa eläintä.',
+          lahde: 'Sylke Rohrlach, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Whale shark',
+        },
+      ],
+    },
+  ],
+  sanambrosio: [
+    {
+      id: 'kaupunki',
+      nimi: 'San Ambrosio',
+      johdanto: 'San Ambrosio on yksi Chilen syrjäisimmistä saarista: tulivuorikallio Tyynellämerellä, jonka jyrkät rinteet putoavat suoraan mereen. Kukaan ei asu siellä pysyvästi – vain merilinnut ja satunnaiset hummerikalastajat käyvät kalliolla.',
+      nostot: [
+        {
+          otsikko: 'Neljäsataa vuotta unohduksissa',
+          teksti: 'Espanjalainen merenkulkija Juan Fernández näki saaren vuonna 1574 purjehtiessaan Callaosta Valparaísoon, ja siitä tuli ensimmäinen varmistettu havainto. Vuonna 1579 kronikoitsija Pedro Sarmiento de Gamboa kirjasi saarten kantavan pyhien Felixin ja Naborin nimiä – mutta ajan mittaan harvinaisempi marttyyri Nabor sekoittui kuuluisampaan piispa Ambrosiukseen, ja nimi jäi elämään väärinkäsityksenä. Vuonna 1789 Espanjan Malaspina-retkikunnan alus Descubierta purjehti ohi, ja sen taiteilija José del Pozo kuvasi saaren kiviseksi ja yksinäiseksi paikaksi, jota karttoivat jopa merileijonat.',
+          tiedosto: 'Plano de la isla San Ambrosio levantado por la Oficialidad de la Goleta Covadonga, al mando del Capitán de la Armada de Chile, Ramón Vidal Gormaz en octubre de 1874.png',
+          lyhyt: 'Saaren nimi syntyi kirjoitusvirheestä, joka muutti pyhän Naborin pyhäksi Ambrosiukseksi.',
+          selite: 'Käsin piirretty merikartta San Ambrosion rannikosta, jonka Chilen laivaston upseerit laativat lokakuussa 1874 kaappiveneen Covadonga kyydistä.',
+          lahde: 'Ramón Vidal Gormaz, Wikimedia Commons (Public domain)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Isoisän aikaan vasta kartalle',
+          teksti: 'Vuonna 1850 brittiläisen HMS Portlandin luutnantti Parkin kiipesi suurin vaivoin saaren lähes pystysuoria rinteitä ylös eikä löytänyt etsimäänsä guanoa – vain kanervamaisia pensaita. Vuonna 1869 Chilen korvetti Chacabuco poimi saarelta ensimmäiset kasvinäytteet, jotka tutkija Rodulfo Amando Philippi tunnisti. Isoisän oman vuoden 1873 matkan tienoilla saari oli siis yhä käytännössä kartoittamaton täplä valtamerellä: vasta lokakuussa 1874 kapteeni Ramón Vidal Gormaz mittasi rannikon tarkasti kaappiveneellä Covadonga, ja ensimmäiset luotettavat kartat julkaistiin vuotta myöhemmin.',
+          tiedosto: 'Plano del grupo de las islas San Félix y San Ambrosio levantado por la Oficialidad de la Goleta Covadonga, al mando del Capitán de la Armada de Chile Ramón Vidal Gormaz, en 1874.png',
+          lyhyt: 'Ensimmäinen luotettava kartta saarista syntyi vasta vuonna 1874.',
+          selite: 'Käsin piirretty merikartta, joka näyttää sekä San Félixin että San Ambrosion samasta vuoden 1874 mittausmatkasta.',
+          lahde: 'Ramón Vidal Gormaz, Wikimedia Commons (Public domain)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Kaukainen tulivuorisaari',
+          teksti: 'San Ambrosio sijaitsee lähes tuhannen kilometrin päässä Chilen rannikosta, eikä sillä ole ainuttakaan hiekkarantaa: jyrkät kalliot putoavat suoraan mereen joka puolella. Saari on oikeastaan paljon suuremman vedenalaisen tulivuoren paljas huippu – sen basalttiset laavavirtaukset ovat geologien mukaan noin 2,9 miljoonaa vuotta vanhoja. Se kuuluu samaan eristyneeseen tulivuorijonoon kuin kaukana lännessä sijaitseva Rapa Nui, vaikka mitään suoraa yhteyttä saarten välillä ei koskaan ollut.',
+          tiedosto: 'Islas Desventuradas locator map.svg',
+          lyhyt: 'Saari on vain tulivuoren huippu, joka nousee suoraan meren pinnalle.',
+          selite: 'Kartta, joka näyttää San Ambrosion, San Félixin ja niiden pikkusaarten sijainnin kaukana Chilen mantereesta.',
+          lahde: 'Henrykez, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Hummerinpyytäjien tilapäinen koti',
+          teksti: 'San Ambrosiolla ei ole pysyviä asukkaita, mutta hiljaisuus rikkoutuu silloin tällöin, kun Robinson Crusoe -saarelta Juan Fernándezin saariryhmästä saapuu kalastajia pyytämään Chilen hummeria eli langostaa. He pystyttävät rannalle tilapäisen leirin pyyntikauden ajaksi ja purjehtivat sitten satojen kilometrien päähän kotisaarelleen. Sama laji elää sekä Juan Fernándezin että Desventuradas-saarten vesillä, ja se on yksi alueen harvoista vientiin asti riittävistä luonnonvaroista.',
+          tiedosto: 'Jasus frontalis.jpg',
+          lyhyt: 'Ainoat tilapäiset asukkaat ovat Robinson Crusoe -saarelta saapuvat hummerikalastajat.',
+          selite: 'Chilen hummeri eli langosta (Jasus frontalis) kuvattuna Robinson Crusoe -saarella Juan Fernándezin saaristossa.',
+          lahde: 'Erasmo Macaya Horta, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Jasus frontalis',
+        },
+        {
+          otsikko: 'Uusi laji pimeästä syvänteestä',
+          teksti: 'Vuonna 2013 tutkijat Oceanan ja National Geographicin Pristine Seas -hankkeesta sukelsivat San Ambrosion ja San Félixin ympäristöön ja löysivät poikkeuksellisen koskemattoman merenpohjan. Löytö johti lokakuussa 2015 Nazca-Desventuradas-meripuiston perustamiseen – yli 300 000 neliökilometrin suojelualueeseen. Tutkimusmatkat jatkuvat yhä: vuonna 2021 tiede kuvasi saarten lähisyvänteistä ennen tuntemattoman äyriäislajin, pikkuisen Munida diritas -taskurapumaisen, kahdensadan metrin syvyydestä.',
+          tiedosto: 'Munida diritas (10.7717-peerj.10531) Figure 2.png',
+          lyhyt: 'Saarten ympärillä on löydetty tieteelle täysin uusia lajeja.',
+          selite: 'Tieteellinen piirros uudesta Munida diritas -taskurapulajista: kuvassa sen kuori, silmät ja suuosat kolmesta suunnasta.',
+          lahde: 'Gallardo Salamanca et al., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Desventuradas Islands',
+        },
+      ],
+    },
+    {
+      id: 'linnut',
+      nimi: 'Linnut maailman reunalla',
+      johdanto: 'Mannermaisten petojen puuttuminen on tehnyt San Ambrosiosta linnuille poikkeuksellisen turvasataman. Osa lajeista pesii täällä suurempina määrinä kuin missään muualla, ja saarella elää oma, muualla tuntematon haukka-alalaji.',
+      tehtava: {
+        kysymys: 'Kuinka monessa paikassa maailmassa uhanalainen pikkuviistäjä pesii varmuudella?',
+        vaihtoehdot: ['Vain yhdessä', 'Kahdessa', 'Kolmessa', 'Kymmenessä'],
+        oikea: 2,
+        fakta: 'Pikkuviistäjä pesii vain kolmessa paikassa maailmassa, ja kaksi niistä on San Ambrosio ja San Félix.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kymmenientuhansien parien kolonia',
+          teksti: 'Maininkiviistäjä (Pterodroma neglecta) pesii San Ambrosiolla omana alalajinaan yhdessä San Félixin ja Juan Fernándezin saarten kanssa. Tutkijat laskivat pelkästään San Ambrosiolta vähintään 22 686 pesivää paria, vaikka jyrkimmille rinteille ei päästy laskemaan lainkaan – koko maailman kanta on arvioitu vain noin 100 000 pariksi. Linnut esiintyvät kolmena värimuunnoksena tummasta vaaleaan, ja pesäpaikaksi kelpaa vain varjoisa kolo. 1900-luvulla tuodut vuohet ja kanit tuhosivat kasvillisuutta ja uhkasivat pesimäpaikkoja, mutta eläimet ovat sittemmin hävinneet saarelta lähes kokonaan.',
+          tiedosto: 'Kermadec Petrel.jpg',
+          lyhyt: 'San Ambrosiolla pesii kymmeniätuhansia viistäjäpareja.',
+          selite: 'Lähikuva maininkiviistäjästä – ei kuvattu San Ambrosiolla, vaan samaa lajia Ducie-saarella Tyynellämerellä.',
+          lahde: 'Angela K. Kepler, Wikimedia Commons (Public domain)',
+          wiki: 'Kermadec petrel',
+        },
+        {
+          otsikko: 'Yksi kolmesta pesäpaikasta maailmassa',
+          teksti: 'Uhanalainen pikkuviistäjä (Pterodroma cookii) pesii koko maailmassa varmuudella vain kolmessa paikassa, ja kaksi niistä on juuri San Ambrosio ja San Félix – kolmas sijaitsee kaukana Uudessa-Seelannissa. Desventuradas-saarten pieni kanta on siksi äärimmäisen arvokas koko lajin säilymiselle: jos jompikumpi saari menettäisi lintunsa esimerkiksi vieraslajin takia, maailman pesimäpaikkojen määrä tippuisi käytännössä kahteen. Tutkijat pitävät saarten eristyneisyyttä ja mannermaisten petojen puuttumista tärkeimpänä syynä sille, että laji on selvinnyt täällä ylipäätään hengissä.',
+          tiedosto: "Cook's Petrel 0A2A7458.jpg",
+          lyhyt: 'Uhanalainen laji pesii vain kolmessa paikassa koko maailmassa.',
+          selite: 'Pikkuviistäjä lennossa meren yllä – kuvattu Tasmanian rannikolla, ei San Ambrosiolla.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "Cook's petrel",
+        },
+        {
+          otsikko: 'Oma haukka kalliojyrkänteillä',
+          teksti: 'San Ambrosiolla elää amerikantuulihaukan (Falco sparverius) oma alalajinsa, jota ei tavata missään muualla maailmassa. Tutkijat ovat kuvanneet sen erilliseksi Desventuradas-saarten omaksi muodoksi, kun taas kauempana etelässä Juan Fernándezin saarilla elää jälleen oma, tästä erillinen pienen haukan alalajinsa. Kummankin saariryhmän pitkä eristyneisyys on siis synnyttänyt oman linnun aivan itsenäisesti. San Ambrosion haukka pesii saaren jyrkillä kallioseinämillä ja saalistaa lähinnä hyönteisiä ja pieniä lintuja, sillä muuta maaselkärankaisravintoa saarelta ei juuri löydy.',
+          tiedosto: 'American kestrel (44273).jpg',
+          lyhyt: 'San Ambrosiolla elää oma haukka-alalajinsa, joka ei asu missään muualla.',
+          selite: 'Uros amerikantuulihaukka istumassa oksalla – yleiskuva lajista, kuvattu kuntoutuslinnusta New Yorkissa, ei San Ambrosion alalajia.',
+          lahde: 'Rhododendrites, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'American kestrel',
+        },
+        {
+          otsikko: 'Trooppinen pesimäkalenteri',
+          teksti: 'Naamiosuula (Sula dactylatra) ja nokitiira (Sterna fuscata) pesivät Desventuradas-saarilla ympäri vuoden riippumatta vuodenajasta, mikä on tyypillistä trooppisille lajeille mutta poikkeuksellista näin eteläisillä leveysasteilla. Tutkijoiden mukaan käyttäytyminen kertoo siitä, että saaret sijaitsevat lämpimän ja kylmän merivirran rajamailla, jonne mahtuu sekä trooppista että subtrooppista lajistoa. Saarilla pesii kaikkiaan kahdeksan lintulajia ja käy lisäksi useita muita, eikä yhdelläkään ole koskaan ollut luontaisia maanisäkäspetoja väijymässä pesillä.',
+          tiedosto: 'Masked booby with chick.JPG',
+          lyhyt: 'Naamiosuula pesii saarilla ympäri vuoden, poikkeuksellista näillä leveyksillä.',
+          selite: 'Aikuinen naamiosuula untuvaisen poikasensa vieressä paljaalla maalla – kuvattu Tern-saarella Havaijilla, ei San Ambrosiolla.',
+          lahde: 'Duncan Wright / USFWS, Wikimedia Commons (Public domain)',
+          wiki: 'Masked booby',
+        },
+      ],
+    },
+  ],
+  nome: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nome',
+      johdanto: 'Nome on kultaryntäyksen synnyttämä kaupunki '
+        + 'Seward-niemimaalla Beringinsalmen rannalla, sata '
+        + 'kahdeksankymmentä kilometriä Siperiasta. Isoisän matkavuonna '
+        + '1873 tätä kaupunkia ei ollut vielä edes olemassa.',
+      nostot: [
+        {
+          otsikko: 'Nimi, joka syntyi kirjoitusvirheestä',
+          teksti: 'Nimi Nome ei viittaa mihinkään paikalliseen sanaan vaan '
+            + 'brittiläisen laivaston kartoitusvirheeseen. Vuosina '
+            + '1850–1852 HMS Heraldilla purjehtinut kartoittaja merkitsi '
+            + 'nimettömän niemen kohdalle muistiinpanon "? name", '
+            + 'kysymysmerkki ja sana nimi. Ison-Britannian amiraliteetin '
+            + 'selityksen mukaan toinen piirtäjä luki myöhemmin oman '
+            + 'käsialansa väärin: kysymysmerkistä tuli C ja a:sta o, ja '
+            + 'tulokseksi jäi "C. Nome" eli Cape Nome. Virheellinen nimi '
+            + 'painettiin karttoihin, ja kun kultakaupunki perustettiin '
+            + 'niemen juurelle 1899, se peri saman erehdyksen.',
+          wiki: 'Cape Nome',
+        },
+        {
+          otsikko: 'Niemimaa jolla asuttiin kauan ennen kultaa',
+          teksti: 'Ennen kuin kukaan etsi kultaa, Seward-niemimaan '
+            + 'rannikolla asuivat iñupiatit, jotka olivat metsästäneet '
+            + 'aluetta muinaisista ajoista lähtien. Tuoreiden '
+            + 'arkeologisten löytöjen mukaan nykyisen Nomen paikalla oli '
+            + 'iñupiat-asutus nimeltä Sitnasuaq jo ennen vuoden 1898 '
+            + 'kultalöytöä. Asukkaat elivät meren varassa: hylkeenpyynti, '
+            + 'mursunmetsästys ja kalastus veivät vuoden kierrossa '
+            + 'rannalta toiselle. Kun kultaryntäys iski 1899, tuhannet '
+            + 'muukalaiset saapuivat samalle rannalle, jota Sitnasuaqin '
+            + 'asukkaat olivat käyttäneet sukupolvien ajan.',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: '1873: rantaviiva joka oli juuri muuttunut amerikkalaiseksi',
+          teksti: 'Isoisä matkusti maailmalla 1873, jolloin Beringinsalmen '
+            + 'rannikko oli ollut Yhdysvaltain omistuksessa vasta kuusi '
+            + 'vuotta. Ulkoministeri William H. Seward oli neuvotellut '
+            + 'koko Alaskan ostosta Venäjältä 1867 hintaan 7,2 miljoonaa '
+            + 'dollaria, alle kolme senttiä eekkeriltä, ja poliittiset '
+            + 'vastustajat pilkkasivat kauppaa nimillä "Sewardin hulluus" '
+            + 'ja "Sewardin jääkaappi". Seward-niemimaalla ei ollut '
+            + 'yhtäkään pysyvää siirtokuntaa eikä karttaa, joka olisi '
+            + 'merkinnyt tulevan Nomen paikkaa. Vasta kolmekymmentä '
+            + 'vuotta myöhemmin kävi ilmi, että "jääkaappi" kätki '
+            + 'sittenkin aarteen.',
+          wiki: 'Alaska Purchase',
+        },
+        {
+          otsikko: 'Yhdeksänkymmentä kilometriä Siperiaan',
+          teksti: 'Nome on saman Seward-niemimaan pääkaupunki, jonka '
+            + 'kärjessä sata seitsemänkymmentä kilometriä luoteeseen '
+            + 'kohoaa Cape Prince of Wales, Yhdysvaltain manneralueen '
+            + 'läntisin piste ja lähempänä Siperiaa kuin mikään muu '
+            + 'paikka Pohjois-Amerikan mantereella, reilut 88 kilometriä '
+            + 'yli Beringinsalmen. Salmen keskellä kaksi pientä saarta, '
+            + 'Iso- ja Pikku-Diomede, ovat toisistaan vain 3,8 kilometrin '
+            + 'päässä, ja niiden välistä kulkee sekä valtakunnanraja että '
+            + 'kansainvälinen päivämääräraja: Pikku-Diomedeltä katsottuna '
+            + 'huominen alkaa jo naapurisaarella. Talvella salmi jäätyy '
+            + 'niin lujaa, että saarten väliä on kävelty jäätä pitkin.',
+          wiki: 'Bering Strait',
+        },
+        {
+          otsikko: 'Pakkasennätys ja lumivalli keskellä katua',
+          teksti: 'Nomen ilmasto on subarktinen: tammikuun keskilämpötila '
+            + 'on noin -15 astetta ja heinäkuun noin +11, mutta ääripäät '
+            + 'ovat rajumpia. Kylmyysennätys -54 astetta mitattiin '
+            + '27.–28. tammikuuta 1989, ja talvimyrskyt voivat lamauttaa '
+            + 'koko kaupungin: vuoden 1925 kurkkumätäepidemian aikana '
+            + 'juuri tällainen myrsky esti seerumin tuomisen '
+            + 'lentokoneella, koska avoimet ohjaamot ja vesijäähdytteiset '
+            + 'moottorit eivät kestäneet pakkasta. Front Streetin '
+            + 'lumivallit kasvavat talvisin ihmistä korkeammiksi, ja '
+            + 'kadun puhtaana pitäminen vaatii koko kaupungin '
+            + 'aurauskaluston.',
+          tiedosto: 'Nome Alaska front street snow.jpg',
+          lyhyt: 'Front Street talvella: aurattu lumi on kasattu ihmistä korkeammaksi valliksi kadun laitaan.',
+          selite: 'Front Street on aurattu, mutta lumi on kasattu ihmistä '
+            + 'korkeammaksi valliksi kadun vasempaan laitaan, ja '
+            + 'pakettiautoja on pysäköity puhdistetun kaistan varrelle.',
+          lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: 'Maali tuhannen mailin päässä',
+          teksti: 'Iditarod-koiravaljakkokilpailu on ajettu Anchoragesta '
+            + 'Nomeen vuodesta 1973, ja matka on virallisesti 1 049 '
+            + 'mailia, luku on symbolinen viittaus Alaskaan 49. '
+            + 'osavaltiona. Kilpailu syntyi kunnianosoituksena vuoden '
+            + '1925 seerumiajolle, jossa parikymmentä valjakkoa kuljetti '
+            + 'kurkkumätärokotetta Nenanasta Nomeen 674 mailin matkan '
+            + 'viidessä ja puolessa vuorokaudessa. Voittajat ajavat '
+            + 'Nomeen nykyään reilussa viikossa, ja koko kaupunki '
+            + 'kokoontuu Front Streetin maaliportille lipuin '
+            + 'riippumatta kellonajasta tai säästä.',
+          tiedosto: 'Iditarod finish line.jpg',
+          lyhyt: 'Front Streetin maaliportti odottaa Iditarodin valjakoita lippuineen ja mainoskylteineen.',
+          selite: 'Front Streetin puisen maaliportin ylle on ripustettu '
+            + 'lippuja ja sponsorien kylttejä, ja sen alla väkijoukko '
+            + 'odottaa pakkaskelissä valjakon saapumista.',
+          lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Iditarod Trail Sled Dog Race',
+        },
+        {
+          otsikko: 'Meri, joka ei enää jäädy samalla tavalla',
+          teksti: 'Nomen edustalla Beringinmeri jäätyy talvisin yhä '
+            + 'ohuemmaksi ja myöhemmin kuin isoisän aikaan, ja koko '
+            + 'Jäämeren jääpeite kutistuu vuosikymmen vuosikymmeneltä. '
+            + 'Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia — mittaushistorian kymmenenneksi '
+            + 'vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. '
+            + 'Nomelle ohuempi jää tarkoittaa pidempää purjehduskautta '
+            + 'mutta myös rajumpaa syysmyrskyjen kuluttamaa '
+            + 'rantaviivaa.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - vertical 3201 print).jpg',
+          lyhyt: 'NASA:n pystykuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion pystykuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Kultaryntäys',
+      johdanto: 'Vuonna 1898 kolme onnenonkijaa löysi kultaa purosta '
+        + 'lähellä tulevaa Nomea, ja seuraavana kesänä kultaa löytyi '
+        + 'suoraan rantahiekasta. Parissa vuodessa autiosta rannasta '
+        + 'tuli hetkeksi Alaskan suurin kaupunki.',
+      tehtava: {
+        kysymys: 'Kuinka monta uutta tulijaa Nomeen saapui keskimäärin '
+          + 'päivässä kesäkuussa 1900?',
+        vaihtoehdot: [
+          'noin tuhat',
+          'noin sata',
+          'noin kymmenen',
+          'ei yhtään, kultaryntäys oli jo päättynyt',
+        ],
+        oikea: 0,
+        fakta: 'Kesäkuussa 1900 Nomeen saapui keskimäärin tuhat uutta '
+          + 'tulijaa päivässä, kun kultaa löytyi suoraan rantahiekasta '
+          + 'ilman valtausoikeutta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme onnenonkijaa Anvil Creekillä',
+          teksti: 'Kesällä 1898 norjalaissyntyinen Jafet Lindeberg sekä '
+            + 'ruotsalaiset Erik Lindblom ja John Brynteson löysivät '
+            + 'kultaa Anvil Creekiltä, purosta joka laskee mereen '
+            + 'nykyisen Nomen kohdalla. Kolmikkoa alettiin kutsua '
+            + 'kolmeksi onnekkaaksi ruotsalaiseksi, vaikka Lindeberg oli '
+            + 'norjalainen. Tieto löydöstä levisi ulkomaailmaan vasta '
+            + 'talvella, kun viimeiset laivat olivat jo lähteneet, ja se '
+            + 'riitti sytyttämään koko seuraavan kesän ryntäyksen. Anvil '
+            + 'Creekin varrelle perustettiin nopeasti kymmeniä '
+            + 'valtauksia, ja paikka on nykyään kansallinen '
+            + 'historiallinen maamerkki.',
+          tiedosto: 'Anvil-creek-1902.jpg',
+          lyhyt: 'Miehet seulovat soraa ja vettä Anvil Creekin uomassa lapioin ja rokkerein vuonna 1902.',
+          selite: 'Miehet kaivavat ja huuhtovat soraa Anvil Creekin '
+            + 'uomassa lapioin, kottikärryin ja puisin rokkerein, '
+            + 'taustalla mäkinen tundra ja muutama teltta.',
+          lahde: 'C. H. Graves, Wikimedia Commons (PD)',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Kultaa suoraan hiekasta',
+          teksti: 'Kesällä 1900 kävi ilmi, että kultaa löytyi paitsi '
+            + 'puroista myös suoraan rantahiekasta kymmenien mailien '
+            + 'matkalta rannikkoa, ainutlaatuinen löytö, jota kuka '
+            + 'tahansa saattoi kaivaa ilman valtausoikeutta. Uutinen '
+            + 'levisi salamana, ja kesäkuussa 1900 Nomeen saapui '
+            + 'keskimäärin tuhat uutta tulijaa päivässä laivoilla, jotka '
+            + 'ankkuroituivat avoveteen ja purkivat matkustajat veneillä '
+            + 'suoraan aaltoihin. Vuoden 1900 väestönlaskenta kirjasi '
+            + '12 488 asukasta, jolloin Nomesta tuli hetkeksi koko '
+            + 'Alaskan suurin kaupunki, vaikka sitä ei ollut ollut '
+            + 'olemassa kahta vuotta aiemmin.',
+          tiedosto: 'Nome Beach Miners 1.jpg',
+          lyhyt: 'Nainen pumppaa rokkerin vipua rantahiekalla, mies työntää täyttä kottikärryä taustalla.',
+          selite: 'Nainen pitkässä 1900-luvun hameessa ja hatussa pumppaa '
+            + 'rokkerin vipua rantahiekalla, mies työntää täyttä '
+            + 'kottikärryä ja toinen mies seisoo kärryn vieressä.',
+          lahde: 'Eric A. Hegg, kuvaajaksi arvioitu, Wikimedia Commons (PD)',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Kaupunki, joka nousi ja katosi',
+          teksti: 'Nomen väkiluku romahti yhtä nopeasti kuin se nousi. '
+            + 'Kesällä 1900 kaupungissa saattoi olla parikymmentä '
+            + 'tuhatta ihmistä, mutta virallinen väestönlaskenta vuonna '
+            + '1910 kirjasi enää 2 600 asukasta, ja vuoteen 1934 '
+            + 'mennessä luku oli pudonnut alle 1 500:aan. Silti kultaa '
+            + 'on nostettu Nomen alueelta yhteensä ainakin 3,6 miljoonaa '
+            + 'troyunssia, ja nykyisin merenpohjasta imuruoppaavat '
+            + 'kultalaivat jatkavat samaa perinnettä aivan kaupungin '
+            + 'edustalla, yli sata vuotta ensimmäisen ryntäyksen '
+            + 'jälkeen.',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Wyatt Earp "louhi kaivosmiehiä"',
+          teksti: 'Syyskuussa 1899 lännen legenda Wyatt Earp rakensi '
+            + 'kumppaninsa Charles Hoxien kanssa Dexter-saluunan, '
+            + 'kaupungin ensimmäisen kaksikerroksisen puurakennuksen. '
+            + 'Earp ei etsinyt kultaa purosta vaan kaivosmiesten '
+            + 'taskuista: hän myönsi suoraan tulleensa louhimaan '
+            + 'kaivosmiehiä, ja Dexteristä tuli kaupungin ylellisin '
+            + 'saluuna, jonka ovista kulki niin kirjailija Rex Beach '
+            + 'kuin nuori kaivosinsinööri Herbert Hoover, myöhempi '
+            + 'presidentti. Earp ja hänen vaimonsa Josephine viettivät '
+            + 'Nomessa vain kesät ja myivät osuutensa Hoxielle muutaman '
+            + 'vuoden jälkeen, ennen joulukuuta 1901.',
+          tiedosto: 'Nome Alaska 1900.jpg',
+          lyhyt: 'Front Street 17. heinäkuuta 1900: kadun varrella kohoaa Wyatt Earpin Dexter Saloon.',
+          selite: 'Front Street on täynnä väkeä ja amerikanlippuja 17. '
+            + 'heinäkuuta 1900, ja kadun vasemmalla puolella erottuu '
+            + 'liikkeiden kylttejä, joukossa Dexter-saluunan kyltti.',
+          lahde: 'Carrie M. McLain Memorial Museum, Wikimedia Commons (PD)',
+          wiki: 'Wyatt Earp',
+        },
+        {
+          otsikko: 'Mursunhammas jolla onniteltiin juutalaista uutta vuotta',
+          teksti: 'Iñupiat-taiteilija Angokwazhuk, jota merimiehet '
+            + 'kutsuivat nimellä Happy Jack, oppi mursunhampaan '
+            + 'kaiverruksen valaanpyyntikapteeni Hartson Bodfishilta '
+            + 'Pikku-Diomeden saarella 1892 ja muutti Nomeen '
+            + 'kultaryntäyksen mukana noin 1900. Hänestä tuli '
+            + 'ensimmäinen alkuperäiskansataiteilija, joka tunnettiin '
+            + 'Alaskassa omalla nimellään: hän myi kaiverrettuja '
+            + 'mursunhampaita kaivosmiehille ja kauppiaille. Vuonna 1910 '
+            + 'hän kaiversi mursunhampaaseen juutalaisen uudenvuoden '
+            + 'onnittelun hepreankielisine siunauksineen kahdelle '
+            + 'nomelaiselle kauppiaalle, ainutlaatuinen todiste '
+            + 'kultakaupungin moninaisuudesta.',
+          tiedosto: 'Happy Jack (born Angokwazhuk) - New Year Greeting - Google Art Project.jpg',
+          lyhyt: 'Mursunhampaaseen on kaiverrettu parrakas mies ja peruukkinainen sekä heprealainen teksti.',
+          selite: 'Mursunhampaan pintaan on kaiverrettu parrakas mies '
+            + 'silinterihatussa vasemmalla ja peruukkia käyttävä nainen '
+            + 'oikealla, niiden välissä heprealainen teksti, Daavidin '
+            + 'tähti ja sana Nome, Alaska.',
+          lahde: 'Angokwazhuk ("Happy Jack"), Wikimedia Commons / Google Art Project (PD)',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: 'Seerumiajo, josta tuli kilpailu',
+          teksti: 'Tammikuussa 1925 lääkäri Curtis Welch totesi Nomessa '
+            + 'kurkkumädän, ja sairaalan seerumivarasto oli vanhentunut '
+            + 'eikä uutta ehtisi laivalla ennen jäätymistä. Koneiden '
+            + 'avoimet ohjaamot eivät kestäneet pakkasta, joten seerumi '
+            + 'kulki 27. tammikuuta alkaen koiravaljakoilla Nenanasta '
+            + '674 mailin eli reilun tuhannen kilometrin matkan Nomeen. '
+            + 'Parikymmentä ajajaa ja noin 150 koiraa vaihtoivat kuormaa '
+            + 'toisilleen viidessä ja puolessa vuorokaudessa: '
+            + 'vaarallisimman, 261 mailin pätkän ajoi Leonhard Seppala '
+            + 'johtokoiranaan Togo, ja viimeiset 53 mailia toi perille '
+            + 'Gunnar Kaasen johtokoiranaan Balto. Seerumi saapui '
+            + 'Nomeen 2. helmikuuta 1925 aamuviideltä.',
+          wiki: '1925 serum run to Nome',
+        },
+      ],
+    },
+  ],
+
+  portovelho: [
+    {
+      id: 'kaupunki',
+      nimi: 'Porto Velho',
+      johdanto: 'Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle '
+        + 'vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen '
+        + 'leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen '
+        + 'tulvista, kumista, tinasta ja soijasta.',
+      nostot: [
+        {
+          otsikko: 'Jättiläisjoki, joka kantaa kaupungin',
+          teksti: 'Rio Madeira on Amazonin suurin sivujoki ja yksin pidempi '
+            + 'kuin Tonava: se syntyy Andien rinteiltä Bolivian ja Perun '
+            + 'vuorista ja laskee lähes 3 300 kilometrin matkan jälkeen '
+            + 'Amazoniin. Sen ruskea vesi kuljettaa niin paljon hienoa '
+            + 'hietaa ja savea Andeilta, että joki värjää koko '
+            + 'alajuoksunsa mutaiseksi. Sadekaudella, marraskuusta '
+            + 'huhtikuuhun, vedenpinta voi nousta yli kymmenen metriä ja '
+            + 'tulvia lähiöitä, kun taas kuivana kautena hiekkarannat '
+            + 'paljastuvat keskellä kaupunkia. Porto Velholle joki on '
+            + 'ollut vuosisadan ajan tärkein kulkuväylä, sillä kunnollista '
+            + 'maantietä pääkaupunkiin ei ollut vielä 1960-luvullakaan.',
+          tiedosto: 'Rio Madeira Porto Velo Brazil (109758143).jpeg',
+          lyhyt: 'Rio Madeira on Amazonin suurin sivujoki ja pidempi kuin Tonava.',
+          selite: 'Valkoiset kasautumispilvet kohoavat korkealle Rio '
+            + 'Madeiran yllä, ja horisontissa siintää Porto Velhon matala '
+            + 'kaupunkisiluetti.',
+          lahde: 'Henry Vagrant, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Madeira (joki)',
+        },
+        {
+          otsikko: 'Ensimmäinen kivikirkko sademetsän keskellä',
+          teksti: 'Porto Velhon vanha keskusta rakentui rautatien ja joen '
+            + 'risteykseen 1900-luvun alussa, ja sen sydämenä on yhä '
+            + 'Praça Pe. João Nicolettin ympärille avautuva puistoaukio. '
+            + 'Aukion laidalla kohoaa kaupungin ensimmäinen katolinen '
+            + 'kivikirkko, Sagrado Coração de Jesus -katedraali: '
+            + 'peruskivi muurattiin 1917, mutta varsinainen rakentaminen '
+            + 'käynnistyi kunnolla vasta kymmenen vuotta myöhemmin. '
+            + 'Ulkoa katedraali on roomalaistyylinen kaksitorninen '
+            + 'rakennus, mutta sisällä holvit nousevat goottilaisittain '
+            + 'terävinä. Ympärille kasvoi hallintorakennuksia ja '
+            + 'liiketaloja, jotka näkyvät yhä ilmasta katsottuna '
+            + 'keskustan matalana, punakattoisena ruudukkona joen '
+            + 'rannalla.',
+          tiedosto: 'Vista aérea de Porto Velho, RO (4154560872).jpg',
+          lyhyt: 'Kaupungin ensimmäinen kivikirkko, Sagrado Coração de Jesus, aloitettiin 1917.',
+          selite: 'Ilmakuvassa avautuu Porto Velhon vanha keskusta: '
+            + 'kaksitornisen Sagrado Coração de Jesus -katedraalin '
+            + 'edessä on puistoaukio, jota ympäröivät matalat '
+            + 'punakattoiset korttelit.',
+          lahde: 'Cleber Rech from Curitiba, PR, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Aurinko laskee jokeen joka ilta',
+          teksti: 'Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu '
+            + 'ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on '
+            + 'kaupungin vakiintunut ilta-askare siinä missä iltakävely '
+            + 'muualla. Joelta palaa samaan aikaan kalastajaveneitä, '
+            + 'jotka ovat olleet päivän saaliilla, sillä joki on monelle '
+            + 'perheelle yhä tärkein toimeentulon lähde. Saalis myydään '
+            + 'usein heti rantatorilla tuoreena, ennen kuin se ehtii '
+            + 'pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee '
+            + 'illoista kosteita ja lämpimiä ympäri vuoden, joten '
+            + 'auringonlasku on myös hetki, jolloin päivän pahin helle '
+            + 'vihdoin hellittää ja kaupunki herää toiseen elämäänsä.',
+          tiedosto: '2007- por-do-sol em porto velho rio madeira - panoramio.jpg',
+          lyhyt: 'Illalla rantaraitille kokoonnutaan katsomaan auringonlaskua Rio Madeiran ylle.',
+          selite: 'Aurinko laskee tyynen Rio Madeiran taakse metsäiselle '
+            + 'rantaviivalle, ja sen kajo heijastuu pitkänä juovana '
+            + 'veteen.',
+          lahde: 'James Martins, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Satama, josta soija ja tina lähtevät merelle',
+          teksti: 'Koska Porto Velhoon ei ollut rautatietä eikä kunnollista '
+            + 'maantietä vuosikymmeniin, joki on ollut ja on yhä '
+            + 'kaupungin tärkein kauppaväylä. Ilmakuvassa näkyvät suuret '
+            + 'pyöreät säiliöt kuuluvat jokisatamaan, jossa soijaa, '
+            + 'maissia ja polttoainetta lastataan proomuihin Rio '
+            + 'Madeiran rantaan. Proomujonot hinataan tuhansien '
+            + 'kilometrien päähän Amazon-jokea pitkin Atlantille asti, '
+            + 'sillä se on halvempi reitti kuin kuorma-autot huonokuntoi'
+            + 'silla teillä. Samalla rannalla toimi 1900-luvun alussa '
+            + 'kumin ja myöhemmin tinamalmin lastauspaikka, joten satama '
+            + 'on ollut kaupungin elinehto sen koko historian ajan.',
+          tiedosto: 'Porto Velho 1 09072007.jpg',
+          lyhyt: 'Jokisatamasta soija, maissi ja polttoaine lastataan proomuihin kohti Atlanttia.',
+          selite: 'Ilmakuvassa Rio Madeiran rantaan on rakennettu '
+            + 'pyöreitä varastosäiliöitä ja satamalaitureita kaupungin '
+            + 'reunalla, joen toisella puolella siintää keskusta.',
+          lahde: 'Wilson Dias/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Kylästä puolen miljoonan asukkaan pääkaupungiksi',
+          teksti: 'Porto Velho syntyi virallisesti vasta 1907 rautatyömaan '
+            + 'leirinä, mutta kasvoi nopeasti: kaupungista tuli 1943 '
+            + 'perustetun liittovaltion Rondônian alueen pääkaupunki ja '
+            + '1981 osavaltioksi korotetun Rondônian pääkaupunki. '
+            + 'Väkiluku moninkertaistui 1970- ja 1980-luvuilla, kun '
+            + 'Brasilian hallitus kannusti perheitä muuttamaan maan '
+            + 'tiheämmin asutuilta alueilta tyhjiksi luulluille '
+            + 'sademetsäseuduille uusia teitä pitkin. Ilmakuvan '
+            + 'punakattoiset omakotitalorivit ja suorakulmaiset kadut '
+            + 'ovat tyypillisiä juuri näinä vuosikymmeninä kasvaneille '
+            + 'asuinalueille. Nykyään Porto Velhossa asuu yli 500 000 '
+            + 'ihmistä, ja se on koko Rondônian ylivoimaisesti suurin '
+            + 'kaupunki.',
+          tiedosto: 'Porto Velho 2 09072007.jpg',
+          lyhyt: 'Rautatyömaan leiristä kasvoi 1981 perustetun Rondônian osavaltion pääkaupunki.',
+          selite: 'Ilmakuvassa erottuvat suorakulmaisten katujen '
+            + 'reunustamat punakattoiset omakotitalorivit, jotka '
+            + 'levisivät nopeasti kasvaneen kaupungin laitamille.',
+          lahde: 'Wilson Dias/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Rondônia',
+        },
+        {
+          otsikko: 'Vaaleanpunainen delfiini joen mutaisessa vedessä',
+          teksti: 'Rio Madeirassa elää amazonindelfiini (Inia '
+            + 'geoffrensis), maailman suurin jokidelfiinilaji ja ainoa, '
+            + 'jonka iho voi värjäytyä vaaleanpunaiseksi aikuisena. '
+            + 'Väri johtuu ihon alla olevasta arpikudoksesta ja '
+            + 'verisuonista, jotka paljastuvat, kun ylempi ihokerros '
+            + 'kuluu iän ja tappeluiden myötä - vanhimmat ja '
+            + 'aktiivisimmat urokset ovat usein väriltään kirkkaimpia. '
+            + 'Toisin kuin merten delfiinit, amazonindelfiinin '
+            + 'kaularanka ei ole yhteen luutunut, joten se pystyy '
+            + 'kääntämään päätään lähes 90 astetta sivulle etsiessään '
+            + 'saalista tulvametsän puiden välistä. Paikallisessa '
+            + 'tarustossa delfiinin uskotaan yöllä muuttuvan mieheksi, '
+            + 'joka viettelee kyläjuhlien naisia.',
+          tiedosto: 'Boto cor-de-rosa - Pink dolphin (46314897644).jpg',
+          lyhyt: 'Amazonindelfiinin iho muuttuu vaaleanpunaiseksi arpien ja verisuonten paljastuessa.',
+          selite: 'Amazonindelfiini pistää päänsä veden pinnalle suu '
+            + 'auki, ja sen vaaleanpunertava iho erottuu selvästi '
+            + 'tummasta jokivedestä.',
+          lahde: 'Just a Brazilian man from Brazil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Amazonindelfiini',
+        },
+      ],
+    },
+    {
+      id: 'perkeleenrata',
+      nimi: 'Perkeleen rautatie',
+      johdanto: 'Rio Madeiran koskien ohitse yritettiin vuosikymmeniä '
+        + 'rakentaa rautatietä, joka vaati tuhansia ihmishenkiä ja sai '
+        + 'liikanimen Perkeleen rata. Sen rippeet ja veturit lepäävät '
+        + 'yhä Porto Velhon museossa ja sademetsän vallassa.',
+      tehtava: {
+        kysymys: 'Miksi Madeira-Mamoré-rataa alettiin kutsua "Perkeleen radaksi"?',
+        vaihtoehdot: [
+          'Koska sen rakentamisessa kuoli tuhansia työläisiä tropiikkitauteihin ja väkivaltaan',
+          'Koska rata rakennettiin kokonaan yhden ainoan sadekauden aikana',
+          'Koska juna suistui raiteilta lähes joka viikko',
+          'Koska rata kulki paikallisten pyhänä pitämän luolaston läpi',
+        ],
+        oikea: 0,
+        fakta: 'Radan rakentamisessa vuosina 1907-1912 kuoli arvioiden '
+          + 'mukaan 6 000-30 000 työläistä lähinnä malariaan, '
+          + 'keltakuumeeseen ja muihin tropiikin tauteihin, minkä vuoksi '
+          + 'rataa alettiin kutsua Perkeleen radaksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuotta ennen isoisän matkaa: rata joka petti jo kerran',
+          teksti: 'Vuonna 1870 eversti George Earl Church sai luvan '
+            + 'rakentaa rautatien Rio Madeiran koskien ohitse Bolivian '
+            + 'kumin viennin helpottamiseksi. Church palkkasi '
+            + 'urakoitsijaksi P. & T. Collinsin yhtiön, joka aloitti '
+            + 'työt 1872 - vain vuosi ennen kuin isoisä alkoi '
+            + 'kirjoittaa matkapäiväkirjaansa. Hanke päättyi '
+            + 'katastrofiin: sademetsän kuumetaudit, ruokapula ja '
+            + 'konfliktit paikallisten kanssa tappoivat lähes 80 '
+            + 'työläistä, ja radasta ehdittiin rakentaa vain nelisen '
+            + 'kilometriä ennen kuin yritys hylättiin. Nykyisen Porto '
+            + 'Velhon paikalla ei siis vielä 1873 ollut kaupunkia, '
+            + 'vaan hylätyn rautatien rappeutuvia raiteita sademetsässä.',
+          tiedosto: 'George Earl Church 1885.jpg',
+          lyhyt: 'Ensimmäinen yritys rakentaa rata alkoi 1872 ja päättyi katastrofiin.',
+          selite: 'Muotokuvassa George Earl Church seisoo '
+            + 'tummanpunaisessa paidassa ja vaaleassa viitassa, '
+            + 'kätensä nojaten kivääriin.',
+          lahde: 'Ethel Morlock, Wikimedia Commons (PD)',
+          wiki: 'George Earl Church',
+        },
+        {
+          otsikko: 'Tuhannet käsiparit kymmenistä maista',
+          teksti: 'Kun rautatie vihdoin valmistui 1907-1912, sen urakoi '
+            + 'rahoittaja Percival Farquhar hyödyntäen vuoden 1903 '
+            + 'Petrópolisin sopimusta. Rakentajia '
+            + 'rekrytoitiin kymmenistä maista: eniten Karibialta, '
+            + 'etenkin Barbadokselta, mutta myös Euroopasta - '
+            + 'kaikkiaan arviolta 20 000-30 000 ihmistä hankkeen eri '
+            + 'vaiheissa. Malaria, keltakuume ja beriberi tappoivat '
+            + 'heistä arvioiden mukaan 6 000-30 000, minkä vuoksi '
+            + 'rataa alettiin kutsua Perkeleen radaksi (Estrada de '
+            + 'Ferro do Diabo). Ruumiit haudattiin usein suoraan '
+            + 'ratapenkan viereen, ja hautapaikat ovat kadonneet '
+            + 'kasvillisuuden alle. Rata valmistui lopulta 366 '
+            + 'kilometrin mittaisena Porto Velhosta Guajará-Mirimiin.',
+          tiedosto: 'Homens posam junto a uma locomotiva.tif',
+          lyhyt: 'Rautatien rakentamisessa 1907-1912 kuoli arvioiden mukaan tuhansia työläisiä.',
+          selite: 'Vanhassa valokuvassa työnjohtajia ja työläisiä eri '
+            + 'asuissa poseeraa höyryveturin edessä radan varrella.',
+          lahde: 'Correio da Manhã, Wikimedia Commons (PD)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Rata raivattiin käsin sademetsän läpi',
+          teksti: 'Radan rakentaminen tarkoitti kilometri kilometriltä '
+            + 'etenevää raivausta: ensin kaadettiin puut, sitten '
+            + 'kaivettiin ratapenger lapioin, ja lopuksi kiskot ja '
+            + 'pölkyt asetettiin paikoilleen. Kuumuus, kosteus ja '
+            + 'hyttyspilvet tekivät työstä hidasta ja vaarallista, ja '
+            + 'moni urakoitsija joutui vaihtamaan työvoimansa useita '
+            + 'kertoja sairastumisten vuoksi. Kumin maailmanmarkkina'
+            + 'hinta oli tuolloin niin korkea, että hanke kannatti '
+            + 'yrittää uudestaan, vaikka aiemmat yritykset olivat '
+            + 'epäonnistuneet. Rata valmistui juuri ajoissa: kumin '
+            + 'hinta romahti pian, kun Kaakkois-Aasian viljelmät '
+            + 'valtasivat markkinat, eikä siitä tullut niin kannattava '
+            + 'kuin toivottiin.',
+          tiedosto: 'Construction of the Madeira-Mamoré Railway in Brazil. Published on 24 May 1913.jpg',
+          lyhyt: 'Rata raivattiin käsin sademetsän läpi kumin maailmanmarkkinahintojen ollessa huipussaan.',
+          selite: 'Mustavalkoisessa valokuvassa hiljattain raivattu '
+            + 'ratapenger kulkee suorana sademetsän keskellä, ja '
+            + 'pieniä ihmishahmoja näkyy penkereellä kaukana.',
+          lahde: 'Ralph Anderson Bennitt, Wikimedia Commons (PD)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Veturi numero 18 seisoo yhä asemapihalla',
+          teksti: 'Rata liikennöi lopulta vuoteen 1972 asti, jolloin uusi '
+            + 'maantie BR-364 teki siitä tarpeettoman ja liikenne '
+            + 'lakkautettiin kokonaan. Porto Velhon vanhalle '
+            + 'rautatieasemalle jäi kuitenkin useita alkuperäisiä '
+            + 'höyryvetureita, jotka on sittemmin kunnostettu museoksi '
+            + 'Complexo Madeira-Mamoré -nimisen puiston alueelle. Yksi '
+            + 'näkyvimmistä on veturi numero 18, jonka kylkeen on '
+            + 'maalattu radan lyhenne E.F.M-M. Museoalueella kiertää '
+            + 'nykyään myös matkailijajuna lyhyen pätkän vanhaa rataa '
+            + 'pitkin muutaman kerran vuodessa, ja paikalliset pitävät '
+            + 'rataa yhtenä kaupungin tärkeimmistä historiallisista '
+            + 'muistomerkeistä, vaikka se syntyi niin raskaan hinnan '
+            + 'kustannuksella.',
+          tiedosto: 'Locomotiva no museu da Estrada de Ferro Madeira-Mamoré (4153821591).jpg',
+          lyhyt: 'Rata liikennöi vuoteen 1972, jolloin uusi maantie teki siitä tarpeettoman.',
+          selite: 'Kunnostettu musta höyryveturi numero 18 seisoo '
+            + 'raiteillaan asemapihan puistoalueella, taustalla näkyy '
+            + 'puita ja pysäköityjä autoja.',
+          lahde: 'Cleber Rech from Curitiba, PR, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Sademetsä valtasi hylätyn veturin takaisin',
+          teksti: 'Kaikkia radan vetureita ei koskaan siirretty museoon. '
+            + 'Osa jäi seisomaan paikoilleen vanhan linjan varrelle sen '
+            + 'jälkeen, kun liikenne lakkasi 1972, ja sademetsä alkoi '
+            + 'vähitellen vallata ne takaisin. Tässä kuvassa näkyvä '
+            + 'veturi numero 20 tunnettiin nimellä Maquinista Rivero '
+            + 'erään junanajajansa mukaan, ja se ehti ruostua '
+            + 'vuosikymmeniä köynnösten ja pensaiden peitossa, ennen '
+            + 'kuin se otettiin talteen Brasilian kansallisen '
+            + 'kulttuuriperintöviraston Iphanin kokoelmiin. Tällaiset '
+            + 'hylätyt veturit muistuttavat siitä, miten nopeasti '
+            + 'sademetsä peittää ihmisen jäljet, jos niitä ei erikseen '
+            + 'suojella - sama kohtalo odotti alun perin koko rataa.',
+          tiedosto: 'EF-Madeira-Mamoré-Imagem-Acervo-Digital-do-Iphan12.jpg',
+          lyhyt: 'Hylätty veturi numero 20 ruostui vuosikymmeniä sademetsän köynnösten peitossa.',
+          selite: 'Vanhassa valokuvassa ruosteinen höyryveturi seisoo '
+            + 'puiden ja pensaiden ympäröimänä, kyljessä lukee '
+            + '"Maquinista Rivero".',
+          lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+      ],
+    },
+  ],
+  kalgoorlie: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kalgoorlie',
+      johdanto: 'Kalgoorlie nousi Länsi-Australian punaiselle aavikolle '
+        + 'kultaryntäyksen mukana 1893, mutta seutu oli asuttua kauan ennen '
+        + 'sitä: wongatha-kansa tunsi joka vesipaikan ikivanhalla '
+        + 'kultakalliolla.',
+      nostot: [
+        {
+          otsikko: 'Karlkurla, hopeanhohtoinen köynnös',
+          tiedosto: 'Marsdenia australis habit.jpg',
+          teksti: 'Kalgoorlien nimi tulee wangai-kielen sanasta karlkurla, '
+            + 'paikka jossa kasvaa silkkipäärynöitä. Kyseessä on '
+            + 'köynnösmäinen aavikkopensas, jonka makeita hedelmiä ja '
+            + 'mehukkaita juuria alkuperäiskansat söivät tuhansien vuosien '
+            + 'ajan ennen minkään eurooppalaisen näkyä. Seutu kuuluu '
+            + 'wongatha- eli wangkatha-kansojen kielialueeseen: nimitys '
+            + 'kattaa kahdeksan ryhmää Kalgoorlien, Coolgardien, Menziesin, '
+            + 'Leonoran ja Lavertonin ympäristössä. Vuonna 2023, '
+            + 'kolmenkymmenen vuoden oikeustaistelun jälkeen, '
+            + 'liittovaltion tuomioistuin tunnusti wongi-kansan '
+            + 'alkuperäiset maaoikeudet kolmenkymmenentuhannen '
+            + 'neliökilometrin alueeseen kultakentillä.',
+          lyhyt: 'Kalgoorlie sai nimensä alkuperäiskielen sanasta, joka '
+            + 'tarkoittaa silkkipäärynän kasvupaikkaa.',
+          selite: 'Silkkipäärynän köynnös kiipeää aidan tolppaa pitkin '
+            + 'punaisella aavikkohiekalla; kasvin makeita hedelmiä '
+            + 'käytettiin ruokana.',
+          lahde: 'Mark Marathon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wangkatha',
+        },
+        {
+          otsikko: 'Isoisä käveli kullan yli tietämättään',
+          tiedosto: 'Paddy Hannan by John McLeod.jpg',
+          teksti: 'Isoisä kulki näillä samoilla tasangoilla vuonna 1873 '
+            + 'tietämättä, että jalkojen alla lepäsi yksi maailman '
+            + 'rikkaimmista kultasuonista — se löytyi vasta kaksikymmentä '
+            + 'vuotta myöhemmin. Kesäkuussa 1893 kullankaivaja Paddy '
+            + 'Hannan matkasi tovereineen kohti Mount Youlea, kun yhden '
+            + 'hevosen kenkä irtosi. Pysähdyksen aikana miehet huomasivat '
+            + 'kullan kimallusta nykyisen Mount Charlotten juurella. '
+            + 'Hannan jätti löytöilmoituksen 17. kesäkuuta, ja sadat '
+            + 'onnenonkijat tulvivat paikalle: leiristä kasvoi muutamassa '
+            + 'vuodessa kaupunki, joka sai nimensä alkuperäiskielisestä '
+            + 'karlkurla-sanasta.',
+          lyhyt: 'Paddy Hannanin hevosen kengän irtoaminen 1893 synnytti '
+            + 'kultaryntäyksen ja koko kaupungin.',
+          selite: 'Paddy Hannanin pronssipatsas Kalgoorlien pääkadulla: '
+            + 'hän istuu kivellä vesileili sylissään, ja patsas toimii '
+            + 'yhä juomalähteenä.',
+          lahde: 'John McLeod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Paddy Hannan',
+        },
+        {
+          otsikko: 'Kamelit kantoivat kaupungin tarvikkeet',
+          tiedosto: 'CamelTrainKalgoorlie WEFretwellCollection.jpg',
+          teksti: 'Ennen rautatietä ja vesijohtoa kultakenttien tavarat '
+            + 'kulkivat kameleilla, joita ajoivat Afganistanista, '
+            + 'Intiasta, Egyptistä, Iranista ja Turkista tulleet '
+            + 'siirtolaiset — heitä kutsuttiin yhteisnimellä afgaanit. '
+            + 'Veljekset Faiz ja Tagh Mahomet perustivat 1890-luvulla '
+            + 'kamelien huoltoasemia ja kauppoja pitkin kultakenttiä aina '
+            + 'Geraldtoniin asti. Kamelit kestivät hiekkaa ja kuumuutta '
+            + 'paremmin kuin hevoset, ja karavaanit kuljettivat ruokaa, '
+            + 'työkaluja ja jopa kokonaisia puurakennuksia pyörillä '
+            + 'leiristä toiseen. Rautatie ja vesijohto tekivät '
+            + 'karavaanikaupasta lopulta tarpeettoman 1900-luvun alussa.',
+          lyhyt: 'Afgaanikamelinajajat kuljettivat kultakenttien tavarat '
+            + 'ennen rautatietä ja vesijohtoa.',
+          selite: 'Kameliryhmä vetää kokonaista puutaloa pyörillä '
+            + 'Kalgoorliessa 1900-luvun alussa; savua nousee taustan '
+            + 'tehtaan piipuista.',
+          lahde: 'William E. Fretwell, Wikimedia Commons (Public domain)',
+          wiki: 'Afghan cameleers in Australia',
+        },
+        {
+          otsikko: 'Kaksoiskaupunki, joka ei suostu yhdeksi',
+          tiedosto: 'Boulder railway station, 2016 (01).jpg',
+          teksti: 'Boulder syntyi kivenheiton päähän Kalgoorliesta, mutta '
+            + 'kieltäytyi jyrkästi sulautumasta naapuriinsa: kun rautatie '
+            + 'ulotettiin Kalgoorlieen 1896, boulderilaiset raivostuivat '
+            + 'pelätessään kaupan valuvan ohitse, ja vaativat oman '
+            + 'asemansa. Rata jatkui Boulderiin 1897, ja kultasuonen '
+            + 'ympärille rakennettiin Golden Mile Loopline -niminen '
+            + 'kehärata, joka kuljetti kaivostyöläisiä kaupunkien ja '
+            + 'kymmenien kaivosten välillä. Kaksikko yhdistyi '
+            + 'hallinnollisesti vasta 1989 nimellä Kalgoorlie-Boulder, '
+            + 'mutta paikalliset puhuvat yhä kahdesta eri kaupungista.',
+          lyhyt: 'Boulder kieltäytyi sulautumasta Kalgoorlieen, ja '
+            + 'kaksikko yhdistyi virallisesti vasta 1989.',
+          selite: 'Boulderin rautatieasema punatiilisine katoksineen ja '
+            + 'aaltopeltikattoineen seisoo tyhjän pysäköintialueen '
+            + 'laidalla.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Boulder, Western Australia',
+        },
+        {
+          otsikko: 'Kuiluista nousi metripaksuinen kultasuoni',
+          tiedosto: 'Hannans North Tourist Mine, 2016 (06).jpg',
+          teksti: 'Kultasuoni tunnetaan Golden Milena, maailman '
+            + 'rikkaimpana neliömailina. Vuoteen 1903 mennessä sen alla '
+            + 'toimi neljäkymmentäyhdeksän erillistä kaivosta, sata '
+            + 'nostotornia ja yli kolmetuhatta kilometriä maanalaisia '
+            + 'käytäviä — kaivosmiehet louhivat kultaa kuiluista, jotka '
+            + 'ulottuivat yli kilometrin syvyyteen. Yksi vanhoista '
+            + 'kaivoksista, Hannans North, on säilytetty museona: sen '
+            + 'nostotornit seisovat yhä punaisella hiekalla, ja kävijät '
+            + 'pääsevät laskeutumaan oppaan kanssa samoihin kuiluihin, '
+            + 'joita miehet louhivat kynttilän valossa yli sata vuotta '
+            + 'sitten.',
+          lyhyt: 'Golden Milella oli 1903 jo 49 kaivosta ja yli 3000 '
+            + 'kilometriä maanalaisia käytäviä.',
+          selite: 'Hannans Northin nostotornit ja punainen '
+            + 'pärekattoinen konehuone seisovat aavikon punaisella '
+            + 'hiekalla sinistä taivasta vasten.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kalgoorlie',
+        },
+        {
+          otsikko: 'Piikkipiru piiloutuu punaiseen hiekkaan',
+          tiedosto: 'Moloch horridus 77894454.jpg',
+          teksti: 'Kalgoorlien ympäröivillä hiekka-aavikoilla elää '
+            + 'piikkipiru, kourallisen kokoinen liskolaji, jonka koko '
+            + 'keho on peitetty terävillä piikeillä petoja vastaan. Se '
+            + 'syö pelkkiä muurahaisia — jopa tuhansia päivässä — ja '
+            + 'nappaa niitä kielellään pesän suulta tuntikausia '
+            + 'liikkumatta. Piikit eivät ole ainoa temppu: liskon '
+            + 'nahassa kulkevat mikroskooppiset urat keräävät kastetta ja '
+            + 'sadetta koko rungon pinnalta ja johtavat veden suoraan '
+            + 'suuhun, joten piikkipiru voi juoda melkein mistä tahansa '
+            + 'kohdasta ihoaan.',
+          lyhyt: 'Piikkipiru juo vettä koko ihollaan ja syö pelkkiä '
+            + 'muurahaisia tuhansittain päivässä.',
+          selite: 'Piikkipiru kävelee punaisella hiekkatiellä; koko keho '
+            + 'on peitetty terävillä, epäsymmetrisillä piikeillä.',
+          lahde: 'Richard Fuller, Wikimedia Commons (CC0)',
+          wiki: 'Piikkipiru',
+        },
+      ],
+    },
+    {
+      id: 'superpit',
+      nimi: 'Superpit',
+      johdanto: 'Golden Mile oli sata vuotta satojen erillisten kuilujen '
+        + 'kaupunki, kunnes 1989 kaikki yhdistettiin yhdeksi jättimäiseksi '
+        + 'kuopaksi. Superpit näkyy nykyään jopa satelliittikuvista.',
+      tehtava: {
+        kysymys: 'Kuinka syvä Kalgoorlien Superpit-avolouhos on?',
+        vaihtoehdot: [
+          'Noin 50 metriä',
+          'Noin 200 metriä',
+          'Yli 600 metriä',
+          'Yli kaksi kilometriä',
+        ],
+        oikea: 2,
+        fakta: 'Superpit on noin 3,5 kilometriä pitkä, 1,6 kilometriä '
+          + 'leveä ja yli 600 metriä syvä — yksi maailman suurimmista '
+          + 'käsin kaivetuista kuopista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman suurimpia käsin kaivettuja kuoppia',
+          tiedosto: 'Super Pit Mine, Kalgoorlie, Western Australia.jpg',
+          teksti: 'Superpit eli Fimistonin avolouhos on suunnilleen 3,5 '
+            + 'kilometriä pitkä, 1,6 kilometriä leveä ja yli 600 metriä '
+            + 'syvä — yksi maailman suurimmista ihmisen kaivamista '
+            + 'kuopista. Louhos on niin valtava, että se erottuu selvästi '
+            + 'satelliittikuvista, ja NASAn maapallon '
+            + 'havainnointisatelliitti on kuvannut sen omaksi kohteekseen. '
+            + 'Näköalapaikalta kaupungin laidalla kuopan pohjalla '
+            + 'liikkuvat jättirekat näyttävät leluautoilta, vaikka niiden '
+            + 'lava on kooltaan pientä omakotitaloa vastaava.',
+          lyhyt: 'Superpit on noin 3,5 kilometriä pitkä ja yli 600 '
+            + 'metriä syvä, näkyy satelliittikuvista.',
+          selite: 'NASAn satelliittikuva Kalgoorliesta: kaupungin '
+            + 'ruutukaava erottuu keskellä, ja oikealla avautuu Superpitin '
+            + 'vaaleanharmaa, epäsäännöllisen muotoinen kuilu '
+            + 'kaivosalueineen.',
+          lahde: 'Jesse Allen, NASA Earth Observatory, Wikimedia Commons (Public domain)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Kaksisataa kuoppaa yhdeksi',
+          tiedosto: 'Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg',
+          teksti: 'Golden Milen alla toimi 1980-luvulle asti kymmeniä '
+            + 'erillisiä kaivosyhtiöitä, jotka olivat kaivaneet samaa '
+            + 'kultasuonta yli sata vuotta omilla kuiluillaan ja omilla '
+            + 'säännöillään. Liikemies Alan Bond yritti 1980-luvun '
+            + 'alussa ostaa kaikki lohkot yhteen omistukseen, mutta '
+            + 'hänen yrityksensä kaatui. Homestake Gold of Australia ja '
+            + 'Normandy Miningin tytäryhtiö onnistuivat siinä, missä '
+            + 'Bond epäonnistui: 1989 noin 260 erillistä louhosoikeutta '
+            + 'yhdistettiin Kalgoorlie Consolidated Gold Minesin '
+            + 'hallintaan yhdeksi avolouhokseksi.',
+          lyhyt: 'Vuonna 1989 noin 260 erillistä kaivosoikeutta '
+            + 'yhdistettiin yhdeksi jättiavolouhokseksi.',
+          selite: 'Superpit päiväsaikaan pilvisen taivaan alla; '
+            + 'punaruskeat ja harmaat kivikerrokset erottuvat selvästi '
+            + 'terasseissa.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Kulta syntyi 2,7 miljardia vuotta sitten',
+          tiedosto: 'Calaverite-Gold-t07-83a.jpg',
+          teksti: 'Golden Milen kulta syntyi noin 2,7 miljardia vuotta '
+            + 'sitten, kun Yilgarnin kraatoni — yksi maapallon vanhimmista '
+            + 'säilyneistä kallioperän kappaleista — puristui kokoon '
+            + 'vuoristonmuodostuksessa. Kuumat, mineraaleja kuljettavat '
+            + 'nesteet virtasivat murroksissa noin neljänkymmenenviiden '
+            + 'miljoonan vuoden ajan ja saostivat kultaa yhdessä '
+            + 'harvinaisten kultatelluridien, kuten kalaveriitin, kanssa. '
+            + 'Telluridit tekivät Golden Milesta poikkeuksellisen mutta '
+            + 'myös hämäävän: toisin kuin kimalteleva puhdas kulta, '
+            + 'telluridimalmi näyttää tavalliselta harmaalta tai '
+            + 'ruskehtavalta kiveltä, ja kultaa on ensin louhittava ja '
+            + 'käsiteltävä, ennen kuin se erottuu näkyväksi.',
+          lyhyt: 'Golden Milen kulta on usein sitoutuneena harmailta '
+            + 'näyttäviin kultatelluridimineraaleihin.',
+          selite: 'Kellertävän harmaa, tiivis kivinäyte, jossa tumman '
+            + 'pilkulliset telluridimineraalit erottuvat vaaleasta '
+            + 'kivestä ilman kiiltävää kultaa.',
+          lahde: 'Robert M. Lavinsky, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yilgarn Craton',
+        },
+        {
+          otsikko: 'Rekka jonka lavalle mahtuisi omakotitalo',
+          tiedosto: 'Cat793C LeTourneau L-1850 Super Pit.JPG',
+          teksti: 'Superpitin pohjalla työskentelevät rekat ovat '
+            + 'kooltaan lähes kaksikerroksisen talon kokoisia: yhden '
+            + 'pyörän halkaisija ylittää aikuisen ihmisen pituuden, ja '
+            + 'yksi lava vetää yli 200 tonnia malmia kerralla. Rekat '
+            + 'kiipeävät kuopan seinämiin louhittuja mutkittelevia '
+            + 'ajoteitä pitkin päivin ja öin, ja niiden matka pohjalta '
+            + 'reunalle voi kestää yli tunnin. Louhinnassa käytetään '
+            + 'myös suuria pyöräkuormaajia, jotka täyttävät rekkojen '
+            + 'lavan muutamassa kauhallisessa — pelin kuvassa näkyvä '
+            + 'kuormaaja yltää rekan renkaan puoliväliin asti.',
+          lyhyt: 'Superpitin jättirekan yksi lava vetää yli 200 tonnia '
+            + 'kultamalmia kerralla.',
+          selite: 'Kaksi keltaista jättirekkaa Superpitin pohjalla: '
+            + 'toinen kuljettaa täyttä lavallista kiveä, toinen on '
+            + 'pyöräkuormaaja.',
+          lahde: 'Geomartin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Katu jonka kulta rakensi',
+          tiedosto: 'Hannan Street, Kalgoorlie, 2018 (01).jpg',
+          teksti: 'Kultaryntäyksen tuoma raha näkyy yhä Hannan '
+            + 'Streetillä, Kalgoorlien pääkadulla: kadun varrella seisoo '
+            + 'rivi 1890- ja 1900-luvun vaihteen tiilirakennuksia '
+            + 'koristeellisine parvekkeineen ja pylväskäytävineen, jotka '
+            + 'suojaavat jalkakäytävää aavikon polttavalta auringolta. '
+            + 'Rakennukset — pankkeja, hotelleja ja kauppahuoneita — '
+            + 'rakennettiin kertomaan tulijoille, ettei Kalgoorlie ollut '
+            + 'mikä tahansa hetken telttaleiri, vaan kaupunki, joka '
+            + 'aikoi jäädä pysyväksi kultarahan turvin.',
+          lyhyt: 'Hannan Streetin koristeelliset tiilitalot rakennettiin '
+            + 'kultaryntäyksen rahalla 1890-luvulla.',
+          selite: 'Hannan Street aurinkoisena päivänä: katua reunustavat '
+            + 'koristeelliset tiilitalot pylväskäytävineen ja '
+            + 'parvekkeineen.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kalgoorlie',
+        },
+        {
+          otsikko: 'Kulta ei ole vieläkään loppumassa',
+          tiedosto: 'Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg',
+          teksti: 'Superpit ei ole historiaa: avolouhos on tuottanut jo '
+            + 'yli 21 miljoonaa unssia kultaa vuodesta 1989, ja vuonna '
+            + '2020 omistajat saivat luvan jatkaa louhintaa ainakin '
+            + 'vuoteen 2035 asti, minkä myötä kaivokselle palkattiin '
+            + 'sata uutta työntekijää. Samalla vanhat maanalaiset '
+            + 'kaivokset, kuten Mount Charlotte, toimivat yhä kuopan '
+            + 'reunan alla omilla kuiluillaan. Kulta ei ole '
+            + 'Kalgoorliesta loppumassa, vaikka ensimmäinen löytö tehtiin '
+            + 'jo yli sata kolmekymmentä vuotta sitten ja moni ennusti '
+            + 'kaupungin näivettyvän jo vuosikymmeniä sitten.',
+          lyhyt: 'Superpit on tuottanut yli 21 miljoonaa unssia kultaa, '
+            + 'ja lupa louhintaan jatkuu 2035 asti.',
+          selite: 'Panoraama Superpitin yleisöltä avautuvalta '
+            + 'näköalapaikalta: porrastetut louhosseinämät kaartuvat '
+            + 'kuvan poikki, ja mutkitteleva ajotie kiertää pohjalle '
+            + 'asti.',
+          lahde: 'Alexey V. Kurochkin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+      ],
+    },
+  ],
+  birdsville: [
+    {
+      id: 'kaupunki',
+      nimi: 'Birdsville',
+      johdanto: 'Birdsville lymyää Queenslandin lounaiskulmassa, missä '
+        + 'Diamantina-joki hupenee Simpsonin aavikon hiekkaan. '
+        + 'Isoisän matkavuonna 1873 paikkaa ei vielä ollut — mutta '
+        + 'Burke ja Wills leiriytyivät samalle kohdalle jo 1861.',
+      nostot: [
+        {
+          otsikko: 'Leiri numero 76',
+          teksti: 'Vuonna 1861 Robert O\'Hara Burke ja William John '
+            + 'Wills palasivat epäonnistuneelta Pohjois-Australian '
+            + 'ylitykseltä nälkiintyneinä ja aikataulusta jäljessä. '
+            + 'Retkikunnan reitti kulki Diamantina-joen vartta, ja '
+            + 'yksi sen leiripaikoista — virallisissa kartoissa '
+            + 'leiri numero 76 — osui lähes tarkalleen kohtaan, '
+            + 'johon Birdsville parikymmentä vuotta myöhemmin '
+            + 'rakennettiin. Burke ja Wills eivät saaneet tietää '
+            + 'siitä: he kuolivat nälkään muutaman viikon kuluttua '
+            + 'Cooper Creekin varrella. Heidän karttansa jäivät '
+            + 'kuitenkin jäljelle, ja niiden ansiosta tiedetään, '
+            + 'että eurooppalaiset kulkivat Birdsvillen kohdalla jo '
+            + 'kaksitoista vuotta ennen isoisän matkaa.',
+          wiki: 'Burke and Wills expedition',
+        },
+        {
+          otsikko: 'Kaupunki, jolla on kolme syntytarinaa',
+          teksti: 'Kun kauppias Matthew Flynn pystytti 1870-luvun '
+            + 'lopulla karjareitin varrelle karun varastokopin, '
+            + 'paikkaa sanottiin vielä Diamantina Crossingiksi. '
+            + 'Uudesta nimestä on kolme kilpailevaa tarinaa. '
+            + 'Pandie Pandie -aseman Robert Frew ehdotti sitä '
+            + 'seudun runsaan linnuston mukaan. Toisen tarinan '
+            + 'mukaan kauppiaat Percy Bird ja George Field '
+            + 'perustivat kaupan nimeltä "Birdfield", jonka '
+            + 'Adelaiden tukkuliike G. ja R. Wills kirjoitti '
+            + 'vuonna 1882 vahingossa osoitteeseen "Birdsville" — '
+            + 'ja nimi jäi elämään. Kolmannen mukaan alun perin '
+            + 'oli "Burtsville", erään Burt-nimisen miehen mukaan, '
+            + 'joka vain vääntyi ajan myötä nykyiseksi.',
+          wiki: 'Birdsville',
+        },
+        {
+          otsikko: 'Tulliasema keskellä tyhjyyttä',
+          teksti: 'Birdsville seisoo Queenslandin ja Etelä-Australian '
+            + 'rajalla, ja ennen liittovaltion perustamista 1901 '
+            + 'jokainen rajan yli kuljetettu karjalauma tai '
+            + 'tavaraerä maksoi tullia. Kaupunkiin nousi oma '
+            + 'tullitoimisto, ja rahavirta toi mukanaan kolme '
+            + 'hotellia, kauppoja ja poliisiaseman. Väkiluku nousi '
+            + 'noin sadastakymmenestä vuonna 1889 yli kolmeensataan '
+            + 'vuosisadan vaihteessa. Kun liittovaltio poisti '
+            + 'sisärajojen tullit vuonna 1901, tulovirta katkesi '
+            + 'yhtä äkkiä kuin oli alkanutkin: 1950-luvulla '
+            + 'Birdsvillessä asui enää noin viisikymmentä ihmistä, '
+            + 'ja kaupunki eli lähinnä ohikulkevasta karjatiestä.',
+          wiki: 'Birdsville',
+        },
+        {
+          otsikko: 'Pubi, joka piti janon loitolla',
+          teksti: 'Birdsville Hotel rakennettiin noin 1884 palvelemaan '
+            + 'karjapaimenia, jotka olivat ajaneet nautoja satoja '
+            + 'kilometrejä pölyisen aavikkotien läpi eteläisille '
+            + 'markkinoille. Rautalevykatto ja paksut kiviseinät '
+            + 'pitivät sisätilan siedettävänä, vaikka ulkona '
+            + 'lämpötila nousisi yli neljäänkymmeneen asteeseen. '
+            + 'Pubista tuli koko Diamantina-seudun kokoontumispaikka: '
+            + 'sinne pysähdyttiin postin, kaupan ja juoruilun '
+            + 'vuoksi yhtä lailla kuin oluen. Rakennus seisoo '
+            + 'samalla paikalla yhä tänään ja on koko Birdsvillen '
+            + 'tunnetuin maamerkki — moni matkailija ajaa satoja '
+            + 'kilometrejä aavikkoa pelkästään nähdäkseen sen.',
+          tiedosto: 'Birdsville Hotel.jpg',
+          lyhyt: 'Birdsville Hotelin rautakattoinen kivirakennus seisoo yksinään kaupungin pölyisellä pääkadulla.',
+          selite: 'Birdsville Hotelin rautakattoinen kivirakennus '
+            + 'seisoo aamuauringossa kaupungin pölyisellä '
+            + 'pääkadulla, veranta edessään ja lippu tangossa.',
+          lahde: 'Stuart Edwards, Wikimedia Commons (PD)',
+          wiki: 'Birdsville Hotel',
+        },
+        {
+          otsikko: 'Kilpahevoset keskellä autiomaata',
+          teksti: 'Syksyllä 1882 sadatoista karjatilan omistajaa, '
+            + 'isäntää ja paimenta kokoontui Queenslandin ja '
+            + 'Etelä-Australian rajalle kilpailemaan hevosillaan — '
+            + 'ilman lähtökarsinoita, vain hatun pudotuksesta '
+            + 'liikkeelle. Muutamaa kuukautta myöhemmin '
+            + 'neljäkymmentäkaksi osallistujaa perusti Border '
+            + 'Jockey Clubin rautakauppa Burt & Co:n tiloissa, ja '
+            + 'Birdsville Racesista tuli vuotuinen perinne, jota '
+            + 'sanotaan yhä "aavikon Melbourne Cupiksi". Kilparata '
+            + 'siirrettiin 1930-luvulla kaupungin länsilaidalta '
+            + 'nykyiselle paikalleen, ja tapahtuma vetää yhä '
+            + 'syyskuisin tuhansia vieraita paikkaan, jossa on '
+            + 'muina aikoina vain muutama sata asukasta.',
+          tiedosto: 'Birdsville Racecourse in the Queensland outback, circa 1926.JPG',
+          lyhyt: 'Hevoset laukkaavat pölypilvessä avoimella hiekkaradalla vuonna 1926, katsojia radan reunalla.',
+          selite: 'Hevoset laukkaavat pölypilvessä avoimella '
+            + 'hiekkaradalla vuonna 1926, ja katsojia seisoo '
+            + 'rypäissä radan reunalla ilman aitoja.',
+          lahde: 'Cliff Everitt, John Oxley Library, State Library '
+            + 'of Queensland, Wikimedia Commons (PD)',
+          wiki: 'Birdsville Races',
+        },
+        {
+          otsikko: 'Joki, joka ei tiedä mihin virrata',
+          teksti: 'Diamantina-joki ei kulje yhtä uomaa vaan haarautuu '
+            + 'Birdsvillen kohdalla kymmeniksi mataliksi kanaviksi, '
+            + 'jotka risteilevät leveänä sokkelona kohti Etelä-'
+            + 'Australiaa. Suurimman osan vuodesta uomat ovat '
+            + 'kuivia hiekkajuovia, mutta kun sadekauden tulva '
+            + 'saapuu pohjoisesta viikkojen viiveellä, se voi '
+            + 'levitä paikoin kolmenkymmenen kilometrin levyiseksi. '
+            + 'Silloin alaville tulvatasangoille kerääntyy jopa '
+            + 'neljäsataaviisikymmentätuhatta vesilintua, ja alue '
+            + 'on siksi luokiteltu kansainvälisesti tärkeäksi '
+            + 'lintualueeksi. Kuivina vuosina Thundapurtyn kaltaiset '
+            + 'syvät altaat pitävät veden ja kalat hengissä seuraavaan '
+            + 'tulvaan asti.',
+          tiedosto: 'The edge of Thundapurty Waterhole, Birdsville, Queensland, 2021.jpg',
+          lyhyt: 'Thundapurtyn tyyni vesiallas lepää punaruskeiden rantojen ja harvan puuston keskellä.',
+          selite: 'Thundapurtyn tyyni vesiallas lepää Diamantina-joen '
+            + 'uomassa punaruskeiden rantojen ja harvan '
+            + 'puuston keskellä — kuivan kauden viimeinen '
+            + 'suoja kaloille ja linnuille.',
+          lahde: 'Royal Geographical Society of Queensland, '
+            + 'Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Diamantina River',
+        },
+        {
+          otsikko: 'Punainen dyyni autiomaan portilla',
+          teksti: 'Kolmenkymmenenviiden kilometrin päässä '
+            + 'Birdsvillestä länteen alkaa Simpsonin aavikko, ja '
+            + 'sen ensimmäinen dyyni on kaupungin tunnetuin '
+            + 'retkikohde. Big Rediksi kutsuttu hiekkaharju — '
+            + 'alkuperäiseltä nimeltään Nappanerica — on '
+            + 'nelikymmentä metriä korkea ja värjäytynyt punaiseksi '
+            + 'hiekkaan sitoutuneesta raudasta. Se on ensimmäinen '
+            + 'yli tuhannesta samansuuntaisesta dyynistä, jotka '
+            + 'juovittavat koko aavikkoa idästä länteen. Nykyään '
+            + 'harjulle kiivetään auringonlaskun aikaan katsomaan, '
+            + 'kun taivas ja hiekka värjäytyvät molemmat '
+            + 'oranssinpunaisiksi — ja moni yrittää ajaa harjun yli '
+            + 'nelivetoautolla, mikä ei aina onnistu ensiyrittämällä.',
+          tiedosto: 'BigRed.JPG',
+          lyhyt: 'Nelivetoauto kiipeää punaisen hiekkadyynin harjanteelle, taustalla loivasti aaltoileva aavikko.',
+          selite: 'Nelivetoauto kiipeää Big Redin punaisen '
+            + 'hiekkadyynin harjanteelle, ja taustalla aavikko '
+            + 'aaltoilee loivina dyyneinä horisonttiin asti.',
+          lahde: 'Paul Hanly, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Simpson Desert',
+        },
+      ],
+    },
+    {
+      id: 'mikirit',
+      nimi: 'Mikirit — aavikon kaivot',
+      johdanto: 'Ennen karjapaimenia ja kilpahevosia Birdsvillen '
+        + 'seudulla asui wangkangurrukansa, joka selvisi Simpsonin '
+        + 'aavikon keskellä käsin kaivettujen kaivojen, mikirien, '
+        + 'ansiosta — tuhansia vuosia ennen kuin kukaan eurooppalainen '
+        + 'näki seutua.',
+      tehtava: {
+        kysymys: 'Kuinka moneen ihmiseen yksi mikiri-kaivo saattoi parhaimmillaan riittää?',
+        vaihtoehdot: [
+          'Noin kymmeneen',
+          'Noin neljäänkymmeneen',
+          'Noin kahteensataan',
+          'Kaivot riittivät vain yhdelle perheelle kerrallaan',
+        ],
+        oikea: 1,
+        fakta: 'Syvimmät mikirit olivat neljästä kuuteen metriä syviä, '
+          + 'ja parhaat niistä pystyivät tarjoamaan vettä jopa '
+          + 'neljänkymmenen hengen ryhmälle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kansa, joka asui autiomaassa',
+          teksti: 'Wangkangurrukansa on asuttanut Simpsonin aavikkoa '
+            + 'kymmenien tuhansien vuosien ajan, ja heidän '
+            + 'perinteinen alueensa — Munga-Thirri, "suurten '
+            + 'hiekkakumpujen maa" — ulottui Dalhousie Springsiltä '
+            + 'aina nykyisen Birdsvillen kohdalle asti. Alue on '
+            + 'yksi maailman kuivimmista asutuista seuduista: '
+            + 'sadetta tulee harvoin, ja suurin osa vedestä on '
+            + 'piilossa syvällä hiekan alla. Wangkangurrut '
+            + 'ratkaisivat ongelman kaivamalla käsin kymmeniä '
+            + 'kaivoja, joiden sijainti periytyi suvun tiedossa '
+            + 'polvesta toiseen. Vuonna 2014 heidän oikeutensa '
+            + 'omaan maahan tunnustettiin virallisesti, ja alue '
+            + 'kattaa yhä myös Birdsvillen kylän.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Kaivo, joka kantoi neljäkymmentä ihmistä',
+          teksti: 'Mikiri on wangkangurrujen sana käsin kaivetulle '
+            + 'kaivolle, joka johti kapean, vinosti hiekkaan '
+            + 'kaivetun kuilun pohjavedelle asti. Syvimmät '
+            + 'tunnetut mikirit olivat neljästä kuuteen metriä '
+            + 'syviä, ja parhaat niistä riittivät jopa '
+            + 'neljänkymmenen hengen ryhmälle — käytännössä koko '
+            + 'suvulle. Tutkijat ovat tähän mennessä paikantaneet '
+            + 'ainakin kuusitoista tällaista kaivoa, mutta '
+            + 'perimätiedossa niitä mainitaan enemmänkin. Kaivot '
+            + 'olivat samalla leiripaikkoja: niiden ympärille '
+            + 'kokoonnuttiin, kerrottiin tarinoita ja levättiin, '
+            + 'ennen kuin siirryttiin seuraavalle kaivolle, jotta '
+            + 'vesi ehti vähitellen täyttyä uudelleen.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Aavikko tyhjeni vuosisadan vaihteessa',
+          teksti: 'Wangkangurrujen elämä aavikolla jatkui '
+            + 'muuttumattomana kauan sen jälkeen, kun karjatilat '
+            + 'olivat jo levittäytyneet seudun laitamille. Vasta '
+            + 'ankara kuivuus 1800-luvun ja 1900-luvun vaihteessa '
+            + 'pakotti viimeiset perheet jättämään mikirinsä ja '
+            + 'siirtymään lähemmäs karjatiloja ja Birdsvillen '
+            + 'kaltaisia asutuskeskuksia, joissa oli varmempi pääsy '
+            + 'ruokaan ja veteen. Muutto ei ollut helppo: '
+            + 'siirtokuntien hallinto kohteli wangkangurruja '
+            + 'toisen luokan asukkaina, eikä perinteiseen elämään '
+            + 'aavikolla ollut enää paluuta. Kaivojen tarkka '
+            + 'sijainti alkoi unohtua, kun niiden ääressä ei enää '
+            + 'asuttu vuosittain.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Kaivo, joka löytyi viisisataa vuotta myöhässä',
+          teksti: 'Vuonna 2019 tutkijat löysivät aavikon '
+            + 'dyynikentästä mikirin, jota ei mainittu yhdessäkään '
+            + 'aiemmassa muistiinpanossa tai sukujen kertomuksessa. '
+            + 'Kaivo oli hylätty jo viisisataa tai kuusisataa '
+            + 'vuotta aiemmin, todennäköisesti siksi, että '
+            + 'pohjaveden pinta oli laskenut niin alas, ettei '
+            + 'kaivo enää antanut vettä. Löytö oli mahdollinen '
+            + 'vain siksi, että Munga-Thirrin puiston vartija Don '
+            + 'Rowlands kutsui arkeologit paikalle etsimään '
+            + 'kaivoa yhdessä. Se osoitti, että aavikon vedenkäyttö '
+            + 'ulottuu paljon pidemmälle historiaan kuin '
+            + 'suullinen perimätieto yksin muistaa.',
+          wiki: 'Simpson Desert',
+        },
+        {
+          otsikko: 'Vartija, joka toi tarinat takaisin',
+          teksti: 'Don Rowlands syntyi 1948 ja on wangkangurru-'
+            + 'yarluyandi-suvun vanhin. Vuonna 1994 hänestä tuli '
+            + 'Munga-Thirrin kansallispuiston vartija — puiston, '
+            + 'joka kattaa suuren osan hänen esi-isiensä '
+            + 'perinteisestä maasta Simpsonin aavikolla. '
+            + 'Kolmenkymmenen vuoden aikana hän on ohjannut '
+            + 'tutkijoita mikirien jäljille, opastanut kävijöitä '
+            + 'ja kirjannut ylös paikkoja ja tarinoita, jotka '
+            + 'olisivat muuten unohtuneet. Työstään hän sai '
+            + 'Australian kunniamerkin OAM. Elokuussa 2026, '
+            + 'kolmenkymmenenkolmen vuoden palveluksen jälkeen, '
+            + 'Rowlands jätti vartijan univormun — mutta lupasi '
+            + 'kävelevänsä aavikolla yhä.',
+        },
+        {
+          otsikko: 'Sisilisko, joka juo ihollaan',
+          teksti: 'Piikkipiru on pienikokoinen, piikkien peittämä '
+            + 'sisiliskolaji, joka elää juuri tällaisilla '
+            + 'aavikoilla — ja sen tapa juoda on ainutlaatuinen '
+            + 'koko eläinkunnassa. Sen suomujen välissä kulkee '
+            + 'verkosto mikroskooppisen kapeita uria, jotka '
+            + 'imevät vettä kapillaari-ilmiöllä mistä tahansa '
+            + 'kohdasta ihoa — kasteesta, kosteasta hiekasta tai '
+            + 'lammikosta — ja kuljettavat sen automaattisesti '
+            + 'suuhun asti. Piikkipiru ei siis tarvitse edes '
+            + 'upottaa päätään veteen: pelkkä jalkojen '
+            + 'kastuminen kosteassa hiekassa riittää juomiseen. '
+            + 'Sama tekniikka toimii myös sateessa, jolloin koko '
+            + 'ruumis kerää vettä yhtä aikaa.',
+          tiedosto: 'Thornydevil.jpg',
+          lyhyt: 'Piikkien peittämä pieni sisilisko seisoo hiekalla, väriltään ruskean ja keltaisen kirjava.',
+          selite: 'Piikkien peittämä pieni piikkipiru seisoo punaisella '
+            + 'hiekalla Länsi-Australiassa — sama laji elää '
+            + 'myös Simpsonin aavikolla.',
+          lahde: 'Bäras, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Thorny devil',
+        },
+        {
+          otsikko: 'Kenguru, joka ei juo, jos ei ole pakko',
+          teksti: 'Jättikenguru eli punajättikenguru on Australian '
+            + 'suurin pussieläin ja aavikon näkyvin asukas: '
+            + 'täysikasvuinen uros voi painaa jopa '
+            + 'yhdeksänkymmentä kiloa. Kuivina kausina se '
+            + 'selviää lähes ilman juomista, koska sen munuaiset '
+            + 'väkevöivät virtsan tavallista tehokkaammin ja '
+            + 'paksusuoli imee ruoansulatuksesta talteen '
+            + 'viimeisenkin kosteuspisaran. Suurin osa '
+            + 'tarvittavasta vedestä tulee ruohosta ja '
+            + 'lehdistä, ei juomapaikoista. Kuumimpina '
+            + 'tunteina jättikenguru pysyttelee varjossa, '
+            + 'nuolee käsivarsiaan viilentyäkseen haihtumalla '
+            + 'ja liikkuu vasta illan viiletessä — sama '
+            + 'käytös, jota wangkangurrujen esi-isät oppivat '
+            + 'lukemaan tuhansien vuosien aikana.',
+          tiedosto: 'Female Red Kangaroo (Macropus rufus).jpg',
+          lyhyt: 'Jättikenguru seisoo pystyssä aidatussa tarhassa, turkki on vaaleanharmaa ja korvat pystyssä.',
+          selite: 'Naaraspuolinen jättikenguru seisoo pystyssä '
+            + 'eläintarhan tarhassa Wagga Waggassa — laji '
+            + 'elää luonnossa samanlaisella kuivalla ruohoaavikolla '
+            + 'kuin Birdsvillen ympäristössä.',
+          lahde: 'Bidgee, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Red kangaroo',
+        },
+      ],
+    },
+  ],
+  mountisa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mount Isa',
+      johdanto: 'Mount Isa kohoaa Luoteis-Queenslandin punaisella '
+        + 'ylängöllä Leichhardtin joen varrella. Joki sai nimensä jo '
+        + '1856, kauan ennen kuin kukaan tiesi kivien alla lymyävästä '
+        + 'hopeasta ja lyijystä.',
+      nostot: [
+        {
+          otsikko: 'Joki, joka lainasi nimensä kadonneelta',
+          teksti: 'Kaupungin läpi virtaava Leichhardtin joki sai '
+            + 'nimensä vuonna 1856, kun tutkimusmatkailija Augustus '
+            + 'Gregory ylitti sen Pohjois-Australian-retkellään ja '
+            + 'erehtyi pitämään sitä Albert-jokena. Saman virheen oli '
+            + 'tehnyt vuosikymmentä aiemmin Ludwig Leichhardt omalla '
+            + 'tutkimusmatkallaan, joten Gregory nimesi joen kadonneen '
+            + 'kollegansa mukaan: "Tämän joen erehtyi tohtori Leichhardt '
+            + 'pitämään Albert-jokena, ja siksi nimesin sen hänen '
+            + 'mukaansa." Joen lähde on vain parikymmentä kilometriä '
+            + 'Mount Isasta etelään, ja se virtaa suoraan kaupungin '
+            + 'läpi. Vasta lähes seitsemän vuosikymmentä myöhemmin sen '
+            + 'varrelle nousi kaivoskaupunki.',
+          tiedosto: 'Lake Moondarra Panorama.jpg',
+          lyhyt: 'Leichhardtin joki on padottu Lake Moondarraksi aivan '
+            + 'Mount Isan kupeessa.',
+          selite: 'Leichhardtin joki on padottu tekojärveksi nimeltä '
+            + 'Lake Moondarra aivan Mount Isan pohjoispuolella; kuvassa '
+            + 'turkoosi vesi kimmeltää punaisten kivikkokukkuloiden ja '
+            + 'eukalyptuspensaikon keskellä.',
+          lahde: 'Ravenspear82, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Leichhardt River',
+        },
+        {
+          otsikko: 'Kalkatungujen nimi elää kivien välissä',
+          teksti: 'Ennen brittiläisiä uudisasukkaita seutua olivat '
+            + 'asuttaneet kalkatungut eli kalkadoonit tuhansien vuosien '
+            + 'ajan. Kansa tunsi kivikkoiset kukkulat ja niiden '
+            + 'vedenlähteet paremmin kuin kukaan myöhemmin tullut, ja se '
+            + 'puolusti maataan pitkään: syyskuussa 1884 lähistöllä '
+            + 'käytiin ase-etu menettäneen kansan viimeinen suuri '
+            + 'taistelu, jota kutsutaan nimellä Battle Mountain. '
+            + 'Kalkatungujen nimi elää yhä seudun kalliopaljastumilla '
+            + 'pesivässä pikkulinnussa: tummaruohomaluri (Amytornis '
+            + 'ballarae) tavataan vain kapealla vyöhykkeellä Mount Isan '
+            + 'ympäristössä eikä juuri muualla maailmassa.',
+          tiedosto: 'Amytornis ballarae 77542098.jpg',
+          lyhyt: 'Tummaruohomaluri elää vain kapealla vyöhykkeellä '
+            + 'Mount Isan kivikkokukkuloilla.',
+          selite: 'Tummaruohomaluri (Amytornis ballarae) kyyristyy '
+            + 'punaisten kivien keskellä kuivan heinikon suojassa; '
+            + 'oikealla näkyy sen pesä risuista kasattuna kivien väliin.',
+          lahde: 'Kym Nicolson, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kalkatungu',
+        },
+        {
+          otsikko: 'Maailman rikkain malmisuoni',
+          teksti: 'Mount Isan malmiot ovat maailman suurimpia lyijyn, '
+            + 'sinkin ja hopean kertymiä, ja niiden vieressä louhitaan '
+            + 'erikseen kuparia. Malmi on kerrostunut noin 1,6 miljardia '
+            + 'vuotta sitten syntyneeseen Urquhart-liuskeeseen, ja se '
+            + 'jatkuu maan alla yli neljän ja puolen kilometrin matkalla '
+            + 'ja puolentoista kilometrin syvyyteen. Kaivoskaupungin '
+            + 'maisemaa hallitsevat kaksi piippua: korkeampi kuuluu '
+            + 'lyijysulatolle ja punavalkoraidallinen kuparisulatolle. '
+            + 'Niiden juurella kohoavat avolouhoksen kasat ja vanha '
+            + 'nostotorni, joka on jo poissa käytöstä mutta seisoo yhä '
+            + 'paikallaan kaupungin symbolina.',
+          tiedosto: 'Mt isa mines qld.jpg',
+          lyhyt: 'Mount Isa Minesin piiput ja louhokset hallitsevat '
+            + 'koko kaupungin taivaanrantaa.',
+          selite: 'Mount Isa Minesin tehdasalue levittäytyy laaksoon: '
+            + 'korkeampi piippu kuuluu lyijysulatolle, matalampi '
+            + 'punavalkoraidallinen kuparisulatolle, ja niiden välissä '
+            + 'kohoavat vanhat nostotornit ja louhoksen kasat.',
+          lahde: 'Geomartin, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Mount Isa Mines',
+        },
+        {
+          otsikko: 'Kaivoskaupungin synty levähdystauolla',
+          teksti: 'Prospektori John Campbell Miles löysi 23. helmikuuta '
+            + '1923 levähdystauolla poikkeuksellisen rikasta hopea- ja '
+            + 'lyijymalmia sisältäviä kiviä. Hän nimesi yhden '
+            + 'louhosalueistaan sisarensa Isabellen mukaan, mutta koko '
+            + 'kohteen nimi syntyi toista kautta: Milesin ystävä Moses '
+            + 'Rowlands oli kertonut hänelle Länsi-Australian hylätystä '
+            + 'kaivoskaupungista nimeltä Mount Ida, ja tästä muistista '
+            + 'syntyi vääntyneenä Mount Isa. Ensimmäiset leirit '
+            + 'pystytettiin puiden alle telttoihin ja rakennelmiin, ja '
+            + 'malmia kuljetettiin aluksi hevosilla ja varhaisilla '
+            + 'kuorma-autoilla, sillä rautatietä ei vielä ollut.',
+          tiedosto: 'One of the first camps at Mount Isa, 1923.jpg',
+          lyhyt: 'Ensimmäinen leiri pystytettiin puiden alle pian '
+            + 'malmilöydön jälkeen 1923.',
+          selite: 'Ryhmä miehiä poseeraa varhaisen autonsa ja '
+            + 'hevoskärryn vieressä puiden alla pystytetyn karkean '
+            + 'leirin edessä pian ensimmäisten malmilöytöjen jälkeen '
+            + 'vuonna 1923.',
+          lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Riversleigh — kivettynyt aarrearkku',
+          teksti: 'Luoteeseen Mount Isasta, Boodjamullan '
+            + 'kansallispuistossa, sijaitsee Riversleigh: yksi maailman '
+            + 'kymmenestä merkittävimmästä fossiilikohteesta ja Unescon '
+            + 'maailmanperintökohde vuodesta 1994. Kalkkikivikerrostumista '
+            + 'on löydetty yli 20 miljoonan vuoden takaisia oligoseeni- '
+            + 'ja mioseenikautisia nisäkkäiden, lintujen ja matelijoiden '
+            + 'jäänteitä, muun muassa pussileijona Thylacoleon ja '
+            + 'jättimäisten juoksulintujen luita. Löydöt kertovat, miten '
+            + 'Australian ainutlaatuinen eläimistö kehittyi sademetsän '
+            + 'vähitellen väistyessä kuivemman aavikon tieltä – muutos, '
+            + 'joka muovasi koko mantereen myöhempää luontoa.',
+          tiedosto: 'D Site, Riversleigh, Australian Fossil Mammal Site.jpg',
+          lyhyt: 'Riversleighin D-alueen kalkkikivipaljastuma kätkee '
+            + 'miljoonien vuosien fossiileja.',
+          selite: 'Riversleighin D-alueen ruohoinen rinne ja punertava '
+            + 'kalkkikivipaljastuma edustavat maisemaa, josta '
+            + 'ensimmäiset nisäkäsfossiilit löydettiin; etualalla kasvaa '
+            + 'eukalyptuspuu.',
+          lahde: 'James Fitzgerald, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riversleigh World Heritage Area',
+        },
+        {
+          otsikko: 'Punajättikenguru, aavikon jättiläinen',
+          teksti: 'Punajättikenguru on Mount Isan seudun aavikon suurin '
+            + 'asukas ja koko maailman suurin pussieläin: '
+            + 'täysikasvuinen uroskenguru voi olla yli 1,8 metriä '
+            + 'pitkä. Vuonna 1932 Malbonissa, Mount Isan seudulla, '
+            + 'valokuvattiin karjatilan aidatussa pihassa tavallista '
+            + 'suurempi yksilö, jonka omistaja J. Lonergan halusi '
+            + 'ikuistaa kuvaan pystyssä seisomassa. Laji kestää '
+            + 'kuivuutta erinomaisesti: se voi tulla toimeen ilman '
+            + 'juomavettä pitkiäkin aikoja, koska se saa suurimman osan '
+            + 'nesteestään syömästään kasvillisuudesta ja välttää '
+            + 'päivän kuumimmat tunnit lepäämällä varjossa.',
+          tiedosto: 'StateLibQld 2 256626 Big Red Kangaroo, Mt. Isa district, 1932.jpg',
+          lyhyt: 'Vuonna 1932 kuvattiin poikkeuksellisen suuri '
+            + 'punajättikenguru Malbonin karjatilalla.',
+          selite: 'Mustavalkoisessa kuvassa vuodelta 1932 '
+            + 'poikkeuksellisen suuri punajättikenguru seisoo aidatussa '
+            + 'karjatilan pihassa Malbonissa Mount Isan seudulla; '
+            + 'kyltissä lukee "J. Lonergans Kangaroo - Malbon, Q".',
+          lahde: 'L. Plass / State Library of Queensland, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Red kangaroo',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Aavikon kaivoskaupungin arki',
+      johdanto: 'Kaivoskaupunki eli omaa arkeaan kaukana kaikesta: '
+        + 'kamelikaravaanit toivat tavaraa, malmimiehet louhivat maan '
+        + 'alle sairaalankin, ja kerran vuodessa koko seutu kokoontuu '
+        + 'yhä maailman suurimpaan rodeoon.',
+      tehtava: {
+        kysymys: 'Minä vuonna Mount Isassa järjestettiin ensimmäinen '
+          + 'rotaryrodeo, "Centenary Rodeo"?',
+        vaihtoehdot: ['1923', '1942', '1959', '1984'],
+        oikea: 2,
+        fakta: 'Ensimmäinen rodeo, Centenary Rodeo, järjestettiin '
+          + 'elokuussa 1959, ja kilparatsuja jouduttiin taluttamaan '
+          + 'viikkokausia Carandotta-karjatilalta vanhoille '
+          + 'rodeoaitauksille Kalkadoon Parkiin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rodeo, joka toi kaupungin kartalle',
+          teksti: 'Elokuussa 1959 Mount Isassa järjestettiin ensimmäinen '
+            + 'rodeo, "Centenary Rodeo", jossa kilpailtiin muun muassa '
+            + 'sonninratsastuksessa, villihärkäjuoksussa ja avoimessa '
+            + 'hurjastelukilpailussa. Kilparatsuja jouduttiin '
+            + 'taluttamaan viikkokausia Carandotta-karjatilalta '
+            + 'Queenslandin ja Pohjoisterritorion rajalta vanhoille '
+            + 'rodeoaitauksille Kalkadoon Parkiin. Järjestäjien tavoite '
+            + 'oli yksinkertainen: kerätä rahaa hyväntekeväisyyteen ja '
+            + 'saattaa nuori, syrjäinen kaivoskaupunki kartalle. Vuonna '
+            + '1962 kilpailun "All Around Cowboy" -tittelin vei Buddy '
+            + 'Gravener, jonka nimi on säilynyt kaupungin jalkakäytävän '
+            + 'muistolaatassa vielä yli 60 vuotta myöhemmin.',
+          tiedosto: 'Mount Isa Rodeo Capital of Australia plaque, Queensland, 2023.jpg',
+          lyhyt: 'Katukäytävän muistolaatta kunnioittaa rodeon '
+            + 'perustamista ja sen varhaisia kilpailijoita.',
+          selite: 'Kadulle upotetut muistolaatat kertovat rodeon '
+            + 'historiasta: pronssisessa mitalissa lukee "Mount Isa – '
+            + 'Rodeo Capital of Australia" ja "All Around Cowboy Buddy '
+            + 'Gravener 1962", vierellä kaiverretut kuvat '
+            + 'sonninratsastuksesta ja häränpainista.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Eteläisen pallonpuoliskon suurin rodeo',
+          teksti: 'Vuosikymmenten aikana pieni hyväntekeväisyystapahtuma '
+            + 'kasvoi eteläisen pallonpuoliskon suurimmaksi ja '
+            + 'rahakkaimmaksi rodeoksi: elokuun toisena viikonloppuna '
+            + 'kaupungin vakituinen väki, noin 18 000 asukasta, saa '
+            + 'seurakseen yli 25 000 kävijää. Ratsastajia ja '
+            + 'karjankäsittelijöitä saapuu ympäri Australiaa ja '
+            + 'ulkomailtakin kilpailemaan palkintorahoista, jotka ovat '
+            + 'kasvaneet 2000-luvulla ennätyslukemiin. Kolmen päivän '
+            + 'ajan tavallisesti hiljainen kaivoskaupunki täyttyy '
+            + 'karavaaneista, telttamajoituksesta ja live-musiikista, ja '
+            + 'koko seudun vuosikalenteri kiertyy tämän yhden '
+            + 'viikonlopun ympärille.',
+          tiedosto: 'City of Mt Isa surrounded by hills in the Leichhardt Valley, Mt Isa, 2021.jpg',
+          lyhyt: 'Iltahämärässä kaupunki lepää vuorten välissä ennen '
+            + 'rodeoviikonlopun vilskettä.',
+          selite: 'Auringonlaskun väreissä kaupunki levittäytyy '
+            + 'puustoisessa laaksossa, taustalla kohoavat Mount Isa '
+            + 'Minesin piiput ja punaiset kukkulat ympärillä.',
+          lahde: 'Anonymous, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Ghantownin kamelikuskit',
+          teksti: '1890- ja 1900-luvun vaihteessa Cloncurryn seudulla, '
+            + 'kivenheiton päässä Mount Isasta, toimi Queenslandin '
+            + 'suurin niin kutsuttu ghantown: yli 200 Afganistanista, '
+            + 'Intiasta ja Lähi-idästä tullutta kamelinajajaa ja noin '
+            + '2 000 kamelia. Hevoset ja härät eivät kestäneet '
+            + 'kaivosseudun kuivuutta ja teräviä kiviä yhtä hyvin kuin '
+            + 'kamelit, joten karavaanit kuljettivat malmia, '
+            + 'polttoainetta, ruokaa ja työkaluja kaivoksille ja '
+            + 'takaisin rautatien päästä. Kamelinajajilla oli oma '
+            + 'moskeijansa Coppermine Creekin varrella, ja he pitivät '
+            + 'myös omia kauppapuutarhoja. Viimeiset kamelikaravaanit '
+            + 'väistyivät vasta, kun kuorma-autot yleistyivät '
+            + '1920-luvulla.',
+          tiedosto: 'Horse and camel team, Cloncurry, ca. 1904 (9725658555).jpg',
+          lyhyt: 'Kamelikaravaani kuljetti raskaita laatikoita '
+            + 'Cloncurryn seudulla 1900-luvun alussa.',
+          selite: 'Mustavalkoisessa valokuvassa kaksi kamelinajajaa '
+            + 'johdattaa raskaasti kuormattua kamelijonoa avoimella '
+            + 'tasangolla Cloncurryssä noin 1904; vasemmalla juoksee '
+            + 'pieni koira ja taustalla näkyy tuulimylly.',
+          lahde: 'State Library of Queensland, Wikimedia Commons '
+            + '(ei tunnettuja tekijänoikeusrajoituksia)',
+          wiki: 'Afghan cameleers in Australia',
+        },
+        {
+          otsikko: 'Kaivos, joka ei koskaan avautunut potilaille',
+          teksti: 'Ulkopuolelta Mount Isa näyttää tavalliselta kadulta, '
+            + 'mutta keltaisen kylttitornin alla kävijä pääsee '
+            + 'laskeutumaan oikeaan, entisten kaivosmiesten johtamaan '
+            + 'malmikaivokseen. Hard Times Mine on rakennettu Outback '
+            + 'at Isa -keskuksen yhteyteen, ja kierroksella laskeudutaan '
+            + 'häkkihissillä maan alle kuuntelemaan koneiden jyrinää ja '
+            + 'kokeilemaan painavaa poravasaraa oppaan opastuksella. '
+            + 'Tauolla tarjoillaan teetä, kahvia ja perinteinen pasteija '
+            + 'samassa ruokailuluolassa, jossa oikeat louhosmiehet '
+            + 'aikanaan söivät vuoronsa välissä.',
+          tiedosto: 'Hard Times Mining Company, Barkly Highway in Mount Isa, Queensland, 2023.jpg',
+          lyhyt: 'Hard Times Mine -kierros laskeutuu oikeaan kaivokseen '
+            + 'Outback at Isa -keskuksessa.',
+          selite: 'Korkea puinen nostotorni kyltillä "Hard Times Mining '
+            + 'Company" seisoo Barkly Highwayn varrella; sen alla '
+            + 'vierailijat pääsevät hissillä oikeaan malmikaivokseen '
+            + 'opastetulle kierrokselle.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Isa Mines',
+        },
+        {
+          otsikko: 'Kaivosmiehet louhivat oman sairaalansa',
+          teksti: 'Kun Darwiniin pudotettiin pommeja helmikuussa 1942, '
+            + 'Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen '
+            + 'tavoittelevan juuri kaupungin arvokkaita malmivarantoja. '
+            + 'Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta '
+            + 'rinnakkaisesta tunnelista ja niitä yhdistävästä '
+            + 'poikkikäytävästä koostuvan maanalaisen varasairaalan, ja '
+            + 'vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon '
+            + 'parissa viikossa Mount Isa Minesin lainatuilla koneilla. '
+            + 'Leikkaussali, synnytyshuone ja potilasosastot kalustettiin '
+            + 'kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut '
+            + 'eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit '
+            + 'avattiin museona vuonna 2001.',
+          tiedosto: 'Former Underground Hospital, Mount Isa - tunnel (2013).jpg',
+          lyhyt: 'Toisen maailmansodan varasairaalan tunnelit on '
+            + 'säilytetty museona.',
+          selite: 'Hirsituettu maanalainen käytävä on kalustettu '
+            + 'vanhoilla lääkintävälineillä ja hyttysverkolla suojatulla '
+            + 'lastensängyllä; tunneli louhittiin 1942 varasairaalaksi '
+            + 'eikä sitä koskaan tarvittu.',
+          lahde: 'Vic Bushing / Queensland Heritage Branch, Wikimedia '
+            + 'Commons (CC BY 3.0)',
+          wiki: 'Underground Hospital, Mount Isa',
+        },
+        {
+          otsikko: 'Löytöretkeilijä autiomaan halki',
+          teksti: 'Vuosina 1861–62 tutkimusmatkailija William '
+            + 'Landsborough samosi Pohjois-Australian autiomaita etsien '
+            + 'kadonnutta Burke–Wills-retkikuntaa. Matkallaan hän löysi '
+            + 'ja nimesi Gregory-joen ja seurasi sitä lounaaseen, kunnes '
+            + 'seutu muuttui kuivien uomien verkostoksi lähellä paikkaa, '
+            + 'josta myöhemmin tuli Camoowealin kylä – samaa '
+            + 'piirikuntaa, jossa Mount Isa sijaitsee. Landsborough ei '
+            + 'löytänyt jälkeäkään kadonneesta retkikunnasta, mutta '
+            + 'hänen matkansa antoi ensimmäiset eurooppalaiset kuvaukset '
+            + 'koko Barkly-ylängön karusta maastosta – kuusi '
+            + 'vuosikymmentä ennen kuin kukaan aavisti kivien alla '
+            + 'olevan yhtään mitään.',
+          tiedosto: 'William Landsborough.tiff',
+          lyhyt: 'William Landsborough kartoitti seudun autiomaat '
+            + 'etsiessään kadonnutta retkikuntaa.',
+          selite: 'Muotokuvassa 1800-luvulta tutkimusmatkailija William '
+            + 'Landsborough seisoo studion maalatun taustakankaan '
+            + 'edessä hattu kädessään; hän johti 1861–62 retkikuntaa, '
+            + 'joka kulki Mount Isan piirikunnan halki.',
+          lahde: 'John Oxley Library, Wikimedia Commons (PD)',
+          wiki: 'William Landsborough',
+        },
+      ],
+    },
+  ],
+
+  cooberpedy: [
+    {
+      id: 'kaupunki',
+      nimi: 'Coober Pedy',
+      johdanto: 'Coober Pedy kohoaa Etelä-Australian punaisella aavikolla, jonka läpi '
+        + 'tutkimusmatkailija John McDouall Stuart ratsasti jo 1858. Opaali löytyi '
+        + 'vasta 1915, ja siitä lähtien kaupunki on kaivautunut maan alle helteen tieltä.',
+      nostot: [
+        {
+          otsikko: 'Stuart ratsasti ohi tietämättä',
+          teksti: 'Vuonna 1858 tutkimusmatkailija John McDouall Stuart ratsasti kahden '
+            + 'miehen kanssa tämän seudun halki etsien laidunmaita ja mineraaleja. Hän '
+            + 'käänsi kurssin lounaaseen juuri nykyisen Coober Pedyn kohdalla — hevoset '
+            + 'kärsivät terävistä piikivistä, eikä kukaan vielä aavistanut, että kivien '
+            + 'alla piileskeli opaalia. Ylänkö sai myöhemmin hänen mukaansa nimen Stuart '
+            + 'Range. Tällaiset kukkulat, Breakawaysit, ovat sen eroosion kuluttamia '
+            + 'jäänteitä: pehmeä maa-aines on kulunut pois tuulen ja veden mukana, ja '
+            + 'jäljelle on jäänyt vain kovin kerros.',
+          tiedosto: 'Salt & Pepper Breakaways Coober Pedy.jpg',
+          lyhyt: 'Tutkimusmatkailija Stuart ratsasti seudun ohi 1858 aavistamatta opaalia kivien alla.',
+          selite: 'Kaksi eriväristä kumpua Breakawaysin alueella Coober Pedystä pohjoiseen, '
+            + 'kuvattu huhtikuussa 2014: vasemmalla vaaleanharmaa, oikealla okranvärinen '
+            + 'kukkula tasaisen aavikkotasangon keskellä.',
+          lahde: 'Sunil Savur, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Stuart Range',
+        },
+        {
+          otsikko: 'Kupa piti eli valkoisen miehen kuoppa',
+          teksti: 'Kaupungin nimi on väännös kokatha-kielisestä ilmauksesta kupa piti: '
+            + 'kupa viittaa kokemattomaan mieheen tai valkoihoiseen, piti tarkoittaa '
+            + 'kuoppaa tai reikää. Nimi sopii täydellisesti, sillä yli puolet asukkaista '
+            + 'asuu yhä maan alle louhituissa kodeissa, joita kutsutaan nimellä dugout. '
+            + 'Ratkaisu syntyi käytännön pakosta: kesäpäivät nousevat yli 40 asteeseen, '
+            + 'mutta hiekkakiveen kaivetussa huoneessa lämpötila pysyy ympäri vuoden noin '
+            + '23 asteessa. Moni koti alkoi alun perin tyhjäksi jääneenä opaalikuoppana, '
+            + 'jota laajennettiin asuinkelpoiseksi hetki kerrallaan.',
+          tiedosto: 'Coober Pedy - Underground house.jpg',
+          lyhyt: 'Kaupungin nimi tarkoittaa suunnilleen valkoisen miehen kuoppaa alkuperäiskielellä.',
+          selite: 'Kaivettuun hiekkakivirinteeseen tehty asuintalo: keltainen ovi vihreine '
+            + 'kehyksineen kiviverhotussa seinässä, katolla aurinkopaneeli ja sähköpylväs, '
+            + 'ympärillä kuivaa aavikkopensastoa.',
+          lahde: 'Lodo27, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dugout (shelter)',
+        },
+        {
+          otsikko: 'Opaali löytyy, kaupunki kaivautuu maahan',
+          teksti: 'Opaali löytyi seudulta vuonna 1915, kun neljätoistavuotias Willie '
+            + 'Hutchison etsi isänsä kanssa kultaa ja törmäsi sen sijaan hohtaviin '
+            + 'kiviin. Ensimmäisen maailmansodan veteraanit toivat mukanaan '
+            + 'juoksuhaudankaivutaidon, ja pian aavikolle syntyi tuhansia pystysuoria '
+            + 'kuiluja. Jokainen valkoinen kartio on yhden kuilun jäljiltä nostettua '
+            + 'sivukiveä; niitä kertyi vuosikymmenten aikana niin paljon, että maisema '
+            + 'muistuttaa paikoin kuun pintaa. Coober Pedy tuottaa nykyään suuren osan '
+            + 'koko maailman jalo-opaaleista, ja kaivostyötä tehdään yhä pääosin käsin '
+            + 'ja pienillä porakoneilla.',
+          tiedosto: 'CSIRO ScienceImage 3835 Opal fields at Coober Pedy South Australia 1992.jpg',
+          lyhyt: 'Opaali löytyi 1915, ja aavikolle nousi pian tuhansia kaivoskuiluja ja sivukiviläjiä.',
+          selite: 'Kymmeniä vaaleita, kartionmuotoisia sivukiviläjiä pensaikkoisella '
+            + 'aavikolla vuonna 1992; jokainen kartio on jäljiltä yhden kaivetun '
+            + 'opaalikuilun.',
+          lahde: 'John Coppi / CSIRO, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Coober Pedy',
+        },
+        {
+          otsikko: 'Kirkko kalliossa',
+          teksti: 'Coober Pedyssä asuu yli neljäkymmentäviisi kansallisuutta, sillä '
+            + 'toisen maailmansodan jälkeen kaivoksille saapui opaalinetsijöitä ympäri '
+            + 'Etelä- ja Itä-Eurooppaa. Serbialaiset siirtolaiset louhivat 1990-luvun '
+            + 'alussa oman kirkkonsa suoraan hiekkakiveen: seinät kaartuvat '
+            + 'luonnollisina, ja alttarin ikonit hohtavat kynttilänvalossa kuin missä '
+            + 'tahansa kivikirkossa, vaikka koko tila on porattu mäen sisään. Kirkkoa '
+            + 'käyttävät nykyisin sekä serbialainen että kreikkalainen ortodoksiyhteisö, '
+            + 'ja kaupungissa on muitakin maanalaisia kirkkoja sekä moskeija. Yhteinen '
+            + 'kokemus kuumuudesta ja kaivostyöstä on hitsannut hyvin erilaiset taustat '
+            + 'yhteen.',
+          tiedosto: 'Serbian Orthodox Church in Coober Pedy.jpg',
+          lyhyt: 'Sotien jälkeen saapuneet siirtolaiset louhivat Coober Pedyyn oman kirkkonsa kallion sisään.',
+          selite: 'Hiekkakiveen louhitun kirkon sisätila: kaareva, työkalunjälkien uurtama '
+            + 'katto ja seinät, kultareunaisia ikoneita alttarin ikonostaasissa, '
+            + 'kynttilöitä ja valkoinen risti etualalla.',
+          lahde: 'Robert Link, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Serbian Orthodox Church, Coober Pedy',
+        },
+        {
+          otsikko: 'Aavikko täynnä piilokuiluja',
+          teksti: 'Coober Pedyn ympärillä on satojatuhansia kaivettuja opaalikuiluja, '
+            + 'eikä kaikkia ole merkitty tai suljettu. Kuka tahansa kaivoslupaa hakenut '
+            + 'voi merkitä itselleen kaupungin ulkopuolelta noin 50 x 50 metrin '
+            + 'kokoisen alan, ja uusia kuoppia syntyy koko ajan vanhojen viereen. Siksi '
+            + 'kylttien kehotus pysyä valaistuina öisin ja kävellä vain merkityillä '
+            + 'poluilla ei ole liioittelua: pimeällä aavikolla harhaileminen jalan tai '
+            + 'autolla on aidosti vaarallista. Samasta syystä paikallinen kävelykin '
+            + 'poikkeaa muualta totutusta — katse suunnataan usein alas eikä maisemaan.',
+          tiedosto: 'Opal mine shafts, Coober Pedy - panoramio.jpg',
+          lyhyt: 'Merkitsemättömiä vanhoja kaivoskuiluja on aavikolla satojatuhansia, ja niitä varotaan yhä.',
+          selite: 'Kymmeniä vaaleita hiekkakivikartioita levittäytyy laakealle aavikolle '
+            + 'iltavalossa; jokaisen kartion vierestä avautuu pystysuora, merkitsemätön '
+            + 'kaivoskuilu.',
+          lahde: 'Eric Spenle, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Opal mining in Australia',
+        },
+      ],
+    },
+    {
+      id: 'opaali',
+      nimi: 'Opaali',
+      johdanto: 'Coober Pedyn opaali syntyi sata miljoonaa vuotta sitten, kun mannerta '
+        + 'peitti matala sisämeri. Kivi taittaa valoa mikroskooppisen pienten '
+        + 'piidioksidipallojen ansiosta, ja siksi sen väri vaihtuu katselukulman mukaan.',
+      tehtava: {
+        kysymys: 'Mistä opaalin sateenkaarenväriset välähdykset johtuvat?',
+        vaihtoehdot: [
+          'mikroskooppisen pienistä piidioksidipalloista, jotka taittavat valoa',
+          'kiveen sekoittuneista metallisuoloista',
+          'kiveen jääneistä ilmakuplista',
+          'kiteytyneen suolan rakenteesta',
+        ],
+        oikea: 0,
+        fakta: 'Opaali koostuu mikroskooppisen pienistä piidioksidin palloista, jotka '
+          + 'ovat järjestäytyneet säännöllisiksi riveiksi. Rivit taittavat valoa niin, '
+          + 'että kivi hohtaa eri värejä katselukulman mukaan; ilmiötä kutsutaan '
+          + 'nimellä play of colour.',
+      },
+      nostot: [
+        {
+          otsikko: 'Muinainen sisämeri jätti jälkensä',
+          teksti: 'Noin sata miljoonaa vuotta sitten liitukaudella suuri osa '
+            + 'Keski-Australiaa oli matalan Eromanga-sisämeren peitossa. Kun meri '
+            + 'vetäytyi vähitellen, sen pohjalle kerrostuneet hiekka- ja savikerrokset '
+            + 'jäivät paljaiksi ja alkoivat rapautua eri tahtiin. Värikkäät, '
+            + 'kerrokselliset kukkulat kertovat tästä menneisyydestä suoraan: vaaleat '
+            + 'kerrokset ovat hienojakoista hiekkakiveä, oranssit ja punertavat raudan '
+            + 'värjäämiä savikerroksia. Samasta kerrostumasta, jota geologit kutsuvat '
+            + 'Suureksi artesiseksi altaaksi, on peräisin myös alueen opaali — sekä '
+            + 'liikakosteus, joka aikoinaan toi piidioksidin kiveen.',
+          tiedosto: 'Muffin Tops Breakaways Coober Pedy.jpg',
+          lyhyt: 'Alueen värikkäät kukkulat ovat sata miljoonaa vuotta vanhan sisämeren pohjakerrostumia.',
+          selite: 'Kerroksellinen, väreiltään vaihteleva kukkula Breakawaysin alueella: '
+            + 'alaosa vaaleaa hiekkakiveä, yläosa oranssia ja punertavaa raudan '
+            + 'värjäämää kiveä, kuvattu huhtikuussa 2014.',
+          lahde: 'Sunil Savur, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Great Artesian Basin',
+        },
+        {
+          otsikko: 'Piidioksidipallot loihtivat sateenkaaren',
+          teksti: 'Kun sisämeri kuivui, piidioksidipitoinen vesi valui hiekkakiven '
+            + 'halkeamiin ja onkaloihin ja kovettui vuosimiljoonien kuluessa geeliksi '
+            + 'ja lopulta kiveksi. Jos piidioksidin mikroskooppiset pallot '
+            + 'järjestäytyivät kiven sisällä säännöllisiksi riveiksi, ne alkavat '
+            + 'taittaa valoa aivan kuin hila: tuloksena on jalo-opaali, joka hohtaa '
+            + 'eri värejä katselukulman mukaan. Jos pallot ovat epäsäännöllisessä '
+            + 'järjestyksessä, syntyy vain himmeä, väritön opaali. Coober Pedyn kivi '
+            + 'on tyypillisesti vaaleaa niin sanottua valkoista opaalia, koska sen '
+            + 'emokivi on itsessään vaaleaa hiekkakiveä.',
+          tiedosto: 'Coober Pedy Opal.jpg',
+          lyhyt: 'Piidioksidipallojen säännöllinen järjestys kiven sisällä synnyttää opaalin väriloisteen.',
+          selite: 'Käsissä pidelty, hiontaamaton raaka-opaali: harmaanruskean emokiven '
+            + 'pinnalla kirkkaan vihreää, sinistä, oranssia ja violettia väriloistetta.',
+          lahde: 'Dpulitzer, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Opal',
+        },
+        {
+          otsikko: 'Simpukka joka muuttui jalokiveksi',
+          teksti: 'Muinaisen sisämeren pohjaan hautautui myös eläimiä: simpukoita, '
+            + 'etanoita ja meriliskoja. Kun niiden kuoret ja luut lopulta hajosivat '
+            + 'maaperässä, piidioksidipitoinen vesi täytti tyhjäksi jääneen muotin '
+            + 'tarkalleen alkuperäisen kuoren muotoisena. Tulos on opaalikivettymä eli '
+            + 'fossiili, joka on ulkomuodoltaan täsmälleen alkuperäisen eliön näköinen '
+            + 'mutta koostumukseltaan kokonaan opaalia. Coober Pedyn kaivoksista on '
+            + 'löytynyt tällä tavoin kivettyneitä simpukoita, etanoita ja jopa hain '
+            + 'hampaita — pieniä muistoja merestä, joka peitti seudun kauan ennen '
+            + 'ihmisiä.',
+          tiedosto: 'Opalized fossil bivalve, Coober Pedy Opal Field, South Australia.jpg',
+          lyhyt: 'Osa Coober Pedyn opaaleista on muinaisten simpukoiden ja etanoiden opaalikivettymiä.',
+          selite: 'Tummanharmaalla soralla lepäävä, simpukan muotoinen opaalikivettymä: '
+            + 'kuoren reunalla erottuu kirkkaan vihreää ja sinistä väriloistetta.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Opalised fossil',
+        },
+        {
+          otsikko: 'Eric, puolikas löytö meren pohjalta',
+          teksti: 'Vuonna 1987 opaalinkaivaja löysi Coober Pedystä lähes täydellisen, '
+            + 'kokonaan opaaliksi kivettyneen meriliskon luurangon. Sitä alettiin '
+            + 'kutsua nimellä Eric, brittiläisen komediaryhmän laulun mukaan. Yli '
+            + 'yhdeksänkymmentä prosenttia luurangosta oli säilynyt, ja luiden seasta '
+            + 'löytyi jopa pieniä kalanruotoja — jäänteitä eläimen viimeisestä '
+            + 'ateriasta. Kun Ericin omistanut yhtiö ajautui vuonna 1992 konkurssiin '
+            + 'ja luuranko oli vaarassa päätyä ulkomaille, tuhannet australialaiset '
+            + 'lahjoittivat rahaa sen lunastamiseksi. Eric on nykyään esillä '
+            + 'Australian museossa Sydneyssä.',
+          tiedosto: 'Umoonasaurus BW.jpg',
+          lyhyt: 'Coober Pedystä 1987 löytynyt opaalinen meriliskon luuranko sai nimen Eric.',
+          selite: 'Taiteilijan näkemys elävästä Umoonasaurus-meriliskosta: nelilepäinen, '
+            + 'pitkäkaulainen liskoeläin uimassa, ruskehtavanvihreä väritys.',
+          lahde: 'Nobu Tamura, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Umoonasaurus',
+        },
+        {
+          otsikko: 'Vanha kaivos museona',
+          teksti: 'Osa Coober Pedyn ensimmäisistä opaalikaivoksista on säilytetty '
+            + 'museoina, joissa vierailijat pääsevät kävelemään aitoja, käsin '
+            + 'louhittuja kaivoskäytäviä pitkin ja näkemään seinään jääneet '
+            + 'opaalisuonet paikallaan. Kivikehyksinen sisäänkäynti johtaa suoraan '
+            + 'hiekkakivimäen sisään, ja käytävien varrella esitellään vanhoja '
+            + 'poravaunuja ja työkaluja, joilla kaivostyötä tehtiin ennen '
+            + 'koneellistumista. Museokierros on monelle matkailijalle ainoa '
+            + 'tilaisuus nähdä, millaista opaalinetsintä on käytännössä: ahtaissa, '
+            + 'pölyisissä käytävissä, kynttilän tai otsalampun valossa.',
+          tiedosto: 'Coober Pedy, South Australia - Opal Mine & Museum.jpg',
+          lyhyt: 'Vanhoja opaalikaivoksia on säilytetty museoina, joissa opaalisuonet näkyvät yhä seinässä.',
+          selite: 'Kivikehyksinen kaivosmuseon sisäänkäynti hiekkakivimäen kyljessä; '
+            + 'edessä vanha poravaunu ja kolme kävijää sisäänkäynnin edustalla.',
+          lahde: 'Rob Chandler, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Umoona Opal Mine',
         },
       ],
     },

@@ -417,11 +417,11 @@ export const AFRICA = {
       ],
     },
     intro: 'Peli alkaa! Etsikää Suuren Zimbabwen kivilintu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
-    starFound: (name, city) => `◈ ${name} löysi SUUREN ZIMBABWEN KIVILINNUN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi SUUREN ZIMBABWEN KIVILINNUN kaupungista {city}!',
     starToast: 'SUUREN ZIMBABWEN KIVILINTU!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Suuren Zimbabwen kivilinnun turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Suuren Zimbabwen kivilinnun kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Suuren Zimbabwen kivilinnun kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän kartassa tämä manner on paikoin väritetty tyhjäksi. Piirtäjä ei ilmeisesti vaivautunut kysymään niiltä miljoonilta, jotka asuivat täällä jo silloin. Tyhjä kohta kartassa kertoo piirtäjästä, ei maasta.',
