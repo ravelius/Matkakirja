@@ -716,6 +716,25 @@ hae_korkeuspalat () {
 LUETTELO_URL="https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json"
 lue_ampari () {
   local t="$ULOS/ampari-luettelo.json"
+  # VANHENTUNUT VÄLIMUISTI (24.9.2026): ajokansioon jäänyt luettelo on
+  # jatkoajon tuki (samat versiot), mutta syvä sarja vei z9-z10:n väärän
+  # version polkuun, koska kuiva-ajo oli tallentanut luettelon ennen kuin
+  # ämpärin pohja vaihtui. Jos ämpärin versio on eri kuin välimuistin,
+  # pysähdytään: uusi ajokansio tai välimuistin poisto on tietoinen valinta.
+  if [ -s "$t" ]; then
+    local tuore; tuore="$(mktemp)"
+    if curl -sSL --retry 3 --max-time 120 -o "$tuore" "$LUETTELO_URL" && [ -s "$tuore" ]; then
+      local vanha uusi
+      vanha="$(node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")).versio ?? "")' "$t")"
+      uusi="$(node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")).versio ?? "")' "$tuore")"
+      if [ "$vanha" != "$uusi" ]; then
+        echo "VIRHE: ajokansion ämpäriluettelo on vanhentunut ($vanha, ämpärissä nyt $uusi)." >&2
+        echo "Poista $t (uusi ajo ämpärin nykyisellä pohjalla) tai jatka vanhaa ajoa tietoisesti uudessa kansiossa." >&2
+        rm -f "$tuore"; exit 1
+      fi
+    fi
+    rm -f "$tuore"
+  fi
   [ -s "$t" ] || curl -sSL --retry 3 --max-time 120 -o "$t" "$LUETTELO_URL" || true
   [ -s "$t" ] || { echo "VIRHE: ämpärin pyramidi.jsonia ei saatu ($LUETTELO_URL)." >&2; exit 1; }
   node -e '
