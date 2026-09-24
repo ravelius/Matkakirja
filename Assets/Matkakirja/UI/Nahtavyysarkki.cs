@@ -524,23 +524,10 @@ namespace Matkakirja.Natiivi
             isa.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
             if (kuvat.Count > 1)
             {
-                var ed = Rakenne.Nappi("‹", "mk-nosto__selaa mk-nosto__selaa--vasen", () => Nayta(i - 1), kehys);
-                var se = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(i + 1), kehys);
-                ed.RegisterCallback<ClickEvent>(e => e.StopPropagation());
-                se.RegisterCallback<ClickEvent>(e => e.StopPropagation());
                 laskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kehys);
                 Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
-                // Pyyhkäisy 40 pt kuvan päällä (web karuselli).
-                Vector2 alku = default;
-                bool vetaa = false;
-                kehys.RegisterCallback<PointerDownEvent>(e => { alku = e.position; vetaa = true; });
-                kehys.RegisterCallback<PointerUpEvent>(e =>
-                {
-                    if (!vetaa) return;
-                    vetaa = false;
-                    var d = (Vector2)e.position - alku;
-                    if (Mathf.Abs(d.x) >= 40f && Mathf.Abs(d.x) > Mathf.Abs(d.y)) Nayta(i + (d.x < 0 ? 1 : -1));
-                });
+                // Löydös 34: reunanapautus ja pyyhkäisy (web 30 px) selaavat, ei nuolia; keskiosa suurentaa.
+                new KuvaSelaus(lohko, () => kuvat.Count, s2 => Nayta(i + s2), () => kehys);
             }
             Nayta(0);
         }
