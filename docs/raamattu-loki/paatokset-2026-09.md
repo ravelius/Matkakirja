@@ -3543,3 +3543,7 @@ Fable katsoi arkin: avaruusavaus, Afrikka-zoomi ja Marokon lähikuva etenevät w
 ## LINSSISEPPA: KEKSINTOJEN PYSAKKIAJOT KUVATTU iPHONE-SIMULAATTORISSA (3f70eb8, proto-3d/lokit/koreografia-iphone-20260924/keksinnot/keksinnot.mp4, arkki.jpg): SIIRROT 3,4 s KUMINAUHAJARRUTUKSELLA, LIIKE NAKYY LAMPUN HEHKUN SIIRTYMANA (KARTTA TUMMENNETTU); koreografia3 MASTERISSA b3a9ad3 (BUILD 6 -EHDOKAS); SEURAAVA iPAD-VUORO PIIKKIAJO 6 (24.9.2026 klo 11.04)
 
 Fable katsoi arkin: Watt → Montgolfier → Jenner, kuva ja kortti vaihtuvat pysäkillä, hehku liukuu tasaisesti. Hyväksytty.
+
+## OMISTAJA klo 11.0x (SITOVA, DATALINSSIT): PERUSTEELLINEN SELVITYS JULKISISTA DATALAHTEISTA, JOITA PELISSA VOI KAYTTAA LINSSEINA (TALOUS, LUONTO, KAUPUNGIT, ILMASTO, VAESTO, YM. — LAAJA SKAALA; ESIMERKKINA X-JULKAISU METSAPALOISTA JA AEROSOLEISTA EUROOPASSA, uploads/a7b0edce-image.png); LAHTEET LISATAAN LINSSIKATALOGIIN (docs/linssikatalogi.md + linssikatalogi.html + ARTEFAKTI), YHDISTETAAN OLEMASSA OLEVIIN LINSSI-IDEOIHIN JA NIISTA LUODAAN UUSIA LINSSI-IDEOITA; OMISTAJALLE ILMOITETAAN KUN UUSI BUILD ON TESTATTAVISSA (24.9.2026 klo 11.06)
+
+Fable: selvitys tilataan Opus-agentille (WebSearch), tulos docs/raportit/datalahteet-linsseille-20260924.md; Fable tiivistää katalogiin osaksi R (datalinssit) ja yhdistää osiin A–Q ja Osa 3. Lisenssiehto: vain PD/CC/avoin data attribuutiolla (NASA, NSIDC, Copernicus, ESA, NOAA, USGS, World Bank, OWID, Eurostat, OSM ym.).
