@@ -257,6 +257,8 @@ namespace Matkakirja.Linssit.Radio
             if (!Auki) return;
             LopetaAani(PysaytyksenHaiveS);
             Auki = false;
+            Mittari.Nollaa();
+            mittarinKello = double.NaN;
             LuentaSallittu = true;
             if (kartta != null)
             {
@@ -332,8 +334,23 @@ namespace Matkakirja.Linssit.Radio
             Aseta(RadioVaihe.Viritys, ViritysVaihe.Siirtyma, kaupunki, asema, null);
         }
 
+        /// <summary>VU-mittari (BUILD 7): päivittyy joka kehys lähetyksen todellisesta tasosta (IRadioTaso) tai varakuviosta.</summary>
+        public readonly VuMittari Mittari = new VuMittari();
+        double mittarinKello = double.NaN;
+
+        void PaivitaMittari()
+        {
+            double t = y?.Aika ?? 0;
+            double dt = double.IsNaN(mittarinKello) ? 0 : t - mittarinKello;
+            mittarinKello = t;
+            bool soi = Auki && !Tauolla && Tila?.Vaihe == RadioVaihe.Soi && virta != null && virta.Kuuluu;
+            double taso = virta is IRadioTaso rt ? rt.Taso : -1;
+            Mittari.Paivita(dt, taso, soi, aani, t, y?.VahennettyLiike ?? false);
+        }
+
         public void Paivita()
         {
+            PaivitaMittari();
             if (!Auki || soiva == null || Tauolla) return;
             double t = Nyt - alkoi;
             if (Tila.Vaihe == RadioVaihe.Virhe) return;

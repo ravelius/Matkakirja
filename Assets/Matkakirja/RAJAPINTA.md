@@ -145,6 +145,16 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 | `IEnumerator Hae<T>(kokoelma, Action<T[]>)` | valmis | JsonUtility-tyypitetty kokoelma (uusin.json → versio → välimuisti laitteella). |
 | `IEnumerator HaeTeksti(kokoelma, Action<string>)` | valmis | Raakateksti (MiniJson sisäkkäisille taulukoille). |
 
+## 8b. Radion VU-taso — `Assets/Plugins/iOS/MatkakirjaRadio.mm` (Natiiviseppä, build 7)
+
+| Funktio (`[DllImport("__Internal")]`) | Tila | Merkitys |
+|---|---|---|
+| `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; tauolla/ei soi → laskee nollaan. **−1** = ei mitattavissa (HLS-virta: MTAudioProcessingTap ei toimi segmenteillä) → käytä webin ajastettua varakuviota. Halpa: luetaan joka kehys (Linssiseppä: RadioVirta.Taso). |
+| `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (|näyte| max), vaimennus ~1 s. |
+
+Mittaus: MTAudioProcessingTap AVPlayerItemin audioMixissä (progressiivinen MP3/AAC), MediaToolbox linkitetään
+Rakennus.Kehykset-jälkikäsittelyssä. Koskee kaikkia MatkakirjaRadio_Avaa-virtoja (myös lehden mediarivi).
+
 ## 9. Testaus
 
 Komentotiedosto `Documents/komento.txt` (Kartta, `Komennot.cs`) ja `Documents/peli-komento.txt`
