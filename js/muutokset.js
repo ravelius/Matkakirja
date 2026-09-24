@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2155, teksti: 'Kaupunkiliuska pysyy taas merkin korkeudella' },
   { v: 2154, teksti: 'Sisältöpaketti 1.10–1.16 natiiville (#2984)' },
   { v: 2153, teksti: 'Kohdistus hyvaksyy kuitin oman outputFormatin (#2961)' },
   { v: 2152, teksti: 'Pulu-eleet: elava kohdistus ilman kuittia (#2978)' },
