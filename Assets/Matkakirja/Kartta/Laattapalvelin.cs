@@ -285,7 +285,7 @@ namespace Matkakirja
         static async Task Vastaa(NetworkStream virta, int tila, byte[] data, string kohde, bool vainOtsake)
         {
             string tyyppi = kohde.Contains(".terrain") ? "application/vnd.quantized-mesh"
-                : kohde.Contains(".json") ? "application/json"
+                : kohde.Contains(".json") || kohde.Contains(".geojson") ? "application/json"
                 : kohde.Contains(".png") ? "image/png"
                 : kohde.Contains(".webp") ? "image/webp" : "image/jpeg";
             int pituus = data?.Length ?? 0;
