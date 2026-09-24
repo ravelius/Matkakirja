@@ -480,6 +480,22 @@ namespace Matkakirja.Natiivi
         /// kuva isompana (web avaaWikiKuva: kuva, tiivistelmä ja lähde, ei ilman lähdettään).
         /// Ei yhteyttä tai ei kuvaa = kuvaton vastaus, joka on kelvollinen.
         /// </summary>
+        /// <summary>
+        /// Kupla kääreeseen, jonka oikeaan laitaan kuva tulee (web float: right). Kuva ei saa olla Labelin
+        /// lapsi: lapsellinen tekstielementti ei enää mittaa tekstiään, jolloin korkeudeksi jäi min-height
+        /// ja teksti valui Tallenna-rivin ja jatkokysymysten päälle (Laitetestaaja A5, iPad 24.9.).
+        /// </summary>
+        static VisualElement Kuvallinen(Label kupla)
+        {
+            if (kupla.parent != null && kupla.parent.ClassListContains("mk-chat__kuvallinen")) return kupla.parent;
+            var isa = kupla.parent;
+            var kaare = new VisualElement();
+            kaare.AddToClassList("mk-chat__kuvallinen");
+            if (isa != null) isa.Insert(isa.IndexOf(kupla), kaare);
+            kaare.Add(kupla);
+            return kaare;
+        }
+
         IEnumerator VastausKuva(Label kupla, string vastaus, string kysymys)
         {
             int poletti = ++kuvaPoletti;
@@ -494,10 +510,9 @@ namespace Matkakirja.Natiivi
                 NostoSisalto.HaeKuva(oma.Lahde, tex =>
                 {
                     if (tex == null || poletti != kuvaPoletti || kupla.panel == null) return;
-                    var nappi = Rakenne.El("mk-chat__vastauskuva", kupla);
+                    var nappi = Rakenne.El("mk-chat__vastauskuva", Kuvallinen(kupla));
                     nappi.tooltip = "Näytä kuva isompana";
                     nappi.style.backgroundImage = new StyleBackground(tex);
-                    kupla.AddToClassList("mk-chat__livia--kuva");
                     nappi.AddManipulator(new Clickable(() => AvaaLinkki(r)));
                     Vierita(kupla);
                 });
@@ -511,10 +526,9 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(y.Kuva, t =>
             {
                 if (t == null || kupla.panel == null) return;
-                var nappi = Rakenne.El("mk-chat__vastauskuva", kupla);
+                var nappi = Rakenne.El("mk-chat__vastauskuva", Kuvallinen(kupla));
                 nappi.tooltip = "Näytä kuva isompana";
                 nappi.style.backgroundImage = new StyleBackground(t);
-                kupla.AddToClassList("mk-chat__livia--kuva");
                 string lahde = "Wikipedia · " + y.Otsikko;
                 nappi.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
                 {
