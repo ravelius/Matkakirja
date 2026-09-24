@@ -153,6 +153,13 @@ void MatkakirjaRadio_Avaa(const char* osoite)
     [[MatkakirjaRadio jaettu] avaa:[NSString stringWithUTF8String:osoite]];
 }
 
+// VU-mittarin taso (BUILD 7): RMS 0…1 tai −1 = ei saatavilla. TYNKÄ (Linssiseppä 24.9.): Natiiviseppä
+// korvaa oikealla mittauksella (esim. MTAudioProcessingTap progressiiviselle virralle; HLS → −1).
+float MatkakirjaRadio_Taso(void)
+{
+    return -1.0f;
+}
+
 void MatkakirjaRadio_Sulje(void)
 {
     [[MatkakirjaRadio jaettu] sulje];
