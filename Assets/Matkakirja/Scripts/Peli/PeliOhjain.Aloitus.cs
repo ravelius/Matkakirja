@@ -82,13 +82,13 @@ namespace Matkakirja.Natiivi
                     () =>
                     {
                         if (tunnus != ajoTunnus) return;
-                        // Kone lähtee: moottorin ääni, lentorepliikki (kerran istunnossa) ja nousu samalla hetkellä.
+                        // Kone lähtee: moottorin ääni, lentorepliikki (jokaisella avauslennolla) ja nousu samalla hetkellä.
                         // Avauslento ei ole siirto: web ei soita sille siirtymäraitaa (doPickStart), vain matkustamon maiseman.
                         IlmoitaLiike(Kulkutapa.Lento, 0, siirtymaraita: false);
                         Lentoaani(true, kesto);
                         AloitaLento(Lentosuunnitelma.Laske("lontoo", kohde, (AloitusLat, AloitusLon), b.Value, kesto,
                             AloituslennonKesto(), aloitus: true));
-                        var repliikki = luennat.OtaLentoAlku();
+                        var repliikki = luennat.LentoAlkuAvaukseen();
                         if (repliikki != null) SoitaLuento(repliikki, 0f);
                     },
                     () => { if (tunnus == ajoTunnus) AjoValmis(); });
