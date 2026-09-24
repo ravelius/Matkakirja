@@ -37,13 +37,20 @@ VERSIO=${VERSIO:-$(curl -s https://media.matkakirja.app/sisalto/1/uusin.json | p
 TMP=$(mktemp -d)
 
 sinne() { xcrun devicectl device copy to --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "$1" --destination "Documents/$2" >/dev/null; }
-hae() { mkdir -p "$1"; xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source Documents --destination "$1" >/dev/null; }
+# Vain lokit ja tämän ajon kuvat (Fable 24.9.: koko Documents = sisältö ja äänet ~700 Mt/ajo täytti levyn).
+hae() {
+  mkdir -p "$1"
+  for f in linssi-loki.txt ui-loki.txt $(cat $TMP/kuvat.txt 2>/dev/null); do
+    xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID \
+      --source "Documents/$f" --destination "$1/$f" >/dev/null 2>&1 || echo "ei laitteella: $f"
+  done
+}
 linssi() { print -l "$@" > $TMP/l.txt; sinne $TMP/l.txt linssi-komento.txt; }
 kartta() { print -l "$@" > $TMP/k.txt; sinne $TMP/k.txt komento.txt; }
 ui() { print -l "$@" > $TMP/u.txt; sinne $TMP/u.txt ui-komento.txt; }
 # Aloitusportin ohitus (Natiivi-UI): muuten Jatka matkaa / Uusi matka jää linssien päälle.
 portti() { sleep ${1:-20}; ui "ui aloita ${KAUPUNKI:-pariisi}"; sleep 6; }
-kuva() { kartta "kuva $1"; sleep 3; }
+kuva() { kartta "kuva $1"; sleep 3; print "$1.png" >> $TMP/kuvat.txt; }
 kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-existing $ID | tail -1; }
 
 case "$1" in
