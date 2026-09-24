@@ -4291,3 +4291,7 @@ Web 2082 km vs natiivi 2073 km, tummennus meri 43 vs 42; kuvaparit proto-3d/loki
 ## LAITETESTAAJA b10c: YLAPALKKI JA TEKSTITAUSTAT KUVATTU — VAAKATILASSA YHA KELLUVAT PILLERIT (KORJATTAVA), TEKSTITAUSTA WEBISSA TASAINEN JA FONTTI LIHAVAMPI, NATIIVISSA OHUT FONTTI + KARKEA RAE (24.9.2026 klo 17.01)
 
 Kuvat proto-3d/lokit/loydos26-pariisi-zoomi/. Fable Natiivi-UI:lle: vaakatilassa vain ☰ (ei pillereitä); webin --paper-noise on hienojakoinen feTurbulence (baseFrequency 0,9, alpha 0,2, multiply) → natiivin rae yhtä hienoksi tai pois; font-weight ja värit (#211d18, #16130f) webin mukaan; nostokortin web-kuva Playwrightilla klikkaamalla. Tekemättä Laitetestaajalla: noppa-kartalle, astropulu, iso iPad Linssisepän jälkeen.
+
+## KEKSINNOT: PAIKANNIMET LINSSISSA — WEB NAYTTAA LAATTOIHIN POLTETUT NIMET, NATIIVIN 23a ILMAN NIMIA → NATIIVI NAYTTAA ELAVAT NIMIOT LINSSIN AIKANA WEBIN TYYLILLA (EI UUSINTAPOLTTOA); LAMPPUJEN HEHKU sRGB/LINEAARI (24.9.2026 klo 17.02)
+
+Linssiseppä: web piilottaa elävät nimiöt linssissä kuten natiivi (css .pallolauta-nimi display:none), nimet ovat webin laatoissa. Fable: 'web on malli' koskee lopputulosta → elävät nimiöt linssin aikana samalla koolla/tiheydellä/zoomikynnyksillä kuin webin poltetut, vesinimet piilossa; Natiivisepän kanssa nimiökerroksen kytkin. Lamput: koko ja peitto samat (0,62/0,42), hehku himmeämpi (ka 54 vs 75, pino 132 vs 250) → sRGB/lineaari Valo-varjostimessa, 2–3 laitekierrosta. ISS-video ja astropulu kun b10c isolla iPadilla.
