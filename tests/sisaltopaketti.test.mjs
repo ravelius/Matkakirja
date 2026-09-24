@@ -1074,3 +1074,30 @@ test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset
   assert.equal(l.tyypit.star.nimi, l.tyypit.star.name);
   assert.equal(l.mannerTyypit.europe.star.nimi, l.mannerTyypit.europe.star.name);
 });
+
+test('2.0 (major2.mjs): ei raakaa, vain natiivin moduulit, tiivisteet täsmäävät', async () => {
+  const { johdaMajor2, onNatiivinModuuli } = await import('../tools/vienti/major2.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  const m = JSON.parse(t2.get('manifest.json'));
+  assert.equal(m.$skeema, 'matkakirja-vienti/2/manifest');
+  assert.equal(m.skeemaversio, '2.0');
+  assert.ok(!('webNakymat' in m));
+  assert.ok(m.moduulit.length > 0 && m.moduulit.every((x) => x.natiivi && onNatiivinModuuli(x.moduuli)));
+  assert.ok(onNatiivinModuuli('js/packs/fokuskohteet-fra.js') && !onNatiivinModuuli('js/packs/europe.js'));
+  const listatut = new Set(['manifest.json']);
+  for (const arvo of Object.values(m)) {
+    for (const e of Array.isArray(arvo) ? arvo : [arvo]) {
+      if (!e || typeof e !== 'object' || typeof e.tiedosto !== 'string') continue;
+      listatut.add(e.tiedosto);
+      assert.ok(t2.has(e.tiedosto), e.tiedosto);
+      if (e.sha256) assert.equal(createHash('sha256').update(t2.get(e.tiedosto)).digest('hex'), e.sha256, e.tiedosto);
+    }
+  }
+  for (const [polku, teksti] of t2) {
+    assert.doesNotMatch(teksti, /matkakirja-vienti\/1\//, polku);
+    if (polku.startsWith('kokoelmat/')) assert.ok(JSON.parse(teksti).alkiot.every((a) => !('data' in a)), polku);
+  }
+  const [laatta] = JSON.parse(t2.get('kokoelmat/laatat.json')).alkiot;
+  assert.ok(laatta.tyypit.star.nimi && !('name' in laatta.tyypit.star));
+  assert.ok(JSON.parse(t2.get(m.media.tiedosto)).viitteet.every((v) => !('esiintymat' in v) && v.arvo));
+});
