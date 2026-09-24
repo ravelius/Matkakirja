@@ -89,13 +89,12 @@ namespace Matkakirja.Natiivi
 
     /// <summary>
     /// Liiku-nappi piiloon kerronnan ajaksi (löydös 45, web js/ui.js kaynnistaLuentavahti + css body.luenta-aanessa
-    /// .monitoimi-nappi display: none). Kysytään VahtiMs välein: piilossa, kun joku on äänessä (isoisä, saapumispuhe,
-    /// Livia), ja Valirauha puheenvuoron jälkeen, jottei nappi välähdä kahden puheen välissä. Ohita pysäyttää puheen,
-    /// joten nappi palaa välirauhan jälkeen.
-    /// Varaventtiili koskee vain hiljaista odotusta (luento pyydetty, ääni ei kuulu): se päästää napin esiin
-    /// Varaventtiili ms:n jälkeen, ettei jumiin jäänyt lataus jätä umpikujaa. Webin venttiili laskee koko puheen
-    /// ajasta ja välähdyttää napin 30 s:n välein pitkän luennan keskellä (mitattu Ateena 24.9.: t 33,4 s näkyvissä
-    /// 0,2 s); sitä ei tuoda natiiviin, koska web tarkoittaa venttiilillä roikkuvaa vuoroa, ei soivaa luentaa.
+    /// .monitoimi-nappi display: none). Kysytään VahtiMs välein: piilossa, kun joku on kuuluvasti äänessä (isoisä,
+    /// saapumispuhe, Livia), ja Valirauha puheenvuoron jälkeen, jottei nappi välähdä kahden puheen välissä. Ohita
+    /// pysäyttää puheen, joten nappi palaa välirauhan jälkeen. Pelkkä pyydetty tai epäonnistunut luento ei piilota
+    /// (web 15.9.: näkyvät merkit seuraavat kuuluvaa ääntä, ei varattua vuoroa).
+    /// Webin varaventtiili (30 s ilman puheen edistymistä, korjattu 24.9. pelikoodari-liiku-luenta) vartioi
+    /// pysähtynyttä virtaa; natiivin AudioSource soittaa ladattua klippiä eikä voi pysähtyä soivana, joten sitä ei tarvita.
     /// </summary>
     public sealed class LuentaPiilo
     {
@@ -103,30 +102,18 @@ namespace Matkakirja.Natiivi
         public const int VahtiMs = 200;
         /// <summary>Web LUENNAN_VALIRAUHA_MS = SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS 900 + 400.</summary>
         public const int ValirauhaMs = 1300;
-        /// <summary>Web LUENNAN_VARAVENTTIILI_MS.</summary>
-        public const int VaraventtiiliMs = 30000;
 
         double? aaniLoppui;   // web puheLoppui: viimeisin hetki, jolloin joku oli äänessä
-        double? odotusAlkoi;  // hiljaisen odotuksen alku (varaventtiilin kello)
 
         public bool Piilossa { get; private set; }
 
-        /// <summary>
-        /// kuuluu: jokin puhe soi (isoisä, saapumispuhe tai Livia). odottaa: luento on pyydetty mutta ei vielä soi
-        /// (lataus tai viive). Palauttaa, onko Liiku piilossa.
-        /// </summary>
-        public bool Paivita(bool kuuluu, bool odottaa, double nytMs)
+        /// <summary>kuuluu: jokin puhe soi (isoisä, saapumispuhe tai Livia). Palauttaa, onko Liiku piilossa.</summary>
+        public bool Paivita(bool kuuluu, double nytMs)
         {
-            if (kuuluu) { aaniLoppui = nytMs; odotusAlkoi = null; return Piilossa = true; }
-            if (odottaa)
-            {
-                odotusAlkoi ??= nytMs;
-                if (nytMs - odotusAlkoi.Value < VaraventtiiliMs) return Piilossa = true;
-            }
-            else odotusAlkoi = null;
-            if (aaniLoppui.HasValue && nytMs - aaniLoppui.Value < ValirauhaMs) return Piilossa = true;
-            aaniLoppui = null;
-            return Piilossa = false;
+            if (kuuluu) aaniLoppui = nytMs;
+            Piilossa = aaniLoppui.HasValue && nytMs - aaniLoppui.Value < ValirauhaMs;
+            if (!Piilossa) aaniLoppui = null;
+            return Piilossa;
         }
     }
 
