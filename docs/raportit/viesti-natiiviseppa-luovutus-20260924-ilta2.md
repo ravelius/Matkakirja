@@ -63,8 +63,10 @@ Korkeus `Mastot.KorkeusM(koko, kameran korkeus)`, valotasot `Mastot.Valotasot(ko
 `LinssiOhjain.RadioSovitin.MastoPiirto = () => sinunPiirtosi`; kun asetettu, radio kallistaa 40° ja ajaa ajoitukset
 itse; null = entinen radio.
 
-## Keskeneräinen agentti
+## Kamerareitin jatko VALMIS haarassa (agentti klo 20.3x)
 
-Kamerareitin jatko (≤ 180°, esilataus) oli Opus-agentilla nollaushetkellä; mahdolliset commitit ovat haarassa
-natiiviseppa/kamerareitti 8fe2136:n päällä (worktree /Users/Shared/Claude/wt/proto-natiiviseppa-kamera). Jos haarassa ei
-ole uutta committia, tee työ itse luovutuksen kohdan 1 mukaan.
+natiiviseppa/kamerareitti **6c2378e** (ei mergetty, ei vielä Unityssä): kierto (c+d) ≤ 180° lyhyempään suuntaan, maisema
+vain tasatilanteessa (≥ 165°), kulmanopeus 12–33°/s (Ateena 107° / 23°/s). Uusi `EsilataaKohde` lataa laskunäkymän
++25 % lennon alusta (Blue Marble Z5–Z7, Sentinel Z8 koko alue, Z9 ≤ 160 lähintä, Z10 säde 2) omilla 4 latauspaikalla.
+Testit 37/37, 270/270, 226/226. SEURAAVAKSI: testi.sh natiiviseppa/kamerareitti omaan simiin → satlento2.sh-video →
+lokirivi "orbit alkaa … kohdealue x/y" → video Fablelle ja omistajalle → merge build 12:een.
