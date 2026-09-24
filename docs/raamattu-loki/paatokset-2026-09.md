@@ -4239,3 +4239,7 @@ peilaa-media.mjs: js/linssit-luku + mainin hetkikuvat-suodatus säilytetty. Aske
 ## OMISTAJAN LOYDOS 35 (BUILD 9, klo 17.0x, SITOVA): AVARUUSLINSSIN PULU EI OLE OIKEA PULU (VALMIIT VASTAUKSET) (24.9.2026 klo 16.34)
 
 Webissä korjattu aiemmin: pulu toimii avaruuslinssissä kuten muualla pelissä (oikea keskustelu). Natiiviin sama → Linssiseppä (Pelikoodarin kanssa jos chat-putki hänen), build 10, kuvapari.
+
+## ISO iPAD: 'No Account for Team F72JLS57C5' — PERSONAL TEAM KUULUU TOISEEN APPLE ID:HEN → KEHITYSKAANNOKSET MAKSULLISEEN DEVELOPER-TIIMIIN (24.9.2026 klo 16.35)
+
+Omistajan koodaus-Xcode-tili (me.com) ei sisällä Personal Team F72JLS57C5:tä. Fable: Natiiviseppä vaihtaa DEVELOPMENT_TEAM:n maksulliseen Developer Program -tiimiin (sama kuin Actionsin TEAM_ID), rekisteröi laitteet (-allowProvisioningDeviceRegistration) ja tekee automaattisen profiilin; Personal Teamia ei enää käytetä. Jos tiimilista ei lataudu, omistaja lukee tiimin nimen/ID:n Accounts-näkymästä.
