@@ -93,8 +93,10 @@ namespace Matkakirja
                 // Syöksy koneen etuviistoon, kuminauhajarrutus lähikuvaan.
                 // Omistaja 24.9. klo 11.4x: lähivaiheissa kone täyttää ~2/3 ruudun leveydestä; kamera matalalta
                 // etuviistosta (kallistus 80–83°), jotta horisontti ja taivas ovat koneen takana ja pilvet alla.
-                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 80, Suunta = 150, Kohde = 0, Kone = 0.74 },
-                // LÄHIKUVA: hidas panorointi koneen ympäri, lähes paikallaan.
+                // SIIVEN OHI (elokuvalento erä 5, 24.9.): syöksy päättyy sivulle lähelle siivenkärkeä (kone 1,25 ruudun
+                // levyinen, siipi täyttää kuvan), ja lähikuvan panorointi liukuu siiven ohi etuviistoon ja nokan yli.
+                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 82, Suunta = 100, Kohde = 0, Kone = 1.25 },
+                // LÄHIKUVA: siiven ohi ja hidas panorointi koneen ympäri, lähes paikallaan.
                 new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.74 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).

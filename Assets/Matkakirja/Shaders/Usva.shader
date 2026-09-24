@@ -81,8 +81,11 @@ Shader "Matkakirja/Usva"
                 // Peitto kasvattaa tiheyttä: pienellä peitolla vain harsoja, täydellä umpimeri.
                 float tiheys = saturate((n - (1.0 - _Peitto) * 0.75) * 2.2 + _Peitto * 0.55);
                 float reuna = 1.0 - smoothstep(0.55, 1.0, i.uv.x);
-                half a = (half)saturate(tiheys * reuna * saturate(_Peitto * 1.6));
-                half3 vari = lerp(_Varjo.rgb, _BaseColor.rgb, i.valo * (0.75 + 0.25 * n));
+                // Täydelläkin peitolla pinta elää: kohinan laaksot vähän läpikuultavia ja varjossa, huiput valossa
+                // (sim 24.9.: tasainen valkoinen näytti tyhjältä).
+                half a = (half)saturate(tiheys * reuna * saturate(_Peitto * 1.6) * (0.78 + 0.22 * smoothstep(0.25, 0.6, n)));
+                float kumpu = smoothstep(0.3, 0.75, fbm(p * 3.1 + 5.3));
+                half3 vari = lerp(_Varjo.rgb, _BaseColor.rgb, saturate(i.valo * (0.35 + 0.65 * kumpu)));
                 return half4(vari * max(0.6, _MainLightColor.rgb), a);
             }
             ENDHLSL
