@@ -38,6 +38,8 @@ namespace Matkakirja
         {
             public string id;
             public string nimi;
+            /// <summary>ISO3 (esim. "GRC").</summary>
+            public string maa;
             public string maa2;
             public double lat;
             public double lon;

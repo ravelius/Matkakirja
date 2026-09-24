@@ -38,6 +38,13 @@ namespace Matkakirja
         }
         HashSet<string> suodatin;
 
+        /// <summary>Kaupungin maa (ISO3) tai null.</summary>
+        public string KaupunginMaa(string id)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            return m?.kaupunki.maa;
+        }
+
         /// <summary>Lähimmän kaupungin id annetusta pisteestä (enintään maxAste asteen päässä), muuten null.</summary>
         public string LahinId(double lat, double lon, double maxAste = 0.5)
         {
