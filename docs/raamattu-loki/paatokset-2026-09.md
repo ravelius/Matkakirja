@@ -2903,3 +2903,7 @@ Jonon kohta 3 valmis osoittimen osalta; #3012 seuraava.
 ## SISALTOKIRJURI: N7 PR #3013 (KILIMANJARO, VIKTORIAN PUTOUKSET, SITKA, BERMUDA, FALKLANDINSAARET), 4164/0; 25/71 TEHTY; N8 KAYNNISSA (24.9.2026 klo 03.16)
 
 Rutiinierä, ei päätöksiä.
+
+## NATIIVI-UI NOLLATAAN klo 03.2x (78 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260924-b.md (25602e864), PROTO-MASTER 07bc3e4, MERGE-PYYNNOSSA natiivi-ui/lehti-kulttuuri 3d3ee8b (UUTISET); ALOITUS viesti-natiivi-ui-aloitus.md (24.9.2026 klo 03.20)
+
+Kaava: clear_session → 75 s → aloitusviesti.
