@@ -870,8 +870,10 @@ static void PakettiKutsu(void* asiakas, UInt32 tavuja, UInt32 paketteja, const v
     }
     if (jonossa / taajuus >= v->kynnys)
     {
-        @try { [self.soitinSolmu play]; self.soittaa = YES; }
-        @catch (NSException* e) { self.moottoriVirhe = e.reason; }
+        // Unityn iOS-projekti kääntää ilman Objective-C-poikkeuksia (@try ei käy): play() heittää vain, jos
+        // moottori ei käy tai solmu ei ole kytketty, joten tarkistetaan se etukäteen.
+        if (self.moottori.isRunning && self.soitinSolmu.engine != nil) { [self.soitinSolmu play]; self.soittaa = YES; }
+        else self.moottoriVirhe = @"play: moottori ei käy";
     }
     [self asetaTila:1 virta:v];
 }
