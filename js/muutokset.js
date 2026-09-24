@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2210, teksti: 'Linssikatalogi: ulkoasukorjaukset PR 3128:aan' },
+  { v: 2210, teksti: 'Kaupunkien nimet: lattiakertoimella ei lukita e… (#3136)' },
   { v: 2209, teksti: 'Linssikatalogi: esittelysivun vaihe 1 (#3128)' },
   { v: 2208, teksti: 'Peilaus lukee js/linssit; 8 Commons-nimeä korja… (#2913)' },
   { v: 2207, teksti: 'Kohdekartat 7 kaupunkiin, Churchillin merijää, N2–N6' },
