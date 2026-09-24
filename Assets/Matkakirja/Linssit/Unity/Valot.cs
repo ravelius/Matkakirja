@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static Valot Luo(CesiumGeoreference georeferenssi,
             IReadOnlyList<(string tunnus, double lat, double lon)> kohteet,
-            bool vahennettyLiike = false, Camera kamera = null)
+            bool vahennettyLiike = false, Camera kamera = null, bool tummallaPohjalla = false)
         {
             var varjostin = Resources.Load<Shader>("Varjostimet/Valo");
             if (varjostin == null || georeferenssi == null || kohteet == null)
@@ -72,6 +72,8 @@ namespace Matkakirja.Natiivi
             v.kamera = kamera;
             v.vahennettyLiike = vahennettyLiike;
             v.Rakenna(varjostin, kohteet);
+            // Keksintöjen tummennuksen päällä hehku sekoitetaan webin sRGB:n tavoin (Valo.shader).
+            v.materiaali.SetFloat("_TummaPohja", tummallaPohjalla ? 1f : 0f);
             return v;
         }
 

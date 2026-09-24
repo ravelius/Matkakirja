@@ -36,6 +36,7 @@ Shader "Matkakirja/Linssit/Valo"
     {
         _Peitto("Peitto", Range(0, 1)) = 1
         _RuudunKorkeusPt("Ruudun korkeus pisteinä", Float) = 844
+        _TummaPohja("sRGB-sekoitus tummalla pohjalla 0/1", Float) = 0
     }
     SubShader
     {
@@ -57,6 +58,7 @@ Shader "Matkakirja/Linssit/Valo"
             CBUFFER_START(UnityPerMaterial)
                 float _Peitto;
                 float _RuudunKorkeusPt;
+                float _TummaPohja;
             CBUFFER_END
 
             struct Syote
@@ -164,11 +166,16 @@ Shader "Matkakirja/Linssit/Valo"
                 c *= i.p.w * _Peitto;
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 // Webin canvas sekoittuu sRGB-arvoihin; projekti on lineaarinen. Tummalla
-                // pohjalla (keksintöjen tummennus) lin(c + (1-a)·pohja) ≈ lin(c) + (1-a)^2,2·lin(pohja):
+                // pohjalla (_TummaPohja 1: keksintöjen tummennus) lin(c + (1-a)·pohja) ≈ lin(c) + (1-a)^2,2·lin(pohja):
                 // ilman muunnosta hännän 0,05 näkyi 0,26:na ja hehku leveni neliön reunaan asti
                 // (kontakti 24.9.). Sama muunnos kuin Tummennus.shaderissa.
-                c.rgb = pow(max(c.rgb, 0.0), 2.2);
-                c.a = 1.0 - pow(max(1.0 - c.a, 0.0), 2.2);
+                // Vaalealla pohjalla (ihmisen matka) sama muunnos sammuttaisi hehkun, joten se
+                // on vain tummennuksen kanssa.
+                if (_TummaPohja > 0.5)
+                {
+                    c.rgb = pow(max(c.rgb, 0.0), 2.2);
+                    c.a = 1.0 - pow(max(1.0 - c.a, 0.0), 2.2);
+                }
             #endif
                 return half4(c);
             }
