@@ -4203,3 +4203,7 @@ Omistaja: saako kallistuksen 90 asteeseen kun kartta on aidosti 3D. Fable: kyll�
 ## SATELLIITTI: HARMAAT SUORAKULMIOT = LOD-VAIHTO (EI VERKKO) → ISALAATTA NAKYVIIN; S2-ALKUP + MERI VARJOSTIMESSA SINISEKSI; VIESTIRAJA EI SAADETTAVISSA (24.9.2026 klo 16.26)
 
 Natiiviseppä: harmaat myös esiladatulla lennolla, kehys tai kaksi LOD-vaihdossa → isäkuva pidetään näkyvissä ennen bathy-oletusta; s2-alkup terävä mutta meri musta (kova sauma), sovitettu s2 ei ehtinyt piirtyä 20 s laskussa → s2-alkup + meri värjätään varjostimessa bathyn siniseksi; Fable hyväksyi. Kallistus palautettu aab08db; testi/b10b kääntyy (b10-haarat + Natiivi-UI ecc5d2a + zoomi + avausteksti + saapumisnäkymä b824987); seuraavaksi 28–31. Viestiraja (10 lähtevää per omistajan viesti tässä sessiossa): ei säädettävissä, dokumentoimaton, avoin pyyntö anthropics/claude-code#94000; nollaus vain uudella viestillä Fablen sessioon; agenttitiimit (kokeellinen, CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS) olisi vaihtoehto, ei oteta käyttöön nyt.
+
+## SISALTOKIRJURI: CHURCHILL-NOSTO PR #3094; N2/N4/N5/N6 YHA AUKI; 14 SAA-PR:AA RISTIRIIDASSA VAIN VERSIOTIEDOSTOISSA (EI PRE-REBASEA) (24.9.2026 klo 16.26)
+
+Fable: Julkaisija mergeää N-erät (#2996, #3002, #3004, #3006) ensin, sitten sää-PR:t (#3047–#3065, versiotiedostot mergessä), sitten kohdekartat ja #3094. Sisältökirjurin välityö: inventaarion kohta 9 turistioppaan kelvolliset kaupungit (71 + 20) perusteineen, ei sisältöä vielä.
