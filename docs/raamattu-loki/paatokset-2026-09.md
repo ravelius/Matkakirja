@@ -3735,3 +3735,7 @@ Koskee elokuvalennon erää 1 ja taidemuseota.
 ## LINSSISEPPA: VU-KUVASARJA + PIIKKIAJO 7 (proto-3d/lokit/linssit-vu-20260924/, RAPORTTI.md): VU-VIAT — ASTEIKKO KAHDESTI (KORJATTU, RAAKA Rms), TAPPI MITTASI VOIMAKKUUDEN JALKEEN (KORJATTU, PreEffects), AVPlayer-TAPPI EI SAA AANTA LIVE-ICECASTISTA (TAPPIKUTSUJA 0) → BUILD 7 VARAKUVIOLLA (24c9194), AITO TASO VAATII AVAudioEngine → NATIIVISEPPA BUILD 8; PIIKIT 7: SATELLIITTI 48,6→33,3 ms, TOPOGRAFIA/VESISTOT 40→32 ms, MUUT 23–25 ms, JALJELLA ENSIPIIRTO (VARJOSTINLAMMITYS) JA UI-FONTTI; LUOKITIN ESTI set_remote_control(self) → FABLE KYTKI RC:N LINSSISEPAN ID:LLE (24.9.2026 klo 12.51)
 
 Fable: VU build 7:ssä varakuviolla on hyväksyttävä välitila; AVAudioEngine tilataan Natiivisepälle build 8:aan.
+
+## KARTTASEPPA: LOYDOS 22 (A) TOIMITETTU — KERMAHUNTU AMPARISSA julisteet/pallo/kerma/2026-09-23a-p080/<27 MAATA>/ + _maailma/ (Z5–Z8, PEITTO 0,80, MERI LAPINAKYVA, OMA MAA REIKA), RAJAVIIVA maapolygonit-2026-09-24/maapolygonit.geojson; TYOKALU karttaseppa-pallokerma 54aef0968 (PR TULOSSA); 11 WORKTREETA SIIVOTTU, VAPAANA 44 Gt (24.9.2026 klo 12.53)
+
+Fable: Natiiviseppä voi antaa build 7 -SHA:n hunnun kanssa heti.
