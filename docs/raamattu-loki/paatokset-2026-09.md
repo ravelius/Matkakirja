@@ -4787,3 +4787,7 @@ Omistajan valinta (D2 + reliefi + vektorirannat, rantaviiva himmeä tai pois) on
 ## JULISTERIVI: NAPPI EHJA (VANHA BUILD/KOORDINAATTI), MUTTA JULISTE-URL KAKSINKERTAISTUI → 404 → TYHJA GALLERIA; KORJAUS de8852b BUILD 12:EEN (NATIIVI-UI); RIVI PASS (LAITETESTAAJA a1f50168f) (25.9.2026 klo 00.07)
 
 Pysyvä reititys toimi: Laitetestaaja → Natiivi-UI suoraan, Fablelle yksi rivi.
+
+## OMISTAJA klo 00.1x (SITOVA): LOYDOS 48 KAUPUNKIKORTTI WEBIN MUKAAN (YKSINKERTAINEN LISTA, KAMERA EI ZOOMAA ULOS VAAN SIIRTYY VAHAN SIVULLE; PIENI HEROKUVA SAA JAADA) → NATIIVI-UI; LOYDOS 49 AANET NATIIVIIN — BUILD 11:SSA EI KUULU MITAAN → PELIKOODARI (AVAudioSession .playback ym.) (25.9.2026 klo 00.15)
+
+Omistajan kuva webin Pariisi-kortista (docs/raportit/kaappaukset/omistaja-20260925/). 'Tulevathan tällaiset kortit nykyisten tilalle… kartta ei zoomaa ulos häiritsevästi (kuten nyt natiivissa) vaan vain vähän oikealle… pieni herokuva oli hyvä lisä… Ja tuleehan kaikki äänet natiiviin myös? Vielä ei ole mitään.' Raamattuun NATIIVI PELI ETUSIJALLE: KAUPUNKIKORTTI JA KAMERA + ÄÄNET NATIIVIIN.
