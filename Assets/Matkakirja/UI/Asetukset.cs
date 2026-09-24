@@ -55,6 +55,8 @@ namespace Matkakirja.Natiivi
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
                 PlayerPrefs.Save();
+                // Web talletaPolloKoodi(''): pöllön ohitus pois.
+                Puhe.TalletaKehittajakoodi(null);
                 Muuttui?.Invoke("Kehittaja");
                 return true;
             }
@@ -67,6 +69,8 @@ namespace Matkakirja.Natiivi
                 t = sb.ToString();
             }
             if (t != KehittajaTiiviste && t != KehittajaTiivisteRajattu) return false;
+            // Web talletaPolloKoodi(taysi ? syote : ''): vain pääkoodi workerille (lukijaäänen ääni ja ohje).
+            Puhe.TalletaKehittajakoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
             PlayerPrefs.SetString(KehittajaAvain, "1");
             PlayerPrefs.Save();
             Muuttui?.Invoke("Kehittaja");

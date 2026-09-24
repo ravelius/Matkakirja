@@ -191,6 +191,8 @@ namespace Matkakirja.Natiivi
             if (File.Exists(levy))
             {
                 using var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, AudioType.MPEG);
+                // Pakattuna muistiin: ei koko mp3:n purkua pääsäikeessä (LoadFMODSound-piikki, Pelikoodarin aanipiikki).
+                ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true;
                 yield return p.SendWebRequest();
                 if (p.result == UnityWebRequest.Result.Success) klippi = DownloadHandlerAudioClip.GetContent(p);
                 else { Debug.LogWarning($"MATKAKIRJA ui ääni ei purkautunut: {levy} ({p.error})"); File.Delete(levy); }
