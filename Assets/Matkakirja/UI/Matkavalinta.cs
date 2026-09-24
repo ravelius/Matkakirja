@@ -39,6 +39,9 @@ namespace Matkakirja.Natiivi
         readonly Button vaihtoNappi, liikuNappi;
         readonly VisualElement liiku, liuku;
         bool liukuAuki, liikuNakyy, sallittu = true;
+        // Löydös 45: Liiku piilossa kerronnan ajan (web body.luenta-aanessa .monitoimi-nappi display: none).
+        readonly LuentaPiilo luentaPiilo = new LuentaPiilo();
+        bool luentaPiilossa;
         // Nopan jälkeen ei enää avata siirtolistaa (Pelikoodari 24.9.: web näyttää vain renkaat kartalla), joten
         // pakollista listaa ei ole; kenttä jää, jos jokin valinta joskus vaatii sen.
         bool pakollinen;
@@ -92,7 +95,28 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(rivit, Kirjasin.Kone);
 
             kerros.TurvaMuuttui += Asettele;
+            liiku.schedule.Execute(TarkistaLuenta).Every(LuentaPiilo.VahtiMs);
         }
+
+        /// <summary>
+        /// Web kaynnistaLuentavahti (löydös 45): 200 ms välein, soiko isoisä, saapumispuhe tai Livia (Aanet-kanavat
+        /// ja Puhe) tai odottaako pyydetty luento latausta (PeliOhjain.LuentoKesken). Piilossa Liiku ei ota
+        /// kosketuksia (visibility hidden), ja auki jäänyt liuku suljetaan.
+        /// </summary>
+        void TarkistaLuenta()
+        {
+            var o = PeliOhjain.Instanssi;
+            bool piiloon = luentaPiilo.Paivita(Aanet.KertojaPuhuu || Aanet.PuluPuhuu, o != null && o.LuentoKesken,
+                Time.realtimeSinceStartupAsDouble * 1000.0);
+            if (piiloon == luentaPiilossa) return;
+            luentaPiilossa = piiloon;
+            Debug.Log("MATKAKIRJA ui liiku: " + (piiloon ? "piiloon (kerronta)" : "esiin (kerronta ohi)"));
+            PaivitaLiikunNakyvyys();
+            if (piiloon) SuljeLiuku();
+        }
+
+        void PaivitaLiikunNakyvyys() =>
+            liiku.style.visibility = sallittu && !luentaPiilossa ? Visibility.Visible : Visibility.Hidden;
 
         void Asettele()
         {
@@ -177,7 +201,7 @@ namespace Matkakirja.Natiivi
         {
             sallittu = sallitaan;
             heitto.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
-            liiku.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
+            PaivitaLiikunNakyvyys();
             if (!sallitaan) SuljeLiuku();
         }
 
