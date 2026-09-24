@@ -380,6 +380,21 @@ täpliä, ei sumeutta.
 **PASS-ehto**: molemmat navat peittyvät saumattomasti, ei mustaa/harmaata,
 Etelämanner terävä. **FAIL**: mustia sektoreita tai sumeutta näkyy yhä.
 
+**LOPULLINEN TULOS 24.9. klo 12.4x (SHA 161fa35, ScreenPointToRay-lähde
+poistettu + NaN-suoja)**: **PASS.** Tuoreella pelillä, portti suljettu
+ensin (`ui aloita valinta`) kuten Natiiviseppä ohjeisti: `aja 89 0 20 1.5`
+(pohjoisnapa) EI virhettä, harmaanbeige täyttö — Natiiviseppä vahvisti
+tämän vastaavan webin kalottia (hyväksytty pariteetiksi)
+(`14-napa-pohjoinen-b161-PASS.png`). `aja -89 0 20 1.5` (etelänapa) EI
+MYÖSKÄÄN virhettä, Antarktis siisti valkoinen täyttö ilman mustia
+sektoreita tai jumiutumista (`14-napa-etelainen-b161-PASS.png`).
+Frustum-spammi-bugi on korjattu.
+
+**Hehkurenkaat (osa löydös 4:ää) — MYÖS PASS**: `renkaat` + kamera
+Lontooseen (`aja 51.5 -0.1 5 1`) näytti selvän KULTAISEN/ORANSSIN
+HEHKURENKAAN pelaajan nappulan ympärillä (`4-hehkurengas-lontoo-PASS.png`)
+— vastaa webin `.target-ring.pick` (kultabronssi, `#b08a3c`).
+
 ---
 
 ## Löydös 15: Karttaselite avautuu paikkakuplan ja silmälasinapin alle
@@ -542,7 +557,7 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 1 | Nostot | Mergetty | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka zoomattuna: kymmeniä tyyppimerkkejä (temppeli/vuori/silta/eläin/salama-ikonit), napautus avasi ryhmälistan (Delfoi/Thermopylai) |
 | 2 | Väritaso/ääriviiva | Mergetty (7b3adee) | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka värillinen/teksturoitu + tumma ääriviiva, muu kartta tasaisen sepian värinen |
 | 3 | Paikkakupla | Mergetty | **PASS** | 3-paikkakupla-kohtaaminen.png | "Ateena, elokuussa 1873" -pilleri ei mene päällekkäin kohtaamisdialogin puhekuplan kanssa |
-| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus) | **PASS (kamera+taivas+piste), EI VOITU TESTATA (hehkurenkaat)** | 4-lento-00/05/09-*.png | Kuvasarja: lähikuva koneesta laskeutuen (frame 0), kaukainen globe-näkymä sininen taivas + vain "Ateena" näkyvissä (frame 5), kiertävä/sukeltava lähestyminen (frame 9). Hehkurenkaat: yritin Natiiviseppän `renkaat ateena,kairo ateena` -komennolla, mutta kamera oli jumissa samassa tyhjässä näkymässä kuin löydös 14:ssä (ks. rivi 14:n huomio debug-ylivuodosta) — ei nähty renkaita, syy todennäköisesti sama tukos |
+| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Mergetty (161fa35) | **PASS (kaikki osat)** | 4-lento-00/05/09-*.png, 4-hehkurengas-lontoo-PASS.png | Kuvasarja: lähikuva koneesta laskeutuen (frame 0), kaukainen globe-näkymä sininen taivas + vain "Ateena" näkyvissä (frame 5), kiertävä/sukeltava lähestyminen (frame 9). Hehkurenkaat uusittu 161fa35:lla (frustum-korjauksen jälkeen): selvä kultainen/oranssi rengas pelaajan nappulan ympärillä (`renkaat` + `aja 51.5 -0.1 5 1` Lontooseen) |
 | 5 | iPhone yläosa | Mergetty | **PASS** | (näkyy kaikissa kuvissa) | Ei ruskeaa palkkia/logoa koko ajon läpi, vain kelluva "300£ 1/80" -pilleri + ratas/hampurilainen oikealla |
 | 6 | Liiku-nappi (puoliläpinäkyvä→pienempi) | Mergetty | **KORVATTU löydös 18:lla** | — | Ks. rivi 18 |
 | 7 | Linssit pois laukusta | Mergetty | **PASS** | 7-laukku-ei-linsseja.png | Laukun "Matka"-välilehdellä ei linssilistaa; erillinen silmälasikuvake (🕶) näkyy omana nappinaan kartan reunassa |
@@ -552,7 +567,7 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 11 | Ihmisen matka: tekstilaatikko | Mergetty | **PASS** | 11-ihmisen-matka-teksti.png | `linssi ihmisen-matka`: kertojan teksti leveänä nelirivisenä laatikkona, sanat eivät katkea kesken, ei kapeaa pystykaistaa |
 | 12 | Ihmisen matka: loppu/kamera | Mergetty | **PASS (todennäköinen)** | 12-ihmisen-matka-loppu.png | `ihminen tutkimus` (hyppy loppuun): pallo näkyy siistinä, ei mustaa ristikkoa alareunassa. "Afrikasta."-sana oli jo aiemmin Natiivi-UI:n todettu ei-bugiksi (24.9.), joten ei testattu erikseen tässä |
 | 13 | Offline: mustat laatat | Mergetty | **PASS** | 13-offline-lataus.png | `alue lataa BGR`: "Ladataan 2 maata · 11 %" -ilmoitin, EI mustia laattaneliöitä latauksen aikana — tausta pysyy vaaleana |
-| 14 | Navat | Mergetty (7b3adee) | **EI VOITU LUOTETTAVASTI TESTATA — MAHDOLLINEN UUSI ONGELMA** | 14-napa-pohjoinen-epavarma.png | Natiiviseppän oikealla syntaksilla (`aja 89 0 20 1.5`, `ui jatka` ensin) kamera näytti silti täysin tyhjän/tekstuurittoman alueen (Norja/Islanti-nimet näkyivät mutta EI YHTÄÄN reliefiä/väriä/napakalottia). SAMANAIKAISESTI kehityskonsoli spämmäsi jatkuvasti "Screen position out of view frustum (screen pos 603.000000, 1311.000000) (Camera rect 0 0 1206 2622)" koko ajon loppuosan ajan (ilmestyi `ui kartuscha GRC auki` -komennon jälkeen, ei poistunut). Epäilen että tämä debug-ylivuoto (todennäköisesti KREIKKA-paneelin radio-ikoni tms. jäänyt kiinni pelitilaan) esti kameran/kartan normaalin toiminnan lopputestien ajaksi — myös `renkaat`-testi (ks. rivi 4) epäonnistui samasta syystä. SUOSITUS: seuraava kierros TUOREELLA pelillä ilman `ui kartuscha`-kutsua ennen napa-/rengastestejä. |
+| 14 | Navat | Mergetty (161fa35) | **PASS** | 14-napa-pohjoinen-b161-PASS.png, 14-napa-etelainen-b161-PASS.png | Kolme yritystä ennen onnistumista (7b3adee ja 921e0b6 spämmäsivät "out of view frustum" -virhettä, ks. historia alla); 161fa35 (ScreenPointToRay-lähde poistettu) korjasi: molemmat navat siistejä, ei mustaa/harmaata sotkua, ei jumiutumista. Natiiviseppä vahvisti pohjoisnavan harmaanbeigen sävyn vastaavan webin kalottia. |
 | 15 | Karttaselite | Mergetty | **PASS** | 15-karttaselite.png | Paneeli täysin näkyvissä, ei minkään peittämä, NOSTOT/MAAKUNNAT-välilehdet ja lukumäärät näkyvät selvästi |
 | 16 | Pulun chat | Melkein (odotti allowlistia) | **PASS (yllättäen)** | 16-pulu-chat-vastaus.png | `ui chat "mikä on demokratiaindeksi"` antoi OIKEAN, asiallisen vastauksen (ei enää "ei vielä auki" -tekstiä) — allowlist tms. vaikuttaa olevan jo kunnossa simulaattorissa |
 | 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Mergetty (7b3adee) | **PASS** | 17-etusivupallo-a.png, 17-etusivupallo-b.png | Kaksi kuvaa 5 s välein: selvästi eri maisema (pallo pyörinyt), koko ruudun täyttävä, sumea, ei yhtään kaupunkipistettä kummassakaan |
@@ -561,7 +576,13 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 20 | iPhonen yläreuna uusiksi | EI (build 7) | — | — | Fable 24.9. klo 11.47: siirretty build 7:ään |
 | 21 | Isoisän/pulun tekstit piilossa oletuksena | EI (build 7) — ei testata | — | — | Siirretty |
 
-**Yhteenveto**: 15 PASS/todennäköinen PASS (1,2,3,4-osin,5,7,8,9,10,11,12,13,15,16,17,19), 1 siirretty build 7:ään Fablen päätöksellä (18: umpikultainen aktiivitila, Natiivi-UI korjaa), 1 ei voitu luotettavasti testata + mahdollinen uusi debug-ylivuoto-ongelma (14), 2 siirretty build 7:ään (20,21). Kuvat: `/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/` (ei repossa, jaettu Mac-polku, CLAUDE.md dist-periaate).
+**Yhteenveto (päivitetty 161fa35:n jälkeen)**: 17 PASS/todennäköinen PASS
+(1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,19), 1 siirretty build 7:ään
+Fablen päätöksellä (18: umpikultainen aktiivitila, Natiivi-UI korjaa),
+2 siirretty build 7:ään (20,21). Kaikki löydös 5-16-alue nyt PASS
+paitsi 18 (tarkoituksella build 7:ään). Kuvat:
+`/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/` (ei
+repossa, jaettu Mac-polku, CLAUDE.md dist-periaate).
 
 **Ajon SHA**: proto-master `7b3adee`, asennettu iPhone 18 Pro
 -simulaattoriin (1572C658) Natiiviseppän toimesta 24.9.2026 klo 11.4x.
@@ -601,6 +622,12 @@ ohutreunainen tausta), riippumatta siitä onko kulkutapavalitsin auki.
 kulkutapavalitsimen ollessa auki. **FAIL**: kumpi tahansa tila yhä
 umpikultainen.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): PASS.** `ui liiku` aktiivisen
+pelin kanssa avasi oikean kulkutapavalitsimen (thumbs-up/tram/boat/
+plane), ja Liiku-nappi näkyi ohutreunaisena/läpikuultavana kultatekstillä
+— EI umpikultaista täyttöä (`b7-1-liiku-aktiivinen-PASS.png`, vrt. build
+6:n `18-liiku-aktiivinen.png`).
+
 ## B7-2: Isoisän/pulun tekstit piilossa oletuksena + aito äänitasokaiutin
 
 **Omistaja (Fable 24.9. klo 11.33, Raamattu 14.–20.9.)**: isoisän ja
@@ -637,6 +664,14 @@ ei koske natiivia).
 kaiutin selvästi eri kokoinen/muotoinen eri hetkinä äänekkyyden mukaan
 (ei tasainen sykli). **FAIL**: teksti näkyy heti tai kaiutin ei muutu
 äänen mukana.
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): PASS (tekstin piilotus), EI
+TESTATTU (kaiutin)**. `ui matkakirja lontoo fokus` -lokirivi vahvisti
+`kortti: pieni True, puhelin True` — kortti näkyy pelkkänä kaupunkinimi-
+pillerinä ilman avattua tekstiä (`b7-2-tekstit-piilossa.png`). Kaiuttimen
+äänitasoreaktiota ei testattu tässä ajossa (vaatisi äänen päälle
+kytkemisen ja nopean kuvasarjan luennan aikana — säästetty
+kuulokoekierrokselle).
 
 ## B7-3 (löydös 22): Maan väritaso, huntu ja meri
 
@@ -687,6 +722,22 @@ tarkka/yksityiskohtainen kuin webin kuvassa. **FAIL**: mikä tahansa
 neljästä pettää — esim. meri saa kermaa, naapurien nimet peittyvät
 kokonaan, tai raja on yksinkertaistettu polygoni.
 
+**TULOS 24.9. klo 13.0x (SHA 24c9194): FAIL — kaksi eri rikkoutumaa
+havaittu.** 1) Ulos-zoomatussa maailmankuvassa (`b7-3-huntu-rikkinainen-
+suorakulmio.png`) Espanjan/Marokon/Länsi-Saharan alueella näkyy ISO
+SUORAKULMAINEN VAALEA LAATTA jyrkillä suorilla reunoilla — ei seuraa
+maiden rajoja lainkaan, näyttää rikkinäiseltä/lataamattomalta
+tekstuurilaatalta kerman sijaan (kaupunkien nimet Madrid/Sevilla NÄKYVÄT
+sen päällä, joten nimiotaso on erillään ja toimii). 2) Kreikkaan
+zoomattuna (`b7-3-kreikka-tile-glitch.png`) naapurimaan (luultavasti
+Albania/Pohjois-Makedonia) laatta on PUOLIKSI ORANSSIA RELIEFIÄ ja
+PUOLIKSI VAALEAA KERMAA JYRKÄLLÄ VIISTOLLA SAUMALLA keskellä laattaa —
+naapuri saa väärin osan Kreikan väritasosta. Meri itsessään näyttää
+kohtuu hyvältä (harmaa sävy + rantaviivakontuurit), Kreikan oma
+ääriviiva/reliefi näyttää oikealta. **Juurisyy vaikuttaa olevan
+laattarajojen/lataustilan bugi kermakerroksessa, ei suunnitteluvirhe** —
+välitetty Karttasepälle/Natiivisepälle.
+
 ## B7-4: Maailmanradion aito VU-mittari
 
 **Tausta**: webissä poistettiin 5.8.2026 (WebKit ei päästä suoratoistoa
@@ -717,6 +768,32 @@ paikallaan), mutta ei väitä olevansa aito.
 nousulla/laskulla progressiivisilla asemilla. **FAIL**: neula
 paikallaan/tasainen tai symmetrinen ajastettu liike myös
 progressiivisilla asemilla.
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): EI VOITU TESTATA TÄSSÄ AJOSSA.**
+Radiolinssi avautui ja mittari näkyi lepoasennossa ("RADIO POIS ·
+VALITSE KAUPUNKI", `b7-4-vu-mittari-lepotila.png`), mutta en onnistunut
+virittämään asemaa kosketuksella (tapit ja vedot ruudulla eivät
+osuneet oikeaan kontrolliin — asemavalinta vaatii ilmeisesti tarkan
+kosketuseleen jota en löytänyt tässä ajassa) enkä löytänyt komentoa
+asematiedon pakottamiseksi. Ei komentoa Linssisepältä/Natiivisepältä
+tälle. Uusinta vaatii joko täsmällisen kosketuskoordinaatin/-eleen tai
+testikomennon.
+
+**TULOS 24.9. klo 13.3x (SHA 24c9194): ✅ PASS.** Löytyi oikea reitti:
+☰-valikko (kartalla oikea ylänurkka) → "Maailmanradio" (listan 7.
+rivi) avaa linssin — kaupungit ovat pieniä ▶-nappeja kartalla.
+Napautin Ateenan ▶-nappia (kaupunki jossa jo oltiin): näyttö vaihtui
+"VIRITTÄÄ... KREIKKA" (lamppu oranssi) → n. 1,5 s kuluttua "KREIKKA /
+ATEENA · KREIKKA" (lamppu punainen, soi). Kuvasarja `b7-4-radio-vu-1/
+2/3.png` (n. 1 s välein virityksen jälkeen): neula liikkui SELVÄSTI
+JOKAISESSA KUVASSA ERI ASENTOON asteikolla (kuva 1: lähellä -5…0,
+jyrkkä kulma oikealle; kuva 2: lähes pystyssä, ~-5; kuva 3: kallistunut
+vasemmalle, ~-8…-10) — epäsymmetrinen, jatkuva liike, EI paikallaan
+eikä tasainen ajastettu heilunta. Täsmää PASS-ehtoon. HLS-asemaa ei
+testattu tässä ajossa (progressiivinen/AAC-asema Ateena/Kreikka
+riitti todentamaan aidon reagoinnin). Kuvat tallennettu
+`/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/
+b7-4-radio-vu-{lepo,1,2,3}.png`.
 
 ## B7-5: Aloituslennon lähikuva (vaiheet 1–2)
 
@@ -749,6 +826,23 @@ luennan tekstipalkki). Potkurit voivat vielä näyttää hitailta/pysähtyneilt�
 **PASS-ehto**: rajaus+taivas+ei-jättivarjoa+napit piilossa kaikki
 täyttyvät. **FAIL**: mikä tahansa neljästä puuttuu (potkureita
 lukuun ottamatta).
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): TODENNÄKÖINEN PASS, osin
+epävarma.** Myöhäisessä lentokuvassa (`b7-5-lento-lahikuva.png`, ~3,6 s
+komennosta) näkyy: kone kohtuullisen suurena (~50 % leveydestä, ei aivan
+2/3 mutta lähellä), TAIVAS JA HORISONTTI koneen TAKANA (ei pelkkä
+maasto), pilvenvarjoja/uria maastossa mutta EI jättimäistä sumeaa
+läiskää, potkurit näyttävät PYÖRIVÄN (sumea kiekko, ei paikallaan) —
+parannus aiempaan. UI (topbar, napit, pulu) EI näkynyt yhdessäkään
+lentoruudussa — täsmää 23B:n korjaukseen. EPÄVARMA OSA: aikaisemmassa
+ruudussa (~2,1 s) kone näkyi pienenä ja suoraan ylhäältä kuin vanhassa
+tyylissä ennen tätä läheisempää kuvaa — vaiheiden järjestys/ajoitus jäi
+epäselväksi tässä ajossa, suositellaan tarkempaa kuvasarjaa (0,2 s
+välein heti komennon jälkeen) seuraavalla kierroksella. Myös huomio:
+"KREIKKA"-kartuscha-paneeli näkyi jälleen jumiutuneena ruudulla vaikka
+pelaaja oli jo Lontoossa/matkalla Ateenaan — sama jumibugi kuin löydös
+14:n aiemmissa yrityksissä, mutta EI estänyt navigointia tai
+komentojen toimintaa tällä kertaa (vain visuaalinen roska).
 
 ## B7-6 (löydös 20): iPhonen yläreuna kokonaan uusiksi
 
@@ -790,7 +884,25 @@ ylimpänä ja "Kehittäjä" (jos kehittäjätila päällä) aivan alimpana.
 vanha yksi-pilleri-asettelu yhä käytössä, silmälasinappi yhä kartalla,
 tai ☰-valikon rivijärjestys väärä.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): FAIL — EI VIELÄ IMPLEMENTOITU
+(odotettua, löydös 20 → build 7 oli jo tiedossa).** Yläosa näyttää yhä
+VANHAN asettelun: yksi "300£ 1/80" -pilleri + erillinen kaupunkinimi-
+pilleri sen alla, ei Dynamic Island -korkeudella (`b7-6-ylaosa-vanha-
+layout.png`). Silmälasinappia ei näy kartalla erikseen (jo korjattu
+aiemmin löydös 7:ssä), joten tältä osin OK. ☰-valikko AVAUTUU ja
+"LINSSIT" on ylimpänä listassa kuten pitää (`b7-6-hampurilaisvalikko-
+linssit-ylimpana.png`) — tämä osa siis JO KUNNOSSA, vain pillerien
+sijoittelu/kaksoispilleri puuttuu vielä.
+
 ## B7-7 (löydös 23): Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
+
+**PÄIVITYS (Fable 24.9. klo 13.5x): alla oleva "avausruutu ilman
+karttaa" -kuvaus on KUMOTTU NATIIVIN ALOITUSKAAVALLA (Raamattu
+ALOITUKSEN TEKSTIT NATIIVISSA) — avausteksti näytetään alapalkissa
+Lontoo-kartan PÄÄLLÄ, ei erillisenä sivuna; tämä on todennettu PASS
+(ks. Zoom-kuminauha-osio). Lennon aikainen väärä ääni (intro-puhe.mp3
+avaustekstin sijaan puhe-lento-alku.mp3:n) on YHÄ VOIMASSA OLEVA BUGI,
+ks. tulos alla.**
 
 **Omistaja (Fable 24.9. klo 12.1x, tarkennettu löydös 23:na klo 12.0x–12.04)**:
 portin, avausruudun ja lennon tekstien pitää täsmätä webiin sanatarkasti.
@@ -840,35 +952,107 @@ flightFirst+puhe-lento-alku (EI avausteksti toistu lennolla), UI-elementit
 piilossa lennon ajan. **FAIL**: lento näyttää/soittaa yhä avaustekstin
 tai UI-elementti näkyy lennolla.
 
-## B7-9 (löydös 24A): Aloitusportin ruutu täsmälleen webin mukaan (ei ylimääräistä)
+**TULOS 24.9. klo 12.5x (SHA 161fa35): "ODOTTAA" (Fablen ohje) — lennon
+ääni on yhä intro, Pelikoodarin korjaus kesken, ei testattu tarkemmin
+tässä ajossa. UI-elementtien piilotus lennon aikana kuitenkin VARMISTETTU
+PASS (ks. B7-5:n tulos: topbar/napit/pulu eivät näkyneet yhdessäkään
+lentoruudussa).**
 
-**Omistaja (Fable 24.9. klo 12.08, SITOVA)**: aloitusportin pitää
-näyttää TÄSMÄLLEEN sen minkä web näyttää — EI MITÄÄN MUUTA. Webissä
-(`js/ui.js` showAloitusportti) portilla on VAIN: "Laita äänet päälle"
-+ kaiutin-ikoni, nappi "Aloita seikkailu", alhaalla linkki "Oppiminen
-on hauskaa" (Periaatteet-lappu). EI otsikkolohkoa ("MATKAKIRJA /
-MAAILMAN YMPÄRI.../OSA II"), EI "Seuraa isoisän..." -ingressiä, EI
-"Jatka matkaa" / "Uusi matka" -nappeja. Portin jälkeen tallennus jatkuu
-TAI (jos ei tallennusta) avausruutu (Heathrow + INTRO_TEXT + "Valitse
-aloituskaupunki").
-**TUNNETTU BUGI (havaittu jo tämän session ALKUPUOLELLA, build 6:n
-ensimmäisessä kylmäkäynnistyskuvassa, ks. proto-3d/lokit/
-build6-tarkistus-20260924/17-etusivupallo-a.png)**: natiivi näyttää
-ison otsikkolohkon ("MATKAKIRJA / MAAILMAN YMPÄRI KAHDEKSASSA-
-KYMMENESSÄ PÄIVÄSSÄ / OSA II · UNOHDETTU AARRE"), ingressin ("Seuraa
-isoisän matkakirjaa...") SEKÄ "Jatka matkaa"/"Uusi matka" -nappiparin
-yhden "Aloita seikkailu"-napin sijaan — kaikki tämä pitää POISTAA.
-**Vastuu**: Natiivi-UI, build 7.
+**LISÄTULOS 24.9. klo 13.0x (SHA 24c9194, lennon ääni)**: EI VOITU
+VARMISTAA LUOTETTAVASTI. `peli-tila.json`:n `puhe`-kenttä (`paalla`,
+`url`) oli `false`/`null` KOKO lyhyen Ateena→Kairo-lennon ajan — mikä
+tarkoittaa, ettei mikään narraatioääni (ei intro EIKÄ lento-alku)
+soinut tällä nimenomaisella lennolla. Tämä voi tarkoittaa: (a) lennon
+avausnarraatio soi vain PELIN ENSIMMÄISELLÄ lennolla uudessa pelissä,
+ei myöhemmillä lennoilla (tätä testiä ei tehty ensimmäisellä lennolla),
+tai (b) narraatio ei käynnistynyt lainkaan. Uusinta vaatii testin
+AIVAN ENSIMMÄISELLÄ lennolla tuoreessa pelissä + `puhe.url`-kentän
+tarkistus heti lennon alettua.
 
-**Testikomento**: kylmäkäynnistys (poista appi ja asenna uudestaan TAI
-tyhjennä tallennus jos komento löytyy, jotta nähdään aidosti tyhjä
-tallennustila), `kuva portti-b7-tyhjatila`. Jos tallennus on olemassa,
-testaa myös se erikseen: `kuva portti-b7-tallennuksella`.
+**TODELLINEN SYY LÖYTYI (klo 13.1x)**: testattiin AIVAN ENSIMMÄINEN
+lento oikealla reitillä (portti → "Uusi matka" → Heathrow/avausruutu,
+`ui napauta 196 675` osui "mk-aloitus__aloita"-nappiin, päästiin
+Lontooseen avausluennan tekstillä ruudulla). `puhe.paalla` oli SILTI
+`false` tässäkin — koska istunnon alussa ajettu `komento.txt: hiljaa`
+(kuulokoetestikäytännön mukainen mykistys) sammuttaa TODENNÄKÖISESTI
+koko puhe/narraatiojärjestelmän, ei vain äänenvoimakkuutta. **Ei siis
+pystytä päättelemään intro vs. lento-alku ilman oikeaa äänen päälle
+kytkemistä** (`komento.txt: aani` tms. tai "Laita äänet päälle"
+-napista) — tätä ei tehty tässä ajossa ajanpuutteen ja
+kontekstirajan takia. SEURAAVA SESSIO: toista TÄSMÄLLEEN tämä reitti
+äänet päällä (Mac-kaiuttimet turvassa, ks. Raamatun äänikäytäntö) ja
+lue `puhe.url` heti kun `lento`-kenttä ilmestyy.
 
-**PASS-ehto**: portilla näkyy VAIN kolme elementtiä (äänikehote+kaiutin,
-"Aloita seikkailu", "Oppiminen on hauskaa") — ei otsikkolohkoa, ei
-ingressiä, ei Jatka/Uusi-nappeja. **FAIL**: mikä tahansa ylimääräinen
-elementti näkyy yhä (kuten build 6:ssa).
+**LOPULLINEN TULOS 24.9. klo 13.3x (SHA 24c9194, iPhone 18 Pro): BUGI
+23A VAHVISTETTU, JUURISYY TARKENTUI.** Kaksi löydöstä:
+
+1. **`puhe pois` -komento on PYSYVÄ TALLENNETTU LIPPU, ei istuntokohtainen
+   mykistys.** Edellisen session `puhe pois` (ei `komento.txt: hiljaa`,
+   vaan `peli-komento.txt`-protokollan oma komento) jäi päälle
+   tallennukseen (`tallennus.json`) ja pysyi voimassa TÄYDEN
+   sovelluksen cold-restartin (`simctl terminate`+`launch`) yli.
+   `luento intro` -komento palautti `VIRHE luennat pois päältä` vielä
+   uudessakin prosessissa ennen korjausta. Korjaus: `puhe paalle` (pysyy
+   päällä uusienkin restartien yli, todennettu). **SEURAAVILLE
+   SESSIOILLE**: jos `puhe.paalla` pysyy `false`:na koko lennon ajan,
+   tarkista ensin `luento intro` -komennolla onko luennat päällä ennen
+   kuin oletat äänen olevan rikki.
+2. **Oikea B7-7-testi ajettu äänet päällä, `puhe paalle`-tilassa,
+   AIVAN ENSIMMÄINEN lento (portti → "Laita äänet päälle" → "Uusi
+   matka" → kartan kaupunkivalinta Ateena):** tiivis pollaus
+   (`peli-komento.txt: tila` n. 3–5 krt/s) läpi koko lennon (`Matkalla`/
+   `Nousu`→`Matka`→[Lasku ohitettiin nopeasti]→`Lehti`, ~9-10 s):
+   - `Aloitus`-vaiheessa (ennen lentoa, kartan zoom) `puhe.url` =
+     `intro-puhe.mp3` — OIKEIN.
+   - HETI kun `lento`-kenttä ilmestyi (`vaihe:"Nousu"`) `puhe.url` OLI
+     YHÄ `intro-puhe.mp3` (sama klippi jatkui/toistui lennon puolelle)
+     3 peräkkäisessä pollauksessa — VÄÄRIN, täsmää tunnettuun bugiin 23A.
+   - Sen jälkeen `puhe.url` putosi `null`:iin ja pysyi `null`:na LOPUN
+     `Nousu`-vaiheen, koko `Matka`-vaiheen ja saapumisen ajan (~35
+     pollausta, ~10 s) — `puhe-lento-alku.mp3` EI SOINUT KERTAAKAAN.
+   - Tukee tätä: testikomento `luento lento-alku` palauttaa
+     `VIRHE luentoa ei ole` (`luento intro` sen sijaan toimii) —
+     `lento-alku`-tunnus ei ole rekisteröity luentokatalogiin tässä
+     buildissa, mikä selittää miksei se koskaan käynnisty automaattisesti.
+   - Musiikkikanavat (pohja/maisema) toimivat koko ajan normaalisti
+     (oikeat URLit, tasot, streams) — vika on rajattu narraatio/puhe-
+     järjestelmään, ei äänijärjestelmään yleensä.
+
+   **PÄIVITETTY PASS/FAIL: FAIL.** Lento soittaa avaustekstin narraation
+   (`intro-puhe.mp3`) hetken lennon alussa, sen jälkeen ei mitään —
+   `puhe-lento-alku.mp3`/`lento-alku`-tunnus puuttuu luentokatalogista.
+   Korjaustarve kahdessa kohdassa: (a) rekisteröi `lento-alku`-luento
+   katalogiin oikealla mp3:lla, (b) varmista ettei lennon käynnistys
+   jätä edellisen (avaus-)narraation soimaan lennon puolelle.
+   Vastuu: Natiiviseppä/Pelikoodari.
+
+## B7-9 (löydös 24A): Aloitusportin ruutu — PERUTTU, KS. KORJAUS ALLA
+
+**KORJAUS (Fable 24.9. klo 13.1x): OMISTAJA PERUI PORTIN MUUTOKSEN klo
+12.2x.** Alkuperäinen vaatimus (poistaa otsikkolohko, ingressi ja
+Jatka/Uusi-napit) EI OLE ENÄÄ VOIMASSA. Aloitusruutu PYSYY NYKYISENÄ
+sellaisenaan: otsikkolohko ("MATKAKIRJA / MAAILMAN YMPÄRI.../OSA II"),
+ingressi ("Seuraa isoisän matkakirjaa...") ja "Jatka matkaa"/"Uusi
+matka" -nappiparin KUULUVAT NÄKYÄ — tämä EI ole bugi. Sen sijaan "Uusi
+matka" vie pallonäkymään Lontoo-zoomilla ja avausluennalla.
+
+**UUSI TESTIKOMENTO/ODOTUS**: kylmäkäynnistys → tarkista portti näyttää
+otsikkolohkon+ingressin+Jatka/Uusi-napit (kuten aina) → paina "Uusi
+matka" → odotettu tulos: kamera zoomaa Lontooseen pallolla, avausluenta
+(INTRO_TEXT + intro-puhe) alkaa.
+
+**PASS-ehto (korjattu)**: portti näyttää nykyisen sisällön (otsikko+
+ingressi+napit), "Uusi matka" -painallus vie Lontoo-zoomiin
+avausluennalla. **FAIL**: portti puuttuu jokin nykyinen elementti, tai
+"Uusi matka" ei laukaise Lontoo-zoomia/avausluentaa.
+
+**TULOS 24.9. klo 13.0x (SHA 24c9194): PASS (korjatun määritelmän
+mukaan).** Kylmäkäynnistyksen portti näytti otsikkolohkon, ingressin ja
+Jatka/Uusi-nappiparin täydellisenä (`b7-9-portti-vielakin-vanha.png` —
+kuvan nimi historiallinen, sisältö on nyt OIKEA/ODOTETTU tila). "Uusi
+matka" -painalluksen jälkeistä Lontoo-zoomia/avausluentaa ei vielä
+erikseen todennettu tässä ajossa — tarkistetaan seuraavan lentotestin
+yhteydessä (ks. B7-7 lisätulos alla).
 
 ## B7-8 (löydös 24B): ☰-valikon "Uusi peli" palauttaa aloitusporttiin asti
 
@@ -897,18 +1081,88 @@ lukijaäänen taso) SÄILYVÄT tyhjennyksessä (omistajan tilaus 14.8.2026).
 on aloitusportti eikä pelitila. **FAIL**: ei vahvistusta, tai peli jää
 kartalle/muuhun tilaan tyhjennyksen jälkeen.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): EI SAATU TESTATTUA TÄSSÄ AJOSSA.**
+☰-valikko avautui onnistuneesti (linssit ylimpänä, ks. B7-6), mutta en
+onnistunut kosketuksella vierittämään listaa alas "Uusi peli" -riviin
+asti tässä ympäristössä (kosketukset osuivat toistuvasti taustan
+karttaan valikon sijaan). Ei komentoa tälle toiminnolle. Vaatii joko
+tarkemman kosketuskoordinaatin seuraavalla kierroksella tai testikomennon
+Natiivi-UI:lta.
+
+**TULOS 24.9. klo 13.4x (SHA 24c9194): ✅ PASS.** Ratkaisu edelliseen
+ongelmaan: `swipe`-ele PANEELIN SISÄLLÄ (ei taustakartalla) vierittää
+listaa luotettavasti — pystysuora veto x=200, y 550→150 (device-
+pisteinä) vieritti koko `LINSSIT`-paneelin alas asti kerralla ja
+paljasti "Uusi peli" -rivin Asetukset/Äänet/Offline-kartat-lohkon
+alla (`b7-8-valikko-uusipeli-rivi.png`). Napautus "Uusi peli" →
+vahvistuskysely näkyi ENSIN, tekstillä "Matka alkaa alusta ja kaikki
+muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat
+ja ääniasetukset. Tätä ei voi perua." + napit "Peruuta"/"Aloita alusta"
+(`b7-8-vahvistuskysely.png`) — täsmää odotukseen. "Aloita alusta" →
+näyttö palasi ALOITUSPORTTIIN ("MATKAKIRJA" + "Aloita seikkailu",
+`b7-8-tulos-aloitusportti.png`) — EI jäänyt Ateenan kartalle. Testattiin
+kesken pelin (Ateenassa, "Uusi matka" -haaran kaupunkivalinnan jälkeen),
+joten portti näytti yhden "Aloita seikkailu" -napin (tuore/tyhjä
+tallennus) eikä Jatka/Uusi-paria — odotettua tyhjennyksen jälkeen.
+
+## Zoom-kuminauha: ulos-zoomi avausluennan jälkeen
+
+**Spesifikaatio (Fable, Raamattu KAMERA-AJOT)**: ulos-zoomi avausluennan
+päätyttyä on yhtenäinen smootherstep-ajo (pehmeä alku ja loppu, ei
+lineaarista pätkää eikä hyppyä), kesto n. 2–3 s, päättyy näkymään jossa
+valittavat kaupungit näkyvät. Todiste = 6–8 kehyksen kuvasarja
+tasavälein.
+
+**TULOS 24.9. klo 13.5x (SHA 24c9194): ✅ PASS.** Kylmäkäynnistys →
+"Uusi matka" → avaustekstin kirjoitus kestää n. 10 s (hidas
+kirjain-animaatio) → siitä n. 0,5–3,3 s jälkeen kamera zoomaa ulos
+ITSESTÄÄN ilman kosketusta (avausluennan päättyminen laukaisee sen,
+ei nappi). 7 kuvan sarja n. 0,44 s välein (todelliset kellonajat
+tallennettu, `zoom-kuminauha/1..7-t*.png`):
+1. t=10,6 s: yhä täysin staattinen Lontoo-lähikuva, avausteksti
+   valmis, UI (yläpallero + ☰) näkyvissä.
+2. t=11,0 s: liike alkaa juuri — UI:n yläpallero jo haalistunut, kartta
+   siirtynyt vain hiukan.
+3. t=11,5 s: SELVÄ HYPPY — kamera huomattavasti kauempana, tekstiruutu
+   häipymässä (puoliläpinäkyvä), pulu siirtymässä paikoilleen.
+4. t=11,9 s: yhä kauemmas, tekstiruutu kokonaan poissa, Alpit näkyvissä.
+5. t=12,4 s: lähes lopullinen kehys, Italia/Väli-meri näkyvissä.
+6. t=12,8 s: kaupunkiympyrät (Ateena, Istanbul, Moskova) ilmestyvät,
+   hyvin lähellä lopputulosta.
+7. t=13,3 s: pysähtynyt, identtinen lopulliseen kaupunginvalintanäkymään.
+
+Liikkeen määrä kehysten välillä kasvaa (1→2 pieni, 2→3 iso, 3→4→5 iso)
+ja pienenee lopussa (5→6→7 pieni) — täsmää pehmeään
+kiihdytys/hidastus-kaareen (smootherstep), ei tasaiseen/lineaariseen
+liikkeeseen eikä hyppyyn. Kokonaiskesto liikkeen alusta (kuva 2, t=11,0)
+pysähtymiseen (kuva 7, t=13,3) ≈ 2,3 s — spesifikaation "n. 2–3 s"
+-rajoissa. Lopputulos on kaupunginvalintanäkymä (Ateena/Istanbul/
+Moskova/Kairo-ympyrät), kuten spesifikaatio edellyttää.
+**AVAUSTEKSTIN SIJOITTELU TARKISTETTU (Fable 24.9. klo 13.5x, voimassa
+oleva kaava, Raamattu ALOITUKSEN TEKSTIT NATIIVISSA)**: alun perin
+epäiltiin ristiriitaa NATIIVIN ALOITUSKAAVAN kanssa, mutta kuvasarjan
+kuva 1 (`zoom-kuminauha/1-t10.6s-staattinen.png`) osoittaa selvästi
+että Lontoon KARTTA ON KOKO AJAN TAUSTALLA NÄKYVISSÄ (pallo zoomattuna
+Lontooseen) ja avausteksti ("Heathrow, Lontoo, syyskuu 2026" +
+INTRO_TEXT) näkyy ALAPALKISSA kartan päällä — EI omana erillisenä
+sivunaan ilman karttaa. Tämä on TÄSMÄLLEEN kaavan mukainen oikea
+toteutus. **PASS.** Vanha B7-7-testin "odotettu tulos webin mukaan"
+-kuvaus (avausruutu ilman karttaa) on KUMOTTU tällä uudemmalla
+kaavalla; B7-7:n avausruutu-osuus päivitetty vastaavasti alla.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
 |---|--------|-----------|------|--------|
-| B7-1 | Liiku läpinäkyvä (myös aktiivinen) | | | |
-| B7-2 | Tekstit piilossa + aito kaiutin | | | |
-| B7-3 | Väritaso/huntu/meri/raja | | | |
-| B7-4 | Radion VU-mittari | | | |
-| B7-5 | Lennon lähikuva | | | |
-| B7-6 | iPhonen yläreuna uusiksi (löydös 20) | | | |
-| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | | | |
-| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | | | |
-| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | | | |
-| 14 | Navat (uusinta tuoreella pelillä) | | | |
-| 4-renkaat | Hehkurenkaat aloitusvalinnassa (uusinta) | | | |
+| B7-1 | Liiku läpinäkyvä (myös aktiivinen) | ✅ PASS (161fa35) | b7-1-liiku-aktiivinen-PASS.png | |
+| B7-2 | Tekstit piilossa + aito kaiutin | ✅ PASS piilotus, ei testattu kaiutin (161fa35) | b7-2-tekstit-piilossa.png | |
+| B7-3 | Väritaso/huntu/meri/raja | ❌ FAIL (24c9194) | b7-3-huntu-rikkinainen-suorakulmio.png, b7-3-kreikka-tile-glitch.png | Rikkinäinen suorakulmainen laatta (Espanja/Marokko) + puoliksi väärä naapurilaatta (Kreikan vieressä); meri ja Kreikan oma raja OK |
+| Zoom-kuminauha | Ulos-zoomin kuminauhaefekti avausluennan jälkeen | ✅ PASS (24c9194) | zoom-kuminauha/1-7*.png | Itsestään laukeava (ei kosketusta); liike kiihtyy keskellä ja hidastuu lopussa, kesto ≈2,3 s, päättyy kaupunginvalintaan |
+| B7-4 | Radion VU-mittari | ✅ PASS (24c9194) | b7-4-radio-vu-1/2/3.png | ☰ → Maailmanradio → kaupungin ▶-nappi; neula liikkui epäsymmetrisesti joka kuvassa |
+| B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
+| B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
+| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni ❌ FAIL (24c9194, lopullinen) | | Lento soittaa `intro-puhe.mp3`:n hetken lennon alussa, sitten hiljaisuus koko loppulennon; `lento-alku`-luento puuttuu katalogista (`VIRHE luentoa ei ole`) |
+| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ✅ PASS (24c9194) | b7-8-tulos-aloitusportti.png | Swipe paneelin sisällä vieritti listan; vahvistuskysely + palautus porttiin molemmat oikein |
+| B7-9 | Aloitusportti (VAATIMUS PERUTTU — nykyinen sisältö on oikea) | ✅ PASS (24c9194, korjatun määritelmän mukaan) | b7-9-portti-vielakin-vanha.png | Omistaja perui alkuperäisen "vain 3 elementtiä" -vaatimuksen 12.2x |
+| 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
+| 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |

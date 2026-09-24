@@ -25,17 +25,30 @@
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
+import { INTRO_TEXT, FLIGHT_FIRST } from '../../js/ui-tekstit.js';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
+/*
+ * Avausluentojen ruututekstit (Pelikoodari 24.9.2026, PR #3057): sama teksti
+ * kuin luenta, joten aikaleimat kohdistuvat siihen. intro = INTRO_TEXT,
+ * lento-alku = laudan flightFirst (tools/generoi-avaus.mjs INTRO_RUUTU ja LENTO_RUUTU).
+ */
+export const AVAUSLUENTOJEN_TEKSTIT = {
+  'assets/audio/intro-puhe.mp3': INTRO_TEXT,
+  'assets/audio/puhe-lento-alku.mp3': FLIGHT_FIRST.join(' '),
+};
+
 function voimassaOlevatAikaleimat() {
-  // Voimassa = kohdistettu täsmälleen nykyiseen matkakirjatekstiin (sama
+  // Voimassa = kohdistettu täsmälleen nykyiseen luentatekstiin (sama
   // ehto kuin js/luentareaktiot.js tarkistaAikaleimat).
   const kansio = join(JUURI, 'assets/aikaleimat');
-  const tekstit = new Map(Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite)
-    .map((v) => [v.matkakirja.aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), v.matkakirja.teksti]));
+  const tekstit = new Map([
+    ...Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).map((v) => [v.matkakirja.aanite, v.matkakirja.teksti]),
+    ...Object.entries(AVAUSLUENTOJEN_TEKSTIT),
+  ].map(([aanite, teksti]) => [aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), teksti]));
   return readdirSync(kansio).filter((f) => f.endsWith('.json')).sort().filter((f) => {
     const d = JSON.parse(readFileSync(join(kansio, f), 'utf8'));
     const teksti = tekstit.get(f);
@@ -66,7 +79,7 @@ export const LISAMODUULIT = [
   m('js/livia.js', ['LIVIAN_AVAUS']),
   // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
   // periaatelappu (js/ui.js tuo samat vakiot).
-  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
+  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET', 'FLIGHT_FIRST']),
   // Natiivi-UI 23.9.2026: pullan nimet maittain (js/fokustehtavat.js pullanNimi)
   // ja lehtitehtävien palkkio; hinta on saannoissa (game.js PULLA_HINTA).
   m('js/fokustehtavat.js', ['PULLA_NIMET', 'PULLA_YLEISNIMI', 'FOKUS_TEHTAVA_PALKKIO', 'FOKUS_LEHTITEHTAVAT']),
@@ -105,7 +118,7 @@ export const LISAMODUULIT = [
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),
   m('js/karttatyokalu-maakunnat.js', ['MAAKUNTIEN_NIMET', 'MAAKUNTIEN_MAAT']),
-  m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET']),
+  m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET', 'HILJENNYKSEN_SYY', 'TUNTEMATTOMAT_LAJIT']),
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
@@ -136,6 +149,11 @@ export const LISAMODUULIT = [
   m('js/linssit/satelliitti-aani.js', ['ASTRONAUTIN_HUMINA', 'ASTRONAUTIN_MUSIIKKI', 'ASTRONAUTIN_MUSIIKKI_KAYTOSSA'], 'linssi'),
   m('js/linssit/omistus.js', ['LINSSIKYNNYKSET', 'OPTIKON_HYVITYS', 'PERUSLINSSIT'], 'linssi'),
   m('js/tyohuone-kehitys-data.js', ['KAARI_PAKETIT'], 'kehittaja'),
+  // Skeema 1.27 (Natiivi-UI 24.9.2026): natiivin KOKEET-valikon Raamattu- ja Kehittäjälehti
+  // (webin työhuone). Henkilöiden sähköpostit peitetään viennissä (vie-sisalto.mjs peitaSahkopostit).
+  m('js/tyohuone-raamattu.js', ['RAAMATTU'], 'kehittaja'),
+  m('js/tyohuone-tilanne.js', ['TILANNE', 'TESTATTAVAA', 'TUOREET'], 'kehittaja'),
+  m('js/tyohuone-pelit.js', ['PELIT'], 'kehittaja'),
 ];
 
 /** Valmiit JSON-aineistot, jotka kopioidaan vientiin sellaisenaan. */

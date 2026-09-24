@@ -65,11 +65,32 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
+        nimi: 'GSHHG — rantaviivat pääkartan laatoissa ja pallon vektoreissa (versio 2.3.7)',
+        tekija: 'Wessel & Smith, A Global Self-consistent, Hierarchical, '
+          + 'High-resolution Geography Database',
+        lisenssi: 'LGPL 3+',
+      },
+      {
         nimi: 'ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — '
-          + 'maaston korkeus, meren syvyys, varjostus ja reliefikartta',
+          + 'pääkartan varjostus ja meren syvyys sekä maaston korkeustiedot',
         tekija: 'Amante & Eakins 2009, NOAA NGDC / NCEI '
           + '(doi:10.7289/V5C8276M); haettu NOAA CoastWatch ERDDAPista',
         lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'ETOPO 2022 15 Arc-Second Global Relief Model, surface — '
+          + 'topografia- ja vesistölinssin reliefi sekä astronautin kamera',
+        tekija: 'NOAA National Centers for Environmental Information 2022 '
+          + '(doi:10.25921/fd45-gt74)',
+        lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'Copernicus DEM GLO-30 ja GLO-90 — natiivipelin maaston korkeusmalli '
+          + 'ja kaupunkien korkeudet',
+        tekija: 'Produced using Copernicus WorldDEM-30 and WorldDEM-90 © DLR e.V. 2010-2014 '
+          + 'and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS '
+          + 'by the European Union and ESA; all rights reserved',
+        lisenssi: 'Copernicus DEM -lisenssi (vapaa käyttö lähdemaininnalla)',
       },
       {
         nimi: 'Earth at Night (Black Marble) 2016 — yökartan valot',
