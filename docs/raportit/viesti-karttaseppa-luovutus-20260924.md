@@ -1,4 +1,4 @@
-# Karttasepän luovutus 24.9.2026 aamu (sessio 7 → seuraava)
+# Karttasepän luovutus 24.9.2026 (sessio 7 → seuraava), päivitetty klo 11
 
 Rooli-worktree `/Users/Shared/Claude/Matkakirja-karttaseppa`, haara
 `karttaseppa-tyo-20260922` (EI mergetä). Erät vain
@@ -62,3 +62,19 @@ kärjessä). Mergen jälkeen luettelo ämpäriin: **`ajo-20260923a/luettelo/pyra
   NAS:n `._*`-tiedostot: tarkistus ja vienti ohittavat ne.
 - Relief: `/Users/Shared/Claude/reliefi-poltto/` (aja-sarja*.sh, lahde/ = reliefi 20260920 paikallisesti).
 - Paikallinen levy ~34 Gt vapaana (97 %): isot tuotokset NAS:iin.
+
+## Päivitys 24.9. klo 11
+
+- **Syvä Ranska valmis:** pyramidi `2026-09-23a-pohja/z9–z10` (896 + 3 410) ja pallo
+  `julisteet/pallo/laatat/2026-09-23a-pohja-20260923asyva/` Z9–Z11 (10 475, ilman viivoja).
+  Virhevienti samasta ajosta polkuun `2026-09-22c-pohja/z9–z10` jätetty ämpäriin (loki
+  `ajo-20260923a-syva/lokit/VIRHEVIENTI-22c-polku.log`); vartija #2962:ssa.
+- **Reliefi 20260924** (päivämäärärajan kaistale paikattu) ämpärissä + pallo/ ja pallo-k08/;
+  webin osoitin PR #3044.
+- **Väritaso natiiville:** `julisteet/pallo/vari/2026-09-14b-tasoitus-k3/<ISO>/` Z5–Z9 RGBA,
+  27 maata (PR #3054, pohjana #2980). Kierrokset ilman päätettä ja k2 hylätty.
+- **E28 syvät tasot ajastettu** klo 22.00 (`pyramidi-poltto/ajo-20260924-e28-syva/aja.sh`,
+  101 shardia + pallo 16 osaa), vahti pysäyttää 02.45 (levysiivous 03, TestFlight 04–05).
+  Jatko samalla komennolla. Pallon kansio `…-20260924e28syva`; kerro Natiivisepälle.
+- **Päivällä rinnakkaisuus 4** (`--ytimet 4`), täysi vain yöllä (Macin muisti loppui 12–16 Chromiumilla).
+- Avoimet PR:t: #2962, #2980, #2989, #3044, #3054.
