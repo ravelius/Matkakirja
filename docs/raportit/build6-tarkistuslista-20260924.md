@@ -1097,6 +1097,47 @@ kesken pelin (Ateenassa, "Uusi matka" -haaran kaupunkivalinnan jälkeen),
 joten portti näytti yhden "Aloita seikkailu" -napin (tuore/tyhjä
 tallennus) eikä Jatka/Uusi-paria — odotettua tyhjennyksen jälkeen.
 
+## Zoom-kuminauha: ulos-zoomi avausluennan jälkeen
+
+**Spesifikaatio (Fable, Raamattu KAMERA-AJOT)**: ulos-zoomi avausluennan
+päätyttyä on yhtenäinen smootherstep-ajo (pehmeä alku ja loppu, ei
+lineaarista pätkää eikä hyppyä), kesto n. 2–3 s, päättyy näkymään jossa
+valittavat kaupungit näkyvät. Todiste = 6–8 kehyksen kuvasarja
+tasavälein.
+
+**TULOS 24.9. klo 13.5x (SHA 24c9194): ✅ PASS.** Kylmäkäynnistys →
+"Uusi matka" → avaustekstin kirjoitus kestää n. 10 s (hidas
+kirjain-animaatio) → siitä n. 0,5–3,3 s jälkeen kamera zoomaa ulos
+ITSESTÄÄN ilman kosketusta (avausluennan päättyminen laukaisee sen,
+ei nappi). 7 kuvan sarja n. 0,44 s välein (todelliset kellonajat
+tallennettu, `zoom-kuminauha/1..7-t*.png`):
+1. t=10,6 s: yhä täysin staattinen Lontoo-lähikuva, avausteksti
+   valmis, UI (yläpallero + ☰) näkyvissä.
+2. t=11,0 s: liike alkaa juuri — UI:n yläpallero jo haalistunut, kartta
+   siirtynyt vain hiukan.
+3. t=11,5 s: SELVÄ HYPPY — kamera huomattavasti kauempana, tekstiruutu
+   häipymässä (puoliläpinäkyvä), pulu siirtymässä paikoilleen.
+4. t=11,9 s: yhä kauemmas, tekstiruutu kokonaan poissa, Alpit näkyvissä.
+5. t=12,4 s: lähes lopullinen kehys, Italia/Väli-meri näkyvissä.
+6. t=12,8 s: kaupunkiympyrät (Ateena, Istanbul, Moskova) ilmestyvät,
+   hyvin lähellä lopputulosta.
+7. t=13,3 s: pysähtynyt, identtinen lopulliseen kaupunginvalintanäkymään.
+
+Liikkeen määrä kehysten välillä kasvaa (1→2 pieni, 2→3 iso, 3→4→5 iso)
+ja pienenee lopussa (5→6→7 pieni) — täsmää pehmeään
+kiihdytys/hidastus-kaareen (smootherstep), ei tasaiseen/lineaariseen
+liikkeeseen eikä hyppyyn. Kokonaiskesto liikkeen alusta (kuva 2, t=11,0)
+pysähtymiseen (kuva 7, t=13,3) ≈ 2,3 s — spesifikaation "n. 2–3 s"
+-rajoissa. Lopputulos on kaupunginvalintanäkymä (Ateena/Istanbul/
+Moskova/Kairo-ympyrät), kuten spesifikaatio edellyttää.
+**HUOM (ei tämän testin piiriä, mutta havaittu sivussa)**: avausteksti-
+ruutu ("Heathrow, Lontoo..." + INTRO_TEXT) NÄYTETÄÄN erillisenä
+ruutuna ennen zoomia — tämä on ristiriidassa NATIIVIN ALOITUSKAAVAN
+("avaustekstiä ei näytetä erillisellä ruudulla") kanssa, mutta täsmää
+B7-7-testin dokumentoituun "odotettu tulos webin mukaan" -kuvaukseen.
+Kaksi dokumenttia ovat ristiriidassa keskenään — ei korjattu tässä,
+ilmoitettu Fablelle.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
@@ -1104,7 +1145,7 @@ tallennus) eikä Jatka/Uusi-paria — odotettua tyhjennyksen jälkeen.
 | B7-1 | Liiku läpinäkyvä (myös aktiivinen) | ✅ PASS (161fa35) | b7-1-liiku-aktiivinen-PASS.png | |
 | B7-2 | Tekstit piilossa + aito kaiutin | ✅ PASS piilotus, ei testattu kaiutin (161fa35) | b7-2-tekstit-piilossa.png | |
 | B7-3 | Väritaso/huntu/meri/raja | ❌ FAIL (24c9194) | b7-3-huntu-rikkinainen-suorakulmio.png, b7-3-kreikka-tile-glitch.png | Rikkinäinen suorakulmainen laatta (Espanja/Marokko) + puoliksi väärä naapurilaatta (Kreikan vieressä); meri ja Kreikan oma raja OK |
-| Zoom-kuminauha | Ulos-zoomin kuminauhaefekti | ⚠️ EI VOITU TESTATA (24c9194) | | Pinch-zoom-eleet eivät toimineet luotettavasti tässä simulaattoriympäristössä (kosketustyökalu) |
+| Zoom-kuminauha | Ulos-zoomin kuminauhaefekti avausluennan jälkeen | ✅ PASS (24c9194) | zoom-kuminauha/1-7*.png | Itsestään laukeava (ei kosketusta); liike kiihtyy keskellä ja hidastuu lopussa, kesto ≈2,3 s, päättyy kaupunginvalintaan |
 | B7-4 | Radion VU-mittari | ✅ PASS (24c9194) | b7-4-radio-vu-1/2/3.png | ☰ → Maailmanradio → kaupungin ▶-nappi; neula liikkui epäsymmetrisesti joka kuvassa |
 | B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
