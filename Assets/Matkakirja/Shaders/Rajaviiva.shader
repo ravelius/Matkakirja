@@ -2,6 +2,13 @@
 // tunnuskartan tarkkuudesta riippumatta. Kärjissä oma paikka ja janan toinen pää (TEXCOORD0),
 // puoli ±1 (TEXCOORD1.x). Piirtyy maaston päälle (ZTest Always) kuten täyttökuori; pallon
 // takapuolen janat piilotetaan maan keskipisteestä (_Keskus, maailma).
+//
+// Pelaajan maan ääriviiva (Kartta/Maaraja.cs) käyttää lisäksi TEXCOORD1.y:tä: etumerkki on janan
+// pää (−1 a, +1 b) ja itseisarvo 1 + renkaan laatikon lävistäjä asteina. _Jatke venyttää janaa
+// päistään puolen leveyden verran (paksu täysi viiva ei lovea kulmissa, web: päätypyörylät
+// korostukselle), ja rengas, jonka lävistäjä ruudulla (× _Tiheys) jää alle _PieninRengas
+// ruutupikselin, jätetään pois (web KOROSTUKSEN_PIENIN_RENGAS_PX). Aluerajoilla (MaaKartta)
+// y = 0, joten kumpikaan ei vaikuta niihin.
 Shader "Matkakirja/Rajaviiva"
 {
     Properties
@@ -10,6 +17,9 @@ Shader "Matkakirja/Rajaviiva"
         _Paksuus("Paksuus (ruutupistettä)", Float) = 1.2
         _Kerroin("Pikseliä pisteelle", Float) = 3
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
+        _Jatke("Päiden jatke (0/1)", Float) = 0
+        _Tiheys("Ruutupikseliä astetta kohti", Float) = 0
+        _PieninRengas("Pienin rengas (ruutupikseliä)", Float) = 0
     }
     SubShader
     {
@@ -33,6 +43,9 @@ Shader "Matkakirja/Rajaviiva"
                 float _Paksuus;
                 float _Kerroin;
                 float4 _Keskus;
+                float _Jatke;
+                float _Tiheys;
+                float _PieninRengas;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; };
@@ -50,11 +63,15 @@ Shader "Matkakirja/Rajaviiva"
                 suunta = l > 1e-4 ? suunta / l : float2(1, 0);
                 float2 normaali = float2(-suunta.y, suunta.x);
                 float px = 0.5 * _Paksuus * _Kerroin + 0.75;
-                a.xy += normaali * i.puoli.x * px * 2.0 / ruutu * a.w;
+                float paa = sign(i.puoli.y);
+                float jatke = _Jatke * paa * (px - 0.75);
+                a.xy += (normaali * i.puoli.x * px + suunta * jatke) * 2.0 / ruutu * a.w;
                 // Pallon takapuoli pois (sama raja kuin Nappula-varjostimessa).
                 float3 ylos = normalize(maailma - _Keskus.xyz);
                 float3 kohti = normalize(_WorldSpaceCameraPos - maailma);
                 if (dot(ylos, kohti) < 0.02) a = float4(2, 2, 2, 1);
+                // Liian pieni rengas (vain ääriviivalla, y ≠ 0) pois kuten takapuoli; tiheys 0 = ei mitattu → kaikki näkyvät (web).
+                if (paa != 0 && _Tiheys > 0 && (abs(i.puoli.y) - 1.0) * _Tiheys < _PieninRengas) a = float4(2, 2, 2, 1);
                 o.paikka = a;
                 o.reuna = i.puoli.x * px;
                 return o;

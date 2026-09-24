@@ -34,6 +34,12 @@ namespace Matkakirja
         public string Maa { get; private set; }
         /// <summary>Pakotettu maa testaukseen (Komennot: vari &lt;ISO&gt;), null = pelaajan maa.</summary>
         public string Pakotettu { get; set; }
+        /// <summary>
+        /// Maa, jonka väritasoa nyt tavoitellaan (pakotettu tai pelaajan; matkalla edellinen), myös
+        /// ennen kuin sarja on ladattu tai jos maalla ei ole sarjaa. Maaraja seuraa tätä: webissä
+        /// korostuskehä ja väritaso lukevat saman maan (js/pallolauta/lauta.js korostusIso).
+        /// </summary>
+        public string Kohde => haluttu;
 
         CesiumUrlTemplateRasterOverlay kerros;
         string haluttu, ladattu;

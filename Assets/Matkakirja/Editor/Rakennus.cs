@@ -117,6 +117,12 @@ namespace Matkakirja.Editori
             // Rajat vektoriviivoina (Fable 24.9.): täyttö 1,2 km:n tunnuskartasta, rajan tarkkuus aineistosta.
             maakunnat.rajaMateriaali = Materiaali("Rajaviiva", "Matkakirja/Rajaviiva", new Color(0.23f, 0.18f, 0.13f, 0.8f));
             kerrokset.maakunnat = maakunnat;
+            // Pelaajan maan ääriviiva (löydös 2, osa 3): webin korostuskehä, sama maa kuin väritasolla.
+            var maaraja = georefGo.AddComponent<Maaraja>();
+            maaraja.georeferenssi = georef;
+            maaraja.varitaso = varitaso;
+            maaraja.materiaali = maakunnat.rajaMateriaali;
+            kerrokset.maaraja = maaraja;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
@@ -157,6 +163,7 @@ namespace Matkakirja.Editori
             kierto.georeferenssi = georef;
             merkit.kamera = kamera;
             merkit.kierto = kierto;
+            maaraja.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
             komennot.kierto = kierto;
             komennot.merkit = merkit;
