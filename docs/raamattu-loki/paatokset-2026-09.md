@@ -4699,3 +4699,7 @@ Laitetestaaja tarkisti b12g-1/raportti.md:n (SAMA 0 / ERI 126 / PUUTTUU 50): riv
 ## OMISTAJA klo 22.5x: EI ILMOITUKSIA ETANA AVOIMISTA KORTEISTA → RAAMATTUUN: SESSIO KUTSUU PushNotification-TYOKALUA HETI KORTIN AVATTUAAN; POSTIVAHTI ILMOITTAA YLI 10 min AUKI OLLEISTA (24.9.2026 klo 22.53)
 
 Omistaja: 'harmi että minulle ei tule pop up ilmoituksia ainakaan remotessa jos sessioilla on kysymyskortti'. Desktopissa on PushNotification-työkalu, joka lähettää työpöytäilmoituksen ja Remote Controlin kautta puhelimeen. Raamattuun (JUMI → KORTTI): jokainen sessio kutsuu heti kortin avattuaan PushNotification-työkalua yhdellä rivillä '<Rooli>: kysymyskortti auki — <aihe>'; Postivahti lähettää saman kierroksellaan, jos kortti on ollut auki yli 10 minuuttia. Postivahti välittää säännön kaikille rooleille.
+
+## OMISTAJA AJOI vapauta-levy-20260924-ilta.sh: 45 → 59 Gt VAPAANA (30 LOKIKANSIOTA, 14 Gt) (24.9.2026 klo 22.55)
+
+Omistaja ajoi Fablen skriptin klo 22.5x: proto-3d/lokit-kansiot ilman raporttiviittausta poistettu, vapaata 45 → 59 Gt. Huom. vapaa tila oli laskenut 69:stä 45:een Karttasepän siivouksen jälkeen (E28-ajo ja käännökset kirjoittavat); Codexin NAS-siirto vapauttaa lisää.
