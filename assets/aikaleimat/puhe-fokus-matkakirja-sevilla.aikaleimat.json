@@ -1,218 +1,177 @@
 {
   "versio": 2,
   "kaupunki": "sevilla",
-  "teksti": "Sevillan tupakkatehdas näyttää palatsilta, mutta sen portista kulkee aamuisin kuningattarien sijasta työväkeä. Nainen sitoi huivinsa, otti viimeisen haukun leivästä ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Olin aikonut kirjoittaa suuresta rakennuksesta. Kirjoitankin siitä, miten pienellä aamiaisella sitä pidetään käynnissä.",
-  "tekstiSha256": "530b094fd431850486771ed58d9e3e8173526140c8db4fefaafcc699d950732f",
+  "teksti": "Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+  "tekstiSha256": "ea1f3638b5580a9aa4af448856e47a00c8de3290dd5743a467850e2e8cda58b8",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-sevilla.mp3",
     "versio": 2,
-    "tavut": 453111,
-    "sha256": "f025f6cd3ad0cbdbfa5baec70bd1df5c3a7d68a857bf018a7b96f81bbdc19bed"
+    "tavut": 392925,
+    "sha256": "c5d912450457a6451c47f7c861ca01709e38ac7d17c65bfd66b1b668592cda29"
   },
-  "kesto": 28199,
+  "kesto": 24460,
   "sanat": [
     {
       "sana": "Sevillan",
-      "alku": 199,
-      "loppu": 639
+      "alku": 220,
+      "loppu": 700
     },
     {
       "sana": "tupakkatehdas",
-      "alku": 699,
-      "loppu": 1500
+      "alku": 740,
+      "loppu": 1560
     },
     {
-      "sana": "näyttää",
-      "alku": 1559,
-      "loppu": 1939
+      "sana": "näytti",
+      "alku": 1600,
+      "loppu": 1940
     },
     {
       "sana": "palatsilta",
-      "alku": 1979,
-      "loppu": 2679
+      "alku": 2000,
+      "loppu": 2700
     },
     {
       "sana": "mutta",
-      "alku": 3419,
-      "loppu": 3639
-    },
-    {
-      "sana": "sen",
-      "alku": 3699,
-      "loppu": 3819
+      "alku": 3420,
+      "loppu": 3640
     },
     {
       "sana": "portista",
-      "alku": 3899,
-      "loppu": 4380
+      "alku": 3700,
+      "loppu": 4180
     },
     {
-      "sana": "kulkee",
-      "alku": 4440,
-      "loppu": 4779
-    },
-    {
-      "sana": "aamuisin",
-      "alku": 4839,
-      "loppu": 5359
-    },
-    {
-      "sana": "kuningattarien",
-      "alku": 5519,
-      "loppu": 6239
-    },
-    {
-      "sana": "sijasta",
-      "alku": 6299,
-      "loppu": 6719
+      "sana": "kulki",
+      "alku": 4240,
+      "loppu": 4560
     },
     {
       "sana": "työväkeä",
-      "alku": 6779,
-      "loppu": 7439
+      "alku": 4620,
+      "loppu": 5380
     },
     {
       "sana": "Nainen",
-      "alku": 9380,
-      "loppu": 9639
+      "alku": 7140,
+      "loppu": 7500
     },
     {
       "sana": "sitoi",
-      "alku": 9699,
-      "loppu": 9979
+      "alku": 7580,
+      "loppu": 7900
     },
     {
       "sana": "huivinsa",
-      "alku": 10059,
-      "loppu": 10619
+      "alku": 7940,
+      "loppu": 8480
     },
     {
-      "sana": "otti",
-      "alku": 11259,
-      "loppu": 11479
+      "sana": "haukkasi",
+      "alku": 8880,
+      "loppu": 9320
     },
     {
-      "sana": "viimeisen",
-      "alku": 11539,
-      "loppu": 11979
-    },
-    {
-      "sana": "haukun",
-      "alku": 12059,
-      "loppu": 12359
-    },
-    {
-      "sana": "leivästä",
-      "alku": 12460,
-      "loppu": 12899
+      "sana": "leipää",
+      "alku": 9380,
+      "loppu": 9800
     },
     {
       "sana": "ja",
-      "alku": 12939,
-      "loppu": 13039
+      "alku": 9840,
+      "loppu": 9920
     },
     {
       "sana": "katosi",
-      "alku": 13079,
-      "loppu": 13420
+      "alku": 9980,
+      "loppu": 10320
     },
     {
       "sana": "sisään",
-      "alku": 13479,
-      "loppu": 13939
+      "alku": 10380,
+      "loppu": 10960
     },
     {
       "sana": "Pihalta",
-      "alku": 15639,
-      "loppu": 15960
+      "alku": 12500,
+      "loppu": 12840
     },
     {
       "sana": "tuli",
-      "alku": 16000,
-      "loppu": 16159
+      "alku": 12880,
+      "loppu": 13080
     },
     {
       "sana": "appelsiininkukkien",
-      "alku": 16219,
-      "loppu": 17280
+      "alku": 13160,
+      "loppu": 14260
     },
     {
       "sana": "tuoksu",
-      "alku": 17340,
-      "loppu": 17799
+      "alku": 14320,
+      "loppu": 14880
     },
     {
-      "sana": "Olin",
-      "alku": 19359,
-      "loppu": 19520
-    },
-    {
-      "sana": "aikonut",
-      "alku": 19559,
-      "loppu": 19919
+      "sana": "Aioin",
+      "alku": 16880,
+      "loppu": 17160
     },
     {
       "sana": "kirjoittaa",
-      "alku": 19979,
-      "loppu": 20600
+      "alku": 17220,
+      "loppu": 17860
     },
     {
       "sana": "suuresta",
-      "alku": 20680,
-      "loppu": 21059
+      "alku": 17960,
+      "loppu": 18420
     },
     {
       "sana": "rakennuksesta",
-      "alku": 21119,
-      "loppu": 21979
+      "alku": 18480,
+      "loppu": 19280
     },
     {
-      "sana": "Kirjoitankin",
-      "alku": 23920,
-      "loppu": 24579
+      "sana": "kirjoitinkin",
+      "alku": 20500,
+      "loppu": 21320
     },
     {
-      "sana": "siitä",
-      "alku": 24639,
-      "loppu": 24939
+      "sana": "pienestä",
+      "alku": 21380,
+      "loppu": 21840
     },
     {
-      "sana": "miten",
-      "alku": 25299,
-      "loppu": 25599
+      "sana": "aamiaisesta",
+      "alku": 21920,
+      "loppu": 22640
     },
     {
-      "sana": "pienellä",
-      "alku": 25659,
-      "loppu": 26000
+      "sana": "joka",
+      "alku": 23120,
+      "loppu": 23360
     },
     {
-      "sana": "aamiaisella",
-      "alku": 26159,
-      "loppu": 26959
+      "sana": "piti",
+      "alku": 23400,
+      "loppu": 23660
     },
     {
       "sana": "sitä",
-      "alku": 27019,
-      "loppu": 27219
-    },
-    {
-      "sana": "pidetään",
-      "alku": 27279,
-      "loppu": 27739
+      "alku": 23720,
+      "loppu": 23940
     },
     {
       "sana": "käynnissä",
-      "alku": 27799,
-      "loppu": 28199
+      "alku": 24000,
+      "loppu": 24460
     }
   ],
   "lauseet": [
-    199,
-    9380,
-    15639,
-    19359,
-    23920
+    220,
+    7140,
+    12500,
+    16880
   ],
-  "luotu": "2026-09-11T12:04:31.622Z"
+  "luotu": "2026-09-23T15:39:32.096Z"
 }

@@ -187,6 +187,19 @@ export function pallonPiste(lat, lng, sade = 100) {
 export function pinnanPiste(kamera, x, y, W, H, R) {
   const o = kamera?.position;
   if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
+  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
+  /*
+   * KALLISTETTU KAMERA (js/pallolauta/kallistus.js, pysyvä kallistus
+   * 23.9.2026): silmä ei ole katsepisteen yllä, joten paikasta johdettu
+   * pov osuisi väärään kohtaan — veto ja zoomin ankkuri karkasivat.
+   * Kallistus kirjoittaa virtuaalisen pov:n kameraan samalla kun se
+   * asettaa paikan, joten lukema on yhä itsensä kanssa yhtenäinen.
+   */
+  const kallistettu = kamera.__kallistusPov;
+  if (kallistettu) {
+    return laattakerroksenOsuma(kallistettu, (2 * x) / W - 1, 1 - (2 * y) / H,
+      { fov, kuvasuhde: W / H, sade: R });
+  }
   const pituus = Math.hypot(o.x, o.y, o.z);
   if (!(pituus > R)) return null;
   const pov = {
@@ -194,7 +207,6 @@ export function pinnanPiste(kamera, x, y, W, H, R) {
     lng: Math.atan2(o.x, o.z) / RAD,
     altitude: pituus / R - 1,
   };
-  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
   return laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H,
     { fov, kuvasuhde: W / H, sade: R });
 }
@@ -362,7 +374,9 @@ export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERA
  * täsmälleen sama versio (muuten sama merkki olisi levossa laatassa ja
  * liikkeessä elävänä tai poissa). Null = ei kerrosta lainkaan.
  */
-export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null) {
+export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null, {
+  poltetutNostot = laattakerroksenKokeet().has('poltetutnostot'),
+} = {}) {
   if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
   if (pallonLuettelo.versio !== pyramidi.versio) return null;
   const viivat = pallonLuettelo.viivat ?? null;
@@ -418,8 +432,12 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    */
   const nostoKirjaus = variMaa ? (pyramidi.nostotasot?.[variMaa] ?? null) : null;
   // Kohdemaan nimiöt elävinä (js/pallo.js KOHDEMAAN_NIMIOT_ELAVINA):
-  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle.
-  const nostotMaittain = !nostot && !KOHDEMAAN_NIMIOT_ELAVINA
+  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle —
+  // PAITSI kun laatasto on poltettu ilman nimiä (`nimiot: false`) ja koe
+  // `poltetutnostot` on päällä: silloin laatta kantaa vain merkin
+  // (js/pallo.js pallonNostonPisteLaatassa).
+  const nimetonLaatasto = poltetutNostot && nostoKirjaus?.nimiot === false;
+  const nostotMaittain = !nostot && (!KOHDEMAAN_NIMIOT_ELAVINA || nimetonLaatasto)
     && Boolean(nostoKirjaus?.versio && nostoKirjaus.tasot?.length);
   /*
    * ══════════════════════════════════════════════════════════════
@@ -900,11 +918,37 @@ export const LAATTAKERROS_TUKI_SYVYYSSIIRTO = -4;
  */
 export const LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI = -10;
 export const LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI = -6;
+/*
+ * KARKEAMMAT PORRASTETAAN TASOERON MUKAAN (23.9.2026, omistaja: "vaihdos
+ * ei ole nätti, siinä tulee aika häiritsevääkin värinää"; kaappaukset
+ * docs/raportit/kaappaukset/omistaja-20260923/meri-ropelo-1335-*.webp:
+ * tummia salmiakkeja säännöllisissä riveissä vain tasonvaihdon ajan).
+ *
+ * MITATTU SYY: tasolla z tuki z−2 on −4 ja nykyinen −8. Kun taso vaihtuu
+ * z → z+1, vanha z ja entinen tuki (tuki-lippu pois) ovat MOLEMMAT
+ * "karkeampia" ja saivat saman −6:n — niiden järjestyksen ratkaisi taas
+ * pelkkä jänteen painuma. Karkean verkon kärkien ympärillä karkea laatta
+ * on hienompaa lähempänä kameraa, joten z−2:n suurennettu sisältö pisti
+ * esiin salmiakkeina karkean verkon ruudukossa, kunnes uusi taso peitti
+ * sen (WebKit, Lioninlahti z7→z8, z8-lataus estettynä: 8 × z7 ja 16 × z5
+ * samalla −6:lla). Nyt jokainen askel karkeammaksi on 2 yksikköä
+ * taaempana: z−1 −6, z−2 −4, z−3 −2, sitä karkeammat −1 (yhä pohjan
+ * edessä). Tuki noudattaa samaa porrasta, mutta ei tule −4:ää lähemmäs.
+ */
+export const LAATTAKERROS_SYVYYSSIIRTO_PORRAS = 2;
 /** Laatan polygonOffsetUnits sen suhteesta valittuun tasoon. */
 export function laatanSyvyyssiirto(t, valittuZ) {
-  if (t?.tuki) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
-  if (!Number.isFinite(valittuZ) || !Number.isFinite(t?.z) || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
-  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI;
+  const tasoton = !Number.isFinite(valittuZ) || !Number.isFinite(t?.z);
+  if (t?.tuki) {
+    if (tasoton || t.z >= valittuZ) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
+    return Math.max(LAATTAKERROS_TUKI_SYVYYSSIIRTO, karkeammanSiirto(valittuZ - t.z));
+  }
+  if (tasoton || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
+  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : karkeammanSiirto(valittuZ - t.z);
+}
+/** Karkeamman laatan siirto tasoerosta (1 → KARKEAMPI, sitten portaittain taemmas). */
+function karkeammanSiirto(ero) {
+  return Math.min(-1, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI + (ero - 1) * LAATTAKERROS_SYVYYSSIIRTO_PORRAS);
 }
 /** Ennakon katto muistista: näin monta laattaa jätetään tavukatosta vapaaksi. */
 export const LAATTAKERROS_ENNAKKO_MUISTIVARA = 4;

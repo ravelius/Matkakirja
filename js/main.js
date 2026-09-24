@@ -8,6 +8,7 @@ import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
   kehysprofiiliPaalla, piirtokoeValinta, koetilanAvain, luoKoevaihdonLataaja, unohdaPoistetutValinnat,
+  suoraanKartallePaalla, asetaSuoraanKartalle, poltetutNostotPaalla, asetaPoltetutNostot,
   PALJAAN_KERROKSET, PALJAAT_KOKEET, asetaPaljasKerros, paljaatKerrokset,
 } from './piirtokoe-asetus.js';
 import { unohdaTarkkuus } from './tarkkuus-asetus.js';
@@ -25,6 +26,7 @@ import { esilataaIlme } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { avaaPikatie, pikatienKaupunki, rakennaPikatiePeli } from './kehittaja-pikatie.js';
+import { avaaLehtikuori, lehtikuorenKaupunki } from './lehtikuori.js';
 import { ohitaSaapumisluenta, suljeFokusvirta } from './fokusvirta.js';
 import {
   kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
@@ -154,7 +156,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2145';
+const APP_VERSION = '2026-09-21.2182';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -701,6 +703,41 @@ if (karttaValikko) {
   rivi.addEventListener('click', () => { asetaLiike(!liikePaalla()); nayta(); });
   nayta();
   karttaValikko.appendChild(rivi);
+
+  /*
+   * KARTTA → KALLISTUS (Fable 23.9.2026, omistaja: "en näe kallistusta"):
+   * pysyvä kamerakallistus tuntuman arviointiin (js/pallolauta/kallistus.js
+   * PYSYVÄ KALLISTUS). Ei oletus. Kallistus asennetaan laudan luonnissa,
+   * joten valinta lataa sivun kuten Syötekoe; peli on tallessa.
+   */
+  const kallistusRivi = document.createElement('button');
+  kallistusRivi.type = 'button';
+  kallistusRivi.className = 'aanikytkin';
+  kallistusRivi.dataset.kytkin = 'kallistus';
+  kallistusRivi.setAttribute('role', 'switch');
+  kallistusRivi.title = 'Kamera katsoo karttaa loivasti viistosta, myös vedossa ja zoomissa (koe)';
+  kallistusRivi.setAttribute('aria-label', 'Kallistus — kamera katsoo karttaa loivasti viistosta (koe)');
+  kallistusRivi.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M3 17l6-9h9l3 9z"/><path d="M9 8l2 9"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Kallistus</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  // Sama avain kuin js/pallolauta/kallistus.js KALLISTUS_AVAIN (ei tuontia:
+  // pallon moduulit latautuvat laiskasti; tests/kallistus.test.mjs vartioi).
+  const KALLISTUS_AVAIN = 'matkakirja-kallistus';
+  const kallistusPaalla = () => { try { return localStorage.getItem(KALLISTUS_AVAIN) === '1'; } catch { return false; } };
+  const naytaKallistus = () => {
+    const paalla = kallistusPaalla();
+    kallistusRivi.classList.toggle('valittu', paalla);
+    kallistusRivi.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  kallistusRivi.addEventListener('click', () => {
+    try { localStorage.setItem(KALLISTUS_AVAIN, kallistusPaalla() ? '0' : '1'); } catch { return; }
+    naytaKallistus();
+    kallistusRivi.querySelector('.aanikytkin-tila').textContent = 'ladataan…';
+    setTimeout(() => location.reload(), 250);
+  });
+  naytaKallistus();
+  karttaValikko.appendChild(kallistusRivi);
 }
 
 /*
@@ -831,6 +868,60 @@ if (profiiliValikko) {
   });
   nayta();
   profiiliValikko.appendChild(rivi);
+
+  /*
+   * SUORAAN KARTALLE (omistajan testitila 23.9.2026 klo 10.50): sama
+   * riviasu kuin kehysprofiilin kytkimellä. Ei latausta: tila koskee
+   * seuraavaa uudelleenlatausta ja seuraavia saapumisia.
+   */
+  const suoraan = document.createElement('button');
+  suoraan.type = 'button';
+  suoraan.className = 'aanikytkin';
+  suoraan.dataset.kytkin = 'suoraan-kartalle';
+  suoraan.setAttribute('role', 'switch');
+  suoraan.title = 'Testitila: lataus suoraan kartalle, ei saapumisesityksiä eikä automaattisia luentoja';
+  suoraan.setAttribute('aria-label', 'Suoraan kartalle — testitila: ei päivitysikkunaa, traileria eikä automaattisia luentoja');
+  suoraan.innerHTML = `<span class="viiva-ikoni">${svg('<path d="M5 12h12"/><path d="m13 7 5 5-5 5"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Suoraan kartalle</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const naytaSuoraan = () => {
+    const paalla = suoraanKartallePaalla();
+    suoraan.classList.toggle('valittu', paalla);
+    suoraan.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    suoraan.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  suoraan.addEventListener('click', () => { asetaSuoraanKartalle(!suoraanKartallePaalla()); naytaSuoraan(); });
+  naytaSuoraan();
+  profiiliValikko.appendChild(suoraan);
+
+  /*
+   * POLTETUT NOSTOT (Fable 23.9.2026, koe `poltetutnostot`): kohdemaan
+   * nostojen pisteet laatasta, elävänä vain nimi — omistaja vertaa dc:n
+   * ja tuntuman ennen oletukseksi ottoa. Lataa sivun kuten Syötekoe.
+   */
+  const poltetut = document.createElement('button');
+  poltetut.type = 'button';
+  poltetut.className = 'aanikytkin';
+  poltetut.dataset.kytkin = 'poltetut-nostot';
+  poltetut.setAttribute('role', 'switch');
+  poltetut.title = 'Koe: nostojen pisteet poltetusta laatasta, nimet elävinä (vähemmän piirtokutsuja)';
+  poltetut.setAttribute('aria-label', 'Poltetut nostot — pisteet laatasta, nimet elävinä (koe)');
+  poltetut.innerHTML = `<span class="viiva-ikoni">${svg('<circle cx="8" cy="12" r="2.5"/><path d="M13 12h6"/>')}</span>`
+    + '<span class="aanikytkin-nimi">Poltetut nostot</span>'
+    + '<span class="aanikytkin-tila"></span>';
+  const naytaPoltetut = () => {
+    const paalla = poltetutNostotPaalla();
+    poltetut.classList.toggle('valittu', paalla);
+    poltetut.setAttribute('aria-checked', paalla ? 'true' : 'false');
+    poltetut.querySelector('.aanikytkin-tila').textContent = paalla ? 'päällä' : 'pois';
+  };
+  poltetut.addEventListener('click', () => {
+    asetaPoltetutNostot(!poltetutNostotPaalla());
+    naytaPoltetut();
+    koevaihto.muuttui();
+  });
+  naytaPoltetut();
+  profiiliValikko.appendChild(poltetut);
 }
 
 for (const tiedot of AANIKYTKIMET) {
@@ -1575,10 +1666,29 @@ function nollaaValitila(game) {
 }
 
 // Kesken jäänyt peli jatkuu automaattisesti, muuten kysytään pelaajat.
-const pikatienKaupunkiId = pikatienKaupunki();
+/*
+ * LEHTIKUORI (js/lehtikuori.js): ?lehti=<kaupunki> avaa pelkän
+ * kaupunkilehden natiivin pelin web-näkymään. Peli kuten pikatiellä,
+ * ei tallennusta, ei lautaa.
+ */
+const lehtiKaupunkiId = lehtikuorenKaupunki();
+const lehtiPeli = lehtiKaupunkiId
+  ? rakennaPikatiePeli(Game, packById('maailmankartta'), lehtiKaupunkiId) : null;
+const pikatienKaupunkiId = lehtiPeli ? null : pikatienKaupunki();
 const pikatiePeli = pikatienKaupunkiId
   ? rakennaPikatiePeli(Game, packById('maailmankartta'), pikatienKaupunkiId) : null;
-if (pikatiePeli) {
+if (lehtiPeli) {
+  document.body.classList.add('lehtikuori');
+  if (ui) ui.destroy();
+  ui = new UI(lehtiPeli, { onNewGame: () => {}, onChange: () => {} });
+  // Ennen mountia: ensimmäinen render ei saa avata lautaa (paivitaPallolauta).
+  ui.lehtikuori = true;
+  ui.katselu = true;
+  ui.mount();
+  window.matkakirja = { game: lehtiPeli, ui, sfx };
+  window.afrikanTahti = window.matkakirja;
+  avaaLehtikuori(ui, lehtiKaupunkiId);
+} else if (pikatiePeli) {
   /*
    * KEHITTÄJÄN PIKATIE (js/kehittaja-pikatie.js): ?lauta=pallo&dev=<kaupunki>
    * avaa pallolaudan suoraan toimintavaiheeseen ilman saapumis-
@@ -1673,7 +1783,7 @@ paataPaivitysruutu();
  */
 const PILVIKYSELY_KAYTOSSA = false;
 
-if (!katseluPack) {
+if (!katseluPack && !lehtiPeli) {
   natiiviKirjauduPelikeskukseen();
   if (PILVIKYSELY_KAYTOSSA) {
     natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));
@@ -1688,7 +1798,8 @@ if (!katseluPack) {
  * eivät kerro mitään — eikä katselutilassa, joka on työhuoneen
  * esikatselu. Koko loki on edelleen versionumeron takana.
  */
-if (paivitysTapahtui && edellinenVersio && !katseluPack) {
+// Suoraan kartalle (testitila, js/piirtokoe-asetus.js): ei päivitysikkunaa.
+if (paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaalla()) {
   const paivitysDialog = document.getElementById('paivitys-dialog');
   const paivitysLista = document.getElementById('paivitys-lista');
   for (const m of MUUTOKSET.slice(0, 2)) paivitysLista.appendChild(muutosRivi(m));

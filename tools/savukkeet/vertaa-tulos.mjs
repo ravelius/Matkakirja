@@ -55,8 +55,18 @@ const savukeExit = savukeExitStr !== undefined && savukeExitStr !== '' ? Number(
 const kaatui = savukeExit !== null && savukeExit !== 0 && okMaara === 0 && failRivit.length === 0;
 if (kaatui) {
   const loppu = loki.trim().split('\n').slice(-15).join('\n');
-  console.log(`  [KAATUMINEN] savuke päättyi koodilla ${savukeExit} eikä tulostanut yhtään OK/FAIL-riviä — lokin häntä:\n${loppu}`);
-  console.log(`::error::savuke ${tiedosto}: kaatui poikkeukseen (koodi ${savukeExit}) ennen yhtään väitettä — ei tunnettu punainen`);
+  // Ero kahden eri syyn välillä: aito poikkeus ennen ensimmäistäkään
+  // vaadi()-riviä tuottaa lyhyen lokin (pino, ei tavallista INFO/OK-
+  // tulostetta); jos lokissa on paljon tavallista tulostetta mutta
+  // silti ei yhtään OK/FAIL-riviä, savuke luultavasti ajoi loppuun
+  // asti väärällä tulostemuodolla (esim. ✓/✗ OK/FAIL:n sijaan).
+  const eiTyhjia = rivit.filter((r) => r.trim()).length;
+  const muotoEpailty = eiTyhjia > 20;
+  const syy = muotoEpailty
+    ? `${eiTyhjia} riviä tulostetta mutta ei yhtään OK/FAIL-riviä — savuke luultavasti ajoi loppuun väärällä tulostemuodolla`
+    : 'ei tulostanut yhtään OK/FAIL-riviä';
+  console.log(`  [KAATUMINEN] savuke päättyi koodilla ${savukeExit}, ${syy} — lokin häntä:\n${loppu}`);
+  console.log(`::error::savuke ${tiedosto}: kaatui poikkeukseen (koodi ${savukeExit}) ennen yhtään väitettä — ei tunnettu punainen${muotoEpailty ? ' (EPÄILYS: väärä tulostemuoto, ei aito kaatuminen — tarkista vartio()-tulostus)' : ''}`);
   console.log(`\n0/0 läpi (savuke ${tiedosto}, KAATUI)`);
   console.log(JSON.stringify({ lapi: 0, yhteensa: 0, uusiaPunaisia: 1 }));
   process.exit(0);

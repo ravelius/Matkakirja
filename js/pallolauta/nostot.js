@@ -60,6 +60,7 @@ import {
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
+import { hetkiKohdetieto } from '../historian-hetket.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
@@ -77,7 +78,7 @@ import {
   kartanMittaSallittu, luoAnkkurivarasto, levitaMerkit, lukittuAnkkuri, lukitutAnkkuritSallittu,
   nostoankkuritSallittu, pikseleistaAsteiksi,
 } from './nostoankkurit.js';
-import { pallonNostoOnPoltettu } from '../pallo.js';
+import { pallonNostoOnPoltettu, pallonNostonPisteLaatassa } from '../pallo.js';
 // Kytkin asuu js/laattapyramidi.js:ssä; pallo.js vie sen eteenpäin, koska
 // nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
 import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
@@ -1399,6 +1400,8 @@ export function asetteleNosto(el, d) {
     }
   }
   g.classList.toggle('nostosym-nimio-piilossa', !nakyy);
+  // Piste laatassa (koe `poltetutnostot`): vain nimi elävänä, ikoni piiloon.
+  g.classList.toggle('nostosym-ikoni-laatassa', Boolean(d.pisteLaatassa));
   if (el.dataset.nimio !== (nakyy ? nimio : '')) el.dataset.nimio = nakyy ? nimio : '';
   if (el.dataset.taso !== String(d.taso ?? 2)) el.dataset.taso = String(d.taso ?? 2);
   el.classList.toggle('pallolauta-nosto-taso1', taso1);
@@ -1529,6 +1532,29 @@ export function nostonLaatikko(p, d, {
 }
 
 /**
+ * NÄHTÄVYYSKARTALTA SIIRRETYN NOSTON AIHE (kaupunkiliuskan kategoria).
+ *
+ * Aihe tulee noston omasta kohdetiedosta (maanKohdetiedot) saman
+ * kohteenKategoria-säännön kautta kuin kartan merkillä. Kohdekartan
+ * historian hetki (`kartalla: false`, js/packs/historian-hetket.js) ei
+ * ole maan kohdetiedoissa, koska se ei ole pääkartan rivi — sen tieto
+ * haetaan tunnuksella hetkimoduulista (hetkiKohdetieto). Ilman tätä 23
+ * kohdekartan hetkeä putosi liuskan "Muut"-kasaan (korjattu 23.9.2026;
+ * vartija tests/kaupunkiliuska-hetket.test.mjs). Tuntematon tai
+ * aiheeton kohde palauttaa tyhjän aiheen ja menee "Muut"-kasaan kuten
+ * ennenkin (PAATOKSET 34 kohta 11).
+ *
+ * @param {Map<string,object>} kohdetiedot maanKohdetiedot(ui, iso)
+ * @param {string} tunnus siirretyn rivin `id`
+ * @returns {string} aihe (KARTTAVALO_AIHEET) tai '' / null
+ */
+export function siirretynAihe(kohdetiedot, tunnus) {
+  const kohde = kohdetiedot?.get?.(tunnus) ?? hetkiKohdetieto(tunnus);
+  const kategoria = kohde ? kohteenKategoria(kohde) : null;
+  return kategoria ? nostosymPaakategoria(kategoria) : '';
+}
+
+/**
  * NAPAKOHTEEN RIVI: nosto, jonka paikka on datassa asteina eikä laudan
  * pisteenä (js/packs/maastokohteet-ata.js ja -ark.js). Sama tietue kuin
  * tavallisella nostolla, mutta paikka luetaan kohteen omasta
@@ -1577,6 +1603,13 @@ const laudanAvain = (k) => `lauta:${k?.id ?? k?.nimi ?? k?.name ?? ''}`;
 
 export function luoNostot({
   ui, merkit, asteet, ruudulla, onPoltettu = pallonNostoOnPoltettu,
+  /*
+   * PISTE LAATASSA (koe `poltetutnostot`, js/pallo.js
+   * pallonNostonPisteLaatassa): rivi on elävä (nimi sovittelun läpi),
+   * mutta sen piste tai kuvamerkki on nostotason laatassa, joten kerros
+   * ei piirrä omaa ikonia (`pisteLaatassa`). Valotäplä ja osuma jäävät.
+   */
+  onPisteLaatassa = pallonNostonPisteLaatassa,
   /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null: nostot rungolle. */
   glSovitin = null,
   /*
@@ -1656,6 +1689,8 @@ export function luoNostot({
   const naytaNostot = () => merkit.aseta('nostot', glSovitin ? glSovitin.nostot(datumit, naytaNostot) : datumit);
   // Viimeisin merkkiportin päätös (savukkeet ja vartijat lukevat sen).
   let portti = null;
+  /** Kohdemaan nostot, joiden piste on laatassa (ks. onPisteLaatassa). */
+  const pisteLaatassa = new Set();
   let viimeisinUloinOsuus = 0;
   let sovittelu = {
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, reunalta: 0, lappuja: 0,
@@ -1902,8 +1937,14 @@ export function luoNostot({
        * sama kohteidenNykyinenIso), eikä katselutilassa lainkaan —
        * ylempänä tässä funktiossa. Siksi lippu on tässä aina tosi.
        */
+      // Samalla kierroksella kuin poltettu-liput: ladonta ajetaan kerran.
+      pisteLaatassa.clear();
+      const kirjaaPiste = (tunnus, tiiviste) => {
+        if (onPisteLaatassa(tunnus, tiiviste)) pisteLaatassa.add(tunnus);
+        return onPoltettu(tunnus, tiiviste);
+      };
       portti = merkkiPortti(
-        maanKohdemerkit(pack, iso, pohja, onPoltettu),
+        maanKohdemerkit(pack, iso, pohja, kirjaaPiste),
         lahizoomiAuki(uloinOsuus),
         (m) => tiedot.get(m.id) ?? m.kohde ?? null,
         { kohdemaa: true },
@@ -1955,6 +1996,7 @@ export function luoNostot({
           puoli: m.puoli ?? 'oikea',
           aihe: nostosymPaakategoria(m.kategoria),
           poltettu: m.poltettu,
+          pisteLaatassa: !m.poltettu && pisteLaatassa.has(m.id),
           /*
            * NÄKYVÄ KAUPUNKI ILMAN KORTTIA (`vainNimi`, omistaja
            * KARTTAUUDISTUKSEN PAATOKSET 13). Merkki ja nimi ovat
@@ -2056,6 +2098,7 @@ export function luoNostot({
           aihe: 'elaimet',
           lunastettu: Boolean(game.elaintakyLunastettu?.(t.iso)),
           poltettu: onPoltettu(t.tunnus, tiiviste),
+          pisteLaatassa: onPisteLaatassa(t.tunnus, tiiviste),
           avaa: () => { if (!ui.busy) avaaElaintaky(ui, t.iso); },
         });
       }
@@ -2828,17 +2871,13 @@ export function luoNostot({
        * merkkiä, jota pitäisi piilottaa (PAATOKSET 33 rajaus a:
        * kaupungin sisäisiä ei polteta laattaan).
        */
-      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => {
-        const kohde = kohdetiedot.get(k.id) ?? null;
-        const kategoria = kohde ? kohteenKategoria(kohde) : null;
-        return {
-          ...k,
-          perhe: 'nosto',
-          kartalta: true,
-          aihe: kategoria ? nostosymPaakategoria(kategoria) : '',
-          ladontaNro: Number.MAX_SAFE_INTEGER,
-        };
-      });
+      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => ({
+        ...k,
+        perhe: 'nosto',
+        kartalta: true,
+        aihe: siirretynAihe(kohdetiedot, k.id),
+        ladontaNro: Number.MAX_SAFE_INTEGER,
+      }));
       const omat = [...kartalta, ...siirretyt];
       if (!omat.length) continue;
       sisaisetKaupungeittain.set(city.avain, omat);

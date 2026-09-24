@@ -39,7 +39,7 @@ const euroSekoita = (rng, lista) => {
 // Kolme esimerkkiriviä arvoineen opettaa järjestelmän: merkit lasketaan
 // yhteen, mutta pienempi ennen suurempaa vähennetään. Neljäs ratkaistaan.
 
-const ROMAANIT = [
+export const ROMAANIT = [
   { rivit: ['VII', 'XXIV', 'LX'], arvot: [7, 24, 60], kysytty: 'XLII', oikea: 42, muut: [62, 52, 38] },
   { rivit: ['VI', 'XIX', 'XL'], arvot: [6, 19, 40], kysytty: 'XCIV', oikea: 94, muut: [114, 84, 96] },
   { rivit: ['IX', 'XXXI', 'LXX'], arvot: [9, 31, 70], kysytty: 'XXIX', oikea: 29, muut: [31, 21, 39] },
@@ -79,7 +79,7 @@ const piirraRoomalaiset = (svg, data) => {
 // Kolme pylvästä nimilappuineen, neljäs kysymysmerkillä. Vastaus näkyy
 // piirroksesta: sama pää kuin jollakin nimetyistä.
 
-const PYLVAAT = ['doorilainen', 'joonialainen', 'korinttilainen'];
+export const PYLVAAT = ['doorilainen', 'joonialainen', 'korinttilainen'];
 
 const piirraPaa = (x, y, tyyli, p) => {
   // Runko: uurrettu pylväs.
@@ -111,7 +111,7 @@ const piirraPaa = (x, y, tyyli, p) => {
  * kuvattuna British Museumissa) — tarkistettu Commonsista ja
  * katsottu silmin, kulkevat peilin kautta kuten muutkin kuvat.
  */
-const PYLVASKUVAT = [
+export const PYLVASKUVAT = [
   {
     tyyli: 'doorilainen',
     tiedosto: 'Parthenon (30276156187).jpg',
@@ -294,7 +294,7 @@ const piirraLaiturit = (svg, data) => {
 // Kirkontornin tuuliviirin kukko osoittaa yhteen ilmansuuntaan. Piirroksesta
 // luetaan suunta — spatiaalinen, ei laskennallinen mekaniikka.
 
-const SUUNNAT = [
+export const SUUNNAT = [
   { avain: 'pohjoinen', kulma: -90 },
   { avain: 'koillinen', kulma: -45 },
   { avain: 'itä', kulma: 0 },
@@ -365,7 +365,7 @@ const EUROPE_SKETCHES = {
 export const EUROPE_PUZZLES = [
   {
     id: 'roomalaiset',
-    generate: EUROPE_GENERATORS.roomalaiset,
+    generaattori: 'roomalaiset',
     city: 'rooma',
     title: 'Kiveen hakatut luvut',
     selite: 'Piirroksessa: neljä kiveen hakattua lukua. Kolmen ensimmäisen arvo lukee vieressä; neljäs on ratkaistava.',
@@ -376,7 +376,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'pylvaat',
-    generate: EUROPE_GENERATORS.pylvaat,
+    generaattori: 'pylvaat',
     city: 'ateena',
     title: 'Pylväiden päät',
     selite: 'Piirroksessa: isoisän luonnos yhdestä pylväänpäästä. Vaihtoehdot ovat oikeita valokuvia — valitse se, jossa on samanlainen pää.',
@@ -388,7 +388,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'suolaaltaat',
-    generate: EUROPE_GENERATORS.suolaaltaat,
+    generaattori: 'suolaaltaat',
     city: 'dubrovnik',
     title: 'Stonin suola-altaat',
     selite: 'Piirroksessa: neljä allasta, joissa lukee veden syvyys senttimetreinä. Alla lukee, montako senttiä haihtuu päivässä ja monenko päivän kuluttua suolan pitää olla valmis.',
@@ -399,7 +399,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'geysir',
-    generate: EUROPE_GENERATORS.geysir,
+    generaattori: 'geysir',
     city: 'islanti',
     title: 'Geysirin kello',
     selite: 'Piirroksessa: neljä purkausta kellonaikoineen. Kolmen aika lukee alla; neljäs on ratkaistava.',
@@ -410,7 +410,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'laiturit',
-    generate: EUROPE_GENERATORS.laiturit,
+    generaattori: 'laiturit',
     city: 'venetsia',
     title: 'Vuoroveden laiturit',
     selite: 'Piirroksessa: vedenpinta ja neljä kulkusiltaa eri korkeuksilla senttimetreinä. Oikea on matalin silta, joka jää vielä veden yläpuolelle.',
@@ -421,7 +421,7 @@ export const EUROPE_PUZZLES = [
   },
   {
     id: 'kukko',
-    generate: EUROPE_GENERATORS.kukko,
+    generaattori: 'kukko',
     city: 'pariisi',
     title: 'Tuulikukko',
     selite: 'Piirroksessa: kirkontornin tuulikukko ja pääilmansuunnat (P pohjoinen, I itä, E etelä, L länsi). Oikea on suunta, johon kukon nokka osoittaa.',

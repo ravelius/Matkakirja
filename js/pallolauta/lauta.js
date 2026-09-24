@@ -149,8 +149,9 @@ import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '..
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
 import { paljasTila, ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
 import { asennaKehysprofiili } from './kehysprofiili.js';
-import { asennaKallistus, kallistusKaytossa } from './kallistus.js';
+import { asennaKallistus, kallistusTila, pysyvaKallistuskulma } from './kallistus.js';
 import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
+import { suoraanKartallePaalla } from '../piirtokoe-asetus.js';
 import { vedonSeuranta } from '../vedon-seuranta.js';
 import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
 import { sfx } from '../sound.js';
@@ -2108,11 +2109,15 @@ export async function avaaPallolauta(ui) {
   asennaPiirtokokeet();
   if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
   /*
-   * KAMERAKALLISTUS, VAIHE 1 (koe; js/pallolauta/kallistus.js): vain
-   * `?koe=kallistus` tai localStorage `matkakirja-kallistus` = '1'. Ilman
-   * lippua mitään ei asenneta eikä pointOfView'ta kääritä.
+   * KAMERAKALLISTUS (koe; js/pallolauta/kallistus.js): esittely
+   * `?koe=kallistus`, pysyvä kallistus valikon kytkimellä (localStorage
+   * `matkakirja-kallistus` = '1') tai `?koe=kallistuspysyva`. Ilman niitä
+   * mitään ei asenneta eikä pointOfView'ta kääritä.
    */
-  const kallistus = kallistusKaytossa(piirtokokeet()) ? asennaKallistus({ pallo, kotelo, kuori, ui }) : null;
+  const kallistustila = kallistusTila(piirtokokeet());
+  const kallistus = kallistustila ? asennaKallistus({
+    pallo, kotelo, kuori, ui, pysyva: kallistustila === 'pysyva', pysyvaKulma: pysyvaKallistuskulma(),
+  }) : null;
   /*
    * `?koe=profiili` (omistajan tilaus Fablen kautta 22.9.2026): sama
    * profiili RUUDULLE ja mittauspalvelimelle, jotta puhelimen pitkän
@@ -2132,7 +2137,7 @@ export async function avaaPallolauta(ui) {
       kotelo,
       asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
       lepo: () => pallo.__piirto?.tila?.() ?? null,
-      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio }),
+      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio, suoraan: suoraanKartallePaalla() }),
       // Paljas kartta: 1 s:n jakso, DOM-kirjoitus minimiin mutta luvut tuoreina (omistaja 23.9.2026).
       ...(paljasTila() ? { jaksoMs: 1000 } : {}),
     })

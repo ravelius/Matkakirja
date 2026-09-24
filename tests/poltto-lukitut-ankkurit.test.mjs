@@ -93,3 +93,39 @@ test('poltettu tiiviste on LADONNAN pisteestä, ei lukitusta ankkurista', () => 
     assert.equal(luettelo[m.tunnus], m.tiiviste, `${m.tunnus}: luettelo ja merkki eri tiivisteellä`);
   }
 });
+
+/*
+ * ESPANJA LUKITTU 23.9.2026 (nostotason poltto). Sama vaatimus kuin
+ * Ranskalla, mutta ankkuri luetaan MAAN OMASTA taulusta: yhteisessä
+ * taulussa FRA voittaa, ja ennen korjausta Espanjan `valimeri` paloi
+ * Ranskan ankkuriin Touloniin (29 jaettua id:tä).
+ */
+const espanja = merkit.filter((m) => m.iso === 'ESP' && m.poltettava && m.perhe === 'nosto'
+  && !onKaupunkipiste(m.tunnus));
+
+test('Espanja on lukittu ja sen poltettavat nostot ovat omassa ankkurissaan', () => {
+  assert.ok(onLukittuMaa('ESP'));
+  /*
+   * ESP ON 23.9.2026 ESTETTY nostotasolta (täkypooli vaihtuu kaupungeittain,
+   * tools/fokuskartta/nostot.mjs maanTakyt), joten poltettavia nostoja ei
+   * ole. Vaatimus pätee heti, kun esto poistuu.
+   */
+  if (!espanja.length) {
+    const { tilasto } = keraaNostot(pack);
+    assert.ok(tilasto.estot.some((e) => e.startsWith('ESP:')), 'ESP:ltä ei polteta nostoja eikä sillä ole estoa');
+  }
+  for (const m of espanja) {
+    const a = lukittuAnkkuri(`nosto:${m.tunnus}`, 'ESP');
+    assert.ok(a, `${m.tunnus} poltetaan ilman Espanjan ankkuria`);
+    const p = asteetLaudalle(pack.id, a.lat, a.lng);
+    assert.equal(m.x, p.x, `${m.tunnus}: x ei ole Espanjan ankkurissa`);
+    assert.equal(m.y, p.y, `${m.tunnus}: y ei ole Espanjan ankkurissa`);
+    assert.equal(m.viiva, null, `${m.tunnus}: siirtoviiva palaisi laattaan`);
+  }
+  const valimeri = espanja.find((m) => m.tunnus === 'valimeri');
+  if (valimeri) {
+    const fra = lukittuAnkkuri('nosto:valimeri', 'FRA');
+    const pf = fra ? asteetLaudalle(pack.id, fra.lat, fra.lng) : null;
+    assert.ok(!pf || pf.x !== valimeri.x || pf.y !== valimeri.y, 'Espanjan Välimeri paloi Ranskan ankkuriin');
+  }
+});

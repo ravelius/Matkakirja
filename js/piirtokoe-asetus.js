@@ -224,7 +224,30 @@ export function tallennetutKokeet() {
   // Paljaan kartan kerroskytkimet vain paljaassa tilassa (myös pikavalinnoissa).
   if (PALJAAT_KOKEET.includes(koe?.avain)) for (const a of paljaatKerrokset()) joukko.add(`kerros-${a}`);
   if (kehysprofiiliPaalla()) joukko.add('profiili');
+  if (poltetutNostotPaalla()) joukko.add('poltetutnostot');
   return joukko;
+}
+
+/*
+ * POLTETUT NOSTOT (Fable 23.9.2026; omistajan kierroksessa täysien tilojen
+ * dc 408–475 vs paljas 35–83): kohdemaan nostojen pisteet ja kuvamerkit
+ * luetaan nostotason laatoista, ja peli piirtää vain nimen elävänä.
+ * Koe, ei oletus — omistaja vertaa dc:n ja tuntuman ennen oletukseksi
+ * ottoa. Sama kuin `?koe=poltetutnostot`. Toimii vain maalle, jonka
+ * nostotaso on poltettu ilman nimiä (luettelo `nostotasot[ISO].nimiot
+ * === false`, tools/generoi-laattapyramidi.mjs --nostot-ilman-nimioita).
+ */
+export const POLTETUT_NOSTOT_AVAIN = 'matkakirja-poltetut-nostot';
+
+/** Onko poltettujen nostojen koe tallennettu laitteelle. */
+export function poltetutNostotPaalla() {
+  return lueMuisti(POLTETUT_NOSTOT_AVAIN) === '1';
+}
+
+/** Kytkin päälle/pois laitteelle. */
+export function asetaPoltetutNostot(paalla) {
+  kirjoitaMuisti(POLTETUT_NOSTOT_AVAIN, paalla ? '1' : '0');
+  return Boolean(paalla);
 }
 
 /*
@@ -277,7 +300,7 @@ export const PIIRTOKOE_LATAUS_VIIVE_MS = 600;
 /** Valikon koetila yhtenä avaimena: koe + kehysprofiilin kytkin. */
 export function koetilanAvain() {
   const kerrokset = PALJAAT_KOKEET.includes(piirtokoeValinta()) ? paljaatKerrokset().join(',') : '';
-  return `${piirtokoeValinta()}|${kehysprofiiliPaalla() ? 1 : 0}|${kerrokset}`;
+  return `${piirtokoeValinta()}|${kehysprofiiliPaalla() ? 1 : 0}|${kerrokset}|${poltetutNostotPaalla() ? 1 : 0}`;
 }
 
 /**
@@ -319,4 +342,30 @@ export function voimassaOlevatKokeet(haku) {
   const joukko = new Set(arvo.split(',').map((k) => k.trim()).filter(Boolean));
   if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
   return laajennaKokeet(joukko);
+}
+
+/*
+ * SUORAAN KARTALLE (omistajan testitila 23.9.2026 klo 10.50). Päällä:
+ * uudelleenlataus avaa pelin suoraan kartalle tallennetusta tilasta ilman
+ * "Peli päivittyi" -ikkunaa, kaupunkiin saapumisen traileria, isoja
+ * luentakuvia ja pulun välihuutoja, eivätkä isoisän ja pulun luennat
+ * käynnisty itsestään — merkinnän teksti on kortissa heti, ja "Kuuntele"
+ * toimii käsin. Tallennus, eteneminen ja äänet muuten ennallaan. Myös
+ * osoitteessa `?koe=suoraan`.
+ */
+export const SUORAAN_AVAIN = 'matkakirja-suoraan-kartalle';
+
+/** Onko testitila "Suoraan kartalle" päällä (valikko tai ?koe=suoraan). */
+export function suoraanKartallePaalla(haku) {
+  if (haku === undefined && lueMuisti(SUORAAN_AVAIN) === '1') return true;
+  // Lehtikuori (?lehti=, js/lehtikuori.js) ohittaa saman: ei päivitysikkunaa, traileria eikä luentaa.
+  try { if (new URLSearchParams(haku ?? globalThis.location?.search ?? '').get('lehti')) return true; } catch { /* ei osoitetta */ }
+  return voimassaOlevatKokeet(haku).has('suoraan');
+}
+
+/** Kytkin päälle/pois laitteelle. */
+export function asetaSuoraanKartalle(paalla) {
+  kirjoitaMuisti(SUORAAN_AVAIN, paalla ? '1' : '0');
+  globalThis.dispatchEvent?.(new CustomEvent(PIIRTOKOE_TAPAHTUMA, { detail: { suoraan: Boolean(paalla) } }));
+  return Boolean(paalla);
 }

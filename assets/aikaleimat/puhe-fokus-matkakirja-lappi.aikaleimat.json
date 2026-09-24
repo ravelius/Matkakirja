@@ -1,234 +1,182 @@
 {
   "versio": 2,
   "kaupunki": "lappi",
-  "teksti": "Rovaniemellä Ounasjoki tuo vetensä Kemijokeen kuin matkustaja suurempaan veneeseen. Rannassa sidottiin kuormaa, ja kauppapuodissa puhuttiin yläjuoksun puista. Olin piirtänyt joet rajoiksi. Täällä ne olivat teitä. Veneeseen astuva nainen tiesi seuraavan talon savusta, ei kartasta. Lisäsin rannalle talon ja jätin savulle tilaa nousta.",
-  "tekstiSha256": "a35a4a58ae3b058114a3e31adab4db7a6df7abc74ebb3bd00d735067ea1b631c",
+  "teksti": "Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei kartasta. Lisäsin talon ja jätin savulle tilaa nousta.",
+  "tekstiSha256": "bd195fe98753435f3048b20070c9e6be570f9c85ed96268872125d530d8dadb6",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-lappi.mp3",
     "versio": 2,
-    "tavut": 483622,
-    "sha256": "5cd7c9416d5027cb2db694bdeeb3cd0da8488cd4755e7fbebfd4597265d8d3c9"
+    "tavut": 364504,
+    "sha256": "db8cc5e2d10e1cdc575d5371867e74868502f75b27fd42ffb57f0b46967eea73"
   },
-  "kesto": 30139,
+  "kesto": 22680,
   "sanat": [
     {
       "sana": "Rovaniemellä",
-      "alku": 159,
-      "loppu": 899
+      "alku": 220,
+      "loppu": 980
     },
     {
       "sana": "Ounasjoki",
-      "alku": 939,
-      "loppu": 1620
+      "alku": 1420,
+      "loppu": 1960
     },
     {
-      "sana": "tuo",
-      "alku": 1779,
-      "loppu": 1939
-    },
-    {
-      "sana": "vetensä",
-      "alku": 2000,
-      "loppu": 2379
+      "sana": "liittyi",
+      "alku": 2020,
+      "loppu": 2480
     },
     {
       "sana": "Kemijokeen",
-      "alku": 2500,
-      "loppu": 3220
+      "alku": 2540,
+      "loppu": 3280
     },
     {
       "sana": "kuin",
-      "alku": 3379,
-      "loppu": 3539
+      "alku": 3540,
+      "loppu": 3720
     },
     {
       "sana": "matkustaja",
-      "alku": 3599,
-      "loppu": 4199
+      "alku": 3780,
+      "loppu": 4400
     },
     {
       "sana": "suurempaan",
-      "alku": 4319,
-      "loppu": 4819
+      "alku": 4460,
+      "loppu": 5000
     },
     {
       "sana": "veneeseen",
-      "alku": 4900,
-      "loppu": 5579
-    },
-    {
-      "sana": "Rannassa",
-      "alku": 7199,
-      "loppu": 7559
-    },
-    {
-      "sana": "sidottiin",
-      "alku": 7639,
-      "loppu": 8139
-    },
-    {
-      "sana": "kuormaa",
-      "alku": 8220,
-      "loppu": 8739
-    },
-    {
-      "sana": "ja",
-      "alku": 9059,
-      "loppu": 9139
-    },
-    {
-      "sana": "kauppapuodissa",
-      "alku": 9199,
-      "loppu": 10019
-    },
-    {
-      "sana": "puhuttiin",
-      "alku": 10059,
-      "loppu": 10599
-    },
-    {
-      "sana": "yläjuoksun",
-      "alku": 10699,
-      "loppu": 11300
-    },
-    {
-      "sana": "puista",
-      "alku": 11420,
-      "loppu": 11960
+      "alku": 5060,
+      "loppu": 5700
     },
     {
       "sana": "Olin",
-      "alku": 14079,
-      "loppu": 14279
+      "alku": 7420,
+      "loppu": 7620
     },
     {
       "sana": "piirtänyt",
-      "alku": 14319,
-      "loppu": 14779
+      "alku": 7680,
+      "loppu": 8200
     },
     {
       "sana": "joet",
-      "alku": 14859,
-      "loppu": 15179
+      "alku": 8260,
+      "loppu": 8560
     },
     {
       "sana": "rajoiksi",
-      "alku": 15279,
-      "loppu": 15859
+      "alku": 8620,
+      "loppu": 9220
     },
     {
-      "sana": "Täällä",
-      "alku": 17180,
-      "loppu": 17479
+      "sana": "täällä",
+      "alku": 10300,
+      "loppu": 10580
     },
     {
       "sana": "ne",
-      "alku": 17520,
-      "loppu": 17579
+      "alku": 10620,
+      "loppu": 10680
     },
     {
       "sana": "olivat",
-      "alku": 17600,
-      "loppu": 17939
+      "alku": 10720,
+      "loppu": 11060
     },
     {
       "sana": "teitä",
-      "alku": 18000,
-      "loppu": 18440
+      "alku": 11120,
+      "loppu": 11640
     },
     {
       "sana": "Veneeseen",
-      "alku": 20119,
-      "loppu": 20579
+      "alku": 13440,
+      "loppu": 13900
     },
     {
       "sana": "astuva",
-      "alku": 20619,
-      "loppu": 20959
+      "alku": 13960,
+      "loppu": 14300
     },
     {
       "sana": "nainen",
-      "alku": 21020,
-      "loppu": 21340
+      "alku": 14360,
+      "loppu": 14840
     },
     {
-      "sana": "tiesi",
-      "alku": 21399,
-      "loppu": 21699
+      "sana": "löysi",
+      "alku": 14900,
+      "loppu": 15180
     },
     {
       "sana": "seuraavan",
-      "alku": 21760,
-      "loppu": 22239
+      "alku": 15240,
+      "loppu": 15820
     },
     {
       "sana": "talon",
-      "alku": 22340,
-      "loppu": 22559
+      "alku": 15880,
+      "loppu": 16160
     },
     {
       "sana": "savusta",
-      "alku": 22659,
-      "loppu": 23139
+      "alku": 16239,
+      "loppu": 16760
     },
     {
       "sana": "ei",
-      "alku": 23920,
-      "loppu": 24039
+      "alku": 17300,
+      "loppu": 17420
     },
     {
       "sana": "kartasta",
-      "alku": 24100,
-      "loppu": 24739
+      "alku": 17480,
+      "loppu": 18180
     },
     {
       "sana": "Lisäsin",
-      "alku": 26719,
-      "loppu": 27059
-    },
-    {
-      "sana": "rannalle",
-      "alku": 27139,
-      "loppu": 27599
+      "alku": 19960,
+      "loppu": 20360
     },
     {
       "sana": "talon",
-      "alku": 27659,
-      "loppu": 28459
+      "alku": 20420,
+      "loppu": 20840
     },
     {
       "sana": "ja",
-      "alku": 28519,
-      "loppu": 28579
+      "alku": 20900,
+      "loppu": 20960
     },
     {
       "sana": "jätin",
-      "alku": 28639,
-      "loppu": 28899
+      "alku": 21020,
+      "loppu": 21300
     },
     {
       "sana": "savulle",
-      "alku": 29000,
-      "loppu": 29439
+      "alku": 21360,
+      "loppu": 21740
     },
     {
       "sana": "tilaa",
-      "alku": 29500,
-      "loppu": 29779
+      "alku": 21880,
+      "loppu": 22200
     },
     {
       "sana": "nousta",
-      "alku": 29840,
-      "loppu": 30139
+      "alku": 22260,
+      "loppu": 22680
     }
   ],
   "lauseet": [
-    159,
-    7199,
-    14079,
-    17180,
-    20119,
-    26719
+    220,
+    7420,
+    13440,
+    19960
   ],
-  "luotu": "2026-09-11T12:05:19.294Z"
+  "luotu": "2026-09-23T15:38:23.361Z"
 }
