@@ -106848,7 +106848,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruutukaava erottuu keskellä, ja oikealla avautuu Superpitin '
             + 'vaaleanharmaa, epäsäännöllisen muotoinen kuilu '
             + 'kaivosalueineen.',
-          lahde: 'Jesse Allen, NASA Earth Observatory (Public domain)',
+          lahde: 'Jesse Allen, NASA Earth Observatory, Wikimedia Commons (Public domain)',
           wiki: 'Super Pit gold mine',
         },
         {
