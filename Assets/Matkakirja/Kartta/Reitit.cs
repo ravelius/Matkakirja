@@ -194,7 +194,7 @@ namespace Matkakirja
 
         void Update()
         {
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             foreach (var m in new[] { maa, meri, lento, korostus })
                 if (m != null) m.SetFloat("_Kerroin", kerroin);
         }

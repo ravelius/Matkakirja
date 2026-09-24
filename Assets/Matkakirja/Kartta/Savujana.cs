@@ -96,7 +96,7 @@ namespace Matkakirja
             if (kamera != null)
             {
                 float etaisyys = Vector3.Distance(kamera.transform.position, paikat[paikat.Length - 1]);
-                float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+                float kerroin = PalloKierto.Pistekerroin;
                 float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
                 viiva.widthMultiplier = pikseli * leveysPx * kerroin;
             }
