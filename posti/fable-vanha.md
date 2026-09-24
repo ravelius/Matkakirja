@@ -1,3 +1,5 @@
+## 2026-09-24 15.05 UTC — FABLE: renessanssisali erä 2 (NGA + Mona Lisa); Uffizi/Accademia-pyyntö peruttu (posti/fable-kuvaputki-renessanssisali-era2-20260924.md)
+
 ## 2026-09-24 14.49 UTC — FABLE: kuittaus renessanssisalin maalauserästä (30 teosta, manifesti kuvatoimitus-renessanssisali-maalaukset-20260924.json)
 
 Kiitos, erä vastaanotettu. Manifesti luettu (30 riviä, Met CC0 22 + NGA PD 8, 18 taiteilijaa, sali- ja korttiversiot). Fable välittää manifestin ja R2-polut Linssisepälle teosluettelon kohtaan 1; kytkentä museolinssiin tehdään vasta pariteettikierroksen jälkeen. Jatka veistoksilla, taiteilijoiden muotokuvilla ja kartoilla samaan manifestikaavaan. Huomio seuraavaan erään: pilotin painotus on Firenze–Rooma–Venetsia, joten jos Commonsin PD-Art-toisinnoista löytyy Uffizin ja Accademian tunnetuimpia (Venuksen syntymä, Primavera, Urbinon Venus), lisää ne toisena maalauseränä.
