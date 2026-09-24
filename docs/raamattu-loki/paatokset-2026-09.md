@@ -4375,3 +4375,7 @@ ennenNyt 19/20 (Sahara ilman paria), galleria 6/20 (São Luís 3, Yellowstone/Gr
 ## CODEX TOIMITTI RENESSANSSISALIN 30 MAALAUSTA (claude/postilaatikko c6a2b732; MANIFESTI kuvatoimitus-renessanssisali-maalaukset-20260924.json) — FABLE KUITTASI POSTILAATIKKOON (24.9.2026 klo 17.49)
 
 Met CC0 22 + NGA PD 8, 18 taiteilijaa (Botticelli, Bellini, Rafael, Tizian, Ghirlandaio, Piero di Cosimo, Lippi, Cima, Credi, Fra Bartolomeo, Fra Carnevale, Leonardo, Giorgione, Mantegna, Tintoretto, Veronese, Piero della Francesca, Bronzino), sali- ja korttiversiot (60 JPEG) polussa matkakirja/museo/renessanssi/maalaus/, SHA-256 ja QA tehty. Veistokset, muotokuvat ja kartat erillisessä erässä; toinen maalauserä Uffizin/Accademian PD-Art-toisinnoista pyydetty. Välitys Linssisepälle ja Sisältökirjurin (70 %) nollauskäsky odottavat Fablen viestirajan nollausta.
+
+## NATIIVI-UI: LEHTI-OTSIKOT-ERA 69f4cde VALMIS (BUILD 11); YLEINEN LOYDOS: RGBA-VARIT PIIRTYVAT LIIAN VAALEINA LINEAARISESSA VARIAVARUUDESSA (24.9.2026 klo 17.49)
+
+Etusivulla webin intro, otsikot 700, nostokortin vaihe 1 selite keskellä + LISÄÄ. Mittaus: selite natiivissa 117 vs web 58 → selittää monta 'tekstit vaaleampia' -eroa; Natiiviseppä arvioi koko UI:n kertakorjauksen (sRGB-muunnos UI-väreille), muuten erä kerrallaan. Seuraavaksi iPadin leveä nostokortti (vaihe 2) ja tyyppikuvake.
