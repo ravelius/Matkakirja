@@ -31,6 +31,11 @@ namespace Matkakirja
         public const string Kansio = "julisteet/pallo/kerma/" + Versio + "/";
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
         public const int AlinTaso = 5;
+        /// <summary>
+        /// Alin käytetty huntutaso (Fable 24.9.: Z3–Z4 ämpärissä, mutta ensin kokeillaan pelkkä zoomihäivytys Z5:stä;
+        /// komento "vari alin 3" ottaa Z3–Z4:n käyttöön vertailuun).
+        /// </summary>
+        public static int AlinKaytetty = AlinTaso;
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
 
@@ -136,7 +141,7 @@ namespace Matkakirja
                 try { l = JsonUtility.FromJson<Luettelo>(r.downloadHandler.text); } catch { }
                 var a = l?.varitaso?.alue;
                 if (a == null) { Poista(); ladattu = null; Maa = null; yield break; }
-                if (l.tasot != null && l.tasot.max > 0) { tasoMin = l.tasot.min; tasoMax = l.tasot.max; }
+                if (l.tasot != null && l.tasot.max > 0) { tasoMin = Math.Max(l.tasot.min, AlinKaytetty); tasoMax = l.tasot.max; }
                 Laattapalvelin.VariAlue(Kansio + maa + "/", a.lon0, a.lat0, a.lon1, a.lat1, Kansio + "_maailma/", tasoMin);
             }
             ladattu = maa;
@@ -217,6 +222,9 @@ namespace Matkakirja
             Destroy(kerros);
             kerros = null;
         }
+
+        /// <summary>Luettelo ja kerros uudelleen seuraavassa Updatessa (esim. AlinKaytetty muuttui).</summary>
+        public void Uudelleen() => haluttu = null;
 
         /// <summary>Linssin raster-kerros kartalla: väritaso väistyy (Cesiumissa kolme paikkaa).</summary>
         public void Linssit(bool paalla)
