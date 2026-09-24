@@ -75,6 +75,17 @@ namespace Matkakirja.Natiivi
         Action kirjoitettu;
 
         public bool Nakyy => kortti.style.display == DisplayStyle.Flex;
+
+        /// <summary>Kortti on yhden rivin lappu (ei auki).</summary>
+        public bool Lappuna => Nakyy && pieni;
+
+        /// <summary>Lappu häipyy offline-pillerin vuoron ajaksi (sama yläkulma; OfflineTilaUi.Vuorottele).</summary>
+        public void Vaisty(bool v)
+        {
+            if (kortti.ClassListContains("mk-matkakirja--vaistyy") == v) return;
+            kortti.EnableInClassList("mk-matkakirja--vaistyy", v);
+            kortti.pickingMode = v ? PickingMode.Ignore : PickingMode.Position;
+        }
         /// <summary>Kortin merkinnän avain (web factKey), tai null.</summary>
         public string Avain => merkinta?.Avain;
         /// <summary>Otsikko on paikallaan, mutta teksti odottaa kirjoitusta (web: traileri/luento kesken).</summary>
