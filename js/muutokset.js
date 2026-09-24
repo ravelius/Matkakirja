@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2172, teksti: 'M1: kuusi puuttuvaa maalehteä (#3035)' },
   { v: 2171, teksti: 'Vanuatun kartuscha valmiiksi: tervehdys Wikivoy… (#3033)' },
   { v: 2170, teksti: 'Korjaa St. John\'sin kuvien apostrofit (#3029)' },
   { v: 2169, teksti: 'v2156: Vesistölinssin joet yhtenäisinä pallolla (#3024)' },

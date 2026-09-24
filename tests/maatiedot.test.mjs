@@ -46,6 +46,22 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * muutkin Pohjois-Amerikan rivit (js/packs/northamerica-maatiedot.js).
  * Lista saa vain lyhentyä.
  */
+/*
+ * Kuusi uutta pientä maalehteä saivat aihesivunsa 24.9.2026: BMU
+ * (Bermuda) ja PRI (Puerto Rico) Pohjois-Amerikan, GUF (Ranskan
+ * Guayana) ja FLK (Falklandinsaaret) Etelä-Amerikan, NCL (Uusi-
+ * Kaledonia) ja NFK (Norfolkinsaari) Oseanian tauluihin. Tutkittu
+ * samana päivänä (Fablen tilaus): yhdellekään ei löydy täyttä riviä,
+ * sama peruste kuin GRL/SHN/HKG:llä — ks. alla EI SUVEREENI -kommentti.
+ * BMU:lla ja PRI:llä on oma World Bank -rivi (väkiluku, pinta-ala,
+ * keskitulo olisivat saatavilla), NCL:llä samoin, mutta V-Demin/OWID:n
+ * liberal-democracy-index-aineistossa ei ole riviä yhdellekään
+ * kuudesta millään haulla — demokratia.arvo/sija/linkki jäisi siis
+ * aina tyhjäksi eikä testi hyväksyisi osittaista riviä. GUF:lle,
+ * FLK:lle ja NFK:lle World Bankin rajapinta ei tunnista maakoodia
+ * lainkaan. Nämä kuusi jäävät siis pysyvästi tälle listalle GRL/SHN/
+ * HKG:n tapaan, eikä niitä yritetä uudelleen ilman uutta tietolähdettä.
+ */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
@@ -58,6 +74,7 @@ const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // Bislama-fraasisanaston tervehdyksen lähteeksi, kun Wiktionarysta
   // ja en-Wikipedian kieliartikkelista ei löytynyt hakusanaa (ks.
   // js/packs/oceania-maatiedot.js:n VUT-rivin kommentti).
+  'BMU', 'PRI', 'GUF', 'FLK', 'NCL', 'NFK',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;
