@@ -1,0 +1,2565 @@
+{
+  "erä": "linssikatalogi-era1-20260924",
+  "tila": "110 R2-objektia todennettu lukemalla takaisin; pelin kytkentä ja julkaistun pelin näkyminen odottavat Fablea",
+  "tilaus": "posti/fable-kuvaputki-linssikatalogi-kuvitus-20260924.md",
+  "count": {
+    "lenses": 29,
+    "concepts": 29,
+    "cc": 26,
+    "cc_not_found": 3,
+    "objects": 110
+  },
+  "entries": [
+    {
+      "id": "A2",
+      "nimi": "Kristinusko leviää Eurooppaan",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kultaiset pisteet seuraavat kristinuskon leviämisen pysäkkejä Välimereltä Pohjois-Eurooppaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Create a visually compelling, clean, image-only game map for the lens 'Christianity spreads across Europe, 30–1000 CE'. An elegant oblique top-down antique parchment cartographic map of Europe and the eastern Mediterranean, recognizable coastlines and landmasses, restrained dark sepia/charcoal earth with warm cream and aged brass accents, fine engraved geographic texture. Six small glowing gold location nodes across Athens, Nicaea in Anatolia, Iona off Scotland, Canterbury, Kyiv, and Uppsala, connected by subtle historically evocative traveling routes that progress across the map. Add a delicate brass time instrument hint along the lower edge, without ticks or lettering. The mood is curious and illuminating, not religious propaganda. Make map geography dominant and easy to read at thumbnail size, with polished painterly 3D depth, cinematic grazing light, and restrained luminous highlights. Style guidance from the project references: antique cream/ink catalogue and dark nighttime globe with delicate pinpoint lights, but this is a standalone illustration. No UI, no controls, no panels, no labels, no letters, no numbers, no symbols or logos, no people, no screenshot, no watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249502,
+            "sha256": "27fb578427aaaea270461ea09aa1ee044c59cc4ff8db53a42cc68de10b13a081",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:34.645Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30899,
+            "sha256": "78f962100178993c1c467887bc5fe8516278e901bbae35715d5404b07771881e",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:39.762Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Bukarestin Stavropoleos-kirkon vanha seinämaalaus esittää Nikaian kirkolliskokousta; kuva on myöhempi taiteellinen tulkinta vuoden 325 tapahtumasta.",
+        "creator": "Kostisl (valokuva); 1700-luvun tuntematon maalari",
+        "title": "Nikaian ensimmäinen kirkolliskokous, Stavropoleos-kirkon seinämaalaus",
+        "year": "1700-luku; valokuva 2008",
+        "collection": "Stavropoleos-kirkko, Bukarest",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Council_of_Nicea-stavropoleos_church.JPG",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285709,
+            "sha256": "98b192136390a2b0219804716355903e6aa3b34f572bed8694d9907acee52c56",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:44.920Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 73638,
+            "sha256": "25508667258de574ad025f1152204c4e09b36b7a9cca267e4ed5b9db6b59011f",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:47.447Z"
+            }
+          }
+        ],
+        "attribution": "Kostisl (valokuva); 1700-luvun tuntematon maalari, Nikaian ensimmäinen kirkolliskokous, Stavropoleos-kirkon seinämaalaus (1700-luku; valokuva 2008), Stavropoleos-kirkko, Bukarest. Public domain. https://commons.wikimedia.org/wiki/File:First_Council_of_Nicea-stavropoleos_church.JPG"
+      }
+    },
+    {
+      "id": "A4",
+      "nimi": "Uskonpuhdistus",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Uskonpuhdistuksen keskukset syttyvät Keski-Euroopan pergamenttikartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Create a visually compelling, clean, image-only game map for the lens 'The Reformation, central Europe, 1517–1648'. Oblique top-down antique parchment cartography focused on central Europe, accurate recognizable continental shapes, a restrained ink/cream/sepia palette with one subdued deep teal accent. Luminous brass-gold chronological nodes at Wittenberg, Zurich, Geneva, Trent, Paris, and the Westphalia region, linked by hairline routes like a historical timeline moving across the map. Very subtle engraved border changes suggest different regions and the spread of ideas; avoid depicting violence or people. A small elegant unlabeled brass time dial arc is barely visible at the bottom edge. Map geography dominates at thumbnail size, with painterly 3D relief, fine engraved texture, cinematic grazing light and gentle vignette. Style from antique cream and dark globe references; standalone illustration, not a UI. No UI, no controls, no panels, no labels, no letters, no numbers, no symbols or logos, no people, no screenshot, no watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244307,
+            "sha256": "ba02d2421e67755fc430562640cfb71c035c7e96f41d7daa6cbe4ba19a437992",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:49.628Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34673,
+            "sha256": "c23d9bb6584031ca71105a27bb287c44b88bb6d14e15a5c2409ad140b81a2722",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:51.886Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1915 postikortti näyttää Wittenbergin linnankirkon, jonka 1517 teesit liittivät uskonpuhdistuksen historiaan.",
+        "creator": "Brück & Sohn, Meißen",
+        "title": "Schlosskirche und Schlosskaserne, Wittenberg (postikortti)",
+        "year": "1915",
+        "collection": "Brück & Sohn -postikorttikokoelma, Zeno.org",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wittenberg,_Lutherstadt,_Sachsen-Anhalt_-_Schlosskirche_und_Schlosskaserne_(Zeno_Ansichtskarten).jpg",
+        "transform_note": "1280 px source mounted without upscaling; full-size Commons download was rate-limited",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 286005,
+            "sha256": "e2ead9d8ba4697a29bc27b966a39308a33a01480837489f4ac590180a24534c7",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:53.660Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 19863,
+            "sha256": "3d2b8d13a3d2bf86705605d81cadd7728d6ffd2ceb20862f5a1dff6389366467",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:55.457Z"
+            }
+          }
+        ],
+        "attribution": "Brück & Sohn, Meißen, Schlosskirche und Schlosskaserne, Wittenberg (postikortti) (1915), Brück & Sohn -postikorttikokoelma, Zeno.org. Public domain. https://commons.wikimedia.org/wiki/File:Wittenberg,_Lutherstadt,_Sachsen-Anhalt_-_Schlosskirche_und_Schlosskaserne_(Zeno_Ansichtskarten).jpg"
+      }
+    },
+    {
+      "id": "B1",
+      "nimi": "Keksinnöt Euroopassa",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Eurooppalaisten keksintöjen aikajana kulkee höyrykoneesta valokuvaukseen ja radioon.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: European inventions, 1769–1928. Antique parchment relief map of Europe with subtle topography and no modern country borders; warm cream, sepia ink, dark sea and brass-gold light. Small accurate glowing nodes at Britain for Watt and Stephenson, Paris for Daguerre, Berlin for Siemens, southwest Germany for Benz, Italy for Marconi, London for Fleming. Fine chronological routes thread between the nodes; sparse engraved silhouettes of a steam engine, early camera and radio wave appear as faint map-layer details, not freestanding objects. A tiny unlabeled brass film-strip arc along the lower edge. Geography remains dominant and legible as a thumbnail. Painterly 3D cartographic depth, soft cinematic light, restrained vignette. No UI, buttons, panels, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248182,
+            "sha256": "7bb223b535d5037804020158be2762b1c7e2a6cbce3e4a8f1e5d7e2ff9d6c167",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:57.677Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36307,
+            "sha256": "e0f153d49e19cfeead201ccdae000b75e7a8df676a0072c51f85a2726300cf6c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:26:59.193Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1860 mezzotinto kuvaa James Wattia höyrykoneen äärellä, myöhempänä tulkintana eurooppalaisen teollistumisen alkuvaiheesta.",
+        "creator": "James Scott (kaiverrus), James Eckford Lauderin maalauksen mukaan",
+        "title": "James Watt and the Steam Engine",
+        "year": "1860",
+        "collection": "Science History Institute",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:James_Watt_and_the_Steam_Engine_-_DPLA_-_4ce34483443e96928d1e5b2fb1866ff7.jpg",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293888,
+            "sha256": "f96b469410c3209dd5daac03335ab0ba5be9f0d25f7a7ff243d03824599b3fe7",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:00.886Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44197,
+            "sha256": "6f9efdf8b2a917b5537da406ad6ec8f197eaa744b58645ae080218024bac8c26",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:02.567Z"
+            }
+          }
+        ],
+        "attribution": "James Scott (kaiverrus), James Eckford Lauderin maalauksen mukaan, James Watt and the Steam Engine (1860), Science History Institute. Public domain. https://commons.wikimedia.org/wiki/File:James_Watt_and_the_Steam_Engine_-_DPLA_-_4ce34483443e96928d1e5b2fb1866ff7.jpg"
+      }
+    },
+    {
+      "id": "B2",
+      "nimi": "Tiede ennen höyryä",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Tieteen varhaiset pysäkit yhdistyvät tähtitaivaan kaariin Euroopan kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: Science before steam, 1543–1760. Elegant antique parchment relief map of Europe, with no modern state borders, showing precise warm luminous nodes at Frombork in Poland, Ven island between Denmark and Sweden, Padua, Prague, Cambridge and Uppsala. Delicate route arcs suggest an intellectual timeline. An engraved celestial orbit and faint star geometry overlay the cartography, with a small unlabeled brass time dial at the bottom. Cream paper, sepia contours, dark indigo sea, restrained gold highlights, gentle vignette, painterly 3D map. The locations and coastline must read clearly at thumbnail size. No UI, buttons, panels, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242934,
+            "sha256": "0d8aae029a265b292dc7cecd0e708e0593647607ba05dcc8a2e7b487cb44212f",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:04.123Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35391,
+            "sha256": "f01cfb5f1de84d6e72a195737dea683e4b158e544ad9f381dfd5b7b15a535327",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:05.523Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jan Matejkon maalaus esittää Kopernikusta Fromborkissa tähtitieteen murroksen äärellä; näkymä on 1800-luvun tulkinta.",
+        "creator": "Jan Matejko",
+        "title": "Astronom Kopernik, czyli rozmowa z Bogiem (Astronomer Copernicus, or Conversations with God)",
+        "year": "1872–1873 (Commonsin päiväys 1872; maalauksen signeeraus 19.2.1873)",
+        "collection": "Jagiellonian University Museum, Krakova",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jan_Matejko-Astronomer_Copernicus-Conversation_with_God.jpg",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 277479,
+            "sha256": "939660fd7003811f62185b2dae60710907c6ae794cff28d481f35bcd470db19a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:07.382Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 57481,
+            "sha256": "f76ef425228cebad0ee4d92058d9dfe182bec5eff6f21fad3fb0a4fd857cecea",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:09.311Z"
+            }
+          }
+        ],
+        "attribution": "Jan Matejko, Astronom Kopernik, czyli rozmowa z Bogiem (Astronomer Copernicus, or Conversations with God) (1872–1873 (Commonsin päiväys 1872; maalauksen signeeraus 19.2.1873)), Jagiellonian University Museum, Krakova. Public domain. https://commons.wikimedia.org/wiki/File:Jan_Matejko-Astronomer_Copernicus-Conversation_with_God.jpg"
+      }
+    },
+    {
+      "id": "B3",
+      "nimi": "Lääketieteen läpimurrot",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Lääketieteen läpimurtojen solmut valaisevat Euroopan karttaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: Breakthroughs in medicine, 1796–1928. Antique parchment relief map of western and central Europe with no modern state-border network, small luminous gold nodes at Gloucestershire, Vienna, London, Paris, Berlin and Würzburg. Fine chronological travel lines connect them. Subtle scientific engraved motifs woven into the map surface: microscope lens, clean water ripples, a vaccination vial silhouette and a faint X-ray hand, all understated and historically evocative; no hospital scene. Warm cream and sepia, dark teal waters, brass light, cinematic gentle vignette, legible map at thumbnail size. Small unlabeled brass time hint at lower edge. No UI, buttons, panels, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242830,
+            "sha256": "2192443414a0bd5a188a8601d13556062836ee387e74b31ee3b480f9af0136ac",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:12.683Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36849,
+            "sha256": "f3cb2cd0dfa3c9a38bddb7b96b4e49be3297fbad15fe50374f08b28d8775a96a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:14.365Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1884 litografia esittää Edward Jennerin rokottamassa lasta; kyse on myöhemmästä historiallisesta tulkinnasta.",
+        "creator": "Tuntematon litografi Eugène-Ernest Hillemacherin mukaan",
+        "title": "A young Edward Jenner vaccinates an anxious looking child seated on its mother's lap",
+        "year": "1884",
+        "collection": "Wellcome Collection, Iconographic Collections, V0018752",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:A_young_Edward_Jenner_vaccinates_an_anxious_looking_child_se_Wellcome_V0018752.jpg",
+        "transform_note": "centred crop; attribution required; https://creativecommons.org/licenses/by/4.0/",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 294172,
+            "sha256": "ce28018ed06091e0efa530d760440a6229dc0256db273f4e9e6a65f6e7c10349",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:16.199Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 67895,
+            "sha256": "3243ca92d9ea2b571ec8fcae833a7b324547eff4b152a2743c99246cf02cd8fe",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:17.840Z"
+            }
+          }
+        ],
+        "attribution": "Tuntematon litografi Eugène-Ernest Hillemacherin mukaan, A young Edward Jenner vaccinates an anxious looking child seated on its mother's lap (1884), Wellcome Collection, Iconographic Collections, V0018752. CC BY 4.0. https://commons.wikimedia.org/wiki/File:A_young_Edward_Jenner_vaccinates_an_anxious_looking_child_se_Wellcome_V0018752.jpg"
+      }
+    },
+    {
+      "id": "B7",
+      "nimi": "Vanhin maailmankuva pallolla",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Vanha maailmankartta kietoutuu pallon pinnalle kartoituksen muuttuessa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: The oldest worldview on a globe, 1507–1873. A dramatic close oblique view of a parchment-covered antique globe, with engraved early cartography gradually giving way to more precise coastlines across its surface, showing Africa and adjacent continents most prominently. Delicate warm luminous cartographic nodes around the European mapmaking centers and an exploratory route toward the Congo basin; historically respectful and no people. Cream and sepia paper, deep brown ocean, subtle brass meridian rings and an unlabeled time dial hint, convincing spherical 3D depth, gentle vignette. The globe must be the unmistakable dominant subject, image-only game concept. No UI, buttons, slider, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248921,
+            "sha256": "6a2357653c5cae2cd72cc17974e9a98bc770edd02ea4c95f4bda2c0f8a749ac4",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:19.528Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 33015,
+            "sha256": "cd83762c13e7f292a76d99c291f263610005b9b2b577ac0ada3520b7355af71c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:22.220Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Waldseemüllerin vuoden 1507 kartta näyttää aikansa käsityksen mantereista, ei nykyisen maantieteen tarkkaa kuvaa.",
+        "creator": "Martin Waldseemüller",
+        "title": "Universalis Cosmographia (Waldseemüllerin maailmankartta)",
+        "year": "1507",
+        "collection": "Library of Congress",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map.jpg",
+        "transform_note": "centred crop; mild 0.8 px smoothing to meet 300 KB limit",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291653,
+            "sha256": "d658a9c949ff1fb092a706d7a87d45a19853bb3979fede0a9305b5daedbfe52a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:24.004Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 53047,
+            "sha256": "0c4efeda0c7f319f55315a44e9e05733283019d8370310129a0a6fc7acd50231",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:25.930Z"
+            }
+          }
+        ],
+        "attribution": "Martin Waldseemüller, Universalis Cosmographia (Waldseemüllerin maailmankartta) (1507), Library of Congress. Public domain. https://commons.wikimedia.org/wiki/File:Waldseemuller_map.jpg"
+      }
+    },
+    {
+      "id": "C7",
+      "nimi": "Ihmisen matka",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ihmisen pitkät muuttoreitit haarautuvat Afrikasta eri mantereille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: Human migration from deep prehistory to Aotearoa. Oblique top-down antique parchment world map, accurate recognizable continents. A few warm luminous origin nodes in east Africa near Omo Kibish and northwest Africa near Jebel Irhoud; delicate branching gold migration routes flow through Eurasia toward Beringia and the Americas, and through Southeast Asia and Sahul toward Lapita islands and Aotearoa. Show broad paths across long time, with no false straight-line precision or historical borders. Warm cream, sepia relief, dark blue-brown sea, brass glow, painterly depth and gentle vignette. A subtle unlabeled time arc at the lower edge. Respectful, no human figures. No UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 241903,
+            "sha256": "6f88259cf9bdab5372dad6d26b5b919b3e11ebc4e72b16b4c329b60907447001",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:27.713Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32000,
+            "sha256": "8fb9dd309b4ead632adfa0c11f423736f303c93d9168af8c69ff630ee3d818b1",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:29.140Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "ei löytynyt",
+        "reason": "Tilauksen vaatimaa vanhaa valokuvaa, historiallista taideteosta tai aikakauden karttaa juuri ihmisen esihistoriallisesta matkasta ei löytynyt. Jebel Irhoudin fossiilin nykyinen museovalokuva ja nykyiset muuttoliikekartat hylättiin kuvatyyppirajauksen vuoksi.",
+        "files": []
+      }
+    },
+    {
+      "id": "E7",
+      "nimi": "Taidemuseo-linssi (natiivi, 3D-salit)",
+      "tyyppi": "museo",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kolmiulotteinen taidemuseon sali avautuu teosten ja aikakausien läpi.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical lens catalogue, single 16:9 landscape concept image. Lens: Art museum in a native 3D hall, antiquity to modern art. A clearly three-dimensional walkable Renaissance-inspired museum gallery viewed at human eye level, with warm travertine arches, a central passage leading to connected rooms, and carefully lit nonfigurative artworks across historical styles: an antique patterned ceramic vessel, a Renaissance architectural landscape, a Baroque still life, a Romantic storm landscape, an Impressionist garden, and an abstract modern color composition. The works are original invented objects, and show no people or bodies. Florence-Rome-Venice Renaissance pilot atmosphere. Refined cream, parchment, dark wood and brass palette; soft daylight and warm gallery pools, cinematic spatial depth, polished game-world concept. The 3D hall must dominate, not a map. No visitors, no portraits, no nudity, no UI, buttons, plaques, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/E7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 236452,
+            "sha256": "d9570ef483511c2963e36337d17278d91f65a40838a4217c0890ee363146b66d",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:34.544Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/E7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32254,
+            "sha256": "3cbfd34ddae787d13096c48d76c359f96ea5f65559d12c906c540f1a509b2ae6",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:36.529Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Botticellin Venuksen syntymä on Firenzen renessanssin tunnettu teos Uffizin kokoelmissa.",
+        "creator": "Sandro Botticelli",
+        "title": "The Birth of Venus",
+        "year": "noin 1485",
+        "collection": "Uffizin galleria, Firenze",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/E7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 281638,
+            "sha256": "e703dd4a26145fb98d1cc6b4f1a54ddef4b26635d85996044243ad2adaee5d0c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:39.381Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/E7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 62774,
+            "sha256": "899ca182ff94f62d40346ef6ffc2ba5879388a8b5aaa36bacf1f81c4e09410af",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:43.128Z"
+            }
+          }
+        ],
+        "attribution": "Sandro Botticelli, The Birth of Venus (noin 1485), Uffizin galleria, Firenze. Public domain. https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg"
+      }
+    },
+    {
+      "id": "M2",
+      "nimi": "Rooman nousu ja tuho",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Rooman valtakunnan alue piirtyy Välimeren ympärille punaisena kerroksena.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical area lens catalogue, single 16:9 landscape concept image. Lens: Rise and fall of Rome, 509 BCE–476 CE. Antique parchment relief map centered on the Mediterranean. The Roman sphere at its height is one dominant muted imperial red area painted over territories around the sea, with aged ink perimeter and a few successive faint ghost boundaries indicating growth and division; no present-day national borders. A handful of small gold nodes mark Rome, Carthage, Gaul, the eastern Mediterranean and the later western collapse. Warm cream coastlines, dark sea, brass and red accents, soft vignette and cinematic cartographic depth. Clear area overlay is primary, no armies or gore. No UI, buttons, panels, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/M2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247781,
+            "sha256": "536343988a81998cc46d8d57129c6d2a52754ed076e8312b3e00d123e6c76498",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:45.361Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/M2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30356,
+            "sha256": "623d760029f4508775b44dc90bf0bd8ba9a075d03d629710a57f2160d9015558",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:48.212Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Claude Lorrainin etsaus näyttää Rooman forumin raunioita 1600-luvulla, kauan keisarikunnan päättymisen jälkeen.",
+        "creator": "Claude Lorrain",
+        "title": "Forum Romanum te Rome: Le Campo Vaccino",
+        "year": "1636–1637",
+        "collection": "Rijksmuseum, Amsterdam, RP-P-OB-5700",
+        "license": "CC0 1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Forum_Romanum_te_Rome_Le_Campo_Vaccino,_RP-P-OB-5700.jpg",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/M2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296562,
+            "sha256": "c6bde3aadd7dc8f2ce6ef6385cf55a4145e3b4b9687616ccaf39e6780ca28e32",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:50.636Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/M2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 54261,
+            "sha256": "a4d9b562a6b65adc24cbb01f4a86356f88ad8f52174a1bf55967d388dba4bf37",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:52.948Z"
+            }
+          }
+        ],
+        "attribution": "Claude Lorrain, Forum Romanum te Rome: Le Campo Vaccino (1636–1637), Rijksmuseum, Amsterdam, RP-P-OB-5700. CC0 1.0. https://commons.wikimedia.org/wiki/File:Forum_Romanum_te_Rome_Le_Campo_Vaccino,_RP-P-OB-5700.jpg"
+      }
+    },
+    {
+      "id": "N1",
+      "nimi": "Napoleonin Eurooppa",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Napoleonin vaikutusalue ja sotareittien solmut levittäytyvät Euroopan kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical area lens catalogue, single 16:9 landscape concept image. Lens: Napoleonic Europe, 1796–1815. Antique parchment relief map of Europe and the Mediterranean, no present-day state borders. One dominant muted French blue area shows the Napoleonic sphere at its extent, with delicate aged-ink edges and subtle faded outlines showing expansion and retreat. Small warm nodes and thin campaign arcs suggest Italy, Egypt, Austerlitz, Spain, Moscow, Leipzig and Waterloo without map text. A restrained brass time arc at lower edge, cream and brown cartography, dark teal sea, soft vignette, painterly 3D relief, clear thumbnail silhouette. Historically evocative, no battle gore, no people. No UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244631,
+            "sha256": "b18bc2bd9979364213d2a99bc6d08dfcee0b0ed267c93d47b555cf58d358f8c1",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:55.788Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 33102,
+            "sha256": "f5b41a920672ece58fb755313776cf44c1d0bc949335e9c3ee1154ce310bb0fa",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:57.631Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jacques-Louis Davidin vuoden 1801 ratsastajamuotokuva rakentaa Napoleonista sankarikuvaa, eikä ole valokuva tapahtumasta.",
+        "creator": "Jacques-Louis David",
+        "title": "Napoleon Crossing the Alps (Charlottenburgin toinen versio)",
+        "year": "toukokuu 1801",
+        "collection": "Charlottenburgin linna, Berliini, GK I 913",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Schloss_Charlottenburg.jpg",
+        "transform_note": "960 px source mounted without upscaling; full-size Commons download was rate-limited",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 294718,
+            "sha256": "c98c79fb97ad32ef9f48732a61dd8221e5ea8efc9f19a0905ab843a365855572",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:27:59.429Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 28556,
+            "sha256": "d5a773f298e352520bea38f19a54332c628c2532fccda7b071d27c6ee9bb9066",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:01.441Z"
+            }
+          }
+        ],
+        "attribution": "Jacques-Louis David, Napoleon Crossing the Alps (Charlottenburgin toinen versio) (toukokuu 1801), Charlottenburgin linna, Berliini, GK I 913. Public domain. https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Schloss_Charlottenburg.jpg"
+      }
+    },
+    {
+      "id": "N2",
+      "nimi": "Ensimmäinen maailmansota",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ensimmäisen maailmansodan rintamalinjat näkyvät Euroopan hillityllä kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical area lens catalogue, single 16:9 landscape concept image. Lens: First World War, 1914–1918. Antique parchment map of Europe and eastern Mediterranean, no modern country-border network. A single dominant muted slate-blue overlay marks the broad war fronts; thin aged-ink front lines arc across France and Belgium, eastern Europe, and Gallipoli. A few restrained warm nodes point to Sarajevo, Marne, Gallipoli, Verdun, Somme and Brest-Litovsk. Historical map illustration, no soldiers, weapons, explosions, smoke or gore; serious quiet tone appropriate for ages 13+. Brass time hint at bottom, cream/brown parchment and dark sea, subtle vignette, cartographic depth and legible front pattern. No UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247771,
+            "sha256": "796eff6cb21ee99f4d265831ca84dc2dc66d04711bda5e1293b7598116e72d81",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:05.142Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32271,
+            "sha256": "456d8ffdda1eaf6b014100343e9280026f58cf219404138ec367362ab8d8796a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:07.296Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "John Warwick Brooken valokuva näyttää skotlantilaisia sotilaita reservihaudassa Sommen taistelun aikana marraskuussa 1916.",
+        "creator": "John Warwick Brooke",
+        "title": "Gordon Highlanders in a reserve trench, Bazentin-le-Petit (Battle of the Somme)",
+        "year": "marraskuu 1916",
+        "collection": "Imperial War Museums, Q 4475",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_the_Somme,_July-november_1916_Q4475.jpg",
+        "transform_note": "centred crop; non-graphic wartime photograph",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 283604,
+            "sha256": "9c048facdb646783a1d5eea7fc31148485701dd1b94465177236e4403dc4f2d7",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:09.487Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 45650,
+            "sha256": "4c6e64784aae12a34f06ad3fe1ee0d9300ad3ca3de3189e0fa76f28d17444f49",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:11.720Z"
+            }
+          }
+        ],
+        "attribution": "John Warwick Brooke, Gordon Highlanders in a reserve trench, Bazentin-le-Petit (Battle of the Somme) (marraskuu 1916), Imperial War Museums, Q 4475. Public domain. https://commons.wikimedia.org/wiki/File:The_Battle_of_the_Somme,_July-november_1916_Q4475.jpg"
+      }
+    },
+    {
+      "id": "N3",
+      "nimi": "Toinen maailmansota",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Toisen maailmansodan Euroopan ja Tyynenmeren rintamat hahmottuvat maailmankartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical area lens catalogue, single 16:9 landscape concept image. Lens: Second World War, 1939–1945. Wide antique parchment world map composed to include Europe on the left and the Pacific on the right, continents geographically recognizable, no modern country-border network. One dominant muted charcoal-blue overlay traces broad fronts in Europe and the Pacific, with a few thin aged-ink front lines and restrained warm nodes at Poland, France, Stalingrad, Normandy, Berlin, Pearl Harbor and Hiroshima. Convey geographic scale and shifting fronts without falsely depicting a single fixed empire. Quiet serious historical tone appropriate for ages 13+, no battle scenes, weapons, explosions, smoke, fire, people or gore. Cream and sepia map texture, brass glints, gentle vignette, painterly 3D depth. No UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 238614,
+            "sha256": "d17960deb59fd00587a63efc609343be8abb00240263252711accafe066ba3a9",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:13.673Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29871,
+            "sha256": "9f2eab7535ed8f9dc8f40ee8e111c592d0d3f4e592d6bfefb404a9bdd09c8b1c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:15.988Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Robert Sargentin historiallisessa valokuvassa yhdysvaltalaissotilaat nousevat maihin Normandiassa 6. kesäkuuta 1944.",
+        "creator": "Robert F. Sargent, U.S. Coast Guard",
+        "title": "Into the Jaws of Death",
+        "year": "6.6.1944",
+        "collection": "U.S. Coast Guard, 440606-G-G0000-1001",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_(6414569).jpg",
+        "transform_note": "centred crop; non-graphic wartime photograph",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/N3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 275026,
+            "sha256": "d44204ee9df1b95b60799c0a6e31fb63d78ee3c25ec099f6dded2408e855c72e",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:18.243Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/N3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 36226,
+            "sha256": "0fd547250b8d0d49b360cde1f3eda3264620b7b17b563399555c5b0c076af834",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:19.925Z"
+            }
+          }
+        ],
+        "attribution": "Robert F. Sargent, U.S. Coast Guard, Into the Jaws of Death (6.6.1944), U.S. Coast Guard, 440606-G-G0000-1001. Public domain. https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_(6414569).jpg"
+      }
+    },
+    {
+      "id": "O6",
+      "nimi": "Euroopan kartta uusiksi",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan muuttuvat aluerajat näkyvät päällekkäisinä historiallisina karttakerroksina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical area lens catalogue, single 16:9 landscape concept image. Lens: Europe's changing map, 1815–1923. Antique parchment relief map of Europe showing several semitransparent historic territorial layers like carefully overlaid hand-colored maps, with one dominant muted teal area and fine sepia border traces that shift through time; do not use a present-day country-border grid. Subtle warm nodes and hairline transitions near Vienna, the Italian peninsula, Germany, Berlin, Versailles and Lausanne. A small unlabeled brass time arc below hints at 1815 to 1923. Clean geography and layered boundaries must read at thumbnail scale. Cream paper, dark blue-brown seas, hand-engraved texture, restrained cinematic 3D depth and vignette. No UI, buttons, panels, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/O6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244253,
+            "sha256": "ac416fd72c5ee7070e6d5dd7b1ae6452a12e42aa3ee2fe3ed5334979bd27c90d",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:21.950Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/O6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 31863,
+            "sha256": "9852994061dc327685591e55b770c5d269a2d27ce60238647b20c564b52602c9",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:24.176Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1815 käsin väritetty etsaus esittää diplomaattien neuvottelua Wienin kongressissa Euroopan rajoista.",
+        "creator": "Tuntematon hollantilainen etsaaja",
+        "title": "Het Congres der Geallieerde Mogendhen te Weenen",
+        "year": "1815",
+        "collection": "Rijksmuseum, Amsterdam, RP-P-1898-A-19819",
+        "license": "CC0 1.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Congres_van_Wenen,_1815_Het_Congres_der_Geallieerde_Mogendhen_te_Weenen_(titel_op_object),_RP-P-1898-A-19819.jpg",
+        "transform_note": "centred crop",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/O6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297216,
+            "sha256": "259f85b9ce6d79f4af94b208665a1dbdd103ba55b2a162e0c266731552ab5bd9",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:27.642Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/O6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 68533,
+            "sha256": "8dc75337efa1b87ae39be2f21a59ea6761ceb502d74421b3ef7951e984fabc53",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:30.367Z"
+            }
+          }
+        ],
+        "attribution": "Tuntematon hollantilainen etsaaja, Het Congres der Geallieerde Mogendhen te Weenen (1815), Rijksmuseum, Amsterdam, RP-P-1898-A-19819. CC0 1.0. https://commons.wikimedia.org/wiki/File:Congres_van_Wenen,_1815_Het_Congres_der_Geallieerde_Mogendhen_te_Weenen_(titel_op_object),_RP-P-1898-A-19819.jpg"
+      }
+    },
+    {
+      "id": "R1",
+      "nimi": "Maailma palaa",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Paloalueet syttyvät historiallisen karttapallon pintaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja game lens catalogue illustration, lens R1 'Maailma palaa' (World on fire). Create ONE polished 16:9 landscape concept image of what this lens looks like on the game's map, without any app chrome. A softly illuminated oblique globe/terrain map made from cream and brown nineteenth-century parchment cartography, legible coastlines and topographic traces, viewed from above. Over the map is one physically plausible wildfire satellite-data layer: clusters of small ember-red and warm orange active-fire points in geographically coherent belts, wisps of translucent smoke and a restrained heat glow. The fire marks read as precise data, not a generic burning planet or apocalypse. Deep, rich but subdued cartographic lighting; gently aged paper texture and slight vignette; elegant premium game art, visually clear at thumbnail size. No legend, no numbers, no labels, no buttons, no UI, no fonts, no logos, no watermark, no humans. Entire composition fills frame with no external border.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 237887,
+            "sha256": "d660bc9a1867ff021aa45e05b0b0ea1f9d91878303e75a05ba3e5d500ed04e3e",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:32.621Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 41941,
+            "sha256": "f7caf68f2e83e54561d15f8f38d8a8f946a2476c0153dcea6d19aa40cb8e344b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:34.924Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n FIRMS-havainnot näyttävät aktiiviset palot maailman kartalla.",
+        "creator": "NASA's Scientific Visualization Studio -",
+        "title": "Current Active Fires from FIRMS (SVS5546 - 1 Main01 FIRMS global 1920x1080)",
+        "year": "2 June 2025, 13:41:00 (upload date)",
+        "collection": "Current Active Fires from FIRMS",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Current_Active_Fires_from_FIRMS_(SVS5546_-_1_Main01_FIRMS_global_1920x1080).png",
+        "dataset_match": "exact",
+        "dataset_note": "NASA FIRMS",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 270489,
+            "sha256": "0fdadd727db0236892b9086c09d1d0f9f0652413e9f7c1fad1445e27f28880b8",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:38.007Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 31492,
+            "sha256": "11c5daa581417309a86382ac26737a836bcb7da31807e0311a9132a2cc0fecea",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:40.049Z"
+            }
+          }
+        ],
+        "attribution": "NASA's Scientific Visualization Studio -, Current Active Fires from FIRMS (SVS5546 - 1 Main01 FIRMS global 1920x1080) (2 June 2025, 13:41:00 (upload date)), Current Active Fires from FIRMS. Public domain. https://commons.wikimedia.org/wiki/File:Current_Active_Fires_from_FIRMS_(SVS5546_-_1_Main01_FIRMS_global_1920x1080).png"
+      }
+    },
+    {
+      "id": "R2",
+      "nimi": "Savun tie**",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ilmakehän savuverho leviää tuulten mukana mantereelta toiselle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja game lens catalogue illustration, lens R2 'Savun tie' (Path of smoke), a conceptual visualization of atmospheric aerosol optical depth on the globe. Create one polished 16:9 landscape image showing the game's antique parchment globe/map from an oblique high-altitude angle. On the parchment terrain, elegant broad semi-transparent smoke plumes and delicate drifting aerosol ribbons trace a believable path from major wildfire regions across an ocean and landmass, with only a few subtle ember origins; the smoke distribution, prevailing-wind flow, and continent boundaries should be visually coherent, like a scientific data layer rather than a dramatic burning-world poster. Restrained cream, warm brown, slate gray, muted amber palette; clear paper surface, gentle vignette, atmospheric depth, premium game art, distinct from a dense fire-points image. No labels, legend, data boxes, numbers, app controls, fonts, logos, watermarks, people, or map pins. The image fills the frame edge to edge.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 238560,
+            "sha256": "e80c172a8c5c383c5d4cf3ceb2a608e22a5399f2eaa3ff0017de8225c0aa9ace",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:42.435Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38853,
+            "sha256": "547c1b9bd999f2e28d410b65ce22d894b4503f0c5e85dad411c522b2e175a587",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:44.635Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "MODIS Terran vuosien 2007–2011 havaintojen keskiarvo näyttää ilmakehän aerosolien optisen paksuuden.",
+        "creator": "Giorgiogp2",
+        "title": "Modis Terra aerosol optical depth at 550nm, 2007–2011 average",
+        "year": "2012",
+        "collection": "Wikimedia Commons; NASA Giovanni / MODIS Terra -data",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Modis_aerosol_optical_depth.png",
+        "dataset_match": "allowed_alternative",
+        "dataset_note": "MODIS Terra AOD; tilauksen sallima vaihtoehto CAMS AOD:lle",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 202508,
+            "sha256": "c02e2cea4ae9fa80543e84b26f968f240d5a853d116eb741b90b87f155c5a3b7",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:46.808Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 33873,
+            "sha256": "0521c0199f919de35ea0b867b68d82277dd8c149dc50f6710ba3a49c7b5850e5",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:48.678Z"
+            }
+          }
+        ],
+        "attribution": "Giorgiogp2, Modis Terra aerosol optical depth at 550nm, 2007–2011 average (2012), Wikimedia Commons; NASA Giovanni / MODIS Terra -data. CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Modis_aerosol_optical_depth.png"
+      }
+    },
+    {
+      "id": "R3",
+      "nimi": "Isoisän sää",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Säärintamat kulkevat isoisän ajan Atlantin ja Euroopan yllä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja lens catalogue, R3 'Isoisän sää' (Grandfather's weather), a conceptual game-map view of historical daily weather reconstructed for 1873. One 16:9 landscape image: a softly lit antique parchment globe, centered on the North Atlantic and Europe from an elegant oblique camera, coastlines and relief recognizable. Across the map a transparent meteorological layer of flowing cloud bands, a spiraling low-pressure system over the Atlantic, delicate thin isobar curves and subtle warm/cool translucent washes, all visually integrated into the old map as a scientific weather reconstruction. Calm, mysterious, restrained cream and brown palette with cool slate-blue weather accents; premium cinematic game art, readable at thumbnail size. It must not look like an actual archive weather map or modern TV weather forecast. No text, letters, numerals, legends, labels, icons, UI boxes, buttons, logos, watermarks, humans, or city pins. Edge-to-edge artwork.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249432,
+            "sha256": "7668023590e55c00400cafe72a39ad25732826c6d41b7b86f8687ac42663d851",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:50.663Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 39975,
+            "sha256": "82b15fcca4f371ddfe90436e88423ce3307c0cc4214661d748840a2c5c213fe2",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:52.901Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NOAA:n 20CRv3 rekonstruoi Kalifornian vuoden 1862 tulvasään paineen, lämpötilan ja sateen.",
+        "creator": "NOAA Physical Sciences Laboratory / CIRES / DOE",
+        "title": "NOAA-CIRES-DOE Twentieth Century Reanalysis V3: Great California Flood weather, 27 December 1861",
+        "year": "vuosi ei ilmoitettu",
+        "collection": "NOAA Physical Sciences Laboratory",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://psl.noaa.gov/data/20thC_Rean/",
+        "dataset_match": "exact",
+        "dataset_note": "NOAA-CIRES-DOE 20CRv3",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 197767,
+            "sha256": "24d8b1a2181b50ebbde6c80502b0daca1889e7192bdba4cc49830803472d0aed",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:28:55.429Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 32894,
+            "sha256": "7c019671b53aad88310819d2c37a60dbbaa6d27c5381e1c646df526025c7e5a2",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:07.123Z"
+            }
+          }
+        ],
+        "attribution": "NOAA Physical Sciences Laboratory / CIRES / DOE, NOAA-CIRES-DOE Twentieth Century Reanalysis V3: Great California Flood weather, 27 December 1861 (vuosi ei ilmoitettu), NOAA Physical Sciences Laboratory. Public domain. https://psl.noaa.gov/data/20thC_Rean/"
+      }
+    },
+    {
+      "id": "R4",
+      "nimi": "Laivat 1873",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1873 laivareitit yhdistävät Atlantin ja Intian valtameren satamia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja game lens catalogue, R4 'Laivat 1873' (Ships in 1873), concept for the historical marine-observation data lens. Create one polished 16:9 landscape view straight down on an aged parchment nautical globe map focused on the Atlantic shipping corridors in 1873: eastern North America at left, western Europe and West Africa at right. Plot dozens of small elegant brass-gold vessel-position glints and fine dotted voyage trails along historically plausible transatlantic and coastal routes, with only a few tiny silhouettes of nineteenth-century sailing and steamships. Calm sea-blue ink, cream paper, subtle bathed light and compass-engraving texture; a coherent data layer, not a busy illustrated sea battle. Rich visual hierarchy and enough open water for routes to read at thumbnail size. No modern container ships, modern ports, letters, numbers, route labels, legend, UI controls, boxes, logos, watermarks, people, or external border.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249315,
+            "sha256": "c12b470f0b00641080a0b348bc5684f3d2083f64fd9fc475b887e72d0aeffc2f",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:11.522Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45270,
+            "sha256": "a3651b01b1971e67ada20f2327497cbe1fc7333d50b8872e283c7b9af727e04d",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:14.474Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "ei löytynyt",
+        "reason": "ICOADS R3:n vuoden 1873 laivahavaintojen karttaa ei löytynyt vahvistetulla PD/CC-lisenssillä; historiallinen navigointikartta ei todistaisi ICOADS-havaintoja.",
+        "files": []
+      }
+    },
+    {
+      "id": "R5",
+      "nimi": "Meriliikenne ennen ja nyt",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Merireittien vanha ja uusi verkosto erottuvat kahdella karttakerroksella.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja lens catalogue illustration for R5 'Meriliikenne ennen ja nyt' (sea traffic then and now). Create a single polished 16:9 landscape concept of the game's parchment world-map globe focused on Atlantic and Indian Ocean routes. Two contrasting time layers occupy the SAME map: sparse warm brass dotted 1873 sailing/steamship traces beneath a denser delicate cool-blue web of present-day shipping density above, offset by subtle translucent depth so a player instantly understands comparison. A few tiny nineteenth-century ship silhouettes only in the antique layer; modern layer is abstract tracks, not big cargo-ship cutouts. Historically coherent coastlines, old engraved paper texture, beautiful but restrained light, legibility at thumbnail scale, premium cinematic data-map art. No split-screen line, captions, timeline control, labels, numbers, legend, interface elements, font text, logos, watermark, or people. Edge-to-edge 16:9 composition.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248125,
+            "sha256": "854233d8990d57acf91b4d2f3cf3be4faac89979cca9e821ad5e82968c2434e4",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:16.474Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 56662,
+            "sha256": "84001828d24b5a7bbc3898fce6c0ca373e29e12536f3028c6e7f4b9693536f98",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:18.415Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Meriliikenteen reitit piirtyvät vaaleina viivoina maailman merille.",
+        "creator": "Grolltech  (derived from  Hengl  (derived from B.S. Halpern))",
+        "title": "Shipping routes red black",
+        "year": "2012-03-19",
+        "collection": "Own work using:     Work of  Tomislav Hengl  at: Halpern, B.S., et al. 2008.  A Global Map of Human Impact on Marine Ecosystems . Science 319(5865):948-952.  https://dx.doi.org/10.1126/science.1149345 , University of California, National Center for Ecological Analysis and Synthesis",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Shipping_routes_red_black.png",
+        "dataset_match": "phenomenon_only",
+        "dataset_note": "Nykyaikainen laivareittikartta, ei ICOADS- tai Maailmanpankin laivatiheysaineistoa",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 263620,
+            "sha256": "1679a31a7d3490b68311bef337e9372236881800d46523f682bb697d7f066e66",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:22.335Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 43593,
+            "sha256": "1e871a5f6f08b5729cddf5789ec89b23be2435604e0219b08a0e3fc7ef7dd89c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:24.784Z"
+            }
+          }
+        ],
+        "attribution": "Grolltech  (derived from  Hengl  (derived from B.S. Halpern)), Shipping routes red black (2012-03-19), Own work using:     Work of  Tomislav Hengl  at: Halpern, B.S., et al. 2008.  A Global Map of Human Impact on Marine Ecosystems . Science 319(5865):948-952.  https://dx.doi.org/10.1126/science.1149345 , University of California, National Center for Ecological Analysis and Synthesis. CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Shipping_routes_red_black.png"
+      }
+    },
+    {
+      "id": "R7",
+      "nimi": "Yön valot ennen ja nyt",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Sama yöpuolen karttapallo näyttää harvat vanhat ja tiheät nykyiset valot.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja lens catalogue R7 'Yön valot ennen ja nyt' (Night lights then and now). Create a single sophisticated 16:9 illustration with TWO perfectly matched views of the same parchment globe, side by side, both centered on Europe and North Africa at night from the identical camera angle. LEFT globe shows 1875: mostly darkness with only a sparse constellation of faint amber city lights. RIGHT globe shows today: dense realistic warm-white city light clusters, with the same coastlines and borders aligned exactly to the left view. The two hemispheric globe views sit close together on dark aged-paper space, separated only by negative space, no graphic line. Elegant premium game art, restrained copper-brown/cream palette and true nighttime contrast; instantly readable as change over time at thumbnail size. No dates or other text, no letters, no labels, no legend, no UI, no slider, no logos, no watermark, no people. No invented bright roads through wilderness.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 234768,
+            "sha256": "badb6cbe6e7831a12d2bcd83967a62c3be043736bb012cc846c40f8d91b05fb4",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:26.645Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30037,
+            "sha256": "1649bf572ce1c1dc9849726995a5d16d9be6cd3b524d1b2d9e95ea4e8a8b6d9a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:29.275Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n Black Marble näyttää Amerikan kaupunkien valot yöpuolen Maassa.",
+        "creator": "NASA Earth Observatory",
+        "title": "Black Marble Americas",
+        "year": "between 18 April 2012 and 23 October 2012 date QS:P,+2012-00-00T00:00:00Z/9,P1319,+2012-04-18T00:00:00Z/11,P1326,+2012-10-23T00:00:00Z/11",
+        "collection": "NASA Earth Observatory / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Black_Marble_Americas.jpg",
+        "dataset_match": "exact",
+        "dataset_note": "NASA Black Marble",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 102309,
+            "sha256": "fba32dbd5bd20966e94b8244e76a40ebec32cbc5759423ce8507620970c4c211",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:32.361Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 14630,
+            "sha256": "207abbdceff8f2b03cfd37a0bf41014fe110467d8d5280a59f3f60d97e7b014b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:35.072Z"
+            }
+          }
+        ],
+        "attribution": "NASA Earth Observatory, Black Marble Americas (between 18 April 2012 and 23 October 2012 date QS:P,+2012-00-00T00:00:00Z/9,P1319,+2012-04-18T00:00:00Z/11,P1326,+2012-10-23T00:00:00Z/11), NASA Earth Observatory / Wikimedia Commons. Public domain. https://commons.wikimedia.org/wiki/File:Black_Marble_Americas.jpg"
+      }
+    },
+    {
+      "id": "R9",
+      "nimi": "Isoisän tähtitaivas",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Tähtitaivas ja tähtikuviot asettuvat isoisän matkakartan ylle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Matkakirja game map lens R9 'Isoisän tähtitaivas' (Grandfather's starry sky), 16:9. An antique 1873 world atlas map spread flat across a desk in near-darkness, Mediterranean and North Atlantic centered. Above the parchment, a translucent indigo nocturnal sky layer shows crisp, plausible star fields, the Milky Way as a gentle band, only a FEW fine copper constellation connection lines and subtle travel-route dots across the atlas. A small 19th-century brass sextant rests at one edge. The main visual must be a legible parchment MAP with a luminous astronomical overlay, not a photorealistic view of Earth from space. Refined, quiet, curious, premium historical game art, cream/copper/ink blue palette, light paper grain, restrained vignette. No illuminated electric cities, no modern satellites, no fantasy zodiac animal drawings, no astronaut view, no text, no letters, no numerals, no labels, no UI, no logos, no watermark, no people.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R9-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R9-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248338,
+            "sha256": "ac05b2d1eaa2d145c94c6cada0879deb49aaecd885b84d6fca0243f6b5a92c79",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:37.247Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R9-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R9-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40983,
+            "sha256": "d77ab50e08d0dce6f0ebd90708e25d4c4837c0530d3a41e44e925a41eede20b3",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:38.840Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n TESS-havaintojen kooste näyttää tähtitaivaan himmeät ja kirkkaat vyöhykkeet.",
+        "creator": "NASA's Scientific Visualization Studio - University of Maryland College Park/Jeanette Kazmierczak, eMITS/Scott Wiessinger",
+        "title": "TESS Reveals Dazzling Night Sky (SVS14985 - TESS pc bin4 noplanets)",
+        "year": "13 May 2026 (upload date)",
+        "collection": "TESS Reveals Dazzling Night Sky",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:TESS_Reveals_Dazzling_Night_Sky_(SVS14985_-_TESS_pc_bin4_noplanets).jpg",
+        "dataset_match": "phenomenon_only",
+        "dataset_note": "NASA TESS -taivaskuva, ei HYG/JPL Horizons/Stellarium-aineistoa eikä 1873 rekonstruktiota",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R9-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R9-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 271150,
+            "sha256": "aa56ad0017575518ccedd05c5953b131b5cb023020e59fc5a1545c5743467c47",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:41.625Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R9-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R9-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 24728,
+            "sha256": "660867f840142967938e28cba95ad08b962c724b6f03b50c18248b668c6f6c02",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:43.292Z"
+            }
+          }
+        ],
+        "attribution": "NASA's Scientific Visualization Studio - University of Maryland College Park/Jeanette Kazmierczak, eMITS/Scott Wiessinger, TESS Reveals Dazzling Night Sky (SVS14985 - TESS pc bin4 noplanets) (13 May 2026 (upload date)), TESS Reveals Dazzling Night Sky. Public domain. https://commons.wikimedia.org/wiki/File:TESS_Reveals_Dazzling_Night_Sky_(SVS14985_-_TESS_pc_bin4_noplanets).jpg"
+      }
+    },
+    {
+      "id": "R11",
+      "nimi": "Myrskyjen radat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Trooppisten myrskyjen kaarevat radat piirtyvät maailman merille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens catalogue, a single 16:9 landscape concept image. Lens: Global storm tracks, based conceptually on IBTrACS and HURDAT2. An antique parchment world globe map seen obliquely, with geographically recognizable continents and dark blue-brown oceans. Overlay several elegant pale aqua and brass curved tropical cyclone tracks across the North Atlantic, western Pacific and Indian Ocean; each arc curls subtly around a few small luminous spiral storm centers. The map remains readable beneath the data, with fine engraved coastlines and lightly weathered cream paper texture, gentle vignette, restrained cinematic lighting and dimensional depth. Display the visual language of a geographic data layer, not a fantasy disaster. No damage, people, ships, UI, controls, legends, labels, text, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R11-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R11-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243092,
+            "sha256": "9ca3216164b1fd7f1c991179386006f45aaa1756c4b1761f192c8e56639a508d",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:45.308Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R11-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R11-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32249,
+            "sha256": "0956d5f8e1f22129b664c175af44bbc8c20b8a0952e33a0718a74382204990ee",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:46.864Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Tropiikin hirmumyrskyjen radat vuosilta 1950–2005 kiertävät maapallon valtameriä.",
+        "creator": "Nilfanion",
+        "title": "Global tropical cyclone tracks",
+        "year": "1950–2005",
+        "collection": "Created using  Wikipedia:WikiProject Tropical cyclones/Tracks . The  background image  is from  NASA   [1] . The tracking data for the Atlantic and Eastern Pacific basins is taken from the  National Hurricane Center  and the  Central Pacific Hurricane Center 's  Northeast and North Central Pacific hurricane database . The tracking data for storms in the Indian Ocean, the Northwest Pacific and the Southern Pacific is from the  Joint Typhoon Warning Center . Tracking data for  Cyclone Catarina  in the South Atlantic was published in  Gary Padgett's April 2004 Monthly Tropical Cyclone Summary  and was originally produced by Roger Edson of the University of Guam.",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Global_tropical_cyclone_tracks.jpg",
+        "dataset_match": "alternate_data",
+        "dataset_note": "NHC/JTWC-hirmumyrskyradat, ei IBTrACS/HURDAT2-kooste",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R11-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R11-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 247027,
+            "sha256": "dd24fd52ae054c21f0a52218235df538b374abfec8734b8f0ae06d82d7c1268b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:51.744Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R11-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R11-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 28852,
+            "sha256": "20862ee59a8e1fac12f870ba643971ca6928cad4e328bef32010ffe89453aa81",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:53.497Z"
+            }
+          }
+        ],
+        "attribution": "Nilfanion, Global tropical cyclone tracks (1950–2005), Created using  Wikipedia:WikiProject Tropical cyclones/Tracks . The  background image  is from  NASA   [1] . The tracking data for the Atlantic and Eastern Pacific basins is taken from the  National Hurricane Center  and the  Central Pacific Hurricane Center 's  Northeast and North Central Pacific hurricane database . The tracking data for storms in the Indian Ocean, the Northwest Pacific and the Southern Pacific is from the  Joint Typhoon Warning Center . Tracking data for  Cyclone Catarina  in the South Atlantic was published in  Gary Padgett's April 2004 Monthly Tropical Cyclone Summary  and was originally produced by Roger Edson of the University of Guam.. Public domain. https://commons.wikimedia.org/wiki/File:Global_tropical_cyclone_tracks.jpg"
+      }
+    },
+    {
+      "id": "R12",
+      "nimi": "Maa järisee",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Maanjäristysten keskukset tihentyvät laattojen rajavyöhykkeille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens catalogue, a single 16:9 landscape concept image. Lens: Earthquake epicenters, global real-time plus history, based conceptually on USGS ComCat and NCEI. An antique parchment globe map in a wide oblique view with recognizable world coastlines and deep blue-brown oceans. Overlay hundreds of tiny warm gold earthquake epicenter points with a few concentric ripple rings, concentrated along the Pacific Ring of Fire and other major plate boundaries; widely different dot sizes suggest event magnitude without a legend. Fine subtle engraved fault traces follow the geography. Natural cream and sepia map texture, restrained brass glow, cinematic depth and gentle vignette, legible at thumbnail scale. Scientific and calm, no destruction, buildings, people, UI, controls, legends, labels, text, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R12-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R12-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247858,
+            "sha256": "594c3772d115657460bd895d9e7aed511933820c4b267f7f3a5b2fbf23a1dc1f",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:55.685Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R12-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R12-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36551,
+            "sha256": "99af800496ddfb366ae6d4444a26dd46eb1a99085ea007c639733275460148f2",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:57.400Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "USGS:n historialliset maanjäristykset paljastavat mannerlaattojen saumakohdat.",
+        "creator": "United States Geological Survey",
+        "title": "USGS Earthquake Catalog Service Map: Historical Seismicity (1900–2024)",
+        "year": "2026 (palveluvienti; aineisto 1900–2024)",
+        "collection": "USGS Earthquake Hazards Program",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://earthquake.usgs.gov/arcgis/rest/services/eq/EQ_Catalog/MapServer",
+        "dataset_match": "exact",
+        "dataset_note": "USGS ComCat / Earthquake Catalog MapServer",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R12-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R12-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 66501,
+            "sha256": "0d60c122c1b60386212bd1d8a61cbba6395ba128f1901e22baf933636f36aa88",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:30:59.281Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R12-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R12-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 10409,
+            "sha256": "42e3f926a20c334c7f8ca87b13d80c55fc6ddb517c580eb740cde26f207b96d3",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:03.184Z"
+            }
+          }
+        ],
+        "attribution": "United States Geological Survey, USGS Earthquake Catalog Service Map: Historical Seismicity (1900–2024) (2026 (palveluvienti; aineisto 1900–2024)), USGS Earthquake Hazards Program. Public domain. https://earthquake.usgs.gov/arcgis/rest/services/eq/EQ_Catalog/MapServer"
+      }
+    },
+    {
+      "id": "R13",
+      "nimi": "Tulen vuoret",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Tulivuorten pisteet ja vaaleat rikkidioksidivanat seuraavat vulkaanisia kaaria.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens catalogue, a single 16:9 landscape concept image. Lens: Active volcanoes and sulfur dioxide plume layer, global, based conceptually on NCEI Volcanoes and GIBS SO2. An antique parchment globe map in a wide oblique view with recognizable world geography and dark blue-brown oceans. A chain of small ember-red volcanic location points follows the Pacific Ring of Fire, Indonesia and other volcanic arcs; translucent pale ochre sulfur dioxide plume wisps drift over a few of them as a data overlay, soft and lightly luminous. Make the land, coastlines and volcanic pattern clear at thumbnail size, with fine sepia relief engraving, brass accents, gentle vignette and dimensional cinematic light. Calm scientific concept, no eruptions, flames, destruction, people, UI, controls, legends, labels, text, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R13-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R13-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249578,
+            "sha256": "2ae663ad4d38cf98972300229492a91572dbc2c82bbf20207f96dd3313e95628",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:05.104Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R13-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R13-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29927,
+            "sha256": "dbe53473a8d862c4977bcae3155cffabed01ed47714c84aa24846a2cac5e171c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:07.341Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "La Palman tulivuoren rikkidioksidipilvi erottuu NASA:n Aura-satelliitin kartassa.",
+        "creator": "Joshua Stevens",
+        "title": "Sulfur Skies over La Palma",
+        "year": "2021",
+        "collection": "NASA Earth Observatory",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://science.nasa.gov/earth/earth-observatory/sulfur-skies-over-la-palma-148978/",
+        "dataset_match": "alternate_data",
+        "dataset_note": "NASA Aura OMI:n SO2-kartta, ei NCEI Volcanoes / GIBS SO2",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R13-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R13-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 155266,
+            "sha256": "e16338b3ac93c0a31a1fdfc9773071581a9675cd33382f553043696a2e978678",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:09.881Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R13-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R13-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 18875,
+            "sha256": "c2c1fbe7adc3afc188f59079a9a24d0c5fbb6060a380c0499be4d63567162226",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:11.983Z"
+            }
+          }
+        ],
+        "attribution": "Joshua Stevens, Sulfur Skies over La Palma (2021), NASA Earth Observatory. Public domain. https://science.nasa.gov/earth/earth-observatory/sulfur-skies-over-la-palma-148978/"
+      }
+    },
+    {
+      "id": "R14",
+      "nimi": "Lämpenevä meri",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Meren lämpötilakerros hehkuu lämpimin ja viilein vyöhykkein.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens catalogue, a single 16:9 landscape concept image. Lens: Warming ocean, a global animated sea-surface temperature anomaly layer inspired by ERSST v5. An antique parchment world map seen obliquely with geographically recognizable coastlines; the oceans are the subject. Overlay flowing broad ocean temperature bands in muted indigo, pale teal, warm amber and soft coral, blending naturally across the Pacific, Atlantic and Indian Oceans, with a subtle glowing warm anomaly in northern sea areas. The data layer feels like a translucent hand-painted scientific field over the map, never a political map. Cream/sepia land, fine engraved coastlines, restrained brass light, gentle vignette, polished dimensional depth and legible patterns at thumbnail size. No flames, people, UI, controls, gauges, legends, labels, text, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R14-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R14-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249681,
+            "sha256": "05a7abcd198b6940354e721ee9a28fcde2ea28c6f8fa1bb96e2370989063e0bd",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:14.675Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R14-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R14-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 31819,
+            "sha256": "92c3c98b82f1815fa8311ba74461ae83b30d3cc7b36565f5feb4ca32807a9753",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:17.125Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NOAA:n meriveden lämpötilapoikkeamat näyttävät lämpimän veden Kalifornian rannikolla.",
+        "creator": "NASA Earth Observatory image by Lauren Dauphin, and sea surface temperature data from Coral Reef Watch. Story by Kathryn Hansen.",
+        "title": "Lajolla crw 2018214 lrg",
+        "year": "2018-08-02",
+        "collection": "NASA Earth Observatory / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lajolla_crw_2018214_lrg.jpg",
+        "dataset_match": "alternate_data",
+        "dataset_note": "NOAA Coral Reef Watch -lämpötilapoikkeama, ei ERSST v5",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R14-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R14-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 256807,
+            "sha256": "6edde1c2e7d8f64e3b85949d046cadb01dded385362e0dcee7c62367b7382d5b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:19.346Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R14-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R14-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 27824,
+            "sha256": "7a40dfc2c625cfaf066a1f40db7c4f72f53b0ade3a2770ce85d25d7d11c748fd",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:22.453Z"
+            }
+          }
+        ],
+        "attribution": "NASA Earth Observatory image by Lauren Dauphin, and sea surface temperature data from Coral Reef Watch. Story by Kathryn Hansen., Lajolla crw 2018214 lrg (2018-08-02), NASA Earth Observatory / Wikimedia Commons. Public domain. https://commons.wikimedia.org/wiki/File:Lajolla_crw_2018214_lrg.jpg"
+      }
+    },
+    {
+      "id": "R15",
+      "nimi": "Ilmastovyöhykkeet liikkuvat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ilmastovyöhykkeet piirtyvät mantereille ja niiden rajat siirtyvät ajassa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens catalogue, a single 16:9 landscape concept image. Lens: Climate zones shift over periods, conceptual Köppen-Geiger global classification. An antique parchment world map seen obliquely with geographically recognizable continents and dark blue-brown seas. Overlay broad translucent ecological climate bands across the land, differentiated in restrained moss green, dry ochre, muted coral, cool blue-gray and pale cream; a few offset ghost edges show zones migrating gradually northward or poleward through time. Land relief and coastlines remain readable, with engraved texture, delicate brass light, gentle vignette and polished dimensional cartography. It must look like one geographic data layer rather than a patchwork of political borders. No icons, people, UI, controls, gauges, legends, labels, text, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R15-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R15-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243137,
+            "sha256": "ca282cd4c54417716529c74dca5bf67e0ab67eeaec98b9e5f3c1c3d60a902df5",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:25.751Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R15-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R15-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29876,
+            "sha256": "faafa04c4b1ea258fd6114f3e736b8214006737503f0b15670e659cfd861b250",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:28.926Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Köppen–Geigerin kartta jakaa maailman ilmastovyöhykkeisiin vuosien 1991–2020 aineistolla.",
+        "creator": "Beck, H.E., McVicar, T.R., Vergopolan, N., Alexis, B., Lutsko, N.J., Dufour, A., Zeng, Z., Jian, X., van Dijk, A.I.J.M., Miralles, D.G.",
+        "title": "Koppen-Geiger Map v2 World 1991–2020",
+        "year": "2024-03-19",
+        "collection": "\"High-resolution (1 km) Köppen-Geiger maps for 1901–2099 based on constrained CMIP6 projections\".  Scientific Data .   DOI  : 10.1038/s41597-023-02549-6 .",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg",
+        "dataset_match": "exact",
+        "dataset_note": "Beck ym. Köppen–Geiger 2023/2024",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R15-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R15-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 179709,
+            "sha256": "f150e2f53f49a90285991e54233620d6b3eba84131a801fb43e12aea0c716e5a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:33.062Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R15-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R15-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 30412,
+            "sha256": "b3e0e2d214008dd07bc78aee667a53ae841b51208a36f0d959b953f71deb2c97",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:36.556Z"
+            }
+          }
+        ],
+        "attribution": "Beck, H.E., McVicar, T.R., Vergopolan, N., Alexis, B., Lutsko, N.J., Dufour, A., Zeng, Z., Jian, X., van Dijk, A.I.J.M., Miralles, D.G., Koppen-Geiger Map v2 World 1991–2020 (2024-03-19), \"High-resolution (1 km) Köppen-Geiger maps for 1901–2099 based on constrained CMIP6 projections\".  Scientific Data .   DOI  : 10.1038/s41597-023-02549-6 .. CC BY 4.0. https://commons.wikimedia.org/wiki/File:Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg"
+      }
+    },
+    {
+      "id": "R16",
+      "nimi": "Pellot valtaavat maan",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Viljelyalat levittäytyvät jokilaaksoista yli maanosien.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Premium Matkakirja map-lens illustration R16 'Pellot valtaavat maan' (Farmland spreads over the Earth), wide 16:9. Show a curved parchment globe centered on Eurasia and Africa with land-use change made instantly visible: patches of ochre and olive cultivated fields spreading outward from several long-established river valleys across otherwise muted natural terrain, faint engraved field-grid textures and a few small granaries or plough silhouettes; do not depict global deforestation as flames. Golden historical-atlas paper, fine cartographic coastlines, restrained copper ink and green with gentle vignette. Suggest time passing through a soft spatial transition from sparse cultivation to denser agriculture, but no panel dividing line, no captions. Beautiful grounded game art based on geographical reality, image must read at thumbnail scale. No text, numbers, letters, labels, legend, UI, logo, watermark, contemporary people or machines.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R16-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R16-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248092,
+            "sha256": "60f4a99f157e16d7ec694a30f21f85f39f76020e2441c8182b5050275e55ea2f",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:38.880Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R16-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R16-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 47370,
+            "sha256": "47abe701368124c0cbee251d6851208522f691a6afa5fed6c64c90122a641020",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:41.158Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "MODIS-satelliitin maanpeitekartassa viljelymaat ovat yksi erikseen luokiteltu peiteluokka.",
+        "creator": "Ivan Shmakov  ( talk )",
+        "title": "MCD12C1 A2003001 051 2012264185451 LCT-1",
+        "year": "2014-03-27",
+        "collection": "Own work based on:  MCD12C1.A2003001.051.2012264185451.hdf  (2003, 2012)",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MCD12C1_A2003001_051_2012264185451_LCT-1.png",
+        "dataset_match": "alternate_data",
+        "dataset_note": "NASA MODIS -maanpeite, ei HYDE 3.3 historiallista peltoalaa",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R16-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R16-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 146877,
+            "sha256": "405ec1a02543e3a3199fcc4bc468f4436d5719c58c4e9554a321d69de730a8eb",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:43.523Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R16-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R16-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 27954,
+            "sha256": "3d2851101bb6a0bc3cd45f38e55cb8e6179c831c9f4a63b809b3277d48184cd7",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:46.125Z"
+            }
+          }
+        ],
+        "attribution": "Ivan Shmakov  ( talk ), MCD12C1 A2003001 051 2012264185451 LCT-1 (2014-03-27), Own work based on:  MCD12C1.A2003001.051.2012264185451.hdf  (2003, 2012). CC0. https://commons.wikimedia.org/wiki/File:MCD12C1_A2003001_051_2012264185451_LCT-1.png"
+      }
+    },
+    {
+      "id": "R17",
+      "nimi": "Ihmisiä pallolla",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Valopisteiden tihentymät näyttävät ihmisten jakautumisen maapallolla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Create a premium Matkakirja game map-lens concept R17 'Ihmisiä pallolla' (People on the globe), 16:9 wide illustration. An antique parchment world globe viewed from a slight angle, with a tasteful geographic population-density layer: thousands of tiny copper and amber points cluster densely in the Indo-Gangetic Plain, eastern China, Java, western Europe and major river deltas, while deserts, oceans, mountains and polar areas remain sparsely marked. Points are subtle, varied, and embedded in the map rather than floating in space; a few warm glowing centers suggest cities but no skyscrapers or crowds. Accurate recognizable continental shapes, elegant old atlas paper grain, cream/sepia/copper palette, softly illuminated globe, subtle vignette. It should communicate human population distribution at thumbnail size, dignified and curious rather than apocalyptic. No numeric data, no text, no letters, no labels, no legend, no UI, no logo, no watermark, no people portraits.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R17-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R17-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 236152,
+            "sha256": "b88ae91231731025ed1f6cec4e9b6a5e7708192a936de79e91093aeb431423a0",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:48.840Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R17-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R17-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38179,
+            "sha256": "cc1eb7a3c1303b76a50307a4517470723aabe63b7f1d09bf689a81c2be3f0e9a",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:51.061Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "GHSL-aineistosta tehty kartta näyttää nykyisen väestötiheyden maailmanlaajuisesti.",
+        "creator": "MrThe1And0nly",
+        "title": "WorldPopulationDensity",
+        "year": "2026-04-25",
+        "collection": "Own work",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WorldPopulationDensity.png",
+        "dataset_match": "exact",
+        "dataset_note": "GHSL-väestötiheys",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R17-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R17-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 124209,
+            "sha256": "c5a85c705083543870b143d40457d1d4d802c8ae09c9d24c74c9f3c1fdcf88ea",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:52.943Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R17-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R17-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 18515,
+            "sha256": "bde6c81f583858dfd1b01d5738ea1b84dfefe0e546bd6a727e820df020560b60",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:54.800Z"
+            }
+          }
+        ],
+        "attribution": "MrThe1And0nly, WorldPopulationDensity (2026-04-25), Own work. CC0. https://commons.wikimedia.org/wiki/File:WorldPopulationDensity.png"
+      }
+    },
+    {
+      "id": "R18",
+      "nimi": "Kaupungit kasvavat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kaupunkikeskusten kasvavat kehät leviävät kartalla ympäröivään maaseutuun.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Wide 16:9 Matkakirja game map lens R18 'Kaupungit kasvavat' (Cities grow), premium visual concept. A beautiful 19th-century parchment atlas map seen obliquely from above, spanning Europe and western Asia, with several historically grounded city centers represented by delicate copper miniature building clusters. The centers visibly expand through concentric translucent ochre footprints into surrounding countryside, modest town becoming metropolis; several cities at different stages create a clear story of urbanization over time. Geographic map must remain legible; subtle rivers and coastlines, fine engraved road networks, warm ivory/copper/umber palette, restrained filmic light and soft vignette. More like an elegant playable map layer than infographic. Buildings are tiny symbolic map miniatures, never a modern skyline. No text, numbers, letters, city labels, legend, UI, buttons, logos, watermark, people.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R18-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R18-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249555,
+            "sha256": "302fbdb0833d57e6052dea4755c46c71474bda177a925c38f0461f167006fe1b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:57.372Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R18-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R18-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 51113,
+            "sha256": "81045b3243263e23a601d0ebf7e3980b867b4c9daaa8f2e0beded7b04e5efd85",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:31:59.233Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "DLR:n satelliittiaineisto näyttää Kairon ja Shanghain asutuksen laajenemisen vuosien 1985 ja 2015 välillä.",
+        "creator": "German Aerospace Center (DLR), Earth Observation Center; nelikentän kooste Matkakirjan kuvaputki",
+        "title": "World Settlement Footprint Evolution: Cairo and Shanghai, 1985 and 2015",
+        "year": "1985 ja 2015 (aineiston havaintovuodet); 2026 (nelikentän kooste)",
+        "collection": "DLR EOC Geoservice",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://geoservice.dlr.de/web/maps/eoc:wsfevolution",
+        "dataset_match": "alternate_data",
+        "dataset_note": "DLR:n ja ESAn World Settlement Footprint Evolution, globaali vuosittainen asutusaineisto 1985–2015; kaksi maanosaesimerkkiä, ei GHSL UCDB/Reba.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R18-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R18-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 284208,
+            "sha256": "e3377833281d407e248d35429941db68404bd9a6ca6a5ee1781d95c5fb93b690",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:32:01.343Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R18-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R18-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 19867,
+            "sha256": "5e31b0f78c6aca269579263e07531447c777e133b88325d1bae671d9b951b57c",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:32:05.627Z"
+            }
+          }
+        ],
+        "attribution": "German Aerospace Center (DLR), Earth Observation Center; nelikentän kooste Matkakirjan kuvaputki, World Settlement Footprint Evolution: Cairo and Shanghai, 1985 and 2015 (1985 ja 2015 (aineiston havaintovuodet); 2026 (nelikentän kooste)), DLR EOC Geoservice. CC BY 4.0. https://geoservice.dlr.de/web/maps/eoc:wsfevolution"
+      }
+    },
+    {
+      "id": "R20",
+      "nimi": "Kauppavirrat 1873",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1873 kauppareitit yhdistävät satamia purje- ja höyrylaivojen aikaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Matkakirja game-map lens R20 'Kauppavirrat 1873' (Global trade flows in 1873), premium wide 16:9 visual concept. An authentic-looking late-19th-century parchment world atlas laid on a desk, with the Atlantic at the center. Fine copper and gold trade-route arcs connect British, French, Indian, East Asian, African and American ports; route width varies subtly by volume, with miniature period steamships and tall ships only along plausible navigable sea corridors. Distinguish imports and exports through two related warm/cool ink tones, but no legend and no labels. The main story is a dense Atlantic network and long maritime links through Suez and around the Cape, shown as elegant geospatial flow rather than literal arrows everywhere. Historically plausible 1873 setting, no container ships, no airplanes, no post-1914 borders. Rich cream paper, brown and blue-green sea, gentle vignette, fine old atlas engraving, restrained light, readable at thumbnail size. No text, letters, numerals, labels, UI, logo, watermark, people.\n",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/R20-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R20-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245224,
+            "sha256": "fa6af7590ff569cf660cd6db4d55f9d9d31a69b11b6c8f058fc09ad201d87c12",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:32:08.531Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/R20-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R20-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 48364,
+            "sha256": "314964f2c951205732f4b48e24bc8a9f391a0b0c20d3982d3f5290ad1d3c800b",
+            "delivery": {
+              "state": "R2 readback verified; game integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-24T19:32:11.179Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "ei löytynyt",
+        "reason": "RICardo/BACI-aineistoon perustuvaa vuoden 1873 kauppavirtojen lisenssikelpoista karttaa ei löytynyt; pelkkä höyrylaivareittikartta antaisi väärän kuvan kauppamääristä.",
+        "files": []
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 110,
+    "all_http_200": true,
+    "all_mime_jpeg": true,
+    "all_srgb": true,
+    "all_dimensions_size_sha256_cors_checked": true
+  }
+}
