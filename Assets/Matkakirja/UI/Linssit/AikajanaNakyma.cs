@@ -66,6 +66,9 @@ namespace Matkakirja.Natiivi
         // Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kohdepisteen yläpuolella, seuraa pistettä.
         readonly VisualElement kertomuskuva;
         bool kertomuskuvaEsilla;
+        // Löytökuvan napautuksen kortti (web luoNostokortti) ja sen löytöpaikka.
+        readonly IhmisenNostokortti nostokortti;
+        Loytopaikka kuvanPaikka;
         Tila tila;
         string kelloTeksti;
         int pysakki = -1, jakso = -1;
@@ -159,8 +162,10 @@ namespace Matkakirja.Natiivi
             // Löytökuva kerroksen juuressa (paneelin koordinaatit = IhmisenMatkaKerros.KuvanPiste muunnettuna).
             kertomuskuva = Rakenne.El("mk-aikajana-kertomuskuva", kerros.Juuri(LinssiUi.Kerros));
             kertomuskuva.style.display = DisplayStyle.None;
-            // Napautus avaa löytöpaikan kortin (web kuvan napautus → nostokortti).
-            kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla) { NaytaLappu(); paneeli.style.display = DisplayStyle.Flex; } });
+            // Napautus avaa noston kortin (web kuvan napautus → nostokortti.avaa).
+            kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla && kuvanPaikka != null) nostokortti.Avaa(kuvanPaikka); });
+            nostokortti = new IhmisenNostokortti(turva);
+            LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Ihmisen matkan aikaselain alareunassa (web luoAikaselain): veto esikatselee, irrotus valitsee.
@@ -268,6 +273,7 @@ namespace Matkakirja.Natiivi
             ylarivi.style.paddingRight = r.z + 8;
             ylarivi.style.height = r.y + Ylapalkki.Korkeus;
             paneeli.style.top = Ylapalkki.Korkeus + 10;
+            nostokortti.Yla = Ylapalkki.Korkeus + 11;
             // Oletusasettelut näyttöluokittain (web .aikajana-ilmio): puhelin pystyssä reunasta reunaan,
             // tabletti pystyssä 66 % hieman oikealle (right 3,5 %), vaakanäyttö 45 % oikeassa yläkulmassa.
             float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
@@ -381,6 +387,8 @@ namespace Matkakirja.Natiivi
             aikaselain.Nayta(false);
             kertomus.style.bottom = StyleKeyword.Null;
             PiilotaKertomuskuva();
+            kuvanPaikka = null;
+            nostokortti.Pois();
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -943,6 +951,7 @@ namespace Matkakirja.Natiivi
             paneelinKuva.style.display = DisplayStyle.None;
             paneelinKuva.style.backgroundImage = StyleKeyword.None;
             PiilotaKertomuskuva();
+            kuvanPaikka = p;
             if (!string.IsNullOrEmpty(p.Kuva))
             {
                 Kuvat.Hae(p.Kuva, t =>
