@@ -231,6 +231,11 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA väritaso: komento {o[1]}, nyt {vt.Maa ?? "ei"}");
                     break;
                 }
+                case "satelliitti":
+                    // satelliitti <versio> | satelliitti pois: lennon pinta Karttasepän satelliittisarjaan (LENNON PINTA).
+                    KarttaKerrokset.SatelliittiVersio = o.Length > 1 && o[1] != "pois" ? o[1] : null;
+                    Debug.Log("MATKAKIRJA lennon pinta: satelliitti " + (KarttaKerrokset.SatelliittiVersio ?? "pois (sileä)"));
+                    break;
                 case "palvelin":
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");

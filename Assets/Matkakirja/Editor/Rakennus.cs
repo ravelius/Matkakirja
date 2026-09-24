@@ -142,11 +142,23 @@ namespace Matkakirja.Editori
             nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.025f, 0.03f, 0.035f));
             nappula.ikkunaMateriaali.SetFloat("_Metallic", 0.25f);
             nappula.ikkunaMateriaali.SetFloat("_Smoothness", 0.95f);
+            // MAAMERKIT (omistajan kortti 24.9.): kaupunkien 3D-tunnusrakennukset, Kartta/Maamerkit/LUE.md.
+            var maamerkit = georefGo.AddComponent<Maamerkit>();
+            maamerkit.georeferenssi = georef;
+            maamerkit.mallit = Maamerkit.Oletustaulukko()
+                .Select(r => MaamerkkiMalli(r.id)).Where(m => m != null).ToArray();
+            nappula.maamerkit = maamerkit;
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();
             nappula.savu.georeferenssi = georef;
             nappula.savu.materiaali = Materiaali("Savu", "Matkakirja/Savu", Color.white);
+            // Lähtösumu ja pilvimeri (LENNON PINTA, omistaja 24.9. klo 13.5x).
+            var usvaGo = new GameObject("Usvalevy");
+            usvaGo.transform.SetParent(georefGo.transform, false);
+            nappula.usva = usvaGo.AddComponent<Usvalevy>();
+            nappula.usva.georeferenssi = georef;
+            nappula.usva.materiaali = Materiaali("Usva", "Matkakirja/Usva", new Color(0.93f, 0.94f, 0.96f));
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
@@ -273,6 +285,25 @@ namespace Matkakirja.Editori
         }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);
+
+        public const string MaamerkkiKansio = "Assets/Matkakirja/Kartta/Maamerkit";
+
+        /// <summary>
+        /// Maamerkin prefab (Maamerkit/&lt;id&gt;.fbx) ja URP Lit -materiaali atlaksella (Tekstuurit/&lt;id&gt;_vari.png,
+        /// albedo + leivottu AO, sRGB). null, jos FBX puuttuu.
+        /// </summary>
+        static Maamerkit.Malli MaamerkkiMalli(string id)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{MaamerkkiKansio}/{id}.fbx");
+            if (prefab == null) { Debug.LogWarning("MATKAKIRJA maamerkit: mallia ei löydy: " + id); return null; }
+            var m = Materiaali("Maamerkki-" + id, "Universal Render Pipeline/Lit", Color.white);
+            var atlas = AssetDatabase.LoadAssetAtPath<Texture2D>($"{MaamerkkiKansio}/Tekstuurit/{id}_vari.png");
+            if (atlas != null) m.SetTexture("_BaseMap", atlas);
+            else Debug.LogWarning("MATKAKIRJA maamerkit: atlasta ei löydy: " + id);
+            m.SetFloat("_Metallic", 0f);
+            m.SetFloat("_Smoothness", 0.15f);
+            EditorUtility.SetDirty(m);
+            return new Maamerkit.Malli { id = id, prefab = prefab, materiaali = m };
 
         public const string KoneTekstuurit = "Assets/Matkakirja/Kartta/Malli/Tekstuurit/";
 

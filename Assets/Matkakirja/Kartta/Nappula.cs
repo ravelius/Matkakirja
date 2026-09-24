@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using CesiumForUnity;
@@ -68,6 +69,10 @@ namespace Matkakirja
         public float malliPx = 110f;
         public Savujana savu;
         public Aurinko aurinko;
+        /// <summary>Lähtösumu ja pilvimeri (LENNON PINTA), Rakennus luo.</summary>
+        public Usvalevy usva;
+        /// <summary>Kaupunkien tunnusrakennukset (Maamerkit.cs), Rakennus luo.</summary>
+        public Maamerkit maamerkit;
 
         GameObject olio;
         Material oma;
@@ -195,7 +200,9 @@ namespace Matkakirja
             // pelin karttapisteet ja muut kaupungit palaavat perillä (Paatalento).
             aloitusMerkit = FindAnyObjectByType<KaupunkiMerkit>();
             string kohde = aloitusMerkit != null ? aloitusMerkit.LahinId(lat, lon) : null;
-            if (aloitusMerkit != null) aloitusMerkit.NaytaVain(kohde != null ? new[] { kohde } : Array.Empty<string>());
+            string lahto = aloitusMerkit != null ? aloitusMerkit.LahinId(lahtoLat, lahtoLon) : null;
+            // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
+            if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
             liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis));
         }
@@ -215,6 +222,14 @@ namespace Matkakirja
         {
             kesken = valmis;
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
+            // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
+            // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
+            if (usva != null)
+            {
+                usva.Aseta(lat0, lon0, nosto * 0.5, 0f);
+                usva.Tavoite(1f, math.max(0.8f, zoomS));
+            }
+            bool pintaVaihdettu = false, laskuSumu = false;
             if (kierto != null && zoomS > 0)
             {
                 kierto.Aja(lat0, lon0, saapumisKorkeus, zoomS, null);
@@ -231,6 +246,20 @@ namespace Matkakirja
             // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
             var merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
             string kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
+            // LENNON KARTTA (omistaja 24.9.2026 klo 13.4x): reittikaari pois (lähikuvassa se näkyi juovana koneesta
+            // kameraa kohti), sileä pohja ilman teitä ja rajoja, lähtö ja kohde punaisin pistein ja renkain.
+            var kerrokset = KarttaKerrokset.Instanssi;
+            reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
+            kerrokset?.Nakyvyys("reitit", false);
+            lentoMerkit = merkit;
+            lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
+            // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
+            if (maamerkit != null) maamerkit.Nayta(lentoIdt);
+            if (merkit != null)
+            {
+                merkit.Renkaat(lentoIdt, null, LentoPunainen);
+                foreach (var id in lentoIdt) merkit.Korosta(id, LentoPunainen);
+            }
             var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk)
                 ? kk : LennonAikajana.Oletus(Suuntima(lat0, lon0, lat1, lon1, 1.0), saapumisKorkeus);
             double loppuKallistus = kierto != null ? kierto.KallistusRaja(saapumisKorkeus) : 0;
@@ -300,6 +329,26 @@ namespace Matkakirja
                     else pilvet.Korkeus(math.max(2000.0, (nosto + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
+                // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
+                // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
+                if (!pintaVaihdettu && (usva == null || usva.Peitto > 0.85f || t > 0.2))
+                {
+                    pintaVaihdettu = true;
+                    kerrokset?.LentoPohja(true);
+                }
+                if (usva != null && t > 0.24 && t < 0.9) usva.Tavoite(0f, kesto * 0.12f);
+                if (usva != null && !laskuSumu && t > 0.9)
+                {
+                    laskuSumu = true;
+                    usva.Aseta(lat1, lon1, nosto * 0.5, usva.Peitto);
+                    usva.Tavoite(1f, kesto * 0.05f);
+                }
+                if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
+                {
+                    pintaVaihdettu = false;
+                    kerrokset?.LentoPohja(false);
+                    usva.Tavoite(0f, 1.4f);
+                }
                 if (t >= 1) break;
                 yield return null;
             }
@@ -315,8 +364,29 @@ namespace Matkakirja
         /// <summary>Koneen leveys osuutena ruudun leveydestä lennon aikajanalta (0 = merkkikoko).</summary>
         float koneRuudusta;
 
+        /// <summary>Lennon lähdön ja kohteen merkki (omistaja 24.9.: punainen piste tai hehkurengas).</summary>
+        static readonly Color LentoPunainen = new Color32(0xb8, 0x32, 0x28, 0xff);
+        KaupunkiMerkit lentoMerkit;
+        string[] lentoIdt;
+        bool reititEnnen = true;
+
         void Paatalento()
         {
+            var kerrokset = KarttaKerrokset.Instanssi;
+            if (kerrokset != null)
+            {
+                kerrokset.LentoPohja(false);
+                if (usva != null) usva.Tavoite(0f, 1.4f);
+                if (maamerkit != null) maamerkit.Piilota();
+                if (reititEnnen) kerrokset.Nakyvyys("reitit", true);
+            }
+            if (lentoMerkit != null)
+            {
+                lentoMerkit.Renkaat(null);
+                if (lentoIdt != null) foreach (var id in lentoIdt) lentoMerkit.Korosta(id, null);
+                lentoMerkit = null;
+                lentoIdt = null;
+            }
             koneRuudusta = 0;
             if (aloitusMerkit != null)
             {
