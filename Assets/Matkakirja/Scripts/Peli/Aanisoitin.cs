@@ -14,10 +14,15 @@
 //
 // RAMPIT: lineaarisesti Time.unscaledDeltaTime-askelin (Tasoramppi, askel enintään 0,1 s, joten
 // jumi tai tauko ei hyppää loppuarvoon). Uusi soitin nousee vasta, kun soitto on oikeasti alkanut
-// (timeSamples liikkuu); siihen asti se on nollassa. Taso on AudioSource.volume = min(1, tavoite).
+// (timeSamples liikkuu); siihen asti se on nollassa. Taso on AudioSource.volume = min(1, tavoite),
+// paitsi maisemalla (alla).
 //
-// KOMPRESSORI (§2.2): maiseman kompressori vaatii editorissa tehdyn AudioMixer-assetin, joten
-// ensimmäinen versio on ilman sitä (taso suoraan volumeen, leikkaus ykköseen). Tilattu Natiivisepältä.
+// KOMPRESSORI (§2.2, ilman AudioMixeriä): maiseman lähteet ovat omissa lapsi-GameObjecteissaan
+// ("Maisema A/B"), joissa MaisemaKompressori (OnAudioFilterRead) ajaa webin DynamicsCompressorin
+// (Peli/Aani/Kompressori.cs, Chromiumin portti, makeup noin +6,4 dB) ja kertoo tuloksen tasolla
+// kompressorin JÄLKEEN kuten web (kompressori → gain). Maiseman AudioSource.volume on aina 1 ja taso
+// menee suodattimeen leikkaamatta (web-gain sallii yli 1:n). Kompressori nollataan klipin alussa
+// (web: oma solmu jokaiselle soittimelle). Pohjaa, visaa, siirtymää ja aarretta ei kompressoida.
 //
 // LATAUS (oma, ei Natiivi-UI:n Aanet.Hae): 1) tavut levylle kerran (persistentDataPath/aanet/,
 // sama nimikaava kuin Aanet.Levy, atominen siirto), latausvahti 6 s ilman uusia tavuja; 2) klippi
@@ -136,6 +141,8 @@ namespace Matkakirja.Natiivi
         {
             public Kanava Kanava;
             public AudioSource A;
+            /// <summary>Maiseman kompressori (lähteen lapsi-GameObjectissa); muilla kanavilla null.</summary>
+            public MaisemaKompressori Komp;
             public string Url;
             public Klippi K;
             public readonly Tasoramppi Taso = new Tasoramppi(0);
@@ -151,6 +158,7 @@ namespace Matkakirja.Natiivi
         sealed class Latausvirhe { public long Http; public bool Verkko, Aika, Purku; }
 
         readonly AudioSource[,] lahteet = new AudioSource[Kanavia, LahteitaKanavalla];
+        readonly MaisemaKompressori[,] kompressorit = new MaisemaKompressori[Kanavia, LahteitaKanavalla];
         readonly Lahde[] nykyiset = new Lahde[Kanavia];
         readonly List<Lahde> elavat = new List<Lahde>();
         readonly Dictionary<string, Klippi> klipit = new Dictionary<string, Klippi>();
@@ -177,12 +185,21 @@ namespace Matkakirja.Natiivi
             for (int k = 0; k < Kanavia; k++)
                 for (int i = 0; i < LahteitaKanavalla; i++)
                 {
-                    var a = gameObject.AddComponent<AudioSource>();
+                    bool maisema = (Kanava)k == Kanava.Maisema;
+                    // Maisema omaan lapsiobjektiinsa: suodatin koskee kaikkia saman olion lähteitä.
+                    var go = gameObject;
+                    if (maisema)
+                    {
+                        go = new GameObject(i == 0 ? "Maisema A" : "Maisema B");
+                        go.transform.SetParent(transform, false);
+                    }
+                    var a = go.AddComponent<AudioSource>();
                     a.playOnAwake = false;
                     a.spatialBlend = 0f;
-                    a.volume = 0f;
-                    a.priority = (Kanava)k == Kanava.Maisema ? 96 : 64;
+                    a.volume = maisema ? 1f : 0f;
+                    a.priority = maisema ? 96 : 64;
                     lahteet[k, i] = a;
+                    if (maisema) kompressorit[k, i] = go.AddComponent<MaisemaKompressori>();
                 }
             Tila.Muuttui += TilaMuuttui;
             Asetukset.Muuttui += AsetuksetMuuttuivat;
@@ -307,15 +324,35 @@ namespace Matkakirja.Natiivi
 
         Lahde Luo(Kanava k, Toive w)
         {
+            var a = VapaaLahde(k);
             var l = new Lahde
             {
-                Kanava = k, A = VapaaLahde(k), Url = w.Url, Tavoite = w.Tavoite, Alku = w.Alku,
+                Kanava = k, A = a, Komp = KompressoriLahteelle(k, a), Url = w.Url, Tavoite = w.Tavoite, Alku = w.Alku,
                 Silmukka = w.Silmukka, Tauko = w.Tauko, NousuMs = w.KestoMs ?? 0,
             };
             elavat.Add(l);
             StartCoroutine(Hae(l, l.Vuoro));
             return l;
         }
+
+        MaisemaKompressori KompressoriLahteelle(Kanava k, AudioSource a)
+        {
+            for (int i = 0; i < LahteitaKanavalla; i++) if (lahteet[(int)k, i] == a) return kompressorit[(int)k, i];
+            return null;
+        }
+
+        /// <summary>
+        /// Lähteen taso: maisemalla kompressorin jälkeen suodattimessa (volume 1, ei leikkausta, web-gain),
+        /// muilla AudioSource.volume = min(1, taso).
+        /// </summary>
+        static void AsetaTaso(Lahde l, double taso)
+        {
+            if (l.A == null) return;
+            if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
+            else l.A.volume = (float)Math.Min(1.0, taso);
+        }
+
+        static float Taso(Lahde l) => l.Komp != null ? l.Komp.Taso : l.A != null ? l.A.volume : 0f;
 
         /// <summary>Kanavan vapaa AudioSource; jos molemmat ovat käytössä, hiljaisin häipyvä katkaistaan.</summary>
         AudioSource VapaaLahde(Kanava k)
@@ -346,7 +383,7 @@ namespace Matkakirja.Natiivi
             l.Url = url;
             l.Ladattu = l.Kaynnistetty = l.Soi = l.Tauotettu = l.OdottaaVerkkoa = false;
             l.Taso.Aseta(0);
-            l.A.volume = 0f;
+            AsetaTaso(l, 0);
             StartCoroutine(Hae(l, l.Vuoro));
         }
 
@@ -363,7 +400,7 @@ namespace Matkakirja.Natiivi
             if (l.Vapautettu) return;
             l.Vapautettu = true;
             l.Vuoro++;
-            if (l.A != null) { l.A.Stop(); l.A.clip = null; l.A.volume = 0f; l.A.loop = false; }
+            if (l.A != null) { l.A.Stop(); l.A.clip = null; AsetaTaso(l, 0); l.A.loop = false; }
             VapautaKlippi(l);
             elavat.Remove(l);
             if (nykyiset[(int)l.Kanava] == l) nykyiset[(int)l.Kanava] = null;
@@ -416,7 +453,8 @@ namespace Matkakirja.Natiivi
             a.clip = c;
             a.loop = l.Silmukka || (l.Kanava == Kanava.Maisema && Silmukka.Liianlyhyt(c.length));
             a.pitch = 1f;
-            a.volume = 0f;
+            AsetaTaso(l, 0);
+            l.Komp?.Nollaa(); // uusi klippi: kompressori alkutilaan ennen ensimmäistä puskuria
             a.Play();
             if (l.Alku > 0 && c.length > 0) a.time = Mathf.Clamp((float)l.Alku, 0f, Mathf.Max(0f, c.length - 0.05f));
             l.Kaynnistetty = true;
@@ -467,7 +505,7 @@ namespace Matkakirja.Natiivi
                 }
                 if (!l.Soi) continue;
                 l.Taso.Askel(dt);
-                a.volume = (float)Math.Min(1.0, l.Taso.Arvo);
+                AsetaTaso(l, l.Taso.Arvo);
                 if (l.Poistuva)
                 {
                     if (!l.Taso.Kaynnissa) Vapauta(l);
@@ -672,12 +710,13 @@ namespace Matkakirja.Natiivi
                 if (k > 0) sb.Append(',');
                 sb.Append('"').Append(((Kanava)k).ToString().ToLowerInvariant()).Append("\":{\"url\":").Append(PeliApu.Json(w.Url))
                   .Append(",\"tavoite\":").Append(w.Tavoite.ToString("0.#####", CultureInfo.InvariantCulture))
-                  .Append(",\"taso\":").Append(l != null && l.A != null ? l.A.volume.ToString("0.#####", CultureInfo.InvariantCulture) : "0")
+                  .Append(",\"taso\":").Append(l != null ? Taso(l).ToString("0.#####", CultureInfo.InvariantCulture) : "0")
                   .Append(",\"soi\":").Append(l != null && l.Soi ? "true" : "false")
                   .Append(",\"ladattu\":").Append(l != null && l.Ladattu ? "true" : "false")
                   .Append(",\"tauko\":").Append(w.Tauko ? "true" : "false")
-                  .Append(",\"aika\":").Append(l != null && l.Kaynnistetty && l.A != null ? l.A.time.ToString("0.0", CultureInfo.InvariantCulture) : "0")
-                  .Append('}');
+                  .Append(",\"aika\":").Append(l != null && l.Kaynnistetty && l.A != null ? l.A.time.ToString("0.0", CultureInfo.InvariantCulture) : "0");
+                if (l?.Komp != null) sb.Append(",\"kompressori\":").Append(l.Komp.Vahvistus.ToString("0.####", CultureInfo.InvariantCulture));
+                sb.Append('}');
             }
             int haipyvia = 0;
             foreach (var l in elavat) if (l.Poistuva) haipyvia++;

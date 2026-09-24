@@ -17,7 +17,8 @@
 //
 // POIKKEAMAT CHROMIUMISTA (kaikki kuulumattomia):
 //   - Kanavamäärä on vapaa (Chromium: aina stereo, mono kahdennetaan). Detektori on linkitetty:
-//     suurin itseisarvo kaikista kanavista, kuten Chromiumissa kahdesta. Yli 8 kanavaa: vain taso.
+//     suurin itseisarvo kaikista kanavista, kuten Chromiumissa kahdesta. Yli 8 kanavaa tai tuntematon
+//     näytetaajuus: vain taso (ei koskaan täyttä voimaa).
 //   - 32 näytteen lohkojako jatkuu puskurirajojen yli (Chromium aloittaa lohkon jokaisen
 //     128 näytteen render quantumin alusta, mikä on 32:n monikerta, joten tulos on sama);
 //     Unityn puskurin koko ei siis vaikuta tulokseen.
@@ -244,8 +245,9 @@ namespace Matkakirja.Peli
             int kehyksia = data.Length / kanavia;
             if (kehyksia == 0) return;
             float tasoAskel = (tasoLoppu - tasoAlku) / kehyksia;
-            if (kanavia > MaksKanavia)
+            if (kanavia > MaksKanavia || (naytetaajuus <= 0 && this.naytetaajuus <= 0))
             {
+                // Ei tuettu kanavamäärä tai näytetaajuus tuntematon: vain taso (ei koskaan täyttä voimaa).
                 for (int i = 0; i < kehyksia; i++)
                 {
                     float t = tasoAlku + tasoAskel * (i + 1);
@@ -254,7 +256,6 @@ namespace Matkakirja.Peli
                 return;
             }
             if (naytetaajuus > 0 && naytetaajuus != this.naytetaajuus) AsetaNaytetaajuus(naytetaajuus);
-            if (this.naytetaajuus <= 0) return;
             if (kanavia != kanavat)
             {
                 kanavat = kanavia;

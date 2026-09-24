@@ -13,7 +13,7 @@ using System.Text;
 
 namespace Matkakirja.Peli
 {
-    /// <summary>Lineaarinen tasoramppi. Arvo on AudioSource.volume ennen leikkausta ykköseen.</summary>
+    /// <summary>Lineaarinen tasoramppi. Arvo on AudioSource.volume ennen leikkausta ykköseen (maisemalla MaisemaKompressorin taso, ei leikkausta).</summary>
     public sealed class Tasoramppi
     {
         /// <summary>Yhden ruudun suurin aika-askel: 2 s:n jumi etenee rampissa vain tämän verran.</summary>
