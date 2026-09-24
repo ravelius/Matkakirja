@@ -331,6 +331,7 @@ namespace Matkakirja
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
                 Interlocked.Increment(ref Varakuvia);
+                varalla.TryAdd(polku, 0);
                 return (200, varakuva);
             }
             // Väritason puuttuva laatta: läpinäkyvä (Cesium piirtäisi epäonnistuneen mustana).
@@ -351,9 +352,53 @@ namespace Matkakirja
             return (tila, data);
         }
 
+        /// <summary>
+        /// Pohjalaatat, joiden tilalle annettiin varalaatta. Cesium ei hae laattaa uudelleen (se sai vastauksen),
+        /// joten pergamenttinen suorakulmio jäisi kartalle (Laitetestaaja 24.9.: umpikerma Espanjan–Saharan yllä).
+        /// Ne haetaan uudelleen rauhallisena hetkenä, ja kun yksikin onnistuu, pohjakerros ladataan uudelleen
+        /// Cesiumiin (laatat tulevat nyt välimuistista).
+        /// </summary>
+        readonly ConcurrentDictionary<string, byte> varalla = new ConcurrentDictionary<string, byte>();
+        float seuraavaUusinta;
+        bool uusintaKesken;
+
         void Update()
         {
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
+            {
+                seuraavaUusinta = Time.unscaledTime + 10f;
+                StartCoroutine(UusiVaralaatat());
+            }
+        }
+
+        IEnumerator UusiVaralaatat()
+        {
+            uusintaKesken = true;
+            int onnistui = 0;
+            foreach (var polku in new System.Collections.Generic.List<string>(varalla.Keys))
+            {
+                var h = new Haku { Polku = polku };
+                yield return Lataa(h);
+                var (tila, data) = h.Valmis.Task.Result;
+                if (tila != 200 || data == null) continue;
+                try
+                {
+                    string f = Tiedosto(valimuisti, polku);
+                    Directory.CreateDirectory(Path.GetDirectoryName(f));
+                    File.WriteAllBytes(f, data);
+                }
+                catch (Exception) { continue; }
+                varalla.TryRemove(polku, out _);
+                onnistui++;
+            }
+            if (onnistui > 0)
+            {
+                var pohja = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pohja : null;
+                if (pohja != null && pohja.enabled) { pohja.RemoveFromTileset(); pohja.AddToTileset(); }
+                Debug.Log($"MATKAKIRJA laattapalvelin: {onnistui} varalaattaa korvattu oikealla, pohja ladattu uudelleen ({varalla.Count} jäljellä)");
+            }
+            uusintaKesken = false;
         }
 
         IEnumerator Lataa(Haku h)
