@@ -2,7 +2,7 @@
 /*
  * MEDIAN LISENSSITARKISTUS — YKSI LASKURI KAIKELLE (Siirtoseppä 23.9.2026).
  *
- *   node tools/vienti/lisenssit.mjs [--json]
+ *   node tools/vienti/lisenssitarkistus.mjs [--json]
  *
  * Pelistä tulee maksullinen (Fable 23.9.2026), joten NC- ja ND-ehtoinen
  * aineisto ei saa olla käytössä. Tämä käy läpi jokaisen viennin
@@ -28,7 +28,7 @@
  *   linkki      lähde- tai lisenssilinkki, ei media
  *
  * PORTTI: tests/lisenssit.test.mjs vaatii, että NC/ND-viitteet ovat
- * täsmälleen TUNNETUT_NC_ND-lista (tools/vienti/lisenssit-tunnetut.json).
+ * täsmälleen TUNNETUT_NC_ND-lista (tools/vienti/lisenssitarkistus-tunnetut.json).
  * Uusi NC/ND kaataa testin; korvattu pitää poistaa listasta, jotta lista
  * pysyy totena ja vain lyhenee. Tämä on ainoa NC/ND-laskuri: myös
  * äänten portin vartija (tests/aanilisenssit.test.mjs) nojaa tähän.
@@ -41,7 +41,7 @@ import { aaniLisenssiTunnus, lisenssiKelpaa } from '../../js/lisenssi.js';
 const TAMA = dirname(fileURLToPath(import.meta.url));
 
 /** Tunnetut NC/ND-viitteet (media.json `arvo`), jotka saa vain poistaa. */
-export const TUNNETUT_NC_ND = JSON.parse(readFileSync(join(TAMA, 'lisenssit-tunnetut.json'), 'utf8')).viitteet;
+export const TUNNETUT_NC_ND = JSON.parse(readFileSync(join(TAMA, 'lisenssitarkistus-tunnetut.json'), 'utf8')).viitteet;
 
 const OMAT_LAJIT = new Set(['juliste', 'hetkikuva', 'kohtaamiskuva', 'aani-oma', 'repo', 'ampari-avain',
   'asset-aarteet', 'asset-elaimet', 'asset-ihmeet', 'asset-miniatyyrit', 'asset-nostot', 'tiedosto']);
@@ -173,7 +173,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     for (const [laji, l] of Object.entries(lajeittain).sort()) console.log(`  ${laji.padEnd(18)} ${JSON.stringify(l)}`);
     console.log(`NC/ND ${v.nyt} (tunnettuja ${TUNNETUT_NC_ND.length}).`);
     for (const a of v.uudet) console.log(`  UUSI NC/ND: ${a} — ${viitteet.find((x) => x.arvo === a).lisenssi}`);
-    for (const a of v.korvatut) console.log(`  korvattu, poista tools/vienti/lisenssit-tunnetut.json:sta: ${a}`);
+    for (const a of v.korvatut) console.log(`  korvattu, poista tools/vienti/lisenssitarkistus-tunnetut.json:sta: ${a}`);
   }
   process.exitCode = v.uudet.length || v.korvatut.length ? 1 : 0;
 }

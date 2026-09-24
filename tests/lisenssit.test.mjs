@@ -2,7 +2,7 @@
  * MEDIAN NC/ND-PORTTI — yksi laskuri kaikelle medialle.
  *
  * Pelistä tulee maksullinen (Fable 23.9.2026), joten NC- ja ND-ehtoinen
- * aineisto ei saa lisääntyä. tools/vienti/lisenssit.mjs luokittelee
+ * aineisto ei saa lisääntyä. tools/vienti/lisenssitarkistus.mjs luokittelee
  * jokaisen mediaviitteen (kuvat, äänet, liput, julisteet…) samalla
  * säännöllä kuin pelin portit (js/lisenssi.js). Tämä testi on AINOA
  * NC/ND-laskuri; äänten portin vartija (tests/aanilisenssit.test.mjs)
@@ -11,13 +11,13 @@
  * Kaatuu, jos
  *   - dataan tulee uusi NC/ND-viite (ei listassa), tai
  *   - listassa on viite, joka on korvattu (lista pidetään totena ja
- *     lyhenevänä: poista rivi tools/vienti/lisenssit-tunnetut.json:sta).
+ *     lyhenevänä: poista rivi tools/vienti/lisenssitarkistus-tunnetut.json:sta).
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
-import { luokitteleMedia, vertaaTunnettuihin, TUNNETUT_NC_ND } from '../tools/vienti/lisenssit.mjs';
+import { luokitteleMedia, vertaaTunnettuihin, TUNNETUT_NC_ND } from '../tools/vienti/lisenssitarkistus.mjs';
 import { aaniLisenssiTunnus, lisenssiKelpaa } from '../js/lisenssi.js';
 
 const { tiedostot } = await kokoaVienti();
@@ -26,7 +26,7 @@ const { viitteet } = luokitteleMedia(tiedostot);
 test('NC/ND-viitteet ovat täsmälleen tunnettu lista', () => {
   const v = vertaaTunnettuihin(viitteet);
   assert.deepEqual(v.uudet, [], `uusi NC/ND-media: ${v.uudet.join(' | ')}`);
-  assert.deepEqual(v.korvatut, [], `korvattu, poista tools/vienti/lisenssit-tunnetut.json:sta: ${v.korvatut.join(' | ')}`);
+  assert.deepEqual(v.korvatut, [], `korvattu, poista tools/vienti/lisenssitarkistus-tunnetut.json:sta: ${v.korvatut.join(' | ')}`);
 });
 
 test('tunnettujen listan rivit ovat oikeasti NC/ND', () => {

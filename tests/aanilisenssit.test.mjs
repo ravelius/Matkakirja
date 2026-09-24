@@ -68,7 +68,7 @@ test('jokaisella kolmannen osapuolen äänellä on kirjattu lisenssi', () => {
 /*
  * Uusien NC/ND-äänitteiden laskuri oli tässä (TUNNETUT_NC_RIVIT = 24). Se
  * siirtyi yhteiseksi kaikelle medialle: tests/lisenssit.test.mjs ja
- * tools/vienti/lisenssit-tunnetut.json (Fable 23.9.2026: ei kahta laskuria).
+ * tools/vienti/lisenssitarkistus-tunnetut.json (Fable 23.9.2026: ei kahta laskuria).
  * Nimetty lista on tiukempi kuin määrä: NC-äänitteen vaihto toiseen NC:hen
  * ei enää mene läpi.
  */
