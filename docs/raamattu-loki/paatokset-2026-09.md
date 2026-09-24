@@ -4723,3 +4723,7 @@ Fablen agentti (Opus) kirjoitti docs/linssikatalogi.md:n uusiksi (655 riviä) ja
 ## LAITETESTAAJA NOLLATTU (FABLE): LUOVUTUS -20260924-yo.md (b65bf87db), PR #3126, ALOITUSVIESTI LAHETETTY (KAANNOSPALVELU, JUMI → KORTTI + PUSH, DESYNC-VAROITUS, MITATTU KIERROS b11o) (24.9.2026 klo 23.16)
 
 Laitetestaaja kirjoitti luovutuksen ja nollasi itsensä klo 23.09; Fable lähetti aloitusviestin haarasta laitetestaaja-inventaario-ipad. Seuraavaksi: #3126:n tila, Pelikoodarin korjattu pariteettiajo, mitattu kierros, nappi-inventaarion loput rivit.
+
+## OMISTAJA klo 23.2x: LOYDOKSEN 46 LAHIKUVAT YHA EPASELVIA VS WEB → SUUNTA: RANNAT JA RAJAT NATIIVIIN VEKTORIKERROKSENA (KUTEN WEB) + SYVEMMAT RASTERITASOT MAALLE; KUVAPARI WEB VS NATIIVI SAMASTA NAKYMASTA ENNEN PAATOSTA (24.9.2026 klo 23.25)
+
+Omistaja: 'nuo uudetkin lähikuvat ovat vielä epäselviä verrattuna web versioon'. Fablen analyysi: web piirtää rannat, rajat ja nimet vektorina jokaisessa zoomissa laatan päälle, natiivi lataa pelkän Z8-rasterin, joten rasteriresepti (B/C) ei yksin riitä lähikuvassa. Karttaseppä: mitattu kuvapari (web tasokartta vs natiivi Z8, Peloponnesos iPad) + vedos Z8-pohja + vektoriranta 1 px + arvio Z9–Z10-sarjasta; Natiiviseppä: Cesium for Unity -vektorikerroksen toteutettavuus (polyline maaston päällä, ruutuleveys) ja rasteritason maksimi. C-resepti yleiskuviin pysyy ehdolla; omistaja päättää kuvista.
