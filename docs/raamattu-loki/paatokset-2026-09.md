@@ -4379,3 +4379,7 @@ Met CC0 22 + NGA PD 8, 18 taiteilijaa (Botticelli, Bellini, Rafael, Tizian, Ghir
 ## NATIIVI-UI: LEHTI-OTSIKOT-ERA 69f4cde VALMIS (BUILD 11); YLEINEN LOYDOS: RGBA-VARIT PIIRTYVAT LIIAN VAALEINA LINEAARISESSA VARIAVARUUDESSA (24.9.2026 klo 17.49)
 
 Etusivulla webin intro, otsikot 700, nostokortin vaihe 1 selite keskellä + LISÄÄ. Mittaus: selite natiivissa 117 vs web 58 → selittää monta 'tekstit vaaleampia' -eroa; Natiiviseppä arvioi koko UI:n kertakorjauksen (sRGB-muunnos UI-väreille), muuten erä kerrallaan. Seuraavaksi iPadin leveä nostokortti (vaihe 2) ja tyyppikuvake.
+
+## BUILD 10 KASKETTY (f02376b) klo 19.1x; KYLMAN LENNON SUORAKULMIOT BUILD 11:EEN; VIISI ODOTTANUTTA KASKYA LAHETETTY (24.9.2026 klo 17.54)
+
+Julkaisija vie f02376b:n (-nographics, Unity kiinni, käännökset tauolla), muutoslokirivi annettu; tiimiristiriita: nykyinen secret, MATKAKIRJA_TEAM-ohitus jos arkistointi kaatuu. Natiiviseppä: harmaat suorakulmiot 2–3 kehystä vain ensimmäisellä lennolla asennuksen jälkeen; laatalla rasteri mutta sisältö harmaa → ei varakartan asia, agentti jatkaa (Laattapalvelin / cesium-nativen virheenkäsittely). Lähetetty: Karttasepälle fontti (Liberation Serif molempiin, polttoon fonttitarkistus), Linssisepälle maalausmanifesti (teosluettelo, ei koodia), Sisältökirjurille luovutus -f ja nollaus (seuraava tehtävä: kuvatilausluonnos galleria + ennenNyt), Postivahdille aloitusviestiohje + ei 'jatka'-viestejä viennin aikana.
