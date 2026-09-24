@@ -241,10 +241,11 @@ namespace Matkakirja.Peli
         /// <summary>Vanhin luettava minor (Kultaiset/paketti = 1.1).</summary>
         public const int PieninMinor = 1;
         /// <summary>
-        /// Uusin läpikäyty minor (koepaketti v43 = 1.33, 24.9.2026: kokoelma maamerkit; 1.31–1.32 lisäsivät
-        /// päätason kenttiä, 1.30 aanitaulut, reitit.maksu ja laattatyyppien suomenkieliset nimet päätasolla).
+        /// Uusin läpikäyty minor (koepaketti v47 = 1.37, 24.9.2026: kokoelmat merinimet 1.36 ja aluenimet 1.37
+        /// Nimikerrokselle, 1.34–1.35 maarajat ja maat.fokuspohja NostoKerrokselle; v43 = 1.33 kokoelma maamerkit;
+        /// 1.31–1.32 lisäsivät päätason kenttiä, 1.30 aanitaulut, reitit.maksu ja laattatyyppien suomenkieliset nimet).
         /// </summary>
-        public const int SuurinMinor = 33;
+        public const int SuurinMinor = 37;
         /// <summary>
         /// Ensimmäinen skeema, jossa jokainen natiivin lukema kenttä on päätasolla suomeksi (koepaketti v38;
         /// 1.26 = v33 toi raakakentät, mutta aanitaulut, meren maksu ja laattojen nimet puuttuivat).
