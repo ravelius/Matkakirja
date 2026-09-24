@@ -2,8 +2,8 @@
 
 Lyhyt läpikäynti kohta kohdalta. "Puute" = tiedossa oleva ero
 edelliseen buildiin tai kesken oleva asia — ei tarvitse raportoida
-uudelleen. Muutokset build 3:een nähden: kohdat 4, 14, 16 ja uusi
-kohta 18.
+uudelleen. Muutokset build 3:een nähden: kohdat 4, 14, 16, 18 ja
+uusi kohta 19 (iPad-erityiset).
 
 **1. Asennus**
 Pitäisi näkyä: TestFlight asentaa ja avaa suoraan.
@@ -89,9 +89,10 @@ Puute: ei tunnettuja.
 Pitäisi näkyä: maailmanradion oma näkymä (pistenäyttö, viritysasteikko,
 merkkivalo) toimii linssilistalta avattuna; asemat vaihtuvat maittain
 napautuksesta tai virityksestä, useimmat soivat suoraan.
-Puute: yksittäisiä asemia voi puuttua tai ne eivät vastaa (palvelimen
-oma vika, ei sovelluksen) — jos SAMA asema epäonnistuu toistuvasti,
-kerro asema+maa; satunnainen yksittäinen ei ole uusi löydös.
+Puute: juurisyy yhdelle toistuvasti epäonnistuvalle asemalle (Sveitsi/
+Bern, stream.rabe.ch) on jo tiedossa — palvelimen oma TLS-asetus, ei
+sovelluksen vika. Jos JOKIN MUU asema epäonnistuu toistuvasti, kerro
+asema+maa; satunnainen yksittäinen aikakatkaisu ei ole uusi löydös.
 
 **17. Sulavuus**
 Pitäisi näkyä: tasainen liike, ei nykimistä missään kohtaa.
@@ -105,6 +106,15 @@ kaartaa laskeutuessa kohteeseen. Avausteksti alareunan kaistaleella ei
 peitä konetta eikä valu kaistaleen ulkopuolelle.
 Puute: ei tunnettuja — juuri korjattu, kerro heti jos kone jää tekstin
 alle tai savujana puuttuu.
+
+**19. iPad-erityiset (UUSI — vain fyysisellä laitteella, ei simulaattorissa)**
+Pitäisi näkyä: (a) sivussa oleva äänettömyyskytkin mykistää pelin äänet
+kuten muidenkin sovellusten; (b) Bluetooth-kuulokkeet/-kaiutin toimivat
+normaalisti parina; (c) jos kuuntelet samaan aikaan muuta ääntä (esim.
+Musiikki-sovellusta), pelin äänet soivat sen PÄÄLLÄ vaimentamatta sitä
+kokonaan (MixWithOthers) — ei kumpaakaan tarvitse kuulua täysin hiljaa.
+Puute: ei tunnettuja — näitä ei voi testata simulaattorissa, joten
+tämä on ensimmäinen kerta kun ne todennetaan oikealla laitteella.
 
 ---
 Jos jokin muu kuin yllä mainitut "puutteet" tuntuu väärältä, se on uusi
