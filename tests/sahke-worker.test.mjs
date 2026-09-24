@@ -546,7 +546,7 @@ function natiiviOtsakkeet(tunniste = NATIIVI, agentti = `Matkakirja/1.0 (${tunni
 
 test('natiivitunniste vaatii listan ja saman tunnisteen User-Agentissa', () => {
   const otsakkeet = (o) => new Headers(o);
-  assert.deepEqual([...NATIIVIT_OLETUS], ['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+  assert.deepEqual([...NATIIVIT_OLETUS], ['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
   assert.ok(sallittuNatiivi(otsakkeet(natiiviOtsakkeet())));
   assert.ok(!sallittuNatiivi(otsakkeet(natiiviOtsakkeet('app.vieras.peli'))));
   assert.ok(!sallittuNatiivi(otsakkeet(natiiviOtsakkeet(NATIIVI, 'Mozilla/5.0'))));
