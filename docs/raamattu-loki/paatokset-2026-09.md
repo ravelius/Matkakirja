@@ -4195,3 +4195,7 @@ Luovutus viesti-laitetestaaja-luovutus-20260924-ilta.md (avoimet pariteettirivit
 ## PELIKOODARI: AVAUSTEKSTI ALOITUSNAYTOLLA (pelikoodari/avausteksti-portille d4950c0, BUILD 10) (24.9.2026 klo 16.22)
 
 Portti → juliste ja arkki ('Heathrow, Lontoo, syyskuu 2026' + INTRO_TEXT intro-puhe.mp3:n tahdissa) → VALITSE ALOITUSKAUPUNKI (webin renderIntro); napautus ohittaa; valinta vaientaa kertojan, naksahdus, pallo suoraan valintanäkymään pulun kanssa; Lontoo-zoomi ja ulos-zoomi poistettu. Raja: Pelikoodari portista valintanäkymään, Natiiviseppä valinnasta eteenpäin (kamerareitti). Web-kuvat ja mitat (AVAUS_*_MS, INTRO_TYPE_MS 190) merge-pyynnössä; teksti paketista. liiku-tanne d7a6e4d PASS iPhonella (build 10).
+
+## OMISTAJAN LOYDOS 31 (klo 16.4x, SITOVA): KALLISTUS LAHES HORISONTTIIN; 28–31 LAHETETTY NATIIVISEPALLE (24.9.2026 klo 16.22)
+
+Omistaja: saako kallistuksen 90 asteeseen kun kartta on aidosti 3D. Fable: kyllä, raja ~85–88° (Google Earthin tapaan; 90° tekisi maasta viivan ja kamera menisi pinnan alle vuoristossa), sekä eleellä että kamera-ajoissa; laattojen näkyvyys ja usva/taivas tarkistetaan matalasta kulmasta. 28 (kallistus pysyy zoomatessa), 29 (korkeuskerroin, kolme vertailukuvaa omistajalle), 30 (heading-pyöritys kahden sormen kiertoeleellä, pohjoinen palautuu) ja 31 lähetetty Natiivisepälle build 10:een. Postivahdin Laitetestaaja-ohje lähetetty.
