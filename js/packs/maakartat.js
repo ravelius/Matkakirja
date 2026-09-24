@@ -3041,6 +3041,39 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Porto Velho (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  portovelho: {
+    polku: 'assets/kartat/portovelho-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -8.75, etela: -8.7785, lansi: -63.924, ita: -63.889,
+    },
+    esittely: 'Kartan alue on Porto Velhon vanha keskusta Rio Madeiran '
+      + 'rannalla. Kaupunki syntyi 1907 kuolonuhreja vaatineen Madeira-'
+      + 'Mamoré-rautatien leirinä; vanha rautatieasema seisoo yhä joen '
+      + 'varrella, ja lähellä kohoaa kaupungin ensimmäinen kivikirkko.',
+    kohteet: [
+      {
+        nimi: 'Sagrado Coração de Jesus -katedraali', lat: -8.7620468, lon: -63.9040348,
+        teksti: 'Porto Velhon ensimmäinen katolinen kivikirkko: peruskivi '
+          + 'muurattiin 1917, mutta rakentaminen käynnistyi kunnolla '
+          + 'vasta kymmenen vuotta myöhemmin. Ulkoa kaksitorninen '
+          + 'katedraali on roomalaistyylinen, mutta sisällä holvit '
+          + 'nousevat goottilaisittain terävinä.',
+      },
+      {
+        nimi: 'Madeira-Mamoré-rautatien vanha asema', lat: -8.7664873, lon: -63.9090431,
+        teksti: 'Porto Velho syntyi 1907 tämän rautatien '
+          + 'rakennusleirinä — hanke vaati satoja työläisten henkiä '
+          + 'malariaan ja muihin sairauksiin. Vanha asemarakennus joen '
+          + 'varrella on säilytetty, ja sen pihalla seisoo yhä ratahankkeen '
+          + 'vanhoja vetureita.',
+      },
+    ],
+  },
+  /*
    * Broome (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
    * `teksti`-kenttä, ei `nosto:`-linkkiä.
    */

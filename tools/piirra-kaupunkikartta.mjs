@@ -65,6 +65,13 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  portovelho: {
+    // Sagrado Coração de Jesus -katedraali (-8.7620/-63.9040) ja Madeira-
+    // Mamoré-rautatien vanha asema (-8.7665/-63.9090) ovat n. 0,7 km
+    // päässä toisistaan keskustassa joen varrella (sisältöinventaario
+    // #3045 kohta 5.5).
+    rajat: { pohjoinen: -8.750, etela: -8.7785, lansi: -63.924, ita: -63.889 },
+  },
   broome: {
     // Bedford Park (-17.9629/122.2389, Women of Pearling -patsas) ja
     // Chinatown (-17.9544/122.2433, Johnny Chi Lane) ovat n. 1,1 km
