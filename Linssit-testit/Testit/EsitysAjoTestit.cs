@@ -115,6 +115,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(o.GetProperty("afrikka").GetDouble(), v.Afrikka, "afrikka");
         }
 
+        [Testi] static void AvausLahteeAvaruudesta()
+        {
+            // Web avaaKaukaisuus: mustan alla kamera 300 pallonsäteen päähän Afrikan keskuksen yläpuolelle,
+            // ja zoomi Afrikkaan lähtee sieltä (omistajan build 5 -löydös 12: iPhonessa zoomi lähti kaupungista).
+            var (e, y, _, _, _, _) = Luo();
+            e.Aloita();
+            Oleta.Tosi(y.Avaruus != null, "kamera ei mennyt avaruuteen");
+            Oleta.Sama(Esitysmatikka.AvaruudenKorkeus, y.Avaruus.Value.Sateita);
+            Lahella(1.0, y.Avaruus.Value.Lat, "keskus lat (−35…37)", 1e-9);
+            Lahella(17.0, y.Avaruus.Value.Lon, "keskus lon (−18…52)", 1e-9);
+            Oleta.Tosi(y.Loki.IndexOf("avaruus 300") >= 0 && !y.Loki.Take(y.Loki.IndexOf("avaruus 300")).Contains("ajo"),
+                "avaruus ennen ensimmäistä kamera-ajoa");
+
+            var (e2, y2, _, _, _, _) = Luo();
+            y2.Vahennetty = true;
+            e2.Aloita();
+            Oleta.Tosi(y2.Avaruus == null, "vähennetty liike: ei avaruutta (pallo heti Afrikassa)");
+        }
+
         [Testi] static void KoreografiaAlustaLoppuun()
         {
             var (e, y, n, a, leimat, kertomus) = Luo();

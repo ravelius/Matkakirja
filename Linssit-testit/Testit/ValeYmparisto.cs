@@ -51,6 +51,8 @@ namespace Matkakirja.Linssit.Testit
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
         { Loki.Add("ajo"); Ajo = kohde; AjonKesto = kestoS; AjonPehmennys = pehmennys; }
         public void ZoomiKatto(double? max) { Loki.Add("katto " + (max?.ToString() ?? "pois")); Katto = max; }
+        public (double Lat, double Lon, double Sateita)? Avaruus;
+        public void KameraAvaruuteen(double lat, double lon, double sateita) { Loki.Add("avaruus " + sateita); Avaruus = (lat, lon, sateita); }
         public double KokoPallonKorkeus => 25_000_000;
         /// <summary>Vale: 1° ruudun leveydellä = 100 km korkeutta.</summary>
         public double KorkeusLeveydelle(double leveysAsteina) => leveysAsteina * 100_000;

@@ -38,6 +38,9 @@ namespace Matkakirja.Linssit.Astronautti
 
     public sealed class AstronauttiLinssi : ILinssi
     {
+        /// <summary>Sulun paluuajo (s) pelaajan näkymään: avauskorkeudesta alas, joten pidempi kuin topografian 0,9 s.</summary>
+        public const float PaluuAjoS = 1.6f;
+
         public const string Kerros = "astronautti";
         public const double MaanSade = 6_371_000;
         public const double PaljastuksenMinimiMs = 1800, PaljastuksenKattoMs = 12000;
@@ -215,8 +218,9 @@ namespace Matkakirja.Linssit.Astronautti
             y.Pelikerrokset(true);
             y.ZoomiKatto(null);
             y.MusiikkiPitoon(false);
-            // Pallo palaa täsmälleen lähtötilaan (web pura()).
-            y.AjaKamera(talteen, 0f);
+            // Pallo palaa täsmälleen lähtötilaan (web pura()); webissä hyppy, natiivissa pehmeä paluu
+            // (Raamattu KAMERA-AJOT, omistaja 24.9.: ei hyppyjä), vähennetyllä liikkeellä heti.
+            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : PaluuAjoS);
         }
     }
 }

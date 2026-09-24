@@ -885,7 +885,10 @@ namespace Matkakirja.Natiivi
             // Laitetestien jälki: keksintöjen loppukamera jäi iPadilla ajamatta (24.9.), syy selvitettävä.
             using var _ = KameraMerkki.Auto();
             Kirjaa($"kamera-ajo → {kohde} {kestoS:F1} s (nyt {Kamera})");
-            kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null, pehmennys);
+            // KAMERA-AJOT (Raamattu, omistaja 24.9.): ease in / ease out ilman lineaarisia pätkiä. Pelin oletus
+            // (trapetsi, ramppi 0,3) kulkee keskellä vakionopeudella, joten linssien oletus on smootherstep.
+            kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null,
+                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys);
         }
 
         /// <summary>
@@ -894,6 +897,12 @@ namespace Matkakirja.Natiivi
         /// vasta, jos jokin linssi rajaa loitonnusta; silloin PalloKierto saa asettimen.
         /// </summary>
         public void ZoomiKatto(double? maxKorkeus) { }
+
+        public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
+        {
+            Kirjaa($"kamera avaruuteen → {lat:F1}, {lon:F1}, {pallonSateita:F0} R");
+            kierto.AsetaKaukaa(lat, lon, pallonSateita * CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
 
         public double KokoPallonKorkeus => kierto.MaxKorkeus();
 

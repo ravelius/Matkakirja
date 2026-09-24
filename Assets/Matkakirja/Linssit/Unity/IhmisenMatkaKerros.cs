@@ -88,7 +88,8 @@ namespace Matkakirja.Natiivi
             Instanssi = k;
             bool vahennetty = LinssiOhjain.Instanssi?.VahennettyLiike ?? false;
             k.valot = Matkakirja.Natiivi.Valot.Luo(g, paikat.Select(p => (p.Tunnus, p.Lat, p.Lon)).ToList(), vahennetty, kierto.GetComponent<Camera>());
-            k.taivas = Tahtitaivas.Luo(g, 1, vahennetty);
+            // Kerroin 60 (web TAHTIEN_KERROIN): avauksen kamera on 300 pallonsäteen päässä, joten tähtien on oltava sitä kauempana.
+            k.taivas = Tahtitaivas.Luo(g, Esitysmatikka.TahtienKerroin, vahennetty);
             kierto.Napautettu += k.Napautettu;
             return k;
         }

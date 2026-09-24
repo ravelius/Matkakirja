@@ -124,7 +124,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(true, y.PelikerroksetNakyvissa);
             Oleta.Tosi(!y.Vale.Rasterit.ContainsKey(AstronauttiLinssi.Kerros));
             Oleta.Sama(alku.Korkeus, y.Ajo.Value.Korkeus);
-            Oleta.Sama(0f, y.AjonKesto);
+            Oleta.Sama(AstronauttiLinssi.PaluuAjoS, y.AjonKesto);   // pehmeä paluu, ei hyppyä (KAMERA-AJOT 24.9.)
             Oleta.Sama("pois", n.Loki.Last());
         }
     
