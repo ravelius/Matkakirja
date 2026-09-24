@@ -4243,3 +4243,7 @@ Webissä korjattu aiemmin: pulu toimii avaruuslinssissä kuten muualla pelissä 
 ## ISO iPAD: 'No Account for Team F72JLS57C5' — PERSONAL TEAM KUULUU TOISEEN APPLE ID:HEN → KEHITYSKAANNOKSET MAKSULLISEEN DEVELOPER-TIIMIIN (24.9.2026 klo 16.35)
 
 Omistajan koodaus-Xcode-tili (me.com) ei sisällä Personal Team F72JLS57C5:tä. Fable: Natiiviseppä vaihtaa DEVELOPMENT_TEAM:n maksulliseen Developer Program -tiimiin (sama kuin Actionsin TEAM_ID), rekisteröi laitteet (-allowProvisioningDeviceRegistration) ja tekee automaattisen profiilin; Personal Teamia ei enää käytetä. Jos tiimilista ei lataudu, omistaja lukee tiimin nimen/ID:n Accounts-näkymästä.
+
+## OMISTAJAN LOYDOKSET 36–37 (BUILD 9, klo 17.1x, SITOVA): MAAILMANAPPI PUUTTUU; KEHITTAJANAPIT JA HAMMASRATAS NAKYVAT ILMAN KEHITTAJATILAA (24.9.2026 klo 16.36)
+
+36) webin karttanappi (maailmanäkymä) palautetaan kartan yläkulmaan webin mukaan. 37) kehittäjäsäätimet ja ⚙ piiloon kun kehittäjätila on pois (Raamattu: vain kehittäjätilassa; ⚙ ei pelaajan näkymässä). → Natiivi-UI, build 10, yläpalkin yhteydessä.
