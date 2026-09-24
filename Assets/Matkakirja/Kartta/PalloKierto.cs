@@ -286,7 +286,7 @@ namespace Matkakirja
         double PuoliKulma()
         {
             var kamera = GetComponent<Camera>();
-            double pysty = math.radians(kamera != null ? kamera.fieldOfView : 40.0) / 2.0;
+            double pysty = math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0;
             double vaaka = math.atan(math.tan(pysty) * (kamera != null ? kamera.aspect : 1.0));
             return math.min(pysty, vaaka);
         }
@@ -328,7 +328,7 @@ namespace Matkakirja
         double AstettaPikselille()
         {
             var kamera = GetComponent<Camera>();
-            double fov = math.radians(kamera != null ? kamera.fieldOfView : 40.0);
+            double fov = math.radians(kamera != null ? kamera.fieldOfView : 50.0);
             double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
             double kaari = 2.0 * korkeus * math.tan(fov / 2.0) / r;
             return math.degrees(math.min(kaari, math.PI)) / math.max(1, Screen.height);
