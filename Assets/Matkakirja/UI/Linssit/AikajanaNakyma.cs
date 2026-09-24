@@ -50,8 +50,14 @@ namespace Matkakirja.Natiivi
         enum Tila { Ei, Keksinnot, Ihminen }
 
         readonly LinssiUi linssit;
-        readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, valinaytos, esittely, loppu, musta;
-        readonly Label otsikko, paikka, kello, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko, vTeksti;
+        readonly UiKerros kerros;
+        readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, valinaytos, valinaytosRivit, esittely, loppu, musta;
+        readonly Label otsikko, paikka, kello, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko;
+        // Havainnekuva (web .aikajana-ilmiokuva): kaksi kerrosta ristihäivytykseen ja kuvateksti kuvan alareunassa.
+        readonly VisualElement havainne, havainneTeksti;
+        readonly VisualElement[] havainneKuvat = new VisualElement[2];
+        readonly Label hVuosi, hNimi, hKuvateksti;
+        readonly SvgIkoni hErotin;
         readonly Label eOtsikko, eTeksti, lOtsikko, lTeksti;
         readonly Button tauko, edellinen, seuraava, kaynnista, kahva, lueJuttu;
         readonly Tiedeliitenakyma tiedeliite;
@@ -81,10 +87,13 @@ namespace Matkakirja.Natiivi
         public AikajanaNakyma(UiKerros kerros, LinssiUi linssit)
         {
             this.linssit = linssit;
+            this.kerros = kerros;
             var turva = kerros.Turva(LinssiUi.Kerros);
 
-            // Ylärivi: otsikot, kello ja ohjaimet (webin .aikajana-ylarivi).
-            ylarivi = Rakenne.El("mk-aikajana-ylarivi", turva);
+            // Palkki (web rakennaPalkki, .aikajana.palkki .aikajana-ylarivi): linssin oma palkki Matkakirjan
+            // yläpalkin paikalla ja sen korkuisena, koko leveydeltä (LinssiUi piilottaa pelin palkin).
+            ylarivi = Rakenne.El("mk-aikajana-ylarivi", kerros.Juuri(LinssiUi.Kerros));
+            Rakenne.Tausta(ylarivi, Kuviot.Ylapalkki);
             ylarivi.style.display = DisplayStyle.None;
             var otsikot = Rakenne.El("mk-aikajana-ylarivi__otsikot", ylarivi, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("", "mk-aikajana-ylarivi__otsikko", otsikot);
@@ -99,8 +108,9 @@ namespace Matkakirja.Natiivi
             // Lapun kahva (web .aikajana-kahva "Näytä X ▾"): kartan kosketus piilottaa paneelin, kahva tuo sen takaisin.
             kahva = Rakenne.Nappi("", "mk-aikajana-nappi mk-aikajana-kahva", NaytaLappu, ohjaimet);
             kahva.style.display = DisplayStyle.None;
-            tauko = Rakenne.Nappi(null, "mk-aikajana-nappi", VaihdaTauko, ohjaimet, Ikonit.Tauko);
-            tauko.tooltip = "Tauko";
+            // Yksi tekstinappi: Tauko / Jatka (myös välinäytöksessä, hehkuen) / Loppu (web taukoNappi).
+            tauko = Rakenne.Nappi("Tauko", "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
+            Kirjasimet.Aseta(tauko, Kirjasin.Kone);
             seuraava = Rakenne.Nappi(null, "mk-aikajana-nappi", () => Selaa(1), ohjaimet, Ikonit.Toista);
             seuraava.tooltip = "Seuraava";
             Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
@@ -111,6 +121,26 @@ namespace Matkakirja.Natiivi
             paneeli.style.display = DisplayStyle.None;
             Rakenne.Tausta(paneeli, Kuviot.Pergamentti);
             paneelinKuva = Rakenne.El("mk-aikajana-paneeli__kuva", paneeli, PickingMode.Ignore);
+            havainne = Rakenne.El("mk-aikajana-havainne", paneeli);
+            havainne.style.display = DisplayStyle.None;
+            // Kehys 16:10 (web .aikajana-ilmiokuva aspect-ratio), leveys paneelista.
+            havainne.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float h = Mathf.Round(e.newRect.width * 10f / 16f);
+                if (e.newRect.width > 0 && Mathf.Abs(e.newRect.height - h) > 0.5f) havainne.style.height = h;
+            });
+            for (int k = 0; k < 2; k++) havainneKuvat[k] = Rakenne.El("mk-aikajana-havainne__kuva", havainne, PickingMode.Ignore);
+            havainneTeksti = Rakenne.El("mk-aikajana-havainne__teksti", havainne, PickingMode.Ignore);
+            var hRivi = Rakenne.El("mk-aikajana-havainne__rivi", havainneTeksti, PickingMode.Ignore);
+            hVuosi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", hRivi);
+            hErotin = Rakenne.Ikoni(Erotin, "mk-aikajana-havainne__erotin", hRivi);
+            hNimi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", hRivi);
+            hKuvateksti = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", havainneTeksti);
+            Kirjasimet.Aseta(hVuosi, Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(hNimi, Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(hKuvateksti, Kirjasin.LukuKursiivi);
+            // Kuvan napautus avaa jutun (web kehys.avaa-jutun → avaaJuttu).
+            havainne.RegisterCallback<ClickEvent>(_ => { if (pysakki >= 0 && LinssiUi.Keksinnot?.Tiedeliite(pysakki) != null) LinssiUi.Keksinnot.AvaaJuttu(pysakki); });
             pVuosi = Rakenne.Teksti("", "mk-aikajana-paneeli__vuosi", paneeli);
             Kirjasimet.Aseta(pVuosi, Kirjasin.Kone);
             pOtsikko = Rakenne.Teksti("", "mk-aikajana-paneeli__otsikko", paneeli);
@@ -131,15 +161,13 @@ namespace Matkakirja.Natiivi
             kertomusTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", kertomus);
             Kirjasimet.Aseta(kertomusTeksti, Kirjasin.Luku);
 
-            // Välinäytös (webin .aikajana-valinaytos): teksti vasemmalla kartan päällä.
+            // Välinäytös (web .aikajana-valinaytos, "TEKSTI SUORAAN KARTAN PÄÄLLE, EI KORTTIA"): otsikko ja
+            // kertojan virkkeet rivi kerrallaan kartan vasemmalla puolella; Jatka on palkin nappi.
             valinaytos = Rakenne.El("mk-aikajana-valinaytos", turva, PickingMode.Ignore);
             valinaytos.style.display = DisplayStyle.None;
             vOtsikko = Rakenne.Teksti("", "mk-aikajana-valinaytos__otsikko", valinaytos);
             Kirjasimet.Aseta(vOtsikko, Kirjasin.LukuLihava);
-            vTeksti = Rakenne.Teksti("", "mk-aikajana-valinaytos__teksti", valinaytos);
-            Kirjasimet.Aseta(vTeksti, Kirjasin.Luku);
-            var jatka = Rakenne.Nappi("Jatka", "mk-aikajana-avausnappi", JatkaValinaytoksesta, valinaytos);
-            Kirjasimet.Aseta(jatka, Kirjasin.LukuLihava);
+            valinaytosRivit = Rakenne.El("mk-aikajana-valinaytos__rivit", valinaytos, PickingMode.Ignore);
 
             // Esittely- ja loppukortti: pergamentti keskellä kevyen himmennyksen päällä.
             var juuri = kerros.Juuri(LinssiUi.Kerros);
@@ -197,9 +225,26 @@ namespace Matkakirja.Natiivi
 
         void Asettele()
         {
-            // Yläkulman rivillä ovat taikalasit ja "Sulje linssi": ylärivi niiden alle, paneeli sen alle.
-            ylarivi.style.top = Ylapalkki.Varaus + 8 + 48;
-            paneeli.style.top = Ylapalkki.Varaus + 8 + 48 + 52;
+            // Palkki Matkakirjan yläpalkin paikalla: turva-alue ylä- ja sivureunoilla, sama korkeus (web
+            // --aikajana-palkki-korkeus). Paneeli palkin alle 10 px väliin (web asetaPaneelinYla).
+            var r = kerros.Reunat(LinssiUi.Kerros);
+            ylarivi.style.paddingTop = r.y;
+            ylarivi.style.paddingLeft = r.x + 14;
+            ylarivi.style.paddingRight = r.z + 8;
+            ylarivi.style.height = r.y + Ylapalkki.Korkeus;
+            paneeli.style.top = Ylapalkki.Korkeus + 10;
+            // Oletusasettelut näyttöluokittain (web .aikajana-ilmio): puhelin pystyssä reunasta reunaan,
+            // tabletti pystyssä 66 % hieman oikealle (right 3,5 %), vaakanäyttö 45 % oikeassa yläkulmassa.
+            float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+            bool pysty = Screen.height >= Screen.width, puhelin = Mathf.Min(Screen.width, Screen.height) / skaala < 701f;
+            if (pysty && puhelin) { paneeli.style.left = 8; paneeli.style.right = 8; paneeli.style.width = StyleKeyword.Auto; }
+            else
+            {
+                paneeli.style.left = StyleKeyword.Auto;
+                paneeli.style.right = pysty ? Length.Percent(3.5f) : 10;
+                paneeli.style.width = Length.Percent(pysty ? 66f : 45f);
+            }
+            valinaytos.EnableInClassList("mk-pysty", pysty);
         }
 
         // --- tila ------------------------------------------------------------------------
@@ -219,6 +264,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (tila != Tila.Keksinnot) return;
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
+                    if (pysakki < 0 && !lopussa) paikka.text = keksinnot.Jakso;
                     var l = LinssiUi.Keksinnot;
                     KuunteleKaynnistys(l);
                     var ajo = l?.Ajo;
@@ -245,6 +291,8 @@ namespace Matkakirja.Natiivi
             if (tila != Tila.Ei) Pois();
             tila = t;
             if (t == Tila.Keksinnot) ylarivi.style.display = DisplayStyle.Flex;
+            // Kertomuskaarella palkin toinen rivi väistyy: vuosi on kellossa (web .aikajana.kertomus .aikajana-paikka).
+            paikka.style.display = t == Tila.Ihminen ? DisplayStyle.None : DisplayStyle.Flex;
             Valikko.NaytaAlusta(t == Tila.Keksinnot || IhmisenAlustus != null);
             tauolla = false;
             PaivitaTauko();
@@ -261,7 +309,9 @@ namespace Matkakirja.Natiivi
             lapunNimi = null;
             paneeli.style.display = DisplayStyle.None;
             kertomus.style.display = DisplayStyle.None;
-            valinaytos.style.display = DisplayStyle.None;
+            SuljeValinaytos(false);
+            PoisHavainne();
+            lopussa = false;
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -300,16 +350,22 @@ namespace Matkakirja.Natiivi
 
         void PaivitaTauko()
         {
-            tauko.Q<SvgIkoni>().Polku = tauolla ? Ikonit.Toista : Ikonit.Tauko;
-            tauko.tooltip = tauolla ? "Jatka" : "Tauko";
+            // Web taukoNappi.textContent: käynnissä "Tauko", muuten loppu ? "Loppu" : "Jatka".
+            tauko.Q<Label>().text = !tauolla ? "Tauko" : lopussa ? "Loppu" : "Jatka";
+            tauko.tooltip = tauko.Q<Label>().text;
+            // Ihmisen matkan lopussa nappi on pois käytöstä (web ihmisen-matka-esitys.js).
+            tauko.SetEnabled(!(lopussa && tila == Tila.Ihminen));
             kello.EnableInClassList("mk-tauolla", tauolla);
         }
+
+        bool lopussa;
 
         void VaihdaTauko()
         {
             if (tila == Tila.Keksinnot)
             {
                 var ajo = LinssiUi.Keksinnot?.Ajo;
+                if (lopussa && !(ajo?.Kaynnissa ?? false)) return; // "Loppu" ei tee mitään (web)
                 if (ajo == null) { AsetaTauko(!tauolla); return; }
                 if (ajo.ValinaytosAuki) { JatkaValinaytoksesta(); return; }
                 if (ajo.Kaynnissa) ajo.Tauko(); else ajo.Jatka();
@@ -329,7 +385,7 @@ namespace Matkakirja.Natiivi
             {
                 var ajo = LinssiUi.Keksinnot?.Ajo;
                 if (ajo == null) return;
-                valinaytos.style.display = DisplayStyle.None;
+                SuljeValinaytos(false);
                 ajo.Siirry(Mathf.Max(0, pysakki + suunta));
             }
             else if (tila == Tila.Ihminen && ihminen != null)
@@ -430,10 +486,12 @@ namespace Matkakirja.Natiivi
                 // pysäkille paikan päällä (web alusta). Linssiseppä sammuttaa valot, hiljentää
                 // luennan (Selaus(-1)) ja ajaa kameran alkuun; UI tyhjentää paneelit.
                 if (keksinnot == null) { LataaKeksinnot(AloitaAlusta); return; }
-                valinaytos.style.display = DisplayStyle.None;
+                SuljeValinaytos(false);
+                PoisHavainne();
                 paneeli.style.display = DisplayStyle.None;
                 Rakenne.Nayta(loppu, false, 0);
-                paikka.text = "";
+                lopussa = false;
+                paikka.text = keksinnot.Jakso;
                 pysakki = -1;
                 var ajo = LinssiUi.Keksinnot?.Ajo;
                 if (ajo != null) ajo.Alusta(keksinnot.Alku);
@@ -500,17 +558,108 @@ namespace Matkakirja.Natiivi
             if (keksinnot == null) { LataaKeksinnot(() => { if (pysakki == i) NaytaPysakki(i); }); return; }
             if (i < 0 || i >= keksinnot.Pysakit.Count) return;
             var p = keksinnot.Pysakit[i];
-            paikka.text = Liita(p.Henkilo, p.Paikka);
-            paneelinKuva.style.display = DisplayStyle.None;
-            pVuosi.text = double.IsNaN(p.Vuosi) ? "" : ((int)p.Vuosi).ToString(CultureInfo.InvariantCulture);
-            pOtsikko.text = p.Otsikko ?? "";
+            string vuosi = double.IsNaN(p.Vuosi) ? null : ((int)p.Vuosi).ToString(CultureInfo.InvariantCulture);
+            // Palkin toinen rivi pysäkillä: ajoitus · paikka (web [ajoitus(t), paikka(t)].join(' · ')).
+            paikka.text = Liita(p.Ajoitus ?? vuosi, p.Paikka);
             lapunNimi = p.Otsikko ?? p.Henkilo ?? lapunNimi;
             if (lappuPiilossa) PaivitaKahva();
-            pAlarivi.text = Liita(p.Henkilo, p.Paikka) ?? "";
-            pTeksti.text = i < keksinnot.Selitteet.Count ? keksinnot.Selitteet[i] ?? "" : "";
-            pTeksti.style.display = pTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            lueJuttu.style.display = LinssiUi.Keksinnot?.Tiedeliite(i) != null ? DisplayStyle.Flex : DisplayStyle.None;
+            bool juttu = LinssiUi.Keksinnot?.Tiedeliite(i) != null;
+            if (p.Ilmio != null && p.Ilmio.OnKuva)
+            {
+                // Kuvahaara (web vaihdaPaneeli onKuva(t.ilmio)): pelkkä havainnekuva soikiohäivytyksellä,
+                // vuosi ◈ nimi (tai nimi + kuvateksti) kuvan alareunassa; kuvasarja kiertää 7 s välein.
+                var sarja = new List<string> { p.Ilmio.Osoite ?? p.Ilmio.Tiedosto };
+                if (i < keksinnot.Sarjat.Count) sarja.AddRange(keksinnot.Sarjat[i]);
+                NaytaHavainne(sarja, (int)(double.IsNaN(p.Vuosi) ? 0 : p.Vuosi), p.Ajoitus ?? vuosi ?? "", p.Otsikko ?? "", p.Ilmio.Kuvateksti);
+            }
+            else
+            {
+                // Tekstihaara: henkilö, otsikko, selite ja Lue juttu.
+                NaytaTekstipaneeli((p.Henkilo ?? "").ToUpperInvariant(), p.Otsikko,
+                    i < keksinnot.Selitteet.Count ? keksinnot.Selitteet[i] : null, juttu);
+            }
             paneeli.style.display = DisplayStyle.Flex;
+        }
+
+        // Webin AIKAJANAN_EROTIN ◈ piirroksena (fonteista puuttuu merkki): vinoneliö, sisällä täytetty pienempi.
+        const string Erotin = "<path d=\"M12 3.5 20.5 12 12 20.5 3.5 12z\"/><path class=\"taytto\" d=\"M12 8.6 15.4 12 12 15.4 8.6 12z\"/>";
+        const long KuvakiertoMs = 7000; // web KUVAKIERTO_MS
+        IVisualElementScheduledItem kuvakierto;
+        int havainneVersio;
+
+        void NaytaHavainne(List<string> sarja, int siemen, string vuosi, string nimi, string kuvateksti)
+        {
+            paneeli.AddToClassList("mk-aikajana-paneeli--kuva");
+            paneeli.style.backgroundImage = StyleKeyword.None;
+            SaadaTekstit(false);
+            havainne.style.display = DisplayStyle.Flex;
+            bool omaTeksti = !string.IsNullOrEmpty(kuvateksti);
+            hVuosi.text = omaTeksti ? "" : vuosi;
+            hVuosi.style.display = hErotin.style.display = omaTeksti ? DisplayStyle.None : DisplayStyle.Flex;
+            hNimi.text = nimi;
+            hKuvateksti.text = kuvateksti ?? "";
+            hKuvateksti.style.display = omaTeksti ? DisplayStyle.Flex : DisplayStyle.None;
+            kuvakierto?.Pause();
+            int versio = ++havainneVersio;
+            foreach (var k in havainneKuvat) { k.RemoveFromClassList("mk-esilla"); k.style.backgroundImage = StyleKeyword.None; }
+            var pohja = havainneKuvat[0];
+            Valokeila.Hae(sarja[0], siemen, t =>
+            {
+                if (versio != havainneVersio || t == null) return;
+                pohja.style.backgroundImage = new StyleBackground(t);
+                pohja.AddToClassList("mk-esilla");
+            });
+            if (sarja.Count < 2) return;
+            int kohta = 0;
+            kuvakierto = havainne.schedule.Execute(() =>
+            {
+                if (versio != havainneVersio) { kuvakierto?.Pause(); return; }
+                kohta = (kohta + 1) % sarja.Count;
+                int tama = kohta;
+                Valokeila.Hae(sarja[tama], siemen, t =>
+                {
+                    if (versio != havainneVersio || t == null) return;
+                    // Päällys ristihäivyttää pohjan päälle; kierroksen alussa pohja palaa (päällys pois).
+                    var paallys = havainneKuvat[1];
+                    if (tama == 0) { paallys.RemoveFromClassList("mk-esilla"); return; }
+                    if (paallys.ClassListContains("mk-esilla")) { pohja.style.backgroundImage = paallys.style.backgroundImage; }
+                    paallys.RemoveFromClassList("mk-esilla");
+                    paallys.style.backgroundImage = new StyleBackground(t);
+                    paallys.schedule.Execute(() => paallys.AddToClassList("mk-esilla"));
+                });
+            }).Every(KuvakiertoMs).StartingIn(KuvakiertoMs);
+        }
+
+        /// <summary>Tekstipaneeli (web .aikajana-ilmio-teksti): pergamentilla henkilö/merkintä, otsikko, selite.</summary>
+        void NaytaTekstipaneeli(string henkilo, string otsikkoTeksti, string selite, bool juttu)
+        {
+            PoisHavainne();
+            SaadaTekstit(true);
+            paneelinKuva.style.display = DisplayStyle.None;
+            pVuosi.text = henkilo ?? "";
+            pVuosi.style.display = string.IsNullOrEmpty(henkilo) ? DisplayStyle.None : DisplayStyle.Flex;
+            pOtsikko.text = otsikkoTeksti ?? "";
+            pAlarivi.style.display = DisplayStyle.None;
+            pTeksti.text = selite ?? "";
+            pTeksti.style.display = pTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            lueJuttu.style.display = juttu ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        void PoisHavainne()
+        {
+            havainneVersio++;
+            kuvakierto?.Pause();
+            havainne.style.display = DisplayStyle.None;
+            if (!paneeli.ClassListContains("mk-aikajana-paneeli--kuva")) return;
+            paneeli.RemoveFromClassList("mk-aikajana-paneeli--kuva");
+            Rakenne.Tausta(paneeli, Kuviot.Pergamentti);
+        }
+
+        void SaadaTekstit(bool nakyy)
+        {
+            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            pVuosi.style.display = pOtsikko.style.display = pAlarivi.style.display = pTeksti.style.display = d;
+            if (!nakyy) { lueJuttu.style.display = DisplayStyle.None; paneelinKuva.style.display = DisplayStyle.None; }
         }
 
         void NaytaValinaytos(int i)
@@ -518,29 +667,80 @@ namespace Matkakirja.Natiivi
             Ala(Tila.Keksinnot);
             if (keksinnot == null) { LataaKeksinnot(() => NaytaValinaytos(i)); return; }
             var v = i >= 0 && i < keksinnot.Valinaytokset.Count ? keksinnot.Valinaytokset[i] : default;
+            // Web avaaValinaytos: otsikko häivyttäen, virkkeet rivi kerrallaan (ilman luennan kestoa
+            // VALINAYTOKSEN_RIVIVALI_MS 1900 ms), paneelin havainnekuva jää paikalleen ja kiertää.
+            valinaytosVersio++;
+            int versio = valinaytosVersio;
             vOtsikko.text = v.Otsikko ?? "";
-            vTeksti.text = v.Kertoja ?? "";
+            vOtsikko.RemoveFromClassList("mk-esilla");
+            valinaytosRivit.Clear();
+            var rivit = Virkkeet(v.Kertoja);
+            valinaytos.style.opacity = StyleKeyword.Null;
             valinaytos.style.display = DisplayStyle.Flex;
-            // Kapealla ruudulla paneeli ja välinäytös menisivät päällekkäin: paneeli odottaa Jatka-nappia.
-            paneeli.style.display = DisplayStyle.None;
+            valinaytos.schedule.Execute(() => { if (versio == valinaytosVersio) vOtsikko.AddToClassList("mk-esilla"); });
+            for (int n = 0; n < rivit.Count; n++)
+            {
+                var rivi = Rakenne.Teksti(rivit[n], "mk-aikajana-valinaytos__rivi", valinaytosRivit);
+                Kirjasimet.Aseta(rivi, Kirjasin.Luku);
+                valinaytos.schedule.Execute(() => { if (versio == valinaytosVersio) rivi.AddToClassList("mk-esilla"); }).StartingIn(ValinaytoksenRivivaliMs * (n + 1));
+            }
             AsetaTauko(true);
+            // Jatka alkaa hehkua hetken päästä (web VALINAYTOKSEN_HEHKUVIIVE_MS, .aikajana-nappi.hehku).
+            hehku?.Pause();
+            bool paalla = false;
+            hehku = tauko.schedule.Execute(() =>
+            {
+                if (versio != valinaytosVersio) { hehku?.Pause(); tauko.RemoveFromClassList("mk-hehku"); return; }
+                paalla = !paalla;
+                tauko.EnableInClassList("mk-hehku", paalla);
+            }).Every(1400).StartingIn(2500);
+        }
+
+        const long ValinaytoksenRivivaliMs = 1900;
+        int valinaytosVersio;
+        IVisualElementScheduledItem hehku;
+
+        /// <summary>Web jaaVirkkeiksi: katkaisu . ! ? … jälkeen tulevasta välilyönnistä.</summary>
+        static List<string> Virkkeet(string teksti) =>
+            System.Text.RegularExpressions.Regex.Split(teksti ?? "", @"(?<=[.!?…])\s+").Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
+
+        void SuljeValinaytos(bool haivyta)
+        {
+            valinaytosVersio++;
+            hehku?.Pause();
+            tauko.RemoveFromClassList("mk-hehku");
+            if (valinaytos.style.display.value != DisplayStyle.Flex) return;
+            if (!haivyta) { valinaytos.style.display = DisplayStyle.None; return; }
+            // Poistuma 420 ms (web VALINAYTOKSEN_POISTUMA_MS).
+            int versio = valinaytosVersio;
+            valinaytos.style.opacity = 0f;
+            valinaytos.schedule.Execute(() => { if (versio == valinaytosVersio) valinaytos.style.display = DisplayStyle.None; }).StartingIn(420);
         }
 
         void JatkaValinaytoksesta()
         {
-            valinaytos.style.display = DisplayStyle.None;
-            if (pysakki >= 0) paneeli.style.display = DisplayStyle.Flex;
+            SuljeValinaytos(true);
             var l = LinssiUi.Keksinnot;
             if (l != null) l.JatkaValinaytoksesta();
             else AsetaTauko(false);
         }
 
+        /// <summary>
+        /// Loppusanat (web lopeta → vaihdaPaneeli ilman kuvaa): paneelin tekstihaara, merkintänä kaaren
+        /// nimi; ei nappeja. Palkin toinen rivi "1765–1928 · 25 valoa" ja nappi "Loppu".
+        /// </summary>
         void KeksintojenLoppu()
         {
             Ala(Tila.Keksinnot);
-            lOtsikko.text = keksinnot?.LoppuOtsikko ?? "Kaari päättyi";
-            lTeksti.text = keksinnot?.LoppuTeksti ?? "";
-            Rakenne.Nayta(loppu, true, 320);
+            if (keksinnot == null) { LataaKeksinnot(KeksintojenLoppu); return; }
+            SuljeValinaytos(false);
+            lopussa = true;
+            NaytaLappu();
+            lapunNimi = keksinnot.LoppuOtsikko ?? lapunNimi;
+            NaytaTekstipaneeli((keksinnot.Otsikko ?? "").ToUpperInvariant(), keksinnot.LoppuOtsikko ?? "Kaari päättyi", keksinnot.LoppuTeksti, false);
+            paneeli.style.display = DisplayStyle.Flex;
+            paikka.text = keksinnot.Jakso + " · " + keksinnot.Valoja + " valoa";
+            AsetaTauko(true);
         }
 
         // --- ihmisen matka ---------------------------------------------------------------
@@ -572,6 +772,21 @@ namespace Matkakirja.Natiivi
             avausTausta.Pois(550);
         }
 
+        /// <summary>
+        /// Esitys käynnissä mistä tahansa reitistä (Käynnistä, aikaselain, testikomento): aloituslaatikko ja
+        /// sen tausta pois (web aloitaAjo poistaa laatikon ennen esitys.aloita()).
+        /// </summary>
+        void EsittelyPoisKaynnissa()
+        {
+            if (esittely.style.display.value != DisplayStyle.Flex) return;
+            // Vain käynnissä olevalle esitykselle: aloituksen musta ja valmistelu eivät vie laatikkoa.
+            if (LinssiUi.IhmisenMatka?.Esitys?.Kaynnissa != true) return;
+            yritys?.Pause();
+            AsetaKaynnistaOdottaa(false);
+            Rakenne.Nayta(esittely, false, 250);
+            avausTausta.Pois(550);
+        }
+
         void AsetaKaynnistaOdottaa(bool odottaa)
         {
             kaynnista.SetEnabled(!odottaa);
@@ -585,6 +800,7 @@ namespace Matkakirja.Natiivi
             musta.style.transitionDuration = new List<TimeValue> { new TimeValue((float)Math.Max(0, feidiMs), TimeUnit.Millisecond) };
             if (paalla)
             {
+                EsittelyPoisKaynnissa();
                 musta.style.display = DisplayStyle.Flex;
                 musta.style.opacity = 1f;
                 musta.pickingMode = PickingMode.Position;
@@ -611,6 +827,7 @@ namespace Matkakirja.Natiivi
         {
             Ala(Tila.Ihminen);
             jakso = i;
+            EsittelyPoisKaynnissa();
             if (j == null) return;
             bool pimea = j.Vaihe == "pimea";
             // Tekstin paikka luetaan omasta tyylistä (resolvedStyle päivittyy vasta asettelussa).
@@ -628,6 +845,8 @@ namespace Matkakirja.Natiivi
         void NaytaLoytopaikka(string tunnus)
         {
             Ala(Tila.Ihminen);
+            PoisHavainne();
+            SaadaTekstit(true);
             if (tunnus == null) { paneeli.style.display = DisplayStyle.None; paikka.text = ""; return; }
             if (ihminen == null) { LataaIhminen(() => NaytaLoytopaikka(tunnus)); return; }
             var p = ihminen.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? ihminen.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);
@@ -676,6 +895,11 @@ namespace Matkakirja.Natiivi
             public double Alku = 1765;
             public List<Pysakki> Pysakit = new List<Pysakki>();
             public List<string> Selitteet = new List<string>();
+            /// <summary>Pysäkin havainnekuvasarjan jatko (web t.ilmioSarja: osoitteet ilmion jälkeen).</summary>
+            public List<List<string>> Sarjat = new List<List<string>>();
+            /// <summary>Palkin toinen rivi levossa (web kaari.jakso ?? "alku–loppu") ja loppurivin valomäärä.</summary>
+            public string Jakso = "";
+            public int Valoja;
             public List<(string Otsikko, string Kertoja)> Valinaytokset = new List<(string, string)>();
         }
 
@@ -720,6 +944,9 @@ namespace Matkakirja.Natiivi
                 Pysakit = aineisto.Pysakit,
                 Alku = aineisto.Alku,
             };
+            double? alku = MiniJson.Luku(kaari, "alku"), loppu = MiniJson.Luku(kaari, "loppu");
+            t.Jakso = MiniJson.Teksti(kaari, "jakso")
+                ?? (alku.HasValue && loppu.HasValue ? $"{(int)alku.Value}–{(int)loppu.Value}" : "");
             // Sama järjestys kuin KeksinnotAineistossa: vuoden mukaan, saman vuoden sisällä aineiston järjestys.
             var tapahtumat = (MiniJson.Kentta(kaari, "tapahtumat") as List<object>) ?? (MiniJson.Kentta(v, "KEKSINNOT") as List<object>) ?? new List<object>();
             var jarjestetty = tapahtumat.Select(Ob).Where(x => x != null).Select((x, n) => (x, n))
@@ -727,6 +954,12 @@ namespace Matkakirja.Natiivi
             foreach (var x in jarjestetty)
             {
                 t.Selitteet.Add(MiniJson.Teksti(x, "selite"));
+                var sarja = new List<string>();
+                foreach (var k in (MiniJson.Kentta(x, "ilmioSarja") as List<object>) ?? new List<object>())
+                    if (Ob(k) is Dictionary<string, object> ko && (MiniJson.Teksti(ko, "osoite") ?? MiniJson.Teksti(ko, "tiedosto")) is string u && u.Length > 0) sarja.Add(u);
+                t.Sarjat.Add(sarja);
+                // Loppurivin valot: keksinnöt ilman merkkipaaluja (web "1765–1928 · 25 valoa", 26 tapahtumaa).
+                if (!(MiniJson.Kentta(x, "paalu") is bool paalu && paalu)) t.Valoja++;
                 var va = Ob(MiniJson.Kentta(x, "valinaytos"));
                 t.Valinaytokset.Add((MiniJson.Teksti(va, "otsikko"), MiniJson.Teksti(va, "kertoja")));
             }

@@ -781,25 +781,26 @@
 
 /* --- aikajanat: ylärivi, kello ja ohjaimet (webin .aikajana-ylarivi) --------- */
 
+/* Palkki (web .aikajana.palkki .aikajana-ylarivi): Matkakirjan yläpalkin paikalla koko leveydeltä,
+ * sama ruskea liukuväri (Kuviot.Ylapalkki) ja alareunan viiva; korkeus ja turva-alue AikajanaNakyma.Asettele. */
 .mk-aikajana-ylarivi {
     position: absolute;
-    left: 10px;
-    right: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
     flex-direction: row;
     align-items: center;
-    padding: 3px 6px 3px 10px;
-    border-width: 1px;
+    border-bottom-width: 1px;
     border-color: rgba(217, 161, 59, 0.38);
-    border-radius: 10px;
-    background-color: #201a14;
     color: #f1e6d0;
     transition-property: opacity;
     transition-duration: 0s;
 }
 
 .mk-aikajana-ylarivi__otsikot {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
+    min-width: 0;
     flex-direction: column;
     justify-content: center;
     margin-right: 6px;
@@ -807,17 +808,17 @@
 }
 
 .mk-aikajana-ylarivi__otsikko {
-    font-size: 10.5px;
-    letter-spacing: 1px;
-    color: var(--accent);
+    font-size: 11.5px;
+    letter-spacing: 1.2px;
+    color: #d9a13b;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .mk-aikajana-ylarivi__paikka {
-    font-size: 13px;
-    color: rgba(241, 230, 208, 0.85);
+    font-size: 14px;
+    color: #e6d7bb;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -831,7 +832,7 @@
     border-radius: 6px;
     background-color: #2a1f16;
     color: #f3e6d0;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .mk-aikajana-kello.mk-tauolla {
@@ -841,7 +842,31 @@
 .mk-aikajana-ohjaimet {
     flex-direction: row;
     flex-shrink: 0;
-    margin-left: 4px;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 6px;
+}
+
+/* Tauko / Jatka / Loppu tekstinä (web .aikajana-nappi, palkissa 36 px korkea). */
+.mk-aikajana-nappi.mk-aikajana-nappi--teksti {
+    width: auto;
+    height: 36px;
+    min-height: 36px;
+    padding: 0 11px;
+    margin-left: 6px;
+    transition-property: border-color, background-color;
+    transition-duration: 1.4s, 1.4s;
+}
+
+.mk-aikajana-nappi--teksti .mk-nappi__teksti {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Jatka hehkuu välinäytöksessä (web .aikajana-nappi.hehku): hento punainen, hitaasti sykkien. */
+.mk-aikajana-nappi.mk-hehku {
+    border-color: rgba(214, 96, 72, 0.9);
+    background-color: rgba(214, 96, 72, 0.22);
 }
 
 .mk-aikajana-nappi {
@@ -932,13 +957,79 @@
 .mk-aikajana-paneeli {
     position: absolute;
     right: 10px;
-    width: 240px;
-    max-width: 62%;
     padding: 10px 12px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.45);
     border-radius: 10px;
     color: var(--map-ink);
+}
+
+/* Havainnekuva (web .aikajana-ilmiokuva): paneelin kehys, tausta ja varjo pois, kuva reunoiltaan
+ * karttaan häipyvänä (Valokeila), vuosi ◈ nimi kuvan alareunassa. */
+.mk-aikajana-paneeli.mk-aikajana-paneeli--kuva {
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-aikajana-havainne {
+    width: 100%;
+}
+
+.mk-aikajana-havainne__kuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.6s;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-aikajana-havainne__kuva.mk-esilla {
+    opacity: 1;
+}
+
+.mk-aikajana-havainne__teksti {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    bottom: 4%;
+    align-items: center;
+}
+
+.mk-aikajana-havainne__rivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-aikajana-havainne__otsikko {
+    font-size: 16px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: #d7bd88;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.mk-aikajana-havainne__erotin {
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    color: #d9a13b;
+    --mk-ikoni-viiva: 1.8;
+}
+
+.mk-aikajana-havainne__kuvateksti {
+    margin-top: 2px;
+    font-size: 12.5px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: #d7bd88;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .mk-aikajana-paneeli__kuva {
@@ -949,9 +1040,9 @@
 }
 
 .mk-aikajana-paneeli__vuosi {
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: var(--accent-dark);
+    font-size: 11.5px;
+    letter-spacing: 1.2px;
+    color: #6b4d1c;
 }
 
 .mk-aikajana-paneeli__otsikko {
@@ -1009,35 +1100,52 @@
     color: rgb(232, 224, 208);
 }
 
+/* Välinäytös (web .aikajana-valinaytos-teksti): ei korttia, teksti kartan päällä varjolla; vaakanäytöllä
+ * vasemmalla puoliskolla (left 5 %, top 52 %, enintään 46 %), pystyssä koko leveydeltä alempana. */
 .mk-aikajana-valinaytos {
     position: absolute;
     left: 5%;
-    top: 34%;
-    width: 60%;
-    max-width: 420px;
-    padding: 12px 14px;
-    border-radius: 10px;
-    background-color: rgba(20, 16, 10, 0.55);
+    top: 52%;
+    max-width: 46%;
+    translate: 0 -50%;
+    transition-property: opacity;
+    transition-duration: 0.42s;
+}
+
+.mk-aikajana-valinaytos.mk-pysty {
+    left: 6%;
+    right: 6%;
+    top: 56%;
+    max-width: none;
 }
 
 .mk-aikajana-valinaytos__otsikko {
-    margin-bottom: 8px;
+    margin-bottom: 11px;
     font-size: 19px;
     white-space: normal;
     color: #f3dfae;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.7s;
 }
 
-.mk-aikajana-valinaytos__teksti {
-    font-size: 15px;
+.mk-aikajana-valinaytos__rivi {
+    margin-bottom: 7px;
+    font-size: 16.5px;
     white-space: normal;
-    color: #f1e6d0;
+    color: #ddd0b6;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    translate: 0 6px;
+    transition-property: opacity, translate;
+    transition-duration: 0.7s, 0.7s;
 }
 
-.mk-aikajana-valinaytos > .mk-aikajana-avausnappi {
-    align-self: flex-start;
-    margin-top: 12px;
+.mk-aikajana-valinaytos__otsikko.mk-esilla,
+.mk-aikajana-valinaytos__rivi.mk-esilla {
+    opacity: 1;
+    translate: 0 0;
 }
 
 .mk-aikajana-musta {

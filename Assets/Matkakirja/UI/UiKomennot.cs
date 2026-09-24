@@ -15,6 +15,7 @@
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
+//   ui lehti vierita <px|loppu>               auki olevan sivun vieritys (kuvasarjat ilman kosketusta)
 //   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
 //                                             juliste = JULISTE-tehtävä); vastaus ja pulla kirjataan, jos peli on käynnissä
@@ -440,6 +441,8 @@ namespace Matkakirja.Natiivi
                     if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"
                         || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                    if (osat[1] == "lehti" && l[0] == "vierita")
+                        return ui.Lehti.Vierita(l.Length > 1 ? l[1] : "loppu");
                     if (osat[1] == "lehti" && l[0] == "fokus")
                     {
                         ui.Lehti.TestaaFokus(l.Length > 1 && l[1].Length > 0 ? l[1].ToLowerInvariant() : "ateena", l.Length > 2 && l[2] == "juliste");
