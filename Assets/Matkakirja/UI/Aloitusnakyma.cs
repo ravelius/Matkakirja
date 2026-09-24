@@ -698,6 +698,11 @@ namespace Matkakirja.Natiivi
         Action uusiMatka;
         public bool Auki { get; private set; }
 
+        // Web #winner-jaa -kuvake: kolme solmua ja kaksi viivaa.
+        const string JaaIkoni = "<circle cx=\"17.5\" cy=\"6\" r=\"2.6\"/><circle cx=\"6.5\" cy=\"12\" r=\"2.6\"/><circle cx=\"17.5\" cy=\"18\" r=\"2.6\"/><path d=\"M8.8 10.8 15.2 7.2M8.8 13.2l6.4 3.6\"/>";
+        readonly Button jaa;
+        string jaettava;
+
         public Huipennus(UiKerros kerros)
         {
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", kerros.Juuri(UiKerros.Valikot));
@@ -711,7 +716,12 @@ namespace Matkakirja.Natiivi
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             var jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--haamu", Sulje, napit, Ikonit.Viiva["kompassi"]);
             Kirjasimet.Aseta(jatka, Kirjasin.Kone);
-            var uusi = Rakenne.Nappi("Uusi matka", "mk-nappi--kulta", () => { Sulje(); uusiMatka?.Invoke(); }, napit);
+            // "Jaa matka" (web #winner-jaa, paivitaJakonappi): vain kun jakoarkki on saatavilla (iOS-laite),
+            // muualla nappia ei ole lainkaan. Teksti web natiiviMatkaTeksti = MatkanYhteenveto.Teksti.
+            jaa = Rakenne.Nappi("Jaa matka", "mk-nappi--haamu", () => { if (jaettava != null) Jakaminen.JaaTeksti(jaettava); }, napit, JaaIkoni);
+            Kirjasimet.Aseta(jaa, Kirjasin.Kone);
+            jaa.style.display = Jakaminen.Saatavilla ? DisplayStyle.Flex : DisplayStyle.None;
+            var uusi = Rakenne.Nappi("Uusi peli", "mk-nappi--kulta", () => { Sulje(); uusiMatka?.Invoke(); }, napit);
             Rakenne.Tausta(uusi, Kuviot.Kulta);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
         }
@@ -719,6 +729,8 @@ namespace Matkakirja.Natiivi
         public void Nayta(MatkanYhteenveto yv, Action uusiMatka)
         {
             this.uusiMatka = uusiMatka;
+            jaettava = yv?.Teksti;
+            jaa.style.display = Jakaminen.Saatavilla && jaettava != null ? DisplayStyle.Flex : DisplayStyle.None;
             teksti.text = Teksti
                 .Replace("{paivat}", (yv?.Paivat ?? 0).ToString())
                 .Replace("{kaupungit}", (yv?.Kaupungit ?? 0).ToString())
