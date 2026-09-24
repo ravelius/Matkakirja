@@ -190,6 +190,12 @@ namespace Matkakirja
             Tee();
             Kone(true);
             Siirra(lahtoLat, lahtoLon, 0);
+            // Omistaja 24.9.: aloituslennon ajan kartalla näkyy vain kohdekaupungin piste (ja nimiö);
+            // pelin karttapisteet ja muut kaupungit palaavat perillä (Paatalento).
+            aloitusMerkit = FindAnyObjectByType<KaupunkiMerkit>();
+            string kohde = aloitusMerkit != null ? aloitusMerkit.LahinId(lat, lon) : null;
+            if (aloitusMerkit != null) aloitusMerkit.NaytaVain(kohde != null ? new[] { kohde } : Array.Empty<string>());
+            KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
             liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis));
         }
 
@@ -225,8 +231,9 @@ namespace Matkakirja
             var alkuAsento = kierto != null
                 ? new Asento { lat = kierto.leveys, lon = kierto.pituus, etaisyys = kierto.korkeus, kallistus = kierto.kallistus, suuntima = kierto.suuntima, katse = kierto.katseKorkeus }
                 : default;
-            double lahtoEtaisyys = math.max(saapumisKorkeus, kierto != null ? math.min(kierto.korkeus, saapumisKorkeus * 2.5) : 0);
-            double matkaEtaisyys = math.clamp(reittiM * 0.28, lahtoEtaisyys, 1_600_000.0);
+            // Lähikuva koneesta (ennen 18,6°:n näkymä ja matkalla jopa 1600 km).
+            double lahiEtaisyys = math.clamp(reittiM * 0.04, 90_000.0, 300_000.0);
+            double kaukoEtaisyys = math.clamp(reittiM * 0.09, lahiEtaisyys * 1.4, 650_000.0);
 
             if (savu != null) savu.Aloita();
             if (aurinko != null) aurinko.Aseta(true);
@@ -246,23 +253,26 @@ namespace Matkakirja
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
 
                 AsetaVaihe(p < NousuLoppuu ? LennonVaihe.Nousu : p < LaskuAlkaa ? LennonVaihe.Matka : LennonVaihe.Lasku);
-                double nousu = Pehmea(p / NousuLoppuu);
-                double lasku = Pehmea((p - LaskuAlkaa) / (1 - LaskuAlkaa));
-                double matka = nousu * (1 - lasku);
+                // LENNON ESITYS (omistaja 24.9.): kamera koneen ETUVIISTOSTA ja lähellä, ja kulma, korkeus ja
+                // suunta muuttuvat koko ajan hitaasti (ei vaiheportaita): nousussa kamera loittonee ja laskee
+                // kulmaa, matkalla kiertää hitaasti koneen ympäri, laskussa puoliorbitti kuten ennen.
+                double nousu = Pehmea(p / 0.4);
+                double lasku = Pehmea((p - 0.68) / 0.32);
+                double matka = Pehmea(p / NousuLoppuu) * (1 - Pehmea((p - LaskuAlkaa) / (1 - LaskuAlkaa)));
 
                 var a = new Asento
                 {
                     lat = q.x,
                     lon = q.y,
                     katse = nosto + h,
-                    etaisyys = math.lerp(math.lerp(lahtoEtaisyys, matkaEtaisyys, nousu), saapumisKorkeus, lasku),
-                    kallistus = math.lerp(math.lerp(25.0, 55.0, nousu), 38.0, lasku),
-                    // Kamera koneen takana; laskussa puoliorbitti koneen ympäri.
-                    suuntima = suunta + 180.0 * lasku,
+                    etaisyys = math.lerp(math.lerp(lahiEtaisyys, kaukoEtaisyys, nousu), saapumisKorkeus, lasku),
+                    kallistus = math.lerp(math.lerp(38.0, 64.0, nousu), 40.0, lasku) + 4.0 * math.sin(math.PI * 2.0 * p),
+                    // Etuviisto (145° lentosuunnasta), hidas kierto koko matkan ajan, laskussa puoliorbitti.
+                    suuntima = suunta + 145.0 + 55.0 * p + 180.0 * lasku,
                 };
                 if (kierto != null)
                 {
-                    double sulau = Pehmea(kulunut / 1.2);
+                    double sulau = Pehmea(kulunut / 2.5);
                     if (sulau < 1) a = Asento.Sekoita(alkuAsento, a, sulau);
                     kierto.Kuvaa(a.lat, a.lon, a.etaisyys, a.kallistus, a.suuntima, a.katse);
                 }
@@ -290,8 +300,16 @@ namespace Matkakirja
         }
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
+        KaupunkiMerkit aloitusMerkit;
+
         void Paatalento()
         {
+            if (aloitusMerkit != null)
+            {
+                aloitusMerkit.NaytaVain(null);
+                KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", true);
+                aloitusMerkit = null;
+            }
             if (kierto != null) kierto.SeurantaLoppui();
             if (savu != null) savu.Lopeta();
             if (aurinko != null) { aurinko.Aseta(false); aurinko.Sumu(0, 0); }
