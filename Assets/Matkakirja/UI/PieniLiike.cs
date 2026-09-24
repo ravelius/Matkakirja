@@ -7,6 +7,12 @@
 //   b) ILLAN SÄVY vuorokaudenajan mukaan (pelin Matka.Tila.Vuorokaudenaika): aamu viileä
 //      rgb(120,150,200) 0,07, ilta lämmin rgb(232,150,70) 0,09, yö sinertävä rgb(40,60,130)
 //      0,12, keskipäivä ei mitään; vaihto pehmeästi 2 s.
+//      Web sekoittaa sävyn mix-blend-mode: multiply -tilassa (kartta vain tummuu hieman). UI Toolkitissa ei ole
+//      multiplyä, ja tavallinen alfasekoitus lineaarisessa väriavaruudessa LISÄSI tummaan karttaan valoa: aamun
+//      sävy toi keksintölinssin kartalle sinisen lisän (0,015; 0,022; 0,038), Linssisepän mittaus 24.9. Nyt kerros
+//      on musta, ja peitto on multiplyn luminanssikerroin lineaarisena: 1 − Σ w·(1 − a·(1 − c))^2,2. Kirkkaus
+//      vastaa webiä; heikko värivivahde (kerroin 0,92–0,98 kanavittain) jää pois. Linssin ollessa auki sävyä ei ole
+//      (webissä linssin kartta peittää pallolaudan sävykerroksen).
 // Pilven varjo on poistettu webistä (omistaja 22.9.2026), joten sitä ei tehdä.
 //
 // LEPO: Natiivisepän PalloKierto.Levossa (ei liikettä eikä peittoa), ei avointa näkymää
@@ -76,7 +82,9 @@ namespace Matkakirja.Natiivi
 
         void PaivitaSavy()
         {
-            var aika = paalla ? PeliOhjain.Instanssi?.Matka?.Tila.Vuorokaudenaika() : null;
+            // Linssin aikana ei sävyä: webissä linssin kartta piirtyy pallolaudan (ja sen sävykerroksen) päälle.
+            bool linssi = LinssiUi.Rekisteri?.Auki != null;
+            var aika = paalla && !linssi ? PeliOhjain.Instanssi?.Matka?.Tila.Vuorokaudenaika() : null;
             (Color vari, float peitto) = aika switch
             {
                 Vuorokaudenaika.Aamu => ((Color)new Color32(120, 150, 200, 255), 0.07f),
@@ -87,8 +95,19 @@ namespace Matkakirja.Natiivi
             string avain = aika?.ToString();
             if (avain == savyNyt) return;
             savyNyt = avain;
-            if (peitto > 0) savy.style.backgroundColor = vari;
-            savy.style.opacity = peitto;
+            savy.style.backgroundColor = Color.black;
+            savy.style.opacity = peitto > 0 ? MultiplynPeitto(vari, peitto) : 0f;
+        }
+
+        /// <summary>
+        /// Web multiply (sRGB-kerroin 1 − a·(1 − c) kanavittain) mustana alfakerroksena: peitto = 1 − luminanssi
+        /// lineaarisista kertoimista (Rec. 709 -painot), eli kartta tummuu yhtä paljon kuin webissä eikä saa lisävaloa.
+        /// </summary>
+        static float MultiplynPeitto(Color srgb, float a)
+        {
+            float K(float c) => Mathf.Pow(1f - a * (1f - c), 2.2f);
+            float luminanssi = 0.2126f * K(srgb.r) + 0.7152f * K(srgb.g) + 0.0722f * K(srgb.b);
+            return Mathf.Clamp01(1f - luminanssi);
         }
 
         /// <summary>Pulu lentää kerran reunasta reunaan (myös testikomento). false = ei levossa.</summary>
