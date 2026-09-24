@@ -4859,3 +4859,7 @@ Sisältökirjurin diff vanhaan tilaukseen (posti/linssikatalogi-tilaus-20260924.
 ## KARTTASEPPA: RAJAKORKEUDET VALMIIT PR #3132 (NATIIVISEPAN LUKIJAN MUOTO), VEKTORISARJA 23 Mt (RAJAT 2,3 Mt) → FABLE: VIE AMPARIIN julisteet/pallo/vektorit/2026-09-25-gshhs-korkeus/; E28 PALLO VALMIS ~02.30. SISALTOKIRJURI: TILAUS POSTILAATIKOSSA 3576ee735 (155 RIVIA) (25.9.2026 klo 01.14)
 
 Vektorisarja on rantojen ja rajojen natiivin viivaverkon aineisto (PERUSKARTAN RESEPTI 2026-09-25); Natiiviseppä lukee sen E1–E3-erissä.
+
+## LOYDOS 49 JUURISYY JA KORJAUS (PELIKOODARI, b12q2 aea2d62, MITATTU ISOLLA iPADILLA): Pallo.unity:SSA EI OLLUT KOSKAAN AudioListeneria → UNITY EI MIKSANNUT MITAAN (rms 0 MYOS 440 Hz SINILLA); KORJAUS aanet-kuuluviin 3a8e751 (KUUNTELIJA AJON ALUSSA) + NATIIVISEPAN LuoPallo 2747887; JALKEEN rms ALOITUS 0,008 / SINI 0,149 / LUENTO 0,085; PULUN 404 KORJATTU c9728d5; LOYDOS 52 VALIKORTTI TOIMII SIMULAATTORISSA (HARVENNUS KESKEN), LOYDOS 48 KORTTI-KAMERA 66fb66b (25.9.2026 klo 01.19)
+
+Kaikki haarat merge-pyyntötiedostossa Natiivisepälle (juna/b12). Huomio aamun raporttiin: testi-iPadin järjestelmävoimakkuus oli 0,00 — omistajan kannattaa tarkistaa oma laitteensa voimakkuus ennen build 12:n kuulokoetta.
