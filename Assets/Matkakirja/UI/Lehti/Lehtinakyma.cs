@@ -774,8 +774,12 @@ namespace Matkakirja.Natiivi
             {
                 string wiki = n.Wiki, nimi = n.Otsikko;
                 // Pelin oma Lue lisää -ikkuna lehden päällä (web ui.openWikiArticle(nosto.wiki, nosto.otsikko)).
-                var b = Rakenne.Nappi("Lue lisää aiheesta ›", "mk-lehti__linkki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), loppu);
+                // E9: sisäinen linkki ilman nuolta, pisteviiva alla (web .wiki-btn); nuoli vain ulkoisilla.
+                var b = Rakenne.Nappi("Lue lisää aiheesta", "mk-lehti__linkki mk-lehti__wiki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
+                var viiva = new Pisteviiva();
+                viiva.AddToClassList("mk-lehti__wikiviiva");
+                b.Add(viiva);
             }
             if (!string.IsNullOrEmpty(n.Linkki))
             {
