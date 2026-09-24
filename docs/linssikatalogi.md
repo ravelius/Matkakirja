@@ -111,6 +111,7 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 | E4 | Maailmannäyttelyt | maailma | 1851–1900 | Lontoo Crystal Palace · Pariisi 1889 Eiffel · Chicago 1893 · Pariisi 1900 | idea |
 | E5 | Arkkitehtuurin ihmeet (ihmesarjan jatko) | maailma | 2560 eaa–1889 | Giza · Pantheon · Hagia Sofia · Alhambra · Kölnin tuomiokirkko · Eiffel | idea |
 | E6 | Museot ja kirjastot syntyvät | Eurooppa | 1683–1900 | Ashmolean · British Museum · Louvre 1793 · Eremitaasi · Ateneum | idea |
+| E7 | Taidemuseo-linssi (natiivi, 3D-salit) | maailma | antiikki–moderni | siivet aikakausittain: antiikki · renessanssi (pilotti: Firenze–Rooma–Venetsia) · barokki · romantiikka · impressionismi · moderni; opastettu kamerakierros + kertoja, ilmaan piirtyvät vuosiluvut, suuntaukset, omakuvat ja karttapiirrokset; ovet kaupunkilehdistä (Louvre, Uffizi, Prado, Rijksmuseum) | seuraava (omistaja 24.9.2026; suunnitelma linssi-taidemuseo-suunnitelma-20260924.md, toteutus pariteetin ja elokuvalennon jälkeen; teokset vain PD/CC0) |
 
 ## F. Luonto ja ympäristö
 
