@@ -1,0 +1,503 @@
+{
+  "batch": "renessanssisali-maalaukset-era2-20260924",
+  "orderSource": "posti/fable-kuvaputki-renessanssisali-era2-20260924.md",
+  "deliveryState": "r2_uploaded_and_full_readback_verified; game_connection_not_claimed",
+  "bucket": "matkakirja",
+  "countWorks": 12,
+  "countImages": 24,
+  "works": [
+    {
+      "id": "nga-26",
+      "name": {
+        "fi": "Alban madonna",
+        "museum_source_title_en": "The Alba Madonna"
+      },
+      "artist": "Raphael",
+      "year": "c. 1510",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.26.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Raphael, The Alba Madonna, National Gallery of Art, Washington, Open Access / Public Domain, object 26.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-26-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-26-gallery.jpg",
+          "sha256": "21b4449022daef4ae2504535921879d06f3332a5ca98abf69db44cccfe181678",
+          "tavut": 3133702,
+          "leveys": 4000,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:38.043Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-26-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-26-card.jpg",
+          "sha256": "3be2e90d86ff5e9a2e96f1ee55f0643927f03829924854e71e9f6514b126610c",
+          "tavut": 789079,
+          "leveys": 1800,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:40.479Z"
+        }
+      }
+    },
+    {
+      "id": "nga-12131",
+      "name": {
+        "fi": "Bindo Altovitin muotokuva",
+        "museum_source_title_en": "Bindo Altoviti"
+      },
+      "artist": "Raphael",
+      "year": "c. 1515",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.12131.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Raphael, Bindo Altoviti, National Gallery of Art, Washington, Open Access / Public Domain, object 12131.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-12131-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-12131-gallery.jpg",
+          "sha256": "082ea9fdbd37a304d49e629211d6b83e498fc39883329afd3ada108b4364dfdc",
+          "tavut": 3018704,
+          "leveys": 2910,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:42.602Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-12131-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-12131-card.jpg",
+          "sha256": "5d79de88674ca406cf3514f9e2761e77d14ceccbad1b882cf1955c5198f33163",
+          "tavut": 725171,
+          "leveys": 1310,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:45.067Z"
+        }
+      }
+    },
+    {
+      "id": "nga-46136",
+      "name": {
+        "fi": "Kardinaali Bandinello Sauli, hänen sihteerinsä ja kaksi maantieteilijää",
+        "museum_source_title_en": "Cardinal Bandinello Sauli, His Secretary, and Two Geographers"
+      },
+      "artist": "Sebastiano del Piombo",
+      "year": "1516",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.46136.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Sebastiano del Piombo, Cardinal Bandinello Sauli, His Secretary, and Two Geographers, National Gallery of Art, Washington, Open Access / Public Domain, object 46136.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46136-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46136-gallery.jpg",
+          "sha256": "425cba305cfbadd566e792b8df1050b2779fe19a65859d79193dcbf73cece66b",
+          "tavut": 3040726,
+          "leveys": 4000,
+          "korkeus": 3231,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:46.890Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46136-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46136-card.jpg",
+          "sha256": "898e65166061c86e937c5c87fab6aa8ca60ef1840164f2303962f8857bae221d",
+          "tavut": 815397,
+          "leveys": 1800,
+          "korkeus": 1454,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:48.874Z"
+        }
+      }
+    },
+    {
+      "id": "nga-46137",
+      "name": {
+        "fi": "Humanistin muotokuva",
+        "museum_source_title_en": "Portrait of a Humanist"
+      },
+      "artist": "Sebastiano del Piombo",
+      "year": "c. 1520",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.46137.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Sebastiano del Piombo, Portrait of a Humanist, National Gallery of Art, Washington, Open Access / Public Domain, object 46137.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46137-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46137-gallery.jpg",
+          "sha256": "f8d485c74e31c8c3668e2c9eb48ecf6aa3f84d47f36d2e49d22512402b3213f8",
+          "tavut": 2477896,
+          "leveys": 3005,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:50.958Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46137-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46137-card.jpg",
+          "sha256": "416b1ec48d4e09ec496332fc7e8458719df7c677dc4ddb8ed1b4f0cadd225024",
+          "tavut": 467333,
+          "leveys": 1352,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:53.510Z"
+        }
+      }
+    },
+    {
+      "id": "nga-41690",
+      "name": {
+        "fi": "Ristiinnaulitseminen",
+        "museum_source_title_en": "The Crucifixion"
+      },
+      "artist": "Luca Signorelli",
+      "year": "c. 1504/1505",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.41690.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Luca Signorelli, The Crucifixion, National Gallery of Art, Washington, Open Access / Public Domain, object 41690.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41690-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41690-gallery.jpg",
+          "sha256": "c00dea19cb3d8f959a31ad1482589704eecaf97603ab22a1766afe3c206db656",
+          "tavut": 4007439,
+          "leveys": 4000,
+          "korkeus": 2880,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:56.021Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41690-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41690-card.jpg",
+          "sha256": "f20963523f5b04cc3c5f203e0724bc538e400b3b28360d3a61966f48612af5b0",
+          "tavut": 1163123,
+          "leveys": 1800,
+          "korkeus": 1296,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:57.849Z"
+        }
+      }
+    },
+    {
+      "id": "nga-356",
+      "name": {
+        "fi": "Madonna ja lapsi",
+        "museum_source_title_en": "Madonna and Child"
+      },
+      "artist": "Pietro Perugino",
+      "year": "c. 1500",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.356.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Pietro Perugino, Madonna and Child, National Gallery of Art, Washington, Open Access / Public Domain, object 356.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-356-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-356-gallery.jpg",
+          "sha256": "0164257e7dda0dfa93d176f3431d745f56ce689278e93d0fd289497f0ee583f4",
+          "tavut": 3181027,
+          "leveys": 2836,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:10:59.814Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-356-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-356-card.jpg",
+          "sha256": "43375fb2308c3aea850f78bad28e2a412103feb761c462d6ab84fd14f0e3929d",
+          "tavut": 869139,
+          "leveys": 1276,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:01.395Z"
+        }
+      }
+    },
+    {
+      "id": "nga-1177",
+      "name": {
+        "fi": "Lorenzo di Credin muotokuva",
+        "museum_source_title_en": "Portrait of Lorenzo di Credi"
+      },
+      "artist": "Pietro Perugino",
+      "year": "1488",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.1177.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Pietro Perugino, Portrait of Lorenzo di Credi, National Gallery of Art, Washington, Open Access / Public Domain, object 1177.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1177-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1177-gallery.jpg",
+          "sha256": "efb09c0b5701f1ecf297ee959ba2c3096daa96697eace93d7cb6623fef4c1c5e",
+          "tavut": 2813364,
+          "leveys": 2802,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:08.608Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1177-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1177-card.jpg",
+          "sha256": "037a59e78b9fcaf64e0237a163a6540781fdebb51ead9eb5415b68a88ab47cac",
+          "tavut": 692142,
+          "leveys": 1261,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:10.515Z"
+        }
+      }
+    },
+    {
+      "id": "nga-24",
+      "name": {
+        "fi": "Tietäjien kumarrus",
+        "museum_source_title_en": "The Adoration of the Magi"
+      },
+      "artist": "Sandro Botticelli",
+      "year": "c. 1478/1482",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.24.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Sandro Botticelli, The Adoration of the Magi, National Gallery of Art, Washington, Open Access / Public Domain, object 24.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-24-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-24-gallery.jpg",
+          "sha256": "9b9e238e1c9b2811a10426cc09ff6a1ee8cebc9b2f3b554b3243ec7bf0eca8c6",
+          "tavut": 3338727,
+          "leveys": 4000,
+          "korkeus": 2661,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:13.375Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-24-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-24-card.jpg",
+          "sha256": "b19796b5d129f1e88ed0a02eaab8cc92a8889e5f6c6050d9f75586c9e31f0cf1",
+          "tavut": 986467,
+          "leveys": 1800,
+          "korkeus": 1197,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:15.762Z"
+        }
+      }
+    },
+    {
+      "id": "nga-41671",
+      "name": {
+        "fi": "Giuliano de’ Medicin muotokuva",
+        "museum_source_title_en": "Giuliano de' Medici"
+      },
+      "artist": "Sandro Botticelli",
+      "year": "c. 1478/1480",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.41671.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Sandro Botticelli, Giuliano de' Medici, National Gallery of Art, Washington, Open Access / Public Domain, object 41671.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41671-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41671-gallery.jpg",
+          "sha256": "80172966f2b47d02ea398e1c804aefe6e6e915164a90baff5703b41a040f83a9",
+          "tavut": 2925784,
+          "leveys": 2690,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:17.534Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41671-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41671-card.jpg",
+          "sha256": "0dcc2331adf63de08ae9f54ca25112da1543f852fe9a443a3abb8eae65d7a47a",
+          "tavut": 790525,
+          "leveys": 1210,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:19.644Z"
+        }
+      }
+    },
+    {
+      "id": "nga-1138",
+      "name": {
+        "fi": "Jumalten juhla",
+        "museum_source_title_en": "The Feast of the Gods"
+      },
+      "artist": "Giovanni Bellini and Titian",
+      "year": "1514/1529",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.1138.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Giovanni Bellini and Titian, The Feast of the Gods, National Gallery of Art, Washington, Open Access / Public Domain, object 1138.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1138-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1138-gallery.jpg",
+          "sha256": "431d9031a938ca8d918b36ce4c5a3bbeabdd9a14bf1f05515b898dba224bfa65",
+          "tavut": 4113682,
+          "leveys": 4000,
+          "korkeus": 3664,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:50.187Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1138-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1138-card.jpg",
+          "sha256": "fa6189097c9765b591f65a1e846861c464034fe4144bfab7bb79c6e8233cc26e",
+          "tavut": 1159402,
+          "leveys": 1800,
+          "korkeus": 1649,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:51.925Z"
+        }
+      }
+    },
+    {
+      "id": "nga-41",
+      "name": {
+        "fi": "Venus peilin kanssa",
+        "museum_source_title_en": "Venus with a Mirror"
+      },
+      "artist": "Titian",
+      "year": "c. 1555",
+      "currentLocation": "National Gallery of Art, Washington, D.C.",
+      "sourceUrl": "https://www.nga.gov/collection/art-object-page.41.html",
+      "license": "Public Domain / NGA Open Access",
+      "licenseUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "licenseEvidence": {
+        "published_images_openaccess": 1,
+        "published_images_viewtype": "primary",
+        "source_provider": "National Gallery of Art"
+      },
+      "attribution": "Titian, Venus with a Mirror, National Gallery of Art, Washington, Open Access / Public Domain, object 41.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41-gallery.jpg",
+          "sha256": "883dbda3c31a48927dad5df5b080fa3b9b8625fc838f7bf74bf160b5b6aed2fb",
+          "tavut": 4274243,
+          "leveys": 3376,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:55.086Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41-card.jpg",
+          "sha256": "0c0cc334793c7f2cb508301276d0896964aab2d174240b4f08d866bcd54f8e51",
+          "tavut": 1043358,
+          "leveys": 1519,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:56.630Z"
+        }
+      }
+    },
+    {
+      "id": "commons-mona-lisa-c2rmf",
+      "name": {
+        "fi": "Mona Lisa",
+        "museum_source_title_en": "Mona Lisa"
+      },
+      "artist": "Leonardo da Vinci",
+      "year": "c. 1503–1506",
+      "currentLocation": "Musée du Louvre, Paris",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+      "license": "PD-Art / Public Domain Mark 1.0; modified version separately released to public domain by Dcoetzee",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg#Licensing",
+      "licenseEvidence": {
+        "commons_file_page_pd_art": true,
+        "derivative_public_domain": true,
+        "photographer": "C2RMF",
+        "retoucher": "Dcoetzee"
+      },
+      "attribution": "Leonardo da Vinci, Mona Lisa, Musée du Louvre, Pariisi · kuva C2RMF / Wikimedia Commons, PD.",
+      "files": {
+        "gallery": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/commons-mona-lisa-c2rmf-gallery.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/commons-mona-lisa-c2rmf-gallery.jpg",
+          "sha256": "f2fa3ed9ed4227ac6bbf331f0c5c3115554be859dfa187a308a08c50ab2f870d",
+          "tavut": 6511509,
+          "leveys": 2684,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:11:59.041Z"
+        },
+        "card": {
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/commons-mona-lisa-c2rmf-card.jpg",
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/commons-mona-lisa-c2rmf-card.jpg",
+          "sha256": "e79218a762cfb022e1989070a7c1001689fb84a67379bf65cfaf5963ca092343",
+          "tavut": 1175754,
+          "leveys": 1208,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "readbackVerifiedAt": "2026-09-24T15:12:00.521Z"
+        }
+      }
+    }
+  ]
+}
