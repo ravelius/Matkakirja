@@ -1,13 +1,12 @@
 {
- "kaksintaistelujalki.json": "d701df8d0464a21057702cdd524cd73748d54e21c355ddcf65b76a9ef3c579ae",
- "kauppajalki.json": "690b12f551541dcdc1d1ad15216fc4140972753ec6c2cce49e1e25d84ab9bf95",
+ "kauppajalki.json": "67ad68b770a7882ca010c3c9234f59e1f76960176d76d86d37c862d6543671ac",
  "kysymysjalki.json": "ad082bd500b0e3f3c949f4d7f87cd06c97319ea33068bd75fa76a58b0e4ad74b",
- "laattajalki.json": "355db98c3b150b89dba177b35f820e0a16e9c63266c8b7ee1f190b008479c8e8",
+ "laattajalki.json": "792ffe3766da47f8ebfbd26c45283d1b94f367dbfb18ee760f76a7439ce13e84",
  "liput.json": "01ddc7ab123e1e54e5988f4e2c225d8976d76ab4f75916e8db9c07260f23d3ff",
  "matkajalki.json": "fcdca6b97fee561ca090e7eec98ca55e3a55c8cdc8f900b6d7e15c57ab489d0a",
  "paketti/laatat.json": "567ea1b370d60c26c84b63f47c00453ad84472a00329e44175424f5e28bf2d28",
  "paketti/tapahtumat.json": "cb45219528ad85d197e76b7c786853f6dc9c2566fdbb8863f99d6520f81db400",
- "pelijalki.json": "4782fa022adacc181c267d6c3be0e44b9572418a9e42b5ed2c3a9d19586dadc7",
- "pulmajalki.json": "676d1e44f792fd5ed4d2772e9fab91ea6babc1b639942a3b073188a439e3c101",
+ "pelijalki.json": "29753e51e9af1fd496841de1362fe0c1ebed439fa007c86d5216eed3050b66d7",
+ "pulmajalki.json": "e04d66eae16f476ba11f88a28f0bd9dbb98859cdbf3146f617904b77e0e97f8f",
  "siirrot.json": "53bc1551a8208b91a9d04749947ecbfeeb703484cf6796000b5dee23070aee88"
 }

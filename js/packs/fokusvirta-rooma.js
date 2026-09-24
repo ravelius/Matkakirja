@@ -917,6 +917,7 @@ export const FOKUSVIRTA_ROOMA = {
        * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
        */
       aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
+      aaniLahde: '"Walking to Pantheon" — Rolf Yngve, radio aporee (public domain)',
       kysymykset: [
         'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
         'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
