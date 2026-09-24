@@ -3567,3 +3567,7 @@ Natiivi-UI luovutti (docs/raportit/viesti-natiivi-ui-luovutus-20260924-g.md): bu
 ## NATIIVI-UI LUOVUTUS H (24.9.2026 klo 17.13)
 
 24.9.2026 klo 17.3x: Natiivi-UI luovutti (docs/raportit/viesti-natiivi-ui-luovutus-20260924-h.md): build 10 -erä 1 masterissa 3726485, b10-jono 0e8ff30 (yläpalkki ilman ⚙, vain ☰ piilossa, tekstit mitattuina, hytinä, löydökset 32, 34, 36) odottaa kuvapareja b10e:stä.
+
+## NATIIVI-UI:N LUOVUTUS (i) (24.9.2026 klo 20.04)
+
+Luovutus docs/raportit/viesti-natiivi-ui-luovutus-20260924-i.md: masterissa radio 40/42, lehti-otsikot, leveä nostokortti ja kappalejako; b11j:ssä kainalo c6db5b5 ja löydös 44 f29def5; rgba vaalenee lineaarisessa väriavaruudessa (sRGB-yhdistelmät).
