@@ -590,12 +590,19 @@
     font-size: 16px;
 }
 
-/* iPhone (omistaja 24.9.2026, löydös 6): Liiku puoliläpinäkyvä ja hieman pienempi, kartta kuultaa läpi. */
+/* iPhone (omistaja 24.9.2026, löydökset 6 ja 18): Liiku pienempi ja läpinäkyvä — vain teksti, kompassi ja kevyt
+ * reuna, ei taustaa. Kevyt vaalea hehku tekstin ympärillä pitää sen luettavana tummalla kartalla. */
 .mk-liiku--puhelin .mk-liiku__nappi {
     height: 38px;
     padding: 0 15px;
     border-radius: 19px;
-    background-color: rgba(245, 240, 226, 0.72);
+    border-color: rgba(70, 51, 31, 0.4);
+    background-color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 3px rgba(245, 240, 226, 0.85);
+}
+
+.mk-liiku--puhelin .mk-liiku__nappi:active {
+    background-color: rgba(245, 240, 226, 0.35);
 }
 
 .mk-liiku--puhelin .mk-liiku__nappi .mk-nappi__teksti {

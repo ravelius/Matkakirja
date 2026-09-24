@@ -98,6 +98,26 @@ namespace Matkakirja.Natiivi
 
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
+        /// <summary>
+        /// iPhone (omistaja 24.9.2026, löydös 19; Raamattu NATIIVIN iPHONE-ASETTELU): kartta kevyesti sumeana aina,
+        /// kun isoisän tai pulun kuvia on näkyvillä — luennan kuvasarja (isoisän kuvakupla), kohtaamiskortti,
+        /// nostokortti ja pulun kuvakortti. Kameran puoli kuuntelee tätä (miedompi kuin portin verho, liukuen).
+        /// </summary>
+        public static event System.Action<bool> KuvaSumeaMuuttui;
+        public static bool KuvaSumea { get; private set; }
+
+        /// <summary>Testikomento (ui kuvasumea paalle|pois|auto): null = näkymien mukaan.</summary>
+        public static bool? PakotaKuvaSumea;
+
+        void PaivitaKuvaSumea()
+        {
+            bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
+                && (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki));
+            if (s == KuvaSumea) return;
+            KuvaSumea = s;
+            KuvaSumeaMuuttui?.Invoke(s);
+        }
+
         UiNakymat(UiKerros kerros)
         {
             instanssi = this;
@@ -150,6 +170,7 @@ namespace Matkakirja.Natiivi
             Nahtavyydet.Suljettu += () => { arkkiAuki = false; PulunKerros(); };
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
+            kerros.JokaRuutu += PaivitaKuvaSumea;
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
             Paljastus = new Paljastus(kerros);
             // Löytö päätyy matkalaukkuun: laukku heilahtaa paljastuksen sulkeutuessa (web elavoitaLaukku).

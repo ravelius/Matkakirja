@@ -559,6 +559,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Pulun kuvakortti (luodaan ensimmäisellä käytöllä nähtävyysarkin jälkeen).</summary>
         public PuluKuvakortti Kuvakortti => kuvakortti ??= new PuluKuvakortti(kerros);
 
+        /// <summary>Kuvakortti auki (ei luo korttia; UiNakymat.KuvaSumea lukee joka ruudussa).</summary>
+        public bool KuvakorttiAuki => kuvakortti != null && kuvakortti.Auki;
+
         /// <summary>
         /// Web reittiAvattavissa (tyyppi nahtavyys): kohdekartta kuuluu kaupunkiin, jossa pelaaja
         /// seisoo, ja kohteella on juttu. Rikkinäinen linkki on pahempi kuin puuttuva.
