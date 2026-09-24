@@ -3499,3 +3499,7 @@ Löydökset 11 ja 12 korjattu build 6:een.
 ## NATIIVI-UI: LUOVUTUS viesti-natiivi-ui-luovutus-20260924-f.md (5791477ba); MERGE-PYYNTO natiivi-ui/nostomerkit e16d1e6 (2.0-LUKIJAT, CHAT-STRIIMI, KEYCHAIN-KOODI, LIIKU-VAISTO); iPHONE-KUVAT BUILD 6 -KORJAUKSISTA (333d3f0) proto-3d/lokit/pariteetti-20260924/natiivi-b6-{kartta,kartuscha,selite,laukku}-iphone.jpg → NAYTETTY OMISTAJALLE; NATIIVI-UI NOLLAUTUU (24.9.2026 klo 10.41)
 
 Kahdestoista nollaus tänään.
+
+## NATIIVI-UI NOLLATTU klo 10.4x (0 VIESTIA TARKISTETTU), ALOITUSVIESTI LAHETETTY (BUILD 6 -KOHDAT, PARITEETIN JALJELLA OLEVAT EROT, TARKISTUSLISTAN FAIL-KOHDAT) (24.9.2026 klo 10.41)
+
+Kahdestoista nollaus.
