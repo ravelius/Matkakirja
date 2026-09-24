@@ -47,7 +47,7 @@ namespace Matkakirja
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
-    ///   lentoharmaa vara|kattavuus|uv|varapois|s2|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
+    ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
@@ -109,6 +109,9 @@ namespace Matkakirja
         ///              rasteria (ja varakartta laukeaa); harmaa ilman magentaa = rasteri on, mutta sisältö harmaa (c)
         ///   kattavuus  paikka 1 vihreänä (rasteri) / magentana (puuttuu) koko pallolla
         ///   uv         varakartan UV väreinä (r = pituus, g = leveys); punainen = maan akselit puuttuvat
+        ///   taso       paikan 1 rasterin taso: vihreä oma, keltainen→punainen esivanhemman (1–8 tasoa), magenta ei
+        ///   sumu pois|paalle   etäisyyssumu (Aurinko) pois lennolta
+        ///   satloki    Laattapalvelimen satelliittiloki alkaa alusta (minuutti seuraavasta satelliittipyynnöstä)
         ///   varapois   varakartta pois (vertailu: sama harmaa ilman varaa?)
         ///   s2         paikan 2 (Sentinel) peitto syaanina (d)
         ///   paikka n a raster-paikan n globaali alfa (0 = piiloon), esim. paikka 0 0 → pergamentti pois
@@ -125,6 +128,9 @@ namespace Matkakirja
                 case "vara": KarttaKerrokset.LentoTesti = 2; break;
                 case "kattavuus": KarttaKerrokset.LentoTesti = 3; break;
                 case "uv": KarttaKerrokset.LentoTesti = 4; break;
+                case "taso": KarttaKerrokset.LentoTesti = 5; break;
+                case "sumu": Aurinko.SumuEstetty = !paalle; break;
+                case "satloki": SatelliittiLoki.Aloita(); break;
                 case "normaali": KarttaKerrokset.LentoTesti = 0; break;
                 case "varapois": KarttaKerrokset.LentoTestiVaraPois = !(o.Length > 2 && o[2] == "pois"); break;
                 case "s2": KarttaKerrokset.LentoTestiS2 = !(o.Length > 2 && o[2] == "pois"); break;
@@ -145,6 +151,7 @@ namespace Matkakirja
                     KarttaKerrokset.LentoTestiVaraPois = false;
                     KarttaKerrokset.LentoTestiS2 = false;
                     Usvalevy.Estetty = false;
+                    Aurinko.SumuEstetty = false;
                     for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
                     var pk = GameObject.Find("Pilvikuori");
                     if (pk != null && pk.TryGetComponent<MeshRenderer>(out var pr)) pr.enabled = true;

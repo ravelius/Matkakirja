@@ -126,6 +126,12 @@ namespace Matkakirja
                     KerrosEpaonnistui?.Invoke(p.Key);
                     return;
                 }
+            // Muut kerrokset (build 11 -selvitys: harmaat suorakulmiot): lennon pinta, pohja, väritaso. Cesium kutsuu tätä
+            // kerroksen (tile provider) virheestä, ei yksittäisen laatan kuvan virheestä (ne näkyvät satloki-riveillä).
+            var o = d.overlay;
+            string nimi = o == null ? "?" : o == silea ? "lento-bmng" : o == sentinel ? "lento-sentinel" : o == pohja ? "pohja"
+                : o.materialKey + (o is CesiumUrlTemplateRasterOverlay u ? " " + u.templateUrl : "");
+            Debug.LogWarning($"MATKAKIRJA kerros {nimi} epäonnistui ({d.type}, http {d.httpStatusCode}): {d.message}");
         }
 
         /// <summary>

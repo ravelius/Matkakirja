@@ -63,11 +63,15 @@ def reuna(a, a_slot, b, b_slot):
 #                    Luokittelu sRGB-arvoilla (tekstuurit ovat sRGB, varjostin näkee lineaarisen arvon → pow 1/2,2).
 # Testitilat (komento "lentoharmaa", KarttaKerrokset.LentoTesti): vara 2 = magenta, missä varakartta laukeaisi;
 # vara 3 = paikan 1 kattavuus (vihreä = rasteri, magenta = puuttuu); vara 4 = varakartan UV väreinä (r = u, g = v,
-# punainen = maan akselit puuttuvat). varaVari.a < 0,5 = varakartta ei käytettävissä (UV ei kelpaa) → pohja näkyy.
+# punainen = maan akselit puuttuvat); vara 5 = paikan 1 rasterin taso: vihreä = oma, keltainen → punainen =
+# esivanhemman rasteri 1…8 tasoa ylempää (translationAndScale.z < 1), syaani = rasteri laattaa pienempi, magenta = ei. varaVari.a < 0,5 = varakartta ei käytettävissä (UV ei kelpaa) → pohja näkyy.
 # kynnys < 0 = paikan 2 peitto syaanina (alfa sellaisenaan).
 SEKOITUS_RUNKO = (
     "float4 s = nayte;\n"
-    "if (vara > 3.5 || (vara > 0.5 && vara < 1.5)) { if (s.a < 0.5 && varaVari.a > 0.5) s = float4(varaVari.rgb, 1.0); }\n"
+    "if (vara > 4.5) { float d = log2(1.0 / max(ts.z, 1e-6)); s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0)\n"
+    "    : ts.z > 1.01 ? float4(0.0, 1.0, 1.0, 1.0) : d < 0.25 ? float4(0.0, 1.0, 0.0, 1.0)\n"
+    "    : float4(1.0, 1.0 - saturate(d / 8.0), 0.0, 1.0); }\n"
+    "else if (vara > 3.5 || (vara > 0.5 && vara < 1.5)) { if (s.a < 0.5 && varaVari.a > 0.5) s = float4(varaVari.rgb, 1.0); }\n"
     "else if (vara > 2.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : float4(0.0, 1.0, 0.0, 1.0);\n"
     "else if (vara > 1.5) { if (s.a < 0.5) s = float4(1.0, 0.0, 1.0, 1.0); }\n"
     "if (kynnys < 0.0) s = float4(0.0, 1.0, 1.0, s.a);\n"
@@ -135,7 +139,8 @@ def sf_paikka(tyyppi, id_, nimi, suunta):
 sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4MaterialSlot", 1, "nayte", 0),
              sf_paikka("Vector1MaterialSlot", 2, "alfa", 0), sf_paikka("Vector4MaterialSlot", 3, "varaVari", 0),
              sf_paikka("Vector1MaterialSlot", 4, "vara", 0), sf_paikka("Vector4MaterialSlot", 5, "meriVari", 0),
-             sf_paikka("Vector1MaterialSlot", 6, "kynnys", 0), sf_paikka("Vector4MaterialSlot", 7, "ulos", 1)]
+             sf_paikka("Vector1MaterialSlot", 6, "kynnys", 0), sf_paikka("Vector4MaterialSlot", 7, "ulos", 1),
+             sf_paikka("Vector4MaterialSlot", 8, "ts", 0)]
 sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
       "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
       "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
@@ -143,7 +148,10 @@ sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", 
       "m_PreviewExpanded": False, "m_PreviewMode": 0, "m_CustomColors": {"m_SerializableColors": []},
       "m_SourceType": 1, "m_FunctionName": "MatkakirjaSekoitus", "m_FunctionSource": "", "m_FunctionBody": SEKOITUS_RUNKO}
 uudet = [alfa, alfa_solmu, alfa_ulos, sf] + sf_paikat
+ts_om = next(o for o in ali if o["m_Type"].endswith("Vector4ShaderProperty") and o["m_Name"] == "translationAndScale")
+ts_solmu = next(o for o in ali if o["m_Type"].endswith("PropertyNode") and o["m_Property"]["m_Id"] == ts_om["m_ObjectId"])
 reunat = [reuna(perus_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 0), reuna(naytteenotto["m_ObjectId"], 0, sf["m_ObjectId"], 1),
+          reuna(ts_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 8),
           reuna(alfa_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 2), reuna(sf["m_ObjectId"], 7, ulostulo["m_ObjectId"], 1)]
 omat = [alfa]
 for i, (nimi, viite, tyyppi, guid, _) in enumerate(ALI_SYOTTEET):
