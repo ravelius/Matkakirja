@@ -2659,6 +2659,7 @@ test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bund
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
   assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
   assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli'), 'TestFlight-buildin bundle (löydös 16)');
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli.kehitys'), 'kehityskäännöksen App ID (Fable 24.9.2026)');
 });
 
 test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eikä tilaan', async () => {
