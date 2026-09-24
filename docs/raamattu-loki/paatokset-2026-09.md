@@ -4343,3 +4343,7 @@ Karttasepän ehdotus (karttaseppa-nimet-ehdotus 3f4837f6c, docs/raportit/natiivi
 ## LINSSISEPPA: ASTROPULU TOIMII ISOLLA iPADILLA (WORKER #3096), LAMPPUPINOT WEBIN TASOLLA (b10f), LINSSINIMET NAKYVAT (24.9.2026 klo 17.33)
 
 Astropulu: kysymys oikeaan chattiin, Livia vastaa kuvan perusteella ilman sijaintia (proto-3d/lokit/linssit-astropulu-20260924/b10d-sallittu/); webin kuva samasta kysymyksestä ei mahdollinen (kontaktityökalu estää workerin) → Fable: ei tarvita, natiivikuva + koodivertailu riittää. Lamppupinot: Pariisi 245 vs 248, Lontoo 215 vs 209 → mergettävissä.
+
+## PROTO-MASTER ac8bf12: LENTOPINTA, SAAPUMISNAKYMA 6c2a287 (6 KUVAPARIA PASS), LIIKU-TANNE, LINSSINIMET, ASTROPULU MERGETTY; FOKUSPOHJA 38e424d → BUILD 11 (24.9.2026 klo 17.33)
+
+Fable hyväksyi fokuspohjan siirron build 11:een (#3081 luonnos, skeema 1.35). Kylmän lennon 2–3 kehyksen suorakulmiot (kylma-b10f.jpg) selvitetään agentilla, 30 min raja, muuten build 11. Build 10 puuttuu: Natiivi-UI b10-jono 0e8ff30 (kuvaparit) ja valintamerkit da29d38 (kuvapari); jos viipyvät yli 19.30, Fable päättää. Löydös 38: piirtotyö 2–3 pv kun data paketissa.
