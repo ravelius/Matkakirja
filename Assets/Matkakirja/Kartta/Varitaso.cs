@@ -22,8 +22,8 @@ namespace Matkakirja
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
-        /// <summary>Karttasepän kierros k2: alueen ulkopuoli ja puuttuvat lähdelaatat täytenä kermana.</summary>
-        public const string Versio = "2026-09-14b-tasoitus-k2";
+        /// <summary>Karttasepän kierros k3: alueen ulkopuoli ja puuttuvat lähdelaatat täytenä kermana, maa läpinäkyvä (k2:ssa maakin oli kermaa).</summary>
+        public const string Versio = "2026-09-14b-tasoitus-k3";
         public const string Kansio = "julisteet/pallo/vari/" + Versio + "/";
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
