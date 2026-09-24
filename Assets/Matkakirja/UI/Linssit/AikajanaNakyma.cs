@@ -53,7 +53,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, valinaytos, esittely, loppu, musta;
         readonly Label otsikko, paikka, kello, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko, vTeksti;
         readonly Label eOtsikko, eTeksti, lOtsikko, lTeksti;
-        readonly Button tauko, edellinen, seuraava, kaynnista;
+        readonly Button tauko, edellinen, seuraava, kaynnista, lueJuttu;
+        readonly Tiedeliitenakyma tiedeliite;
         Tila tila;
         string kelloTeksti;
         int pysakki = -1, jakso = -1;
@@ -115,6 +116,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(pAlarivi, Kirjasin.LukuKursiivi);
             pTeksti = Rakenne.Teksti("", "mk-aikajana-paneeli__teksti", paneeli);
             Kirjasimet.Aseta(pTeksti, Kirjasin.Luku);
+            // "Lue juttu" (web aikajana.js .aikajana-lue): tiedeliitteen sivu, kun pysäkillä on juttu.
+            lueJuttu = Rakenne.Nappi("Lue juttu", "mk-aikajana-lue", () => { if (pysakki >= 0) LinssiUi.Keksinnot?.AvaaJuttu(pysakki); }, paneeli);
+            Kirjasimet.Aseta(lueJuttu, Kirjasin.KoneLihava);
+            lueJuttu.style.display = DisplayStyle.None;
+            tiedeliite = new Tiedeliitenakyma(kerros);
 
             // Kertojan teksti (ihmisen matka).
             kertomus = Rakenne.El("mk-aikajana-kertomus", turva, PickingMode.Ignore);
@@ -251,6 +257,7 @@ namespace Matkakirja.Natiivi
             paneeli.style.display = DisplayStyle.None;
             kertomus.style.display = DisplayStyle.None;
             valinaytos.style.display = DisplayStyle.None;
+            tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
             Rakenne.Nayta(loppu, false, 0);
@@ -392,9 +399,19 @@ namespace Matkakirja.Natiivi
         {
             if (ReferenceEquals(l, kuunneltu)) return;
             if (kuunneltu != null) kuunneltu.Kaynnistetty -= Kaynnistyi;
+            if (kuunneltu != null) kuunneltu.JuttuPyydetty -= JuttuPyydetty;
             kuunneltu = l;
-            if (l != null) l.Kaynnistetty += Kaynnistyi;
+            if (l != null) { l.Kaynnistetty += Kaynnistyi; l.JuttuPyydetty += JuttuPyydetty; }
         }
+
+        /// <summary>Linssiseppä: tiedeliitteen sivu pyydettiin auki (Lue juttu tai AvaaJuttu).</summary>
+        void JuttuPyydetty(int i) => UiKerros.PaaSaikeessa(() =>
+        {
+            var l = kuunneltu;
+            if (l == null) return;
+            if (keksinnot == null) { LataaKeksinnot(() => tiedeliite.Avaa(l, i, keksinnot?.Pysakit.Count ?? 0)); return; }
+            tiedeliite.Avaa(l, i, keksinnot.Pysakit.Count);
+        });
 
         void Kaynnistyi() => UiKerros.PaaSaikeessa(() => Rakenne.Nayta(esittely, false, 250));
 
@@ -426,6 +443,7 @@ namespace Matkakirja.Natiivi
             pAlarivi.text = Liita(p.Henkilo, p.Paikka) ?? "";
             pTeksti.text = i < keksinnot.Selitteet.Count ? keksinnot.Selitteet[i] ?? "" : "";
             pTeksti.style.display = pTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            lueJuttu.style.display = LinssiUi.Keksinnot?.Tiedeliite(i) != null ? DisplayStyle.Flex : DisplayStyle.None;
             paneeli.style.display = DisplayStyle.Flex;
         }
 

@@ -21,6 +21,7 @@
 //   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
 //   ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]  maailmanradion kotelo keksityllä
 //                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan)
+//   ui linssi tiedeliite [i]                 keksintölinssin tiedeliite (ensimmäinen sivullinen pysäkki)
 //   ui linssi valikko [keksinnot|matka] [kiinni|alusta]
 //                                         aikajanan ylärivi esimerkillä ja sen hampurilaisvalikko
 //                                         auki (Poistu, Aloita alusta, Kertoja, Taustamusiikki);
@@ -101,6 +102,15 @@ namespace Matkakirja.Natiivi
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));
                 case "radio":
                     return l.Radio.Testaa(a1);
+                case "tiedeliite":
+                {
+                    // Keksintölinssi auki (ui linssi keksinnot tai valitsimesta): tiedeliitteen sivu pysäkille i.
+                    var kl = LinssiUi.Keksinnot;
+                    if (kl == null) return "keksintölinssi ei ole auki";
+                    int i = Luku(a1, -1);
+                    if (i < 0) for (int j = 0; j < 400 && i < 0; j++) if (kl.Tiedeliite(j) != null) i = j;
+                    return kl.AvaaJuttu(i) ? null : "pysäkillä " + i + " ei ole tiedeliitettä";
+                }
                 case "valikko":
                 {
                     bool matka = a1 == "matka";
