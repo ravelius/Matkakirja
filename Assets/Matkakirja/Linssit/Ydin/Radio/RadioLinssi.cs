@@ -301,6 +301,9 @@ namespace Matkakirja.Linssit.Radio
                 // Ulosliuku (PaivitaSulku); ilman mastoja ei ole mitään liu'utettavaa.
                 sulkuAlku = Nyt;
                 sulkuY = y;
+                // Pergamentti takaisin heti reliefin alle (paikka 0, reliefi 1 peittää): se latautuu liu'un ajan
+                // piilossa. Lopussa palautettuna se näkyi 2,4 s sumeana ja laikuittain (simulaattori 25.9. klo 01.2x).
+                if (pohjaVaihdettu) y?.Kerrokset?.Nakyvyys(Topografia.Pohja, true);
             }
             else PalautaPohja();
             if (y != null && Mastot3D != null && kallistusEnnen is double k)
