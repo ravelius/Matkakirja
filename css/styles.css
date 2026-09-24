@@ -29150,3 +29150,15 @@ body.pallolauta-kallistettu .minipopup,
 body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
   visibility: hidden;
 }
+
+/*
+ * LEHTIKUORI (js/lehtikuori.js, ?lehti=<kaupunki>): natiivin pelin
+ * web-näkymässä näkyy vain kaupunkilehti. Sovelluksen runko (.app:
+ * yläpalkki, lauta, toimintorivi) ja päivitysruutu piiloon; dialogit
+ * (lehti, artikkeli, nähtävyys, suurennos) ovat bodyn suoria lapsia ja
+ * toimivat kuten pelissä. Tausta pergamentin tumma, ettei lehden sulkeutuminen
+ * välähdä valkoisena ennen kuin natiivi sulkee näkymän.
+ */
+body.lehtikuori > .app,
+body.lehtikuori > .paivitysruutu { display: none !important; }
+body.lehtikuori { background: #2a241c; }

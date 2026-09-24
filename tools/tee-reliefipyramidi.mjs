@@ -4,13 +4,15 @@
  *   NODE_USE_ENV_PROXY=1 node tools/tee-reliefipyramidi.mjs \
  *       [--alue 5,40,15,48] [--tasot 0-7] [--ulos <kansio>] \
  *       [--rinnakkain 3] [--jatka] [--pakota-laatat z7/89/35,z7/89/39] \
- *       [--katto-kt 120] [--kuiva]
+ *       [--katto-kt 120] [--kuiva] [--palvelu ncss|opendap]
  *
  * --jatka        ohittaa laatat, jotka ovat jo levyllä tai kirjattu
  *                manifestiin avomereksi; manifesti päivittyy lisäten.
  * --rinnakkain   montako laattaa haetaan yhtä aikaa (oletus 3).
  * --pakota-laatat  nimetyt laatat ajetaan vaikka --jatka ohittaisi ne.
  * --tasot 0-7    z7 haetaan NOAA:lta, z6…z0 alinäytteistetään z7:stä.
+ * --palvelu      NOAA:n THREDDS-reitti: ncss (oletus) tai opendap
+ *                (sama aineisto; varalla, kun NCSS on alhaalla).
  *
  * === MIKSI PYRAMIDI EIKÄ OMA LAATTAJAKO =============================
  *
@@ -209,6 +211,75 @@ export const LAHDE = {
 const NCSS = 'https://www.ngdc.noaa.gov/thredds/ncss/grid/global/ETOPO2022/15s'
   + '/15s_surface_elev_netcdf/ETOPO_2022_v1_15s_%TILE%_surface.nc';
 
+/*
+ * OPeNDAP VARAREITTINÄ (`--palvelu opendap`, Karttaseppä 24.9.2026).
+ *
+ * Mitattu 24.9.2026 klo 7.10: NCSS vastasi JOKAISEEN pyyntöön HTTP
+ * 500:lla ja rungossa luki `IOException: No space left on device` —
+ * NOAA:n palvelimen levy oli täynnä, koska NCSS kirjoittaa leikatun
+ * ikkunan ensin väliaikaistiedostoksi. Saman palvelimen OPeNDAP
+ * (dodsC) vastasi samaan aikaan normaalisti, koska se striimaa
+ * vastauksen suoraan eikä tarvitse levyä.
+ *
+ * SAMA AINEISTO, SAMA HILA: OPeNDAP lukee täsmälleen saman
+ * ETOPO_2022_v1_15s_<laatta>_surface.nc-tiedoston, ja leikkaus tehdään
+ * INDEKSEILLÄ, joten solut ovat samat kuin NCSS:n. Vastaus on DAP2:n
+ * binäärimuoto (.dods): DDS-teksti, rivi `Data:` ja sen jälkeen
+ * gridin taulukko (float32) ja kartat lat, lon (float64), kaikki
+ * big-endian XDR:nä ja jokaisen edessä pituus kahdesti.
+ *
+ * MITATTU SAMALLA (versio 20260920 vs. OPeNDAP, 24.9.2026): laatat,
+ * jotka ovat kokonaan yhden lähdelaatan sisällä, ovat PIKSELILLEEN
+ * samat (24 näytettä, yksi joka 15°:n kaistalta). Laatoissa, jotka
+ * ylittävät 15°:n meridiaanin (z7/89/35 15 °E, z7/166 180°), NCSS:n
+ * rajalta alkava pala on YHDEN SOLUN (15″) liian idässä; OPeNDAP:n
+ * rajasolut jatkuvat saumatta (15 °E, 47 °N: 900 → 906 m). Sama
+ * siirto lienee SAUMASARAKKEEN (alempana) todellinen syy.
+ *
+ * Oletus on yhä NCSS. Vararetti valitaan lipulla eikä automaattisesti:
+ * NCSS:n viisi uusintaa maksavat 30 s laattaa kohti, ja hiljainen
+ * vaihto tekisi palvelun vaihtumisesta näkymättömän.
+ */
+const OPENDAP = 'https://www.ngdc.noaa.gov/thredds/dodsC/global/ETOPO2022/15s'
+  + '/15s_surface_elev_netcdf/ETOPO_2022_v1_15s_%TILE%_surface.nc';
+/** Yhden NOAA:n 15°-lähdelaatan hilan koko soluina kumpaankin suuntaan. */
+const LAHDELAATAN_SOLUT = 15 * 240;
+
+let palvelu = 'ncss';
+/** Lähdepalvelu: 'ncss' (oletus) tai 'opendap'. */
+export function asetaPalvelu(nimi) {
+  if (nimi !== 'ncss' && nimi !== 'opendap') throw new Error(`--palvelu ncss|opendap (${nimi})`);
+  palvelu = nimi;
+}
+
+/**
+ * DAP2-binäärivastaus (.dods) yhdestä gridistä: `{ z, lat, lon }`.
+ * Gridin taulukko ensin, sitten kartat siinä järjestyksessä kuin
+ * DDS ne luettelee (lat, lon).
+ */
+export function lueDods(buf) {
+  const merkki = buf.indexOf('\nData:\n', 0, 'latin1');
+  if (merkki < 0) {
+    throw new Error(`OPeNDAP ei palauttanut dataa: ${buf.toString('utf8', 0, 200)}`);
+  }
+  let p = merkki + 7;
+  const taulukko = (tavua, lue) => {
+    const n = buf.readUInt32BE(p);
+    if (buf.readUInt32BE(p + 4) !== n) throw new Error('DAP2: taulukon pituudet eivät täsmää');
+    p += 8;
+    const ulos = tavua === 4 ? new Float32Array(n) : new Float64Array(n);
+    for (let i = 0; i < n; i++) { ulos[i] = lue(p); p += tavua; }
+    return ulos;
+  };
+  const z = taulukko(4, (o) => buf.readFloatBE(o));
+  const lat = taulukko(8, (o) => buf.readDoubleBE(o));
+  const lon = taulukko(8, (o) => buf.readDoubleBE(o));
+  if (z.length !== lat.length * lon.length) {
+    throw new Error(`DAP2: z ${z.length} ≠ ${lat.length} × ${lon.length}`);
+  }
+  return { z, lat, lon };
+}
+
 const VALIMUISTI = join(tmpdir(), 'matkakirja-reliefi15');
 
 /* ------------------------------------------------ lähdeikkunan haku */
@@ -255,7 +326,11 @@ async function noudaNcss(url) {
       if (!v.ok) throw new Error(`${v.status} ${v.statusText} — ${url}`);
       // eslint-disable-next-line no-await-in-loop
       const buf = Buffer.from(await v.arrayBuffer());
-      if (buf.length < 8 || buf.toString('latin1', 0, 3) !== 'CDF') {
+      if (palvelu === 'opendap') {
+        if (buf.indexOf('\nData:\n', 0, 'latin1') < 0) {
+          throw new Error('OPeNDAP ei palauttanut DAP2-dataa — muuttuiko palvelu?');
+        }
+      } else if (buf.length < 8 || buf.toString('latin1', 0, 3) !== 'CDF') {
         throw new Error('NCSS ei palauttanut klassista netCDF:ää — muuttuiko palvelu?');
       }
       return buf;
@@ -294,14 +369,40 @@ async function noudaNcss(url) {
  */
 const pyoristaPyynto = (v) => Math.round(v * 1e6) / 1e6;
 
+/**
+ * OPeNDAP-pyynnön indeksit: ne solut, joiden KESKIPISTE on välillä
+ * [a, b]. Lähdelaatan hila alkaa `pohja`sta (laatan etelä- tai
+ * länsireuna) ja solun i keskipiste on pohja + (i + 0,5) / 240.
+ * Epsilon pitää 15°:n rajaan puoli solua sisään vedetyn reunan
+ * (`rajat`) täsmälleen reunasolussa: ilman sitä liukuluku 3598,9999
+ * pyöristyisi alas ja rajalle jäisi yhden solun rako.
+ */
+export function dodsIndeksit(a, b, pohja) {
+  const i0 = Math.max(0, Math.ceil((a - pohja) * 240 - 0.5 - 1e-6));
+  const i1 = Math.min(LAHDELAATAN_SOLUT - 1, Math.floor((b - pohja) * 240 - 0.5 + 1e-6));
+  return [i0, i1];
+}
+
 /** Yhden lähdelaatan sisällä oleva ikkuna. */
 async function haePala({ lon0, lat0, lon1, lat1 }) {
   const laatta = lahdeLaatta((lon0 + lon1) / 2, (lat0 + lat1) / 2);
-  const url = `${NCSS.replace('%TILE%', laatta)}?var=z`
-    + `&south=${pyoristaPyynto(lat0)}&north=${pyoristaPyynto(lat1)}`
-    + `&west=${pyoristaPyynto(lon0)}&east=${pyoristaPyynto(lon1)}&accept=netcdf`;
-  const nimi = `p-${laatta}-${lon0.toFixed(5)}_${lat0.toFixed(5)}`
-    + `_${lon1.toFixed(5)}_${lat1.toFixed(5)}.nc.gz`;
+  let url;
+  let nimi;
+  if (palvelu === 'opendap') {
+    const lonPohja = Math.floor(((lon0 + lon1) / 2) / 15) * 15;
+    const latPohja = Math.min(90, Math.ceil(((lat0 + lat1) / 2) / 15) * 15) - 15;
+    const [x0, x1] = dodsIndeksit(lon0, lon1, lonPohja);
+    const [y0, y1] = dodsIndeksit(lat0, lat1, latPohja);
+    if (x1 < x0 || y1 < y0) throw new Error(`OPeNDAP: tyhjä ikkuna ${lon0}…${lon1}, ${lat0}…${lat1}`);
+    url = `${OPENDAP.replace('%TILE%', laatta)}.dods?z[${y0}:1:${y1}][${x0}:1:${x1}]`;
+    nimi = `o-${laatta}-${y0}_${y1}_${x0}_${x1}.dods.gz`;
+  } else {
+    url = `${NCSS.replace('%TILE%', laatta)}?var=z`
+      + `&south=${pyoristaPyynto(lat0)}&north=${pyoristaPyynto(lat1)}`
+      + `&west=${pyoristaPyynto(lon0)}&east=${pyoristaPyynto(lon1)}&accept=netcdf`;
+    nimi = `p-${laatta}-${lon0.toFixed(5)}_${lat0.toFixed(5)}`
+      + `_${lon1.toFixed(5)}_${lat1.toFixed(5)}.nc.gz`;
+  }
   const polku = join(VALIMUISTI, nimi);
 
   let buf;
@@ -313,8 +414,13 @@ async function haePala({ lon0, lat0, lon1, lat1 }) {
     writeFileSync(polku, gzipSync(buf));
   }
 
-  const nc = lueNetCDF(buf);
-  const lat = nc.lat?.data; const lon = nc.lon?.data; const z = nc.z?.data;
+  let lat; let lon; let z;
+  if (palvelu === 'opendap') {
+    ({ lat, lon, z } = lueDods(buf));
+  } else {
+    const nc = lueNetCDF(buf);
+    lat = nc.lat?.data; lon = nc.lon?.data; z = nc.z?.data;
+  }
   if (!lat || !lon || !z) throw new Error('netCDF:stä puuttuu lat/lon/z');
   /*
    * lat on NCSS:ssä NOUSEVA eli sama suunta kuin ruudukkosopimuksessa
@@ -992,7 +1098,22 @@ export function laatatAlueelle(mitat, alue) {
       const ala = lautaLat(b.y + b.h);
       const lansi = lautaLon(b.x);
       const ita = lautaLon(b.x + b.w);
-      if (ita <= lon0 || lansi >= lon1 || yla <= lat0 || ala >= lat1) continue;
+      /*
+       * ALUE KIERTÄÄ PÄIVÄMÄÄRÄRAJAN YLI (Karttaseppä 24.9.2026).
+       *
+       * Arkki on 360° leveä ja alkaa −175:stä, joten sen itäisimmät
+       * sarakkeet ovat lautaLonissa 180…185 eli todellisuudessa
+       * −180…−175. Versio 20260920 poltettiin alueella
+       * `-180,-65.4,180,84`: vertailu `lansi >= lon1` pudotti z7:n
+       * sarakkeet 167–168 (lansi 181,27 ja 183,4) pois, vaikka koko
+       * maailma oli pyydetty. Sarakkeita ei haettu lainkaan, ja
+       * alinäytteistys maalasi niiden kohdan jokaisella tasolla
+       * MERIVARI-täytteellä (mitattu z6/83 oikea puolisko 100 %).
+       * Nyt alue kelpaa myös ±360° siirrettynä, joten −180…180 kattaa
+       * koko arkin; Euroopan kaltainen alue ei muutu.
+       */
+      const osuu = [-360, 0, 360].some((k) => ita > lon0 + k && lansi < lon1 + k);
+      if (!osuu || yla <= lat0 || ala >= lat1) continue;
       ulos.push({ sarake, rivi, bbox: b });
     }
   }
@@ -1084,6 +1205,8 @@ async function main() {
   const pakotetut = new Set(
     String(lippu('--pakota-laatat', '')).split(',').map((s) => s.trim()).filter(Boolean),
   );
+  /* Lähdepalvelu: NCSS oletuksena, OPeNDAP varalla (ks. OPENDAP). */
+  asetaPalvelu(String(lippu('--palvelu', 'ncss')));
   /*
    * JÄRVIMASKIN AINEISTO (`--jarvet <kansio>`, ne_10m_lakes.geojson).
    * Ilman kansiota työkalu toimii täsmälleen kuten ennen: maski on
@@ -1103,7 +1226,7 @@ async function main() {
   mkdirSync(VALIMUISTI, { recursive: true });
 
   console.log(`lähde: ${LAHDE.nimi}`);
-  console.log(`       ${LAHDE.lisenssi}, doi:${LAHDE.doi}, ${LAHDE.palvelu}`);
+  console.log(`       ${LAHDE.lisenssi}, doi:${LAHDE.doi}, ${palvelu === 'opendap' ? 'THREDDS OPeNDAP (DAP2)' : LAHDE.palvelu}`);
   console.log(`arkki: x ${ARKKI.x} y ${ARKKI.y.toFixed(2)} `
     + `w ${ARKKI.w} h ${ARKKI.h.toFixed(2)} (sama kuin pääkartan pyramidilla)`);
   console.log(`ajo:   tasot ${tasot.join(',')}, rinnakkain ${rinnakkain}`
@@ -1118,9 +1241,16 @@ async function main() {
     meri.get(z)?.delete(`${sarake}/${rivi}`);
   }
 
+  /*
+   * PALVELU KIRJATAAN LUETTELOON KERTYVÄNÄ: --jatka-ajo pitää aiemmat
+   * tasot, joten luettelon on kerrottava kaikki reitit, joista sen
+   * laatat tulivat (versio 20260924: NCSS + itäsarakkeet OPeNDAPista).
+   */
+  const aiemmatPalvelut = String(vanha?.lahde?.palvelu ?? '').split('; ').filter(Boolean);
+  const tamaPalvelu = palvelu === 'opendap' ? 'THREDDS OPeNDAP (DAP2)' : LAHDE.palvelu;
   const luettelo = {
     tunnus: 'reliefipyramidi',
-    lahde: LAHDE,
+    lahde: { ...LAHDE, palvelu: [...new Set([...aiemmatPalvelut, tamaPalvelu])].join('; ') },
     arkki: { x: ARKKI.x, y: ARKKI.y, w: ARKKI.w, h: ARKKI.h },
     laatta: LAATTA,
     ruutu: RUUTU_15S,

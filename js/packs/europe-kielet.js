@@ -21,7 +21,9 @@
  * Muoto: { url, nimi, kesto } — nimi kertoo paikan, tekijän ja
  * lisenssin, ja se näkyy sellaisenaan lähdemainintana.
  */
-export const EUROPE_KIELET = {
+
+import { aaniLisenssiSallittu } from '../lisenssi.js';
+export const EUROPE_KIELET_KAIKKI = {
   lontoo: { url: 'https://archive.org/download/aporee_16582_19251/EastStreetmarketElephantCastle.mp3', nimi: 'Itäkadun tori (Lontoo) — yll_foundations, PD', kesto: 180 },
   istanbul: { url: 'https://archive.org/download/aporee_67584_78236/Bazarauen.mp3', nimi: 'Katettu basaari (Istanbul) — jakob.roth, PD', kesto: 180 },
   dublin: { url: 'https://archive.org/download/aporee_23825_27683/EarlstreetNorthLotsofLanguagespeoplepassingSPsD.mp3', nimi: 'Earl Street (Dublin) — jo_pamo, PD', kesto: 180 },
@@ -54,3 +56,13 @@ export const EUROPE_KIELET = {
   oslo: { url: 'https://archive.org/download/aporee_13979_16300/StazioneCleTabelloneTreniPassi.mp3', nimi: 'Päärautatieasema (Oslo) — hatoriyumi, PD', kesto: 180 },
   kobenhavn: { url: 'https://archive.org/download/aporee_28276_32572/NyhavnKopenhagen01.mp3', nimi: 'Nyhavnin rantakatu (Kööpenhamina) — weitere, CC BY-NC-SA', kesto: 180 },
 };
+
+/*
+ * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- ja ND-ehtoinen
+ * kielinäyte ei soi — kaupungin "Kuuntele kieltä" -nappi jää pois, kunnes
+ * näytteelle löytyy vapaa korvaaja (docs/raportit/lisenssi-inventaario-
+ * 20260923.md, kohta C). Kaikki rivit ovat EUROPE_KIELET_KAIKKI:ssa.
+ */
+export const EUROPE_KIELET = Object.fromEntries(
+  Object.entries(EUROPE_KIELET_KAIKKI).filter(([, e]) => aaniLisenssiSallittu(e.nimi)),
+);
