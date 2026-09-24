@@ -4307,3 +4307,7 @@ Tilaukset: posti/fable-kuvaputki-maamerkit-viitekuvat-20260924.md (70 kaupunkia,
 ## NATIIVI-UI 70 % (POSTIVAHTI) — NOLLAUSKASKY ODOTTAA FABLEN VIESTIRAJAN NOLLAUSTA (24.9.2026 klo 17.09)
 
 Natiivi-UI:lla b10-jono 0e8ff30 testikäännöksessä, kuvaparit tulossa; luovutus käsketään heti kun omistaja kirjoittaa Fablen sessioon (viestiraja täynnä). Myös Sisältökirjurin N-erien käsky odottaa.
+
+## VIESTIRAJA NOLLATTU klo 18.2x: NATIIVI-UI:N LUOVUTUS (-h) JA NOLLAUS KASKETTY, SISALTOKIRJURIN N-ERAT ALOITETTU, POSTIVAHDIN ALOITUSVIESTIOHJE LAHETETTY (24.9.2026 klo 17.12)
+
+Kolme viestiä toimitettu omistajan 'tehty'-viestin jälkeen.
