@@ -4320,6 +4320,8 @@ export class UI {
 
   /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
   paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
     if (this.pallolauta) {
       this.pallolauta.paivita();
       return;
@@ -17513,7 +17515,7 @@ export class UI {
     lohko.appendChild(johdanto);
 
     const vihje = html('p', 'periaate-teksti');
-    vihje.textContent = 'Pelin oikeassa alakulmassa on huutomerkki. Sitä '
+    vihje.textContent = 'Valikossa on nappi "ehdota sisältöä". Sitä '
       + 'napauttamalla voit lähettää palautetta juuri siitä kohdasta, '
       + 'jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.';
     lohko.appendChild(vihje);

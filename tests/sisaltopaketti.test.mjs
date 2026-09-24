@@ -942,8 +942,9 @@ test('skeema 1.15: lehdet natiiville', async () => {
   assert.equal(lontoo.menovinkitMaalta, 'GBR');
   assert.equal(lontoo.sivut.at(-1), 'menovinkit');
   // Elämää: litteät nostot yhtenä kappaleena, kuten webin vanha piirto.
+  // Lajia ei vaadita: kun viimeisetkin Elämää-kaupungit saavat oman lehden
+  // (N4: kongo, sahara, madagaskar), niitä on 0. Muoto tarkistetaan, jos on.
   const elama = [...kl.values()].filter((a) => a.laji === 'elama');
-  assert.ok(elama.length > 0);
   for (const a of elama) {
     assert.equal(a.kansi, null);
     assert.deepEqual(a.aiheet.map((x) => x.id), ['elama']);
