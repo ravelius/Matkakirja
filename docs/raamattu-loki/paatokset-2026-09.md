@@ -2935,3 +2935,7 @@ Isoisä 1873 erä 2 pysyy odottavana (ei webissä).
 ## NATIIVISEPPA NOLLATTU klo 04.1x (70 %): LUOVUTUS viesti-natiiviseppa-luovutus-20260924.md (7f9d2b14e, HAARA selvittaja-3d-luovutus), PROTO-MASTER a345a19, AVOIMET MERGE-PYYNNOT natiivi-ui/jaa-matka 9230344 (LAITEKAANNOS .mm) JA natiivi-ui/nosto-media f02a5ee; LEVY 98 % → TF1–3 JA Build/iOS-laite POISTETTU (~24 Gt VAPAANA); ALOITUS viesti-natiiviseppa-aloitus.md LUOTU (24.9.2026 klo 04.10)
 
 Kesken: maailman maaston osoite, valokeilan ensimmäinen vaihto 23 ms, ui jatka -kehys 100 ms, Espanjan viiva.
+
+## NATIIVI-UI: MASTERISSA LUE LISAA -IKKUNA (OMA ARTIKKELI TAI WIKIPEDIA), KEKSIJAKARUSELLI, IHMISEN MATKAN AIKASELAIN (◀▶ POIS), KUVIEN GPU-LUKU TAUSTALLA (KUVAT OIKEIN PAIN, PIIKIT PIENEMMAT); MERGE-JONOSSA JAA MATKA, NOSTON KUUNTELU- JA MUSIIKKINAPIT, LINSSIN VALMIIT KYSYMYKSET, IHMISEN MATKAN NOSTOKORTTI, HAVAINNEKUVIEN ESILATAUS; INVENTAARION OSIOT 8, 16, 20 TARKISTETTU; KUVASARJA C LAITETESTAAJALLA; SEURAAVAKSI C-LOYDOKSET, SITTEN KOKEET-RIVIT (24.9.2026 klo 04.13)
+
+Fable: merge-jono etenee kun Natiiviseppä on nollattu; Natiivi-UI päivittää nappi-inventaarion tehty-luvun jokaisen erän jälkeen.
