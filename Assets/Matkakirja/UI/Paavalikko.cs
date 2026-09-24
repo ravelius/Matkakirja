@@ -21,6 +21,8 @@
 // pois-rivi himmeä. Tilateksti versaalina ("päällä"/"pois").
 // Kehittäjän syötekokeet (webin Syötekoe, Kerrokset, Kehysprofiili) ja
 // laudanvalinta (piilossa webissäkin) jätetään pois.
+// iPHONE (löydös 20): ☰ avaa linssivalikon, jonka riveiltä tämä paneeli aukeaa osana: Asetukset (kytkimet ja
+// retkikunta) tai Kehittäjä (KOKEET-rivit ja kehittäjäkoodi); komennot kutsutaan suoraan (KysyUusiPeli ym.).
 // Uusi peli kysyy varmistuksen (webin #nollaa-dialog) ja tyhjentää tallennuksen
 // ja ääniasetukset: PeliOhjain.UusiPeli (Pelikoodari) + Asetukset.Nollaa.
 using System;
@@ -44,8 +46,24 @@ namespace Matkakirja.Natiivi
         /// <summary>Retkikuntaosion paikka (SahkeNakyma täyttää; tyhjänä piilossa).</summary>
         public readonly VisualElement Retkikunta;
 
+        /// <summary>Paneelin osa (iPhonen ☰-valikon riveiltä); Kaikki = iPad ja web-asettelu.</summary>
+        public enum Osa { Kaikki, Asetukset, Kehittaja }
+        Osa osa;
+        readonly List<VisualElement> asetusosat = new List<VisualElement>(), komentoosat = new List<VisualElement>();
+        readonly Vahvistus vahvistus;
+        StyleEnum<DisplayStyle>? retkiEnnen;
+
+        public void AvaaOsa(Osa o)
+        {
+            if (Auki) Sulje();
+            osa = o;
+            Avaa();
+        }
+
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
+            this.vahvistus = vahvistus;
+            AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
             Otsikko("Äänet");
             Kytkinrivi(Kytkin.Kertoja, Ikonit.Kertoja);
             Kytkinrivi(Kytkin.Musiikki, Ikonit.Musiikki);
@@ -54,6 +72,7 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
             Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", Sisalto, PickingMode.Ignore);
             Retkikunta.style.display = DisplayStyle.None;
+            asetusosat.AddRange(Sisalto.Children());
             // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);
@@ -77,27 +96,16 @@ namespace Matkakirja.Natiivi
             Tyohuonerivi("Kehittäjälehti", "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9\"/>", Tyohuone.AvaaKehittajalehti);
 #endif
 
+            int ennenKomentoja = Sisalto.childCount;
             Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
-            var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () =>
-            {
-                Sulje();
-                vahvistus.Kysy("Uusi peli",
-                    "Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat ja ääniasetukset. Tätä ei voi perua.",
-                    "Peruuta", "Aloita alusta", () =>
-                    {
-                        Asetukset.Nollaa();
-                        // Web tyhjennaMuistit pyyhkii myös pro-tunnuksen (matkakirja-pro-tunnus).
-                        Palautekanava.AsetaProTunnus(null, null);
-                        UusiPeli?.Invoke();
-                    });
-            }, Sisalto);
+            var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () => { Sulje(); KysyUusiPeli(); }, Sisalto);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
 
-            var ehdota = Rakenne.Nappi("ehdota sisältöä", "mk-komentorivi", () => { Sulje(); EhdotaPainettu?.Invoke(); }, Sisalto);
+            var ehdota = Rakenne.Nappi("ehdota sisältöä", "mk-komentorivi", () => { Sulje(); Ehdota(); }, Sisalto);
             ehdota.tooltip = "Ehdota sisältöä tai lähetä palautetta tästä kohdasta";
             Kirjasimet.Aseta(ehdota, Kirjasin.KoneLihava);
 
-            var tietoja = Rakenne.Nappi("tekijätiedot ja lähteet", "mk-komentorivi", () => { Sulje(); TietojaPainettu?.Invoke(); }, Sisalto);
+            var tietoja = Rakenne.Nappi("tekijätiedot ja lähteet", "mk-komentorivi", () => { Sulje(); Tietoja(); }, Sisalto);
             Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);
 
             var pohja = Rakenne.El("mk-pudotus__pohjarivi", Sisalto, PickingMode.Ignore);
@@ -113,8 +121,31 @@ namespace Matkakirja.Natiivi
 #else
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
 #endif
+            for (int i = ennenKomentoja; i < Sisalto.childCount; i++) komentoosat.Add(Sisalto[i]);
+#if !MATKAKIRJA_APPSTORE
+            // Kehittäjäkoodi (iPhonen Kehittäjä-osa; iPadilla sama ikkuna aukeaa Mitä uutta -näkymän napista).
+            var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
+            Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
+#endif
             Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
         }
+
+        /// <summary>"uusi peli": varmistus (webin #nollaa-dialog), sitten tyhjennys ja UusiPeli.</summary>
+        public void KysyUusiPeli()
+        {
+            vahvistus.Kysy("Uusi peli",
+                "Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat ja ääniasetukset. Tätä ei voi perua.",
+                "Peruuta", "Aloita alusta", () =>
+                {
+                    Asetukset.Nollaa();
+                    // Web tyhjennaMuistit pyyhkii myös pro-tunnuksen (matkakirja-pro-tunnus).
+                    Palautekanava.AsetaProTunnus(null, null);
+                    UusiPeli?.Invoke();
+                });
+        }
+
+        public void Ehdota() => EhdotaPainettu?.Invoke();
+        public void Tietoja() => TietojaPainettu?.Invoke();
 
         readonly Button reliefi;
         readonly VisualElement kokeet;
@@ -157,7 +188,12 @@ namespace Matkakirja.Natiivi
             }
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
-            kokeet.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            kokeet.style.display = Asetukset.Kehittaja && osa != Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var e in asetusosat) if (e != Retkikunta) e.style.display = osa == Osa.Kehittaja ? DisplayStyle.None : DisplayStyle.Flex;
+            // Retkikunnan näkyvyys on SahkeNakyman: Kehittäjä-osassa piiloon ja takaisin entiseen seuraavalla avauksella.
+            if (osa == Osa.Kehittaja) { retkiEnnen ??= Retkikunta.style.display; Retkikunta.style.display = DisplayStyle.None; }
+            else if (retkiEnnen.HasValue) { Retkikunta.style.display = retkiEnnen.Value; retkiEnnen = null; }
+            foreach (var e in komentoosat) e.style.display = osa == Osa.Kaikki ? DisplayStyle.Flex : DisplayStyle.None;
             if (kynnykset != null)
             {
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;

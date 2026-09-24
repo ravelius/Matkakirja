@@ -109,6 +109,28 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento (ui kuvasumea paalle|pois|auto): null = näkymien mukaan.</summary>
         public static bool? PakotaKuvaSumea;
 
+        /// <summary>
+        /// iPhonen ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20): pelaajan asetukset,
+        /// vanhan päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä (ei App Store -käännöksessä).
+        /// </summary>
+        void RakennaPuhelinvalikko()
+        {
+            var v = Linssit.Valitsin;
+            v.Avaaja = Tilarivi.Valikko;
+            v.LisaErotin();
+            v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
+            v.LisaRivi("Äänet", Ikonit.Viiva["kaiutin"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet));
+            v.LisaRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
+            v.LisaErotin();
+            v.LisaRivi("Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
+            v.LisaRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
+            v.LisaRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
+            v.LisaRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
+#if !MATKAKIRJA_APPSTORE
+            v.LisaRivi("Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+#endif
+        }
+
         void PaivitaKuvaSumea()
         {
             bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
@@ -196,7 +218,17 @@ namespace Matkakirja.Natiivi
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
-            Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Vaihda(); };
+            // iPhone (löydös 20): ☰ avaa linssivalikon koko pelin valikkona; iPad ja muut: päävalikko.
+            Tilarivi.Valikko.clicked += () =>
+            {
+                Aanentasot.Sulje(); Matkalaukku.Sulje();
+                if (Linssivalitsin.Valikkona) { Valikko.Sulje(); Linssit.Valitsin.Vaihda(); }
+                else Valikko.Vaihda();
+            };
+            Linssit.Valitsin.AukiMuuttui += auki => { if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki); };
+            RakennaPuhelinvalikko();
+            Tilarivi.Vieras(Karttaselite.Nappi);
+            Matkakirja.Kiinnita(Tilarivi);
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
             Tilarivi.PilleriPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Vaihda(); };
             Valikko.AukiMuuttui += auki => Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
