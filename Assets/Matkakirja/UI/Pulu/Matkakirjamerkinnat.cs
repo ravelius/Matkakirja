@@ -155,7 +155,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!(o is Dictionary<string, object> a)) continue;
                 // Skeema 1.24: kentät alkion päätasolla (ei data-oliota); vanha muoto data-olion sisällä.
-                var d = MiniJson.Kentta(a, "lihavoitu") != null ? a : MiniJson.Kentta(a, "data") as Dictionary<string, object> ?? a;
+                var d = Rakenne.Paatasolta(a);
                 var kaupunki = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(d, "kaupunki") ?? MiniJson.Teksti(d, "id");
                 if (kaupunki != null && d != null) yield return (kaupunki, d);
             }

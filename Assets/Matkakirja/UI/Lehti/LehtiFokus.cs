@@ -113,7 +113,7 @@ namespace Matkakirja.Natiivi
             foreach (var a in Rakenne.Lista(MiniJson.Kentta(juuri, "alkiot")) ?? new List<object>())
             {
                 if (!(a is Dictionary<string, object> o)) continue;
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object> ?? o;
+                var d = Rakenne.Paatasolta(o);
                 string kaupunki = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(d, "kaupunki");
                 var x = Tehtava(d, kaupunki, MiniJson.Teksti(d, "tehtava"), MiniJson.Kentta(d, "juliste") as string);
                 if (x != null) Lisaa(t, x);

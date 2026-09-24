@@ -9,6 +9,24 @@ namespace Matkakirja.Natiivi
     public static class Rakenne
     {
         /// <summary>
+        /// Päätaso ensin (Paataso, skeema 1.26): alkion omat kentät raa'an datan päällä; raaka data vain
+        /// Paataso.Raaka-reitin kautta (RaakaKielletty katkaisee sen). ohita = päätason kentät, joiden muoto
+        /// poikkeaa raa'asta (esim. tyypitetty kuva-olio raa'an merkkijonon sijaan).
+        /// </summary>
+        public static System.Collections.Generic.Dictionary<string, object> Paatasolta(System.Collections.Generic.Dictionary<string, object> alkio, params string[] ohita)
+        {
+            if (alkio == null) return null;
+            var tulos = Matkakirja.Peli.Paataso.Raaka(alkio) is System.Collections.Generic.Dictionary<string, object> r
+                ? new System.Collections.Generic.Dictionary<string, object>(r) : new System.Collections.Generic.Dictionary<string, object>();
+            foreach (var kv in alkio)
+            {
+                if (kv.Key == "data" || kv.Value == null || System.Array.IndexOf(ohita, kv.Key) >= 0) continue;
+                tulos[kv.Key] = kv.Value;
+            }
+            return tulos;
+        }
+
+        /// <summary>
         /// iOS: kun järjestelmän näppäimistö (ja sen syöteikkuna) sulkeutuu, kenttä jää UI Toolkitissa fokukseen, ja
         /// jokainen seuraava napautus missä tahansa avaa näppäimistön uudelleen eikä osu kohteeseensa (Laitetestaajan
         /// T2 24.9.: Raamatun kentät). Kenttä vapautetaan fokuksesta heti, kun näppäimistö on ollut näkyvissä ja

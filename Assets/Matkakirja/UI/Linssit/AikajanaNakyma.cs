@@ -1516,6 +1516,8 @@ namespace Matkakirja.Natiivi
         public string TestaaIhminen(string mita, int i)
         {
             Ala(Tila.Ihminen);
+            // Testitila ilman linssiä: otsikko ei tule Kytke-kutsusta (pariteetti 24.9.: jäi "KEKSINNÖT EUROOPASSA").
+            otsikko.text = (IhmisenMatkaLinssi.IhmisenMatkaTiedot.Nimi ?? "Ihmisen matka").ToUpperInvariant();
             LataaIhminen(() =>
             {
                 switch (mita)
