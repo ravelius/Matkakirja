@@ -191,8 +191,8 @@ namespace Matkakirja.Natiivi
             if (File.Exists(levy))
             {
                 using var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, AudioType.MPEG);
-                // Pakattuna muistiin: ei koko mp3:n purkua pääsäikeessä (LoadFMODSound-piikki, Pelikoodarin aanipiikki).
-                ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true;
+                // EI pakattuna: tehosteet siivutetaan ja iskut etsitään näytteistä (Leikkaa, Iskut: GetData), joka ei
+                // toimi pakatulle klipille ("Cannot get data on compressed samples", 24.9.). Tehosteet ovat lyhyitä.
                 yield return p.SendWebRequest();
                 if (p.result == UnityWebRequest.Result.Success) klippi = DownloadHandlerAudioClip.GetContent(p);
                 else { Debug.LogWarning($"MATKAKIRJA ui ääni ei purkautunut: {levy} ({p.error})"); File.Delete(levy); }
