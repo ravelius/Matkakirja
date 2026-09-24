@@ -174,6 +174,14 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (Kaynnissa || Paattynyt) return;
             nakyma.Musta(true, 0);
+            // Web avaaKaukaisuus: mustan alla pallo kauas Afrikan keskuksen yläpuolelle, jotta Maa näkyy musta
+            // pois -hetkellä pisteenä tähtien keskellä ja zoomi Afrikkaan lähtee avaruudesta (ei pelaajan
+            // kaupungista: omistajan build 5 -löydös 12, iPhone). Vähennetty liike: pallo heti Afrikassa.
+            if (!y.VahennettyLiike && Esitysmatikka.Alueet.TryGetValue("afrikka", out var a) && a is Laatikko af)
+            {
+                var r = af.Rajaus();
+                y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus);
+            }
             Kaynnissa = true;
             AloitaJakso(0);
         }

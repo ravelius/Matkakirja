@@ -895,6 +895,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void ZoomiKatto(double? maxKorkeus) { }
 
+        public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
+        {
+            Kirjaa($"kamera avaruuteen → {lat:F1}, {lon:F1}, {pallonSateita:F0} R");
+            kierto.AsetaKaukaa(lat, lon, pallonSateita * CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
+
         public double KokoPallonKorkeus => kierto.MaxKorkeus();
 
         /// <summary>
