@@ -116,6 +116,8 @@ namespace Matkakirja.Natiivi
             if (PorttiAuki == auki) return;
             PorttiAuki = auki;
             PorttiMuuttui?.Invoke(auki);
+            // Kameran puoli: pallo täyttää ruudun ja sumenee 6 pt, merkit piiloon (Natiiviseppä, löydös 17).
+            PalloKierto.PorttiSumea = auki;
         }
 
         public Aloitusnakyma(UiKerros kerros)
@@ -451,7 +453,11 @@ namespace Matkakirja.Natiivi
         void Valitse(string id)
         {
             Aanet.Tehoste("clack", 2.4f); // web ui.js:12690 aloituskaupungin napautus
+            var merkit = valintaMerkit;
             LopetaPallovalinta();
+            // Valittu kaupunki pitää renkaansa (valittu-asu) aloituslennon loppuun (AloituslentoPaattyi).
+            if (merkit != null) merkit.Renkaat(new[] { id }, id);
+            rengasMerkit = merkit;
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
             aloita?.Invoke(id);
@@ -496,6 +502,8 @@ namespace Matkakirja.Natiivi
         public void AloituslentoPaattyi()
         {
             lentoOhi = true;
+            if (rengasMerkit != null) rengasMerkit.Renkaat(null);
+            rengasMerkit = null;
             if (lennolla && (sanat == null || sana >= sanat.Length)) LopetaLento(1500);
         }
 
@@ -528,6 +536,8 @@ namespace Matkakirja.Natiivi
         const string PisteEtuliite = "aloitus:";
 
         KaupunkiMerkit valintaMerkit;
+        /// <summary>Valitun kaupungin rengas lennon ajan (poistuu AloituslentoPaattyi-kutsussa).</summary>
+        KaupunkiMerkit rengasMerkit;
         Karttapisteet valintaPisteet;
         PalloKierto valintaKierto;
         readonly List<string> valintaIdt = new List<string>();
@@ -555,6 +565,8 @@ namespace Matkakirja.Natiivi
             foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
             var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
             valintaMerkit.NaytaVain(nakyvat);
+            // Valittavien hehkurenkaat (web .pallolauta-huomio; Natiivisepän KaupunkiMerkit.Renkaat).
+            valintaMerkit.Renkaat(valintaIdt);
             foreach (var id in valintaIdt)
             {
                 valintaMerkit.Korosta(id, Huomio);
@@ -595,6 +607,7 @@ namespace Matkakirja.Natiivi
             {
                 foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
                 valintaMerkit.NaytaVain(null);
+                valintaMerkit.Renkaat(null);
             }
             valintaIdt.Clear();
         }
