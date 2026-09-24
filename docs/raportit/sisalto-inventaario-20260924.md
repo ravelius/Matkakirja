@@ -102,3 +102,45 @@ mainissa (docs/raportit/viesti-sisaltokirjuri-luovutus-20260924-c.md
 kohta 3).
 
 Ei avoimia omistajan päätöksiä — järjestys on Fablen hyväksymä.
+
+## 6. Galleria-vaihe — tulokset (24.9.2026, Fablen hyväksymä linja: vain aito löytö)
+
+Menetelmä: `node tools/hae-commons.mjs haku "<kaupunki/aihe> painting"`
+per kaupunki, lisenssitarkistus `tiedot`-komennolla, vain PD/CC-kuvat
+jotka AIDOSTI kuvaavat kyseistä paikkaa (ei samannimistä muuta
+kohdetta — ks. Campo Granden hylkäys alla). Käyty läpi kaikki 46
+mergettyä N8–N16-kaupunkia; N2/N4/N5/N6:n 20 kaupunkia (yhä auki
+PR:issä #2996/#3002/#3004/#3006) odottavat vuoroaan.
+
+### Sai gallerian (3/46)
+
+| Kaupunki | PR | Kuvat |
+|---|---|---|
+| Kap Horn | #3066 | 3 laivamaalausta (Drew 1884, Agate 1838, Cammillieri n. 1825) |
+| Norfolk | #3066 | 2 maalausta (Seller 1839, Wilson 1850-l.) |
+| Karthago | #3068 | 3 teosta ("Marius raunioilla" -aihe, Vanderlyn/Bergeret 1807 + Gülin 1778) |
+
+### Ei gallerialle aitoa löytöä (43/46)
+
+angola, namib, robinsoncrusoe, appalakit, churchill, sierraleone,
+tanganjika, boavista, kappalmas (Kap Palmas — EI Hyväntoivonniemi),
+kimberley, labrador, sthelena (vain yksi Napoleonin ajan East
+Indiaman-kauppalaivan maalaus, ei liity Napoleoniin, jäi liian
+ohueksi galleriaksi), ahaggar, gao, kamerun, suakin, viktoria,
+cayenne, darfur, mosambik, rashafun, tshadjarvi, bahrelghazal,
+broome, orjarannikko, santarem, sepik, bananal, geraldton,
+joaopessoa, murzuk, nullarbor, alkufra, campogrande (löytyi Pedro
+Américon "Batalha de Campo Grande" 1871 -maalaus, mutta se kuvaa
+SAMANNIMISTÄ taistelua Paraguayssa 1869 — ei liity Brasilian
+kaupunkiin, hylätty faktantarkistuksessa), exmouth, macapa,
+sanambrosio, birdsville, cooberpedy, kalgoorlie, mountisa, nome,
+portovelho.
+
+**Yield ~6,5 % (3/46).** Onnistuneet tapaukset jakavat yhteisen
+piirteen: paikalla on tunnettu länsimainen taideperinne (merenkulun
+kuvasto, klassismin Marius-aihe, siirtomaa-ajan vankisiirtola-
+kuvitus). Valtaosalla 71:stä — erityisesti syrjäisillä
+luontokohteilla ja pienillä siirtomaa-ajan jälkeisillä kaupungeilla —
+tätä ei ole. Suositus: ei kannata olettaa tasaista saantia jatkoerissä
+(N2/N4/N5/N6); järjestyksen seuraavat vaiheet (ennenNyt, turistiopas,
+kohdekartta) ovat todennäköisesti tuottavampia.
