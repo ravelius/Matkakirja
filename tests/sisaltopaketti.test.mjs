@@ -656,7 +656,10 @@ test('skeema 1.21: fokusvirrat ja laatat päätasolla', () => {
   assert.match(ateena.virta.matkakirja.luentakuva.url, /^https:\/\//);
   assert.deepEqual(ateena.lehtitehtavat, ['ateena:aarre', 'ateena:juliste']);
   const [l] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
-  assert.deepEqual(l.tyypit, l.data.types);
+  // 1.30: tyyppiolioissa myös nimi, symboli, arvo ja vari; alkuperäiset avaimet ennallaan.
+  for (const [id, t] of Object.entries(l.data.types)) {
+    for (const [k, v] of Object.entries(t)) assert.deepEqual(l.tyypit[id][k], v, `${id}.${k}`);
+  }
   assert.deepEqual(l.maarat, l.data.counts);
 });
 
@@ -1026,4 +1029,164 @@ test('skeema 1.26: loput natiivin raakakentät päätasolla', () => {
   const sofia = k('fokusvirrat').find((a) => a.id === 'sofia');
   assert.equal(sofia.sahketehtava.id, 'sofia-varna');
   assert.equal(typeof sofia.kohtaamispiste.laudat.maailmankartta.x, 'number');
+});
+
+test('skeema 1.27: työhuoneen moduulit ilman henkilöiden sähköposteja', async () => {
+  const { peitaSahkopostit } = await import('../tools/vienti/vie-sisalto.mjs');
+  assert.equal(peitaSahkopostit('a etu.suku@esimerkki.fi b palaute@matkakirja.app'), 'a [sähköposti] b palaute@matkakirja.app');
+  for (const [m, nimet] of [['tyohuone-raamattu', ['RAAMATTU']], ['tyohuone-tilanne', ['TILANNE', 'TESTATTAVAA', 'TUOREET']], ['tyohuone-pelit', ['PELIT']]]) {
+    const t = tiedostot.get(`moduulit/js/${m}.json`);
+    assert.ok(t, m);
+    for (const n of nimet) assert.ok(n in JSON.parse(t).exportit, `${m}.${n}`);
+    assert.doesNotMatch(t, /@(?!matkakirja\.app)[a-z0-9.-]+\.[a-z]{2,}/i, `${m}: sähköposti`);
+  }
+});
+
+test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
+  const t = JSON.parse(tiedostot.get('kokoelmat/tyohuonetilastot.json'));
+  assert.deepEqual(t.alkiot.map((a) => a.id), ['europe', 'middleeast', 'asia', 'africa', 'oceania', 'northamerica', 'southamerica']);
+  const { laskeTilastot } = await import('../js/tyohuone-tilastot.js');
+  assert.equal(t.alkiot[0].kaikki, laskeTilastot()[0].kaikki);
+  assert.ok(t.sarakkeet.length >= 20 && t.sarakkeet.every((s) => s.avain && s.otsikko && ['kaupunki', 'maa'].includes(s.taso)));
+  const avaimet = new Set(t.sarakkeet.map((s) => s.avain));
+  assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
+});
+
+test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', () => {
+  const m = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((a) => [a.id, a]));
+  const nor = m.get('NOR');
+  assert.ok(nor.bbox[3] < 72 && nor.kokoBbox[3] > 80, `NOR ${nor.bbox} / ${nor.kokoBbox}`);
+  assert.ok(nor.muutRenkaat.some((r) => r.some(([, lat]) => lat > 76)));
+  assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
+  assert.ok(m.get('FIN').muutRenkaat.length === 0);
+  assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+});
+
+test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset avaimet', () => {
+  const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
+  const a = k('aanitaulut');
+  assert.ok(a.filter((x) => x.laji === 'siirtyma').every((x) => x.ryhma === x.data.ryhma && 'nousuMs' in x));
+  assert.ok(a.filter((x) => x.laji === 'tilaraita' || x.laji === 'paikkaraita').every((x) => x.tunnus));
+  const r = k('reitit');
+  assert.ok(r.filter((x) => x.laji === 'sea').every((x) => x.maksu === 100));
+  assert.ok(r.filter((x) => x.laji !== 'sea').every((x) => x.maksu === 0));
+  const [l] = k('laatat');
+  assert.equal(l.tyypit.star.nimi, l.tyypit.star.name);
+  assert.equal(l.mannerTyypit.europe.star.nimi, l.mannerTyypit.europe.star.name);
+});
+
+test('2.0 (major2.mjs): ei raakaa, vain natiivin moduulit, tiivisteet täsmäävät', async () => {
+  const { johdaMajor2, onNatiivinModuuli } = await import('../tools/vienti/major2.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  const m = JSON.parse(t2.get('manifest.json'));
+  assert.equal(m.$skeema, 'matkakirja-vienti/2/manifest');
+  assert.equal(m.skeemaversio, '2.0');
+  assert.ok(!('webNakymat' in m));
+  assert.ok(m.moduulit.length > 0 && m.moduulit.every((x) => x.natiivi && onNatiivinModuuli(x.moduuli)));
+  assert.ok(onNatiivinModuuli('js/packs/fokuskohteet-fra.js') && !onNatiivinModuuli('js/packs/europe.js'));
+  const listatut = new Set(['manifest.json']);
+  for (const arvo of Object.values(m)) {
+    for (const e of Array.isArray(arvo) ? arvo : [arvo]) {
+      if (!e || typeof e !== 'object' || typeof e.tiedosto !== 'string') continue;
+      listatut.add(e.tiedosto);
+      assert.ok(t2.has(e.tiedosto), e.tiedosto);
+      if (e.sha256) assert.equal(createHash('sha256').update(t2.get(e.tiedosto)).digest('hex'), e.sha256, e.tiedosto);
+    }
+  }
+  for (const [polku, teksti] of t2) {
+    assert.doesNotMatch(teksti, /matkakirja-vienti\/1\//, polku);
+    if (polku.startsWith('kokoelmat/')) assert.ok(JSON.parse(teksti).alkiot.every((a) => !('data' in a)), polku);
+  }
+  const [laatta] = JSON.parse(t2.get('kokoelmat/laatat.json')).alkiot;
+  assert.ok(laatta.tyypit.star.nimi && !('name' in laatta.tyypit.star));
+  assert.ok(JSON.parse(t2.get(m.media.tiedosto)).viitteet.every((v) => !('esiintymat' in v) && v.arvo));
+});
+
+test('skeema 1.31: ennen 2.0:aa dict-raakadatan jokainen kenttä on päätasolla', () => {
+  for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat', 'nahtavyydet', 'paikallisaarteet']) {
+    for (const a of JSON.parse(tiedostot.get(`kokoelmat/${nimi}.json`)).alkiot) {
+      if (!a.data || typeof a.data !== 'object' || Array.isArray(a.data)) continue;
+      for (const k of Object.keys(a.data)) assert.ok(k in a, `${nimi}/${a.id}: ${k}`);
+    }
+  }
+  const [lontoo] = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((a) => a.id === 'lontoo');
+  assert.deepEqual(lontoo.nimionAnkkuri, { tasaus: 'end', dx: -20, dy: 5 });
+  assert.equal(lontoo.ambienssi, 'kaupunki');
+});
+
+test('2.0-vartija: jokainen dict-raakakenttä on päätasolla tai RAAKA_VASTINEET-listassa', async () => {
+  const { RAAKA_VASTINEET } = await import('../tools/vienti/tyypitys.mjs');
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const puuttuu = [];
+  for (const { nimi, tiedosto } of m.kokoelmat) {
+    for (const a of JSON.parse(tiedostot.get(tiedosto)).alkiot) {
+      if (!a.data || typeof a.data !== 'object' || Array.isArray(a.data)) continue;
+      for (const k of Object.keys(a.data)) if (!(k in a) && !RAAKA_VASTINEET[nimi]?.[k]) puuttuu.push(`${nimi}.${k}`);
+    }
+  }
+  assert.deepEqual([...new Set(puuttuu)], []);
+  const la = new Map(JSON.parse(tiedostot.get('kokoelmat/linssiaineisto.json')).alkiot.map((a) => [a.id, a]));
+  assert.ok(la.get('maamaski').juoksut && la.get('pilvet').url && la.get('linssiluennat').keksinnot);
+});
+
+test('2.0-julkaisu: osoitin sisalto/2/, oma tarkistus', async () => {
+  const { johdaMajor2 } = await import('../tools/vienti/major2.mjs');
+  const { tarkistaMajor2 } = await import('../tools/vienti/julkaise-sisalto.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  assert.deepEqual(tarkistaMajor2(t2), []);
+  const j = kokoaJulkaisu({ tiedostot: t2, commit: 'abc1234', julkaistu: JULKAISTU, major: 2 });
+  assert.deepEqual(j.virheet, []);
+  assert.equal(j.osoitin.polku, 'sisalto/2/v1/');
+  assert.equal(j.osoitin.$skeema, 'matkakirja-vienti/2/osoitin');
+  assert.equal(j.osoitin.skeemaversio, '2.0');
+  const rikki = new Map(t2);
+  rikki.set('kokoelmat/kaupungit.json', tiedostot.get('kokoelmat/kaupungit.json'));
+  assert.ok(tarkistaMajor2(rikki).length > 0);
+});
+
+test('1.x ja 2.0: sama sisältö (Fablen pyyntö 24.9.2026)', async () => {
+  const { johdaMajor2, onNatiivinModuuli } = await import('../tools/vienti/major2.mjs');
+  const { RAAKA_VASTINEET, TYYPITETYT, RAAKA_KOKONAAN } = await import('../tools/vienti/tyypitys.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  const tag = (s) => s.replaceAll('matkakirja-vienti/1/', 'matkakirja-vienti/2/').replaceAll('https://matkakirja.app/vienti/1/', 'https://matkakirja.app/vienti/2/');
+  const m1 = JSON.parse(tiedostot.get('manifest.json'));
+  const ENG = ['name', 'symbol', 'value', 'color'];
+  const ilmanEng = (o) => (o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).map(([k, t]) => [k, Object.fromEntries(Object.entries(t).filter(([a]) => !ENG.includes(a)))])) : o);
+  for (const { nimi, tiedosto } of m1.kokoelmat) {
+    const k1 = JSON.parse(tiedostot.get(tiedosto));
+    const k2 = JSON.parse(t2.get(tiedosto));
+    assert.equal(k2.alkiot.length, k1.alkiot.length, nimi);
+    k1.alkiot.forEach((a, i) => {
+      const { data, ...ilman } = a;
+      if (nimi === 'laatat') {
+        ilman.tyypit = ilmanEng(ilman.tyypit);
+        if (ilman.mannerTyypit) ilman.mannerTyypit = Object.fromEntries(Object.entries(ilman.mannerTyypit).map(([mm, t]) => [mm, ilmanEng(t)]));
+      }
+      assert.deepEqual(k2.alkiot[i], ilman, `${nimi}/${a.id}: 2.0-alkio = 1.x ilman dataa`);
+      // Raakadatan jokainen tieto on 2.0:ssa: sama nimi ja arvo, eri niminen vastine tai tyypitetty kenttä.
+      if (data && typeof data === 'object' && !Array.isArray(data)) {
+        for (const [kk, v] of Object.entries(data)) {
+          if (RAAKA_VASTINEET[nimi]?.[kk] || TYYPITETYT[nimi]?.includes(kk)) continue;
+          assert.deepEqual(k2.alkiot[i][kk], v, `${nimi}/${a.id}.${kk}`);
+        }
+      } else if (data != null) {
+        assert.ok(RAAKA_KOKONAAN[nimi], `${nimi}: ei-olio-data ilman vastinetta`);
+      }
+    });
+    if (nimi === 'julisteet') for (const a of k1.alkiot) assert.equal(a.nimi, a.data.kaupunki);
+    if (nimi === 'kohtaamiskuvat') for (const a of k1.alkiot) assert.equal(a.kaupunginNimi, a.data.kaupunki ?? null);
+    if (nimi === 'paikkatiedot') for (const a of k1.alkiot) if (typeof a.data === 'string') assert.equal(a.teksti, a.data);
+    if (nimi === 'pulmaaineisto') for (const a of k1.alkiot) assert.deepEqual(a.aineisto, a.data);
+    if (nimi === 'miniatyyrit') for (const a of k1.alkiot) assert.equal(a.kuva?.arvo, a.data, a.id);
+  }
+  for (const mo of m1.moduulit) {
+    if (onNatiivinModuuli(mo.moduuli)) assert.equal(t2.get(mo.tiedosto), tag(tiedostot.get(mo.tiedosto)), mo.moduuli);
+    else assert.ok(!t2.has(mo.tiedosto), mo.moduuli);
+  }
+  const med1 = JSON.parse(tiedostot.get(m1.media.tiedosto)).viitteet;
+  const med2 = JSON.parse(t2.get(m1.media.tiedosto)).viitteet;
+  assert.deepEqual(med2, med1.map(({ esiintymat, ...v }) => v));
+  for (const polku of [m1.offline.tiedosto, m1.lisenssit.tiedosto, ...m1.lisatiedostot.map((l) => l.tiedosto)]) {
+    assert.equal(t2.get(polku), tag(tiedostot.get(polku)), polku);
+  }
 });
