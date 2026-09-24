@@ -85,7 +85,8 @@ namespace Matkakirja
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             foreach (var k in kohteet)
             {
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, nosto));
+                // Nosto ellipsoidista × korkeuskerroin: mikä oli kertoimella 1 maaston yllä, pysyy liioitellun yllä.
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, KorkeusKerroin.Sovita(nosto)));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
                 var juuri = new GameObject("Siirtokohde " + k.Avain).transform;
                 juuri.SetParent(georeferenssi.transform, false);
