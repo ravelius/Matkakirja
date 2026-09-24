@@ -133,6 +133,9 @@ namespace Matkakirja.Natiivi
             // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
             // Linssin portti (web linssikarttaEstaa) estää myös kaupungin napautuksen.
             PeliOhjain.NapautusSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu && !KarttaEstetty;
+            // Liiku, Matkusta, Tutki ja lehdet kiinni portin ajan (Pelikoodarin pelikoodari/linssiportti).
+            PeliOhjain.LinssiEstaa = () => KarttaEstetty;
+            PorttiMuuttui += _ => PeliOhjain.LinssiPorttiMuuttui();
             PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
