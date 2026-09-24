@@ -102704,7 +102704,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli purjehtii aluksia ja vasemmassa ylälaidassa on '
             + 'Newfoundlandin rannikko.',
           lahde: 'Mille, Wikimedia Commons (CC0)',
-          wiki: 'St. John’s, Newfoundland and Labrador',
+          wiki: 'St. John\'s, Newfoundland and Labrador',
         },
         {
           otsikko: 'Kapea portti ja sen puolustajat',
