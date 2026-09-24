@@ -56,7 +56,8 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 var a = Ob(o);
                 if (MiniJson.Teksti(a, "id") != "linssiluennat") continue;
-                return LueData(Ob(MiniJson.Kentta(Ob(MiniJson.Kentta(a, "data")), "keksinnot")));
+                // Päätaso ensin (2.0: alkiolla ei dataa); raaka data vain Paatason kautta.
+                return LueData(Ob(MiniJson.Kentta(a, "keksinnot")) ?? Ob(MiniJson.Kentta(Paataso.Raaka(a), "keksinnot")));
             }
             return null;
         }

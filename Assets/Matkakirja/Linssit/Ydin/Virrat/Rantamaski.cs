@@ -40,13 +40,14 @@ namespace Matkakirja.Linssit.Virrat
             m?.Juoksut == null ? null : Juoksuista(m.Juoksut, m.Leveys, m.Korkeus, Ruudukko.Aste);
 
         /// <summary>
-        /// Rantamaski sisältöpaketin alkiosta { id, data: { leveys, korkeus, aste, juoksut } }
-        /// tai suoraan data-oliosta.
+        /// Rantamaski sisältöpaketin alkiosta: päätason kentät { id, leveys, korkeus, aste, juoksut } (2.0-polku)
+        /// tai vanha { id, data: { … } } Paataso.Raaka-varareitin kautta, tai suoraan data-oliosta.
         /// </summary>
         public static Ruutumaski Lue(object alkio)
         {
             var o = alkio as Dictionary<string, object> ?? throw new FormatException("rantamaski: odotettiin objektia");
-            if (o.TryGetValue("data", out var d) && d is Dictionary<string, object> data) o = data;
+            // Päätaso ensin; raaka data vain Paatason kautta (RaakaKielletty katkaisee sen, Pelikoodari 24.9.).
+            if (!o.ContainsKey("juoksut") && Matkakirja.Peli.Paataso.Raaka(o) is Dictionary<string, object> data) o = data;
             var juoksut = o.TryGetValue("juoksut", out var j) ? j as string : null;
             if (juoksut == null) throw new FormatException("rantamaski: juoksut puuttuu");
             var leveys = (int)(Luku(o, "leveys") ?? 2880);
