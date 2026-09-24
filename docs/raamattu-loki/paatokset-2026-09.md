@@ -4331,3 +4331,7 @@ Fable katsoi lentopinta.jpg (kylmä ja lämmin lento): meri yhtenäisen sininen,
 ## PELIKOODARI: KEHITYS-APP ID fi.matkakirja.peli.kehitys SALLITTU POLLO-, EHDOTUS- JA SAHKEWORKERISSA (PR #3096) (24.9.2026 klo 17.22)
 
 Oikeudet ja päiväraja kuten muilla natiiveilla; testit 186/186. Pöllö julkaistaan automaattisesti mergessä, ehdotukset ja sähke käsin (Julkaisija). Linssiseppä ottaa astropulun kuvaparin kun voimassa.
+
+## PELIKOODARI 70 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 17.29)
+
+Luovutus viesti-pelikoodari-luovutus-20260924-ilta.md, aloitusviesti päivitettynä; Postivahti lähettää uusimman version kun tyhjä.
