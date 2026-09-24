@@ -4171,3 +4171,7 @@ Build 9: noppa webin mukaan, valintavihje, kone terävä, huntu häivytys, esila
 ## LENNON KAMERAKASIKIRJOITUS HYVAKSYTTY (proto-3d/lokit/kamerakasikirjoitus-lento-20260924.md); ISO iPAD: XCODESSA EI APPLE-TILIA koodaus-KAYTTAJALLE (24.9.2026 klo 16.19)
 
 Vaiheet 20 s lennolle: (a) syöksy sivulle 0–2,6 s + sivukylki 2,6–4,2 s (kallistus 84°, kone ~0,9 ruudun leveyttä), (b) loittonus 4,2–11 s (30 → ~3000 km, kone aina ruudulla), liuku 11–12 s, (c) kierto kaupungin vastapuolelle 12–15,5 s (kone kohti kameraa), (d) orbit laskuun 15,5–20 s webin saapumiskaavaan. Fablen vastaukset: maisemasuunta ratkaisee vain kiertosuunnan; kesto skaalataan 16–26 s reitin mukaan (sivukylki ≥ 1,4 s, orbit ≥ 4 s). Toteutus build 10 -viennin jälkeen, video omistajalle. Iso iPad: laitetta ei voi rekisteröidä automaattisesti (No Accounts) → Natiiviseppä kokeilee ASC API -avaimella (-authenticationKeyPath); jos ei toimi, omistaja lisää laitteen developer.apple.comissa tai kirjautuu koodaus-käyttäjän Xcodeen.
+
+## ISO iPAD: ASC-AVAIMET VAIN ACTIONS-SECRETEINA → OMISTAJA KIRJAUTUU koodaus-KAYTTAJAN XCODEEN (24.9.2026 klo 16.20)
+
+Natiiviseppä: p8-avainta ei ole Macilla (Raamattu: käyttö vain työnkulkujen kautta), luokitin esti etsinnän, ei kierretä. Fable pyysi omistajaa kirjautumaan koodaus-käyttäjän Xcodeen (Settings → Accounts, me.com-tunnus), jolloin automaattinen allekirjoitus rekisteröi laitteen ja tekee profiilin pysyvästi; pelkkä UDID developer.apple.comissa ei riitä. Siihen asti TestFlight-buildit isolla iPadilla.
