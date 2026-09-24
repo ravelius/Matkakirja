@@ -4415,3 +4415,7 @@ Omistaja: 'Voit tehdä 5h 98% asti'. Raamattu päivitetty (VIIKKOKIINTIÖ-kohta)
 ## OMISTAJA klo 18.2x: BUILD-NUMERO NAKYVIIN TESTFLIGHTIIN → VERSIO 1.0.<n> BUILD 11:STA ALKAEN (24.9.2026 klo 18.24)
 
 TestFlight näyttää '1.0.0 (202609241305)'; build-tunniste ei saa pienentyä, joten ordinaali menee versionumeroon: build 11 = 1.0.11 (aikaleima). Julkaisija tekee PR:n workflowiin (MARKETING_VERSION ordinaalista, ei käsin); build 10 jatkaa vanhalla muodolla.
+
+## OMISTAJAN KUVA RADIOLINSSISTA (BUILD 9): LOYDOKSET 39–42 → LINSSISEPPA, BUILD 11 (24.9.2026 klo 18.27)
+
+39) Sulje linssi -pilleri leijuu keskellä karttaa → oikeaan yläkulmaan. 40) Pulu radiopaneelin päällä → webin paikka paneelin yläpuolella. 41) Näyttöteksti 'KREIKKA / ATEENA · KREIKKA' — tarkistetaan webin rivit soiton aikana (aseman nimi). 42) Karttaselitteen nappi puuttuu linssin aikana. VU-mittari on tilattu poikkeama. Nimet kartalta = löydös 38.
