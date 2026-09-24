@@ -16,6 +16,8 @@
 // raakapolkuja ei lueta, joten jokainen lukija, joka vielä tarvitsee niitä, punastuu.
 // SKEEMA 1.26 (24.9.2026): säännöt ovat päätaso ensin ("kentta|data.vanha", Tai("a.b")), kuten
 // lukijat (Paataso.Nakyma/Olio). Raaka vaihtoehto on vain vanhoja paketteja varten.
+// SKEEMA 1.33 (24.9.2026, koepaketti v43): kokoelma maamerkit (valinnainen, Maamerkkisisalto.Lue); 1.31–1.32
+// toivat lisää päätason kenttiä (2.0-aukot), jotka eivät muuta natiivin lukijoita.
 // SKEEMA 1.30 (24.9.2026, koepaketti v38): aanitaulut (oma sääntö), reitit.maksu ja laattatyyppien
 // suomenkieliset nimet päätasolla. Laattatyypin englanninkieliset nimet (name, symbol, value, color)
 // ovat vanhan muodon varareitti: vartija kohtelee niitä kuten data.*-polkuja (Englanninkieliset).
@@ -135,6 +137,8 @@ namespace Matkakirja.Peli.Testit
         /// <summary>Ajaa oikean lukijan: (luettu määrä tai null, kuvaus).</summary>
         public Func<Paketti, (int? Maara, string Kuvaus)> Aja;
         public int VahintaanLuettu = 1;
+        /// <summary>Skeema, josta alkaen kokoelma on paketissa (null = aina); vanhemmasta paketista se saa puuttua.</summary>
+        public string Alkaen;
 
         public Lukijasaanto Pakko(string polut, JsonTyyppi t) { Kentat.Add(new VartijanKentta { Polut = polut.Split('|'), Tyyppi = t, Pakollinen = true }); return this; }
         public Lukijasaanto Voi(string polut, JsonTyyppi t) { Kentat.Add(new VartijanKentta { Polut = polut.Split('|'), Tyyppi = t }); return this; }
@@ -461,6 +465,23 @@ namespace Matkakirja.Peli.Testit
                 .Ehto((o, p) => MiniJson.Teksti(o, "url") is string u && !u.StartsWith("https://", StringComparison.Ordinal) ? "url ei ole https" : null)
                 .Uniikki("iso"),
 
+            // Maamerkit (skeema 1.33, valinnainen: tyhjä tai puuttuva kokoelma = ei maamerkkejä paketista).
+            new Lukijasaanto
+            {
+                Kokoelma = "maamerkit", Lukija = "Maamerkkisisalto.Lue", VahintaanLuettu = 0, Alkaen = "1.33",
+                Aja = p =>
+                {
+                    var hyl = new List<string>();
+                    var n = Maamerkkisisalto.Lue(p.Teksti("maamerkit"), hyl).Count;
+                    return (n, hyl.Count > 0 ? "lukija ohitti: " + string.Join("; ", hyl) : null);
+                },
+            }
+                .Pakko("id", T).Pakko("kaupunki", T).Pakko("lat", L).Pakko("lon", L).Pakko("mallinKorkeus", L)
+                .Voi("maanKorkeus", L).Voi("suunta", L).Pakko("malli", O).Pakko("malli.url", T).Pakko("malli.sha256", T)
+                .Pakko("malli.tavuja", L).Pakko("lisenssi", T).Voi("tekija", T).Voi("lahde", T)
+                .Ehto((o, p) => Kaupunki(p, MiniJson.Teksti(o, "kaupunki"), "kaupunki"))
+                .Uniikki("kaupunki"),
+
             Saanto("pulmat", "Pulmadata.Lue", p =>
                 {
                     var d = Pulmadata.Lue(p.Teksti("pulmat"));
@@ -594,7 +615,14 @@ namespace Matkakirja.Peli.Testit
             foreach (var nimi in lista.Select(s => s.Kokoelma).Distinct())
             {
                 string teksti = p.Teksti(nimi);
-                if (teksti == null) { tulos.Virheet.Add($"{nimi}: kokoelma puuttuu paketista"); continue; }
+                if (teksti == null)
+                {
+                    var alkaen = lista.First(s => s.Kokoelma == nimi).Alkaen;
+                    var versio = mv ?? ov;
+                    if (alkaen == null || Pakettiskeema.Vahintaan(versio, alkaen))
+                        tulos.Virheet.Add($"{nimi}: kokoelma puuttuu paketista");
+                    continue;
+                }
                 Dictionary<string, object> runko;
                 try { runko = p.Runko(nimi); }
                 catch (Exception e) { tulos.Virheet.Add($"{nimi}: JSON ei jäsenny: {e.Message}"); continue; }
