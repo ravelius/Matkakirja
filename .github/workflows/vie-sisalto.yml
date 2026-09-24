@@ -12,6 +12,8 @@
 #                          osoitin.json), Cache-Control vuosi, immutable
 #   sisalto/1/uusin.json   osoitin, max-age 60 s. Kirjoitetaan VIIMEISENÄ,
 #                          kun paketti on tarkistettu julkisesta osoitteesta.
+#   assets/…               repon assets/-kuvat, joihin paketti osoittaa
+#                          (skeema 1.12), ja assets/.tiivisteet.json
 #
 # N on sisältöversio: CI:n laskuri, erillään APP_VERSIONista. Jos paketin
 # tiiviste ei muuttunut (pelkkä koodimuutos), mitään ei viedä. Säilytetään
@@ -143,6 +145,34 @@ jobs:
           node tools/vienti/julkaise-sisalto.mjs --edellinen edellinen/uusin.json \
             --suurin "${{ steps.tila.outputs.suurin }}" --commit "$GITHUB_SHA"
 
+      # Skeema 1.12: paketti osoittaa repon assets/-kuviin ämpärissä
+      # (media.matkakirja.app/assets/…?v=<sha>), joten ne viedään ennen
+      # pakettia. Vain uudet ja muuttuneet (assets/.tiivisteet.json).
+      - name: Vie sivuston assetit ämpäriin
+        if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
+        id: assetit
+        run: |
+          set -euo pipefail
+          if ! aws s3 cp "s3://$AMPARI/assets/.tiivisteet.json" edellinen/assetit.json --endpoint-url "$PAATE" >/dev/null 2>&1; then
+            echo "Ei edellisiä tiivisteitä: viedään kaikki paketin assetit."
+            echo '{}' > edellinen/assetit.json
+          fi
+          node tools/vienti/sivustoassetit.mjs --edellinen edellinen/assetit.json --ulos dist/assetit
+          if [ -d dist/assetit/assets ]; then
+            aws s3 sync dist/assetit/assets "s3://$AMPARI/assets/" --endpoint-url "$PAATE" \
+              --cache-control 'public, max-age=86400' --no-progress --only-show-errors
+          fi
+          # Pistokoe julkisesta osoitteesta (enintään 10 muuttunutta).
+          head -10 dist/assetit.muuttuneet.txt | while IFS="$(printf '\t')" read -r polku odotettu; do
+            saatu=$(curl -fsSL --retry 5 --retry-delay 3 "$JULKINEN/$polku?v=${odotettu:0:12}" | sha256sum | cut -d' ' -f1)
+            if [ "$saatu" != "$odotettu" ]; then
+              echo "::error::$polku ei vastaa julkisesta osoitteesta ($saatu ≠ $odotettu)"
+              exit 1
+            fi
+          done
+          aws s3 cp dist/assetit.tiivisteet.json "s3://$AMPARI/assets/.tiivisteet.json" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'no-store'
+
       - name: Vie paketti (muuttumaton versiokansio)
         if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
         run: |
@@ -166,16 +196,77 @@ jobs:
             fi
           done
           echo "Paketti v$N luettavissa: $JULKINEN/sisalto/1/v$N/"
+          # Ämpäritarkistus (Fable 24.9.2026): jokainen tiedosto HEAD:lla, koko sama kuin paikallisesti.
+          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/1/v$N/" --kansio "dist/sisalto/v$N"
 
       # Osoitin VIIMEISENÄ: sovellus ei koskaan näe osoitinta pakettiin,
       # jota ei vielä ole kokonaan ämpärissä.
+      # Osoitinvartija (Fable 23.9.2026): osoitin luetaan uudelleen juuri
+      # ennen kirjoitusta. Pienempi skeemaversio kuin ämpärin osoittimessa
+      # (esim. koepaketti ennen haarojen mergeä) jättää osoittimen ennalleen;
+      # paketti jää silti ämpäriin versiokansioonsa.
       - name: Päivitä osoitin
         if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'
         run: |
           set -euo pipefail
+          if ! aws s3 cp "s3://$AMPARI/sisalto/1/uusin.json" nykyinen-osoitin.json --endpoint-url "$PAATE" >/dev/null 2>&1; then
+            rm -f nykyinen-osoitin.json
+          fi
+          paatos=$(node tools/vienti/osoitinvartija.mjs nykyinen-osoitin.json dist/sisalto/uusin.json)
+          if [ "$paatos" != "korvaa" ]; then
+            echo "::warning::Osoitinta ei vaihdettu: ${paatos#ohita }"
+            exit 0
+          fi
           aws s3 cp dist/sisalto/uusin.json "s3://$AMPARI/sisalto/1/uusin.json" --endpoint-url "$PAATE" \
             --content-type application/json --cache-control 'public, max-age=60'
           cat dist/sisalto/uusin.json
+
+      # SISÄLTÖPAKETTI 2.0 (suunnitelman vaihe 5, Siirtoseppä 24.9.2026): sama
+      # sisältö ilman raakakerrosta sisalto/2/:een (tools/vienti/major2.mjs).
+      # 1.x jatkuu ennallaan vanhoille sovelluksille; natiivi siirtyy 2.0:aan
+      # omassa tahdissaan. Oma osoitin, oma numerointi, sama osoitinvartija.
+      - name: "2.0: vie ja valmistele paketti"
+        if: env.PALAUTA == ''
+        id: julkaisu2
+        run: |
+          set -uo pipefail
+          mkdir -p edellinen
+          if ! loki=$(aws s3 cp "s3://$AMPARI/sisalto/2/uusin.json" edellinen/uusin2.json --endpoint-url "$PAATE" 2>&1); then
+            if echo "$loki" | grep -qiE 'does not exist|NoSuchKey|404'; then rm -f edellinen/uusin2.json; else echo "$loki"; exit 1; fi
+          fi
+          suurin=$( { aws s3 ls "s3://$AMPARI/sisalto/2/" --endpoint-url "$PAATE" 2>/dev/null || true; } \
+            | sed -n 's/.*PRE v\([0-9][0-9]*\)\/$/\1/p' | sort -n | tail -1)
+          set -e
+          node tools/vienti/major2.mjs --vienti dist/vienti --ulos dist/vienti2
+          node tools/vienti/julkaise-sisalto.mjs --major 2 --vienti dist/vienti2 --ulos dist/sisalto2 \
+            --edellinen edellinen/uusin2.json --suurin "${suurin:-0}" --commit "$GITHUB_SHA"
+
+      - name: "2.0: vie paketti, tarkista ja päivitä osoitin"
+        if: env.PALAUTA == '' && steps.julkaisu2.outputs.muuttui == 'true'
+        run: |
+          set -euo pipefail
+          N="${{ steps.julkaisu2.outputs.versio }}"
+          aws s3 sync "dist/sisalto2/v$N" "s3://$AMPARI/sisalto/2/v$N/" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'public, max-age=31536000, immutable' \
+            --no-progress --only-show-errors
+          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/2/v$N/" --kansio "dist/sisalto2/v$N"
+          if ! aws s3 cp "s3://$AMPARI/sisalto/2/uusin.json" nykyinen-osoitin2.json --endpoint-url "$PAATE" >/dev/null 2>&1; then
+            rm -f nykyinen-osoitin2.json
+          fi
+          paatos=$(node tools/vienti/osoitinvartija.mjs nykyinen-osoitin2.json dist/sisalto2/uusin.json)
+          if [ "$paatos" != "korvaa" ]; then
+            echo "::warning::2.0-osoitinta ei vaihdettu: ${paatos#ohita }"
+            exit 0
+          fi
+          aws s3 cp dist/sisalto2/uusin.json "s3://$AMPARI/sisalto/2/uusin.json" --endpoint-url "$PAATE" \
+            --content-type application/json --cache-control 'public, max-age=60'
+          cat dist/sisalto2/uusin.json
+          for v in $(aws s3 ls "s3://$AMPARI/sisalto/2/" --endpoint-url "$PAATE" \
+              | sed -n 's/.*PRE v\([0-9][0-9]*\)\/$/\1/p'); do
+            if [ "$v" -le $((N - 20)) ]; then
+              aws s3 rm "s3://$AMPARI/sisalto/2/v$v/" --recursive --endpoint-url "$PAATE" --only-show-errors
+            fi
+          done
 
       - name: Siivoa vanhat versiot (20 uusinta jää)
         if: env.PALAUTA == '' && steps.julkaisu.outputs.muuttui == 'true'

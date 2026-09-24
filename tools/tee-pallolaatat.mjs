@@ -1018,13 +1018,6 @@ async function paa() {
     kansio = reliefinKansio(versio, kyllaisyys);
     luettelo.kyllaisyys = kyllaisyys;
   }
-  /*
-   * `--ilman-viivoja` (Linssiseppä 23.9.2026): sarja ilman viivatasoa eli
-   * ilman poltettuja nykyrajoja — natiivin isoisän linssi 1873 vaihtaa sen
-   * pohjan tilalle, jotta nykyrajat eivät näy vuoden 1873 rajojen alla.
-   * Luettelon viivat on silloin null. Oma --tunniste on pakollinen, koska
-   * laatat ovat vuoden välimuistissa.
-   */
   const variIso = lippu('--varitaso');
   if (variIso) {
     if (reliefLahde || nostot) throw new Error('--varitaso: ei --relief- eikä --nostot-lippua');
@@ -1032,6 +1025,13 @@ async function paa() {
     // --tunniste = sarjan kierros (laatat ovat vuoden välimuistissa).
     kansio = varitasonPallokansio(luettelo.vari.versio, variIso, tunniste);
   }
+  /*
+   * `--ilman-viivoja` (Linssiseppä 23.9.2026): sarja ilman viivatasoa eli
+   * ilman poltettuja nykyrajoja — natiivin isoisän linssi 1873 vaihtaa sen
+   * pohjan tilalle, jotta nykyrajat eivät näy vuoden 1873 rajojen alla.
+   * Luettelon viivat on silloin null. Oma --tunniste on pakollinen, koska
+   * laatat ovat vuoden välimuistissa.
+   */
   if (argv.includes('--ilman-viivoja')) {
     if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
     luettelo = { ...luettelo, viivataso: null };
@@ -1070,7 +1070,7 @@ async function paa() {
   if (vainLuettelo) {
     mkdirSync(ulos, { recursive: true });
     kirjoitaLuettelo(ulos, luettelo, {
-      min, max, nostot, ranta, tunniste, kansio,
+      min, max, nostot, ranta, tunniste, kansio, alue,
     });
     console.log(`kirjoitettu vain luettelo kansioon ${ulos}; ämpärin kansio: ${kansio}`);
     return;
@@ -1108,7 +1108,7 @@ async function paa() {
    */
   if (!osa) {
     kirjoitaLuettelo(ulos, luettelo, {
-      min, max, nostot, ranta, tunniste, kansio,
+      min, max, nostot, ranta, tunniste, kansio, alue,
     });
   }
   console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}${osa ? ` (osa ${osa.i}/${osa.n}, ei luetteloa)` : ''}; ämpärin kansio: ${kansio}`);
@@ -1116,7 +1116,7 @@ async function paa() {
 
 /** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
 export function kirjoitaLuettelo(ulos, luettelo, {
-  min, max, nostot, ranta = true, tunniste, kansio,
+  min, max, nostot, ranta = true, tunniste, kansio, alue = null,
 }) {
   writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
     versio: luettelo.versio,
@@ -1135,6 +1135,13 @@ export function kirjoitaLuettelo(ulos, luettelo, {
     ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde, kyllaisyys: luettelo.kyllaisyys ?? 1 } : {}),
     ...(luettelo.vari ? { varitaso: luettelo.vari } : {}),
     tasot: { min, max },
+    /*
+     * ALUESARJA (23.9.2026, natiivin syvä sarja Z9–Z11): laatat ovat
+     * olemassa vain tällä alalla [lon0, lat0, lon1, lat1]. Kenttä
+     * syntyy vain `--alue`-ajossa, joten koko maailman sarjan luettelo
+     * pysyy tavulleen entisenä.
+     */
+    ...(alue ? { alue } : {}),
     laatta: LAATTA,
     muoto: luettelo.vari ? 'webp' : 'jpg',
     tehty: new Date().toISOString(),

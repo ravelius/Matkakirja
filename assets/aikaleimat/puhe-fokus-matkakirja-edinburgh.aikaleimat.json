@@ -1,243 +1,184 @@
 {
   "versio": 2,
   "kaupunki": "edinburgh",
-  "teksti": "Edinburghissa katu saattaa olla toisen kadun katto. Menin portaita alas ja tulin ulos korkealla jonkun ikkunan yläpuolella. Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun päällä vailla vähäisintäkään huimausta. Linnan musta kallio kohosi kaiken takana. Kaupungin kartoittamiseen tarvittaisiin tavallisen paperin lisäksi toinen arkki päälle.",
-  "tekstiSha256": "f007a5463334ef5786b0415e76ff356e74d214c50393176731ae696f11aaaced",
+  "teksti": "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
+  "tekstiSha256": "32774656e4e67bf99dfadfcb080c448ad54fa2853ea94298b1e2eecca3a4ae90",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-edinburgh.mp3",
     "versio": 2,
-    "tavut": 441408,
-    "sha256": "5912b36e96d717f337181ec9e7bc57ff531b21b3e8f519fde72f8d2bf6bc413e"
+    "tavut": 358235,
+    "sha256": "2eb3972ebd3813ffaa1dda8e6183ffd84301ceca3056cd6e97af96b065c23074"
   },
-  "kesto": 27479,
+  "kesto": 22300,
   "sanat": [
     {
-      "sana": "Edinburghissa",
-      "alku": 99,
-      "loppu": 839
+      "sana": "Edinburghin",
+      "alku": 180,
+      "loppu": 840
     },
     {
-      "sana": "katu",
-      "alku": 939,
-      "loppu": 1179
+      "sana": "hautausmaalla",
+      "alku": 900,
+      "loppu": 1760
     },
     {
-      "sana": "saattaa",
-      "alku": 1279,
-      "loppu": 1679
+      "sana": "vanha",
+      "alku": 1800,
+      "loppu": 2080
     },
     {
-      "sana": "olla",
-      "alku": 1699,
-      "loppu": 1919
+      "sana": "rautahäkki",
+      "alku": 2160,
+      "loppu": 2820
     },
     {
-      "sana": "toisen",
-      "alku": 1939,
-      "loppu": 2279
+      "sana": "peitti",
+      "alku": 2880,
+      "loppu": 3220
     },
     {
-      "sana": "kadun",
-      "alku": 2359,
-      "loppu": 2599
+      "sana": "hautaa",
+      "alku": 3260,
+      "loppu": 3920
     },
     {
-      "sana": "katto",
-      "alku": 2679,
-      "loppu": 3179
+      "sana": "Ruumiinryöstäjät",
+      "alku": 5040,
+      "loppu": 5880
     },
     {
-      "sana": "Menin",
-      "alku": 4839,
-      "loppu": 5099
+      "sana": "olivat",
+      "alku": 5940,
+      "loppu": 6220
     },
     {
-      "sana": "portaita",
-      "alku": 5139,
-      "loppu": 5619
+      "sana": "myyneet",
+      "alku": 6300,
+      "loppu": 6700
     },
     {
-      "sana": "alas",
-      "alku": 5679,
-      "loppu": 5940
+      "sana": "vainajia",
+      "alku": 6760,
+      "loppu": 7320
     },
     {
-      "sana": "ja",
-      "alku": 6000,
-      "loppu": 6079
+      "sana": "lääkäreiden",
+      "alku": 7360,
+      "loppu": 7980
     },
     {
-      "sana": "tulin",
-      "alku": 6119,
-      "loppu": 6399
+      "sana": "opetukseen",
+      "alku": 8039,
+      "loppu": 8800
     },
     {
-      "sana": "ulos",
-      "alku": 6460,
-      "loppu": 6699
+      "sana": "Kysyin",
+      "alku": 10280,
+      "loppu": 10580
     },
     {
-      "sana": "korkealla",
-      "alku": 6779,
-      "loppu": 7359
+      "sana": "haudankaivajalta",
+      "alku": 10620,
+      "loppu": 11620
     },
     {
-      "sana": "jonkun",
-      "alku": 7419,
-      "loppu": 7739
+      "sana": "kauanko",
+      "alku": 11880,
+      "loppu": 12320
     },
     {
-      "sana": "ikkunan",
-      "alku": 7819,
-      "loppu": 8239
+      "sana": "häkkiä",
+      "alku": 12360,
+      "loppu": 12720
     },
     {
-      "sana": "yläpuolella",
-      "alku": 8319,
-      "loppu": 8979
+      "sana": "oli",
+      "alku": 12760,
+      "loppu": 12900
     },
     {
-      "sana": "Pyykkinaru",
-      "alku": 10559,
-      "loppu": 11159
+      "sana": "tarvittu",
+      "alku": 12940,
+      "loppu": 13600
     },
     {
-      "sana": "kulki",
-      "alku": 11199,
-      "loppu": 11519
+      "sana": "Kunnes",
+      "alku": 14460,
+      "loppu": 14800
     },
     {
-      "sana": "kujan",
-      "alku": 11559,
-      "loppu": 11899
+      "sana": "ruumis",
+      "alku": 14860,
+      "loppu": 15160
     },
     {
-      "sana": "yli",
-      "alku": 12000,
-      "loppu": 12199
+      "sana": "ei",
+      "alku": 15220,
+      "loppu": 15300
     },
     {
-      "sana": "ja",
-      "alku": 12439,
-      "loppu": 12500
+      "sana": "enää",
+      "alku": 15360,
+      "loppu": 15580
     },
     {
-      "sana": "sukat",
-      "alku": 12579,
-      "loppu": 12920
+      "sana": "kelvannut",
+      "alku": 15620,
+      "loppu": 16100
     },
     {
-      "sana": "riippuivat",
-      "alku": 13000,
-      "loppu": 13599
+      "sana": "kaupaksi",
+      "alku": 16140,
+      "loppu": 16800
     },
     {
-      "sana": "kuilun",
-      "alku": 13659,
-      "loppu": 14079
+      "sana": "Hän",
+      "alku": 18420,
+      "loppu": 18540
     },
     {
-      "sana": "päällä",
-      "alku": 14139,
-      "loppu": 14479
+      "sana": "jatkoi",
+      "alku": 18620,
+      "loppu": 18940
     },
     {
-      "sana": "vailla",
-      "alku": 14679,
-      "loppu": 14960
+      "sana": "työtään",
+      "alku": 19000,
+      "loppu": 19620
     },
     {
-      "sana": "vähäisintäkään",
-      "alku": 15019,
-      "loppu": 15859
+      "sana": "Minä",
+      "alku": 20560,
+      "loppu": 20740
     },
     {
-      "sana": "huimausta",
-      "alku": 15920,
-      "loppu": 16559
+      "sana": "jäin",
+      "alku": 20780,
+      "loppu": 20980
     },
     {
-      "sana": "Linnan",
-      "alku": 18559,
-      "loppu": 18840
+      "sana": "lukemaan",
+      "alku": 21020,
+      "loppu": 21480
     },
     {
-      "sana": "musta",
-      "alku": 18920,
-      "loppu": 19180
+      "sana": "nimeä",
+      "alku": 21520,
+      "loppu": 21860
     },
     {
-      "sana": "kallio",
-      "alku": 19279,
-      "loppu": 19680
-    },
-    {
-      "sana": "kohosi",
-      "alku": 19739,
-      "loppu": 20039
-    },
-    {
-      "sana": "kaiken",
-      "alku": 20139,
-      "loppu": 20479
-    },
-    {
-      "sana": "takana",
-      "alku": 20559,
-      "loppu": 20959
-    },
-    {
-      "sana": "Kaupungin",
-      "alku": 22600,
-      "loppu": 23019
-    },
-    {
-      "sana": "kartoittamiseen",
-      "alku": 23059,
-      "loppu": 23920
-    },
-    {
-      "sana": "tarvittaisiin",
-      "alku": 23959,
-      "loppu": 24719
-    },
-    {
-      "sana": "tavallisen",
-      "alku": 24779,
-      "loppu": 25299
-    },
-    {
-      "sana": "paperin",
-      "alku": 25359,
-      "loppu": 25739
-    },
-    {
-      "sana": "lisäksi",
-      "alku": 25799,
-      "loppu": 26219
-    },
-    {
-      "sana": "toinen",
-      "alku": 26359,
-      "loppu": 26719
-    },
-    {
-      "sana": "arkki",
-      "alku": 26799,
-      "loppu": 27159
-    },
-    {
-      "sana": "päälle",
-      "alku": 27219,
-      "loppu": 27479
+      "sana": "kivestä",
+      "alku": 21920,
+      "loppu": 22300
     }
   ],
   "lauseet": [
-    99,
-    4839,
-    10559,
-    18559,
-    22600
+    180,
+    5040,
+    10280,
+    14460,
+    18420,
+    20560
   ],
-  "luotu": "2026-09-11T12:04:38.862Z"
+  "luotu": "2026-09-23T15:37:24.946Z"
 }

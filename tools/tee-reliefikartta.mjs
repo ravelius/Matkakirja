@@ -607,6 +607,18 @@ export const TOPOGRAFIA_KUVA = {
  * Polku kirjoitetaan tässä, jotta se ei katoa kun paketti tehdään uusiksi.
  */
 export const TOPOGRAFIA_PALLOKUVA = ${jono(PALLON_SUHTEELLINEN)};
+
+/*
+ * LISENSSI VIENNIN LASKURIA VARTEN (Siirtoseppä 23.9.2026,
+ * tools/vienti/lisenssit.mjs). Sekä TOPOGRAFIA_KUVA että
+ * TOPOGRAFIA_PALLOKUVA ovat samasta NOAA ETOPO1 -korkeusruudukosta
+ * renderöityjä public domain -kuvia (ks. TOPOGRAFIA_KUVA.lisenssi
+ * yllä), mutta laskuri lukee vain MERKKIJONO-kenttiä eikä
+ * TOPOGRAFIA_KUVA.lisenssi-olion sisään — tämä moduulin oma
+ * \`*_LAHDE\`-vakio on laskurin dokumentoitu varareitti sellaiselle.
+ */
+export const TOPOGRAFIA_LAHDE = 'NOAA NGDC ETOPO1 Global Relief Model, Ice Surface — Public domain '
+  + '(Yhdysvaltain liittovaltion virasto NOAA; lähteen maininta suositeltu).';
 `;
 
 writeFileSync(PAKETTI, paketti);
