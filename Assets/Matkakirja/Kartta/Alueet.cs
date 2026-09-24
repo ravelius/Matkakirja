@@ -198,6 +198,8 @@ namespace Matkakirja
             }
             Laatat("rasteri", rasteriPohja);
             Laatat("maasto", maastoPohja);
+            // Napakalotit (NapaKannet) kuuluvat yleiskarttaan: ilman niitä navat jäävät yksivärisiksi kansiksi.
+            if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());
             if (a.Tiedot.TryGetValue("media", out var me) && me is List<object> media)
                 foreach (var u in media) if (u is string us && Suhteellinen(us) is string s) polut.Add(s);
             return polut;

@@ -127,6 +127,7 @@ namespace Matkakirja
                 case "laatat":
                     if (pohja != null) pohja.enabled = nakyy;
                     if (varitaso != null) varitaso.Nakyvat(nakyy);
+                    PaivitaNavat();
                     break;
                 case "varitaso": if (varitaso != null) varitaso.Nakyvat(nakyy); break;
                 case "maasto":
@@ -179,6 +180,7 @@ namespace Matkakirja
             k.tileHeight = 256;
             k.enabled = alfa > 0f;
             rasterit[avain] = new Rasteri { kerros = k, lisatty = Time.unscaledTime };
+            PaivitaNavat();
             return avain;
         }
 
@@ -188,11 +190,26 @@ namespace Matkakirja
             if (r.kerros != null) { r.kerros.enabled = false; Destroy(r.kerros); }
             rasterit.Remove(avain);
             if (rasterit.Count == 0 && varitaso != null) varitaso.Linssit(false);
+            PaivitaNavat();
         }
 
         public void Alfa(string avain, float alfa)
         {
             if (rasterit.TryGetValue(avain, out var r)) r.kerros.enabled = alfa > 0f;
+            PaivitaNavat();
+        }
+
+        /// <summary>
+        /// Reliefi pohjan tilalla (topografialinssi, ei luovuttanut): napakalotti piiloon ja kannet
+        /// reliefin sävyyn (web NAPAKANSI_RELIEFI_*). Kalotti on pelin kartan kuva, eikä se saa
+        /// nousta reliefin päälle; laatat loppuvat reliefilläkin 85°:een, joten kansi jää.
+        /// </summary>
+        void PaivitaNavat()
+        {
+            if (napakannet == null) return;
+            bool reliefi = rasterit.TryGetValue(Matkakirja.Linssit.Topografia.Kerros, out var r)
+                           && r.kerros != null && r.kerros.enabled && (pohja == null || !pohja.enabled);
+            napakannet.Reliefi(reliefi);
         }
 
         void Update()
