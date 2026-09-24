@@ -4519,3 +4519,7 @@ Kuvan tumma alue pillerin yläpuolella oli iPhonen turva-alue (62 pt), joten pel
 ## PROTO-MASTER 703eee8 (BUILD 11): RADIO 40/42/43, NOSTOKORTTI LEVEA + LEHTI-OTSIKOT, NIMIKERROS (38) LIBERATION SERIF SDF HYVAKSYTTY, HARMAAT SUORAKULMIOT KORJATTU (Z2-VARAKARTTA KAUKAISEN ESIVANHEMMAN TILALLE), KAPPALEJAKO (24.9.2026 klo 19.43)
 
 Nimikerros: alue- ja merinimet maahan painettuina, väistö, alfa lineaariseen sekoitukseen; kuvat lokit/nimikerros-b11c/. Kylmällä lennolla ei suorakulmioita, yksi ohut sauma yhden kehyksen ajan. Jono: kainalo (testi/b11h), fokuspohja, hytinä 27, lennon kamerareitti, mastot; b9755e9:n peruutus nyt (build 10 TestFlightissa). Build 11 -SHA kun kamerareitti + löydös 44 mukana.
+
+## LAITETESTAAJA: KOSKETUSKIERROS iPHONE 18 PRO (BUILD 10) — 12 RIVIA SAMA (#3076 4a0930eea); SIMULAATTORITORMAYS → RAAMATTUUN SIMULAATTORIEN OMISTUS (24.9.2026 klo 19.48)
+
+Laukku, Matkan tilastot, Julisteet, Sisällys + Palaa kartalle, pöllön ehdotukset SAMA; maatiedot-linssi ei enää tyhjä; toinen sessio asensi iPhone 18 Pro -simiin kesken lennon (kaatuminen) → sääntö: simulaattorit roolikohtaisia, Natiiviseppä ja Linssiseppä omilla simeillä. Web-kuvaparit 12 riville vielä ottamatta; ~19 riviä EI TARKISTETTU.
