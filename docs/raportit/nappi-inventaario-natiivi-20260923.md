@@ -49,7 +49,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | Periaatteet: palautelomake "Lähetä palautetta" ja sähköpostikenttä | ui.js:17636 (periaatePalaute) | puuttuu | on (PalauteLomake.PeriaateLohko) | NUI, PK |
 | Avausteksti: napautus kirjoittaa loppuun | ui.js (typeText) | Aloitusnakyma.cs:91 | on | NUI |
 | "Mistä aloitan?" (intro-valinta) | index.html:657, ui.js:17098 | Aloitusnakyma.cs:97 | on | NUI |
-| Lähtökaupunki valitaan pallolta kohderenkailla | ui.js:10508 (doPickStart) | Aloitusnakyma.cs:276 (lista lippuineen) | osittain: natiivissa listakortti, webissä valinta pallolta | NUI, NS |
+| Lähtökaupunki valitaan pallolta kohderenkailla | ui.js:10508 (doPickStart) | Aloitusnakyma.AloitaPallovalinta (kultapisteet Karttapisteillä, napautus → Aloita; kortti vain ilman palloa) | on | NUI, NS |
 
 ## 2. Yläpalkki
 
@@ -131,7 +131,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | "Liiku tänne" | kaupunkiliuska.js:44, lauta.js:3650 | KaupunkiKortti "Liiku tänne" | on | NUI |
 | Nostokategoriat "Historia (5)" haitarina, nostorivit avaavat noston | kaupunkiliuska.js:225–291, pallolauta/nostot.js:1228 | puuttuu | on (nostohaitari) | NUI, NS |
 | Liuskan kelausrivit ylös/alas | nostot.js:4258, kaupunkiliuska.js:318 | puuttuu | on (kelausrivit) | NUI |
-| Turisti-info-merkki kartalla (i) | kaupunkinosto.js:321, lauta.js:3700 | puuttuu | puuttuu | NS, NUI |
+| Turisti-info-merkki kartalla (i) | kaupunkinosto.js:321, lauta.js:3700 | – | ei tarvita: KYLTTI_KARTALLA = false (lauta.js:4232) | – |
 | Turisti-info ja kaupunkipopup: "Kaupunkilehti", ✕, "Lue loppuun", "Lue lisää" | kaupunkinosto.js:494, 602, 791, 956 | puuttuu | ei tarvita: popupit eivät ole webissä käytössä | NUI |
 | Lisäkaupungin kortti | kaupunkinosto.js:1153 | puuttuu | on (lisäkaupungin kortti) | NUI, SS |
 
@@ -145,8 +145,8 @@ Laitetestaajan lehtivertailun (PR #2970, `lehti-web-vs-natiivi-20260923.md`) ero
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
 | Kaupunkilehden sisällys (☰) | lehti.js varmistaLehtiHampurilainen | Lehtinakyma ylärivin ☰ (≥ 2 sivua) | korjattu: testikomento `ui lehti sisallys` avasi vain maalehdessä | NUI |
-| Maalehden etusivu: korkokartta pisteineen, perustiedot, tervehdykset, V-Dem-selitys, kartan nosto | maalehti.js piirraMaaEtusivu, naytaMaaTunnusluvut | Lehtinakyma.MaaEtusivu (skeema 1.15 `maat.maakartta`) | tekeillä (natiivi-ui/inventaario-11-20); radiowidget tulee radion kuoren kanssa | NUI, SS |
-| Maalehden sivut webin järjestyksessä: maan etusivu, aiheet (myös Tavat, Menovinkit) ja "Maa numeroina" | maalehti.js piirraMaaNumerotSivu, maalehdet.sivut | LehtiSisalto.Maalehti + UI/Lehti/MaaNumeroina.cs | tekeillä: v17:ssä data on (Tavat ja Menovinkit olivat jo natiivissa, testissä vierittämättä) | NUI, SS |
+| Maalehden etusivu: korkokartta pisteineen, perustiedot, tervehdykset, V-Dem-selitys, kartan nosto | maalehti.js piirraMaaEtusivu, naytaMaaTunnusluvut | Lehtinakyma.MaaEtusivu (skeema 1.15 `maat.maakartta`) | on (Lehtinakyma.MaaEtusivu; mediarivi uutisten perässä) | NUI, SS |
+| Maalehden sivut webin järjestyksessä: maan etusivu, aiheet (myös Tavat, Menovinkit) ja "Maa numeroina" | maalehti.js piirraMaaNumerotSivu, maalehdet.sivut | LehtiSisalto.Maalehti + UI/Lehti/MaaNumeroina.cs | on (LehtiSisalto.Maalehti, MaaNumeroina) | NUI, SS |
 
 **Tarkistettu 24.9.2026 (Natiivi-UI):** alla olevat entiset kuori-rivit on käyty läpi natiivia lehteä (`UI/Lehti/`) vasten; kuorta ei enää käytetä.
 
@@ -235,7 +235,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Kartuscha: masto (avaa/sulje) | pallolauta/maapaneeli.js:845 | UI/Kartuscha.cs:63 | on | NUI |
 | Kartuscha: aiheet → maalehti | maapaneeli.js:1047 | Kartuscha.cs:172 → PeliOhjain.LueMaalehti | on (lehti kuoressa) | NUI |
 | Kartuscha: sija näkyy rivin napautuksesta | maapaneeli.js | Kartuscha.cs:60 | on | NUI |
-| Kartuscha: radio (suora lähetys) | maapaneeli.js:902 | puuttuu (Kartuscha.cs:20 "radio vain webissä") | puuttuu | NUI, LS, SS |
+| Kartuscha: radio (suora lähetys) | maapaneeli.js:902 | Kartuscha + Mediarivi.Radionappi (merkkivalo, sama soitin) | on (merge-jonossa natiivi-ui/kartuscha-radio fa383cd) | NUI, LS, SS |
 | Kartuscha: lipun tarina | maapaneeli.js:961, liput.js | puuttuu | on (Lippuikkuna) | NUI, SS |
 | "Maiden lehdet" -nappi kartalla (maatietolinssi päälle/pois) | index.html:562, ui.js:3153 | puuttuu (vain linssivalitsimesta) | ei tarvita: nappi näkyy vain vanhassa kartassa (kartta-lataus.js) | NUI |
 | Maakyltti "Lue lehti ›" | ui.js:10286 | UI/Linssit/MaidenNakyma.cs:57 | on | NUI |
@@ -401,7 +401,7 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
 | Voitto: "Jatka vaeltamista" | index.html:1450, ui.js:19589 | Aloitusnakyma.cs:410 (Huipennus) | on | NUI |
-| Voitto: "Jaa matka" (vain iOS) | index.html:1453, ui.js:19613 | puuttuu | puuttuu | NUI, PK |
+| Voitto: "Jaa matka" (vain iOS) | index.html:1453, ui.js:19613 | Huipennus + Jakaminen (PK) | on (master 724ad30, iPad: näkyy, .mm linkittyy) | NUI, PK |
 | Voitto: "Uusi peli" | index.html:1454, main.js:1417 | Aloitusnakyma.cs:412 | on | NUI |
 | Pilvitallennus: "Jatka" / "Ei nyt" | index.html:1465–1471, main.js:353 | puuttuu (vain tallennus.json) | puuttuu | PK, NUI |
 | Game Center -saavutukset (ensimmäinen aarre, läpipeluu) | natiivi.js:116, ui.js:19594, 19641 | puuttuu | puuttuu | PK |
@@ -497,6 +497,14 @@ palkki, havainnekuva, välinäytös, loppusanat, karuselli, löytökuva pisteen 
 `ui lehti vierita`, `ui wiki`, `ui media`. Merge-pyynnössä: ihmisen matkan aikaselain ja kuvien GPU-luku
 taustalla (AsyncGPUReadback). Seuraavaksi: Jaa matka (odottaa PK:n Jakaminen-rajapintaa).
 
+## Tehty (päivitys 24.9.2026 iltapäivä, Natiivi-UI)
+
+Masterissa (724ad30): Jaa matka, noston kuuntelu- ja musiikkinapit, linssin valmiit kysymykset chatissa, ihmisen
+matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + keksintölinssin esilämmitys
+(kartuscha-radio fa383cd), nostokortin kentät ja ihmisen tiedeliite (nostokortti-kentat 3e3057d). Tarkistettu
+vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
+Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
+
 ## Taulukon tarkistus (24.9.2026 aamu, Natiivi-UI)
 
 Tila-sarake päivitetty Tehty-osioiden ja koodin mukaan (65 riviä). Avoinna Natiivi-UI:lla: pöllöpoimintojen
@@ -517,16 +525,20 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Puuttuvat rivit ensisijaisen omistajan mukaan** (ensimmäinen nimi Kenelle-sarakkeessa):
+**Tehty-luku (päivitys 24.9.2026 iltapäivä, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
-| Omistaja | puuttuu | osittain | kuori (lehti) |
-|---|---|---|---|
-| Natiivi-UI | 71 | 13 | 20 |
-| Pelikoodari | 6 | 6 | – |
-| Natiiviseppä | 5 | 3 | – |
-| Linssiseppä | 4 | – | – |
-| Siirtoseppä-data | 1 | – | – |
-| **Yhteensä** | **87** | **22** | **20** |
+| Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
+|---|---|---|---|---|---|
+| Natiivi-UI | 193 | 1 | 0 | 6 | 3 |
+| Pelikoodari | 1 | 6 | 5 | 5 | – |
+| Natiiviseppä | – | 2 | 4 | 5 | – |
+| Linssiseppä | 3 | – | 2 | – | – |
+| Siirtoseppä-data | 1 | – | – | – | – |
+| (ei omistajaa) | – | – | – | 2 | 12 |
+| **Yhteensä** | **198** | **9** | **11** | **18** | **15** |
+
+Natiivi-UI:n ainoa osittainen rivi on ihmisen matkan nostokortti (kentät merge-jonossa, natiivi-ui/nostokortti-kentat).
+Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
 
 - Siirtoseppä-data on toissijaisena mukana noin 20 puuttuvalla rivillä: nähtävyydet ja opas, muutosloki, liput, radiot, julisteet, tiedeliite, ihme, leikekirja, täkynostot ja syvennykset.
 - Pelikoodari on toissijaisena mukana sähkeen, kaveriavun, palautekanavan ja sanelun riveillä.
