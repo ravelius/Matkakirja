@@ -1,0 +1,1694 @@
+{
+  "batch": "renessanssisali-maalaukset-20260924",
+  "orderSource": "posti/fable-kuvaputki-renessanssisali-20260924.md",
+  "count": 30,
+  "variants": 60,
+  "deliveryState": "r2_uploaded_and_full_readback_verified; game_integration_not_claimed",
+  "items": [
+    {
+      "id": "met-435729",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Pyhän Zenobiuksen kolme ihmettä",
+        "it_descriptive": "Tre miracoli di san Zanobi",
+        "museum_source_title_en": "Three Miracles of Saint Zenobius"
+      },
+      "tekija": "Botticelli (Alessandro di Mariano Filipepi)",
+      "tekijänElinvuodet": {
+        "from": "1444",
+        "to": "1510",
+        "museum_bio": "Italian, Florence 1444/45–1510 Florence"
+      },
+      "vuosi": "ca. 1500",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435729",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-18875-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Botticelli (Alessandro di Mariano Filipepi), Three Miracles of Saint Zenobius, The Metropolitan Museum of Art, Open Access / CC0, object 435729.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435729-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435729-gallery.jpg",
+          "sha256": "50969bd0c2535b7c65f60f75a3d918827105119b5c7400d27c71e869e6d10903",
+          "tavut": 3159851,
+          "leveys": 4000,
+          "korkeus": 1855,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:28.747Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435729-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435729-card.jpg",
+          "sha256": "e0214b37d810da8c53848faa7b70da280b48bc11f9946c52840b798576746562",
+          "tavut": 482920,
+          "leveys": 1800,
+          "korkeus": 834,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:30.044Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435728",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Pyhän Hieronymuksen viimeinen ehtoollinen",
+        "it_descriptive": "L'ultima comunione di san Girolamo",
+        "museum_source_title_en": "The Last Communion of Saint Jerome"
+      },
+      "tekija": "Botticelli (Alessandro di Mariano Filipepi)",
+      "tekijänElinvuodet": {
+        "from": "1444",
+        "to": "1510",
+        "museum_bio": "Italian, Florence 1444/45–1510 Florence"
+      },
+      "vuosi": "early 1490s",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435728",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-24049-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Botticelli (Alessandro di Mariano Filipepi), The Last Communion of Saint Jerome, The Metropolitan Museum of Art, Open Access / CC0, object 435728.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435728-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435728-gallery.jpg",
+          "sha256": "8112c778f50a3b9158eebdc892838a1a2d930c3fdecea5467a2f25bf33abb5d5",
+          "tavut": 6120935,
+          "leveys": 3019,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:32.020Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435728-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435728-card.jpg",
+          "sha256": "49a906e58498e0c8e8ac9499d70bdc9844335e46e8265fa4e6968ec9b41a82f7",
+          "tavut": 922783,
+          "leveys": 1358,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:33.357Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-459016",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Ilmestys",
+        "it_descriptive": "Annunciazione",
+        "museum_source_title_en": "The Annunciation"
+      },
+      "tekija": "Botticelli (Alessandro di Mariano Filipepi)",
+      "tekijänElinvuodet": {
+        "from": "1444",
+        "to": "1510",
+        "museum_bio": "Italian, Florence 1444/45–1510 Florence"
+      },
+      "vuosi": "ca. 1490",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/459016",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/rl/original/DP267397.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Botticelli (Alessandro di Mariano Filipepi), The Annunciation, The Metropolitan Museum of Art, Open Access / CC0, object 459016.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-459016-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-459016-gallery.jpg",
+          "sha256": "f1604aedf0b940a0b4b4b4ade6adc1d9e5a86d53b32080535e7d64472d234f49",
+          "tavut": 3870428,
+          "leveys": 3913,
+          "korkeus": 2571,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:35.039Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-459016-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-459016-card.jpg",
+          "sha256": "31a84913d3dc78e3299f45c4704bdd1c6813da58e4d6d87457db9841b3e29e49",
+          "tavut": 822469,
+          "leveys": 1800,
+          "korkeus": 1182,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:36.282Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435641",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna ja lapsi",
+        "it_descriptive": "Madonna col Bambino",
+        "museum_source_title_en": "Madonna and Child"
+      },
+      "tekija": "Giovanni Bellini",
+      "tekijänElinvuodet": {
+        "from": "1424",
+        "to": "1516",
+        "museum_bio": "Italian, Venice, 1424/26–1516 Venice"
+      },
+      "vuosi": "late 1480s",
+      "syntymakaupunki": "venetsia",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435641",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DT375.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Giovanni Bellini, Madonna and Child, The Metropolitan Museum of Art, Open Access / CC0, object 435641.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435641-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435641-gallery.jpg",
+          "sha256": "84a39a9b20b3994ab94334264624fb5a82ec64e0a6b94e71dfdbf0d588ee2cae",
+          "tavut": 4408512,
+          "leveys": 3019,
+          "korkeus": 3718,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:37.796Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435641-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435641-card.jpg",
+          "sha256": "fd2d90875add95692b9bb796778a943b03f50c5721faecc1d0aea76f6203466a",
+          "tavut": 1023968,
+          "leveys": 1461,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:39.508Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435640",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna palvoo nukkuvaa lasta",
+        "it_descriptive": "Madonna che adora il Bambino dormiente",
+        "museum_source_title_en": "Madonna Adoring the Sleeping Child"
+      },
+      "tekija": "Giovanni Bellini",
+      "tekijänElinvuodet": {
+        "from": "1424",
+        "to": "1516",
+        "museum_bio": "Italian, Venice, 1424/26–1516 Venice"
+      },
+      "vuosi": "early 1460s",
+      "syntymakaupunki": "venetsia",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435640",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DT7219.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Giovanni Bellini, Madonna Adoring the Sleeping Child, The Metropolitan Museum of Art, Open Access / CC0, object 435640.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435640-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435640-gallery.jpg",
+          "sha256": "fb9231c9944fdcb6a2861efbe3fdaf02a1f355bcbe55dc76d7d452904be3f89f",
+          "tavut": 3316538,
+          "leveys": 2415,
+          "korkeus": 3722,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:41.959Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435640-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435640-card.jpg",
+          "sha256": "24e99a47dd98656c1710d93ca08b22572f387a28602622703d3307be7e1ebf50",
+          "tavut": 889825,
+          "leveys": 1168,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:45.111Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435642",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna ja lapsi pyhimysten kanssa",
+        "it_descriptive": "Madonna col Bambino e santi",
+        "museum_source_title_en": "Madonna and Child with Saints"
+      },
+      "tekija": "Giovanni Bellini",
+      "tekijänElinvuodet": {
+        "from": "1424",
+        "to": "1516",
+        "museum_bio": "Italian, Venice, 1424/26–1516 Venice"
+      },
+      "vuosi": "ca. 1505–10",
+      "syntymakaupunki": "venetsia",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435642",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP104372.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Giovanni Bellini, Madonna and Child with Saints, The Metropolitan Museum of Art, Open Access / CC0, object 435642.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435642-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435642-gallery.jpg",
+          "sha256": "ee57aa962ab5190c6658775e4e4c69696e4ee94a36b577e286475927b5b3cb74",
+          "tavut": 2887656,
+          "leveys": 3767,
+          "korkeus": 2396,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:46.893Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435642-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435642-card.jpg",
+          "sha256": "dfd7bd3c73586346b64428e17c7b07ffecb6ae7922aeb1b994830b554dedd149",
+          "tavut": 806164,
+          "leveys": 1800,
+          "korkeus": 1145,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:48.286Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437372",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Valtaistuimella istuva Madonna, lapsi ja pyhimykset",
+        "it_descriptive": "Madonna col Bambino in trono e santi",
+        "museum_source_title_en": "Madonna and Child Enthroned with Saints"
+      },
+      "tekija": "Raphael (Raffaello Sanzio or Santi)",
+      "tekijänElinvuodet": {
+        "from": "1483",
+        "to": "1520",
+        "museum_bio": "Italian, Urbino 1483–1520 Rome"
+      },
+      "vuosi": "ca. 1504",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437372",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-43051-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Raphael (Raffaello Sanzio or Santi), Madonna and Child Enthroned with Saints, The Metropolitan Museum of Art, Open Access / CC0, object 437372.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437372-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437372-gallery.jpg",
+          "sha256": "b7d1d3149ce708a49bfccf4e9dd88f5200146924acef590fb2fe11cc3e48c666",
+          "tavut": 5677447,
+          "leveys": 3067,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:50.111Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437372-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437372-card.jpg",
+          "sha256": "14c432dcd3c32a067b81e857630d368b4aa6c6426bb583f8c3e083bac4f45c26",
+          "tavut": 855460,
+          "leveys": 1380,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:51.626Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437373",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Giuliano de’ Medici, Nemoursin herttua",
+        "it_descriptive": "Giuliano de’ Medici, duca di Nemours",
+        "museum_source_title_en": "Giuliano de' Medici (1479–1516), Duke of Nemours"
+      },
+      "tekija": "Raphael",
+      "tekijänElinvuodet": {
+        "from": "1483",
+        "to": "1520",
+        "museum_bio": "Italian, Urbino 1483–1520 Rome"
+      },
+      "vuosi": "museotietueessa ei päiväystä",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437373",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP265692.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Raphael, Giuliano de' Medici (1479–1516), Duke of Nemours, The Metropolitan Museum of Art, Open Access / CC0, object 437373.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437373-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437373-gallery.jpg",
+          "sha256": "d434550b4a48910e76ff4b742df1ed93250599940eab9d42ace24c35ebddc9f5",
+          "tavut": 882560,
+          "leveys": 1502,
+          "korkeus": 1935,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:53.239Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437373-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437373-card.jpg",
+          "sha256": "168763c7d537b0623e7aa05c019a4e18e0db1282a65d86fbf3bb807a8542cecb",
+          "tavut": 702715,
+          "leveys": 1397,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:54.989Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437824",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna ja lapsi",
+        "it_descriptive": "Madonna col Bambino",
+        "museum_source_title_en": "Madonna and Child"
+      },
+      "tekija": "Titian (Tiziano Vecellio)",
+      "tekijänElinvuodet": {
+        "from": "1485",
+        "to": "1576",
+        "museum_bio": "Italian, Pieve di Cadore ca. 1485/90?–1576 Venice"
+      },
+      "vuosi": "ca. 1508",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437824",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-17398-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Titian (Tiziano Vecellio), Madonna and Child, The Metropolitan Museum of Art, Open Access / CC0, object 437824.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437824-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437824-gallery.jpg",
+          "sha256": "c1d80a2ee3a4675a529bf88739fde1008254207083708a78d122c7018fe72754",
+          "tavut": 7577306,
+          "leveys": 4000,
+          "korkeus": 3265,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:41:58.609Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437824-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437824-card.jpg",
+          "sha256": "c6bc3e9f0430585ae9115068bbccb6877440ec81ebee274ec83af53e9b4b5ae4",
+          "tavut": 983934,
+          "leveys": 1800,
+          "korkeus": 1469,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:01.026Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-436489",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Francesco Sassetti ja hänen poikansa Teodoro",
+        "it_descriptive": "Francesco Sassetti e il figlio Teodoro",
+        "museum_source_title_en": "Francesco Sassetti (1421–1490) and His Son Teodoro"
+      },
+      "tekija": "Domenico Ghirlandaio (Domenico Bigordi)",
+      "tekijänElinvuodet": {
+        "from": "1448",
+        "to": "1494",
+        "museum_bio": "Italian, Florence 1448/49–1494 Florence"
+      },
+      "vuosi": "ca. 1488",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/436489",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DT1369.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Domenico Ghirlandaio (Domenico Bigordi), Francesco Sassetti (1421–1490) and His Son Teodoro, The Metropolitan Museum of Art, Open Access / CC0, object 436489.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436489-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436489-gallery.jpg",
+          "sha256": "c9ecb02ffc33fb0c934acf69095424aaf1c03ac05993367682b074c1be1a7f69",
+          "tavut": 3463365,
+          "leveys": 2822,
+          "korkeus": 3722,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:02.770Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436489-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436489-card.jpg",
+          "sha256": "1a12dbb5c4314fe66245f76a87fb120e2cf5bb206477399d44f17ecf45910b23",
+          "tavut": 874156,
+          "leveys": 1364,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:04.577Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437283",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Metsästyskohtaus",
+        "it_descriptive": "Scena di caccia",
+        "museum_source_title_en": "A Hunting Scene"
+      },
+      "tekija": "Piero di Cosimo (Piero di Lorenzo di Piero d'Antonio)",
+      "tekijänElinvuodet": {
+        "from": "1462",
+        "to": "1522",
+        "museum_bio": "Italian, Florence 1462–1522 Florence"
+      },
+      "vuosi": "ca. 1494–1500",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437283",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-19296-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Piero di Cosimo (Piero di Lorenzo di Piero d'Antonio), A Hunting Scene, The Metropolitan Museum of Art, Open Access / CC0, object 437283.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437283-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437283-gallery.jpg",
+          "sha256": "29c278d75f158d3c85eeb9b66742425c81e8581d8c5707dc2c0fb63520259bc9",
+          "tavut": 2939117,
+          "leveys": 4000,
+          "korkeus": 1798,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:07.519Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437283-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437283-card.jpg",
+          "sha256": "ec9f6896546ac2016ca1b046600863ce3db88fcd05402dae8e718c2fb597208d",
+          "tavut": 483639,
+          "leveys": 1800,
+          "korkeus": 809,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:08.948Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437284",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Paluu metsästyksestä",
+        "it_descriptive": "Ritorno dalla caccia",
+        "museum_source_title_en": "The Return from the Hunt"
+      },
+      "tekija": "Piero di Cosimo (Piero di Lorenzo di Piero d'Antonio)",
+      "tekijänElinvuodet": {
+        "from": "1462",
+        "to": "1522",
+        "museum_bio": "Italian, Florence 1462–1522 Florence"
+      },
+      "vuosi": "ca. 1494–1500",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437284",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-24048-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Piero di Cosimo (Piero di Lorenzo di Piero d'Antonio), The Return from the Hunt, The Metropolitan Museum of Art, Open Access / CC0, object 437284.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437284-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437284-gallery.jpg",
+          "sha256": "b235ecfba0dc4e996ee43a3dc1bc3f41835090f05039421043084a36bc5f4edf",
+          "tavut": 3361749,
+          "leveys": 4000,
+          "korkeus": 1782,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:11.013Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437284-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437284-card.jpg",
+          "sha256": "32c06434fff30650f57b60b9ecb9435f8f54a492446f18da5c020915aa9c85c9",
+          "tavut": 525029,
+          "leveys": 1800,
+          "korkeus": 802,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:12.419Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-436895",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Valtaistuimella istuva Madonna ja lapsi sekä kaksi enkeliä",
+        "it_descriptive": "Madonna col Bambino in trono e due angeli",
+        "museum_source_title_en": "Madonna and Child Enthroned with Two Angels"
+      },
+      "tekija": "Fra Filippo Lippi",
+      "tekijänElinvuodet": {
+        "from": "1406",
+        "to": "1469",
+        "museum_bio": "Italian, Florence ca. 1406–1469 Spoleto"
+      },
+      "vuosi": "ca. 1440",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/436895",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-20746-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Fra Filippo Lippi, Madonna and Child Enthroned with Two Angels, The Metropolitan Museum of Art, Open Access / CC0, object 436895.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436895-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436895-gallery.jpg",
+          "sha256": "ed5762419ad6f9472c7f1b5d59a741ec35871cf6741b59fa5edd1c6246ca1f3a",
+          "tavut": 3808336,
+          "leveys": 2118,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:14.270Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436895-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436895-card.jpg",
+          "sha256": "1972e2dd413fed2387c1d9f7978d56980d13792fabc31b30e5e4320e0786fbe4",
+          "tavut": 565913,
+          "leveys": 953,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:15.978Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-436896",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Naisen ja miehen muotokuva ikkunan ääressä",
+        "it_descriptive": "Ritratto di donna con uomo alla finestra",
+        "museum_source_title_en": "Portrait of a Woman with a Man at a Casement"
+      },
+      "tekija": "Fra Filippo Lippi",
+      "tekijänElinvuodet": {
+        "from": "1406",
+        "to": "1469",
+        "museum_bio": "Italian, Florence ca. 1406–1469 Spoleto"
+      },
+      "vuosi": "ca. 1440",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/436896",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP159891.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Fra Filippo Lippi, Portrait of a Woman with a Man at a Casement, The Metropolitan Museum of Art, Open Access / CC0, object 436896.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436896-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436896-gallery.jpg",
+          "sha256": "588a1414af6554f09ca8115330261318161b3a7268f3e6af9793a2a8ed4205ef",
+          "tavut": 3581372,
+          "leveys": 2568,
+          "korkeus": 3875,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:17.845Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436896-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436896-card.jpg",
+          "sha256": "e3177b2c6c4155ea59287db44202faf6d561263f750d90e7747cd1959ff4aecf",
+          "tavut": 885268,
+          "leveys": 1193,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:19.338Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435901",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna ja lapsi pyhien Franciscuksen ja Claran kanssa",
+        "it_descriptive": "Madonna col Bambino, san Francesco e santa Chiara",
+        "museum_source_title_en": "Madonna and Child with Saints Francis and Clare"
+      },
+      "tekija": "Cima da Conegliano (Giovanni Battista Cima)",
+      "tekijänElinvuodet": {
+        "from": "1459",
+        "to": "1518",
+        "museum_bio": "Italian, Conegliano ca. 1459–1517/18 Venice or Conegliano"
+      },
+      "vuosi": "ca. 1510",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435901",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-18296-025.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Cima da Conegliano (Giovanni Battista Cima), Madonna and Child with Saints Francis and Clare, The Metropolitan Museum of Art, Open Access / CC0, object 435901.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435901-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435901-gallery.jpg",
+          "sha256": "9d0fc97e6050d9165a1f9eceeaa4557a74165be8f2cedbbcd7a44d3c59fff30c",
+          "tavut": 6931902,
+          "leveys": 4000,
+          "korkeus": 3008,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:22.685Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435901-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435901-card.jpg",
+          "sha256": "c27cd2db1e1b16a410853f5783fcfb23f798405d4c89027cc38923a092cefa84",
+          "tavut": 914411,
+          "leveys": 1800,
+          "korkeus": 1353,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:24.209Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435902",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Kolme pyhimystä: Rochus, Antonius ja Lucia",
+        "it_descriptive": "Tre santi: Rocco, Antonio abate e Lucia",
+        "museum_source_title_en": "Three Saints: Roch, Anthony Abbot, and Lucy"
+      },
+      "tekija": "Cima da Conegliano (Giovanni Battista Cima)",
+      "tekijänElinvuodet": {
+        "from": "1459",
+        "to": "1518",
+        "museum_bio": "Italian, Conegliano ca. 1459–1517/18 Venice or Conegliano"
+      },
+      "vuosi": "ca. 1513",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435902",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP214439.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Cima da Conegliano (Giovanni Battista Cima), Three Saints: Roch, Anthony Abbot, and Lucy, The Metropolitan Museum of Art, Open Access / CC0, object 435902.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435902-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435902-gallery.jpg",
+          "sha256": "da91ed77401058a515c82b68ecb92f4396e2a94e9f5219e316bbf716fb0e84c8",
+          "tavut": 3798343,
+          "leveys": 3636,
+          "korkeus": 3841,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:26.047Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435902-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435902-card.jpg",
+          "sha256": "956638b296b0f350e49e83c674d0b899a16d2f2d66d3ac489ae39ff099686320",
+          "tavut": 1001647,
+          "leveys": 1704,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:27.648Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-436910",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Nuoren naisen muotokuva",
+        "it_descriptive": "Ritratto di giovane donna",
+        "museum_source_title_en": "Portrait of a Young Woman"
+      },
+      "tekija": "Lorenzo di Credi (Lorenzo d'Andrea d'Oderigo)",
+      "tekijänElinvuodet": {
+        "from": "1456",
+        "to": "1536",
+        "museum_bio": "Italian, Florence 1456/59–1536 Florence"
+      },
+      "vuosi": "ca. 1490–1500",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/436910",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP161260.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Lorenzo di Credi (Lorenzo d'Andrea d'Oderigo), Portrait of a Young Woman, The Metropolitan Museum of Art, Open Access / CC0, object 436910.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436910-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436910-gallery.jpg",
+          "sha256": "233d16357f4feecaa86ea0604ebd319a381dc74b5f99fb71b1cdf049d3248dd5",
+          "tavut": 3351237,
+          "leveys": 2712,
+          "korkeus": 3871,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:29.225Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436910-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436910-card.jpg",
+          "sha256": "c1e80b59cdcf1191b5b32ea2c6c928cd499df05e049f75560e293231383d0709",
+          "tavut": 832482,
+          "leveys": 1261,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:30.614Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-436909",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna palvoo lasta Johannes Kastajan ja enkelin kanssa",
+        "it_descriptive": "Madonna che adora il Bambino con san Giovannino e un angelo",
+        "museum_source_title_en": "Madonna Adoring the Child with the Infant Saint John the Baptist and an Angel"
+      },
+      "tekija": "Lorenzo di Credi (Lorenzo d'Andrea d'Oderigo)",
+      "tekijänElinvuodet": {
+        "from": "1456",
+        "to": "1536",
+        "museum_bio": "Italian, Florence 1456/59–1536 Florence"
+      },
+      "vuosi": "early 1490s",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/436909",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP358280.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Lorenzo di Credi (Lorenzo d'Andrea d'Oderigo), Madonna Adoring the Child with the Infant Saint John the Baptist and an Angel, The Metropolitan Museum of Art, Open Access / CC0, object 436909.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436909-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436909-gallery.jpg",
+          "sha256": "5e66ee5a69c0e85d4fc8029fe9afddbfcab1604bc7705a107657b1d9cff7a86a",
+          "tavut": 3320305,
+          "leveys": 3793,
+          "korkeus": 3845,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:32.322Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-436909-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-436909-card.jpg",
+          "sha256": "58c186e8715f72e2328f805c536192ed36893d5acb51a9b20308761274caf291",
+          "tavut": 797702,
+          "leveys": 1775,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:33.762Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435614",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Madonna ja lapsi sekä nuori Johannes Kastaja",
+        "it_descriptive": "Madonna col Bambino e san Giovannino",
+        "museum_source_title_en": "Madonna and Child with the Young Saint John the Baptist"
+      },
+      "tekija": "Fra Bartolomeo (Bartolomeo di Paolo del Fattorino)",
+      "tekijänElinvuodet": {
+        "from": "1473",
+        "to": "1517",
+        "museum_bio": "Italian, Florence 1473–1517 Florence"
+      },
+      "vuosi": "ca. 1497",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435614",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-17017-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Fra Bartolomeo (Bartolomeo di Paolo del Fattorino), Madonna and Child with the Young Saint John the Baptist, The Metropolitan Museum of Art, Open Access / CC0, object 435614.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435614-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435614-gallery.jpg",
+          "sha256": "cefd209b1c492c8a3fbbb02a94a17cbc7c90fab94913dc21767dad09a69c15ae",
+          "tavut": 5297499,
+          "leveys": 3177,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:35.587Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435614-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435614-card.jpg",
+          "sha256": "15e6d744a903a7beac3aed95fb8336bd0c865fb8d650c4023850df5c51996db4",
+          "tavut": 718582,
+          "leveys": 1429,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:37.137Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-435848",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Neitsyt Marian syntymä",
+        "it_descriptive": "La nascita della Vergine",
+        "museum_source_title_en": "The Birth of the Virgin"
+      },
+      "tekija": "Fra Carnevale (Bartolomeo di Giovanni Corradini)",
+      "tekijänElinvuodet": {
+        "from": "1416",
+        "to": "1484",
+        "museum_bio": "Italian, born by 1416–died 1484 Urbino"
+      },
+      "vuosi": "1467",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/435848",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP109484.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Fra Carnevale (Bartolomeo di Giovanni Corradini), The Birth of the Virgin, The Metropolitan Museum of Art, Open Access / CC0, object 435848.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435848-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435848-gallery.jpg",
+          "sha256": "904c3f5eb11c53f3dd6a6a58ab821953fd1fd628db339a013cc196c833bc5efd",
+          "tavut": 3133478,
+          "leveys": 2565,
+          "korkeus": 3823,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:42.223Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-435848-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-435848-card.jpg",
+          "sha256": "ebe6143a513c1b798d591fc7b367f311e8203f4a82a20973a1778f26d58305b2",
+          "tavut": 815239,
+          "leveys": 1207,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:45.762Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437826",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Venus ja Adonis",
+        "it_descriptive": "Venere e Adone",
+        "museum_source_title_en": "Venus and Adonis"
+      },
+      "tekija": "Titian (Tiziano Vecellio)",
+      "tekijänElinvuodet": {
+        "from": "1485",
+        "to": "1576",
+        "museum_bio": "Italian, Pieve di Cadore ca. 1485/90?–1576 Venice"
+      },
+      "vuosi": "1550s",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437826",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP-19299-001.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Titian (Tiziano Vecellio), Venus and Adonis, The Metropolitan Museum of Art, Open Access / CC0, object 437826.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437826-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437826-gallery.jpg",
+          "sha256": "713432b9e94c4c0ac901e5cd906b0bd2e1ea66ec3e0cfa7e4cb11c3c9d7baed4",
+          "tavut": 7554124,
+          "leveys": 4000,
+          "korkeus": 3234,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:49.973Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437826-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437826-card.jpg",
+          "sha256": "c7890d9e820d0e64ce595ec944c672ff0cfb2725b6ebacdf9552dc8ca8fa5b09",
+          "tavut": 900927,
+          "leveys": 1800,
+          "korkeus": 1455,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:53.194Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "met-437371",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Rukous Getsemanessa",
+        "it_descriptive": "L'orazione nell'orto",
+        "museum_source_title_en": "The Agony in the Garden"
+      },
+      "tekija": "Raphael (Raffaello Sanzio or Santi)",
+      "tekijänElinvuodet": {
+        "from": "1483",
+        "to": "1520",
+        "museum_bio": "Italian, Urbino 1483–1520 Rome"
+      },
+      "vuosi": "ca. 1504",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "The Metropolitan Museum of Art, New York",
+      "lahdeUrl": "https://www.metmuseum.org/art/collection/search/437371",
+      "alkuperaisenKuvanUrl": "https://images.metmuseum.org/CRDImages/ep/original/DP136373.jpg",
+      "lisenssi": "CC0 1.0",
+      "lisenssiUrl": "https://www.metmuseum.org/about-the-met/policies-and-documents/open-access",
+      "attribuutio": "Raphael (Raffaello Sanzio or Santi), The Agony in the Garden, The Metropolitan Museum of Art, Open Access / CC0, object 437371.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437371-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437371-gallery.jpg",
+          "sha256": "5f916c7c1c018f258b8fd1a4bcb68d1ccbd645a0fd1e87ab31eaed43f6766514",
+          "tavut": 5401248,
+          "leveys": 3851,
+          "korkeus": 3330,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:55.558Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/met-437371-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/met-437371-card.jpg",
+          "sha256": "38a8ad1d33c5e9a5cb1ac44bb6fcca92504219cdce52d6028338a4c1ff2ef7ad",
+          "tavut": 1243932,
+          "leveys": 1800,
+          "korkeus": 1556,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:42:58.229Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-50724",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Ginevra de’ Bencin muotokuva",
+        "it_descriptive": "Ritratto di Ginevra de’ Benci",
+        "museum_source_title_en": "Ginevra de' Benci [obverse]"
+      },
+      "tekija": "Leonardo da Vinci",
+      "tekijänElinvuodet": {
+        "from": "1452",
+        "to": "1519"
+      },
+      "vuosi": "c. 1474/1478",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/50724-ginevra-de-benci-obverse",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/8f29e3c9-a289-4d53-abf0-31a66e9e98fa/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Leonardo da Vinci, Ginevra de' Benci [obverse], National Gallery of Art, Washington, Open Access / Public Domain, object 50724.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-50724-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-50724-gallery.jpg",
+          "sha256": "445ef850332b55c575f2837520fe9423a245e81cee1a3523708c5649dac33ae0",
+          "tavut": 4460838,
+          "leveys": 3878,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:00.676Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-50724-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-50724-card.jpg",
+          "sha256": "8f599aba877d0b19ec7c903656002ebd3298a8d2bd08c8a4bd9dddce6cca5c43",
+          "tavut": 878096,
+          "leveys": 1745,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:05.656Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-432",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Paimenten kumarrus",
+        "it_descriptive": "Adorazione dei pastori",
+        "museum_source_title_en": "The Adoration of the Shepherds"
+      },
+      "tekija": "Giorgione",
+      "tekijänElinvuodet": {
+        "from": "1477/1478",
+        "to": "1510"
+      },
+      "vuosi": "1505/1510",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/432-adoration-shepherds",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/77d22f22-777b-456f-adc6-baf1e010b832/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Giorgione, The Adoration of the Shepherds, National Gallery of Art, Washington, Open Access / Public Domain, object 432.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-432-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-432-gallery.jpg",
+          "sha256": "e33ea744829c9b4aecdfb6d81a4395cbc8f2910edc3919540700e415e8010c45",
+          "tavut": 3581464,
+          "leveys": 4000,
+          "korkeus": 3272,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:07.777Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-432-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-432-card.jpg",
+          "sha256": "2bbc1a0c39df7d59d1bafd113045449756a201edf8f66c71f18d7a815c484346",
+          "tavut": 709216,
+          "leveys": 1800,
+          "korkeus": 1472,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:09.161Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-41584",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Miehen muotokuva",
+        "it_descriptive": "Ritratto d’uomo",
+        "museum_source_title_en": "Portrait of a Man"
+      },
+      "tekija": "Andrea Mantegna",
+      "tekijänElinvuodet": {
+        "from": "c. 1431",
+        "to": "1506"
+      },
+      "vuosi": "c. 1470",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/41584-portrait-man",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/2540c5bf-5185-4c7e-b3f6-f0244ba1a0ec/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Andrea Mantegna, Portrait of a Man, National Gallery of Art, Washington, Open Access / Public Domain, object 41584.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41584-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41584-gallery.jpg",
+          "sha256": "5a44d9c62ae5b20c65f39343f2b01d7f2c1c90591030a867217774440825acd2",
+          "tavut": 4016497,
+          "leveys": 3142,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:13.291Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41584-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41584-card.jpg",
+          "sha256": "c3fdb6a2c7f0dc7cf5665d9ba032827021837b9a2abbe23159f80930daf95af0",
+          "tavut": 796998,
+          "leveys": 1414,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:16.142Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-46189",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Kesä",
+        "it_descriptive": "Estate",
+        "museum_source_title_en": "Summer"
+      },
+      "tekija": "Jacopo Tintoretto",
+      "tekijänElinvuodet": {
+        "from": "1518/1519",
+        "to": "1594"
+      },
+      "vuosi": "c. 1546/1548",
+      "syntymakaupunki": "venetsia",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/46189-summer",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/b0246c8e-7ee6-4b9f-a021-fa0cc4a2fd81/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Jacopo Tintoretto, Summer, National Gallery of Art, Washington, Open Access / Public Domain, object 46189.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46189-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46189-gallery.jpg",
+          "sha256": "aaafae0d5eb17d9e299e4b102831d1d9416098556b370999d2dc46031093c135",
+          "tavut": 3242332,
+          "leveys": 4000,
+          "korkeus": 2141,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:19.990Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-46189-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-46189-card.jpg",
+          "sha256": "54abeb11620034c4914da2c631f7dc99d32c862d6e7c0aecef1abefd99dc70bd",
+          "tavut": 601470,
+          "leveys": 1800,
+          "korkeus": 964,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:21.704Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-45",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Mooseksen löytyminen",
+        "it_descriptive": "Il ritrovamento di Mosè",
+        "museum_source_title_en": "The Finding of Moses"
+      },
+      "tekija": "Paolo Veronese",
+      "tekijänElinvuodet": {
+        "from": "1528",
+        "to": "1588"
+      },
+      "vuosi": "c. 1581/1582",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/45-finding-moses",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/7ef08b06-e4ff-49e5-8c13-f79dd0b1a872/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Paolo Veronese, The Finding of Moses, National Gallery of Art, Washington, Open Access / Public Domain, object 45.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-45-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-45-gallery.jpg",
+          "sha256": "e0eadca1bf5bee1eaf98495423446e9fd153968693039e5504b9cc3643d376ab",
+          "tavut": 4596554,
+          "leveys": 3025,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:24.032Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-45-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-45-card.jpg",
+          "sha256": "000cb8bc57ab68839eba9ec99b6d65e3db3810d202fc5f2498476feeb16cebb6",
+          "tavut": 840756,
+          "leveys": 1361,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:26.269Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-41629",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Pyhä Apollonia",
+        "it_descriptive": "Sant’Apollonia",
+        "museum_source_title_en": "Saint Apollonia"
+      },
+      "tekija": "Attributed to Piero della Francesca",
+      "tekijänElinvuodet": {
+        "from": "c. 1416/1417",
+        "to": "1492"
+      },
+      "vuosi": "c. 1455/1460",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/41629-saint-apollonia",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/86098116-ac10-4aca-bb24-d51a576ac15c/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Attributed to Piero della Francesca, Saint Apollonia, National Gallery of Art, Washington, Open Access / Public Domain, object 41629.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41629-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41629-gallery.jpg",
+          "sha256": "336927b1096ba1f1af7fa2ce537d1c008352d40a8ea970678f78c6ba157e711b",
+          "tavut": 5079710,
+          "leveys": 2904,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:29.052Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41629-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41629-card.jpg",
+          "sha256": "45e1b007cb169ba3997beb47b34c111e3b61a0d2c891e39053b316067839d644",
+          "tavut": 1024122,
+          "leveys": 1307,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:30.677Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-1143",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Nuori nainen ja hänen poikansa",
+        "it_descriptive": "Una giovane donna con il figlioletto",
+        "museum_source_title_en": "A Young Woman and Her Little Boy"
+      },
+      "tekija": "Agnolo Bronzino",
+      "tekijänElinvuodet": {
+        "from": "1503",
+        "to": "1572"
+      },
+      "vuosi": "c. 1540",
+      "syntymakaupunki": "firenze",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/1143-young-woman-and-her-little-boy",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/bb63dde5-923f-4f5a-a814-7a6d96642b8e/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Agnolo Bronzino, A Young Woman and Her Little Boy, National Gallery of Art, Washington, Open Access / Public Domain, object 1143.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1143-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1143-gallery.jpg",
+          "sha256": "848a9ebb198a4d4ff5ad3dcf3213f7ce5515cc1689a0d7966cd4c663827d0979",
+          "tavut": 2641584,
+          "leveys": 3057,
+          "korkeus": 4000,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:32.492Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-1143-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-1143-card.jpg",
+          "sha256": "9dda14c61297eeeeb909aa290428a605d8fe368b5aca0dbf58dd2ec9d5d33449",
+          "tavut": 529430,
+          "leveys": 1376,
+          "korkeus": 1800,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:34.062Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    },
+    {
+      "id": "nga-41697",
+      "tyyppi": "maalaus",
+      "nimi": {
+        "fi": "Rebekka kaivolla",
+        "it_descriptive": "Rebecca al pozzo",
+        "museum_source_title_en": "Rebecca at the Well"
+      },
+      "tekija": "Veronese and Workshop",
+      "tekijänElinvuodet": {
+        "from": "1528",
+        "to": "1588"
+      },
+      "vuosi": "c. 1582/1588",
+      "syntymakaupunki": "muu",
+      "nykyinenSijainti": "National Gallery of Art, Washington, D.C.",
+      "lahdeUrl": "https://www.nga.gov/artworks/41697-rebecca-well",
+      "alkuperaisenKuvanUrl": "https://api.nga.gov/iiif/58275103-1fa9-4058-8921-34f8e8777041/full/!4000,4000/0/default.jpg",
+      "lisenssi": "Public Domain",
+      "lisenssiUrl": "https://www.nga.gov/artworks/free-images-and-open-access",
+      "attribuutio": "Veronese and Workshop, Rebecca at the Well, National Gallery of Art, Washington, Open Access / Public Domain, object 41697.",
+      "files": {
+        "gallery": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41697-gallery.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41697-gallery.jpg",
+          "sha256": "a1e85bfdea78901852754b64e21c95c838437747d4b12a9addb409dc7d8d3f6b",
+          "tavut": 3025351,
+          "leveys": 4000,
+          "korkeus": 2024,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:36.226Z"
+        },
+        "card": {
+          "url": "https://media.matkakirja.app/museo/renessanssi/maalaus/nga-41697-card.jpg",
+          "r2Key": "matkakirja/museo/renessanssi/maalaus/nga-41697-card.jpg",
+          "sha256": "e97931a22a569c47e64ae77e4ba4fb9a670317c5bdeda53f75fb67eb9b6e34a1",
+          "tavut": 519140,
+          "leveys": 1800,
+          "korkeus": 911,
+          "mime": "image/jpeg",
+          "colorSpace": "sRGB",
+          "readbackVerifiedAt": "2026-09-24T14:43:37.854Z"
+        }
+      },
+      "qa": {
+        "whole_artwork_visible": true,
+        "watermark": false,
+        "ai_generated": false,
+        "artist_death_over_70_years": true,
+        "visual_review": "passed contact sheet",
+        "technical_review": "passed"
+      },
+      "note": null
+    }
+  ],
+  "rejected": [
+    {
+      "source_id": "met-435643",
+      "title": "The Circumcision",
+      "reason": "Met source reproduction is monochrome despite the color painting; unsuitable for color Renaissance gallery."
+    }
+  ],
+  "notes": [
+    "The Italian titles are descriptive translations; exact museum catalog titles are preserved separately.",
+    "No image is upscaled. When a Met source is below 4000 px on the long side, the gallery file retains its original dimensions. NGA IIIF is requested at full region and bounded to 4000/1800 px.",
+    "No image is cropped or AI completed. The Met original downloads and NGA 4000px full-region source copies are preserved in source/.",
+    "NGA 41629 is attributed to Piero della Francesca, and NGA 41697 to Veronese and Workshop. These attribution caveats are preserved."
+  ]
+}
