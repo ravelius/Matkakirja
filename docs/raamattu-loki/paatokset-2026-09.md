@@ -4475,3 +4475,7 @@ security list-keychains näyttää vain matkakirja-testflight + System; Fablen p
 ## OMISTAJA klo 19.1x: DEVELOPER-TILI ON samireivinen@me.com = RCD77XPB7M; gmail F72JLS57C5 OLI VAIN XCODEN ILMAINEN PERSONAL TEAM (24.9.2026 klo 19.10)
 
 CI:n DEVELOPMENT_TEAM=$TEAM_ID ylikirjoittaa Unityn asetuksen → TestFlight-buildit ovat menneet RCD77XPB7M:llä; hotfix b9755e9 perutaan, oletus RCD77XPB7M kaikkiin käännöksiin. Build 10 -kaatumisten juurisyy: koodaus-avainnipussa paikallinen kehitysvarmenne FD3S699799 (RCD77XPB7M) + automaation API-varmenne samalle tiimille → Xcode valitsee paikallisen, ajuri ei pääse avaimeen. Korjaus ilman hakulistan vaihtoa: (a) set-key-partition-list tai (b) kehitysvarmenne omaan avainnippuun laitekäännöksen ajaksi; 2RX77QMLHA (gmail) poistetaan. Julkaisija ja Natiiviseppä ohjeistettu.
+
+## OMISTAJA klo 19.3x (KORTIT): VARMENNEKORJAUS A (set-key-partition-list login-avainnippuun, OMISTAJA AJAA) JA VANHAN gmail-KEHITYSVARMENTEEN 2RX77QMLHA POISTO (OMISTAJA AJAA) (24.9.2026 klo 19.13)
+
+Ei hakulistan vaihtoa jatkossa; build 11 viedään ilman kiertotietä kun omistaja on ajanut komennot. Natiiviseppä peruuttaa b9755e9:n build 10:n jälkeen (RCD77XPB7M kaikkialla). Karttasepällä ja Fablella pushit odottavat avainnippulistan palautusta (build 10 -ajo).
