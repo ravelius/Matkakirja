@@ -830,7 +830,8 @@ namespace Matkakirja.Natiivi
             R("Demokratiaindeksi", m.Demokratia, m.DemokratiaSija);
             R("Keskitulo", m.Keskitulo, m.KeskituloSija);
             if (!string.IsNullOrEmpty(m.Valtiomuoto)) rivit.Insert(0, ("Valtiomuoto 1873", m.Valtiomuoto));
-            if (rivit.Count == 0 && m.Tervehdykset.Count == 0) return;
+            // Ajankohtaiset otsikot maaosaston loppuun (web naytaMaaUutiset), myös ilman tunnuslukuja.
+            if (rivit.Count == 0 && m.Tervehdykset.Count == 0) { Uutiset.Piirra(s, m.Iso3); return; }
             var laatikko = Rakenne.El("mk-lehti__maaosasto", s, PickingMode.Ignore);
             foreach (var (nimi, arvo) in rivit)
             {
@@ -855,6 +856,7 @@ namespace Matkakirja.Natiivi
                 string terv = string.Join(" · ", m.Tervehdykset.Select(t => t.Teksti + (string.IsNullOrEmpty(t.Kieli) ? "" : " (" + t.Kieli + ")")));
                 Kirjasimet.Aseta(Rakenne.Teksti("Tervehdys: " + terv, "mk-lehti__tervehdys", laatikko), Kirjasin.LukuKursiivi);
             }
+            Uutiset.Piirra(laatikko, m.Iso3);
         }
 
         // --- kuvat ja teksti --------------------------------------------------------------------
