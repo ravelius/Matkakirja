@@ -115,7 +115,7 @@
   .seuraavat-kaista { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 14px; scroll-snap-type: x proximity; }
   .sk-kortti { scroll-snap-align: start; flex: 0 0 168px; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 10px; display: grid; gap: 6px; }
   .sk-numero { font: 12px "Special Elite", monospace; color: var(--seepia); }
-  .sk-kuva { aspect-ratio: 4/3; border-radius: 6px; background: var(--tausta, var(--paperi-tumma)); display: flex; align-items: center; justify-content: center; color: var(--vari, var(--muste-haalea)); }
+  .sk-kuva { position: relative; aspect-ratio: 4/3; border-radius: 6px; background: var(--tausta, var(--paperi-tumma)); display: flex; align-items: center; justify-content: center; color: var(--vari, var(--muste-haalea)); overflow: hidden; }
   .sk-kuva svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.6; }
   .sk-nimi { font-size: 13.5px; font-weight: 600; line-height: 1.25; }
   .sk-kaari { font-size: 11.5px; color: var(--muste-haalea); font-variant-numeric: tabular-nums; }
@@ -147,7 +147,7 @@
   .k-kuva-pieni { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .k-lahde { margin: 2px 0 0; font-size: 12px; color: var(--muste-haalea); }
   .k-lahde a { color: var(--sininen); }
-  .k-tila-piste { position: absolute; top: 8px; left: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--tilavari); box-shadow: 0 0 0 2px var(--paperi-kortti); }
+  .k-tila-piste { position: absolute; top: 8px; left: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--tilavari); box-shadow: 0 0 0 2px var(--paperi-kortti); z-index: 2; }
   .k-body { padding: 12px 14px 14px; display: grid; gap: 6px; }
   .k-ylarivi { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
   .k-tunnus { font: 11.5px "Special Elite", monospace; color: var(--seepia); }
@@ -164,7 +164,7 @@
   .k-pysakit span.lisaa { color: var(--muste-haalea); background: transparent; padding-left: 2px; }
   .k-tila-teksti { font: 11px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--tilavari); }
   .k-opitaan { font-size: 13px; font-style: italic; color: var(--muste-haalea); margin: 0; }
-  .k-pelikytkos { position: absolute; top: 8px; right: 8px; font: 10.5px "Special Elite", monospace; letter-spacing: .05em; background: var(--muste); color: var(--paperi); padding: 3px 8px; border-radius: 999px; }
+  .k-pelikytkos { position: absolute; top: 8px; right: 8px; font: 10.5px "Special Elite", monospace; letter-spacing: .05em; background: var(--muste); color: var(--paperi); padding: 3px 8px; border-radius: 999px; z-index: 2; max-width: 70%; }
   .k-tahdet { font-size: 12px; letter-spacing: 1px; color: var(--kulta); }
   .moottori-lohko { margin-bottom: 38px; }
   .moottori-lohko h3 { display: flex; align-items: center; gap: 8px; font-size: 20px; margin: 0 0 12px; }
@@ -226,7 +226,7 @@
   #esitys { position: fixed; inset: 0; z-index: 20; background: var(--paperi); display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; }
   body.esitys-paalla #esitys { display: flex; }
   body.esitys-paalla > .sivu, body.esitys-paalla .teemakytkin { display: none; }
-  #esitys .e-kuva { width: min(70vw, 640px); aspect-ratio: 4/3; border-radius: 14px; background: var(--tausta, var(--paperi-tumma)); color: var(--vari, var(--muste-haalea)); display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
+  #esitys .e-kuva { position: relative; overflow: hidden; width: min(70vw, 640px); aspect-ratio: 4/3; border-radius: 14px; background: var(--tausta, var(--paperi-tumma)); color: var(--vari, var(--muste-haalea)); display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
   #esitys .e-kuva svg { width: 90px; height: 90px; fill: none; stroke: currentColor; stroke-width: 1.2; opacity: .6; }
   #esitys .e-nimi { font-size: clamp(26px, 4vw, 42px); font-weight: 700; margin: 0 0 8px; }
   #esitys .e-kaari { font-family: "Special Elite", monospace; color: var(--muste-haalea); font-size: 15px; margin-bottom: 0; }
@@ -342,7 +342,7 @@ const LINSSIT = window.LINSSIKATALOGI.linssit;
 const MOOTTORIT_DATA = window.LINSSIKATALOGI.moottorit;
 
 const MANTEREET = ['Eurooppa', 'Aasia', 'Afrikka', 'Pohjois-Amerikka', 'Etelä-Amerikka', 'Oseania', 'Napa-alueet', 'Yleiset'];
-const MOOTTORIT_LINSSEISSA = ['aikajana', 'alue', 'virta', 'data'];
+const MOOTTORIT_LINSSEISSA = ['aikajana', 'alue', 'virta', 'data', 'esitys', 'pohjakartta', 'muu'];
 
 // SVG-ikonit yhtenäisellä 0 0 24 24 -ruudukolla, viiva currentColor.
 const IKONIT = {
@@ -350,17 +350,19 @@ const IKONIT = {
   alue: '<svg viewBox="0 0 24 24"><path d="M9 3 3 5.5v15L9 18l6 2.5 6-2.5v-15L15 5.5 9 3Z"/><path d="M9 3v15M15 5.5v15"/></svg>',
   virta: '<svg viewBox="0 0 24 24"><path d="M2 12c4-6 8 6 12 0s6-6 8 0"/><path d="M2 17c4-6 8 6 12 0s6-6 8 0" opacity=".5"/></svg>',
   data: '<svg viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20V14M22 20V8" stroke-linejoin="round"/></svg>',
-  esitysmoottori: '<svg viewBox="0 0 24 24"><path d="M3 4h18v13H3z"/><path d="M8 21h8M12 17v4"/></svg>',
-  pohjakartat: '<svg viewBox="0 0 24 24"><path d="M2 21h20M3 21V10M21 21V10M1.5 10 12 3.5 22.5 10"/><path d="M6.5 10v11M11 10v11M13 10v11M17.5 10v11"/></svg>',
+  esitys: '<svg viewBox="0 0 24 24"><path d="M3 4h18v13H3z"/><path d="M8 21h8M12 17v4"/></svg>',
+  pohjakartta: '<svg viewBox="0 0 24 24"><path d="M2 21h20M3 21V10M21 21V10M1.5 10 12 3.5 22.5 10"/><path d="M6.5 10v11M11 10v11M13 10v11M17.5 10v11"/></svg>',
+  muu: '<svg viewBox="0 0 24 24"><path d="M9 3v3.3a2 2 0 1 0 4 0V3h3.5a1.5 1.5 0 0 1 1.5 1.5V8h-1.5a2 2 0 1 0 0 4H18v4.5A1.5 1.5 0 0 1 16.5 18H13v-1.5a2 2 0 1 0-4 0V18H5.5A1.5 1.5 0 0 1 4 16.5V13h1.5a2 2 0 1 0 0-4H4V4.5A1.5 1.5 0 0 1 5.5 3H9Z"/></svg>',
 };
 
 const MOOTTORIVARIT = {
-  aikajana:       { nimi: 'Aikajana',       vari: 'var(--sininen)' },
-  alue:           { nimi: 'Alue',           vari: 'var(--terrakotta)' },
-  virta:          { nimi: 'Virta',          vari: 'var(--turkoosi)' },
-  data:           { nimi: 'Data',           vari: 'var(--violetti)' },
-  esitysmoottori: { nimi: 'Esitysmoottori', vari: 'var(--ruusu)' },
-  pohjakartat:    { nimi: 'Pohjakartat',    vari: 'var(--hiekka)' },
+  aikajana:    { nimi: 'Aikajana',    vari: 'var(--sininen)' },
+  alue:        { nimi: 'Alue',        vari: 'var(--terrakotta)' },
+  virta:       { nimi: 'Virta',       vari: 'var(--turkoosi)' },
+  data:        { nimi: 'Data',        vari: 'var(--violetti)' },
+  esitys:      { nimi: 'Esitys',      vari: 'var(--ruusu)' },
+  pohjakartta: { nimi: 'Pohjakartat', vari: 'var(--hiekka)' },
+  muu:         { nimi: 'Leikki',      vari: 'var(--vihrea)' },
 };
 
 const TILAT = {
@@ -373,6 +375,24 @@ const TILAT = {
 
 const AXIS_MIN = -3500;
 const AXIS_MAX = 2026;
+
+// Kuvaputken erä 1:n (posti/kuvatoimitus-linssikatalogi-era1-20260924.json) kuvatekstit ja
+// CC-lähdetiedot, joita linssikatalogi-data.js:n kuvat-kentän pelkät URL:t eivät sisällä.
+// h = havainnekuvan kuvateksti, c = aikalaiskuvan {cap, tek, nimi, vuo, lis, url}.
+const ERA1_KUVATEKSTIT = {"A2": {"h": "Kultaiset pisteet seuraavat kristinuskon leviämisen pysäkkejä Välimereltä Pohjois-Eurooppaan.", "c": {"cap": "Bukarestin Stavropoleos-kirkon vanha seinämaalaus esittää Nikaian kirkolliskokousta; kuva on myöhempi taiteellinen tulkinta vuoden 325 tapahtumasta.", "tek": "Kostisl (valokuva); 1700-luvun tuntematon maalari", "nimi": "Nikaian ensimmäinen kirkolliskokous, Stavropoleos-kirkon seinämaalaus", "vuo": "1700-luku; valokuva 2008", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:First_Council_of_Nicea-stavropoleos_church.JPG"}}, "A4": {"h": "Uskonpuhdistuksen keskukset syttyvät Keski-Euroopan pergamenttikartalle.", "c": {"cap": "Vuoden 1915 postikortti näyttää Wittenbergin linnankirkon, jonka 1517 teesit liittivät uskonpuhdistuksen historiaan.", "tek": "Brück & Sohn, Meißen", "nimi": "Schlosskirche und Schlosskaserne, Wittenberg (postikortti)", "vuo": "1915", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Wittenberg,_Lutherstadt,_Sachsen-Anhalt_-_Schlosskirche_und_Schlosskaserne_(Zeno_Ansichtskarten).jpg"}}, "B1": {"h": "Eurooppalaisten keksintöjen aikajana kulkee höyrykoneesta valokuvaukseen ja radioon.", "c": {"cap": "Vuoden 1860 mezzotinto kuvaa James Wattia höyrykoneen äärellä, myöhempänä tulkintana eurooppalaisen teollistumisen alkuvaiheesta.", "tek": "James Scott (kaiverrus), James Eckford Lauderin maalauksen mukaan", "nimi": "James Watt and the Steam Engine", "vuo": "1860", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:James_Watt_and_the_Steam_Engine_-_DPLA_-_4ce34483443e96928d1e5b2fb1866ff7.jpg"}}, "B2": {"h": "Tieteen varhaiset pysäkit yhdistyvät tähtitaivaan kaariin Euroopan kartalla.", "c": {"cap": "Jan Matejkon maalaus esittää Kopernikusta Fromborkissa tähtitieteen murroksen äärellä; näkymä on 1800-luvun tulkinta.", "tek": "Jan Matejko", "nimi": "Astronom Kopernik, czyli rozmowa z Bogiem (Astronomer Copernicus, or Conversations with God)", "vuo": "1872–1873 (Commonsin päiväys 1872; maalauksen signeeraus 19.2.1873)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Jan_Matejko-Astronomer_Copernicus-Conversation_with_God.jpg"}}, "B3": {"h": "Lääketieteen läpimurtojen solmut valaisevat Euroopan karttaa.", "c": {"cap": "Vuoden 1884 litografia esittää Edward Jennerin rokottamassa lasta; kyse on myöhemmästä historiallisesta tulkinnasta.", "tek": "Tuntematon litografi Eugène-Ernest Hillemacherin mukaan", "nimi": "A young Edward Jenner vaccinates an anxious looking child seated on its mother's lap", "vuo": "1884", "lis": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:A_young_Edward_Jenner_vaccinates_an_anxious_looking_child_se_Wellcome_V0018752.jpg"}}, "B7": {"h": "Vanha maailmankartta kietoutuu pallon pinnalle kartoituksen muuttuessa.", "c": {"cap": "Waldseemüllerin vuoden 1507 kartta näyttää aikansa käsityksen mantereista, ei nykyisen maantieteen tarkkaa kuvaa.", "tek": "Martin Waldseemüller", "nimi": "Universalis Cosmographia (Waldseemüllerin maailmankartta)", "vuo": "1507", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map.jpg"}}, "C7": {"h": "Ihmisen pitkät muuttoreitit haarautuvat Afrikasta eri mantereille."}, "E7": {"h": "Kolmiulotteinen taidemuseon sali avautuu teosten ja aikakausien läpi.", "c": {"cap": "Botticellin Venuksen syntymä on Firenzen renessanssin tunnettu teos Uffizin kokoelmissa.", "tek": "Sandro Botticelli", "nimi": "The Birth of Venus", "vuo": "noin 1485", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg"}}, "M2": {"h": "Rooman valtakunnan alue piirtyy Välimeren ympärille punaisena kerroksena.", "c": {"cap": "Claude Lorrainin etsaus näyttää Rooman forumin raunioita 1600-luvulla, kauan keisarikunnan päättymisen jälkeen.", "tek": "Claude Lorrain", "nimi": "Forum Romanum te Rome: Le Campo Vaccino", "vuo": "1636–1637", "lis": "CC0 1.0", "url": "https://commons.wikimedia.org/wiki/File:Forum_Romanum_te_Rome_Le_Campo_Vaccino,_RP-P-OB-5700.jpg"}}, "N1": {"h": "Napoleonin vaikutusalue ja sotareittien solmut levittäytyvät Euroopan kartalle.", "c": {"cap": "Jacques-Louis Davidin vuoden 1801 ratsastajamuotokuva rakentaa Napoleonista sankarikuvaa, eikä ole valokuva tapahtumasta.", "tek": "Jacques-Louis David", "nimi": "Napoleon Crossing the Alps (Charlottenburgin toinen versio)", "vuo": "toukokuu 1801", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Schloss_Charlottenburg.jpg"}}, "N2": {"h": "Ensimmäisen maailmansodan rintamalinjat näkyvät Euroopan hillityllä kartalla.", "c": {"cap": "John Warwick Brooken valokuva näyttää skotlantilaisia sotilaita reservihaudassa Sommen taistelun aikana marraskuussa 1916.", "tek": "John Warwick Brooke", "nimi": "Gordon Highlanders in a reserve trench, Bazentin-le-Petit (Battle of the Somme)", "vuo": "marraskuu 1916", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_the_Somme,_July-november_1916_Q4475.jpg"}}, "N3": {"h": "Toisen maailmansodan Euroopan ja Tyynenmeren rintamat hahmottuvat maailmankartalla.", "c": {"cap": "Robert Sargentin historiallisessa valokuvassa yhdysvaltalaissotilaat nousevat maihin Normandiassa 6. kesäkuuta 1944.", "tek": "Robert F. Sargent, U.S. Coast Guard", "nimi": "Into the Jaws of Death", "vuo": "6.6.1944", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_(6414569).jpg"}}, "O6": {"h": "Euroopan muuttuvat aluerajat näkyvät päällekkäisinä historiallisina karttakerroksina.", "c": {"cap": "Vuoden 1815 käsin väritetty etsaus esittää diplomaattien neuvottelua Wienin kongressissa Euroopan rajoista.", "tek": "Tuntematon hollantilainen etsaaja", "nimi": "Het Congres der Geallieerde Mogendhen te Weenen", "vuo": "1815", "lis": "CC0 1.0", "url": "https://commons.wikimedia.org/wiki/File:Congres_van_Wenen,_1815_Het_Congres_der_Geallieerde_Mogendhen_te_Weenen_(titel_op_object),_RP-P-1898-A-19819.jpg"}}, "R1": {"h": "Paloalueet syttyvät historiallisen karttapallon pintaan.", "c": {"cap": "NASA:n FIRMS-havainnot näyttävät aktiiviset palot maailman kartalla.", "tek": "NASA's Scientific Visualization Studio -", "nimi": "Current Active Fires from FIRMS (SVS5546 - 1 Main01 FIRMS global 1920x1080)", "vuo": "2 June 2025, 13:41:00 (upload date)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Current_Active_Fires_from_FIRMS_(SVS5546_-_1_Main01_FIRMS_global_1920x1080).png"}}, "R2": {"h": "Ilmakehän savuverho leviää tuulten mukana mantereelta toiselle.", "c": {"cap": "MODIS Terran vuosien 2007–2011 havaintojen keskiarvo näyttää ilmakehän aerosolien optisen paksuuden.", "tek": "Giorgiogp2", "nimi": "Modis Terra aerosol optical depth at 550nm, 2007–2011 average", "vuo": "2012", "lis": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Modis_aerosol_optical_depth.png"}}, "R3": {"h": "Säärintamat kulkevat isoisän ajan Atlantin ja Euroopan yllä.", "c": {"cap": "NOAA:n 20CRv3 rekonstruoi Kalifornian vuoden 1862 tulvasään paineen, lämpötilan ja sateen.", "tek": "NOAA Physical Sciences Laboratory / CIRES / DOE", "nimi": "NOAA-CIRES-DOE Twentieth Century Reanalysis V3: Great California Flood weather, 27 December 1861", "vuo": "vuosi ei ilmoitettu", "lis": "Public domain", "url": "https://psl.noaa.gov/data/20thC_Rean/"}}, "R4": {"h": "Vuoden 1873 laivareitit yhdistävät Atlantin ja Intian valtameren satamia."}, "R5": {"h": "Merireittien vanha ja uusi verkosto erottuvat kahdella karttakerroksella.", "c": {"cap": "Meriliikenteen reitit piirtyvät vaaleina viivoina maailman merille.", "tek": "Grolltech  (derived from  Hengl  (derived from B.S. Halpern))", "nimi": "Shipping routes red black", "vuo": "2012-03-19", "lis": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Shipping_routes_red_black.png"}}, "R7": {"h": "Sama yöpuolen karttapallo näyttää harvat vanhat ja tiheät nykyiset valot.", "c": {"cap": "NASA:n Black Marble näyttää Amerikan kaupunkien valot yöpuolen Maassa.", "tek": "NASA Earth Observatory", "nimi": "Black Marble Americas", "vuo": "between 18 April 2012 and 23 October 2012 date QS:P,+2012-00-00T00:00:00Z/9,P1319,+2012-04-18T00:00:00Z/11,P1326,+2012-10-23T00:00:00Z/11", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Black_Marble_Americas.jpg"}}, "R9": {"h": "Tähtitaivas ja tähtikuviot asettuvat isoisän matkakartan ylle.", "c": {"cap": "NASA:n TESS-havaintojen kooste näyttää tähtitaivaan himmeät ja kirkkaat vyöhykkeet.", "tek": "NASA's Scientific Visualization Studio - University of Maryland College Park/Jeanette Kazmierczak, eMITS/Scott Wiessinger", "nimi": "TESS Reveals Dazzling Night Sky (SVS14985 - TESS pc bin4 noplanets)", "vuo": "13 May 2026 (upload date)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:TESS_Reveals_Dazzling_Night_Sky_(SVS14985_-_TESS_pc_bin4_noplanets).jpg"}}, "R11": {"h": "Trooppisten myrskyjen kaarevat radat piirtyvät maailman merille.", "c": {"cap": "Tropiikin hirmumyrskyjen radat vuosilta 1950–2005 kiertävät maapallon valtameriä.", "tek": "Nilfanion", "nimi": "Global tropical cyclone tracks", "vuo": "1950–2005", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Global_tropical_cyclone_tracks.jpg"}}, "R12": {"h": "Maanjäristysten keskukset tihentyvät laattojen rajavyöhykkeille.", "c": {"cap": "USGS:n historialliset maanjäristykset paljastavat mannerlaattojen saumakohdat.", "tek": "United States Geological Survey", "nimi": "USGS Earthquake Catalog Service Map: Historical Seismicity (1900–2024)", "vuo": "2026 (palveluvienti; aineisto 1900–2024)", "lis": "Public domain", "url": "https://earthquake.usgs.gov/arcgis/rest/services/eq/EQ_Catalog/MapServer"}}, "R13": {"h": "Tulivuorten pisteet ja vaaleat rikkidioksidivanat seuraavat vulkaanisia kaaria.", "c": {"cap": "La Palman tulivuoren rikkidioksidipilvi erottuu NASA:n Aura-satelliitin kartassa.", "tek": "Joshua Stevens", "nimi": "Sulfur Skies over La Palma", "vuo": "2021", "lis": "Public domain", "url": "https://science.nasa.gov/earth/earth-observatory/sulfur-skies-over-la-palma-148978/"}}, "R14": {"h": "Meren lämpötilakerros hehkuu lämpimin ja viilein vyöhykkein.", "c": {"cap": "NOAA:n meriveden lämpötilapoikkeamat näyttävät lämpimän veden Kalifornian rannikolla.", "tek": "NASA Earth Observatory image by Lauren Dauphin, and sea surface temperature data from Coral Reef Watch. Story by Kathryn Hansen.", "nimi": "Lajolla crw 2018214 lrg", "vuo": "2018-08-02", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Lajolla_crw_2018214_lrg.jpg"}}, "R15": {"h": "Ilmastovyöhykkeet piirtyvät mantereille ja niiden rajat siirtyvät ajassa.", "c": {"cap": "Köppen–Geigerin kartta jakaa maailman ilmastovyöhykkeisiin vuosien 1991–2020 aineistolla.", "tek": "Beck, H.E., McVicar, T.R., Vergopolan, N., Alexis, B., Lutsko, N.J., Dufour, A., Zeng, Z., Jian, X., van Dijk, A.I.J.M., Miralles, D.G.", "nimi": "Koppen-Geiger Map v2 World 1991–2020", "vuo": "2024-03-19", "lis": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg"}}, "R16": {"h": "Viljelyalat levittäytyvät jokilaaksoista yli maanosien.", "c": {"cap": "MODIS-satelliitin maanpeitekartassa viljelymaat ovat yksi erikseen luokiteltu peiteluokka.", "tek": "Ivan Shmakov  ( talk )", "nimi": "MCD12C1 A2003001 051 2012264185451 LCT-1", "vuo": "2014-03-27", "lis": "CC0", "url": "https://commons.wikimedia.org/wiki/File:MCD12C1_A2003001_051_2012264185451_LCT-1.png"}}, "R17": {"h": "Valopisteiden tihentymät näyttävät ihmisten jakautumisen maapallolla.", "c": {"cap": "GHSL-aineistosta tehty kartta näyttää nykyisen väestötiheyden maailmanlaajuisesti.", "tek": "MrThe1And0nly", "nimi": "WorldPopulationDensity", "vuo": "2026-04-25", "lis": "CC0", "url": "https://commons.wikimedia.org/wiki/File:WorldPopulationDensity.png"}}, "R18": {"h": "Kaupunkikeskusten kasvavat kehät leviävät kartalla ympäröivään maaseutuun.", "c": {"cap": "DLR:n satelliittiaineisto näyttää Kairon ja Shanghain asutuksen laajenemisen vuosien 1985 ja 2015 välillä.", "tek": "German Aerospace Center (DLR), Earth Observation Center; nelikentän kooste Matkakirjan kuvaputki", "nimi": "World Settlement Footprint Evolution: Cairo and Shanghai, 1985 and 2015", "vuo": "1985 ja 2015 (aineiston havaintovuodet); 2026 (nelikentän kooste)", "lis": "CC BY 4.0", "url": "https://geoservice.dlr.de/web/maps/eoc:wsfevolution"}}, "R20": {"h": "Vuoden 1873 kauppareitit yhdistävät satamia purje- ja höyrylaivojen aikaan."}};
+
+// Normalisoi tila-arvon perustyyppiin (esim. "seuraava (data)" → "seuraava").
+function tilaAvain(tila) {
+  if (!tila) return 'idea';
+  if (tila.startsWith('idea')) return 'idea';
+  if (tila.startsWith('seuraava')) return 'seuraava';
+  return tila;
+}
+
+// Kuvaputken tiedostonimikäytäntö: <id>-havainne.jpg + <id>-havainne-480.jpg (sama cc:lle).
+function url480(url) {
+  return url.replace(/(\.[a-z]+)$/i, '-480$1');
+}
 
 function aikapalkkiHTML(l) {
   const vari = MOOTTORIVARIT[l.moottori]?.vari || 'var(--seepia)';
@@ -390,32 +410,36 @@ function aikapalkkiHTML(l) {
 }
 
 // --- Luvut ---
-const pelissaNytIdt = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'B1', 'C7'];
 const lahdeSetti = new Set();
-LINSSIT.filter((l) => l.moottori === 'data').forEach((l) => (l.aineisto || l.pysakit || []).forEach((s) => lahdeSetti.add(s.toLowerCase())));
+LINSSIT.filter((l) => l.moottori === 'data' && l.aineisto).forEach((l) => l.aineisto.split(',').map((s) => s.trim()).filter(Boolean).forEach((s) => lahdeSetti.add(s.toLowerCase())));
 
 document.getElementById('luvut').innerHTML = [
   ['linssiä', LINSSIT.length],
-  ['pelissä nyt', LINSSIT.filter((l) => l.tila === 'valmis' || l.tila === 'rakenteilla').length],
-  ['seuraavaksi', LINSSIT.filter((l) => l.tila === 'seuraava').length],
+  ['pelissä nyt', LINSSIT.filter((l) => l.pelissa).length],
+  ['seuraavaksi', LINSSIT.filter((l) => tilaAvain(l.tila) === 'seuraava').length],
   ['aineistolähteitä', lahdeSetti.size],
 ].map(([nimi, luku]) => `<div><b>${luku}</b>${nimi}</div>`).join('');
 
-// --- Moottorikortit (kuusi, aineisto linssikatalogi-data.js:stä) ---
+// --- Moottorikortit (linssikatalogi-data.js:stä) ---
 document.getElementById('moottorit').innerHTML = MOOTTORIT_DATA.map((m) => {
-  const vari = MOOTTORIVARIT[m.moottori]?.vari || 'var(--seepia)';
+  const vari = MOOTTORIVARIT[m.avain]?.vari || 'var(--seepia)';
+  const rakennettu = !/^ei\b/i.test((m.rakennettu || '').trim());
   return `<div class="moottori">
-    <div class="ikoni" style="--vari:${vari}">${IKONIT[m.moottori] || ''}</div>
+    <div class="ikoni" style="--vari:${vari}">${IKONIT[m.avain] || ''}</div>
     <b>${m.nimi}</b>
-    <span class="badge ${m.rakennettu ? 'rakennettu' : 'suunnitteilla'}">${m.rakennettu ? 'rakennettu' : 'suunnitteilla'}</span>
+    <span class="badge ${rakennettu ? 'rakennettu' : 'suunnitteilla'}" title="${(m.rakennettu || '').replace(/"/g, '&quot;')}">${rakennettu ? 'rakennettu' : 'suunnitteilla'}</span>
     <p>${m.kuvaus}</p>
     ${m.pilotti ? `<p class="mono" style="font-size:11px">Pilotti: ${m.pilotti}</p>` : ''}
   </div>`;
 }).join('');
 
-// --- Pelissä nyt ---
-document.getElementById('pelissa-nyt').innerHTML = pelissaNytIdt.map((id) => LINSSIT.find((x) => x.id === id)).filter(Boolean).map((l) => {
-  const t = TILAT[l.tila] || TILAT.idea;
+// --- Pelissä nyt (data-vetoinen: kentän pelissa=true linssit) ---
+const pelissaNytLista = LINSSIT.filter((l) => l.pelissa).sort((a, b) => {
+  const jarjesta = (id) => id.startsWith('X') ? parseInt(id.slice(1), 10) : 100 + id.charCodeAt(0);
+  return jarjesta(a.id) - jarjesta(b.id);
+});
+document.getElementById('pelissa-nyt').innerHTML = pelissaNytLista.map((l) => {
+  const t = TILAT[tilaAvain(l.tila)] || TILAT.idea;
   return `<div class="pn-kortti">
     <div class="pn-kuva">
       <span class="tagi">${t.nimi.toUpperCase()}</span>
@@ -435,7 +459,7 @@ document.getElementById('seuraavat').innerHTML = seuraavatJarjestyksessa.map((l)
   const havainne = l.kuvat && l.kuvat.havainne;
   return `<div class="sk-kortti">
     <div class="sk-numero mono">#${l.jarjestys}</div>
-    <div class="sk-kuva" style="--vari:${t.vari}">${havainne ? `<img src="${havainne.url480}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px">` : IKONIT[l.moottori]}</div>
+    <div class="sk-kuva" style="--vari:${t.vari}">${IKONIT[l.moottori]}${havainne ? `<img src="${url480(havainne)}" alt="" loading="lazy" onerror="this.remove()" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:6px">` : ''}</div>
     <div class="sk-nimi">${l.nimi}</div>
     <div class="sk-kaari">${l.kaari}</div>
   </div>`;
@@ -447,23 +471,21 @@ function tahdetHTML(n) {
   return `<span class="k-tahdet" title="1873-sidos">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
 }
 function korttiHTML(l) {
-  const t = TILAT[l.tila] || TILAT.idea;
-  const ty = MOOTTORIVARIT[l.moottori];
+  const t = TILAT[tilaAvain(l.tila)] || TILAT.idea;
+  const ty = MOOTTORIVARIT[l.moottori] || { vari: 'var(--seepia)' };
   const pysakit = l.pysakit || [];
   const nayta = pysakit.slice(0, 6);
   const loput = pysakit.length - nayta.length;
-  const pysakkiOtsikko = l.moottori === 'data' ? 'Aineistolähteet' : 'Pysäkit';
-  const pysakkiLahde = l.aineisto || pysakit;
-  const havainne = l.kuvat && l.kuvat.havainne;
-  const cc = l.kuvat && l.kuvat.cc;
+  const havainneUrl = l.kuvat && l.kuvat.havainne;
+  const ccUrl = l.kuvat && l.kuvat.cc;
+  const tekstit = ERA1_KUVATEKSTIT[l.id];
   return `
     <div class="k-kuva" style="--vari:${ty.vari}">
       <div class="k-tila-piste" style="--tilavari:${t.vari}" title="${t.nimi}"></div>
       ${l.pelikytkos ? `<span class="k-pelikytkos">${l.pelikytkos}</span>` : ''}
-      ${havainne
-        ? `<img class="k-kuva-pieni" src="${havainne.url480}" data-iso="${havainne.url}" alt="${havainne.caption.replace(/"/g, '&quot;')}" loading="lazy">`
-        : IKONIT[l.moottori]}
-      ${cc ? `<img class="k-cc" src="${cc.url480}" data-iso="${cc.url}" alt="" loading="lazy" title="${(cc.tekija + ' — ' + cc.lisenssi).replace(/"/g, '&quot;')}">` : ''}
+      ${IKONIT[l.moottori] || ''}
+      ${havainneUrl ? `<img class="k-kuva-pieni" src="${url480(havainneUrl)}" data-iso="${havainneUrl}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+      ${ccUrl ? `<img class="k-cc" src="${url480(ccUrl)}" data-iso="${ccUrl}" alt="" loading="lazy" onerror="this.remove()" title="${tekstit && tekstit.c ? (tekstit.c.tek + ' — ' + tekstit.c.lis).replace(/"/g, '&quot;') : 'aikalaiskuva'}">` : ''}
     </div>
     <div class="k-body">
       <div class="k-ylarivi">
@@ -482,13 +504,14 @@ function korttiHTML(l) {
     </div>
     <div class="k-lisatiedot">
       <div class="sarake">
-        <h4>${pysakkiOtsikko} (kaikki)</h4>
-        <p class="pysakit-koko">${pysakkiLahde.join(' · ')}</p>
+        <h4>Pysäkit (kaikki)</h4>
+        <p class="pysakit-koko">${pysakit.join(' · ') || '—'}</p>
+        ${l.aineisto ? `<div><h4>Aineisto</h4><p class="huom-teksti">${l.aineisto}</p></div>` : ''}
         ${l.huom ? `<div><h4>Huomio</h4><p class="huom-teksti">${l.huom}</p></div>` : ''}
       </div>
       <div class="sarake">
-        ${havainne ? `<div><h4>Havainnekuva</h4><p class="huom-teksti">${havainne.caption}</p></div>` : ''}
-        ${cc ? `<div><h4>Aikalaiskuva</h4><p class="huom-teksti">${cc.caption}</p><p class="k-lahde">${cc.tekija} · ${cc.nimi} (${cc.vuosi}) · ${cc.lisenssi} · <a href="${cc.lahdeUrl}" target="_blank" rel="noopener">lähde</a></p></div>` : ''}
+        ${tekstit && tekstit.h ? `<div><h4>Havainnekuva</h4><p class="huom-teksti">${tekstit.h}</p></div>` : ''}
+        ${tekstit && tekstit.c ? `<div><h4>Aikalaiskuva</h4><p class="huom-teksti">${tekstit.c.cap}</p><p class="k-lahde">${tekstit.c.tek} · ${tekstit.c.nimi} (${tekstit.c.vuo}) · ${tekstit.c.lis} · <a href="${tekstit.c.url}" target="_blank" rel="noopener">lähde</a></p></div>` : ''}
         <button type="button" class="k-sulje">Sulje</button>
       </div>
     </div>`;
@@ -510,7 +533,7 @@ for (const moottori of MOOTTORIT_LINSSEISSA) {
     d.className = 'kortti';
     d.dataset.id = l.id;
     d.dataset.moottori = l.moottori;
-    d.dataset.tila = l.tila.startsWith('idea') ? 'idea' : l.tila;
+    d.dataset.tila = tilaAvain(l.tila);
     d.dataset.manner = l.manner;
     d.dataset.haku = `${l.nimi} ${l.alue} ${(l.pysakit || []).join(' ')} ${l.id}`.toLowerCase();
     if (l.alkuvuosi != null) { d.dataset.alku = l.alkuvuosi; d.dataset.loppu = l.loppuvuosi; }
@@ -545,7 +568,7 @@ let aikaMax = AXIS_MAX;
 function lippurivi(kohde, avaimet, nimikartta, aktiiviSetti) {
   const juuri = document.getElementById(kohde);
   juuri.innerHTML = avaimet.map((a) => {
-    const maara = LINSSIT.filter((l) => (kohde === 'mannersuodatin' ? l.manner === a : (l.tila.startsWith('idea') ? 'idea' : l.tila) === a)).length;
+    const maara = LINSSIT.filter((l) => (kohde === 'mannersuodatin' ? l.manner === a : tilaAvain(l.tila) === a)).length;
     return `<button type="button" class="lippu" data-avain="${a}" aria-pressed="false">${nimikartta[a]?.nimi || a} (${maara})</button>`;
   }).join('');
   juuri.addEventListener('click', (ev) => {
@@ -610,7 +633,7 @@ const tiekarttaJuuri = document.getElementById('tiekartta');
 const TILA_JARJESTYS = ['valmis', 'rakenteilla', 'seuraava', 'jonossa', 'idea'];
 tiekarttaJuuri.innerHTML = TILA_JARJESTYS.map((tila) => {
   const t = TILAT[tila];
-  const linssit = LINSSIT.filter((l) => (l.tila.startsWith('idea') ? 'idea' : l.tila) === tila);
+  const linssit = LINSSIT.filter((l) => tilaAvain(l.tila) === tila);
   return `<div class="tk-sarake">
     <div class="tk-otsikko"><span class="tk-piste" style="--vari:${t.vari}"></span>${t.nimi}<span class="tk-maara">${linssit.length}</span></div>
     ${linssit.map((l) => `<div class="tk-kortti" data-id="${l.id}"><b>${l.nimi}</b><span>${l.id} · ${l.manner}</span></div>`).join('')}
@@ -637,18 +660,17 @@ function nayttaEsitys() {
   const lista = esitysLista();
   esitysIndeksi = ((esitysIndeksi % lista.length) + lista.length) % lista.length;
   const l = LINSSIT.find((x) => x.id === lista[esitysIndeksi]);
-  const ty = MOOTTORIVARIT[l.moottori];
-  const havainne = l.kuvat && l.kuvat.havainne;
+  const ty = MOOTTORIVARIT[l.moottori] || { vari: 'var(--seepia)' };
+  const havainneUrl = l.kuvat && l.kuvat.havainne;
   document.getElementById('e-kuva').style.setProperty('--vari', ty.vari);
-  document.getElementById('e-kuva').innerHTML = havainne
-    ? `<img src="${havainne.url}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:14px">`
-    : IKONIT[l.moottori];
+  document.getElementById('e-kuva').innerHTML = `${IKONIT[l.moottori] || ''}${havainneUrl ? `<img src="${havainneUrl}" alt="" onerror="this.remove()" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px">` : ''}`;
   document.getElementById('e-nimi').textContent = l.nimi;
   document.getElementById('e-kaari').textContent = `${l.alue} · ${l.kaari}`;
   document.getElementById('e-opitaan').textContent = l.mitaOpitaan || '';
-  const cc = l.kuvat && l.kuvat.cc;
-  document.getElementById('e-cc').innerHTML = cc
-    ? `<img src="${cc.url480}" alt=""><span>${cc.tekija} · ${cc.lisenssi} · <a href="${cc.lahdeUrl}" target="_blank" rel="noopener">lähde</a></span>`
+  const ccUrl = l.kuvat && l.kuvat.cc;
+  const tekstit = ERA1_KUVATEKSTIT[l.id];
+  document.getElementById('e-cc').innerHTML = (ccUrl && tekstit && tekstit.c)
+    ? `<img src="${url480(ccUrl)}" alt="" onerror="this.remove()"><span>${tekstit.c.tek} · ${tekstit.c.lis} · <a href="${tekstit.c.url}" target="_blank" rel="noopener">lähde</a></span>`
     : '';
   document.getElementById('e-laskuri').textContent = `${esitysIndeksi + 1} / ${lista.length}`;
 }
