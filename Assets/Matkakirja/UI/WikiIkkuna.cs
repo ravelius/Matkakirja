@@ -318,13 +318,17 @@ namespace Matkakirja.Natiivi
     public static class WikiArtikkelit
     {
         static readonly string[] Moduulit = { "africa", "europe", "asia", "northamerica", "southamerica", "oceania" };
-        static Dictionary<string, string> artikkelit;
+        static Dictionary<string, string> artikkelit, introt;
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
 
         /// <summary>Artikkelin teksti (artikkeli ?? teksti) wiki-otsikolla, tai null.</summary>
         public static string Hae(string otsikko) =>
             otsikko != null && artikkelit != null && artikkelit.TryGetValue(otsikko, out var t) ? t : null;
+
+        /// <summary>Artikkelin lyhyt esittely (web ARTIKKELIT[x].intro, maalehden pääkirjoitus), tai null.</summary>
+        public static string Intro(string otsikko) =>
+            otsikko != null && introt != null && introt.TryGetValue(otsikko, out var t) ? t : null;
 
         public static void Lataa(Action valmis)
         {
@@ -338,6 +342,7 @@ namespace Matkakirja.Natiivi
         static IEnumerator HaeKaikki()
         {
             var tulos = new Dictionary<string, string>();
+            var introTulos = new Dictionary<string, string>();
             foreach (var m in Moduulit)
             {
                 string json = null;
@@ -357,11 +362,13 @@ namespace Matkakirja.Natiivi
                             var a = Rakenne.Olio(kv.Value);
                             string t = MiniJson.Teksti(a, "artikkeli") ?? MiniJson.Teksti(a, "teksti");
                             if (!string.IsNullOrEmpty(t)) tulos[kv.Key] = t; // myöhempi voittaa kuten spread
+                            if (MiniJson.Teksti(a, "intro") is string intro && intro.Length > 0) introTulos[kv.Key] = intro;
                         }
                     }
                 }
                 catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui artikkelit " + m + ": " + e.Message); }
             }
+            introt = introTulos;
             artikkelit = tulos;
             haussa = false;
             var kutsut = odottajat.ToArray();

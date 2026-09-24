@@ -35,6 +35,15 @@ namespace Matkakirja.Natiivi
         // Merkit, joita iOS:n American Typewriter / Iowan Old Style eivät sisällä (◈ ▸ ⌄ ⏸ ▶):
         // tekstinä ne näkyisivät laatikkoina, joten ne piirretään viivaikoneina.
         public const string Aarremerkki = "<path d=\"M12 3 21 12 12 21 3 12z\"/><path d=\"M12 8.2 15.8 12 12 15.8 8.2 12z\" fill=\"currentColor\"/>";
+        // js/lehti.js avaaSisallysvalikko: "Palaa kartalle" -napin nuoli.
+        public const string Paluu = "<path d=\"M13.5 5.5 7 12l6.5 6.5\"/><path d=\"M7 12h10.5\"/>";
+
+        // js/maalehti.js naytaMaaTunnusluvut IKONIT (15 × 15 viewBox: SvgIkoni.Ruutu = 15).
+        public const string TunnusVaki = "<circle cx=\"7.3\" cy=\"4.1\" r=\"2.7\"/><path d=\"M2 13.4c.7-3.4 2.7-5.1 5.3-5.1s4.6 1.7 5.3 5.1\"/>";
+        public const string TunnusAla = "<rect x=\"1\" y=\"1\" width=\"12.6\" height=\"12.6\" rx=\"1.8\"/><path d=\"M1 9.4l3.4-3 2.6 2.2 3.2-3.6 3.4 2.6\"/>";
+        public const string TunnusVaaka = "<path d=\"M7.3 1.8v11.4M3.6 13.2h7.4M2.4 4.2h9.8\"/><path d=\"M2.4 4.2 1 7.9a2.2 2.2 0 0 0 2.8 0zM12.2 4.2l-1.4 3.7a2.2 2.2 0 0 0 2.8 0z\"/>";
+        public const string TunnusRaha = "<circle cx=\"7.3\" cy=\"7.5\" r=\"5.9\"/><path d=\"M7.3 4.3v6.4M5.5 6.2c0-.9.8-1.6 1.8-1.6s1.8.65 1.8 1.5c0 1.9-3.6 1.05-3.6 2.95 0 .85.8 1.5 1.8 1.5s1.8-.7 1.8-1.6\"/>";
+
         public const string NuoliOikea = "<path d=\"M9 5.5 15.5 12 9 18.5\"/>";
         public const string NuoliAlas = "<path d=\"M5.5 9 12 15.5 18.5 9\"/>";
         public const string Tauko = "<path d=\"M8.5 5v14M15.5 5v14\"/>";
