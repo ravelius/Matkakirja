@@ -4,9 +4,11 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
-  LAATTA, julisteenLeveysvali, laskeLaatta, reliefinKansio, reliefinLuettelo, rivinLeveysaste,
+  LAATTA, RELIEFIN_TAYTE, RELIEFIN_VALI, julisteenLeveysvali, laskeLaatta, reliefinKansio, reliefinLuettelo,
+  rivinLeveysaste,
 } from '../tools/tee-pallolaatat.mjs';
 
 const ARKKI = { x: 0, y: -1046.3149255312064, w: 12000, h: 7307.715927310571 };
@@ -37,10 +39,8 @@ test('reliefin luettelo: pohjan geometria, reliefin tasot, ei kehystä eikä ker
   assert.deepEqual(l.rajaus, POHJA.rajaus);
   assert.equal(l.viivataso, undefined);
   assert.equal(l.tasot[2].pikseliaPerYksikko, (675 * 4) / 12000);
-  // Ilman alakehystä etelä on rajauksen alareuna (66° S), ei 61,5° S.
-  const v = julisteenLeveysvali(l);
-  assert.ok(Math.abs(v.pohjoinen - 84) < 0.01, v.pohjoinen);
-  assert.ok(Math.abs(v.etela + 66) < 0.01, v.etela);
+  // Väli on reliefin kattavuus, ei julisteen rajaus kehyksineen (61,5° S).
+  assert.deepEqual(julisteenLeveysvali(l), RELIEFIN_VALI);
   assert.ok(julisteenLeveysvali(POHJA).etela > -62);
   assert.equal(reliefinKansio('20260920'), 'matkakirja/reliefipyramidi/20260920/pallo/');
 });
@@ -49,7 +49,7 @@ test('reliefin luettelo: eri arkki on virhe', () => {
   assert.throws(() => reliefinLuettelo(POHJA, { ...RELIEF, arkki: { ...ARKKI, y: 0 } }, 'x'), /arkki/);
 });
 
-test('reliefin laatta: kartan ulkopuoli jatkaa reunan sävyä, ei pergamentin merta', async () => {
+test('reliefin laatta: kartan ulkopuoli on reliefin täytesävyä, ei pergamentin merta', async () => {
   const SININEN = [10, 60, 200];
   const lukija = {
     varmista: async () => {},
@@ -62,10 +62,56 @@ test('reliefin laatta: kartan ulkopuoli jatkaa reunan sävyä, ei pergamentin me
   const rivi = 2; // 85° N
   assert.ok(rivinLeveysaste(3, 0, rivi) > 84);
   const o = (rivi * LAATTA + 100) * 3;
-  assert.deepEqual([...relief.subarray(o, o + 3)], SININEN);
+  assert.deepEqual([...relief.subarray(o, o + 3)], RELIEFIN_TAYTE);
   // Ilman reliefiä kylläinen sininen ei kelpaa merisävyksi → yleissävy.
   assert.deepEqual([...pohja.subarray(o, o + 3)], [1, 2, 3]);
   // Kartan sisällä molemmat lukevat lähdettä.
   const sisa = (200 * LAATTA + 100) * 3;
   assert.deepEqual([...relief.subarray(sisa, sisa + 3)], SININEN);
+});
+
+test('kylläisyys: CSS saturate -matriisi, harmaa säilyy, oma kansio', async () => {
+  const { kyllaista, reliefinKansio: kansio } = await import('../tools/tee-pallolaatat.mjs');
+  const b = Buffer.from([200, 100, 50, 128, 128, 128, 0, 0, 0]);
+  kyllaista(b, 0.8);
+  // Selaimen saturate(0.8) samoille arvoille (feColorMatrix, sRGB).
+  assert.deepEqual([...b], [184, 104, 64, 128, 128, 128, 0, 0, 0]);
+  assert.deepEqual([...kyllaista(Buffer.from([10, 20, 30]), 1)], [10, 20, 30]);
+  assert.equal(kansio('20260920', 0.8), 'matkakirja/reliefipyramidi/20260920/pallo-k08/');
+  assert.equal(kansio('20260920'), 'matkakirja/reliefipyramidi/20260920/pallo/');
+});
+
+test('--ilman-viivoja: luettelossa ei viivatasoa, vaatii tunnisteen', () => {
+  const src = readFileSync(new URL('../tools/tee-pallolaatat.mjs', import.meta.url), 'utf8');
+  assert.match(src, /--ilman-viivoja vaatii oman --tunniste-lipun/);
+  assert.match(src, /luettelo = \{ \.\.\.luettelo, viivataso: null \}/);
+});
+
+test('väritaso pallolle: luettelo ja kansio', async () => {
+  const { varitasonLuettelo, varitasonPallokansio } = await import('../tools/tee-pallolaatat.mjs');
+  const pohja = { ...POHJA, viivataso: { versio: 'v' }, varitasot: { FRA: { versio: '2026-09-14b-tasoitus', maa: 'FRA', maaPolussa: true, tasot: [4, 5, 6, 7, 8], alue: { lon0: -11, lon1: 16, lat0: 30, lat1: 59 } } } };
+  const l = varitasonLuettelo(pohja, 'FRA');
+  assert.equal(l.versio, '2026-09-14b-tasoitus/vari/FRA');
+  assert.equal(l.viivataso, null);
+  assert.equal(l.vari.maa, 'FRA');
+  assert.throws(() => varitasonLuettelo(pohja, 'SWE'), /ei väritasoa/);
+  assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA'), 'julisteet/pallo/vari/2026-09-14b-tasoitus/FRA/');
+  assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA', 'k2'), 'julisteet/pallo/vari/2026-09-14b-tasoitus-k2/FRA/');
+});
+
+test('väritaso: maan läpinäkyvä sisäosa säilyy, vain puuttuva laatta ja alueen ulkopuoli kermaksi', async () => {
+  const { laskeVariLaatta, varitasonLuettelo, VARIN_ULKOPUOLI } = await import('../tools/tee-pallolaatat.mjs');
+  const pohja = { ...POHJA, varitasot: { FRA: { versio: 'v', maa: 'FRA', maaPolussa: true, tasot: [2], alue: { lon0: -5, lon1: 10, lat0: 40, lat1: 52 } } } };
+  const l = varitasonLuettelo(pohja, 'FRA');
+  l.tasot = RELIEF.tasot.map((t) => ({ ...t, pikseliaPerYksikko: t.leveys / 12000 }));
+  // Lähde: läpinäkyvä (maan sisäosa) tai puuttuva, sarakkeen mukaan.
+  const lukija = {
+    varmista: async () => {},
+    pikseliRGBA: (z, px, py, ulos, o) => { if (px % 2 < 1) return false; ulos[o] = 0; ulos[o + 1] = 0; ulos[o + 2] = 0; ulos[o + 3] = 0; return true; },
+  };
+  const b = await laskeVariLaatta(l, lukija, 3, 4, 2); // Z3 x4 y2 ≈ lon 0…45, lat 41…66
+  let lapi = 0; let kerma = 0;
+  for (let i = 0; i < b.length; i += 4) { if (b[i + 3] === 0) lapi += 1; else if (b[i + 3] === VARIN_ULKOPUOLI[3]) kerma += 1; }
+  assert.ok(lapi > 0, 'maan läpinäkyvä sisäosa säilyy');
+  assert.ok(kerma > 0, 'alueen ulkopuoli ja puuttuva laatta kermana');
 });

@@ -3559,3 +3559,12 @@ Fable: Raamatun NATIIVIN iPHONE-ASETTELU päivitetty (Liiku läpinäkyvä; kuvie
 ## DATALAHTEIDEN SELVITYS VALMIS (docs/raportit/datalahteet-linsseille-20260924.md, OPUS-AGENTTI): 145 LAHDETTA 19 AIHEALUEELTA, LISENSSIT TARKISTETTU 24.9.; LINSSIKATALOGIIN OSA R (35 DATALINSSI-IDEAA, md + html, e4296c6cd); TOTEUTUSJARJESTYS: MAAPALLON TILA → LAIVAT 1873 (ICOADS) → YON VALOT → PALOT JA SAVU (FIRMS/GIBS, CAMS TILILLA) → MYRSKYT → JARISTYKSET/TULIVUORET → VAESTO (HYDE) → KAUPPAVIRRAT 1873 (RICardo) → ISOISAN SAA JA TAIVAS (20CRv3, HYG) → LAMPENEVA MERI (ERSST); LOYDOT: NOAA STAR MERENPINTA ILMAN TUNNUSTA (TAYTTAA MAAPALLON TILAN AUKON), VUOSI 1873 LOYTYY DATANA (ICOADS, 20CRv3, ERSST, RICardo), COPERNICUS CC BY 4.0 (TILI); EI AVOIMIA: BERKELEY EARTH, FALCHI, CShapes, GVP, WHO, UNESCO-LISTA, WDPA — KAIKILLE AVOIN VAIHTOEHTO; OMISTAJALLE KORTTI: ILMAISET DATATILIT, NC-LISENSSIT, JAKOEHTO (24.9.2026 klo 11.24)
 
 Fable: toteutus vasta pariteetin ja build 6 -kokeilun jälkeen (Raamattu MAAPALLON TILA). Artefaktiversio päivitetään Julkaisijan tilillä PR:n mergen jälkeen.
+
+
+## TILA: Natiiviseppä luovutus 24.9. ilta (24.9.2026 klo 15.55)
+
+Natiiviseppä luovutti klo 15.54 (konteksti 70 %): proto-master 9a5618b = build 9 viennissä; build 10 -jono ja WEB ON MALLI -merge-portti: docs/raportit/viesti-natiiviseppa-luovutus-20260924-ilta.md.
+
+## TILA: Julkaisijan luovutus 24.9. ilta (24.9.2026 klo 19.32)
+
+Julkaisija luovutti klo 19.3x: TestFlight buildit 6–10 sisäisessä ryhmässä (build 10 = 202609241607, proto b9755e9); build 11:stä versio 1.0.<ordinaali> (#3107), vienti -nographics (#3071), Unity-tarkistus omalle käyttäjälle (#3110), ei hakulistan vaihtoa; web-jono ja savukeuusinnat kesken: docs/raportit/viesti-julkaisija-luovutus-20260924-ilta.md.

@@ -942,8 +942,9 @@ test('skeema 1.15: lehdet natiiville', async () => {
   assert.equal(lontoo.menovinkitMaalta, 'GBR');
   assert.equal(lontoo.sivut.at(-1), 'menovinkit');
   // Elämää: litteät nostot yhtenä kappaleena, kuten webin vanha piirto.
+  // Lajia ei vaadita: kun viimeisetkin Elämää-kaupungit saavat oman lehden
+  // (N4: kongo, sahara, madagaskar), niitä on 0. Muoto tarkistetaan, jos on.
   const elama = [...kl.values()].filter((a) => a.laji === 'elama');
-  assert.ok(elama.length > 0);
   for (const a of elama) {
     assert.equal(a.kansi, null);
     assert.deepEqual(a.aiheet.map((x) => x.id), ['elama']);
@@ -1052,16 +1053,14 @@ test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
   assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
 });
 
-test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', () => {
+test('skeema 1.34: maarajat = kaikki admin-0-renkaat (NOR Huippuvuorineen, web #3078)', () => {
   const m = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((a) => [a.id, a]));
   const nor = m.get('NOR');
-  assert.ok(nor.bbox[3] < 72 && nor.kokoBbox[3] > 80, `NOR ${nor.bbox} / ${nor.kokoBbox}`);
-  assert.ok(nor.muutRenkaat.some((r) => r.some(([, lat]) => lat > 76)));
-  assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
-  assert.ok(m.get('FIN').muutRenkaat.length === 0);
-  assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+  assert.ok(nor.bbox[3] > 80, `NOR ${nor.bbox}`);
+  assert.ok(nor.renkaat.some((r) => r.some(([, lat]) => lat > 76)), 'Huippuvuoret renkaissa');
+  assert.ok([...m.values()].every((a) => a.muutRenkaat.length === 0 && a.bbox.join() === a.kokoBbox.join()));
+  assert.ok(m.get('FRA').bbox[0] < -60, 'merentakaiset mukana');
 });
-
 test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset avaimet', () => {
   const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
   const a = k('aanitaulut');
@@ -1191,6 +1190,34 @@ test('1.x ja 2.0: sama sisältö (Fablen pyyntö 24.9.2026)', async () => {
   }
 });
 
+test('skeema 1.33: maamerkit-kokoelma, tarkistus ja offline-media', async () => {
+  const { tarkistaMaamerkit } = await import('../tools/vienti/maamerkit.mjs');
+  const { kokoaOffline } = await import('../tools/vienti/offline.mjs');
+  const k = JSON.parse(tiedostot.get('kokoelmat/maamerkit.json'));
+  assert.ok(Array.isArray(k.alkiot));
+  const sha = 'ab12cd34'.padEnd(64, '0');
+  const hyva = {
+    id: 'lontoo', kaupunki: 'lontoo', lat: 51.5051, lon: -0.115, maanKorkeus: 10, suunta: 0, mallinKorkeus: 97.2,
+    malli: { url: `https://media.matkakirja.app/maamerkit/lontoo-${sha.slice(0, 8)}.glb`, sha256: sha, tavuja: 123456 },
+    lisenssi: 'CC0-1.0', tekija: 'Matkakirja (oma työ)', lahde: 'Blender-skripti',
+  };
+  const idt = new Set(['lontoo']);
+  assert.deepEqual(tarkistaMaamerkit([hyva], idt), []);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, maanKorkeus: '10' }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, malli: { ...hyva.malli, url: 'maamerkit/lontoo.glb' } }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, malli: { ...hyva.malli, sha256: 'f'.repeat(64) } }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, kaupunki: 'atlantis' }], idt).length);
+  // Offline: malli maan medialistaan ja tavuihin.
+  const t = new Map(tiedostot);
+  t.set('kokoelmat/maamerkit.json', JSON.stringify({ ...k, alkiot: [hyva] }));
+  const mf = JSON.parse(t.get('manifest.json'));
+  const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
+  const ilman = kokoaOffline({ tiedostot, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
+  const kanssa = kokoaOffline({ tiedostot: t, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
+  assert.ok(kanssa.maat.GBR.media.includes(hyva.malli.url));
+  assert.equal(kanssa.maat.GBR.tavuja.media - ilman.maat.GBR.tavuja.media, 123456);
+});
+
 test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari #3057)', async () => {
   const { existsSync } = await import('node:fs');
   const { INTRO_TEXT, FLIGHT_FIRST } = await import('../js/ui-tekstit.js');
@@ -1205,4 +1232,58 @@ test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari 
       assert.ok(tiedostot.has(a.aikaleimaTiedosto), `${id}: aikaleimat paketissa`);
     }
   }
+});
+
+test('skeema 1.35: maat.fokuspohja = webin FOKUS_POHJAT', async () => {
+  const { FOKUS_POHJAT } = await import('../js/packs/fokus-grc.js');
+  const maat = new Map(JSON.parse(tiedostot.get('kokoelmat/maat.json')).alkiot.map((a) => [a.id, a]));
+  for (const [iso, p] of Object.entries(FOKUS_POHJAT)) {
+    if (!maat.has(iso)) continue;
+    assert.deepEqual(maat.get(iso).fokuspohja.laudalla.bbox, p.bbox, iso);
+  }
+  const fra = maat.get('FRA').fokuspohja.bbox;
+  assert.ok(fra[0] > -20 && fra[2] < 25 && fra[1] > 30 && fra[3] < 60, `FRA ${fra}`);
+});
+
+test('skeema 1.36: merinimet kuten webin nimiötasolla (Linssiseppä)', async () => {
+  const { NIMISTO_1873 } = await import('../js/packs/nimisto-1873.js');
+  const W = await import('../tools/fokuskartta/maailmapiirto.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/merinimet.json'));
+  const lahde = NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva'));
+  assert.equal(k.alkiot.length, lahde.length);
+  assert.ok(k.alkiot.length >= 29);
+  for (const [i, r] of k.alkiot.entries()) {
+    assert.equal(r.nimi, lahde[i].teksti);
+    assert.equal(r.lat, lahde[i].lat);
+    assert.equal(r.lon, lahde[i].lon);
+    assert.match(r.id, /^[a-z0-9-]+$/);
+    assert.equal(typeof r.kulma, 'number');
+    assert.equal(r.kaari, null);
+    assert.deepEqual(r.tasot, [4, 5, 6, 7, 8]);
+    assert.ok(r.lahde && r.lisenssi);
+  }
+  assert.equal(new Set(k.alkiot.map((r) => r.id)).size, k.alkiot.length);
+  assert.ok(k.alkiot.some((r) => r.id === 'englannin-kanaali'));
+  assert.equal(k.tyyli.harvennusEm, W.NIMION_HARVENNUS_EM);
+  assert.equal(k.tyyli.vari, W.NIMION_VARIT.meri);
+  assert.equal(k.tyyli.fontti, W.NIMION_FONTTI);
+  assert.deepEqual(k.tyyli.kirjainkorkeusPx, Object.fromEntries(Object.entries(W.NIMION_KOOT.meri).map(([z, v]) => [z, v])));
+  assert.equal(k.tyyli.versaali, true);
+});
+
+test('skeema 1.37: aluenimet Karttasepän tiedostosta sellaisenaan', () => {
+  const a = JSON.parse(readFileSync(new URL('../assets/data/aluenimet-natiivi.json', import.meta.url), 'utf8'));
+  const k = JSON.parse(tiedostot.get('kokoelmat/aluenimet.json'));
+  assert.equal(k.aineistoversio, a.versio);
+  assert.deepEqual(k.tyylit, a.tyylit);
+  assert.deepEqual(k.fontti, a.fontti);
+  assert.equal(k.alkiot.length, a.nimet.length + a.valtameret.length);
+  const idt = new Map(k.alkiot.map((r) => [r.id, r]));
+  assert.equal(idt.size, k.alkiot.length);
+  for (const n of a.nimet) assert.deepEqual(idt.get(n.id).paikat, n.paikat, n.id);
+  for (const v of a.valtameret) assert.equal(idt.get(v.id).luokka, 'valtameri');
+  for (const r of k.alkiot) assert.ok(k.tyylit[r.tyyli], `${r.id}: tyyli`);
+  // Merinimet (1.36) ovat aluenimien meriosa samoin tunnuksin.
+  const meret = JSON.parse(tiedostot.get('kokoelmat/merinimet.json')).alkiot;
+  for (const m of meret) assert.equal(idt.get(m.id)?.luokka, 'meri', m.id);
 });
