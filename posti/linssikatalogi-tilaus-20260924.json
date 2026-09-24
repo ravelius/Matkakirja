@@ -1370,6 +1370,76 @@
   "manner": "Yleiset"
  },
  {
+  "id": "X1",
+  "nimi": "Karttapallo",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "pyöritä palloa · napauta kohtaa · sukella laudalle",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X2",
+  "nimi": "Topografialinssi",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "väri kertoo korkeuden · varjo kertoo muodon",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X3",
+  "nimi": "Vesistölinssi",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "joet · järvet · meret topografian päällä",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X4",
+  "nimi": "Astronautin kamera",
+  "alue": "maailma",
+  "kaari": "kuvat 1991–2026",
+  "pysakit": "64 kuvauskohdetta pallolla · galleria · info-nappi · Pulun kysymykset",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X5",
+  "nimi": "Maailmanradio",
+  "alue": "maailma",
+  "kaari": "nykyhetki (suorat lähetykset)",
+  "pysakit": "kaupungit play-nappeina · viritysääni · suora lähetys",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X6",
+  "nimi": "Vertailulinssi",
+  "alue": "maailma",
+  "kaari": "1950 → nyt",
+  "pysakit": "enintään kolme maata · Suomi rinnalla · maakäyrät samoilla asteikoilla",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X7",
+  "nimi": "Maiden tiedot",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "napauta maata · rajat ja nimi · maan lehti",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
   "id": "B8",
   "nimi": "Valokuvan synty",
   "alue": "Eurooppa–USA",
@@ -1410,46 +1480,6 @@
   "manner": "Maailma"
  },
  {
-  "id": "Y7",
-  "nimi": "Maailman ruoat",
-  "alue": "maailma",
-  "kaari": "nykyhetki",
-  "pysakit": "kaupunkien ruoat kartalla · kuva ja yksi lause",
-  "tila": "jonossa",
-  "tyyppi": "aikajana",
-  "manner": "Maailma"
- },
- {
-  "id": "Y8",
-  "nimi": "Maailman musiikki",
-  "alue": "maailma",
-  "kaari": "nykyhetki",
-  "pysakit": "soittolista kaupungeittain · radion jatke",
-  "tila": "jonossa",
-  "tyyppi": "aikajana",
-  "manner": "Maailma"
- },
- {
-  "id": "Y9",
-  "nimi": "Maailman eläimet",
-  "alue": "maailma",
-  "kaari": "nykyhetki",
-  "pysakit": "eläimet pallolla ilman kaarta · F2:n lajit",
-  "tila": "jonossa",
-  "tyyppi": "aikajana",
-  "manner": "Maailma"
- },
- {
-  "id": "Y10",
-  "nimi": "Suurimmat kaupungit",
-  "alue": "maailma",
-  "kaari": "vuosi vuodelta (3700 eaa → nyt)",
-  "pysakit": "suurimmat kaupungit palloina · pallot kasvavat vuosi vuodelta",
-  "tila": "jonossa",
-  "tyyppi": "aikajana",
-  "manner": "Maailma"
- },
- {
   "id": "P6",
   "nimi": "Mantereet liikkuvat",
   "alue": "maailma",
@@ -1457,6 +1487,26 @@
   "pysakit": "Pangaea · Gondwana · Atlantti avautuu · Intia törmää · nyt",
   "tila": "idea",
   "tyyppi": "alue",
+  "manner": "Maailma"
+ },
+ {
+  "id": "E10",
+  "nimi": "Rooman kasvu pallolla",
+  "alue": "Rooma",
+  "kaari": "n. 750 eaa–2020",
+  "pysakit": "n. 750 eaa. Palatinus · n. 378 eaa. Serviuksen muuri · n. 200 jaa. huippu (1,2 milj.) · 1377 pohja (17 000) · 1748 Nolli · 1871 pääkaupunki · 2020",
+  "tila": "seuraava (esitys)",
+  "tyyppi": "esitys",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "R36",
+  "nimi": "Maapallon tila",
+  "alue": "maailma",
+  "kaari": "1880 → nyt",
+  "pysakit": "merijää · lämpötila · merenpinta",
+  "tila": "seuraava (data)",
+  "tyyppi": "data",
   "manner": "Maailma"
  },
  {
@@ -1470,23 +1520,33 @@
   "manner": "Maailma"
  },
  {
-  "id": "R36",
-  "nimi": "Maapallon tila",
+  "id": "Q2",
+  "nimi": "Atlaslehti",
   "alue": "maailma",
-  "kaari": "1880 → nyt",
-  "pysakit": "merijää · lämpötila · merenpinta",
-  "tila": "seuraava (data)",
-  "tyyppi": "data",
+  "kaari": "1875",
+  "pysakit": "Stieler 1875 -atlaksen PD-skanni georeferoituna pallon päälle",
+  "tila": "jonossa",
+  "tyyppi": "pohjakartta",
   "manner": "Maailma"
  },
  {
-  "id": "E10",
-  "nimi": "Rooman kasvu pallolla",
-  "alue": "Rooma",
-  "kaari": "n. 750 eaa–2020",
-  "pysakit": "n. 750 eaa. Palatinus · n. 378 eaa. Serviuksen muuri · n. 200 jaa. huippu (1,2 milj.) · 1377 pohja (17 000) · 1748 Nolli · 1871 pääkaupunki · 2020",
-  "tila": "seuraava (esitys)",
-  "tyyppi": "esitys",
-  "manner": "Eurooppa"
+  "id": "Q3",
+  "nimi": "Satelliittipinta (lennon pinta)",
+  "alue": "maailma",
+  "kaari": "2004 ja 2016 (kuvausvuodet)",
+  "pysakit": "Blue Marble NG merineen koko pallolle · Sentinel-2 72 kaupungin ympärille",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q4",
+  "nimi": "Yövalot (Black Marble)",
+  "alue": "maailma",
+  "kaari": "2016 (kuvausvuosi)",
+  "pysakit": "kaupunkien valot hehkuvana kerroksena Z0–Z6",
+  "tila": "jonossa",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
  }
 ]
