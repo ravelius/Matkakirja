@@ -4595,3 +4595,7 @@ Natiiviseppä klo 20.3x: build 11 (proto-master 1c8cdab) kaatuu todennäköisest
 ## JULKAISIJA PERUI BUILD 11 -AJON 36034131150 ENNEN VIENTIA (Pulu.cs:111 NRE); LASKURI 10; UUSINTA HETI UUDESTA SHA:STA ILMAN ERILLISTA KASKYA (24.9.2026 klo 20.32)
 
 Julkaisija perui ajon 36034131150 (1c8cdab) jonosta ennen Unity-vientiä; mitään ei ladattu, laskuri yhä 10. Fable: Julkaisija ajaa 1.0.11:n heti kun Natiiviseppä lähettää korjatun SHA:n (323a0b5 mergettynä ja käynnistys varmistettu simulaattorissa), ilman erillistä käskyä.
+
+## KORJATTU BUILD 11 = PROTO-MASTER 6ff16f3 (NRE-KORJAUS 323a0b5 + LOYDOS 45 e9b39de), KAYNNISTYS VARMISTETTU SIMULAATTORISSA → JULKAISIJA AJAA 1.0.11 (24.9.2026 klo 20.37)
+
+Natiiviseppä klo 20.3x: korjattu build 11 = proto-master 6ff16f3 (Pulu.Oikea-NRE 323a0b5, löydös 45 e9b39de: Liiku piilossa vain kuuluvan puheen ajan kuten korjatussa webissä). Omassa simulaattorissa aloitus, jatka matkaa ja Lontoon lehti toimivat ilman poikkeuksia; tarkistus 0, luo/sim/xcode-sim läpi, työkopio puhdas. Julkaisija ajaa 1.0.11:n (laskuri 10) tästä SHA:sta pysyvän käskyn mukaan.
