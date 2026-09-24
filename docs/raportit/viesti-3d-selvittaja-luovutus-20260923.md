@@ -13,6 +13,21 @@ Edellistä luovutusta ei ole (ensimmäinen vuoro).
 4. Tämän vuoron raportit (alla), tärkein ensin: 3d-selvitys → 3d-google-laatat-eu →
    3d-unreal-vs-unity → 3d-prototyypin-valmius.
 
+## TILA 23.9.2026 klo 12.39 (ennen Macin uudelleenkäynnistystä)
+
+1. Päätökset: Unity 6.3 + Cesium; Googlen 3D-laattoja ei käytetä. Xcode-selvitys on PR:ssä #2917
+   (haara 3d-selvittaja-xcode, worktree /Users/Shared/Claude/wt/3d-selvittaja-xcode). Omistaja
+   hyväksyi asennukset kortilla. Unity Hub 3.21.3 on asennettu (brew cask).
+2. Kesken: editorin 6000.3.24f1 ja iOS-moduulin lataus keskeytettiin 36 %:ssa. Käynnistä uudelleen:
+   `"/Applications/Unity Hub.app/Contents/MacOS/Unity Hub" -- --headless install --version 6000.3.24f1 --module ios --architecture arm64`
+   (loki proto-3d/lokit/). Omistajalta odotetaan Unity Personal -lisenssiä
+   (ohje /Users/Shared/Claude/proto-3d/OHJE-unity-lisenssi.md) ja Metal Toolchainia (Fable pyytää).
+3. Seuraavaksi: projektipohja kansioon /Users/Shared/Claude/proto-3d (ei repoon; Cesium 1.25.1
+   -lähteet on kloonattu kansioon _lahteet/). Pallo: Cesium3DTileset FromEllipsoid +
+   CesiumUrlTemplateRasterOverlay WebMercator, osoite
+   https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-21-pohja-20260921a/{z}/{x}/{y}.jpg (z0–8).
+   Simulaattorista sovitaan Laitetestaajan kanssa.
+
 ## Tila
 
 - main = v2145 (3b5807bce, #2894); luovutushetken mainin kärki 99522e54d (#2899).
