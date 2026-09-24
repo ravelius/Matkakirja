@@ -147,8 +147,11 @@ namespace Matkakirja.Linssit.Astronautti
             double t = (nyt - avattu) / 1000;
             nakyma.Pilvet(Astronauttimatikka.PilvienPeitto(s, 1), t / 60 * Astronauttimatikka.PilvienKiertoAstettaMin);
             nakyma.Sumu(Astronauttimatikka.SumunPeitto(s, 1));
-            nakyma.Iss(Astronauttimatikka.IssPaikka(t), Astronauttimatikka.IssKaari(t));
+            Astronauttimatikka.IssKaari(t, kaari);
+            nakyma.Iss(Astronauttimatikka.IssPaikka(t), kaari);
         }
+
+        readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
 
         void PaivitaAvaus(double nyt)
         {

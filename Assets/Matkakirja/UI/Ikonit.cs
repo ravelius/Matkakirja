@@ -77,6 +77,8 @@ namespace Matkakirja.Natiivi
             ["tahti"] = "<path d=\"m12 3.8 2.5 5.2 5.5.7-4 3.9 1 5.6-5-2.7-5 2.7 1-5.6-4-3.9 5.5-.7z\"/>",
             ["passi"] = "<rect x=\"5.5\" y=\"3.5\" width=\"13\" height=\"17\" rx=\"2\"/><circle cx=\"12\" cy=\"10.3\" r=\"2.9\"/><path d=\"M8.6 16.6h6.8\"/>",
             ["paivita"] = "<path d=\"M19.4 4.8v3.7h-3.7\"/><path d=\"M19.2 8.4a7.4 7.4 0 1 0 1 5.4\"/>",
+            // Sulkuristi ✕ (U+2715, web fokusnosto/fokuskohteet/kaupunkinosto/karttaselite): viiva, koska kirjasimissa ei ole merkkiä.
+            ["rasti"] = "<path d=\"M6.5 6.5L17.5 17.5M17.5 6.5L6.5 17.5\"/>",
             ["kallo"] = "<path d=\"M12 3.8c-3.9 0-6.5 2.7-6.5 6.1 0 2 .9 3.3 2.1 4.2v2.5h8.8v-2.5c1.2-.9 2.1-2.2 2.1-4.2 0-3.4-2.6-6.1-6.5-6.1z\"/><g class=\"taytto\"><circle cx=\"9.6\" cy=\"10.1\" r=\"1.3\"/><circle cx=\"14.4\" cy=\"10.1\" r=\"1.3\"/></g><path d=\"M10.3 16.6v2.4M13.7 16.6v2.4\"/>",
             ["kukkaro"] = "<path d=\"M9.6 6.9 8.3 4.2h7.4L14.4 6.9\"/><path d=\"M9.6 6.9h4.8c2.5 1.6 4.1 4.2 4.1 7 0 3.3-2.5 5.4-6.5 5.4s-6.5-2.1-6.5-5.4c0-2.8 1.6-5.4 4.1-7z\"/>",
             ["estetty"] = "<circle cx=\"12\" cy=\"12\" r=\"8.4\"/><path d=\"M6.3 6.3l11.4 11.4\"/>",

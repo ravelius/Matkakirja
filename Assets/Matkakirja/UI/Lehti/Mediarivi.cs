@@ -120,7 +120,13 @@ namespace Matkakirja.Natiivi
                 {
                     b.SetEnabled(true);
                     t.Nimi.text = kehotus;
-                    if (string.IsNullOrEmpty(url)) { UiNakymat.Hae()?.Tilarivi.Viesti("Näytettä ei löytynyt"); return; }
+                    // E19 (web ui.js esikuuntelu): nappi kertoo syyn 2,5 s eikä jää jumiin.
+                    if (string.IsNullOrEmpty(url))
+                    {
+                        t.Nimi.text = "Ei yhteyttä";
+                        b.schedule.Execute(() => { if (t.Nimi.text == "Ei yhteyttä") t.Nimi.text = kehotus; }).StartingIn(2500);
+                        return;
+                    }
                     virtaUrl = url;
                     if (soiva == null) Painettu(t, url, null);
                 });
@@ -189,7 +195,7 @@ namespace Matkakirja.Natiivi
                 radionapit[b] = (r.Tila, a?.Url);
                 // Näkyvyys luokalla: isännän tila (kartuscha auki) päättää lopun USS:ssä.
                 b.EnableInClassList("mk-kartuscha__radio--asema", a != null);
-                b.tooltip = a != null ? $"{maanNimi}: kuuntele suoraa lähetystä ({a.Nimi})" : null;
+                b.tooltip = a?.Nimi; // E20: web radio.title = asema
             });
         }
 

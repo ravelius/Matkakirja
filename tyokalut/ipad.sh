@@ -1,5 +1,7 @@
 #!/bin/zsh
-# iPad-apu (Natiiviseppä). UDID oletuksena jaettu iPad Pro 11".
+# iPad-apu (Natiiviseppä). UDID oletuksena pysyvä testilaite iPad Pro 13 (Fable 24.9.2026); pieni iPad Pro 11
+# UDID=00008142-0019686E02F3801C, iPhone UDID=00008150-000A212E1407801C. Kehityskäännöksen App ID
+# fi.matkakirja.peli.kehitys (Developer Program -tiimi RCD77XPB7M; Rakennus.LaiteBundleId).
 #   tyokalut/ipad.sh asenna                     # Build/dd-laite:n .app laitteelle ja käynnistys
 #   tyokalut/ipad.sh kaynnista                  # uudelleenkäynnistys (puhdas ajo)
 #   tyokalut/ipad.sh peli <skripti> <s> <kansio># peli-komento.txt, odotus, lokit → kansio
@@ -9,8 +11,8 @@
 #                                               # lokikansioon vain kuvat, videot ja konsoli)
 #   tyokalut/ipad.sh konsoli <s> <tiedosto>     # uudelleenkäynnistys ja Unityn loki (stdout) s sekuntia
 #   tyokalut/ipad.sh versio                     # laitteen sisältöpaketin polku (välimuistikopioille)
-UDID=${UDID:-00008142-0019686E02F3801C}
-ID=app.matkakirja.proto3d
+UDID=${UDID:-00008103-001819421413401E}
+ID=${ID:-fi.matkakirja.peli.kehitys}
 cd "$(dirname "$0")/.."
 kopioi_sinne() { xcrun devicectl device copy to --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "$1" --destination "Documents/$2" >/dev/null; }
 yksi() { xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "Documents/$2" --destination "$1/$2" >/dev/null 2>&1 || echo "puuttuu: $2"; }

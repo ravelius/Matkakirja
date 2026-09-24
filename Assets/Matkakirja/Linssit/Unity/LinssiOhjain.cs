@@ -817,12 +817,17 @@ namespace Matkakirja.Natiivi
                     Pelaaja = PelaajanPaikka,
                 };
                 linssi.Avaa(y);
+                // Kartan nimet ja kaupunkipisteet näkyvät kuten webin linssikartan laatoissa (Fable 24.9.:
+                // lopputulos kuten webissä; natiivin laatat on poltettu ilman nimiä). Natiiviseppä e8d95dd:
+                // voimassa, kun "kaupungit" on pois (Pelikerrokset(false)); purkautuu pelikerrosten palatessa.
+                KarttaKerrokset.Instanssi?.Nakyvyys("linssinimet", true);
                 kerros.ValoNapautettu += i => { o.Kirjaa("keksinnöt: lamppu " + i); linssi?.NapautaValoa(i); };
                 if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
             }
             public void Paivita() => linssi?.Paivita();
             public void Sulje()
             {
+                KarttaKerrokset.Instanssi?.Nakyvyys("linssinimet", false);
                 linssi?.Sulje();
                 linssi = null;
                 if (kerros != null) Destroy(kerros.gameObject);
@@ -912,7 +917,7 @@ namespace Matkakirja.Natiivi
 
         public IKarttaKerrokset Kerrokset => kerrokset;
 
-        public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus);
+        public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus);
 
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
         {

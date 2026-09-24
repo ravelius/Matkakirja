@@ -301,6 +301,28 @@
     font-size: 13px;
 }
 
+/* E9 (web .wiki-btn): 0,78rem, välistys 0,05em, #7a5514, pisteviiva rgba(122,85,20,.45) 4 px tekstin alla. */
+.mk-lehti__wiki {
+    align-self: flex-start;
+    min-height: 0;
+    margin-top: 6.4px;
+    padding: 1.6px 0;
+}
+
+.mk-lehti__wiki .mk-nappi__teksti {
+    font-size: 12.48px;
+    letter-spacing: 0.62px;
+}
+
+.mk-lehti__wikiviiva {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2.4px;
+    height: 1px;
+    color: rgba(122, 85, 20, 0.45);
+}
+
 /* --- kuvat ---------------------------------------------------------------------- */
 
 .mk-lehti__kuvakehys {

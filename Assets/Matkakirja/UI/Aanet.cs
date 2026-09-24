@@ -218,10 +218,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static void Karsi()
         {
-            if (jarjestys.Count <= Muistissa) return;
+            // Suojatut (esiladatut tehosteet) eivät vie musiikin ja puheen paikkoja.
+            int raja = Muistissa + suojatut.Count;
+            if (jarjestys.Count <= raja) return;
             var kaytossa = KaytossaOlevat();
             var solmu = jarjestys.Last;
-            while (jarjestys.Count > Muistissa && solmu != null)
+            while (jarjestys.Count > raja && solmu != null)
             {
                 var edellinen = solmu.Previous;
                 string url = solmu.Value;
@@ -551,6 +553,17 @@ namespace Matkakirja.Natiivi
             {
                 string url = Osoite(u);
                 yield return Levylle(url, Levy(url));
+            }
+            // Käyttöliittymän tehosteet (efekti-*.mp3, ≤ 57 kt) myös muistiin ja suojaan, yksi ruutua kohden: purku
+            // soittohetkellä maksoi linssin sulkukehyksessä 45–50 ms (Linssiseppä, piikkiajot 7–8, LoadFMODSound).
+            foreach (var u in osoitteet)
+            {
+                string url = Osoite(u);
+                if (!Path.GetFileName(url).StartsWith("efekti-", StringComparison.Ordinal) || muisti.ContainsKey(url)) continue;
+                bool valmis = false;
+                Hae(url, c => { Suojaa(c, true); valmis = true; });
+                while (!valmis) yield return null;
+                yield return null;
             }
         }
 

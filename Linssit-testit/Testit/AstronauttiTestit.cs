@@ -41,6 +41,25 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        [Testi] static void IssKaariKehyksittainTasainen()
+        {
+            // Build 9 -löydös 33: rata päivitetään joka kehys valmiiseen taulukkoon; sama tulos kuin listalla,
+            // ja 1/60 s:n askel siirtää rataa vain murto-osan asteesta (ei sekunnin nykäyksiä).
+            var a = new Matkakirja.Linssit.Aikajana.LatLon[241];
+            Astronauttimatikka.IssKaari(123.4, a);
+            var l = Astronauttimatikka.IssKaari(123.4, 240);
+            for (int i = 0; i < a.Length; i++) { Lahella(l[i].Lat, a[i].Lat, "lat"); Lahella(l[i].Lon, a[i].Lon, "lon"); }
+            var b = new Matkakirja.Linssit.Aikajana.LatLon[241];
+            Astronauttimatikka.IssKaari(123.4 + 1 / 60.0, b);
+            double suurin = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                double d = Math.Abs(b[i].Lon - a[i].Lon); if (d > 180) d = 360 - d;
+                suurin = Math.Max(suurin, d);
+            }
+            Oleta.Tosi(suurin > 0 && suurin < 0.05, "kehyksen siirto asteina: " + suurin);
+        }
+
         [Testi] static void KameranKorkeudetKutenWebissa()
         {
             var k = K();

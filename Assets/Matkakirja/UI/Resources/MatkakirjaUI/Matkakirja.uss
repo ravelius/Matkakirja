@@ -482,7 +482,26 @@
 
 /* --- matkavalinta ------------------------------------------------------- */
 
+.mk-matkavalinta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-matkavalinta.mk-auki {
+    opacity: 1;
+}
+
+/* E5 (web .actions + .ikoni-teksti.wide): leveät napit kartan päällä, väli 0,4rem. */
 .mk-matkavalinta__rivit {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
     flex-direction: column;
 }
 
@@ -498,6 +517,43 @@
     height: 26px;
     margin-right: 13px;
     color: var(--accent);
+}
+
+.mk-matkavalinta__rivit .mk-valintarivi {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    min-height: 44px;
+    margin: 6.4px 0 0 0;
+    padding: 0 12.8px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.35);
+    border-radius: 10px;
+    background-color: rgba(250, 243, 226, 0.72);
+    color: #46331f;
+}
+
+.mk-matkavalinta__rivit .mk-valintarivi > .mk-ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 7.2px;
+    color: #46331f;
+}
+
+.mk-matkavalinta__rivit .mk-valintarivi--takaisin > .mk-ikoni {
+    margin-right: 0;
+}
+
+.mk-matkavalinta__rivit .mk-valintarivi__nimi {
+    font-size: 18.4px;
+    color: #46331f;
+}
+
+.mk-matkavalinta__rivit .mk-valintarivi__selite {
+    margin: 0 0 0 7.2px;
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.7);
 }
 
 .mk-valintarivi__tekstit {
@@ -2582,6 +2638,43 @@
     color: #46331f;
 }
 
+/* E14 (web .lippu-versio.tarkennettu): kasvaa paikallaan 1,7 ×, paperipohja, selite alla; muut häivyttyvät. */
+.mk-lippu__versio {
+    transition-property: scale, translate, opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-lippu__versio--tarkennettu {
+    scale: 1.7 1.7;
+    background-color: #f5f0e2;
+    border-radius: 3px;
+}
+
+.mk-lippu__versioselite {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% 2.4px;
+    width: 160px;
+    padding: 1.6px 4.8px 2.4px 4.8px;
+    font-size: 8.8px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.92);
+    background-color: #f5f0e2;
+    border-radius: 3px;
+}
+
+.mk-lippu__versio--tarkennettu .mk-lippu__versioselite {
+    display: flex;
+}
+
+.mk-lippu__sumea {
+    opacity: 0.3;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
 .mk-aloitus__periaatelinkki {
     align-self: flex-start;
     margin-top: 8px;
@@ -3254,4 +3347,68 @@
 .mk-lentosiirtyma.mk-lentopiilo {
     opacity: 0;
     transition-duration: 0.6s;
+}
+
+/* E13 postikortti (web .postikortti, .postikortti-kortti, .alla, .kuvateksti, .kuvalahde, .postikortti-laskuri). */
+.mk-postikortti__verho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-postikortti {
+    translate: 0 -2%;
+}
+
+.mk-postikortti__kortti {
+    padding: 8.8px 8.8px 4.8px 8.8px;
+    border-radius: 2px;
+    background-color: #f8f3e6;
+    rotate: -4.5deg;
+    transition-property: rotate, translate;
+    transition-duration: 0.22s;
+}
+
+.mk-postikortti__kortti--alla {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    rotate: 4deg;
+    translate: 14px 30px;
+}
+
+.mk-postikortti__kortti--alla .mk-postikortti__teksti,
+.mk-postikortti__kortti--alla .mk-postikortti__laskuri {
+    visibility: hidden;
+}
+
+.mk-postikortti__kuva {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.12);
+    background-color: #ded5c2;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-postikortti__teksti {
+    margin: 5.6px 1.6px 4px 1.6px;
+    padding-right: 36px;
+    font-size: 13.76px;
+    white-space: normal;
+    color: #5a4a33;
+}
+
+.mk-postikortti__laskuri {
+    position: absolute;
+    right: 11.2px;
+    bottom: 7.2px;
+    font-size: 11.52px;
+    letter-spacing: 0.46px;
+    color: rgba(74, 55, 26, 0.62);
 }

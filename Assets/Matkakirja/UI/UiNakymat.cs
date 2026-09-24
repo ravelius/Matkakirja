@@ -72,6 +72,8 @@ namespace Matkakirja.Natiivi
             PeliNakymat.Sahke = _ => Hae().Sahke;
             // Pöllön sähketehtävä: vihreä piste sähkekaupungissa avaa lomakkeen laattakysymyksen sijaan.
             PeliNakymat.Sahketehtava = _ => Hae().Sahkelomake;
+            // Testikomento uusi-peli sulkee aloitusnäkymän kuten ui aloita (PeliKomennot).
+            PeliNakymat.SuljeAloitus = () => Hae().Aloitus.Piilota();
             // Sähkehakemisto maalle (web sisaltohakemisto) ja Livian linkki kartan kohteeseen (web kohdeavaus).
             PeliOhjain.SahkeHakemisto = SahkeHakemistot.Hae;
             PeliOhjain.AvaaKohde = (maa, kohde) =>

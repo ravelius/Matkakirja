@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
             var juuri = kerros.Juuri(UiKerros.Valikot);
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
             himmennys.style.display = DisplayStyle.None;
-            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
+            // E18: web #nollaa-dialog sulkeutuu vain napeista (tai Escistä), ei taustan napautuksesta.
 
             var kortti = new Kortti("mk-vahvistus");
             himmennys.Add(kortti);

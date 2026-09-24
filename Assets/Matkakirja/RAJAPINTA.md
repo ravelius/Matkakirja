@@ -24,7 +24,8 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `event Action NakymaMuuttui` | valmis | Kameratila muuttui tässä kehyksessä (linssit, sumu). |
 | `bool Liikkeessa` | valmis | Sormi, liuku tai ajo käynnissä (mittarit ja UI). |
 | `bool RuutuPiste(lat, lon, out Vector2 ruutu, korkeus = 0)` | valmis | Pisteen paikka näytön pikseleinä (origo vasen ala kuten Input); false = takapuolella tai ruudun ulkopuolella (Natiivi-UI:n noppa). |
-| `double kallistus` (0–60°) | valmis | Kahden sormen pystyveto kallistaa. Kallistus on sallittu vain alle 3000 km:n korkeudella, ja raja liukuu. |
+| `double kallistus` (0–85°), `double KaytettyKallistus` | valmis | Kahden sormen yhdensuuntainen pystyveto kallistaa (ele lukitaan alussa: kallistus TAI nipistys+kierto, `KameraEleet`). `kallistus` on pelaajan tallennettu arvo; kuvassa käytetään `KaytettyKallistus` = min(tallennettu, raja): täysi ≤ 1500 km, nolla ≥ 7000 km (smootherstep), ja maaston rako (≥ 150 m tai 1 % etäisyydestä) voi pienentää sitä. Asentoa talteen ottava lukee `KaytettyKallistus`. |
+| `double suuntima`, `void PalautaPohjoinen(float kestoS = 0.4f)` | valmis | Katseen suunta (0 = pohjoinen ylös). Pelaaja kääntää kahden sormen kiertoeleellä, ja suunta pysyy; tuplanapautus ja `PalautaPohjoinen` kääntävät pohjoisen ylös lyhintä tietä (smootherstep, 0 = heti). **Natiivi-UI:** kompassinappi kutsuu `PalautaPohjoinen()` ja voi kiertää neulaa `-suuntima` astetta (myötäpäivään positiivinen, kuten UI Toolkitin rotate). Lennon kuvauksen suuntima palautuu lennon jälkeen nollaan. |
 
 ## 2. Kaupungit — `KaupunkiMerkit` (CesiumGeoreference-olio)
 
@@ -68,6 +69,7 @@ Webin pallon nostokerros (js/pallolauta/nostot.js, js/fokuskohteet.js). Kartta p
 | `bool Nakyvissa`, `float Syttyminen` (0→1, 0,7 s), `float Osuus` | Kerros näkyy, kun maan leveys / näkyvä leveys ≥ 0,5 (LEHDEN_VAHIN_OSUUS) ja saapumisesta 1,4 s kamera ja nappula paikallaan (saapumisPortti). |
 | `event Action Paivittyi` | Naytettavat, näkyvyys tai syttyminen muuttui tässä kehyksessä (kuuntele ja siirrä merkit). |
 | `string Maa { get; set; }`, `NykyinenMaa` | Pakotettu maa (ISO3) tai null = nappulan kaupungin maa. |
+| `bool LinssiNimet` | Linssinimet (KarttaKerrokset `"linssinimet"`): saapumisportti ohitetaan ja `Lahella` on tosi. **Natiivi-UI:** näytä merkit linssin aikana, kun tämä on tosi (`NaytaSallittu(false)` ei silloin piilota), ilman napautusta ja viuhkaa. |
 
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
@@ -76,6 +78,7 @@ Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
 | Jäsen | Merkitys |
 |---|---|
 | `void Nakyvyys(string kerros, bool)` | Sisäiset kerrokset: `"laatat"`, `"maasto"`, `"kaupungit"`, `"nimiot"`, `"reitit"`, `"napakannet"` (napakalotit ja niiden varakannet; reliefin ollessa pohjan tilalla kalotti piiloon ja kansi reliefin sävyyn automaattisesti), `"nappula"` (nappula ja kone), `"pisteet"` (Karttapisteet), `"valot"` (karttavalot; valinta säilyy). Linssiportti piilottaa nämä kuten webin body.aikajana-paalla. |
+| `Nakyvyys("linssinimet", bool)`, `bool Linssinimet` | Webin linssikartan nimet (build 10): kun linssi on piilottanut `"kaupungit"`, kaupunkipisteet ja -nimet näkyvät webin linssiasussa (harvennettu kapiteeli 0,14 em, muste rgba(103,88,73,0.92), nimi 9,5/10,5 pt, piste 3,3/4,3 pt) ilman napautusta, huomiorenkaita ja maan kehää, ja `NostoKerros.LinssiNimet` päästää nostot saapumisportin ohi ja avaa `Lahella`-portin (ryhmien nimet). Tila purkautuu, kun `"kaupungit"` palaa. Merinimiä ei vielä ole natiivissa. Testi: `kerros kaupungit pois`, `kerros nimiot pois`, `kerros linssinimet paalle`. |
 | `string LisaaRasteri(avain, urlTemplate, WebMercator/Geographic, minTaso, maxTaso, alfa)` | Linssin oma raster-kerros laattojen päälle (Cesium UrlTemplate). Enintään 2 linssikerrosta kerrallaan (Cesiumin oletusmateriaali tukee kolmea kerrosta). |
 | `void PoistaRasteri(avain)`, `void Alfa(avain, float)` | |
 | `event Action<string> KerrosValmis` | Linssin rasteri ladattu näkyvältä alueelta (Cesium ComputeLoadProgress). |

@@ -14,7 +14,7 @@
 //            [ uusi peli ]
 //            [ ehdota sisältöä ]             (webin #palaute-kulma → "Kerro mitä huomasit", PalauteIkkuna)
 //            [ tekijätiedot ja lähteet ]     (Tietoja: karttojen pakollinen attribuutio)
-//   v1.0 · sisältö v1
+//   v1.0 (kehittäjätilassa v1.0 · kehittäjä)
 //
 // Kytkinrivit (.kertoja-valikko): min 44 pt, puolihimmeä tausta, reuna --line,
 // pyöristys 8; päällä-rivi: --panel-2, reuna --accent-dark, teksti --accent;
@@ -210,7 +210,8 @@ namespace Matkakirja.Natiivi
                 kynnykset.EnableInClassList("mk-valittu", paalla);
                 kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
             }
-            versio.text = (Asetukset.Kehittaja ? "kehittäjä · " : "") + "v" + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : "");
+            // E7: webin versiokulma "vNNN" / "vNNN · kehittäjä" (js/main.js); sisältöversio vain Tietoja-näkymässä.
+            versio.text = "v" + Application.version + (Asetukset.Kehittaja ? " · kehittäjä" : "");
         }
     }
 

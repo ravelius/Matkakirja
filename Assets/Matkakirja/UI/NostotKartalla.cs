@@ -13,7 +13,11 @@
 //
 // AIHEMERKIT JA VIUHKA (web js/pallolauta/aihemerkit.js, PAATOKSET 27 ja 32): saman aiheen nostot yhdistyvät
 // yhdeksi merkiksi, kun niiden nimiölaatikot leikkaavat (vara 1 px) tai pisteet ovat sormen säteen (44 px)
-// sisällä; saman kaupungin nostot aina. Ryhmän nimiö on tärkeimmän noston nimi + "…", ei lukumäärää.
+// sisällä; saman kaupungin nostot aina. Ryhmän nimiö on tärkeimmän noston nimi + "…", ei lukumäärää, ja se näkyy
+// VAIN LÄHIZOOMISSA (web aihenostonNimioNakyy = lahizoomiAuki, PAATOKSET 27 TARKENNUS 4 kohta 10; natiivissa sama
+// portti NostoKerros.Lahella, joka päästää lahizoom-nostot). Ryhmämerkki on pelkkä värilevy ilman sisäsymbolia
+// (web piirraAihemerkki, css .pallolauta-aihemerkki-*): paperi r 3,4 peitto 0,95, aiheväri peitto 0,5 ja
+// musterengas #4b3a1c 1,1 px peitto 0,85.
 // Napautus avaa viuhkan: pystylista merkin tyhjemmälle kyljelle (26 px sivuun, rivit 30 px välein) kehyksettömällä
 // paperipohjalla (#efdcb4, peitto 0,82); rivin napautus avaa noston kortin. Lista sulkeutuu kartan
 // napautuksesta, zoomista ja panoroinnista (merkin piste liikkuu) sekä toisen viuhkan avauksesta.
@@ -105,7 +109,7 @@ namespace Matkakirja.Natiivi
                 var karki = kasa[0];
                 foreach (int i in kasa) if (lista[i].Tarkeys > lista[karki].Tarkeys) karki = i;
                 bool ryhma = kasa.Count > 1;
-                var m = Hae(n++, lista[karki], ryhma ? RyhmanNimio(lista[karki].Nimio ?? lista[karki].Nimi) : null);
+                var m = Hae(n++, lista[karki], ryhma ? (k.Lahella ? RyhmanNimio(lista[karki].Nimio ?? lista[karki].Nimi) : "") : null, ryhma);
                 m.Piste = pisteet[karki];
                 if (ryhma)
                 {
@@ -244,7 +248,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Uusiokäyttö: i:s merkki tälle nostolle (symboli ja nimiö vaihdetaan vain tarvittaessa).</summary>
-        Merkki Hae(int i, NostoKerros.Nosto s, string nimio = null)
+        Merkki Hae(int i, NostoKerros.Nosto s, string nimio = null, bool ryhma = false)
         {
             while (merkit.Count <= i)
             {
@@ -260,12 +264,12 @@ namespace Matkakirja.Natiivi
             var m = merkit[i];
             m.El.style.display = DisplayStyle.Flex;
             m.Id = s.Id;
-            string tyyppi = (s.Aihe ?? "") + "|" + Kuva(s);
+            string tyyppi = ryhma ? "ryhma|" + s.Aihe : (s.Aihe ?? "") + "|" + Kuva(s);
             if (tyyppi != m.Tyyppi)
             {
                 m.Tyyppi = tyyppi;
                 m.Symboli?.RemoveFromHierarchy();
-                m.Symboli = Symboli(s);
+                m.Symboli = ryhma ? RyhmaSymboli(s) : Symboli(s);
                 m.El.Insert(0, m.Symboli);
             }
             string nimi = nimio ?? s.Nimio ?? "";
@@ -285,6 +289,28 @@ namespace Matkakirja.Natiivi
             foreach (var k in r.Kuvat)
                 if (s.Kategoria != null && k == "merkki-" + s.Kategoria + ".png") return k;
             return r.Kuvat[0];
+        }
+
+        /// <summary>Web piirraAihemerkki: paperilevy, aiheväri puoliksi läpi ja musterengas, r 3,4 (ei sisäsymbolia).</summary>
+        VisualElement RyhmaSymboli(NostoKerros.Nosto s)
+        {
+            var alue = new VisualElement { pickingMode = PickingMode.Ignore };
+            alue.AddToClassList("mk-nosto-merkki__symboli");
+            alue.AddToClassList("mk-nosto-merkki__symboli--ryhma");
+            if (s.Aihe == null || !rivit.TryGetValue(s.Aihe, out var r)) r = rivit["kaupungit"];
+            SvgIkoni Levy(string luokka, bool tayta)
+            {
+                var levy = new SvgIkoni(NostoMerkit.PisteTaytto) { Ruutu = 16, Alku = new Vector2(-8, -8), pickingMode = PickingMode.Ignore };
+                if (tayta) levy.AddToClassList("mk-ikoni--tayta");
+                levy.AddToClassList("mk-nosto-merkki__kuvio");
+                levy.AddToClassList(luokka);
+                alue.Add(levy);
+                return levy;
+            }
+            Levy("mk-nosto-merkki__levy-pohja", true);
+            Levy("mk-nosto-merkki__levy-vari", true).style.color = Kuviot.Vari(r.Vari ?? "#8a6d4a");
+            Levy("mk-nosto-merkki__levy-keha", false);
+            return alue;
         }
 
         VisualElement Symboli(NostoKerros.Nosto s)

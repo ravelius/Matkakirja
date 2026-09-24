@@ -67,11 +67,20 @@ namespace Matkakirja.Linssit.Astronautti
 
         public static List<LatLon> IssKaari(double t, int maara = IssKaarenPisteita)
         {
+            var ulos = new LatLon[Math.Max(8, maara) + 1];
+            IssKaari(t, ulos);
+            return new List<LatLon>(ulos);
+        }
+
+        /// <summary>
+        /// Rata valmiiseen taulukkoon (pituus = pisteitä + 1), joka kehys ilman allokointia: rata kiertyy
+        /// solmun mukana tasaisesti eikä sekunnin välein nykäyksittäin (omistajan build 9 -löydös 33).
+        /// </summary>
+        public static void IssKaari(double t, LatLon[] ulos)
+        {
             double solmu = -360 * t / IssSolmunKiertoS;
-            int n = Math.Max(8, maara);
-            var ulos = new List<LatLon>(n + 1);
-            for (int k = 0; k <= n; k++) ulos.Add(RadanPiste(360.0 * k / n, solmu));
-            return ulos;
+            int n = ulos.Length - 1;
+            for (int k = 0; k <= n; k++) ulos[k] = RadanPiste(360.0 * k / n, solmu);
         }
 
         /// <summary>Korkeus (säteinä), jolla koko pallo mahtuu ruudun kapeampaan sivuun (fov pystykulma).</summary>

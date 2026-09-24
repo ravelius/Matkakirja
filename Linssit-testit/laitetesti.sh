@@ -26,6 +26,12 @@
 #   ./laitetesti.sh vu <kansio>            VU-mittarin kuvasarja: asemat VU_ASEMAT (oletus "DEU NLD") äänellä
 #                                          AANI (oletus 0,005: tappi mittaa ennen voimakkuutta, 0 lepuuttaa neulan),
 #                                          4 kuvaa + "radio tila" per asema, lopuksi vaiennus → lepo
+#   ./laitetesti.sh keksinnotpari <kansio> keksinnöt pysäkillä 0 (1769 Glasgow) ja 2, kuten webin
+#                                          pariteettikuva linssi-karuselli-* (WEB ON MALLI, MITATTUNA)
+#   ./laitetesti.sh iss <kansio>           astronautin kamera: 16 kuvaa 0,25 s:n välein sovelluksen sisältä
+#                                          (komento.txt odota), kehysajat mittaus-iss.txt, video iss.mp4 (ffmpeg)
+#   ./laitetesti.sh astropulu <kansio>     astronautin kuva (KOHDE, oletus etna) ja minipulun kortti; PULU_X/PULU_Y
+#                                          (pt) napauttaa ensimmäistä valmista kysymystä, vastaus 20 s
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh huippuvuoret <kansio>  vertailu FIN + NOR, kamera 76/18/2500 km (kontakti-web.mjs KIINTEA=huippuvuoret)
 #   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
@@ -33,8 +39,8 @@
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
 # Komennot: linssi-komento.txt (LinssiOhjain) ja komento.txt (Kartta/Komennot: kuva).
-UDID=${UDID:-00008142-0019686E02F3801C}
-ID=app.matkakirja.proto3d
+UDID=${UDID:-00008103-001819421413401E}
+ID=${ID:-fi.matkakirja.peli.kehitys}
 KOE=${2:-/Users/Shared/Claude/sisalto-koe/v11}
 # Laitteen välimuistin versiopolku = osoittimen polku (esim. "sisalto/1/v3/").
 VERSIO=${VERSIO:-$(curl -s https://media.matkakirja.app/sisalto/1/uusin.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["polku"].rstrip("/"))')}
@@ -114,6 +120,27 @@ case "$1" in
     done
     linssi "radio aani 0"; sleep 3; linssi "radio tila"; kuva vu-vaiennettu
     linssi "radio stop" "linssi pois"; sleep 2; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -16 ;;
+  keksinnotpari)
+    kaynnista; portti
+    linssi "linssi keksinnot"; sleep 8; linssi "keksinnot 0"; sleep 10; kuva pari-keksinnot-1769
+    linssi "keksinnot 2"; sleep 12; kuva pari-keksinnot-1796
+    linssi "linssi pois"; sleep 2; hae "$2"; grep -a "keksinnöt" "$2/linssi-loki.txt" | tail -4 ;;
+  iss)
+    kaynnista; portti
+    linssi "linssi satelliitti"; sleep 22
+    rivit=("mittaus alku iss")
+    for n in $(seq -w 1 16); do rivit+=("kuva iss-$n" "odota 0.25"); print "iss-$n.png" >> $TMP/kuvat.txt; done
+    rivit+=("mittaus loppu"); kartta "${rivit[@]}"; sleep 12
+    print "mittaus-iss.txt" >> $TMP/kuvat.txt
+    linssi "linssi pois"; sleep 2; hae "$2"
+    ffmpeg -loglevel error -y -framerate 4 -pattern_type glob -i "$2/iss-*.png" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -pix_fmt yuv420p "$2/iss.mp4" && echo "video: $2/iss.mp4"
+    awk '{ s+=$1; if ($1>m) m=$1; n++ } END { if (n) printf "kehyksiä %d, ka %.1f ms, pisin %.1f ms\n", n, s/n, m }' "$2/mittaus-iss.txt" 2>/dev/null ;;
+  astropulu)
+    kaynnista; portti
+    linssi "linssi satelliitti"; sleep 20
+    ui "ui linssi kuva ${KOHDE:-etna} pulu"; sleep 8; kuva astropulu-kortti
+    if [[ -n "$PULU_X" ]]; then ui "ui napauta $PULU_X $PULU_Y"; sleep 20; kuva astropulu-vastaus; fi
+    linssi "linssi pois"; sleep 2; hae "$2"; grep -a "pulu\|chat\|Livia" "$2/ui-loki.txt" | tail -6 ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
     # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.

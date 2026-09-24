@@ -48,7 +48,7 @@ const chromium = pw.chromium ?? pw.default?.chromium;
 const selain = await chromium.launch({
   args: ['--autoplay-policy=no-user-gesture-required', '--use-angle=metal', '--disable-features=AudioServiceOutOfProcess'],
 });
-const k = await selain.newContext({ viewport: { width: 834, height: 1194 }, deviceScaleFactor: 2, serviceWorkers: 'block' });
+const k = await selain.newContext({ viewport: { width: Number(process.env.PW_W ?? 834), height: Number(process.env.PW_H ?? 1194) }, deviceScaleFactor: 2, serviceWorkers: 'block' });
 const s = await k.newPage();
 const virheet = [];
 s.on('pageerror', (e) => virheet.push(String(e)));
@@ -239,6 +239,23 @@ if (process.env.KIINTEA === 'maat' || process.env.KIINTEA === 'huippuvuoret') {
   });
   await odota(4000); await kamera(36, 138, 4000); await odota(2000);
   await kuva('maatiedot');
+  await selain.close(); palvelin.close(); process.exit(0);
+}
+/*
+ * KEKSINNÖT-PARI (natiivin laitetesti.sh keksinnotpari): pysäkki 0 (1769 Glasgow) ja 2, tauolla.
+ * Iso iPad 1024 × 1366: PW_W=1024 PW_H=1366 (Fable 24.9.).
+ */
+if (process.env.KIINTEA === 'keksinnotpari') {
+  await avaa('keksinnot');
+  await odota(6000);
+  await s.evaluate(() => { const a = window.matkakirja.ui.aikajana; a.aloitaSelaus?.(); a.siirry(0); a.tauko?.(); });
+  await odota(10000);
+  console.log('pov 1769', JSON.stringify(await s.evaluate(() => window.matkakirja.ui.pallonInstanssi?.pointOfView?.())));
+  await kuva('pari-keksinnot-1769');
+  await s.evaluate(() => { const a = window.matkakirja.ui.aikajana; a.aloitaSelaus?.(); a.siirry(2); a.tauko?.(); });
+  await odota(12000);
+  console.log('pov 1796', JSON.stringify(await s.evaluate(() => window.matkakirja.ui.pallonInstanssi?.pointOfView?.())));
+  await kuva('pari-keksinnot-1796');
   await selain.close(); palvelin.close(); process.exit(0);
 }
 if (process.env.KIINTEA) {

@@ -813,8 +813,8 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             UusiPeli(siemen, lahtokaupunki);
-            // Aloituskaava (omistaja 24.9.2026 klo 12.1x): intro soi pallonäkymässä ennen valintaa (Natiivi-UI,
-            // SoitaIntro), valinta keskeyttää sen ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
+            // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
+            // SoitaIntro); valintaan siirtyminen ohittaa sen, ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
             // Ilman lentoa (Lontoo, ei nappulaa) valinta keskeyttää intron silti (web doPickStart); aloitusnäkymän
             // ulkopuolella (voiton Uusi matka) intro soi tässä.
             if (!AloitaAloituslento(matka.Tila.Pelaaja.Sijainti.Kaupunki))

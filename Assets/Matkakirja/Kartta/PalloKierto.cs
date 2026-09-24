@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using CesiumForUnity;
 using Matkakirja.Peli;
 using Unity.Mathematics;
@@ -14,8 +15,10 @@ namespace Matkakirja
     /// Pallon kamera: katsoo aina maan keskipisteeseen paikasta (pituus, leveys, korkeus).
     ///
     /// Ohjaus: yhden sormen veto pyörittää palloa, irrotus jättää liukuman, joka
-    /// hiipuu pehmeästi. Kahden sormen nipistys zoomaa, ja sormien keskipisteen siirto
-    /// pyörittää samalla. Lyhyt kosketus ilman liikettä on napautus (<see cref="Napautettu"/>).
+    /// hiipuu pehmeästi. Kahden sormen ele lukitaan alussa (<see cref="KameraEleet.Paata"/>):
+    /// yhdensuuntainen pystyveto kallistaa, muuten nipistys zoomaa, sormiparin kierto kääntää
+    /// suuntimaa ja keskipisteen siirto pyörittää. Lyhyt kosketus ilman liikettä on napautus
+    /// (<see cref="Napautettu"/>); toinen napautus samaan kohtaan 0,3 s:n sisällä kääntää pohjoisen ylös.
     /// Ennen ensimmäistä kosketusta pallo pyörii itsestään.
     ///
     /// Kamera-ajo (<see cref="Aja"/>, IKamera) käyttää verkkopelin liikekieltä:
@@ -44,9 +47,18 @@ namespace Matkakirja
         [Header("Ohjaus")]
         [Tooltip("Liukuman hiipumisen aikavakio sekunteina.")]
         public double liukuAika = 0.35;
-        [Tooltip("Lähin näkymä: kapeamman suunnan kaari asteina. Verkkopelin lähin on 3,6° " +
-                 "(PALLOLAUDAN_SIIRTOLEVEYS); lähempänä pallolaattojen Z8 venyy sumeaksi.")]
-        public double minKaari = 3.6;
+        // LÄHIN ZOOMI WEBIN MUKAAN (omistajan build 9 -löydös 26, 24.9.2026; WEB ON MALLI, MITATTUNA):
+        // web js/pallolauta/kamera.js (origin/main 24.9.) 375 PALLOLAUDAN_LAHIN_LEVEYS = SIIRTOLEVEYS 120 / 2 = 60
+        // lautayksikköä RUUDUN LEVEYDELLÄ (lauta 12000 = 360°, eli 1,8°); 428–432 puhelin (leveys ≤ 480 css px ja
+        // dpr ≥ 2) pääsee yhden portaan syvemmälle, kerroin 1,5 → 40 yksikköä = 1,2° (Raamattu KARTTAUUDISTUKSEN
+        // PAATOKSET 34 kohta 15 c). Korkeus kuten 276 korkeusLeveydesta: leveys / (kuvasuhde · 2 tan(fov/2)).
+        // Aiempi natiivi 3,6° kapeammassa suunnassa oli siirtonäkymän leveys eikä lähin zoomi.
+        [Tooltip("Lähin näkymä: ruudun leveys lautayksikköinä (web PALLOLAUDAN_LAHIN_LEVEYS 60 = 1,8°).")]
+        public double lahinLeveys = 60.0;
+        [Tooltip("Puhelimen lähizoomin syvennys (web PUHELIMEN_LAHIZOOMIN_KERROIN).")]
+        public double puhelimenLahizoomi = 1.5;
+        [Tooltip("Kapean ruudun raja pisteinä, jota pidetään puhelimena (web PUHELIMEN_RUUTU_PX).")]
+        public double puhelimenRuutuPt = 480.0;
         [Tooltip("Kuinka suuren osan kapeammasta kuvakulmasta pallo täyttää kaukaisimmillaan.")]
         public double taytto = 0.92;
         public double maxLeveys = 80.0;
@@ -54,17 +66,27 @@ namespace Matkakirja
         [Header("Kallistus")]
         [Tooltip("Kameran kallistus pystysuorasta, asteina (0 = suoraan alas).")]
         public double kallistus = 0.0;
-        [Tooltip("Suurin kallistus lähimmässä näkymässä.")]
-        public double maxKallistus = 60.0;
-        [Tooltip("Katseen vaakasuunta asteina (0 = kamera katsoo pohjoiseen, 90 = itään). Pelaajan eleet olettavat 0:n; lennon kuvaus kääntää ja palauttaa.")]
+        // KALLISTUS PIDEMMÄLLE (omistajan build 9 -löydös 31, 24.9.2026): lähes horisonttiin, 85° (ei 90°), sama
+        // kuin lennon kuvauksen raja (Kuvaa). Maaston alle kamera ei mene: Aseta pienentää käytettyä kallistusta, jos
+        // rako maastoon alittuu (KameraEleet.Maastolle).
+        [Tooltip("Suurin kallistus pelikorkeuksilla (kallistusTaysiKm ja alle).")]
+        public double maxKallistus = 85.0;
+        [Tooltip("Katseen vaakasuunta asteina (0 = kamera katsoo pohjoiseen, 90 = itään). Pelaaja kääntää kahden sormen " +
+                 "kiertoeleellä, ja se pysyy; tuplanapautus ja PalautaPohjoinen kääntävät pohjoisen ylös. Lennon kuvauksen " +
+                 "suuntima palautuu lennon jälkeen nollaan.")]
         public double suuntima = 0.0;
         [Tooltip("Katsottavan pisteen korkeus metreinä (lennon kuvaus katsoo konetta).")]
         public double katseKorkeus = 0.0;
         [Tooltip("Suuntiman ja katseen korkeuden palautuksen aikavakio lennon jälkeen, sekunteja.")]
         public double palautusAika = 0.6;
 
-        [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu.")]
-        public double kallistusRajaKm = 3000.0;
+        // KALLISTUSRAJA (löydös 28 b): täysi tavallisilla pelikorkeuksilla, laskee vasta pallon mittakaavassa
+        // (smootherstep). Aiempi lineaarinen raja MinKorkeus…3000 km leikkasi kallistusta heti loitonnettaessa.
+        [Tooltip("Korkeus (km), jonka alapuolella kallistus saa olla täysi (maxKallistus).")]
+        public double kallistusTaysiKm = KameraEleet.KallistusTaysiM / 1000.0;
+        [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu (smootherstep).")]
+        public double kallistusNollaKm = KameraEleet.KallistusNollaM / 1000.0;
+
         [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
         public double kallistusHerkkyys = 0.25;
 
@@ -129,7 +151,7 @@ namespace Matkakirja
         PalloSumennus sumennus;
 
         /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila;
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen;
 
         /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
         public bool Seurataan { get; private set; }
@@ -167,7 +189,49 @@ namespace Matkakirja
             kallistus = math.clamp(kallistusAsteina, 0, 85);
             suuntima = suuntimaAsteina;
             katseKorkeus = katseenKorkeus;
+            lennonSuuntima = true;
+            pohjoiseen = false;
             Aseta();
+        }
+
+        /// <summary>
+        /// Kallistus, jolla kamera tässä kehyksessä oikeasti on (asteina): tallennettu <see cref="kallistus"/>
+        /// rajattuna korkeuden mukaan (<see cref="KallistusRaja()"/>, ei lennon kuvauksessa) ja maaston raon mukaan.
+        /// Tallennettu arvo ei muutu, joten lähemmäs zoomatessa pelaajan kallistus palaa. Kameran asentoa
+        /// talteen ottavat (lennon alku, linssit) lukevat tämän eivätkä kenttää.
+        /// </summary>
+        public double KaytettyKallistus { get; private set; }
+
+        /// <summary>
+        /// POHJOINEN YLÖS (omistajan build 9 -löydös 30; Natiivi-UI:n kompassinappi, tuplanapautus): suuntima kääntyy
+        /// lyhintä tietä nollaan <paramref name="kestoS"/> sekunnissa (smootherstep). Kallistus ja zoomi pysyvät.
+        /// 0 = heti. Kiertoele tai lennon kuvaus keskeyttää.
+        /// </summary>
+        public void PalautaPohjoinen(float kestoS = 0.4f)
+        {
+            lennonSuuntima = false;
+            pohjoiseenAlku = Kiedo(suuntima);
+            pohjoiseenAika = 0;
+            pohjoiseenKesto = kestoS;
+            pohjoiseen = kestoS > 0f && pohjoiseenAlku != 0;
+            if (!pohjoiseen) suuntima = 0;
+        }
+
+        // SUUNTIMAN PALAUTUS (löydös 30 i): pelaajan kiertoeleellä asettama suuntima pysyy. Vain lennon kuvauksen
+        // (Kuvaa) oma suuntima palautuu seurannan jälkeen, ja se palautuu NOLLAAN eikä pelaajan lentoa edeltäneeseen
+        // suuntimaan: lennon aikajanan lasku päättyy jo pohjoinen ylös (LennonAikajana.Laske, "ilman takaisinkääntöä"),
+        // saapuminen uuteen kaupunkiin on webin mukaan pohjoinen ylös, ja vanhan suuntiman palautus kääntäisi karttaa
+        // laskeutumisen jälkeen vielä kerran. Useimmiten palautettavaa ei siis ole; tämä siivoaa vain keskeytetyn lennon.
+        bool lennonSuuntima;
+        bool pohjoiseen;
+        double pohjoiseenAlku, pohjoiseenAika, pohjoiseenKesto;
+
+        void KaannaPohjoiseen(double dt)
+        {
+            pohjoiseenAika += dt;
+            double t = pohjoiseenAika / math.max(0.01, pohjoiseenKesto);
+            suuntima = pohjoiseenAlku * (1.0 - KameraEleet.Smootherstep(t));
+            if (t >= 1.0) { suuntima = 0; pohjoiseen = false; }
         }
 
         /// <summary>
@@ -185,6 +249,7 @@ namespace Matkakirja
             korkeus = math.max(MinKorkeus(), korkeusM);
             kallistus = 0;
             suuntima = 0;
+            pohjoiseen = false;
             katseKorkeus = 0;
             Aseta();
         }
@@ -357,9 +422,12 @@ namespace Matkakirja
                     if (ajo != null) Etene(Time.unscaledDeltaTime);
                 }
             }
-            if (!Seurataan && (suuntima != 0 || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
+            if (pohjoiseen && !Seurataan) KaannaPohjoiseen(Time.unscaledDeltaTime);
+            if (!Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
+            else if (!Seurataan) lennonSuuntima = false;
+            if (Application.isPlaying) PaivitaMaasto();
             Aseta();
-            var nakyma = new double4(pituus, leveys, korkeus, kallistus + suuntima * 1000.0);
+            var nakyma = new double4(pituus, leveys, korkeus, KaytettyKallistus + suuntima * 1000.0);
             if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
             bool lepo = !Liikkeessa && !Peitetty;
             if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
@@ -427,6 +495,7 @@ namespace Matkakirja
             korkeus = PorttiKorkeus();
             kallistus = 0;
             suuntima = 0;
+            pohjoiseen = false;
             katseKorkeus = 0;
         }
 
@@ -449,13 +518,13 @@ namespace Matkakirja
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>
         public double KallistusRaja() => KallistusRaja(korkeus);
 
-        /// <summary>Sallittu kallistus annetulla korkeudella (lennon lasku päättyy tähän, ettei kamera hyppää).</summary>
-        public double KallistusRaja(double korkeusM)
-        {
-            double raja = kallistusRajaKm * 1000.0;
-            double min = MinKorkeus();
-            return maxKallistus * math.saturate((raja - korkeusM) / math.max(1.0, raja - min));
-        }
+        /// <summary>
+        /// Sallittu kallistus annetulla korkeudella (lennon lasku päättyy tähän, ettei kamera hyppää): täysi
+        /// <see cref="maxKallistus"/> ≤ <see cref="kallistusTaysiKm"/>, nolla ≥ <see cref="kallistusNollaKm"/>,
+        /// välillä smootherstep (KameraEleet.KallistusRaja). Rajaa käytetyn kallistuksen, ei tallennettua.
+        /// </summary>
+        public double KallistusRaja(double korkeusM) =>
+            KameraEleet.KallistusRaja(korkeusM, maxKallistus, kallistusTaysiKm * 1000.0, kallistusNollaKm * 1000.0);
 
         /// <summary>Korkeus, jolla koko pallo mahtuu kuvan kapeampaan suuntaan.</summary>
         public double MaxKorkeus()
@@ -464,11 +533,19 @@ namespace Matkakirja
             return r / math.sin(PuoliKulma() * taytto) - r;
         }
 
-        /// <summary>Korkeus, jolla kapeampi suunta näyttää <see cref="minKaari"/> astetta.</summary>
+        /// <summary>
+        /// Lähin korkeus: ruudun leveys näyttää <see cref="lahinLeveys"/> lautayksikköä (puhelimella syvemmälle),
+        /// webin lahinKorkeus (js/pallolauta/kamera.js 442) samalla kaavalla.
+        /// </summary>
         public double MinKorkeus()
         {
             double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
-            return math.radians(minKaari) * r / (2.0 * math.tan(PuoliKulma()));
+            var kamera = GetComponent<Camera>();
+            double tanPysty = math.tan(math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0);
+            double kuvasuhde = kamera != null ? kamera.aspect : 1.0;
+            bool puhelin = Screen.width / (double)Kerroin <= puhelimenRuutuPt && Kerroin >= 2f;
+            double asteet = lahinLeveys * 360.0 / 12000.0 / (puhelin ? math.max(1.0, puhelimenLahizoomi) : 1.0);
+            return math.radians(asteet) * r / (2.0 * tanPysty * math.max(0.01, kuvasuhde));
         }
 
         /// <summary>Korkeus, jolla kapeampi suunta näyttää annetun kaaren (asteina).</summary>
@@ -493,21 +570,38 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Synteettinen ele (Komennot: veto, nipistys): sormien paikat näytön osuuksina
+        /// Synteettinen ele (Komennot: veto, nipistys, kallista, kierra): sormien paikat näytön osuuksina
         /// (0–1) ajan funktiona. Syötetään samaan ohjaukseen kuin oikeat sormet.
         /// </summary>
         public class Ele
         {
             public float kesto, aika;
             public float2 a0, a1;        // 1. sormi alussa ja lopussa
-            public float2 b0, b1;        // 2. sormi (vain nipistys)
+            public float2 b0, b1;        // 2. sormi (vain kahden sormen eleet)
             public bool kaksi;
+            /// <summary>Sormipari kiertyy keskipisteensä ympäri eleen aikana (asteina, vastapäivään +).</summary>
+            public float kiertoAst;
         }
 
         Ele ele;
 
         /// <summary>Aloittaa synteettisen eleen; sen jälkeinen kehys ilman sormia on irrotus (liuku).</summary>
         public void AloitaEle(Ele e) => ele = e;
+
+        // KAHDEN SORMEN ELEEN LUKITUS (omistajan build 9 -löydös 28 a, 24.9.2026): nipistyksessä keskipiste liikkuu
+        // aina hieman pystyyn, ja vanha koodi tulkitsi sen kallistukseksi. Nyt ele lukitaan alussa (KameraEleet.Paata,
+        // kynnykset siellä): Kallistus yksin TAI nipistys + kierto + siirto. Lukitus vapautuu, kun sormia on alle 2.
+        Elelukko lukko;
+        float2 lukkoA0, lukkoB0;          // sormet (pikseleinä), kun kahden sormen ele alkoi
+        float2 edellinenA, edellinenB;    // sormet edellisessä kehyksessä (kierto kehyksestä toiseen)
+        // Tuplanapautus (löydös 30): edellisen napautuksen aika (s, unscaled) ja paikka pisteinä.
+        double viimeNapautusAika = -1;
+        float2 viimeNapautus;
+
+        /// <summary>Kahden sormen eleen lukittu tila (Ei ennen kynnystä; diagnostiikkaan).</summary>
+        public Elelukko Lukko => lukko;
+
+        static (double x, double y) Pt(float2 p, float kerroin) => (p.x / kerroin, p.y / kerroin);
 
         void Ohjaa(double dt)
         {
@@ -524,6 +618,7 @@ namespace Matkakirja
             }
             float2 keski = 0;
             float vali = 0;
+            float2 sa = 0, sb = 0; // kaksi ensimmäistä sormea (n >= 2)
 
             if (ele != null)
             {
@@ -534,7 +629,16 @@ namespace Matkakirja
                 if (ele.kaksi)
                 {
                     float2 b = math.lerp(ele.b0, ele.b1, t) * ruutu;
-                    n = 2; keski = (a + b) * 0.5f; vali = math.distance(a, b);
+                    if (ele.kiertoAst != 0f)
+                    {
+                        // Kierto keskipisteen ympäri kaarena (ei jänteenä: väli pysyy, ettei kierto näytä nipistykseltä).
+                        float2 m = (a + b) * 0.5f;
+                        float k = math.radians(ele.kiertoAst * t), c = math.cos(k), s = math.sin(k);
+                        float2 da = a - m, db = b - m;
+                        a = m + new float2(da.x * c - da.y * s, da.x * s + da.y * c);
+                        b = m + new float2(db.x * c - db.y * s, db.x * s + db.y * c);
+                    }
+                    n = 2; keski = (a + b) * 0.5f; vali = math.distance(a, b); sa = a; sb = b;
                 }
                 else { n = 1; keski = a; }
                 if (t >= 1f) ele = null;
@@ -543,7 +647,12 @@ namespace Matkakirja
             {
                 for (int i = 0; i < n; i++) keski += (float2)sormet[i].screenPosition;
                 keski /= n;
-                if (n >= 2) vali = math.distance(sormet[0].screenPosition, sormet[1].screenPosition);
+                if (n >= 2)
+                {
+                    sa = sormet[0].screenPosition;
+                    sb = sormet[1].screenPosition;
+                    vali = math.distance(sa, sb);
+                }
             }
             else if (!syoteEstetty && Mouse.current != null && Mouse.current.leftButton.isPressed)
             {
@@ -551,6 +660,7 @@ namespace Matkakirja
                 keski = Mouse.current.position.ReadValue();
             }
 
+            if (n < 2) lukko = Elelukko.Ei;
             if (n > 0)
             {
                 kosketettu = true;
@@ -578,16 +688,45 @@ namespace Matkakirja
                     float2 siirto = keski - edellinenKeski;
                     if (n >= 2)
                     {
-                        // Kahden sormen pystyveto kallistaa (kuten Apple Mapsissa), vaakaveto pyörittää.
-                        kallistus = math.clamp(kallistus - siirto.y / Kerroin * kallistusHerkkyys, 0, KallistusRaja());
-                        siirto.y = 0;
+                        if (lukko == Elelukko.Ei)
+                            lukko = KameraEleet.Paata(Pt(lukkoA0, Kerroin), Pt(lukkoB0, Kerroin), Pt(sa, Kerroin), Pt(sb, Kerroin));
+                        if (lukko == Elelukko.Kallistus)
+                        {
+                            // Yhdensuuntainen pystyveto kallistaa (kuten Apple Mapsissa); zoomi, suunta ja paikka pysyvät.
+                            // Lähtö käytetystä kallistuksesta: tallennettu voi olla korkeuden rajaa suurempi.
+                            double raja = KallistusRaja();
+                            kallistus = math.clamp(math.min(kallistus, raja) - siirto.y / Kerroin * kallistusHerkkyys, 0, raja);
+                            vetoNopeus = 0;
+                        }
+                        else if (lukko == Elelukko.NipistysKierto)
+                        {
+                            // Nipistys zoomaa, sormiparin kierto kääntää suuntimaa ja keskipisteen siirto panoroi;
+                            // kallistus ei muutu (käytetty kallistus voi silti laskea pallon mittakaavassa, KallistusRaja).
+                            Kierra(siirto, dt);
+                            if (edellinenVali > 1f && vali > 1f)
+                                korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
+                            double kierto = KameraEleet.KulmaMuutos(Pt(edellinenA, 1f), Pt(edellinenB, 1f), Pt(sa, 1f), Pt(sb, 1f));
+                            if (kierto != 0)
+                            {
+                                suuntima = Kiedo(suuntima + KameraEleet.SuuntimanMuutos(kierto));
+                                pohjoiseen = false;
+                                lennonSuuntima = false;
+                            }
+                        }
+                        else vetoNopeus = 0; // ennen lukitusta kamera ei liiku
                     }
-                    Kierra(siirto, dt);
-                    if (n >= 2 && edellinenVali > 1f && vali > 1f)
-                        korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
+                    else Kierra(siirto, dt);
+                }
+                else if (n >= 2)
+                {
+                    lukko = Elelukko.Ei;
+                    lukkoA0 = sa;
+                    lukkoB0 = sb;
                 }
                 edellinenKeski = keski;
                 edellinenVali = vali;
+                edellinenA = sa;
+                edellinenB = sb;
             }
             else
             {
@@ -596,7 +735,21 @@ namespace Matkakirja
                     if (kosketusMatka <= napautusLiike && kosketusAika <= napautusAika)
                     {
                         vetoNopeus = 0;
-                        Napautettu?.Invoke(edellinenKeski);
+                        // Tuplanapautus kääntää pohjoisen ylös. Ensimmäinen napautus käsitellään heti (kaupungin valinta ei
+                        // odota); toista ei välitetä napautuksena, ettei sama kohde avaudu ja sulkeudu.
+                        float2 pt = edellinenKeski / Kerroin;
+                        double nyt = Time.unscaledTimeAsDouble;
+                        if (KameraEleet.OnTupla(viimeNapautusAika, (viimeNapautus.x, viimeNapautus.y), nyt, (pt.x, pt.y)))
+                        {
+                            viimeNapautusAika = -1;
+                            PalautaPohjoinen();
+                        }
+                        else
+                        {
+                            viimeNapautusAika = nyt;
+                            viimeNapautus = pt;
+                            Napautettu?.Invoke(edellinenKeski);
+                        }
                     }
                     liuku = vetoNopeus;
                 }
@@ -618,8 +771,10 @@ namespace Matkakirja
         {
             double a = AstettaPikselille();
             double cos = math.max(0.3, math.cos(math.radians(leveys)));
-            // Veto oikealle tuo lännen näkyviin (pallo pyörii sormen mukana).
-            var muutos = new double2(-pikselit.x * a / cos, -pikselit.y * a);
+            // Veto oikealle tuo lännen näkyviin (pallo pyörii sormen mukana). Kiertyneessä näkymässä (suuntima) ruudun
+            // siirto käännetään maan suuntiin, jotta sormen alla oleva maa seuraa sormea (löydös 30 ii).
+            var (ita, pohjoinen) = KameraEleet.RuutuMaahan(pikselit.x, pikselit.y, suuntima);
+            var muutos = new double2(-ita * a / cos, -pohjoinen * a);
             Siirra(muutos);
             if (dt > 0)
             {
@@ -788,13 +943,71 @@ namespace Matkakirja
             math.isfinite(leveys) && math.isfinite(pituus) && math.isfinite(korkeus) && korkeus > 0
             && math.isfinite(kallistus) && math.isfinite(suuntima) && math.isfinite(katseKorkeus);
 
-        /// <summary>Lennon jälkeen suuntima kääntyy lyhintä tietä pohjoiseen ja katse laskeutuu maahan.</summary>
+        // MAASTO KAMERAN ALLA (löydös 31). Tilesetissä ei ole törmäysverkkoja (Editor/Rakennus.cs createPhysicsMeshes =
+        // false: iPadilla ne paistettiin jokaiselle laatalle), joten Physics.Raycast ei osu mihinkään. Korkeus luetaan
+        // Cesiumin SampleHeightMostDetailed-kyselyllä yhdestä pisteestä (silmän alta), enintään 2,5 kertaa sekunnissa,
+        // yksi kysely kerrallaan, ja vain kun silmä on alle maastonKatto + rako + 3 km ellipsoidista — korkeammalla
+        // mikään vuori ei ylety, eikä kyselyjä tehdä (tavallinen pelinäkymä ilman kallistusta on satojen km:n päässä).
+        // Ellipsoidipohjalla (maasto pois) maasto = 0. Vanha näyte kelpaa 30 km:n päähän; kauempana oletetaan 0.
+
+        [Tooltip("Maapallon korkein huippu (m): tätä ylempänä silmä ei voi osua maastoon, eikä kyselyjä tehdä.")]
+        public double maastonKatto = 9000.0;
+        [Tooltip("Maastokyselyjen väli sekunteina (SampleHeightMostDetailed silmän alta).")]
+        public float maastoVali = 0.4f;
+
+        double silmanLat, silmanLon, silmanKorkeus = double.MaxValue;
+        Cesium3DTileset maastoPallo;
+        Task<CesiumSampleHeightResult> maastoKysely;
+        double2 maastoKyselyPaikka;   // (lat, lon)
+        double maastoNayte;
+        double2 maastoNaytePaikka;    // (lat, lon)
+        bool maastoNayteOn;
+        float seuraavaMaasto;
+
+        /// <summary>Maaston korkeus (m, ellipsoidista) viimeisimmästä näytteestä, jos se on 30 km:n sisällä; muuten 0.</summary>
+        double MaastoKohdassa(double lat, double lon)
+        {
+            if (!maastoNayteOn) return 0.0;
+            if (ReittiGeometria.Kulma(lat, lon, maastoNaytePaikka.x, maastoNaytePaikka.y) > 30.0 / 111.2) return 0.0;
+            return math.max(0.0, maastoNayte);
+        }
+
+        void PaivitaMaasto()
+        {
+            if (maastoKysely != null)
+            {
+                if (!maastoKysely.IsCompleted) return;
+                var tehtava = maastoKysely;
+                maastoKysely = null;
+                if (!tehtava.IsFaulted && !tehtava.IsCanceled && tehtava.Result != null
+                    && tehtava.Result.sampleSuccess != null && tehtava.Result.sampleSuccess.Length > 0 && tehtava.Result.sampleSuccess[0])
+                {
+                    maastoNayte = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+                    maastoNaytePaikka = maastoKyselyPaikka;
+                    maastoNayteOn = true;
+                }
+            }
+            if (Time.unscaledTime < seuraavaMaasto) return;
+            if (silmanKorkeus > maastonKatto + KameraEleet.VahimmaisRako(korkeus) + 3000.0) return;
+            if (maastoPallo == null && georeferenssi != null) maastoPallo = georeferenssi.GetComponentInChildren<Cesium3DTileset>();
+            if (maastoPallo == null || maastoPallo.tilesetSource != CesiumDataSource.FromUrl) { maastoNayteOn = false; return; }
+            seuraavaMaasto = Time.unscaledTime + maastoVali;
+            maastoKyselyPaikka = new double2(silmanLat, silmanLon);
+            try { maastoKysely = maastoPallo.SampleHeightMostDetailed(new double3(silmanLon, silmanLat, 0.0)); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA kamera: maastokysely kaatui: " + e.Message); maastoKysely = null; }
+        }
+
+        /// <summary>Lennon jälkeen lennon suuntima kääntyy lyhintä tietä pohjoiseen ja katse laskeutuu maahan.</summary>
         void Palauta(double dt)
         {
             double a = 1.0 - math.exp(-dt / math.max(0.05, palautusAika));
-            double s = ((suuntima % 360.0) + 540.0) % 360.0 - 180.0;
-            s -= s * a;
-            suuntima = math.abs(s) < 0.05 ? 0.0 : s;
+            if (lennonSuuntima)
+            {
+                double s = ((suuntima % 360.0) + 540.0) % 360.0 - 180.0;
+                s -= s * a;
+                suuntima = math.abs(s) < 0.05 ? 0.0 : s;
+                if (suuntima == 0) lennonSuuntima = false;
+            }
             katseKorkeus = katseKorkeus < 1.0 ? 0.0 : katseKorkeus * (1.0 - a);
         }
 
@@ -818,7 +1031,11 @@ namespace Matkakirja
             }
             else viimeKelvollinen = (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus);
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
-            if (!vapaaKuvaus) kallistus = math.min(kallistus, KallistusRaja());
+            // Käytetty kallistus (löydös 28 b): tallennettua kallistusta EI leikata, vaan raja koskee vain kuvaa, joten
+            // loitonnus ja lähennys palauttavat pelaajan kallistuksen. Lennon kuvaus (vapaaKuvaus) ei ole korkeuden
+            // rajoittama. Ylempänä ennen 24.9. tässä oli kallistus = min(kallistus, raja), joka leikkasi pysyvästi.
+            double kaytetty = math.clamp(vapaaKuvaus ? kallistus : math.min(kallistus, KallistusRaja()), 0.0, 85.0);
+            double etaisyys = korkeus;
 
             // Kamera kiertää pistettä (pituus, leveys, katseKorkeus): kallistus kääntää sen
             // pystysuorasta katsesuuntaa vastapäätä (suuntima 0 = kamera etelässä, katse
@@ -830,9 +1047,29 @@ namespace Matkakirja
             double3 ita = math.normalize(math.cross(pohjoinen, ylos));
             double b = math.radians(suuntima);
             double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
-            double k = math.radians(kallistus);
+            double k = math.radians(kaytetty);
             double3 suunta = ylos * math.cos(k) - eteen * math.sin(k);
-            double3 silma = kohde + suunta * korkeus;
+            double3 silma = kohde + suunta * etaisyys;
+            // MAASTON RAKO (löydös 31): silmän ellipsoidikorkeus ja maasto sen alla (PaivitaMaasto). Jos rako alittuu,
+            // kallistus pienenee (tai kallistuksen 0 ei riittäessä kamera nousee) pallomallilla, jonka virhe
+            // ellipsoidiin nähden korjataan tämän kehyksen tarkalla korkeudella.
+            double3 silmaLlh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(silma);
+            double maasto = MaastoKohdassa(silmaLlh.y, silmaLlh.x);
+            double minSilma = maasto + KameraEleet.VahimmaisRako(etaisyys);
+            if (silmaLlh.z < minSilma)
+            {
+                double sade = math.length(kohde) - katseKorkeus;
+                double virhe = KameraEleet.SilmanKorkeus(katseKorkeus, etaisyys, kaytetty, sade) - silmaLlh.z;
+                (kaytetty, etaisyys) = KameraEleet.Maastolle(katseKorkeus, etaisyys, kaytetty, minSilma + virhe, sade);
+                k = math.radians(kaytetty);
+                suunta = ylos * math.cos(k) - eteen * math.sin(k);
+                silma = kohde + suunta * etaisyys;
+                silmaLlh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(silma);
+            }
+            KaytettyKallistus = kaytetty;
+            silmanLat = silmaLlh.y;
+            silmanLon = silmaLlh.x;
+            silmanKorkeus = silmaLlh.z;
             double3 kameranYlos = eteen * math.cos(k) + ylos * math.sin(k);
 
             var gt = georeferenssi.transform;
@@ -846,9 +1083,14 @@ namespace Matkakirja
             if (kamera != null)
             {
                 double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
-                kamera.nearClipPlane = (float)math.max(100.0, korkeus * 0.02);
-                kamera.farClipPlane = (float)math.max(korkeus + 2.0 * r, KaukorajaVahintaan);
-                if (kallistus > 0) kamera.nearClipPlane = (float)math.max(50.0, korkeus * 0.01);
+                // Kaukotaso: etäisyys + pallon halkaisija kattaa aina horisontin (85°:n kallistuksessa silmä on ≥ 150 m
+                // maasta, horisontti √(2Rh) ≤ satoja km), joten matalassakin kulmassa horisontin laatat mahtuvat.
+                // Lähitaso: kallistuksessa 1 % etäisyydestä, mutta enintään puolet raosta maastoon, ettei läheinen
+                // vuori leikkaudu (Metal käyttää käänteistä syvyyttä, joten pieni lähitaso ei syö tarkkuutta).
+                double lahi = kaytetty > 0 ? math.max(50.0, etaisyys * 0.01) : math.max(100.0, etaisyys * 0.02);
+                lahi = math.min(lahi, math.max(1.0, (silmanKorkeus - maasto) * 0.5));
+                kamera.nearClipPlane = (float)lahi;
+                kamera.farClipPlane = (float)math.max(etaisyys + 2.0 * r, KaukorajaVahintaan);
             }
         }
     }

@@ -213,6 +213,8 @@ namespace Matkakirja.Natiivi
             sisus.Clear();
             luettavat.Clear();
             if (!string.IsNullOrEmpty(nimi)) luettavat.Add(nimi);
+            otsikonPituus = luettavat.Count > 0 ? luettavat[0].Length : 0;
+            PaivitaKaiutin();
             vieritys.scrollOffset = Vector2.zero;
             Asettele();
             Aanet.PulunTehoste("popup");
@@ -329,6 +331,7 @@ namespace Matkakirja.Natiivi
             var l = Rakenne.El("mk-nahtavyys__lainaus", isa, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nahtavyys__lainausteksti", l), Kirjasin.LukuKursiivi);
             luettavat.Add(teksti);
+            PaivitaKaiutin();
             if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-nahtavyys__lainauslahde", l), Kirjasin.Kone);
         }
 
@@ -457,6 +460,7 @@ namespace Matkakirja.Natiivi
             var n = Rakenne.El("mk-opas__nosto", null, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-opas__nostoteksti", n), Kirjasin.LukuKursiivi);
             luettavat.Add(teksti);
+            PaivitaKaiutin();
             return n;
         }
 
@@ -553,6 +557,7 @@ namespace Matkakirja.Natiivi
             l.enableRichText = true;
             Kirjasimet.Aseta(l, Kirjasin.Luku);
             luettavat.Add(teksti);
+            PaivitaKaiutin();
         }
 
         const string VuosiJakso = @"(?:\s?[–-]\s?\d{2,4})?";
@@ -584,6 +589,19 @@ namespace Matkakirja.Natiivi
         static string Suojaa(string s) => s.Replace("<", "<noparse><</noparse>");
 
         // --- luenta ------------------------------------------------------------------------------------
+
+        int otsikonPituus;
+
+        /// <summary>
+        /// E16 (web lukija.js paivitaLukija, LUETTAVAN_VAHIMMAIS 80): kaiutin vain, kun luettavaa tekstiä on otsikon
+        /// lisäksi vähintään 80 merkkiä — muuten nappi lupaisi hiljaisuutta.
+        /// </summary>
+        void PaivitaKaiutin()
+        {
+            int pituus = -otsikonPituus;
+            foreach (var t in luettavat) pituus += t?.Length ?? 0;
+            kaiutin.style.display = pituus >= 80 ? DisplayStyle.Flex : DisplayStyle.None;
+        }
 
         void VaihdaLuenta()
         {
