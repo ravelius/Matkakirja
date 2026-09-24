@@ -74,6 +74,27 @@ tarpeen.
   laitetta — ei testattu tällä kierroksella ajan puutteessa.
 - Vaaka ja iPad jäivät edelleen pois.
 
+## Mediarivi (24.9.2026, master d28176d) — PASS iPhonella
+
+- `ui lehti lontoo`, etusivun loppuun vieritettynä: **ENNEN** "Hold Your
+  Hand Out, Naughty Boy · 1913" (lähde "Florrie Forde · UCSB Cylinder
+  Audio Archive · Commons, PD") ja **NYT** "Resonance 104.4 FM" +
+  punainen "LIVE". Ei napautettu soittonappeja (▷) ohjeen mukaisesti.
+  (media-lontoo-ennen-nyt.png)
+- `ui lehti pariisi`: yksi radionappi "Radio Campus Paris 93,9 · LIVE",
+  ei ENNEN/NYT-paria — täsmää.
+  (media-pariisi-yksi-nappi.png)
+- `ui media lontoo` lokirivi: `media lontoo (GBR): radio Resonance
+  104.4 FM, kielinäyte Itäkadun tori (Lontoo) — yll_foundations, PD,
+  tallenne Hold Your Hand Out, Naughty Boy · asemia 115, tallenteita 2+0`
+
+**iPad**: vahvistettu myös, kun Natiivi-UI lisäsi `ui lehti vierita
+<px|loppu>` -komennon (master cebcf62). Lontoossa ENNEN/NYT näkyvät
+VIEREKKÄIN kahtena sarakkeena (ei allekkain kuten iPhonella) — sama
+sisältö, otsikko "Hold Your Hand Out, …" katkeaa kapeampaan sarakkeeseen
+(ei bugi, vain leveys). Pariisissa yksi nappi, sama kuin iPhonella.
+(ipad-media-20260924/media-lontoo-ipad.png, media-pariisi-ipad.png)
+
 ## B ja C -osiot
 
 Ei aloitettu ajan puutteessa (B: aiemmat erät, C: äänikierros — B7:n

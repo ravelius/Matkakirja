@@ -159,10 +159,10 @@ Natiivissa lehti on verkkosivu natiivin päällä (`Scripts/Peli/LehtiKuori.cs`,
 | Mastossa maan linkki (maalehti) | index.html:776, ui.js:2609 | Lehtinakyma.Masto "X-liite" | on (merge-pyynnössä) | NUI |
 | Sää-rivi → koko vuoden sää (×) | index.html:781, ui.js:2623, lehti.js:2388 | Lehtinakyma.SaaRivi + Saagraafi | on (merge-pyynnössä natiivi-ui/lehti-kulttuuri) | NUI, SS |
 | Kuvagalleria ‹ ›, kuvan napautus → suurennos | index.html:787–788, ui.js:2525–2539, 16744–16747 | LehtiKuori.cs | kuori | NUI |
-| "Lue lisää" / "Lue lisää maasta" → wiki-dialogi (liuskat, ‹ ›, "lue artikkeli", "Sulje") | index.html:796, 807, 870–899; ui.js:2545, 2569, 16571 | LehtiKuori.cs | kuori | NUI, SS |
-| Aiheliuskat ja nostot, "Lue lisää aiheesta" | index.html:847, ui.js:15211 | LehtiKuori.cs | kuori | NUI, SS |
+| "Lue lisää" / "Lue lisää maasta" → wiki-dialogi (liuskat, ‹ ›, "lue artikkeli", "Sulje") | index.html:796, 807, 870–899; ui.js:2545, 2569, 16571 | UI/WikiIkkuna.cs (lehdessä vain noston "Lue lisää aiheesta", web: lehdessä ei Lue lisää -nappia) | on (master 95dd4d9) | NUI, SS |
+| Aiheliuskat ja nostot, "Lue lisää aiheesta" | index.html:847, ui.js:15211 | Lehtinakyma.Nosto → WikiIkkuna | on (master 95dd4d9) | NUI, SS |
 | Uutisotsikot → uutinen (×, "Käännä") | index.html:817, lehti.js:2438, 2490, 2503 | LehtiKuori.cs | kuori | NUI, SS |
-| Mediarivi: maan radio ja tv | index.html:822, 836 | LehtiKuori.cs | kuori | NUI, SS |
+| Mediarivi: maan radio ja tv | index.html:822, 836 | UI/Lehti/Mediarivi.cs (Ennen-tallenne, radio LIVE, kielinäyte; tv:tä ei webissä enää ole) | on (master 3e66f72, PASS iPhone + iPad) | NUI, SS |
 | "Kuuntele näyte", "Kuuntele musiikkia", esikuuntelu, musiikkilinkit | ui.js:16265, 16275, 16289, 16326 | LehtiKuori.cs | kuori | NUI, SS |
 | Noston "Avaa sivusto" -linkki | ui.js:16256 | LehtiKuori.cs | kuori | NUI |
 | Kulttuurivisan vaihtoehdot | index.html:851, ui.js:15269 | Lehtinakyma.Kulttuurivisa (kokoelma kulttuurivisat) | on (merge-pyynnössä) | NUI, PK |
@@ -183,7 +183,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Nähtävyysarkki: ☰ muut nähtävyydet, ‹ ›, ← takaisin, "Sulje" | index.html:915–932, nahtavyydet.js:2570, 2726 | puuttuu | on | NUI, SS |
 | Kohdekartta: zoomi, "⤢ Kokoruutu", × | nahtavyydet.js:953, 980, 1229, 1473 | puuttuu | on | NUI, SS |
 | "Matkaopas"-nauha, "Lue lisää matkailijan oppaasta →" | nahtavyydet.js:1700, 1743 | puuttuu | on | NUI, SS |
-| "Lue lisää aiheesta", henkilölinkki | nahtavyydet.js:2213, 2368 | puuttuu | on | NUI, SS |
+| "Lue lisää aiheesta", henkilölinkki | nahtavyydet.js:2213, 2368 | Nahtavyysarkki → WikiIkkuna | on (wiki-ikkuna master 95dd4d9) | NUI, SS |
 | Opas: vyörivit, säägraafin suurennus, linkit | opas.js:189, 317, 338 | puuttuu | on | NUI, SS |
 
 ## 10. Kysymykset, tapahtumakortti ja paljastus
@@ -342,11 +342,12 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
 | "Käynnistä" | aikajana.js:4507 | UI/Linssit/AikajanaNakyma.cs:118 | on | NUI |
-| Kello ja "Tauko" / "Jatka" | aikajana.js:2666, 2713 | AikajanaNakyma.cs:80 | on | NUI |
-| Aikajanan kortit (siirry keksintöön) | aikajana.js:2759 | AikajanaNakyma.cs:78, 82 (◀ ▶) | on | NUI |
+| Palkki pelin yläpalkin tilalle, kello ja "Tauko" / "Jatka" / "Loppu" | aikajana.js:2666, 2713, 2847 | AikajanaNakyma.cs (palkki) | on (master cebcf62) | NUI |
+| Keksijäkaruselli (siirry keksintöön, veto, heitto, keskimmäinen → juttu) | aikajana.js:2759, 3951, 6024 | UI/Linssit/Keksijakaruselli.cs; ◀▶ poistettu (ei webissä) | on (master 95dd4d9) | NUI |
+| Havainnekuva soikiona, vuosi ◈ nimi, kuvakierto; loppusanat paneelissa | aikajana.js:5590, 4950 | AikajanaNakyma + Valokeila.cs | on (master cebcf62) | NUI |
 | Kartan valot (napautus → keksintö) | aikajana.js:3145, 3289 | puuttuu | puuttuu | LS |
 | Lappukahva "Näytä X" | aikajana.js:4151 | puuttuu | on (lappukahva, master ee8c2af) | NUI |
-| Välinäytöksen "Jatka" | aikajana.js:771 | AikajanaNakyma.cs:112 | on | NUI |
+| Välinäytöksen "Jatka" | aikajana.js:771 | palkin nappi hehkuen, teksti kartan päällä ilman korttia | on (master cebcf62) | NUI |
 | "Katso löydöt" (loppu) | aikajana.js:5005 | AikajanaNakyma.cs:121, 123 | on | NUI |
 | "Lue juttu" → tiedeliite | aikajana.js:5677 | AikajanaNakyma (paneelin nappi) → KeksinnotLinssi.AvaaJuttu (LS) | on (merge-pyynnössä natiivi-ui/tiedeliite) | NUI, LS |
 | Tiedeliite: ✕, ☰ sisällys ja sen rivit, edellinen/seuraava keksijä, karuselli ‹ › ja pisteet, kuvan suurennus | tiedeliite.js:642, 654, 749, 700, 388, 398, 227 | UI/Linssit/Tiedeliitenakyma.cs | on (merge-pyynnössä); ihmisen matkan tiedeliite tulee LS:n tutkimusvaiheen kanssa | NUI, LS |
@@ -356,8 +357,9 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
 | Aloituskortin "Käynnistä" | ihmisen-matka.js | AikajanaNakyma.cs (IHMISEN MATKAN ALOITUS) | on | NUI |
-| "Tauko" / "Jatka" / "Loppu" | ihmisen-matka-esitys.js:2493 | AikajanaNakyma.cs:78–82 | on | NUI |
-| Löytöpaikan kehys → avaa nosto | ihmisen-matka-esitys.js:1759 | AikajanaNakyma (KuvaKasittelija, vain näyttö) | osittain | NUI, LS |
+| "Tauko" / "Jatka" / "Loppu" | ihmisen-matka-esitys.js:2493 | AikajanaNakyma.cs (palkki) | on | NUI |
+| Aikaselain (nauha: veto esikatselee, irrotus valitsee) | linssit/aikaselain.js | UI/Linssit/Aikaselain.cs + LS:n Esitys.Esikatsele/Valitse; ◀▶ pois | on (merge-pyynnössä natiivi-ui/aikaselain a3d28f9) | NUI, LS |
+| Löytöpaikan kehys → avaa nosto | ihmisen-matka-esitys.js:1759 | löytökuva pisteen yllä (KuvanPiste), napautus avaa paikan kortin | on (master 95dd4d9); nostokortin omat napit alla | NUI, LS |
 | Nostokortti: "Sulje nosto", "Tiedeliite: koko juttu" | linssit/ihmisen-matka-kortti.js:398, 443 | puuttuu | puuttuu | NUI, LS |
 | Tutkimusvaihe (vanat, pulukysymykset) | ihmisen-matka-tutkimus.js:343 | puuttuu (tarkista) | puuttuu | LS, NUI |
 
@@ -485,6 +487,15 @@ matkakirjakortti lappuna luennan aikana kaikilla laitteilla (webin TEKSTIT PIILO
 Myöhemmin samana päivänä: sanelu ja "Kirjoita kysymys" (masterissa), Liiku, kulkutapaliuku ja "Vaihda
 matkustustapa" (master 30fe586), B7-äänisoittimen koukut ja tehosteiden webpariteetti (masterissa).
 Odottaa muita: ✈-kohdemerkit (NS), tiedeliite ja aikajanalinssit (LS).
+
+## Tehty (päivitys 24.9.2026 aamupäivä, Natiivi-UI)
+
+Kuvasarjat A4/A5/A7 PASS uusinnassa. Masterissa: ehdotuslomake lehden päälle, lehden mediarivi (osio 8),
+Lue lisää -ikkuna (WikiIkkuna: oma artikkeli tai Wikipedia, galleria, lähderivi, kaiutin; lehti,
+nähtävyysarkki, matkakirjakortti), aikajanalinssit webin mukaan (Linssisepän vertailukuvien viisi eroa:
+palkki, havainnekuva, välinäytös, loppusanat, karuselli, löytökuva pisteen yllä, aloituslaatikon poisto),
+`ui lehti vierita`, `ui wiki`, `ui media`. Merge-pyynnössä: ihmisen matkan aikaselain ja kuvien GPU-luku
+taustalla (AsyncGPUReadback). Seuraavaksi: Jaa matka (odottaa PK:n Jakaminen-rajapintaa).
 
 ## Taulukon tarkistus (24.9.2026 aamu, Natiivi-UI)
 
