@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2194, teksti: 'Sää: Birdsville, Coober Pedy, Kalgoorlie, Mount… (#3065)' },
   { v: 2193, teksti: 'Sää: Al Kufra, Campo Grande, Exmouth, Macapá, S… (#3064)' },
   { v: 2192, teksti: 'Sää: Bananal, Geraldton, João Pessoa, Murzuk, N… (#3063)' },
   { v: 2191, teksti: 'Sää: Bahr el Ghazal, Broome, Orjarannikko, Sant… (#3062)' },

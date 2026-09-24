@@ -4333,4 +4333,85 @@ export const SAATIEDOT = {
       + 'lämpötilan leutona, 15–20 astetta ympäri vuoden. Sadetta '
       + 'tulee vähän, hieman enemmän kesä–heinäkuussa.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N16-kaupungit, VIIMEINEN
+   * ERÄ — kaikki 71 uutta kaupunkia saavat säänsä tämän jälkeen): Open-
+   * Meteon ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko
+   * vuodelta (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-
+   * saanormaalit.mjs --vain birdsville,cooberpedy,kalgoorlie,mountisa,
+   * nome,portovelho.
+   */
+  birdsville: {
+    lat: -25.8987,
+    lon: 139.3487,
+    keskilampo: [33.7, 31.8, 28.5, 24, 17.3, 14.1, 13.8, 16.7, 22.1, 25.1, 29.3, 30.3],
+    ylin: [40, 38, 34, 30, 23, 20, 20, 23, 29, 32, 36, 36],
+    alin: [27, 26, 23, 18, 12, 8, 7, 10, 15, 18, 22, 24],
+    sade: [5, 42, 42, 2, 17, 0, 12, 5, 1, 12, 2, 18],
+    luonnehdinta: 'Birdsvillessä tammikuu on polttava, lähes 34 '
+      + 'astetta, ja heinäkuu selvästi viilein. Sadetta tulee '
+      + 'vähän ja satunnaisesti — helmi–maaliskuu ovat tavallista '
+      + 'sateisempia.',
+  },
+  cooberpedy: {
+    lat: -29.0135,
+    lon: 134.7544,
+    keskilampo: [29.2, 27.5, 25.5, 19.9, 14.4, 11.3, 11.6, 14, 18.2, 20.7, 25.7, 25.4],
+    ylin: [37, 34, 32, 26, 20, 17, 18, 20, 25, 28, 33, 32],
+    alin: [22, 21, 19, 14, 9, 6, 5, 8, 11, 13, 18, 19],
+    sade: [25, 41, 5, 14, 12, 4, 5, 20, 14, 24, 5, 18],
+    luonnehdinta: 'Coober Pedyssä kesä (joulu–helmikuu) on '
+      + 'kuuma, lähes 29 astetta, ja talvi (kesä–heinäkuu) '
+      + 'viilenee reiluun kymmeneen. Sadetta tulee vähän ympäri '
+      + 'vuoden.',
+  },
+  kalgoorlie: {
+    lat: -30.7489,
+    lon: 121.4658,
+    keskilampo: [25.4, 24.5, 22.9, 18.6, 14.7, 12.3, 11.8, 13.3, 15.1, 19.5, 22.7, 24.2],
+    ylin: [32, 31, 29, 23, 20, 17, 17, 18, 21, 26, 30, 31],
+    alin: [19, 18, 16, 14, 9, 8, 7, 8, 10, 13, 16, 17],
+    sade: [34, 46, 44, 19, 26, 17, 6, 42, 24, 14, 10, 15],
+    luonnehdinta: 'Kalgoorliessa eteläinen kesä (joulu–helmikuu) '
+      + 'on lämmin, noin 25 astetta, talvi (kesä–heinäkuu) '
+      + 'viilenee alle 13 asteeseen. Sadetta tulee tasaisesti '
+      + 'ympäri vuoden.',
+  },
+  mountisa: {
+    lat: -20.7256,
+    lon: 139.4927,
+    keskilampo: [30.8, 29.8, 28.4, 25.5, 19.9, 18, 17.5, 20.6, 24.8, 27.7, 30.8, 30.5],
+    ylin: [37, 35, 33, 30, 25, 24, 24, 27, 31, 34, 38, 36],
+    alin: [25, 25, 24, 21, 14, 12, 11, 14, 19, 21, 24, 25],
+    sade: [127, 74, 96, 76, 15, 0, 1, 1, 8, 6, 1, 42],
+    luonnehdinta: 'Mount Isassa tammikuu ja marras–joulukuu ovat '
+      + 'kuumimmat ja sateisimmat, yli 30 astetta. Kesäkuu ja '
+      + 'heinäkuu ovat käytännössä sateettomia ja selvästi '
+      + 'viileämpiä.',
+  },
+  nome: {
+    lat: 64.5011,
+    lon: -165.4064,
+    keskilampo: [-18.5, -16, -12.9, -6.6, 1.7, 8.2, 10.8, 10.1, 5.4, 0.3, -6.8, -14.6],
+    ylin: [-16, -13, -10, -4, 5, 11, 13, 12, 7, 2, -5, -12],
+    alin: [-21, -19, -16, -9, -1, 5, 8, 8, 3, -1, -9, -17],
+    sade: [12, 56, 44, 37, 28, 46, 51, 79, 79, 101, 74, 40],
+    luonnehdinta: 'Nomessa talvi (joulu–helmikuu) on ankaran '
+      + 'kylmä, lähes 20 asteen pakkasessa. Lyhyt kesä '
+      + '(heinä–elokuu) nousee vain kymmeneen asteeseen, ja '
+      + 'syksy tuo vuoden sateisimmat kuukaudet.',
+  },
+  portovelho: {
+    lat: -8.7608,
+    lon: -63.8999,
+    keskilampo: [26.1, 25.7, 25.8, 25.5, 25.4, 26.1, 26.1, 27, 27, 27, 26.2, 25.7],
+    ylin: [29, 29, 29, 28, 29, 30, 30, 32, 31, 31, 30, 29],
+    alin: [23, 23, 23, 23, 22, 23, 22, 22, 23, 23, 23, 23],
+    sade: [309, 355, 314, 290, 109, 35, 26, 34, 91, 145, 232, 278],
+    luonnehdinta: 'Porto Velhossa helmikuu on sateisin, yli 350 '
+      + 'millimetriä, kun Amazonin sadekausi on huipussaan. '
+      + 'Kesä–heinäkuu on selvästi kuivempaa, alle 30 '
+      + 'millimetrin sateella.',
+  },
 };
