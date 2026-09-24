@@ -164,16 +164,16 @@ export function sallittuOrigin(origin, lista = []) {
  * arvo on sovelluksen bundle id, ja saman tunnisteen esiintymisestä
  * User-Agentissa (iOS:n NSURLSession kirjoittaa sen sinne itse). Sallitut
  * tunnisteet: ympäristömuuttuja POLLO_NATIIVIT (pilkkulista) tai oletus
- * NATIIVIT_OLETUS. Natiivi pääsee puhesynteesiin, pöllön chattiin ja
- * sähketehtävän tuomioon (NATIIVIN_TEHTAVAT; Fablen päätös 23.9.2026: chat
- * ja sähketuomio samoin 30/vrk per IP- ja kuukausirajoin kuin selain), ei
- * kuvaan eikä tilaan.
+ * NATIIVIT_OLETUS. Natiivi pääsee puhesynteesiin ja pöllön chattiin
+ * (NATIIVIN_TEHTAVAT; Fablen päätös 23.9.2026: chat samoin 30/vrk per IP- ja
+ * kuukausirajoin kuin selain), ei kuvaan, sähkeeseen eikä tilaan.
  */
 export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+// fi.matkakirja.peli = TestFlight-/App Store -build (proto3d-testflight.yml BUNDLE_ID), omistajan löydös 16.
 export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
-export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset']);
 
 /** Saako natiivi tehdä pyynnön tehtävän? */
 export function natiivilleSallittu(tehtava) {

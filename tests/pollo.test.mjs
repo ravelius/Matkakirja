@@ -1117,7 +1117,9 @@ test('yleinen sana ei enää riitä osumaksi', () => {
 });
 
 test('kysymys, johon aineistossa ei ole vastausta, ei tuota yhtään linkkiä', () => {
-  for (const kysymys of ['Kuka oli Napoleon?', 'Kuinka vanha ihmiskunta on?', 'Onko Syyriassa sotaa?']) {
+  // "Kuka oli Napoleon?" vaihdettiin pois 24.9.2026: St. Helenan
+  // Napoleon-aihesivu (sisältöerä N10) antaa sille nyt oikean osuman.
+  for (const kysymys of ['Mikä on suurin alkuluku?', 'Kuinka vanha ihmiskunta on?', 'Onko Syyriassa sotaa?']) {
     const { katkelmat } = haeKatkelmat(INDEKSI, kysymys, { maara: 4, sijainti: LONTOOSSA });
     assert.deepEqual(katkelmat.map((k) => k.leima), [],
       `heikko osuma pääsi läpi: ${kysymys}`);
@@ -2656,6 +2658,7 @@ test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bund
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'com.paha', 'user-agent': 'com.paha' })), false, 'vieras bundle id');
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
   assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli'), 'TestFlight-buildin bundle (löydös 16)');
 });
 
 test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eikä tilaan', async () => {
