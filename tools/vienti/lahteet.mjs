@@ -66,7 +66,7 @@ export const LISAMODUULIT = [
   m('js/livia.js', ['LIVIAN_AVAUS']),
   // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
   // periaatelappu (js/ui.js tuo samat vakiot).
-  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
+  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET', 'FLIGHT_FIRST']),
   // Natiivi-UI 23.9.2026: pullan nimet maittain (js/fokustehtavat.js pullanNimi)
   // ja lehtitehtävien palkkio; hinta on saannoissa (game.js PULLA_HINTA).
   m('js/fokustehtavat.js', ['PULLA_NIMET', 'PULLA_YLEISNIMI', 'FOKUS_TEHTAVA_PALKKIO', 'FOKUS_LEHTITEHTAVAT']),
