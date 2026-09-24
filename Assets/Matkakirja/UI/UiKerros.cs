@@ -95,6 +95,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Kerroksen koko ruudun juuri (himmennykset, jotka peittävät myös turva-alueen ulkopuolen).</summary>
         public VisualElement Juuri(int kerros) => Dokumentti(kerros).rootVisualElement;
 
+        /// <summary>
+        /// Kerroksen piirtojärjestys ajon aikana (oletus = kerroksen numero). Pulu ja chat nousevat lehden päälle
+        /// lehden ajaksi (web: pulun nappi ja paneeli asuvat ylimmässä dialogissa, livianDialogikoti).
+        /// </summary>
+        public void AsetaJarjestys(int kerros, int jarjestys)
+        {
+            var d = Dokumentti(kerros);
+            if (d.panelSettings != null && d.panelSettings.sortingOrder != jarjestys) d.panelSettings.sortingOrder = jarjestys;
+        }
+
         UIDocument Dokumentti(int kerros)
         {
             if (dokumentit.TryGetValue(kerros, out var d)) return d;
