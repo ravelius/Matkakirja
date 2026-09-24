@@ -4823,3 +4823,7 @@ Postivahti lähettää aloitusviestin kun list_events = 0.
 ## NATIIVI-UI NOLLATTU (FABLE LAHETTI ALOITUSVIESTIN HAARASTA natiivi-ui-luovutus-j, LISATTYNA LOYDOKSET 48/50/51, b12-2-RAJAT, KAANNOSPALVELU, JUMI → KORTTI) (25.9.2026 klo 00.33)
 
 Luovutus docs/raportit/viesti-natiivi-ui-luovutus-20260925.md; ensimmäisenä yhteiskäännöksen tulos FB234D08:ssa ja merge-pyynnöt.
+
+## PELIKOODARI NOLLATTU (LUOVUTUS -20260925-yo.md, 6235ddf71; FABLE LAHETTI ALOITUSVIESTIN: ENSIN LOYDOS 49 AANET b12q-LAITEKAANNOKSESTA, SITTEN 52, ELEET-VIDEO, 48:N KAMERAKYTKENTA); KATALOGIN KORJAUS-PR #3129 (v2210) VALMIS JULKAISIJALLE, VALILEHDET TYON ALLA (25.9.2026 klo 00.35)
+
+Sisältökirjuri: #3129 testit 4282/0 kahdesti; neljän välilehden rakenne uudessa worktreessä.
