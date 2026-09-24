@@ -25,7 +25,8 @@
  * valtameret z0–z3 = pallon Z1–Z4 (maailmapiirto.js KALUSTEIDEN_YLARAJA 0,5).
  *
  * KOKO METREINÄ. Web piirtää nimen Millerin arkille pikseleinä; pallolla
- * se venyy arkin mukana. Korkeus metreinä leveysasteella φ:
+ * se venyy arkin mukana. NIMION_KOOT on canvasin fonttikoko (ctx.font
+ * `${px}px`, em), ei versaalin korkeus. Fonttikoko metreinä leveysasteella φ:
  *   korkeus_m = px · R · (2π / L_z) · cos(0,8 φ)   (Millerin pystymittakaava)
  * ja nimen leveys metreinä on laatikon pituusasteväli · R · cos φ.
  * R = 6 371 008,8 m, L_z = pyramidi.json tasot[z].leveys.
@@ -67,7 +68,7 @@ export function laatikonKeskipiste({ lon0, lat0, lon1, lat1 }) {
   return { lon: (lon0 + lon1) / 2, lat: millerLat((millerY(lat0) + millerY(lat1)) / 2) };
 }
 
-/** Kirjainkorkeus metreinä: px tasolla, jonka arkin leveys on L px. */
+/** Fonttikoko (em) metreinä: px tasolla, jonka arkin leveys on L px. */
 export const korkeusMetreina = (px, L, lat) => px * R * ((2 * Math.PI) / L) * Math.cos(0.8 * lat * RAD);
 
 /** Nimen tyyliavain kuten maailmapiirto.js nimionAsettelu. */
@@ -134,7 +135,7 @@ export function aluenimet(pyramidi, { muste = new Map(), versio } = {}) {
   return {
     kuvaus: 'Aluenimet natiiville elävinä, pinnalle painettuina (Fable 24.9.2026, löydös 38 b). '
       + 'Paikat ovat webin nimiötason törmäyksenväistön jälkeiset ankkurit tasoittain; tasot = pyramidin z, pallotasot = Mercator Z = z + 1. '
-      + 'korkeus_m = kirjainkorkeus metreinä (Millerin pystymittakaava), leveys_m = koko nimen leveys harvennuksineen. '
+      + 'korkeus_px / korkeus_m = fonttikoko (em, kuten canvasin ctx.font), ei versaalin korkeus; metreinä Millerin pystymittakaavalla. leveys_m = koko nimen leveys harvennuksineen. '
       + 'Teksti versaalein; nykyalueilla sanan ensimmäinen kirjain täysikokoinen, muut pienkapiteeli-kertoimella. Ei haloa.',
     versio,
     lahde: { pyramidi: pyramidi.versio, nimiotaso: taso.versio, tyylit: 'tools/fokuskartta/maailmapiirto.js' },
