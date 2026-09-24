@@ -6,10 +6,9 @@
 // (RAJAPINTA.md: 10 nimikortti, 15 tilarivi, 20 matkavalinta, 25 linssit,
 // 30 pelidialogit, 40 valikot, kartuscha, pulu).
 //
-// Mitoitus puhelimessa kuten UGUI-näkymissä (Tilarivi.Skaalain): viiteruutu 393 × 852
-// pistettä (iPhone 15), leveys ja korkeus puoliksi — iPhonella 1 UI-yksikkö ≈ 1 piste = webin CSS-px.
-// iPadilla (Fable 24.9.2026) 1 UI-yksikkö = 1 iOS-piste = webin CSS-px (ConstantPixelSize, pikseliä
-// pisteessä): viiteruutu teki iPad Pro 11":n UI:sta 1,74-kertaisen webiin verrattuna. Testikomento
+// Mitoitus: laitteella (iPad Fable 24.9., iPhone 25.9.2026) 1 UI-yksikkö = 1 iOS-piste = webin CSS-px (ConstantPixelSize, pikseliä
+// pisteessä): viiteruutu 393 × 852 (editori ja `ui skaala viite`) teki iPad Pro 11":n UI:sta 1,74-kertaisen ja
+// iPhonen vaaka-asennon 1,35-kertaisen webiin verrattuna. Testikomento
 // `ui skaala piste|viite|auto` vaihtaa ajon aikana (PlayerPrefs matkakirja-ui-skaala). Jokaisen kerroksen juuren
 // lapsi "mk-turva" (position absolute) seuraa reunoillaan Screen.safeAreaa (lovi, Dynamic Island, kotipalkki).
 //
@@ -155,13 +154,17 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Pisteskaala käytössä: iPadilla oletuksena, testikomennolla pakotettavissa (piste | viite).</summary>
+        /// <summary>
+        /// Pisteskaala käytössä: iPadilla ja iPhonella oletuksena (Fable 25.9.2026: iPhonen vaaka 874 × 402 kuten webin
+        /// CSS-px, viiteruutu teki siitä 648 × 298 ja UI:sta ~35 % webiä suuremman), editorissa viiteruutu.
+        /// Testikomennolla pakotettavissa (piste | viite).
+        /// </summary>
         public static bool Pisteskaala
         {
             get
             {
                 string s = PlayerPrefs.GetString(SkaalaAvain, "");
-                return s == "piste" || (s != "viite" && Tabletti);
+                return s == "piste" || (s != "viite" && (Tabletti || Application.isMobilePlatform));
             }
         }
 
