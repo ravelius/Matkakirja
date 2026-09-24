@@ -14,8 +14,9 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void KokoAsukasluvusta()
         {
             Oleta.Sama(MastoKoko.Iso, Mastot.Koko(8_900_000), "Lontoo");
-            Oleta.Sama(MastoKoko.Iso, Mastot.Koko(3_000_000), "raja 3 milj.");
-            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(2_999_999), "alle 3 milj.");
+            Oleta.Sama(MastoKoko.Iso, Mastot.Koko(2_000_000), "raja 2 milj.");
+            Oleta.Sama(MastoKoko.Iso, Mastot.Koko(2_100_000), "Pariisi");
+            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(1_999_999), "alle 2 milj.");
             Oleta.Sama(MastoKoko.Keski, Mastot.Koko(500_000), "raja 0,5 milj.");
             Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(130_000), "Luxemburg");
             Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(null), "puuttuva (Sahara)");

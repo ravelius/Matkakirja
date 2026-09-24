@@ -3,10 +3,10 @@
 // Natiiviseppä piirtää mastot, vilkun, maavalon ja renkaat IRadioKartan takana, tämä kertoo mitä.
 //
 //   koko        kaupungin asukasluvusta (kaupungit.json "asukkaat", Wikidata P1082):
-//               ≥ 3 milj. Iso, 0,5–3 milj. Keski, muuten Pieni. Puuttuva (luontokohteet kuten Sahara,
+//               ≥ 2 milj. Iso (Fable 24.9. klo 20.2x: P1082 on kaupungin raja, Pariisi 2,1 milj.), 0,5–2 milj. Keski, muuten Pieni. Puuttuva (luontokohteet kuten Sahara,
 //               Alpit) ja asukkaatAlue (luku koskee saarta tai valtiota: Angola, Madagaskar, Islanti) → Pieni:
 //               syrjäinen paikka saa pienen maston, alueen väkiluku ei kerro kaupungista (Linssiseppä 24.9.,
-//               skeema 1.38: radiokaupungeista 36 Iso, 43 Keski, 36 Pieni)
+//               skeema 1.38)
 //   vilkku      muut mastot: jakso 1,5 s ± 20 % ja vaihe aseman tunnuksesta, palaa 0,45 s, reunat 0,12 s
 //   valittu     kirkkaus = max(0,25, VU), nousu 30 ms, lasku 250 ms
 //   renkaat     uusi 1,6 s välein lukituksesta, kasvu kuuluvuussäteeseen 4,8 s käyrällä Nousu,
@@ -23,7 +23,7 @@ namespace Matkakirja.Linssit.Radio
 
     public static class Mastot
     {
-        public const long IsoRaja = 3_000_000, KeskiRaja = 500_000;
+        public const long IsoRaja = 2_000_000, KeskiRaja = 500_000;
 
         /// <summary>Kokoluokka asukasluvusta; puuttuva tai alueen (saari, valtio) luku → Pieni.</summary>
         public static MastoKoko Koko(long? asukkaat, bool alue = false) =>
