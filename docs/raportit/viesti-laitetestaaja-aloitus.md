@@ -1,9 +1,9 @@
-# Laitetestaaja: aloita tästä
+# Laitetestaajan aloitusviesti (24.9.2026 klo 10.2x)
 
-Uusi Laitetestaaja-sessio: lue ensin
-`docs/raportit/viesti-laitetestaaja-luovutus-20260922-ilta.md` (tuorein
-luovutus) — tila, avoin Piirtokoe-tehtävä (data jo kerätty, kehysmäärä-
-anomalia selvitettävä ennen raporttia), CGEvent-löydös ja aikajana-
-ohjeen käyttö. Vanhemmat luovutukset (`viesti-laitetestaaja-luovutus-
-*-20260921*.md`, `viesti-fable-luovutus-*.md`) ovat historiaa, ei
-tarvitse lukea ellei tuorein viittaa niihin.
+Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetestaaja (haara jäljessä
+mainista: tee docs-PR:t uudesta haarasta origin/mainista). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (myös
+FABLEN KÄSKYT ILMAN OMISTAJAN VÄLITYSTÄ) ja kohta NATIIVI PELI ETUSIJALLE sekä
+docs/raportit/viesti-laitetestaaja-luovutus-20260924-c.md (ja -b.md, PR #3034). Olet iOS-simulaattorin ainoa käyttäjä;
+iPad-vuoro pyydetään Natiivisepältä. Tila: iPad ja iPhone A/C/T-sarjat PASS (master 5c7b762+), B7 12/13 (mannerlento odottaa koetila-komentoa, joka on nyt masterissa 4ef72b0), Simulator.app-GUI puuttuu → simctl-kiertotie. PARITEETTIKIERROS ON TEHTY: 43/43 näkymää verrattu (docs/raportit/pariteetti-natiivi-20260924.md), erot jaettu Natiivi-UI:lle, Natiivisepälle ja Linssisepälle; web-kuvat Pelikoodarin työkalulla (tools/pariteettikuvat.mjs, PR #3038; älä luota yhteenveto.jsonin ok-merkintään, katso kuvat). Seuraavaksi: 1) OMISTAJAN BUILD 5 -LÖYDÖSTEN TOISINNOT simulaattorissa (loki: löydökset 1–16, mm. nostot puuttuvat, navat mustia, offline-lataus jättää mustia laattoja, chat ei kytketty, maapaneeli, karttaselite, ihmisen matkan tekstilaatikko) → tee jokaisesta toistettava testiaskel docs/raportit/build6-tarkistuslista-20260924.md:hen, jotta build 6 voidaan todentaa; 2) kun Natiiviseppä ilmoittaa korjaukset masterissa, aja lista simulaattorissa ja iPadilla (vuoro Natiivisepältä); 3) B7 kohta 3 mannerlento (koetila mannerlento, kun Pelikoodarin rivi-korjaus on masterissa) ja virtanappien pikselitarkistus. Sen jälkeen: B7 kohta 3 mannerlento koetila mannerlento -komennolla, virtanappien pikselitarkistus (ihminen tutkimus). Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja kutsu clear_session self samassa
+vuorossa. Testit ilman ääniä paitsi kuulokokeessa. Viestit Fablelle vain valmis erä, jumi tai kysymys,
+enintään 8 riviä.
