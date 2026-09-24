@@ -4,6 +4,16 @@
 // musiikki ja pulu olivat siihen asti mykkiä — ja jos luento ei alkanut, koko peli. Web soi mykistettynäkin
 // (Safarin <audio>), joten natiivi asettaa Playbackin (MixWithOthers) heti ja uudelleen etualalle palatessa:
 // Unity voi palauttaa oman istuntonsa keskeytyksen tai taustalta paluun jälkeen.
+//
+// KUUNTELIJA (löydös 49, mitattu 25.9. klo 01.1x): generoidussa kohtauksessa Pallo.unity (Editor/Rakennus.cs LuoPallo)
+// ei ole AudioListeneria, eikä kohtauksessa ole koskaan ollut (d464ffa 23.9. alkaen). Ilman kuuntelijaa Unity ei
+// miksaa mitään: aani mittaa antoi rms 0 simulaattorissa ja isolla iPadilla (b12q), vaikka lähteet soivat @1,00,
+// ja myös omasta klipistä soitettu 440 Hz:n siniääni (aani sini) oli hiljaa jokaisella istunnolla. Kaikki
+// lähteet ovat 2D-ääniä (spatialBlend 0), joten kuuntelijan paikalla ei ole väliä: se lisätään tähän pysyvään
+// olioon, jos kohtauksessa ei ole omaa.
+//
+// Unity palauttaa oman Ambient-istuntonsa, kun se käynnistää äänen uudelleen (mitattu: aani nollaa → Ambient),
+// joten Playback asetetaan uudelleen myös OnAudioConfigurationChanged-tapahtumassa.
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -19,8 +29,30 @@ namespace Matkakirja.Natiivi
             go.hideFlags = HideFlags.HideInHierarchy;
             DontDestroyOnLoad(go);
             go.AddComponent<AaniIstunto>();
+            VarmistaKuuntelija(go);
             Aseta("käynnistys");
+            AudioSettings.OnAudioConfigurationChanged += _ =>
+            {
+                // Istunnon vaihto voi itse laukaista kokoonpanon muutoksen: enintään kerran sekunnissa, ettei synny kehää.
+                if (Time.realtimeSinceStartup - viimeksiKokoonpanosta < 1f) return;
+                viimeksiKokoonpanosta = Time.realtimeSinceStartup;
+                Aseta("äänen kokoonpano");
+            };
         }
+
+        static float viimeksiKokoonpanosta = -10f;
+
+        /// <summary>AudioListener pysyvään olioon, jos kohtauksessa ei ole kuuntelijaa (muuten mikään ei kuulu).</summary>
+        static void VarmistaKuuntelija(GameObject go)
+        {
+            if (FindObjectsByType<AudioListener>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length > 0) return;
+            go.AddComponent<AudioListener>();
+            Debug.Log("MATKAKIRJA ääni: kohtauksessa ei ollut AudioListeneria, lisätty (löydös 49)");
+        }
+
+        /// <summary>Aktiivisten kuuntelijoiden määrä (peli-komento aani mittaa).</summary>
+        public static int Kuuntelijoita =>
+            FindObjectsByType<AudioListener>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length;
 
         void OnApplicationFocus(bool fokus) { if (fokus) Aseta("etualalle"); }
         void OnApplicationPause(bool tauolla) { if (!tauolla) Aseta("tauolta"); }

@@ -367,10 +367,10 @@ namespace Matkakirja.Natiivi
                 if (l.isPlaying) soivat.Add($"{l.gameObject.name}:{(l.clip != null ? l.clip.name : "-")}@{l.volume:0.00}{(l.mute ? " mykkä" : "")}");
             var inv = System.Globalization.CultureInfo.InvariantCulture;
             var kokoonpano = AudioSettings.GetConfiguration();
-            Kirjaa("aani", string.Format(inv, "rms {0:0.00000}, huippu {1:0.0000}, kuuntelija {2:0.00}{3}, näytetaajuus {4} ({8} {9}, dsp {10}), soivia {5} [{6}], istunto: {7}",
+            Kirjaa("aani", string.Format(inv, "rms {0:0.00000}, huippu {1:0.0000}, kuuntelijoita {11}, kuuntelija {2:0.00}{3}, näytetaajuus {4} ({8} {9}, dsp {10}), soivia {5} [{6}], istunto: {7}",
                 rms, huippu, AudioListener.volume, AudioListener.pause ? " TAUOLLA" : "", AudioSettings.outputSampleRate,
                 soivat.Count, string.Join(", ", soivat), AaniIstunto.Tila(), kokoonpano.sampleRate, kokoonpano.speakerMode,
-                kokoonpano.dspBufferSize));
+                kokoonpano.dspBufferSize, AaniIstunto.Kuuntelijoita));
         }
 
         void Kirjaa(string rivi, string tulos)
