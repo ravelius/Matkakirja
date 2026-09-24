@@ -979,3 +979,30 @@
     font-size: 13px;
     white-space: normal;
 }
+
+/* Linssin valmis vastaus ja sen lähderivi (web .pollo-valmisvastaus, .pollo-valmislahteet). */
+.mk-chat__valmislahteet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -4px 0 9px 0;
+}
+
+.mk-chat__valmislahde {
+    margin-right: 4px;
+    font-size: 12px;
+    color: #5a4a33;
+}
+
+.mk-chat__valmislinkki {
+    min-height: 26px;
+    margin-right: 8px;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-chat__valmislinkki .mk-nappi__teksti {
+    font-size: 12px;
+    color: #7a5514;
+}

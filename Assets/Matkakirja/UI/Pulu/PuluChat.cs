@@ -199,7 +199,62 @@ namespace Matkakirja.Natiivi
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
             PuluHaku.Valmistele(); // web: indeksi laiskasti chatin ensimmäisellä avauksella
             paneeli.EnableInClassList("mk-chat--alku", historia.Count == 0);
-            HaeEhdotukset();
+            // Linssin valmiit kysymykset tervehdyksen tilalla (web naytaValmiit → naytaLinssinValmiit).
+            if (!NaytaLinssinValmiit()) HaeEhdotukset();
+        }
+
+        // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
+
+        readonly Dictionary<string, HashSet<string>> linssiKysytyt = new Dictionary<string, HashSet<string>>();
+
+        /// <summary>Jäljellä olevat valmiit kysymykset napeiksi; tosi, jos linssi tarjoaa kysymyksiä.</summary>
+        bool NaytaLinssinValmiit()
+        {
+            var lk = LinssiKysymykset.Nykyinen();
+            if (lk == null) return false;
+            foreach (var e in virta.Query(className: "mk-chat__linssivalmiit").ToList()) e.RemoveFromHierarchy();
+            linssiKysytyt.TryGetValue(lk.Avain, out var kysytyt);
+            var jaljella = lk.Kysymykset.Where(k => kysytyt == null || !kysytyt.Contains(k)).ToList();
+            if (jaljella.Count == 0) return true;
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__linssivalmiit", virta, PickingMode.Ignore);
+            foreach (var t in jaljella)
+            {
+                string kysymys = t;
+                var b = Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaLinssinValmiilla(lk, kysymys), ryhma);
+                Kirjasimet.Aseta(b, Kirjasin.Kone);
+            }
+            Vierita(ryhma);
+            return true;
+        }
+
+        void VastaaLinssinValmiilla(LinssiKysymys lk, string kysymys)
+        {
+            if (kysyy) return;
+            if (!linssiKysytyt.TryGetValue(lk.Avain, out var kysytyt)) linssiKysytyt[lk.Avain] = kysytyt = new HashSet<string>();
+            kysytyt.Add(kysymys);
+            // Ilman valmista vastausta sama polku kuin kirjoitettu kysymys (web kysy).
+            if (!lk.Vastaukset.TryGetValue(kysymys.Trim(), out var v)) { Kysy(kysymys); return; }
+            PoistaSirut();
+            ehdotusPoletti++;
+            paneeli.RemoveFromClassList("mk-chat--alku");
+            Viesti("mk-chat__pelaaja", kysymys);
+            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", v.Vastaus);
+            kupla.enableRichText = false;
+            if (v.Lahteet.Count > 0)
+            {
+                var rivi = Rakenne.El("mk-chat__valmislahteet", virta, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti("Lähde:", "mk-chat__valmislahde", rivi), Kirjasin.Luku);
+                foreach (var (url, otsikko) in v.Lahteet)
+                {
+                    string u = url;
+                    Kirjasimet.Aseta(Rakenne.Nappi(otsikko, "mk-chat__valmislinkki", () => Application.OpenURL(u), rivi), Kirjasin.Luku);
+                }
+            }
+            if (AaniPaalla) Puhe.Hae()?.Lue(v.Vastaus, "pollo");
+            historia.Add(("kayttaja", kysymys));
+            historia.Add(("pollo", v.Vastaus));
+            NaytaLinssinValmiit();
+            Vierita(kupla);
         }
 
         public void Sulje()
