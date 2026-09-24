@@ -2,27 +2,27 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-24 23:05 EEST
+**Päivitetty:** 2026-09-24 23:17 EEST
 
 ## 1) Sessiot
 
 | Rooli | Malli | Konteksti | Tila | Viimeisin valmis erä | Odottaa |
 |---|---|---|---|---|---|
-| Fable | Fable 5.1 | 41% | busy | (koordinoi tilataulua) | — |
-| Julkaisija | Opus, high | 28% | idle | Kortti ratkaistu: #3124 mainissa, TestFlight käännöskopiosta; sisältöjuna ajaa testejä | #2913 ajetaan junan jälkeen |
-| Natiiviseppä | Opus | 45% | idle | — | — |
-| Natiivi-UI | Opus | 49% | idle | `natiivi-ui/tyyppikuvake` 79a49af + `natiivi-ui/intro-palstat` 993437c | Testikäännös käännöspalvelulla |
-| Linssiseppä | Opus | 67% | idle | Radiouudistuksen topografiavariantti A hyväksytty | Toteutus (build 12) |
-| Sisältökirjuri | Sonnet | 57% | idle | — | — |
-| Laitetestaaja | Sonnet | 72% | idle | — | Pelikoodarin pariteettiajo simuloilla |
-| Siirtoseppä | Opus | 27% | idle | — | PR #2913 ajetaan junan jälkeen |
-| Pelikoodari | Opus | 61% | busy | — | — |
-| Karttaseppä | Opus | 46% | idle | — | E28-ajo |
-| Postivahti (self) | Sonnet | 57% | busy | (tämä taulu) | — |
+| Fable | Fable 5.1 | 45% | busy | (koordinoi tilataulua) | — |
+| Julkaisija | Opus, high | 29% | idle | Sisältöjuna ajaa testejä | #2913 junan jälkeen |
+| Natiiviseppä | Opus | 46% | idle | — | — |
+| Natiivi-UI | Opus | 49% | idle | `natiivi-ui/tyyppikuvake` + `natiivi-ui/intro-palstat` | Testikäännös käännöspalvelulla |
+| Linssiseppä | Opus | 68% | idle | Radiouudistuksen topografiavariantti A hyväksytty | Toteutus (build 12) |
+| Sisältökirjuri | Sonnet | 62% | busy | — | — |
+| Laitetestaaja | Sonnet | 7% (juuri nollattu) | idle | — | — |
+| Siirtoseppä | Opus | 27% | idle | — | PR #2913 junan jälkeen |
+| Pelikoodari | Opus | 63% | idle | — | — |
+| Karttaseppä | Opus | — | idle | — | E28-ajo |
+| Postivahti (self) | Sonnet | 58% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia kortteja tällä hetkellä. Julkaisijan aiempi kortti (~30+ min auki, push lähetetty) on ratkaistu. JUMI → KORTTI -sääntö sekä uusi PushNotification-vaatimus (kortin avauksesta heti push omistajalle) välitetty kaikille rooleille.
+Ei avoimia kortteja. JUMI → KORTTI -sääntö sekä PushNotification-vaatimus (kortin avauksesta heti push omistajalle) välitetty kaikille rooleille.
 
 **Fablen viimeisin päätös:** Käännöspalvelu käytössä (`proto-3d/tyokalut/proto-kaanna.sh`), testikäännöksiä ei enää pyydetä Natiivisepältä. Build 12 -suunnitelma valmisteilla (docs/raportit/build-12-suunnitelma.md, integraatiohaara juna/b12).
 
@@ -43,11 +43,11 @@ Julkaisijan seuraava juna: sisältöjuna ajaa testejä, sen jälkeen #2913; Test
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 78 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (vapautuu ~100 Gt lisää), kuvaputki tauolla — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt, siirto valmis) tai laskee alle 30 Gt.
+- **Levy** (/System/Volumes/Data): 57 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla) — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt) tai laskee alle 30 Gt.
 - **wt/-worktreet:** 25 kpl. Rajoissa lähes kaikilla rooleilla.
-- **5 h -kiintiö:** 50%, nollautuu klo 21:20 EEST (raja 95%/98%, tauko vasta 98%:ssa).
-- **Viikkokiintiö (kaikki mallit):** 63%. **Viikkokiintiö (Fable):** 39%. Nollautuu 2026-09-28 klo 01:00.
+- **5 h -kiintiö:** 54%, nollautuu klo 21:20 EEST (raja 95%/98%, tauko vasta 98%:ssa).
+- **Viikkokiintiö (kaikki mallit):** 64%. **Viikkokiintiö (Fable):** 39%. Nollautuu 2026-09-28 klo 01:00.
 
 ## 6) Kellonaika
 
-2026-09-24 23:05 EEST (`date`-komennolla varmennettu)
+2026-09-24 23:17 EEST (`date`-komennolla varmennettu)
