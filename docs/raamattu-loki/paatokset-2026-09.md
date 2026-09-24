@@ -4707,3 +4707,7 @@ Omistaja ajoi Fablen skriptin klo 22.5x: proto-3d/lokit-kansiot ilman raporttivi
 ## JULKAISIJAN KORTTI RATKAISTU: #3124 MAINISSA, SISALTOJUNA AJAA TESTEJA, #2913 JUNAN JALKEEN; LAITETESTAAJA 72 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 23.07)
 
 Postivahti klo 23.0x: Julkaisija idle, sisältöjuna käynnissä. Laitetestaaja 72 % → luovutus -20260924-yo.md, aloitusviestiin käännöspalvelu, JUMI → KORTTI + PushNotification ja tilataulu; clear_session self samassa vuorossa, Postivahti lähettää aloitusviestin.
+
+## LINSSIKATALOGIN ESITTELYSIVU VAIHE 1 (SISALTOKIRJURI, v2207, HAARA sisaltokirjuri-linssikatalogi b15011b6a): RUNKO HYVAKSYTTY KUVISTA, 7 KORJAUSTA ENNEN PR:AA (DATA.JS, PELISSA NYT 9, ESITYSTILAAN MITA OPITAAN + CC-LAHDE, JONOSSA-TILA, 480-KUVAT, YOTILA, PELIKOODARIN TARKISTUS) (24.9.2026 klo 23.08)
+
+Sisältökirjuri pushasi vaiheen 1 (testit 0 fail, 4281; kuvat docs/raportit/kaappaukset/linssikatalogi-uudistus-20260924/, kuvaputken erä 1 kytketty 28/29). Fable hyväksyi rungon (hissipuhe + 4 lukua + kuusi moottorikorttia, suodattimet tila/manner/aika/haku, kortit aikajanapalkilla ja 1873-merkillä, esitystila) ja antoi korjaukset; datalähde vaihtuu agentin linssikatalogi-data.js:ään, kun Fable committoi sen.
