@@ -289,9 +289,11 @@
     margin-bottom: 2.4px;
 }
 
+/* Ei kutistu: otsikko pysyy yhdellä rivillä, ja aikamerkki rivittyy sen alle (web flex-basis = otsikon leveys). */
 .mk-lehti__nosto-otsikko {
     flex-grow: 1;
-    flex-shrink: 1;
+    flex-shrink: 0;
+    max-width: 100%;
     font-size: 15.68px;
     letter-spacing: 0.31px;
     white-space: normal;

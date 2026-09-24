@@ -1366,7 +1366,13 @@ namespace Matkakirja.Natiivi
                     k.RegisterCallback<GeometryChangedEvent>(_ =>
                     {
                         float f = k.resolvedStyle.fontSize > 0 ? k.resolvedStyle.fontSize : 16f;
-                        float mb = Mathf.Round(valiEm * f);
+                        // CSS jakaa rivivälin puoliksi rivin ylä- ja alapuolelle; TextCoren <line-height> ei lisää sitä
+                        // viimeisen rivin alle eikä ensimmäisen päälle, joten kappaleväliin puuttui (riviväli − luonnollinen
+                        // rivi) ≈ 6,8 pt (b12n: perusviivaväli kappaleen yli 30,7 vs web 38,9).
+                        var mitta = k as TextElement ?? k.Q<Label>();
+                        float luonnollinen = mitta != null
+                            ? mitta.MeasureTextSize("A", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y : 1.2f * f;
+                        float mb = Mathf.Round(valiEm * f + Mathf.Max(0f, riviEm * f - luonnollinen));
                         if (!Mathf.Approximately(k.resolvedStyle.marginBottom, mb)) k.style.marginBottom = mb;
                     });
                 }
