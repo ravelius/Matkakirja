@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
         string iso, testiIso;
+        /// <summary>Pelaajan todellinen maa testimaan asetushetkellä: kun se vaihtuu, testi raukeaa.</summary>
+        string testinTodellinen;
         bool auki, sallittu = true, sijatAuki;
 
         public Kartuscha(UiKerros kerros)
@@ -105,18 +107,28 @@ namespace Matkakirja.Natiivi
             Seuraa();
         }
 
-        void Seuraa()
+        string TodellinenMaa()
         {
             var o = PeliOhjain.Instanssi;
-            string uusi = null;
             if (sallittu && o != null && o.Kaytossa && o.Matka != null
                 && (o.Tila == SilmukanTila.Kartta || o.Tila == SilmukanTila.Dialogi || o.Tila == SilmukanTila.Matkalla))
             {
                 var s = o.Matka.Tila.Pelaaja.Sijainti;
-                if (s.Kaupungissa) uusi = UiSisalto.Kaupunki(s.Kaupunki)?.Maa;
+                if (s.Kaupungissa) return UiSisalto.Kaupunki(s.Kaupunki)?.Maa;
             }
+            return null;
+        }
+
+        void Seuraa()
+        {
+            string uusi = TodellinenMaa();
+            // Testimaa (ui kartuscha ISO) raukeaa, kun pelaajan todellinen maa vaihtuu (matka, uusi peli): muuten
+            // testin KREIKKA jäi kartalle Lontooseen ja lennolle (Laitetestaaja 24.9., 161fa35).
+            if (testiIso != null && uusi != testinTodellinen) { testiIso = null; if (auki) Sulje(); }
             if (testiIso != null) uusi = testiIso;
             if (uusi == iso) return;
+            // Maa vaihtui: auki jäänyt kortti ei siirry uuteen maahan auki.
+            if (auki && testiIso == null) Sulje();
             iso = uusi;
             if (iso == null || UiSisalto.Maa(iso) == null)
             {
@@ -244,6 +256,7 @@ namespace Matkakirja.Natiivi
         public void Testaa(string iso3, bool avaa)
         {
             testiIso = iso3;
+            testinTodellinen = TodellinenMaa();
             UiSisalto.Lataa(() => { iso = null; Seuraa(); if (avaa) Avaa(); });
         }
 
