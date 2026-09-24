@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2192, teksti: 'Sää: Bananal, Geraldton, João Pessoa, Murzuk, N… (#3063)' },
   { v: 2191, teksti: 'Sää: Bahr el Ghazal, Broome, Orjarannikko, Sant… (#3062)' },
   { v: 2190, teksti: 'Sää: Cayenne, Darfur, Mosambik, Ras Hafun, Tšad… (#3060)' },
   { v: 2189, teksti: 'Sää: Ahaggar, Gao, Kamerun, Suakin, Viktoria (#3058)' },
