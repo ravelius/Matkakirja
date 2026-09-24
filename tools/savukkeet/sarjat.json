@@ -447,7 +447,11 @@
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. TUNNETTU PUNAINEN (Pelikoodari/Julkaisija 21.9.2026, v1984): 8l4 puhelin — liuska x nimio (Skandaalit). Sovittelun lukko luettiin ennen merkit.aseta-kutsua, jolloin ruutu nayttaa datan kyljen eika lasketun asennon (14/68 lappua eri asennossa mitattu 1400 px); piilotustesti ei silloin osu oikeaan nimioon. Korjaus (pelikoodari-camargue) mergetty, mutta rivi on yha punainen CI:n kuormassa 21.9.2026 aamuyolla - seurataan.",
       "tunnetutPunaisetMac": [
         "8l4\\. puhelin: liuska on ruudussa eikä leikkaa"
-      ]
+      ],
+      "tunnetutPunaiset": [
+        "8k\\. puhelin: keskitetty liuska on merkin korkeudella"
+      ],
+      "huomautus8k": "TUNNETTU PUNAINEN (Julkaisija 24.9.2026): 8k punainen jokaisessa ajossa viimeistaan 22.9.2026 klo 23.40 alkaen (run 35781826724), myos paikallisesti ilman kuormaa mainissa 3671682e5: listan keskipiste 78 px merkin ylapuolella (sieto 30 px), lista merkin oikealla. Ei kuormaherkka eika PR-jonon aiheuttama. Pelikoodarille: korjaa asemointi tai paivita odotus, ja poista tama rivi."
     },
     "savuke-pariisi-lahizoom.mjs#1400-perus": {
       "env": {
