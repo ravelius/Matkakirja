@@ -407,7 +407,10 @@ namespace Matkakirja.Natiivi
             AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, true);
         }
 
-        /// <summary>Kertojan avaus päättyi pallolla: alapalkki häipyy ja pulu esittäytyy (kerran laitteella).</summary>
+        /// <summary>
+        /// Kertojan avaus päättyi pallolla (omistaja 24.9.2026 klo 12.2x): alapalkki häipyy, kamera zoomaa Lontoosta ulos
+        /// valittavien kohteiden näkymään ja samaan aikaan pulu lentää ruutuun esittelemään valinnan (kerran laitteella).
+        /// </summary>
         void AvausPallollaValmis()
         {
             avausPallolla = false;
@@ -415,8 +418,11 @@ namespace Matkakirja.Natiivi
             {
                 if (lennolla || !ValitseePallolla) return;
                 intro.style.opacity = 0f;
-                if (ValitseePallolla) LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
-            }).StartingIn(1800);
+                try { AvausluentaPaattyi?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                if (valintaKierto != null)
+                    valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), UlosZoominKesto, null, UlosZoominPehmennys);
+                LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
+            }).StartingIn(900);
         }
 
         void Jatka()
@@ -690,6 +696,16 @@ namespace Matkakirja.Natiivi
         // --- valinta pallolla (web aloitaPallolta; lauta.js aloitusnakyma, aloitusKohteet) --
 
         public const double ValintaLat = 30, ValintaLon = 17;
+        /// <summary>Kertojan avauksen aikana kamera on Lontoon (Heathrow) kohdalla (omistaja 24.9.2026 klo 12.2x).</summary>
+        public const double LontooLat = 51.47, LontooLon = -0.45, LontooKorkeus = 1_400_000;
+
+        /// <summary>
+        /// Avausluenta päättyi pallolla: kamera zoomaa ulos valintanäkymään ja pulu lentää ruutuun samaan aikaan.
+        /// Natiiviseppä voi antaa ulos-zoomin käyrän (KAMERA-AJOT) UlosZoominPehmennys-kentällä; null = PalloKierron oletus.
+        /// </summary>
+        public static event Action AvausluentaPaattyi;
+        public static Func<double, double> UlosZoominPehmennys;
+        public const float UlosZoominKesto = 3.2f;
         const double PallonOsuus = 0.55, AnkkuriVara = 0.78;
         /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
         static readonly string[] Ankkurit = { "lontoo", "ateena" };
@@ -740,7 +756,9 @@ namespace Matkakirja.Natiivi
             }
             valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
             valintaPisteet.Napautettu += PisteValittu;
-            valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // Kertojan avauksen ajan Lontoon kohdalla; muuten suoraan valintanäkymään.
+            if (avausPallolla) valintaKierto.Aja(LontooLat, LontooLon, LontooKorkeus, 1.6f, null);
+            else valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
             // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella) — pallon avauksessa
             // vasta kertojan jälkeen (AvausPallollaValmis).
             if (!avausPallolla) LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
