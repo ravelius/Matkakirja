@@ -64,6 +64,11 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  '1.37': ['kokoelma:aluenimet', 'aluenimet/tyylit', 'aluenimet/fontti', 'aluenimet/aineistoversio'],
+  '1.36': ['kokoelma:merinimet', 'merinimet/tyyli'],
+  '1.35': ['maat.fokuspohja'],
+  '1.34': ['maarajat.renkaat'],
+  '1.33': ['kokoelma:maamerkit'],
   '1.32': ['pulmaaineisto.aineisto', 'kohtaamiskuvat.kaupunginNimi', 'linssiaineisto.manifesti', 'linssiaineisto.juoksut', 'tarinakaari.saapumisLuenta', 'tapahtumat.teksti'],
   '1.31': ['skandaalit.teksti', 'historianHetket.lehti', 'monumentit.teksti', 'fokusvirrat.oppitunti', 'kaupungit.nimionAnkkuri'],
 };

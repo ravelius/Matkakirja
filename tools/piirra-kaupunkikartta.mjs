@@ -65,6 +65,22 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  kalgoorlie: {
+    // Hannan Streetin kultakenttäkeskusta laajennettuna pohjoiseen, jotta
+    // Paddy Hannanin patsas (Wilson St, -30.7490/121.4706) ja Hannans
+    // North Tourist Mine (-30.7268/121.4716, n. 2,4 km pohjoiseen) mahtuvat
+    // molemmat samaan rajaukseen (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492 },
+  },
+  mountisa: {
+    // Mount Isa Mines (-20.7279/139.4831, Nominatim: Mines Power Station)
+    // ja City Lookout (-20.7235/139.4984, Lookout Park/The Gap) ovat
+    // ainoat kaksi aidosti paikannettavaa kohdetta — Lake Moondarra, jota
+    // kulttuurinosto kuvaa "aivan kaupungin kupeessa", on todellisuudessa
+    // n. 18 km kaupungista eikä mahdu samaan rajaukseen (sisältöinventaario
+    // #3045 kohta 5.5).
+    rajat: { pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518 },
+  },
   geraldton: {
     // Point Mooren majakka (-28.7827/114.5794) ja rautatieasema
     // (-28.7698/114.6133) ovat n. 3,6 km päässä toisistaan

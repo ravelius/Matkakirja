@@ -1,8 +1,7 @@
 // KULTAINEN PULMAJÄLKI: verkkopelin isoisän pulmat (js/game.js pendingPuzzle,
 // openPuzzle, answerQuiz/closeQuiz-pulmahaarat, js/packs/*-puzzles.js
-// generate(rng)) ja tapahtumakortit (openEvent, closeEvent, rideTarget)
-// kirjataan tiedostoon Kultaiset/pulmajalki.json. C#-portti (Peli/Pulmat.cs,
-// Peli/Tapahtumat.cs) toistaa jäljen testissä Testit/PulmaTestit.cs
+// generate(rng)) kirjataan tiedostoon Kultaiset/pulmajalki.json. C#-portti
+// (Peli/Pulmat.cs) toistaa jäljen testissä Testit/PulmaTestit.cs
 // identtisesti, myös satunnaislukukutsujen määrän ja tallennuksen yli.
 //
 // Käyttö: node Kultaiset/tee-pulmajalki.mjs [verkkopelin js-kansio]
@@ -20,13 +19,11 @@
 //        vihje → actionHint (jos vihje ja ≥ 40 £) ja sitten oikein;
 //        puolita → actionFiftyFifty (jos ≥ 4 vaihtoehtoa ja ≥ 80 £), sitten väärin;
 //        sulje → closeQuiz vastaamatta; aika → timeoutQuiz.
-//      quiz (vastattu) → closeQuiz. event → closeEvent. Muu vaihe lopettaa.
+//      quiz (vastattu) → closeQuiz. Muu vaihe lopettaa.
 //      Enintään 12 tekoa.
 // 3. peli-ajot — koko peli pulmineen kysymysjäljen käsikirjoituksella
-//    (tee-kysymysjalki.mjs, C# KyselyKasikirjoitus) ja event-vaiheessa
-//    closeEvent. Osassa ajoista laudalle lisätään Afrikan tapahtumakortit
-//    (maailmankartalla niitä ei ole): kortit kirjoitetaan testiaineistoksi
-//    Kultaiset/paketti/tapahtumat.json lähdemoduulin muodossa.
+//    (tee-kysymysjalki.mjs, C# KyselyKasikirjoitus). Tapahtumakortit on poistettu
+//    natiivista (Fablen tarkastus C1 23.9.2026; maailmankartalla niitä ei ole).
 //
 // RAJAUKSET (kuten pelijäljessä): lippukysymykset pois (flagTargets → []),
 // valokuvapooli tyhjä (rosvot ja kaksintaistelu poistettu pelistä),
@@ -39,7 +36,6 @@ const tama = dirname(fileURLToPath(import.meta.url));
 const JS = resolve(process.argv[2] ?? '/Users/Shared/Claude/Matkakirja-pelikoodari/js');
 const { Game } = await import(pathToFileURL(join(JS, 'game.js')).href);
 const { packById } = await import(pathToFileURL(join(JS, 'pack.js')).href);
-const { AFRICA } = await import(pathToFileURL(join(JS, 'packs', 'africa.js')).href);
 // v2150 (#2963): pulma nimeää generaattorinsa tunnisteella (generaattori), funktio
 // rekisteristä js/pulmageneraattorit.js; vanhemmassa webissä pulma.generate.
 const { pulmanGeneraattori } = await import(pathToFileURL(join(JS, 'pulmageneraattorit.js')).href)
@@ -50,19 +46,9 @@ const generaattori = (pulma) => pulma.generate ?? pulmanGeneraattori(pulma);
 const ordinaali = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const pack = packById('maailmankartta');
 if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
-if ((pack.events ?? []).length) throw new Error('maailmankartalla on tapahtumia: tapahtumapaketin koeasetelma ei enää päde');
+if ((pack.events ?? []).length) throw new Error('maailmankartalla on tapahtumia: natiivi ei tue tapahtumakortteja (C1)');
 const PULMAT = pack.puzzles;
 if (PULMAT.length < 11) throw new Error(`pulmia vain ${PULMAT.length}`);
-const TAPAHTUMAT = AFRICA.events;
-const tapahtumapaketti = { ...pack, events: TAPAHTUMAT };
-
-// Tapahtumakortit testiaineistoksi (lähdemoduulin muoto: [{text, effect}]).
-writeFileSync(join(tama, 'paketti', 'tapahtumat.json'), JSON.stringify({
-  $kuvaus: 'Tapahtumakortit testiaineistoksi (js/packs/africa.js AFRICA.events, lähdemoduulin muoto). Maailmankartalla ei ole tapahtumia eikä sisältöpaketissa tapahtumakokoelmaa. Tee: Kultaiset/tee-pulmajalki.mjs.',
-  events: TAPAHTUMAT,
-}, null, 1) + '\n');
-
-// --- mulberry32 laskurilla (sama kuin js/game.js mulberry32 + rngCalls) ---
 function lahde(siemen) {
   let a = siemen >>> 0;
   const f = () => {
@@ -171,9 +157,6 @@ function tila(g, teko) {
     pulmaOdottaa: g.pendingPuzzle()?.id ?? null,
     puzzlesSeen: [...g.puzzlesSeen].map((k) => k.split(':')[1]).sort(ordinaali),
     puzzlePrevPhase: g.puzzlePrevPhase,
-    eventCard: g.eventCard
-      ? { cityId: g.eventCard.cityId, text: g.eventCard.text, effect: ei(g.eventCard.effect) }
-      : null,
     quiz: kysymys(g.quiz),
   };
 }
@@ -235,8 +218,6 @@ for (const pulma of PULMAT) {
           tulos = g.answerQuiz(valinta);
         }
         if (q.kind === 'puzzle') laske(`pulma:${teko.replace(/:.*/, '')}`);
-      } else if (g.phase === 'event') {
-        teko = 'event:close'; tulos = g.closeEvent();
       } else {
         break;
       }
@@ -255,21 +236,21 @@ for (const pulma of PULMAT) {
 const VUOROT = 100;
 const MAX_TEOT = 500;
 const PELIAJOT = [
-  { seed: 3, start: 'pariisi', tapahtumat: false },
-  { seed: 17, start: 'kairo', tapahtumat: true },
-  { seed: 23, start: 'rooma', tapahtumat: true },
-  { seed: 31, start: 'venetsia', tapahtumat: false },
-  { seed: 47, start: 'ateena', tapahtumat: true },
-  { seed: 59, start: 'kapkaupunki', tapahtumat: true },
-  { seed: 71, start: 'dubrovnik', tapahtumat: true },
-  { seed: 83, start: 'lontoo', tapahtumat: true },
-  { seed: 97, start: 'tokio', tapahtumat: true },
-  { seed: 101, start: 'timbuktu', tapahtumat: true },
+  { seed: 3, start: 'pariisi' },
+  { seed: 17, start: 'kairo' },
+  { seed: 23, start: 'rooma' },
+  { seed: 31, start: 'venetsia' },
+  { seed: 47, start: 'ateena' },
+  { seed: 59, start: 'kapkaupunki' },
+  { seed: 71, start: 'dubrovnik' },
+  { seed: 83, start: 'lontoo' },
+  { seed: 97, start: 'tokio' },
+  { seed: 101, start: 'timbuktu' },
 ];
 const peliAjot = [];
 for (const ajo of PELIAJOT) {
-  const { seed, start, tapahtumat } = ajo;
-  const g = uusiPeli(tapahtumat ? tapahtumapaketti : pack, seed, start);
+  const { seed, start } = ajo;
+  const g = uusiPeli(pack, seed, start);
   const rngAlussa = g.rngCalls;
   const askeleet = [tila(g, 'alku')];
   let valinnat = 0;
@@ -293,7 +274,6 @@ for (const ajo of PELIAJOT) {
           avatut++; apuKokeiltu = false;
           if (g.quiz.kind === 'puzzle') laske(`peli:pulma${g.quiz.laatta ? '+laatta' : '-laatta'}`);
         }
-        if (g.phase === 'event') laske('peli:tapahtuma');
       } else {
         const tapa = muut[valinnat % muut.length];
         if (tapa === 'bus') {
@@ -352,27 +332,22 @@ for (const ajo of PELIAJOT) {
           tulos = g.answerQuiz(valinta);
         }
       }
-    } else if (g.phase === 'event') {
-      laske(`peli:vaikutus:${g.eventCard.effect?.kind ?? 'ei'}`);
-      teko = 'event:close';
-      tulos = g.closeEvent();
     } else {
       throw new Error(`odottamaton vaihe ${g.phase} (siemen ${seed})`);
     }
     if (!tulos.ok) throw new Error(`${teko} epäonnistui: ${tulos.error} (siemen ${seed})`);
     askeleet.push(tila(g, teko));
   }
-  peliAjot.push({ seed, start, tapahtumat, rngAlussa, askeleet });
+  peliAjot.push({ seed, start, rngAlussa, askeleet });
 }
 
 // Kattavuus: jokainen pulma avautuu, laatallinen ja laataton pulma, kaikki
-// muunnelmat, ja peliajoissa pulmia sekä jokainen tapahtumavaikutus.
+// muunnelmat, ja peliajoissa pulmia.
 const avatutPulmat = new Set(pulmaAjot.flatMap((a) => a.askeleet.map((s) => s.quiz?.puzzleId).filter(Boolean)));
 const puuttuu = [
   ...PULMAT.filter((p) => !avatutPulmat.has(p.id)).map((p) => `pulma ${p.id}`),
   ...['avattu:puzzle+laatta', 'avattu:puzzle-laatta', 'pulma:answer', 'pulma:hint', 'pulma:fiftyfifty',
-    'pulma:close', 'pulma:timeout', 'peli:pulma+laatta', 'peli:tapahtuma',
-    'peli:vaikutus:raha', 'peli:vaikutus:kyyti', 'peli:vaikutus:viive'].filter((k) => !lajit[k]),
+    'pulma:close', 'pulma:timeout', 'peli:pulma+laatta'].filter((k) => !lajit[k]),
 ];
 if (puuttuu.length) throw new Error(`jälki ei kata: ${puuttuu.join(', ')}`);
 
@@ -382,7 +357,7 @@ const riveina = (lista) => lista.map((j) => {
   return `${alku},"askeleet":[\n${askeleet.map((a) => JSON.stringify(a)).join(',\n')}\n]}`;
 });
 writeFileSync(join(tama, 'pulmajalki.json'),
-  `{"$kuvaus":"Verkkopelin pulmat ja tapahtumakortit (Kultaiset/tee-pulmajalki.mjs). Älä muokkaa käsin.",\n`
+  `{"$kuvaus":"Verkkopelin pulmat (Kultaiset/tee-pulmajalki.mjs). Älä muokkaa käsin.",\n`
   + `"lauta":"maailmankartta","pulmat":${JSON.stringify(PULMAT.map((p) => ({ id: p.id, city: p.city, generate: !!generaattori(p) })))},\n`
   + `"muunnelmat":${JSON.stringify(MUUNNELMAT)},"vuorot":${VUOROT},"maxTeot":${MAX_TEOT},\n`
   + `"arvonnat":[\n${arvonnat.map((a) => JSON.stringify(a)).join(',\n')}\n],\n`
