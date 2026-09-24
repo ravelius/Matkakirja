@@ -50,6 +50,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.Kaupungit.First(x => x.Id == "bern").Asukkaat == null, "Bern ilman kenttää");
             Oleta.Sama(MastoKoko.Iso, Mastot.Koko(a.Kaupungit.First(x => x.Id == "lontoo")), "Lontoo iso");
             Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(a.Kaupungit.First(x => x.Id == "angola")), "Angola alue → pieni");
+            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(a.Kaupungit.First(x => x.Id == "bern")), "vanha skeema ilman kenttää → keski");
+            Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(new RadioKaupunki { AsukkaatSkeemassa = true }), "kenttä null → pieni");
         }
 
         [Testi] static void KorkeusMitoitettu()
