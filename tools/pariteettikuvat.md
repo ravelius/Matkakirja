@@ -1,7 +1,7 @@
 # Pariteettikuvat — webin näkymät kuviksi natiivin vertailuun
 
 Työkalu: `tools/pariteettikuvat.mjs` (ajo) ja `tools/pariteettikuvat-nakymat.mjs`
-(näkymälista). Tilaaja Fable 24.9.2026 Laitetestaajalle: noin 40 näkymää kahdessa
+(näkymälista). Tilaaja Fable 24.9.2026 Laitetestaajalle: noin 40 näkymää (nyt 44) kahdessa
 koossa ilman introa ja UI-polkuja. Kuva vie noin 3–6 s eikä 30–40 s.
 
 ## Pikaohje Laitetestaajalle
@@ -125,6 +125,7 @@ Näkymää ilman todennusta ei voi lisätä, koska moduuli kaatuu latautuessaan.
 | laukku-linssit | Laukku, kaikki linssit omistettuina | `player.linssit` + `openPassport()` |
 | linssi-<id> | Jokainen aktiivinen linssi (js/linssit/rekisteri.js) | `player.linssit.push(id)`, `ui.valitseLinssi(id)` |
 | linssi-selite | Linssin selite (topografia) | `.linssi-selite` |
+| linssi-ihmisen-matka-kaynnissa | Ihmisen matka Käynnistä-napin jälkeen: esitys ensimmäisessä jaksossa (Afrikka), yläpalkki näkyvissä, pallo liikkeellä (noin 13 s avausjakso odotetaan ehdolla) | `ui.valitseLinssi('ihmisen-matka')` + `.aikajana-avaus-nappi`, todennus `ui.aikajana.esitys.tila()` (kaynnissa, indeksi ≥ 1, palkki näkyy, aloituskortti poissa) |
 | linssi-karuselli | Ihmisen matka: palkki ja korttikaruselli | `.aikajana-avaus-nappi` |
 | liiku | Kulkutapaliuska | `ui.liukuAuki = true` |
 | noppa / noppa-siirtolista | Liftauksen noppa / siirtovaiheen kohteet | Liiku → Liftaus |

@@ -303,6 +303,30 @@ export const NAKYMAT = [
     odotaJalkeen: '.linssi-selite',
   },
   {
+    nimi: 'linssi-ihmisen-matka-kaynnissa',
+    kuvaus: 'Ihmisen matka Käynnistä-napin jälkeen: esitys käynnissä (jakso ≥ 1, Afrikka), yläpalkki näkyvissä, pallo liikkeellä',
+    avaa: valitseLinssi, parametri: { linssi: 'ihmisen-matka' }, odota: '.aikajana-avaus-nappi',
+    jalkeen: async () => {
+      const { ui } = window.matkakirja;
+      document.querySelector('.aikajana-avaus-nappi')?.click();
+      // Avausjakso (musta, zoomi) kestää noin 13 s; odotetaan ensimmäistä
+      // varsinaista jaksoa, jolloin yläpalkki on näkyvissä (ei kiinteää odotusta).
+      const alku = Date.now();
+      const valmis = () => {
+        const t = ui.aikajana?.esitys?.tila?.();
+        return t && t.kaynnissa && t.indeksi >= 1 && !t.palkkiPiilossa && !document.querySelector('.aikajana-avaus');
+      };
+      while (!valmis() && Date.now() - alku < 45000) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 250));
+      }
+      const t = ui.aikajana?.esitys?.tila?.();
+      if (!valmis()) return { virhe: `esitys ei edennyt ensimmäiseen jaksoon 45 s:ssa (indeksi ${t?.indeksi ?? '–'})` };
+      return { jakso: t.jakso, indeksi: t.indeksi, kaynnistaMs: Date.now() - alku };
+    },
+    odotaJalkeen: '.aikajana-palkki',
+  },
+  {
     nimi: 'linssi-karuselli', kuvaus: 'Keksinnöt-linssi käynnissä: yläpalkki ja korttikaruselli (Käynnistä = .aikajana-avaus-nappi)',
     avaa: valitseLinssi, parametri: { linssi: 'keksinnot' }, odota: '.aikajana-avaus-nappi',
     jalkeen: () => { document.querySelector('.aikajana-avaus-nappi')?.click(); return null; },
@@ -485,6 +509,18 @@ const TODENNUS = {
     },
   },
   'linssi-selite': { nakyy: ['.linssi-selite'], ehto: linssiKaynnissa },
+  'linssi-ihmisen-matka-kaynnissa': {
+    nakyy: ['.aikajana-palkki'],
+    ehto: () => {
+      if (!document.body.classList.contains('linssi-ihmisen-matka')) return 'body.linssi-ihmisen-matka puuttuu';
+      if (document.querySelector('.aikajana-avaus')) return 'aloituskortti (.aikajana-avaus) yhä näkyvissä';
+      const t = window.matkakirja.ui.aikajana?.esitys?.tila?.();
+      if (!t) return 'esitystä ei ole';
+      if (!t.kaynnissa || t.paattynyt) return `esitys ei käynnissä (kaynnissa ${t.kaynnissa}, paattynyt ${t.paattynyt})`;
+      if (t.indeksi < 1) return `yhä avausjaksossa (indeksi ${t.indeksi})`;
+      return t.palkkiPiilossa ? 'yläpalkki piilossa' : null;
+    },
+  },
   'linssi-karuselli': {
     nakyy: ['.aikajana-palkki', '.aikajana-nauha'],
     ehto: (p) => {
