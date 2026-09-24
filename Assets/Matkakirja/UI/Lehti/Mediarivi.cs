@@ -138,6 +138,8 @@ namespace Matkakirja.Natiivi
                 virta ??= RadioVirta.Luo(UiKerros.Hae().transform);
                 virta.Voimakkuus = 0.55f * Puhe.Voimakkuus;
                 virta.Avaa(radio, null);
+                // Radiolinssin oma viritys voittaa (RadioVirta.Varattu): syy tilariville, ei varanäytettä päälle.
+                if (virta.Estetty) { UiNakymat.Hae()?.Tilarivi.Viesti(virta.Virhe); Pysayta(); return; }
                 soivaUrl = null;
                 radioAlku = Time.unscaledTime;
                 radioVara = tallenne;

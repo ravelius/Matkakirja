@@ -2024,3 +2024,78 @@
 .mk-tiedeliite__navinappi:disabled {
     opacity: 0.45;
 }
+
+/* ------------------------------------------------------------------------ *
+ * KEKSIJÄKARUSELLI (Keksijakaruselli.cs): web css/aikajana.css .aikajana-nauha ja
+ * .aikajana-kortti. Kortti on tummaa paperia (#201a14) kultaisella hiusviivalla,
+ * muotokuva 4:5 ja nimi kursiivilla; keskimmäisellä kultareuna. Paikka, mitta ja
+ * himmeys tulevat koodista (translate, scale, opacity) 0,6 s siirtymällä.
+ * ------------------------------------------------------------------------ */
+.mk-karuselli {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    overflow: hidden;
+}
+
+.mk-karuselli__kortti {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    overflow: hidden;
+    border-width: 1px;
+    border-color: rgba(217, 161, 59, 0.38);
+    border-radius: 10px;
+    background-color: #201a14;
+    transform-origin: center bottom;
+    transition-property: translate, scale, opacity;
+    transition-duration: 0.6s, 0.6s, 0.6s;
+    transition-timing-function: ease-in-out-cubic, ease-in-out-cubic, ease-in-out-cubic;
+}
+
+.mk-karuselli--vedossa .mk-karuselli__kortti {
+    transition-duration: 0s, 0s, 0s;
+}
+
+.mk-karuselli__kortti--nykyinen {
+    border-width: 2px;
+    border-color: rgba(217, 161, 59, 0.75);
+}
+
+.mk-karuselli__kortti--paalu {
+    background-color: #2a2119;
+}
+
+.mk-karuselli__kuva {
+    width: 100%;
+    background-color: #2a2119;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-karuselli__nimi {
+    padding: 4px 6px 6px 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #d9ccb4;
+}
+
+/* Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kehyksetön, reunoiltaan häipyvä
+ * (Valokeila.HaeKertomuskuva), kasvaa 0,6 → 1 pisteestä ylöspäin pienellä ylityksellä. */
+.mk-aikajana-kertomuskuva {
+    position: absolute;
+    -unity-background-scale-mode: stretch-to-fill;
+    transform-origin: center bottom;
+    scale: 0.6 0.6;
+    opacity: 0;
+    transition-property: scale, opacity;
+    transition-duration: 0.5s, 0.4s;
+    transition-timing-function: ease-out-back, ease;
+}
+
+.mk-aikajana-kertomuskuva.mk-esilla {
+    scale: 1 1;
+    opacity: 1;
+}
