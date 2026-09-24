@@ -6,6 +6,8 @@
 # Satelliittilento (24.9.2026): alikaavion lerp on Custom Function MatkakirjaSekoitus (sama tulos oletussyötteillä),
 # joka paikassa 1 korvaa puuttuvan rasterin lennon varakartalla ja paikassa 2 värjää Sentinelin tumman meren.
 # Lisäksi verteksivaiheeseen korkeuserojen liioittelu (globaali _korkeusKerroin, Kartta/KorkeusKerroin.cs; löydös 29).
+# Radiouudistus (build 12): fragmentin perusväri ja emissio kulkevat RadioHamara-funktion läpi (hämärä, maavalo ja
+# yövalojen uniformit; Kartta/RadioMastot.cs). Globaalit 0 = ennallaan.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
 
@@ -449,6 +451,78 @@ for s in satsolmut:
 lisat += [vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om, vara_ulos, meriv_ulos, kynnys_ulos, keski2_ulos,
           akseli2_ulos, nolla_ulos, ita_ulos, kartta_ulos, maailma_ulos, vara2_ulos, varataso_ulos] + satsolmut + uv_slotit + nayte_slotit + vv_slotit
 print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 ← meren värjäys (_s2MeriVari, _s2MeriKynnys)")
+
+# ---- Radion hämärä, maavalo ja yövalot (radiouudistus build 12, Natiiviseppä 24.9.2026) ----
+# Suunnitelma docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md luvut 3 ja 5. Globaalit asettaa
+# Kartta/RadioMastot.cs (IRadioMastot); asettamattomina ne ovat 0, jolloin tulos on täsmälleen ennallaan.
+#   _radioHamara       h 0…1: pohja → lerp(pohja, pohja × (0,18, 0,17, 0,24) + (0,006, 0,006, 0,016), h), lineaarinen
+#   _radioMaavalo      xyz = valitun maston juuri Unityn maailmassa, w = säde (m) = 110 km × (0,6 + 0,4 × kirkkaus)
+#   _radioMaavaloVari  rgb = lämmin #ff8a4a lineaarisena × kirkkaus; lisätään emissiona (valaisee paperia)
+#   _radioYonValot     xyz = valitun maston juuri, w = paikallinen tehostus 0…1 (RadioMastot.YonValot)
+# Yövalojen kerros (NASA Black Marble) puuttuu vielä: Karttasepän poltto Z0–Z6 tulee E28:n jälkeen. Uniformit ovat
+# kaaviossa valmiina, ja kerros lisätään tähän funktioon, kun rasteri on olemassa.
+HAMARA_RUNKO = (
+    "variOut = vari.rgb; emisOut = emis;\n"
+    "float h = saturate(hamara);\n"
+    "if (h > 0.0)\n"
+    "{\n"
+    "    float3 ham = vari.rgb * float3(0.18, 0.17, 0.24) + float3(0.006, 0.006, 0.016);\n"
+    "    variOut = lerp(vari.rgb, ham, h);\n"
+    "}\n"
+    "// Ground glow around the selected mast: radial gradient of the illustration (0.7 at centre, 0.28 at 45 %, 0 at\n"
+    "// the rim) ~ 0.7 f^2. Emission lights the unshaded paper, so coastlines and relief stay readable.\n"
+    "if (maavalo.w > 0.0)\n"
+    "{\n"
+    "    float f = saturate(1.0 - length(pos - maavalo.xyz) / maavalo.w);\n"
+    "    emisOut += maavaloVari.rgb * (0.7 * f * f) * (vari.rgb * 1.5 + 0.03);\n"
+    "}\n"
+    "// Night lights (NASA Black Marble): yonValot.xyz = selected mast, yonValot.w = local boost. Layer pending the\n"
+    "// Black Marble burn (Karttaseppa, Z0-Z6 after E28); uniforms are wired so only this body changes then.\n")
+flohko = {byid[b["m_Id"]]["m_SerializedDescriptor"]: b["m_Id"] for b in G["m_FragmentContext"]["m_Blocks"]}
+def sisaan(lohko_id):
+    return next(e for e in G["m_Edges"] if e["m_InputSlot"]["m_Node"]["m_Id"] == lohko_id)
+vari_reuna, emis_reuna = sisaan(flohko["SurfaceDescription.BaseColor"]), sisaan(flohko["SurfaceDescription.Emission"])
+G["m_Edges"] = [e for e in G["m_Edges"] if e is not vari_reuna and e is not emis_reuna]
+FX = G["m_FragmentContext"]["m_Position"]["x"] - 450.0
+FY = G["m_FragmentContext"]["m_Position"]["y"] - 300.0
+ham_slotit = [slotti("Vector4MaterialSlot", 0, "vari", 0, v4()), slotti("Vector3MaterialSlot", 1, "emis", 0, v3()),
+              slotti("Vector3MaterialSlot", 2, "pos", 0, v3()), slotti("Vector1MaterialSlot", 3, "hamara", 0, 0.0),
+              slotti("Vector4MaterialSlot", 4, "maavalo", 0, v4()), slotti("Vector4MaterialSlot", 5, "maavaloVari", 0, v4()),
+              slotti("Vector4MaterialSlot", 6, "yonValot", 0, v4()), slotti("Vector3MaterialSlot", 7, "variOut", 1, v3()),
+              slotti("Vector3MaterialSlot", 8, "emisOut", 1, v3())]
+for s in ham_slotit: s["m_StageCapability"] = 2
+ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
+                    synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
+                    m_FunctionBody=HAMARA_RUNKO)
+ham_om = kellu_ominaisuus("radioHamara", "_radioHamara", True); ham_om["m_Value"] = 0.0
+maavalo_om = vektori_ominaisuus("radioMaavalo", "_radioMaavalo")
+maavari_om = vektori_ominaisuus("radioMaavaloVari", "_radioMaavaloVari")
+yon_om = vektori_ominaisuus("radioYonValot", "_radioYonValot")
+ham_solmu, ham_ulos = ominaisuussolmu(ham_om, FX - 300.0, FY + 120.0)
+maavalo_solmu, maavalo_ulos = vektori_ominaisuussolmu(maavalo_om, FX - 300.0, FY + 180.0)
+maavari_solmu, maavari_ulos = vektori_ominaisuussolmu(maavari_om, FX - 300.0, FY + 240.0)
+yon_solmu, yon_ulos = vektori_ominaisuussolmu(yon_om, FX - 300.0, FY + 300.0)
+hpaikka_ulos = slotti("Vector3MaterialSlot", 0, "Out", 1, v3())
+hpaikka_solmu = solmupohja("PositionNode", "Position", FX - 300.0, FY + 60.0, [hpaikka_ulos], m_SGVersion=1, m_Space=4,
+                           m_PositionSource=0, m_DismissedVersion=0)
+H = ham_cf["m_ObjectId"]
+G["m_Edges"] += [reuna(vari_reuna["m_OutputSlot"]["m_Node"]["m_Id"], vari_reuna["m_OutputSlot"]["m_SlotId"], H, 0),
+                 reuna(emis_reuna["m_OutputSlot"]["m_Node"]["m_Id"], emis_reuna["m_OutputSlot"]["m_SlotId"], H, 1),
+                 reuna(hpaikka_solmu["m_ObjectId"], 0, H, 2),
+                 reuna(ham_solmu["m_ObjectId"], 0, H, 3),
+                 reuna(maavalo_solmu["m_ObjectId"], 0, H, 4),
+                 reuna(maavari_solmu["m_ObjectId"], 0, H, 5),
+                 reuna(yon_solmu["m_ObjectId"], 0, H, 6),
+                 reuna(H, 7, vari_reuna["m_InputSlot"]["m_Node"]["m_Id"], vari_reuna["m_InputSlot"]["m_SlotId"]),
+                 reuna(H, 8, emis_reuna["m_InputSlot"]["m_Node"]["m_Id"], emis_reuna["m_InputSlot"]["m_SlotId"])]
+for om in (ham_om, maavalo_om, maavari_om, yon_om):
+    G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
+    KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
+hsolmut = [ham_cf, ham_solmu, maavalo_solmu, maavari_solmu, yon_solmu, hpaikka_solmu]
+for s in hsolmut:
+    G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
+lisat += [ham_om, maavalo_om, maavari_om, yon_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, hpaikka_ulos] + hsolmut + ham_slotit
+print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)
