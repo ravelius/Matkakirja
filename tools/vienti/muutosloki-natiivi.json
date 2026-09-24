@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.11 (202609241848)",
+   "paiva": "2026-09-24",
+   "teksti": "Build 11: lennon uusi kamerareitti (kone läheltä, loittonus, kierto kohteen ympäri), iPhonen matalampi yläpalkki, Liiku piilossa kerronnan ajan, iPadin lehti leveämpi, radiolinssin korjaukset (kaikki maat näkyvissä), leveä nostokortti, kartan nimet uudella fontilla."
+  },
+  {
    "versio": "1.0.0 (202609241607)",
    "paiva": "2026-09-24",
    "teksti": "Ruskea yläpalkki iPhonelle, avausteksti aloitusnäytöllä, lento aidon satelliittikuvan päällä, kallistus pysyy zoomatessa, lehtien tekstit ja kuvaselaus webin mukaan, ISS-rata pehmeä, astronauttipulun keskustelu. Tunnettu: ensilennolla hetken harmaita laattoja."
