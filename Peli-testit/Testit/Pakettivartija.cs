@@ -559,7 +559,7 @@ namespace Matkakirja.Peli.Testit
             "PeliOhjain.HaeAanitaulut (Scripts/Peli/PeliOhjain.Aanet.cs): moduulit/js/aani-ehdokkaat.json, kun paketissa ei maisemakoreja (skeema < 1.22); ohitetaan raakakiellolla",
             "Laattamaarat.Lue (Peli/Laatat.cs): webin moduulimuoto exportit (vain testit; raakakiellolla FormatException). PeliOhjainin moduulivarareitti poistettu 24.9.2026",
             "SisaltoTuonti.LueReitit: data.fee (Paataso.Raaka), vain kun päätason maksu puuttuu (≤ 1.29); fee ei ole yhdessäkään paketissa, joten käytännössä web SEA_FEE",
-            "UI/ (Natiivi-UI, ei tässä vartijassa): UiSisalto, Kohdekartat, MitaUutta, Lippuikkuna, NostoSisalto, Pulu/Fokusvirrat, Pulu/Matkakirjamerkinnat, Lehti/LehtiFokus, Lehti/LehtiSisalto lukevat data-kenttiä",
+            "UI/ (Natiivi-UI, ei tässä vartijassa): päätaso ensin (natiivi-ui/paataso); jäljellä Pulu/Fokusvirrat, Lehti/LehtiSisalto ja Pulu/PuluHaku (v38:n päätaso eri rakenteessa, Siirtosepän kenttäkartta)",
         };
 
         // --- tarkistus -----------------------------------------------------
