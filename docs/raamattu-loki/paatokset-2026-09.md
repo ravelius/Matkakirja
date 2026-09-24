@@ -4147,3 +4147,7 @@ Piikit 8: ihmisen matkan avauksessa ei yli 20 ms:n kehyksiä (ajo 7: 31,7 ms); m
 ## OMISTAJA klo 16.2x: NATIIVIN LEHDISSA JA NOSTOKORTEISSA VAARANLAINEN TAUSTA TEKSTIN TAKANA → KOPIOIDAAN WEBISTA (24.9.2026 klo 16.12)
 
 Natiivi-UI mittaa webin css:n (tausta, läpinäkyvyys, tekstuuri, reunus, varjo, pyöristys, paddingit) kaupunkilehdestä, maalehdestä, nostokortista ja nostovisasta ja toteuttaa saman; kuvaparit merge-pyyntöön; build 10, yläpalkin jälkeen ennen E3:a.
+
+## ISO iPAD: DEVELOPMENT-KAANNOS EI ASENNU (0xe8008012) — LAITE PUUTTUU PERSONAL TEAM F72JLS57C5:N PROFIILISTA (24.9.2026 klo 16.13)
+
+Profiilissa vain 00008142… ja 00008150…; Natiiviseppä rekisteröi laitteen 00008103-001819421413401E ja allekirjoittaa uudelleen (xcodebuild -allowProvisioningUpdates). Sen jälkeen Linssiseppä uusii Huippuvuoret-kuvan ja keksinnöt-kuvaparin 1024×1366:ssa. TestFlight-buildit asentuvat isolle iPadille tästä riippumatta.
