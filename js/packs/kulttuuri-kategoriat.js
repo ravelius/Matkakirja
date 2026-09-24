@@ -106114,4 +106114,678 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  sthelena: [
+    {
+      id: 'kaupunki',
+      nimi: 'St. Helena',
+      johdanto: 'St. Helena on pieni tulivuorisaari keskellä eteläistä Atlanttia, yli 1800 kilometrin päässä lähimmästä mantereesta. Isoisän matkan aikaan 1873 saari oli yhä laivaliikenteen tärkeä välietappi ja Napoleonin kohtalon leimaama.',
+      nostot: [
+        {
+          otsikko: 'Jamestown ahtaassa laaksossa',
+          teksti: 'Saaren ainoa kaupunki Jamestown on rakennettu kapeaan, jyrkkien kallioseinämien väliin puristuvaan laaksoon aivan meren rannalla. Itä-Intian kauppakomppania perusti asutuksen 1600-luvulla, ja 1700-luvulla satamaan pysähtyi vuosittain jopa tuhat laivaa täydentämään vesi- ja ruokavarastojaan matkalla Aasiaan tai sieltä pois. Kapeat kadut, siirtomaa-ajan rakennukset ja jyrkät rinteet ovat säilyneet lähes ennallaan isoisän vuoden 1873 vierailusta lähtien: kaupunki on yhä ainoa tapa nousta laivasta kuivalle maalle satojen kilometrien säteellä.',
+          tiedosto: 'St-Helena-Jamestown-from-above.jpg',
+          lyhyt: 'Jamestown on saaren ainoa kaupunki, puristuksissa jyrkkien kallioiden välissä.',
+          selite: 'Ilmakuva näyttää Jamestownin ahtaassa laaksossa meren rannalla, ympärillä jyrkät ja paljaat kallioseinämät sekä satama-allas veneineen.',
+          lahde: 'Andrew Neaum, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jamestown, Saint Helena',
+        },
+        {
+          otsikko: 'Eteläisen pallonpuoliskon vanhin anglikaanikirkko',
+          teksti: 'Jamestownin harmaa kivikirkko St. James on eteläisen pallonpuoliskon vanhin yhä käytössä oleva anglikaaninen kirkkorakennus: nykyinen rakennus valmistui 1774, edeltäjänsä paikalle vuodelta 1671. Kirkko seisoo yhä samalla paikalla kuin isoisän vieraillessa saarella 1873, kapean pääkadun varrella laakson pohjalla. Napoleonin aikana kirkko oli brittiupseerien ja siirtolaisten kokoontumispaikka; sen kellotapuli purettiin turvallisuussyistä 1980 ja rakennettiin uudelleen vasta vuonna 2020, yli neljäsataa vuotta ensimmäisen kirkon jälkeen.',
+          tiedosto: 'Saint James Church in Jamestown Saint Helena.jpg',
+          lyhyt: 'St. James on eteläisen pallonpuoliskon vanhin yhä toimiva anglikaanikirkko.',
+          selite: 'Kuvassa harmaaksi rapattu kivikirkko harjakattoineen ja korkeine torneineen, edessä pieni parkkipaikka autoineen ja taustalla paljas kallioseinämä.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Saint James' Church, Jamestown",
+        },
+        {
+          otsikko: '699 porrasta ylös kallioon',
+          teksti: "Jacob's Ladder on 699 portaan suora kiviportaikko, joka kiipeää Jamestownista Ladder Hillin linnoitukseen. Alun perin vuonna 1829 rakennettu köysirata kuljetti kiskoilla lantaa ja maataloustuotteita laakson ja ylängön väliä; portaat kulkivat kiskojen vieressä jalankulkijoille. Termiittien syömät puiset ratapölkyt johtivat siihen, että vaunut ja kiskot purettiin 1871 – jäljelle jäivät vain portaat, joita isoisänkin olisi pitänyt kiivetä noustessaan varuskuntaan asti. Museo, jonka edustalla vanha tykki yhä seisoo, sijaitsee portaikon juurella.",
+          tiedosto: "Jacob's Ladder in Jamestown just behind the Saint Helena Museum.jpg",
+          lyhyt: '699 porrasta nousee suoraan kalliota pitkin Jamestownista ylängölle.',
+          selite: 'Kuvassa jyrkkä, suora porrasrivistö nousee kalliorinnettä ylös, edessä museorakennus ja vanha tykki telineellään.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Jacob's Ladder (Saint Helena)",
+        },
+        {
+          otsikko: 'Napoleon-kadun siirtomaatalo',
+          teksti: 'Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.',
+          tiedosto: 'Consulate Hotel in Jamestown Saint Helena.jpg',
+          lyhyt: 'Napoleon Streetin siirtomaatalo on nimetty keisarin mukaan Jamestownissa.',
+          selite: 'Kuvassa vaaleaksi rapattu kaksikerroksinen talo, jossa mustat rautaparvekkeet ja kyltti Consulate Hotel; parvekkeella erottuu valkoinen patsashahmo.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jamestown, Saint Helena',
+        },
+        {
+          otsikko: 'Linnoitus Jamestownin yllä',
+          teksti: 'Jyrkän High Knoll -kukkulan laella kohoava linnoitus vartioi Jamestownia lähes 600 metrin korkeudesta. Itä-Intian kauppakomppania rakensi paikalle pyöreän tornin vuonna 1799 suojaamaan saarta mahdolliselta ranskalaiselta hyökkäykseltä – pelko ei ollut turha, sillä Napoleon oli tuolloin Euroopan mahtavin sotapäällikkö. Isoisän vieraillessa saarella 1873 kukkulalla seisoi vielä tuo vanhempi torni; nykyinen muurien rengas rakennettiin vasta vuotta myöhemmin, 1874, kuninkaallisten insinöörien toimesta. Myöhemmin linnoitukseen suljettiin muun muassa buurisotavankeja.',
+          tiedosto: 'High Knoll Fort on Saint Helena Island, March 2020.jpg',
+          lyhyt: 'Linnoitus vartioi Jamestownia kukkulalta lähes 600 metrin korkeudesta.',
+          selite: 'Kuvassa vihreän kasvillisuuden takaa kohoava harmaa kivilinnoitus muurihammastuksineen sinistä taivasta vasten.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'High Knoll Fort',
+        },
+        {
+          otsikko: 'Lankalintu, jota ei löydy muualta',
+          teksti: 'St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.',
+          tiedosto: 'Saint Helena plover, locally known as the wirebird.jpg',
+          lyhyt: 'Lankalintu elää luonnossa vain St. Helenalla eikä missään muualla maailmassa.',
+          selite: 'Kuvassa ruskehtava ja valkorintainen kahlaajalintu seisoo paksulehtisten sukkulakasvien keskellä hiekkaisella maalla.',
+          lahde: 'Adrien37, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Saint Helena plover',
+        },
+      ],
+    },
+    {
+      id: 'napoleon',
+      nimi: 'Keisari kalliosaaren vankina',
+      johdanto: 'Napoleon karkotettiin St. Helenalle 1815 Waterloon tappion jälkeen, toista kertaa maanpakoon Elban jälkeen. Keisari eli saarella kuolemaansa asti, ja hänen muistonsa oli isoisän 1873 vierailun aikaan yhä saaren tärkein puheenaihe.',
+      tehtava: {
+        kysymys: 'Minä vuonna Napoleonin maalliset jäänteet siirrettiin takaisin Ranskaan St. Helenalta?',
+        vaihtoehdot: ['1821', '1830', '1840', '1858'],
+        oikea: 2,
+        fakta: 'Napoleonin ruumis kaivettiin esiin ja siirrettiin Ranskaan vuonna 1840 prinssi de Joinvillen johtamalla retkikunnalla – tapahtumaa kutsutaan nimellä Retour des Cendres.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ensimmäiset viikot puutarhamajassa',
+          teksti: 'Saavuttuaan St. Helenalle lokakuussa 1815 Napoleon ei päässyt heti Longwoodiin, joka ei ollut vielä valmis hänen vastaanottamiseensa. Hän asui ensin kauppias William Balcomben tilan pienessä puutarhamajassa, Briarsissa, lähes kaksi kuukautta. Napoleon viihtyi paikassa ja ystävystyi erityisesti Balcomben tyttären Betsyn kanssa – tästä ajasta on säilynyt useita muistelmia. Joulukuussa 1815 hän muutti lopulta Longwood Houseen, joka jäi hänen kodikseen kuuden vuoden ajaksi loppuelämänsä loppuun saakka.',
+          tiedosto: 'Briars pavilion (40164448305).jpg',
+          lyhyt: 'Napoleon asui ensin Briarsin puutarhamajassa ennen Longwoodiin muuttoa.',
+          selite: 'Kuvassa pieni vihreäluukkuinen valkoinen talo vehreän kasvillisuuden keskellä, taustalla paljas ja jyrkkä kallioseinämä.',
+          lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Briars, Saint Helena',
+        },
+        {
+          otsikko: 'Longwood House – vankila puutarhan keskellä',
+          teksti: 'Longwood House oli alun perin Itä-Intian kauppakomppanian maatila, joka muutettiin kiireesti Napoleonin asunnoksi. Rakennus oli kostea, tuulinen ja täynnä rottia, ja keisari valitti siitä usein brittiläiselle vartiostolleen. Siellä hän saneli muistelmansa ja eli tarkkaan vartioituna kuolemaansa 5. toukokuuta 1821 asti. Ranskan valtio osti Longwoodin ympäristöineen vuonna 1858 seitsemästä tuhannesta sadasta punnasta, ja rakennus toimii yhä Ranskan omistamana museona – yksi harvoista Ranskan alueista keskellä eteläistä Atlanttia.',
+          tiedosto: 'Longwood House le 12 janvier 2008.jpg',
+          lyhyt: 'Longwood House oli Napoleonin koti ja vankila vuoteen 1821 asti.',
+          selite: 'Kuvassa vaaleanpunakattoinen pitkä siirtomaatalo kukkivan puutarhan keskellä, edustalla Ranskan lippu tangossa.',
+          lahde: 'Michel Dancoisne-Martineau, Wikimedia Commons (CC0)',
+          wiki: 'Longwood House',
+        },
+        {
+          otsikko: 'Keisarin viimeiset hetket',
+          teksti: 'Napoleon kuoli Longwood Housessa 5. toukokuuta 1821 vain 51-vuotiaana; ruumiinavauksessa löytyi merkkejä mahalaukun sairaudesta. Saksalaissyntyinen ranskalaistaiteilija Charles de Steuben maalasi vuosikymmeniä myöhemmin tämän tunnetuksi tulleen kuvauksen kuolinvuoteesta, jota ympäröivät keisarin uskolliset seuralaiset ja upseerit. Maalauksesta tuli niin suosittu, että siitä otettiin lukuisia toisintoja, ja se muovasi pitkäksi aikaa käsitystä siitä, miltä Napoleonin viimeiset hetket näyttivät – vaikka taiteilija ei itse ollut paikalla.',
+          tiedosto: 'Napoleon death-Charles von Steuben-IMG 1512.JPG',
+          lyhyt: 'Napoleon kuoli Longwoodissa 5. toukokuuta 1821, 51-vuotiaana.',
+          selite: 'Maalauksessa Napoleon makaa vuoteella verhotun katoksen alla, ympärillä suruun vaipuneita upseereita ja siviilejä tummissa asuissa.',
+          lahde: 'Charles de Steuben, Wikimedia Commons (public domain)',
+          wiki: 'Death of Napoleon',
+        },
+        {
+          otsikko: 'Tyhjä hauta Geraniumilaaksossa',
+          teksti: "Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.",
+          tiedosto: "Napoleon's Tomb on Saint Helena 2020.jpg",
+          lyhyt: 'Napoleonin tyhjä hauta on yhä paikallaan, vaikka ruumis vietiin Ranskaan 1840.',
+          selite: 'Kuvassa nurmikentän keskellä pieni mustan rautaisen aidan ympäröimä tasainen hauta-alue vehreän puutarhan ja kivimuurin keskellä.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Valley of the Tomb',
+        },
+        {
+          otsikko: 'Keisari palaa kotiin 1840',
+          teksti: 'Vuonna 1840 Ranskan kuningas Louis-Philippe lähetti poikansa, prinssi de Joinvillen, laivueella noutamaan Napoleonin jäänteet takaisin Ranskaan – tapahtumaa kutsutaan Retour des Cendresiksi. Prinssi itse maalasi tämän akvarellin ruumiin kaivamisen jälkeisistä hetkistä St. Helenan satamassa: ranskalaiset merimiehet kantavat arkkua veneeseen Ranskan lippu liehuen, kun brittisotilaat seisovat rivissä rannalla. Matka päättyi Pariisiin, jossa Napoleon haudattiin lopulta Invalidien kirkkoon suureen valtiolliseen seremoniaan joulukuussa 1840.',
+          tiedosto: "François d'Orléans - Retour des cendres de Napoléon, Sainte Hélène, 1840.jpg",
+          lyhyt: 'Vuonna 1840 Napoleonin jäänteet noudettiin takaisin Ranskaan St. Helenalta.',
+          selite: 'Akvarellissa vene täynnä ranskalaisia merimiehiä ja Ranskan lippu lähestyy rantaa, taustalla jyrkät vuoret ja rivissä seisovia sotilaita.',
+          lahde: "François d'Orléans, Wikimedia Commons (public domain)",
+          wiki: 'Retour des cendres',
+        },
+      ],
+    },
+  ],
+  kimberley: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kimberley',
+      johdanto:
+        'Isoisän saapuessa Etelä-Afrikkaan 1873 uusi kaivoskaupunki sai sinä vuonna nimensä brittiläisen siirtomaaministerin mukaan – kaksi vuotta aiemmin löydetyt timantit olivat tehneet savannikummusta maailman kuuluisimman kaivoksen.',
+      nostot: [
+        {
+          otsikko: 'Löytö Colesbergin kummulla',
+          teksti:
+            'Heinäkuussa 1871 löysi etsintäretkikunnan kokki Esau Damoense timantteja pienellä kummulla, joka sijaitsi veljesten Nicolaas ja Diederik de Beersin tilalla. Tieto levisi kulovalkean tavoin, ja paikalle syntyi välitön ryntäys, jota jälkipolvet kutsuivat nimellä New Rush. Jo kuukaudessa kumpuun oli hakattu 900 erillistä kaivosvaltausta, joita työsti kiivaasti kaksi–kolmetuhatta miestä yhtä aikaa: jokainen kaivoi omaa pientä ruutuaan kirveellä ja lapiolla siinä toivossa, että seuraava lapiollinen paljastaisi timantin.',
+          tiedosto: "DF1873 Old DeBeer's.jpg",
+          lyhyt: 'Vuoden 1873 kuva Old De Beersin tilasta, josta tuli timanttiryntäyksen keskus.',
+          selite:
+            'Vuoden 1873 kuva näyttää Old De Beersin avaraa savannimaisemaa: muutama teltta ja hökkeli, harvat akaasiapuut, hevosen vetämä kärry ja pari ihmistä istumassa hiekkaisella polulla – rauhallinen näky juuri ennen kuin paikasta tuli timanttiryntäyksen keskus.',
+          lahde: 'Tuntematon tekijä 1873 (British Library), Wikimedia Commons (Public domain)',
+          wiki: 'Kimberley, Northern Cape',
+        },
+        {
+          otsikko: 'Nimi jonka lordi osasi lausua',
+          teksti:
+            'Nopeasti kasvaneen kaivosleirin nimi New Rush ei kelvannut siirtomaahallinnolle pitkäksi aikaa. Siirtomaasihteeri J. B. Currey halusi kunnianosoituksen Britannian silloiselle siirtomaaministerille, kreivi Kimberleylle – osin siksi, että tämä pystyisi ainakin kirjoittamaan ja ääntämään oman vaalipiirinsä nimen oikein. Käskykirjeellä 5. heinäkuuta 1873, täsmälleen samana vuonna kun isoisä matkusti Etelä-Afrikassa, New Rushista tuli virallisesti Kimberley. Nimi periytyi näin kaupungille mieheltä, joka ei koskaan itse käynyt kaivoskuopan reunalla.',
+          tiedosto: 'Portrait of John Wodehouse, 1st Earl of Kimberley.jpg',
+          lyhyt: 'John Wodehouse, 1. Kimberleyn kreivi, jonka mukaan kaupunki nimettiin 1873.',
+          selite:
+            'Kaiverrettu muotokuva esittää iäkkäänä kuvatun John Wodehousea, 1. Kimberleyn kreiviä: kalju päälaki, harmaa täysparta, tumma puku ja valkoinen rusetti – mies, jonka mukaan kaivoskaupunki nimettiin heinäkuussa 1873.',
+          lahde: 'E. Passingham, Wikimedia Commons (Public domain)',
+          wiki: 'John Wodehouse, 1st Earl of Kimberley',
+        },
+        {
+          otsikko: 'Maailman suurin käsin kaivettu kuoppa',
+          teksti:
+            'Heinäkuusta 1871 aina vuoteen 1914 asti jopa 50 000 kaivosmiestä louhi kumpua hakulla ja lapiolla, kunnes tuloksena oli 17 hehtaarin laajuinen ja 463 metriä leveä kuilu – Big Hole, Suuri kuoppa. Syvimmillään se ulottui 240 metrin syvyyteen, ennen kuin kuoppaa osittain täytettiin louheella ja pohjavesi nousi peittämään alimmat kymmenet metrit. Koko urakan aikana maasta nostettiin noin 2 722 kilogrammaa eli 13,6 miljoonaa karaattia timantteja – pelkillä käsityökaluilla kaivettuna sitä on pidetty maailman suurimpana ihmiskäsin louhittuna kuoppana, vaikka osa tutkijoista on myöhemmin kyseenalaistanut ennätyksen.',
+          tiedosto: 'The Big Hole (45394589474).jpg',
+          lyhyt: 'Tänään vedellä täyttynyt Big Hole, maailman suurimmaksi mainittu käsin kaivettu kuoppa.',
+          selite:
+            'Ilmakuva näyttää tänä päivänä vedellä täyttyneen Big Holen: pystysuorat, raidalliset kalliojyrkänteet syöksyvät turkoosinvihreään veteen, jonka reunoja kehystävät vehreät pensaat ja kuivunut ruohikko.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Rhodesin timanttivalta syntyy',
+          teksti:
+            'Vuosikymmenten mittaan satojen pienten valtausten sekamelska alkoi haitata tehokasta louhintaa, kun kilpailevat yhtiöt söivät toistensa voittoja. Nuori brittiläinen siirtolainen Cecil Rhodes osti kumppaninsa Charles Ruddin kanssa vähitellen haltuunsa yhä useampia valtauksia entisellä De Beersin tilalla. 13. maaliskuuta 1888 kilpailevat yhtiöt sulautuivat Rhodesin johdolla yhdeksi jättiläiseksi, De Beers Consolidated Mines -yhtiöksi, jonka elinikäisiin johtajiin kuului myös Rhodesin entinen kilpailija Barney Barnato. Yhtiöstä tuli vuosikymmeniksi maailman timanttikaupan monopoli, joka säänteli sekä tuotantoa että hintoja.',
+          tiedosto: 'Washing plant of De Beers Consolidated Mines, Kimberley 1900.jpg',
+          lyhyt: 'De Beers Consolidated Minesin pesulaitos vuonna 1900, monopoliyhtiön teollista mittakaavaa.',
+          selite:
+            'Vanha valokuva vuodelta 1900 näyttää De Beersin timanttikaivosten pesulaitosta: korkeita puisia nostotorneja, pyöriviä seulapyöriä ja pieniä malminkuljetusvaunuja, joiden edessä seisoo hevonen kärryineen.',
+          lahde: 'Tuntematon tekijä 1900, Wikimedia Commons (Public domain)',
+          wiki: 'De Beers',
+        },
+        {
+          otsikko: 'Timantit pöydällä',
+          teksti:
+            'Kaivetusta soralouheesta vain murto-osa oli timantteja, joten suuri osa työstä tehtiin lopulta pöytien ääressä, ei kuopan pohjalla. Louhe murskattiin, pestiin ja seulottiin, minkä jälkeen lajittelijat kävivät läpi jäljelle jääneen rakeisen aineksen käsin, poimien esiin kiiltävät kivet yksi kerrallaan. Työ vaati tarkkuutta: samalla pöydällä saattoi liikkua päivässä omaisuuksia, joita mikään vartija ei pystynyt täysin valvomaan. Lajitellut timantit lähetettiin Kimberleystä edelleen Lontooseen, ja juuri tämä kauppaketju teki savannin keskelle nousseesta kaivoskaupungista yhden Etelä-Afrikan vauraimmista paikoista.',
+          tiedosto:
+            'Diamantsorteerders bij een mijn van De Beers in Kimberley, Zuid-Afrika Sorting the rough Diamonds, De Beers Mines, Kimberley, South Africa, RP-F-F09044.jpg',
+          lyhyt: 'De Beersin kaivosten työntekijät lajittelevat raakoja timantteja pöydän ääressä.',
+          selite:
+            'Sepiansävyinen stereokuvakortti esittää kahta miestä pöydän ääressä lajittelemassa raakoja timantteja pienistä kasoista; taustalla kolmas mies kumartuu toisen kasan yli De Beersin kaivosten lajittelusuojassa.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'De Beers',
+        },
+      ],
+    },
+    {
+      id: 'timantit',
+      nimi: 'Timanttiryntäys',
+      johdanto:
+        'Big Holen ympärillä eli tuhansia kaivosmiehiä, joiden arkeen kuuluivat käsin kaivetut valtaukset, tauteja levittävä ahtaus ja lopulta syvälle maan alle ulottuvat kuilut – tarina, joka jatkui kauan isoisän vierailun jälkeenkin.',
+      tehtava: {
+        kysymys:
+          'Minkä nimen sai kivilaji, jonka piippumaisista muodostumista löytyi timantteja Kimberleyn seudulla?',
+        vaihtoehdot: ['Graniitti', 'Kimberliitti', 'Basaltti', 'Marmori'],
+        oikea: 1,
+        fakta:
+          'Kivilaji sai nimensä kimberliitti, koska sen tunnetuimmat timanttipitoiset esiintymät löytyivät juuri Kimberleyn seudulta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Uuden rynnistyksen shakkilauta',
+          teksti:
+            'Colesbergin kummun päälle piirrettiin heti alkuvaiheessa tiheä ruudukko, jossa jokaisella löytäjällä oli oikeus vain yhteen pieneen valtaukseen. Kuukaudessa ruudukkoon oli hakattu 900 erillistä valtausta, joita työsti kahdesta kolmeen tuhatta miestä samanaikaisesti – jokainen kaivoi omaa ruutuaan naapureistaan erillään, hakulla ja lapiolla, ilman yhteistä suunnitelmaa. Kun valtaukset syvenivät eri tahtiin, syntyi sekava, jyrkkäseinäinen sokkelo, jossa louhetta jouduttiin nostamaan köysillä ja koreilla yhä korkeammalta reunalle asti. Vasta kun yhtiöt sulautuivat De Beersiksi 1888, alueesta tuli yksi hallittu louhos.',
+          tiedosto: 'South Africa; an open works mine at De Beers diamond mine. P Wellcome V0037952.jpg',
+          lyhyt: 'Avolouhoksen portaikkomainen seinämä De Beersin kaivoksella 1890-luvulla.',
+          selite:
+            'Käsin väritetty valokuva 1890-luvulta on nimetty "Open Works De Beers Mine": se näyttää avolouhoksen portaikkomaisen, viistoihin kerrostuneen seinämän, jonka yläreunalla erottuu puisia nostotorneja ja matalia rakennuksia.',
+          lahde: 'J.E.M., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Kivi joka sai nimensä kaupungista',
+          teksti:
+            'Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.',
+          tiedosto: 'Diamond in kimberlite (Cretaceous; Kimberley, South Africa) 1 (32832594347).jpg',
+          lyhyt: 'Kimberliittikivi, jonka sisään on jäänyt kaksi timanttikidettä.',
+          selite:
+            'Lähikuva harmaasta, huokoisesta kimberliittikivestä, jonka pinnalla erottuu ainakin kaksi kirkasta, viistopintaista timanttikidettä ruudukolla merkityn mittapohjan päällä.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kimberlite',
+        },
+        {
+          otsikko: 'Syvemmälle maan alle',
+          teksti:
+            'Kun avolouhoksen seinät alkoivat sortua ja pintavaltaukset kävivät vaarallisiksi, De Beers siirtyi kaivamaan timantteja maan alle pystykuiluja pitkin. 1890-luvulla yhtiön kaivosmiehet työskentelivät jo 900 jalan eli lähes 275 metrin syvyydessä, missä hissikorit ja kiskoilla kulkevat malmivaunut korvasivat vanhat köysi- ja korikuljetukset. Myöhemmin maanalaiset käytävät ulottuivat yli tuhannen metrin syvyyteen asti, kauas alkuperäisen Colesbergin kummun alle. Pinnalta katsottuna kaivos näytti yhä samalta valtavalta kuopalta, mutta sen todellinen laajuus jatkui näkymättömissä moninkertaisesti syvemmälle kuin kukaan pystyi kuopan reunalta arvioimaan.',
+          tiedosto: 'PSM V41 D474 In the rock shaft of the de beers diamond mine at 900 feet.jpg',
+          lyhyt: 'Herrasmiehiä De Beersin kaivoksen maanalaisessa käytävässä 900 jalan syvyydessä.',
+          selite:
+            'Kynäpiirros esittää kolmea hienosti pukeutunutta herrasmiestä keskustelemassa maanalaisessa kaivoskäytävässä pienten, kiskoilla kulkevien malmivaunujen vierellä; yläpuolella näkyy köysi ja taljapyörä.',
+          lahde: 'Tuntematon tekijä 1892 (Popular Science Monthly), Wikimedia Commons (Public domain)',
+          wiki: 'Big Hole',
+        },
+        {
+          otsikko: 'Ahtaus ja taudit rynnistyksen kaupungissa',
+          teksti:
+            'Kaivoskaupungin arki ei ollut vain jännittävää aarteenetsintää. Vesi oli niukkaa, kesät polttavan kuumia, ja telttoihin sekä hökkeleihin ahtautunut väestö altisti itsensä tarttuville taudeille. Kimberleyn sairaalan omista tiedoista käy ilmi, että vuosina 1897–1899 hoidettiin 5 368 mustaa potilasta, joista 1 144 kuoli – syinä muun muassa tuberkuloosi, keuhkokuume, keripukki, ripuli ja kaivosonnettomuudet. Suurin osa kaivosten mustista työntekijöistä asui erillisissä, valvotuissa työläisleireissä, joista käsin heidät kuljetettiin päivittäin louhokselle ja takaisin, usein ilman mahdollisuutta poistua alueelta koko sopimuskauden aikana.',
+          tiedosto: 'South Africa; bread carried on trolleys for the African work Wellcome V0038004.jpg',
+          lyhyt: 'Leipää kuljetetaan vaunulla De Beersin kaivoksen työläisleirille noin vuonna 1905.',
+          selite:
+            'Valokuva näyttää joukon afrikkalaisia kaivostyöläisiä pienen, kiskoilla kulkevan vaunun ympärillä; vaunuun on pinottu kymmeniä leipiä työläisten ruokintaa varten De Beersin kaivoksen työläisleirin edustalla.',
+          lahde: 'Hugh Marshall, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kimberley, Northern Cape',
+        },
+      ],
+    },
+  ],
+  labrador: [
+    {
+      id: 'kaupunki',
+      nimi: 'Labrador',
+      johdanto:
+        'Labrador on Kanadan koillisin ja karuin maakolkka: jylhiä vuoria, jäisiä vuonoja ja satojen vuosien takaisia inuittikyliä. Isoisän matkavuonna 1873 se oli jo vanha tuttu paikka valaanpyytäjille ja turkiskauppiaille.',
+      nostot: [
+        {
+          otsikko: 'Kirkko joka ehti sata vuotta ennen isoisää',
+          teksti:
+            'Herrnhutilainen lähetyssaarnaaja Jens Haven perusti Nainiin lähetysaseman vuonna 1771 – yli sata vuotta ennen isoisän matkaa. Moravian veljeskunta oli tullut Labradoriin kääntämään inuiitteja kristinuskoon, ja jo pari vuotta perustamisen jälkeen Nainissa asui ja kävi kastettavana yli 250 inuittia, jotka olivat saapuneet kauempaakin etelän rannikolta. Nain oli aikanaan yksi Kanadan vanhimmista pysyvistä inuittiyhteisöistä, ja lähetysasemien verkosto laajeni pian myös Hopedaleen, Hebroniin ja Okakiin. 1870-luvulla asema oli jo osa rannikon arkea, ei mikään uutuus.',
+          tiedosto: 'Nain Moravian Church, Labrador, July 2023.jpg',
+          lyhyt: 'Nainin valkoinen puukirkko, jonka kyltti kertoo perustamisvuoden 1771.',
+          selite:
+            'Valokuva Nainin Moravian-kirkosta: valkoiseksi maalattu puukirkko vihreine listoineen ja tornin kellotapuli, edessä kyltti "Nain Moravian Church Established 1771".',
+          lahde: 'Quincylvania, Wikimedia Commons (CC0)',
+          wiki: 'Nain, Newfoundland and Labrador',
+        },
+        {
+          otsikko: 'Vuoret joita jää veisti vuosituhansia',
+          teksti:
+            'Labradorin pohjoiskärkeä hallitsevat Torngatin vuoret, joiden nimi tulee inuktitutin sanasta Torngarsuk – henkiolento, joka uskottiin asuvan huipuilla. Jäätiköt kaivoivat vuoriin syviä, U:n muotoisia laaksoja ja vuonoja, kuten Nachvakin vuonon, jonka rannoilla ei kasva juuri muuta kuin jäkälää ja matalaa pensaikkoa. Alueella elää ainoana paikkana maailmassa tundralla viihtyviä mustakarhuja, ja samat rinteet ovat myös jääkarhujen ja karibujen laidunmaita. Isoisän aikaan seutu oli lähes kokonaan kartoittamaton erämaa.',
+          tiedosto: 'Nachvak Fjord Labrador 2008.JPG',
+          lyhyt: 'Nachvakin vuono viiltää Torngatin vuoriston kallioita Pohjois-Labradorissa.',
+          selite:
+            'Valokuva Nachvakin vuonosta: jyrkät, lumitäpläiset kalliorinteet laskeutuvat tummansiniseen veteen, etualalla ruskeaa syyskasvillisuutta peittävää kalliota.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Torngat Mountains',
+        },
+        {
+          otsikko: 'Baskit keittivät valasta öljyksi',
+          teksti:
+            'Kauan ennen brittiläisiä tai ranskalaisia siirtokuntia Red Bayn satamassa kiehuivat baskien valaanpyytäjien padat: 1530-luvulta 1600-luvun alkuun baskilaiset laivastot pyysivät alueella grönlanninvalaita ja sulattivat rasvan öljyksi Euroopan lamppuihin. Arkeologit ovat löytäneet paikalta uponneita laivoja ja baskityylisiä punaisia kattotiiliä, jotka todistavat asutuksen olleen aikanaan Pohjois-Amerikan suurin eurooppalainen teollisuuslaitos. Red Bay julistettiin Kanadan kansalliseksi historialliseksi kohteeksi 1979 ja Unescon maailmanperintökohteeksi 2013 parhaiten säilyneenä todisteena eurooppalaisesta valaanpyyntiperinteestä.',
+          tiedosto: 'Red Bay Labrador 01.jpg',
+          lyhyt: 'Red Bayn kylä, jossa baskit pyysivät valaita jo 1500-luvulla.',
+          selite:
+            'Valokuva Red Bayn rannikkokylästä: valkoisia ja punakattoisia taloja matalalla niemellä sataman ympärillä, kaukana oikealla siintää valkoinen jäävuori.',
+          lahde: 'Cephas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Red Bay',
+        },
+        {
+          otsikko: 'Jäävuorten kuja',
+          teksti:
+            'Labradorinvirta kuljettaa joka kevät Grönlannin ja Baffininsaaren jäätiköiltä irronneita jäävuoria etelään Labradorin rannikkoa pitkin niin säännöllisesti, että reittiä kutsutaan "jäävuorten kujaksi". Kylmä virtaus pitää meriveden lämpötilan usein nollan tuntumassa kesälläkin ja on yksi syy siihen, miksi Labradorin edustan kalavedet olivat pitkään niin runsaat: kylmä, hapekas vesi sopi turskalle ja katkaravulle mainiosti. Ajelehtivat jäävuoret tarjosivat isoisän aikaan myös lepopaikan meripäivälinnuille, jotka istuivat jään harjalla kymmenien parvina.',
+          tiedosto: 'Iceberg (Red Bay harbour).jpg',
+          lyhyt: 'Jäävuori Red Bayn satamassa, sen laella lepää lintuparvi.',
+          selite:
+            'Valokuva sinertävästä jäävuoresta meren pinnalla: sen harjalla ja rinteillä istuu kymmenien lintujen parvi, taustalla usvainen keltertävä taivas.',
+          lahde: 'Wiegee, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador Current',
+        },
+        {
+          otsikko: 'Turkkia kruunulle',
+          teksti:
+            'Hudson\'s Bay -yhtiö perusti kauppapaikan Rigolet\'in kylään vuonna 1836 ostaakseen inuiteilta ja rannikon asukkailta turkiksia – erityisesti kettua, saukkoa ja nahkiaishylkeen taljaa – brittiläisten hattutehtaiden tarpeisiin. Postille rakennettiin varastoja, asuinrakennuksia ja lopulta myös verkkovaja, ja se pysyi seudun tärkeimpänä kauppapaikkana vuosikymmenien ajan. Isoisän matkavuonna 1873 tällaiset postit olivat rannikon ainoa yhteys ulkomaailman rahatalouteen: turkiksilla maksettiin jauhoista, ammuksista ja työkaluista, käteistä nähtiin harvoin.',
+          tiedosto:
+            "Emil Brass, Im Reiche der Pelze, Seite 299, Leutehaus des Hudson's Bay Postens in Rigolet, Labrador.jpg",
+          lyhyt: 'Hudson’s Bay -yhtiön työläisten talo Rigolet’n kauppapostilla.',
+          selite:
+            'Vanha mustavalkoinen valokuva pitkästä, valkoiseksi maalatusta hirsitalosta: univormuun pukeutunut mies kävelee rakennuksen edessä kulkevaa polkua pitkin.',
+          lahde: 'Emil Brass, Wikimedia Commons (Public domain)',
+          wiki: "Hudson's Bay Company",
+        },
+        {
+          otsikko: '"Labradorin pääkaupunki"',
+          teksti:
+            'Battle Harbourin saarelle perusti englantilainen Poolen kauppahuone suolakalan käsittelyyn erikoistuneen kauppa-aseman jo 1770-luvulla. Vuoden 1820 jälkeen paikasta tuli niin vakiintunut kesäkalastuksen keskus, että sitä alettiin kutsua "Labradorin pääkaupungiksi". Satoja kalastajia saapui joka kesä Newfoundlandista pyytämään turskaa, joka suolattiin ja kuivattiin telineillä vientiin Eurooppaan. Isoisän aikaan Battle Harbour oli koko rannikon vilkkain paikka juuri kesäkuukausina; talvisin väki väheni murto-osaan. Paikka nimettiin kansalliseksi historialliseksi kohteeksi 1996.',
+          tiedosto: 'BattleHarbour Labrador 2008.JPG',
+          lyhyt: 'Battle Harbourin kalastusasema sumun peittämänä syksyisenä päivänä.',
+          selite:
+            'Valokuva sumuisesta Battle Harbourista: valkoisia, punakattoisia varastorakennuksia rannalla, edessä laitureita ja telineitä, tausta katoaa usvaan.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Battle Harbour',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Labradorinsorsa – lintu joka katosi',
+      johdanto:
+        'Labradorin nimeä kantoi myös lintu: labradorinsorsa, joka ui rannikon matalikoilla vielä isoisän lapsuudessa. Se hävisi todistetusti isoisän omana aikana, ilman selitystä sille, miksi se oli aina ollut niin harvinainen.',
+      tehtava: {
+        kysymys: 'Missä ja milloin ammuttiin viimeinen varmasti tunnettu labradorinsorsa?',
+        vaihtoehdot: [
+          'Long Islandilla New Yorkissa syksyllä 1875',
+          'Nainin edustalla Labradorissa 1800',
+          'Grönlannin rannikolla 1920',
+          'Torngatin vuoristossa 1750',
+        ],
+        oikea: 0,
+        fakta:
+          'Viimeinen säilynyt näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, vain kaksi vuotta isoisän matkan jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lintu jota kukaan ei tuntenut kunnolla',
+          teksti:
+            'Labradorinsorsa (Camptorhynchus labradorius) oli sukupuuttoon kuollut jo ennen kuin kukaan ehti tutkia sen elintapoja kunnolla. Koiraan puvussa vuorottelivat musta ja valkoinen eiderin tapaan, naaras oli vaatimattoman harmaanruskea. Molemmilla oli erikoinen, leveäksi ja litteäksi levittynyt nokka, jonka sisäreunoilla oli tiheä rivi ohuita lamelleja – luultavasti sopeuma, jolla lintu suodatti pientä saalista mudasta tai hiekasta. Laji oli tiedemiesten mukaan aina ollut harvinainen, eikä kukaan osannut edes 1800-luvulla sanoa varmasti miksi juuri tämä sorsa oli niin harvassa muihin vesilintuihin verrattuna.',
+          tiedosto: 'Extinctbirds1907 P36 Camptolaemus labradorius0363AA.jpg',
+          lyhyt: 'Labradorinsorsan naaras ja koiras John Gerrard Keulemansin maalauksessa 1907.',
+          selite:
+            'Vanha lintumaalaus kahdesta sorsasta kalliota vasten: vasemmalla ruskea naaras, oikealla mustavalkoinen, tummapäinen koiras, jonka nokka on leveä ja litteä.',
+          lahde: 'John Gerrard Keulemans, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Pesät joita kukaan ei löytänyt',
+          teksti:
+            'Labradorinsorsan uskottiin pesivän juuri Labradorin ja Pohjois-Québecin rannikoilla, ja luonnontutkija John James Audubonin poika kertoi nähneensä yhden pesän Labradorissa 1800-luvun puolivälissä. Kukaan muu ei kuitenkaan koskaan varmuudella löytänyt lajin pesää tai munaa, vaikka linnusta kerättiin näytekappaleita museoihin ympäri maailmaa. Osa tutkijoista arveli lajin pesineen myös Pyhän Laurin lahden ulkosaarilla. Tämä tietokatko teki labradorinsorsasta arvoituksen jo eläessään: kukaan ei tiennyt, kuinka moni lintu oikeasti pesi Labradorin karuilla rannoilla isoisän aikaan.',
+          tiedosto: 'Saglek Fjord Labrador 2008.JPG',
+          lyhyt: 'Saglekin vuono Pohjois-Labradorissa, arvioitua labradorinsorsan pesimäseutua.',
+          selite:
+            'Valokuva Saglekin vuonon jyrkästä, kerroksellisesta kalliorinteestä tyynen sinisen veden yllä, taivas kirkas ja pilvetön.',
+          lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Ruokaa simpukoista',
+          teksti:
+            'Erikoinen litteä nokka paljastaa labradorinsorsan ruokavalion: se sukelsi matalissa rannikkovesissä ja suodatti pohjamudasta pieniä simpukoita ja muita nilviäisiä. Kalastajat pystyivät jopa pyytämään lintuja ongella, kun koukun syöttinä käytettiin simpukkaa – lintu tarttui siihen yhtä innokkaasti kuin oikeaan ravintoonsa. Kun rannikoiden simpukkapenkkejä alettiin 1800-luvulla hävittää rakentamisen ja ruoppauksen myötä erityisesti lajin talvehtimisalueilla etelämpänä, ravinto väheni juuri sillä hetkellä kun lintukanta oli jo entuudestaan hauras. Kapea erikoisruokavalio teki sopeutumisesta lähes mahdotonta.',
+          tiedosto: 'Redbay001.jpg',
+          lyhyt: 'Matala, simpukkapohjainen rantavesi Labradorin rannikolla.',
+          selite:
+            'Valokuva matalasta lahdenpoukamasta laskuveden aikaan: kivikkoinen ja mutainen ranta paljastuu veden alta, taustalla kylän valkoisia taloja.',
+          lahde: 'Wiegee, Wikimedia Commons (Public domain)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Viimeinen lintu ammutaan',
+          teksti:
+            'Labradorinsorsan kanta romahti nopeasti vuosien 1850 ja 1870 välillä: munia kerättiin, höyhenkauppa verotti kantaa ja talvehtimisalueiden simpukkapenkit hupenivat. Viimeinen Kanadassa nähty yksilö havaittiin New Brunswickin Grand Mananissa vuonna 1874 – isoisän matkavuonna. Viimeinen tunnettu ja museoon säilötty näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, ja viimeinen väitetty havainto tehtiin vielä 1878 Elmirassa. Kansainvälinen luonnonsuojeluliitto IUCN pitää lajia sukupuuttoon kuolleena virallisesti vuodesta 1875 – ensimmäisenä pohjoisamerikkalaisena vesilintulajina, jonka ihminen hävitti.',
+          tiedosto: 'Camptorhynchus labradorius (Labrador duck) (8365390008).jpg',
+          lyhyt: 'Labradorinsorsan täytetty näytekappale, yksi noin 55 säilyneestä.',
+          selite:
+            'Lähikuva täytetystä labradorinsorsasta kivellä: pää ja niska valkoiset, musta myssymäinen laikku päälaella, siivet ja selkä mustavalkokuvioiset.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Labrador duck',
+        },
+        {
+          otsikko: 'Serkku joka selvisi',
+          teksti:
+            'Toisin kuin labradorinsorsa, sen sukulaislaji haahka pesii Labradorin rannikolla yhä nykyäänkin miljoonapäisenä kantana. Haahka syö samantyyppistä simpukkaravintoa mutta on huomattavasti yleistaitoisempi ja kykenee pesimään monenlaisilla rannikoilla eri puolilla pohjoista pallonpuoliskoa, ei vain kapealla erikoisalueella. Tutkijat pitävät juuri tätä eroa yhtenä syynä siihen, miksi haahka säilyi ja labradorinsorsa ei: kun toisen ruokavalio ja pesimäalue olivat äärimmäisen suppeat, toinen pystyi joustamaan olosuhteiden muuttuessa. Ero muistuttaa siitä, miten hento raja erikoistumisen ja sukupuuton välillä joskus on.',
+          tiedosto: 'Common Eider (29671831526).jpg',
+          lyhyt: 'Haahka uimassa – labradorinsorsan lähisukulainen, joka ei kuollut sukupuuttoon.',
+          selite:
+            'Valokuva tummasta, valkosiipisestä haahkasta uimassa tyynellä sinisellä merellä, nokka vaaleankeltainen ja pitkä.',
+          lahde: "Mike's Birds, Wikimedia Commons (CC BY-SA 2.0)",
+          wiki: 'Common eider',
+        },
+      ],
+    },
+  ],
+  kappalmas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kap Palmas',
+      johdanto:
+        'Kap Palmas on Liberian kaakkoiskärjen kalliopilkka, jonka isoisä näki vuonna 1873 jo osana Liberiaa – vain kuusitoista vuotta aiemmin niemi oli ollut oman pienen tasavallan, Marylandin, pääkaupunki.',
+      nostot: [
+        {
+          otsikko: 'Grebot asuivat niemellä ennen siirtolaisia',
+          teksti:
+            'Kap Palmasin niemellä ja sitä ympäröivällä rannikolla asui grebo-kansa kauan ennen kuin ensimmäiset siirtolaislaivat saapuivat vuonna 1834. Grebot elivät kalastuksesta, öljypalmuviljelystä ja rannikkokaupasta, ja heidän kylänsä koostuivat pyöreistä, olkikattoisista majoista palmujen katveessa. Siirtolaisten saapuessa grebot suostuivat aluksi luovuttamaan maata sillä ehdolla, että perinteiset kalastusoikeudet ja kylät säilyisivät koskemattomina – sopimus, joka rapautui vuosikymmenten kuluessa uudisasukkaiden määrän kasvaessa ja johti lopulta aseellisiin yhteenottoihin.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 06 - 042 - Traditional huts with high thatched pointed roofs among palm trees - Half Graway, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Grebojen perinteinen olkikattoinen maja palmujen keskellä Half Grawayn kylässä.',
+          selite:
+            'Valokuvassa näkyy korkea, terävähuippuinen olkikattoinen maja palmupuiden siimeksessä Half Grawayn kylässä vuonna 1978 – samantyyppisiä majoja grebot rakensivat jo kauan ennen siirtolaisten saapumista.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grebo people',
+        },
+        {
+          otsikko: 'Marylandin oma siirtokunta',
+          teksti:
+            'Yhdysvaltain Marylandin osavaltiolla oli oma siirtomaayhdistyksensä, joka halusi perustaa vapautetuille orjille ja vapaana syntyneille mustille amerikkalaisille asutuksen erillään muusta Liberiasta. Maryland State Colonization Society valitsi kohteeksi Kap Palmasin kallioisen niemen, ja ensimmäiset siirtolaiset nousivat maihin 12. helmikuuta 1834 kuvernööri James Hallin johdolla. Toisin kuin Monrovian ympärille syntynyt Liberia, Marylandin siirtokunta pysyi hallinnollisesti täysin omanaan lähes neljännesvuosisadan ajan.',
+          tiedosto: 'Cape Palmas etch.jpg',
+          lyhyt: 'Kap Palmasin ranta ja niemi litografiassa vuodelta 1853.',
+          selite:
+            'Vuonna 1853 painettu litografia näyttää Kap Palmasin kalliorannan, palmuja, kanootteja ja ihmisiä hiekkarannalla sekä siirtokunnan rakennuksia niemen harjanteella taustalla.',
+          lahde: 'Wagner & C., Lith., Philadelphia, Wikimedia Commons (Public domain)',
+          wiki: 'Maryland in Africa',
+        },
+        {
+          otsikko: 'Kalliokärki ja majakka',
+          teksti:
+            'Kap Palmas on kapea, kivikkoinen niemi, joka yhdistyy mantereeseen kapealla hiekkakannaksella – muoto, joka teki siitä 1830-luvulla ihanteellisen paikan uudisasutukselle ja satamalle. Niemen kärkeen rakennettiin majakka opastamaan laivoja karikkoisen rannikon ohi kohti Harperin satamaa, ja se seisoo yhä paikallaan palmujen keskellä, vaikka moni sitä ympäröinyt siirtokunnan aikainen rakennus on sittemmin rapistunut. Cavallajoki, joka nykyään erottaa Liberian Norsunluurannikosta, laskee mereen vain parinkymmenen kilometrin päässä niemestä.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 15 - 37 - The lighthouse Cape Palmas Light on a peninsula in the Atlantic Ocean - Harper city, Maryland County, Liberia - 1979.tif',
+          lyhyt: 'Kap Palmasin majakka niemenkärjessä auringonlaskun aikaan vuonna 1979.',
+          selite:
+            'Valokuva vuodelta 1979 näyttää valkoisen majakkatornin ja sen vieressä matalia rakennuksia vihreällä niemenkärjellä, palmu edessä ja aurinko laskemassa mereen taustalla.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Palmas Lighthouse',
+        },
+        {
+          otsikko: 'Lahti, laguuni ja hiekkaranta',
+          teksti:
+            'Harperin edustalla Atlantin vedet ovat ympäri vuoden lämpimiä, ja niissä riittää kalaa, delfiinejä, satunnaisia valaita ja ostereita täynnä olevia simpukkapenkkejä. Kaupungin takana kapea hiekkaharju erottaa meren matalasta laguunista, jonka rannalla olkikattoiset kylät ovat sijainneet sukupolvien ajan. Kalastajat lähtevät edelleen pitkillä kanooteilla aaltojen läpi avomerelle, samaan tapaan kuin isoisän aikana 1870-luvulla, jolloin rannikon laivaliikenne kulki juuri tätä samaa hiekkarantaa pitkin kohti Harperin satamaa.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 02 - 044 - Harper bay and shore. Traditional huts. Lagoon - Harper, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Harperin hiekkaranta, laguuni ja kyläasutus rannikon puuston takana.',
+          selite:
+            'Valokuvassa aallot lyövät hiekkarantaan, jonka takana puiden ja palmujen keskellä erottuu muutama olkikattoinen maja sekä laaja laguuni ja rehevä rannikkometsä horisontissa.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Harper, Liberia',
+        },
+        {
+          otsikko: 'Raunioitunut vapaamuurarien maja',
+          teksti:
+            'Harperin vanhimmat korttelit muistuttavat arkkitehtuuriltaan Yhdysvaltain New Orleansia, sillä siirtolaiset rakensivat kotikaupunkinsa tyyliin plantaasimaisia taloja pylväineen ja parvekkeineen. Yksi näyttävimmistä oli Morning Star -niminen vapaamuurarien maja, jonka pylväsjulkisivu ja leveät portaat kertoivat siirtokunnan johtavien sukujen vauraudesta. Vapaamuurariloosit olivat 1800-luvulla tärkeitä americo-liberialaisen eliitin kokoontumispaikkoja, joissa siirtolaisten jälkeläiset pitivät yllä perinteitään. Nykyään rakennus seisoo kattoa vailla, mustuneena ja pensaikon valtaamana.',
+          tiedosto: 'Masonic Lodge in Harper, Liberia.jpg',
+          lyhyt: 'Morning Star -vapaamuurarilodgen rauniot Harperissa, pylväät ja portaat yhä pystyssä.',
+          selite:
+            'Nykyvalokuva näyttää kaksikerroksisen rakennuksen mustuneet, katottomat seinät, pylväiden reunustaman sisäänkäynnin ja niitä kohti nousevat leveät kiviportaat korkean heinikon keskellä.',
+          lahde: 'Sophieroad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Americo-Liberians',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Marylandin oma tasavalta',
+      johdanto:
+        'Kap Palmas ei ollut vain osa Liberiaa: vuosina 1834–1857 se oli oman siirtokuntansa, Marylandin, keskus – kolme viimeistä vuotta jopa itsenäisenä tasavaltana omine lippuineen ja perustuslakeineen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Marylandin tasavalta Kap Palmasissa liittyi osaksi Liberiaa?',
+        vaihtoehdot: ['1841', '1854', '1857', '1871'],
+        oikea: 2,
+        fakta:
+          'Maryland liittyi Liberiaan vuonna 1857 sen jälkeen, kun se ei kyennyt yksin puolustautumaan grebojen ja krun kapinalta.',
+      },
+      nostot: [
+        {
+          otsikko: 'John Brown Russwurm, kuvernööri joka uskoi siirtokuntaan',
+          teksti:
+            'John Brown Russwurm oli vuonna 1826 ensimmäinen afroamerikkalainen, joka valmistui yhdysvaltalaisesta korkeakoulusta, ja vuotta myöhemmin hän oli perustamassa Freedom’s Journalia, ensimmäistä mustien omistamaa sanomalehteä Yhdysvalloissa. Pettyneenä orjuuden vastustajien hitaisiin voittoihin hän muutti itse Liberiaan vuonna 1829 ja nousi vuonna 1836 Marylandin siirtokunnan kuvernööriksi Kap Palmasissa. Viisitoista vuotta kestäneen kautensa aikana hän kannusti maanviljelyä ja kauppaa, ja siirtokunnan väkiluku kasvoi lähelle tuhatta asukasta neljine kirkkoineen ja kuutena kouluineen ennen hänen kuolemaansa virassaan vuonna 1851.',
+          tiedosto: 'John B. Russwurm.png',
+          lyhyt: 'John Brown Russwurmin muotokuva, Marylandin siirtokunnan kuvernööri 1836–1851.',
+          selite:
+            'Kaiverrettu muotokuva näyttää tummaan pukuun ja rusettiin pukeutuneen miehen kasvokuvana – John Brown Russwurmin, joka johti Marylandin siirtokuntaa Kap Palmasissa viisitoista vuotta.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'John Brown Russwurm',
+        },
+        {
+          otsikko: 'Oma lippu ja perustuslaki',
+          teksti:
+            'Marylandin siirtokunta julisti itsensä ensin osavaltioksi helmikuussa 1841 ja lopulta täysin itsenäiseksi tasavallaksi 29. toukokuuta 1854 – nimellä Maryland Liberiassa, pääkaupunkinaan Harper. Tasavallalla oli oma lippu, jonka mustat ja keltaiset raidat viittasivat Marylandin osavaltion väreihin, sekä vuonna 1847 laadittu perustuslaki, joka noudatti pitkälti Yhdysvaltain perustuslain mallia. Itsenäisyys jäi kuitenkin lyhytaikaiseksi: jo kolme vuotta myöhemmin, vuonna 1857, tasavalta liittyi naapurinsa Liberian osaksi Marylandin piirikunnaksi.',
+          tiedosto: 'Flag of the Republic of Maryland.svg',
+          lyhyt: 'Marylandin tasavallan lippu vuosilta 1854–1857, mustia ja keltaisia raitoja.',
+          selite:
+            'Lipussa on mustia ja keltaisia vaakaraitoja sekä vasemmassa yläkulmassa sininen kenttä, jossa on valkoinen risti – Marylandin lyhytikäisen tasavallan virallinen tunnus.',
+          lahde:
+            'Government of the Republic of Maryland/Liberia, digitointi Jaume Ollé, Wikimedia Commons (Public domain)',
+          wiki: 'Republic of Maryland',
+        },
+        {
+          otsikko: 'Uudisraivaajien muistomerkki',
+          teksti:
+            'Harperin niemen kärjessä, joen suulla, seisoo pieni valkoinen muistomerkki, joka on omistettu Marylandin siirtokunnan perustajille – naisille ja miehille, jotka nousivat maihin helmikuussa 1834 kuvernööri James Hallin johdolla. Muistomerkki on pystytetty paikalle, josta avautuu näkymä sekä Atlantille että joelle, samalle kannakselle jolle ensimmäiset siirtolaiset rakensivat majansa. Se on säilynyt yhtenä siirtokunnan harvoista alkuperäisistä muistomerkeistä, vaikka suuri osa muusta 1800-luvun Harperista on sittemmin tuhoutunut tai rapistunut ajan saatossa.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 02 - 041 - Peninsula Harper City with the Pioneer Monument - Harper, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Uudisraivaajien muistomerkki Harperin niemellä, joen suulla vuonna 1978.',
+          selite:
+            'Valokuvassa puun lehvästö kehystää näkymää joen suulle, jonka rannalla vasemmalla erottuu kapea valkoinen muistomerkki – Marylandin siirtokunnan perustajille pystytetty monumentti.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Maryland in Africa',
+        },
+        {
+          otsikko: 'Sota joka päätti tasavallan',
+          teksti:
+            'Kap Palmasin ympäristön grebo- ja kru-kansat eivät koskaan hyväksyneet siirtokunnan laajenemista täysin, ja vuonna 1856 jännitteet puhkesivat aseelliseksi kapinaksi maata ja kauppaoikeuksia vastaan. Pieni ja huonosti varustautunut Marylandin tasavalta ei kyennyt puolustautumaan yksin, joten sen johto pyysi apua naapuriltaan Liberialta. Liberian presidentti Joseph Jenkins Roberts lähetti sotilasapua, ja liberialaisten ja marylandilaisten yhteisjoukot kukistivat lopulta kapinan. Voitto osoitti kuitenkin karulla tavalla, ettei pieni tasavalta pystyisi selviytymään yksin, ja vuonna 1857 Maryland äänesti liittymisestä Liberiaan omaksi piirikunnakseen.',
+          tiedosto:
+            'ASC Leiden - F. van der Kraaij Collection - 06 - 037 - ceremonial War Dances of the Grebo people commemorating those who died in the past year - Half Graway, Maryland County, Liberia, 1978.tiff',
+          lyhyt: 'Grebojen perinteinen sotatanssi Half Grawayn kylässä vuonna 1978, kuolleita muistaen.',
+          selite:
+            'Valokuvassa vuodelta 1978 grebomiehet tanssivat höyhen- ja raffia-asuisina hiekkaisella kylänraitilla olkikattoisen talon edessä katselijoiden ympäröiminä – perinteinen tanssi kunnioittaa kuolleita, ei kuvaa itse 1856–57 sotaa.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Joseph Jenkins Roberts',
+        },
+      ],
+    },
+  ],
+  boavista: [
+    {
+      id: 'kaupunki',
+      nimi: 'Boa Vista',
+      johdanto:
+        'Boa Vista sai alkunsa vuonna 1830 karjatilana Rio Brancon rannalla — isoisän matkavuonna 1873 se oli yhä pieni savanniasutus, ei osavaltion pääkaupunki eikä edes virallinen kaupunki, vaan seurakunta nimeltä Nossa Senhora do Carmo.',
+      nostot: [
+        {
+          otsikko: 'Karjatilasta seurakunnaksi',
+          teksti:
+            'Vuonna 1830 entinen Forte São Joaquimin komendantti, kapteeni Inácio Lopes de Magalhães, perusti Boa Vistan karjatilan Rio Brancon oikealle rannalle noin 30 kilometrin päähän vanhasta linnoituksesta. Kaunis niemeke joen varrella houkutteli vähitellen ympärilleen muita tilallisia ja kauppiaita, jotka hakivat suojaa ja vaihdantamahdollisuuksia. Vuonna 1858 asutus sai seurakunnan aseman ja nimen Nossa Senhora do Carmo — isoisän matkavuonna 1873 se oli siis yhä nimenomaan pieni seurakuntakylä, ei kaupunki, keskellä laajaa savannia.',
+          tiedosto: 'Centro cívico de Boa Vista, RR.jpg',
+          lyhyt: 'Boa Vistan viuhkamainen keskusta ja Rio Branco -joki ilmakuvassa.',
+          selite:
+            'Ilmakuva näyttää Boa Vistan viuhkamaisen siviilikeskuksen pyöreine kiertoliittymineen, valkoisine hallintorakennuksineen ja puistoalueineen; taustalla erottuu leveä Rio Branco -joki hiekkarantoineen ja siltoineen.',
+          lahde: 'Dieny Portinanni Araujo Cavalcante, Wikimedia Commons (CC0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+        {
+          otsikko: 'Rio Branco kantoi kylän elämää',
+          teksti:
+            'Rio Branco on Amazonin altaan pohjoisosan valtaväylä: se saa alkunsa Guayanan ylängön tepui-vuorilta virtaavista puroista ja laskee lopulta Rio Negroon, joka puolestaan yhtyy Amazon-jokeen Manausin kohdalla. Isoisän aikaan joki oli seudun ainoa käytännöllinen kulkuyhteys ulkomaailmaan: karjatilan asukkaat, kauppiaat ja lähetyssaarnaajat kulkivat kanooteilla ja proomuilla satojen kilometrien matkoja, sillä maanteitä alueelle ei vielä ollut. Joen sade- ja kuivakausien voimakas vaihtelu tahditti koko yhteisön elämää vuodesta toiseen.',
+          tiedosto: 'Rio Branco norte.JPG',
+          lyhyt: 'Rio Branco -joki Boa Vistan kohdalla, alueen ainoa kulkuväylä 1800-luvulla.',
+          selite:
+            'Näkymä rakennuksen katolta yli Rio Brancon leveän, sameanruskean vesialueen pilvisenä iltapäivänä; joen toisella rannalla siintää yhtenäinen metsäkaista.',
+          lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Branco River',
+        },
+        {
+          otsikko: 'Kaupunki tuulettimen muodossa',
+          teksti:
+            'Kun Boa Vistasta suunniteltiin 1900-luvulla osavaltion pääkaupunkia, sille piirrettiin poikkeuksellinen asemakaava: kaupunginosat levittäytyvät kuin auki taitettu viuhka joen rannalta, ja niitä yhdistää kuusitoista säteittäistä pääkatua. Malli lainattiin samantyyppisistä suunnitelluista kaupungeista kuten Pariisista, Belo Horizontesta ja Goiânialta. Satelliittikuvasta viuhkamainen keskusta erottuu selvästi joen mutkan vierestä — aivan toisenlainen näky kuin isoisän aikainen pieni rantaseurakunta, josta koko kaupunki lopulta kasvoi.',
+          tiedosto: 'Imagem de satélite de Boa Vista, Roraima em 2017.jpg',
+          lyhyt: 'Satelliittikuva Boa Vistan viuhkamaisesta katuverkosta joen mutkan vieressä.',
+          selite:
+            'Väriltään käsitelty satelliittikuva näyttää Boa Vistan kaupunkialueen säteittäisen, viuhkamaisen katuverkon sekä sitä idässä rajaavan Rio Branco -joen leveän mutkan.',
+          lahde: 'Coordenação-Geral de Observação da Terra/INPE, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+        {
+          otsikko: 'Hiekkasärkät keskellä kuivaa kautta',
+          teksti:
+            'Boa Vistan sää kääntyy ylösalaisin verrattuna muuhun Amazonin alueeseen: sadekausi kestää huhtikuusta marraskuuhun, mutta joulukuusta maaliskuuhun taivas pysyy lähes pilvettömänä. Kuivan kauden aikana Rio Brancon vedenpinta laskee niin paljon, että joen keskelle ja rannoille paljastuu laajoja hiekkasärkkiä, joista on tullut suosittuja uinti- ja kokoontumispaikkoja koko kaupungille. Samat vuodenaikojen ääripäät vaikeuttivat aikanaan myös isoisän sukupolven jokimatkoja: kuivana kautena matalikot pakottivat kanootit kiertämään pitkiä mutkia, sateisena kautena virta taas saattoi nousta useita metrejä.',
+          tiedosto: 'Praia no rio Branco.JPG',
+          lyhyt: 'Hiekkasärkkä Rio Brancolla — kuivan kauden suosittu uimaranta.',
+          selite:
+            'Rio Brancon keskelle kuivana kautena paljastunut pitkä hiekkasärkkä täynnä aurinkovarjoja, veneitä ja uimareita, kuvattuna palmunlehden takaa joen rannalta.',
+          lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Branco River',
+        },
+        {
+          otsikko: 'Kulta ja timantit toivat asukkaita',
+          teksti:
+            'Pitkään Boa Vistan ja koko seudun talous nojasi karjatalouteen, mutta 1900-luvulla alueelle virtasi uusia asukkaita kullan ja timanttien perässä. Garimpeiroiksi kutsutut itsenäiset kaivostyöläiset seuloivat jokien hiekkaa käsin ja yksinkertaisin välinein, ja monet heistä asettuivat lopulta pysyvästi kasvavaan kaupunkiin. Myöhemmin koneellinen kaivostoiminta kiellettiin, koska se aiheutti pahoja tuhoja joki- ja metsäalueille. Kaupungin keskustassa seisova patsas kumartuneesta kullankaivajasta muistuttaa yhä tästä Boa Vistan historian vaiheesta.',
+          tiedosto: 'Monumento aos Garimpeiros Boa Vista RR.jpg',
+          lyhyt: 'Patsas kultaa seulovasta garimpeirosta Boa Vistan keskustassa.',
+          selite:
+            'Patsas kumartuneesta miehestä, jolla on lieriömäinen hattu ja kädessään kultaa seulova vati — Boa Vistan muistomerkki kaupungin kultakaivostyöläisille eli garimpeiroille.',
+          lahde: 'Jorge Brazil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Roraima',
+        },
+        {
+          otsikko: 'Ainoa pääkaupunki päiväntasaajan pohjoispuolella',
+          teksti:
+            'Vuonna 1943, toisen maailmansodan aikana, Boa Vistasta tuli vastaperustetun Rio Branco -liittovaltion alueen pääkaupunki; alue muuttui myöhemmin osavaltioksi ja sai nimen Roraima. Boa Vista on ainoa Brasilian osavaltion pääkaupunki, joka sijaitsee kokonaan päiväntasaajan pohjoispuolella — kaikki muut suuret kaupungit jäävät eteläiselle pallonpuoliskolle. Nykyisin joen rantaa reunustaa pitkä promenadi näkötorneineen ja puistoineen, aivan toisenlainen näky kuin isoisän aikainen pieni karjakylä samalla paikalla.',
+          tiedosto: 'Orla de Boa Vista-RR.jpg',
+          lyhyt: 'Boa Vistan jokirantainen promenadi näkötorneineen nykyään.',
+          selite:
+            'Ilmakuva Boa Vistan jokirantaisesta promenadista: korkea näköalatorni, pitkä laituri ja puistoalueet Rio Brancon rannalla, kaupungin rakennukset taustalla.',
+          lahde: 'Andrezza Mariot, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Boa Vista, Roraima',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Lavrado ja Roraima-vuori',
+      johdanto:
+        'Boa Vistan ympärillä leviää lavrado, Amazonin altaan ainoa laaja savanni, ja sen reunalla kohoaa yksinäinen pöytävuori Roraima, jonka luoksepääsemättömät seinämät innoittivat pitkään sekä tutkimusmatkailijoita että kirjailijoita.',
+      tehtava: {
+        kysymys: 'Minä vuonna Everard im Thurn ja Harry Perkins nousivat ensimmäisinä tunnettuina ihmisinä Roraima-vuoren huipulle?',
+        vaihtoehdot: ['1775', '1858', '1884', '1943'],
+        oikea: 2,
+        fakta: 'Englantilainen Everard im Thurn saavutti apulaisensa Harry Perkinsin ja paikallisten oppaiden kanssa Roraiman huipun 18. joulukuuta 1884.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lavrado — savanniaukio keskellä sademetsää',
+          teksti:
+            'Lavrado on Amazonin altaan pohjoisosan laaja savanni, joka poikkeaa jyrkästi ympäröivästä sademetsästä: matalaa ruohikkoa, hajanaisia puuryhmiä ja lähes täysin tasaista maastoa. Suurin osa koko Guayanan savannivyöhykkeestä — noin 43 000 neliökilometriä — sijaitsee juuri Roraiman osavaltiossa, ja loput levittäytyvät naapurimaihin Guyanaan ja Venezuelaan. Silmiinpistävin piirre ovat lukemattomat termiittikeot: eräät termiittilajit pystyttävät jopa parimetrisiä kekoja, jotka toimivat hedelmällisyyssaarekkeina köyhässä savannimaassa ja näkyvät maisemassa säännöllisinä täplinä kilometrien päähän.',
+          tiedosto: 'Termiteros Gran Sabana.jpg',
+          lyhyt: 'Lavrado-savannia täplittävät lukuisat termiittikeot ja palmuryhmät.',
+          selite:
+            'Vanhahtavassa värivalokuvassa avautuu vihreä savannilaakso, jota täplittävät sadat säännöllisin välein sijaitsevat termiittikeot sekä pieni palmuryhmä laakson pohjalla.',
+          lahde: 'Fev, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Guianan savanna',
+        },
+        {
+          otsikko: 'Sadekausi hukuttaa tasangon',
+          teksti:
+            'Lavradon sää on äärimmäinen: syyskuusta maaliskuuhun kestävä kuiva kausi polttaa ruohikon ja tekee tulipaloista arkipäivää, mutta huhtikuusta marraskuuhun kestävä sadekausi voi peittää poikkeuksellisen sateisina vuosina jopa kolmanneksen koko tasangosta matalilla, tilapäisillä järvillä. Tasainen maasto ja tiheä puronverkosto saavat veden leviämään laajalle sen sijaan, että se virtaisi nopeasti pois. Kun ilta-aurinko heijastuu näihin hetkellisiin järviin, koko savanni näyttää hetkeksi sulautuvan taivaaseen — näky, joka teki vaikutuksen moneen alueella matkanneeseen.',
+          tiedosto: 'Raposa Serra do Sol Nascer do sol.jpg',
+          lyhyt: 'Auringonnousu heijastuu lavradon sadekauden tilapäiseen tulvajärveen.',
+          selite:
+            'Auringonnousu heijastuu savannin tulva-ajan matalaan järveen; tulenvärinen, pilvinen taivas ja puurivin tumma siluetti peilautuvat tyynestä vedenpinnasta.',
+          lahde: 'Antonio Cruz/ABr, Wikimedia Commons (CC BY 3.0 BR)',
+          wiki: 'Guianan savanna',
+        },
+        {
+          otsikko: 'Roraima — vuori joka nousee tasangosta pilviin',
+          teksti:
+            'Roraima on tepui: jyrkkäseinäinen pöytävuori, jonka lakea peittävä hiekkakivi on kertynyt jo 1,7–2 miljardia vuotta sitten, kauan ennen kuin elämä siirtyi maalle. Vuori kohoaa yli 2 800 metrin korkeuteen, ja sen huipulla kohtaavat kolme valtiota: Brasilia, Venezuela ja Guyana. Pemón-kansa antoi vuorelle nimen, joka tarkoittaa suunnilleen "suurta sinivihreää" — nimi viittaa etäältä nähtyyn, usein pilvien peittämään sinertävään huippuun. Sadan metrin mittaiset pystysuorat kalliot tekivät vuoresta vuosisatojen ajan lähes mahdottoman kiivetä, mikä ruokki tarinoita sen huipulla piilevästä tuntemattomasta maailmasta.',
+          tiedosto: 'Monte Roraima e Kukenan Tepui no retorno a casa.jpg',
+          lyhyt: 'Roraima ja Kukenan-tepui kohoavat savannin yllä Gran Sabanassa.',
+          selite:
+            'Hiekkatie kulkee vihreän ylätasangon halki kohti kahta jyrkkäseinäistä pöytävuorta, Roraimaa ja Kukenania, jotka kohoavat kirkkaan sinisen taivaan alla savannin yläpuolelle.',
+          lahde: 'Neygfilho, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Roraima',
+        },
+        {
+          otsikko: 'Ensimmäinen nousu huipulle',
+          teksti:
+            'Vuonna 1838 tutkimusmatkailija Robert Schomburgk piti Roraiman jyrkkiä seiniä täysin kiipeämättöminä. Vasta 18. joulukuuta 1884 englantilainen Everard im Thurn ja hänen apulaisensa Harry Perkins löysivät paikallisten pemón-oppaiden avulla loivemman reitin ja saavuttivat huipun ensimmäisinä tunnettuina ihmisinä. Im Thurn keräsi matkallaan kasvinäytteitä, joista Lontoon Kew Gardensin tutkijat tunnistivat myöhemmin peräti 53 tieteelle uutta lajia ja kolme uutta sukua — osoitus siitä, kuinka eristyksissä vuoren huipun oma elämä oli vuosimiljoonien aikana kehittynyt.',
+          tiedosto: 'Everard Ferdinand Im Thurn - Norton - btv1b8453038t (1 of 2).jpg',
+          lyhyt: 'Everard im Thurnin muotokuva vuodelta 1884, Roraiman ensikiipeäjä.',
+          selite:
+            'Vanha sivuprofiilivalokuva parrakkaasta miehestä 1800-luvun asussa; kuvan reunaan on käsin kirjoitettu Everard im Thurnin nimi ja tieto Roraiman ensinoususta joulukuussa 1884.',
+          lahde: 'Norton (valokuvaaja), Wikimedia Commons (Public domain)',
+          wiki: 'Everard im Thurn',
+        },
+        {
+          otsikko: 'Kadonnut maailma syntyy tarinana',
+          teksti:
+            'Palattuaan Lontooseen Everard im Thurn piti retkestään esitelmän, jota kerrotaan seuranneen myös nuori kirjailija Arthur Conan Doyle. Vuosikymmeniä myöhemmin, vuonna 1912, Conan Doyle julkaisi seikkailuromaanin "Kadonnut maailma", jossa tutkimusretkikunta löytää eristyneeltä pöytävuorelta esihistoriallisten eläinten asuttaman maailman. Roraiman ja sitä ympäröivien tepui-vuorten kerrotaan olleen yksi romaanin innoittajista: todellinen, vaikeapääsyinen ylätasanko oli tiedeyhteisölle vuosikymmenten ajan lähes yhtä salaperäinen kuin kirjan kuvitteellinen ylänkö.',
+          tiedosto: 'Great Savanna 2014.JPG',
+          lyhyt: 'Savanni ja etäinen ylätasanko — maisema joka innoitti Kadonnutta maailmaa.',
+          selite:
+            'Panoraamanäkymä aaltoilevasta savannista, jonka laaksoa reunustaa metsäkaistale ja jonka takana siintää etäinen, sumuinen ylätasanko horisontissa.',
+          lahde: 'Emmanuelst7, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'The Lost World (Doyle novel)',
+        },
+      ],
+    },
+  ],
 };
