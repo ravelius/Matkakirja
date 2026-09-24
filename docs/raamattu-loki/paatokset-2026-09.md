@@ -4399,3 +4399,7 @@ Koepoltto z7 lähes identtinen Times-version kanssa; uusintapolttoa ei ajettu. S
 ## SISALTOKIRJURI NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA sisalto-kohdekartta-pilotti-20260924 (klo 17.58), RC PAALLA; 5 h -KIINTIO 84 % (24.9.2026 klo 18.05)
 
 Uusi sessio aloittaa kuvatilausluonnoksesta (galleria 58 + ennenNyt 12).
+
+## SISALTOKIRJURI (UUSI SESSIO): KUVATILAUSLUONNOS GALLERIA + ENNENNYT HYVAKSYTTY (763f74bf6, docs/raportit/kuvatilaus-galleria-ennennyt-20260924.md) → POSTILAATIKKOON (24.9.2026 klo 18.13)
+
+59 kaupunkia (11 molemmat, 47 vain galleria, 1 vain ennenNyt); säännöt: ei homonyymejä (Campo Grande), ei teemakuvia jotka eivät kuvaa kohdetta, kulttuurisesti herkkä aineisto pois (Uluru, Sepik, Bananal, Kongo), vain PD/CC tarkistettuna, tyhjä jos ei aitoa löytöä, ennenNyt vaatii ajoituksen; avoimet arkistot per alue (Rijksmuseum, LoC, Gallica, Smithsonian, Internet Archive, Wellcome, Trove, Brasiliana, Memoria Chilena, Sudan Archive, HBC, NLNZ, Getty, Europeana). Fable lisäsi: ei tunnistettavia nykyisiä yksityishenkilöitä ennenNyt-kuvissa; toimitus manifestina 15 kaupungin erissä.
