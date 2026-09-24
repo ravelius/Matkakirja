@@ -69,6 +69,21 @@ natiiviseppa-tf-sha-viesti.md, lokikansiot-vain-kuvat-konsoli.md.
   minimumLevel 5 (tarkista Cesiumin webp-tuki ja laattamäärä), vaihdetaan maan vaihtuessa.
 - Ääriviiva: vektorina Siirtosepän maarajoista (ei laattaa) — #6b5539 1,6–3 px, täysi peitto, häivytys 260 ms (MaaKartta/Rajaviiva).
 
+## Karttasepän tarkennus (korvaa yllä olevan) ja navat, klo 10.5x
+
+- VÄRITASO = RGBA-huntu NYKYISEN MAAN ULKOPUOLELLA: muut maat ja meri kermaksi (#faf4d6, peitto 0,85, reuna häivytetty), nykyinen maa
+  lähes läpinäkyvä → pohjan relief ja värit näkyvät vain siinä. Mercator: https://media.matkakirja.app/julisteet/pallo/vari/2026-09-14b-tasoitus/<ISO>/{z}/{x}/{y}.webp
+  Z5–Z9, 256 px RGBA webp, alue ja tasot <ISO>/laatat.json; kaikki 27 E28-maata samaa versiota; ämpärissä ~11.30–11.45 (Karttaseppä ilmoittaa).
+  Toteutus: yksi CesiumUrlTemplateRasterOverlay pohjan päälle, templateUrl vaihdetaan NostoKerros.NykyinenMaa:n mukaan (maa ilman sarjaa → ei kerrosta).
+  Varmista: Cesiumin webp-tuki, alfa läpäisee (overlay-sekoitus), minimumLevel 5 (tasot 0–4 pelkkä pohja?), laattamäärä.
+  Webin kermashader (js/laattakerma-shader.js) on erillinen — ei laatoissa.
+- NAVAT: napakalotit https://media.matkakirja.app/julisteet/pallo/napakalotit/2026-09-11b/pohjoinen.webp (2048²) ja etela.webp (4096²),
+  RGBA, atsimutaalinen ekvidistantti, napa keskellä, ulkokehä 80° N / 60° S häivytetty läpinäkyväksi, laattojen päälle. Natiivissa oma
+  pallokappale/materiaali (UV atsimutaalinen), korvaa NapaKannet-värikannen kun ladattu. Varakansi: 83,7°→napa, pohjoinen #c9c2af, etelä
+  #dcd6c6, 0,4° häivä peitto 0,4, säde × 1,0015. Reliefilinssin aikana kalotti piiloon, kannet rgb(38,78,145) / rgb(236,240,244).
+  Kalotit ovat 11.9. pohjasta; uusi poltto 23a:sta vain pyynnöstä.
+- Jonossa lisäksi: `pelikoodari/tuotanto-v16` 10cab22 (vain Peli-testit: pakettivartijan kopio v11 → v20, kaanna 248/248).
+
 ## Muut tehdyt (tämä sessio)
 
 - 2.0-valmius: Sisalto.Paaversio = 1 (+ Documents/sisalto-2.txt → sisalto/2/), Osoitin ominaisuutena; Reitit päätasolta (lauta, laji, via).
