@@ -243,11 +243,11 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        /// <summary>riviva = web line-height 1,5 (rich text, teksti &lt;noparse&gt;-suojattuna).</summary>
+        /// <summary>riviva = web line-height 1,5 (rich text em-yksikkönä: TextCoren % on fontin oman rivin osuus, b12l 28 px vs 23,5).</summary>
         static void Nakyy(Label l, string teksti, bool riviva = false)
         {
             l.enableRichText = riviva || l.enableRichText;
-            l.text = string.IsNullOrEmpty(teksti) ? "" : riviva ? "<line-height=150%><noparse>" + teksti + "</noparse>" : teksti;
+            l.text = string.IsNullOrEmpty(teksti) ? "" : riviva ? "<line-height=1.5em><noparse>" + teksti + "</noparse>" : teksti;
             l.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
         }
 

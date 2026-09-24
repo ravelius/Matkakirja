@@ -320,11 +320,15 @@ namespace Matkakirja.Natiivi
                 return;
             }
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
-            float rk = kerros.layout.height - t.y - t.w, h = kortti.layout.height;
+            // iPhonella ei ole yläpalkkia (NATIIVIN iPHONE-ASETTELU): pilleri ja saapumispalkki ovat samoilla y-arvoilla kuin
+            // webin yläpalkki ja palkki Safarin näkymässä, joten ruutu alkaa näytön yläreunasta (b12l: turva-alueesta
+            // mitattuna kortti jäi 62 pt webiä alemmas). iPadilla turva-alueen alta kuten ennen.
+            float yla = UiKerros.Tabletti ? t.y : 0f;
+            float rk = kerros.layout.height - yla - t.w, h = kortti.layout.height;
             if (rk <= 0 || h <= 0 || float.IsNaN(h)) return;
             float ylin = Mathf.Max(KuvaMarginaali, Mathf.Min(Mathf.Round((rk - h) / 2f), KuvaMarginaali + KuvaYlavara));
             kerros.style.justifyContent = Justify.FlexStart;
-            float p = Mathf.Round(t.y + ylin);
+            float p = Mathf.Round(Mathf.Max(yla + ylin, t.y + KuvaMarginaali));
             if (kerros.resolvedStyle.paddingTop != p) kerros.style.paddingTop = p;
         }
 
