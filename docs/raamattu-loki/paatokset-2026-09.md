@@ -3495,3 +3495,7 @@ Hehkurenkaan parametrit Natiivisepälle.
 ## LINSSISEPPA: LOYDOS 12 TODENNETTU iPHONE-SIMULAATTORISSA (333d3f0; KUVASARJA proto-3d/lokit/ihminen-avaus-iphone-20260924/333d3f0/arkki.jpg): MUSTA ENSIMMAINEN VIRKE → MAA PISTEENA TAHDISSA → ZOOMI 'Afrikasta' → AFRIKKA → MAROKKO, EI KALLISTETTUA HORISONTTIA; TEKSTILAATIKKO LEVEA (11); SEURAAVA ERA: TEMPON DRAMATURGIA + YHTEINEN KAYRAKIRJASTO Linssit/Ydin/Kamera (linssiseppa/koreografia 7679b59) MERGEEN PIIKKIAJO 4:N JALKEEN (24.9.2026 klo 10.38)
 
 Löydökset 11 ja 12 korjattu build 6:een.
+
+## NATIIVI-UI: LUOVUTUS viesti-natiivi-ui-luovutus-20260924-f.md (5791477ba); MERGE-PYYNTO natiivi-ui/nostomerkit e16d1e6 (2.0-LUKIJAT, CHAT-STRIIMI, KEYCHAIN-KOODI, LIIKU-VAISTO); iPHONE-KUVAT BUILD 6 -KORJAUKSISTA (333d3f0) proto-3d/lokit/pariteetti-20260924/natiivi-b6-{kartta,kartuscha,selite,laukku}-iphone.jpg → NAYTETTY OMISTAJALLE; NATIIVI-UI NOLLAUTUU (24.9.2026 klo 10.41)
+
+Kahdestoista nollaus tänään.
