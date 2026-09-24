@@ -1150,6 +1150,36 @@ toteutus. **PASS.** Vanha B7-7-testin "odotettu tulos webin mukaan"
 -kuvaus (avausruutu ilman karttaa) on KUMOTTU tällä uudemmalla
 kaavalla; B7-7:n avausruutu-osuus päivitetty vastaavasti alla.
 
+## B7-uusinta proto-master f6de924:llä (Fable 24.9. klo n. 14.2x, iPhone 17 -sim FB234D08)
+
+Komentoajo (`peli-komento.txt`/`ui-komento.txt`), koska kosketuslupa
+evätty tälle uudelle simulaattorille tässä sessiossa (Simulator-
+paneelista pitää hyväksyä "Let Claude use it").
+
+- **B7-7 lennon ääni: ✅ PASS.** `uusi-peli 1 lontoo` → `uusi-matka
+  ateena`: `puhe.url` = `puhe-lento-alku.mp3` heti `Nousu`-vaiheesta
+  asti (aiempi bugi, intro-puhe lennolla, on korjattu). Toistettu myös
+  Istanbul-lennolla samalla tuloksella.
+- **☰-valikon kaksi riviä: ✅ PASS.** `ui linssi valitsin` -paneelin
+  yläosassa nyt kaksi pikarivistöä ennen linssilistaa: Kertoja/
+  Musiikki/Äänimaisema ja Uusi peli/Muut/Kehittäjä — ei enää tarvitse
+  vierittää löytääkseen Uusi peli -painikkeen. Kuva
+  `valikko-kaksi-rivia-f6de924.png`.
+- **Lento (pilvimeri, maamerkki, punainen rengas): ✅ PASS.** Nopea
+  kuvasarja Istanbul-lennosta: DC-3-kone pilvimeren yllä, ja pilvien
+  läpi näkyy punainen rengas Lontoon kohdalla lähtöhetkellä. Kuvat
+  `b7-7-lento-pilvimeri-f6de924.png`,
+  `b7-7-lento-punarengas-lontoo-f6de924.png`.
+- **Varalaatta Espanja–Sahara: ❌ FAIL, YHÄ RIKKI.** `uusi-peli 1
+  madrid`: sama iso suorakulmainen laatta kuin B7-3:ssa halkoo
+  Espanjan/Marokon/Saharan aluetta jyrkillä suorilla reunoilla,
+  piittaamatta maiden rajoista. Kuva
+  `b7-3-varalaatta-f6de924-yha-rikki.png`.
+- **Uusi peli: EI UUDELLEENTESTATTU TOIMINTOA** (nappi näkyy heti,
+  mutta kosketus estetty tällä laitteella) — itse toiminto (vahvistus
+  + palautus porttiin) vahvistettu jo aiemmin tänään SHA 24c9194:llä
+  iPhone 18 Prolla.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
