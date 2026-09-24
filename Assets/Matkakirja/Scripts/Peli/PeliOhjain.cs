@@ -979,11 +979,7 @@ namespace Matkakirja.Natiivi
             Tila = SilmukanTila.Kartta;
             PaivitaNakyma();
             PaivitaNappula();
-            if (kameraPelaajaan && Kaytossa)
-            {
-                var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
-                if (k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
-            }
+            if (kameraPelaajaan && Kaytossa) Saavu();
         }
 
         double SaapumisKaari => merkit != null ? merkit.saapumisKaari : 18.6;
@@ -1303,7 +1299,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
-        void Perilla()
+        void Perilla() => Perilla(false);
+
+        void Perilla(bool aloituslento)
         {
             if (Tila != SilmukanTila.Matkalla) return;
             Lentoaani(false);
@@ -1313,6 +1311,9 @@ namespace Matkakirja.Natiivi
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
+            // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
+            // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
+            if (kaupunki != null) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
                 // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).
@@ -1386,9 +1387,8 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
             // Lehdestä avattu tehtävä näkyviin vasta nyt.
             if (AvoinTehtava != Tehtava.Ei) { NaytaKysymys(); return; }
-            // Lehden aikana tapahtunut mannerlento: kamera pelaajaan.
-            var k = PeliApu.Koordinaatti(verkko, matka.Tila.Pelaaja.Sijainti);
-            if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki && k.HasValue) Ajo(k.Value.Lat, k.Value.Lon, SaapumisKaari, 1.5f, null);
+            // Lehden aikana tapahtunut mannerlento: kamera pelaajaan (web: paikanvaihto ilman siirtoa → lauta.saavu).
+            if (matka.Tila.Pelaaja.Sijainti.Kaupunki != kaupunki) Saavu();
             // Isoisän matkakirjaluento saapuessa, kun saapumislehti on luettu (web: jokaisella saapumisella;
             // ei kortista avatusta lehdestä eikä maalehdestä).
             bool saapuminen = saapumisLehti != null && saapumisLehti == kaupunki;
@@ -1791,6 +1791,22 @@ namespace Matkakirja.Natiivi
             ajoValmis = valmis;
             ajoLoppuu = Time.unscaledTime + kesto + AjonVara;
             ((IKamera)kierto).Aja(lat, lon, kierto.KorkeusKaarelle(kaari), kesto, () => { if (tunnus == ajoTunnus) AjoValmis(); });
+        }
+
+        /// <summary>
+        /// SAAPUMISNÄKYMÄ pelaajan paikkaan (web js/pallolauta/lauta.js saavu → kamera.js kotiin, 1400 ms): maa
+        /// ruutuun, kallistus 0 (Kartta/Saapumisnakyma.cs, PalloKierto.AjaSaapumisnakymaan). Maa = pelaajan
+        /// kaupungin ISO3 (web cityOf; reitin varrella null → kaupunkinäkymä). Varareitti kuten Ajo.
+        /// </summary>
+        void Saavu(bool maaRajaus = true, Action valmis = null)
+        {
+            if (matka == null || kierto == null) return;
+            var s = matka.Tila.Pelaaja.Sijainti;
+            var k = PeliApu.Koordinaatti(verkko, s);
+            if (!k.HasValue) return;
+            string maa = s.Kaupungissa && verkko.Kaupungit.TryGetValue(s.Kaupunki, out var kp) ? kp.Maa : null;
+            NappulaAjo(v => kierto.AjaSaapumisnakymaan(maa, k.Value.Lat, k.Value.Lon, Saapumisnakyma.AjoS, v, maaRajaus),
+                Saapumisnakyma.AjoS, valmis);
         }
 
         /// <summary>Pelinappula tai null (kohtaus ilman nappulaa: kamera-ajo kuten ennen).</summary>

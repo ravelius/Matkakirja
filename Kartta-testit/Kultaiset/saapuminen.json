@@ -1,0 +1,1463 @@
+{
+ "lahde": "origin/main 4d6b01ff7",
+ "tapaukset": [
+  {
+   "maa": "GRC",
+   "kaupunki": "ateena",
+   "lat": 37.969923376,
+   "lon": 23.741,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6473.235,
+    "y": 1720.135,
+    "w": 316.03,
+    "h": 296.23
+   },
+   "web": {
+    "lat": 38.325278701,
+    "lng": 23.9375,
+    "altitude": 0.145778201
+   },
+   "kaupunkinakyma": {
+    "lat": 39.359463872,
+    "lng": 24.485972941,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "GRC",
+   "kaupunki": "ateena",
+   "lat": 37.969923376,
+   "lon": 23.741,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6473.235,
+    "y": 1720.135,
+    "w": 316.03,
+    "h": 296.23
+   },
+   "web": {
+    "lat": 38.325278701,
+    "lng": 23.741,
+    "altitude": 0.145767817
+   },
+   "kaupunkinakyma": {
+    "lat": 40.894815462,
+    "lng": 24.502992742,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "GRC",
+   "kaupunki": "ateena",
+   "lat": 37.969923376,
+   "lon": 23.741,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6473.235,
+    "y": 1720.135,
+    "w": 316.03,
+    "h": 296.23
+   },
+   "web": {
+    "lat": 38.325278701,
+    "lng": 23.741,
+    "altitude": 0.145767817
+   },
+   "kaupunkinakyma": {
+    "lat": 42.332754145,
+    "lng": 24.520172044,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "FRA",
+   "kaupunki": "pariisi",
+   "lat": 48.845100988,
+   "lon": 2.333,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5637.5,
+    "y": 1322.385,
+    "w": 539,
+    "h": 446.93
+   },
+   "web": {
+    "lat": 46.348054776,
+    "lng": 2.21,
+    "altitude": 0.204938309
+   },
+   "kaupunkinakyma": {
+    "lat": 50.234641483,
+    "lng": 3.233499394,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "FRA",
+   "kaupunki": "pariisi",
+   "lat": 48.845100988,
+   "lon": 2.333,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5637.5,
+    "y": 1322.385,
+    "w": 539,
+    "h": 446.93
+   },
+   "web": {
+    "lat": 46.348054776,
+    "lng": 2.333,
+    "altitude": 0.204934348
+   },
+   "kaupunkinakyma": {
+    "lat": 51.769993074,
+    "lng": 3.26380397,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "FRA",
+   "kaupunki": "pariisi",
+   "lat": 48.845100988,
+   "lon": 2.333,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5637.5,
+    "y": 1322.385,
+    "w": 539,
+    "h": 446.93
+   },
+   "web": {
+    "lat": 46.348054776,
+    "lng": 2.333,
+    "altitude": 0.204934348
+   },
+   "kaupunkinakyma": {
+    "lat": 53.207931757,
+    "lng": 3.294742769,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "ESP",
+   "kaupunki": "madrid",
+   "lat": 40.403648764,
+   "lon": -3.709,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5500.585,
+    "y": 1635.605,
+    "w": 499.73,
+    "h": 343.09
+   },
+   "web": {
+    "lat": 39.891667164,
+    "lng": -2.4865,
+    "altitude": 0.166691282
+   },
+   "kaupunkinakyma": {
+    "lat": 41.79318926,
+    "lng": -2.936421416,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "ESP",
+   "kaupunki": "madrid",
+   "lat": 40.403648764,
+   "lon": -3.709,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5500.585,
+    "y": 1635.605,
+    "w": 499.73,
+    "h": 343.09
+   },
+   "web": {
+    "lat": 39.891667164,
+    "lng": -3.709,
+    "altitude": 0.166691088
+   },
+   "kaupunkinakyma": {
+    "lat": 43.328540851,
+    "lng": -2.917172364,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "ESP",
+   "kaupunki": "madrid",
+   "lat": 40.403648764,
+   "lon": -3.709,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5500.585,
+    "y": 1635.605,
+    "w": 499.73,
+    "h": 343.09
+   },
+   "web": {
+    "lat": 39.891667164,
+    "lng": -3.709,
+    "altitude": 0.166691088
+   },
+   "kaupunkinakyma": {
+    "lat": 44.766479534,
+    "lng": -2.897712805,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "GBR",
+   "kaupunki": "lontoo",
+   "lat": 51.505088532,
+   "lon": -0.115,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5544.335,
+    "y": 857.76,
+    "w": 364.43,
+    "h": 559.68
+   },
+   "web": {
+    "lat": 55.605837108,
+    "lng": -3.2035,
+    "altitude": 0.231635523
+   },
+   "kaupunkinakyma": {
+    "lat": 52.894629028,
+    "lng": 0.839776178,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "GBR",
+   "kaupunki": "lontoo",
+   "lat": 51.505088532,
+   "lon": -0.115,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5544.335,
+    "y": 857.76,
+    "w": 364.43,
+    "h": 559.68
+   },
+   "web": {
+    "lat": 55.605837108,
+    "lng": -3.2035,
+    "altitude": 0.231635523
+   },
+   "kaupunkinakyma": {
+    "lat": 54.429980618,
+    "lng": 0.875205515,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "GBR",
+   "kaupunki": "lontoo",
+   "lat": 51.505088532,
+   "lon": -0.115,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5544.335,
+    "y": 857.76,
+    "w": 364.43,
+    "h": 559.68
+   },
+   "web": {
+    "lat": 55.605837108,
+    "lng": -3.2035,
+    "altitude": 0.231635523
+   },
+   "kaupunkinakyma": {
+    "lat": 55.867919301,
+    "lng": 0.911550318,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "NOR",
+   "kaupunki": "oslo",
+   "lat": 59.907792729,
+   "lon": 10.772,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5944.065,
+    "y": 275.205,
+    "w": 968.77,
+    "h": 785.29
+   },
+   "web": {
+    "lat": 64.969887202,
+    "lng": 17.8535,
+    "altitude": 0.285215327
+   },
+   "kaupunkinakyma": {
+    "lat": 61.297333225,
+    "lng": 11.971339557,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "NOR",
+   "kaupunki": "oslo",
+   "lat": 59.907792729,
+   "lon": 10.772,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5944.065,
+    "y": 275.205,
+    "w": 968.77,
+    "h": 785.29
+   },
+   "web": {
+    "lat": 64.969887202,
+    "lng": 17.8535,
+    "altitude": 0.285215327
+   },
+   "kaupunkinakyma": {
+    "lat": 62.832684815,
+    "lng": 12.033524336,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "NOR",
+   "kaupunki": "oslo",
+   "lat": 59.907792729,
+   "lon": 10.772,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5944.065,
+    "y": 275.205,
+    "w": 968.77,
+    "h": 785.29
+   },
+   "web": {
+    "lat": 64.969887202,
+    "lng": 15.041164916,
+    "altitude": 0.285185147
+   },
+   "kaupunkinakyma": {
+    "lat": 64.270623498,
+    "lng": 12.098818945,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "JPN",
+   "kaupunki": "tokio",
+   "lat": 35.700347496,
+   "lon": 139.7,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 9893.065,
+    "y": 1539.845,
+    "w": 838.97,
+    "h": 887.81
+   },
+   "web": {
+    "lat": 35.308477888,
+    "lng": 134.3765,
+    "altitude": 0.439827757
+   },
+   "kaupunkinakyma": {
+    "lat": 37.089887992,
+    "lng": 140.422084681,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "JPN",
+   "kaupunki": "tokio",
+   "lat": 35.700347496,
+   "lon": 139.7,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 9893.065,
+    "y": 1539.845,
+    "w": 838.97,
+    "h": 887.81
+   },
+   "web": {
+    "lat": 35.308477888,
+    "lng": 134.3765,
+    "altitude": 0.439827757
+   },
+   "kaupunkinakyma": {
+    "lat": 38.625239583,
+    "lng": 140.437284182,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "JPN",
+   "kaupunki": "tokio",
+   "lat": 35.700347496,
+   "lon": 139.7,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 9893.065,
+    "y": 1539.845,
+    "w": 838.97,
+    "h": 887.81
+   },
+   "web": {
+    "lat": 35.308477888,
+    "lng": 138.596532907,
+    "altitude": 0.439827573
+   },
+   "kaupunkinakyma": {
+    "lat": 40.063178266,
+    "lng": 140.452611409,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "USA",
+   "kaupunki": "newyork",
+   "lat": 40.899444003,
+   "lon": -74.2,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": -619.51,
+    "y": 184.64,
+    "w": 4422.22,
+    "h": 2502.72
+   },
+   "web": {
+    "lat": 42.288984499,
+    "lng": -73.42136959,
+    "altitude": 0.092872685
+   },
+   "kaupunkinakyma": {
+    "lat": 42.288984499,
+    "lng": -73.42136959,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "USA",
+   "kaupunki": "newyork",
+   "lat": 40.899444003,
+   "lon": -74.2,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": -619.51,
+    "y": 184.64,
+    "w": 4422.22,
+    "h": 2502.72
+   },
+   "web": {
+    "lat": 43.824336089,
+    "lng": -73.401625777,
+    "altitude": 0.195490942
+   },
+   "kaupunkinakyma": {
+    "lat": 43.824336089,
+    "lng": -73.401625777,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "USA",
+   "kaupunki": "newyork",
+   "lat": 40.899444003,
+   "lon": -74.2,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": false,
+   "laatikko": {
+    "x": -619.51,
+    "y": 184.64,
+    "w": 4422.22,
+    "h": 2502.72
+   },
+   "web": {
+    "lat": 45.262274772,
+    "lng": -73.381658421,
+    "altitude": 0.291598416
+   },
+   "kaupunkinakyma": {
+    "lat": 45.262274772,
+    "lng": -73.381658421,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "ITA",
+   "kaupunki": "rooma",
+   "lat": 41.886936332,
+   "lon": 12.491,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6033.535,
+    "y": 1491.8,
+    "w": 437.03,
+    "h": 508.2
+   },
+   "web": {
+    "lat": 41.440775671,
+    "lng": 12.5615,
+    "altitude": 0.243436409
+   },
+   "kaupunkinakyma": {
+    "lat": 43.276476828,
+    "lng": 13.28214982,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "ITA",
+   "kaupunki": "rooma",
+   "lat": 41.886936332,
+   "lon": 12.491,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6033.535,
+    "y": 1491.8,
+    "w": 437.03,
+    "h": 508.2
+   },
+   "web": {
+    "lat": 41.440775671,
+    "lng": 12.5615,
+    "altitude": 0.243436409
+   },
+   "kaupunkinakyma": {
+    "lat": 44.811828418,
+    "lng": 13.302924861,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "ITA",
+   "kaupunki": "rooma",
+   "lat": 41.886936332,
+   "lon": 12.491,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6033.535,
+    "y": 1491.8,
+    "w": 437.03,
+    "h": 508.2
+   },
+   "web": {
+    "lat": 41.440775671,
+    "lng": 12.491,
+    "altitude": 0.243435045
+   },
+   "kaupunkinakyma": {
+    "lat": 46.249767101,
+    "lng": 13.323952537,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "FIN",
+   "kaupunki": "helsinki",
+   "lat": 60.478179939,
+   "lon": 24.833,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6502.555,
+    "y": 350.03,
+    "w": 401.39,
+    "h": 613.14
+   },
+   "web": {
+    "lat": 65.177399062,
+    "lng": 26.0975,
+    "altitude": 0.22077208
+   },
+   "kaupunkinakyma": {
+    "lat": 61.867720435,
+    "lng": 26.054610329,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "FIN",
+   "kaupunki": "helsinki",
+   "lat": 60.478179939,
+   "lon": 24.833,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6502.555,
+    "y": 350.03,
+    "w": 401.39,
+    "h": 613.14
+   },
+   "web": {
+    "lat": 65.177399062,
+    "lng": 26.0975,
+    "altitude": 0.22077208
+   },
+   "kaupunkinakyma": {
+    "lat": 63.403072025,
+    "lng": 26.119543804,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "FIN",
+   "kaupunki": "helsinki",
+   "lat": 60.478179939,
+   "lon": 24.833,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6502.555,
+    "y": 350.03,
+    "w": 401.39,
+    "h": 613.14
+   },
+   "web": {
+    "lat": 65.177399062,
+    "lng": 26.0975,
+    "altitude": 0.22077208
+   },
+   "kaupunkinakyma": {
+    "lat": 64.841010708,
+    "lng": 26.187874799,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "DEU",
+   "kaupunki": "berliini",
+   "lat": 52.532302246,
+   "lon": 13.376,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6013.115,
+    "y": 1146.005,
+    "w": 336.27,
+    "h": 378.29
+   },
+   "web": {
+    "lat": 51.255298389,
+    "lng": 10.4375,
+    "altitude": 0.164601286
+   },
+   "kaupunkinakyma": {
+    "lat": 53.921842741,
+    "lng": 14.354114208,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "DEU",
+   "kaupunki": "berliini",
+   "lat": 52.532302246,
+   "lon": 13.376,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6013.115,
+    "y": 1146.005,
+    "w": 336.27,
+    "h": 378.29
+   },
+   "web": {
+    "lat": 51.255298389,
+    "lng": 10.4375,
+    "altitude": 0.164601286
+   },
+   "kaupunkinakyma": {
+    "lat": 55.457194332,
+    "lng": 14.391833989,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "DEU",
+   "kaupunki": "berliini",
+   "lat": 52.532302246,
+   "lon": 13.376,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6013.115,
+    "y": 1146.005,
+    "w": 336.27,
+    "h": 378.29
+   },
+   "web": {
+    "lat": 51.255298389,
+    "lng": 11.825189493,
+    "altitude": 0.164580343
+   },
+   "kaupunkinakyma": {
+    "lat": 56.895133015,
+    "lng": 14.430610672,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "CHL",
+   "kaupunki": "valparaiso",
+   "lat": -32.999491568,
+   "lon": -71.2,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": 3116.46,
+    "y": 3725.95,
+    "w": 526.68,
+    "h": 1648.9
+   },
+   "web": {
+    "lat": -31.609951073,
+    "lng": -70.52365464,
+    "altitude": 0.092872685
+   },
+   "kaupunkinakyma": {
+    "lat": -31.609951073,
+    "lng": -70.52365464,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "CHL",
+   "kaupunki": "valparaiso",
+   "lat": -32.999491568,
+   "lon": -71.2,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 3116.46,
+    "y": 3725.95,
+    "w": 526.68,
+    "h": 1648.9
+   },
+   "web": {
+    "lat": -38.213297269,
+    "lng": -73.606,
+    "altitude": 0.772288452
+   },
+   "kaupunkinakyma": {
+    "lat": -30.074599482,
+    "lng": -70.534391579,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "CHL",
+   "kaupunki": "valparaiso",
+   "lat": -32.999491568,
+   "lon": -71.2,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 3116.46,
+    "y": 3725.95,
+    "w": 526.68,
+    "h": 1648.9
+   },
+   "web": {
+    "lat": -38.213297269,
+    "lng": -73.606,
+    "altitude": 0.772288452
+   },
+   "kaupunkinakyma": {
+    "lat": -28.636660799,
+    "lng": -70.54372175,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "IDN",
+   "kaupunki": "jakarta",
+   "lat": -6.399656876,
+   "lon": 107,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 8923.565,
+    "y": 2985.93,
+    "w": 1685.97,
+    "h": 619.74
+   },
+   "web": {
+    "lat": -2.528664742,
+    "lng": 108.278906038,
+    "altitude": 0.339568151
+   },
+   "kaupunkinakyma": {
+    "lat": -5.01011638,
+    "lng": 107.578209167,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "IDN",
+   "kaupunki": "jakarta",
+   "lat": -6.399656876,
+   "lon": 107,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 8923.565,
+    "y": 2985.93,
+    "w": 1685.97,
+    "h": 619.74
+   },
+   "web": {
+    "lat": -2.528664742,
+    "lng": 107,
+    "altitude": 0.339392853
+   },
+   "kaupunkinakyma": {
+    "lat": -3.47476479,
+    "lng": 107.577060875,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "IDN",
+   "kaupunki": "jakarta",
+   "lat": -6.399656876,
+   "lon": 107,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 8923.565,
+    "y": 2985.93,
+    "w": 1685.97,
+    "h": 619.74
+   },
+   "web": {
+    "lat": -2.528664742,
+    "lng": 107,
+    "altitude": 0.339392853
+   },
+   "kaupunkinakyma": {
+    "lat": -2.036826107,
+    "lng": 107.576364153,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "BEL",
+   "kaupunki": "bryssel",
+   "lat": 50.850186674,
+   "lon": 4.352,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5911.085,
+    "y": 1320.12,
+    "w": 141.13,
+    "h": 96.36
+   },
+   "web": {
+    "lat": 50.501372629,
+    "lng": 4.4495,
+    "altitude": 0.042106871
+   },
+   "kaupunkinakyma": {
+    "lat": 52.23972717,
+    "lng": 5.292624643,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "BEL",
+   "kaupunki": "bryssel",
+   "lat": 50.850186674,
+   "lon": 4.352,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5911.085,
+    "y": 1320.12,
+    "w": 141.13,
+    "h": 96.36
+   },
+   "web": {
+    "lat": 50.501372629,
+    "lng": 4.352,
+    "altitude": 0.048872736
+   },
+   "kaupunkinakyma": {
+    "lat": 53.775078761,
+    "lng": 5.326690857,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "BEL",
+   "kaupunki": "bryssel",
+   "lat": 50.850186674,
+   "lon": 4.352,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5911.085,
+    "y": 1320.12,
+    "w": 141.13,
+    "h": 96.36
+   },
+   "web": {
+    "lat": 50.501372629,
+    "lng": 4.352,
+    "altitude": 0.048599736
+   },
+   "kaupunkinakyma": {
+    "lat": 55.213017443,
+    "lng": 5.361592903,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "NLD",
+   "kaupunki": "amsterdam",
+   "lat": 52.380617819,
+   "lon": 4.886,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5938.695,
+    "y": 1227.935,
+    "w": 140.91,
+    "h": 135.63
+   },
+   "web": {
+    "lat": 52.142472855,
+    "lng": 5.2745,
+    "altitude": 0.058160683
+   },
+   "kaupunkinakyma": {
+    "lat": 53.770158315,
+    "lng": 5.86057661,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "NLD",
+   "kaupunki": "amsterdam",
+   "lat": 52.380617819,
+   "lon": 4.886,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5938.695,
+    "y": 1227.935,
+    "w": 140.91,
+    "h": 135.63
+   },
+   "web": {
+    "lat": 52.142472855,
+    "lng": 4.984424901,
+    "altitude": 0.058159808
+   },
+   "kaupunkinakyma": {
+    "lat": 55.305509905,
+    "lng": 5.897945777,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "NLD",
+   "kaupunki": "amsterdam",
+   "lat": 52.380617819,
+   "lon": 4.886,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5938.695,
+    "y": 1227.935,
+    "w": 140.91,
+    "h": 135.63
+   },
+   "web": {
+    "lat": 52.142472855,
+    "lng": 4.886,
+    "altitude": 0.058160386
+   },
+   "kaupunkinakyma": {
+    "lat": 56.743448588,
+    "lng": 5.936349583,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "DNK",
+   "kaupunki": "kobenhavn",
+   "lat": 55.689261573,
+   "lon": 12.542,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6094.715,
+    "y": 1028.59,
+    "w": 169.07,
+    "h": 165.22
+   },
+   "web": {
+    "lat": 56.168690602,
+    "lng": 10.3775,
+    "altitude": 0.067305809
+   },
+   "kaupunkinakyma": {
+    "lat": 57.078802069,
+    "lng": 13.601826761,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "DNK",
+   "kaupunki": "kobenhavn",
+   "lat": 55.689261573,
+   "lon": 12.542,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6094.715,
+    "y": 1028.59,
+    "w": 169.07,
+    "h": 165.22
+   },
+   "web": {
+    "lat": 56.168690602,
+    "lng": 10.556049208,
+    "altitude": 0.067299102
+   },
+   "kaupunkinakyma": {
+    "lat": 58.614153659,
+    "lng": 13.647993406,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "DNK",
+   "kaupunki": "kobenhavn",
+   "lat": 55.689261573,
+   "lon": 12.542,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 6094.715,
+    "y": 1028.59,
+    "w": 169.07,
+    "h": 165.22
+   },
+   "web": {
+    "lat": 56.168690602,
+    "lng": 11.336421828,
+    "altitude": 0.067303095
+   },
+   "kaupunkinakyma": {
+    "lat": 60.052092342,
+    "lng": 13.695817452,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "PRT",
+   "kaupunki": "lissabon",
+   "lat": 38.731041165,
+   "lon": -9.124,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5511.21,
+    "y": 1707.235,
+    "w": 120.78,
+    "h": 223.63
+   },
+   "web": {
+    "lat": 39.588229474,
+    "lng": -7.852,
+    "altitude": 0.108995878
+   },
+   "kaupunkinakyma": {
+    "lat": 40.12058166,
+    "lng": -8.370753558,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "PRT",
+   "kaupunki": "lissabon",
+   "lat": 38.731041165,
+   "lon": -9.124,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5511.21,
+    "y": 1707.235,
+    "w": 120.78,
+    "h": 223.63
+   },
+   "web": {
+    "lat": 39.588229474,
+    "lng": -7.852,
+    "altitude": 0.108995878
+   },
+   "kaupunkinakyma": {
+    "lat": 41.655933251,
+    "lng": -8.353070052,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "PRT",
+   "kaupunki": "lissabon",
+   "lat": 38.731041165,
+   "lon": -9.124,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 5511.21,
+    "y": 1707.235,
+    "w": 120.78,
+    "h": 223.63
+   },
+   "web": {
+    "lat": 39.588229474,
+    "lng": -7.852,
+    "altitude": 0.108995878
+   },
+   "kaupunkinakyma": {
+    "lat": 43.093871934,
+    "lng": -8.335213209,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "RUS",
+   "kaupunki": "moskova",
+   "lat": 55.764048325,
+   "lon": 37.646,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": 6187.9,
+    "y": -543.07,
+    "w": 6298.6,
+    "h": 2408.34
+   },
+   "web": {
+    "lat": 57.153588821,
+    "lng": 38.707968606,
+    "altitude": 0.092872685
+   },
+   "kaupunkinakyma": {
+    "lat": 57.153588821,
+    "lng": 38.707968606,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "RUS",
+   "kaupunki": "moskova",
+   "lat": 55.764048325,
+   "lon": 37.646,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": 6187.9,
+    "y": -543.07,
+    "w": 6298.6,
+    "h": 2408.34
+   },
+   "web": {
+    "lat": 58.688940412,
+    "lng": 38.754365778,
+    "altitude": 0.195490942
+   },
+   "kaupunkinakyma": {
+    "lat": 58.688940412,
+    "lng": 38.754365778,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "RUS",
+   "kaupunki": "moskova",
+   "lat": 55.764048325,
+   "lon": 37.646,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": false,
+   "laatikko": {
+    "x": 6187.9,
+    "y": -543.07,
+    "w": 6298.6,
+    "h": 2408.34
+   },
+   "web": {
+    "lat": 60.126879095,
+    "lng": 38.802438413,
+    "altitude": 0.291598416
+   },
+   "kaupunkinakyma": {
+    "lat": 60.126879095,
+    "lng": 38.802438413,
+    "altitude": 0.291598416
+   }
+  },
+  {
+   "maa": "AUS",
+   "kaupunki": "sydney",
+   "lat": -33.600151111,
+   "lon": 151.001,
+   "ruutu": "ipad-vaaka",
+   "w": 1210,
+   "h": 834,
+   "dpr": 2,
+   "mahtuu": false,
+   "laatikko": {
+    "x": 9520.11,
+    "y": 3457.815,
+    "w": 1693.78,
+    "h": 1370.27
+   },
+   "web": {
+    "lat": -32.210610615,
+    "lng": 151.681775045,
+    "altitude": 0.092872685
+   },
+   "kaupunkinakyma": {
+    "lat": -32.210610615,
+    "lng": 151.681775045,
+    "altitude": 0.092872685
+   }
+  },
+  {
+   "maa": "AUS",
+   "kaupunki": "sydney",
+   "lat": -33.600151111,
+   "lon": 151.001,
+   "ruutu": "ipad-pysty",
+   "w": 834,
+   "h": 1210,
+   "dpr": 2,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 9520.11,
+    "y": 3457.815,
+    "w": 1693.78,
+    "h": 1370.27
+   },
+   "web": {
+    "lat": -27.260552609,
+    "lng": 140.786333794,
+    "altitude": 0.684269691
+   },
+   "kaupunkinakyma": {
+    "lat": -30.675259024,
+    "lng": 151.670710867,
+    "altitude": 0.195490942
+   }
+  },
+  {
+   "maa": "AUS",
+   "kaupunki": "sydney",
+   "lat": -33.600151111,
+   "lon": 151.001,
+   "ruutu": "iphone-pysty",
+   "w": 390,
+   "h": 844,
+   "dpr": 3,
+   "mahtuu": true,
+   "laatikko": {
+    "x": 9520.11,
+    "y": 3457.815,
+    "w": 1693.78,
+    "h": 1370.27
+   },
+   "web": {
+    "lat": -27.260552609,
+    "lng": 148.17733776,
+    "altitude": 0.684271561
+   },
+   "kaupunkinakyma": {
+    "lat": -29.237320341,
+    "lng": 151.661093149,
+    "altitude": 0.291598416
+   }
+  }
+ ]
+}

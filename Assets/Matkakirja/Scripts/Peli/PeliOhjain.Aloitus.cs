@@ -105,8 +105,9 @@ namespace Matkakirja.Natiivi
         {
             AloituslentoKaynnissa = false;
             try { AloituslentoPaattyi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
-            // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla).
-            Perilla();
+            // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla); kamera webin avauslennon tapaan
+            // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa).
+            Perilla(aloituslento: true);
         }
     }
 }
