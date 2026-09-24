@@ -106,6 +106,7 @@ namespace Matkakirja.Natiivi
             arkki = Rakenne.El("mk-lehti", peite);
             Rakenne.Tausta(arkki, Kuviot.Pergamentti);
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
+            arkki.RegisterCallback<GeometryChangedEvent>(e => arkki.EnableInClassList("mk-lehti--levea", e.newRect.width >= 700f));
 
             // Tarttuva otsikkorivi (web #arrival-city etusivulla, .aihe-nimi aihesivuilla): sivun oma otsikko,
             // hampurilainen vasemmalla ja lukija oikealla otsikon viivojen sisällä. Etusivulla yllä "UNOHDETTU AARRE"
@@ -332,6 +333,7 @@ namespace Matkakirja.Natiivi
             nyt = i;
             sivu = new ScrollView(ScrollViewMode.Vertical);
             sivu.AddToClassList("mk-lehti__sivu");
+            sivu.contentContainer.AddToClassList("mk-lehti__sisalto");
             sivu.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sivu.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             sivupaikka.Add(sivu);
