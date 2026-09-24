@@ -24,6 +24,7 @@
 #   ./laitetesti.sh regressio <kansio>     kaikki linssit (RADIO=1: myös radio), KAUPUNKI oletus lontoo
 #   ./laitetesti.sh tutkimus <kansio>      ihmisen matka suoraan tutkimusvaiheeseen
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
+#   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
@@ -134,6 +135,45 @@ case "$1" in
     linssi "keksinnot 25" "keksinnot jatka"; sleep 12; kuva kontakti-keksinnot-loppu
     linssi "linssi ihmisen-matka"; sleep 45; linssi "esitys levantti"; sleep 12; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
     linssi "linssi pois"; sleep 4; hae "$2"; tail -12 "$2/linssi-loki.txt" ;;
-  *) echo "käyttö: $0 sisalto [koepaketti] | portti | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio>"; exit 1 ;;
+  piikit)
+    # Linssien kehyspiikit (Fable 24.9.: ei yli 16 ms kehyksiä avauksessa ja pysäkinvaihdossa). Vaatii
+    # Development-käännöksen (MATKAKIRJA_KEHITYS=1, ProfilerRecorderit). Unityn loki konsolista taustalla;
+    # vaiheet erotetaan lokiin tuntemattomilla komennoilla "vaihe-<nimi>". KYNNYS ms (oletus 20).
+    mkdir -p "$2"; LOKI="$2/konsoli.txt"
+    timeout ${KESTO:-420} xcrun devicectl device process launch --device $UDID --terminate-existing --console $ID > "$LOKI" 2>&1 &
+    portti
+    linssi "linssi pois"; sleep 2
+    ui "ui piikit ${KESTO:-420} ${KYNNYS:-20}"; sleep 2
+    linssi "vaihe-lepo"; sleep 8
+    for l in topografia vesistot; do
+      linssi "vaihe-$l-avaus" "linssi $l"; sleep 8
+      linssi "vaihe-$l-hyppy" "kamera 0 20 9000"; sleep 8
+      linssi "vaihe-$l-sulku" "linssi pois"; sleep 4
+    done
+    linssi "vaihe-satelliitti-avaus" "linssi satelliitti"; sleep 20
+    linssi "vaihe-satelliitti-sulku" "linssi pois"; sleep 4
+    linssi "vaihe-keksinnot-avaus" "linssi keksinnot"; sleep 10
+    for p in 5 11 25; do linssi "vaihe-keksinnot-pysakki-$p" "keksinnot $p"; sleep 12; done
+    linssi "vaihe-keksinnot-sulku" "linssi pois"; sleep 4
+    linssi "vaihe-ihminen-avaus" "linssi ihmisen-matka"; sleep 30
+    linssi "vaihe-ihminen-levantti" "esitys levantti"; sleep 12
+    linssi "vaihe-ihminen-sulku" "linssi pois"; sleep 4
+    linssi "vaihe-vertailu-avaus" "linssi vertailu"; sleep 6
+    linssi "vaihe-vertailu-maat" "maa SWE" "maa NOR"; sleep 4
+    linssi "vaihe-vertailu-arkki" "vertaa"; sleep 4
+    linssi "vaihe-maatiedot-avaus" "linssi maatiedot"; sleep 6
+    linssi "vaihe-maatiedot-maa" "maa JPN"; sleep 4
+    linssi "vaihe-maatiedot-lehti" "lehti"; sleep 4
+    linssi "vaihe-maatiedot-sulku" "linssi pois"; sleep 4
+    linssi "vaihe-radio-avaus" "linssi radio" "radio aani 0"; sleep 8
+    linssi "vaihe-radio-lontoo" "radio kaupunki lontoo"; sleep 10
+    linssi "vaihe-radio-sulku" "radio stop" "linssi pois"; sleep 4
+    linssi "vaihe-loppu"; sleep 3
+    ui "ui piikit pois"; sleep 2; kill %1 2>/dev/null; wait
+    # Vaiheittain: piikkien määrä ja pisin kehys.
+    awk '/tuntematon komento: vaihe-/ { v=$0; sub(/.*vaihe-/, "", v); sub(/[^a-z0-9-].*/, "", v); next }
+         /MATKAKIRJA piikit: kehys/ { if (v == "") v = "alku"; n[v]++; ms=$0; sub(/.*kehys /, "", ms); ms+=0; if (ms>mx[v]) mx[v]=ms; if (!(v in o)) { o[v]=++k; j[k]=v } }
+         END { for (i=1;i<=k;i++) printf "%-28s %3d piikkiä, pisin %6.1f ms\n", j[i], n[j[i]], mx[j[i]] }' "$LOKI" ;;
+  *) echo "käyttö: $0 sisalto [koepaketti] | portti | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio> | piikit <kansio>"; exit 1 ;;
 esac
 rm -rf $TMP
