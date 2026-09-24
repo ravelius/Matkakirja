@@ -4275,3 +4275,7 @@ Kallistussuunta välitetty Natiivisepälle (02847d7 mergettävissä). Omistaja a
 ## OMISTAJA klo 17.5x (KORTTI): MAAILMANAPPI VAIN KEHITTAJALLE (HUNTU POIS, LIIKKUMINEN KOKO PALLOLLA) — PUUTTUI KEHITTAJATILASSA BUILD 9:SSA; 37: VAIN ⚙ NAKYI ILMAN KEHITTAJATILAA (24.9.2026 klo 16.47)
 
 Natiivi-UI: yläpalkki korjattu 0299fdb (⚙ pois, ☰ = linssivalikko, linssit eivät laukkuun); webin pelaajanäkymässä kartan kulmassa vain karttaselitteen nappi; maailmanappi webissä kehittäjän nappi → natiiviin kehittäjätilaan webin mukaan. 37: koodissa ilman kehittäjätilaa näkyi vain ⚙ (poistettu); muut kehittäjärivit sidottu Asetukset.Kehittajaan (PlayerPrefs, säilyy kunnes kytketään pois ☰ → Kehittäjä → Kytke pois) tai Debug-käännökseen.
+
+## ISO iPAD ASENNETTU (TIIMI RCD77XPB7M, KEHITYS-APP ID fi.matkakirja.peli.kehitys, natiiviseppa/kehitystiimi 0295e8a); PROTO-MASTER 5876005 (ELEET f248117); testi/b10c 67dcc5e SIMUISSA (24.9.2026 klo 16.51)
+
+iPad 11 ja iPhone rekisteröity samaan tiimiin; vanha app.matkakirja.proto3d oli Personal Teamin eikä siirry (omistaja hyväksyi uuden App ID:n). b10c: Natiivi-UI b10-jono, avausteksti, saapumisnäkymä, b10-avaruus, astropulu, korkeuskerroin. Kesken: korkeuskertoimen kuvat (postikortti peitti), Pariisin lähizoomi (natiivi pysähtyy kauemmas → dpi-tunnistus simulaattorissa mittauksessa). Linssiseppä ja Laitetestaaja saivat laitteen.
