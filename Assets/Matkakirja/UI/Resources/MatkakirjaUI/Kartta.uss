@@ -1760,3 +1760,27 @@
     margin: 0;
     color: rgb(88, 70, 51);
 }
+
+/* Nostokortin kaksipalstataitto ≥ 1100 pt (web css/fokusnosto.css osio 13, mitattu 24.9. b12 1194 × 834 ja
+   1366 × 1024): kuvapalsta (kuva ja kuvateksti) vasemmalla, tekstipalsta oikealla, väli 1,5 rem, palstat alkavat
+   samalta yläreunalta (align-items flex-start). Kuvapalstan leveys tulee koodista (Nostokortti.MitoitaKuvapalsta). */
+.mk-nosto__rivi {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-nosto__kuvapalsta {
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.mk-nosto__kuvapalsta > .mk-nosto__kuvasarja {
+    margin-top: 0;
+}
+
+.mk-nosto__tekstipalsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
