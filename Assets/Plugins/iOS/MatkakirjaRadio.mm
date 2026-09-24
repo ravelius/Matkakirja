@@ -109,7 +109,7 @@ static float VuAsteikko(float lineaarinen)
 @property (nonatomic) float voimakkuus;
 @property (nonatomic) BOOL tauolla;    // pelaajan tauko: ei automaattista jatkoa
 @property (nonatomic) float nayttoTaso, nayttoHuippu;
-@property (nonatomic) CFTimeInterval edellinenLuku, vuAlku;
+@property (nonatomic) CFTimeInterval edellinenLuku, vuAlku, vuKytketty;
 @property (nonatomic, copy) NSString* vuSyy;
 @end
 
@@ -189,10 +189,20 @@ static float VuAsteikko(float lineaarinen)
     self.nayttoHuippu = 0;
     self.vuSyy = @"odottaa readyToPlay";
     self.vuAlku = 0;
+    self.vuKytketty = 0;
 }
 
 - (void)yritaTappi
 {
+    // Live-Icecast: tappi kytkeytyy, mutta AVPlayer ei syötä sille ääntä (iPad 24.9.: kutsuja 0) → 3 s
+    // kytkennän jälkeen −1, jolloin mittari näyttää varakuviota eikä lepää soiton aikana.
+    if (vuTila.load() == 1 && vuKutsut.load() == 0 && self.vuKytketty > 0
+        && CACurrentMediaTime() - self.vuKytketty > 3.0 && self.soitin.timeControlStatus == AVPlayerTimeControlStatusPlaying)
+    {
+        vuTila.store(-1);
+        self.vuSyy = @"tappi ei saa ääntä (live-virta)";
+        return;
+    }
     if (vuTila.load() != 0 || self.soitin == nil) return;
     AVPlayerItem* k = self.soitin.currentItem;
     if (k == nil || k.status != AVPlayerItemStatusReadyToPlay) return;
@@ -226,6 +236,7 @@ static float VuAsteikko(float lineaarinen)
     miksaus.inputParameters = @[parametrit];
     k.audioMix = miksaus;
     vuTila.store(1);
+    self.vuKytketty = CACurrentMediaTime();
     self.vuSyy = [NSString stringWithFormat:@"tappi kytketty (%@)", raita.mediaType];
 }
 
