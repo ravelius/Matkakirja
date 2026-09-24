@@ -1,7 +1,9 @@
 // Maatila (vertailu- ja maatietolinssit): maiden täyttö ja raja pallon päällä.
 // _Tunnus on tasakulmainen maatunnuskartta (R8, 0 = meri, 1–255 = maan indeksi),
 // _Paletti 256×2 (rivi 0 täyttö, rivi 1 raja). Raja tunnistetaan naapuritekseleistä
-// ruudun mittakaavassa (fwidth), joten viivan leveys pysyy pikseleinä vakiona.
+// ruudun mittakaavassa (fwidth), joten viivan leveys pysyy pikseleinä vakiona: 1 laitepikseli
+// kuten webin three-globe polygonStrokeColor (LineBasicMaterial). Peittävyys muunnetaan
+// lineaarisessa väriavaruudessa webin sRGB-sekoitusta vastaavaksi (sama kuin Tummennus.shader).
 // Kuori piirretään ilman syvyystestiä ennen reittejä ja merkkejä (MaaKartta.cs).
 Shader "Matkakirja/MaaTaytto"
 {
@@ -9,7 +11,7 @@ Shader "Matkakirja/MaaTaytto"
     {
         _Tunnus("Tunnuskartta", 2D) = "black" {}
         _Paletti("Paletti", 2D) = "black" {}
-        _ReunaLeveys("Rajan leveys (px)", Float) = 1.5
+        _ReunaLeveys("Rajan leveys (px)", Float) = 0.5
         _Alue("Rajaus", Vector) = (-180, 90, 360, 180)
     }
     SubShader
@@ -58,7 +60,13 @@ Shader "Matkakirja/MaaTaytto"
 
             half4 Vari(float id, float rivi)
             {
-                return SAMPLE_TEXTURE2D_LOD(_Paletti, sampler_point_clamp, float2((id + 0.5) / 256.0, rivi), 0);
+                half4 c = SAMPLE_TEXTURE2D_LOD(_Paletti, sampler_point_clamp, float2((id + 0.5) / 256.0, rivi), 0);
+            #if !defined(UNITY_COLORSPACE_GAMMA)
+                // Web sekoittaa rgba-täytön sRGB-arvoihin; lineaarisena sama 0,3 jäi iPadilla lähes
+                // näkymättömäksi (Linssisepän kontakti 24.9.). Eksponentti kuten Tummennus.shaderissa.
+                c.a = 1 - pow(max(1 - c.a, 0), 1.75);
+            #endif
+                return c;
             }
 
             half4 frag(Vali i) : SV_Target
