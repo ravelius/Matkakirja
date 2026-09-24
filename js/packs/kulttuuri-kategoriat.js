@@ -116128,6 +116128,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dennis Martínez',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nicaragua. National Palace, Managua LCCN2016820953.jpg',
+          vuosi: '1910-luku',
+          lyhyt: 'Managuan kansallispalatsi 1910-luvulla, ennen kuin '
+            + 'keskusta tuhoutui kahdesti maanjäristyksissä.',
+          selite: 'Managuan kansallispalatsi 1910-luvulla. Nicaraguan '
+            + 'pääkaupunki oli tuolloin pieni järvenrantakaupunki, ja '
+            + 'keskusta sortui myöhemmin kahdesti maanjäristyksessä, '
+            + 'vuosina 1931 ja 1972.',
+          lahde: 'National Photo Company / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Old Managua Cathedral (3).jpg',
+          vuosi: '2016',
+          lyhyt: 'Managuan vanha katedraali seisoo yhä vuoden 1972 '
+            + 'maanjäristyksen jäljiltä vaurioituneena.',
+          selite: 'Vanha katedraali Managuan keskustassa vuonna 2016. '
+            + 'Kirkko vaurioitui 1972 maanjäristyksessä eikä ole enää '
+            + 'käytössä, mutta managualaiset käyvät sitä yhä katsomassa '
+            + 'joka viikonloppu.',
+          lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116305,6 +116329,67 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Reggae Maranhão Museum',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Largo do Carmo - São Luís - em 1908.jpg',
+          vuosi: '1908',
+          lyhyt: 'Largo do Carmo São Luísissa vuonna 1908, aukio joka '
+            + 'nimettiin pian uudelleen.',
+          selite: 'Largo do Carmo São Luísissa vuonna 1908, raitiotien '
+            + 'kiskoineen ja Carmon kirkkoineen. Aukio sai 1901 uuden '
+            + 'nimen Praça João Lisboa maranhãolaisen kirjailijan '
+            + 'mukaan.',
+          lahde: 'Gaudêncio Cunha, Álbum do Maranhão em 1908, Wikimedia '
+            + 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Mercado das Tulhas - 01.jpg',
+          vuosi: '2019',
+          lyhyt: 'Mercado das Tulhas, vuonna 1861 rakennettu kauppahalli, '
+            + 'on yhä käytössä São Luísissa.',
+          selite: 'Mercado das Tulhas São Luísin vanhassakaupungissa. '
+            + 'Kaarikäytävän yläpuolelle on hakattu vuosiluku 1861, ja '
+            + 'halli on yhä kauppapaikka, nykyään enimmäkseen käsitöille '
+            + 'ja vaatteille.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Vingboonsin näkymä 1665',
+          tiedosto: 'AMH-6765-NA View of Sao Luis de Maranhao.jpg',
+          lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
+            + 'hollantilaismiehityksen jäljiltä.',
+          selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
+            + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
+            + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
+            + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
+            + 'kaupunkia 1641–1644.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Righinin öljyvärinäkymä',
+          tiedosto: 'Joseph Léon Righini - View of São Luis do Maranhão - Google Art Project.jpg',
+          lyhyt: 'Italialaissyntyisen Joseph Léon Righinin maalaus São '
+            + 'Luísista.',
+          selite: 'Italialaissyntyinen Joseph Léon Righini (1820–1884) '
+            + 'kuoli Brasiliassa Belémissä ja maalasi useita näkymiä '
+            + 'maan kaupungeista — tämä esittää São Luísia mereltä '
+            + 'päin.',
+          lahde: 'Joseph Léon Righini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tuntemattoman taiteilijan näkymä',
+          tiedosto: 'Vista de São Luis do Maranhão (atribuído), da Coleção Brasiliana Iconográfica.jpg',
+          lyhyt: 'Tuntemattoman taiteilijan näkymä São Luísista '
+            + 'Brasiliana Iconográfica -kokoelmasta.',
+          selite: 'Nimettömän taiteilijan maalaus kuuluu Brasiliana '
+            + 'Iconográfica -kokoelmaan, joka kokoaa historiallisia '
+            + 'näkymiä Brasilian kaupungeista.',
+          lahde: 'Tuntematon tekijä, Brasiliana Iconográfica -kokoelma, '
+            + 'Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'kuvataide',
@@ -116438,6 +116523,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanha valokuva Casa Blancasta ja sitä ympäröivästä merimuurista; talo oli Ponce de Leónin suvun asuntona lähes 250 vuotta.',
           lahde: 'Detroit Photographic Co., Wikimedia Commons (PD)',
           wiki: 'Casa Blanca (San Juan)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'St. Cristobal Fortress, San Juan, Puerto Rico LCCN96522666.jpg',
+          vuosi: '1908',
+          lyhyt: 'San Cristóbalin linnoitus San Juanissa vuonna 1908, '
+            + 'kymmenen vuotta Yhdysvaltain vallan alkamisesta.',
+          selite: 'San Cristóbalin linnoitus vuonna 1908. Espanjalaisten '
+            + 'rakentama linnake sulkee vanhan kaupungin '
+            + 'maanpuoleisen kannaksen, ja kuva on otettu kymmenen '
+            + 'vuotta sen jälkeen, kun Puerto Rico siirtyi Espanjalta '
+            + 'Yhdysvalloille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Top of homes in La Perla, San Juan, Puerto Rico.jpg',
+          vuosi: '2019',
+          lyhyt: 'La Perlan kattoja San Juanin kaupunginmuurin '
+            + 'ulkopuolella vuonna 2019.',
+          selite: 'La Perlan kattoja kaupunginmuurin ulkopuolella. '
+            + 'Kaupunginosa rakentui muurin ja meren väliin jäävälle '
+            + 'kapealle kaistaleelle, ja talot laskeutuvat portaittain '
+            + 'rantakalliolle.',
+          lahde: 'Šarūnas Burdulis, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -116590,6 +116700,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Nouméa Cathedral',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nouméa - Hauts fourneaux Ballande - Ch. B. Nething - btv1b10121338v.jpg',
+          vuosi: '1900–1920-luku',
+          lyhyt: 'Ballanden masuunit savusivat Nouméan lahdella '
+            + 'nikkelinsulatuksen alkuaikoina.',
+          selite: 'Ballanden masuunit savuavat Nouméan lahden toisella '
+            + 'rannalla. Uuden-Kaledonian nikkeli löydettiin '
+            + '1860-luvulla, ja sitä alettiin sulattaa saarella '
+            + 'itsellään sen sijaan että malmi olisi viety kokonaan '
+            + 'pois.',
+          lahde: 'Ch. B. Nething / Gallica, Ranskan kansalliskirjasto (PD)',
+        },
+        {
+          tiedosto: 'Noumea Market.jpg',
+          vuosi: '2006',
+          lyhyt: 'Bataattikauppias Nouméan rantatorilla varhain aamulla.',
+          selite: 'Bataattikauppias Nouméan torilla. Tori on kaupungin '
+            + 'rannassa ja avautuu varhain aamulla, kun kalastajat '
+            + 'tuovat yön saaliin samaan aikaan kuin viljelijät '
+            + 'juurekset.',
+          lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116721,6 +116855,29 @@ export const KULTTUURI_KATEGORIAT = {
             'Costanera-kadun varrella kohoavia korkeita asuin- ja liiketorneja, edessä rantakivikko ja Reloncavín selän sininen vesi.',
           lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Puerto Montt',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Puerto Montt (ca. 1912).jpg',
+          vuosi: 'noin 1912',
+          lyhyt: 'Puerto Montt noin vuonna 1912, saksalaissiirtolaisten '
+            + '1853 perustama kaupunki.',
+          selite: 'Puerto Montt noin vuonna 1912. Kaupunki perustettiin '
+            + '1853 saksalaisten siirtolaisten asutuskeskukseksi '
+            + 'Reloncavín lahden pohjukkaan ja nimettiin Chilen '
+            + 'silloisen presidentin Manuel Monttin mukaan.',
+          lahde: 'Bulletin of the Pan American Union, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Angelmó 2014 f06 -entrada al mercado.jpg',
+          vuosi: '2014',
+          lyhyt: 'Angelmón kalatorin sisäänkäynti Puerto Montin '
+            + 'satamakylässä.',
+          selite: 'Sisäänkäynti Angelmón torille. Angelmó on Puerto '
+            + 'Montin satamakylä Tenglon salmen varrella, ja sen '
+            + 'kojuista ostetaan kalaa, simpukoita ja merilevää.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },

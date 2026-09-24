@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2189, teksti: 'N2: galleria + ennenNyt' },
   { v: 2187, teksti: 'Sää: Managua, Nouméa, Puerto Montt, San Juan ja… (#3047)' },
   { v: 2186, teksti: 'N4: viisi luontokohdetta (#3002)' },
   { v: 2185, teksti: 'N6: viisi maailmankohdetta (#3006)' },
