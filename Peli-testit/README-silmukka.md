@@ -22,8 +22,7 @@ projektin syöte on pelkkä Input System). Fontti otetaan `KaupunkiMerkit.fontti
 1. `./aja.sh sim && ./aja.sh xcode-sim && ./aja.sh asenna-sim <UDID>` (uudet skriptit tuodaan
    käännöksessä; `luo` ei ole pakollinen, koska kohtaus ei muutu).
 2. Lokissa pitää näkyä `MATKAKIRJA peli: sisältö sisalto/1/v1/, 266 kaupunkia …`,
-   `MATKAKIRJA peli: laattoja 266 (moduulit/js/packs/maailmankartta.json)` (tai `kokoelmat/laatat.json`,
-   kun Siirtosepän pino on ämpärissä) ja `MATKAKIRJA peli: uusi peli, 300 puntaa · päivä 1 · aamu · Pariisi`.
+   `MATKAKIRJA peli: laattoja 266 (kokoelmat/laatat.json)` ja `MATKAKIRJA peli: uusi peli, 300 puntaa · päivä 1 · aamu · Pariisi`.
    Kamera ajaa Pariisiin ja itsestään pyöriminen loppuu.
 3. Aja testiskripti (alla) ja tarkista `peli-tila-*.json` ja `peli-loki.txt`.
 
@@ -40,10 +39,9 @@ pelin UI:ta piirretä. `peli paalle` palauttaa. Huom: kun peli on päällä, 3D:
 
 - **Käynnistys:** `uusin.json` → versiopolku → `kokoelmat/kaupungit.json` ja `reitit.json`
   raakatekstinä samaan välimuistiin kuin Sisalto.cs (`persistentDataPath/sisalto/<polku>`,
-  kirjoitus atomisesti) → `Reittiverkko`. Laattamäärät: `kokoelmat/laatat.json`, jos puuttuu
-  (404) `moduulit/js/packs/maailmankartta.json` (1,7 Mt; määrät tiivistetään kerran
-  tiedostoon `sisalto/<polku>peli/laattamaarat.json`); kumpaakaan ei saatu → peli ilman
-  laattoja. Kysymykset, tarinakaari ja paikkatiedot ladataan taustalla (`PeliOhjain.Kysymykset`,
+  kirjoitus atomisesti) → `Reittiverkko`. Laattamäärät: `kokoelmat/laatat.json` (määrät tiivistetään kerran
+  tiedostoon `sisalto/<polku>peli/laattamaarat.json`; webin moduulin varareitti poistettu
+  24.9.2026); ei saatu → peli ilman laattoja. Kysymykset, tarinakaari ja paikkatiedot ladataan taustalla (`PeliOhjain.Kysymykset`,
   seuraavaa erää varten; kysymys-UI:ta ei vielä ole, joten Pysy-tapaa ei tarjota).
 - **Peli:** `tallennus.json` → `Matka.Lataa(verkko, json, laattamäärät)`, muuten uusi peli
   Pariisista (`Matka.UusiPeli(…, laattamäärät)`). Tallennus atomisesti (tmp + File.Replace)

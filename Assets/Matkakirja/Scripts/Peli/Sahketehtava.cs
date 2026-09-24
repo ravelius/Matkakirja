@@ -15,7 +15,7 @@
 //
 // Ohilyönnit ja vastatut ovat istunnon tilaa kuten webissä (ui.sahkeOhi, ui.sahkeVastattu), eivät
 // tallennusta; pullat ovat pelitilassa (Kaupat.PullaOstos, avain KauppaVakiot.SahkePullaAvain).
-// Sisältö: kokoelma fokusvirrat, alkion data.sahketehtava. Ei UnityEngineä: Peli-testit/Testit/SahkeTestit.cs.
+// Sisältö: kokoelma fokusvirrat, alkion sahketehtava (skeema 1.26; vanha paketti data.sahketehtava). Ei UnityEngineä: Peli-testit/Testit/SahkeTestit.cs.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -74,8 +74,8 @@ namespace Matkakirja.Natiivi
             foreach (var o in MiniJson.Alkiot(json))
             {
                 var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
-                if (id != null && MiniJson.Kentta(o, "data") is Dictionary<string, object> d
-                    && MiniJson.Kentta(d, "sahketehtava") is Dictionary<string, object> s)
+                // Päätason sahketehtava (skeema 1.26); vanha paketti data.sahketehtava (Paataso).
+                if (id != null && Paataso.Olio(o, "sahketehtava", "sahketehtava") is Dictionary<string, object> s)
                     tulos[id] = Lue(s, id);
             }
             return tulos;

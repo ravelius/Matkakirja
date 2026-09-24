@@ -31,7 +31,15 @@ namespace Matkakirja.Peli.Testit
         static void Vartioi(Paketti p)
         {
             bool vanha = Paataso.RaakaKielletty;
-            if (Paalla("VARTIJA_RAAKA_KIELLETTY")) Paataso.RaakaKielletty = true;
+            bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY");
+            // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.26, koepaketti v33).
+            // Vanhempi paketti (tuotanto v11 = 1.10) luetaan raa'an datan varareitillä, ja se kerrotaan.
+            if (kielto && !Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
+            {
+                Console.WriteLine($"  (raakakielto ei koske pakettia {p.Nimi}: skeema {p.Skeemaversio ?? "?"} < {Pakettiskeema.PaatasoTaysi}, päätaso ei ole täysi)");
+                kielto = false;
+            }
+            if (kielto) Paataso.RaakaKielletty = true;
             Vartijatulos t;
             try { t = Pakettivartija.Tarkista(p); }
             finally { Paataso.RaakaKielletty = vanha; }
@@ -94,9 +102,14 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void PuuttuvaPakollinenKenttaOnPunainen()
         {
-            var teksti = Muokkaa("reitit", l => ((Dictionary<string, object>)l.First(o => (string)o["laji"] == "maa")["data"]).Remove("steps"));
+            var teksti = Muokkaa("reitit", l =>
+            {
+                var o = l.First(x => (string)x["laji"] == "maa");
+                o.Remove("askelia");
+                ((Dictionary<string, object>)o["data"]).Remove("steps");
+            });
             var t = Aja(Paikallinen.Korvaa("reitit", teksti), "reitit");
-            OletaVirhe(t, "puuttuu data.steps");
+            OletaVirhe(t, "puuttuu askelia");
             OletaVirhe(t, "lukija kaatui");
             var rivi = t.Rivit.First(r => r.Kokoelma == "reitit");
             Oleta.Sama(1, rivi.Hylatty, "yksi reitti hylätty");

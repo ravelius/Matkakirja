@@ -185,7 +185,9 @@ namespace Matkakirja.Peli
     {
         public sealed class Elaintaky
         {
-            public string Maa, Elain, Otsikko, Teksti, Lahde, Kuva;
+            public string Maa, Elain, Otsikko, Teksti, Lahde;
+            /// <summary>Kuvan valmis osoite (päätason kuva.url, skeema 1.26) tai vanhassa paketissa polku (data.kuva).</summary>
+            public string Kuva;
             public double Lat, Lon;
         }
 
@@ -195,7 +197,9 @@ namespace Matkakirja.Peli
             public string Avain;
             /// <summary>Kaupunki, jos juliste on kaupungin oma (alikohteella null).</summary>
             public string Kaupunki;
-            public string Tiedosto, Otsikko, Lyhyt, Selite;
+            /// <summary>Julisteen valmis osoite (päätason kuva.url, skeema 1.26) tai vanhassa paketissa tiedosto (data.tiedosto).</summary>
+            public string Tiedosto;
+            public string Otsikko, Lyhyt, Selite;
         }
 
         /// <summary>Eläintäyt maittain (ISO3), paketin järjestyksessä.</summary>
@@ -207,13 +211,16 @@ namespace Matkakirja.Peli
             json == null ? Enumerable.Empty<Dictionary<string, object>>()
                 : MiniJson.Alkiot(json);
 
-        /// <summary>Lukee kokoelmien tekstit (kumpi tahansa voi olla null).</summary>
+        /// <summary>
+        /// Lukee kokoelmien tekstit (kumpi tahansa voi olla null). Päätason kentät ensin (skeema 1.26),
+        /// vanhan paketin data.* vain Paataso-varareitillä.
+        /// </summary>
         public static Kauppasisalto Lue(string elaintaytJson, string julisteetJson)
         {
             var s = new Kauppasisalto();
             foreach (var a in Alkiot(elaintaytJson))
             {
-                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object> ?? new Dictionary<string, object>();
+                var d = Paataso.Nakyma(a, Paataso.Elaintaky);
                 var maa = MiniJson.Teksti(a, "maa") ?? MiniJson.Teksti(a, "id");
                 s.Elaintayt[maa] = new Elaintaky
                 {
@@ -222,20 +229,20 @@ namespace Matkakirja.Peli
                     Otsikko = MiniJson.Teksti(d, "otsikko"),
                     Teksti = MiniJson.Teksti(d, "teksti"),
                     Lahde = MiniJson.Teksti(d, "lahde"),
-                    Kuva = MiniJson.Teksti(d, "kuva"),
+                    Kuva = MiniJson.Teksti(MiniJson.Kentta(a, "kuva") as Dictionary<string, object>, "url") ?? MiniJson.Teksti(Paataso.Raaka(a), "kuva"),
                     Lat = MiniJson.Luku(d, "lat") ?? 0,
                     Lon = MiniJson.Luku(d, "lon") ?? 0,
                 };
             }
             foreach (var a in Alkiot(julisteetJson))
             {
-                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object> ?? new Dictionary<string, object>();
+                var d = Paataso.Nakyma(a, Paataso.Juliste);
                 var avain = MiniJson.Teksti(a, "id");
                 s.Julisteet[avain] = new Juliste
                 {
                     Avain = avain,
                     Kaupunki = MiniJson.Teksti(a, "kaupunki"),
-                    Tiedosto = MiniJson.Teksti(d, "tiedosto"),
+                    Tiedosto = MiniJson.Teksti(MiniJson.Kentta(a, "kuva") as Dictionary<string, object>, "url") ?? MiniJson.Teksti(Paataso.Raaka(a), "tiedosto"),
                     Otsikko = MiniJson.Teksti(d, "otsikko"),
                     Lyhyt = MiniJson.Teksti(d, "lyhyt"),
                     Selite = MiniJson.Teksti(d, "selite"),
