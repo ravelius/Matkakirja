@@ -156,8 +156,8 @@ Natiivissa lehti on verkkosivu natiivin päällä (`Scripts/Peli/LehtiKuori.cs`,
 | "Poistu lehdestä" / "Poistu" | lehti.js:1754 (paivitaTutkiAlapalkki) | LehtiKuori.cs | kuori | NUI, PK |
 | Sisällys (alapalkki, hampurilainen, ×, paluu) | lehti.js:1828, 1900, 1950, 1979 | LehtiKuori.cs | kuori | NUI |
 | Maaliite "X-liite" | lehti.js:1790 | LehtiKuori.cs | kuori | NUI, SS |
-| Mastossa maan linkki (maalehti) | index.html:776, ui.js:2609 | LehtiKuori.cs | kuori | NUI |
-| Sää-rivi → koko vuoden sää (×) | index.html:781, ui.js:2623, lehti.js:2388 | LehtiKuori.cs | kuori | NUI, SS |
+| Mastossa maan linkki (maalehti) | index.html:776, ui.js:2609 | Lehtinakyma.Masto "X-liite" | on (merge-pyynnössä) | NUI |
+| Sää-rivi → koko vuoden sää (×) | index.html:781, ui.js:2623, lehti.js:2388 | Lehtinakyma.SaaRivi + Saagraafi | on (merge-pyynnössä natiivi-ui/lehti-kulttuuri) | NUI, SS |
 | Kuvagalleria ‹ ›, kuvan napautus → suurennos | index.html:787–788, ui.js:2525–2539, 16744–16747 | LehtiKuori.cs | kuori | NUI |
 | "Lue lisää" / "Lue lisää maasta" → wiki-dialogi (liuskat, ‹ ›, "lue artikkeli", "Sulje") | index.html:796, 807, 870–899; ui.js:2545, 2569, 16571 | LehtiKuori.cs | kuori | NUI, SS |
 | Aiheliuskat ja nostot, "Lue lisää aiheesta" | index.html:847, ui.js:15211 | LehtiKuori.cs | kuori | NUI, SS |
@@ -165,7 +165,7 @@ Natiivissa lehti on verkkosivu natiivin päällä (`Scripts/Peli/LehtiKuori.cs`,
 | Mediarivi: maan radio ja tv | index.html:822, 836 | LehtiKuori.cs | kuori | NUI, SS |
 | "Kuuntele näyte", "Kuuntele musiikkia", esikuuntelu, musiikkilinkit | ui.js:16265, 16275, 16289, 16326 | LehtiKuori.cs | kuori | NUI, SS |
 | Noston "Avaa sivusto" -linkki | ui.js:16256 | LehtiKuori.cs | kuori | NUI |
-| Kulttuurivisan vaihtoehdot | index.html:851, ui.js:15269 | LehtiKuori.cs (teko actionKulttuuri) | kuori | NUI, PK |
+| Kulttuurivisan vaihtoehdot | index.html:851, ui.js:15269 | Lehtinakyma.Kulttuurivisa (kokoelma kulttuurivisat) | on (merge-pyynnössä) | NUI, PK |
 | Minitehtävät ja "Lunasta juliste" | ui.js:16006, 16050; fokustehtavat.js:854, 1003 | LehtiKuori.cs (actionMinitehtava, myonnaJuliste) | kuori | NUI, PK |
 | Pulla-vinkki ("… Livialle", maksaa punnissa) | fokustehtavat.js:578, 666 | LehtiKuori.cs (actionPullaVinkki/Ostos) | kuori | NUI, PK |
 | Lukija (kaiutin, "Tauko" / "Jatka kuuntelua") | lehti.js:697, lukija.js:1835, 2010 | LehtiKuori.cs | kuori | NUI, PK |
