@@ -10,7 +10,7 @@
 //
 // Raamatun sivut ovat muokkauskenttiä: muutos elää istunnon luonnoksessa (web sessionStorage) ja lähtee
 // "Lähetä muutokset" -napilla ehdotuskanavaan lajilla raamattu (Fable kuratoi). Kehittäjälehden rivit
-// kutsuvat samoja avauksia kuin webin rivit; natiivissa ovat nyt Tilannelehti, Poiminnat, Grafiikka ja Musiikki.
+// kutsuvat samoja avauksia kuin webin rivit; natiivissa ovat nyt Tilannelehti, Poiminnat, Grafiikka, Lukijoilta (Lukijoilta.cs) ja Musiikki.
 // Fable 24.9.: Raamattu-data ei muutu appissa, luonnos ei tallennu pysyvästi, lähetys kulkee ehdotusreittiä
 // (laji raamattu) ja koko työhuone on vain kehittäjätilassa eikä App Store -buildissa (Paavalikko #if).
 using System;
@@ -30,13 +30,13 @@ namespace Matkakirja.Natiivi
         const string PelitModuuli = "moduulit/js/tyohuone-pelit.json";
         const string MaailmankarttaModuuli = "moduulit/js/packs/maailmankartta.json";
 
-        static Lehtinakyma Lehti => UiNakymat.Olemassa ? UiNakymat.Hae().Lehti : null;
+        internal static Lehtinakyma Lehti => UiNakymat.Olemassa ? UiNakymat.Hae().Lehti : null;
 
         /// <summary>Työhuone vain kehittäjätilassa eikä koskaan App Store -buildissa (Fable 24.9.).</summary>
 #if MATKAKIRJA_APPSTORE
-        static bool Sallittu => false;
+        internal static bool Sallittu => false;
 #else
-        static bool Sallittu => Asetukset.Kehittaja;
+        internal static bool Sallittu => Asetukset.Kehittaja;
 #endif
 
         /// <summary>Moduulin exportit (arvo-kääre pois); null, jos moduulia ei ole paketissa.</summary>
@@ -64,14 +64,14 @@ namespace Matkakirja.Natiivi
         static List<string> Tekstit(object x) =>
             (Rakenne.Lista(x) ?? new List<object>()).Select(o => o as string ?? "").ToList();
 
-        static LehtiSivu Sivu(string otsikko, Action<VisualElement> rakenna = null, bool jatka = false, params LehtiNosto[] nostot)
+        internal static LehtiSivu Sivu(string otsikko, Action<VisualElement> rakenna = null, bool jatka = false, params LehtiNosto[] nostot)
         {
             var aihe = new LehtiAihe { Nimi = otsikko };
             aihe.Nostot.AddRange(nostot);
             return new LehtiSivu { Laji = LehtiSivuLaji.Aihe, Aihe = aihe, Otsikko = otsikko, Rakenna = rakenna, RakennaJatka = jatka };
         }
 
-        static Label Teksti(VisualElement isa, string teksti, string luokka, Kirjasin kirjasin = Kirjasin.Luku)
+        internal static Label Teksti(VisualElement isa, string teksti, string luokka, Kirjasin kirjasin = Kirjasin.Luku)
         {
             var l = Rakenne.Teksti(teksti ?? "", luokka, isa);
             l.enableRichText = false;
@@ -264,6 +264,8 @@ namespace Matkakirja.Natiivi
                 "<rect x=\"4.5\" y=\"9\" width=\"15\" height=\"6\" rx=\"3\"/><path d=\"M12 9v6\"/>", () => AvaaTilanne(2)),
             ("Grafiikka", "Julistesuunnan luonnokset yksi juliste sivua kohti.",
                 "<path d=\"M4.5 4.5h15v15h-15z\"/><path d=\"m4.5 15.5 4.5-4.5 3.5 3.5 3-3 4 4\"/><path d=\"M9.5 8.7a.9.9 0 1 1 0 .2\"/>", () => AvaaGrafiikka()),
+            ("Lukijoilta", "Lukijoiden ehdotukset, kuvavinkit ja Raamatun muutokset.",
+                "<path d=\"M3.8 6.5h16.4v11H3.8z\"/><path d=\"m3.8 6.5 8.2 6 8.2-6\"/>", () => Lukijoilta.Avaa()),
             ("Musiikki", "Siirtymä-, linssi- ja palettiraidat sekä tehosteet kuunneltavina.",
                 "<path d=\"M9.5 17.5V6.2l9-1.7v11\"/><path d=\"M9.5 9.7l9-1.7\"/><path d=\"M9.5 17.5a2.2 2.2 0 1 1-2.2-2.2 2.2 2.2 0 0 1 2.2 2.2z\"/><path d=\"M18.5 15.5a2.2 2.2 0 1 1-2.2-2.2 2.2 2.2 0 0 1 2.2 2.2z\"/>", () => AvaaMusiikki()),
         };
