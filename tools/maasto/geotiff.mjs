@@ -23,13 +23,28 @@ const TAGIT = {
 };
 const TYYPIN_KOKO = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 11: 4, 12: 8, 16: 8 };
 
-/** Tiedosto lukijaksi: lukee vain tarvitut tavualueet (NAS on hidas kokonaisille). */
+/*
+ * Tiedosto lukijaksi: lukee vain tarvitut tavualueet (NAS on hidas kokonaisille).
+ * ALKU KERRALLA (maailma-ajo 24.9.2026): COG:n IFD:t ja tagiarvot ovat
+ * tiedoston alussa, ja niiden lukeminen pala kerrallaan oli ~20 NAS-
+ * pyyntöä ruutua kohti. Ensimmäiset 64 kt luetaan yhdellä pyynnöllä ja
+ * alkuun osuvat lukemiset palvellaan siitä.
+ */
+const ALKU = 65536;
 function tiedostonLukija(polku) {
   const fd = openSync(polku, 'r');
   const koko = fstatSync(fd).size;
+  const alku = Buffer.allocUnsafe(Math.min(ALKU, koko));
+  let alkuLuettu = 0;
+  while (alkuLuettu < alku.length) {
+    const n = readSync(fd, alku, alkuLuettu, alku.length - alkuLuettu, alkuLuettu);
+    if (n <= 0) break;
+    alkuLuettu += n;
+  }
   return {
     koko,
     lue(offset, pituus) {
+      if (offset + pituus <= alkuLuettu) return Buffer.from(alku.subarray(offset, offset + pituus));
       const b = Buffer.allocUnsafe(pituus);
       let luettu = 0;
       while (luettu < pituus) {
@@ -107,20 +122,33 @@ function lueIfdt(lukija) {
  * Liukulukuprediktorin (3) purku yhdelle ruudulle: ensin tavujen
  * vaakadifferenssi rivi kerrallaan, sitten tavutasot (big-endian:
  * ylin tavu ensin) takaisin float32:ksi.
+ *
+ * `wK` × `hK` = ruudun käytetty osa (maailma-ajo 24.9.2026): GLO-90:n
+ * ruutu on 2048², mutta kuva 1200² ja pienin overview 300², joten
+ * reunaruudusta puretaan vain kuvan sisäiset rivit ja sarakkeet. Tulos
+ * on wK × hK (rivin pituus wK); tavujen vaakasumma kulkee silti koko
+ * rivin läpi, koska tavutasot ovat rivillä peräkkäin.
  */
-export function puraLiukulukuprediktori(tavut, w, h) {
+export function puraLiukulukuprediktori(tavut, w, h, wK = w, hK = h) {
   const rivi = w * 4;
-  const ulos = new Float32Array(w * h);
-  const dv = new DataView(new ArrayBuffer(4));
-  for (let y = 0; y < h; y += 1) {
+  const ulos = new Float32Array(wK * hK);
+  // Neljä tavua float32:ksi: little-endian-koneella suoraan näkymän kautta
+  // (ylin tavu viimeiseksi), muuten DataView big-endianina.
+  const tavu4 = new Uint8Array(4);
+  const f4 = new Float32Array(tavu4.buffer);
+  const dv = new DataView(tavu4.buffer);
+  const le = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
+  const [i0, i1, i2, i3] = le ? [3, 2, 1, 0] : [0, 1, 2, 3];
+  for (let y = 0; y < hK; y += 1) {
     const o = y * rivi;
-    for (let i = 1; i < rivi; i += 1) tavut[o + i] = (tavut[o + i] + tavut[o + i - 1]) & 0xff;
-    for (let x = 0; x < w; x += 1) {
-      dv.setUint8(0, tavut[o + x]);
-      dv.setUint8(1, tavut[o + w + x]);
-      dv.setUint8(2, tavut[o + 2 * w + x]);
-      dv.setUint8(3, tavut[o + 3 * w + x]);
-      ulos[y * w + x] = dv.getFloat32(0, false);
+    let summa = tavut[o];
+    for (let i = o + 1; i < o + rivi; i += 1) { summa = (summa + tavut[i]) & 0xff; tavut[i] = summa; }
+    for (let x = 0; x < wK; x += 1) {
+      tavu4[i0] = tavut[o + x];
+      tavu4[i1] = tavut[o + w + x];
+      tavu4[i2] = tavut[o + 2 * w + x];
+      tavu4[i3] = tavut[o + 3 * w + x];
+      ulos[y * wK + x] = le ? f4[0] : dv.getFloat32(0, false);
     }
   }
   return ulos;
@@ -149,9 +177,12 @@ export function avaaGeotiff(lahde) {
     if (d) return d;
     const raaka = lukija.lue(t.offsetit[k], t.tavut[k]);
     const tavut = t.pakkaus === 1 ? Buffer.from(raaka) : inflateSync(raaka);
+    // Käytetty osa: reunaruutu ulottuu kuvan yli (pikseli() rajaa reunoihin).
+    const wK = Math.min(t.ruutuW, t.leveys - rx * t.ruutuW);
+    const hK = Math.min(t.ruutuH, t.korkeus - ry * t.ruutuH);
     d = t.prediktori === 3
-      ? puraLiukulukuprediktori(tavut, t.ruutuW, t.ruutuH)
-      : new Float32Array(tavut.buffer.slice(tavut.byteOffset, tavut.byteOffset + tavut.length));
+      ? { arvot: puraLiukulukuprediktori(tavut, t.ruutuW, t.ruutuH, wK, hK), leveys: wK }
+      : { arvot: new Float32Array(tavut.buffer.slice(tavut.byteOffset, tavut.byteOffset + tavut.length)), leveys: t.ruutuW };
     if (valimuisti.size > 24) valimuisti.delete(valimuisti.keys().next().value);
     valimuisti.set(avain, d);
     return d;
@@ -162,7 +193,7 @@ export function avaaGeotiff(lahde) {
     const x = Math.max(0, Math.min(t.leveys - 1, px));
     const y = Math.max(0, Math.min(t.korkeus - 1, py));
     const d = ruutu(ti, Math.floor(x / t.ruutuW), Math.floor(y / t.ruutuH));
-    const v = d[(y % t.ruutuH) * t.ruutuW + (x % t.ruutuW)];
+    const v = d.arvot[(y % t.ruutuH) * d.leveys + (x % t.ruutuW)];
     return (t.nodata !== null && v === t.nodata) || !Number.isFinite(v) ? 0 : v;
   };
   return {

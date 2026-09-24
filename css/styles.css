@@ -23402,6 +23402,18 @@ dialog.tekija-ikkuna:focus-visible { outline: none; }
 /* Ulkoisen linkin merkintä samalla nuolella kuin muualla pelissä. */
 .tekija-linkki::after { content: ' ↗'; text-decoration: none; }
 
+/*
+ * Lähderivin sisällä (Commons-kuvan lähde- ja lisenssilinkit, herojen
+ * pohjaviitteet 23.9.2026) linkki on osa krediittiä: rivin oma koko,
+ * kirjasin ja väri. Yllä oleva 0.9rem kuuluu tekijäkortin linkkilistalle;
+ * lähderivillä se teki linkeistä kuvatekstiä suurempia.
+ */
+.tekija-linkki:not(.tekija-linkkilista .tekija-linkki) {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
 .tekija-tila,
 .tekija-huomio {
   margin: 0.6rem 0 0;
@@ -29138,3 +29150,15 @@ body.pallolauta-kallistettu .minipopup,
 body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
   visibility: hidden;
 }
+
+/*
+ * LEHTIKUORI (js/lehtikuori.js, ?lehti=<kaupunki>): natiivin pelin
+ * web-näkymässä näkyy vain kaupunkilehti. Sovelluksen runko (.app:
+ * yläpalkki, lauta, toimintorivi) ja päivitysruutu piiloon; dialogit
+ * (lehti, artikkeli, nähtävyys, suurennos) ovat bodyn suoria lapsia ja
+ * toimivat kuten pelissä. Tausta pergamentin tumma, ettei lehden sulkeutuminen
+ * välähdä valkoisena ennen kuin natiivi sulkee näkymän.
+ */
+body.lehtikuori > .app,
+body.lehtikuori > .paivitysruutu { display: none !important; }
+body.lehtikuori { background: #2a241c; }

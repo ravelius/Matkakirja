@@ -567,9 +567,10 @@ function pullaKuittausTeksti(nimi) {
  */
 export function pullaOstosnappi(ui, kotelo, {
   hinta = PULLA_HINTA, teksti, varmistus, koyha, kelluke, tehty,
-  ostettu = false, osta, jalkeen = null,
+  ostettu = false, osta, jalkeen = null, tarjolla = null, luokka = null,
 }) {
   const rivi = html('div', 'fokus-pulla');
+  if (luokka) rivi.classList.add(luokka);
   kotelo.appendChild(rivi);
   if (ostettu) {
     rivi.appendChild(html('p', 'fokus-pulla-tehty', tehty));
@@ -601,6 +602,13 @@ export function pullaOstosnappi(ui, kotelo, {
   };
 
   nappi.addEventListener('click', () => {
+    // Tarjous vanheni rivin ollessa ruudulla (aarre avattiin muuta
+    // tietä): rivi pois, eikä rahaa veloiteta.
+    if (tarjolla && !tarjolla()) {
+      clearTimeout(ajastin);
+      rivi.remove();
+      return;
+    }
     if (!varmistusOdottaa) {
       varmistusOdottaa = true;
       paivita();
@@ -654,6 +662,24 @@ function pullaTarjolla(ui, city) {
   return !aarreAuki(ui, city);
 }
 
+/** Aarteen pullatarjouksen rivin luokka (siivoaPullatarjous löytää sen). */
+const PULLA_AARRERIVI = 'fokus-pulla-aarre';
+
+/**
+ * TARJOUS POIS, KUN AARRE AVATTIIN MUUTA TIETÄ (omistaja 23.9.2026,
+ * sama kuin natiivissa). Lehti ei piirrä itseään uudelleen vastauksen
+ * jälkeen (koko render() sulkisi sen), joten ratkaistun aarretehtävän
+ * alle jäi ostettava pullarivi — ja sillä pystyi maksamaan jo avatusta
+ * aarteesta. Rivit, joissa on yhä ostonappi, poistetaan heti; jo
+ * ostetun pullan kuittausrivi jää.
+ */
+function siivoaPullatarjous(ui, city) {
+  if (typeof document === 'undefined' || pullaTarjolla(ui, city)) return;
+  for (const rivi of document.querySelectorAll(`.${PULLA_AARRERIVI}`)) {
+    if (rivi.querySelector('.fokus-pulla-nappi')) rivi.remove();
+  }
+}
+
 /**
  * TARJOUSRIVI LAATIKON LOPPUUN — nappi ja Livian ääni.
  *
@@ -667,6 +693,8 @@ function piirraPullaOstos(ui, city, kotelo, aarreAvattiin) {
   if (!pullaTarjolla(ui, city)) return null;
   const nimi = pullanNimi(ui, city);
   return pullaOstosnappi(ui, kotelo, {
+    tarjolla: () => pullaTarjolla(ui, city),
+    luokka: PULLA_AARRERIVI,
     hinta: PULLA_HINTA,
     teksti: pullaNapinTeksti(nimi),
     varmistus: pullaVarmistusTeksti(nimi),
@@ -1016,6 +1044,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * voisi ehtiä katsoa karttaa sitä ennen.
        */
       if (oikein && avaaAarteen(tehtava)) ui.paivitaFokuspiste?.();
+      if (oikein) siivoaPullatarjous(ui, city);
       /*
        * PÖLLÖ KERTOO PALKINNOSTA VIIMEISENÄ. Kupla nousee pöllönapista
        * lehden päälle, ja se on tässä vasta kaiken muun jälkeen kahdesta
@@ -1173,6 +1202,7 @@ function visaanVastattiin(ui, city, oikein) {
   ui.arrivalKulttuuriVisa?.classList.remove('fokus-visa-aarre');
   ui.arrivalKulttuuriVisa?.querySelector('.fokus-tehtava-vihje')?.remove();
   if (!oikein) return;
+  siivoaPullatarjous(ui, city);
   // Sama järjestys kuin nimetyssä tehtävässä: piste ensin kartalle,
   // vasta sitten pöllö — kupla ei saa luvata mitään, mitä siellä ei ole.
   ui.paivitaFokuspiste?.();
