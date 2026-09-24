@@ -4626,4 +4626,78 @@ export const SAATIEDOT = {
       + '(joulu–helmikuu) pysyy 20 asteessa, talvi (kesä–heinäkuu) '
       + 'laskee reiluun viiteentoista. Sadekausi on loka–maaliskuu.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N8-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain angola,caphorn,namib,norfolk,robinsoncrusoe. Asemat: Luanda
+   * (Angola), Kap Horn, Sesriem (Namib), Norfolkinsaaren Kingston,
+   * San Juan Bautista (Robinson Crusoe / Juan Fernández).
+   */
+  angola: {
+    lat: -8.8390,
+    lon: 13.2894,
+    keskilampo: [26.7, 27.5, 27.7, 26.7, 25.8, 23.6, 21.2, 21.3, 22.7, 24.6, 25.8, 26],
+    ylin: [31, 32, 32, 30, 30, 28, 26, 26, 27, 28, 29, 29],
+    alin: [23, 23, 24, 24, 22, 19, 17, 17, 19, 21, 22, 23],
+    sade: [46, 63, 32, 106, 3, 0, 0, 2, 3, 12, 57, 28],
+    luonnehdinta: 'Angolan rannikolla Benguelan kylmä virta pitää '
+      + 'ilman kuivana huolimatta trooppisesta leveysasteesta: '
+      + 'kesä–elokuu on sateeton. Huhtikuu on sateisin, ja '
+      + 'lämpötila pysyy koko vuoden 21–28 asteessa.',
+  },
+  caphorn: {
+    lat: -55.9833,
+    lon: -67.2833,
+    keskilampo: [8.6, 8.5, 8.1, 7.4, 6, 4.2, 4, 4.3, 4.2, 5.6, 6.3, 7.3],
+    ylin: [9, 10, 9, 9, 7, 5, 5, 5, 5, 7, 8, 8],
+    alin: [8, 7, 7, 6, 5, 3, 3, 3, 3, 5, 5, 6],
+    sade: [117, 112, 145, 123, 115, 97, 71, 130, 85, 94, 118, 92],
+    luonnehdinta: 'Kap Hornissa on kylmää ja tuulista ympäri '
+      + 'vuoden, keskilämpö vain 4–9 astetta. Sadetta kertyy '
+      + 'joka kuukausi runsaasti, elokuussa yli 130 millimetriä.',
+  },
+  namib: {
+    lat: -24.5,
+    lon: 15.8,
+    keskilampo: [26.7, 26.3, 25.8, 23.5, 20.3, 17.3, 17.3, 17.2, 22.2, 23.5, 24.7, 25.4],
+    ylin: [34, 34, 33, 31, 28, 25, 25, 26, 31, 32, 33, 34],
+    alin: [19, 19, 18, 16, 12, 10, 9, 9, 13, 15, 16, 16],
+    sade: [19, 32, 4, 19, 5, 0, 1, 0, 1, 1, 2, 1],
+    luonnehdinta: 'Namibin aavikossa kesä (joulu–maaliskuu) on '
+      + 'polttava, yli 26 astetta, ja talvi (kesä–elokuu) laskee '
+      + 'reiluun seitsemääntoista. Sadetta ei käytännössä ole '
+      + 'toukokuusta marraskuuhun.',
+  },
+  /*
+   * NORFOLK: Open-Meteon ERA5-ruutu osuu tälle pienelle (n. 8 km)
+   * saarelle enimmäkseen mereen, jolloin vuorokauden vaihteluväli
+   * painui epäuskottavan kapeaksi (tools/hae-saanormaalit.mjs merkitsi
+   * rivin "TARKISTA"). Käytetty siksi Norfolk Island Airport -aseman
+   * omaa normaalia en-Wikipediasta (24.9.2026).
+   */
+  norfolk: {
+    lat: -29.0408,
+    lon: 167.9547,
+    keskilampo: [22.2, 22.8, 22, 20.5, 18.8, 17.2, 16.3, 16, 16.9, 17.8, 19.2, 20.9],
+    ylin: [25, 25, 25, 23, 21, 19, 19, 19, 19, 20, 22, 24],
+    alin: [20, 20, 20, 18, 17, 15, 14, 14, 14, 15, 16, 18],
+    sade: [80, 87, 107, 95, 102, 121, 123, 100, 78, 62, 72, 84],
+    lahde: { nimi: 'en-Wikipedia, Norfolk Island Airport -normaali', kausi: '1991–2020' },
+    luonnehdinta: 'Norfolkinsaarella ilmasto on leuto ympäri '
+      + 'vuoden, 14–25 asteessa. Sadetta riittää joka kuukausi, '
+      + 'runsaimmin touko–heinäkuussa.',
+  },
+  robinsoncrusoe: {
+    lat: -33.6333,
+    lon: -78.8333,
+    keskilampo: [17.3, 17.7, 18.1, 16.8, 15.4, 14.4, 13.2, 12.4, 12.2, 12.6, 13.7, 15.9],
+    ylin: [18, 18, 19, 17, 16, 15, 14, 13, 13, 13, 14, 16],
+    alin: [17, 17, 18, 16, 15, 14, 13, 12, 12, 12, 13, 15],
+    sade: [2, 5, 15, 25, 34, 71, 35, 38, 12, 7, 4, 5],
+    luonnehdinta: 'Robinson Crusoen saarella kesä (tammi–maaliskuu) '
+      + 'on lämpimin ja kuivin, 17–18 astetta. Sadetta kertyy '
+      + 'eniten eteläisenä talvena, kesäkuussa yli 70 millimetriä.',
+  },
 };
