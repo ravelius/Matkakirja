@@ -8,14 +8,22 @@ namespace Matkakirja
 {
     /// <summary>
     /// Verkkopelin sisältöpaketti ämpäristä (Siirtoseppä, tools/vienti):
-    /// sisalto/1/uusin.json → polku (esim. sisalto/1/v1/) → kokoelmat/*.json.
+    /// sisalto/&lt;pääversio&gt;/uusin.json → polku (esim. sisalto/1/v15/) → kokoelmat/*.json.
     /// Versiokansiot ovat muuttumattomia, joten haettu kokoelma tallennetaan
     /// laitteelle ja luetaan sieltä, jos verkkoa ei ole.
     /// </summary>
     public static class Sisalto
     {
         public const string Juuri = "https://media.matkakirja.app/";
-        public const string Osoitin = Juuri + "sisalto/1/uusin.json";
+        /// <summary>
+        /// Paketin pääversio: 1 = verkkopelin kanssa jaettu (tuotanto), 2 = 2.0 (sisalto/2/, ei data-kenttää).
+        /// Vaihto 2:een on Fablen päätös, kun 2.0 on ämpärissä. Kokeiluun Documents/sisalto-2.txt valitsee 2:n.
+        /// </summary>
+        public const int Paaversio = 1;
+        public static int ValittuPaaversio =>
+            File.Exists(Path.Combine(Application.persistentDataPath, "sisalto-2.txt")) ? 2 : Paaversio;
+        /// <summary>Osoitin sisalto/&lt;pääversio&gt;/uusin.json (kaikki lukijat hakevat sen tästä).</summary>
+        public static string Osoitin => Juuri + $"sisalto/{ValittuPaaversio}/uusin.json";
 
         [Serializable]
         public class OsoitinTiedot

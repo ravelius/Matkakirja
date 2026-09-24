@@ -62,9 +62,10 @@ namespace Matkakirja
                     lat = MiniJson.Luku(k, "lat") ?? 0,
                     lon = MiniJson.Luku(k, "lon") ?? 0,
                 };
-                // Laudan piste (raakaolio data): reitin polku lasketaan siitä kuten verkkopelissä.
-                if (MiniJson.Kentta(k, "data") is Dictionary<string, object> d &&
-                    MiniJson.Luku(d, "x") is double x && MiniJson.Luku(d, "y") is double y)
+                // Laudan piste: päätason lauta {x, y} (1.26+, 2.0), vanhassa paketissa raaka data.x/y.
+                // Reitin polku lasketaan siitä kuten verkkopelissä.
+                var lauta = MiniJson.Kentta(k, "lauta") as Dictionary<string, object> ?? Paataso.Raaka(k);
+                if (lauta != null && MiniJson.Luku(lauta, "x") is double x && MiniJson.Luku(lauta, "y") is double y)
                 {
                     c.lauta = new double2(x, y);
                     c.lautaOn = true;
@@ -74,16 +75,17 @@ namespace Matkakirja
             foreach (var o in reittiAlkiot)
             {
                 if (!(o is Dictionary<string, object> r)) continue;
-                var d = MiniJson.Kentta(r, "data") as Dictionary<string, object>;
+                // Päätaso ensin (laji "maa"/"sea"/"lento", via), raaka data vain vanhassa paketissa (Paataso).
+                var d = Paataso.Raaka(r);
                 var reitti = new Reitti
                 {
                     id = MiniJson.Teksti(r, "id"),
                     laji = MiniJson.Teksti(r, "laji"),
                     a = MiniJson.Teksti(r, "a"),
                     b = MiniJson.Teksti(r, "b"),
-                    tyyppi = d != null ? MiniJson.Teksti(d, "type") : null,
+                    tyyppi = MiniJson.Teksti(r, "laji") == "sea" ? "sea" : d != null ? MiniJson.Teksti(d, "type") : null,
                 };
-                if (d != null && MiniJson.Kentta(d, "via") is List<object> via)
+                if ((MiniJson.Kentta(r, "via") ?? (d != null ? MiniJson.Kentta(d, "via") : null)) is List<object> via && via.Count > 0)
                 {
                     reitti.via = new List<double2>();
                     foreach (var v in via)
