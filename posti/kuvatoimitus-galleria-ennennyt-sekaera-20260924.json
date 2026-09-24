@@ -1,0 +1,293 @@
+{
+  "sourceOrder": "posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md",
+  "images": [
+    {
+      "cityId": "sahara",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/sahara-galleria.jpg",
+      "sha256": "0a2c63910ab2b4db141fda774467afabf6d5f041429cd441f8c34876d7810f7f",
+      "tavut": 1105672,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1333
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Mammaliatheirva00figu_orig_0254.png",
+      "tekija": "Albin Mesnel, Édouard Riou ym.",
+      "vuosi": "1870",
+      "lisenssi": "Public domain",
+      "attribuutio": "Albin Mesnel, Édouard Riou ym.; https://commons.wikimedia.org/wiki/File:Mammaliatheirva00figu_orig_0254.png; Public domain",
+      "kuvateksti-ehdotus": "Vuoden 1870 kirjankuvitus kuvaa karavaania Saharan aavikolla.",
+      "sourceDownloadedSha256": "3adcd61b9ff153aa1a0fa9b3a9f93f41f59d00dc562147f5f67ab6e7a54d6093",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Mammaliatheirva00figu_orig_0254.png/1920px-Mammaliatheirva00figu_orig_0254.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "sahara",
+      "tyyppi": "ennenNyt",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/ennennyt/sahara-ennennyt.jpg",
+      "sha256": "4eae083d2fa695283fea24a43dab5185288c74389853924056f38d4c8cc03fd8",
+      "tavut": 200889,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 730
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg",
+      "tekija": "tuntematon valokuvaaja",
+      "vuosi": "1920–1950",
+      "lisenssi": "Public domain",
+      "attribuutio": "tuntematon valokuvaaja; https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuosien 1920–1950 välillä otettu valokuva näyttää Saharan erg-tyyppistä dyynialuetta.",
+      "sourceDownloadedSha256": "ae8cee8b00a058c71e458057a86641ea6e00297c65693bb5671fd5121be915e0",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/D%C3%BCnenw%C3%BCste_oder_Erg%2C_Sahara_1920-50.jpg/1280px-D%C3%BCnenw%C3%BCste_oder_Erg%2C_Sahara_1920-50.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "appalakit",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/appalakit-galleria.jpg",
+      "sha256": "e75728a0f73de4c45a3beb495833b0d21e0dd13d30133d55589e4f740cf50e86",
+      "tavut": 210352,
+      "mitat": {
+        "leveys": 1100,
+        "korkeus": 693
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Shenandoah_Valley_William_Louis_Sonntag.jpeg",
+      "tekija": "William Louis Sonntag",
+      "vuosi": "1859–1860",
+      "lisenssi": "Public domain",
+      "attribuutio": "William Louis Sonntag; https://commons.wikimedia.org/wiki/File:Shenandoah_Valley_William_Louis_Sonntag.jpeg; Public domain",
+      "kuvateksti-ehdotus": "William Louis Sonntag maalasi Shenandoahin laakson Appalakkien keskellä vuosina 1859–1860.",
+      "sourceDownloadedSha256": "54ab4496f482e1e655b1d11dee436b891950b23c78f8213c0ff4763179aa3bfd",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Shenandoah_Valley_William_Louis_Sonntag.jpeg/960px-Shenandoah_Valley_William_Louis_Sonntag.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "labrador",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/labrador-galleria.jpg",
+      "sha256": "a144f4a2431a05e08a3cee7f47b627cae77700b9dee5b9285378464ae1760450",
+      "tavut": 551005,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1134
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:William_Bradford_-_The_Coast_of_Labrador_-_1983.529_-_Art_Institute_of_Chicago.jpg",
+      "tekija": "William Bradford",
+      "vuosi": "1866",
+      "lisenssi": "Public domain",
+      "attribuutio": "William Bradford; https://commons.wikimedia.org/wiki/File:William_Bradford_-_The_Coast_of_Labrador_-_1983.529_-_Art_Institute_of_Chicago.jpg; Public domain",
+      "kuvateksti-ehdotus": "William Bradfordin vuoden 1866 maalaus kuvaa Labradorin rannikkoa.",
+      "sourceDownloadedSha256": "b190d7075b268e87f86dfe9b3db21d86c76755faf437c9c049393d1373196d01",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/William_Bradford_-_The_Coast_of_Labrador_-_1983.529_-_Art_Institute_of_Chicago.jpg/1920px-William_Bradford_-_The_Coast_of_Labrador_-_1983.529_-_Art_Institute_of_Chicago.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "sthelena",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/sthelena-galleria.jpg",
+      "sha256": "c7fb9c69dff9a60799a47340bc5e842df74033fc873eae631064628037396928",
+      "tavut": 269544,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 609
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:View_of_James_Town_and_the_harbour,_Saint_Helena_taken_from_the_Harbour_Master's_Office_during_the_Rollers_of_the_17th_February_1846,_on_which_day_thirteen_vessels_were_wrecked.jpg",
+      "tekija": "tuntematon litografi",
+      "vuosi": "1846",
+      "lisenssi": "Public domain",
+      "attribuutio": "tuntematon litografi; https://commons.wikimedia.org/wiki/File:View_of_James_Town_and_the_harbour,_Saint_Helena_taken_from_the_Harbour_Master's_Office_during_the_Rollers_of_the_17th_February_1846,_on_which_day_thirteen_vessels_were_wrecked.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuoden 1846 litografia esittää Jamestownin satamaa myrskypäivänä, jolloin kolmetoista alusta haaksirikkoutui.",
+      "sourceDownloadedSha256": "226e0a48c6d7e2a35ac9028d6224e3e8b800dfc201aff6818f9d6065cfc89c32",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/View_of_James_Town_and_the_harbour%2C_Saint_Helena_taken_from_the_Harbour_Master%27s_Office_during_the_Rollers_of_the_17th_February_1846%2C_on_which_day_thirteen_vessels_were_wrecked.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "cayenne",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/cayenne-galleria.jpg",
+      "sha256": "5fbc47ccd2fda7153a96b27cc2f4d842d8516dc39c28659c143d430205072bf5",
+      "tavut": 870922,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1253
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Vue_de_la_Rivi%C3%A8re_et_de_l'Isle_de_Cayenne_-_c'est_en_cet_endroit_que_doit_se_rendre_la_nouvelle_colonie_fran%C3%A7oise_pour_y_occuper_principalement_les_belles_plaines_situ%C3%A9es_entre_les_rivieres_de_Marauny,_d'Amaribo_et..._-_btv1b69494998.jpg",
+      "tekija": "tuntematon kaivertaja",
+      "vuosi": "n. 1760",
+      "lisenssi": "Public domain",
+      "attribuutio": "tuntematon kaivertaja; https://commons.wikimedia.org/wiki/File:Vue_de_la_Rivi%C3%A8re_et_de_l'Isle_de_Cayenne_-_c'est_en_cet_endroit_que_doit_se_rendre_la_nouvelle_colonie_fran%C3%A7oise_pour_y_occuper_principalement_les_belles_plaines_situ%C3%A9es_entre_les_rivieres_de_Marauny,_d'Amaribo_et..._-_btv1b69494998.jpg; Public domain",
+      "kuvateksti-ehdotus": "Noin vuonna 1760 tehty kaiverrus esittää Cayennejoen suuta ranskalaisen siirtomaasuunnitelman näkökulmasta.",
+      "sourceDownloadedSha256": "deaec4b4c9c4d0995d8c9d6ebf135b1f678b4ee5e6a5fd6270edec62d43d9cd6",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Vue_de_la_Rivi%C3%A8re_et_de_l%27Isle_de_Cayenne_-_c%27est_en_cet_endroit_que_doit_se_rendre_la_nouvelle_colonie_fran%C3%A7oise_pour_y_occuper_principalement_les_belles_plaines_situ%C3%A9es_entre_les_rivieres_de_Marauny%2C_d%27Amaribo_et..._-_btv1b69494998.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "orjarannikko",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/orjarannikko-galleria.jpg",
+      "sha256": "2ba8af4aa8db0eea9cffbc516b43a0108e1df35e63c6edb3ca98980264651ae1",
+      "tavut": 183162,
+      "mitat": {
+        "leveys": 1280,
+        "korkeus": 670
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Fort_of_S%C3%A3o_Jo%C3%A3o_Baptista_de_Ajud%C3%A1_(1890).jpg",
+      "tekija": "tuntematon ranskalainen meriupseeri",
+      "vuosi": "1890",
+      "lisenssi": "Public domain",
+      "attribuutio": "tuntematon ranskalainen meriupseeri; https://commons.wikimedia.org/wiki/File:Fort_of_S%C3%A3o_Jo%C3%A3o_Baptista_de_Ajud%C3%A1_(1890).jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuoden 1890 dokumentaarinen piirros näyttää Ouidahin portugalilaisen linnakkeen siirtomaavallan aikana.",
+      "sourceDownloadedSha256": "a9fca936f4a2e73322f9cd1651fe8e2c8c5fb600cf71f156d160a091a1fae180",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Fort_of_S%C3%A3o_Jo%C3%A3o_Baptista_de_Ajud%C3%A1_%281890%29.jpg/1280px-Fort_of_S%C3%A3o_Jo%C3%A3o_Baptista_de_Ajud%C3%A1_%281890%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "murzuk",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/murzuk-galleria.jpg",
+      "sha256": "45931f75f213a6bbd316a99ca6465bad48784aa8a86abdfcf58618aef70c09b7",
+      "tavut": 638253,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1243
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:AFR_V2_D101_General_view_of_Murzuk.jpg",
+      "tekija": "Élisée Reclusin teoksen kuvittaja",
+      "vuosi": "1891",
+      "lisenssi": "Public domain",
+      "attribuutio": "Élisée Reclusin teoksen kuvittaja; https://commons.wikimedia.org/wiki/File:AFR_V2_D101_General_view_of_Murzuk.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuonna 1891 julkaistu kaiverrus kuvaa Murzukin keidaskaupunkia Fezzanissa.",
+      "sourceDownloadedSha256": "25424d33c86683327f66c2c3f313f537599bb3e5a25e984f69a77abb4adbdb6f",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/AFR_V2_D101_General_view_of_Murzuk.jpg/1920px-AFR_V2_D101_General_view_of_Murzuk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "alkufra",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/alkufra-galleria.jpg",
+      "sha256": "2b5b0e2dd88f499d9b362235cf75e497884c24b166ab199f0760451bfb873ab2",
+      "tavut": 692086,
+      "mitat": {
+        "leveys": 1236,
+        "korkeus": 1800
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:AFR_V2_D046_The_Kufra_oasis.jpg",
+      "tekija": "Élisée Reclusin teoksen kuvittaja",
+      "vuosi": "1891",
+      "lisenssi": "Public domain",
+      "attribuutio": "Élisée Reclusin teoksen kuvittaja; https://commons.wikimedia.org/wiki/File:AFR_V2_D046_The_Kufra_oasis.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuonna 1891 julkaistu kuvitus näyttää Kufran keitaan Libyan aavikolla.",
+      "sourceDownloadedSha256": "c057d9b60550909a01ba49ff2cebaaf212b6c55dd21354f421915797ef1434aa",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/AFR_V2_D046_The_Kufra_oasis.jpg/1920px-AFR_V2_D046_The_Kufra_oasis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "kongo",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/kongo-galleria.jpg",
+      "sha256": "fb1347fbf6bc15c102fb2b50265954712f305dbee31292d4e81445533f7cd9a8",
+      "tavut": 971165,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1414
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:View_of_the_Congo_river_and_a_corner_of_the_Matadi_market,_work_by_Alfred_Bastien,_1913,_Prints_Department_of_the_Royal_Library_of_Belgium_(KBR),_S.I_24227.jpeg",
+      "tekija": "Alfred Bastien",
+      "vuosi": "1913",
+      "lisenssi": "Public domain",
+      "attribuutio": "Alfred Bastien; https://commons.wikimedia.org/wiki/File:View_of_the_Congo_river_and_a_corner_of_the_Matadi_market,_work_by_Alfred_Bastien,_1913,_Prints_Department_of_the_Royal_Library_of_Belgium_(KBR),_S.I_24227.jpeg; Public domain",
+      "kuvateksti-ehdotus": "Alfred Bastienin vuoden 1913 siirtomaanäyttelyyn tehty painokuva esittää Kongojoen rantaa ja Matadin markkinaa eurooppalaisen näyttelykatseen kautta.",
+      "sourceDownloadedSha256": "f80766ae3d8881aaea4712ecd92f52da26560261d1e17f37c1f2d0156c6f72aa",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/View_of_the_Congo_river_and_a_corner_of_the_Matadi_market%2C_work_by_Alfred_Bastien%2C_1913%2C_Prints_Department_of_the_Royal_Library_of_Belgium_%28KBR%29%2C_S.I_24227.jpeg/1920px-View_of_the_Congo_river_and_a_corner_of_the_Matadi_market%2C_work_by_Alfred_Bastien%2C_1913%2C_Prints_Department_of_the_Royal_Library_of_Belgium_%28KBR%29%2C_S.I_24227.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "madagaskar",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/madagaskar-galleria.jpg",
+      "sha256": "46f5dc429a28cd845728c0597840abf872a0408406eaf7421c5af5e359aa3e48",
+      "tavut": 424284,
+      "mitat": {
+        "leveys": 1280,
+        "korkeus": 829
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Sikidy,_Tananarive,_Painting.webp",
+      "tekija": "Henri Ratova",
+      "vuosi": "1912",
+      "lisenssi": "Public domain",
+      "attribuutio": "Henri Ratova; https://commons.wikimedia.org/wiki/File:Sikidy,_Tananarive,_Painting.webp; Public domain",
+      "kuvateksti-ehdotus": "Henri Ratovan vuonna 1912 Tananarivessa maalaama kohtaus esittää sikidy-ennustamista.",
+      "sourceDownloadedSha256": "cba4361271393ba46346ff54a36abf70a967724b0f73e52192db5a1efed0fe34",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Sikidy%2C_Tananarive%2C_Painting.webp/1280px-Sikidy%2C_Tananarive%2C_Painting.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "titicaca",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/titicaca-galleria.jpg",
+      "sha256": "d650dc866b21ee9da7809cad1a0cbbf001af9a6b9dcec6d57e98316c04ccbf39",
+      "tavut": 722193,
+      "mitat": {
+        "leveys": 1450,
+        "korkeus": 1800
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Llamas_traversing_the_Andes_laden_with_silver_Titicaca_balsa_off_Puno_-_-_sketched_by_L._Gibbon_%3B_JQ_%3B_lith._of_P.S._Duval_%26_Co._Philada._LCCN2014649307.jpg",
+      "tekija": "L. Gibbon; P. S. Duval & Co.",
+      "vuosi": "1853",
+      "lisenssi": "Public domain",
+      "attribuutio": "L. Gibbon; P. S. Duval & Co.; https://commons.wikimedia.org/wiki/File:Llamas_traversing_the_Andes_laden_with_silver_Titicaca_balsa_off_Puno_-_-_sketched_by_L._Gibbon_%3B_JQ_%3B_lith._of_P.S._Duval_%26_Co._Philada._LCCN2014649307.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuoden 1853 retkikuntalitografia näyttää Titicacajärven balsalautan Punon edustalla.",
+      "sourceDownloadedSha256": "0e9b11001c64f80049456e6315a506a84671263ff52fd0a636f60e4672be4a5b",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Llamas_traversing_the_Andes_laden_with_silver_Titicaca_balsa_off_Puno_-_-_sketched_by_L._Gibbon_%3B_JQ_%3B_lith._of_P.S._Duval_%26_Co._Philada._LCCN2014649307.jpg/1920px-Llamas_traversing_the_Andes_laden_with_silver_Titicaca_balsa_off_Puno_-_-_sketched_by_L._Gibbon_%3B_JQ_%3B_lith._of_P.S._Duval_%26_Co._Philada._LCCN2014649307.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "mountrushmore",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/mountrushmore-galleria.jpg",
+      "sha256": "e1815b7d378e70c76f2d578d3f49947acaf228c7c433d5d1d2ab84910153938c",
+      "tavut": 559634,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 1178
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Franklin_De_Haven_-_Castle_Creek_Canyon,_South_Dakota_-_1913.6.2_-_Smithsonian_American_Art_Museum.jpg",
+      "tekija": "Franklin De Haven",
+      "vuosi": "1912",
+      "lisenssi": "Public domain",
+      "attribuutio": "Franklin De Haven; https://commons.wikimedia.org/wiki/File:Franklin_De_Haven_-_Castle_Creek_Canyon,_South_Dakota_-_1913.6.2_-_Smithsonian_American_Art_Museum.jpg; Public domain",
+      "kuvateksti-ehdotus": "Franklin De Haven maalasi Black Hillsin Castle Creek Canyonin ennen Mount Rushmoren veistotöitä.",
+      "sourceDownloadedSha256": "8c2cfdc1d2fbb3213ac327ff2ec0d837b3a5c3e3a81f0844b9b9cb610dd2fe97",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Franklin_De_Haven_-_Castle_Creek_Canyon%2C_South_Dakota_-_1913.6.2_-_Smithsonian_American_Art_Museum.jpg/960px-Franklin_De_Haven_-_Castle_Creek_Canyon%2C_South_Dakota_-_1913.6.2_-_Smithsonian_American_Art_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    },
+    {
+      "cityId": "hawaii",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/hawaii-galleria.jpg",
+      "sha256": "31929a6bd425a3a15afe50fb17f42cd18f23b51fc55b8f8f586e8a2995e8bc58",
+      "tavut": 356992,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 626
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:Jules_Tavernier_(1844-1889)_-_'An_Eruption,_Hawaii',_c._late_1880s,_oil_on_canvas.jpg",
+      "tekija": "Jules Tavernier",
+      "vuosi": "1880-luvun loppu",
+      "lisenssi": "Public domain",
+      "attribuutio": "Jules Tavernier; https://commons.wikimedia.org/wiki/File:Jules_Tavernier_(1844-1889)_-_'An_Eruption,_Hawaii',_c._late_1880s,_oil_on_canvas.jpg; Public domain",
+      "kuvateksti-ehdotus": "Jules Tavernierin 1880-luvun lopun öljymaalaus kuvaa tulivuorenpurkausta Havaijilla.",
+      "sourceDownloadedSha256": "b4daee6dd97a3bf2a5f611c254bcca683d8d2e3772c81f4a8672d566587fbea7",
+      "sourceVariantUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Jules_Tavernier_%281844-1889%29_-_%27An_Eruption%2C_Hawaii%27%2C_c._late_1880s%2C_oil_on_canvas.jpg/1920px-Jules_Tavernier_%281844-1889%29_-_%27An_Eruption%2C_Hawaii%27%2C_c._late_1880s%2C_oil_on_canvas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    }
+  ],
+  "unfound": [
+    {
+      "cityId": "bahrelghazal",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Commonsista, Sudan Archiven hakemistoista ja 1800-luvun matkakertomuksista ei löytynyt varmennettua juuri Bahr el Ghazalin paikkaa esittävää PD/CC-taideteosta; kartat ja yleiset etnografiakuvat jätettiin pois."
+    }
+  ]
+}

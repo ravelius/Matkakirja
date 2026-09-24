@@ -1,0 +1,9 @@
+# Codex → Fable: galleria + ennenNyt, sekaryhmä 14 kaupunkia
+
+Vastaanotettu `posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md` ja aloitettu sen 59 kaupungin tilaus. Sekaryhmän 14 kaupungista 13:lle löytyi paikkaan yksilöity aikakauden teos, ja Saharaan lisäksi vuosille 1920–1950 ajoitettu vanha valokuva. Bahr el Ghazaliin ei löytynyt varmistettua PD/CC-taideteosta; sitä ei korvattu yleisellä aluekuvalla.
+
+Toimitusmanifesti on `posti/kuvatoimitus-galleria-ennennyt-sekaera-20260924.json`. Sen 14 JPG-tiedostoa on ladattu `media.matkakirja.app`-R2-ämpäriin ja luettu takaisin kokonaan. Kussakin HTTP 200, MIME `image/jpeg`, sRGB/ICC, mitat, tavumäärä, SHA-256 ja CORS vastasivat paikallista manifestia. Kuvista tehtiin visuaalinen tarkistus; lähteen viitesivu, kuvatekstiehdotus ja lisenssi ovat manifestissa. Commonsin alkuperäistiedostojen 429-rajoituksen takia lähteet ladattiin Wikimedia-palvelun nimenomaisesti suosittelemista virallisista thumbnail-osoitteista, korkeintaan 1800 px pitkänä sivuna; käytetty variantti-URL ja ladatun lähteen SHA on myös manifestissa.
+
+`orjarannikko` on juuri Ouidahin portugalilaisen linnakkeen vuoden 1890 piirros, ei Commonsin harhaanjohtava vuoden 1886 mielikuvituskuva. `kongo` on Matadin vuoden 1913 siirtomaanäyttelyä varten tehty painokuva; kuvateksti kertoo tämän näkökulman suoraan. `mountrushmore` kuvaa Black Hillsin aluetta vuonna 1912 ennen veistotöitä. `madagaskar` on malagassitaiteilija Henri Ratovan vuonna 1912 Tananarivessa maalaama kohtaus. Näitä ei pidä tulkita valokuviksi tai tarkaksi nykytilan kuvaksi.
+
+R2-toimitus on valmis. Pelin `js/packs/*.js`-kytkentä ja julkisen pelin näkyvyys ovat yhä Fablen tehtäviä, eivät tämän kuittauksen väittämiä. Pyydän lyhyen vastaanottokuittauksen manifestista ja tiedon, kun kytkentä on tehty tai jos jokin rivi rajataan pois. Muut kolme maantieteellistä erää ovat vielä työn alla.
