@@ -102,7 +102,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | Web-nappi/toiminto | Natiivi | Tila | Mitattu webistä (px/zoomikynnys) |
 |---|---|---|---|
 | Linssivalitsin (lista + kuvaukset) | Sama, testattu tänään sekä iPhonella että iPadilla | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Topografialinssi | **KORJAUS: rivi 30:n aiempi PASS oli väärä** — kuvassa LINSSIT-lista oli yhä auki, itse linssi ei koskaan avautunut iPadilla (kosketus ei rekisteröitynyt). EI vielä uudelleentestattu oikealla kosketuksella. | EI TARKISTETTU (peruttu) | EI (linssi ei ollut edes auki) |
+| Topografialinssi | **UUDELLEENTESTATTU JA VAHVISTETTU** (Laitetestaaja, 24.9. klo 23.4x, oikealla `linssi topografia` -komennolla, EI `ui linssi`-esimerkillä joka aiheutti Pelikoodarin löytämän desyncin): topo-reliefikartta + "TOPOGRAFIALINSSI"-otsikkochippi + sulkunappi + ☰-valikko, sama asettelu kuin webissä. Kuvapari `natiivi-topografialinssi-iphone.png` vs. olemassa oleva `linssi-topografia-393x852.png`. | SAMA (korjattu, mitattu) | **KYLLÄ** (kuvapari, ks. proto-3d/lokit/pariteetti-web-2026-09-24/) |
 | Isoisän linssi 1873 | Listassa näkyy, ei testattu sisältöä tänään | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | Vesistölinssi | Sama jokiviivat, testattu useaan otteeseen (rivi 31, PASS + tämän kierroksen web-korjaus vahvistettu) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Keksintölinssi (karuselli) | Sama pallo+vuosi+Tauko-rakenne (rivi 11/40); web ja natiivi pysähtyvät eri vuoteen (odotettua) | SAMA (rakenne) | EI (rakennevertailu, ei pikselimitattu) |
@@ -225,3 +225,31 @@ web-vastineita ei saatu auki suoralla funktiokutsulla eikä synteettisellä
 klikkauksella tässä kierroksessa (`avaaKohtaamistesti`/`avaaJulisteGalleria`
 eivät reagoineet odotetusti) — natiivipuoli on silti vahvistettu
 komennolla/kosketuksella, vain web-mitta puuttuu näiltä kahdelta.
+
+**PÄIVITYS 4 (Laitetestaaja, uusi sessio 24.9. klo 23.2x–23.5x):**
+Pelikoodari korjasi pariteetti-ajo.mjs:n desync-bugin (b12g-1:n rivi 39
+-löydöksestä, ks. edellisen session luovutus) ja ajaa toisen kierroksen
+(b12-2) omilla simulaattoreillaan — ei enää tarvitse minun simejäni,
+odotetaan valmistumisilmoitusta ennen Build 11/12 -mittaustilauksen
+jatkoa. Sillä välin: **Topografialinssi uudelleentestattu ja
+VAHVISTETTU** (rivi päivitetty yllä) oikealla `linssi topografia`
+-komennolla (ei `ui linssi`-esimerkkikomennolla, joka aiheutti aiemman
+desyncin) — kuvapari täsmää. Julisterivi avautui uudelleen sekä webissä
+(interaktiivinen selain, oikea klikkaus laukku→Matkan tilastot→
+Julisteet) että natiivissa manuaalisesti aiemmin tänään; tälle
+kierrokselle en kuitenkaan saanut UUTTA natiivi-kuvaparia — kolme
+peräkkäistä `tap`-komentoa samaan JULISTEET-riviin (napautus laukun
+ollessa jo auki) ei rekisteröitynyt UI:hin näkyvästi, kunnes seuraava
+täysin erillinen tap (☰-alueelle) paljasti taustalla jo auki olleen
+topografialinssin — **mahdollinen näytön päivitysviive tai kosketuksen
+rekisteröintiongelma laukku-paneelissa, ei vielä varmistettu bugiksi**;
+Pelikoodarin/Natiivi-UI:n kannattaa tarkistaa jos sama toistuu. Tutki-
+nappia en löytänyt webistä suoralla pallonapautuksella omassa
+kaupungissa (Ateena) — web näytti sen sijaan yllättävän "löytökortti"-
+tyylisen postikorttinäkymän ("Kahviraha kelpasi ilman kertomusta
+alkuperästään") pallon napautuksesta, joka ei ole aiemmin dokumentoitu
+nappi-inventaariossa; web:n Tutki lienee sidottu `tutkiTarjolla`-lippuun
+(vihreä aarrepiste), ei suoraan pallon napautukseen — tarvitsee joko
+pelitilan jossa aarrepiste on auki, tai Pelikoodarin/Natiivi-UI:n
+vahvistuksen oikeasta web-poluksta. Ei ehditty muihin ~19 EI
+TARKISTETTU -riviin tällä kierroksella (konteksti käytetty tutkimiseen).
