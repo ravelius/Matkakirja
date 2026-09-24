@@ -21,6 +21,20 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 - **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asennettu.
 - Tuotannon sisältö v15 (skeema 1.16). #3012 (1.17–1.25: maakuntakaaret, offline-maanosat) Julkaisijan jonossa → natiivi lukee jo.
 
+## Päivitys 24.9. ~05.20 (master 62c03b4)
+
+- Mergetty: linssiseppa/tummennus-gamma + valo-gamma, natiivi-ui/karuselli-kevyt + karuselli-sumea, kehittajan-liite (1fd601b),
+  kehittajalehti-2, lukijoilta, avain-muistiin (Fablen kiire: avain ei PlayerPrefsiin), tilastot, peitteet; pelikoodari/avaimet,
+  paataso-lukijat, avaus-introon, maisemakompressori (kaanna 239/239). Avoimia pyyntöjä ei ole.
+- **Maailman maasto 2026-09-24-maailma** (z0–z12) masterissa (64a7844) ja iPadilla: Espanjan 41° N -viiva poissa
+  (lokit/maailman-maasto-20260924/docs/).
+- Karuselli: pysäkinvaihto yht 0,8–2,9 ms (oli 24 ms), max kehys 17 ms (lokit/karuselli-20260924).
+- Sininen tummennussävy tulee UI Toolkit -kerroksesta (Linssisepän ui pois -koe) → Natiivi-UI (`ui peitteet`).
+- `ui jatka` yhä 107 ms kehys → Natiivi-UI:lle kerrottu. Lentokaari pallon reunan yli = webin mukainen (0,5·R·kulma/180).
+- Yö-TF ei poiminut Lukijoilta-väliversiota (ei Build/yo). iPad: 62c03b4, Linssisepän kontaktiajossa. Simulaattori: 2bb8687.
+- Oppi: kysy "iPad vapaa?" ennen jokaista asennusta (asensin kerran kesken Linssisepän ajon). ProjectSettings.asset palautetaan
+  checkoutilla myös IosLaite-viennin jälkeen.
+
 ## Päivitys 24.9. ~05
 
 - Mergetty: jaa-matka (+jakaminen, iPadilla "Jaa matka" näkyy, .mm linkittyy), nosto-media, linssin-valmiit, ihmisen-nostokortti,
