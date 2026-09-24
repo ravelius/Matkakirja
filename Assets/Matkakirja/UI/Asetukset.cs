@@ -44,6 +44,50 @@ namespace Matkakirja.Natiivi
         public static bool Kehittaja => Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1";
 #endif
 
+        /// <summary>
+        /// Pöllön kehittäjäkoodi chatin x-pollo-kehittaja-otsakkeeseen (Fable 24.9.: ei koskaan kovakoodattuna eikä
+        /// PlayerPrefsissä). Omistaja syöttää sen kerran kehittäjätilan kytkennässä; arvo säilyy vain iOS Keychainissa
+        /// (MatkakirjaAvaimet, kuten Lukijoilta-avain). Editorissa vain muistissa. App Store -käännöksessä aina null.
+        /// </summary>
+        public static string PolloKoodi
+        {
+            get
+            {
+#if MATKAKIRJA_APPSTORE
+                return null;
+#else
+                if (!polloKoodiLuettu)
+                {
+                    polloKoodiLuettu = true;
+#if UNITY_IOS && !UNITY_EDITOR
+                    polloKoodi = MatkakirjaAvaimet_Hae(PolloKeychain);
+#endif
+                }
+                return string.IsNullOrEmpty(polloKoodi) ? null : polloKoodi;
+#endif
+            }
+        }
+
+#if !MATKAKIRJA_APPSTORE
+        const string PolloKeychain = "pollo-kehittajakoodi";
+        static string polloKoodi;
+        static bool polloKoodiLuettu;
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern int MatkakirjaAvaimet_Aseta(string nimi, string arvo);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern string MatkakirjaAvaimet_Hae(string nimi);
+#endif
+
+        static void TalletaPolloKoodi(string koodi)
+        {
+            polloKoodi = string.IsNullOrEmpty(koodi) ? null : koodi;
+            polloKoodiLuettu = true;
+#if UNITY_IOS && !UNITY_EDITOR
+            if (MatkakirjaAvaimet_Aseta(PolloKeychain, polloKoodi) != 1)
+                Debug.LogWarning("MATKAKIRJA asetukset: avainnippuun kirjoitus ei onnistunut (pöllön koodi vain muistissa)");
+#endif
+        }
+#endif
+
         /// <summary>Kytkee kehittäjätilan koodilla (true = onnistui) tai pois (koodi null).</summary>
         public static bool AsetaKehittaja(string koodi)
         {
@@ -57,6 +101,7 @@ namespace Matkakirja.Natiivi
                 PlayerPrefs.Save();
                 // Web talletaPolloKoodi(''): pöllön ohitus pois.
                 Puhe.TalletaKehittajakoodi(null);
+                TalletaPolloKoodi(null);
                 Muuttui?.Invoke("Kehittaja");
                 return true;
             }
@@ -71,6 +116,7 @@ namespace Matkakirja.Natiivi
             if (t != KehittajaTiiviste && t != KehittajaTiivisteRajattu) return false;
             // Web talletaPolloKoodi(taysi ? syote : ''): vain pääkoodi workerille (lukijaäänen ääni ja ohje).
             Puhe.TalletaKehittajakoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
+            TalletaPolloKoodi(t == KehittajaTiiviste ? koodi.Trim() : null);
             PlayerPrefs.SetString(KehittajaAvain, "1");
             PlayerPrefs.Save();
             Muuttui?.Invoke("Kehittaja");

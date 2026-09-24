@@ -793,8 +793,9 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             // Kehittäjäkoodi (web x-pollo-kehittaja): omistajan laitteella ohittaa päivärajan, jonka web ja natiivi
-            // samasta verkosta jakavat. Arvo luetaan laitteelta, ei koskaan koodista eikä lokiin.
-            string koodi = Puhe.Saadot?.Kehittajakoodi;
+            // samasta verkosta jakavat. Vain Keychainista (Asetukset.PolloKoodi), ei koskaan koodissa eikä lokissa;
+            // App Store -käännöksessä ei otsaketta.
+            string koodi = Asetukset.PolloKoodi;
             if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
             return r;
         }
