@@ -68,9 +68,10 @@ namespace Matkakirja.Editori
 
             var kannet = georefGo.AddComponent<NapaKannet>();
             kannet.georeferenssi = georef;
-            // Sävyt sovitettu mitattuihin laattoihin 82°:n kohdalla (simulaattorikaappaus 23.9.).
-            kannet.pohjoinen = KansiMateriaali("Napakansi-pohjoinen", new Color32(0xba, 0xb6, 0xa6, 0xff));
-            kannet.etela = KansiMateriaali("Napakansi-etela", new Color32(0xdc, 0xd6, 0xc6, 0xff));
+            // Materiaalit ovat varjostimen pohjia: NapaKannet asettaa värit ajossa (webin sävyt ×
+            // laattojenSavy) ja kopioi kalottien materiaalit näistä.
+            kannet.pohjoinen = KansiMateriaali("Napakansi-pohjoinen", NapaKannet.KansiPohjoinen);
+            kannet.etela = KansiMateriaali("Napakansi-etela", NapaKannet.KansiEtela);
 
             var merkit = georefGo.AddComponent<KaupunkiMerkit>();
             merkit.georeferenssi = georef;
