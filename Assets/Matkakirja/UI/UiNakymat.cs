@@ -110,6 +110,7 @@ namespace Matkakirja.Natiivi
             Kaupunkikortti = new KaupunkiKortti(kerros);
             Kysymys = new KysymysNakyma(kerros);
             Kartuscha = new Kartuscha(kerros);
+            Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);

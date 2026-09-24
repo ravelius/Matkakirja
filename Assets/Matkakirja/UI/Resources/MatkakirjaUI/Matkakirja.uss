@@ -588,6 +588,13 @@
     height: 18px;
 }
 
+/* Maan kortti auki (web body.infotaulu-auki): Liiku väistyy. */
+.mk-liiku--vaistyy {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.18s;
+}
+
 .mk-liiku__nappi.mk-valittu {
     background-color: #d9a13b;
     border-color: #7a5514;

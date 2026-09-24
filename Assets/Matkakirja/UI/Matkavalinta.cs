@@ -183,6 +183,17 @@ namespace Matkakirja.Natiivi
             if (!sallitaan) SuljeLiuku();
         }
 
+        /// <summary>
+        /// Maan kortti auki (web body.infotaulu-auki .monitoimi-nappi: opacity 0, visibility hidden 0,18 s):
+        /// Liiku väistyy, jottei se peitä kortin rivejä.
+        /// </summary>
+        public void VaistaLiiku(bool vaista)
+        {
+            liiku.EnableInClassList("mk-liiku--vaistyy", vaista);
+            liikuNappi.pickingMode = vaista ? PickingMode.Ignore : PickingMode.Position;
+            if (vaista) SuljeLiuku();
+        }
+
         // --- Liiku (PeliOhjain.Kulkutavat, LiikuMuuttui) --------------------------------
 
         IReadOnlyList<KulkutapaNappi> tavat = Array.Empty<KulkutapaNappi>();

@@ -115,6 +115,10 @@ namespace Matkakirja.Natiivi
                 if (kortti.worldBound.height <= 0) continue;
                 korkein = Mathf.Max(korkein, ruudunKorkeus - kortti.worldBound.yMin + 6f);
             }
+            // Maan kortti auki (web pulu-paneelin-ylla: pulu hyppää alalaidan paneelin yläreunan päälle).
+            var kartuscha = ui.Kartuscha?.AukiKortti;
+            if (kartuscha != null && kartuscha.panel != null && kartuscha.worldBound.height > 0)
+                korkein = Mathf.Max(korkein, kartuscha.panel.visualTree.layout.height - kartuscha.worldBound.yMin + 8f);
             return Mathf.Max(perus, korkein);
         }
 

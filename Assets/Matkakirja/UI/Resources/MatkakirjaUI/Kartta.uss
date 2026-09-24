@@ -7,6 +7,7 @@
 .mk-kartuscha {
     position: absolute;
     flex-direction: column;
+    align-items: flex-start;
     max-width: 92%;
     padding: 4px 8px 4px 8px;
     border-width: 0;
@@ -14,21 +15,39 @@
     color: rgba(58, 40, 25, 0.92);
 }
 
+/* Avattu (web .maapaneeli-kortti.valikko-auki): pergamentti, reuna ja varjo; puhelimessa vasen+oikea koodista,
+ * tabletilla 40 % leveys. */
 .mk-kartuscha.mk-auki {
-    width: 100%;
-    max-width: 460px;
-    padding: 10px 14px 10px 14px;
+    max-width: none;
+    padding: 11.2px 13.6px 12px 13.6px;
     background-color: rgba(247, 239, 219, 0.94);
     border-width: 1px;
     border-color: rgba(74, 52, 33, 0.55);
 }
 
+.mk-kartuscha--tabletti.mk-auki {
+    width: 40%;
+}
+
+.mk-kartuscha__kehys {
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-width: 1px;
+    border-color: rgba(74, 52, 33, 0.22);
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__kehys {
+    display: flex;
+}
+
 .mk-kartuscha__sisus {
     flex-direction: column;
-    padding: 4px 2px 8px 2px;
-    margin-bottom: 6px;
-    border-bottom-width: 1px;
-    border-color: rgba(74, 52, 33, 0.22);
+    align-self: stretch;
+    margin-top: 7.2px;
 }
 
 .mk-kartuscha__masto {
@@ -42,6 +61,10 @@
     color: rgba(58, 40, 25, 0.92);
 }
 
+.mk-kartuscha.mk-auki .mk-kartuscha__masto {
+    align-self: stretch;
+}
+
 .mk-kartuscha__masto:active {
     background-color: rgba(0, 0, 0, 0);
     opacity: 0.8;
@@ -52,10 +75,17 @@
     align-items: center;
 }
 
+/* Web .maapaneeli-nimi-suomi: American Typewriter, puhelimessa 1,3rem / 0,16em, tabletilla 1,9rem / 0,2em. */
 .mk-kartuscha__nimi {
-    font-size: 24px;
-    letter-spacing: 4.8px;
+    font-size: 20.8px;
+    letter-spacing: 3.33px;
+    color: rgba(58, 40, 25, 0.92);
     text-shadow: 0 0 4px rgb(244, 232, 205);
+}
+
+.mk-kartuscha--tabletti .mk-kartuscha__nimi {
+    font-size: 30.4px;
+    letter-spacing: 6.08px;
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__nimi,
@@ -63,14 +93,21 @@
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
+/* Lippu nimen perässä vain avattuna (web .maapaneeli-lippukuva: 1cap korkea, 0,34 em väli). */
 .mk-kartuscha__lippu {
     display: none;
-    height: 18px;
-    width: 27px;
-    margin-right: 9px;
+    height: 14px;
+    width: 20px;
+    margin-left: 4px;
     border-width: 1px;
     border-color: rgba(74, 52, 33, 0.45);
     -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-kartuscha--tabletti .mk-kartuscha__lippu {
+    height: 20px;
+    width: 30px;
+    margin-left: 6px;
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__lippu {
@@ -80,70 +117,61 @@
 .mk-kartuscha__viiva {
     height: 1px;
     align-self: stretch;
-    margin: 3px 0 3px 0;
+    margin: 3.5px 0 3.2px 0;
     background-color: rgba(74, 52, 33, 0.55);
 }
 
 .mk-kartuscha__alarivi {
-    font-size: 14px;
-    letter-spacing: 1.1px;
-    color: rgba(74, 52, 33, 0.85);
+    font-size: 12.2px;
+    letter-spacing: 0.9px;
+    color: rgba(74, 52, 33, 0.88);
     white-space: normal;
     text-shadow: 0 0 3px rgb(244, 232, 205);
 }
 
-.mk-kartuscha__aiheet {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
+.mk-kartuscha--tabletti .mk-kartuscha__alarivi {
+    font-size: 16px;
+    letter-spacing: 1.3px;
 }
 
-.mk-kartuscha__aihe {
-    min-height: 26px;
-    padding: 2px 0 1px 0;
-    margin: 0 12px 6px 0;
-    border-width: 0;
-    border-bottom-width: 1px;
-    border-radius: 0;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(58, 40, 25, 0.92);
+.mk-kartuscha.mk-auki .mk-kartuscha__alarivi {
+    display: none;
 }
 
-.mk-kartuscha__aihe:active {
-    background-color: rgba(74, 52, 33, 0.08);
-}
-
-.mk-kartuscha__aihe .mk-nappi__teksti {
-    font-size: 12.5px;
-    letter-spacing: 1.5px;
+/* Rivit (web .maapaneeli-rivit, avattuna otsikko 0,62rem ja arvo 0,7rem; sarakeväli 0,5rem). */
+.mk-kartuscha__tilastot {
+    flex-direction: column;
+    margin-bottom: 4.8px;
 }
 
 .mk-kartuscha__vuosi,
 .mk-kartuscha__rivi {
     flex-direction: row;
     align-items: center;
-    min-height: 20px;
+    min-height: 14.3px;
 }
 
 .mk-kartuscha__nimike {
-    width: 118px;
+    width: 78px;
+    margin-right: 8px;
     flex-shrink: 0;
-    font-size: 11px;
-    letter-spacing: 1.4px;
-    color: rgba(74, 52, 33, 0.75);
+    font-size: 9.92px;
+    letter-spacing: 0.89px;
+    color: rgba(74, 52, 33, 0.72);
 }
 
 .mk-kartuscha__arvo {
     flex-shrink: 1;
-    font-size: 12.5px;
-    white-space: normal;
+    font-size: 11.2px;
+    white-space: nowrap;
+    color: rgba(58, 40, 25, 0.92);
 }
 
 .mk-kartuscha__sija {
     display: none;
-    margin-left: 8px;
-    font-size: 10.5px;
-    color: rgba(74, 52, 33, 0.6);
+    margin-left: 4px;
+    font-size: 10.56px;
+    color: rgba(74, 52, 33, 0.72);
 }
 
 .mk-kartuscha__tilastot.mk-sijat-auki .mk-kartuscha__sija {
@@ -151,14 +179,16 @@
 }
 
 .mk-kartuscha__nyt {
-    font-size: 11px;
-    -unity-font-style: italic;
-    color: rgba(74, 52, 33, 0.7);
-    margin: 6px 0 2px 0;
+    display: none;
 }
 
 .mk-kartuscha__kielet {
     flex-direction: row;
+    align-items: flex-start;
+    margin-top: 1.3px;
+}
+
+.mk-kartuscha__kielet > .mk-kartuscha__nimike {
     margin-top: 2px;
 }
 
@@ -171,27 +201,69 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 18px;
+    min-height: 17px;
 }
 
 .mk-tervehdys__teksti {
-    font-size: 12.5px;
-    -unity-font-style: italic;
-    margin-right: 6px;
+    font-size: 12.32px;
+    margin-right: 4px;
+    color: rgba(58, 40, 25, 0.92);
 }
 
 .mk-tervehdys__lippu {
-    height: 11px;
-    width: 16px;
-    margin-right: 5px;
-    border-width: 0.5px;
-    border-color: rgba(74, 52, 33, 0.4);
+    height: 10px;
+    width: 14px;
+    margin-right: 4px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
     -unity-background-scale-mode: stretch-to-fill;
 }
 
 .mk-tervehdys__kieli {
-    font-size: 11px;
-    color: rgba(74, 52, 33, 0.7);
+    font-size: 8.74px;
+    letter-spacing: 0.17px;
+    color: rgba(70, 51, 31, 0.62);
+}
+
+.mk-tervehdys__tarkenne {
+    margin-left: 3px;
+    font-size: 8.74px;
+    color: rgba(74, 52, 33, 0.6);
+}
+
+/* Aiheet (web .maapaneeli-otsikkorivi: flex-wrap, väli 0,3rem × 0,85rem; aihe 12 px, 0,12 em, pisteviiva). */
+.mk-kartuscha__aiheet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 5.6px;
+}
+
+.mk-kartuscha__aihe {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 16px;
+    padding: 0;
+    margin: 0 13.6px 4.8px 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(74, 52, 33, 0.88);
+}
+
+.mk-kartuscha__aihe:active {
+    background-color: rgba(74, 52, 33, 0.08);
+}
+
+.mk-kartuscha__aihe .mk-nappi__teksti {
+    font-size: 12px;
+    letter-spacing: 1.44px;
+}
+
+.mk-kartuscha__aiheviiva {
+    align-self: stretch;
+    height: 1px;
+    margin-top: 0;
+    color: rgba(74, 52, 33, 0.75);
 }
 
 /* --- karttaselite -------------------------------------------------------- */
@@ -1433,8 +1505,8 @@
 .mk-kartuscha__radio {
     display: none;
     position: absolute;
-    top: 0;
-    right: 11px;
+    top: 11.2px;
+    right: 11.2px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
