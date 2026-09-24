@@ -1,6 +1,6 @@
 # Linssikatalogi — aikajana-, alue- ja virtalinssien aiheluettelo
 
-Päivitetty: 21.9.2026 (Fable; osa Q lisätty). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
+Päivitetty: 24.9.2026 (Fable; osa R datalinssit lisätty). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
 suurien uskontojen tapahtumista täytyy myös saada omat kuvansa ja niistä
 varmasti tehdään myös samanlainen aikajanalinssi kuin nyt tekniikasta
 Euroopassa. hiotaan vain ensin tuo linssi mahdollisimman hyväksi niin sitten
@@ -262,6 +262,56 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 - Muut historialliset tapahtumat (mm. N2 ja N3 maailmansodat) saavat omat
   linssinsä nykyisen kartan päälle; Q1 ei korvaa niitä.
 
+## R. Datalinssit (lisätty 24.9.2026, omistajan tilaus: julkisen datan visualisointi kartalle)
+
+Selvitys: docs/raportit/datalahteet-linsseille-20260924.md (145 avointa lähdettä 19 aihealueelta,
+lisenssit tarkistettu 24.9.2026; lähteiden kytkentä osiin A–Q ja Osa 3 on selvityksen luvussa 3).
+Ensimmäinen datalinssi on Maapallon tila (Raamattu, NASA/NSIDC; suunnitelma
+docs/raportit/linssi-maapallon-tila-suunnitelma-20260924.md) — se rakentaa rasteripinon ja aikaselaimen,
+joita muut käyttävät. Lisenssiehto: vain PD/CC0/CC BY/avoin attribuutiolla; NC-lisenssit eivät kelpaa;
+jakoehto (ODbL, CC BY-SA) ja ilmaiset datatilit odottavat omistajan päätöstä (kortti 24.9.).
+Vaikeus: helppo/keski/vaikea. 1873-sidos: ★★★ isoisän matkaan, ★★ ennen ja nyt, ★ nykyhetki.
+Toteutusjärjestys (selvityksen luku 7): 1 Maapallon tila → 2 R4+R5 → 3 R7 → 4 R1+R2 → 5 R11 → 6 R12+R13 →
+7 R16–R18 → 8 R20 → 9 R3+R9 → 10 R14+R15.
+
+| # | Linssi | Mitä pelaaja näkee | Lähteet | Aikasarja | Vaikeus | 1873 | Tila |
+|---|---|---|---|---|---|---|---|
+| R1 | **Maailma palaa** | Viimeisen viikon palot hehkuvat pallolla, ja valitun kuukauden palot syttyvät ja sammuvat päivä kerrallaan. | FIRMS 7 pv (ei tunnusta), GIBS-palokerros | animoitu | keski | ★ (Peshtigo 1871 ja Chicago 1871 pysäkkeinä) | seuraava |
+| R2 | **Savun tie**** | Palojen ja pölyn aerosolipilvet kulkevat mantereelta toiselle kolmen kuukauden ajan. | CAMS AOD (CC BY 4.0, tili), vaihtoehtona GIBS MODIS AOD | animoitu | vaikea | ★ (Krakatau 1883: auringonlaskut punaisina ympäri maailman) | seuraava |
+| R3 | **Isoisän sää** | Pelaaja valitsee päiväkirjan päivän, ja pallolle piirtyvät sen päivän matalapaineet ja tuulet vuonna 1873. | 20CRv3 | animoitu (päivä) | vaikea | ★★★ | seuraava |
+| R4 | **Laivat 1873** | Jokainen vuoden 1873 laivahavainto piirtyy pisteenä, ja reitit piirtyvät vähitellen kuukausi kerrallaan. | ICOADS R3 | animoitu | keski | ★★★ | seuraava |
+| R5 | **Meriliikenne ennen ja nyt** | Liukusäädin vaihtaa ICOADS 1873:n harvat reitit nykypäivän AIS-tiheyteen. | ICOADS + Maailmanpankin laivatiheys | staattinen vertailu | helppo | ★★★ | seuraava |
+| R6 | **Purjelaivojen tuulet** | 1750–1854 lokikirjojen reitit ja tuulihavainnot näyttävät, miksi laivat kiersivät Atlantin kaarena. | CLIWOC | animoitu | keski | ★★ | idea |
+| R7 | **Yön valot ennen ja nyt** | Pallo pimenee yöksi: nyt kaupungit loistavat, ja vuoden 1873 asetuksella palaa vain kaasuvalojen kaupunkeja. | Black Marble (GIBS), EOG VNL, Reba (kaupungit 1875) | staattinen + vertailu | helppo | ★★ | seuraava |
+| R8 | **Näetkö Linnunradan?** | Valitun paikan taivas: tähtien määrä vähenee valosaasteen mukaan, ja vuoden 1873 taivas on täynnä tähtiä. | HYG, Deep Star Maps, EOG VNL (Falchin atlas vain luvalla) | staattinen | keski | ★★ | idea |
+| R9 | **Isoisän tähtitaivas** | Päiväkirjan yön taivas planeettoineen oikeasta paikasta nähtynä, ja Venuksen ylikulku 9.12.1874 omana pysäkkinään. | HYG, JPL Horizons, Stellarium-tähtikuviot, NASA Eclipse | animoitu (yö) | keski | ★★★ | seuraava |
+| R10 | **Revontulet nyt** | Revontuliovaali elää napojen ympärillä reaaliajassa, ja vertailuna on suuri revontulimyrsky helmikuussa 1872. | NOAA OVATION | reaaliaika | helppo | ★★ | idea |
+| R11 | **Myrskyjen radat** | Kaikki trooppiset myrskyt 1850-luvulta alkaen piirtyvät vuosi kerrallaan, ja voimakkuus näkyy värinä. | IBTrACS, HURDAT2 | animoitu | helppo | ★★★ (1873 Nova Scotian hurrikaani) | seuraava |
+| R12 | **Maa järisee** | Viimeisen 30 päivän järistykset sykkivät, ja historiasta nousevat Lissabon 1755 ja muut merkittävät. | USGS ComCat, NCEI | reaaliaika + historia | helppo | ★★ | seuraava |
+| R13 | **Tulen vuoret** | Merkittävät purkaukset 4 000 vuoden ajalta, ja purkauksen koko (VEI) näkyy renkaana. | NCEI Volcanoes, GIBS SO₂ | animoitu | helppo | ★★ (Krakatau 1883 kymmenen vuotta matkan jälkeen) | seuraava |
+| R14 | **Lämpenevä meri** | Meren pintalämpö 1854→nyt: vuoden 1873 meri on vertailupohja, ja poikkeama värjää pallon. | ERSST v5 | animoitu | keski | ★★★ | seuraava |
+| R15 | **Ilmastovyöhykkeet liikkuvat** | Köppenin vyöhykkeet 1901–1930 → 1991–2020 → 2071–2099, jolloin Sahara ja tundra siirtyvät. | Köppen–Geiger (Beck 2023) | jaksot | helppo | ★★ | seuraava |
+| R16 | **Pellot valtaavat maan** | Viljelyksen leviäminen 10 000 eaa.→nyt, ja vuosi 1870 on merkkipaalu. | HYDE 3.3 | animoitu | keski | ★★★ | seuraava |
+| R17 | **Ihmisiä pallolla** | Väestötiheys kasvaa ja keskittyy: 1870 (HYDE) → 1975–2030 (GHSL). | HYDE, GHSL | animoitu | keski | ★★★ | seuraava |
+| R18 | **Kaupungit kasvavat** | Maailman suurimmat kaupungit 3700 eaa.→2000 pylväinä, ja kärkikymmenikkö vaihtuu. | Reba ym., GHSL UCDB | animoitu | helppo | ★★★ (vuoden 1875 kärkikaupungit isoisän reitillä) | seuraava |
+| R19 | **Maailmantalouden painopiste** | Talouden painopiste vaeltaa Aasiasta Eurooppaan ja takaisin vuodesta 1 jaa. nykyhetkeen. | Maddison | animoitu | keski | ★★★ | idea |
+| R20 | **Kauppavirrat 1873** | Maiden väliset kauppavirrat valuvat nuolina, ja paksuus kertoo arvon (RICardo). Nykyvertailu tehdään BACIlla. | RICardo, BACI | animoitu + vertailu | keski | ★★★ | seuraava |
+| R21 | **Metsät katoavat** | Metsäkato 2001–2024 punaisena vuosi vuodelta. Pellot 1870 (HYDE) kertovat, mitä raivattiin ennen. | Hansen GFC, HYDE | animoitu | vaikea (datamäärä) | ★★ | idea |
+| R22 | **Pisaran matka** | Pelaaja napauttaa maata, ja pisara virtaa jokia pitkin mereen, jolloin valuma-alue valaistuu. | HydroRIVERS, HydroBASINS | interaktiivinen | keski | ★★ (Niili, Kongo ja Mississippi isoisän tutkimusmatkoilla) | idea |
+| R23 | **Kielten kirjo** | 8 000 kieltä pisteinä, joissa kielisuku on värinä ja uhanalaiset kielet himmenevät. | Glottolog, Grambank | staattinen | helppo | ★★ (monet kielet olivat 1873 elinvoimaisia) | idea |
+| R24 | **Mitä maa kasvaa** | Kahvin, teen, riisin ja perunan viljelyalueet, joiden alle maaperän pH ja ilmastovyöhyke valaisevat syyn. | MapSPAM, SoilGrids, Köppen | staattinen | keski | ★★ (F3 kasvien matkat) | idea |
+| R25 | **Sähkö syttyy** | Voimalaitokset syttyvät avausvuosinaan: hiili, vesi, ydin, tuuli ja aurinko. Vuonna 1873 ei vielä yhtään. | Global Energy Monitor, GPPD, Ember | animoitu | keski | ★★ | idea |
+| R26 | **Tuulet nyt** | Nullschool-tyyliset tuulihiukkaset huomisen ennusteesta, ja vertailuna isoisän 1873 tuulet samasta kuukaudesta. | ECMWF Open Data tai GFS, 20CRv3 | animoitu | vaikea | ★★ | idea |
+| R27 | **Ilma jota hengitämme** | Asemien PM2.5-pallot ja EDGAR-päästöhila kertovat, mistä saaste tulee. | OpenAQ, EDGAR | staattinen + kk | keski | ★ (hiilisavu 1873 Lontoossa pysäkkinä) | idea |
+| R28 | **Eläinten matkat** | Kurkien, haikaroiden, gnujen ja merikilpikonnien GPS-jäljet liikkuvat vuodenkierrossa. | Movebank (CC0/CC BY), OBIS | animoitu | keski | ★ (F2) | idea |
+| R29 | **Korallien helle** | Lämpöstressin viikot värjäävät riutat, ja korallien vaalenemisvuodet sykkivät. | Coral Reef Watch, Allen Coral Atlas | animoitu | keski | ★ | idea |
+| R30 | **Jääkauden rannat** | Merenpinta laskee 120 m, jolloin Beringia, Doggerland ja Sahul nousevat ja uppoavat uudelleen. | GEBCO/ETOPO, Spratt & Lisiecki | animoitu | helppo | ★★ (C7:n tausta) | idea |
+| R31 | **80 päivää → 80 tuntia** | Matka-ajan kartta Lontoosta: Bartholomew'n isokrooninen kartta 1914 (PD) rinnakkain nykyisten lentoyhteyksien kanssa. | Commons (PD), OurAirports, OpenFlights (2014) | staattinen vertailu | keski | ★★★ (Fogg 1872 ja isoisä 1873) | idea |
+| R32 | **Lentävä maapallo** | Yhden vuorokauden kaikki lennot valojuovina (adsb.lol), ja vertailuna Foggin laivareitti. | adsb.lol (ODbL) | animoitu (24 h) | vaikea | ★★ | idea |
+| R33 | **Sähkeet 1873 ja nyt** | Vuoden 1873 kaapelit (digitoitu PD-kartoista) välähtävät, ja nykyinen merikaapeliverkko häivytetään päälle. | Commons/LoC-kaapelikartat, OSM-merikaapelit | vertailu | keski | ★★★ (pelin sähkeet) | idea |
+| R34 | **Elinajan kartta** | Elinajanodote maittain 1800→nyt: vuonna 1873 kaikkialla alle 45 vuotta. | Gapminder, UN WPP | animoitu | helppo | ★★★ | idea |
+| R35 | **Suomen sää 1844→nyt** | Helsingin ja muiden asemien pitkät sarjat pylväinä Suomen päällä. | Ilmatieteen laitos (CC BY 4.0) | animoitu | helppo | ★★ | idea |
+
 ## Osa 3: Virtalinssit (kolmas moottori)
 
 Omistaja 2.9.2026 ilta: *"visuaalisesti voimakkain linssi jonka pohjana olisi
@@ -298,6 +348,8 @@ siirtomaavaltojen arjesta (13+, mutta asia kerrotaan niin kuin se oli).
 | U3 | Muuttolinnut | maailma | vuodenkierto | kurjet · haarapääskyt · valaat | idea (= F2) |
 
 ## Järjestys
+
+Datalinssien (R) järjestys on osassa R; ne kulkevat omalla moottorillaan rinnakkain.
 
 1. Keksinnöt Euroopassa hiotaan valmiiksi (pelillinen ovi, kuvat kuvaputkelta, musiikki kuunneltu).
 2. A1 Suuret uskonnot syntyvät + A4 Uskonpuhdistus (omistajan linjaus; kuvat H4-tilauksena).
