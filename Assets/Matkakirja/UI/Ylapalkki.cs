@@ -19,6 +19,11 @@
 // ulkopuolelle sulkee sen. Ylhäältä asemoituvat näkymät lukevat varauksen Ylapalkki.Varaus-
 // arvosta (0 piilotettuna), joten kartta ja kortit nousevat palkin paikalle.
 //
+// iPHONE (omistaja 24.9.2026, build 5 -löydökset 5–6, Raamattu NATIIVIN iPHONE-ASETTELU; iPad ja web ennallaan):
+// ei ruskeaa palkkia eikä logoa, kartta näkyy koko ruudulta (myös Dynamic Islandin alta). Vasemmassa
+// yläkulmassa kelluva pilleri "300£ 1/80" (raha, päivä/80), oikeassa vain ☰ (kehittäjätilassa myös ratas),
+// puoliläpinäkyvällä pergamenttitaustalla kuten muut kelluvat napit. Napit pysyvät turva-alueen alapuolella.
+//
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
 using UnityEngine;
@@ -52,6 +57,12 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Testikomento (ui ylapalkki kelluva|palkki): null = laitteen mukaan.</summary>
+        public static bool? PakotaKelluva;
+
+        /// <summary>iPhonen kelluva yläosa (ks. yllä): iOS ilman tablettia; iPad ja muut alustat pitävät palkin.</summary>
+        public static bool Kelluva => PakotaKelluva ?? (Application.platform == RuntimePlatform.IPhonePlayer && !UiKerros.Tabletti);
+
         /// <summary>Ylhäältä asemoituvien näkymien varaus turva-alueen yläreunasta (0, kun palkki on piilossa).</summary>
         public static float Varaus => Piilossa ? 0f : Korkeus;
 
@@ -63,7 +74,8 @@ namespace Matkakirja.Natiivi
         public Func<bool> PudotusAuki;
 
         readonly UiKerros kerros;
-        readonly VisualElement palkki, pilleri, ilmoitus;
+        readonly VisualElement palkki, pilleri, ilmoitus, logo;
+        bool? kelluvaNyt;
         readonly Button vakasnappi;
         bool piilossa, nakyy = true;
         readonly Label raha, kello, ilmoitusTeksti;
@@ -89,7 +101,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
 
             // Logo avaa tekijätiedot ja lähteet (web brand-btn, omistaja 5.8.2026).
-            var logo = Rakenne.El("mk-logo", palkki);
+            logo = Rakenne.El("mk-logo", palkki);
             logo.AddManipulator(new Clickable(() => LogoPainettu?.Invoke()));
             var logoKuva = Resources.Load<Texture2D>("MatkakirjaUI/logo");
             if (logoKuva != null) logo.style.backgroundImage = new StyleBackground(logoKuva);
@@ -129,10 +141,29 @@ namespace Matkakirja.Natiivi
             palkki.style.paddingLeft = r.x + 10;
             palkki.style.paddingRight = r.z + 10;
             palkki.style.height = r.y + Korkeus;
+            AsetaKelluva();
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa);
             PaivitaNappi();
+        }
+
+        void AsetaKelluva()
+        {
+            bool k = Kelluva;
+            Ratas.style.display = !k || Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kelluvaNyt == k) return;
+            kelluvaNyt = k;
+            palkki.EnableInClassList("mk-ylapalkki--kelluva", k);
+            palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
+            logo.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
+            if (k) palkki.style.backgroundImage = StyleKeyword.None;
+            else Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
+            // Pillerin muoto vaihtuu: sama rivi uudelleen.
+            string r = rivi;
+            rivi = null;
+            kelloTeksti = "";
+            Aseta(r);
         }
 
         /// <summary>Ruudun koko tai testikomento muutti tilaa: näkymät asettuvat uudelleen (TurvaMuuttui).</summary>
@@ -236,6 +267,20 @@ namespace Matkakirja.Natiivi
                 raha.text = teksti;
                 kello.text = "";
                 kello.style.display = DisplayStyle.None;
+            }
+            else if (kelluvaNyt == true)
+            {
+                // iPhone: "300£ 1/80" (omistaja 24.9.2026) — raha ja päivä / isoisän ennätys.
+                string luku = Raha(osat[0]).TrimStart('£');
+                string uusiRaha = luku + "£";
+                if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
+                raha.text = uusiRaha;
+                var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
+                string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
+                kello.style.display = DisplayStyle.Flex;
+                if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
+                kelloTeksti = uusiKello;
+                kello.text = uusiKello;
             }
             else
             {

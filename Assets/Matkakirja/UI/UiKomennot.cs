@@ -82,6 +82,7 @@
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
+//   ui ylapalkki kelluva|palkki               iPhonen kelluva yläosa päälle / pois (auto palauttaa laitteen mukaan)
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
@@ -669,6 +670,8 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "ylapalkki":
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
+                    if (loput == "kelluva" || loput == "palkki") { Ylapalkki.PakotaKelluva = loput == "kelluva"; ui.Tilarivi.Paivita(); return null; }
+                    if (loput == "auto") Ylapalkki.PakotaKelluva = null;
                     Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
                     ui.Tilarivi.Paivita();
                     return null;
