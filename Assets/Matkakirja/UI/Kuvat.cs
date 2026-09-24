@@ -298,7 +298,8 @@ namespace Matkakirja.Natiivi
                 UnityEngine.Object.Destroy(alkup);
                 tulos = pieni != null ? Nimea(pieni, avain) : null;
             }
-            if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0]);
+            // Kysely pois lokista: kehittäjän kuratointikuvien osoitteissa on avain (?avain=).
+            if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0].Split('?')[0]);
             else Muista(avain, tulos);
             if (kesken.TryGetValue(avain, out var odottajat))
             {
