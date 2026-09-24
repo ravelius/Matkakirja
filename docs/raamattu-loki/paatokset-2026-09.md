@@ -4271,3 +4271,7 @@ Natiivi-UI teki palkin webin mukaan (logo, pilleri, ⚙, ☰; linssit laukkuun; 
 ## OMISTAJA klo 17.4x: KALLISTUS KAHDEN SORMEN VEDOLLA ALAS (KUTEN NYT); DEVELOPER-TILI MUUTETAAN ORGANISAATIOKSI ENNEN APP STORE -JULKAISUA (24.9.2026 klo 16.41)
 
 Kallistussuunta välitetty Natiivisepälle (02847d7 mergettävissä). Omistaja aikoo tehdä Individual → Organization -muutoksen (myyjänimeksi yritys) ennen ensimmäistä App Store -julkaisua; vaatii Y-tunnuksen ja D-U-N-S-numeron; TestFlight ja kehitys jatkuvat Individual-tilillä siihen asti.
+
+## OMISTAJA klo 17.5x (KORTTI): MAAILMANAPPI VAIN KEHITTAJALLE (HUNTU POIS, LIIKKUMINEN KOKO PALLOLLA) — PUUTTUI KEHITTAJATILASSA BUILD 9:SSA; 37: VAIN ⚙ NAKYI ILMAN KEHITTAJATILAA (24.9.2026 klo 16.47)
+
+Natiivi-UI: yläpalkki korjattu 0299fdb (⚙ pois, ☰ = linssivalikko, linssit eivät laukkuun); webin pelaajanäkymässä kartan kulmassa vain karttaselitteen nappi; maailmanappi webissä kehittäjän nappi → natiiviin kehittäjätilaan webin mukaan. 37: koodissa ilman kehittäjätilaa näkyi vain ⚙ (poistettu); muut kehittäjärivit sidottu Asetukset.Kehittajaan (PlayerPrefs, säilyy kunnes kytketään pois ☰ → Kehittäjä → Kytke pois) tai Debug-käännökseen.
