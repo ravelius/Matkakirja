@@ -98,3 +98,20 @@ test('väritaso pallolle: luettelo ja kansio', async () => {
   assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA'), 'julisteet/pallo/vari/2026-09-14b-tasoitus/FRA/');
   assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA', 'k2'), 'julisteet/pallo/vari/2026-09-14b-tasoitus-k2/FRA/');
 });
+
+test('väritaso: maan läpinäkyvä sisäosa säilyy, vain puuttuva laatta ja alueen ulkopuoli kermaksi', async () => {
+  const { laskeVariLaatta, varitasonLuettelo, VARIN_ULKOPUOLI } = await import('../tools/tee-pallolaatat.mjs');
+  const pohja = { ...POHJA, varitasot: { FRA: { versio: 'v', maa: 'FRA', maaPolussa: true, tasot: [2], alue: { lon0: -5, lon1: 10, lat0: 40, lat1: 52 } } } };
+  const l = varitasonLuettelo(pohja, 'FRA');
+  l.tasot = RELIEF.tasot.map((t) => ({ ...t, pikseliaPerYksikko: t.leveys / 12000 }));
+  // Lähde: läpinäkyvä (maan sisäosa) tai puuttuva, sarakkeen mukaan.
+  const lukija = {
+    varmista: async () => {},
+    pikseliRGBA: (z, px, py, ulos, o) => { if (px % 2 < 1) return false; ulos[o] = 0; ulos[o + 1] = 0; ulos[o + 2] = 0; ulos[o + 3] = 0; return true; },
+  };
+  const b = await laskeVariLaatta(l, lukija, 3, 4, 2); // Z3 x4 y2 ≈ lon 0…45, lat 41…66
+  let lapi = 0; let kerma = 0;
+  for (let i = 0; i < b.length; i += 4) { if (b[i + 3] === 0) lapi += 1; else if (b[i + 3] === VARIN_ULKOPUOLI[3]) kerma += 1; }
+  assert.ok(lapi > 0, 'maan läpinäkyvä sisäosa säilyy');
+  assert.ok(kerma > 0, 'alueen ulkopuoli ja puuttuva laatta kermana');
+});

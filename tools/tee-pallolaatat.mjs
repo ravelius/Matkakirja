@@ -559,16 +559,17 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     };
     return meri;
   }
-  /** Kuten pikseli, mutta RGBA; puuttuva lähdelaatta on läpinäkyvä (väritaso). */
+  /** Kuten pikseli, mutta RGBA; palauttaa false, jos lähdelaatta puuttuu (väritaso). */
   function pikseliRGBA(z, px, py, ulos, o) {
     const taso = luettelo.tasot.find((t) => t.z === z);
     const W = taso.leveys;
     const x = ((Math.floor(px) % W) + W) % W;
     const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
     const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
-    if (!k) { ulos[o] = 0; ulos[o + 1] = 0; ulos[o + 2] = 0; ulos[o + 3] = 0; return; }
+    if (!k) return false;
     const i = ((y % L) * k.w + (x % L)) * 4;
     ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2]; ulos[o + 3] = k.data[i + 3];
+    return true;
   }
   return { varmista, pikseli, pikseliRGBA, tilasto, mittaaMeri };
 }
@@ -736,9 +737,12 @@ export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
       const va = luettelo.vari?.alue;
       const alueella = !va || (lon >= va.lon0 && lon <= va.lon1 && lat >= va.lat0 && lat <= va.lat1);
       const a = kartalla && alueella ? arkinPikseli(luettelo, taso, lon, lat) : null;
-      if (a) lukija.pikseliRGBA(z, a.px, a.py, ulos, o);
-      // Alueen ulkopuoli ja puuttuva lähde (alfa 0) → kerma.
-      if (!a || ulos[o + 3] === 0) {
+      /*
+       * Alueen ulkopuoli ja PUUTTUVA lähdelaatta → kerma. Läpinäkyvä
+       * pikseli olemassa olevassa laatassa on maan sisäosa ja jää
+       * läpinäkyväksi (kierros k2 kermasi sen virheellisesti).
+       */
+      if (!a || !lukija.pikseliRGBA(z, a.px, a.py, ulos, o)) {
         [ulos[o], ulos[o + 1], ulos[o + 2], ulos[o + 3]] = VARIN_ULKOPUOLI;
       }
     }
