@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
             Linssirekisteri.Mittaa = Mittaa;
             foreach (var id in MitattavatLinssit)
                 foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto, OsaKerros, OsaAani, OsaLinssi, OsaTahdet, OsaPilvet,
-                    "Avaa.Muisti", "Avaa.Esitys", "Avaa.Jatka", "Virta.Avaa", "Viritin.Aloita", "Korosta" })
+                    "Avaa.Muisti", "Avaa.Esitys", "Avaa.Jatka", "Avaa.Vanat", "Virta.Avaa", "Viritin.Aloita", "Korosta" })
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
@@ -411,7 +411,7 @@ namespace Matkakirja.Natiivi
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 linssi.Avaa(y);
-                if (vanat != null) VanatValmiit(vanat);
+                if (vanat != null) using (Merkki("ihmisen-matka", "Avaa.Vanat").Auto()) VanatValmiit(vanat);
             }
 
             public void Paivita() => linssi?.Paivita();
@@ -987,7 +987,8 @@ namespace Matkakirja.Natiivi
             PeiteKasittelija?.Invoke(paalla);
         }
 
-        public void MusiikkiPitoon(bool pidossa) => MusiikkiKasittelija?.Invoke(pidossa);
+        static readonly Unity.Profiling.ProfilerMarker MusiikkiMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.Musiikki");
+        public void MusiikkiPitoon(bool pidossa) { using (MusiikkiMerkki.Auto()) MusiikkiKasittelija?.Invoke(pidossa); }
 
         public void LinssiMusiikki(string laji) => LinssiMusiikkiKasittelija?.Invoke(laji);
 
