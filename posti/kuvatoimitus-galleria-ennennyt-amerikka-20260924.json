@@ -1,0 +1,476 @@
+{
+  "sourceOrder": "/private/tmp/matkakirja-fable-image-delivery-20260924/posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md",
+  "uploadStatus": "5 JPEGs R2 readback verified",
+  "integrationStatus": "Not integrated into game by Codex; Fable receipt and wiring pending",
+  "sourceCodeVerification": "Current game-src origin/main commit 9684af91 (24 Sep 2026) has top-level photo anchors for bananal, campogrande, churchill, nome; no replacement delivery required. Other listed beforeNow cityIds do not have top-level historical anchors. Feature-level beforeNow wiring remains Fable-owned.",
+  "images": [
+    {
+      "cityId": "santarem",
+      "kaupunki": "santarem",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "b11f629b9b9e652ee3e419284700631da3ecac2e4f8a78e5da73d98bfba81c00",
+      "tavut": 935505,
+      "mitat": {
+        "leveys": 1799,
+        "korkeus": 1263
+      },
+      "lahde": "Instituto Hercule Florence GLAM / Wikimedia Commons",
+      "tekija": "Hércules Florence",
+      "vuosi": "1828",
+      "lisenssi": "Public domain; PD-old-100, PD-US-expired, Commons GLAM VRT #2020110510009371",
+      "attribuutio": "Public domain / Instituto Hercule Florence",
+      "kuvateksti-ehdotus": "Hercule Florence maalasi Santarémin Tapajósjoen länsirannalta vuonna 1828.",
+      "qaKonteksti": "Aito juuri Santarémia Parássa kuvaava vesiväri; alkuperäinen 6830×4794 px; lähde ja lupa vahvistettu Commonsin IHF-GLAM-kuvasivulla sekä instituutin luettelossa.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Vue_de_Santarem_sur_le_Tapaj%C3%B3s,_prise_du_c%C3%B4te_de_l%27Ouest._Ao%C3%BBt,_1828._Hercule_Florence,_ft.,_do_acervo_do_Instituto_Hercule_Florence.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Vue_de_Santarem_sur_le_Tapaj%C3%B3s%2C_prise_du_c%C3%B4te_de_l%27Ouest._Ao%C3%BBt%2C_1828._Hercule_Florence%2C_ft.%2C_do_acervo_do_Instituto_Hercule_Florence.jpg/1920px-Vue_de_Santarem_sur_le_Tapaj%C3%B3s%2C_prise_du_c%C3%B4te_de_l%27Ouest._Ao%C3%BBt%2C_1828._Hercule_Florence%2C_ft.%2C_do_acervo_do_Instituto_Hercule_Florence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Vue_de_Santarem_sur_le_Tapaj%C3%B3s%2C_prise_du_c%C3%B4te_de_l%27Ouest._Ao%C3%BBt%2C_1828._Hercule_Florence%2C_ft.%2C_do_acervo_do_Instituto_Hercule_Florence.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "e20c0dc8065b28bf9eee37b109dcc29d8f29abe86e0428438fae5a594a14e5d1",
+      "lähdeTavut": 872897,
+      "lähdeMitat": [
+        1920,
+        1348
+      ],
+      "qaTekninen": "JPG RGB, named embedded sRGB ICC, dimensions and SHA-256 verified; no upscaling.",
+      "qaVisuaalinen": "Full image inspected: authentic historic artwork or photo, correct place as identified by source, no AI/watermark; original framing retained.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/santarem-galleria.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "churchill",
+      "kaupunki": "churchill",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "992c8dce9f5bdce5c15d1ba901e211ee6a9f34d8bc57a24cff2850d57296fe59",
+      "tavut": 229870,
+      "mitat": {
+        "leveys": 1280,
+        "korkeus": 892
+      },
+      "lahde": "Bibliothèque nationale de France / Gallica / Wikimedia Commons",
+      "tekija": "Lieutenant de frégate Lefebvre",
+      "vuosi": "1782",
+      "lisenssi": "PD-Art, PD-old-100, PD-US-expired",
+      "attribuutio": "Lieutenant de frégate Lefebvre / BnF-Gallica / Wikimedia Commons",
+      "kuvateksti-ehdotus": "Ranskalainen meriupseeri piirsi Churchilljoen Prince of Walesin linnoituksen vuoden 1782 retkellä.",
+      "qaKonteksti": "Nimenomainen Churchilljoen fortti eikä samanniminen muu kohde; Commons 1336×931 px.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Vue_du_fort_prince_de_Walles_dans_la_baie_d%27Hudson_en_1782.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Vue_du_fort_prince_de_Walles_dans_la_baie_d%27Hudson_en_1782.jpg/1280px-Vue_du_fort_prince_de_Walles_dans_la_baie_d%27Hudson_en_1782.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vue_du_fort_prince_de_Walles_dans_la_baie_d%27Hudson_en_1782.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "08f1a7d7697e9fd9b8e5ee46d1ec8fc80cc5501fdf26d4b7262c3aa1b18907df",
+      "lähdeTavut": 193015,
+      "lähdeMitat": [
+        1280,
+        892
+      ],
+      "qaTekninen": "JPG RGB, named embedded sRGB ICC, dimensions and SHA-256 verified; no upscaling.",
+      "qaVisuaalinen": "Full image inspected: authentic historic artwork or photo, correct place as identified by source, no AI/watermark; original framing retained.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/churchill-galleria.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "joaopessoa",
+      "kaupunki": "joaopessoa",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "994e5e52d3c5a0d1b87ba4341d08c6f026b42f45770b5fe2cbded2acc516dc46",
+      "tavut": 213603,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 683
+      },
+      "lahde": "Colección Patricia Phelps de Cisneros / Web Gallery of Art / Wikimedia Commons",
+      "tekija": "Frans Post",
+      "vuosi": "1638",
+      "lisenssi": "PD-Art, PD-old-100, PD-US-expired",
+      "attribuutio": "Frans Post / Colección Patricia Phelps de Cisneros / Wikimedia Commons",
+      "kuvateksti-ehdotus": "Frans Post kuvasi nykyisen João Pessoan paikalla sijainneen Frederican kaupungin vuonna 1638.",
+      "qaKonteksti": "Frederica/Frederiksstad on nykyinen João Pessoa; öljymaalaus, Commons 1082×770 px, ei suurennusta.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:View_of_Frederiksstad_in_Paraiba,_Brazil_1638_Frans_Post.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/View_of_Frederiksstad_in_Paraiba%2C_Brazil_1638_Frans_Post.jpg/960px-View_of_Frederiksstad_in_Paraiba%2C_Brazil_1638_Frans_Post.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/View_of_Frederiksstad_in_Paraiba%2C_Brazil_1638_Frans_Post.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "c926179090f4f0ba8c1cbbc108a60ffaa5c9c54470483f02f84686be799b3383",
+      "lähdeTavut": 171754,
+      "lähdeMitat": [
+        960,
+        683
+      ],
+      "qaTekninen": "JPG RGB, named embedded sRGB ICC, dimensions and SHA-256 verified; no upscaling.",
+      "qaVisuaalinen": "Full image inspected: authentic historic artwork or photo, correct place as identified by source, no AI/watermark; original framing retained.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/joaopessoa-galleria.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "managua",
+      "kaupunki": "managua",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "1275d8f0e64d73ec3f363a437109a08c1387a227fec660a84b8ecbbd0f9bdb21",
+      "tavut": 192320,
+      "mitat": {
+        "leveys": 700,
+        "korkeus": 550
+      },
+      "lahde": "E. G. Squier, Nicaragua (original 1852, Cornell 1860 edition), Commons PD scan; Project Gutenberg extracted plate",
+      "tekija": "Ephraim George Squier / unidentified book engraver",
+      "vuosi": "1852 (original engraving); 1860 edition scan",
+      "lisenssi": "Public domain, PD-old-100, PD-US-expired (Commons book license); artwork first published 1852",
+      "attribuutio": "E. G. Squier / Cornell University Library / Wikimedia Commons; plate file via Project Gutenberg",
+      "kuvateksti-ehdotus": "Vuoden 1852 matkakirjan puupiirros katsoo Managua-järvelle kaupungin rannalta.",
+      "qaKonteksti": "Book plate caption explicitly says VIEW OF LAKE, FROM BEACH AT MANAGUA; not generic Nicaraguan view. Commons 1860 scan carries public-domain license and original publication was 1852. Gutenberg plate matches it; source 700x550, no upscaling, full frame and no watermark.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Nicaragua_-_its_people,_scenery,_monuments,_resources,_condition,_and_proposed_canal_(IA_cu31924021061837).pdf",
+      "lähdeTiedosto": "https://www.gutenberg.org/cache/epub/76906/images/p2090_ill1.jpg",
+      "commonsAlkuperainenUrl": null,
+      "lähdeSha256": "1518acabb58971ca53b38f17acbec7e1306069da6e337f4c13994c2731c44224",
+      "lähdeTavut": 236167,
+      "lähdeMitat": [
+        700,
+        550
+      ],
+      "qaTekninen": "JPG RGB, named embedded sRGB ICC, dimensions and SHA-256 verified; no upscaling.",
+      "qaVisuaalinen": "Whole plate inspected: lake, shore, huts and people; no AI/watermark, exact city caption supported by 1852 book.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/managua-galleria.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "sanjuan",
+      "kaupunki": "sanjuan",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "64f36fe00af8cc484f8ab747c09b9cb94f440a708c01568cded2186d85e73ee1",
+      "tavut": 1042846,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1152
+      },
+      "lahde": "Lealtad y Heroismo de la Isla de Puerto Rico (1897) / Wikimedia Commons",
+      "tekija": "Lit. Boletin Mercantil",
+      "vuosi": "1897; kuvaa vuoden 1797 piiritystä",
+      "lisenssi": "PD-old-70, PD-US-expired",
+      "attribuutio": "Lit. Boletin Mercantil / Wikimedia Commons",
+      "kuvateksti-ehdotus": "Vuoden 1897 litografia näyttää englantilaisten San Juaniin vuonna 1797 tekemän piirityksen.",
+      "qaKonteksti": "Täsmällisesti San Juan, Puerto Rico; kaiverrus/litografia, Commons 4516×2890 px, ei nykyisten henkilöiden pääaihetta.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Asedio_Ingles.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Asedio_Ingles.jpg/1920px-Asedio_Ingles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Asedio_Ingles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "e7cb74a77ffa1fc3472aa61076ebf36698d140ce2697ef5fce0c41e587654a9f",
+      "lähdeTavut": 1036875,
+      "lähdeMitat": [
+        1920,
+        1229
+      ],
+      "qaTekninen": "JPG RGB, named embedded sRGB ICC, dimensions and SHA-256 verified; no upscaling.",
+      "qaVisuaalinen": "Full image inspected: authentic historic artwork or photo, correct place as identified by source, no AI/watermark; original framing retained.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/sanjuan-galleria.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    }
+  ],
+  "existingInGame": [
+    {
+      "cityId": "bananal",
+      "tyyppi": "ennenNyt",
+      "existingInGame": true,
+      "delivery_required": false,
+      "existing_main_source": "game-src/js/packs/southamerica-valokuvat.js:115",
+      "existing_in_main_sha": "9684af91",
+      "huomio": "Nykyisessä origin/mainissa on jo vuodelta 1911 top-level valokuva Araguaiajoen Karajá-ryhmästä; kulttuurisesti herkkää kuvaa ei lisäkopioida eikä korvata. Fable voi arvioida ennenNyt-parin kytkennän ja kuvatekstin omassa kontekstissaan."
+    },
+    {
+      "cityId": "campogrande",
+      "tyyppi": "ennenNyt",
+      "existingInGame": true,
+      "delivery_required": false,
+      "existing_main_source": "game-src/js/packs/southamerica-valokuvat.js:311",
+      "existing_in_main_sha": "9684af91",
+      "huomio": "CityId campogrande refers to Campo Grande, Mato Grosso do Sul; current game table contains exact source and date; no present-day identifiable private person is a main subject. Commons original 2818×1626 px."
+    },
+    {
+      "cityId": "nome",
+      "tyyppi": "ennenNyt",
+      "existingInGame": true,
+      "delivery_required": false,
+      "existing_main_source": "game-src/js/packs/northamerica-valokuvat.js:1171",
+      "existing_in_main_sha": "9684af91",
+      "huomio": "Aito Nomen Front Street, 17.7.1900; alkuperäinen Commons 2773×1292 px; jo nykyisen pelin matkavalokuvataulussa."
+    },
+    {
+      "cityId": "churchill",
+      "tyyppi": "ennenNyt",
+      "existingInGame": true,
+      "delivery_required": false,
+      "existing_main_source": "game-src/js/packs/northamerica-valokuvat.js:211",
+      "existing_in_main_sha": "9684af91",
+      "huomio": "Aito Churchillin näkymä, alkuperäinen Commons 1936×1396 px; jo nykyisen pelin matkavalokuvataulussa."
+    }
+  ],
+  "unfound": [
+    {
+      "cityId": "boavista",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Ei varmennettua paikkakohtaista aikakauden taideteosta. Boa Vista (Roraima) -haut tarkistettu; samannimiset muut paikat hylätty."
+    },
+    {
+      "cityId": "boavista",
+      "tyyppi": "ennenNyt",
+      "loytyi": false,
+      "huomio": "Hamilton Ricen vuoden 1924 ilmakuva löytyy Commonsista (File:Boa Vista antiga 1.jpg), mutta ainoa todennettu vedos on 250×148 px ja käyttöoikeusmerkintä on heikosti perusteltu; ei toimituskelpoinen."
+    },
+    {
+      "cityId": "santarem",
+      "tyyppi": "ennenNyt",
+      "loytyi": false,
+      "huomio": "Santarém (Pará) -haussa ei todennettu Commonsissa päivättyä, kaupunkia esittävää pre-1960 valokuvaa. Henkilömuotokuva ja Portugalin Santarém hylätty."
+    },
+    {
+      "cityId": "bananal",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Museu Paulistan c.1950 van Emelenin Javaé-johtajamuotokuva kuvaa henkilöä, ei tunnistettavaa saarimaisemaa; kulttuurisesti herkkä aineisto ilman riittävää peliympäristön kontekstia jätetty pois."
+    },
+    {
+      "cityId": "campogrande",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Pedro Américon Campo Grande -taistelumaalaus on Paraguaysta, ei Mato Grosso do Sulin kaupungista; muita kelpoja aikakauden kaupunkiteoksia ei todennettu."
+    },
+    {
+      "cityId": "nome",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Nomen kultaryntäyksestä löytyi valokuvia mutta ei aidosti paikkaa kuvaavaa aikakauden maalausta, kaiverrusta tai litografiaa."
+    },
+    {
+      "cityId": "caphorn",
+      "tyyppi": "ennenNyt",
+      "loytyi": false,
+      "huomio": "Chilen laivastoarkiston ja BND Chilen c.1930 Cabo de Hornos -viitteitä ei voitu yhdistää Commonsin varmennettuun PD/CC-lisenssiin; Commonsin Cape Horn -valokuvat viittaavat usein Oregonin, Alaskan tai Arizonan nimikaimoihin, ja Drake Passage -kuva on 2005 eikä esitä niemeä."
+    },
+    {
+      "cityId": "macapa",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Macapán linnoituksesta löytyi vanhoja pohjapiirroksia ja nykyvalokuvia, mutta tilattu galleria rajaa kartat ja valokuvat pois; ei varmennettua aikakauden taideteosta."
+    },
+    {
+      "cityId": "portovelho",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Madeira–Mamoré-rautatien aikaan kuvatuista Porto Velhon näkymistä löytyy valokuvia, mutta ei todennettua maalausta, kaiverrusta tai litografiaa."
+    },
+    {
+      "cityId": "galapagos",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Galápagosin vanhat kartat sekä yksittäisten lajien eläinkuvitukset eivät esitä tunnistettavaa saarinäkymää; niillä ei täytetä tilattua paikkagalleriaa."
+    },
+    {
+      "cityId": "machupicchu",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Hiram Binghamin 1911–1912 aineistosta löytyy historiallisia valokuvia, mutta ei todennettua aikakauden paikkakohtaista maalausta, kaiverrusta tai litografiaa. Valokuvia ei vaihdeta galleriateoksiin."
+    }
+  ],
+  "candidateOnly": [
+    {
+      "cityId": "puertomontt",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/fable-20260924/galleria-ennennyt-americas/images/puertomontt-galleria.jpg",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Puerto_Montt_-_Vista_jeneral_-_Chile_Ilustrado_(1872).png",
+      "lisenssi": "PD-old-100, PD-US-expired",
+      "huomio": "Only a 330×134 px official Commons thumbnail is available during the original-upload rate limit. Keep the authentic candidate, but do not deliver it for fullscreen gallery use or upscale it."
+    }
+  ],
+  "citySummary": [
+    {
+      "cityId": "boavista",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Ei varmennettua paikkakohtaista aikakauden taideteosta. Boa Vista (Roraima) -haut tarkistettu; samannimiset muut paikat hylätty."
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "not_found",
+          "huomio": "Hamilton Ricen vuoden 1924 ilmakuva löytyy Commonsista (File:Boa Vista antiga 1.jpg), mutta ainoa todennettu vedos on 250×148 px ja käyttöoikeusmerkintä on heikosti perusteltu; ei toimituskelpoinen."
+        }
+      ]
+    },
+    {
+      "cityId": "santarem",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "local_qa_passed_not_uploaded",
+          "huomio": null
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "not_found",
+          "huomio": "Santarém (Pará) -haussa ei todennettu Commonsissa päivättyä, kaupunkia esittävää pre-1960 valokuvaa. Henkilömuotokuva ja Portugalin Santarém hylätty."
+        }
+      ]
+    },
+    {
+      "cityId": "bananal",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Museu Paulistan c.1950 van Emelenin Javaé-johtajamuotokuva kuvaa henkilöä, ei tunnistettavaa saarimaisemaa; kulttuurisesti herkkä aineisto ilman riittävää peliympäristön kontekstia jätetty pois."
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "existing_in_game",
+          "huomio": "Nykyisessä origin/mainissa on jo vuodelta 1911 top-level valokuva Araguaiajoen Karajá-ryhmästä; kulttuurisesti herkkää kuvaa ei lisäkopioida eikä korvata. Fable voi arvioida ennenNyt-parin kytkennän ja kuvatekstin omassa kontekstissaan."
+        }
+      ]
+    },
+    {
+      "cityId": "campogrande",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Pedro Américon Campo Grande -taistelumaalaus on Paraguaysta, ei Mato Grosso do Sulin kaupungista; muita kelpoja aikakauden kaupunkiteoksia ei todennettu."
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "existing_in_game",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "nome",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Nomen kultaryntäyksestä löytyi valokuvia mutta ei aidosti paikkaa kuvaavaa aikakauden maalausta, kaiverrusta tai litografiaa."
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "existing_in_game",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "churchill",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "local_qa_passed_not_uploaded",
+          "huomio": null
+        },
+        {
+          "tyyppi": "ennenNyt",
+          "state": "existing_in_game",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "caphorn",
+      "slots": [
+        {
+          "tyyppi": "ennenNyt",
+          "state": "not_found",
+          "huomio": "Chilen laivastoarkiston ja BND Chilen c.1930 Cabo de Hornos -viitteitä ei voitu yhdistää Commonsin varmennettuun PD/CC-lisenssiin; Commonsin Cape Horn -valokuvat viittaavat usein Oregonin, Alaskan tai Arizonan nimikaimoihin, ja Drake Passage -kuva on 2005 eikä esitä niemeä."
+        }
+      ]
+    },
+    {
+      "cityId": "joaopessoa",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "local_qa_passed_not_uploaded",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "macapa",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Macapán linnoituksesta löytyi vanhoja pohjapiirroksia ja nykyvalokuvia, mutta tilattu galleria rajaa kartat ja valokuvat pois; ei varmennettua aikakauden taideteosta."
+        }
+      ]
+    },
+    {
+      "cityId": "portovelho",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Madeira–Mamoré-rautatien aikaan kuvatuista Porto Velhon näkymistä löytyy valokuvia, mutta ei todennettua maalausta, kaiverrusta tai litografiaa."
+        }
+      ]
+    },
+    {
+      "cityId": "managua",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "local_qa_passed_not_uploaded",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "sanjuan",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "local_qa_passed_not_uploaded",
+          "huomio": null
+        }
+      ]
+    },
+    {
+      "cityId": "puertomontt",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "candidate_only",
+          "huomio": "Only a 330×134 px official Commons thumbnail is available during the original-upload rate limit. Keep the authentic candidate, but do not deliver it for fullscreen gallery use or upscale it."
+        }
+      ]
+    },
+    {
+      "cityId": "galapagos",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Galápagosin vanhat kartat sekä yksittäisten lajien eläinkuvitukset eivät esitä tunnistettavaa saarinäkymää; niillä ei täytetä tilattua paikkagalleriaa."
+        }
+      ]
+    },
+    {
+      "cityId": "machupicchu",
+      "slots": [
+        {
+          "tyyppi": "galleria",
+          "state": "not_found",
+          "huomio": "Hiram Binghamin 1911–1912 aineistosta löytyy historiallisia valokuvia, mutta ei todennettua aikakauden paikkakohtaista maalausta, kaiverrusta tai litografiaa. Valokuvia ei vaihdeta galleriateoksiin."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "slots": 21,
+    "cities": 15,
+    "deliverable_images": 5,
+    "existing_in_game": 4,
+    "not_found": 11,
+    "low_resolution_candidate_only": 1,
+    "pending_download": 0
+  }
+}

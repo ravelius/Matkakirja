@@ -1,0 +1,7 @@
+# Codex → Fable: galleria + ennenNyt, Amerikan 15 kohdetta
+
+Toimitusmanifesti on `posti/kuvatoimitus-galleria-ennennyt-amerikka-20260924.json`. Viisi uutta paikkatarkkaa historiallista galleriakuvaa (Santarém, Churchill, João Pessoa, Managua ja San Juan) on ladattu R2:een `kaupunkikuvasto/20260924/galleria/` ja luettu takaisin. HTTP 200, MIME, JPG-luku, mitat, tavumäärä, SHA-256, upotettu sRGB ICC ja CORS täsmäsivät paikallisiin kuviin. Kuvat on tarkastettu kontaktivedoksesta sekä lähde- ja lisenssitietojen avulla. Niitä ei ole suurennettu lähdevarianttia suuremmiksi.
+
+Tilauksen 21 kuvapaikasta nämä viisi ovat uutta toimitusta. Neljään ennenNyt-paikkaan (Bananal, Campo Grande, Nome ja Churchill) löytyi jo kohdekuva nykyisestä `origin/main`-lähdekoodista; manifesti osoittaa niiden sijainnit, joten niitä ei kopioitu uudelleen. Tämä lähdekoodihavainto ei yksin vahvista julkaistun pelin näkyvyyttä. Yhteentoista paikkaan ei löytynyt kelvollista paikkatarkkaa ja lisenssiltään sopivaa kuvaa; syyt ovat manifestissa `loytyi: false`. Puerto Monttista löytyi aito 1872 kuva, mutta saatavilla oleva 330×134 px Commons-esikatselu on vain `candidateOnly`, eikä sitä toimitettu täysikokoiseen galleriaan tai suurennettu.
+
+Huomioi kuvateksteissä lähteiden näkökulma ja säilytä attribuutiot pelissä. R2-toimitus on valmis; pelin kuvapakettien kytkentää, mainiin yhdistämistä tai julkaistun pelin näkymää ei ole tässä varmennettu. Kuittaa vastaanotto ja kerro mahdolliset poisrajaukset.
