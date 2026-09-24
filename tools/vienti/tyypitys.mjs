@@ -95,4 +95,28 @@ export function tyypitaLoput(kokoelmat) {
   }
   kokoelmat.laatat.kuvaus += ' Skeema 1.30: tyypit ja mannerTyypit sisältävät myös nimi, symboli, arvo ja vari '
     + '(= name, symbol, value, color; 2.0 jättää vain suomenkieliset).';
+
+  // Skeema 1.31 (Pelikoodarin vartijaraportti 24.9.2026, ennen 2.0:aa): loput raakakentät
+  // päätasolle. Nämä kokoelmat ovat jo suomeksi, joten avaimet nostetaan sellaisenaan:
+  // natiivin nykyinen polku data.X on 2.0:ssa X.
+  const nostaLoput = (nimi) => {
+    const avaimet = new Set();
+    for (const a of kokoelmat[nimi].alkiot) {
+      if (a.data && typeof a.data === 'object' && !Array.isArray(a.data)) for (const k of Object.keys(a.data)) if (!(k in a)) avaimet.add(k);
+    }
+    const lista = [...avaimet].sort();
+    for (const a of kokoelmat[nimi].alkiot) for (const k of lista) if (!(k in a)) a[k] = nollaksi(a.data?.[k]);
+    kokoelmat[nimi].kuvaus += ` Skeema 1.31: päätasolla myös raakakentät sellaisenaan: ${lista.join(', ')}.`;
+  };
+  for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat']) nostaLoput(nimi);
+
+  for (const a of kokoelmat.kaupungit.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      wiki: nollaksi(d.wiki), ambienssi: nollaksi(d.ambience),
+      nimionAnkkuri: d.la ? { tasaus: d.la, dx: nollaksi(d.lx), dy: nollaksi(d.ly) } : null,
+    });
+  }
+  kokoelmat.kaupungit.kuvaus += ' Skeema 1.31: päätasolla wiki (artikkelin nimi), ambienssi (webin ambience) ja '
+    + 'nimionAnkkuri { tasaus: start | end | middle, dx, dy } (laudan nimiön paikka pisteeseen nähden).';
 }

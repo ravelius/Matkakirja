@@ -8,10 +8,11 @@
   "1.27": "6ce8cb0b49deb75c",
   "1.28": "f06631f1168799e5",
   "1.29": "5333684225d7cb2b",
-  "1.30": "4eacd12cb5266253"
+  "1.30": "4eacd12cb5266253",
+  "1.31": "a7e1d2be199a1a5e"
  },
  "uusin": {
-  "skeemaversio": "1.30",
+  "skeemaversio": "1.31",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -63,18 +64,46 @@
     "id"
    ],
    "fokusvirrat": [
+    "aarremerkinta",
     "data",
     "id",
     "kaupunki",
+    "kohtaaminen",
     "kohtaamispiste",
+    "kohteet",
     "lehtitehtavat",
+    "matkakirja",
+    "oppitunti",
+    "pollo",
     "sahketehtava",
+    "takynostot",
+    "takyt",
+    "valinta",
     "virta"
    ],
    "historianHetket": [
+    "aihe",
     "data",
     "id",
-    "maa"
+    "iso",
+    "kartalla",
+    "kartanUlkopuolella",
+    "kartanUlkopuolellaSyy",
+    "kattoVapaa",
+    "kuvat",
+    "kuvaversio",
+    "lat",
+    "lehti",
+    "lehtiJohdanto",
+    "lehtiTehtava",
+    "lon",
+    "maa",
+    "nimio",
+    "otsikko",
+    "paikka",
+    "paivays",
+    "teksti",
+    "visa"
    ],
    "julisteet": [
     "data",
@@ -119,6 +148,7 @@
    ],
    "kaupungit": [
     "aloitus",
+    "ambienssi",
     "data",
     "id",
     "intro",
@@ -132,10 +162,12 @@
     "maa2",
     "manner",
     "nimi",
+    "nimionAnkkuri",
     "saari",
     "sijaintiLahde",
     "tarkeys",
-    "tyyppi"
+    "tyyppi",
+    "wiki"
    ],
    "kaupunkilehdet": [
     "aiheet",
@@ -387,7 +419,16 @@
    "monumentit": [
     "data",
     "id",
-    "maa"
+    "ihme",
+    "kysymykset",
+    "lahde",
+    "lahi",
+    "laudat",
+    "maa",
+    "nappi",
+    "nimi",
+    "teksti",
+    "tyyppi"
    ],
    "muutosloki-natiivi": [
     "id",
@@ -545,7 +586,20 @@
    "skandaalit": [
     "data",
     "id",
-    "maa"
+    "kattoVapaa",
+    "kortti",
+    "kuva",
+    "kuvat",
+    "lahde",
+    "lat",
+    "lon",
+    "maa",
+    "nimio",
+    "otsikko",
+    "paikka",
+    "teksti",
+    "visa",
+    "vuosi"
    ],
    "takynostot": [
     "aani",

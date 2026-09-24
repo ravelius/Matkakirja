@@ -157,8 +157,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (tools/vienti/maarajat.mjs rajaaWebinMuotoon).
  *   1.30 Pelikoodarin tilaus: aanitaulut (siirtyma, tila-/paikkaraita, pulu)
  *        kentät päätasolle, reitit.maksu, laattatyyppeihin nimi/symboli/arvo/vari.
+ *   1.31 ennen 2.0:aa loput raakakentät päätasolle: skandaalit, historianHetket,
+ *        monumentit ja fokusvirrat sellaisenaan; kaupungit wiki, ambienssi,
+ *        nimionAnkkuri.
  */
-export const SKEEMAVERSIO_TARKKA = '1.30';
+export const SKEEMAVERSIO_TARKKA = '1.31';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

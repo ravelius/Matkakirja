@@ -1101,3 +1101,15 @@ test('2.0 (major2.mjs): ei raakaa, vain natiivin moduulit, tiivisteet täsmääv
   assert.ok(laatta.tyypit.star.nimi && !('name' in laatta.tyypit.star));
   assert.ok(JSON.parse(t2.get(m.media.tiedosto)).viitteet.every((v) => !('esiintymat' in v) && v.arvo));
 });
+
+test('skeema 1.31: ennen 2.0:aa dict-raakadatan jokainen kenttä on päätasolla', () => {
+  for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat', 'nahtavyydet', 'paikallisaarteet']) {
+    for (const a of JSON.parse(tiedostot.get(`kokoelmat/${nimi}.json`)).alkiot) {
+      if (!a.data || typeof a.data !== 'object' || Array.isArray(a.data)) continue;
+      for (const k of Object.keys(a.data)) assert.ok(k in a, `${nimi}/${a.id}: ${k}`);
+    }
+  }
+  const [lontoo] = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((a) => a.id === 'lontoo');
+  assert.deepEqual(lontoo.nimionAnkkuri, { tasaus: 'end', dx: -20, dy: 5 });
+  assert.equal(lontoo.ambienssi, 'kaupunki');
+});
