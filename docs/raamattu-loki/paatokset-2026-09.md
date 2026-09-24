@@ -4495,3 +4495,7 @@ Julkaisijan luovutukseen build 11 -kaava (ordinaali #3107, -nographics, #3110, e
 ## LAITETESTAAJA: LENNON ESILATAUS MITATTU BUILD 10:LLA — VAIHTO t=0,08, ESILATAUS 278/278 (100 %), VALIMUISTISTA 2335 / VERKOSTA 322; LASKUSSA 3707 / 925 (24.9.2026 klo 19.31)
 
 Oppi: xcrun simctl launch --stdout=/--stderr= näyttää Unityn Debug.Log-virran (simctl log show ei); Natiivisepälle korjattu aiempi 'en löytänyt lokia'. Lento päättyi normaalisti Ateenan lehteen. Jatkaa nappi-inventaarion EI TARKISTETTU -osioihin.
+
+## OMISTAJAN LOYDOS 44 (BUILD 10, klo 19.4x, SITOVA): iPHONEN YLAPALKKI MATALAMMAKSI, LOGO POIS, PILLERI VASEMPAAN JA ☰ OIKEAAN, PALKKI JAA TAUSTAA RAUHOITTAMAAN (24.9.2026 klo 19.35)
+
+Raamattu päivitetty (tarkennus yläpalkkikohtaan; iPad ennallaan). Natiivi-UI:lle build 11:een; samalla mittaus: Liiku-nappi kuvassa ruudun keskellä nappulan päällä ja pulu peittää nostonimen → verrataan webiin.
