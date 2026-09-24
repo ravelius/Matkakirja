@@ -945,41 +945,33 @@ tai (b) narraatio ei käynnistynyt lainkaan. Uusinta vaatii testin
 AIVAN ENSIMMÄISELLÄ lennolla tuoreessa pelissä + `puhe.url`-kentän
 tarkistus heti lennon alettua.
 
-## B7-9 (löydös 24A): Aloitusportin ruutu täsmälleen webin mukaan (ei ylimääräistä)
+## B7-9 (löydös 24A): Aloitusportin ruutu — PERUTTU, KS. KORJAUS ALLA
 
-**Omistaja (Fable 24.9. klo 12.08, SITOVA)**: aloitusportin pitää
-näyttää TÄSMÄLLEEN sen minkä web näyttää — EI MITÄÄN MUUTA. Webissä
-(`js/ui.js` showAloitusportti) portilla on VAIN: "Laita äänet päälle"
-+ kaiutin-ikoni, nappi "Aloita seikkailu", alhaalla linkki "Oppiminen
-on hauskaa" (Periaatteet-lappu). EI otsikkolohkoa ("MATKAKIRJA /
-MAAILMAN YMPÄRI.../OSA II"), EI "Seuraa isoisän..." -ingressiä, EI
-"Jatka matkaa" / "Uusi matka" -nappeja. Portin jälkeen tallennus jatkuu
-TAI (jos ei tallennusta) avausruutu (Heathrow + INTRO_TEXT + "Valitse
-aloituskaupunki").
-**TUNNETTU BUGI (havaittu jo tämän session ALKUPUOLELLA, build 6:n
-ensimmäisessä kylmäkäynnistyskuvassa, ks. proto-3d/lokit/
-build6-tarkistus-20260924/17-etusivupallo-a.png)**: natiivi näyttää
-ison otsikkolohkon ("MATKAKIRJA / MAAILMAN YMPÄRI KAHDEKSASSA-
-KYMMENESSÄ PÄIVÄSSÄ / OSA II · UNOHDETTU AARRE"), ingressin ("Seuraa
-isoisän matkakirjaa...") SEKÄ "Jatka matkaa"/"Uusi matka" -nappiparin
-yhden "Aloita seikkailu"-napin sijaan — kaikki tämä pitää POISTAA.
-**Vastuu**: Natiivi-UI, build 7.
+**KORJAUS (Fable 24.9. klo 13.1x): OMISTAJA PERUI PORTIN MUUTOKSEN klo
+12.2x.** Alkuperäinen vaatimus (poistaa otsikkolohko, ingressi ja
+Jatka/Uusi-napit) EI OLE ENÄÄ VOIMASSA. Aloitusruutu PYSYY NYKYISENÄ
+sellaisenaan: otsikkolohko ("MATKAKIRJA / MAAILMAN YMPÄRI.../OSA II"),
+ingressi ("Seuraa isoisän matkakirjaa...") ja "Jatka matkaa"/"Uusi
+matka" -nappiparin KUULUVAT NÄKYÄ — tämä EI ole bugi. Sen sijaan "Uusi
+matka" vie pallonäkymään Lontoo-zoomilla ja avausluennalla.
 
-**Testikomento**: kylmäkäynnistys (poista appi ja asenna uudestaan TAI
-tyhjennä tallennus jos komento löytyy, jotta nähdään aidosti tyhjä
-tallennustila), `kuva portti-b7-tyhjatila`. Jos tallennus on olemassa,
-testaa myös se erikseen: `kuva portti-b7-tallennuksella`.
+**UUSI TESTIKOMENTO/ODOTUS**: kylmäkäynnistys → tarkista portti näyttää
+otsikkolohkon+ingressin+Jatka/Uusi-napit (kuten aina) → paina "Uusi
+matka" → odotettu tulos: kamera zoomaa Lontooseen pallolla, avausluenta
+(INTRO_TEXT + intro-puhe) alkaa.
 
-**PASS-ehto**: portilla näkyy VAIN kolme elementtiä (äänikehote+kaiutin,
-"Aloita seikkailu", "Oppiminen on hauskaa") — ei otsikkolohkoa, ei
-ingressiä, ei Jatka/Uusi-nappeja. **FAIL**: mikä tahansa ylimääräinen
-elementti näkyy yhä (kuten build 6:ssa).
+**PASS-ehto (korjattu)**: portti näyttää nykyisen sisällön (otsikko+
+ingressi+napit), "Uusi matka" -painallus vie Lontoo-zoomiin
+avausluennalla. **FAIL**: portti puuttuu jokin nykyinen elementti, tai
+"Uusi matka" ei laukaise Lontoo-zoomia/avausluentaa.
 
-**TULOS 24.9. klo 13.0x (SHA 24c9194): FAIL — ei muutosta build 6:sta.**
-Kylmäkäynnistyksen portti näyttää yhä täyden otsikkolohkon (MATKAKIRJA/
-MAAILMAN YMPÄRI.../OSA II), ingressin ja "Jatka matkaa"/"Uusi matka"
--nappiparin (`b7-9-portti-vielakin-vanha.png`) — täsmälleen sama kuin
-build 6:ssa. Ei vielä toteutettu.
+**TULOS 24.9. klo 13.0x (SHA 24c9194): PASS (korjatun määritelmän
+mukaan).** Kylmäkäynnistyksen portti näytti otsikkolohkon, ingressin ja
+Jatka/Uusi-nappiparin täydellisenä (`b7-9-portti-vielakin-vanha.png` —
+kuvan nimi historiallinen, sisältö on nyt OIKEA/ODOTETTU tila). "Uusi
+matka" -painalluksen jälkeistä Lontoo-zoomia/avausluentaa ei vielä
+erikseen todennettu tässä ajossa — tarkistetaan seuraavan lentotestin
+yhteydessä (ks. B7-7 lisätulos alla).
 
 ## B7-8 (löydös 24B): ☰-valikon "Uusi peli" palauttaa aloitusporttiin asti
 
@@ -1029,6 +1021,6 @@ Natiivi-UI:lta.
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
 | B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni EI VOITU VARMISTAA (161fa35+24c9194) | | `puhe.url` oli null koko lennon ajan — ei ensimmäinen lento tuoreessa pelissä, uusinta tarvitaan |
 | B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ⚠️ EI SAATU TESTATTUA (161fa35) | | Kosketus ei osunut valikon vieritykseen |
-| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | ❌ FAIL (24c9194) | b7-9-portti-vielakin-vanha.png | Ei muutosta build 6:sta, sama vanha otsikkolohko+napit |
+| B7-9 | Aloitusportti (VAATIMUS PERUTTU — nykyinen sisältö on oikea) | ✅ PASS (24c9194, korjatun määritelmän mukaan) | b7-9-portti-vielakin-vanha.png | Omistaja perui alkuperäisen "vain 3 elementtiä" -vaatimuksen 12.2x |
 | 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
 | 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
