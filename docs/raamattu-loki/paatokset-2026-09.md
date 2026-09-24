@@ -4247,3 +4247,7 @@ Omistajan koodaus-Xcode-tili (me.com) ei sisällä Personal Team F72JLS57C5:tä.
 ## OMISTAJAN LOYDOKSET 36–37 (BUILD 9, klo 17.1x, SITOVA): MAAILMANAPPI PUUTTUU; KEHITTAJANAPIT JA HAMMASRATAS NAKYVAT ILMAN KEHITTAJATILAA (24.9.2026 klo 16.36)
 
 36) webin karttanappi (maailmanäkymä) palautetaan kartan yläkulmaan webin mukaan. 37) kehittäjäsäätimet ja ⚙ piiloon kun kehittäjätila on pois (Raamattu: vain kehittäjätilassa; ⚙ ei pelaajan näkymässä). → Natiivi-UI, build 10, yläpalkin yhteydessä.
+
+## LOYDOS 35 → LINSSISEPPA TEKEE ITSE (linssiseppa/b10-astropulu); PROTO-MASTER 3726485 (EI WEBISSA -ERA MUKANA); KORKEUSKERROIN bf5e82b (24.9.2026 klo 16.36)
+
+Linssiseppä: webissä astronauttipulun pillerit ovat valmiita kysymyksiä oikeaan chat-reittiin (polloUlkoinenKysymys), konteksti 'Avattu valokuva avaruudesta' + selite ilman sijaintia, ei mikki/kaiutinriviä; natiivin vika MinipulunKortti (valmiit vastaukset) ja PuluChat.Konteksti (kaupunki) → Linssiseppä korjaa, koska Natiivi-UI:n jono on täynnä. Natiiviseppä: proto-master 3726485 (merge d3629d3) sisältää natiivi-ui/ei-webissa 42c5015; build 10 odottaa kuvapareja/korjauksia: saapumisnäkymä, zoomi, avausteksti, liiku-tanne iPad, fokuspohja, satelliitti (harmaat + meren värjäys), b10-avaruus, eleet 28–31, korkeuskerroin (bf5e82b: verteksisiirto varjostimessa, komento 'korkeus <k>', vertailukuvat tulossa).
