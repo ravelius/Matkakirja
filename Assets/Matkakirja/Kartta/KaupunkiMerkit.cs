@@ -439,7 +439,8 @@ namespace Matkakirja
 
             foreach (var m in merkit)
             {
-                Vector3 paikka = gt.TransformPoint(m.pinta);
+                // Korkeuskerroin nostaa maastoa: merkki nousee saman verran (paketin pintakorkeudesta).
+                Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);

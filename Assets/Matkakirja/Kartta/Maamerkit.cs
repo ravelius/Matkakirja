@@ -213,7 +213,10 @@ namespace Matkakirja
 
             foreach (var e in esiintymat.Values)
             {
-                Vector3 p = gt.TransformPoint(e.paikka);
+                // Korkeuskerroin nostaa maastoa jalan kohdalla: malli nousee saman verran.
+                Vector3 paikallinen = e.paikka + e.ylos * KorkeusKerroin.Lisays(e.rivi.korkeusM);
+                if (e.t.localPosition != paikallinen) e.t.localPosition = paikallinen;
+                Vector3 p = gt.TransformPoint(paikallinen);
                 Vector3 kohti = kp - p;
                 float d = kohti.magnitude;
                 Vector3 ylos = gt.TransformDirection(e.ylos);
