@@ -232,9 +232,10 @@ namespace Matkakirja.Natiivi
                 kortti.style.width = kortti.style.maxHeight = StyleKeyword.Null;
                 return;
             }
-            float w = kerros.layout.width > 0 ? kerros.layout.width : Screen.width;
+            // Paneelin leveys (pisteinä): kerros voi olla vielä piilossa, jolloin sen oma layout on 0.
+            float w = kerros.panel != null ? kerros.panel.visualTree.layout.width : 0f;
             kortti.style.position = Position.Absolute;
-            kortti.style.width = Mathf.Round(Mathf.Min(Leveys, w * LeveysOsuus));
+            if (w > 0f) kortti.style.width = Mathf.Round(Mathf.Min(Leveys, w * LeveysOsuus));
             kortti.style.left = Mathf.Round(ankkuri.Value.x + Rako);
             kortti.style.top = Mathf.Round(ankkuri.Value.y);
             Asemoi();
@@ -245,6 +246,8 @@ namespace Matkakirja.Natiivi
         {
             float w = kerros.layout.width, h = kerros.layout.height;
             if (w <= 0 || h <= 0 || !ankkuri.HasValue) return;
+            float haluttu = Mathf.Round(Mathf.Min(Leveys, w * LeveysOsuus));
+            if (kortti.resolvedStyle.width != haluttu) kortti.style.width = haluttu;
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot); // vasen, ylä, oikea, ala
             float laitavara = Mathf.Min(LaitavaraEnintaan, Mathf.Max(Marginaali, Mathf.Round(h * LaitavaraOsuus)));
             float ala = h - Mathf.Max(laitavara, t.w + Marginaali), yla = Mathf.Max(laitavara, t.y + Marginaali);
