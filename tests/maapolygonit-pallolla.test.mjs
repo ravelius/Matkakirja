@@ -177,3 +177,32 @@ test('pallon maasävyt ovat samat kuin kartan', () => {
     assert.ok(lahde.includes(`'${reuna}'`), `${luokka}: reuna puuttuu pallon sävyistä`);
   }
 });
+
+/*
+ * TARKAT RAJAT (Fable 24.9.2026): pallolla piirretään Natural Earth 10m
+ * -aineisto (assets/data/maapolygonit.json), jotta Huippuvuoret kuuluvat
+ * Norjalle — laudan muoto loppuu 76° N:ään.
+ */
+test('tarkalla aineistolla Huippuvuoret ovat Norjaa ja pistemäärä pysyy kohtuullisena', () => {
+  const tarkat = JSON.parse(readFileSync(new URL('../assets/data/maapolygonit.json', import.meta.url), 'utf8'));
+  const tarkkaMaat = maapolygonitPallolle(map, asteet, tarkat);
+  const nor = renkaat(tarkkaMaat.get('NOR').geometry);
+  const huippuvuoret = nor.filter((r) => r.some(([lon, lat]) => lat > 76 && lon > 5 && lon < 35));
+  assert.ok(huippuvuoret.length >= 5, `Huippuvuorten renkaita vain ${huippuvuoret.length}`);
+  assert.equal(renkaat(maat.get('NOR').geometry).filter((r) => r.some(([, lat]) => lat > 76.5)).length, 0,
+    'laudan muodossa ei pitäisi olla Huippuvuoria (testi mittaisi väärää)');
+  let pisteita = 0;
+  for (const [, maa] of tarkkaMaat) for (const r of renkaat(maa.geometry)) pisteita += r.length;
+  assert.ok(pisteita < 60000, `pallolle ${pisteita} pistettä — liikaa Globe.gl:n kolmioinnille`);
+  for (const [iso, maa] of tarkkaMaat) {
+    for (const r of renkaat(maa.geometry)) {
+      assert.deepEqual(r[0], r[r.length - 1], `${iso}: rengas ei ole suljettu`);
+    }
+  }
+});
+
+test('eri laudan aineistoa ei käytetä (mitat eivät täsmää)', () => {
+  const vaara = { lauta: { leveys: 1, korkeus: 1 }, maat: { NOR: [[0, 0, 10, 0, 0, 10]] } };
+  const t = maapolygonitPallolle(map, asteet, vaara);
+  assert.equal(renkaat(t.get('NOR').geometry).length, map.countryShapes.NOR.renkaat.length);
+});

@@ -1053,16 +1053,14 @@ test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
   assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
 });
 
-test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', () => {
+test('skeema 1.34: maarajat = kaikki admin-0-renkaat (NOR Huippuvuorineen, web #3078)', () => {
   const m = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((a) => [a.id, a]));
   const nor = m.get('NOR');
-  assert.ok(nor.bbox[3] < 72 && nor.kokoBbox[3] > 80, `NOR ${nor.bbox} / ${nor.kokoBbox}`);
-  assert.ok(nor.muutRenkaat.some((r) => r.some(([, lat]) => lat > 76)));
-  assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
-  assert.ok(m.get('FIN').muutRenkaat.length === 0);
-  assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+  assert.ok(nor.bbox[3] > 80, `NOR ${nor.bbox}`);
+  assert.ok(nor.renkaat.some((r) => r.some(([, lat]) => lat > 76)), 'Huippuvuoret renkaissa');
+  assert.ok([...m.values()].every((a) => a.muutRenkaat.length === 0 && a.bbox.join() === a.kokoBbox.join()));
+  assert.ok(m.get('FRA').bbox[0] < -60, 'merentakaiset mukana');
 });
-
 test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset avaimet', () => {
   const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
   const a = k('aanitaulut');
@@ -1234,4 +1232,41 @@ test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari 
       assert.ok(tiedostot.has(a.aikaleimaTiedosto), `${id}: aikaleimat paketissa`);
     }
   }
+});
+
+test('skeema 1.35: maat.fokuspohja = webin FOKUS_POHJAT', async () => {
+  const { FOKUS_POHJAT } = await import('../js/packs/fokus-grc.js');
+  const maat = new Map(JSON.parse(tiedostot.get('kokoelmat/maat.json')).alkiot.map((a) => [a.id, a]));
+  for (const [iso, p] of Object.entries(FOKUS_POHJAT)) {
+    if (!maat.has(iso)) continue;
+    assert.deepEqual(maat.get(iso).fokuspohja.laudalla.bbox, p.bbox, iso);
+  }
+  const fra = maat.get('FRA').fokuspohja.bbox;
+  assert.ok(fra[0] > -20 && fra[2] < 25 && fra[1] > 30 && fra[3] < 60, `FRA ${fra}`);
+});
+
+test('skeema 1.36: merinimet kuten webin nimiötasolla (Linssiseppä)', async () => {
+  const { NIMISTO_1873 } = await import('../js/packs/nimisto-1873.js');
+  const W = await import('../tools/fokuskartta/maailmapiirto.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/merinimet.json'));
+  const lahde = NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva'));
+  assert.equal(k.alkiot.length, lahde.length);
+  assert.ok(k.alkiot.length >= 29);
+  for (const [i, r] of k.alkiot.entries()) {
+    assert.equal(r.nimi, lahde[i].teksti);
+    assert.equal(r.lat, lahde[i].lat);
+    assert.equal(r.lon, lahde[i].lon);
+    assert.match(r.id, /^[a-z0-9-]+$/);
+    assert.equal(typeof r.kulma, 'number');
+    assert.equal(r.kaari, null);
+    assert.deepEqual(r.tasot, [4, 5, 6, 7, 8]);
+    assert.ok(r.lahde && r.lisenssi);
+  }
+  assert.equal(new Set(k.alkiot.map((r) => r.id)).size, k.alkiot.length);
+  assert.ok(k.alkiot.some((r) => r.id === 'englannin-kanaali'));
+  assert.equal(k.tyyli.harvennusEm, W.NIMION_HARVENNUS_EM);
+  assert.equal(k.tyyli.vari, W.NIMION_VARIT.meri);
+  assert.equal(k.tyyli.fontti, W.NIMION_FONTTI);
+  assert.deepEqual(k.tyyli.kirjainkorkeusPx, Object.fromEntries(Object.entries(W.NIMION_KOOT.meri).map(([z, v]) => [z, v])));
+  assert.equal(k.tyyli.versaali, true);
 });

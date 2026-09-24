@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2196, teksti: 'Vertailulinssi pallolla: Huippuvuoret Norjalle… (#3078)' },
+  { v: 2195, teksti: 'Periaatteet: palautenappi on valikossa (#3093)' },
   { v: 2194, teksti: 'Sää: Birdsville, Coober Pedy, Kalgoorlie, Mount… (#3065)' },
   { v: 2193, teksti: 'Sää: Al Kufra, Campo Grande, Exmouth, Macapá, S… (#3064)' },
   { v: 2192, teksti: 'Sää: Bananal, Geraldton, João Pessoa, Murzuk, N… (#3063)' },
