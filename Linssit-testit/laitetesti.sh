@@ -43,6 +43,8 @@ hae() {
   for f in linssi-loki.txt ui-loki.txt $(cat $TMP/kuvat.txt 2>/dev/null); do
     xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID \
       --source "Documents/$f" --destination "$1/$f" >/dev/null 2>&1 || echo "ei laitteella: $f"
+    # Kuvat pienennettyinä (Fable 24.9.): pitkä sivu 1200 px riittää vertailuun.
+    [[ $f == *.png && -f "$1/$f" ]] && sips -Z 1200 "$1/$f" >/dev/null 2>&1
   done
 }
 linssi() { print -l "$@" > $TMP/l.txt; sinne $TMP/l.txt linssi-komento.txt; }
