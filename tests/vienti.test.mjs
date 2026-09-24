@@ -30,6 +30,8 @@ import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
 import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
+import { LIVIAN_SAAPUMISET } from '../js/fokusvirta.js';
+import { NOSTO_MAAT } from '../js/fokusnosto.js';
 import { LISAMODUULIT, LISATIEDOSTOT } from '../tools/vienti/lahteet.mjs';
 
 const eka = await kokoaVienti();
@@ -173,8 +175,11 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
       .filter(([n, v]) => onSaantoArvo(v) && !['DUEL_PRIZE', 'BOT_SKILL'].includes(n)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
+    kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
+    'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
+    lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
     radiot: avaimia(ns('radiot.js').RADIOT),
-    aanitaulut: ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
+    aanitaulut: P.cities.length + 4 + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length + 2 + ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
       + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
@@ -184,6 +189,11 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     pulmaaineisto: 7,
     maastonimet: ['vuoret', 'jarvet', 'joet'].reduce((a, l) => a + ns('maailmankartta-nimet.js').MAAILMANKARTAN_NIMET[l].length, 0),
     karttavalot: kokoelma('karttavalot').alkiot.length,
+    // Skeema 1.24: kaupungit ilman fokusvirtaa (matkakirja tai havainto), Livian taulu, NOSTO_MAAT.
+    saapumistekstit: P.cities.filter((c) => !ns('fokusvirrat.js').FOKUSVIRRAT[c.id]
+      && (ns('js/sisaltotaulut.js').SAAPUMISTEKSTIT.maailmankartta[c.id] || P.placeFacts[c.id]?.length)).length,
+    liviansaapumiset: avaimia(LIVIAN_SAAPUMISET),
+    takynostot: Object.values(NOSTO_MAAT).reduce((a, l) => a + l.length, 0),
     maarajat: Object.keys(JSON.parse(readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8')).maat).length,
     maat: Object.keys(P.map.countryShapes).length,
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
@@ -264,4 +274,35 @@ test('manifestin tiivisteet vastaavat tiedostoja', () => {
   for (const k of manifest.kokoelmat) assert.equal(sha(tiedostot.get(k.tiedosto)), k.sha256, k.tiedosto);
   for (const t of manifest.lisatiedostot) assert.equal(sha(tiedostot.get(t.tiedosto)), t.sha256, t.tiedosto);
   assert.equal(sha(tiedostot.get('media.json')), manifest.media.sha256);
+});
+
+test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
+  const { tarkistaMuutosloki, jarjesta, lueMuutosloki } = await import('../tools/vienti/muutosloki-natiivi.mjs');
+  assert.deepEqual(tarkistaMuutosloki(lueMuutosloki().rivit), []);
+  const hyva = { versio: '1.0.0 (3)', paiva: '2026-09-24', teksti: 'Radiolinssi. Korjauksia.' };
+  assert.deepEqual(tarkistaMuutosloki([hyva]), []);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, versio: '1.0.0' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, paiva: '24.9.2026' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, teksti: 'Yksi. Kaksi. Kolme. Neljä.' }]).length, 1);
+  assert.equal(tarkistaMuutosloki([hyva, hyva]).length, 1);
+  assert.equal(tarkistaMuutosloki([{ ...hyva, build: 3 }]).length, 1);
+  const j = jarjesta([
+    { versio: '0.1.0 (1)', paiva: '2026-09-23', teksti: 'a' },
+    { versio: '1.0.0 (10)', paiva: '2026-09-24', teksti: 'c' },
+    { versio: '1.0.0 (9)', paiva: '2026-09-24', teksti: 'b' },
+  ]);
+  assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
+});
+
+test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () => {
+  const { manifestinPolut, tarkistaAmpari } = await import('../tools/vienti/amparitarkistus.mjs');
+  const polut = manifestinPolut({
+    kokoelmat: [{ nimi: 'k', tiedosto: 'kokoelmat/k.json' }], moduulit: [{ tiedosto: 'moduulit/js/a.json' }],
+    media: { tiedosto: 'media.json' }, offline: { tiedosto: 'offline.json' }, skeemaversio: '1.25',
+  });
+  assert.deepEqual(polut, ['kokoelmat/k.json', 'manifest.json', 'media.json', 'moduulit/js/a.json', 'offline.json']);
+  const ampari = { 'x/a.json': 10, 'x/b%C3%A4.json': 5 };
+  const hae = async (url) => (url in ampari ? { tila: 200, koko: ampari[url] } : { tila: 404, koko: NaN });
+  const v = await tarkistaAmpari('x/', [{ polku: 'a.json', koko: 10 }, { polku: 'bä.json', koko: 6 }, { polku: 'c.json' }], { hae });
+  assert.deepEqual(v, ['bä.json: koko 5 ≠ 6', 'c.json: 404']);
 });
