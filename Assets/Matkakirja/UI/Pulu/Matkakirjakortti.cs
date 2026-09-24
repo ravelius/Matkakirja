@@ -463,7 +463,15 @@ namespace Matkakirja.Natiivi
 
         // --- kaiutin: Kertoja-kytkin ja VU-mittari -----------------------------------
 
-        void VaihdaKertoja() => Asetukset.Aseta(Kytkin.Kertoja, !Asetukset.Paalla(Kytkin.Kertoja));
+        /// <summary>Kortin kaiutin käänsi kertojan päälle (web factKuuntele: vain kortin nappi aloittaa merkinnän luennan).</summary>
+        public event Action KertojaPaalleKortista;
+
+        void VaihdaKertoja()
+        {
+            bool paalle = !Asetukset.Paalla(Kytkin.Kertoja);
+            Asetukset.Aseta(Kytkin.Kertoja, paalle);
+            if (paalle) KertojaPaalleKortista?.Invoke();
+        }
 
         void PaivitaKaiutin()
         {
