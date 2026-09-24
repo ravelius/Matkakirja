@@ -4735,3 +4735,7 @@ Omistaja: 'voisi kokeilla karttaa myös ilman vahvistettua ääriviivaa'. Kartta
 ## OMISTAJA klo 23.2x: MERESTA SYVYYSVIIVAT POIS, VAIN SAVYVAIHTELU (LOYDOS 46) (24.9.2026 klo 23.28)
 
 Omistaja: 'merestä voisi ottaa ehkä ne syvyysviivat pois ja jättää vain värivaihtelut niihin'. Karttasepälle: syvyys pehmeänä sävyliukuna pergamentin sävyssä, ei käyriä eikä vesiviivoitusta; yhdistetään ääriviivattomaan ja C-varianttiin.
+
+## FABLE (LOYDOS 46): RANNAT JA RAJAT NATIIVIIN OMANA VIIVAVERKKONA (MAARAJAN TEKNIIKKA, 0,8–1,2 pt, PEITTO 0,58 KUTEN WEB; AINEISTO WEBIN GSHHS-SARJA) — ERAT E1 RANNIKKO, E2 RAJAT + MAAN KEHA, E3 iPHONE-MITTAUS; RASTERI Z9 KOKO MAAILMALLE ENSIN (~2 Gt), Z10 MYOHEMMIN TARPEEN MUKAAN; MAARAJA-KEHAN KORJAUS 603ac2d (PYOREAT PAAT) (24.9.2026 klo 23.33)
+
+Natiivisepän arvio: viivaverkko 30–100k janaa, 4–12 piirtokutsua, < 13 Mt, ei sulavuusriskiä; riskit kallistuksessa viiva vuorten läpi (ZTest LEqual + syvyysnosto) ja rajojen irtoaminen korkeuskertoimella → Karttasepältä rajoille korkeus pisteittäin (dlon, dlat, h int16). Cesiumin GeoJSON-overlay hylätty (neljäs rasteripaikka, ohenee, välähtää). Rasteri: Z8 nyt 5,4× suurennettu iPhonen lähikuvassa, Z9 2,7×, Z10 1,35× (+50–90 Mt muistia, 1–2 s 4G); osittainen Z10 näkyisi laikkuina, koska Laattapalvelin korvaa puuttuvan laatan pergamentilla → koko kattavuus tai kattavuuslista. Fablen päätös: E1 alkaa heti (ei riipu omistajan pohjavalinnasta), Z9 koko maailmalle Karttasepän polttojonoon uuden pohjareseptin kanssa; Z10 kattavuuslistalla myöhemmin.
