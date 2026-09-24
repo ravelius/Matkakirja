@@ -65,6 +65,12 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  broome: {
+    // Bedford Park (-17.9629/122.2389, Women of Pearling -patsas) ja
+    // Chinatown (-17.9544/122.2433, Johnny Chi Lane) ovat n. 1,1 km
+    // päässä toisistaan (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633 },
+  },
   kalgoorlie: {
     // Hannan Streetin kultakenttäkeskusta laajennettuna pohjoiseen, jotta
     // Paddy Hannanin patsas (Wilson St, -30.7490/121.4706) ja Hannans
