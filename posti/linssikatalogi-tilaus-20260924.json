@@ -170,16 +170,6 @@
   "manner": "Yleiset"
  },
  {
-  "id": "C4",
-  "nimi": "Höyrylaivat ja kanavat",
-  "alue": "maailma",
-  "kaari": "1807 – 1914",
-  "pysakit": "Clermont · Great Eastern · Suez 1869 · Kielin kanava · Panama 1914 · Titanic",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Yleiset"
- },
- {
   "id": "C5",
   "nimi": "Maapallon ympäri 80 päivässä",
   "alue": "maailma",
@@ -258,16 +248,6 @@
   "tila": "idea",
   "tyyppi": "aikajana",
   "manner": "Eurooppa"
- },
- {
-  "id": "D6",
-  "nimi": "Imperiumit ja siirtomaat",
-  "alue": "maailma",
-  "kaari": "1600 – 1914",
-  "pysakit": "VOC Amsterdam · Kalkutta · Kap · Berliinin konferenssi 1884",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Yleiset"
  },
  {
   "id": "E1",
@@ -360,26 +340,6 @@
   "manner": "Eurooppa"
  },
  {
-  "id": "F1",
-  "nimi": "Suuret tulivuorenpurkaukset",
-  "alue": "maailma",
-  "kaari": "1600 eaa – 1883",
-  "pysakit": "Thera · Vesuvius 79 · Laki 1783 · Tambora 1815 (vuosi ilman kesää) · Krakatau 1883",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Yleiset"
- },
- {
-  "id": "F2",
-  "nimi": "Eläinten muuttoreitit",
-  "alue": "maailma",
-  "kaari": "vuodenkierto",
-  "pysakit": "kurjet · valaat · gnut · monarkkiperhoset · lohet",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Yleiset"
- },
- {
   "id": "F3",
   "nimi": "Kasvien matkat",
   "alue": "maailma",
@@ -388,26 +348,6 @@
   "tila": "idea",
   "tyyppi": "aikajana",
   "manner": "Yleiset"
- },
- {
-  "id": "F4",
-  "nimi": "Maanjäristykset ja kaupungit",
-  "alue": "maailma",
-  "kaari": "1755 – 1908",
-  "pysakit": "Lissabon 1755 · San Francisco 1906 · Messina 1908",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Yleiset"
- },
- {
-  "id": "G1",
-  "nimi": "Taudit ja rokotukset",
-  "alue": "Eurooppa",
-  "kaari": "1347 – 1918",
-  "pysakit": "Musta surma Messina 1347 · Lontoon kolera 1854 · Jenner · Pasteur · espanjantauti 1918",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Eurooppa"
  },
  {
   "id": "G2",
@@ -448,16 +388,6 @@
   "tila": "idea",
   "tyyppi": "aikajana",
   "manner": "Yleiset"
- },
- {
-  "id": "G6",
-  "nimi": "Posti ja sähkösanoma",
-  "alue": "Eurooppa",
-  "kaari": "1840 – 1901",
-  "pysakit": "Penny Black · Morse Washington 1844 · Reuters Aachen · Atlantin kaapeli · Marconi",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Eurooppa"
  },
  {
   "id": "H1",
@@ -505,16 +435,6 @@
   "alue": "Kaakkois-Aasia",
   "kaari": "800 – 1431",
   "pysakit": "Borobudur · Bagan · Angkor · Ayutthaya",
-  "tila": "idea",
-  "tyyppi": "aikajana",
-  "manner": "Aasia"
- },
- {
-  "id": "H6",
-  "nimi": "Maustereitit",
-  "alue": "Intian valtameri",
-  "kaari": "1000 – 1700",
-  "pysakit": "Malabar · Malakka · Molukit · Batavia · Lissabon",
   "tila": "idea",
   "tyyppi": "aikajana",
   "manner": "Aasia"
@@ -1080,16 +1000,6 @@
   "manner": "Eurooppa"
  },
  {
-  "id": "T2",
-  "nimi": "Pyhiinvaellukset",
-  "alue": "maailma",
-  "kaari": "vuodenkierto",
-  "pysakit": "Santiago · Mekka · Varanasi · Jerusalem",
-  "tila": "idea",
-  "tyyppi": "virta",
-  "manner": "Yleiset"
- },
- {
   "id": "T3",
   "nimi": "Siperian karkotukset ja asutus",
   "alue": "Venäjä",
@@ -1115,16 +1025,6 @@
   "alue": "maailma",
   "kaari": "1840 – 1914",
   "pysakit": "P&O · Cunard · Suez · Fogg 1872",
-  "tila": "idea",
-  "tyyppi": "virta",
-  "manner": "Yleiset"
- },
- {
-  "id": "U3",
-  "nimi": "Muuttolinnut",
-  "alue": "maailma",
-  "kaari": "vuodenkierto",
-  "pysakit": "kurjet · haarapääskyt · valaat",
   "tila": "idea",
   "tyyppi": "virta",
   "manner": "Yleiset"
@@ -1470,13 +1370,183 @@
   "manner": "Yleiset"
  },
  {
-  "id": "R35",
-  "nimi": "Suomen sää 1844→nyt",
+  "id": "X1",
+  "nimi": "Karttapallo",
   "alue": "maailma",
-  "kaari": "animoitu",
-  "pysakit": "Ilmatieteen laitos (CC BY 4.0)",
+  "kaari": "nykyhetki",
+  "pysakit": "pyöritä palloa · napauta kohtaa · sukella laudalle",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X2",
+  "nimi": "Topografialinssi",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "väri kertoo korkeuden · varjo kertoo muodon",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X3",
+  "nimi": "Vesistölinssi",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "joet · järvet · meret topografian päällä",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X4",
+  "nimi": "Astronautin kamera",
+  "alue": "maailma",
+  "kaari": "kuvat 1991–2026",
+  "pysakit": "64 kuvauskohdetta pallolla · galleria · info-nappi · Pulun kysymykset",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X5",
+  "nimi": "Maailmanradio",
+  "alue": "maailma",
+  "kaari": "nykyhetki (suorat lähetykset)",
+  "pysakit": "kaupungit play-nappeina · viritysääni · suora lähetys",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X6",
+  "nimi": "Vertailulinssi",
+  "alue": "maailma",
+  "kaari": "1950 → nyt",
+  "pysakit": "enintään kolme maata · Suomi rinnalla · maakäyrät samoilla asteikoilla",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "X7",
+  "nimi": "Maiden tiedot",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "napauta maata · rajat ja nimi · maan lehti",
+  "tila": "valmis",
+  "tyyppi": "muu",
+  "manner": "Maailma"
+ },
+ {
+  "id": "B8",
+  "nimi": "Valokuvan synty",
+  "alue": "Eurooppa–USA",
+  "kaari": "1826–1900",
+  "pysakit": "Niépce Chalon 1826 · Daguerre Pariisi 1839 · Talbot Lacock · Nadar Pariisi 1858 · Muybridge 1878 · Kodak Rochester 1888 · Lumière Lyon 1895",
   "tila": "idea",
-  "tyyppi": "data",
+  "tyyppi": "aikajana",
   "manner": "Eurooppa"
+ },
+ {
+  "id": "B9",
+  "nimi": "Aika ja nollameridiaani",
+  "alue": "Britannia–maailma",
+  "kaari": "1675–1884",
+  "pysakit": "Greenwich 1675 · Harrison H4 1761 · rautatieaika Britannia 1840 · Washingtonin meridiaanikonferenssi 1884 · aikavyöhykkeet",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "D7",
+  "nimi": "Suomi isoisän aikaan",
+  "alue": "Suomi",
+  "kaari": "1809–1917",
+  "pysakit": "Porvoon valtiopäivät 1809 · Helsinki pääkaupungiksi 1812 · Saimaan kanava 1856 · markka 1860 ja kultakanta 1877 · rautatie Helsinki–Hämeenlinna 1862 · kansakouluasetus 1866 · nälkävuodet 1866–68 · 1917",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "F5",
+  "nimi": "Elämän matka",
+  "alue": "maailma",
+  "kaari": "4 mrd v sitten → nyt",
+  "pysakit": "ensimmäinen elämä · happi · kambrikausi · maalle nousu · dinosaurukset · asteroidi 66 milj. · nisäkkäät · ihminen",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "P6",
+  "nimi": "Mantereet liikkuvat",
+  "alue": "maailma",
+  "kaari": "250 milj. v sitten → nyt",
+  "pysakit": "Pangaea · Gondwana · Atlantti avautuu · Intia törmää · nyt",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Maailma"
+ },
+ {
+  "id": "E10",
+  "nimi": "Rooman kasvu pallolla",
+  "alue": "Rooma",
+  "kaari": "n. 750 eaa–2020",
+  "pysakit": "n. 750 eaa. Palatinus · n. 378 eaa. Serviuksen muuri · n. 200 jaa. huippu (1,2 milj.) · 1377 pohja (17 000) · 1748 Nolli · 1871 pääkaupunki · 2020",
+  "tila": "seuraava (esitys)",
+  "tyyppi": "esitys",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "R36",
+  "nimi": "Maapallon tila",
+  "alue": "maailma",
+  "kaari": "1880 → nyt",
+  "pysakit": "merijää · lämpötila · merenpinta",
+  "tila": "seuraava (data)",
+  "tyyppi": "data",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q1",
+  "nimi": "Isoisän linssi — vuosi 1873",
+  "alue": "maailma",
+  "kaari": "1873",
+  "pysakit": "1873 rajat ja maiden nimet · Horation reitti katkoviivana · isoisän valokuvat · ajan äänet ja media",
+  "tila": "rakenteilla",
+  "tyyppi": "alue",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q2",
+  "nimi": "Atlaslehti",
+  "alue": "maailma",
+  "kaari": "1875",
+  "pysakit": "Stieler 1875 -atlaksen PD-skanni georeferoituna pallon päälle",
+  "tila": "jonossa",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q3",
+  "nimi": "Satelliittipinta (lennon pinta)",
+  "alue": "maailma",
+  "kaari": "2004 ja 2016 (kuvausvuodet)",
+  "pysakit": "Blue Marble NG merineen koko pallolle · Sentinel-2 72 kaupungin ympärille",
+  "tila": "valmis",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q4",
+  "nimi": "Yövalot (Black Marble)",
+  "alue": "maailma",
+  "kaari": "2016 (kuvausvuosi)",
+  "pysakit": "kaupunkien valot hehkuvana kerroksena Z0–Z6",
+  "tila": "jonossa",
+  "tyyppi": "pohjakartta",
+  "manner": "Maailma"
  }
 ]
