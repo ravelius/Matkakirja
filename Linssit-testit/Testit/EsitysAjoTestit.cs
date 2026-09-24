@@ -202,6 +202,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(ajo.keskus.Lon > 25 && ajo.keskus.Lon < 45, "kamera Levanttiin: " + ajo.keskus.Lon);
         }
 
+        [Testi] static void HyppyHetiAlustaSytyttaaValot()
+        {
+            // iPad 24.9.: "esitys levantti" heti avauksen alussa jätti mustan ruudun päälle (valot-jaksoa
+            // ei ajettu). Web valitse → avaus ohi → asennaPinnat({ pimea: false }).
+            var (e, y, n, a, leimat, kertomus) = Luo();
+            e.Aloita();
+            Aja(e, y, 0.5);
+            Oleta.Tosi(!n.Loki.Any(l => l.mita == "valot"), "avauksessa pimeää");
+            e.Valitse("levantti");
+            Oleta.Tosi(n.Loki.Any(l => l.mita == "valot"), "valot syttyivät hypyssä");
+            Oleta.Tosi(e.AvausOhi);
+            int valoja = n.Loki.Count(l => l.mita == "valot");
+            e.Valitse("chauvet");
+            Oleta.Sama(valoja, n.Loki.Count(l => l.mita == "valot"), "valot syttyvät kerran");
+        }
+
         [Testi] static void EpaonnistunutKelausEiJumita()
         {
             // iPad: hyppy jaksoon, mutta ääni alkaa nollasta (kelaus ei tartu kahdesti).

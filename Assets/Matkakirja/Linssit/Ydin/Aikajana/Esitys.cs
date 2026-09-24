@@ -123,7 +123,7 @@ namespace Matkakirja.Linssit.Aikajana
         /// kulkee seinäkellolla, ja kelausta pyydetään uudelleen enintään kerran sekunnissa.
         /// </summary>
         public const double AanenToleranssiMs = 1000, KelauksenValiMs = 1000;
-        bool puluSanottu, avausOdottaa = true, valotOdottaa, kohdeajo;
+        bool puluSanottu, avausOdottaa = true, valotOdottaa, kohdeajo, valotPalavat;
         double? kelauksenAlku, kohdeajonTauko;
         double avaruusAlku = double.NaN, avaruusKesto, avaruusTauko = double.NaN;
 
@@ -280,7 +280,9 @@ namespace Matkakirja.Linssit.Aikajana
             else if (jakso.Vaihe != "pimea")
             {
                 KaynnistaAvaruusajo(null);
-                if (valotOdottaa) SytytaValot();
+                // Hyppy avauksen yli (web valitse → avaus ohi, asennaPinnat({ pimea: false })):
+                // valot syttyvät, vaikka valot-jaksoa ei ajettu, muuten musta jää päälle.
+                if (valotOdottaa || !valotPalavat) SytytaValot();
                 AvausOhi = true;
                 MusiikkiSisaan();
             }
@@ -419,6 +421,7 @@ namespace Matkakirja.Linssit.Aikajana
         void SytytaValot()
         {
             valotOdottaa = false;
+            valotPalavat = true;
             double jaljella = KohteeseenAsti();
             double vara = double.IsFinite(jaljella)
                 ? Math.Max(0, jaljella + Esitysmatikka.ZoominJatkoMs - Esitysmatikka.MarokonPohjaMs)
