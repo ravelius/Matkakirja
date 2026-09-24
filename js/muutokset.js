@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2207, teksti: 'Linssikatalogi: esittelysivun vaihe 1, kuusi moottoria' },
   { v: 2204, teksti: 'Kohdekartta: Geraldton (#3082)' },
   { v: 2203, teksti: 'Kohdekartta: Mount Isa (#3080)' },
   { v: 2202, teksti: 'Sää: Appalakit, Churchill, Karthago, Sierra Leo… (#3053)' },

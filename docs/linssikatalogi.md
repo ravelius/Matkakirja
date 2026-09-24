@@ -15,6 +15,20 @@ tileillä, osoite on ainoa avain, noindex) sekä artefaktina
 https://claude.ai/code/artifact/70aa8279-bf6b-49ce-a6cb-64b5a70c3fae
 (vain julkaisijan tilille). Päivitä kaikki kolme yhdessä.
 
+**UUDISTUS ESITTELYSIVUKSI, VAIHE 1 (24.9.2026, Fable):** linssikatalogi.html
+on uudistettu visuaaliseksi esittelysivuksi omistajan yhteistyökumppaneille —
+moottorikortit, "Pelissä nyt", "Seuraavat"-kaista, kuusi moottorilohkoa
+(aikajana, alue, virta, data, esitysmoottori, pohjakartat), suodattimet ja
+haku, aikajanapalkki (1873-merkkipaalu), tiekartta-kanban, esitys- ja
+tulostustila. Data on siirretty erilliseen `linssikatalogi-data.js`:ään
+(`window.LINSSIKATALOGI = { moottorit, linssit, yhdistetyt }`, ladataan
+ennen sivun omaa scriptiä; pages.yml kopioi molemmat). Tämän vuoron
+`linssikatalogi-data.js` on VÄLIAIKAINEN placeholder (uudet kentät
+`mitaOpitaan`, `pelikytkos`, `pari`, `teema`, `muoto` ovat null) — Fablen
+agentti korvaa sen aidolla datalla haarasta `claude/bold-ride-vow4ki`.
+Tämän dokumentin A–U/R-taulukot ovat yhä sisällön lähde ihmislukijalle;
+`linssikatalogi-data.js` johdetaan niistä samoilla kentillä + uudet.
+
 ## Malli, jota monistetaan
 
 Keksinnöt Euroopassa 1769–1928 (v1470, js/aikajana.js + js/linssit/keksinnot.js)
