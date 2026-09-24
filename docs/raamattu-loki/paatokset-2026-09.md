@@ -4543,3 +4543,7 @@ Fablen virhe: vapautti #3081:n luonnostilasta build 10:n TestFlight-tiedolla, va
 ## PERUUTUS: FOKUSPOHJA 38e424d ON JO BUILD 10:SSA (saapumisnakyma-HAARAN MUKANA) → 1.34–1.35 SAA MENNA TUOTANTOON; VAIN BUILD 9 ALTIS (24.9.2026 klo 20.00)
 
 Natiivisepän väärä hälytys peruttu (merge-base --is-ancestor). Julkaisijalle peruutus: ei pidätystä. Natiiviseppä kuvaa NOR/FRA-ääriviivat kun tuotanto on 1.35.
+
+## OMISTAJAN LOYDOS 45 (BUILD 10, klo 20.0x, SITOVA): LIIKU-NAPPI NAKYY SAAPUMISEN KERRONNAN AIKANA — PIILOON KUNNES KERRONTA ON OHI (KUTEN WEBISSA) (24.9.2026 klo 20.01)
+
+Postikortti + Ohita näkyvissä, Liiku jo näkyvissä. → Pelikoodari mittaa webin käytöksen ja korjaa (Natiivi-UI:n kanssa), build 11, kuvapari.
