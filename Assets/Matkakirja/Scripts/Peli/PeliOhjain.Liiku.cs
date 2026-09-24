@@ -7,11 +7,16 @@
 // Liiku (~11988, renderTravelChoice ~11334): alareunan monitoiminappi avaa liu'un, jossa liftaus,
 // bussi, laiva ja lento (Kulkutavat(), puhdas laskenta Peli/Liikkuminen.cs). Tapa valitaan ensin,
 // kohde sen jälkeen (ValitseKulkutapa):
-//   liftaus → tapa ja heitto samalla painalluksella (web doWalk), sitten nopan siirrot listana
+//   liftaus → tapa ja heitto samalla painalluksella (web doWalk), sitten nopan siirrot kartalle
 //   bussi   → naapurit "Kaupunki (50 p)" → Matkusta (web doBus)
 //   laiva   → "Laivalla (100 p)" → tapa valittu, heittonappi + Vaihda (web actionTravel('sea'))
 //   lento   → lennot "Kaupunki (300 p)" ja mannerlennot → Matkusta (web doFly, actionMannerLento)
-// Nopan siirroissa kartan kaupunkimerkin napautus valitsee kohteen kuten listan rivi (web: korostettu kohde).
+//
+// NOPAN SIIRROT KARTALLA, EI LISTAA (web vaihe 'move', Laitetestaajan pariteettiero 24.9.2026): web ei näytä
+// siirtovaiheessa korttia eikä tekstiä kartan päällä (ui.js turnCard: "kehotuksen kertovat kartan korostetut
+// kohteet"). Kohteet ovat game.moveOptions (PeliApu.SiirtoKohteet): SiirtoKohteetMuuttui kertoo ne kartalle
+// (Natiiviseppä piirtää renkaat), kaupunkimerkin napautus tai ValitseSiirto(avain) valitsee. Jos kartalla ei
+// tapahdu mitään Valintavihje.ViiveMs:n (15 s) aikana, ValintavihjeAika herää (Natiivi-UI: pöllön kupla).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,10 +109,18 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Matkavalinnan rivi indeksillä (testikomento 'rivi'): Liiku-vuon kohde- ja siirtolistat.</summary>
+        /// <summary>
+        /// Matkavalinnan rivi indeksillä (testikomento 'rivi'): Liiku-vuon kohdelistat (bussi, lento, laiva,
+        /// mannerlento). Siirtovaiheessa ilman listaa i:s siirtokohde (SiirtoKohteet, sama järjestys).
+        /// </summary>
         public string ValitseRivi(int indeksi)
         {
-            if (Tila != SilmukanTila.Dialogi || riviValittu == null) return "rivilista ei ole auki";
+            if (Tila != SilmukanTila.Dialogi || riviValittu == null)
+            {
+                if (siirtoKohteet.Count == 0) return "rivilista ei ole auki eikä siirtokohteita ole";
+                if (indeksi < 0 || indeksi >= siirtoKohteet.Count) return $"siirtokohde {indeksi} ei ole kartalla (0–{siirtoKohteet.Count - 1})";
+                return ValitseSiirto(siirtoKohteet[indeksi].Avain);
+            }
             if (indeksi < 0 || indeksi >= vaihtoehdot.Count) return $"rivi {indeksi} ei ole listalla (0–{vaihtoehdot.Count - 1})";
             var v = riviValittu;
             riviValittu = null;
@@ -133,12 +146,13 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Heitto ilman tavoitetta (web doWalk/doRoll ja vaihe 'move'): noppa ensin (PeliNakymat.Noppa),
-        /// sitten nopan siirrot listana. Ilman siirtoja vuoro päättyy (web 'stuck').
+        /// sitten nopan siirrot kartalle (SiirtoKohteet). Ilman siirtoja vuoro päättyy (web 'stuck').
         /// </summary>
         string HeitaJaValitse()
         {
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
-            if (matka.Tila.Vaihe == Vaihe.Siirto) { AvaaSiirrot(); return null; }
+            // Noppa on jo heitetty: kohteet ovat kartalla, valinta napautuksella.
+            if (matka.Tila.Vaihe == Vaihe.Siirto) { if (Tila != SilmukanTila.Kartta) Kartalle(false); else PaivitaSiirtoKohteet(); return null; }
             var lahto = matka.Tila.Pelaaja.Sijainti;
             tapahtumat.Clear();
             var r = matka.Heita();
@@ -150,7 +164,8 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA peli: noppa {noppa}, siirtoja {matka.Tila.Siirrot?.Count ?? 0}");
             Action jatko = () =>
             {
-                if (matka.Tila.Vaihe == Vaihe.Siirto) { Tila = SilmukanTila.Kartta; AvaaSiirrot(); return; }
+                // Siirtovaihe: kartalle, jossa kohteet korostuvat (PaivitaNakyma → PaivitaSiirtoKohteet).
+                if (matka.Tila.Vaihe == Vaihe.Siirto) { Kartalle(false); return; }
                 // Jumissa: vuoro päättyi jo (Matka.Heita); noppa häipyy.
                 try { MatkaPerilla?.Invoke(null); } catch (Exception e) { Debug.LogException(e); }
                 if (tapahtumat.Count > 0) Viesti(string.Join(" · ", tapahtumat));
@@ -175,25 +190,95 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        // --- siirtokohteet kartalle ja pöllön valintavihje (web vaihe 'move') -------------------------
+
         /// <summary>
-        /// Nopan siirrot matkavalintaan (otsikko "Noppa n"). Web: lista ei sulkeudu ilman valintaa, joten
-        /// näkymän sulkeminen avaa sen uudelleen (Fable 24.9.2026).
+        /// Nopan siirtokohteet vaihtuivat (web: kohdemerkit laudalla). Natiiviseppä piirtää renkaat: kaupunki
+        /// isona nimen kera, reitin varren piste (Kaupunki null) pienenä. Tyhjä lista = siirtovaihe päättyi,
+        /// renkaat pois. Herää vain muutoksesta (uusi heitto, vaihe, silmukan tila, linssi).
         /// </summary>
-        void AvaaSiirrot()
+        public event Action<IReadOnlyList<SiirtoKohde>> SiirtoKohteetMuuttui;
+
+        /// <summary>Nykyiset siirtokohteet (tyhjä, kun peli ei odota siirron valintaa kartalta).</summary>
+        public IReadOnlyList<SiirtoKohde> SiirtoKohteet => siirtoKohteet;
+
+        /// <summary>
+        /// Pöllön valintavihje (web paivitaValintavihje): siirtovaihe on odottanut Valintavihje.ViiveMs (15 000 ms)
+        /// ilman kartan kosketusta. Parametri on webin vihjeteksti (Valintavihje.Teksti). Kerran vaihetta kohden.
+        /// </summary>
+        public event Action<string> ValintavihjeAika;
+
+        /// <summary>Näytetty vihje pois (web polloVihjePois): kartan kosketus, valinta tai vaiheen loppu.</summary>
+        public event Action ValintavihjePois;
+
+        /// <summary>
+        /// Siirtokohteen napautus kartalla (renkaan tai kaupunkimerkin avain, SiirtoKohde.Avain; web lauta.js
+        /// valitseSiirto → ui.doMove). Vain kartalla tarjottu kohde kelpaa. Palauttaa virheen tai null.
+        /// </summary>
+        public string ValitseSiirto(string avain)
         {
-            var rivit = PeliApu.SiirtoRivit(matka);
-            if (rivit.Count == 0) { Kartalle(false); return; }
-            string ala = $"{matka.Tila.Pelaaja.Raha} {PeliApu.Valuutta} · valitse kohde listasta tai kartalta";
-            NaytaRivit($"Noppa {matka.Tila.Noppa}", ala, rivit.Select(x => x.Rivi).ToList(), i => Siirry(rivit[i].Avain),
-                () => { if (matka?.Tila.Vaihe == Vaihe.Siirto) AvaaSiirrot(); else Kartalle(false); });
+            if (matka == null) return "peli ei ole valmis";
+            if (LinssiAuki) return LinssiAukiSyy;
+            if (NapautusSallittu != null && !NapautusSallittu()) return "radio soi";
+            if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
+            if (avain == null || !siirtoKohteet.Any(k => k.Avain == avain)) return "ei siirtokohde: " + avain;
+            return Siirry(avain);
         }
 
-        /// <summary>Nopan siirron avain napautetulle kaupungille ("c:id"), jos se on siirroissa; muuten null.</summary>
-        string SiirtoKohde(string kaupunki)
+        IReadOnlyList<SiirtoKohde> siirtoKohteet = Array.Empty<SiirtoKohde>();
+        bool kohteetNaytetty;
+        object kohteidenLahde;
+        readonly Valintavihje valintavihje = new Valintavihje();
+
+        /// <summary>Näkyvätkö siirtokohteet nyt (web kohdevalinta: vaihe 'move', ei linssiä; silmukka ei matkalla).</summary>
+        bool KohteetNakyvissa => matka != null && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto && matka.Tila.Siirrot != null
+                                 && (Tila == SilmukanTila.Kartta || Tila == SilmukanTila.Dialogi) && !LinssiAuki;
+
+        /// <summary>Laskee kohteet uudelleen, jos näkyvyys tai heitto vaihtui, ja kertoo kartalle (PaivitaNakyma, Update).</summary>
+        void PaivitaSiirtoKohteet()
         {
-            if (matka == null || kaupunki == null || matka.Tila.Vaihe != Vaihe.Siirto || matka.Tila.Siirrot == null) return null;
+            bool nayta = KohteetNakyvissa;
+            object lahde = nayta ? matka.Tila.Siirrot : null;
+            if (nayta == kohteetNaytetty && ReferenceEquals(lahde, kohteidenLahde)) return;
+            kohteetNaytetty = nayta;
+            kohteidenLahde = lahde;
+            siirtoKohteet = nayta ? PeliApu.SiirtoKohteet(matka) : (IReadOnlyList<SiirtoKohde>)Array.Empty<SiirtoKohde>();
+            if (nayta) Debug.Log($"MATKAKIRJA peli: siirtokohteet {string.Join(", ", siirtoKohteet.Select(k => k.Avain))}");
+            try { SiirtoKohteetMuuttui?.Invoke(siirtoKohteet); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+        /// <summary>
+        /// Vihjeen ajastin joka ruutu (web paivitaValintavihje): odottaa = kohteet kartalla, silmukka kartalla,
+        /// radio pois ja pöllö löydetty (web polloLoydetty !== false). Botteja ja katselutilaa natiivissa ei ole.
+        /// </summary>
+        void PaivitaValintavihje()
+        {
+            bool radio = false;
+            try { radio = NapautusSallittu != null && !NapautusSallittu(); } catch { }
+            bool odottaa = siirtoKohteet.Count > 0 && Tila == SilmukanTila.Kartta && !radio && matka.Tila.PolloLoydetty;
+            Vihje(valintavihje.Paivita(odottaa, Time.unscaledTimeAsDouble));
+        }
+
+        /// <summary>Pallon kosketus (PalloKierto.Napautettu tai PelaajanEle; web kartallaKosketettu): ajastin ja kupla pois.</summary>
+        void KarttaKosketettu() => Vihje(valintavihje.Kosketettu());
+        void PalloNapautettu(Vector2 _) => KarttaKosketettu();
+
+        void Vihje(Valintavihje.Muutos m)
+        {
+            try
+            {
+                if (m == Valintavihje.Muutos.Nayta) { Debug.Log("MATKAKIRJA peli: valintavihje"); ValintavihjeAika?.Invoke(Valintavihje.Teksti); }
+                else if (m == Valintavihje.Muutos.Pois) ValintavihjePois?.Invoke();
+            }
+            catch (Exception e) { Debug.LogException(e); }
+        }
+
+        /// <summary>Nopan siirron avain napautetulle kaupungille ("c:id"), jos se on kartalla tarjottu kohde; muuten null.</summary>
+        string SiirtoAvain(string kaupunki)
+        {
+            if (matka == null || kaupunki == null || matka.Tila.Vaihe != Vaihe.Siirto) return null;
             var avain = "c:" + kaupunki;
-            return matka.Tila.Siirrot.ContainsKey(avain) ? avain : null;
+            return siirtoKohteet.Any(k => k.Avain == avain) || (matka.Tila.Siirrot != null && matka.Tila.Siirrot.ContainsKey(avain)) ? avain : null;
         }
 
         /// <summary>Valittu nopan siirto (web actionMove): liike ja saapuminen kuten Matkusta.</summary>

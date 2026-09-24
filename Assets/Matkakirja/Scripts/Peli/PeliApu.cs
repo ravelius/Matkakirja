@@ -7,6 +7,7 @@
 //   Vaihtoehdot  — matkavalinnan rivit napautettuun kaupunkiin
 //   Matkusta     — valittu tapa Matkan teoiksi (peru, valitse, heitä, liiku)
 //   ValitseSiirto— nopan siirroista napautettu kaupunki tai lähin sitä kohti
+//   SiirtoKohteet — nopan siirtokohteet kartalle (web moveOptions), Valintavihje — pöllön vihjeen ajastin
 //   Koordinaatti — kaupungin tai reitin askeleen lat/lon (isoympyrä a→b)
 //   AjoKesto     — kamera-ajon kesto 1,5–3 s matkan pituuden mukaan
 //   KirjoitaAtomisesti — tallennus tmp-tiedostoon ja siirto paikalleen
@@ -20,6 +21,72 @@ using Matkakirja.Peli;
 
 namespace Matkakirja.Natiivi
 {
+    /// <summary>
+    /// Nopan siirtokohde kartalle (web vaihe 'move': korostettu kohde, js/pallolauta/merkit.js kohdeElementti).
+    /// Kaupunki: iso kohdemerkki nimen kera; reitin varren piste (Kaupunki null): pieni merkki ilman nimeä.
+    /// Napautus: PeliOhjain.ValitseSiirto(Avain).
+    /// </summary>
+    public sealed class SiirtoKohde
+    {
+        /// <summary>Siirron avain ("c:pariisi" tai "e:reitti:askel"), PeliOhjain.ValitseSiirto ottaa tämän.</summary>
+        public string Avain;
+        /// <summary>Kohdekaupungin tunnus; null = reitin varren piste.</summary>
+        public string Kaupunki;
+        /// <summary>Kaupungin nimi merkin lappuun; null reitin varrella (web: pistemerkillä ei nimeä).</summary>
+        public string Nimi;
+        public double Lat, Lon;
+        /// <summary>Käytetyt askeleet (polun pituus; kaupunkiin voi pysähtyä ennen silmälukua).</summary>
+        public int Askeleet;
+    }
+
+    /// <summary>
+    /// Pöllön valintavihjeen ajastin (web js/ui.js paivitaValintavihje, peruValintavihje, kartallaKosketettu).
+    /// Siirtovaiheen alusta ViiveMs ilman kartan kosketusta: Nayta kerran. Kosketus peruu ajastimen (ja vie
+    /// näkyvän kuplan), eikä ajastinta viritetä uudelleen ennen kuin odotus on välillä päättynyt.
+    /// </summary>
+    public sealed class Valintavihje
+    {
+        /// <summary>Web VALINTAVIHJEEN_VIIVE.</summary>
+        public const int ViiveMs = 15000;
+        /// <summary>Web VALINTAVIHJEEN_TEKSTI (polloVihje).</summary>
+        public const string Teksti = "Napauta korostettua kohdetta kartalla, niin matka jatkuu.";
+        public enum Muutos { Ei, Nayta, Pois }
+
+        /// <summary>Viive millisekunteina (testit voivat lyhentää, kuten web valintavihjeViive).</summary>
+        public int Viive = ViiveMs;
+        bool vaihe;       // web valintavihjeVaihe
+        double? loppuu;   // web valintavihjeAjastin
+        bool nakyy;
+
+        /// <summary>Onko ajastin käynnissä.</summary>
+        public bool Kay => loppuu.HasValue;
+        public bool Nakyy => nakyy;
+
+        /// <summary>Joka ruutu: odottaako peli valintaa kartalta, ja kello sekunteina.</summary>
+        public Muutos Paivita(bool odottaaValintaa, double nytS)
+        {
+            if (!odottaaValintaa)
+            {
+                bool pois = vaihe && nakyy;
+                vaihe = false; loppuu = null; nakyy = false;
+                return pois ? Muutos.Pois : Muutos.Ei;
+            }
+            if (!vaihe) { vaihe = true; loppuu = nytS + Viive / 1000.0; return Muutos.Ei; }
+            if (loppuu.HasValue && nytS >= loppuu.Value) { loppuu = null; nakyy = true; return Muutos.Nayta; }
+            return Muutos.Ei;
+        }
+
+        /// <summary>Kartan kosketus (veto, nipistys tai napautus): ajastin pois, kupla pois; ei uutta tässä vaiheessa.</summary>
+        public Muutos Kosketettu()
+        {
+            if (!vaihe) return Muutos.Ei;
+            loppuu = null;
+            bool pois = nakyy;
+            nakyy = false;
+            return pois ? Muutos.Pois : Muutos.Ei;
+        }
+    }
+
     /// <summary>Yksi matkavalinnan rivi (bussi, lento, liftaus tai laiva).</summary>
     public sealed class MatkaVaihtoehto
     {
@@ -336,7 +403,7 @@ namespace Matkakirja.Natiivi
         /// Kohderivit valitulle tavalle (web vaihe B): bussi "Kaupunki (50 p)" naapureihin (busDestinations),
         /// lento "Kaupunki (300 p)" (airportDestinations) ja perään mannerlennot "Lennä Oseaniaan: Sydney (300 p)",
         /// laiva yksi rivi "Laivalla (100 p)" (kohde null: valitsee tavan, noppa heitetään heittonapista).
-        /// Liftaus: tyhjä (web doWalk heittää heti; kohde valitaan siirroista, SiirtoRivit).
+        /// Liftaus: tyhjä (web doWalk heittää heti; kohde valitaan kartalta, SiirtoKohteet).
         /// </summary>
         public static List<(string Kohde, MatkaVaihtoehto Rivi)> KohdeRivit(Matka m, Kulkutapa tapa, IReadOnlyList<MannerlentoKohde> mannerlennot = null)
         {
@@ -366,27 +433,46 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Nopan siirrot valittaviksi riveiksi (web vaihe 'move': korostetut kohteet kartalla): kaupungit ensin
-        /// nimen mukaan, sitten reitin varren pisteet. Nimi = kaupunki tai "A–B", Selite = askeleet.
+        /// Nopan siirtokohteet kartalle (web vaihe 'move': game.moveOptions, js/game.js). Kaikki siirrot ovat
+        /// laillisia, mutta kartalla tarjotaan suunnittain (polun ensimmäinen askel) vain kaupungit; jos
+        /// suunnalla ei ole kaupunkia nopan päässä, sen suunnan reitin varren pisteet tarjotaan, jottei suunta
+        /// katoa. Järjestys: kaupungit nimen mukaan, sitten reitin varren pisteet (testikomento `rivi i`).
+        /// Paikka on sijainnin lat/lon (Koordinaatti); kohde ilman koordinaattia jää pois (web pallonKohta null).
         /// </summary>
-        public static List<(string Avain, MatkaVaihtoehto Rivi)> SiirtoRivit(Matka m)
+        public static List<SiirtoKohde> SiirtoKohteet(Matka m)
         {
             var t = m.Tila;
-            var rivit = new List<(string, MatkaVaihtoehto)>();
-            if (t.Vaihe != Vaihe.Siirto || t.Siirrot == null) return rivit;
-            var tapa = t.Kulkutapa ?? Kulkutapa.Maa;
-            foreach (var s in t.Siirrot.OrderBy(s => s.Value.Kohde.Kaupungissa ? 0 : 1)
+            var kohteet = new List<SiirtoKohde>();
+            if (t.Vaihe != Vaihe.Siirto || t.Siirrot == null) return kohteet;
+            var suunnat = new Dictionary<string, List<KeyValuePair<string, Siirto>>>();
+            var jarjestys = new List<string>();
+            foreach (var s in t.Siirrot)
+            {
+                var suunta = s.Value.Polku != null && s.Value.Polku.Count > 0 ? s.Value.Polku[0].Avain : s.Key;
+                if (!suunnat.TryGetValue(suunta, out var lista)) { suunnat[suunta] = lista = new List<KeyValuePair<string, Siirto>>(); jarjestys.Add(suunta); }
+                lista.Add(s);
+            }
+            var tarjottavat = new List<KeyValuePair<string, Siirto>>();
+            foreach (var suunta in jarjestys)
+            {
+                var lista = suunnat[suunta];
+                var kaupungit = lista.Where(s => s.Value.Kohde.Kaupungissa).ToList();
+                tarjottavat.AddRange(kaupungit.Count > 0 ? kaupungit : lista);
+            }
+            foreach (var s in tarjottavat.Distinct()
+                         .OrderBy(s => s.Value.Kohde.Kaupungissa ? 0 : 1)
                          .ThenBy(s => SijaintiNimi(m.Verkko, s.Value.Kohde), StringComparer.Ordinal).ThenBy(s => s.Key, StringComparer.Ordinal))
             {
-                int askelia = s.Value.Polku?.Count ?? 0;
-                rivit.Add((s.Key, new MatkaVaihtoehto
+                var k = Koordinaatti(m.Verkko, s.Value.Kohde);
+                if (!k.HasValue) continue;
+                var kaupunki = s.Value.Kohde.Kaupungissa ? s.Value.Kohde.Kaupunki : null;
+                kohteet.Add(new SiirtoKohde
                 {
-                    Tapa = tapa, Noppa = true, Askelia = askelia,
-                    Nimi = SijaintiNimi(m.Verkko, s.Value.Kohde),
-                    Selite = s.Value.Kohde.Kaupungissa ? $"{askelia} askelta" : $"{askelia} askelta · reitin varrelle",
-                }));
+                    Avain = s.Key, Kaupunki = kaupunki, Nimi = kaupunki != null ? KaupunginNimi(m.Verkko, kaupunki) : null,
+                    Lat = k.Value.Lat, Lon = k.Value.Lon, Askeleet = s.Value.Polku?.Count ?? 0,
+                });
             }
-            return rivit;
+            return kohteet;
         }
 
         /// <summary>Mannerlento kohteeseen, jos se on nyt tarjolla (web mannerLennot), muuten null.</summary>
