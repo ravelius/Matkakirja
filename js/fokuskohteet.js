@@ -113,9 +113,9 @@ import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
   html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
   arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
-  suurennoksenMitat,
+  suurennoksenMitat, lehtipalstaKotelo,
 } from './ui-apurit.js';
-import { nostokuvaAloita, nostokuvaKortissa } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -1304,6 +1304,29 @@ export function maanKohdetiedot(ui, iso) {
   return tiedot;
 }
 
+/**
+ * MAAN KAIKKI KADONNEET IHMEET — riippumatta siitä, onko kohteella
+ * paikkaa pääkartalla vai onko se kaupunkilehden kohdekartalle
+ * siirretty (js/fokuskohteet.js karsiKaupunkikartanNostot pudottaa
+ * jälkimmäiset pääkartan riveiltä, mutta ne ovat silti MAASSA).
+ *
+ * Omistajan bugiraportti 22.9.2026: Ranskan selitteen "Kadonneet
+ * ihmeet" -rivi näytti 0, vaikka maassa on kolme kadonnutta ihmettä
+ * (Tuileries, Bastilji, Saint-Cloud) — kaksi niistä asuu Pariisin
+ * kaupunkikartalla eikä ollut koskaan pääkartan osumissa, josta vanha
+ * laskuri luki lukunsa (js/pallolauta/nostot.js laskurikoonti).
+ *
+ * SÄÄNTÖ ON SAMA KUIN KARTAN MERKILLÄ (kohteenKategoria) — ei
+ * kopioitu ehtoa, jottei tämä funktio voi eriytyä kartan merkistä.
+ *
+ * @param {Map<string,object>|Iterable<object>} kohdetiedot maanKohdetiedot(ui, iso).
+ * @returns {object[]} kadonneet ihmekohteet, joilla on `id`.
+ */
+export function maanKadonneetIhmeet(kohdetiedot) {
+  const kohteet = kohdetiedot instanceof Map ? kohdetiedot.values() : (kohdetiedot ?? []);
+  return [...kohteet].filter((kohde) => kohde?.id && kohteenKategoria(kohde) === 'ihme');
+}
+
 /*
  * KOHTEEN OMA MAA (Sonnet 1, kierros 16b, 20.9.2026). Kortin arvonimi
  * luettiin pelaajan sijainnista, joten Liettuan kortissa luki
@@ -1505,8 +1528,23 @@ const KOHDE_TYYPPISYMBOLIT = {
   kaupunki: 'kaupunki',
 };
 
-/** Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä. */
-function kohteenKategoria(kohde) {
+/**
+ * Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä.
+ *
+ * EXPORTATTU 22.9.2026 (Ranskan "Kadonneet ihmeet" -bugi): tämä on
+ * AINOA paikka, joka tuntee ehdon `ihme.kadonnut && ihme.osoite`.
+ * Kaikkien muiden passien — myös kaupunkilehden kohdekartalle
+ * siirrettyjen kohteiden aiheen (js/pallolauta/nostot.js "siirretyt")
+ * ja maan kadonneiden ihmeiden lukumäärän (maanKadonneetIhmeet alla) —
+ * on kysyttävä TÄTÄ funktiota eikä koottava ehtoa uudelleen
+ * `kohde.symboli ?? kohde.tyyppi`-tyyppisellä oikotiellä: se ohittaa
+ * ihme-lipun, koska ihme ei ole kategoria vaan kohteen KENTTÄ, ja
+ * silloin kadonnut ihme luokittuu vahingossa historiaksi tai joksikin
+ * muuksi (juuri se, mikä pudotti Tuileriesin ja Bastiljin selitteen
+ * "Kadonneet ihmeet" -laskurista, kun ne siirtyivät Pariisin
+ * kaupunkikartalle).
+ */
+export function kohteenKategoria(kohde) {
   if (kohde?.ihme?.kadonnut && kohde.ihme.osoite) return 'ihme';
   if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
   if (kohteenKierrokset(kohde).length) return 'silma';
@@ -4759,11 +4797,16 @@ function asetaKohteenPaikka(ui) {
     KOHDE_LAITAVARA_ENINTAAN,
     Math.max(KOHDE_MARGINAALI, Math.round(pane.height * KOHDE_LAITAVARA_OSUUS)),
   );
+  // TURVA-ALUE (omistaja 21.9.2026, iPhone v2021: kortit tilarivin ja
+  // loven alla): rajat alkavat insetin sisäpuolelta — kartan pane
+  // ulottuu viewport-fit=coverissa niiden alle (js/nostokuva.js
+  // nostokuvaTurvaAlue lukee :root --turva-*).
+  const turva = nostokuvaTurvaAlue();
   // Alanapit: vuorolaatikko kelluu kapealla ruudulla kartan päällä.
-  let alaraja = pane.bottom - laitavara;
-  const ylaraja = pane.top + laitavara;
-  let oikeaRaja = pane.right - KOHDE_MARGINAALI;
-  const vasenRaja = pane.left + KOHDE_MARGINAALI;
+  let alaraja = pane.bottom - Math.max(laitavara, turva.ala + KOHDE_MARGINAALI);
+  const ylaraja = pane.top + Math.max(laitavara, turva.yla + KOHDE_MARGINAALI);
+  let oikeaRaja = pane.right - KOHDE_MARGINAALI - turva.oikea;
+  const vasenRaja = pane.left + KOHDE_MARGINAALI + turva.vasen;
   const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
   if (napit && napit.height > 0 && napit.right > pane.left && napit.left < pane.right
     && napit.top > pane.top) {
@@ -5398,7 +5441,8 @@ function piirraKohdeTeksti(ui, sisalto, kohde) {
   for (const kappale of jaaKappaleiksi(kohde.teksti)) {
     teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
   }
-  sisalto.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+  sisalto.appendChild(lehtipalstaKotelo(teksti, kohde.teksti));
 }
 
 /** Kortin loppuun enintään kaksi valmista kysymystä pöllölle. */
@@ -6563,6 +6607,10 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
       piirraIhmenauha(nappi, paakuva.nauha);
     },
     latoNosto: latoKohde,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoKohde(sisalto, undefined);

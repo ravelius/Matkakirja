@@ -44,6 +44,22 @@ export const KOHDEMERKIN_PISTE_PX = 15;
 export const KOHDEMERKIN_NIMI_PX = 13;
 /** Halon laajin aste (CSS kohde-halo) — nimi sen yläpuolelle. */
 export const KOHDEMERKIN_HALO_LAAJIN = 1.42;
+/*
+ * HALON HENGITYS LUKUINA (css @keyframes kohde-halo, 2,4 s ease-in-out):
+ * 0 % scale 1,14 / opacity 0,85 — 50 % scale 1,42 / opacity 0,4. CSS
+ * omistaa animaation CSS2D-merkissä; GL-kerros (glnimiot-sovitin.js)
+ * tarvitsee samat luvut, koska siellä hengitys tulee rungon
+ * syke-uniformista ja peitosta, ei selaimen animaatiosta. Jakso on
+ * NOSTOSYM_SYKKEEN_JAKSO_MS = 2400 ms, eli TÄSMÄLLEEN sama kuin tässä
+ * keyframessa — siksi sama uniform kelpaa molemmille.
+ */
+/** Halon kapein aste (CSS kohde-halo 0 %). */
+export const KOHDEMERKIN_HALO_KAPEIN = 1.14;
+/** Halon keskiaste: GL-rasteri piirretään tähän ja syke heiluttaa sen ympärillä. */
+export const KOHDEMERKIN_HALO_KESKI = (KOHDEMERKIN_HALO_KAPEIN + KOHDEMERKIN_HALO_LAAJIN) / 2;
+/** Halon peitto kapeimmillaan ja laajimmillaan (CSS kohde-halo). */
+export const KOHDEMERKIN_HALO_PEITTO_KAPEA = 0.85;
+export const KOHDEMERKIN_HALO_PEITTO_LAAJA = 0.4;
 /** Rako halon ja nimen väliin (px). */
 export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
 /*
@@ -262,7 +278,11 @@ export function kohdeElementti(kohde) {
  * lista)`, `maara(osa)`, `laatikot(osa)` ja kohteiden luettelon
  * osumatestiä varten.
  */
-export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null }) {
+export function luoMerkit({
+  pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null,
+  /** Osan jako ennen asetusta (GL-kerros): (osa, lista) → CSS2D:hen jäävät; null = kaikki. */
+  jakaja = null,
+}) {
   const data = new Map(); // avain → pysyvä datum
   const osat = new Map(); // osan nimi → datumit
   const poistuvat = new Map(); // avain → ajastin
@@ -344,9 +364,11 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
    * mahdollinen `asettele(el, d)` (sisäasettelu, kun sama datum saa
    * uudet mitat). Sama datum säilyy, kun avain säilyy.
    */
-  const aseta = (osa, uudet, { haivyta = true } = {}) => {
+  const aseta = (osa, annetut, { haivyta = true } = {}) => {
     const ennen = osat.get(osa) ?? [];
     const lista = [];
+    // GL-kerros voi ottaa osan riveistä itselleen (js/pallolauta/glnimiot-sovitin.js).
+    const uudet = typeof jakaja === 'function' ? (jakaja(osa, annetut) ?? annetut) : annetut;
     for (const tiedot of uudet) {
       let d = data.get(tiedot.avain);
       if (d) {
@@ -370,7 +392,15 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
       if (haivyta) poista(d); else data.delete(d.avain);
     }
     osat.set(osa, lista);
-    if (osa === 'peli') kohteet = lista.filter((d) => d.laji === 'kohde');
+    /*
+     * OSUMATESTI LUKEE KAIKKI KOHTEET, EI VAIN CSS2D:HEN JÄÄNEITÄ
+     * (A, 22.9.2026). `lista` on jakajan JÄLKEEN jäljellä oleva osa,
+     * eli GL-kerrokseen siirtyneet kohteet puuttuvat siitä. Napautus
+     * etsii lähimmän kohteen tästä listasta (lauta.js lahinKohde),
+     * joten se on luettava `annetut`ista — muuten GL-kohdetta ei voi
+     * napauttaa. Sama syy kuin nappulan `pelinLaatikot`illa.
+     */
+    if (osa === 'peli') kohteet = annetut.filter((d) => d.laji === 'kohde');
     tyonna();
   };
 
@@ -448,6 +478,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
+    /** Elementin datum (lat, lng, avain) — mittarit ja savukkeet (sulavuus). */
+    datum: (el) => elementinDatum.get(el) ?? null,
     /**
      * NAPAUTETTAVAT LINSSIMERKIT (aalto 2A). Linssin merkki
      * (js/pallolauta/linssit.js merkit, laji `linssi`) saa datumiinsa
@@ -478,6 +510,37 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
         for (const d of lista) if (!d.poistuu && typeof d.avaa === 'function') ulos.push(d);
       }
       return ulos;
+    },
+    /**
+     * KIRJASTON SIIRTYMÄ POIS ELEEN AJAKSI (KARTAN SULAVUUS ENSIN, erä
+     * E3). Globe.gl tweenaa olemassa olevan merkin uuteen paikkaan
+     * htmlTransitionDuration-ajassa; liikkeessä merkin paikan on oltava
+     * SAMASSA kehyksessä kuin kuvan (lukittu ankkuri, ei tweeniä), joten
+     * lauta sammuttaa tweenin liikkeen ajaksi ja palauttaa sen levossa.
+     * Kirjaston prop on triggerUpdate:false — halpa, ei ladontaa.
+     * Poistumisen häivytys (poista) lukee edelleen omaa `siirtyma`ansa.
+     */
+    /**
+     * ELEMENTTIEN TILA (diagnostiikka, Laitetestaaja 21.9.2026 iPad:
+     * merkkejä 65, DOMissa 0): montako datumia kirjasto on jo
+     * muuttanut elementiksi (htmlElement-tehdas ajettu) ja montako
+     * niistä on liitetty DOMiin (CSS2DRenderer.render liittää vasta
+     * piirrossa). Luotu ilman liitosta = CSS2D-piirto ei aja.
+     */
+    /** Ensimmäinen nosto- tai nimidatum (diagnostiikka, ks. lauta.tila css2dNayte). */
+    naytedatum: () => [...data.values()].find((d) => d.el && (d.laji === 'nosto' || d.laji === 'nimi')) ?? null,
+    elementit: () => {
+      let luotu = 0;
+      let liitetty = 0;
+      for (const d of data.values()) {
+        if (!d.el) continue;
+        luotu += 1;
+        if (d.el.isConnected) liitetty += 1;
+      }
+      return { datumeja: data.size, luotu, liitetty };
+    },
+    kirjastonSiirtyma: (paalla) => {
+      pallo.htmlTransitionDuration?.(paalla ? siirtyma : 0);
     },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);

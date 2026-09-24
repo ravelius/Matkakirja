@@ -370,3 +370,42 @@ test('syvin tiheys on sama luku kuin laattageneraattorilla', () => {
     'tasojen oletusmäärä muuttui: tuotannon pyramidi ei ole enää z0–z7');
   assert.equal(NOSTOLADONTA_SYVIN_TIHEYS, 7.2);
 });
+
+test('nimiön katto nousee lähizoomissa kartan kertoimen mukaan (omistaja 21.9.2026): 16 px kertoimeen 2, 22 px kertoimesta 4', async () => {
+  const s = await import('../js/fokusnosto-symbolit.js');
+  assert.equal(s.nostosymNimionKattoPx(1), 16);
+  assert.equal(s.nostosymNimionKattoPx(2), 16);
+  assert.ok(Math.abs(s.nostosymNimionKattoPx(2 * Math.SQRT2) - 19) < 1e-9, `kerroin 2,83 → ${s.nostosymNimionKattoPx(2 * Math.SQRT2)}`);
+  assert.equal(s.nostosymNimionKattoPx(4), 22);
+  assert.equal(s.nostosymNimionKattoPx(16), 22);
+  assert.equal(s.nostosymNimionKattoPx(NaN), 16);
+  // Voimassa oleva katto seuraa asetusta, ja katettu mitta lukee sen.
+  assert.equal(s.nostosymAsetaNimionKatto(4), 22);
+  assert.ok(Math.abs(s.nostosymMitanKatto() - 22 / s.NOSTOSYM_NIMIO_KOKO) < 1e-12);
+  assert.ok(Math.abs(s.nostosymKatettuMitta(10) - 22 / s.NOSTOSYM_NIMIO_KOKO) < 1e-12);
+  assert.equal(s.nostosymAsetaNimionKatto(1), 16);
+  assert.equal(s.nostosymMitanKatto(), s.NOSTOSYM_MITAN_KATTO);
+});
+
+test('hehkupiste (omistaja 21.9.2026): sykähdys vain levossa ja vain kategorian värikiekolle, väriapurit', async () => {
+  const s = await import('../js/fokusnosto-symbolit.js');
+  const g = await import('../js/pallolauta/glnimiot-sovitin.js');
+  assert.equal(s.nostosymVariAlfalla('#a05c3f', 0.45), 'rgba(160,92,63,0.45)');
+  assert.equal(s.nostosymVariAlfalla('rgb(10, 20, 30)', 0), 'rgba(10,20,30,0)');
+  assert.equal(s.nostosymVaalenna('#000000', 0.5), 'rgb(128,128,128)');
+  assert.equal(s.nostosymVaalenna('punainen', 0.5), 'punainen');
+  assert.ok(s.NOSTOSYM_HEHKUN_SADE * s.NOSTOSYM_PISTE_R <= s.NOSTOSYM_MINI_RUUTU, 'hehku mahtuu rasterin ruutuun');
+  assert.equal(g.glOnHehkupiste({ kategoria: 'historia' }), true);
+  assert.equal(g.glOnHehkupiste({ kategoria: 'historia', kuvamerkki: 'assets/x.png' }), false);
+  assert.equal(g.glOnHehkupiste({ kategoria: 'meri' }), s.NOSTOSYM_PISTEET.includes('meri'));
+  assert.equal(g.glSykeKerroin(1000, { liikkeessa: true }), 1);
+  const huippu = g.glSykeKerroin(s.NOSTOSYM_SYKKEEN_JAKSO_MS * 1.25, { levonAlku: 0 });
+  assert.ok(Math.abs(huippu - (1 + s.NOSTOSYM_SYKKEEN_OSUUS)) < 1e-9, `huippu ${huippu}`);
+  // Levon alussa amplitudi nousee: 300 ms / 600 ms → puolet.
+  const alku = g.glSykeKerroin(s.NOSTOSYM_SYKKEEN_JAKSO_MS * 1.25, { levonAlku: s.NOSTOSYM_SYKKEEN_JAKSO_MS * 1.25 - 300 });
+  assert.ok(Math.abs(alku - (1 + s.NOSTOSYM_SYKKEEN_OSUUS / 2)) < 1e-9, `nousu ${alku}`);
+  const ikoni = g.glNostonInstanssi({ id: 'x', lat: 1, lng: 2, kategoria: 'historia' }, { avain: 'a', skaala: 1 }, 'ikoni', 1);
+  const nimio = g.glNostonInstanssi({ id: 'x', lat: 1, lng: 2, kategoria: 'historia' }, { avain: 'b', skaala: 1 }, 'nimio', 1);
+  assert.equal(ikoni.syke, true);
+  assert.equal(nimio.syke, false);
+});

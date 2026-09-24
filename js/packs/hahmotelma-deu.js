@@ -57,7 +57,10 @@
  */
 
 /** Saksan hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_DEU = [
+  ...EUROOPAN_KADONNEET.DEU,
   {
     id: 'hahmotelma-saechsische-schweiz',
     kuva: {
@@ -460,6 +463,18 @@ export const HAHMOTELMA_DEU = [
       + 'Herrenchiemsee-palatsi.',
     lahde: 'en-Wikipedia "Chiemsee", johdanto-osa ja osiot "Origin" ja "Islands" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mihin suureen jokeen Chiemseen vedet lopulta laskevat Innin kautta?',
+      vaihtoehdot: [
+        'Tonavaan',
+        'Reiniin',
+        'Elbeen',
+        'Moldauun',
+      ],
+      oikea: 0,
+      fakta: 'Chiemseestä lähtevä Alz-joki virtaa pohjoiseen Inniin, joka puolestaan '
+        + 'laskee Tonavaan.',
+    },
   },
   {
     id: 'hahmotelma-hermannsdenkmal',
@@ -725,6 +740,18 @@ export const HAHMOTELMA_DEU = [
       + 'Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan '
       + 'kehdoksi.',
     lahde: 'en-Wikipedia "Quedlinburg", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Quedlinburg mainitaan ensimmäisen kerran kaupunkina?',
+      vaihtoehdot: [
+        '919',
+        '922',
+        '994',
+        '900',
+      ],
+      oikea: 1,
+      fakta: 'Quedlinburg mainitaan ensimmäisen kerran kaupunkina vuonna 922 Henrik '
+        + 'Linnustajan lahjoituksessa.',
+    },
   },
   {
     id: 'hahmotelma-maulbronn',
@@ -958,6 +985,18 @@ export const HAHMOTELMA_DEU = [
       + 'ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.',
     lahde: 'en-Wikipedia "Rüdesheim am Rhein", johdanto-osa ja osiot "Geography" ja "Sights" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Niederwalddenkmal-muistomerkki valmistui?',
+      vaihtoehdot: [
+        '1877',
+        '1871',
+        '1883',
+        '1919',
+      ],
+      oikea: 2,
+      fakta: 'Niederwalddenkmalin peruskivi laskettiin 1877, ja muistomerkki valmistui '
+        + 'vuonna 1883.',
+    },
   },
   {
     id: 'hahmotelma-bernkastel',

@@ -85,6 +85,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Großglockner',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä Pasterze on?',
       'Miksi korkeus mitataan Adrianmerestä?',
@@ -101,6 +102,17 @@ export const MAASTOKOHTEET_AUT = [
       + 'Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, '
       + 'Itävallan laajin jäätikkö.',
     lahde: 'en-Wikipedia "Grossglockner", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä jäätikkö lepää Großglocknerin itärinteellä ja on Itävallan laajin?',
+      vaihtoehdot: [
+        'Pasterze',
+        'Hohe Tauern',
+        'Glockner-ryhmä',
+        'Adrianmeren jää',
+      ],
+      oikea: 0,
+      fakta: 'Großglocknerin itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.',
+    },
   },
   {
     id: 'wildspitze',
@@ -177,6 +189,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Tonava',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Kuinka monen pääkaupungin läpi Tonava virtaa?',
       'Mikä Wachaun laakso on?',
@@ -193,6 +206,17 @@ export const MAASTOKOHTEET_AUT = [
       + 'aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, '
       + 'Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.',
     lahde: 'en-Wikipedia "Danube", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä joen jälkeen Tonava on Euroopan toiseksi pisin joki?',
+      vaihtoehdot: [
+        'Reinin',
+        'Volgan',
+        'Rhônen',
+        'Elben',
+      ],
+      oikea: 1,
+      fakta: 'Volgan jälkeen Tonava on Euroopan toiseksi pisin joki, 2 850 kilometriä pitkä.',
+    },
   },
   {
     id: 'inn',
@@ -235,6 +259,17 @@ export const MAASTOKOHTEET_AUT = [
       + 'Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan '
       + 'ainoa laakso, jonka vedet päätyvät Mustallemerelle.',
     lahde: 'en-Wikipedia "Inn (river)", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä huippu on Innin valuma-alueen korkein kohta?',
+      vaihtoehdot: [
+        'Großglockner',
+        'Wildspitze',
+        'Ortler',
+        'Piz Bernina',
+      ],
+      oikea: 3,
+      fakta: 'Innin valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2, 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -265,6 +300,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Hallstatt',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kaivoksesta löytyy tuhansia vuosia vanhoja kenkiä?',
       'Mikä Hallstattin kulttuuri on?',
@@ -321,6 +357,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Melkin luostari',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi Melk säästyi lakkauttamiselta?',
       'Kuka on Melkin Adso?',
@@ -379,6 +416,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Hohensalzburgin linnoitus',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mikä Reisszug on?',
       'Milloin linnoitusta piiritettiin?',
@@ -436,6 +474,7 @@ export const MAASTOKOHTEET_AUT = [
     ],
     nimi: 'Semmeringin rata',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miksi radalle piti kehittää oma veturityyppi?',
       'Kuinka paljon rata nousee?',
@@ -632,6 +671,17 @@ export const MAASTOKOHTEET_AUT = [
       + 'ylitti Tonavan juuri Carnuntumin kohdalla.',
     lahde: 'en-Wikipedia "Carnuntum", johdanto-osa sekä osiot "Military history" ja '
       + '"History of the city" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Mikä kauppareitti ylitti Tonavan juuri Carnuntumin kohdalla?',
+      vaihtoehdot: [
+        'Silkkitie',
+        'Suolatie',
+        'Meripihkatie',
+        'Kuningasreitti',
+      ],
+      oikea: 2,
+      fakta: 'Meripihkatien päähaara ylitti Tonavan juuri Carnuntumin kohdalla.',
+    },
   },
   {
     id: 'eisriesenwelt',
@@ -762,6 +812,17 @@ export const MAASTOKOHTEET_AUT = [
       + 'vuotuista Erzberg Rodeo -enduroajoa.',
     lahde: 'en-Wikipedia "Erzberg mine", johdanto-osa sekä osiot "Geology" ja '
       + '"History" (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Millä nimellä kutsuttiin kelkkoja, joilla malmi vedettiin laaksoon?',
+      vaihtoehdot: [
+        'Sackzug',
+        'Radwerk',
+        'Rodeo',
+        'Erzweg',
+      ],
+      oikea: 0,
+      fakta: 'Malmia vedettiin laaksoon kelkoilla, joita kutsuttiin nimellä Sackzug.',
+    },
   },
   {
     id: 'bregenzin-jarvinayttamo',

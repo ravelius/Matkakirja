@@ -107,7 +107,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://127.0.0.1:${palvelin.address().port}/?lauta=${LAUTA}`;
+const osoite = `http://127.0.0.1:${palvelin.address().port}/?lauta=${LAUTA}&glnimiot=0`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {

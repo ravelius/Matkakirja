@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, LAATU_KAUKORAJA, laatuTeravyys, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import {
+  LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, NAPAKANNEN_HAIVEPEITTO, NAPAKANNEN_LEVEYS, NAPAKANSI_ETELA, NAPAKANSI_POHJOINEN, NAPAKERROIN_MIN, OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS, OSOITTIMEN_NAYTTEITA, OSOITTIMEN_VIIVE_MAX_MS, PALLO_KIRJASTO, PALLO_LAATAT, PALLO_LAATTAKANSIO, PALLO_LAATTATASO_MAX, PALLO_LAATTAVERSIO, PALLO_SUKELLUSLEVEYS, PALLO_TEKSTUURI, PALLO_TEKSTUURITASO, PALLO_TEKSTUURIVERSIO, SYOTE_KIIHTYVYYS_MAX, asennaNapakannet, jousiAskel, kolmiulotteinen, laatatSaatavilla, laattakynnykset, laattatasoMax, laatuTeravyys, lepokerroin, napakerroin, osoittimenKohta, pallonKaupungit, pallonLaatta, rajaaKiihtyvyys, sukelluskohta,
+} from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY, tyolista, osanLaatat, kaistanRajat, lueOsa, NOUTOVALI_OLETUS, YHTEISTAHTI_MS } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -26,9 +28,12 @@ import {
 import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
   RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
-  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
+  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto, liukuLoppuAskel, LIUKU_LOPPU_PX_MS,
+  ZOOMIN_ASKELKATTO, ZOOMIN_HERKKYYS, ZOOMIN_LIUKU_MS, kohdistaAnkkuri, zoominAskel,
+  ENNUSTE_KEHYS_MAX_MS, ennustaKamera, pallonEnnusteKaytossa,
 } from '../js/pallo.js';
 import { OSOITTIMEN_JALKIVIIVE_MS, pisteEdessa } from '../js/pallolauta/lauta.js';
+import { laattakerroksenOsuma } from '../js/pallolaatat.js';
 import {
   PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
   palloTurvatilassa, pallonKaatumiset,
@@ -130,16 +135,22 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260921a, versio 2026-09-21-pohja (21.9.2026, GSHHG-poltto; edellinen 20260920k 20.9.2026, Macin
-   * pohja-ajo; docs/raportit/viesti-fable-pohja-20260920.md).
+   * TUNNISTE 20260923a, versio 2026-09-23a-pohja (23.9.2026: sama kuin 22c,
+   * mutta vesiviivoitus.harvennus = 'haive' — harvennus häivyttää eikä katkaise;
+   * docs/raportit/kuvat/harvennus-haive-20260923/). Edellinen 20260922c,
+   * versio 2026-09-22c-pohja (22.9.2026 ilta: vesiviivat
+   * laudan yksiköihin ja laikut maailmaan, jotta tasot piirtävät saman kuvion
+   * samaan maantieteelliseen kohtaan — docs/raportit/vesiviivat-laudan-
+   * yksikoihin-20260922.md; edellinen 20260922a 21.9.2026 ilta, isobaatit +
+   * merikoristeet).
    *
    * Sama sääntö kuin sarjalla i: sarja on poltettu ILMAN nostoja, joten
    * kansiossa ei ole '-nostot'-osaa ja nostot tulevat maittain
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260921a`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260921a')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260923a`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260923a')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -172,8 +183,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-21-pohja-20260921a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-21-pohja-20260921a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-23a-pohja-20260923a\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-23a-pohja-20260923a\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
@@ -232,7 +243,17 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
-  assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
+  /*
+   * HEITON TÖKKÄYS (omistaja 23.9.2026, paljas kartta): liuku astuu
+   * kirjaston tickissä ennen renderiä (sovellaSyote), ei omassa rAF:ssa
+   * tickin jälkeen, ja sen kello jatkaa vedon aikajanaa. Vanha kaava
+   * jätti irrotuksen jälkeen kaksi renderiä ilman siirtymää.
+   */
+  assert.doesNotMatch(pallo2, /requestAnimationFrame\(\(\) => liu\(/, 'liuku ei astu omassa rAF:ssa');
+  assert.match(pallo2, /const sovellaSyote = \(\) => \{\n    const nyt = kehyksenHetki\(\);\n    paivitaKehysvali\(nyt\);\n    if \(vauhti\.liukuu\) \{ liu\(nyt\); return; \}/,
+    'liuku astuu tickissä ennen vetoa ja renderiä');
+  assert.match(pallo2, /vauhti\.liukuAika = vauhti\.aika;/, 'liu\'un kello alkaa viimeksi sovelletusta vetopaikasta');
+  assert.match(pallo2, /const tavoite = nyt - vauhti\.liukuViive;/, 'liuku seuraa samalla viiveellä kuin veto');
 });
 
 /*
@@ -725,11 +746,13 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
   // lapsessa, joten kotelon kaappaus ehtii ensin. passive: false, muuten
   // preventDefault ei tehoa.
   assert.match(kasittelija, /\{ capture: true, passive: false \}/);
-  // Cmd (mac) tai ctrl (Windows, nipistys) → kirjasto zoomaa kuten ennen.
-  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) return;/);
-  const zoomKohta = kasittelija.indexOf('e.metaKey');
-  const estoKohta = kasittelija.indexOf('e.preventDefault()');
-  assert.ok(zoomKohta >= 0 && estoKohta > zoomKohta, 'zoom päästetään läpi ennen estoa');
+  // Cmd (mac) tai ctrl (Windows, nipistys) → zoom itse kohti osoitinta,
+  // liukuen (sulavuus E3): kirjaston dolly on pois (enableZoom false).
+  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) \{/);
+  assert.match(ele, /ohjaimet\.enableZoom = false;/);
+  assert.match(kasittelija, /zoomi\.kohde \+ zoominAskel\(e\.deltaY, e\.deltaMode\)/);
+  assert.match(kasittelija, /requestAnimationFrame\(zoominLiuku\)/);
+  assert.match(ele, /kohdistaAnkkuri\(pov, ankkuri, sx, sy, alt, linssi\(\)\)/);
   // Muuten: selaimen oma vieritys/zoom pois ja kirjasto ohitetaan.
   assert.match(kasittelija, /e\.preventDefault\(\);\s*\n\s*e\.stopPropagation\(\);/);
   assert.match(kasittelija, /rullanAskel\(e\.deltaX, e\.deltaY, pov\.altitude/);
@@ -1066,4 +1089,225 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
      */
     assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
   }
+});
+
+test('sulavuus E3: rullan pykälä ln-korkeutena, katto ja deltaMode', () => {
+  assert.equal(zoominAskel(100), 100 * ZOOMIN_HERKKYYS);
+  assert.ok(zoominAskel(100) > 0.1 && zoominAskel(100) < 0.25, 'sata pikseliä on noin kuudesosa');
+  assert.equal(zoominAskel(-100), -zoominAskel(100));
+  assert.equal(zoominAskel(3, 1), zoominAskel(3 * RULLAN_RIVI_PX));
+  assert.equal(zoominAskel(1, 2), ZOOMIN_ASKELKATTO, 'sivun pykälä leikkautuu kattoon');
+  assert.equal(zoominAskel(NaN), 0);
+  assert.ok(ZOOMIN_LIUKU_MS > 0 && ZOOMIN_LIUKU_MS <= 200, 'liuku on lyhyt');
+});
+
+test('sulavuus E3: ankkuri pysyy ruudun kohdassa zoomissa (Google Earth)', () => {
+  const linssi = { fov: 50, kuvasuhde: 390 / 844, sade: 100 };
+  const pov = { lat: 46.5, lng: 2.5, altitude: 0.2 };
+  // Ankkuri ruudun oikeassa yläneljänneksessä.
+  const sx = 0.6;
+  const sy = 0.5;
+  const ankkuri = laattakerroksenOsuma(pov, sx, sy, linssi);
+  assert.ok(ankkuri, 'ankkuri osuu palloon');
+  for (const alt of [0.1, 0.05, 0.4]) {
+    const uusi = kohdistaAnkkuri(pov, ankkuri, sx, sy, alt, linssi);
+    assert.equal(uusi.altitude, alt);
+    const osuma = laattakerroksenOsuma(uusi, sx, sy, linssi);
+    assert.ok(Math.abs(osuma.lat - ankkuri.lat) < 1e-3, `lat ${alt}: ${osuma.lat} vs ${ankkuri.lat}`);
+    assert.ok(Math.abs(osuma.lng - ankkuri.lng) < 1e-3, `lng ${alt}: ${osuma.lng} vs ${ankkuri.lng}`);
+    // Kamera siirtyi kohti ankkuria lähennettäessä ja siitä pois loitonnettaessa.
+    const lahemmas = alt < pov.altitude;
+    assert.equal(uusi.lng > pov.lng, lahemmas, `suunta ${alt}`);
+  }
+  // Ilman ankkuria (osoitin pallon ohi) vain korkeus vaihtuu.
+  assert.deepEqual(kohdistaAnkkuri(pov, null, sx, sy, 0.1, linssi), { lat: 46.5, lng: 2.5, altitude: 0.1 });
+  // Keskellä ruutua kamera ei liiku.
+  const keski = laattakerroksenOsuma(pov, 0, 0, linssi);
+  const paikallaan = kohdistaAnkkuri(pov, keski, 0, 0, 0.05, linssi);
+  assert.ok(Math.abs(paikallaan.lat - 46.5) < 1e-6 && Math.abs(paikallaan.lng - 2.5) < 1e-6);
+});
+
+test('sulavuus E4b: kameran ennuste ekstrapoloi liikkeen, lepää levossa ja kiertää sauman', () => {
+  const a = { aika: 1000, pov: { lat: 46.5, lng: 2.5, altitude: 0.2 } };
+  const b = { aika: 1016, pov: { lat: 46.6, lng: 2.7, altitude: 0.19 } };
+  const e = ennustaKamera(a, b);
+  assert.equal(e.dtMs, 16);
+  assert.ok(Math.abs(e.pov.lat - 46.7) < 1e-9 && Math.abs(e.pov.lng - 2.9) < 1e-9, `${e.pov.lat},${e.pov.lng}`);
+  assert.ok(Math.abs(e.pov.altitude - 0.19 * 0.19 / 0.2) < 1e-9, 'korkeus logaritmisesti');
+  // Levossa ei ennustetta.
+  const lepo = ennustaKamera(a, { aika: 1016, pov: { ...a.pov } });
+  assert.equal(lepo.dtMs, 0);
+  assert.deepEqual(lepo.pov, a.pov);
+  // Pitkä tauko (yli 250 ms) ei ennusta; kehysväli katkaistaan kattoon.
+  assert.equal(ennustaKamera(a, { aika: 1400, pov: b.pov }).dtMs, 0);
+  assert.equal(ennustaKamera(a, { aika: 1100, pov: b.pov }).dtMs, ENNUSTE_KEHYS_MAX_MS);
+  // Sauma: 179,9 → −179,9 on 0,2° itään, ei 359,8° länteen.
+  const s = ennustaKamera({ aika: 0, pov: { lat: 0, lng: 179.9, altitude: 0.2 } },
+    { aika: 16, pov: { lat: 0, lng: -179.9, altitude: 0.2 } });
+  assert.ok(Math.abs(s.pov.lng - (-179.7)) < 1e-9, `sauma ${s.pov.lng}`);
+  assert.deepEqual(ennustaKamera(null, b).pov, b.pov);
+  // Kytkin: ?ennuste=0 sammuttaa.
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=0' } }), false);
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '?ennuste=1' } }), true);
+  // Oletuksena pois (omistajan tuntuma 21.9.2026: nimiöt heiluivat työpöydällä).
+  assert.equal(pallonEnnusteKaytossa({ location: { search: '' } }), false);
+});
+
+/*
+ * OSOITIN KEHYKSEN HETKELLÄ (sulavuus kohta 13). Mitattu vika: kamera
+ * toisti tapahtumajonon rytmiä, joten kehys ilman näytettä oli
+ * pysähdys (p10-suhde 0 kaikissa 16 aidossa vedossa) ja seuraava oli
+ * ylikorjaava piikki (p90 3–14).
+ */
+test('osoittimenKohta: interpoloi näytteiden välistä', () => {
+  const n = [{ x: 0, y: 0, t: 100 }, { x: 10, y: 20, t: 110 }];
+  assert.deepEqual(osoittimenKohta(n, 105), { x: 5, y: 10, t: 105 });
+  assert.deepEqual(osoittimenKohta(n, 102.5), { x: 2.5, y: 5, t: 102.5 });
+});
+
+test('osoittimenKohta: ennen ensimmäistä näytettä ei ease-iniä', () => {
+  const n = [{ x: 4, y: 6, t: 100 }, { x: 10, y: 20, t: 110 }];
+  // Vedon alussa haluttu hetki on ennen ensimmäistä näytettä: käytetään
+  // sitä sellaisenaan, jotta kartta lähtee heti eikä kiihdy viiveen läpi.
+  assert.deepEqual(osoittimenKohta(n, 90), { x: 4, y: 6, t: 100 });
+});
+
+test('osoittimenKohta: ekstrapoloi enintään yhden kehyksen', () => {
+  const n = [{ x: 0, y: 0, t: 100 }, { x: 10, y: 0, t: 110 }];
+  // Nopeus 1 px/ms: 5 ms viimeisen jälkeen → 15.
+  assert.deepEqual(osoittimenKohta(n, 115, { ekstraMax: 17 }), { x: 15, y: 0, t: 115 });
+  // Katto leikkaa: 40 ms pyydettynä, katto 17 → 27, ei 50.
+  assert.deepEqual(osoittimenKohta(n, 150, { ekstraMax: 17 }), { x: 27, y: 0, t: 127 });
+  // Ilman ekstrapolointia jäädään viimeiseen näytteeseen.
+  assert.deepEqual(osoittimenKohta(n, 150, { ekstraMax: 0 }), { x: 10, y: 0, t: 110 });
+});
+
+test('osoittimenKohta: tyhjä ja yksi näyte', () => {
+  assert.equal(osoittimenKohta([], 100), null);
+  assert.equal(osoittimenKohta(null, 100), null);
+  assert.deepEqual(osoittimenKohta([{ x: 3, y: 4, t: 100 }], 120), { x: 3, y: 4, t: 100 });
+});
+
+test('osoittimenKohta: KEHYS ILMAN NÄYTETTÄ EI OLE PYSÄHDYS', () => {
+  /*
+   * Tämä on koko korjauksen ydin. Näytteitä tulee 125 Hz (8 ms) ja
+   * kehyksiä 60 Hz (16,7 ms), mutta ne eivät ole tahdissa: osaan
+   * kehyksistä osuu kaksi näytettä, osaan ei yhtään. Vanha tapa
+   * (viimeisin näyte sellaisenaan) antoi silloin 0 ja sitten 2x.
+   * Interpoloitu paikka etenee joka kehyksellä saman verran.
+   */
+  const naytteet = [];
+  // Näytteitä koko ikkunan yli, jotta ekstrapoloinnin katto ei sotke väitettä.
+  for (let i = 0; i <= 16; i += 1) naytteet.push({ x: i * 8, y: 0, t: 100 + i * 8 });
+  const askeleet = [];
+  let edellinen = null;
+  for (let k = 0; k < 6; k += 1) {
+    const kohta = osoittimenKohta(naytteet, 120 + k * 16.7);
+    if (edellinen) askeleet.push(+(kohta.x - edellinen.x).toFixed(3));
+    edellinen = kohta;
+  }
+  // Jokainen kehys etenee saman verran (16,7 ms x 1 px/ms), ei 0 ja 2x.
+  for (const a of askeleet) assert.ok(a > 16 && a < 17.5, `askel ${a} (askeleet ${askeleet})`);
+});
+
+test('osoittimenKohta: vakiot ovat enintään yksi kehys', () => {
+  assert.ok(OSOITTIMEN_VIIVE_MAX_MS <= 17, 'viive enintään yksi kehys (Fable 22.9.2026)');
+  assert.ok(OSOITTIMEN_EKSTRAPOLOINTI_MAX_MS <= 17);
+  assert.ok(OSOITTIMEN_NAYTTEITA >= 8, 'kaksi kehystä 125 Hz:n hiirellä');
+});
+
+test('coalesced-näytteisiin ei nojata: kelvoton lista johtaa varapolkuun', () => {
+  /*
+   * Safari tukee getCoalescedEventsia vasta iOS 18.2:sta ja vajaana,
+   * joten näytteet on kelpuutettava yksitellen. Jos yksikään ei kelpaa,
+   * on käytettävä itse tapahtumaa — muuten veto jäisi kokonaan väliin.
+   */
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(!Number\.isFinite\(x\) \|\| !Number\.isFinite\(y\)\) return false;/);
+  assert.match(lahde, /if \(!lisatty\) lisaa\(e\);/, 'varapolku, jos coalesced ei tuottanut yhtään näytettä');
+  assert.match(lahde, /Safari tukee sitä vasta iOS 18\.2/);
+});
+
+test('kytkentä: näytteet kerätään coalesced-tapahtumista ja sovelletaan kehyksen hetkellä', () => {
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /typeof e\.getCoalescedEvents === 'function' \? e\.getCoalescedEvents\(\) : null/);
+  assert.match(lahde, /kohta = osoittimenKohta\(n, nyt - viive, \{/);
+  assert.match(lahde, /const viive = Math\.min\(kehysvali, OSOITTIMEN_VIIVE_MAX_MS\);/);
+  assert.match(lahde, /interpVanha: laattakerroksenKokeet\(\)\.has\('interpvanha'\)/, 'paluulippu');
+  assert.match(lahde, /syote\.naytteet\.length = 0;/, 'pointerdown tyhjentää näytteet');
+});
+
+/* (4) Jousi: kriittisesti vaimennettu, dt-pohjainen. */
+test('jousiAskel lähestyy tavoitetta eikä ylitä sitä (kriittinen vaimennus)', () => {
+  let p = 0; let v = 0;
+  const tau = 16.7;
+  const matka = [];
+  for (let i = 0; i < 20; i += 1) {
+    const r = jousiAskel(p, v, 100, 16.7, tau);
+    p = r.p; v = r.v;
+    matka.push(p);
+  }
+  assert.ok(p > 95 && p <= 100.5, `lähestyy tavoitetta (${p})`);
+  assert.ok(Math.max(...matka) <= 101, `ei merkittävää ylitystä (${Math.max(...matka)})`);
+  // Sama matka isommalla dt:llä: tulos ei saa riippua kehystaajuudesta.
+  let p2 = 0; let v2 = 0;
+  for (let i = 0; i < 10; i += 1) { const r = jousiAskel(p2, v2, 100, 33.4, tau); p2 = r.p; v2 = r.v; }
+  assert.ok(Math.abs(p2 - p) < 6, `dt ei ratkaise lopputulosta (${p} vs ${p2})`);
+});
+
+/* (3) Ennakointi: kiihtyvyyskatto estää hypyn suunnanvaihdossa. */
+test('rajaaKiihtyvyys rajaa nopeuden muutoksen, ei nopeutta', () => {
+  // Pieni muutos menee läpi sellaisenaan.
+  assert.equal(rajaaKiihtyvyys(1, 1.1, 16), 1.1);
+  // Suunnanvaihdos rajataan katolla (0,02 px/ms² × 16 ms = 0,32).
+  const r = rajaaKiihtyvyys(1, -1, 16);
+  assert.ok(Math.abs(r - (1 - SYOTE_KIIHTYVYYS_MAX * 16)) < 1e-9, `${r}`);
+  // Ensimmäisellä kehyksellä ei ole edellistä nopeutta: ei rajausta.
+  assert.equal(rajaaKiihtyvyys(undefined, 5, 16), 5);
+});
+
+test('kytkentä: viisi syötetapaa ovat samassa rakennuksessa lippuina', () => {
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(syote\.interpVanha\) tapa = 'vanha';/);
+  assert.match(lahde, /else if \(k\.has\('syoteennakko'\)\) tapa = 'ennakko';/);
+  assert.match(lahde, /else if \(k\.has\('syotejousi'\)\) tapa = 'jousi';/);
+  assert.match(lahde, /k\.has\('syotetouch'\)/);
+  // Kosketuslähde vain kosketuslaitteella, ja silloin pointermove ei syötä puskuria.
+  assert.match(lahde, /typeof globalThis\.ontouchstart !== 'undefined'/);
+  assert.match(lahde, /if \(syote\.touchLahde\) return;/);
+  assert.match(lahde, /kotelo\.addEventListener\('touchmove', touchNayte, \{ passive: true \}\)/);
+  /*
+   * Mittauslippu voittaa valikon valinnan (js/vedon-seuranta.js): ilman
+   * tätä savuke mittaisi sitä, mikä laitteen localStorageen on jäänyt.
+   */
+  assert.match(lahde, /const mittausLippu = mittauslippuPaalla\(\);/);
+  assert.match(lahde, /if \(mittausLippu\) return; \/\/ mittausajossa lippu pitää valtansa/);
+});
+
+/*
+ * LIU'UN LOPPU PEHMEÄSTI (omistaja 23.9.2026: "pehmeämmin hidastaa sen
+ * ihan lopun vierityksen"). Loppuvaihe v0·(1 − s/T)²: sauma kitkaan on
+ * sileä, ja lopussa nopeus ja hidastuvuus ovat nolla.
+ */
+test('liu\'un loppuvaihe: sileä sauma, asettuu nollaan, tarkka matka', () => {
+  const KITKA = 0.0028;
+  const T = 2 / KITKA;
+  // Hidastuvuus vaiheen alussa = kitka · v0 (sama kuin eksponentiaalisen kitkan).
+  const h = 0.01;
+  const alku = liukuLoppuAskel(0, h, T);
+  assert.ok(Math.abs((1 - alku.nopeus) / h - KITKA) < 1e-4, `hidastuvuus ${(1 - alku.nopeus) / h}`);
+  // Koko vaiheen matka = v0·T/3 askeleista riippumatta (60 Hz ja 120 Hz samat).
+  const matka = (dt) => { let s = 0; let m = 0; for (;;) { const a = liukuLoppuAskel(s, s + dt, T); m += a.matka; s += dt; if (a.valmis) return m; } };
+  assert.ok(Math.abs(matka(16.7) - T / 3) < 1e-9);
+  assert.ok(Math.abs(matka(8.3) - T / 3) < 1e-9);
+  // Loppu: nopeus nolla, ja viimeisen kehyksen askel on pieni (ei seinää).
+  const loppu = liukuLoppuAskel(T - 16.7, T, T);
+  assert.equal(loppu.valmis, true);
+  assert.equal(loppu.nopeus, 0);
+  assert.ok(loppu.matka < 0.001 * 16.7, `viimeinen askel ${loppu.matka}`);
+  // Kynnys pikseleinä, noin 2,5 px/kehys.
+  assert.ok(LIUKU_LOPPU_PX_MS > 0.1 && LIUKU_LOPPU_PX_MS < 0.2);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /if \(ruutunopeus\(vauhti, kohta\.lat\) < LIUKU_LOPPU_PX_MS\)/, 'kynnys luetaan ruudun pikseleinä');
+  assert.doesNotMatch(pallo, /hypot\(vauhti\.lat, vauhti\.lng\) > VAUHTI_KYNNYS\) pysaytaLiuku|> VAUHTI_KYNNYS\) vauhti\.raf = requestAnimationFrame/, 'ei asteisiin perustuvaa katkaisua kesken liu\'un');
 });

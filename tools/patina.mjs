@@ -1287,6 +1287,51 @@ export async function patinoiSelaimessa({
    * Ilman bbox:ia palautuu lehden omaksi koordinaatiksi (x / s). */
   const maailmaX = (x) => (mk ? (mk.x + x * (mk.w / L)) * VIITE_PX : x / s);
   const maailmaY = (y) => (mk ? (mk.y + y * (mk.h / K)) * VIITE_PX : y / s);
+  /*
+   * VESIVIIVAN MITAT OVAT MAAILMAN MITTOJA (Karttaseppä 22.9.2026,
+   * omistajan tuntumatesti v2106: *"meriviivojen hyppiminen"*).
+   *
+   * Vesiviivoitus oli kolmatta lajia, jota yllä oleva jako ei tunne:
+   * sen VIIVANLEVEYS on paperin mitta (kynä on kynä joka tasolla),
+   * mutta viivan PAIKKA on maailman mitta — viiva k on tietyllä
+   * etäisyydellä rannasta, eikä se etäisyys saa riippua siitä, mitä
+   * pyramidin tasoa katsotaan. Paperivakiona (paperiS 1) viivasto oli
+   * joka tasolla eri kohdassa merta, ja kun peli häivyttää tason
+   * toiseksi, kaksi eri viivastoa sekoittui liaksi. Mitattu 22.9.2026:
+   * saman maa-alan korkeataajuinen kuvio korreloi tasojen z5 ja z6
+   * välillä vain 0,14, kun meren sävy korreloi 0,96
+   * (docs/raportit/merikuviot-tasoissa-20260922.md).
+   *
+   * `vvSkaala` on pikseliä VIITE_PX-yksikköä kohti tällä tasolla, eli
+   * se kerroin, jolla maailman mitta muuttuu tämän kuvan pikseleiksi.
+   * Sillä kerrotaan viivaväli, sen kasvu, aloitusetäisyys ja huojunta;
+   * paksuus ja voima jäävät paperin mittaan (`sp`). Ilman bbox:ia
+   * (yksittäinen koekuva) palautuu vanhaan käytökseen.
+   */
+  const vvSkaala = mk ? (L / mk.w) / VIITE_PX : sp;
+  /*
+   * HARVENNUS: kun viivaväli menee tällä tasolla alle kolmen pikselin,
+   * viivat sulaisivat yhdeksi tummaksi nauhaksi. Silloin piirretään
+   * vain joka toinen (tai joka neljäs) viiva — karkea taso on HARVEMPI
+   * eikä tummempi, ja koska harvennus on viivan indeksistä eikä
+   * paikasta, karkean tason viivat osuvat tarkan tason viivojen päälle.
+   */
+  const VV_VAHIN_VALI_PX = 3;
+  /*
+   * HARVENNUS HÄIVYTTÄEN (omistaja 23.9.2026 Fablen kautta, 22c-poltto:
+   * "harvennetut viivat vaimeina eikä pois"). Kova harvennus pudottaa
+   * viivaluokan kerralla, kun sen väli alittaa 3 px — ja koska väli
+   * kaksinkertaistuu joka tasolla, sama viiva on tasolla z+1 täysi ja
+   * tasolla z poissa: tasonvaihdon häivytys näyttää sen syttyvän.
+   * `vesiviivoitus.harvennus = 'haive'`: jokaisen viivan paino tulee
+   * sen OMAN luokan välistä (väli × 2^r, r = indeksin kakkosen potenssi),
+   * ja paino kasvaa pehmeästi VV_HAIVE_ALKU_PX:stä (0) VV_VAHIN_VALI_PX:ään
+   * (1). Täydet viivat ovat täsmälleen samat kuin ennen; vain pudotetut
+   * saavat välipainon. Oletus 'pois' = entinen käytös (reseptin valinta,
+   * `--resepti-json '{"vesiviivoitus":{"harvennus":"haive"}}'`).
+   */
+  const VV_HAIVE_ALKU_PX = 1.5;
+  const vvHaive = resepti.vesiviivoitus?.harvennus === 'haive';
 
   /* ------------------------------------------------- pienennetyt kentät */
   /*
@@ -1883,26 +1928,35 @@ export async function patinoiSelaimessa({
            * viivat huojuvat rikkomatta samankeskisyyttään: viereiset
            * pikselit saavat lähes saman siirtymän, eivätkä viivat siksi
            * mene ristiin vaikka siirtymä on viivaväliä suurempi. */
-          const hx = (x + faasiX) / (vv.huojuntaSkaala * sp);
-          const hy = (y + faasiY) / (vv.huojuntaSkaala * sp);
+          const hx = maailmaX(x) / vv.huojuntaSkaala;
+          const hy = maailmaY(y) / vv.huojuntaSkaala;
           const wx = (fbm(kohinaVesiviiva, hx, hy, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * sp;
+            * vv.huojunta * vvSkaala;
           const wy = (fbm(kohinaVesiviiva, hx + 137.3, hy + 71.9, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * sp;
+            * vv.huojunta * vvSkaala;
           const et = hae2(etaisyys2, x + wx, y + wy);
-          const e = et - vv.aloitus * sp;
-          const v0 = vv.vali * sp; const kasvu = vv.kasvu * sp;
+          const e = et - vv.aloitus * vvSkaala;
+          const v0 = vv.vali * vvSkaala; const kasvu = vv.kasvu * vvSkaala;
           const juuri = (v0 - kasvu / 2) ** 2 + 2 * kasvu * e;
           if (e > -v0 && juuri > 0 && et < 1e7) {
             /* nro = viivanumero murtolukuna; kokonaisluku osuu viivalle */
             const nro = (Math.sqrt(juuri) - (v0 - kasvu / 2)) / kasvu;
             const k = Math.round(nro);
-            if (k >= 0 && k < vv.viivoja) {
+            /* Harvennusaskel tämän kohdan viivavälistä: 1, 2, 4, 8 … */
+            const valiTassa = v0 + k * kasvu;
+            const askel = valiTassa >= VV_VAHIN_VALI_PX
+              ? 1
+              : 2 ** Math.ceil(Math.log2(VV_VAHIN_VALI_PX / Math.max(0.01, valiTassa)));
+            /* Häivytyksessä viiva k painotetaan oman luokkansa välistä. */
+            let luokka = 1;
+            if (vvHaive && k > 0) { let q = k; while (q % 2 === 0 && luokka < 1024) { q /= 2; luokka *= 2; } }
+            const luokanPaino = !vvHaive || k === 0 || k % askel === 0 ? 1
+              : pehmene(VV_HAIVE_ALKU_PX, VV_VAHIN_VALI_PX, valiTassa * luokka);
+            if (k >= 0 && k < vv.viivoja && luokanPaino > 0.01) {
               /* Paikallinen viivaväli kasvaa ulospäin, joten murto-osa
                * muunnetaan pikseleiksi sillä välillä, jolla ollaan —
                * viivan PAKSUUS pysyy samana, vain tiheys harvenee. */
-              const vali = v0 + k * kasvu;
-              const poikkeama = Math.abs(nro - k) * vali;
+              const poikkeama = Math.abs(nro - k) * valiTassa;
               const viiva = pehmene(vv.paksuus * sp, vv.paksuus * sp * 0.3, poikkeama);
               if (viiva > 0.01) {
                 /* Uloin viiva häipyy: vyö loppuu avomerelle. Vyön pituus
@@ -1925,9 +1979,9 @@ export async function patinoiSelaimessa({
                 const haip = Math.max(0, 1 - k / maara) ** vv.haipyma;
                 /* Voiman vaihtelu pitkin viivaa: muste ei kanna tasaisesti. */
                 const roso = Math.max(0, 1 + vv.roso * 2
-                  * (kohinaVesiviiva((x + faasiX) / (vv.rosoSkaala * sp) + 900.5,
-                    (y + faasiY) / (vv.rosoSkaala * sp) + 401.5) - 0.5));
-                kerroin -= vv.voima * viiva * haip * roso * meriW;
+                  * (kohinaVesiviiva(maailmaX(x) / vv.rosoSkaala + 900.5,
+                    maailmaY(y) / vv.rosoSkaala + 401.5) - 0.5));
+                kerroin -= vv.voima * viiva * haip * roso * meriW * luokanPaino;
               }
             }
           }

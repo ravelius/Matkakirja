@@ -54,6 +54,12 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Kulta-Liisa': 'berliini-kulta-liisa',
     'Hobrechtin putket': 'berliini-hobrechtin-putket',
+    'Muuri 1961': 'assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
+    'Hattupäinen ukkeli': 'assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
+    'Gaertnerin Berliini': 'assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
+    'Marlene Dietrich': 'assets/kartat/miniatyyrit/berliini-marlene-dietrich.webp',
+    'Paavin kosto': 'assets/kartat/miniatyyrit/berliini-paavin-kosto.webp',
+    Maailmankello: 'assets/kartat/miniatyyrit/berliini-maailmankello.webp',
   },
   helsinki: {
     'Temppeliaukion kirkko': 'assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko.webp',
@@ -73,6 +79,7 @@ export const MINIATYYRIT = {
     Finlandia: 'helsinki-finlandia',
     Pirtukuningas: 'helsinki-pirtukuningas',
     'Nurmen kohu': 'helsinki-nurmen-kohu',
+    'Suomi herää 1899': 'assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
   },
   pariisi: {
     'Eiffel-torni': 'assets/kartat/miniatyyrit/pariisi-eiffel-torni.webp',
@@ -110,6 +117,25 @@ export const MINIATYYRIT = {
      * piirretty rakennus ja pysyy kartalla.
      */
     Bastilji: 'pariisi-bastilji',
+    'Carmenin ensi-ilta': 'assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
+    'Kirahvin kävelymatka': 'assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+    'Torni romuraudaksi': 'assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+    'Vrain-Lucas': 'assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
+    Impressionistit: 'assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
+    Kyyhkyposti: 'assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
+    'Tuileriain rauniot': 'assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+    'Curie 1898': 'assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
+    'Lavoisier 1780': 'assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
+    'Pasteur 1862': 'assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
+    'Torni 1888': 'assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
+    'Bastilji 1789': 'assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
+    'Lumière 1895': 'assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
+    '72 nimeä': 'assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
+    'Metron sisäänkäynti': 'assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp',
+    'Notre-Damen kukko': 'assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
+    'Pariisi soi': 'assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
+    'Paras patonki': 'assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+    'Pariisin vuosisadat': 'assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
   },
   lontoo: {
     'Buckinghamin palatsi': 'assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.webp',
@@ -127,6 +153,20 @@ export const MINIATYYRIT = {
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Vanha London Bridge': 'lontoo-vanha-london-bridge',
+    'Faraday 1831': 'assets/kartat/miniatyyrit/lontoo-faraday-1831.webp',
+    'Fleming 1928': 'assets/kartat/miniatyyrit/lontoo-fleming-1928.webp',
+    'Tunneli 1827': 'assets/kartat/miniatyyrit/lontoo-tunneli-1827.webp',
+    'Palo 1666': 'assets/kartat/miniatyyrit/lontoo-palo-1666.webp',
+    'Globe 1599': 'assets/kartat/miniatyyrit/lontoo-globe-1599.webp',
+    'Metron höyryveturi': 'assets/kartat/miniatyyrit/lontoo-metron-hoyryveturi.webp',
+    'Exchange Alley': 'assets/kartat/miniatyyrit/lontoo-exchange-alley.webp',
+    'Canaletto Lontoossa': 'assets/kartat/miniatyyrit/lontoo-canaletto-lontoossa.webp',
+    'Dickensin pubi': 'assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp',
+    'Abbey Roadin suojatie': 'assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp',
+    'Leake Streetin tunneli': 'assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp',
+    'Neljäs jalusta': 'assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
+    Turbiinihalli: 'assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
+    Liukumäkiveistos: 'assets/kartat/miniatyyrit/lontoo-liukumakiveistos.webp',
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
@@ -166,6 +206,12 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Forum Romanum': 'rooma-forum-romanum',
     'Banca Romana': 'rooma-banca-romana',
+    'Sikstus 1510': 'assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
+    'Kolikko olan yli': 'assets/kartat/miniatyyrit/rooma-kolikko-olan-yli.webp',
+    'Areenan kellari': 'assets/kartat/miniatyyrit/rooma-areenan-kellari.webp',
+    'Norsu ja obeliski': 'assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
+    'Aqua Virgo': 'assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',
+    Nasone: 'assets/kartat/miniatyyrit/rooma-nasone.webp',
   },
   wien: {
     Raatihuone: 'assets/kartat/miniatyyrit/wien-raatihuone.webp',
@@ -177,12 +223,18 @@ export const MINIATYYRIT = {
     Schönbrunn: 'assets/kartat/miniatyyrit/wien-schonbrunn.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    Vuoristovesijohto: 'wien-vuoristovesijohto',
+    Vuoristovesijohto: 'assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Klimtin maalaukset': 'wien-klimtin-maalaukset',
     Saliera: 'wien-saliera',
+    'Yhdeksäs 1824': 'assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
+    'Figaro 1786': 'assets/kartat/miniatyyrit/wien-figaro-1786.webp',
+    'Rattaan kulmat': 'assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
+    Lipizzanit: 'assets/kartat/miniatyyrit/wien-lipizzanit.webp',
+    Taikahuilu: 'assets/kartat/miniatyyrit/wien-taikahuilu.webp',
+    'Tonava kaunoinen': 'assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
   },
   praha: {
     'Petřínin näkötorni': 'assets/kartat/miniatyyrit/praha-petrinin-nakotorni.webp',
@@ -211,6 +263,11 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     Timanttihiomo: 'amsterdam-timanttihiomo',
     'Amsterdam-laiva': 'amsterdam-amsterdam-laiva',
+    'Kapein talo': 'assets/kartat/miniatyyrit/amsterdam-kapein-talo.webp',
+    Maitotyttö: 'assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
+    Kissalaiva: 'assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
+    'Herengracht 537': 'assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
+    Yövartio: 'assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
   },
   tukholma: {
     Kaupungintalo: 'assets/kartat/miniatyyrit/tukholma-kaupungintalo.webp',
@@ -344,6 +401,48 @@ export const MINIATYYRIT = {
     'Khan el-Khalili': 'assets/kartat/miniatyyrit/kairo-khan-el-khalili.webp',
     'Al-Azhar-puisto': 'assets/kartat/miniatyyrit/kairo-al-azhar-puisto.webp',
   },
+  // Euroopan puuttuvat kohdekarttaminatyyrit, erä A (21.9.2026).
+  // Kuvat on tarkistettu sekä täydessä koossa että 96 px koossa ennen
+  // pelipakettiin lisäämistä.
+  bryssel: {
+    'Brysselin pörssi': 'assets/kartat/miniatyyrit/bryssel-brysselin-porssi.webp',
+    'Manneken Pis': 'assets/kartat/miniatyyrit/bryssel-manneken-pis.webp',
+    Oikeuspalatsi: 'assets/kartat/miniatyyrit/bryssel-oikeuspalatsi.webp',
+    'Grand-Place': 'assets/kartat/miniatyyrit/bryssel-grand-place.webp',
+    'Galeries Royales Saint-Hubert': 'assets/kartat/miniatyyrit/bryssel-galeries-royales-saint-hubert.webp',
+    'Mont des Arts': 'assets/kartat/miniatyyrit/bryssel-mont-des-arts.webp',
+    Kuninkaanpalatsi: 'assets/kartat/miniatyyrit/bryssel-kuninkaanpalatsi.webp',
+  },
+  ljubljana: {
+    'Tivoli-puisto': 'assets/kartat/miniatyyrit/ljubljana-tivoli-puisto.webp',
+    Križanke: 'assets/kartat/miniatyyrit/ljubljana-kri-anke.webp',
+    'Prešernin aukio': 'assets/kartat/miniatyyrit/ljubljana-pre-ernin-aukio.webp',
+    Tromostovje: 'assets/kartat/miniatyyrit/ljubljana-tromostovje.webp',
+    'Ljubljanan tuomiokirkko': 'assets/kartat/miniatyyrit/ljubljana-ljubljanan-tuomiokirkko.webp',
+    'Ljubljanan linna': 'assets/kartat/miniatyyrit/ljubljana-ljubljanan-linna.webp',
+    Keskustori: 'assets/kartat/miniatyyrit/ljubljana-keskustori.webp',
+    Lohikäärmesilta: 'assets/kartat/miniatyyrit/ljubljana-lohikaarmesilta.webp',
+  },
+  kosice: {
+    'Pyhän Elisabetin tuomiokirkko': 'assets/kartat/miniatyyrit/kosice-pyhan-elisabetin-tuomiokirkko.webp',
+    'Urbanin torni': 'assets/kartat/miniatyyrit/kosice-urbanin-torni.webp',
+    'Hlavná-katu': 'assets/kartat/miniatyyrit/kosice-hlavn-katu.webp',
+    Valtionteatteri: 'assets/kartat/miniatyyrit/kosice-valtionteatteri.webp',
+    Immaculata: 'assets/kartat/miniatyyrit/kosice-immaculata.webp',
+    'Miklušin vankila': 'assets/kartat/miniatyyrit/kosice-miklu-in-vankila.webp',
+    'Pyövelin bastioni': 'assets/kartat/miniatyyrit/kosice-pyovelin-bastioni.webp',
+    'Jakabin palatsi': 'assets/kartat/miniatyyrit/kosice-jakabin-palatsi.webp',
+  },
+  bergen: {
+    Nykirken: 'assets/kartat/miniatyyrit/bergen-nykirken.webp',
+    'Fredriksbergin linnake': 'assets/kartat/miniatyyrit/bergen-fredriksbergin-linnake.webp',
+    'Munkelivin luostari': 'assets/kartat/miniatyyrit/bergen-munkelivin-luostari.webp',
+    Korskirken: 'assets/kartat/miniatyyrit/bergen-korskirken.webp',
+    'Pyhän Yrjänän kirkko': 'assets/kartat/miniatyyrit/bergen-pyhan-yrjanan-kirkko.webp',
+    Permanenten: 'assets/kartat/miniatyyrit/bergen-permanenten.webp',
+    Kaupunginkirjasto: 'assets/kartat/miniatyyrit/bergen-kaupunginkirjasto.webp',
+    Yliopistomuseo: 'assets/kartat/miniatyyrit/bergen-yliopistomuseo.webp',
+  },
   // Akvarellierä (23.8.2026): Dubain ja Istanbulin kohdekartat saivat
   // ensimmäiset miniatyyrinsä suoraan akvarelleina.
   dubai: {
@@ -369,6 +468,7 @@ export const MINIATYYRIT = {
     'Galatan silta': 'assets/kartat/miniatyyrit/istanbul-galatan-silta.webp',
     'Sirkecin asema': 'assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp',
     'Neitsyttorni': 'assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp',
+    'Konstantinopoli 1453': 'assets/kartat/miniatyyrit/istanbul-konstantinopoli-1453.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
     'Vararikko 1875': 'istanbul-vararikko-1875',
@@ -412,12 +512,13 @@ export const MINIATYYRIT = {
     Kallimarmaro: 'assets/kartat/miniatyyrit/ateena-kallimarmaro.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    'Akropolis-museo': 'ateena-akropolis-museo',
-    'Iliou Melathron': 'ateena-iliou-melathron',
-    Maratonhuijaus: 'ateena-maratonhuijaus',
-    'Elginin marmorit': 'ateena-elginin-marmorit',
-    'Diogeneen astia': 'ateena-diogeneen-astia',
-    'Niken temppeli': 'ateena-niken-temppeli',
+    'Akropolis-museo': 'assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+    'Iliou Melathron': 'assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
+    Maratonhuijaus: 'assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+    'Elginin marmorit': 'assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+    'Diogeneen astia': 'assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+    'Niken temppeli': 'assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
+    'Louis 1896': 'assets/kartat/miniatyyrit/ateena-louis-1896.webp',
   },
   sofia: {
     'Mineraalikylpylä': 'assets/kartat/miniatyyrit/sofia-mineraalikylpyla.webp',
@@ -489,6 +590,12 @@ export const MINIATYYRIT = {
     'Casa de Fieras': 'madrid-casa-de-fieras',
     'Filipin patsas': 'madrid-filipin-patsas',
     Baldomera: 'madrid-baldomera',
+    Tapaskierros: 'assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
+    'Goyan kansankuvat': 'assets/kartat/miniatyyrit/madrid-goyan-kansankuvat.webp',
+    Chotis: 'assets/kartat/miniatyyrit/madrid-chotis.webp',
+    'Kaksi joukkuetta': 'assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
+    'Palamaton linna': 'assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
+    'Gran Vía': 'assets/kartat/miniatyyrit/madrid-gran-v-a.webp',
   },
   lissabon: {
     'Glórian köysirata': 'assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
@@ -640,6 +747,7 @@ export const MINIATYYRIT = {
     // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
     // tarkistettu 200.
     'Mendelejev 1869': 'pietari-mendelejev-1869',
+    'Jänissaari 1703': 'assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
   },
   kiova: {
     'Kontraktovan aukio': 'assets/kartat/miniatyyrit/kiova-kontraktovan-aukio.webp',
@@ -825,15 +933,28 @@ export const MINIATYYRIT = {
     'Sadu House': 'kuwait-sadu-house',
   },
   nikosia: {
-    // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
-    // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
-    // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Selimiyen moskeija': 'nikosia-selimiyen-moskeija',
-    'Büyük Han': 'nikosia-buyuk-han',
-    'Faneromenin kirkko': 'nikosia-faneromenin-kirkko',
-    'Omeryen hamam': 'nikosia-omeryen-hamam',
-    'Kyproksen museo': 'nikosia-kyproksen-museo',
-    'Leventis-museo': 'nikosia-leventis-museo',
+    'Selimiyen moskeija': 'assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
+    'Büyük Han': 'assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
+    'Faneromenin kirkko': 'assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
+    'Omeryen hamam': 'assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
+    'Kyproksen museo': 'assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
+    'Leventis-museo': 'assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
+  },
+  luxemburg: {
+    'Adolphe-silta': 'assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
+    'Guillaume II:n aukio': 'assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
+    'Notre-Damen katedraali': 'assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
+    'Suurherttuallinen palatsi': 'assets/kartat/miniatyyrit/luxemburg-suurherttuallinen-palatsi.webp',
+    'Chemin de la Corniche': 'assets/kartat/miniatyyrit/luxemburg-chemin-de-la-corniche.webp',
+    'Bockin kasematit': 'assets/kartat/miniatyyrit/luxemburg-bockin-kasematit.webp',
+  },
+  valletta: {
+    'Auberge de Castille': 'assets/kartat/miniatyyrit/valletta-auberge-de-castille.webp',
+    'Pyhän Johanneksen ko-katedraali': 'assets/kartat/miniatyyrit/valletta-pyhan-johanneksen-ko-katedraali.webp',
+    'Suurmestarin palatsi': 'assets/kartat/miniatyyrit/valletta-suurmestarin-palatsi.webp',
+    'Yläbarrakan puutarhat': 'assets/kartat/miniatyyrit/valletta-ylabarrakka-puutarhat.webp',
+    'Piirityskello-muistomerkki': 'assets/kartat/miniatyyrit/valletta-piirityskello-muistomerkki.webp',
+    'Pyhän Elmon linnake': 'assets/kartat/miniatyyrit/valletta-pyhan-elmon-linnake.webp',
   },
   doha: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1989';
+const CACHE = 'matkakirja-2026-09-21.2157';
 const SHELL = [
   './',
   './index.html',
@@ -107,7 +107,9 @@ const SHELL = [
   './js/packs/elaintakyt.js',
   './js/fokusnosto-symbolit.js',
   './js/karttavalot.js',
+  './js/karttaselite-levy.js',
   './js/karttaselite.js',
+  './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
   './js/fokusnosto.js',
@@ -133,6 +135,7 @@ const SHELL = [
   './js/livia-svg-paa.js',
   './js/livia-astronautti.js',
   './js/livia-svg.js',
+  './js/livia-uudet-versiot.js',
   './assets/livia/livia-astronauttikypara-2x.png',
   './js/minipulu.js',
   './js/livia-eleet.js',
@@ -153,6 +156,9 @@ const SHELL = [
   './js/pollopoiminnat.js',
   './js/game.js',
   './js/tietajatasot.js',
+  './js/pulmageneraattorit.js',
+  './js/tekstipohja.js',
+  './js/ui-tekstit.js',
   './js/tietajagalleria.js',
   './js/minipopup.js',
   './js/ai.js',
@@ -227,12 +233,15 @@ const SHELL = [
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
   './js/pallolaatat.js',
+  './js/laattakerma-shader.js',
   './js/reliefipyramidi.js',
   // Vektoriviivat laattojen päälle (erä V1, 6.9.2026, Raamattu
   // VEKTORIT SAMALLA): pallolauta tuo kerroksen, joten se kulkee samaa
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa
   // (immutable, versio polussa) eikä palvelutyöntekijän korissa.
   './js/pallovektorit.js',
+  './js/laattaesilataus.js',
+  './js/pallomaakunnat.js',
   // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
@@ -244,7 +253,13 @@ const SHELL = [
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
   './js/pallolauta/kameraloki.js',
+  './js/pallolauta/lepopiirto.js',
+  './js/pallolauta/profiilinaytto.js',
   './js/kartta-liike.js',
+  './js/piirtokoe-asetus.js',
+  './js/vedon-seuranta.js',
+  './js/tarkkuus-asetus.js',
+  './js/kehittaja-pikatie.js',
   './js/pallolauta/linssikartta.js',
   './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
@@ -272,6 +287,12 @@ const SHELL = [
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
   './js/pallolauta/sovittelu.js',
+  './js/pallolauta/sulavuusmittari.js',
+  './js/pallolauta/nimiorasterit.js',
+  './js/pallolauta/glnimiot-sovitin.js',
+  './js/pallolauta/kerrokset.js',
+  './js/pallolauta/kehysprofiili.js',
+  './js/pallolauta/kallistus.js',
   './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
@@ -341,7 +362,13 @@ const SHELL = [
   './js/aikajana-virrat-laskenta.js',
   // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
   './js/aikajana-virrat-tyo.js',
+  // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
+  './js/pallovektorit-naulaus.js',
+  './js/pallovektorit-tyo.js',
+  // GL-nimiökerros (runko, 21.9.2026; ?glnimiot=1).
+  './js/pallonimiot-gl.js',
   './js/linssit/rekisteri.js',
+  './js/linssit/aarteet.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',
@@ -430,6 +457,7 @@ const SHELL = [
   './js/packs/nostoankkurit-dnk.js',
   './js/packs/nostoankkurit-hun.js',
   './js/packs/nostoankkurit-swe.js',
+  './js/packs/monumentit-eurooppa.js',
   './js/packs/hahmotelma-fra.js',
   './js/packs/hahmotelma-bel.js',
   './js/packs/hahmotelma-deu.js',
@@ -466,6 +494,8 @@ const SHELL = [
   './js/packs/hahmotelma-bih.js',
   './js/packs/hahmotelma-ukr.js',
   './js/packs/maakartat.js',
+  './js/packs/maakunnat-luonnehdinnat.js',
+  './js/packs/maakunnat-pulu.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
@@ -591,6 +621,11 @@ const SHELL = [
   './js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   './js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  './js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  './js/packs/fokusvirta-valletta.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -807,6 +842,7 @@ const SHELL = [
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',
   './assets/varusteet/varuste-vertailu.jpg',
+  './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
   // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
@@ -1258,6 +1294,128 @@ const SHELL = [
   './assets/kartat/miniatyyrit/vilna-uzupis.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
+  './assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
+  './assets/kartat/miniatyyrit/amsterdam-kapein-talo.webp',
+  './assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
+  './assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
+  './assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+  './assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+  './assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+  './assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+  './assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
+  './assets/kartat/miniatyyrit/ateena-louis-1896.webp',
+  './assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+  './assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
+  './assets/kartat/miniatyyrit/bergen-fredriksbergin-linnake.webp',
+  './assets/kartat/miniatyyrit/bergen-kaupunginkirjasto.webp',
+  './assets/kartat/miniatyyrit/bergen-korskirken.webp',
+  './assets/kartat/miniatyyrit/bergen-munkelivin-luostari.webp',
+  './assets/kartat/miniatyyrit/bergen-nykirken.webp',
+  './assets/kartat/miniatyyrit/bergen-permanenten.webp',
+  './assets/kartat/miniatyyrit/bergen-pyhan-yrjanan-kirkko.webp',
+  './assets/kartat/miniatyyrit/bergen-yliopistomuseo.webp',
+  './assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
+  './assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
+  './assets/kartat/miniatyyrit/berliini-maailmankello.webp',
+  './assets/kartat/miniatyyrit/berliini-marlene-dietrich.webp',
+  './assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
+  './assets/kartat/miniatyyrit/berliini-paavin-kosto.webp',
+  './assets/kartat/miniatyyrit/bryssel-brysselin-porssi.webp',
+  './assets/kartat/miniatyyrit/bryssel-galeries-royales-saint-hubert.webp',
+  './assets/kartat/miniatyyrit/bryssel-grand-place.webp',
+  './assets/kartat/miniatyyrit/bryssel-kuninkaanpalatsi.webp',
+  './assets/kartat/miniatyyrit/bryssel-manneken-pis.webp',
+  './assets/kartat/miniatyyrit/bryssel-mont-des-arts.webp',
+  './assets/kartat/miniatyyrit/bryssel-oikeuspalatsi.webp',
+  './assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
+  './assets/kartat/miniatyyrit/istanbul-konstantinopoli-1453.webp',
+  './assets/kartat/miniatyyrit/kosice-hlavn-katu.webp',
+  './assets/kartat/miniatyyrit/kosice-immaculata.webp',
+  './assets/kartat/miniatyyrit/kosice-jakabin-palatsi.webp',
+  './assets/kartat/miniatyyrit/kosice-miklu-in-vankila.webp',
+  './assets/kartat/miniatyyrit/kosice-pyhan-elisabetin-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/kosice-pyovelin-bastioni.webp',
+  './assets/kartat/miniatyyrit/kosice-urbanin-torni.webp',
+  './assets/kartat/miniatyyrit/kosice-valtionteatteri.webp',
+  './assets/kartat/miniatyyrit/ljubljana-keskustori.webp',
+  './assets/kartat/miniatyyrit/ljubljana-kri-anke.webp',
+  './assets/kartat/miniatyyrit/ljubljana-ljubljanan-linna.webp',
+  './assets/kartat/miniatyyrit/ljubljana-ljubljanan-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/ljubljana-lohikaarmesilta.webp',
+  './assets/kartat/miniatyyrit/ljubljana-pre-ernin-aukio.webp',
+  './assets/kartat/miniatyyrit/ljubljana-tivoli-puisto.webp',
+  './assets/kartat/miniatyyrit/ljubljana-tromostovje.webp',
+  './assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
+  './assets/kartat/miniatyyrit/luxemburg-bockin-kasematit.webp',
+  './assets/kartat/miniatyyrit/luxemburg-chemin-de-la-corniche.webp',
+  './assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
+  './assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
+  './assets/kartat/miniatyyrit/luxemburg-suurherttuallinen-palatsi.webp',
+  './assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp',
+  './assets/kartat/miniatyyrit/lontoo-canaletto-lontoossa.webp',
+  './assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp',
+  './assets/kartat/miniatyyrit/lontoo-exchange-alley.webp',
+  './assets/kartat/miniatyyrit/lontoo-faraday-1831.webp',
+  './assets/kartat/miniatyyrit/lontoo-fleming-1928.webp',
+  './assets/kartat/miniatyyrit/lontoo-globe-1599.webp',
+  './assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp',
+  './assets/kartat/miniatyyrit/lontoo-liukumakiveistos.webp',
+  './assets/kartat/miniatyyrit/lontoo-metron-hoyryveturi.webp',
+  './assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
+  './assets/kartat/miniatyyrit/lontoo-palo-1666.webp',
+  './assets/kartat/miniatyyrit/lontoo-tunneli-1827.webp',
+  './assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
+  './assets/kartat/miniatyyrit/madrid-chotis.webp',
+  './assets/kartat/miniatyyrit/madrid-goyan-kansankuvat.webp',
+  './assets/kartat/miniatyyrit/madrid-gran-v-a.webp',
+  './assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
+  './assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
+  './assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
+  './assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
+  './assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
+  './assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
+  './assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
+  './assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
+  './assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
+  './assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
+  './assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
+  './assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
+  './assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+  './assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
+  './assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
+  './assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
+  './assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp',
+  './assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
+  './assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+  './assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
+  './assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
+  './assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
+  './assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
+  './assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+  './assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+  './assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
+  './assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
+  './assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',
+  './assets/kartat/miniatyyrit/rooma-areenan-kellari.webp',
+  './assets/kartat/miniatyyrit/rooma-kolikko-olan-yli.webp',
+  './assets/kartat/miniatyyrit/rooma-nasone.webp',
+  './assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
+  './assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
+  './assets/kartat/miniatyyrit/valletta-auberge-de-castille.webp',
+  './assets/kartat/miniatyyrit/valletta-piirityskello-muistomerkki.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-elmon-linnake.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-johanneksen-ko-katedraali.webp',
+  './assets/kartat/miniatyyrit/valletta-suurmestarin-palatsi.webp',
+  './assets/kartat/miniatyyrit/valletta-ylabarrakka-puutarhat.webp',
+  './assets/kartat/miniatyyrit/wien-figaro-1786.webp',
+  './assets/kartat/miniatyyrit/wien-lipizzanit.webp',
+  './assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
+  './assets/kartat/miniatyyrit/wien-taikahuilu.webp',
+  './assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
+  './assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
+  './assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
   // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
   // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä
   // js/packs/fokuskohteet-*.js). Nämä ovat pelin kohokohtia, ja monella
@@ -1556,12 +1714,16 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/firenze-varikartta.png',
+  './assets/kartat/luxemburg-keskusta.png',
+  './assets/kartat/luxemburg-varikartta.png',
   './assets/kartat/bryssel-keskusta.png',
   './assets/kartat/bryssel-varikartta.png',
   './assets/kartat/ljubljana-keskusta.png',
   './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/kosice-keskusta.png',
   './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/valletta-keskusta.png',
+  './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',
@@ -1936,19 +2098,35 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-21-pohja-20260921a';
+const LAATTAKANSIO = '2026-09-23a-pohja-20260923a';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-21-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-23a-pohja';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
 const LAATTASIIVOUS = 200;
-/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä). */
-const LAATTAESILATAUKSEN_LEVEYS = 6;
+/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä; 6 → 4 22.9.2026, omistaja: pieni rinnakkaisuus levossa). */
+const LAATTAESILATAUKSEN_LEVEYS = 4;
 
 /** Onko osoite pallon laatta tai sen luettelo (peili tai paikallinen peili)? */
 const PALLOLAATTA = (osoite) => osoite.pathname.includes(LAATTAPOLKU);
+/*
+ * PYRAMIDIN LAATAT SAMAAN KORIIN (esilataus levossa, 22.9.2026;
+ * js/laattaesilataus.js). Laattakerroksen (js/pallolaatat.js) laatat
+ * asuvat polussa julisteet/pyramidi/<versio>/… ja ne haetaan
+ * fetch()-kutsulla, joka ei ole `destination: image` — ne eivät siis
+ * osuneet mihinkään koriin, vaan vain selaimen HTTP-välimuistiin. Nyt
+ * ne palvellaan kuten pallon laatat (välimuisti ensin, talletus
+ * ensimmäisellä haulla), ja lepoaikainen esilataus voi tuoda ne koriin
+ * ennen zoomia. Luettelot (pyramidi.json, .json) menevät verkkoon
+ * kuten ennen (js/laattapyramidi.js revalidoi ne itse). Versiot eivät
+ * ole täällä kaksoiskappaleina: pyramidin versio vaihtuu ämpärin
+ * luettelossa ilman sw.js-muutosta, joten vanhat versiot vanhenevat
+ * FIFO-katon (LAATTAKATTO) kautta eikä siivoaVanhatLaatat koske niihin.
+ */
+const PYRAMIDIPOLKU = '/julisteet/pyramidi/';
+const PYRAMIDILAATTA = (osoite) => osoite.pathname.includes(PYRAMIDIPOLKU) && !osoite.pathname.endsWith('.json');
 
 /*
  * Laattojen määrä muistissa, jotta keys() ei aja jokaisella laatalla —
@@ -2057,7 +2235,8 @@ async function esilataaLaatat(osoitteet, portti) {
   const alku = Date.now();
   const kori = await caches.open(LAATTACACHE);
   const jono = (Array.isArray(osoitteet) ? osoitteet : [])
-    .filter((u) => typeof u === 'string' && LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)))
+    .filter((u) => typeof u === 'string'
+      && (LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)) || u.includes(PYRAMIDIPOLKU)))
     .slice(0, LAATTAKATTO);
   let seuraava = 0;
   let uusia = 0;
@@ -2094,7 +2273,11 @@ async function siivoaVanhatLaatat() {
   if (!kori) return;
   const nykyiset = LAATTAKANSIOT.map((k) => `${LAATTAPOLKU}${k}/`);
   const avaimet = await kori.keys();
-  const vanhat = avaimet.filter((p) => !nykyiset.some((n) => new URL(p.url).pathname.includes(n)));
+  // Pyramidin laatat eivät ole kansiosiivouksen kohde (ks. PYRAMIDILAATTA).
+  const vanhat = avaimet.filter((p) => {
+    const polku = new URL(p.url).pathname;
+    return !polku.includes(PYRAMIDIPOLKU) && !nykyiset.some((n) => polku.includes(n));
+  });
   await Promise.all(vanhat.map((p) => kori.delete(p).catch(() => {})));
   laattojaKorissa = avaimet.length - vanhat.length;
 }
@@ -2219,6 +2402,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(osoite.pathname.endsWith('/laatat.json')
       ? laattaluettelo(event)
       : laattaPeilista(event.request));
+    return;
+  }
+  if (PYRAMIDILAATTA(osoite)) {
+    event.respondWith(laattaPeilista(event.request));
     return;
   }
   // Ulkoisista kutsuista välimuistitetaan vain wikikuvat (kuva kerran

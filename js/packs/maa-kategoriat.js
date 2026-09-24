@@ -15656,6 +15656,139 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Islannin historia on täynnä ratkaisuja jotka tehtiin nopeasti '
+        + 'ja pysyivät: uskonto vaihtui yhdessä yössä, piispa hävisi hengellään, '
+        + 'kuningas toi perustuslain isoisän matkan jälkimainingeissa, ja '
+        + 'pieni saari voitti kaksi suurvaltaa ilman yhtään laukausta.',
+      nostot: [
+        {
+          otsikko: 'Yksi mies ratkaisi koko maan uskonnon yhdessä yössä',
+          aika: '1000',
+          tiedosto: 'Þingvallakirkja 01.jpg',
+          teksti: 'Vuonna 1000 Alþingillä uhkasi puhjeta sisällissota, kun '
+            + 'kristityt ja vanhauskoiset eivät suostuneet enää elämään '
+            + 'samojen lakien alla. Ratkaisu jätettiin lainlausuja Þorgeir '
+            + 'Ljósvetningagoðille, joka oli itse vanhauskoinen mutta '
+            + 'tunnettu puolueettomuudestaan. Hän veti turkin päänsä yli ja '
+            + 'makasi hiljaa vuorokauden, ja seuraavana päivänä hän julisti '
+            + 'koko maan kristityksi — mutta kompromississa sai yhä uhrata '
+            + 'vanhoille jumalille kotona salaa, syödä hevosenlihaa ja '
+            + 'jättää vastasyntyneen lapsen heitteille, kuten ennenkin. '
+            + 'Verta ei vuodatettu kertaakaan.',
+          lyhyt: 'Alþingi julisti Islannin kristityksi vuonna 1000 kompromississa, joka esti sisällissodan.',
+          selite: 'Þingvallakirkja seisoo samalla tasangolla, jossa Alþingi '
+            + 'kokoontui satoja vuosia. Saagojen mukaan paikalla oli kirkko '
+            + 'jo vuonna 1017, ja nykyinen rakennus vihittiin 1859.',
+          lahde: 'Syrio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piispa joka taisteli uskontoaan vastaan ja hävisi',
+          aika: '1550',
+          tiedosto: 'Jón Arason.jpg',
+          teksti: 'Tanska määräsi Islannin luterilaiseksi 1500-luvulla, mutta '
+            + 'Hólarin piispa Jón Arason kieltäytyi luopumasta katolisesta '
+            + 'uskosta. Hän kokosi miehiä, otti vangiksi kilpailevan '
+            + 'luterilaisen piispan ja hallitsi hetken käytännössä koko '
+            + 'Pohjois-Islantia. Vuonna 1550 hänet ja hänen kaksi poikaansa '
+            + 'vangittiin taistelun jälkeen, ja marraskuun 7. päivänä heidät '
+            + 'mestattiin Skálholtissa ilman oikeudenkäyntiä — päätöksen '
+            + 'teki kuninkaan kirjuri, koska pelättiin, ettei rauhaa muuten '
+            + 'koskaan tulisi. Arasonin kuolema päätti katolisen kirkon '
+            + 'vallan Islannissa.',
+          lyhyt: 'Jón Arason oli Islannin viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa 1550.',
+          selite: 'Patsas kuvaa Jón Arasonia, Islannin viimeistä katolista '
+            + 'piispaa, joka mestattiin poikineen vuonna 1550. Patsaan on '
+            + 'veistänyt Guðmundur Einarsson, ja se seisoo Munkaþverássa.',
+          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jón Arason',
+        },
+        {
+          otsikko: 'Kuningas toi perustuslain vuosi isoisän jälkeen',
+          aika: '1874',
+          tiedosto: 'Islændernes adresse overrækkes Christian 9 på Thingvalla 7. august 1874.jpg',
+          teksti: 'Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja '
+            + 'juhlaan saapui ensimmäistä kertaa historiassa hallitseva '
+            + 'Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa '
+            + 'heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden '
+            + 'perustuslain, joka antoi Islannille oman lainsäädäntövallan '
+            + 'sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — '
+            + 'vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä '
+            + 'islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää '
+            + 'itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut '
+            + 'vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.',
+          lyhyt: 'Kristian IX toi Islannille perustuslain 2. elokuuta 1874, vuosi isoisän vierailun jälkeen.',
+          selite: 'Piirros kuvaa hetkeä, jolloin islantilaiset ojensivat '
+            + 'vetoomuksensa kuningas Kristian IX:lle Þingvellirillä 7. '
+            + 'elokuuta 1874, viisi päivää perustuslain allekirjoituksen '
+            + 'jälkeen.',
+          lahde: 'Carl Frederik Sørensen, Wikimedia Commons (public domain)',
+          wiki: 'Kristian IX',
+        },
+        {
+          otsikko: 'Sota jota käytiin verkonleikkureilla, ei ammuksilla',
+          aika: '1958–1976',
+          tiedosto: 'ICGV Óðinn in the Víkin museum.jpg',
+          teksti: 'Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 '
+            + 'aina kauemmas rannikolta, Britannian troolarit eivät '
+            + 'suostuneet väistymään — eikä Britannian laivasto liioin. '
+            + 'Kolmessa niin sanotussa turskasodassa Islannin '
+            + 'rannikkovartioston pienet alukset, kuten Óðinn, ajoivat '
+            + 'troolareiden perässä ja leikkasivat niiden verkkoketjut irti '
+            + 'erityisillä leikkureilla; brittilaivat puolestaan yrittivät '
+            + 'väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei '
+            + 'ammuttu vihaisessa mielessä, mutta aluksia vaurioitui '
+            + 'kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia '
+            + 'hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko '
+            + 'maailmaan.',
+          lyhyt: 'Islanti ja Britannia kiistelivät kalastusrajoista kolmessa turskasodassa 1958–1976.',
+          selite: 'Óðinn oli Islannin rannikkovartioston alus, joka '
+            + 'osallistui toiseen ja kolmanteen turskasotaan ja törmäsi '
+            + 'useita kertoja brittiläisiin sota-aluksiin. Se on nykyään '
+            + 'museolaiva Reykjavíkin Víkin-merimuseossa.',
+          lahde: 'Szilas, Wikimedia Commons (public domain)',
+          wiki: 'Turskasota',
+        },
+        {
+          otsikko: 'Kansa kolisteli pankit pois vallasta kattiloilla',
+          aika: '2008–2009',
+          tiedosto: 'Demonstration utanfor althingi i Reykjavik 2009-01-26.jpg',
+          teksti: 'Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat '
+            + 'muutamassa päivässä, ja koko maan talous romahti — suhteessa '
+            + 'väkilukuun suurin pankkikriisi minkään maan historiassa. '
+            + 'Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja '
+            + 'tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset '
+            + 'toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat '
+            + 'niitä yhdessä niin kovaa, että parlamentin istuntoa oli '
+            + 'vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus '
+            + 'erosi parin viikon sisällä, ja myöhemmin lähes '
+            + 'kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan '
+            + '— Islanti on ainoa maa, joka vangitsi näin monta oman '
+            + 'kriisinsä syyllistä.',
+          lyhyt: 'Kattilakumous pakotti Islannin hallituksen eroamaan pankkikriisin jälkeen tammikuussa 2009.',
+          selite: 'Mielenosoittajat kokoontuivat Alþingin edustalle '
+            + 'Reykjavíkissa tammikuussa 2009 hakkaamaan kattiloita ja '
+            + 'pannuja protestiksi pankkikriisin hoidolle.',
+          lahde: 'Johannes Jansson/norden.org, Wikimedia Commons (CC BY 2.5 DK)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Islannin rannikkovartiosto sai brittiläisten '
+          + 'troolareiden verkot irti turskasodissa?',
+        vaihtoehdot: [
+          'Ampumalla verkkoja rikki',
+          'Leikkaamalla verkkoketjut erityisillä leikkureilla',
+          'Pyytämällä kalastajia luopumaan vapaaehtoisesti',
+          'Sulkemalla satamat',
+        ],
+        oikea: 1,
+        fakta: 'Kolmessa turskasodassa ei ammuttu ainuttakaan laukausta '
+          + 'vihamielisessä mielessä, mutta verkkoja leikattiin irti '
+          + 'kymmeniä.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Islanti on pieni maa, joka on avannut verkkoon paljon: melkein '
@@ -18641,6 +18774,232 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ruhtinas heitti jumalansa jokeen, tsaari harppoi tuulisella '
+        + 'hiekkarannalla perustamassa uutta pääkaupunkia, ja isoisän '
+        + 'aikaan miljoonat ihmiset lakkasivat yhtäkkiä olemasta toisen '
+        + 'omaisuutta.',
+      nostot: [
+        {
+          otsikko: 'Ruhtinas heitti jumalankuvan jokeen',
+          aika: '988',
+          tiedosto: 'Lebedev baptism.jpg',
+          teksti: 'Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin '
+            + 'keisari Basileios II:lle sotilasavun kapinallista vastaan, jos '
+            + 'saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa '
+            + 'kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen '
+            + 'valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan '
+            + 'Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä '
+            + 'slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin '
+            + 'hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen '
+            + 'aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä '
+            + 'vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja '
+            + 'Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.',
+          lyhyt: 'Ruhtinas Vladimir Suuri kastatti Kiovan asukkaat Dneprjoessa vuonna 988.',
+          selite: 'Klavdi Lebedevin maalaus kuvaa Kiovan asukkaiden '
+            + 'joukkokastetta Dneprjoessa papiston johdolla vuonna 988.',
+          lahde: 'Klavdi Lebedev, Wikimedia Commons (PD)',
+          wiki: 'Kiovan rusien kaste',
+        },
+        {
+          otsikko: 'Kaksi armeijaa tuijotti toisiaan yli joen',
+          aika: '1480',
+          tiedosto: 'Facial Chronicle - b.16, p. 461 - Great standing on the Ugra.jpg',
+          teksti: 'Moskovan suuriruhtinas Iivana III lakkasi 1470-luvulla '
+            + 'maksamasta veroa Kultaisen ordan perijälle, Suurelle ordalle, '
+            + 'ja lokakuussa 1480 sen kaani Ahmat marssi joukkoineen Ugra-joen '
+            + 'toiselle rannalle Moskovan armeijaa vastapäätä. Kuukauden ajan '
+            + 'armeijat vain tuijottivat toisiaan joen yli: yksi kaanin '
+            + 'ylityskokeilu torjuttiin venäläisten tuliaseilla, mutta '
+            + 'suurempaa taistelua ei koskaan syttynyt. Ahmat odotti turhaan '
+            + 'liettualaista apujoukkoa, ja kun pakkanen ja muonapula '
+            + 'painoivat päälle, hän perääntyi 8. marraskuuta. Venäläinen '
+            + 'historiankirjoitus on sen jälkeen pitänyt Ugran seisontaa '
+            + 'kahden ja puolen vuosisadan mongolivallan päätepisteenä: enää '
+            + 'yksikään ruhtinas ei tarvinnut kaanin lupaa hallita.',
+          lyhyt: 'Ugra-joen seisonta lokakuussa 1480 päätti mongolivallan ilman suurta taistelua.',
+          selite: 'Venäläisen 1560-luvun aikakirjan kuvitus näyttää Moskovan '
+            + 'ja Suuren ordan armeijat vastakkain Ugra-joen kummallakin '
+            + 'rannalla.',
+          lahde: 'Tuntematon venäläinen kuvittaja (1560-luku), Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tsaari perusti pääkaupungin suolle',
+          aika: '1703',
+          tiedosto: 'Serov — Peter the Great.jpg',
+          teksti: 'Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri '
+            + 'valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 '
+            + 'perustaa linnoituksen pienelle Jänissaarelle suojaamaan '
+            + 'uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia '
+            + 'talonpoikia ja sotavankeja kaivamaan maata paljain käsin '
+            + 'suoperäisellä rannalla, ja moni heistä kuoli raskaissa '
+            + 'oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli '
+            + 'vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui '
+            + 'itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä '
+            + 'usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, '
+            + 'mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen '
+            + 'asuun ja etäisyyteen.',
+          lyhyt: 'Pietari Suuri perusti Pietari-Paavalin linnoituksen Nevan suistoon 27.5.1703.',
+          selite: 'Valentin Serovin maalauksessa Pietari Suuri harppoo '
+            + 'tuulisella rantatyömaalla seuralaistensa kanssa, taustalla '
+            + 'purjelaivoja.',
+          lahde: 'Valentin Serov, Wikimedia Commons (PD)',
+          wiki: 'Pietari-Paavalin linnoitus',
+        },
+        {
+          otsikko: '23 miljoonaa ihmistä lakkasi olemasta omaisuutta',
+          aika: '1861',
+          tiedosto: 'Reading of the Manifest (Liberation of peasants) - Kustodiev, 1907.jpg',
+          teksti: 'Tsaari Aleksanteri II allekirjoitti 3. maaliskuuta 1861 '
+            + 'manifestin, joka vapautti noin 23 miljoonaa maaorjaa eli '
+            + 'reilut kolmasosan koko valtakunnan väestöstä. Aleksanteri '
+            + 'perusteli uudistusta sanomalla, että on parempi lakkauttaa '
+            + 'maaorjuus ylhäältä käsin kuin odottaa hetkeä, jolloin se '
+            + 'alkaa purkautua alhaalta. Vapaus ei tullut ilmaiseksi: '
+            + 'entisten maaorjien piti maksaa maastaan lunastusmaksuja '
+            + 'valtiolle lähes viisikymmentä vuotta, ja moni jäi silti '
+            + 'entistä isäntäänsä köyhemmäksi. Isoisän matkapäiväkirja on '
+            + 'kirjoitettu vain kaksitoista vuotta uudistuksen jälkeen, '
+            + 'jolloin sen seuraukset näkyivät venäläisillä maaseuduilla '
+            + 'yhä kaikkialla.',
+          lyhyt: 'Aleksanteri II vapautti maaorjat manifestilla 3.3.1861.',
+          selite: 'Boris Kustodijevin maalauksessa kartanon väki kokoontuu '
+            + 'kuulemaan vapautusmanifestin lukemista pakkasaamuna.',
+          lahde: 'Boris Kustodijev, Wikimedia Commons (PD)',
+          wiki: 'Maaorjuus Venäjällä',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi kaani Ahmat lopulta perääntyi Ugra-joelta lokakuussa '
+          + '1480 ilman suurta taistelua?',
+        vaihtoehdot: [
+          'Moskovan armeija hyökkäsi yllättäen ja voitti',
+          'Odotettu liettualainen apujoukko ei koskaan tullut, ja pakkanen '
+            + 'sekä muonapula painoivat päälle',
+          'Kaani sai tiedon, että Moskova oli jo antautunut',
+          'Joki tulvi yli ja hukutti leirit',
+        ],
+        oikea: 1,
+        fakta: 'Ahmat odotti turhaan Liettuan kuninkaan apujoukkoja, ja kun '
+          + 'talvi ja muonapula lähestyivät, hän perääntyi 8. marraskuuta '
+          + '1480 taistelematta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kadulla myytiin tynnyristä hapanjuomaa, hienoin ravintola '
+        + 'kätki reseptinsä, kakku huijasi muka keisarinnaa, ja vanha '
+        + 'sananlasku lupaa maan, jossa joet virtaavat makeaa keittoa.',
+      nostot: [
+        {
+          otsikko: 'Juoma joka kulki tynnyrissä kadulla',
+          aika: '1800-luku',
+          tiedosto: 'Бочка кваса Белгород.jpg',
+          teksti: 'Kvassia eli hapatettua ruisleipäjuomaa on juotu '
+            + 'itäslaavilaisilla alueilla ainakin 900-luvulta asti: vanhin '
+            + 'kirjallinen maininta kertoo, että sitä jaettiin kansalle '
+            + 'ruhtinas Vladimirin kastejuhlissa vuonna 988. Juoma tehtiin '
+            + 'liottamalla kuivattua ruisleipää tai -jauhoa kuumassa '
+            + 'vedessä mallastaen, ja käyminen jätti siihen vain '
+            + 'puolesta prosentista pariin prosenttiin alkoholia — riittävän '
+            + 'vähän, että sitä pidettiin lasten ja aikuisten juomana. '
+            + '1800-luvulla kvassista tuli katukuvan vakioilmestys: sitä '
+            + 'myytiin väkijoukoille suoraan puu- tai metallitynnyreistä '
+            + 'kaupunkien toreilla, ja makuja oli kirjattu ylös yli sata '
+            + 'viisikymmentä erilaista.',
+          lyhyt: 'Kvassia on juotu 900-luvulta asti, ja 1800-luvulla sitä myytiin tynnyreistä kaduilla.',
+          selite: 'Perinteiseen tapaan koristeltu kvassitynnyri toimii yhä '
+            + 'katukioskina, josta juomaa myydään ohikulkijoille.',
+          lahde: 'Lobatšev Vladimir, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kvassi',
+        },
+        {
+          otsikko: 'Kokin resepti syntyi Moskovan hienoimmassa ravintolassa',
+          aika: '1860-luku',
+          tiedosto: 'Olivier Russian salad made to the Hermitage restaurant recipe.jpg',
+          teksti: 'Ranskalais-belgialainen kokki Lucien Olivier loi '
+            + '1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: '
+            + 'majoneesilla sidotun salaatin, jossa oli pyytä, rapujen '
+            + 'pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti '
+            + 'tarkan reseptin salassa eikä paljastanut sitä edes '
+            + 'keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen '
+            + 'vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen '
+            + 'jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: '
+            + 'pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä '
+            + 'keitettyjä kananmunia ja oliiveista suolakurkkua ja '
+            + 'herneitä. Tästä yksinkertaistetusta versiosta tuli '
+            + 'neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla '
+            + 'ei ollut täydellinen.',
+          lyhyt: 'Lucien Olivier loi salaatin Moskovan Hermitagessa 1860-luvulla; resepti julkaistiin 1894.',
+          selite: 'Nykyaikaan sovitettu versio Olivierin alkuperäisestä '
+            + 'reseptistä: liha, kananmuna, kurkku ja vihannekset '
+            + 'majoneesissa.',
+          lahde: 'HOBOPOCC, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Olivier-salaatti',
+        },
+        {
+          otsikko: 'Kakku jonka väitetään huijanneen keisarinnaa',
+          aika: '1900-luku',
+          tiedosto: 'Gâteau feuilleté russe au miel.jpg',
+          teksti: 'Tarinan mukaan nuori hovikondiittori keksi 1800-luvun '
+            + 'alussa ohuista kakkulevyistä ja hapankermatäytteestä '
+            + 'kakun miellyttääkseen keisari Aleksanteri I:n puolisoa '
+            + 'Elizaveta Aleksejevnaa, joka ei muka sietänyt hunajaa — '
+            + 'ja keisarinnan kerrotaan rakastuneen kakkuun tietämättä, '
+            + 'että se oli täynnä juuri sitä. Tarina on kaunis, mutta '
+            + 'mistään 1800-luvun keittokirjasta medovikia ei löydy: '
+            + 'kakku yleistyi todellisuudessa vasta neuvostoaikana. '
+            + 'Ohuet levyt paistetaan koviksi ja pinotaan päällekkäin '
+            + 'hunajaisen täytteen kanssa, minkä jälkeen kakun annetaan '
+            + 'seistä päiväkausia — täyte pehmentää levyt vasta '
+            + 'varastoinnin aikana, ja pinta koristellaan usein '
+            + 'murustetuilla leikkuutähteillä.',
+          lyhyt: 'Medovik-kakun keisarinnalegenda on kaunis tarina, mutta kakki yleistyi vasta neuvostoaikana.',
+          selite: 'Kotitekoinen medovik-kakku pöydällä; ohuet kakkulevyt ja '
+            + 'hunajainen täyte erottuvat leikkauspinnasta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maa jossa joet virtaavat makeaa keittoa',
+          aika: '1800-luku',
+          tiedosto: 'Kissel (16166850513).jpg',
+          teksti: 'Kisseli on hapatetusta tai tärkkelyksellä sakeutetusta '
+            + 'marjasta, hedelmästä tai viljasta keitetty jälkiruoka, jonka '
+            + 'nimi juontuu vanhasta slaavilaisesta hapan-sanasta. '
+            + 'Alkuperäiset kisselit tehtiin kaurasta tai rukiista ilman '
+            + 'perunatärkkelystä, ja makea marjaversio yleistyi vasta '
+            + '1800-luvulla, kun halpaa perunatärkkelystä alkoi olla '
+            + 'kaikkien saatavilla. Venäläisissä saduissa ihannemaata '
+            + 'kuvataan sanonnalla "maidonjoet, kisselirannat", ja '
+            + 'kaukaista sukulaista sanotaan leikillään "seitsemänneksi '
+            + 'vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä '
+            + 'näyttäytyy. Karpalosta keitetty kisseli on yksi '
+            + 'suosituimmista versioista, ja sen paksu, kiiltävä pinta '
+            + 'muistuttaa enemmän hyytelöä kuin juomaa.',
+          lyhyt: 'Kisseli-jälkiruoka sai makean marjamuotonsa 1800-luvulla halvan perunatärkkelyksen myötä.',
+          selite: 'Kiehuva karpalokisseli kattilassa; paksu, kiiltävä pinta '
+            + 'on tyypillinen tälle vanhalle jälkiruoalle.',
+          lahde: 'Dmitri Grigorjev, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Olivier-salaatin alkuperäisessä 1800-luvun reseptissä '
+          + 'oli tilalla nykyisin käytettyä kanaa tai keittomakkaraa?',
+        vaihtoehdot: [
+          'Pyytä eli metsäkanalintua',
+          'Naudanlihaa',
+          'Kalaa',
+          'Salaatti oli alun perin kokonaan lihaton',
+        ],
+        oikea: 0,
+        fakta: 'Lucien Olivierin alkuperäisessä reseptissä oli pyytä ja '
+          + 'rapujen pyrstöjä; vasta vallankumouksen jälkeen ne korvattiin '
+          + 'halvemmalla kanalla tai makkaralla.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Venäjän suuret museot ja kirjastot ovat vieneet kokoelmansa '
@@ -18924,6 +19283,233 @@ export const MAA_KATEGORIAT = {
         oikea: 2,
         fakta: 'Utjosov aloitti sirkusakrobaattina ja perusti vasta 1920-luvulla '
           + 'oman jazzorkesterinsa.',
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Viisi käännekohtaa, joissa kasakkahetmani valitsi liittolaisensa, '
+        + 'nuori tasavalta ehti elää neljä vuotta, ja valtio yritti vaientaa oman '
+        + 'nälänhätänsä.',
+      nostot: [
+        {
+          otsikko: 'Hetmani valitsi tsaarin liittolaisekseen',
+          aika: '1654',
+          tiedosto: '2019-07-21 Monument to Bohdan Khmelnytsky in Kyiv by Mikhail Mikeshin.jpg',
+          teksti: 'Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan '
+            + 'valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti '
+            + 'tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat '
+            + 'Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari '
+            + 'Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin '
+            + 'vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta '
+            + 'hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun '
+            + 'artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja '
+            + 'sen todellisesta luonteesta – liitosta vai alistumisesta – '
+            + 'kiistellään historioitsijoiden kesken yhä.',
+          lyhyt: 'Hetmani Bohdan Hmelnytskyi vannoi kasakoiden puolesta uskollisuutta Venäjän tsaarille 1654.',
+          selite: 'Hmelnytskyin ratsastajapatsas Kiovassa, taustalla Pyhän '
+            + 'Mikaelin luostarin kupolit. Patsas paljastettiin vuonna 1888.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bohdan H’melnytskyi',
+        },
+        {
+          otsikko: 'Nuorisoseurasta syntyi armeijan siemen',
+          aika: '1914',
+          tiedosto: 'Ukrainian Sich Riflemen Monument on Lychakiv Cemetery 04.jpg',
+          teksti: 'Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet '
+            + 'satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat '
+            + 'innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 '
+            + 'näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 '
+            + 'miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka '
+            + 'taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan '
+            + 'päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan '
+            + 'kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa '
+            + 'vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin '
+            + 'Lytšakivin hautausmaalle pystytettiin heille muistomerkki.',
+          lyhyt: 'Ukrainalaiset sitšiläisampujat oli 1914 perustettu galitsialainen vapaaehtoislegioona.',
+          selite: 'Lvivin Lytšakivin hautausmaan muistomerkki ukrainalaisille '
+            + 'sitšiläisampujille, siivekäs hahmo pylvään huipulla.',
+          lahde: 'Dmytro Petishkin, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Tasavalta eli neljä vuotta ennen kuin se hävisi',
+          aika: '1918',
+          tiedosto: 'Standard of the President of Ukraian People\'s Republic 1918.png',
+          teksti: 'Historioitsija Mychailo Hruševskyin johtama Keskusrada '
+            + 'julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin '
+            + 'itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun '
+            + 'Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman '
+            + 'lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja '
+            + 'kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin '
+            + 'joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 '
+            + 'mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi '
+            + 'maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa '
+            + 'itsenäistyneelle Ukrainalle.',
+          lyhyt: 'Ukrainan kansantasavalta julistautui itsenäiseksi 1918 mutta hävisi sodassa bolševikeille.',
+          selite: 'Ukrainan kansantasavallan presidentin lippu vuodelta 1918, '
+            + 'keskellä kultainen tryzub-vaakuna.',
+          lahde: 'Evostoryarchive, Wikimedia Commons (julkinen, Ukrainan '
+            + 'tekijänoikeuslain nojalla)',
+          wiki: 'Ukrainan kansantasavalta',
+        },
+        {
+          otsikko: 'Nälänhätä jota valtio yritti salata',
+          aika: '1932–1933',
+          tiedosto: 'Holodomor victims Memorial.jpg',
+          teksti: 'Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä '
+            + 'maatalouden pakkokollektivisointi ajoi ukrainalaiset '
+            + 'talonpojat luopumaan maastaan ja omaisuudestaan, ja '
+            + 'vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot '
+            + 'äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme '
+            + 'nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt '
+            + 'päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot '
+            + 'uhrien määrästä vaihtelevat muutamasta miljoonasta yli '
+            + 'kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, '
+            + 'mutta parikymmentä valtiota on tunnustanut tapahtuman '
+            + 'kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina '
+            + 'perestroikaan asti.',
+          lyhyt: 'Pakkokollektivisointi ja viljan pakko-otot aiheuttivat Ukrainassa joukkokuoleman 1932–1933.',
+          selite: 'Holodomorin uhrien muistomerkki Kiovassa, taustalla '
+            + 'Petšerskin luostarin kultaiset kupolit.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Holodomor',
+        },
+        {
+          otsikko: 'Yöllä kirjoitettu teksti päätti imperiumin',
+          aika: '1991',
+          tiedosto: 'Kiev-VerkhovnaRadaBuilding 03.jpg',
+          teksti: 'Kun Moskovassa yritettiin elokuun 19. päivä 1991 '
+            + 'vallankaappausta, Ukrainan korkein neuvosto kokoontui '
+            + 'hätäistuntoon ja hyväksyi kahden yön kiireisen valmistelun '
+            + 'jälkeen itsenäisyysjulistuksen 24. elokuuta äänin 321–2. '
+            + 'Kansanäänestys vahvisti päätöksen 1. joulukuuta yli 90 '
+            + 'prosentin kannatuksella, ja Neuvostoliitto lakkasi olemasta '
+            + 'joulukuun 26. päivänä. Samana päivänä kun julistus '
+            + 'hyväksyttiin, Kiovan kaupunginhallitus päätti nimetä lokakuun '
+            + 'vallankumouksen aukion uudelleen: siitä tuli Itsenäisyyden '
+            + 'aukio. Julistuksen teksti on kiinnitetty pronssilaattaan '
+            + 'parlamenttitalon seinään.',
+          lyhyt: 'Korkein neuvosto hyväksyi Ukrainan itsenäisyysjulistuksen 24. elokuuta 1991 äänin 321–2.',
+          selite: 'Ukrainan itsenäisyysjulistuksen teksti pronssilaatassa '
+            + 'Verhovna Radan eli parlamenttitalon seinällä Kiovassa.',
+          lahde: 'Vincent de Groot, Wikimedia Commons (CC BY-SA)',
+          wiki: 'Ukrainan itsenäisyysjulistus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä äänimäärällä Ukrainan korkein neuvosto hyväksyi itsenäisyysjulistuksen 24. elokuuta 1991?',
+        vaihtoehdot: [
+          '321 puolesta, 2 vastaan',
+          'Yksimielisesti, ilman vastaäänin',
+          '180–170',
+          'Julistus hylättiin ensimmäisellä äänestyskierroksella',
+        ],
+        oikea: 0,
+        fakta: 'Julistus hyväksyttiin ylivoimaisella enemmistöllä, 321 äänellä '
+          + 'puolesta ja vain 2 vastaan, 360 läsnäolijasta.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Kulttuuri',
+      johdanto: 'Kasvoton nukke, sokea laulaja ja paita joka paljasti '
+        + 'kotiseudun – Ukrainan kansanperinne piilotti viestejä, joita vain '
+        + 'tuntija osasi lukea.',
+      nostot: [
+        {
+          otsikko: 'Kuvio kertoi kotiseudun',
+          aika: '1800-luku',
+          tiedosto: 'Ivan Honchar museum vyshyvanka 12.JPG',
+          teksti: 'Kirjottu paita eli vyšyvanka on osa ukrainalaista '
+            + 'kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen '
+            + 'taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat '
+            + 'punainen, musta ja valkoinen, ja jokaisella seudulla oli omat '
+            + 'kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa '
+            + 'paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat '
+            + 'värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. '
+            + 'Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin '
+            + 'yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun '
+            + 'kolmantena torstaina vietettävä kansainvälinen juhla, jolloin '
+            + 'ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.',
+          lyhyt: 'Vyšyvanka-paidan kuviot kertoivat perinteisesti käyttäjänsä kotiseudun.',
+          selite: 'Käsin kirjottu naisten paita 1900-luvun alusta, Ivan '
+            + 'Hončarin museon kokoelmasta Kiovasta.',
+          lahde: 'Riwnodennyk, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Vyšyvanka',
+        },
+        {
+          otsikko: 'Sokea laulaja kantoi kansan muistia',
+          aika: '1441',
+          tiedosto: '02022 0881 Anonymus, Cossack the Bandura Player, 1832.jpg',
+          teksti: 'Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa '
+            + 'soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi '
+            + 'vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät '
+            + 'muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja '
+            + 'kertovia balladeja kasakoiden taisteluista ja sankareista – he '
+            + 'olivat kansan elävä historiankirja aikana, jolloin harva osasi '
+            + 'lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen '
+            + '1930-luvulla vangitsemalla ja karkottamalla soittajia '
+            + 'Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy '
+            + 'usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu '
+            + 'hevosensa vierellä bandura sylissään.',
+          lyhyt: 'Sokeat kobzarit kiersivät maata soittaen banduraa ja laulaen kasakoiden tarinoita.',
+          selite: '"Kasakka Mamai" -maalaus vuodelta 1832: kasakka istuu '
+            + 'banduransa kanssa hevosensa vieressä.',
+          lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bandura',
+        },
+        {
+          otsikko: 'Sotatanssista tuli kansallistanssi',
+          aika: '1500-luku',
+          tiedosto: 'Split jump in Hopak dance performed by the Kalyna Performing Art Ensemble.jpg',
+          teksti: 'Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta '
+            + '"hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden '
+            + 'juhlana: kun sotaretkeltä palattiin voittajina, miehet '
+            + 'tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat '
+            + 'taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet '
+            + 'tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja '
+            + 'ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo '
+            + 'Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä '
+            + 'näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt '
+            + 'esittävät nykyään ympäri maailmaa – myös maastamuuttajien '
+            + 'juhlissa Kanadassa ja Yhdysvalloissa.',
+          lyhyt: 'Hopak syntyi 1500-luvulla kasakoiden voitontanssina ja on nykyään Ukrainan kansallistanssi.',
+          selite: 'Hopak-tanssija ilmahypyssä Kalyna-tanssiryhmän esityksessä.',
+          lahde: 'Mykola Swarnyk, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hopak',
+        },
+        {
+          otsikko: 'Nukelle ei saanut ommella kasvoja',
+          aika: 'perinne',
+          tiedosto: 'Майстриня ляльок.jpg',
+          teksti: 'Motanka-nukke tehdään kietomalla kangassuikaleita ja '
+            + 'lankaa ilman neulaa tai muuta terävää – uskomuksen mukaan '
+            + 'pistäminen olisi "pistänyt kohtaloa". Nuken kasvot jätettiin '
+            + 'tyhjiksi tai niiden paikalle solmittiin risti, sillä kasvot '
+            + 'olisivat voineet houkutella nukkeen pahan hengen. Jokainen '
+            + 'nukke tehtiin tiettyä toivomusta varten – perheen suojaksi, '
+            + 'onnellista avioliittoa tai hyvää satoa varten – ja se '
+            + 'annettiin usein lapselle tai ripustettiin kotiin. Perinne on '
+            + 'yhteinen Ukrainalle, Puolalle ja Valko-Venäjälle, ja se on '
+            + '2000-luvulla noussut uudelleen suosioon käsityöläisten '
+            + 'keskuudessa.',
+          lyhyt: 'Motanka on kasvoton, kietomalla tehty suojelunukke, jota ei koskaan ommeltu neulalla.',
+          selite: 'Käsin tehty motanka-nukke perinteisessä asussa Ukrainan '
+            + 'kansanperinnejuhlassa.',
+          lahde: 'Vitali Popkov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi motanka-nuken kasvot jätettiin usein tyhjiksi tai niiden tilalle tehtiin risti?',
+        vaihtoehdot: [
+          'Kasvot olisivat voineet houkutella nukkeen pahan hengen',
+          'Kangasta ei riittänyt kasvoihin',
+          'Kasvojen tekeminen oli lailla kiellettyä',
+          'Perinne unohtui ajan myötä',
+        ],
+        oikea: 0,
+        fakta: 'Uskomuksen mukaan kasvoton nukke ei voinut houkutella pahaa '
+          + 'henkeä sisäänsä, siksi motankaan ei koskaan ommeltu kasvoja.',
       },
     },
     {
@@ -20694,6 +21280,335 @@ export const MAA_KATEGORIAT = {
         fakta: 'Bosnialaisen kahvin seuraksi kannetaan aina lasi vettä ja pala '
           + 'rahat-lokumia, ja sokeripala kastetaan kahviin ennen kuin se '
           + 'pannaan suuhun.',
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Bosnian historia on kirjoitettu keskiajan kuninkaiden '
+        + 'sinettiin, sähköraitiovaunun kiskoihin ja hylätyn '
+        + 'bobrata-radan betoniin: sama maa ehti olla kuningaskunta, '
+        + 'kokeilualue ja piiritetty kaupunki.',
+      nostot: [
+        {
+          otsikko: 'Kirje joka on vanhin säilynyt suomalaisittain luettava teksti',
+          aika: '1189',
+          tiedosto: 'Povelja Kulina bana.jpg',
+          teksti: 'Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, '
+            + 'kirjoitutti 29. elokuuta 1189 kauppasopimuksen '
+            + 'Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat '
+            + 'liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. '
+            + 'Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä '
+            + 'kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, '
+            + 'minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen '
+            + 'puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on '
+            + 'säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan '
+            + 'kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään '
+            + 'Bosnian ensimmäisenä rauhan ja vaurauden kautena.',
+          lyhyt: 'Ban Kulinin 1189 kirjoitutettu kauppasopimus Dubrovnikin kanssa on vanhin säilynyt eteläslaavilainen valtionasiakirja.',
+          selite: 'Jäljennös ban Kulinin vuoden 1189 kauppasopimuksesta, '
+            + 'vanhimmasta säilyneestä eteläslaavilaisen puhekielen '
+            + 'valtiollisesta asiakirjasta.',
+          lahde: 'Tuntematon kirjuri, Wikimedia Commons (PD)',
+          wiki: 'Ban Kulinin kirja',
+        },
+        {
+          otsikko: 'Kuningas kruunattiin, ja linna jäi pääkaupungiksi',
+          aika: '1377',
+          tiedosto: 'Bobovac Fortress - panoramio.jpg',
+          teksti: 'Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna '
+            + '1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni '
+            + 'suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen '
+            + 'linnoitus oli Bobovac keskisessä Bosniassa: sinne oli '
+            + 'koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, '
+            + 'eikä sinne johtanut kunnollista tietä turvallisuussyistä. '
+            + 'Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes '
+            + 'se kavallettiin vihollisille vuonna 1463 — samana vuonna '
+            + 'Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja '
+            + 'teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia '
+            + 'lakkasi olemasta.',
+          lyhyt: 'Bobovac oli keskiaikaisen Bosnian kuninkaiden päälinnoitus, kunnes se kavallettiin ottomaaneille 1463.',
+          selite: 'Bobovacin linnanrauniot keskisessä Bosniassa. Linna oli '
+            + 'Bosnian kuninkaiden päälinnoitus, kunnes se kavallettiin '
+            + 'vihollisille vuonna 1463.',
+          lahde: 'Branimir Mlakić, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bobovac',
+        },
+        {
+          otsikko: 'Raitiovaunu joka kulkee yhä samoja kiskoja',
+          aika: '1885',
+          tiedosto: 'Sarajevo Tram City-Hall.jpg',
+          teksti: 'Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi '
+            + 'nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu '
+            + 'aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan '
+            + 'Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. '
+            + 'Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen '
+            + 'vartta, ja samalla kaudella kaupunkiin rakennettiin '
+            + 'rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne '
+            + 'jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä '
+            + 'kulkee samoja katuja kuin 1800-luvun hevosvaunu.',
+          lyhyt: 'Sarajevo sai hevosvetoisen raitiovaunun 1885 Itävalta-Unkarin nykyaikaistaessa kaupunkia.',
+          selite: 'Historiallinen raitiovaunu Sarajevon kaupungintalon '
+            + 'edustalla Itävalta-Unkarin kaudella.',
+          lahde: 'J. Studnička & Co., Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Bobiradasta tuli tulilinja, sitten graffititaidetta',
+          aika: '1984',
+          tiedosto: 'Trebevic Track 1983 DDR.jpg',
+          teksti: 'Sarajevo isännöi vuoden 1984 talviolympialaisia — '
+            + 'ensimmäisiä, jotka pidettiin sosialistisessa maassa. '
+            + 'Trebević-vuorelle rakennettu bob- ja kelkkarata oli '
+            + 'kisojen näkyvimpiä uutuuksia, betonista valettu 1300 '
+            + 'metrin mittainen kouru vuoren rinteessä. Kymmenen vuotta '
+            + 'myöhemmin, Sarajevon piirityksen aikana 1992–1996, '
+            + 'Trebević oli rintamalinjalla, ja hylätty rata toimi '
+            + 'tykistöasemana kaupunkia kohti. Rata jäi käyttämättömäksi '
+            + 'ja rappeutui, mutta 2000-luvulla siitä tuli suosittu '
+            + 'graffititaiteen näyttämö ja nähtävyys, jonne moni kulkee '
+            + 'yhä kävellen tai polkupyörällä.',
+          lyhyt: 'Trebevićin bobrata rakennettiin 1984 olympialaisiin ja toimi myöhemmin tykistöasemana piirityksen aikana.',
+          selite: 'Trebević-vuoren bob- ja kelkkarata rakennettiin vuoden '
+            + '1984 talviolympialaisia varten.',
+          lahde: 'XVI talviolympialaisten järjestelytoimikunta, Wikimedia Commons (PD)',
+          wiki: 'Vuoden 1984 talviolympialaiset',
+        },
+        {
+          otsikko: 'Ruusu joka ei koskaan kuihdu',
+          aika: '1992–1996',
+          tiedosto: 'Sarajevo Rose (1).jpg',
+          teksti: 'Sarajevon piiritys kesti huhtikuusta 1992 helmikuuhun '
+            + '1996, lähes neljä vuotta — pisin nykyaikaisen sodankäynnin '
+            + 'historiassa tunnettu pääkaupungin piiritys. Kaupungin '
+            + 'jalkakäytyihin jäi kranaatinsirpaleiden repimiä '
+            + 'tähtikuvioita, joihin sodan jälkeen alettiin valaa '
+            + 'punaista hartsia surmansa saaneiden muistoksi. Näitä '
+            + 'muistomerkkejä kutsutaan Sarajevon ruusuiksi, ja niitä on '
+            + 'kaupungin kaduilla yhä kymmeniä. Piirityksen jälkeen '
+            + 'kaupunki rakennettiin uudelleen, mutta ruusut jätettiin '
+            + 'paikoilleen muistuttamaan.',
+          lyhyt: 'Sarajevon piiritys 1992–1996 oli pisin pääkaupungin piiritys nykyaikaisessa sodankäynnissä.',
+          selite: 'Kranaatin jättämä jälki jalkakäytävällä, täytetty '
+            + 'punaisella hartsilla — yksi Sarajevon ruusuista.',
+          lahde: 'Jennifer Boyer, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sarajevon piiritys',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä teki ban Kulinin vuoden 1189 asiakirjasta poikkeuksellisen?',
+        vaihtoehdot: [
+          'Se oli kirjoitettu kullalla',
+          'Se on vanhin säilynyt eteläslaavilaisen puhekielen valtionasiakirja',
+          'Se oli osoitettu paaville',
+          'Se allekirjoitettiin Bobovacin linnassa',
+        ],
+        oikea: 1,
+        fakta: 'Ban Kulinin 1189 kauppasopimus Dubrovnikin kanssa on kirjoitettu '
+          + 'tavallisella puhekielellä kirkkoslaavin sijaan, minkä vuoksi sitä '
+          + 'pidetään vanhimpana säilyneenä eteläslaavilaisena valtionasiakirjana.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bosnialainen ruokapöytä on täynnä Ottomaanien perintöä: '
+        + 'grillattua jauhelihaa somunissa, kierteistä täytettyä taikinaa '
+        + 'ja omena joka on täytetty pähkinöillä eikä muulla.',
+      nostot: [
+        {
+          otsikko: 'Kymmenen pientä makkaraa yhdellä leivällä',
+          aika: 'nykyaika',
+          tiedosto: 'Cevapi (7714963036).jpg',
+          teksti: 'Ćevapi on Bosnian tunnetuin ruokalaji: pieniä, sormen '
+            + 'mittaisia jauhelihapihvejä, yleensä naudan- ja lampaanlihasta, '
+            + 'jotka grillataan hiilellä ja tarjoillaan tuoreessa, pehmeässä '
+            + 'somun-leivässä. Annos tulee yleensä kymmenessä kappaleessa, '
+            + 'mukana raakaa sipulia ja usein kajmakia, paksua kermaista '
+            + 'juustoa. Sarajevolainen versio on pieni ja niitä syödään '
+            + 'monta, kun taas Banja Lukassa ćevapi ovat isompia ja niitä '
+            + 'tarjoillaan harvempi ranskalaisten kera. Ruoan juuret ovat '
+            + 'Ottomaanien ajan lihapullaperinteessä.',
+          lyhyt: 'Ćevapi on pienistä jauhelihapihveistä ja somun-leivästä koostuva Bosnian kansallisruoka.',
+          selite: 'Ćevapi tarjoiltuna somun-leivän kanssa raa\'an sipulin '
+            + 'kera.',
+          lahde: 'Kurt Bauschardt, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ćevapi',
+        },
+        {
+          otsikko: 'Kierre, jolla on eri nimi joka täytteelle',
+          aika: 'nykyaika',
+          tiedosto: 'Bosnian börek.jpg',
+          teksti: 'Ohuesta filotaikinasta kääritty, kierteiseksi taiteltu '
+            + 'piirakka tunnetaan Bosniassa yhteisnimellä pita, mutta '
+            + 'jokaisella täytteellä on oma nimensä: lihatäytteinen on '
+            + 'burek, juustotäytteinen sirnica, perunatäytteinen '
+            + 'krompiruša ja pinaattitäytteinen zeljanica. Sana burek tulee '
+            + 'ottomaanien turkin sanasta börek. Piirakka leivotaan usein '
+            + 'suurena pyöreänä vuokana ja leikataan viipaleiksi vasta '
+            + 'tarjolle pantaessa, ja sen kanssa juodaan perinteisesti '
+            + 'kiselo mlijekoa, hapanmaitojuomaa, joka tasapainottaa '
+            + 'rasvaisen taikinan.',
+          lyhyt: 'Bosnialainen filotaikinapiirakka tunnetaan yhteisnimellä pita, ja täyte antaa sille oman nimen.',
+          selite: 'Lihatäytteinen burek leivottu perinteiseen '
+            + 'kierrevuokaan.',
+          lahde: 'BosnianGourmet, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Burek',
+        },
+        {
+          otsikko: 'Omena joka täytetään pähkinöillä',
+          aika: 'Ottomaanien kausi',
+          tiedosto: 'Tufahija in Morića Han.JPG',
+          teksti: 'Tufahija on bosnialainen jälkiruoka, jonka juuret ovat '
+            + 'ottomaaniajan keittiössä: kokonainen omena kuoritaan ja '
+            + 'haudutetaan sokeriliemessä neilikan ja sitruunan kanssa, '
+            + 'kunnes se pehmenee mutta säilyttää muotonsa. Omenan '
+            + 'sisus kovetetaan ja täytetään jauhetuilla saksanpähkinöillä, '
+            + 'ja päälle lisätään kermavaahtoa. Nimi juontuu arabian ja '
+            + 'turkin omenaa tarkoittavasta sanasta tuffah. Jälkiruokaa '
+            + 'tarjoillaan yhä Sarajevon Baščaršijan vanhassa Morića '
+            + 'Han -karavaanimajatalossa, joka on 1600-luvulta.',
+          lyhyt: 'Tufahija on ottomaaniperäinen jälkiruoka: saksanpähkinöillä täytetty, sokeriliemessä haudutettu omena.',
+          selite: 'Tufahija tarjoiltuna Morića Hanin karavaanimajatalossa '
+            + 'Sarajevon Baščaršijalla.',
+          lahde: 'Antidiskriminator, Wikimedia Commons (CC0)',
+          wiki: 'Tufahija',
+        },
+        {
+          otsikko: 'Panimon lähde joka pelasti piiritetyn kaupungin',
+          aika: '1864',
+          tiedosto: 'Sarajevska pivara D.D..JPG',
+          teksti: 'Sarajevska pivara, Bosnian vanhin panimo, perustettiin '
+            + 'vuonna 1864 ja sen pseudomaurilaistyylinen tehdasrakennus on '
+            + '1800-luvun lopulta. Panimon alla on luonnollinen lähde, '
+            + 'josta saatiin puhdasta juomavettä jo ennen olutta. Sarajevon '
+            + 'piirityksen aikana 1992–1996 kaupungin vesi- ja '
+            + 'sähköverkot olivat pitkiä aikoja poikki, ja panimon lähteestä '
+            + 'tuli yksi harvoista turvallisista vedenhakupaikoista — '
+            + 'asukkaat kantoivat sieltä vettä tarkka-ampujien tulen alla. '
+            + 'Panimo toimii yhä samalla paikalla ja valmistaa Sarajevsko-olutta.',
+          lyhyt: 'Sarajevska pivaran lähde tarjosi puhdasta vettä piiritetylle Sarajevolle 1992–1996.',
+          selite: 'Sarajevska pivaran pseudomaurilaistyylinen tehdasrakennus '
+            + 'vuodelta 1864.',
+          lahde: 'Watalicom, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sarajevska pivara',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Sarajevon asukkaat hakivat vettä, kun kaupungin '
+          + 'vesijohtoverkko oli poikki piirityksen aikana?',
+        vaihtoehdot: [
+          'Naapurimaasta tuoduista tankkiautoista',
+          'Sarajevska pivaran panimon lähteestä',
+          'Miljacka-joesta suoraan',
+          'Kaivoista Trebević-vuorella',
+        ],
+        oikea: 1,
+        fakta: 'Sarajevska pivara-panimon alla oleva lähde tarjosi puhdasta '
+          + 'vettä, kun kaupungin vesijohtoverkko oli poikki, ja asukkaat '
+          + 'hakivat sieltä vettä tarkka-ampujien tulen alla.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Kulttuuri',
+      johdanto: 'Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää '
+        + 'Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se '
+        + 'syntyi uudelleen elokuvafestivaalina keskellä piiritystä.',
+      nostot: [
+        {
+          otsikko: 'Laji jonka nimi tarkoittaa kaihoa',
+          aika: 'Ottomaanien kausi – nykyaika',
+          tiedosto: 'Damir Imamović Sevdah Takht (BH,HR,XS) - WOMEX 15, 2015.10.24 (1).JPG',
+          teksti: 'Sevdalinka on bosnialainen kaupunkilainen kansanlaulun '
+            + 'laji, joka syntyi Ottomaanien vallan aikana ja yhdistää '
+            + 'ottomaani-, sefardijuutalaista ja slaavilaista '
+            + 'musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka '
+            + 'tulee arabian sydäntä ja mustaa sappea tarkoittavasta '
+            + 'käsitteestä ja viittaa syvään, usein onnettomaan '
+            + 'rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­'
+            + 'kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää '
+            + 'muun muassa muusikko Damir Imamović, tunnetun sevdalinka-'
+            + 'laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt '
+            + 'lajilla kansainvälisillä musiikkifestivaaleilla.',
+          lyhyt: 'Sevdalinka on kaihoisa bosnialainen kansanlaulun laji, jota nykyään elvyttää muun muassa Damir Imamović.',
+          selite: 'Damir Imamović esiintymässä WOMEX-musiikkimessuilla '
+            + '2015.',
+          lahde: 'Elekes Andor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sevdalinka',
+        },
+        {
+          otsikko: 'Moskeija joka toi mukanaan koko korttelin',
+          aika: '1531',
+          tiedosto: "Gazi Husrev-beg's Mosque 01.jpg",
+          teksti: 'Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna '
+            + '1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä '
+            + 'ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti '
+            + 'ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla '
+            + 'alueelle kirjaston, koraanikoulun, kellotornin ja katetun '
+            + 'basaarin — hänen lahjoituksensa loivat pohjan koko '
+            + 'Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen '
+            + 'hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. '
+            + 'Se selvisi 1990-luvun piirityksestä vaurioituneena mutta '
+            + 'pystyssä, ja se on sittemmin kunnostettu.',
+          lyhyt: 'Gazi Husrev-begin moskeija valmistui 1531 ja on yksi Balkanin merkittävimmistä ottomaaniarkkitehtuurin kohteista.',
+          selite: 'Gazi Husrev-begin moskeija Sarajevon Baščaršijalla, '
+            + 'valmistunut 1531.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gazi Husrev-begin moskeija',
+        },
+        {
+          otsikko: 'Kirjonta jota opetetaan vain äidiltä tyttärelle',
+          aika: 'perinne, Unesco-status 2014',
+          tiedosto: 'Zmijanje embroidery in BL store 2.jpg',
+          teksti: 'Zmijanjen alueella Banja Lukan lähellä kirjotaan '
+            + 'mustavalkoista, tarkan geometrista kirjontaa, jolla '
+            + 'koristellaan perinteisesti naisten kansallispukuja. '
+            + 'Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on '
+            + 'kulkenut sukupolvelta toiselle äideiltä tyttärille ilman '
+            + 'kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan '
+            + 'ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna '
+            + '2014, koska perinne oli säilynyt elävänä mutta harvojen '
+            + 'osaajien varassa. Nykyään kirjontaa opetetaan myös '
+            + 'kouluissa perinteen katoamisen estämiseksi.',
+          lyhyt: 'Zmijanjen mustavalkoinen geometrinen kirjonta pääsi Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
+          selite: 'Zmijanjen perinteistä mustavalkoista kirjontaa '
+            + 'myynnissä Banja Lukassa.',
+          lahde: 'Smooth_O, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Zmijanjen kirjonta',
+        },
+        {
+          otsikko: 'Festivaali joka avattiin kesken piirityksen',
+          aika: '1995',
+          tiedosto: 'Sarajevo Film Festival 01.JPG',
+          teksti: 'Sarajevon elokuvafestivaali perustettiin vuonna 1995, '
+            + 'kun kaupungin piiritys oli yhä käynnissä: ensimmäiset '
+            + 'näytökset pidettiin ilman vakituista sähköä, osittain '
+            + 'generaattoreiden ja kynttilöiden valossa, tietoisena '
+            + 'vastarintana sodalle. Festivaali jatkui piirityksen '
+            + 'päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja '
+            + 'vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu '
+            + 'vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä '
+            + 'elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, '
+            + 'miten kaupunki piti kulttuurin hengissä sodan keskellä.',
+          lyhyt: 'Sarajevon elokuvafestivaali perustettiin 1995 kesken piirityksen ja on nyt Kaakkois-Euroopan suurin.',
+          selite: 'Yleisöä Sarajevon elokuvafestivaalilla, joka '
+            + 'perustettiin 1995.',
+          lahde: 'MirkoS18, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sarajevon elokuvafestivaali',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä olosuhteissa Sarajevon elokuvafestivaali pidettiin ensimmäisen kerran 1995?',
+        vaihtoehdot: [
+          'Vasta sodan päätyttyä rauhan juhlana',
+          'Kesken kaupungin piirityksen, osin generaattorien valossa',
+          'Ulkomailla pakolaisleirillä',
+          'Vain televisiolähetyksenä ilman yleisöä',
+        ],
+        oikea: 1,
+        fakta: 'Sarajevon elokuvafestivaalin ensimmäiset näytökset pidettiin '
+          + '1995 kesken kaupungin piirityksen, osin generaattoreiden ja '
+          + 'kynttilöiden valossa, tietoisena vastarintana sodalle.',
       },
     },
     {

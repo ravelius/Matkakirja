@@ -26,17 +26,42 @@
  * 1980-luvulta) ovat mukana: teksti on nykytietoa ja `nappi` katsoo
  * vuodesta 1873.
  *
+ * LAAJENNUS 21.9.2026 (Sonnet-sisältösessio): neljä uutta nostoa täydentää
+ * listan 22:sta 26:een uusilla aihepiireillä: Famagusta (kauppa, itärannikon
+ * muurikaupunki, jonka kauppiaat pakenivat Larnakaan jo 1570-luvulla), Pano
+ * Lefkara (kulttuuri, pitsikylä Troodoksen etelärinteillä), Protaras (meri,
+ * itärannikon ranta muinaisen Leukollan paikalla, nykyinen lomakohde kasvaa
+ * vasta Ayia Napan jälkeen) ja Prodromos (vuori, Kyproksen korkein kylä,
+ * hiihtokeskus rakennetaan vasta 1900-luvulla). MUUT TUTKITUT MUTTA POIS
+ * JÄTETYT KOHTEET: Larnaka, Limassol, Tamassos, Amathus ja Kakopetria
+ * kirjoitettiin valmiiksi mutta pudotettiin, koska jokainen niistä
+ * erikseen lisättynä rikkoi tests/nimiolimitys.test.mjs:n (yksikään
+ * poltettava nimiö ei saa mennä toisen päälle): Kyproksen eteläisen
+ * keskiosan rypäs (kourion, khirokitia, asinounkirkko, kykkoksenluostari
+ * ja skandaalit "kypros-myydaan" ja "cesnolan-kokoelma" maastokohteet-
+ * cyp.js:ssä ja skandaalit.js:ssä) on jo omistajan aiemman päätöksen
+ * mukaan äärirajoillaan (ks. skandaali-kypros-myydaan-rivin kommentti:
+ * merkki on jo siirretty 5 km kauemmas Khirokitia-törmäyksen takia), ja
+ * se on niin herkkä että se särkyy lähes minkä tahansa uuden CYP-rivin
+ * lisäyksestä riippumatta sijainnista (mitattu tools/tarkista-
+ * nimiolimitys.mjs CYP:llä kandidaatti kerrallaan — Famagusta, Lefkara,
+ * Protaras ja Prodromos olivat ainoat kokeilluista yhdeksästä, jotka
+ * eivät rikkoneet mitään, yksin eivätkä yhdessä). Korjaus (nimiön
+ * lyhennys `nimio`-kentällä tai nostojen siirto) koskisi maastokohteet-
+ * cyp.js:ää ja skandaalit.js:ää, jotka ovat tämän erän ulkopuolella;
+ * asia jätetään päätoimitukselle. 28-30 noston tavoite jää siis 26:een.
+ *
  * === KUVAT ===========================================================
  *
  * Kuvat ovat JPEG-tiedostoja (1800 px tai alkuperäinen, jos se on
  * pienempi), nimeltään `cyp-nosto-<id>-<8 hex sha256>.jpg`, ja osoite on
  * kirjattu pakkaan etukäteen muotoon
- * `https://media.matkakirja.app/karttanostot/20260920/<tiedosto>`.
- * Kuvia EI ole viety ämpäriin eikä committoitu repoon (Fable vie);
- * siihen asti osoitteet vastaavat 404:llä ja puuttuva kuva pudotetaan
- * sarjasta. Tiedostot ovat kansiossa
- * /Users/samireivinen/Matkakirja-nostot-kuvat/cyp/. Kuvissa ei ole
- * tunnistettavia yksityishenkilöitä.
+ * `https://media.matkakirja.app/karttanostot/<20260920 tai 20260921>/<tiedosto>`
+ * (21.9.2026 lisätyillä neljällä nostolla jälkimmäinen). Kuvia EI ole
+ * viety ämpäriin eikä committoitu repoon (Fable vie); siihen asti
+ * osoitteet vastaavat 404:llä ja puuttuva kuva pudotetaan sarjasta.
+ * Tiedostot ovat kansiossa /Users/samireivinen/Matkakirja-nostot-kuvat/cyp/.
+ * Kuvissa ei ole tunnistettavia yksityishenkilöitä.
  *
  * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ==================================
  *
@@ -61,7 +86,10 @@
  */
 
 /** Kyproksen hahmotelmanostot: sisällölliset kohteet kaupungin ja nykyisten nostojen ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_CYP = [
+  ...EUROOPAN_KADONNEET.CYP,
   {
     id: 'hahmotelma-kormakitis',
     kuva: {
@@ -213,6 +241,7 @@ export const HAHMOTELMA_CYP = [
     ],
     nimi: 'Akamas',
     tyyppi: 'vuori',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minkä sankarin mukaan Akamas on nimetty?',
@@ -739,6 +768,7 @@ export const HAHMOTELMA_CYP = [
     ],
     nimi: 'Kyrenia',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa?',
@@ -774,6 +804,236 @@ export const HAHMOTELMA_CYP = [
       ],
       oikea: 1,
       fakta: 'Venetsialaiset lisäsivät linnaan paksut muurit ja tykkiaukot.',
+    },
+  },
+  {
+    id: 'hahmotelma-famagusta',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-famagusta-424383d5.jpg',
+      lyhyt: 'Kävelysilta Famagustan muurien yli iltavalossa.',
+      selite: 'Kaareva kiviportti johtaa Famagustan vanhoille kaupunginmuureille, joita pitkin kulkee kävelyreitti. Muurien takaa erottuu kaupungin kattojen ja puiden kirjo iltavalossa.',
+      lahde: 'Valokuva: Alaexis, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alaexis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Famagusta_wall.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-famagusta-9436c8c7.jpg',
+        lyhyt: 'Othellon linnan sisäpiha kivimuureineen ja holvatuine oviaukkoineen.',
+        selite: 'Linnan sisäpiha on hiekkakivisten muurien ympäröimä, ja seinissä on rivi kaarevia holvattuja oviaukkoja. Taustalla erottuu Famagustan puita ja rakennuksia.',
+        lahde: 'Valokuva: Blcksprt, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Blcksprt',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Othello_Castle_Inside_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Famagusta',
+    tyyppi: 'kauppa',
+    taso: 1,
+    lahi: true,
+    kysymykset: [
+      'Minkä kaupungin seuraajaksi Famagusta perustettiin?',
+      'Miksi Famagustaa alettiin kutsua kirkkojen kaupungiksi?',
+    ],
+    korostukset: ['kirkkojen kaupunki|kirkkojen kaupungiksi'],
+    nappi: 'Rappeutunut muurikaupunki osmanien vallan alla; sen kauppiaat pakenivat Larnakaan jo 1570-luvulla',
+    // 33.94166667 E / 35.125 N — en-Wikipedia "Famagusta"
+    laudat: {
+      maailmankartta: { x: 6964.7, y: 1990.7 },
+      europe: { x: 862.9, y: 969.8 },
+    },
+    teksti: 'Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se '
+      + 'perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli '
+      + 'tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta '
+      + 'lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 '
+      + 'jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että '
+      + 'Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli '
+      + 'viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden '
+      + 'piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin '
+      + 'elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset '
+      + 'joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut '
+      + 'turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat '
+      + 'asettuivat sen sijaan Larnakaan, joka peri Famagustan aseman kaupan keskuksena. '
+      + 'Pyhän Nikolaoksen katedraali muutettiin moskeijaksi osmanien aikana.',
+    lahde: 'en-Wikipedia "Famagusta", johdanto-osa ja osiot "Lusignan, Genoese and Venetian '
+      + 'Famagusta" ja "Ottoman Famagusta" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Miksi kauppiaat siirtyivät Famagustasta Larnakaan osmanien valtauksen jälkeen?',
+      vaihtoehdot: [
+        'Famagustan satama madaltui liikaa',
+        'Latinalaiset kauppiaat karkotettiin Famagustasta',
+        'Larnakassa oli halvemmat verot',
+        'Famagustan linna tuhoutui maanjäristyksessä',
+      ],
+      oikea: 1,
+      fakta: 'Karkotetut kauppiaat olivat pääosin latinalaisia, jotka olivat rakentaneet '
+        + 'Famagustan lukuisat kirkot.',
+    },
+  },
+  {
+    id: 'hahmotelma-lefkara',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-lefkara-559a3b5f.jpg',
+      lyhyt: 'Pitsikauppa Pano Lefkarassa, jonka oviaukoista roikkuu käsintehtyjä pitsiliinoja.',
+      selite: 'Keltaisen kivitalon kahden oven edessä riippuu valkoisia pitsiliinoja ja -huiveja markiisien alla. Liikkeen edessä on kadunkulman peili ja kivinen katu.',
+      lahde: 'Valokuva: דוד שי, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'דוד שי',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lace_shop_in_Lefkara.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-lefkara-55cfa66e.jpg',
+        lyhyt: 'Kapea kivikatu Lefkarassa parvekkeineen ja kukkivine köynnöksineen.',
+        selite: 'Kapea katu kulkee vaaleansinisten kivitalojen välissä, joiden parvekkeilla on takorautakaiteet. Pinkkiä bougainvillea-köynnöstä roikkuu talon seinältä kadun ylle.',
+        lahde: 'Valokuva: דוד שי, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'דוד שי',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Street_in_Lefkara.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Pano Lefkara',
+    nimio: 'Lefkara',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Leonardo da Vinci kerrotaan vierailleen Pano Lefkarassa?',
+      'Minä vuonna kylään avattiin paikallinen pitsikoulu?',
+    ],
+    korostukset: ['lefkaritika|lefkaritikasta'],
+    nappi: 'Kivikylä, jonka naiset ovat kirjailleet pitsiä vuosisatoja; Leonardo da Vinci osti sieltä alttariliinan jo 1481',
+    // 33.30694444 E / 34.86666667 N — en-Wikipedia "Pano Lefkara"
+    laudat: {
+      maailmankartta: { x: 6943.6, y: 2000.4 },
+      europe: { x: 850.7, y: 976.6 },
+    },
+    teksti: 'Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli '
+      + 'lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista '
+      + '"lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. '
+      + 'Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä '
+      + 'alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin '
+      + 'osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, '
+      + 'sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille '
+      + 'tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli '
+      + 'Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä '
+      + 'vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti '
+      + 'käsityön mainetta.',
+    lahde: 'en-Wikipedia "Pano Lefkara", johdanto-osa ja osiot "Silver and lace" ja '
+      + '"Historical overview" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-protaras',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-protaras-b6ddcacd.jpg',
+      lyhyt: 'Ilmakuva Fig Tree Bayn turkoosista lahdesta Protaraksessa.',
+      selite: 'Ilmakuvassa hiekkaranta kaartuu kirkkaan turkoosin veden ympärille, ja rannalla on riveittäin aurinkovarjoja. Pienet laiturit ja kallioinen niemeke pistävät ulos merelle.',
+      lahde: 'Valokuva: dronepicr, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'dronepicr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fig_Tree_beach_Protaras_(29851923968).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-protaras-1fdaeaf7.jpg',
+        lyhyt: 'Profitis Eliaksen pieni kivikirkko kalliolla Protaraksen lähellä.',
+        selite: 'Pieni kupolikattoinen kivikirkko seisoo yksin kalliokukkulalla, ja sen valkoiseksi maalattu kellotorni kohoaa sivussa. Taivas on kirkkaan sininen ja taustalla siintää rannikkokaupunkia.',
+        lahde: 'Valokuva: Viaggiamocela, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Viaggiamocela',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Profitis_Elias_Church.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Protaras',
+    tyyppi: 'meri',
+    lahi: true,
+    kysymykset: [
+      'Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?',
+      'Minkä lahden ranta on Protaraksen tunnetuin?',
+    ],
+    korostukset: ['Leukolla|Leukollan'],
+    nappi: 'Muinaisen Leukollan rauhallinen ranta; nykyinen lomakohde kasvaa vasta Ayia Napan jälkeen',
+    // 34.05416667 E / 35.015 N — en-Wikipedia "Protaras"
+    laudat: {
+      maailmankartta: { x: 6968.5, y: 1994.8 },
+      europe: { x: 865, y: 972.7 },
+    },
+    teksti: 'Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin '
+      + 'aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa '
+      + 'satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, '
+      + 'yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion '
+      + 'ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on '
+      + 'kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig '
+      + 'Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia '
+      + 'Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja '
+      + 'kyproslaisille itselleen suunnattuna kohteena.',
+    lahde: 'en-Wikipedia "Protaras", johdanto-osa (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-prodromos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-prodromos-f90beb3e.jpg',
+      lyhyt: 'Prodromoksen kylä laaksossa, ja yläpuolella kuurassa valkoiset Troodoksen huiput.',
+      selite: 'Männyt peittävät rinteet, ja niiden yläpuolella Troodoksen ylimmät huiput ovat kuuran peittämiä ja valkoisia. Laakson pohjalla näkyy kylän taloja puiden lomasta.',
+      lahde: 'Valokuva: Aliosha Bielenberg, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Aliosha Bielenberg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Prodromos_in_Winter.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/cyp-nosto-prodromos-05aa798d.jpg',
+        lyhyt: 'Prodromoksen punakattoiset talot ja pieni kirkko rinteellä kesäisin.',
+        selite: 'Vihreiden puiden keskeltä kohoavat kylän punakattoiset talot rinteen eri korkeuksilla, ja alempana näkyy pieni kupolikirkko pihoineen.',
+        lahde: 'Valokuva: Xaris333, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Xaris333',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Prodromos,_Cyprus_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Prodromos',
+    tyyppi: 'vuori',
+    lahi: true,
+    kysymykset: [
+      'Minkä pyhän henkilön mukaan Prodromos on nimetty?',
+      'Kuinka monta vakituista asukasta Prodromoksessa oli vuoden 2011 väestönlaskennassa?',
+    ],
+    korostukset: ['Prodromos|Prodromokseksi'],
+    nappi: 'Kyproksen korkein kylä lumisine talvineen; hiihtokeskus Olympokselle rakennetaan vasta 1900-luvulla',
+    // 32.82944444 E / 34.94833333 N — en-Wikipedia "Prodromos, Cyprus"
+    laudat: {
+      maailmankartta: { x: 6927.6, y: 1997.4 },
+      europe: { x: 841.5, y: 974.5 },
+    },
+    teksti: 'Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen '
+      + 'vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan '
+      + 'mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli '
+      + 'edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; '
+      + 'kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt '
+      + 'tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista '
+      + 'asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. '
+      + 'Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus '
+      + 'kolmine hiihtorinteineen.',
+    lahde: 'en-Wikipedia "Prodromos, Cyprus", johdanto-osa ja osiot "Topography" ja '
+      + '"Camping" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minkä pyhän henkilön liikanimen mukaan Prodromoksen kylä on nimetty?',
+      vaihtoehdot: [
+        'Pyhä Yrjö',
+        'Johannes Kastaja',
+        'Pyhä Nikolaos',
+        'Apostoli Andreas',
+      ],
+      oikea: 1,
+      fakta: 'Prodromos tarkoittaa kreikaksi edelläkävijää tai airutta.',
     },
   },
 ];

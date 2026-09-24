@@ -61,7 +61,10 @@
  */
 
 /** Espanjan hahmotelmanostot: sisällölliset kohteet kaupunkien ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_ESP = [
+  ...EUROOPAN_KADONNEET.ESP,
   {
     id: 'hahmotelma-picos-de-europa',
     kuva: {
@@ -1730,5 +1733,63 @@ export const HAHMOTELMA_ESP = [
       + '1940 italialaisten munkkien voimin.',
     lahde: 'en-Wikipedia "Poblet Abbey", johdanto-osa ja osiot "Significance" ja "Ruin and '
       + 'rebuilding" (tarkistettu 19.9.2026).',
+  },
+  /*
+   * MEDINA AZAHARA / MADINAT AL-ZAHRA — MATKAKIRJAN IHME, "RAPPEUTUNUT"
+   * (kadonnut: false), tilaus docs/raportit/havainnekuvat-codexille-
+   * eurooppa-20260921.md (kohde 12). Kuva on aito Commons-valokuva
+   * kaivetuista raunioista; `ihme.osoite` odottaa Codexin
+   * kulta-aikakuvaa (loistoaika-parikuva, ei vielä toimitettu — osoite
+   * 404:ttää siihen asti, sama käytäntö kuin Clunyssa).
+   */
+  {
+    id: 'hahmotelma-medina-azahara',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/esp-nosto-medina-azahara-3293d71b.jpg',
+      lyhyt: 'Medina Azaharan kaivettu Salón Rico -vastaanottosali julkisivuineen.',
+      selite: 'Kuvassa on Madinat al-Zahran kaivettujen raunioiden pääasiallinen '
+        + 'vastaanottosali, Salón Rico, pylväineen ja kaarineen aavikkomaisessa maastossa.',
+      lahde: 'Valokuva: Alvaro.vinuela.carnicero, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alvaro.vinuela.carnicero',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ciudad_de_medina_vista_general.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Medina Azahara',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuinka suuri osa alkuperäisestä kaupungista on kaivettu esiin?',
+      'Miksi kaupunki hylättiin?',
+    ],
+    korostukset: ['Abd ar-Rahman III|Abd ar-Rahman III', 'sisällissodassa|sisällissodassa'],
+    nappi: 'Kalifin uusi pääkaupunki, joka ryöstettiin sisällissodassa',
+    // 4.867 W / 37.888 N — en-Wikipedia "Madinat al-Zahra" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 5671.1, y: 1885.2 },
+      europe: { x: 117.8, y: 897.1 },
+    },
+    teksti: 'Umayyad-kalifi Abd ar-Rahman III perusti Madinat al-Zahran eli Medina Azaharan '
+      + 'vuosina 936–940 Córdoban länsipuolelle uudeksi hallintokeskukseksi, kun hän oli '
+      + 'julistautunut kalifiksi 929 ja halusi vallalleen symbolin Fatimidien ja Abbasidien '
+      + 'kalifikuntia vastaan. Linnoitettu palatsikaupunki käsitti juhlasaleja, suuren '
+      + 'moskeijan, hallintorakennuksia, aatelisasuntoja, puutarhoja, rahapajan ja kylpylöitä, '
+      + 'joita vesijohdot syöttivät. Kaupungin asema hallintokeskuksena päättyi Al-Hakam '
+      + 'II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin '
+      + 'raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on '
+      + 'kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen '
+      + 'maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".',
+    lahde: 'en-Wikipedia "Madinat al-Zahra" (uudelleenohjaus "Medina Azahara"), johdanto-osa '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-medina-azahara-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 950-luvulla Madinat al-Zahra oli häikäisevä palatsikaupunki, '
+        + 'jonka kultaisiin vastaanottosaleihin ja puutarheisiin saapui lähettiläitä '
+        + 'osoittamaan kunnioitustaan Córdoban kalifille.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Madinat al-Zahra", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Medina_Azahara',
+    },
   },
 ];

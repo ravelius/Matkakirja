@@ -3922,9 +3922,18 @@ peitä koko näkyvää aluetta, mutta silloinkin enintään `POHJAN_VALI_MS`
 **2. Kaksi tekstuuria kehystä kohti.** Mitattu `initTexture`: 3,0 ms
 (p50), 6,7 ms (max). Kaksi peräkkäin samassa kehyksessä on pahimmillaan
 13 ms 16,7 ms:n budjetista — se yksin pudottaa kehyksen.
-`LAATTAKERROS_TEKSTUUREJA_PER_KEHYS` on nyt **1**. Se on 60 Hz:llä yhä
-60 laattaa sekunnissa eli enemmän kuin `LAATTAKERROS_RINNAKKAIN` (6)
-ehtii ladata, joten jono ei kasva.
+`LAATTAKERROS_TEKSTUUREJA_PER_KEHYS` oli 7.9.2026 alkaen **1**. Se on
+60 Hz:llä yhä 60 laattaa sekunnissa eli enemmän kuin
+`LAATTAKERROS_RINNAKKAIN` (6) ehtii ladata, joten jono ei kasva.
+
+*Päivitys 22.9.2026 (Karttaseppä):* zoomissa yksi vienti kehyksessä oli
+karkean tason näkymisajan lattia — 32 uuden tason laattaa vie 32
+kehystä, ja verkko ei ole pullonkaula (z8-laatta 16–52 kt, TTFB 21–56
+ms). Katto on nyt **2** ja valmistelun budjetti 6 ms: karkean tason
+näkymisaika (tools/savukkeet/mittaa-zoomiennakko-meri.mjs, WebKit 390 ×
+844 dpr 3) putosi merellä 536–895 → 347–433 ms ja maalla 751–1052 →
+546–711 ms (6 ms:n budjetilla 354–477 / 560–664), zoomin ja
+panoroinnin p95 ennallaan (mittaa-ablaatio porras 2: 25–28 / 18–22 ms).
 
 **3. Päivitys tuotti roskaa 10 kertaa sekunnissa.** Kerroksen
 `suorita` kokosi mittarinsa kahdeksalla erillisellä `filter`/`reduce`-

@@ -62,7 +62,10 @@
  */
 
 /** Maltan hahmotelmanostot: valmis sisältö, ei rekisteröity (Malta ei ole vielä kartalla). */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_MLT = [
+  ...EUROOPAN_KADONNEET.MLT,
   {
     id: 'hahmotelma-valletta',
     kuva: {
@@ -160,6 +163,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Mdina',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä on Mdinan lempinimi?',
@@ -211,6 +215,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Ħaġar Qim',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mitä Ħaġar Qim tarkoittaa?',
@@ -396,6 +401,7 @@ export const HAHMOTELMA_MLT = [
     ],
     nimi: 'Comino',
     tyyppi: 'saari',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mistä Comino on saanut nimensä?',
@@ -671,5 +677,809 @@ export const HAHMOTELMA_MLT = [
       + 'alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat '
       + 'Cottonera-murretta.',
     lahde: 'en-Wikipedia "Birgu", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-fort-manoel',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fort-manoel-8e1ce2b9.jpg',
+      lyhyt: 'Fort Manoel kohoaa pienellä saarella Marsamxettin sataman keskellä, muurit ja kellotorni näkyvissä.',
+      selite: 'Tähtimäinen linnoitus peittää koko pienen Manoel-saaren Marsamxettin satamassa. Vaaleat kalkkikivimuurit ja niiden takana kohoava kirkon kellotorni kuvastuvat kirkkaaseen veteen.',
+      lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Frank Vincentz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Gzira_-_Manoel_Island_-_Fort_Manoel_(Ferry_Sliema-Valletta)_02_ies.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fort-manoel-380c08cc.jpg',
+        lyhyt: 'Fort Manoel Vallettasta katsottuna, kaupungin kattojen ja tornien takaa.',
+        selite: 'Linnoitus erottuu Marsamxettin sataman toiselta puolelta, Vallettan bastionien ja modernien kerrostalojen takaa.',
+        lahde: 'Valokuva: Stefan Bellini, Wikimedia Commons (CC0).',
+        tekija: 'Stefan Bellini',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fort_Manoel_-_View_from_Valletta.JPG',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
+    nimi: 'Fort Manoel',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kenen mukaan Fort Manoel on nimetty?',
+      'Minä vuonna britit ottivat linnoituksen haltuunsa?',
+    ],
+    korostukset: ['Vilhena|Vilhenan'],
+    nappi: 'Marsamxettin satamaa vartioiva linnoitus on ollut brittien varuskuntana vuodesta 1800',
+    // 14.50527778 E / 35.90305556 N — en-Wikipedia "Fort Manoel"
+    laudat: {
+      maailmankartta: { x: 6316.8, y: 1961.2 },
+      europe: { x: 489.7, y: 949.3 },
+    },
+    teksti: 'Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin '
+      + 'satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel '
+      + 'de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus '
+      + 'hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää '
+      + 'barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat '
+      + 'linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.',
+    lahde: 'en-Wikipedia "Fort Manoel", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minkä ritarikunnan suurmestarin mukaan Fort Manoel on nimetty?',
+      vaihtoehdot: [
+        'António Manoel de Vilhena',
+        'Jean Parisot de Valette',
+        'Hugues Loubenx de Verdalle',
+        'Juan de Homedes',
+      ],
+      oikea: 0,
+      fakta: 'Britit käyttivät linnoitusta varuskuntana vuoteen 1964 asti.',
+    },
+  },
+  {
+    id: 'hahmotelma-popeye-village',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-popeye-village-5250b846.jpg',
+      lyhyt: 'Popeye Villagen värikkäät puurakennukset kallion juurella turkoosin lahden rannalla.',
+      selite: 'Kaltevat, väreiltään kirjavat puutalot kiipeävät kallioseinämää vasten pienen suojaisan lahden ympärillä. Rannassa keinuu perinteisiä kalastajaveneitä.',
+      lahde: 'Valokuva: DXR, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'DXR',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Popeye_Village,_Malta_20110424_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-popeye-village-e39cd62a.jpg',
+        lyhyt: 'Panoraamanäkymä Popeye Villagesta ja Ankkurilahdesta jyrkkien kalkkikivikallioiden välissä.',
+        selite: 'Kylän puurakennukset ja niiden pitkät laiturit levittäytyvät kapean, jyrkkäreunaisen lahden ympärille.',
+        lahde: 'Valokuva: Giorgio Galeotti, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Giorgio Galeotti',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Popeye_Village_-_Anchor_Bay,_Mellieha,_Malta_-_April_24,_2013_02.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+      },
+    ],
+    nimi: 'Popeye Village',
+    tyyppi: 'kulttuuri',
+    lahi: true,
+    kysymykset: [
+      'Mitä elokuvaa varten kylä alun perin rakennettiin?',
+      'Ketkä olivat elokuvan pääosien näyttelijät?',
+    ],
+    korostukset: ['Popeye-elokuvan|Popeye-elokuvan'],
+    nappi: 'Kylää ei ole olemassa vielä 1873: se rakennetaan vasta 1980 elokuvalavasteeksi',
+    // 14.3413 E / 35.960848 N — en-Wikipedia "Popeye Village"
+    laudat: {
+      maailmankartta: { x: 6311.4, y: 1959 },
+      europe: { x: 486.6, y: 947.8 },
+    },
+    teksti: 'Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin '
+      + 'elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se '
+      + 'pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka '
+      + 'tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat '
+      + 'Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä '
+      + 'puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.',
+    lahde: 'en-Wikipedia "Popeye Village", johdanto-osa (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-mellieha',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-mellieha-7156c462.jpg',
+      lyhyt: 'Mellieħan Neitsyt Marian pyhäkkökirkko punaisine kupoleineen kaupungin kattojen yllä.',
+      selite: 'Kellotorni ja kaksi punakattoista kupolia kohoavat kalkkikivikirkosta, ja taustalla leviää Mellieħan kaupunki mereen asti.',
+      lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Frank Vincentz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Mellieha_-_Misrah_il-Parocca_-_Sanctuary_of_our_Lady_of_Mellieha_01_ies.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-mellieha-f33cb947.jpg',
+        lyhyt: 'Mellieħan kaupunki kohoaa rinteessä, taustalla pyhäkkökirkon tornit ja meri.',
+        selite: 'Vaaleat kalkkikivitalot kasautuvat rinteeseen, ja kaupungin laidalla kohoavat pyhäkkökirkon kaksoistornit merta vasten.',
+        lahde: 'Valokuva: Giorgio Galeotti, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Giorgio Galeotti',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sanctuary_of_our_Lady_of_Mellieha_-_Mellieha,_Malta_-_April_23,_2013_04.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+      },
+    ],
+    nimi: 'Mellieħa',
+    tyyppi: 'kaupunki',
+    lahi: true,
+    kysymykset: [
+      'Mistä Mellieħan nimi juontuu?',
+      'Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?',
+    ],
+    korostukset: ['korsaarien|korsaarien'],
+    nappi: 'Kylä on ollut autio vuosisatoja korsaarien vuoksi; Pyhän Agatan torni suojaa rannikkoa jo 1649',
+    // 14.36638889 E / 35.95638889 N — en-Wikipedia "Mellieħa"
+    laudat: {
+      maailmankartta: { x: 6312.2, y: 1959.2 },
+      europe: { x: 487, y: 947.9 },
+    },
+    teksti: 'Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä '
+      + 'sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden '
+      + 'foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin '
+      + 'matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan '
+      + 'kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt '
+      + 'Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, '
+      + 'mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä '
+      + 'asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa '
+      + '1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui '
+      + 'vuonna 1649.',
+    lahde: 'en-Wikipedia "Mellieħa", johdanto-osa ja osiot "Etymology" ja "History" '
+      + '(tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-marsaskala',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-marsaskala-a135c91c.jpg',
+      lyhyt: 'Marsaskalan lahti ja rantakatu, taustalla kaupungin kattoja ja kirkontorneja.',
+      selite: 'Kapea lahti pistää sisämaahan, ja sen molemmin puolin kulkee rantakatu. Kaupungin rakennukset nousevat loivasti ylöspäin lahden takana.',
+      lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Frank Vincentz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Marsaskala_-_Triq_is-Salini+Marsaskala_Bay+Triq_Zonqor_02_ies.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-marsaskala-e8a8bdbe.jpg',
+        lyhyt: 'Marsaskalan satama täynnä pieniä veneitä, taustalla rinteeseen nouseva kaupunki.',
+        selite: 'Kymmenet pienet veneet keinuvat suojaisassa satamassa, ja niiden takana kohoaa tiiviisti rakennettu rantakaupunki.',
+        lahde: 'Valokuva: Pacopac, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Pacopac',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Marsaskala_Bay_in_Malta.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Marsaskala',
+    tyyppi: 'merenkulku',
+    lahi: true,
+    kysymykset: [
+      'Mitä marsa tarkoittaa arabiaksi?',
+      'Minä vuonna kaupungin seurakuntakirkko valmistui?',
+    ],
+    korostukset: ['Wied il-Għajn|Wied il-Għajniksi'],
+    nappi: 'Vanha kalastajakylä, jonka nykyinen seurakuntakirkko rakennetaan vasta 1950-luvulla',
+    // 14.5675 E / 35.8625 N — en-Wikipedia "Marsaskala"
+    laudat: {
+      maailmankartta: { x: 6318.9, y: 1962.7 },
+      europe: { x: 490.9, y: 950.4 },
+    },
+    teksti: 'Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se '
+      + 'oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja '
+      + 'pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja '
+      + 'jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta '
+      + 'sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan '
+      + 'laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. '
+      + 'Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, '
+      + 'ja kaupungin juhlaa vietetään heinäkuun lopussa.',
+    lahde: 'en-Wikipedia "Marsaskala", johdanto-osa ja osio "Name and etymology" (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-verdala-palace',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-verdala-palace-2f8b1cbd.jpg',
+      lyhyt: 'Verdalan palatsi Maltan lippu liehuen tornissaan, Buskettin puiston puiden keskellä.',
+      selite: 'Neliömäinen linnamainen palatsi neljine kulmatorneineen kohoaa mäntymetsän yläpuolelle. Katolla liehuu Maltan lippu.',
+      lahde: 'Valokuva: Rhododendrites, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Rhododendrites',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Verdala_Palace_(50023).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-verdala-palace-9ee637d0.jpg',
+        lyhyt: 'Verdalan palatsi kaukaa katsottuna Buskettin puutarhojen puiden yllä.',
+        selite: 'Palatsin kulmatornit ja lipputanko erottuvat puuston latvojen yläpuolella harmaan pilvisellä taivaalla.',
+        lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Frank Vincentz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Siggiewi_-_Triq_il-Buskett_-_Buskett_Gardens_+_Verdala_Palace_03_ies.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
+    nimi: 'Verdalan palatsi',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minkä suurmestarin mukaan palatsi on nimetty?',
+      'Mitä rakennusta paikalla oli ennen palatsia?',
+    ],
+    korostukset: ['Verdallen|Verdallen'],
+    nappi: 'Suurmestarien vanha metsästyspalatsi toimii brittiaikana kuvernöörin kesäasuntona',
+    // 14.400614 E / 35.861531 N (koordinaatit Wikimedia Commonsin luokkasivulta) — en-Wikipedia "Verdala Palace"
+    laudat: {
+      maailmankartta: { x: 6313.4, y: 1962.8 },
+      europe: { x: 487.7, y: 950.4 },
+    },
+    teksti: 'Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, '
+      + 'ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli '
+      + '1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten '
+      + 'rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi '
+      + 'vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on '
+      + 'nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni '
+      + 'Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi '
+      + 'Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös '
+      + 'brittihallitsijoita ja muuta ylhäisöä.',
+    lahde: 'en-Wikipedia "Verdala Palace", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna metsästysmaja laajennettiin palatsiksi?',
+      vaihtoehdot: [
+        '1550',
+        '1586',
+        '1650',
+        '1700',
+      ],
+      oikea: 1,
+      fakta: 'Palatsi on nykyään Maltan presidentin virallinen kesäasunto.',
+    },
+  },
+  {
+    id: 'hahmotelma-ghar-dalam',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-ghar-dalam-8af2bbd1.jpg',
+      lyhyt: 'Għar Dalamin luolakäytävä valaistuna, kävelysilta kulkee kaivauskuoppien vierellä.',
+      selite: 'Pitkä, kaareva luolakäytävä on louhittu kalkkikiveen. Käytävän pohjalla näkyvät kaivausalueet ja niitä reunustava kävelysilta.',
+      lahde: 'Valokuva: Jean-Christophe BENOIST, Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Jean-Christophe BENOIST',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:GharDalam-VueGrotte.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-ghar-dalam-bc3ce9af.jpg',
+        lyhyt: 'Għar Dalamin luolan suuaukko ja valaistu käytävä syvemmälle kallioon.',
+        selite: 'Luolan kaareva suuaukko avautuu pimeään käytävään, jonka pohjalla erottuvat kaiteet ja valot.',
+        lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Frank Vincentz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Birzebbuga_-_Triq_Ghar_Dalam_-_Ghar_Dalam_-_cave_05_ies.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
+    nimi: 'Għar Dalam',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?',
+      'Millaisten eläinten luita luolasta on löydetty?',
+    ],
+    korostukset: ['kääpiönorsuja|kääpiönorsuja'],
+    nappi: 'Luola on jo tunnettu löytöpaikka 1873: Issel kaivoi sitä tieteellisesti kahdeksan vuotta aiemmin',
+    // 14.52802778 E / 35.83641667 N — en-Wikipedia "Għar Dalam"
+    laudat: {
+      maailmankartta: { x: 6317.6, y: 1963.7 },
+      europe: { x: 490.1, y: 951.1 },
+    },
+    teksti: 'Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen '
+      + 'kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: '
+      + 'kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut '
+      + 'nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään '
+      + 'yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset '
+      + 'teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John '
+      + 'H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British '
+      + 'Museumiin.',
+    lahde: 'en-Wikipedia "Għar Dalam", johdanto-osa ja osio "Recent history" (tarkistettu '
+      + '21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Għar Dalamissa tehtiin ensimmäiset tieteelliset kaivaukset?',
+      vaihtoehdot: [
+        '1855',
+        '1865',
+        '1892',
+        '1902',
+      ],
+      oikea: 1,
+      fakta: 'Luolasta on löydetty muun muassa kääpiönorsujen ja -virtahepojen luita.',
+    },
+  },
+  {
+    id: 'hahmotelma-kalkara',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-kalkara-90349adc.jpg',
+      lyhyt: 'Kalkaran rivitalot värikkäine parvekkeineen Kalkaran puron rannalla.',
+      selite: 'Kapea katu kulkee vaaleiden kalkkikivitalojen välissä, joiden parvekkeissa on maltalaisittain maalattuja puukaiteita.',
+      lahde: 'Valokuva: Christian Camenzuli, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Christian Camenzuli',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalkara_townhouses_overlooking_the_creek,_in_2026.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-kalkara-6de95b1f.jpg',
+        lyhyt: 'Kalkaran puro täynnä purjeveneitä, taustalla vanhoja varastorakennuksia ja uudempia taloja.',
+        selite: 'Suojaisassa lahdessa on kymmeniä purjeveneitä laitureissa. Rannalla vuorottelevat rapistuneet kivivarastot ja uudet asuinrakennukset.',
+        lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Frank Vincentz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Kalkara_-_Triq_Marina_+_Kalkara_Creek_(Triq_il-Mandragg)_01_ies.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
+    nimi: 'Kalkara',
+    tyyppi: 'merenkulku',
+    lahi: true,
+    kysymykset: [
+      'Mistä latinan sanasta Kalkaran nimi juontuu?',
+      'Mitkä kylät rajaavat Kalkaraa?',
+    ],
+    korostukset: ['calce|calce'],
+    nappi: 'Vaatimaton kalastajakylä Grand Harbourin poukamassa, Birgun ja Żabbarin naapurina',
+    // 14.52944444 E / 35.88916667 N — en-Wikipedia "Kalkara"
+    laudat: {
+      maailmankartta: { x: 6317.6, y: 1961.7 },
+      europe: { x: 490.2, y: 949.7 },
+    },
+    teksti: 'Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen '
+      + 'naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta '
+      + 'sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä '
+      + 'syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut '
+      + 'historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, '
+      + 'koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. '
+      + 'Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on '
+      + 'löydetty varhaiskristillisiä hypogeumeja.',
+    lahde: 'en-Wikipedia "Kalkara", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-blue-grotto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-blue-grotto-2d55e69b.jpg',
+      lyhyt: 'Sinisen luolan meriluolat avautuvat kalkkikivijyrkänteessä, kuvattuna venekierrokselta.',
+      selite: 'Tumma meriluolan suuaukko aukeaa vaalean kalkkikivikallion juurella. Luolan katossa ja seinillä näkyy kerroksellista kiveä.',
+      lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Frank Vincentz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Qrendi_(Blue_Grotto_tour_boat)_10_ies.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-blue-grotto-68d0d1bc.jpg',
+        lyhyt: 'Venekierroksen näkymä Sinisen luolan rannikolle Wied iż-Żurrieqin ja luolaston välillä.',
+        selite: 'Korkea kalkkikivijyrkänne nousee suoraan sinisestä merestä, pinnassa näkyy koloja ja pieniä luolia.',
+        lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Frank Vincentz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malta_-_Qrendi_(Blue_Grotto_tour_boat)_36_ies.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
+    nimi: 'Sininen luola',
+    tyyppi: 'vuori',
+    taso: 1,
+    lahi: true,
+    kysymykset: [
+      'Minkä kylän alueeseen luolat kuuluvat?',
+      'Mikä asumaton saari näkyy luolien edustalla?',
+    ],
+    korostukset: ['Filfla|Filfla-saari'],
+    nappi: 'Merenveden värit vaihtelevat luolissa jo ennen kuin niistä tulee venekierrosten kohde 1900-luvulla',
+    // 14.45 E / 35.81666667 N — en-Wikipedia "Blue Grotto (Malta)"
+    laudat: {
+      maailmankartta: { x: 6315, y: 1964.5 },
+      europe: { x: 488.6, y: 951.6 },
+    },
+    teksti: 'Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied '
+      + 'iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, '
+      + 'mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien '
+      + 'seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat '
+      + 'myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, '
+      + 'merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.',
+    lahde: 'en-Wikipedia "Blue Grotto (Malta)", johdanto-osa (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minkä saaren viereen Sininen luola sijoittuu?',
+      vaihtoehdot: [
+        'Comino',
+        'Filfla',
+        'Cominotto',
+        'Manoel',
+      ],
+      oikea: 1,
+      fakta: 'Filfla on nykyään lintujensuojelualue.',
+    },
+  },
+  {
+    id: 'hahmotelma-victoria-cittadella',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-victoria-cittadella-7a7d152d.jpg',
+      lyhyt: 'Cittadellan bastionimuuri Victorian yllä, taustalla kaupungin kattoja ja Pyhän Yrjön basilikan kupoli.',
+      selite: 'Cittadellan paksu kalkkikivimuuri kaartuu terassin reunalla, jolla seisoo vanha tykki. Alempana leviää Victorian kattomeri ja basilikan punainen kupoli.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ciudadela,_Victoria,_isla_de_Gozo,_Malta,_2021-08-22,_DD_17.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-victoria-cittadella-6f4914c5.jpg',
+        lyhyt: 'Pyhän Yrjön basilikan kullattu kattomaalaus Victoriassa.',
+        selite: 'Kirkon holvikatto on täynnä kullattuja kehyksiä ja raamatullisia maalauksia, ja valo virtaa sisään lasimaalatuista ikkunoista.',
+        lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Diego Delso',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_San_Jorge,_Victoria,_isla_de_Gozo,_Malta,_2021-08-22,_DD_14-16_HDR.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Victoria (Cittadella)',
+    tyyppi: 'kaupunki',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna osmanit valtasivat ja ryöstivät Cittadellan?',
+      'Minä vuonna kaupunki sai nimen Victoria?',
+    ],
+    korostukset: ['Rabatina|Rabatina'],
+    nappi: 'Gozon pääkaupunkia kutsutaan 1873 yhä Rabatiksi – nimi Victoria annetaan vasta 1887',
+    // 14.23944444 E / 36.04638889 N — en-Wikipedia "Cittadella (Gozo)"
+    laudat: {
+      maailmankartta: { x: 6308, y: 1955.7 },
+      europe: { x: 484.6, y: 945.6 },
+    },
+    teksti: 'Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös '
+      + 'Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti '
+      + 'Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla '
+      + 'sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. '
+      + 'Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, '
+      + 'ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen '
+      + 'kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja '
+      + 'osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin '
+      + 'uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi '
+      + 'kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten '
+      + 'kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.',
+    lahde: 'en-Wikipedia "Cittadella (Gozo)" ja "Victoria, Malta", johdanto-osat ja osio '
+      + '"History" (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Gozon pääkaupunki sai nimen Victoria?',
+      vaihtoehdot: [
+        '1837',
+        '1867',
+        '1887',
+        '1901',
+      ],
+      oikea: 2,
+      fakta: 'Nimi annettiin kuningatar Victorian kultaisten kruunajaisten kunniaksi.',
+    },
+  },
+  {
+    id: 'hahmotelma-wied-il-ghasri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-wied-il-ghasri-5b436f5b.jpg',
+      lyhyt: 'Wied il-Għasrin kapea merikuru jyrkkien kalkkikivikallioiden välissä.',
+      selite: 'Turkoosi merivesi täyttää kapean, jyrkkäreunaisen kurun, joka aukeaa kaukana merelle.',
+      lahde: 'Valokuva: Marika Caruana, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Marika Caruana',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_il-Ghasri,_Gozo.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-wied-il-ghasri-fea9b444.jpg',
+        lyhyt: 'Näkymä Wied il-Għasrin laaksosta merelle päin, uimareita rannassa.',
+        selite: 'Kapea laakso avautuu vähitellen kohti avomerta, ja rannassa uivat pienet ihmishahmot antavat mittakaavan jyrkille kallioseinille.',
+        lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Diego Delso',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_Il-%C4%9Easri,_isla_de_Gozo,_Malta,_2021-08-23,_DD_07.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Wied il-Għasri',
+    tyyppi: 'vuori',
+    lahi: true,
+    kysymykset: [
+      'Minkä kylän suuntaan laakso jatkuu maalle päin?',
+      'Mitä laakson reunalla uskotaan sijainneen?',
+    ],
+    korostukset: ['suolapatoja|suolapatoja'],
+    nappi: 'Syrjäinen merikuru, jonka suolapatoja on käytetty sukupolvien ajan',
+    // 14.2285 E / 36.0788 N — en-Wikipedia "Għasri Valley"
+    laudat: {
+      maailmankartta: { x: 6307.6, y: 1954.5 },
+      europe: { x: 484.4, y: 944.7 },
+    },
+    teksti: 'Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu '
+      + 'maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin '
+      + 'päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. '
+      + 'Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan '
+      + 'perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja '
+      + 'uimareiden keskuudessa.',
+    lahde: 'en-Wikipedia "Għasri Valley", johdanto-osa (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-fungus-rock',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fungus-rock-02f7b3cb.jpg',
+      lyhyt: 'Fungus Rock -kallio Dwejran lahdella, meren ympäröimänä.',
+      selite: 'Jyrkkäseinäinen, kasvipeitteinen kalliosaareke kohoaa suoraan mereltä lahden suulla, taustalla toinen kalkkikivijyrkänne.',
+      lahde: 'Valokuva: Michael Leithold, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Michael Leithold',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fungus_rock_dwejra-bucht_gozo.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fungus-rock-4ad9616d.jpg',
+        lyhyt: 'Dwejran lahden rantaviiva auringonlaskun valossa, Fungus Rock etäällä merellä.',
+        selite: 'Illan kultainen valo värjää rantakalliot, ja lahden suulla kohoaa erillinen kalliosaareke.',
+        lahde: 'Valokuva: JosephAmodio, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'JosephAmodio',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fungus_Rock,_Dwejra_Bay,_Gozo_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Fungus Rock',
+    tyyppi: 'saari',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna suurmestari Pinto julisti kallion kielletyksi?',
+      'Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?',
+    ],
+    korostukset: ['loisikasvin|loisikasvin'],
+    nappi: 'Kallio on ollut kiellettyä aluetta jo 127 vuotta 1873: vartijat estävät nousun',
+    // 14.19083333 E / 36.04583333 N — en-Wikipedia "Fungus Rock"
+    laudat: {
+      maailmankartta: { x: 6306.4, y: 1955.8 },
+      europe: { x: 483.7, y: 945.6 },
+    },
+    teksti: 'Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen '
+      + 'mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. '
+      + 'Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin '
+      + 'virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä '
+      + 'parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että '
+      + 'antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion '
+      + 'kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin '
+      + 'kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, '
+      + 'Sininen ikkuna, joka romahti mereen vasta vuonna 2017.',
+    lahde: 'en-Wikipedia "Fungus Rock", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026); en-Wikipedia "Azure Window".',
+    visa: {
+      kysymys: 'Minä vuonna suurmestari Pinto julisti Fungus Rockin kielletyksi alueeksi?',
+      vaihtoehdot: [
+        '1690',
+        '1746',
+        '1800',
+        '1830',
+      ],
+      oikea: 1,
+      fakta: 'Kalliolla kasvavaa loiskasvia pidettiin niin arvokkaana, että sitä annettiin '
+        + 'lahjaksi ylhäisölle.',
+    },
+  },
+  {
+    id: 'hahmotelma-marsalforn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-marsalforn-6b7647df.jpg',
+      lyhyt: 'Marsalfornin rantakatu ja hotellirakennuksia sataman reunalla.',
+      selite: 'Rantapromenadin varrella nousee vaaleita kerrostaloja ja hotelleja, ja kirkon kellotorni pistää esiin kattojen keskeltä.',
+      lahde: 'Valokuva: Kritzolina, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Kritzolina',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Marsalforn,_Gozo_Nov_2014_03.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-marsalforn-b29b5075.jpg',
+        lyhyt: 'Marsalfornin lahti ja kaupunki vihreän kukkulan juurella.',
+        selite: 'Kirkkaan sininen lahti kaartuu rantakaupungin editse, ja sen takana kohoaa vehreä kukkula.',
+        lahde: 'Valokuva: HasanK, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'HasanK',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Marsalforn_in_Gozo_-1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Marsalforn',
+    tyyppi: 'kaupunki',
+    lahi: true,
+    kysymykset: [
+      'Mitä sana marsa tarkoittaa arabiaksi?',
+      'Minkä kahden kylän välissä Marsalforn sijaitsee?',
+    ],
+    korostukset: ['Qbajjarin|Qbajjarin'],
+    nappi: 'Pieni satamakylä pohjoisrannikolla, kauan ennen kuin siitä tulee matkailukeskus',
+    // 14.25833333 E / 36.07194444 N (koordinaatit Wikimedia Commonsin luokkasivulta) — en-Wikipedia "Marsalforn"
+    laudat: {
+      maailmankartta: { x: 6308.6, y: 1954.8 },
+      europe: { x: 485, y: 944.9 },
+    },
+    teksti: 'Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin '
+      + 'kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on '
+      + 'yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan '
+      + 'alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja '
+      + 'siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain '
+      + 'vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden '
+      + 'lomassa.',
+    lahde: 'en-Wikipedia "Marsalforn", johdanto-osa ja osio "Name" (tarkistettu 21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-ramla-bay',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-ramla-bay-7df24ce7.jpg',
+      lyhyt: 'Ramla Bayn punertava hiekkaranta ja rantakalliot pitkällä valotusajalla kuvattuna.',
+      selite: 'Punaisenkeltainen hiekka reunustaa lahtea, jonka vesi näyttää pitkän valotusajan vuoksi usvaiselta. Taustalla kohoaa vihreä niemi.',
+      lahde: 'Valokuva: JosephAmodio, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JosephAmodio',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ramla_Bay,_Gozo_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-ramla-bay-66044b41.jpg',
+        lyhyt: 'Ramla Bay talvisena päivänä, yksinäinen kulkija rannalla.',
+        selite: 'Punainen hiekkaranta ulottuu pitkälle, ja matalikko heijastaa pilvistä taivasta. Rannan päässä kohoaa vihreä niemi.',
+        lahde: 'Valokuva: Bellina 09, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Bellina 09',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ir-Ramla_l-Hamra_in_winter.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Ramla Bay',
+    tyyppi: 'merenkulku',
+    lahi: true,
+    kysymykset: [
+      'Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?',
+      'Minkä myyttisen hahmon nimeä lahden luola kantaa?',
+    ],
+    korostukset: ['Kalypsoon|Kalypsoon'],
+    nappi: 'Punainen hiekkaranta ja Kalypson luolan taru ovat molemmat jo vanhaa perimätietoa 1873',
+    // 14.283 E / 36.062 N — en-Wikipedia "Ramla Bay"
+    laudat: {
+      maailmankartta: { x: 6309.4, y: 1955.2 },
+      europe: { x: 485.4, y: 945.2 },
+    },
+    teksti: 'Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon '
+      + 'koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä '
+      + 'Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä '
+      + 'poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä '
+      + 'tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla '
+      + 'sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi '
+      + 'Kalypsoon.',
+    lahde: 'en-Wikipedia "Ramla Bay" ja "Calypso\'s Cave", johdanto-osat (tarkistettu '
+      + '21.9.2026).',
+  },
+  {
+    id: 'hahmotelma-fort-chambray',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fort-chambray-c959816e.jpg',
+      lyhyt: 'Fort Chambrayn bastionimuuri ja tähtimäinen linnoitusmuoto ylhäältä.',
+      selite: 'Paksut, viistot kalkkikivimuurit muodostavat teräväkulmaisia bastioneja kukkulan laella, ympärillä avautuu Gozon maaseutu.',
+      lahde: 'Valokuva: JosephAmodio, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JosephAmodio',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fort_Chambray,_Gozo_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-fort-chambray-9a17eae9.jpg',
+        lyhyt: 'Fort Chambray Mġarrin lautalta katsottuna, kirkontorni sen vieressä.',
+        selite: 'Linnoituksen pitkät, matalat rakennukset asettuvat kukkulan laelle meren yllä, ja lähellä kohoaa kaupungin kirkon torni ja kupoli.',
+        lahde: 'Valokuva: Averater, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Averater',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fort_Chambray_from_the_ferry.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
+    nimi: 'Fort Chambray',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Mitä kaupunkia linnoituksen oli tarkoitus korvata Gozon pääkaupunkina?',
+      'Miksi linnoitusta käytettiin ranskalaismiehityksen jälkeen?',
+    ],
+    korostukset: ['Ras it-Tafalin|Ras it-Tafalin'],
+    nappi: 'Linnoitus, josta piti tulla Gozon uusi pääkaupunki – suunnitelma jäi toteutumatta',
+    // 14.29333333 E / 36.02083333 N (koordinaatit Wikimedia Commonsin luokkasivulta) — en-Wikipedia "Fort Chambray"
+    laudat: {
+      maailmankartta: { x: 6309.8, y: 1956.7 },
+      europe: { x: 485.6, y: 946.3 },
+    },
+    teksti: 'Fort Chambray on bastionilinnoitus Għajnsielemin kunnan alueella Gozolla, '
+      + 'rakennettu 1700-luvun puolivälissä Johanniittaritarikunnan toimesta Ras it-Tafalin '
+      + 'niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Linnoituksen oli tarkoitus toimia '
+      + 'uuden kaupungin, joka olisi korvannut Cittadellan Gozon pääkaupunkina, '
+      + 'ydinlinnakkeena, mutta suunnitelma ei koskaan toteutunut kokonaan. '
+      + 'Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin '
+      + 'siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja '
+      + 'siihen rakennetaan majoitustiloja.',
+    lahde: 'en-Wikipedia "Fort Chambray", johdanto-osa ja osio "Background and construction" '
+      + '(tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Mitä Fort Chambraysta oli tarkoitus tulla?',
+      vaihtoehdot: [
+        'Uusi satama',
+        'Gozon uuden pääkaupungin linnake',
+        'Vankila',
+        'Tykistökoulu',
+      ],
+      oikea: 1,
+      fakta: 'Linnoitusta käytettiin myöhemmin sotilassairaalana ja mielisairaalana.',
+    },
+  },
+  {
+    id: 'hahmotelma-nadur',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-nadur-de6e82f4.jpg',
+      lyhyt: 'Näkymä Nadurin ylätasangolta naapurikylä Għajnsielemiin ja merelle.',
+      selite: 'Nadurin korkealta harjanteelta avautuu laaja näkymä alempana olevaan kylään ja sen takana siintävään mereen.',
+      lahde: 'Valokuva: Kikku33, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Kikku33',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:G%C4%A7ajnsielem_from_Nadur,_Gozo.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-nadur-0b824c52.jpg',
+        lyhyt: 'Nadurin ylänkö Gozon kanavan lautalta katsottuna.',
+        selite: 'Merenrannalta kohoaa loivasti Nadurin harjanne, jonka laella erottuu rakennuksia sinistä taivasta vasten.',
+        lahde: 'Valokuva: Enrique Íñiguez Rodríguez (Qoan), Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Enrique Íñiguez Rodríguez (Qoan)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:G%C4%A7awdex_mill-vapur._In-Nadur_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    nimi: 'Nadur',
+    tyyppi: 'kaupunki',
+    lahi: true,
+    kysymykset: [
+      'Mistä arabian sanasta Nadurin nimi juontuu?',
+      'Mistä elinkeinosta kaupunki on tunnettu?',
+    ],
+    korostukset: ['nadara|nadara'],
+    nappi: 'Harjanteen tähystyskylä, jonka leipomot tunnetaan kaukana Gozon rajojen ulkopuolella',
+    // 14.295 E / 36.03805556 N — en-Wikipedia "Nadur"
+    laudat: {
+      maailmankartta: { x: 6309.8, y: 1956.1 },
+      europe: { x: 485.7, y: 945.8 },
+    },
+    teksti: 'Nadur on Gozon toiseksi suurin kaupunki, ja se levittäytyy korkealle harjanteelle '
+      + 'Victorian itäpuolelle; sitä kutsutaan saaren "toiseksi kaupungiksi". Nimi juontuu '
+      + 'arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa, ja sama ajatus näkyy '
+      + 'kaupungin tunnuslauseessa "Valpas" sekä vaakunassa, jossa aurinko nousee sinisestä '
+      + 'merestä. Kaupunki tunnetaan leipomoistaan, ja sen lähellä ovat San Blasin ja Daħlet '
+      + 'Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. '
+      + 'Varhaisimmista asukkaista ei ole säilynyt asiakirjoja, mutta harjanteella on ollut '
+      + 'maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.',
+    lahde: 'en-Wikipedia "Nadur", johdanto-osa ja osio "History" (tarkistettu 21.9.2026).',
   },
 ];

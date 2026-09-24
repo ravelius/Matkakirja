@@ -101,6 +101,17 @@ export const MAASTOKOHTEET_LTU = [
       + 'yliopiston geodesian laitoksella GPS:n avulla, ja tulos oli 293,84 metriä — sitä ennen '
       + 'maan korkeimpana pidettiin viidensadan metrin päässä olevaa Juozapinėä, 292,7 metriä.',
     lahde: 'en-Wikipedia "Aukštojas Hill", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Millä tavalla Aukštojasin korkeus mitattiin vuonna 2004?',
+      vaihtoehdot: [
+        'GPS-satelliittien avulla',
+        'Ilmakuvien avulla',
+        'Vaaituskojeen avulla',
+        'Tähtitieteen avulla',
+      ],
+      oikea: 0,
+      fakta: 'Aukštojasin korkeudeksi mitattiin 293,84 metriä.',
+    },
   },
   {
     id: 'itameri',
@@ -152,6 +163,19 @@ export const MAASTOKOHTEET_LTU = [
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Middle Ages" ja "Economy"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu '
       + '1.9.2026).',
+    visa: {
+      kysymys: 'Miltä vuosisadalta Itämeren etelärannan meripihkaesiintymät mainitaan '
+        + 'kirjoissa?',
+      vaihtoehdot: [
+        '1100-luvulta',
+        '1500-luvulta',
+        '900-luvulta',
+        '1700-luvulta',
+      ],
+      oikea: 0,
+      fakta: 'Liettuan lyhyt rannikko on meripihkarantaa, ja Klaipėdan telakat pitävät '
+        + 'kaupungin yhä kiinni meren omassa elinkeinossa.',
+    },
   },
   {
     id: 'nemunas',
@@ -197,6 +221,17 @@ export const MAASTOKOHTEET_LTU = [
       + 'Itä-Euroopan suurista joista: se virtaa länteen Grodnoon, pohjoiseen Kaunasiin ja '
       + 'siitä taas länteen merelle.',
     lahde: 'en-Wikipedia "Neman", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä alueen pohjoisrajan Nemunasin eteläinen haara muodostaa?',
+      vaihtoehdot: [
+        'Puolan alueen',
+        'Latvian alueen',
+        'Kaliningradin alueen',
+        'Venäjän ydinalueen',
+      ],
+      oikea: 2,
+      fakta: 'Nemunasin eteläinen haara muodostaa Kaliningradin alueen pohjoisrajan.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2, 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -227,6 +262,7 @@ export const MAASTOKOHTEET_LTU = [
     ],
     nimi: 'Trakain saarilinna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka kuoli linnassa vuonna 1430?',
       'Miksi linnan kunnostus oli vaikeaa?',
@@ -256,6 +292,17 @@ export const MAASTOKOHTEET_LTU = [
       + 'perustettiin Trakain historiallinen museo.',
     lahde: 'en-Wikipedia "Trakai Island Castle", johdanto-osa sekä osiot "First phase" ja '
       + '"Second phase" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna saksalainen ritarikunta vaurioitti Trakain linnaa pahoin?',
+      vaihtoehdot: [
+        '1300',
+        '1409',
+        '1430',
+        '1377',
+      ],
+      oikea: 3,
+      fakta: 'Saksalainen ritarikunta vaurioitti linnaa pahoin hyökkäyksessään vuonna 1377.',
+    },
   },
   {
     id: 'kernave',
@@ -327,6 +374,7 @@ export const MAASTOKOHTEET_LTU = [
     },
     nimi: 'Ristien kukkula',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miksi ensimmäiset ristit pystytettiin?',
       'Kuinka monta ristiä kukkulalla arvioidaan olevan?',
@@ -369,6 +417,7 @@ export const MAASTOKOHTEET_LTU = [
     },
     nimi: 'Kuurinkynnäs',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä pitää kynnäksen olemassa?',
       'Ketkä jakavat maailmanperintökohteen?',
@@ -519,6 +568,7 @@ export const MAASTOKOHTEET_LTU = [
     ],
     nimi: 'Grūtasin puisto',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mistä patsaat tulivat puistoon?',
       'Minkä palkinnon puisto sai?',
@@ -665,6 +715,17 @@ export const MAASTOKOHTEET_LTU = [
       + 'Nykyään Klaipėda elää kalastuksesta ja merenkulusta, ja kesällä siellä vietetään '
       + 'vuosittaista merijuhlaa.',
     lahde: 'en-Wikipedia "Klaipėda" (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna saksalainen ritarikunta rakensi Memelburgin linnoituksen?',
+      vaihtoehdot: [
+        '1252',
+        '1254',
+        '1258',
+        '1939',
+      ],
+      oikea: 0,
+      fakta: 'Saksalainen ritarikunta rakensi Memelburgin linnoituksen vuonna 1252.',
+    },
   },
   {
     id: 'puntukas',

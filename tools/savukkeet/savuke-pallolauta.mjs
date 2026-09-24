@@ -249,7 +249,7 @@ async function avaaSivu({
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  await sivu.goto(`${osoite}?lauta=${lauta}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=${lauta}&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 60000 });
   return { ctx, sivu, pyynnot };
 }
@@ -484,15 +484,16 @@ if (AMPARI_TOIMII) {
       const pallo = ui.pallonInstanssi;
       ui.karttaselite.avaa();
       await new Promise((r) => setTimeout(r, 100));
-      const luvut = [...document.querySelectorAll('.karttaselite-rivi')].map((r) => [r.dataset.aihe, r.querySelector('.karttaselite-luku').textContent]);
-      const rivi = [...document.querySelectorAll('.karttaselite-rivi')].find((r) => /\d/.test(r.querySelector('.karttaselite-luku').textContent));
+      const aiherivit = [...document.querySelectorAll('.karttaselite-rivi[data-aihe]')];
+      const luvut = aiherivit.map((r) => [r.dataset.aihe, r.querySelector('.karttaselite-luku').textContent]);
+      const rivi = aiherivit.find((r) => /[1-9]/.test(r.querySelector('.karttaselite-luku').textContent));
       if (!rivi) return { luvut, virhe: 'ei riviä, jolla on kappaleita' };
       rivi.click();
       await new Promise((r) => setTimeout(r, 200));
       const aihe = rivi.dataset.aihe;
       const valojaPaalla = pallo.pointsData().filter((p) => p.laji === 'valo').length;
       const luokka = document.body.classList.contains(`valot-${aihe}`);
-      document.querySelector('.karttaselite-kaikki').click(); // OFF
+      document.querySelector('.karttaselite-rivi[data-valinta="ei"]').click(); // Ei mitään
       await new Promise((r) => setTimeout(r, 200));
       const valojaPois = pallo.pointsData().filter((p) => p.laji === 'valo').length;
       ui.karttaselite.sulje();

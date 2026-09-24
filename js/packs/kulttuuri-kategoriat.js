@@ -28480,6 +28480,62 @@ export const KULTTUURI_KATEGORIAT = {
    */
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). KEVYT KANSISIVU (Fablen tilaus):
+   * vain aihe 'kaupunki', ei täyttä 6-aiheista lehteä — sama ratkaisu
+   * kuin muilla kevyillä pelikaupungeilla (KEVYET_FOKUSVIRRAT).
+   * Kansikuvat samat, joiden lisenssi on tarkistettu Commonsin
+   * imageinfo/extmetadata-rajapinnasta 21.9.2026 (maakartat.js
+   * KAUPUNKIKARTAT.luxemburg käyttää osaa samoista).
+   */
+  luxemburg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Luxemburg',
+      johdanto: 'Kaupunki seisoo kalliolla, jonka Alzette- ja '
+        + 'Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin '
+        + 'vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen '
+        + 'Gibraltariksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'Luxembourg City from the Bock Casements.jpg',
+          vuosi: '2024',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+          lyhyt: 'Luxemburgin alakaupunki Bockin kasemattien kalliolta nähtynä.',
+          selite: 'Bock-kallio on kaupungin syntypaikka: kreivi '
+            + 'Siegfried rakensi tänne linnansa vuonna 963. Kalliolta '
+            + 'avautuu näkymä alas Alzette-joen mutkaan.',
+        },
+        {
+          tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+          vuosi: '2009',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Adolphe-silta kaartuu Pétrussen laakson yli.',
+          selite: 'Adolphe-silta rakennettiin vuosina 1900–1903 '
+            + 'yhdistämään vanhakaupunki ja asema-alue Pétrussen syvän '
+            + 'laakson yli.',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          lyhyt: 'Guillaume II:n aukio raatihuoneineen, taustalla Notre-Damen katedraalin tornit.',
+          selite: 'Guillaume II:n aukio raatihuoneineen; taustalla '
+            + 'näkyvät Notre-Damen katedraalin tornit.',
+        },
+        kappale: 'Luxemburg on suurherttuakunnan pääkaupunki ja koko '
+          + 'maan ainoa suuri kaupunki. Vanhakaupunki on kallioisella '
+          + 'niemekkeellä jyrkkien jokilaaksojen välissä, ja sen alle '
+          + 'louhitut kasemattikäytävät tekivät siitä vuosisatojen ajan '
+          + 'yhden Euroopan vahvimmista linnoituksista. Lontoon '
+          + 'sopimus 1867 päätti suurvaltojen kilpailun kaupungista: '
+          + 'linnoitus puretaan, ja Luxemburgista tulee pysyvästi '
+          + 'puolueeton.',
+      },
+    },
+  ],
   nikosia: [
     {
       id: 'kaupunki',
@@ -64772,6 +64828,53 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cabbage soup',
         },
       ],
+    },
+  ],
+
+  /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan
+   * pelikaupunki Valletta). KEVYT KANSISIVU — vain aihe `kaupunki`,
+   * ei täyttä 6-aiheista lehteä (sama linjaus kuin muilla tuoreilla
+   * pelikaupungeilla ennen täyttä sisältöerää). Kuvat Commonsista,
+   * lisenssit ja tekijät luettu extmetadata-rajapinnasta 21.9.2026.
+   */
+  valletta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Valletta',
+      johdanto: 'Kalkkikivestä veistetty linnoituskaupunki kahden '
+        + 'sataman välissä — koko vanhakaupunki on ruutukaavaa, jonka '
+        + 'ritarikunta piirsi suoraksi jo vuonna 1566.',
+      kansikuvat: [
+        {
+          tiedosto: 'Valletta old skyline.jpg',
+          lyhyt: 'Ilmakuva Vallettasta: Suurmestarin palatsi etualalla.',
+          selite: 'Ilmakuva Vallettan ruutukaavasta ja kalkkikivikattojen '
+            + 'merestä; etualalla kohoaa Suurmestarin palatsin katto.',
+          lahde: 'Airphotomalta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Malta - Valletta - St. James Bastion - 360° Panorama 01.jpg',
+          lyhyt: 'St. James -bastionin paksut kalkkikivimuurit.',
+          selite: 'St. James -bastionin paksut kalkkikivimuurit, osa '
+            + 'ritarikunnan 1500-luvulla rakentamaa linnoitusrengasta '
+            + 'Vallettan ympärillä.',
+          lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+          lyhyt: 'Auberge de Castillen barokkijulkisivu.',
+          selite: 'Auberge de Castillen koristeellinen barokkijulkisivu '
+            + '— yksi ritarikunnan komeimmista majataloista.',
+          lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Valletta on vain 0,61 neliökilometrin kokoinen, joten '
+          + 'koko vanhakaupungin kiertää jalan muutamassa tunnissa. '
+          + 'Kadut nousevat ja laskevat jyrkästi niemen muodon mukaan, '
+          + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
+      },
     },
   ],
 
@@ -106007,6 +106110,651 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Vuoden 2007 nukke oli Guinnessin mukaan maailman suurin '
             + 'marionetti, 15,21 metriä.',
           wiki: 'Zozobra',
+        },
+      ],
+    },
+  ],
+  kilimandzaro: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kilimanjaro',
+      johdanto: 'Kilimanjaro kohoaa Tansaniassa aivan päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi ja jää. Se on Afrikan korkein vuori ja maailman korkein yksinäinen tulivuori.',
+      nostot: [
+        {
+          otsikko: 'Vuori savannin yllä',
+          teksti: 'Kilimanjaro näkyy kirkkaalla säällä jopa sadan kilometrin päähän, ja sen lumihuippu kohoaa usein pilvikerroksen yläpuolelle niin, että vuori näyttää leijuvan taivaalla. Vuori on 5895 metriä korkea ja nousee ympäröivästä savannista lähes 4900 metriä – enemmän kuin mikään muu yksittäinen tulivuori maailmassa. Akaasiapuiden reunustama tasanko ja lumihuippu samassa maisemassa hämmästyttää yhä matkailijoita, aivan kuten se hämmästytti 1800-luvun eurooppalaisia tutkimusmatkailijoita, jotka pitivät moista näkyä päiväntasaajalla lähes mahdottomana.',
+          tiedosto: 'Kilimanjaro_from_Amboseli.jpg',
+          lyhyt: 'Kilimanjaron lumihuippu kohoaa usein savannin pilvien yläpuolelle.',
+          selite: 'Valokuvassa Kilimanjaron pyöreä, lumipeitteinen huippu kohoaa paksun pilvikerroksen yläpuolelle aamuvalossa, ja etualalla erottuu Amboselin savannin kuivaa maata sekä matalia akaasiapuita.',
+          lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Kolme tulivuorikartiota',
+          teksti: 'Kilimanjaro ei ole yksi vuori vaan kolmen tulivuorikartion muodostama massiivi: korkein ja nuorin on Kibo, jonka huippu kohoaa 5895 metriin ja joka on yhä uinuva – sen kraatterissa purkautuu edelleen rikkikaasuja. Mawenzi on Kibon itäpuolella jyrkkäpiirteinen ja sammunut, ja lännempänä kohoava Shira on kolmesta matalin ja vanhin. Kaikki kolme syntyivät samalla Itä-Afrikan hautavajoaman alueella miljoonien vuosien aikana, ja Kibon viimeisin purkaus ajoittuu noin 150 000–200 000 vuoden taakse.',
+          tiedosto: 'Kibo_and_Mawenzi_Mt._Kilimanjaro.JPG',
+          lyhyt: 'Kilimanjaro koostuu kolmesta tulivuorikartiosta: Kibosta, Mawenzista ja Shirasta.',
+          selite: 'Kuvassa erottuvat illan hämärässä sekä pyöreä, lumihuippuinen Kibo että sen oikealla puolella jyrkkäpiirteinen, hammasmainen Mawenzin huippu; etualalla on puutarhamainen kasvillisuus.',
+          lahde: 'Chris 73, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Rebmannin lumihavainto',
+          teksti: 'Saksalais-sveitsiläinen lähetyssaarnaaja Johannes Rebmann näki Kilimanjaron ensimmäisenä eurooppalaisena vuonna 1848 ja kirjasi päiväkirjaansa marraskuussa, ettei huipulla hohtava valkoinen voinut olla mitään muuta kuin lunta. Väite julkaistiin 1849, mutta Lontoon maantieteellinen seura piti sitä mahdottomana: lumen ei uskottu voivan pysyä päiväntasaajan tuntumassa, ja Rebmannin havainnon arveltiin johtuvan malarian aiheuttamista harhoista. Vasta 1861, kun saksalaiset tutkimusmatkailijat vahvistivat näkemänsä, epäily lopulta hälveni.',
+          tiedosto: 'Johannes_rebmann.gif',
+          lyhyt: 'Rebmann näki Kilimanjaron lumen 1848, mutta Eurooppa ei uskonut häntä.',
+          selite: 'Kuvassa on 1800-luvun litografiaan perustuva muotokuva nuoresta, tummaan takkiin ja solmukkeeseen pukeutuneesta Johannes Rebmannista; kuvatekstissä lukevat hänen syntymä- ja kuolinvuotensa sekä lähtö Itä-Afrikkaan.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+          wiki: 'Johannes Rebmann',
+        },
+        {
+          otsikko: 'Ensimmäinen huipulle',
+          teksti: 'Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.',
+          tiedosto: 'Kibo_Summit,_Mount_Kilimanjaro,_Tanzania_(30819102678).jpg',
+          lyhyt: 'Hans Meyer ja Ludwig Purtscheller saavuttivat Kibon huipun 6.10.1889.',
+          selite: 'Kuvassa Kibon huipun kraatterin karu, ruskea kivireuna kohoaa aavikkomaisena kirkasta taivasta vasten, ja reunoilla näkyy vielä ohuita lumi- ja jääjuovia.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hans Meyer (geographer)',
+        },
+        {
+          otsikko: 'Saksan Itä-Afrikka',
+          teksti: 'Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.',
+          tiedosto: "German_Moshi_Boma_Built_in_1893_on_the_former_site_of_Mangi_Meli's_Boma.jpg",
+          lyhyt: 'Kilimanjaro kuului Saksan Itä-Afrikkaan vuosina 1885–1918.',
+          selite: 'Vanhassa sepiansävyisessä valokuvassa on suuri, valkoseinäinen ja harjakattoinen hallintorakennus muurin ympäröimänä, pihalla pieni katettu kaivorakennelma, ja taustalla erottuu himmeästi Kilimanjaron kaksi huippua.',
+          lahde: 'Halidtz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'German East Africa',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Kilimanjaron luonto',
+      johdanto: 'Muutaman vuorokauden kiipeilyllä Kilimanjarolla kulkee savannin kuumuudesta arktiseen pakkaseen viiden ilmastovyöhykkeen läpi, ja jokaisella vyöhykkeellä elää omanlaisiaan kasveja ja eläimiä.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osa Kilimanjaron jääpeitteestä suli vuosien 1912 ja 2011 välillä?',
+        vaihtoehdot: ['Noin 35 prosenttia', 'Noin 60 prosenttia', 'Lähes 85 prosenttia', 'Yli 95 prosenttia'],
+        oikea: 2,
+        fakta: 'Jääpeitteestä suli lähes 85 prosenttia vuosina 1912–2011, ja tutkijoiden mukaan loputkin jäätiköt voivat kadota vuosisadan puoliväliin mennessä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Viisi ilmastovyöhykettä',
+          teksti: 'Kilimanjaron rinteillä matkustaa muutamassa päivässä läpi viiden ilmastovyöhykkeen, jotka muualla maailmassa vaatisivat matkan päiväntasaajalta navalle. Noin 800–1800 metrin korkeudessa on pensaikkoista savannia, ja 1800–2800 metrissä alkaa sateinen vuoristosademetsä, jossa etelärinteillä sataa jopa 2000–3000 millimetriä vuodessa. Sitä seuraa 2800–4000 metrissä kanervikkoinen nummivyöhyke, sitten karu korkeavuoriston aavikko 4000–5000 metrissä, ja aivan huipulla, yli 5000 metrissä, alkaa lähes elotonna oleva arktinen vyöhyke jäineen.',
+          tiedosto: 'Naremoru_river_in_the_rainforest_near_Mt_Kilimanjaro.JPG',
+          lyhyt: 'Kilimanjarolla on viisi ilmastovyöhykettä savannista arktiseen huippuun.',
+          selite: 'Kuvassa sammaltunutta ja jäkälän peittämää vuoristosademetsää: puron kirkas vesi virtaa kivikkoisessa uomassa, ja puiden oksilta riippuu pitkiä, vaaleanvihreitä jäkälätupsuja.',
+          lahde: 'Chris 73, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+        {
+          otsikko: 'Jättiläismäiset ruusukoivut',
+          teksti: 'Kanervikko- ja aavikkovyöhykkeillä kasvaa kasveja, jotka eivät muistuta mitään tavallista pensasta: Dendrosenecio kilimanjari eli jättiruusukoivu kasvattaa paksun, palmumaisen rungon, jonka latvassa on tiivis lehtiruusuke. Laji on sopeutunut vuorokauden äärimmäisiin lämpötilanvaihteluihin, joissa yö voi olla pakkasella ja päivä helteinen; kuolleet lehdet jäävät rungon ympärille suojaamaan sitä kylmältä. Kasvi on endeeminen eli sitä ei tavata missään muualla luonnossa kuin Kilimanjaron ja sitä ympäröivien vuorten korkeilla rinteillä.',
+          tiedosto: 'Dendrosenecio_kilimanjari_in_front_of_Kilimanjaro_(16432052644).jpg',
+          lyhyt: 'Jättiruusukoivu kasvaa vain Kilimanjaron ja sen naapurivuorten korkeilla rinteillä.',
+          selite: 'Kuvassa kasvaa joukko tummanvihreitä, palmumaisia jättiruusukoivuja kivikkoisella rinteellä, ja taustalla kohoaa Kilimanjaron lumihuippuinen Kibo kirkasta taivasta vasten.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dendrosenecio kilimanjari',
+        },
+        {
+          otsikko: 'Jättiloopelia',
+          teksti: 'Toinen Kilimanjarolle ja muutamalle naapurivuorelle ominainen kasvi on jättiloopelia, joka kasvaa 3800–4300 metrin korkeudessa. Sen tiivis, piikikkäiden lehtien muodostama ruusuke pystyy sulkeutumaan yöksi suojaksi pakkaselta, ja rungon sisällä oleva geelimäinen neste toimii eristeenä. Yksittäinen ruusuke elää vuosikymmeniä ennen kuin se tuottaa yhden ainoan, valtavan kukintovarren ja satojatuhansia siemeniä – ja kuolee sen jälkeen. Kasvi on sopeutunut samaan äärimmäiseen vuorokausivaihteluun kuin jättiruusukoivu.',
+          tiedosto: 'Riesenlobelien_1.jpg',
+          lyhyt: 'Jättiloopelian ruusuke kukkii vain kerran elämässään ja kuolee sitten.',
+          selite: 'Kuvassa on lähikuva jättiloopeliasta: sen latvassa on tiivis, käpymäinen silmu, jota ympäröi piikikkäiden, harmaanvihreiden lehtien ruusuke kivisellä rinteellä.',
+          lahde: 'Hochschwab, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lobelia deckenii',
+        },
+        {
+          otsikko: 'Norsut alarinteillä',
+          teksti: 'Kilimanjaron alimmilla, savannimaisilla rinteillä ja niitä ympäröivillä tasangoilla elää suuria nisäkkäitä, kuten afrikannorsuja, päiväntasaajan puhveleita ja monia muita eläinlajeja. Naapurissa sijaitseva Amboselin kansallispuisto Keniän puolella on yksi maailman tunnetuimmista paikoista seurata vapaana eläviä norsulaumoja aivan Kilimanjaron juurella. Korkeammalla vuorella eläimistö vaihtuu: sademetsässä tavataan muun muassa apinoita ja kameleontteja, ja aivan huipun tuntumassa elää enää harvoja hyönteisiä sekä Kilimanjaron oma, endeeminen päästäislaji.',
+          tiedosto: 'African_Bush_Elephants,_Amboseli_National_Park_(32312286377).jpg',
+          lyhyt: 'Amboselin norsulaumat laiduntavat aivan Kilimanjaron juurella.',
+          selite: 'Kuvassa aikuinen norsu kävelee kohti kameraa korvat levällään, ja sen takana on kaksi norsunvasaa sekä toinen aikuinen norsu kellastuneella heinikkoalueella.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'African bush elephant',
+        },
+        {
+          otsikko: 'Sulava jäätikkö',
+          teksti: 'Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.',
+          tiedosto: 'Furtwangler_Glacier_Mount_Kilimanjaro_Tanzania.jpg',
+          lyhyt: 'Lähes 85 prosenttia Kilimanjaron jääpeitteestä suli vuosina 1912–2011.',
+          selite: 'Kuvassa auringonlaskun värjäämä, useiden metrien korkuinen jäätikköseinämä kohoaa lumikentältä; sen edessä seisova ihminen näyttää pieneltä verrattuna jään mittasuhteisiin.',
+          lahde: 'Altezzatravel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Kilimanjaro',
+        },
+      ],
+    },
+  ],
+  viktorianputoukset: [
+    {
+      id: 'kaupunki',
+      nimi: 'Viktorian putoukset',
+      johdanto:
+        'Isoisän matkapäiväkirjan sivuilla möyryää Zambezi: joki, joka putoaa Sambian ja Zimbabwen rajalla jylisevänä vesiseinänä ja jonka paikalliset tunsivat kauan ennen kuin yksikään eurooppalainen sitä näki.',
+      nostot: [
+        {
+          otsikko: 'Jylisevä savu saa eurooppalaisen nimen',
+          teksti:
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16. marraskuuta 1855 matkatessaan kanootilla Zambezi-jokea kohti Intian valtamerta. Seuraavana päivänä hän kiipesi joen keskellä olevalle saarelle ja katsoi, kuinka vesimassa syöksyi rotkoon valtavana sumupilvenä — hän nimesi näyn kuningatar Viktorian mukaan. Paikalliset lozi- ja tonga-kansat olivat kuitenkin tunteneet putoukset kauan ennen häntä ja kutsuivat niitä nimellä Mosi-oa-Tunya, "jylisevä savu", joka on virallinen nimi yhä Sambian puolella.',
+          tiedosto: 'Victoria Falls, Zimbabwe 05.jpg',
+          lyhyt: 'Zambezi-joki syöksyy putouksena rotkoon, jonka rinteillä kasvaa vihreää sademetsää.',
+          selite:
+            'Kuva näyttää putouksen viistosti sivulta: vesi syöksyy kapeaan rotkoon paksuna sumupilvenä, ja rotkon molemmilla reunoilla kasvaa tiheää vihreää sademetsää kuivan ylängön keskellä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Maailman suurin vesiverho',
+          teksti:
+            'Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.',
+          tiedosto: 'Aerial view of Victoria Falls, August 2018.jpg',
+          lyhyt: 'Ilmakuva Viktorian putouksista, joiden sumu nousee syvästä rotkosta korkealle.',
+          selite:
+            'Ilmakuva ylhäältä näyttää koko putouksen leveän linjan: Zambezi-joki virtaa vasemmalta saarten välistä ja putoaa suorassa kulmassa kapeaan, vihreän kasvillisuuden reunustamaan rotkoon, jonka poikki näkyy pieni silta.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Victoria Falls',
+        },
+        {
+          otsikko: 'Isoisän matkavuosi ja löytäjän viimeinen matka',
+          teksti:
+            'Samana vuonna 1873, kun isoisä matkasi Zambeziä pitkin, kuoli David Livingstone kaukana putouksilta pohjoisessa, Bangweulun suoseudun laidalla nykyisessä Sambiassa. Hän oli etsinyt vuosia Niilin lähteitä, sairastui malariaan ja sisäiseen verenvuotoon eikä enää jaksanut kävellä. Palvelijat Susi ja Chuma löysivät hänet 1. toukokuuta 1873 polvillaan sängyn vierestä, ikään kuin rukoilemassa. He hautasivat Livingstonen sydämen paikalliseen maahan puun juurelle, muumioivat ruumiin ja kantoivat sitä yli tuhannen mailin matkan rannikolle — matka kesti lähes viisi kuukautta.',
+          tiedosto: 'David Livingstone by Thomas Annan.jpg',
+          lyhyt: 'David Livingstonen valokuva vuodelta 1864, yhdeksän vuotta ennen hänen kuolemaansa.',
+          selite:
+            'Muotokuvassa vanhempi, viiksekäs David Livingstone istuu tuolissa kädet sauvan varassa, tumma takki yllään — vakava valokuva otettiin vuonna 1864, yhdeksän vuotta ennen hänen kuolemaansa Afrikassa.',
+          lahde: 'Thomas Annan / Adam Cuerden, Wikimedia Commons (Public domain)',
+          wiki: 'Livingstone Memorial',
+        },
+        {
+          otsikko: 'Patsas joka muistaa löytäjän',
+          teksti:
+            'Zimbabwen puolella putousten rannalla seisoo pronssinen Livingstone-patsas, joka pystytettiin vuonna 1934 muistoksi hänen löytöretkestään. Patsaan jalustaan on kaiverrettu vuosiluvut 1813–1873 sekä sanat Missionary, Explorer, Liberator eli lähetyssaarnaaja, tutkimusmatkailija, vapauttaja. Jälkimmäinen vuosiluku on juuri se, jolloin isoisä kirjoitti omaa matkapäiväkirjaansa toisella puolella maailmaa: samana vuonna kun Livingstone kuoli Afrikan sisämaassa, hänen löytämänsä putoukset olivat jo tulleet tunnetuksi kaukana Euroopassa hänen omien matkakertomustensa ansiosta.',
+          tiedosto: 'Livingstone statue at Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Livingstone-patsas, jonka jalustaan on kaiverrettu vuosiluvut 1813–1873.',
+          selite:
+            'Pronssipatsas esittää Livingstonea seisomassa lippalakki päässä ja käsi lantiolla kivijalustan päällä; jalustaan on kaiverrettu hänen nimensä ja vuosiluvut, joista jälkimmäinen, 1873, on isoisän matkavuosi.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Statue of David Livingstone, Victoria Falls',
+        },
+        {
+          otsikko: 'Silta joka toi radan putousten partaalle',
+          teksti:
+            'Kaivosmiljonääri Cecil Rhodes halusi Kapkaupungista Kairoon kulkevan rautatien niin lähelle putouksia, että matkustajat tuntisivat sumun junan ikkunasta. Hänen toiveensa mukaisesti Zambezin ylittävä rautatiesilta rakennettiin Englannissa osina, kuljetettiin laivalla Afrikkaan ja koottiin paikan päällä suoraan putousten alapuolelle avautuvan rotkon yli. Silta valmistui vuonna 1905 ja oli tuolloin maailman korkein rautatiesilta: kaarisilta kohoaa 128 metriä joen yläpuolelle ja on 198 metriä pitkä. Rhodes ei koskaan nähnyt siltaa valmiina, sillä hän kuoli samana vuonna.',
+          tiedosto: 'Victoria Falls Bridge and Zambezi river.jpg',
+          lyhyt: 'Victoria Falls -silta ylittää rotkon, jonka pohjalla näkyy sateenkaari sumussa.',
+          selite:
+            'Kuvassa teräksinen kaarisilta ylittää syvän, kasvillisuuden reunustaman rotkon; rotkon pohjalla virtaa Zambezi-joki koskena, ja kuvan vasempaan reunaan piirtyy sateenkaari nousevasta sumusta.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Falls Bridge',
+        },
+        {
+          otsikko: 'Uinti putouksen partaalla',
+          teksti:
+            'Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil\'s Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.',
+          tiedosto: "Devil's Pool on Livingstone Island.jpg",
+          lyhyt: 'Uimari lepää Devil\'s Poolin reunalla aivan putouksen partaalla, sateenkaari sumussa.',
+          selite:
+            'Kuvassa mies seisoo vyötäröään myöten vedessä aivan putouksen reunalla; hänen vasemmalla puolellaan avautuu syvä rotko täynnä sumua, ja sumusta kaartuu sateenkaari, kun oikealla vesi kaatuu koskena ohitse.',
+          lahde: 'Rudolph.A.furtado, Wikimedia Commons (CC BY 4.0)',
+          wiki: "Devil's Pool (Victoria Falls)",
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sumun synnyttämä sademetsä',
+      johdanto:
+        'Putouksen alta nouseva vesisumu kastelee vierellään pientä metsäkaistaletta joka ainoa päivä ympäri vuoden, vaikka koko muu seutu on kuivaa savannia — sademetsä, joka elää yksin putouksen omasta hengityksestä.',
+      tehtava: {
+        kysymys:
+          'Kuinka korkealle Viktorian putousten synnyttämä vesisumu voi parhaimmillaan kohota ilmaan?',
+        vaihtoehdot: ['50 metriä', '150 metriä', '400 metriä', '900 metriä'],
+        oikea: 2,
+        fakta:
+          'Sumu voi runsasvetisenä aikana kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sademetsä jota sade ei koskaan jätä',
+          teksti:
+            'Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.',
+          tiedosto: 'Rainforest, Victoria Falls, Zimbabwean side.jpg',
+          lyhyt: 'Aurinko siivilöityy Viktorian putousten sumumetsän tiheän lehvästön läpi.',
+          selite:
+            'Kuva näyttää tiheän, vehreän metsikön: korkeiden puiden alla kasvaa palmuja ja pensaita, ja auringonvalo pilkottaa lehvästön läpi täplinä — juuri tällainen kasvillisuus elää putouksen jatkuvasta sumusta.',
+          lahde: 'Ninaras, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Victoria Falls National Park',
+        },
+        {
+          otsikko: 'Kuunvalon sateenkaari',
+          teksti:
+            'Kun kuu on täysi tai lähes täysi ja putouksen sumupilvi riittävän tiheä, öisin taivaalle voi ilmestyä moonbow eli kuunkaari: kuunvalon taittumisesta syntyvä sateenkaari, joka näkyy silmälle vaaleana, hopeanhohtoisena kaarena. Viktorian putoukset ovat yksi harvoista paikoista maailmassa, joissa ilmiön voi nähdä säännöllisesti, sillä siihen tarvitaan sekä riittävän voimakas sumupilvi että tarpeeksi pimeä taivas. Parhaat kuukaudet kuunkaarelle ovat huhti–heinäkuu, jolloin Zambezi virtaa runsaimmillaan ja sumua riittää sekä päivisin auringolle että öisin kuulle taittua.',
+          tiedosto: 'Moonbow at Victoria Falls.jpg',
+          lyhyt: 'Kuunvalon synnyttämä vaalea kaari nousee putouksen yön sumupilvestä.',
+          selite:
+            'Yökuvassa tähtitaivasta vasten kaartuu vaaleanhohtoinen sateenkaari nousevasta sumupilvestä; sumu erottuu vaaleana pilvenä tummaa taivasta vasten, ja etualalla virtaa joki.',
+          lahde: 'Scolopendra33, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Moonbow',
+        },
+        {
+          otsikko: 'Veitsenterää pitkin sumun sisään',
+          teksti:
+            'Zimbabwen puolen sademetsäpolulta erkanee kapea jalankulkusilta, jota kutsutaan Veitsenterä-sillaksi (Knife-Edge Bridge): se vie rotkon poikki näköalakalliolle aivan putouksen toisen haaran viereen. Sillalta putousta katsova jää lähes aina läpimäräksi, sillä sumu leviää sieltä joka suuntaan kuin jatkuva sade, ja moni kävijä pukee sadeviitan ennen sillalle astumista. Vastapäätä avautuva näkymä Itäiseen putoukseen ja alla kuohuvaan rotkoon on yksi koko kansallispuiston näyttävimmistä, ja sumun määrä kertoo parhaiten, kuinka paljon vettä joessa kulloinkin virtaa.',
+          tiedosto: 'Knife edge bridge over a chasm at the Victoria Falls.jpg',
+          lyhyt: 'Kävelijät ylittävät sumuisen Veitsenterä-sillan lähellä putouksen reunaa.',
+          selite:
+            'Kuvassa sadeviittoihin pukeutuneet kävelijät ylittävät kapean, kaiteellisen jalankulkusillan; sillan oikealla puolella nousee paksu valkoinen sumupilvi, joka peittää näkymän putoukseen lähes kokonaan.',
+          lahde: 'Hans Hillewaert, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Zambezi',
+        },
+        {
+          otsikko: '"Jylisevä savu" ennen Livingstonea',
+          teksti:
+            'Kauan ennen kuin yksikään eurooppalainen oli kuullutkaan putouksista, Batoka-ylängön tonga- ja lozi-kansat tunsivat ne nimellä Mosi-oa-Tunya, "jylisevä savu", ja pitivät paikkaa pyhänä: lähistöllä oli uhripaikkoja, ja kertomusten mukaan joessa asui voimakas jokihenki, jota piti lepytellä ennen ylitystä. Nimi elää yhä virallisena Sambian puolella, jossa myös kansallispuisto on nimetty Mosi-oa-Tunyaksi, kun taas Zimbabwen puolella käytetään edelleen Livingstonen antamaa nimeä. Kahden nimen rinnakkaiselo muistuttaa, että paikka oli osa paikallista maailmaa kauan ennen kuin siitä tuli osa eurooppalaisten karttoja.',
+          tiedosto: 'Victoria falls, zambia.jpg',
+          lyhyt: 'Rotkon partaalla kasvaa vehreää sademetsää putouksen sumun ansiosta.',
+          selite:
+            'Kuva Sambian puolelta näyttää putouksen leveän vesiverhon syöksymässä rotkoon; etualalla ja rotkon reunoilla kasvaa vehreää puustoa, jonka juuri putouksen oma sumu pitää elossa ympäri vuoden.',
+          lahde: 'Someone35, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lozi people',
+        },
+      ],
+    },
+  ],
+  sitka: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sitka',
+      johdanto:
+        'Isoisän saapuessa 1873 Sitka oli yhä sekakielinen rajakaupunki: Venäjän Amerikan entinen pääkaupunki Novoarhangelsk oli myyty Yhdysvalloille vain kuusi vuotta aiemmin, ja kupolikirkot muistuttivat vielä kaikkialla tsaarin ajasta.',
+      nostot: [
+        {
+          otsikko: 'Lippu joka vaihtui Linnamäellä',
+          teksti:
+            'Lokakuun 18. päivänä 1867 Sitkan Linnamäellä laskettiin Venäjän lippu ja nostettiin Yhdysvaltain tähtilippu: Venäjä myi koko Alaskan, noin 375 miljoonaa eekkeriä maata, Yhdysvalloille 7,2 miljoonalla dollarilla eli suunnilleen kahdella sentillä eekkeriltä. Kauppaa ajoi sitkeästi Yhdysvaltain ulkoministeri William Seward, joka piti aluetta tärkeänä maan laajenemiselle, vaikka moni aikalainen piti hankintaa hyödyttömänä jäätikkömaana. Sitkasta tuli luovutuksen jälkeen Alaskan departementin hallintokaupunki, ja isoisä saapui sinne vain kuusi vuotta myöhemmin, jolloin venäläinen aika näkyi kaduilla yhä kaikkialla.',
+          tiedosto: 'Colina del Castillo de Baranof..jpg',
+          lyhyt: 'Vanha tykki ja lipputangot Sitkan Linnamäellä, jossa Alaska vaihtoi omistajaa 1867.',
+          selite:
+            'Kuvassa on Linnamäen (Castle Hill) näköalatasanne: kivimuurin sisäpuolella seisoo vanha tykki pyörillään, kolme tyhjää lipputankoa ja penkkejä, ja taustalla avautuu näkymä Sitkan salmelle ja vuorille — juuri tällä paikalla Venäjän lippu laskettiin ja Yhdysvaltain lippu nostettiin lokakuussa 1867.',
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alaska Purchase',
+        },
+        {
+          otsikko: 'Kupolit jotka jäivät katoille',
+          teksti:
+            'Pappi Innokenti Veniaminov suunnitteli Pyhän Mikaelin katedraalin venäläiseen kirkolliseen tyyliin, ja se valmistui 20.11.1848 hirsistä ja lautavuorauksesta — Uuden maailman ensimmäinen ortodoksinen katedraali, jonka kellotapulissa ja sipulikupolissa kimalsivat kultaiset ristit. Osa ikoneista oli maalattu jo 1600-luvun puolivälissä, ja kaksi niistä oli hovimaalari Vladimir Borovikovskin käsialaa. Tammikuun 2. päivän vastaisena yönä 1966 tulipalo tuhosi koko alkuperäisen rakennuksen kelloineen ja venäjän-, tlingitin- ja aleutinkielisine kirjastoineen; nykyinen katedraali rakennettiin vanhoja mittoja noudattaen ja vihittiin uudelleen käyttöön 1978.',
+          tiedosto: 'St Michaels Cathedral - Sitka - front.JPG',
+          lyhyt: 'Pyhän Mikaelin katedraalin harmaa tapuli ja vihreä sipulikupoli kohoavat pilvitaivasta vasten.',
+          selite:
+            'Lähikuva näyttää katedraalin harmaaksi maalatun puutapulin kellotorneineen ja kellotauluineen sekä sen edessä kohoavan vihreän sipulikupolin, jonka huipulla kimaltaa kultainen ortodoksiristi.',
+          lahde: 'Barek, Wikimedia Commons (Public domain)',
+          wiki: "St. Michael's Cathedral (Sitka, Alaska)",
+        },
+        {
+          otsikko: 'Piispantalo hirsistä',
+          teksti:
+            'Suomalaiset työmiehet pystyttivät Sitkaan vuosina 1841–1843 kaksikerroksisen hirsirakennuksen Venäjän-Amerikan-yhtiön palveluksessa: siitä tuli Alaskan ensimmäisen piispan, Innokenti Veniaminovin, koti ja hallintokeskus. Rakennuksessa asui myöhemmin myös pappeja, ja se toimi välillä jopa majatalona, kunnes Sitkan hiippakunta siirrettiin San Franciscoon 1872. Piispantalo on yksi harvoista Venäjän-Amerikan ajalta säilyneistä rakennuksista koko Alaskassa, ja se rauhoitettiin kansallismuistomerkiksi 1962. Nykyisin se on osa Sitkan kansallista historiallista puistoa ja avoinna yleisölle opastetuilla kierroksilla museona.',
+          tiedosto: 'Casa del Obispo Ruso..jpg',
+          lyhyt: 'Keltainen Piispantalo ja opastaulu muistuttavat Sitkan venäläisestä hallintokeskuksesta.',
+          selite:
+            "Kuvassa näkyy puistonvartijan opastaulu 'Russian Bishop's House' aidan takana, ja sen takana kohoaa keltainen, punakattoinen kaksikerroksinen hirsirakennus sekä sen vieressä pienempi valkoinen rakennus, entinen venäläinen orpokoti.",
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: "Russian Bishop's House",
+        },
+        {
+          otsikko: 'Tulivuori joka vartioi salmea',
+          teksti:
+            'Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.',
+          tiedosto:
+            "Sitka Sound, Mt. Edgecumbe and John O'Connell Bridge as seen from the park. (ce381fa9-3f33-4d74-be3b-0d4391fa3b6d).JPG",
+          lyhyt: 'Kalastusveneitä Sitkan salmella, taustalla sammuneen Mount Edgecumben tulivuoren kartio.',
+          selite:
+            'Kuvassa kaksi kalastusalusta kulkee tyynellä salmella kohti rantakylää, ja taustalla kohoaa Mount Edgecumben symmetrinen, lumitäpläinen tulivuorenhuippu kirkkaan sinistä taivasta vasten.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Sitka, Alaska',
+        },
+        {
+          otsikko: 'Pääkaupungista sivuraiteelle',
+          teksti:
+            'Alaskan oston jälkeen Sitkasta tuli ensin Alaskan departementin ja vuodesta 1884 alkaen Alaskan piirikunnan hallintokaupunki — asema, jota se piti aina vuoteen 1906 saakka. Silloin hallintokaupungin arvo siirrettiin pohjoisemmas Juneauhun, joka oli kasvanut nopeasti Klondiken kultaryntäyksen ansiosta, kun taas Sitkan taloudellinen merkitys oli hiipunut. Venäläinen katedraali jäi silti kaupungin sydämeksi ja maamerkiksi, joka näkyy yhä metsäisten vuorten ja sumun keskeltä kauas rantaan asti, vaikka valta oli jo aikoja sitten siirtynyt muualle.',
+          tiedosto: "Sitka, AK - St. Michael's Cathedral from Castle Hill 01.jpg",
+          lyhyt: 'Katedraalin torni pilkottaa puiden ja sumuisten vuorten keskeltä kaupungin ylle.',
+          selite:
+            'Kuva on otettu etäältä puiden lehvästön läpi: katedraalin vihreä huippu ja sipulikupoli kohoavat kattojen yläpuolelle, ja taustalla sumu verhoaa havumetsäistä vuorenrinnettä.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sitka, Alaska',
+        },
+      ],
+    },
+    {
+      id: 'tlingit',
+      nimi: 'Tlingit ja Sitkan taistelu',
+      johdanto:
+        'Kuusi vuotta ennen isoisän matkaa Sitka oli yhä sotanäyttämön muisto: paikan Tlingit-kansa oli taistellut alueestaan venäläisiä vastaan vuonna 1804, ja sen suvut kertoivat historiaansa yhä totemipylväiden kuvakielellä.',
+      tehtava: {
+        kysymys: 'Minä vuonna presidentti William H. Taft rauhoitti Sitkan taistelupaikan kansallismonumentiksi?',
+        vaihtoehdot: ['1867', '1892', '1910', '1943'],
+        oikea: 2,
+        fakta:
+          'Presidentti Taft rauhoitti alueen Sitkan kansallismonumentiksi 23. maaliskuuta 1910 suojellakseen sekä taistelupaikkaa että totemipylväskokoelmaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Linnoitus jota ei voitu murtaa hyökkäyksellä',
+          teksti:
+            "Kesäkuussa 1802 Kiksʼádi-suvun soturit tuhosivat Sitkaan pystytetyn venäläisen kauppa-aseman ja tappoivat suurimman osan sen asukkaista. Kaksi vuotta myöhemmin, 1.–4. lokakuuta 1804, venäläisten kuvernööri Aleksandr Baranov palasi laivasto-osaston kanssa takaisin ja piiritti Kiksʼádin uuden linnoituksen, Shísʼgi Nooŵ'n, jonka noin 1 000 kuusenrungon paalumuuri suojasi 750–800 soturia päällikkö Katlianin johdolla. Venäläisten alkuhyökkäys torjuttiin ja Baranov haavoittui vakavasti, mutta laivan tykkitulen murrettua puolustuksen Kiksʼádi-suku vetäytyi öisin metsään säilyttääkseen kansansa hengissä. Katlianin soturikypärä on säilynyt näihin päiviin asti.",
+          tiedosto: 'Raven helmet worn by Katlian in conflict of 1804.jpg',
+          lyhyt: 'Katlianin päällikkökypärä muistuttaa Sitkan taistelusta vuonna 1804.',
+          selite:
+            'Lähikuva museossa esillä olevasta tummasta, kiiltävästä puisesta soturikypärästä: se on veistetty linnun pään muotoiseksi terävine nokkineen, ja sen reunoja koristaa punaruskea turkis.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+          wiki: 'Battle of Sitka',
+        },
+        {
+          otsikko: 'Puisto joka syntyi taistelukentälle',
+          teksti:
+            'Venäläisten voiton jälkeen Sitkasta tuli heidän uusi linnoituksensa Linnamäelle, mutta paikka jäi elämään myös Tlingit-suvun historiassa taistelupaikkana. Presidentti William H. Taft rauhoitti alueen Sitkan kansallismonumentiksi 23. maaliskuuta 1910 nimenomaan suojellakseen sekä vuoden 1804 linnoituksen paikkaa että sinne koottua totemipylväskokoelmaa — siitä kasvoi myöhemmin nykyinen Sitkan kansallinen historiallinen puisto. Puisto kattaa noin 45 hehtaaria rannikkometsää, jonka läpi kulkee kaksi kilometriä polkuja Itäisen kanavan rantaviivaa myötäillen aina taistelupaikalle asti.',
+          tiedosto: 'Centennial Pole as seen from the beach (480f12eb-984a-4db6-9617-4cc04abe2352).JPG',
+          lyhyt: 'Presidentti Taft rauhoitti taistelupaikan puistoksi vuonna 1910.',
+          selite:
+            'Kuvassa värikäs, tuoreelta näyttävä totemipylväs seisoo sorarannalla tumman kuusimetsän reunassa iltavalossa — tällaisia pylväitä puisto on perustamisestaan asti suojellut yhdessä taistelupaikan kanssa.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Sitka National Historical Park',
+        },
+        {
+          otsikko: 'Pylväät jotka kertovat suvusta',
+          teksti:
+            'Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.',
+          tiedosto: 'Native Alaskan Totem Pole.JPG',
+          lyhyt: 'Värikkäästi maalattu totemipylväs kertoo veistoksin suvun tarinaa.',
+          selite:
+            'Kuvassa on korkea, kirkkain värein — turkoosilla, mustalla ja punaisella — maalattu totemipylväs metsäpolun varressa; siihen on veistetty päällekkäin useita eläin- ja ihmishahmoja.',
+          lahde: 'Lordkinbote, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Tlingit',
+        },
+        {
+          otsikko: 'Kielen ja väen paluu',
+          teksti:
+            'Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.',
+          tiedosto: 'Wolf Pole (72f2e9ca-b680-4942-8228-563fb8b81ea5).jpg',
+          lyhyt: 'Vanha, säänkuluttama totemipylväs metsäpolun varressa Sitkan puistossa.',
+          selite:
+            'Kuvassa harmaaksi kuluneen puun sävyinen, osin maalinsa menettänyt totemipylväs seisoo soratien varrella vehreän havumetsän keskellä; pylvään huipulla on hattupäinen ihmishahmo.',
+          lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+          wiki: 'Tlingit',
+        },
+      ],
+    },
+  ],
+  bermuda: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bermuda',
+      johdanto:
+        'Isoisän matkavuonna 1873 Bermuda oli brittiläinen siirtomaa, jonka vaaralliset koralliriutat olivat tehneet siitä merenkulkijoiden pelkäämät Paholaisten saaret ja jonka talous eli purjelaivoista ja sipulikaupasta.',
+      nostot: [
+        {
+          otsikko: 'Haaksirikko joka synnytti siirtokunnan',
+          teksti:
+            'Heinäkuussa 1609 brittiläinen laivue matkasi kohti Virginian siirtokuntaa, kun myrsky erotti lippulaiva Sea Venturen muista ja ajoi sen karille Bermudan riuttoihin. Kaikki 150 matkustajaa ja miehistön jäsentä selvisivät hengissä rannalle, ja amiraali George Somers päätti jäädä saarille rakentamaan kaksi uutta laivaa hylyn osista. Vasta toukokuussa 1610 selviytyjät purjehtivat lopulta Virginiaan, mutta osa jäi pysyvästi Bermudalle: näin syntyi tahattomasti Britannian ensimmäinen pysyvä siirtokunta saarilla, kolme vuotta ennen kuin yhtään virallista siirtolaista oli lähetetty paikalle.',
+          tiedosto: 'Somers runs his ship on shore of Bermuda, 1609.jpg',
+          lyhyt: 'Vanha kaiverrus kuvaa lippulaiva Sea Venturen ajautumista myrskyssä karille Bermudalla 1609.',
+          selite:
+            'Kaiverrus näyttää suuren purjelaivan kallistuneena jättiaalloissa lähellä jyrkkiä rantakallioita, kun pieni soutuvene miehistöineen yrittää päästä turvaan – kohtaus muistuttaa Sea Venturen haaksirikosta Bermudan riutoilla heinäkuussa 1609.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Sea Venture',
+        },
+        {
+          otsikko: 'Paholaisten saaret',
+          teksti:
+            'Bermudaa ympäröivät koralliriutat upottivat vuosisatojen aikana satoja purjelaivoja, ja merenkulkijat alkoivat kutsua saaria pelokkaasti Paholaisten saariksi. Öisin riutoilta kuului kummallisia ääniä, joiden uskottiin todistavan pahojen henkien läsnäolosta – todellisuudessa äänet syntyivät merilinnuista ja saarille tuoduista villisioista. Vaara oli silti aito: matalat riutat ulottuvat kilometrien päähän rannasta ja ovat yhä nykyaikaisillekin aluksille uhka. Vuonna 1846 kukkulalle valmistui Gibbs Hillin majakka opastamaan laivoja turvallisesti riuttojen ohi; sen valo näkyy parhaimmillaan yli 40 meripeninkulman päähän.',
+          tiedosto: 'Gibbs Hill Lighthouse.jpg',
+          lyhyt: 'Gibbs Hillin majakka kohoaa valkoisena kukkulalla lähellä majakanvartijan taloa.',
+          selite:
+            'Valokuvassa näkyy korkea, valkoiseksi maalattu valurautainen majakkatorni ja sen vieressä vihreäluukkuinen majakanvartijan talo sekä kiviportaat rinteessä – majakka rakennettiin 1846 varoittamaan laivoja Bermudan vaarallisista riutoista.',
+          lahde: 'dbking, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gibbs Hill Lighthouse',
+        },
+        {
+          otsikko: 'Vanhin brittiläinen kaupunki Uudessa maailmassa',
+          teksti:
+            "Sea Venturen selviytyjien perustama St. George's sai virallisen asemansa 1612, kun Lontoon Virginia-yhtiö lähetti saarille kuusikymmentä uutta siirtolaista. Kaupungista tuli Bermudan pääkaupunki ja tärkein satama aina vuoteen 1815 asti, ja se tunnetaan yhä vanhimpana yhtäjaksoisesti asuttuna brittiläisenä kaupunkina koko Uudessa maailmassa. Kapeat kujat ja vanhat kivitalot ovat säilyneet niin hyvin, että Unesco otti St. Georgen ja sitä ympäröivät linnoitukset maailmanperintöluetteloonsa vuonna 2000. Kaupungin keskellä seisoo yhä Pyhän Pietarin kirkko, jota pidetään vanhimpana yhä käytössä olevana anglikaanisena kirkkona läntisellä pallonpuoliskolla.",
+          tiedosto: "St. Peter's Church, Bermuda, Front.jpg",
+          lyhyt: 'Pyhän Pietarin kirkko St. Georgessa on vanhimpia yhä käytössä olevia kirkkoja lännessä.',
+          selite:
+            'Valokuva näyttää vaaleaksi rapatun kirkon päädyn pyöreine ikkunoineen ja vihreine luukkuineen, kellotornin sekä edustalla liehuvan Pyhän Yrjön ristilipun – Pyhän Pietarin kirkko on ollut käytössä 1600-luvulta lähtien St. Georgen kaupungissa.',
+          lahde: 'JoeyBagODonuts, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "St. George's, Bermuda",
+        },
+        {
+          otsikko: 'Setripuiset purjehtijat',
+          teksti:
+            'Kun siirtomaayhtiön monopoli purkautui 1684, bermudalaiset kääntyivät maanviljelystä laivanrakennukseen ja alkoivat hyödyntää saarten omaa setripuuta. Kevyt mutta kestävä setri sopi nopeisiin, yksimastoisiin aluksiin, joita alettiin kutsua Bermudan sluupeiksi: parhaimmillaan ne kulkivat viiden solmun nopeutta ja olivat ylivoimaisia luovimaan vastatuuleen. Kolmenkymmenen tonnin aluksen pystyi rakentamaan vain muutamassa kuukaudessa, ja saarelaiset omistivat pian tuhansia tonneja laivastoa. Osa aluksista purjehti kaapparikirjeen turvin ryöstelemässä vihollismaiden kauppalaivoja, mikä toi saarille huomattavaa vaurautta 1700- ja 1800-luvuilla.',
+          tiedosto: 'The Spirit of Bermuda of the Bermuda Sloop Foundation.jpeg',
+          lyhyt: 'Nykyaikainen kolmimastoinen Spirit of Bermuda ankkurissa Hamiltonin edustalla.',
+          selite:
+            'Valokuvassa kolmimastoinen puuvenhe on ankkurissa illanhämärässä Hamiltonin edustalla, taustalla kaupungin rakennuksia ja mäkiä – alus on 2000-luvulla rakennettu koulutuspurjehtija, joka noudattaa perinteistä Bermudan sluupimallia.',
+          lahde: 'Seán Pòl Ó Creachmhaoil, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda sloop',
+        },
+        {
+          otsikko: 'Sipulisaari',
+          teksti:
+            '1800-luvun puolivälistä lähtien bermudalaiset viljelivät makeaa, nopeasti kypsyvää sipulilajiketta, jonka he ehtivät New Yorkin markkinoille ennen kilpailijoitaan. Kauppa kasvoi vuosikymmen vuosikymmeneltä niin suureksi, että amerikkalaiset alkoivat kutsua saarta Sipulilaikuksi ja sen asukkaita Sipuleiksi – lempinimi, joka on elänyt tähän päivään asti. Isoisän matkavuoden 1873 tienoilla vientiä lastattiin viikoittain kymmeniätuhansia laatikoita, ja kauppa huipentui 1899, jolloin saarilta lähti lähes 450 000 laatikollista sipulia. Myöhemmin yhdysvaltalaiset tulliesteet ja Texasin oma "Bermuda-sipuli" tekivät lopun vientimenestyksestä.',
+          tiedosto: 'N.E. Lusher - Packing Onions, Bermuda 3339541392.jpg',
+          lyhyt: 'Työntekijät pakkaavat sipuleita puulaatikoihin setripuiden varjossa Bermudalla.',
+          selite:
+            'Vanha valokuva näyttää joukon miehiä, naisia ja lapsia istumassa ja työskentelemässä setripuiden katveessa, ympärillään täysiä sipulilaatikoita ja kasoja irtosipuleita – tällaista sipulinlajittelua ja -pakkaamista tehtiin Bermudalla vientikaupan kukoistusaikana.',
+          lahde: 'Nicholas Ethelbert Lusher, Wikimedia Commons (Public domain)',
+          wiki: 'Bermuda onion',
+        },
+        {
+          otsikko: 'Vaaleanpunaiset hiekkarannat',
+          teksti:
+            'Bermudan etelärannikon hiekka näyttää lähietäisyydeltä vaaleanpunertavalta, sillä joukossa on miljoonia mikroskooppisen pieniä punertavia kuoria, jotka ovat peräisin Homotrema rubrum -nimisestä yksisoluisesta eliöstä. Kun aallot ja aika murskaavat näitä kuoria valkoisen korallihiekan ja simpukankuorten kanssa, syntyy hienojakoinen hiekka, jonka sävy vaihtelee vaaleasta vaaleanpunaisesta lähes valkoiseen valaistuksesta riippuen. Suosituimmat rannat sijaitsevat saaren eteläpuolella, missä koralliriutta suojaa uimareita Atlantin isoilta aalloilta. Isoisän aikana rannat olivat vielä lähes autioita – matkailu löysi Bermudan hiekkarannat vasta 1900-luvulla.',
+          tiedosto: 'Elbow Beach, Bermuda - view looking east.jpg',
+          lyhyt: 'Jalanjäljet kulkevat vaaleassa hiekassa kohti turkoosia merta Bermudalla.',
+          selite:
+            'Valokuva näyttää autiotun, hienojakoisen hiekkarannan, jonka poikki kulkee yksinäinen jalanjälkien jono kohti turkoosina hohtavaa merta – kauempaa katsottuna hiekan vaaleanpunertava sävy erottuu selvimmin.',
+          lahde: 'LeeG~commonswiki, Wikimedia Commons (Public domain)',
+          wiki: 'Elbow Beach, Bermuda',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Cahow, riutat ja luolat',
+      johdanto:
+        'Bermudan luonto kätkee mullistavan pelastustarinan, maailman pohjoisimmat koralliriutat ja vuosituhansien aikana muotoutuneet kalkkikiviluolat – kaiken tämän saman pienen saariryhmän sisällä.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta pesivää cahow-paria löytyi tammikuussa 1951, kun lintu löydettiin uudelleen 300 vuoden jälkeen?',
+        vaihtoehdot: ['3', '18', '47', '132'],
+        oikea: 1,
+        fakta:
+          'Tutkijat löysivät tammikuussa 1951 täsmälleen 18 pesivää cahow-paria Castle Harbourin pikkusaarilta – lintu jonka luultiin kuolleen sukupuuttoon jo 1620-luvulla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Lintu joka katosi',
+          teksti:
+            "1500-luvulla espanjalaiset merimiehet pyydystivät Bermudan pesimäsaarilta jopa 4000 cahow-lintua yhtenä yönä ruoaksi, ja englantilaisten asuttua saaret 1609 mukana tulleet siat ja rotat tuhosivat lintujen maakoloihin tehdyt pesät. Vuoteen 1620 mennessä cahow'ta pidettiin jo sukupuuttoon kuolleena, eikä yhtään elävää yksilöä nähty yli kolmeen vuosisataan. Tammikuun 28. päivänä 1951 tutkijat Robert Cushman Murphy, Louis Mowbray ja viisitoistavuotias David Wingate löysivät Castle Harbourin pikkusaarilta kuitenkin 18 pesivää paria – yksi luonnonhistorian kuuluisimmista \"ylösnousemuksista\". Wingatesta tuli myöhemmin lintulajin pelastustyön elämäntehtävä.",
+          tiedosto: 'Bermuda Petrel From The Crossley ID Guide Eastern Birds.jpg',
+          lyhyt: 'Neljä eri höyrylintulajia, niiden joukossa cahow, liitää meren yllä.',
+          selite:
+            "Kuvassa liitää useita ulkonäöltään toisiaan muistuttavia merilintuja matalalla aaltojen yllä eri kulmista kuvattuna – tunnistusoppaan kuva havainnollistaa, miten vaikeaa cahow'ta on erottaa muista samankokoisista petreleistä merellä.",
+          lahde: 'Richard Crossley, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda petrel',
+        },
+        {
+          otsikko: 'Pohjoisimmat koralliriutat maailmassa',
+          teksti:
+            'Bermuda on ainoa paikka maailmassa, jossa koralliriuttoja kasvaa näin kaukana päiväntasaajalta: saaret sijaitsevat noin 32 leveysasteella, mutta lämmin Golfvirta pitää meriveden riittävän lämpimänä koralleille ympäri vuoden. Riutat muodostavat saaren ympärille laajan, matalan alustan, jonka päällä vesi hohtaa avaruudesta asti vaaleanturkoosina tummaa merta vasten. Samat riutat, jotka suojaavat saarta suurilta aalloilta, upottivat aikoinaan satoja purjelaivoja. Nykyisin riutta-alue on suojeltu, ja siellä elää kymmeniä kovan korallin lajeja sekä satoja kalalajeja – eliöyhteisö, joka ei kasva missään muualla yhtä pohjoisessa.',
+          tiedosto: 'ISS017-E-10695 - View of Bermuda.jpg',
+          lyhyt: 'Avaruudesta kuvattu Bermuda erottuu vaaleana turkoosina laikkuna tummansinisellä merellä.',
+          selite:
+            'Kansainvälisen avaruusaseman ottama valokuva näyttää Bermudan saariryhmän vaaleanturkoosin matalikon ympäröimänä tummansinisellä valtamerellä, mikä paljastaa saarta reunustavan koralliriutan laajuuden ylhäältä katsottuna.',
+          lahde: 'NASA Earth Science and Remote Sensing Unit, Wikimedia Commons (Public domain)',
+          wiki: 'Bermuda',
+        },
+        {
+          otsikko: 'Madon rakentamat pikkuriutat',
+          teksti:
+            'Bermudan matalissa lahdissa esiintyy harvinainen ilmiö: pieni putkimato rakentaa kalkkisia putkiaan tiiviisti toistensa päälle, kunnes muodostuu matala, rengasmainen riutta kuin pienoiskoossa oleva koralliatolli. Luonnontutkija Alpheus Hyatt Verrill kuvasi näitä "serpuliiniatolleja" 1900-luvun alussa, ja osa niistä kohoaa yhä ajoittain näkyviin matalan veden aikaan aaltojen halkoessa niiden ympärillä. Ilmiö on erikoinen, sillä tavallisesti riuttoja rakentavat korallieläimet, eivät madot: Bermudan lämmin vesi, suojaisat lahdet ja runsas kalkkiaines ovat yhdistelmä, joka mahdollistaa pienoisriutan synnyn vain harvoissa paikoissa maailmassa.',
+          tiedosto: 'FMIB 49263 Serpuline atolls at Bermuda.jpeg',
+          lyhyt: 'Vanha valokuva näyttää kaksi matalaa, pitkänomaista riuttaa aaltojen keskellä.',
+          selite:
+            'Vuosisadan alun valokuvassa näkyy kaksi tummaa, pitkänomaista ja rengasmaista muodostumaa aivan meren pinnan tasalla aaltojen lyödessä niitä vasten – kyseessä ovat putkimatojen kalkista rakentamat pienet riutat eli "serpuliiniatollit".',
+          lahde: 'Alpheus Hyatt Verrill, Wikimedia Commons (Public domain)',
+          wiki: 'Serpulidae',
+        },
+        {
+          otsikko: 'Kalkkikivestä syntyneet luolat',
+          teksti:
+            'Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.',
+          tiedosto: 'Crystal Cave (199858407).jpeg',
+          lyhyt: 'Tippukivet riippuvat kattoa kohti Crystal Cavesin luolastossa Bermudalla.',
+          selite:
+            'Valokuvassa näkyy luolan kattoa peittävät lukuisat vaaleat stalaktiitit, jotka riippuvat alas kohti tummaa vedenpintaa, sekä lattialta kohoavia paksumpia kivipatsaita – näky Bermudan tunnetuimmasta luolastosta, Crystal Cavesista.',
+          lahde: 'Andrew Currie, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Crystal Caves of Bermuda',
+        },
+      ],
+    },
+  ],
+  falkland: [
+    {
+      id: 'kaupunki',
+      nimi: 'Falklandinsaaret',
+      johdanto:
+        'Isoisän vuoden 1873 päiväkirjassa Falklandinsaaret olivat kaukainen ja tuulinen etuvartio: Britannia oli palauttanut hallinnon niille jo 1833, ja pieni Port Stanley eli haaksirikkojen, lampaiden ja Kap Hornin purjelaivojen varassa.',
+      nostot: [
+        {
+          otsikko: 'Valaanpyytäjien pysähdyspaikka Kap Hornin kupeessa',
+          teksti:
+            'Falklandinsaaret sijaitsevat Kap Hornin luoteispuolella, reitillä, jota valaanpyytäjät ja hylkeenpyytäjät kulkivat Tyynellemerelle ja takaisin 1800-luvulla. Saarten suojaisat lahdet tarjosivat purjelaivoille turvapaikan ennen raskasta Kap Hornin kiertämistä ja sen jälkeen, kun myrskyt olivat repineet purjeita ja katkoneet mastoja. Hallinnon keskus siirrettiin avoimelta Port Louisilta suojaisampaan Port Stanleyhin 1840-luvun puolivälissä, ja vuonna 1849 amiraali Edward Fanshawe maalasi satamakylästä akvarellin, joka näyttää vasta muutaman valkoisen mökin rannalla. Isoisän matkalla 1873 kylä oli jo kasvanut suuremmaksi.',
+          tiedosto: 'Edward Gennys Fanshawe, Settlement at Port Stanley, Falkland Islands, May 1849.jpg',
+          lyhyt: 'Amiraali Fanshawen akvarelli Port Stanleyn pienestä satamakylästä vuonna 1849.',
+          selite:
+            'Akvarellissa näkyy kourallinen valkoisia mökkejä Stanleyn sataman rannalla, yksi laiva ankkurissa ja puuttomat kukkulat taustalla - kuva ajalta, jolloin kylä oli vasta muutaman vuoden ikäinen.',
+          lahde: 'Edward Gennys Fanshawe, Wikimedia Commons (Public domain)',
+          wiki: 'Stanley, Falkland Islands',
+        },
+        {
+          otsikko: 'Haaksirikkojen satama',
+          teksti:
+            'Port Stanleyn maine 1800-luvulla ei ollut mairitteleva: kaupunki tunnettiin paikkana, jonne pahoin vaurioituneet purjelaivat ajautuivat Kap Hornin kiertämisen jälkeen ja jäivät usein korjauskelvottomina makaamaan satamaan. Paikallinen talous eli pitkälti näiden hylkyjen ja niiden lastien myynnistä ja ostosta, ja monet asukkaat vaurastuivat purjelaivojen onnettomuuksien varassa. Kauppa hiipui vasta 1870-luvun jälkeen, kun höyrylaivat alkoivat syrjäyttää purjelaivoja halvan eteläamerikkalaisen hiilen ansiosta, ja loppui käytännössä kokonaan, kun Panaman kanava avattiin vuonna 1914 ja tarve kiertää Kap Hornia väheni ratkaisevasti.',
+          tiedosto: 'Stanley (Falkland Islands) - Wrack der Jhelum.jpg',
+          lyhyt: 'Purjelaiva Jhelumin lahonnut hylky makaa yhä Stanleyn sataman rannassa.',
+          selite:
+            'Kuvassa näkyy vanhan purjelaivan pahoin lahonnut puurunko matalassa vedessä, ikkunan kehyksen ja keltaisten kukkien kautta kuvattuna - yksi monista Stanleyn satamaan jääneistä 1800-luvun hylyistä.',
+          lahde: 'HaSt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Stanley, Falkland Islands',
+        },
+        {
+          otsikko: 'Lady Elizabeth makaa yhä satamassa',
+          teksti:
+            'Sunderlandissa Englannissa vuonna 1879 rakennettu rautarunkoinen parkkilaiva Lady Elizabeth purjehti maailman merillä yli kolmekymmentä vuotta ennen kohtaloaan. Joulukuussa 1912 se lähti Vancouverista kohti Mosambikia lastinaan puutavaraa, mutta ankara myrsky lähellä Kap Hornia repi kannelta osan lastista ja vei mukanaan neljä merimiestä. Vaurioitunut laiva ajautui Port Stanleyhin, jossa se todettiin merikelvottomaksi ja myytiin Falklandinsaarten yhtiölle varastolaivaksi. Vuonna 1936 raju myrsky repi Lady Elizabethin irti kiinnityksistään ja ajoi sen matalikolle Whalebone Coveen, jossa hylky lepää edelleen näkyvissä Stanleyn satamassa.',
+          tiedosto: 'Wreck of Lady Elizabeth on Falkland Islands - Islas Malvinas - panoramio.jpg',
+          lyhyt: 'Kolmimastoinen Lady Elizabeth -laivan hylky Stanleyn satamassa myrskytaivasta vasten.',
+          selite:
+            'Dramaattisessa kuvassa tumma, pilvinen taivas kohoaa kolmimastoisen Lady Elizabethin siluetin yllä, laiva makaa matalikolla keskellä Stanleyn satamaa, jossa se on levännyt vuodesta 1936.',
+          lahde: 'Alex Petrenko, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lady Elizabeth (1879)',
+        },
+        {
+          otsikko: 'Lampaat valtaavat saaret',
+          teksti:
+            'Kun purjelaivakauppa oli vielä kukoistava elinkeino, saarille alkoi nousta myös toinen, pysyvämpi talouden muoto: lampaanhoito. Falklandinsaarten yhtiö perustettiin vuonna 1851, ja se toi saarille cheviot-rotuisia lampaita villantuotantoa varten. Karu, puuton ja tuulinen maasto sopi lampaille yllättävän hyvin, sillä laajat ruohoniityt riittivät laumojen laiduntamiseen ympäri vuoden. Malli osoittautui menestykseksi, ja pian muutkin tilalliset perustivat omia lammastiloja saarten eri kolkkiin. Villasta tuli vuosikymmeniksi saarten tärkein vientituote, ja lampaanhoito muovasi maisemaa ja elinkeinorakennetta pitkälle 1900-luvulle asti.',
+          tiedosto: 'Sheep on Saunders Island in the Falkland Islands.jpg',
+          lyhyt: 'Lampaita laiduntamassa ruohoisella rinteellä Saundersin saarella.',
+          selite:
+            'Kuvassa lampaita laiduntaa loivalla, ruohoisella rinteellä kapean merenlahden yllä - juuri tällaista karua mutta laidunkelpoista maastoa Falklandinsaarten yhtiö alkoi valjastaa lampaanhoitoon 1850-luvulta lähtien.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Falkland Islands Company',
+        },
+        {
+          otsikko: 'Alituinen tuuli',
+          teksti:
+            'Falklandinsaarten ilmasto on kylmä, kostea ja lähes taukoamatta tuulinen: Etelä-Atlantilta puuskittava länsituuli pyyhkii yli saarten lähes joka päivä, eikä juuri mikään suojaa sitä vastaan, sillä saarilla ei kasva luontaisesti yhtään puuta. Sen sijaan maisemaa hallitsevat matalat ruohoniityt, kovat kivikkoalueet ja paikoin kolme metriä korkeaksi kasvava tuussakkiheinä, joka muodostaa tiheitä, melkein metsämäisiä kasvustoja rannikoilla. Purjelaivan kannelta katsottuna saaret näyttivät usein pelkiltä matalilta, ruskeanvihreiltä kukkuloilta sumun keskellä, ja moni 1800-luvun matkalainen piti niitä maailman ankarimpina asuttuina paikkoina.',
+          tiedosto: 'Landscape Falkland Islands.jpg',
+          lyhyt: 'Puuton, tuulen kuluttama rantamaisema ja kallioinen kukkula Falklandinsaarilla.',
+          selite:
+            'Kuvassa avautuu tyypillinen falklandilainen maisema: tumma merenlahti, loivat ja puuttomat, ruohon peittämät rinteet sekä kaukana kohoava kallioinen kukkula - maisema, jota ainuttakaan puuta ei riko.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Climate of the Falkland Islands',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Pingviinit ja kadonnut susi',
+      johdanto:
+        'Falklandinsaarilla pesii viisi pingviinilajia ja maailman suurimpia albatrossiyhdyskuntia, mutta ainoa alkuperäinen maanisäkäs, kesy susi nimeltä varra, hävisi ihmisen käsissä sukupuuttoon isoisän matkan aikoihin.',
+      tehtava: {
+        kysymys:
+          'Minä vuonna Falklandinsaarten ainoa alkuperäinen maanisäkäs, varra, hävisi lopullisesti sukupuuttoon?',
+        vaihtoehdot: ['1833', '1865', '1876', '1901'],
+        oikea: 2,
+        fakta:
+          'Varra hävisi sukupuuttoon vuonna 1876 eli vain kolme vuotta isoisän vuoden 1873 matkan jälkeen, turkismetsästyksen ja myrkytyksen seurauksena.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuninkaanpingviinien paluu',
+          teksti:
+            'Volunteer Pointin hiekkarannalla Itä-Falklandilla pesii saarten suurin kuninkaanpingviiniyhdyskunta. Vielä vuonna 1971 siellä laskettiin vain 31 pesivää paria, sillä 1800- ja 1900-luvun metsästys oli harventanut kantaa rajusti höyhenpeitteen ja rasvan vuoksi. Suojelu kuitenkin käänsi kehityksen: nykyisin samalla rannalla pesii yli 1500 paria, ja yhdyskunta on kasvanut vuosikymmen toisensa jälkeen yhdeksi maailman suurimmista ja helppopääsyisimmistä kuninkaanpingviinikeskittymistä. Täysikasvuinen kuninkaanpingviini tuntee rantaveden houkuttelevana kalastuspaikkana ja seisoo usein pitkään aallokon reunalla ennen sukellustaan.',
+          tiedosto: 'Facing forward looking into the water King Penguin Falkland Islands.jpg',
+          lyhyt: 'Kuninkaanpingviini seisoo kivikkoisella rannalla katsoen veteen.',
+          selite:
+            'Kuvassa yksinäinen kuninkaanpingviini seisoo matalassa, kirkkaassa rantavedessä pyöreiden kivien keskellä ja katsoo tarkkaavaisesti eteensä ennen sukellustaan.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Volunteer Point',
+        },
+        {
+          otsikko: 'Kalliolla hyppivä pingviini',
+          teksti:
+            'Falklandinsaarten viidestä pesivästä pingviinilajista pienin on kalliopingviini, joka on saanut nimensä tavastaan kiivetä jyrkkiä rantakallioita molemmilla jaloilla yhtä aikaa hyppien sen sijaan, että se kävelisi. Lajin tuntee helposti keltaisista, piikkimäisistä höyhentöyhdöistä silmien yläpuolella sekä räikeän oranssista nokasta. Kalliopingviinit pesivät suurina, meluisina yhdyskuntina tuulisilla rannikkokallioilla, usein samoilla alueilla kuin mustakulmikkaat albatrossit, ja molemmat lajit sietävät hyvin toistensa läheisyyttä. Falklandinsaaret ovat edelleen yksi lajin tärkeimmistä pesimäalueista koko eteläisellä pallonpuoliskolla.',
+          tiedosto: 'Falkland Islands Penguins 87.jpg',
+          lyhyt: 'Kalliopingviinien ryhmä keltaisine höyhentöyhtöineen ja oransseine nokkineen.',
+          selite:
+            'Lähikuvassa näkyy joukko kalliopingviinejä, joiden silmien yläpuolella heiluu keltaisia, piikkimäisiä höyhentöyhtöjä ja joiden nokat hehkuvat kirkkaan oransseina.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Southern rockhopper penguin',
+        },
+        {
+          otsikko: 'Gentoopingviinien hiekkarannat',
+          teksti:
+            'Gentoopingviinit suosivat Falklandinsaarilla laajoja, tasaisia hiekkarantoja, joilta matka kalastusvesille on lyhyt ja loiva. Toisin kuin kalliopingviini, laji ei juurikaan kiipeile, vaan kävelee pystyasennossa hitaasti mutta vakaasti pesimäalueensa ja rantaviivan väliä. Sen tuntee oranssinpunaisesta nokasta ja jaloista sekä valkoisesta, silmien yläpuolelle ulottuvasta höyhenkuviosta. Falklandinsaarilla elää maailman suurin gentoopingviinikanta, ja lajin poikaset kasvavat nopeasti isoiksi ja tummanharmaiksi ennen kuin ne saavat aikuisten selvän mustavalkoisen puvun. Rannoilla pesivät yhdyskunnat näkyvät jo kaukaa mustina ja valkoisina täplinä hiekalla.',
+          tiedosto: 'Gentoo-Colony.jpg',
+          lyhyt: 'Gentoopingviinejä oransseine jalkoineen valkoisella hiekkarannalla.',
+          selite:
+            'Kuvassa suuri joukko gentoopingviinejä seisoo ja kävelee valkoisella hiekkarannalla, oranssinpunaiset jalat ja nokat selvästi erottuen, vuoret ja meri taustalla.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Gentoo penguin',
+        },
+        {
+          otsikko: 'Maailman suurin albatrossiyhdyskunta',
+          teksti:
+            'Falklandinsaaret ovat mustakulmikasalbatrossin tärkein pesimäalue koko maailmassa: saarilla pesii arviolta kaksi kolmasosaa lajin koko maailmankannasta, satojatuhansia pareja. Lintu tunnistaa jopa yli kahden metrin siipivälistään sekä tummasta, kulmakarvamaisesta silmänympärysjuovastaan, josta laji on saanut suomenkielisen nimensä. Toisin kuin monet sukulaislajit, jotka pesivät jyrkillä, tuussakkiheinän peittämillä rinteillä, Falklandinsaarten albatrossit pesivät usein avoimella rantatasangolla lähellä merta. Linnut ovat uskollisia pesäpaikoilleen ja palaavat samalle kalliolle vuodesta toiseen munimaan yhden ainoan munan.',
+          tiedosto: 'Black-browed-albatross-Colony.jpg',
+          lyhyt: 'Mustakulmikasalbatrosseja pesimässä jäkäläisellä rantakalliolla.',
+          selite:
+            'Kuvassa valkoisia mustakulmikasalbatrosseja lepää keltajäkäläisen rantakallion pesäpaikoillaan aivan meren äärellä, aallot pärskyvät kallioita vasten.',
+          lahde: 'Ben Tubby, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Black-browed albatross',
+        },
+        {
+          otsikko: 'Varra - Darwinin kesy susi',
+          teksti:
+            'Kun Charles Darwin vieraili Falklandinsaarilla vuonna 1833, hän tapasi saarten ainoan alkuperäisen maanisäkkään, sudenkaltaisen ketun eli varran, jota ei tavattu muualla. Darwin hämmästeli eläimen pelottomuutta: asukkaat saattoivat houkutella sen lihanpalalla toisessa kädessä ja veitsellä toisessa, ja eläin saattoi kävellä telttaan varastamaan lihaa nukkuvan merimiehen pään alta. Darwin ennusti eläimen häviävän sukupuuttoon muutamassa vuodessa, ja niin kävikin: turkismetsästys ja myrkytys - osin siksi, että pelästyneet lampaat luultiin sen saalistamiksi - hävittivät varran Itä-Falklandilta 1860-luvulla, ja viimeinen tunnettu yksilö kuoli vuonna 1876.',
+          tiedosto: 'Falkland Island wolf, Dusicyon australis OMNZVT2369 !1pub.jpg',
+          lyhyt: 'Varran täytetty museonäyttely, sudenkaltainen kettu Falklandinsaarilta.',
+          selite:
+            'Kuvassa on Otago-museon täytetty varra-näyttelykappale, jonka jalustassa lukee "Canis Antarcticus, Falkland Island" - ainoa tapa nähdä laji nykyään, sillä se hävisi sukupuuttoon jo 1800-luvulla.',
+          lahde: 'Kane Fleury / MothmanNZ, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Warrah',
         },
       ],
     },

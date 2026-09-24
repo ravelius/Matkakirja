@@ -63,7 +63,10 @@
  */
 
 /** Kroatian hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_HRV = [
+  ...EUROOPAN_KADONNEET.HRV,
   {
     id: 'hahmotelma-krka',
     kuva: {
@@ -1577,5 +1580,108 @@ export const HAHMOTELMA_HRV = [
       + 'itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen '
       + 'epätavallisena matkailukohteena.',
     lahde: 'en-Wikipedia "Đurđevac", koko artikkeli (tarkistettu 19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-salona-amfiteatteri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/hrv-nosto-salona-amfiteatteri-5b371c4c.jpg',
+      lyhyt: 'Salonan amfiteatterin sortuneet kiviholvit ja ympärysmuurin rauniot.',
+      selite: 'Kuvassa on Salonan amfiteatterin raunioita: kolme pyöreäkaarista kiviholvia '
+        + 'kohoaa särkyneiden muurinpätkien keskellä pilvisen taivaan alla, ja penkkirivien '
+        + 'kivilohkareet peittyvät ruohoon etualalla.',
+      lahde: 'Valokuva: Bieniecki Piotr, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Bieniecki Piotr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Salona_amphitheater.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Salonan amfiteatteri',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuinka monta katsojaa amfiteatteriin mahtui parhaimmillaan?',
+      'Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?',
+    ],
+    korostukset: ['turkkilaissodissa|turkkilaissodissa', 'gladiaattoriotteluita|gladiaattoriotteluita'],
+    nappi: 'Dalmatian pääkaupungin areena, jonka venetsialaiset purkivat sotastrategian vuoksi',
+    // 16.473956 E / 43.538469 N — en-Wikipedia "List of Roman amphitheatres" (Salona-rivi)
+    laudat: {
+      maailmankartta: { x: 6382.5, y: 1661.6 },
+      europe: { x: 527.5, y: 748.5 },
+    },
+    teksti: 'Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin '
+      + '100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena '
+      + '65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa '
+      + 'seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne '
+      + 'kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen '
+      + 'kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan '
+      + '600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan '
+      + '— siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin '
+      + 'kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, '
+      + 'kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi '
+      + 'linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa '
+      + 'Solinissa.',
+    lahde: 'en-Wikipedia "Salona" (osio "Amphitheatre") ja "List of Roman amphitheatres" '
+      + '(Salona-rivi), tarkistettu 21.9.2026.',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-salona-amfiteatteri-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 200-luvulla Salonan amfiteatterin katsomo täyttyi tuhansista '
+        + 'katsojista, jotka seurasivat gladiaattoriotteluita Rooman Dalmatian provinssin '
+        + 'pääkaupungin areenalla.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Salona", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Salona',
+    },
+  },
+  {
+    id: 'hahmotelma-cacvina',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/hrv-nosto-cacvina-72e23a51.jpg',
+      lyhyt: 'Näkymä Čačvinan linnan raunioituneelta huipulta vihreille kukkuloille ja vuorille.',
+      selite: 'Kuvassa avautuu näkymä Čačvinan linnan rapistuneelta kivimuurilta yli vehreän '
+        + 'Dinaridien maaston kohti sinistä, pilvistä taivasta ja etäisiä vuoria; etualalla '
+        + 'harmaa kiviraunio ja lippusalko.',
+      lahde: 'Valokuva: Brian Eager, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Brian Eager',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C4%8Ca%C4%8Dvina_Fortress_-_Inland_Dalmatia_(26372378304).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Čačvinan linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minä vuonna osmanit valtasivat Čačvinan?',
+      'Kuka purki linnan ja minä vuonna?',
+    ],
+    korostukset: ['Kosača|Kosača', 'Dinaridien|Dinaridien'],
+    nappi: 'Dinaridien solan vartiolinna, jonka Ranskan vallan aikana purettiin',
+    // 16.79944 E / 43.60833 N — en-Wikipedia "Čačvina Fortress" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 6393.3, y: 1658.7 },
+      europe: { x: 533.7, y: 746.7 },
+    },
+    teksti: 'Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin '
+      + 'korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon '
+      + 'Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, '
+      + 'ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului '
+      + 'Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan '
+      + 'otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić '
+      + 'Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit '
+      + 'valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina '
+      + 'vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui '
+      + '1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.',
+    lahde: 'en-Wikipedia "Čačvina Fortress", osio "History" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-cacvina-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Kukoistuskaudellaan 1400-luvun puolivälissä Čačvinan linna oli aatelin '
+        + 'hallinnoima vartiolinnoitus, jonka torneista vartijat tähyilivät Dinaridien solaan '
+        + 'saapuvia kauppakaravaaneja Bosniasta.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Čačvina Fortress", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/%C4%8Ca%C4%8Dvina_Fortress',
+    },
   },
 ];

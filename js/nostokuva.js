@@ -117,6 +117,53 @@ export const NOSTOKUVA_PYSTYVARA = 150;
 /** Kuvasuhteen oletus, kun kuva ei ole vielä latautunut (3:2 havainnekuva). */
 const NOSTOKUVA_OLETUSSUHDE = 3 / 2;
 
+/*
+ * NOSTOKORTIN KAKSIPALSTATAITTO (omistaja 21.9.2026, Le Mans -kaappaus
+ * työpöydällä; css/fokusnosto.css osio 13). Kaksi sääntöä samalla
+ * lipulla (`kaksipalstaTaitto: true`). KAIKKI kutsujat pyytävät sen
+ * 22.9.2026 alkaen (omistaja klo 23.06: *"Kaikkiin nostoihin kaksi
+ * palstaa. Ja niin että ensin Kuva avautuu isona ja kun klikkaa niin
+ * sitten kuva pienenee ja tulee teksti palsta mukaan oikealle."*) —
+ * nostokortti, kohdekortti, skandaali, eläintäky, historian hetki ja
+ * syvennys. Palstat rakentaa `nostoPalstoiksi` (alla) niille
+ * kutsujille, jotka eivät rakenna niitä itse:
+ *
+ *   1. ALLE NOSTOKUVA_LEVEA_RAJAn kortti pysyy nykyisessä pinossa (kuva
+ *      ylhäällä, teksti alla), mutta leveys ei enää kasva kuvan ehdoilla
+ *      lähes ruudun levyiseksi — katto on NOSTOKUVA_KAPEA_KATTO (~760 px).
+ *   2. RAJAN YLÄPUOLELLA VAIHEESSA 1 kuva on ISO (sama sovitus kuin
+ *      pinossa, katettuna niin että kortti pysyy NOSTOKUVA_LEVEA_KATON
+ *      alla) — omistajan "ensin kuva avautuu isona". VAIHEESSA 2
+ *      koko kortti rajataan NOSTOKUVA_LEVEA_KATTOon
+ *      (~1100 px, omistajan tarkennus 21.9.2026: alkuperäinen "kortti
+ *      pysyy yhtä leveänä kuin ennen tätä muutosta" venytti kortin
+ *      1300+ px:iin isolla ruudulla eikä rajannut sitä mitenkään). KUVA
+ *      itse kapenee NOSTOKUVA_KUVAPALSTA_OSUUS-osuuteen TÄSTÄ katetusta
+ *      pohjasta (pystykuvalla NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS) —
+ *      vapautunut tila antaa css:n kuvapalsta/tekstipalsta-koteloille
+ *      (css/fokusnosto.css osio 13) oikean levyisen tekstipalstan kuvan
+ *      viereen. OSUUSLUVUT OVAT KATTOJA CSS:N PUOLELLA (`.fokusnosto-
+ *      kuvapalsta max-width`), EI ainoa totuus: kuva mitoitetaan
+ *      pikselilleen täällä, css varmistaa vain sen harvinaisen polun,
+ *      jossa JS ei ehdi mitoittaa kuvaa.
+ */
+export const NOSTOKUVA_LEVEA_RAJA = 1100;
+/** Vaiheen 2 kuvan kutistusliikkeen kesto leveällä (ks. kutistaNakyvasti). */
+export const NOSTOKUVA_KUTISTUS_MS = 260;
+export const NOSTOKUVA_LEVEA_KATTO = 1100;
+export const NOSTOKUVA_KAPEA_KATTO = 760;
+export const NOSTOKUVA_KUVAPALSTA_OSUUS = 0.5;
+export const NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS = 0.32;
+/**
+ * Kortin oma tila (reunus, sisennys, mahdollinen vierityskaista) arviona
+ * — `jaadytaLeveys` mittaa tarkan luvun vasta ladonnan jälkeen, mutta
+ * kuvan oma leveyskatto on laskettava jo ennen sitä. Arvio on väljä
+ * tarkoituksella: `jaadytaLeveys`in oma `enintaan`-katto on silti viime
+ * kädessä se, joka takaa katon pitävän (kapealla ~760 px, leveällä
+ * ~1100 px).
+ */
+const NOSTOKUVA_VARA_ARVIO = 48;
+
 /**
  * Ison kuvan mitat ruudulla.
  *
@@ -126,7 +173,7 @@ const NOSTOKUVA_OLETUSSUHDE = 3 / 2;
  * Tässä varataan sen lisäksi kortin oma paperitila.
  */
 export function nostokuvanMitat({
-  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity,
 } = {}) {
   const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
     && Number.isFinite(kuvaKorkeus) && kuvaKorkeus > 0;
@@ -137,6 +184,7 @@ export function nostokuvanMitat({
     ruutuKorkeus,
     vaakaVara: NOSTOKUVA_VAAKAVARA,
     pystyVara: NOSTOKUVA_PYSTYVARA,
+    enintaanLeveys,
   });
   return { leveys, korkeus };
 }
@@ -149,12 +197,12 @@ export function nostokuvanMitat({
  * täyttää kortin" -mitta — ja pystykuva sovitetaan siihen sisään
  * (`nostokuvanSovitus`) eikä kavenna korttia.
  *
- * @param {{ruutuLeveys:number, ruutuKorkeus:number}} p
+ * @param {{ruutuLeveys:number, ruutuKorkeus:number, enintaanLeveys?:number}} p
  * @returns {number} kuva-alan vakioleveys pikseleinä (0 = ei ruutua)
  */
-export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus } = {}) {
+export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity } = {}) {
   return nostokuvanMitat({
-    kuvaLeveys: 3000, kuvaKorkeus: 3000 / NOSTOKUVA_OLETUSSUHDE, ruutuLeveys, ruutuKorkeus,
+    kuvaLeveys: 3000, kuvaKorkeus: 3000 / NOSTOKUVA_OLETUSSUHDE, ruutuLeveys, ruutuKorkeus, enintaanLeveys,
   }).leveys;
 }
 
@@ -165,15 +213,15 @@ export function nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus } = {}) {
  * mahtuu aina kokonaan ruudulle, ja pystykuva jää kapeammaksi keskelle.
  *
  * @param {{kuvaLeveys:number, kuvaKorkeus:number, ruutuLeveys:number,
- *   ruutuKorkeus:number}} p
+ *   ruutuKorkeus:number, enintaanLeveys?:number}} p
  * @returns {{leveys:number, korkeus:number, vakioleveys:number}}
  */
 export function nostokuvanSovitus({
-  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys = Infinity,
 } = {}) {
-  const vakioleveys = nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus });
+  const vakioleveys = nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus, enintaanLeveys });
   const oma = nostokuvanMitat({
-    kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+    kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus, enintaanLeveys,
   });
   if (!vakioleveys || !oma.leveys || !oma.korkeus) return { leveys: 0, korkeus: 0, vakioleveys };
   const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
@@ -276,12 +324,88 @@ function nostokuvaLataaTyyli() {
   document.head.appendChild(linkki);
 }
 
-/** Ruudun mitat; testattavuuden takia yhdessä paikassa. */
-function nostokuvaRuutu() {
-  return {
-    leveys: globalThis.innerWidth || 0,
-    korkeus: globalThis.innerHeight || 0,
+/**
+ * TURVA-ALUE (omistajan iPhone-kaappaus 21.9.2026, v2021, skandaali
+ * "Kuningattaren kaulanauhajuttu": kortti alkoi tilarivin alta,
+ * kellonaika peitti otsikkorivin ja sulkunappi oli akkukuvakkeen
+ * päällä). Sivu on viewport-fit=cover, joten `innerHeight` ulottuu
+ * tilarivin ja kotipalkin alle. Insetit luetaan :root-muuttujista
+ * `--turva-*` (css/styles.css, env(safe-area-inset-*)), jotka selain
+ * antaa pikseleinä; ilman dokumenttia tai muuttujaa inset on 0.
+ * Savuke voi pakottaa arvot samoihin muuttujiin (tools/savukkeet/
+ * savuke-kortti-turva-alue.mjs). Puhdas lukija, ei tilaa.
+ */
+export function nostokuvaTurvaAlue(doc = globalThis.document) {
+  const juuri = doc?.documentElement;
+  if (!juuri || typeof getComputedStyle !== 'function') return { yla: 0, ala: 0, vasen: 0, oikea: 0 };
+  const tyyli = getComputedStyle(juuri);
+  const lue = (nimi) => {
+    const v = Number.parseFloat(tyyli.getPropertyValue(nimi));
+    return Number.isFinite(v) && v > 0 ? v : 0;
   };
+  return { yla: lue('--turva-yla'), ala: lue('--turva-ala'), vasen: lue('--turva-vasen'), oikea: lue('--turva-oikea') };
+}
+
+/**
+ * Ruudun mitat; testattavuuden takia yhdessä paikassa. `leveys` ja
+ * `korkeus` ovat TURVA-ALUEEN SISÄPUOLINEN ruutu, ja `vasen`/`yla`
+ * sen alkupiste: kaikki kortin `left`/`top`-arvot lasketaan tässä
+ * ruudussa ja kirjoitetaan siirrettyinä (asetaKortinYlin/lueKortinYlin).
+ */
+function nostokuvaRuutu() {
+  const turva = nostokuvaTurvaAlue();
+  return {
+    leveys: Math.max(0, (globalThis.innerWidth || 0) - turva.vasen - turva.oikea),
+    korkeus: Math.max(0, (globalThis.innerHeight || 0) - turva.yla - turva.ala),
+    vasen: turva.vasen,
+    yla: turva.yla,
+  };
+}
+
+/**
+ * KAKSI PALSTAA KORTILLE, JOKA EI RAKENNA NIITÄ ITSE (omistaja 22.9.2026
+ * klo 23.06, ks. NOSTOKUVA_LEVEA_RAJA yllä).
+ *
+ * js/fokusnosto.js latoo palstat itse (piirraNostonSisus). Muut kutsujat
+ * — kohdekortti, skandaali, eläintäky, historian hetki, syvennys —
+ * latovat sisällön yhtenä pinona: ylärivi, otsikko, kuva (mahdollisesti
+ * gallerian tai karusellin sisällä), teksti ja loput. Tämä jakaa
+ * VALMIIN pinon samaan muotoon kuin nostokortti: kuvaa edeltävät lapset
+ * (ylärivi, otsikko, medianapit) jäävät palstojen yläpuolelle, kuvan
+ * sisältävä lapsi — kuvateksteineen, pisteineen ja nuolineen —
+ * kuvapalstaan, ja kaikki sen jälkeen tekstipalstaan. Kuvakehys
+ * siirretään SOLMUNA, ei kopioida: sama <img>, ei uutta latausta, ei
+ * välähdystä.
+ *
+ * Luokat ovat nostokortin omat (.fokusnosto-rivi, -kuvapalsta,
+ * -tekstipalsta), joten css/fokusnosto.css osio 13 koskee kaikkia
+ * kuoria yhdellä säännöllä. Kapealla ruudulla rivi on tavallinen
+ * lohko, eli pino näyttää täsmälleen samalta kuin ennen.
+ *
+ * Palauttaa true, jos palstat rakennettiin; false, jos kuvaa ei ole
+ * kotelossa tai palstat ovat jo olemassa (nostokortti).
+ *
+ * @param {Element} kotelo  kortin sisältökotelo
+ * @param {Element} kehys   kuvakehys (nostokuva-kehys), joka on kotelossa
+ */
+export function nostoPalstoiksi(kotelo, kehys) {
+  if (!kotelo || !kehys || typeof document === 'undefined') return false;
+  if ([...kotelo.children].some((lapsi) => lapsi.classList?.contains('fokusnosto-rivi'))) return false;
+  // parentNode ja childNodes (ei parentElement/nextSibling): toimii sekä
+  // selaimessa että testien pienessä DOM-mallissa.
+  let kuvaLapsi = kehys;
+  while (kuvaLapsi && kuvaLapsi.parentNode !== kotelo) kuvaLapsi = kuvaLapsi.parentNode;
+  if (!kuvaLapsi) return false;
+  const lapset = [...kotelo.childNodes];
+  const jalkeen = lapset.slice(lapset.indexOf(kuvaLapsi) + 1);
+  const rivi = html('div', 'fokusnosto-rivi');
+  const kuvapalsta = html('div', 'fokusnosto-kuvapalsta');
+  const tekstipalsta = html('div', 'fokusnosto-tekstipalsta');
+  kotelo.insertBefore(rivi, kuvaLapsi);
+  kuvapalsta.appendChild(kuvaLapsi);
+  tekstipalsta.append(...jalkeen);
+  rivi.append(kuvapalsta, tekstipalsta);
+  return true;
 }
 
 /**
@@ -304,11 +428,17 @@ function nostokuvaRuutu() {
  *   oma lisä kuvan päälle (kartan tietoruudun ihmenauha)
  * @param {() => void} [p.onKuvatta] kutsutaan, kun kuvaesittely on peruttu
  *   (kuva jäi lataamatta); kortti on silloin jo ladottu tekstikorttina.
+ * @param {boolean} [p.kaksipalstaTaitto] kaksipalstataitto (ks.
+ *   NOSTOKUVA_LEVEA_RAJA yllä): kapea katto alle rajan; sen yläpuolella
+ *   vaiheen 1 kuva on iso ja vaiheessa 2 kuva pienenee vasempaan
+ *   palstaan ja teksti tulee oikealle. Kaikki kutsujat pyytävät tämän
+ *   (omistaja 22.9.2026); oletus false on vain testejä ja tulevia
+ *   kutsujia varten.
  * @returns {{ kehys:Element, vaihe:() => string, lisaa:() => void } | null}
  */
 export function nostokuvaAloita({
   kortti, sisalto, kuva, aseta, latoNosto,
-  avaaSuurennos = null, onKuvatta = null, koristele = null,
+  avaaSuurennos = null, onKuvatta = null, koristele = null, kaksipalstaTaitto = false,
 }) {
   if (typeof document === 'undefined' || !kortti || !sisalto || !kuva) return null;
   nostokuvaLataaTyyli();
@@ -390,9 +520,54 @@ export function nostokuvaAloita({
    * jälkeen mittaan ei kosketa: kuvan laatikko on silloin lukossa.
    */
   let vakioleveys = 0;
+  /*
+   * KORTIN OMA LEVEYSPOHJA (ks. NOSTOKUVA_LEVEA_RAJA-kommentti yllä).
+   * Normaalisti sama kuin `vakioleveys` (kuvan oma laatikko), mutta
+   * kaksipalstataiton LEVEÄLLÄ puolella kortin pohja on rajoittamaton
+   * leveys KATETTUNA NOSTOKUVA_LEVEA_KATTOon (~1100 px) — kuva itse
+   * kapenee osuuteensa siitä, ja vapautunut tila menee tekstipalstalle
+   * (css/fokusnosto.css osio 13, .fokusnosto-tekstipalsta).
+   */
+  let korttiVakioleveys = 0;
+  /** Kortin `top` turva-alueen ruudussa ↔ ruudun koordinaatit (nostokuvaRuutu). */
+  const asetaKortinYlin = (ylin) => { kortti.style.top = `${nostokuvaRuutu().yla + ylin}px`; };
+  const lueKortinYlin = () => (Number.parseFloat(kortti.style.top) || 0) - nostokuvaRuutu().yla;
   const mitoita = () => {
     const ruutu = nostokuvaRuutu();
     if (!ruutu.leveys || !ruutu.korkeus) return;
+    const kapea = kaksipalstaTaitto && ruutu.leveys < NOSTOKUVA_LEVEA_RAJA;
+    const leveaKaksi = kaksipalstaTaitto && !kapea;
+    let enintaanLeveys = Infinity;
+    let korttiPohja = 0;
+    if (kapea) {
+      /*
+       * KAPEA KATTO KUVAN OMALLE LEVEYDELLE. Arvio VARAsta vähennettynä
+       * KAPEA_KATTOsta, jotta kuva + kortin oma tila (reunus, sisennys,
+       * vierityskaista) mahtuu KAPEA_KATTOn alle — `jaadytaLeveys` alla
+       * vartioi lopullisen luvun joka tapauksessa.
+       */
+      enintaanLeveys = NOSTOKUVA_KAPEA_KATTO - NOSTOKUVA_VARA_ARVIO;
+    } else if (leveaKaksi && vaihe !== 1) {
+      /*
+       * VAIHE 2 LEVEÄLLÄ: kuva kapenee palstaansa. Rajoittamaton pohja
+       * ensin, sitten katettuna LEVEA_KATTOon: koko kortti — ei vain
+       * kuva — pysyy ~1100 px:n rajan sisällä.
+       *
+       * VAIHEESSA 1 tätä haaraa EI ajeta (omistaja 22.9.2026 klo 23.06:
+       * *"ensin Kuva avautuu isona ja kun klikkaa niin sitten kuva
+       * pienenee"*): vaiheen 1 kuva sovitetaan kuten pinossa, eli
+       * lähes ruudun kokoisena, ja kortti on kuvan levyinen.
+       */
+      const luonnollinenVakioleveys = nostokuvanVakioleveys({
+        ruutuLeveys: ruutu.leveys, ruutuKorkeus: ruutu.korkeus,
+      });
+      korttiPohja = Math.min(luonnollinenVakioleveys, NOSTOKUVA_LEVEA_KATTO - NOSTOKUVA_VARA_ARVIO);
+      // Pystykuva saa OMAN, kapeamman osuutensa (sama tunnistus kuin
+      // kortin fokusnosto-pysty-luokka, ks. seuraaKuvanSuuntaa alla).
+      const pysty = img.naturalWidth > 0 && img.naturalHeight > img.naturalWidth;
+      enintaanLeveys = korttiPohja
+        * (pysty ? NOSTOKUVA_KUVAPALSTA_PYSTY_OSUUS : NOSTOKUVA_KUVAPALSTA_OSUUS);
+    }
     // Vakioleveys ja contain-sovitus (nostokuvanSovitus): kortti on aina
     // vaakakuvan levyinen, pystykuva kapeampana keskellä.
     const sovitus = nostokuvanSovitus({
@@ -400,9 +575,11 @@ export function nostokuvaAloita({
       kuvaKorkeus: img.naturalHeight,
       ruutuLeveys: ruutu.leveys,
       ruutuKorkeus: ruutu.korkeus,
+      enintaanLeveys,
     });
     if (!sovitus.leveys || !sovitus.korkeus) return;
     vakioleveys = sovitus.vakioleveys;
+    korttiVakioleveys = leveaKaksi && vaihe !== 1 ? korttiPohja : vakioleveys;
     img.style.width = `${Math.round(sovitus.leveys)}px`;
     img.style.height = `${Math.round(sovitus.korkeus)}px`;
   };
@@ -429,7 +606,19 @@ export function nostokuvaAloita({
    * sellaisenaan (omistajan tilaus 11.9.2026).
    */
   const jaadytaLeveys = () => {
-    const enintaan = Math.max(0, nostokuvaRuutu().leveys - 2 * NOSTOKUVA_MARGINAALI);
+    const ruutuLeveys = nostokuvaRuutu().leveys;
+    let enintaan = Math.max(0, ruutuLeveys - 2 * NOSTOKUVA_MARGINAALI);
+    // KATTO — VIIMEINEN VARTIO (kaksipalstaTaitto, ks. yllä): vaikka
+    // kuvan oma leveys olisi arvioitu väärin, kortti ei silti ylitä
+    // KAPEA_KATTOa alle NOSTOKUVA_LEVEA_RAJAn eikä LEVEA_KATTOa sen
+    // yläpuolella.
+    if (kaksipalstaTaitto && ruutuLeveys < NOSTOKUVA_LEVEA_RAJA) {
+      enintaan = Math.min(enintaan, NOSTOKUVA_KAPEA_KATTO);
+    } else if (kaksipalstaTaitto && vaihe !== 1) {
+      // Vaiheessa 1 leveällä kortti on pelkkä iso kuva: katto vasta
+      // vaiheessa 2, kun kortti saa tekstipalstan.
+      enintaan = Math.min(enintaan, NOSTOKUVA_LEVEA_KATTO);
+    }
     const kuvanLeveys = Number.parseFloat(img.style.width) || 0;
     /*
      * VIERITYSPALKIN KAISTA MUKAAN. Vaiheessa 2 sisältö vierittyy, ja
@@ -442,8 +631,10 @@ export function nostokuvaAloita({
     const vara = reunat(kortti) + reunat(sisalto) + kaista;
     kortti.style.maxWidth = `${enintaan}px`;
     // KORTIN LEVEYS ON VAKIO (nostokuvanVakioleveys), ei kuvan leveys:
-    // pystykuva ei kavenna korttia (omistaja 20.9.2026).
-    kortti.style.width = `${Math.round(Math.min((vakioleveys || kuvanLeveys) + vara, enintaan))}px`;
+    // pystykuva ei kavenna korttia (omistaja 20.9.2026). Kaksipalstataiton
+    // leveällä puolella pohja on `korttiVakioleveys` (rajoittamaton), EI
+    // `vakioleveys` (joka on siellä kapeampi, kuvan oma palstaosuus).
+    kortti.style.width = `${Math.round(Math.min((korttiVakioleveys || vakioleveys || kuvanLeveys) + vara, enintaan))}px`;
   };
 
   /**
@@ -455,10 +646,10 @@ export function nostokuvaAloita({
     const ruutu = nostokuvaRuutu();
     const laatikko = kortti.getBoundingClientRect();
     const vasen = Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.leveys - laatikko.width) / 2));
-    kortti.style.left = `${vasen}px`;
-    kortti.style.top = `${nostokuvanYlin({
+    kortti.style.left = `${ruutu.vasen + vasen}px`;
+    asetaKortinYlin(nostokuvanYlin({
       korkeus: laatikko.height, ruutuKorkeus: ruutu.korkeus,
-    })}px`;
+    }));
   };
 
   const asemoi = () => {
@@ -514,6 +705,14 @@ export function nostokuvaAloita({
     if (korkeus) img.style.height = `${Math.round(korkeus)}px`;
   };
   img.addEventListener('load', () => {
+    /*
+     * PYSTYKUVA KAVENTAA KUVAPALSTAA kaikilla kuorilla (css/fokusnosto.css
+     * osio 13 .fokusnosto-pysty). js/fokusnosto.js asettaa saman luokan
+     * omalle kortilleen; tämä kattaa muut kutsujat samalla säännöllä.
+     */
+    if (kaksipalstaTaitto && img.naturalWidth && img.naturalHeight) {
+      kortti.classList.toggle('fokusnosto-pysty', img.naturalHeight > img.naturalWidth);
+    }
     if (vaihe === 1) { asemoi(); return; }
     if (vaihe === 2) sovitaLukittuLaatikko();
   });
@@ -540,11 +739,29 @@ export function nostokuvaAloita({
     //    elementtiä, ei src:n vaihtoa.
     sisalto.replaceChildren();
     latoNosto(sisalto, kehys);
+    /*
+     * KAKSI PALSTAA JA KUVA PIENENEE (omistaja 22.9.2026 klo 23.06).
+     * Vain leveällä (≥ NOSTOKUVA_LEVEA_RAJA): pino jaetaan palstoiksi,
+     * kuva kapenee palstaansa ja kortti levenee ~1100 px:iin
+     * tekstipalstaa varten. Kapealla mitään ei muuteta — pino, kuva ja
+     * kortti pysyvät pikselilleen ennallaan kuten tähänkin asti.
+     */
+    const leveaRuutu = kaksipalstaTaitto && nostokuvaRuutu().leveys >= NOSTOKUVA_LEVEA_RAJA;
+    const palstoina = leveaRuutu && nostoPalstoiksi(sisalto, kehys);
+    const leveaVaihe2 = leveaRuutu
+      && Boolean(palstoina || sisalto.querySelector('.fokusnosto-rivi'));
+    if (leveaVaihe2) {
+      mitoita();
+      jaadytaLeveys();
+      const ruutu = nostokuvaRuutu();
+      const leveys = kortti.getBoundingClientRect().width;
+      kortti.style.left = `${ruutu.vasen + Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.leveys - leveys) / 2))}px`;
+    }
     kortti.style.maxHeight = `${Math.max(0, nostokuvaRuutu().korkeus - 2 * NOSTOKUVA_MARGINAALI)}px`;
     // 3) MITTA JÄLKEEN JA KORJAUS.
     const jalkeen = img.getBoundingClientRect();
     const korjaus = nostokuvanKorjaus({
-      ylin: Number.parseFloat(kortti.style.top) || 0,
+      ylin: lueKortinYlin(),
       delta: jalkeen.top - ennen.top,
       korkeus: kortti.getBoundingClientRect().height,
       ruutuKorkeus: nostokuvaRuutu().korkeus,
@@ -562,7 +779,7 @@ export function nostokuvaAloita({
      * korkeuskatto (nostokuvanSovitus) pitävät kuvan ruudulla.
      */
     sisalto.scrollTop = 0;
-    kortti.style.top = `${Math.max(NOSTOKUVA_MARGINAALI, korjaus.ylin)}px`;
+    asetaKortinYlin(Math.max(NOSTOKUVA_MARGINAALI, korjaus.ylin));
     /*
      * KORTIN ALALAITA RUUDUN SISÄÄN. Kuva pysyy paikallaan siksi, että
      * kortti saa liukua alaspäin — mutta silloin sen alaosa jäisi
@@ -586,10 +803,52 @@ export function nostokuvaAloita({
     // Jäännös korjataan vain, jos kortti ei jo lepää yläreunassa:
     // otsikon näkyvyys voittaa kuvan paikallaanpysymisen (ks. yllä).
     const jaannos = img.getBoundingClientRect().top - ennen.top;
-    const yla = Number.parseFloat(kortti.style.top) || 0;
+    const yla = lueKortinYlin();
     if (jaannos && yla - jaannos >= NOSTOKUVA_MARGINAALI) {
-      kortti.style.top = `${yla - jaannos}px`;
+      asetaKortinYlin(yla - jaannos);
     }
+    if (leveaVaihe2) kutistaNakyvasti(ennen);
+  };
+
+  /*
+   * KUVA PIENENEE NÄKYVÄSTI, EI HYPPÄÄ (omistaja 22.9.2026 klo 23.06 ja
+   * 11.9.2026: kuva ei välähdä eikä hyppää vaiheenvaihdossa).
+   *
+   * Leveällä kuva kapenee vaiheessa 2 palstaansa, joten sen koko
+   * väistämättä muuttuu — mutta sen ei pidä vaihtua yhdessä kehyksessä.
+   * Sama <img> on paikallaan uudessa laatikossaan, ja siihen asetetaan
+   * hetkeksi muunnos, joka piirtää sen vielä VANHAAN laatikkoonsa
+   * (FLIP: first, last, invert, play). Seuraavassa kehyksessä muunnos
+   * puretaan siirtymällä, jolloin kuva liukuu ja pienenee paikalleen.
+   * Muunnos ei muuta ladontaa, joten tekstipalsta on heti oikeassa
+   * paikassa eikä mikään muu liiku. Vähennetyllä liikkeellä
+   * (prefers-reduced-motion) muunnosta ei aseteta lainkaan.
+   */
+  const kutistaNakyvasti = (ennen) => {
+    const vahennetty = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    if (vahennetty) return;
+    const nyt = img.getBoundingClientRect();
+    if (!nyt.width || !nyt.height || !ennen.width || !ennen.height) return;
+    const sx = ennen.width / nyt.width;
+    const sy = ennen.height / nyt.height;
+    const dx = ennen.left - nyt.left;
+    const dy = ennen.top - nyt.top;
+    if (Math.abs(sx - 1) < 0.01 && Math.abs(sy - 1) < 0.01 && Math.abs(dx) < 0.5 && Math.abs(dy) < 0.5) return;
+    img.style.transformOrigin = '0 0';
+    img.style.transition = 'none';
+    img.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
+    img.getBoundingClientRect();
+    const raf = globalThis.requestAnimationFrame ?? ((f) => setTimeout(f, 16));
+    raf(() => {
+      img.style.transition = `transform ${NOSTOKUVA_KUTISTUS_MS}ms cubic-bezier(0.2, 0.7, 0.2, 1)`;
+      img.style.transform = '';
+    });
+    const siivoa = () => {
+      img.style.transition = '';
+      img.style.transformOrigin = '';
+    };
+    img.addEventListener('transitionend', siivoa, { once: true });
+    setTimeout(siivoa, NOSTOKUVA_KUTISTUS_MS + 100);
   };
 
   lisaa.addEventListener('click', (tapahtuma) => {

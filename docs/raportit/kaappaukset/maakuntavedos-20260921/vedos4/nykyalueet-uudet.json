@@ -1,0 +1,708 @@
+[
+ {
+  "teksti": "Emilia-Romagna",
+  "luokka": "nykyalue",
+  "lon": 10.9,
+  "lat": 44.55,
+  "iso": "ITA",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Trentino-Alto Adige",
+  "luokka": "nykyalue",
+  "lon": 11.3,
+  "lat": 46.4,
+  "iso": "ITA",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Abruzzo",
+  "luokka": "nykyalue",
+  "lon": 13.848,
+  "lat": 42.23,
+  "iso": "ITA",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Friuli-Venezia Giulia",
+  "luokka": "nykyalue",
+  "lon": 12.9,
+  "lat": 46.2,
+  "iso": "ITA",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Molise",
+  "luokka": "nykyalue",
+  "lon": 14.593,
+  "lat": 41.687,
+  "iso": "ITA",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Aostanlaakso",
+  "luokka": "nykyalue",
+  "lon": 7.371,
+  "lat": 45.73,
+  "iso": "ITA",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Kastilia ja León",
+  "luokka": "nykyalue",
+  "lon": -5,
+  "lat": 41.7,
+  "iso": "ESP",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Kastilia-La Mancha",
+  "luokka": "nykyalue",
+  "lon": -2.9,
+  "lat": 39.5,
+  "iso": "ESP",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Madrid",
+  "luokka": "nykyalue",
+  "lon": -3.717,
+  "lat": 40.495,
+  "iso": "ESP",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Kantabria",
+  "luokka": "nykyalue",
+  "lon": -4.034,
+  "lat": 43.199,
+  "iso": "ESP",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "La Rioja",
+  "luokka": "nykyalue",
+  "lon": -2.496,
+  "lat": 42.28,
+  "iso": "ESP",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Ceuta",
+  "luokka": "nykyalue",
+  "lon": -5.347,
+  "lat": 35.892,
+  "iso": "ESP",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Melilla",
+  "luokka": "nykyalue",
+  "lon": -2.944,
+  "lat": 35.295,
+  "iso": "ESP",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Englanti",
+  "luokka": "nykyalue",
+  "lon": -1.3,
+  "lat": 52.6,
+  "iso": "GBR",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Skotlanti",
+  "luokka": "nykyalue",
+  "lon": -4.2,
+  "lat": 56.9,
+  "iso": "GBR",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Wales",
+  "luokka": "nykyalue",
+  "lon": -3.75,
+  "lat": 52.35,
+  "iso": "GBR",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Pohjois-Irlanti",
+  "luokka": "nykyalue",
+  "lon": -6.9,
+  "lat": 54.6,
+  "iso": "GBR",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Masovia",
+  "luokka": "nykyalue",
+  "lon": 21.2,
+  "lat": 52.6,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Suur-Puola",
+  "luokka": "nykyalue",
+  "lon": 17,
+  "lat": 52.3,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Varmia-Masuria",
+  "luokka": "nykyalue",
+  "lon": 20.769,
+  "lat": 53.85,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Länsi-Pommeri",
+  "luokka": "nykyalue",
+  "lon": 15.615,
+  "lat": 53.587,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Lublin",
+  "luokka": "nykyalue",
+  "lon": 22.9,
+  "lat": 51.243,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Podlasia",
+  "luokka": "nykyalue",
+  "lon": 22.883,
+  "lat": 53.279,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Ala-Sleesia",
+  "luokka": "nykyalue",
+  "lon": 16.3,
+  "lat": 51.2,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Łódź",
+  "luokka": "nykyalue",
+  "lon": 19.409,
+  "lat": 51.559,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Kujavia-Pommeri",
+  "luokka": "nykyalue",
+  "lon": 18.501,
+  "lat": 53.022,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Podkarpackie",
+  "luokka": "nykyalue",
+  "lon": 22.208,
+  "lat": 49.97,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Vähä-Puola",
+  "luokka": "nykyalue",
+  "lon": 20.3,
+  "lat": 49.9,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Lubuskie",
+  "luokka": "nykyalue",
+  "lon": 15.342,
+  "lat": 52.202,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Sleesia",
+  "luokka": "nykyalue",
+  "lon": 18.996,
+  "lat": 50.31,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Świętokrzyskie",
+  "luokka": "nykyalue",
+  "lon": 20.768,
+  "lat": 50.742,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Opole",
+  "luokka": "nykyalue",
+  "lon": 17.875,
+  "lat": 50.617,
+  "iso": "POL",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Ala-Itävalta",
+  "luokka": "nykyalue",
+  "lon": 15.6,
+  "lat": 48.3,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Steiermark",
+  "luokka": "nykyalue",
+  "lon": 15,
+  "lat": 47.2,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Tiroli",
+  "luokka": "nykyalue",
+  "lon": 11.4,
+  "lat": 47.25,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Ylä-Itävalta",
+  "luokka": "nykyalue",
+  "lon": 13.956,
+  "lat": 48.142,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Kärnten",
+  "luokka": "nykyalue",
+  "lon": 13.911,
+  "lat": 46.772,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Salzburg",
+  "luokka": "nykyalue",
+  "lon": 13.088,
+  "lat": 47.392,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Burgenland",
+  "luokka": "nykyalue",
+  "lon": 16.513,
+  "lat": 47.546,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Vorarlberg",
+  "luokka": "nykyalue",
+  "lon": 9.881,
+  "lat": 47.237,
+  "iso": "AUT",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Wien",
+  "luokka": "nykyalue",
+  "lon": 16.384,
+  "lat": 48.223,
+  "iso": "AUT",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Graubünden",
+  "luokka": "nykyalue",
+  "lon": 9.62,
+  "lat": 46.657,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Bern",
+  "luokka": "nykyalue",
+  "lon": 7.627,
+  "lat": 46.825,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Valais",
+  "luokka": "nykyalue",
+  "lon": 7.586,
+  "lat": 46.21,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Vaud",
+  "luokka": "nykyalue",
+  "lon": 6.657,
+  "lat": 46.572,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Ticino",
+  "luokka": "nykyalue",
+  "lon": 8.798,
+  "lat": 46.294,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "St. Gallen",
+  "luokka": "nykyalue",
+  "lon": 9.283,
+  "lat": 47.252,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Zürich",
+  "luokka": "nykyalue",
+  "lon": 8.646,
+  "lat": 47.417,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Fribourg",
+  "luokka": "nykyalue",
+  "lon": 7.082,
+  "lat": 46.719,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Luzern",
+  "luokka": "nykyalue",
+  "lon": 8.108,
+  "lat": 47.068,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Aargau",
+  "luokka": "nykyalue",
+  "lon": 8.154,
+  "lat": 47.412,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Uri",
+  "luokka": "nykyalue",
+  "lon": 8.625,
+  "lat": 46.775,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Thurgau",
+  "luokka": "nykyalue",
+  "lon": 9.109,
+  "lat": 47.563,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Schwyz",
+  "luokka": "nykyalue",
+  "lon": 8.749,
+  "lat": 47.064,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Jura",
+  "luokka": "nykyalue",
+  "lon": 7.15,
+  "lat": 47.348,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Neuchâtel",
+  "luokka": "nykyalue",
+  "lon": 6.779,
+  "lat": 46.996,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Solothurn",
+  "luokka": "nykyalue",
+  "lon": 7.641,
+  "lat": 47.305,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Glarus",
+  "luokka": "nykyalue",
+  "lon": 9.057,
+  "lat": 46.984,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Basel-Landschaft",
+  "luokka": "nykyalue",
+  "lon": 7.698,
+  "lat": 47.457,
+  "iso": "CHE",
+  "koko": "suuri",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Obwalden",
+  "luokka": "nykyalue",
+  "lon": 8.239,
+  "lat": 46.853,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Schaffhausen",
+  "luokka": "nykyalue",
+  "lon": 8.589,
+  "lat": 47.708,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Geneve",
+  "luokka": "nykyalue",
+  "lon": 6.118,
+  "lat": 46.222,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Nidwalden",
+  "luokka": "nykyalue",
+  "lon": 8.4,
+  "lat": 46.927,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Zug",
+  "luokka": "nykyalue",
+  "lon": 8.531,
+  "lat": 47.158,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Appenzell Ausserrhoden",
+  "luokka": "nykyalue",
+  "lon": 9.352,
+  "lat": 47.367,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Appenzell Innerrhoden",
+  "luokka": "nykyalue",
+  "lon": 9.402,
+  "lat": 47.32,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "teksti": "Basel-Stadt",
+  "luokka": "nykyalue",
+  "lon": 7.599,
+  "lat": 47.564,
+  "iso": "CHE",
+  "koko": "pieni",
+  "aika": "pysyva",
+  "muste": "ruoste-vahva"
+ },
+ {
+  "luokka": "raja",
+  "iso": "ITA",
+  "muste": "ruoste-vahva",
+  "viivat": 34
+ },
+ {
+  "luokka": "raja",
+  "iso": "ESP",
+  "muste": "ruoste-vahva",
+  "viivat": 38
+ },
+ {
+  "luokka": "raja",
+  "iso": "GBR",
+  "muste": "ruoste-vahva",
+  "viivat": 2
+ },
+ {
+  "luokka": "raja",
+  "iso": "POL",
+  "muste": "ruoste-vahva",
+  "viivat": 34
+ },
+ {
+  "luokka": "raja",
+  "iso": "AUT",
+  "muste": "ruoste-vahva",
+  "viivat": 14
+ },
+ {
+  "luokka": "raja",
+  "iso": "CHE",
+  "muste": "ruoste-vahva",
+  "viivat": 82
+ }
+]

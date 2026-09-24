@@ -267,6 +267,17 @@ const KEHYS = {
  * on tällöin 207 px tasolla z2 ja 104 px tasolla z1.
  */
 const KOMPASSI = { lon: -132, lat: -38, sade: 198 };
+/*
+ * VALTAMERTEN KORISTEET POHJAAN (`--koristeet <json>`, Karttaseppä
+ * 21.9.2026 ilta; maailmapiirto.js piirraMaailma osio 9): Codexin
+ * laivat ja kompassiruusut arkin kalusteina merten nimien ja ruusun
+ * rinnalla. Rivi { kuva, lon, lat, kokoPx, kierto?, tasot? }; kuvapolku
+ * repon juuresta. Oletustiedosto assets/koristeet/meri/pallo-koristeet.json.
+ * Karsinta (umpimeriSavy kohta 5) säästää laatat, joihin koriste osuu.
+ */
+const KORISTEET_LAHDE = valitsin('koristeet', null);
+const KORISTEET = KORISTEET_LAHDE ? JSON.parse(readFileSync(KORISTEET_LAHDE, 'utf8')) : [];
+const KORISTEIDEN_OLETUSTASOT = [1, 2, 3, 4, 5, 6];
 const MERET = [
   { nimi: 'TYYNIMERI', lon: -142, lat: 4, koko: 49 },
   { nimi: 'TYYNIMERI', lon: 163, lat: 18, koko: 49 },
@@ -301,15 +312,15 @@ const TASO0 = (12000 * TIHEYS) / 2 ** SYVIN_VIITE;
 
 if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
-    + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
+    + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] [--koristeet <json>] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
-    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>]] '
+    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
-    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--resepti-json <json>] [--joet-pohjaan] '
+    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--paperirae ruutu] [--resepti-json <json>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -994,6 +1005,15 @@ const PATINA_POHJA = PATINA_TASO === 'ei' ? null
 /** `--syvyysportaat 30,120,600,1500,3000` — meren syvyysvyöhykkeet portaina (koe). */
 const SYVYYSPORTAAT = valitsin('syvyysportaat', null)
   ? valitsin('syvyysportaat', null).split(',').map(Number).filter((v) => v > 0) : null;
+/** `--syvyyskayrat 200,1000,3000` — isobaatit ohuina viivoina (koe 21.9.2026, ks. maailmapiirto.js syvyysKayrat). */
+const SYVYYSKAYRAT = valitsin('syvyyskayrat', null)
+  ? valitsin('syvyyskayrat', null).split(',').map(Number).filter((v) => v > 0) : null;
+/** `--syvyyskayrapeitto 0.55` — isobaattiviivan peitto. */
+const SYVYYSKAYRAPEITTO = Number(valitsin('syvyyskayrapeitto', 0.55));
+/** `--syvyyskohina lauta` — vyöhykerajan kohina laudan yksiköissä (sama kuvio joka tasolla). */
+const SYVYYSKOHINA_LAUDALLA = valitsin('syvyyskohina', 'pikselit') === 'lauta';
+/** `--paperirae ruutu` — kuitu ja rae POIS laatasta (peli piirtää ne ruutuavaruudessa; ks. maailmapiirto.js paperiRaeRuudulla). */
+const PAPERIRAE_RUUDULLA = valitsin('paperirae', 'poltto') === 'ruutu';
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -1009,10 +1029,30 @@ const yhdistaResepti = (pohja, muutos) => {
   }
   return ulos;
 };
-const PATINA_MUUTOS = {
+/*
+ * `--resepti-json` YHDISTETÄÄN LIPPUJEN PÄÄLLE SISÄKKÄIN (23.9.2026):
+ * `{"vesiviivoitus":{"harvennus":"haive"}}` muuttaa vain sen kentän
+ * `--vesiviivoitus tumma` -asetuksista. Ennen JSON korvasi koko avaimen,
+ * ja vesiviivoitus jäi ilman parametrejaan.
+ */
+const PATINA_MUUTOS = yhdistaResepti({
   ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA] } : {}),
-  ...(RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : {}),
-};
+  /*
+   * `--paperirae ruutu` SAMMUTTAA PAPERIN HIENON RAKEEN MYÖS PATINASTA
+   * (omistaja 22.9.2026, vaihtoehto b). Rae, nyppy, kuitu, ristikuitu
+   * ja kuitukimppujen katkonta ovat kaikki paperipikselin mittaisia,
+   * eli juuri sitä kuviota, joka on joka tasolla eri kohdassa maailmaa
+   * ja joka sekoittuu tasonvaihdon häivytyksessä liaksi. Peli piirtää
+   * ne ruutuavaruudessa (js, Pelikoodari), jolloin paperintuntu on
+   * vakio eikä välky. Ikääntymisen laikku EI ole tässä: se on jo
+   * sidottu laudalle (`maailmaX/maailmaY`) ja saa jäädä laattaan.
+   */
+  ...(PAPERIRAE_RUUDULLA ? {
+    paperi: {
+      rae: 0, raeKarkea: 0, kuitu: 0, kuituRisti: 0, klimppi: 0,
+    },
+  } : {}),
+}, RESEPTI_JSON ? JSON.parse(RESEPTI_JSON) : null);
 const PATINA = PATINA_POHJA && Object.keys(PATINA_MUUTOS).length
   ? yhdistaResepti(PATINA_POHJA, PATINA_MUUTOS) : PATINA_POHJA;
 if (PATINA_TASO !== 'ei' && !PATINA) {
@@ -1238,17 +1278,27 @@ const NOSTOTASOT = valitsin('nostotasot', null) ? JSON.parse(readFileSync(valits
 const NOSTO_TASO1_KERROIN = 1.5;
 const NOSTO_TASO3_ALIN_Z = 7;
 const nostonTaso = (m) => Number(NOSTOTASOT?.[m.tunnus] ?? m.taso ?? 2) || 2;
+/*
+ * `--nostot-ilman-nimioita` (Fable 23.9.2026, paatokset 20.9.: kohdemaan
+ * nimiöt elävinä): nostotasolle palaa vain merkki (harmaa piste tai
+ * kuvamerkki), ei nimeä — peli piirtää nimen elävänä sovittelun läpi
+ * (js/pallo.js pallonNostonPisteLaatassa, koe `poltetutnostot`).
+ * Tiiviste ei muutu (se lasketaan merkin datasta ennen tätä), ja
+ * maan kirjaus saa kentän `nimiot: false`, josta peli tunnistaa tilan.
+ */
+const NOSTOT_ILMAN_NIMIOITA = lippu('nostot-ilman-nimioita');
 const poltettavatMerkit = nostot.merkit
   .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA))
   .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-')
     || POLTETTAVAT_HAHMOTELMAT.has(String(m.tunnus ?? '')))
   .map((m) => {
     const taso = nostonTaso(m);
+    const nimio = NOSTOT_ILMAN_NIMIOITA ? { nimioNakyy: false } : {};
     if (taso === 1) {
       const kuva = NOSTOTASOT?.['@kuvat']?.[m.laji] ?? NOSTOTASOT?.['@kuvat']?.[m.symboli] ?? null;
-      return { ...m, taso, porras: m.porras * NOSTO_TASO1_KERROIN, nimioRajaton: true, ...(kuva ? { kuva } : {}) };
+      return { ...m, taso, porras: m.porras * NOSTO_TASO1_KERROIN, nimioRajaton: true, ...(kuva ? { kuva } : {}), ...nimio };
     }
-    return { ...m, taso };
+    return { ...m, taso, ...nimio };
   });
 if (NOSTOTASOT) {
   const n = [1, 2, 3].map((k) => poltettavatMerkit.filter((m) => m.taso === k).length);
@@ -2139,7 +2189,7 @@ function nimiotasonLadonnat(mitat) {
   const ulos = [];
   // Meret ja koristeet ensin (isot, harvat), sitten maakunnat väistävät niitä.
   const jarjestys = [...nimiotasonNimiot()].sort((a, b) => {
-    const arvo = (n) => (n.luokka === 'meri' ? 0 : (['kompassi', 'laiva', 'kuva', 'reitti'].includes(n.luokka) ? 1 : 2));
+    const arvo = (n) => (n.luokka === 'meri' ? 0 : (['kompassi', 'laiva', 'kuva', 'reitti', 'raja'].includes(n.luokka) ? 1 : 2));
     return arvo(a) - arvo(b);
   });
   let siirrettyja = 0;
@@ -2157,7 +2207,7 @@ function nimiotasonLadonnat(mitat) {
      * PUDOTETAAN tältä tasolta: päällekkäinen nimi on huonompi kuin
      * puuttuva, ja seuraavalla tasolla sille on tilaa.
      */
-    const reitti = nimio.luokka === 'reitti';
+    const reitti = nimio.luokka === 'reitti' || nimio.luokka === 'raja';
     const koriste = ['kompassi', 'laiva', 'kuva'].includes(nimio.luokka);
     const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
     let valittu = null;
@@ -2167,10 +2217,12 @@ function nimiotasonLadonnat(mitat) {
       const laatikko = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
       if (reitti || laatikkoVapaa(laatikko, esteet, ladotut)) { valittu = { x, y, laatikko }; if (sx || sy) siirrettyja += 1; break; }
     }
-    if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z)) { pudotettuja += 1; continue; }
+    // Nykyalue z7:llä vain jos mahtuu (omistaja 21.9.2026); z8:sta aina.
+    if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z || (nimio.luokka === 'nykyalue' && mitat.z < 8))) { pudotettuja += 1; continue; }
     valittu ??= { x: l.x, y: l.y, laatikko: l.laatikko };
     const ladonta = { ...l, x: valittu.x, y: valittu.y, laatikko: valittu.laatikko };
-    ladotut.push(ladonta.laatikko);
+    // Alueraja ei ole este: sen laatikko on koko maan kokoinen.
+    if (nimio.luokka !== 'raja') ladotut.push(ladonta.laatikko);
     ulos.push({ nimio, ladonta });
   }
   if (siirrettyja || pudotettuja) console.log(`  nimiötaso z${mitat.z}: ${ulos.length} nimiötä, ${siirrettyja} väisti kaupunkia/jokea/nimiötä, ${pudotettuja} pudotettu (ei vapaata paikkaa)`);
@@ -2181,8 +2233,20 @@ function nimiotasonPeite(mitat) {
   const joukko = new Set();
   const marg = VIIVA_MARGINAALI_PX;
   for (const { ladonta } of nimiotasonLadonnat(mitat)) {
-    const [x0, y0, x1, y1] = ladonta.laatikko;
-    for (const d of [0, -mitat.leveys, mitat.leveys]) {
+    /*
+     * ALUERAJAN PEITE JANOITTAIN (maakuntavedos 21.9.2026): rajan
+     * laatikko on koko FRA+DEU:n kokoinen, ja laatikosta laskettu peite
+     * olisi lupannut z8:lla 336 laattaa, joista suurin osa tyhjiä
+     * (mitattu: 171 → 336). Viiva kulkee vain osassa niistä; peite
+     * kootaan janojen omista laatikoista.
+     */
+    const laatikot = Array.isArray(ladonta.polut)
+      ? ladonta.polut.flatMap((polku) => polku.slice(1).map(([x, y], i) => {
+        const [px, py] = polku[i];
+        return [Math.min(px, x), Math.min(py, y), Math.max(px, x), Math.max(py, y)];
+      }))
+      : [ladonta.laatikko];
+    for (const [x0, y0, x1, y1] of laatikot) for (const d of [0, -mitat.leveys, mitat.leveys]) {
       const s0 = Math.floor((x0 + d - marg) / LAATTA);
       const s1 = Math.floor((x1 + d + marg) / LAATTA);
       const r0 = Math.max(0, Math.floor((y0 - marg) / LAATTA));
@@ -2711,6 +2775,18 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
     if (KOMPASSI.lon > lonL - kompassiAst && KOMPASSI.lon < lonO + kompassiAst
       && KOMPASSI.lat > latE - kompassiAst && KOMPASSI.lat < latP + kompassiAst) return ei('kompassi');
   }
+  /*
+   * 5. VALTAMERTEN KORISTEET (--koristeet): koko on laatan pikseleitä
+   * (kokoPx), joten asteina se on kokoPx / (px · ASTE); kierto ja
+   * laivan varjo mahtuvat kertoimeen 0,8 (puolikas 0,5 · 1,6).
+   */
+  for (const k of KORISTEET) {
+    const tasot = Array.isArray(k.tasot) ? k.tasot : KORISTEIDEN_OLETUSTASOT;
+    if (!tasot.includes(mitat.z) || !(k.kokoPx > 0)) continue;
+    const puoli = (k.kokoPx * 0.8) / (mitat.px * ASTE);
+    if (k.lon > lonL - puoli && k.lon < lonO + puoli
+      && k.lat > latE - puoli && k.lat < latP + puoli) return ei('koriste');
+  }
 
   // 1b. järvet
   for (const j of JARVIEN_LAATIKOT) {
@@ -2975,6 +3051,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    */
   const RANTATASO = ${RANTATASO};
   const NIMIOTASO = ${NIMIOTASO};
+  // Pohjan valtamerikoristeiden kuvapolut (ks. KORISTEET): esiladataan kuten nimiötason kuvat.
+  const KORISTEKUVAT = ${JSON.stringify([...new Set(KORISTEET.filter((k) => k.kuva).map((k) => k.kuva))])};
   /*
    * VÄRITASOAJO POLTTAA LEIKKURIN LAATTAAN (erä 1b): kohdemaa ja sen
    * aluevedet täydellä peitolla, muu laatikko feidattuna paperina,
@@ -3044,19 +3122,20 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   }
   let nimiotaso = null;
   const koristekuvat = {};
+  // Kuvakoristeet esiladataan kerran: polku → Image (maailmapiirto.js KUVAKORISTEET);
+  // pohjan valtamerikoristeet (KORISTEKUVAT) samaan tauluun.
+  const polut = new Set(KORISTEKUVAT);
   if (NIMIOTASO) {
     // Esiladotut nimiöt tasoittain (ks. TÖRMÄYSTEN VÄISTÖ): { z: [ {nimio, x, y, …} ] }.
     nimiotaso = (await (await fetch('./nimiot.json')).json())?.tasot ?? {};
-    // Kuvakoristeet esiladataan kerran: polku → Image (maailmapiirto.js KUVAKORISTEET).
-    const polut = new Set();
     for (const lista of Object.values(nimiotaso)) for (const l of lista) if (l.nimio?.luokka === 'kuva' && l.nimio.kuva) polut.add(l.nimio.kuva);
-    await Promise.all([...polut].map((polku) => new Promise((ok) => {
-      const img = new Image();
-      img.onload = () => { koristekuvat[polku] = img; ok(); };
-      img.onerror = () => ok();
-      img.src = './koristeet/' + polku.split('/').pop();
-    })));
   }
+  await Promise.all([...polut].map((polku) => new Promise((ok) => {
+    const img = new Image();
+    img.onload = () => { koristekuvat[polku] = img; ok(); };
+    img.onerror = () => ok();
+    img.src = './koristeet/' + polku.split('/').pop();
+  })));
   if (!TASOITUS && !NOSTOTASO && !VIIVATASO && !RANTATASO && !NIMIOTASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
     aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
@@ -3115,7 +3194,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...yhteiset, nostot: nostotTasolla(saumaZ), piirraNosto: piirraNostoTasoineen,
+        ...yhteiset, nostot: nostotTasolla(saumaZ), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
       });
     }
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3271,7 +3350,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [], kuvat: koristekuvat });
       } else {
         piirraMaailma(kangas, aineisto, {
-          ...yhteiset, nostot: nostotTasolla(perus.__z ?? 7), piirraNosto: piirraNostoTasoineen,
+          ...yhteiset, nostot: nostotTasolla(perus.__z ?? 7), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
         });
       }
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3363,7 +3442,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...asetukset, sisalto, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen,
+        ...asetukset, sisalto, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen, kuvat: koristekuvat,
       });
     }
     /*
@@ -3446,6 +3525,8 @@ const palvelin = createServer((req, res) => {
     ...Object.fromEntries([
       ...(NIMIOTASO ? nimiotasonNimiot() : []).filter((n) => n.luokka === 'kuva' && n.kuva),
       ...(NOSTOTASO ? poltettavatMerkit : []).filter((m) => m.kuva),
+      // Pohjan valtamerikoristeet (ks. KORISTEET).
+      ...KORISTEET.filter((k) => k.kuva),
     ].map((n) => [`/koristeet/${basename(n.kuva)}`, resolve(n.kuva)])),
     // Väritason leikkuri: kohdemaan aluevesirenkaat (ks. vari.json).
     '/vari.json': join(tyokansio, 'vari.json'),
@@ -3557,7 +3638,7 @@ console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} 
  * molemmissa, kartalla olisi kaksinkertainen viiva.
  */
 const TYYLI = {
-  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, asteverkko: false,
+  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, koristeet: KORISTEET, asteverkko: false,
   ...(ILMAN_RANTAVIIVAA ? { rantaviiva: false } : {}),
 };
 
@@ -3722,6 +3803,11 @@ for (const { mitat, bx, by } of lohkot.values()) {
     variVesi: VARITASO ? VARI_VESI : null,
     // Syvyysvyöhykkeet portaina (poltto-koe; ks. maailmapiirto.js syvyysPortaat).
     syvyysPortaat: SYVYYSPORTAAT,
+    // Isobaatit viivoina (koe 21.9.2026).
+    syvyysKayrat: SYVYYSKAYRAT,
+    syvyysKayraPeitto: SYVYYSKAYRAPEITTO,
+    syvyysKohinaLaudalla: SYVYYSKOHINA_LAUDALLA,
+    paperiRaeRuudulla: PAPERIRAE_RUUDULLA,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -3842,6 +3928,9 @@ function teeLuettelo() {
   // Ajokohtainen reseptimuutos (poltto-koe): kirjataan, jotta ämpäristä
   // näkee mitä ajettiin; peli ei lue kenttää.
   ...(SYVYYSPORTAAT ? { syvyysPortaat: SYVYYSPORTAAT } : {}),
+  ...(SYVYYSKAYRAT ? { syvyysKayrat: SYVYYSKAYRAT, syvyysKayraPeitto: SYVYYSKAYRAPEITTO } : {}),
+  ...(SYVYYSKOHINA_LAUDALLA ? { syvyysKohina: 'lauta' } : {}),
+  ...(PAPERIRAE_RUUDULLA ? { paperirae: 'ruutu' } : {}),
   ...(Object.keys(PATINA_MUUTOS).length ? {
     patinaMuutos: {
       ...(VESIVIIVOITUS_VALINTA ? { vesiviivoitus: VESIVIIVOITUS_VALINTA } : {}),
@@ -4023,7 +4112,7 @@ function teeLuettelo() {
     const laatastot = {};
     for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, nimiotasonPeite(m));
     const nimiot = {};
-    const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : String(n.teksti)).toLowerCase()
+    const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : (n.luokka === 'raja' ? `raja-${n.iso ?? 'x'}` : String(n.teksti))).toLowerCase()
       .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
       .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const asteiksi = (x, y) => {
@@ -4143,6 +4232,8 @@ function teeLuettelo() {
         tasot: omat.map((m) => m.z),
         nostot: poltettuLuettelo,
         laatastot,
+        // Nimet elävinä (ks. NOSTOT_ILMAN_NIMIOITA); kenttä puuttuu = nimet laatassa.
+        ...(NOSTOT_ILMAN_NIMIOITA ? { nimiot: false } : {}),
       },
     };
   })(),

@@ -135,6 +135,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuinka pitkälle kaivaukset ovat ehtineet nykyään?',
       'Mitä Priamoksen aarteelle tapahtui löydön jälkeen?',
@@ -176,6 +177,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kaupunki lopulta hylättiin?',
       'Minne temppelin löydöt vietiin?',
@@ -235,6 +237,18 @@ export const FOKUSKOHTEET_TUR = [
         + 'tarkistettu 5.9.2026.',
       url: 'https://whc.unesco.org/en/list/1018/',
     },
+    visa: {
+      kysymys: 'Minä vuonna John Turtle Wood löysi Artemiin temppelin kivijalan?',
+      vaihtoehdot: [
+        '1869',
+        '1863',
+        '1873',
+        '1994',
+      ],
+      oikea: 0,
+      fakta: 'Brittiläinen arkkitehti John Turtle Wood etsi temppeliä British Museumin '
+        + 'rahoituksella vuodesta 1863.',
+    },
   },
   {
     id: 'kappadokia',
@@ -245,6 +259,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Asuuko kallokolotaloissa vielä ihmisiä?',
       'Kuinka syvälle maanalaiset kaupungit ulottuvat?',
@@ -280,6 +295,18 @@ export const FOKUSKOHTEET_TUR = [
         + 'on kaiverrettu satoja kirkkoja ja luostareita.',
       lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mitkä kolme tulivuorta peittivät Kappadokian tuhkakiveen?',
+      vaihtoehdot: [
+        'Ararat, Nemrut ja Süphan',
+        'Vesuvius, Etna ja Stromboli',
+        'Fuji, Aso ja Sakurajima',
+        'Erciyes, Hasan ja Göllüdağ',
+      ],
+      oikea: 3,
+      fakta: 'Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita sekä '
+        + 'kokonaisia maanalaisia kaupunkeja.',
+    },
   },
   {
     id: 'pamukkale',
@@ -290,6 +317,7 @@ export const FOKUSKOHTEET_TUR = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Saako terasseilla vielä kävellä?',
       'Miksi antiikin kaupunki rakennettiin juuri tähän?',
@@ -372,6 +400,18 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Ankaran linna kaupungin vanhan ytimen laella. Isoisän '
         + 'aikaan kaupunki tunnettiin Euroopassa nimellä Angora.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minä vuonna kelttiläiset galatalaiset asettuivat Ankaraan?',
+      vaihtoehdot: [
+        '278 eaa.',
+        '25 eaa.',
+        '1873 jaa.',
+        '64 eaa.',
+      ],
+      oikea: 0,
+      fakta: 'Isoisän matkan aikaan Ankara oli vasta Angoran vilajetin keskus, ei '
+        + 'pääkaupunki — pääkaupunki oli Istanbul.',
     },
   },
   {
@@ -659,6 +699,18 @@ export const FOKUSKOHTEET_TUR = [
         + 'niin emäksinen, ettei se yleensä jäädy.',
       lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Kuinka korkeita mikrobialiittitorneja Vanjärven pohjalta on löydetty?',
+      vaihtoehdot: [
+        '3 000 metriä',
+        '40 metriä',
+        '9,7 metriä',
+        '280 metriä',
+      ],
+      oikea: 1,
+      fakta: 'Vanjärven vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy '
+        + 'talvellakaan.',
+    },
   },
   {
     id: 'mustameri',
@@ -864,6 +916,17 @@ export const FOKUSKOHTEET_TUR = [
         + 'sulttaanin tughra eli nimikirjoitusmerkki.',
       lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna alettiin rakentaa Kapalıçarşın ydintä?',
+      vaihtoehdot: [
+        '1873',
+        '1929',
+        '1455',
+        '1994',
+      ],
+      oikea: 2,
+      fakta: 'Kapalıçarşıssa on 61 katettua katua ja yli 4 000 myymälää.',
+    },
   },
   {
     id: 'gelibolu',
@@ -975,6 +1038,18 @@ export const FOKUSKOHTEET_TUR = [
         lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
       },
     ],
+    visa: {
+      kysymys: 'Minä vuonna puhtaita Vanin kissoja laskettiin olevan enää 92?',
+      vaihtoehdot: [
+        '1873',
+        '1929',
+        '1995',
+        '1992',
+      ],
+      oikea: 3,
+      fakta: 'Vanin kissa tunnetaan "uivana kissana", sillä sen on nähty uivan '
+        + 'Vanjärvessä.',
+    },
   },
   {
     id: 'kirkpinar',

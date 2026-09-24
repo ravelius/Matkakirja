@@ -8,8 +8,9 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const JUURI = new URL('..', import.meta.url).pathname;
+const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const sw = readFileSync(join(JUURI, 'sw.js'), 'utf8');
 const SHELL = [...sw.matchAll(/'\.\/([^']+)'/g)].map((m) => m[1]);
 
@@ -242,6 +243,11 @@ const NIPUTTAMATTOMAT = new Set([
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
   // (Node-generaattori), ei minkään selainmoduulin tuoma.
   'js/packs/nimisto-1873.js',
+  // Maakuntien luonnehdinnat JA pulu-kysymykset: ensimmäinen tuoja
+  // ilmestyi 22.9.2026 (js/karttatyokalu-maakunnat.js, Karttatyökalun
+  // Maakunnat-runko) — molemmat paketit ovat siis MODULES-listalla
+  // (tools/build-standalone.mjs) eikä enää tässä. Rivit jätetty tähän
+  // muistiksi listan historiasta.
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',
@@ -265,6 +271,13 @@ const NIPUTTAMATTOMAT = new Set([
   // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
   // niputuksen ulkopuolella. SHELLissä paketti on.
   'js/packs/maastokohteet-ark.js',
+  // Vedon seuranta (valikko poistettu 22.9.2026, "Poista kaikki
+  // ylimääräiset vivut valikosta"): js/main.js:n staattinen tuonti
+  // hävisi menun mukana. Ainoat jäljellä olevat tuojat, js/pallo.js ja
+  // js/pallolauta/lauta.js, ovat itse niputuksen ulkopuolella (pallo.js
+  // ladataan dynaamisesti) — sama peruste kuin pallolaudan paketeilla
+  // yllä. Liput (?koe=, ratasvalikon Kartta-osio) toimivat yhä.
+  'js/vedon-seuranta.js',
   // Ranskan nostojen lukitut ankkurit: ainoa tuoja on
   // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
   // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.

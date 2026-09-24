@@ -81,7 +81,7 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  */
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import {
-  html, jaaKappaleiksi, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus, TOAST_MS,
+  html, jaaKappaleiksi, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus, TOAST_MS, lehtipalstaKotelo,
 } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import {
@@ -631,7 +631,8 @@ export function avaaElaintaky(ui, iso) {
     for (const kappale of jaaKappaleiksi(taky.teksti)) {
       teksti.appendChild(html('p', '', kappale));
     }
-    kotelo.appendChild(teksti);
+    // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+    kotelo.appendChild(lehtipalstaKotelo(teksti, taky.teksti));
     /*
      * LÄHDERIVI EI ENÄÄ PIIRRY KORTILLE (omistaja 20.9.2026, sama päätös
      * kuin täkynostolla: js/fokusnosto.js KORTIN LÄHDERIVI POIS).
@@ -688,6 +689,10 @@ export function avaaElaintaky(ui, iso) {
       'elaintakyZoom',
     ),
     latoNosto: latoElaintaky,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoElaintaky(sisalto, undefined);

@@ -122,6 +122,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'mostar',
     nimi: 'Mostar',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Kuka oli Mimar Sinan?',
       'Mitä sillanvartijan työhön kuului?',
@@ -208,6 +209,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'una',
     nimi: 'Una-joki',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Mihin Una lopulta laskee?',
       'Mitä Unan kansallispuistossa voi tehdä?',
@@ -235,6 +237,18 @@ export const FOKUSKOHTEET_BIH = [
       + '("According to local legends"), ja teksti sanoo sen ääneen. '
       + 'Muoto "Una-joki" on aineiston ohje: fi-Wikipedian "Una" on '
       + 'moniselitesivu.',
+    visa: {
+      kysymys: 'Mikä on Unan suurin putous?',
+      vaihtoehdot: [
+        'Kravice',
+        'Štrbački buk',
+        'Plitvice',
+        'Skradinski buk',
+      ],
+      oikea: 1,
+      fakta: '212 kilometrin mittainen Una on täynnä koskia ja putouksia, ja sen varren '
+        + 'tärkein kaupunki on Bihać.',
+    },
     // Commons 25.8.2026: 4899×3266, CC BY-SA 3.0, Julian Nyča, 8.9.2018,
     // kuvaus "Wasserfall Štrbački buk an der Una südlich von Bihać" —
     // juuri se putous, jonka teksti nimeää. Category:Štrbački buk.
@@ -286,6 +300,7 @@ export const FOKUSKOHTEET_BIH = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä romaani Drinan silta kertoo?',
       'Mitä suurvisiirin työhön kuului?',
@@ -527,6 +542,7 @@ export const FOKUSKOHTEET_BIH = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miten luolaeläin tulee toimeen ilman valoa?',
       'Miksi luolan suusta puhaltaa kylmää?',

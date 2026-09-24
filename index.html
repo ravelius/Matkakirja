@@ -10,6 +10,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Matkakirja" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- Ämpäri (laatat, kuvat, äänet) on eri alkuperä: yhteys auki ennen ensimmäistä laattaa (sulavuuskatsaus 22.9.2026 kohta 20). Laatat haetaan fetch(mode: cors), siksi crossorigin. -->
+  <link rel="preconnect" href="https://media.matkakirja.app" crossorigin />
+  <link rel="dns-prefetch" href="https://media.matkakirja.app" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
@@ -283,6 +286,36 @@
                    ja generointi sen, lähtikö haku. -->
               <p id="kehittaja-valikko-vihje" class="kehittaja-valikko-vihje" hidden></p>
             </div>
+            <!-- MITTAUS: SYÖTEKOE, KEHYSPROFIILI JA SUORAAN KARTALLE RATTAASEEN
+                 (omistaja 23.9.2026, kaappaus hampurilaisvalikosta: "niiden
+                 pitää olla hammasratasvalikon alla" ja näkyä vain
+                 kehittäjänäkymässä). Ryhmä on .kehittaja-ryhma, joten
+                 js/main.js paivitaKehittajaValikko piilottaa sen, kun
+                 kehittäjätila (matkakirja-kehittaja, salasana) on pois:
+                 tavallinen pelaaja ei näe kokeita. Pieni liike jäi
+                 hampurilaisen Kartta-osioon pelaajan asetukseksi.
+                 Tunnisteet ovat entiset, joten js/main.js rakentaa rivit
+                 kuten ennenkin. -->
+            <div id="kehittaja-mittaus" class="kehittaja-ryhma" hidden>
+              <p class="valikko-otsikko">Mittaus</p>
+              <!-- PIIRTOKOE JA KEHYSPROFIILI (omistaja 22.9.2026 klo 20.15):
+                   mittauskokeet suoraan peliin, koska puhelimella pitkän
+                   ?koe=-osoitteen naputtelu on se este, jonka takia koe jää
+                   ajamatta. Rivit rakentaa js/main.js, vaihtoehdot ja
+                   tallennus js/piirtokoe-asetus.js; valinta käyttäytyy
+                   täsmälleen kuin sama lippu osoitteessa. -->
+              <p class="valikko-alaotsikko" id="piirtokoe-otsikko">Syötekoe</p>
+              <div id="piirtokoe-valikko" class="kertoja-valikko"
+                   role="radiogroup" aria-labelledby="piirtokoe-otsikko"></div>
+              <p id="piirtokoe-vihje" class="lauta-vihje" hidden></p>
+              <!-- KERROKSET PALJAAN KARTAN PÄÄLLE (omistaja 23.9.2026 klo
+                   09.25): kytkimet näkyvät vain, kun Syötekoe on Paljas
+                   kartta. Rivit rakentaa js/main.js, ryhmät ja tallennus
+                   js/piirtokoe-asetus.js PALJAAN_KERROKSET. -->
+              <p class="valikko-alaotsikko" id="paljaat-kerrokset-otsikko" hidden>Kerrokset</p>
+              <div id="paljaat-kerrokset-valikko" class="kertoja-valikko" hidden></div>
+              <div id="kehysprofiili-valikko" class="kertoja-valikko"></div>
+            </div>
             <div id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden>
               <!-- TYÖHUONE: KAKSI NAPPIA (omistaja 11.9.2026, sanatarkasti:
                    "saisiko kuvan otsikot yhdistettyä niin että jäljelle jäisi
@@ -390,6 +423,13 @@
             <div class="kertoja-kotelo kartta-kotelo">
               <p class="valikko-otsikko">Kartta</p>
               <div id="kartta-valikko" class="kertoja-valikko"></div>
+              <!-- VEDON SEURANTA JA TARKKUUS LIIKKEESSÄ POISTETTU VALIKOSTA
+                   (omistaja 22.9.2026 klo 22.30: "Poista kaikki ylimääräiset
+                   vivut valikosta niin löydän testattavat vaihtoehdot
+                   paremmin."). Liput toimivat yhä osoitteessa (?koe=,
+                   ?tarkkuus=); aiemmin tallennettu valinta nollataan
+                   käynnistyksessä (js/piirtokoe-asetus.js
+                   unohdaPoistetutValinnat). -->
             </div>
             <!--
               PELILAUTA: KARTTAPALLO VAI VANHA KARTTA (omistaja

@@ -14,7 +14,7 @@
  * molemmissa vaiheissa ja niiden eron: se on ylätekstien korkeus, ja
  * sen mukaan on mitoitettu vaiheen 1 avauskorkeuden katto
  * (js/nostokuva.js NOSTOKUVA_YLAVARA). Mitta otetaan kolmella näyttömitalla
- * (iPad 834x1194 ja 1194x834, puhelin 390x844) ja kahdella
+ * (iPad 834x1194, puhelin 390x844; leveä ruutu ks. RUUDUT) ja kahdella
  * kuvasuhteella (vaaka 3:2, pysty 4:5).
  *
  * Ajo:  PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/mittaa-nostokuva.mjs
@@ -38,9 +38,15 @@ const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const SELAIN = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 
 /** Näyttömitat, joilla kortit mitataan. */
+/*
+ * VAIN ALLE 1100 PX:N RUUDUT (22.9.2026). Leveällä kuva pienenee
+ * vaiheessa 2 TARKOITUKSELLA (omistaja klo 23.06: "ensin Kuva avautuu
+ * isona ja kun klikkaa niin sitten kuva pienenee ja tulee teksti palsta
+ * mukaan oikealle"), joten "ero on nolla" ei päde siellä. Leveän ruudun
+ * mittari on tools/mittaa-nostopalstat.mjs.
+ */
 const RUUDUT = [
   ['iPad pysty', 834, 1194],
-  ['iPad vaaka', 1194, 834],
   ['puhelin', 390, 844],
 ];
 

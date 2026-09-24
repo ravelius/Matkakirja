@@ -181,7 +181,7 @@ for (const ruutu of RUUDUT) {
   });
 
   const tunnus = ruutu.nimi;
-  await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
   const auki = await sivu
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
@@ -311,7 +311,8 @@ for (const ruutu of RUUDUT) {
   });
   tieto(`${tunnus}: maailmatila pisteitä päällä / pois`, `${maailma.paalla} / ${maailma.pois}`);
   vaadi(`${tunnus}: 5. maailmatila näyttää kaikki ja sammutus palauttaa rajauksen`,
-    maailma.paalla === 264 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
+    // Kaupunkeja tulee lisää (22.9.2026: 266): vaadi vähintään entinen määrä, ei tasan.
+    maailma.paalla >= 264 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
 
   vaadi(`${tunnus}: 6. ei sivuvirheitä`, virheet.length === 0,
     virheet.join(' | ').slice(0, 300));

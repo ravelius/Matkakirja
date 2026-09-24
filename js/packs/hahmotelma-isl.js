@@ -266,6 +266,7 @@ export const HAHMOTELMA_ISL = [
     ],
     nimi: 'Sinilóni',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mistä Sinilónin veden sininen väri johtuu?',
@@ -507,6 +508,7 @@ export const HAHMOTELMA_ISL = [
     ],
     nimi: 'Reynisfjara',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mistä tarina kertoo Reynisdrangarin synnystä?',

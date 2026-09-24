@@ -107,6 +107,18 @@ export const HAHMOTELMA_GRC = [
       + 'sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.',
     lahde: 'en-Wikipedia "Vikos Gorge", johdanto-osa ja osio "Etymology" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkälaiseksi ennätykseksi Vikosin rotko on kirjattu Guinnessiin?',
+      vaihtoehdot: [
+        'Syvin suhteessa leveyteen',
+        'Pisin rotko Euroopassa',
+        'Korkein vesiputous alueella',
+        'Suurin järvien alue',
+      ],
+      oikea: 0,
+      fakta: 'Vikosin rotko on Pindoksen vuoristossa Tymphe-vuoren '
+        + 'eteläisillä rinteillä, noin 32 kilometriä pitkä.',
+    },
   },
   {
     id: 'hahmotelma-samaria',
@@ -284,6 +296,18 @@ export const HAHMOTELMA_GRC = [
       + 'liitettiin UNESCOn biosfäärialueiden verkostoon.',
     lahde: 'en-Wikipedia "Lake Prespa", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Kuinka korkealla merenpinnasta Prespajärvet sijaitsevat?',
+      vaihtoehdot: [
+        '421 metrissä',
+        '853 metrissä',
+        '1 204 metrissä',
+        '612 metrissä',
+      ],
+      oikea: 1,
+      fakta: 'Prespajärvet ovat Balkanin korkeimmalla sijaitsevat '
+        + 'tektoniset järvet, 853 metrin korkeudessa.',
+    },
   },
   {
     id: 'hahmotelma-kerkini',
@@ -415,6 +439,18 @@ export const HAHMOTELMA_GRC = [
       + 'kalkkikivisoran seassa.',
     lahde: 'en-Wikipedia "Navagio Beach", johdanto-osa ja osio "History and namesake" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Navagion poukaman alkuperäinen nimi?',
+      vaihtoehdot: [
+        'Agia Marina',
+        'Agios Nikolaos',
+        'Agios Georgios',
+        'Agia Paraskevi',
+      ],
+      oikea: 2,
+      fakta: 'Rahtialus Panagiotis ajoi myrskyssä karille Navagion '
+        + 'rannalle 5. lokakuuta 1980.',
+    },
   },
   {
     id: 'hahmotelma-milos',
@@ -596,6 +632,17 @@ export const HAHMOTELMA_GRC = [
       + 'Kassandroksen ja Antigonos II:n aikana. Roomalaiset ryöstivät sen kolmannessa '
       + 'Makedonian sodassa, ja sen merkityksen ohitti lähellä oleva Thessalonike.',
     lahde: 'en-Wikipedia "Pella", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä kaupunki oli Makedonian kuninkaiden hautapaikka Pellan sijaan?',
+      vaihtoehdot: [
+        'Aigai',
+        'Thessalonike',
+        'Korintti',
+        'Argos',
+      ],
+      oikea: 0,
+      fakta: 'Aigai pysyi kuninkaiden ja kuningasperheen hautapaikkana, vaikka Pella oli pääkaupunki.',
+    },
   },
   {
     id: 'hahmotelma-philippi',
@@ -656,6 +703,17 @@ export const HAHMOTELMA_GRC = [
       + 'Filippoissa käytiin myös vuonna 42 eaa. Filippoin taistelu, ja Uuden testamentin '
       + 'mukaan apostoli Paavali vieraili kaupungissa toisella lähetysmatkallaan.',
     lahde: 'en-Wikipedia "Philippi", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Filippoin alkuperäinen nimi ennen Filippos II:ta?',
+      vaihtoehdot: [
+        'Amphipolis',
+        'Krenides',
+        'Pydna',
+        'Dion',
+      ],
+      oikea: 1,
+      fakta: 'Filippoin alkuperäinen nimi oli Krenides eli lähteet, ennen kuin Filippos II nimesi sen uudelleen.',
+    },
   },
   {
     id: 'hahmotelma-bassae',
@@ -765,6 +823,17 @@ export const HAHMOTELMA_GRC = [
       + 'arkeologisessa museossa ja Ateenan kansallisessa arkeologisessa museossa, ja UNESCO '
       + 'merkitsi saaren maailmanperintöluetteloon vuonna 1990.',
     lahde: 'en-Wikipedia "Delos", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Delos merkittiin Unescon maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1987',
+        '1988',
+        '1990',
+        '1993',
+      ],
+      oikea: 2,
+      fakta: 'UNESCO merkitsi Deloksen saaren maailmanperintöluetteloon vuonna 1990.',
+    },
   },
   {
     id: 'hahmotelma-monemvasia',
@@ -815,6 +884,17 @@ export const HAHMOTELMA_GRC = [
       + 'moni, yksi, ja emvasis, sisäänpääsy, ja sen italialainen muoto Malvasia antoi nimen '
       + 'malvasiaviinille; Monemvasiaa on kutsuttu idän Gibraltariksi.',
     lahde: 'en-Wikipedia "Monemvasia", johdanto-osa ja osio "Etymology" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä kahdesta sanasta Monemvasian nimi on peräisin?',
+      vaihtoehdot: [
+        'Malvasia ja viini',
+        'Idän ja Gibraltarin',
+        'Meri ja kallio',
+        'Moni ja emvasis',
+      ],
+      oikea: 3,
+      fakta: 'Nimi tulee sanoista moni, yksi, ja emvasis, sisäänpääsy.',
+    },
   },
   {
     id: 'hahmotelma-sounion',
@@ -940,6 +1020,7 @@ export const HAHMOTELMA_GRC = [
     ],
     nimi: 'Meteora',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miten luostarit rakennettiin kalliopylväiden päälle?',
@@ -1033,6 +1114,17 @@ export const HAHMOTELMA_GRC = [
       + 'maailmanperintöluetteloon vuonna 1988 luostareiden hyvin säilyneen arkkitehtuurin ja '
       + 'niemimaan luonnon säilymisen vuoksi.',
     lahde: 'en-Wikipedia "Mount Athos", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kirkollisen johtajan alaisuuteen Athoksen munkkiyhteisö kuuluu?',
+      vaihtoehdot: [
+        'Rooman katolinen paavi',
+        'Konstantinopolin patriarkka',
+        'Kreikan arkkipiispa',
+        'Jerusalemin patriarkka',
+      ],
+      oikea: 1,
+      fakta: 'Athoksen munkkiyhteisö kuuluu kirkollisesti suoraan Konstantinopolin ekumeenisen patriarkan alaisuuteen.',
+    },
   },
   {
     id: 'hahmotelma-metsovo',
@@ -1152,6 +1244,17 @@ export const HAHMOTELMA_GRC = [
       + 'Vuonna 2007 saaren vanhakaupunki lisättiin UNESCOn maailmanperintöluetteloon, ja '
       + 'Korfu on suosittu matkailukohde.',
     lahde: 'en-Wikipedia "Corfu", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Korfun vanhakaupunki lisättiin Unescon maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        '1999',
+        '2004',
+        '2007',
+        '2011',
+      ],
+      oikea: 2,
+      fakta: 'Korfun vanhakaupunki lisättiin Unescon maailmanperintöluetteloon vuonna 2007.',
+    },
   },
   {
     id: 'hahmotelma-kastoria',
@@ -1262,6 +1365,18 @@ export const HAHMOTELMA_GRC = [
       + 'että koulutustoimintaan.',
     lahde: 'en-Wikipedia "Naousa, Imathia", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Naoussa nimettiin kuninkaallisella asetuksella sankarikaupungiksi?',
+      vaihtoehdot: [
+        '1912',
+        '1922',
+        '1940',
+        '1955',
+      ],
+      oikea: 3,
+      fakta: 'Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi kunnioittamaan '
+        + 'vapaussodan taistelua.',
+    },
   },
   {
     id: 'hahmotelma-lavrio',
@@ -1440,6 +1555,18 @@ export const HAHMOTELMA_GRC = [
       + 'eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 '
       + 'asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.',
     lahde: 'en-Wikipedia "Chios", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna Chios koki verilöylyn Kreikan vapaussodan aikana?',
+      vaihtoehdot: [
+        'Vuonna 1770',
+        'Vuonna 1797',
+        'Vuonna 1912',
+        'Vuonna 1822',
+      ],
+      oikea: 3,
+      fakta: 'Chios kuului Ottomaanien valtakuntaan vuoteen 1912 asti, ja '
+        + 'vuonna 1822 saari koki Chioksen verilöylyn.',
+    },
   },
   {
     id: 'hahmotelma-zagori',
@@ -1650,6 +1777,17 @@ export const HAHMOTELMA_GRC = [
       + 'kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä '
       + 'kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.',
     lahde: 'en-Wikipedia "Missolonghi", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kunnianimen Mesolongi sai sankarillisen piirityksen jälkeen?',
+      vaihtoehdot: [
+        'Hiera Polis, Pyhä kaupunki',
+        'Akropolis, Yläkaupunki',
+        'Nea Smyrni, Uusi Smyrna',
+        'Palaia Poli, Vanha kaupunki',
+      ],
+      oikea: 0,
+      fakta: 'Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki asukkaiden sankarillisen vastarinnan vuoksi.',
+    },
   },
   {
     id: 'hahmotelma-navarino',

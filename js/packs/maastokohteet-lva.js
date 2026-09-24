@@ -103,6 +103,17 @@ export const MAASTOKOHTEET_LVA = [
       + 'tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin '
       + 'turvallisuussyistä ja purettiin joulukuussa 2012.',
     lahde: 'en-Wikipedia "Gaiziņkalns", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka monta metriä korkeampi Viron Suur Munamägi on kuin Gaiziņkalns?',
+      vaihtoehdot: [
+        'Kuusi metriä',
+        'Kaksitoista metriä',
+        'Kolme metriä',
+        'Yhdeksän metriä',
+      ],
+      oikea: 0,
+      fakta: 'Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi kuin Gaiziņkalns.',
+    },
   },
   {
     id: 'itameri',
@@ -154,6 +165,18 @@ export const MAASTOKOHTEET_LVA = [
     lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
       + '"Subdivisions", "Hydrography" ja "Economy"; laivan osalta "Vasa (ship)", johdanto-osa '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Mikä Itämeren oma sivumeri reunustaa Latvian rannikkoa?',
+      vaihtoehdot: [
+        'Riianlahti',
+        'Suomenlahti',
+        'Selkämeri',
+        'Pommerinlahti',
+      ],
+      oikea: 0,
+      fakta: 'Riianlahteen laskee Väinäjoki, yksi niistä suurista joista, jotka pitävät '
+        + 'Itämeren veden vähäsuolaisena.',
+    },
   },
   {
     id: 'vainajoki',
@@ -198,6 +221,17 @@ export const MAASTOKOHTEET_LVA = [
       + 'Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää '
       + 'matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.',
     lahde: 'en-Wikipedia "Daugava", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä suuren joen lähteen naapurissa Väinäjoen lähde sijaitsee?',
+      vaihtoehdot: [
+        'Tonavan',
+        'Reinin',
+        'Volgan',
+        'Rhônen',
+      ],
+      oikea: 2,
+      fakta: 'Väinäjoen lähde on aivan Volgan lähteen naapurissa Venäjällä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -241,6 +275,7 @@ export const MAASTOKOHTEET_LVA = [
     nimi: 'Rundālen palatsi',
     nimio: 'Rundāle',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Kuka suunnitteli palatsin?',
       'Mihin palatsia käytettiin vuonna 1812?',
@@ -348,6 +383,7 @@ export const MAASTOKOHTEET_LVA = [
     nimi: 'Turaidan ruusu',
     nimio: 'Turaida',
     tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Mistä legenda sai alkunsa?',
       'Miksi vastavihityt käyvät haudalla?',
@@ -530,6 +566,17 @@ export const MAASTOKOHTEET_LVA = [
       + '1265–1266 linnan luonnolliselle saarelle, jota kutsutaan Pilssalaksi.',
     lahde: 'en-Wikipedia "Jelgava", johdanto-osa sekä osiot "Name" ja '
       + '"History/Early history" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuinka kaukana ja mihin suuntaan Riiasta Jelgava sijaitsee?',
+      vaihtoehdot: [
+        'Noin 120 km pohjoiseen',
+        'Noin 15 km itään',
+        'Noin 80 km etelään',
+        'Noin 41 km lounaaseen',
+      ],
+      oikea: 3,
+      fakta: 'Jelgava sijaitsee noin 41 kilometriä Riiasta lounaaseen Lielupe-joen rannalla.',
+    },
   },
   {
     id: 'daugavpilsin-linnoitus',
@@ -584,6 +631,17 @@ export const MAASTOKOHTEET_LVA = [
       + 'Aleksanteri III ja Nikolai II.',
     lahde: 'en-Wikipedia "Daugavpils fortress", johdanto-osa ja osio "History" '
       + '(tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Montako miestä puolusti Daugavpilsin linnoitusta ranskalaisten hyökätessä 1812?',
+      vaihtoehdot: [
+        '3 300 miestä',
+        '10 000 miestä',
+        '500 miestä',
+        '24 000 miestä',
+      ],
+      oikea: 0,
+      fakta: 'Linnoitusta puolusti 3 300 miestä ja 200 tykkiä ranskalaisten hyökätessä 1812.',
+    },
   },
   {
     id: 'engure',
@@ -679,6 +737,7 @@ export const MAASTOKOHTEET_LVA = [
     ],
     nimi: 'Ventas rumba',
     tyyppi: 'ruoka',
+    taso: 1,
     kysymykset: [
       'Miksi putous perääntyy hitaasti ylävirtaan?',
       'Miten lohia pyydettiin ilmasta?',

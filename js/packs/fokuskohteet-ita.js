@@ -158,6 +158,17 @@ export const FOKUSKOHTEET_ITA = [
         + 'vuonna 1944.',
       lahde: 'Norbert Nagel, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna Vesuvius purkautui viimeksi?',
+      vaihtoehdot: [
+        '1944',
+        '1980',
+        '1631',
+        '1900',
+      ],
+      oikea: 0,
+      fakta: 'Vesuvius purkautui viimeksi vuonna 1944.',
+    },
   },
   {
     id: 'pompeji',
@@ -204,6 +215,17 @@ export const FOKUSKOHTEET_ITA = [
         + 'nykyisen tapansa Giuseppe Fiorellilta 1860-luvulla.',
       lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna Giuseppe Fiorelli otti Pompejin kaivaukset johtoonsa?',
+      vaihtoehdot: [
+        '1873',
+        '1863',
+        '1944',
+        '1826',
+      ],
+      oikea: 1,
+      fakta: 'Giuseppe Fiorelli otti Pompejin kaivaukset johtoonsa vuonna 1863.',
+    },
   },
   {
     id: 'napoli',
@@ -239,6 +261,17 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Napoli, sen satama ja Vesuvius Castel Sant\'Elmon '
         + 'kukkulalta nähtynä.',
       lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Mitä kreikkalainen nimi Neápolis tarkoittaa?',
+      vaihtoehdot: [
+        'Kaunis kaupunki',
+        'Pyhä kaupunki',
+        'Uusi kaupunki',
+        'Suuri kaupunki',
+      ],
+      oikea: 2,
+      fakta: 'Napolin kreikkalainen nimi Neápolis tarkoittaa "uutta kaupunkia".',
     },
   },
   {
@@ -649,6 +682,17 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Pon suisto Adrianmerellä ilmasta kuvattuna.',
       lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Kuka oli mukana suunnittelemassa Milanon kanavaverkkoa?',
+      vaihtoehdot: [
+        'Michelangelo Buonarroti',
+        'Leonardo da Vinci',
+        'Galileo Galilei',
+        'Raffaello Sanzio',
+      ],
+      oikea: 1,
+      fakta: 'Po on yhdistetty Milanoon kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.',
+    },
   },
   {
     id: 'sardinia',
@@ -895,6 +939,17 @@ export const FOKUSKOHTEET_ITA = [
         + 'aikanaan. Faktat: Parco archeologico del Colosseo — official '
         + 'collections, tarkistettu 5.9.2026.',
       url: 'https://colosseo.it/en/marvels/',
+    },
+    visa: {
+      kysymys: 'Kuka vihki Colosseumin käyttöön vuonna 80?',
+      vaihtoehdot: [
+        'Vespasianus',
+        'Nero',
+        'Traianus',
+        'Titus',
+      ],
+      oikea: 3,
+      fakta: 'Vespasianus aloitti Colosseumin rakentamisen 72, ja Titus vihki sen käyttöön vuonna 80.',
     },
   },
 ];

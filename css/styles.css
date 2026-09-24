@@ -706,6 +706,27 @@ button, .brand, .turn-pill, .fact-card h2 {
 .lauta-vihje[hidden] { display: none; }
 
 /*
+ * KARTTA-OSASTON ALAOTSIKKO (omistaja 22.9.2026). Osastossa on nyt
+ * kytkin ja kaksi rivivalintaa — Tarkkuus liikkeessä ja Vedon seuranta.
+ * Alaotsikko erottaa ne toisistaan ilman uutta osastoa: se on osaston
+ * otsikkoa pienempi ja vaimeampi, jottei valikkoon tule kahta
+ * samanarvoista otsikkoa.
+ *
+ * YKSI NIMI, EI KAHTA. Tarkkuus liikkeessä toi mukanaan oman
+ * `.valikko-aliotsikko`-luokkansa; kaksi lähes samannimistä luokkaa
+ * samalle asialle on yksi liikaa, joten molemmat käyttävät tätä.
+ */
+.valikko-alaotsikko {
+  margin: 0.5rem 0 0.3rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(230, 214, 184, 0.72);
+}
+
+/*
  * ── VALIKON KOMENNOT: KAKSI LEVEÄÄ TEKSTINAPPIA ──────────────────────
  *
  * Omistajan päätös 18.8.2026: "uusi peli" ja sen alla "ehdota
@@ -4644,6 +4665,32 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
 .passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.esikatselu,
 .passport-card .linssi-valikko .linssi-liuskat-kesken button.kesken.paalla {
   opacity: 0.85;
+}
+
+/*
+ * HIOMASSA OPTIKOLLA (omistaja 21.9.2026; js/linssit/rekisteri.js
+ * HIOMASSA): omistettu mutta toteuttamaton linssi samalla harmaalla
+ * rivillä kuin keskeneräiset, ilman aktivointia. VALMISTUI-MERKKI:
+ * pieni kultainen täplä valmiin linssin kulmassa, kunnes ruutua on
+ * napautettu (js/ui.js esikatseleLinssi → omistus.js merkitseNahdyksi).
+ */
+.passport-card .linssi-valikko .linssi-liuskat-hiomassa button.hiomassa {
+  filter: grayscale(1) contrast(0.85);
+  opacity: 0.55;
+  cursor: help;
+}
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui { position: relative; }
+.passport-card .linssi-valikko .linssi-liuskat button.valmistui::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c9a227;
+  border: 2px solid #f5f0e2;
+  box-shadow: 0 0 0 1px rgba(70, 51, 31, 0.35);
 }
 
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
@@ -17185,9 +17232,21 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
  */
 .vinkkisivu .vinkki-selitys { max-width: 46em; }
 
-/* Ajankohta noston otsikkorivillä: pieni konekirjoitusleima. */
+/*
+ * Ajankohta noston otsikkorivillä: pieni konekirjoitusleima omassa
+ * laatikossaan (omistajan lisäys 21.9.2026 reaktiouudistuksen
+ * yhteydessä — kaappaus Ranskan lehden Historia-osiosta: "vuosiluku
+ * otsikkorivin oikeassa reunassa OMASSA PIENESSÄ LAATIKOSSA tai
+ * värillisellä taustalla"). Haalea ruostesävy ja ohut kaiverrusreunus
+ * nostavat leiman hieman irti otsikosta ilman somen tagin näköä —
+ * sama muste kuin muualla lehdessä, ei uutta väriä.
+ */
 .nosto-aika {
   margin-left: auto;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid rgba(122, 85, 20, 0.4);
+  border-radius: 4px;
+  background: rgba(156, 107, 23, 0.12);
 }
 
 /*
@@ -23578,14 +23637,14 @@ dialog.minipopup:focus-visible { outline: none; }
 }
 
 /* ------------------------------------------------------------------ *
- * REAKTIOT — viisi kaiverrettua symbolia sisällön alalaidassa ja
- * lehden väliotsikoiden päässä (js/reaktiot.js).
+ * REAKTIOT — sydän ja peukku alas sisällön alalaidassa ja lehden
+ * väliotsikoiden päässä (js/reaktiot.js; UUDISTETTU 21.9.2026: viisi
+ * symbolia ja lepotila korvattiin kahdella suoraan näkyvällä napilla).
  *
- * LEPOTILASSA YKSI NAPPI: voittajasymboli ja äänimäärä lähderivin
- * kokoisena, samaa mustetta kuin krediitti, ilman taustaa ja ilman
- * kehystä ennen kuin siihen koskee. Napautus levittää viisi symbolia
- * äänimäärineen samalle riville. Väri kirkastuu vasta osoitettaessa —
- * silloin nappi kertoo olevansa nappi.
+ * KAKSI NAPPIA, AINA NÄKYVISSÄ. Ei enää lepotilaa eikä avattavaa
+ * valikkoa: sydän ja peukku alas ovat samaa mustetta kuin krediitti,
+ * ilman taustaa ja ilman kehystä ennen kuin niihin koskee. Väri
+ * kirkastuu vasta osoitettaessa — silloin nappi kertoo olevansa nappi.
  *
  * Rivi kelluu kuvien alapuolelle (clear) kuten lähderivi ja
  * pöllöpoiminnat, jottei se päädy kainalokuvan viereen.
@@ -23598,6 +23657,27 @@ dialog.minipopup:focus-visible { outline: none; }
   align-items: center;
   gap: 0.35rem 0.5rem;
   margin: 0.55rem 0 0;
+}
+
+/*
+ * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA RIVILLÄ
+ * (omistajan päätös 21.9.2026, js/maalehti.js piirraKategoria). Linkki
+ * vasemmalla, reaktiorivi työntyy oikeaan reunaan auto-marginaalilla
+ * eikä enää kellu omana lohkonaan.
+ */
+.leipa-loppurivi {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.leipa-loppurivi .wiki-btn { margin-top: 0; }
+
+.leipa-loppurivi .reaktiorivi {
+  clear: none;
+  margin: 0 0 0 auto;
 }
 
 .reaktio-napit {
@@ -23639,8 +23719,7 @@ button.reaktionappi:disabled {
   cursor: default;
 }
 
-.reaktio-ikoni,
-.reaktio-lepoikoni {
+.reaktio-ikoni {
   display: inline-flex;
   pointer-events: none;
 }
@@ -23659,54 +23738,20 @@ button.reaktionappi:disabled {
 .reaktio-luku:empty { display: none; }
 
 /*
- * LEPOTILAN NAPPI. Ilman ääniä se on haalea seppele ilman lukua —
- * kutsu eikä ilmoitus. Oma ääni tummentaa sen, jotta pelaaja näkee
- * yhdellä silmäyksellä äänestäneensä jo.
+ * OMA ÄÄNI kummassa tahansa napissa: tummempi muste ja kevyt kehä —
+ * ei täytettyä nappia, sama kevyt korostus kuin muualla lehdessä.
  */
-button.reaktio-lepo.tyhja { opacity: 0.42; }
-
-button.reaktio-lepo.oma {
-  color: rgba(70, 51, 31, 0.92);
-  border-color: rgba(70, 51, 31, 0.3);
-}
-
-/*
- * AVATTU RIVI: viisi symbolia lukuineen. Kevyt pergamenttikapseli
- * erottaa valikon leipätekstistä ilman että se muuttuu valikkolaatikoksi.
- */
-.reaktio-valikko {
-  display: flex;
-  align-items: center;
-  gap: 0.05rem;
-  padding: 0.1rem 0.25rem;
-  border: 1px solid rgba(70, 51, 31, 0.22);
-  border-radius: 999px;
-  background: rgba(255, 252, 244, 0.6);
-}
-
-.reaktio-valikko[hidden] { display: none; }
-
-button.reaktio-symboli {
-  min-width: 28px;
-  padding: 0.18rem 0.2rem;
-}
-
-/* Oma ääni: tummempi muste ja kevyt kehä — ei täytettyä nappia. */
-button.reaktio-symboli.oma {
+button.reaktionappi.oma {
   color: #7a5514;
   border-color: rgba(122, 85, 20, 0.45);
   background: rgba(156, 107, 23, 0.1);
 }
 
-/* Jo ilmoitettu virhe: tahran saa yhä äänestää, mutta kenttä ei aukea
-   uudestaan — himmennys kertoo sen ilman erillistä tekstiä. */
-button.reaktio-symboli.ilmoitettu:not(.oma) { opacity: 0.55; }
-
 /*
- * VÄLIOTSIKON NAPPI (js/reaktiot.js piirraOtsikonReaktio). Rivin
- * PÄÄSSÄ eikä leipätekstin päällä: margin-left: auto työntää sen
- * otsikkorivin oikeaan reunaan, ja pienempi kuvake pitää sen otsikon
- * mittasuhteissa. Ei clearia — otsikkorivi ei kellu.
+ * VÄLIOTSIKON NAPIT (js/reaktiot.js piirraOtsikonReaktio). Rivin
+ * PÄÄSSÄ eikä leipätekstin päällä: margin-left: auto työntää sydämen
+ * ja peukun otsikkorivin oikeaan reunaan, ja pienempi kuvake pitää ne
+ * otsikon mittasuhteissa. Ei clearia — otsikkorivi ei kellu.
  */
 .reaktiorivi.reaktiot-otsikko {
   clear: none;
@@ -23722,18 +23767,13 @@ button.reaktio-symboli.ilmoitettu:not(.oma) { opacity: 0.55; }
 }
 
 /* Pienemmässä koossa hiusviiva katoaa pergamenttiin: kuvake kutistuu
-   mutta muste vahvistuu, jotta seppeleen lehdet erottuvat vielä
-   16 pikselissä. CSS voittaa SVG:n oman stroke-width-attribuutin. */
-.reaktiot-otsikko .reaktio-ikoni svg,
-.reaktiot-otsikko .reaktio-lepoikoni svg {
+   mutta muste vahvistuu, jotta ääriviiva erottuu vielä 16 pikselissä.
+   CSS voittaa SVG:n oman stroke-width-attribuutin. */
+.reaktiot-otsikko .reaktio-ikoni svg {
   width: 16px;
   height: 16px;
   stroke-width: 1.75;
 }
-
-/* Väliotsikon lepotila saa hiukan enemmän mustetta kuin leipätekstin:
-   otsikkorivi on tiheämpi, ja 0.42 hukkui siihen kokonaan. */
-.reaktiot-otsikko button.reaktio-lepo.tyhja { opacity: 0.5; }
 
 /* Otsikkorivin kuittaus veisi tilaa otsikolta: ääni riittää kuvitukseksi. */
 .reaktiot-otsikko .reaktio-kuittaus { display: none; }
@@ -23832,6 +23872,48 @@ textarea.reaktio-teksti {
 
 /* Virheikkuna on kapea: se on yksi kenttä ja kaksi nappia, ei näkymä. */
 .minipopup-kortti.minipopup-reaktio { max-width: 30rem; }
+
+/*
+ * "MIKÄ OLI VIALLA?" — peukku alas avaa tämän ennen äänen kirjaamista
+ * (js/reaktiot.js avaaKysymys). Kolme vaihtoehtoa samalla napin
+ * tyylillä kuin virheikkunan lomakenapit, pystyrivissä koska tekstit
+ * ovat pitempiä kuin Lähetä/Peru.
+ */
+.reaktio-kysymys {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.reaktio-kysymys-ohje {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: rgba(50, 36, 22, 0.9);
+}
+
+.reaktio-kysymys-napit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reaktio-kysymys-nappi {
+  padding: 0.4rem 0.7rem;
+  min-height: 0;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 6px;
+  background: rgba(255, 252, 244, 0.7);
+  color: rgba(50, 36, 22, 0.92);
+  font-family: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.reaktio-kysymys-nappi:hover { border-color: rgba(70, 51, 31, 0.7); }
+
+.minipopup-kortti.minipopup-reaktio-kysymys { max-width: 22rem; }
 
 /*
  * KUVASUURENNOS. Postikortin ja kartan suurennoksen paperi on tummempi
@@ -25147,6 +25229,15 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
    */
   --sym-hetki: #6e4a63;
   --sym-hetki-hiekka: #c9a86a; /* hiekan kellertävä kasa lasin pohjalla */
+  /*
+   * KARTAN PISTEEN HARMAA (omistaja 22.9.2026: *"muuttaa piste pelkäksi
+   * harmaaksi pisteeksi jossa itsessään ei ole väriä vaan väri tulisi
+   * vasta kun nostoväri on laitettu vivusta päälle"*). Kartalla kiekko
+   * on neutraali; kategoriaväri elää selitevalikon pallossa ja vivun
+   * sytyttämässä valotäplässä. Sävy on seepian ja pergamentin väliltä,
+   * ei puhdas harmaa — puhdas harmaa olisi tällä paperilla sininen.
+   */
+  --sym-piste-harmaa: #6f6a61;
 }
 
 /* TÄHTI — Matkakirjan ihme, kohde jota ei enää ole (Raamattu, osio
@@ -25292,6 +25383,9 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
   opacity: 0.86;
 }
 
+/* Kartan neutraali kiekko (ks. --sym-piste-harmaa). Selitevalikon oma
+   merkki on väriavain ja pitää kategoriavärinsä. */
+.nostosym-mini-harmaa { fill: var(--sym-piste-harmaa); }
 .nostosym-mini-silma { fill: var(--sym-silma); }
 .nostosym-mini-historia { fill: var(--sym-historia); }
 .nostosym-mini-ruoka { fill: var(--sym-ruoka); }
@@ -25316,6 +25410,26 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  * ympyrä (.fokuskohde-osuma).
  */
 .nostosym-rasteri { pointer-events: none; }
+/*
+ * HEHKUPISTEEN SYKÄHDYS CSS2D:SSÄ (omistaja 21.9.2026: "eloton yksi
+ * väripallo"; runko tekee saman uniformilla, js/pallonimiot-gl.js
+ * `syke`): kategorian värikiekko ilman kuvamerkkiä sykkii levossa
+ * hitaasti ±7 % (fokusnosto-symbolit.js NOSTOSYM_SYKKEEN_OSUUS, jakso
+ * 2,4 s) ja seisoo liikkeessä (.pallolauta-liikkuu).
+ */
+.nostosym-rasteri-piste {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nostosym-syke 2.4s ease-in-out infinite;
+}
+.pallolauta-liikkuu .nostosym-rasteri-piste { animation-play-state: paused; }
+@keyframes nostosym-syke {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nostosym-rasteri-piste { animation: none; }
+}
 
 /*
  * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js; omistaja 21.9.2026
@@ -25350,6 +25464,18 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
  */
 .nostosym-nimiokuva { transition: opacity 180ms ease-out; }
 .nostosym-nimio-piilossa .nostosym-nimiokuva { opacity: 0; }
+/* Piste laatassa (koe `poltetutnostot`, js/pallolauta/nostot.js onPisteLaatassa):
+   nostotason laatta kantaa pisteen tai kuvamerkin, elävänä vain nimi. */
+.nostosym-ikoni-laatassa .nostosym-rasteri:not(.nostosym-nimiokuva) { visibility: hidden; }
+/*
+ * KYLKI VAIHTUU HÄIVYTTÄMÄLLÄ (KARTAN SULAVUUS ENSIN, erä E3;
+ * js/pallolauta/nostot.js asetteleNosto): vanha kylki häipyy
+ * (.nostosym-nimio-vanha) ja uusi tulee (.nostosym-nimio-tulee →
+ * luokka pois seuraavassa kehyksessä → opacity 1 samalla 180 ms:n
+ * siirtymällä). Nimiö ei liu'u pisteen yli. Reduced motion: heti.
+ */
+.nostosym-nimiokuva.nostosym-nimio-vanha,
+.nostosym-nimiokuva.nostosym-nimio-tulee { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
   .nostosym-nimiokuva { transition: none; }
 }
@@ -25705,7 +25831,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   display: flex;
   flex-direction: column;
   width: max-content;
-  max-width: min(78vw, 20rem);
+  /* Mahdollisimman kapea (omistaja 22.9.2026): nimet lyhyinä, yksi merkkisarake. */
+  max-width: min(78vw, 15rem);
   max-height: min(60vh, 26rem);
   overflow-y: auto;
   padding: 0.35rem;
@@ -25720,7 +25847,26 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   transition: transform 220ms ease, opacity 180ms ease, visibility 0s linear 220ms;
 }
 
+/*
+ * AUKI OLEVA LEVY NOUSEE RAILIN YLI (22.9.2026). Levy alkaa nyt kartan
+ * yläreunasta (peittää avausnapin), jolloin se osuu päiväkirjapilleriin
+ * (.rail .fact-card.pieni). .map-pane on oma pinontakontekstinsa
+ * (isolation: isolate), joten levyn oma z-index ei yllä railin (4) yli —
+ * ruutu nostetaan railin ohi vain levyn ollessa auki.
+ */
+.map-pane:has(.karttaselite-levy.auki) { z-index: 5; }
+
 .karttaselite-levy.auki {
+  /*
+   * PANEELI PEITTÄÄ AVAUSNAPIN (omistajan päätös 22.9.2026): auki
+   * levy alkaa täsmälleen kotelon yläreunasta eli napin omasta
+   * yläreunasta, `top: calc(100% + …)` sijaan. Nappi jää sen alle —
+   * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
+   * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
+   * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
+   * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
+   */
+  top: 0;
   transform: none;
   opacity: 1;
   visibility: visible;
@@ -25741,44 +25887,80 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   border-bottom: 1px solid rgba(70, 51, 31, 0.18);
 }
 
-.karttaselite-otsikko {
+/*
+ * VÄLILEHDET "NOSTOT | MAAKUNNAT" (omistajan päätös 22.9.2026)
+ * korvasivat vanhan otsikkorivin. Nostot on nykyinen selitelista;
+ * Maakunnat rakennetaan js/karttatyokalu-maakunnat.js:stä
+ * (js/karttaselite.js asetaMaakunnat) — tämä tiedosto tietää vain,
+ * että molemmat ovat samaa nappiperhettä kuin muut selitteen napit.
+ */
+.karttaselite-valilehdet {
+  display: flex;
   flex: 1 1 auto;
-  color: rgba(70, 51, 31, 0.92);
-  font-family: var(--font-type);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 0.25rem;
 }
 
-.karttaselite-kaikki {
+.karttaselite-valilehti {
   min-height: 0;
-  padding: 0.2rem 0.45rem;
-  border: 1px solid rgba(70, 51, 31, 0.3);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid transparent;
   border-radius: 5px;
-  background: rgba(255, 252, 242, 0.7);
-  color: rgba(70, 51, 31, 0.85);
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
   font-family: var(--font-type);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.karttaselite-kaikki:hover:not(:disabled) {
-  background: rgba(255, 252, 242, 1);
+.karttaselite-valilehti:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.92);
+}
+
+.karttaselite-valilehti[aria-selected='true'] {
+  border-color: rgba(70, 51, 31, 0.3);
+  background: rgba(255, 252, 242, 0.85);
+  color: rgba(70, 51, 31, 0.96);
+}
+
+/* Sulkuristi (omistajan päätös 22.9.2026: paneeli peittää nyt
+   avausnapin, joten napin täytyy saada oma sulkijansa levyn sisään). */
+.karttaselite-sulje {
+  min-width: 0;
+  min-height: 0;
+  padding: 0.15rem 0.4rem;
+  border: 0;
+  background: none;
+  color: rgba(70, 51, 31, 0.7);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.karttaselite-sulje:hover:not(:disabled),
+.karttaselite-sulje:active:not(:disabled) {
+  /* Yleinen button:hover maalaa tumman taustan (rivi 2329) — risti katoaisi. */
+  background: rgba(70, 51, 31, 0.12);
   color: rgba(70, 51, 31, 1);
 }
 
+.karttaselite-paneeli-maakunnat { padding-top: 0.2rem; }
+
 .karttaselite-lista {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 0.2rem;
 }
 
-/* Neljä saraketta: pallo, symboli, selite, luku. Selite venyy, joten
-   luku asettuu joka rivillä samaan kohtaan oikeaan laitaan. */
+/* Kolme saraketta: tyyppimerkki, selite, luku (värirenkaat poistuivat
+   22.9.2026). Selite venyy, joten luku asettuu joka rivillä samaan
+   kohtaan oikeaan laitaan. */
 .karttaselite-rivi {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.45rem;
   min-height: 0;
@@ -25798,41 +25980,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   color: rgba(70, 51, 31, 0.92);
 }
 
-/*
- * VÄRIPALLO ON KYTKIN JA TILANÄYTTÖ (omistajan täsmennys 29.8.2026:
- * *"päälle kytketyn aiheen väripallo syttyy myös valikon
- * seliterivillä — valikko näyttää aina mitkä valot ovat päällä"*).
- *
- * Sammuneena pallo on pelkkä ääriviiva aiheen omassa värissä; syttyneenä
- * se on täytetty ja saa ympärilleen saman himmeän kehän kuin kartan
- * valotäplä.
- *
- * KEHÄ ON PSEUDOELEMENTTI EIKÄ color-mix-varjo: läpinäkyvyys pitäisi
- * silloin laskea CSS:n omalla funktiolla, jota vanhempi WebKit ei
- * tunne — ja peliä pelataan iOS:n kotivalikkosovelluksessa. Sama väri
- * `opacity`lla on sama jälki ilman uutta funktiota.
- */
-.karttaselite-pallo {
-  position: relative;
-  width: 0.85rem;
-  height: 0.85rem;
-  border: 2px solid var(--valo, #8a6d4a);
-  border-radius: 50%;
-  background: transparent;
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo {
-  background: var(--valo, #8a6d4a);
-}
-
-.karttaselite-rivi[aria-pressed='true'] .karttaselite-pallo::after {
-  content: '';
-  position: absolute;
-  inset: -0.3rem;
-  border-radius: 50%;
-  background: var(--valo, #8a6d4a);
-  opacity: 0.24;
-}
+/* Värirenkaat (.karttaselite-pallo) poistettiin 22.9.2026 omistajan päätöksellä. */
 
 .karttaselite-rivi[aria-pressed='true'],
 .karttaselite-rivi[aria-pressed='true']:hover:not(:disabled) {
@@ -25843,6 +25991,26 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   width: 1.35rem;
   height: 1.35rem;
   display: block;
+}
+
+/*
+ * TYYPPIMERKKI (omistajan päätös 22.9.2026): sama Codexin kuvamerkki
+ * kuin kartalla (assets/nostotyypit/merkki-*.png). Kotelo pitää yhden
+ * tai useamman merkin vierekkäin (Kulttuuri ja ruoka, Kauppa ja
+ * tekniikka) samalla leveydellä kuin ennen kaiverrettu symboli, jotta
+ * pallo-sarake ei hyppää rivien välillä.
+ */
+.karttaselite-merkki {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 1.35rem;
+}
+
+.karttaselite-kuvamerkki {
+  display: block;
+  height: 1.05rem;
+  width: auto;
 }
 
 .karttaselite-nimi { line-height: 1.25; }
@@ -25863,11 +26031,442 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    kartan selite eikä sisällysluettelo. */
 .karttaselite-tyhja { opacity: 0.45; }
 
-.karttaselite-vihje {
-  margin: 0.35rem 0.4rem 0.1rem;
-  color: rgba(70, 51, 31, 0.62);
-  font-size: 0.7rem;
+
+/*
+ * PEUKALOLEVY (js/karttaselite-levy.js) — pystysuuntainen liukukahva,
+ * joka napsahtaa aina valitun rivin kohdalle (omistajan päätös
+ * 22.9.2026: monivalinta pois, valinta on aina yksi rivi).
+ *
+ * LEVY ISTUU RIVIEN LUVUN PÄÄLLE EIKÄ NIIDEN VIERELLE (omistajan
+ * täsmennys): tausta on vaalea ja läpinäkyvä, jotta lukumäärä näkyy
+ * levyn ALTA. `.karttaselite-lista` on tämän containing block
+ * (position: relative), ja pystysijainti on JS:n oma `transform:
+ * translateY(...)` — se lasketaan vain avatessa ja valinnan
+ * vaihtuessa, ei kehyksittäin.
+ */
+.karttaselite-peukalolevy {
+  position: absolute;
+  top: 0;
+  right: 0.1rem;
+  width: 2.2rem;
+  /* Läpinäkyvä vedin (omistaja 22.9.2026): vain ohut reunus ja linssi keskellä. */
+  border: 1px solid rgba(70, 51, 31, 0.3);
+  border-radius: 7px;
+  background: transparent;
+  box-shadow: none;
+  cursor: grab;
+  touch-action: none;
+  transition: transform 120ms ease;
+  z-index: 1;
+}
+
+.karttaselite-peukalolevy:active { cursor: grabbing; }
+
+/* Raahauksen ajaksi siirtymä pois, jotta levy ei jää jälkeen sormesta. */
+.karttaselite-peukalolevy.ei-siirtyma { transition: none; }
+
+/*
+ * LINSSI vetimen keskellä: pyöreä lasi, jossa rivin luku näkyy hieman
+ * suurennettuna. Pallopyöristymä (linssivirhe) tehdään kahdella
+ * liukuvärillä — kiilto vasemmalla ylhäällä, tummuva reuna — ja sisäisellä
+ * varjolla; numero on lasin sisällä 1,25-kertaisena.
+ */
+.karttaselite-peukalolevy-linssi {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  border: 1px solid rgba(70, 51, 31, 0.55);
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.75) 0, rgba(255, 255, 255, 0.25) 28%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(circle at 50% 50%, rgba(245, 240, 225, 0.35) 55%, rgba(70, 51, 31, 0.18) 100%);
+  box-shadow: inset 0 0 3px rgba(70, 51, 31, 0.35), 0 1px 2px rgba(20, 14, 6, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(70, 51, 31, 0.95);
+  transform: scale(1.25);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karttaselite-peukalolevy { transition: none; }
+}
+
+/*
+ * KEHYSPROFIILIN NÄYTTÖ (`?koe=profiili`, js/pallolauta/profiilinaytto.js).
+ * VAIN MITTAUKSEEN: kerros syntyy kartalle vain lipun kanssa, joten
+ * pelaaja ei näe sitä koskaan. Puhelin ensin: pieni tasalevyinen
+ * kirjasin, tumma pohja ja kapea rivinväli, jotta neljä riviä mahtuu
+ * 390 px:n leveydelle kuvakaappaukseen luettavana.
+ */
+/* Kotelon yleissääntö (.pallo-kotelo > div { inset: 0 }) on tätä
+   täsmällisempi, joten valitsimessa on kotelo mukana ja `inset: auto`
+   purkaa venytyksen — muuten laatikko olisi koko kartan kokoinen. */
+.pallo-kotelo > .profiilinaytto,
+.profiilinaytto {
+  position: absolute;
+  inset: auto auto 0.4rem 0.4rem;
+  z-index: 6;
+  max-width: calc(100% - 0.8rem);
+  padding: 0.3rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(18, 14, 8, 0.78);
+  color: #f2e7cf;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.62rem;
   line-height: 1.35;
+  white-space: pre-wrap;
+  pointer-events: none;
+  /* Mittauskerros ei saa vaikuttaa mittaukseen: ei varjoja, ei suotimia. */
+  text-shadow: none;
+}
+
+/*
+ * RIVIN OMA LUKU PIILOON LINSSIN ALTA (omistaja 22.9.2026: *"Suurennos-
+ * lasin alta paistaa myös se pienempi numero."*). Linssi näyttää saman
+ * luvun suurennettuna, joten rivin oma luku näkyi sen takaa kahtena.
+ * `visibility`, ei `display`: rivin ladelma ei saa hypätä, kun levy
+ * liukuu sen yli. Luokan (.luku-linssin-alla — ei .linssin-alla, joka on
+ * pallokuoren oma tila) asettaa js/karttaselite-levy.js sille riville,
+ * joka on levyn alla — myös kesken raahauksen.
+ */
+.karttaselite-rivi.luku-linssin-alla .karttaselite-luku,
+.maakunnat-rivi.luku-linssin-alla .maakunnat-luku {
+  visibility: hidden;
+}
+
+/* ===========================================================================
+   KARTTATYÖKALUN MAAKUNNAT-VÄLILEHTI (js/karttatyokalu-maakunnat.js)
+   ---------------------------------------------------------------------------
+   Omistajan päätös 22.9.2026: karttaselitepaneeliin uusi välilehti,
+   josta pelaaja selaa nykymaakuntia maittain ja lukee Livian lyhyen
+   luonnehdinnan. Tämä lohko on RUNKO ILMAN KARTTAKYTKENTÄÄ — värjäys
+   kartalla tulee myöhemmin Karttasepän vektoritasolta.
+
+   Puhelin ensin (390 px): sarakkeet ja fontit mitoitettu kapealle
+   ruudulle, samat tokenit kuin karttaselitteen levyllä (ruskea muste,
+   #f5f0e2-pergamentti) — työkalu on saman valikon toinen välilehti eikä
+   saa näyttää vieraalta sen vierellä.
+   =========================================================================== */
+
+.maakunnat-tyokalu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Rivien yhteinen esi-isä: position: relative, jotta tuleva peukalolevy
+   (js/karttaselite-levy.js) voi liukua tämän päällä samassa sarakkeessa
+   kuin muillakin välilehdillä. Ryhmäkotelot eivät aseta omaa position-
+   arvoaan, joten tämä pysyy lähimpänä asemoituna esivanhempana. */
+.maakunnat-lista {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.maakunnat-ryhma {
+  display: flex;
+  flex-direction: column;
+}
+
+.maakunnat-maaotsikko {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  padding: 0.3rem 0.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunnat-maaotsikko:hover:not(:disabled) { background: rgba(70, 51, 31, 0.07); }
+
+/* Pieni nuoli kertoo auki/kiinni-tilan ilman erillistä kuvaketta. */
+.maakunnat-maaotsikko::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 160ms ease;
+}
+
+.maakunnat-maaotsikko[aria-expanded='true']::before { transform: rotate(90deg); }
+
+.maakunnat-rivit-ryhma {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kaksi saraketta: nimi venyy, luku asettuu oikeaan laitaan samaan
+   sarakkeeseen kuin karttaselitteen kappalemäärä. */
+.maakunnat-rivi {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 0;
+  padding: 0.3rem 0.4rem 0.3rem 1.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunnat-rivi:hover:not(:disabled) { background: rgba(70, 51, 31, 0.07); }
+
+.maakunnat-rivi[aria-pressed='true'] {
+  background: rgba(70, 51, 31, 0.1);
+  font-weight: 600;
+}
+
+.maakunnat-rivi-nimi {
+  line-height: 1.25;
+  /* Pitkä nimi kolmella pisteellä (omistaja 22.9.2026); koko nimi rivin title-attribuutissa. */
+  max-width: 9.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tyhjä lukupaikka: ei tekstiä tässä erässä, mutta sarake on olemassa
+   niin että peukalolevy löytää saman kohdan kuin Nostot-välilehdellä. */
+.maakunnat-luku {
+  min-width: 1.4rem;
+}
+
+.maakunnat-luonnehdinta {
+  /*
+   * LUONNEHDINTA PYSYY NÄKYVISSÄ LISTAN ALLA (omistaja 22.9.2026: "paneelin
+   * alapuolelle"): levy vierii (max-height), joten laatikko tarttuu
+   * vierityslaatikon alareunaan eikä jää maalistan alle piiloon.
+   */
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background: #f5f0e2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.3rem 0.5rem;
+  margin: 0.2rem 0.15rem 0;
+  padding: 0.5rem 0.6rem;
+  border-top: 1px solid rgba(70, 51, 31, 0.18);
+}
+
+.maakunnat-luonnehdinta-nimi {
+  flex: 1 1 100%;
+  margin: 0;
+  color: rgba(70, 51, 31, 0.75);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.maakunnat-luonnehdinta-teksti {
+  flex: 1 1 auto;
+  margin: 0;
+  color: rgba(70, 51, 31, 0.92);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.maakunnat-luonnehdinta-lisaa {
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  border-radius: 50%;
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.85);
+  cursor: pointer;
+}
+
+.maakunnat-luonnehdinta-lisaa:hover:not(:disabled) {
+  background: rgba(255, 252, 242, 1);
+  color: rgba(70, 51, 31, 1);
+}
+
+/* --------------------------------------------------------------------
+   ALUEEN KORTTI (plussan avaama pop-up) — sama korttikerrosmalli kuin
+   nostokortilla (css/fokusnosto.css .fokusnosto-kerros), oma luokka-
+   perhe: kelluva paperi kartan/paneelin päällä, ei koko ruudun modaali.
+   -------------------------------------------------------------------- */
+
+.maakunta-kortti-kerros {
+  position: fixed;
+  inset: 0;
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(1rem + var(--turva-yla, 0px)) calc(1rem + var(--turva-oikea, 0px))
+    calc(1rem + var(--turva-ala, 0px)) calc(1rem + var(--turva-vasen, 0px));
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+
+.maakunta-kortti-auki { background: rgba(18, 12, 4, 0.3); }
+
+.maakunta-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(30rem, 100%);
+  max-height: min(86vh, 46rem);
+  overflow-y: auto;
+  padding: 0.7rem 0.8rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  font-family: var(--font-luku);
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+
+.maakunta-kortti-auki .maakunta-kortti {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .maakunta-kortti-kerros,
+  .maakunta-kortti { transition: none; }
+}
+
+.maakunta-kortti-sulje {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  z-index: 2;
+  min-height: 30px;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 6px;
+  background: rgba(245, 240, 226, 0.86);
+  color: rgba(70, 51, 31, 0.9);
+  cursor: pointer;
+}
+
+.maakunta-kortti-otsikko {
+  margin: 0 1.6rem 0.4rem 0;
+  font-family: var(--font-type);
+  font-size: 1.05rem;
+}
+
+.maakunta-kortti-teksti {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Kaksi kuvaa vierekkäin; useampi vaihtaa vaakakarusellin puolelle. */
+.maakunta-kuvat-ruudukko {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.maakunta-kuvat-karuselli {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.maakunta-kuvat-karuselli .maakunta-kuva {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+}
+
+.maakunta-kuva {
+  margin: 0;
+}
+
+.maakunta-kuva img {
+  display: block;
+  width: 100%;
+  height: 8rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.maakunta-kuva-lahde {
+  margin-top: 0.2rem;
+  color: rgba(70, 51, 31, 0.65);
+  font-size: 0.66rem;
+  line-height: 1.3;
+}
+
+/* Pulun kysymykset: nappi ikonilla ja tekstillä, vastaus puhekuplana heti alla. */
+.maakunta-pulu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.maakunta-pulu-kysymys {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 0;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 252, 242, 0.7);
+  color: rgba(70, 51, 31, 0.92);
+  font: inherit;
+  font-size: 0.84rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.maakunta-pulu-kysymys:hover:not(:disabled) { background: rgba(255, 252, 242, 1); }
+
+.maakunta-pulu-ikoni {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  color: rgba(70, 51, 31, 0.7);
+}
+
+.maakunta-pulu-vastaus {
+  margin: -0.15rem 0 0;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  background: rgba(70, 51, 31, 0.08);
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 
 /* ==================== KARTTAPALLO (js/pallo.js) ==================== */
@@ -26382,6 +26981,34 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/*
+ * KOKO LIUKUU JOKA KEHYKSESSÄ (js/pallolauta/nimet.js, erä E2): kotelon
+ * `--nimiokerroin` (kameran mittakaava / ladonnan mittakaava, pallon
+ * kehyskoukusta) skaalaa merkin SVG-KUOREN merkin omasta pisteestä;
+ * sisäryhmien style.transform ja font-size pysyvät ladonnan pohjana.
+ * Katto (PAATOKSET 31 kohta 2) tulee merkin omista muuttujista:
+ * näytetty mitta = pohja · min(kerroin · a, b) = min(raaka · kerroin, katto).
+ */
+.pallolauta-nimi > svg,
+.pallolauta-nosto > svg,
+.pallolauta-turisti-info > svg {
+  transform-origin: 0 0;
+  transform: scale(min(calc(var(--nimiokerroin, 1) * var(--nimio-a, 1)), var(--nimio-b, 1e9)));
+}
+/* Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u; nimet liukuvat silti. */
+.pallolauta-nostot-ruutuvakio .pallolauta-nosto > svg,
+.pallolauta-nostot-ruutuvakio .pallolauta-turisti-info > svg { transform: none; }
+/*
+ * Siirtymät pois liikkeen ajaksi: ladonnan pohja ja kuori vaihtuvat
+ * samassa kehyksessä, eikä pohja saa liukua perässä (nimet.js
+ * SIIRTYMÄT POIS LIIKKEEN AJAKSI). Luonnoksen opacity/filter jäävät.
+ */
+.pallolauta-liikkuu .pallolauta-nimi-siirto,
+.pallolauta-liikkuu .pallolauta-aihemerkki-siirto,
+.pallolauta-liikkuu .pallolauta-turisti-info-siirto { transition: none; }
+.pallolauta-liikkuu .pallolauta-nosto .pallolauta-nosto-siirto {
+  transition: opacity 600ms ease-out, filter 600ms ease-out;
+}
 
 /*
  * LISTAN ALLE JÄÄNYT MUSTE PIILOUTUU LISTAN AJAKSI (Raamattu,
@@ -27543,6 +28170,13 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width: 44px
  * Erillinen, kosketukset läpäisevä pinta ohittaa kartan/napin leikkausrajat. */
 .pollo-nappi.pollo-kelluu.livia-kasvot-valmis,
 body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px; height:48px; min-width:48px; right:calc(2.6rem + env(safe-area-inset-right, 0px)); }
+/* Kartalla hahmolle yhtä paljon hengitystilaa oikealle ja alas (22.9.2026).
+   Nappi on myös piirroksen ankkuri, joten kosketuskohde ja puhekuplat
+   seuraavat mukana. Paneelin väistö ja avoimen chatin oma paikka säilyvät. */
+.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla.livia-kasvot-valmis:not(.livia-chat-nappi) {
+  right: calc(3.6rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
+}
 .livia-kasvot-pinta.livia-lentonayttamo { position:fixed; right:auto; bottom:auto; width:152px; height:304px; z-index:39; pointer-events:none; overflow:hidden; }
 .livia-lentonayttamo[hidden] { display:none; }
 .livia-lentonayttamo canvas { display:block; mix-blend-mode:normal!important; image-rendering:pixelated; }
@@ -27595,52 +28229,52 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  * ruudulle, pitää kartta selite nappia siirtää hieman vasemmalle.
  * Uusi nappi saisi olla saman korkuinen kuin kartta selite."*
  *
- * RAJA ON KORKEUS EIKÄ ORIENTAATIO. `orientation: landscape` on tosi
- * myös leveällä työpöydällä, jossa palkille on tilaa yllin kyllin —
- * ongelma on matala ruutu. 520 px on pelin oma vaakapuhelinraja
- * (sama kuin .intro-tyopoyta yllä), joten uusi sääntö ei tuo peliin
- * uutta taitekohtaa.
+ * RAJA ON ORIENTAATIO (omistaja 21.9.2026, Raamatun loki "BUGI: IPADIN
+ * YLAPALKKI POISSA MYOS PYSTYASENNOSSA"): yläpalkki piilotetaan VAIN
+ * VAAKA-ASENNOSSA iPhonella ja iPadilla; pystyasennossa palkki on aina
+ * näkyvissä. Kun palkki näkyy, valikon kuvake on tavallinen
+ * hampurilainen; vain kun palkkia ei ole, kartalla kelluu kolmen
+ * väkäsen nappi. Tämä korvaa 18.9.2026 säännön (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9: *"Ylapalkin voisi piilottaa
+ * myos ipadilla niin kuin iphonella on"*), joka toteutettiin ehdolla
+ * `(pointer: coarse) and (min-width: 700px) and (max-width: 1366px)`
+ * — se osui iPadiin MOLEMMISSA suunnissa, ja siksi iPad pysty
+ * (834 × 1194) oli ilman palkkia. Tässä lohkossa luki aiemmin "raja on
+ * korkeus eikä orientaatio"; se ei enää päde.
  *
- * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta
- * näkyy vain tässä. Niin moduulin ei tarvitse mitata ruutua eikä
- * kuunnella koon muutoksia: sama raja on yhdessä paikassa.
+ * KAKSI EHTOA, MOLEMMAT VAAKASUUNNAN:
  *
- * ── SAMA KÄYTÖS IPADILLA, MOLEMMISSA SUUNNISSA ────────────────────
- * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9; omistaja
- * 18.9.2026 sanatarkasti: *"Ylapalkin voisi piilottaa myos ipadilla
- * niin kuin iphonella on."*)
+ *   (orientation: landscape) and (max-height: 520px)
+ *       vaakapuhelin (844 × 390) ja matala vaakaikkuna — 520 px on
+ *       pelin oma vaakapuhelinraja (sama kuin .intro-tyopoyta yllä).
+ *   (orientation: landscape) and (pointer: coarse) and (max-width: 1366px)
+ *       vaaka-iPad kosketuksella (1133 × 744 … 1366 × 1024). Työpöytä
+ *       (hiiri, `pointer: fine`) ei osu kumpaankaan missään
+ *       ikkunakoossa, joten se jää täsmälleen ennalleen. Pysty-iPad
+ *       (744 × 1133 … 1024 × 1366) ja pystypuhelin ovat `portrait`
+ *       eivätkä osu: palkki näkyy, väkäsnappi ei.
  *
- * IPADIN KUMPIKAAN SUUNTA EI OLE MATALA RUUTU: 1024 × 1366 ja
- * 1366 × 1024 ovat molemmat yli 520 px korkeita, joten pelkkä
- * korkeusraja ei tavoita niitä. Toinen ehto on siksi LAITELAATU JA
- * LEVEYS, ei orientaatio:
- *
- *   pointer: coarse   — sormi, ei hiiri. Työpöytä (1400 × 900 hiiri)
- *                       on `pointer: fine` eikä osu tähän missään
- *                       ikkunakoossa, joten se jää täsmälleen
- *                       ennalleen.
- *   min-width: 700px  — pelin oma puhelinraja on `max-width: 699px`
- *                       (ks. PUHELIN: ISOISÄN JA PULUN TEKSTIT
- *                       PIILOON alla). Pystypuhelin jää siis
- *                       ennalleen: siellä palkki mahtuu ja omistaja
- *                       pyysi muutosta vaakaan ja iPadiin, ei
- *                       pystypuhelimeen. Vaakapuhelin (844 × 390)
- *                       osuu yhä ylempään korkeusehtoon.
- *   max-width: 1366px — iPad Pro 12,9" on vaakasuunnassa laajin
- *                       iPad (1366 px). Sitä leveämpi kosketusnäyttö
- *                       on jo työpöytäluokan ruutu, jossa palkille
- *                       on tilaa.
- *
- * Mitatut laitteet rajan sisällä: iPad mini 744 × 1133 / 1133 × 744,
- * iPad 10,9" 820 × 1180 / 1180 × 820, iPad Pro 12,9" 1024 × 1366 /
- * 1366 × 1024. Nappi, sen paikka, karttaselitteen väistö ja
- * sulkusääntö ovat samat kaikissa — sääntölohko on yksi eikä kahta
- * taitekohtaa synny.
+ * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta näkyy
+ * vain tässä lohkossa — sama lohko piilottaa palkin ja näyttää napin,
+ * joten "palkki näkyvissä väkäsillä" ei voi syntyä: kumpikin seuraa
+ * yhtä ja samaa media-kyselyä. Moduulin ei tarvitse mitata ruutua
+ * eikä kuunnella koon muutoksia: raja on yhdessä paikassa.
  */
 .ylapalkki-nappi { display: none; }
+/*
+ * LINSSIN OMA YLÄPALKKI ON YLÄPALKKI (omistaja 21.9.2026): kun
+ * aikajanalinssi (keksinnöt, Ihmisen matka) korvaa Matkakirjan
+ * yläpalkin omallaan (css/aikajana.css body.aikajana-palkki-auki
+ * .topbar), ruudulla ON palkki ja sen valikko on hampurilainen
+ * (js/aikajana-valikko.js) — kelluvaa väkäsnappia ei silloin ole
+ * missään asennossa. Ennen tätä vaaka-asennossa näkyi linssin palkki
+ * JA sen alla väkäsnappi, joka avasi näkymättömäksi kutistetun pelin
+ * palkin: juuri se "yläpalkki, jossa on väkäset".
+ */
+body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
 
-@media (max-height: 520px),
-  (pointer: coarse) and (min-width: 700px) and (max-width: 1366px) {
+@media (orientation: landscape) and (max-height: 520px),
+  (orientation: landscape) and (pointer: coarse) and (max-width: 1366px) {
   /*
    * Palkki pois asettelusta, ei vain näkyvistä: `.app` on grid, jonka
    * ensimmäinen rivi on palkki. Pelkkä visibility jättäisi rivin
@@ -28339,7 +28973,7 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
 
 /*
  * PIENI LIIKE KARTALLE (js/pallolauta/liike.js): kerros kankaan päällä,
- * ei osumia. Pilvi ja pulu liikkuvat vain `.paalla.levossa`; sävy
+ * ei osumia. Pulu lentää vain `.paalla.levossa`; sävy
  * vaihtuu pehmeästi. Kaikki transform/opacity — komposiittorin työtä.
  */
 .pallo-kotelo > .pallolauta-liike {
@@ -28355,28 +28989,6 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   opacity: 0;
   mix-blend-mode: multiply;
   transition: opacity 2000ms ease, background 2000ms ease;
-}
-.pallolauta-liike-pilvi {
-  position: absolute;
-  top: -20%;
-  left: 0;
-  width: 55%;
-  height: 140%;
-  opacity: 0;
-  mix-blend-mode: multiply;
-  background: radial-gradient(ellipse 50% 45% at 50% 50%, rgba(30, 30, 40, 1) 0%, rgba(30, 30, 40, 0.5) 45%, rgba(30, 30, 40, 0) 70%);
-  transform: translateX(-100%);
-  will-change: transform;
-  animation: pallolauta-pilvi-liuku var(--pilven-matka-ms, 40000ms) linear infinite;
-  animation-play-state: paused;
-}
-.pallolauta-liike.paalla.levossa .pallolauta-liike-pilvi {
-  opacity: var(--pilven-peitto, 0.08);
-  animation-play-state: running;
-}
-@keyframes pallolauta-pilvi-liuku {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(200%); }
 }
 .pallolauta-liike-pulu {
   position: absolute;
@@ -28395,6 +29007,134 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   to { transform: scaleY(0.25); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pallolauta-liike-pilvi, .pallolauta-liike-pulu, .pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: none; transition: none; }
+  .pallolauta-liike-pulu, .pallolauta-liike-pulu .pallolauta-pulu-siipi { animation: none; transition: none; }
   .pallolauta-liike-pulu { display: none; }
+}
+
+/* ===========================================================================
+   ABLAATIOTIKAS (js/pallolauta/kerrokset.js, `?kerrokset=`; vain
+   mittaukseen). Laudan ulkopuolinen käyttöliittymä kytketään pois
+   body-luokilla `kerros-pois-<nimi>`: pulu ja pöllö (nappi, paneeli,
+   kuplat), ui (yläpalkki, vuorokortti ja toimintorivi, maapaneeli,
+   kartuutsi, yläpalkin nappi). `display: none` on ablaatiossa oikein —
+   piilotettu elementti ei maksa ladontaa eikä maalausta.
+   =========================================================================== */
+body.kerros-pois-pulu .pollo-nappi,
+body.kerros-pois-pulu .pollo-paneeli,
+body.kerros-pois-pulu .pollo-kuplapino-kehys,
+body.kerros-pois-liike .pallolauta-liike,
+body.kerros-pois-ui .topbar,
+body.kerros-pois-ui .turn-card,
+body.kerros-pois-ui .ylapalkki-nappi,
+body.kerros-pois-ui .pallolauta-maapaneeli,
+body.kerros-pois-ui .kartuutsi,
+body.kerros-pois-ui .pallolauta-kartuutsi { display: none !important; }
+
+/*
+ * PALJAS KARTTA (omistaja 23.9.2026 klo 09.20: "riisutaan kartalta kaikki
+ * ylimääräiset elementit"; js/pallolauta/kerrokset.js PALJAAT_TILAT).
+ * body.kerros-pois-dom: kaikki sivun elementit näkymättömiin paitsi
+ * pallon kangas, kehysprofiilin overlay, hampurilainen ja ratasvalikko
+ * (nappi ja pudotus; kokeet ovat rattaan Mittaus-ryhmässä), jotta tilan
+ * voi vaihtaa takaisin, sekä pulu ja pieni liike,
+ * joilla on omat Kerrokset-kytkimensä. `visibility` periytyy, joten
+ * yksittäisten luokkien jahtaamista ei tarvita; animoivat ja omaa kerrosta
+ * pitävät elementit lisäksi display: none, jottei niitä sommitella.
+ */
+body.kerros-pois-dom { visibility: hidden; }
+body.kerros-pois-dom .pallo-kotelo canvas,
+body.kerros-pois-dom .profiilinaytto,
+body.kerros-pois-dom .profiilinaytto *,
+body.kerros-pois-dom #menu-btn,
+body.kerros-pois-dom #menu-btn *,
+body.kerros-pois-dom #paavalikko,
+body.kerros-pois-dom #paavalikko *,
+/* Kokeet ovat ratasvalikon Mittaus-ryhmässä (23.9.2026): ratas näkyviin. */
+body.kerros-pois-dom #kehittaja-valikko-btn,
+body.kerros-pois-dom #kehittaja-valikko-btn *,
+body.kerros-pois-dom #kehittaja-valikko,
+body.kerros-pois-dom #kehittaja-valikko *,
+/* Pulu ja pieni liike ovat omia kytkimiään (kerros-pois-pulu / -liike). */
+body.kerros-pois-dom .pallolauta-liike,
+body.kerros-pois-dom .pallolauta-liike *,
+body.kerros-pois-dom .pollo-nappi,
+body.kerros-pois-dom .pollo-nappi *,
+body.kerros-pois-dom .pollo-paneeli,
+body.kerros-pois-dom .pollo-paneeli *,
+body.kerros-pois-dom .pollo-kuplapino-kehys,
+body.kerros-pois-dom .pollo-kuplapino-kehys * { visibility: visible !important; }
+body.kerros-pois-dom .maapaneeli-nurkka,
+body.kerros-pois-dom .monitoimi-nappi,
+body.kerros-pois-dom .saapumistraileri,
+body.kerros-pois-dom .turn-card,
+body.kerros-pois-dom .kartuutsi,
+body.kerros-pois-dom .pallolauta-kartuutsi,
+body.kerros-pois-dom .pallolauta-maapaneeli { display: none !important; }
+
+/* ===========================================================================
+   LEHTIPALSTAT PITKÄLLE NOSTOTEKSTILLE (omistaja 22.9.2026 klo 23.48, iPad
+   pystyssä: "Kaksi erilaista. Tuo kaksi palstaa näyttää paremmalta kaiken
+   kaikkiaan myös muuten. Voisi tehdä kaikkiin pidempiin ainakin.")
+   ---------------------------------------------------------------------------
+   Skandaalikortin lööpin leipätekstimalli (css/fokusnosto.css osio 9,
+   .looppi-leipa: kaksi palstaa, anfangi, palstaväli 1,4 rem, vasen tasaus)
+   kaikkien karttakorttien PITKÄÄN leipätekstiin — kohdekortti, eläintäky,
+   historian hetki, syvennys, maalehden nosto. Pituuden ratkaisee JS
+   (js/ui-apurit.js onPitkaNostoteksti): lyhyt teksti ei saa luokkaa eikä
+   koteloa, joten se pysyy yhtenä palstana kaikilla leveyksillä.
+
+   TÄÄLTÄ TÄYSIN ERIKSEEN RATKEAA LEVEYS: container query tekstin OMASTA
+   leveydestä, ei ruudun. Silloin sama sääntö toimii kolmessa eri
+   tilanteessa ilman erikoistapauksia:
+     - puhelin ja kapea tekstikortti (34 rem)  → yksi palsta;
+     - iPadin kuvakortti pinona (~760 px)       → kaksi palstaa;
+     - ≥ 1100 px kuva/teksti-taitto: tekstipalsta on ~500 px kuvan
+       vieressä → yksi palsta (kaksi ~240 px:n palstaa olisi alle 35
+       merkkiä rivillä; mitattu tools/mittaa-lehtipalstat.mjs).
+   Kotelo on oma elementtinsä (.lehtipalsta-kotelo), koska container-
+   type tuo mukanaan layout-rajauksen: sitä ei haluta kortin vieritys-
+   koteloon, jossa se muuttaisi kiinteästi asemoitujen lasten
+   sijoituspohjaa. Tekstikotelossa on vain kappaleita.
+   =========================================================================== */
+.lehtipalsta-kotelo { container-type: inline-size; }
+
+@container (min-width: 600px) {
+  .lehtipalsta {
+    column-count: 2;
+    column-gap: 1.4rem;
+    text-align: left;
+    hyphens: auto;
+  }
+  .lehtipalsta p { margin: 0 0 0.65em; }
+  .lehtipalsta p:last-child { margin-bottom: 0; }
+  /* Anfangi vain palstoissa: lehden etusivun ele, ei puhelimen pino. */
+  .lehtipalsta p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-type);
+    font-size: 3.1em;
+    line-height: 0.82;
+    font-weight: 700;
+    padding: 0.06em 0.12em 0 0;
+    color: rgba(70, 51, 31, 0.9);
+  }
+}
+
+/* KAMERAKALLISTUS, VAIHE 1 (koe; js/pallolauta/kallistus.js). Usva peittää
+   horisontin rajauksen; ruutuun ankkuroidut kortit piiloon kallistuksen ajan
+   (suunnitelma docs/raportit/kamerakallistus-suunnitelma-20260923.md). */
+.pallolauta-usva {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(to bottom, var(--kerma) 0%, var(--kerma) var(--usva-taysi, 30%), rgb(250 244 214 / 0) 100%);
+}
+body.pallolauta-kallistettu .fokuskohde-popup,
+body.pallolauta-kallistettu .kaupunkipopup,
+body.pallolauta-kallistettu .pallolauta-maapaneeli,
+body.pallolauta-kallistettu .minipopup,
+body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
+  visibility: hidden;
 }

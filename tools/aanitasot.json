@@ -3,7 +3,7 @@
   "mitattu": [
     {
       "url": "https://cdn.freesound.org/previews/731/731249_10924423-lq.mp3",
-      "voima": 0.6,
+      "voima": 3.04,
       "asetettu": true,
       "esiintymat": 2,
       "lufs": -42.65,
@@ -13,7 +13,7 @@
     },
     {
       "url": "https://cdn.freesound.org/previews/731/731247_10924423-lq.mp3",
-      "voima": 0.6,
+      "voima": 2.84,
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -42.08,
@@ -23,7 +23,7 @@
     },
     {
       "url": "https://cdn.freesound.org/previews/340/340276_2669559-lq.mp3",
-      "voima": 0.6,
+      "voima": 0.23,
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -20.23,
@@ -33,7 +33,7 @@
     },
     {
       "url": "https://cdn.freesound.org/previews/433/433002_138-lq.mp3",
-      "voima": 3.6,
+      "voima": 2.69,
       "asetettu": true,
       "esiintymat": 2,
       "lufs": -41.61,
@@ -43,7 +43,7 @@
     },
     {
       "url": "https://cdn.freesound.org/previews/456/456092_3025911-lq.mp3",
-      "voima": 0.3,
+      "voima": 0.18,
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -18.08,
@@ -53,7 +53,7 @@
     },
     {
       "url": "https://cdn.freesound.org/previews/245/245691_2047664-lq.mp3",
-      "voima": 0.22,
+      "voima": 0.15,
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -15.7,
@@ -86,7 +86,7 @@
       "voima": 2.9,
       "asetettu": true,
       "esiintymat": 1,
-      "lufs": -42.25,
+      "lufs": -42.24,
       "huippuDb": -0.43,
       "kesto": 180,
       "uusiVoima": 2.9
@@ -100,16 +100,6 @@
       "huippuDb": -2,
       "kesto": 75.5,
       "uusiVoima": 0.21
-    },
-    {
-      "url": "https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3",
-      "voima": 0.55,
-      "asetettu": true,
-      "esiintymat": 4,
-      "lufs": -27.86,
-      "huippuDb": -4.31,
-      "kesto": 40.8,
-      "uusiVoima": 0.55
     },
     {
       "url": "https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3",
@@ -156,10 +146,10 @@
       "voima": 4.31,
       "asetettu": true,
       "esiintymat": 2,
-      "lufs": -45.69,
+      "lufs": -45.7,
       "huippuDb": -24.55,
       "kesto": 180,
-      "uusiVoima": 4.31
+      "uusiVoima": 4.32
     },
     {
       "url": "https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3",
@@ -180,16 +170,6 @@
       "huippuDb": -0.28,
       "kesto": 60.6,
       "uusiVoima": 0.15
-    },
-    {
-      "url": "https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3",
-      "voima": 0.82,
-      "asetettu": true,
-      "esiintymat": 2,
-      "lufs": -31.27,
-      "huippuDb": -6.3,
-      "kesto": 180,
-      "uusiVoima": 0.82
     },
     {
       "url": "https://archive.org/download/aporee_8703_10524/CityCountryMeSassnitzFischereihafenFender.mp3",
@@ -267,7 +247,7 @@
       "asetettu": true,
       "esiintymat": 2,
       "lufs": -19.97,
-      "huippuDb": -0.45,
+      "huippuDb": -0.46,
       "kesto": 180,
       "uusiVoima": 0.22
     },
@@ -318,7 +298,7 @@
       "esiintymat": 2,
       "lufs": -40.6,
       "huippuDb": -22.17,
-      "kesto": 82,
+      "kesto": 81.6,
       "uusiVoima": 2.4
     },
     {
@@ -338,22 +318,12 @@
       "esiintymat": 2,
       "lufs": -31.64,
       "huippuDb": -19.88,
-      "kesto": 120,
+      "kesto": 119.3,
       "uusiVoima": 0.86
     },
     {
-      "url": "https://cdn.freesound.org/previews/411/411996_7037-lq.mp3",
-      "voima": 0.92,
-      "asetettu": true,
-      "esiintymat": 2,
-      "lufs": -32.32,
-      "huippuDb": -5.2,
-      "kesto": 180,
-      "uusiVoima": 0.92
-    },
-    {
       "url": "https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3",
-      "voima": 0.48,
+      "voima": 0.5,
       "asetettu": true,
       "esiintymat": 3,
       "lufs": -27,
@@ -375,7 +345,7 @@
       "url": "https://cdn.freesound.org/previews/176/176134_334810-lq.mp3",
       "voima": 0.32,
       "asetettu": true,
-      "esiintymat": 2,
+      "esiintymat": 1,
       "lufs": -23.15,
       "huippuDb": -1.74,
       "kesto": 74.1,
@@ -592,6 +562,36 @@
       "uusiVoima": 0.17
     },
     {
+      "url": "https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3",
+      "voima": 0.55,
+      "asetettu": true,
+      "esiintymat": 2,
+      "lufs": -27.86,
+      "huippuDb": -4.31,
+      "kesto": 40.8,
+      "uusiVoima": 0.55
+    },
+    {
+      "url": "https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3",
+      "voima": 0.82,
+      "asetettu": true,
+      "esiintymat": 1,
+      "lufs": -31.27,
+      "huippuDb": -6.3,
+      "kesto": 180,
+      "uusiVoima": 0.82
+    },
+    {
+      "url": "https://cdn.freesound.org/previews/411/411996_7037-lq.mp3",
+      "voima": 0.92,
+      "asetettu": true,
+      "esiintymat": 1,
+      "lufs": -32.32,
+      "huippuDb": -5.2,
+      "kesto": 180,
+      "uusiVoima": 0.92
+    },
+    {
       "url": "https://archive.org/download/aporee_5304_6751/AutumnDayStJamesparkLondon.mp3",
       "voima": 0.56,
       "asetettu": true,
@@ -672,14 +672,14 @@
       "uusiVoima": 0.96
     },
     {
-      "url": "https://archive.org/download/aporee_40436_46176/201855QuaiduPortseafluxboatmurmur1737.mp3",
-      "voima": 0.25,
-      "asetettu": true,
+      "url": "https://archive.org/download/aporee_5735_7211/MarseilleHafendampferundMwen.mp3",
+      "voima": 1,
+      "asetettu": false,
       "esiintymat": 1,
-      "lufs": -20.91,
-      "huippuDb": -0.22,
-      "kesto": 180,
-      "uusiVoima": 0.25
+      "lufs": -23.8,
+      "huippuDb": -7.37,
+      "kesto": 122.3,
+      "uusiVoima": 0.35
     },
     {
       "url": "https://archive.org/download/aporee_60580_69616/20160705004glisedeSantaLuisaPCMD100.mp3",
@@ -702,34 +702,24 @@
       "uusiVoima": 0.34
     },
     {
-      "url": "https://archive.org/download/aporee_41792_47644/MD220006RD01.mp3",
-      "voima": 0.15,
-      "asetettu": true,
+      "url": "https://archive.org/download/aporee_21584_25098/mercadobarcelona01.mp3",
+      "voima": 1,
+      "asetettu": false,
       "esiintymat": 1,
-      "lufs": -15.76,
-      "huippuDb": 0.02,
-      "kesto": 180,
-      "uusiVoima": 0.15
+      "lufs": -31.53,
+      "huippuDb": -8.4,
+      "kesto": 109.2,
+      "uusiVoima": 0.84
     },
     {
-      "url": "https://archive.org/download/aporee_61524_70763/230214020BPlazaNuevaPilardelToro.mp3",
-      "voima": 0.49,
-      "asetettu": true,
+      "url": "https://archive.org/download/aporee_21765_25301/GranadaCalleCaldereraNuevacaminando.mp3",
+      "voima": 1,
+      "asetettu": false,
       "esiintymat": 1,
-      "lufs": -26.8,
-      "huippuDb": 0,
-      "kesto": 120.6,
-      "uusiVoima": 0.49
-    },
-    {
-      "url": "https://archive.org/download/aporee_61541_70780/230516002CatedralfrentealtarmasvolumenFadeAadido.mp3",
-      "voima": 4.78,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -46.59,
-      "huippuDb": -13.17,
-      "kesto": 146.9,
-      "uusiVoima": 4.78
+      "lufs": -33.51,
+      "huippuDb": -8.79,
+      "kesto": 181.6,
+      "uusiVoima": 1.06
     },
     {
       "url": "https://archive.org/download/aporee_9337_11221/BInterieurtramAdam.mp3",
@@ -822,34 +812,14 @@
       "uusiVoima": 0.31
     },
     {
-      "url": "https://archive.org/download/aporee_71588_83518/2503101259.mp3",
-      "voima": 0.43,
-      "asetettu": true,
+      "url": "https://archive.org/download/aporee_13075_15305/110804152036Warsawda16bit224.mp3",
+      "voima": 1,
+      "asetettu": false,
       "esiintymat": 1,
-      "lufs": -25.62,
-      "huippuDb": -0.23,
-      "kesto": 180,
-      "uusiVoima": 0.43
-    },
-    {
-      "url": "https://archive.org/download/aporee_71577_83505/2503081558.mp3",
-      "voima": 0.34,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -23.71,
-      "huippuDb": -0.87,
-      "kesto": 180,
-      "uusiVoima": 0.34
-    },
-    {
-      "url": "https://archive.org/download/aporee_71560_83484/2502221312.mp3",
-      "voima": 0.35,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -23.88,
-      "huippuDb": -0.57,
-      "kesto": 168.9,
-      "uusiVoima": 0.35
+      "lufs": -49.82,
+      "huippuDb": -29.11,
+      "kesto": 76.4,
+      "uusiVoima": 6
     },
     {
       "url": "https://archive.org/download/aporee_11573_13626/hejnal.mp3",
@@ -882,16 +852,6 @@
       "uusiVoima": 2.62
     },
     {
-      "url": "https://archive.org/download/aporee_52547_60044/20180524PlaceSazintMarcr1session20210316.mp3",
-      "voima": 0.68,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -29.6,
-      "huippuDb": -8.76,
-      "kesto": 180,
-      "uusiVoima": 0.68
-    },
-    {
       "url": "https://archive.org/download/aporee_27844_32090/201556veniceNightWalk2246.mp3",
       "voima": 0.31,
       "asetettu": true,
@@ -907,7 +867,7 @@
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -21.79,
-      "huippuDb": -0.44,
+      "huippuDb": -0.45,
       "kesto": 180,
       "uusiVoima": 0.28
     },
@@ -920,16 +880,6 @@
       "huippuDb": 0.6,
       "kesto": 161.8,
       "uusiVoima": 0.36
-    },
-    {
-      "url": "https://archive.org/download/aporee_61268_70466/AMBRoccazzelleSicilybeachpeoplewavesaugust.mp3",
-      "voima": 3.23,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -43.19,
-      "huippuDb": -22.58,
-      "kesto": 180,
-      "uusiVoima": 3.23
     },
     {
       "url": "https://archive.org/download/aporee_30592_35195/hackny.mp3",
@@ -947,7 +897,7 @@
       "asetettu": true,
       "esiintymat": 1,
       "lufs": -24.95,
-      "huippuDb": -9.48,
+      "huippuDb": -9.49,
       "kesto": 180,
       "uusiVoima": 0.4
     },
@@ -992,14 +942,24 @@
       "uusiVoima": 2.42
     },
     {
-      "url": "https://archive.org/download/aporee_72320_84455/stjosephchurchsarajevo.mp3",
-      "voima": 0.33,
+      "url": "https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3",
+      "voima": 0.82,
       "asetettu": true,
       "esiintymat": 1,
-      "lufs": -23.3,
+      "lufs": -30.69,
       "huippuDb": 0.01,
       "kesto": 180,
-      "uusiVoima": 0.33
+      "uusiVoima": 0.77
+    },
+    {
+      "url": "https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3",
+      "voima": 1.11,
+      "asetettu": true,
+      "esiintymat": 1,
+      "lufs": -33.91,
+      "huippuDb": -3.24,
+      "kesto": 77,
+      "uusiVoima": 1.11
     },
     {
       "url": "https://archive.org/download/aporee_15487_18036/LS111000kopor.mp3",
@@ -1202,14 +1162,14 @@
       "uusiVoima": 1.78
     },
     {
-      "url": "https://archive.org/download/aporee_32161_36945/patrickmcginley20160505kemijokibridge.mp3",
-      "voima": 0.22,
-      "asetettu": true,
+      "url": "https://archive.org/download/aporee_49673_56640/torinranta.mp3",
+      "voima": 1,
+      "asetettu": false,
       "esiintymat": 1,
-      "lufs": -19.81,
-      "huippuDb": -0.86,
-      "kesto": 180,
-      "uusiVoima": 0.22
+      "lufs": -27.97,
+      "huippuDb": -1.44,
+      "kesto": 360.5,
+      "uusiVoima": 0.56
     },
     {
       "url": "https://archive.org/download/aporee_65563_75724/Harbour20241014174716.mp3",
@@ -1240,36 +1200,6 @@
       "huippuDb": -0.49,
       "kesto": 172,
       "uusiVoima": 0.24
-    },
-    {
-      "url": "https://archive.org/download/aporee_61946_71274/231021Trollafoss.mp3",
-      "voima": 0.18,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -18.23,
-      "huippuDb": -3.59,
-      "kesto": 168.1,
-      "uusiVoima": 0.18
-    },
-    {
-      "url": "https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3",
-      "voima": 0.82,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -31.27,
-      "huippuDb": 0.08,
-      "kesto": 241,
-      "uusiVoima": 0.82
-    },
-    {
-      "url": "https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3",
-      "voima": 1.11,
-      "asetettu": true,
-      "esiintymat": 1,
-      "lufs": -33.91,
-      "huippuDb": -3.24,
-      "kesto": 77,
-      "uusiVoima": 1.11
     }
   ]
 }

@@ -103,7 +103,10 @@
  */
 
 /** Venäjän hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_RUS = [
+  ...EUROOPAN_KADONNEET.RUS,
   {
     id: 'hahmotelma-peterhof',
     kuva: {
@@ -132,6 +135,7 @@ export const HAHMOTELMA_RUS = [
     ],
     nimi: 'Peterhof',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Miksi Peterhofia kutsutaan "Venäjän Versailles\'ksi"?',
@@ -907,6 +911,58 @@ export const HAHMOTELMA_RUS = [
       fakta: 'Vereštšagin esitteli oman voinsa Pariisin näyttelyssä uudelleen vuonna 1878, '
         + 'jolloin se voitti kultamitalin — mutta koska idea oli ranskalaislähtöinen, voita '
         + 'myytiin pitkään nimellä Pariisin voi.',
+    },
+  },
+  {
+    id: 'hahmotelma-staraja-rjazan',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/rus-nosto-staraja-rjazan-91939ff8.jpg',
+      lyhyt: 'Vanhan Rjazanin muinaisjäännösalue ilmasta kuvattuna Okajoen mutkassa.',
+      selite: 'Ilmakuvassa näkyy Vanhan Rjazanin laaja linnavuoren ja esikaupungin alue '
+        + 'vihreine maavalleineen Okajoen rannalla. Muinaisen kaupungin rakennuksista ei ole '
+        + 'maan päällä jäljellä juuri mitään — vain nurmettuneet valli- ja kaivantolinjat '
+        + 'piirtävät entisen asutuksen ääriviivat.',
+      lahde: 'Valokuva: Mikhey77777, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Mikhey77777',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Городище_Старая_Рязань._Вид_со_стороны_Оки.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Vanha Rjazan',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka oli Vanhan Rjazanin ruhtinas, joka sai surmansa kaupungin tuhoutuessa?',
+      'Minne ruhtinaskunnan pääkaupunki siirrettiin tuhon jälkeen?',
+    ],
+    korostukset: ['Batu-kaani|Batu-kaanin', 'Juri Igorevitš|Juri Igorevitšin'],
+    nappi: 'Ruhtinaskunnan pääkaupunki makaa jo 636 vuotta autiona mongolien tuhon jäljiltä',
+    // 40.424167 E / 54.405278 N — en-Wikipedia "Siege of Ryazan" (coord-malline)
+    laudat: {
+      maailmankartta: { x: 7180.8, y: 1193.2 },
+      europe: { x: 987.3, y: 462.7 },
+    },
+    teksti: 'Vanha Rjazan eli Staraja Rjazan oli Rjazanin ruhtinaskunnan alkuperäinen '
+      + 'pääkaupunki Okajoen rannalla, noin 50 kilometriä nykyisestä Rjazanista itään. '
+      + 'Joulukuussa 1237 Batu-kaanin mongolijoukot piirittivät kaupunkia viiden päivän '
+      + 'ajan, ja 21. joulukuuta ne murtautuivat sisään heittokoneilla revittyjen muurien '
+      + 'läpi. Hyökkääjät tappoivat ruhtinas Juri Igorevitšin puolisoineen ja lähes koko '
+      + 'väestön sekä polttivat kaupungin maan tasalle — arkeologit ovat myöhemmin '
+      + 'löytäneet joukkohautoja väkivaltaisesti kuolleista asukkaista. Kaupunkia ei '
+      + 'koskaan rakennettu uudelleen, vaan ruhtinaskunnan pääkaupunki siirtyi pysyvästi '
+      + 'Perejaslavl-Rjazanskiin, joka nimettiin vasta 1778 Rjazaniksi. Nykyisin entisen '
+      + 'kaupungin paikalla näkyy enää maavalleja, ja se on arkeologinen kaivauskohde.',
+    lahde: 'en-Wikipedia "Siege of Ryazan" (johdanto-osa) ja "Ryazan" (osio "History"), '
+      + 'tarkistettu 21.9.2026.',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-staraja-rjazan-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1200-luvun alussa Vanha Rjazan oli Rjazanin ruhtinaskunnan '
+        + 'vauras, linnoitettu pääkaupunki Okajoen rannalla, jonka puumuurien ja kivikirkkojen '
+        + 'sisällä kauppiaat ja ruhtinaan hovi elivät vielä rauhan aikaa ennen mongolien tuloa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Siege of Ryazan" ja "Ryazan", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Siege_of_Ryazan',
     },
   },
 ];

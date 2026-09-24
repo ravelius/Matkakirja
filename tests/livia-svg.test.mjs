@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIA_SVG_ELEET,LIVIAN_PITKAN_SELITYKSEN_MIN_MS,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima,livianSelityseleenVariantti} from '../js/livia-svg.js';
+import {LIVIA_SVG_ELEET,LIVIAN_PITKAN_SELITYKSEN_MIN_MS,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima,livianSelityseleenVariantti,livianLeijuntaSiipi,luoLivianSvg} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
  assert.equal(LIVIA_SVG_ELEET.length,70);
@@ -226,6 +226,43 @@ test('karttaleijunta nostaa Pulua ja liikuttaa siipiä pehmeästi vaiheen mukana
  assert.equal(low.y,ground.y-6);assert.equal(high.y,ground.y-12);
  assert.equal(high.wing,'flap');assert.notEqual(high.wingAmount,livianSvgMalli({...rest,mapHover:{height:1,phase:Math.PI/2}}).wingAmount);
  assert.match(livianSvgKuva({...rest,mapHover:{height:1,phase:0}}),/data-map-hover="1"/);
+});
+test('leijunnan paikkaus antaa täsmälleen samat transformit kuin koko kuva (kartan sulavuus 22.9.2026)',()=>{
+ const rest=livianSvgAsento('blink',0);
+ for(const phase of [0,1.3,Math.PI/2,4.2]){
+  const svg=livianSvgKuva({...rest,mapHover:{height:1,phase}});
+  for(const side of ['near','far']){
+   const m=new RegExp(`data-part="${side}-wing" transform="([^"]+)"`).exec(svg);
+   assert.ok(m,`${side}-wing löytyy leijunnassa`);
+   assert.equal(m[1],livianLeijuntaSiipi(side,phase));
+  }
+ }
+});
+test('luoLivianSvg.paikkaa päivittää vain vaiheen: sama asento → attribuutit, eri asento tai matala leijunta → ei',()=>{
+ // Pieni DOM-jäljitelmä: innerHTML-asetus jäsentää data-part-transformit, setAttribute kirjaa ne.
+ const osat=new Map();
+ const el={style:{},set innerHTML(v){osat.clear();this._html=v;for(const m of v.matchAll(/data-part="(whole-bird|near-wing|far-wing)"[^>]*? transform="([^"]+)"/g)){const t={_t:m[2],setAttribute(n,x){if(n==='transform')this._t=x;},getAttribute(){return this._t;}};osat.set(m[1],t);}},get innerHTML(){return this._html;},querySelector(sel){const n=/data-part="([^"]+)"/.exec(sel)[1];return osat.get(n)??null;}};
+ const k=luoLivianSvg(el);
+ const rest=livianSvgAsento('blink',0);
+ const s1={...rest,mapHover:{height:1,phase:0}};
+ assert.equal(k.paikkaa(s1),false,'ensimmäinen leijuntakuva rakennetaan, ei paikata');
+ k.paint(s1);
+ const html1=el.innerHTML;
+ const s2={...rest,mapHover:{height:1,phase:1.3}};
+ assert.equal(k.paikkaa(s2),true,'vain vaihe muuttui → paikataan');
+ assert.equal(el.innerHTML,html1,'innerHTML ei rakennettu uudestaan');
+ assert.equal(osat.get('near-wing').getAttribute('transform'),livianLeijuntaSiipi('near',1.3));
+ assert.match(livianSvgKuva(s2),new RegExp(`data-part="whole-bird"[^>]*? transform="${osat.get('whole-bird').getAttribute('transform').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}"`),'linnun transform on sama kuin koko kuvassa');
+ // Nousu: porras vaihtuu → rakennetaan; saman portaan sisällä paikataan (sulavuus kohta 17).
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.5,phase:2}}),false,'eri korkeusporras → rakennetaan');
+ k.paint({...rest,mapHover:{height:.5,phase:2}});
+ const html2=el.innerHTML;
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.55,phase:2.4}}),true,'sama porras (0,5 ≈ 0,55) → paikataan');
+ assert.equal(el.innerHTML,html2,'innerHTML ei rakennettu portaan sisällä');
+ assert.equal(k.paikkaa({...rest,mapHover:{height:.7,phase:2.5}}),false,'seuraava porras → rakennetaan');
+ assert.equal(k.paikkaa({...rest,mapHover:{height:0,phase:3}}),false,'maassa ei paikata');
+ k.paint(s2);
+ assert.equal(k.paikkaa({...s2,propsRight:true}),false,'asento muuttui → rakennetaan');
 });
 test('karttaleijunta vetää jalat sisään korkeuden mukana',()=>{
  const rest=livianSvgKuva(livianSvgAsento('blink',0));

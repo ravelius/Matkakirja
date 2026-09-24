@@ -204,6 +204,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Viandenin linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka myi Viandenin linnan vuonna 1820?',
@@ -277,6 +278,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Echternach',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Minä vuonna Pyhä Willibrord perusti Echternachin luostarin?',
@@ -472,6 +474,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Luxembourgin kaupunki',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka hankki Lucilinburhucin linnakkeen vuonna 963?',
@@ -878,6 +881,7 @@ export const HAHMOTELMA_LUX = [
     ],
     nimi: 'Esch-sur-Alzette',
     tyyppi: 'tekniikka',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Milloin alueelta löytyi runsaasti rautamalmia?',
@@ -984,6 +988,55 @@ export const HAHMOTELMA_LUX = [
       ],
       oikea: 3,
       fakta: 'Lämpölähteet löytyivät 1840-luvulla suolaa etsittäessä.',
+    },
+  },
+  {
+    id: 'hahmotelma-altmunster',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/lux-nosto-altmunster-0ae5d4fb.jpg',
+      lyhyt: 'Altmünsterin luostarin pyöreä kivitorni puiden keskellä.',
+      selite: 'Vanhan Altmünsterin luostarin ainoa säilynyt osa, pyöreä hiekkakivitorni, kohoaa puiden ja pensaiden keskeltä Luxemburgin kaupungissa.',
+      lahde: 'Valokuva: Philippe Henri Blasen, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Philippe Henri Blasen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tour_Altm%C3%BCnster_Luxembourg.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Altmünsterin luostari',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka perusti Altmünsterin luostarin vuonna 1083?',
+      'Minne apotti Johannes Harder vei luostarin arvoesineet ennen tuhoa?',
+    ],
+    korostukset: ['Ranskan kuningas Frans I|Ranskan kuningas Frans I'],
+    nappi: 'Luxemburgin kaupungin vanhin luostari, jonka rauniolla seisoo enää yksi torni',
+    // 6.1425 E / 49.613333 N — en-Wikipedia "Altmünster Abbey"
+    laudat: {
+      maailmankartta: { x: 6038.1, y: 1407 },
+      europe: { x: 329.1, y: 588.8 },
+    },
+    teksti: 'Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin '
+      + 'kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti '
+      + 'veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja '
+      + 'luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; '
+      + 'myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. '
+      + 'Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja '
+      + 'luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — '
+      + 'tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä '
+      + 'arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen '
+      + 'hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin '
+      + 'kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.',
+    lahde: 'en-Wikipedia "Altmünster Abbey", koko artikkeli (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-altmunster-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan keskiajalla Altmünsterin luostari oli kivimuurein ja '
+        + 'kirkontornein varustettu benediktiiniluostari Luxemburgin kaupungin laidalla, jonne '
+        + 'haudattiin kreivien suvun jäseniä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Altmünster Abbey", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Altm%C3%BCnster_Abbey',
     },
   },
 ];

@@ -1,248 +1,212 @@
 {
   "versio": 2,
   "kaupunki": "dubrovnik",
-  "teksti": "Ragusan muureilta näkee, kuinka huolellisesti meri on pidetty ulkona. Portin sisällä vesi kuitenkin tulee vastaan vanhan suihkukaivon kivikasvoista. Join yhden suusta ja toisenkin, sillä ne näyttivät olevan eri mieltä mausta. Sama vesi. Kaupunki on rakentanut janolleen kuusitoista puhuvaa päätä, ja jokainen neuvoo ottamaan vielä kulauksen.",
-  "tekstiSha256": "0989882fb6e739ccac09d6960f08ca25253e457863960950a0f42fd298f2370c",
+  "teksti": "Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
+  "tekstiSha256": "451813de50984d4272582eac62d4df7ba5292ac952862c514e8cda98770a2849",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-dubrovnik.mp3",
     "versio": 2,
-    "tavut": 466904,
-    "sha256": "43613c1cf90d88c3de58e02ab8f94f8fcf8ab75981ea5a256f165886bf991c18"
+    "tavut": 401702,
+    "sha256": "ad07b0c41047938f5d5b45789ecdd8e9ef1992d346d7cb57b80315b6e1253cee"
   },
-  "kesto": 29100,
+  "kesto": 25020,
   "sanat": [
     {
       "sana": "Ragusan",
       "alku": 140,
-      "loppu": 599
+      "loppu": 660
     },
     {
-      "sana": "muureilta",
-      "alku": 620,
-      "loppu": 1100
+      "sana": "itäportin",
+      "alku": 740,
+      "loppu": 1320
     },
     {
-      "sana": "näkee",
-      "alku": 1199,
-      "loppu": 1639
+      "sana": "vieressä",
+      "alku": 1360,
+      "loppu": 1880
     },
     {
-      "sana": "kuinka",
-      "alku": 1819,
-      "loppu": 2119
+      "sana": "katselin",
+      "alku": 1920,
+      "loppu": 2400
     },
     {
-      "sana": "huolellisesti",
-      "alku": 2159,
-      "loppu": 2899
+      "sana": "vanhoja",
+      "alku": 2440,
+      "loppu": 2860
     },
     {
-      "sana": "meri",
-      "alku": 2939,
-      "loppu": 3220
+      "sana": "karanteenirakennuksia",
+      "alku": 2900,
+      "loppu": 4360
     },
     {
-      "sana": "on",
-      "alku": 3299,
-      "loppu": 3359
+      "sana": "Niissä",
+      "alku": 5720,
+      "loppu": 5980
     },
     {
-      "sana": "pidetty",
-      "alku": 3460,
-      "loppu": 3859
+      "sana": "merimiehet",
+      "alku": 6020,
+      "loppu": 6580
     },
     {
-      "sana": "ulkona",
-      "alku": 3939,
-      "loppu": 4399
+      "sana": "olivat",
+      "alku": 6620,
+      "loppu": 6920
     },
     {
-      "sana": "Portin",
-      "alku": 5960,
-      "loppu": 6339
+      "sana": "joutuneet",
+      "alku": 6960,
+      "loppu": 7440
     },
     {
-      "sana": "sisällä",
-      "alku": 6399,
-      "loppu": 6859
+      "sana": "odottamaan",
+      "alku": 7500,
+      "loppu": 8080
     },
     {
-      "sana": "vesi",
-      "alku": 6920,
-      "loppu": 7159
+      "sana": "etteivät",
+      "alku": 8420,
+      "loppu": 8840
     },
     {
-      "sana": "kuitenkin",
-      "alku": 7219,
-      "loppu": 7719
+      "sana": "toisi",
+      "alku": 8880,
+      "loppu": 9180
     },
     {
-      "sana": "tulee",
-      "alku": 7739,
-      "loppu": 7980
+      "sana": "tautia",
+      "alku": 9220,
+      "loppu": 9640
     },
     {
-      "sana": "vastaan",
-      "alku": 8059,
-      "loppu": 8539
+      "sana": "kaupunkiin",
+      "alku": 9700,
+      "loppu": 10380
     },
     {
-      "sana": "vanhan",
-      "alku": 8679,
-      "loppu": 9020
+      "sana": "Olin",
+      "alku": 12380,
+      "loppu": 12560
     },
     {
-      "sana": "suihkukaivon",
-      "alku": 9119,
-      "loppu": 9880
+      "sana": "aina",
+      "alku": 12620,
+      "loppu": 12800
     },
     {
-      "sana": "kivikasvoista",
-      "alku": 9979,
-      "loppu": 10979
+      "sana": "pitänyt",
+      "alku": 12840,
+      "loppu": 13180
     },
     {
-      "sana": "Join",
-      "alku": 12920,
-      "loppu": 13159
+      "sana": "satamaan",
+      "alku": 13220,
+      "loppu": 13680
     },
     {
-      "sana": "yhden",
-      "alku": 13259,
-      "loppu": 13500
+      "sana": "saapumista",
+      "alku": 13740,
+      "loppu": 14420
     },
     {
-      "sana": "suusta",
-      "alku": 13579,
-      "loppu": 14039
+      "sana": "matkan",
+      "alku": 14460,
+      "loppu": 14880
     },
     {
-      "sana": "ja",
-      "alku": 14099,
-      "loppu": 14139
+      "sana": "loppuna",
+      "alku": 14920,
+      "loppu": 15480
     },
     {
-      "sana": "toisenkin",
-      "alku": 14259,
-      "loppu": 14819
+      "sana": "Täällä",
+      "alku": 17000,
+      "loppu": 17320
     },
     {
-      "sana": "sillä",
-      "alku": 15579,
-      "loppu": 15739
+      "sana": "sen",
+      "alku": 17360,
+      "loppu": 17540
     },
     {
-      "sana": "ne",
-      "alku": 15799,
-      "loppu": 15859
+      "sana": "jälkeen",
+      "alku": 17580,
+      "loppu": 18040
     },
     {
-      "sana": "näyttivät",
-      "alku": 15920,
-      "loppu": 16359
+      "sana": "oli",
+      "alku": 18080,
+      "loppu": 18220
     },
     {
-      "sana": "olevan",
-      "alku": 16420,
-      "loppu": 16739
+      "sana": "voinut",
+      "alku": 18260,
+      "loppu": 18560
     },
     {
-      "sana": "eri",
-      "alku": 16819,
-      "loppu": 16979
+      "sana": "alkaa",
+      "alku": 18640,
+      "loppu": 18960
     },
     {
-      "sana": "mieltä",
-      "alku": 17059,
-      "loppu": 17359
+      "sana": "vaikein",
+      "alku": 19020,
+      "loppu": 19480
     },
     {
-      "sana": "mausta",
-      "alku": 17399,
-      "loppu": 17879
+      "sana": "osuus",
+      "alku": 19560,
+      "loppu": 20000
     },
     {
-      "sana": "Sama",
-      "alku": 19219,
-      "loppu": 19439
+      "sana": "nähdä",
+      "alku": 21440,
+      "loppu": 21740
     },
     {
-      "sana": "vesi",
-      "alku": 19520,
-      "loppu": 19859
+      "sana": "kaupungin",
+      "alku": 21800,
+      "loppu": 22360
     },
     {
-      "sana": "Kaupunki",
-      "alku": 22119,
-      "loppu": 22579
+      "sana": "katot",
+      "alku": 22420,
+      "loppu": 22840
     },
     {
-      "sana": "on",
-      "alku": 22619,
-      "loppu": 22719
+      "sana": "joka",
+      "alku": 22900,
+      "loppu": 23200
     },
     {
-      "sana": "rakentanut",
-      "alku": 22760,
-      "loppu": 23279
+      "sana": "aamu",
+      "alku": 23320,
+      "loppu": 23760
     },
     {
-      "sana": "janolleen",
-      "alku": 23359,
-      "loppu": 23939
+      "sana": "pääsemättä",
+      "alku": 23820,
+      "loppu": 24400
     },
     {
-      "sana": "kuusitoista",
-      "alku": 24000,
-      "loppu": 24600
+      "sana": "niiden",
+      "alku": 24460,
+      "loppu": 24740
     },
     {
-      "sana": "puhuvaa",
-      "alku": 24739,
-      "loppu": 25219
-    },
-    {
-      "sana": "päätä",
-      "alku": 25279,
-      "loppu": 25639
-    },
-    {
-      "sana": "ja",
-      "alku": 26539,
-      "loppu": 26619
-    },
-    {
-      "sana": "jokainen",
-      "alku": 26680,
-      "loppu": 27259
-    },
-    {
-      "sana": "neuvoo",
-      "alku": 27340,
-      "loppu": 27699
-    },
-    {
-      "sana": "ottamaan",
-      "alku": 27760,
-      "loppu": 28200
-    },
-    {
-      "sana": "vielä",
-      "alku": 28260,
-      "loppu": 28479
-    },
-    {
-      "sana": "kulauksen",
-      "alku": 28559,
-      "loppu": 29100
+      "sana": "alle",
+      "alku": 24840,
+      "loppu": 25020
     }
   ],
   "lauseet": [
     140,
-    5960,
-    12920,
-    19219,
-    22119
+    5720,
+    12380,
+    17000
   ],
-  "luotu": "2026-09-11T12:04:17.547Z"
+  "luotu": "2026-09-23T15:39:19.635Z"
 }

@@ -391,6 +391,19 @@ export const POLLO_VALMISKYSYMYKSET = {
   },
 
   /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Vain saapuminen kirjoitettu — kevyt
+   * pakki (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti
+   * jäävät täyden pinon sisältöerään.
+   */
+  luxemburg: {
+    saapuminen: [
+      'Kenen linnasta Luxemburgin kaupunki sai alkunsa vuonna 963?',
+      'Minkä lempinimen Luxemburg sai vahvan linnoituksensa vuoksi?',
+    ],
+  },
+
+  /*
    * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenian
    * pelikaupunki). Vain saapuminen kirjoitettu — kevyt pakki
    * (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti jäävät
@@ -413,6 +426,19 @@ export const POLLO_VALMISKYSYMYKSET = {
     saapuminen: [
       'Mikä otus on Ljubljanan vaakunassa ja linnan tornissa?',
       'Millä saksankielisellä nimellä Ljubljanaa kutsuttiin?',
+    ],
+  },
+
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Maltan
+   * pelikaupunki). Vain saapuminen kirjoitettu — kevyt pakki
+   * (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti jäävät
+   * täyden pinon sisältöerään.
+   */
+  valletta: {
+    saapuminen: [
+      'Kenen mukaan Valletta on saanut nimensä?',
+      'Minkä kahden sataman välissä Valletta sijaitsee?',
     ],
   },
 

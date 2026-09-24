@@ -380,7 +380,7 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
     : sivu.screenshot({ type: 'png' }));
   const lue = () => sivu.evaluate(`(${TILA})()`);
 
-  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${pyramidi ? '' : '&reliefipyramidi=0'}`;
+  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&glnimiot=0${pyramidi ? '' : '&reliefipyramidi=0'}`;
   await sivu.goto(osoite, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
@@ -808,7 +808,7 @@ async function ajaMeret() {
    * sen jälkeen pelin omaa tilaa.
    */
   sivu.setDefaultNavigationTimeout(90000);
-  await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'domcontentloaded' });
+  await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded' });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui), null, { timeout: 60000 }).catch(() => null);
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
@@ -1524,7 +1524,7 @@ async function ajaAvaus({ peite = true } = {}) {
   const cdp = MOOTTORI === 'webkit' ? null : await konteksti.newCDPSession(sivu);
 
   await sivu.goto(
-    `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${peite ? '' : '&topopeite=0'}`,
+    `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&glnimiot=0${peite ? '' : '&topopeite=0'}`,
     { waitUntil: 'domcontentloaded' },
   );
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 })

@@ -107,6 +107,7 @@ export const FOKUSKOHTEET_ROU = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'sana',
     tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Missä Vlad Seivästäjä sitten asui?',
       'Kuka linnassa on oikeasti asunut?',
@@ -180,6 +181,17 @@ export const FOKUSKOHTEET_ROU = [
         + 'Vanhakaupunki on ollut Unescon listalla vuodesta 1999.',
       lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna Sighișoaran vanhakaupunki tuli Unescon listalle?',
+      vaihtoehdot: [
+        '1435',
+        '1914',
+        '1999',
+        '1866',
+      ],
+      oikea: 2,
+      fakta: 'Vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999.',
+    },
   },
   {
     id: 'peles',
@@ -187,6 +199,7 @@ export const FOKUSKOHTEET_ROU = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä linnan oma sähkö tuotettiin?',
       'Ketkä työmaalla noita kieliä puhuivat?',
@@ -227,6 +240,7 @@ export const FOKUSKOHTEET_ROU = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Mikä linna tien varrella on?',
       'Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?',
@@ -276,6 +290,7 @@ export const FOKUSKOHTEET_ROU = [
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Milloin pelikaanit saapuvat suistoon?',
       'Miten suistossa liikutaan?',
@@ -673,6 +688,17 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Nadia Comăneci Montrealin olympialaisissa 1976.',
       lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
         + 'Commons (public domain)',
+    },
+    visa: {
+      kysymys: 'Minkä yhtiön tulostaulu ei osannut näyttää täyttä kymppiä?',
+      vaihtoehdot: [
+        'Adidas',
+        'Rolex',
+        'Seiko',
+        'Omega',
+      ],
+      oikea: 3,
+      fakta: 'Omega ei ollut ohjelmoinut taulua näyttämään lukemaa 10.00, joten se näytti 1.00.',
     },
   },
   /* ================================================================

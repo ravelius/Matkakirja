@@ -197,7 +197,8 @@ test('kaupunkipisteiden paikka kirjoitetaan piirtokoukussa, ei change-tapahtumas
   // 2. Katsesäteen laskenta on koukun käyttämässä funktiossa.
   const aseta = lauta.match(/const asetaPisteidenPaikat = \(kameranPaikka\) => \{[\s\S]*?\n {2}\};/);
   assert.ok(aseta, 'asetaPisteidenPaikat puuttuu');
-  assert.match(aseta[0], /katsesateenPaikka\(/);
+  // Kohta 11: katsesäteen kaava suoraan paikkaan (ks. kohdekaupunki.test.mjs).
+  assert.match(aseta[0], /dx \/ matka - pinta\.x \/ pallonSade/);
   assert.match(aseta[0], /o\.position\.set\(/);
   // 3. Tapahtumavetoinen tahdistaPisteidenKoko EI enää kirjoita paikkaa:
   //    se on kokojen (scale) asia, ja koko saa maksaa tapahtuman verran.
@@ -207,7 +208,8 @@ test('kaupunkipisteiden paikka kirjoitetaan piirtokoukussa, ei change-tapahtumas
     'paikka ei saa tulla change-tapahtumasta — se jää kehyksiä jälkeen kamerasta');
   assert.doesNotMatch(tahdista[0], /katsesateenPaikka\(/);
   // 4. Koukku pysyy halpana: ei ladontaa eikä asettelun luentaa kehyksessä.
-  const koukku = lauta.match(/const pisteetKehyksessa = \(\{[\s\S]*?\n {2}\};/);
+  // Koukku ottaa mitat oliona (E4b: ennuste luetaan siitä) tai puretaan suoraan.
+  const koukku = lauta.match(/const pisteetKehyksessa = \((\{|mitat)[\s\S]*?\n {2}\};/);
   assert.ok(koukku, 'pisteetKehyksessa puuttuu');
   for (const kielletty of [
     'ladoLevossa', 'nostot.paivita', 'nimet.lado', 'kohdekaupunki(',

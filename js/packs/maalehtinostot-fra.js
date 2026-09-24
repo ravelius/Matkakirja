@@ -15,14 +15,23 @@
  *
  * === MAALEHTI EI MUUTU ============================================
  *
- * Tämä tiedosto EI kopioi yhtään merkkiä lehden tekstistä. Se on
- * pelkkä JAKOSUUNNITELMA: kunkin rivin `sivu` ja `nosto` osoittavat
- * js/packs/maa-kategoriat.js:n FRA-taulun omaan nostoon, ja kortin
- * otsikko, leipäteksti, kuva ja kuvatekstit LUETAAN SIELTÄ ajon
- * aikana. Lehden data on siis yhä ainoa lähde, eikä kahta kopiota voi
- * ajautua erilleen — sama rakenteellinen tae, jonka erä 10 sai
- * generaattorilla (docs/raportit/viesti-fable-karttauudistus-era10-
- * 20260913.md luku 1), mutta ilman generoitua kopiota.
+ * Tämä tiedosto ei kopioi kuvaa eikä kuvatekstejä lehdeltä: kunkin
+ * rivin `sivu` ja `nosto` osoittavat js/packs/maa-kategoriat.js:n
+ * FRA-taulun omaan nostoon, ja kortin otsikko, kuva ja kuvatekstit
+ * LUETAAN SIELTÄ ajon aikana — sama rakenteellinen tae, jonka erä 10
+ * sai generaattorilla (docs/raportit/viesti-fable-karttauudistus-
+ * era10-20260913.md luku 1), mutta ilman generoitua kopiota.
+ *
+ * LEIPÄTEKSTI ON POIKKEUS (Fable, "CODEX-TILAUS 8 KADONNEESTA
+ * MONUMENTISTA PERUTTU" -päätöksen yhteydessä, 21.9.2026): jokaisella
+ * 18 rivillä on oma `teksti`-kenttänsä (440–660 merkkiä,
+ * docs/moduulit/maalehti.md:n resepti), joka EI ole lainaus lehdestä
+ * vaan itsenäisesti kirjoitettu samoista tarkistetuista faktoista.
+ * Kuudella rivillä on oma `visa`; niiden teksti sisältää yhä lehden
+ * `fakta`-kentän vastaavan vastauksen, jotta kysymys ei jää ilman
+ * vastausta omassa tekstissään. `korttiLehdesta()` käyttää
+ * `rivi.teksti`:ä leipätekstinä; lehden oma `lunastus`-mekanismi jää
+ * varalle vain, jos joskus lisätään rivi ilman omaa tekstiä.
  *
  * Lehden sivut, Lisää-valikko ja sivujen omat tehtävät (`tehtava`)
  * jäävät ennalleen: js/maalehti.js:ään ja maa-kategoriat.js:n
@@ -101,9 +110,20 @@ const JAKO = [
     sivu: 'historia',
     nosto: 3,
     id: 'maalehti-peilisali',
+    tyyppi: 'kulttuuri',
     nimio: 'Versaillesin peilisali',
     symboli: 'kulttuuri',
     lahi: true,
+    teksti: "Kun Ludvig XIV halusi peilisalin Versailles'hen, Venetsia piti "
+      + 'peilinvalmistustaidon tiukasti valtiosalaisuutena — '
+      + 'asiantuntijoiden luvaton lähtö saattoi maksaa hengen. Ranska '
+      + 'houkutteli salaa venetsialaisia mestareita Pariisiin ja perusti '
+      + '1665 oman peilitehtaan. Tuloksena syntyi 73 metriä pitkä käytävä, '
+      + 'jonka yhdellä seinällä on ikkunat puutarhaan ja toisella yhtä '
+      + 'monta peiliä vastapäätä — peilejä on kaikkiaan 357. Illalla '
+      + 'satojen kynttilöiden liekit heijastuivat peileistä niin, että sali '
+      + 'näytti kaksinkertaiselta. Nykyään saliin pääsee tavallisella '
+      + 'pääsylipulla.',
     /*
      * NOSTOTASOT (Fablen tilaus 20.9.2026, docs/raportit/
      * nostotasot-fra-20260920.md): ykköstaso = tunnetuin ja
@@ -130,9 +150,21 @@ const JAKO = [
     sivu: 'ruoka',
     nosto: 0,
     id: 'maalehti-roquefort',
+    tyyppi: 'ruoka',
     nimio: 'Roquefort',
     symboli: 'ruoka',
     lahi: true,
+    teksti: 'Legendan mukaan roquefort syntyi paimenesta, joka jätti '
+      + 'leipänsä ja lampaanjuustonsa Combalou-vuoren luolaan '
+      + 'lähtiessään juoksemaan kaukaa näkemänsä tytön perään. Kuukausia '
+      + 'myöhemmin hän palasi nälkäisenä ja söi homehtuneen juuston '
+      + "silti — se maistui paremmalta kuin koskaan. Combalou'n luolissa "
+      + 'on halkeamia, fleurineitä, jotka puhaltavat tasaisen kosteaa '
+      + 'ilmaa ja saavat homeen kasvamaan juuri sopivasti. Yhteen '
+      + 'juustokiloon tarvitaan noin neljä ja puoli litraa lampaanmaitoa. '
+      + 'Kuningas Kaarle VI antoi yksinoikeuden kypsytykseen jo 1411, ja '
+      + '1925 roquefortista tuli ensimmäinen ranskalainen juusto, jolla '
+      + 'on virallinen alkuperäsuoja.',
     // 2,991993 E / 43,974912 N — en-Wikipedia "Roquefort-sur-Soulzon",
     // prop=coordinates (haettu 14.9.2026)
     paikka: {
@@ -154,9 +186,21 @@ const JAKO = [
     sivu: 'ruoka',
     nosto: 2,
     id: 'maalehti-michelin-opas',
+    tyyppi: 'kauppa',
     nimio: 'Michelinin opas',
     symboli: 'kauppa',
     lahi: true,
+    teksti: 'André Michelin näki eräänä päivänä korjaamon työpöydän '
+      + 'jalan alla pinon omia matkaoppaitaan ja tajusi heti, ettei '
+      + 'ilmainen kirja saa koskaan arvostusta. Renkaita valmistavat '
+      + 'veljekset André ja Édouard olivat julkaisseet oppaan vuonna '
+      + '1900, jolloin Ranskan teillä ajoi alle kolmetuhatta autoa: '
+      + 'kartat, korjaamot, hotellit ja bensa-asemat samoissa '
+      + 'kansissa, lähes 35 000 kappaletta ilmaiseksi jaettuna. Tämän '
+      + 'jälkeen oppaasta alettiin periä maksu. Ravintoloille '
+      + 'annettiin ensimmäiset tähdet 1926, ja nykyinen kolmen tähden '
+      + 'asteikko vakiintui 1931 — tähdet eivät liity ruokaan, vaan '
+      + 'siihen, kannattaako matka tehdä sen vuoksi.',
     /*
      * 3,0824 E / 45,7831 N — en-Wikipedia "Clermont-Ferrand",
      * prop=coordinates (haettu 14.9.2026). Kaupunki on Michelinin
@@ -171,14 +215,33 @@ const JAKO = [
         europe: { x: 270.4, y: 689.5 },
       },
     },
+    visa: {
+      kysymys: 'Minä vuonna Michelinin opas julkaistiin ensimmäisen kerran?',
+      vaihtoehdot: ['1900', '1926', '1931'],
+      oikea: 0,
+      fakta: 'Ravintoloiden tähdet tulivat käyttöön vasta 1926.',
+    },
   },
   {
     sivu: 'ruoka',
     nosto: 3,
     id: 'maalehti-chandeleur',
+    tyyppi: 'ruoka',
     nimio: 'Chandeleur',
     symboli: 'ruoka',
     lahi: true,
+    teksti: 'Chandeleur-nimi tulee kynttilöiden siunauksesta: 2. '
+      + 'helmikuuta kirkoissa vietettiin tulta symboloiva '
+      + 'kynttiläkulkue, neljäkymmentä päivää joulun jälkeen. '
+      + 'Ranskalaisille päivä tarkoittaa nykyään ennen kaikkea '
+      + 'ohukaisia, joita paistetaan kotona pinoittain ja syödään '
+      + 'sokerin, hillon tai suklaan kanssa. Vanha perinne vaatii, '
+      + 'että ohukainen käännetään ilmassa yhdellä kädellä samalla '
+      + 'kun toisessa kädessä pidetään kultakolikkoa — jos ohukainen '
+      + 'laskeutuu takaisin pannuun oikein päin, vuodesta tulee '
+      + 'onnekas. Bretagnessa ohukaiset paistetaan yhä pyöreällä '
+      + 'valurautalevyllä, ja taikina levitetään ohueksi pitkällä '
+      + 'puulastalla.',
     /*
      * -1,67 E / 48,1 N — Rennes, js/packs/fokus-grc.js FOKUS_LISANIMET
      * FRA (pelin omaa tarkistettua aineistoa). Lehden teksti nimeää
@@ -197,9 +260,22 @@ const JAKO = [
     sivu: 'keksinnot',
     nosto: 0,
     id: 'maalehti-montgolfier',
+    tyyppi: 'tekniikka',
     nimio: 'Montgolfierin pallo',
     symboli: 'tekniikka',
     lahi: true,
+    teksti: 'Veljekset Joseph ja Étienne Montgolfier valmistivat '
+      + 'paperia Annonayssa ja huomasivat savun paisuttavan '
+      + 'kangaspusseja tulen yllä. He uskoivat aluksi, että juuri '
+      + 'savu — villaa ja vanhoja kenkiä polttamalla syntynyt — '
+      + 'sisälsi erityisen nostekaasun, eivätkä ymmärtäneet vielä, '
+      + 'että pelkkä ilman lämpö riitti yksin. Ennen ihmislentoa piti '
+      + "kokeilla eläimillä: 19. syyskuuta 1783 Versailles'n pihalla "
+      + 'kuninkaan ja väkijoukon edessä nousi pallo, jonka korissa '
+      + 'matkusti lammas, ankka ja kukko. Lento kesti kahdeksan '
+      + 'minuuttia ja vei matkustajat noin kolmen kilometrin päähän '
+      + 'ehjinä. Ihmiset nousivat ilmaan kaksi kuukautta myöhemmin, '
+      + 'marraskuussa 1783, Pariisissa.',
     // 4,6714 E / 45,2408 N — en-Wikipedia "Annonay", prop=coordinates
     // (haettu 14.9.2026). Kaupunki on tekstissä: veljekset tekivät
     // siellä paperia ja rakensivat siellä pallonsa.
@@ -210,14 +286,38 @@ const JAKO = [
         europe: { x: 300.9, y: 703.8 },
       },
     },
+    visa: {
+      kysymys: 'Mitkä kolme eläintä matkustivat ensimmäisessä '
+        + 'ilmapallolennossa?',
+      vaihtoehdot: [
+        'Lammas, ankka ja kukko',
+        'Koira, kissa ja kana',
+        'Hevonen, lammas ja ankka',
+      ],
+      oikea: 0,
+      fakta: 'Lento kesti kahdeksan minuuttia ja vei matkustajat noin '
+        + 'kolmen kilometrin päähän.',
+    },
   },
   {
     sivu: 'keksinnot',
     nosto: 1,
     id: 'maalehti-braille',
+    tyyppi: 'tekniikka',
     nimio: 'Braillen pisteet',
     symboli: 'sana',
     lahi: true,
+    teksti: "Ranskan armeijalle kehitettiin 1800-luvun alussa "
+      + "'yökirjoitus', kohopistejärjestelmä, jonka avulla sotilaat "
+      + 'pystyivät lukemaan viestejä pimeässä sormin. Sen keksijä '
+      + 'Charles Barbier toi menetelmän Pariisin sokeainkouluun, '
+      + 'jossa kolmevuotiaana isänsä satulasepänverstaassa naskalin '
+      + 'osumasta näkönsä menettänyt Louis Braille opiskeli. '
+      + "Barbier'n järjestelmässä yksi äänne vaati kaksitoista "
+      + 'pistettä, eikä ryhmä mahtunut sormenpään alle kerralla — '
+      + 'lukeminen oli hidasta. Viisitoistavuotiaana Braille keksi '
+      + 'oman ratkaisunsa: kuusi pistettä riittää yhteen merkkiin, '
+      + 'joka vastaa suoraan kirjainta äänteen sijaan.',
     /*
      * 2,351 E / 48,857 N — Pariisi, js/packs/maakartat.js FRA
      * (pelin omaa tarkistettua aineistoa). Lehden teksti nimeää
@@ -230,14 +330,34 @@ const JAKO = [
         europe: { x: 256.3, y: 608.7 },
       },
     },
+    visa: {
+      kysymys: 'Kuinka monta pistettä Braillen omassa järjestelmässä '
+        + 'on yhdessä merkissä?',
+      vaihtoehdot: ['Kuusi', 'Kaksitoista', 'Kolmekymmentäkuusi'],
+      oikea: 0,
+      fakta: "Barbier'n alkuperäisessä järjestelmässä yksi äänne "
+        + 'vaati kaksitoista pistettä.',
+    },
   },
   {
     sivu: 'keksinnot',
     nosto: 2,
     id: 'maalehti-pasteur-meister',
+    tyyppi: 'historia',
     nimio: 'Joseph Meister',
     symboli: 'historia',
     lahi: true,
+    teksti: 'Louis Pasteur pelkäsi heinäkuussa 1885 kahta asiaa: '
+      + 'yhdeksänvuotiaan Joseph Meisterin kuolemaa raivotautiin ja '
+      + 'omaa asemaansa, sillä hän oli kemisti eikä laillistettu '
+      + 'lääkäri eikä olisi saanut hoitaa ketään. Koira oli purrut '
+      + 'poikaa pahoin raivotautisena. Pasteur kutsui paikalle kaksi '
+      + 'lääkärikollegaa, jotka totesivat pojan kuolevan joka '
+      + 'tapauksessa ilman hoitoa, ja vasta silloin hän uskalsi '
+      + 'aloittaa rokotesarjan, jota oli testannut vain koirilla. '
+      + 'Meister ei sairastunut lainkaan. Aikuisena hänestä tuli '
+      + 'Pasteur-instituutin vahtimestari, jossa hän työskenteli '
+      + 'vuosikymmenten ajan.',
     /*
      * 2,31166667 E / 48,84 N — en-Wikipedia "Pasteur Institute",
      * prop=coordinates (haettu 14.9.2026). Teksti ei nimeä paikkaa;
@@ -256,9 +376,21 @@ const JAKO = [
     sivu: 'keksinnot',
     nosto: 3,
     id: 'maalehti-cinematographe',
+    tyyppi: 'tekniikka',
     nimio: 'Cinématographe',
     symboli: 'tekniikka',
     lahi: true,
+    teksti: 'Ennen Lumièren veljeksiä liikkuvia kuvia saattoi katsoa '
+      + 'vain yksi ihminen kerrallaan: Thomas Edisonin kinetoskooppi '
+      + 'oli laatikko, johon kurkistettiin ylhäältä. '
+      + 'Valokuvaustarvikkeita Lyonissa valmistaneet Auguste ja Louis '
+      + 'Lumière patentoivat helmikuussa 1895 cinématographen, joka '
+      + 'toimi kamerana, kopiokoneena ja projektorina — kuvan saattoi '
+      + 'heijastaa valkokankaalle koko huoneelliselle katsojia yhtä '
+      + 'aikaa. Ensimmäinen maksullinen näytös pidettiin 28. '
+      + 'joulukuuta 1895 noin neljällekymmenelle katsojalle. '
+      + 'Ohjelmassa oli kymmenen elokuvaa, joista jokainen kesti alle '
+      + 'minuutin, ja joukossa oli ensimmäinen elokuvakomedia.',
     // 4,835 E / 45,7675 N — en-Wikipedia "Lyon", prop=coordinates
     // (haettu 14.9.2026). Kaupunki on tekstissä: veljekset tekivät
     // siellä valokuvaustarvikkeita.
@@ -282,9 +414,21 @@ const JAKO = [
     sivu: 'luonto',
     nosto: 0,
     id: 'maalehti-dune-du-pilat',
+    tyyppi: 'meri',
     nimio: 'Dune du Pilat',
     symboli: 'luonto',
     lahi: true,
+    teksti: "Bordeaux'n eteläpuolella kohoava Dune du Pilat on "
+      + 'Euroopan korkein hiekkadyyni — vuonna 2018 mitattuna 106,6 '
+      + 'metriä korkea, lähes kolme kilometriä pitkä, hiekkaa '
+      + 'yhteensä kuusikymmentä miljoonaa kuutiometriä. Toisen '
+      + 'maailmansodan aikaiset saksalaiset bunkkerit rakennettiin '
+      + 'aikanaan maan tasalle, mutta dyyni on siitä lähtien '
+      + 'vaeltanut hitaasti sisämaahan ja hautautunut osittain omaan '
+      + 'hiekkaansa, joten osa bunkkereista näkyy nyt korkealla '
+      + 'rinteessä puoliksi hiekan peitossa. Dyyni nielee alleen myös '
+      + 'mäntymetsää ja teitä. Vielä 1930-luvulla paikkaa kutsuttiin '
+      + 'nimellä Les Sabloneys, uudet hiekat.',
     // -1,21166667 E / 44,59 N — en-Wikipedia "Dune of Pilat",
     // prop=coordinates (haettu 14.9.2026). Dyyni on tekstissä nimeltä.
     paikka: {
@@ -305,9 +449,21 @@ const JAKO = [
     sivu: 'luonto',
     nosto: 1,
     id: 'maalehti-camarguen-hevoset',
+    tyyppi: 'kulttuuri',
     nimio: 'Camarguen hevoset',
     symboli: 'elain',
     lahi: true,
+    teksti: 'Camarguen suomailla Rhônen suistossa kasvatetaan sekä '
+      + 'valkoisia hevosia että mustia härkiä samoilla laitumilla: '
+      + 'gardianit eli paikalliset paimenet ratsastavat hevosilla '
+      + 'kootakseen härkiä course camarguaise -otteluihin, joissa '
+      + 'pelaaja yrittää napata kukkakoristeen härän sarvien välistä '
+      + 'ilman että kumpikaan loukkaantuu. Hevoset syntyvät mustina '
+      + 'tai tummanruskeina varsoina, ja väri vaalenee vuosi '
+      + 'vuodelta, kunnes turkki on aikuisena kokonaan valkea. Ne '
+      + 'ovat pieniä, säkäkorkeus vain 135–150 senttiä, mutta '
+      + 'kantavat silti täysikasvuisen miehen leveillä ja kovilla '
+      + 'kavioillaan, jotka eivät uppoa suohon.',
     // 4,5 E / 43,53333333 N — en-Wikipedia "Camargue",
     // prop=coordinates (haettu 14.9.2026). Alue on tekstissä nimeltä.
     paikka: {
@@ -322,9 +478,21 @@ const JAKO = [
     sivu: 'luonto',
     nosto: 2,
     id: 'maalehti-chaine-des-puys',
+    tyyppi: 'vuori',
     nimio: 'Chaîne des Puys',
     symboli: 'luonto',
     lahi: true,
+    teksti: 'Luonnontutkija Jean-Étienne Guettard matkusti Auvergneen '
+      + '1751 etsimässä kivilajeja ja huomasi paikallisten käyttävän '
+      + 'outoa mustaa kiveä katukiveyksiin — hän tunnisti sen '
+      + 'laavaksi ja päätteli ensimmäisenä, että seudun neljäkymmentä '
+      + 'kilometriä pitkä kumpurivi on tulivuoria, ei ihmisen '
+      + 'kasaamia kaivosjätekasoja, kuten yleisesti uskottiin. '
+      + 'Ketjussa on yli seitsemänkymmentä tulivuorta: 48 '
+      + 'kuonakartiota, kahdeksan laavakupolia ja viisitoista '
+      + 'räjähdyskraatteria, korkeimpana Puy de Dôme 1 465 metrissä. '
+      + 'Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. '
+      + 'Alue pääsi Unescon listalle vasta 2018.',
     // 2,9625 E / 45,77194444 N — en-Wikipedia "Puy de Dôme",
     // prop=coordinates (haettu 14.9.2026). Huippu on tekstissä
     // nimeltä ja on ketjun korkein.
@@ -340,9 +508,21 @@ const JAKO = [
     sivu: 'luonto',
     nosto: 3,
     id: 'maalehti-couesnonin-vuorovesi',
+    tyyppi: 'meri',
     nimio: 'Vuorovesi 2015',
     symboli: 'luonto',
     lahi: true,
+    teksti: 'Keskiajalla Mont-Saint-Michelin lahdelle kulkeneille '
+      + "pyhiinvaeltajille varoitettiin, että vuorovesi nousee 'yhtä "
+      + "nopeasti kuin laukkaava hevonen' — liikkuva hiekka ja äkkiä "
+      + 'nouseva vesi ovat vieneet henkiä vuosisatojen ajan. Lahdessa '
+      + 'vuoroveden korkeusero on noin neljätoista metriä, yksi '
+      + 'Euroopan suurimmista, ja kalliosaari oli ennen kiinni '
+      + 'mantereessa vain laskuveden aikaan. Vuonna 1879 rakennettu '
+      + 'pengertie pysäytti veden virtauksen ja lahti alkoi liettyä '
+      + 'umpeen, joten penger purettiin ja tilalle nousi pilareilla '
+      + 'seisova silta. 21. maaliskuuta 2015 poikkeuksellisen korkea '
+      + 'vuoksi peitti uuden sillan täysin.',
     // -1,511 E / 48,636 N — en-Wikipedia "Mont-Saint-Michel",
     // prop=coordinates (haettu 14.9.2026). Sama piste kuin kohteella
     // `mont-saint-michel`: nostot kertovat samasta lahdesta eri
@@ -359,9 +539,21 @@ const JAKO = [
     sivu: 'urheilu',
     nosto: 0,
     id: 'maalehti-tour-de-france-1903',
+    tyyppi: 'historia',
     nimio: 'Tour 1903',
     symboli: 'urheilu',
     lahi: true,
+    teksti: "L'Auto-lehti oli häviämässä lukijataistelun "
+      + 'kilpailijalleen, kun toimittaja Géo Lefèvre ehdotti '
+      + 'epätoivoisena kisaa koko Ranskan ympäri — idea pelasti '
+      + 'lehden, mutta seuraavana vuonna kisa oli vaarassa loppua, '
+      + 'kun ajajat matkustivat osan matkasta junalla ja katsojat '
+      + 'hakkasivat kilpailijoita nuijilla. Ensimmäinen Tour de '
+      + 'France ajettiin heinäkuussa 1903: kuusi osuutta ja 2 428 '
+      + 'kilometriä, keskimäärin yli 400 kilometriä päivässä, lähtö '
+      + 'yleensä ennen aamunkoittoa. Kuudestakymmenestä lähtijästä '
+      + 'voittajaksi tuli Maurice Garin lähes kolmen tunnin erolla. '
+      + 'Keltainen johtajan paita otettiin käyttöön vasta 1919.',
     /*
      * 2,351 E / 48,857 N — Pariisi, js/packs/maakartat.js FRA. Kisan
      * keksi L'Auto-lehti, joka ilmestyi Pariisissa, ja ensimmäinen
@@ -376,14 +568,32 @@ const JAKO = [
         europe: { x: 256.3, y: 608.7 },
       },
     },
+    visa: {
+      kysymys: 'Kuka voitti ensimmäisen Tour de Francen 1903?',
+      vaihtoehdot: ['Maurice Garin', 'Géo Lefèvre', 'Jacky Ickx'],
+      oikea: 0,
+      fakta: 'Voittomarginaali oli lähes kolme tuntia.',
+    },
   },
   {
     sivu: 'urheilu',
     nosto: 1,
     id: 'maalehti-petanque',
+    tyyppi: 'kulttuuri',
     nimio: 'Pétanque',
     symboli: 'urheilu',
     lahi: true,
+    teksti: 'Provencen perinteisessä kuulapelissä heittäjän piti '
+      + "ottaa kolme juoksuaskelta ennen heittoa — sääntö, joka sulki "
+      + "pelin ulkopuolelle La Ciotat'n kaupungissa asuneen Jules "
+      + 'Lenoirin, jonka nivelet olivat liian kipeät juoksemiseen. '
+      + 'Kahvilanpitäjä Ernest Pitiot keksi ystävälleen uuden '
+      + 'version: rata puolitettiin ja heittäjä seisoo paikallaan '
+      + 'ympyrässä, jalat kiinni maassa — provensaaliksi pè tancat. '
+      + "Ensimmäinen turnaus pelattiin La Ciotat'ssa 1910, ja maalina "
+      + 'toimii pieni puupallo, cochonnet eli porsas. Vammaiselle '
+      + 'ystävälle keksitystä helpotuksesta tuli lopulta suositumpi '
+      + 'kuin alkuperäisestä pelistä.',
     // 5,6086 E / 43,1769 N — en-Wikipedia "La Ciotat",
     // prop=coordinates (haettu 14.9.2026). Kaupunki on tekstissä:
     // siellä asui Jules Lenoir ja siellä pelattiin ensimmäinen turnaus.
@@ -405,9 +615,21 @@ const JAKO = [
     sivu: 'urheilu',
     nosto: 2,
     id: 'maalehti-roland-garros',
+    tyyppi: 'kulttuuri',
     nimio: 'Roland Garros',
     symboli: 'urheilu',
     lahi: true,
+    teksti: 'Ranskan avoimet tennismestaruuskilpailut on nimetty '
+      + 'miehen mukaan, joka ei koskaan pelannut kilpatennistä: '
+      + 'Roland Garros oli lentäjä, ensimmäinen joka lensi yksin '
+      + 'Välimeren yli, ja kaatui ensimmäisessä maailmansodassa. Kun '
+      + 'Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se '
+      + 'sai hänen nimensä, ja sama nimi periytyi koko turnaukselle. '
+      + 'Kentän tunnettu punainen pinta ei myöskään ole savea, '
+      + 'vaikka sitä usein niin kutsutaan: pohjana on kalkkikivi, '
+      + 'jonka päälle jyrätään ohut kerros jauhettua punaista tiiltä '
+      + 'ja kastellaan vedellä. Otteluiden välissä pintaa '
+      + 'tasoitetaan raahaamalla ketjumattoa.',
     // 2,24638889 E / 48,84722222 N — en-Wikipedia "Stade Roland
     // Garros", prop=coordinates (haettu 14.9.2026). Stadion on
     // tekstissä: se rakennettiin Pariisiin 1928 Davis Cupia varten.
@@ -418,14 +640,38 @@ const JAKO = [
         europe: { x: 254.3, y: 608.9 },
       },
     },
+    visa: {
+      kysymys: 'Mistä Roland Garrosin kentän tunnettu punainen pinta '
+        + 'on tehty?',
+      vaihtoehdot: [
+        'Jauhetusta tiilestä kalkkikiven päällä',
+        'Savesta',
+        'Muovimatosta',
+      ],
+      oikea: 0,
+      fakta: 'Pintaa tasoitetaan otteluiden välissä raahaamalla '
+        + 'ketjumattoa.',
+    },
   },
   {
     sivu: 'urheilu',
     nosto: 3,
     id: 'maalehti-le-mans',
+    tyyppi: 'tekniikka',
     nimio: 'Le Mansin 24 tuntia',
     symboli: 'urheilu',
     lahi: true,
+    teksti: 'Le Mansin kaupungin liepeillä on ajettu vuodesta 1923 '
+      + 'kisaa, joka kestää tasan vuorokauden, ja voittaja on se '
+      + 'auto, joka ehtii ajaa 24 tunnissa pisimmälle — nykyään yli '
+      + 'viisituhatta kilometriä kolmen kuljettajan vuorotellen '
+      + 'ajamana. Vanhassa lähtötavassa kuljettajat juoksivat radan '
+      + 'poikki autoihinsa ja lähtivät liikkeelle kiireessä, usein '
+      + 'turvavyö kiinnittämättä. Vuonna 1969 Jacky Ickx protestoi '
+      + 'tapaa vaarallisena kävelemällä juoksemisen sijaan ja '
+      + 'kiinnitti turvavyönsä rauhassa kilpailijoiden jo lähdettyä '
+      + '— ja voitti silti koko kisan. Seuraavana vuonna '
+      + 'juoksulähdöstä luovuttiin kokonaan.',
     // 0,1984 E / 48,0077 N — en-Wikipedia "Le Mans", prop=coordinates
     // (haettu 14.9.2026). Kaupunki on tekstissä: kisa ajetaan sen
     // liepeillä.
@@ -436,14 +682,33 @@ const JAKO = [
         europe: { x: 215, y: 631 },
       },
     },
+    visa: {
+      kysymys: 'Minä vuonna Jacky Ickx käveli juoksemisen sijaan Le '
+        + 'Mansin lähdössä?',
+      vaihtoehdot: ['1969', '1923', '1970'],
+      oikea: 0,
+      fakta: 'Seuraavana vuonna juoksulähdöstä luovuttiin kokonaan.',
+    },
   },
   {
     sivu: 'arki',
     nosto: 1,
     id: 'maalehti-marseillen-saippua',
+    tyyppi: 'kauppa',
     nimio: 'Marseillen saippua',
     symboli: 'kauppa',
     lahi: true,
+    teksti: 'Vuonna 1688 kuninkaan asetus määräsi, että Marseillen '
+      + 'saippua saa keittää vain puhtaasta oliiviöljystä ja '
+      + 'soodasta — rasvan tai voin käyttö tarkoitti tavaroiden '
+      + "takavarikointia. Yli kolmesataa vuotta myöhemmin nimeä 'savon "
+      + "de Marseille' ei kuitenkaan suojaa mikään laki: kuka tahansa "
+      + 'saa myydä sillä nimellä mitä tahansa saippuaa, ja vasta 2003 '
+      + 'perustettu vapaaehtoinen laatuvaliokunta yrittää pitää '
+      + 'perinteen elossa. Perinteisen 600 gramman kuution kylkeen '
+      + 'leimataan valmistajan nimi ja luku 72, joka kertoo öljyn '
+      + 'osuuden prosentteina. Vuonna 1913 kaupunki tuotti saippuaa '
+      + '180 000 tonnia.',
     // 5,37 E / 43,2964 N — en-Wikipedia "Marseille", prop=coordinates
     // (haettu 14.9.2026). Kaupunki on tekstissä: saippua on sen omaa
     // ja kuution kylkeen leimataan valmistajan nimi.
@@ -459,9 +724,21 @@ const JAKO = [
     sivu: 'tavat',
     nosto: 1,
     id: 'maalehti-bouquinistit',
+    tyyppi: 'kulttuuri',
     nimio: 'Seinen kirjalaatikot',
     symboli: 'kulttuuri',
     lahi: true,
+    teksti: 'Seinen kirjakauppiaat olivat vuosisatoja '
+      + 'kulkukauppiaita, joita poliisi ajoi pois silloilta: he '
+      + 'tukkivat liikennettä, ja varkaat piilottivat tavaraa heidän '
+      + 'laatikoihinsa. Lopulta kaupunki laillisti kaupan ja antoi '
+      + 'myyjille kiinteät paikat kaiteilla. Nykyään myyjiä on '
+      + 'runsaat kaksisataa ja vihreitä peltilaatikoita lähes '
+      + 'yhdeksänsataa kolmen kilometrin matkalla. Säännöt ovat '
+      + 'tiukat: yksi myyjä saa kahdeksan metriä kaidetta ja '
+      + 'enintään neljä laatikkoa, ja maali on aina sama vaunuvihreä '
+      + 'kuin ensimmäisen metron kylteissä. Kesällä 2024 laatikot '
+      + 'piti purkaa olympialaisten tieltä, mutta päätös peruttiin.',
     // 2,34728 E / 48,85296 N — en-Wikipedia "Bouquinistes",
     // prop=coordinates (haettu 14.9.2026). Paikka on tekstissä:
     // Seinen kaiteet kolmen kilometrin matkalla.
@@ -712,12 +989,16 @@ function lehdenNosto(sivu, indeksi) {
 }
 
 /**
- * KORTTI LEHDEN NOSTOSTA — teksti, kuva ja kuvatekstit sellaisinaan.
+ * KORTTI LEHDEN NOSTOSTA — otsikko, kuva ja kuvatekstit lehdeltä;
+ * leipäteksti riviltä itseltään, jos sillä on oma `teksti`.
  *
- * Mitään ei kirjoiteta uudelleen eikä lyhennetä: `lunastus` on lehden
- * oma `teksti` yhtenä kappaleena, ja kuvan neljä kenttää ovat lehden
- * omat. Ainoa lisäys on lähderivi, joka kertoo mistä sivulta ja mistä
- * nostosta kortti on.
+ * Otsikko ja kuvan neljä kenttää luetaan aina lehdeltä sellaisinaan.
+ * Leipäteksti (`lunastus`) on ENSISIJAISESTI `rivi.teksti` — kortin oma
+ * itsenäinen kirjoitus, ei lainaus (ks. tiedoston alun kommentti) —
+ * ja vasta jos rivillä ei ole omaa tekstiä, käytetään lehden
+ * `lahde.teksti`:ä sellaisenaan (varamekanismi, ei tällä hetkellä
+ * käytössä yhdelläkään 18 rivistä). Lähderivi kertoo aina mistä
+ * sivulta ankkuri ja kuva ovat peräisin.
  */
 function korttiLehdesta(rivi) {
   const lahde = lehdenNosto(rivi.sivu, rivi.nosto);
@@ -734,21 +1015,22 @@ function korttiLehdesta(rivi) {
     id: rivi.id,
     nimio: rivi.nimio,
     otsikko: lahde.otsikko,
-    lunastus: [lahde.teksti],
+    lunastus: [rivi.teksti ?? lahde.teksti],
     ...(kuva ? { kuva } : {}),
     // Kartan oma toinen kuva lehden kuvan pariksi (ks. KUVAT yllä).
     // Noston kuvalista on `galleria`, ei `kuvat` — js/fokusnosto.js
     // nostonKuvat lukee vain sen.
     ...(KUVAT[rivi.id]?.length ? { galleria: KUVAT[rivi.id] } : {}),
     symboli: rivi.symboli,
+    ...(rivi.tyyppi ? { tyyppi: rivi.tyyppi } : {}),
     ...(rivi.lahi ? { lahi: true } : {}),
     ...(rivi.visa ? { visa: rivi.visa } : {}),
     ...(rivi.taso ? { taso: rivi.taso } : {}),
     paikka: rivi.paikka,
     lahde: `Maalehden sivu "${rivi.sivu}", nosto "${lahde.otsikko}" `
       + '(js/packs/maa-kategoriat.js FRA, pelin omaa tarkistettua '
-      + 'aineistoa). Teksti ja kuva luetaan lehdestä ajon aikana, joten '
-      + 'ne ovat sanatarkasti samat.',
+      + 'aineistoa). Otsikko ja kuva luetaan lehdestä ajon aikana; '
+      + `leipäteksti on ${rivi.teksti ? 'kortin oma itsenäinen kirjoitus' : 'sanatarkasti sama kuin lehdellä'}.`,
   };
 }
 

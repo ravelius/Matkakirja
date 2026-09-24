@@ -44,17 +44,22 @@ export const LUONNOKSEN_PEITTO = 0.45;
 let sumuMuisti = null;
 
 /**
- * Onko löytämisen sumu päällä. JULKAISUSSA KAIKILLE (omistaja 21.9.2026);
- * `?sumu=0` tai localStorage matkakirja-sumu = 0 sammuttaa (savukkeet,
- * vertailu). Tulos muistetaan istunnon ajan.
+ * Onko löytämisen sumu päällä. OLETUS POIS (omistaja 21.9.2026 illalla,
+ * tuotantokaappaus v1997 Ranska z6: *"nostot näkyvät ympyröinä ilman
+ * ikonia ja nimeä"* — aamun kokeilu julkaisuun kaikille kumottiin;
+ * nostot ovat aina näkyvissä ikoneineen ja nimiöineen, ei sumua, ei
+ * feidausta). Kokeilun saa päälle vain nimenomaan: `?loytosumu=1` tai
+ * localStorage matkakirja-sumu = 1 (savukkeet, kehittäjän vertailu).
+ * Parametri on oma (ei `sumu`), koska `?sumu=0` on Astronautin kameran
+ * pilvikerroksen kytkin (js/linssit/astro-sumu.js). Muistetaan istunnon ajan.
  */
 export function sumuPaalla() {
   if (sumuMuisti !== null) return sumuMuisti;
   try {
-    const param = new URLSearchParams(globalThis.location?.search ?? '').get('sumu');
-    if (param != null) sumuMuisti = !/^(0|off|false|pois)$/.test(param);
-    else sumuMuisti = globalThis.localStorage?.getItem(SUMU_AVAIN) !== '0';
-  } catch { sumuMuisti = true; }
+    const param = new URLSearchParams(globalThis.location?.search ?? '').get('loytosumu');
+    if (param != null) sumuMuisti = /^(1|on|true|paalla)$/.test(param);
+    else sumuMuisti = globalThis.localStorage?.getItem(SUMU_AVAIN) === '1';
+  } catch { sumuMuisti = false; }
   return sumuMuisti;
 }
 

@@ -162,7 +162,8 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
    * kummassakaan — ladonta väistää nappulan siinä ajossa, joka
    * SYNNYTTÄÄ lukon, ja kantaa sen sen jälkeen sellaisenaan.
    */
-  assert.match(lauta, /if \(heti\) ladoLevossa\(\);/);
+  // 22.9.2026 (LIIKKEESSÄ EI TÄYTTÄ LADONTAA): sama ajo, mutta liikkeessä vain kun kamera on siirtynyt riittävästi.
+  assert.match(lauta, /if \(heti\) \{\n\s*if \(ladontaTarpeen\(kamera\.nakyvaAlue\(\)\)\) ladoLevossa\(\);/);
   assert.ok(!/liikkeenLadonta/.test(lauta), 'liikkeen ladonnan lippu on poistettu');
   assert.ok(!/^\s+levossa: /m.test(lauta), 'nimiladonta ei enää saa levossa-lippua');
   assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossaLevossa, viiveMs\);/);
@@ -227,13 +228,16 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pakotus kirjataan (tests/karttanimet.test.mjs vertaa arvot).
   const tulos = karttanimienLadonta(MAAILMANKARTTA, 1.88);
   // Jokainen kaupunki saa merkkinsä: nimi on oma tai maastoparin (Alpit).
+  // 264 → 266 (21.9.2026): Luxemburg ja Valletta liittyivät
+  // maailmankartalle (omistajan päätös 21.9.2026: Kypros, Luxemburg ja
+  // Malta saavat pelikaupungin).
   // 263 → 264 (20.9.2026): Košice liittyi maailmankartalle (Slovakian
   // pelikaupunki, omistajan päätös 19.9.2026).
   // 262 → 263 (20.9.2026): Ljubljana liittyi maailmankartalle (Slovenian
   // pelikaupunki, omistajan päätös 19.9.2026).
   // 261 → 262 (19.9.2026): Bryssel liittyi maailmankartalle (omistajan
   // päätös, Belgian pelikaupunki, pilotti).
-  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 264);
+  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 266);
   assert.equal(typeof tulos.pakotettu, 'number');
   // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
   const nimet = lue('../js/pallolauta/nimet.js');
@@ -269,9 +273,11 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   assert.equal(pallonNostoOnPoltettu('parnassos'), false);
   // Nostokerros kysyy pallon luetteloa, ei pyramidin.
   const nostot = lue('../js/pallolauta/nostot.js');
-  assert.match(nostot, /import \{ pallonNostoOnPoltettu \} from '\.\.\/pallo\.js';/);
+  assert.match(nostot, /import \{ pallonNostoOnPoltettu, pallonNostonPisteLaatassa \} from '\.\.\/pallo\.js';/);
   // Kytkin tulee pallo.js:n kautta, ei suoraan pyramidista (kommentti saa mainita tiedoston).\n  assert.doesNotMatch(nostot, /from '\.\.\/laattapyramidi\.js'/);
-  assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, onPoltettu\)/);
+  // Poltettu-liput kulkevat kääreen läpi (koe `poltetutnostot` kirjaa samalla pisteet laatassa).
+  assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, kirjaaPiste\)/);
+  assert.match(nostot, /return onPoltettu\(tunnus, tiiviste\);/);
   assert.match(nostot, /naapurienPoltetutMerkit\(ui, nakyva, onPoltettu\)/);
   // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.
   // Piirto asuu sisäasettelussa (asetteleNosto), koska sovittelu voi
@@ -519,7 +525,7 @@ test('nimi ei leikkaudu ruudun reunasta: ulkopuoli on este', () => {
   const nimet = lue('../js/pallolauta/nimet.js');
   // Ehdokkaan pisteen on oltava ruudulla (ei enää +40 px ulkopuolelle).
   assert.equal(NIMEN_REUNAVARA_PX, 0);
-  assert.match(nimet, /ruutu: \{ w, h \}/);
+  assert.match(nimet, /ruutu: \{ w, h, vara: liikevara > 0 \? liikevara : 0 \}/);
   const w = 834;
   const h = 1112;
   const laidalla = ehdokkaat(834 / 12000, ateena, w, h);

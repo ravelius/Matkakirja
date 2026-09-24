@@ -87,6 +87,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Sněžka',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi vuorella on kaksi nimeä?',
       'Mitä huipulla on nykyään?',
@@ -146,6 +147,17 @@ export const MAASTOKOHTEET_CZE = [
       + 'se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. '
       + 'Kokonaispituutta sillä on 1 094 kilometriä.',
     lahde: 'en-Wikipedia "Elbe", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mihin mereen Labe eli Elbe lopulta laskee?',
+      vaihtoehdot: [
+        'Pohjanmereen',
+        'Itämereen',
+        'Mustaanmereen',
+        'Välimereen',
+      ],
+      oikea: 0,
+      fakta: 'Labe laskee Pohjanmereen Cuxhavenissa Saksassa.',
+    },
   },
   {
     id: 'vltava',
@@ -174,6 +186,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Vltava',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Miksi Vltavaa sanotaan kansallisjoeksi?',
       'Mikä oli Pyhän Johanneksen koski?',
@@ -196,6 +209,17 @@ export const MAASTOKOHTEET_CZE = [
       + 'pahoin, että korjaukset kestivät vuosia.',
     lahde: 'en-Wikipedia "Vltava", osiot "Etymology", "Dams", "Floods" ja "References in culture '
       + 'and science", sekä en-Wikipedia "Má vlast" (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Mitä Vltava-joen nimi alun perin tarkoittaa suomeksi?',
+      vaihtoehdot: [
+        'Hidasta virtaa',
+        'Syvää järveä',
+        'Villiä vettä',
+        'Kirkasta lähdettä',
+      ],
+      oikea: 2,
+      fakta: 'Vltavan nimi juontuu vanhasta sanaparista wilt ahwa, villiä vettä.',
+    },
   },
   /* ================================================================
    * K2-ERÄ 2.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
@@ -236,6 +260,7 @@ export const MAASTOKOHTEET_CZE = [
     ],
     nimi: 'Kutná Hora',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä kaupungin rikkaus tuli?',
       'Mitä nimi Kutná Hora tarkoittaa?',
@@ -261,6 +286,17 @@ export const MAASTOKOHTEET_CZE = [
       + 'neljänneksi laajimpana.',
     lahde: 'en-Wikipedia "Kutná Hora", johdanto-osa sekä osiot "Etymology" ja '
       + '"Geography" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: "Mitä sana 'hora' tarkoittaa Kutná Horan nimessä?",
+      vaihtoehdot: [
+        'Kaivosta',
+        'Kylää',
+        'Jokea',
+        'Vuorta',
+      ],
+      oikea: 3,
+      fakta: 'Kutná Horan nimi tulee vuoresta, ja hora tarkoittaa tšekiksi vuorta.',
+    },
   },
   {
     id: 'cesky-krumlov',
@@ -286,6 +322,7 @@ export const MAASTOKOHTEET_CZE = [
     }],
     nimi: 'Český Krumlov',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä kaupungin nimi tulee?',
       'Miksi nimen eteen lisättiin sana Český?',
@@ -340,6 +377,7 @@ export const MAASTOKOHTEET_CZE = [
     nimi: 'Plzeňský Prazdroj',
     nimio: 'Prazdroj',
     tyyppi: 'ruoka',
+    taso: 1,
     kysymykset: [
       'Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?',
       'Mitä nimi Urquell tarkoittaa?',
@@ -618,6 +656,17 @@ export const MAASTOKOHTEET_CZE = [
       + 'vaihettumisvyöhykkeeseen. Nimi tulee slaavilaisesta henkilönnimestä Děk.',
     lahde: 'en-Wikipedia "Děčín", johdanto-osa sekä osiot "Etymology" ja '
       + '"Geography" (tarkistettu 2.9.2026).',
+    visa: {
+      kysymys: 'Kuinka korkealla merenpinnasta Děčínin kaupungin ydin sijaitsee?',
+      vaihtoehdot: [
+        '250 metrissä',
+        '135 metrissä',
+        '400 metrissä',
+        '80 metrissä',
+      ],
+      oikea: 1,
+      fakta: 'Děčínin kaupungin ydin on jokilaaksossa 135 metrin korkeudessa.',
+    },
   },
   /* ================================================================
    * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
@@ -723,6 +772,17 @@ export const MAASTOKOHTEET_CZE = [
       + 'vuonna 1754 olivat läsnä keisarinna Maria Teresia ja hänen puolisonsa Frans I.',
     lahde: 'en-Wikipedia "Holy Trinity Column, Olomouc", johdanto-osa ja osio "History" '
       + '(tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Miksi Olomoucin Kolminaisuuden pylväs alun perin pystytettiin?',
+      vaihtoehdot: [
+        'Kiitokseksi ruton päättymisestä',
+        'Kuninkaan syntymäpäiväksi',
+        'Sodan voiton muistoksi',
+        'Kaupungin perustamisen kunniaksi',
+      ],
+      oikea: 0,
+      fakta: 'Pylväs on kiitos siitä, että rutto päättyi Määrissä vuosina 1713–1715.',
+    },
   },
   {
     id: 'jachymov',

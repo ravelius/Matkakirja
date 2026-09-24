@@ -65,11 +65,14 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   kytkePallonKehys,
+  kytkePallonEnnuste, kolmiulotteinen as pallonKolmiulotteinen,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
+import { luoPallomaakunnat, pallomaakunnatPaalla } from '../pallomaakunnat.js';
+import { maanLaatikko as esilatauksenMaanLaatikko } from '../laattaesilataus.js';
 /*
  * VÄRITASON KOHDEMAA (karttauudistus, erä 1b). Lauta kertoo sen
  * laattapyramidille SAMASSA HETKESSÄ kuin punaisen kehän — kerros ei
@@ -117,16 +120,22 @@ import {
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
+import * as laattaApi from '../pallolaatat.js';
 import { luoKameraloki } from './kameraloki.js';
+import { luoSulavuusmittari } from './sulavuusmittari.js';
 import {
   SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
 } from './sumu.js';
-import { luoKartanLiike } from '../kartta-liike.js';
+import { LEVON_ESTEET, luoKartanLiike } from '../kartta-liike.js';
+import { asennaLepopiirto, lepopiirtoKaytossa } from './lepopiirto.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
-import { luoNimet, nimibudjetti } from './nimet.js';
+import {
+  LIIKKUU_LUOKKA, NIMIOKERROIN_MUUTTUJA, ladonnanMitta, liukuvaNimiokerroin, luoNimet, nimibudjetti,
+} from './nimet.js';
+import { kartanMittaSallittu } from './nostoankkurit.js';
 import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, PISTEIDEN_KATTO, VALON_KORKEUS, VALON_SADE,
-  luoNostot, nostonLaatikko, nostonMitta,
+  luoNostot, nostonLaatikko, nostonMitta, nostonRaakaMitta,
 } from './nostot.js';
 import {
   HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
@@ -136,6 +145,16 @@ import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
+import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
+import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
+import { paljasTila, ablaatioPaalla, kerrosKaytossa, kerrostenBodyLuokat, asennaPiirtokokeet, piirtokokeet } from './kerrokset.js';
+import { asennaKehysprofiili } from './kehysprofiili.js';
+import { asennaKallistus, kallistusTila, pysyvaKallistuskulma } from './kallistus.js';
+import { luoProfiilinaytto, koetilanNimi } from './profiilinaytto.js';
+import { suoraanKartallePaalla } from '../piirtokoe-asetus.js';
+import { vedonSeuranta } from '../vedon-seuranta.js';
+import { tarkkuusLiikkeessa } from '../tarkkuus-asetus.js';
+import { sfx } from '../sound.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -1076,6 +1095,14 @@ export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;
  * perillä.
  */
 export const LADONNAN_TAHTI_MS = 200;
+/** Liikkeessä ladonta uudestaan, kun kamera on siirtynyt tämän osuuden nostojen liikevarasta (ks. LIIKKEESSÄ EI TÄYTTÄ LADONTAA). */
+export const LADONNAN_LIIKEVARAOSUUS = 0.5;
+/** Sama ilman liikevaraa (vastakoe ?liikevara=0): siirtymä pikseleinä. */
+export const LADONNAN_SIIRTYMAKYNNYS_PX = 120;
+/** Liikkeessä ladonta uudestaan, kun mittakaava on muuttunut tämän verran (kuori kantaa siihen asti). */
+export const LADONNAN_ZOOMIKYNNYS = 1.35;
+/** Kamera on "liikkeessä" (rasterijono, sovittimen lykkäys) tämän ajan viimeisestä muutoksesta. */
+export const LIIKKEEN_IKKUNA_MS = 120;
 /**
  * Ladonnan ajoitus yhdestä kameran muutoksesta: ajetaanko heti ja
  * milloin seuraava perälauta-ajo (ks. LADONTA KULKEE MUKANA).
@@ -1403,6 +1430,62 @@ export async function avaaPallolauta(ui) {
     return null;
   }
   const eleet = asennaPallonEleet(pallo, kotelo, ui);
+  /*
+   * LEPOPIIRTO (js/pallolauta/lepopiirto.js, sulavuus kohta 18): piirto
+   * vain kun jokin muuttui + syke 4 fps. Esteet = tilat, joiden omat
+   * animaatiot eivät ilmoita muutoksistaan (linssit, lennot, isot
+   * animaatiot — kartta-liike.js LEVON_ESTEET bodyssä tai kuoressa):
+   * niissä piirretään joka kehys kuten ennen. Hidas animaatio =
+   * hehkupisteen syke levossa (glSovitin.sykkii, sidotaan alempana).
+   * Scenen ryhmien add/remove (laatat, vektorit, kirjaston pohja)
+   * ilmoittavat itse: ks. ryhmienVahti.
+   */
+  let sykkiiNyt = () => false;
+  /*
+   * ══ ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+   * mittaus 22.9.2026, v2122:n kehysprofiili) ══════════════════════
+   *
+   * Omistajan kolme kaappausta vedon aikana: rAF 59–63 Hz (ei siis
+   * ProMotion-tahtivika), mutta PIIRTO 51–86 % rAF-kehyksistä ja
+   * ohitettuja 133–234. Vedon aikana jäi siis joka toinen tai joka
+   * kuudes kehys piirtämättä.
+   *
+   * KEHÄ. iOS:n Safari ei tahdista pointermovea rAF:iin, joten osaan
+   * kehyksistä ei osu yhtään tapahtumaa. Lepopiirto näki sellaisen
+   * kehyksen levollisena (kamera ei ole vielä muuttunut) ja pysäytti
+   * kirjaston tickin — mutta KAIKKI syötetavat (interpolointi, ennakko,
+   * jousi) ajetaan `ohjaimet.update`in sisällä eli juuri siinä tickissä.
+   * Tauolla ollut tick ei voi soveltaa odottavaa vetoa, joten kamera ei
+   * muutu, joten seuraavakin kehys näyttää levolliselta. Siitä syntyy
+   * se 0/2-kuvio, jonka omistaja tuntee nykimisenä — ja se selittää,
+   * miksi syötetavan tai dpr:n vaihtaminen ei muuttanut mitään.
+   *
+   * v2110 ilmoitti lepopiirrolle vedon ALUSTA (yksi kehys); tämä on sen
+   * puuttunut puolisko: koko eleen ja sen jälkeisen liu'un ajan piirto
+   * on este, eli jokainen rAF-kehys piirretään. Syke ja ohitukset
+   * palaavat vasta levossa.
+   */
+  let vetoNyt = () => false; // sidotaan alempana (eleKaynnissa + liuku)
+  const puraLepopiirto = lepopiirtoKaytossa() ? asennaLepopiirto(pallo, {
+    esteet: () => vetoNyt()
+      || LEVON_ESTEET.some((l) => document.body.classList.contains(l) || kuori.classList.contains(l)),
+    hitaat: () => sykkiiNyt(),
+  }) : () => {};
+  /* Ryhmien add/remove → piirto: kirjaston pohjan laatat, kerroksen laatat, vektorit. */
+  const ryhmienVahti = (() => {
+    const puretut = [];
+    const kolmi = pallonKolmiulotteinen(pallo);
+    for (const ryhma of [kolmi?.juuri, kolmi?.moottori]) {
+      if (!ryhma || !pallo.__piirto) continue;
+      for (const nimi of ['add', 'remove']) {
+        const alkuperainen = ryhma[nimi];
+        if (typeof alkuperainen !== 'function') continue;
+        ryhma[nimi] = function ryhmanMuutos(...a) { pallo.__piirto?.tarvitaan(); return alkuperainen.apply(this, a); };
+        puretut.push(() => { if (ryhma[nimi]?.name === 'ryhmanMuutos') ryhma[nimi] = alkuperainen; });
+      }
+    }
+    return () => { for (const p of puretut) p(); };
+  })();
   // Lauta ei pyöri itsekseen: se on pelilauta, ei näyteikkuna.
   pallo.controls().autoRotate = false;
   const siirtyma = ui.reducedMotion ? 0 : MERKKIEN_SIIRTYMA_MS;
@@ -1420,19 +1503,27 @@ export async function avaaPallolauta(ui) {
   let siirtymaAjastin = 0;
   let tahdistaSiirtymanJalkeen = () => {};
   let merkkienNakyvyys = { ajasta() {}, kameranJalkeen: async (ajo) => ajo, pura() {} };
+  /*
+   * UNI KULKEE LEPOPIIRRON KAUTTA, KUN SE ON ASENNETTU: kirjaston
+   * silmukalla on yksi omistaja (lepopiirto.js "UNI ON ERI ASIA KUIN
+   * LEPO"). Ilman lepopiirtoa (`?koe=levovanha`) pause/resume suoraan
+   * kuten ennen.
+   */
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
     // Jono ennen Globe.gl:n omaa ensimmäistä herätysframea: datan
     // invalidointi ehtii sen päivitysjonoon heti heräämisen alussa.
     merkkienNakyvyys.ajasta();
-    pallo.resumeAnimation?.();
+    if (pallo.__piirto) pallo.__piirto.uni(false);
+    else pallo.resumeAnimation?.();
     tahdistaSiirtymanJalkeen();
   };
   const lepaa = () => {
     if (tauolla) return;
     tauolla = true;
-    pallo.pauseAnimation?.();
+    if (pallo.__piirto) pallo.__piirto.uni(true);
+    else pallo.pauseAnimation?.();
   };
   /** Nukkuuko pallo: lehti auki, kuori piilossa tai sivu taustalla. */
   const lepoTarpeen = () => kuori.hidden
@@ -1857,6 +1948,17 @@ export async function avaaPallolauta(ui) {
       if (!eleet.sormet.alhaalla) pallo.enablePointerInteraction?.(false);
     }, OSOITTIMEN_JALKIVIIVE_MS);
   };
+  /*
+   * Veto on alkanut, kun osoitin on siirtynyt laskeutumispaikasta yli
+   * VEDON_KYNNYS_PX. Kirjaston oma napautuskynnys on 1 px liikettä
+   * tapahtumaa kohti; tämä on sitä väljempi, joten raycast ei sammu
+   * napautuksen jitteristä ennen kuin kirjasto on lukenut osuman.
+   */
+  const VEDON_KYNNYS_PX = 4;
+  let laskeutuminen = null;
+  kotelo.addEventListener('pointerdown', (e) => { laskeutuminen = { x: e.clientX, y: e.clientY }; });
+  const vetoAlkoi = (e) => Boolean(laskeutuminen
+    && Math.hypot(e.clientX - laskeutuminen.x, e.clientY - laskeutuminen.y) > VEDON_KYNNYS_PX);
   if (kosketuslaite) {
     pallo.enablePointerInteraction?.(false);
     // Kaappausvaiheessa dokumentista: kirjaston oma pointerdown-kuuntelija
@@ -1864,6 +1966,44 @@ export async function avaaPallolauta(ui) {
     document.addEventListener('pointerdown', osoitinPaalle, true);
     kotelo.addEventListener('pointerup', osoitinPois);
     kotelo.addEventListener('pointercancel', osoitinPois);
+    /*
+     * ELEEN AJAKSI POIS MYÖS SORMEN OLLESSA ALHAALLA (sulavuus E3,
+     * 21.9.2026). Vedon ja nipistyksen aikana raycast kävi joka kehys
+     * (profiili 4×: intersectObjects 2,6 s / 31 s) eikä siitä ole
+     * hyötyä: vedosta ei synny klikkiä, ja napautuksen osuma on jo
+     * luettu laskeutumisessa. Pois heti, kun sormi on liikkunut
+     * napautuskynnyksen yli tai toinen sormi laskeutuu.
+     */
+    kotelo.addEventListener('pointermove', (e) => {
+      if (!eleet.sormet.alhaalla) return;
+      if (eleet.sormet.nipistys || vetoAlkoi(e)) pallo.enablePointerInteraction?.(false);
+    });
+  } else {
+    /*
+     * HIIRI: RAYCAST POIS VEDON JA RULLAN AJAKSI (sulavuus E3). Kirjasto
+     * raycastaa hiiren alta joka kehys hiirivihjettä varten; vedon ja
+     * zoomin aikana vihjettä ei tarvita, ja raycast on juuri se työ, joka
+     * kilpailee kehyksen kanssa. Takaisin päälle irrotuksessa (klikin
+     * osuma luetaan laskeutumisessa, kuten kosketuksella) ja
+     * OSOITTIMEN_JALKIVIIVE_MS rullan jälkeen.
+     */
+    let vedossa = false;
+    kotelo.addEventListener('pointerdown', () => { vedossa = true; });
+    kotelo.addEventListener('pointermove', (e) => {
+      if (vedossa && vetoAlkoi(e)) pallo.enablePointerInteraction?.(false);
+    });
+    const vetoLoppui = () => {
+      vedossa = false;
+      clearTimeout(osoitinAjastin);
+      osoitinAjastin = setTimeout(() => pallo.enablePointerInteraction?.(true), 0);
+    };
+    document.addEventListener('pointerup', vetoLoppui, true);
+    document.addEventListener('pointercancel', vetoLoppui, true);
+    kotelo.addEventListener('wheel', () => {
+      pallo.enablePointerInteraction?.(false);
+      clearTimeout(osoitinAjastin);
+      osoitinAjastin = setTimeout(() => { if (!vedossa) pallo.enablePointerInteraction?.(true); }, OSOITTIMEN_JALKIVIIVE_MS);
+    }, { passive: true, capture: true });
   }
 
   /* ---- laattojen esilataus ja vakaa istunto ------------------------- */
@@ -1932,8 +2072,11 @@ export async function avaaPallolauta(ui) {
    */
   const { pisteet: laudanOmatPisteet, siirtymat } = pallonOmatPisteet(pack);
   omatPisteet = laudanOmatPisteet;
+  // GL-kerroksen jako pelin merkeille (nappula rungolle); sidotaan sovittimen synnyttyä alempana.
+  let pelinJako = null;
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
+    jakaja: (osa, lista) => (osa === 'peli' && pelinJako ? pelinJako(lista) : lista),
     // Globe.gl:n nollakestoisen pointOfView-kutsun renderöijäpäivitys
     // valmistuu vasta seuraavalla framella. Merkit tarkistavat silloin
     // etu/taka-puolen tästä samasta geometriasta kuin osumatesti.
@@ -1955,9 +2098,75 @@ export async function avaaPallolauta(ui) {
    * Line2-luokat reittikerroksen kautta, joten se on luotava vasta
    * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
    */
-  const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  // ABLAATIOTIKAS (js/pallolauta/kerrokset.js, `?kerrokset=`): kerros pois vain mittauksessa.
+  if (ablaatioPaalla()) {
+    document.body?.classList.add(...kerrostenBodyLuokat());
+    // Äänet pois ilman asetuksen tallennusta (sound.js enabled-portti).
+    if (!kerrosKaytossa('aanet')) sfx.enabled = false;
+  }
+  // PIIRTOKOKEET (`?koe=`, kerrokset.js): DOM-kerros pois vain mittauksessa;
+  // kehysprofiili (pääsäie/GPU-jako) samoilla lipuilla laitteen konsoliin.
+  asennaPiirtokokeet();
+  if (ablaatioPaalla() || piirtokokeet().size) asennaKehysprofiili(() => globalThis.matkakirja?.ui);
+  /*
+   * KAMERAKALLISTUS (koe; js/pallolauta/kallistus.js): esittely
+   * `?koe=kallistus`, pysyvä kallistus valikon kytkimellä (localStorage
+   * `matkakirja-kallistus` = '1') tai `?koe=kallistuspysyva`. Ilman niitä
+   * mitään ei asenneta eikä pointOfView'ta kääritä.
+   */
+  const kallistustila = kallistusTila(piirtokokeet());
+  const kallistus = kallistustila ? asennaKallistus({
+    pallo, kotelo, kuori, ui, pysyva: kallistustila === 'pysyva', pysyvaKulma: pysyvaKallistuskulma(),
+  }) : null;
+  /*
+   * `?koe=profiili` (omistajan tilaus Fablen kautta 22.9.2026): sama
+   * profiili RUUDULLE ja mittauspalvelimelle, jotta puhelimen pitkän
+   * kehyksen syyn näkee ilman Web Inspectoria. Rivillä ovat myös
+   * voimassa olevat asetukset, jolloin omistajan kuvakaappaus kertoo
+   * itsessään, missä tilassa peli oli (js/pallolauta/profiilinaytto.js).
+   */
+  // Koetila luetaan nyt, samaan aikaan kuin kerrokset lukevat lippunsa; valikon myöhempi valinta näkyy "seuraavana".
+  const koeAlussa = koetilanNimi(piirtokokeet());
+  const sovellusversio = (() => {
+    const t = document.getElementById('app-version')?.textContent ?? '';
+    return t ? `v${t.split('.').pop()}` : '';
+  })();
+  const puraProfiilinaytto = piirtokokeet().has('profiili')
+    ? luoProfiilinaytto({
+      profiili: globalThis.__kehysprofiili,
+      kotelo,
+      asetukset: () => ({ veto: vedonSeuranta(), tarkkuus: tarkkuusLiikkeessa() }),
+      lepo: () => pallo.__piirto?.tila?.() ?? null,
+      tila: () => ({ koe: koeAlussa, seuraava: koetilanNimi(piirtokokeet()), versio: sovellusversio, suoraan: suoraanKartallePaalla() }),
+      // Paljas kartta: 1 s:n jakso, DOM-kirjoitus minimiin mutta luvut tuoreina (omistaja 23.9.2026).
+      ...(paljasTila() ? { jaksoMs: 1000 } : {}),
+    })
+    : () => {};
+  const vektorit = pallovektoritPaalla() && kerrosKaytossa('vektorit') ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
+  /*
+   * Maakuntavektorit (js/pallomaakunnat.js, erä M1): admin-1-alueet
+   * täyttöinä laattojen päällä, viivojen alla. OLETUKSENA POIS
+   * (`?maakunnat=1`); maa seuraa pelaajan maan korostusta alempana.
+   */
+  const maakunnat = pallomaakunnatPaalla() ? luoPallomaakunnat({ pallo }) : null;
+  /** Maa, jonka laatat on jo annettu esilatausjonoon (js/laattaesilataus.js). */
+  let esilatausMaaAnnettu = null;
+  let liikkeessaNyt = () => false;
+  // GL-nimiöt (vaihe 2): ladonnan nimet rungolle sovittimen kautta (oletus päällä, `?glnimiot=0` pois).
+  const glSovitin = glNimiotKaytossa() && !/[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '')
+    ? luoGlNimiosovitin({
+      kotelo, kerros: () => ui.pallolautaGL(), ui, ruutupiste: (lat, lng) => ruudulla(lat, lng, 0),
+      // Rasteroinnit jonoon liikkeessä (nimiorasterit.js): sormi alhaalla tai kamera-ajo
+      // (eleKaynnissa määritellään alempana; sidotaan silloin).
+      liikkeessa: () => liikkeessaNyt(),
+    })
+    : null;
+  sykkiiNyt = () => Boolean(glSovitin?.sykkii?.());
+  // Nappula rungolle; kun rasteri valmistuu tai runko syntyy, sama lista asetetaan uudestaan (jako aseta-kutsussa).
+  const peliUudestaan = () => { const l = glSovitin?.viimeisetPeli(); if (l) merkit.aseta('peli', l, { haivyta: false }); };
+  if (glSovitin) pelinJako = (lista) => glSovitin.peli(lista, peliUudestaan);
   const nimet = luoNimet({
-    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
+    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
   });
   /*
    * ══ RUUDUN KALUSTEET OVAT LISTAN KOVIA ESTEITÄ ══════════════════
@@ -2025,6 +2234,7 @@ export async function avaaPallolauta(ui) {
     merkit,
     asteet: pallonAsteet,
     ruudulla,
+    glSovitin,
     onPoltettu: pallonNostoOnPoltettu,
     /*
      * AIHEMERKIN VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;
@@ -2048,7 +2258,7 @@ export async function avaaPallolauta(ui) {
      * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
      * pikseleinä.
      */
-    esteet: () => [...merkit.laatikot('peli'), ...ruudunKalusteet()],
+    esteet: () => [...merkit.laatikot('peli'), ...(glSovitin?.pelinLaatikot() ?? []), ...ruudunKalusteet()],
     /*
      * KAUPUNKIEN NIMILAATIKOT LIUSKAN LADONTAAN (Fablen tarkistus
      * 18.9.2026: avattu kategoria ladottiin kartalle piirretyn
@@ -3638,25 +3848,171 @@ export async function avaaPallolauta(ui) {
        * Parallaksi pois JOKAISELTA pisteeltä — kaupungeilta, helmiltä ja
        * aihevaloilta (ks. LEVY KATSESÄTEELLE). Paikka lasketaan aina
        * datumin asteista, ei olion nykyisestä paikasta.
+       *
+       * EI VARAUKSIA KEHYSPOLUSSA (sulavuuskatsaus 22.9.2026 kohta 11):
+       * pinnan piste lasketaan datumille kerran (`__pinta`, lat/lon ja
+       * säde eivät muutu) ja katsesäteen siirto kirjoitetaan suoraan
+       * olion paikkaan — ennen tässä syntyi kaksi oliota pistettä ja
+       * kehystä kohti (satoja per kehys liikkeessä, GC:n merkinnät
+       * Web Inspectorin aikajanalla).
        */
-      const paikka = katsesateenPaikka(
-        pallonPiste(d.lat, d.lon, pallonSade), kameranPaikka, o.scale.z,
+      let pinta = d.__pinta;
+      if (!pinta || pinta.sade !== pallonSade) {
+        const p = pallonPiste(d.lat, d.lon, pallonSade);
+        pinta = { x: p.x, y: p.y, z: p.z, sade: pallonSade };
+        d.__pinta = pinta;
+      }
+      const korkeus = o.scale.z;
+      if (!(korkeus > 0)) { o.position.set(pinta.x, pinta.y, pinta.z); n += 1; continue; }
+      const dx = kameranPaikka.x - pinta.x;
+      const dy = kameranPaikka.y - pinta.y;
+      const dz = kameranPaikka.z - pinta.z;
+      const matka = Math.hypot(dx, dy, dz);
+      if (!(matka > 0)) { o.position.set(pinta.x, pinta.y, pinta.z); n += 1; continue; }
+      // Sama kaava kuin katsesateenPaikka (pinnan säde = pallonSade).
+      o.position.set(
+        pinta.x + korkeus * (dx / matka - pinta.x / pallonSade),
+        pinta.y + korkeus * (dy / matka - pinta.y / pallonSade),
+        pinta.z + korkeus * (dz / matka - pinta.z / pallonSade),
       );
-      if (paikka) o.position.set(paikka.x, paikka.y, paikka.z);
       n += 1;
     }
     return n;
   };
+  /*
+   * NIMIÖIDEN KUORI LIUKUU SAMASTA KOUKUSTA (js/pallolauta/nimet.js KOKO
+   * LIUKUU JOKA KEHYKSESSÄ, erä E2): kotelon `--nimiokerroin` = kameran
+   * mittakaava nyt / ladonnan mittakaava, yksi tyylikirjoitus kehystä
+   * kohti ja vain kun luku muuttuu. Ladonta kirjaa oman mittansa
+   * (`kuorenLadonta`) ja palauttaa kertoimen heti, jotta pohja ja kuori
+   * vaihtuvat samassa kehyksessä myös silloin, kun pallo ei piirrä.
+   */
+  let kuorenLadonta = null;
+  let kuorenKerroin = '';
+  let kuorenKorkeus = NaN;
+  let liikkuuLuokka = false;
+  const kirjoitaKuorenKerroin = (korkeus, kuvasuhde) => {
+    const k = liukuvaNimiokerroin(kuorenLadonta, korkeus, kuvasuhde);
+    const teksti = k.toFixed(4);
+    if (teksti === kuorenKerroin) return;
+    kuorenKerroin = teksti;
+    kotelo.style.setProperty(NIMIOKERROIN_MUUTTUJA, teksti);
+  };
+  /** Kameran korkeus (altitude) kameran paikasta — sama kaava kuin kirjastolla. */
+  const kameranKorkeus = (kam, sade) => {
+    const p = kam?.position;
+    if (!p || !(sade > 0)) return NaN;
+    return (Math.hypot(p.x, p.y, p.z) - sade) / sade;
+  };
+  /** Piirrettyjä kehyksiä (diagnostiikka `tila`: nukkuuko pallo oikeasti). */
+  let kehyksia = 0;
+  /**
+   * KAMERAN ENNUSTE (Karttasepän E4b, 21.9.2026, haara karttaseppa-
+   * ennuste): kehyskoukun mitat saavat kentän `ennuste = { dtMs, pov,
+   * nopeus }` — seuraavan kehyksen kamera — ja Karttasepän
+   * jälkikehyskoukku siirtää CSS2D-merkit ennustettuun paikkaan.
+   * Nimiöiden KOKO seuraa samaa ennustetta: kuoren kerroin lasketaan
+   * ennustetusta korkeudesta, jotta paikka ja koko ovat samasta
+   * kamerasta. Ilman kenttää kaikki on kuten E2:ssa. Viimeisin ennuste
+   * jää luettavaksi (`viimeisinKehys`) sulavuusmittarille.
+   */
+  let viimeisinKehys = null;
   /** Piirtokoukku: sama kamera, sama kehys kuin kuvalla. */
-  const pisteetKehyksessa = ({ kamera: kam, aika }) => {
+  const pisteetKehyksessa = (mitat) => {
+    const { kamera: kam, aika, sade, kuvasuhde } = mitat;
+    kehyksia += 1;
+    viimeisinKehys = mitat;
     const p = kam?.position ?? null;
     if (!p) return;
     const liikkui = p.x !== kehyksenKamera.x || p.y !== kehyksenKamera.y || p.z !== kehyksenKamera.z;
+    if (liikkui) {
+      const ennustettu = mitat.ennuste?.pov?.altitude;
+      const korkeus = ennustettu > 0 ? ennustettu : kameranKorkeus(kam, sade);
+      if (korkeus !== kuorenKorkeus) {
+        kuorenKorkeus = korkeus;
+        kirjoitaKuorenKerroin(korkeus, kuvasuhde);
+      }
+      // Siirtymät pois liikkeen ajaksi (nimet.js SIIRTYMÄT POIS LIIKKEEN
+      // AJAKSI) — myös kirjaston oma merkkitween (merkit.kirjastonSiirtyma).
+      if (!liikkuuLuokka) {
+        liikkuuLuokka = true;
+        kotelo.classList.add(LIIKKUU_LUOKKA);
+        merkit.kirjastonSiirtyma(false);
+      }
+    }
     if (!liikkui && aika > siirtymaAsti) return;
     kehyksenKamera = { x: p.x, y: p.y, z: p.z };
     asetaPisteidenPaikat(p);
   };
   const kehyspurku = kytkePallonKehys(pallo, kotelo, pisteetKehyksessa);
+  // Kameran ennuste: CSS2D-nimiöt ja merkit seuraavan kehyksen paikkaan (E4b, ?ennuste=0 pois).
+  const ennustepurku = kytkePallonEnnuste(pallo, kotelo);
+  /*
+   * GL-KERROS (oletus päällä, `?glnimiot=0` CSS2D:hen; docs/raportit/
+   * gl-kerros-suunnitelma-20260921.md): kerros syntyy laiskasti, kun
+   * kirjaston luokat ovat scenessä (laattaverkko + ilmakehän varjostin).
+   * VAIHE 2: ladonnan nimet tulevat rungolle sovittimen kautta (glSovitin,
+   * js/pallolauta/glnimiot-sovitin.js; rasterit nimiorasterit.js);
+   * rungon omat 40 testinimiötä ovat vain `?glnimiot=testi`-tilassa
+   * (savuke-glnimiot.mjs). Nostot vaiheessa 3, napautus datumeista;
+   * CSS2D on perääntymistie (rasteri kesken, atlas täynnä, ei runkoa).
+   */
+  let glKerros = null;
+  let glSiemen = null; // pov, jonka ympäriltä testinimiöt valittiin (vain ?glnimiot=testi)
+  const glTesti = glNimiotKaytossa() && /[?&]glnimiot=testi\b/.test(globalThis.location?.search ?? '');
+  // Kahva UI:n pallolautaGL()-metodille (js/ui.js): kerros tai null.
+  ui.glKerros = () => (glVirhe ? null : glKerros);
+  const glTestinimiot = (pov, dpr) => {
+    glKerros.tyhjenna();
+    const lahimmat = pallonKaupungit(pack)
+      .map((k) => ({ ...k, d: Math.hypot(k.lat - pov.lat, ((k.lon - pov.lng + 540) % 360 - 180) * Math.cos((pov.lat * Math.PI) / 180)) }))
+      .sort((a, b) => a.d - b.d).slice(0, 40);
+    for (const k of lahimmat) {
+      const avain = `testi|${k.n}|${dpr}`;
+      const rasteri = glKerros.onRasteri(avain) ? null : rasteroiTeksti(k.n, { px: 12, dpr, doc: kotelo.ownerDocument });
+      // Testirasteri on laitepikseleissä: skaala 1/dpr = css-px per rasterin px.
+      glKerros.aseta(`kaupunki-${k.id}`, { lat: k.lat, lng: k.lon, avain, rasteri, skaala: 1 / dpr });
+    }
+    glSiemen = { lat: pov.lat, lng: pov.lng };
+  };
+  /*
+   * PERÄÄNTYMISTIE CSS2D:HEN ILMAN LIPPUA (omistaja 21.9.2026: GL on
+   * oletus). Jos kirjaston luokat eivät koskaan ilmesty sceneen (ei
+   * WebGL-tekstuuria) runkoa ei synny ja sovitin jättää kaiken CSS2D:hen.
+   * Jos runko kaatuu kehyksessä, se puretaan ja sama jako ajetaan
+   * uudestaan ilman runkoa — nimet ja nostot palaavat CSS2D:hen.
+   */
+  let glVirhe = null;
+  const glKehys = (mitat) => {
+    if (glVirhe) return;
+    try {
+      const pov = mitat.pov ?? pallo.pointOfView();
+      if (!glKerros) {
+        const luokat = glLuokat(pallo);
+        if (!luokat) return;
+        glKerros = luoNimiokerrosGL({
+          pallo, kotelo, luokat, juuri: pallonKolmiulotteinen(pallo)?.juuri ?? null,
+          // Piirtokokeet (?koe=eipuskuri, ?koe=eivienti) jäädyttävät kirjoitukset liikkeen ajaksi.
+          liikkeessa: () => liikkeessaNyt(),
+        });
+        // Ladonnan nimet ja nostot rungolle heti, kun runko on olemassa (ei uutta ladontaa).
+        if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
+      }
+      // Testinimiöt kameran ympäriltä (vain ?glnimiot=testi); uudet, kun kamera on siirtynyt kauas.
+      if (glTesti && (!glSiemen || Math.hypot(pov.lat - glSiemen.lat, ((pov.lng - glSiemen.lng + 540) % 360) - 180) > 10)) {
+        glTestinimiot(pov, mitat.suhde ?? 1);
+      }
+      glSovitin?.kehys();
+      glKerros.kehys(mitat);
+    } catch (virhe) {
+      glVirhe = virhe;
+      console.warn('[glnimiot] runko kaatui, CSS2D perääntymistie:', virhe?.message ?? virhe);
+      try { glKerros?.pura(); } catch { /* purku ei kaada */ }
+      glKerros = null;
+      if (!glTesti) { nimet.jaaUudestaan?.(); nostot.jaaUudestaan?.(); peliUudestaan(); }
+    }
+  };
+  const glpurku = glNimiotKaytossa() ? kytkePallonKehys(pallo, kotelo, glKehys) : () => {};
 
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
@@ -4112,6 +4468,7 @@ export async function avaaPallolauta(ui) {
        * ja lähizoomissa katon 16 px.
        */
       mitta: nostonMitta(),
+      mittaRaaka: nostonRaakaMitta(),
       elementti: turistiInfoElementti,
       asettele: asetteleTuristiInfo,
 
@@ -4210,7 +4567,53 @@ export async function avaaPallolauta(ui) {
    */
   let lepoladonta = false;
   const eleKaynnissa = () => Boolean(eleet.sormet.alhaalla || eleet.sormet.nipistys
-    || kamera.kameraAjossa?.());
+    || kamera.kameraAjossa?.()
+    // Kallistus on ele: ladonnan mitat olettavat ylhäältä-kameran (kallistus.js).
+    || kallistus?.kaynnissa());
+  /*
+   * LIIKE RASTERIJONOLLE JA SOVITTIMELLE: ele TAI kameran tuore muutos
+   * (kirjaston oma pointOfView-ajo ei näy eleistä eikä kameraAjossa-
+   * lipusta; controls 'change' näkyy joka kehys). Ikkuna on lyhyt, jotta
+   * lepo alkaa heti liikkeen loputtua.
+   */
+  let kameraMuuttuiHetki = -Infinity;
+  liikkeessaNyt = () => eleKaynnissa()
+    || ((globalThis.performance?.now?.() ?? Date.now()) - kameraMuuttuiHetki) < LIIKKEEN_IKKUNA_MS;
+  /*
+   * Lepopiirron este (ks. ELEEN AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ):
+   * sormi alhaalla, nipistys, kamera-ajo TAI irrotuksen jälkeinen liuku
+   * (`ui.pallonVauhti.raf`, js/pallo.js). Liuku kirjoittaa kameraa itse,
+   * mutta este on silti oikea paikka: sen pysähdykset näkyisivät samana
+   * nykimisenä vedon lopussa.
+   */
+  vetoNyt = () => eleKaynnissa() || Boolean(ui.pallonVauhti?.raf);
+  /*
+   * ══ LIIKKEESSÄ EI TÄYTTÄ LADONTAA (sulavuus 22.9.2026, ablaatiotikas
+   * docs/raportit/sulavuus-ablaatio-20260921.md; Fablen päätös) ═════
+   *
+   * Zoomin ja panoroinnin pitkät kehykset olivat ladonta + rasteroinnit
+   * + laattapyynnöt samassa kehyksessä. Liikkeen aikana ladonta ajetaan
+   * nyt vain, kun kamera on siirtynyt viime ladonnasta yli puolet
+   * nostojen liikevarasta (nostot.js LIIKEVARA: levossa ladotaan ruutua
+   * suurempi alue, joten tähän asti kaikki on jo paikallaan) tai zoomi
+   * on muuttunut yli LADONNAN_ZOOMIKYNNYS-kertaisesti (kuoren kerroin
+   * kantaa siihen asti, E2). Muuten liikkeen kehys vain siirtää:
+   * runko lukee paikat lat/lng:stä ja CSS2D-kerros omistaan.
+   */
+  let viimeLadonta = null; // { lat, lng, skaala } viime ladonnan keskipiste
+  let ladontojaOhitettu = 0; // liikkeessä ohitetut (mittari)
+  let ladontojaAjettu = 0;
+  const ladontaTarpeen = (nakyva) => {
+    if (!viimeLadonta || !nakyva) return true;
+    const p = ruudulla(viimeLadonta.lat, viimeLadonta.lng, Infinity);
+    if (!p) return true;
+    const siirtyma = Math.hypot(p.x - kotelo.clientWidth / 2, p.y - kotelo.clientHeight / 2);
+    const vara = nostot.liikevaraPx?.() ?? 0;
+    if (vara > 0 && siirtyma > vara * LADONNAN_LIIKEVARAOSUUS) return true;
+    if (!(vara > 0) && siirtyma > LADONNAN_SIIRTYMAKYNNYS_PX) return true;
+    const suhde = viimeLadonta.skaala > 0 && nakyva.skaala > 0 ? nakyva.skaala / viimeLadonta.skaala : 1;
+    return suhde >= LADONNAN_ZOOMIKYNNYS || suhde <= 1 / LADONNAN_ZOOMIKYNNYS;
+  };
   const ladoLevossa = () => {
     lepoAjastin = 0;
     // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
@@ -4218,8 +4621,38 @@ export async function avaaPallolauta(ui) {
     ladottuHetki = globalThis.performance?.now?.() ?? Date.now();
     if (ui.dead || kuori.hidden) return null;
     const nakyva = kamera.nakyvaAlue();
+    ladontojaAjettu += 1;
+    if (nakyva) {
+      const keski = pallo.toGlobeCoords?.(kotelo.clientWidth / 2, kotelo.clientHeight / 2) ?? null;
+      viimeLadonta = keski ? { lat: keski.lat, lng: keski.lng, skaala: nakyva.skaala } : viimeLadonta;
+    }
+    glSovitin?.alkuLadonta?.();
+    try { return ladoLevossaSisus(nakyva); } finally { glSovitin?.loppuLadonta?.(); }
+  };
+  const ladoLevossaSisus = (nakyva) => {
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
     const pelia = merkit.maara('peli');
+    /*
+     * PELIMERKKIEN LAATIKOT LUETAAN KERRAN (erä E3, Karttasepän iPad-
+     * profiili: ladonta levossa yhtenä 42–50 ms:n tehtävänä, josta
+     * suuri osa getBoundingClientRect-pakotettua asettelua). Sama lista
+     * meni ennen kolmesti — nostoille, nimille ja sovittelulle — ja
+     * jokainen luenta väliin osuneiden DOM-kirjoitusten jälkeen pakotti
+     * uuden asettelun. Nappula ei muutu ladonnan aikana, joten yksi
+     * luenta riittää kaikille kolmelle.
+     */
+    const pelinLaatikot = [...merkit.laatikot('peli'), ...(glSovitin?.pelinLaatikot() ?? [])];
+    /*
+     * KUOREN POHJA VAIHTUU NYT (nimet.js LADONTA JA KUORI VAIHTUVAT
+     * SAMASSA KEHYKSESSÄ): ladonnan mitta talteen ja kerroin heti sen
+     * mukaiseksi. Korkeus luetaan samasta kaavasta kuin kehyskoukussa.
+     */
+    kuorenLadonta = ladonnanMitta(nakyva?.skaala ?? 0, saapumisenSkaala(),
+      kameranKorkeus(pallo.camera?.(), pallo.getGlobeRadius?.() ?? 100));
+    kuorenKorkeus = kuorenLadonta?.korkeus ?? NaN;
+    kirjoitaKuorenKerroin(kuorenKorkeus, kotelo.clientWidth / Math.max(1, kotelo.clientHeight));
+    // Ruutuvakioiset nostot (?nostokoko=0) eivät liu'u kuoren mukana.
+    kotelo.classList.toggle('pallolauta-nostot-ruutuvakio', !kartanMittaSallittu());
     const nostoTulos = nostot.paivita({
       nakyva,
       keskipiste,
@@ -4248,7 +4681,9 @@ export async function avaaPallolauta(ui) {
        * kerroksen, joten laatikot annetaan sille kerrokselta, joka ne
        * omistaa — sama lista kuin nimiladonnan `pinot`.
        */
-      esteet: merkit.laatikot('peli'),
+      esteet: pelinLaatikot,
+      // Ablaatiotikas (kerrokset.js): ilman nostokerrosta katot nollaan (viimeinen avain voittaa).
+      ...(kerrosKaytossa('nostot') ? {} : { katto: 0, pisteKatto: 0 }),
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
@@ -4291,9 +4726,13 @@ export async function avaaPallolauta(ui) {
     const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
       varaukset: [...nostoTulos.laatikot, ...infoTulos],
-      pinot: merkit.laatikot('peli'),
+      pinot: pelinLaatikot,
       katto,
       vain,
+      // Liikevara: sama kuin nostoilla (nimet.js lado `liikevara`).
+      liikevara: nostot.liikevaraPx?.() ?? 0,
+      // Ablaatiotikas (kerrokset.js): ilman nimikerrosta ei yhtään ehdokasta (voittaa `vain`-rajauksen).
+      ...(kerrosKaytossa('nimet') ? {} : { vain: new Set() }),
       // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
       etusija: matkanKohteet(),
       kokoKerroin: kaupunginMitat.nimiKerroin,
@@ -4346,7 +4785,7 @@ export async function avaaPallolauta(ui) {
      */
     const sovittelu = nostot.sovittele({
       nimet: nimet.laatikot(),
-      kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+      kiinteat: [...infoTulos, ...pelinLaatikot],
       // Meren nimiöt väistävät kohdemaan korostuskehää (ks. rantaviivanLaatikot).
       rantaviiva: rantaviivanLaatikot,
       rantaviivaOn: pallonKorostusRenkaat(pallonKorostettuMaa()).length > 0,
@@ -4370,14 +4809,34 @@ export async function avaaPallolauta(ui) {
   /** Lepoladonta: ajetaan levossa, sovittelu saa ratkaista. */
   const ladoLevossaLevossa = () => {
     lepoladonta = true;
-    try { return ladoLevossa(); } finally { lepoladonta = false; }
+    try { return ladoLevossa(); } finally {
+      lepoladonta = false;
+      /*
+       * Liikkeen luokka pois vasta SEURAAVASSA kehyksessä: lepoladonnan
+       * oma pohja vaihtuu vielä ilman siirtymää, ja siirtymät ovat
+       * käytössä vasta levossa (nimet.js SIIRTYMÄT POIS LIIKKEEN AJAKSI).
+       */
+      if (liikkuuLuokka) {
+        liikkuuLuokka = false;
+        globalThis.requestAnimationFrame?.(() => {
+          if (liikkuuLuokka) return;
+          kotelo.classList.remove(LIIKKUU_LUOKKA);
+          merkit.kirjastonSiirtyma(true);
+        });
+      }
+    }
   };
   const pyydaLadonta = () => {
     clearTimeout(lepoAjastin);
     const nyt = globalThis.performance?.now?.() ?? Date.now();
     const { heti, viiveMs } = ladonnanAjoitus(nyt - ladottuHetki);
-    // Liikkeen tahdissa nimiöt pysyvät lukossa (lepo = false).
-    if (heti) ladoLevossa();
+    // Liikkeen tahdissa nimiöt pysyvät lukossa (lepo = false) — ja ladonta
+    // ajetaan vain, kun kamera on siirtynyt riittävästi (LIIKKEESSÄ EI
+    // TÄYTTÄ LADONTAA); muuten vain kello käy.
+    if (heti) {
+      if (ladontaTarpeen(kamera.nakyvaAlue())) ladoLevossa();
+      else { ladottuHetki = nyt; ladontojaOhitettu += 1; }
+    }
     // Perälauta: liikkeen VIIMEINEN muutos saa vielä oman ajonsa, jottei
     // se jää kuritusikkunan sisään — ja se on lepoladonta.
     lepoAjastin = setTimeout(ladoLevossaLevossa, viiveMs);
@@ -4388,6 +4847,7 @@ export async function avaaPallolauta(ui) {
     return ladoLevossa();
   };
   const ohjaimet = pallo.controls();
+  ohjaimet.addEventListener('change', () => { kameraMuuttuiHetki = globalThis.performance?.now?.() ?? Date.now(); });
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Sormen nousu ilman kameran muutosta (paikallaan pidetty sormi) on
   // myös eleen loppu: lepoladonta sen jälkeen.
@@ -4396,12 +4856,16 @@ export async function avaaPallolauta(ui) {
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
   ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
   /*
-   * Maapaneeli skaalautuu kuin painettu kartta, joten sen mittakaava
-   * on zoomin asia eikä ladonnan: se kirjoitetaan samalla
-   * kamera-tapahtumalla kuin kaupunkipisteen säde, ei vasta levossa
-   * (muuten paneeli hyppäisi kokoonsa vasta eleen päätyttyä).
+   * MAAPANEELIA EI KIRJOITETA KAMERAN TAHDISSA (sulavuuskatsaus
+   * 22.9.2026 kohta 15). Aiemmin ohjainten `change` ajoi joka kehys
+   * `maapaneeli.tahdistaKoko()` → `kirjoita()` (rect-luku, kaksi CSS-
+   * muuttujaa, kortin täyttö, Liikun pohjan mittaus rAF:eineen ja
+   * ajastimineen), vaikka kamera ei vaikuta paneelin kokoon eikä
+   * paikkaan lainkaan (PÄÄTÖKSET 28, TARKENNUS 2: typografia on
+   * ruutupikseleitä). Paneeli kirjoitetaan nyt vain, kun sen sisältö
+   * tai ruutu muuttuu: `paivita` pelin tilasta ja `tahdistaZoomirajat`
+   * (ResizeObserver → mitoita) ruudun koosta.
    */
-  ohjaimet.addEventListener('change', () => maapaneeli.tahdistaKoko());
   // Aihevalot: selitteen väripallo vaihtaa bodyn luokan.
   let valoAvain = '';
   const valovahti = new MutationObserver(() => {
@@ -4481,6 +4945,8 @@ export async function avaaPallolauta(ui) {
     tauolla: () => tauolla,
     eleKaynnissa,
     korttiAuki: () => Boolean(nostot.liuskaAuki?.()),
+    // Ablaatiotikas (kerrokset.js): porras ilman pulua jättää pienen liikkeen pois.
+    rakenna: kerrosKaytossa('liike'),
   });
   const paivita = () => {
     if (ui.dead) return;
@@ -4500,6 +4966,8 @@ export async function avaaPallolauta(ui) {
     // Avauslennolla lauta on niukka: ei kohteita, ei nappulaa, ja
     // reittikerros saa lennon oman valinnan (yksi kaari).
     const kohteet = lento || linssiPaalla() ? [] : kohdevalinta();
+    // Ablaatiotikas (kerrokset.js): kohteet omana portaanaan.
+    if (!kerrosKaytossa('kohteet')) kohteet.length = 0;
     /*
      * REITTI JA PELINAPPULA POIS LINSSIN AJAKSI (Raamattu,
      * TOPOGRAFIALINSSI: … PELIN ELEMENTIT POIS, omistaja 16.9.2026).
@@ -4585,7 +5053,9 @@ export async function avaaPallolauta(ui) {
     const nappulanKohta = !liikkuu && ui.siirtoKaynnissa
       ? (pallonKohta(ui.siirtoKaynnissa) ?? kohta)
       : kohta;
-    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
+    // Ablaatiotikas (kerrokset.js): nappula omana portaanaan (kohteet yllä).
+    if (!kerrosKaytossa('nappula')) merkit.paivita({ nappula: null, kohteet });
+    else merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
@@ -4624,6 +5094,30 @@ export async function avaaPallolauta(ui) {
       asteet: pallonAsteet,
       lataa: lataaMaapolygonit,
     });
+    // Maakuntatäytöt samasta maasta ja samalla hetkellä kuin korostuskehä.
+    maakunnat?.asetaMaa(linssiPaalla() ? null : korostusIso);
+    /*
+     * KOHDEMAAN LAATAT ESILATAUSJONOON (omistaja 22.9.2026; js/
+     * laattaesilataus.js): maan z6–z8 palvelutyöntekijän koriin levossa,
+     * kerran maata kohti, kun korostuksen renkaat ovat saapuneet
+     * (laatikko = manner + lähisaaret, ei merentakaiset).
+     */
+    const esilatausIso = linssiPaalla() ? null : korostusIso;
+    const annaEsilatausMaa = () => {
+      if (!esilatausIso || esilatausIso === esilatausMaaAnnettu || pallonKorostettuMaa() !== esilatausIso) return;
+      const renkaat = pallonKorostusRenkaat(esilatausIso);
+      const laatikko = renkaat.length ? esilatauksenMaanLaatikko(renkaat) : null;
+      const kerros = pallonLepokerros(pallo);
+      if (laatikko && kerros?.asetaEsilatausMaa) {
+        esilatausMaaAnnettu = esilatausIso;
+        kerros.asetaEsilatausMaa(esilatausIso, laatikko);
+      }
+    };
+    annaEsilatausMaa();
+    // Renkaat saapuvat laiskasti: yritetään uudestaan, kun aineisto on perillä.
+    if (esilatausIso && esilatausIso !== esilatausMaaAnnettu) {
+      Promise.resolve(lataaMaapolygonit()).then(() => annaEsilatausMaa()).catch(() => {});
+    }
     /*
      * MAAILMANÄKYMÄ LUETAAN SAMASTA HETKESTÄ KUIN MAA (omistaja
      * 15.9.2026, Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Kun
@@ -4911,6 +5405,8 @@ export async function avaaPallolauta(ui) {
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
   const saavu = async ({ kesto = 0 } = {}) => {
+    // Maan esittely (kallistuskoe): animoidun saapumisajon perään kallistus + orbit.
+    if (kallistus && kesto > 0) void kallistus.esitteleAjonJalkeen(() => kamera.kameraAjossa?.());
     /*
      * SAAPUMISLAATIKKO = MAA + MAAPANEELI (erä 3) JA SE ON MYÖS
      * ULOSZOOMAUKSEN KATTO (erä 2). Kamera päätyy juuri tähän
@@ -5159,6 +5655,126 @@ export async function avaaPallolauta(ui) {
     liike: () => liike,
     /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
     kameraloki: () => kameraloki.merkinnat(),
+    /** Kamerakallistus (koe) tai null: kallista/orbit/suorista/esittele/tila. */
+    kallistus: () => kallistus,
+    /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null (savukkeet). */
+    glSovitin: () => glSovitin,
+    /** Nimiöiden sulavuusmittari (js/pallolauta/sulavuusmittari.js): aloita/lopeta/yhteenveto. */
+    sulavuus: null,
+    /**
+     * LAUDAN TILA YHDELLÄ LUENNALLA (Laitetestaaja 21.9.2026,
+     * docs/raportit/laitemittaus-sulavuus-20260921.md: esisiemennetty
+     * tallenne vei Marseilleen, mutta yhtään .pallolauta-nimi/-nosto-
+     * elementtiä ei syntynyt eikä syytä näkynyt). CSS2D-merkki syntyy
+     * vasta kirjaston seuraavassa kehyksessä, ja pallo NUKKUU (ks.
+     * RENDER-SILMUKKA LEPÄÄ) kun lehti on auki, kuori piilossa, sivu
+     * taustalla tai saapumiskortti auki — silloin ladonta antaa datumit
+     * mutta DOMiin ei tule mitään. Tämä kertoo, mikä näistä on päällä.
+     * Pelkkä luenta.
+     */
+    tila: () => ({
+      nukkuu: tauolla,
+      kehyksia,
+      lepoTarpeen: lepoTarpeen(),
+      kuoriPiilossa: Boolean(kuori.hidden),
+      sivuPiilossa: document.visibilityState === 'hidden',
+      saapumiskorttiAuki: Boolean(ui.arrivalDialog?.open),
+      dialogejaAuki: document.querySelectorAll('dialog[open]').length,
+      kotelo: { w: kotelo.clientWidth, h: kotelo.clientHeight },
+      kuollut: Boolean(ui.dead),
+      lento: Boolean(lento),
+      linssi: linssiPaalla(),
+      merkkeja: { nostot: merkit.maara('nostot'), nimet: merkit.maara('nimet'), peli: merkit.maara('peli') },
+      domissa: {
+        nimet: document.querySelectorAll('.pallolauta-nimi').length,
+        nostot: document.querySelectorAll('.pallolauta-nosto').length,
+      },
+      elementit: merkit.elementit(),
+      // CSS2D-kerroksen oma juuri (kirjaston .scene-container > div) ja sen lapset.
+      css2d: (() => {
+        const juuri = [...kotelo.querySelectorAll('.scene-container > div')]
+          .find((e) => e.style.position === 'absolute' && e.style.pointerEvents === 'none');
+        return juuri ? { loytyi: true, lapsia: juuri.childElementCount } : { loytyi: false, lapsia: 0 };
+      })(),
+      virheet: globalThis.__pallonVirheet?.slice(-5) ?? null,
+      /*
+       * PALLON JUURI (three-globe): `visible` on false kunnes pallon
+       * pintakerros ilmoittaa olevansa valmis (waitForGlobeReady) —
+       * ensimmäinen laatta/tekstuuri ladattu. Sitä ennen WebGL ei piirrä
+       * palloa eikä CSS2DRenderer liitä yhtään merkkiä (esi-isä
+       * näkymätön). Laitetestaaja 21.9.2026 iPad: ketjuNakyva[2] false.
+       */
+      pallonJuuri: (() => {
+        const juuri = pallo.scene?.()?.children?.find?.((o) => o.children?.some?.((c) => c.__globeObjType || c.children?.some?.((cc) => cc.__globeObjType))) ?? null;
+        return juuri ? { nakyva: juuri.visible, lapsia: juuri.children.length, skaala: Number(juuri.scale?.x?.toFixed?.(3)) } : null;
+      })(),
+      /*
+       * CSS2D-NÄYTE (Laitetestaaja 21.9.2026 iPad: luotu 68, liitetty
+       * 0). CSS2DRenderer liittää elementin vain, jos olio on
+       * näkyvä, sen leikkaussyvyys z on [-1, 1] ja kerrostesti läpäisee
+       * — sama lasku tässä yhdelle merkille kameran omilla matriiseilla,
+       * jotta nähdään, mikä kolmesta ehdosta kaatuu. Identiteetti-
+       * matrixWorldInverse (kamera origossa katsomassa -z:aa) panisi
+       * KOKO Ranskan (lng ≈ 0 → +z) kameran taakse: z < -1.
+       */
+      css2dNayte: (() => {
+        try {
+          const kam = pallo.camera?.();
+          const d = merkit.naytedatum();
+          const olio = d?.__threeObjHtml ?? null;
+          if (!kam || !olio) return { olio: false };
+          const m = kam.projectionMatrix.clone().multiply(kam.matrixWorldInverse);
+          const v = kam.position.clone().setFromMatrixPosition(olio.matrixWorld).applyMatrix4(m);
+          const ketju = [];
+          const ketjunNimet = [];
+          for (let o = olio; o; o = o.parent) {
+            ketju.push(o.visible);
+            ketjunNimet.push(`${o.type ?? o.constructor?.name ?? '?'}${o.__globeObjType ? `:${o.__globeObjType}` : ''}${o.name ? `#${o.name}` : ''}(${o.children?.length ?? 0})`);
+          }
+          const inv = kam.matrixWorldInverse.elements;
+          return {
+            avain: d.avain ?? null,
+            nakyva: olio.visible,
+            ketjuNakyva: ketju,
+            ketju: ketjunNimet,
+            kerros: olio.layers.test(kam.layers),
+            z: Number(v.z.toFixed(4)),
+            x: Number(v.x.toFixed(3)),
+            y: Number(v.y.toFixed(3)),
+            paikka: { x: olio.position.x.toFixed(1), y: olio.position.y.toFixed(1), z: olio.position.z.toFixed(1) },
+            maailma: olio.matrixWorld.elements.slice(12, 15).map((e) => Number(e.toFixed(1))),
+            kameraOrigossa: [0, 5, 10, 15].every((i) => Math.abs(inv[i] - 1) < 1e-9)
+              && [12, 13, 14].every((i) => Math.abs(inv[i]) < 1e-9),
+            kameranVanhempi: Boolean(kam.parent),
+            kameraAuto: kam.matrixWorldAutoUpdate,
+            olioAuto: olio.matrixWorldAutoUpdate,
+            kameraPaikka: { x: kam.position.x.toFixed(1), y: kam.position.y.toFixed(1), z: kam.position.z.toFixed(1) },
+          };
+        } catch (e) {
+          return { virhe: String(e?.message ?? e) };
+        }
+      })(),
+      korkeus: pallo.pointOfView()?.altitude ?? null,
+      versio: document.getElementById('app-version')?.textContent ?? null,
+    }),
+    /** Viimeisimmän piirretyn kehyksen mitat (kamera, pov, ennuste) — sulavuusmittari. */
+    viimeisinKehys: () => viimeisinKehys,
+    /**
+     * Pinnan piste ruudulle ENNUSTETULLA kameralla (Karttasepän
+     * pinnanRuutupiste, js/pallolaatat.js, E4b). Nimiavaruustuonti,
+     * jotta lauta toimii myös ilman apuria: silloin null.
+     */
+    ruutupisteEnnusteesta: (pov, lat, lng) => {
+      const f = laattaApi.pinnanRuutupiste;
+      const m = viimeisinKehys;
+      if (typeof f !== 'function' || !pov || !m) return null;
+      try {
+        // sx, sy ovat normalisoituja (−1…1, y ylös) → kotelon pikselit.
+        const r = f(pov, lat, lng, { fov: m.fov, kuvasuhde: m.kuvasuhde });
+        if (!r || !r.edessa) return null;
+        return { x: ((r.sx + 1) / 2) * m.W, y: ((1 - r.sy) / 2) * m.H };
+      } catch { return null; }
+    },
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
@@ -5172,12 +5788,16 @@ export async function avaaPallolauta(ui) {
      * kenttä, koska asennus odottaa kirjaston laattamoottoria.
      */
     lepokerros: () => pallonLepokerros(pallo),
+    /** Ladontojen laskurit (mittarit): ajetut ja liikkeessä ohitetut. */
+    ladonnat: () => ({ ajettu: ladontojaAjettu, ohitettu: ladontojaOhitettu }),
     /**
      * Vektorikerroksen kahva (js/pallovektorit.js: mittarit, paivita)
      * tai null, jos kerros on pois (`?vektorit=0`) — mittarit
      * savukkeille ja vartijalle kuten lepokerros.
      */
     vektorit: () => vektorit,
+    /** Maakuntavektorien kahva (js/pallomaakunnat.js) tai null (`?maakunnat=1` kytkee). */
+    maakunnat: () => maakunnat,
     /** Siirron kuljettaja (ui.nappulanKuljettaja → js/pallolauta/siirto.js). */
     nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
       ui, lauta, player, ...valinnat,
@@ -5220,6 +5840,7 @@ export async function avaaPallolauta(ui) {
     nayta: () => { kuori.hidden = false; mitoita(); noppaKuoreen(); tahdistaLepo(); },
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
+      kallistus?.pura();
       doc.body.classList.remove('pallolauta-paalla');
       // Kaupungin pop-up on tämän laudan kortti (ankkuri on pallon
       // ruutupiste): purettu lauta ei jätä sitä leijumaan karttaruutuun.
@@ -5243,6 +5864,10 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', pyydaLadonta);
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
+      ennustepurku();
+      glpurku();
+      glSovitin?.pura();
+      glKerros?.pura();
       kameraloki.pura();
       liike.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
@@ -5255,6 +5880,9 @@ export async function avaaPallolauta(ui) {
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
       eleet.pura();
+      ryhmienVahti();
+      puraProfiilinaytto();
+      puraLepopiirto();
       litistaja.pura();
       // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä
       // voimaan, kun lauta puretaan (ks. PANOROINNIN RAJA yllä).
@@ -5265,6 +5893,7 @@ export async function avaaPallolauta(ui) {
       noppaTakaisin();
       lauta.linssit?.pura();
       vektorit?.pura();
+      maakunnat?.pura();
       // Maakorostuksen muisti on moduulitasolla (yksi pallo
       // kerrallaan): seuraava lauta latoo korostuksen alusta.
       nollaaPallonMaakorostus();
@@ -5284,6 +5913,8 @@ export async function avaaPallolauta(ui) {
    * delegoivat tänne; kuori tuntee pallon kameran ja tämän kuoren.
    */
   lauta.linssikartta = luoLinssikartta({ ui, lauta });
+  // Sulavuusmittari tarvitsee valmiin laudan (merkit.datum, kamera).
+  lauta.sulavuus = luoSulavuusmittari(lauta);
   /*
    * LINSSIT PALLOLLE (karttapallo.md luku 10, aalto 1A; omistaja
    * 5.9.2026: *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta

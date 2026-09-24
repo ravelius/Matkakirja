@@ -36,6 +36,30 @@
  *      Ainoa, mikä sen häivyttää, on kaupungin nimi (kiinteä muste):
  *      silloin ikoni jää ja nimiö häipyy (Fable 21.9.2026).
  *
+ *   5. NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (omistaja 23.9.2026 klo 08.47,
+ *      iPhone v2140, "Chambordin linna" ja "Loire" hyppäsivät symbolin
+ *      vasemmalta oikealle kesken vedon: *"Mitkään tekstit eivät saisi
+ *      vaihtaa paikkaa panoroitaessa kun ne ovat ruudulla."*; tarkennus
+ *      klo 09.0x: sama pätee ZOOMIIN — nimi saa vain muuttaa kokoaan,
+ *      poistua ruudulta tai tulla uutena, mutta näkyvä nimiö ei koskaan
+ *      siirry symbolin toiselle puolelle). Sääntö 1 piti kyljen eleen
+ *      AJAN, mutta vedon tauoilla ja zoomin jälkeen ajettu lepo ratkaisi
+ *      sen uudestaan: reunaa lähestyvä lappu vaihtoi kylkeä, ja vastaan
+ *      tullut naapuri saattoi viedä sen. Nyt lukittu lappu, jonka laatikko
+ *      on RUUDULLA (`ruutu`, SOVITTELUN_NAKYVYYSVARA_PX:n varalla),
+ *      kokeilee vain lukittua kylkeään zoomista riippumatta: ruudun reuna
+ *      ei pura lukkoa (nimi saa leikkautua, sama kuin kaupunkien nimillä,
+ *      js/pallolauta/nimet.js), ja jos kylki on tukossa, nimiö häipyy
+ *      paikallaan — se ei loikkaa. Ruudulla häivytetty palaa samaan
+ *      kylkeen (hystereesillä), ei toiselle puolelle. Törmäyksessä
+ *      kumpikaan ei siirry: jonossa ensin levossa lukitut, sitten eleen
+ *      aikana tulleet (`syy: 'ele'`), viimeisenä lukottomat, ja saman
+ *      ikäisistä painoarvon mukaan — myöhempi häivytetään. Ruudulla
+ *      lukossa ei ole ykköstason pakkoasentoa (se veisi tekstin toisen
+ *      päälle). Vapaa puoli haetaan vain uudelle lapulle ja lapulle,
+ *      joka on ollut poissa ruudulta.
+ *      Mittari: tools/savukkeet/savuke-nimiolukko-veto.mjs.
+ *
  * Meren lappu (`meri: true`) pitää rantaviivan esteenä samoin kuin
  * ennen: sen ehdokas ei saa leikata kohdemaan korostuskehää. Aihenosto
  * (`este: true`) sovitellaan viimeisenä kuten ennen.
@@ -56,6 +80,8 @@ import { NOSTOSYM_NIMIO_ASENNOT } from '../fokusnosto-symbolit.js';
 export const SOVITTELUN_KYLJET = Object.freeze([...NOSTOSYM_NIMIO_ASENNOT]);
 /** Häivytetyn lapun paluun marginaali (px): ehdokas on vapaa tällä varalla. */
 export const SOVITTELUN_HYSTEREESI_PX = 6;
+/** Näkyvän lukon ruutuvara (px): näin lähellä ruutua oleva lappu lasketaan ruudulla olevaksi. */
+export const SOVITTELUN_NAKYVYYSVARA_PX = 16;
 /** Prioriteettiluokat (pienempi ensin). */
 /*
  * KAUPUNGIN NIMI VOITTAA YKKÖSTASON (Fable 21.9.2026, päätös avoimeen
@@ -154,6 +180,8 @@ export function sovittelunEhdokkaat(l, lukittu = null, kyljet = SOVITTELUN_KYLJE
  * @param {Array} [p.rantaviiva]  kehän laatikot, joita meren lappu väistää
  * @param {Array} [p.kyljet]
  * @param {number} [p.hystereesi]  häivytetyn paluun marginaali (px)
+ * @param {object|null} [p.ruutu]  ruudun laatikko ilman turva-alueita;
+ *   annettuna näkyvä lukko pitää kylkensä (sääntö 5), null = vanha tapa
  * @returns {{ asennot: Map, piilotettu: number, kylkiVaihtui: number,
  *   siirretty: number, jaljella: number, reunalta: number, kokeiltuja: number }}
  *   `siirretty` on aina 0 (ei vapaata siirtoa); kenttä jää mittareille.
@@ -161,8 +189,19 @@ export function sovittelunEhdokkaat(l, lukittu = null, kyljet = SOVITTELUN_KYLJE
 export function sovitteleLaput({
   laput = [], esteet = [], lukot = null, reuna = null, rantaviiva = [],
   kyljet = SOVITTELUN_KYLJET, hystereesi = SOVITTELUN_HYSTEREESI_PX,
+  ruutu = null, nakyvyysvara = SOVITTELUN_NAKYVYYSVARA_PX,
 } = {}) {
-  const kiinteat = esteet.filter(laatikkoKelpaa);
+  /*
+   * IKONIT OVAT ESTEITÄ (nostot.js TYYPPIMERKIT LÄHIZOOMISSA, Fable
+   * 21.9.2026: *"merkit eivät osu nimiöiden päälle"*). Ikoni ei väistä
+   * ketään — se on kiinni pisteessään — joten nimiön on väistettävä
+   * muiden nostojen ikoneja. Laatikko on lapun oma ilman nimiötä
+   * (`laatikko(kylki, 0, 0, false)`); oma ikoni ei estä omaa nimiötä
+   * (`avain`, ks. estaa).
+   */
+  const ikonit = laput.map((l) => (typeof l.laatikko === 'function'
+    ? { ...l.laatikko(l.kylki, 0, 0, false), avain: l.avain } : null)).filter(laatikkoKelpaa);
+  const kiinteat = [...esteet, ...ikonit].filter(laatikkoKelpaa);
   const ranta = rantaviiva.filter(laatikkoKelpaa);
   const asennot = new Map();
   const sijoitetut = []; // jo asetettujen lappujen laatikot (näkyvät nimiöt)
@@ -172,11 +211,30 @@ export function sovitteleLaput({
   let kokeiltuja = 0;
 
   const rannalla = (r, l) => Boolean(l?.meri) && ranta.some((e) => laatikotLimittyvat(r, e));
+  // Ikoni (este, jolla on avain) ei estä lappua itseään eikä kaupunkia
+  // tai ykköstasoa: ne väistävät vain nimiä, kiinteää mustetta ja
+  // toisiaan (sääntö 4 alla), muut laput väistävät niitä — myös ikonia.
+  const vahva = (l) => Boolean(l?.kaupunki) || l?.taso === 1;
+  const estaa = (rr, l) => kiinteat.some((e) => (!e.avain || (!vahva(l) && e.avain !== l?.avain)) && laatikotLimittyvat(rr, e));
+  /*
+   * LIIKEVARA (omistaja 21.9.2026, työpöytä v2026: nostot tupsahtavat
+   * panoroitaessa jälkikäteen): ruudun ulkopuolella liikevarassa oleva
+   * lappu (`l.reuna`, nostot.js LIIKEVARA) sovitellaan omaa laajempaa
+   * reunaansa vasten — ruudun reuna koskee vain ruudussa olevia.
+   */
+  const reunaLle = (l) => l?.reuna ?? reuna;
+  // Liikevaran lappu ei saa jäädä puoliksi ruutuun: laatikko on joko
+  // kokonaan ruudun sisällä tai kokonaan sen ulkopuolella (ei leikkaudu).
+  const eiPuoliksi = (r, l) => {
+    const sisa = l?.sisareuna ?? reuna;
+    return !l?.reuna || !sisa || laatikkoSisalla(r, sisa) || !laatikotLimittyvat(r, sisa);
+  };
   const vapaa = (r, l, vara = 0) => {
     const rr = laatikkoVaralla(r, vara);
-    return laatikkoSisalla(r, reuna)
+    return laatikkoSisalla(r, reunaLle(l))
+      && eiPuoliksi(r, l)
       && !rannalla(r, l)
-      && !kiinteat.some((e) => laatikotLimittyvat(rr, e))
+      && !estaa(rr, l)
       && !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
   };
 
@@ -185,20 +243,61 @@ export function sovitteleLaput({
    * painoarvon mukaan (taso 1, kaupunki, taso 2, taso 3; lyhyt nimi
    * ensin) ja tasapelissä lähinnä kiinteää mustetta oleva ensin.
    */
+  /*
+   * RUUDUSSA OLEVA VOITTAA TULOKKAAN (LIIKEVARA, Fable 21.9.2026:
+   * *"ruudussa olevien koko ja paikka eivät muutu"*): lappu, jolla on
+   * jo näkyvä lukittu asento, käsitellään ennen lukotonta tulokasta
+   * (samassa este-luokassa), jotta liikevarasta ruutuun tullut nimiö
+   * väistää tai häipyy — ei se, joka pelaajalla oli jo silmissä.
+   * Ykköstason pakkosääntö (alla) pysyy voimassa tulokkaillekin.
+   */
+  const lukittuNakyva = (l) => { const k = lukot?.get(l.avain); return Boolean(k) && k.nimio !== false; };
+  // Levossa lukittu (0) ennen eleen aikana tullutta (1) ennen lukotonta (2) — sääntö 5.
+  const ika = (l) => (!lukittuNakyva(l) ? 2 : (lukot.get(l.avain).syy === 'ele' ? 1 : 0));
   const jono = laput
     .map((l) => ({
       l,
       paino: sovittelunPainoarvo(l),
       d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat),
+      vanha: ika(l),
     }))
     .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este)))
-      || (a.paino - b.paino) || (a.d - b.d))
+      || (a.vanha - b.vanha) || (a.paino - b.paino) || (a.d - b.d))
     .map((rivi) => rivi.l);
+
+  // NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (sääntö 5): ruudulla tai näkyvyysvaran sisällä.
+  const ruudulla = (r) => laatikotLimittyvat(laatikkoVaralla(r, nakyvyysvara), ruutu);
 
   for (const l of jono) {
     const lukko = lukot?.get(l.avain) ?? null;
     const oliPiilossa = Boolean(lukko) && lukko.nimio === false;
     const lahto = lukko?.kylki ?? l.kylki;
+    const lukossa = ruutu && lukko ? l.laatikko(lukko.kylki, 0, 0, true) : null;
+    if (laatikkoKelpaa(lukossa) && ruudulla(lukossa)) {
+      /*
+       * Ruudulla häivytetty palaa VAIN lukittuun kylkeensä ja
+       * hystereesin marginaalilla — muuten nimi häipyisi toiselta
+       * puolelta ja ilmestyisi toiselle, mikä on sama loikka hitaasti.
+       */
+      kokeiltuja += 1;
+      const vara = oliPiilossa ? hystereesi : 0;
+      const rr = laatikkoVaralla(lukossa, vara);
+      // Reunaa ei koeteta: nimi saa leikkautua ruudun laidassa.
+      const musteeton = !rannalla(lukossa, l) && !estaa(rr, l);
+      const laputon = !sijoitetut.some((e) => laatikotLimittyvat(rr, e));
+      if (musteeton && laputon) {
+        sijoitetut.push(lukossa);
+        asennot.set(l.avain, {
+          kylki: lukko.kylki, dx: 0, dy: 0, nimio: true, syy: oliPiilossa ? 'palaa' : 'nakyva',
+        });
+      } else {
+        piilotettu += 1;
+        asennot.set(l.avain, {
+          kylki: lukko.kylki, dx: 0, dy: 0, nimio: false, syy: 'piilossa', este: musteeton ? 'lappu' : 'kiintea',
+        });
+      }
+      continue;
+    }
     // Häivytetty palaa vain marginaalilla (hystereesi); näkyvä pitää
     // asentonsa ilman marginaalia, jottei se ala väistää turhaan.
     const vara = oliPiilossa ? hystereesi : 0;
@@ -223,8 +322,8 @@ export function sovitteleLaput({
       const kelpaa = (e, { sisalla, musteeton }) => {
         const r = l.laatikko(e, 0, 0, true);
         if (!laatikkoKelpaa(r)) return false;
-        if (sisalla && !laatikkoSisalla(r, reuna)) return false;
-        return !musteeton || (!rannalla(r, l) && !kiinteat.some((x) => laatikotLimittyvat(r, x)));
+        if (sisalla && (!laatikkoSisalla(r, reunaLle(l)) || !eiPuoliksi(r, l))) return false;
+        return !musteeton || (!rannalla(r, l) && !estaa(r, l));
       };
       const k = ehdokkaat.find((e) => kelpaa(e, { sisalla: true, musteeton: true })) ?? null;
       const r = k ? l.laatikko(k, 0, 0, true) : null;
@@ -234,7 +333,7 @@ export function sovitteleLaput({
       const vaihtui = valittu.kylki !== lahto;
       if (vaihtui) {
         kylkiVaihtui += 1;
-        if (!laatikkoSisalla(l.laatikko(lahto, 0, 0, true), reuna)) reunalta += 1;
+        if (!laatikkoSisalla(l.laatikko(lahto, 0, 0, true), reunaLle(l))) reunalta += 1;
       }
       sijoitetut.push(valittu.r);
       asennot.set(l.avain, {
@@ -249,8 +348,14 @@ export function sovitteleLaput({
     // Häivytys: nimiö pois, ikoni jää samaan asentoon. Ikoni ei ole
     // este muille — se on pieni ja kiinni omassa pisteessään.
     piilotettu += 1;
+    // Mittareille: mikä esti oman kyljen (reuna, ranta, kiinteä muste vai toinen lappu).
+    const oma = l.laatikko(lahto, 0, 0, true);
+    const este = !laatikkoKelpaa(oma) ? 'laatikko'
+      : !laatikkoSisalla(oma, reunaLle(l)) ? 'reuna'
+        : rannalla(oma, l) ? 'ranta'
+          : kiinteat.some((e) => laatikotLimittyvat(oma, e)) ? 'kiintea' : 'lappu';
     asennot.set(l.avain, {
-      kylki: lahto, dx: 0, dy: 0, nimio: false, syy: 'piilossa',
+      kylki: lahto, dx: 0, dy: 0, nimio: false, syy: 'piilossa', este,
     });
   }
   return {

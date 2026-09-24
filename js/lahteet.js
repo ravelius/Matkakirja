@@ -242,13 +242,13 @@ export const LAHTEET = [
           + '(äänimaisemat ja "Kuuntele kieltä")',
         tekija: 'Äänittäjät kohteittain; jakelu archive.orgin kautta. Nimi ja '
           + 'lisenssi näkyvät äänen selitteessä pelissä.',
-        lisenssi: 'Public domain, CC BY, CC BY-SA ja CC BY-NC kohteittain',
+        lisenssi: 'Public domain, CC BY ja CC BY-SA kohteittain',
       },
       {
         nimi: 'Freesound — äänimaisemat ja tehosteet (mm. nopan heitto, '
           + 'kirjoituskone, potkurikone, sivun kääntö)',
         tekija: 'Äänittäjät kohteittain, mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal',
-        lisenssi: 'CC0, CC BY ja CC BY-NC kohteittain',
+        lisenssi: 'CC0 ja CC BY kohteittain',
       },
       /*
        * Kaksi hakuajoa, jotka valitsevat äänensä koneellisesti ja

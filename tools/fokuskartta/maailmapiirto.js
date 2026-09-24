@@ -585,9 +585,78 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * Rajan aaltoilu tulee samasta kohinasta kuin ennenkin.
      */
     syvyysPortaat = null,
+    /*
+     * SYVYYSKÄYRÄT VIIVOINA (omistajan kysymys 21.9.2026: *"toimisiko
+     * atlaslehden tapainen syvyyskäyräpiirros"*). Lista syvyysrajoja
+     * metreinä kuten portaissa, mutta raja piirretään OHUENA VIIVANA
+     * (isobaatti, Stielerin "Tiefenlinie") eikä sävyhyppynä: meren sävy
+     * on jatkuva ramppi (tai portaat, jos molemmat annetaan), ja
+     * käyrän kohdalle — pikseli, jonka vyöhyke eroaa oikean tai
+     * alapuolisen naapurin vyöhykkeestä — sekoitetaan viivamuste
+     * `syvyysKayraMuste` peitolla `syvyysKayraPeitto`. Aaltoilu tulee
+     * samasta kohinasta kuin vyöhykkeillä, joten käyrä ei ole
+     * korkeusruudukon portaikko.
+     */
+    syvyysKayrat = null,
+    syvyysKayraMuste = [64, 78, 104],
+    syvyysKayraPeitto = 0.55,
+    /*
+     * SYVYYSKOHINA LAUDAN YKSIKÖISSÄ (omistajan havainto 21.9.2026 ilta,
+     * v2000: *"merellä laikukasta möhnää … vilkkuu zoomatessa"*).
+     * Vyöhykerajan aaltoilu laskettiin tason PIKSELEISSÄ, joten z6:n ja
+     * z7:n laikkukuvio oli eri, ja tason vaihdon häive sekoitti kaksi
+     * kuviota. Laudan yksiköissä kohina on sama joka tasolla (karkea
+     * taso vain näytteistää sen harvemmin) — tason vaihto ei muuta
+     * meren kuviota. Skaala on sama kuin z7:n entinen (30 px / 7,2
+     * px/yksikkö), joten z7 näyttää samalta kuin ennen.
+     */
+    syvyysKohinaLaudalla = false,
+    /*
+     * PAPERIN HIENO RAE RUUDULLE, EI LAATTAAN (omistaja 22.9.2026 klo
+     * 15.55, vaihtoehto b).
+     *
+     * Kuitu ja rae on mitoitettu paperipikseleinä (`P`), ja pyramidissa
+     * `paperiS: 1` tekee niistä joka tasolla saman kokoisia — mutta myös
+     * joka tasolla ERI KUVION samassa maantieteellisessä kohdassa. Kun
+     * peli häivyttää tason toiseksi, kaksi korreloimatonta rakeisuutta
+     * sekoittuu ja meri näyttää likaiselta. Mitattu 22.9.2026: saman
+     * maa-alan korkeataajuinen kuvio korreloi z5:n ja z6:n välillä 0,14,
+     * kun meren sävy korreloi 0,96
+     * (docs/raportit/merikuviot-tasoissa-20260922.md).
+     *
+     * Kohinakenttä ei voi olla yhtä aikaa maailmaan sidottu JA ruudulla
+     * samankokoinen. Isoille laikuille valittiin maailma (ne saavat
+     * kasvaa), hienolle rakeelle ruutu: se poistetaan laatasta ja peli
+     * piirtää sen ruutuavaruuden kerroksena, jolloin paperintuntu on
+     * vakio eikä välky lainkaan. Tämä lippu poistaa kuidun ja rakeen
+     * laatasta; laikku jää ja siirtyy laudan yksiköihin.
+     */
+    paperiRaeRuudulla = false,
   } = asetukset;
+  const SYVYYSKOHINA_YKSIKOT = 30 / 7.2;
+  /*
+   * Laikun mitta laudan yksiköissä. 260 px / 7,2 px/yksikkö on sama
+   * viitetaso kuin syvyyskohinalla: z7 näyttää samalta kuin ennen ja
+   * muut tasot sovittautuvat siihen.
+   */
+  const LAIKKU_YKSIKOT = 260 / 7.2;
+  /*
+   * Laikku seuraa samaa kytkintä kuin meren vyöhykekohina: kumpikin on
+   * sama päätös — matalan taajuuden kuvio kuuluu maailmalle, ei
+   * paperille. Pyramidi ajaa `--syvyyskohina lauta`, yksittäinen
+   * koelehti ei anna sitä eikä silloin muutu mikään.
+   */
+  const laikkuLaudalla = syvyysKohinaLaudalla;
   const portaat = Array.isArray(syvyysPortaat) && syvyysPortaat.length
     ? [...syvyysPortaat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const kayrat = Array.isArray(syvyysKayrat) && syvyysKayrat.length
+    ? [...syvyysKayrat].map(Number).filter((v) => v > 0).sort((a, b) => a - b) : null;
+  const kayraVyohyke = (m) => {
+    const d = -m;
+    let i = 0;
+    for (const raja of kayrat) { if (d < raja) return i; i += 1; }
+    return i;
+  };
   const porrasta = (m) => {
     if (!portaat) return m;
     const d = -m;
@@ -1010,6 +1079,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   {
     const img = ctx.createImageData(W, H);
     const d = img.data;
+    // Syvyyskäyrien vyöhykepuskuri: -1 = ei merta, muuten vyöhykkeen indeksi.
+    const vyohykkeet = kayrat ? new Int8Array(W * H).fill(-1) : null;
     // Paperin pohjaväri kolmena lukuna, jottei sitä pilkota silmukassa.
     const pohja = [
       parseInt(PAPERI.slice(1, 3), 16),
@@ -1053,9 +1124,13 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const i = (y * W + x) * 4;
         const gx = x + GX;
         // --- paperi: kuitujuovat, rae ja laikut ---
-        const kuitu = fbm(KOHINA, gx / (52 * P), gy / (7 * P), 3) - 0.5;
-        const rae = KOHINA2(gx / (1.7 * P), gy / (1.7 * P)) - 0.5;
-        const laikka = fbm(KOHINA2, gx / (260 * P), gy / (260 * P), 3) - 0.5;
+        const kuitu = paperiRaeRuudulla ? 0 : fbm(KOHINA, gx / (52 * P), gy / (7 * P), 3) - 0.5;
+        const rae = paperiRaeRuudulla ? 0 : KOHINA2(gx / (1.7 * P), gy / (1.7 * P)) - 0.5;
+        /* Laikku on maailman mitta (ks. paperiRaeRuudulla): sama
+         * maailmankohta saa saman laikun joka tasolla. */
+        const laikka = laikkuLaudalla
+          ? fbm(KOHINA2, (origo.x + gx / px) / LAIKKU_YKSIKOT, (origo.y + gy / px) / LAIKKU_YKSIKOT, 3) - 0.5
+          : fbm(KOHINA2, gx / (260 * P), gy / (260 * P), 3) - 0.5;
         const v = kuitu * 9 + rae * 11 + laikka * 16;
         if (marginaalissa) {
           const s = (1 - reuna) * 15;
@@ -1077,9 +1152,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         if (vesi) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
-          const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
-          const s = lerpSyvyysAsteikolla(syvyysAsteikko,
-            porrasta(m + n * Math.min(150, Math.max(12, -m * 1.25))));
+          const n = (syvyysKohinaLaudalla
+            ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
+            : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
+          const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
+          if (vyohykkeet) vyohykkeet[y * W + x] = kayraVyohyke(mk);
+          const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
           const a = MEREN_PEITTO;
           r = r * (1 - a) + s[0] * a;
           g = g * (1 - a) + s[1] * a;
@@ -1102,6 +1180,25 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         d[i + 1] = Math.max(0, Math.min(255, g));
         d[i + 2] = Math.max(0, Math.min(255, b));
         d[i + 3] = 255;
+      }
+    }
+    if (vyohykkeet) {
+      // Isobaatti: vyöhykkeen raja oikeaan tai alapuoliseen naapuriin.
+      const [mr, mg, mb] = syvyysKayraMuste;
+      const a = syvyysKayraPeitto;
+      for (let y = 0; y < H - 1; y += 1) {
+        for (let x = 0; x < W - 1; x += 1) {
+          const k = y * W + x;
+          const v = vyohykkeet[k];
+          if (v < 0) continue;
+          const o = vyohykkeet[k + 1];
+          const al = vyohykkeet[k + W];
+          if ((o < 0 || o === v) && (al < 0 || al === v)) continue;
+          const i = k * 4;
+          d[i] = d[i] * (1 - a) + mr * a;
+          d[i + 1] = d[i + 1] * (1 - a) + mg * a;
+          d[i + 2] = d[i + 2] * (1 - a) + mb * a;
+        }
       }
     }
     ctx.putImageData(img, 0, 0);
@@ -1599,6 +1696,47 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     teksti('N', cx, cy - r * 1.45, {
       koko: (k.sade ?? 130) * 0.2, vari: 'rgba(74,52,33,0.62)', ank: 'center',
     });
+  }
+
+  /* ============================================ 9. VALTAMERTEN KORISTEET
+   *
+   * (Karttaseppä 21.9.2026 ilta, omistajan toive 20.9.: *"veneitä
+   * useampaan paikkaan"*; Codexin käsin piirretyt laivat ja
+   * kompassiruusut assets/koristeet/meri.) Ne ovat ARKIN KALUSTEITA
+   * kuten merten nimet ja ruusu, ja siksi POHJASSA: pohja on ainoa
+   * kerros, jonka pallo näyttää joka tilassa — yleiskuva lukee pallon
+   * sarjaa (tee-pallolaatat) ja lepo lepokerrosta, ja molemmat alkavat
+   * pohjalaatasta. Nimiötasolla ne katoaisivat yleiskuvasta ja
+   * viivatasolla levosta (jokitaso korvaa sen pallolla).
+   *
+   * Rivi (tyyli.koristeet, generaattorin --koristeet <json>):
+   *   { kuva, lon, lat, kokoPx, kierto?, tasot?: [z, …] }
+   * KOKO ON LAATAN PIKSELEITÄ EIKÄ KARTAN MITTAA: pallo valitsee tason
+   * laitepikseleistä (retina-työpöytä lukee maailmankuvaan z4–z5,
+   * puhelin z1–z2), joten vakio laattapikselikoko on vakio ruutukoko
+   * kaikilla laitteilla — sama syy kuin nostonimiöiden mitoituksella.
+   * `tasot` harventaa uloimmilta tasoilta (z1 vain isot laivat ja
+   * ruusut); ilman kenttää rivi piirretään tasoilla z1–z6. Kuvat tulevat
+   * esiladattuina (asetukset.kuvat: polku → Image) kuten nimiötason
+   * kuvakoristeet. Karsinta (generoi umpimeriSavy kohta 5) säästää
+   * laatat, joihin koriste osuu.
+   */
+  const koristeTaso = Math.round(Math.log2(px / KORISTEEN_TASO0_PX));
+  for (const k of tyyli.koristeet ?? []) {
+    const tasot = Array.isArray(k.tasot) ? k.tasot : KORISTEEN_OLETUSTASOT;
+    if (!tasot.includes(koristeTaso) || !(k.kokoPx > 0)) continue;
+    const kuva = asetukset.kuvat?.[k.kuva] ?? asetukset.kuvat?.get?.(k.kuva);
+    if (!kuva) continue;
+    const w = k.kokoPx;
+    const h = w * (k.suhde > 0 ? k.suhde : 1);
+    const cx = kuvaX(k.lon);
+    const cy = kuvaY(k.lat);
+    ctx.save();
+    ctx.translate(cx, cy);
+    if (k.kierto) ctx.rotate((Number(k.kierto) || 0) * Math.PI / 180);
+    if (laivakuva(k)) piirraLaivaVedessa(ctx, kuva, w, h);
+    else ctx.drawImage(kuva, -w / 2, -h / 2, w, h);
+    ctx.restore();
   }
 
   /* =========================================== 8b. PYSYVÄT VIIVAT
@@ -4148,14 +4286,41 @@ export const NIMION_KOOT = Object.freeze({
   meri: { 4: 14, 5: 18, 6: 24, 7: 34, 8: 46 },
   maakunta: { 5: 13, 6: 17, 7: 24, 8: 32 },
   'maakunta-pieni': { 7: 18, 8: 26 },
+  /*
+   * NYKYALUEET (maakuntavedos 2, omistaja 21.9.2026): nykyiset
+   * hallintoalueet (FRA regionit, DEU osavaltiot) näkyvät vasta z8:sta,
+   * z7:llä vain jos mahtuvat (generaattori pudottaa ilman vapaata
+   * paikkaa). Harvennetut pienkapiteelit: ensimmäinen kirjain täydessä
+   * koossa, loput NIMION_PIENKAPITEELI-osuudessa. Muste on "toinen muste"
+   * — vaimea ruosteenpunainen atlasperinteen tapaan tai vaaleampi sepia
+   * (rivin `muste`: 'ruoste' | 'sepia'); hierarkia: nostot ja kaupungit
+   * tummin, kulttuurinimet keskisävy, nykyalueet vaalein.
+   */
+  nykyalue: { 7: 16, 8: 22 },
+  'nykyalue-pieni': { 8: 18 },
 });
+export const NIMION_PIENKAPITEELI = 0.78;
 /** Harvennus em-yksikköinä (kirjainkorkeudesta). */
 export const NIMION_HARVENNUS_EM = 0.32;
 export const NIMION_FONTTI = '"Liberation Serif", "FreeSerif", serif';
 export const NIMION_VARIT = Object.freeze({
   meri: 'rgba(58, 66, 84, 0.62)',
   maakunta: 'rgba(70, 48, 29, 0.58)',
+  'nykyalue-ruoste': 'rgba(146, 66, 38, 0.60)',
+  'nykyalue-sepia': 'rgba(70, 48, 29, 0.36)',
+  // Vedos 3 (omistaja 21.9.: ruoste ei erottunut sepiasta): syvempi sävy
+  // ja lähes täysi peitto; pienkapiteelit ovat ohuita, joten 0,60 jäi
+  // pergamentilla ruskeaksi.
+  'nykyalue-ruoste-vahva': 'rgba(128, 44, 20, 0.95)',
 });
+/** Aluerajan muste nimien mukaan (rivin `muste`). */
+export const RAJAN_VARIT = Object.freeze({
+  ruoste: 'rgba(146, 66, 38, 0.42)',
+  sepia: 'rgba(70, 48, 29, 0.45)',
+  'ruoste-vahva': 'rgba(128, 44, 20, 0.75)',
+});
+/** Nykyalueen/rajan muste rivistä: 'ruoste' tai 'sepia' (oletus). */
+export const nimionMuste = (nimio) => (['ruoste', 'ruoste-vahva'].includes(nimio?.muste) ? nimio.muste : 'sepia');
 
 /**
  * Yhden nimiön ladonta tasolla z.
@@ -4167,7 +4332,42 @@ export const NIMION_VARIT = Object.freeze({
  * @param {Function} mittaa (teksti, fontti) → leveys pikseleinä (ilman harvennusta)
  * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
  */
+/*
+ * ALUERAJAT (maakuntavedos 21.9.2026, Fable): luokka 'raja' on joukko
+ * polylineja `viivat: [[[lon, lat], …], …]` — nykyisten hallintoalueiden
+ * (FRA regionit, DEU osavaltiot; Natural Earth admin-1) sisäiset rajat.
+ * Ohut, himmeä yhtenäinen viiva rajamusteen sävyssä, ei tekstiä, ei
+ * väistöä eikä estettä muille nimiöille; vasta z6:sta.
+ */
+export const RAJAN_LEVEYDET = Object.freeze({ 6: 1.0, 7: 1.5, 8: 2.2 });
+export const RAJAN_VARI = 'rgba(70, 48, 29, 0.45)';
+
+/** Pienkapiteelien osat: [{ teksti, kerroin }] — sanan alkukirjain 1, muut NIMION_PIENKAPITEELI. */
+export function pienkapiteelienOsat(teksti) {
+  const osat = [];
+  let sananAlku = true;
+  for (const m of [...String(teksti).toUpperCase()]) {
+    const kerroin = sananAlku && /\p{L}/u.test(m) ? 1 : NIMION_PIENKAPITEELI;
+    osat.push({ teksti: m, kerroin });
+    sananAlku = /[\s\-'’]/.test(m);
+  }
+  return osat;
+}
+
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  if (!nimioTasolla(nimio, z)) return null;
+  if (nimio.luokka === 'raja') {
+    const leveys = RAJAN_LEVEYDET[z];
+    const viivat = Array.isArray(nimio.viivat) ? nimio.viivat.filter((v) => Array.isArray(v) && v.length > 1) : [];
+    if (!leveys || !viivat.length) return null;
+    const polut = viivat.map((v) => v.map((p) => [kaava.lautaX(p[0]) * px, kaava.lautaY(p[1]) * px]));
+    let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+    for (const polku of polut) for (const [x, y] of polku) { if (x < x0) x0 = x; if (y < y0) y0 = y; if (x > x1) x1 = x; if (y > y1) y1 = y; }
+    return {
+      x: (x0 + x1) / 2, y: (y0 + y1) / 2, korkeus: leveys, leveys: 0, kulma: 0, luokka: 'raja',
+      polut, laatikko: [x0 - leveys, y0 - leveys, x1 + leveys, y1 + leveys],
+    };
+  }
   // Reittiviiva (esim. Horation reitti 1873): pisteet [lon, lat], teksti
   // reitin keskikohdan viereen; laatikko koko polun ympäri.
   if (nimio.luokka === 'reitti') {
@@ -4207,14 +4407,19 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
       laatikko: [x - puoli, y - puoli, x + puoli, y + puoli],
     };
   }
+  const nykyalue = nimio.luokka === 'nykyalue';
   const luokka = nimio.luokka === 'meri' ? 'meri'
-    : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
+    : nykyalue ? (nimio.koko === 'pieni' ? 'nykyalue-pieni' : 'nykyalue')
+      : (nimio.koko === 'pieni' ? 'maakunta-pieni' : 'maakunta');
   const korkeus = NIMION_KOOT[luokka]?.[z];
   if (!korkeus) return null;
   const teksti = String(nimio.teksti ?? '').toUpperCase();
   if (!teksti) return null;
   const merkit = [...teksti];
-  const leveys = mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`)
+  // Pienkapiteelit: sanan ensimmäinen kirjain täydessä koossa, loput pienempinä.
+  const leveys = (nykyalue
+    ? pienkapiteelienOsat(teksti).reduce((s, o) => s + mittaa(o.teksti, `${korkeus * o.kerroin}px ${NIMION_FONTTI}`), 0)
+    : mittaa(teksti, `${korkeus}px ${NIMION_FONTTI}`))
     + NIMION_HARVENNUS_EM * korkeus * (merkit.length - 1);
   const kulma = Number(nimio.kulma) || 0;
   // Laatikko kulman kanssa: kierretyn suorakaiteen rajat; merellä
@@ -4255,7 +4460,20 @@ export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
  * drawImage keskipisteen ympäri kierrettynä. Metadataan kirjataan
  * luokka 'kuva' ja tiedosto, jotta Pelikoodari tunnistaa koristeen.
  */
+/** Pohjan koristeet (piirraMaailma osio 9): tason 0 tarkkuus px/lautayksikkö ja oletustasot. */
+export const KORISTEEN_TASO0_PX = 675 / 12000;
+export const KORISTEEN_OLETUSTASOT = Object.freeze([1, 2, 3, 4, 5, 6]);
 export const KUVAN_KOKOKERROIN = Object.freeze({ 4: 0.3, 5: 0.42, 6: 0.65, 7: 1, 8: 1.45 });
+/*
+ * NIMIÖN OMAT TASOT (Karttaseppä 21.9.2026 ilta): rivin kenttä
+ * `tasot: [z, …]` rajaa, millä pyramidin tasoilla rivi ladotaan. Ilman
+ * kenttää rivi ladotaan tasoilta z ≥ 4 kuten tähän asti (nimiötaso
+ * alkoi z4:stä). Valtamerten koristeet eivät kulje tätä kautta vaan
+ * pohjan kalusteina (piirraMaailma osio 9, tyyli.koristeet).
+ */
+export function nimioTasolla(nimio, z) {
+  return Array.isArray(nimio?.tasot) ? nimio.tasot.includes(z) : z >= 4;
+}
 
 export const KORISTEEN_KOOT = Object.freeze({
   kompassi: { 4: 28, 5: 40, 6: 56, 7: 80, 8: 110 },
@@ -4466,7 +4684,22 @@ export function piirraNimiotaso(canvas, asetukset) {
     if (projektio?.leveys) siirrot.push(-projektio.leveys * px, projektio.leveys * px);
     for (const d of siirrot) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
-      const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta'
+        : nimio.luokka === 'nykyalue' ? `nykyalue-${nimionMuste(nimio)}` : 'meri'];
+      if (nimio.luokka === 'raja') {
+        ctx.save();
+        ctx.translate(d - GX, -GY);
+        ctx.strokeStyle = RAJAN_VARIT[nimionMuste(nimio)] ?? RAJAN_VARI;
+        ctx.lineWidth = l.korkeus;
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        for (const polku of l.polut) polku.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+        ctx.stroke();
+        ctx.restore();
+        piirretty += 1;
+        continue;
+      }
       if (nimio.luokka === 'reitti') {
         // Katkoviiva ohuella musteella + pieni teksti keskijanan viereen.
         ctx.save();
@@ -4525,11 +4758,19 @@ export function piirraNimiotaso(canvas, asetukset) {
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'left';
       ctx.fillStyle = vari;
-      const merkit = [...String(nimio.teksti).toUpperCase()];
       let t = -l.leveys / 2;
-      for (const m of merkit) {
-        ctx.fillText(m, t, 0);
-        t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+      if (nimio.luokka === 'nykyalue') {
+        for (const o of pienkapiteelienOsat(nimio.teksti)) {
+          ctx.font = `${l.korkeus * o.kerroin}px ${NIMION_FONTTI}`;
+          ctx.fillText(o.teksti, t, 0);
+          t += ctx.measureText(o.teksti).width + NIMION_HARVENNUS_EM * l.korkeus;
+        }
+      } else {
+        const merkit = [...String(nimio.teksti).toUpperCase()];
+        for (const m of merkit) {
+          ctx.fillText(m, t, 0);
+          t += ctx.measureText(m).width + NIMION_HARVENNUS_EM * l.korkeus;
+        }
       }
       // Meren nimen alla kevyt aaltomerkki (omistaja 20.9.2026).
       if (nimio.luokka === 'meri') piirraAaltomerkki(ctx, 0, l.korkeus * 0.95, l.leveys, vari);

@@ -137,7 +137,7 @@ test('valittavat kaupungit ovat laudan merkkejä (kohde-laji), eivät svg-renkai
     'kohdevalinta antaa aloituskaupungit merkkikerrokselle (osa `peli`)');
   const merkit = lue('../js/pallolauta/merkit.js');
   assert.match(merkit, /else if \(d\.laji === 'kohde'\) el = kohdeElementti\(d\);/);
-  assert.match(merkit, /if \(osa === 'peli'\) kohteet = lista\.filter\(\(d\) => d\.laji === 'kohde'\);/);
+  assert.match(merkit, /if \(osa === 'peli'\) kohteet = annetut\.filter\(\(d\) => d\.laji === 'kohde'\);/);
 });
 
 test('pallon lauta on aina maailmankartta — myös aloitusnäytön aikana', () => {

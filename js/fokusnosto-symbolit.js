@@ -574,6 +574,35 @@ function nostosymKyna(tera) {
  * (js/pallolauta/aihemerkit.js AIHEMERKIN_R).
  */
 export const NOSTOSYM_PISTE_R = 3.4;
+/** Hehkupisteen häiveen säde pisteen säteinä, häiveen alfa laidalla ja sisuksen vaalennus (0…1). */
+export const NOSTOSYM_HEHKUN_SADE = 2.1;
+export const NOSTOSYM_HEHKUN_ALFA = 0.45;
+export const NOSTOSYM_HEHKUN_SISUS = 0.42;
+/** Sykähdys levossa: koon vaihtelu (±) ja jakso (ms) — runko ja CSS2D lukevat samat luvut. */
+export const NOSTOSYM_SYKKEEN_OSUUS = 0.07;
+export const NOSTOSYM_SYKKEEN_JAKSO_MS = 2400;
+/** Väri (#rrggbb, rgb() tai rgba()) annetulla alfalla; muu merkkijono palautuu sellaisenaan. */
+export function nostosymVariAlfalla(vari, alfa) {
+  const rgb = nostosymRgb(vari);
+  return rgb ? `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${alfa})` : vari;
+}
+/** Väri vaalennettuna valkoista kohti osuudella t (0 = sama, 1 = valkoinen). */
+export function nostosymVaalenna(vari, t) {
+  const rgb = nostosymRgb(vari);
+  if (!rgb) return vari;
+  const v = rgb.map((c) => Math.round(c + (255 - c) * t));
+  return `rgb(${v[0]},${v[1]},${v[2]})`;
+}
+function nostosymRgb(vari) {
+  const s = String(vari ?? '').trim();
+  const hex = /^#([0-9a-f]{6})$/iu.exec(s);
+  if (hex) return [0, 2, 4].map((i) => parseInt(hex[1].slice(i, i + 2), 16));
+  const lyhyt = /^#([0-9a-f]{3})$/iu.exec(s);
+  if (lyhyt) return [...lyhyt[1]].map((c) => parseInt(c + c, 16));
+  const rgb = /^rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)/u.exec(s);
+  if (rgb) return [rgb[1], rgb[2], rgb[3]].map(Number);
+  return null;
+}
 
 /**
  * PISTEMERKIN LUONNOS — sama muoto jokaiselle pisteytetylle
@@ -846,13 +875,18 @@ export function nostosymMiniMerkki(symboli, laji) {
  * rasteria varten (nostosymMustelajit), joten kumpikin piirtotapa
  * jäljittää yhtä lähdettä.
  */
-export function piirraNostosymMini(g, symboli, laji) {
+export function piirraNostosymMini(g, symboli, laji, { harmaa = false } = {}) {
   const merkki = nostosymMiniMerkki(symboli, laji);
   // Kiekko ensin ja mustereuna sen päälle: reunan on peitettävä värin
   // laita, tai kiekosta jää musteen ulkopuolelle värillinen kehä.
+  //
+  // `harmaa` on KARTAN piste (ks. KARTAN PISTE ON HARMAA): kartalla
+  // kiekko on neutraali ja värin kertoo vivun sytyttämä valotäplä.
+  // Selitevalikon oma merkki (js/karttaselite.js) on sen sijaan
+  // VÄRIAVAIN, joten se pitää kategoriavärinsä.
   if (merkki.taytto) {
     el('path', {
-      class: `nostosym-mini-taytto nostosym-mini-${merkki.vari}`,
+      class: `nostosym-mini-taytto nostosym-mini-${harmaa ? 'harmaa' : merkki.vari}`,
       d: merkki.taytto,
     }, g);
   }
@@ -880,10 +914,33 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
      * kategoriaväri istuu pergamentille samalla painolla kuin merkin
      * oma muste. Alfa asetetaan ja palautetaan tässä, koska kutsujalla
      * voi olla oma peittonsa (haalistunut merkki).
+     *
+     * HEHKUPISTE (omistaja 21.9.2026 klo 22.00: *"eloton yksi
+     * väripallo, saisi olla hehkuvan näköinen"*; Fablen erä): kiekon
+     * ympärille säteittäinen häive aiheen omalla musteella
+     * (NOSTOSYM_HEHKUN_SADE × piste, alfa NOSTOSYM_HEHKUN_ALFA → 0) ja
+     * kiekon sisus vaaleampi kuin laita (NOSTOSYM_HEHKUN_SISUS). Hidas
+     * sykähdys levossa on rungon uniform (js/pallonimiot-gl.js `syke`)
+     * ja CSS2D:ssä keyframe (css/styles.css .nostosym-rasteri-piste) —
+     * rasteri itse on paikallaan. Väri pysyy aiheen musteella.
      */
     const alfa = ctx.globalAlpha;
+    // Kartan kiekko on harmaa (ks. KARTAN PISTE ON HARMAA); hehkukin
+    // on siis neutraali, ja aiheen väri tulee vivun valotäplästä.
+    const vari = muste.harmaa ?? NOSTOSYM_PISTE_HARMAA;
+    const r = NOSTOSYM_PISTE_R;
+    const hehku = ctx.createRadialGradient(0, 0, r * 0.7, 0, 0, r * NOSTOSYM_HEHKUN_SADE);
+    hehku.addColorStop(0, nostosymVariAlfalla(vari, NOSTOSYM_HEHKUN_ALFA));
+    hehku.addColorStop(1, nostosymVariAlfalla(vari, 0));
+    ctx.fillStyle = hehku;
+    ctx.beginPath();
+    ctx.arc(0, 0, r * NOSTOSYM_HEHKUN_SADE, 0, Math.PI * 2);
+    ctx.fill();
     ctx.globalAlpha = alfa * (muste.pisteHimmeys ?? NOSTOSYM_PISTE_HIMMEYS);
-    ctx.fillStyle = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    const sisus = ctx.createRadialGradient(-r * 0.25, -r * 0.25, 0, 0, 0, r);
+    sisus.addColorStop(0, nostosymVaalenna(vari, NOSTOSYM_HEHKUN_SISUS));
+    sisus.addColorStop(1, vari);
+    ctx.fillStyle = sisus;
     ctx.fill(new Path2D(merkki.taytto));
     ctx.globalAlpha = alfa;
   }
@@ -1640,10 +1697,60 @@ export const NOSTOSYM_NIMIO_KOKO = 11;
  * merkki pysähtyy TÄSMÄLLEEN samaan pikselimäärään — kukin omalla
  * zoomillaan.
  */
-/** Nimiön suurin kirjasinkoko ruudulla (px), ks. yllä. */
+/** Nimiön suurin kirjasinkoko ruudulla (px) saapumisnäkymän puolella, ks. yllä. */
 export const NOSTOSYM_NIMIO_KATTO_PX = 16;
-/** Merkin mitan katto: nimiö ei kasva yli NOSTOSYM_NIMIO_KATTO_PX:n. */
+/** Merkin mitan katto saapumisnäkymän puolella: nimiö ei kasva yli NOSTOSYM_NIMIO_KATTO_PX:n. */
 export const NOSTOSYM_MITAN_KATTO = NOSTOSYM_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KATTO NOUSEE LÄHIZOOMISSA (omistaja 21.9.2026, iPhone v2021, Lorraine
+ * z9 ja Ranska z7: *"nostonimet pienenevät liikaa lähelle zoomattaessa
+ * — z9:llä ruutu lähes tyhjä ja nimet 12–13 px, tilaa isommalle on"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Katto on 16 px, kunnes kamera on yhden zoomiportaan saapumisnäkymän
+ * sisäpuolella (kartan kerroin 2), ja nousee siitä log2-asteikolla
+ * tasaisesti 22 px:iin kertoimessa 4 (kaksi porrasta saapumisesta);
+ * syvemmällä se pysyy 22 px:ssä. Puhelimen syvin sallittu zoomi on
+ * mitattu kertoimeen n. 4,3 (Camargue, maanZoomiraja), joten 22 px on
+ * se, mitä pelaaja lähimpänä näkee; kerroin 2,83 antaa 19 px. Käyrä on
+ * kameran korkeuden funktio EIKÄ riipu ladonnasta, tilasta tai muista
+ * nimistä (Fable 21.9.2026): sovittelu saa piilottaa tai siirtää, ei
+ * skaalata. Katto asetetaan ladonnassa (js/pallolauta/nostot.js
+ * paivita → nostosymAsetaNimionKatto) samasta kertoimesta, jolla
+ * merkkien mitta lasketaan; kehysten välissä E2:n kuori lukee saman
+ * katon `--nimio-b`:stä.
+ */
+/** Nimiön suurin kirjasinkoko lähizoomissa (px). */
+export const NOSTOSYM_NIMIO_LAHIKATTO_PX = 22;
+/** Kartan kerroin, josta katto alkaa nousta (yksi zoomiporras saapumisesta). */
+export const NOSTOSYM_KATON_NOUSU_ALKAA = 2;
+/** Kartan kerroin, jossa katto on täydessä lähizoomin mitassaan. */
+export const NOSTOSYM_KATON_NOUSU_PAATTYY = 4;
+/**
+ * Nimiön kirjasinkoon katto ruudulla (px) kartan kertoimella. Puhdas
+ * funktio: savukkeet ja testit lukevat odotuksensa tästä.
+ *
+ * @param {number} kerroin kameran mittakaava / saapumisnäkymän mittakaava
+ */
+export function nostosymNimionKattoPx(kerroin) {
+  const k = Number.isFinite(kerroin) && kerroin > 0 ? kerroin : 1;
+  const alku = Math.log2(NOSTOSYM_KATON_NOUSU_ALKAA);
+  const loppu = Math.log2(NOSTOSYM_KATON_NOUSU_PAATTYY);
+  const t = Math.min(1, Math.max(0, (Math.log2(k) - alku) / (loppu - alku)));
+  return NOSTOSYM_NIMIO_KATTO_PX + t * (NOSTOSYM_NIMIO_LAHIKATTO_PX - NOSTOSYM_NIMIO_KATTO_PX);
+}
+/** Voimassa oleva katto (px); ladonta asettaa sen kameran kertoimesta. */
+let nimionKattoPxNyt = NOSTOSYM_NIMIO_KATTO_PX;
+/** Asettaa voimassa olevan katon kartan kertoimesta; palauttaa katon (px). */
+export function nostosymAsetaNimionKatto(kerroin) {
+  nimionKattoPxNyt = nostosymNimionKattoPx(kerroin);
+  return nimionKattoPxNyt;
+}
+/** Voimassa oleva nimiön katto ruudulla (px). */
+export function nostosymNimionKattoPxNyt() {
+  return nimionKattoPxNyt;
+}
 /*
  * KATON VASTAKOE YHDELLÄ LIPULLA: `?nimiokatto=0` sammuttaa katon,
  * jolloin merkit kasvavat kuten ennen PAATOKSET 31:tä. Savuke mittaa
@@ -1676,10 +1783,40 @@ function nimiokattoKaytossa() {
  * kaavallaan ja päästää sen tästä läpi.
  *
  * @param {number} mitta merkin mitta (1 = nimiö NOSTOSYM_NIMIO_KOKO px)
- * @returns {number} sama mitta, enintään NOSTOSYM_MITAN_KATTO
+ * @returns {number} sama mitta, enintään voimassa oleva katto (nostosymMitanKatto)
  */
 export function nostosymKatettuMitta(mitta) {
-  return nimiokattoKaytossa() ? Math.min(NOSTOSYM_MITAN_KATTO, mitta) : mitta;
+  return nimiokattoKaytossa() ? Math.min(nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO, mitta) : mitta;
+}
+/** Voimassa oleva mitan katto (nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO), tai Infinity kun katto on pois. */
+export function nostosymMitanKatto() {
+  return nimiokattoKaytossa() ? nimionKattoPxNyt / NOSTOSYM_NIMIO_KOKO : Infinity;
+}
+
+/**
+ * KUOREN KATON MUUTTUJAT (js/pallolauta/nimet.js KOKO LIIKUU JOKA
+ * KEHYKSESSÄ, erä E2): merkin kuori skaalautuu kotelon `--nimiokerroin`-
+ * muuttujalla, ja katto pätee kehys kerrallaan: a = raaka / katettu,
+ * b = katto / katettu → css laskee kuoren skaalaksi min(kerroin · a, b)
+ * eli näytetyn mitan min(raaka · kerroin, katto). Ilman kattoa
+ * muuttujat poistetaan. Asuu täällä (ei pallolauta-kansiossa), koska
+ * turisti-infon kyltti js/kaupunkinosto.js on yhden tiedoston version
+ * moduuli eikä saa tuoda pallolaudasta (tools/build-standalone.mjs).
+ *
+ * @param {HTMLElement} el merkin kuori (div)
+ * @param {{mitta: number, mittaRaaka?: number, katto?: number}} d
+ */
+export function nostosymAsetaKuorenKatto(el, { mitta, mittaRaaka = null, katto = Infinity }) {
+  const tyyli = el?.style;
+  if (!tyyli) return;
+  const raaka = mittaRaaka > 0 ? mittaRaaka : mitta;
+  if (!(mitta > 0) || !(katto > 0) || !Number.isFinite(katto)) {
+    tyyli.removeProperty('--nimio-a');
+    tyyli.removeProperty('--nimio-b');
+    return;
+  }
+  tyyli.setProperty('--nimio-a', (raaka / mitta).toFixed(4));
+  tyyli.setProperty('--nimio-b', (katto / mitta).toFixed(4));
 }
 
 /**
@@ -2057,6 +2194,30 @@ export const NOSTOSYM_PISTE_VARIT = {
  */
 export const NOSTOSYM_PISTE_HIMMEYS = 0.86;
 
+/*
+ * KARTAN PISTE ON HARMAA, VÄRI TULEE VIVUSTA (omistaja 22.9.2026,
+ * sanatarkasti: *"...tai sitten muuttaa piste pelkäksi harmaaksi
+ * pisteeksi jossa itsessään ei ole väriä vaan väri tulisi vasta kun
+ * nostoväri on laitettu vivusta päälle."*).
+ *
+ * Yksitoista kategoriaa jakoi saman kiekon ja erosi vain väristä, joten
+ * kartta oli täynnä värejä, joista yksikään ei ollut vastaus mihinkään
+ * kysymykseen. Nyt kiekko on kartalla neutraali — ja kun karttaselitteen
+ * vipu sytyttää aiheen, sen merkkien alle piirtyy aiheen VÄRINEN
+ * valotäplä (js/pallolauta/nostot.js paivitaValot, js/karttavalot.js).
+ * Väri on siis vastaus vipuun eikä merkin pysyvä ominaisuus.
+ *
+ * VÄRIT EIVÄT KADONNEET: NOSTOSYM_PISTE_VARIT elää yhä selitevalikon
+ * väripallossa ja valotäplässä (karttavaloVari) — vain kartan oma
+ * kiekko on harmaa.
+ *
+ * POLTETTU LAATTA ON VIELÄ VÄRILLINEN: Karttasepän nostolaatoissa on
+ * kiekon väri poltettuna, joten lähizoomissa näkyy toistaiseksi vanha
+ * värillinen piste, kunnes laatat poltetaan uudelleen. Elävä kerros ja
+ * tämä vakio ovat sen poltonkin lähde.
+ */
+export const NOSTOSYM_PISTE_HARMAA = '#6f6a61';
+
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
 
@@ -2165,6 +2326,7 @@ function nostosymMustelajit(svg) {
     return NOSTOSYM_MUSTE ?? {
       ...NOSTOSYM_MUSTE_VARA,
       varit: NOSTOSYM_PISTE_VARIT,
+      harmaa: NOSTOSYM_PISTE_HARMAA,
       pisteHimmeys: NOSTOSYM_PISTE_HIMMEYS,
     };
   }
@@ -2194,6 +2356,8 @@ function nostosymMustelajit(svg) {
   NOSTOSYM_MUSTE = {
     vahva: lue('nostosym-mini', NOSTOSYM_MUSTE_VARA.vahva),
     ohut: lue('nostosym-mini-ohut', NOSTOSYM_MUSTE_VARA.ohut),
+    // Kartan kiekon harmaa samasta tyylitiedostosta kuin muutkin sävyt.
+    harmaa: lue('nostosym-mini-taytto nostosym-mini-harmaa', NOSTOSYM_PISTE_HARMAA),
     varit,
     pisteHimmeys: Number.isFinite(peitto) ? peitto : NOSTOSYM_PISTE_HIMMEYS,
   };
@@ -2362,16 +2526,24 @@ const NOSTOSYM_NIMIO_ALAOSA = 0.25;
 export const NOSTOSYM_KUVAMERKIN_KERROIN = 1.6;
 export const NOSTOSYM_TASO1_MUSTE = 'rgba(46,30,14,0.98)';
 /*
- * KUVAMERKIN HALO (Fable 21.9.2026): tumman reliefin päällä (Mont Blanc
- * Alppien rinteellä) vaalea kuvamerkki hukkui taustaan. Sama
- * paperinvaalea sädekehä kuin Karttasepän poltetuilla nimiöillä
- * (js/pallolaatat.js NIMION_HALO): varjo kuvan omasta muodosta, neljä
- * vetoa, ja päälle merkki terävänä. Säde on merkin yksiköissä ja
- * kerrotaan portaalla rasterissa.
+ * KUVAMERKIN HALO POISTETTU (omistaja 22.9.2026, kuva Carcassonnesta,
+ * sanatarkasti: *"Nostoihin jää valkoinen reunus, joka kyllä poistuu,
+ * kun zoomaa tarpeeksi lähelle, mutta maailma tilan ollessa päällä
+ * valkoinen reunus jää. Se saisi olla aina poissa."*).
+ *
+ * Halo oli paperinvaalea sädekehä (rgb(252,249,242), neljä vetoa)
+ * kuvamerkin ympärillä — Fablen lisäys 21.9.2026 siihen, että vaalea
+ * kuvamerkki hukkui tumman reliefin päälle (Mont Blanc Alppien
+ * rinteellä). Lähizoomissa merkki tulee Karttasepän poltetusta
+ * laatasta, jossa haloa ei ole, joten reunus katosi zoomatessa ja jäi
+ * näkyviin siellä, missä elävä rasteri piirtää merkin — muun muassa
+ * maailmanäkymässä. Kahdesta eri ulkoasusta samalle merkille omistaja
+ * valitsi sen, jossa reunusta ei ole.
+ *
+ * JOS LUETTAVUUS PETTÄÄ tumman reliefin päällä, ratkaisu on merkin oma
+ * muste (tummempi veto tai ohut musteääriviiva), ei vaalea kehä: se ei
+ * saa palata, koska poltettu laatta ei voi sitä toistaa.
  */
-export const NOSTOSYM_KUVAMERKIN_HALO = 'rgb(252, 249, 242)';
-export const NOSTOSYM_KUVAMERKIN_HALO_SADE = 1.2;
-export const NOSTOSYM_KUVAMERKIN_HALO_VETOJA = 4;
 /** Tyyppi (kategoria tai luonnon laji) → kuvamerkin tiedosto. */
 export const NOSTOSYM_KUVAMERKIT = {
   vuori: 'merkki-vuori', saari: 'merkki-saari', jarvi: 'merkki-jarvi', joki: 'merkki-joki',
@@ -2582,16 +2754,10 @@ async function nostosymRasteroi(tunnus, nimio, svg, porras, nimionLaji, puoli = 
     // Pelkkä nimiö samaan laatikkoon (erillinen nimiökuva, ks.
     // piirraNostosymKartalle `erillinenNimio`): ikonin ruutu jää tyhjäksi.
   } else if (merkkikuva) {
-    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon —
-    // ensin paperinvaalea halo (ks. KUVAMERKIN HALO), sitten merkki.
+    // Kuvamerkki koko ruutuun (2 × sade), keskitettynä origoon. Ei
+    // vaaleaa kehää (ks. KUVAMERKIN HALO POISTETTU): elävän rasterin on
+    // näytettävä samalta kuin poltetun laatan.
     const koko = 2 * sade * porras;
-    ctx.save();
-    ctx.shadowColor = NOSTOSYM_KUVAMERKIN_HALO;
-    ctx.shadowBlur = NOSTOSYM_KUVAMERKIN_HALO_SADE * porras;
-    for (let veto = 0; veto < NOSTOSYM_KUVAMERKIN_HALO_VETOJA; veto += 1) {
-      ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
-    }
-    ctx.restore();
     ctx.drawImage(merkkikuva, -koko / 2, -koko / 2, koko, koko);
   } else {
     piirraNostosymMiniCanvas(ctx, tunnus, muste, porras);
@@ -2803,7 +2969,7 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
   const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
   const elavana = () => {
     g.replaceChildren();
-    piirraNostosymMini(g, symboli, laji);
+    piirraNostosymMini(g, symboli, laji, { harmaa: true });
     // Teksti on jo ladottu mittaansa yllä; toinen lyhennys katkaisisi
     // yhdistetyn merkin pilkkulistan uudestaan (Infinity = älä koske).
     if (teksti) piirraNostosymNimio(g, teksti, laji, puoli, Infinity);
@@ -2819,6 +2985,9 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
    * kortti kertoo) ja se nimi, joka kuvaan ladottiin.
    */
   kuva.dataset.symboli = NOSTOSYM_PIIRTAJAT[symboli] ? symboli : 'huuto';
+  // Hehkupiste sykkii levossa myös CSS2D:ssä (css/styles.css .nostosym-rasteri-piste):
+  // vain kategorian värikiekko ilman kuvamerkkiä, kuten rungolla (glOnHehkupiste).
+  if (!kuvamerkki && nostosymMiniMerkki(symboli, laji)?.vari) kuva.classList.add('nostosym-rasteri-piste');
   /*
    * ERILLINEN NIMIÖKUVA (Fable 21.9.2026, nimiöt vakaat): kun kutsuja
    * pyytää `erillinenNimio`, ikoni ja nimiö ovat KAKSI rasteria samassa
@@ -2862,25 +3031,66 @@ export function piirraNostosymKartalle(g, symboli, nimio, laji, kylki = 'oikea',
  * jätä kerrokseen tyhjää merkkiä — sama koko, vain karkeampi kuva,
  * kunnes tarkempi saapuu (js/fokuskohteet.js PORTAAN_LEPO_MS).
  */
-function asetaRasteri(kuva, g) {
-  const resepti = kuva.__nostosym;
-  if (!resepti) return;
+/**
+ * NOSTON RASTERIRESEPTIT ILMAN ELEMENTTIÄ (GL-kerros, 21.9.2026): sama
+ * tunnus, nimiölaji, lyhennetty teksti ja kylki kuin
+ * piirraNostosymKartalle laskee — ikoni ilman tekstiä ja nimiö ilman
+ * ikonia (erillinenNimio). Palauttaa { ikoni, nimio | null }.
+ */
+export function nostosymReseptit(symboli, nimio, laji, kylki = 'oikea', {
+  kuvamerkki = null, ruutuKerroin = 1, tumma = false,
+} = {}) {
+  const tunnus = nostosymMiniTunnus(symboli, laji);
+  const nimionLaji = nostosymNimionLaji(laji);
+  const teksti = nostosymNimioTeksti(nimio, NOSTOSYM_NIMIO_ASUT[nimionLaji], NOSTOSYM_NIMIO_MERKKEJA);
+  const puoli = teksti ? nostosymNimioPuoli(kylki) : 'oikea';
+  const perus = { tunnus, nimionLaji, puoli, elavana: () => {}, kuvamerkki, ruutuKerroin, tumma };
+  return {
+    ikoni: { ...perus, teksti: '', ilmanIkonia: false },
+    nimio: teksti ? { ...perus, teksti, ilmanIkonia: true } : null,
+  };
+}
+
+/** Rasterin välimuistiavain reseptistä ja portaasta (sama SVG:lle ja GL-kerrokselle). */
+export function nostosymRasterinAvain(resepti, porras = NOSTOSYM_PORRAS) {
   const {
-    tunnus, teksti, nimionLaji, puoli, elavana, kuvamerkki = null, ruutuKerroin = 1, tumma = false,
-    ilmanIkonia = false,
+    tunnus, teksti, nimionLaji, puoli, kuvamerkki = null, ruutuKerroin = 1, tumma = false, ilmanIkonia = false,
   } = resepti;
-  const porras = NOSTOSYM_PORRAS;
-  kuva.__nostosymPorras = porras;
-  const avain = `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`
+  return `${porras}|${tunnus}|${nimionLaji}|${puoli}|${teksti}`
     + (kuvamerkki || ruutuKerroin !== 1 || tumma ? `|${kuvamerkki ?? ''}|${ruutuKerroin}|${tumma ? 'T' : ''}` : '')
     + (ilmanIkonia ? '|N' : '');
+}
+
+/**
+ * RASTERI RESEPTISTÄ, JAETTU VÄLIMUISTI (GL-kerros, 21.9.2026): sama
+ * lupaus, jonka SVG-kuva saa `asetaRasteri`ssa — { osoite (blob-URL),
+ * leveys, korkeus, origoX, origoY } kirjaston yksiköissä — mutta ilman
+ * elementtiä. `tyyliLahde` on SVG-solmu (tai mikä tahansa elementti),
+ * josta asu ja muste luetaan CSS:stä; GL-kerros antaa kotelon.
+ */
+export function nostosymRasteri(resepti, tyyliLahde = null, porras = NOSTOSYM_PORRAS) {
+  const {
+    tunnus, teksti, nimionLaji, puoli, kuvamerkki = null, ruutuKerroin = 1, tumma = false, ilmanIkonia = false,
+  } = resepti;
+  const avain = nostosymRasterinAvain(resepti, porras);
   let valmis = NOSTOSYM_RASTERIT.get(avain);
   if (!valmis) {
-    valmis = nostosymRasteroi(tunnus, teksti, g.ownerSVGElement, porras, nimionLaji, puoli, {
+    valmis = nostosymRasteroi(tunnus, teksti, tyyliLahde, porras, nimionLaji, puoli, {
       kuvamerkki, ruutuKerroin, tumma, ilmanIkonia,
     });
     NOSTOSYM_RASTERIT.set(avain, valmis);
+    valmis.catch(() => NOSTOSYM_RASTERIT.delete(avain));
   }
+  return { avain, porras, valmis };
+}
+
+function asetaRasteri(kuva, g) {
+  const resepti = kuva.__nostosym;
+  if (!resepti) return;
+  const { elavana } = resepti;
+  const porras = NOSTOSYM_PORRAS;
+  kuva.__nostosymPorras = porras;
+  const { avain, valmis } = nostosymRasteri(resepti, g.ownerSVGElement, porras);
   valmis.then((r) => {
     if (!kuva.isConnected) return;
     // Väliin ehti uudempi porras: sen kirjoitus voittaa, eikä tämä

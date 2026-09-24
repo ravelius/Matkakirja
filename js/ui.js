@@ -52,6 +52,11 @@ import {
   LUENNAN_TEKSTIPIILO, luennanTekstipiilo, tekstitPiilossa,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
+// Rekisteri on pieni ja staattinen: hiomassa-linssin ikonipaikka luetaan
+// siitä laukkuun ilman moduulia (js/linssit/rekisteri.js HIOMASSA).
+import { LINSSIT } from './linssit/rekisteri.js';
+/** Yhteinen kuva hiomassa olevalle linssille, kunnes Codex piirtää omat (assets/linssit/<tunnus>.png). */
+const LINSSI_HIOMASSA_KUVA = 'assets/linssit/hiomassa.svg';
 import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 // Kehittäjän kohtaamislista (omistaja 5.9.2026): oma moduulinsa, joka
 // hoitaa lehden, hiekkalaatikon ja pelin kloonauksen kokonaan itse.
@@ -181,7 +186,7 @@ import {
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
 // kulttuurinostojen väliotsikkonapit; lehden ja jutun omat napit
 // piirretään niiden omissa moduuleissa.
-import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
+import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 /*
  * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
  * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
@@ -437,6 +442,10 @@ import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
 import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
+// Karttatyökalun Maakunnat-välilehti (runko, 22.9.2026): kytketään heti
+// karttaselitteen käynnistyksen jälkeen — turvallinen kutsu myös vanhalla
+// karttaselitteellä, jolla ei vielä ole asetaMaakunnat-koukkua.
+import { kytkeMaakunnatKarttaselitteeseen } from './karttatyokalu-maakunnat.js';
 import { kaynnistaYlapalkkiVaaka } from './ylapalkki-vaaka.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
@@ -451,6 +460,9 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
+import { taytaPohja } from './tekstipohja.js';
+import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -506,7 +518,7 @@ const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
  * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
  * siirtymä toistuu pelissä kymmeniä kertoja.
  */
-const JALKAMATKAN_MAISEMA = 'metsa';
+export const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -1036,7 +1048,7 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * eikä niitä esiladata service workerissa, joten peli hakee ne
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
-const AARRE_MUSIIKKI = {
+export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
 };
@@ -1784,53 +1796,6 @@ const INTRO_KARTTA_ENINTAAN = 0.72;
  * ALAPUOLISEEN pergamenttiin eikä syö karttakuvan alinta kaistaletta.
  */
 const INTRO_HAIVYTYS_EM = 2.2;
-/*
- * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
- * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
- * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
- * 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
- * muutos vain tools/generoi-avaus.mjs:n kautta, jonka INTRO_RUUTU
- * on tämän vakion ainoa lähde (sanasta sanaan).
- *
- * V3/V4 25.8.2026 (omistajan etusivu-uudistus): kirjan nimi pois —
- * se luetaan nyt kansikuvan selästä (assets/etusivu/kansikuva.png) —
- * ja ohjerivi "Valitse kohde kartalta" pois, koska ohjeen tilalle
- * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
- * siis täsmälleen siihen, mihin nauhoitettu luentakin.
- */
-/*
- * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
- * ja revitty sivu yhdessä kappaleessa; paikkarivi naputetaan ensin
- * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
- */
-const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
-  + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko '
-  + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
-  + 'sivun?';
-/*
- * KYSYMYS ON NAPPI (omistajan tilaus 26.8.2026, ilta): "Mistä
- * aloitan?" on samalla se kehystetty 1873-nappi, joka vie kartan
- * lähikuvaan Lontoon kohdalle. Välivaihe, jossa kysymys oli pelkkää
- * tekstiä ja sen alla erillinen ALOITA MATKA -nappi, purettiin — kaksi
- * peräkkäistä kehotusta oli yksi liikaa.
- *
- * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
- * luenta päättyy revittyyn sivuun.
- *
- * TEKSTI ON NYT KEHOTUS EIKÄ KYSYMYS (omistajan pelitestipalaute
- * v1119): *"Mistä aloitan?" → "Valitse aloituskaupunki"*. Nappi vie
- * kartan lähikuvaan, jossa valinta oikeasti tehdään, ja kysymys jätti
- * epäselväksi mitä napista tapahtuu.
- */
-const INTRO_VALINTA = 'Valitse aloituskaupunki';
-/*
- * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
- * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
- * kellosta. Kertoja EI lue tätä (nauhoitettu luenta alkaa vasta
- * varsinaisesta tekstistä), joten rivi elää oman elementtinsä
- * varassa eikä ole osa INTRO_TEXTiä.
- */
-const INTRO_PAIKKA = 'Heathrow, Lontoo';
 
 /*
  * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
@@ -2154,7 +2119,7 @@ function sykkeenArvo(arvot, osuus) {
 
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
-const MINITEHTAVA_PALKKIO = 10;
+export const MINITEHTAVA_PALKKIO = 10;
 /*
  * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
  *
@@ -3380,6 +3345,10 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
+    // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
+    // kuin pelaaja avaa välilehden.
+    kytkeMaakunnatKarttaselitteeseen(this);
     /*
      * VAAKAPUHELIMEN YLÄPALKKINAPPI samassa kohdassa ja samasta
      * syystä: se asuu karttaruudussa karttaselitteen vieressä.
@@ -5231,6 +5200,17 @@ export class UI {
   ajastaTarkkuustarkistus(viive = TARKKUUS_ENSI_MS) {
     clearTimeout(this.tarkkuusAjastin);
     this.tarkkuusAjastin = setTimeout(() => this.tarkistaTarkkuus(), viive);
+  }
+
+  /**
+   * Pallon GL-nimiökerros (js/pallonimiot-gl.js) tai null. Lauta antaa
+   * kerroksen kahvan kenttään `glKerros` (js/pallolauta/lauta.js), koska
+   * kerros syntyy laiskasti ja puretaan laudan mukana; savukkeet ja
+   * vartijat lukevat sen tästä metodista (tools/tarkista-savukkeet.mjs
+   * hyväksyy kutsun vain UI-luokan metodille).
+   */
+  pallolautaGL() {
+    return typeof this.glKerros === 'function' ? (this.glKerros() ?? null) : null;
   }
 
   /**
@@ -13747,6 +13727,17 @@ export class UI {
           // merkinnän korttiin.
           if (this.dead || this.factKey !== merkinta.avain) return;
           if (this.game.cityOf?.()?.id !== virtaKaupunki.id) return;
+          /*
+           * SUORAAN KARTALLE (omistajan testitila 23.9.2026): merkintä
+           * kortissa heti, luenta valmiiksi "Kuuntele"-napin taakse mutta
+           * ei käyntiin, ei pulun välihuutoa eikä isoja luentakuvia. Pulun
+           * saapumiskupla (merkinnän lopun koukku) jää samalla pois.
+           */
+          if (suoraanKartallePaalla()) {
+            this.factText.textContent = merkinta.teksti;
+            this.asetaMerkinnanLuenta(luentatehtava, { aloita: false });
+            return;
+          }
           this.typeText(this.factText, merkinta.teksti, 'fact', () => {
             fokusvirtaMerkintaLuettu(this, virtaKaupunki);
           });
@@ -13788,8 +13779,9 @@ export class UI {
          */
         const trailerAvain = `${game.pack.id}:${virtaKaupunki.id}`;
         this.trailerNaytetty ??= new Set();
+        // Suoraan kartalle (testitila): ei traileria.
         const trailerSaa = !this.katselu && !this.trailerNaytetty.has(trailerAvain)
-          && !this.arrivalDialog?.open;
+          && !this.arrivalDialog?.open && !suoraanKartallePaalla();
         if (trailerSaa) {
           this.trailerNaytetty.add(trailerAvain);
           void naytaSaapumistraileri(this, virtaKaupunki).then(aloitaMerkinta);
@@ -15144,13 +15136,10 @@ export class UI {
       // Ääninäyte, Apple Music ja ilmainen musiikkinäyte — yhteinen
       // toteutus kategorianostojen kanssa (lisaaNostonNapit).
       this.lisaaNostonNapit(otsikkoRivi, nosto);
-      /*
-       * VÄLIOTSIKON REAKTIONAPPI (js/reaktiot.js) rivin päähän, sama
-       * kuin kategorianostoilla (js/maalehti.js). Sivuavain tulee
-       * kutsujalta: Tutki-ikkunan liuska tietää, mikä sivu on auki,
-       * eikä sitä voi päätellä täältä ilman lehtitilan kaivamista.
-       */
-      piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
+      // REAKTIONAPIT EIVÄT OLE ENÄÄ OTSIKKORIVILLÄ (omistajan päätös
+      // 21.9.2026): ne piirtyvät "Lue lisää aiheesta" -linkin viereen
+      // jutun lopussa, ks. LOPPURIVI alempana. Sama kohdeavain
+      // (otsikkoAvain) pitää vanhat äänet tallessa.
       lohko.appendChild(otsikkoRivi);
       if (nosto.tyyppi === 'kuva' && nosto.tiedosto) {
         const kuva = document.createElement('img');
@@ -15167,12 +15156,21 @@ export class UI {
         lohko.appendChild(kuva);
       }
       lohko.appendChild(html('p', 'arrival-intro', nosto.teksti));
+      /*
+       * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA
+       * RIVILLÄ (omistajan päätös 21.9.2026), sama malli kuin
+       * js/maalehti.js piirraKategoria.
+       */
+      const loppurivi = html('div', 'leipa-loppurivi');
       if (nosto.wiki) {
         const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
         nappi.type = 'button';
         nappi.addEventListener('click', () => this.openWikiArticle(nosto.wiki, nosto.otsikko));
-        lohko.appendChild(nappi);
+        loppurivi.appendChild(nappi);
       }
+      const reaktioAvain = otsikkoAvain(sivuAvain, nosto.otsikko);
+      if (reaktioAvain) piirraReaktiot(loppurivi, reaktioAvain, { otsikko: nosto.otsikko });
+      if (loppurivi.childNodes.length) lohko.appendChild(loppurivi);
       this.lisaaNostonLinkki(lohko, nosto);
       const lahteet = [lahdemerkinta(nosto.lahde), nosto.aaniLahde]
         .filter(Boolean).join(' · ');
@@ -17429,61 +17427,20 @@ export class UI {
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    const otsikko = html('h2', 'periaate-otsikko', 'Oppiminen on hauskaa');
+    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
     kortti.appendChild(otsikko);
 
-    const kappale = (teksti, luokka = '') => {
-      const p = html('p', `periaate-teksti ${luokka}`.trim());
-      p.textContent = teksti;
+    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
+    for (const osa of PERIAATTEET.osat) {
+      if (osa.otsikko) {
+        const h = html('h3', 'periaate-valiotsikko');
+        h.textContent = osa.otsikko;
+        kortti.appendChild(h);
+      }
+      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
+      p.textContent = osa.teksti;
       kortti.appendChild(p);
-    };
-    const valiotsikko = (teksti) => {
-      const h = html('h3', 'periaate-valiotsikko');
-      h.textContent = teksti;
-      kortti.appendChild(h);
-    };
-
-    kappale('Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — '
-      + 'ei oppikirja, johon on liimattu noppa. Pelin pitää olla '
-      + 'koukuttava ensin; tieto tarttuu matkassa.', 'kärki');
-
-    valiotsikko('Mitä pelissä opitaan');
-    kappale('Maiden arkea ja kulttuuria, maantiedettä ja historiaa, '
-      + 'geopolitiikkaa ja poliittista tilannetta — ja ennen kaikkea sitä, '
-      + 'että maailma on suurempi kuin oma ympäristö. Jokaisella '
-      + 'pysähdyksellä on jotain katsottavaa: valokuva silloin ja nyt, '
-      + 'maan tunnusluvut, kaupungin musiikkia ja ruokaa.');
-
-    valiotsikko('Kaksi ääntä');
-    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto '
-      + 'tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on '
-      + 'toivottoman vanhentunut nimissä ja rajoissa.');
-
-    valiotsikko('Totuus ja lähteet');
-    kappale('Jokainen väittämä on tarkistettavissa. Epävarmaa ei väitetä '
-      + 'eikä kiistanalaista esitetä varmana. Politiikka ja historia '
-      + 'kuvataan, ei tuomita: kerrotaan mitä on ja miksi.');
-
-    valiotsikko('Tekoäly apuna, ihminen päättää');
-    kappale('Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan '
-      + 'avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, '
-      + 'ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. '
-      + 'Jokaisen sisällön tarkistaa ja hyväksyy ihminen.');
-
-    valiotsikko('Kunnioitus');
-    kappale('Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, '
-      + 'ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. '
-      + 'Vaikeita aiheita ei kaunistella eikä kauhistella.');
-
-    valiotsikko('Avointa ja ilmaista');
-    kappale('Peli on toistaiseksi ilmainen, ja sen lähdekoodi on '
-      + 'kaikkien luettavissa. Peliä tekee tamperelainen '
-      + 'Visuaaliviestinnän Instituutti (VVI). '
-      + 'Kuvat, äänet ja tiedot tulevat avoimista '
-      + 'lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen '
-      + 'on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata '
-      + 'ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan '
-      + 'tuotteeseen tarvitaan lupa.');
+    }
 
     // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
     // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
@@ -17491,15 +17448,14 @@ export class UI {
     // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
     if (LIPPU_TEKIJAT.length) {
       const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = `Lippukuvat ovat Wikimedia Commonsista. `
-        + `Näiden tekijät lisenssi käskee nimetä: `
+      lippurivi.textContent = PERIAATTEET.lippurivi
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
 
     const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', 'Pelin GitHub-sivu');
-    gh.href = 'https://github.com/ravelius/Matkakirja';
+    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
+    gh.href = PERIAATTEET.linkki.url;
     gh.target = '_blank';
     gh.rel = 'noopener';
     linkit.appendChild(gh);
@@ -17507,8 +17463,7 @@ export class UI {
 
     kortti.appendChild(this.periaatePalaute());
 
-    const oikeudet = html('p', 'periaate-oikeudet',
-      '© Visuaaliviestinnän Instituutti Tampere Oy');
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
@@ -18600,12 +18555,21 @@ export class UI {
       this.linssiPois.clear();
     }
     const nakyvat = this.nakyvatLinssit(tuki);
-    this.linssiKotelo.hidden = nakyvat.length === 0;
+    /*
+     * HIOMASSA OPTIKOLLA (omistaja 21.9.2026): omistettu linssi, jota ei
+     * vielä ole toteutettu, näkyy laukussa harmaana — sillä ei ole
+     * moduulia, joten se ei ole `nakyvat`-listassa. Valmistunut linssi
+     * saa kerran "valmistui"-merkin (omistus.js valmistuneet).
+     */
+    const hiomassa = tuki.omistus?.hiomassaOlevat?.(this.game, this.game.player) ?? [];
+    const valmistuneet = tuki.omistus?.valmistuneet?.(this.game, this.game.player) ?? [];
+    this.linssiKotelo.hidden = nakyvat.length === 0 && hiomassa.length === 0;
 
-    const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`;
+    const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`
+      + `|hiomassa:${hiomassa.join(',')}|valmistui:${valmistuneet.join(',')}`;
     if (tunniste !== this.linssiTunniste) {
       this.linssiTunniste = tunniste;
-      this.rakennaLinssivalikko(nakyvat);
+      this.rakennaLinssivalikko(nakyvat, { hiomassa, valmistuneet });
     }
 
     // Omistamaton tai tuntematon tallennettu valinta ohitetaan hiljaa
@@ -18941,7 +18905,7 @@ export class UI {
    * nuolinäppäinnavigoinnin, jota tässä pelissä ei ole yhdessäkään
    * liuskarivissä (suunnitelman luku 5.2).
    */
-  rakennaLinssivalikko(linssit) {
+  rakennaLinssivalikko(linssit, { hiomassa = [], valmistuneet = [] } = {}) {
     if (!this.linssiValikko) return;
     this.linssiValikko.replaceChildren();
     // Vanha tietolohko jäi irralleen puusta: viittaus siihen kirjoittaisi
@@ -18949,7 +18913,7 @@ export class UI {
     this.linssiTiedot = null;
     // Ruudukko on uusi, joten napautusmuisti ei koske siihen.
     this.linssiEsikatselu = undefined;
-    if (!linssit.length) return;
+    if (!linssit.length && !hiomassa.length) return;
 
     const liuskat = html('nav', 'linssi-liuskat');
     liuskat.setAttribute('role', 'group');
@@ -18970,7 +18934,13 @@ export class UI {
     const valmiit = linssit.filter((l) => !l.kesken);
     const keskeneraiset = linssit.filter((l) => l.kesken);
     for (const linssi of valmiit) {
-      liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi));
+      const nappi = this.linssiLiuska(linssi.tunnus, linssi.nimi);
+      // Optikolta valmistunut linssi: merkki, kunnes ruutua on napautettu.
+      if (valmistuneet.includes(linssi.tunnus)) {
+        nappi.classList.add('valmistui');
+        nappi.title = `${linssi.nimi} — optikko toi linssin valmiina`;
+      }
+      liuskat.appendChild(nappi);
     }
     this.linssiValikko.appendChild(liuskat);
     if (keskeneraiset.length) {
@@ -18984,13 +18954,30 @@ export class UI {
       }
       this.linssiValikko.appendChild(kesken);
     }
+    /*
+     * HIOMASSA OPTIKOLLA: samalla harmaalla rivillä kuin keskeneräiset,
+     * mutta ilman aktivointia — linssiä ei ole. Kuvake on rekisterin
+     * paikkavaraus (Codex piirtää) tai yhteinen hiomassa-kuva.
+     */
+    if (hiomassa.length) {
+      const rivi = html('nav', 'linssi-liuskat linssi-liuskat-kesken linssi-liuskat-hiomassa');
+      rivi.setAttribute('role', 'group');
+      rivi.setAttribute('aria-label', 'Hiomassa optikolla');
+      for (const tunnus of hiomassa) {
+        const nimi = this.linssiTuki?.omistus?.hiomassaNimi?.(tunnus) ?? tunnus;
+        const nappi = this.linssiLiuska(tunnus, `${nimi} (hiomassa optikolla)`, { hiomassa: true });
+        nappi.classList.add('kesken', 'hiomassa');
+        rivi.appendChild(nappi);
+      }
+      this.linssiValikko.appendChild(rivi);
+    }
     this.linssiTiedot = html('div', 'linssi-tiedot');
     this.linssiValikko.appendChild(this.linssiTiedot);
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
   }
 
-  linssiLiuska(tunnus, nimi) {
+  linssiLiuska(tunnus, nimi, { hiomassa = false } = {}) {
     const nappi = html('button');
     nappi.type = 'button';
     nappi.dataset.linssi = tunnus ?? '';
@@ -19010,7 +18997,11 @@ export class UI {
        * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
        */
       const onSatelliitti = tunnus === 'satelliitti';
-      const tiedot = { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
+      // Hiomassa: rekisterin ikonipaikka tai yhteinen hiomassa-kuva.
+      const kuva = hiomassa
+        ? (LINSSIT.find((r) => r.tunnus === tunnus)?.ikoni ?? LINSSI_HIOMASSA_KUVA)
+        : `assets/varusteet/varuste-${tunnus}.jpg`;
+      const tiedot = { kuva, name: nimi };
       nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
       // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut
@@ -19039,6 +19030,12 @@ export class UI {
    */
   esikatseleLinssi(tunnus) {
     this.linssiEsikatselu = tunnus ?? null;
+    // Valmistuneen linssin merkki kuitataan ensimmäisellä napautuksella.
+    const omistus = this.linssiTuki?.omistus;
+    if (tunnus && omistus?.valmistuneet?.(this.game, this.game.player).includes(tunnus)) {
+      omistus.merkitseLinssiNahdyksi?.(tunnus);
+      this.linssiValikko?.querySelector(`.linssi-liuskat button[data-linssi="${tunnus}"]`)?.classList.remove('valmistui');
+    }
     this.paivitaLinssiTiedot();
   }
 
@@ -19200,6 +19197,15 @@ export class UI {
     // päällä olevasta linssistä kuten ennen.
     const tunnus = esikatselussa ? this.linssiEsikatselu : this.linssiValittu;
     const linssi = this.linssiTunnuksella(tunnus);
+    if (!linssi && tunnus && this.linssiTuki?.omistus?.hiomassa?.(tunnus)) {
+      // Hiomassa optikolla: nimi rekisteristä, ei aktivointia.
+      const nimi = this.linssiTuki.omistus.hiomassaNimi?.(tunnus) ?? tunnus;
+      this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', nimi));
+      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt',
+        'Hiomassa optikolla. Linssi tulee laukkuun käyttöön, kun se on valmis — kerran nähtyä maailmaa ei oteta pois.'));
+      this.havaitseLinssiTietojenVaihto();
+      return;
+    }
     if (!linssi) {
       // "Ei linssiä" on napautettuna yhtä lailla varuste: sillä on nimi
       // ja selite, ja sen Aktivoi-nappi palauttaa paljaan kartan.
@@ -19488,7 +19494,7 @@ export class UI {
     // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
     this.typeText(
       document.getElementById('winner-text'),
-      this.game.pack.texts.winnerStar(w.name, w.money),
+      taytaPohja(this.game.pack.texts.winnerStar, { name: w.name, money: w.money }),
       'winner',
     );
     const roamBtn = document.getElementById('winner-roam');
@@ -23624,6 +23630,12 @@ export class UI {
       } else if (event.tilanne === 'peli.linssi.avautui') {
         ilmoitaLivianTunne(
           { tunne: 'ilo', voimakkuus: 0.65 },
+          { lahde: 'peli', tunnus: event.tilanne, linssi: event.linssi },
+        );
+      } else if (event.tilanne === 'peli.linssi.hiomassa') {
+        // Linssi hiomassa optikolla: iloa löydöstä, mutta ei juhlaa vielä.
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.45 },
           { lahde: 'peli', tunnus: event.tilanne, linssi: event.linssi },
         );
       }

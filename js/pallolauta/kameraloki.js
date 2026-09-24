@@ -84,13 +84,22 @@ export function luoKameraloki({
     viimeisinKirjoitus = { hetki: nyt(), laukaisija: syy, pino };
   };
 
+  /*
+   * KUTSUPINO VAIN KEHITTÄJÄTILASSA (sulavuuskatsaus 22.9.2026 kohta 14):
+   * `new Error()` + pinon merkkijonotus + 8 regexiä joka kamera-
+   * kirjoituksesta maksoi vaihtelevan määrän pääsäiettä keskellä vetoa
+   * — suoraan px/ms-vaihtelua. Tuotannossa kirjataan vain hetki ja
+   * yleisnimi; laukaisijan tarkka nimi tulee lokiin, kun kehittäjätila
+   * on päällä (localStorage matkakirja-kehittaja = 1).
+   */
+  const pino = () => (kehittajaTilaPaalla() ? pinonRivit(new Error()) : '');
   // pointOfView-kirjoitukset: vain kutsut argumentein ovat kirjoituksia.
   const alkuperainenPov = pallo?.pointOfView;
   if (typeof alkuperainenPov === 'function') {
     pallo.pointOfView = function kameralokiPointOfView(...args) {
       if (args.length && args[0] && typeof args[0] === 'object') {
-        const pino = pinonRivit(new Error());
-        kirjaa(kameralokiLaukaisija(pino), pino);
+        const p = pino();
+        kirjaa(p ? kameralokiLaukaisija(p) : 'pointOfView-kirjoitus (pino vain kehittäjätilassa)', p);
       }
       return alkuperainenPov.apply(this, args);
     };
@@ -100,8 +109,8 @@ export function luoKameraloki({
   const alkuperainenAjo = kamera?.ajaKamera;
   if (typeof alkuperainenAjo === 'function') {
     kamera.ajaKamera = function kameralokiAjaKamera(...args) {
-      const pino = pinonRivit(new Error());
-      kirjaa(`ajo: ${kameralokiLaukaisija(pino)}`, pino);
+      const p = pino();
+      kirjaa(p ? `ajo: ${kameralokiLaukaisija(p)}` : 'ajo (pino vain kehittäjätilassa)', p);
       return alkuperainenAjo.apply(this, args);
     };
   }

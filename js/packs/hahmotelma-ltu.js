@@ -65,7 +65,10 @@
  */
 
 /** Liettuan hahmotelmanostot: sisällölliset kohteet kaupungin (Vilna) ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_LTU = [
+  ...EUROOPAN_KADONNEET.LTU,
   {
     id: 'hahmotelma-kedainiai',
     kuva: {
@@ -1449,6 +1452,69 @@ export const HAHMOTELMA_LTU = [
       oikea: 3,
       fakta: 'Birštonasin jazzfestivaali on Liettuan vanhin kansainvälinen jazzfestivaali. Se '
         + 'on tehnyt kylpyläkaupungista maan jazzin Mekan.',
+    },
+  },
+  /*
+   * TRAKAIN NIEMEKELINNA / PENINSULA CASTLE — MATKAKIRJAN "RAPPEUTUNUT"-
+   * NOSTO, tilaus docs/raportit/havainnekuvat-codexille-eurooppa-20260921.md
+   * (kohde 50). ERI KOHDE kuin js/packs/maastokohteet-ltu.js:n
+   * 'trakain-saarilinna' (Trakai Island Castle, kokonaan 1950–60-luvuilla
+   * jälleenrakennettu): tämä on Trakain manteretta lähempänä oleva
+   * niemekelinna, joka jäi venäläis-puolalaisen sodan 1654–1667 jälkeen
+   * raunioiksi eikä sitä koskaan jälleenrakennettu. Kuva on aito
+   * Commons-valokuva rauniotorneista; `ihme.osoite` odottaa Codexin
+   * kulta-aikakuvaa (loistoaika-parikuva, ei vielä toimitettu — osoite
+   * 404:ttää siihen asti, sama käytäntö kuin Medina Azaharassa).
+   */
+  {
+    id: 'hahmotelma-trakai-niemekelinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/ltu-nosto-trakai-niemeke-607912e4.jpg',
+      lyhyt: 'Trakain niemekelinnan rauniotorni kohoaa puiden keskellä.',
+      selite: 'Kuvassa on Trakain niemekelinnan punatiilinen rauniotorni, jonka muurit ovat '
+        + 'osin sortuneet ja joita ympäröi lehtipuusto.',
+      lahde: 'Valokuva: Paulius Čiuladis, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Paulius Čiuladis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:N_trakai_1pilis.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Trakain niemekelinna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti '
+        + 'puolustusmerkityksensä?',
+      'Mikä sodista tuhosi linnan lopullisesti?',
+    ],
+    korostukset: ['Kęstutis|Kęstutis', 'Venäjän–Puolan sota|Venäjän–Puolan sota'],
+    nappi: 'Suuriruhtinaiden vanha linna, joka jäi sodan jalkoihin raunioiksi',
+    // 24.937 E / 54.646 N — en-Wikipedia "Trakai Peninsula Castle"
+    laudat: {
+      maailmankartta: { x: 6664.6, y: 1182.2 },
+      europe: { x: 690, y: 456.4 },
+    },
+    teksti: 'Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 '
+      + 'puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti '
+      + 'kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja '
+      + 'sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis '
+      + 'murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. '
+      + 'Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan '
+      + 'jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue '
+      + 'luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon '
+      + '1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston '
+      + 'suojelemia.',
+    lahde: 'en-Wikipedia "Trakai Peninsula Castle", johdanto-osa ja osiot "History" ja '
+      + '"Present day" (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-trakai-niemekelinna-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1300–1400-luvuilla Trakain niemekelinna oli suurruhtinaiden '
+        + 'linnoitettu residenssi seitsemine torneineen, jonka muurien sisällä hovi asui ja '
+        + 'piti oikeutta ennen kuin sota jätti sen raunioiksi.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Trakai Peninsula Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Trakai_Peninsula_Castle',
     },
   },
 ];

@@ -76,6 +76,7 @@ export const MAASTOKOHTEET_POL = [
     id: 'rysy',
     nimi: 'Rysy',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi Rysyllä on kolme huippua?',
       'Mikä on Puolan vuorten kruunu?',
@@ -92,6 +93,17 @@ export const MAASTOKOHTEET_POL = [
       + 'huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat '
       + 'Slovakian puolella.',
     lahde: 'en-Wikipedia "Rysy", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä Rysyn kolmesta huipuista on Puolan korkein piste?',
+      vaihtoehdot: [
+        'Luoteinen huippu',
+        'Keskimmäinen huippu',
+        'Kaakkoinen huippu',
+        'Kaikki kolme yhtä korkeita',
+      ],
+      oikea: 0,
+      fakta: 'Luoteinen huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun.',
+    },
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/pol-maasto-rysy-d416f9d31745.jpg',
       lyhyt: 'Rysyn huipulta avautuu näkymä Czarny Staw pod Rysami- ja Morskie Oko -järville.',
@@ -228,6 +240,17 @@ export const MAASTOKOHTEET_POL = [
       + 'Varsovan halki.',
     lahde: 'en-Wikipedia "Vistula", johdanto-osa sekä osiot "Delta" ja "Channel changes" '
       + '(tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Miksi Preussi kaivoi Veikselille uuden keinouoman 1889–1895?',
+      vaihtoehdot: [
+        'Gdańskin satama laajenisi',
+        'Jäälautat eivät padonneet uomaa',
+        'Joki lyhenisi kymmeniä km',
+        'Krakova saisi oman sataman',
+      ],
+      oikea: 1,
+      fakta: 'Preussi kaivoi keinouoman, jotta joki huuhtoisi jäälauttansa mereen ennen patoutumista.',
+    },
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/pol-maasto-veiksel-30c4f5e8b267.jpg',
       lyhyt: 'Rohkean Veikselin leveä suu-uoma kohtaa Itämeren Gdańskin itäpuolella.',
@@ -316,6 +339,7 @@ export const MAASTOKOHTEET_POL = [
     id: 'malbork',
     nimi: 'Malborkin linna',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka rakensi Malborkin linnan?',
       'Miten linna päätyi Puolan kuninkaalle?',
@@ -340,6 +364,17 @@ export const MAASTOKOHTEET_POL = [
       + 'maailmanperintökohteeksi se merkittiin joulukuussa 1997.',
     lahde: 'en-Wikipedia "Malbork Castle", johdanto-osa ja osio "Origins" '
       + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Miksi Malborkin linna päätyi Puolan kuninkaalle vuonna 1457?',
+      vaihtoehdot: [
+        'Ritarikunta lahjoitti sen kuninkaalle',
+        'Puola valtasi linnan sodassa',
+        'Puolan kuningas osti linnan',
+        'Böömiläiset palkkasoturit myivät sen',
+      ],
+      oikea: 3,
+      fakta: 'Böömiläiset palkkasoturit myivät linnan korvausten sijasta Puolan kuninkaalle Kasimir IV:lle.',
+    },
     kuva: {
       tiedosto: 'Nogat river and Malbork Castle in the afternoon.jpg',
       selite: 'Malborkin laaja punatiilinen linnakokonaisuus kohoaa Nogatjoen vehreältä rannalta Pohjois-Puolassa.',
@@ -376,6 +411,7 @@ export const MAASTOKOHTEET_POL = [
     ],
     nimi: 'Auschwitz-Birkenau',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mitä Auschwitzissa tapahtui?',
       'Miksi 27. tammikuuta on muistopäivä?',
@@ -594,6 +630,7 @@ export const MAASTOKOHTEET_POL = [
     ],
     nimi: 'Elblągin kanava',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Miten alukset nousevat sata metriä ylös?',
       'Kuka kanavan suunnitteli?',

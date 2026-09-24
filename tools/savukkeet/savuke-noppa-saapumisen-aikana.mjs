@@ -198,8 +198,31 @@ const LUE = `() => {
       ruudulla: ruudulla(r) && !e.classList.contains('pallolauta-takana'),
     };
   });
+  // Kohdemerkit ovat 22.9.2026 lähtien GL-rungolla (sovitin jaaPeli, erä A):
+  // DOMissa on vain huomiokohde ja CSS2D-varapolku. Rungon kohde on se,
+  // jonka jokin osa (tunnus avain:osa) on rungolla; ruutupaikka pallolta.
+  const sov = pl?.glSovitin?.() ?? null;
+  const rungolla = sov?.rungolla?.() ?? new Set();
+  const koti = pl?.kotelo?.getBoundingClientRect?.();
+  for (const d of sov?.viimeisetPeli?.() ?? []) {
+    if (d.laji !== 'kohde') continue;
+    const t = d.avain ?? ('kohde:' + d.id);
+    if (![...rungolla].some((x) => x.startsWith(t + ':'))) continue;
+    const q = pl.pallo.getScreenCoords(d.lat, d.lng, 0);
+    if (!q || !koti) continue;
+    const x = koti.left + q.x; const y = koti.top + q.y;
+    kohteet.push({ key: d.key ?? d.id, x: Math.round(x), y: Math.round(y), gl: true,
+      ruudulla: x > koti.left && y > koti.top && x < koti.right && y < koti.bottom });
+  }
+  // Lepotilan nappula on v2017:stä lähtien GL-rungolla (vaihe 4): laatikko
+  // sovittimelta kotelon pikseleinä; liikkuva nappula on yhä DOMissa.
   const n = document.querySelector('.pallolauta-nappula');
-  const nr = n ? n.getBoundingClientRect() : null;
+  let nr = n ? n.getBoundingClientRect() : null;
+  if (!nr) {
+    const b = ui.pallolauta?.glSovitin?.()?.pelinLaatikot?.()[0] ?? null;
+    const koti = ui.pallolauta?.kotelo?.getBoundingClientRect?.();
+    if (b && koti) nr = { x: koti.left + b.x0, y: koti.top + b.y0, left: koti.left + b.x0, top: koti.top + b.y0, right: koti.left + b.x1, bottom: koti.top + b.y1, width: b.x1 - b.x0, height: b.y1 - b.y0 };
+  }
   const p = game.player.pos;
   return {
     vaihe: game.phase,

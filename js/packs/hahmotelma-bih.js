@@ -93,7 +93,10 @@
  */
 
 /** Bosnia ja Hertsegovinan hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_BIH = [
+  ...EUROOPAN_KADONNEET.BIH,
   {
     id: 'hahmotelma-sarajevo',
     kuva: {
@@ -146,8 +149,7 @@ export const HAHMOTELMA_BIH = [
       + 'hallinnollinen keskus.',
     lahde: 'en-Wikipedia "Sarajevo", johdanto-osa ja osiot "Ottoman era" (tarkistettu 21.9.2026).',
     visa: {
-      kysymys: 'Minä vuonna Sarajevossa tapahtui arkkiherttua Franz Ferdinandin murha, joka '
-        + 'sytytti ensimmäisen maailmansodan?',
+      kysymys: 'Minä vuonna Franz Ferdinand murhattiin Sarajevossa?',
       vaihtoehdot: ['1908', '1914', '1918', '1929'],
       oikea: 1,
       fakta: 'Itävalta-Unkari käytti Sarajevoa myös uusien keksintöjen koelaboratoriona: '
@@ -366,8 +368,7 @@ export const HAHMOTELMA_BIH = [
     lahde: 'en-Wikipedia "Konjic", johdanto-osa ja osio "History"; en-Wikipedia "Konjic '
       + 'woodcarving" (tarkistettu 21.9.2026).',
     visa: {
-      kysymys: 'Minä vuonna Unesco lisäsi Konjicin puunveiston ihmiskunnan aineettoman '
-        + 'kulttuuriperinnön listalle?',
+      kysymys: 'Minä vuonna Unesco lisäsi Konjicin puunveiston aineettoman perintölistalle?',
       vaihtoehdot: ['1997', '2007', '2017', '2021'],
       oikea: 2,
       fakta: 'Konjicin lähelle louhittiin kylmän sodan aikana salassa vuosina 1953–1979 valtava, '
@@ -422,6 +423,17 @@ export const HAHMOTELMA_BIH = [
       + '1500-luvulta — ovat suosittu matkailukohde.',
     lahde: 'en-Wikipedia "Tvrdoš Monastery", johdanto-osa ja osio "History" (tarkistettu '
       + '21.9.2026).',
+    visa: {
+      kysymys: 'Mitkä ovat Tvrdošin luostarin viinin tärkeimmät rypälelajikkeet?',
+      vaihtoehdot: [
+        'Merlot ja Cabernet',
+        'Tempranillo ja Garnacha',
+        'Vranac ja Žilavka',
+        'Riesling ja Chardonnay',
+      ],
+      oikea: 2,
+      fakta: 'Luostarin viinikellareista yksi on peräisin jo 1500-luvulta.',
+    },
   },
   {
     id: 'hahmotelma-livno',
@@ -526,6 +538,17 @@ export const HAHMOTELMA_BIH = [
       + 'osoittautui virheeksi, sillä laji saalistaa tritonia.',
     lahde: 'en-Wikipedia "Prokoško Lake", johdanto-osa; bs-Wikipedia "Prokoško jezero", osiot '
       + 'eliöstöstä ja tutkimushistoriasta (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Miksi Prokoškon järveen istutettu kalifornianpurotaimen osoittautui virheeksi?',
+      vaihtoehdot: [
+        'Se saalistaa alueen tritonia',
+        'Se samensi järven veden',
+        'Se levitti kalataudin',
+        'Se söi kaiken kasvillisuuden',
+      ],
+      oikea: 0,
+      fakta: 'Bosnialainen alppitriton säilyttää toukkamaisia piirteitään vielä aikuisenakin.',
+    },
   },
   {
     id: 'hahmotelma-doboj',
@@ -851,5 +874,17 @@ export const HAHMOTELMA_BIH = [
       + 'veistettyä monumentaaliveistosta — ainutlaatuinen ulkoilmapatsaspuisto Kaakkois-'
       + 'Euroopassa.',
     lahde: 'en-Wikipedia "Ostrožac Castle", johdanto-osa (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Miksi Bihaćin pormestari Lothar von Berks rakennutti Ostrožacin linnan '
+        + 'uudelleen 1900-luvulla?',
+      vaihtoehdot: [
+        'Kirkoksi paikalliselle seurakunnalle',
+        'Museoksi Bihaćin kaupungille',
+        'Kasarmiksi ottomaanijoukoille',
+        'Syntymäpäivälahjaksi vaimolleen',
+      ],
+      oikea: 3,
+      fakta: 'Uusgoottilainen jälleenrakennus toteutettiin vuosina 1900–1906.',
+    },
   },
 ];

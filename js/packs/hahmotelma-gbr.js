@@ -169,6 +169,13 @@ export const HAHMOTELMA_GBR = [
       + 'Kendalin ja Windermeren rautatiehaara avattiin vuonna 1847, ja se toi Lake '
       + 'Districtin ensi kertaa laajan yleisön ulottuville.',
     lahde: 'en-Wikipedia "Windermere", johdanto-osa (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Kuinka syvä on Windermere-järven syvin kohta?',
+      vaihtoehdot: ['35 metriä', '50 metriä', '64 metriä', '18 metriä'],
+      oikea: 2,
+      fakta: 'Windermere on noin 18 kilometriä pitkä ja enimmillään reilun kilometrin '
+        + 'levyinen nauhajärvi, ja sen vedet laskevat Leven-jokea pitkin Morecamben lahteen.',
+    },
   },
   {
     id: 'hahmotelma-geevor-tin',
@@ -388,6 +395,18 @@ export const HAHMOTELMA_GBR = [
       + 'kirjastosta.',
     lahde: 'en-Wikipedia "Radcliffe Camera", johdanto-osa ja osio "History" (tarkistettu '
       + '21.9.2026).',
+    visa: {
+      kysymys: 'Miten Radcliffe Cameraan pääsee nykyään, kun se ei ole avoinna yleisölle?',
+      vaihtoehdot: [
+        'Erillisen sisäänkäynnin kautta pihalta',
+        'Tunnelia pitkin Bodleian-kirjastosta',
+        'Vain oppailla varustetuilla kierroksilla',
+        'Katolla olevan portaikon kautta',
+      ],
+      oikea: 1,
+      fakta: 'Rakennus rahoitettiin lääkäri John Radcliffen jäämistöstä: hän testamenttasi '
+        + 'kuollessaan 1714 40 000 puntaa kirjaston rakentamiseen.',
+    },
   },
   {
     id: 'hahmotelma-fish-and-chips',
@@ -611,9 +630,9 @@ export const HAHMOTELMA_GBR = [
     lahde: 'en-Wikipedia "Stockton and Darlington Railway" ja "Locomotion No. 1", '
       + 'johdanto-osat (tarkistettu 21.9.2026).',
     visa: {
-      kysymys: 'Mikä oli ensimmäisen höyryveturin nimi, joka veti matkustajajunaa Stockton '
-        + 'ja Darlingtonin rautatiellä?',
-      vaihtoehdot: ['Rocket', 'Locomotion No. 1', 'Puffing Billy', 'Planet'],
+      kysymys: 'Minkä nimisenä ensimmäinen höyryveturi kulki Stocktonin ja Darlingtonin '
+        + 'rautatiellä?',
+      vaihtoehdot: ['Rocket-veturi', 'Locomotion No. 1', 'Puffing Billy', 'Planet-veturi'],
       oikea: 1,
       fakta: 'Veturi oli alun perin nimeltään Active, ja se räjähti myöhemmin vuonna 1828 '
         + 'tappaen kuljettajansa – silti se korjattiin ja on nykyään näytteillä museossa.',
@@ -726,6 +745,13 @@ export const HAHMOTELMA_GBR = [
       + 'tehnyt siitä yhden Skotlannin tunnetuimmista maisemista, ja se on nimetty '
       + 'kansalliseksi maisema-alueeksi.',
     lahde: 'en-Wikipedia "Cuillin", johdanto-osa (tarkistettu 21.9.2026).',
+    visa: {
+      kysymys: 'Minkä järven ympäri Cuillinin pääharjanne kaartuu noin 14 kilometrin matkalla?',
+      vaihtoehdot: ['Loch Ness', 'Loch Lomond', 'Loch Katrine', 'Loch Coruisk'],
+      oikea: 3,
+      fakta: 'Vuoriston korkein huippu, ja samalla koko Skyen korkein kohta, on Sgùrr '
+        + 'Alasdair, 992 metriä merenpinnasta.',
+    },
   },
   {
     id: 'hahmotelma-loch-lomond',
@@ -863,6 +889,7 @@ export const HAHMOTELMA_GBR = [
     ],
     nimi: 'Doverin liiduvuoret',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuinka korkeita Doverin liiduvuoret parhaimmillaan ovat, ja mistä ne ovat syntyneet?',
@@ -978,6 +1005,7 @@ export const HAHMOTELMA_GBR = [
     ],
     nimi: 'Edinburghin linna',
     tyyppi: 'historia',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Mikä on Edinburghin linnan ja koko kaupungin vanhin säilynyt rakennus?',
@@ -1008,9 +1036,8 @@ export const HAHMOTELMA_GBR = [
     visa: {
       kysymys: 'Mitä varten Edinburghin linnan kello yhden tykinlaukaus alun perin '
         + 'ammuttiin?',
-      vaihtoehdot: ['Merkiksi vartion vaihdosta', 'Ajan näyttämiseksi Leithin sataman '
-        + 'laivoille', 'Juhlistamaan kuninkaallisia syntymäpäiviä', 'Varoittamaan '
-        + 'tulipalosta'],
+      vaihtoehdot: ['Merkiksi vartion vaihdosta', 'Ajan näyttämiseksi Leithin laivoille',
+        'Juhlistamaan kuninkaallisia juhlia', 'Varoittamaan tulipalosta'],
       oikea: 1,
       fakta: 'Koska ääni kulkee valoa hitaammin, vuonna 1861 laadittiin erityinen kartta, '
         + 'joka näytti kuinka monta sekuntia myöhässä laukauksen ääni kuuluisi eri '

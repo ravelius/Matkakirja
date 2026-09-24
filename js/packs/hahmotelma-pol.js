@@ -83,6 +83,7 @@ export const HAHMOTELMA_POL = [
     ],
     nimi: 'Białowieżan metsä',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuka rakennutti Białowieżan kylään valkoisen puisen metsästyskartanon?',
@@ -251,6 +252,7 @@ export const HAHMOTELMA_POL = [
     ],
     nimi: 'Słowińskin dyynit',
     tyyppi: 'meri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kuinka nopeasti Słowińskin liikkuvat dyynit etenevät vuodessa?',
@@ -330,6 +332,17 @@ export const HAHMOTELMA_POL = [
       + 'eläimistö, ja sen nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran '
       + 'merenrantajyrkänteet sekä visenttien suojelualue.',
     lahde: 'en-Wikipedia "Wolin National Park", koko artikkeli (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitkä merenrantajyrkänteet kuuluvat Wolinin puiston nähtävyyksiin?',
+      vaihtoehdot: [
+        'Międzyzdroje ja Świnoujście',
+        'Sopot ja Gdynia',
+        'Gosań ja Kawcza Góra',
+        'Rowokol ja Słowiński',
+      ],
+      oikea: 2,
+      fakta: 'Puiston nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran merenrantajyrkänteet.',
+    },
   },
   {
     id: 'hahmotelma-tarnica',
@@ -1597,5 +1610,105 @@ export const HAHMOTELMA_POL = [
       + 'ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.',
     lahde: 'en-Wikipedia "Bolesławiec", johdanto-osa ja osiot "History" ja "Pottery" '
       + '(tarkistettu 19.9.2026).',
+  },
+  {
+    id: 'hahmotelma-torun-zamek',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/pol-nosto-torun-59edb40e.jpg',
+      lyhyt: 'Toruńin ristiritarilinnan raunioitunut käymälätorni (dansker) kaupungin kirkkojen edessä.',
+      selite: 'Kuvassa on Toruńin ristiritarilinnan rauniot: taustalla kohoaa käymälätorni '
+        + '(dansker), joka on laajin säilynyt osa linnasta, ja sen takana näkyvät kaupungin '
+        + 'Pyhän Katariinan ja Pyhän Jaakobin kirkot.',
+      lahde: 'Valokuva: Pko (oletettu tekijä), Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Pko (oletettu tekijä)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Torun_zamek_krzyzacki_ruiny_wiezy.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+    },
+    nimi: 'Toruńin ristiritarien linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minkä ritarikunnan linna Toruńin rauniot olivat?',
+      'Miksi kaupunkilaiset purkivat linnan vuonna 1454?',
+    ],
+    korostukset: ['Saksalaisen ritarikunnan|Saksalaisen ritarikunnan', 'kapinan|kapinaa'],
+    nappi: 'Ritarikunnan linna, jonka Toruń hajotti kapinan alkaessa 1454',
+    // 18.61083333 E / 53.00944444 N — en-Wikipedia "Toruń Castle"
+    laudat: {
+      maailmankartta: { x: 6453.7, y: 1256.8 },
+      europe: { x: 568.5, y: 499.5 },
+    },
+    teksti: 'Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama '
+      + 'linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan '
+      + 'ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten '
+      + 'alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat '
+      + 'kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki '
+      + 'antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen '
+      + 'kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti '
+      + 'kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni '
+      + '(dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin '
+      + 'museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.',
+    lahde: 'en-Wikipedia "Toruń Castle", johdanto-osa ja osiot "History" ja "Architecture" '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-torun-zamek-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1300-luvulla Toruńin linna oli ehjä nelikulmainen '
+        + 'ristiritarilinnoitus muureineen ja torneineen, ritarikunnan komentajan varustettu '
+        + 'tukikohta Veiksel-joen rannalla.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Toruń Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Toru%C5%84_Castle',
+    },
+  },
+  {
+    id: 'hahmotelma-ogrodzieniec',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/pol-nosto-ogrodzieniec-71a1cf3e.jpg',
+      lyhyt: 'Ogrodzieńcin linnan rauniot kalkkikivikallioiden päällä Puolan Jurassa.',
+      selite: 'Kuvassa on Ogrodzieńcin linnan rauniot, jotka nousevat pyöreiden '
+        + 'kalkkikivikallioiden lomasta Puolan Jurassa; muurit ja tornit ovat vailla kattoja.',
+      lahde: 'Valokuva: Łukasz Śmigasiewicz, Wikimedia Commons (CC BY-SA 3.0 pl).',
+      tekija: 'Łukasz Śmigasiewicz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ogrodzieniec_zamek_2.jpg',
+      lisenssi: 'CC BY-SA 3.0 pl',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en',
+    },
+    nimi: 'Ogrodzieńcin linna',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Minkä reitin varrella Ogrodzieńcin linna on?',
+      'Mikä joukko poltti linnan osittain 1655?',
+    ],
+    korostukset: ['Kotkanpesät|Kotkanpesien', 'ruotsalaiset|Ruotsalaiset'],
+    nappi: 'Puolan Jurassa kohoava renessanssilinna, jota ruotsalaiset eivät säästäneet',
+    // 19.55333333 E / 50.45333333 N — en-Wikipedia "Ogrodzieniec Castle"
+    laudat: {
+      maailmankartta: { x: 6485.1, y: 1370.4 },
+      europe: { x: 586.6, y: 566.7 },
+    },
+    teksti: 'Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, '
+      + 'kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka '
+      + 'yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla '
+      + 'tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin '
+      + 'rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi '
+      + '1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 '
+      + 'Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli '
+      + 'puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan '
+      + 'korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen '
+      + 'asukkaille.',
+    lahde: 'en-Wikipedia "Ogrodzieniec Castle", johdanto-osa ja osio "History" '
+      + '(tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-ogrodzieniec-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1500-luvulla Ogrodzieńcin renessanssilinna oli näyttävä, '
+        + 'katettu aatelislinna kalkkikivikallioiden päällä, Boner-suvun ylpeys Puolan Jurassa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Ogrodzieniec Castle", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Ogrodzieniec_Castle',
+    },
   },
 ];

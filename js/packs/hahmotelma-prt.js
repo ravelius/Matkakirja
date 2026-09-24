@@ -62,7 +62,10 @@
  */
 
 /** Portugalin hahmotelmanostot: sisällölliset kohteet kaupungin ulkopuolella. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_PRT = [
+  ...EUROOPAN_KADONNEET.PRT,
   {
     id: 'hahmotelma-peneda-geres',
     kuva: {
@@ -1746,5 +1749,59 @@ export const HAHMOTELMA_PRT = [
       + 'niemimaaksi.',
     lahde: 'en-Wikipedia "Peniche Fortress", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+  },
+  /*
+   * CONVENTO DO CARMO — MATKAKIRJAN IHME, "RAPPEUTUNUT" (kadonnut: false),
+   * tilaus docs/raportit/havainnekuvat-codexille-eurooppa-20260921.md
+   * (kohde 15). Kuva on aito Commons-valokuva kattamattomista goottilaisista
+   * holvikaarista; `ihme.osoite` odottaa Codexin kulta-aikakuvaa
+   * (loistoaika-parikuva, ei vielä toimitettu — osoite 404:ttää siihen asti,
+   * sama käytäntö kuin Medina Azaharassa).
+   */
+  {
+    id: 'hahmotelma-convento-carmo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/prt-nosto-convento-carmo-b00cd17e.jpg',
+      lyhyt: 'Convento do Carmon kattamattomat goottilaiset holvikaaret taivasta vasten.',
+      selite: 'Kuvassa on Convento do Carmon luostarikirkon keskilaiva Lissabonin Chiadossa: '
+        + 'goottilaiset pilarit ja holvikaaret nousevat ilman kattoa suoraan taivasta kohti.',
+      lahde: 'Valokuva: Adriano Miguel M. Batista, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Adriano Miguel M. Batista',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Igreja_do_Convento_do_Carmo,_Nave_Central.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Convento do Carmo',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Miksi kirkolla ei ole kattoa?',
+      'Mitä raunioissa on nykyään?',
+    ],
+    korostukset: ['maanjäristys|maanjäristys'],
+    nappi: 'Luostarikirkko, jonka katon maanjäristys repi pois',
+    // -9.14 E / 38.71222222 N — en-Wikipedia "Carmo Convent"
+    laudat: {
+      maailmankartta: { x: 5528.7, y: 1853.2 },
+      europe: { x: 35.7, y: 875.5 },
+    },
+    teksti: 'Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon '
+      + 'kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli '
+      + 'aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin '
+      + 'maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. '
+      + 'Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja '
+      + 'rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa '
+      + 'keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.',
+    lahde: 'en-Wikipedia "Carmo Convent", johdanto-osa (tarkistettu 21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-convento-carmo-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Ennen vuoden 1755 maanjäristystä Convento do Carmon goottilainen kirkko seisoi '
+        + 'kattoineen kokonaisena, yhtenä Lissabonin suurimmista ja komeimmista '
+        + 'luostarikirkoista.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Carmo Convent", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Carmo_Convent',
+    },
   },
 ];

@@ -120,7 +120,10 @@
  */
 
 /** Ukrainan hahmotelmanostot: sisällölliset kohteet. */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
 export const HAHMOTELMA_UKR = [
+  ...EUROOPAN_KADONNEET.UKR,
   {
     id: 'hahmotelma-kiova',
     kuva: {
@@ -272,6 +275,7 @@ export const HAHMOTELMA_UKR = [
     ],
     nimi: 'Bakhchysarain palatsi',
     tyyppi: 'kulttuuri',
+    taso: 1,
     lahi: true,
     kysymykset: [
       'Kenen puolesta suru synnytti Kyynelten suihkulähteen tarinan?',
@@ -1036,6 +1040,77 @@ export const HAHMOTELMA_UKR = [
       fakta: 'Kansantarun mukaan kreivin tytär Syn itki järven täyteen suruissaan, kun '
         + 'hänen rakastettunsa, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimi '
         + 'yhdistää yhä molemmat nimet.',
+    },
+  },
+  /*
+   * KIOVAN KULTAINEN PORTTI / ZOLOTI VOROTA — MATKAKIRJAN IHME,
+   * "RAPPEUTUNUT" (kadonnut: false), tilaus docs/raportit/havainnekuvat-
+   * codexille-eurooppa-20260921.md (kohde 77). Kuva on aito Commons-
+   * valokuva säilyneistä keskiaikaisista muurinpätkistä 1982
+   * rekonstruktiopaviljongin SISÄLLÄ (sama tilanne kuin Clunyssa) —
+   * ei kuva koko nykyisestä, täyteen kokoonsa jälleenrakennetusta
+   * portista. `ihme.osoite` odottaa Codexin kulta-aikakuvaa
+   * (loistoaika-parikuva, ei vielä toimitettu — osoite 404:ttää siihen
+   * asti, sama käytäntö kuin Medina Azaharassa).
+   *
+   * HUOM SIJAINNISTA: Zoloti vorota (50.44889 N / 30.51333 E) on vain
+   * noin 0,4 laudan yksikön päässä olemassa olevasta hahmotelma-kiova-
+   * merkistä (30.52333 E / 50.45 N) — käytännössä sama piste kuin
+   * Kiovan pääkaupunkimerkki. `node tools/tarkista-nimiolimitys.mjs
+   * UKR` on ajettava tämän lisäyksen jälkeen; jos nimiöt limittyvät,
+   * ratkaisu (yhdistäminen Kiova-nostoon tms.) jää Fablen päätettäväksi.
+   */
+  {
+    id: 'hahmotelma-kultainen-portti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260921/ukr-nosto-kultainen-portti-668b3022.jpg',
+      lyhyt: 'Kiovan Kultaisen portin säilyneet keskiaikaiset muurinpätkät rekonstruktiopaviljongin sisällä.',
+      selite: 'Kuvassa on Kultaisen portin sisätila: karkeasta harmaasta kivestä ja tiilestä '
+        + 'muurattujen 1000-luvun alkuperäisten muurinpätkien jäänteet, joita ympäröi 1982 '
+        + 'rakennettu suojaava rekonstruktiopaviljonki.',
+      lahde: 'Valokuva: Vi Ko, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Vi Ko',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Руїни_Золотих_воріт_у_Києві_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Kiovan Kultainen portti',
+    tyyppi: 'historia',
+    lahi: true,
+    kysymykset: [
+      'Kuka Kultaisen portin rakennutti ja miksi?',
+      'Miten paljon alkuperäisestä portista on oikeasti jäljellä?',
+    ],
+    korostukset: ['Jaroslav Viisas|Jaroslav Viisas', 'Batu-kaanin|Batu-kaanin'],
+    nappi: 'Kiovan Rusin pääportti, jonka läpi kulki ruhtinaan voittosaatto',
+    // 30.51333 E / 50.44889 N — en-Wikipedia "Golden Gate, Kyiv"
+    laudat: {
+      maailmankartta: { x: 6850.4, y: 1370.6 },
+    },
+    teksti: 'Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama '
+      + 'Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu '
+      + 'juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon '
+      + 'kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan '
+      + 'piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä '
+      + 'pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden '
+      + 'kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä '
+      + 'portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen '
+      + 'rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on '
+      + 'vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. '
+      + 'Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun '
+      + 'muurinpätkää, jotka ovat jälleenrakennuksen ainoat aidosti keskiaikaiset osat.',
+    lahde: 'en-Wikipedia "Golden Gate, Kyiv", johdanto-osa ja osio "History" (tarkistettu '
+      + '21.9.2026).',
+    ihme: {
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-kultainen-portti-loistoaika.jpg',
+      kadonnut: false,
+      selite: 'Loistokaudellaan 1000-luvulla Kultainen portti oli Kiovan Rusin pääkaupungin '
+        + 'komein sisäänkäynti: korkea kivinen porttitorni, jonka huipulla kohosi kultakupolinen '
+        + 'porttikirkko, ja jonka läpi ruhtinas Jaroslav Viisas ratsasti voittosaatossaan '
+        + 'kaupunkiin.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: '
+        + 'en-Wikipedia "Golden Gate, Kyiv", tarkistettu 21.9.2026.',
+      url: 'https://en.wikipedia.org/wiki/Golden_Gate,_Kyiv',
     },
   },
 ];

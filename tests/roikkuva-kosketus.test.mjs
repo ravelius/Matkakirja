@@ -90,7 +90,7 @@ test('pallon sormivahti lukee noston dokumentista ja nollaa kirjaston listan', (
       `${laji} puuttuu sormivahdista`);
   }
   // Kaikki kytkennät puretaan pallon mukana.
-  assert.match(ele, /pura: \(\) => \{ pysaytaLiuku\(\); pysaytaRulla\(\); puraSormivahti\(\); \}/);
+  assert.match(ele, /pura: \(\) => \{ pysaytaLiuku\(\); pysaytaRulla\(\); pysaytaZoomi\(\); puraSormivahti\(\); puraSyote\(\); \}/);
 });
 
 test('kerrokset, jotka katoavat kesken kosketuksen, ilmoittavat siitä', () => {

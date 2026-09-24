@@ -66,6 +66,7 @@ const MODULES = [
   // fokusvirta-pariisi.js:ää, joka lukee tätä.
   'js/packs/maalehtinostot-fra.js',
   'js/packs/nakyvat-kaupungit-fra.js',
+  'js/packs/monumentit-eurooppa.js',
   'js/packs/hahmotelma-fra.js',
   'js/packs/hahmotelma-bel.js',
   'js/packs/hahmotelma-deu.js',
@@ -207,6 +208,11 @@ const MODULES = [
   'js/packs/fokusvirta-ljubljana.js',
   // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
   'js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  'js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  'js/packs/fokusvirta-valletta.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
@@ -421,6 +427,7 @@ const MODULES = [
   'js/passport.js',
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
+  'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
@@ -579,6 +586,11 @@ const MODULES = [
   // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti
   // (nousu tarkistetaan awardXp-portissa) ja ui.js nimikkeen laukkuun.
   'js/tietajatasot.js',
+  // Sisältöpaketin osa 2: game.js ja ui.js tuovat nämä staattisesti
+  // (pulmien generaattori tunnisteella, packien tekstipohjat).
+  'js/pulmageneraattorit.js',
+  'js/tekstipohja.js',
+  'js/ui-tekstit.js',
   'js/game.js',
   'js/ai.js',
   /*
@@ -728,6 +740,7 @@ const MODULES = [
   'js/livia-svg-paa.js',
   'js/livia-astronautti.js',
   'js/livia-svg.js',
+  'js/livia-uudet-versiot.js',
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',
   'js/pulu-paneelin-ylla.js',
@@ -816,8 +829,15 @@ const MODULES = [
    */
   'js/saapumistraileri.js',
   /*
-   * Kaiuttimen VU-mittari (15.9.2026): ei tuo mitään, joten paikka on
-   * vapaa — kunhan se on ennen js/ui.js:ää, joka tuo sen.
+   * Piirtokoe-asetus ENNEN kaiutinmittaria (23.9.2026, Syötekoe 5-8):
+   * kaiutinmittari tuo sen nyt voimassaOlevatKokeet-lukuun. Ei omia
+   * riippuvuuksia, joten paikka muuten vapaa.
+   */
+  'js/piirtokoe-asetus.js',
+  /*
+   * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
+   * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
+   * joka tuo sen.
    */
   'js/kaiutinmittari.js',
   'js/fokusvirta.js',
@@ -898,9 +918,14 @@ const MODULES = [
    * rivin yllä.
    */
   /*
+   * Peukalolevy (js/karttaselite-levy.js) ennen karttaselitettä, joka
+   * tuo sen (22.9.2026: valikon uusi liukukahva, ks. Raamattu).
+   */
+  'js/karttaselite-levy.js',
+  /*
    * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
-   * mapartin ja ui-apurit — kaikki jo yllä.
+   * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
   'js/karttaselite.js',
   'js/vakasikoni.js',
@@ -937,6 +962,15 @@ const MODULES = [
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
+  /*
+   * Karttatyökalun Maakunnat-välilehden runko (22.9.2026) ennen ui:ta
+   * (ui tuo kytkentäkutsun). Data ensin, moduuli perässä: se tuo
+   * ui-apurit ja fokuskohteet.js:n nykyisen maan päättelyn — molemmat
+   * jo yllä.
+   */
+  'js/packs/maakunnat-luonnehdinnat.js',
+  'js/packs/maakunnat-pulu.js',
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -1031,6 +1065,10 @@ const MODULES = [
    */
   'js/pulu-paikka.js',
   'js/kartta-liike.js',
+  'js/tarkkuus-asetus.js',
+  // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
+  // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
+  'js/kehittaja-pikatie.js',
   'js/main.js',
 ];
 
