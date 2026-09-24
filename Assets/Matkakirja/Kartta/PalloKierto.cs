@@ -876,6 +876,112 @@ namespace Matkakirja
             return t;
         }
 
+        [Tooltip("Panoroinnin (Panoroi) pehmennyksen ramppi: web LIUSKAN_AJON_RAMPPI 0,12.")]
+        public double panorointiRamppi = Panorointi.LiuskanRamppi;
+
+        /// <summary>
+        /// PANOROINTI RUUTUPISTEESEEN (Natiivi-UI, löydös 48; web js/pallolauta/lauta.js napautaKaupunki → ajaKamera
+        /// LIUSKAN_AJO_MS 420 ja LIUSKAN_PEHMENNYS): kamera ajaa niin, että maan pinnan piste (lat, lon, korkeus 0)
+        /// päätyy ruutupisteeseen <paramref name="ruutuMaali"/> (pikseleinä, origo vasen alakulma kuten
+        /// <see cref="RuutuPiste"/>). Korkeus, kallistus ja suuntima eivät muutu, vain katselupiste liikkuu
+        /// (pituus ja leveys lineaarisesti, kuten <see cref="Aja"/>, ilman nousukaarta). Pehmennys on webin
+        /// siirtoajonPehmennys rampilla <see cref="panorointiRamppi"/>; kesto <paramref name="kestoS"/> (web 0,42 s,
+        /// <see cref="Panorointi.LiuskanAjoS"/>), 0 tai alle = heti. Sormi keskeyttää kuten muutkin ajot, eikä
+        /// <paramref name="valmis"/>-kutsua silloin tehdä; muuten se kutsutaan ajon lopussa.
+        ///
+        /// Katselupiste ratkaistaan numeerisesti (<see cref="Panorointi.Ratkaise"/>) samalla asennonlaskulla kuin
+        /// kameran päivitys (<see cref="LaskeAsento"/>), alkuarvauksena maa maalipikselin alla. Reunatapaukset:
+        /// piste ruudun ulkopuolella tai pallon takana ratkeaa samoin (projektio ei välitä peitosta). Jos ratkaisu
+        /// ei osu 2 px:n sisään (maalipikseli taivasta kallistetussa kuvassa, katselupisteen leveysraja ±maxLeveys)
+        /// tai piste jäisi ratkaisussa horisontin taakse, kamera ajaa pisteen ruudun keskelle (katselupiste = piste),
+        /// jolloin se ainakin näkyy; lokiin varoitus. Käynnissä oleva pohjoisen palautus lasketaan valmiiksi
+        /// (suuntima 0). Ilman kameraa tai georeferenssiä valmis kutsutaan heti.
+        /// </summary>
+        public void Panoroi(double lat, double lon, Vector2 ruutuMaali, float kestoS, Action valmis)
+        {
+            var kamera = GetComponent<Camera>();
+            if (georeferenssi == null || kamera == null || !Kelvollinen() || !math.isfinite(lat) || !math.isfinite(lon))
+            {
+                Debug.LogWarning("MATKAKIRJA panorointi: ei kameraa tai kelvotonta tilaa, ohitetaan");
+                valmis?.Invoke();
+                return;
+            }
+            kosketettu = true;
+            liuku = 0;
+            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            double suunt = pohjoiseen ? 0.0 : suuntima;
+            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0.0));
+            Panorointi.Projektio f = (double p, double l, out double x, out double y) =>
+                Projisoi(kamera, LaskeAsento(p, l, suunt), kohde, out x, out y);
+
+            // Alkuarvaus: maa maalipikselin alla nykyisessä kuvassa (säde ellipsoidiin); taivasta vasten kohde itse.
+            var alku = (pituus: lon, leveys: lat);
+            var a0 = LaskeAsento(pituus, leveys, suunt);
+            if (MaaRuudulla(kamera, a0, ruutuMaali, out double3 maa))
+            {
+                var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(maa);
+                alku = Panorointi.Alkuarvaus(pituus, leveys, llh.x, llh.y, lon, lat, maxLeveys);
+            }
+            var r = Panorointi.Ratkaise(f, alku.pituus, alku.leveys, ruutuMaali.x, ruutuMaali.y,
+                AstettaPikselille() * 4.0, maxLeveys, 0.25, 8);
+            bool kelpaa = r.Virhe <= 2.0;
+            if (kelpaa)
+            {
+                var a1 = LaskeAsento(r.Pituus, r.Leveys, suunt);
+                kelpaa = math.dot(CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde), a1.silma - kohde) > 0.0;
+            }
+            if (!kelpaa)
+            {
+                Debug.LogWarning($"MATKAKIRJA panorointi: ({lat:0.###}, {lon:0.###}) → ({ruutuMaali.x:0}, {ruutuMaali.y:0}) " +
+                                 $"ei ratkea (virhe {r.Virhe:0.#} px, {r.Kierroksia} kierrosta) → piste ruudun keskelle");
+                r.Pituus = Kiedo(lon);
+                r.Leveys = math.clamp(lat, -maxLeveys, maxLeveys);
+            }
+            if (kestoS <= 0f)
+            {
+                ajo = null;
+                pituus = r.Pituus;
+                leveys = r.Leveys;
+                Aseta();
+                valmis?.Invoke();
+                return;
+            }
+            double ramppi = panorointiRamppi;
+            ajo = new Ajo
+            {
+                alku = new double3(pituus, leveys, korkeus),
+                loppu = new double3(pituus + Kiedo(r.Pituus - pituus), r.Leveys, korkeus),
+                kesto = math.max(0.05, kestoS),
+                nousu = 0.0,
+                valmis = valmis,
+                pehmennys = t => Pehmennys(t, ramppi),
+            };
+        }
+
+        /// <summary>Ruutupisteen säteen ensimmäinen osuma ellipsoidiin (korkeus 0) asennosta a; false = taivas.</summary>
+        static bool MaaRuudulla(Camera kamera, in Asento a, Vector2 ruutu, out double3 osuma)
+        {
+            osuma = default;
+            double3 eteen = math.normalize(a.kohde - a.silma);
+            double3 ylos = math.normalize(a.ylos - eteen * math.dot(a.ylos, eteen));
+            double3 oikea = math.cross(eteen, ylos);
+            double tanY = math.tan(math.radians(kamera.fieldOfView) * 0.5);
+            var rect = kamera.pixelRect;
+            if (rect.width <= 0 || rect.height <= 0) return false;
+            double nx = (ruutu.x - rect.x) / rect.width * 2.0 - 1.0, ny = (ruutu.y - rect.y) / rect.height * 2.0 - 1.0;
+            double3 suunta = eteen + oikea * (nx * tanY * kamera.aspect) + ylos * (ny * tanY);
+            // Ellipsoidi yksikköpalloksi: (x/a, y/a, z/b).
+            double3 s = CesiumWgs84Ellipsoid.GetRadii();
+            double3 o = a.silma / s, d = suunta / s;
+            double aa = math.dot(d, d), bb = 2.0 * math.dot(o, d), cc = math.dot(o, o) - 1.0;
+            double disk = bb * bb - 4.0 * aa * cc;
+            if (disk < 0 || aa <= 0) return false;
+            double t = (-bb - math.sqrt(disk)) / (2.0 * aa);
+            if (t <= 0) return false;
+            osuma = a.silma + suunta * t;
+            return true;
+        }
+
         void Etene(double dt)
         {
             ajo.aika += dt;
@@ -895,6 +1001,9 @@ namespace Matkakirja
             {
                 var valmis = ajo.valmis;
                 ajo = null;
+                // Kamera loppuasentoon ennen kutsua: valmis lukee usein RuutuPisteen (liuska ripustetaan merkin uuteen
+                // ruutupisteeseen, web ladoLevossa), ja muuten transform olisi vielä edellisen kehyksen asennossa.
+                if (valmis != null) Aseta();
                 valmis?.Invoke();
             }
         }
@@ -1018,26 +1127,21 @@ namespace Matkakirja
             katseKorkeus = katseKorkeus < 1.0 ? 0.0 : katseKorkeus * (1.0 - a);
         }
 
-        public void Aseta()
+        /// <summary>Kameran asento ECEF-koordinaateissa (metrit): <see cref="LaskeAsento"/>.</summary>
+        struct Asento
         {
-            if (georeferenssi == null) return;
-            // Suoja: yksikin ei-äärellinen arvo (NaN) tekee kameran käyttökelvottomaksi — kuva tyhjenee ja
-            // ScreenPointToRay kirjaa joka kehys "Screen position out of view frustum" (Laitetestaaja 24.9.,
-            // build 6). Palautetaan viimeisin kelvollinen asento ja kirjataan kerran, mistä arvo tuli.
-            if (!Kelvollinen())
-            {
-                if (!nanKirjattu)
-                {
-                    nanKirjattu = true;
-                    Debug.LogError($"MATKAKIRJA kamera: ei-äärellinen asento (lev {leveys}, pit {pituus}, kork {korkeus}, " +
-                                   $"kall {kallistus}, suunt {suuntima}, katse {katseKorkeus}) → palautetaan\n{Environment.StackTrace}");
-                }
-                (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus) = viimeKelvollinen;
-                ajo = null;
-                liuku = 0;
-            }
-            else viimeKelvollinen = (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus);
-            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            public double3 silma, kohde, ylos; // ylos = kameran yläsuunta
+            public double kaytetty, etaisyys, maasto;
+            public double3 silmaLlh;           // (pituus, leveys, korkeus)
+        }
+
+        /// <summary>
+        /// Kameran asento annetulla katselupisteellä ja suuntimalla, muut tilat (korkeus, kallistus, katseKorkeus,
+        /// maastonäyte) nykyisistä kentistä. Ei liikuta kameraa eikä muuta kenttiä: <see cref="Aseta"/> asettaa
+        /// kameran tällä, ja <see cref="Panoroi"/> ratkaisee katselupisteen samalla geometrialla.
+        /// </summary>
+        Asento LaskeAsento(double pit, double lev, double suunt)
+        {
             // Käytetty kallistus (löydös 28 b): tallennettua kallistusta EI leikata, vaan raja koskee vain kuvaa, joten
             // loitonnus ja lähennys palauttavat pelaajan kallistuksen. Lennon kuvaus (vapaaKuvaus) ei ole korkeuden
             // rajoittama. Ylempänä ennen 24.9. tässä oli kallistus = min(kallistus, raja), joka leikkasi pysyvästi.
@@ -1047,12 +1151,12 @@ namespace Matkakirja
             // Kamera kiertää pistettä (pituus, leveys, katseKorkeus): kallistus kääntää sen
             // pystysuorasta katsesuuntaa vastapäätä (suuntima 0 = kamera etelässä, katse
             // pohjoiseen), etäisyys pysyy samana. Kallistus 0 = suora katse alas.
-            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(pituus, leveys, katseKorkeus));
+            double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(pit, lev, katseKorkeus));
             double3 ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde);
             double3 napa = new double3(0, 0, 1);
             double3 pohjoinen = math.normalize(napa - ylos * math.dot(napa, ylos));
             double3 ita = math.normalize(math.cross(pohjoinen, ylos));
-            double b = math.radians(suuntima);
+            double b = math.radians(suunt);
             double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
             double k = math.radians(kaytetty);
             double3 suunta = ylos * math.cos(k) - eteen * math.sin(k);
@@ -1073,16 +1177,65 @@ namespace Matkakirja
                 silma = kohde + suunta * etaisyys;
                 silmaLlh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(silma);
             }
+            return new Asento
+            {
+                silma = silma, kohde = kohde, ylos = eteen * math.cos(k) + ylos * math.sin(k),
+                kaytetty = kaytetty, etaisyys = etaisyys, maasto = maasto, silmaLlh = silmaLlh,
+            };
+        }
+
+        /// <summary>
+        /// ECEF-pisteen paikka ruudulla (pikseleinä, origo vasen alakulma kuten WorldToScreenPoint) asennosta a,
+        /// kameran FOV:lla, kuvasuhteella ja pixelRectillä ilman Unityn kameraa. Ruudun oikea = eteen × ylös
+        /// (oikeakätinen ECEF; kallistus 0, suuntima 0 → oikea on itä kuten kartalla). false = kameran takana.
+        /// </summary>
+        static bool Projisoi(Camera kamera, in Asento a, double3 piste, out double x, out double y)
+        {
+            x = y = 0;
+            double3 eteen = math.normalize(a.kohde - a.silma);
+            double3 ylos = math.normalize(a.ylos - eteen * math.dot(a.ylos, eteen));
+            double3 oikea = math.cross(eteen, ylos);
+            double3 d = piste - a.silma;
+            double z = math.dot(d, eteen);
+            if (!(z > 1e-6 * math.length(d))) return false;
+            double tanY = math.tan(math.radians(kamera.fieldOfView) * 0.5);
+            var rect = kamera.pixelRect;
+            x = rect.x + (math.dot(d, oikea) / (z * tanY * kamera.aspect) + 1.0) * 0.5 * rect.width;
+            y = rect.y + (math.dot(d, ylos) / (z * tanY) + 1.0) * 0.5 * rect.height;
+            return true;
+        }
+
+        public void Aseta()
+        {
+            if (georeferenssi == null) return;
+            // Suoja: yksikin ei-äärellinen arvo (NaN) tekee kameran käyttökelvottomaksi — kuva tyhjenee ja
+            // ScreenPointToRay kirjaa joka kehys "Screen position out of view frustum" (Laitetestaaja 24.9.,
+            // build 6). Palautetaan viimeisin kelvollinen asento ja kirjataan kerran, mistä arvo tuli.
+            if (!Kelvollinen())
+            {
+                if (!nanKirjattu)
+                {
+                    nanKirjattu = true;
+                    Debug.LogError($"MATKAKIRJA kamera: ei-äärellinen asento (lev {leveys}, pit {pituus}, kork {korkeus}, " +
+                                   $"kall {kallistus}, suunt {suuntima}, katse {katseKorkeus}) → palautetaan\n{Environment.StackTrace}");
+                }
+                (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus) = viimeKelvollinen;
+                ajo = null;
+                liuku = 0;
+            }
+            else viimeKelvollinen = (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus);
+            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            var a = LaskeAsento(pituus, leveys, suuntima);
+            double kaytetty = a.kaytetty, etaisyys = a.etaisyys, maasto = a.maasto;
             KaytettyKallistus = kaytetty;
-            silmanLat = silmaLlh.y;
-            silmanLon = silmaLlh.x;
-            silmanKorkeus = silmaLlh.z;
-            double3 kameranYlos = eteen * math.cos(k) + ylos * math.sin(k);
+            silmanLat = a.silmaLlh.y;
+            silmanLon = a.silmaLlh.x;
+            silmanKorkeus = a.silmaLlh.z;
 
             var gt = georeferenssi.transform;
-            var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(silma));
-            var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(kohde));
-            var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(kameranYlos));
+            var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.silma));
+            var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.kohde));
+            var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(a.ylos));
             transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
 
             // Leikkaustasot seuraavat korkeutta: lähellä pintaa tarkkuus riittää.
