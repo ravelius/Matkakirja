@@ -200,7 +200,9 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat("_Peitto", Mathf.Clamp01(peitto));
             Vector3 kameraPaikka = kamera != null ? kamera.transform.position : Vector3.zero;
             int naytetty = 0;
-            for (int i = 0; i < valot.Count; i++)
+            int n = valot.Count;
+            if (kuvat.Length != n) { kuvat = new ValonKuva[n]; nakyvat = new float[n]; pinot = new int[n]; }
+            for (int i = 0; i < n; i++)
             {
                 var valo = valot[i];
                 var kuva = valo.Laske(nytMs, vahennettyLiike);
@@ -213,14 +215,40 @@ namespace Matkakirja.Natiivi
                     nakyvyys = Mathf.SmoothStep(0, 1, Mathf.InverseLerp(NakyvaAlku, NakyvaTaysi, Vector3.Dot(normaali, kohti)));
                 }
                 nakyvyydet[i] = nakyvyys * (float)kuva.Peitto;
-                Kirjoita(i, valo, kuva, nakyvyys, nytMs);
+                kuvat[i] = kuva; nakyvat[i] = nakyvyys; pinot[i] = 1;
                 if (nakyvyys > 0) naytetty++;
             }
+            /*
+             * PINOT KUTEN WEBISSÄ (Fable 24.9.: Pariisin pino 132 vs web 174/250). Webissä jokainen lamppu on oma
+             * canvas, ja samaan kaupunkiin osuvat canvasit sekoittuvat sRGB-arvoina päällekkäin, jolloin peitto
+             * kasautuu: a_k = 1 − (1 − a)^k. Lineaarisessa kehyksessä erilliset neliöt eivät tee samaa (pohja ei
+             * ole enää B). Samassa paikassa ja samassa tilassa olevat lamput piirretään siksi yhtenä neliönä,
+             * jonka varjostin kasaa k kertaa webin kaavalla. Napautus (nakyvyydet) koskee yhä jokaista lamppua.
+             */
+            for (int i = 0; i < n; i++)
+            {
+                if (nakyvat[i] <= 0) continue;
+                for (int j = 0; j < i; j++)
+                {
+                    if (nakyvat[j] <= 0 || pinot[j] <= 0) continue;
+                    if (valot[j].Tuleva != valot[i].Tuleva || valot[j].Nykyinen != valot[i].Nykyinen) continue;
+                    if ((paikat[j] - paikat[i]).sqrMagnitude > PinonEtaisyys * PinonEtaisyys) continue;
+                    pinot[j]++; pinot[i] = 0; break;
+                }
+            }
+            for (int i = 0; i < n; i++)
+                Kirjoita(i, valot[i], kuvat[i], pinot[i] > 0 ? nakyvat[i] : 0, nytMs, pinot[i]);
             Naytetty = naytetty;
             for (int c = 0; c < kanavat.Length; c++) mesh.SetUVs(c, kanavat[c]);
         }
 
-        void Kirjoita(int i, Liekkivalo valo, ValonKuva kuva, float nakyvyys, double nytMs)
+        ValonKuva[] kuvat = new ValonKuva[0];
+        float[] nakyvat = new float[0];
+        int[] pinot = new int[0];
+        /// <summary>Saman kaupungin lamput (sama paikka; yksikkö on georeferenssin metri).</summary>
+        const float PinonEtaisyys = 500f;
+
+        void Kirjoita(int i, Liekkivalo valo, ValonKuva kuva, float nakyvyys, double nytMs, int pino = 1)
         {
             int v0 = i * 4;
             if (nakyvyys <= 0)
@@ -235,7 +263,8 @@ namespace Matkakirja.Natiivi
             }
             var muoto = valo.Muoto(nytMs, vahennettyLiike);
             float laatikko = (float)kuva.Laatikko;
-            float peitto = (float)kuva.Peitto * nakyvyys;
+            // Pino koodataan peiton kanssa samaan kanavaan: w = peitto + 2·(pino − 1) (Valo.shader purkaa).
+            float peitto = (float)kuva.Peitto * nakyvyys + 2f * (Mathf.Max(1, pino) - 1);
             var k1 = new Vector4((float)(kuva.Sade * kuva.Skaala), (float)kuva.Kirkkaus, (float)muoto.KohinaAlku, (float)muoto.Kohina[4]);
             var kohina = new Vector4((float)muoto.Kohina[0], (float)muoto.Kohina[1], (float)muoto.Kohina[2], (float)muoto.Kohina[3]);
             var voimat = new Vector4((float)muoto.Voimat[0], (float)muoto.Voimat[1], (float)muoto.Voimat[2], (float)muoto.Voimat[3]);

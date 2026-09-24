@@ -165,7 +165,17 @@ Shader "Matkakirja/Linssit/Valo"
                 if (d <= S * 0.85 * Reuna(a, i)) c += Veto(d, S * 0.9, min(1.0, k * 0.6), i);
                 c += Veto(d, S * 0.26, min(1.0, k), i);
                 c = min(c, 1.0);
-                c *= i.p.w * _Peitto;
+                // w = peitto + 2·(pino − 1) (Valot.cs): pino = saman kaupungin lamput yhtenä neliönä.
+                float pino = floor(i.p.w * 0.5) + 1.0;
+                c *= (i.p.w - 2.0 * (pino - 1.0)) * _Peitto;
+                // Webin päällekkäiset canvasit (premultiplied source-over sRGB:nä): a_k = 1 − (1 − a)^k,
+                // väri samassa suhteessa.
+                if (pino > 1.0 && c.a > 1e-4)
+                {
+                    float ak = 1.0 - pow(1.0 - c.a, pino);
+                    c.rgb *= ak / c.a;
+                    c.a = ak;
+                }
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 // Webin canvas sekoittuu sRGB-arvoihin; projekti on lineaarinen. Tummalla
                 // pohjalla (_TummaPohja 1: keksintöjen tummennus) muunnos alla; ilman sitä hännän
