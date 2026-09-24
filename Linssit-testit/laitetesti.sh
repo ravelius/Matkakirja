@@ -30,6 +30,8 @@
 #                                          pariteettikuva linssi-karuselli-* (WEB ON MALLI, MITATTUNA)
 #   ./laitetesti.sh iss <kansio>           astronautin kamera: 16 kuvaa 0,25 s:n välein sovelluksen sisältä
 #                                          (komento.txt odota), kehysajat mittaus-iss.txt, video iss.mp4 (ffmpeg)
+#   ./laitetesti.sh astropulu <kansio>     astronautin kuva (KOHDE, oletus etna) ja minipulun kortti; PULU_X/PULU_Y
+#                                          (pt) napauttaa ensimmäistä valmista kysymystä, vastaus 20 s
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh huippuvuoret <kansio>  vertailu FIN + NOR, kamera 76/18/2500 km (kontakti-web.mjs KIINTEA=huippuvuoret)
 #   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
@@ -133,6 +135,12 @@ case "$1" in
     linssi "linssi pois"; sleep 2; hae "$2"
     ffmpeg -loglevel error -y -framerate 4 -pattern_type glob -i "$2/iss-*.png" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -pix_fmt yuv420p "$2/iss.mp4" && echo "video: $2/iss.mp4"
     awk '{ s+=$1; if ($1>m) m=$1; n++ } END { if (n) printf "kehyksiä %d, ka %.1f ms, pisin %.1f ms\n", n, s/n, m }' "$2/mittaus-iss.txt" 2>/dev/null ;;
+  astropulu)
+    kaynnista; portti
+    linssi "linssi satelliitti"; sleep 20
+    ui "ui linssi kuva ${KOHDE:-etna} pulu"; sleep 8; kuva astropulu-kortti
+    if [[ -n "$PULU_X" ]]; then ui "ui napauta $PULU_X $PULU_Y"; sleep 20; kuva astropulu-vastaus; fi
+    linssi "linssi pois"; sleep 2; hae "$2"; grep -a "pulu\|chat\|Livia" "$2/ui-loki.txt" | tail -6 ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
     # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.
