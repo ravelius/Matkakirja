@@ -4775,3 +4775,7 @@ Omistaja valitsi vedoksista (osat 1–3) D2 + reliefi + vektorirannat. Raamattuu
 ## PELIKOODARIN ULKOASUTARKISTUS KATALOGI-PR:AAN #3128 KOMMENTTINA (TILAMERKIT VENYVAT, PUHELIMEN MOOTTORISARAKKEET, TYHJA CC-NELIO, YLEISET (0), MUU-MOOTTORIN VARI) → UUSI SISALTOKIRJURI KORJAA ENNEN MERGEA; PARITEETIN 2. AJO KAYNNISSA (juna/b12 0a55b60) (25.9.2026 klo 00.05)
 
 Sisältökirjuri oli jo nollautumassa, joten tarkistus meni PR-kommentteihin; Postivahti lisää korjauslistan aloitusviestiin.
+
+## OMISTAJA klo 00.0x: RANTAVIIVA VEKTORINA HIMMEA TAI POIS (POHJAN VARIRAJA RIITTAA MERELLA), MAIDEN RAJAT TAYDELLA VOIMALLA — RAAMATTUUN, NATIIVISEPPA NAYTTAA MOLEMMAT KUVAPARISSA (25.9.2026 klo 00.05)
+
+Omistaja: 'Vektori voisi olla himmeämpi tai poissa jos meri. Maalla vektori varmasti hyvä erottamaan maat toisistaan.' Tarkennus PERUSKARTAN RESEPTI 2026-09-25 -kohtaan.
