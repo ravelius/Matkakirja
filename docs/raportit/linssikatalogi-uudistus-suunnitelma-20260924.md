@@ -7,7 +7,11 @@ Lähde pysyy docs/linssikatalogi.md:ssä; sivu lukee saman LINSSIT-taulukon. Kuv
 ämpärissä media.matkakirja.app/linssikatalogi/), sivun on toimittava myös ennen kuvia (paikkamerkki
 tyypin värillä ja ikonilla).
 
-## Rakenne ylhäältä alas
+## Rakenne: neljä välisivua (omistaja 25.9.2026 klo 00.3x)
+
+Sivu jaetaan yläreunan välilehdillä neljäksi välisivuksi, ei yhdeksi vieritettäväksi sivuksi: 1) Moottorit (avaus ja kuusi moottorikorttia), 2) Pelissä nyt, 3) Seuraavat (kaikki kerralla näkyvissä ruudukkona, ei vaakavieritystä), 4) Koko katalogi (suodattimet, kortit, tiekartta, esitystila). Välilehti URL-hashiin. Alla olevat osat sijoittuvat näille välisivuille.
+
+## Osat
 
 1. **Avaus**: yksi lause siitä, mitä linssi on ("Linssi on kartan päälle laskeutuva kerros, joka näyttää
    yhden ilmiön ajassa ja paikassa"), neljä lukua (linssiä, pelissä nyt, seuraavaksi, aineistolähteitä) ja
