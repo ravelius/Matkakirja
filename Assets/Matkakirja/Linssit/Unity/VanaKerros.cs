@@ -233,9 +233,9 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdKamera, new Vector4((float)kameraU.x, (float)kameraU.y, (float)kameraU.z, 0f));
 
             // Mittakaava ruudun keskellä: km pistettä kohti korkeudella pinnasta
-            // (Retina: yksi piste = dpi/163 pikseliä, kuten KaupunkiMerkit).
+            // (Retina: yksi piste = LinssiOhjain.Pistekerroin pikseliä, kuten UI).
             var korkeusM = math.max(1.0, (math.length(kameraU) - 1.0) * skaala.x);
-            var kerroin = Screen.dpi > 0 ? math.max(1.0, Screen.dpi / 163.0) : 1.0;
+            var kerroin = (double)LinssiOhjain.Pistekerroin;
             var pisteita = math.max(1.0, kam.pixelHeight / kerroin);
             var kmPx = 2.0 * korkeusM * math.tan(math.radians(kam.fieldOfView) * 0.5) / pisteita / 1000.0;
             var mitat = VanaPiirto.Mitat(kmPx);

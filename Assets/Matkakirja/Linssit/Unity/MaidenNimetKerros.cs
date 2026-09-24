@@ -94,7 +94,7 @@ namespace Matkakirja.Natiivi
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = LinssiOhjain.Pistekerroin;
             float pisteita = Screen.height / kerroin;
             foreach (var p in nimet)
             {
