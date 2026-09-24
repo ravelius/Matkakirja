@@ -25,17 +25,30 @@
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
+import { INTRO_TEXT, FLIGHT_FIRST } from '../../js/ui-tekstit.js';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
+/*
+ * Avausluentojen ruututekstit (Pelikoodari 24.9.2026, PR #3057): sama teksti
+ * kuin luenta, joten aikaleimat kohdistuvat siihen. intro = INTRO_TEXT,
+ * lento-alku = laudan flightFirst (tools/generoi-avaus.mjs INTRO_RUUTU ja LENTO_RUUTU).
+ */
+export const AVAUSLUENTOJEN_TEKSTIT = {
+  'assets/audio/intro-puhe.mp3': INTRO_TEXT,
+  'assets/audio/puhe-lento-alku.mp3': FLIGHT_FIRST.join(' '),
+};
+
 function voimassaOlevatAikaleimat() {
-  // Voimassa = kohdistettu täsmälleen nykyiseen matkakirjatekstiin (sama
+  // Voimassa = kohdistettu täsmälleen nykyiseen luentatekstiin (sama
   // ehto kuin js/luentareaktiot.js tarkistaAikaleimat).
   const kansio = join(JUURI, 'assets/aikaleimat');
-  const tekstit = new Map(Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite)
-    .map((v) => [v.matkakirja.aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), v.matkakirja.teksti]));
+  const tekstit = new Map([
+    ...Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).map((v) => [v.matkakirja.aanite, v.matkakirja.teksti]),
+    ...Object.entries(AVAUSLUENTOJEN_TEKSTIT),
+  ].map(([aanite, teksti]) => [aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), teksti]));
   return readdirSync(kansio).filter((f) => f.endsWith('.json')).sort().filter((f) => {
     const d = JSON.parse(readFileSync(join(kansio, f), 'utf8'));
     const teksti = tekstit.get(f);
