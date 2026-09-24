@@ -2,6 +2,7 @@
 //   keksinnöt: Käynnistä → siirry(10) → 12 s → siirry(11) → 12 s → kuva (kontakti-keksinnot-1873)
 //              siirry(25) → jatka → 12 s → kuva (kontakti-keksinnot-loppu)
 //   ihmisen matka: Käynnistä → valitse('levantti') → 12 s → tauko → kuva
+//   KIINTEA=radio: radio auki (50/10/6000 km) ja Lontoon asema äänettömänä
 //   KIINTEA=maat: vertailu (FIN; +SWE, NOR, DNK) ja maatiedot (JPN)
 //   KIINTEA=topografia|vesistot: vain se näkymä (45/10/8000 km tai 0/20/9000 km) tuoreella sivulla
 // Oikeat ajastimet (ei nopeutusta), pelaaja Lontoossa kuten natiivin "ui aloita lontoo" (KAUPUNKI=lontoo laitetesti.sh:ssa; webin pallopakassa ei ole Pariisia),
@@ -49,7 +50,8 @@ const k = await selain.newContext({ viewport: { width: 834, height: 1194 }, devi
 const s = await k.newPage();
 const virheet = [];
 s.on('pageerror', (e) => virheet.push(String(e)));
-await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+// Radion asemavirrat ovat ulkoisia (audio ilman CORSia): radiotilassa ne päästetään läpi.
+if (process.env.KIINTEA !== 'radio') await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
 await s.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
   const v = await ampari(route.request().url());
   if (!v) { route.abort(); return; }
@@ -154,6 +156,37 @@ const KIINTEAT = { topografia: [45, 10, 8000], vesistot: [0, 20, 9000] };
  * MAAT (natiivin laitetesti.sh maat): vertailu kamera 60/15/5000 km, Suomi oletuksena, sitten
  * SWE, NOR, DNK (js/vertailu.js valitseVertailuMaa); maatiedot 36/138/4000 km ja Japani.
  */
+/*
+ * RADIO (natiivi: linssi radio, radio aani 0, kamera 50 10 6000, radio kaupunki lontoo): linssi
+ * auki kiinteällä kameralla, sitten Lontoon asema äänettömänä (js/linssit/radio.js).
+ */
+if (process.env.KIINTEA === 'radio') {
+  const kamera = () => s.evaluate(() => {
+    const u = window.matkakirja.ui;
+    u.pallolauta?.zoomirajat?.({ max: 2.5 });
+    u.pallonInstanssi.pointOfView({ lat: 50, lng: 10, altitude: 6000 / 6371 }, 0);
+  });
+  await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes('radio')) ui.game.player.linssit.push('radio');
+    ui.valitseLinssi('radio');
+  });
+  await odota(6000); await ohita();
+  await s.evaluate(async () => { const r = await import('/js/linssit/radio.js'); r.asetaAani(0); });
+  await kamera(); await odota(5000);
+  await kuva('radio-auki');
+  const soi = await s.evaluate(async () => {
+    const r = await import('/js/linssit/radio.js');
+    r.asetaAani(0);
+    return { kanava: Boolean(r.kanavaKaupungille('lontoo')), tulos: String(r.soitaKaupunki('lontoo')) };
+  });
+  console.log('radio lontoo', JSON.stringify(soi));
+  await odota(12000); await kamera(); await odota(2000);
+  await kuva('radio-lontoo');
+  console.log('radio tila', JSON.stringify(await s.evaluate(async () => (await import('/js/linssit/radio.js')).tilanne?.())));
+  await selain.close(); palvelin.close(); process.exit(0);
+}
 if (process.env.KIINTEA === 'maat') {
   const kamera = (la, ln, km) => s.evaluate(([a, b, k]) => {
     const u = window.matkakirja.ui;
