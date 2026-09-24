@@ -668,12 +668,16 @@ namespace Matkakirja.Peli.Testit
                 foreach (var k in s.Kentat)
                 {
                     bool loytyi = false, vainRaaka = false;
-                    foreach (var polku in k.Polut)
+                    for (int pi = 0; pi < k.Polut.Length; pi++)
                     {
+                        var polku = k.Polut[pi];
                         var arvot = Arvot(o, polku).ToList();
                         // Tähdellinen polku löytyy, kun säiliö on (tyhjä taulukko = ei tarkistettavaa).
                         int tahti = polku.IndexOf(".*", StringComparison.Ordinal);
                         bool onArvo = tahti >= 0 ? Arvot(o, polku.Substring(0, tahti)).Any(x => x.Arvo != null) : arvot.Any(x => x.Arvo != null);
+                        // Säiliö on, mutta yhdelläkään alkiolla ei ole tätä lehteä (esim. tyypit.*.nimi skeemassa
+                        // 1.26, jossa vain name): kokeile seuraavaa vaihtoehtoa ennen kuin puute on virhe.
+                        if (tahti >= 0 && onArvo && pi < k.Polut.Length - 1 && arvot.Count > 0 && arvot.All(x => x.Arvo == null)) continue;
                         if (Paataso.RaakaKielletty && OnRaaka(polku)) { vainRaaka |= onArvo; continue; }
                         if (!onArvo) continue;
                         loytyi = true;
