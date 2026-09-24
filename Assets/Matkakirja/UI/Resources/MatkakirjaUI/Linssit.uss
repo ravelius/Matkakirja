@@ -2644,18 +2644,6 @@
 }
 
 /* --- radion napit pallolla (RadioNapit, web .pallolauta-radionappi) --------- */
-/* Radiouudistus: soivan maston nimi osuma-alueen oikealla puolella (napin keskikohta = maston puoliväli). */
-.mk-radionappi__nimi {
-    position: absolute;
-    left: 34px;
-    top: 14px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    color: #ffd9b0;
-    text-shadow: 0 1px 2px #1a0f06;
-}
-
 .mk-radionapit {
     position: absolute;
     top: 0;
