@@ -103,6 +103,49 @@ kohta 3).
 
 Ei avoimia omistajan päätöksiä — järjestys on Fablen hyväksymä.
 
+## 5.5. Kohdekartta: 12 kaupungin lista ja hylkäysperuste 18:lle (24.9.2026, Fablen hyväksymä)
+
+Pohjajoukko on kohdan 3 kaupunki/taajama-luokka (30 kaupunkia — luonnonkohteet,
+33 kpl, eivät koskaan saa kävelykarttaa). Kohdekartta vaatii kaksi asiaa
+yhtä aikaa: 1) toimivan katuruudukon Overpassin bbox-haussa (Norfolk-koe:
+~1700 asukkaan paikka piirtyi tyhjäksi, yksi tie ja muutama rakennus;
+Kalgoorlie, n. 30 000 as., piirtyi hyvin heti), ja 2) vähintään kaksi
+aidosti paikannettavaa, osoitteellista kohdetta kaupungissa (luovutus
+`viesti-sisaltokirjuri-luovutus-20260924-e.md` kohta 4.1) — muuten
+kartta jätetään tekemättä.
+
+**Hyväksytty 12 kaupungin lista** (kaikki mergetyistä N8–N16-kaupungeista,
+täyttävät molemmat ehdot): Kalgoorlie, Mount Isa, Broome, Geraldton,
+Porto Velho, Santarém, João Pessoa, Macapá, Cayenne, Kimberley, Gao,
+Al Kufra.
+
+**Hylätty 18 jakautuu kolmeen ryhmään** (tarkistettu `js/packs/*.js`:stä
+tässä haarassa 24.9.2026 — ei koskaan olettaen):
+
+1. **Ei vielä mergetty (6)** — sisältö on auki olevissa N2/N4/N5/N6-erien
+   PR:issä (#2996, #3002, #3004, #3006), ei tässä haarassa eikä mainissa
+   arvioitavaksi: Managua, Nouméa, Puerto Montt, San Juan, São Luís (N2),
+   Ouro Preto (N6). Arvioidaan uudelleen, kun PR mergetään (kohta 4.2).
+2. **Liian pieni asutus, katuruudukko piirtyisi todennäköisesti tyhjäksi
+   Norfolk-kokeen mukaan (10)**: Norfolk/Kingston (n. 800 as.), Churchill
+   (n. 900 as.), Birdsville (n. 140 as.), Coober Pedy (n. 1 700 as.),
+   Exmouth (n. 2 500 as.), Nome (n. 3 600 as.), Sitka (n. 8 500 as.,
+   raja-alueella), Stanley/Falkland (n. 2 500 as.), Jamestown/St Helena
+   (n. 800 as.), Hamilton/Bermuda (itse kaupunkikeskus n. 1 000 as.,
+   vaikka territorio on suurempi).
+3. **Riittävä väestö, mutta ei kahta paikannettavaa kohdetta (2)** —
+   nostot ovat aluetason tunnelmaa/teemaa, eivät yksittäisiä
+   osoitteellisia nähtävyyksiä: Campo Grande (nostot: ara-papukaijat
+   kaupungin puistojen yllä, "portti Pantanaliin" — ei yksittäistä
+   patsasta tai rakennusta; ks. myös kohdan 6 faktavirhehavainto samasta
+   kaupungista), Murzuk (nostot: Tadrart Acacusin kalliomaalaukset ovat
+   kaukana keitaan ulkopuolella eivätkä kävelymatkan päässä, taatelipalmu
+   ja karavaanikieli ovat teemallisia tekstejä ilman paikkaa).
+
+Lista ei ole pysyvä poissulkeva sääntö: jos jokin näistä saa myöhemmin
+uuden, paikannettavan noston tai kaupunki mergetään, kohdekartta
+harkitaan uudelleen samalla kaavalla.
+
 ## 6. Galleria-vaihe — tulokset (24.9.2026, Fablen hyväksymä linja: vain aito löytö)
 
 Menetelmä: `node tools/hae-commons.mjs haku "<kaupunki/aihe> painting"`
