@@ -22,6 +22,8 @@ namespace Matkakirja
         public KaupunkiMerkit merkit;
         public Reitit reitit;
         public NapaKannet napakannet;
+        /// <summary>Nykyisen maan väritaso (kerma muualle), Cesiumin raster-paikka 2.</summary>
+        public Varitaso varitaso;
 
         /// <summary>Linssin rasterin näkyvä alue on ladattu (avain).</summary>
         public event Action<string> KerrosValmis;
@@ -120,7 +122,11 @@ namespace Matkakirja
         {
             switch (kerros)
             {
-                case "laatat": if (pohja != null) pohja.enabled = nakyy; break;
+                case "laatat":
+                    if (pohja != null) pohja.enabled = nakyy;
+                    if (varitaso != null) varitaso.Nakyvat(nakyy);
+                    break;
+                case "varitaso": if (varitaso != null) varitaso.Nakyvat(nakyy); break;
                 case "maasto":
                     if (pallo != null)
                         pallo.tilesetSource = nakyy ? CesiumDataSource.FromUrl : CesiumDataSource.FromEllipsoid;
@@ -144,6 +150,8 @@ namespace Matkakirja
                                    int min, int max, float alfa)
         {
             PoistaRasteri(avain);
+            // Väritaso vapauttaa paikan 2 linssin ajaksi (Cesiumissa kolme raster-paikkaa).
+            if (varitaso != null) varitaso.Linssit(true);
             var kaytetyt = new HashSet<string>();
             foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
             string avainCesium = !kaytetyt.Contains("1") ? "1" : !kaytetyt.Contains("2") ? "2" : null;
@@ -169,8 +177,9 @@ namespace Matkakirja
         public void PoistaRasteri(string avain)
         {
             if (!rasterit.TryGetValue(avain, out var r)) return;
-            if (r.kerros != null) Destroy(r.kerros);
+            if (r.kerros != null) { r.kerros.enabled = false; Destroy(r.kerros); }
             rasterit.Remove(avain);
+            if (rasterit.Count == 0 && varitaso != null) varitaso.Linssit(false);
         }
 
         public void Alfa(string avain, float alfa)

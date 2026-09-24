@@ -76,6 +76,8 @@ namespace Matkakirja.Editori
             merkit.georeferenssi = georef;
             merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", new Color32(0x3b, 0x2f, 0x22, 0xff));
             merkit.fontti = Fontti();
+            // Aloitusvalinnan huomiorengas: web .pallolauta-huomio, --kulta #eab84e.
+            merkit.rengasMateriaali = Materiaali("Kaupunkirengas", "Matkakirja/Rengas", new Color32(0xea, 0xb8, 0x4e, 0xff));
 
             // Reitit: värit ja katkot verkkopelin js/pallolauta/reitit.js REITIN_VARIT ja *_KATKO_AST.
             var reitit = georefGo.AddComponent<Reitit>();
@@ -96,6 +98,9 @@ namespace Matkakirja.Editori
             kerrokset.merkit = merkit;
             kerrokset.reitit = reitit;
             kerrokset.napakannet = kannet;
+            var varitaso = georefGo.AddComponent<Varitaso>();
+            varitaso.pallo = pallo;
+            kerrokset.varitaso = varitaso;
             var maat = georefGo.AddComponent<MaaKartta>();
             maat.georeferenssi = georef;
             maat.kerrokset = kerrokset;
@@ -152,6 +157,8 @@ namespace Matkakirja.Editori
             kamera.fieldOfView = 50f; // webin PALLO_FOV (js/pallolauta/kamera.js), pystysuunta kuten three.js
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
+            // Aloitusportin sumennus (web .start-gate blur 6px, löydös 17): materiaali vie shaderin käännökseen.
+            kierto.sumennusMateriaali = Materiaali("Sumennus", "Matkakirja/Sumennus", Color.white);
             merkit.kamera = kamera;
             merkit.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
@@ -178,6 +185,7 @@ namespace Matkakirja.Editori
             aurinko.georeferenssi = georef;
             aurinko.valo = valo;
             nappula.aurinko = aurinko;
+            aurinko.taivas = Materiaali("Taivas", "Matkakirja/Taivas", new Color(0.80f, 0.87f, 0.94f));
             RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
 
