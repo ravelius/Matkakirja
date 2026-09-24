@@ -363,7 +363,9 @@ namespace Matkakirja
                 // Esilataus (build 9): vaihto vasta, kun kolmannes reitin laatoista on välimuistissa (lähtöpää ensin),
                 // muuten viimeistään t > 0,2 ennen kuin usva alkaa hälvetä (t > 0,24).
                 bool pintaValmis = esilataus == null || esilataus.Osuus >= 0.33f;
-                if (!pintaVaihdettu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 && pintaValmis || t > 0.2))
+                // !laskuSumu: laskun jälkeen (pintaVaihdettu = false) pinta ei saa vaihtua takaisin; ennen t > 0,2 -ehto
+                // vaihtoi sen uudelleen joka kehys, ja loki näytti 15 vaihto/lasku-paria (kylmä lento 24.9.).
+                if (!pintaVaihdettu && !laskuSumu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 && pintaValmis || t > 0.2))
                 {
                     pintaVaihdettu = true;
                     kerrokset?.LentoPohja(true);

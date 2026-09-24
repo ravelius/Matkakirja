@@ -291,11 +291,36 @@ namespace Matkakirja
         {
             Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? S2MeriVari.linear : S2MeriVari;
             Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, 1f));
-            Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? S2MeriKynnys : 0f);
+            Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? (LentoTestiS2 ? -1f : S2MeriKynnys) : 0f);
             bool vara = satelliittiLento && varaKartta != null && varaKarttaAvain == SatelliittiAvain();
             if (vara) Shader.SetGlobalTexture(LentoVaraKarttaId, varaKartta);
-            Shader.SetGlobalFloat(LentoVaraId, vara ? 1f : 0f);
+            // Testitila (lentoharmaa): 2 magenta missä vara laukeaisi, 3 paikan 1 kattavuus, 4 varakartan UV;
+            // "varapois" pitää varan pois. Testitilat eivät tarvitse varakarttaa (4 näyttää pelkän UV:n).
+            float arvo = !satelliittiLento || LentoTestiVaraPois ? 0f : LentoTesti >= 2 ? LentoTesti : vara ? 1f : 0f;
+            Shader.SetGlobalFloat(LentoVaraId, arvo);
+            if (satelliittiLento)
+            {
+                // Maan akselit (_maaNolla/_maaIta/_maaAkseli) uudelleen lennon alussa: varakartan UV ei saa riippua siitä,
+                // oliko georeferenssi alustettu KarttaKerrokset.Awakessa (muuten UV = kulma → valkoinen Etelämanner).
+                KorkeusKerroin.Aseta(KorkeusKerroin.Arvo, GetComponent<CesiumGeoreference>());
+                Debug.Log($"MATKAKIRJA lennon pinta: varjostin _lentoVara {arvo:0}, varakartta {(varaKartta != null ? varaKarttaAvain : "ei")}, " +
+                          $"_maaNolla {Shader.GetGlobalVector("_maaNolla")}, _maaAkseli {Shader.GetGlobalVector("_maaAkseli")}");
+            }
         }
+
+        /// <summary>
+        /// HARMAIDEN SUORAKULMIOIDEN KOKEILU (komento "lentoharmaa", simulaattori 24.9.2026): 0 = normaali; 2 = magenta
+        /// siellä, missä paikan 1 rasteri puuttuu (vara laukeaisi); 3 = paikan 1 kattavuus (vihreä rasteri, magenta ei);
+        /// 4 = varakartan UV väreinä (punainen = maan akselit puuttuvat). Voimaan heti ja seuraavilla lennoilla.
+        /// </summary>
+        public static int LentoTesti;
+        /// <summary>Varakartta pois lennolta (hypoteesi: näkyykö harmaa ilman sitä samana).</summary>
+        public static bool LentoTestiVaraPois;
+        /// <summary>Paikan 2 (Sentinel) peitto syaanina (hypoteesi d).</summary>
+        public static bool LentoTestiS2;
+
+        /// <summary>Testitilan muutos voimaan heti (Komennot).</summary>
+        public void LentoTestiVoimaan() => PaivitaLennonVarjostin();
 
         /// <summary>
         /// LENNON VARAKARTTA (harmaat suorakulmiot loittonuksessa, Fablen päätös 24.9.2026 "isälaatta pysyy näkyvissä").
