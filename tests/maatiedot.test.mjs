@@ -46,6 +46,19 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * muutkin Pohjois-Amerikan rivit (js/packs/northamerica-maatiedot.js).
  * Lista saa vain lyhentyä.
  */
+/*
+ * Kuusi uutta pientä maalehteä saivat aihesivunsa 24.9.2026: BMU
+ * (Bermuda) ja PRI (Puerto Rico) Pohjois-Amerikan, GUF (Ranskan
+ * Guayana) ja FLK (Falklandinsaaret) Etelä-Amerikan, NCL (Uusi-
+ * Kaledonia) ja NFK (Norfolkinsaari) Oseanian tauluihin. BMU, GUF, FLK,
+ * NCL ja NFK ovat merentakaisia alueita samaan tapaan kuin GRL/SHN/HKG
+ * — niiden vertailukelpoisuus Maailmanpankin/V-Demin suvereenien
+ * valtioiden sijalistoilla pitää selvittää tapaus kerrallaan ennen
+ * riviä. PRI ON osa Yhdysvaltoja mutta World Bank pitää sitä usein
+ * omana taloutenaan (vrt. HKG) — senkin osalta pitää tarkistaa erikseen.
+ * Tunnusluvut ovat oma jatkoerä, ei tehty tässä. Lista saa vain
+ * lyhentyä.
+ */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
@@ -59,8 +72,10 @@ const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // löydy — Itä-Timor sai sillä rivinsä ("Bondia", Tetun language) —
   // mutta artikkelissa "Bislama" ei ole tervehdystä lainkaan, eikä
   // arvattu sana kelpaa. Muut kolme lukua ovat valmiina raportissa,
-  // joten rivi syntyy heti, kun tervehdykselle löytyy lähde.
+  // joten rivi syntyy heti, kun tervehdykselle löytyy lähde. (Korjattu
+  // erillisessä PR:ssä 24.9.2026 — tämä haara ei riipu siitä.)
   'VUT',
+  'BMU', 'PRI', 'GUF', 'FLK', 'NCL', 'NFK',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;
