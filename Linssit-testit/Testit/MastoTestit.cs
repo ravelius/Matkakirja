@@ -125,6 +125,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(m.Lista.Count(x => x.Kanava) > 80, "kanavalliset");
             Oleta.Sama(40.0, y.Ajo.Value.Kallistus, "avaus kallistaa 40°");
             Oleta.Sama((double?)40.0, y.AjonKallistus, "kallistus välitetään kamera-ajolle");
+            var kerrokset = (ValeKerrokset)y.Kerrokset;
+            Oleta.Tosi(kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros), "topografia pohjaksi (omistaja 24.9. klo 22.3x)");
+            Oleta.Sama(Topografia.ReliefiSarja, kerrokset.Rasterit[RadioLinssi.PohjaKerros].Url);
+            Oleta.Sama(false, kerrokset.Nakyvat["laatat"], "pergamentti piiloon");
             void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
             Aja(0.75);
             Oleta.Tosi(m.H > 0.3 && m.H < 0.8, "hämärä puolivälissä: " + m.H);
@@ -159,6 +163,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!l.KameraAjossa && y.Ajo.Value.Equals(ennen), "ele keskeytti, kamera ei enää liiku");
             l.Sulje();
             Oleta.Sama(null, m.Lista, "mastot pois");
+            Oleta.Tosi(!kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros) && kerrokset.Nakyvat["laatat"], "pohja palautettu");
             Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
             Oleta.Sama((double?)0.0, y.AjonKallistus, "palautus välitetään");
         }

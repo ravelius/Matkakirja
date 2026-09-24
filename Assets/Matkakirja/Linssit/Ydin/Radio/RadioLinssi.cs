@@ -184,6 +184,34 @@ namespace Matkakirja.Linssit.Radio
 
         public IReadOnlyList<Masto> MastoLista => mastot;
 
+        /// <summary>
+        /// POHJA (omistaja 24.9. klo 22.3x, havainnekuva A): radiolinssin kartta on värillinen topografia hämärässä,
+        /// sama reliefisarja kuin topografialinssissä. Oma avain, ettei topografialinssin tila sekoitu.
+        /// </summary>
+        public const string PohjaKerros = "radio-topografia";
+        bool pohjaVaihdettu, pohjaPalautettu;
+
+        void VaihdaPohja()
+        {
+            if (y?.Kerrokset == null) return;
+            y.Kerrokset.LisaaRasteri(PohjaKerros, new Rasteri
+            {
+                Url = Topografia.ReliefiSarja, Projektio = Projektio.WebMercator,
+                MinTaso = 0, MaxTaso = Topografia.ReliefiMaxTaso, Alfa = 1f,
+            });
+            y.Kerrokset.Nakyvyys(Topografia.Pohja, false);
+            pohjaVaihdettu = true;
+            pohjaPalautettu = false;
+        }
+
+        void PalautaPohja()
+        {
+            if (!pohjaVaihdettu || y?.Kerrokset == null) return;
+            y.Kerrokset.Poista(PohjaKerros);
+            y.Kerrokset.Nakyvyys(Topografia.Pohja, true);
+            pohjaVaihdettu = false;
+        }
+
         void AvaaMastot()
         {
             mastot.Clear();
@@ -211,6 +239,7 @@ namespace Matkakirja.Linssit.Radio
             {
                 Mastot3D.Mastot(mastot);
                 Mastot3D.Hamara(0);
+                VaihdaPohja();
             }
             // Kallistus 40° (Fable 24.9.: mastot näkyvät vain kallistetussa kamerassa); pelaaja saa muuttaa.
             if (y != null && Mastot3D != null)
@@ -224,6 +253,7 @@ namespace Matkakirja.Linssit.Radio
 
         void SuljeMastot()
         {
+            PalautaPohja();
             if (Mastot3D != null)
             {
                 Mastot3D.Renkaat(0, 0, 0, Array.Empty<double>());
@@ -271,6 +301,12 @@ namespace Matkakirja.Linssit.Radio
             double nyt = Nyt, dt = double.IsNaN(edellinenKello) ? 0 : (nyt - edellinenKello) / 1000;
             edellinenKello = nyt;
             if (Mastot3D == null || !Auki || double.IsNaN(avausHetki)) return;
+            // Reliefi ei tule (osoite ei vastaa): pelaaja näkee oman karttansa eikä tyhjää palloa (kuten topografialinssi).
+            if (pohjaVaihdettu && !pohjaPalautettu && y.Kerrokset.Tila(PohjaKerros) == KerrosTila.Luovutti)
+            {
+                pohjaPalautettu = true;
+                y.Kerrokset.Nakyvyys(Topografia.Pohja, true);
+            }
             double s = (nyt - avausHetki) / 1000;
             bool vahennetty = y?.VahennettyLiike ?? false;
             Mastot3D.Hamara((float)(vahennetty ? 1 : Kamera.Kamerakayrat.Pehmea(Math.Clamp(s / Mastot.AvausS, 0, 1))));
