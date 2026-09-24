@@ -1125,7 +1125,7 @@ namespace Matkakirja.Natiivi
             // Testikomento ilman esitystä: ensimmäinen osa paikallaan.
             if (es == null || es.I != jakso) { AsetaKertomusteksti(osat[Math.Max(0, osa)].Teksti, true); return; }
             double kulunut = es.Kulunut;
-            if (kulunut < tekstiViive) { AsetaKertomusteksti(kertomusTeksti.text, false); return; }
+            if (kulunut < tekstiViive) { AsetaKertomusteksti(kertomusRaaka, false); return; }
             double luenta = Math.Max(1, es.Luenta);
             if (osienAjat == null || osienLuenta != luenta)
             {
@@ -1148,12 +1148,40 @@ namespace Matkakirja.Natiivi
             AsetaKertomusteksti(osat[i].Teksti, kulunut >= osienAjat[i] && !haipyy);
         }
 
+        string kertomusRaaka = "";
+
         void AsetaKertomusteksti(string teksti, bool nakyy)
         {
-            if (teksti != kertomusTeksti.text) kertomusTeksti.text = teksti;
+            teksti ??= "";
+            if (teksti != kertomusRaaka)
+            {
+                kertomusRaaka = teksti;
+                // Web line-height 1.45 (USS:ssä ei riviväliä: TextCoren line-height-tagi).
+                kertomusTeksti.text = teksti.Length == 0 ? "" : "<line-height=145%>" + teksti + "</line-height>";
+                Tasapainota();
+            }
             if (nakyy == tekstiNakyy) return;
             tekstiNakyy = nakyy;
             kertomusLaatikko.EnableInClassList("mk-nakyy", nakyy);
+        }
+
+        /// <summary>
+        /// Web text-wrap: balance: rivit yhtä pitkiksi. Mitataan teksti yhdellä rivillä, lasketaan montako riviä laatikon
+        /// leveyteen tarvitaan ja kavennetaan tekstialue rivien keskipituuteen (pieni vara, ettei viimeinen sana putoa).
+        /// </summary>
+        void Tasapainota()
+        {
+            kertomusTeksti.style.maxWidth = StyleKeyword.Null;
+            if (kertomusRaaka.Length == 0) return;
+            kertomusTeksti.schedule.Execute(() =>
+            {
+                float tila = kertomusLaatikko.contentRect.width;
+                if (float.IsNaN(tila) || tila <= 0) return;
+                var yksi = kertomusTeksti.MeasureTextSize(kertomusTeksti.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined);
+                if (float.IsNaN(yksi.x) || yksi.x <= tila) return;
+                int rivit = Mathf.CeilToInt(yksi.x / tila);
+                kertomusTeksti.style.maxWidth = Mathf.Min(tila, Mathf.Ceil(yksi.x / rivit * 1.06f + 8f));
+            });
         }
 
         void AvaaNosto(string tunnus)
