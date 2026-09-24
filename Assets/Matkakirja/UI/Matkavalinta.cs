@@ -127,7 +127,10 @@ namespace Matkakirja.Natiivi
             {
                 int indeksi = i;
                 var (nimi, selite) = vaihtoehdot[i];
-                Ikonit.Viiva.TryGetValue(IkoniNimelle(nimi), out var ikoni);
+                // Liiku-polun rivit ovat kohteita ("Lontoo (50 p)"): ikoni valitusta kulkutavasta (web: bussi/kone/purje).
+                string ikoniNimi = IkoniNimelle(nimi);
+                if (ikoniNimi == "kompassi" && valittuTapa.HasValue) ikoniNimi = TavanIkoni(valittuTapa.Value);
+                Ikonit.Viiva.TryGetValue(ikoniNimi, out var ikoni);
                 var b = Rakenne.Nappi(null, "mk-valintarivi", () => { if (Auki) valittu?.Invoke(indeksi); }, rivit, ikoni);
                 Rakenne.Teksti(nimi, "mk-valintarivi__nimi", b);
                 if (!string.IsNullOrEmpty(selite)) Rakenne.Teksti(selite, "mk-valintarivi__selite", b);
@@ -190,6 +193,8 @@ namespace Matkakirja.Natiivi
         // --- Liiku (PeliOhjain.Kulkutavat, LiikuMuuttui) --------------------------------
 
         IReadOnlyList<KulkutapaNappi> tavat = Array.Empty<KulkutapaNappi>();
+        /// <summary>Liiku-liu'usta viimeksi valittu tapa (kohderivien ikoni); testikomento kulkutapa ohittaa liu'un.</summary>
+        Kulkutapa? valittuTapa;
         bool liikuEstetty;
 
         static string TavanIkoni(Kulkutapa t) => t switch
@@ -263,6 +268,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             SuljeLiuku();
+            valittuTapa = t.Laji;
             var virhe = PeliOhjain.Instanssi?.ValitseKulkutapa(t.Laji);
             if (virhe != null && UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(virhe);
         }
