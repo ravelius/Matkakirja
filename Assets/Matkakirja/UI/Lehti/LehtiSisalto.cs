@@ -41,6 +41,8 @@ namespace Matkakirja.Natiivi
         public List<(string Url, string Nimi, string Otsake)> Musiikkilinkit = new List<(string, string, string)>();
         public LehtiKuva Kuva;
         public List<LehtiKuva> Galleria = new List<LehtiKuva>();
+        /// <summary>Kehittäjän liitteen noston lisäosa tekstin perään (web nosto.toiminnot: napit, kentät), muuten null.</summary>
+        public Action<VisualElement> Lisa;
     }
 
     public sealed class LehtiTehtava

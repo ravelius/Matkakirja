@@ -62,6 +62,8 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
         /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
+        /// <summary>Auki olevan kehittäjän liitteen nimi (esim. "Lukijoilta") tai null.</summary>
+        public string LiiteAuki => Auki && lehti != null && lehti.Laji == LehtiLaji.Kehittaja ? lehti.Nimi : null;
         public string AukiSivunNimi => Auki && lehti != null && nyt >= 0 ? SivunNimi(nyt) : null;
         /// <summary>Auki olevan aihesivun poiminta-avain aihe:omistaja:aihe (web aiheAvain) tai null.</summary>
         public string AukiAvain => Auki && lehti != null && lehti.Laji != LehtiLaji.Kehittaja && nyt >= 0 && nyt < lehti.Sivut.Count
@@ -640,6 +642,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             foreach (var k in Kappaleet(n.Teksti)) Kappale(lohko, k, "mk-lehti__leipa");
+            if (n.Lisa != null) { try { n.Lisa(lohko); } catch (Exception e) { Debug.LogException(e); } }
             var loppu = Rakenne.El("mk-lehti__nostoloppu", lohko, PickingMode.Ignore);
             if (!string.IsNullOrEmpty(n.Wiki))
             {
