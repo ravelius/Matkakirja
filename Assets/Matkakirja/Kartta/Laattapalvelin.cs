@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -43,6 +44,10 @@ namespace Matkakirja
         TcpListener kuuntelija;
         CancellationTokenSource lopetus;
         readonly ConcurrentQueue<Haku> jono = new ConcurrentQueue<Haku>();
+        /// <summary>Huntulaatat (pieniä, 3 kt) ohi jonon: näkyvän alueen huntu ehtii ennen kuin laatta näkyy ilman sitä.</summary>
+        readonly ConcurrentQueue<Haku> kiireJono = new ConcurrentQueue<Haku>();
+        /// <summary>Esilataus (lennon reitti): vain kun tavallinen jono on tyhjä, ja kaksi paikkaa jää näkyvälle kartalle.</summary>
+        readonly ConcurrentQueue<Haku> esiJono = new ConcurrentQueue<Haku>();
         int kaynnissa;
         string offline, valimuisti;
 
@@ -53,7 +58,7 @@ namespace Matkakirja
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
         /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
         /// </summary>
-        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty);
+        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
 
         /// <summary>
         /// Pohjalaatan polun alku (Rakennus.LaattaUrl ilman ämpäriä): jos tällainen laatta ei tule
@@ -108,12 +113,66 @@ namespace Matkakirja
             return polku;
         }
 
+        static readonly ConcurrentDictionary<string, Func<int, int, int, bool>> kattavuudet =
+            new ConcurrentDictionary<string, Func<int, int, int, bool>>();
+
+        /// <summary>
+        /// Harvan sarjan kattavuus (LENNON PINTA: Sentinel-2 vain kaupunkien ympärillä): kansion (ämpärin polku,
+        /// "/"-loppuinen) laatta z/x/y (XYZ) haetaan vain, jos onko palauttaa true; muuten ja virheessä annetaan
+        /// läpinäkyvä laatta heti ilman verkkoa (Cesium piirtäisi puuttuvan mustana). Kutsu säikeistä: onko
+        /// ajetaan palvelimen säikeessä, joten sen pitää lukea vain muuttumatonta dataa.
+        /// </summary>
+        public static void Kattavuus(string kansio, Func<int, int, int, bool> onko)
+        {
+            if (onko == null) kattavuudet.TryRemove(kansio, out _);
+            else kattavuudet[kansio] = onko;
+        }
+
+        static bool KattavuusOhjaus(string polku, out bool tyhja)
+        {
+            tyhja = false;
+            foreach (var p in kattavuudet)
+            {
+                if (!polku.StartsWith(p.Key, StringComparison.Ordinal)) continue;
+                var osat = polku.Substring(p.Key.Length).Split('/');
+                if (osat.Length != 3) { tyhja = true; return true; }
+                int piste = osat[2].IndexOf('.');
+                if (!int.TryParse(osat[0], out int z) || !int.TryParse(osat[1], out int x)
+                    || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) { tyhja = true; return true; }
+                tyhja = !p.Value(z, x, y);
+                return true;
+            }
+            return false;
+        }
+
         [Tooltip("Varalaatan väri (pergamentti, meren ja maan välissä).")]
         public Color32 varavari = new Color32(0xd9, 0xd0, 0xbb, 0xff);
+
+        /// <summary>
+        /// Esilatauksen edistyminen (Pelikoodari 24.9., build 9): Nappula vaihtaa lennon pinnan vasta, kun osa on
+        /// valmiina, ja KarttaKerrokset perii edellisen lennon jonon. Säieturvallinen (taustasäie laskee, pääsäie lukee).
+        /// </summary>
+        public sealed class Esilataus
+        {
+            int yhteensa, valmiit, epaonnistui;
+            volatile bool peruttu;
+            public int Yhteensa => Volatile.Read(ref yhteensa);
+            public int Valmis => Volatile.Read(ref valmiit);
+            public int Epaonnistui => Volatile.Read(ref epaonnistui);
+            public bool Peruttu => peruttu;
+            /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
+            public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
+            /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
+            public void Peru() => peruttu = true;
+            internal void Lisaa(int n) => Interlocked.Add(ref yhteensa, n);
+            internal void Merkitse(bool ok) { if (ok) Interlocked.Increment(ref valmiit); else Interlocked.Increment(ref epaonnistui); }
+        }
 
         sealed class Haku
         {
             public string Polku;
+            /// <summary>Esilatauksen haku (esiJono): peruttu → vapautetaan ilman verkkoa.</summary>
+            public Esilataus Esi;
             public TaskCompletionSource<(int tila, byte[] data)> Valmis =
                 new TaskCompletionSource<(int, byte[])>(TaskCreationOptions.RunContinuationsAsynchronously);
         }
@@ -308,29 +367,64 @@ namespace Matkakirja
             await virta.FlushAsync();
         }
 
-        /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
-        async Task<(int, byte[])> Hae(string polku)
+        /// <summary>
+        /// Laatat välimuistiin etukäteen (LENNON PINTA, Fable 24.9.: sileän pinnan laatat latautuivat matkalla
+        /// näkyvinä lohkoina). Polut ämpärin polkuina; jo välimuistissa olevat ohitetaan lukematta. Taustasäikeessä,
+        /// ja haut odottavat, kunnes näkyvän kartan jono on tyhjä. Palauttaa edistymisen; <paramref name="jatka"/>
+        /// lisää polut samaan esilataukseen (Sentinel-laatat kattavuuden latauduttua).
+        /// </summary>
+        public static Esilataus Esilataa(IReadOnlyCollection<string> polut, Esilataus jatka = null)
         {
+            var e = jatka ?? new Esilataus();
+            var p = Instanssi;
+            if (p == null || polut == null || polut.Count == 0 || e.Peruttu) return e;
+            e.Lisaa(polut.Count);
+            var lista = new List<string>(polut);
+            Task.Run(() => { foreach (var polku in lista) _ = Yksi(polku); });
+            async Task Yksi(string polku)
+            {
+                try
+                {
+                    var (tila, _) = await p.Hae(polku, e);
+                    e.Merkitse(tila == 200);
+                }
+                catch (Exception) { e.Merkitse(false); }
+            }
+            return e;
+        }
+
+        /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
+        async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
+        {
+            bool esi = esilataus != null;
             polku = Uri.UnescapeDataString(polku);
             if (polku.Contains("..")) return (404, null);
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
             if (tyhja && tyhjakuva != null) return (200, tyhjakuva);
+            if (KattavuusOhjaus(polku, out bool kattavuusTyhja))
+            {
+                varitasoa = true;   // virhe → läpinäkyvä, ei mustaa
+                if (kattavuusTyhja && tyhjakuva != null) return (200, tyhjakuva);
+            }
             string f = Tiedosto(offline, polku);
-            if (File.Exists(f)) { Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
+            if (File.Exists(f)) { if (esi) return (200, null); Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
             f = Tiedosto(valimuisti, polku);
             if (File.Exists(f))
             {
+                if (esi) return (200, null);
                 Interlocked.Increment(ref Valimuistista);
                 var sisalto = File.ReadAllBytes(f);
                 try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
                 return (200, sisalto);
             }
-            var h = new Haku { Polku = polku };
-            jono.Enqueue(h);
+            if (esi && esilataus.Peruttu) return (499, null);
+            var h = new Haku { Polku = polku, Esi = esilataus };
+            (varitasoa ? kiireJono : esi ? esiJono : jono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
                 Interlocked.Increment(ref Varakuvia);
+                varalla.TryAdd(polku, 0);
                 return (200, varakuva);
             }
             // Väritason puuttuva laatta: läpinäkyvä (Cesium piirtäisi epäonnistuneen mustana).
@@ -351,9 +445,60 @@ namespace Matkakirja
             return (tila, data);
         }
 
+        /// <summary>
+        /// Pohjalaatat, joiden tilalle annettiin varalaatta. Cesium ei hae laattaa uudelleen (se sai vastauksen),
+        /// joten pergamenttinen suorakulmio jäisi kartalle (Laitetestaaja 24.9.: umpikerma Espanjan–Saharan yllä).
+        /// Ne haetaan uudelleen rauhallisena hetkenä, ja kun yksikin onnistuu, pohjakerros ladataan uudelleen
+        /// Cesiumiin (laatat tulevat nyt välimuistista).
+        /// </summary>
+        readonly ConcurrentDictionary<string, byte> varalla = new ConcurrentDictionary<string, byte>();
+        float seuraavaUusinta;
+        bool uusintaKesken;
+
         void Update()
         {
+            // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
+            while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            while (kaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
+            {
+                if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
+                StartCoroutine(Lataa(e));
+            }
+            if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
+            {
+                seuraavaUusinta = Time.unscaledTime + 10f;
+                StartCoroutine(UusiVaralaatat());
+            }
+        }
+
+        IEnumerator UusiVaralaatat()
+        {
+            uusintaKesken = true;
+            int onnistui = 0;
+            foreach (var polku in new System.Collections.Generic.List<string>(varalla.Keys))
+            {
+                var h = new Haku { Polku = polku };
+                yield return Lataa(h);
+                var (tila, data) = h.Valmis.Task.Result;
+                if (tila != 200 || data == null) continue;
+                try
+                {
+                    string f = Tiedosto(valimuisti, polku);
+                    Directory.CreateDirectory(Path.GetDirectoryName(f));
+                    File.WriteAllBytes(f, data);
+                }
+                catch (Exception) { continue; }
+                varalla.TryRemove(polku, out _);
+                onnistui++;
+            }
+            if (onnistui > 0)
+            {
+                var pohja = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pohja : null;
+                if (pohja != null && pohja.enabled) { pohja.RemoveFromTileset(); pohja.AddToTileset(); }
+                Debug.Log($"MATKAKIRJA laattapalvelin: {onnistui} varalaattaa korvattu oikealla, pohja ladattu uudelleen ({varalla.Count} jäljellä)");
+            }
+            uusintaKesken = false;
         }
 
         IEnumerator Lataa(Haku h)

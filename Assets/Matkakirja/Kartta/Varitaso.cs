@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using CesiumForUnity;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -29,6 +31,11 @@ namespace Matkakirja
         public const string Kansio = "julisteet/pallo/kerma/" + Versio + "/";
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
         public const int AlinTaso = 5;
+        /// <summary>
+        /// Alin käytetty huntutaso (Fable 24.9.: Z3–Z4 ämpärissä, mutta ensin kokeillaan pelkkä zoomihäivytys Z5:stä;
+        /// komento "vari alin 3" ottaa Z3–Z4:n käyttöön vertailuun).
+        /// </summary>
+        public static int AlinKaytetty = AlinTaso;
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
 
@@ -63,8 +70,29 @@ namespace Matkakirja
 
         float seuraava;
 
+        [Tooltip("Kameran korkeus (m), jonka yläpuolella huntu on pois (web: ei huntua maailmanäkymässä). Kaukana Cesium\n" +
+                 "sekoittaa huntutasojen alimman tason ja sitä karkeammat (läpinäkyvät) laatat, jolloin huntu näkyi\n" +
+                 "suorakulmioina (Laitetestaaja 24.9., Espanja–Sahara, f6de924). Paluu 85 %:ssa (hystereesi).")]
+        public double kaukoKorkeus = 6_000_000.0;
+        PalloKierto kierto;
+        bool kaukana;
+
         void Update()
         {
+            if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto != null)
+            {
+                bool k = kaukana ? kierto.korkeus > kaukoKorkeus * 0.85 : kierto.korkeus > kaukoKorkeus;
+                if (k != kaukana) { kaukana = k; if (k) Poista(); else Luo(); }
+                // Fablen päätös 24.9.: huntu häivytetään koko näkymän zoomin funktiona (alfa 0 → 1 tasoilla 4,5…5,5),
+                // ei laattakohtaisesti; zoom on näkymän KAUKAISIMMAN maapisteen taso (ylälaita tai horisontti).
+                if (kerros != null)
+                {
+                    float z = NakymanAlinTaso();
+                    float t = Mathf.Clamp01((z - 4.5f) / 1.0f);
+                    Alfa(t * t * (3f - 2f * t));
+                }
+            }
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
             {
@@ -113,7 +141,7 @@ namespace Matkakirja
                 try { l = JsonUtility.FromJson<Luettelo>(r.downloadHandler.text); } catch { }
                 var a = l?.varitaso?.alue;
                 if (a == null) { Poista(); ladattu = null; Maa = null; yield break; }
-                if (l.tasot != null && l.tasot.max > 0) { tasoMin = l.tasot.min; tasoMax = l.tasot.max; }
+                if (l.tasot != null && l.tasot.max > 0) { tasoMin = Math.Max(l.tasot.min, AlinKaytetty); tasoMax = l.tasot.max; }
                 Laattapalvelin.VariAlue(Kansio + maa + "/", a.lon0, a.lat0, a.lon1, a.lat1, Kansio + "_maailma/", tasoMin);
             }
             ladattu = maa;
@@ -125,7 +153,7 @@ namespace Matkakirja
         void Luo()
         {
             Poista();
-            if (ladattu == null || linssit || piilossa || pallo == null) return;
+            if (ladattu == null || linssit || piilossa || kaukana || pallo == null) return;
             kerros = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.materialKey = MateriaaliAvain;
             // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa).
@@ -142,8 +170,51 @@ namespace Matkakirja
         /// <summary>Napakalotit samaan kermaan kuin laatat (kalotti piirtyy laattojen päälle).</summary>
         static void Navat(bool kerma) => KarttaKerrokset.Instanssi?.napakannet?.Kerma(kerma);
 
+        static readonly int AlfaId = Shader.PropertyToID("_overlayAlfa_" + MateriaaliAvain);
+        float alfaNyt = -1f;
+
+        /// <summary>Raster-paikan 2 alfa tileset-varjostimessa (Shaders/Cesium/MatkakirjaTileset, globaali).</summary>
+        void Alfa(float a)
+        {
+            if (Mathf.Abs(a - alfaNyt) < 0.004f) return;
+            alfaNyt = a;
+            Shader.SetGlobalFloat(AlfaId, a);
+        }
+
+        /// <summary>
+        /// Näkymän kaukaisimman maapisteen laattataso (Web Mercator): ruudun yläkulmien ja -keskikohdan säteet palloa
+        /// vasten, osumaton säde = horisontti. Taso, jolla 256 px:n laatan pikseli ≈ näytön pikseli siellä.
+        /// </summary>
+        float NakymanAlinTaso()
+        {
+            var kam = kierto.GetComponent<Camera>();
+            var g = kierto.georeferenssi;
+            if (kam == null || g == null) return 20f;
+            Vector3 keskus = g.transform.TransformPoint((Vector3)(float3)g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            const double R = 6_371_000.0;
+            // Kaksoistarkkuus: float-neliöt (~4e13) hukkaisivat matalan korkeuden horisontin.
+            double3 oc = (double3)(float3)(kam.transform.position - keskus);
+            double oc2 = math.dot(oc, oc);
+            double horisontti = Math.Sqrt(Math.Max(0.0, oc2 - R * R));
+            double kauimmas = 0;
+            foreach (var vx in new[] { 0f, 0.5f, 1f })
+            {
+                var sade = kam.ViewportPointToRay(new Vector3(vx, 1f, 0f));
+                double3 suunta = (double3)(float3)sade.direction;
+                double b = math.dot(oc, suunta), c = oc2 - R * R, d = b * b - c;
+                double osuma = d >= 0 ? -b - Math.Sqrt(d) : horisontti;
+                if (osuma < 0) osuma = horisontti;
+                kauimmas = Math.Max(kauimmas, osuma);
+            }
+            double mpp = 2.0 * kauimmas * Math.Tan(kam.fieldOfView * 0.5 * Math.PI / 180.0) / Math.Max(1, Screen.height);
+            double lev = Math.Cos(kierto.leveys * Math.PI / 180.0);
+            return (float)Math.Log(2.0 * Math.PI * R * Math.Max(0.2, lev) / (256.0 * Math.Max(1e-3, mpp)), 2.0);
+        }
+
         void Poista()
         {
+            Alfa(1f);
+            alfaNyt = -1f;
             if (kerros == null) return;
             Navat(false);
             // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä.
@@ -151,6 +222,9 @@ namespace Matkakirja
             Destroy(kerros);
             kerros = null;
         }
+
+        /// <summary>Luettelo ja kerros uudelleen seuraavassa Updatessa (esim. AlinKaytetty muuttui).</summary>
+        public void Uudelleen() => haluttu = null;
 
         /// <summary>Linssin raster-kerros kartalla: väritaso väistyy (Cesiumissa kolme paikkaa).</summary>
         public void Linssit(bool paalla)

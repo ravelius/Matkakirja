@@ -93,8 +93,10 @@ namespace Matkakirja
                 // Syöksy koneen etuviistoon, kuminauhajarrutus lähikuvaan.
                 // Omistaja 24.9. klo 11.4x: lähivaiheissa kone täyttää ~2/3 ruudun leveydestä; kamera matalalta
                 // etuviistosta (kallistus 80–83°), jotta horisontti ja taivas ovat koneen takana ja pilvet alla.
-                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 80, Suunta = 150, Kohde = 0, Kone = 0.74 },
-                // LÄHIKUVA: hidas panorointi koneen ympäri, lähes paikallaan.
+                // SIIVEN OHI (elokuvalento erä 5, 24.9.): syöksy päättyy sivulle lähelle siivenkärkeä (kone 1,25 ruudun
+                // levyinen, siipi täyttää kuvan), ja lähikuvan panorointi liukuu siiven ohi etuviistoon ja nokan yli.
+                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 82, Suunta = 100, Kohde = 0, Kone = 1.25 },
+                // LÄHIKUVA: siiven ohi ja hidas panorointi koneen ympäri, lähes paikallaan.
                 new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.74 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).
@@ -166,11 +168,15 @@ namespace Matkakirja
             double sn = n.SuuntaAbs ? n.Suunta : n.Suunta + lentosuunta;
             // Suhteellinen → absoluuttinen: lyhin kulma, muuten avainten oma kiertosuunta (voi ylittää 180°).
             if (p.SuuntaAbs != n.SuuntaAbs) sn = sp + Kiedo180(sn - sp);
+            // Kuminauhan ylitys (s > 1) vain etäisyyteen, suuntaan ja koneen kokoon. Kohde ja kallistus eivät saa
+            // ampua ohi: syöksyn lopussa kohde > 0 siirsi katseen koneesta kohti kohdekaupunkia (~50 km), ja kone
+            // liukui 0,5 s ruudun reunaan; kallistus yli 80° painoi kameran horisonttiin (iPad-simulaattori 24.9.).
+            double sr = math.saturate(s);
             return (
                 math.exp(math.lerp(math.log(math.max(1, p.Etaisyys)), math.log(math.max(1, n.Etaisyys)), s)),
-                math.lerp(p.Kallistus, n.Kallistus, s),
+                math.lerp(p.Kallistus, n.Kallistus, sr),
                 math.lerp(sp, sn, ss),
-                math.clamp(math.lerp(p.Kohde, n.Kohde, s), -1, 1),
+                math.clamp(math.lerp(p.Kohde, n.Kohde, sr), -1, 1),
                 math.max(0, math.lerp(p.Kone, n.Kone, s)));
         }
 

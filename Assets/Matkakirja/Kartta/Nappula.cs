@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using CesiumForUnity;
@@ -64,10 +65,16 @@ namespace Matkakirja
         public Material koneMateriaali;
         [Tooltip("Raidan (Raita) ja ikkunoiden (Ikkunat) materiaalit; null = koneMateriaali.")]
         public Material raitaMateriaali, ikkunaMateriaali;
+        /// <summary>Potkurikiekko (Shaders/PotkuriKiekko, elokuvalento erä 2).</summary>
+        public Material kiekkoMateriaali;
         [Tooltip("3D-koneen koko ruudulla iOS-pisteinä (siipiväli).")]
         public float malliPx = 110f;
         public Savujana savu;
         public Aurinko aurinko;
+        /// <summary>Lähtösumu ja pilvimeri (LENNON PINTA), Rakennus luo.</summary>
+        public Usvalevy usva;
+        /// <summary>Kaupunkien tunnusrakennukset (Maamerkit.cs), Rakennus luo.</summary>
+        public Maamerkit maamerkit;
 
         GameObject olio;
         Material oma;
@@ -195,7 +202,9 @@ namespace Matkakirja
             // pelin karttapisteet ja muut kaupungit palaavat perillä (Paatalento).
             aloitusMerkit = FindAnyObjectByType<KaupunkiMerkit>();
             string kohde = aloitusMerkit != null ? aloitusMerkit.LahinId(lat, lon) : null;
-            if (aloitusMerkit != null) aloitusMerkit.NaytaVain(kohde != null ? new[] { kohde } : Array.Empty<string>());
+            string lahto = aloitusMerkit != null ? aloitusMerkit.LahinId(lahtoLat, lahtoLon) : null;
+            // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
+            if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
             liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis));
         }
@@ -215,6 +224,16 @@ namespace Matkakirja
         {
             kesken = valmis;
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
+            // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
+            // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
+            // Lennon pinnan laatat välimuistiin zoomin ja usvan aikana (ei lohkoja matkalla, Fable 24.9.).
+            var esilataus = KarttaKerrokset.Instanssi?.EsilataaLento(lat0, lon0, lat1, lon1);
+            if (usva != null)
+            {
+                usva.Aseta(lat0, lon0, nosto * 0.5, 0f);
+                usva.Tavoite(1f, math.max(0.8f, zoomS));
+            }
+            bool pintaVaihdettu = false, laskuSumu = false;
             if (kierto != null && zoomS > 0)
             {
                 kierto.Aja(lat0, lon0, saapumisKorkeus, zoomS, null);
@@ -231,6 +250,20 @@ namespace Matkakirja
             // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
             var merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
             string kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
+            // LENNON KARTTA (omistaja 24.9.2026 klo 13.4x): reittikaari pois (lähikuvassa se näkyi juovana koneesta
+            // kameraa kohti), sileä pohja ilman teitä ja rajoja, lähtö ja kohde punaisin pistein ja renkain.
+            var kerrokset = KarttaKerrokset.Instanssi;
+            reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
+            kerrokset?.Nakyvyys("reitit", false);
+            lentoMerkit = merkit;
+            lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
+            // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
+            if (maamerkit != null) maamerkit.Nayta(lentoIdt);
+            if (merkit != null)
+            {
+                merkit.Renkaat(lentoIdt, null, LentoPunainen);
+                foreach (var id in lentoIdt) merkit.Korosta(id, LentoPunainen);
+            }
             var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk)
                 ? kk : LennonAikajana.Oletus(Suuntima(lat0, lon0, lat1, lon1, 1.0), saapumisKorkeus);
             double loppuKallistus = kierto != null ? kierto.KallistusRaja(saapumisKorkeus) : 0;
@@ -248,6 +281,7 @@ namespace Matkakirja
 
             if (savu != null) savu.Aloita();
             if (aurinko != null) aurinko.Aseta(true);
+            Filmipino.Instanssi?.Paalle(true);
             var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
             pilvet?.Nayta(math.max(2000.0, huippu * 0.35));
             AsetaVaihe(LennonVaihe.Nousu);
@@ -300,6 +334,38 @@ namespace Matkakirja
                     else pilvet.Korkeus(math.max(2000.0, (nosto + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
+                // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
+                // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
+                // Vasta lähikuvassa (t ≥ 0,08), kun usva täyttää kuvan: Lontoon zoomissa kamera on niin korkealla, että
+                // usvalevy peittää vain keskustan ja uuden pinnan laatat näkyivät pikselöityinä reunoilla (sim 24.9.).
+                // Esilataus (build 9): vaihto vasta, kun kolmannes reitin laatoista on välimuistissa (lähtöpää ensin),
+                // muuten viimeistään t > 0,2 ennen kuin usva alkaa hälvetä (t > 0,24).
+                bool pintaValmis = esilataus == null || esilataus.Osuus >= 0.33f;
+                if (!pintaVaihdettu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 && pintaValmis || t > 0.2))
+                {
+                    pintaVaihdettu = true;
+                    kerrokset?.LentoPohja(true);
+                    // Mittari (Fable 24.9.): montako reitin laattaa ehti välimuistiin ennen pinnan vaihtoa.
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: vaihto t={t:0.00}, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
+                }
+                if (usva != null && t > 0.24 && t < 0.9) usva.Tavoite(0f, kesto * 0.12f);
+                if (usva != null && !laskuSumu && t > 0.9)
+                {
+                    laskuSumu = true;
+                    usva.Aseta(lat1, lon1, nosto * 0.5, usva.Peitto);
+                    usva.Tavoite(1f, kesto * 0.05f);
+                }
+                if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
+                {
+                    pintaVaihdettu = false;
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: lasku, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
+                    kerrokset?.LentoPohja(false);
+                    usva.Tavoite(0f, 1.4f);
+                }
                 if (t >= 1) break;
                 yield return null;
             }
@@ -315,8 +381,29 @@ namespace Matkakirja
         /// <summary>Koneen leveys osuutena ruudun leveydestä lennon aikajanalta (0 = merkkikoko).</summary>
         float koneRuudusta;
 
+        /// <summary>Lennon lähdön ja kohteen merkki (omistaja 24.9.: punainen piste tai hehkurengas).</summary>
+        static readonly Color LentoPunainen = new Color32(0xb8, 0x32, 0x28, 0xff);
+        KaupunkiMerkit lentoMerkit;
+        string[] lentoIdt;
+        bool reititEnnen = true;
+
         void Paatalento()
         {
+            var kerrokset = KarttaKerrokset.Instanssi;
+            if (kerrokset != null)
+            {
+                kerrokset.LentoPohja(false);
+                if (usva != null) usva.Tavoite(0f, 1.4f);
+                if (maamerkit != null) maamerkit.Piilota();
+                if (reititEnnen) kerrokset.Nakyvyys("reitit", true);
+            }
+            if (lentoMerkit != null)
+            {
+                lentoMerkit.Renkaat(null);
+                if (lentoIdt != null) foreach (var id in lentoIdt) lentoMerkit.Korosta(id, null);
+                lentoMerkit = null;
+                lentoIdt = null;
+            }
             koneRuudusta = 0;
             if (aloitusMerkit != null)
             {
@@ -327,6 +414,7 @@ namespace Matkakirja
             if (kierto != null) kierto.SeurantaLoppui();
             if (savu != null) savu.Lopeta();
             if (aurinko != null) { aurinko.Aseta(false); aurinko.Sumu(0, 0); }
+            Filmipino.Instanssi?.Paalle(false);
             var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
             if (pilvet != null && pilvet.Nakyvissa) pilvet.Piilota();
             AsetaVaihe(LennonVaihe.Ei);
@@ -374,6 +462,8 @@ namespace Matkakirja
             // Lähikuvassa kone täyttää osan ruudun leveydestä (aikajana), muuten vakiokokoinen merkki.
             float koko = Mathf.Max(malliPx * kerroin, koneRuudusta * Screen.width);
             malli.transform.localScale = Vector3.one * (pikseli * koko / malliKoko);
+            // Filmiefektipino (erä 3): lähikuvan osuus (0,74 = täysi lähikuva) syväterävyyteen, luotain koneen mukana.
+            Filmipino.Instanssi?.Kuvaa(koneRuudusta / 0.74f, etaisyys, paikka);
         }
 
         Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)
@@ -422,6 +512,8 @@ namespace Matkakirja
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
+                    // Kiekot vasta koon jälkeen: ne ovat lapojen sisällä eivätkä saa koneen materiaalia.
+                    malli.GetComponent<Potkurit>().Kiekot(kiekkoMateriaali);
                     if (!kerrosNakyy) foreach (var mr in malli.GetComponentsInChildren<Renderer>()) mr.enabled = false;
                     Debug.Log($"MATKAKIRJA nappula: kone {malli.GetComponentsInChildren<Renderer>().Length} osaa, koko {malliKoko:0.##} m, rajat {rajat?.size}");
                 }

@@ -527,6 +527,7 @@ namespace Matkakirja.Natiivi
                 yield return new WaitForSecondsRealtime(yritys < 3 ? 3f : 15f);
             }
             AloitaAanitaulut();
+            StartCoroutine(HaeMaamerkit()); // taustalla (PeliOhjain.Maamerkit.cs)
 
             yield return HaeLaattamaarat();
             AloitaTaiJatka();
@@ -812,10 +813,15 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             UusiPeli(siemen, lahtokaupunki);
-            // Aloituskaava (omistaja 23.9.2026): kone lentää Lontoosta valittuun kaupunkiin ja intro soi
-            // lennon ajan (PeliOhjain.Aloitus.cs). Ilman lentoa (Lontoo, ei nappulaa) intro soi tässä,
-            // paitsi aloitusnäkymässä, jossa Natiivi-UI soittaa sen avaustekstin aikana.
-            if (!AloitaAloituslento(matka.Tila.Pelaaja.Sijainti.Kaupunki) && !AloitusNakyma) SoitaLuento(luennat.Intro, 1.0f);
+            // Aloituskaava (omistaja 24.9.2026 klo 12.1x): intro soi pallonäkymässä ennen valintaa (Natiivi-UI,
+            // SoitaIntro), valinta keskeyttää sen ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
+            // Ilman lentoa (Lontoo, ei nappulaa) valinta keskeyttää intron silti (web doPickStart); aloitusnäkymän
+            // ulkopuolella (voiton Uusi matka) intro soi tässä.
+            if (!AloitaAloituslento(matka.Tila.Pelaaja.Sijainti.Kaupunki))
+            {
+                if (AloitusNakyma) OhitaLuento();
+                else SoitaLuento(luennat.Intro, 1.0f);
+            }
             return null;
         }
 
