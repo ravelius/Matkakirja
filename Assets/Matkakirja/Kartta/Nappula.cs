@@ -238,12 +238,31 @@ namespace Matkakirja
             // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
             // Lennon pinnan laatat välimuistiin zoomin ja usvan aikana (ei lohkoja matkalla, Fable 24.9.).
             var esilataus = KarttaKerrokset.Instanssi?.EsilataaLento(lat0, lon0, lat1, lon1);
+            // Lento päättyy täsmälleen saapumisnäkymään, johon PeliOhjain.Saavu ajaa perillä (aloituslento: webin
+            // kaupunkinäkymä ilman maan laatikkoa; kallistus 0, pohjoinen ylös), joten perillä kamera ei hyppää.
+            double saapumisKorkeus = lahtoKorkeus, saapumisLat = lat1, saapumisLon = lon1;
+            Laattapalvelin.Esilataus kohdeLataus = null;
+            if (kierto != null)
+            {
+                var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
+                saapumisKorkeus = sn.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius();
+                saapumisLat = sn.Lat;
+                saapumisLon = sn.Lon;
+                // LASKUN LAATAT (Fable 24.9. klo 18): orbitin loppunäkymän laatat etusijalla heti lennon alussa.
+                // Näkymä: leveys NakyvaLeveys lautayksikköä (12000 = 360°), korkeus leveys / kuvasuhde, väljennys 25 %.
+                var kam = kierto.GetComponent<Camera>();
+                double aspect = kam != null && kam.aspect > 0 ? kam.aspect : 0.7;
+                double pl = 0.5 * 1.25 * sn.NakyvaLeveys * 360.0 / Saapumisnakyma.LaudanLeveys;
+                double pk = pl / aspect;
+                kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
+                    math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
+            }
             if (usva != null)
             {
                 usva.Aseta(lat0, lon0, UsvanKorkeus, 0f);
                 usva.Tavoite(1f, math.max(0.8f, zoomS));
             }
-            bool pintaVaihdettu = false, laskuSumu = false;
+            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false;
             if (kierto != null && zoomS > 0)
             {
                 kierto.Aja(lat0, lon0, lahtoKorkeus, zoomS, null);
@@ -290,16 +309,6 @@ namespace Matkakirja
             }
             // Maisemasuunta ratkaisee vain kiertosuunnan (Fable 24.9.); muille kohteille lyhyempi kierto.
             var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk) ? kk : LennonAikajana.EiMaisemaa;
-            // Lento päättyy täsmälleen saapumisnäkymään, johon PeliOhjain.Saavu ajaa perillä (aloituslento: webin
-            // kaupunkinäkymä ilman maan laatikkoa; kallistus 0, pohjoinen ylös), joten perillä kamera ei hyppää.
-            double saapumisKorkeus = lahtoKorkeus, saapumisLat = lat1, saapumisLon = lon1;
-            if (kierto != null)
-            {
-                var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
-                saapumisKorkeus = sn.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius();
-                saapumisLat = sn.Lat;
-                saapumisLon = sn.Lon;
-            }
             var avaimet = LennonAikajana.Laske(reittiM, saapumisKorkeus, kaupunki, jako,
                 tt => Suuntima(lat0, lon0, lat1, lon1, LennonAikajana.KoneenOsuus(tt, jako)));
             // Lähtöasento kamerasta (esim. Lontoon zoomin loppu): aikajanan ensimmäinen avain.
@@ -336,6 +345,13 @@ namespace Matkakirja
                 Siirra(q.x, q.y, h);
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
                 AsetaVaihe(LennonAikajana.Vaihe(t, jako));
+                // Mittari: kohdealueen laatat orbitin alkaessa (tavoite: valmiina ennen laskeutumisnäkymää).
+                if (kohdeLataus != null && !kohdeKirjattu && t >= jako.Kierto)
+                {
+                    kohdeKirjattu = true;
+                    Debug.Log($"MATKAKIRJA lennon pinta: orbit alkaa t={t * kesto:0.0} s, kohdealue {kohdeLataus.Valmis}+{kohdeLataus.Epaonnistui}"
+                              + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})");
+                }
 
                 var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = LennonAikajana.Arvo(avaimet, t, suunta);
                 koneRuudusta = (float)koneOsuus;

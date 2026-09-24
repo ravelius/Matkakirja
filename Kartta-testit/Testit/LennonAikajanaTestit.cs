@@ -215,36 +215,41 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
-        static void OrbitKulkeeMaisemanYliJaKatseVastaan()
+        static void KiertoEnintaan180LyhyempaanSuuntaan()
         {
+            // Fable 24.9. klo 18: kierron (c + d) kokonaiskulma ≤ 180° lyhyempään suuntaan; maisema ratkaisee vain
+            // tasatilanteen (180° ± 15°), jolloin kaari saa olla enintään 195°.
+            foreach (var kesto in new double?[] { 16, 20, 26, null })
             foreach (var (id, lat, lon) in Kohteet)
             {
-                var l = Tee(id, lat, lon);
-                var j = l.Jako;
-                // Kierto + orbit pyyhkäisee maiseman katsesuunnan kautta.
-                bool ohi = false;
-                for (int i = 0; i <= 2000 && !ohi; i++)
+                var l = Tee(id, lat, lon, kesto);
+                double kaari = l.Arvo(1).s - l.Arvo(l.Jako.Liuku).s;
+                Oleta.Tosi(Math.Abs(kaari) <= 180.0 + 1e-9, $"{id} {l.Jako.KestoS:0.0} s: kierto {kaari:0.0}°");
+            }
+            // Kaikki lentosuunnat: ilman maisemaa ≤ 180°, maiseman kanssa ≤ 195° ja yli 180° vain maiseman takia.
+            for (double f = 0; f < 360; f += 0.5)
+            {
+                double k0 = LennonAikajana.Kaari(f, double.NaN, 163, out _);
+                Oleta.Tosi(Math.Abs(k0) <= 180.0 + 1e-9, $"f={f}: {k0:0.0}°");
+                foreach (double m in new[] { 0.0, 45, 135, 235, 315 })
                 {
-                    double t = j.Liuku + (1 - j.Liuku) * i / 2000.0;
-                    double d = ((l.Arvo(t).s - l.Maisema.Suunta) % 360 + 540) % 360 - 180;
-                    ohi = Math.Abs(d) < 1.0;
+                    double k = LennonAikajana.Kaari(f, m, 163, out _);
+                    Oleta.Tosi(Math.Abs(k) <= 195.0 + 1e-9, $"f={f}, maisema {m}: {k:0.0}°");
+                    if (Math.Abs(k) > 180.0 + 1e-9) Oleta.Tosi(Math.Abs(k0) >= 165.0 - 1e-9, $"f={f}: yli 180° ilman tasatilannetta");
                 }
-                Oleta.Tosi(ohi, $"{id}: orbit ei kulje maiseman ({l.Maisema.Suunta}°) yli");
-                // Kierron lopussa katse on likimain lentosuuntaa vastaan (koko kierto yhdellä nopeusprofiililla).
-                double vastaan = l.Suunta(1.0) + 180;
-                double poikkeama = Math.Abs(((l.Arvo(j.Kierto).s - vastaan) % 360 + 540) % 360 - 180);
-                Oleta.Tosi(poikkeama < 60, $"{id}: katse kierron lopussa {poikkeama:0}° lentosuunnan vastaisesta");
             }
         }
 
         [Testi]
-        static void KiertosuuntaIlmanMaisemaaLyhyempi()
+        static void KiertoTavoitenopeudenLahella()
         {
-            Oleta.Sama(1, LennonAikajana.Kiertosuunta(300, double.NaN));
-            Oleta.Sama(-1, LennonAikajana.Kiertosuunta(60, double.NaN));
-            // Ateena: vastakkainen puoli ~317°, maisema 45° on vastapäiväisellä kaarella 317 → 0.
-            Oleta.Sama(-1, LennonAikajana.Kiertosuunta(317, 45));
-            Oleta.Sama(1, LennonAikajana.Kiertosuunta(317, 340));
+            // Sivukylki valitaan sille puolelle, jolta kulma on lähimpänä tavoitetta (35°/s ≈ 163° 20 s:n lennolla):
+            // puolten kaaret eroavat 117°, joten vakio-osuuden nopeus on ~12–38°/s.
+            for (double f = 0; f < 360; f += 1)
+            {
+                double k = LennonAikajana.Kaari(f, double.NaN, 163, out _);
+                Oleta.Tosi(Math.Abs(k) >= 50 && Math.Abs(k) <= 180, $"f={f}: {k:0.0}°");
+            }
         }
 
         // ---- Kone ruudulla ja maastoturva (pallomalli PalloKierto.Aseta ja Nappula.Lento) ----
@@ -374,7 +379,7 @@ namespace Matkakirja.Kartta.Testit
             var alku = l.Arvo(j.Syoksy);
             var loppu = l.Arvo(j.Sivu);
             double rel(double s, double t) => ((s - l.Suunta(t)) % 360 + 360) % 360;
-            // Ateena kiertää vastapäivään, joten sivukylki on peilattu: 270° → 250° (= 90° → 110° toiselta puolelta).
+            // Sivukylki 90° → 110° tai peilattuna 270° → 250° (puoli valitaan kierron tavoitekulmasta).
             double r0 = rel(alku.s, j.Syoksy), r1 = rel(loppu.s, j.Sivu);
             Oleta.Tosi(Math.Abs(Math.Min(r0, 360 - r0) - 90) < 1e-6, $"syöksyn loppu {r0:0.0}°");
             Oleta.Tosi(Math.Abs(Math.Min(r1, 360 - r1) - 110) < 1e-6, $"sivukyljen loppu {r1:0.0}°");
