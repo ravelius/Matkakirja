@@ -150,6 +150,12 @@ namespace Matkakirja.Editori
             nappula.savu = savuGo.AddComponent<Savujana>();
             nappula.savu.georeferenssi = georef;
             nappula.savu.materiaali = Materiaali("Savu", "Matkakirja/Savu", Color.white);
+            // Lähtösumu ja pilvimeri (LENNON PINTA, omistaja 24.9. klo 13.5x).
+            var usvaGo = new GameObject("Usvalevy");
+            usvaGo.transform.SetParent(georefGo.transform, false);
+            nappula.usva = usvaGo.AddComponent<Usvalevy>();
+            nappula.usva.georeferenssi = georef;
+            nappula.usva.materiaali = Materiaali("Usva", "Matkakirja/Usva", new Color(0.93f, 0.94f, 0.96f));
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);

@@ -108,6 +108,38 @@ namespace Matkakirja
             return polku;
         }
 
+        static readonly ConcurrentDictionary<string, Func<int, int, int, bool>> kattavuudet =
+            new ConcurrentDictionary<string, Func<int, int, int, bool>>();
+
+        /// <summary>
+        /// Harvan sarjan kattavuus (LENNON PINTA: Sentinel-2 vain kaupunkien ympärillä): kansion (ämpärin polku,
+        /// "/"-loppuinen) laatta z/x/y (XYZ) haetaan vain, jos onko palauttaa true; muuten ja virheessä annetaan
+        /// läpinäkyvä laatta heti ilman verkkoa (Cesium piirtäisi puuttuvan mustana). Kutsu säikeistä: onko
+        /// ajetaan palvelimen säikeessä, joten sen pitää lukea vain muuttumatonta dataa.
+        /// </summary>
+        public static void Kattavuus(string kansio, Func<int, int, int, bool> onko)
+        {
+            if (onko == null) kattavuudet.TryRemove(kansio, out _);
+            else kattavuudet[kansio] = onko;
+        }
+
+        static bool KattavuusOhjaus(string polku, out bool tyhja)
+        {
+            tyhja = false;
+            foreach (var p in kattavuudet)
+            {
+                if (!polku.StartsWith(p.Key, StringComparison.Ordinal)) continue;
+                var osat = polku.Substring(p.Key.Length).Split('/');
+                if (osat.Length != 3) { tyhja = true; return true; }
+                int piste = osat[2].IndexOf('.');
+                if (!int.TryParse(osat[0], out int z) || !int.TryParse(osat[1], out int x)
+                    || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) { tyhja = true; return true; }
+                tyhja = !p.Value(z, x, y);
+                return true;
+            }
+            return false;
+        }
+
         [Tooltip("Varalaatan väri (pergamentti, meren ja maan välissä).")]
         public Color32 varavari = new Color32(0xd9, 0xd0, 0xbb, 0xff);
 
@@ -315,6 +347,11 @@ namespace Matkakirja
             if (polku.Contains("..")) return (404, null);
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
             if (tyhja && tyhjakuva != null) return (200, tyhjakuva);
+            if (KattavuusOhjaus(polku, out bool kattavuusTyhja))
+            {
+                varitasoa = true;   // virhe → läpinäkyvä, ei mustaa
+                if (kattavuusTyhja && tyhjakuva != null) return (200, tyhjakuva);
+            }
             string f = Tiedosto(offline, polku);
             if (File.Exists(f)) { Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
             f = Tiedosto(valimuisti, polku);
