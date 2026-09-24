@@ -4015,3 +4015,7 @@ Omistaja: build 7:ssä paljon virheitä, ei perkaa niitä kun iso osa on työn a
 ## HUNTU Z3–Z4 PALAUTETAAN AMPARIIN (28 SARJAA, tasot.min = 3) (24.9.2026 klo 15.16)
 
 Karttaseppä oli poistanut ne perumisen mukaisesti; Natiivisepän perustelu hyväksytty: huntu häivytetään näkymän zoomilla 4,5→5,5, Z3–Z4 tarvitaan vain horisontin karkeisiin laattoihin kun näkymä on ≥ z5 — ei riko 'maailmanäkymässä ei huntua' -linjausta, ilman niitä suorakulmiot palaavat. Työkalu PR #3061 (21257bb90), uudelleenvienti ~2 min. BMNG topo.bathy ajossa (bmng-bathy/), EOX-nouto ~45 %.
+
+## PELIKOODARI: PARITEETTIRIVI 13 EI OLE KOODIVIKA; ESILATAUKSEN MITTAUS BUILD 9:LLA LAITETESTAAJALTA (24.9.2026 klo 15.16)
+
+Kytke(linssi) asettaa otsikon 'IHMISEN MATKA' oikein; vanha kuva tuli testikomennon polulta, jonka Natiivi-UI korjasi e536f8e:ssä → Laitetestaaja varmistaa build 8:lla oikealla vaihdolla (rivit 5, 13, 23). Esilatauksen mittari fee30eb (lokirivi 'lennon pinta: vaihto t=… esilataus V+E/Y') tulee build 9:ään; Laitetestaaja mittaa lokista, Pelikoodari ei käytä simulaattoria (roolitus). Pelikoodarilla nyt nopan listakortin poisto.
