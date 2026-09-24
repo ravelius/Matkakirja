@@ -24,8 +24,7 @@
 // (kultainen jälki), säilönä PlayerPrefs webin localStorage-avaimin. Staattiset apurit alla
 // (Persoonat, Oletus, Aanivaihtoehdot, Asetus/AsetaAsetus/PoistaAsetus, Nopeus, Voima) ja Nayte.
 //   - Ääni ja ohje kulkevat pyynnössä kuten webissä (haePala); worker tottelee niitä vain
-//     kehittäjäkoodilla (x-pollo-kehittaja, PlayerPrefs matkakirja-puhe-kehittaja tai
-//     matkakirja-pollo-kehittajakoodi; TalletaKehittajakoodi).
+//     kehittäjäkoodilla (x-pollo-kehittaja; koodi vain Keychainissa, Asetukset.PolloKoodi).
 //   - Nopeus (oletus 1,15) toteutuu GENEROINNISSA kuten webissä (OpenAI speed, worker `nopeus`),
 //     ei toistossa: AudioSource.pitch pysyy 1:ssä, joten sävelkorkeus ei muutu.
 //   - Voima (oletus 2,0) on synteesin vahvistus ennen kompressoria (PuheVahvistin, web GainNode +
@@ -86,6 +85,9 @@ namespace Matkakirja.Natiivi
                     k => PlayerPrefs.HasKey(k) ? PlayerPrefs.GetString(k, null) : null,
                     (k, v) => { PlayerPrefs.SetString(k, v); PlayerPrefs.Save(); },
                     k => { PlayerPrefs.DeleteKey(k); PlayerPrefs.Save(); });
+                // Kehittäjäkoodi vain Keychainista (Asetukset.PolloKoodi); vanhat PlayerPrefs-kopiot pois.
+                saadot.Koodilahde = () => Asetukset.PolloKoodi;
+                saadot.PoistaVanhatKoodit();
                 saadot.Muuttui += () =>
                 {
                     if (Instanssi != null) Instanssi.PaivitaVahvistus();
@@ -144,7 +146,11 @@ namespace Matkakirja.Natiivi
         /// Kehittäjätilan pääkoodi talteen (web talletaPolloKoodi): kutsu koodilla, kun kehittäjätila
         /// kytketään pääkoodilla, ja null, kun tila kytketään pois tai koodi on rajattu.
         /// </summary>
-        public static void TalletaKehittajakoodi(string koodi) => Saadot.TalletaPolloKoodi(koodi);
+        /// <summary>
+        /// Vanha kutsu (Asetukset.AsetaKehittaja): koodi on nyt vain Keychainissa (Asetukset.PolloKoodi), joten tämä
+        /// vain siivoaa mahdolliset vanhat PlayerPrefs-kopiot. Ei tallenna mitään.
+        /// </summary>
+        public static void TalletaKehittajakoodi(string koodi) => Saadot.PoistaVanhatKoodit();
 
         /// <summary>Synteesin toistotaso (web lukijanTaso) ilman mykistystä.</summary>
         public static float LukijanTaso => (float)Saadot.LukijanTaso(Asetukset.Taso(global::Matkakirja.Natiivi.Voima.Lukija));
