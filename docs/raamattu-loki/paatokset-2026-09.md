@@ -4819,3 +4819,7 @@ Omistaja: 'Väliotsikot saisivat olla omina sivuinaan eli moottorit, pelissä ny
 ## NATIIVI-UI 66 % → NOLLAUS (LUOVUTUS j 7323db020, HAARA natiivi-ui-luovutus-j): MERGE-PYYNNOSSA radio-mastonimi 7dd1e45 JA tyyppikuvake 79a49af; TODENNETTAVAT intro-palstat, juliste-url; LOYDOS 48 liuska-48 397b37f (KAMERA: NATIIVISEPPA PANOROI, PELIKOODARI KYTKEE); 51 MITTAUS LAITETESTAAJALLA; 50 JA b12-2-REITITYS JONOSSA (25.9.2026 klo 00.33)
 
 Postivahti lähettää aloitusviestin kun list_events = 0.
+
+## NATIIVI-UI NOLLATTU (FABLE LAHETTI ALOITUSVIESTIN HAARASTA natiivi-ui-luovutus-j, LISATTYNA LOYDOKSET 48/50/51, b12-2-RAJAT, KAANNOSPALVELU, JUMI → KORTTI) (25.9.2026 klo 00.33)
+
+Luovutus docs/raportit/viesti-natiivi-ui-luovutus-20260925.md; ensimmäisenä yhteiskäännöksen tulos FB234D08:ssa ja merge-pyynnöt.
