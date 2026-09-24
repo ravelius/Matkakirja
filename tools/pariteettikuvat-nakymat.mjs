@@ -496,12 +496,13 @@ export const NAKYMAT = [
   },
   {
     nimi: 'ratas', kuvaus: 'Hammasratas: äänentasot ja asetukset (#kehittaja-valikko-btn)',
-    avaa: () => { document.getElementById('kehittaja-valikko-btn')?.click(); },
+    // Vaakapuhelimella yläpalkki on väkäsnapin takana (js/ylapalkki-vaaka.js): auki ensin, muuten nappi ei näy.
+    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('kehittaja-valikko-btn')?.click(); },
     odota: '#kehittaja-valikko:not([hidden])',
   },
   {
     nimi: 'valikko', kuvaus: 'Hampurilainen: päävalikko (#menu-btn)',
-    avaa: () => { document.getElementById('menu-btn')?.click(); },
+    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('menu-btn')?.click(); },
     odota: '#paavalikko:not([hidden])',
   },
   {
