@@ -38,6 +38,16 @@ namespace Matkakirja
         public double Lat { get; private set; }
         public double Lon { get; private set; }
         public bool Nakyy => olio != null && olio.activeSelf;
+
+        bool kerrosNakyy = true;
+
+        /// <summary>KarttaKerrokset "nappula": nappula ja kone piiloon (linssiportti) tilaa muuttamatta.</summary>
+        public void Nakyvat(bool nakyy)
+        {
+            kerrosNakyy = nakyy;
+            if (olio != null && olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = nakyy;
+            if (malli != null) foreach (var mr in malli.GetComponentsInChildren<Renderer>()) mr.enabled = nakyy;
+        }
         public bool Liikkeessa => liike != null;
 
         [Header("Aloituslento")]
@@ -399,6 +409,7 @@ namespace Matkakirja
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
+                    if (!kerrosNakyy) foreach (var mr in malli.GetComponentsInChildren<Renderer>()) mr.enabled = false;
                     Debug.Log($"MATKAKIRJA nappula: kone {malli.GetComponentsInChildren<Renderer>().Length} osaa, koko {malliKoko:0.##} m, rajat {rajat?.size}");
                 }
                 if (malli != null) malli.SetActive(paalle);
@@ -503,6 +514,7 @@ namespace Matkakirja
             r.sharedMaterial = oma;
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             r.receiveShadows = false;
+            r.enabled = kerrosNakyy;
             olio.SetActive(false);
         }
 

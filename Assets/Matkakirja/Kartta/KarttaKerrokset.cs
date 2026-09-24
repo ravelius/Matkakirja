@@ -129,6 +129,9 @@ namespace Matkakirja
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
                 case "reitit": if (reitit != null) reitit.Nakyvat(nakyy); break;
                 case "napakannet": if (napakannet != null) napakannet.Nakyvat(nakyy); break;
+                case "nappula": if (nappula != null) nappula.Nakyvat(nakyy); break;
+                case "pisteet": if (pisteet != null) pisteet.Nakyvat(nakyy); break;
+                case "valot": { var av = FindAnyObjectByType<AiheValot>(); if (av != null) av.Nakyvat(nakyy); break; }
                 default: Debug.LogWarning("MATKAKIRJA kerrokset: tuntematon kerros " + kerros); break;
             }
         }

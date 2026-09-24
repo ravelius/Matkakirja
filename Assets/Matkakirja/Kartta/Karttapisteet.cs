@@ -31,6 +31,15 @@ namespace Matkakirja
         public float sykeJakso = 1.6f;
         public float sykeMaara = 0.2f;
         readonly Dictionary<string, Piste> pisteet = new Dictionary<string, Piste>();
+        bool nakyvat = true;
+
+        /// <summary>KarttaKerrokset "pisteet": kaikki pelin karttapisteet piiloon (linssiportti) tai näkyviin.</summary>
+        public void Nakyvat(bool nakyy)
+        {
+            nakyvat = nakyy;
+            foreach (var p in pisteet.Values)
+                if (p.Olio != null && p.Olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = nakyy;
+        }
 
         void Start()
         {
@@ -59,6 +68,7 @@ namespace Matkakirja
                 r.sharedMaterial = p.Oma;
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 r.receiveShadows = false;
+                r.enabled = nakyvat;
                 pisteet[id] = p;
             }
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);

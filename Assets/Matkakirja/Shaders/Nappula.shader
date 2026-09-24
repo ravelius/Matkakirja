@@ -55,6 +55,9 @@ Shader "Matkakirja/Nappula"
                 float ks, kc;
                 sincos(_Kulma, ks, kc);
                 siirto = float2(kc * siirto.x - ks * siirto.y, ks * siirto.x + kc * siirto.y);
+                // Välikuvaan piirrettäessä (Metal/URP) leikkausavaruuden y on käännetty: ilman tätä
+                // nappula näkyi ylösalaisin kuin punainen huutomerkki (Linssisepän kontaktiarkki 24.9.).
+                siirto.y *= _ProjectionParams.x;
                 o.paikka.xy += siirto * 2.0 / _ScreenParams.xy * o.paikka.w;
                 if (dot(normaali, kohti) < 0.02) o.paikka = float4(2, 2, 2, 1);
                 o.uv = float2(i.kulma.x * 0.5 + 0.5, i.kulma.y);
