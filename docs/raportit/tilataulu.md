@@ -2,23 +2,23 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-24 23:17 EEST
+**Päivitetty:** 2026-09-24 23:32 EEST
 
 ## 1) Sessiot
 
 | Rooli | Malli | Konteksti | Tila | Viimeisin valmis erä | Odottaa |
 |---|---|---|---|---|---|
-| Fable | Fable 5.1 | 45% | busy | (koordinoi tilataulua) | — |
+| Fable | Fable 5.1 | 46% | busy | (koordinoi tilataulua) | — |
 | Julkaisija | Opus, high | 29% | idle | Sisältöjuna ajaa testejä | #2913 junan jälkeen |
-| Natiiviseppä | Opus | 46% | idle | — | — |
+| Natiiviseppä | Opus | 47% | idle | — | — |
 | Natiivi-UI | Opus | 49% | idle | `natiivi-ui/tyyppikuvake` + `natiivi-ui/intro-palstat` | Testikäännös käännöspalvelulla |
 | Linssiseppä | Opus | 68% | idle | Radiouudistuksen topografiavariantti A hyväksytty | Toteutus (build 12) |
-| Sisältökirjuri | Sonnet | 62% | busy | — | — |
-| Laitetestaaja | Sonnet | 7% (juuri nollattu) | idle | — | — |
+| Sisältökirjuri | Sonnet | 69% | idle | — | — |
+| Laitetestaaja | Sonnet | 20% | busy | (nollattu edellisellä kierroksella) | — |
 | Siirtoseppä | Opus | 27% | idle | — | PR #2913 junan jälkeen |
 | Pelikoodari | Opus | 63% | idle | — | — |
-| Karttaseppä | Opus | — | idle | — | E28-ajo |
-| Postivahti (self) | Sonnet | 58% | busy | (tämä taulu) | — |
+| Karttaseppä | Opus | 47% | idle | — | E28-ajo |
+| Postivahti (self) | Sonnet | 60% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
@@ -43,11 +43,11 @@ Julkaisijan seuraava juna: sisältöjuna ajaa testejä, sen jälkeen #2913; Test
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 57 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla) — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt) tai laskee alle 30 Gt.
+- **Levy** (/System/Volumes/Data): 76 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla) — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt) tai laskee alle 30 Gt.
 - **wt/-worktreet:** 25 kpl. Rajoissa lähes kaikilla rooleilla.
-- **5 h -kiintiö:** 54%, nollautuu klo 21:20 EEST (raja 95%/98%, tauko vasta 98%:ssa).
-- **Viikkokiintiö (kaikki mallit):** 64%. **Viikkokiintiö (Fable):** 39%. Nollautuu 2026-09-28 klo 01:00.
+- **5 h -kiintiö:** 57%, nollautuu klo 21:20 EEST — LÄHELLÄ NOLLAUTUMISTA (raja 95%/98%, tauko vasta 98%:ssa).
+- **Viikkokiintiö (kaikki mallit):** 65%. **Viikkokiintiö (Fable):** 40%. Nollautuu 2026-09-28 klo 01:00.
 
 ## 6) Kellonaika
 
-2026-09-24 23:17 EEST (`date`-komennolla varmennettu)
+2026-09-24 23:32 EEST (`date`-komennolla varmennettu)
