@@ -121,3 +121,20 @@ Pelikoodarin `pariteettikuvat.mjs` merkitsee nämä `ok:true` vaikka
 kuvassa ei ole linssin/kortin sisältöä. Korjaus on jo työn alla
 (DOM-ehto per näkymä + aktiivinen pelitila kaupunkikortille ja
 noppa/siirtolistalle, Pelikoodarin viesti 24.9.2026).
+
+## Uusinta 24.9. klo 14.1x (Pelikoodarin korjatut web-kuvat, PR #3038)
+
+Pelikoodari korjasi ja otti uudelleen 6 web-kuvaa
+(`proto-3d/lokit/pariteetti-web-2026-09-24/`). Laitetestaaja vertasi
+natiiviin uudelleen:
+
+| # | Näkymä | Tulos |
+|---|--------|-------|
+| 17 | Kaupunkikortti | **PASS.** Ei enää tyhjä — näyttää oikean kortin (Lyon), rakenne täsmää natiiviin. |
+| 19 | Noppa-siirtolista | **VAHVISTETTU PARITEETTIERO (Pelikoodari täsmensi: natiivin Bussi/Lento/Liftaus/Laiva-kortti oli itse asiassa kulkutapaliuska, ei siirtolista).** Testattu itse (`uusi-peli 5 marseille` → `kulkutapa liftaus`): nopanheiton ("Noppa 4") jälkeen natiivi näyttää LISTAKORTIN kartan päällä ("valitse kohde listasta TAI kartalta", kohteet askelmäärineen: Alpit, Barcelona, Pariisi, Alpit-Berliini…) — web näyttää PELKÄT renkaat kartalla ilman listaa. Natiivilla siis ylimääräinen UI-elementti jota web ei tarjoa. Kuva: `pariteetti-noppa4-listakortti-natiivi.png`. Vastuu: Natiivi-UI/Pelikoodari (linjauspäätös: kumpi on oikea). |
+| 31 | Linssi: vesistöt | **PASS.** Jokiviivat näkyvät oikein, sama rakenne kuin natiivissa. |
+| 13 | Linssi: ihmisen matka | **YHÄ EI VERTAILUKELPOINEN.** Web näyttää nyt lensin oman aloituskortin ("IHMISEN MATKA" + Käynnistä) — eri vaihe kuin kumpikaan natiivikuva (musta kysymysruutu tai käynnissä oleva pallo). |
+| 40 | Linssi: keksinnöt, karuselli | **TARKOITUKSELLINEN MUUTOS (Pelikoodari vahvisti): karuselli kuuluu vain keksinnöt-linssiin, vanha "Ihmisen matka" -aloituskortti oli väärä näkymä eikä ollut oikea PASS.** Uusintavertailu natiivin omaan keksinnöt-kuvaan (`natiivi-linssi-keksinnot-iphone.jpg`, v. 1800 Pavia): rakenne muuten sama (pallo+vuosi+Tauko), mutta natiivissa keksijän kuva sulautuu pallon päälle suoraan, webissä (v. 1769 Glasgow) erillinen kehystetty muotokuva-kortti pallon alla + pieni filminauha tulevista keksijöistä — voi olla vain eri hetken visuaalinen tila (rivin 11 tapaan), ei varmistettu bugiksi. |
+| 35 | Maalehti: aihesivu 1 | **KORJATTU (Natiivi-UI, natiivi-ui/iphone-island, build 8 -jonossa).** Juurisyy ei ollut väärä kenttä vaan tarkoituksellinen linjaus: web piilottaa selitteen kokonaan aihesivujen nostokuvista (maalehti.js "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.), näyttää vain lähderivin — selite näkyy vasta suurennoksessa. Natiivi näytti aiemmin lyhyen selitteen + lähteen; korjattu vastaamaan webiä. Sama koskee kaupunkilehden aihesivuja (esim. Ateenan karyatidit). |
+
+Ilmoitettu Pelikoodarille (24.9. klo 14.1x).
