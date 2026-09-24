@@ -84,6 +84,42 @@ sumua eikä laikkuja missään vaiheessa. Kuvat 4–5.
 4. sulku 0,3 s (jo puhdas)
 5. sulku 1,8 s (edelleen puhdas, ei sumua)
 
+## PÄIVITYS: korjaus vahvistettu (linssiseppa/radio-veto @ b35566b)
+
+Linssiseppä löysi juurisyyn (nimien `Clickable` kaappasi osoittimen ennen
+asteikon omaa vetokäsittelijää) ja korjasi haarassa
+`linssiseppa/radio-veto` (e8d0cbf, juna/b12:n päällä). Käänsin
+`juna/b12+linssiseppa/radio-veto` (@ b35566b) omaan simulaattoriini ja
+toistin TÄSMÄLLEEN saman `touch_path`-testin (samat koordinaatit,
+y≈819 pt, 104 pt matka Pariisista):
+
+- **Neula liikkui vedon mukana** Pariisista Kumasiin (2 asemaa taakse-
+  päin vetosuuntaan nähden — nauha liikkuu fyysisesti sormen mukana,
+  ei kursori, joten suunta on odotettu tälle skeuomorfiselle mallille).
+- Ketju eteni oikein: `Viritys/Siirtyma` → `Viritys/Haku` →
+  `Viritys/Lukittuu` → `Soi GHA Kumasi Info Radio Ghana`.
+- **Napautus nimeen toimii yhä** — testattu LAGOS-nimen napautus, hyppäsi
+  suoraan `NGA Lagos Metro FM 97.7`:ään osumakohdan (ei nimen
+  Clickablen) kautta, kuten Linssiseppä pyysi tarkistamaan.
+
+**Ajoitushuomio (ei varmistettu onko poikkeama):** koko ketju
+Siirtymä→Soi kesti n. 2,6 s vapautuksesta (86,18 → 88,80 s peli-
+kellossa), ja kamera-ajo Kumasin mastolle NÄYTTI käynnistyvän heti
+`Siirtyma`-vaiheen alussa, ei vasta `Lukittuu`-vaiheen jälkeen kuten
+pyynnön kuvaus antoi ymmärtää ("vasta sitten kamera lentää mastolle").
+En tunne vaihekoneen tarkkaa suunnitelmaa, joten en väitä tätä bugiksi —
+Linssisepän kannattaa tarkistaa lokiote (`docs/raportit/kaappaukset/
+radio-viivain-20260925/` ei sisällä tätä lokia, mutta linssi-loki.txt-
+ote on tässä raportissa yllä olevassa PÄIVITYS-kappaleessa mainitulla
+aikavälillä 86,18–88,80).
+
+En pystynyt mittaamaan 1:1-seurantaa kesken pidon: simulaattorin
+`touch_path` on yksi suljettu alas→liike→ylös-kutsu, joten en näe
+välitiloja kesken vedon — vain lopputuloksen. Kamera ei liikkunut
+kummallakaan aiemmalla epäonnistuneella yrityksellä ennen korjausta,
+eikä tälläkään kertaa ennen vapautusta (kamera-ajo alkoi vasta
+vapautuksen jälkeen molemmilla kerroilla, mikä on oikein).
+
 ## Seuraava askel
 
 Pyydän Linssiseppää joko a) testaamaan vetoa oikealla sormella oikealla
