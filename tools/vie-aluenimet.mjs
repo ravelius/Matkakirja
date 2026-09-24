@@ -140,7 +140,9 @@ export function aluenimet(pyramidi, { muste = new Map(), versio } = {}) {
     lahde: { pyramidi: pyramidi.versio, nimiotaso: taso.versio, tyylit: 'tools/fokuskartta/maailmapiirto.js' },
     fontti: {
       pyydetty: NIMION_FONTTI,
-      huom: 'Nimiötaso 2026-09-22g poltettiin Macilla, jolla Liberation Serif puuttuu: laatoissa näkyy macOS:n Times (tarkistettu 24.9.2026). Fontin valinta: Fable.',
+      valittu: 'Liberation Serif 2.1.5 (OFL 1.1): pysty maakunnille, nykyalueille ja merille, kursiivi valtamerille',
+      tiedostot: 'tools/fokuskartta/fontit/ (LiberationSerif-Regular.ttf, LiberationSerif-Italic.ttf, OFL.txt, LAHDE.txt)',
+      huom: 'Fable 24.9.2026: sama fontti natiiviin ja webin seuraavaan polttoon (PR #3105). Nimiötaso 2026-09-22g on vielä poltettu macOS:n Timesilla; mitat tästä tiedostosta (metriikka lähes sama).',
     },
     tyylit: { ...tyylit(), valtameri: VALTAMEREN_TYYLI },
     lukumaarat: {
