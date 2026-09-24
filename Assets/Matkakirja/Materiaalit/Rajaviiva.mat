@@ -25,8 +25,11 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _Jatke: 0
     - _Kerroin: 3
     - _Paksuus: 1.2
+    - _PieninRengas: 0
+    - _Tiheys: 0
     m_Colors:
     - _BaseColor: {r: 0.23, g: 0.18, b: 0.13, a: 0.8}
     - _Keskus: {r: 0, g: 0, b: 0, a: 0}
