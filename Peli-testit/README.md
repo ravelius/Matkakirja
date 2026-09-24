@@ -42,6 +42,9 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     Vaisto, **AaniTila** (tapahtumakone → `Toive` kanavittain: Pohja, Maisema, Visa, Siirtyma, Aarre)
     ja Tehostetaulu (siivut, sovittu Natiivi-UI:n kanssa). Kultainen jälki
     `Kultaiset/aanijalki.json` (`node Kultaiset/tee-aanijalki.mjs <web/js>`), testit AaniTestit.
+    **Kompressori** (maiseman DynamicsCompressor, Chromiumin dynamics_compressor.cc:n portti;
+    Unityssä Scripts/Peli/MaisemaKompressori.cs OnAudioFilterRead), testit KompressoriTestit
+    (kultaiset arvot Chromium 151:n OfflineAudioContextista).
 - WKWebView-lehtikuori (LehtiKuori, MatkakirjaLehti.mm, LehtiOsoite) on poistettu (A4, 23.9.2026):
   lehdet ovat natiiveja (Natiivi-UI, `ILehtiNakyma`).
 
