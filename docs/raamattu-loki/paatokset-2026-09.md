@@ -4183,3 +4183,7 @@ Natiiviseppä: p8-avainta ei ole Macilla (Raamattu: käyttö vain työnkulkujen 
 ## OMISTAJA klo 16.3x: LOYDOS 25 KUMOTTU — KAHDEN SORMEN KALLISTUS JAA KARTTAAN (24.9.2026 klo 16.21)
 
 Natiivisepälle ilmoitettu; 26 (zoomi) ja 27 (nostojen hytinä) pysyvät.
+
+## LAITETESTAAJA 71 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 16.21)
+
+Luovutus viesti-laitetestaaja-luovutus-20260924-ilta.md (avoimet pariteettirivit, EI TARKISTETTU -osiot, build 9 -mittaus, kosketuslupa, iso iPad), aloitusviesti päivitettynä; Postivahti lähettää uusimman version kun tyhjä.
