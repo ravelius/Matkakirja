@@ -4319,3 +4319,7 @@ Lamput: yksittäiset ka 69 vs 73–77, pinot 127 vs 174 → korjataan erikseen. 
 ## NATIIVI-UI NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA natiivi-ui-ei-webissa (klo 17.3x), RC PAALLA (24.9.2026 klo 17.17)
 
 Mainin kopio oli vanhentunut (10.5x) → uusin haarasta, kuten ohjeistettu. Postilaatikon commit 962cf9077 havaittu.
+
+## ASTROPULU b10d: PILLERI MENEE OIKEAAN CHATTIIN, MUTTA WORKER HYLKAA KEHITYS-APP ID:N (HTTP 403 Origin ei ole sallittu) → PELIKOODARI LISAA fi.matkakirja.peli.kehitys SALLITTUIHIN (24.9.2026 klo 17.21)
+
+Linssisepän korjaus: pöllökoodi ei ole chatin ehto (vain päivärajan ohitus). Kuvat proto-3d/lokit/linssit-astropulu-20260924/. Kuvapari webin kanssa kun worker sallii ID:n.
