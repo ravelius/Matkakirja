@@ -1,0 +1,906 @@
+{
+ "nostot": [
+  {
+   "tunnus": "jebel-irhoud",
+   "laji": "loytopaikka",
+   "indeksi": 0,
+   "otsikko": "Kasvot, jotka tunnistaisi",
+   "teksti": "Kaivostyömies irrotti kallon luolan seinästä vuonna 1961, ja se kulki jonkin aikaa insinöörin matkamuistona ennen kuin päätyi Rabatin yliopistolle. Vuonna 2017 julkaistu uusi ajoitus teki löydöistä vanhimmat tunnetut Homo sapiensin jäänteet.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/jebel-irhoud.jpg",
+   "kuvaSelite": "Jebel Irhoud, noin 300 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-jebel-irhoud-r20260907.jpg",
+   "esineSelite": "Kallon kasvo-osa, Jebel Irhoud",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Jebel Irhoud\"",
+   "juttu": true,
+   "lyhytAjoitus": "300 000 v."
+  },
+  {
+   "tunnus": "omo-kibish",
+   "laji": "loytopaikka",
+   "indeksi": 1,
+   "otsikko": "Tuhkakerroksen alta",
+   "teksti": "Richard Leakeyn johtama retkikunta löysi 1967–1974 Omo-joen varrelta kaksi osittaista kalloa, leukoja ja satoja hampaita. Löydöt nimettiin Omo I:ksi ja Omo II:ksi, ja niitä pidettiin vuosikymmeniä maailman vanhimpina nykyihmisen luina.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/omo-kibish.jpg",
+   "kuvaSelite": "Omo Kibish, noin 230 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-omo-kibish-r20260907.jpg",
+   "esineSelite": "Kallon fragmentit, Omo Kibish",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Omo remains\"",
+   "juttu": true,
+   "lyhytAjoitus": "233 000 v."
+  },
+  {
+   "tunnus": "pinnacle-point",
+   "laji": "loytopaikka",
+   "indeksi": 2,
+   "otsikko": "Meri ruokkii",
+   "teksti": "Rantakallion luolista löytyi 2000-luvun kaivauksissa simpukankuoria, jauhettua okraa ja kuumennettuja kiventeriä. Ne ovat varhaisimpia tunnettuja todisteita siitä, että ihminen käytti meren antimia järjestelmällisesti.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/pinnacle-point.jpg",
+   "kuvaSelite": "Pinnacle Point, noin 160 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-pinnacle-point-r20260907.jpg",
+   "esineSelite": "Simpukankuoret ja kivityökalut, Pinnacle Point",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Pinnacle Point\"",
+   "juttu": true,
+   "lyhytAjoitus": "164 000 v."
+  },
+  {
+   "tunnus": "skhul-qafzeh",
+   "laji": "loytopaikka",
+   "indeksi": 3,
+   "otsikko": "Varhainen retki Levanttiin",
+   "teksti": "Dorothy Garrodin johtamilla kaivauksilla 1929–1934 Karmelvuoren luolista nousi kymmenkunta luurankoa, ja lähellä Nasaretia sijaitsevasta Qafzehin luolasta löytyi myöhemmin hautoja, joissa oli okraa ja peuransarvia.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/skhul-qafzeh.jpg",
+   "kuvaSelite": "Qafzeh, noin 100 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-skhul-qafzeh-r20260907.jpg",
+   "esineSelite": "Sarvi ja okra, Qafzeh",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Skhul and Qafzeh hominins\" ja \"Skhul Cave\"",
+   "juttu": true,
+   "lyhytAjoitus": "105 000 v."
+  },
+  {
+   "tunnus": "blombos",
+   "laji": "loytopaikka",
+   "indeksi": 4,
+   "otsikko": "Okra ja helmet",
+   "teksti": "Christopher Henshilwoodin kaivauksista nousi 1990-luvulta alkaen kaiverrettuja okrapaloja, reiällisiä kotilonkuoria ja hiottuja luukärkiä. Helmet ovat noin 75 000 vuoden ikäisiä, vanhin piirros noin 73 000.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/blombos.jpg",
+   "kuvaSelite": "Blombos, noin 75 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-blombos-r20260907.jpg",
+   "esineSelite": "Kaiverrettu okra ja simpukkahelmet, Blombos",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Blombos Cave\"",
+   "juttu": true,
+   "lyhytAjoitus": "100 000 v."
+  },
+  {
+   "tunnus": "al-wusta",
+   "laji": "loytopaikka",
+   "indeksi": 5,
+   "otsikko": "Sormiluu vihreässä Arabiassa",
+   "teksti": "Kuivuneen järven pohjalta löytyi yksi ainoa ihmisen sormen luu, joka ajoitettiin vuonna 2018 noin 88 000 vuoden ikäiseksi. Se on vanhin ihmisfossiili, joka tunnetaan Afrikan ja Levantin ulkopuolelta.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/al-wusta.jpg",
+   "kuvaSelite": "Al Wusta, noin 85 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-al-wusta-r20260907.jpg",
+   "esineSelite": "AW-1-välinivel, Al Wusta",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Arabian Peninsula\" ja \"Nafud desert\"",
+   "juttu": true,
+   "lyhytAjoitus": "88 000 v."
+  },
+  {
+   "tunnus": "lida-ajer",
+   "laji": "loytopaikka",
+   "indeksi": 6,
+   "otsikko": "Kaksi hammasta sademetsässä",
+   "teksti": "Hollantilainen Eugène Dubois keräsi luolasta 1890-luvulla laatikollisen hampaita ja luita. Vasta vuonna 2017 kaksi hammasta tunnistettiin nykyihmisen hampaiksi ja kerrokset ajoitettiin 73 000–63 000 vuoden ikäisiksi.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/lida-ajer.jpg",
+   "kuvaSelite": "Lida Ajer, noin 70 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lida-ajer-r20260907.jpg",
+   "esineSelite": "Hampaat, Lida Ajer",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"List of first human settlements\"",
+   "juttu": true,
+   "lyhytAjoitus": "70 000 v."
+  },
+  {
+   "tunnus": "madjedbebe",
+   "laji": "loytopaikka",
+   "indeksi": 7,
+   "otsikko": "Yli meren Sahuliin",
+   "teksti": "Hiekkakivikallion suojasta on kaivettu yli satatuhatta esinettä: kiventeriä, hiottuja kirveenteriä, jauhinkiviä ja okraa. Vuoden 2017 ajoitus antoi alimmalle asutuskerrokselle iäksi 65 000 ± 6 000 vuotta.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/madjedbebe.jpg",
+   "kuvaSelite": "Madjedbebe, noin 65 000–50 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-madjedbebe-r20260907.jpg",
+   "esineSelite": "Hiottu kivikirves ja okra, Madjedbebe",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Madjedbebe\"",
+   "juttu": true,
+   "lyhytAjoitus": "57 500 v."
+  },
+  {
+   "tunnus": "denisova",
+   "laji": "loytopaikka",
+   "indeksi": 8,
+   "otsikko": "Kolme ihmisryhmää, yksi luola",
+   "teksti": "Luolasta löytyi 2008 pieni sormiluun pala, jonka perimä osoitti 2010 kokonaan tuntemattoman ihmisryhmän, denisovalaiset. Samasta luolasta on löytynyt myös noin 50 000 vuotta vanha luuneula.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/denisova.jpg",
+   "kuvaSelite": "Denisovan luola, noin 50 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-denisova-r20260907.jpg",
+   "esineSelite": "Denisova 3:n kaksi sormiluufragmenttia ja erillinen vihreä rannerengas, Denisovan luola",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Denisova Cave\" ja \"Denisovan\"",
+   "juttu": true,
+   "lyhytAjoitus": "50 000 v."
+  },
+  {
+   "tunnus": "bacho-kiro",
+   "laji": "loytopaikka",
+   "indeksi": 9,
+   "otsikko": "Nykyihminen Euroopassa",
+   "teksti": "Luolan kerroksesta 11 löytyi leukaluun paloja ja rei'itettyjä karhunhampaita. Hampaat ovat Euroopan vanhimmat tunnetut korut, yli 43 000 vuotta vanhoja, ja perimä osoitti luiden kuuluneen nykyihmiselle.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/bacho-kiro.jpg",
+   "kuvaSelite": "Bacho Kiro, noin 45 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-bacho-kiro-r20260907.jpg",
+   "esineSelite": "Karhunhammasriipukset, Bacho Kiro",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Bacho Kiro Cave\"",
+   "juttu": true,
+   "lyhytAjoitus": "45 000 v."
+  },
+  {
+   "tunnus": "lake-mungo",
+   "laji": "loytopaikka",
+   "indeksi": 10,
+   "otsikko": "Mungon nainen ja mies",
+   "teksti": "Geologi Jim Bowler löysi 1968 hiekkatörmästä poltetut luut, jotka ovat maailman vanhimpia tunnettuja tuhkauksia. Kuusi vuotta myöhemmin samalta alueelta löytyi hauta, jonka vainaja oli peitetty punaisella okralla.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/lake-mungo.jpg",
+   "kuvaSelite": "Lake Mungo, noin 42 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lake-mungo-r20260907.jpg",
+   "esineSelite": "Tuhka, okra ja simpukat, Lake Mungo",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Lake Mungo remains\"",
+   "juttu": true,
+   "lyhytAjoitus": "42 000 v."
+  },
+  {
+   "tunnus": "tianyuan",
+   "laji": "loytopaikka",
+   "indeksi": 11,
+   "otsikko": "Kalastaja Pekingin lähellä",
+   "teksti": "Luolasta kerättiin 34 luunpalaa, jotka kuuluvat samalle ihmiselle. Radiohiiliajoitus antoi iäksi 42 000–39 000 vuotta, ja luista saatiin perimä — yksi vanhimmista, joita nykyihmisestä on onnistuttu lukemaan.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/tianyuan.jpg",
+   "kuvaSelite": "Tianyuan, noin 40 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-tianyuan-r20260907.jpg",
+   "esineSelite": "Reisiluu, Tianyuan",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Tianyuan man\"",
+   "juttu": true,
+   "lyhytAjoitus": "40 500 v."
+  },
+  {
+   "tunnus": "niah",
+   "laji": "loytopaikka",
+   "indeksi": 12,
+   "otsikko": "Syvä kallo",
+   "teksti": "Barbara Harrisson löysi helmikuussa 1958 kuumaksi ristityn kaivauskuopan pohjalta osittaisen kallon lähes kolmen metrin syvyydestä. \"Syvä kallo\" oli kauan Kaakkois-Aasian vanhin tunnettu nykyihmisen jäänne.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/niah.jpg",
+   "kuvaSelite": "Niahin luola, noin 40 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-niah-r20260907.jpg",
+   "esineSelite": "Deep Skullin säilyneet kallon osat, Niah",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Niah National Park\"",
+   "juttu": true,
+   "lyhytAjoitus": "40 000 v."
+  },
+  {
+   "tunnus": "chauvet",
+   "laji": "loytopaikka",
+   "indeksi": 13,
+   "otsikko": "Hevoset ja sarvikuonot seinällä",
+   "teksti": "Kolme luolatutkijaa löysi 18. joulukuuta 1994 kallionkolosta käytävän, joka johti koskemattomaan luolaan. Seinillä oli satoja maalauksia, ja mustimmat niistä on ajoitettu 37 000–33 500 vuoden ikäisiksi.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/chauvet.jpg",
+   "kuvaSelite": "Chauvet’n luola, noin 36 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-chauvet-r20260907.jpg",
+   "esineSelite": "Todellinen Panel of the Horses ympäröivine eläinhahmoineen, Chauvet",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Chauvet Cave\"",
+   "juttu": true,
+   "lyhytAjoitus": "36 000 v."
+  },
+  {
+   "tunnus": "yana",
+   "laji": "loytopaikka",
+   "indeksi": 14,
+   "otsikko": "Napapiirin pohjoispuolella",
+   "teksti": "Geologi löysi 1993 jokitörmästä keihäänvarren, joka oli tehty villisarvikuonon sarvesta. Sen ohjaamana paikannettiin 2001 leiripaikka, joka on noin 32 000 vuotta vanha ja pohjoisin tunnettu tämän ikäinen.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/yana.jpg",
+   "kuvaSelite": "Yana, noin 32 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-yana-r20260907.jpg",
+   "esineSelite": "Luusta ja norsunluusta tehdyt työkalut, Yana",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Yana Rhinoceros Horn Site\"",
+   "juttu": true,
+   "lyhytAjoitus": "32 000 v."
+  },
+  {
+   "tunnus": "white-sands",
+   "laji": "loytopaikka",
+   "indeksi": 15,
+   "otsikko": "Jalanjäljet järven rannalla",
+   "teksti": "Kuivuneen Otero-järven rannalta paljastui vuodesta 2009 alkaen 61 ihmisen jalanjälkeä. Vuonna 2021 jälkien kerroksista löytyneet siemenet ajoitettiin 23 000–21 000 vuoden ikäisiksi.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/white-sands.jpg",
+   "kuvaSelite": "White Sands, noin 23 000–21 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-white-sands-r20260907.jpg",
+   "esineSelite": "Fossiloitunut jalanjälki, White Sands",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"White Sands footprints\"",
+   "juttu": true,
+   "lyhytAjoitus": "22 000 v."
+  },
+  {
+   "tunnus": "beringia",
+   "laji": "loytopaikka",
+   "indeksi": 16,
+   "otsikko": "Maasilta, jota ei enää ole",
+   "teksti": "Beringiaa ei kaivettu esiin vaan pääteltiin. Kasvitieteilijä Eric Hultén nimesi 1937 kasvien levinneisyyden perusteella maa-alueen, jonka meri on sittemmin peittänyt; merenpinnan historia ja perimäntutkimus ovat sittemmin vahvistaneet sen.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/beringia.jpg",
+   "kuvaSelite": "Beringia, noin 20 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-beringia-r20260907.jpg",
+   "esineSelite": "Norsunluuaihio ja kivikärki, Beringia",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Beringia\"",
+   "juttu": true,
+   "lyhytAjoitus": "20 000 v."
+  },
+  {
+   "tunnus": "monte-verde",
+   "laji": "loytopaikka",
+   "indeksi": 17,
+   "otsikko": "Turpeen alle jäänyt leiri",
+   "teksti": "Puron törmä syöpyi 1975 auki ja paljasti luita, joita paikalliset pitivät lehmän jäänteinä. Turpeen alla oli säilynyt kokonainen leiri: pitkä puinen runko, köyttä, tulisijoja ja ruoantähteitä.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/monte-verde.jpg",
+   "kuvaSelite": "Monte Verde, noin 14 500 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-monte-verde-r20260907.jpg",
+   "esineSelite": "Puuesine ja solmittu kuitunaru, Monte Verde",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Monte Verde\"",
+   "juttu": true,
+   "lyhytAjoitus": "14 500 v."
+  },
+  {
+   "tunnus": "lapita",
+   "laji": "loytopaikka",
+   "indeksi": 18,
+   "otsikko": "Savenvalajat avomerellä",
+   "teksti": "Kalastajakylän mullasta kaivettiin 2000-luvulla lapita-kulttuurin leimakuvioisia saviastioita. Korallista tehty hiomakivi ajoitettiin 2012 uraani-torium-menetelmällä noin 2 840 vuoden ikäiseksi.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/lapita.jpg",
+   "kuvaSelite": "Lapita, Tonga ja Samoa, noin 3 000 vuotta sitten",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lapita-r20260907.jpg",
+   "esineSelite": "Hammastettu ruukunpala, Lapita",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Nukuleka\" ja \"Lapita culture\"",
+   "juttu": true,
+   "lyhytAjoitus": "2 850 v."
+  },
+  {
+   "tunnus": "aotearoa",
+   "laji": "loytopaikka",
+   "indeksi": 19,
+   "otsikko": "Viimeinen suuri maa",
+   "teksti": "Koulupoika Jim Eyles löysi 1939 joensuun sorasärkältä esineitä, ja kaivauksissa paljastui asuinpaikka ja hautausmaa. Se on Uuden-Seelannin varhaisimpia tunnettuja asuinpaikkoja, noin vuodelta 1280.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/aotearoa.jpg",
+   "kuvaSelite": "Aotearoa, noin 1250–1300 jaa.",
+   "esine": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-aotearoa-r20260907.jpg",
+   "esineSelite": "Moa-luu ja luinen kalakoukku, Aotearoa",
+   "kuvaAito": null,
+   "kuvaAitoSelite": null,
+   "tekija": null,
+   "lahde": "en-Wikipedia \"Wairau Bar\"",
+   "juttu": true,
+   "lyhytAjoitus": "750 v."
+  },
+  {
+   "tunnus": "toba",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Tulivuori, joka pimensi taivaan",
+   "teksti": "Sumatran Toba purkautui niin rajusti, että se on neljännesmiljoonan vuoden suurin tunnettu purkaus: tuhkaa levisi Intian valtameren yli ja kraatterista tuli järvi, joka on yhä sadan kilometrin pituinen. Vanha ajatus siitä, että purkaus kutisti ihmiskunnan muutamaan tuhanteen yksilöön, on sittemmin kyseenalaistettu — Afrikan kaivauksissa elämä jatkui tuhkakerroksen yli.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/toba.jpg",
+   "kuvaSelite": "Tulivuori, joka pimensi taivaan",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-toba-fc05389a.jpg",
+   "kuvaAitoSelite": "Toba-järvi ja sen kaldera Sumatralla korkeuskartalla.",
+   "tekija": "Batholith",
+   "lahde": "en-Wikipedia \"Toba eruption\"",
+   "juttu": false,
+   "lyhytAjoitus": "74 000 v."
+  },
+  {
+   "tunnus": "sunda",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Kuiva silta Kaakkois-Aasiaan",
+   "teksti": "Kun jää sitoi vettä mantereille, meri oli noin 120 metriä nykyistä alempana ja Sumatra, Jaava ja Borneo olivat kiinni Aasiassa yhtenä tasankona. Sundamaan poikki käveltiin kuivin jaloin, ja sen jokilaaksot ja rannat ovat nyt matalan meren pohjassa — siksi varhaisimmat leirit ovat vaikeimmin löydettäviä.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/sunda.jpg",
+   "kuvaSelite": "Kuiva silta Kaakkois-Aasiaan",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-sunda-c8515f30.jpg",
+   "kuvaAitoSelite": "Sundamaa viimeisen jääkauden huipulla: nykyiset maat tummalla.",
+   "tekija": "ש.מירון",
+   "lahde": "en-Wikipedia \"Sundaland\"",
+   "juttu": false,
+   "lyhytAjoitus": "20 000 v."
+  },
+  {
+   "tunnus": "sahul",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Australia, joka oli isompi",
+   "teksti": "Australia, Uusi-Guinea ja Tasmania olivat yksi manner, Sahul, jonka keskellä nykyinen Carpentarianlahti oli järvi. Sinne ei silti päässyt kävellen: viimeinen vesiväli oli kymmeniä kilometrejä leveä, joten ensimmäinen australialainen tuli veneellä. Merenpinnan noustua manner katkesi kolmeksi ja rannikon vanhimmat leirit jäivät veden alle.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/sahul.jpg",
+   "kuvaSelite": "Australia, joka oli isompi",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-sahul-b4f9bd68.jpg",
+   "kuvaAitoSelite": "Sahul: Australian ja Uuden-Guinean yhteinen jääkauden manner.",
+   "tekija": "Altaileopard",
+   "lahde": "en-Wikipedia \"Sahul\"",
+   "juttu": false,
+   "lyhytAjoitus": "50 000 v."
+  },
+  {
+   "tunnus": "wallacea",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Vesiraja, joka ei koskaan sulkeutunut",
+   "teksti": "Sundamaan ja Sahulin väliin jää saarivyöhyke, jota syvät salmet erottavat molemmista: Wallacea. Vesi on siellä niin syvää, ettei jääkausi koskaan paljastanut siltaa, ja siksi Aasian ja Australian eläimistöt ovat yhä eri maailmoja. Ihminen ylitti rajan silti — ja se on vanhin todiste siitä, että osattiin kulkea merellä.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/wallacea.jpg",
+   "kuvaSelite": "Vesiraja, joka ei koskaan sulkeutunut",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-wallacea-f7a910fa.jpg",
+   "kuvaAitoSelite": "Wallacen alkuperäinen kartta vuodelta 1863 ja hänen vetämänsä raja.",
+   "tekija": "Alfred Russel Wallace; J. Arrowsmith",
+   "lahde": "en-Wikipedia \"Wallacea\"",
+   "juttu": false,
+   "lyhytAjoitus": "65 000 v."
+  },
+  {
+   "tunnus": "flores",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Pienet ihmiset Floresilla",
+   "teksti": "Liang Buan luolasta löytyi vuonna 2003 aikuinen nainen, joka oli noin 106 senttiä pitkä ja jonka aivot olivat greipin kokoiset. Homo floresiensis eli saarella kymmeniätuhansia vuosia, teki kivityökaluja ja metsästi kääpiönorsuja — ja katosi suunnilleen silloin, kun nykyihminen saapui seudulle.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/flores.jpg",
+   "kuvaSelite": "Pienet ihmiset Floresilla",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-flores-b4131f24.jpg",
+   "kuvaAitoSelite": "Liang Buan luola Floresilla, Indonesiassa.",
+   "tekija": "Rosino",
+   "lahde": "en-Wikipedia \"Homo floresiensis\"",
+   "juttu": false,
+   "lyhytAjoitus": "60 000 v."
+  },
+  {
+   "tunnus": "sulawesi-taide",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Vanhin kuva, jonka tunnemme",
+   "teksti": "Sulawesin Maros-Pangkepin karstiluolien seinillä on käsien kuvia ja metsäsikoja, ja yhdessä paneelissa pienet hahmot ympäröivät villisikaa — vanhin tunnettu kuva, joka kertoo tapahtuman. Ajoitus tehdään maalin päälle kasvaneesta kalkkikerroksesta, joten kuva on vähintään niin vanha kuin sitä peittävä kivi.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/sulawesi-taide.jpg",
+   "kuvaSelite": "Vanhin kuva, jonka tunnemme",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-sulawesi-taide-2941b3f9.jpg",
+   "kuvaAitoSelite": "Käsijälkimaalauksia Pettakeren luolan seinällä Marosissa.",
+   "tekija": "Sabjan Badio",
+   "lahde": "en-Wikipedia \"Maros-Pangkep karst\"",
+   "juttu": false,
+   "lyhytAjoitus": "47 000 v."
+  },
+  {
+   "tunnus": "ust-ishim",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Reisiluu joen rannalta",
+   "teksti": "Irtysh-joen törmästä löytynyt yksi reisiluu antoi vanhimman koko perimän, joka nykyihmisestä on luettu. Sen neandertalilaisperäiset pätkät ovat pitkiä eivätkä vielä pilkkoutuneita — siitä lasketaan, että sekoittuminen tapahtui noin 50 000–60 000 vuotta sitten, muutama sata sukupolvea ennen tätä miestä.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/ust-ishim.jpg",
+   "kuvaSelite": "Reisiluu joen rannalta",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-ust-ishim-576932ca.jpg",
+   "kuvaAitoSelite": "Irtyš-joen ranta Ust-Išimin kylän kohdalla Länsi-Siperiassa.",
+   "tekija": "Odessey",
+   "lahde": "en-Wikipedia \"Ust'-Ishim man\"",
+   "juttu": false,
+   "lyhytAjoitus": "45 000 v."
+  },
+  {
+   "tunnus": "kostenki",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Donin leirit tuhkan alla",
+   "teksti": "Kostenkin ja Borštševon kylien ympäriltä on kaivettu kymmeniä leiripaikkoja, joista osa on Italian suurpurkauksen tuhkakerroksen alla — sama tuhka ajoittaa ne kaikki kerralla. Kostenki 14:n perimä osoittaa, että eurooppalaisten sukupuu haarautui jo tällöin, ja mammutinluista rakennettiin majoja arolla, jossa puuta ei ollut.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/kostenki.jpg",
+   "kuvaSelite": "Donin leirit tuhkan alla",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-kostenki-52a30bb4.jpg",
+   "kuvaAitoSelite": "Don-joki Kostenkin kylän lähellä Voronežin alueella.",
+   "tekija": "Наталья Филатова",
+   "lahde": "en-Wikipedia \"Kostyonki–Borshchyovo archaeological complex\"",
+   "juttu": false,
+   "lyhytAjoitus": "37 000 v."
+  },
+  {
+   "tunnus": "sungir",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Kaksikymmentä tuhatta helmeä",
+   "teksti": "Sungirissa haudattiin kaksi lasta pää päätä vasten ja aikuinen mies heidän viereensä, kaikki peitettyinä mammutinluisilla helmillä. Yhden puvun helmien tekemiseen on arvioitu kuluneen tuhansia työtunteja, ja lasten haudassa oli suoraksi oiottuja mammutinsyöksyhampaita. Se kertoo yhteisöstä, jolla oli varaa haudata lapsi kuin ruhtinas.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/sungir.jpg",
+   "kuvaSelite": "Kaksikymmentä tuhatta helmeä",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-sungir-b41a27f1.jpg",
+   "kuvaAitoSelite": "Sungirin pojan pukuvaatteen rekonstruktio helmikoristeineen museossa.",
+   "tekija": "Лапоть",
+   "lahde": "en-Wikipedia \"Sunghir\"",
+   "juttu": false,
+   "lyhytAjoitus": "34 000 v."
+  },
+  {
+   "tunnus": "dolni-vestonice",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Maailman vanhin savifiguuri",
+   "teksti": "Määrin mammutinmetsästäjien leiristä löytyi pieni naisfiguuri, joka oli poltettu savesta — kymmeniätuhansia vuosia ennen ensimmäistä ruukkua. Samalta paikalta tunnetaan kudotun kankaan painaumia savessa ja kolmen nuoren yhteishauta, jonka asetelmaa on selitetty monella tavalla eikä yksikään selitys ole varma.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/dolni-vestonice.jpg",
+   "kuvaSelite": "Maailman vanhin savifiguuri",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-dolni-vestonice-6b9fd4d0.jpg",
+   "kuvaAitoSelite": "Dolní Věstonicen Venus, maailman vanhin tunnettu keraaminen figuuri.",
+   "tekija": "Miroslav Zachoval",
+   "lahde": "en-Wikipedia \"Dolní Věstonice (archaeology)\"",
+   "juttu": false,
+   "lyhytAjoitus": "29 000 v."
+  },
+  {
+   "tunnus": "malta-poika",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Poika, joka yhdistää kaksi maanosaa",
+   "teksti": "Mal'tan kylästä Baikalin länsipuolelta kaivettiin 1920-luvulla nuoren pojan hauta, ja vuonna 2013 hänen perimänsä yllätti kaikki: se on sukua sekä eurooppalaisille että Amerikan alkuperäisväestölle. Tästä \"muinaisten pohjois-eurasialaisten\" väestöstä tuli toinen puolikas siinä seoksessa, joka lopulta ylitti Beringian.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/malta-poika.jpg",
+   "kuvaSelite": "Poika, joka yhdistää kaksi maanosaa",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-malta-poika-f5823400.jpg",
+   "kuvaAitoSelite": "Mal'tan lapsihaudan esineitä: helmiä, riipuksia ja rannerengas.",
+   "tekija": "Liudmila Lbova",
+   "lahde": "en-Wikipedia \"Mal'ta–Buret' culture\"",
+   "juttu": false,
+   "lyhytAjoitus": "24 000 v."
+  },
+  {
+   "tunnus": "lascaux",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Härkien sali",
+   "teksti": "Neljä poikaa ja koira löysivät vuonna 1940 luolan, jonka seinillä on lähes kaksituhatta kuvaa: hevosia, uroshirviä ja jättimäisiä härkiä. Luola suljettiin yleisöltä 1963, koska kävijöiden hiilidioksidi ja kosteus alkoivat tuhota maalauksia — nyt siellä käydään kopiossa.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/lascaux.jpg",
+   "kuvaSelite": "Härkien sali",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-lascaux-afb31501.jpg",
+   "kuvaAitoSelite": "Lascaux-luolan maalauksen kopio: hevosia ja villihärkä.",
+   "tekija": "Eline13Viki+",
+   "lahde": "en-Wikipedia \"Lascaux\"",
+   "juttu": false,
+   "lyhytAjoitus": "17 000 v."
+  },
+  {
+   "tunnus": "bluefish",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Kiistellyt luut Yukonissa",
+   "teksti": "Bluefish Cavesin hevosen ja poron luissa on viiltoja, joita on tulkittu ihmisen kiveniskujen jäljiksi jopa 24 000 vuoden takaa. Jos tulkinta pitää, ihmisiä oli Beringiassa kauan ennen jään väistymistä — mutta viilto voi syntyä myös pedon hampaista ja maan liikkeistä, ja kiista jatkuu.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/bluefish.jpg",
+   "kuvaSelite": "Kiistellyt luut Yukonissa",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-bluefish-ebc0b933.jpg",
+   "kuvaAitoSelite": "Suuren järven ranta Old Crow Flatsin kosteikoilla Yukonissa.",
+   "tekija": "Paul Gierszewski",
+   "lahde": "en-Wikipedia \"Bluefish Caves\"",
+   "juttu": false,
+   "lyhytAjoitus": "24 000 v."
+  },
+  {
+   "tunnus": "paisley",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Todiste, jota kukaan ei odottanut",
+   "teksti": "Oregonin Paisleyn luolien kuivasta pölystä löytyi ihmisen ulostetta, joka on radiohiiliajoitettu vanhemmaksi kuin yksikään Clovis-kärki. Siitä luettu DNA ja luolan luuytimestä tehdyt neulat kertovat samaa: Amerikassa oli ihmisiä ennen Clovisia.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/paisley.jpg",
+   "kuvaSelite": "Todiste, jota kukaan ei odottanut",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-paisley-9083f775.jpg",
+   "kuvaAitoSelite": "Paisley Caves -luolat Summer Laken tasangon yläpuolella Oregonissa.",
+   "tekija": "BLM photo",
+   "lahde": "en-Wikipedia \"Paisley Caves\"",
+   "juttu": false,
+   "lyhytAjoitus": "14 300 v."
+  },
+  {
+   "tunnus": "clovis",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Uurrettu kärki",
+   "teksti": "Clovisin kaupungin liepeiltä New Mexicosta kaivettiin 1930-luvulla keihäänkärkiä, joiden tyvessä on uurre varren kiinnitystä varten. Samaa kärkeä alkoi löytyä kaikkialta Pohjois-Amerikasta muutaman vuosisadan sisällä, ja pitkään sitä pidettiin maanosan ensimmäisen kulttuurin merkkinä — nykyään se on yksi vaihe muiden joukossa.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/clovis.jpg",
+   "kuvaSelite": "Uurrettu kärki",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-clovis-19487ff7.jpg",
+   "kuvaAitoSelite": "Clovis-keihäänkärkiä esillä Clevelandin luonnonhistoriallisessa museossa.",
+   "tekija": "Tim Evanson",
+   "lahde": "en-Wikipedia \"Clovis culture\"",
+   "juttu": false,
+   "lyhytAjoitus": "13 000 v."
+  },
+  {
+   "tunnus": "doggerland",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Pohjanmeren uponnut maa",
+   "teksti": "Britannian ja Tanskan välissä oli soita, jokia ja metsää, joissa metsästettiin — troolarit nostavat sieltä yhä luuharppuunoita ja mammutinluita. Meri söi Doggerlandin vähitellen, ja lopun teki noin 8 200 vuotta sitten Norjan edustan valtava vedenalainen maanvyöry ja sen hyökyaalto.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/doggerland.jpg",
+   "kuvaSelite": "Pohjanmeren uponnut maa",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-doggerland-be5c7d79.jpg",
+   "kuvaAitoSelite": "Doggerland ja Doggerbank kartoilla: nykytilanne ja muinainen maasilta.",
+   "tekija": "Francis Lima",
+   "lahde": "en-Wikipedia \"Doggerland\"",
+   "juttu": false,
+   "lyhytAjoitus": "8 500 v."
+  },
+  {
+   "tunnus": "teouma",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Lapita-hautausmaa Vanuatulla",
+   "teksti": "Teouman hautausmaa löytyi 2003, kun traktori rikkoi koristellun Lapita-ruukun. Haudoissa on kymmeniä ensimmäisen sukupolven siirtolaisia, ja heidän perimänsä on lähes kokonaan aasialaista alkuperää — papualainen aines tuli saarille vasta myöhemmin, mikä kertoo kahdesta eri muuttoaallosta.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/teouma.jpg",
+   "kuvaSelite": "Lapita-hautausmaa Vanuatulla",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-teouma-46a33b40.jpg",
+   "kuvaAitoSelite": "Lapita-keramiikkaa Vanuatun kulttuurikeskuksessa Port Vilassa.",
+   "tekija": "Torbenbrinker",
+   "lahde": "en-Wikipedia \"Teouma\"",
+   "juttu": false,
+   "lyhytAjoitus": "3 000 v."
+  },
+  {
+   "tunnus": "madagaskar",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Borneosta Afrikan rannikolle",
+   "teksti": "Madagaskarin malagassin kieli on sukua Borneon barito-kielille, vaikka saari on Afrikan rannikolla — asuttajat purjehtivat siis Intian valtameren yli, eivät kävelleet Mosambikista. Väestö on sekoitus austronesialaista ja bantutaustaa, ja saaren jättiläislinnut ja kääpiövirtahevot katosivat ihmisen tulon jälkeen.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/madagaskar.jpg",
+   "kuvaSelite": "Borneosta Afrikan rannikolle",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-madagaskar-6c324b37.jpg",
+   "kuvaAitoSelite": "Vezo-kalastajien purjekanootti Madagaskarin rannalla.",
+   "tekija": "Boosha Afrikaf",
+   "lahde": "en-Wikipedia \"Madagascar\"",
+   "juttu": false,
+   "lyhytAjoitus": "1 300 v."
+  },
+  {
+   "tunnus": "saqqaq",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Ensimmäiset grönlantilaiset",
+   "teksti": "Saqqaq-kulttuurin väki tuli Grönlantiin Kanadan arktiselta saaristolta ja eli siellä satoja vuosia — eikä heillä ole jälkeläisiä nykyisissä inuiteissa. Jäätyneestä maasta säilyneestä hiustupsusta luettiin vuonna 2010 ensimmäinen muinaisen ihmisen koko perimä; se kertoi miehen silmien värin, veriryhmän ja korvavahan laadun.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/saqqaq.jpg",
+   "kuvaSelite": "Ensimmäiset grönlantilaiset",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-saqqaq-7f08cc47.jpg",
+   "kuvaAitoSelite": "Sermermiutin laakso Ilulissatin jäävuonon rannalla Länsi-Grönlannissa.",
+   "tekija": "Sebastian We",
+   "lahde": "en-Wikipedia \"Saqqaq culture\"",
+   "juttu": false,
+   "lyhytAjoitus": "4 500 v."
+  },
+  {
+   "tunnus": "rapa-nui",
+   "laji": "lisanosto",
+   "indeksi": -1,
+   "otsikko": "Kaukaisin saari",
+   "teksti": "Rapa Nui on tuhansien kilometrien päässä lähimmästä asutusta saaresta, ja sinne osattiin silti purjehtia. Saarelaiset pystyttivät lähes tuhat moai-patsasta, ja pitkään kerrottua tarinaa itse aiheutetusta romahduksesta on viime vuosina korjattu: väestö näyttää pysyneen vakaana, ja suurin isku tuli eurooppalaisten mukana.",
+   "kuva": "https://media.matkakirja.app/aikajana/ihmisen-matka/nosto/rapa-nui.jpg",
+   "kuvaSelite": "Kaukaisin saari",
+   "esine": null,
+   "esineSelite": null,
+   "kuvaAito": "https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920/im-rapa-nui-bf5da0ea.jpg",
+   "kuvaAitoSelite": "Kuusi moai-patsasta Ahu Tongarikin seremoniapaikalla Rapa Nuilla.",
+   "tekija": "Rivi",
+   "lahde": "en-Wikipedia \"Easter Island\"",
+   "juttu": false,
+   "lyhytAjoitus": "800 v."
+  }
+ ],
+ "sivut": [
+  {
+   "i": 0,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-jebel-irhoud-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/jebel-irhoud.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/jebel-irhoud.jpg"
+   ]
+  },
+  {
+   "i": 1,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-omo-kibish-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/omo-kibish.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/omo-kibish.jpg"
+   ]
+  },
+  {
+   "i": 2,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-pinnacle-point-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/pinnacle-point.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/pinnacle-point.jpg"
+   ]
+  },
+  {
+   "i": 3,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-skhul-qafzeh-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/skhul-qafzeh.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/skhul-qafzeh.jpg"
+   ]
+  },
+  {
+   "i": 4,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-blombos-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/blombos.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/blombos.jpg"
+   ]
+  },
+  {
+   "i": 5,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-al-wusta-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/al-wusta.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/al-wusta.jpg"
+   ]
+  },
+  {
+   "i": 6,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lida-ajer-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/lida-ajer.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/lida-ajer.jpg"
+   ]
+  },
+  {
+   "i": 7,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-madjedbebe-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/madjedbebe.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/madjedbebe.jpg"
+   ]
+  },
+  {
+   "i": 8,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-denisova-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/denisova.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/denisova.jpg"
+   ]
+  },
+  {
+   "i": 9,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-bacho-kiro-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/bacho-kiro.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/bacho-kiro.jpg"
+   ]
+  },
+  {
+   "i": 10,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lake-mungo-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/lake-mungo.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/lake-mungo.jpg"
+   ]
+  },
+  {
+   "i": 11,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-tianyuan-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/tianyuan.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/tianyuan.jpg"
+   ]
+  },
+  {
+   "i": 12,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-niah-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/niah.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/niah.jpg"
+   ]
+  },
+  {
+   "i": 13,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-chauvet-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/chauvet.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/chauvet.jpg"
+   ]
+  },
+  {
+   "i": 14,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-yana-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/yana.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/yana.jpg"
+   ]
+  },
+  {
+   "i": 15,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-white-sands-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/white-sands.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/white-sands.jpg"
+   ]
+  },
+  {
+   "i": 16,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-beringia-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/beringia.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/beringia.jpg"
+   ]
+  },
+  {
+   "i": 17,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-monte-verde-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/monte-verde.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/monte-verde.jpg"
+   ]
+  },
+  {
+   "i": 18,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lapita-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/lapita.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/lapita.jpg"
+   ]
+  },
+  {
+   "i": 19,
+   "sivu": true,
+   "kasvot": [
+    "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-aotearoa-r20260907.jpg"
+   ],
+   "vara": "https://media.matkakirja.app/aikajana/ihmisen-matka/aotearoa.jpg",
+   "ilmiot": [
+    "https://media.matkakirja.app/aikajana/ihmisen-matka/aotearoa.jpg"
+   ]
+  }
+ ]
+}

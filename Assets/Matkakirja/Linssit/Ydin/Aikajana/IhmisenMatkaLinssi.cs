@@ -117,6 +117,33 @@ namespace Matkakirja.Linssit.Aikajana
                 j.Vuosia ?? 0)).ToList();
         }
 
+        List<Pysakki> tiedeliite;
+        IReadOnlyList<Pysakki> TiedeliitteenPysakit => tiedeliite ??= aineisto.TiedeliitteenPysakit();
+
+        /// <summary>
+        /// Kortin "Lue lisää" (web ajo.avaaNostonJuttu(indeksi)): tiedeliitteen sivu löytöpaikan
+        /// indeksillä; null, jos sivua ei ole (lisänosto tai ei juttua). Natiivi-UI:n Tiedeliitenäkymä.
+        /// </summary>
+        public TiedeliiteSivu Tiedeliite(int i) => Aikajana.Tiedeliite.Sivu(TiedeliitteenPysakit, i);
+
+        /// <summary>Noston tiedeliitesivun indeksi (löytöpaikan järjestysnumero) tai -1.</summary>
+        public int TiedeliitteenSivu(string tunnus)
+        {
+            int i = aineisto.Paikat.FindIndex(p => p.Tunnus == tunnus);
+            return i >= 0 && Aikajana.Tiedeliite.OnSivu(TiedeliitteenPysakit[i]) ? i : -1;
+        }
+
+        /// <summary>
+        /// Sisällys LISTANA (web sisallys { lista, ajoitus: lyhytAjoitus, pilkku }): aikajärjestyksessä
+        /// indeksi, lyhyt ajoitus ("230 000 v."), otsikko ja tunnus (pilkun väri tunnuksesta).
+        /// </summary>
+        public IReadOnlyList<(int I, string Ajoitus, string Otsikko, string Tunnus)> TiedeliitteenSisallys() =>
+            aineisto.Paikat.Select((p, i) => (p, i)).Where(x => Aikajana.Tiedeliite.OnSivu(TiedeliitteenPysakit[x.i]))
+                .Select(x => (x.i, x.p.LyhytAjoitus, x.p.Otsikko, x.p.Tunnus)).ToList();
+
+        /// <summary>Alkusanat tiedeliitteen ensimmäisen sivun kärkeen (web tiedeliiteAlkusanat); null = ei.</summary>
+        public string TiedeliitteenAlkusanat => aineisto.Kaistaselite;
+
         public void Paivita() => Esitys?.Paivita();
 
         public void Sulje()

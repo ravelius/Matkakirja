@@ -20,6 +20,8 @@ namespace Matkakirja.Linssit.Aikajana
     public sealed class Kuvatieto
     {
         public string Osoite, Tiedosto, Lyhyt, Selite, Kuvateksti, Lahde;
+        /// <summary>Varakuvan osoite, jos tämä ei lataudu (web ihmisenMatkanPysakit: löytökuvan vara = havainnekuva).</summary>
+        public string Vara;
         public bool OnKuva => !string.IsNullOrEmpty(Tiedosto) || !string.IsNullOrEmpty(Osoite);
         /// <summary>Kortin kuvateksti (web kuvatekstiLyhyt).</summary>
         public string LyhytTeksti => Lyhyt ?? Selite ?? Kuvateksti ?? "";
@@ -32,6 +34,7 @@ namespace Matkakirja.Linssit.Aikajana
             if (!(arvo is Dictionary<string, object> o)) return null;
             return new Kuvatieto
             {
+                Vara = MiniJson.Teksti(o, "vara"),
                 Osoite = MiniJson.Teksti(o, "osoite"), Tiedosto = MiniJson.Teksti(o, "tiedosto"),
                 Lyhyt = MiniJson.Teksti(o, "lyhyt"), Selite = MiniJson.Teksti(o, "selite"),
                 Kuvateksti = MiniJson.Teksti(o, "kuvateksti"), Lahde = MiniJson.Teksti(o, "lahde"),
