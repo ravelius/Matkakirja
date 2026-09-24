@@ -729,51 +729,45 @@
     opacity: 1;
 }
 
+/* Web .toimintorivi.rivi-yksi .monitoimi-nappi (erä 19, mitattu 24.9. b12 Pariisi): täysin läpinäkyvä nappi,
+ * 44 × 36 (leveys vähintään 44, muuten sanan mukaan), ei reunusta eikä taustaa, kompassi piilossa; sana
+ * American Typewriter 600, 11,5 px, harvennus 0,1 em (1,15 px), #46331f peittävyydellä 0,65 ja kerman hehku
+ * (0 0 2px rgba(244,232,205,.9), 0 0 5px …,.7). Peittävyys läpinäkymättömänä värinä vaalean kartan päällä
+ * (sRGB: rgb(128, 111, 88)), koska lineaarinen väriavaruus vaalentaisi alfan (luovutus i). */
 .mk-liiku__nappi {
     flex-direction: row;
     align-items: center;
-    height: 44px;
-    padding: 0 18px;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.5);
-    border-radius: 22px;
-    background-color: #f5f0e2;
-    color: #2c1e07;
+    justify-content: center;
+    min-width: 44px;
+    height: 36px;
+    padding: 0;
+    border-width: 0;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(128, 111, 88);
 }
 
 .mk-liiku__nappi > .mk-ikoni {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    color: #7a5514;
+    display: none;
 }
 
 .mk-liiku__nappi .mk-nappi__teksti {
-    font-size: 16px;
+    font-size: 11.5px;
+    letter-spacing: 1.15px;
+    text-shadow: 0 0 3px rgba(244, 232, 205, 0.9);
 }
 
-/* iPhone (omistaja 24.9.2026, löydökset 6 ja 18): Liiku pienempi ja läpinäkyvä — vain teksti, kompassi ja kevyt
- * reuna, ei taustaa. Kevyt vaalea hehku tekstin ympärillä pitää sen luettavana tummalla kartalla. */
+/* iPhone (Raamattu NATIIVIN iPHONE-ASETTELU, omistaja 24.9. klo 11.1x): läpinäkyvä, vain teksti ja kevyt reuna,
+ * pienempi. Sana kuten webissä; kevyt reuna on hyväksytty poikkeama. */
 .mk-liiku--puhelin .mk-liiku__nappi {
-    height: 38px;
-    padding: 0 15px;
-    border-radius: 19px;
+    padding: 0 12px;
+    border-width: 1px;
+    border-radius: 18px;
     border-color: rgba(70, 51, 31, 0.4);
-    background-color: rgba(0, 0, 0, 0);
-    text-shadow: 0 0 3px rgba(245, 240, 226, 0.85);
 }
 
 .mk-liiku--puhelin .mk-liiku__nappi:active {
     background-color: rgba(245, 240, 226, 0.35);
-}
-
-.mk-liiku--puhelin .mk-liiku__nappi .mk-nappi__teksti {
-    font-size: 14.5px;
-}
-
-.mk-liiku--puhelin .mk-liiku__nappi > .mk-ikoni {
-    width: 18px;
-    height: 18px;
 }
 
 /* Maan kortti auki (web body.infotaulu-auki): Liiku väistyy. */

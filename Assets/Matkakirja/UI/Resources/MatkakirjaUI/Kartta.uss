@@ -9,7 +9,9 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 92%;
-    padding: 4px 8px 4px 8px;
+    /* Web .maapaneeli-kortti kiinni: täyte 0 (mitattu 24.9. b12 Pariisi: kortti x 20,2, oikea reuna 157,3, lapset
+       saman levyisiä). 8 pt:n täyte vei oikean reunan Liikun nousurajan 162,5 yli, ja Liiku nousi kortin päälle. */
+    padding: 0;
     border-width: 0;
     border-radius: 2px;
     color: rgba(58, 40, 25, 0.92);
