@@ -29,13 +29,21 @@ nimellä `<nakyma>-<leveys>x<korkeus>.png`. Samassa kansiossa on `yhteenveto.jso
 | `--ulos` | `/Users/Shared/Claude/proto-3d/lokit/pariteetti-web-<pvm>` | Kuvakansio |
 | `--kaupunki` | `marseille` | Tallenteen kaupunki (Ranskassa on kaikki nostolajit) |
 | `--siemen` | `5` | Pelin siemen (sama kuin savukkeissa) |
-| `--rinnakkain` | `2` | Samanaikaiset sivut |
 | `--uusinta` | `1` | Montako kertaa epäonnistunut kuva yritetään uudestaan |
 | `--gpu` | `metal` | `metal` = `--use-angle=metal` (Mac Studion GPU), `ohjelma` = SwiftShader |
 
 Playwright haetaan järjestyksessä `playwright`, `$PLAYWRIGHT_JS`,
 `/Users/Shared/Claude/Matkakirja-fable/node_modules/playwright/index.js`, …;
 selain on Playwrightin oma Chromium (tai `$CHROMIUM`).
+
+## Resurssit
+
+Yksi Chromium koko ajolle. Näkymät ajetaan peräkkäin (ei rinnakkain), ja
+jokaisen kuvan sivu ja konteksti suljetaan heti. Selain suljetaan aina: myös
+virheessä, Ctrl-C:ssä ja SIGTERMissä. Älä aja koko listaa samaan aikaan CI:n
+savukesarjan kanssa (actions-runner jakaa saman Macin muistin ja GPU:n):
+tarkista ensin `pgrep -fl actions-runner/_work` ja aja tarvittaessa vain
+muutama näkymä `--nakymat`-lipulla.
 
 ## Miten intro ohitetaan (olemassa olevat oikotiet, ei uusia)
 
@@ -52,7 +60,8 @@ Jokainen kuva otetaan tuoreessa selainkontekstissa:
    luennan. Merkinnän teksti on kortissa heti.
 3. **`reducedMotion: 'reduce'`** (Playwrightin konteksti → `prefers-reduced-motion`):
    `ui.typeText` kirjoittaa tekstin kerralla (`js/ui.js`). Tämä ohittaa myös visan,
-   sähkeen ja kohtaamisen kirjoituskoneen, ja paljastuskortti ohittaa häivytyksen.
+   sähkeen ja kohtaamisen kirjoituskoneen. Ennen kuvaa odotetaan, että päättyvät
+   CSS-animaatiot ja -siirtymät ovat valmiita (`document.getAnimations()`, katto 5 s).
 4. **Kehittäjätila on POIS** (`matkakirja-kehittaja` puuttuu), joten kuvat vastaavat
    pelaajan näkymää.
 5. **Valmiusehto**: pallon lepokerroksen näkyvät laatat ovat täysin scenessä
@@ -69,7 +78,7 @@ Käytetyt konsolikomennot (`window.matkakirja = { game, ui, sfx }`, js/main.js):
 `ui.openArrival(city)`, `ui.naytaTutkiSivu(n, { heti: true })`, `ui.avaaMaalehti(iso)`,
 `ui.openPassport()`, `ui.asetaPaivakirjanKoko(bool)`, `ui.valitseLinssi(id)` ja
 `ui.lataaLinssit()`, `ui.pallolauta.napautaNosto(id)` ja `ui.pallolauta.nostot.osumat()`,
-`ui.liukuAuki = true; ui.render()`, `ui.playTokenReveal(tyyppi, kaupunki)`,
+`ui.liukuAuki = true; ui.render()`, `game.quiz.correct` (visan oikea vastaus),
 `import('/js/fokusvirta.js').avaaFokusKohtaaminen(ui, city)`.
 Kehittäjän pikatie `?lauta=pallo&dev=<kaupunki>` (js/kehittaja-pikatie.js) on myös
 olemassa, mutta se kytkee kehittäjätilan päälle ja ohittaa saapumisen omalla tavallaan, joten tämä
@@ -105,7 +114,7 @@ työkalu käyttää tallennetta.
 | valikko | Hampurilainen | `#menu-btn` |
 | karttaselite | Kartan selite | `.karttaselite-nappi` |
 | pollo | Pöllöpaneeli | `.pollo-nappi` |
-| aarre | Aarteen paljastus kohtaamisen päällä | kohtaaminen + `ui.playTokenReveal('pieniAarre', kaupunki)` |
+| aarre | Aarteen paljastus pelin omalla polulla | kohtaaminen → Aloita peli → oikea vastaus (`game.quiz.correct`) |
 
 **Kauppaa ei ole.** Pelissä ei ole kauppaa eikä linssien ostoa: linssit löytyvät
 aarteina (`game.linssiAarteet`), ja "pulla" on vain sähkeen vihjeiden maksuväline.

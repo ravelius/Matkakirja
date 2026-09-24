@@ -6,7 +6,7 @@
  *
  *   node tools/pariteettikuvat.mjs [--url https://matkakirja.app/ | paikallinen | http://localhost:8080/]
  *     [--nakymat kartta,passi,...] [--koot 393x852,834x1194] [--ulos kansio]
- *     [--kaupunki marseille] [--siemen 5] [--dpr-iphone 3] [--rinnakkain 2]
+ *     [--kaupunki marseille] [--siemen 5] [--dpr-iphone 3]
  *     [--gpu metal|ohjelma] [--uusinta 1] [--lista]
  *
  * Jokainen kuva otetaan TUOREESSA selainkontekstissa: tallenne (siemen +
@@ -43,7 +43,6 @@ const ULOS = String(arg('ulos', `/Users/Shared/Claude/proto-3d/lokit/pariteetti-
 const KAUPUNKI = String(arg('kaupunki', 'marseille'));
 const SIEMEN = Number(arg('siemen', 5));
 const DPR_IPHONE = Number(arg('dpr-iphone', 3));
-const RINNAKKAIN = Math.max(1, Number(arg('rinnakkain', 2)));
 const GPU = String(arg('gpu', 'metal'));
 const UUSINTOJA = Math.max(0, Number(arg('uusinta', 1)));
 const KOOT = String(arg('koot', '393x852,834x1194')).split(',').map((k) => {
@@ -151,7 +150,35 @@ const LIPUT = GPU === 'metal'
   ? ['--use-angle=metal', '--ignore-gpu-blocklist', '--enable-gpu']
   : ['--use-gl=angle', '--use-angle=swiftshader'];
 LIPUT.push('--disable-features=HardwareMediaKeyHandling,MediaSessionService', '--autoplay-policy=no-user-gesture-required', '--mute-audio');
+/*
+ * YKSI SELAIN, NÄKYMÄT PERÄKKÄIN, SULKU AINA (Fable 24.9.2026: Macin muisti
+ * loppui, kun CI:n savukkeet ja kymmenet Chrome for Testing -prosessit
+ * ajoivat yhtä aikaa). Rinnakkaisuutta ei ole; jokaisen kuvan sivu ja
+ * konteksti suljetaan finallyssa, ja selain suljetaan myös virheessä,
+ * Ctrl-C:ssä (SIGINT), SIGTERMissä ja SIGHUPissa.
+ */
 const selain = await chromium.launch({ args: LIPUT, executablePath: process.env.CHROMIUM || undefined });
+let suljettu = false;
+async function suljeKaikki() {
+  if (suljettu) return;
+  suljettu = true;
+  await selain.close().catch(() => {});
+  palvelin?.close();
+}
+for (const signaali of ['SIGINT', 'SIGTERM', 'SIGHUP']) {
+  process.once(signaali, () => {
+    console.log(`\n${signaali}: suljetaan selain`);
+    suljeKaikki().finally(() => process.exit(130));
+  });
+}
+process.once('uncaughtException', (e) => {
+  console.error(e);
+  suljeKaikki().finally(() => process.exit(1));
+});
+process.once('unhandledRejection', (e) => {
+  console.error(e);
+  suljeKaikki().finally(() => process.exit(1));
+});
 
 /** Pallo valmis: lepokerroksen näkyvät laatat täysin scenessä, fontit ladattu. */
 async function odotaPallo(sivu, kattoMs = 25000) {
@@ -179,13 +206,17 @@ async function odotaKuvat(sivu, kattoMs = 8000) {
 
 async function kuvaaYksi(nakyma, koko) {
   const alku = Date.now();
-  const ctx = await selain.newContext({
+  let ctx = null;
+  const luoKonteksti = () => selain.newContext({
     viewport: { width: koko.w, height: koko.h }, deviceScaleFactor: koko.dpr,
     isMobile: koko.mobiili, hasTouch: true, reducedMotion: 'reduce', serviceWorkers: 'block',
     locale: 'fi-FI', timezoneId: 'Europe/Helsinki',
   });
   const virheet = [];
+  const vaiheet = {};
+  const merkitse = (nimi) => { vaiheet[nimi] = +((Date.now() - alku) / 1000).toFixed(1); };
   try {
+    ctx = await luoKonteksti();
     await ctx.addInitScript(([d, lisat]) => {
       if (sessionStorage.getItem('pariteetti-alustettu')) return;
       sessionStorage.setItem('pariteetti-alustettu', '1');
@@ -214,6 +245,7 @@ async function kuvaaYksi(nakyma, koko) {
     });
     const haku = nakyma.haku ?? '?lauta=pallo&koe=suoraan';
     await sivu.goto(`${OSOITE}${haku}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    merkitse('dom');
     const kaynnissa = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui), null, { timeout: 45000 })
       .then(() => true).catch(() => false);
     if (!kaynnissa) {
@@ -225,7 +257,9 @@ async function kuvaaYksi(nakyma, koko) {
       throw new Error(`peli ei käynnistynyt 45 s:ssa (readyState ${tila}; vireillä ${vireilla.size}: ${jumissa.join(', ')}${virheet.length ? `; sivuvirhe: ${virheet[0]}` : ''})`);
     }
     let pallo = null;
+    merkitse('peli');
     if (nakyma.pallo !== false) pallo = await odotaPallo(sivu);
+    merkitse('pallo');
     const p = { kaupunki: KAUPUNKI, ...(nakyma.parametri ?? {}) };
     let tulos = null;
     if (nakyma.avaa) {
@@ -244,21 +278,35 @@ async function kuvaaYksi(nakyma, koko) {
       await sivu.waitForSelector(nakyma.odotaJalkeen, { state: 'visible', timeout: 20000 });
     }
     if (nakyma.palloJalkeen) pallo = await odotaPallo(sivu, 15000);
+    merkitse('nakyma');
     let kuvat = await odotaKuvat(sivu);
+    merkitse('kuvat');
     // Vieritys vasta kuvien jälkeen: latautuva kuva siirtäisi kohdetta.
     if (nakyma.viimeinen) {
       await sivu.evaluate(nakyma.viimeinen, p);
       kuvat = (await odotaKuvat(sivu)) && kuvat;
     }
-    // Viimeinen asettuminen: kaksi piirtokehystä (ei kiinteää odotusta).
-    await sivu.evaluate(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
+    // Viimeinen asettuminen: päättyvät CSS-animaatiot ja -siirtymät loppuun
+    // (katto 5 s; päättymättömät kuten sykkeet ohitetaan), sitten kaksi
+    // piirtokehystä. reducedMotion ei pysäytä kaikkia CSS-häivytyksiä.
+    await sivu.evaluate(async () => {
+      const kesken = () => document.getAnimations().filter((a) => a.playState === 'running'
+        && Number.isFinite(a.effect?.getComputedTiming?.().endTime ?? Infinity));
+      const katto = new Promise((ok) => { setTimeout(ok, 5000); });
+      for (let kierros = 0; kierros < 3 && kesken().length; kierros += 1) {
+        // eslint-disable-next-line no-await-in-loop
+        await Promise.race([Promise.allSettled(kesken().map((a) => a.finished)), katto]);
+      }
+      await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
+    });
+    merkitse('asettui');
     const polku = join(ULOS, `${nakyma.nimi}-${koko.nimi}.png`);
     await sivu.screenshot({ path: polku });
-    return { nakyma: nakyma.nimi, koko: koko.nimi, ok: true, ms: Date.now() - alku, polku, pallo, kuvat, virheet, tulos };
+    return { nakyma: nakyma.nimi, koko: koko.nimi, ok: true, ms: Date.now() - alku, polku, pallo, kuvat, virheet, tulos, vaiheet };
   } catch (e) {
-    return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: String(e.message ?? e).split('\n')[0], virheet };
+    return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: String(e.message ?? e).split('\n')[0], virheet, vaiheet };
   } finally {
-    await ctx.close().catch(() => {});
+    await ctx?.close().catch(() => {});
   }
 }
 
@@ -269,14 +317,13 @@ console.log(`Pariteettikuvat: ${ajettavat.length} näkymää × ${KOOT.length} k
 console.log(`  osoite ${OSOITE}  kaupunki ${KAUPUNKI}  siemen ${SIEMEN}  gpu ${GPU}  ulos ${ULOS}`);
 const alkuKaikki = Date.now();
 const tulokset = [];
-let seuraava = 0;
-async function tyolainen() {
-  while (seuraava < tyot.length) {
-    const [n, k] = tyot[seuraava++];
+try {
+  for (const [n, k] of tyot) {
+    if (suljettu) break; // signaali: ei uusia kuvia
     // eslint-disable-next-line no-await-in-loop
     let t = await kuvaaYksi(n, k);
     // Uusinta: tuotannon verkko tai GPU-prosessi voi hetkellisesti jumittaa latauksen.
-    for (let u = 0; !t.ok && u < UUSINTOJA; u += 1) {
+    for (let u = 0; !t.ok && !suljettu && u < UUSINTOJA; u += 1) {
       // eslint-disable-next-line no-await-in-loop
       const uusi = await kuvaaYksi(n, k);
       t = { ...uusi, ms: t.ms + uusi.ms, uusinta: u + 1, ensinVirhe: t.virhe };
@@ -288,12 +335,8 @@ async function tyolainen() {
     const tieto = t.tulos && typeof t.tulos === 'object' ? ` ${JSON.stringify(t.tulos)}` : '';
     console.log(`${t.ok ? 'OK   ' : 'VIRHE'} ${t.nakyma.padEnd(24)} ${t.koko.padEnd(9)} ${(t.ms / 1000).toFixed(1).padStart(5)} s${huom}${tieto}`);
   }
-}
-try {
-  await Promise.all(Array.from({ length: Math.min(RINNAKKAIN, tyot.length) }, tyolainen));
 } finally {
-  await selain.close().catch(() => {});
-  palvelin?.close();
+  await suljeKaikki();
 }
 const ok = tulokset.filter((t) => t.ok).length;
 const kesto = (Date.now() - alkuKaikki) / 1000;

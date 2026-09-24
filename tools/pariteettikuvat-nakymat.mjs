@@ -311,9 +311,24 @@ export const NAKYMAT = [
     odota: '.pollo-paneeli',
   },
   {
-    nimi: 'aarre', kuvaus: 'Aarteen paljastus kohtaamisen päällä (kohtaaminen + ui.playTokenReveal("pieniAarre"))',
-    avaa: avaaKohtaaminen, odota: '#quiz-dialog[open]',
-    jalkeen: (p) => { void window.matkakirja.ui.playTokenReveal('pieniAarre', p.kaupunki); return null; },
-    odotaJalkeen: '.reveal-overlay .reveal-aarrekuva.shown, .reveal-overlay .reveal-caption.shown',
+    nimi: 'aarre', kuvaus: 'Aarteen paljastus pelin omalla polulla: kohtaaminen → Aloita → oikea vastaus (game.quiz.correct)',
+    avaa: avaaKohtaaminen, odota: '#quiz-dialog[open] .quiz-aloita',
+    jalkeen: async () => {
+      const { game } = window.matkakirja;
+      document.querySelector('#quiz-dialog .quiz-aloita')?.click();
+      const alku = Date.now();
+      let napit = [];
+      while (Date.now() - alku < 10000) {
+        napit = [...document.querySelectorAll('#quiz-dialog .quiz-option')].filter((b) => b.getBoundingClientRect().width > 0);
+        if (napit.length && Number.isInteger(game.quiz?.correct)) break;
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 100));
+      }
+      const oikea = napit[game.quiz?.correct];
+      if (!oikea) return { virhe: 'visan vaihtoehtoja ei tullut' };
+      oikea.click();
+      return null;
+    },
+    odotaJalkeen: '.reveal-overlay .reveal-jatka.nakyy',
   },
 ];
