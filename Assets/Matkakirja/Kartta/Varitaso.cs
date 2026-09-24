@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using CesiumForUnity;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -77,6 +79,14 @@ namespace Matkakirja
             {
                 bool k = kaukana ? kierto.korkeus > kaukoKorkeus * 0.85 : kierto.korkeus > kaukoKorkeus;
                 if (k != kaukana) { kaukana = k; if (k) Poista(); else Luo(); }
+                // Fablen päätös 24.9.: huntu häivytetään koko näkymän zoomin funktiona (alfa 0 → 1 tasoilla 4,5…5,5),
+                // ei laattakohtaisesti; zoom on näkymän KAUKAISIMMAN maapisteen taso (ylälaita tai horisontti).
+                if (kerros != null)
+                {
+                    float z = NakymanAlinTaso();
+                    float t = Mathf.Clamp01((z - 4.5f) / 1.0f);
+                    Alfa(t * t * (3f - 2f * t));
+                }
             }
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
@@ -155,8 +165,51 @@ namespace Matkakirja
         /// <summary>Napakalotit samaan kermaan kuin laatat (kalotti piirtyy laattojen päälle).</summary>
         static void Navat(bool kerma) => KarttaKerrokset.Instanssi?.napakannet?.Kerma(kerma);
 
+        static readonly int AlfaId = Shader.PropertyToID("_overlayAlfa_" + MateriaaliAvain);
+        float alfaNyt = -1f;
+
+        /// <summary>Raster-paikan 2 alfa tileset-varjostimessa (Shaders/Cesium/MatkakirjaTileset, globaali).</summary>
+        void Alfa(float a)
+        {
+            if (Mathf.Abs(a - alfaNyt) < 0.004f) return;
+            alfaNyt = a;
+            Shader.SetGlobalFloat(AlfaId, a);
+        }
+
+        /// <summary>
+        /// Näkymän kaukaisimman maapisteen laattataso (Web Mercator): ruudun yläkulmien ja -keskikohdan säteet palloa
+        /// vasten, osumaton säde = horisontti. Taso, jolla 256 px:n laatan pikseli ≈ näytön pikseli siellä.
+        /// </summary>
+        float NakymanAlinTaso()
+        {
+            var kam = kierto.GetComponent<Camera>();
+            var g = kierto.georeferenssi;
+            if (kam == null || g == null) return 20f;
+            Vector3 keskus = g.transform.TransformPoint((Vector3)(float3)g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            const double R = 6_371_000.0;
+            // Kaksoistarkkuus: float-neliöt (~4e13) hukkaisivat matalan korkeuden horisontin.
+            double3 oc = (double3)(float3)(kam.transform.position - keskus);
+            double oc2 = math.dot(oc, oc);
+            double horisontti = Math.Sqrt(Math.Max(0.0, oc2 - R * R));
+            double kauimmas = 0;
+            foreach (var vx in new[] { 0f, 0.5f, 1f })
+            {
+                var sade = kam.ViewportPointToRay(new Vector3(vx, 1f, 0f));
+                double3 suunta = (double3)(float3)sade.direction;
+                double b = math.dot(oc, suunta), c = oc2 - R * R, d = b * b - c;
+                double osuma = d >= 0 ? -b - Math.Sqrt(d) : horisontti;
+                if (osuma < 0) osuma = horisontti;
+                kauimmas = Math.Max(kauimmas, osuma);
+            }
+            double mpp = 2.0 * kauimmas * Math.Tan(kam.fieldOfView * 0.5 * Math.PI / 180.0) / Math.Max(1, Screen.height);
+            double lev = Math.Cos(kierto.leveys * Math.PI / 180.0);
+            return (float)Math.Log(2.0 * Math.PI * R * Math.Max(0.2, lev) / (256.0 * Math.Max(1e-3, mpp)), 2.0);
+        }
+
         void Poista()
         {
+            Alfa(1f);
+            alfaNyt = -1f;
             if (kerros == null) return;
             Navat(false);
             // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä.
