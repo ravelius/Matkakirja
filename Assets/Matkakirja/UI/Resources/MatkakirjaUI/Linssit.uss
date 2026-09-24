@@ -1586,3 +1586,313 @@
     white-space: normal;
     color: rgba(70, 51, 31, 0.68);
 }
+
+/* --- Tiedeliite (web css/aikajana.css .tiedeliite-*, fokusnosto .looppi-*) --------------- */
+.mk-aikajana-lue {
+    align-self: flex-start;
+    margin-top: 8px;
+    min-height: 32px;
+    padding: 2px 14px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.55);
+    border-radius: 16px;
+    background-color: #f6ecc6;
+    color: #7a5514;
+}
+
+.mk-aikajana-lue .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+.mk-tiedeliite__peite {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(18, 12, 4, 0.3);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
+.mk-tiedeliite__peite.mk-auki {
+    opacity: 1;
+}
+
+.mk-tiedeliite {
+    width: 100%;
+    max-width: 640px;
+    max-height: 90%;
+    padding: 11px 13px 10px 13px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 12px;
+    background-color: #f6ecc6;
+    color: #211d18;
+}
+
+.mk-tiedeliite__ylarivi {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom-width: 3px;
+    border-color: rgba(70, 51, 31, 0.75);
+}
+
+.mk-tiedeliite__reuna {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-tiedeliite__reuna--oikea {
+    justify-content: flex-end;
+}
+
+.mk-tiedeliite__nimiot {
+    align-items: center;
+}
+
+.mk-tiedeliite__nimio {
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.mk-tiedeliite__paikkarivi {
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-tiedeliite__ikoninappi {
+    width: 36px;
+    height: 34px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+}
+
+.mk-tiedeliite__ikoninappi > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+}
+
+.mk-tiedeliite__sulje {
+    min-height: 34px;
+    padding: 1px 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #46331f;
+}
+
+.mk-tiedeliite__sulje .mk-nappi__teksti {
+    font-size: 18px;
+}
+
+.mk-tiedeliite__sisallys {
+    position: absolute;
+    top: 58px;
+    left: 10px;
+    width: 260px;
+    max-height: 70%;
+    padding: 6px;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 8px;
+    background-color: #fbf4dc;
+}
+
+.mk-tiedeliite__sisallysrivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 32px;
+    padding: 2px 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #211d18;
+}
+
+.mk-tiedeliite__sisallysrivi.mk-valittu {
+    background-color: rgba(122, 85, 20, 0.14);
+}
+
+.mk-tiedeliite__sisallysvuosi {
+    width: 64px;
+    font-size: 12px;
+    color: #7a5514;
+}
+
+.mk-tiedeliite__sisallysnimi {
+    flex-shrink: 1;
+    font-size: 13px;
+    white-space: normal;
+}
+
+.mk-tiedeliite__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-tiedeliite__otsikko {
+    font-size: 21px;
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+.mk-tiedeliite__henkilo {
+    font-size: 11.5px;
+    letter-spacing: 2px;
+    color: #7a5514;
+    margin-bottom: 8px;
+}
+
+.mk-tiedeliite__ingressi {
+    font-size: 15.5px;
+    -unity-font-style: italic;
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.mk-tiedeliite__palsta {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-tiedeliite__leipa {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.mk-tiedeliite__kappale {
+    font-size: 14.5px;
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.mk-tiedeliite__kasvot {
+    width: 34%;
+    margin-left: 10px;
+}
+
+.mk-tiedeliite__kasvo {
+    margin-bottom: 8px;
+}
+
+.mk-tiedeliite__kasvo > .mk-tiedeliite__kuva {
+    height: 150px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 6px;
+    background-color: #e6dcc3;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-tiedeliite__ilmio,
+.mk-tiedeliite__karuselli {
+    margin: 4px 0 12px 0;
+}
+
+.mk-tiedeliite__ilmio > .mk-tiedeliite__kuva,
+.mk-tiedeliite__kuva--karuselli {
+    height: 240px;
+    border-radius: 6px;
+    background-color: #e6dcc3;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-tiedeliite__kuvateksti {
+    margin-top: 4px;
+    font-size: 11.5px;
+    color: rgba(33, 29, 24, 0.75);
+    white-space: normal;
+}
+
+.mk-tiedeliite__karuselli-ikkuna {
+    justify-content: center;
+}
+
+.mk-tiedeliite__karuselli-nuoli {
+    position: absolute;
+    top: 100px;
+    left: 4px;
+    width: 36px;
+    height: 40px;
+    border-radius: 18px;
+    background-color: rgba(246, 236, 198, 0.85);
+    color: #46331f;
+}
+
+.mk-tiedeliite__karuselli-nuoli--oikea {
+    left: auto;
+    right: 4px;
+}
+
+.mk-tiedeliite__karuselli-nuoli:disabled {
+    opacity: 0.3;
+}
+
+.mk-tiedeliite__pisteet {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.mk-tiedeliite__piste {
+    width: 10px;
+    height: 10px;
+    min-height: 10px;
+    margin: 0 4px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: rgba(70, 51, 31, 0.25);
+}
+
+.mk-tiedeliite__piste.mk-valittu {
+    background-color: #7a5514;
+}
+
+.mk-tiedeliite__keksija {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+}
+
+.mk-tiedeliite__valiotsikko {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.mk-tiedeliite__navi {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.3);
+}
+
+.mk-tiedeliite__navinappi {
+    flex-shrink: 1;
+    max-width: 49%;
+    min-height: 34px;
+    padding: 2px 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #7a5514;
+}
+
+.mk-tiedeliite__navinappi .mk-nappi__teksti {
+    font-size: 13px;
+}
+
+.mk-tiedeliite__navinappi:disabled {
+    opacity: 0.45;
+}
