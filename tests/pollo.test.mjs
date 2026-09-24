@@ -2656,6 +2656,7 @@ test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bund
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'com.paha', 'user-agent': 'com.paha' })), false, 'vieras bundle id');
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
   assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli'), 'TestFlight-buildin bundle (löydös 16)');
 });
 
 test('worker: natiivi pääsee puheeseen ja chattiin, ei kuvaan, sähkeeseen eikä tilaan', async () => {
