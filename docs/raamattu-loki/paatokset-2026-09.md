@@ -4755,3 +4755,7 @@ Omistaja: 'kirjaa nuo varakanavat ylös raamattuun jotta sitten kun vaihdetaan k
 ## LAITETESTAAJA (f17f6caa7): LOYTOKORTTI = ISOISAN LUENTAKUVASARJA (EI UUSI RIVI); TUTKI VAATII AARREPISTEEN (SAMA); NATIIVIN JULISTEET-RIVI EI AVAUDU LAINKAAN (5 YRITYSTA) → NATIIVI-UI, AIEMPI SAMA-VAITE KUMOTTU (24.9.2026 klo 23.53)
 
 Pelikoodarin vastaukset suoraan Laitetestaajalle. Laukun Julisteet-rivi natiivissa: ei viive vaan rivi ei avaudu (muut napit toimivat) — EI TARKISTETTU, bugi Natiivi-UI:lle build 12 -jonoon.
+
+## LOYDOS 46 OSA 1 (KARTTASEPPA 2ca0303b2): MITATTU KUVAPARI PELOPONNESOS — WEB PIIRTAA z8:N 1:1 (464 px/°), NATIIVI VENYTTAA Z8-LAATTAA 2,55× (24.9.2026 klo 23.58)
+
+Kuvat 2-web-peloponnesos.jpg ja 2-natiivi-nykyinen.jpg kansiossa kartta-46-20260924; omistajalle lähetetty. Vahvistaa: natiivin epäselvyys on rasteritason puute (Z9–Z10) + vektorikerroksen puute, ei pelkkä resepti. Osa 2 (ääriviivaton D1/D2 + C-meri sävyliukuna) ~10 min.
