@@ -1489,7 +1489,9 @@
 .mk-radio__kotelo {
     flex-grow: 1;
     max-width: 478px;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 7.2px 8px;
     border-width: 1px 1px 0 1px;
     border-color: rgba(0, 0, 0, 0.5);
@@ -1516,7 +1518,24 @@
     height: 12px;
 }
 
+/* VU-mittari (web v267 .radio-mittari ≤ 800 px 80 × 57): kapealla keskiö vie koko rivin ja mittari on alla vasemmalla,
+ * leveällä mittari on keskiön vasemmalla puolella ja kotelo levenee sen verran (web 780 → 880). */
+.mk-radio__vu {
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.mk-radio--levea .mk-radio__vu {
+    margin: 0 8px 0 0;
+}
+
+.mk-radio--levea .mk-radio__kotelo {
+    max-width: 566px;
+    flex-wrap: nowrap;
+}
+
 .mk-radio__keskio {
+    width: 100%;
     flex-direction: column;
     justify-content: center;
 }
@@ -2571,6 +2590,12 @@
     height: 44px;
 }
 
+
+.mk-radio--levea .mk-radio__keskio {
+    width: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 
 /* iPhonen ☰-valikko (omistaja 24.9.2026, löydös 20): sama pergamenttipaneeli, matala yläkaista, linssit ja
  * valikon rivit vievät koko korkeuden; rivit ohuen viivan jälkeen. */

@@ -29,6 +29,8 @@ namespace Matkakirja
         public struct Avain
         {
             public double Osuus, Parametri, Etaisyys, Kallistus, Suunta, Kohde;
+            /// <summary>Koneen leveys osuutena ruudun leveydestä (0 = tavallinen merkkikoko, Nappula.malliPx).</summary>
+            public double Kone;
             public Kayra Kayra;
             /// <summary>Suunnan oma käyrä (null = Kayra): kaupungin kierto kiihtyy, vaikka etäisyys pysyy.</summary>
             public Kayra? SuuntaKayra;
@@ -89,9 +91,11 @@ namespace Matkakirja
                 // ALKU: lähtöpiste (kameran nykyinen asento, Nappula täyttää).
                 new Avain { Osuus = 0.00, Kohde = -1 },
                 // Syöksy koneen etuviistoon, kuminauhajarrutus lähikuvaan.
-                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 64, Suunta = 150, Kohde = 0 },
+                // Omistaja 24.9. klo 11.4x: lähivaiheissa kone täyttää ~2/3 ruudun leveydestä; kamera matalalta
+                // etuviistosta (kallistus 80–83°), jotta horisontti ja taivas ovat koneen takana ja pilvet alla.
+                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 80, Suunta = 150, Kohde = 0, Kone = 0.66 },
                 // LÄHIKUVA: hidas panorointi koneen ympäri, lähes paikallaan.
-                new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 68, Suunta = 205, Kohde = 0 },
+                new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.66 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).
             var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 30, Suunta = 360, Kohde = 0 };
@@ -139,13 +143,14 @@ namespace Matkakirja
             {
                 Osuus = osuus, Kayra = Kayra.Kiihtyva, SuuntaAbs = c.SuuntaAbs, Kohde = c.Kohde,
                 Etaisyys = math.exp(V(math.log(a.Etaisyys), math.log(c.Etaisyys))),
+                Kone = V(a.Kone, c.Kone),
                 Kallistus = V(a.Kallistus, c.Kallistus),
                 Suunta = V(a.Suunta, c.Suunta),
             };
         }
 
         /// <summary>Kameran asento kohdassa t (0–1): segmentin käyrä ja lineaarinen sekoitus (etäisyys log).</summary>
-        public static (double etaisyys, double kallistus, double suunta, double kohde) Arvo(Avain[] a, double t, double lentosuunta)
+        public static (double etaisyys, double kallistus, double suunta, double kohde, double kone) Arvo(Avain[] a, double t, double lentosuunta)
         {
             int i = 1;
             while (i < a.Length - 1 && t > a[i].Osuus) i++;
@@ -163,7 +168,8 @@ namespace Matkakirja
                 math.exp(math.lerp(math.log(math.max(1, p.Etaisyys)), math.log(math.max(1, n.Etaisyys)), s)),
                 math.lerp(p.Kallistus, n.Kallistus, s),
                 math.lerp(sp, sn, ss),
-                math.clamp(math.lerp(p.Kohde, n.Kohde, s), -1, 1));
+                math.clamp(math.lerp(p.Kohde, n.Kohde, s), -1, 1),
+                math.max(0, math.lerp(p.Kone, n.Kone, s)));
         }
 
         /// <summary>Lennon vaihe (Nousu, Matka, Lasku) aikajanan kohdasta.</summary>
