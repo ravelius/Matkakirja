@@ -4,7 +4,7 @@
   "title": "Matkakirja-vienti: kaupungit-kokoelman alkio",
   "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta, aloitus ja tarkeys (skeema 1.2) nimien harvennukseen. data = laudan raakaolio, johon natiivi ei nojaa.",
   "type": "object",
-  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "tarkeys", "lauta", "korkeus", "data"],
+  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "tarkeys", "lauta", "korkeus", "asukkaat", "asukkaatVuosi", "asukkaatAlue", "asukkaatLahde", "data"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
     "nimi": { "type": "string" },
@@ -19,6 +19,10 @@
     "aloitus": { "type": "boolean" },
     "tyyppi": { "type": ["string", "null"], "description": "laudan ambience (kaupunki, satama, erämaa…)" },
     "tarkeys": { "type": "integer", "minimum": 0, "maximum": 3, "description": "nimiöiden harvennus: 3 = pääkaupunki (tools/vienti/paakaupungit.mjs) tai aloituskaupunki, 2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä, 0 = muut (skeema 1.2)" },
+    "asukkaat": { "type": ["integer", "null"], "minimum": 0, "description": "Asukasluku, Wikidata P1082 (CC0), tools/vienti/hae-asukkaat.mjs; null = Wikidatassa ei lukua (luontokohteet) (skeema 1.38)" },
+    "asukkaatVuosi": { "type": ["integer", "null"], "description": "Asukasluvun vuosi (P585); null = ei ajankohtaa tai ei lukua (skeema 1.38)" },
+    "asukkaatAlue": { "type": "boolean", "description": "true = luku koskee saarta, valtiota tai merentakaista aluetta, ei kaupunkia (skeema 1.38)" },
+    "asukkaatLahde": { "type": ["string", "null"], "description": "\"Wikidata P1082 (CC0), <vuosi>, <Q-tunnus>\"; null kun asukkaat on null (skeema 1.38)" },
     "korkeus": { "type": ["integer", "null"], "description": "Korkeus metreinä EGM2008-geoidin yläpuolella, 10 m tarkkuus (Copernicus GLO-30 DSM, tools/vienti/korkeudet.mjs); null = korkeusruutua ei ole haettu (skeema 1.10)" },
     "lauta": {
       "type": "object",

@@ -65,6 +65,53 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  gao: {
+    // Askian mausoleumi (16.2894/-0.0445) ja Gaon suurmoskeija
+    // (16.2793/-0.0493) ovat n. 1,2 km päässä toisistaan
+    // (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325 },
+  },
+  cayenne: {
+    // Fort Cépérou (4.9377/-52.3368) ja Place des Palmistes
+    // (4.9396/-52.3338) ovat n. 0,4 km päässä toisistaan vanhassa
+    // kaupungissa (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326 },
+  },
+  macapa: {
+    // Fortaleza de São José de Macapá (0.0311/-51.0488) ja Marco Zero
+    // -muistomerkki (0.0007/-51.0779) ovat n. 4,7 km päässä toisistaan
+    // (sisältöinventaario #3045 kohta 5.5) — leveämpi rajaus kuin
+    // tavallisesti, koska ainoat kaksi paikannettavaa kohdetta ovat
+    // kaupungin eri laidoilla.
+    rajat: { pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037 },
+  },
+  joaopessoa: {
+    // Centro Cultural São Francisco (-7.1146/-34.8825) ja Theatro Santa
+    // Rosa (-7.1178/-34.8867) ovat n. 0,6 km päässä toisistaan
+    // historiallisessa keskustassa (sisältöinventaario #3045 kohta 5.5).
+    // Farol do Cabo Branco/Ponta do Seixas on muutaman km päässä
+    // keskustasta, ei samassa rajauksessa.
+    rajat: { pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876 },
+  },
+  santarem: {
+    // Orla de Santarém (-2.4179/-54.7172, vesien kohtaamisen näköalapaikka)
+    // ja Praça Tiradentes (-2.4194/-54.7235, vanha kaupunginosa) ovat n.
+    // 0,7 km päässä toisistaan (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705 },
+  },
+  portovelho: {
+    // Sagrado Coração de Jesus -katedraali (-8.7620/-63.9040) ja Madeira-
+    // Mamoré-rautatien vanha asema (-8.7665/-63.9090) ovat n. 0,7 km
+    // päässä toisistaan keskustassa joen varrella (sisältöinventaario
+    // #3045 kohta 5.5).
+    rajat: { pohjoinen: -8.750, etela: -8.7785, lansi: -63.924, ita: -63.889 },
+  },
+  broome: {
+    // Bedford Park (-17.9629/122.2389, Women of Pearling -patsas) ja
+    // Chinatown (-17.9544/122.2433, Johnny Chi Lane) ovat n. 1,1 km
+    // päässä toisistaan (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633 },
+  },
   kalgoorlie: {
     // Hannan Streetin kultakenttäkeskusta laajennettuna pohjoiseen, jotta
     // Paddy Hannanin patsas (Wilson St, -30.7490/121.4706) ja Hannans

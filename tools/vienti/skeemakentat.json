@@ -15,10 +15,11 @@
   "1.34": "081f5d7fd7c62ab5",
   "1.35": "7a7178d9759be893",
   "1.36": "da7f54e6ae671424",
-  "1.37": "1f3dae321dc1fa92"
+  "1.37": "1f3dae321dc1fa92",
+  "1.38": "8ecfeec7eec821e1"
  },
  "uusin": {
-  "skeemaversio": "1.37",
+  "skeemaversio": "1.38",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -174,6 +175,10 @@
    "kaupungit": [
     "aloitus",
     "ambienssi",
+    "asukkaat",
+    "asukkaatAlue",
+    "asukkaatLahde",
+    "asukkaatVuosi",
     "data",
     "id",
     "intro",

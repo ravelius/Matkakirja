@@ -1287,3 +1287,28 @@ test('skeema 1.37: aluenimet Karttasepän tiedostosta sellaisenaan', () => {
   const meret = JSON.parse(tiedostot.get('kokoelmat/merinimet.json')).alkiot;
   for (const m of meret) assert.equal(idt.get(m.id)?.luokka, 'meri', m.id);
 });
+
+test('skeema 1.38: kaupunkien asukasluku Wikidatasta (Linssiseppä)', () => {
+  const a = JSON.parse(readFileSync(new URL('../tools/vienti/kaupunkien-asukkaat.json', import.meta.url), 'utf8'));
+  const k = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot;
+  assert.equal(Object.keys(a.kaupungit).length, k.length);
+  let luvullisia = 0;
+  for (const c of k) {
+    const r = a.kaupungit[c.id];
+    assert.ok(r, c.id);
+    assert.equal(c.asukkaat, r.asukkaat, c.id);
+    if (c.asukkaat == null) {
+      assert.equal(c.asukkaatLahde, null);
+      assert.equal(c.asukkaatAlue, false);
+      continue;
+    }
+    luvullisia += 1;
+    assert.ok(Number.isInteger(c.asukkaat) && c.asukkaat >= 0, c.id);
+    assert.match(c.asukkaatLahde, /^Wikidata P1082 \(CC0\)(, \d{4})?, Q\d+$/);
+    assert.equal(typeof c.asukkaatAlue, 'boolean');
+  }
+  assert.ok(luvullisia >= 220, `asukasluvullisia ${luvullisia}`);
+  const lontoo = k.find((c) => c.id === 'lontoo');
+  assert.ok(lontoo.asukkaat > 3e6 && !lontoo.asukkaatAlue);
+  assert.equal(k.find((c) => c.id === 'sumatra').asukkaatAlue, true);
+});
