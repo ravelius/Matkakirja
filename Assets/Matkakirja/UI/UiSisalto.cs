@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
         public string Manner;
         /// <summary>Onko kaupungilla oma kaupunkilehti (kategoria "kaupunki").</summary>
         public bool Lehti;
+        /// <summary>Kaupungissa nauhoitettu kielinäyte (kaupungit.kielinayte: url, nimi), radion vara lehden mediarivillä.</summary>
+        public string KielinayteUrl, KielinayteNimi;
     }
 
     public sealed class MaaTiedot
@@ -259,6 +261,12 @@ namespace Matkakirja.Natiivi
                     Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"), Manner = MiniJson.Teksti(a, "manner"),
                     Lat = MiniJson.Luku(a, "lat") ?? double.NaN, Lon = MiniJson.Luku(a, "lon") ?? double.NaN,
                 };
+                var nayte = Rakenne.Olio(MiniJson.Kentta(a, "kielinayte"));
+                if (MiniJson.Teksti(nayte, "url") is string nayteUrl && nayteUrl.Length > 0)
+                {
+                    t[id].KielinayteUrl = nayteUrl;
+                    t[id].KielinayteNimi = MiniJson.Teksti(nayte, "nimi");
+                }
             }
 
             var maat = new Dictionary<string, (string Nimi, List<string> Lippu)>();

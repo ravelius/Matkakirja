@@ -370,6 +370,7 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "media": Mediarivi.Testaa(loput.Length > 0 ? loput.ToLowerInvariant() : "lontoo", t => Kirjaa(t)); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
                 case "haku":
                 {
