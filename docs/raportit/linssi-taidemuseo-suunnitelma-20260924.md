@@ -3,8 +3,8 @@
 *Linssiseppä (Opus) ja Natiiviseppä (Opus) Fablen pyynnöstä. Omistajan kortti 24.9.2026 klo 12.3x
 (Fablen välittämä, sitova): linssi on vain natiivissa. Tämä on pelkkä suunnitelma. Toteutus alkaa vasta
 pariteettikierroksen ja elokuvalennon jälkeen. Raamatun kohta on TAIDEMUSEO-LINSSI (Karttalinssit-osa),
-ja sen kirjoittaa Fable. Luvut 6 ja 7 ovat Natiivisepän (sali, valot, efektit ja muistibudjetti). Niissä
-on Linssisepän lähtöehdotus, jonka Natiiviseppä korjaa.*
+ja sen kirjoittaa Fable. Luvut 6 ja 7 ovat Natiivisepän (sali, valot, efektit ja muistibudjetti); Natiiviseppä tarkisti ne 24.9. Niissä
+on Linssisepän lähtöehdotus Natiivisepän korjauksin.*
 
 ## 0. Fablen päätökset 24.9.2026 (sitovat)
 
@@ -281,7 +281,7 @@ Kertoja mainitsee ne, ja karttapiirros vie niiden kaupunkiin pallolle.
     Tämä näkyy kulussa ja pidossa.
   - **Yksityiskohta:** 4096–8192 px 512 px:n ruutuina (ASTC 6×6), ladataan vain pysäytetylle teokselle
     ja Ken Burns -kohteelle. Ruudut ovat samaa mallia kuin kartan laatat.
-- **Ämpäri:** `sisalto/1/vN/taidemuseo/<siipi>/<teos-id>/{seina.astc.ktx2, yks/<z>/<x>_<y>.ktx2, laatta.json}`,
+- **Ämpäri:** `sisalto/1/vN/taidemuseo/<siipi>/<teos-id>/{seina.astc, yks/<z>/<x>_<y>.astc, laatta.json}` (raaka ASTC + otsake, luku 6.4),
   ja välimuisti on laitteella kuten muilla linssiaineistoilla. Siirtoseppä lisää skeemaan kokoelman
   `taidemuseo` (teos: id, nimi fi/en, taiteilija, vuosi, kaupunki lat/lon, museo, objekti-id, lisenssi,
   lähde-URL, koko cm, kuvasuhde, tasot).
@@ -293,28 +293,108 @@ Kertoja mainitsee ne, ja karttapiirros vie niiden kaupunkiin pallolle.
 - **Laatta ja attribuutio:** jokaisessa teoksessa näkyy museon nimi ja lisenssi (CC0 ei vaadi mainintaa,
   mutta käytämme sitä). CC BY -malleissa tekijä on laatassa ja lähdeluettelossa.
 
-## 6. Sali (Natiiviseppä; lähtöehdotus)
+## 6. Sali (Natiiviseppä; tarkistettu 24.9.2026)
 
-- **Proseduraalinen klassinen halli:** pitkä galleria (esim. 3 × 24 m × 11 m, korkeus 9 m), tynnyriholvi
-  ja kasettikatto, kattolyhdyt, pilasterit teosten välissä, marmorilattia (ruutukuvio) ja kaariaukot
-  osien välissä. Parametrit tulevat JSONista (mitat, pilasterijako, seinäväri, lattiakuvio), jolloin
-  siivet eroavat ilman uutta mallinnusta.
-- **Tyyli siivittäin:** renessanssissa pietra serena -harmaa ja kalkkivalkoinen (Firenze), Roomassa lämmin
-  travertiini, Venetsiassa punainen damasti ja terrazzo.
-- **Valaistus:** kattolyhdyistä suunnattu pehmeä päivänvalo, teoksille kohdevalot ja valmiiksi paistettu
-  valokartta (halli on staattinen). Heijastuskoetin lattian kiillolle.
-- **Filmiefektit (URP):** lämmin LUT, lievä bloom valoaukoista, filmirae, vinjetti ja syväterävyys pidossa
-  (fokus teokseen). Liike-epäterävyys vain kulussa, ja vähennetyssä liikkeessä se on pois päältä.
-- **Muistibudjetti (ehdotus):** salin geometria ja valokartat ≤ 60 Mt, teokset seinätasolla 30 × 1,9 Mt ≈ 57 Mt,
-  yksityiskohtaruudut ≤ 40 Mt, veistokset 5 × 8 Mt = 40 Mt eli yhteensä noin 200 Mt. Pallo ja kartta
-  vapautetaan tai jäädytetään museon ajaksi.
+*Natiivisepän korjaukset Linssisepän lähtöehdotukseen on merkitty sanalla **Korjaus**. Tekniikka on sama
+kuin muussa natiivissa: Unity 6.3, URP, Metal, iOS/iPadOS; ei kolmannen osapuolen ajonaikaisia paketteja.*
 
-## 7. Siirtymä pallolta saliin ja takaisin (Natiiviseppä + Linssiseppä)
+### 6.1 Rakennus: parametrit JSONissa, sali leivotaan editorissa
 
-Oven avaus kaupunkilehdestä: kamera laskeutuu kaupunkiin, sukeltaa sisäänkäynnin läpi ja häivyttää
-pergamentin valkoiseen, jonka jälkeen sali piirtyy musteviivoista valmiiksi (0,8 s). Paluu tapahtuu
-käänteisesti. Karttapiirroksen kautta kamera nousee kattolyhdystä pilviin, ja pallo tulee näkyviin.
-Molemmat ovat Kamerakoreografia-ajoja.
+- **Korjaus: sali ei synny ajonaikana.** Valokarttaa ei voi paistaa laitteella, ja ajonaikainen geometria
+  pakottaisi reaaliaikavaloihin. Siksi `sali.json` (mitat, pilasterijako, holvi, lattiakuvio, tyyli, osat,
+  teospaikat) luetaan **editoriskriptillä** (Rakennus.LuoSali, kuten Rakennus.LuoPallo), joka kokoaa salin
+  modulaarisesta sarjasta (seinäjakso, pilasteri, kaari, holvisegmentti, kasettilaatta, kattolyhty, lattiaruutu,
+  jalusta, kehys), paistaa valokartat ja heijastuskoettimet ja tallentaa siiven **Addressables-kimpuksi**.
+  "Siipi on dataa" pätee edelleen: uusi siipi = uusi `sali.json` + ajo editorissa, ei mallinnusta.
+- **Mitat (pilotti):** yksi galleria kolmessa osassa, kukin noin 24 × 11 m, korkeus 9 m (holvin laki),
+  kaariaukot osien välissä. Teospaikat ovat `sali.json`issa seinäjaksojen mukaan (jakso, korkeus, leveys),
+  joten kierroksen avainkehykset viittaavat teospaikkaan, eivät koordinaatteihin (luku 2A).
+- **Geometria:** koko sali ≤ 250 k kolmiota, ≤ 120 piirtokutsua mistä tahansa kulmasta (SRP Batcher, sama
+  materiaali per osa, GPU-instanssit pilastereille ja kasettilaatoille). Yksityiskohta normaalikartoista.
+- **Tyyli siivittäin** (ennallaan): Firenze pietra serena ja kalkkivalkoinen, Rooma lämmin travertiini,
+  Venetsia punainen damasti ja terrazzo. **Materiaalit:** ambientCG ja Poly Haven (CC0; marmori, travertiini,
+  terrazzo, kipsi, kulta, puu) sekä omat Blender-proseduraaliset (damasti, kasetit, kehysten profiilit),
+  kaikki lisenssiporttiin ja Tietoja.cs:ään. Tekstuurit ASTC 6×6, 1024–2048 px.
+- **Kehykset:** proseduraalinen profiili (8 profiilia Blenderistä) teoksen mittojen mukaan, kultaus
+  normaali- ja maskikartalla. Teoksen kuva on kehyksen sisällä oma quad (ei valokartassa).
+
+### 6.2 Valaistus
+
+- Kattolyhdyistä pehmeä päivänvalo **paistettuna** (Progressive CPU -paistin editorissa; GPU-paistin Metalilla
+  kaatoi Blenderin Cyclesin 24.9., joten CPU myös tässä), valokartat ≤ 2 × 2048² ASTC per osa.
+- **Teosten kohdevalot:** ei reaaliaikaisia spotteja (iPhonen URP Forward+ kestäisi, mutta 30 teosta on
+  liikaa): kohdevalon valokeila on valokartassa seinällä, ja teoksen oma quad saa **valokeilamaskin**
+  (varjostin: keila, reunahäive, lämpötila 3000 K) — sama ilme ilman valon hintaa.
+- **Veistokset** (GLB ajonaikana, eivät voi olla valokartassa): valokoettimet (Light Probe Group, paistettu)
+  + AO-kartta + **yksi** reaaliaikainen suunnattu valo, jonka suunta seuraa lähintä kattolyhtyä; se antaa
+  "valo liukuu marmorilla" -kiillon kierrossa. Varjot veistoksesta lattialle: pehmeä paistettu tahra
+  (kontaktivarjo-quad), ei varjokarttaa.
+- **Heijastukset:** yksi paistettu heijastuskoetin per osa (box projection) lattian kiillolle. URP:ssa ei
+  ole SSR:ää; tasoheijastus olisi toinen piirto, joten ei.
+
+### 6.3 Filmiefektit
+
+Sama **filmiefektipino** kuin elokuvalennossa (erä 3, URP Volume): lämmin LUT (Color Lookup), Tonemapping
+Neutral, lievä Bloom valoaukoista, Film Grain, Vinjetti. Salin profiili on oma Volume, lennon oma.
+- **Syväterävyys pidossa:** iPhonella Gaussian DoF (halpa), iPad Pro M5:llä Bokeh. Fokus teoksen
+  etäisyyteen kameraraidalta.
+- **Korjaus: liike-epäterävyys pois oletuksena** (URP Camera Motion Blur on mobiililla kallis ja sotkee
+  tekstit); kulun vauhdin tuntu syntyy tempon dramaturgiasta. Kokeillaan vasta iPad Prolla, kun budjetti on mitattu.
+- **Budjetti:** pino ≤ 3 ms iPhonella (sama raja kuin lennossa), mitataan Laitetestaajan sulavuusportilla.
+- Vähennetty liike (iOS Reduce Motion): ei DoF-siirtymiä, lyhyemmät ajot, ristihäivytykset.
+
+### 6.4 Muisti ja lataus
+
+| Osa | Budjetti | Huom. |
+|---|---|---|
+| Salin kimppu (geometria, materiaalit, valokartat, koettimet) | ≤ 60 Mt | Addressables, sovelluksen mukana tai ämpäristä ensimmäisellä avauksella |
+| Teokset seinätasolla | ≤ 60 Mt | 30 × ~1,9 Mt (2048 px ASTC 6×6 + mipit) |
+| Yksityiskohtaruudut | ≤ 40 Mt | LRU, vain pysäytetty teos + Ken Burns -kohde |
+| Veistokset | ≤ 40 Mt | 5 × ≤ 8 Mt, vain näkyvä osa ladattuna |
+| **Yhteensä museo** | **≤ 200 Mt** | + pelin pohja; iPhonen jetsam-raja huomioitava (4 Gt:n laitteilla ~2 Gt) |
+
+- **Korjaus: kuvien muoto.** Ämpärissä raaka ASTC-lohkodata + pieni otsake (`seina.astc`, ei KTX2):
+  `Texture2D.LoadRawTextureData(TextureFormat.ASTC_6x6)` + `Apply(false, makeNoLongerReadable: true)`, jolloin
+  CPU-kopio vapautuu heti eikä tarvita KTX-pakettia. Latauksen purku ja luku taustasäikeessä, GPU-siirto
+  enintään 2 kuvaa kehyksessä (ei yli 16 ms kehyksiä, luku 11 vaihe 7).
+- **Pallo museon ajaksi:** pallon kamera pois, Cesium-tilesetin päivitys pysäytetään (`suspendUpdate`),
+  laattapalvelin tauolle, tilesetin välimuisti pienennetään 64 Mt:iin 4 Gt:n laitteilla. Paluussa pallo
+  palaa samaan kamera-asentoon ja välimuisti täyttyy uudelleen taustalla.
+- Salin kimppu vapautetaan (Addressables.Release + Resources.UnloadUnusedAssets), kun museosta palataan
+  pelin pallolle; karttapiirroksen välikäynnillä pallolla sali jää muistiin (tila säilyy, luku 3.1).
+
+## 7. Siirtymä pallolta saliin ja takaisin (Natiiviseppä + Linssiseppä; tarkistettu 24.9.2026)
+
+**Korjaus: lavat eivät sekoitu kameratasolla.** Pallon kamera (PalloKierto, Cesiumin ECEF-georeferenssi) ja
+salin kamera (Cinemachine, salin metrit) eivät voi interpoloitua toisiinsa mielekkäästi, joten leikkaus
+piilotetaan **pergamenttihäivytykseen**. Luvun 2A "sekoitus lavojen välillä" tarkoittaa tätä: sama
+esitysaikajana jatkuu, kamera vaihtuu pergamentin takana.
+
+**Sisään (kaupunkilehden ovi, noin 2,4 s):**
+1. Oven napautus: salin kimppu ja 4 ensimmäistä teosta ovat jo latauksessa siitä hetkestä, kun kaupunkilehti
+   avautui ovellisessa kaupungissa (esilataus, ei odotusta napautuksen jälkeen).
+2. Kamera laskeutuu kaupunkiin (Kamerakoreografia: SyoksyKuminauha kohti museon lat/lon, 1,2 s, kallistus
+   nousee 60°:een) — ei rakennusta, vaan liike antaa "sukelluksen" tunnun.
+3. Pergamentti häivyttyy ruudun päälle (0,35 s, UI-kerros), kertoja ja pallon äänimaisema vaimenevat.
+4. Pergamentin takana: salin kohtaus additiivisena (`LoadSceneAsync` jo valmiina, aktivointi tässä), pallo
+   jäädytetään (6.4), salin kamera ensimmäiseen avainkehykseen.
+5. **Musteviivapiirto (0,8 s):** koko ruudun URP-renderöintiominaisuus (ScriptableRendererFeature) piirtää salin
+   reunat syvyys- ja normaalipuskurista seepiamusteena pergamentille ja häivyttää sitten täysväriin; viiva
+   paljastuu alhaalta ylös kohinamaskilla (sama käsiala kuin luvun 8 elementeissä). Kamera liikkuu jo
+   piirron aikana (Kuminauha ensimmäiseen teokseen), jolloin ruutu ei seiso.
+6. Jos esilataus ei ole valmis, pergamentti pysyy ja siinä piirtyy mustekynän kiemura, kunnes sali on valmis.
+
+**Ulos (Takaisin-nappi):** käänteinen: sali → musteviivat → pergamentti → pallo samaan kamera-asentoon, josta
+lähdettiin, ja kamera nousee kaupungista hitaasti (Jarruttava).
+
+**Karttapiirros → pallo ja takaisin:** salin kamera nousee kattolyhdyn läpi (Kiihtyva, 1,0 s), ruutu valkenee
+pilveksi (valkoinen häivytys, ei pergamentti), pallo tulee näkyviin pilvien yläpuolella kohdekaupungin
+yllä (LentoPilvet ja Aurinko kuten lennossa) ja kamera laskeutuu kaupunkiin Kamerakoreografialla.
+Takaisin-nappi: nousu pilviin → valkoinen → kamera laskee kattolyhdystä saliin samaan kierroksen kohtaan.
+
+**Ehdot:** siirtymän aikana ei yli 33 ms kehyksiä (kimppu ja kohtaus ladattu etukäteen, kuvasiirrot aikaviipaloituna,
+`QualitySettings.asyncUploadTimeSlice`), kertoja tauolla (LuentaSoitin.Tauko) ja jatkaa samasta lauseesta;
+Reduce Motion: ei syöksyä, pelkkä pergamenttihäivytys.
 
 ## 8. Ilmaan piirtyvät elementit
 
