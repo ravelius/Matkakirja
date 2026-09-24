@@ -3963,3 +3963,7 @@ Nollauksia tänään 18.
 ## SISALTOKIRJURI 71 % → LUOVUTUS JA NOLLAUS KASKETTY; POSTIVAHTI LAHETTAA SEN ALOITUSVIESTIN (viesti-sisaltokirjuri-aloitus.md) KUN KONTEKSTI < 10 %; PELIKOODARI NOLLAUTUI VAHVISTETUSTI; FABLE NOLLAUTUU TAMAN VUORON JALKEEN (24.9.2026 klo 14.49)
 
 Kirjattu.
+
+## PAATOKSET 24.9.2026 klo 14.5x: SATELLIITTIPINTA, EOX-NOUTO (24.9.2026 klo 14.53)
+
+Omistaja päätti kortilla: EOX Sentinel-2 cloudless 2016 (CC BY 4.0) noudetaan CC BY:n nojalla kohteliaalla tahdilla (≤ 4 pyyntöä/s, pysähtyy 429/503:een), ja omistaja lähettää EOX:lle kohteliaisuusviestin (luonnos docs/raportit/satelliitti-lennon-pinta-20260924.md, haara karttaseppa-satelliitti). Fable päätti: BMNG Z0–Z7 topo (ei batymetriaa), elokuu, ajetaan päivällä ≤ 2 prosessia; attribuutio pelissä NASA Earth Observatory (Blue Marble Next Generation) ja EOX:n täysi muoto; värisovituksesta tuotetaan sekä alkuperäinen että kaupunkikohtaisesti sovitettu sarja, omistaja valitsee iPadilla; EOX-vaihe ennen klo 22 tai huomenna päivällä (E28 klo 22). Natiiviseppä varmistaa topon tumman meren sopivuuden palloon.
