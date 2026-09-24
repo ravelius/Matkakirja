@@ -292,7 +292,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Valmiit ehdotukset (sirut) | pollo.js:2166, 6254 | PuluChat.cs:193 | on | NUI |
 | Jatkokysymykset | pollo.js:5505 | PuluChat.cs:311 | on | NUI |
 | "Yritä uudelleen" | pollo.js:5533 | PuluChat.cs:302 | on | NUI |
-| Linssin valmiit kysymykset chatissa | pollo.js:2227 | UI/Linssit/MinipulunKortti.cs:110 (vain astronautti) | osittain | NUI, LS |
+| Linssin valmiit kysymykset chatissa | pollo.js:2227 | PuluChat.NaytaLinssinValmiit + UI/Linssit/LinssiKysymykset.cs (ihmisen matka: jakson kysymykset, valmis vastaus lähteineen); astronautti MinipulunKortti | on (merge-jonossa natiivi-ui/linssin-valmiit 4bece65) | NUI, LS |
 | "Ehdota sisältöä" (chatin ylärivi) | pollo.js:1941 | PuluChat.cs (ylärivi) | on | NUI |
 | "Näytä puhekuplat" | pollo.js:1972 | PuluChat.cs (ylärivi) | on | NUI |
 | Vastauksen kuva → "Näytä kuva isompana" | pollo.js:5305 | puuttuu | on | NUI |
@@ -367,11 +367,11 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Radiolinssi valitsimessa | linssit/radio.js:2181 | puuttuu (Linssirekisteri.cs:14 "radio jää pois") | puuttuu | LS, NUI |
-| Kaupunkien kanavanapit "Viritä kanava" | radiosoitin.js:824 | puuttuu | puuttuu | LS, NUI |
-| Viritysasteikko | radiosoitin.js:623 | puuttuu | puuttuu | NUI, LS |
-| Lamppu "Keskeytä lähetys" | radiosoitin.js:437 | puuttuu | puuttuu | NUI, LS |
-| Linssin askeleet selitekortissa | ui.js:19492, 19565 | puuttuu | puuttuu | NUI, LS |
+| Radiolinssi valitsimessa | linssit/radio.js:2181 | Linssirekisteri (radio kynnyslinsseissä, 1400) | on (LS) | LS, NUI |
+| Kaupunkien kanavanapit "Viritä kanava" | radiosoitin.js:824 | UI/Linssit/RadioNakyma.cs (paikat, "Viritä kanava: X") | on (LS) | LS, NUI |
+| Viritysasteikko | radiosoitin.js:623 | RadioNakyma (asteikko, viisari, RadioLinssi.Asteikko) | on (LS) | NUI, LS |
+| Lamppu "Keskeytä lähetys" | radiosoitin.js:437 | RadioNakyma (lamppu, tauko) | on (LS) | NUI, LS |
+| Linssin askeleet selitekortissa | ui.js:19492, 19565 | – | ei tarvita nyt: yksikään webin linssi ei määrittele askeleita (linssit/*.js) | – |
 
 ### 16 g. Muut linssit
 
