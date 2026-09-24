@@ -84,7 +84,7 @@ Avaimia ei kysytä omistajalta.
 - Kuvat ja media vain PD/CC, tarkistettuina Commonsista. API-avaimia
   ei koskaan repoon eikä lokiin.
 - Konttiympäristössä Noden fetch tarvitsee `NODE_USE_ENV_PROXY=1`;
-  Chromium on polussa /opt/pw-browsers/chromium.
+  Chromium on Macilla ~/Library/Caches/ms-playwright (konttipolku /opt/pw-browsers/chromium oli vanha ympäristö).
 
 ## Arkisto
 
