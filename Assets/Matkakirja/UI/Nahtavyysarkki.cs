@@ -56,6 +56,8 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
         public event Action Suljettu;
+        /// <summary>Arkki tuli näkyviin (pulun kerros väistää sen alle, UiNakymat).</summary>
+        public event Action Avautui;
         /// <summary>Auki olevan nähtävyysjutun poiminta-avain juttu:kaupunki:nimi (web juttuAvain) tai null.</summary>
         public string AukiAvain => Auki && !opas && nykyinen != null
             ? Reaktiot.JuttuAvain(kartta?.Kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki, nykyinen.Nimi) : null;
@@ -218,6 +220,7 @@ namespace Matkakirja.Natiivi
             Auki = true;
             Rakenne.Nayta(peite, true, 220);
             SyoteLukko.Esta(this);
+            Avautui?.Invoke();
         }
 
         /// <summary>Testikomento: vieritys alas (px) taiton jälkeen.</summary>

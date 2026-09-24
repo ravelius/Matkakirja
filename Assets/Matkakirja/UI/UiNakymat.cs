@@ -134,6 +134,12 @@ namespace Matkakirja.Natiivi
             // B7-soitin: lehti hiljentää äänimaiseman myös testiavauksessa (tuplakutsu ohjaimen kanssa on harmiton).
             Lehti.Avautui += _ => Aanisoitin.Hiljennys("lehti", true);
             Lehti.Suljettu += _ => Aanisoitin.Hiljennys("lehti", false);
+            // Webissä pulu ja chat asuvat avoimessa lehdessä (arrival-dialog on LIVIAN_NAPPIDIALOGIT): pulun
+            // kerros lehden päälle lehden ajaksi; nähtävyysjuttu aukeaa taas chatin päälle (web: juttu chatin päälle).
+            Lehti.Avautui += _ => { lehtiAuki = true; PulunKerros(); };
+            Lehti.Suljettu += _ => { lehtiAuki = false; PulunKerros(); };
+            Nahtavyydet.Avautui += () => { arkkiAuki = true; PulunKerros(); };
+            Nahtavyydet.Suljettu += () => { arkkiAuki = false; PulunKerros(); };
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
@@ -259,6 +265,11 @@ namespace Matkakirja.Natiivi
             SuljeKaikki();
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
+
+        bool lehtiAuki, arkkiAuki;
+
+        void PulunKerros() =>
+            Kerros.AsetaJarjestys(Pulu.Kerros, lehtiAuki && !arkkiAuki ? UiKerros.Traileri + 2 : Pulu.Kerros);
 
         void UusiMatka(PeliOhjain o)
         {

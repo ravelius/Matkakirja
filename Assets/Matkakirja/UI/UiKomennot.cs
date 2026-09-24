@@ -366,6 +366,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "chat":
+                    if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;

@@ -98,7 +98,8 @@ namespace Matkakirja.Natiivi
         {
             this.kerros = kerros;
             this.pulu = pulu;
-            var juuri = kerros.Juuri(UiKerros.Valikot);
+            // Pulun omalla kerroksella: se nousee lehden päälle lehden ajaksi (UiNakymat.PulunKerros).
+            var juuri = kerros.Juuri(Pulu.Kerros);
             sulkija = Rakenne.El("mk-sulkija", juuri);
             sulkija.style.display = DisplayStyle.None;
             sulkija.RegisterCallback<PointerDownEvent>(e => { Sulje(); e.StopPropagation(); });
@@ -111,12 +112,7 @@ namespace Matkakirja.Natiivi
             naytaKuplat.tooltip = "Tuo ohi menneet puhekuplat takaisin näkyviin";
             Kirjasimet.Aseta(naytaKuplat, Kirjasin.Luku);
             // "Ehdota sisältöä" (web .pollo-ehdota): chat väistyy ja ehdotuslomake aukeaa tilanteen kanssa.
-            var ehdota = Rakenne.Nappi("Ehdota sisältöä", "mk-chat__pilleri", () =>
-            {
-                if (!UiNakymat.Olemassa) return;
-                Sulje();
-                UiNakymat.Hae().Palaute.Avaa();
-            }, ylarivi);
+            var ehdota = Rakenne.Nappi("Ehdota sisältöä", "mk-chat__pilleri", EhdotaSisaltoa, ylarivi);
             ehdota.tooltip = "Ehdota sisältöä tähän kohtaan peliä";
             Kirjasimet.Aseta(ehdota, Kirjasin.Luku);
             virta = new ScrollView(ScrollViewMode.Vertical);
@@ -166,6 +162,15 @@ namespace Matkakirja.Natiivi
             suurennos = new Kuvasuurennos(juuri);
             kerros.TurvaMuuttui += Asettele;
             Asettele();
+        }
+
+        /// <summary>Ylärivin "Ehdota sisältöä" (myös testikomento ui chat ehdota): chat väistyy, lomake auki.</summary>
+        public void EhdotaSisaltoa()
+        {
+            Debug.Log("MATKAKIRJA ui chat: Ehdota sisältöä");
+            if (!UiNakymat.Olemassa) return;
+            Sulje();
+            UiNakymat.Hae().Palaute.Avaa();
         }
 
         void Asettele()

@@ -81,6 +81,7 @@ namespace Matkakirja.Natiivi
             switch (t.Laji)
             {
                 case LehtiTekoLaji.Minitehtavavastaus: return o.KauppaTeko(k => k.Minitehtava(t.Kaupunki, t.Aihe, t.Oikein, t.Palkkio));
+                case LehtiTekoLaji.Kulttuurivastaus: return o.KauppaTeko(k => k.Kulttuuri(t.Kaupunki, t.Oikein));
                 case LehtiTekoLaji.JulisteMyonto: return o.KauppaTeko(k => k.MyonnaJuliste(t.Avain));
                 case LehtiTekoLaji.PullaVinkki: return o.KauppaTeko(k => k.PullaVinkki(t.Kaupunki));
                 default: return null;
@@ -281,6 +282,8 @@ namespace Matkakirja.Natiivi
                 }
                 default: Aihesivu(sivu.contentContainer, s); break;
             }
+            // Web lehti.js visasivu: kaupunkilehdessä toisella sivulla (yksisivuisessa etusivulla).
+            if (lehti.Laji == LehtiLaji.Kaupunki && i == (lehti.Sivut.Count > 1 ? 1 : 0)) Kulttuurivisa(sivu.contentContainer);
 
             if (vanha != null)
             {
@@ -428,6 +431,102 @@ namespace Matkakirja.Natiivi
             string pvm = lehti.Laji == LehtiLaji.Maa ? "Maan oma lehti" : string.Join(" · ", new[] { lehti.MaaNimi, paiva }.Where(x => !string.IsNullOrEmpty(x)));
             var p = Rakenne.El("mk-lehti__paivays", m, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(pvm.ToUpperInvariant(), "mk-lehti__paivaysteksti", p), Kirjasin.Kone);
+            if (lehti.Laji != LehtiLaji.Kaupunki) return;
+            // Liitelinkki päiväysrivillä "Suomi-liite", kun maalla on karttaetusivu (web arrival-maa-linkki).
+            var maa = UiSisalto.Maa(lehti.Maa);
+            if (maa?.KarttaUrl != null && !string.IsNullOrEmpty(lehti.MaaNimi))
+            {
+                var linkki = Rakenne.Nappi(lehti.MaaNimi + "-liite", "mk-lehti__maalinkki", AvaaLiite, p);
+                Kirjasimet.Aseta(linkki, Kirjasin.Kone);
+            }
+            SaaRivi(m, lehti.Omistaja);
+        }
+
+        // --- sää maston alla (web naytaLehtiSaa, asetaSaaRivi, naytaVuosiSaa; js/saa.js) ----------
+
+        static readonly string[] KuukausissaNimet =
+        {
+            "tammikuussa", "helmikuussa", "maaliskuussa", "huhtikuussa", "toukokuussa", "kesäkuussa",
+            "heinäkuussa", "elokuussa", "syyskuussa", "lokakuussa", "marraskuussa", "joulukuussa",
+        };
+        static readonly (int[] Koodit, string Teksti, string Kuvake)[] Saakoodit =
+        {
+            (new[] { 0 }, "selkeää", "aurinko"), (new[] { 1 }, "melkein selkeää", "aurinko"), (new[] { 2 }, "puolipilvistä", "pilvi"),
+            (new[] { 3 }, "pilvistä", "pilvi"), (new[] { 45, 48 }, "sumua", "sumu"), (new[] { 51, 53, 55, 56, 57 }, "tihkusadetta", "sade"),
+            (new[] { 61, 63, 65, 66, 67 }, "sadetta", "sade"), (new[] { 71, 73, 75, 77 }, "lumisadetta", "lumi"),
+            (new[] { 80, 81, 82 }, "sadekuuroja", "sade"), (new[] { 85, 86 }, "lumikuuroja", "lumi"), (new[] { 95, 96, 99 }, "ukkosta", "ukkonen"),
+        };
+        static readonly Dictionary<string, string> SaaIkonit = new Dictionary<string, string>
+        {
+            ["aurinko"] = "<circle cx=\"12\" cy=\"12\" r=\"4.4\"/><path d=\"M12 2.8v2.6M12 18.6v2.6M2.8 12h2.6M18.6 12h2.6M5.5 5.5l1.8 1.8M16.7 16.7l1.8 1.8M18.5 5.5l-1.8 1.8M7.3 16.7l-1.8 1.8\"/>",
+            ["pilvi"] = "<path d=\"M7 17.5h9.6a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.8-1.1A3.9 3.9 0 0 0 7 17.5Z\"/>",
+            ["sade"] = "<path d=\"M7 14.5h9.6a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.8-1.1A3.9 3.9 0 0 0 7 14.5Z\"/><path d=\"M8.5 17.2l-1 2.6M12.4 17.2l-1 2.6M16.3 17.2l-1 2.6\"/>",
+            ["lumi"] = "<path d=\"M7 14.5h9.6a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.8-1.1A3.9 3.9 0 0 0 7 14.5Z\"/><path d=\"M8.4 18.2h.01M12.2 19.6h.01M15.9 18.2h.01\"/>",
+            ["sumu"] = "<path d=\"M4.5 9.5h15M3.5 13h17M5.5 16.5h13\"/>",
+            ["ukkonen"] = "<path d=\"M7 13.5h9.6a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.8-1.1A3.9 3.9 0 0 0 7 13.5Z\"/><path d=\"M12.8 15.5 10.6 19h2.6l-1.8 3\"/>",
+        };
+
+        /// <summary>
+        /// Kuukauden normaali heti ("syyskuussa keskimäärin 18°, sadetta 40 mm"), sitten tämän päivän sää
+        /// Open-Meteosta ("tänään 18° (12…20°), puolipilvistä, sadetta 3 mm"); "vuosiennuste ›" avaa graafin.
+        /// </summary>
+        void SaaRivi(VisualElement isa, string kaupunki)
+        {
+            var rivi = Rakenne.Nappi(null, "mk-lehti__saa", null, isa);
+            rivi.style.display = DisplayStyle.None;
+            Saatiedot.Hae(kaupunki, t =>
+            {
+                if (t == null || rivi.panel == null) return;
+                int kk = DateTime.Now.Month - 1;
+                var ikoni = Rakenne.Ikoni(SaaIkonit["pilvi"], "mk-ikoni", rivi);
+                var teksti = Rakenne.Teksti($"{Iso(KuukausissaNimet[kk])} keskimäärin {Mathf.RoundToInt(t.Keskilampo[kk])}°, sadetta {Mathf.RoundToInt(t.Sade[kk])} mm",
+                    "mk-lehti__saateksti", rivi);
+                Kirjasimet.Aseta(Rakenne.Teksti("vuosiennuste ›", "mk-lehti__saavihje", rivi), Kirjasin.Kone);
+                rivi.clicked += () => Saagraafi.NaytaIsona(t, "Sää vuoden mittaan — " + lehti.Nimi);
+                rivi.style.display = DisplayStyle.Flex;
+                var k = UiSisalto.Kaupunki(kaupunki);
+                if (k == null || double.IsNaN(k.Lat)) return;
+                UiKerros.Hae().StartCoroutine(SaaTanaan(k.Lat, k.Lon, (lampo, ylin, alin, koodi, sade) =>
+                {
+                    if (rivi.panel == null) return;
+                    var kuvaus = Saakoodit.FirstOrDefault(x => x.Koodit.Contains(koodi));
+                    string kuvake = kuvaus.Kuvake ?? "pilvi";
+                    ikoni.Polku = SaaIkonit[kuvake];
+                    string sadeTeksti = sade >= 1 ? $", sadetta {Mathf.RoundToInt(sade)} mm" : "";
+                    teksti.text = $"Tänään {lampo}° ({alin}…{ylin}°), {kuvaus.Teksti ?? ""}{sadeTeksti}";
+                }));
+            });
+        }
+
+        static string Iso(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
+
+        static readonly Dictionary<string, (float Aika, int L, int Y, int A, int K, float S)> saaMuisti = new Dictionary<string, (float, int, int, int, int, float)>();
+
+        /// <summary>Web haeSaaTanaan: Open-Meteo current + daily, välimuisti tunnin, aikaraja 8 s.</summary>
+        static System.Collections.IEnumerator SaaTanaan(double lat, double lon, Action<int, int, int, int, float> valmis)
+        {
+            string avain = lat.ToString(System.Globalization.CultureInfo.InvariantCulture) + "," + lon.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            if (saaMuisti.TryGetValue(avain, out var m) && Time.realtimeSinceStartup - m.Aika < 3600f) { valmis(m.L, m.Y, m.A, m.K, m.S); yield break; }
+            string url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat.ToString(System.Globalization.CultureInfo.InvariantCulture)
+                + "&longitude=" + lon.ToString(System.Globalization.CultureInfo.InvariantCulture)
+                + "&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&forecast_days=1";
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(url))
+            {
+                r.timeout = 8;
+                yield return r.SendWebRequest();
+                if (r.result != UnityEngine.Networking.UnityWebRequest.Result.Success) yield break;
+                Dictionary<string, object> d;
+                try { d = Rakenne.Olio(MiniJson.Jasenna(r.downloadHandler.text)); } catch (FormatException) { yield break; }
+                var nyt = Rakenne.Olio(MiniJson.Kentta(d, "current"));
+                var pv = Rakenne.Olio(MiniJson.Kentta(d, "daily"));
+                double? Eka(string k) => Rakenne.Lista(MiniJson.Kentta(pv, k)) is List<object> l && l.Count > 0 && l[0] is double x ? x : (double?)null;
+                if (!(MiniJson.Luku(nyt, "temperature_2m") is double lampo)) yield break;
+                int koodi = (int)(MiniJson.Luku(nyt, "weather_code") ?? -1);
+                var tulos = (Time.realtimeSinceStartup, (int)Math.Round(lampo), (int)Math.Round(Eka("temperature_2m_max") ?? lampo),
+                    (int)Math.Round(Eka("temperature_2m_min") ?? lampo), koodi, (float)(Eka("precipitation_sum") ?? 0));
+                saaMuisti[avain] = tulos;
+                valmis(tulos.Item2, tulos.Item3, tulos.Item4, tulos.Item5, tulos.Item6);
+            }
         }
 
         // --- aihesivu ------------------------------------------------------------------------
@@ -526,6 +625,58 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Nappi("Avaa ›", "mk-lehti__linkki", () => Application.OpenURL(url), tekstit), Kirjasin.Kone);
                 }
             }
+        }
+
+        bool KulttuuriVastattu(string kaupunki) =>
+            tila != null ? tila.KulttuuriVastattu(kaupunki) : PeliOhjain.Instanssi?.Kaupat?.KulttuuriVastattu(kaupunki) ?? false;
+
+        /// <summary>
+        /// Web naytaKulttuuri: "LEHDEN KYSYMYS" minitehtävän kehyksessä, kysymys heti näkyvissä ("Tutustuitko? …"),
+        /// vastaus → KauppaTeko Kulttuurivastaus, kehystetty tulos ("Oikein! +25 puntaa." tai oikea vastaus + fakta).
+        /// </summary>
+        void Kulttuurivisa(VisualElement s)
+        {
+            string kaupunki = lehti.Omistaja;
+            var paikka = Rakenne.El("mk-lehti__visapaikka", s, PickingMode.Ignore);
+            Kulttuurivisat.Lataa(() =>
+            {
+                var v = Kulttuurivisat.Hae(kaupunki);
+                if (v == null || paikka.panel == null) return;
+                var laatikko = Rakenne.El("mk-lehti__tehtava", paikka, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti("LEHDEN KYSYMYS", "mk-lehti__tehtavaotsake", laatikko), Kirjasin.Kone);
+                var palsta = Rakenne.El("mk-lehti__tehtavapalsta", laatikko, PickingMode.Ignore);
+                bool vastattu = KulttuuriVastattu(kaupunki);
+                var kysymys = Rakenne.Teksti(vastattu ? "Kulttuurivisaan on jo vastattu tässä kaupungissa." : "Tutustuitko? " + v.Kysymys,
+                    "mk-lehti__kysymys", palsta);
+                Kirjasimet.Aseta(kysymys, Kirjasin.LukuLihava);
+                if (vastattu) return;
+                var napit = new List<Button>();
+                var tulos = Rakenne.Teksti("", "mk-lehti__tehtavatulos", palsta);
+                tulos.style.display = DisplayStyle.None;
+                int palkkio = KauppaVakiot.KulttuuriPalkkio;
+                for (int i = 0; i < v.Vaihtoehdot.Count; i++)
+                {
+                    int valinta = i;
+                    var b = Rakenne.Nappi(v.Vaihtoehdot[i], "mk-nosto__visanappi", null, palsta);
+                    Kirjasimet.Aseta(b, Kirjasin.Luku);
+                    b.clicked += () =>
+                    {
+                        bool oikein = valinta == v.Oikea;
+                        var r = Teko(new LehtiTeko { Laji = LehtiTekoLaji.Kulttuurivastaus, Kaupunki = kaupunki, Oikein = oikein, Palkkio = palkkio });
+                        foreach (var x in napit) x.RemoveFromHierarchy();
+                        kysymys.text = v.Kysymys;
+                        tulos.style.display = DisplayStyle.Flex;
+                        // Hiljaista polkua ei ole: jo vastattu saa näkyvän vastauksen (web).
+                        if (r != null && !r.Ok) { tulos.text = "Kysymykseen on jo vastattu tässä kaupungissa."; return; }
+                        tulos.text = (oikein ? $"Oikein! +{palkkio} puntaa. " : $"Oikea vastaus: {v.Vaihtoehdot[v.Oikea]}. ") + (v.Fakta ?? "");
+                        tulos.EnableInClassList("mk-oikein", oikein);
+                        tulos.EnableInClassList("mk-vaarin", !oikein);
+                        Aanet.PulunTehoste(oikein ? "correct" : "wrong");
+                        Rakenne.Vierita(sivu, tulos, 30);
+                    };
+                    napit.Add(b);
+                }
+            });
         }
 
         void Tehtava(VisualElement s, LehtiTehtava t, string aihe)

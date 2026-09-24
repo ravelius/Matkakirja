@@ -816,9 +816,10 @@
 }
 
 .mk-chat__pilleri {
-    min-height: 0;
+    /* Kosketusala 32 pt (web pilleri on pienempi, mutta sormi tarvitsee alan). */
+    min-height: 32px;
     margin-left: 6px;
-    padding: 2px 9px;
+    padding: 4px 12px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.3);
     border-radius: 12px;
