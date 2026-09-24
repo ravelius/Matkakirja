@@ -4263,3 +4263,7 @@ Pillerit lähettävät kysymyksen oikeaan chattiin kuten webissä; valmiit vasta
 ## OMISTAJA klo 17.3x: DEVELOPER PROGRAM TEAM ID RCD77XPB7M (me.com) — KEHITYSKAANNOKSET TAHAN TIIMIIN, PERSONAL TEAM F72JLS57C5 POIS (24.9.2026 klo 16.39)
 
 Natiiviseppä ajaa ison iPadin käännöksen DEVELOPMENT_TEAM=RCD77XPB7M, rekisteröi kolme laitetta, Xcode luo varmenteen ja profiilin; Rakennus.cs:n kovakoodaus → MATKAKIRJA_TEAM. Eleet 28, 30, 31 valmiit (02847d7, testit 270/270); kallistussuunta (sormet alas = kallistus vai päinvastoin) kysytään omistajalta. Xcoden tiimilista ei latautunut me.com-tiimiä automaattisesti (IDEProvisioningTeamByIdentifier vain F72JLS57C5).
+
+## NATIIVI-UI: BUILD 10 -JONO KOODATTU (natiivi-ui/b10-jono bee0199): YLAPALKKI 6ec3854, TEKSTITAUSTA 29326ba, HYTINA — FABLE KORJAUTTAA PALKIN (EI ⚙, ☰ OMISTAJAN VALIKKO, LINSSIT EI LAUKKUUN) (24.9.2026 klo 16.41)
+
+Natiivi-UI teki palkin webin mukaan (logo, pilleri, ⚙, ☰; linssit laukkuun; ☰ = webin päävalikko). Fable: ⚙ pois (löydös 37), ☰ pysyy omistajan klo 13.3x valikkona (Raamatun hyväksytty poikkeama), linssit vain ☰:stä (klo 11.2x); iPhone 57 pt, iPad 50 → 61 pt; veto piilottaa, napautus/☰ palauttaa; vaaka piilossa. Tekstitausta: lehti ja nähtävyysarkit webin .dialog.arkki-tyyliin (#f5f0e2 + paperikohina); nostokortti jo webin mukainen — jos omistaja tarkoitti muuta, kuva. Hytinä: merkit liikkeessä pyöristämättä, levossa pikselille. Omistaja: Individual-tili riittää (App Store, TestFlight, IAP, 100 laitetta); myyjänimi = oma nimi, ei tiimijäseniä.
