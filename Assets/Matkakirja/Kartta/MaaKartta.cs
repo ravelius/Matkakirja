@@ -127,7 +127,7 @@ namespace Matkakirja
             // Pallotesti Unityn avaruudessa (säde = päiväntasaajan säde): napojen virhe on alle
             // 21 km, mikä mahtuu osumatestin 0,5°:n toleranssiin. Osuma muunnetaan ECEF:ksi ja
             // siitä leveydeksi ja pituudeksi.
-            Ray r = kamera.ScreenPointToRay(ruutu);
+            if (!PalloKierto.Sade(kamera, ruutu, out Ray r)) return false;
             var gt = georeferenssi.transform;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             double3 o = (float3)gt.InverseTransformPoint(r.origin);
