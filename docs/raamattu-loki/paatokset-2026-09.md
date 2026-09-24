@@ -4143,3 +4143,7 @@ Omistajan kuva (Ateena, iPhone): yläosan kelluvat napit ja pillerit liian sekav
 ## LINSSISEPPA: PIIKKIAJO 8, HUIPPUVUORET-LAITEKUVA JA KEKSINNOT-KUVAPARI VALMIIT; PIENI iPAD VAPAA (24.9.2026 klo 16.12)
 
 Piikit 8: ihmisen matkan avauksessa ei yli 20 ms:n kehyksiä (ajo 7: 31,7 ms); muut 23–41 ms ensipiirrosta; uusi: topografian sulussa 50 ms sulkuäänen latauksesta → Natiivi-UI esilataa (build 10). Huippuvuoret iPadilla: natiivi ei vielä väritä (skeema 1.29 muutRenkaat) → 1.34 + #3078 korjaavat. Keksinnöt: kuvapari vastaa rakenteeltaan webiä (proto-3d/lokit/linssit-keksinnot-pari-20260924/), Laitetestaajan rivin 40 kuva oli build 5:stä. Omistajalle: pieni iPad saa irrottaa.
+
+## OMISTAJA klo 16.2x: NATIIVIN LEHDISSA JA NOSTOKORTEISSA VAARANLAINEN TAUSTA TEKSTIN TAKANA → KOPIOIDAAN WEBISTA (24.9.2026 klo 16.12)
+
+Natiivi-UI mittaa webin css:n (tausta, läpinäkyvyys, tekstuuri, reunus, varjo, pyöristys, paddingit) kaupunkilehdestä, maalehdestä, nostokortista ja nostovisasta ja toteuttaa saman; kuvaparit merge-pyyntöön; build 10, yläpalkin jälkeen ennen E3:a.
