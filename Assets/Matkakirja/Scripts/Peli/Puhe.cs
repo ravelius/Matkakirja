@@ -337,12 +337,12 @@ namespace Matkakirja.Natiivi
                     {
                         ViimeVirhe = r.error;
                         Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut: {r.error}");
-                        lataus = null;
+                        LatausPetti();
                         yield break;
                     }
                 }
                 try { if (File.Exists(tiedosto)) File.Delete(tiedosto); File.Move(valiaikainen, tiedosto); }
-                catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: välimuisti: " + e.Message); lataus = null; yield break; }
+                catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: välimuisti: " + e.Message); LatausPetti(); yield break; }
             }
 
             AudioClip klippi;
@@ -357,7 +357,7 @@ namespace Matkakirja.Natiivi
                     ViimeVirhe = r.error;
                     Debug.LogWarning($"MATKAKIRJA puhe: {tiedosto} ei avautunut: {r.error}");
                     try { File.Delete(tiedosto); } catch { }
-                    lataus = null;
+                    LatausPetti();
                     yield break;
                 }
                 klippi = DownloadHandlerAudioClip.GetContent(r);
@@ -393,6 +393,18 @@ namespace Matkakirja.Natiivi
             var l = loppu;
             loppu = null;
             l?.Invoke();
+        }
+
+        /// <summary>
+        /// Uuden puheen lataus tai avaus epäonnistui (esim. TTS 403): korvattu puhe häipyy jo (Haivyta ilman
+        /// pysäytystä jätti puhuu-tilan päälle), joten puhe loppuu tähän. Muuten Soi jäisi todeksi
+        /// (Natiivi-UI: matkakirjakortti jäi lapuksi, 24.9.2026).
+        /// </summary>
+        void LatausPetti()
+        {
+            lataus = null;
+            SoivaUrl = null;
+            AsetaPuhuu(false);
         }
 
         void Haivyta(float kesto, bool pysayta)
