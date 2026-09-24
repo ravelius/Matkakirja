@@ -2875,3 +2875,7 @@ Siirtosepän ilmoitus klo 03.0x; #2984 tarkistukset käynnissä (reitti vihreä,
 ## TARKENNUS #2984: FABLEN LUOKITIN ESTI --admin-OHJEEN LAHETYKSEN (CI Bypass) → OHJE JULKAISIJALLE ILMAN OHITUSTA: SELVITA JA KORJAA savukkeet-mac:N YLEINEN PUNAINEN ENSIN, MERGE VIHREANA; OMISTAJALLE TIEDOKSI AAMUN KORTISSA (24.9.2026 klo 02.59)
 
 Edellisen kirjauksen --admin-kohta ei ole voimassa. Sallintalistalla ei voi avata luokitinestoa; Raamatun --admin-sääntö on Julkaisijan oma harkinta.
+
+## LAITETESTAAJA: B7 KUULOKOE 6/13 (docs/raportit/b7-kuulokoe-tulos-20260924.md, HAARA laitetestaaja): ETUSIVU, AVAUSLENTO, VISA, AARRE, LEHTI, LINSSIT OIKEIN, EI VIRHEITA; AVOIN EPAILY INTRON TASONPALAUTUS (0,6×/1,45× EI PALAUTUNUT KAUPUNKIVALINNASSA) → PELIKOODARI TARKISTAA; KOHDAT 3, 4, 9, 13 SEURAAVAAN ERAAN KOMPRESSORIN JALKEEN; KOHTA 12 (MYKISTYS, BLUETOOTH) OMISTAJAN iPAD-LISTALLE; OMISTAJAN TARKISTUSLISTA VIEDAAN MAINIIN PR:LLA ENNEN AAMUA; LAITETESTAAJA JATKAA A1–A9 (24.9.2026 klo 03.02)
+
+Fablen ohjeet klo 03.0x. Pelikoodarille etusijalla Siirtosepän polkukartta (29 punaista lukijaa → päätaso), sitten intron tasonpalautus ja kompressori.
