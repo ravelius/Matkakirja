@@ -945,6 +945,20 @@ tai (b) narraatio ei käynnistynyt lainkaan. Uusinta vaatii testin
 AIVAN ENSIMMÄISELLÄ lennolla tuoreessa pelissä + `puhe.url`-kentän
 tarkistus heti lennon alettua.
 
+**TODELLINEN SYY LÖYTYI (klo 13.1x)**: testattiin AIVAN ENSIMMÄINEN
+lento oikealla reitillä (portti → "Uusi matka" → Heathrow/avausruutu,
+`ui napauta 196 675` osui "mk-aloitus__aloita"-nappiin, päästiin
+Lontooseen avausluennan tekstillä ruudulla). `puhe.paalla` oli SILTI
+`false` tässäkin — koska istunnon alussa ajettu `komento.txt: hiljaa`
+(kuulokoetestikäytännön mukainen mykistys) sammuttaa TODENNÄKÖISESTI
+koko puhe/narraatiojärjestelmän, ei vain äänenvoimakkuutta. **Ei siis
+pystytä päättelemään intro vs. lento-alku ilman oikeaa äänen päälle
+kytkemistä** (`komento.txt: aani` tms. tai "Laita äänet päälle"
+-napista) — tätä ei tehty tässä ajossa ajanpuutteen ja
+kontekstirajan takia. SEURAAVA SESSIO: toista TÄSMÄLLEEN tämä reitti
+äänet päällä (Mac-kaiuttimet turvassa, ks. Raamatun äänikäytäntö) ja
+lue `puhe.url` heti kun `lento`-kenttä ilmestyy.
+
 ## B7-9 (löydös 24A): Aloitusportin ruutu — PERUTTU, KS. KORJAUS ALLA
 
 **KORJAUS (Fable 24.9. klo 13.1x): OMISTAJA PERUI PORTIN MUUTOKSEN klo
