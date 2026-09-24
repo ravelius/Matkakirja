@@ -3563,3 +3563,7 @@ Fable: toteutus vasta pariteetin ja build 6 -kokeilun jälkeen (Raamattu MAAPALL
 ## NATIIVI-UI LUOVUTUS G (24.9.2026 klo 15.27)
 
 Natiivi-UI luovutti (docs/raportit/viesti-natiivi-ui-luovutus-20260924-g.md): build 8 = 3e2ad74, build 9 -merge-pyyntö natiivi-ui/iphone-island bf7af3d odottaa kuvapareja (WEB ON MALLI, MITATTUNA), Ei webissä -lista E1–E20 haarassa natiivi-ui-ei-webissa odottaa Fablen päätöstä.
+
+## NATIIVI-UI LUOVUTUS H (24.9.2026 klo 17.13)
+
+24.9.2026 klo 17.3x: Natiivi-UI luovutti (docs/raportit/viesti-natiivi-ui-luovutus-20260924-h.md): build 10 -erä 1 masterissa 3726485, b10-jono 0e8ff30 (yläpalkki ilman ⚙, vain ☰ piilossa, tekstit mitattuina, hytinä, löydökset 32, 34, 36) odottaa kuvapareja b10e:stä.
