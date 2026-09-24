@@ -106114,4 +106114,716 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  viktoria: [
+    {
+      id: 'kaupunki',
+      nimi: 'Viktoria Nyanza',
+      johdanto:
+        'Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi, jonka rannoilla asuu nykyään yli 45 miljoonaa ihmistä kolmessa maassa. Sen löytöhistoria kesti lähes 20 vuotta ja synnytti Lontoossa kiivaan tiedekiistan.',
+      nostot: [
+        {
+          otsikko: 'Speke näkee unelmansa järven',
+          teksti:
+            'Elokuussa 1858 nuori englantilaisupseeri John Hanning Speke saapui yksin suuren sisäjärven rannalle nykyisen Tansanian puolella, sillä hänen matkatoverinsa Richard Burton oli sairastunut eikä jaksanut jatkaa mukana. Speke nimesi järven kuningatar Viktorian mukaan ja vakuuttui heti, ilman minkäänlaisia mittauksia, että hän oli löytänyt kauan etsityn Niilin lähteen. Burton piti väitettä älyttömän hätiköitynä, ja miesten ystävyys mureni riidaksi, joka jatkui vuosikausia ja päättyi lopulta julkiseen kiistelyyn Lontoon tiedeseuroissa. Isoisän matkaan asti, vuoteen 1873, kysymys järven ja Niilin yhteydestä oli yhä osin auki.',
+          tiedosto: 'John Hanning Speke (1827-64) RMG F8616 (cropped).jpg',
+          lyhyt: 'John Hanning Speke, joka näki ja nimesi Viktorianjärven vuonna 1858.',
+          selite:
+            'Muotokuva näyttää Speken kokovartalossa tummassa 1800-luvun puvussa hänen vierellään seisova sekstantti viittaa hänen työhönsä tutkimusmatkailijana ja mittaajana.',
+          lahde: 'S. Hollyer; Southwell Brothers, Wikimedia Commons (Public domain)',
+          wiki: 'John Hanning Speke',
+        },
+        {
+          otsikko: 'Todiste Ripon Putouksilla',
+          teksti:
+            'Speke ei luovuttanut, vaikka Burton epäili häntä yhä. Vuosina 1860–1863 hän palasi alueelle toverinsa James Grantin kanssa uudella retkellä, jonka tarkoitus oli todistaa väite kiistattomasti. Heinäkuussa 1862 Speke saapui järven pohjoisrannalle nykyisen Jinjan tienoille ja näki, kuinka valtava vesimassa syöksyi järvestä putouksena kohti pohjoista — hän nimesi näyn Ripon Putouksiksi Kuninkaallisen maantieteellisen seuran silloisen puheenjohtajan mukaan. Speke julisti nyt nähneensä omin silmin paikan, jossa Niili sai alkunsa. Moni Lontoossa piti todistusta yhä puutteellisena, mutta löytö oli merkittävin askel kohti Niilin arvoituksen ratkaisua.',
+          tiedosto: 'Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg',
+          lyhyt: 'Ripon Putoukset, joilla Speke totesi Niilin saavan alkunsa järvestä.',
+          selite:
+            'Vuoden 1913 kuvitus näyttää Ripon Putoukset sellaisina kuin ne näyttivät ennen kuin pato 1900-luvulla peitti ne alleen — juuri tätä näkyä Speke katseli heinäkuussa 1862.',
+          lahde: 'Jules Leclercq (oletettu), Wikimedia Commons (Public domain)',
+          wiki: 'Ripon Falls',
+        },
+        {
+          otsikko: 'Stanley purjehtii ympäri järven',
+          teksti:
+            'Kiista Niilin lähteestä jatkui vielä vuosia, sillä kukaan ei ollut varmistanut, oliko Viktorianjärvi yksi yhtenäinen allas vai ryhmä toisiinsa kytkeytymättömiä lampia. Helmikuussa 1875 toimittaja ja tutkimusmatkailija Henry Morton Stanley saapui rannalle mukanaan Lady Alice, osiin purettava puuvene, jonka hän oli kuljettanut kantajien selässä satojen kilometrien päähän sisämaahan. Stanley purjehti veneellään järven ympäri lähes 1 000 mailin matkan ja todisti sen olevan yksi ainoa suunnaton järvi, jolla on vain yksi laskuaukko: sama Ripon Putous, jonka Speke oli löytänyt 13 vuotta aiemmin. Kiista oli vihdoin ratkennut.',
+          tiedosto: 'Sir Henry Morton Stanley, GCB.jpg',
+          lyhyt: 'Henry Morton Stanley, joka purjehti Viktorianjärven ympäri vuonna 1875.',
+          selite:
+            'Kaiverrettu muotokuva perustuu Kairossa vuonna 1890 otettuun valokuvaan Stanleysta hienostuneessa asussa — samasta miehestä, joka 15 vuotta aiemmin oli purjehtinut osiin purettavalla veneellä järven ympäri.',
+          lahde: 'Waterlow and Sons, Wikimedia Commons (Public domain)',
+          wiki: 'Henry Morton Stanley',
+        },
+        {
+          otsikko: 'Kolmen maan järvi',
+          teksti:
+            'Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi pinta-alaltaan, lähes 60 000 neliökilometriä — enemmän kuin monen Euroopan pikkuvaltion koko maa-ala. Sen rannat jakautuvat kolmen maan kesken: Tansania omistaa lähes puolet rantaviivasta, Uganda toisen ison siivun ja Kenia pienimmän kaistaleen pohjoisrannalla. Järvi on silti yllättävän matala, keskisyvyydeltään vain noin 40 metriä ja syvimmilläänkin alle 100 metriä, mikä tekee siitä herkän tuulten nostattamille äkillisille myrskyille. Valuma-alueella asuu nykyään yli 45 miljoonaa ihmistä, jotka saavat järvestä juomaveden, kulkuväylän ja suuren osan ruokaisasta proteiinistaan.',
+          tiedosto: 'Sunset on the Victoria lake.JPG',
+          lyhyt: 'Auringonlasku Viktorianjärven ylle, jonka rannat jakautuvat kolmen maan kesken.',
+          selite:
+            'Kuvassa aurinko laskee tyynen järvenselän taakse kultaisin ja oranssein sävyin, ja rantaviiva erottuu tummana siluettina taivasta vasten.',
+          lahde: 'Damiano Luchetti, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Victoria',
+        },
+        {
+          otsikko: 'Saarien meri',
+          teksti:
+            'Viktorianjärven pinnalta pistää esiin lähes tuhat saarta — tarkkaan ottaen 985 — joista suurin osa sijaitsee Ugandan puolella. Näyttävin ryhmä on Ssese-saaristo, 84 metsäisen saaren ketju järven luoteisosassa: paikalliset kertoivat isoisän ajan matkalaisille tarinoita saarilla asuvista hengistä, jotka piti tyynnyttää ennen kalastusmatkalle lähtöä. Saarilla kasvaa yhä alkuperäistä sademetsää, kun taas mantereen rannoilla metsät on suurelta osin raivattu maanviljelylle. Kalastajakylät elävät edelleen samalla rytmillä kuin vuosisata sitten: veneet lähtevät aamuyöllä ja palaavat saaliineen ennen puolenpäivän hellettä.',
+          tiedosto: 'The Shore at Ssese Islands, on Lake Victoria.jpg',
+          lyhyt: 'Ssese-saariston hiekkaranta Viktorianjärven luoteisosassa.',
+          selite:
+            'Kuva näyttää Ssese-saariston rauhallisen hiekkarannan ja sen editse siintävän järven, joka ympäröi saaristoa joka puolelta.',
+          lahde: 'Jiame Josh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ssese Islands',
+        },
+        {
+          otsikko: 'Elanto verkoilla ja koukuilla',
+          teksti:
+            'Kalastus on Viktorianjärven rannoilla yhä tärkein elinkeino, ja saalis ruokkii miljoonia ihmisiä kolmessa maassa. Perinteiset puuveneet lähtevät rannasta jo pimeän aikaan, ja kalastajat palaavat aamun tunteina lastissa tilapiaa ja niiliahventa, joka kattaa nykyisin noin 60 prosenttia kaupallisista saaliista. Isoisän matkan aikaan 1870-luvulla verkot olivat vielä käsin punottuja ja veneet ilman moottoria, mutta kalastuksen perusrytmi — yö vedellä, aamu rannassa myymässä saalista — on säilynyt yllättävän samanlaisena. Rantakylien torit täyttyvät päivittäin tuoreesta kalasta heti veneiden saavuttua rantaan.',
+          tiedosto: 'Ugandan fishing boats.jpg',
+          lyhyt: 'Kalastusveneitä palaamassa saaliineen Ggaban rantaan Ugandassa.',
+          selite:
+            'Kuvassa perinteisiä puuveneitä on ajettu rantaan Ggaban kalasatamassa Ugandassa; veneet ovat juuri tuoneet tilapiasaaliin myyntiin.',
+          lahde: 'sarahemcc, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Tilapia',
+        },
+      ],
+    },
+    {
+      id: 'jarvielama',
+      nimi: 'Evoluution laboratorio',
+      johdanto:
+        'Viktorianjärvi kätkee vedenalaisen ihmeen: sadat ainutlaatuiset kirjoahvenlajit syntyivät järvessä vain muutamassa tuhannessa vuodessa. Yksi ihmisen istuttama peto lähes pyyhkäisi koko ihmeen pois 1900-luvun jälkipuoliskolla.',
+      tehtava: {
+        kysymys:
+          'Minä vuosikymmenellä niiliahven istutettiin Viktorianjärveen ja käynnisti satojen kirjoahvenlajien tuhon?',
+        vaihtoehdot: ['1920-luvulla', '1950-luvulla', '1980-luvulla', '2000-luvulla'],
+        oikea: 1,
+        fakta:
+          'Niiliahventa alettiin istuttaa Viktorianjärveen 1950-luvulla, ja se ajoi vuosikymmenien kuluessa satoja endeemisiä kirjoahvenlajeja sukupuuttoon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satojen lajien parvi',
+          teksti:
+            'Kun edellinen kuivakausi noin 15 000 vuotta sitten päättyi ja Viktorianjärvi täyttyi uudelleen vedellä, järveen jäi vain kourallinen kirjoahvenlajien esi-isiä. Evoluutio teki tehtävänsä huimaa vauhtia: tutkijoiden mukaan järvessä ehti kehittyä yli 500 endeemistä kirjoahvenlajia, jotka jakoivat keskenään lähes jokaisen kuviteltavissa olevan ravintolähteen — osa söi vain kotiloita, osa toisten kalojen suomuja, osa toisten kalojen munia suoraan emokalan suusta. Tämä oli nopein tunnettu selkärankaisten lajiutumistapahtuma koko maapallolla, ja se tapahtui geologisessa mittakaavassa silmänräpäyksessä, vain muutamassa tuhannessa vuodessa.',
+          tiedosto: 'Pundamilia nyererei.jpg',
+          lyhyt: 'Pundamilia nyererei, yksi Viktorianjärven sadoista kirjoahvenlajeista.',
+          selite:
+            'Kuvassa punaoranssiin hehkuva uroskala on kuvattu sivuprofiilista vedessä — väri on tyypillinen tavalle, jolla lajit erottuvat toisistaan Viktorianjärvessä.',
+          lahde: 'Oliver Selz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pundamilia nyererei',
+        },
+        {
+          otsikko: 'Vieraslaji joka mullisti järven',
+          teksti:
+            '1950-luvulla siirtomaahallinto ja kalastusviranomaiset istuttivat Viktorianjärveen niiliahventa (Lates niloticus), jättimäistä petokalaa, jonka toivottiin kasvattavan kalansaaliita ja synnyttävän vientiteollisuutta. Yksikään endeeminen kirjoahven ei ollut koskaan kohdannut näin suurta ja tehokasta saalistajaa. Niiliahven levisi hitaasti mutta varmasti, ja 1980-luvulle tultaessa se oli ajanut sadat kirjoahvenlajit sukupuuttoon tai lähelle sitä — tutkijat arvioivat menetyksen suuruudeksi yli 200 lajia. Samalla veden sameus lisääntyi, mikä hämärsi kalojen värisignaaleja ja johti lajien risteytymiseen entistä enemmän.',
+          tiedosto: 'Lates niloticus by DaijuAzuma.jpg',
+          lyhyt: 'Niiliahven, joka istutettiin järveen 1950-luvulla vientikalaksi.',
+          selite:
+            'Kuvassa pitkänomainen, vahvarakenteinen niiliahven on kuvattu sivulta neutraalia taustaa vasten — samanlainen kala kasvaa Viktorianjärvessä jopa parimetriseksi jättiläiseksi.',
+          lahde: 'Daiju Azuma, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nile perch',
+        },
+        {
+          otsikko: 'Kalasääski, järven ilmavartija',
+          teksti:
+            'Viktorianjärven taivaalla kiertelee usein kalasääski, tumma ja valkorintainen petolintu, jonka kimeä huuto kantaa kauas veden yli. Se istuu mielellään rantapuiden latvoissa ja syöksyy äkkiä alaspäin havaitessaan kalan lähellä pintaa — terävät kynnet lävistävät saaliin, jota linnun karheat, piikikkäät varpaat pitävät tiukasti kiinni liukkaastakin pinnasta. Kalasääski on yksi Afrikan suurten järvien tunnetuimmista symboleista, ja sen kuva löytyy useiden alueen valtioiden vaakunoista ja seteleistä. Se pärjää hyvin myös nykyisessä, niiliahvenen muokkaamassa järvessä, sillä sekä ahven että jäljellä olevat kirjoahvenet kelpaavat sille ravinnoksi.',
+          tiedosto: 'African Fish Eagle (Haliaeetus vocifer) (11802366844).jpg',
+          lyhyt: 'Kalasääski, Afrikan suurten järvien tunnetuimpia petolintuja.',
+          selite:
+            'Kuvassa kalasääski lepää oksalla tumma selkä ja valkoinen pää ja rinta erottuvat selvästi — samanlaisia lintuja tavataan runsaasti myös Viktorianjärven rannoilla.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'African fish eagle',
+        },
+        {
+          otsikko: 'Papyrusviidakko suodattaa vettä',
+          teksti:
+            'Suuri osa Viktorianjärven rantaviivasta on tiheän papyrusviidakon reunustamaa: kolmemetrisiksi kasvavat, tupsupäiset kaislat muodostavat kelluvia soita, jotka toimivat järven luonnollisina suodattimina. Papyrus imee itseensä ravinteita ja saastetta ennen kuin vesi ehtii avoveteen, ja samalla se tarjoaa suojan kymmenille lintu- ja kalalajeille, jotka eivät selviäisi avoimella rannalla. Isoisän aikaan 1870-luvulla papyrusviidakot olivat huomattavasti laajemmat kuin nykyään, sillä väestönkasvu ja maanviljely ovat sittemmin kaventaneet niitä monin paikoin. Paikalliset ovat perinteisesti punoneet papyruksesta mattoja, kattoja ja jopa kokonaisia veneitä.',
+          tiedosto: 'Papyrus (Cyperus papyrus) (7079214073).jpg',
+          lyhyt: 'Papyrusta kasvaa runsaasti Viktorianjärven rantasoilla.',
+          selite:
+            'Kuvassa korkeat, tupsupäiset papyruskasvit kasvavat tiheänä ryhmänä kosteikossa — samanlaiset kasvustot reunustavat laajoja osia Viktorianjärven rannoista.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cyperus papyrus',
+        },
+        {
+          otsikko: 'Saalis joka ruokkii ja jakaa',
+          teksti:
+            'Niiliahvenen tulo mullisti myös ihmisten elämän järven rannoilla: kalasta tuli yhtäkkiä paljon suurempaa ja arvokkaampaa, ja sen ympärille syntyi tehtaita, jotka fileoivat kalan pakastettavaksi ja lennätettäväksi Euroopan markkinoille asti. Monet kalastajakylät vaurastuivat, mutta samalla paikallinen ruokaturva heikkeni, kun arvokkain saalis alkoi kulkea vientiin sen sijaan, että se olisi jäänyt lähiruokapöytiin. Perinteiset puuveneet lähtevät yhä joka ilta vedelle lyhtyjen valossa, sillä niiliahventa kalastetaan usein yöllä, jolloin kala nousee lähemmäs pintaa syömään pienempiä kaloja valon houkuttelemana.',
+          tiedosto: 'Men fishing on lake Victoria in Uganda.jpg',
+          lyhyt: 'Kalastajia veneessä Viktorianjärvellä nykyaikana.',
+          selite:
+            'Kuvassa kaksi miestä istuu puuveneessä keskellä järveä pyydystämässä kalaa — samanlaisia veneitä liikkuu vedellä niin päivällä kuin yölläkin.',
+          lahde: 'Geossegawa, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Fishing in Uganda',
+        },
+      ],
+    },
+  ],
+  gao: [
+    {
+      id: 'kaupunki',
+      nimi: 'Gao',
+      johdanto:
+        'Gao oli Songhain valtakunnan pääkaupunki, jonka vaurauden takasi Saharan yli kulkeva kulta- ja suolakauppa. Isoisän matkavuonna 1873 kerran mahtavasta kaupungista oli jäljellä vain köyhtynyt Nigerjoen varren kylä.',
+      nostot: [
+        {
+          otsikko: 'Songhain valtakunnan sydän',
+          teksti:
+            'Gao syntyi joen mutkaan jo 600-700-luvulla ajanlaskumme jälkeen: kaivoksista saatu rauta ja pitkän matkan kauppa tekivät siitä merkittävän työpajan ja markkinapaikan kauan ennen keskiajan suurvaltaa. Arabialainen maantieteilijä kuvasi kaupunkia 800-luvulla yhdeksi Sudanin alueen mahtavimmista valtakunnista. Vuonna 1464 valtaan noussut soturikuningas Sonni Ali teki Gaosta pääkaupunkinsa ja laajensi sen ympärille imperiumin, joka ohitti vauraudessa ja koossa aiemman Malin valtakunnan. Niin syntyi Songhain valtakunta, jonka sydämeksi Gao jäi yli sadaksi vuodeksi.',
+          tiedosto: 'Vue du ciel à Gao.jpg',
+          lyhyt: 'Ilmakuva Gaon kaupungista Nigerjoen mutkassa.',
+          selite:
+            'Ilmakuva näyttää Gaon rakennusryhmän ja viljellyt palstat aivan Nigerjoen rannalla, autiomaan reunustaessa asutusta joka puolelta.',
+          lahde: 'Cheic D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gao',
+        },
+        {
+          otsikko: 'Askian mausoleumi',
+          teksti:
+            'Askia Muhammad, joka nousi valtaan 1493, rakennutti oman hautamonumenttinsa Gaohon: paikallinen kyltti muistomerkillä kertoo sen valmistuneen jo vuonna 1495. Perimätiedon mukaan osa savesta ja puuaineksesta tuotiin tuhansien kamelien karavaanilla aina Mekasta asti, kun hallitsija palasi pyhiinvaellukseltaan. Pyramidin muotoinen, 17 metriä korkea rakennelma on Gaon suurin esikolonialistinen monumentti, ja sen tasakattoiset uloketangot ovat tyypillisiä Sahelin savirakentamiselle. Kompleksiin kuuluu myös kaksi moskeijaa, hautausmaa ja kokoontumisalue. Unesco liitti sen maailmanperintöluetteloon vuonna 2004.',
+          tiedosto: 'Tombeau askia.jpg',
+          lyhyt: 'Askian mausoleumin savipyramidi ja sen rakennusvuoden kertova kyltti.',
+          selite:
+            'Valokuvassa näkyy Askian mausoleumin pyramidinmuotoinen, puutankojen peittämä savirakennelma sekä sen edessä kyltti, joka kertoo ranskaksi monumentin valmistuneen vuonna 1495 Askia Mohamedin toimesta.',
+          lahde: 'Gio53, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tomb of Askia',
+        },
+        {
+          otsikko: 'Yhä elävä pyhäkkö',
+          teksti:
+            'Askian mausoleumi ei ole pelkkä muistomerkki menneisyydestä: se toimii yhä rukouspaikkana, ja gaolaiset kutsuvat sitä myös nimellä Askia djira, "Askian moskeija". Savirakennuksia on rapattu uudelleen säännöllisin väliajoin jo vuosikymmenten ajan, sillä sadekaudet kuluttavat pintaa jatkuvasti. Nykyisin pihapiirissä vietetään päivittäisten rukousten lisäksi häitä sekä Malin itsenäisyyspäivän juhlaa 22. syyskuuta. Karjaa kuljetetaan yhä muurien ohi samalla hiekkaisella aukiolla, jolla vuosisatoja sitten kulkivat kultaa ja suolaa kuljettaneet karavaanit.',
+          tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
+          lyhyt: 'Karjaa ja lapsia kulkemassa Askian mausoleumin muurien ohitse.',
+          selite:
+            'Kuvassa lapset ohjaavat lehmiä ja vuohia hiekkaisella aukiolla Askian mausoleumin muurien edustalla - pyhäkkö on yhä osa gaolaisten arkea.',
+          lahde: 'David Sessoms, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tomb of Askia',
+        },
+        {
+          otsikko: 'Marokon tykit kaatoivat valtakunnan',
+          teksti:
+            'Vuonna 1583 kuollut Askia Daoud oli valtakunnan viimeinen vahva hallitsija: hänen jälkeensä seuranneet valtataistelut heikensivät Songhain puolustusta juuri kun Marokon sulttaani Ahmad al-Mansur päätti iskeä. Vuonna 1591 komentaja Judar Pasha johti pienen mutta tuliaseilla varustetun armeijan halki Saharan Gaon pohjoispuolelle Tondibiin. Songhain moninkertaisesti suurempi joukko hyökkäsi tykkien ja arkebuusien tuleen laumoittamiensa härkien turvin, mutta paniikkiin ajautunut karja käännähti omia joukkoja vastaan. Tappio murskasi Songhain sotilaallisen ylivallan lopullisesti, ja Gao menetti asemansa alueen mahtavimpana kaupunkina.',
+          tiedosto: 'Bataille de tondibi.png',
+          lyhyt: 'Kaavio Tondibin taistelusta 1591, jossa Marokon armeija kukisti Songhain.',
+          selite:
+            'Nelivaiheinen kaavio esittää Tondibin taistelun kulun: Marokon (Saadien) tykein ja arkebuusein varustettu pieni armeija voitti moninkertaisesti suuremman Songhain joukon vuonna 1591.',
+          lahde: 'Monsieur Fou, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Battle of Tondibi',
+        },
+        {
+          otsikko: 'Saksalainen tutkija löysi rauniot',
+          teksti:
+            'Kaksikymmentä vuotta ennen isoisän omaa matkaa saksalainen tutkimusmatkailija Heinrich Barth saapui Gaohon vuonna 1854 pitkän Saharan- ja Sahelin-matkansa varrella. Kerran mahtavan imperiumin pääkaupungista oli jäljellä vaatimaton kylä, jossa Barth laski noin 300 mattokatteista majaa. Ranskalaiset eivät vielä tuolloin hallinneet aluetta - siihen kului vielä nelisenkymmentä vuotta - joten Gao eli tuareghallinnan reunalla kaukana eurooppalaisten ulottumattomissa. Barthin matkapäiväkirjat jäivät vuosikymmeniksi tärkeimmäksi eurooppalaiseksi tietolähteeksi koko Nigerjoen mutkan alueesta.',
+          tiedosto: 'Portret van Heinrich Barth, RP-P-1915-724.jpg',
+          lyhyt: 'Saksalaisen tutkimusmatkailijan Heinrich Barthin muotokuva 1800-luvulta.',
+          selite:
+            'Litografiakuva esittää tutkimusmatkailija Heinrich Barthin, joka vieraili Gaossa vuonna 1854 kartoittaessaan laajoja alueita Saharan eteläpuolelta.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: "Piroket ja markkinat rannalla",
+          teksti:
+            'Songhain valtakunnan vaurauden pohjana oli aina Nigerjoki: kulta ja suola vaihtoivat omistajaa kamelinselästä puuveneisiin juuri sellaisilla rannoilla, joita Gaossa näkyy yhä. Kapeat, kaiverretut piroque-veneet kuljettavat kalastajia ja tavaraa, ja rannalla kokoontuu markkinaväkeä, aaseja ja kauppatavaraa samaan tapaan kuin vuosisatoja sitten. Jokea pitkin kulki myös keskiajan tieto ja uskonto: islamilaiset oppineet, kauppiaat ja pyhiinvaeltajat liikkuivat samoja reittejä pitkin Timbuktusta Gaohon ja edelleen kohti Sahelin muita kaupunkeja. Nigerjoki on Malin pisin vesireitti ja edelleen Gaon tärkein kulkuväylä aavikon keskellä.',
+          tiedosto: 'GaoPirogeNiger1990.jpg',
+          lyhyt: 'Piirogeveneitä ja markkinaväkeä Nigerjoen rannalla Gaossa.',
+          selite:
+            'Valokuva vuodelta 1990 näyttää lukuisia piiroque-veneitä ja vilkasta markkinaväkeä Nigerjoen rannalla Gaossa - samalla joella, joka kantoi kultaa ja suolaa jo keskiajalla.',
+          lahde: 'Albert Backer, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Niger River',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Songhain kultainen valtakunta',
+      johdanto:
+        '1400-1500-luvuilla Gaosta hallittu Songhain valtakunta oli aikansa mahtavin Länsi-Afrikassa: sen alue ulottui Atlantilta lähelle Nigeriaa, ja sen vaurauden takasivat kulta, suola ja Saharan yli kulkeva karavaanikauppa.',
+      tehtava: {
+        kysymys: 'Kuinka monta kultarahaa Askia Muhammad otti mukaansa pyhiinvaellukselleen Mekkaan?',
+        vaihtoehdot: ['30 000', '100 000', '300 000', '1 000 000'],
+        oikea: 2,
+        fakta:
+          'Askia Muhammad kuljetti mukanaan 300 000 kultarahaa ja tuhansien kamelien saattueen, kun hän matkusti Mekkaan vuosina 1497-1498.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sonni Ali valloitti kauppakaupungit',
+          teksti:
+            'Sonni Ali nousi Songhain valtaistuimelle vuonna 1464 ja aloitti sarjan valloitusretkiä, jotka tekivät hänen valtakunnastaan Länsi-Afrikan mahtavimman. Vuonna 1468 hän valtasi Timbuktun paikallisten pyydettyä apua tuaregien vallan kukistamiseen, ja vuonna 1473 kaupunki Djenné antautui seitsemän vuoden piirityksen jälkeen. Djennén suuri savimoskeija, jonka nykyinen hahmo on myöhempää perua, seisoo yhä samalla paikalla, jonka hallinta toi Songhaille pääsyn tärkeille kauppareiteille. Sonni Alin valloitusten myötä Songhai ohitti vauraudessa, koossa ja voimassa aiemman Malin valtakunnan, jonka rauniolle uusi imperiumi osin rakentui.',
+          tiedosto: 'Djenne great mud mosque.jpg',
+          lyhyt: 'Djennén suuri savimoskeija, kaupunki jonka Sonni Ali valtasi 1473.',
+          selite:
+            'Kuva näyttää Djennén suuren savimoskeijan pinnakkeineen ja ulkonevine puutankoineen; mies polkupyörineen ja vuohineen seisoo aukiolla rakennuksen edessä.',
+          lahde: 'Ruud Zwart, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sonni Ali',
+        },
+        {
+          otsikko: 'Askia Muhammad uudisti valtakunnan',
+          teksti:
+            'Askia Muhammad Ture kaappasi vallan sotilasvallankaappauksella vuonna 1493 ja hallitsi Songhaita seuraavat 35 vuotta. Hän perusti ammattimaisen, pysyvän armeijan aiempien tilapäisten heimojoukkojen tilalle ja järjesti valtakunnan hallinnon maakunniksi luotettavien käskynhaltijoiden alle. Askia otti käyttöön yhtenäisen painojen ja mittojen järjestelmän koko valtakuntaan, mikä helpotti kaukokauppaa Gaon, Timbuktun ja Djennén välillä. Kartalla näkyvä valtakunta ulottui parhaimmillaan Atlantin rannikolta lähelle nykyistä Nigeriaa, yli 1,4 miljoonan neliökilometrin alueelle - suunnilleen läntisen Euroopan kokoiselle alueelle.',
+          tiedosto: 'Map of the Songhay Empire.png',
+          lyhyt: 'Kartta Songhain valtakunnan laajimmasta ulottuvuudesta.',
+          selite:
+            'Kartta esittää Songhain valtakunnan (vihreä alue) laajimman ulottuvuuden Länsi-Afrikassa, Gao merkittynä pääkaupungiksi lähellä valtakunnan itäreunaa.',
+          lahde: 'HetmanTheResearcher, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Askia Muhammad I',
+        },
+        {
+          otsikko: 'Pyhiinvaellus, joka toi kultaa Kairoon',
+          teksti:
+            'Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.',
+          tiedosto: 'La Dune Rose.jpg',
+          lyhyt: 'Vaaleanpunertava hiekkadyyni Gaon liepeillä, aavikon reunalla.',
+          selite:
+            'Kuvassa kohoaa vaaleanpunertava hiekkadyyni vehreiden viljelysten takana - samanlaista autiomaata Askia Muhammadin saattue ylitti matkallaan Mekkaan.',
+          lahde: 'Jonathon Hicks, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Askia Muhammad I',
+        },
+        {
+          otsikko: 'Kulta ja suola kulkivat jokea pitkin',
+          teksti:
+            'Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.',
+          tiedosto: 'Fleuve du desert de Gao.jpg',
+          lyhyt: 'Ilmakuva Nigerjoesta kapeana vihreänä nauhana aavikon keskellä.',
+          selite:
+            'Ilmakuvassa Nigerjoki virtaa kapeana, sinivihreänä nauhana kuivan aavikkomaiseman halki - juuri tämä jokinauha teki mahdolliseksi Songhain kaltaisen valtakunnan synnyn.',
+          lahde: 'Cheic D, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Niger River',
+        },
+        {
+          otsikko: 'Nigerin ylityspaikka',
+          teksti:
+            'Gaon kohdalla Nigerjoki on aina ollut luonnollinen solmukohta, jossa pohjois-eteläsuuntainen karavaanireitti kohtasi joen omat kulkuväylät. Vuosisatojen ajan kauppiaat, sotilaat ja pyhiinvaeltajat ylittivät joen tällä kohdalla veneillä, ja sama ylityspaikka on käytössä edelleen - nykyisin lautoilla, jotka kuljettavat kuorma-autoja ja matkustajia rannalta toiselle. Kun Songhain valtakunta romahti 1591, moni kauppareitti hiipui vuosikymmeniksi, mutta ylityspaikka säilytti merkityksensä paikallisliikenteelle. Sama kohta joesta kulki tärkeänä reittinä myös, kun eurooppalaiset alkoivat 1800-luvulla kartoittaa Länsi-Afrikan sisämaata.',
+          tiedosto: 'The ferry of Gao city (Mali).jpg',
+          lyhyt: 'Lautta ylittämässä Nigerjokea kuorma-autoineen Gaon kohdalla.',
+          selite:
+            'Kuvassa pieni lautta kuljettaa kuorma-autoja Nigerjoen yli Gaon kohdalla - samalla ylityspaikalla, jota kauppiaat ja pyhiinvaeltajat käyttivät jo vuosisatoja sitten.',
+          lahde: 'Komalick, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Niger River',
+        },
+      ],
+    },
+  ],
+  kamerun: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kamerun',
+      johdanto:
+        'Kamerunvuori kohoaa yli 4000 metriä suoraan Guineanlahden rannasta – tulivuori, jonka purkaukset ovat muokanneet koko rannikkoa jo yli 2000 vuoden ajan ja synnyttäneet legendan jumalten vaunusta.',
+      nostot: [
+        {
+          otsikko: 'Jumalten vaunu',
+          teksti:
+            'Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen "jumalten vaunu", Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.',
+          tiedosto: 'Le Mont Cameroun depuis Limbé.JPG',
+          lyhyt: 'Kamerunvuori kohoaa pilvien seasta palmujen takana Limbén rannalta kuvattuna.',
+          selite:
+            'Valokuvassa Kamerunvuoren lumeton, pilvien verhoama huippu kohoaa rantapalmujen ja pienen kahvilakatoksen yläpuolelle Limbén rannalta kuvattuna – juuri tällaisen näyn matkalaiset merellä ovat nähneet vuosituhansien ajan.',
+          lahde: 'PRA, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Katkarapujoki antaa nimen maalle',
+          teksti:
+            'Vuonna 1472 portugalilaiset merenkulkijat purjehtivat Wouri-joen suulle ja huomasivat vedessä valtavan määrän pieniä äyriäisiä. He nimesivät joen Rio dos Camarões, "Katkarapujoki". Nimi levisi vähitellen ensin koko rannikkoseutuun ja lopulta koko maahan: siitä syntyivät sekä Kamerun että englanninkielinen Cameroon. Isoisän aikaan 1800-luvulla katkarapujen mukaan nimetty maa oli eurooppalaisille kartoille jo vakiintunut nimi, vaikka harva tiesi enää miksi se niin oli saanut nimensä.',
+          tiedosto: 'River Wouri Douala Cameroon.jpg',
+          lyhyt: 'Wouri-joen leveä suisto lähellä Doualaa, josta koko maa sai nimensä.',
+          selite:
+            'Kuvassa avautuu Wouri-joen tyyni, sininen suisto pilvisen taivaan alla, taustalla Doualan kaupungin ääriviivat ja satamarakenteita – tämä joki sai portugalilaisilta nimen Rio dos Camarões vuonna 1472.',
+          lahde: 'Blaizo 237, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wouri River',
+        },
+        {
+          otsikko: 'Mongo ma Ndemi ja Victorian synty',
+          teksti:
+            'Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.',
+          tiedosto: 'Down Beach Limbe vue aerienne - Ndongere - Sud-Ouest - Cameroun.jpg',
+          lyhyt: 'Ilmakuva Limbén rannikkokaupungista ja kalastajavenelaiturista.',
+          selite:
+            'Ilmakuva näyttää Limbén (entisen Victorian) rantaviivan: tumma hiekkaranta, rivi puisia kalastusveneitä ankkurissa ja tiheään rakennettu kaupunki mäen rinteellä tulivuoren juurella.',
+          lahde: 'Eric Joel MAMA NKE, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Limbe, Cameroon',
+        },
+        {
+          otsikko: 'Kaksi miestä huipulla',
+          teksti:
+            "Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.",
+          tiedosto: 'Gustav Mann. Photograph, 1905. Wellcome V0026803.jpg',
+          lyhyt: 'Kasvitieteilijä Gustav Mannin muotokuva vuodelta 1905.',
+          selite:
+            'Muotokuva esittää iäkkäämmän Gustav Mannin pyöreäsankaisissa silmälaseissaan ja viiksineen – neljä vuosikymmentä sen jälkeen, kun hän nuorena kasvitieteilijänä nousi Burtonin kanssa Kamerunvuoren huipulle.',
+          lahde: 'Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Gustav Mann',
+        },
+        {
+          otsikko: 'Elävä tulivuori',
+          teksti:
+            'Kamerunvuori on tilavuudeltaan suurin tulivuori koko Saharan eteläpuolisessa Afrikassa, ja se purkautuu keskimäärin 10–20 vuoden välein. Isoisän omana aikana vuori oli erityisen levoton: purkauksia tallennettiin vuosina 1865, 1866, 1868 ja 1871 – siis vain kaksi vuotta ennen isoisän 1873 matkaa. Vuoden 1909 purkaus pelotti myöhemmin jopa Saksan siirtomaahallinnon hetkeksi pois Bueasta Doualaan, ja vuoden 1999 purkauksessa laavavirta pysähtyi vain 200 metrin päähän merestä.',
+          tiedosto: 'Lava Flow from Mt Cameroon 1999 eruption (21562945615).jpg',
+          lyhyt: 'Mustaa, jähmettynyttä laavakenttää vuoden 1999 purkauksesta.',
+          selite:
+            'Kuvassa karu, tummanharmaa jähmettyneen laavan kenttä ulottuu vehreää sademetsää ja viljelyalueita vasten – jäljet vuoden 1999 purkauksesta, jonka laavavirta pysähtyi lähelle rantaviivaa.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Mustat rannat',
+          teksti:
+            'Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.',
+          tiedosto: 'Limbé (Cameroun) - plage volcanique.JPG',
+          lyhyt: 'Uimareita mustien laavakivien reunustamalla rannalla Limbéssä.',
+          selite:
+            'Kuvassa kolme uimaria kahlaa mereen mustien, pyöristyneiden laavakivien peittämällä rannalla – Kamerunvuoren purkausten synnyttämä tumma kivikko on tyypillinen näky koko Ambas-lahden rannikolla.',
+          lahde: 'PRA, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ambas Bay',
+        },
+      ],
+    },
+    {
+      id: 'sademetsa',
+      nimi: 'Kamerunvuoren sademetsä',
+      johdanto:
+        'Kamerunvuoren rinteillä sademetsä muuttuu muutamassa tunnin vaelluksessa pilvimetsäksi ja lopulta tuulen pieksemäksi ruohoylängöksi – ja koko matkalla asuu eläimiä ja kasveja, joita ei tavata missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Kuinka monta millimetriä sadetta Kamerunvuoren länsirinteelle voi sataa vuodessa?',
+        vaihtoehdot: ['1 000 mm', '4 000 mm', '10 000 mm', '20 000 mm'],
+        oikea: 2,
+        fakta:
+          'Kamerunvuoren länsirinne voi saada jopa 10 000 millimetriä sadetta vuodessa, mikä tekee siitä yhden koko maailman sateisimmista paikoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vyöhyke toisensa jälkeen',
+          teksti:
+            'Kamerunvuoren kansallispuisto ulottuu merenrannan sademetsästä aina yli 3000 metrin korkeuteen asti, ja matkan varrella kasvillisuus vaihtuu useaan kertaan: alavan sademetsän jättiläispuut väistyvät ylempänä sumuisen pilvimetsän saniaisille ja mättäille avoimelle ruohoylängölle. Vuoren länsirinne voi saada jopa 10 000 millimetriä sadetta vuodessa, mikä tekee siitä yhden koko maailman sateisimmista paikoista. Runsas sade ja moninaiset vyöhykkeet ovat synnyttäneet ainutlaatuisen eliöyhteisön, jossa elää lajeja, joita ei tavata missään muualla maapallolla.',
+          tiedosto: 'Tropical rain forest Mount Cameroon.jpg',
+          lyhyt: 'Sademetsän tiheä, vehreä kasvillisuus Kamerunvuoren alarinteillä.',
+          selite:
+            'Kuvassa sademetsän hämärä, kosteudesta kiiltävä aluskasvillisuus – ohuita runkoja, saniaisia ja sammalta niin tiheässä, että aurinko pääsee latvuston läpi vain paikoin.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon National Park',
+        },
+        {
+          otsikko: 'Uhanalainen otsa-apina',
+          teksti:
+            'Otsa-apina eli drilli on yksi maailman uhanalaisimmista kädellisistä: sitä tavataan luonnossa enää Nigeriassa, Kamerunissa ja Bioko-saarella, ja koko lajin kanta on enää noin 4000 yksilöä. Kamerunvuoren kansallispuisto on yksi sen harvoista turvapaikoista metsästystä ja elinympäristön häviämistä vastaan. Uroksen kirkkaanväriset takapuolen ihoalueet muistuttavat läheistä sukulaista mandrilliä, mutta drilli on tummempi ja sen turkki matalampi vuoristometsän viileyteen sopivaksi.',
+          tiedosto: 'Drill (Mandrillus leucophaeus).jpg',
+          lyhyt: 'Otsa-apinan eli drillin kasvokuva lähikuvassa.',
+          selite:
+            'Lähikuva näyttää drillin tumman, uurteisen kuonon, ruskeat silmät ja harmaanruskean turkin – piirteet, joiden ansiosta laji tunnistetaan helposti lähisukulaisestaan mandrillista.',
+          lahde: 'Clément Bardot, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Drill (animal)',
+        },
+        {
+          otsikko: 'Metsänorsut sademetsän suojissa',
+          teksti:
+            'Kamerunvuoren kansallispuistossa elää yli sata afrikkalaista metsänorsua, pienintä kolmesta nykyisin tunnustetusta norsulajista. Metsänorsu on savanninorsua pienempi, sen korvat ovat pyöreämmät ja syöksyhampaat osoittavat suoraan alaspäin tiheässä aluskasvillisuudessa liikkumisen helpottamiseksi. Vuosikymmenten salametsästys on ajanut lajin vuodesta 2021 lähtien äärimmäisen uhanalaiseksi, ja koko Kamerunissa metsänorsuja arvioidaan olevan jäljellä enää muutama sata.',
+          tiedosto: 'African forest elephant emerging from rainforest at Dzanga Bai.jpg',
+          lyhyt: 'Metsänorsu seisoo ruohikossa metsäaukion reunalla.',
+          selite:
+            'Kuvassa metsänorsu seisoo korkeassa ruohikossa joen rannalla metsän reunalla, korvat levällään – laji jonka pienempi koko ja suorat syöksyhampaat erottavat sen savanninorsusta.',
+          lahde: 'JosepMGracia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'African forest elephant',
+        },
+        {
+          otsikko: 'Puut jotka seisovat tukijaloilla',
+          teksti:
+            'Kamerunvuoren alarinteiden sademetsässä monet jättiläispuut kannattelevat itseään leveillä, seinämäisillä tukijuurilla, jotka voivat levitä useiden metrien päähän rungosta. Sademetsän maaperä on yllättävän ohutta ja ravinneköyhää, joten juuret eivät ehdi kasvaa syvälle – tukijuuret antavat vakautta tuulta ja rankkasateita vastaan ja auttavat samalla keräämään ravinteita laajalta alueelta aivan maanpinnan tuntumasta. Sammalen peittämät tukijuuret ovat samalla oma pieni elinympäristönsä saniaisille ja hyönteisille.',
+          tiedosto: 'Tree with buttress roots, Mount Cameroon.jpg',
+          lyhyt: 'Sammaleinen jättiläispuu levittäytyvine tukijuurineen sademetsässä.',
+          selite:
+            'Kuvassa sammaleen peittämä puunrunko levittäytyy alaosastaan leveiksi, seinämäisiksi tukijuuriksi saniaisten ympäröimänä – tyypillinen näky Kamerunvuoren alarinteiden sademetsässä.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Buttress root',
+        },
+        {
+          otsikko: 'Ruohikko myrskyjen yllä',
+          teksti:
+            'Yli 3000 metrin korkeudessa sademetsä on jäänyt kauas alas, ja tilalle nousee avoin ruohoylänkö, jossa kasvaa vain mättäikkömäisiä heiniä ja jäkäliä. Yöt voivat olla lähellä nollaa, kun taas päivällä aurinko paahtaa suojattomasti – ääripäät joita mikään vuoren alaosien kasvi ei kestäisi. Tuuli pieksee rinnettä lakkaamatta, minkä vuoksi puut eivät tälle korkeudelle enää yletä lainkaan. Näkymä huipulta avautuu toisinaan aina merelle ja naapurisaari Bioolle asti.',
+          tiedosto: 'Mount Cameroon grassland field.jpg',
+          lyhyt: 'Tuulinen ruohoylänkö korkealla Kamerunvuoren rinteellä.',
+          selite:
+            'Kuvassa auringon valaisema, kellastunut heinikko ja saniaiset peittävät avointa rinnettä sumuisessa valossa – ylängön kasvillisuus jää mataliksi jatkuvan tuulen ja viileyden vuoksi.',
+          lahde: 'Atabong Armstrong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon',
+        },
+        {
+          otsikko: 'Kukkia laavan reunalla',
+          teksti:
+            'Kamerunvuoren toistuvat purkaukset eivät ole tuhonneet elämää pysyvästi: tuore laava ja tuhka rikastavat maaperää, ja vuosien kuluessa sen päälle tunkeutuu ensin sammalta ja sitten kukkivia kasveja. Vuorelta tunnetaan useita kasvilajeja, joita ei kasva luonnossa missään muualla maailmassa, muun muassa pieniä balsamikasveja. Kirjavat kukat houkuttelevat hyönteisiä pölyttämään keskellä muuten mustaa ja karua laavakenttää – elävä muistutus siitä, miten nopeasti sademetsä valtaa takaisin tuhon jäljet.',
+          tiedosto: 'Beautiful wild flower on Mt Cameroon.jpg',
+          lyhyt: 'Keltainen villikukka kukkii Kamerunvuoren kasvillisuuden keskellä.',
+          selite:
+            'Lähikuvassa kirkkaankeltainen viisilehtinen kukka avautuu tummanpunertavien silmujen ja pistävänvihreiden lehtien keskellä – yksi lukuisista kukkivista kasveista, jotka värittävät vuoren rinteitä laavakenttienkin tuntumassa.',
+          lahde: 'Josephine Lifanje, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Cameroon National Park',
+        },
+      ],
+    },
+  ],
+  suakin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Suakin',
+      johdanto:
+        'Suakin oli vuosisatoja Punaisenmeren tärkein satama Sudanin rannikolla ja pyhiinvaeltajien portti Mekkaan; isoisän matkavuonna 1873 se oli osa khediivi Ismailin uudistuvaa Egyptiä, jonka Suezin kanava oli juuri avannut maailmalle.',
+      nostot: [
+        {
+          otsikko: 'Saari ja manner — kaksoiskaupunki',
+          teksti:
+            'Suakin mainitaan kirjallisissa lähteissä jo 900-luvulla, mutta kaupunki nousi Punaisenmeren tärkeimmäksi satamaksi vasta 1400-luvulla, kun vanha pyhiinvaellussatama Aydhab hieman pohjoisempana hylättiin. Sen jälkeen kaupunki rakentui kahdesta osasta: linnoitetusta saarikaupungista, jossa asuivat kauppiaat ja virkamiehet, ja mantereen puoleisesta El-Geyfin kaupunginosasta, jonne karavaanit saapuivat sisämaasta. Kapea salmi erotti nämä kaksi puoliskoa toisistaan, ja pieni lossi kuljetti väkeä ja tavaraa niiden välillä päivittäin.',
+          tiedosto: 'AFR V1 D322 Suakin in 1882.jpg',
+          lyhyt: 'Piirros Suakinista vuodelta 1882, teoksesta Élisée Reclusin Africa.',
+          selite:
+            'Piirros on peräisin Élisée Reclusin maantieteellisestä teoksesta Africa (1882) ja näyttää Suakinin kaupunkinäkymän rannikolta: matalia koralirakennuksia ja veneitä, sellaisena kuin kaupunki näyttäytyi vain vuosikymmenen isoisän matkan jälkeen.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Khediivi Ismailin satama',
+          teksti:
+            'Ottomaanit hallitsivat Suakinia vuodesta 1555 lähtien, mutta kaupunki oli 1800-luvun alussa raunioitunut niin pahoin, että sveitsiläinen matkustaja Johann Ludwig Burckhardt kuvasi kahden kolmasosan taloista olevan asumiskelvottomia. Vuonna 1865 Egyptin khediivi Ismail sai kaupungin tiukempaan hallintaansa ja käynnisti sen elvytyksen: uusia taloja, myllyjä, moskeijoita ja sairaaloita rakennettiin. Isoisän matkavuonna 1873 Suakin oli siis osa Ismailin nykyaikaistuvaa Egyptiä, samaa valtakuntaa, joka oli neljä vuotta aiemmin avannut Suezin kanavan ja laajentanut valtaansa syvälle Sudaniin.',
+          tiedosto: 'Die Gartenlaube (1884) b 181 2.jpg',
+          lyhyt: 'Suakin nähtynä mantereen puolelta, saksalaisen aikakauslehden piirros vuodelta 1884.',
+          selite:
+            'Saksalaisen Die Gartenlaube -aikakauslehden vuonna 1884 julkaisema piirros näyttää Suakinin mantereen puolelta kuvattuna: kaupungin matalat rakennukset ja taustalla siintävä meri.',
+          lahde: 'Rudolf Cronau, Wikimedia Commons (Public domain)',
+          wiki: "Isma'il Pasha of Egypt",
+        },
+        {
+          otsikko: 'Koralliarkkitehtuuri',
+          teksti:
+            'Suakinin talot rakennettiin madreporista eli meren pohjasta louhitusta koralliaineksesta, joka kovetettiin ja siloteltiin valkoiseksi kalkkirapatuksi seinäksi. Parhaimmillaan rakennukset kohosivat neljään kerrokseen ja niissä oli koristeellisia puuparvekkeita ja ristikkoikkunoita, jotka päästivät ilmaa sisään auringolta suojassa. Materiaali oli kaunis mutta hauras: ilman jatkuvaa huoltoa ja rapatusta suojaa koralli murenee kosteudessa nopeasti, minkä vuoksi monet kaupungin rakennukset alkoivat rapistua heti, kun asukasmäärä alkoi vähentyä 1900-luvun alussa.',
+          tiedosto: 'Suakin,el-Geyf mosque.jpg',
+          lyhyt: 'El-Geyfin moskeija, rakennettu koralliaineksesta mantereen puolella Suakinia.',
+          selite:
+            'Valokuva näyttää El-Geyfin moskeijan Suakinin mantereen puolella: vaalean rapatun koraliseinän ja moskeijalle tyypillisen minareetin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'Muurit ja portit',
+          teksti:
+            'Kaksoiskaupunkia suojasivat muurit ja portit, joista yksi tunnetaan nykyisin Kitchenerin porttina mantereen puoleisen kaupunginosan ulkoreunalla. Portit ja muurit rakennettiin turvaamaan kaupunkia sisämaasta tulevilta hyökkäyksiltä ja valvomaan karavaanien kulkua sisään ja ulos: jokainen tavarakuorma ja matkustaja kulki jonkin portin kautta, mikä teki tullien keräämisestä ja kaupungin valvonnasta helppoa hallinnolle. Muurien sisäpuolella kaupunki tunsi olonsa turvalliseksi öisin, vaikka portit avattiin joka aamu jälleen karavaaneille ja kauppiaille, jotka jatkoivat matkaansa sisämaahan päin.',
+          tiedosto: 'Suakin,Kitcheners gate.jpg',
+          lyhyt: 'Kitchenerin portti, yksi Suakinin mantereen puoleisen kaupunginosan muurin porteista.',
+          selite:
+            'Valokuva näyttää Kitchenerin portin rauniot Suakinin mantereen puoleisen kaupunginosan ulkomuurissa: kaarevan porttiaukon ja sitä ympäröivän rapistuneen muurin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+        {
+          otsikko: 'El-Geyf, mantereen kaupunginosa',
+          teksti:
+            'Saarikaupungin kivitalot olivat varakkaiden kauppiaiden ja virkamiehien aluetta, mutta suurin osa väestöstä asui mantereen puolella El-Geyfin kaupunginosassa yksinkertaisemmissa oljista ja puusta tehdyissä majoissa. El-Geyf oli myös se paikka, jonne sisämaasta saapuvat kamelikaravaanit pysähtyivät ennen kuin niiden lasti kuljetettiin salmen yli saarelle punnittavaksi ja verotettavaksi. Aasinvetoiset kärryt kuljettivat tavaraa ja ihmisiä kaupunginosan kapeilla, hiekkaisilla kaduilla vielä vuosikymmeniä Suakinin kulta-ajan jälkeenkin.',
+          tiedosto: 'Suakin,Beja town.jpg',
+          lyhyt: 'Katunäkymä El-Geyfistä, Suakinin mantereen puoleisesta kaupunginosasta.',
+          selite:
+            'Valokuva näyttää katunäkymän Suakinin mantereen puoleisesta El-Geyfin kaupunginosasta: hiekkaisen kadun ja aasinvetoisen kärryn, joilla tavaraa ja ihmisiä kuljetettiin vielä vuosikymmeniä kaupungin kulta-ajan jälkeenkin.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Suakin',
+        },
+      ],
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Karavaanit, kauppa ja pyhiinvaeltajat',
+      johdanto:
+        'Suakinin kautta kulki vuosisatojen ajan kaikkea Afrikan sisämaan tavaraa Arabian niemimaalle ja tuhansia pyhiinvaeltajia matkalla Mekkaan — mutta samaa reittiä kulkivat myös ihmiset, jotka myytiin orjiksi.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta orjaksi myytyä ihmistä arvioidaan kulkeneen Suakinin kautta vuosittain 1800-luvun puolivälissä?',
+        vaihtoehdot: ['Muutama kymmenen', '200–300', '2 000–3 000', '20 000–30 000'],
+        oikea: 2,
+        fakta:
+          'Historioitsijoiden arvion mukaan Suakinin kautta kulki 1800-luvun puolivälissä vuosittain noin 2 000–3 000 orjaksi myytyä ihmistä matkalla Arabian niemimaalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tullitalo ja kaupan varjopuoli',
+          teksti:
+            'Suakinin tullitalo rekisteröi ja verotti kaiken kaupungin läpi kulkevan tavaran: Etiopian ja Jemenin kahvia, kumiarabikumia, norsunluuta, strutsinsulkia ja helmiäiskuoria, jotka karavaanit toivat sisämaasta laivattavaksi Arabiaan ja edelleen Intiaan. Kauppa oli vilkasta, mutta sen varjopuoli oli synkkä: historioitsijoiden arvioiden mukaan Suakinin kautta kulki 1800-luvun puolivälissä vuosittain noin 2 000–3 000 orjaksi myytyä ihmistä matkalla Arabian niemimaalle, ennen kuin brittiläinen painostus sai orjakaupan vähitellen hiipumaan vuosisadan loppua kohti.',
+          tiedosto: 'Suakin,custom office.jpg',
+          lyhyt: 'Sudanin entisen tullirakennuksen rauniot Suakinissa.',
+          selite:
+            'Valokuva näyttää Suakinin entisen tullirakennuksen raunioita: kaarikäytäviä ja rapistuneita koraliseiniä, joiden läpi kaikki kaupungin tavaraliikenne aikoinaan kulki.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Red Sea slave trade',
+        },
+        {
+          otsikko: 'Egyptin pankki rantautuu',
+          teksti:
+            'Khediivi Ismailin hallintokaudella Suakinista kehittyi Egyptin Punaisenmeren rannikon hallinnollinen ja taloudellinen etuvartio, jonka kautta kulkivat sekä tullitulot että alueen kauppaa rahoittava pääoma. Myöhemmin kaupunkiin rakennettiin jopa oma sivukonttori Egyptin kansallispankille — todiste siitä, että Suakin pysyi tärkeänä rahaliikenteen solmukohtana vielä vuosikymmenten ajan, vaikka sen suuruudenajan huippu oli jo isoisän vierailun aikoihin ohitettu.',
+          tiedosto: 'Suakin,national bank.jpg',
+          lyhyt: 'Egyptin kansallispankin sivukonttorin rauniot Suakinissa.',
+          selite:
+            'Valokuva näyttää Egyptin kansallispankin entisen sivukonttorin raunioita Suakinissa: sortuneita seiniä ja tyhjiä ikkuna-aukkoja, jotka todistavat kaupungin entisestä taloudellisesta merkityksestä.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'National Bank of Egypt',
+        },
+        {
+          otsikko: 'Minareetti joka kutsui pyhiinvaeltajia',
+          teksti:
+            "Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.",
+          tiedosto: 'Suakin,Schafai minaret.jpg',
+          lyhyt: "Shafi'in moskeijan minareetti, joka kutsui pyhiinvaeltajia Suakinissa.",
+          selite:
+            "Valokuva näyttää Shafi'in moskeijan minareetin Suakinissa: hoikan, kerroksittain kapenevan tornin, josta rukouskutsu kuului yli kaupungin pyhiinvaeltajille ja asukkaille.",
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'ʿAydhab',
+        },
+        {
+          otsikko: 'Rukousnišši Mekkaa kohti',
+          teksti:
+            "Shafi'in moskeijan sisällä mihrab eli rukousnišši osoittaa qiblan suunnan, Mekan puoleen, johon jokainen rukoileva kääntyy. Vierellä seisoo minbar, korotettu saarnatuoli, josta imaami johti perjantairukouksia ja piti puheita myös lähtevälle tai saapuvalle pyhiinvaeltajajoukolle. Näiden kahden koristellun rakenteen äärellä kohtasivat paikalliset asukkaat ja kaukaa saapuneet matkalaiset, joita yhdisti sama määränpää: pyhä kaupunki Punaisenmeren toisella puolella.",
+          tiedosto: 'Suakin,Schafia mihrab.jpg',
+          lyhyt: "Shafi'in moskeijan mihrab ja minbar Suakinissa.",
+          selite:
+            "Valokuva näyttää Shafi'in moskeijan sisätilan Suakinissa: koristellun mihrab-rukousnišsin ja sen vieressä kohoavan minbar-saarnatuolin.",
+          lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Mihrab',
+        },
+      ],
+    },
+  ],
+  ahaggar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ahaggar',
+      johdanto:
+        'Ahaggarin vuoristo kohoaa keskellä Saharaa tulivuorenpurkausten muovaamana kalliomaisemana. Isoisän matkavuonna 1873 ranskalainen Henri Duveyrier oli vasta äskettäin kartoittanut nämä seudut eläen tuaregien keskuudessa.',
+      nostot: [
+        {
+          otsikko: 'Ranskalainen joka eli tuaregien keskuudessa',
+          teksti:
+            'Vuonna 1857, 17-vuotiaana, ranskalainen Henri Duveyrier tapasi ensimmäistä kertaa tuareg-paimentolaisia Algerian aavikon reunalla ja kiehtoutui heidän tavoistaan. Toukokuussa 1859 hän lähti tutkimusmatkalle ja vietti seuraavien 27 kuukauden aikana yli seitsemän kuukautta tuaregien keskuudessa alueilla Ahaggarin vuoristosta Fessaniin. Duveyrier palasi 1861 näännyksissä ja kuumeessa, mutta julkaisi 1864 teoksensa "Les Touareg du Nord", aikansa tärkeimmän länsimaisen kuvauksen tuaregien elämästä. Kun isoisä aloitti oman matkansa 1873, kirja oli jo yhdeksän vuotta vanha ja Ahaggarin vuoret olivat vasta äskettäin ilmestyneet eurooppalaisille kartoille.',
+          tiedosto: 'Duveyrier 1864.jpg',
+          lyhyt: 'Henri Duveyrier eli tuaregien keskuudessa ja kartoitti Ahaggaria 1857–1861.',
+          selite:
+            'Kaiverrus vuodelta 1864 kuvaa nuorta Henri Duveyrieria, joka eli seitsemän kuukautta tuaregien keskuudessa ja julkaisi saman vuonna löydöistään kertovan teoksensa.',
+          lahde: 'Nimetön kaiverrus M. Bertalin valokuvasta (1864), Wikimedia Commons (Public domain)',
+          wiki: 'Henri Duveyrier',
+        },
+        {
+          otsikko: 'Tulivuorten muovaama aavikko',
+          teksti:
+            'Ahaggarin kallioperän pohja on lähes kaksi miljardia vuotta vanhaa peruskalliota, mutta vuoristomainen hahmo syntyi paljon myöhemmin: noin 300 miljoonaa vuotta sitten alue kohosi, ja tulivuorenpurkaukset peittivat sen laavakerroksilla. Keskeisin näistä on Atakorin tulivuorialue, noin 2 150 neliökilometrin sokkelo laavakupuja, tuhkakartioita ja jähmettyneiden purkauskanavien paljastamia kivipylväitä. Eroosiossa pehmeämpi kivi on kulunut pois ja jäljelle on jäänyt vain purkauskanavia täyttänyt kova laava — Ahaggarin maisema näyttää yhä paikoin siltä kuin tulivuoret olisivat sammuneet vasta äsken, vaikka viimeisimmästä purkauksesta on jo miljoonia vuosia.',
+          tiedosto:
+            "ASC Leiden - van Achterberg Collection - 14 - 16 - Un massif rocheux érodé du massif volcanique d'Atakor - Ahaggar, Algérie - 1984.jpg",
+          lyhyt: 'Eroosion paljastama kalliomassiivi Atakorin tulivuorialueella Ahaggarissa.',
+          selite:
+            'Vaalean sävyinen vanha valokuva näyttää jyrkkäreunaisen, eroosion muovaaman kalliomassiivin aavikon keskellä — jäänteen laavakupusta, jonka ympäriltä pehmeämpi kivi on kulunut pois.',
+          lahde: 'Angeline A. van Achterberg / ASC Leiden, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atakor volcanic field',
+        },
+        {
+          otsikko: 'Tahat — Saharan katto',
+          teksti:
+            'Ahaggarin vuoriston laella kohoava Tahat on paitsi koko massiivin myös koko Algerian korkein huippu: 2 908 metriä merenpinnasta ja yli 2 300 metriä paikallista korkeuseroa ympäröivään aavikkoon nähden. Huippu on vulkaanista alkuperää ja sijaitsee Atakorin tulivuorialueen sydämessä, missä kivinen, mustan laavan peittämä ylänkö nousee vähitellen kohti taivasta. Karavaanit ovat kulkeneet Tahatin juurella vuosisatojen ajan matkalla pohjoisen Välimeren rannikon ja eteläisemmän Saharan reunan välillä, sillä Ahaggarin vuoristo tarjosi ainoat käytettävissä olevat vesipaikat satojen kilometrien laajuisella hiekka- ja kivialueella.',
+          tiedosto: 'Tahat - Hoggar.jpg',
+          lyhyt: 'Tahat, Algerian ja koko Saharan korkein huippu, 2 908 metriä.',
+          selite:
+            'Valokuva näyttää Tahatin piikikkään huipun taustalla ja mustan kivikkoisen tasangon poikki kulkevan kamelikaravaanin etualalla — samankaltaisilla reiteillä karavaanit ovat ylittäneet Ahaggarin vuosisatojen ajan.',
+          lahde: 'Yshak6.9, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Tahat',
+        },
+        {
+          otsikko: 'Assekrem — näköala pilvien tasalla',
+          teksti:
+            'Assekremin tasanko kohoaa Ahaggarin sydämessä 2 726 metrin korkeuteen, ja sieltä avautuu näkymä kymmeniin tulivuoren muovaamiin huippuihin, jotka työntyvät esiin ympäröivästä aavikosta kuin hampaat. Auringonlaskun aikaan tasangolla kasvavat niukat aavikkokasvit piirtyvät mustina siluetteina hehkuvaa taivasta vasten, ja ilta kirkastaa ilman niin läpinäkyväksi, että kaukaisimmatkin vuorenhuiput erottuvat terävinä ääriviivoina. Korkeus ja kuivuus tekevät paikasta myös yhden aavikon parhaista tähtienkatselupaikoista, sillä valosaastetta ei ole satojen kilometrien säteellä.',
+          tiedosto: 'Assekrem sunset.jpg',
+          lyhyt: 'Assekremin tasangon auringonlasku lähes 2 730 metrin korkeudessa.',
+          selite:
+            'Valokuvassa aavikon niukkoja, kukkivia kasveja siluetteina hehkuvaa auringonlaskua ja etäisen vuoren ääriviivaa vasten Assekremin tasangolla.',
+          lahde: 'Ismail Harkat, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Assekrem',
+        },
+        {
+          otsikko: 'Piikkikivien metsä',
+          teksti:
+            'Ahaggarin maisemaa hallitsevat pystyt, piikkimäiset kivipylväät, jotka nousevat tasaisesta aavikosta kymmeniä tai jopa yli sata metriä ilmaan. Ne ovat vanhojen tulivuorten sisäisiä syöttökanavia: kun laava jähmettyi kanavan sisällä, siitä tuli ympäröivää kiveä huomattavasti kovempaa, ja miljoonien vuosien eroosio on sittemmin kuluttanut pehmeämmän kiven pois ja jättänyt jäljelle vain kovan ytimen. Tällaisia pystykiviä on Atakorin alueella kymmenittäin, ja monet niistä ovat saaneet oman nimensä paikallisilta asukkailta, jotka ovat käyttäneet niitä maamerkkeinä vuosisatojen ajan aavikon yli kulkiessaan.',
+          tiedosto: 'Adrian Massif, Hoggar National Park.jpg',
+          lyhyt: 'Vanhan tulivuoren syöttökanavasta jäljelle jäänyt kivipiikki Ahaggarissa.',
+          selite:
+            'Valokuva näyttää terävän, kymmeniä metrejä korkean kivipiikin sinistä taivasta vasten — vanhan tulivuoren jähmettyneen syöttökanavan, jonka ympäriltä pehmeämpi kivi on kulunut pois eroosiossa.',
+          lahde: 'Abderrehmann H. Dribat, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hoggar Mountains',
+        },
+        {
+          otsikko: 'Kalliokaiverrukset kertovat vihreästä Saharasta',
+          teksti:
+            'Ahaggarin kallioihin on kaiverrettu tuhansia vuosia vanhoja kuvia ja kuvioita, jotka todistavat alueen olleen joskus aivan toisenlainen kuin nykyinen kuiva aavikko. Vanhimmat kaiverrukset ajoittuvat noin 6000 vuoden taakse ajalle, jolloin Sahara oli vihreä ja sinne mahtui järviä, jokia ja laiduntavia karjalaumoja. Tikemtinen kaltaisilla kaiverruspaikoilla Atakorin alueella kivipintoihin on piirretty sekä eläinhahmoja että abstrakteja spiraali- ja verkkokuvioita, joiden tarkkaa merkitystä ei enää tunneta. Kaiverrukset ovat säilyneet, koska Saharan kuivuus on suojellut niitä vuosituhansien ajan sateen ja kasvillisuuden aiheuttamalta kulumiselta.',
+          tiedosto: 'Ahaggar Prehistoric rock carvings.png',
+          lyhyt: 'Tuhansia vuosia vanhoja kalliokaiverruksia Atakorin tulivuorialueelta.',
+          selite:
+            'Lähikuva kuluneesta kivilaatasta, johon on kaiverrettu toisiinsa kietoutuvia spiraalikuvioita ja pienempiä geometrisia merkkejä — muinaista kalliotaidetta Atakorin alueelta.',
+          lahde: 'Heribertus2, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hoggar Mountains',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Huivin ja teltan kansa',
+      johdanto:
+        'Ahaggarin aavikkoa asuttavat Kel Ahaggarin tuaregit, joiden tavat kääntävät monta totuttua käsitystä ylösalaisin: miehet peittävät kasvonsa huivilla, naiset eivät, ja teltan sekä sen sisällön omistaa perinteisesti perheen äiti.',
+      tehtava: {
+        kysymys: 'Kuinka pitkä tuareg-miehen sininen huivi, tagelmust, voi parhaimmillaan olla?',
+        vaihtoehdot: ['Alle metrin', 'Noin kolme metriä', 'Yli kymmenen metriä', 'Yli viisikymmentä metriä'],
+        oikea: 2,
+        fakta:
+          'Tagelmust-huivi kiedotaan pään ja kasvojen ympäri monta kertaa, ja kangasta voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tagelmust — sininen huivi ja miehuuden merkki',
+          teksti:
+            'Tuareg-miehet peittävät kasvonsa ja päänsä pitkällä, tummansinisellä kankaalla nimeltä tagelmust jo teini-iästä lähtien: huivin ottaminen käyttöön on merkki siitä, että pojasta on tullut mies. Kangas kiedotaan pään ja kasvojen ympäri monta kertaa, ja sitä voi parhaimmillaan olla yli kymmenen metriä — silti ohut puuvillakangas painaa vain vähän ja suojaa samalla auringolta, kuumuudelta ja hiekkamyrskyiltä. Perinteisesti kangas värjättiin indigolla, jonka väriaine hiertyi ajan myötä ihoon ja antoi tuaregeille lempinimen "siniset ihmiset". Toisin kuin muissa kulttuureissa, tuareg-naiset eivät peitä kasvojaan lainkaan — huivi on nimenomaan miesten tapa.',
+          tiedosto: 'Targui.jpg',
+          lyhyt: 'Tuareg-mies tummansinisessä tagelmust-huivissa Ahaggarin kalliomaisemassa.',
+          selite:
+            'Valokuvassa tuareg-mies tummansinisessä tagelmust-huivissa, joka peittää suun ja nenän, punertavia aavikon kallioita vasten.',
+          lahde: 'Florence Devouard, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tagelmust',
+        },
+        {
+          otsikko: 'Nainen omistaa teltan',
+          teksti:
+            'Tuareg-yhteisössä valta ja omaisuus kulkevat usein naisten kautta: teltta ja sen sisältö kuuluvat perinteisesti avioituneelle naiselle, ei hänen miehelleen, ja avioerossa mies poistuu teltasta vaimon jäädessä kotiinsa. Myös yhteisön johtajan eli amgharin asema periytyy äidinpuoleisesti: seuraaja on usein hallitsijan sisaren poika, ei oma poika. Naiset huolehtivat perinteisesti karjasta ja kaivoilta haetusta vedestä, jotka ovat aavikon elämän kannalta yhtä tärkeitä kuin miesten hoitamat kamelikaravaanit. Tällaista äitilinjaan nojaavaa yhteiskuntaa kutsutaan matrilineaariseksi, ja se erottaa tuaregit naapurikulttuureistaan.',
+          tiedosto:
+            'ASC Leiden - van Achterberg Collection - 15 - 76 - Une femme chez un puits carré - Terhaouhaout, Ahaggar, Algérie - Fin des années 1980 ?.jpg',
+          lyhyt: 'Kel Ahaggarin naiset kaivolla, jonka äärellä myös vuohet juovat.',
+          selite:
+            'Valokuvassa kaksi naista aavikon kaivolla: toinen nostaa vettä köydellä, toinen nojaa kivialtaan reunaan, ja mustia vuohia juo vieressä olevasta kaukalosta — taustalla kaksi miestä ja lapsi.',
+          lahde: 'Angeline A. van Achterberg / ASC Leiden, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tuareg people',
+        },
+        {
+          otsikko: 'Tifinagh — kirjoitus joka on elänyt tuhansia vuosia',
+          teksti:
+            'Tuaregit kirjoittavat yhä tifinagh-aakkosilla, jotka periytyvät muinaisesta libyko-berberiläisestä kirjoitusjärjestelmästä. Merkit koostuvat yksinkertaisista pisteistä, viivoista ja ympyröistä, ja niitä on perinteisesti kaiverrettu kallioihin tai piirretty hiekkaan pikaviestien tapaan. Samoille kallioseinämille on usein kaiverrettu myös paljon vanhempia, esihistoriallisia kuvioita, kuten spiraaleja ja geometrisia verkkoja, joten yhdellä kalliopinnalla voi näkyä tuhansien vuosien kirjoittamisen perinne päällekkäin. Nykyisin tifinagh on virallinen kirjoitusjärjestelmä useissa Pohjois-Afrikan maissa, joissa berberikielten asema on vahvistunut.',
+          tiedosto: 'Tifinagh Algeria.jpg',
+          lyhyt: 'Tifinagh-kirjoitusta ja vanhoja spiraalikuvioita samalla kalliopinnalla.',
+          selite:
+            'Valokuva kalliopinnasta, johon on kaiverrettu sekä tifinagh-aakkosten merkkejä että niitä vanhempia, toisiinsa kietoutuvia spiraalikuvioita.',
+          lahde: 'Patrick Gruban, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tifinagh',
+        },
+        {
+          otsikko: 'Tin Hinan — tuaregien tarunhohtoinen kantaäiti',
+          teksti:
+            'Monet Kel Ahaggarin tuaregisuvut jäljittävät juurensa Tin Hinaniin, legendaariseen naiseen, jonka kerrotaan saapuneen Ahaggariin karavaanin kanssa satoja vuosia sitten ja perustaneen siellä oman sukunsa. Vuonna 1925 ranskalaiset arkeologit kaivoivat Abalessan kylän lähellä esiin suuren kivisen hautakumpelun, jonka sisältä löytyi nainen kultakoruineen ja jota pidettiin todisteena Tin Hinanin olemassaolosta. Tarina sopii saumattomasti tuaregien matrilineaariseen maailmaan, jossa nainen ei ole vain kodin vaan koko suvun alkuperän symboli. Hauta on yhä nähtävissä Abalessassa.',
+          tiedosto: 'Tin Hinan Tomb 05.jpg',
+          lyhyt: 'Tin Hinanin haudaksi tulkittu kivikumpu Abalessan kylän lähellä.',
+          selite:
+            'Valokuvassa kivistä ladottu, rapautunut hautakumpu aavikon keskellä, taustalla vehreitä puita ja kylän rakennuksia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Tin Hinan',
+        },
+      ],
+    },
+  ],
 };
