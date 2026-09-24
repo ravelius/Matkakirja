@@ -18,12 +18,13 @@ namespace Matkakirja
     ///   hämärä     tileset-varjostimen globaali _radioHamara (RadioHamara, Shaders/Cesium/Lahde~/tee_tileset.py) ja sama
     ///              kaava napakansille, mastoille ja kameran taustalle; ei omaa piirtokutsua
     ///   mastot     kolme proseduraalista verkkoa (MastoGeometria: Iso, Keski, Pieni) GPU-instansseina (Shaders/Radiomasto),
-    ///              3 piirtokutsua; pinnan normaalin suuntaisina, korkeus Mastot.KorkeusM(koko, kameran korkeus) × nousu;
+    ///              3 piirtokutsua; pinnan normaalin suuntaisina, korkeus ruudulla Mastot.KorkeusPt × pistekerroin × kasvu
+    ///              (KorkeusM:n zoomilaki; lyheneminen korvataan 40°:n kallistukseen asti) × nousu; ristikko viivoina;
     ///              kanavaton maa 50 % peittävyydellä ilman valoja; pallon takana olevat karsitaan
     ///   valot      lentoestevalot yhtenä instansoituna billboard-kutsuna (Shaders/Lentoestevalo): tasot
     ///              Mastot.Valotasot, muiden mastojen vilkku varjostimessa (jakso ja vaihe Mastot.Vilkku), valitun
     ///              maston kaikki tasot sen kirkkaudella; halo 6,8 × (valittu 12 ×) valon säde
-    ///   maavalo    lämmin #ff8a4a valitun maston ympärillä, säde 110 km × (0,6 + 0,4 × kirkkaus), nousee 0,8 s:ssa
+    ///   maavalo    lämmin #ff8a4a valitun maston ympärillä, säde 110–140 km kirkkauden mukaan, nousee 0,8 s:ssa
     ///              valinnan vaihtuessa (tileset-varjostimen _radioMaavalo, emissiona)
     ///   renkaat    pallokalotti 2 km pinnan yläpuolella yhdellä piirtokutsulla (Shaders/Radiorengas)
     ///   yövalot    uniformit valmiina (_radioYonValot), kerros odottaa Karttasepän Black Marble -polttoa
@@ -65,6 +66,7 @@ namespace Matkakirja
         static readonly int PeittoId = Shader.PropertyToID("_Peitto");
         static readonly int ValoId = Shader.PropertyToID("_Valo");
         static readonly int SadeId = Shader.PropertyToID("_Sade");
+        static readonly int ViivaId = Shader.PropertyToID("_Viiva");
         static readonly int SadeValittuId = Shader.PropertyToID("_SadeValittu");
         static readonly int KeskusId = Shader.PropertyToID("_Keskus");
         static readonly int PohjaId = Shader.PropertyToID("_Pohja");
@@ -351,13 +353,23 @@ namespace Matkakirja
             if (kamera == null) kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
             if (kamera == null) return;
             Vector3 kameraPaikka = kamera.transform.position;
-            double korkeus = Math.Max(1000.0, (kameraPaikka - keskus).magnitude - MaanSade);
+            // KOKO RUUDULLA (b12d-korjaus): mastot olivat noin 0,55 × liian lyhyitä, koska Mastot.KorkeusM:n vakio olettaa
+            // suoraan ylhäältä katsotun kartan (2 400 km iPadin 1 024 pt:n leveydellä) ja kameran korkeuden. Radion
+            // 40°:n kallistuksessa (1) pystymasto lyhenee ruudulla kertoimella sin φ ≈ 0,64 (φ = näkösäteen ja maston
+            // välinen kulma) ja (2) tähän syötetty korkeus oli silmän korkeus maan pinnasta (noin 2 200 km), kun
+            // PalloKierto.korkeus on etäisyys katsottavaan pisteeseen (2 600 km): 0,87 potenssin 0,85 jälkeen.
+            // 0,64 × 0,87 ≈ 0,56. Nyt korkeus lasketaan ruudusta: tavoite = Mastot.KorkeusPt × pistekerroin × kasvu
+            // (KorkeusM:n zoomilaki), ja juuren kohdalla mitataan pikseliä metriä kohden normaalin suunnassa.
+            // Lyheneminen korvataan 40°:een asti (MastoGeometria.KorkeusRuudulle).
+            double etaisyys = kierto != null && kierto.korkeus > 0 ? kierto.korkeus : Math.Max(1000.0, (kameraPaikka - keskus).magnitude - MaanSade);
             float kerroin = PalloKierto.Pistekerroin;
+            float kasvu = MastoGeometria.Kasvu(etaisyys);
             var nk = new Num.Vector3(kameraPaikka.x, kameraPaikka.y, kameraPaikka.z);
             var no = new Num.Vector3(keskus.x, keskus.y, keskus.z);
-            float h0 = (float)Linssit.Radio.Mastot.KorkeusM(MastoKoko.Pieni, korkeus);
-            float h1 = (float)Linssit.Radio.Mastot.KorkeusM(MastoKoko.Keski, korkeus);
-            float h2 = (float)Linssit.Radio.Mastot.KorkeusM(MastoKoko.Iso, korkeus);
+            float t0 = (float)Linssit.Radio.Mastot.KorkeusPt(MastoKoko.Pieni) * kerroin * kasvu;
+            float t1 = (float)Linssit.Radio.Mastot.KorkeusPt(MastoKoko.Keski) * kerroin * kasvu;
+            float t2 = (float)Linssit.Radio.Mastot.KorkeusPt(MastoKoko.Iso) * kerroin * kasvu;
+            const float Mittapuikko = 20_000f;
             bool nousuOhi = Time.unscaledTime - mastotAika > 2f;   // RadioLinssi syöttää nousun vain avauksen ajan
 
             lkm[0] = lkm[1] = lkm[2] = 0;
@@ -368,7 +380,13 @@ namespace Matkakirja
                 ref var m = ref tiedot[i];
                 float nousu = nousuOhi ? 1f : m.Nousu;
                 if (nousu <= 0.001f) continue;
-                float h = m.Koko == 2 ? h2 : m.Koko == 1 ? h1 : h0;
+                Vector3 s0 = kamera.WorldToScreenPoint(m.Juuri);
+                if (s0.z <= 0) continue;
+                Vector3 s1 = kamera.WorldToScreenPoint(m.Juuri + m.Normaali * Mittapuikko);
+                float pxPerM = new Vector2(s1.x - s0.x, s1.y - s0.y).magnitude / Mittapuikko;
+                float sinPhi = Vector3.Cross((m.Juuri - kameraPaikka).normalized, m.Normaali).magnitude;
+                float h = MastoGeometria.KorkeusRuudulle(m.Koko == 2 ? t2 : m.Koko == 1 ? t1 : t0, pxPerM, sinPhi);
+                if (h <= 0) continue;
                 float korkeusNyt = h * nousu;
                 Vector3 huippu = m.Juuri + m.Normaali * korkeusNyt;
                 float raja = m.Sade - 500f;
@@ -410,12 +428,13 @@ namespace Matkakirja
                 {
                     if (lkm[k] == 0) continue;
                     mastoMpb[k].SetFloatArray(PeittoId, peitot[k]);
+                    mastoMpb[k].SetFloat(ViivaId, kerroin * Mathf.Clamp(kasvu, 0.8f, 2f));
                     rp.matProps = mastoMpb[k];
                     Graphics.RenderMeshInstanced(rp, verkot[k], 0, matriisit[k], lkm[k]);
                 }
             if (valoja > 0 && valoMateriaali != null)
             {
-                float mittakaava = MastoGeometria.ValonMittakaava(korkeus);
+                float mittakaava = MastoGeometria.ValonMittakaava(etaisyys);
                 valoMpb.SetVectorArray(ValoId, valoTiedot);
                 valoMpb.SetFloat(SadeId, valoPt * mittakaava * kerroin);
                 valoMpb.SetFloat(SadeValittuId, valittuValoPt * mittakaava * kerroin);
@@ -456,7 +475,8 @@ namespace Matkakirja
                 var j = tiedot[valittu].Juuri;
                 Shader.SetGlobalVector(MaavaloId, new Vector4(j.x, j.y, j.z, MastoGeometria.MaavalonSadeM(kirkkaus)));
                 var v = maavalonVari.linear;
-                float s = kirkkaus * Pehmea(maavalo);
+                // Tasainen pohja + VU-tahti (b12d: pelkkä kirkkaus 0,25…1 jätti maavalon hiljaisissa kohdissa näkymättömäksi).
+                float s = (0.55f + 0.45f * kirkkaus) * Pehmea(maavalo);
                 Shader.SetGlobalVector(MaavaloVariId, new Vector4(v.r * s, v.g * s, v.b * s, 1f));
             }
             else if (maavaloPaalla || !Application.isPlaying)
@@ -495,17 +515,26 @@ namespace Matkakirja
             var paikat = new Vector3[n];
             var normaalit = new Vector3[n];
             var varit = new Color32[n];
+            var viivat = new List<Vector2>(n);
+            var alut = new List<Vector3>(n);
+            var loput = new List<Vector3>(n);
             for (int i = 0; i < n; i++)
             {
                 var p = v.Paikat[i]; var q = v.Normaalit[i]; uint c = v.Varit[i];
                 paikat[i] = new Vector3(p.X, p.Y, p.Z);
                 normaalit[i] = new Vector3(q.X, q.Y, q.Z);
                 varit[i] = new Color32((byte)c, (byte)(c >> 8), (byte)(c >> 16), (byte)(c >> 24));
+                viivat.Add(new Vector2(v.Viivat[i].X, v.Viivat[i].Y));
+                alut.Add(new Vector3(v.Alut[i].X, v.Alut[i].Y, v.Alut[i].Z));
+                loput.Add(new Vector3(v.Loput[i].X, v.Loput[i].Y, v.Loput[i].Z));
             }
             var m = new Mesh { name = nimi };
             m.vertices = paikat;
             m.normals = normaalit;
             m.colors32 = varit;
+            m.SetUVs(0, viivat);
+            m.SetUVs(1, alut);
+            m.SetUVs(2, loput);
             m.triangles = v.Kolmiot.ToArray();
             m.RecalculateBounds();
             m.UploadMeshData(true);

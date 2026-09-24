@@ -12,10 +12,17 @@
 //   Pieni  putkimasto: putki 0,1 h → 0,05 h 0,92 h:hon, poikkipuomi 0,72 h (0,22 × 0,05 h), antenni 1,0 h:hon
 //
 // Verkko on maston korkeuden yksiköissä (juuri y = 0, huippu y = 1), joten instanssin skaalaus (H, H · nousu, H)
-// antaa maston korkeuden maailmassa (Mastot.KorkeusM). Kolmioita LOD0:ssa noin 300 (Iso), 210 (Keski) ja 60 (Pieni).
-// Ristikon sauvat ovat tasolevyjä kyljen tasossa (normaali kyljen ulkonormaali); varjostin piirtää molemmat puolet.
-// Värit (mastot.js): teräs #5d5242, harukset #2a241c, putki #7d705d, tasanne ja puomi #3a3126. Hämärässä varjostin
-// tummentaa ne samalla kertoimella kuin kartan (mustahko ristikko kuten havainnekuvassa).
+// antaa maston korkeuden maailmassa (RadioMastot laskee H:n ruudun pisteistä). Kolmioita noin 250 (Iso), 200 (Keski)
+// ja 50 (Pieni).
+//
+// VIIVAT RUUDUN PISTEINÄ (Natiivisepän laitekierros b12d 24.9.: 3D-sauvat ohenivat 30–64 pt:n mastossa alle pikselin,
+// ja ristikosta jäi näkyviin vain tikku ja poikkipuu): ristikon tolpat, vinoristikko, vaakasauvat, antenni ja
+// harukset ovat viivoja kuten havainnekuvan SVG:ssä. Viivan kärjissä on molemmat päätepisteet (uv2, uv3), puoli
+// (uv.x = ±1) ja leveys pisteinä (uv.y); varjostin levittää nelikulmion ruudulla kohtisuoraan viivaa vastaan, joten
+// leveys pysyy pisteinä maston koosta riippumatta (mastot.js: tolppa 1,1, ristikko 0,6, harus 0,5, antenni 1,4 pt).
+// Kylkien täyttö on puoliläpinäkyvä levy (mastot.js: kyljet peitolla 0,55 ja 0,7), putki ja tasanne kiinteitä.
+// Värit: viivat lähes mustat #1c1813 (omistajan palaute: tummat tolpat ja vinoristikko), harukset #2a241c peitolla
+// 0,7, kylki #5d5242, putki #7d705d, tasanne ja puomi #3a3126.
 using System;
 using System.Collections.Generic;
 using Num = System.Numerics;
@@ -29,15 +36,36 @@ namespace Matkakirja
         public readonly List<Num.Vector3> Normaalit = new List<Num.Vector3>();
         public readonly List<uint> Varit = new List<uint>();
         public readonly List<int> Kolmiot = new List<int>();
+        /// <summary>Viivan puoli (x = ±1) ja leveys pisteinä (y); kiinteällä pinnalla (0, 0).</summary>
+        public readonly List<Num.Vector2> Viivat = new List<Num.Vector2>();
+        /// <summary>Viivan päätepisteet (kiinteällä pinnalla molemmat = kärki).</summary>
+        public readonly List<Num.Vector3> Alut = new List<Num.Vector3>(), Loput = new List<Num.Vector3>();
 
         public int Kolmioita => Kolmiot.Count / 3;
+
+        void Karki(Num.Vector3 p, Num.Vector3 n, uint vari, Num.Vector2 viiva, Num.Vector3 a, Num.Vector3 b)
+        {
+            Paikat.Add(p); Normaalit.Add(n); Varit.Add(vari); Viivat.Add(viiva); Alut.Add(a); Loput.Add(b);
+        }
+
+        /// <summary>Viiva a → b, leveys pisteinä ruudulla (varjostin levittää).</summary>
+        public void Viiva(Num.Vector3 a, Num.Vector3 b, float leveysPt, uint vari)
+        {
+            int i = Paikat.Count;
+            var n = Num.Vector3.UnitY;
+            Karki(a, n, vari, new Num.Vector2(-1, leveysPt), a, b);
+            Karki(a, n, vari, new Num.Vector2(1, leveysPt), a, b);
+            Karki(b, n, vari, new Num.Vector2(1, leveysPt), a, b);
+            Karki(b, n, vari, new Num.Vector2(-1, leveysPt), a, b);
+            Kolmiot.AddRange(new[] { i, i + 1, i + 2, i, i + 2, i + 3 });
+        }
 
         /// <summary>Suorakulmainen levy (a, b, c, d vastapäivään normaalista katsottuna).</summary>
         public void Levy(Num.Vector3 a, Num.Vector3 b, Num.Vector3 c, Num.Vector3 d, Num.Vector3 normaali, uint vari)
         {
             int i = Paikat.Count;
             var n = Num.Vector3.Normalize(normaali);
-            foreach (var p in new[] { a, b, c, d }) { Paikat.Add(p); Normaalit.Add(n); Varit.Add(vari); }
+            foreach (var p in new[] { a, b, c, d }) Karki(p, n, vari, Num.Vector2.Zero, p, p);
             Kolmiot.AddRange(new[] { i, i + 1, i + 2, i, i + 2, i + 3 });
         }
 
@@ -56,13 +84,6 @@ namespace Matkakirja
                 var n = u * (float)Math.Cos(km) + v * (float)Math.Sin(km);
                 Levy(a + s0 * r0, a + s1 * r0, b + s1 * r1, b + s0 * r1, n, vari);
             }
-        }
-
-        /// <summary>Litteä sauva kyljen tasossa: a → b, leveys w, normaali = kyljen ulkonormaali.</summary>
-        public void Lista(Num.Vector3 a, Num.Vector3 b, float w, Num.Vector3 normaali, uint vari)
-        {
-            var sivu = Num.Vector3.Normalize(Num.Vector3.Cross(b - a, normaali)) * (w / 2);
-            Levy(a - sivu, a + sivu, b + sivu, b - sivu, normaali, vari);
         }
 
         /// <summary>Laatikko (kuusi tahkoa) keskipisteen ja puolikkaiden mittojen mukaan.</summary>
@@ -95,8 +116,15 @@ namespace Matkakirja
 
         static Num.Vector3 V(float x, float y, float z) => new Num.Vector3(x, y, z);
 
-        /// <summary>Ristikko: kulmien ympyrän säteet ala- ja yläpäässä, kulmia n, kenttiä osat, korkeus h.</summary>
-        static void Ristikko(MastoVerkko m, int n, float ala, float yla, float h, int osat, float jalka, float sauva)
+        public static readonly uint Viivan = Vari(0x1c, 0x18, 0x13);
+        public static readonly uint Kylki = Vari(0x5d, 0x52, 0x42, 0x70);
+        public static readonly uint HarusViiva = Vari(0x2a, 0x24, 0x1c, 0xb3);
+
+        /// <summary>
+        /// Ristikko: n kulmaa (säteet ala → yla), korkeus h, kenttiä osat. Kyljet puoliläpinäkyvinä levyinä, tolpat ja
+        /// ristikko viivoina (mastot.js ristikko(): kaksi vinoa ja vaaka jokaisessa kentässä).
+        /// </summary>
+        static void Ristikko(MastoVerkko m, int n, float ala, float yla, float h, int osat, float tolppaPt, float sauvaPt)
         {
             Num.Vector3 Kulma(int i, float t)
             {
@@ -104,75 +132,66 @@ namespace Matkakirja
                 float r = ala + (yla - ala) * t;
                 return V(r * (float)Math.Cos(k), h * t, r * (float)Math.Sin(k));
             }
-            // Jalat: yksi kolmiosauva kulmaa kohden.
-            // Jalka ohenee kapenevassa tornissa puoleen matkaa kulmien suhteesta (Keski 0,6 ×, Iso ennallaan).
-            float jalkaYla = jalka * (0.5f + 0.5f * yla / Math.Max(ala, 1e-4f));
-            for (int i = 0; i < n; i++) m.Sauva(Kulma(i, 0), Kulma(i, 1), jalka, jalkaYla, Teras);
-            // Kyljet: vaakasauva jokaisen kentän yläreunassa ja X-ristikko kentän sisällä (mastot.js: kaksi vinoa ja vaaka).
             for (int i = 0; i < n; i++)
             {
                 int j = (i + 1) % n;
+                var a0 = Kulma(i, 0); var b0 = Kulma(j, 0); var a1 = Kulma(i, 1); var b1 = Kulma(j, 1);
+                var normaali = Num.Vector3.Normalize(Num.Vector3.Cross(b0 - a0, a1 - a0));
+                var keski = (a0 + b0) / 2; keski.Y = 0;
+                if (Num.Vector3.Dot(normaali, keski) < 0) normaali = -normaali;
+                m.Levy(a0, b0, b1, a1, normaali, Kylki);
+                m.Viiva(a0, a1, tolppaPt, Viivan);
                 for (int o = 0; o < osat; o++)
                 {
                     float t0 = (float)o / osat, t1 = (float)(o + 1) / osat;
-                    var a0 = Kulma(i, t0); var b0 = Kulma(j, t0); var a1 = Kulma(i, t1); var b1 = Kulma(j, t1);
-                    var normaali = Num.Vector3.Normalize(Num.Vector3.Cross(b0 - a0, a1 - a0));
-                    // Ulospäin: kyljen keskipiste akselilta poispäin.
-                    var keski = (a0 + b0) / 2; keski.Y = 0;
-                    if (Num.Vector3.Dot(normaali, keski) < 0) normaali = -normaali;
-                    m.Lista(a0, b1, sauva, normaali, Teras);
-                    m.Lista(b0, a1, sauva, normaali, Teras);
-                    m.Lista(a1, b1, sauva, normaali, Teras);
+                    var p0 = Kulma(i, t0); var q0 = Kulma(j, t0); var p1 = Kulma(i, t1); var q1 = Kulma(j, t1);
+                    m.Viiva(p0, q1, sauvaPt, Viivan);
+                    m.Viiva(q0, p1, sauvaPt, Viivan);
+                    m.Viiva(p1, q1, sauvaPt, Viivan);
                 }
             }
         }
 
-        /// <summary>Harustettu ristikkomasto (Iso, noin 280 kolmiota).</summary>
+        /// <summary>Harustettu ristikkomasto (Iso, noin 250 kolmiota).</summary>
         public static MastoVerkko Iso()
         {
             var m = new MastoVerkko();
             const float lev = 0.07f, h = 0.94f;
             // Kolmion sivu lev → kulmien ympyrän säde lev / √3.
             float r = lev / (float)Math.Sqrt(3);
-            Ristikko(m, 3, r, r, h, 12, 0.005f, 0.0045f);
-            m.Sauva(V(0, h, 0), V(0, 1, 0), 0.006f, 0.003f, Tumma);
-            // Harukset kolmeen suuntaan: kaksi ristikkäistä listaa, ettei harus katoa sivulta katsottuna.
+            Ristikko(m, 3, r, r, h, 12, 1.1f, 0.6f);
+            m.Viiva(V(0, h, 0), V(0, 1, 0), 1.4f, Viivan);
+            // Harukset kolmeen suuntaan (mastot.js: korkeuksilta 0,36 / 0,68 / 0,95, ankkuri 0,42 · t).
             foreach (float t in new[] { 0.36f, 0.68f, 0.95f })
                 for (int s = 0; s < 3; s++)
                 {
                     double k = 2 * Math.PI * s / 3 + Math.PI / 6;
-                    var ylos = V(0, t, 0);
-                    var ankkuri = V(0.42f * t * (float)Math.Cos(k), 0, 0.42f * t * (float)Math.Sin(k));
-                    var suunta = Num.Vector3.Normalize(ankkuri - ylos);
-                    var sivu = Num.Vector3.Normalize(Num.Vector3.Cross(suunta, Num.Vector3.UnitY));
-                    var toinen = Num.Vector3.Cross(suunta, sivu);
-                    m.Lista(ylos, ankkuri, 0.005f, sivu, Harus);
-                    m.Lista(ylos, ankkuri, 0.005f, toinen, Harus);
+                    m.Viiva(V(0, t, 0), V(0.42f * t * (float)Math.Cos(k), 0, 0.42f * t * (float)Math.Sin(k)), 0.5f, HarusViiva);
                 }
             return m;
         }
 
-        /// <summary>Itsekantava ristikkotorni (Keski, noin 210 kolmiota).</summary>
+        /// <summary>Itsekantava ristikkotorni (Keski, noin 200 kolmiota).</summary>
         public static MastoVerkko Keski()
         {
             var m = new MastoVerkko();
             const float h = 0.9f;
             // Neliön sivu s → kulmien ympyrän säde s / √2.
             float s2 = (float)Math.Sqrt(2);
-            Ristikko(m, 4, 0.26f / s2, 0.05f / s2, h, 7, 0.009f, 0.006f);
+            Ristikko(m, 4, 0.26f / s2, 0.05f / s2, h, 7, 1.1f, 0.6f);
             m.Laatikko(V(0, 0.62f + 0.0175f, 0), V(0.06f, 0.0175f, 0.06f), Tumma);
-            m.Sauva(V(0, h, 0), V(0, 1, 0), 0.008f, 0.004f, Tumma);
+            m.Viiva(V(0, h, 0), V(0, 1, 0), 1.2f, Viivan);
             return m;
         }
 
-        /// <summary>Putkimasto (Pieni, noin 60 kolmiota).</summary>
+        /// <summary>Putkimasto (Pieni, noin 50 kolmiota).</summary>
         public static MastoVerkko Pieni()
         {
             var m = new MastoVerkko();
             m.Sauva(V(0, 0, 0), V(0, 0.92f, 0), 0.05f, 0.025f, Putki, 10);
             m.Laatikko(V(0, 0.72f + 0.025f, 0), V(0.11f, 0.025f, 0.02f), Tumma);
             m.Laatikko(V(0, 0.72f + 0.025f, 0), V(0.02f, 0.025f, 0.11f), Tumma);
-            m.Sauva(V(0, 0.92f, 0), V(0, 1, 0), 0.01f, 0.005f, Tumma);
+            m.Viiva(V(0, 0.92f, 0), V(0, 1, 0), 1.0f, Viivan);
             return m;
         }
 
@@ -225,8 +244,32 @@ namespace Matkakirja
             return (float)Math.Min(1.6, Math.Max(0.7, k));
         }
 
-        /// <summary>Maavalon säde (m): 110 km × (0,6 + 0,4 × kirkkaus) (suunnitelma luku 5).</summary>
-        public static float MaavalonSadeM(float kirkkaus) => 110_000f * (0.6f + 0.4f * Math.Min(1f, Math.Max(0f, kirkkaus)));
+        /// <summary>
+        /// Maavalon säde (m): 110 km hiljaisella, 140 km täydellä kirkkaudella (suunnitelma luvut 3 ja 5; b12d-palaute:
+        /// 110–140 km, maavalo ei erottunut).
+        /// </summary>
+        public static float MaavalonSadeM(float kirkkaus) => 110_000f + 30_000f * Math.Min(1f, Math.Max(0f, kirkkaus));
+
+        /// <summary>
+        /// Maston korkeus maailmassa (m), jotta se näkyy ruudulla tavoitePx:n korkuisena. pxPerM = maston juuren
+        /// kohdalla mitattu ruudun pikselimäärä metriä kohden pinnan normaalin suunnassa (sisältää perspektiivin ja
+        /// lyhenemisen sin φ, φ = näkösäteen ja maston välinen kulma). Lyheneminen korvataan vain 40°:n kallistukseen
+        /// asti: jyrkemmin ylhäältä katsottuna masto lyhenee luonnollisesti (suunnitelma luku 4: 0°:ssa lyhyt).
+        /// </summary>
+        public static float KorkeusRuudulle(float tavoitePx, float pxPerM, float sinPhi, float sinViite = 0.6427876f)
+        {
+            if (pxPerM <= 0 || tavoitePx <= 0) return 0;
+            float s = Math.Max(1e-3f, sinPhi);
+            float pxPerMKohtisuora = pxPerM / s;
+            return tavoitePx / (pxPerMKohtisuora * Math.Max(s, sinViite));
+        }
+
+        /// <summary>
+        /// Maston koon kasvu zoomatessa (Mastot.KorkeusM:n laki: maailmassa ∝ korkeus^0,85, ruudulla ∝ korkeus^−0,15),
+        /// 1 kameran etäisyydellä 2 600 km (PalloKierto.korkeus = etäisyys katsottavaan pisteeseen). Rajattu 0,6…2,5.
+        /// </summary>
+        public static float Kasvu(double kameranEtaisyysM) =>
+            (float)Math.Min(2.5, Math.Max(0.6, Math.Pow(Math.Max(1000, kameranEtaisyysM) / 2_600_000.0, -0.15)));
 
         /// <summary>sRGB-komponentti (0–1) lineaariseksi (varjostimen uniformit ovat lineaarisia).</summary>
         public static float Lineaarinen(float s) => s <= 0.04045f ? s / 12.92f : (float)Math.Pow((s + 0.055f) / 1.055f, 2.4f);

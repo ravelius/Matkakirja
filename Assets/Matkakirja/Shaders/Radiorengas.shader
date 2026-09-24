@@ -2,7 +2,7 @@
 // piirtokutsulla. Verkko on napakoordinaattiruudukko (u = säteen osuus 0…1, v = kiertokulma 0…1), jonka kärkivaihe
 // taivuttaa pallokalotiksi valitun maston ympärille 2 km pinnan yläpuolelle, joten 900 km:n rengas kaartuu pallon
 // mukana. Fragmentti laskee kulmaetäisyyden keskuksesta maailmanpisteestä ja piirtää jokaisen renkaan:
-//   viiva 2 pt #ff7a4a, hehku 6 pt peitolla 0,18, renkaan alfa Mastot.RenkaanAlfa (0,55) × (1 − osuus)
+//   viiva 2 pt #ff7a4a, hehku 6 pt tasaisella peitolla 0,18 (pt = _Mitat.z pikseliä, PalloKierto.Pistekerroin), renkaan alfa Mastot.RenkaanAlfa (0,55) × (1 − osuus)
 // Uniformit (MaterialPropertyBlock):
 //   _Keskus   maan keskipiste (maailma);  _Pohja, _Ita, _Pohjoinen  keskuksen normaali ja tangentit (maailma)
 //   _Mitat    x = kalotin kulmasäde (rad), y = kalotin säde maan keskipisteestä (m), z = pikseliä pisteelle,
@@ -55,7 +55,7 @@ Shader "Matkakirja/Radiorengas"
                 if (osuus < 0.0) return 0.0;
                 float d = abs(th - osuus * _Mitat.w) / fw;               // pikseleinä
                 half viiva = saturate(1.0 * px + 0.5 - d);                // 2 pt: puolikas 1 pt
-                half hehku = 0.18 * (1.0 - smoothstep(0.0, 3.0 * px, d)); // 6 pt: puolikas 3 pt
+                half hehku = 0.18 * saturate(3.0 * px + 0.5 - d);         // 6 pt tasaisella 18 %:lla: puolikas 3 pt
                 return max(viiva, hehku) * 0.55 * (1.0 - osuus);
             }
 
@@ -64,7 +64,9 @@ Shader "Matkakirja/Radiorengas"
                 float3 n = normalize(i.maailma - _Keskus.xyz);
                 // Kulmaetäisyys keskuksesta (atan2 on tarkka myös pienillä kulmilla).
                 float th = atan2(length(cross(n, _Pohja.xyz)), dot(n, _Pohja.xyz));
-                float fw = max(fwidth(th), 1e-9);
+                // Kulman muutos pikseliä kohden gradientin pituutena (fwidth = |ddx| + |ddy| yliarvioi vinossa
+                // jopa √2:lla, jolloin viiva oheni; b12d-palaute: renkaat ohuita).
+                float fw = max(length(float2(ddx(th), ddy(th))), 1e-9);
                 if (dot(n, normalize(_WorldSpaceCameraPos - i.maailma)) < 0.0) discard;
                 float px = _Mitat.z;
                 half p = 1.0;

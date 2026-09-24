@@ -456,7 +456,7 @@ print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 �
 # Suunnitelma docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md luvut 3 ja 5. Globaalit asettaa
 # Kartta/RadioMastot.cs (IRadioMastot); asettamattomina ne ovat 0, jolloin tulos on täsmälleen ennallaan.
 #   _radioHamara       h 0…1: pohja → lerp(pohja, pohja × (0,18, 0,17, 0,24) + (0,006, 0,006, 0,016), h), lineaarinen
-#   _radioMaavalo      xyz = valitun maston juuri Unityn maailmassa, w = säde (m) = 110 km × (0,6 + 0,4 × kirkkaus)
+#   _radioMaavalo      xyz = valitun maston juuri Unityn maailmassa, w = säde (m) = 110 km + 30 km × kirkkaus
 #   _radioMaavaloVari  rgb = lämmin #ff8a4a lineaarisena × kirkkaus; lisätään emissiona (valaisee paperia)
 #   _radioYonValot     xyz = valitun maston juuri, w = paikallinen tehostus 0…1 (RadioMastot.YonValot)
 # Yövalojen kerros (NASA Black Marble) puuttuu vielä: Karttasepän poltto Z0–Z6 tulee E28:n jälkeen. Uniformit ovat
@@ -469,12 +469,12 @@ HAMARA_RUNKO = (
     "    float3 ham = vari.rgb * float3(0.18, 0.17, 0.24) + float3(0.006, 0.006, 0.016);\n"
     "    variOut = lerp(vari.rgb, ham, h);\n"
     "}\n"
-    "// Ground glow around the selected mast: radial gradient of the illustration (0.7 at centre, 0.28 at 45 %, 0 at\n"
-    "// the rim) ~ 0.7 f^2. Emission lights the unshaded paper, so coastlines and relief stay readable.\n"
+    "// Ground glow around the selected mast (b12d: was too faint): bright core 1.3 f^2 plus a long linear tail 0.45 f,\n"
+    "// lighting the unshaded paper (coastlines and relief stay readable) with a floor so dark sea glows too.\n"
     "if (maavalo.w > 0.0)\n"
     "{\n"
     "    float f = saturate(1.0 - length(pos - maavalo.xyz) / maavalo.w);\n"
-    "    emisOut += maavaloVari.rgb * (0.7 * f * f) * (vari.rgb * 1.5 + 0.03);\n"
+    "    emisOut += maavaloVari.rgb * (1.3 * f * f + 0.45 * f) * (vari.rgb * 1.6 + 0.12);\n"
     "}\n"
     "// Night lights (NASA Black Marble): yonValot.xyz = selected mast, yonValot.w = local boost. Layer pending the\n"
     "// Black Marble burn (Karttaseppa, Z0-Z6 after E28); uniforms are wired so only this body changes then.\n")

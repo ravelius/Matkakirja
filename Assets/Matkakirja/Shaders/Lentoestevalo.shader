@@ -8,8 +8,9 @@
 //
 // Ulkoasu havainnekuvan mastot.js:stä: valon säde r = 2,1 pt (valittu 2,8 pt) × max(0,7, mittakaava) (_Sade ja
 // _SadeValittu pikseleinä); halo 6,8 r (valittu 12 r) radialGradient-pysäyttimillä
-//   hehku   0: #ff5a3a 1 · 0,22: #ff3a1a 0,55 · 0,55: #ff2a0a 0,16 · 1: 0     ydin #ff5a3a
-//   hehkuV  0: #ffd0b0 1 · 0,18: #ff5a2a 0,8  · 0,5: #ff3a12 0,25 · 1: 0     ydin #ffd2b0
+//   hehku   0: #ff5a3a 1 · 0,22: #ff3a1a 0,7 · 0,55: #ff2a0a 0,34 · 1: 0     ydin #ff5a3a
+//   hehkuV  0: #ffd0b0 1 · 0,18: #ff5a2a 0,9 · 0,5: #ff3a12 0,45 · 1: 0     ydin lähes valkoinen 1,15 r
+// (reunan peitot nostettu havainnekuvan arvoista 0,55/0,16 ja 0,8/0,25, b12d-palaute; halo lisätään lähes lisäävästi)
 // ja sammunut valo pieni tumma piste #5a1a10 (0,8 r). Värit lineaarisina. Pallon takana olevat valot karsii C#.
 Shader "Matkakirja/Lentoestevalo"
 {
@@ -76,13 +77,13 @@ Shader "Matkakirja/Lentoestevalo"
                 return o;
             }
 
-            // Paloittain lineaarinen radiaaligradientti: pysäyttimet (0, a, b, 1), värit c0…c3 ja peitot p0…p3.
+            // Radiaaligradientti: pysäyttimet (0, a, b, 1), värit c0…c3 ja peitot p0…p2 (viimeinen väli hiipuu neliöllisesti).
             half4 Liuku(float d, float a, float b, half3 c0, half3 c1, half3 c2, half3 c3, half p0, half p1, half p2)
             {
                 if (d < a) { float t = d / a; return half4(lerp(c0, c1, t), lerp(p0, p1, t)); }
                 if (d < b) { float t = (d - a) / (b - a); return half4(lerp(c1, c2, t), lerp(p1, p2, t)); }
                 float t = saturate((d - b) / (1.0 - b));
-                return half4(lerp(c2, c3, t), lerp(p2, 0.0, t));
+                return half4(lerp(c2, c3, t), p2 * (1.0 - t) * (1.0 - t));
             }
 
             half4 frag(Vali i) : SV_Target
@@ -92,17 +93,22 @@ Shader "Matkakirja/Lentoestevalo"
                 if (d >= 1.0) discard;
                 half v = i.tila.x;
                 bool valittu = i.tila.y > 0.5;
+                // b12d-palaute: halo erottui vain ytimen ympärillä. Reunan peitto nostettu (hehku 0,22: 0,7 · 0,55: 0,34,
+                // valittu 0,18: 0,9 · 0,5: 0,45), ja loppuosa hiipuu neliöllisesti reunaan asti.
                 half4 h = valittu
-                    ? Liuku(d, 0.18, 0.5, half3(1.0, 0.6308, 0.4342), half3(1.0, 0.1022, 0.0232), half3(1.0, 0.0423, 0.0060), half3(1.0, 0.0232, 0.0030), 1.0, 0.8, 0.25)
-                    : Liuku(d, 0.22, 0.55, half3(1.0, 0.1022, 0.0423), half3(1.0, 0.0423, 0.0103), half3(1.0, 0.0232, 0.0030), half3(1.0, 0.0232, 0.0030), 1.0, 0.55, 0.16);
+                    ? Liuku(d, 0.18, 0.5, half3(1.0, 0.6308, 0.4342), half3(1.0, 0.1022, 0.0232), half3(1.0, 0.0423, 0.0060), half3(1.0, 0.0232, 0.0030), 1.0, 0.9, 0.45)
+                    : Liuku(d, 0.22, 0.55, half3(1.0, 0.1022, 0.0423), half3(1.0, 0.0423, 0.0103), half3(1.0, 0.0232, 0.0030), half3(1.0, 0.0232, 0.0030), 1.0, 0.7, 0.34);
                 h.a *= v;
-                // Ydin: palaessa kirkas (säde r), sammuneena tumma piste 0,8 r.
-                half3 ydinVari = lerp(half3(0.1022, 0.0103, 0.0052), valittu ? half3(1.0, 0.6445, 0.4342) : half3(1.0, 0.1022, 0.0423), v);
-                float ydinR = i.tila.z * lerp(0.8, 1.0, v);
+                // Ydin: palaessa kirkas (säde r), sammuneena tumma piste 0,8 r. Valitun ydin on lähes valkoinen ja
+                // hieman suurempi (1,15 r), jotta masto ei huku omaan hehkuunsa (b12d: Pariisi).
+                half3 kirkas = valittu ? half3(1.0, 0.86, 0.72) : half3(1.0, 0.1022, 0.0423);
+                half3 ydinVari = lerp(half3(0.1022, 0.0103, 0.0052), kirkas, v);
+                float ydinR = i.tila.z * lerp(0.8, valittu ? 1.15 : 1.0, v);
                 half ydin = 1.0 - smoothstep(ydinR - w, ydinR + w, d);
-                // SVG-järjestys: halo ensin, ydin päälle (esikerrottu alfa).
+                // Halo lähes lisäävänä (peitto 0,4 × alfa): tumma ristikko hehkun alla jää erottumaan, koska halo
+                // vaalentaa sitä yhtä paljon kuin ympäristöä eikä peitä sitä. Ydin peittää.
                 half3 rgb = h.rgb * h.a * (1.0 - ydin) + ydinVari * ydin;
-                half a = h.a * (1.0 - ydin) + ydin;
+                half a = 0.4 * h.a * (1.0 - ydin) + ydin;
                 half nak = i.tila.w;
                 return half4(rgb * nak, a * nak);
             }
