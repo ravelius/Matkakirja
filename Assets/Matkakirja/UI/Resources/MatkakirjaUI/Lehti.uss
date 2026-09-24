@@ -1559,3 +1559,114 @@
     font-size: 14px;
     white-space: normal;
 }
+
+/* Mediarivi (web .maa-media, .kulttuuri-kuuntele, .aani-puoli, .vanha-kuuntele, .aani-lahde):
+   maan radio, kielinäyte ja vanha tallenne. Pari rinnakkain, kapealla ruudulla allekkain (web ≤ 520 px). */
+.mk-lehti__media {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 10px 0 4px 0;
+}
+
+.mk-lehti__aanipuoli {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 220px;
+    min-width: 0;
+    margin: 0 9px 8px 0;
+}
+
+.mk-lehti__aanirooli {
+    margin-bottom: 3px;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-lehti__kuuntele {
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    max-width: 100%;
+    min-height: 34px;
+    margin: 0;
+    padding: 5px 11px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 8px;
+    background-color: rgba(255, 250, 238, 0.9);
+    color: #46331f;
+}
+
+.mk-lehti__aanipuoli .mk-lehti__kuuntele {
+    align-self: stretch;
+}
+
+.mk-lehti__kuuntele--soi {
+    background-color: rgba(234, 184, 78, 0.28);
+}
+
+.mk-lehti__kuuntele--vanha {
+    background-color: rgba(244, 233, 210, 0.75);
+    border-color: rgba(70, 51, 31, 0.35);
+}
+
+.mk-lehti__kuuntele--vanha.mk-lehti__kuuntele--soi {
+    background-color: rgba(234, 184, 78, 0.28);
+}
+
+.mk-lehti__kuuntele-merkki {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+    --mk-ikoni-viiva: 1.7;
+    color: #46331f;
+}
+
+.mk-lehti__kuuntele-nimi {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12.5px;
+    color: #46331f;
+}
+
+.mk-lehti__kuuntele-vuosi,
+.mk-lehti__kuuntele-aika {
+    flex-shrink: 0;
+    margin-left: 6px;
+    font-size: 11.5px;
+    color: rgba(70, 51, 31, 0.75);
+}
+
+.mk-lehti__live {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.mk-lehti__live-piste {
+    width: 7px;
+    height: 7px;
+    margin-right: 4px;
+    border-radius: 4px;
+    background-color: #c4321f;
+}
+
+.mk-lehti__live-teksti {
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    color: #a3281c;
+}
+
+.mk-lehti__kuuntele-lahde {
+    margin-top: 3px;
+    font-size: 10px;
+    white-space: normal;
+    color: rgba(90, 74, 51, 0.8);
+}
