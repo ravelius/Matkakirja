@@ -49,6 +49,33 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Lahella(-10.0, KameraEleet.KulmaMuutos((0, 0), (1, 0), (0, 0), (Math.Cos(-k), Math.Sin(-k))), 1e-9));
         }
 
+        /// <summary>Omistaja 24.9. klo 22.4x: nipistyksen pieni kierto ei käännä karttaa; kynnyksen jälkeen ei hyppyä.</summary>
+        [Testi] static void KiertoEstinKutenGoogleEarth()
+        {
+            Oleta.Sama(15.0, KameraEleet.KiertoEstinAst);
+            var e = new KameraEleet.KiertoEstin();
+            double yht = 0;
+            for (int i = 0; i < 7; i++) yht += e.Suodata(2.0); // 14° kertynyt
+            Oleta.Sama(0.0, yht, "alle kynnyksen pohjoinen pysyy");
+            Oleta.Tosi(!e.Auki);
+            Oleta.Sama(1.0, e.Suodata(2.0), "16°: kynnys vähennetään, kartta jatkaa 1° eikä hyppää 16°");
+            Oleta.Tosi(e.Auki);
+            Oleta.Sama(3.0, e.Suodata(3.0), "auki: seuraa sormia sellaisenaan");
+            Oleta.Sama(-2.0, e.Suodata(-2.0), "myös takaisin");
+            e.Nollaa();
+            Oleta.Sama(0.0, e.Suodata(-10.0) + e.Suodata(9.0) + e.Suodata(-4.0), "edestakainen hapuilu: nettokertymä −5° ei ylitä kynnystä");
+            Oleta.Sama(-10.0, e.Suodata(-20.0), "kertymä −25°: kynnys vähennetään etumerkillä (−25 + 15)");
+        }
+
+        /// <summary>Omistaja 24.9. klo 22.4x: veto ylös kallistaa viistoon, alas palauttaa; hitaampi (0,20 °/pt).</summary>
+        [Testi] static void KallistusYlosVetaenJaHitaampi()
+        {
+            Oleta.Sama(0.20, KameraEleet.KallistusHerkkyys);
+            Oleta.Tosi(KameraEleet.KallistusMuutos(100) > 0, "ylös = lisää kallistusta");
+            Oleta.Tosi(KameraEleet.KallistusMuutos(-100) < 0, "alas = kohti ylhäältä katsottavaa");
+            Oleta.Tosi(Math.Abs(KameraEleet.KallistusMuutos(100) - 20.0) < 1e-9, "100 pt = 20°");
+        }
+
         [Testi] static void VaakasiirtoPanoroi()
         {
             var l = KameraEleet.Paata((100, 200), (300, 200), (125, 202), (325, 201));

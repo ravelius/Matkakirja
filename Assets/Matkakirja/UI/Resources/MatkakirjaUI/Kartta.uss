@@ -1823,3 +1823,21 @@
     -unity-text-align: middle-center;
     white-space: nowrap;
 }
+
+/* Ylärivin aihesymboli (web .fokuskohde-ylarivi-symboli, mitattu 24.9. b12): 1,5 em = 16,3 pt, oikealla 0,4 em =
+   4,35 pt, kaiverruskuva 14,1 pt keskellä (viewBox −12…12, kuva ±NOSTOSYM_R). Rivin korkeus = symbolin korkeus. */
+.mk-nosto__ylarivi--rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-nosto__ylarivi-symboli {
+    width: 16.3px;
+    height: 16.3px;
+    margin-right: 4.35px;
+    flex-shrink: 0;
+    background-size: 14.1px 14.1px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}

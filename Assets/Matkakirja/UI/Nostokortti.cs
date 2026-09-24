@@ -654,8 +654,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina" : "Kuuntele hetki");
 
-            var yla = Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi", sisus);
-            Kirjasimet.Aseta(yla, Kirjasin.Kone);
+            Ylarivi(sisus, n);
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -727,6 +726,25 @@ namespace Matkakirja.Natiivi
             }
             MitoitaKuvaEdella();
             if (rivi != null && ennen.HasValue && ennen.Value.width > 0) Kutista(ennen.Value);
+        }
+
+        /// <summary>
+        /// Web nostosymKortinYlarivi / piirraKohdeYlarivi: aihesymboli ja luokka. Symboli 1,5 em (16,3 pt) rivin
+        /// alussa, oikealla 0,4 em (4,35 pt), kaiverruskuva sisällä 14,1 pt (mitattu 24.9. b12, Millaun silta).
+        /// Generoitu kuva UI/Resources/Symbolit/sym-*.png (web assets/kartat/symbolit/sym-*.webp); hetki ja ihme ovat
+        /// webissä koodipiirtäjiä, joten niille ei ole kuvaa (rivi ilman symbolia).
+        /// </summary>
+        static void Ylarivi(VisualElement isa, Nosto n)
+        {
+            var rivi = Rakenne.El("mk-nosto__ylarivi mk-nosto__ylarivi--rivi", isa, PickingMode.Ignore);
+            Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+            var kuva = n.Symboli == null ? null : Resources.Load<Texture2D>("Symbolit/sym-" + n.Symboli);
+            if (kuva != null)
+            {
+                var symboli = Rakenne.El("mk-nosto__ylarivi-symboli", rivi, PickingMode.Ignore);
+                symboli.style.backgroundImage = new StyleBackground(kuva);
+            }
+            Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi-teksti", rivi);
         }
 
         // --- lajien lohkot ------------------------------------------------------------------
