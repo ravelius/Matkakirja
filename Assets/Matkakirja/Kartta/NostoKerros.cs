@@ -192,6 +192,8 @@ namespace Matkakirja
             {
                 Nakyvissa = nakyvissa;
                 sytytysAlku = nakyvissa ? Time.unscaledTime : -1f;
+                int n = maa != null && maittain.TryGetValue(maa, out var kaikki) ? kaikki.Count : 0;
+                Debug.Log($"MATKAKIRJA nostot: {(nakyvissa ? "näkyvissä" : "piilossa")} {maa}, osuus {Osuus:F2}, maan nostoja {n}");
                 muuttui = true;
             }
             float sytty = Nakyvissa ? Mathf.Clamp01(sytytysAlku < 0 ? 1f : (Time.unscaledTime - sytytysAlku) / Mathf.Max(0.01f, syttyminenS)) : 0f;
