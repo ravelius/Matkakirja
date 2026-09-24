@@ -15,6 +15,12 @@
 // ~8,6 laitepikseliä 6:n sijaan). Nyt jatkeen osuus leikataan ympyräksi: fragmentti tietää paikkansa janan suunnassa
 // (pitkin, laitepikseleinä a:sta) ja janan pituuden, ja peitto lasketaan etäisyydestä janaan eikä vain sivusuunnasta.
 // _Jatke = 0 (aluerajat) → ennallaan.
+//
+// SYVYYSTESTI JA SYVYYSNOSTO (löydös 46 E1, rannikko: Kartta/Rannikko.cs): oletus on ennallaan ZTest Always (aluerajat,
+// ääriviiva). Rannikko asettaa _ZTest = LessEqual ja nostaa vain SYVYYDEN Napakansi.shaderin tapaan: kärki siirretään
+// näkösädettä pitkin kameraa kohti niin, että se on _Nosto + _NostoOsuus × etäisyys metriä pinnan yläpuolella
+// (ruutupaikka ei muutu). Nosto kattaa maaston karkean tason virheen korkeuskertoimella (virhe kasvaa etäisyyden
+// mukana), joten viiva ei z-fightaa rannan kanssa, mutta sitä korkeampi vuori kallistetussa kuvassa peittää sen.
 Shader "Matkakirja/Rajaviiva"
 {
     Properties
@@ -26,6 +32,9 @@ Shader "Matkakirja/Rajaviiva"
         _Jatke("Päiden jatke (0/1)", Float) = 0
         _Tiheys("Ruutupikseliä astetta kohti", Float) = 0
         _PieninRengas("Pienin rengas (ruutupikseliä)", Float) = 0
+        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti", Float) = 8
+        _Nosto("Syvyysnosto (m)", Float) = 0
+        _NostoOsuus("Syvyysnosto etäisyyden osuutena", Float) = 0
     }
     SubShader
     {
@@ -36,7 +45,7 @@ Shader "Matkakirja/Rajaviiva"
             Tags { "LightMode" = "UniversalForward" }
             Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
-            ZTest Always
+            ZTest [_ZTest]
             Cull Off
 
             HLSLPROGRAM
@@ -52,6 +61,8 @@ Shader "Matkakirja/Rajaviiva"
                 float _Jatke;
                 float _Tiheys;
                 float _PieninRengas;
+                float _Nosto;
+                float _NostoOsuus;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; };
@@ -61,7 +72,15 @@ Shader "Matkakirja/Rajaviiva"
             {
                 Vali o;
                 float3 maailma = TransformObjectToWorld(i.paikka.xyz);
-                float4 a = TransformWorldToHClip(maailma);
+                float3 ylos = normalize(maailma - _Keskus.xyz);
+                float3 kohtiV = _WorldSpaceCameraPos - maailma;
+                float etaisyys = length(kohtiV);
+                float3 kohti = kohtiV / max(etaisyys, 1e-3);
+                // Syvyysnosto (vain rannikko; muilla 0): pinnan normaalin suunnassa h, näkösädettä pitkin siis h / cos.
+                float c = dot(ylos, kohti);
+                float h = _Nosto + _NostoOsuus * etaisyys;
+                float nosto = h > 0.0 && c > 0.0 ? min(h / max(c, 0.15), etaisyys * 0.5) : 0.0;
+                float4 a = TransformWorldToHClip(maailma + kohti * nosto);
                 float4 b = TransformObjectToHClip(i.toinen);
                 float2 ruutu = _ScreenParams.xy;
                 float2 suunta = b.xy / b.w * ruutu - a.xy / a.w * ruutu;
@@ -73,9 +92,7 @@ Shader "Matkakirja/Rajaviiva"
                 float jatke = _Jatke * paa * px;   // koko puolileveys + reunan häive: pyöreä pää mahtuu jatkeeseen
                 a.xy += (normaali * i.puoli.x * px + suunta * jatke) * 2.0 / ruutu * a.w;
                 // Pallon takapuoli pois (sama raja kuin Nappula-varjostimessa).
-                float3 ylos = normalize(maailma - _Keskus.xyz);
-                float3 kohti = normalize(_WorldSpaceCameraPos - maailma);
-                if (dot(ylos, kohti) < 0.02) a = float4(2, 2, 2, 1);
+                if (c < 0.02) a = float4(2, 2, 2, 1);
                 // Liian pieni rengas (vain ääriviivalla, y ≠ 0) pois kuten takapuoli; tiheys 0 = ei mitattu → kaikki näkyvät (web).
                 if (paa != 0 && _Tiheys > 0 && (abs(i.puoli.y) - 1.0) * _Tiheys < _PieninRengas) a = float4(2, 2, 2, 1);
                 o.paikka = a;
