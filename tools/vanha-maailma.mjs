@@ -338,6 +338,10 @@ export function sovitaMaailma({ leveys = 12000, lon0 = -30, etela = -58, pohjoin
 export const TARKAT_PAIKAT = {
   // Reykjavíkin seutu; Islanti on Eurooppa-laudan kaavan ulkopuolella.
   islanti: [-21.94, 64.15],
+  // Gao (Wikidata Q188904). Afrikka-laudan piste kääntyi 14,56° N 2,95° E
+  // eli 374 km kaakkoon, Niameyn suuntaan (Siirtoseppä 23.9.2026,
+  // docs/raportit/kaupunkien-latlon-20260923.md).
+  gao: [-0.05, 16.27],
 };
 
 /**

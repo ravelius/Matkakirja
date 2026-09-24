@@ -491,6 +491,19 @@ export function nostotasonPoltetut() {
   return nostotasonKirjaus()?.nostot ?? null;
 }
 
+/*
+ * NIMET ELÄVINÄ, MERKIT LAATASSA (Fable 23.9.2026, koe `poltetutnostot`):
+ * kohdemaan nostotaso on poltettu ilman nimiä (tools/generoi-
+ * laattapyramidi.mjs --nostot-ilman-nimioita → kirjauksen `nimiot:
+ * false`). Silloin laatta kantaa pisteen tai kuvamerkin ja peli piirtää
+ * vain nimen elävänä. Vanha kirjaus ilman kenttää = nimet laatassa =
+ * false (kerros pysyy poissa kuten KOHDEMAAN_NIMIOT_ELAVINA vaatii).
+ */
+export function nostotasonNimetElavina() {
+  const kirjaus = luettelo?.nostotasot ? nostotasonKirjaus() : null;
+  return Boolean(kirjaus?.versio && kirjaus.tasot?.length && kirjaus.nimiot === false);
+}
+
 /** Tunnus→tiiviste-taulu, josta elävä kerros saa vaieta. */
 function poltetutNostot() {
   if (luettelo?.nostotasot) return nostotasonKirjaus()?.nostot ?? null;

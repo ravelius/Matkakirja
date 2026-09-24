@@ -1,243 +1,183 @@
 {
   "versio": 2,
   "kaupunki": "krakova",
-  "teksti": "Krakovan Marian kirkon tornista soi torvi ja vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut odottaa enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä muualle.",
-  "tekstiSha256": "f47992ff966a18a3f43393987a8805bf353d5f7b3cac9718675469d533a3f45f",
+  "teksti": "Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
+  "tekstiSha256": "55312a9be178b614f2ba4d88974892168ac5e2f0927c79b788f60e1b18fee024",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-krakova.mp3",
     "versio": 2,
-    "tavut": 418421,
-    "sha256": "da4b3b9bb876ae211cd85f46b188691be59d3bdf4ecb1501b9d0e19da1e43b26"
+    "tavut": 336501,
+    "sha256": "43875eb33efbd7d0262c30ef3a2e03789b00990f9c86ab2d81d830ebcc544ae6"
   },
-  "kesto": 26059,
+  "kesto": 20940,
   "sanat": [
     {
       "sana": "Krakovan",
       "alku": 140,
-      "loppu": 620
+      "loppu": 600
     },
     {
-      "sana": "Marian",
-      "alku": 719,
-      "loppu": 1120
+      "sana": "yliopistossa",
+      "alku": 660,
+      "loppu": 1340
     },
     {
-      "sana": "kirkon",
-      "alku": 1159,
-      "loppu": 1539
+      "sana": "näin",
+      "alku": 1380,
+      "loppu": 1540
     },
     {
-      "sana": "tornista",
-      "alku": 1559,
-      "loppu": 2119
+      "sana": "vanhan",
+      "alku": 1580,
+      "loppu": 1920
     },
     {
-      "sana": "soi",
-      "alku": 2299,
-      "loppu": 2500
+      "sana": "maapallon",
+      "alku": 2000,
+      "loppu": 2640
     },
     {
-      "sana": "torvi",
-      "alku": 2539,
-      "loppu": 2899
-    },
-    {
-      "sana": "ja",
-      "alku": 3379,
-      "loppu": 3419
-    },
-    {
-      "sana": "vaikeni",
-      "alku": 3480,
-      "loppu": 3899
-    },
-    {
-      "sana": "kesken",
+      "sana": "Intian",
       "alku": 3980,
-      "loppu": 4299
+      "loppu": 4320
     },
     {
-      "sana": "sävelmän",
-      "alku": 4380,
-      "loppu": 4899
-    },
-    {
-      "sana": "Odotin",
-      "alku": 6480,
-      "loppu": 6819
-    },
-    {
-      "sana": "loppua",
-      "alku": 6859,
-      "loppu": 7259
-    },
-    {
-      "sana": "niin",
-      "alku": 7299,
-      "loppu": 7480
-    },
-    {
-      "sana": "kauan",
-      "alku": 7559,
-      "loppu": 7859
-    },
-    {
-      "sana": "että",
-      "alku": 7919,
-      "loppu": 8239
-    },
-    {
-      "sana": "torikauppias",
-      "alku": 8300,
-      "loppu": 9039
-    },
-    {
-      "sana": "tarjosi",
-      "alku": 9079,
-      "loppu": 9439
-    },
-    {
-      "sana": "tuolia",
-      "alku": 9500,
-      "loppu": 9899
-    },
-    {
-      "sana": "Hän",
-      "alku": 11539,
-      "loppu": 11639
+      "sana": "eteläpuolelle",
+      "alku": 4420,
+      "loppu": 5180
     },
     {
       "sana": "oli",
-      "alku": 11699,
-      "loppu": 11840
+      "alku": 5240,
+      "loppu": 5380
     },
     {
-      "sana": "kuullut",
-      "alku": 11899,
-      "loppu": 12239
+      "sana": "merkitty",
+      "alku": 5420,
+      "loppu": 5920
     },
     {
-      "sana": "saman",
-      "alku": 12300,
-      "loppu": 12599
+      "sana": "maa",
+      "alku": 5980,
+      "loppu": 6280
     },
     {
-      "sana": "katkoksen",
-      "alku": 12659,
-      "loppu": 13259
+      "sana": "nimeltä",
+      "alku": 6340,
+      "loppu": 6700
     },
     {
-      "sana": "koko",
-      "alku": 13299,
-      "loppu": 13500
+      "sana": "Amerikka",
+      "alku": 6800,
+      "loppu": 7520
     },
     {
-      "sana": "ikänsä",
-      "alku": 13619,
-      "loppu": 14039
+      "sana": "Vieressä",
+      "alku": 8760,
+      "loppu": 9180
     },
     {
-      "sana": "eikä",
-      "alku": 14519,
-      "loppu": 14719
+      "sana": "luki",
+      "alku": 9220,
+      "loppu": 9480
     },
     {
-      "sana": "aikonut",
-      "alku": 14799,
-      "loppu": 15139
+      "sana": "vastikään",
+      "alku": 10320,
+      "loppu": 10900
     },
     {
-      "sana": "odottaa",
-      "alku": 15179,
-      "loppu": 15599
+      "sana": "löydetty",
+      "alku": 10960,
+      "loppu": 11600
     },
     {
-      "sana": "enää",
-      "alku": 15679,
-      "loppu": 15960
+      "sana": "Minä",
+      "alku": 13280,
+      "loppu": 13460
     },
     {
-      "sana": "Ostin",
-      "alku": 17699,
-      "loppu": 17979
+      "sana": "luin",
+      "alku": 13500,
+      "loppu": 13660
     },
     {
-      "sana": "leivän",
-      "alku": 18039,
-      "loppu": 18539
+      "sana": "sen",
+      "alku": 13700,
+      "loppu": 13840
     },
     {
-      "sana": "ja",
-      "alku": 18600,
-      "loppu": 18659
+      "sana": "kahdesti",
+      "alku": 13880,
+      "loppu": 14420
     },
     {
-      "sana": "jäin",
-      "alku": 18739,
-      "loppu": 18979
+      "sana": "Omista",
+      "alku": 15680,
+      "loppu": 15980
     },
     {
-      "sana": "silti",
-      "alku": 19039,
-      "loppu": 19379
+      "sana": "kartoistani",
+      "alku": 16040,
+      "loppu": 16660
     },
     {
-      "sana": "Kun",
-      "alku": 21319,
-      "loppu": 21439
+      "sana": "on",
+      "alku": 16720,
+      "loppu": 16840
     },
     {
-      "sana": "kaupunki",
-      "alku": 21539,
-      "loppu": 21939
+      "sana": "puuttunut",
+      "alku": 16900,
+      "loppu": 17360
     },
     {
-      "sana": "jättää",
-      "alku": 22000,
-      "loppu": 22359
+      "sana": "saaria",
+      "alku": 17420,
+      "loppu": 17880
     },
     {
-      "sana": "jotakin",
-      "alku": 22399,
-      "loppu": 22799
+      "sana": "mutta",
+      "alku": 18400,
+      "loppu": 18620
     },
     {
-      "sana": "sanomatta",
-      "alku": 22899,
-      "loppu": 23500
+      "sana": "kokonaista",
+      "alku": 18660,
+      "loppu": 19200
     },
     {
-      "sana": "korva",
-      "alku": 24399,
-      "loppu": 24779
+      "sana": "mannerta",
+      "alku": 19280,
+      "loppu": 19800
     },
     {
-      "sana": "ei",
-      "alku": 24859,
-      "loppu": 24920
+      "sana": "en",
+      "alku": 19860,
+      "loppu": 19940
     },
     {
-      "sana": "tahdo",
-      "alku": 25019,
-      "loppu": 25279
+      "sana": "sentään",
+      "alku": 20000,
+      "loppu": 20360
     },
     {
-      "sana": "lähteä",
-      "alku": 25340,
-      "loppu": 25719
+      "sana": "ole",
+      "alku": 20400,
+      "loppu": 20520
     },
     {
-      "sana": "muualle",
-      "alku": 25779,
-      "loppu": 26059
+      "sana": "hukannut",
+      "alku": 20560,
+      "loppu": 20940
     }
   ],
   "lauseet": [
     140,
-    6480,
-    11539,
-    17699,
-    21319
+    3980,
+    8760,
+    13280,
+    15680
   ],
-  "luotu": "2026-09-11T12:04:58.963Z"
+  "luotu": "2026-09-23T15:34:36.726Z"
 }

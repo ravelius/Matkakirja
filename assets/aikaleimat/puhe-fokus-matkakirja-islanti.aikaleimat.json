@@ -1,254 +1,132 @@
 {
   "versio": 2,
   "kaupunki": "islanti",
-  "teksti": "Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Höyry nousi maasta, ja tuuli yritti viedä sen merelle. Annoin pestäväksi paitani. Se oli ensimmäinen kerta, kun maa teki minulle palveluksen vaatimatta lapioimista. Paluumatkalla näin pienet talot ja niiden takana suuren tyhjyyden. Kaulukseni oli puhtaampi kuin käsitykseni tästä saaresta.",
-  "tekstiSha256": "694329080f3937da389ccdca6496ed2da13b60a5d06ec055955adf864771bef2",
+  "teksti": "Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.",
+  "tekstiSha256": "4c3365081a483fd64b728ae263148fa4ac1a6c323020898888535b1d2a7403f4",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-islanti.mp3",
     "versio": 2,
-    "tavut": 492399,
-    "sha256": "f180b213414fd3001dd7ce636f584116b576768020dc89f661093f95b71f4887"
+    "tavut": 289271,
+    "sha256": "d9ca791010e4d50fe4ae031c68d3b5bbcd2d56a230e4b7e29ee267a009b41b23"
   },
-  "kesto": 30679,
+  "kesto": 17960,
   "sanat": [
     {
       "sana": "Reykjavikin",
-      "alku": 179,
-      "loppu": 759
+      "alku": 220,
+      "loppu": 800
     },
     {
       "sana": "ulkopuolella",
-      "alku": 839,
-      "loppu": 1539
+      "alku": 860,
+      "loppu": 1540
     },
     {
       "sana": "naiset",
-      "alku": 1779,
-      "loppu": 2119
+      "alku": 1600,
+      "loppu": 1960
     },
     {
       "sana": "pesivät",
-      "alku": 2139,
-      "loppu": 2559
+      "alku": 2000,
+      "loppu": 2360
     },
     {
       "sana": "pyykkiä",
-      "alku": 2599,
-      "loppu": 3079
+      "alku": 2420,
+      "loppu": 2920
     },
     {
       "sana": "kuumassa",
-      "alku": 3139,
-      "loppu": 3539
+      "alku": 2980,
+      "loppu": 3420
     },
     {
       "sana": "lähteessä",
-      "alku": 3619,
-      "loppu": 4279
-    },
-    {
-      "sana": "Höyry",
-      "alku": 6019,
-      "loppu": 6359
-    },
-    {
-      "sana": "nousi",
-      "alku": 6399,
-      "loppu": 6679
-    },
-    {
-      "sana": "maasta",
-      "alku": 6759,
-      "loppu": 7159
-    },
-    {
-      "sana": "ja",
-      "alku": 7599,
-      "loppu": 7639
-    },
-    {
-      "sana": "tuuli",
-      "alku": 7759,
-      "loppu": 8019
-    },
-    {
-      "sana": "yritti",
-      "alku": 8079,
-      "loppu": 8380
-    },
-    {
-      "sana": "viedä",
-      "alku": 8439,
-      "loppu": 8699
-    },
-    {
-      "sana": "sen",
-      "alku": 8760,
-      "loppu": 8880
-    },
-    {
-      "sana": "merelle",
-      "alku": 8939,
-      "loppu": 9380
+      "alku": 3460,
+      "loppu": 4160
     },
     {
       "sana": "Annoin",
-      "alku": 11099,
-      "loppu": 11359
-    },
-    {
-      "sana": "pestäväksi",
-      "alku": 11399,
-      "loppu": 11960
+      "alku": 5400,
+      "loppu": 5700
     },
     {
       "sana": "paitani",
-      "alku": 12000,
-      "loppu": 12500
+      "alku": 5740,
+      "loppu": 6140
     },
     {
-      "sana": "Se",
-      "alku": 14179,
-      "loppu": 14219
+      "sana": "pestäväksi",
+      "alku": 6180,
+      "loppu": 6840
     },
     {
-      "sana": "oli",
-      "alku": 14259,
-      "loppu": 14359
-    },
-    {
-      "sana": "ensimmäinen",
-      "alku": 14439,
-      "loppu": 14899
-    },
-    {
-      "sana": "kerta",
-      "alku": 15019,
-      "loppu": 15339
-    },
-    {
-      "sana": "kun",
-      "alku": 15659,
-      "loppu": 15779
-    },
-    {
-      "sana": "maa",
-      "alku": 15880,
-      "loppu": 16119
+      "sana": "Maa",
+      "alku": 9060,
+      "loppu": 9240
     },
     {
       "sana": "teki",
-      "alku": 16159,
-      "loppu": 16379
+      "alku": 9280,
+      "loppu": 9520
     },
     {
-      "sana": "minulle",
-      "alku": 16440,
-      "loppu": 16779
+      "sana": "ensi",
+      "alku": 9600,
+      "loppu": 9820
+    },
+    {
+      "sana": "kerran",
+      "alku": 9880,
+      "loppu": 10200
     },
     {
       "sana": "palveluksen",
-      "alku": 16840,
-      "loppu": 17459
+      "alku": 10260,
+      "loppu": 11040
     },
     {
       "sana": "vaatimatta",
-      "alku": 17719,
-      "loppu": 18219
+      "alku": 11100,
+      "loppu": 11680
     },
     {
       "sana": "lapioimista",
-      "alku": 18279,
-      "loppu": 19059
+      "alku": 11720,
+      "loppu": 12460
     },
     {
-      "sana": "Paluumatkalla",
-      "alku": 21279,
-      "loppu": 21939
+      "sana": "Kaulus",
+      "alku": 14100,
+      "loppu": 14460
     },
     {
-      "sana": "näin",
-      "alku": 22000,
-      "loppu": 22219
-    },
-    {
-      "sana": "pienet",
-      "alku": 22279,
-      "loppu": 22579
-    },
-    {
-      "sana": "talot",
-      "alku": 22680,
-      "loppu": 23019
-    },
-    {
-      "sana": "ja",
-      "alku": 23439,
-      "loppu": 23500
-    },
-    {
-      "sana": "niiden",
-      "alku": 23539,
-      "loppu": 23799
-    },
-    {
-      "sana": "takana",
-      "alku": 23840,
-      "loppu": 24180
-    },
-    {
-      "sana": "suuren",
-      "alku": 24299,
-      "loppu": 24639
-    },
-    {
-      "sana": "tyhjyyden",
-      "alku": 24760,
-      "loppu": 25379
-    },
-    {
-      "sana": "Kaulukseni",
-      "alku": 27479,
-      "loppu": 27959
-    },
-    {
-      "sana": "oli",
-      "alku": 28000,
-      "loppu": 28139
-    },
-    {
-      "sana": "puhtaampi",
-      "alku": 28199,
-      "loppu": 28719
-    },
-    {
-      "sana": "kuin",
-      "alku": 28799,
-      "loppu": 29099
+      "sana": "puhdistui",
+      "alku": 14500,
+      "loppu": 15060
     },
     {
       "sana": "käsitykseni",
-      "alku": 29159,
-      "loppu": 29840
-    },
-    {
-      "sana": "tästä",
-      "alku": 29899,
-      "loppu": 30099
+      "alku": 16140,
+      "loppu": 16800
     },
     {
       "sana": "saaresta",
-      "alku": 30219,
-      "loppu": 30679
+      "alku": 16860,
+      "loppu": 17440
+    },
+    {
+      "sana": "ei",
+      "alku": 17840,
+      "loppu": 17960
     }
   ],
   "lauseet": [
-    179,
-    6019,
-    11099,
-    14179,
-    21279,
-    27479
+    220,
+    5400,
+    9060,
+    14100
   ],
-  "luotu": "2026-09-11T12:05:15.028Z"
+  "luotu": "2026-09-23T15:36:34.232Z"
 }

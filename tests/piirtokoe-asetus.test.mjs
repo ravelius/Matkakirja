@@ -28,7 +28,7 @@ function valeMuisti() {
 const {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe, kehysprofiiliPaalla,
   piirtokoeValinta, tallennetutKokeet, koetilanAvain, luoKoevaihdonLataaja,
-  PIIRTOKOE_LATAUS_VIIVE_MS,
+  PIIRTOKOE_LATAUS_VIIVE_MS, asetaPoltetutNostot,
 } = await import('../js/piirtokoe-asetus.js');
 const { laattakerroksenKokeet } = await import('../js/pallolaatat.js');
 const { piirtokokeet } = await import('../js/pallolauta/kerrokset.js');
@@ -221,7 +221,7 @@ test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"
   try {
     globalThis.location = { search: '' };
     const alussa = koetilanAvain();
-    assert.equal(alussa, 'normaali|0|');
+    assert.equal(alussa, 'normaali|0||0');
     const ajastetut = [];
     let ladattu = 0;
     const naytetty = [];
@@ -250,6 +250,12 @@ test('koevaihto: muutos ajastaa latauksen viiveellä ja näyttää "Ladataan…"
     // Kehysprofiilin kytkin on osa tilaa: sekin vaatii latauksen.
     asetaKehysprofiili(true);
     assert.equal(lataaja.muuttui(), true);
+    // Poltettujen nostojen koe on osa tilaa (23.9.2026): lataus, ja lippu mukaan.
+    asetaKehysprofiili(false);
+    assert.equal(lataaja.muuttui(), false);
+    asetaPoltetutNostot(true);
+    assert.equal(lataaja.muuttui(), true);
+    assert.ok(tallennetutKokeet().has('poltetutnostot'));
     ajastetut.at(-1).fn();
     assert.equal(ladattu, 1, 'ajastin lataa sivun');
     assert.equal(lataaja.odottaa(), false);
@@ -260,7 +266,7 @@ test('koevaihto: main.js kytkee lataajan sekä kokeeseen että kehysprofiiliin',
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   assert.match(main, /const koevaihto = luoKoevaihdonLataaja\(\{\n  alussa: koetilanAvain\(\),\n  lataa: \(\) => location\.reload\(\),/);
   assert.match(main, /piirtokoeVihje\.textContent = lataus \? 'Ladataan…' : '';/);
-  assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 3, 'Syötekoe-rivit, paljaan kerroskytkimet ja kehysprofiilin kytkin');
+  assert.equal(main.match(/koevaihto\.muuttui\(\);/g)?.length, 4, 'Syötekoe-rivit, paljaan kerroskytkimet, kehysprofiilin ja poltettujen nostojen kytkin');
   assert.doesNotMatch(main, /Tulee voimaan seuraavassa latauksessa/);
 });
 
@@ -373,7 +379,7 @@ test('paljas: kerroskytkin tallentuu vain paljaaseen tilaan ja kuuluu koetilaan 
 test('paljas: CSS jättää kankaan, overlayn ja valikon näkyviin', () => {
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   assert.match(css, /body\.kerros-pois-dom \{ visibility: hidden; \}/);
-  for (const s of ['.pallo-kotelo canvas', '.profiilinaytto', '#menu-btn', '#paavalikko']) {
+  for (const s of ['.pallo-kotelo canvas', '.profiilinaytto', '#menu-btn', '#paavalikko', '#kehittaja-valikko-btn', '#kehittaja-valikko']) {
     assert.ok(css.includes(`body.kerros-pois-dom ${s}`), s);
   }
 });

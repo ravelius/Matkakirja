@@ -369,6 +369,9 @@ const MODULES = [
   // js/pollopoiminnat.js tuo tämän staattisesti.
   'js/packs/pollo-poiminnat.js',
   'js/packs/europe-valokuvat.js',
+  // Lisenssiportti (NC/ND, js/lisenssi.js): ei riippuvuuksia; ennen
+  // kielipakettia, äänilistoja ja kuvagalleriaa, jotka tuovat sen.
+  'js/lisenssi.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',
   'js/packs/europe-artikkelit.js',
@@ -586,6 +589,11 @@ const MODULES = [
   // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti
   // (nousu tarkistetaan awardXp-portissa) ja ui.js nimikkeen laukkuun.
   'js/tietajatasot.js',
+  // Sisältöpaketin osa 2: game.js ja ui.js tuovat nämä staattisesti
+  // (pulmien generaattori tunnisteella, packien tekstipohjat).
+  'js/pulmageneraattorit.js',
+  'js/tekstipohja.js',
+  'js/ui-tekstit.js',
   'js/game.js',
   'js/ai.js',
   /*

@@ -869,22 +869,25 @@ test('VARTIO: jokaisen pakin reaktioankkurit löytyvät sen omasta luentatekstis
   assert.ok(reaktioita >= 6, `reaktioita löytyi ${reaktioita}, pilotissa on kuusi`);
 });
 
-test('VARTIO: vanha Marseillen kohdistus ei kelpaa hyväksytylle r2-tekstille', async () => {
+test('VARTIO: Marseillen kohdistus on kohdistettu hyväksyttyyn r2-tekstiin (korjattu 23.9.2026)', async () => {
   const data = JSON.parse(lue('assets/aikaleimat/puhe-fokus-matkakirja-marseille.aikaleimat.json'));
   assert.equal(data.versio, AIKALEIMOJEN_VERSIO);
   assert.equal(data.kaupunki, 'marseille');
   assert.equal(data.tekstiSha256, sha(Buffer.from(data.teksti, 'utf8')));
   assert.equal(data.aani.nimi, 'puhe-fokus-matkakirja-marseille.mp3');
   /*
-   * Hyväksytty r2 muutti tekstin, mutta uutta maksullista ääni- ja
-   * kohdistusajoa ei ole valtuutettu. Vanha tiedosto saa jäädä talteen,
-   * mutta pelin tiukan tarkistuksen pitää hylätä se ennen käyttöä.
+   * 14.9.2026: hyväksytty r2 muutti tekstin, ja vanha kohdistus jäi
+   * silloin tarkoituksella talteen ilman uutta maksullista ajoa —
+   * tämä testi vartioi, että peli hylkäisi sen tuolloin (ks. git-
+   * historia). 23.9.2026 Fable valtuutti kohdistuksen kaikille 45
+   * fokusvirtakaupungille (.github/workflows/generoi-luennat.yml
+   * toiminto: kohdista); Marseille kohdistettiin uudelleen nykyiseen
+   * tekstiin, joten vartio kääntyi positiiviseksi: rivi kelpaa nyt.
    */
   const uusiTeksti = FOKUSVIRRAT.marseille.matkakirja.teksti;
-  assert.notEqual(data.teksti, uusiTeksti);
+  assert.equal(data.teksti, uusiTeksti);
   const tulos = await tarkistaAikaleimat(data, { teksti: uusiTeksti });
-  assert.equal(tulos.ok, false);
-  assert.match(tulos.syy, /teksti ei ole sama/);
+  assert.equal(tulos.ok, true, tulos.syy);
 });
 
 test('kohdistustyökalun kuiva ajo kertoo osoitteet eikä tarvitse verkkoa', () => {
