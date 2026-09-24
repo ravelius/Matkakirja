@@ -34,6 +34,12 @@
 // ennalleen. RadioLinssissä ei ole taukoa, joten kuori mykistää
 // (Voimakkuus = 0) ja palauttaa entisen voimakkuuden; uusi kaupunki nollaa tauon
 // kuten webissä ("uuden kaupungin valitseminen on pyyntö kuulla se").
+//
+// PALLON NAPIT (RadioNapit, web radio.js pallonNapit / piirraPallonNapinSisus): radiotilassa kartalla
+// on vain radion ▶-napit; pelin kaupunkimerkit ja nappula väistyvät (LinssiOhjain.RadioSovitin.OmatNapit).
+// Nappi 44 × 44 (osuma-ala), rengas r 13 (1,4; soiva 2,4 punaisena), opasiteetti 0,85, kanavaton 0,34
+// katkoviivalla 2 / 3,5 ilman kolmiota; soivalla hehku r 21 (0,16) ja ulkokeha r 17 (1,2, 0,62).
+// Paikka joka ruutu LinssiOhjain.Ruutupiste (null = pallon takana → piilossa); napautus SoitaKaupunki.
 using System.Collections.Generic;
 using System.Linq;
 using Matkakirja.Linssit;
@@ -58,6 +64,7 @@ namespace Matkakirja.Natiivi
         readonly List<string> naytetyt = new List<string>();
 
         LinssiOhjain.RadioSovitin sovitin;
+        readonly RadioNapit napit;
         RadioLinssi linssi;
         bool nakyvissa, levea;
         int perPuoli = 2;
@@ -84,6 +91,10 @@ namespace Matkakirja.Natiivi
         public RadioNakyma(UiKerros kerros)
         {
             this.kerros = kerros;
+            // Pallon napit kotelon alle samaan kerrokseen; pelin merkit piiloon radion ajaksi.
+            LinssiOhjain.RadioSovitin.OmatNapit = true;
+            napit = new RadioNapit(kerros.Juuri(LinssiUi.Kerros));
+            kerros.JokaRuutu += napit.Paivita;
             juuri = Rakenne.El("mk-radio", kerros.Juuri(LinssiUi.Kerros), PickingMode.Ignore);
             juuri.style.display = DisplayStyle.None;
 
@@ -168,6 +179,7 @@ namespace Matkakirja.Natiivi
             vaihe = RadioVaihe.Hiljaa;
             viritys = ViritysVaihe.Ei;
             kaupunki = null;
+            napit.Sido(l);
             if (l == null) return;
             l.TilaMuuttui += TilaMuuttui;
             TilaMuuttui(l.Tila);
@@ -925,6 +937,141 @@ namespace Matkakirja.Natiivi
             p.ClosePath();
             p.fillColor = vari;
             p.Fill();
+        }
+    }
+
+    /// <summary>Radion ▶-napit pallolla (web radio.js pallonNappiElementti, piirraPallonNapinSisus).</summary>
+    public sealed class RadioNapit
+    {
+        const float Laatikko = 44f, Rengas = 13f, Hehku = 21f, Ulkokeha = 17f, Kolmio = 4.6f;
+        static readonly Color Muste = new Color32(0x46, 0x33, 0x1f, 255), Punainen = new Color32(0xc2, 0x45, 0x2f, 255);
+
+        sealed class Nappi : VisualElement
+        {
+            public RadioNappi Tieto;
+            public Nappi() { generateVisualContent += Piirra; }
+
+            void Piirra(MeshGenerationContext mgc)
+            {
+                var d = Tieto;
+                if (d == null) return;
+                var p = mgc.painter2D;
+                var c = new Vector2(Laatikko / 2f, Laatikko / 2f);
+                if (d.Soi)
+                {
+                    p.fillColor = new Color(Punainen.r, Punainen.g, Punainen.b, 0.16f);
+                    p.BeginPath();
+                    p.Arc(c, Hehku, Angle.Degrees(0f), Angle.Degrees(360f));
+                    p.Fill();
+                }
+                var rengas = d.Soi ? Punainen : Muste;
+                p.strokeColor = new Color(rengas.r, rengas.g, rengas.b, d.OnKanava ? 0.85f : 0.34f);
+                p.lineWidth = d.Soi ? 2.4f : 1.4f;
+                if (d.OnKanava)
+                {
+                    p.BeginPath();
+                    p.Arc(c, Rengas, Angle.Degrees(0f), Angle.Degrees(360f));
+                    p.Stroke();
+                }
+                else
+                {
+                    // Katkoviiva 2 / 3,5 (web stroke-dasharray) kaarina renkaan kehallä.
+                    float keha = 2f * Mathf.PI * Rengas;
+                    for (float a = 0f; a < keha; a += 5.5f)
+                    {
+                        p.BeginPath();
+                        p.Arc(c, Rengas, Angle.Radians(a / Rengas), Angle.Radians(Mathf.Min(a + 2f, keha) / Rengas));
+                        p.Stroke();
+                    }
+                }
+                if (d.Soi)
+                {
+                    p.strokeColor = new Color(Punainen.r, Punainen.g, Punainen.b, 0.62f);
+                    p.lineWidth = 1.2f;
+                    p.BeginPath();
+                    p.Arc(c, Ulkokeha, Angle.Degrees(0f), Angle.Degrees(360f));
+                    p.Stroke();
+                }
+                if (d.OnKanava)
+                {
+                    // Optisesti keskitetty kolmio: massa vasemmalla, kärki yli.
+                    var t = d.Soi ? Punainen : Muste;
+                    p.fillColor = new Color(t.r, t.g, t.b, d.Soi ? 1f : 0.72f);
+                    p.BeginPath();
+                    p.MoveTo(c + new Vector2(-Kolmio * 0.55f, -Kolmio));
+                    p.LineTo(c + new Vector2(Kolmio, 0f));
+                    p.LineTo(c + new Vector2(-Kolmio * 0.55f, Kolmio));
+                    p.ClosePath();
+                    p.Fill();
+                }
+            }
+        }
+
+        readonly VisualElement juuri;
+        readonly Dictionary<string, Nappi> napit = new Dictionary<string, Nappi>();
+        RadioLinssi linssi;
+
+        public RadioNapit(VisualElement isa)
+        {
+            juuri = Rakenne.El("mk-radionapit", isa, PickingMode.Ignore);
+            juuri.style.display = DisplayStyle.None;
+        }
+
+        public void Sido(RadioLinssi l)
+        {
+            if (ReferenceEquals(l, linssi)) return;
+            if (linssi != null) linssi.NapitMuuttuivat -= Rakenna;
+            linssi = l;
+            if (l != null) l.NapitMuuttuivat += Rakenna;
+            Rakenna();
+        }
+
+        void Rakenna()
+        {
+            var tiedot = linssi?.Napit ?? System.Array.Empty<RadioNappi>();
+            var mukana = new HashSet<string>();
+            foreach (var d in tiedot)
+            {
+                if (d?.Kaupunki == null || !mukana.Add(d.Kaupunki)) continue;
+                if (!napit.TryGetValue(d.Kaupunki, out var n))
+                {
+                    n = new Nappi();
+                    n.AddToClassList("mk-radionappi");
+                    n.style.visibility = Visibility.Hidden;
+                    string kaupunki = d.Kaupunki;
+                    n.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); linssi?.SoitaKaupunki(kaupunki); });
+                    juuri.Add(n);
+                    napit[d.Kaupunki] = n;
+                }
+                bool muuttui = n.Tieto == null || n.Tieto.Soi != d.Soi || n.Tieto.OnKanava != d.OnKanava;
+                n.Tieto = d;
+                n.tooltip = d.OnKanava ? "Soita " + d.Kaupunki : d.Kaupunki;
+                if (muuttui) n.MarkDirtyRepaint();
+                // Soiva päällimmäiseksi, jotta hehku ei jää naapurin alle.
+                if (d.Soi) n.BringToFront();
+            }
+            foreach (var k in napit.Keys.Where(k => !mukana.Contains(k)).ToList())
+            {
+                napit[k].RemoveFromHierarchy();
+                napit.Remove(k);
+            }
+            juuri.style.display = napit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            Paivita();
+        }
+
+        /// <summary>Joka ruutu: napit pallon pisteiden päälle (Unityn ruutupikselit → paneeli).</summary>
+        public void Paivita()
+        {
+            if (napit.Count == 0 || juuri.panel == null) return;
+            foreach (var n in napit.Values)
+            {
+                var piste = LinssiOhjain.Ruutupiste(n.Tieto.Lat, n.Tieto.Lon);
+                if (!piste.HasValue) { if (n.style.visibility.value != Visibility.Hidden) n.style.visibility = Visibility.Hidden; continue; }
+                var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y));
+                n.style.left = p.x - Laatikko / 2f;
+                n.style.top = p.y - Laatikko / 2f;
+                if (n.style.visibility.value != Visibility.Visible) n.style.visibility = Visibility.Visible;
+            }
         }
     }
 }
