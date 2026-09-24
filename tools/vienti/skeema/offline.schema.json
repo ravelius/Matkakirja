@@ -66,6 +66,34 @@
         },
         "additionalProperties": false
       }
+    },
+    "ryhmat": {
+      "type": "object",
+      "description": "Pelaajan valittavat lataukset (skeema 1.23): maailma (globaali osa), maanosat (europe, middleeast, africa, asia, northamerica, southamerica, oceania) ja kaikki. tavuja summattu maiden riveistä; jaettu media voi laskea kahdesti (yläraja).",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "nimi",
+          "maat",
+          "tavuja"
+        ],
+        "properties": {
+          "nimi": {
+            "type": "string"
+          },
+          "maat": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$"
+            }
+          },
+          "tavuja": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "additionalProperties": false,

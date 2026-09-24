@@ -112,8 +112,40 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        yleisradion maahan korvaava soiva asema tools/vienti/radiokorvaavat.json,
  *        kiellettyjä ei pakettiin, omistaja 23.9.2026) ja aanitaulut
  *        laji viritys (viritysäänet pelin osoitteella, tekijä ja lisenssi).
+ *   1.17 kokoelma kohdekartat (kaupunkien kohdekartat, kohteiden x/y pelin
+ *        karttapiste()-funktiolla, kartat ämpärissä assets/kartat/),
+ *        kokoelma lehtitehtavat (fokusvirtojen lehtitehtävät) ja moduuli
+ *        js/fokustehtavat.js (PULLA_NIMET, PULLA_YLEISNIMI, palkkio).
+ *   1.18 nahtavyydet ja miniatyyrit päätasolle (2.0-polun ensimmäinen
+ *        tyypitys, docs/raportit/sisaltopaketti-2-0-suunnitelma-20260923.md).
+ *   1.19 kysymykset ja pulmat päätasolle (2.0-polku).
+ *   1.20 elaintayt ja julisteet päätasolle (2.0-polku).
+ *   1.21 fokusvirrat (virta: kuvat ratkaistuina, lehtitehtävien id:t) ja
+ *        laatat (tyypit, mannerTyypit, maarat) päätasolle; 2.0-polun
+ *        natiivin data-lukijat ovat nyt kaikki tyypitetty.
+ *   1.22 kokoelma muutosloki-natiivi (Julkaisijan rivit) ja osoittimeen
+ *        kokoelmaLkm ja muutos (automaattinen sisältörivi, julkaise-sisalto.mjs).
+ *   1.23 offline.json ryhmat: maailma, maanosat (7) ja kaikki summattuine
+ *        tavuineen; maat[].manner (omistaja: lataus maanosittain; arvot kuten kaupungit.manner).
+ *   1.24 Natiivi-UI:n datatoiveet (tools/vienti/saapumiset.mjs, karttavalot.mjs):
+ *        kokoelmat saapumistekstit (kaupungit ilman fokusvirtaa: pakin kuvaus
+ *        ja nosto tai havainto, kuvapino R.kuva-muodossa, äänite), liviansaapumiset
+ *        (LIVIAN_SAAPUMISET valintasääntöineen) ja takynostot (NOSTO_MAAT);
+ *        karttavalot uusiksi webin pallon nostokerroksesta (maanKohdemerkit:
+ *        + syvennykset, täky- ja maalehtinostot, napakohteet, kohdekartalle
+ *        siirretyt paakartalla false; nimio, paikka, kategoria, tunnus, ladottu,
+ *        taso, lahizoom, kaupunkiAvain, kohdekartta, takynosto, liitetytNostot);
+ *        kohdekartat.kohteet[].linkit ja aihe.
+ *   1.25 maakuntarajat: juuren kaaret (rajaviivat, jokainen jaettu raja kerran)
+ *        ja renkaat rakennettuna samoista kaarista (Natiivisepän pyyntö,
+ *        Fable 24.9.2026: rajat vektoriviivoina); tools/vienti/maakuntarajat.mjs
+ *        kaariTopologia. Lisäksi julkaisun tarkistus skeemasopimus.mjs.
+ *   1.26 2.0-polku jatkuu (Pelikoodarin pakettivartija, v32): tarinakaari,
+ *        paikkatiedot, kohtaamiset, kohtaamiskuvat, paikallisaarteet,
+ *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
+ *        päätasolle (tools/vienti/tyypitys.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.16';
+export const SKEEMAVERSIO_TARKKA = '1.26';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const tavuja = (s) => Buffer.byteLength(s);
@@ -244,6 +276,10 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     tiedostot,
     manifest: { media: { tiedosto: 'media.json' }, kokoelmat: kokoelmaKuvaus },
     countryShapes: nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA.map.countryShapes,
+    // Skeema 1.23: maanosaryhmät (offline.json ryhmat).
+    kartta: (({ cities, map }) => ({ countryShapes: map.countryShapes, cities, cityCountry: map.cityCountry,
+      cityManner: map.cityManner }))(nimiavaruudet.get('js/packs/maailmankartta.js').MAAILMANKARTTA),
+    mannerNimet: nimiavaruudet.get('js/game.js').MANNER_NIMET,
   });
   const offlineTeksti = JSON.stringify(offline) + '\n';
   tiedostot.set('offline.json', offlineTeksti);
