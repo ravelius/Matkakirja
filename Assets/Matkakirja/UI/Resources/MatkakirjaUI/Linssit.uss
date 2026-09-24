@@ -2784,3 +2784,17 @@
     margin: 2px 5.6px 4px 5.6px;
     -unity-text-align: middle-left;
 }
+
+/* Valitun radiomaston nimi (radiouudistus build 12, suunnitelma luku 4; mitattu hyväksytystä havainnekuvasta
+   kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg, 1024 pt): versaali serif, noin 15 pt, harvennus 1 pt,
+   kerman täyttö #f3e9d2 ja tumma ääriviiva, hämärän kartan päällä. Webissä vastinetta ei ole (▶-napit). */
+.mk-radio-mastonimi {
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #f3e9d2;
+    -unity-text-outline-width: 0.8px;
+    -unity-text-outline-color: #2a1c10;
+    text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8);
+    white-space: nowrap;
+}
