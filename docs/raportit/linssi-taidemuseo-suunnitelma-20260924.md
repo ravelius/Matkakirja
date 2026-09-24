@@ -6,25 +6,24 @@ pariteettikierroksen ja elokuvalennon jälkeen. Raamatun kohta on TAIDEMUSEO-LIN
 ja sen kirjoittaa Fable. Luvut 6 ja 7 ovat Natiivisepän (sali, valot, efektit ja muistibudjetti). Niissä
 on Linssisepän lähtöehdotus, jonka Natiiviseppä korjaa.*
 
-## 0. Päätettävät asiat (Fable ja omistaja)
+## 0. Fablen päätökset 24.9.2026 (sitovat)
 
-1. **Italian kulttuuriperintölaki.** Codice dei beni culturali (art. 107–108) rajoittaa italialaisten
-   museoiden teoskuvien kaupallista käyttöä, vaikka teos itse on public domainia (Uffizi ja Accademia ovat
-   riitauttaneet mm. Davidin ja Vitruviuksen miehen kuvien käytön). **Ehdotus:** pilotin kuvat otetaan
-   vain museoista, jotka julkaisevat kuvansa itse CC0:na (NGA, Met, AIC, Cleveland, Rijksmuseum,
-   Paris Musées). Uffizin omia tiedostoja ei käytetä, vaikka Commons merkitsee ne PD-Artiksi.
-   Siksi Venuksen syntymä, Kevät, Sikstiinan kappeli ja Mona Lisa jäävät kuviksi pois (ks. luku 4.4).
-   Kertoja voi mainita ne, ja karttapiirros vie pelaajan niiden kaupunkiin.
-2. **Ovien nimet.** Ovet avautuvat kaupunkilehdistä (Louvre, Uffizi, Prado, Rijksmuseum). Salissa näkyvät
-   teokset tulevat avoimista kokoelmista, eivät välttämättä oven museosta. **Ehdotus:** ovi on
-   "siiven sisäänkäynti" kaupungin kohdalla, ja jokaisen teoksen laatassa lukee oikea omistava museo
-   ("National Gallery of Art, Washington"). Emme väitä, että teos on Uffizissa, jos se ei ole.
-   Louvren ja Pradon kuvat eivät ole CC0-lisenssillä (Louvren ehdot rajaavat uudelleenkäyttöä, ja
-   Pradon kuvat ovat © Museo del Prado). Niiden ovista pääsee siis siipeen, jonka teokset tulevat muualta.
-3. **Kertoja.** Pilotissa on sama kertojan ääni ja sama TTS-putki kuin ihmisen matkassa.
-   Fable hyväksyy tekstit (luku 9).
-4. **Avauskynnys.** Ehdotus: linssi aukeaa, kun pelaaja on käynyt Firenzessä, Roomassa tai Venetsiassa.
-   Kehittäjätilassa linssi on aina auki.
+1. **Italian valtion museoiden teokset jäävät pilotista pois.** Tällaisia ovat Uffizin Venuksen syntymä ja
+   Kevät sekä Torinon Leonardo. Pelissä on maksullisia lisäosia, joten Italian kulttuuriperintölaki
+   (Codice dei beni culturali art. 107–108) on kaupallinen riski. Uffizille voidaan tehdä lupakysely myöhemmin.
+   **Mona Lisa saa olla mukana** Commonsin PD-tiedostona: Louvre on Ranskassa, ja EU:n tekijänoikeusdirektiivin
+   (2019/790) 14 artikla pätee, eli PD-teoksen jäljennös on vapaa.
+2. **Oven museo ei ole teoksen museo.** Ovet avautuvat kaupunkilehdistä (Louvre, Uffizi, Prado, Rijksmuseum)
+   siiven sisäänkäynteinä, ja jokaisen teoksen laatassa lukee oikea omistava museo.
+3. **PDM 1.0 kelpaa.** Se kirjataan muodossa "PD (PDM 1.0)" (SMK:n valokset).
+4. **Omakuvat.** Jos CC0-museosta (Met, NGA tai Rijks) löytyy PD-kaiverrusmuotokuva taiteilijasta, sitä
+   käytetään. Muuten medaljongissa on nimi ja signeeraus.
+5. **Layers of London ja NLS:** tarkistettava käsin ennen käyttöä.
+6. Suunnitelma on hyväksytty, kun Natiiviseppä on tarkistanut luvut 6–7. **Toteutus alkaa vasta Fablen
+   käskystä** (pariteetti ja elokuvalento ensin).
+
+Avoimet: kertojan ääni on sama kuin ihmisen matkassa, ja Fable hyväksyy tekstit (luku 9). Avauskynnykseksi
+ehdotetaan käyntiä Firenzessä, Roomassa tai Venetsiassa (kehittäjätilassa linssi on aina auki).
 
 ## 1. Linssi lyhyesti
 
@@ -201,10 +200,11 @@ Tempon dramaturgia teosta kohden (Raamattu KAMERA-AJOT, omistaja 24.9.):
 |---|---|---|---|---|
 | 0:00 | aula → Firenzen kaari | laskeutuu kattoikkunasta, SyoksyKuminauha | Firenze 1400-luvulla, kilta ja pankki | "FIRENZE · 1400" + karttapiirros Toscanasta |
 | 0:18 | Fra Angelico / Filippo Lippi | lähestyminen, pito | perspektiivi ja kulta | "Varhaisrenessanssi" |
-| 0:40 | Botticelli: Tietäjien kumarrus | Ken Burns kasvoihin | Medicit ja antiikin paluu | nimi ja signeeraus; "Medici" |
+| 0:30 | Leonardo: Ginevra de' Benci → Mona Lisa | kulku, lyhyt pito kummallakin | Leonardo ja sfumato | Leonardon muotokuva (Vasari 1568, Rijks) |
+| 0:40 | Botticelli: Tietäjien kumarrus | Ken Burns kasvoihin | Medicit ja antiikin paluu | Botticellin muotokuva (Vasari-sarja, Rijks); "Medici" |
 | 1:00 | Michelangelo: Bacchus (valos) | kierto 90° | nuori Michelangelo ja antiikki | Michelangelon mitali (Leoni 1560) |
 | 1:15 | kaari Roomaan | kulku, kiihtyvä | paavit kutsuvat taiteilijat | "ROOMA · 1508" + karttapiirros |
-| 1:30 | Rafael: Alban Madonna | pito | harmonia ja sommittelu | "Korkearenessanssi", Rafaelin nimi ja signeeraus |
+| 1:30 | Rafael: Alban Madonna | pito | harmonia ja sommittelu | "Korkearenessanssi", Rafaelin muotokuva (Bonasone, Rijks) |
 | 1:55 | Michelangelo: Mooses (valos) | kierto 120° | Sikstiinan kappeli (mainitaan) | karttapiirros → Rooma (napautettava) |
 | 2:15 | kaari Venetsiaan | kulku, valo lämpenee | meri, kauppa ja väri | "VENETSIA · 1500" |
 | 2:30 | Bellini ja Tizian: Jumalten juhla | pito | öljyväri ja valo | "Venetsialainen koulu", Bellinin mitali |
@@ -223,7 +223,7 @@ rajapinnoista. Italialaisten museoiden kuvia ei ole käytetty.
 
 | Osa | Teokset |
 |---|---|
-| **Firenze (9)** | Fra Angelico: Nöyryyden Madonna · Filippo Lippi: Madonna ja lapsi · Botticelli: Tietäjien kumarrus, Giuliano de' Medici · Filippino Lippi: Nuorukaisen muotokuva · Ghirlandaio: Madonna ja lapsi · Piero di Cosimo: Marian ja Elisabetin kohtaaminen · Bronzino: Nuori nainen ja poikansa · **Leonardo: Ginevra de' Benci** (ainoa Leonardo Amerikassa) |
+| **Firenze (9 + Mona Lisa)** | Fra Angelico: Nöyryyden Madonna · Filippo Lippi: Madonna ja lapsi · Botticelli: Tietäjien kumarrus, Giuliano de' Medici · Filippino Lippi: Nuorukaisen muotokuva · Ghirlandaio: Madonna ja lapsi · Piero di Cosimo: Marian ja Elisabetin kohtaaminen · Bronzino: Nuori nainen ja poikansa · **Leonardo: Ginevra de' Benci** (ainoa Leonardo Amerikassa) |
 | **Rooma (8)** | Perugino: Madonna ja lapsi, Lorenzo di Credi · **Rafael: Alban Madonna**, Bindo Altoviti, Pyhä Yrjö ja lohikäärme · Sebastiano del Piombo: Kardinaali Sauli ja kaksi maantieteilijää, Humanistin muotokuva · Signorelli: Ristiinnaulitseminen |
 | **Venetsia (11)** | **Bellini ja Tizian: Jumalten juhla** · Bellini: Venetsialainen aatelismies · **Tizian: Venus peilin edessä**, Ranuccio Farnese · Giorgione: Pyhä perhe · Carpaccio: Madonna ja lapsi · Crivelli: Valtaistuimen Madonna · Tintoretto: Doge Mocenigo perheineen · Veronese: Mooseksen löytyminen · Lotto: Pyhä Katariina · Mantegna: Miehen muotokuva |
 
@@ -232,7 +232,14 @@ Yksityiskohtatasot (luku 5) voidaan siis tehdä 8192 px:iin asti. Perugino, Sign
 ja Mantegna on sijoitettu saliin koulukunnan mukaan, ei maalauspaikan mukaan. Karttapiirros vie silti
 oikeaan syntykaupunkiin (liitteen alaviitteet).
 
-### 4.2 Veistokset: 5, SMK Kööpenhamina, kipsivalosten 3D-skannaukset (Public Domain Mark 1.0)
+### 4.1b Mona Lisa (Fablen päätös 1)
+
+Leonardo da Vinci: **Mona Lisa**, n. 1503–1519, Firenze, Louvre. Commons: *File:Mona Lisa, by Leonardo da Vinci,
+from C2RMF retouched.jpg*, 7479 × 11146 px, **Public domain** (varmennettu 24.9.2026 Commons API, extmetadata).
+Kuva on rajattu ja tasoitettu C2RMF:n kuvasta. Mona Lisa sijoitetaan Firenzen osaan Ginevra de' Bencin viereen.
+Laatassa lukee "Musée du Louvre, Pariisi · kuva C2RMF / Wikimedia Commons, PD".
+
+### 4.2 Veistokset: 5, SMK Kööpenhamina, kipsivalosten 3D-skannaukset (PD (PDM 1.0))
 
 Michelangelo: **Mooses**, **Bacchus**, **Kapinoiva orja**, **Kuoleva orja** ja **Ylösnoussut Kristus**.
 Tiedostot ovat STL-muodossa: pieni versio noin 20 Mt ja suuri 45–173 Mt. Ne muunnetaan GLB:ksi
@@ -240,19 +247,28 @@ Tiedostot ovat STL-muodossa: pieni versio noin 20 Mt ja suuri 45–173 Mt. Ne mu
 **Aukko:** Firenzen ja Venetsian koulukunnan veistoksia (Donatello, Verrocchio) ei löytynyt avoimena
 3D-mallina. Pilotissa kaikki viisi ovat Michelangeloa, ja ne sijoitetaan Rooman osaan (Mooses, Kristus,
 orjat) sekä Firenzen osaan (Bacchus). Lisähaku Smithsonian 3D:stä myöhemmin.
-**Päätettävä (Fable):** kelpaako PDM 1.0 (museon oma "ei tunnettuja rajoituksia") CC0:n rinnalla? Ehdotus: kelpaa.
+Lisenssi kirjataan muodossa "PD (PDM 1.0)" (Fable 24.9.).
 
-### 4.3 Taiteilijoiden muotokuvat: 5 henkilöä
+### 4.3 Taiteilijoiden muotokuvat: 17 taiteilijaa
 
-Giovanni ja Gentile Bellini (Gambellon aikalaismitalit, NGA), Michelangelo (Leone Leonin mitali 1560
-sekä kaiverrukset, NGA) ja Tizian (Agostino Carraccin kaiverrus 1587, NGA; kaiverrus omakuvan mukaan, AIC).
-Giorgione on epävarma ("after Titian", 1600-luku). **Rafaelin, Leonardon ja Botticellin omakuvat ovat
-italialaisissa museoissa**, joten medaljonki näyttää niiden sijaan nimen, elinvuodet ja
-musteella piirretyn signeerauksen. Signeeraus on typografinen, ei jäljennös.
+- **NGA (CC0):** Giovanni ja Gentile Bellini (Gambellon aikalaismitalit), Michelangelo (Leone Leonin
+  mitali 1560 ja Bonasonen kaiverrus 1546) ja Tizian (Agostino Carraccin kaiverrus 1587). Lisäksi AIC:n
+  kaiverrus Tizianin omakuvan mukaan.
+- **Rijksmuseum (CC0):** Rafael (Bonasonen kaiverrus, 5455 × 7091 px), Leonardo, Botticelli, Mantegna,
+  Perugino, Giorgione, Carpaccio, Fra Angelico, Filippo Lippi, Ghirlandaio, Piero di Cosimo, Sebastiano
+  del Piombo ja Signorelli. Useimmat ovat Vasarin *Vite* -teoksen (1568) puupiirrosmuotokuvia, joten ne
+  muodostavat yhtenäisen sarjan, joka sopii medaljonkeihin. Veronesesta ja Tintorettosta on
+  1600-luvun kaiverrukset.
+- **Ei avointa muotokuvaa:** Bronzino, Lotto ja Crivelli. Heidän medaljongissaan on nimi ja signeeraus
+  (Fablen päätös 4).
+
+Tunnisteet, IIIF-osoitteet ja resoluutiot ovat liitteen osioissa C ja E. Kuvattu henkilö on varmennettu
+Rijksmuseumin tietueen represents-kentästä, joten esimerkiksi Ridolfo Ghirlandaion ja Eusebio Crivellin
+muotokuvat on hylätty.
 
 ### 4.4 Ikonit, jotka jäävät kuvina pois
 
-Venuksen syntymä, Kevät (Uffizi), Sikstiinan kappeli (Vatikaani), Mona Lisa (Louvre), Viimeinen
+Venuksen syntymä, Kevät (Uffizi), Sikstiinan kappeli (Vatikaani), Viimeinen
 ehtoollinen (Milano), Vitruviuksen mies ja Tempesta (Accademia) sekä Assunta (Frari). Syyt ovat liitteessä.
 Kertoja mainitsee ne, ja karttapiirros vie niiden kaupunkiin pallolle.
 
@@ -308,7 +324,7 @@ Molemmat ovat Kamerakoreografia-ajoja.
   kun kamera liikkuu.
 - **Taidesuuntaukset:** kalligrafinen käsiala ja alleviivaus.
 - **Omakuvat ja muotokuvat:** soikea kaiverrusmedaljonki (kuva seepiaksi sävytettynä), jossa on nimi ja elinvuodet.
-  Jos avointa muotokuvaa ei ole (Rafael, Leonardo ja Botticelli, luku 4.3), medaljongissa on nimi, elinvuodet ja
+  Jos avointa muotokuvaa ei ole (Bronzino, Lotto ja Crivelli, luku 4.3), medaljongissa on nimi, elinvuodet ja
   musteella piirretty typografinen signeeraus.
 - **Karttapiirrokset:** pieni käsinpiirretty Italia ja reitti Firenze–Rooma–Venetsia, jossa nykyinen
   kaupunki on punaisella. Piirros on napautettava ja vie pallolle.
