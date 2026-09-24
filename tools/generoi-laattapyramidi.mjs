@@ -81,7 +81,7 @@
  */
 import { createServer } from 'node:http';
 import {
-  mkdirSync, readFileSync, writeFileSync, statSync, existsSync,
+  mkdirSync, readFileSync, writeFileSync, statSync, existsSync, rmSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import {
@@ -3074,6 +3074,15 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
+/*
+ * TYÖKANSIO SIIVOTAAN AINA (Karttaseppä 24.9.2026). Kansiossa on
+ * korkeusruudukko ja merimaski (syvällä sarjalla ~440 Mt), eikä sitä
+ * poistettu koskaan: E28-ajon 16 rinnakkaista shardia jättivät jokainen
+ * omansa, ja 429 orpoa kansiota (35 Gt) täytti levyn kesken ajon.
+ * Poisto sekä normaalissa lopussa että SIGTERM/SIGINT-pysäytyksessä.
+ */
+process.on('exit', () => { try { rmSync(tyokansio, { recursive: true, force: true }); } catch { /* ei väliä */ } });
+for (const s of ['SIGTERM', 'SIGINT']) process.once(s, () => process.exit(143));
 if (!ILMAN_AINEISTOA) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
