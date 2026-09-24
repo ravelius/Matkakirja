@@ -176,6 +176,7 @@ namespace Matkakirja.Linssit.Radio
         readonly List<Masto> mastot = new List<Masto>();
         readonly Dictionary<string, double> nousunViive = new Dictionary<string, double>();
         readonly MastonKirkkaus kirkkaus = new MastonKirkkaus();
+        readonly List<double> renkaat = new List<double>(4);   // uudelleenkäyttö: ei roskaa joka kehys
         double avausHetki = double.NaN, soiAlku = double.NaN, edellinenKello = double.NaN;
         double? kallistusEnnen;
         // Kaareva kamera-ajo uudelle mastolle (Mastot.KameraAjonKesto, Kuminauha 0,25).
@@ -217,7 +218,7 @@ namespace Matkakirja.Linssit.Radio
                 var n0 = y.Kamera;
                 kallistusEnnen = n0.Kallistus;
                 y.AjaKamera(new Nakyma(n0.Lat, n0.Lon, n0.Korkeus, Mastot.RadionKallistus), y.VahennettyLiike ? 0f : (float)Mastot.AvausS,
-                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea));
+                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), Mastot.RadionKallistus);
             }
         }
 
@@ -234,7 +235,7 @@ namespace Matkakirja.Linssit.Radio
             {
                 var n0 = y.Kamera;
                 y.AjaKamera(new Nakyma(n0.Lat, n0.Lon, n0.Korkeus, k), y.VahennettyLiike ? 0f : (float)Mastot.SulkuS,
-                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea));
+                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), k);
             }
             kallistusEnnen = null;
             mastot.Clear();
@@ -248,7 +249,7 @@ namespace Matkakirja.Linssit.Radio
             double d = Mastot.EtaisyysKm(n.Lat, n.Lon, k.Lat, k.Lon);
             if (y.VahennettyLiike)
             {
-                y.AjaKamera(new Nakyma(k.Lat, k.Lon, n.Korkeus, Mastot.RadionKallistus), 0f);
+                y.AjaKamera(new Nakyma(k.Lat, k.Lon, n.Korkeus, Mastot.RadionKallistus), 0f, null, Mastot.RadionKallistus);
                 return;
             }
             ajoAlku = Nyt;
@@ -291,7 +292,9 @@ namespace Matkakirja.Linssit.Radio
                 double sLukosta = (nyt - soiAlku) / 1000;
                 var koko = Mastot.Koko(k);
                 bool linkki = ToimintoAsemalle(aineisto.MaanAsema(k.Iso3)) == Toiminto.Linkki;
-                Mastot3D.Renkaat(k.Lat, k.Lon, Mastot.KuuluvuusKm(koko), linkki || vahennetty ? Array.Empty<double>() : Mastot.Renkaat(sLukosta));
+                renkaat.Clear();
+                if (!linkki && !vahennetty) Mastot.Renkaat(sLukosta, renkaat);
+                Mastot3D.Renkaat(k.Lat, k.Lon, Mastot.KuuluvuusKm(koko), renkaat);
                 Mastot3D.YonValot(k.Lat, k.Lon, (float)Kamera.Kamerakayrat.Pehmea(Math.Clamp(sLukosta / Mastot.ValojenSyttyminen, 0, 1)));
             }
             else
@@ -307,7 +310,7 @@ namespace Matkakirja.Linssit.Radio
                 double u = Kamera.Kamerakayrat.Arvo(Kamera.Kayra.Kuminauha, t, 0.25);
                 var (lat, lon) = Mastot.Isoympyra(ajoLat0, ajoLon0, ajoLat1, ajoLon1, u);
                 double korkeus = ajoKorkeus * (1 + (ajoKorotus - 1) * Math.Sin(Math.PI * t));
-                y.AjaKamera(new Nakyma(lat, lon, korkeus, Mastot.RadionKallistus), 0f);
+                y.AjaKamera(new Nakyma(lat, lon, korkeus, Mastot.RadionKallistus), 0f, null, Mastot.RadionKallistus);
                 if (t >= 1) ajoAlku = double.NaN;
             }
         }

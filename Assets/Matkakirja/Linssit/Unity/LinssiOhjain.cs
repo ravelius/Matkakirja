@@ -927,7 +927,7 @@ namespace Matkakirja.Natiivi
 
         public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus);
 
-        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null)
         {
             // Laitetestien jälki: keksintöjen loppukamera jäi iPadilla ajamatta (24.9.), syy selvitettävä.
             using var _ = KameraMerkki.Auto();
@@ -936,7 +936,8 @@ namespace Matkakirja.Natiivi
             // (trapetsi, ramppi 0,3) kulkee keskellä vakionopeudella, joten linssien oletus on smootherstep.
             // Kohde katon yläpuolella (ihmisen matkan nousu avaruuteen): PalloKierto sallii sen vain pyydettäessä.
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null,
-                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys, yliKaton: kohde.Korkeus > KokoPallonKorkeus);
+                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys, yliKaton: kohde.Korkeus > KokoPallonKorkeus,
+                kallistukseen: kallistukseen);
         }
 
         /// <summary>
