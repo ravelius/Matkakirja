@@ -28,6 +28,68 @@ namespace Matkakirja
         /// <summary>KarttaKerrokset: "kaupungit" (pisteet ja nimiöt) ja "nimiot".</summary>
         public bool merkitNakyvat = true, nimiotNakyvat = true;
 
+        [Header("LINSSINIMET (KarttaKerrokset \"linssinimet\"): web mitattuna, pisteinä")]
+        // WEB ON MALLI, MITATTUNA (Linssisepän tilaus, Fablen päätös build 10). Webin linssin aikana kaupunkien
+        // nimet ja pisteet jäävät kartalle ilman napautusta. Lähteet (pelin repo origin/main 24.9.2026):
+        //  - asu: js/karttanimet.js:388 PAAKAUPUNGIN_ASU { tyylitys: 'small-caps', vali: 0.14 } ja
+        //    :433 KOHDEKAUPUNGIN_ASU = sama → harvennettu kapiteeli, kirjainväli 0,14 em (TMP characterSpacing 14);
+        //  - muste: js/pallolauta/nimiorasterit.js:69 'rgba(103, 88, 73, 0.92)' (css --karttamuste, ei haloa);
+        //  - kokosuhde: js/karttanimet.js:294 isoKaupunki 15 / kaupunki 13,5 = 1,11; pisteet :699–:702
+        //    pisteIso 2,6 / piste 2,0 = 1,3; rako pisteestä NIMION_RAKO 3 (:443) = valistys.
+        //  - koko ruudulla: mitattu webin linssikuvasta (proto-3d/lokit/linssit-keksinnot-pari-20260924/
+        //    web1024/kontakti-pari-keksinnot-1796.png, 1024 × 1366 CSS px, dpr 2): LONTOO versaalin korkeus
+        //    15 px = 7,5 pt ja DUBLIN 13,3 px = 6,7 pt → kirjasinkoko noin 10–11 pt (Iowanin versaali ≈ 0,7 em);
+        //    Lontoon piste 6,6–8,6 px = 3,3–4,3 pt.
+        [Tooltip("Tavallisen kaupungin nimi linssin aikana (pt): 10,5 / 1,11 (web KOKO-suhde).")]
+        public float linssiKirjain = 9.5f;
+        [Tooltip("Tärkeän kaupungin nimi linssin aikana (pt): mitattu LONTOO/DUBLIN noin 10–11 pt.")]
+        public float linssiTarkeaKirjain = 10.5f;
+        [Tooltip("Kirjainväli em-yksikköinä (web KOHDEKAUPUNGIN_ASU.vali 0,14).")]
+        public float linssiValistysEm = 0.14f;
+        [Tooltip("Tavallinen piste linssin aikana (pt): 4,3 / 1,3 (web MERKKI.pisteIso / piste).")]
+        public float linssiPiste = 3.3f;
+        [Tooltip("Tärkeän kaupungin piste linssin aikana (pt): mitattu Lontoo 3,3–4,3 pt.")]
+        public float linssiTarkeaPiste = 4.3f;
+        [Tooltip("Web --karttamuste rgba(103, 88, 73, 0.92).")]
+        public Color linssiMuste = new Color32(103, 88, 73, 235);
+
+        /// <summary>
+        /// LINSSINIMET (KarttaKerrokset.Nakyvyys("linssinimet"), RAJAPINTA luku 4): pisteet ja nimet näkyvät,
+        /// vaikka "kaupungit" ja "nimiot" ovat pois, webin linssiasussa (yllä). Napautus ei osu (Osuma null), eikä
+        /// aloitusvalinnan huomiorengas näy. Maan kehä (Maaraja) pysyy piilossa "kaupungit"-portin mukaan.
+        /// KarttaKerrokset asettaa tämän vain, kun "kaupungit" on pois; pelikerrosten palatessa tila purkautuu.
+        /// </summary>
+        public bool LinssiTila { get; private set; }
+
+        public void LinssiNimet(bool paalla)
+        {
+            if (LinssiTila == paalla) return;
+            LinssiTila = paalla;
+            foreach (var m in merkit) Tyyli(m);
+            PaivitaRenkaat();
+            Debug.Log($"MATKAKIRJA kaupungit: linssinimet {(paalla ? "päälle" : "pois")} ({merkit.Count} merkkiä)");
+        }
+
+        /// <summary>Merkin koko ja nimiön asu nykyisen tilan mukaan (pelin asu tai linssinimet); päivittää nimiön mitat.</summary>
+        void Tyyli(Merkki m)
+        {
+            bool l = LinssiTila, tarkea = m.tyyli > 0;
+            float pk = l ? (tarkea ? linssiTarkeaPiste : linssiPiste) : (tarkea ? tarkeaPiste : piste);
+            m.pisteKoko = pk;
+            float kasvu = m.korostettu ? 1.5f : 1f;
+            m.pisteT.localScale = new Vector3(pk * kasvu, pk * kasvu, 1);
+            var n = m.nimio;
+            n.fontSize = l ? (tarkea ? linssiTarkeaKirjain : linssiKirjain) : (tarkea ? tarkeaKirjain : kirjain);
+            n.fontStyle = l ? FontStyles.SmallCaps : m.tyyli == 2 ? FontStyles.Bold : FontStyles.Normal;
+            // TMP:n characterSpacing on em/100.
+            n.characterSpacing = l ? linssiValistysEm * 100f : 0f;
+            n.color = l ? linssiMuste : musteenVari;
+            n.transform.localPosition = new Vector3(pk * 0.5f + valistys, 0, 0);
+            n.ForceMeshUpdate(true);
+            var koko = n.GetRenderedValues(false) * 10f;
+            m.koko = new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk));
+        }
+
         /// <summary>
         /// Suodatin linsseille (Linssisepän radio: vain kanavakaupungit): null = kaikki näkyvät,
         /// muuten vain luettelon kaupungit. RAJAPINTA luku 2, NaytaKaupungit.
@@ -65,6 +127,7 @@ namespace Matkakirja
             var m = merkit.Find(x => x.kaupunki.id == id);
             if (m == null) return;
             var r = m.pisteT.GetComponent<MeshRenderer>();
+            m.korostettu = vari.HasValue;
             if (vari.HasValue)
             {
                 korostusLohko ??= new MaterialPropertyBlock();
@@ -136,7 +199,8 @@ namespace Matkakirja
             Color perus = rengasMateriaali.GetColor("_BaseColor");
             foreach (var m in merkit)
             {
-                bool paalla = rengasIdt.Contains(m.kaupunki.id);
+                // Linssinimissä ei huomiorenkaita (web: linssin aikana ei pelin merkkejä).
+                bool paalla = !LinssiTila && rengasIdt.Contains(m.kaupunki.id);
                 if (paalla && m.rengas == null) m.rengas = TeeRengas(m);
                 if (m.rengas == null) continue;
                 if (m.rengas.gameObject.activeSelf != paalla) m.rengas.gameObject.SetActive(paalla);
@@ -204,6 +268,8 @@ namespace Matkakirja
             public int tarkeys;
             public Vector2 koko; // nimiön koko pisteinä
             public float pisteKoko;
+            public int tyyli; // Tarkeys 0–2: pisteen ja nimiön asu
+            public bool korostettu; // Korosta: piste 1,5-kertainen
         }
 
         /// <summary>Osuus etäisyydestä, jonka verran merkki tuodaan pinnan eteen.</summary>
@@ -317,17 +383,12 @@ namespace Matkakirja
                 p.SetParent(juuri, false);
                 p.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
                 p.gameObject.AddComponent<MeshRenderer>().sharedMaterial = pisteMateriaali;
-                float pk = tarkeys > 0 ? tarkeaPiste : piste;
-                p.localScale = new Vector3(pk, pk, 1);
 
                 var n = new GameObject("Nimiö").AddComponent<TextMeshPro>();
                 n.transform.SetParent(juuri, false);
                 n.font = fontti;
                 n.fontSharedMaterial = nimioMateriaali;
                 n.text = k.nimi;
-                n.fontSize = tarkeys > 0 ? tarkeaKirjain : kirjain;
-                n.fontStyle = tarkeys == 2 ? FontStyles.Bold : FontStyles.Normal;
-                n.color = musteenVari;
                 n.alignment = TextAlignmentOptions.MidlineLeft;
                 n.textWrappingMode = TextWrappingModes.NoWrap;
                 n.outlineWidth = 0.2f;
@@ -337,19 +398,18 @@ namespace Matkakirja
                 rt.sizeDelta = new Vector2(400, 40);
                 // TMP:n 3D-tekstin fonttikoko 10 = 1 yksikkö; juuren mittakaava on 1 yksikkö/pikseli.
                 n.transform.localScale = Vector3.one * 10f;
-                n.transform.localPosition = new Vector3(pk * 0.5f + valistys, 0, 0);
-                n.ForceMeshUpdate();
-                var koko = n.GetRenderedValues(false) * 10f;
 
-                juuri.gameObject.SetActive(false);
-                valmiit.Add(new Merkki
+                var merkki = new Merkki
                 {
                     kaupunki = k, juuri = juuri, pisteT = p, nimio = n, tarkeys = Jarjestys(k, paketinTarkeys),
+                    tyyli = tarkeys,
                     normaali = (float3)math.normalize(u - keskus),
                     pinta = (float3)u,
-                    pisteKoko = pk,
-                    koko = new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk)),
-                });
+                };
+                // Koko, asu ja nimiön mitat (pelin asu tai linssinimet, jos tila on jo päällä).
+                Tyyli(merkki);
+                juuri.gameObject.SetActive(false);
+                valmiit.Add(merkki);
             }
             // Tärkeimmät ensin; saman tärkeyden sisällä pidempi nimi ei saa etuoikeutta.
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
@@ -371,6 +431,8 @@ namespace Matkakirja
 
         Merkki Osuma(Vector2 ruutu)
         {
+            // Linssinimet ovat pelkkää karttaa: pisteitä ja nimiä ei voi napauttaa.
+            if (LinssiTila) return null;
             float kerroin = PalloKierto.Pistekerroin;
             Merkki paras = null;
             float parasEtaisyys = float.MaxValue;
@@ -444,7 +506,7 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
                 // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
-                bool edessa = merkitNakyvat && !PalloKierto.PorttiSumea && (suodatin == null || suodatin.Contains(m.kaupunki.id))
+                bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && (suodatin == null || suodatin.Contains(m.kaupunki.id))
                     && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
@@ -462,7 +524,7 @@ namespace Matkakirja
                 var koko = m.koko * kerroin;
                 var suorakulmio = new Rect(ruutu.x - 4 * kerroin, ruutu.y - koko.y * 0.5f - 2 * kerroin,
                     koko.x + 8 * kerroin, koko.y + 4 * kerroin);
-                bool mahtuu = nimiotNakyvat;
+                bool mahtuu = nimiotNakyvat || LinssiTila;
                 foreach (var v in varatut)
                     if (v.Overlaps(suorakulmio)) { mahtuu = false; break; }
                 if (mahtuu)
