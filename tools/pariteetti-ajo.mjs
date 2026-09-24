@@ -21,23 +21,26 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync, copyFileSync, rmSyn
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
-import { RIVIT, NATIIVI_ALKU, NATIIVI_SIIVOUS, KAUPUNKI, SIEMEN } from './pariteetti-rivit.mjs';
-import { skaalaa, parita, kuvaEroSiirrolla, tuomio, markdownTaulu, kontaktiarkki } from './pariteetti-vertailu.mjs';
+import { RIVIT, NATIIVI_ALKU, NATIIVI_SIIVOUS, PERUSTILA, KAUPUNKI, SIEMEN } from './pariteetti-rivit.mjs';
+import { normalisoi, skaalaa, parita, kuvaEroSiirrolla, tuomio, markdownTaulu, kontaktiarkki } from './pariteetti-vertailu.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const aja = promisify(execFile);
 const odota = (ms) => new Promise((ok) => { setTimeout(ok, ms); });
 
 /*
- * LAITTEET: Laitetestaajan simulaattorit (1572C658 iPhone 18 Pro, 3B4CDACB iPad Pro 13") ja
- * Pelikoodarin pariteetti-iPad11-834 (C1D5E34C, iPad Pro 11" M5; 834 × 1194 -mallia ei ole iOS 27:ssä).
- * Vaaka = sama iPhone komennolla ui kierto vaaka (Natiivi-UI 43b70aa).
+ * LAITTEET: Pelikoodarin omat pariteettisimulaattorit (Fable 24.9.: testikäännökset käännetään itse
+ * proto-3d/tyokalut/proto-kaanna.sh:lla ja ajetaan vain omissa simulaattoreissa): pariteetti-iPhone ja
+ * pariteetti-iPhone-vaaka (iPhone 18 Pro 402 × 874; vaaka komennolla ui kierto vaaka, Natiivi-UI 43b70aa),
+ * pariteetti-iPad11-834 (iPad Pro 11" M5 834 × 1210; 834 × 1194 -mallia ei ole iOS 27:ssä) ja
+ * pariteetti-iPad13 (iPad Pro 13" M5 1032 × 1376). Omina ne ajetaan kaikki rinnakkain.
+ * Käännös kaikkiin: proto-kaanna.sh <haara> <UDID…> (ks. KAANNOS alla).
  */
 export const LAITTEET = {
-  iphone: { udid: '1572C658-6455-4E55-8C05-3F88CB3C32F6', w: 402, h: 874, kierto: 'pysty' },
-  'iphone-vaaka': { udid: '1572C658-6455-4E55-8C05-3F88CB3C32F6', w: 874, h: 402, kierto: 'vaaka' },
+  iphone: { udid: 'A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2', w: 402, h: 874, kierto: 'pysty' },
+  'iphone-vaaka': { udid: '993F8873-E2D9-4230-81CE-CBF9230D9B55', w: 874, h: 402, kierto: 'vaaka' },
   ipad11: { udid: 'C1D5E34C-DFA8-4326-AD85-92B58A672AA7', w: 834, h: 1210, kierto: 'pysty' },
-  ipad13: { udid: '3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D', w: 1032, h: 1376, kierto: 'pysty' },
+  ipad13: { udid: '88939C12-2D15-4514-B107-DF6DAAABB227', w: 1032, h: 1376, kierto: 'pysty' },
 };
 const BUNDLE = 'app.matkakirja.proto3d';
 
@@ -138,6 +141,90 @@ async function askel(dokumentit, a) {
   if (m) await odota(Math.min(Number(m[1]), 5) * 1000);
 }
 
+// ── Tilavartija (Fable 24.9.: b12g-ajon rivi 39 kuvasi radiolinssin vertailulinssin sijaan) ─────────
+/*
+ * Ennen jokaista natiivikuvaa vartija lukee UI-puun ja odottaa enintään VARTIJA_MS, että rivin tunniste
+ * näkyy. Tunnisteet ovat saman näkymän webin tekstejä, joita ei ole pelkällä kartalla (tai rivin oma
+ * tunniste); ilman niitä odotetaan kartan PERUSTILAa. Jos tila ei täsmää, rivi on VIRHE (ei ERI), kuva
+ * otetaan silti diagnoosia varten ja ajo jatkuu. Siivouksen jälkeen vartija vahvistaa perustilan.
+ * Webissä sama tehdään pariteettikuvat.mjs:n todennuksella (nakyy-valitsimet ja ehto).
+ */
+const VARTIJA_MS = 5000;
+
+/** Webin näkymän tekstit (normalisoituna) mistä tahansa koosta; odottaa webin rinnakkaista ajoa. */
+async function webTekstit(nakyma, kokoEnsin, kattoMs = 10 * 60 * 1000) {
+  const alku = Date.now();
+  for (;;) {
+    const ehdokkaat = [kokoEnsin, ...laitteet.map(koko)].map((k) => join(WEB, `${nakyma}-${k}.json`));
+    const loytyi = ehdokkaat.find((p) => existsSync(p));
+    if (loytyi) {
+      const j = lueJson(loytyi);
+      if (j) return (j.elementit || []).filter((e) => e.teksti).map((e) => normalisoi(e.teksti)).filter((t) => t.length >= 4);
+    }
+    const loki = join(WEB, `loki-${kokoEnsin}.txt`);
+    // Webin ajo on ohi (loki kirjoitettu) eikä näkymää tullut: ei tunnisteita.
+    if (existsSync(loki) || Date.now() - alku > kattoMs) return null;
+    await odota(2000); // eslint-disable-line no-await-in-loop
+  }
+}
+
+/*
+ * Tunnisteet: KAIKKI webin näkymän tekstit, joita ei ole webin kartalla eikä natiivin perustilan puussa
+ * (natiivinPerus). b12g-vartijakokeessa pelkät pisimmät tekstit olivat webin karttanimiä (vertailulinssi:
+ * "Bosnia ja Hertsegovina"), jotka natiivi piirtää 3D:nä eikä UI-puuhun, ja oikea tila merkittiin VIRHEeksi.
+ */
+async function tunnisteet(r, l, natiivinPerus) {
+  if (r.tunniste) return [normalisoi(r.tunniste)];
+  if (!r.web) return [];
+  const [nakyma, kartta] = await Promise.all([webTekstit(r.web, koko(l)), webTekstit('kartta', koko(l))]);
+  if (!nakyma) return [];
+  const perus = new Set([...(kartta ?? []), ...natiivinPerus]);
+  return [...new Set(nakyma.filter((t) => !perus.has(t)))].sort((a, b) => b.length - a.length);
+}
+
+/** Rivin linssi (viimeinen "linssi:linssi <id>" -askel) tai null. */
+const rivinLinssi = (r) => r.natiivi.map((a) => a.match(/^linssi:linssi ([a-z0-9-]+)$/)?.[1]).filter((x) => x && x !== 'pois').pop() ?? null;
+
+/** Linssin tila: kirjoittaa linssi-komento "tila" ja lukee linssi-lokin viimeisen "tila: auki <id>" -rivin. */
+async function linssiAuki(dokumentit) {
+  const loki = join(dokumentit, 'linssi-loki.txt');
+  const ennen = existsSync(loki) ? readFileSync(loki, 'utf8').length : 0;
+  await kirjoita(dokumentit, 'linssi-komento.txt', 'tila');
+  for (let i = 0; i < 20; i += 1) {
+    const uusi = existsSync(loki) ? readFileSync(loki, 'utf8').slice(ennen) : '';
+    const m = [...uusi.matchAll(/tila: auki ([a-z0-9-]+)/g)].pop();
+    if (m) return m[1];
+    await odota(200); // eslint-disable-line no-await-in-loop
+  }
+  return null;
+}
+
+/** UI-puu nyt: kirjoittaa ui puu <nimi>, odottaa tiedoston ja palauttaa sen polun (tai null). */
+async function puuNyt(dokumentit, nimi) {
+  const puu = join(dokumentit, `ui-puu-${nimi}.json`);
+  rmSync(puu, { force: true });
+  await kirjoita(dokumentit, 'ui-komento.txt', `ui puu ${nimi}`);
+  for (let i = 0; i < 30 && !existsSync(puu); i += 1) await odota(200); // eslint-disable-line no-await-in-loop
+  return existsSync(puu) ? puu : null;
+}
+
+const puunTekstit = (polku) => (lueJson(polku)?.elementit || []).filter((e) => e.teksti && (e.opasiteetti ?? 1) >= 0.3)
+  .map((e) => normalisoi(e.teksti));
+const osuu = (tunniste, tekstit) => tekstit.some((t) => t.includes(tunniste) || (t.length >= 4 && tunniste.includes(t)));
+
+/** Odottaa, että jokin tunnisteista näkyy natiivin puussa. Palauttaa { ok, puu, osuma }. */
+async function vartioi(dokumentit, nimi, odotetut) {
+  const alku = Date.now();
+  let puu = null;
+  do {
+    puu = await puuNyt(dokumentit, nimi); // eslint-disable-line no-await-in-loop
+    const tekstit = puu ? puunTekstit(puu) : [];
+    const osuma = odotetut.find((t) => osuu(t, tekstit));
+    if (osuma) return { ok: true, puu, osuma };
+  } while (Date.now() - alku < VARTIJA_MS);
+  return { ok: false, puu };
+}
+
 /** Yksi laite: kaikki rivit peräkkäin, kuva + UI-puu jokaisesta. */
 async function ajaLaite(l) {
   const tunnus = `${l.nimi}`;
@@ -152,9 +239,13 @@ async function ajaLaite(l) {
   await askel(dokumentit, `ui:ui kierto ${l.kierto}`);
   await odota(1500);
   let peliKaynnissa = false;
+  let natiivinPerus = [];
   const aloitaPeli = async () => {
     for (const a of NATIIVI_ALKU) await askel(dokumentit, a); // eslint-disable-line no-await-in-loop
     peliKaynnissa = true;
+    // Natiivin perustilan tekstit (kartta, pilleri, kartussi): ne eivät kelpaa rivin tunnisteiksi.
+    const perus = await puuNyt(dokumentit, `perus-${tunnus}`);
+    natiivinPerus = perus ? puunTekstit(perus) : [];
   };
   // Pelittömät rivit (portti, aloitusvalinta) ensin, sitten peli käyntiin.
   const jarjestys = [...rivit.filter((r) => !r.peli), ...rivit.filter((r) => r.peli)];
@@ -164,19 +255,42 @@ async function ajaLaite(l) {
     try {
       if (r.peli && !peliKaynnissa) await aloitaPeli(); // eslint-disable-line no-await-in-loop
       for (const a of r.natiivi) await askel(dokumentit, a); // eslint-disable-line no-await-in-loop
+      const linssi = rivinLinssi(r);
+      let odotetut;
+      let v;
+      if (linssi) {
+        // Linssirivi: linssin oma tila (tekstejä ei välttämättä ole, esim. satelliitti), sitten puu kuvan pariksi.
+        const alkuL = Date.now();
+        let auki = null;
+        do auki = await linssiAuki(dokumentit); while (auki !== linssi && Date.now() - alkuL < VARTIJA_MS); // eslint-disable-line no-await-in-loop
+        odotetut = [`linssi ${linssi} auki (oli: ${auki ?? '–'})`];
+        v = { ok: auki === linssi, puu: await puuNyt(dokumentit, nimi), osuma: `linssi ${linssi}` }; // eslint-disable-line no-await-in-loop
+      } else {
+        odotetut = await tunnisteet(r, l, natiivinPerus); // eslint-disable-line no-await-in-loop
+        if (!odotetut.length) odotetut = [normalisoi(PERUSTILA)];
+        v = await vartioi(dokumentit, nimi, odotetut); // eslint-disable-line no-await-in-loop
+      }
       const png = join(NATIIVI, `${nimi}.png`);
       await simctl('io', l.udid, 'screenshot', '--type=png', png); // eslint-disable-line no-await-in-loop
-      const puu = join(dokumentit, `ui-puu-${nimi}.json`);
-      rmSync(puu, { force: true });
-      await kirjoita(dokumentit, 'ui-komento.txt', `ui puu ${nimi}`); // eslint-disable-line no-await-in-loop
-      for (let i = 0; i < 30 && !existsSync(puu); i += 1) await odota(200); // eslint-disable-line no-await-in-loop
-      if (existsSync(puu)) copyFileSync(puu, join(NATIIVI, `${nimi}.json`));
-      tulos[r.rivi] = { ok: true, puu: existsSync(puu), ms: Date.now() - alku };
+      if (v.puu) copyFileSync(v.puu, join(NATIIVI, `${nimi}.json`));
+      tulos[r.rivi] = v.ok
+        ? { ok: true, puu: true, tunniste: v.osuma, ms: Date.now() - alku }
+        : { ok: false, tila: 'VIRHE', puu: Boolean(v.puu), virhe: `tila ei täsmännyt ${VARTIJA_MS / 1000} s:ssa: odotettiin jotakin näistä: "${odotetut.slice(0, 3).join('", "')}"`, ms: Date.now() - alku };
     } catch (e) {
-      tulos[r.rivi] = { ok: false, virhe: String(e.message ?? e).split('\n')[0], ms: Date.now() - alku };
+      tulos[r.rivi] = { ok: false, tila: 'VIRHE', virhe: String(e.message ?? e).split('\n')[0], ms: Date.now() - alku };
     }
     console.log(`natiivi ${tunnus} ${r.rivi.padEnd(4)} ${tulos[r.rivi].ok ? 'ok' : `VIRHE ${tulos[r.rivi].virhe}`}${tulos[r.rivi].puu === false ? ' (ei UI-puuta: ui puu puuttuu käännöksestä?)' : ''} ${(tulos[r.rivi].ms / 1000).toFixed(1)} s`);
     for (const a of NATIIVI_SIIVOUS) await askel(dokumentit, a); // eslint-disable-line no-await-in-loop
+    if (peliKaynnissa) {
+      // Perustila vahvistetaan: kartan Liiku näkyy. Jos ei, siivous uudestaan kerran ja huomautus seuraavalle.
+      let p = await vartioi(dokumentit, `siivous-${nimi}`, [normalisoi(PERUSTILA)]); // eslint-disable-line no-await-in-loop
+      if (!p.ok) {
+        for (const a of NATIIVI_SIIVOUS) await askel(dokumentit, a); // eslint-disable-line no-await-in-loop
+        p = await vartioi(dokumentit, `siivous2-${nimi}`, [normalisoi(PERUSTILA)]); // eslint-disable-line no-await-in-loop
+      }
+      tulos[r.rivi].perustila = p.ok;
+      if (!p.ok) console.log(`natiivi ${tunnus} ${r.rivi}: perustila ei palautunut siivouksen jälkeen`);
+    }
     if (r.nollaa && peliKaynnissa) {
       await askel(dokumentit, `peli:uusi-peli ${SIEMEN} ${KAUPUNKI}`); // eslint-disable-line no-await-in-loop
       await askel(dokumentit, 'peli:odota-tila Kartta 30'); // eslint-disable-line no-await-in-loop
@@ -202,7 +316,7 @@ async function ajaNatiivi() {
 }
 
 // ── 3. Vertailu ───────────────────────────────────────────────────────
-const lueJson = (p) => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } };
+function lueJson(p) { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } }
 
 async function vertaa() {
   const sharp = await lataaSharp();
@@ -223,6 +337,7 @@ async function vertaa() {
     await kuva.resize({ width: Math.min(w, 520) }).jpeg({ quality: 72 }).toFile(kohde);
   };
   const tulos = [];
+  const natTulokset = lueJson(join(NATIIVI, 'tulokset.json')) ?? {};
   for (const r of rivit) {
     for (const l of laitteet) {
       const k = koko(l);
@@ -233,8 +348,16 @@ async function vertaa() {
       const natOk = existsSync(natPng);
       if (webOk) { rivi.webKuva = `kuvat/${r.rivi}-${l.nimi}-web.jpg`; await esikatselu(webPng, join(ULOS, rivi.webKuva), l.w, l.h); } // eslint-disable-line no-await-in-loop
       if (natOk) { rivi.natiiviKuva = `kuvat/${r.rivi}-${l.nimi}-natiivi.jpg`; await esikatselu(natPng, join(ULOS, rivi.natiiviKuva), l.w, l.h); } // eslint-disable-line no-await-in-loop
-      if (!webOk || !natOk) {
-        rivi.syyt.push(!webOk ? 'web-kuva puuttuu' : 'natiivikuva puuttuu');
+      const natTila = natTulokset[l.nimi]?.[r.rivi];
+      if (!webOk) {
+        // Webin todennus (pariteettikuvat) ei hyväksynyt näkymää: tila ei täsmännyt, ei ero.
+        rivi.tila = 'VIRHE';
+        rivi.syyt.push('web-näkymä ei avautunut (pariteettikuvat-todennus, ks. web/loki-*.txt)');
+      } else if (natTila?.tila === 'VIRHE') {
+        rivi.tila = 'VIRHE';
+        rivi.syyt.push(`natiivi: ${natTila.virhe}`);
+      } else if (!natOk) {
+        rivi.syyt.push('natiivikuva puuttuu');
       } else {
         const [a, b] = await Promise.all([harmaa(webPng, l.w, l.h), harmaa(natPng, l.w, l.h)]); // eslint-disable-line no-await-in-loop
         const kuva = kuvaEroSiirrolla(a.data, b.data, LEVEYS, a.kork);
@@ -259,11 +382,11 @@ async function vertaa() {
   writeFileSync(join(ULOS, 'kontaktiarkki.html'), kontaktiarkki(tulos, otsikko));
   const laske = (t) => tulos.filter((x) => x.tila === t).length;
   const md = `# ${otsikko}\n\nWeb ${URL_ARG}, natiivi ${BUILD}; tila siemen ${SIEMEN} ${KAUPUNKI}. `
-    + `SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')} / ${tulos.length}.\n`
+    + `SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VIRHE ${laske('VIRHE')} (tila ei täsmännyt) / ${tulos.length}.\n`
     + `Kuvat ja kontaktiarkki: ${join(ULOS, 'kontaktiarkki.html')}\n\n${markdownTaulu(tulos)}\n`;
   writeFileSync(join(ULOS, 'raportti.md'), md);
   writeFileSync(join(ULOS, 'tulos.json'), JSON.stringify(tulos, null, 2));
-  console.log(`vertailu: SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')} / ${tulos.length}`);
+  console.log(`vertailu: SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VIRHE ${laske('VIRHE')} / ${tulos.length}`);
 }
 
 // ── Ajo ───────────────────────────────────────────────────────────────

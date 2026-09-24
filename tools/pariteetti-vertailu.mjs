@@ -620,7 +620,8 @@ const html = (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({
  * suodatinnapit. Ei ulkoisia resursseja, toimii offline.
  */
 export function kontaktiarkki(rivit, otsikko = 'Pariteettiajo') {
-  const TILAT = ['SAMA', 'ERI', 'PUUTTUU'];
+  // VIRHE = tila ei täsmännyt (tilavartija tai webin todennus): ei ero vaan ajon ongelma.
+  const TILAT = ['SAMA', 'ERI', 'PUUTTUU', 'VIRHE'];
   const maarat = Object.fromEntries(TILAT.map((t) => [t, rivit.filter((r) => r.tila === t).length]));
   const kuva = (polku, kuvaus) => (polku
     ? `<a href="${html(polku)}"><img src="${html(polku)}" alt="${html(kuvaus)}" loading="lazy"></a>`
@@ -645,10 +646,10 @@ export function kontaktiarkki(rivit, otsikko = 'Pariteettiajo') {
 <title>${html(otsikko)}</title>
 <style>
 :root { --tausta:#f6f4ef; --pinta:#fff; --teksti:#1d1b18; --himmea:#6b665d; --raja:#ddd7cc;
-  --sama:#1f7a3a; --eri:#b85c00; --puuttuu:#b3261e; color-scheme: light dark; }
+  --sama:#1f7a3a; --eri:#b85c00; --puuttuu:#b3261e; --virhe:#5b5b66; color-scheme: light dark; }
 @media (prefers-color-scheme: dark) {
   :root { --tausta:#161513; --pinta:#211f1c; --teksti:#ece8e1; --himmea:#a39d92; --raja:#3a3632;
-    --sama:#4cc073; --eri:#f0a040; --puuttuu:#f06a60; }
+    --sama:#4cc073; --eri:#f0a040; --puuttuu:#f06a60; --virhe:#a0a0ad; }
 }
 * { box-sizing: border-box; }
 body { margin:0; padding:16px; background:var(--tausta); color:var(--teksti);
@@ -660,12 +661,12 @@ h1 { font-size:20px; margin:0 0 12px; }
   background:var(--pinta); color:var(--teksti); cursor:pointer; }
 .suodattimet button[aria-pressed="true"] { outline:2px solid currentColor; }
 .suodattimet button.t-SAMA { color:var(--sama); } .suodattimet button.t-ERI { color:var(--eri); }
-.suodattimet button.t-PUUTTUU { color:var(--puuttuu); }
+.suodattimet button.t-PUUTTUU { color:var(--puuttuu); } .suodattimet button.t-VIRHE { color:var(--virhe); }
 .rivi { background:var(--pinta); border:1px solid var(--raja); border-radius:10px; padding:12px; margin-bottom:14px; }
 .rivi header { display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; margin-bottom:8px; }
 .nro, .koko, .ero { color:var(--himmea); }
 .tila { font-weight:700; padding:1px 8px; border-radius:6px; color:#fff; }
-.tila.t-SAMA { background:var(--sama); } .tila.t-ERI { background:var(--eri); } .tila.t-PUUTTUU { background:var(--puuttuu); }
+.tila.t-SAMA { background:var(--sama); } .tila.t-ERI { background:var(--eri); } .tila.t-PUUTTUU { background:var(--puuttuu); } .tila.t-VIRHE { background:var(--virhe); }
 .kuvat { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 figure { margin:0; min-width:0; }
 figure img { width:100%; height:auto; display:block; border:1px solid var(--raja); border-radius:6px; }
