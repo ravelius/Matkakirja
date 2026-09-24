@@ -50,6 +50,7 @@ namespace Matkakirja
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
     ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
+    ///   maaraja pois|paalle | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja) mittaukseen
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
@@ -432,6 +433,15 @@ namespace Matkakirja
                     break;
                 case "suodatus":
                     Suodatus();
+                    break;
+                case "maaraja":
+                    // maaraja pois|paalle | maaraja paksuus <pt>|web (löydös 46 jatko, Maaraja.Sallittu/PaksuusPt)
+                    if (o.Length > 2 && o[1] == "paksuus")
+                        Maaraja.PaksuusPt = o[2] == "web" ? float.NaN : (float)D(2);
+                    else if (o.Length > 1) Maaraja.Sallittu = o[1] == "paalle";
+                    Debug.Log($"MATKAKIRJA maaraja: näkyvissä {Maaraja.Sallittu}, paksuus " +
+                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
+                              $" × pistekerroin {PalloKierto.Pistekerroin}");
                     break;
                 case "alue":
                 case "offline":

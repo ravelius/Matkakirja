@@ -9,6 +9,12 @@
 // korostukselle), ja rengas, jonka lävistäjä ruudulla (× _Tiheys) jää alle _PieninRengas
 // ruutupikselin, jätetään pois (web KOROSTUKSEN_PIENIN_RENGAS_PX). Aluerajoilla (MaaKartta)
 // y = 0, joten kumpikaan ei vaikuta niihin.
+//
+// PÄÄTYPYÖRYLÄT (löydös 46 jatko, web pehmennaLineMaterial(korostus, { paatypyorylat: true })): jatke oli neliö, joka
+// porrasmaisella rannikolla (lyhyet janat, 90° käänteet) täytti kulmat √2-kertaisiksi (omistajan kuva: 3 pt:n kehä
+// ~8,6 laitepikseliä 6:n sijaan). Nyt jatkeen osuus leikataan ympyräksi: fragmentti tietää paikkansa janan suunnassa
+// (pitkin, laitepikseleinä a:sta) ja janan pituuden, ja peitto lasketaan etäisyydestä janaan eikä vain sivusuunnasta.
+// _Jatke = 0 (aluerajat) → ennallaan.
 Shader "Matkakirja/Rajaviiva"
 {
     Properties
@@ -49,7 +55,7 @@ Shader "Matkakirja/Rajaviiva"
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; };
-            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; };
+            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; float2 pitkin : TEXCOORD1; };
 
             Vali vert(Syote i)
             {
@@ -64,7 +70,7 @@ Shader "Matkakirja/Rajaviiva"
                 float2 normaali = float2(-suunta.y, suunta.x);
                 float px = 0.5 * _Paksuus * _Kerroin + 0.75;
                 float paa = sign(i.puoli.y);
-                float jatke = _Jatke * paa * (px - 0.75);
+                float jatke = _Jatke * paa * px;   // koko puolileveys + reunan häive: pyöreä pää mahtuu jatkeeseen
                 a.xy += (normaali * i.puoli.x * px + suunta * jatke) * 2.0 / ruutu * a.w;
                 // Pallon takapuoli pois (sama raja kuin Nappula-varjostimessa).
                 float3 ylos = normalize(maailma - _Keskus.xyz);
@@ -74,13 +80,21 @@ Shader "Matkakirja/Rajaviiva"
                 if (paa != 0 && _Tiheys > 0 && (abs(i.puoli.y) - 1.0) * _Tiheys < _PieninRengas) a = float4(2, 2, 2, 1);
                 o.paikka = a;
                 o.reuna = i.puoli.x * px;
+                // Paikka janan suunnassa a:sta (a-pään kärjet −jatke, b-pään kärjet pituus + jatke) ja janan pituus.
+                // b-pään kärjen oma jana on b → b + (b − a), joten sen pituus on sama kuin a → b. suunta on NDC × ruutu
+                // eli kaksinkertaisina pikseleinä (siirto yllä kertoo 2 / ruutu), joten pituus pikseleinä on l / 2.
+                float jatkeIso = _Jatke * px;
+                float lpx = 0.5 * l;
+                o.pitkin = float2(paa > 0 ? lpx + jatkeIso : -jatkeIso, lpx);
                 return o;
             }
 
             half4 frag(Vali i) : SV_Target
             {
                 float px = 0.5 * _Paksuus * _Kerroin + 0.75;
-                half alfa = _BaseColor.a * saturate(px - abs(i.reuna));
+                float yli = max(max(-i.pitkin.x, i.pitkin.x - i.pitkin.y), 0.0);   // 0 janan kohdalla, > 0 jatkeessa
+                float etaisyys = sqrt(i.reuna * i.reuna + yli * yli);
+                half alfa = _BaseColor.a * saturate(px - etaisyys);
                 return half4(_BaseColor.rgb, alfa);
             }
             ENDHLSL

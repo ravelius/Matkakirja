@@ -25,6 +25,7 @@ $DN "$R/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nul
   ../Assets/Matkakirja/Kartta/KameraEleet.cs \
   ../Assets/Matkakirja/Kartta/Karttavalo.cs \
   ../Assets/Matkakirja/Kartta/Horisonttiusva.cs \
+  ../Assets/Matkakirja/Kartta/Viivaleveys.cs \
   ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs
 cat > rakennus/KarttaTestit.runtimeconfig.json <<J
 {"runtimeOptions":{"tfm":"net6.0","framework":{"name":"Microsoft.NETCore.App","version":"6.0.21"}}}

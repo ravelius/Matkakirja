@@ -38,15 +38,22 @@ namespace Matkakirja
     /// taustasäikeessä omalla kevyellä lukijalla (<see cref="Geojson"/>) maittain tauluksi. Jos tiedosto
     /// ei tule (offline ilman latausta), varana sisältöpaketin karkea kokoelmat/maarajat.json.
     /// Nauha piirretään Rajaviiva-varjostimella omalla materiaalikopiolla.
+    ///
+    /// LÖYDÖS 46 JATKO (omistajan kuva Kreikasta, build 11: "paksu tumma kehä rantojen ympärillä"): leveys on jo webin
+    /// arvo (Viivaleveys: 1,6–3 pt × Pistekerroin = webin css × dpr, peitto 1, #6b5539), mutta kuvassa kehä oli noin
+    /// 8,6 laitepikseliä 6:n sijaan. Syy: janojen neliöjatke porrasmaisilla rannoilla täytti kulmat; web piirtää
+    /// korostuksen päätypyörylöillä. Rajaviiva-varjostin tekee nyt pyöreät päät. Toinen ero webiin jää: webissä kehä
+    /// piirtyy ohuen rannikkoviivan (0,8–1,2 css, peitto 0,58) ALLE ja naulataan rannikkoaineistoon; natiivissa
+    /// rannikko on poltettu laattaan ja kehä piirtyy sen päälle.
     /// </summary>
     public class Maaraja : MonoBehaviour
     {
         /// <summary>Webin RAJA_MUSTE (paletin --raja-muste), sRGB.</summary>
         public static readonly Color Muste = new Color32(0x6b, 0x55, 0x39, 0xff);
         /// <summary>Leveys css-pikseleinä [kaukana, lähellä] (web VEKTORIT_KOROSTUS_LEVEYS_CSS).</summary>
-        public static readonly Vector2 LeveysCss = new Vector2(1.6f, 3f);
+        public static readonly Vector2 LeveysCss = new Vector2((float)Viivaleveys.KorostusKaukana, (float)Viivaleveys.KorostusLahella);
         /// <summary>Tiheyden liukuma laitepikseleinä astetta kohti (web VEKTORIT_LEVEYS_TIHEYS).</summary>
-        public static readonly Vector2 LeveysTiheys = new Vector2(25f, 250f);
+        public static readonly Vector2 LeveysTiheys = new Vector2((float)Viivaleveys.TiheysKaukana, (float)Viivaleveys.TiheysLahella);
         /// <summary>Häive sisään sekunteina (web VEKTORIT_HAIVE_MS).</summary>
         public const float HaiveSek = 0.26f;
         /// <summary>Pienin piirrettävä rengas laitepikseleinä (web KOROSTUKSEN_PIENIN_RENGAS_PX).</summary>
@@ -64,6 +71,14 @@ namespace Matkakirja
         /// offline-latauksen "maailma"-alueessa (Alueet.Polut).
         /// </summary>
         public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-24/maapolygonit.geojson";
+
+        /// <summary>Kehä piirretään (komento "maaraja pois|paalle", mittaukseen; oletus true).</summary>
+        public static bool Sallittu = true;
+        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = webin laki [1,6; 3].</summary>
+        public static float PaksuusPt = float.NaN;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaKokeilut() { Sallittu = true; PaksuusPt = float.NaN; }
 
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
@@ -344,7 +359,7 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (piirto == null || georeferenssi == null) return;
-            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa;
+            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa && Sallittu;
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
@@ -354,8 +369,8 @@ namespace Matkakirja
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             oma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
             float tiheys = Tiheys();
-            float t = Mathf.Clamp01((tiheys - LeveysTiheys.x) / (LeveysTiheys.y - LeveysTiheys.x));
-            oma.SetFloat("_Paksuus", Mathf.Lerp(LeveysCss.x, LeveysCss.y, t));
+            // Webin laki (Viivaleveys.KehaPt = viivanLeveysCss korostukselle) tai komennon kiinteä leveys.
+            oma.SetFloat("_Paksuus", (float)Viivaleveys.KehaPt(tiheys, PaksuusPt));
             oma.SetFloat("_Tiheys", tiheys);
             float h = haiveAlku < 0f ? 1f : Mathf.Clamp01((Time.unscaledTime - haiveAlku) / HaiveSek);
             float alfa = 1f - (1f - h) * (1f - h) * (1f - h);
