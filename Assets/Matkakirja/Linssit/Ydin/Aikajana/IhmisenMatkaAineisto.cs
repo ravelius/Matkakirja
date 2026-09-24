@@ -23,6 +23,31 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Kuvien osoitteet (kuva/ilmio, esine, aito) sellaisinaan paketista; null jos puuttuu.</summary>
         public string Kuva, Esine, Aito;
         public IReadOnlyList<string> Kysymykset = Array.Empty<string>();
+
+        // Kortin kentät (web ihmisen-matka-kortti.js kokoaNostot).
+        /// <summary>Havainnekuvan lyhyt teksti (web ilmionLyhyt: lyhyt ?? kuvateksti), muuten otsikko.</summary>
+        public string KuvaSelite;
+        /// <summary>Löytökuvan lyhyt teksti (web kuvatekstiLyhyt(esine)); lisänostolla null.</summary>
+        public string EsineSelite;
+        /// <summary>Aidon Commons-kuvan lyhyt teksti (web kuvatekstiLyhyt(kuvaAito)).</summary>
+        public string AitoSelite;
+        /// <summary>
+        /// Aidon kuvan koko olio (web kuvaAitoTiedot: tekija, lisenssi, lisenssiUrl, lahdeUrl, lahde,
+        /// selite) kortinKuvalahdetta ja suurennosta varten; null, jos aitoa kuvaa ei ole.
+        /// </summary>
+        public IReadOnlyDictionary<string, object> AidonTiedot;
+        /// <summary>Tekstin lähderivi (web lahde, esim. en-Wikipedia "Jebel Irhoud").</summary>
+        public string Lahde;
+        /// <summary>Tiedeliitteen juttu (vain löytöpaikoilla); Juttu = onko sivu (web Boolean(t.juttu)).</summary>
+        public string JuttuTeksti;
+        public bool Juttu => !string.IsNullOrEmpty(JuttuTeksti);
+        /// <summary>Kuvatiedot tiedeliitteelle: havainnekuva (web ilmio), löytökuva (esine) ja aito.</summary>
+        public Kuvatieto KuvaTieto, EsineTieto, AitoTieto;
+        /// <summary>Kortin teksti (web teksti: löytöpaikalla loyto ?? selite, lisänostolla teksti).</summary>
+        public string KortinTeksti => Loyto ?? Selite ?? "";
+        /// <summary>Lyhyt ajoitus sisällykseen ja varakuvaan (web lyhytAjoitus): "230 000 v." tai sanallinen.</summary>
+        public string LyhytAjoitus => double.IsFinite(VuosiaSitten) && VuosiaSitten > 0
+            ? IhmisenMatkaAineisto.RyhmitaLuku(VuosiaSitten) + "\u00a0v." : Ajoitus ?? "";
     }
 
     public sealed class IhmisenMatkaAineisto
@@ -33,6 +58,30 @@ namespace Matkakirja.Linssit.Aikajana
         public List<Loytopaikka> Paikat = new List<Loytopaikka>();
         public List<Loytopaikka> Lisanostot = new List<Loytopaikka>();
         public List<KertomusJakso> Kertomus = new List<KertomusJakso>();
+        /// <summary>Tiedeliitteen alkusanat (web kaari.tiedeliiteAlkusanat = IHMISEN_MATKA_KAISTASELITE); null, jos paketissa ei ole.</summary>
+        public string Kaistaselite;
+
+        /// <summary>
+        /// Tiedeliitteen sivut (web ihmisenMatkanPysakit → avaaTiedeliite): löytöpaikat järjestyksessä,
+        /// kasvoriville löytökuva (varana havainnekuva) ja aito, ilmiöksi havainnekuva. Indeksi on
+        /// Paikat-listan indeksi (web avaaNostonJuttu(indeksi)).
+        /// </summary>
+        public List<Pysakki> TiedeliitteenPysakit() => Paikat.Select(p => new Pysakki
+        {
+            Vuosi = double.NaN, Lat = p.Lat, Lon = p.Lon,
+            Otsikko = p.Otsikko, Paikka = p.Paikka, Ajoitus = p.Ajoitus,
+            Selite = p.Selite, Juttu = p.JuttuTeksti, Lahde = p.Lahde,
+            Kuva = p.EsineTieto != null
+                ? new Kuvatieto
+                {
+                    Osoite = p.EsineTieto.Osoite, Tiedosto = p.EsineTieto.Tiedosto, Lyhyt = p.EsineTieto.Lyhyt,
+                    Selite = p.EsineTieto.Selite, Kuvateksti = p.EsineTieto.Kuvateksti, Lahde = p.EsineTieto.Lahde,
+                    Vara = p.KuvaTieto?.Osoite,
+                }
+                : p.KuvaTieto,
+            KuvaAito = p.AitoTieto,
+            Ilmio = p.KuvaTieto,
+        }).ToList();
 
         public IReadOnlyDictionary<string, LatLon> Kohteet =>
             Paikat.ToDictionary(p => p.Tunnus, p => new LatLon(p.Lat, p.Lon));
@@ -61,6 +110,7 @@ namespace Matkakirja.Linssit.Aikajana
                     .OfType<string>().ToList();
                 a.Lisanostot.Add(p);
             }
+            a.Kaistaselite = MiniJson.Teksti(data, "IHMISEN_MATKA_KAISTASELITE");
             var kysymykset = Ob(MiniJson.Kentta(data, "IHMISEN_MATKA_KYSYMYKSET"));
             if (kysymykset != null)
                 foreach (var p in a.Paikat)
@@ -89,7 +139,44 @@ namespace Matkakirja.Linssit.Aikajana
             return a;
         }
 
-        static Loytopaikka Paikka(Dictionary<string, object> o, bool lisa) => new Loytopaikka
+        /// <summary>Web ryhmitaLuku: tuhaterotin sitovalla välilyönnillä (U+00A0), joka ei katkea riviltä.</summary>
+        public static string RyhmitaLuku(double n)
+        {
+            long k = (long)Math.Round(Math.Abs(double.IsFinite(n) ? n : 0), MidpointRounding.AwayFromZero);
+            var t = k.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            var b = new System.Text.StringBuilder();
+            for (int i = 0; i < t.Length; i++)
+            {
+                if (i > 0 && (t.Length - i) % 3 == 0) b.Append('\u00a0');
+                b.Append(t[i]);
+            }
+            return b.ToString();
+        }
+
+        static Loytopaikka Paikka(Dictionary<string, object> o, bool lisa)
+        {
+            var p = PaikanKentat(o, lisa);
+            var kuva = MiniJson.Kentta(o, "kuva") ?? MiniJson.Kentta(o, "ilmio");
+            var esine = lisa ? null : MiniJson.Kentta(o, "esine");
+            var aito = MiniJson.Kentta(o, "kuvaAito");
+            p.KuvaTieto = Kuvatieto.Lue(kuva);
+            p.EsineTieto = Kuvatieto.Lue(esine);
+            p.AitoTieto = Kuvatieto.Lue(aito);
+            // Web ilmionLyhyt(kuva) = lyhyt ?? kuvateksti (ei seliteä), tyhjä → otsikko.
+            var kuvaOlio = Ob(kuva);
+            var ilmionLyhyt = MiniJson.Teksti(kuvaOlio, "lyhyt") ?? MiniJson.Teksti(kuvaOlio, "kuvateksti");
+            p.KuvaSelite = !string.IsNullOrEmpty(ilmionLyhyt) ? ilmionLyhyt : p.Otsikko;
+            p.EsineSelite = Tyhja(p.EsineTieto?.LyhytTeksti);
+            p.AitoSelite = Tyhja(p.AitoTieto?.LyhytTeksti);
+            p.AidonTiedot = Ob(aito);
+            p.Lahde = MiniJson.Teksti(o, "lahde");
+            p.JuttuTeksti = lisa ? null : MiniJson.Teksti(o, "juttu");
+            return p;
+        }
+
+        static string Tyhja(string s) => string.IsNullOrEmpty(s) ? null : s;
+
+        static Loytopaikka PaikanKentat(Dictionary<string, object> o, bool lisa) => new Loytopaikka
         {
             Tunnus = MiniJson.Teksti(o, "tunnus"),
             Otsikko = MiniJson.Teksti(o, "otsikko"),
