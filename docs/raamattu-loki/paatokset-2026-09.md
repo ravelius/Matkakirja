@@ -4211,3 +4211,7 @@ Fable: Julkaisija mergeää N-erät (#2996, #3002, #3004, #3006) ensin, sitten s
 ## LAITETESTAAJA NOLLATTU (LUOVUTUS b8f867bb3 klo 16.23) — FABLE LAHETTI ALOITUSVIESTIN ITSE; testi/b10b aa17f73 SIMULAATTOREISSA (24.9.2026 klo 16.29)
 
 Postivahti ei ollut vielä lähettänyt; sessio tyhjä (0 viestiä). Aloitusviesti (viesti-laitetestaaja-aloitus.md ilta) lähetetty session id:llä + heti-tehtävä: Pariisin lähizoomin kuvapari (löydös 26) ja avaustekstin natiivikuvat b10b:stä. Natiiviseppä: b10b = b10-haarat + Natiivi-UI ecc5d2a + saapumisnäkymä b824987 + zoomi aab08db + avausteksti d4950c0 + liiku-tanne; 28–31 ja korkeuskerroin kahdella Opus-agentilla.
+
+## OMISTAJAN LOYDOKSET 32–34 (BUILD 9, klo 16.5x, SITOVA): SULJE LINSSI -NAPPI ANIMOITUU ✕:KSI, ISS-VIIVA NYKII, KUVIEN SELAUS SWIPELLA JA REUNANAPAUTUKSELLA (24.9.2026 klo 16.29)
+
+32) Avaruuslinssin 'Sulje linssi' näkyy ensin tekstinä ja pienenee animoidusti kirjain kerrallaan pelkäksi ✕:ksi yläkulmaan; sama kaikkiin linsseihin (omistajan pyytämä natiivin lisäys) → Linssiseppä. 33) ISS-viiva liikkuu nykäyksittäin, pitää liikkua pehmeästi pallon ympäri → Linssiseppä (interpolointi joka kehys). 34) avatut kuvat selattaviksi swipellä ja kuvan reunaa napauttamalla, ei väkäsiä kuvan päälle → Natiivi-UI. Kaikki build 10.
