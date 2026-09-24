@@ -4,8 +4,12 @@
 #   zsh tyokalut/siivoa-levy.sh poista   # poistaa ja kirjaa proto-3d/lokit/siivous.log
 # Ajastus: tyokalut/fi.matkakirja.siivous.plist (klo 03.00, "poista"), asennus tyokalut/README.md.
 # Ei koskaan: Build/testflight*, NAS, .git-kansiot, git-haarat.
-#  1) proto-3d/lokit/<kansio>, jossa ei ole yli 2 pv:n sisällä muuttunutta tiedostoa: kaikki paitsi
-#     *.png *.jpg *.jpeg *.txt *.md (iPadin Documents-kopiot, äänet, sisältöpaketit)
+#  1) proto-3d/lokit/<kansio>, jossa ei ole yli 2 pv:n sisällä muuttunutta tiedostoa: koko kansio pois
+#     (omistaja 24.9.2026 klo 13.3x). Ennen poistoa kuvat, joihin pelin repon docs/raportit/*.md viittaa
+#     polulla proto-3d/lokit/<kansio>/…, kopioidaan pienennettyinä (leveys ≤ 1600 px, jpg) kansioon
+#     docs/raportit/kuvat/<kansio>/, raporttien linkit vaihdetaan ja muutos viedään PR:nä (haara
+#     siivous-kuvat-<pvm>, Fable hyväksyy). Kansion *.md-tiedostot (RAPORTTI.md ym.) kopioidaan aina samaan
+#     PR:ään kansioon docs/raportit/lokit/<kansio>/. Jos kopio tai PR epäonnistuu, nämä kansiot jäävät.
 #  2) Build/dd-sim, Build/iOS-sim, Build/yo, jos yli 1 pv vanhoja eikä Unity/xcodebuild ole käynnissä
 #  3) Xcode DerivedData: projektikansiot, joiden WorkspacePath ei ole proto-3d:ssä (välimuistit jäävät)
 #  4) /Users/Shared/Claude/wt/*: pelin repon worktree, jonka haara on mergetty origin/mainiin (tai PR MERGED), työpuu
@@ -24,12 +28,68 @@ typeset -a kohteet worktreet
 kb() { du -sk "$1" 2>/dev/null | awk '{print $1}'; }
 yht=0
 
-# 1) lokikansiot
+# 1) lokikansiot: hiljaiset kansiot kokonaan; raporttien viittaamat kuvat ensin repoon (PR)
+typeset -A vanha viitattu
 for d in $P/lokit/*(/); do
   [ -n "$(find "$d" -type f -mtime -2 -print -quit)" ] && continue
-  while IFS= read -r -d '' f; do kohteet+=("$f"); done < <(find "$d" -type f \
-    ! \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.txt' -o -iname '*.md' \) -print0)
+  vanha[${d:t}]=1
 done
+if (( ${#vanha} )); then
+  PAA=$C/Matkakirja-fable
+  pvm=$(date +%Y%m%d)
+  WK=$C/wt/siivous-kuvat-$pvm
+  git -C $PAA fetch -q origin main 2>/dev/null
+  # Viite: valinnainen etuliite (/Users/Shared/Claude/ tai ../) + proto-3d/lokit/<kansio>/<polku>.<kuva>
+  typeset -a viitteet
+  viitteet=(${(f)"$(git -C $PAA grep -hoE "(/Users/Shared/Claude/|(\.\./)+)?proto-3d/lokit/[^] )\`\"'<>]+\.(png|jpe?g|webp)" \
+    origin/main -- 'docs/raportit/*.md' 2>/dev/null | sort -u)"})
+  typeset -a kopioitavat
+  for viite in $viitteet; do
+    suht=${viite#*proto-3d/lokit/}; kansio=${suht%%/*}
+    [ -n "${vanha[$kansio]}" ] && [ -f "$P/lokit/$suht" ] || continue
+    viitattu[$kansio]=1; kopioitavat+=("$viite")
+    [ $POISTA = 0 ] && echo "kuva repoon: $suht"
+  done
+  # Kansion omat muistiinpanot (RAPORTTI.md ym.) aina repoon docs/raportit/lokit/<kansio>/ (Fable 24.9.2026).
+  typeset -a mdt
+  for k in ${(k)vanha}; do
+    for f in $P/lokit/$k/**/*.md(.); do mdt+=("${f#$P/lokit/}"); viitattu[$k]=1; [ $POISTA = 0 ] && echo "md repoon: ${f#$P/lokit/}"; done
+  done
+  pr_ok=0
+  if [ $POISTA = 1 ] && (( ${#kopioitavat} + ${#mdt} )) && git -C $PAA worktree add -q -f -B siivous-kuvat-$pvm $WK origin/main 2>/dev/null; then
+    virhe=0
+    for suht in $mdt; do
+      mkdir -p $WK/docs/raportit/lokit/${suht:h} && cp "$P/lokit/$suht" $WK/docs/raportit/lokit/$suht || virhe=1
+    done
+    for viite in $kopioitavat; do
+      suht=${viite#*proto-3d/lokit/}; kansio=${suht%%/*}
+      nimi=${${suht#*/}:r}; nimi=${nimi//\//-}.jpg
+      kohde=docs/raportit/kuvat/$kansio/$nimi
+      mkdir -p $WK/${kohde:h}
+      leveys=$(sips -g pixelWidth "$P/lokit/$suht" 2>/dev/null | awk '/pixelWidth/{print $2}')
+      koko=(); [ "${leveys:-0}" -gt 1600 ] && koko=(--resampleWidth 1600)
+      sips -s format jpeg -s formatOptions 82 $koko "$P/lokit/$suht" --out $WK/$kohde >/dev/null 2>&1
+      [ -s $WK/$kohde ] || { virhe=1; echo "kuvan kopio epäonnistui: $suht"; continue; }
+      # Raportin linkki repon kopioon (suhteessa docs/raportit/-kansioon).
+      for md in ${(f)"$(grep -rlF --include='*.md' -- "$viite" $WK/docs/raportit)"}; do
+        VIITE="$viite" UUSI="kuvat/$kansio/$nimi" perl -0pi -e 's/\Q$ENV{VIITE}\E/$ENV{UUSI}/g' "$md"
+      done
+    done
+    if [ $virhe = 0 ] \
+      && git -C $WK add docs/raportit \
+      && git -C $WK commit -q -m "Siivous: lokikansioiden raportit ja kuvat repoon ($pvm, ${#mdt} md, ${#kopioitavat} kuvaa)" \
+      && git -C $WK push -q -f origin siivous-kuvat-$pvm; then
+      ( cd $WK && { gh pr view siivous-kuvat-$pvm --json state -q .state 2>/dev/null | grep -qx OPEN \
+        || gh pr create --base main --head siivous-kuvat-$pvm --title "Siivous: lokikansioiden raportit ja kuvat repoon ($pvm)" \
+             --body "Yön siivous (proto-3d tyokalut/siivoa-levy.sh) poistaa yli 2 vrk hiljaiset proto-3d/lokit-kansiot. Kansioiden ${#mdt} md-tiedostoa on kopioitu kansioon docs/raportit/lokit/<kansio>/, ja raporttien viittaamat ${#kopioitavat} kuvaa pienennettyinä (leveys ≤ 1600 px, jpg) kansioon docs/raportit/kuvat/<kansio>/ linkit vaihdettuina. Fable hyväksyy." >/dev/null; } ) \
+        && pr_ok=1
+    fi
+    git -C $PAA worktree remove --force $WK 2>/dev/null
+  fi
+  # Kansio, jolla on md-tiedostoja tai viitattuja kuvia, poistetaan vain kun ne ovat PR:ssä.
+  [ $pr_ok = 1 ] || [ $POISTA = 0 ] || for k in ${(k)viitattu}; do unset "vanha[$k]"; echo "$(date '+%Y-%m-%d %H:%M') jää (md/kuvat ei PR:ssä): $k" >> "$LOKI"; done
+  for k in ${(k)vanha}; do kohteet+=("$P/lokit/$k"); done
+fi
 
 # 2) simulaattori- ja yökäännökset
 if ! pgrep -qf "Unity.app/Contents/MacOS/Unity" && ! pgrep -qx xcodebuild; then
