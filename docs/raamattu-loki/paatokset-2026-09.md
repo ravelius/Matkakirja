@@ -4039,3 +4039,7 @@ Kaksi kohdetta piste.teksti-polulla, pisteet maalla, mittarit ok; 12 hyväksytyn
 ## NATIIVI-UI 82 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 15.25)
 
 Postivahti ilmoitti 82 %. Fable käski luovutuksen (viesti-natiivi-ui-luovutus-20260924-g.md, aloitusviesti päivitettynä WEB ON MALLI -säännöllä) ja clear_session self samassa vuorossa; notify_when_idle ei ole käytettävissä Desktop-sessioille → Postivahti lähettää aloitusviestin kun list_events = 0 ja varmistaa RC:n. Kesken oleva 'Ei webissä' -lista siirtyy luovutuksen kautta.
+
+## LAITETESTAAJA: NAPPI-INVENTAARIO + iPAD-PARITEETTI PR #3076 (laitetestaaja-inventaario-ipad) (24.9.2026 klo 15.26)
+
+Löydökset: noppalista (jo päätetty: pois, build 9), offline-lataukset natiivin oma lisä (Raamatussa hyväksytty poikkeama), aihesivun otsikko korjattu build 8 -jonossa, iPad-pistokoe 13/15 PASS ilman uusia rakenne-eroja, iPadilla aloitusportti jäi hetkittäin läpikuultavana pelin alle testikomennon jälkeen (varmistetaan oikealla kosketuksella). Suuri osa inventaariosta EI TARKISTETTU (rehellisesti merkitty). Fable: päivitykset riveihin 1–2 ennen mergeä, jatko build 8 -rivien jälkeen mitoin.
