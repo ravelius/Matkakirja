@@ -41,7 +41,9 @@
  *
  * nousu(z) = RTIN:n suurin nousu ruudukon yli, rajattu RTIN_KERROIN ×
  * kynnys(z) (kynnys = max(0,5; 77 067 m / 2^z · 0,5), sama kuin teeLaatta).
- * Tämä on pisteen yläraja B(p). JANAN yläraja J on B:n maksimi koko janan
+ * Verkko ei myöskään nouse laatan korkeimman näytteen yli, joten karkeilla
+ * tasoilla (z ≤ 8, joilla kynnys on satoja metrejä tai kilometrejä) B on
+ * lisäksi rajattu siihen. Tämä on pisteen yläraja B(p). JANAN yläraja J on B:n maksimi koko janan
  * matkalta (näytteet kolmasosan solun välein). Pisteen h on
  *
  *     h_i = max(B_i, J_{i−1}, J_i)
@@ -105,6 +107,8 @@ const M_ASTE = 111320;
  * z10 75 m, z6 1,2 km (tasolla, jolla pikseli on ~0,9 km).
  */
 export const RTIN_KERROIN = 2;
+/** Nousuvara (m), jonka ylittyessä yläraja rajataan laatan korkeimpaan näytteeseen (z ≤ 8). */
+export const KATON_RAJA = 200;
 
 /** Oletukset = maailma-ajo 2026-09-24-maailma (maasto-poltto/aja-maailma.sh). */
 export const MAASTO = {
@@ -200,11 +204,33 @@ export function ylaraja(dem, tehokasTaso, { n = RUUDUKKO, kerroin = RTIN_KERROIN
     }
     return v;
   };
-  /** Solun (i, j) tasolla t kulmien maksimi + RTIN-nousu. */
+  /*
+   * LAATAN KATTO. Verkon piste on kolmion kärkien kupera yhdistelmä, joten
+   * verkko ei koskaan nouse laatan korkeimman näytteen yli. Karkeilla
+   * tasoilla kynnys on kilometrejä (z1 19 km, z3 4,8 km: kaarevuus pitää
+   * kolmiot pieninä, ei korkeus), ja silloin katto on paljon tiukempi.
+   * Laatan kaikki 65² näytettä luetaan vain, kun nousuvara on yli
+   * KATON_RAJA metriä (z ≤ 8), eli harvoista suurista laatoista.
+   */
+  const katot = new Map();
+  const katto = (t, i, j) => {
+    const x = Math.floor(i / (n - 1)); const y = Math.floor(j / (n - 1));
+    const avain = `${t}/${x}/${y}`;
+    let v = katot.get(avain);
+    if (v === undefined) {
+      const s = naytevali(t, n);
+      v = -Infinity;
+      for (let jj = 0; jj < n; jj += 1) for (let ii = 0; ii < n; ii += 1) v = Math.max(v, nayte(t, x * (n - 1) + ii, y * (n - 1) + jj, s));
+      katot.set(avain, v);
+    }
+    return v;
+  };
+  /** Solun (i, j) tasolla t kulmien maksimi + RTIN-nousu, enintään laatan katto. */
   const solu = (t, i, j) => {
     const s = naytevali(t, n);
     const m = Math.max(nayte(t, i, j, s), nayte(t, i + 1, j, s), nayte(t, i, j + 1, s), nayte(t, i + 1, j + 1, s));
-    return m + kerroin * rtinKynnys(t);
+    const vara = kerroin * rtinKynnys(t);
+    return vara > KATON_RAJA ? Math.min(m + vara, katto(t, i, j)) : m + vara;
   };
   const paikka = (z, lon, lat) => {
     const t = tehokasTaso(z, lon, lat);
