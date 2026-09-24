@@ -1,0 +1,37 @@
+{
+  "batch": "renessanssisali-veistos-pieta-korvaa-moses-20260924",
+  "orderSource": "posti/fable-kuvaputki-renessanssisali-20260924.md",
+  "deliveryState": "r2_uploaded_and_full_readback_verified; game_connection_not_claimed",
+  "supersedes": "museo/renessanssi/veistokset/sculpture-moses.glb",
+  "instruction": "Do not connect partial Moses bust; use complete Pieta cast scan as fifth sculpture",
+  "items": [
+    {
+      "id": "sculpture-pieta",
+      "type": "sculpture-3d-scan-of-cast",
+      "nameFi": "Pietà",
+      "nameOriginal": "Pietà di San Pietro",
+      "creator": "Michelangelo Buonarroti",
+      "creatorLifespan": "1475–1564",
+      "year": "1497-1500",
+      "city": "rooma",
+      "currentLocation": "Statens Museum for Kunst, Copenhagen (plaster cast); original: S. Pietro",
+      "castObjectNumber": "KAS115",
+      "castYear": "1897",
+      "sourceUrl": "https://open.smk.dk/artwork/image/KAS115",
+      "sourceApiUrl": "https://api.smk.dk/api/v1/art/?object_number=KAS115",
+      "sourceFileUrl": "https://api.smk.dk/api/v1/download-3d/4m90f1143_KAS115_small.stl",
+      "license": "Public Domain Mark 1.0",
+      "attribution": "Statens Museum for Kunst, Copenhagen, Royal Cast Collection, KAS115; 3D scan of a plaster cast after Michelangelo Buonarroti. Original marble: S. Pietro",
+      "r2Bucket": "matkakirja",
+      "r2Key": "museo/renessanssi/veistokset/sculpture-pieta.glb",
+      "r2Url": "https://media.matkakirja.app/museo/renessanssi/veistokset/sculpture-pieta.glb",
+      "sha256": "e6aaf85a911f6bd63380b54d18612fcce1a1e57803abe31b390f9e5701a7c20f",
+      "bytes": 15538508,
+      "triangleCount": 185000,
+      "sourceTriangleCount": 400016,
+      "conversion": "Blender 5.2.1; STL imported, decimate modifier to 185000 triangles, single neutral plaster material, XY centred and Z floor aligned; exported GLB",
+      "qaNote": "Front and rear inspected; complete cast geometry present. This is a 19th-century plaster cast scan, not a scan of the Renaissance marble itself. STL source axis corrected +90 degrees about X so the group stands on its base.",
+      "readbackVerifiedAt": "2026-09-24T15:17:51.394Z"
+    }
+  ]
+}
