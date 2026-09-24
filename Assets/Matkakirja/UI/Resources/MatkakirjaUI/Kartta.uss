@@ -1623,3 +1623,35 @@
 .mk-nosto-merkki--tarkea .mk-nosto-merkki__nimio {
     font-size: 13.5px;
 }
+
+/* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
+ * varjolla; rivit 30 px välein, symboli ja nimi. Avautuu 180 ms. */
+.mk-nosto-viuhka {
+    position: absolute;
+    align-items: flex-start;
+    transition-property: opacity, scale;
+    transition-duration: 0.18s;
+}
+
+.mk-nosto-viuhka--vasen {
+    align-items: flex-end;
+}
+
+.mk-nosto-viuhka__pohja {
+    padding: 2px 10px;
+    border-radius: 12px;
+    background-color: rgba(239, 220, 180, 0.82);
+}
+
+.mk-nosto-viuhka__rivi {
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+
+.mk-nosto-viuhka__nimi {
+    margin-left: 4px;
+    font-size: 13px;
+    white-space: nowrap;
+    color: rgba(58, 40, 25, 0.92);
+}
