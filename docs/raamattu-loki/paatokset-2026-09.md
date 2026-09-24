@@ -2927,3 +2927,7 @@ Rutiinierä; aikaselain on webin toiminto, joten se tehdään (toimintopariteett
 ## NATIIVISEPPA (70 %) JA LINSSISEPPA (73 %) PYYDETTY LUOVUTUKSEEN klo 03.5x → NOLLAUS JA ALOITUSVIESTIT FABLEN KAAVALLA; NATIIVISEPALLE EI OLE VIELA ALOITUSVIESTITIEDOSTOA → KIRJOITETAAN viesti-natiiviseppa-aloitus.md LUOVUTUKSEN POHJALTA (24.9.2026 klo 04.02)
 
 Postivahdin ilmoitus klo 03.5x.
+
+## LINSSISEPPA NOLLATTU klo 04.0x (73 %): LUOVUTUS viesti-linssiseppa-luovutus-20260924.md (53e0a06b4, HAARA linssiseppa-tyo-20260923), PROTO-MASTER 3afad75, MERGE-PYYNNOSSA korkeussovitus 0896ad4; AIKASELAIMEN SOPIMUS NATIIVI-UI:N KANSSA (MOOTTORI LINSSISEPAN, NAUHA NATIIVI-UI:N); ALOITUS viesti-linssiseppa-aloitus.md PAIVITETTY (24.9.2026 klo 04.06)
+
+Isoisä 1873 erä 2 pysyy odottavana (ei webissä).
