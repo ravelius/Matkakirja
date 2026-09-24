@@ -656,6 +656,14 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     maskiAA = 0,
     rantaKerroin = 1,
     reliefi = null,
+    /*
+     * `meriKohina`: syvyyden kohinan kerroin (löydös 46, omistaja 24.9.
+     * ilta: *"syvyys vain hienovaraisena sävynä … pehmeä liuku ilman
+     * viivoja"*). 1 = entinen ±150 m:n aaltoilu, joka piirtää merelle
+     * laikkuja; 0,2 jättää pelkän syvyysliu'un. Isobaatit ja
+     * vesiviivoitus ovat omia lippujaan.
+     */
+    meriKohina = 1,
   } = asetukset;
   const SYVYYSKOHINA_YKSIKOT = 30 / 7.2;
   /*
@@ -1221,7 +1229,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
       const n = (syvyysKohinaLaudalla
         ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
         : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
-      const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
+      const mk = m + n * meriKohina * Math.min(150, Math.max(12, -m * 1.25));
       if (vIdx >= 0) vyohykkeet[vIdx] = kayraVyohyke(mk);
       const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
       const a = MEREN_PEITTO;
@@ -1354,7 +1362,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           const n = (syvyysKohinaLaudalla
             ? fbm(KOHINA, (origo.x + gx / px) / SYVYYSKOHINA_YKSIKOT, (origo.y + gy / px) / SYVYYSKOHINA_YKSIKOT, 4)
             : fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4)) - 0.5;
-          const mk = m + n * Math.min(150, Math.max(12, -m * 1.25));
+          const mk = m + n * meriKohina * Math.min(150, Math.max(12, -m * 1.25));
           if (vyohykkeet) vyohykkeet[y * W + x] = kayraVyohyke(mk);
           const s = lerpSyvyysAsteikolla(syvyysAsteikko, porrasta(mk));
           const a = MEREN_PEITTO;

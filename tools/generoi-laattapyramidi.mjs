@@ -1053,6 +1053,8 @@ const RELIEFI_KOE = (() => {
   return v === 'lammin' ? {} : JSON.parse(v);
 })();
 const DEM_KAIKKI_TASOT = lippu('dem-kaikki-tasot');
+/** `--meri-kohina 0.2` — syvyyskohinan kerroin (löydös 46: pehmeä syvyysliuku). */
+const MERI_KOHINA = valitsin('meri-kohina', null) === null ? null : Number(valitsin('meri-kohina', null));
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -3996,6 +3998,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
     ...(RANTALEVEYS ? { rantaKerroin: rantaKerroinTasolle(mitat.z) } : {}),
     ...(RELIEFI_KOE ? { reliefi: RELIEFI_KOE } : {}),
+    ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
