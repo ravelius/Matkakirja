@@ -161,7 +161,7 @@ namespace Matkakirja.Natiivi
         PalloKierto kierto;
 
         /// <summary>
-        /// Web kutistaKortinLiikkeesta (mapPanen napautus, raahaus, nipistys): pelaajan napautus karttaan kutistaa
+        /// Web kutistaKortinLiikkeesta (mapPanen napautus, raahaus, nipistys): pelaajan napautus tai ele kartalla kutistaa
         /// auki olevan kortin lapuksi. Kertojan luennan aikana kortti ei nouse takaisin (omistaja 15.9.2026), joten
         /// palautusajastinta ei tarvita. Lapun oma napautus avaa kortin (PointerDown yllä).
         /// </summary>
@@ -169,7 +169,10 @@ namespace Matkakirja.Natiivi
         {
             if (kierto != null) return;
             kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
-            if (kierto != null) kierto.Napautettu += _ => KartanLiike();
+            if (kierto == null) return;
+            kierto.Napautettu += _ => KartanLiike();
+            // Veto ja nipistys (web kartan raahaus, nipistys ja pallolaudan veto); kamera-ajo ei herätä.
+            kierto.PelaajanEle += KartanLiike;
         }
 
         public void KartanLiike()
