@@ -65,6 +65,14 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  macapa: {
+    // Fortaleza de São José de Macapá (0.0311/-51.0488) ja Marco Zero
+    // -muistomerkki (0.0007/-51.0779) ovat n. 4,7 km päässä toisistaan
+    // (sisältöinventaario #3045 kohta 5.5) — leveämpi rajaus kuin
+    // tavallisesti, koska ainoat kaksi paikannettavaa kohdetta ovat
+    // kaupungin eri laidoilla.
+    rajat: { pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037 },
+  },
   joaopessoa: {
     // Centro Cultural São Francisco (-7.1146/-34.8825) ja Theatro Santa
     // Rosa (-7.1178/-34.8867) ovat n. 0,6 km päässä toisistaan

@@ -3041,6 +3041,41 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Macapá (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Rajaus on tavallista leveämpi,
+   * koska ainoat kaksi paikannettavaa kohdetta ovat kaupungin eri
+   * laidoilla (tools/piirra-kaupunkikartta.mjs macapa-rivin kommentti).
+   */
+  macapa: {
+    polku: 'assets/kartat/macapa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037,
+    },
+    esittely: 'Kartan alue kattaa Macapán vanhan linnoituksen ja '
+      + 'Marco Zero -muistomerkin, jotka sijaitsevat kaupungin eri '
+      + 'laidoilla Amazon-joen suiston partaalla. Macapá on ainoa '
+      + 'Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja '
+      + 'kulkee.',
+    kohteet: [
+      {
+        nimi: 'Fortaleza de São José de Macapá', lat: 0.0310513, lon: -51.0487588,
+        teksti: 'Tähdenmuotoinen, nelibastioninen linnoitus valmistui '
+          + '1782 lähes kaksikymmentä vuotta kestäneen rakennustyön '
+          + 'jälkeen ja suojasi Amazonin suiston rajaseutua Ranskan ja '
+          + 'Alankomaiden pyrkimyksiltä. Linnoitusta pidetään nykyisin '
+          + 'kaupungin symbolisena syntymäpaikkana.',
+      },
+      {
+        nimi: 'Marco Zero -muistomerkki', lat: 0.0007167, lon: -51.0779419,
+        teksti: 'Vuonna 1987 avattu 30-metrinen betoniobeliski merkitsee '
+          + 'tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa '
+          + 'pohjoisella ja eteläisellä pallonpuoliskolla. Tästä '
+          + 'Macapá tunnetaan lempinimellä "Keskimaailman pääkaupunki".',
+      },
+    ],
+  },
+  /*
    * João Pessoa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
    * `teksti`-kenttä, ei `nosto:`-linkkiä. Farol do Cabo Branco/Ponta do
    * Seixas (Amerikan mantereen itäisin kärki) on muutaman km päässä
