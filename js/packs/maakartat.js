@@ -3080,6 +3080,79 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
+   * Mount Isa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Lake Moondarra, jota
+   * kulttuurinosto kuvaa "aivan kaupungin kupeessa", jätettiin pois: se
+   * on todellisuudessa n. 18 km kaupungista eikä mahdu samaan
+   * rajaukseen kuin kaivos ja lookout (tools/piirra-kaupunkikartta.mjs
+   * mountisa-rivin kommentti).
+   */
+  mountisa: {
+    polku: 'assets/kartat/mountisa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518,
+    },
+    esittely: 'Kartan alue on Mount Isan ydinkeskusta Leichhardtin joen '
+      + 'molemmin puolin. Joen länsipuolella kohoavat Mount Isa Minesin '
+      + 'piiput ja louhokset, jotka hallitsevat koko kaupungin '
+      + 'taivaanrantaa; keskustan lounaispuolella oleva City Lookout '
+      + 'tarjoaa parhaan näköalan kaivosalueelle.',
+    kohteet: [
+      {
+        nimi: 'Mount Isa Mines', lat: -20.7279113, lon: 139.4830884,
+        teksti: 'Mount Isa Minesin lyijy-, sinkki-, hopea- ja '
+          + 'kuparimalmiot ovat maailman suurimpia. Kaupungin '
+          + 'taivaanrantaa hallitsevat kaksi piippua — korkeampi '
+          + 'lyijysulatolle, punavalkoraidallinen kuparisulatolle — ja '
+          + 'niiden juurella vanha, jo käytöstä poistettu nostotorni '
+          + 'seisoo yhä kaupungin symbolina.',
+      },
+      {
+        nimi: 'City Lookout', lat: -20.7235054, lon: 139.4984195,
+        teksti: 'Kaupungin lounaisreunalla kohoava City Lookout on '
+          + 'paikallisten ja matkailijoiden näköalapaikka, josta avautuu '
+          + 'näkymä koko Mount Isaan ja sen kaivosalueen piippuihin '
+          + 'Leichhardtin joen yli.',
+      },
+    ],
+  },
+  /*
+   * Geraldton (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Houtman Abrolhosin haaksirikko
+   * on 80 km ulkona merellä, ei kartalla.
+   */
+  geraldton: {
+    polku: 'assets/kartat/geraldton-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -28.7548, etela: -28.7977, lansi: 114.5644, ita: 114.6283,
+    },
+    esittely: 'Kartan alue on Geraldtonin ydinkeskusta Champion Bayn '
+      + 'rannalla. Länsikärjessä kohoaa Point Mooren majakka, Länsi-'
+      + 'Australian vanhin yhä pystyssä oleva liittovaltion majakka; '
+      + 'kauempana idässä on kaupungin rautatieasema, joka avasi '
+      + 'sisämaan kaivosseudun satamalle 1879.',
+    kohteet: [
+      {
+        nimi: 'Point Mooren majakka', lat: -28.7827109, lon: 114.5793925,
+        teksti: 'Point Mooren punavalkoraidallinen majakka valmistui '
+          + '1878 opastamaan laivat turvallisesti Champion Bayhin. Se on '
+          + 'Länsi-Australian vanhin yhä pystyssä oleva liittovaltion '
+          + 'majakka, lähes 35 metriä korkea, ja sen valo näkyy '
+          + 'avomerelle kymmenien kilometrien päähän.',
+      },
+      {
+        nimi: 'Geraldtonin rautatieasema', lat: -28.7697728, lon: 114.6132638,
+        teksti: 'Vuonna 1879 valmistunut rautatie yhdisti Geraldtonin '
+          + 'sataman sisämaan kaivosseutuun ja moninkertaisti '
+          + 'satamaliikenteen käytännössä yhdessä yössä. Nykyinen '
+          + 'koristeellinen asemarakennus samalla paikalla toimii yhä '
+          + 'matkailijoiden lähtöpisteenä.',
+      },
+    ],
+  },
+  /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
    * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,
