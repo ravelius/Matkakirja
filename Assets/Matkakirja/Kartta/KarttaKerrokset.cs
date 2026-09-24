@@ -204,6 +204,12 @@ namespace Matkakirja
         /// Copernicus Sentinel data 2016, EOX IT Services" → Tietoja), kattavuus s2/laatat.json (laatat8).
         /// </summary>
         public static string SatelliittiVersio = null;
+        /// <summary>
+        /// Karttasepän sarjat 2026-09-24 (omistaja vertaa, hävinnyt poistetaan): meri "bmng" (topo, tumma meri) tai
+        /// "bmng-bathy" (sininen meri); kaupungit "s2" (EOX sovitettuna Blue Marbleen) tai "s2-alkup" (muuttamaton).
+        /// Kattavuus (s2/laatat.json) on molemmissa sama.
+        /// </summary>
+        public static string SatelliittiMeri = "bmng", SatelliittiS2 = "s2";
         const string SatelliittiJuuri = "https://media.matkakirja.app/julisteet/pallo/satelliitti/";
         static HashSet<long> sentinelZ8;
         bool sentinelHaettu;
@@ -292,7 +298,7 @@ namespace Matkakirja
             }
             // Satelliitti: Blue Marble paikkaan 1 (Z0–Z7; Cesium venyttää Z7:n syvemmälle), Sentinel paikkaan 2
             // (väritaso väistyy lennon ajaksi kuten linssille). Cesium Unityssä {reverseY} = XYZ-rivi kuten pohjassa.
-            silea = Kerros(pallo.gameObject, "1", SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg", 7);
+            silea = Kerros(pallo.gameObject, "1", SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg", 7);
             string s2 = SentinelKaytto(versio);
             if (varitaso != null) varitaso.Linssit(true);
             sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
@@ -301,7 +307,7 @@ namespace Matkakirja
         /// <summary>Sentinel-sarjan kansio (ämpärin osoite, "/"-loppuinen); kattavuus Laattapalvelimelle ja sen haku.</summary>
         string SentinelKaytto(string versio)
         {
-            string s2 = SatelliittiJuuri + versio + "/s2/";
+            string s2 = SatelliittiJuuri + versio + "/" + SatelliittiS2 + "/";
             Laattapalvelin.Kattavuus(s2.Substring(Laattapalvelin.Ampari.Length), SentinelKattaa);
             if (!sentinelHaettu) { sentinelHaettu = true; StartCoroutine(HaeSentinelKattavuus(versio)); }
             return s2;
@@ -321,7 +327,7 @@ namespace Matkakirja
             LennonEsilataus?.Peru();
             LennonEsilataus = null;
             string versio = SatelliittiVersio;
-            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg";
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg";
             int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
             if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return null;
             string pohjaPolku = malli.Substring(Laattapalvelin.Ampari.Length);

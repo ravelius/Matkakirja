@@ -238,7 +238,10 @@ namespace Matkakirja
                 }
                 case "satelliitti":
                     // satelliitti <versio> | satelliitti pois: lennon pinta Karttasepän satelliittisarjaan (LENNON PINTA).
+                    // satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup]
                     KarttaKerrokset.SatelliittiVersio = o.Length > 1 && o[1] != "pois" ? o[1] : null;
+                    if (o.Length > 2) KarttaKerrokset.SatelliittiMeri = o[2];
+                    if (o.Length > 3) KarttaKerrokset.SatelliittiS2 = o[3];
                     Debug.Log("MATKAKIRJA lennon pinta: satelliitti " + (KarttaKerrokset.SatelliittiVersio ?? "pois (sileä)"));
                     break;
                 case "palvelin":
