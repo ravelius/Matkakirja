@@ -74,6 +74,7 @@ SEKOITUS_RUNKO = (
     "float4 s = nayte;\n"
     "float dr = length(ddx(ouv)) + length(ddy(ouv));\n"
     "float z = log2(max(dr, 1e-12)) - (varaVari.a - 64.0);\n"
+    "z = (z > -64.0 && z < 64.0) ? z : 64.0;\n"
     "bool varaOk = varaVari.a > 0.5;\n"
     "if (vara > 4.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : !varaOk ? float4(0.0, 0.0, 1.0, 1.0)\n"
     "    : z <= varaTaso ? float4(1.0, 0.0, 0.0, 1.0) : float4(1.0 - saturate((z - 2.0) / 6.0), 1.0, 0.0, 1.0);\n"
@@ -408,8 +409,10 @@ nayte = solmupohja("SampleTexture2DNode", "Sample Texture 2D", SX + 500.0, SY, n
 # VaraVari: näyte → paikan 1 varaVari. UV ei kelpaa (akselit puuttuvat, uv < 0) → a = 0, jolloin varakarttaa ei
 # käytetä (ennen: kulman pikseli, Etelämanner, valkoinen). Testitila 4 (_lentoVara) → UV väreinä.
 VARA_VARI_RUNKO = (
-    "bool kelpaa = uv.x >= 0.0;\n"
+    "bool kelpaa = uv.x >= 0.0 && uv.x <= 1.0 && uv.y >= -0.01 && uv.y <= 1.01;\n"
     "float koodi = 64.0 + log2(max(length(ddx(uv)) + length(ddy(uv)), 1e-12));\n"
+    "// NaN/inf-safe: a valid fallback must never look unavailable (the base map would show through).\n"
+    "koodi = (koodi > 1.0 && koodi < 127.0) ? koodi : 1.0;\n"
     "vari = kelpaa ? float4(nayte.rgb, koodi) : float4(0.0, 0.0, 0.0, 0.0);\n"
     "if (tila > 3.5 && tila < 4.5) vari = kelpaa ? float4(uv.x, uv.y, 0.0, koodi) : float4(1.0, 0.0, 0.0, 64.0);\n")
 vv_slotit = [slotti("Vector4MaterialSlot", 0, "nayte", 0, v4()), slotti("Vector2MaterialSlot", 1, "uv", 0, {"x": 0.0, "y": 0.0}),
