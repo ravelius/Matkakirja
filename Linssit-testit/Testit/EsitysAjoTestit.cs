@@ -12,7 +12,7 @@ namespace Matkakirja.Linssit.Testit
 {
     public static class EsitysAjoTestit
     {
-        sealed class ValeAani : IEsityksenAani
+        internal sealed class ValeAani : IEsityksenAani
         {
             readonly ValeYmparisto y;
             double? alku;       // kello (ms), jolloin kohta oli 0
@@ -35,7 +35,7 @@ namespace Matkakirja.Linssit.Testit
             public double? KohtaMs => tauolla ?? (alku is double a ? Math.Min(Pituus, y.Kello * 1000 - a) : (double?)null);
         }
 
-        sealed class ValeNakyma : IEsityksenNakyma
+        internal sealed class ValeNakyma : IEsityksenNakyma
         {
             readonly ValeYmparisto y;
             public readonly List<(double ms, string mita)> Loki = new List<(double, string)>();
@@ -44,6 +44,7 @@ namespace Matkakirja.Linssit.Testit
             void K(string s) => Loki.Add((y.Kello * 1000, s));
             public void Musta(bool p, double f) => K($"musta {p}");
             public void Valot(double f) => K("valot");
+            public void PidonPohja(double v) => K("pohja " + v);
             public void Jakso(int i, KertomusJakso j) => K("jakso " + j.Id);
             public void Kello(double v) => Kellossa = v;
             public void SytytaKohde(string k) => K("sytyta " + k);

@@ -116,6 +116,7 @@ namespace Matkakirja.Linssit.Testit
         {
             public void Musta(bool p, double f) { }
             public void Valot(double f) { }
+            public void PidonPohja(double v) { }
             public void Jakso(int i, KertomusJakso j) { }
             public void Kello(double v) { }
             public void SytytaKohde(string k) { }

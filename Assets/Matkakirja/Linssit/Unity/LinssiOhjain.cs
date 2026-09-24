@@ -243,6 +243,14 @@ namespace Matkakirja.Natiivi
             Kirjaa($"ihmisen matka: {laskenta.Result.Vanat.Count} vanaa laskettu");
         }
 
+        /// <summary>Linssin muisti laitteelle (web localStorage): PlayerPrefs, tallennus heti levylle.</summary>
+        public sealed class PlayerPrefsVarasto : Matkakirja.Linssit.Aikajana.ILinssiVarasto
+        {
+            public string Lue(string avain) => PlayerPrefs.HasKey(avain) ? PlayerPrefs.GetString(avain) : null;
+            public void Kirjoita(string avain, string arvo) { PlayerPrefs.SetString(avain, arvo); PlayerPrefs.Save(); }
+            public void Poista(string avain) { PlayerPrefs.DeleteKey(avain); PlayerPrefs.Save(); }
+        }
+
         public sealed class IhmisenMatkaSovitin : ILinssi
         {
             readonly LinssiOhjain o;
@@ -275,14 +283,19 @@ namespace Matkakirja.Natiivi
                 // Rantamaski (linssiaineisto) puuttuu julkaistusta paketista v2: vanat
                 // piirretään silloin ilman rannan leikkausta (VanaPiirto sietää nullin).
                 kerros.AsetaVanat(tulos, virrat, rantamaski);
-                linssi.AsetaVanat(tulos);
+                linssi.AsetaVanat(tulos, virrat.Virrat);
             }
 
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
                 aani = EsityksenAani.Luo(kerros.transform, aanite);
-                linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani);
+                linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani)
+                {
+                    // Linssi muistaa paikkansa (web localStorage → PlayerPrefs, sama avain).
+                    Varasto = new PlayerPrefsVarasto(),
+                    TutkimuksenNakyma = kerros,
+                };
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 linssi.Avaa(y);
