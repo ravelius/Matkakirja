@@ -1016,6 +1016,20 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        /// <summary>Testikomento "ui lehti vierita px|loppu": auki olevan sivun vieritys ilman kosketusta.</summary>
+        public string Vierita(string mihin)
+        {
+            if (!Auki || sivu == null) return "lehti ei ole auki";
+            // Asettelu ensin: juuri avatun sivun sisältö on vielä mittaamatta.
+            sivu.schedule.Execute(() =>
+            {
+                float loppu = Mathf.Max(0, sivu.contentContainer.layout.height - sivu.contentViewport.layout.height);
+                float y = mihin == "loppu" ? loppu : float.TryParse(mihin, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var px) ? px : 0;
+                sivu.scrollOffset = new Vector2(0, Mathf.Clamp(y, 0, loppu));
+            }).StartingIn(50);
+            return null;
+        }
+
         /// <summary>Testikomento "ui lehti fokus [kaupunki] [juliste]": kaupunkilehti fokustehtävän sivulla (ilman peliä).</summary>
         public void TestaaFokus(string kaupunki, bool juliste) =>
             LehtiFokus.Lataa(() =>

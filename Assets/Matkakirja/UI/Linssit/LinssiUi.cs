@@ -171,8 +171,10 @@ namespace Matkakirja.Natiivi
             bool astro = id == AstronauttiId;
             astroTila = astro;
             Asettele();
-            ui.Tilarivi.NaytaPalkki(!astro);
-            Valitsin.NaytaNappi(!astro);
+            // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
+            bool aikajana = id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
+            ui.Tilarivi.NaytaPalkki(!astro && !aikajana);
+            Valitsin.NaytaNappi(!astro && !aikajana);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
             Maat.Kytke(linssi);
