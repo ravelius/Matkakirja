@@ -344,9 +344,30 @@ täpliä (pyramidi loppuu ±85°, ei napakalottia), Etelämanner sumeana.
 (webin tapa + mahdollinen napalaatta). **EI VIELÄ KORJATTU
 kirjoitushetkellä** — tarkista uudelleen ennen ajoa.
 
-**Testikomento**: `komento.txt`: `aja 90 0 20` (pohjoisnapa) ja
-`aja -90 0 20` (etelänapa) — geneerinen kamerakomento
-(`Komennot.cs:106-108`). `kuva napa-pohjoinen`, `kuva napa-etelainen`.
+**UUSINTA 24.9. klo 12.2x (SHA 921e0b6, NaN-suojan jälkeen, TUOREELLA
+pelillä ilman kartuscha-kutsua)**: `aja 89 0 20 1.5` (pohjoisnapa) EI
+kaatanut/spämmännyt — näkyi täyttämätön harmaa/ruskea alue navan
+kohdalla, ei mustaa muttei myöskään selkeää jäätä/napakalottia
+(`14-napa-pohjoinen-tuore.png`). HETI PERÄÄN `aja -89 0 20 1.5`
+(etelänapa) TOI SAMAN "Screen position out of view frustum (screen pos
+603.000000, 1311.000000) (Camera rect 0 0 1206 2622)" -spämmin TAKAISIN
+(`14-napa-etelainen-tuore.png`) — Antarktis itsessään näytti siistiltä
+valkoiselta täytöltä (hyvä merkki), mutta virhelaatikko ja jumiutunut
+"KREIKKA"-kartuscha-paneeli (vaikkei sitä avattu tällä kertaa komennolla)
+jäivät pysyvästi näkyviin loppuistunnon ajaksi (myös kameran palautus
+päiväntasaajalle ei poistanut niitä, ks. `4-renkaat-jumittunut.png`).
+**Havainto Natiivisepälle lähetetty**: 603/1311 = tarkalleen ruudun
+keskipiste — vaikuttaa NaN-korvausarvolta; bugi liittyy todennäköisesti
+mihin tahansa maailmakoordinaatin ruutuprojektioon (esim. maapaneelin
+sijoittelu) äärimmäisillä leveysasteilla, ei pelkästään kartuscha-
+komentoon. Vaatii sovelluksen UUDELLEENKÄYNNISTYKSEN puhdistuakseen.
+
+**Testikomento**: `komento.txt`: `aja 89 0 20 1.5` (pohjoisnapa) ja
+`aja -89 0 20 1.5` (etelänapa), Natiiviseppän oikea 4-parametrinen
+syntaksi. `ui jatka` ensin jos peli ei ole Kartta-tilassa. `kuva
+napa-pohjoinen`, `kuva napa-etelainen`. KÄYNNISTÄ APPI UUDELLEEN ennen
+toista napaa jos ensimmäinen laukaisee spämmin, jotta jälkimmäinen
+näkyy puhtaana.
 
 **Odotettu tulos webin mukaan** (`js/pallo.js:2109+`,
 `tools/tee-napakalotit.mjs`): Web Mercator -laattaverkko loppuu 85,05°:ssa,
