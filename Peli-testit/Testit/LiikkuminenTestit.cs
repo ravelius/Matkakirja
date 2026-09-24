@@ -1,6 +1,7 @@
 // Liiku-liu'un napit ja Vaihda matkustustapa (Peli/Liikkuminen.cs, Matka.VaihtoTarjolla):
 // kultainen jälki Kultaiset/kulkutapajalki.json (tee-kulkutapajalki.mjs lukee webin ui.js:n
-// estosyyt) samalla käsikirjoituksella kuin matkajälki, ja Liiku-vuon kohde- ja siirtorivit.
+// estosyyt) samalla käsikirjoituksella kuin matkajälki, Liiku-vuon kohderivit, siirtokohteet kartalle
+// (web moveOptions) ja pöllön valintavihjeen ajastin.
 // ./kaanna.sh Liikkuminen
 using System;
 using System.Collections.Generic;
@@ -106,14 +107,91 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, PeliApu.KohdeRivit(m, Kulkutapa.Meri).Count, "Pariisista ei laivaa");
             Oleta.Sama(0, PeliApu.KohdeRivit(m, Kulkutapa.Maa).Count, "liftaus heittää heti");
 
-            // Liftaus: tapa + heitto, sitten pelaajan valitsema siirto (web doWalk → actionMove).
+            // Liftaus: tapa + heitto, sitten pelaajan kartalta valitsema siirto (web doWalk → actionMove).
+            Oleta.Sama(0, PeliApu.SiirtoKohteet(m).Count, "ennen heittoa ei kohteita");
             Oleta.Tosi(m.ValitseKulkutapa(Kulkutapa.Maa).Ok && m.Heita().Ok, "heitto");
-            var siirrot = PeliApu.SiirtoRivit(m);
-            Oleta.Sama(m.Tila.Siirrot.Count, siirrot.Count);
-            var viimeinen = siirrot[siirrot.Count - 1].Avain;
+            var kohteet = PeliApu.SiirtoKohteet(m);
+            Oleta.Tosi(kohteet.Count > 0 && kohteet.Count <= m.Tila.Siirrot.Count, "kohteita " + kohteet.Count);
+            Oleta.Tosi(kohteet.All(k => m.Tila.Siirrot.ContainsKey(k.Avain)), "avaimet siirroista");
+            Oleta.Tosi(kohteet.All(k => (k.Kaupunki != null) == (k.Nimi != null) && k.Askeleet == m.Tila.Siirrot[k.Avain].Polku.Count), "nimi ja askeleet");
+            var viimeinen = kohteet[kohteet.Count - 1].Avain;
             var t = PeliApu.Matkusta(m, null, Kulkutapa.Maa, siirto: viimeinen);
             Oleta.Tosi(t.Ok, t.Virhe);
             Oleta.Sama(viimeinen, t.Kohde.Avain, "valittu siirto, ei lähin tavoitetta");
+            Oleta.Sama(0, PeliApu.SiirtoKohteet(m).Count, "siirron jälkeen ei kohteita");
+        }
+
+        /// <summary>
+        /// Web game.moveOptions (js/game.js) kultaisista siirroista (Kultaiset/siirrot.json, webin findMoves
+        /// polkuineen): suunta = polun ensimmäinen askel; suunnalta kaupungit, tai ilman kaupunkia kaikki pisteet.
+        /// </summary>
+        [Testi] static void SiirtoKohteetKuinMoveOptions()
+        {
+            var v = KultaisetApu.Verkko;
+            int n = 0, pisteita = 0, karsittuja = 0;
+            foreach (var tc in KultaisetApu.Lista(KultaisetApu.Kultaiset, "tapaukset"))
+            {
+                var lahto = (string)tc["lahto"];
+                var silmaluku = (int)(double)tc["silmaluku"];
+                var tapa = KultaisetApu.Tavaksi((string)tc["tapa"]);
+                var web = KultaisetApu.Lista(tc, "siirrot").Select(s => (Avain: (string)s["avain"],
+                    Suunta: MiniJson.Taulukko(s["polku"]).Cast<string>().FirstOrDefault() ?? (string)s["avain"])).ToList();
+                var odotettu = new HashSet<string>();
+                foreach (var ryhma in web.GroupBy(s => s.Suunta))
+                {
+                    var kaupungit = ryhma.Where(s => s.Avain.StartsWith("c:")).ToList();
+                    foreach (var s in kaupungit.Count > 0 ? kaupungit : ryhma.ToList()) odotettu.Add(s.Avain);
+                }
+                var m = Matka.UusiPeli(v, new Satunnainen(1), "Fogg", "pariisi");
+                m.Tila.Pelaaja.Sijainti = KultaisetApu.Sijainniksi(lahto);
+                m.Tila.Vaihe = Vaihe.Siirto;
+                m.Tila.Kulkutapa = tapa;
+                m.Tila.Noppa = silmaluku;
+                m.Tila.Siirrot = v.Siirrot(m.Tila.Pelaaja.Sijainti, silmaluku, tapa);
+                var saatu = PeliApu.SiirtoKohteet(m);
+                var tunnus = $"{lahto} {silmaluku} {tc["tapa"]}";
+                Oleta.Sama(string.Join(",", odotettu.OrderBy(x => x, StringComparer.Ordinal)),
+                    string.Join(",", saatu.Select(k => k.Avain).OrderBy(x => x, StringComparer.Ordinal)), tunnus);
+                // Kaupungit ensin nimen mukaan (testikomento `rivi i`), reitin varsi perässä.
+                Oleta.Tosi(saatu.SkipWhile(k => k.Kaupunki != null).All(k => k.Kaupunki == null), "kaupungit ensin " + tunnus);
+                Oleta.Tosi(saatu.All(k => !double.IsNaN(k.Lat) && !double.IsNaN(k.Lon)), "paikka " + tunnus);
+                pisteita += saatu.Count(k => k.Kaupunki == null);
+                karsittuja += web.Count - saatu.Count;
+                n++;
+            }
+            Oleta.Tosi(n >= 200, "tapauksia " + n);
+            Oleta.Tosi(pisteita > 0, "reitin varren kohteita tarjotaan, kun suunnalla ei ole kaupunkia");
+            Oleta.Tosi(karsittuja > 0, "kaupungin suunnalta pisteet karsitaan");
+        }
+
+        /// <summary>Web paivitaValintavihje: 15 000 ms, kerran vaiheessa, kosketus peruu, vaiheen loppu vie kuplan.</summary>
+        [Testi] static void ValintavihjeKuinWeb()
+        {
+            Oleta.Sama(15000, Valintavihje.ViiveMs);
+            Oleta.Sama("Napauta korostettua kohdetta kartalla, niin matka jatkuu.", Valintavihje.Teksti);
+            var M = Valintavihje.Muutos.Ei;
+            var v = new Valintavihje();
+            Oleta.Sama(M, v.Paivita(false, 0), "ei odotusta");
+            Oleta.Sama(M, v.Paivita(true, 10), "ajastin käyntiin");
+            Oleta.Tosi(v.Kay, "käy");
+            Oleta.Sama(M, v.Paivita(true, 24.9), "ei vielä");
+            Oleta.Sama(Valintavihje.Muutos.Nayta, v.Paivita(true, 25), "15 s");
+            Oleta.Sama(M, v.Paivita(true, 100), "kerran vaiheessa");
+            Oleta.Sama(Valintavihje.Muutos.Pois, v.Paivita(false, 101), "valinta vie kuplan");
+            Oleta.Sama(M, v.Paivita(false, 102));
+            // Kosketus peruu ajastimen, eikä uutta viritetä samassa vaiheessa.
+            Oleta.Sama(M, v.Paivita(true, 200));
+            Oleta.Sama(M, v.Kosketettu(), "kupla ei näkynyt");
+            Oleta.Tosi(!v.Kay, "peruttu");
+            Oleta.Sama(M, v.Paivita(true, 300), "ei uutta ajastinta");
+            Oleta.Sama(M, v.Paivita(false, 301), "vaihe päättyi ilman kuplaa");
+            // Uusi vaihe: uusi ajastin; näkyvä kupla lähtee kosketuksesta.
+            v.Paivita(true, 400);
+            Oleta.Sama(Valintavihje.Muutos.Nayta, v.Paivita(true, 415));
+            Oleta.Sama(Valintavihje.Muutos.Pois, v.Kosketettu(), "kosketus vie kuplan");
+            Oleta.Sama(M, v.Kosketettu());
+            Oleta.Sama(M, v.Paivita(true, 500), "ei uudestaan");
+            Oleta.Sama(M, v.Kosketettu(), "ei vaihetta, ei muutosta");
         }
 
         [Testi] static void LaivaRiviSatamasta()
