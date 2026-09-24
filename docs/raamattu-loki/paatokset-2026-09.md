@@ -4443,3 +4443,7 @@ Peruttu: Siirtosepän savuke 36004651653 (ajossa) ja jonosta 36021034498, 360157
 ## LINSSISEPPA 71 % → LUOVUTUS JA NOLLAUS KASKETAAN (ODOTTAA VIESTIRAJAN NOLLAUSTA); BUILD 10 UNITY-VIENTI ALKOI 18.51 (24.9.2026 klo 18.53)
 
 Linssisepän luovutukseen: löydös 43 (radiossa ei huntua, muut linssit linssikohtaisesti webin mukaan), 39/40/42 Natiivi-UI:lla, museon teosluettelo (30 + erä 2 + muotokuvat 16/18, Cima ja Fra Carnevale ilman kuvaa), lamppupinot ja linssinimet mergetty, merinimet Siirtosepältä, vapauta-levy-skripti omistajalle. Julkaisija ajaa perutut savukkeet ja Julkaise peli uudelleen Unity-vaiheen jälkeen.
+
+## BUILD 10 KAATUI ARKISTOINTIIN (36016173109, CodeSign errSecInternalComponent): KEHITYSTIIMI RCD77XPB7M VUOTI TESTFLIGHT-VIENTIIN → PR #3109 (MATKAKIRJA_TEAM=$TEAM_ID); UUSINTA f02376b:STA (24.9.2026 klo 18.56)
+
+Julkaisijan näkemä 836706c oli testihaara testi/b11c samassa proto-työkopiossa, ei master; Natiiviseppä siivosi työkopion (puhdas, Unity kiinni) ja oppi: testihaaraa ei jätetä checkoutiin, koska Julkaisija vie samasta työkopiosta. Fable: build 10 uusinta masterista f02376b heti kun #3109 on mainissa; viestit Julkaisijalle odottavat viestirajan nollausta.
