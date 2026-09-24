@@ -47,3 +47,10 @@ vesistöjen yhtenäinen uoma (webin pallolla z-taistelubugi, Fable 24.9.).
 2. Natiivi-UI: ihmisen matkan "Kertomus päättyi" -kortti ei ole webissä (ilmoitettu).
 3. Isoisä 1873 erä 2 odottaa omistajaa (ei webissä, ei tehdä).
 4. Webin vesistöjen z-taistelu on Pelikoodarin matalan prioriteetin bugi (Fable).
+
+## Tila 24.9. klo 08 (ennen tyhjennystä)
+
+Proto-master 20a9ee0: kaikki erät mergetty (loppukupla 5b6143c, valojen-napautus, radionapit, esitys-leimat).
+Jonossa vain linssiseppa/regressio 4227a9f (testityökalut). Huippuvuorten iPad-tarkistus (vertailu NOR) odottaa
+Siirtosepän skeemaa 1.29 tuotannossa (#3012). Natiivi-UI:lle toimitettu pisteskaalan kuvat
+(proto-3d/lokit/kontakti-pisteet-794e96f). Seuraava tehtävä: omistajan aamukokeilun löydökset (Fable).
