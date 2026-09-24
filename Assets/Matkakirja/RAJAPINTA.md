@@ -63,7 +63,7 @@ Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
 
 | Jäsen | Merkitys |
 |---|---|
-| `void Nakyvyys(string kerros, bool)` | Sisäiset kerrokset: `"laatat"`, `"maasto"`, `"kaupungit"`, `"nimiot"`, `"reitit"`, `"napakannet"`. |
+| `void Nakyvyys(string kerros, bool)` | Sisäiset kerrokset: `"laatat"`, `"maasto"`, `"kaupungit"`, `"nimiot"`, `"reitit"`, `"napakannet"`, `"nappula"` (nappula ja kone), `"pisteet"` (Karttapisteet), `"valot"` (karttavalot; valinta säilyy). Linssiportti piilottaa nämä kuten webin body.aikajana-paalla. |
 | `string LisaaRasteri(avain, urlTemplate, WebMercator/Geographic, minTaso, maxTaso, alfa)` | Linssin oma raster-kerros laattojen päälle (Cesium UrlTemplate). Enintään 2 linssikerrosta kerrallaan (Cesiumin oletusmateriaali tukee kolmea kerrosta). |
 | `void PoistaRasteri(avain)`, `void Alfa(avain, float)` | |
 | `event Action<string> KerrosValmis` | Linssin rasteri ladattu näkyvältä alueelta (Cesium ComputeLoadProgress). |

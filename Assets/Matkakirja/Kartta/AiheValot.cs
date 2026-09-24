@@ -58,6 +58,14 @@ namespace Matkakirja
         readonly Dictionary<string, int> laskurit = new Dictionary<string, int>();
         readonly Dictionary<string, MeshRenderer> verkot = new Dictionary<string, MeshRenderer>();
         readonly List<Valo> valot = new List<Valo>();
+        bool nakyvat = true;
+
+        /// <summary>KarttaKerrokset "valot": karttavalot piiloon (linssiportti) valintaa muuttamatta.</summary>
+        public void Nakyvat(bool nakyy)
+        {
+            nakyvat = nakyy;
+            foreach (var p in verkot) p.Value.enabled = nakyy && (Valittu == "kaikki" || Valittu == p.Key);
+        }
         bool nakymaMuuttui = true;
         float seuraavaLasku;
 
@@ -75,7 +83,7 @@ namespace Matkakirja
         {
             if (string.IsNullOrEmpty(aihe)) aihe = "ei";
             Valittu = aihe;
-            foreach (var p in verkot) p.Value.enabled = aihe == "kaikki" || aihe == p.Key;
+            foreach (var p in verkot) p.Value.enabled = nakyvat && (aihe == "kaikki" || aihe == p.Key);
             nakymaMuuttui = true;
             seuraavaLasku = 0;
             Muuttui?.Invoke();
@@ -119,7 +127,7 @@ namespace Matkakirja
                 r.sharedMaterial.SetVector("_Keskus", (Vector3)(float3)keskus);
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 r.receiveShadows = false;
-                r.enabled = Valittu == "kaikki" || Valittu == aihe;
+                r.enabled = nakyvat && (Valittu == "kaikki" || Valittu == aihe);
                 verkot[aihe] = r;
             }
             Valmis = true;
