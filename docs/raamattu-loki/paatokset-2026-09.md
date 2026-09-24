@@ -4267,3 +4267,7 @@ Natiiviseppä ajaa ison iPadin käännöksen DEVELOPMENT_TEAM=RCD77XPB7M, rekist
 ## NATIIVI-UI: BUILD 10 -JONO KOODATTU (natiivi-ui/b10-jono bee0199): YLAPALKKI 6ec3854, TEKSTITAUSTA 29326ba, HYTINA — FABLE KORJAUTTAA PALKIN (EI ⚙, ☰ OMISTAJAN VALIKKO, LINSSIT EI LAUKKUUN) (24.9.2026 klo 16.41)
 
 Natiivi-UI teki palkin webin mukaan (logo, pilleri, ⚙, ☰; linssit laukkuun; ☰ = webin päävalikko). Fable: ⚙ pois (löydös 37), ☰ pysyy omistajan klo 13.3x valikkona (Raamatun hyväksytty poikkeama), linssit vain ☰:stä (klo 11.2x); iPhone 57 pt, iPad 50 → 61 pt; veto piilottaa, napautus/☰ palauttaa; vaaka piilossa. Tekstitausta: lehti ja nähtävyysarkit webin .dialog.arkki-tyyliin (#f5f0e2 + paperikohina); nostokortti jo webin mukainen — jos omistaja tarkoitti muuta, kuva. Hytinä: merkit liikkeessä pyöristämättä, levossa pikselille. Omistaja: Individual-tili riittää (App Store, TestFlight, IAP, 100 laitetta); myyjänimi = oma nimi, ei tiimijäseniä.
+
+## OMISTAJA klo 17.4x: KALLISTUS KAHDEN SORMEN VEDOLLA ALAS (KUTEN NYT); DEVELOPER-TILI MUUTETAAN ORGANISAATIOKSI ENNEN APP STORE -JULKAISUA (24.9.2026 klo 16.41)
+
+Kallistussuunta välitetty Natiivisepälle (02847d7 mergettävissä). Omistaja aikoo tehdä Individual → Organization -muutoksen (myyjänimeksi yritys) ennen ensimmäistä App Store -julkaisua; vaatii Y-tunnuksen ja D-U-N-S-numeron; TestFlight ja kehitys jatkuvat Individual-tilillä siihen asti.
