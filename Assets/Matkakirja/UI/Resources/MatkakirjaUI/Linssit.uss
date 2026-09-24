@@ -2099,3 +2099,71 @@
     scale: 1 1;
     opacity: 1;
 }
+
+/* ------------------------------------------------------------------------ *
+ * AIKASELAIN (Aikaselain.cs): web css/aikajana.css .aikaselain. Tumma lasi
+ * alalaidassa, viiva per jakso; korkeus ja aalto (viivan korkeus ja
+ * läpinäkymättömyys) koodista, valittu kultainen. Vuosi valitun yllä.
+ * ------------------------------------------------------------------------ */
+.mk-aikaselain {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top-width: 1px;
+    border-color: rgba(217, 161, 59, 0.38);
+    background-color: rgba(37, 27, 18, 0.82);
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+.mk-aikaselain--vedossa {
+    background-color: rgba(45, 33, 22, 0.88);
+}
+
+.mk-aikaselain__viivat {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 9px;
+    height: 30px;
+}
+
+.mk-aikaselain--puhelin .mk-aikaselain__viivat {
+    bottom: 6px;
+    height: 26px;
+}
+
+.mk-aikaselain__viiva {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    border-radius: 1px;
+    translate: -50% 0;
+    background-color: rgba(233, 214, 176, 0.62);
+    transition-property: height, opacity, background-color;
+    transition-duration: 0.24s, 0.24s, 0.24s;
+}
+
+.mk-aikaselain__viiva--valittu {
+    width: 3px;
+    background-color: #d9a13b;
+}
+
+.mk-aikaselain__vuosi {
+    position: absolute;
+    bottom: 41px;
+    translate: -50% 0;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    color: #f1e6d0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    transition-property: left;
+    transition-duration: 0.24s;
+}
+
+.mk-aikaselain--puhelin .mk-aikaselain__vuosi {
+    bottom: 34px;
+    font-size: 10px;
+}

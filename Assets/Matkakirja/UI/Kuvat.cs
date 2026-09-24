@@ -127,7 +127,94 @@ namespace Matkakirja.Natiivi
             if (muisti.TryGetValue(avain, out var t) && t != null) { valmis?.Invoke(t); return; }
             if (kesken.TryGetValue(avain, out var odottajat)) { odottajat.Add(valmis); return; }
             kesken[avain] = new List<Action<Texture2D>> { valmis };
-            UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, alkup => Pienenna(alkup, leveys, korkeus, ylaAsento)));
+            UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, (alkup, valmisPieni) => PienennaTaustalla(alkup, leveys, korkeus, ylaAsento, px =>
+            {
+                if (px == null) { valmisPieni(null); return; }
+                var t2 = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };
+                t2.SetPixels32(px);
+                t2.Apply(false, false); // luettava: karusellin sumea versio pienennetään tästä
+                valmisPieni(t2);
+            })));
+        }
+
+        /// <summary>
+        /// Sama kuin Pienenna, mutta pikselit luetaan AsyncGPUReadbackilla: pääsäie ei pysähdy odottamaan
+        /// GPU:ta (Natiiviseppä mittasi ReadPixelsistä 17–24 ms kehyksiä iPadilla). valmis saa pikselit
+        /// Texture2D:n rivijärjestyksessä (alin rivi ensin) pääsäikeessä, tai null virheessä.
+        /// Luennan rivijärjestys mitataan kerran koekuvalla (grafiikkarajapinnat eroavat).
+        /// </summary>
+        public static void PienennaTaustalla(Texture lahde, int leveys, int korkeus, float ylaAsento, Action<Color32[]> valmis)
+        {
+            if (!SystemInfo.supportsAsyncGPUReadback) { valmis(Synkroninen(lahde, leveys, korkeus, ylaAsento)); return; }
+            if (luentaKaannetty == null) { MittaaLuenta(() => PienennaTaustalla(lahde, leveys, korkeus, ylaAsento, valmis)); return; }
+            var rt = Piirra(lahde, leveys, korkeus, ylaAsento);
+            UnityEngine.Rendering.AsyncGPUReadback.Request(rt, 0, TextureFormat.RGBA32, pyynto =>
+            {
+                Color32[] px = null;
+                if (!pyynto.hasError) px = pyynto.GetData<Color32>().ToArray();
+                RenderTexture.ReleaseTemporary(rt);
+                if (px != null && luentaKaannetty == true) Kaanna(px, leveys, korkeus);
+                valmis(px);
+            });
+        }
+
+        static bool? luentaKaannetty;
+        static List<Action> mittausOdottajat;
+
+        /// <summary>Koekuva 1 × 2 (ylärivi punainen): tuleeko luenta ylin rivi ensin (käännettävä) vai alin.</summary>
+        static void MittaaLuenta(Action valmis)
+        {
+            if (mittausOdottajat != null) { mittausOdottajat.Add(valmis); return; }
+            mittausOdottajat = new List<Action> { valmis };
+            var koe = new Texture2D(1, 2, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point };
+            koe.SetPixels32(new[] { new Color32(0, 0, 255, 255), new Color32(255, 0, 0, 255) }); // rivi 0 = alin = sininen
+            koe.Apply();
+            var rt = RenderTexture.GetTemporary(1, 2, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            rt.filterMode = FilterMode.Point;
+            Graphics.Blit(koe, rt);
+            UnityEngine.Rendering.AsyncGPUReadback.Request(rt, 0, TextureFormat.RGBA32, pyynto =>
+            {
+                bool kaanna = false;
+                if (!pyynto.hasError) { var d = pyynto.GetData<Color32>(); kaanna = d.Length >= 2 && d[0].r > d[0].b; }
+                RenderTexture.ReleaseTemporary(rt);
+                UnityEngine.Object.Destroy(koe);
+                luentaKaannetty = kaanna;
+                Debug.Log("MATKAKIRJA ui kuvat: GPU-luennan rivit " + (kaanna ? "ylhäältä (käännetään)" : "alhaalta"));
+                var odottajat = mittausOdottajat;
+                mittausOdottajat = null;
+                foreach (var o in odottajat) o();
+            });
+        }
+
+        static void Kaanna(Color32[] px, int leveys, int korkeus)
+        {
+            var rivi = new Color32[leveys];
+            for (int y = 0; y < korkeus / 2; y++)
+            {
+                int a = y * leveys, b = (korkeus - 1 - y) * leveys;
+                Array.Copy(px, a, rivi, 0, leveys);
+                Array.Copy(px, b, px, a, leveys);
+                Array.Copy(rivi, 0, px, b, leveys);
+            }
+        }
+
+        static RenderTexture Piirra(Texture lahde, int leveys, int korkeus, float ylaAsento)
+        {
+            float suhde = (float)lahde.width / Mathf.Max(1, lahde.height), kohde = (float)leveys / korkeus;
+            Vector2 skaala = Vector2.one, siirto = Vector2.zero;
+            if (suhde > kohde) { skaala.x = kohde / suhde; siirto.x = (1f - skaala.x) * 0.5f; }
+            else { skaala.y = suhde / kohde; siirto.y = (1f - skaala.y) * Mathf.Clamp01(ylaAsento); }
+            var rt = RenderTexture.GetTemporary(leveys, korkeus, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            Graphics.Blit(lahde, rt, skaala, siirto);
+            return rt;
+        }
+
+        static Color32[] Synkroninen(Texture lahde, int leveys, int korkeus, float ylaAsento)
+        {
+            var t = Pienenna(lahde, leveys, korkeus, ylaAsento);
+            var px = t.GetPixels32();
+            UnityEngine.Object.Destroy(t);
+            return px;
         }
 
         /// <summary>Rajaus peittäen (object-fit: cover) ja pienennys GPU:lla luettavaksi tekstuuriksi.</summary>
@@ -160,7 +247,7 @@ namespace Matkakirja.Natiivi
         /// ~33 ms kehyksiä): UnityWebRequestTexture purkaa JPG/PNG:n taustasäikeessä (nonReadable),
         /// laitevälimuisti luetaan file://-osoitteella samaa reittiä ja kirjoitetaan taustasäikeessä.
         /// </summary>
-        static IEnumerator Lataa(string avain, string[] reitit, Func<Texture2D, Texture2D> muunna = null)
+        static IEnumerator Lataa(string avain, string[] reitit, Action<Texture2D, Action<Texture2D>> muunna = null)
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
@@ -194,9 +281,12 @@ namespace Matkakirja.Natiivi
             if (tulos != null && muunna != null)
             {
                 Texture2D pieni = null;
-                try { pieni = muunna(tulos); }
-                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva: pienennys " + e.Message); }
-                UnityEngine.Object.Destroy(tulos);
+                bool valmis = false;
+                var alkup = tulos;
+                try { muunna(alkup, t => { pieni = t; valmis = true; }); }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva: pienennys " + e.Message); valmis = true; }
+                while (!valmis) yield return null;
+                UnityEngine.Object.Destroy(alkup);
                 tulos = pieni != null ? Nimea(pieni, avain) : null;
             }
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0]);

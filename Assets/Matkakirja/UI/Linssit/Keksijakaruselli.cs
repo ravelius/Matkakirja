@@ -186,9 +186,39 @@ namespace Matkakirja.Natiivi
             {
                 if (t == null || kortti.Terava != null) return;
                 kortti.Terava = t;
-                try { kortti.Sumea = Kuvat.Pienenna(t, SumeaL, SumeaK); } catch (Exception) { kortti.Sumea = t; }
+                kortti.Sumea = Sumenna(t) ?? t;
                 NaytaKuva(kortti);
             }, "kuvat");
+        }
+
+        /// <summary>
+        /// Sumea versio prosessorilla (lohkojen keskiarvo 240 × 300 → 24 × 30, näytetään venytettynä):
+        /// ei GPU-luentaa pääsäikeessä. Vaatii luettavan tekstuurin (Kuvat.HaePienena).
+        /// </summary>
+        static Texture2D Sumenna(Texture2D t)
+        {
+            if (!t.isReadable) return null;
+            var px = t.GetPixels32();
+            int lx = t.width / SumeaL, ly = t.height / SumeaK;
+            if (lx < 1 || ly < 1) return null;
+            var ulos = new Color32[SumeaL * SumeaK];
+            for (int y = 0; y < SumeaK; y++)
+            for (int x = 0; x < SumeaL; x++)
+            {
+                int r = 0, g = 0, b = 0, a = 0;
+                for (int yy = 0; yy < ly; yy++)
+                for (int xx = 0; xx < lx; xx++)
+                {
+                    var c = px[(y * ly + yy) * t.width + x * lx + xx];
+                    r += c.r; g += c.g; b += c.b; a += c.a;
+                }
+                int n = lx * ly;
+                ulos[y * SumeaL + x] = new Color32((byte)(r / n), (byte)(g / n), (byte)(b / n), (byte)(a / n));
+            }
+            var s = new Texture2D(SumeaL, SumeaK, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+            s.SetPixels32(ulos);
+            s.Apply(false, true);
+            return s;
         }
 
         static void NaytaKuva(Kortti k)
