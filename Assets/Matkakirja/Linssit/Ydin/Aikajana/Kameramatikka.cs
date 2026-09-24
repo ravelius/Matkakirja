@@ -30,7 +30,8 @@ namespace Matkakirja.Linssit.Aikajana
         public static readonly double EnnakkoMs = Math.Round(Kello.ViiveMs * EnnakkoOsuus, MidpointRounding.AwayFromZero); // 3680
         public const double JalkijattoMs = -300;                        // ajo päättyy 300 ms ennen syttymistä
         public const double PohjaMs = 900;                              // lyhin ajo
-        public const double LoppuAjoMs = 1400;                          // sovitaKaareen
+        public const double LoppuAjoMs = 1400;
+        public const double MaanSade = 6_371_000;                          // sovitaKaareen
 
         const double Rad = Math.PI / 180;
 
@@ -40,6 +41,53 @@ namespace Matkakirja.Linssit.Aikajana
         static double MillerY(double phi) => -1.25 * Math.Log(Math.Tan(Math.PI / 4 + 0.4 * phi));
 
         /// <summary>Laudan piste (x, y) asteiksi (web fokusmitat laudaltaAsteiksi, Miller).</summary>
+        /// <summary>Laatikko laudan yksiköissä (web alue { x, y, w, h }).</summary>
+        public readonly struct LautaLaatikko
+        {
+            public readonly double X, Y, W, H;
+            public LautaLaatikko(double x, double y, double w, double h) { X = x; Y = y; W = w; H = h; }
+        }
+
+        /// <summary>
+        /// Web aikajana.js KAMERA_JATKE ja kaarenKameralaatikko: paneeli ja karuselli vievät osan
+        /// ruudusta, joten kaaren laatikkoa jatketaan niiden suuntaan (pystyssä ylös 50 % ja alas 28 %).
+        /// </summary>
+        public static LautaLaatikko KaarenKameralaatikko(LautaLaatikko a, bool pysty) => pysty
+            ? new LautaLaatikko(a.X, a.Y - a.H * 0.5, a.W, a.H * (1 + 0.28 + 0.5))
+            : new LautaLaatikko(a.X - a.W * 0.08, a.Y - a.H * 0.14, a.W * (1 + 0.08), a.H * (1 + 0.12 + 0.14));
+
+        const int PerimetrinNaytteet = 12;
+
+        /// <summary>
+        /// Web pallolauta/kamera.js pallonKorkeus + kehanTarve: kameran korkeus (pallon säteinä), jolla
+        /// laatikon koko kehä (12 näytettä sivua kohti) mahtuu ruutuun perspektiivissä laatikon
+        /// keskipisteestä katsottuna. vara = 1 + 2 · marginaali. Palauttaa (keskipiste, korkeus) tai null.
+        /// </summary>
+        public static (LatLon Keski, double KorkeusSateina)? PallonKorkeus(LautaLaatikko b, double fovAst, double kuvasuhde, double vara = 1)
+        {
+            if (!(b.W > 0) || !(b.H > 0)) return null;
+            var keski = LaudaltaAsteiksi(b.X + b.W / 2, b.Y + b.H / 2);
+            double sin0 = Math.Sin(keski.Lat * Rad), cos0 = Math.Cos(keski.Lat * Rad);
+            double T = Math.Tan(fovAst / 2 * Rad), A = Math.Max(0.01, kuvasuhde);
+            double etaisyys = 0;
+            for (int i = 0; i <= PerimetrinNaytteet; i++)
+            {
+                double t = i / (double)PerimetrinNaytteet;
+                foreach (var (bx, by) in new[] { (b.X + b.W * t, b.Y), (b.X + b.W * t, b.Y + b.H), (b.X, b.Y + b.H * t), (b.X + b.W, b.Y + b.H * t) })
+                {
+                    var p = LaudaltaAsteiksi(bx, by);
+                    double lat = p.Lat * Rad, dLng = (p.Lon - keski.Lon) * Rad;
+                    double sinP = Math.Sin(lat), cosP = Math.Cos(lat), cosDl = Math.Cos(dLng);
+                    double syvyys = sinP * sin0 + cosP * cos0 * cosDl;
+                    double sivu = Math.Abs(cosP * Math.Sin(dLng)) / (T * A);
+                    double pysty = Math.Abs(sinP * cos0 - cosP * sin0 * cosDl) / T;
+                    etaisyys = Math.Max(etaisyys, syvyys + vara * Math.Max(sivu, pysty));
+                }
+            }
+            if (!(etaisyys > 1)) return null;
+            return (keski, etaisyys - 1);
+        }
+
         public static LatLon LaudaltaAsteiksi(double x, double y)
         {
             double lon = x / MillerS / Rad + MillerLon0;

@@ -90,5 +90,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(a.Pysakit.Count, l.Pysakkeja);
             Oleta.Sama(25, l.Sisallys().Count);
         }
+
+        [Testi] static void KaarenLoppukameraKutenWebinSovitaKaareen()
+        {
+            // web: kaarenKameralaatikko (pysty: +50 % ylös, +28 % alas) + pallonKorkeus vara 1,06, FOV 50.
+            var a = A();
+            var y = new ValeYmparisto { Kuvasuhde = 1668.0 / 2420, Nakokulma = 50 };
+            var l = new KeksinnotLinssi(a, new TyhjaNakyma());
+            l.Avaa(y); l.Kaynnista();
+            l.Ajo.Siirry(25); l.Ajo.Jatka();
+            for (int i = 0; i < 600 && !l.Ajo.Paattynyt; i++) { y.Kello += 1 / 60.0; l.Paivita(); }
+            Oleta.Tosi(l.Ajo.Paattynyt);
+            var b = Kameramatikka.KaarenKameralaatikko(a.AlueLaudalla, pysty: true);
+            var odotettu = Kameramatikka.PallonKorkeus(b, 50, y.Kuvasuhde, 1.06).Value;
+            Oleta.Tosi(y.Ajo.HasValue && Math.Abs(y.Ajo.Value.Korkeus - odotettu.KorkeusSateina * Kameramatikka.MaanSade) < 1, "loppuajo: " + y.Ajo);
+            Oleta.Tosi(Math.Abs(y.Ajo.Value.Lat - odotettu.Keski.Lat) < 1e-9 && Math.Abs(y.Ajo.Value.Lon - odotettu.Keski.Lon) < 1e-9);
+            // Eurooppa mahtuu ruutuun: korkeus selvästi alle koko pallon (iPadilla ennen 12 000 km).
+            Oleta.Tosi(y.Ajo.Value.Korkeus < 9_000_000 && y.Ajo.Value.Korkeus > 3_000_000, "korkeus " + y.Ajo.Value.Korkeus);
+        }
     }
 }

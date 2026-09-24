@@ -752,6 +752,15 @@ namespace Matkakirja.Natiivi
             return kierto.KorkeusKaarelle(kapea);
         }
 
+        public double Nakokulma
+        {
+            get
+            {
+                var kamera = kierto.GetComponent<Camera>();
+                return kamera != null ? kamera.fieldOfView : 50;
+            }
+        }
+
         public double Kuvasuhde
         {
             get

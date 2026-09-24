@@ -55,6 +55,7 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Vale: 1° ruudun leveydellä = 100 km korkeutta.</summary>
         public double KorkeusLeveydelle(double leveysAsteina) => leveysAsteina * 100_000;
         public double Kuvasuhde { get; set; } = 0.46;
+        public double Nakokulma { get; set; } = 50;
         public void Pelikerrokset(bool n) { Loki.Add("pelikerrokset " + n); PelikerroksetNakyvissa = n; }
         public void Peite(bool p) { Loki.Add("peite " + p); PeitePaalla = p; }
         public void MusiikkiPitoon(bool p) { Loki.Add("musiikki " + p); Musiikkipito = p; }
