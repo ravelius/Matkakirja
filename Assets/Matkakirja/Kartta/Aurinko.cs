@@ -39,6 +39,9 @@ namespace Matkakirja
         /// <summary>Kohta (koneen pituusaste), jonka paikallinen aika määrää auringon, kun Aika = null.</summary>
         public void Kohde(double pituusAste) => kohdePituus = pituusAste;
 
+        /// <summary>Kokeilu (komento "lentoharmaa sumu pois"): etäisyyssumu pois lennolta.</summary>
+        public static bool SumuEstetty;
+
         /// <summary>Paistaako aurinko (lento) vai kameravalo.</summary>
         public bool Paalla { get; private set; }
 
@@ -84,7 +87,7 @@ namespace Matkakirja
             valo.transform.rotation = kierto;
             Taivas(kamera != null ? kamera.GetComponent<Camera>() : null);
 
-            RenderSettings.fog = sumu;
+            RenderSettings.fog = sumu && !SumuEstetty;
             if (sumu)
             {
                 RenderSettings.fogMode = FogMode.Linear;

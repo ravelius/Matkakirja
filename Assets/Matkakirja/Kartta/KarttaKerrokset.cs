@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet", "varitaso", "aariviiva", "linssinimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -126,6 +126,12 @@ namespace Matkakirja
                     KerrosEpaonnistui?.Invoke(p.Key);
                     return;
                 }
+            // Muut kerrokset (build 11 -selvitys: harmaat suorakulmiot): lennon pinta, pohja, väritaso. Cesium kutsuu tätä
+            // kerroksen (tile provider) virheestä, ei yksittäisen laatan kuvan virheestä (ne näkyvät satloki-riveillä).
+            var o = d.overlay;
+            string nimi = o == null ? "?" : o == silea ? "lento-bmng" : o == sentinel ? "lento-sentinel" : o == pohja ? "pohja"
+                : o.materialKey + (o is CesiumUrlTemplateRasterOverlay u ? " " + u.templateUrl : "");
+            Debug.LogWarning($"MATKAKIRJA kerros {nimi} epäonnistui ({d.type}, http {d.httpStatusCode}): {d.message}");
         }
 
         /// <summary>
@@ -156,6 +162,8 @@ namespace Matkakirja
                 case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
                 case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
+                // Alue-, meri- ja valtamerinimet (Nimikerros, build 11); seuraavat myös "kaupungit"- ja "nimiot"-porttia.
+                case "aluenimet": if (Nimikerros.Instanssi != null) Nimikerros.Instanssi.paalla = nakyy; break;
                 case "reitit": if (reitit != null) reitit.Nakyvat(nakyy); break;
                 case "napakannet": if (napakannet != null) napakannet.Nakyvat(nakyy); break;
                 case "nappula": if (nappula != null) nappula.Nakyvat(nakyy); break;
@@ -175,8 +183,8 @@ namespace Matkakirja
 
         /// <summary>
         /// Webin linssikartan nimet (Linssiseppä, build 10): kaupunkipisteet ja -nimet (KaupunkiMerkit.LinssiNimet)
-        /// ja nostot nimineen (NostoKerros.LinssiNimet) ilman napautuksia ja ilman maan kehää. Merinimiä natiivissa
-        /// ei vielä ole (RAJAPINTA luku 4).
+        /// ja nostot nimineen (NostoKerros.LinssiNimet) ilman napautuksia ja ilman maan kehää. Merinimet näkyvät
+        /// linssin aikana Nimikerroksesta, joka lukee tämän tilan (Linssinimet) itse (RAJAPINTA luku 4).
         /// </summary>
         void PaivitaLinssinimet()
         {
@@ -291,11 +299,51 @@ namespace Matkakirja
         {
             Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? S2MeriVari.linear : S2MeriVari;
             Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, 1f));
-            Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? S2MeriKynnys : 0f);
+            Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? (LentoTestiS2 ? -1f : S2MeriKynnys) : 0f);
             bool vara = satelliittiLento && varaKartta != null && varaKarttaAvain == SatelliittiAvain();
             if (vara) Shader.SetGlobalTexture(LentoVaraKarttaId, varaKartta);
-            Shader.SetGlobalFloat(LentoVaraId, vara ? 1f : 0f);
+            // Testitila (lentoharmaa): 2 magenta missä vara laukeaisi, 3 paikan 1 kattavuus, 4 varakartan UV;
+            // "varapois" pitää varan pois. Testitilat eivät tarvitse varakarttaa (4 näyttää pelkän UV:n).
+            float arvo = !satelliittiLento || LentoTestiVaraPois ? 0f : LentoTesti >= 2 ? LentoTesti : vara ? 1f : 0f;
+            Shader.SetGlobalFloat(LentoVaraId, arvo);
+            Shader.SetGlobalFloat(LentoVaraTasoId, VaraTaso);
+            if (satelliittiLento)
+            {
+                // Maan akselit (_maaNolla/_maaIta/_maaAkseli) uudelleen lennon alussa: varakartan UV ei saa riippua siitä,
+                // oliko georeferenssi alustettu KarttaKerrokset.Awakessa (muuten UV = kulma → valkoinen Etelämanner).
+                KorkeusKerroin.Aseta(KorkeusKerroin.Arvo, GetComponent<CesiumGeoreference>());
+                Debug.Log($"MATKAKIRJA lennon pinta: varjostin _lentoVara {arvo:0}, varakartta {(varaKartta != null ? varaKarttaAvain : "ei")}, " +
+                          $"_maaNolla {Shader.GetGlobalVector("_maaNolla")}, _maaAkseli {Shader.GetGlobalVector("_maaAkseli")}");
+            }
         }
+
+        /// <summary>
+        /// HARMAIDEN SUORAKULMIOIDEN KOKEILU (komento "lentoharmaa", simulaattori 24.9.2026): 0 = normaali; 2 = magenta
+        /// siellä, missä paikan 1 rasteri puuttuu (vara laukeaisi); 3 = paikan 1 kattavuus (vihreä rasteri, magenta ei);
+        /// 4 = varakartan UV väreinä (punainen = maan akselit puuttuvat). Voimaan heti ja seuraavilla lennoilla.
+        /// </summary>
+        public static int LentoTesti;
+        /// <summary>
+        /// KAUKAINEN ESIVANHEMPI (diagnoosi 2, 24.9.2026, kolme kylmää lentoa): harmaat suorakulmiot ovat laattoja, joille
+        /// Cesium on kiinnittänyt useita tasoja ylemmän esivanhemman rasterin (RasterMappedTo3DTile.cpp:136–167,
+        /// translationAndScale.z = 2^−d), ja sen näyte on tasaisen vaalea. Lennon aikana paikka 1 käyttää silloin
+        /// Z2-varakarttaa (sama Blue Marble, aina valmis), kun käytetty rasteri on itse tasolla ≤ VaraTaso (varakartta ei
+        /// silloin ole koskaan huonompi) tai rasterin UV on [0,1]:n ulkopuolella. Tasoeroa ei käytetä (d3cd945:n
+        /// tasoerosääntö korvasi Ateenan lähikuvan laattoja, joiden oma Z8 latasi). Absoluuttinen taso lasketaan
+        /// varjostimessa UV-derivaattojen suhteesta: z = log2(|d uv_rasteri| / |d uv_varakartta|) — rasterin
+        /// suorakulmion Mercator-taso (Cesium mitoittaa rasterin kuvan laatan kokoon, joten se vastaa kuvan tarkkuutta).
+        /// 0 = sääntö pois. Komento "lentoharmaa varataso z" (oletus 2,5 = tasot 0–2).
+        /// </summary>
+        public static float VaraTaso = 2.5f;
+        static readonly int LentoVaraTasoId = Shader.PropertyToID("_lentoVaraTaso");
+
+        /// <summary>Varakartta pois lennolta (hypoteesi: näkyykö harmaa ilman sitä samana).</summary>
+        public static bool LentoTestiVaraPois;
+        /// <summary>Paikan 2 (Sentinel) peitto syaanina (hypoteesi d).</summary>
+        public static bool LentoTestiS2;
+
+        /// <summary>Testitilan muutos voimaan heti (Komennot).</summary>
+        public void LentoTestiVoimaan() => PaivitaLennonVarjostin();
 
         /// <summary>
         /// LENNON VARAKARTTA (harmaat suorakulmiot loittonuksessa, Fablen päätös 24.9.2026 "isälaatta pysyy näkyvissä").

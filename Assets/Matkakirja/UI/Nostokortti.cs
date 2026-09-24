@@ -43,7 +43,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -749,19 +748,8 @@ namespace Matkakirja.Natiivi
             return sb.ToString();
         }
 
-        static List<string> Kappaleet(string teksti)
-        {
-            var l = new List<string>();
-            if (string.IsNullOrWhiteSpace(teksti)) return l;
-            var osat = Regex.Split(teksti.Trim(), @"\n\s*\n").Select(x => x.Trim()).Where(x => x.Length > 0).ToList();
-            if (osat.Count > 1) return osat;
-            var virkkeet = Regex.Split(teksti.Trim(), @"(?<=[.!?])\s+(?=[A-ZÅÄÖ""“])");
-            if (virkkeet.Length < 3) { l.Add(teksti.Trim()); return l; }
-            int puoli = (virkkeet.Length + 1) / 2;
-            l.Add(string.Join(" ", virkkeet.Take(puoli)));
-            l.Add(string.Join(" ", virkkeet.Skip(puoli)));
-            return l;
-        }
+        /// <summary>Web jaaKappaleiksi (Kappalejako): tyhjät rivit, muuten ≥ 3 virkettä puolitettuna.</summary>
+        static List<string> Kappaleet(string teksti) => Kappalejako.Jaa(teksti);
 
         // --- kuvat ------------------------------------------------------------------------
 

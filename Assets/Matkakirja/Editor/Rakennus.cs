@@ -212,6 +212,19 @@ namespace Matkakirja.Editori
             nostoKerros.kierto = kierto;
             nostoKerros.merkit = merkit;
             nostoKerros.nappula = nappula;
+            // Alue-, meri- ja valtamerinimet maahan painettuina (löydös 38, build 11). Fontit: Liberation Serif
+            // (Fable 24.9.2026) SDF-assetteina, kun ne on tehty; puuttuessa natiivin serif (merkit.fontti) varalla.
+            var nimet = georefGo.AddComponent<Nimikerros>();
+            nimet.georeferenssi = georef;
+            nimet.kamera = kamera;
+            nimet.kierto = kierto;
+            nimet.merkit = merkit;
+            nimet.nappula = nappula;
+            nimet.fonttiPysty = Fontti(NimiTtfPysty, NimiFonttiPysty, "LiberationSerif-Regular SDF");
+            nimet.fonttiKursiivi = Fontti(NimiTtfKursiivi, NimiFonttiKursiivi, "LiberationSerif-Italic SDF");
+            // ZTest Always kuten Rajaviiva: maahan painettu teksti ei jää korotetun maaston alle. Viite vie varjostimen käännökseen.
+            nimet.varjostin = Shader.Find("TextMeshPro/Distance Field Overlay");
+            nimet.aaltoMateriaali = Materiaali("Aaltomerkki", "Matkakirja/Rajaviiva", new Color(58 / 255f, 66 / 255f, 84 / 255f, 0.62f));
 
             // Valo kulkee kameran mukana: näkyvä puolipallo on aina valaistu.
             var valoGo = new GameObject("Valo");
@@ -276,6 +289,13 @@ namespace Matkakirja.Editori
 
         public const string TmpFontti = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";
 
+        /// <summary>Aluenimien fontit (Nimikerros.fonttiPysty ja fonttiKursiivi): Liberation Serif SDF, kun Natiiviseppä on ne tehnyt.</summary>
+        public const string NimiFonttiPysty = "Assets/Matkakirja/Fontit/LiberationSerif-Regular SDF.asset";
+        public const string NimiFonttiKursiivi = "Assets/Matkakirja/Fontit/LiberationSerif-Italic SDF.asset";
+        /// <summary>Liberation Serif 2.1.5 (SIL OFL 1.1, Fontit/LiberationSerif-OFL.txt; lähde ja SHA-256 Fontit/LiberationSerif-LAHDE.txt).</summary>
+        public const string NimiTtfPysty = "Assets/Matkakirja/Fontit/LiberationSerif-Regular.ttf";
+        public const string NimiTtfKursiivi = "Assets/Matkakirja/Fontit/LiberationSerif-Italic.ttf";
+
         public const string FonttiTiedosto = "Assets/Matkakirja/Fontit/EBGaramond.ttf";
         public const string FonttiAsset = "Assets/Matkakirja/Fontit/EBGaramond SDF.asset";
 
@@ -283,22 +303,26 @@ namespace Matkakirja.Editori
         /// EB Garamond (OFL, Fontit/OFL.txt) TextMeshPro-fonttina. Atlas täyttyy
         /// dynaamisesti ajossa, joten kaikki nimien merkit (á ä é ö š ž ’) toimivat.
         /// </summary>
-        static TMPro.TMP_FontAsset Fontti()
+        static TMPro.TMP_FontAsset Fontti() => Fontti(FonttiTiedosto, FonttiAsset, "EBGaramond SDF")
+            ?? throw new Exception("Fonttia ei löydy: " + FonttiTiedosto);
+
+        /// <summary>TTF → dynaaminen SDF-asset (luodaan kerran; null, jos TTF puuttuu).</summary>
+        static TMPro.TMP_FontAsset Fontti(string ttfPolku, string assetPolku, string nimi)
         {
-            var olemassa = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+            var olemassa = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(assetPolku);
             if (olemassa != null) return olemassa;
-            var ttf = AssetDatabase.LoadAssetAtPath<Font>(FonttiTiedosto)
-                ?? throw new Exception("Fonttia ei löydy: " + FonttiTiedosto);
+            var ttf = AssetDatabase.LoadAssetAtPath<Font>(ttfPolku);
+            if (ttf == null) return null;
             var fa = TMPro.TMP_FontAsset.CreateFontAsset(ttf, 90, 9,
                 UnityEngine.TextCore.LowLevel.GlyphRenderMode.SDFAA, 1024, 1024,
                 TMPro.AtlasPopulationMode.Dynamic, true);
-            fa.name = "EBGaramond SDF";
-            AssetDatabase.CreateAsset(fa, FonttiAsset);
-            fa.material.name = "EBGaramond SDF Material";
+            fa.name = nimi;
+            AssetDatabase.CreateAsset(fa, assetPolku);
+            fa.material.name = nimi + " Material";
             AssetDatabase.AddObjectToAsset(fa.material, fa);
-            foreach (var t in fa.atlasTextures) { t.name = "EBGaramond SDF Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
+            foreach (var t in fa.atlasTextures) { t.name = nimi + " Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
             AssetDatabase.SaveAssets();
-            return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+            return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(assetPolku);
         }
 
         static Material Viiva(string nimi, Color vari, float paksuus, Vector4 katko)
@@ -459,7 +483,7 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.simulatorSdkArchitecture = AppleMobileArchitectureSimulator.ARM64;
             PlayerSettings.iOS.targetOSVersionString = "17.0";
             // Tiimi MATKAKIRJA_TEAM-ympäristömuuttujasta (Fable 24.9.2026: kehityskäännökset maksulliseen
-            // Developer Program -tiimiin RCD77XPB7M, samireivinen@me.com; Personal Team F72JLS57C5 pois kokonaan).
+            // Developer Program -tiimiin RCD77XPB7M, samireivinen@me.com; vanha ilmainen Personal Team on poistettu kokonaan).
             var tiimi = Environment.GetEnvironmentVariable("MATKAKIRJA_TEAM");
             PlayerSettings.iOS.appleDeveloperTeamID = string.IsNullOrEmpty(tiimi) ? Tiimi : tiimi;
             PlayerSettings.iOS.appleEnableAutomaticSigning = true;
@@ -531,8 +555,6 @@ namespace Matkakirja.Editori
 
         /// <summary>Omistajan Developer Program -tiimi (samireivinen@me.com; TestFlight ja kehityskäännökset).</summary>
         const string Tiimi = "RCD77XPB7M";
-        /// <summary>TestFlight-jakelun tiimi buildeissa 4–9 (Actionsin TEAM_ID); build 10 kaatui, kun oletus oli Tiimi.</summary>
-        const string JakeluTiimi = "F72JLS57C5";
         /// <summary>Laitteen kehityskäännöksen App ID (tyokalut/ipad.sh ID).</summary>
         const string LaiteBundleId = "fi.matkakirja.peli.kehitys";
 
@@ -540,7 +562,7 @@ namespace Matkakirja.Editori
         /// Xcode-projekti TestFlightiin: Build/testflight (Julkaisija arkistoi ja lähettää
         /// pilviallekirjoituksella). Ympäristömuuttujat:
         ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d)
-        ///   MATKAKIRJA_TEAM       tiimin Team ID (oletus jakelutiimi <see cref="JakeluTiimi"/>, kuten buildeissa 4–9)
+        ///   MATKAKIRJA_TEAM       tiimin Team ID (oletus Developer Program -tiimi <see cref="Tiimi"/>; CI antaa TEAM_ID:n)
         ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
         ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
         ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE)
@@ -556,7 +578,7 @@ namespace Matkakirja.Editori
             AsetaIos(iOSSdkVersion.DeviceSDK);
             PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS,
                 Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
-            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", JakeluTiimi);
+            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", Tiimi);
             PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
             PlayerSettings.iOS.buildNumber = build;
             // MATKAKIRJA_APPSTORE=1: App Store -käännös (linssien kehittäjätila pois, kynnykset aina;

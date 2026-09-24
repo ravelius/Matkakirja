@@ -393,34 +393,86 @@ namespace Matkakirja
             return e;
         }
 
-        /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
+        /// <summary>
+        /// Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin). Satelliittikansion vastaukset
+        /// kirjataan (SatelliittiLoki) harmaiden suorakulmioiden selvitystä varten (build 11).
+        /// </summary>
         async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
+        {
+            var lahde = new Lahde();
+            var tulos = await HaeSisalto(polku, esilataus, lahde);
+            if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
+                SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
+            return tulos;
+        }
+
+        sealed class Lahde { public string Nimi = "?"; }
+
+        /// <summary>
+        /// JPEG kokonainen: alussa SOI (FF D8) ja lopussa EOI (FF D9, enintään 16 täytetavun päässä). Katkennut JPEG
+        /// dekoodautuu Cesiumissa harmaaksi loppuosaltaan (puuttuvat lohkot = DC 0 = keskiharmaa, alfa 1), eikä
+        /// lennon varakartta silloin laukea. Muut tiedostotyypit hyväksytään sellaisenaan.
+        /// </summary>
+        internal static bool KuvaEhja(string polku, byte[] data)
+        {
+            if (data == null || !polku.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase)) return true;
+            if (data.Length < 4 || data[0] != 0xFF || data[1] != 0xD8) return false;
+            for (int i = data.Length - 2; i >= Math.Max(2, data.Length - 18); i--)
+                if (data[i] == 0xFF && data[i + 1] == 0xD9) return true;
+            return false;
+        }
+
+        async Task<(int, byte[])> HaeSisalto(string polku, Esilataus esilataus, Lahde lahde)
         {
             bool esi = esilataus != null;
             polku = Uri.UnescapeDataString(polku);
             if (polku.Contains("..")) return (404, null);
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
-            if (tyhja && tyhjakuva != null) return (200, tyhjakuva);
+            if (tyhja && tyhjakuva != null) { lahde.Nimi = "tyhja"; return (200, tyhjakuva); }
             if (KattavuusOhjaus(polku, out bool kattavuusTyhja))
             {
                 varitasoa = true;   // virhe → läpinäkyvä, ei mustaa
-                if (kattavuusTyhja && tyhjakuva != null) return (200, tyhjakuva);
+                if (kattavuusTyhja && tyhjakuva != null) { lahde.Nimi = "kattamaton"; return (200, tyhjakuva); }
             }
             string f = Tiedosto(offline, polku);
-            if (File.Exists(f)) { if (esi) return (200, null); Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
-            f = Tiedosto(valimuisti, polku);
             if (File.Exists(f))
             {
                 if (esi) return (200, null);
-                Interlocked.Increment(ref Valimuistista);
                 var sisalto = File.ReadAllBytes(f);
-                try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
-                return (200, sisalto);
+                if (KuvaEhja(polku, sisalto)) { Interlocked.Increment(ref Offline); lahde.Nimi = "offline"; return (200, sisalto); }
+                Debug.LogWarning($"MATKAKIRJA laattapalvelin: offline-laatta rikki ({sisalto.Length} t), haetaan verkosta: {polku}");
+            }
+            f = Tiedosto(valimuisti, polku);
+            if (File.Exists(f))
+            {
+                byte[] sisalto = null;
+                if (!esi || polku.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase))
+                    try { sisalto = File.ReadAllBytes(f); } catch (Exception) { sisalto = null; }
+                if (sisalto != null && KuvaEhja(polku, sisalto))
+                {
+                    if (esi) return (200, null);
+                    Interlocked.Increment(ref Valimuistista);
+                    try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
+                    lahde.Nimi = "valimuisti";
+                    return (200, sisalto);
+                }
+                if (esi && sisalto == null && File.Exists(f)) return (200, null);
+                // Rikkinäinen tai kadonnut välimuistitiedosto: pois ja verkosta uudelleen.
+                Debug.LogWarning($"MATKAKIRJA laattapalvelin: välimuistin laatta rikki ({sisalto?.Length ?? -1} t), haetaan verkosta: {polku}");
+                try { File.Delete(f); } catch { }
             }
             if (esi && esilataus.Peruttu) return (499, null);
             var h = new Haku { Polku = polku, Esi = esilataus };
             (varitasoa ? kiireJono : esi ? esiJono : jono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
+            lahde.Nimi = "verkko";
+            if (tila == 200 && !KuvaEhja(polku, data))
+            {
+                // Katkennut lataus: ei välimuistiin, ja Cesium saa virheen (esivanhemman rasteri / varakartta) harmaan sijaan.
+                Debug.LogWarning($"MATKAKIRJA laattapalvelin: verkon laatta rikki ({data?.Length ?? 0} t): {polku}");
+                tila = 502;
+                data = null;
+            }
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
                 Interlocked.Increment(ref Varakuvia);
@@ -457,6 +509,7 @@ namespace Matkakirja
 
         void Update()
         {
+            SatelliittiLoki.Yhteenveto();
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));

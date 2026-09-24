@@ -382,7 +382,13 @@ namespace Matkakirja
         const float Etuna = 0.3f;
 
         readonly List<Merkki> merkit = new List<Merkki>();
-        readonly List<Rect> varatut = new List<Rect>();
+
+        /// <summary>
+        /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut nimiöalueet pikseleinä. Kaupungit varaavat
+        /// ensin (LateUpdate), ja Nimikerros lisää samaan nostojen laatikot ja alue-, meri- ja valtamerinimet
+        /// (prioriteetti kaupunki > nosto > maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado).
+        /// </summary>
+        public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
         Mesh nelio;
 
         public int Naytetty { get; private set; }
@@ -597,7 +603,7 @@ namespace Matkakirja
             // Retina-näytöllä yksi piste on 2–3 pikseliä; mitoitus tehdään pisteinä.
             float kerroin = PalloKierto.Pistekerroin;
             float pikseleita = Screen.height / kerroin;
-            varatut.Clear();
+            Varaukset.Aloita(Time.frameCount);
             int naytetty = 0;
 
             // Valintamerkit ensin (jarjestys), muuten tärkeysjärjestys (merkit).
@@ -629,21 +635,21 @@ namespace Matkakirja
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
                 bool valinta = m.valintamerkki && !LinssiTila;
                 bool mahtuu = valinta || nimiotNakyvat || LinssiTila;
-                if (!valinta)
-                    foreach (var v in varatut)
-                        if (v.Overlaps(suorakulmio)) { mahtuu = false; break; }
+                if (!valinta && mahtuu && Varaukset.Osuu(Laatikko(suorakulmio))) mahtuu = false;
                 if (mahtuu)
                 {
                     // Varataan nimiö ja oma piste: myöhempi nimiö ei saa peittää kumpaakaan.
                     float pp = m.pisteKoko * kerroin;
-                    varatut.Add(suorakulmio);
-                    varatut.Add(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp));
+                    Varaukset.Varaa(Laatikko(suorakulmio));
+                    Varaukset.Varaa(Laatikko(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp)));
                     naytetty++;
                 }
                 if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
             }
             Naytetty = naytetty;
         }
+
+        static Ruutulaatikko Laatikko(Rect r) => new Ruutulaatikko(r.xMin, r.yMin, r.xMax, r.yMax);
 
         /// <summary>Nimiön alue ruudulla (pikseleinä, y ylös): oikealla pisteestä, valintamerkillä keskellä renkaan yläpuolella.</summary>
         Rect NimenAla(Merkki m, Vector2 p, float kerroin)
