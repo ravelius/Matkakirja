@@ -2629,3 +2629,9 @@
     min-height: 44px;
     padding: 6px 10px;
 }
+
+/* Valikon linssiosan väliotsikko viivan alla (pelin rivit yläpuolella). */
+.mk-linssivalitsin__valiotsikko {
+    margin: 2px 5.6px 4px 5.6px;
+    -unity-text-align: middle-left;
+}

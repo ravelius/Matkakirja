@@ -14,8 +14,8 @@
 // sulkeutuu ✕:sta, valinnasta ja napautuksesta paneelin ohi.
 //
 // iPHONE (omistaja 24.9.2026, löydös 20): silmälasinappia ei ole; yläpalkin ☰ avaa tämän paneelin
-// koko pelin valikkona (Valikkona). Yläkaista on matala, linssit ylimpinä ja niiden alla ohuen viivan
-// jälkeen Lisaosa-rivit (UiNakymat.RakennaPuhelinvalikko: Asetukset, Äänet, Offline-kartat, vanhan
+// koko pelin valikkona (Valikkona). Yläkaista on matala, ylimpänä Lisaosa-rivit (Fable 24.9.: perustoiminnot
+// eivät jää vierityksen taakse) ja ohuen viivan jälkeen linssit (UiNakymat.RakennaPuhelinvalikko: Asetukset, Äänet, Offline-kartat, vanhan
 // päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä).
 using System;
 using System.Collections.Generic;
@@ -76,8 +76,10 @@ namespace Matkakirja.Natiivi
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             paneeli.Add(vieritys);
-            lista = Rakenne.El("mk-linssivalitsin__lista", vieritys);
+            // iPhonen valikkona pelin rivit ylimpänä (Fable 24.9.: perustoiminnot eivät saa jäädä vierityksen taakse),
+            // ohut viiva ja linssit niiden alla koko tilaan.
             lisaosa = Rakenne.El("mk-linssivalitsin__lisaosa", vieritys, PickingMode.Ignore);
+            lista = Rakenne.El("mk-linssivalitsin__lista", vieritys);
             lisaosa.style.display = DisplayStyle.None;
 
             poisNappi = Rakenne.Nappi("Ota linssi pois", "mk-nappi--haamu mk-linssivalitsin__pois", () => { Sulje(); Suljettava?.Invoke(); }, paneeli);
@@ -204,8 +206,14 @@ namespace Matkakirja.Natiivi
             else if (r != null) foreach (var l in r.Valittavat) tiedot.Add(l.Tiedot);
             // Valikkona ilman löydettyjä linssejä: ei otsikkoa eikä tyhjää riviä, vain valikon rivit.
             bool tyhjaValikko = Valikkona && r != null && tiedot.Count == 0;
-            otsikko.text = Valikkona && tyhjaValikko ? "" : "LINSSIT";
+            // Valikkona otsikko "LINSSIT" on linssien yllä viivan alla, yläkaistassa vain ✕.
+            otsikko.text = Valikkona ? "" : "LINSSIT";
             lista.style.display = tyhjaValikko ? DisplayStyle.None : DisplayStyle.Flex;
+            if (Valikkona && !tyhjaValikko)
+            {
+                Rakenne.El("mk-linssivalitsin__erotin", lista, PickingMode.Ignore);
+                Rakenne.Teksti("LINSSIT", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
+            }
             if (tiedot.Count == 0 && !tyhjaValikko) Rakenne.Teksti("Linssit latautuvat…", "mk-linssivalitsin__tyhja", lista);
             foreach (var t in tiedot) LuoRivi(t);
             Merkitse(r?.Auki?.Tiedot?.Id ?? aukiId);
