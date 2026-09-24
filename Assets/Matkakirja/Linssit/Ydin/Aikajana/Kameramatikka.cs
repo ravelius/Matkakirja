@@ -10,6 +10,8 @@
 // Web mittaa leveydet laudan yksiköissä: 12000 yksikköä = 360°. Natiivi muuntaa
 // ne asteiksi (LeveysAsteina) ja ympäristö korkeudeksi ruudun leveyden mukaan.
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Matkakirja.Linssit.Aikajana
 {
@@ -86,6 +88,91 @@ namespace Matkakirja.Linssit.Aikajana
             }
             if (!(etaisyys > 1)) return null;
             return (keski, etaisyys - 1);
+        }
+
+        static IEnumerable<LatLon> Keha(LautaLaatikko b)
+        {
+            for (int i = 0; i <= PerimetrinNaytteet; i++)
+            {
+                double t = i / (double)PerimetrinNaytteet;
+                yield return LaudaltaAsteiksi(b.X + b.W * t, b.Y);
+                yield return LaudaltaAsteiksi(b.X + b.W * t, b.Y + b.H);
+                yield return LaudaltaAsteiksi(b.X, b.Y + b.H * t);
+                yield return LaudaltaAsteiksi(b.X + b.W, b.Y + b.H * t);
+            }
+        }
+
+        /// <summary>Web kehanTarve akseli kerrallaan: 'X', 'Y' tai null (molemmat).</summary>
+        static double KehanTarve(IReadOnlyList<LatLon> pisteet, double lat0, double lng0, double vara, double T, double A, char? akseli)
+        {
+            double sin0 = Math.Sin(lat0 * Rad), cos0 = Math.Cos(lat0 * Rad), e = 0;
+            foreach (var p in pisteet)
+            {
+                double lat = p.Lat * Rad, dLng = (p.Lon - lng0) * Rad;
+                double sinP = Math.Sin(lat), cosP = Math.Cos(lat), cosDl = Math.Cos(dLng);
+                double syvyys = sinP * sin0 + cosP * cos0 * cosDl;
+                double sivu = Math.Abs(cosP * Math.Sin(dLng)) / (T * A);
+                double pysty = Math.Abs(sinP * cos0 - cosP * sin0 * cosDl) / T;
+                double osa = akseli == 'X' ? sivu : akseli == 'Y' ? pysty : Math.Max(sivu, pysty);
+                e = Math.Max(e, syvyys + vara * osa);
+            }
+            return e;
+        }
+
+        /// <summary>Web reunanPuoli: pienin |Δlng|, jolla reunameridiaani on kokonaan ruudun laidassa tai ulkona.</summary>
+        static double ReunanPuoli(double latMin, double latMax, double lat0, double etaisyys, double T, double A)
+        {
+            double sin0 = Math.Sin(lat0 * Rad), cos0 = Math.Cos(lat0 * Rad);
+            double PieninTarve(double u)
+            {
+                double cosDl = Math.Cos(u * Rad), sinDl = Math.Sin(u * Rad), pienin = double.PositiveInfinity;
+                for (int i = 0; i <= PerimetrinNaytteet; i++)
+                {
+                    double lat = (latMin + (latMax - latMin) * i / PerimetrinNaytteet) * Rad;
+                    double tarve = Math.Sin(lat) * sin0 + Math.Cos(lat) * cos0 * cosDl + Math.Cos(lat) * sinDl / (T * A);
+                    if (tarve < pienin) pienin = tarve;
+                }
+                return pienin;
+            }
+            double ala = 0, yla = 90;
+            if (!(PieninTarve(yla) >= etaisyys)) return yla;
+            for (int i = 0; i < 24; i++)
+            {
+                double k = (ala + yla) / 2;
+                if (PieninTarve(k) >= etaisyys) yla = k; else ala = k;
+            }
+            return yla;
+        }
+
+        /// <summary>
+        /// Web ajaKamera({ bbox, marginaali }) ilman kokonaan-lippua: KAPEA RUUTU SOVITETAAN KORKEUTEEN
+        /// (korkeuteenSovitus: jos leveys sitoisi, vain pystyakseli sitoo, X-keskipiste = toive rajattuna
+        /// niin, ettei laatikon reuna tule ruudun sisään), muuten pallonKorkeus molempiin suuntiin.
+        /// toiveLon = pelaajan pituusaste (web pelaajanAsteet); null = laatikon keskipiste.
+        /// </summary>
+        public static (LatLon Keski, double KorkeusSateina)? SovitaLaatikko(LautaLaatikko b, double fovAst, double kuvasuhde, double vara = 1, double? toiveLon = null)
+        {
+            if (!(b.W > 0) || !(b.H > 0)) return null;
+            double T = Math.Tan(fovAst / 2 * Rad), A = Math.Max(0.01, kuvasuhde);
+            var pisteet = Keha(b).ToList();
+            var keski = LaudaltaAsteiksi(b.X + b.W / 2, b.Y + b.H / 2);
+            double lngW = LaudaltaAsteiksi(b.X, b.Y + b.H / 2).Lon, lngE = LaudaltaAsteiksi(b.X + b.W, b.Y + b.H / 2).Lon;
+            if (lngE > lngW && lngE - lngW < 180
+                && KehanTarve(pisteet, keski.Lat, keski.Lon, vara, T, A, 'X') > KehanTarve(pisteet, keski.Lat, keski.Lon, vara, T, A, 'Y'))
+            {
+                double latMin = pisteet.Min(p => p.Lat), latMax = pisteet.Max(p => p.Lat);
+                double toive = toiveLon ?? keski.Lon;
+                double lng0 = Math.Min(lngE, Math.Max(lngW, toive)), etaisyys = 0;
+                for (int i = 0; i < 3; i++)
+                {
+                    etaisyys = KehanTarve(pisteet, keski.Lat, lng0, vara, T, A, 'Y');
+                    double puoli = ReunanPuoli(latMin, latMax, keski.Lat, etaisyys, T, A);
+                    double alaraja = lngW + puoli, ylaraja = lngE - puoli;
+                    lng0 = ylaraja > alaraja ? Math.Min(ylaraja, Math.Max(alaraja, toive)) : (lngW + lngE) / 2;
+                }
+                if (etaisyys > 1) return (new LatLon(keski.Lat, lng0), etaisyys - 1);
+            }
+            return PallonKorkeus(b, fovAst, kuvasuhde, vara);
         }
 
         public static LatLon LaudaltaAsteiksi(double x, double y)
