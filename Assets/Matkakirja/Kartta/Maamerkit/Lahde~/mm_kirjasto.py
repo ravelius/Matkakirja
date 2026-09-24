@@ -509,6 +509,40 @@ def esikatselu(scene, o, albedo_polku, kansio, etuliite, nakymat, maan_vari="#d9
 
 # ---------------------------------------------------------------------------------------------
 # Vienti
+def vie_glb(scene, o, albedo_polku, polku):
+    """Sisältöpaketin GLB (Pelikoodari 24.9.2026; natiivin GlbLukija): kopio mallista ilman apukanavia, yksi
+    materiaali, jonka baseColorTexture on upotettu atlas (PNG). EI kääntöä: glTF-vienti +Y ylös antaa
+    karttakehyksestä (+X itä, +Y pohjoinen, +Z ylös) glTF-kehyksen (+X itä, +Y ylös, −Z pohjoinen), ja
+    GlbLukija peilaa z:n → Unity +X itä, +Y ylös, +Z pohjoinen (sama kuin vie_fbx:n FBX). Ajetaan ennen
+    vie_fbx:ää, koska se muuttaa verkkoa ja poistaa muut oliot. Palauttaa (tavuja, sha256)."""
+    import hashlib
+    kopio = o.copy(); kopio.data = o.data.copy(); kopio.name = o.name + "_glb"
+    scene.collection.objects.link(kopio)
+    for nimi in ("tunnus", "param"):
+        uv = kopio.data.uv_layers.get(nimi)
+        if uv: kopio.data.uv_layers.remove(uv)
+    m = bpy.data.materials.new(o.name + "_glb"); m.use_nodes = True
+    nt = m.node_tree
+    bsdf = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
+    bsdf.inputs["Roughness"].default_value = 0.9
+    bsdf.inputs["Metallic"].default_value = 0.0
+    tx = nt.nodes.new("ShaderNodeTexImage")
+    tx.image = bpy.data.images.load(albedo_polku); tx.image.colorspace_settings.name = 'sRGB'
+    nt.links.new(tx.outputs["Color"], bsdf.inputs["Base Color"])
+    kopio.data.materials.clear(); kopio.data.materials.append(m)
+    for x in scene.objects: x.select_set(False)
+    kopio.select_set(True)
+    bpy.context.view_layer.objects.active = kopio
+    bpy.ops.export_scene.gltf(filepath=polku, export_format='GLB', use_selection=True, export_yup=True,
+                              export_apply=False, export_texcoords=True, export_normals=True,
+                              export_tangents=False, export_materials='EXPORT', export_image_format='AUTO',
+                              export_animations=False, export_extras=False, export_cameras=False, export_lights=False)
+    bpy.data.objects.remove(kopio)
+    data = open(polku, "rb").read()
+    sha = hashlib.sha256(data).hexdigest()
+    loki("vienti:", polku, "(%.2f Mt, sha256 %s)" % (len(data) / 1e6, sha))
+    return len(data), sha
+
 def vie_fbx(scene, o, polku):
     """Kääntää mallin 180° pystyakselin ympäri (karttakehys → Unity: +X itä, +Z pohjoinen) ja vie FBX:n
     ilman ylimääräisiä UV-kanavia ja tekstuuriviitteitä."""

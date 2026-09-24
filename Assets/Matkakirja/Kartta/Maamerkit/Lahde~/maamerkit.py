@@ -1,7 +1,10 @@
 # Matkakirja: kaupunkien matalapolyiset 3D-maamerkit (oma työ, CC0). Omistajan kortti 24.9.2026.
 #
 #   /Applications/Blender.app/Contents/MacOS/Blender -b -P maamerkit.py -- <kaupunki-id> \
-#       [--ulos <Maamerkit-kansio>] [--esikatselu <kansio>] [--koko 1024] [--saikeet 8]
+#       [--ulos <Maamerkit-kansio>] [--esikatselu <kansio>] [--koko 1024] [--saikeet 8] [--glb <kansio>]
+#
+# --glb: lisäksi sisältöpaketin GLB <kansio>/<id>-<sha8>.glb (atlas upotettuna) ja rivi
+# tools/vienti/maamerkit.json:iin tulostettuna (MAAMERKKIRIVI {...}); ks. ../LUE.md "Sisältöpaketti".
 #
 # Tuottaa <ulos>/<id>.fbx, <ulos>/Tekstuurit/<id>_vari.png (albedo + AO, sRGB, 1024², ei alfaa) ja
 # esikatselukuvat (<esikatselu>/<id>-*.png; oletus Lahde~/esikatselu). Kaupunki on moduuli
@@ -27,6 +30,7 @@ KOKO = int(valinta("--koko", 1024))
 SAIKEET = int(valinta("--saikeet", 8))
 ULOS = valinta("--ulos", os.path.dirname(TAMA))
 ESIKATSELU = valinta("--esikatselu", os.path.join(TAMA, "esikatselu"))
+GLB = valinta("--glb", None)
 if not argv: raise SystemExit("anna kaupunki-id, esim. -- lontoo")
 ID = argv[0]
 
@@ -63,6 +67,19 @@ vari = mk.tallenna_albedo(os.path.join(ULOS, "Tekstuurit", ID + "_vari.png"), al
 if ESIKATSELU and ESIKATSELU != "-":
     mk.esikatselu(scene, o, vari, ESIKATSELU, ID, kaupunki.NAKYMAT, getattr(kaupunki, "MAAN_VARI", "#d9cba5"),
                   int(os.environ.get("MM_NAYTTEET", "24")))
+
+if GLB:
+    import json, shutil
+    os.makedirs(GLB, exist_ok=True)
+    valiaikainen = os.path.join(GLB, ID + "-uusi.glb")
+    tavuja, sha = mk.vie_glb(scene, o, vari, valiaikainen)
+    nimi = "%s-%s.glb" % (ID, sha[:8])
+    shutil.move(valiaikainen, os.path.join(GLB, nimi))
+    mk.loki("MAAMERKKIRIVI " + json.dumps({
+        "id": ID, "kaupunki": ID, "mallinKorkeus": round(float(P[:, 2].max()), 1),
+        "malli": {"url": "https://media.matkakirja.app/maamerkit/" + nimi, "sha256": sha, "tavuja": tavuja},
+        "lisenssi": "CC0-1.0", "tekija": "Matkakirja (oma työ)",
+        "lahde": "Blender-skripti Kartta/Maamerkit/Lahde~/kaupungit/%s.py" % ID}, ensure_ascii=False))
 
 mk.vie_fbx(scene, o, os.path.join(ULOS, ID + ".fbx"))
 mk.loki("VALMIS %s: %d kolmiota, korkeus %.1f m" % (ID, kolmiot, P[:, 2].max()))

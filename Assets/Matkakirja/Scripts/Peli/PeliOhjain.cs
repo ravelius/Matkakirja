@@ -524,6 +524,7 @@ namespace Matkakirja.Natiivi
                 yield return new WaitForSecondsRealtime(yritys < 3 ? 3f : 15f);
             }
             AloitaAanitaulut();
+            StartCoroutine(HaeMaamerkit()); // taustalla (PeliOhjain.Maamerkit.cs)
 
             yield return HaeLaattamaarat();
             AloitaTaiJatka();

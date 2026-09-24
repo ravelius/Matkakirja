@@ -82,21 +82,35 @@ Esimerkki: pallon saapumisnäkymässä (kaari 18,6°) kamera on niin kaukana, et
 malli olisi alle 6 pt, joten maamerkki näkyy vasta lähempänä, esimerkiksi lennon lähtö- ja
 laskuvaiheessa.
 
-## Ehdotus sisältöpaketille (Siirtoseppä)
+## Sisältöpaketti (kokoelma `maamerkit`, skeema 1.33)
 
-Kokoelma `maamerkit`, jossa yksi rivi maamerkkiä kohti (sama muoto kuin `Maamerkit.Rivi`):
+Kaupunkeihin monistaminen on pelkkää sisältötyötä, eikä sovellukseen tarvita muutoksia:
 
-```json
-{ "alkiot": [
-  { "id": "lontoo", "kaupunki": "lontoo", "lat": 51.5051, "lon": -0.115, "korkeusM": 10,
-    "suunta": 0, "korkeus": 97.2, "lisenssi": "CC0-1.0", "tekija": "Matkakirja (oma työ)" }
-] }
-```
+1. Tee skripti `Lahde~/kaupungit/<id>.py` kuten yllä ja aja se lipulla `--glb <kansio>`:
+   ```sh
+   /Applications/Blender.app/Contents/MacOS/Blender -b --factory-startup -P maamerkit.py -- <id> --glb <kansio>
+   ```
+   Tuloksena syntyy `<kansio>/<id>-<sha8>.glb` (verkko + upotettu PNG-atlas, glTF +Y ylös, −Z pohjoinen) ja
+   lokiin rivi `MAAMERKKIRIVI {...}` (id, kaupunki, mallinKorkeus, malli {url, sha256, tavuja}, lisenssi, tekija,
+   lahde).
+2. Vie GLB ämpärin kansioon `maamerkit/` (CI tai Julkaisija, ei repoon).
+3. Lisää rivi Matkakirja-repon tiedostoon `tools/vienti/maamerkit.json` (rivit[]) ja täydennä kentät `lat`, `lon`
+   (kaupunkipiste), `maanKorkeus` (m, EGM2008 kuten kaupungit.korkeus) ja `suunta` (° pohjoisesta myötäpäivään).
+   Vienti tarkistaa HEAD-pyynnöllä, että osoite, sha ja tavumäärä täsmäävät, ja lisää mallin maan
+   offline-medialistaan.
 
-Mallit ja atlakset pysyvät sovelluksen mukana (FBX:t kääntyvät Unityssä). Paketti voi siirtää
-tai kiertää maamerkkiä ja ottaa sen pois käytöstä poistamalla rivin. Kaupungin oma
-`kaupungit.maamerkki`-kenttä (id tai null) riittää myöhemmin, jos sijainti ja kierto tulevat
-aina kaupungista.
+Natiivi (`Scripts/Peli/PeliOhjain.Maamerkit.cs`) lukee kokoelman taustalla (`Peli/Maamerkkisisalto.cs`), hakee GLB:n
+(välimuisti `persistentDataPath/maamerkit/`, offline `Laattapalvelin.Paikallinen`), tarkistaa tavut ja sha256:n,
+lukee sen (`Peli/GlbLukija.cs`, ei glTFast-pakettia) ja antaa sen tälle komponentille: `LisaaMalli` (materiaali
+kloonataan `pohjaMateriaali`sta, jonka `Rakennus` asettaa) ja `AsetaTaulukko`. Paketin rivi korvaa saman kaupungin
+oletusrivin vasta, kun sen malli on ladattu. Jos rivin id on `lontoo` tai `ateena`, se korvaa myös FBX-mallin.
+**Pilotti (Lontoo, Ateena) siirretään pakettiin vasta omistajan kokeilun jälkeen**, ja siihen asti se tulee
+`Oletustaulukko()`sta.
+
+Kehys: GlbLukija muuntaa glTF:n (x, y, z) Unityn kehykseen (x, y, −z) ja kääntää kolmioiden kierron, joten
+tulos on +X itä, +Y ylös ja +Z pohjoinen kuten FBX:ssä. Testit ovat tiedostossa
+`Peli-testit/Testit/MaamerkkiTestit.cs`, ja kultainen Blender-vienti (1024 → 128 px atlas) on
+`Peli-testit/Kultaiset/maamerkki-koe.glb`.
 
 ## Lisenssi
 

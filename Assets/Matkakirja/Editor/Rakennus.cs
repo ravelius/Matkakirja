@@ -148,6 +148,9 @@ namespace Matkakirja.Editori
             maamerkit.georeferenssi = georef;
             maamerkit.mallit = Maamerkit.Oletustaulukko()
                 .Select(r => MaamerkkiMalli(r.id)).Where(m => m != null).ToArray();
+            // Sisältöpaketin GLB-mallit kloonaavat tämän materiaalin (URP Lit pysyy buildissa).
+            maamerkit.pohjaMateriaali = maamerkit.mallit.FirstOrDefault(m => m.id == "lontoo")?.materiaali
+                                        ?? maamerkit.mallit.FirstOrDefault()?.materiaali;
             nappula.maamerkit = maamerkit;
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);

@@ -19,6 +19,7 @@ namespace Matkakirja
     /// maasta / painavat sen maahan <see cref="kasvuS"/> sekunnissa. Varjot pois.
     ///
     /// Rajapinta (Natiiviseppä kytkee Nappula.Lentoon): <see cref="Nayta"/>(kaupunki-idt) ja <see cref="Piilota"/>.
+    /// Sisältöpaketti (kokoelma "maamerkit", Pelikoodari): <see cref="LisaaMalli"/> + <see cref="AsetaTaulukko"/>.
     /// </summary>
     public class Maamerkit : MonoBehaviour
     {
@@ -51,6 +52,8 @@ namespace Matkakirja
         public CesiumGeoreference georeferenssi;
         public Camera kamera;
         public Malli[] mallit = new Malli[0];
+        [Tooltip("Sisältöpaketin GLB-mallien materiaalipohja (URP Lit): kloonataan ja _BaseMap vaihdetaan (Rakennus asettaa).")]
+        public Material pohjaMateriaali;
         public List<Rivi> taulukko = Oletustaulukko();
 
         [Header("Koko ruudulla (iOS-pisteinä, PalloKierto.Pistekerroin)")]
@@ -121,6 +124,25 @@ namespace Matkakirja
             esiintymat.Clear();
             taulukko = new List<Rivi>(rivit ?? Array.Empty<Rivi>());
             Nayta(new List<string>(naytettavat));
+        }
+
+        /// <summary>
+        /// Lisää ajon aikana tuodun mallin (sisältöpaketin GLB, Pelikoodarin MaamerkitPaketista) tai korvaa saman
+        /// id:n mallin. Olemassa oleva saman id:n esiintymä luodaan uudelleen seuraavassa Nayta-kutsussa.
+        /// </summary>
+        public void LisaaMalli(Malli m)
+        {
+            if (m == null || string.IsNullOrEmpty(m.id)) return;
+            var lista = new List<Malli>(mallit ?? Array.Empty<Malli>());
+            lista.RemoveAll(x => x == null || x.id == m.id);
+            lista.Add(m);
+            mallit = lista.ToArray();
+            if (esiintymat.TryGetValue(m.id, out var e))
+            {
+                if (e.t != null) Destroy(e.t.gameObject);
+                esiintymat.Remove(m.id);
+                Nayta(new List<string>(naytettavat));
+            }
         }
 
         Malli EtsiMalli(string id)
