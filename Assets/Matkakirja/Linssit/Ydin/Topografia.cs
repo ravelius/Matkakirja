@@ -154,7 +154,7 @@ namespace Matkakirja.Linssit
             if (porttiAsetettu) y.Pelikerrokset(true);
             y.ZoomiKatto(null);
             y.MusiikkiPitoon(false);
-            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : PaluuAjo);
+            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : PaluuAjo, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
         }
     }
 }

@@ -73,6 +73,31 @@ namespace Matkakirja.Linssit.Kamera
             }
         }
 
+        /// <summary>Paluun ja muistijatkon kevyt jousto (pienempi kuin syöksyn kuminauha).</summary>
+        public const double PaluunYlitys = 0.3;
+
+        /// <summary>Lyhyen ja pitkän matkan rajat (isoympyräkulma asteina) automaattisten ajojen rytmille.</summary>
+        public const double LyhytAsteina = 6, PitkaAsteina = 35;
+
+        /// <summary>Isoympyräkulma asteina kahden pisteen välillä.</summary>
+        public static double Kulma(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double Rad = Math.PI / 180;
+            double c = Math.Sin(lat1 * Rad) * Math.Sin(lat2 * Rad) + Math.Cos(lat1 * Rad) * Math.Cos(lat2 * Rad) * Math.Cos((lon2 - lon1) * Rad);
+            return Math.Acos(Math.Max(-1, Math.Min(1, c))) / Rad;
+        }
+
+        /// <summary>
+        /// TEMPO MATKAN MUKAAN (Raamattu KAMERA-AJOT: nopeuden vaihtelu): lyhyt siirto pehmeä, keskipitkä
+        /// kuminauhajarrutuksella, pitkä syöksy kuminauhalla.
+        /// </summary>
+        public static Kayra Matkalle(double kulmaAsteina) =>
+            kulmaAsteina < LyhytAsteina ? Kayra.Pehmea : kulmaAsteina < PitkaAsteina ? Kayra.Kuminauha : Kayra.SyoksyKuminauha;
+
+        /// <summary>Matkan käyrä funktiona (lähtö → kohde).</summary>
+        public static Func<double, double> Matkalle(double lat1, double lon1, double lat2, double lon2) =>
+            Funktio(Matkalle(Kulma(lat1, lon1, lat2, lon2)));
+
         /// <summary>Käyrä funktiona (ILinssiYmparisto.AjaKamera / PalloKierto.Aja pehmennys).</summary>
         public static Func<double, double> Funktio(Kayra kayra, double parametri = double.NaN) =>
             t => Arvo(kayra, t, parametri);

@@ -169,7 +169,10 @@ namespace Matkakirja.Linssit.Aikajana
         {
             ViimeisinAjo = (keskus, leveysAst, kestoMs);
             double ms = y.VahennettyLiike ? 0 : kestoMs;
-            y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000));
+            // Tempo matkan mukaan (Kamerakoreografia.Matkalle, Raamattu KAMERA-AJOT 24.9.).
+            var nyt = y.Kamera;
+            y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000),
+                Matkakirja.Linssit.Kamera.Kamerakayrat.Matkalle(nyt.Lat, nyt.Lon, keskus.Lat, keskus.Lon));
         }
 
         void Lopeta()
@@ -197,7 +200,9 @@ namespace Matkakirja.Linssit.Aikajana
                 && Kameramatikka.SovitaLaatikko(Kameramatikka.KaarenKameralaatikko(a, y.Kuvasuhde < 1), y.Nakokulma, y.Kuvasuhde, 1 + 2 * 0.03, Pelaaja?.Invoke()?.Lon) is var (keski, h))
             {
                 ViimeisinAjo = (keski, double.NaN, Kameramatikka.LoppuAjoMs);
-                y.AjaKamera(new Nakyma(keski.Lat, keski.Lon, h * Kameramatikka.MaanSade), (float)((y.VahennettyLiike ? 0 : Kameramatikka.LoppuAjoMs) / 1000));
+                // KEKSINTÖJEN LOPPU: nousu koko kaareen (nopea irtoaminen, pitkä pehmeä hidastus).
+                y.AjaKamera(new Nakyma(keski.Lat, keski.Lon, h * Kameramatikka.MaanSade), (float)((y.VahennettyLiike ? 0 : Kameramatikka.LoppuAjoMs) / 1000),
+                    Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Nousu));
                 return;
             }
             var r = alue.Rajaus();
