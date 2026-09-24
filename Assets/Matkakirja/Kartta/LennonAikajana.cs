@@ -93,9 +93,9 @@ namespace Matkakirja
                 // Syöksy koneen etuviistoon, kuminauhajarrutus lähikuvaan.
                 // Omistaja 24.9. klo 11.4x: lähivaiheissa kone täyttää ~2/3 ruudun leveydestä; kamera matalalta
                 // etuviistosta (kallistus 80–83°), jotta horisontti ja taivas ovat koneen takana ja pilvet alla.
-                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 80, Suunta = 150, Kohde = 0, Kone = 0.66 },
+                new Avain { Osuus = 0.09, Kayra = Kayra.SyoksyKuminauha, Etaisyys = 40_000, Kallistus = 80, Suunta = 150, Kohde = 0, Kone = 0.74 },
                 // LÄHIKUVA: hidas panorointi koneen ympäri, lähes paikallaan.
-                new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.66 },
+                new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.74 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).
             var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 30, Suunta = 360, Kohde = 0 };
