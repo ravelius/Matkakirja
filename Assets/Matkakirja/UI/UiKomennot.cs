@@ -16,7 +16,7 @@
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
-//   ui tyohuone raamattu | kehittajalehti | tilanne [sivu] | poiminnat | musiikki | grafiikka | lukijoilta
+//   ui tyohuone raamattu | kehittajalehti | tilanne [sivu] | poiminnat | musiikki | grafiikka | lukijoilta | tilastot
 //                                             KOKEET-työhuone kehittäjän liitteinä
 //                                             (vain kehittäjätilassa; aineisto sisältöpaketin tyohuone-moduuleista)
 //   ui tyohuone poiminta [avain]              tallentaa testiparin laitteelle (oletus aihe:pariisi:kaupunki) ja
@@ -390,6 +390,7 @@ namespace Matkakirja.Natiivi
                         case "musiikki": Tyohuone.AvaaMusiikki(); return null;
                         case "grafiikka": Tyohuone.AvaaGrafiikka(); return null;
                         case "lukijoilta": Lukijoilta.Avaa(); return null;
+                        case "tilastot": Tilastot.Avaa(); return null;
                         case "poiminta":
                             Kirjaa("tallennettu " + PoimintaVarasto.Tallenna(arvo.Length > 0 ? arvo : "aihe:pariisi:kaupunki",
                                 "Testikysymys " + System.DateTime.Now.ToString("HH.mm.ss"), "Testivastaus.\n\nToinen kappale."));
