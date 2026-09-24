@@ -3836,4 +3836,72 @@ export const SAATIEDOT = {
       + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
       + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N14-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain bananal,geraldton,joaopessoa,murzuk,nullarbor. Asemat: Ilha
+   * do Bananal, Geraldton, João Pessoa, Murzuk, Eucla (Nullarborin
+   * tasanko).
+   */
+  bananal: {
+    lat: -11.5,
+    lon: -50.2,
+    keskilampo: [26.5, 26.2, 26.5, 26.4, 27.1, 26.9, 27.2, 29.2, 29.6, 27.9, 26.5, 26.2],
+    ylin: [30, 29, 30, 30, 31, 32, 33, 35, 35, 33, 30, 30],
+    alin: [23, 23, 23, 23, 23, 22, 22, 23, 24, 23, 23, 23],
+    sade: [298, 237, 266, 212, 25, 1, 0, 1, 46, 140, 227, 281],
+    luonnehdinta: 'Ilha do Bananalilla syyskuu on kuumin, lähes '
+      + '30 astetta, ja samalla käynnissä on täydellinen '
+      + 'kuiva-kausi — kesä–elokuu on käytännössä sateeton. '
+      + 'Sadekausi joulu–maaliskuussa tuo yli 200 millimetriä '
+      + 'kuukaudessa.',
+  },
+  geraldton: {
+    lat: -28.7774,
+    lon: 114.6150,
+    keskilampo: [24.6, 25.5, 24.6, 21.2, 18.5, 17.1, 15.7, 15.8, 16.8, 19.2, 20.7, 23.9],
+    ylin: [30, 30, 29, 26, 23, 22, 20, 19, 21, 23, 25, 29],
+    alin: [20, 21, 20, 17, 14, 13, 12, 12, 13, 15, 16, 19],
+    sade: [22, 14, 17, 31, 15, 35, 28, 69, 22, 7, 22, 2],
+    luonnehdinta: 'Geraldtonilla on Välimeren tapainen ilmasto: '
+      + 'eteläinen kesä (joulu–helmikuu) on lämmin ja kuiva, '
+      + 'talvi (kesä–elokuu) leuto ja selvästi sateisempi.',
+  },
+  joaopessoa: {
+    lat: -7.1195,
+    lon: -34.8450,
+    keskilampo: [26.9, 26.8, 26.7, 26.5, 25.8, 24.9, 24.3, 24.3, 24.8, 25.7, 26.2, 26.6],
+    ylin: [29, 29, 29, 29, 28, 27, 26, 26, 27, 28, 29, 29],
+    alin: [24, 24, 25, 24, 24, 23, 22, 22, 23, 23, 24, 24],
+    sade: [44, 92, 125, 129, 132, 124, 101, 57, 42, 28, 41, 28],
+    luonnehdinta: 'João Pessoassa lämpötila pysyy tasaisen '
+      + 'lämpimänä, 24–27 astetta ympäri vuoden. Sadekausi '
+      + 'maalis–kesäkuussa on runsain, syys–lokakuu selvästi '
+      + 'kuivempaa.',
+  },
+  murzuk: {
+    lat: 25.9164,
+    lon: 13.9192,
+    keskilampo: [9.9, 13.4, 18.7, 24.4, 27.7, 31.5, 31.1, 31.6, 28.8, 24, 15.7, 11.4],
+    ylin: [16, 21, 26, 32, 35, 39, 39, 39, 36, 31, 22, 18],
+    alin: [4, 6, 11, 17, 20, 24, 24, 24, 22, 17, 9, 4],
+    sade: [5, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    luonnehdinta: 'Murzukissa elokuu on kuumin, yli 31 astetta, '
+      + 'ja tammikuu selvästi viilein, alle kymmenen astetta. '
+      + 'Sadetta ei käytännössä ole minään kuukautena.',
+  },
+  nullarbor: {
+    lat: -31.6784,
+    lon: 128.8830,
+    keskilampo: [21.1, 20.8, 20.6, 18.3, 15.1, 13.2, 12.8, 13.9, 15.4, 17.4, 19.7, 19.6],
+    ylin: [25, 24, 25, 22, 19, 17, 17, 18, 20, 23, 25, 24],
+    alin: [17, 17, 16, 15, 11, 9, 9, 9, 11, 12, 15, 15],
+    sade: [46, 16, 32, 43, 19, 9, 15, 24, 21, 41, 11, 30],
+    luonnehdinta: 'Nullarborin tasangolla kesä (joulu–helmikuu) '
+      + 'on lämmin, noin 20 astetta, ja talvi (kesä–elokuu) '
+      + 'viilenee alle 13 asteeseen. Sadetta tulee vähän mutta '
+      + 'tasaisesti ympäri vuoden.',
+  },
 };
