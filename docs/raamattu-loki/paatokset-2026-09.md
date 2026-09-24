@@ -4339,3 +4339,7 @@ Luovutus viesti-pelikoodari-luovutus-20260924-ilta.md, aloitusviesti päivitetty
 ## PAATOS LOYDOKSEEN 38 (NIMET NATIIVISSA): ELAVAT ALUENIMET SAMASTA DATASTA KUIN WEBIN NIMIOTASO 2026-09-22g, EI POLTTOA (BUILD 11) (24.9.2026 klo 17.31)
 
 Karttasepän ehdotus (karttaseppa-nimet-ehdotus 3f4837f6c, docs/raportit/natiivi-nimet-ehdotus-20260924.md): webin laatoissa nimiötaso z4–z8 (195 riviä: maakunnat, nykyalueet, meret) + valtameret z0–z3; kaupungit ja nostot eläviä; natiivista nimiötaso puuttuu. Fable: b — fontti sama kuin webin poltossa, mitat webin laatasta; aluenimet makaavat pinnalla ja kääntyvät luettaviksi >90° (ei ylösalaisin), kaupunkinimiöt kameraan päin; zoomikynnykset webin mukaan; aloitus Ranskasta, iPad-mittaus; vienti Karttaseppä + Siirtoseppä (~1 pv), piirto Natiiviseppä (3–4 pv). Verdun/Reims: nostoportti lähizoomissa (N1) Natiivisepälle. Pelikoodari luovutti (0b1f576b3) ja nollaa.
+
+## LINSSISEPPA: ASTROPULU TOIMII ISOLLA iPADILLA (WORKER #3096), LAMPPUPINOT WEBIN TASOLLA (b10f), LINSSINIMET NAKYVAT (24.9.2026 klo 17.33)
+
+Astropulu: kysymys oikeaan chattiin, Livia vastaa kuvan perusteella ilman sijaintia (proto-3d/lokit/linssit-astropulu-20260924/b10d-sallittu/); webin kuva samasta kysymyksestä ei mahdollinen (kontaktityökalu estää workerin) → Fable: ei tarvita, natiivikuva + koodivertailu riittää. Lamppupinot: Pariisi 245 vs 248, Lontoo 215 vs 209 → mergettävissä.
