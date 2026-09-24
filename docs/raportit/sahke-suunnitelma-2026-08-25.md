@@ -224,7 +224,11 @@ Huomioita:
   jonka vuoto avaisi kaiken. Julkaisuajossa ei siksi ole
   `wrangler secret put` -askelta.
 - **Origin-portti.** Kaikki reitit vaativat pelin originin tai
-  localhostin — sama malli kuin ehdotusworkerin `/laheta`.
+  localhostin — sama malli kuin ehdotusworkerin `/laheta`. Natiiviportti
+  (23.9.2026): natiivi iOS-peli ilman Originia pääsee kaikkiin reitteihin
+  otsakkeella `x-matkakirja-natiivi: <bundle id>`, kun sama tunniste on
+  User-Agentissa ja sallittu (`SAHKE_NATIIVIT`, oletus
+  `app.matkakirja.proto3d,app.matkakirja.peli`).
 - **Kenttäportti.** Jokaisen POSTin runko saa sisältää täsmälleen
   sallitut kentät. Tuntematon kenttä on 400 nimeltä mainiten.
 - **Kirjoitusrajoitin.** 30 kirjoitusta minuutissa per jäsen. Ikkuna ja

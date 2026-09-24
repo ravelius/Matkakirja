@@ -76,6 +76,23 @@
  * sanat eivät vastaa pakkia, sidonta hylätään: silloin tarvitaan uusi
  * kohdistus eikä leimaa vanhan päälle.
  *
+ * AVAUSLUENNAT (--avaus, 24.9.2026, Fablen tilaus build 7): etusivun
+ * avausteksti (assets/audio/intro-puhe.mp3) ja avauslennon repliikki
+ * (assets/audio/puhe-lento-alku.mp3) saavat samat versio 2 -aikaleimat.
+ * Pulu ei reagoi niihin, vaan natiivi tahdistaa kirjoituskoneen sanoihin
+ * (ilman tiedostoa varana on merkkimäärä). Teksti on RUUDUN teksti
+ * samasta lähteestä kuin pelissä: js/ui-tekstit.js INTRO_TEXT ja
+ * js/packs/maailma.js texts.flightFirst[0] (luenta lukittu yhteen
+ * riviin, tools/generoi-avaus.mjs). Avausluennoilla ei ole Horatio-
+ * kuittia: äänite haetaan pelin osoitteesta (aaniUrl, ?v=UUSITUT_AANET)
+ * ja tiedosto viedään sen sisarnimeen, jolloin natiivin ja pelin
+ * aikaleimojenOsoite (…/audio/intro-puhe.aikaleimat.json?v=2) osuu
+ * siihen. Kyselyversio kulkee mukana tiedoston `aani.versio`-kentässä.
+ * Tiedoston `kaupunki` on null ja `luenta` kertoo, kumpi avausluenta on
+ * (sama tunnus kuin sisältöpaketin kokoelmat/luennat.json -rivillä).
+ *   ELEVEN_API_KEY=... node tools/kohdista-luennat.mjs --avaus --vie
+ *   node tools/kohdista-luennat.mjs --avaus --kuiva
+ *
  * HUOM konttiympäristössä: Noden fetch ei lue ympäristön proxyä ilman
  * lippua — aja NODE_USE_ENV_PROXY=1 (tai anna työkalun käynnistää
  * itsensä uudelleen, kuten alla).
@@ -91,6 +108,8 @@ import {
 } from '../js/luentareaktiot.js';
 import { AANI_JUURI, UUSITUT_AANET, aaniUrl } from '../js/media.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
+import { MAAILMA } from '../js/packs/maailma.js';
+import { INTRO_TEXT } from '../js/ui-tekstit.js';
 import {
   PAKOTETUN_OSOITE, jaksonJasennys, karsiTagit, normalisoiAlignment, sovitaMerkit,
 } from './generoi-linssiluennat.mjs';
@@ -146,6 +165,8 @@ export function kohdistusTyo(id, kuittirivi = null) {
   const nimi = `puhe-fokus-matkakirja-${id}.mp3`;
   return {
     id,
+    kaupunki: id,
+    luenta: null,
     teksti,
     /* Sama kenttä kuin pelissä; kuiva ajo paljastaa eron heti. */
     kentta: merkinta.aanite ?? null,
@@ -159,6 +180,53 @@ export function kohdistusTyo(id, kuittirivi = null) {
       : `audio/puhe-fokus-matkakirja-${id}.aikaleimat.json`,
     kuittiAani: kuittirivi?.finalAudio ?? null,
     reaktiot: Array.isArray(merkinta.reaktiot) ? merkinta.reaktiot : [],
+  };
+}
+
+/**
+ * AVAUSLUENNAT: tunnus (sama kuin sisältöpaketin luennat-kokoelman
+ * rivillä), äänitteen nimi ja ruudun tekstin lähde. Teksti luetaan
+ * pelin omasta vakiosta, ei kopiosta: jos avausteksti muuttuu, vanha
+ * kohdistus hylätään (tekstiSha256) eikä jää hiljaa väärään kohtaan.
+ */
+export const AVAUSLUENNAT = Object.freeze([
+  { id: 'intro', nimi: 'intro-puhe.mp3', teksti: () => INTRO_TEXT },
+  {
+    id: 'lento-alku',
+    nimi: 'puhe-lento-alku.mp3',
+    teksti: () => {
+      const rivit = MAAILMA.texts?.flightFirst ?? [];
+      // Äänite on tuotettu täsmälleen yhdelle riville (generoi-avaus.mjs
+      // LENTO_RUUTU); useampi rivi tarkoittaisi, ettei tiedetä mikä soi.
+      if (rivit.length !== 1) {
+        throw new Error(`maailma.texts.flightFirst: odotettiin yksi rivi, löytyi ${rivit.length}`);
+      }
+      return rivit[0];
+    },
+  },
+]);
+
+/** Avausluennan kohdistustyö (--avaus); sama muoto kuin kohdistusTyo. */
+export function avausTyo(id) {
+  const maara = AVAUSLUENNAT.find((l) => l.id === id);
+  if (!maara) return null;
+  const teksti = String(maara.teksti() ?? '');
+  if (!teksti) return null;
+  const aaniPolku = `assets/audio/${maara.nimi}`;
+  const json = maara.nimi.replace(/\.mp3$/, '.aikaleimat.json');
+  return {
+    id,
+    kaupunki: null,
+    luenta: id,
+    teksti,
+    kentta: null,
+    aaniNimi: maara.nimi,
+    aaniPolku,
+    aaniOsoite: aaniUrl(aaniPolku),
+    kohde: `${AIKALEIMAKANSIO}/${json}`,
+    ampariNimi: `${AMPARIN_KANSIO}/${json}`,
+    kuittiAani: null,
+    reaktiot: [],
   };
 }
 
@@ -324,7 +392,7 @@ export async function aanenTunnusluvut(tyo, aanidata) {
  * vastauksen `words`-listasta: näin tiedoston sanat vastaavat tarkasti
  * pakin tekstiä, jota vasten ankkurit kirjoitetaan.
  */
-export async function aikaleimoiksi(teksti, vastaus, { kaupunki, aani }) {
+export async function aikaleimoiksi(teksti, vastaus, { kaupunki, luenta = null, aani }) {
   const kohdistus = normalisoiAlignment(vastaus);
   const merkit = kohdistus?.characters ?? [];
   const alut = kohdistus?.character_start_times_seconds ?? [];
@@ -355,6 +423,8 @@ export async function aikaleimoiksi(teksti, vastaus, { kaupunki, aani }) {
   return {
     versio: AIKALEIMOJEN_VERSIO,
     kaupunki,
+    // Vain avausluennoilla (kaupunki null): kumpi luenta.
+    ...(luenta ? { luenta } : {}),
     teksti,
     tekstiSha256: await tekstinSha256(teksti),
     aani,
@@ -393,7 +463,8 @@ export async function sidoAikaleimat(tyo, aani) {
   }
   return {
     versio: AIKALEIMOJEN_VERSIO,
-    kaupunki: tyo.id,
+    kaupunki: tyo.kaupunki ?? null,
+    ...(tyo.luenta ? { luenta: tyo.luenta } : {}),
     teksti: vanha.teksti,
     tekstiSha256: await tekstinSha256(vanha.teksti),
     aani,
@@ -464,6 +535,7 @@ function vieAmpariin(polku, nimi) {
 export function lueLiput(argv) {
   const liput = {
     kaupungit: [], kaikki: false, kuiva: false, vienti: false, sidonta: false, kuitti: null,
+    avaus: false,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
@@ -471,6 +543,7 @@ export function lueLiput(argv) {
     else if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vienti = true;
     else if (pala === '--sido') liput.sidonta = true;
+    else if (pala === '--avaus') liput.avaus = true;
     else if (pala === '--kuitti') {
       const arvo = argv[++i];
       if (!arvo || String(arvo).startsWith('--')) throw new Error('--kuitti ilman polkua tai URLia');
@@ -501,21 +574,41 @@ async function main() {
     console.error(virhe.message);
     process.exit(1);
   }
-  if (!liput.kuiva && !liput.sidonta && !liput.kuitti) {
+  // Kaupunkiluentojen kohdistus vaatii kuitin; avausluennat (--avaus)
+  // eivät, koska niillä ei ole Horatio-erää (äänite = pelin osoite).
+  const kaupunkeja = liput.kaupungit.length > 0 || liput.kaikki || kuitit.size > 0;
+  if (!liput.kuiva && !liput.sidonta && !liput.kuitti && (kaupunkeja || !liput.avaus)) {
     console.error('Varsinainen kohdistus vaatii --kuitti-polun tai URLin versionoituun tuotantoeraan.');
+    console.error('Avausluennat ilman kuittia: --avaus (ilman kaupunkeja).');
     process.exit(1);
   }
   const pyydetyt = liput.kaupungit.length ? liput.kaupungit
     : liput.kaikki ? kaikkiKaupungit() : [...kuitit.keys()];
-  if (!pyydetyt.length) {
+  if (!pyydetyt.length && !liput.avaus) {
     console.error('Anna kaupungit: node tools/kohdista-luennat.mjs --kaupungit marseille');
     console.error('Kaikki 45: --kaikki. Kuiva ajo ilman avainta ja verkkoa: --kuiva.');
     console.error('Pelkkä äänisidonta ilman kohdistusta: --sido (ei tarvitse avainta).');
+    console.error('Avausluennat (intro, lento-alku): --avaus.');
     process.exit(1);
   }
 
   const tyot = [];
   let puuttuvia = 0;
+  if (liput.avaus) {
+    for (const { id } of AVAUSLUENNAT) {
+      try {
+        const tyo = avausTyo(id);
+        if (tyo) tyot.push(tyo);
+        else {
+          console.error(`${id}: avausluennan tekstiä ei löydy — ohitetaan.`);
+          puuttuvia += 1;
+        }
+      } catch (virhe) {
+        console.error(`${id}: ${virhe.message}`);
+        puuttuvia += 1;
+      }
+    }
+  }
   for (const id of pyydetyt) {
     const tyo = kohdistusTyo(id, kuitit.get(id));
     if (!tyo) {
@@ -558,16 +651,17 @@ async function main() {
           console.log(`  ${reaktio.id}: ankkuri sanoissa ${paikka + 1}–${paikka + sanoiksi(reaktio.ankkuri).length} (${reaktio.tarkoitus})`);
         }
       }
-      if (!tyo.reaktiot.length) console.log('  (ei reaktioita pakissa — aikaleimat silti hyödyllisiä)');
+      if (tyo.luenta) console.log('  (avausluenta: natiivin kirjoituskone tahdistetaan sanoihin)');
+      else if (!tyo.reaktiot.length) console.log('  (ei reaktioita pakissa — aikaleimat silti hyödyllisiä)');
     }
     console.log(puuttuvia
       ? `Kuiva ajo valmis — ${puuttuvia} huomautusta.`
-      : `Kuiva ajo valmis — ${tyot.length} kaupunkia kunnossa.`);
+      : `Kuiva ajo valmis — ${tyot.length} luentaa kunnossa.`);
     process.exit(puuttuvia ? 1 : 0);
   }
 
   if (puuttuvia) {
-    console.error(`Tunnistamattomia kaupunkiavaimia: ${puuttuvia} — ei kohdisteta mitään.`);
+    console.error(`Tunnistamattomia luentoja: ${puuttuvia} — ei kohdisteta mitään.`);
     process.exit(1);
   }
 
@@ -591,7 +685,7 @@ async function main() {
       const data = liput.sidonta
         ? await sidoAikaleimat(tyo, aani)
         : await aikaleimoiksi(tyo.teksti, await haeKohdistus(aanidata, tyo.teksti, avain),
-          { kaupunki: tyo.id, aani });
+          { kaupunki: tyo.kaupunki, luenta: tyo.luenta, aani });
       /*
        * VALIDAATTORI ENNEN KIRJOITUSTA. Sama funktio kuin pelissä: jos
        * tiedosto ei kelpaisi pelille, se ei saa päätyä reposta ämpäriin

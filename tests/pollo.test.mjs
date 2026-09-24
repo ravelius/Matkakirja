@@ -2658,9 +2658,11 @@ test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bund
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'com.paha', 'user-agent': 'com.paha' })), false, 'vieras bundle id');
   assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
   assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli'), 'TestFlight-buildin bundle (löydös 16)');
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli.kehitys'), 'kehityskäännöksen App ID (Fable 24.9.2026)');
 });
 
-test('worker: natiivi pääsee puheeseen ja chattiin, ei kuvaan, sähkeeseen eikä tilaan', async () => {
+test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eikä tilaan', async () => {
   const { default: worker } = await import('../tools/pollo/worker.js');
   const env = { POLLO_ORIGINIT: 'https://matkakirja.app' };
   const otsakkeet = {
@@ -2671,9 +2673,9 @@ test('worker: natiivi pääsee puheeseen ja chattiin, ei kuvaan, sähkeeseen eik
   const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset']);
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke']);
   assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
-  for (const tehtava of ['kuva', 'sahke', 'tila']) {
+  for (const tehtava of ['kuva', 'tila']) {
     const v = await pyynto({ tehtava });
     assert.equal(v.status, 403, tehtava);
     assert.equal(await v.text(), 'Tehtävä ei ole natiiville sallittu');
@@ -2684,6 +2686,45 @@ test('worker: natiivi pääsee puheeseen ja chattiin, ei kuvaan, sähkeeseen eik
   assert.notEqual(puhe.status, 403, 'natiivi läpi puheen käsittelyyn (ilman avainta 503)');
   const chat = await pyynto({ kysymys: 'Mikä on Pariisi?' });
   assert.notEqual(chat.status, 403, 'natiivi läpi chattiin (ilman avainta 503)');
+  const sahke = await pyynto({ tehtava: 'sahke', id: 'sofia-varna', vastaus: 'Varna 1972' });
+  assert.notEqual(sahke.status, 403, 'natiivi läpi sähketuomioon (ilman avainta 503)');
+});
+
+test('worker: natiivin sähketuomio toimii ilman Originia ja kuluttaa samaa rajaa kuin selain', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const kvData = new Map();
+  const kv = { get: async (k) => kvData.get(k) ?? null, put: async (k, v) => { kvData.set(k, v); } };
+  const env = {
+    ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, POLLO_PAIVARAJA: '2',
+  };
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({
+    content: [{ type: 'text', text: '{"kohde_oikein":true,"vuosi_oikein":false}' }],
+  }), { status: 200, headers: { 'content-type': 'application/json' } });
+  const runko = JSON.stringify({ tehtava: 'sahke', id: 'sofia-varna', vastaus: 'Varna, joskus 70-luvulla' });
+  try {
+    const natiivi = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7',
+        'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
+      },
+      body: runko,
+    }), env, {});
+    const selain = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
+      body: runko,
+    }), env, {});
+    const eka = await natiivi();
+    assert.equal(eka.status, 200, 'natiivin sähketuomio vastaa');
+    assert.deepEqual(await eka.json(), { tulkittu: true, kohde: true, vuosi: false });
+    assert.equal(eka.headers.get('access-control-allow-origin'), null, 'natiiville ei kaiuteta originia');
+    assert.equal((await selain()).status, 200, 'sama IP selaimesta');
+    assert.equal((await natiivi()).status, 429, 'päiväraja yhteinen: kolmas tuomio samasta IP:stä torjutaan');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
 });
 
 test('worker: natiivin chat kuluttaa samaa 30/vrk per IP -rajaa kuin selain', async () => {

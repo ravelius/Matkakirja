@@ -1,0 +1,41 @@
+{
+ "kuvaus": "NC/ND-ehtoiset mediaviitteet, jotka ovat pelissä (lisenssi-inventaario 23.9.2026: 23; korit A ja B korvattu #2903:ssa → 9). Lista saa vain lyhentyä: korvattu viite poistetaan, uutta ei lisätä (tests/lisenssit.test.mjs). Korvaus: Sisältökirjuri.",
+ "viitteet": [
+  {
+   "arvo": "https://archive.org/download/SIBELIUSFinlandia-NEWTRANSFER/Sibelius-FinlandiaOp.26.mp3",
+   "lisenssi": "Sibelius: Finlandia — Artur Rodzinski, CC BY-NC-SA"
+  },
+  {
+   "arvo": "https://archive.org/download/ShostakovichSymphonyNo.5-Stokowski/02.Ii.Allegretto.mp3",
+   "lisenssi": "Šostakovitš: 5. sinfonia — Leopold Stokowski, CC BY-NC-SA"
+  },
+  {
+   "arvo": "https://archive.org/download/TarannCobla-OdaAlFolklore/01RquiemDeCooper.mp3",
+   "lisenssi": "Cobla soittaa — Tarannà + Cobla, CC BY-NC"
+  },
+  {
+   "arvo": "https://archive.org/download/TheKerryJigTheMugOfBrownAle/01_kerry_mug_of_brown_ale_jigs.mp3",
+   "lisenssi": "Irlantilainen jigi ja reel — Tradschool, CC BY-NC-SA"
+  },
+  {
+   "arvo": "https://archive.org/download/aporee_28276_32572/NyhavnKopenhagen01.mp3",
+   "lisenssi": "Nyhavnin rantakatu (Kööpenhamina) — weitere, CC BY-NC-SA"
+  },
+  {
+   "arvo": "https://archive.org/download/aporee_46724_53068/dr40xy0007.mp3",
+   "lisenssi": "Kulkukauppias Gelassa (Sisilia) — Andrea Gianessi, CC BY-NC"
+  },
+  {
+   "arvo": "https://archive.org/download/aporee_51947_59319/200219000RD01.mp3",
+   "lisenssi": "Näyttelyn avajaiset (Varsova) — Andrzej Maciejewski, CC BY-NC"
+  },
+  {
+   "arvo": "https://archive.org/download/jamendo-369605/01-1720225-Nataliya%20Bermas-Ukrainian%20Melody%20Ivanko.mp3",
+   "lisenssi": "Ukrainalainen sävelmä \"Ivanko\" — Nataliya Bermas, CC BY-NC"
+  },
+  {
+   "arvo": "https://archive.org/download/raretunes_364_beating-retreat-edinburgh-castle/raretunesedretreat.mp3",
+   "lisenssi": "Pipe band, Edinburgh Castle — CC BY-NC-SA"
+  }
+ ]
+}

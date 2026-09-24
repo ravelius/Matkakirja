@@ -114,20 +114,51 @@ export function hetkiKarttarivit(iso, lauta) {
     if (!paikka) continue;
     rivit.push({
       hetki,
-      kohde: {
-        id: `hetki-${hetki.id}`,
-        nimi: hetki.nimio ?? hetki.otsikko,
-        nimio: hetki.nimio ?? null,
-        tyyppi: 'hetki',
-        symboli: 'hetki',
-        // Kaupunkinostojen katto ei koske hetkeä, joka ei mahdu
-        // kaupungin kohdekartalle (js/fokuskohteet.js, KATTOVAPAA).
-        ...(hetki.kattoVapaa ? { kattoVapaa: true } : {}),
-      },
+      kohde: hetkiKohde(hetki),
       paikka: { x: paikka.x, y: paikka.y },
     });
   }
   return rivit;
+}
+
+/** Hetken kohdetietue: sama muoto pääkartan merkille ja tunnushaulle. */
+function hetkiKohde(hetki) {
+  return {
+    id: `hetki-${hetki.id}`,
+    nimi: hetki.nimio ?? hetki.otsikko,
+    nimio: hetki.nimio ?? null,
+    tyyppi: 'hetki',
+    symboli: 'hetki',
+    // Kaupunkinostojen katto ei koske hetkeä, joka ei mahdu
+    // kaupungin kohdekartalle (js/fokuskohteet.js, KATTOVAPAA).
+    ...(hetki.kattoVapaa ? { kattoVapaa: true } : {}),
+  };
+}
+
+/**
+ * HETKEN KOHDETIETO TUNNUKSELLA — MYÖS KOHDEKARTAN HETKELLE.
+ *
+ * Kaupungin laatan päälle osuva hetki (`kartalla: false`, omistaja
+ * 3.9.2026) ei ole pääkartan rivi, joten `hetkiKarttarivit` ei palauta
+ * sitä eikä se ole maan kohdetiedoissa (js/fokuskohteet.js
+ * maanKohdetiedot). Se asuu kaupunkilehden kohdekartalla
+ * (js/packs/maakartat.js `nosto: 'hetki-…'`), ja kaupunkiliuska lukee
+ * sen sieltä sisäiseksi nostoksi (js/pallolauta/nostot.js "siirretyt").
+ * Liuska tarvitsee sille aiheen — ilman tätä hakua 23 kohdekartan
+ * hetkeä putosi "Muut"-kasaan "Historian hetket" -kategorian sijaan.
+ * Suodatin `kartalla` pysyy ennallaan: se koskee vain pääkarttaa.
+ *
+ * @param {string} tunnus kohteen tunnus muodossa `hetki-<id>`
+ * @returns {object|null} kohdetietue (ks. hetkiKohde) tai null
+ */
+let hetkiTunnuksittain = null;
+export function hetkiKohdetieto(tunnus) {
+  if (typeof tunnus !== 'string' || !tunnus.startsWith('hetki-')) return null;
+  if (!hetkiTunnuksittain) {
+    hetkiTunnuksittain = new Map(HISTORIAN_HETKET.map((h) => [`hetki-${h.id}`, h]));
+  }
+  const hetki = hetkiTunnuksittain.get(tunnus);
+  return hetki ? hetkiKohde(hetki) : null;
 }
 
 /**

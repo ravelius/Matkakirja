@@ -144,10 +144,44 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        paikkatiedot, kohtaamiset, kohtaamiskuvat, paikallisaarteet,
  *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
  *        päätasolle (tools/vienti/tyypitys.mjs).
+ *   1.27 työhuoneen moduulit natiivin KOKEET-valikolle (Natiivi-UI):
+ *        js/tyohuone-raamattu.js RAAMATTU, js/tyohuone-tilanne.js TILANNE,
+ *        TESTATTAVAA ja TUOREET, js/tyohuone-pelit.js PELIT (luokka kehittaja);
+ *        tyohuone-musiikki.js HILJENNYKSEN_SYY ja TUNTEMATTOMAT_LAJIT.
+ *        Kehittäjämoduulien sähköpostiosoitteet peitetään (peitaSahkopostit).
+ *   1.28 kokoelma tyohuonetilastot (Natiivi-UI): webin laskeTilastot()
+ *        valmiina (alkio = manner), juuressa sarakkeet (KAUPUNGIN_OSAT ja
+ *        MAAN_OSAT ilman laskufunktioita).
+ *   1.29 maarajat: renkaat rajattu webin laudan maamuodon alueelle (Natiiviseppä:
+ *        NOR ilman Huippuvuoria kuten webissä), muutRenkaat ja kokoBbox
+ *        (tools/vienti/maarajat.mjs rajaaWebinMuotoon).
+ *   1.30 Pelikoodarin tilaus: aanitaulut (siirtyma, tila-/paikkaraita, pulu)
+ *        kentät päätasolle, reitit.maksu, laattatyyppeihin nimi/symboli/arvo/vari.
+ *   1.31 ennen 2.0:aa loput raakakentät päätasolle: skandaalit, historianHetket,
+ *        monumentit ja fokusvirrat sellaisenaan; kaupungit wiki, ambienssi,
+ *        nimionAnkkuri.
+ *   1.32 linssiaineisto sellaisenaan päätasolle (Linssiseppä), tarinakaari kuva,
+ *        lauta, saapumisLuenta; kohtaamiskuvat kansio, tiedosto; tapahtumat teksti,
+ *        vaikutus. Vartija: jokainen raakakenttä päätasolla tai RAAKA_VASTINEET.
+ *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
+ *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
+ *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
+ *   1.34 maarajat: 1.29:n rajaus pois (web #3078 piirtää Natural Earth 10m
+ *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
+ *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
+ *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
  */
-export const SKEEMAVERSIO_TARKKA = '1.26';
+export const SKEEMAVERSIO_TARKKA = '1.35';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
+
+/*
+ * Kehittäjämoduulit (työhuone) ovat julkisia webissäkin, mutta paketti
+ * jaetaan sovelluksen mukana: henkilöiden sähköpostit peitetään.
+ * Pelin omat osoitteet (@matkakirja.app) jäävät.
+ */
+const SAHKOPOSTI = /[A-Za-z0-9._%+-]+@(?!matkakirja\.app\b)[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+export const peitaSahkopostit = (teksti) => teksti.replace(SAHKOPOSTI, '[sähköposti]');
 const tavuja = (s) => Buffer.byteLength(s);
 
 /**
@@ -221,7 +255,8 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
       });
     }
     const tiedosto = `moduulit/${polku.replace(/\.js$/, '.json')}`;
-    const sisalto = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const raaka = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const sisalto = luokka === 'kehittaja' ? peitaSahkopostit(raaka) : raaka;
     tiedostot.set(tiedosto, sisalto + '\n');
     manifestModuulit.push({
       moduuli: polku,

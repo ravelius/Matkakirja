@@ -26,6 +26,7 @@ import { esilataaIlme } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import { avaaPikatie, pikatienKaupunki, rakennaPikatiePeli } from './kehittaja-pikatie.js';
+import { avaaLehtikuori, lehtikuorenKaupunki } from './lehtikuori.js';
 import { ohitaSaapumisluenta, suljeFokusvirta } from './fokusvirta.js';
 import {
   kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
@@ -155,7 +156,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2163';
+const APP_VERSION = '2026-09-21.2196';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1665,10 +1666,29 @@ function nollaaValitila(game) {
 }
 
 // Kesken jäänyt peli jatkuu automaattisesti, muuten kysytään pelaajat.
-const pikatienKaupunkiId = pikatienKaupunki();
+/*
+ * LEHTIKUORI (js/lehtikuori.js): ?lehti=<kaupunki> avaa pelkän
+ * kaupunkilehden natiivin pelin web-näkymään. Peli kuten pikatiellä,
+ * ei tallennusta, ei lautaa.
+ */
+const lehtiKaupunkiId = lehtikuorenKaupunki();
+const lehtiPeli = lehtiKaupunkiId
+  ? rakennaPikatiePeli(Game, packById('maailmankartta'), lehtiKaupunkiId) : null;
+const pikatienKaupunkiId = lehtiPeli ? null : pikatienKaupunki();
 const pikatiePeli = pikatienKaupunkiId
   ? rakennaPikatiePeli(Game, packById('maailmankartta'), pikatienKaupunkiId) : null;
-if (pikatiePeli) {
+if (lehtiPeli) {
+  document.body.classList.add('lehtikuori');
+  if (ui) ui.destroy();
+  ui = new UI(lehtiPeli, { onNewGame: () => {}, onChange: () => {} });
+  // Ennen mountia: ensimmäinen render ei saa avata lautaa (paivitaPallolauta).
+  ui.lehtikuori = true;
+  ui.katselu = true;
+  ui.mount();
+  window.matkakirja = { game: lehtiPeli, ui, sfx };
+  window.afrikanTahti = window.matkakirja;
+  avaaLehtikuori(ui, lehtiKaupunkiId);
+} else if (pikatiePeli) {
   /*
    * KEHITTÄJÄN PIKATIE (js/kehittaja-pikatie.js): ?lauta=pallo&dev=<kaupunki>
    * avaa pallolaudan suoraan toimintavaiheeseen ilman saapumis-
@@ -1763,7 +1783,7 @@ paataPaivitysruutu();
  */
 const PILVIKYSELY_KAYTOSSA = false;
 
-if (!katseluPack) {
+if (!katseluPack && !lehtiPeli) {
   natiiviKirjauduPelikeskukseen();
   if (PILVIKYSELY_KAYTOSSA) {
     natiiviKuunteleSynkka(SAVE_KEY, (raaka) => tarjoaPilviTallennus(raaka));

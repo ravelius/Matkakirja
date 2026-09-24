@@ -84,6 +84,53 @@ function ulkoinenLinkki(linkki) {
   return a;
 }
 
+/** Havainnekuvan oma lisenssi, kun jokin pohjakuva on BY-SA. */
+const HAVAINNEKUVA_BY_SA = {
+  nimi: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/',
+};
+
+/**
+ * POHJAKUVIEN ATTRIBUUTIO havainnekuvan lähderivin perään (omistaja
+ * 23.9.2026: kaikki 394 heroa pidetään, viitteet näkyviin).
+ *
+ * Osa kaupunkilehden herokuvista generoitiin 2–4 Commons-valokuvan
+ * pohjalta (tools/hero-ajuri.mjs, `tarkkaKohde`). Kuvalla on silloin
+ * kenttä `viitteet: [{ nimi, tekija, lisenssi, lisenssiUrl, sivu }]`,
+ * ja rivi saa perään "· Pohjana Wikimedia Commons -kuvat: Tekijä (CC BY
+ * 4.0), …" — tekijä linkkinä kuvasivulle ja lisenssi lisenssin sivulle,
+ * samoin kuin tavallisen Commons-kuvan lähderivillä. Jos yksikin pohja
+ * on BY-SA, havainnekuva lisensoidaan CC BY-SA 4.0:lla (ShareAlike
+ * periytyy muunneltuun kuvaan); maininta tulee rivin loppuun.
+ *
+ * Viitteet on rekonstruoitu ja varmistettu ajonaikaista Commonsia vasten
+ * (docs/raportit/herokuvien-viitteet-20260923-varmistus.md);
+ * uusissa ajoissa hero-ajuri kirjaa ne repoon (tools/hero-viiteloki.tsv).
+ *
+ * @param {HTMLElement} el täytetty lähderivi
+ * @param {object} kohde kuva-olio
+ * @returns {HTMLElement} sama elementti
+ */
+function lisaaPohjaviitteet(el, kohde = {}) {
+  const viitteet = kohde?.viitteet;
+  if (!el || !Array.isArray(viitteet) || !viitteet.length || typeof document === 'undefined') return el;
+  el.appendChild(document.createTextNode(' · Pohjana Wikimedia Commons -kuvat: '));
+  viitteet.forEach((v, i) => {
+    if (i) el.appendChild(document.createTextNode(', '));
+    el.appendChild(v.sivu ? ulkoinenLinkki({ nimi: v.tekija, url: v.sivu })
+      : document.createTextNode(v.tekija));
+    el.appendChild(document.createTextNode(' ('));
+    el.appendChild(v.lisenssiUrl ? ulkoinenLinkki({ nimi: v.lisenssi, url: v.lisenssiUrl })
+      : document.createTextNode(v.lisenssi));
+    el.appendChild(document.createTextNode(')'));
+  });
+  if (viitteet.some((v) => /BY-SA/.test(v.lisenssi ?? ''))) {
+    el.appendChild(document.createTextNode('; havainnekuva '));
+    el.appendChild(ulkoinenLinkki(HAVAINNEKUVA_BY_SA));
+  }
+  el.appendChild(document.createTextNode('.'));
+  return el;
+}
+
 /**
  * Avaa tekijäsivun omassa dialogissaan.
  *
@@ -226,7 +273,7 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
     ].filter(({ nimi, url }) => nimi && url && teksti.includes(nimi));
     if (!linkit.length) {
       el.textContent = teksti;
-      return merkitseHavainnekuva(el, teksti, kohde);
+      return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
     }
     linkit.sort((a, b) => teksti.indexOf(a.nimi) - teksti.indexOf(b.nimi));
     el.replaceChildren();
@@ -239,7 +286,7 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
       alku = kohta + linkki.nimi.length;
     }
     if (alku < teksti.length) el.appendChild(document.createTextNode(teksti.slice(alku)));
-    return merkitseHavainnekuva(el, teksti, kohde);
+    return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
   }
 
   const avaa = (nappiTeksti) => {
@@ -267,5 +314,5 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
     if (teksti) el.appendChild(document.createTextNode(`${teksti} `));
     el.appendChild(avaa('Tekijästä'));
   }
-  return merkitseHavainnekuva(el, teksti, kohde);
+  return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
 }
