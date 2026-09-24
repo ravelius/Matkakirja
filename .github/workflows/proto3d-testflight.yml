@@ -90,6 +90,21 @@ jobs:
             exit 1
           fi
 
+      # Unity-batch tarvitsee ikkunapalvelimen: jos konsolissa (näytöllä) on
+      # toinen macOS-käyttäjä, Unity jää heti lisenssin jälkeen odottamaan
+      # tapahtumasilmukkaan ja vahti tappaa sen (24.9.2026, build 7:n kaksi
+      # kaatumista). Tarkistus ennen vientiä, jotta syy näkyy suoraan.
+      - name: Onko konsoli ajurin käyttäjällä
+        if: env.VIE_UNITYSTA == 'true'
+        run: |
+          set -euo pipefail
+          konsoli=$(stat -f %Su /dev/console)
+          if [ "$konsoli" != "$(whoami)" ]; then
+            echo "$(date '+%Y-%m-%d %H:%M') KONSOLI: $konsoli, ei $(whoami) — Unity-vientiä ei aloiteta" | tee -a "$YOLOKI"
+            echo "::error title=Konsoli toisella käyttäjällä::Näytöllä on käyttäjä $konsoli, ajuri on $(whoami). Unity-batch ei saa ikkunapalvelinta. Vaihda konsoli käyttäjälle $(whoami) ja aja uudelleen."
+            exit 1
+          fi
+
       # Aikaleima buildinumeroksi: App Store Connect hylkää saman
       # versio+build-parin kahdesti. Unity-viennissä sama numero menee
       # MATKAKIRJA_BUILDiin, jolloin sovelluksen rakennus.txt = ASC:n numero.
