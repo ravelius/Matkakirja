@@ -15,6 +15,7 @@
 // Position); läpinäkyvät kehykset ovat pickingMode Ignore.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -147,6 +148,10 @@ namespace Matkakirja.Natiivi
         }
 
         public bool Nakyvissa => nakyvissa;
+
+        /// <summary>Kaikki luodut kerrokset juurineen (diagnostiikka: UiKomennot "ui peitteet").</summary>
+        public IEnumerable<(int Kerros, VisualElement Juuri)> Juuret =>
+            dokumentit.OrderBy(kv => kv.Key).Select(kv => (kv.Key, kv.Value.rootVisualElement));
 
         /// <summary>
         /// Osuuko ruudun piste (Input Systemin pikselit, origo vasen alakulma)
