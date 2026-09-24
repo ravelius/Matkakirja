@@ -1732,17 +1732,17 @@
 }
 
 /* Kehystetty äänet-nappi (ennen pelkkä teksti, joka ei erottunut kosketettavaksi). */
+/* Web showAloitusportti (löydös 24): pelkkä teksti ja kaiutin varjolla, ei pilleriä. */
 .mk-aloitus__aanet {
     flex-direction: row;
     align-items: center;
     min-height: 40px;
     margin-bottom: 14px;
     padding: 7px 16px;
-    border-width: 1px;
-    border-color: rgba(232, 214, 172, 0.75);
-    border-radius: 20px;
-    background-color: rgba(36, 26, 18, 0.55);
-    color: #e8d6ac;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #f1e3c4;
+    text-shadow: 0 1px 3px rgba(20, 12, 4, 0.75);
 }
 
 .mk-aloitus__aanet.mk-valittu {
