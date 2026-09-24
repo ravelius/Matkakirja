@@ -8,7 +8,8 @@
 #     (omistaja 24.9.2026 klo 13.3x). Ennen poistoa kuvat, joihin pelin repon docs/raportit/*.md viittaa
 #     polulla proto-3d/lokit/<kansio>/…, kopioidaan pienennettyinä (leveys ≤ 1600 px, jpg) kansioon
 #     docs/raportit/kuvat/<kansio>/, raporttien linkit vaihdetaan ja muutos viedään PR:nä (haara
-#     siivous-kuvat-<pvm>, Fable hyväksyy). Jos kopio tai PR epäonnistuu, viitatut kansiot jäävät.
+#     siivous-kuvat-<pvm>, Fable hyväksyy). Kansion *.md-tiedostot (RAPORTTI.md ym.) kopioidaan aina samaan
+#     PR:ään kansioon docs/raportit/lokit/<kansio>/. Jos kopio tai PR epäonnistuu, nämä kansiot jäävät.
 #  2) Build/dd-sim, Build/iOS-sim, Build/yo, jos yli 1 pv vanhoja eikä Unity/xcodebuild ole käynnissä
 #  3) Xcode DerivedData: projektikansiot, joiden WorkspacePath ei ole proto-3d:ssä (välimuistit jäävät)
 #  4) /Users/Shared/Claude/wt/*: pelin repon worktree, jonka haara on mergetty origin/mainiin (tai PR MERGED), työpuu
@@ -49,9 +50,17 @@ if (( ${#vanha} )); then
     viitattu[$kansio]=1; kopioitavat+=("$viite")
     [ $POISTA = 0 ] && echo "kuva repoon: $suht"
   done
+  # Kansion omat muistiinpanot (RAPORTTI.md ym.) aina repoon docs/raportit/lokit/<kansio>/ (Fable 24.9.2026).
+  typeset -a mdt
+  for k in ${(k)vanha}; do
+    for f in $P/lokit/$k/**/*.md(.); do mdt+=("${f#$P/lokit/}"); viitattu[$k]=1; [ $POISTA = 0 ] && echo "md repoon: ${f#$P/lokit/}"; done
+  done
   pr_ok=0
-  if [ $POISTA = 1 ] && (( ${#kopioitavat} )) && git -C $PAA worktree add -q -f -B siivous-kuvat-$pvm $WK origin/main 2>/dev/null; then
+  if [ $POISTA = 1 ] && (( ${#kopioitavat} + ${#mdt} )) && git -C $PAA worktree add -q -f -B siivous-kuvat-$pvm $WK origin/main 2>/dev/null; then
     virhe=0
+    for suht in $mdt; do
+      mkdir -p $WK/docs/raportit/lokit/${suht:h} && cp "$P/lokit/$suht" $WK/docs/raportit/lokit/$suht || virhe=1
+    done
     for viite in $kopioitavat; do
       suht=${viite#*proto-3d/lokit/}; kansio=${suht%%/*}
       nimi=${${suht#*/}:r}; nimi=${nimi//\//-}.jpg
@@ -68,17 +77,17 @@ if (( ${#vanha} )); then
     done
     if [ $virhe = 0 ] \
       && git -C $WK add docs/raportit \
-      && git -C $WK commit -q -m "Siivous: raporttien lokikuvat repoon ($pvm, ${#kopioitavat} kuvaa)" \
+      && git -C $WK commit -q -m "Siivous: lokikansioiden raportit ja kuvat repoon ($pvm, ${#mdt} md, ${#kopioitavat} kuvaa)" \
       && git -C $WK push -q -f origin siivous-kuvat-$pvm; then
       ( cd $WK && { gh pr view siivous-kuvat-$pvm --json state -q .state 2>/dev/null | grep -qx OPEN \
-        || gh pr create --base main --head siivous-kuvat-$pvm --title "Siivous: raporttien lokikuvat repoon ($pvm)" \
-             --body "Yön siivous (proto-3d tyokalut/siivoa-levy.sh) poistaa yli 2 vrk hiljaiset proto-3d/lokit-kansiot. Raporttien viittaamat ${#kopioitavat} kuvaa on kopioitu pienennettyinä (leveys ≤ 1600 px, jpg) kansioon docs/raportit/kuvat/<lokikansio>/ ja linkit vaihdettu. Fable hyväksyy." >/dev/null; } ) \
+        || gh pr create --base main --head siivous-kuvat-$pvm --title "Siivous: lokikansioiden raportit ja kuvat repoon ($pvm)" \
+             --body "Yön siivous (proto-3d tyokalut/siivoa-levy.sh) poistaa yli 2 vrk hiljaiset proto-3d/lokit-kansiot. Kansioiden ${#mdt} md-tiedostoa on kopioitu kansioon docs/raportit/lokit/<kansio>/, ja raporttien viittaamat ${#kopioitavat} kuvaa pienennettyinä (leveys ≤ 1600 px, jpg) kansioon docs/raportit/kuvat/<kansio>/ linkit vaihdettuina. Fable hyväksyy." >/dev/null; } ) \
         && pr_ok=1
     fi
     git -C $PAA worktree remove --force $WK 2>/dev/null
   fi
-  # Viitattu kansio poistetaan vain, kun sen kuvat ovat PR:ssä.
-  [ $pr_ok = 1 ] || [ $POISTA = 0 ] || for k in ${(k)viitattu}; do unset "vanha[$k]"; echo "$(date '+%Y-%m-%d %H:%M') jää (kuvat ei PR:ssä): $k" >> "$LOKI"; done
+  # Kansio, jolla on md-tiedostoja tai viitattuja kuvia, poistetaan vain kun ne ovat PR:ssä.
+  [ $pr_ok = 1 ] || [ $POISTA = 0 ] || for k in ${(k)viitattu}; do unset "vanha[$k]"; echo "$(date '+%Y-%m-%d %H:%M') jää (md/kuvat ei PR:ssä): $k" >> "$LOKI"; done
   for k in ${(k)vanha}; do kohteet+=("$P/lokit/$k"); done
 fi
 
