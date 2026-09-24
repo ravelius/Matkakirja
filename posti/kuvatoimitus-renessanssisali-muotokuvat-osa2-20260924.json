@@ -1,0 +1,113 @@
+{
+  "batch": "renessanssisali-muotokuvat-osa2-20260924",
+  "orderSource": "posti/fable-kuvaputki-renessanssisali-20260924.md",
+  "deliveryState": "r2_uploaded_and_full_readback_verified; 16_of_18_artist_portraits_sourced; game_connection_not_claimed",
+  "countPortraits": 5,
+  "totalDeliveredWithPrevious": 16,
+  "items": [
+    {
+      "id": "portrait-sandro-botticelli",
+      "sitter": "Sandro Botticelli",
+      "objectTitle": "Ritratto di Sandro Botticelli",
+      "artistOfPortrait": "Cosimo Colombini",
+      "portraitDate": "1769",
+      "institution": "Wikimedia Commons; digitized 1769 plate from Serie degli uomini i più illustri, vol. 2",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Sandro_Botticelli.jpg",
+      "license": "Public Domain Mark 1.0 / PD-old-70-expired",
+      "identityNote": "The engraved plate names Sandro Botticelli; later historical portrait, not a life likeness.",
+      "r2Key": "matkakirja/museo/renessanssi/muotokuvat/portrait-sandro-botticelli.jpg",
+      "url": "https://media.matkakirja.app/museo/renessanssi/muotokuvat/portrait-sandro-botticelli.jpg",
+      "sha256": "4b18b5047372b6081a93893c6ec08e6e90913bc26536207cb61e69d770e67759",
+      "tavut": 1114008,
+      "leveys": 1319,
+      "korkeus": 1800,
+      "readbackVerifiedAt": "2026-09-24T15:21:00.957Z"
+    },
+    {
+      "id": "portrait-giovanni-bellini",
+      "sitter": "Giovanni Bellini",
+      "objectTitle": "Portret van Giovanni Bellini",
+      "artistOfPortrait": "Philipp Kilian (possibly), after Jakob von Sandrart",
+      "portraitDate": "1768–1775",
+      "institution": "Rijksmuseum",
+      "sourceUrl": "https://id.rijksmuseum.nl/200468880",
+      "license": "Public domain (Rijksmuseum object page)",
+      "identityNote": "The plate says Giovanni Bellino Venet; Rijksmuseum lists Giovanni Bellini as the subject.",
+      "r2Key": "matkakirja/museo/renessanssi/muotokuvat/portrait-giovanni-bellini.jpg",
+      "url": "https://media.matkakirja.app/museo/renessanssi/muotokuvat/portrait-giovanni-bellini.jpg",
+      "sha256": "d597a6242b3397d35d6c5f58cbb8a10d0c613930772e99062d98a215008a7e5b",
+      "tavut": 517031,
+      "leveys": 1350,
+      "korkeus": 1336,
+      "readbackVerifiedAt": "2026-09-24T15:21:02.312Z"
+    },
+    {
+      "id": "portrait-piero-di-cosimo",
+      "sitter": "Piero di Cosimo",
+      "objectTitle": "Portret van Piero di Cosimo",
+      "artistOfPortrait": "Anonymous woodcut maker",
+      "portraitDate": "1568",
+      "institution": "Rijksmuseum",
+      "sourceUrl": "https://id.rijksmuseum.nl/200781185",
+      "license": "Public domain (Rijksmuseum object page)",
+      "identityNote": "The woodcut says Piero di Cosimo; Rijksmuseum lists him as subject. Likely from Vasari, 1568.",
+      "r2Key": "matkakirja/museo/renessanssi/muotokuvat/portrait-piero-di-cosimo.jpg",
+      "url": "https://media.matkakirja.app/museo/renessanssi/muotokuvat/portrait-piero-di-cosimo.jpg",
+      "sha256": "b1258dd8bf716991d4bc8c87926138bac59ef90e251c6ad5d6984023b599d30e",
+      "tavut": 985884,
+      "leveys": 1800,
+      "korkeus": 1640,
+      "readbackVerifiedAt": "2026-09-24T15:21:03.781Z"
+    },
+    {
+      "id": "portrait-fra-bartolomeo",
+      "sitter": "Fra Bartolomeo",
+      "objectTitle": "Ritratto di Fra Bartolomeo di S. Marco",
+      "artistOfPortrait": "Giovanni Battista Cecchi (engraver)",
+      "portraitDate": "1769",
+      "institution": "Wikimedia Commons; digitized 1769 plate from Serie degli uomini i più illustri, vol. 3",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Fra_Bartolomeo.jpg",
+      "license": "Public Domain Mark 1.0 / PD-old-70-expired",
+      "identityNote": "The engraved plate names Fra Bartolomeo; later historical portrait, possibly derived from a claimed self-portrait, not independently verifiable.",
+      "r2Key": "matkakirja/museo/renessanssi/muotokuvat/portrait-fra-bartolomeo.jpg",
+      "url": "https://media.matkakirja.app/museo/renessanssi/muotokuvat/portrait-fra-bartolomeo.jpg",
+      "sha256": "3b4ee15ce11a7e625ac69b64fb2e8d029a8ccc3872ef90fb65bb032bed316750",
+      "tavut": 1077331,
+      "leveys": 1303,
+      "korkeus": 1800,
+      "readbackVerifiedAt": "2026-09-24T15:21:05.384Z"
+    },
+    {
+      "id": "portrait-agnolo-bronzino",
+      "sitter": "Agnolo Bronzino",
+      "objectTitle": "Le Bronzino",
+      "artistOfPortrait": "Jeanron (drawing); Wacquez and Bouquet (engraving), precise plate author unspecified",
+      "portraitDate": "1842",
+      "institution": "Wikimedia Commons; scan of 1842 French edition of Vasari, vols. 9–10",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vasari_-_Vies_des_peintres_-_t9_t10,_1842_(Bronzino).jpg",
+      "license": "Public Domain Mark 1.0 / PD-old-70-expired",
+      "identityNote": "The engraving is specifically published as Bronzino in Vasari’s artist lives; later historical likeness.",
+      "r2Key": "matkakirja/museo/renessanssi/muotokuvat/portrait-agnolo-bronzino.jpg",
+      "url": "https://media.matkakirja.app/museo/renessanssi/muotokuvat/portrait-agnolo-bronzino.jpg",
+      "sha256": "8a88458f6d9f379f1b8ff578f511a469c5c7903eb84af7889795ce45bf751256",
+      "tavut": 499134,
+      "leveys": 1438,
+      "korkeus": 1800,
+      "readbackVerifiedAt": "2026-09-24T15:21:06.962Z"
+    }
+  ],
+  "unfilled": [
+    {
+      "id": "portrait-cima-da-conegliano",
+      "name": "Cima da Conegliano",
+      "reason": "No verified PD/CC0 portrait with identified sitter located. A 2007 commemorative medal uses the face of St John the Baptist from Cima’s San Fior polyptych as a supposed portrait; scholarly source explicitly calls it presumed, so it is not evidence of Cima’s likeness.",
+      "evidence_url": "https://arts.units.it/retrieve/e2913fde-a0ed-f688-e053-3705fe0a67e0/grava%20leggero.pdf"
+    },
+    {
+      "id": "portrait-fra-carnevale",
+      "name": "Fra Carnevale",
+      "reason": "No reliable, identified likeness of the painter located in the requested source set. Works titled Portrait of a Man are attributed to or by Carnevale and depict unnamed other sitters, not Carnevale himself.",
+      "evidence_url": "https://www.wga.hu/html/c/carneval/6portrai.html"
+    }
+  ]
+}

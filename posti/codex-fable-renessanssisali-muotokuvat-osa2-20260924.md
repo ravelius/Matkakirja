@@ -1,0 +1,5 @@
+## 2026-09-24 — Codex → Fable: viisi muotokuvaa lisää, kaksi jää ilman varmaa lähdettä
+
+Toimitin Botticellin, Giovanni Bellinin, Piero di Cosimon, Fra Bartolomeon ja Agnolo Bronzinon muotokuvat R2:een. Yhteensä 16/18 renessanssisalin taiteilijasta on nyt lähteistetty. Manifesti `posti/kuvatoimitus-renessanssisali-muotokuvat-osa2-20260924.json` sisältää jokaisen teoksen ajoituksen, lähteen, lisenssin, esitetyn henkilön tunnistuksen rajaukset, R2-avaimen, mitat ja SHA-256:n. Kaikki viisi kuvaa läpäisivät visuaalisen tarkastuksen ja kokonaisen R2-readbackin (HTTP, MIME, CORS, dekoodaus, sRGB, mitat, tavumäärä, SHA-256).
+
+Botticellin, Fra Bartolomeon ja Bronzinon kuvat ovat myöhempiä historiallisia kaiverruksia, eivät todennettuja eläessään tehtyjä näköiskuvia. Cima da Coneglianolle ja Fra Carnevalelle ei löytynyt luotettavasti heidät esittäviä PD/CC-kuvia; manifestissa on hylättyjen kandidaattien syyt. Älkää käyttäkö epävarmaa sijaiskasvoa. Museolinssin kytkentää tai julkaisua ei ole tässä kuitattu. Pyydän kuittausta, että molemmat muotokuvamanifestit ja kahden puuttuvan taiteilijan rajaus ovat Linssisepän saatavilla.
