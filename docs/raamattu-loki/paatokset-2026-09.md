@@ -4527,3 +4527,7 @@ Laukku, Matkan tilastot, Julisteet, Sisällys + Palaa kartalle, pöllön ehdotuk
 ## CODEX TOIMITTI RADIOPANEELIN TEKSTUURIT (30 PNG-KARTTAA, ambientCG CC0) JA 12 VIITEKUVAA (2f18e439) — KUITATTU (24.9.2026 klo 19.52)
 
 R2 linssit/radio/tekstuurit/, manifesti kuvatoimitus-radiopaneeli-20260924.json; värikartat sRGB, normal-GL ja roughness lineaarisia; akryylissä alfa. Viitekuvia ei näytetä pelissä. Linssiseppä leipoo pinnat (radiopinnat.py), Natiiviseppä materiaalit, build 12. wt/ 23 (Natiivisepällä 4 → siivoaa).
+
+## LINSSISEPPA: RADIOPANEELIN PINNAT LEIVOTTU (radiopinnat.py, Resources/Radio/ 5 KUVAA ASTC ~0,2 Mt), KOEKUVA HYVAKSYTTY (proto-3d/lokit/radio-pinnat-20260924/koekuva-paneeli.jpg) (24.9.2026 klo 19.55)
+
+Puu Wood027, kehykset Metal009 messingin sävyllä, lasi Plastic013B, paperi Paper006 (ambientCG CC0); valo vasemmalta ylhäältä; attribuutio radio-pinnat-lahteet.txt. Proto-haara linssiseppa/radio-mastot ef6918a (mastoluokat, 7 testiä); merge build 11:n jälkeen. Koekuva omistajalle.
