@@ -118475,6 +118475,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Charles Darwin Research Station',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Preparing for the trail LCCN99472325.jpg',
+          vuosi: '1903',
+          lyhyt: 'Keräysretkikunnan miehiä Galápagossaarilla vuonna '
+            + '1903.',
+          selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla '
+            + 'vuonna 1903: maassa on jättiläiskilpikonnien kilpiä, ja '
+            + 'näytteitä valmistellaan kuljetusta varten museoiden '
+            + 'kokoelmiin.',
+          lahde: 'R. H. Beck, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'PtoAyoraMercado.jpg',
+          vuosi: '2018',
+          lyhyt: 'Puerto Ayoran tori Santa Cruzin saarella '
+            + 'Galápagossaarilla vuonna 2018.',
+          selite: 'Puerto Ayoran tori Santa Cruzin saarella. Kaali, '
+            + 'banaani, sipuli ja munat myydään muovilaareista ja '
+            + 'pahvilaatikoista — osa kasvatetaan saaren kosteammalla '
+            + 'ylängöllä, osa tuodaan laivalla mantereelta.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -118613,6 +118637,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Belgian kuningas Leopold II, jonka henkilökohtaiseksi omaisuudeksi Kongo-vapaavaltio julistettiin vuonna 1885.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (Public domain)',
           wiki: 'Congo Free State',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Boma, Congo, ca. 1900-1915 (IMP-CSCNWW33-OS11-74).jpg',
+          vuosi: '1900–1915',
+          lyhyt: 'Boman satama Kongojoen rannalla noin vuosina '
+            + '1900–1915.',
+          selite: 'Lasilevykuva Boman satamasta Kongojoen rannalla — '
+            + 'Boma oli tuolloin Kongo-vapaavaltion pääkaupunki ja '
+            + 'joen tärkein satama sisämaahan.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Aerial view of the Congo River near Kisangani.jpg',
+          vuosi: '2010',
+          lyhyt: 'Kongojoki ilmasta Kisanganin lähellä, haarautuu '
+            + 'vehreiden saarten väliin kuin meri.',
+          selite: 'Kongojoki ilmasta Kisanganin lähellä. Joki haarautuu '
+            + 'vehreiden saarten väliin niin laajaksi, että sitä on '
+            + 'helppo luulla mereksi.',
+          lahde: 'MONUSCO / Myriam Asmani, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -118765,6 +118811,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Huayna Picchu',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Machupicchu hb10.jpg',
+          vuosi: '1912',
+          lyhyt: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen.',
+          selite: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen kasvillisuudesta. '
+            + 'Vuotta aiemmin paikka oli lähes kokonaan viidakon '
+            + 'peitossa, ja raivaus tehtiin käsityönä.',
+          lahde: 'Hiram Bingham, National Geographic 1913 (PD)',
+        },
+        {
+          tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 51.JPG',
+          vuosi: '2015',
+          lyhyt: 'Machu Picchun laastittomia kivimuureja ja '
+            + 'pengerryksiä vuonna 2015.',
+          selite: 'Muureja ja pengerryksiä läheltä. Kivet on hakattu '
+            + 'sopimaan toisiinsa ilman laastia, ja terassien '
+            + 'tukimuurit pitävät jyrkän rinteen paikallaan '
+            + 'sadekaudella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -118907,6 +118977,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Sepiansävyinen ryhmäpotretti noin vuodelta 1880: kuvernööri istuu keskellä ruudullisessa puvussa, ympärillä kymmenkunta perheenjäsentä osin perinteisissä raidallisissa lamba-viitoissa.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Toamasina',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Antananarivo Four Roads c1905.jpg',
+          vuosi: 'noin 1905',
+          lyhyt: 'Postikortti Antananarivon "Neljän tien" risteyksestä '
+            + 'noin 1905.',
+          selite: 'Vanha postikortti Antananarivon "Neljän tien" '
+            + 'risteyksestä ja teatterista noin vuodelta 1905 — '
+            + 'Tananarive oli kaupungin silloinen ranskalainen nimi.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Highlands, Madagascar (22741639463).jpg',
+          vuosi: '2015',
+          lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri '
+            + 'antaa lempinimen "punainen saari".',
+          selite: 'Madagaskarin ylängön punertavia kukkuloita ja kyliä. '
+            + 'Maan väri tulee raudasta, ja se antaa saarelle '
+            + 'lempinimen punainen saari.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
