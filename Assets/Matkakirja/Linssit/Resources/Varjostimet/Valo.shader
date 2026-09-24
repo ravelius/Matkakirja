@@ -37,6 +37,7 @@ Shader "Matkakirja/Linssit/Valo"
         _Peitto("Peitto", Range(0, 1)) = 1
         _RuudunKorkeusPt("Ruudun korkeus pisteinä", Float) = 844
         _TummaPohja("sRGB-sekoitus tummalla pohjalla 0/1", Float) = 0
+        _PohjaSrgb("Tummennetun pohjan sRGB-arvo (mitattu 24.9.: 43/255)", Float) = 0.169
     }
     SubShader
     {
@@ -59,6 +60,7 @@ Shader "Matkakirja/Linssit/Valo"
                 float _Peitto;
                 float _RuudunKorkeusPt;
                 float _TummaPohja;
+                float _PohjaSrgb;
             CBUFFER_END
 
             struct Syote
@@ -166,15 +168,21 @@ Shader "Matkakirja/Linssit/Valo"
                 c *= i.p.w * _Peitto;
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 // Webin canvas sekoittuu sRGB-arvoihin; projekti on lineaarinen. Tummalla
-                // pohjalla (_TummaPohja 1: keksintöjen tummennus) lin(c + (1-a)·pohja) ≈ lin(c) + (1-a)^2,2·lin(pohja):
-                // ilman muunnosta hännän 0,05 näkyi 0,26:na ja hehku leveni neliön reunaan asti
-                // (kontakti 24.9.). Sama muunnos kuin Tummennus.shaderissa.
+                // pohjalla (_TummaPohja 1: keksintöjen tummennus) muunnos alla; ilman sitä hännän
+                // 0,05 näkyi 0,26:na ja hehku leveni neliön reunaan asti (kontakti 24.9.).
                 // Vaalealla pohjalla (ihmisen matka) sama muunnos sammuttaisi hehkun, joten se
                 // on vain tummennuksen kanssa.
                 if (_TummaPohja > 0.5)
                 {
-                    c.rgb = pow(max(c.rgb, 0.0), 2.2);
-                    c.a = 1.0 - pow(max(1.0 - c.a, 0.0), 2.2);
+                    // Webin tulos sRGB:nä on o = c + (1 − a)·B. Lineaarisessa kehyksessä sekoitus on
+                    // lin(o) = c' + (1 − a)·lin(B), joten c' = lin(c + (1 − a)·B) − (1 − a)·lin(B), kun B on
+                    // tummennetun kartan sRGB-arvo (_PohjaSrgb, mitattu isolta iPadilta ja webistä: 43/255).
+                    // Tarkka tummalla pohjalla; aiempi lin(c) + (1 − a)^2,2 teki hehkusta himmeän (ka 54 vs
+                    // webin 75) ja päällekkäiset lamput eivät kirkastuneet (Pariisi 132 vs 250; Fable 24.9.).
+                    float B = _PohjaSrgb;
+                    float linB = pow(B, 2.2);
+                    float3 o = min(c.rgb + (1.0 - c.a) * B, 1.0);
+                    c.rgb = max(pow(o, 2.2) - (1.0 - c.a) * linB, 0.0);
                 }
             #endif
                 return half4(c);
