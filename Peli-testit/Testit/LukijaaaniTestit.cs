@@ -92,6 +92,10 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void JalkiToistuu()
         {
             var (l, sailo) = Uusi();
+            // Webin jälki asettaa koodin localStorageen (oma avain, varalla pöllön); natiivissa sama arvo tulee
+            // Keychainista (Koodilahde). Toisto lukee jäljen säilöstä samalla järjestyksellä.
+            l.Koodilahde = () => sailo.TryGetValue(Lukijaaani.KoodiAvain, out var k) && !string.IsNullOrEmpty(k) ? k
+                : sailo.TryGetValue(Lukijaaani.PolloKoodiAvain, out var pk) ? pk : null;
             int n = 0;
             foreach (var a in MiniJson.Taulukko(Jalki["askeleet"]).Select(MiniJson.Objekti))
             {
@@ -154,19 +158,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("{\"kertoja\":{\"aani\":\"ash\",\"ohje\":\"Hitaasti.\"},\"pollo\":{\"aani\":null,\"ohje\":\"Vain ohje\"}}", sailo[Lukijaaani.AsetusAvain]);
         }
 
-        [Testi] static void KehittajakoodiKuinWebin()
+        [Testi] static void KehittajakoodiVainLahteesta()
         {
             var (l, sailo) = Uusi();
             Oleta.Sama((string)null, l.Kehittajakoodi);
-            l.TalletaPolloKoodi("P");
-            Oleta.Sama("P", sailo[Lukijaaani.PolloKoodiAvain]);
+            string koodi = "P";
+            l.Koodilahde = () => koodi;
             Oleta.Sama((string)null, l.Pyynto("x", "pollo", null).Koodi, "ilman säätöjä ei otsaketta");
             l.AsetaAsetus("pollo", "nova", "");
             Oleta.Sama("P", l.Pyynto("x", "pollo", null).Koodi);
-            sailo[Lukijaaani.KoodiAvain] = "T";
-            Oleta.Sama("T", l.Kehittajakoodi, "oma avain ensin");
-            l.TalletaPolloKoodi(null);
-            Oleta.Tosi(!sailo.ContainsKey(Lukijaaani.PolloKoodiAvain));
+            Oleta.Tosi(!sailo.ContainsKey(Lukijaaani.KoodiAvain) && !sailo.ContainsKey(Lukijaaani.PolloKoodiAvain), "koodi ei säilöön");
+            koodi = "";
+            Oleta.Sama((string)null, l.Kehittajakoodi, "tyhjä = ei koodia");
+            // Migraatio: vanhat selväkieliset kopiot pois.
+            sailo[Lukijaaani.KoodiAvain] = "T"; sailo[Lukijaaani.PolloKoodiAvain] = "Q";
+            l.PoistaVanhatKoodit();
+            Oleta.Tosi(!sailo.ContainsKey(Lukijaaani.KoodiAvain) && !sailo.ContainsKey(Lukijaaani.PolloKoodiAvain));
         }
 
         [Testi] static void MuuttuiLaukeaa()

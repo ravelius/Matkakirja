@@ -242,30 +242,31 @@ namespace Matkakirja.Peli
 
         // --- puhepyyntö ------------------------------------------------------------------------------
 
-        /// <summary>Kehittäjäkoodi (js/puhe.js kehittajaKoodi): oma avain, varalla pöllön koodi; tyhjä = ei.</summary>
+        /// <summary>
+        /// Kehittäjäkoodin lähde (Fable 24.9.2026: avaimet vain iOS Keychainissa; natiivissa Asetukset.PolloKoodi).
+        /// Koodia EI tallenneta säilöön (web: localStorage matkakirja-puhe-kehittaja / matkakirja-pollo-kehittajakoodi).
+        /// </summary>
+        public Func<string> Koodilahde;
+
+        /// <summary>Kehittäjäkoodi (js/puhe.js kehittajaKoodi) Koodilahteestä; tyhjä = ei.</summary>
         public string Kehittajakoodi
         {
             get
             {
-                string k = Lue(KoodiAvain);
-                if (!string.IsNullOrEmpty(k)) return k;
-                k = Lue(PolloKoodiAvain);
+                string k;
+                try { k = Koodilahde?.Invoke(); } catch { k = null; }
                 return string.IsNullOrEmpty(k) ? null : k;
             }
         }
 
         /// <summary>
-        /// Pöllön kehittäjäkoodi (main.js talletaPolloKoodi): kehittäjätilan pääkoodi talteen, kun
-        /// tila kytketään koodilla; null/tyhjä poistaa (tila pois tai rajattu koodi).
+        /// Migraatio: poistaa säilöstä vanhat selväkieliset koodit (KoodiAvain, PolloKoodiAvain), jotka aiempi versio
+        /// tallensi PlayerPrefsiin. Kutsutaan kerran käynnistyksessä.
         /// </summary>
-        public void TalletaPolloKoodi(string koodi)
+        public void PoistaVanhatKoodit()
         {
-            try
-            {
-                if (!string.IsNullOrEmpty(koodi)) kirjoita(PolloKoodiAvain, koodi);
-                else poista(PolloKoodiAvain);
-            }
-            catch { /* säilö estetty: pöllön ohitus jää pois, muu toimii */ }
+            try { poista(KoodiAvain); poista(PolloKoodiAvain); }
+            catch { /* säilö estetty */ }
         }
 
         /// <summary>
