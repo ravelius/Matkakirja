@@ -24,6 +24,7 @@
 #   ./laitetesti.sh regressio <kansio>     kaikki linssit (RADIO=1: myös radio), KAUPUNKI oletus lontoo
 #   ./laitetesti.sh tutkimus <kansio>      ihmisen matka suoraan tutkimusvaiheeseen
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
+#   ./laitetesti.sh huippuvuoret <kansio>  vertailu FIN + NOR, kamera 76/18/2500 km (kontakti-web.mjs KIINTEA=huippuvuoret)
 #   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
@@ -144,6 +145,11 @@ case "$1" in
     linssi "keksinnot 25" "keksinnot jatka"; sleep 12; kuva kontakti-keksinnot-loppu
     linssi "linssi ihmisen-matka"; sleep 45; linssi "esitys levantti"; sleep 12; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
     linssi "linssi pois"; sleep 4; hae "$2"; tail -12 "$2/linssi-loki.txt" ;;
+  huippuvuoret)
+    kaynnista; portti
+    linssi "linssi vertailu"; sleep 5; linssi "maa NOR"; sleep 4; linssi "kamera 76 18 2500"; sleep 8
+    kuva kontakti-vertailu-huippuvuoret
+    linssi "linssi pois"; sleep 2; hae "$2"; grep -a "vertailu\|auki" "$2/linssi-loki.txt" | tail -4 ;;
   piikit)
     # Linssien kehyspiikit (Fable 24.9.: ei yli 16 ms kehyksiä avauksessa ja pysäkinvaihdossa). Vaatii
     # Development-käännöksen (MATKAKIRJA_KEHITYS=1, ProfilerRecorderit). Unityn loki konsolista taustalla;
