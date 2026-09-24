@@ -1024,12 +1024,14 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
-/* Web .nostokuva-selite (mitattu 24.9. b11): Iowan 13,44 px, rgba(33, 29, 24, 0.82), keskitetty, yllä 5,6 px. */
+/* Web .nostokuva-selite (mitattu 24.9. b11): Iowan 13,44 px, rgba(33, 29, 24, 0.82), keskitetty, yllä 5,6 px.
+   Väri läpinäkymättömänä (0,82 kortin #f5f0e2:n päällä sRGB:ssä = rgb(71, 67, 60)): projekti on lineaarisessa
+   väriavaruudessa, ja alfa sekoittuu siellä vaaleammaksi (b11a mitattu 117 vs web 58, täysi #211d18 osui 33,29,24). */
 .mk-nosto__kuvateksti {
     margin-top: 5.6px;
     font-size: 13.44px;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.82);
+    color: rgb(71, 67, 60);
 }
 
 /* Kuvan alla keskitetty (web figcaption.nostokuva-selite text-align center). */
@@ -1055,9 +1057,10 @@
     margin-bottom: 1.6px;
     padding: 5.6px 25.6px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.45);
+    /* rgba(122, 85, 20, 0.45) ja rgba(250, 246, 235, 0.96) kortin päällä sRGB:ssä (lineaarinen alfa vaalentaisi). */
+    border-color: rgb(190, 170, 133);
     border-radius: 8px;
-    background-color: rgba(250, 246, 235, 0.96);
+    background-color: rgb(250, 246, 235);
     color: rgb(92, 63, 14);
 }
 
