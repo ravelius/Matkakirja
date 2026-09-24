@@ -4767,3 +4767,7 @@ Osa 3 (Z8 + 1 px vektoriranta) ~10 min. Omistaja katsoo ja valitsee.
 ## LOYDOS 46 OSA 3 (KARTTASEPPA f1a582883): 2-b-vektoriranta.jpg — D2:N Z8-POHJA ILMAN MUSTETTA + WEBIN GSHHS l4 -VEKTORIRANTA 1 css-px; Z9-ARVIO TULOSSA (25.9.2026 klo 00.00)
 
 Kaikki kolme osaa omistajalla; kortti pohjavalinnasta.
+
+## OMISTAJA klo 00.0x (KORTTI, SITOVA): PERUSKARTAN RESEPTI = D2 + RELIEFI + VEKTORIRANNAT (EI RANTAMUSTETTA, MERI SAVYLIUKUNA, GLO-30-RELIEFI, PALLOSARJA Z0–Z9 KOKO MAAILMALLE; RANNAT JA RAJAT NATIIVISSA VEKTORINA) — RAAMATTUUN; KARTTASEPPA POLTTAA, NATIIVISEPPA PIIRTAA; SISALTOKIRJURI: KATALOGI-PR #3128 AUKI, NOLLAUS (25.9.2026 klo 00.04)
+
+Omistaja valitsi vedoksista (osat 1–3) D2 + reliefi + vektorirannat. Raamattuun NATIIVI PELI ETUSIJALLE: PERUSKARTAN RESEPTI 2026-09-25. Työ: Karttaseppä — DEM-kaistajako (~½ pv), poltto pyramidi + pallosarja Z0–Z9 (~3,5 h) + sileä sarja, huntu ja syvät tasot (~5 h), yövalosarja klo 9 jälkeen rinnalla, E28 loppuun; Natiiviseppä — E1 rannikko, E2 rajat + maan kehä, E3 iPhone-mittaus, Maaraja pois; Z9 Laattapalvelimeen kun sarja on ämpärissä; omistaja hyväksyy kuvaparista. Sisältökirjuri avasi katalogi-PR:n #3128 (testit 0 fail, korjaukset 1–6), Pelikoodari tarkistaa, luovutus -20260924-yo.md, nollaus; Julkaisija mergeää tarkistuksen jälkeen.
