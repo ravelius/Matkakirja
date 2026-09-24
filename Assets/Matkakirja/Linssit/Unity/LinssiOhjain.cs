@@ -748,8 +748,13 @@ namespace Matkakirja.Natiivi
             /// </summary>
             public static Func<Matkakirja.Linssit.Radio.IRadioMastot> MastoPiirto;
 
+            Matkakirja.Linssit.Radio.RadioLinssi sulkeva;
+
             public void Avaa(ILinssiYmparisto y)
             {
+                // Edellisen sulun ulosliuku kesken: loppuun heti, ettei vanha purku poista uuden avauksen reliefiä.
+                sulkeva?.LopetaSulku();
+                sulkeva = null;
                 virta = RadioVirta.Luo(o.transform, etusija: true);
                 viritin = RadioViritin.Luo(o.transform, aineisto.Viritysaanet);
                 kartta = new Kartta(o.kierto);
@@ -772,6 +777,17 @@ namespace Matkakirja.Natiivi
             {
                 if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
                 linssi?.Sulje();
+                if (linssi != null && linssi.Sulkeutuu)
+                {
+                    var l = linssi;
+                    sulkeva = l;
+                    o.Jalkiajo(() =>
+                    {
+                        bool jatkuu = l.PaivitaSulku();
+                        if (!jatkuu && ReferenceEquals(sulkeva, l)) sulkeva = null;
+                        return jatkuu;
+                    });
+                }
                 linssi = null;
                 if (virta != null) Destroy(virta.gameObject);
                 if (viritin != null) Destroy(viritin.gameObject);
@@ -907,12 +923,19 @@ namespace Matkakirja.Natiivi
         {
             using (KytkeMerkki.Auto()) kerrokset.Kytke();
             rekisteri.Paivita();
+            // Suljettujen linssien jälkiajot (radion ulosliuku): true = jatkuu.
+            if (jalkiajot.Count > 0) jalkiajot.RemoveAll(f => !f());
 #if !MATKAKIRJA_APPSTORE
             // App Store -käännöksessä ei testikomentoja (kuten ui-komento.txt ja komento.txt).
             komentoKello -= Time.unscaledDeltaTime;
             if (komentoKello <= 0f) { komentoKello = 0.5f; using (KomennotMerkki.Auto()) LueKomennot(); }
 #endif
         }
+
+        readonly List<Func<bool>> jalkiajot = new List<Func<bool>>();
+
+        /// <summary>Kehyksittäinen ajo linssin sulun jälkeen (esim. radion hämärän ulosliuku); palauttaa false, kun valmis.</summary>
+        internal void Jalkiajo(Func<bool> ajo) { if (ajo != null) jalkiajot.Add(ajo); }
 
         void OnDestroy()
         {

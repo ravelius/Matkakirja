@@ -251,16 +251,58 @@ namespace Matkakirja.Linssit.Radio
             }
         }
 
+        // SULKU (Natiiviseppä 25.9.: ulosliuku ei näkynyt): hämärä ja reliefi liukuvat pois 0,8 s Pehmeä, pohja ja mastot
+        // pois vasta lopuksi. Linssi on jo kiinni, joten LinssiOhjain ajaa PaivitaSulku-kutsuja jälkiajona.
+        double sulkuAlku = double.NaN;
+        ILinssiYmparisto sulkuY;
+
+        /// <summary>Sulun ulosliuku käynnissä (Sulje on palannut, mutta hämärä ja reliefi vielä näkyvät).</summary>
+        public bool Sulkeutuu => !double.IsNaN(sulkuAlku);
+
+        /// <summary>Jälkiajo sulun jälkeen joka kehys; palauttaa false, kun liuku on valmis ja kaikki purettu.</summary>
+        public bool PaivitaSulku()
+        {
+            if (!Sulkeutuu) return false;
+            double s = sulkuY == null ? Mastot.SulkuS : (sulkuY.Aika * 1000 - sulkuAlku) / 1000;
+            double t = sulkuY == null || sulkuY.VahennettyLiike ? 1 : Math.Clamp(s / Mastot.SulkuS, 0, 1);
+            float h = (float)(1 - Kamera.Kamerakayrat.Pehmea(t));
+            Mastot3D?.Hamara(h);
+            foreach (var m in mastot) Mastot3D?.Nousu(m.Id, h);
+            if (t < 1) return true;
+            LopetaSulku();
+            return false;
+        }
+
+        /// <summary>Sulku heti loppuun (uusi avaus kesken ulosliu'un tai kohtauksen purku).</summary>
+        public void LopetaSulku()
+        {
+            if (!Sulkeutuu) return;
+            var yEnnen = y;
+            y = sulkuY;
+            PalautaPohja();
+            y = yEnnen;
+            if (Mastot3D != null)
+            {
+                Mastot3D.Hamara(0);
+                Mastot3D.Mastot(null);
+            }
+            mastot.Clear();
+            sulkuAlku = double.NaN;
+            sulkuY = null;
+        }
+
         void SuljeMastot()
         {
-            PalautaPohja();
             if (Mastot3D != null)
             {
                 Mastot3D.Renkaat(0, 0, 0, Array.Empty<double>());
                 Mastot3D.Valittu(null, 0);
-                Mastot3D.Hamara(0);
-                Mastot3D.Mastot(null);
+                Mastot3D.YonValot(0, 0, 0);
+                // Ulosliuku (PaivitaSulku); ilman mastoja ei ole mitään liu'utettavaa.
+                sulkuAlku = Nyt;
+                sulkuY = y;
             }
+            else PalautaPohja();
             if (y != null && Mastot3D != null && kallistusEnnen is double k)
             {
                 var n0 = y.Kamera;
@@ -268,7 +310,7 @@ namespace Matkakirja.Linssit.Radio
                     Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), k);
             }
             kallistusEnnen = null;
-            mastot.Clear();
+            if (Mastot3D == null) mastot.Clear();
             ajoAlku = avausHetki = soiAlku = double.NaN;
         }
 
@@ -418,6 +460,7 @@ namespace Matkakirja.Linssit.Radio
         public void Avaa(ILinssiYmparisto ymparisto)
         {
             if (Auki) return;
+            LopetaSulku();
             Auki = true;
             y = ymparisto;
             LuentaSallittu = false;
