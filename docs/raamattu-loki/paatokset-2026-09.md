@@ -2931,3 +2931,7 @@ Postivahdin ilmoitus klo 03.5x.
 ## LINSSISEPPA NOLLATTU klo 04.0x (73 %): LUOVUTUS viesti-linssiseppa-luovutus-20260924.md (53e0a06b4, HAARA linssiseppa-tyo-20260923), PROTO-MASTER 3afad75, MERGE-PYYNNOSSA korkeussovitus 0896ad4; AIKASELAIMEN SOPIMUS NATIIVI-UI:N KANSSA (MOOTTORI LINSSISEPAN, NAUHA NATIIVI-UI:N); ALOITUS viesti-linssiseppa-aloitus.md PAIVITETTY (24.9.2026 klo 04.06)
 
 Isoisä 1873 erä 2 pysyy odottavana (ei webissä).
+
+## NATIIVISEPPA NOLLATTU klo 04.1x (70 %): LUOVUTUS viesti-natiiviseppa-luovutus-20260924.md (7f9d2b14e, HAARA selvittaja-3d-luovutus), PROTO-MASTER a345a19, AVOIMET MERGE-PYYNNOT natiivi-ui/jaa-matka 9230344 (LAITEKAANNOS .mm) JA natiivi-ui/nosto-media f02a5ee; LEVY 98 % → TF1–3 JA Build/iOS-laite POISTETTU (~24 Gt VAPAANA); ALOITUS viesti-natiiviseppa-aloitus.md LUOTU (24.9.2026 klo 04.10)
+
+Kesken: maailman maaston osoite, valokeilan ensimmäinen vaihto 23 ms, ui jatka -kehys 100 ms, Espanjan viiva.
