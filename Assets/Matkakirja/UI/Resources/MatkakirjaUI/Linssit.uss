@@ -2615,8 +2615,11 @@
     min-height: 24px;
 }
 
+/* Pelin rivit tiiviinä kahden sarakkeen ruudukkona (Fable 24.9.: linssit saavat tilan, vähintään 4 näkyvissä). */
 .mk-linssivalitsin__lisaosa {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 2px;
 }
 
 .mk-linssivalitsin__erotin {
@@ -2626,8 +2629,26 @@
 }
 
 .mk-linssirivi--valikko {
-    min-height: 44px;
-    padding: 6px 10px;
+    width: 50%;
+    min-height: 30px;
+    margin: 1px 0;
+    padding: 3px 6px;
+    border-radius: 8px;
+}
+
+.mk-linssirivi--valikko > .mk-linssirivi__ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    padding: 3px;
+    border-radius: 11px;
+    flex-shrink: 0;
+}
+
+.mk-linssirivi--valikko > .mk-linssirivi__nimi {
+    flex-shrink: 1;
+    font-size: 13px;
+    white-space: normal;
 }
 
 /* Valikon linssiosan väliotsikko viivan alla (pelin rivit yläpuolella). */
