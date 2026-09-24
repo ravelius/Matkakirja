@@ -22,7 +22,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { RIVIT, NATIIVI_ALKU, NATIIVI_SIIVOUS, KAUPUNKI, SIEMEN } from './pariteetti-rivit.mjs';
-import { skaalaa, parita, kuvaEro, tuomio, markdownTaulu, kontaktiarkki } from './pariteetti-vertailu.mjs';
+import { skaalaa, parita, kuvaEroSiirrolla, tuomio, markdownTaulu, kontaktiarkki } from './pariteetti-vertailu.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const aja = promisify(execFile);
@@ -237,7 +237,7 @@ async function vertaa() {
         rivi.syyt.push(!webOk ? 'web-kuva puuttuu' : 'natiivikuva puuttuu');
       } else {
         const [a, b] = await Promise.all([harmaa(webPng, l.w, l.h), harmaa(natPng, l.w, l.h)]); // eslint-disable-line no-await-in-loop
-        const kuva = kuvaEro(a.data, b.data, LEVEYS, a.kork);
+        const kuva = kuvaEroSiirrolla(a.data, b.data, LEVEYS, a.kork);
         const web = lueJson(join(WEB, `${r.web}-${k}.json`));
         const natiivi = lueJson(join(NATIIVI, `${r.rivi}-${l.nimi}.json`));
         let t;
@@ -245,7 +245,7 @@ async function vertaa() {
           t = tuomio(parita(web, skaalaa(natiivi, web)), kuva);
         } else {
           // Ilman UI-puuta (vanha käännös) tai web-laatikoita: tuomio pelkästä kuvasta.
-          const sama = kuva.ssim >= 0.55 && kuva.reunat >= 0.5;
+          const sama = kuva.ssim >= 0.15 && kuva.reunat >= 0.15;
           t = { tila: sama ? 'SAMA' : 'ERI', eroPx: null, syyt: [`vain kuvavertailu (${!natiivi ? 'ei UI-puuta' : 'ei web-laatikoita'})`] };
         }
         Object.assign(rivi, t);

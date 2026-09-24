@@ -184,17 +184,22 @@ test('tuomio: oletusrajat ovat tehtävänannon mukaiset', () => {
   assert.equal(OLETUSRAJAT.kokoOsuus, 0.15);
   assert.equal(OLETUSRAJAT.puuttuvatOsuus, 0.10);
   assert.equal(OLETUSRAJAT.puuttuuOsuus, 0.60);
-  assert.equal(OLETUSRAJAT.ssim, 0.55);
-  assert.equal(OLETUSRAJAT.reunat, 0.5);
+  assert.equal(OLETUSRAJAT.ssim, 0.15);
+  assert.equal(OLETUSRAJAT.reunat, 0.15);
   assert.equal(OLETUSRAJAT.opasiteetti, 0.3);
   assert.equal(OLETUSRAJAT.pitkaTeksti, 120);
 });
 
 test('tuomio SAMA ↔ ERI: sijainti ±8 px', () => {
   const web = nakyma(PERUS);
-  const sisalla = tuomio(parita(web, nakyma(siirra(PERUS, (e) => ({ y: e.y + 8 })))));
+  const sisalla = tuomio(parita(web, nakyma(siirra(PERUS, (e, i) => ({ y: e.y + (i === 3 ? 8 : 0) })))));
   assert.equal(sisalla.tila, 'SAMA', sisalla.syyt.join('; '));
   assert.equal(sisalla.eroPx, 8);
+  // Koko näkymän yhteinen siirto (turva-alue) vähennetään ja kerrotaan huomautuksena.
+  const kaikki = tuomio(parita(web, nakyma(siirra(PERUS, (e) => ({ y: e.y + 60 })))));
+  assert.equal(kaikki.tila, 'SAMA', kaikki.syyt.join('; '));
+  assert.equal(kaikki.eroPx, 0);
+  assert.match(kaikki.syyt.at(-1), /koko näkymä siirtynyt dx \+0 px, dy \+60 px/);
   const yli = tuomio(parita(web, nakyma(siirra(PERUS, (e, i) => ({ y: e.y + (i === 3 ? 14 : 0) })))));
   assert.equal(yli.tila, 'ERI');
   assert.equal(yli.eroPx, 14);
@@ -232,11 +237,11 @@ test('tuomio SAMA ↔ ERI: puuttuvat tekstit 10 %, vähintään 1', () => {
   assert.ok(lisaa.syyt.includes('vain natiivissa: "Ylimääräinen A"'));
 });
 
-test('tuomio SAMA ↔ ERI: rakenne ssim 0.55 ja reunat 0.5', () => {
+test('tuomio SAMA ↔ ERI: rakenne ssim 0.15 ja reunat 0.15', () => {
   const p = parita(nakyma(PERUS), nakyma(PERUS));
-  assert.equal(tuomio(p, { ssim: 0.55, reunat: 0.5 }).tila, 'SAMA');
-  assert.equal(tuomio(p, { ssim: 0.54, reunat: 0.9 }).tila, 'ERI');
-  const r = tuomio(p, { ssim: 0.9, reunat: 0.49 });
+  assert.equal(tuomio(p, { ssim: 0.15, reunat: 0.15 }).tila, 'SAMA');
+  assert.equal(tuomio(p, { ssim: 0.14, reunat: 0.9 }).tila, 'ERI');
+  const r = tuomio(p, { ssim: 0.9, reunat: 0.14 });
   assert.equal(r.tila, 'ERI');
   assert.match(r.syyt[0], /^rakenne eri: ssim 0\.90/);
   assert.equal(tuomio(p, null).tila, 'SAMA');
@@ -308,4 +313,27 @@ test('kontaktiarkki: itsenäinen HTML, suodattimet, ei ulkoisia viittauksia', ()
   assert.ok(h.includes('<li>&quot;Liiku&quot;: dy +14 px</li>'));
   assert.doesNotMatch(h, /https?:/);
   assert.doesNotMatch(h, /<link|@import|src="\/\//);
+});
+
+test('parita: anfangi, katkelmien kokoaminen, upotettu lihavointi ja natiivin peitto (b12g-ajon löydökset)', () => {
+  const kappale = 'Marseille on Ranskan vanhin kaupunki ja Pariisin jälkeen sen väkirikkain, ja satama on nimeltään Vanhasatama nykyään';
+  const web = nakyma([
+    laatikko('France', 20, 780, 50, 16),
+    laatikko('· tasavalta v. 1873', 72, 780, 120, 16),
+    laatikko(kappale.replace(' Vanhasatama', ''), 20, 470, 360, 200),
+    laatikko('Vanhasatama', 120, 600, 90, 20),
+  ]);
+  const natiivi = nakyma([
+    laatikko('Kartan nimi alla', 100, 300, 90, 16), // lehden alle jäävä kartan nimi
+    { kuva: true, x: 0, y: 0, w: 393, h: 852, opasiteetti: 1 }, // koko ruudun lehti päälle
+    laatikko('France · tasavalta v. 1873', 20, 781, 172, 16),
+    laatikko('M', 20, 470, 40, 40),
+    laatikko(kappale.slice(1, 60), 62, 470, 300, 60),
+    laatikko(kappale.slice(60), 20, 530, 360, 140),
+  ]);
+  const p = parita(web, natiivi);
+  assert.equal(p.vainNatiivi.length, 0, JSON.stringify(p.vainNatiivi.map((e) => e.teksti)));
+  assert.equal(p.vainWeb.length, 0, JSON.stringify(p.vainWeb.map((e) => e.teksti)));
+  assert.ok(p.parit.some((x) => x.laatu === 'koottu' && /France/.test(x.web.teksti)));
+  assert.equal(tuomio(p).tila, 'SAMA', tuomio(p).syyt.join('; '));
 });

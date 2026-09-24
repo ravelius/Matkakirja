@@ -33,11 +33,16 @@ export const OLETUSRAJAT = Object.freeze({
   puuttuvatVahintaan: 1, // … mutta aina vähintään näin monta sallitaan
   ylimaaraisetOsuus: 0.10, // vain natiivissa olevat samalla säännöllä
   puuttuuOsuus: 0.60, // yli tämän osuuden puuttuessa tila on PUUTTUU
-  ssim: 0.55, // rakenne sama, kun ssim ≥ tämä …
-  reunat: 0.5, // … JA reunakarttojen korrelaatio ≥ tämä
+  ssim: 0.15, // rakenne sama, kun ssim ≥ tämä … (Chromium ja Unity piirtävät kartan ja fontit eri tavoin: b12g-ajossa samankin näkymän ssim 0,1–0,4, joten raja tunnistaa vain täysin eri näkymän)
+  reunat: 0.15, // … JA reunakarttojen korrelaatio ≥ tämä
   opasiteetti: 0.3, // tätä himmeämmät elementit ohitetaan
   pitkaTeksti: 120, // tätä pidempi teksti on leipätekstiä (vain yläreunan dy)
   osittainenAlku: 12, // osittaiseen pariin vaaditaan näin monta yhteistä alkumerkkiä
+  sanaPituus: 30, // tätä pidemmät tekstit voivat parittua sanojen päällekkäisyydellä …
+  sanaOsuus: 0.6, // … kun lyhyemmän sanoista vähintään tämä osuus on toisessa (sisältymiskerroin)
+  kokoamisSade: 48, // katkelmat kootaan yhdeksi tekstiksi tämän säteen sisältä (web-px siirron jälkeen)
+  siirtoOsuus: 0.4, // koko näkymän yhteinen siirto (turva-alue) on huomautus, kun ≤ tämä osuus paneelista
+  kuvaSiirto: 0.15, // kuvavertailu hakee parhaan pystysiirron ± tämä osuus korkeudesta
 });
 
 // ---------------------------------------------------------------- teksti
@@ -151,16 +156,54 @@ function lahimmat(webit, natiivit) {
 
 const lista = (x) => (Array.isArray(x) ? x : x?.elementit || []);
 
+/*
+ * NATIIVIN PEITTO (heuristiikka): UI-puu listaa elementit piirtojärjestyksessä (kerros, sitten puu), mutta
+ * ei tiedä, mikä jää toisen alle. Koko ruudun näkymä (lehti, linssi, asetukset) peittää kartan nimet.
+ * Elementti, jonka päälle myöhemmin piirtyy läpinäkymätön (opasiteetti ≥ 0,9) laatikko, joka peittää
+ * vähintään 90 % paneelista ja koko elementin, jätetään pois. Webissä sama tehdään elementFromPointilla.
+ */
+function piilotaPeitetyt(natiivi) {
+  if (!natiivi || Array.isArray(natiivi) || !natiivi.paneeli) return natiivi;
+  const el = natiivi.elementit || [];
+  const ala = natiivi.paneeli.w * natiivi.paneeli.h;
+  const peittajat = [];
+  el.forEach((e, i) => {
+    if (!e.teksti && (e.opasiteetti ?? 1) >= 0.9 && e.w * e.h >= 0.9 * ala) peittajat.push(i);
+  });
+  if (!peittajat.length) return natiivi;
+  const sisalla = (a, b) => a.x >= b.x - 1 && a.y >= b.y - 1 && a.x + a.w <= b.x + b.w + 1 && a.y + a.h <= b.y + b.h + 1;
+  return { ...natiivi, elementit: el.filter((e, i) => !peittajat.some((j) => j > i && sisalla(e, el[j]))) };
+}
+
 function tekstit(elementit, rajat) {
   return lista(elementit)
     .filter((e) => typeof e.teksti === 'string'
       && (e.opasiteetti == null || e.opasiteetti >= rajat.opasiteetti))
     .map((e) => ({ ...e, avain: normalisoi(e.teksti) }))
-    .filter((e) => e.avain.length > 0);
+    // Yksittäinen merkki (anfangin "M", nuoli, luettelomerkki) ei ole vertailukelpoinen teksti.
+    .filter((e) => e.avain.length > 1);
 }
 
+// Sanat vertailuun: yksikirjaimiset pois, mutta numerot säilyvät ("Rivi 1" ≠ "Rivi 10").
+const sanat = (t) => new Set(t.split(' ').filter((x) => x.length > 1 || /\d/.test(x)));
+/** Sisältymiskerroin: yhteiset sanat / pienemmän joukon sanat (katkelma sisältyy kappaleeseen). */
+function sisaltyy(a, b) {
+  const A = sanat(a), B = sanat(b);
+  if (!A.size || !B.size) return 0;
+  let yht = 0;
+  for (const x of A) if (B.has(x)) yht++;
+  return yht / Math.min(A.size, B.size);
+}
+const mediaani = (t) => {
+  if (!t.length) return 0;
+  const j = [...t].sort((a, b) => a - b);
+  const k = Math.floor(j.length / 2);
+  return j.length % 2 ? j[k] : (j[k - 1] + j[k]) / 2;
+};
+
 function teePari(w, n, laatu, rajat) {
-  const pitka = w.avain.length > rajat.pitkaTeksti || n.avain.length > rajat.pitkaTeksti;
+  // Osittainen tai koottu pari (katkelma ≠ kappale) mitataan kuten leipäteksti: vain yläreunojen ero.
+  const pitka = laatu !== 'tarkka' || w.avain.length > rajat.pitkaTeksti || n.avain.length > rajat.pitkaTeksti;
   const a = keski(w), b = keski(n);
   return {
     web: w,
@@ -187,7 +230,7 @@ export function parita(web, natiivi, rajat = {}) {
   const r = { ...OLETUSRAJAT, ...rajat };
   const nat = !Array.isArray(natiivi) && !Array.isArray(web) && natiivi?.paneeli && web?.paneeli
     ? skaalaa(natiivi, web) : natiivi;
-  const W = tekstit(web, r), N = tekstit(nat, r);
+  const W = tekstit(web, r), N = tekstit(piilotaPeitetyt(nat), r);
   const parit = [];
   const wKaytetty = new Set(), nKaytetty = new Set();
 
@@ -226,12 +269,99 @@ export function parita(web, natiivi, rajat = {}) {
     wKaytetty.add(i); nKaytetty.add(j);
   }
 
+  /*
+   * 3. Sanojen päällekkäisyys pitkille teksteille: anfangi ("M" + "arseille on…") tai lihavoitu
+   * sana erillisenä elementtinä pilkkoo webin kappaleen, natiivin Label pitää sen kokonaisena.
+   */
+  const sanaEhd = [];
+  W.forEach((a, i) => {
+    if (wKaytetty.has(i) || a.avain.length < r.sanaPituus) return;
+    N.forEach((b, j) => {
+      if (nKaytetty.has(j) || b.avain.length < r.sanaPituus) return;
+      const o = sisaltyy(a.avain, b.avain);
+      if (o >= r.sanaOsuus) sanaEhd.push({ i, j, o, d: etaisyys(a, b) });
+    });
+  });
+  sanaEhd.sort((p, q) => q.o - p.o || p.d - q.d);
+  for (const { i, j } of sanaEhd) {
+    if (wKaytetty.has(i) || nKaytetty.has(j)) continue;
+    parit.push(teePari(W[i], N[j], 'osittainen', r));
+    wKaytetty.add(i); nKaytetty.add(j);
+  }
+
+  /*
+   * 4. Upotetut katkelmat: parittamaton teksti, joka sisältyy toisen puolen paritettuun
+   * pidempään tekstiin (webin <b>Vanhasatama</b> natiivin kappaleessa), ei puutu.
+   */
+  const upotettu = (e, toiset) => toiset.some((t) => t.avain.length > e.avain.length && ` ${t.avain} `.includes(` ${e.avain} `));
+  const nParitetut = parit.map((p) => p.natiivi), wParitetut = parit.map((p) => p.web);
+  W.forEach((e, i) => { if (!wKaytetty.has(i) && upotettu(e, nParitetut)) wKaytetty.add(i); });
+  N.forEach((e, j) => { if (!nKaytetty.has(j) && upotettu(e, wParitetut)) nKaytetty.add(j); });
+
+  /*
+   * 4b. Katkelmien kokoaminen: webin otsakerivi "France" + "· tasavalta v. 1873" on natiivissa yksi Label
+   * (ja päinvastoin). Parittamattomat katkelmat, joiden sanat sisältyvät toisen puolen parittamattomaan
+   * tekstiin lähellä (kokoamisSade), kootaan yhdeksi pariksi, kun ne kattavat ≥ sanaOsuus sen sanoista.
+   */
+  const alustava = (() => {
+    const t = parit.filter((p) => p.laatu === 'tarkka' && !p.pitka);
+    return t.length >= 3 ? { dx: mediaani(t.map((p) => p.dx)), dy: mediaani(t.map((p) => p.dy)) } : { dx: 0, dy: 0 };
+  })();
+  const kokoa = (Kohteet, kohdeKaytetty, Palat, palaKaytetty, kohdeOnWeb) => {
+    Kohteet.forEach((k, ki) => {
+      if (kohdeKaytetty.has(ki)) return;
+      const kSanat = sanat(k.avain);
+      if (kSanat.size < 2) return;
+      const kk = keski(k);
+      const valitut = [];
+      Palat.forEach((pala, pi) => {
+        if (palaKaytetty.has(pi)) return;
+        const pk = keski(pala);
+        // Palan keskipiste kohteen tilaan: natiivi → web vähennetään siirto, web → natiivi lisätään.
+        const sx = kohdeOnWeb ? -alustava.dx : alustava.dx, sy = kohdeOnWeb ? -alustava.dy : alustava.dy;
+        if (Math.hypot(pk.x + sx - kk.x, pk.y + sy - kk.y) > r.kokoamisSade + Math.max(k.w, k.h) / 2) return;
+        const ps = sanat(pala.avain);
+        if (ps.size && [...ps].every((x) => kSanat.has(x))) valitut.push(pi);
+      });
+      if (!valitut.length) return;
+      const katetut = new Set(valitut.flatMap((pi) => [...sanat(Palat[pi].avain)]));
+      if (katetut.size / kSanat.size < r.sanaOsuus) return;
+      const x0 = Math.min(...valitut.map((pi) => Palat[pi].x)), y0 = Math.min(...valitut.map((pi) => Palat[pi].y));
+      const x1 = Math.max(...valitut.map((pi) => Palat[pi].x + Palat[pi].w)), y1 = Math.max(...valitut.map((pi) => Palat[pi].y + Palat[pi].h));
+      const koottu = { ...Palat[valitut[0]], teksti: valitut.map((pi) => Palat[pi].teksti).join(' '), avain: k.avain, x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+      parit.push(kohdeOnWeb ? teePari(k, koottu, 'koottu', r) : teePari(koottu, k, 'koottu', r));
+      kohdeKaytetty.add(ki);
+      valitut.forEach((pi) => palaKaytetty.add(pi));
+    });
+  };
+  kokoa(N, nKaytetty, W, wKaytetty, false);
+  kokoa(W, wKaytetty, N, nKaytetty, true);
+  // Upotus sanatasolla: katkelma, jonka sanoista ≥ 80 % on paritetussa pidemmässä tekstissä.
+  const upotettuSanoin = (e, toiset) => toiset.some((t) => t.avain.length > e.avain.length && sisaltyy(e.avain, t.avain) >= 0.8);
+  // Verrataan kaikkiin jo käytettyihin (paritetut, kootut ja upotetut): kappaleen toinen natiivikatkelma
+  // on itse upotettu, ja webin lihavoitu sana voi olla juuri siinä.
+  for (let kierros = 0; kierros < 2; kierros++) {
+    const nK = N.filter((_, j) => nKaytetty.has(j)), wK = W.filter((_, i) => wKaytetty.has(i));
+    W.forEach((e, i) => { if (!wKaytetty.has(i) && upotettuSanoin(e, nK)) wKaytetty.add(i); });
+    N.forEach((e, j) => { if (!nKaytetty.has(j) && upotettuSanoin(e, wK)) nKaytetty.add(j); });
+  }
+
+  /*
+   * 5. Koko näkymän yhteinen siirto (mediaani lyhyistä tarkoista pareista): natiivin
+   * turva-alue (Dynamic Island, kotipalkki) siirtää koko sisällön, eikä se ole
+   * jokaisen tekstin virhe. tuomio vertaa pareja siirron jälkeen.
+   */
+  const perus = parit.filter((p) => p.laatu === 'tarkka' && !p.pitka);
+  const siirto = perus.length >= 3 ? { dx: mediaani(perus.map((p) => p.dx)), dy: mediaani(perus.map((p) => p.dy)) } : { dx: 0, dy: 0 };
+
   parit.sort((p, q) => p.web.y - q.web.y || p.web.x - q.web.x);
   const riisu = ({ avain, ...e }) => e;
   return {
     parit: parit.map((p) => ({ ...p, web: riisu(p.web), natiivi: riisu(p.natiivi) })),
     vainWeb: W.filter((_, i) => !wKaytetty.has(i)).map(riisu),
     vainNatiivi: N.filter((_, j) => !nKaytetty.has(j)).map(riisu),
+    siirto,
+    paneeli: web?.paneeli ?? null,
   };
 }
 
@@ -320,6 +450,26 @@ export function kuvaEro(harmaaA, harmaaB, leveys, korkeus) {
   };
 }
 
+/**
+ * Kuvaero parhaalla pystysiirrolla (± rajat.kuvaSiirto korkeudesta): natiivin turva-alue siirtää
+ * koko sisältöä, ja pikselikohtainen SSIM romahtaisi siitä, vaikka ulkoasu on sama.
+ * Vertaa päällekkäistä osaa; palauttaa { ssim, reunat, siirtoY } (siirtoY kuvan riveinä).
+ */
+export function kuvaEroSiirrolla(harmaaA, harmaaB, leveys, korkeus, rajat = {}) {
+  const r = { ...OLETUSRAJAT, ...rajat };
+  const maksimi = Math.floor(korkeus * r.kuvaSiirto);
+  let paras = { ...kuvaEro(harmaaA, harmaaB, leveys, korkeus), siirtoY: 0 };
+  for (let dy = -maksimi; dy <= maksimi; dy++) {
+    if (!dy) continue;
+    const h = korkeus - Math.abs(dy);
+    const a = dy > 0 ? harmaaA.subarray(0, h * leveys) : harmaaA.subarray(-dy * leveys);
+    const b = dy > 0 ? harmaaB.subarray(dy * leveys) : harmaaB.subarray(0, h * leveys);
+    const t = kuvaEro(a, b, leveys, h);
+    if (t.ssim + t.reunat > paras.ssim + paras.reunat) paras = { ...t, siirtoY: dy };
+  }
+  return paras;
+}
+
 // ---------------------------------------------------------------- tuomio
 
 const lyhenna = (t, n = 40) => {
@@ -344,8 +494,14 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
   const vainNatiivi = paritus?.vainNatiivi || [];
   const webTekstit = parit.length + vainWeb.length;
 
+  // Koko näkymän yhteinen siirto vähennetään, kun se mahtuu rajaan (turva-alue); muuten se on itse ero.
+  const siirto = paritus?.siirto ?? { dx: 0, dy: 0 };
+  const pan = paritus?.paneeli;
+  const siirtoOk = !pan || (Math.abs(siirto.dx) <= pan.w * r.siirtoOsuus && Math.abs(siirto.dy) <= pan.h * r.siirtoOsuus);
+  const sx = siirtoOk ? siirto.dx : 0, sy = siirtoOk ? siirto.dy : 0;
+  const ero = (p) => ({ dx: p.dx - sx, dy: p.dy - sy });
   const eroPx = parit.length
-    ? pyor1(Math.max(...parit.map((p) => (p.pitka ? Math.abs(p.dy) : Math.max(Math.abs(p.dx), Math.abs(p.dy))))))
+    ? pyor1(Math.max(...parit.map((p) => { const e = ero(p); return p.pitka ? Math.abs(e.dy) : Math.max(Math.abs(e.dx), Math.abs(e.dy)); })))
     : null;
 
   // PUUTTUU: natiivista ei saatu mitään tai suurin osa teksteistä puuttuu.
@@ -377,10 +533,11 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
   for (const p of parit) {
     const nimi = `"${lyhenna(p.web.teksti)}"`;
     const osat = [];
-    if (!p.pitka && Math.abs(p.dx) > r.sijaintiPx) osat.push(`dx ${etumerkki(p.dx)} px`);
-    if (Math.abs(p.dy) > r.sijaintiPx) osat.push(`dy ${etumerkki(p.dy)} px`);
+    const e = ero(p);
+    if (!p.pitka && Math.abs(e.dx) > r.sijaintiPx) osat.push(`dx ${etumerkki(e.dx)} px`);
+    if (Math.abs(e.dy) > r.sijaintiPx) osat.push(`dy ${etumerkki(e.dy)} px`);
     if (osat.length) {
-      sijainti.push({ paino: Math.max(p.pitka ? 0 : Math.abs(p.dx), Math.abs(p.dy)), rivi: `${nimi}: ${osat.join(', ')}` });
+      sijainti.push({ paino: Math.max(p.pitka ? 0 : Math.abs(e.dx), Math.abs(e.dy)), rivi: `${nimi}: ${osat.join(', ')}` });
     }
     // Koko vain tarkoille lyhyille pareille: katkaistun tai rivittyvän
     // tekstin laatikko ei ole vertailukelpoinen.
@@ -418,6 +575,7 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
     syyt.push(...vainNatiivi.map((e) => `vain natiivissa (sallittu): "${lyhenna(e.teksti)}"`));
   }
 
+  if (sx || sy) syyt.push(`koko näkymä siirtynyt dx ${etumerkki(sx)} px, dy ${etumerkki(sy)} px (turva-alue; vähennetty)`);
   return { tila: eri ? 'ERI' : 'SAMA', eroPx, syyt };
 }
 
