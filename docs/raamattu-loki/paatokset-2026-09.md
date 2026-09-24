@@ -4807,3 +4807,7 @@ Omistaja: 'Saavuttaessa ensi lennon jälkeen kohdekaupunkiin saisi tulla sama v�
 ## LINSSIKATALOGIN UUSI SIVU TUOTANNOSSA (https://matkakirja.app/linssikatalogi.html, v2209): 165 LINSSIA, 9 PELISSA NYT, 27 SEURAAVAKSI, 66 AINEISTOLAHDETTA, KUUSI MOOTTORIKORTTIA; DATA.JS 175 kt LATAUTUU; EI KONSOLIVIRHEITA (25.9.2026 klo 00.21)
 
 Fable tarkisti selaimella klo 00.2x. Pieni korjaus Sisältökirjurin jatko-PR:ään: moottorikortin tekstissä näkyy raaka markdown-lainaus (). Huom: 'Seuraavaksi 27' laskee data- ja esitys-kaistat mukaan; tarkistetaan luku (8 + 17 + 4 = 29?).
+
+## PARITEETTIAJO 2 (juna/b12 0a55b60, 23,5 min, 4 SIMUA): SAMA 3 / ERI 124 / PUUTTUU 31 / VIRHE 18; DESYNC KORJATTU, TILAVARTIJA; FABLE: ERI-RAJA — YLI 16 px = KORJATTAVA BUGI, 8–16 px = HIENOSAATO, ALLE 8 = SAMA; REITITYS NATIIVI-UI:LLE KAHTENA LISTANA (proto-3d/lokit/pariteetti-ajo/b12-2/reititys.md). LOYDOS 49: KEHITYSKAANNOKSESSA AANET SOIVAT, KORJAUS pelikoodari/aanet-kuuluviin d14f766 (PLAYBACK-ISTUNTO HETI KAYNNISTYKSESSA; ENNEN SITA AMBIENT KUNNES ENSIMMAINEN PUHE), PULUN REPLIIKKI 404; MITTAUS iPADILLA b12q ~01.15 (25.9.2026 klo 00.30)
+
+Pelikoodari 73 % → luovutus ja nollaus käsketty; uusi Pelikoodari jatkaa 49:stä (b12q-mittaus) ja 52:sta. ERI ei ole aina bugi (turva-alue, pyöristys); raja sovittu yllä.
