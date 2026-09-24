@@ -436,6 +436,10 @@ namespace Matkakirja.Linssit.Aikajana
             if (kamera && viimeinen?.Alue != null) AjaAlueeseen(viimeinen.Alue, y.VahennettyLiike ? 0 : Esitysmatikka.LopunAsetusMs);
             nakyma.Kuva(null);
             nakyma.Loppu();
+            // Viimeisen jakson pulu on luovutus tutkimusvaiheeseen ("Kartta on sinun…"; web paata →
+            // sanoPulu(viimeinen)): sanotaan lopussa, ellei jakso ehtinyt sanoa sitä itse — myös
+            // muistista tai testikomennolla suoraan loppuun tultaessa. Ei koskaan kahdesti.
+            if (!puluSanottu && !string.IsNullOrEmpty(viimeinen?.Pulu)) { puluSanottu = true; nakyma.Pulu(viimeinen.Pulu); }
             // Koukku viimeisenä: tutkimusvaihe saa ruudun vasta, kun esitys on siivonnut jälkensä.
             Lopussa?.Invoke();
         }

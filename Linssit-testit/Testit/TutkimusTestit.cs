@@ -265,6 +265,7 @@ namespace Matkakirja.Linssit.Testit
                 if (vaihe == "ennen vanoja") { Oleta.Sama(null, l.Tutkimus, "odottaa vanoja"); l.AsetaVanat(t, v.Virrat); }
                 Oleta.Tosi(l.Esitys.Paattynyt && l.Tutkimus != null && n.Napit && n.Nostot.Count == 40, vaihe + ": tutkimusvaihe auki");
                 Oleta.Sama(false, l.Esitys.MustaPaalla, vaihe + ": ei mustaa");
+                Oleta.Sama(1, nakyma.Loki.Count(r => r.mita == "pulu" && r.ms >= 0 && l.Esitys.Paattynyt), vaihe + ": loppukupla kerran");
                 if (vaihe == "kesken esityksen")
                     Oleta.Tosi(a.Kertomus.Where(j => j.Kohde != null).All(j => nakyma.Loki.Any(r => r.mita == "sytyta " + j.Kohde)), "kaikki löytöpaikat syttyivät");
                 Oleta.Tosi(l.SiirryTutkimukseen(), "toinen kutsu ei tee mitään");
