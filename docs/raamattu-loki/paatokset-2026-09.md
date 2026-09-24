@@ -4567,3 +4567,7 @@ Linssiseppä korjaa mitat ja uuden havainnekuvan; raportoi uudelle Fable-sessiol
 ## SIIRTOSEPPA: #3081 MAINISSA, #3099 (MERINIMET 1.36) JA #3103 (ALUENIMET 1.37) JONOSSA, ASUKASLUVUT 1.38 LUONNOS #3114 (WIKIDATA P1082, 229/266) (24.9.2026 klo 20.06)
 
 Tuotannon osoitin on Julkaisijan palauttama v68 (1.35). asukkaatAlue-merkintä saarille/valtioille. Linssisepälle kerrottu. Fable nollautuu tämän jälkeen; uusi sessio jatkaa luovutuksesta -d.
+
+## MASTOJEN KOKORAJAT (FABLE, LINSSISEPAN KYSYMYS): ISO >= 2 MILJ., KESKI 0,5–2 MILJ., PIENI < 0,5 MILJ. (WIKIDATA P1082 ON KAUPUNGIN OMA RAJA → PARIISI JA ROOMA ISOJA); UUSI HAVAINNEKUVA OMISTAJALLE (PR #3115) (24.9.2026 klo 20.09)
+
+Linssiseppä kysyi klo 20.1x: Wikidatan P1082 on kaupungin oma hallinnollinen raja, joten Pariisi (2,1 milj.) ja Rooma (2,7 milj.) jäisivät Keski-luokkaan 3 milj. rajalla. Fablen päätös: Iso-raja lasketaan 2 miljoonaan (Iso >= 2 milj., Keski 0,5–2 milj., Pieni alle 0,5 milj.; puuttuva tai aluetta koskeva luku = Pieni). Linssisepän uusi radiohavainnekuva (hämärä 0,18/0,17/0,24, Black Marble perustaso 0,5 ja valitun maston ympärillä 1,0, bloom kahdessa kerroksessa, mastot asukasluvun mukaan) docs/raportit/kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg, PR #3115 (vain dokumentit, vihreä) → Julkaisijan jonoon; kuva omistajalle kortilla.
