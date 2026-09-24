@@ -65,6 +65,12 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  cayenne: {
+    // Fort Cépérou (4.9377/-52.3368) ja Place des Palmistes
+    // (4.9396/-52.3338) ovat n. 0,4 km päässä toisistaan vanhassa
+    // kaupungissa (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326 },
+  },
   macapa: {
     // Fortaleza de São José de Macapá (0.0311/-51.0488) ja Marco Zero
     // -muistomerkki (0.0007/-51.0779) ovat n. 4,7 km päässä toisistaan
