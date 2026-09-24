@@ -419,12 +419,12 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 
 ## 20. Kehittäjäsäätimet → KOKEET-valikko
 
-Natiivin nykyinen KOKEET-osio (Astronautin reliefi) on julkisessa hampurilaisessa (`Paavalikko.cs:50`). Linjauksen mukaan se siirretään piilotettuun KOKEET-valikkoon, esimerkiksi versiorivin pitkän painalluksen taakse, joka vastaa webin salasanaa.
+**Tarkistettu 24.9.2026 (Natiivi-UI):** kehittäjätila on natiivissa webin tavoin (Mitä uutta → "Kehittäjä" → koodi, samat SHA-256-tiivisteet, `Asetukset.Kehittaja`), ja päävalikon KOKEET-osio näkyy vain kehittäjätilassa (`Paavalikko.cs`).
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Kehittäjätilan avaus: salasana, "Kytke päälle", "Sulje" | index.html:95, 1149–1162; main.js:1848–1850 | puuttuu (KOKEET-valikon avaus) | KOKEET | NUI |
-| Astronautin reliefi TÄYSI / VAIMEA | – | Paavalikko.cs:50 | KOKEET (siirrettävä piiloon) | NUI, LS |
+| Kehittäjätilan avaus: salasana, "Kytke päälle", "Sulje" | index.html:95, 1149–1162; main.js:1848–1850 | MitaUutta "Kehittäjä" → Paavalikko-koodi (Asetukset.AsetaKehittaja) | on | NUI |
+| Astronautin reliefi TÄYSI / VAIMEA | – | Paavalikko KOKEET (vain kehittäjätilassa) | on | NUI, LS |
 | "maailma" (maailmanäkymä) | index.html:238, main.js:2166 | puuttuu | KOKEET | NS |
 | "mittari" (laitemittari) | index.html:244, main.js:2172 | Kartta/KehysMittari.cs (ei kytkintä) | KOKEET | NS |
 | "pallolauta" (piilossa) | index.html:261, main.js:2188 | – | ei tarvita | – |
