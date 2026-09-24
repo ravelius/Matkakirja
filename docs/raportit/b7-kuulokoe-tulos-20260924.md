@@ -58,7 +58,9 @@ alla mitä oikeasti todennettiin vs. mitä ei.
   kuulokoetta ei voi ajaa tällä komentosarjalla ennen korjausta. Korjaus:
   lisää `riviValittu = i => Matkusta(kohteet[i].Kaupunki,
   Matkakirja.Peli.Kulkutapa.Lento, true);` AvaaMannerlennot-metodiin
-  ennen `dialogi.Nayta`-kutsua.
+  ennen `dialogi.Nayta`-kutsua. **PÄIVITYS (Pelikoodari 24.9.2026):**
+  korjaus haarassa `pelikoodari/mannerlento-rivi`, merge-pyynnössä
+  Natiivisepällä. Kohta 3 ajettavissa heti mergen jälkeen.
 - **Kohta 4 (jalan-raita/laiva)**: ei ehditty ajaa omana kulkutapana
   ajan puutteessa.
 - **Kohta 9 (tausta/takaisin, striimaus isoista tiedostoista,

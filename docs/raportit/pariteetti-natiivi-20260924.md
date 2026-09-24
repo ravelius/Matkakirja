@@ -13,17 +13,19 @@ kirjata: pohjakartta 23a, vesistöjen uoma, värivivahde 0,96–0,99.
 
 ## Tunnetut esteet
 
-- **Web-etusivun otsikko piilossa automaatiossa**: `.intro-juliste`
-  jää `opacity:0`-tilaan, luokka `avaus-kesken` ei poistu edes 15 s:ssa
-  Chromium+Metal-GPU:lla. Kirjattu Pelikoodarille erikseen
-  24.9.2026. Etusivun rivi alla merkitty ODOTTAA kunnes korjautuu —
-  vertailu ei ole reilu ennen sitä.
+- **KUMOTTU (Pelikoodari 24.9.2026): Web-etusivun otsikko piilossa
+  automaatiossa ei ole bugi.** `.intro-juliste` on tarkoituksella
+  piilossa aloitusportilla omistajan tilauksesta 6.9.2026 — luokka
+  `avaus-kesken` poistuu vasta "Aloita seikkailu" -napin painalluksesta
+  (js/ui.js `naytaAvausjuliste`), ei ajastimella. Automaatiokomento
+  odotti väärää ehtoa (aikakattoa) oikean sijaan (napin painallusta).
+  Etusivun rivi uusittava mittaamalla ajastus napin painalluksesta.
 
 ## Taulu (iPhone, aloitettu 24.9.2026)
 
 | # | Näkymä | Ero | Kuvapari | Vastuu |
 |---|--------|-----|----------|--------|
-| 1 | Etusivu/portti | ODOTTAA — web-otsikko piilossa (ks. yllä), joten kokonaisvertailu kesken. Rakenteellisesti sama pino (logo, otsikko, pallo, äänipainike, päänappi, footer) siltä osin kuin web näkyy. Web-istunto oli tuore (vain "Aloita seikkailu"), natiivilla oli tallennus (myös "Jatka matkaa" + "Uusi matka") — eri pelitila, ei bugi; uusittava samalla tallennustilalla kun web korjautuu. | iphone/web/01-etusivu.jpg, iphone/natiivi/01-etusivu-v3.jpg | Pelikoodari (avaus-kesken), sitten Natiivi-UI |
+| 1 | Etusivu/portti | UUSITTAVA — ei bugi, väärä mittaustapa (ks. Tunnetut esteet). Rakenteellisesti sama pino (logo, otsikko, pallo, äänipainike, päänappi, footer) siltä osin kuin web näkyy. Web-istunto oli tuore (vain "Aloita seikkailu"), natiivilla oli tallennus (myös "Jatka matkaa" + "Uusi matka") — eri pelitila, ei bugi; uusittava samalla tallennustilalla ja mittaamalla otsikon ajastus "Aloita seikkailu" -napin painalluksesta, ei sivun latauksesta. | iphone/web/01-etusivu.jpg, iphone/natiivi/01-etusivu-v3.jpg | Laitetestaaja (uusi mittaus) |
 
 | 2 | Aloitusvalinta (kaupunkivalinta pallolta) | **ERO**: webissä valittavissa olevat kaupungit (Moskova, Istanbul, Ateena, Kairo) korostuvat kultaisella/oranssilla HEHKURENKAALLA ympärillään — helposti erottuvat muista pisteistä. Natiivissa samat kaupungit ovat vain tavallisia oranssin väriseikä pisteitä, EI rengashehkua — vaikeampi huomata mitkä kaupungit ovat valittavissa. Lisäksi natiivissa näkyy kaksi kelluvaa ikoninappia oikealla (lista/selite, linssit-silmälasit) joita web ei näytä tässä näkymässä. Web merkitsee Lontoon erikoisella nastaikonilla, natiivi pelkällä mustalla pisteellä. Pulu (kyyhky) näkyy molemmissa oikeassa alakulmassa. **Huom**: natiivin kuvassa näkyy tumma liuska ylimpänä (siirtymäanimaation jäänne `ui aloitus valinta` -pikakomennosta, ei välttämättä oikean navigointipolun tila) — uusittava oikealla klikkausvirralla varmuuden vuoksi. | iphone/web/02-aloitusvalinta.jpg, iphone/natiivi/02-aloitusvalinta.jpg | Natiivi-UI |
 
