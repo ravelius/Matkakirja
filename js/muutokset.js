@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2180, teksti: 'Sähke ja pulla natiivin mukaisiksi (#2997)' },
   { v: 2179, teksti: 'Reliefipyramidin osoitin 20260924 (#3044)' },
   { v: 2178, teksti: 'Syvät tasot z9–z10 DEM-reliefillä (#2962)' },
   { v: 2177, teksti: 'Afrikan faktakorjaukset: Big Hole, Suakin, Vict… (#2973)' },
