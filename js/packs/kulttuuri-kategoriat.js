@@ -116795,4 +116795,705 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  yellowstone: [
+    {
+      id: 'kaupunki',
+      nimi: 'Yellowstone',
+      johdanto:
+        'Yellowstone oli isoisän matkavuonna 1873 vasta vuoden ikäinen ihme: maailman ensimmäinen kansallispuisto, jonka geysirit ja kanjonit olivat vielä muutama vuosi aiemmin pelkkiä rajaseudun tarinoita, joita kukaan ei uskonut todeksi.',
+      nostot: [
+        {
+          otsikko: 'Maailman ensimmäinen kansallispuisto',
+          teksti:
+            'Presidentti Ulysses S. Grant allekirjoitti 1. maaliskuuta 1872 lain, joka teki Yellowstonesta maailman ensimmäisen kansallispuiston: alue julistettiin kansan yhteiseksi "huvi- ja virkistysalueeksi", jota kukaan ei saisi ottaa yksityisomistukseensa. Kongressin oli suhteellisen helppo hyväksyä laki, sillä alueella ei asunut siihen aikaan juuri ketään eikä sinne johtanut rautatietä — kukaan ei siis menettänyt maata. Isoisän matkavuonna 1873 puisto oli vasta vuoden ikäinen eikä sillä ollut vielä vartijoita, teitä tai edes selvää rajaa: ensimmäiset vuodet salametsästäjät ja vandaalit saivat toimia siellä lähes vapaasti.',
+          tiedosto: 'Grand Canon of the Yellowstone, by Jackson, William Henry, 1843-1942.jpg',
+          lyhyt: 'William Henry Jacksonin valokuva Yellowstonen suuresta kanjonista 1870-luvulta.',
+          selite:
+            'Valokuva näyttää Yellowstonejoen kaivaman kanjonin jyrkät, keltaisenväriset kalliot — juuri tällaisia näkymiä puiston perustamislaki vuonna 1872 asetti kansan yhteiseksi omaisuudeksi.',
+          lahde: 'William Henry Jackson, Wikimedia Commons (Public domain)',
+          wiki: 'Yellowstone National Park',
+        },
+        {
+          otsikko: 'Colterin helvetti',
+          teksti:
+            'Talvella 1807–1808 entinen Lewis ja Clark -retkikunnan jäsen John Colter vaelsi yksin nykyisen Yellowstonen seudulla etsimässä turkiskauppakumppaneita intiaaniheimoilta. Hänen reittinsä kulki myös Shoshone-joen varrella, Codyn kaupungin länsipuolella, jossa maasta kohosi höyryä ja rikin hajuisia kaasuja. Kun Colter palasi ja kertoi näkemästään, harva uskoi häntä — tarinaa pidettiin yksinäisen metsästäjän liioitteluna. Kirjailija Washington Irving risti paikan myöhemmin pilkallisesti "Colterin helvetiksi", ja nimi jäi elämään vuosikymmeniksi, vaikka koko Yellowstonen ihmemaa odotti tuolloin vielä varsinaista löytäjäänsä.',
+          tiedosto: 'Colters Hell.jpg',
+          lyhyt: 'Colterin helvetiksi ristitty höyryävä alue Shoshone-joen varrella lähellä Codya.',
+          selite:
+            'Nykyvalokuva näyttää höyryävän hydrotermisen alueen Shoshone-joen varrella — samankaltaisen näyn John Colter kohtasi talvella 1807–1808 ja josta kertomukselle kukaan ei aluksi uskonut.',
+          lahde: 'Jeff the quiet, Wikimedia Commons (CC0)',
+          wiki: 'John Colter',
+        },
+        {
+          otsikko: 'Iltanuotion tarina',
+          teksti:
+            'Syyskuussa 1870 Montanan aluekirjuri Henry Washburn johti retkikunnan, johon kuuluivat Nathaniel P. Langford ja luutnantti Gustavus Doane, tutkimaan huhuttua ihmemaata. Kuukauden matkallaan miehet löysivät ja nimesivät geysirin, joka purkautui säännöllisesti reilun tunnin välein — he kutsuivat sitä Old Faithfuliksi. Perimätiedon mukaan retkikunta pysähtyi paluumatkalla nykyisen National Park Mountainin juurelle ja pohti iltanuotiolla, pitäisikö jokaisen lunastaa oma palanen ihmeellistä maata itselleen. Tarinan mukaan miehet päättivät sen sijaan ehdottaa alueen suojelemista kaikille yhteiseksi — ajatus, josta kansallispuisto 1872 lopulta syntyi.',
+          tiedosto: 'National Park Mountain Yellowstone NP1.jpg',
+          lyhyt: 'National Park Mountain Madison-joen rannalla, tarinan mukainen iltanuotiopaikka.',
+          selite:
+            'Nykyvalokuva Madison-joen rannalta ja National Park Mountainista, paikasta jonka perimätieto liittää Washburnin retkikunnan vuoden 1870 keskusteluun puiston perustamisesta.',
+          lahde: 'Acroterion, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Washburn–Langford–Doane Expedition',
+        },
+        {
+          otsikko: 'Haydenin tiederetkikunta',
+          teksti:
+            'Vuonna 1871 geologi Ferdinand V. Hayden johti ensimmäisen kokonaan liittovaltion rahoittaman tieteellisen retkikunnan Yellowstoneen. Mukana kulki parikymmentä tutkijaa, avustajaa ja muonanhoitajaa, jotka mittasivat, kartoittivat ja keräsivät näytteitä koko kesän ajan vaikeakulkuisessa maastossa. Hayden varoitti kongressia suoraan: ellei aluetta suojella, ilkivaltaiset kädet tuhoaisivat sen ihmeet peruuttamattomasti jo yhden ainoan kesän aikana. Retkikunnan mukana kulkivat myös valokuvaaja William Henry Jackson ja taidemaalari Thomas Moran, joiden tuomat todisteet osoittautuivat lopulta ratkaisevammiksi kuin mikään tieteellinen raportti.',
+          tiedosto: 'Camp in the forests of the Yellowstone, by Jackson, William Henry, 1843-1942.jpg',
+          lyhyt: 'Haydenin retkikunnan leiri Yellowstonen metsässä kesällä 1871.',
+          selite:
+            'William Henry Jacksonin valokuva retkikunnan telttaleiristä kertoo, millaisissa oloissa parikymmentä tutkijaa ja avustajaa liikkui kesän 1871 kartoitusmatkalla.',
+          lahde: 'William Henry Jackson, Wikimedia Commons (Public domain)',
+          wiki: 'Hayden Geological Survey of 1871',
+        },
+        {
+          otsikko: 'Valokuvaaja joka todisti ihmeen',
+          teksti:
+            'Hayden palkkasi retkikuntaansa valokuvaaja William Henry Jacksonin, jonka tehtävänä oli vangita puiston geysirit ja kuumat lähteet kameralle. Työ oli raskasta: lasilevynegatiivit, kemikaalit ja pimiöteltta kulkivat muulien selässä, ja jokainen kuva piti kehittää paikan päällä tuoreeltaan, ennen kuin emulsio ehti kuivua. Jacksonin kuvat olivat ensimmäiset koskaan otetut valokuvat Yellowstonen ihmeistä, ja niitä käytettiin todisteena, kun kongressille esiteltiin lakiehdotusta puiston perustamisesta. Toisin kuin kertomuksia, valokuvia ei voinut leimata liioitteluksi — ne osoittivat mustavalkoisen kiistattomasti, että geysirit ja terassit olivat totta.',
+          tiedosto: 'Old Faithful, William Henry Jackson.jpg',
+          lyhyt: 'William Henry Jacksonin valokuva Old Faithful -geysiirin purkauksesta 1870-luvulta.',
+          selite:
+            'Jacksonin ottama varhainen valokuva geysiiristä purkautumassa oli osa todistusaineistoa, joka vakuutti kongressin siitä, että Yellowstonen ihmeet olivat totta eivätkä pelkkiä tarinoita.',
+          lahde: 'William Henry Jackson, Wikimedia Commons (Public domain)',
+          wiki: 'William Henry Jackson',
+        },
+        {
+          otsikko: 'Maalari joka vangitsi kanjonin värit',
+          teksti:
+            'Taidemaalari Thomas Moran liittyi Haydenin retkikuntaan kesällä 1871 ja teki paikan päällä lukuisia luonnoksia ja vesivärejä Yellowstonen kanjonista ja putouksista. Palattuaan ateljeehensa hän maalasi niiden pohjalta valtavan, lähes 2,1 metriä leveän öljymaalauksen "Yellowstonen suuri kanjoni", joka valmistui keväällä 1872 — samoihin aikoihin kun puistolaki allekirjoitettiin. Yhdysvaltain kongressi osti maalauksen 10 000 dollarilla ja ripusti sen Capitolin käytävälle, ensimmäisenä länsimaisena maisemamaalauksena, jonka liittovaltio koskaan hankki. Moranin myöhemmät nimikirjaimet T.Y.M., "Thomas Yellowstone Moran", juontuvat juuri tästä teoksesta.',
+          tiedosto: 'Thomas Moran - Grand Canyon of the Yellowstone.jpg',
+          lyhyt: 'Thomas Moranin vuonna 1872 valmistunut maalaus Yellowstonen suuresta kanjonista.',
+          selite:
+            'Moranin öljymaalaus näyttää kanjonin jyrkät, keltaiset ja oranssit kalliot sekä putouksen kaukana taustalla — kongressi osti teoksen ripustettavaksi Capitolin käytävälle.',
+          lahde: 'Thomas Moran, Wikimedia Commons (Public domain)',
+          wiki: 'Thomas Moran',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Geysirit ja erämaa',
+      johdanto:
+        'Maan alla kytevä supertulivuori pitää yllä maailman tiheintä geysirikeskittymää, ja tiukka suojelu on antanut biisonien ja susien palata alueille, joilta ihminen oli ne 1900-luvun alkuun mennessä jo lähes hävittänyt.',
+      tehtava: {
+        kysymys: 'Kuinka monta sutta tuotiin Kanadasta Yellowstoneen vuosina 1995–1996?',
+        vaihtoehdot: ['14', '31', '66', '124'],
+        oikea: 1,
+        fakta:
+          'Yellowstoneen vapautettiin yhteensä 31 sutta, 14 vuonna 1995 ja 17 vuonna 1996 — ensimmäiset sudet puistossa lähes seitsemään vuosikymmeneen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Old Faithful — luotettava geysiiri',
+          teksti:
+            'Washburnin retkikunta nimesi geysiirin Old Faithful eli "Uskollinen vanha" syyskuussa 1870, koska se purkautui niin säännöllisesti. Nykyisin purkaukset tulevat keskimäärin reilun puolentoista tunnin välein, mutta vaihtelu on suurta: väli voi olla puolesta tunnista kahteen tuntiin. Yksi purkaus syöksee ilmaan noin 14 000–32 000 litraa kiehuvaa vettä 32–56 metrin korkeuteen ja kestää parista minuutista viiteen. Geysiiri ei ole puiston suurin — Steamboat Geyser purkautuu paljon korkeammalle — mutta se on ennustettavuutensa ansiosta puiston tunnetuin nähtävyys jo yli 150 vuoden ajan, ja sen purkauksia on tallennettu yli miljoona kertaa.',
+          tiedosto: 'Yellowstone National Park (WY, USA), Old Faithful Geyser -- 2022 -- 2599.jpg',
+          lyhyt: 'Old Faithful -geysiiri purkautumassa kohti taivasta.',
+          selite:
+            'Vuonna 2022 otettu valokuva näyttää Old Faithfulin purkauksen — geysiirin, joka on purkautunut ennustettavasti jo yli 150 vuoden ajan.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Old Faithful',
+        },
+        {
+          otsikko: 'Grand Prismatic Spring — sateenkaaren lähde',
+          teksti:
+            'Grand Prismatic Spring on Yhdysvaltain suurin ja maailman kolmanneksi suurin kuuma lähde: halkaisijaltaan noin 110 metriä ja syvimmiltä kohdiltaan noin 50 metriä syvä. Keskellä vesi on niin kuumaa ja steriiliä, ettei siellä elä juuri mitään — siksi keskiosa näyttää syvän siniseltä, kun pelkkä vesi imee itseensä muut värit paitsi sinisen. Reunoilla vesi jäähtyy, ja siellä viihtyvät lämpöä sietävät bakteerit ja arkeonit muodostavat mattoja, joiden klorofylli ja karotenoidipigmentit värjäävät renkaat keltaisiksi, oransseiksi ja punaisiksi. Värit vaihtuvat vuodenajan mukaan: kesällä reunat hehkuvat oranssinpunaisina, talvella ne tummuvat lähes vihreiksi.',
+          tiedosto: 'Grand Prismatic Spring and Midway Geyser Basin from above.jpg',
+          lyhyt: 'Grand Prismatic Spring ylhäältä kuvattuna, keskellä sininen ja reunoilla oranssi rengas.',
+          selite:
+            'Ilmakuva näyttää lähteen kerroksittaiset värit: steriilin sinisen keskustan ja sen ympärillä lämpöä sietävien mikrobien värjäämät keltaiset ja oranssit vyöhykkeet.',
+          lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Grand Prismatic Spring',
+        },
+        {
+          otsikko: 'Supertulivuori kaiken alla',
+          teksti:
+            'Yellowstonen geysirit ja kuumat lähteet kertovat siitä, mitä maan alla piilee: koko puisto lepää valtavan supertulivuoren, Yellowstonen kalderan, päällä. Sen alla oleva magmasäiliö on noin 80 kilometriä pitkä ja 20 kilometriä leveä, ja siitä 6–8 prosenttia on sulaa kiveä. Alueella on ollut kolme jättimäistä purkausta — noin 2,1 miljoonaa, 1,3 miljoonaa ja 631 000 vuotta sitten — joista viimeisin muovasi nykyisen kalderan muodon. Tutkijoiden mukaan seuraava valtapurkaus ei ole "myöhässä": purkausten välit eivät ole säännöllisiä, ja tulivuoriobservatorio seuraa aluetta jatkuvasti mittalaittein ilman merkkejä lähestyvästä katastrofista.',
+          tiedosto: 'Yellowstone Caldera NW Wyoming Topo Rainbow Zebra 2346.jpg',
+          lyhyt: 'Topografinen kartta Yellowstonen kalderan muodosta ja rajoista.',
+          selite:
+            'Kartta hahmottaa Yellowstonen kalderan ääriviivat puiston sisällä — alueen, joka on muotoutunut kolmen valtavan tulivuoripurkauksen jäljiltä viimeisten kahden miljoonan vuoden aikana.',
+          lahde: 'Rainbow Zebra 13, Wikimedia Commons (Public domain)',
+          wiki: 'Yellowstone Caldera',
+        },
+        {
+          otsikko: 'Biisonien paluu sukupuuton partaalta',
+          teksti:
+            'Yellowstone on ainoa paikka Yhdysvalloissa, jossa villejä biisoneja on elänyt yhtäjaksoisesti esihistoriallisista ajoista lähtien. Se ei silti taannut turvaa: 1800-luvun lopun laajamittainen metsästys ajoi Pohjois-Amerikan biisonikannan lähes sukupuuttoon, ja Yellowstonen villi lauma kutistui vuosien 1896 ja 1912 välillä vain 25–50 yksilöön. Puiston tiukka suojelu ja pieni siirtokarjan tuoma lisäys pelastivat kannan häviämiseltä. Elpyminen on ollut niin voimakasta, että nykyisin puistossa laiduntaa noin 5 900 biisonia — yksi harvoista laumoista, joiden perimässä ei ole lainkaan kesyn karjan geenejä.',
+          tiedosto: 'Yellowstone Park bison herd grazing at Firehole River in Fountain Flats, Wyoming, US.jpg',
+          lyhyt: 'Biisonilauma laiduntamassa Firehole-joen rannalla.',
+          selite:
+            'Kuva näyttää nykyisen biisonilauman kokoa Fountain Flatsin niityllä — muistutus siitä, miten pieneksi kanta kutistui ennen puiston suojelutoimia.',
+          lahde: 'Clyde Charles Brown, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'American bison',
+        },
+        {
+          otsikko: 'Sudet takaisin erämaahan',
+          teksti:
+            'Harmaasudet metsästettiin Yellowstonesta sukupuuttoon: viimeiset puiston sisällä ammuttiin vuonna 1926, eikä alueella kuultu susien ulvontaa lähes seitsemään vuosikymmeneen. Tilanne muuttui tammikuussa 1995, kun Albertasta, Kanadasta, tuotiin 14 tainnutettua sutta ja vapautettiin puiston erämaahan; vuonna 1996 seurasi vielä 17 sutta lisää, yhteensä 31 yksilöä. Palanneet sudet alkoivat pitää hirvikannan kurissa, mikä antoi pajukoille ja haavoille tilaa toipua vuosikymmenten laidunnuksesta. Nykyisin puistossa elää noin 124 sutta reilussa kymmenessä laumassa — osa siitä yli 300 suden kannasta, joka asuttaa koko Yellowstonen ympäristöä.',
+          tiedosto: 'Gray Wolf (7828692538).jpg',
+          lyhyt: 'Harmaasusi kuvattuna varhain aamulla Yellowstonen tienvarrella.',
+          selite:
+            'Kuva on otettu Yellowstonesta, samalta alueelta jonne kanadalaiset sudet vapautettiin 1995–1996 lähes seitsemän sudettoman vuosikymmenen jälkeen.',
+          lahde: 'Shanthanu Bhardwaj, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Wolves in Yellowstone',
+        },
+      ],
+    },
+  ],
+
+  grandcanyon: [
+    {
+      id: 'kaupunki',
+      nimi: 'Grand Canyon',
+      johdanto: 'Grand Canyon on Coloradojoen kaivama rotkolaakso Arizonassa, paikoin lähes kaksi kilometriä syvä. Isoisän matkavuonna 1873 sen tutkiminen oli vasta alkamassa – ensimmäinen venematka kanjonin läpi oli vain neljä vuotta aiemmin.',
+      nostot: [
+        {
+          otsikko: 'Rotko joka näkyy avaruudesta',
+          teksti: 'Grand Canyon on Yhdysvaltain Arizonassa sijaitseva kanjoni, jonka Coloradojoki on kaivanut kallioon miljoonien vuosien aikana. Se on lähes 450 kilometriä pitkä, paikoin yli 29 kilometriä leveä ja syvimmillään runsaan 1,8 kilometrin syvyinen. Kanjonin seinämät paljastavat kerros kerrokselta kiveä, joka on syntynyt aina lähes kahden miljardin vuoden takaa asti – pidemmältä ajalta kuin missään muualla maan pinnalla yhtä helposti nähtävissä. Isoisän aikaan 1870-luvulla kanjonia pidettiin vielä lähes kulkukelvottomana erämaana, jonne vain harvat tutkimusmatkailijat uskalsivat suunnata.',
+          tiedosto: 'Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 5962.jpg',
+          lyhyt: 'Ilmakuva Grand Canyonista paljastaa kerroksittaiset kalliomuodostumat ja mutkittelevan joen.',
+          selite: 'Ilmakuvassa näkyvät Grand Canyonin kerrostuneet punaruskeat kalliot ja alhaalla mutkitteleva Coloradojoki vuonna 2012 kuvattuna.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grand Canyon',
+        },
+        {
+          otsikko: 'Espanjalaiset eksyvät reunalle',
+          teksti: 'Syyskuussa 1540 Francisco Vázquez de Coronado lähetti upseerinsa García López de Cárdenasin etsimään suurta jokea, josta Hopi-oppaat olivat kertoneet. Parikymmentä päivää pohjoiseen kuljettuaan joukko saapui kanjonin eteläreunalle nykyisen Desert View’n tienoilla – ensimmäisinä eurooppalaisina koskaan. Kolme sotilasta yritti usean päivän ajan löytää reittiä alas jokeen, mutta janoisina ja uupuneina he pääsivät vain murto-osan matkasta ennen kuin joukko kääntyi takaisin. Retkikunta piti kanjonia lähinnä esteenä, ei ihmeenä, ja palasi pettyneenä Cíbolaan. Seuraavat eurooppalaiset saapuivat samalle reunalle vasta yli 200 vuotta myöhemmin.',
+          tiedosto: 'Coronado expedition.jpg',
+          lyhyt: 'Kartta esittää Coronaadon retkikunnan reitin, joka ulottui myös Grand Canyoniin.',
+          selite: 'Kartta havainnollistaa Coronaadon retkikunnan 1540–42 reittejä Amerikan lounaisosassa; Cárdenasin ryhmä erkani kohti Grand Canyonia.',
+          lahde: 'National Park Service, Wikimedia Commons (PD)',
+          wiki: 'García López de Cárdenas',
+        },
+        {
+          otsikko: 'Viljaa kalliokoloissa',
+          teksti: 'Kauan ennen Cárdenasia tai Foggin isoisää kanjonissa asui ihmisiä: vanhimmat löydetyt esineet ovat lähes 12 000 vuoden takaa, ja puebloväestö asutti alueita jo tuhat vuotta sitten. Nankoweapin kohdalla, korkealla kalliohyllyllä joen yläpuolella, seisoo yhä rivi kivistä muurattuja viljavarastoja, jotka Ancestral Puebloan -viljelijät rakensivat noin 1100-luvulla suojaamaan maissisatoaan jyrsijöiltä ja kosteudelta. Vaikeapääsyinen sijainti piti varastot turvassa – se kertoo myös, miten hyvin asukkaat tunsivat kanjonin polut. Alueelta on luetteloitu yli 4 300 muinaisjäännöstä, todisteena lähes yhtäjaksoisesta asutuksesta tuhansien vuosien ajalta.',
+          tiedosto: 'Grand Canyon National Park, Colorado River Nankoweap Granaries 3516 - Flickr - Grand Canyon NPS.jpg',
+          lyhyt: 'Ancestral Puebloan -viljavarastot on muurattu kalliokoloon korkealla joen yläpuolella.',
+          selite: 'Kuva näyttää Nankoweapin viljavarastot, jotka on rakennettu kapealle kallioreunustalle satojen metrien korkeuteen Coloradojoesta.',
+          lahde: 'Grand Canyon National Park, Wikimedia Commons (PD)',
+          wiki: 'Ancestral Puebloans',
+        },
+        {
+          otsikko: 'Kansa joka ei koskaan lähtenyt',
+          teksti: 'Havasupai-kansa on asunut kanjonin sivuhaarassa, Havasu-purolaaksossa, satoja vuosia – nimi tarkoittaa suunnilleen ”sinivihreän veden kansaa”. 1800-luvun lopulla ja 1900-luvun alussa valokuvaaja George Wharton James dokumentoi heidän arkeaan: naiset punoivat koreja kasvikuiduista, kun taas miehet viljelivät maissia, papuja ja kurpitsaa kapealla purolaakson pohjalla. Toisin kuin monet muut kanjonin kävijät, havasupait eivät koskaan hylänneet aluetta – heidän jälkeläisensä asuvat samassa kylässä, Supaissa, yhä tänäkin päivänä, ja kylään pääsee edelleen vain jalkaisin, muulilla tai helikopterilla.',
+          tiedosto: 'Havasupai women making baskets in front of a dwelling in Havasu or Cataract Canyon, ca.1900 (CHS-4689).jpg',
+          lyhyt: 'Havasupai-naiset punovat koreja perinteisen asumuksen edessä noin vuonna 1900.',
+          selite: 'Valokuvassa havasupainaiset istuvat kotinsa edessä punomassa koreja Havasu-kanjonin punaisten kalliomuurien juurella.',
+          lahde: 'George Wharton James, Wikimedia Commons (PD)',
+          wiki: 'Havasupai',
+        },
+        {
+          otsikko: 'Yksikätinen majuri kartoittaa tuntematonta',
+          teksti: 'John Wesley Powell menetti oikean kätensä kyynärpään alapuolelta sisällissodan Shilohin taistelussa 1862, mutta palasi silti rintamalle ja eteni majuriksi asti. Sodan jälkeen hänestä tuli geologi ja luonnontutkija, jota kiehtoi Yhdysvaltain karttojen suurin valkoinen läiskä: Coloradojoen kulku Grand Canyonin läpi oli tuolloin täysin kartoittamaton. Powell ei antanut vamman estää itseään, vaan suunnitteli retken, jolla hän aikoi laskea koko joen veneillä latvoilta asti. Muotokuva 1890-luvulta näyttää parrakkaan, arvokkaan tiedemiehen – kaukana nuoresta majurista, joka oli vuosikymmentä aiemmin lähtenyt tuntemattomaan.',
+          tiedosto: 'John Wesley Powell by Charles Parker, c. 1890, albumen silver print, from the National Portrait Gallery - NPG-8200234C 1.jpg',
+          lyhyt: 'John Wesley Powellin muotokuva 1890-luvulta, pitkä parta ja arvokas ilme.',
+          selite: 'Charles Parkerin ateljeekuva esittää John Wesley Powellin rintakuvana, pukeutuneena tummaan pukuun; täysparta ulottuu rintaan asti.',
+          lahde: 'Charles Parker, Wikimedia Commons (PD)',
+          wiki: 'John Wesley Powell',
+        },
+        {
+          otsikko: 'Nojatuoli veneen kannella',
+          teksti: 'Koska Powellilta puuttui oikea käsivarsi, hänelle rakennettiin puinen nojatuoli, joka köytettiin kiinni lipputoimiveneen Emma Dean kannelle. Tuolista käsin hän näki esteettä eteenpäin koskissa ja pystyi viittomaan muille veneille suunnan. Ensimmäinen, vuoden 1869 retki eteni ilman yhtään valokuvaa – kamerat ja mittalaitteet hukkuivat koskissa – mutta toisella retkellä 1871–72 valokuvaajat Beaman, Fennemore ja Hillers ikuistivat matkan. Tämä kuva Marble Canyonista vuodelta 1872 näyttää retkikunnan veneet ankkuroituna kivikkoiselle rantatörmälle korkeiden kanjoninseinien katveessa – hetken lepoa ennen seuraavaa vaarallista koskea.',
+          tiedosto: "Colorado River. Marble Canyon, 1872. Hillers Photo, 1-3 gone. The Major's armchair on the boat shows clearly with two... - NARA - 517985.jpg",
+          lyhyt: 'Powellin retkikunnan veneet ankkurissa Marble Canyonin rantakivikossa 1872.',
+          selite: 'Valokuva näyttää retkikunnan veneet ankkuroituna kivikkoiselle rannalle Marble Canyonissa, jyrkkien kalliokerrosten välissä.',
+          lahde: 'Elias Olcott Beaman, James Fennemore ja John Karl Hillers, Wikimedia Commons (PD)',
+          wiki: 'Powell Geographic Expedition of 1869',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Kivi, joki ja eliöt',
+      johdanto: 'Grand Canyonin seinämät ovat kuin aikakone: alimmat kerrokset ovat lähes kaksi miljardia vuotta vanhoja. Jyrkät kalliot ovat myös koti eliöille, jotka ovat sopeutuneet kuumuuteen, kuivuuteen ja korkeuseroihin.',
+      tehtava: {
+        kysymys: 'Kuinka leveä on täysikasvuisen kaliforniankondorin siipien kärkiväli levällään?',
+        vaihtoehdot: ['Noin 1,5 metriä', 'Noin 2 metriä', 'Lähes 3 metriä', 'Yli 4 metriä'],
+        oikea: 2,
+        fakta: 'Kaliforniankondorin siipien kärkiväli on jopa lähes kolme metriä – suurin minkään Pohjois-Amerikan linnun siipiväli.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kivi joka on lähes kaksi miljardia vuotta vanha',
+          teksti: 'Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.',
+          tiedosto: '2012.09.14.123206 Vishnu schist Grand Village Canyon Arizona.jpg',
+          lyhyt: 'Näytepala tummaa Vishnu-liusketta, kanjonin 1 745 miljoonaa vuotta vanhaa peruskiveä.',
+          selite: 'Kuvassa on Vishnu-liuskenäyte esittelyalustalla Grand Canyonin ”Trail of Time” -polulla; kyltti kertoo kiven iäksi 1 745 miljoonaa vuotta.',
+          lahde: 'Hermann Luyken, Wikimedia Commons (CC0)',
+          wiki: 'Vishnu Basement Rocks',
+        },
+        {
+          otsikko: 'Joki joka kaivoi vuoren sisältä pois',
+          teksti: 'Coloradojoki virtaa nykyään kanjonin pohjalla vain murto-osan siitä voimasta, joka sen alun perin kaivoi – padot ylävirrassa ovat hillinneet sekä tulvia että mukana kulkevaa hiekkaa ja mutaa. Silti juuri tämä joki, yhdessä sivupurojen ja pakkasen halkaisemien kallioiden kanssa, on kuluttanut kanjonin syvyyden yli 1,8 kilometriin miljoonien vuosien aikana. Tutkijoiden mukaan koko kanjoni ei ole syntynyt kerralla, vaan eri osat ovat muotoutuneet eri aikoina: jotkin osuudet ehkä jo 50–70 miljoonaa vuotta sitten, toiset vasta 5–6 miljoonaa vuotta sitten, kun joki lopulta yhdisti erilliset laaksot yhtenäiseksi väyläksi kohti Kalifornianlahtea.',
+          tiedosto: 'Colorado River, Grand Canyon.jpg',
+          lyhyt: 'Coloradojoki mutkittelee kanjonin pohjalla korkeiden kalliomuurien välissä.',
+          selite: 'Kuva näyttää Coloradojoen virtaamassa Grand Canyonin pohjalla, ympärillä jyrkät monikerroksiset kalliomuurit.',
+          lahde: 'Wolfgang Staudt, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Colorado River',
+        },
+        {
+          otsikko: 'Kiipeilijä jolle jyrkänne ei ole este',
+          teksti: 'Aavikonlampaat liikkuvat Grand Canyonin pystysuorilla kallioseinämillä yhtä varmasti kuin muut eläimet tasamaalla: niiden sorkkien kumimaiset alustat tarttuvat kapeisiinkin kielekkeisiin, ja ne osaavat hypätä useiden metrien pudotuksia vahingoittumatta. Pässien kierteiset sarvet voivat painaa yli 13 kiloa – enemmän kuin niiden kaikkien muiden luiden yhteispaino – ja niitä käytetään sekä puolustukseen että kilpataisteluissa toisia pässejä vastaan kiima-aikana. Lampaat selviävät myös ilman juomavettä pitkiä aikoja, sillä ne saavat nesteestään kasveista ja voivat juoda kerralla suuria määriä löytäessään lähteen tai sadeveden täyttämän kalliokuopan.',
+          tiedosto: 'Desert Bighorn Sheep in Grand Canyon National Park D 3939 (5735086801).jpg',
+          lyhyt: 'Aavikonlammaspässi ja -uuhi seisovat jyrkällä kalliohyllyllä.',
+          selite: 'Kuvassa aavikonlampaan uuhi ja pässi tasapainoilevat kapealla kallioreunustalla Grand Canyonin punaruskeilla seinämillä.',
+          lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Desert bighorn sheep',
+        },
+        {
+          otsikko: 'Taivaan jättiläinen palaa kanjoniin',
+          teksti: 'Kaliforniankondori on Pohjois-Amerikan suurin lentävä lintu: sen siipien kärkiväli on levällään jopa lähes kolme metriä, ja se voi liitää tunteja lepuuttamatta siipiään, kunhan löytää nousevan ilmavirran. Laji ajautui 1980-luvulla sukupuuton partaalle – luonnossa oli enää alle 30 yksilöä – kun lyijymyrkytys, sähkölinjat ja elinympäristön häviäminen verottivat kantaa. Kaikki jäljellä olleet linnut pyydystettiin ja niitä kasvatettiin tarhoissa, ja vuodesta 1996 kasvatettuja kondoreita on vapautettu takaisin luontoon, myös Grand Canyoniin. Jokaisella villiin päästetyllä linnulla on siivessään numeroitu tunnistuslaatta, josta sen liikkeitä seurataan.',
+          tiedosto: 'Grand Canyon National Park California Condor - CONDOR23 (5735075449).jpg',
+          lyhyt: 'Kaliforniankondori istuu kaiteella, siivessä näkyy numeroitu tunnistuslaatta.',
+          selite: 'Kuvassa kaliforniankondori lähikuvassa, taustalla Grand Canyonin kalliokerrokset; linnun siivessä on tutkijoiden numeroima merkkilaatta.',
+          lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'California condor',
+        },
+        {
+          otsikko: 'Orava jonka kanjoni erotti serkuistaan',
+          teksti: 'Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.',
+          tiedosto: 'Grand Canyon National Park North Rim - Kaibab Squirrel 0188.jpg',
+          lyhyt: 'Kaibab-orava kiipeää männyn rungolla, tuuhea valkoinen häntä näkyvissä.',
+          selite: 'Kuvassa Kaibab-orava kiipeää mäntyyn Grand Canyonin pohjoisreunalla; laji elää luonnossa vain tällä alueella.',
+          lahde: 'Grand Canyon NPS, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kaibab squirrel',
+        },
+      ],
+    },
+  ],
+
+  uluru: [
+    {
+      id: 'kaupunki',
+      nimi: 'Uluru',
+      johdanto: 'Australian mantereella kohoaa yksinäinen punainen kallio, jonka näki ensimmäisenä eurooppalaisena maanmittaaja William Gosse isoisän matkavuonna 1873. Paikka oli silti jo kauan ollut anangujen koti ja pyhä maisema.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen eurooppalainen näkijä',
+          teksti: 'Maanmittaaja William Gosse johti retkikuntaa, joka lähti Alice Springsistä huhtikuussa 1873 kartoittamaan seutua ylämantereen lennätinlinjan länsipuolella. Matka vei viikkoja kuivan, vedettömän maaston halki, kunnes 19. heinäkuuta taivaanrannassa erottui hahmo, jota mikään kartta ei tuntenut: yli 340 metriä ympäröivää tasankoa korkeampi punainen kallio. Gosse oli ensimmäinen eurooppalainen, joka koskaan näki sen — isoisän oma matkavuosi osui siis täsmälleen samaan hetkeen maailmanhistoriassa. Löytö oli mahdollinen vain siksi, että ylämantereen lennätinlinja oli äskettäin avannut reitin autiomaan sydämeen asti.',
+          tiedosto: 'Ayers Rock - Uluru.JPG',
+          lyhyt: 'Ulurun punaruskea, syvien uurteiden uurtama kallioseinämä iltapäivän valossa.',
+          selite: 'Kuvassa näkyvät Ulurun pystysuorat vako-urat ja kallion tyvellä kasvava harva pensaikko sekä kuivuneita puita; matala aurinko luo kalliolle voimakkaan varjorajan.',
+          lahde: 'Alexandra, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'William Gosse (explorer)',
+        },
+        {
+          otsikko: 'Kamelikaravaani autiomaan halki',
+          teksti: 'Gossen retkikunnassa kulkivat apulaisena Edwin Berry, kaksi muuta eurooppalaista sekä kolme afgaanilaista kamelinajajaa, Kamran, Jemma Kahn ja Allanah. Mukana oli myös Moses-niminen aboriginaalinuorukainen The Peaken asemalta oppaana. Kamelit kestivät viikkojen matkan ilman luotettavaa vettä paremmin kuin mikään muu tuolloin tunnettu kulkuneuvo: retkikunta eteni parhaimmillaan lähes tuhat kilometriä länteen, ennen kuin väheneva vesivaranto pakotti kääntymään takaisin. Matka päättyi Charlotte Watersiin joulukuussa 1873, kahdeksan kuukautta lähdön jälkeen. Samanlaiset kamelikaravaanit kulkivat Keski-Australian autiomailla vielä vuosikymmeniä myöhemmin.',
+          tiedosto: "Camel team approaching Ayers Rock in search for Lasseter's body - John Bailey.jpg",
+          lyhyt: 'Kamelikaravaani kulkee Keski-Australian aavikkomaastossa 1930-luvulla.',
+          selite: 'Vanha valokuva näyttää miesten johtaman kamelijonon ylittämässä pensaikkoista tasankoa lähellä Ayers Rockia — samanlaisilla kameleilla myös Gossen retkikunta kulki alueella jo 1873.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'William Gosse (explorer)',
+        },
+        {
+          otsikko: 'Ensimmäiset kalliolla',
+          teksti: 'Löydettyään kallion Gosse ei tyytynyt vain katselemaan sitä kaukaa. Hän kiipesi afgaanilaisen kamelinajajansa Kamranin kanssa loivaa, sileää kalliokylkeä pitkin yli 300 metriä ylös ja seisoi ensimmäisenä eurooppalaisena kallion laella. Nousu ilman köysiä tai muita apuvälineitä vaati tasapainoa: kalliopinta on paikoin niin loiva, että sillä pystyy kävelemään, mutta tuulisella säällä sileä, hiekkakivinen pinta muuttuu liukkaaksi ja vaaralliseksi. Huipulta avautui näkymä satojen kilometrien päähän tasaiselle, punaiselle aavikolle joka suuntaan — maisema, jota kukaan eurooppalainen ei ollut ennen nähnyt.',
+          tiedosto: "Lascar Uluru's starting climb point (4563119100).jpg",
+          lyhyt: 'Ulurun huipulle nousevan reitin loiva, sileä yläosa.',
+          selite: 'Kuva näyttää kallion lakiosaan johtavan loivan harjanteen, jota pitkin kulkijoiden jättämä vaalea polku erottuu tummemmasta kalliopinnasta.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'William Gosse (explorer)',
+        },
+        {
+          otsikko: 'Nimi kuvernöörin kunniaksi',
+          teksti: 'Gosse nimesi löytönsä Ayers Rockiksi kunnianosoituksena Sir Henry Ayersille, joka toimi heinäkuussa 1873 Etelä-Australian pääministerinä ja sisäasiainsihteerinä. Ayers oli noussut asemaansa kuparikaivosyhtiön johtajana ja istui pääministerin tuolilla urallaan peräti viisi kertaa — ennätys, jota kukaan muu siirtokunnan johtaja ei saavuttanut. Tutkimusmatkailijoiden oli tapana nimetä löytönsä vaikutusvaltaisten virkamiesten tai rahoittajien mukaan, ja niin kallio sai eurooppalaisen nimensä mieheltä, joka ei koskaan käynyt paikan päällä. Nimi jäi viralliseen käyttöön yli sadaksi vuodeksi.',
+          tiedosto: 'Painting of Ayers Rock (near Lake Amadeus) - Northern Territory(GN02710).jpg',
+          lyhyt: 'Vuoden 1905 tienoilla otettu valokuva painokuvasta, jossa Ayers Rock esitellään matkailijoille.',
+          selite: 'Kuva on Etelä-Australian arkiston vanha lasinegatiivi: siinä on painettu maisemakuva Ayers Rockista, jonka alla lukee "Ayers Rock, Near Lake Amadeus, Northern Territory".',
+          lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
+          wiki: 'Henry Ayers',
+        },
+        {
+          otsikko: 'Paikka jota anangut ovat aina tunteneet',
+          teksti: 'Kun Gosse merkitsi löydön päiväkirjaansa, kallio ei ollut kenellekään tuntematon: alueen anangu-aboriginaalit olivat asuneet sen ympäristössä jo yli 10 000 vuoden ajan. Heidän kertomusperinteessään, tjukurpassa, esi-isähahmot muovasivat aikojen alussa tasaisesta maasta nykyisen maiseman kaikkine uurteineen ja luolineen, ja näiden hahmojen kerrotaan yhä asuvan paikassa. Kallion juurelle kertyneet pysyvät vesikuopat ovat olleet elintärkeitä autiomaan keskellä sukupolvesta toiseen. Gosselle kallio oli uusi löytö; niille, jotka siellä jo asuivat, se oli aina ollut tuttu ja nimetty paikka.',
+          tiedosto: 'Mutitjulu Waterhole - 2013.04 - panoramio.jpg',
+          lyhyt: 'Mutitjulun vesikuoppa Ulurun rotkon pohjalla.',
+          selite: 'Kuvassa on Mutitjulun pysyvä vesiallas kallion rotkon pohjalla, jonka äärellä kulkee nykyinen puinen näköalalaituri; ihmisiä kuvassa ei näy.',
+          lahde: 'rheins, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Anangu',
+        },
+        {
+          otsikko: 'Kalliota suurempi kuin näkee',
+          teksti: 'Se, minkä matkailija näkee maan pinnalla, on vain osa Ulurusta. Kallio kohoaa 348 metriä ympäröivää tasankoa korkeammalle, ja sen kehä on peräti 9,4 kilometriä — mutta geologien mittausten mukaan suuri osa kivimassasta jatkuu syvälle maan alle näkymättömissä. Ilmasta kuvattuna kallio erottuu yksinäisenä, terävärajaisena punaisena saarekkeena keskellä äärettömän tasaista pensasaavikkoa. Mittasuhteet tekivät siitä heti mieleenpainuvan uutisaiheen 1870-luvun Etelä-Australiassa: mikään muu yksittäinen kallio mantereella ei noussut näin jyrkästi tasangosta.',
+          tiedosto: 'Aerial view of Uluru.jpg',
+          lyhyt: 'Ilmakuva Ulurusta yksinäisenä saarekkeena tasaisella pensasaavikolla.',
+          selite: 'Ilmasta kuvattuna kallio erottuu selvärajaisena punaisena massana keskellä laakeaa pensasaavikkoa; taustalla taivaalla näkyy ohut savuvana.',
+          lahde: 'Emily Cox, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Kivi ja väri',
+      johdanto: 'Uluru ei ole tavallinen kivi vaan yhtenäinen hiekkakivilohko, joka on säilynyt ehjänä, kun ympäröivä maasto on kulunut sen ympäriltä pois satojen miljoonien vuosien aikana. Myös sen punainen väri selittyy yhdellä ilmiöllä.',
+      tehtava: {
+        kysymys: 'Mistä Ulurun punainen väri oikeastaan johtuu?',
+        vaihtoehdot: [
+          'Kivilaji on kauttaaltaan punaista',
+          'Pinnan rautapitoiset mineraalit ovat hapettuneet',
+          'Auringonvalo heijastuu punaisesta hiekasta',
+          'Kallion pinnalla kasvaa punaista levää',
+        ],
+        oikea: 1,
+        fakta: 'Jos Ulurun pintaa raaputtaisi tai lohkaisisi palan kiveä sisältä, paljastuisi harmaa kivi — tuttu punainen väri on vain ohut, pintaan hapettunut kerros.',
+      },
+      nostot: [
+        {
+          otsikko: 'Hiekkaa vuorten juurelta',
+          teksti: 'Ulurun kivi on arkoosia, karkearakeista hiekkakiveä, jossa on tavallista enemmän maasälpää: keskimäärin noin puolet kivestä on maasälpää, neljännes kvartsia ja loppu pikkuruisia kivimurusia. Aines on peräisin noin 550–530 miljoonaa vuotta sitten kohonneista vuorista, joiden rinteiltä joet ja tulvat kuljettivat hiekkaa ja soraa laajaksi, viuhkamaiseksi kasautumaksi tasangolle. Vuosimiljoonien saatossa hiekka puristui kiinteäksi kivimassaksi paksujen kerrosten painon alla. Kallion pintaan syntyneet pyöreät kolot ja onkalot ovat merkki siitä, että sade ja tuuli irrottavat yhä hitaasti maasälpärakeita ja pehmeämpiä kohtia kivestä.',
+          tiedosto: 'Close up Uluru.jpg',
+          lyhyt: 'Lähikuva Ulurun pinnasta, jossa on lukuisia pyöreitä rapautumiskuoppia.',
+          selite: 'Kuvassa näkyy kallion pinnan pyöreitä koloja ja vaaleampia raitoja, jotka ovat syntyneet, kun rapautuminen on irrottanut maasälpärakeita kivestä epätasaisesti.',
+          lahde: 'Michelle Corcoran, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+        {
+          otsikko: 'Pystyyn nostettu kerrostuma',
+          teksti: 'Kun hiekkakivi oli kovettunut, se makasi alun perin vaakatasossa muun kerrostuman seassa. Noin 400–300 miljoonaa vuotta sitten alueen maankuori rutistui uudelleen mannerlaattojen liikkeissä, ja kerrokset kääntyivät lähes pystyyn — niin jyrkästi, että alkuperäiset vaakasuorat kerrosrajat näkyvät nykyään kallion kyljessä pystysuorina uurteina ylhäältä alas asti. Juuri nämä pystysuorat urat antavat Ulurulle sen tunnusomaisen ryppyisen ulkonäön kaukaa katsottuna. Samasta liikkeestä ja myöhemmästä rapautumisesta ovat syntyneet myös kallion suuret, kaarevat onkalot, joissa pehmeämpi kivi on kulunut ympäristöään nopeammin.',
+          tiedosto: 'Interesting rock formation on Uluru.jpg',
+          lyhyt: 'Kellomainen kallionmuoto, jonka alaosaan on syöpynyt suuri onkalo.',
+          selite: 'Kuvassa erottuvat sekä kallion yläosan pystysuorat vako-urat että alaosan laaja, katosmainen onkalo, jonka pehmeämpi kivi on rapautunut ympäristöään nopeammin.',
+          lahde: 'June Lennie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+        {
+          otsikko: 'Harmaasta punaiseksi',
+          teksti: 'Jos Ulurun pintaa raaputtaisi tai lohkaisisi palan kiveä sisältä, paljastuisi harmaa kivi — ei punainen. Kallion tuttu ruskeanpunainen väri syntyy vasta aivan pinnassa, kun rautapitoiset mineraalit hapettuvat ilman ja kosteuden vaikutuksesta samalla tavalla kuin rauta ruostuu. Ohut, vain muutaman millimetrin paksuinen hapettunut kerros peittää lähes koko näkyvän kallion. Suojaisissa koloissa ja katosmaisissa onkaloissa, joihin sade ei pääse huuhtomaan pintaa samalla tavalla, kivi säilyttää sen sijaan vaaleamman, harmaanbeigen alkuperäisen sävynsä — ja tällaiset kohdat erottuvat kallion kyljessä selvinä vaaleina laikkuina.',
+          tiedosto: 'Massive crack on the side of Uluru.jpg',
+          lyhyt: 'Ulurun kylkeen avautuva suuri kalliokatos, jonka sisäpinta on vaaleampi.',
+          selite: 'Kuva näyttää kallion kylkeen syöpyneen katosmaisen onkalon, jonka suojaisa sisäpinta on vaaleanharmaa toisin kuin katoksen ulkopuolen syvän punainen, hapettunut kalliopinta.',
+          lahde: 'Callum Greig, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+        {
+          otsikko: 'Kallio joka ei kulunut pois',
+          teksti: 'Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.',
+          tiedosto: 'Majestic Uluru.jpg',
+          lyhyt: 'Uluru kohoaa yhtenä murtumattomana massana auringonlaskun taivasta vasten.',
+          selite: 'Kuvassa kallio erottuu tummana, ehyenä siluettina värikästä auringonlaskun taivasta vasten korkean heinikon takaa kuvattuna.',
+          lahde: 'Ameristralian, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+        {
+          otsikko: 'Väri joka vaihtuu päivän mukaan',
+          teksti: 'Ulurun tunnetuin ilmiö on sen näennäinen värin muutos vuorokauden aikana. Keskipäivällä kallio näyttää tylsän ruskeanpunaiselta, mutta auringon laskiessa matalalle taivaanrantaan sen valo kulkee pidemmän matkan ilmakehän läpi ja suodattuu punertavaksi — sama ilmiö, joka värjää tavallisen auringonlaskun taivaan. Kun tämä punertava ilta- tai aamuvalo osuu kallion hapettuneeseen, rautapitoiseen pintaan, koko kivimassa näyttää hetkeksi hehkuvan voimakkaammin kuin päivällä. Ilmiö on voimakkaimmillaan vain muutaman minuutin ajan juuri ennen auringonlaskua ja heti sen jälkeen, ja se toistuu samanlaisena joka ainoa selkeä ilta.',
+          tiedosto: 'Golden Uluru Sunset.jpg',
+          lyhyt: 'Uluru hehkuu punaisena auringon laskiessa matalalle taivaanrantaan.',
+          selite: 'Kuvassa kallio hehkuu voimakkaan punaisena auringonlaskun valossa heinikon reunustaman tasangon takana, taivaan värjäytyessä siniharmaasta oranssiin.',
+          lahde: 'Matheus Hobold Sovernigo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uluru',
+        },
+      ],
+    },
+  ],
+
+  iguazu: [
+    {
+      id: 'kaupunki',
+      nimi: 'Iguazú',
+      johdanto:
+        'Iguazú ei ole kaupunki vaan valtava putoussarja Argentiinan ja Brasilian rajalla – seutu, joka isoisän matkavuonna 1873 oli eurooppalaisille kartoille vielä lähes tyhjä, kartoittamaton läiskä keskellä viidakkoa.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen eurooppalainen näki putoukset 1541',
+          teksti:
+            'Espanjalainen valloittaja Álvar Núñez Cabeza de Vaca kulki vuonna 1541 halki nykyisen Brasilian viidakon matkallaan Asunción del Paraguayhin ja törmäsi jylisevään putoussarjaan, josta hän kuuli kaukaa ennen kuin näki sitä. Hän nimesi löytönsä Saltos de Santa Maríaksi, Pyhän Marian putouksiksi, ja kirjoitti niistä matkakertomukseensa, joka julkaistiin myöhemmin Espanjassa. Nimi ei jäänyt elämään: guaranínkielinen Iguazú, "suuri vesi", osoittautui osuvammaksi ja vakiintui käyttöön. Cabeza de Vacan teksti on silti putousten ensimmäinen tunnettu eurooppalainen kuvaus, kolmesataakolmekymmentä vuotta ennen isoisän omaa matkaa.',
+          tiedosto: 'Monumento Cabeza de Vaca muralla Jerez.jpg',
+          lyhyt: 'Patsas Cabeza de Vacasta, joka löysi Iguazún putoukset eurooppalaisena ensimmäisenä 1541.',
+          selite:
+            'Kuvassa on Jerez de la Fronteran vanha kaupunginmuuri, jonka juurella pieni patsasryhmä ja muistolaatta kunnioittavat kaupungissa syntynyttä löytöretkeilijää.',
+          lahde: 'Jerezplataforma, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Álvar Núñez Cabeza de Vaca',
+        },
+        {
+          otsikko: 'Käärmejumala ja pakenevat rakastavaiset',
+          teksti:
+            'Guaraníperäisen kertomuksen mukaan joen käärmejumala M\'Boi oli valinnut nuoren Naipín omakseen. Naipí rakasti kuitenkin soturi Tarobáa, ja pari pakeni yhdessä kanootilla jokea pitkin. Raivostunut M\'Boi kiemursi valtavalla ruumiillaan joen pohjaa vasten ja repäisi maan auki pakenijoiden edestä: syntyi kuilu, johon kanootti ja rakastavaiset putosivat. Tarinan mukaan Naipí muuttui kuilusta nousevaksi kiveksi ja Tarobá partaalle kasvavaksi palmuksi, joka katsoo ikuisesti kohti Naipiä. Legendasta tunnetaan useita toisiinsa kietoutuvia versioita eri alkuperäiskansojen keskuudessa, mutta ydin pysyy samana: putoukset syntyivät rakkaudesta ja raivosta.',
+          tiedosto: 'Con arcoiris - panoramio.jpg',
+          lyhyt: 'Sumu ja sateenkaari putousten juurella – paikka, johon legendan rakastavaiset putosivat.',
+          selite:
+            'Kuvassa tumma basalttiseinämä, jolta putoaa useita vesiputouksia tiheän viidakon keskellä; alhaalla vaahtoavan veden yllä kaartuu sateenkaari.',
+          lahde: 'Manuel pino, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Iguazu Falls',
+        },
+        {
+          otsikko: '275 putousta ja kurkku, joka nielee joen',
+          teksti:
+            'Iguazú ei ole yksi putous vaan kenkähevosen muotoinen kokonaisuus, jossa laskee arvioiden mukaan noin 275 erillistä putousta ja putousryhmää lähes kolmen kilometrin matkalla. Suurin ja pelottavin niistä on Garganta del Diablo, Paholaisen kurkku: siihen syöksyy noin puolet koko joen vedestä yhtenä U-kirjaimen muotoisena putouksena, jonka pohjaa ei erota vaahdon ja sumun keskeltä. Putousten korkeus vaihtelee 60–82 metrin välillä, ja sadekaudella virtaama voi moninkertaistua kuivan kauden lukemiin verrattuna. Osa Argentiinan ja Brasilian välisestä rajasta kulkee juuri tätä kurkkua pitkin, joten sama jylisevä näky kuuluu molemmille maille.',
+          tiedosto: 'CATARATAS DEL IGUAZU. GARGANTA DEL DIABLO.jpg',
+          lyhyt: 'Garganta del Diablo, Paholaisen kurkku, nielee noin puolet koko joen vedestä yhtenä putouksena.',
+          selite:
+            'Kuvassa leveä, voimakas vesiputous vyöryy tummalta kalliojyrkänteeltä valtavana vaahtoavana massana; sumupilvi nousee putouksen yllä pilvisen taivaan alla.',
+          lahde: 'Nataliaeconomia2008, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Iguazu Falls',
+        },
+        {
+          otsikko: 'Kolmen maan raja ja kartta joka puuttui',
+          teksti:
+            'Kun isoisä matkusti vuonna 1873, Iguazún seutu oli eurooppalaisille kartoille lähes tyhjä läiskä – tiheä viidakko ja sen putoukset tunnettiin lähinnä huhupuheina. Espanja ja Portugali olivat kiistelleet samasta rajaseudusta jo 1700-luvun lopulla, ja kiista periytyi Argentiinalle ja Brasilialle: kumpikin vaati samaa, noin 30 000 neliökilometrin Misiones-aluetta putousten ympäriltä. Vasta 1881 hallitukset alkoivat neuvotella rajasta virallisesti, ja kysymys ratkesi 1895, kun presidentti Grover Cleveland toimi välimiehenä ja määräsi rajan kahta jokea pitkin. Nykyään kolmen maan rajat kohtaavat lähellä putouksia, jokien yhtymäkohdassa.',
+          tiedosto: 'Triple frontera Argentina, Brasil y Paraguay.jpg',
+          lyhyt: 'Näköala paikkaan, jossa Argentiinan, Brasilian ja Paraguayn rajat kohtaavat jokien yhtymässä.',
+          selite:
+            'Kuva on otettu korkealta näköalapaikalta leveän, ruskehtavan joen mutkaan; toisella rannalla kohoaa rakennus tiheän viidakon keskellä.',
+          lahde: 'Dario Alpern, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Argentina–Brazil border',
+        },
+        {
+          otsikko: 'Jesuiittojen kivikylä viidakossa',
+          teksti:
+            'Sata kilometriä putouksilta etelään seisovat San Ignacio Minín rauniot, yksi 1600-luvulla perustetuista jesuiittalähetysasemista, joissa espanjalaiset munkit ja guaraníalkuperäiskansa rakensivat yhdessä omavaraisia kivikaupunkeja viidakon keskelle. Asemalla asui parhaimmillaan yli 3000 asukasta, joilla oli oma verstas, kirkko ja hallinto – kokeilu, jossa alkuperäiskansa sai oman asemansa siirtomaa-ajan pakkotyön rinnalla. Jesuiitat karkotettiin 1767, minkä jälkeen kylä autioitui ja viidakko valtasi sen vuosikymmeniksi. Rauniot kaivettiin esiin vasta 1900-luvulla, ja ne ovat nykyään UNESCOn maailmanperintökohde.',
+          tiedosto: 'Main facade of the church at San Ignacio Mini, Misiones, Argentina.jpg',
+          lyhyt: 'San Ignacio Minín rauniot ovat jäljellä 1600-luvun jesuiittalähetyksestä Misionesin alueella.',
+          selite:
+            'Kuvassa punertavan hiekkakiven rauniokaaria ja pilareita, joissa erottuu koristeveistoksia; ruohokentän ja puiden keskellä aurinkoinen taivas.',
+          lahde: 'Josep M. Gracia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Ignacio Miní',
+        },
+        {
+          otsikko: 'Suojeltu viidakko putousten ympärillä',
+          teksti:
+            'Argentiina perusti Iguazún kansallispuiston vuonna 1934 ja Brasilia oman puolensa 1939 – putoukset olivat siihen mennessä tulleet tunnetuiksi maailmalla, ja niitä alettiin suojella sekä matkailukohteena että viimeisenä laajana palana atlantista sademetsää, joka oli muualla kutistunut nopeasti maanviljelyn tieltä. UNESCO listasi molemmat puistot maailmanperintökohteiksi 1984 ja 1986, perusteluna putousten ainutlaatuisuus ja runsas eliölajisto. Puistot kattavat yhteensä yli 2000 neliökilometriä metsää, jossa elää jaguaareja, tapiireja ja satoja lintulajeja – putoukset ovat vain äänekkäin osa paljon suurempaa suojelualuetta.',
+          tiedosto: 'Aerial Foz de Iguaçu 26 Nov 2005.jpg',
+          lyhyt: 'Ilmakuva näyttää putoukset vihreän sademetsän keskellä – vain osa suurta suojeltua puistoa.',
+          selite:
+            'Ilmakuvassa kenkähevosen muotoinen putoussarja avautuu keskellä laajaa, tiheää sademetsää; joki jatkuu mutkitellen metsän halki kuvan reunoille.',
+          lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Iguazú National Park',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sademetsä ja sen asukkaat',
+      johdanto:
+        'Putousten ympärillä leviää atlantin sademetsän viimeisiä laajoja jäänteitä: laji toisensa jälkeen selviää täällä kosteudesta ja lämmöstä, jotka syntyvät sadoista putoavista vesitonneista.',
+      tehtava: {
+        kysymys: 'Miksi perhoset kerääntyvät Iguazússa suurina parvina kosteaan hiekkaan?',
+        vaihtoehdot: [
+          'Ne imevät kosteasta maasta natriumia ja muita mineraaleja, joita kukkien mesi ei tarjoa tarpeeksi.',
+          'Ne pakenevat lepakoita, jotka saalistavat niitä ilmassa päiväsaikaan.',
+          'Ne etsivät hiekan alta sopivaa munimispaikkaa poikasilleen.',
+          'Ne viilentävät itseään kosteassa hiekassa kuumimpina päivinä.',
+        ],
+        oikea: 0,
+        fakta:
+          'Ilmiötä kutsutaan mudanjuonniksi (mud-puddling): perhoset, useimmiten koiraat, hakevat kosteasta maasta natriumia ja muita mineraaleja, joita ne eivät saa tarpeeksi pelkästä kukkien mettä juomalla mutta jotka ovat tärkeitä lisääntymiselle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sumun kostuttama viidakko',
+          teksti:
+            'Iguazún putoukset syytävät ilmaan niin paljon vesipisaroita, että ympärille syntyy oma pieni mikroilmasto: kosteus pysyy koholla myös kuivimpina kuukausina, ja se pitää yllä poikkeuksellisen rehevää atlantin sademetsää. Tämä metsätyyppi on kutistunut Etelä-Amerikassa murto-osaan alkuperäisestä laajuudestaan maanviljelyn ja kaupunkien tieltä, ja Iguazún ympärille säilynyt palanen on yksi sen tärkeimmistä jäljellä olevista osista. Latvuskerroksen alla kasvaa sananjalkoja, orkideoita ja liaaneja päällekkäin, ja jokainen kerros tarjoaa elinympäristön hyönteisille, linnuille ja nisäkkäille. Puiston rajat eivät suojaa vain putouksia vaan koko elämän kirjoa.',
+          tiedosto: 'Iguazu National Park Falls.jpg',
+          lyhyt: 'Putousten sumu pitää ympäröivän sademetsän kosteana ja poikkeuksellisen rehevänä.',
+          selite:
+            'Kuvassa leveä putoussarja avautuu tiheän, vehreän sademetsän keskellä; puiden latvusto reunustaa jokiuomaa molemmin puolin.',
+          lahde: 'Tomfriedel, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Iguazú National Park',
+        },
+        {
+          otsikko: 'Tukaani, viidakon näyttävä hedelmänsyöjä',
+          teksti:
+            'Ison nokkatukaanin räikeän oranssinkeltainen nokka on suurin kaikista tukaanilajeista suhteessa ruumiinkokoon, mutta yllättävän kevyt: nokan sisällä on huokoinen luuverkko, ei umpinaista massaa. Lintu käyttää pitkää nokkaansa hedelmien tavoitteluun ohuilla oksilla, joille sen oma paino ei riittäisi, ja nokka toimii myös lämmönsäätelyssä – veren virtausta säätelemällä lintu hukkaa lämpöä kuumalla säällä. Tukaanit nielevät hedelmiä usein kokonaisina ja levittävät siemeniä pitkin metsää lentäessään, joten ne ovat tärkeitä metsän uudistumiselle. Iguazún seudun metsissä laji on yksi helpoimmin tunnistettavista ja äänekkäimmistä asukkaista.',
+          tiedosto: 'Toco Toucan (Ramphastos toco) in Papaya tree (28802932863).jpg',
+          lyhyt: 'Ison nokkatukaanin näyttävä nokka on yllättävän kevyt – sisällä on huokoinen luuverkko.',
+          selite:
+            'Kuvassa tukaani kurkottaa pitkällä, oranssinkeltaisella nokallaan kohti vihreiden papaijojen tertun oksaa kirkasta sinistä taivasta vasten.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Toco toucan',
+        },
+        {
+          otsikko: 'Nenäkarhu, rohkea ruokavieras',
+          teksti:
+            'Etelännenäkarhu liikkuu Iguazún puistoissa usein isoina, kymmenien yksilöiden laumoina, joita johtavat naaraat – aikuiset urokset elävät suurimman osan vuodesta yksin ja liittyvät laumaan vain parittelukauden ajaksi. Pitkä, liikkuva kärsä ja terävät kynnet tekevät siitä taitavan kaivajan, joka etsii hyönteisiä ja pieniä selkärankaisia maasta ja lahopuista, mutta se syö mielellään myös hedelmiä. Puistoissa coatit ovat oppineet, että kävijät pudottelevat välipaloja, ja niistä on tullut rohkeita ihmisten lähellä – ruokkimiskieltoja on lisätty reittien varrelle. Luonnossa laji levittää siemeniä syödessään hedelmiä ja liikkuessaan laajalla alueella.',
+          tiedosto: 'Argentina-01449 - Coati (48995015432).jpg',
+          lyhyt: 'Etelännenäkarhut liikkuvat Iguazússa isoina, naaraiden johtamina laumoina.',
+          selite:
+            'Lähikuvassa nenäkarhun pitkä, kapeneva kärsä erottuu tarkasti sivuprofiilista; eläin seisoo puiston kivetyllä käytävällä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'South American coati',
+        },
+        {
+          otsikko: 'Tuhannet perhoset märällä hiekalla',
+          teksti:
+            'Iguazún polkujen varsilla ja jokirantojen kosteassa hiekassa kerääntyy usein satoja tai jopa tuhansia perhosia samaan kohtaan – ilmiötä kutsutaan mudanjuonniksi (mud-puddling). Perhoset, useimmiten koiraat, imevät kärsällään kosteasta maasta natriumia ja muita mineraaleja, joita ei saa tarpeeksi pelkästä kukkien mettä juomalla mutta jotka ovat tärkeitä lisääntymiselle. Puistossa tavataan satoja perhoslajeja, joista näyttävimpiä ovat suuret keltaiset ja mustaraitaiset purjeperhoset, jotka nousevat pilvenä ilmaan heti kun joku astuu liian lähelle. Perhosparvet ovat yksi puiston tunnetuimmista näyistä, vaikka putoukset vievät suurimman huomion.',
+          tiedosto: 'Swarm of Broad-banded Swallowtail (Iguazú, Argentina - 2009).jpg',
+          lyhyt: 'Purjeperhoset kerääntyvät parviksi imemään mineraaleja kosteasta hiekasta ja mudasta.',
+          selite:
+            'Kuvassa kymmeniä keltamustaraitaisia purjeperhosia kerääntyneenä tiiviisti kosteaan, ruskeaan hiekkaan metsän pohjalla.',
+          lahde: 'Dvortygirl from Santa Clara, California, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mud-puddling',
+        },
+        {
+          otsikko: 'Laava joka rakensi portaat',
+          teksti:
+            'Putousten kova pohja on peräisin laavapurkauksista noin 130 miljoonaa vuotta sitten, kun Etelä-Amerikan ja Afrikan mantereet olivat vielä kiinni toisissaan ja alkoivat repeytyä erilleen. Sulaa basalttia virtasi halkeamista laajalle alueelle kerros kerroksen päälle, ja jäähtyessään kivi halkeili pystysuoriksi pilareiksi – samaa ilmiötä kuin Pohjois-Irlannin Jättiläisten tiellä. Iguazún joki on kuluttanut pehmeämmät kerrokset pois ja jättänyt jäljelle kovemmat, mikä synnytti sarjan porrasmaisia pudotuksia yhden suuren sijaan. Paraná-basalttikerrostuma ulottuu yli miljoonan neliökilometrin alueelle ja on maapallon suurimpia tunnettuja laavapurkaumia.',
+          tiedosto:
+            'Columnar-jointed flood basalt (Serra Geral Formation, Lower Cretaceous; Iguazu Falls, Iguazu River, Brazil-Argentina border) (40231142201).jpg',
+          lyhyt: 'Putousten porrasmainen muoto syntyi, kun joki kulutti 130 miljoonaa vuotta vanhaa laavakiveä.',
+          selite:
+            'Kuvassa jyrkän kanjoninseinämän vaakasuorat laavakerrokset erottuvat selvästi; kallion päällä kasvaa tiheä viidakko ja alhaalla näkyy pieni putous.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Paraná and Etendeka traps',
+        },
+      ],
+    },
+  ],
+
+  titicaca: [
+    {
+      id: 'kaupunki',
+      nimi: 'Titicaca-järvi',
+      johdanto:
+        'Titicaca on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä, lähes 3 812 metrin korkeudessa Andeilla Perun ja Bolivian rajalla. Sen rannoilla syntyi inkojen luomistarusto ja inkoja vanhempi Tiwanakun valtakunta.',
+      nostot: [
+        {
+          otsikko: 'Maailman korkein purjehduskelpoinen järvi',
+          teksti:
+            'Titicaca kohoaa Andeilla 3 812 metrin korkeuteen ja on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä suurilla aluksilla – pienempiä lampia toki löytyy vieläkin ylempää. Vettä on 8 372 neliökilometrin alalla, ja järvi jakautuu kapean Tiquina-salmen kohdalla kahteen altaaseen: pohjoiseen suureen ja eteläiseen pienempään. Rajaviiva Perun ja Bolivian välillä kulkee keskeltä järveä, joten kumpikin maa pitää sitä osittain omanaan. Syvimmillään vesi ulottuu lähes 280 metrin syvyyteen, mutta suurin osa altaasta on matalampaa ja lämpenee auringossa hitaasti ohuen ilman takia.',
+          tiedosto: 'Lake Titicaca ESA22522896.jpeg',
+          lyhyt: 'Sentinel-2-satelliitin kuva näyttää koko Titicaca-järven Andien ylängöllä.',
+          selite:
+            'Euroopan avaruusjärjestön Sentinel-2-satelliitti kuvasi koko Titicaca-järven ylhäältä; kuvan oikeassa yläkulmassa erottuu lumista Andien vuoristoa.',
+          lahde: 'European Space Agency, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+          wiki: 'Lake Titicaca',
+        },
+        {
+          otsikko: 'Isoisän ajan höyrylaiva vuorten yli',
+          teksti:
+            'Kun isoisä matkusti Etelä-Amerikassa 1873, Titicaca-järvellä purjehti jo höyrylaiva, jonka matka sinne oli yhtä käänteinen kuin merten takaa. Yavari tilattiin Lontoosta 1861 ja rakennettiin Thames Ironworksin telakalla osina, jotka piti pystyä kantamaan muulin selässä Andien yli – kumpikin sisarusalus purettiin yhteensä 2 766 kappaleeksi. Rautatie kuljetti osat rannikolta sisämaahan, mutta loppumatka Punoon kesti muulien selässä vuosia, ja alkuperäinen urakoitsija jätti työn kesken. Kuljetus jatkui 1868, rungon ensimmäiset levyt niitattiin paikalleen 1869, ja Yavari laskettiin vesille vasta 1870 – kolme vuotta ennen isoisän matkaa.',
+          tiedosto: 'SS Yavari in Puno, 2002.jpg',
+          lyhyt: 'Höyrylaiva Yavari Punon satamassa vuonna 2002.',
+          selite:
+            'Valokuva näyttää Yavari-höyrylaivan telakoituna Punon satamaan vuonna 2002, vuosikymmeniä sen jälkeen kun laivan osat oli kannettu muulien selässä Andien yli.',
+          lahde: 'Unbuttered Parsnip, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yavari (ship)',
+        },
+        {
+          otsikko: 'Auringon lapset nousevat järvestä',
+          teksti:
+            'Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.',
+          tiedosto:
+            "Voyage historique de l'Amerique Meridionale, 1752 Le premier Ynca Manco Capac et la Reine Coya Mama Oello Huaco son Epouse toux deux Enfans ou Soleil rassemblent les sauvages. (21083105528).jpg",
+          lyhyt: 'Ranskalainen 1700-luvun kaiverrus esittää Manco Cápacin ja Mama Ocllon auringon lapsina.',
+          selite:
+            'Vuoden 1752 kaiverrus kuvaa inkojen tarun mukaisesti Manco Cápacia ja Mama Ocllo Huacoa auringon lapsina, jotka opettavat kohtaamiaan ihmisiä.',
+          lahde: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Manco Cápac',
+        },
+        {
+          otsikko: 'Tiwanaku, inkoja vanhempi valtakunta',
+          teksti:
+            'Aivan järven eteläpuolella kohoaa Tiwanaku, valtakunta joka kukoisti vuosisatoja ennen inkoja. Asutus alkoi kasvaa merkittäväksi noin 300–700-luvuilla jaa. ja oli mahtavimmillaan noin vuonna 800, jolloin kaupungissa asui tutkijoiden arvioiden mukaan 10 000–20 000 ihmistä – yksi Andien suurimmista tuolloin. Kuivuusjaksot heikensivät satoja, ja kulttuuri romahti noin vuoteen 1000 mennessä, kauan ennen kuin inkat nousivat valtaan samalla ylängöllä. Inkojen rakennustapa lainasi silti paljon Tiwanakusta: kaupungin raunioissa seisoo yhä yhdestä kivimöhkäleestä veistetty Auringonportti, jonka pintaan on kaiverrettu jumalhahmoja ja kalenterimerkkejä.',
+          tiedosto: 'Bolivia - Gate of the Sun detail - Tiwanaku or Tiahuanaco 01.jpg',
+          lyhyt: 'Tiwanakun Auringonportti veistettynä yhdestä kivimöhkäleestä.',
+          selite:
+            'Lähikuva Tiwanakun Auringonportista näyttää portin yläreunan kaiverrukset, joissa toistuvat jumalhahmot ja kalenteriin liittyvät merkit.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tiwanaku',
+        },
+        {
+          otsikko: 'Auringon pyhä saari',
+          teksti:
+            'Auringon saareksi kutsuttu Isla del Sol on Titicacan suurin saari ja oli inkoille tärkein pyhiinvaelluskohde. Saarella on yli 80 rauniota, joista suurin osa ajoittuu 1400-luvulle ja inkavallan huippukauteen: kivisiä temppeleitä, labyrinttimäinen Chinkana-rakennus sekä jyrkkiä viljelysterasseja, jotka yhä kannattelevat maissi- ja perunapeltoja. Saarella ei ole moottoriajoneuvoja lainkaan, vaan kapeat polut kulkevat kylästä toiseen kukkuloiden yli. Nykyään saarella asuu noin 800 perhettä maanviljelystä, kalastuksesta ja yhä enemmän matkailusta – veneet Copacabanan rannalta tuovat vierailijoita rantaan, jota pidettiin kerran auringon syntysijana.',
+          tiedosto: 'Isla del sol - lago titicaca 01.jpg',
+          lyhyt: 'Panoraama Isla del Solilta yli Titicaca-järven.',
+          selite:
+            'Panoraamakuva Isla del Solin rinteiltä avautuu yli saaren kivisen maaston ja Titicaca-järven sinisen veden.',
+          lahde: 'SaraWayra, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Isla del Sol',
+        },
+        {
+          otsikko: 'Puman kivi antoi järvelle nimen',
+          teksti:
+            'Nimi Titicaca ei ollut alun perin koko järven nimi lainkaan. Kielitutkija Weston La Barren mukaan sana juontuu ilmauksesta titiqaqa, suunnilleen "harmaa lyijynvärinen puuma" – nimitys viittasi alun perin vain yhteen pyhään kallioon Isla del Solilla. Koska koko järvelle ei 1500-luvulla ollut vakiintunutta yhteistä nimeä, espanjalaiset alkoivat käyttää tämän tärkeimmän pyhäkön nimeä koko vesialueesta, ja ajan mittaan siitä tuli Titicaca. Auringonlaskun aikaan järven pinta hehkuu usein kullanhohtoisena, ja paikalliset soutavat yhä totorasta punotuilla veneillä samoja rantoja pitkin kuin sukupolvet ennen heitä.',
+          tiedosto: 'Sunlight reflection on Lake Titicaca.jpg',
+          lyhyt: 'Auringonvalo kimmeltää Titicacan pinnalla lähellä Punoa.',
+          selite:
+            'Auringonvalo kimmeltää Titicaca-järven pinnalla Punon edustalla; rannan kasvillisuus ja perinteinen kaislavene kehystävät näkymää.',
+          lahde: 'H.dav.are, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lake Titicaca',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Kelluvat saaret ja järven eliöt',
+      johdanto:
+        'Titicacan matalissa lahdissa kasvava totora-kaisla kannattelee kokonaisia kelluvia kyliä, ja järven kylmässä vedessä elää eliöitä, jotka eivät selviäisi missään muualla – ohuen ilman muokkaamia sopeutumia kaikki.',
+      tehtava: {
+        kysymys: 'Miksi Titicacan jättiläissammakolla on niin paljon löysää, poimuista ihoa?',
+        vaihtoehdot: [
+          'Se auttaa sammakkoa uimaan nopeammin',
+          'Iho toimii lisähengityselimenä, joka kerää happea ohuessa ilmassa',
+          'Se suojaa sammakkoa auringon UV-säteilyltä',
+          'Poimut varastoivat rasvaa kylmää vettä vastaan',
+        ],
+        oikea: 1,
+        fakta:
+          'Titicacan jättiläissammakon keuhkot ovat pienet, joten se hengittää suurimman osan tarvitsemastaan hapesta ihonsa läpi – löysä, poimuinen iho kasvattaa pinta-alaa tätä varten.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kelluvat ruokosaaret',
+          teksti:
+            'Uru-kansa on asuttanut Titicaca-järveä vuosisatoja ja rakentanut kotinsa suoraan veden päälle: noin 120 itse tehtyä saarta kelluu järven pohjoisosassa Punon edustalla. Perimätiedon mukaan saaret olivat alun perin puolustuskeino – jos vaara uhkasi rannalta, koko yhteisö saattoi hinata saarensa kauemmas turvaan. Uru-sana Lupihaques tarkoittaa suunnilleen "auringon poikia". Nykyään saarilla asuu enää muutama sata ihmistä; suurin osa lähes 5 300 hengen uru-väestöstä on muuttanut mantereelle, mutta perinne ja kieli elävät saarilla yhä matkailun ja käsitöiden ansiosta.',
+          tiedosto: '00 1635 Reed Islands of Lake Titicaca.jpg',
+          lyhyt: 'Kelluvia ruokosaaria Titicaca-järvellä ylhäältä kuvattuna.',
+          selite:
+            'Kuva näyttää yhden Uros-kansan kelluvan ruokosaaren ja perinteisen totora-kaislaveneen vierekkäin Titicaca-järvellä.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uros',
+        },
+        {
+          otsikko: 'Elämä totorasta rakennetulla saarella',
+          teksti:
+            'Saaren pohja on khili, jopa parimetrinen kerros toisiinsa kietoutuneita totoran juuria, joka kannattaa koko painon veden päällä. Sen päälle pinotaan yhä uusia kaislakerroksia, sillä alimmat kerrokset lahoavat vedessä muutamassa viikossa tai kuukaudessa. Koko saari kestää käytössä parikymmentä vuotta ennen kuin vesi tunkeutuu liian syvälle ja asukkaat rakentavat uuden sen tilalle. Majat, veneet ja osa huonekaluista on punottu samasta kaislasta, ja ankkuriköydet pitävät saaret paikoillaan järven pohjaan lyötyjen eukalyptuspaalujen avulla.',
+          tiedosto: 'Living on the Uros Islands (8447844694).jpg',
+          lyhyt: 'Elämää ja reppuja Uros-saarten kaislamajojen keskellä.',
+          selite:
+            'Valokuva Uros-saarilta näyttää kaislasta punottuja majoja ja perinteisiä totora-veneitä saaren rannassa.',
+          lahde: 'Alex Proimos, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Uros',
+        },
+        {
+          otsikko: 'Totora, saarten ainoa raaka-aine',
+          teksti:
+            'Koko saariyhteisö nojaa yhteen ainoaan kasviin: totora eli Schoenoplectus californicus on korkea, ilmaa täynnä oleva kaisla, joka kasvaa Titicacan matalissa lahdissa tiheinä kenttinä. Sen juuristo muodostaa paksun, kelluvan turvematon, jonka päälle koko saari rakentuu – sama juuristo pitää myös veneet ja majat pinnalla. Kaislaa syödään tuoreena, sen valkoinen tyviosa maistuu hieman selleriltä, ja siitä tehdään myös teetä flunssaan. Ilman totoraa Titicacan kelluvia saaria ei olisi koskaan syntynyt, sillä mikään muu kasvi järven rannoilla ei kasva yhtä tiheänä eikä kannattele yhtä hyvin.',
+          tiedosto: 'Islas flotantes de los Uros, Lago Titicaca, Perú, 2015-08-01, DD 33.JPG',
+          lyhyt: 'Totora-kaislan paksut juuret, joiden varaan kelluvat saaret rakennetaan.',
+          selite:
+            'Kuva näyttää totora-kaislan paksun, kelluvan juuriston läheltä – samaa ainesta, joka kannattaa koko saarta ja sen asukkaita.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Schoenoplectus californicus',
+        },
+        {
+          otsikko: 'Jättiläissammakko joka hengittää ihollaan',
+          teksti:
+            'Titicacan syvyyksissä elää maailman suurimpia täysin vedessä eläviä sammakoita, joiden iho roikkuu löysinä poimuina koko vartalon ympärillä. Ulkonäkö ei ole vika vaan hengityslaite: keuhkot ovat vain kolmasosan tavallista sammakkoa pienemmät, koska ohut ilma yli 3 800 metrin korkeudessa tarjoaa vähemmän happea hengitettäväksi. Löysä, poimuinen iho kasvattaa pinta-alaa niin paljon, että sammakko imee suurimman osan tarvitsemastaan hapesta suoraan kylmästä vedestä ihonsa läpi. 1960-luvun sukelluksessa löytyi jopa 60-senttinen, kilon painoinen yksilö, vaikka useimmat jäävät pienemmiksi. Laji on nykyään uhanalainen liikapyynnin ja saastumisen vuoksi.',
+          tiedosto: 'Lake Titicaca Frog (49693722948).jpg',
+          lyhyt: 'Titicacan jättiläissammakko tarhassa, iho löysinä poimuina.',
+          selite:
+            'Kuva otettiin Denver Zoon kasvatusohjelmassa vuonna 2020 ja näyttää Titicacan jättiläissammakon löysine ihopoimuineen.',
+          lahde: 'USFWS Mountain Prairie, Wikimedia Commons (PD)',
+          wiki: 'Titicaca water frog',
+        },
+        {
+          otsikko: 'Lentokyvytön sukeltajalintu',
+          teksti:
+            'Titicacan ruovikoissa pesii lintu, joka ei ole koskaan oppinut lentämään: siivet ovat niin lyhyet, ettei zampullín del Titicaca eli Titicacan uikku nouse ilmaan lainkaan. Se liikkuu juosten vettä pitkin siipiään apuna käyttäen ja sukeltaa erinomaisesti kalaa pyytäessään. Lähes koko ravinto, noin 95 prosenttia, koostuu pienistä orestias-särkikaloista; suurempia istutettuja hopeakaloja se ei syö, koska nielee vain alle 15-senttisiä saaliita. Laji on uhanalainen – yksilöitä on jäljellä enää muutama tuhat, ja suurin uhka on hukkuminen kalastajien verkkoihin. Se pesii vain totoraa kasvavissa rantalahdissa, joten kaislikko on linnulle elintärkeä.',
+          tiedosto: 'Titicaca Grebe.jpg',
+          lyhyt: 'Titicacan uikku eli zampullín del Titicaca vedessä.',
+          selite:
+            'Kuva näyttää Titicacan uikun uimassa järven pinnalla – lajin siivet ovat niin lyhyet, ettei se pysty lentämään lainkaan.',
+          lahde: 'CLAUDIOLD, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Titicaca grebe',
+        },
+      ],
+    },
+  ],
 };
