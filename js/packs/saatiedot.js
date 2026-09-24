@@ -3836,4 +3836,71 @@ export const SAATIEDOT = {
       + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
       + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N12-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain cayenne,darfur,mosambik,rashafun,tshadjarvi. Asemat: Cayenne,
+   * El Fasher (Darfur), Mosambikin saari, Ras Hafun, Bol (Tšad-järvi).
+   */
+  cayenne: {
+    lat: 4.9224,
+    lon: -52.3135,
+    keskilampo: [25.2, 25.4, 25.7, 25.6, 25.5, 25.2, 25.7, 26.5, 27.1, 27.3, 26, 25.5],
+    ylin: [27, 27, 28, 28, 28, 27, 28, 29, 31, 30, 29, 28],
+    alin: [23, 23, 24, 24, 23, 23, 23, 24, 24, 24, 23, 23],
+    sade: [287, 200, 171, 458, 467, 410, 238, 151, 51, 72, 261, 298],
+    luonnehdinta: 'Cayennessa lämpötila pysyy tasaisen kuumana, '
+      + '25–27 astetta ympäri vuoden. Sadekausi huhti–kesäkuussa '
+      + 'on runsain — toukokuu tuo yli 460 millimetriä — ja '
+      + 'syyskuu selvästi kuivempaa aikaa.',
+  },
+  darfur: {
+    lat: 13.6289,
+    lon: 25.3494,
+    keskilampo: [19.2, 21, 26.3, 28.6, 30.7, 31.2, 29.5, 25.7, 27.6, 28.6, 23, 19.7],
+    ylin: [27, 30, 35, 37, 39, 38, 35, 30, 33, 35, 30, 28],
+    alin: [11, 12, 18, 20, 23, 24, 24, 21, 22, 22, 16, 11],
+    sade: [0, 0, 0, 0, 1, 2, 28, 133, 31, 2, 0, 0],
+    luonnehdinta: 'Darfurissa sade on käytännössä olematon '
+      + 'lokakuusta kesäkuuhun. Elokuu tuo lyhyen sadekauden '
+      + 'huipun, ja lämpötila on korkeimmillaan touko–kesäkuussa, '
+      + 'yli 30 astetta.',
+  },
+  mosambik: {
+    lat: -15.0342,
+    lon: 40.7358,
+    keskilampo: [27, 27.1, 26.9, 26.4, 25.2, 23.8, 22.8, 23.1, 24.1, 25.6, 27, 27.5],
+    ylin: [29, 30, 29, 29, 28, 26, 26, 26, 27, 29, 30, 30],
+    alin: [25, 25, 24, 24, 23, 21, 20, 20, 21, 23, 24, 25],
+    sade: [258, 170, 157, 78, 18, 17, 30, 10, 8, 10, 68, 123],
+    luonnehdinta: 'Mosambikin saarella on trooppinen '
+      + 'monsuuni-ilmasto: joulu–maaliskuu on lämpimin ja '
+      + 'sateisin, eteläinen talvi (touko–syyskuu) selvästi '
+      + 'kuivempi ja viileämpi.',
+  },
+  rashafun: {
+    lat: 10.4306,
+    lon: 51.2683,
+    keskilampo: [24.6, 24.9, 25.9, 27.6, 28.5, 27.2, 26.1, 25.2, 25.5, 25.7, 25.7, 25.1],
+    ylin: [26, 26, 28, 29, 30, 29, 28, 28, 28, 27, 27, 26],
+    alin: [23, 24, 24, 26, 27, 25, 24, 23, 23, 24, 24, 24],
+    sade: [23, 3, 19, 10, 6, 0, 0, 0, 0, 13, 72, 57],
+    luonnehdinta: 'Ras Hafunin niemellä on kuiva, tasaisen '
+      + 'lämmin rannikkoilmasto, 25–29 astetta. Sadetta tulee '
+      + 'vain marras–joulukuun kaudella, kesäkuukaudet ovat '
+      + 'käytännössä sateettomia.',
+  },
+  tshadjarvi: {
+    lat: 13.4594,
+    lon: 14.7136,
+    keskilampo: [22.3, 24.4, 29.9, 32.8, 34.1, 33.8, 30.2, 28.1, 29.7, 30.9, 25.9, 23],
+    ylin: [29, 32, 38, 40, 41, 40, 35, 31, 33, 37, 32, 30],
+    alin: [15, 17, 22, 25, 27, 28, 26, 25, 26, 25, 19, 16],
+    sade: [0, 0, 0, 0, 4, 6, 45, 112, 47, 1, 0, 0],
+    luonnehdinta: 'Tšad-järven rannalla toukokuu on polttavan '
+      + 'kuuma, yli 34 astetta. Sadekausi heinä–elokuussa tuo '
+      + 'lyhyen helpotuksen, muulloin sadetta ei juuri ole.',
+  },
 };
