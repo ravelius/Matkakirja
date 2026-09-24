@@ -13,7 +13,7 @@
 //   MatkakirjaRadio_Kuvaus()           diagnoosi lokiin virheen hetkellä: tilat, odotuksen syy,
 //                                      virheet ja virhelokin viimeinen rivi (strdup, Unity vapauttaa)
 //   MatkakirjaRadio_Taso()             VU-mittari (Natiiviseppä 24.9., build 7): kuuluvan äänen taso 0…1
-//                                      (RMS ~30 ms ikkunoista, dBFS −60…0 → 0…1, × voimakkuus), nopea nousu ja
+//                                      (RMS ~30 ms ikkunoista, dBFS −60…0 → 0…1, ennen voimakkuutta), nopea nousu ja
 //                                      lyhyt vaimennus (~300 ms); −1 = tasoa ei saada (HLS: äänitappi ei
 //                                      toimi segmenttivirroilla) → Unity käyttää ajastettua varakuviota
 //   MatkakirjaRadio_Huippu()           sama huippuarvosta (|näyte| max), vaimennus ~1 s
@@ -210,7 +210,8 @@ static float VuAsteikko(float lineaarinen)
     }];
 }
 
-// Unityn luku joka kehys: nopea nousu, lyhyt vaimennus (taso ~300 ms, huippu ~1 s), × voimakkuus.
+// Unityn luku joka kehys (halpa): nopea nousu, lyhyt vaimennus (taso ~300 ms, huippu ~1 s). Lähetyksen
+// taso ENNEN voimakkuutta (Linssisepän sopimus: mittari näyttää aseman tasoa, vaiennus erikseen).
 - (float)taso:(BOOL)huippu
 {
     if (self.soitin == nil) return 0;
@@ -220,8 +221,8 @@ static float VuAsteikko(float lineaarinen)
     double dt = self.edellinenLuku > 0 ? nyt - self.edellinenLuku : 0;
     self.edellinenLuku = nyt;
     BOOL soi = !self.tauolla && self.soitin.timeControlStatus == AVPlayerTimeControlStatusPlaying;
-    float uusiTaso = soi ? VuAsteikko(vuRms.load()) * self.voimakkuus : 0;
-    float uusiHuippu = soi ? VuAsteikko(vuHuippu.load()) * self.voimakkuus : 0;
+    float uusiTaso = soi ? VuAsteikko(vuRms.load()) : 0;
+    float uusiHuippu = soi ? VuAsteikko(vuHuippu.load()) : 0;
     float vt = (float)exp(-dt / 0.3), vh = (float)exp(-dt / 1.0);
     self.nayttoTaso = uusiTaso > self.nayttoTaso ? uusiTaso : self.nayttoTaso * vt + uusiTaso * (1 - vt);
     self.nayttoHuippu = uusiHuippu > self.nayttoHuippu ? uusiHuippu : self.nayttoHuippu * vh;
