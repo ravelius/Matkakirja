@@ -120,6 +120,24 @@ kummallakaan aiemmalla epäonnistuneella yrityksellä ennen korjausta,
 eikä tälläkään kertaa ennen vapautusta (kamera-ajo alkoi vasta
 vapautuksen jälkeen molemmilla kerroilla, mikä on oikein).
 
+## PÄIVITYS 2: ajoituskorjaus vahvistettu (linssiseppa/radio-veto @ 263e831, a26b248)
+
+Linssiseppä vahvisti kamera-ajon alkavan irrotuksessa suunnitelman
+mukaisesti (ei bugi), mutta korjasi ketjun turhan Siirtymä-vaiheen pois
+vedolla tehdyn siirtymän jäljiltä. Käänsin uudelleen
+(`juna/b12+linssiseppa/radio-veto` @ 263e831) ja toistin saman
+`touch_path`-testin:
+
+- Ketju alkaa nyt SUORAAN `Viritys/Haku` (31,42 s) — **ei enää
+  `Viritys/Siirtyma`-vaihetta ennen sitä.**
+- `Viritys/Lukittuu` 32,62 s (+1,2 s Haun alusta, lähellä pyydettyä
+  "noin 1 s").
+- `Soi GHA Kumasi Info Radio Ghana` 32,96 s.
+- Kamera-ajo alkaa 31,43 s, samaan aikaan Haun kanssa (irrotuksessa,
+  ei kesken vedon) — vahvistettu suunnitelman mukaiseksi.
+
+PASS.
+
 ## Seuraava askel
 
 Pyydän Linssiseppää joko a) testaamaan vetoa oikealla sormella oikealla
