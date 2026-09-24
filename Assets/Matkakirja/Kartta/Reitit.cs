@@ -176,6 +176,9 @@ namespace Matkakirja
 
         bool nakyvat = true;
 
+        /// <summary>Reitit näkyvissä (KarttaKerrokset "reitit"); lento palauttaa tämän perillä.</summary>
+        public bool Nakyvissa => nakyvat;
+
         /// <summary>KarttaKerrokset "reitit": piirretyt reitit piiloon tai näkyviin.</summary>
         public void Nakyvat(bool nakyy)
         {

@@ -134,17 +134,31 @@ namespace Matkakirja.Editori
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
             kerrokset.nappula = nappula;
             nappula.koneMalli = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Matkakirja/Kartta/Malli/DC3.fbx");
-            // Hopea mutta pergamenttia tummempi, jotta kone erottuu kartasta; raita pelin punaisella.
-            nappula.koneMateriaali = Materiaali("Kone", "Universal Render Pipeline/Lit", new Color(0.55f, 0.57f, 0.60f));
-            nappula.koneMateriaali.SetFloat("_Metallic", 0.6f);
-            nappula.koneMateriaali.SetFloat("_Smoothness", 0.55f);
+            // Kone: yksi 4K-atlas (albedo, normaali, maski; ELOKUVALLINEN ALOITUSLENTO erä 1, 24.9.2026).
+            // Punainen raita (#9a3b2c) on atlaksessa; KoneRaita jää vain vanhan mallin "Raita"-osalle.
+            nappula.koneMateriaali = KoneMateriaali();
             nappula.raitaMateriaali = Materiaali("KoneRaita", "Universal Render Pipeline/Lit", new Color32(0x9a, 0x3b, 0x2c, 0xff));
-            nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.12f, 0.10f, 0.09f));
+            // Lasi: tumma, heijastava (taivaan heijastus tulee heijastusluotaimesta, erä 3).
+            nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.025f, 0.03f, 0.035f));
+            nappula.ikkunaMateriaali.SetFloat("_Metallic", 0.25f);
+            nappula.ikkunaMateriaali.SetFloat("_Smoothness", 0.95f);
+            // MAAMERKIT (omistajan kortti 24.9.): kaupunkien 3D-tunnusrakennukset, Kartta/Maamerkit/LUE.md.
+            var maamerkit = georefGo.AddComponent<Maamerkit>();
+            maamerkit.georeferenssi = georef;
+            maamerkit.mallit = Maamerkit.Oletustaulukko()
+                .Select(r => MaamerkkiMalli(r.id)).Where(m => m != null).ToArray();
+            nappula.maamerkit = maamerkit;
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();
             nappula.savu.georeferenssi = georef;
             nappula.savu.materiaali = Materiaali("Savu", "Matkakirja/Savu", Color.white);
+            // Lähtösumu ja pilvimeri (LENNON PINTA, omistaja 24.9. klo 13.5x).
+            var usvaGo = new GameObject("Usvalevy");
+            usvaGo.transform.SetParent(georefGo.transform, false);
+            nappula.usva = usvaGo.AddComponent<Usvalevy>();
+            nappula.usva.georeferenssi = georef;
+            nappula.usva.materiaali = Materiaali("Usva", "Matkakirja/Usva", new Color(0.93f, 0.94f, 0.96f));
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
@@ -278,6 +292,65 @@ namespace Matkakirja.Editori
         }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);
+
+        public const string MaamerkkiKansio = "Assets/Matkakirja/Kartta/Maamerkit";
+
+        /// <summary>
+        /// Maamerkin prefab (Maamerkit/&lt;id&gt;.fbx) ja URP Lit -materiaali atlaksella (Tekstuurit/&lt;id&gt;_vari.png,
+        /// albedo + leivottu AO, sRGB). null, jos FBX puuttuu.
+        /// </summary>
+        static Maamerkit.Malli MaamerkkiMalli(string id)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{MaamerkkiKansio}/{id}.fbx");
+            if (prefab == null) { Debug.LogWarning("MATKAKIRJA maamerkit: mallia ei löydy: " + id); return null; }
+            var m = Materiaali("Maamerkki-" + id, "Universal Render Pipeline/Lit", Color.white);
+            var atlas = AssetDatabase.LoadAssetAtPath<Texture2D>($"{MaamerkkiKansio}/Tekstuurit/{id}_vari.png");
+            if (atlas != null) m.SetTexture("_BaseMap", atlas);
+            else Debug.LogWarning("MATKAKIRJA maamerkit: atlasta ei löydy: " + id);
+            m.SetFloat("_Metallic", 0f);
+            m.SetFloat("_Smoothness", 0.15f);
+            EditorUtility.SetDirty(m);
+            return new Maamerkit.Malli { id = id, prefab = prefab, materiaali = m };
+        }
+
+        public const string KoneTekstuurit = "Assets/Matkakirja/Kartta/Malli/Tekstuurit/";
+
+        /// <summary>
+        /// DC-3:n atlasmateriaali (URP/Lit): _BaseMap = DC3_vari (sRGB), _BumpMap = DC3_normaali,
+        /// _MetallicGlossMap = DC3_maski (R metallisuus, A sileys; G = peittävyys → myös _OcclusionMap).
+        /// Ilman tekstuureja (esim. ennen tuontia) palataan vanhaan tasaiseen hopeaan.
+        /// </summary>
+        static Material KoneMateriaali()
+        {
+            var vari = AssetDatabase.LoadAssetAtPath<Texture2D>(KoneTekstuurit + "DC3_vari.png");
+            var normaali = AssetDatabase.LoadAssetAtPath<Texture2D>(KoneTekstuurit + "DC3_normaali.png");
+            var maski = AssetDatabase.LoadAssetAtPath<Texture2D>(KoneTekstuurit + "DC3_maski.png");
+            if (vari == null || normaali == null || maski == null)
+            {
+                Debug.LogWarning("MATKAKIRJA rakennus: DC-3:n tekstuureja ei löydy, kone tasaisella hopealla");
+                // Hopea mutta pergamenttia tummempi, jotta kone erottuu kartasta.
+                var tasainen = Materiaali("Kone", "Universal Render Pipeline/Lit", new Color(0.55f, 0.57f, 0.60f));
+                tasainen.SetFloat("_Metallic", 0.6f);
+                tasainen.SetFloat("_Smoothness", 0.55f);
+                return tasainen;
+            }
+            var m = Materiaali("Kone", "Universal Render Pipeline/Lit", Color.white);
+            m.SetTexture("_BaseMap", vari);
+            m.SetTexture("_MainTex", vari);
+            m.SetTexture("_BumpMap", normaali);
+            m.SetFloat("_BumpScale", 1f);
+            m.EnableKeyword("_NORMALMAP");
+            m.SetTexture("_MetallicGlossMap", maski);
+            m.EnableKeyword("_METALLICSPECGLOSSMAP");
+            m.SetFloat("_Metallic", 1f);
+            m.SetFloat("_Smoothness", 1f);               // kartan A-kanavan kerroin
+            m.SetFloat("_SmoothnessTextureChannel", 0f); // sileys metallikartan alfasta
+            m.SetTexture("_OcclusionMap", maski);        // URP lukee peittävyyden G-kanavasta
+            m.SetFloat("_OcclusionStrength", 1f);
+            m.EnableKeyword("_OCCLUSIONMAP");
+            EditorUtility.SetDirty(m);
+            return m;
+        }
 
         /// <summary>Materiaali assetiksi annetulla shaderilla ja värillä.</summary>
         static Material Materiaali(string nimi, string shader, Color vari)
@@ -466,6 +539,44 @@ namespace Matkakirja.Editori
             plist.ReadFromFile(plistPolku);
             plist.root.SetBoolean("ITSAppUsesNonExemptEncryption", false);
             plist.WriteToFile(plistPolku);
+        }
+    }
+
+    /// <summary>
+    /// DC-3:n tekstuurien tuontiasetukset nimen perusteella (Malli/Tekstuurit/): 4K, mipit, anisotropia;
+    /// *_normaali = NormalMap, *_maski = lineaarinen (sRGB pois, alfa kartasta), *_vari = sRGB ilman alfaa.
+    /// Ajetaan jokaisessa tuonnissa, joten .meta-tiedostoon ei tarvitse asettaa mitään käsin.
+    /// </summary>
+    sealed class KoneTekstuurienTuonti : AssetPostprocessor
+    {
+        void OnPreprocessTexture()
+        {
+            if (!assetPath.StartsWith(Rakennus.KoneTekstuurit)) return;
+            var ti = (TextureImporter)assetImporter;
+            string nimi = Path.GetFileNameWithoutExtension(assetPath);
+            ti.maxTextureSize = 4096;
+            ti.mipmapEnabled = true;
+            ti.anisoLevel = 4;
+            ti.filterMode = FilterMode.Trilinear;
+            ti.wrapMode = TextureWrapMode.Clamp;
+            if (nimi.EndsWith("_normaali"))
+            {
+                ti.textureType = TextureImporterType.NormalMap;
+                ti.sRGBTexture = false;
+            }
+            else if (nimi.EndsWith("_maski"))
+            {
+                ti.textureType = TextureImporterType.Default;
+                ti.sRGBTexture = false;
+                ti.alphaSource = TextureImporterAlphaSource.FromInput;
+                ti.alphaIsTransparency = false;
+            }
+            else
+            {
+                ti.textureType = TextureImporterType.Default;
+                ti.sRGBTexture = true;
+                ti.alphaSource = TextureImporterAlphaSource.None;
+            }
         }
     }
 }

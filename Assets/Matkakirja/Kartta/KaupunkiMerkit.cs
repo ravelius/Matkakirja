@@ -99,9 +99,11 @@ namespace Matkakirja
         /// merkki näkyy (NaytaVain-suodatin, pallon etupuoli, ei aloitusporttia PalloKierto.PorttiSumea), ja
         /// sen koko on vakio näytön pisteinä (Pistekerroin). Napautus renkaan sisällä osuu kaupunkiin
         /// (KaupunkiNapautettu). Kutsun voi tehdä ennen kuin merkit on rakennettu; renkaat tulevat valmistuessa.
+        /// <paramref name="vari"/> korvaa kaikkien renkaiden värin (lennon lähtö ja kohde punaisina, omistaja 24.9.).
         /// </summary>
-        public void Renkaat(IEnumerable<string> idt, string valittu = null)
+        public void Renkaat(IEnumerable<string> idt, string valittu = null, Color? vari = null)
         {
+            rengasVari = vari;
             rengasIdt.Clear();
             if (idt != null)
                 foreach (var id in idt)
@@ -112,6 +114,7 @@ namespace Matkakirja
 
         readonly HashSet<string> rengasIdt = new HashSet<string>();
         string rengasValittu;
+        Color? rengasVari;
         MaterialPropertyBlock rengasLohko;
         bool rengasVaroitettu;
         /// <summary>Neliön sivu pisteinä: suurin säde (1,16 × säde) + puolikas viiva + reunan pehmennys.</summary>
@@ -141,7 +144,7 @@ namespace Matkakirja
                 bool valittu = m.kaupunki.id == rengasValittu;
                 m.rengas.localScale = new Vector3(sivu, sivu, 1);
                 rengasLohko.Clear();
-                rengasLohko.SetColor("_BaseColor", valittu ? rengasValittuVari : perus);
+                rengasLohko.SetColor("_BaseColor", rengasVari ?? (valittu ? rengasValittuVari : perus));
                 rengasLohko.SetFloat("_Paksuus", valittu ? rengasValittuPaksuus : rengasPaksuus);
                 rengasLohko.SetFloat("_Sade", rengasSade);
                 rengasLohko.SetFloat("_Koko", sivu);

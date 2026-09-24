@@ -402,8 +402,12 @@ namespace Matkakirja.Natiivi
             valintaNappi.style.display = DisplayStyle.None;
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;
+            // Intro soi pelin kautta (Pelikoodari: PeliOhjain.SoitaIntro — avauksen äänisekoitus seuraa sitä);
+            // ilman pelisilmukkaa UI soittaa sen itse.
+            var o = PeliOhjain.Instanssi;
+            if (o != null) o.SoitaIntro(); else Puhe.Hae()?.Soita(IntroPuhe);
             var nyt = DateTime.Now;
-            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, true);
+            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, false);
         }
 
         /// <summary>
@@ -413,6 +417,22 @@ namespace Matkakirja.Natiivi
         void AvausPallollaValmis()
         {
             avausPallolla = false;
+            // Ulos-zoomi ja pulu vasta, kun intron luenta on oikeasti loppunut (viimeinen sana ilmestyy ennen
+            // äänen loppua); enintään 6 s odotus.
+            float alku = Time.unscaledTime;
+            IVisualElementScheduledItem odotus = null;
+            odotus = juuri.schedule.Execute(() =>
+            {
+                var p = Puhe.Instanssi;
+                bool soi = p != null && p.Soi && (p.SoivaUrl ?? "").Contains(Tunniste(IntroPuhe));
+                if (soi && Time.unscaledTime - alku < 6f) return;
+                odotus?.Pause();
+                UlosZoomiJaPulu();
+            }).Every(100);
+        }
+
+        void UlosZoomiJaPulu()
+        {
             juuri.schedule.Execute(() =>
             {
                 if (lennolla || !ValitseePallolla) return;
@@ -421,7 +441,7 @@ namespace Matkakirja.Natiivi
                 if (valintaKierto != null)
                     valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), UlosZoominKesto, null, UlosZoominPehmennys);
                 LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
-            }).StartingIn(900);
+            }).StartingIn(300);
         }
 
         void Jatka()

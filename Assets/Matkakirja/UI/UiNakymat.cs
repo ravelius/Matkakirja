@@ -117,18 +117,25 @@ namespace Matkakirja.Natiivi
         {
             var v = Linssit.Valitsin;
             v.Avaaja = Tilarivi.Valikko;
-            v.LisaErotin();
-            v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
-            v.LisaRivi("Äänet", Ikonit.Viiva["kaiutin"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet));
-            v.LisaRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
-            v.LisaErotin();
-            v.LisaRivi("Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
-            v.LisaRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
-            v.LisaRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
-            v.LisaRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
+            // Omistaja 24.9.2026 klo 13.3x: rivi 1 äänikytkimet, rivi 2 Uusi peli · Muut · Kehittäjä; Muut avaa oman
+            // paneelin (Offline-kartat, Asetukset, Ehdota, Tekijätiedot, Mitä uutta); viivan alla LINSSIT.
+            var aanet = v.LisaNappirivi();
+            foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
+            {
+                var kk = k;
+                v.LisaKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
+            }
+            var toiminnot = v.LisaNappirivi();
+            v.LisaNappi(toiminnot, "Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
+            v.LisaMuutNappi(toiminnot, "Muut", Ikonit.Valikko);
 #if !MATKAKIRJA_APPSTORE
-            v.LisaRivi("Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+            v.LisaNappi(toiminnot, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
 #endif
+            v.LisaMuuRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
+            v.LisaMuuRivi("Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            v.LisaMuuRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
+            v.LisaMuuRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
+            v.LisaMuuRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
         }
 
         /// <summary>

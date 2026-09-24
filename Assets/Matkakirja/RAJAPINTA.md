@@ -145,16 +145,23 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 | `IEnumerator Hae<T>(kokoelma, Action<T[]>)` | valmis | JsonUtility-tyypitetty kokoelma (uusin.json → versio → välimuisti laitteella). |
 | `IEnumerator HaeTeksti(kokoelma, Action<string>)` | valmis | Raakateksti (MiniJson sisäkkäisille taulukoille). |
 
-## 8b. Radion VU-taso — `Assets/Plugins/iOS/MatkakirjaRadio.mm` (Natiiviseppä, build 7)
+## 8b. Radion VU-taso — `Assets/Plugins/iOS/MatkakirjaRadio.mm` (Natiiviseppä, build 8: oma AVAudioEngine-soitin)
 
 | Funktio (`[DllImport("__Internal")]`) | Tila | Merkitys |
 |---|---|---|
-| `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; tauolla/ei soi → laskee nollaan. **−1** = ei mitattavissa (HLS-virta: MTAudioProcessingTap ei toimi segmenteillä) → käytä webin ajastettua varakuviota. Halpa: luetaan joka kehys (Linssiseppä: RadioVirta.Taso). |
-| `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (|näyte| max), vaimennus ~1 s. |
-| `float MatkakirjaRadio_Rms()` | valmis | Raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta eikä dB-asteikkoa, ennen voimakkuutta; 0 ei soi, −1 HLS. VuMittari tasoittaa itse. |
+| `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; 0 kun ei soi (tila ≠ 2) tai tauolla. **−1** vain AVPlayer-varapolulla (HLS/.m3u8, Ogg/Opus tai muu tuntematon muoto, URLSessionin varhainen virhe, ei ääntä 8 s:ssa) → webin ajastettu varakuvio. Halpa: luetaan joka kehys (atomit, ei lukkoja). |
+| `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (\|näyte\| max), vaimennus ~1 s. |
+| `float MatkakirjaRadio_Rms()` | valmis | Raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta eikä dB-asteikkoa, ennen voimakkuutta; 0 ei soi, −1 varapolku. VuMittari tasoittaa itse. |
 
-Mittaus: MTAudioProcessingTap AVPlayerItemin audioMixissä (progressiivinen MP3/AAC), MediaToolbox linkitetään
-Rakennus.Kehykset-jälkikäsittelyssä. Koskee kaikkia MatkakirjaRadio_Avaa-virtoja (myös lehden mediarivi).
+Mittaus (build 8): progressiiviset http(s)-virrat (Icecast/Shoutcast mp3, aac/aacp ADTS, myös Shoutcast v1
+"ICY 200 OK") soitetaan omalla moottorilla URLSession → AudioFileStream → AudioConverter (Float32) →
+AVAudioPlayerNode → mainMixerNode, ja taso lasketaan `installTapOnBus`-tapista soitinsolmun ulostulosta.
+Tila 2 vasta kun ajastettu ääni oikeasti soi; puskurointi 1,5 s (alivuodon jälkeen +1 s, enintään 4 s),
+ajastettua enintään ~6 s (live pysyy livenä). `MatkakirjaRadio_Kuvaus()` kertoo polun (engine/avplayer),
+Content-Typen, muodon, ajastetut sekunnit, alivuodot, tavut, tappikutsut ja varapolun syyn.
+ATS: `NSAllowsArbitraryLoadsForMedia` ei koske URLSessionia → http://-osoitteet menevät varapolulle (VU −1).
+MediaToolbox-linkitystä (Rakennus.Kehykset) ei enää tarvita, mutta se on harmiton.
+Koskee kaikkia MatkakirjaRadio_Avaa-virtoja (myös lehden mediarivi).
 
 ## 9. Testaus
 
