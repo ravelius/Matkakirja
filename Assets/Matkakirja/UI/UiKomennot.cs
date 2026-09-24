@@ -114,6 +114,7 @@
 //                                             kuvaus + nosto) | kaari (tarinakaaren saapuminen) | havainto (isoisän
 //                                             paikkatieto, "Katso kuva") | satunnainen | reitti ("Matkalla — X", lähderivi);
 //                                             ilman lajia kuten saapuessa. Esim. tanger havainto, bergen reitti, ateena aarre.
+//   ui matkakirja auki                        avaa lapuksi alkaneen kortin (web asetaPaivakirjanKoko(false))
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
 //   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
@@ -448,6 +449,8 @@ namespace Matkakirja.Natiivi
                 }
                 case "matkakirja":
                 {
+                    // Web asetaPaivakirjanKoko(false): puhelimella merkintä alkaa lappuna, "auki" avaa sen.
+                    if (loput.Trim().ToLowerInvariant() == "auki") { ui.Matkakirja.Avaa(); Kirjaa("matkakirja auki: " + ui.Matkakirja.Tila); return null; }
                     var mk = loput.Split(' ');
                     string kaup = mk[0].Length > 0 ? mk[0].ToLowerInvariant() : "tanger";
                     string laji = mk.Length > 1 ? mk[1].ToLowerInvariant() : "";
