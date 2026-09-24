@@ -403,7 +403,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web naytaFactValokuva: muistikirjan kyljen pikkukuva (pinon ensimmäinen), napautus avaa
-        /// koko pinon (web postikortti; natiivissa luentakuvien selattava suurennos). Latausvirhe
+        /// koko pinon postikortteina (web naytaPostikortti, Postikortti alla). Latausvirhe
         /// piilottaa pikkukuvan (web factValokuvaKuva error). Ei userDataa: luennan pikkukuvien
         /// sarja (LisaaPikkukuva) ei poimi tätä.
         /// </summary>
@@ -420,7 +420,7 @@ namespace Matkakirja.Natiivi
             el.RegisterCallback<PointerDownEvent>(e =>
             {
                 e.StopPropagation();
-                Kuvat.Suurenna(pino, 0);
+                Postikortti.Avaa(pino); // E13: web naytaPostikortti
             });
         }
 
@@ -505,6 +505,86 @@ namespace Matkakirja.Natiivi
                 kaariTaso[i] = Mathf.MoveTowards(kaariTaso[i], tavoite, nopeus);
                 kaaret[i].style.opacity = kaariTaso[i];
             }
+        }
+    }
+
+    /// <summary>
+    /// E13 (web naytaPostikortti ja postikorttiSulkija, css .postikortti): matkakirjan valokuvapino vinoina
+    /// postikortteina ruudun keskellä (leveys min(84 %, 460), nosto −52 %). Päällimmäinen kallistuu −4,5°,
+    /// alemmat +4° ja siirtyvät (14, 30) px ilman tekstejä. Kuva-ikkuna min(48 % korkeudesta, 330 px) rajattuna,
+    /// kuvateksti 0,86rem ja lähde 0,6rem kirjoituskoneella, laskuri "i/n" oikeassa alakulmassa. Pinossa
+    /// vasen reunakaista (24 %) vie edelliseen ja oikea seuraavaan, keskiosa pitää kortin; napautus kortin
+    /// ohi sulkee (yhden kuvan kortti mistä tahansa). Ei varjoa eikä harmaasävyä (UITK:ssa ei box-shadow- eikä
+    /// filter-ominaisuutta).
+    /// </summary>
+    public static class Postikortti
+    {
+        static VisualElement verho;
+        static readonly List<VisualElement> kortit = new List<VisualElement>();
+        static int indeksi;
+
+        public static void Avaa(List<VirtaKuva> pino)
+        {
+            Sulje();
+            if (pino == null || pino.Count == 0) return;
+            var juuri = UiKerros.Hae().Juuri(UiKerros.Traileri);
+            verho = Rakenne.El("mk-postikortti__verho", juuri);
+            verho.RegisterCallback<PointerDownEvent>(Napautus);
+            float w = juuri.panel != null ? juuri.panel.visualTree.layout.width : 393f;
+            float h = juuri.panel != null ? juuri.panel.visualTree.layout.height : 852f;
+            var pinoEl = Rakenne.El("mk-postikortti", verho, PickingMode.Ignore);
+            pinoEl.style.width = Mathf.Round(Mathf.Min(w * 0.84f, 460f));
+            kortit.Clear();
+            indeksi = 0;
+            for (int i = 0; i < pino.Count; i++)
+            {
+                var k = pino[i];
+                var kortti = Rakenne.El("mk-postikortti__kortti", pinoEl, PickingMode.Ignore);
+                var kuva = Rakenne.El("mk-postikortti__kuva", kortti, PickingMode.Ignore);
+                kuva.style.height = Mathf.Round(Mathf.Min(h * 0.48f, 330f));
+                Kuvat.Hae(k.Osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
+                var teksti = Rakenne.Teksti(k.Selite ?? k.Lyhyt ?? "", "mk-postikortti__teksti", kortti);
+                Kirjasimet.Aseta(teksti, Kirjasin.Kone);
+                teksti.style.display = string.IsNullOrEmpty(teksti.text) ? DisplayStyle.None : DisplayStyle.Flex;
+                if (!string.IsNullOrEmpty(k.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lahde, "mk-postikortti__lahde", kortti), Kirjasin.Kone);
+                if (pino.Count > 1) Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1}/{pino.Count}", "mk-postikortti__laskuri", kortti), Kirjasin.Kone);
+                kortit.Add(kortti);
+            }
+            Jarjesta();
+        }
+
+        public static bool Auki => verho != null;
+
+        public static void Sulje()
+        {
+            verho?.RemoveFromHierarchy();
+            verho = null;
+            kortit.Clear();
+        }
+
+        /// <summary>Päällimmäinen ilman alla-luokkaa ja muiden päälle; muut sen alle pinoon.</summary>
+        static void Jarjesta()
+        {
+            for (int i = 0; i < kortit.Count; i++)
+                kortit[i].EnableInClassList("mk-postikortti__kortti--alla", i != indeksi);
+            if (kortit.Count > 0) kortit[indeksi].BringToFront();
+        }
+
+        static void Napautus(PointerDownEvent e)
+        {
+            e.StopPropagation();
+            if (kortit.Count == 0) { Sulje(); return; }
+            var paalla = kortit[indeksi];
+            var p = (Vector2)e.position;
+            bool kortilla = kortit.Any(k => k.worldBound.Contains(p));
+            if (kortit.Count < 2 || !kortilla) { Sulje(); return; }
+            // Web gallerianVyohyke: reunakaistat 24 % kortin leveydestä, keskiosa 52 % pitää kortin.
+            var r = paalla.worldBound;
+            float x = (p.x - r.xMin) / Mathf.Max(1f, r.width);
+            int askel = x < 0.24f ? -1 : x > 0.76f ? 1 : 0;
+            if (askel == 0) return;
+            indeksi = (indeksi + askel + kortit.Count) % kortit.Count;
+            Jarjesta();
         }
     }
 }
