@@ -65,6 +65,13 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  kalgoorlie: {
+    // Hannan Streetin kultakenttäkeskusta laajennettuna pohjoiseen, jotta
+    // Paddy Hannanin patsas (Wilson St, -30.7490/121.4706) ja Hannans
+    // North Tourist Mine (-30.7268/121.4716, n. 2,4 km pohjoiseen) mahtuvat
+    // molemmat samaan rajaukseen (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492 },
+  },
   berliini: {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
