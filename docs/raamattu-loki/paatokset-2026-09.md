@@ -4535,3 +4535,7 @@ Puu Wood027, kehykset Metal009 messingin sävyllä, lasi Plastic013B, paperi Pap
 ## LAITETESTAAJA (#3076 fccad7ec7): WEB-KUVAPARIT 3/12 RIVILLE MITATTUNA SAMA; 'MITA UUTTA' ERI (NATIIVISSA TAYSI MUUTOSLOKI, WEBISSA VAIN 'PELI PAIVITTYI') (24.9.2026 klo 19.55)
 
 Fable: 'Mitä uutta' on omistajan ☰ → Muut -linjauksen rivi (24.9. klo 13.3x), natiivin täysi muutosloki hyväksytty poikkeama — merkitään pariteettiraporttiin. Tutki-napin ja Julisterivin web-vastineet eivät auenneet funktiokutsuilla (mitta puuttuu). Laitetestaaja jatkaa ~19 riviä omilla simeillään.
+
+## KIIREELLINEN: #3081 (SKEEMA 1.34–1.35) MAINISSA ENNEN FOKUSPOHJAA → 1.34 RIKKOISI NOSTOTASON BUILDEISSA 9–10; JULKAISIJA PIDATTAA TUOTANTOVIENNIN v46:EEN, FOKUSPOHJA BUILD 11:EEN HETI (24.9.2026 klo 20.00)
+
+Fablen virhe: vapautti #3081:n luonnostilasta build 10:n TestFlight-tiedolla, vaikka fokuspohja 38e424d oli siirretty build 11:een. Toimet: A) Julkaisija pidättää 1.x-paketin 1.34-viennin (jos jo ämpärissä, osoitin takaisin v46:een); B) Natiiviseppä mergeää fokuspohjan build 11:een ja kuvaa NOR/FRA 1.34-koepaketilla; Linssiseppä tarkistaa MaatAineiston kamerasovituksen bboxiin. Oppi: luonnos-PR:n vapautusehto tarkistetaan luovutuksesta sanatarkasti.
