@@ -219,6 +219,9 @@ namespace Matkakirja.Natiivi
                 vieritys.Clear();
                 osat = PalauteLomake.Kentat(vieritys, PalauteLomake.Tilanne(), UiKerros.Valikot);
                 vieritys.scrollOffset = Vector2.zero;
+                // Web avaa lomakkeen showModalilla top-layeriin, auki olevan lehden päälle: valikkokerros
+                // nousee lehden (ja lehden ajaksi nostetun pulun) yläpuolelle lomakkeen ajaksi.
+                UiKerros.Hae().AsetaJarjestys(UiKerros.Valikot, UiKerros.Traileri + 4);
                 Rakenne.Nayta(himmennys, true, 320);
                 SyoteLukko.Esta(this);
             }
@@ -239,6 +242,8 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(himmennys, false, 250);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(UiKerros.Valikot).focusController?.focusedElement?.Blur();
+            // Kerros palaa paikalleen vasta häivytyksen jälkeen, ettei lomake putoa lehden alle kesken häivytyksen.
+            himmennys.schedule.Execute(() => { if (!Auki) UiKerros.Hae().AsetaJarjestys(UiKerros.Valikot, UiKerros.Valikot); }).StartingIn(260);
         }
     }
 
