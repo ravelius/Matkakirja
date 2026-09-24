@@ -2081,3 +2081,21 @@
     text-overflow: ellipsis;
     color: #d9ccb4;
 }
+
+/* Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kehyksetön, reunoiltaan häipyvä
+ * (Valokeila.HaeKertomuskuva), kasvaa 0,6 → 1 pisteestä ylöspäin pienellä ylityksellä. */
+.mk-aikajana-kertomuskuva {
+    position: absolute;
+    -unity-background-scale-mode: stretch-to-fill;
+    transform-origin: center bottom;
+    scale: 0.6 0.6;
+    opacity: 0;
+    transition-property: scale, opacity;
+    transition-duration: 0.5s, 0.4s;
+    transition-timing-function: ease-out-back, ease;
+}
+
+.mk-aikajana-kertomuskuva.mk-esilla {
+    scale: 1 1;
+    opacity: 1;
+}

@@ -62,6 +62,9 @@ namespace Matkakirja.Natiivi
         readonly Button tauko, edellinen, seuraava, kaynnista, kahva, lueJuttu;
         readonly Tiedeliitenakyma tiedeliite;
         readonly Keksijakaruselli karuselli;
+        // Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kohdepisteen yläpuolella, seuraa pistettä.
+        readonly VisualElement kertomuskuva;
+        bool kertomuskuvaEsilla;
         Tila tila;
         string kelloTeksti;
         int pysakki = -1, jakso = -1;
@@ -155,6 +158,13 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(lueJuttu, Kirjasin.KoneLihava);
             lueJuttu.style.display = DisplayStyle.None;
             tiedeliite = new Tiedeliitenakyma(kerros);
+
+            // Löytökuva kerroksen juuressa (paneelin koordinaatit = IhmisenMatkaKerros.KuvanPiste muunnettuna).
+            kertomuskuva = Rakenne.El("mk-aikajana-kertomuskuva", kerros.Juuri(LinssiUi.Kerros));
+            kertomuskuva.style.display = DisplayStyle.None;
+            // Napautus avaa löytöpaikan kortin (web kuvan napautus → nostokortti).
+            kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla) { NaytaLappu(); paneeli.style.display = DisplayStyle.Flex; } });
+            kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Keksijäkaruselli alareunassa (web .aikajana-nauha): veto ja napautus kelaavat kaarta tauolle.
             karuselli = new Keksijakaruselli(turva);
@@ -332,6 +342,7 @@ namespace Matkakirja.Natiivi
             PoisHavainne();
             lopussa = false;
             karuselli.Nayta(false);
+            PiilotaKertomuskuva();
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -802,8 +813,10 @@ namespace Matkakirja.Natiivi
         void EsittelyPoisKaynnissa()
         {
             if (esittely.style.display.value != DisplayStyle.Flex) return;
-            // Vain käynnissä olevalle esitykselle: aloituksen musta ja valmistelu eivät vie laatikkoa.
-            if (LinssiUi.IhmisenMatka?.Esitys?.Kaynnissa != true) return;
+            // Vain alkaneelle esitykselle (käynnissä tai jakso valittu, myös tauolla aikaselaimesta tai
+            // testikomennosta): aloituksen musta ja valmistelu eivät vie laatikkoa.
+            var e = LinssiUi.IhmisenMatka?.Esitys;
+            if (e == null || (!e.Kaynnissa && e.I < 0)) return;
             yritys?.Pause();
             AsetaKaynnistaOdottaa(false);
             Rakenne.Nayta(esittely, false, 250);
@@ -870,10 +883,13 @@ namespace Matkakirja.Natiivi
             Ala(Tila.Ihminen);
             PoisHavainne();
             SaadaTekstit(true);
-            if (tunnus == null) { paneeli.style.display = DisplayStyle.None; paikka.text = ""; return; }
+            // Kortti ei ole esillä oikeassa reunassa (web: ilmiöpaneeli ei ole esityksessä käytössä); se
+            // aukeaa löytökuvan napautuksesta.
+            paneeli.style.display = DisplayStyle.None;
+            if (tunnus == null) { PiilotaKertomuskuva(); paikka.text = ""; return; }
             if (ihminen == null) { LataaIhminen(() => NaytaLoytopaikka(tunnus)); return; }
             var p = ihminen.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? ihminen.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);
-            if (p == null) { paneeli.style.display = DisplayStyle.None; return; }
+            if (p == null) { PiilotaKertomuskuva(); return; }
             paikka.text = Liita(p.Paikka, p.Maa) ?? "";
             pVuosi.text = p.Ajoitus ?? "";
             pOtsikko.text = p.Otsikko ?? "";
@@ -884,14 +900,57 @@ namespace Matkakirja.Natiivi
             pTeksti.style.display = pTeksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             paneelinKuva.style.display = DisplayStyle.None;
             paneelinKuva.style.backgroundImage = StyleKeyword.None;
+            PiilotaKertomuskuva();
             if (!string.IsNullOrEmpty(p.Kuva))
+            {
                 Kuvat.Hae(p.Kuva, t =>
                 {
                     if (t == null || tila != Tila.Ihminen) return;
                     paneelinKuva.style.backgroundImage = new StyleBackground(t);
                     paneelinKuva.style.display = DisplayStyle.Flex;
                 });
-            paneeli.style.display = DisplayStyle.Flex;
+                int versio = ++kertomuskuvaVersio;
+                Valokeila.HaeKertomuskuva(p.Kuva, t =>
+                {
+                    if (t == null || tila != Tila.Ihminen || versio != kertomuskuvaVersio) return;
+                    kertomuskuva.style.backgroundImage = new StyleBackground(t);
+                    kertomuskuvaEsilla = true;
+                    kertomuskuva.style.display = DisplayStyle.Flex;
+                    SijoitaKertomuskuva();
+                    kertomuskuva.schedule.Execute(() => { if (kertomuskuvaEsilla && versio == kertomuskuvaVersio) kertomuskuva.AddToClassList("mk-esilla"); });
+                });
+            }
+        }
+
+        int kertomuskuvaVersio;
+
+        void PiilotaKertomuskuva()
+        {
+            kertomuskuvaVersio++;
+            kertomuskuvaEsilla = false;
+            kertomuskuva.RemoveFromClassList("mk-esilla");
+            kertomuskuva.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>
+        /// Joka ruutu: löytökuva kohdepisteen yläpuolelle (web translate(−50 %, −100 % − 1,1 rem)), leveys
+        /// 66 % ruudusta enintään 560, 3:2. Piste pallon takana (null) → kuva piiloon siksi aikaa.
+        /// </summary>
+        void SijoitaKertomuskuva()
+        {
+            if (!kertomuskuvaEsilla) return;
+            var juuri = kertomuskuva.parent;
+            var piste = IhmisenMatkaKerros.KuvanPiste;
+            if (!piste.HasValue || juuri?.panel == null) { kertomuskuva.style.visibility = Visibility.Hidden; return; }
+            var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y));
+            float leveys = juuri.resolvedStyle.width;
+            if (float.IsNaN(leveys) || leveys <= 0) return;
+            float w = Mathf.Min(leveys * 0.66f, 560f), h = Mathf.Round(w * 2f / 3f);
+            kertomuskuva.style.visibility = Visibility.Visible;
+            kertomuskuva.style.width = w;
+            kertomuskuva.style.height = h;
+            kertomuskuva.style.left = p.x - w / 2f;
+            kertomuskuva.style.top = p.y - h - 17.6f;
         }
 
         void IhmisenLoppu()

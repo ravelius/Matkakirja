@@ -23,21 +23,36 @@ namespace Matkakirja.Natiivi
         const int Katto = 12;
 
         /// <summary>Maskattu kuva (välimuistista tai laskettuna); null, jos kuvaa ei saatu.</summary>
-        public static void Hae(string osoite, int siemen, Action<Texture2D> valmis)
+        public static void Hae(string osoite, int siemen, Action<Texture2D> valmis) =>
+            Hae(osoite, "#" + siemen, Leveys, Korkeus, () => Soikiot(siemen), valmis);
+
+        public const int KertomusL = 600, KertomusK = 400;
+        static readonly float[] KertomusAsemat = { 0.34f, 0.58f, 0.78f, 0.94f }, KertomusArvot = { 1f, 0.72f, 0.2f, 0f };
+
+        /// <summary>
+        /// Ihmisen matkan löytökuva (web .aikajana-kertomuskuva img): 3:2, yksi soikio
+        /// radial-gradient(ellipse 52% 52%, #000 34%, .72 58%, .2 78%, transparent 94%).
+        /// </summary>
+        public static void HaeKertomuskuva(string osoite, Action<Texture2D> valmis) =>
+            Hae(osoite, "#kertomus", KertomusL, KertomusK,
+                () => new List<Soikio> { new Soikio { Cx = 50, Cy = 50, Rx = 52, Ry = 52, Asemat = KertomusAsemat, Arvot = KertomusArvot } }, valmis);
+
+        static void Hae(string osoite, string muoto, int leveys, int korkeus, Func<List<Soikio>> soikiot, Action<Texture2D> valmis)
         {
-            string avain = osoite + "#" + siemen;
+            string avain = osoite + muoto;
             if (muisti.TryGetValue(avain, out var t) && t != null) { valmis?.Invoke(t); return; }
             Kuvat.Hae(osoite, lahde =>
             {
                 if (lahde == null) { valmis?.Invoke(null); return; }
                 if (muisti.TryGetValue(avain, out var v) && v != null) { valmis?.Invoke(v); return; }
                 Color32[] px;
-                try { px = Lue(lahde); }
+                try { px = Lue(lahde, leveys, korkeus); }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui valokeila: " + e.Message); valmis?.Invoke(lahde); return; }
-                Task.Run(() => Maskaa(px, siemen)).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
+                var muodot = soikiot();
+                Task.Run(() => Maskaa(px, leveys, korkeus, muodot)).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
                 {
                     if (tt.IsFaulted) { valmis?.Invoke(lahde); return; }
-                    var tulos = new Texture2D(Leveys, Korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "valokeila " + osoite };
+                    var tulos = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "valokeila " + osoite };
                     tulos.SetPixels32(tt.Result);
                     tulos.Apply(false, true);
                     Muista(avain, tulos);
@@ -60,29 +75,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lähde 16:10-rajauksella (keskeltä, peittäen) luettavaksi pikselitaulukoksi.</summary>
-        static Color32[] Lue(Texture2D lahde)
+        static Color32[] Lue(Texture2D lahde, int leveys, int korkeus)
         {
-            float suhde = (float)lahde.width / Mathf.Max(1, lahde.height), kohde = (float)Leveys / Korkeus;
-            Vector2 skaala = Vector2.one, siirto = Vector2.zero;
-            if (suhde > kohde) { skaala.x = kohde / suhde; siirto.x = (1f - skaala.x) * 0.5f; }
-            else { skaala.y = suhde / kohde; siirto.y = (1f - skaala.y) * 0.5f; }
-            var rt = RenderTexture.GetTemporary(Leveys, Korkeus, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
-            var ennen = RenderTexture.active;
-            try
-            {
-                Graphics.Blit(lahde, rt, skaala, siirto);
-                RenderTexture.active = rt;
-                var luku = new Texture2D(Leveys, Korkeus, TextureFormat.RGBA32, false);
-                luku.ReadPixels(new Rect(0, 0, Leveys, Korkeus), 0, 0, false);
-                var px = luku.GetPixels32();
-                UnityEngine.Object.Destroy(luku);
-                return px;
-            }
-            finally
-            {
-                RenderTexture.active = ennen;
-                RenderTexture.ReleaseTemporary(rt);
-            }
+            var luku = Kuvat.Pienenna(lahde, leveys, korkeus);
+            var px = luku.GetPixels32();
+            UnityEngine.Object.Destroy(luku);
+            return px;
         }
 
         struct Soikio { public float Cx, Cy, Rx, Ry; public float[] Asemat, Arvot; }
@@ -133,16 +131,15 @@ namespace Matkakirja.Natiivi
             return 0f;
         }
 
-        static Color32[] Maskaa(Color32[] px, int siemen)
+        static Color32[] Maskaa(Color32[] px, int leveys, int korkeus, List<Soikio> soikiot)
         {
-            var soikiot = Soikiot(siemen);
-            for (int y = 0; y < Korkeus; y++)
+            for (int y = 0; y < korkeus; y++)
             {
                 // Texture2D:n rivi 0 on alhaalla; maskin y mitataan ylhäältä kuten CSS:ssä.
-                float v = 100f * (1f - (y + 0.5f) / Korkeus);
-                for (int x = 0; x < Leveys; x++)
+                float v = 100f * (1f - (y + 0.5f) / korkeus);
+                for (int x = 0; x < leveys; x++)
                 {
-                    float u = 100f * (x + 0.5f) / Leveys, peitto = 0f;
+                    float u = 100f * (x + 0.5f) / leveys, peitto = 0f;
                     foreach (var s in soikiot)
                     {
                         float dx = (u - s.Cx) / s.Rx, dy = (v - s.Cy) / s.Ry;
@@ -150,7 +147,7 @@ namespace Matkakirja.Natiivi
                         peitto = peitto + a * (1f - peitto);
                         if (peitto >= 0.999f) break;
                     }
-                    int i = y * Leveys + x;
+                    int i = y * leveys + x;
                     var c = px[i];
                     c.a = (byte)Mathf.RoundToInt(c.a * Mathf.Clamp01(peitto));
                     px[i] = c;
