@@ -15,7 +15,7 @@
 // NOPAN SIIRROT KARTALLA, EI LISTAA (web vaihe 'move', Laitetestaajan pariteettiero 24.9.2026): web ei näytä
 // siirtovaiheessa korttia eikä tekstiä kartan päällä (ui.js turnCard: "kehotuksen kertovat kartan korostetut
 // kohteet"). Kohteet ovat game.moveOptions (PeliApu.SiirtoKohteet): SiirtoKohteetMuuttui kertoo ne kartalle
-// (Natiiviseppä piirtää renkaat), kaupunkimerkin napautus tai ValitseSiirto(avain) valitsee. Jos kartalla ei
+// (Natiiviseppä piirtää renkaat: Siirtokohdemerkit, kytketty tässä), kaupunkimerkin tai renkaan napautus tai ValitseSiirto(avain) valitsee. Jos kartalla ei
 // tapahdu mitään Valintavihje.ViiveMs:n (15 s) aikana, ValintavihjeAika herää (Natiivi-UI: pöllön kupla).
 using System;
 using System.Collections.Generic;
@@ -237,6 +237,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Laskee kohteet uudelleen, jos näkyvyys tai heitto vaihtui, ja kertoo kartalle (PaivitaNakyma, Update).</summary>
         void PaivitaSiirtoKohteet()
         {
+            KytkeSiirtokohdemerkit();
             bool nayta = KohteetNakyvissa;
             object lahde = nayta ? matka.Tila.Siirrot : null;
             if (nayta == kohteetNaytetty && ReferenceEquals(lahde, kohteidenLahde)) return;
@@ -245,6 +246,41 @@ namespace Matkakirja.Natiivi
             siirtoKohteet = nayta ? PeliApu.SiirtoKohteet(matka) : (IReadOnlyList<SiirtoKohde>)Array.Empty<SiirtoKohde>();
             if (nayta) Debug.Log($"MATKAKIRJA peli: siirtokohteet {string.Join(", ", siirtoKohteet.Select(k => k.Avain))}");
             try { SiirtoKohteetMuuttui?.Invoke(siirtoKohteet); } catch (Exception e) { Debug.LogException(e); }
+            NaytaSiirtokohdemerkit();
+        }
+
+        /// <summary>Natiivisepän renkaat (Siirtokohdemerkit, Kartta-kokoonpano ei näe peliä): kytketty instanssi.</summary>
+        Siirtokohdemerkit siirtokohdemerkit;
+
+        /// <summary>Kytkee renkaat, kun instanssi ilmestyy tai vaihtuu (kohtaus, Rakennus), ja piirtää nykyiset kohteet.</summary>
+        void KytkeSiirtokohdemerkit()
+        {
+            var m = Siirtokohdemerkit.Instanssi;
+            if (m == siirtokohdemerkit) return;
+            if (siirtokohdemerkit != null) siirtokohdemerkit.Napautettu -= SiirtokohdeNapautettu;
+            siirtokohdemerkit = m;
+            if (m == null) return;
+            m.Napautettu += SiirtokohdeNapautettu;
+            NaytaSiirtokohdemerkit();
+        }
+
+        void NaytaSiirtokohdemerkit()
+        {
+            if (siirtokohdemerkit == null) return;
+            try
+            {
+                siirtokohdemerkit.Nayta(siirtoKohteet.Select(k => new Siirtokohdemerkit.Kohde
+                    { Avain = k.Avain, Kaupunki = k.Kaupunki, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon }).ToList());
+            }
+            catch (Exception e) { Debug.LogException(e); }
+        }
+
+        /// <summary>Reitin varren renkaan napautus (kaupungit tulevat KaupunkiNapautettu-reittiä): web valitseSiirto.</summary>
+        void SiirtokohdeNapautettu(string avain)
+        {
+            KarttaKosketettu();
+            var virhe = ValitseSiirto(avain);
+            if (virhe != null) Debug.Log("MATKAKIRJA peli: siirtokohde " + avain + ": " + virhe);
         }
 
         /// <summary>
