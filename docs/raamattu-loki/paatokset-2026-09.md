@@ -4491,3 +4491,7 @@ Kuvat proto-3d/lokit/loydos26-pariisi-zoomi/, raportti docs/raportit/loydos26-ja
 ## JULKAISIJA 70 % → LUOVUTUS JA NOLLAUS KASKETTY; 5 h -KIINTIO NOLLAUTUI (3 %); LEHDEN LEVEYS ISOLLA iPADILLA PASS (WEB 928 / NATIIVI 951 px) (24.9.2026 klo 19.30)
 
 Julkaisijan luovutukseen build 11 -kaava (ordinaali #3107, -nographics, #3110, ei hakulistan vaihtoa, tiimi RCD77XPB7M), jono ja perutut savukkeet; Postivahti lähettää aloitusviestin.
+
+## LAITETESTAAJA: LENNON ESILATAUS MITATTU BUILD 10:LLA — VAIHTO t=0,08, ESILATAUS 278/278 (100 %), VALIMUISTISTA 2335 / VERKOSTA 322; LASKUSSA 3707 / 925 (24.9.2026 klo 19.31)
+
+Oppi: xcrun simctl launch --stdout=/--stderr= näyttää Unityn Debug.Log-virran (simctl log show ei); Natiivisepälle korjattu aiempi 'en löytänyt lokia'. Lento päättyi normaalisti Ateenan lehteen. Jatkaa nappi-inventaarion EI TARKISTETTU -osioihin.
