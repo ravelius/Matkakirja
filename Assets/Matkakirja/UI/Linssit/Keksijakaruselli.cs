@@ -4,7 +4,8 @@
 //
 // Kortti per pysäkki (hiljaiset pois): muotokuva 4:5 ylhäältä rajattuna ja henkilön nimi. Keskimmäinen
 // on 1,45-kertainen kultareunalla, naapurit 0,62 → 0,52 → 0,44, väli kortin mittojen keskiarvo × 1,05.
-// Menneet ovat teräviä ja himmeneviä, tulevat sumeita (valmiiksi sumennettu pieni kuva, ei suodatin).
+// Menneet ovat teräviä ja himmeneviä, tulevat sumeita (valmiiksi sumennettu kuva, ei suodatin: web lataa ämpärin
+// muotokuva/sumea/-webp:n, gblur sigma 2,6 / 400 px; natiivi sumentaa saman suhteen taustasäikeessä).
 // Kortti, joka ei mahdu kokonaan nauhalle, on piilossa (nykyinen näkyy aina); reunan takaisia kauempana
 // olevat ovat display: none, ja piirtojärjestystä korjataan vain keskimmäisen vaihtuessa (pysäkinvaihdon piikki).
 //
@@ -23,7 +24,8 @@ namespace Matkakirja.Natiivi
     {
         static readonly float[] Mitat = { 1.45f, 0.62f, 0.52f, 0.44f }; // web KARUSELLIN_MITAT
         const float Vali = 1.05f, Kynnys = 8f, HeitonAika = 0.18f, HeitonKatto = 3f;
-        const int KuvaL = 240, KuvaK = 300, SumeaL = 24, SumeaK = 30;
+        const int KuvaL = 240, KuvaK = 300;
+        const float Sigma = 2.6f * KuvaL / 400f; // web tools/tee-pienet-kuvat.mjs SUMENNUS_SIGMA 400 px:n leveydellä
 
         sealed class Kortti
         {
@@ -228,39 +230,67 @@ namespace Matkakirja.Natiivi
             {
                 if (t == null || kortti.Terava != null) return;
                 kortti.Terava = t;
-                kortti.Sumea = Sumenna(t) ?? t;
                 NaytaKuva(kortti);
+                SumennaTaustalla(t, sumea =>
+                {
+                    kortti.Sumea = sumea;
+                    NaytaKuva(kortti);
+                });
             }, "kuvat");
         }
 
         /// <summary>
-        /// Sumea versio prosessorilla (lohkojen keskiarvo 240 × 300 → 24 × 30, näytetään venytettynä):
-        /// ei GPU-luentaa pääsäikeessä. Vaatii luettavan tekstuurin (Kuvat.HaePienena).
+        /// Gaussinen sumennus (web gblur) kahtena erillisenä ajona taustasäikeessä; pääsäikeessä vain pikselien
+        /// luku ja tekstuurin luonti. Vaatii luettavan tekstuurin (Kuvat.HaePienena); muuten sumeaa ei tule.
         /// </summary>
-        static Texture2D Sumenna(Texture2D t)
+        static void SumennaTaustalla(Texture2D t, Action<Texture2D> valmis)
         {
-            if (!t.isReadable) return null;
+            if (!t.isReadable) return;
             var px = t.GetPixels32();
-            int lx = t.width / SumeaL, ly = t.height / SumeaK;
-            if (lx < 1 || ly < 1) return null;
-            var ulos = new Color32[SumeaL * SumeaK];
-            for (int y = 0; y < SumeaK; y++)
-            for (int x = 0; x < SumeaL; x++)
+            int l = t.width, k = t.height;
+            System.Threading.Tasks.Task.Run(() => Sumenna(px, l, k, Sigma)).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
             {
-                int r = 0, g = 0, b = 0, a = 0;
-                for (int yy = 0; yy < ly; yy++)
-                for (int xx = 0; xx < lx; xx++)
+                if (tt.IsFaulted) return;
+                var s = new Texture2D(l, k, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear, name = "karuselli sumea" };
+                s.SetPixels32(tt.Result);
+                s.Apply(false, true);
+                valmis(s);
+            }));
+        }
+
+        static Color32[] Sumenna(Color32[] px, int l, int k, float sigma)
+        {
+            int r = Mathf.CeilToInt(sigma * 3f);
+            var paino = new float[2 * r + 1];
+            float summa = 0;
+            for (int i = -r; i <= r; i++) summa += paino[i + r] = Mathf.Exp(-i * i / (2f * sigma * sigma));
+            for (int i = 0; i < paino.Length; i++) paino[i] /= summa;
+            var vali = new Color32[px.Length];
+            var ulos = new Color32[px.Length];
+            Ajo(px, vali, l, k, 1, l, paino, r);   // vaakaan
+            Ajo(vali, ulos, k, l, l, 1, paino, r); // pystyyn
+            return ulos;
+        }
+
+        /// <summary>Yksiulotteinen konvoluutio: pituus pikseliä askeleella askel, rivejä rivit (rivin väli riviAskel); reunat venytetään.</summary>
+        static void Ajo(Color32[] sisaan, Color32[] ulos, int pituus, int rivit, int askel, int riviAskel, float[] paino, int r)
+        {
+            for (int rivi = 0; rivi < rivit; rivi++)
+            {
+                int alku = rivi * riviAskel;
+                for (int i = 0; i < pituus; i++)
                 {
-                    var c = px[(y * ly + yy) * t.width + x * lx + xx];
-                    r += c.r; g += c.g; b += c.b; a += c.a;
+                    float cr = 0, cg = 0, cb = 0, ca = 0;
+                    for (int j = -r; j <= r; j++)
+                    {
+                        int n = Mathf.Clamp(i + j, 0, pituus - 1);
+                        var c = sisaan[alku + n * askel];
+                        float w = paino[j + r];
+                        cr += c.r * w; cg += c.g * w; cb += c.b * w; ca += c.a * w;
+                    }
+                    ulos[alku + i * askel] = new Color32((byte)(cr + 0.5f), (byte)(cg + 0.5f), (byte)(cb + 0.5f), (byte)(ca + 0.5f));
                 }
-                int n = lx * ly;
-                ulos[y * SumeaL + x] = new Color32((byte)(r / n), (byte)(g / n), (byte)(b / n), (byte)(a / n));
             }
-            var s = new Texture2D(SumeaL, SumeaK, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
-            s.SetPixels32(ulos);
-            s.Apply(false, true);
-            return s;
         }
 
         static void NaytaKuva(Kortti k)
