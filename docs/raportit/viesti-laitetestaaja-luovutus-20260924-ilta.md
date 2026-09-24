@@ -90,6 +90,34 @@ sitten build 9 -rivit.
   Fable mainitsi tulevan testilaitteeksi, ei vielä käytetty. Tarkista
   simulaattoriluettelosta kun aloitat.
 
+## 6b. UUSI PYYNTÖ Natiivisepältä (saapui luovutushetkellä, ei aloitettu)
+
+Löydös 26 (lähin zoomi, Pariisi): web-kuvat tuotannosta lähimmässä
+sallitussa zoomissa (kamera.js: 60 lautayksikköä/1,8° työpöydällä, 40/
+1,2° puhelimella), koot 393×852 ja 834×1194. Natiiviseppä odottaa
+näiden valmistumista JA että "b10-kuvauksesi (liiku-tanne iPad)" on
+tehty ennen kuin asentaa testi/b10b:n (868d439,
+natiiviseppa/zoomi-kallistus) — ilmoita polku hänelle kun kuvat on
+otettu. Tee tämä HETI iPad-liiku-tanne-kuvan jälkeen (kohta 7.1).
+
+## 6c. UUSI PYYNTÖ Pelikoodarilta (saapui luovutushetkellä, ei aloitettu)
+
+Kuvapyyntö testi/b10b:lle (pelikoodari/avausteksti-portti d4950c0,
+omistajan päätös klo 16.1x): polku portti → "Uusi matka" (tai "Aloita
+seikkailu"), varapolku `ui aloitus avaus`. 1) ~4 s kohdalla →
+natiivi-avausteksti-kesken-{iphone,ipad}.png. 2) kun VALITSE
+ALOITUSKAUPUNKI -nappi näkyy → natiivi-avausteksti-valmis-*.png. 3)
+napin painallus → pallo SUORAAN valintanäkymään (EI Lontoo-zoomia),
+pulu esittelee → natiivi-valinta-*.png. 4) napautus tekstiin kesken
+kirjoituksen → kertoja vaikenee, pallo avautuu heti (kuva
+vapaaehtoinen). Kansio proto-3d/lokit/avausteksti-web-20260924/ (web-
+vastineet samassa). Kerro tulos Pelikoodarille ja Natiiviseppälle.
+**HUOM**: tämä avausteksti-korjaus (portti→pallo suoraan, ei Lontoo-
+zoomia) voi olla ristiriidassa aiemmin tänään testatun ja PASS-
+merkityn "NATIIVIN ALOITUSKAAVAN" kanssa (zoom-kuminauha-osio, ks.
+build6-tarkistuslista-20260924.md) — tarkista Fablelta/Raamatusta
+kumpi on voimassa ennen PASS/FAIL-merkintää.
+
 ## 7. Seuraavat askeleet (priorisoitu)
 
 1. iPad-kuvapari testi/b10:n dice-roll-korjaukselle (Pelikoodarille).
