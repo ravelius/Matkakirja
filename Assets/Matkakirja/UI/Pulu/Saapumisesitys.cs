@@ -62,7 +62,6 @@ namespace Matkakirja.Natiivi
         string aarreLippu;
         /// <summary>Web luettuSaapuminen: viimeksi luettu saapumismerkintä (sama ei ala uudelleen peräkkäin).</summary>
         string luettuSaapuminen;
-        bool kertojaOli;
         readonly HashSet<string> aarreOdottaa = new HashSet<string>();
         readonly HashSet<string> aarreKerrottu = new HashSet<string>();
 
@@ -85,16 +84,12 @@ namespace Matkakirja.Natiivi
             // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
             Ajastin.Execute(Tarkkaile).Every(300);
-            // Kaiutin (Kertoja-kytkin) päälle saapumistekstin kortissa: äänite alkaa (web kaiutinnappi
-            // aloittaa merkinnän luennan). Vain äänitteelliselle merkinnälle, jolla kaiutin näkyy.
-            kertojaOli = Asetukset.Paalla(Kytkin.Kertoja);
-            Asetukset.Muuttui += _ =>
+            // Kortin kaiutin päälle: äänite alkaa (web factKuuntele aloittaa merkinnän luennan). E8: valikon
+            // Kertoja-kytkin ei käynnistä luentaa (web kaannaKertoja), vain kortin oma nappi.
+            kortti.KertojaPaalleKortista += () =>
             {
-                bool paalla = Asetukset.Paalla(Kytkin.Kertoja);
-                bool paalle = paalla && !kertojaOli;
-                kertojaOli = paalla;
                 var m = kortti.Merkinta;
-                if (paalle && kortti.Nakyy && m?.AaniUrl != null && m.Kaiutin && !Aanet.KertojaPuhuu)
+                if (kortti.Nakyy && m?.AaniUrl != null && m.Kaiutin && !Aanet.KertojaPuhuu)
                     Puhe.Hae().Soita(m.AaniUrl);
             };
             // Kortti avattiin kesken luennon (esim. UI syntyi myöhemmin).

@@ -5,8 +5,8 @@ using UnityEngine;
 namespace Matkakirja
 {
     /// <summary>
-    /// Korkeuserojen liioittelu (omistajan löydös 29, build 9 → 10): koelippu, oletus 1,0 kunnes omistaja valitsee
-    /// vertailukuvista (Alpit, Kreikka). Cesium for Unity 1.25 ei tunne vertical exaggerationia, joten maasto nostetaan
+    /// Korkeuserojen liioittelu (omistajan löydös 29, build 9 → 10): omistaja valitsi vertailukuvista (Alpit, Kreikka)
+    /// oletukseksi 2 (<see cref="Oletus"/>); komennolla voi yhä kokeilla muita. Cesium for Unity 1.25 ei tunne vertical exaggerationia, joten maasto nostetaan
     /// tileset-varjostimen verteksivaiheessa (Shaders/Cesium/MatkakirjaTileset, generaattori Lahde~/tee_tileset.py):
     /// p' = p + n·max(h, 0)·(k − 1), h ellipsoidista. Meri ei kuoppaannu.
     ///
@@ -31,8 +31,11 @@ namespace Matkakirja
         static readonly int NollaId = Shader.PropertyToID("_maaNolla");
         static readonly int ItaId = Shader.PropertyToID("_maaIta");
 
+        /// <summary>Pelin oletus: omistaja valitsi vertailukuvista kertoimen 2 (build 10).</summary>
+        public const float Oletus = 2f;
+
         /// <summary>Voimassa oleva kerroin (1 = ennallaan).</summary>
-        public static float Arvo { get; private set; } = 1f;
+        public static float Arvo { get; private set; } = Oletus;
 
         /// <summary>
         /// Asettaa kertoimen heti (varjostimen globaalit). Georeferenssi haetaan kohtauksesta, jos sitä ei anneta.

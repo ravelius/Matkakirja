@@ -30,6 +30,8 @@ namespace Matkakirja
         public float koko = 36f;
         [Tooltip("Korkeus ellipsoidin yläpuolella, metreinä (kuten merkit).")]
         public double nosto = 5000.0;
+        [Tooltip("Lennon vähimmäisvara liioitellun maaston (KorkeusKerroin) yläpuolella reitin näytteissä, metreinä.")]
+        public double maastoVara = 1000.0;
         public Color vari = new Color32(0x9a, 0x3b, 0x2c, 0xff);
         public bool seuraaKamera = true;
 
@@ -224,13 +226,18 @@ namespace Matkakirja
         {
             kesken = valmis;
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
+            // KORKEUSKERROIN (löydös 29): lennon pohja nousee liioitellun maaston yli (reitin näytteet, LennonPohja).
+            double reittiM0 = math.radians(ReittiGeometria.Kulma(lat0, lon0, lat1, lon1)) * 6371000.0;
+            double huippu0 = math.min(900000.0, reittiM0 * 0.12);
+            lentoPohja = KorkeusKerroin.Sovita(nosto);
+            var pohjaKysely = new LennonPohja(this, lat0, lon0, lat1, lon1, reittiM0, huippu0);
             // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
             // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
             // Lennon pinnan laatat välimuistiin zoomin ja usvan aikana (ei lohkoja matkalla, Fable 24.9.).
             var esilataus = KarttaKerrokset.Instanssi?.EsilataaLento(lat0, lon0, lat1, lon1);
             if (usva != null)
             {
-                usva.Aseta(lat0, lon0, nosto * 0.5, 0f);
+                usva.Aseta(lat0, lon0, UsvanKorkeus, 0f);
                 usva.Tavoite(1f, math.max(0.8f, zoomS));
             }
             bool pintaVaihdettu = false, laskuSumu = false;
@@ -238,13 +245,27 @@ namespace Matkakirja
             {
                 kierto.Aja(lat0, lon0, saapumisKorkeus, zoomS, null);
                 // Sormi voi keskeyttää zoomin (Aja ei silloin kutsu valmista): lento lähtee silti ajallaan.
-                yield return new WaitForSecondsRealtime(zoomS);
+                // Zoomin aikana reitin maastokysely valmistuu yleensä; pohja asettuu heti (kamera on vielä kaukana).
+                float zoomAlku = Time.unscaledTime;
+                while (Time.unscaledTime - zoomAlku < zoomS)
+                {
+                    double ennen = lentoPohja;
+                    pohjaKysely.Paivita(heti: true);
+                    Siirra(lat0, lon0, 0);
+                    if (usva != null && math.abs(lentoPohja - ennen) > 1.0)
+                    {
+                        // Lähtösumu koneen alle myös korotetulla pohjalla (peitto ja nousu jatkuvat).
+                        usva.Aseta(lat0, lon0, UsvanKorkeus, usva.Peitto);
+                        usva.Tavoite(1f, math.max(0.05f, zoomS - (Time.unscaledTime - zoomAlku)));
+                    }
+                    yield return null;
+                }
             }
             lahti?.Invoke();
 
             double kulma = ReittiGeometria.Kulma(lat0, lon0, lat1, lon1);
             double reittiM = math.radians(kulma) * 6371000.0;
-            double huippu = math.min(900000.0, reittiM * 0.12);
+            double huippu = huippu0;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
 
             // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
@@ -276,7 +297,7 @@ namespace Matkakirja
                 avaimet[0] = new LennonAikajana.Avain
                 {
                     Osuus = 0, Kohde = -1, SuuntaAbs = true,
-                    Etaisyys = kierto.korkeus, Kallistus = kierto.kallistus, Suunta = kierto.suuntima,
+                    Etaisyys = kierto.korkeus, Kallistus = kierto.KaytettyKallistus, Suunta = kierto.suuntima,
                 };
 
             if (savu != null) savu.Aloita();
@@ -293,6 +314,7 @@ namespace Matkakirja
                 double t = math.saturate(kulunut / kesto);
                 // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin.
                 double p = LennonAikajana.KoneenOsuus(t);
+                pohjaKysely.Paivita();
                 var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
                 double h = huippu * math.sin(math.PI * p);
                 Siirra(q.x, q.y, h);
@@ -308,13 +330,13 @@ namespace Matkakirja
                     double s = kohde + 1;
                     klat = math.lerp(alku0.lat, q.x, s);
                     klon = alku0.lon + ((q.y - alku0.lon + 540.0) % 360.0 - 180.0) * s;
-                    katse = math.lerp(alku0.katse, nosto + h, s);
+                    katse = math.lerp(alku0.katse, lentoPohja + h, s);
                 }
                 else
                 {
                     klat = math.lerp(q.x, lat1, kohde);
                     klon = q.y + ((lon1 - q.y + 540.0) % 360.0 - 180.0) * kohde;
-                    katse = math.lerp(nosto + h, 0.0, kohde);
+                    katse = math.lerp(lentoPohja + h, 0.0, kohde);
                 }
                 if (kierto != null) kierto.Kuvaa(klat, klon, etaisyys, kallistusNyt, suuntimaNyt, katse);
 
@@ -331,7 +353,7 @@ namespace Matkakirja
                 if (pilvet != null)
                 {
                     if (t > 0.78) { if (pilvet.Nakyvissa) pilvet.Piilota(); }
-                    else pilvet.Korkeus(math.max(2000.0, (nosto + h) * 0.6));
+                    else pilvet.Korkeus(math.max(2000.0, (lentoPohja + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
                 // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
@@ -354,7 +376,7 @@ namespace Matkakirja
                 if (usva != null && !laskuSumu && t > 0.9)
                 {
                     laskuSumu = true;
-                    usva.Aseta(lat1, lon1, nosto * 0.5, usva.Peitto);
+                    usva.Aseta(lat1, lon1, UsvanKorkeus, usva.Peitto);
                     usva.Tavoite(1f, kesto * 0.05f);
                 }
                 if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
@@ -371,6 +393,7 @@ namespace Matkakirja
             }
             liike = null;
             kesken = null;
+            lentoPohja = double.NaN;
             Paatalento();
             valmis?.Invoke();
         }
@@ -448,7 +471,7 @@ namespace Matkakirja
             if (savu != null)
             {
                 var qs = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
-                savu.Lisaa(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(qs.y, qs.x, nosto + huippu * math.sin(math.PI * p))));
+                savu.Lisaa(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(qs.y, qs.x, lentoPohja + huippu * math.sin(math.PI * p))));
             }
             if (malli == null) { Suunta(kamera, a, b); return; }
             var paikka = olio.transform.position;
@@ -469,7 +492,7 @@ namespace Matkakirja
         Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)
         {
             var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
-            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.y, q.x, nosto + huippu * math.sin(math.PI * p)));
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.y, q.x, lentoPohja + huippu * math.sin(math.PI * p)));
             return georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef));
         }
 
@@ -576,6 +599,7 @@ namespace Matkakirja
 
         void Pysayta()
         {
+            lentoPohja = double.NaN;
             if (liike != null) StopCoroutine(liike);
             liike = null;
             kesken = null;
@@ -584,11 +608,114 @@ namespace Matkakirja
             Kone(false);
         }
 
+        /// <summary>
+        /// Nappulan ja koneen pohjakorkeus ellipsoidista. Maassa (ei lentoa) <see cref="nosto"/> × korkeuskerroin: mikä
+        /// oli kertoimella 1 maaston yllä, pysyy sen yllä (KorkeusKerroin.Sovita). Lennolla <see cref="lentoPohja"/>.
+        /// </summary>
+        double Pohja => double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
+        /// <summary>Lennon pohjakorkeus (koneen kaari = pohja + huippu·sin(πp)); NaN = ei lentoa.</summary>
+        double lentoPohja = double.NaN;
+        /// <summary>Lähtö- ja laskusumu puolet nostosta koneen alle (ennen 1,0: nosto/2), korotetun pohjan mukana.</summary>
+        double UsvanKorkeus => math.max(nosto * 0.5, Pohja - nosto * 0.5);
+
+        /// <summary>
+        /// KORKEUSKERROIN (löydös 29, build 10): kone ei saa lentää liioitellun maaston läpi. Lennon alussa (ennen
+        /// zoomia) Cesiumilta kysytään maaston korkeus reitin niistä kohdista, joissa kaari on matala: 2 km:n välein
+        /// (enintään 64 näytettä), kun huippu·sin(πp) &lt; Sovita(9000 m) + vara − nosto. Pitkällä reitillä se on
+        /// noin 35–75 km kummastakin päästä, lyhyellä koko reitti. Pohja = max(nosto, max_i(Sovita(h_i) + vara − kaari_i)):
+        /// vakio koko lennolle, joten kaaren muoto pysyy, ja alankolennot (Lontoo) pysyvät ennallaan 5 km:ssä.
+        /// Tulos saapuu asynkronisesti: pohja nousee tavoitteeseen pehmeästi (aikavakio 0,6 s). Jos kysely epäonnistuu,
+        /// pohja on Sovita(nosto) (kertoimen 1 turvallisuus skaalattuna). Näytteiden väliin jäävät huiput katetaan
+        /// varalla (1 km).
+        /// </summary>
+        sealed class LennonPohja
+        {
+            const double Katto = 9000.0;
+            readonly Nappula n;
+            readonly double[] osuudet;
+            readonly double huippu;
+            System.Threading.Tasks.Task<CesiumSampleHeightResult> kysely;
+            double tavoite, varma;
+
+            public LennonPohja(Nappula n, double lat0, double lon0, double lat1, double lon1, double reittiM, double huippu)
+            {
+                this.n = n;
+                this.huippu = huippu;
+                // Kunnes tulos on saatu (tai jos kysely epäonnistuu): kertoimen 1 nosto skaalattuna.
+                varma = KorkeusKerroin.Sovita(n.nosto);
+                tavoite = varma;
+                double raja = KorkeusKerroin.Sovita(Katto) + n.maastoVara - n.nosto;
+                var o = new List<double>();
+                int askelia = (int)math.clamp(math.ceil(reittiM / 2000.0), 1, 20000);
+                for (int i = 0; i <= askelia; i++)
+                {
+                    double p = (double)i / askelia;
+                    if (huippu * math.sin(math.PI * p) < raja) o.Add(p);
+                }
+                if (o.Count > 64)
+                {
+                    var harva = new List<double>();
+                    for (int j = 0; j < 63; j++) harva.Add(o[(int)((long)j * o.Count / 63)]);
+                    harva.Add(o[o.Count - 1]);
+                    o = harva;
+                }
+                osuudet = o.ToArray();
+                var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo
+                    : UnityEngine.Object.FindAnyObjectByType<Cesium3DTileset>();
+                // Ellipsoidipohjalla (maasto pois) ei ole liioiteltavaa: nosto riittää.
+                if (pallo != null && pallo.tilesetSource != CesiumDataSource.FromUrl) { tavoite = n.nosto; return; }
+                if (pallo == null || osuudet.Length == 0) return;
+                var paikat = new double3[osuudet.Length];
+                for (int i = 0; i < osuudet.Length; i++)
+                {
+                    var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, osuudet[i]);
+                    paikat[i] = new double3(q.y, q.x, 0);
+                }
+                try { kysely = pallo.SampleHeightMostDetailed(paikat); }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA nappula: reitin maastokysely kaatui: " + e.Message); }
+            }
+
+            /// <summary>
+            /// Joka kehys lennon aikana: kyselyn tulos tavoitteeksi ja pohja pehmeästi kohti sitä (heti = zoomin aikana).
+            /// </summary>
+            public void Paivita(bool heti = false)
+            {
+                if (kysely != null && kysely.IsCompleted)
+                {
+                    var t = kysely;
+                    kysely = null;
+                    if (t.IsFaulted || t.IsCanceled || t.Result == null)
+                        Debug.LogWarning("MATKAKIRJA nappula: reitin maastokysely epäonnistui, lennon pohja " + varma.ToString("0") + " m");
+                    else
+                    {
+                        var r = t.Result;
+                        double uusi = n.nosto, korkein = 0;
+                        int ok = 0;
+                        for (int i = 0; i < osuudet.Length; i++)
+                        {
+                            if (r.sampleSuccess == null || !r.sampleSuccess[i]) continue;
+                            ok++;
+                            double h = r.longitudeLatitudeHeightPositions[i].z;
+                            korkein = math.max(korkein, h);
+                            uusi = math.max(uusi, KorkeusKerroin.Sovita(h) + n.maastoVara - huippu * math.sin(math.PI * osuudet[i]));
+                        }
+                        // Puuttuva näyte voi olla huippu: silloin vähintään varma pohja.
+                        tavoite = ok < osuudet.Length ? math.max(uusi, varma) : uusi;
+                        Debug.Log($"MATKAKIRJA nappula: reitin maasto {ok}/{osuudet.Length} näytettä, korkein {korkein:0} m, " +
+                                  $"kerroin {KorkeusKerroin.Arvo:0.##} → lennon pohja {tavoite:0} m");
+                    }
+                }
+                if (double.IsNaN(n.lentoPohja)) n.lentoPohja = tavoite;
+                double a = heti ? 1.0 : 1.0 - math.exp(-Time.unscaledDeltaTime / 0.6);
+                n.lentoPohja += (tavoite - n.lentoPohja) * a;
+            }
+        }
+
         void Siirra(double lat, double lon, double h)
         {
             Lat = lat;
             Lon = lon;
-            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, nosto + h));
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, Pohja + h));
             olio.transform.localPosition = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
         }
 

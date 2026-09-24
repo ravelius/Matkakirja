@@ -368,9 +368,21 @@
     background-color: rgba(70, 51, 31, 0.1);
 }
 
+.mk-selite__sulje {
+    align-items: center;
+    justify-content: center;
+}
+
 .mk-selite__sulje .mk-nappi__teksti {
     font-size: 13.6px;
     -unity-text-align: middle-center;
+}
+
+/* E4 (web .karttaselite-sulje ✕ 0,85rem): risti ~9,5 px. */
+.mk-selite__sulje .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    --mk-ikoni-viiva: 1.3;
 }
 
 .mk-selite__vieritys {
@@ -846,6 +858,16 @@
     background-color: rgba(18, 12, 4, 0.3);
 }
 
+/* E3: kuvaton kortti ja lisäkaupunki napautuspisteen vieressä ilman himmennystä (web .fokuskohde-popup:
+ * kartta näkyy). Vapaa = kortti absoluuttisena (ankkuroitu tai raahattu), kerroksessa ei täytettä. */
+.mk-nosto__kerros--ankkuroitu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-nosto__kerros--vapaa {
+    padding: 0;
+}
+
 .mk-nosto {
     width: 100%;
     max-width: 544px;
@@ -885,22 +907,27 @@
 }
 
 .mk-nosto__sulje {
+    /* E4 (web .fokuskohde-sulje): ✕ 1rem, 30 × 30, reuna ja vaalea pohja, top 0,3rem, right 0,35rem. */
     position: absolute;
-    top: 4px;
-    right: 4px;
-    width: 34px;
-    height: 34px;
-    min-height: 34px;
+    top: 4.8px;
+    right: 5.6px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
     padding: 0;
-    border-width: 0;
+    border-width: 1px;
+    border-color: rgba(122, 85, 20, 0.3);
     border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0);
-    color: #46331f;
+    background-color: rgba(245, 240, 226, 0.86);
+    color: rgba(33, 29, 24, 0.7);
+    align-items: center;
+    justify-content: center;
 }
 
-.mk-nosto__sulje .mk-nappi__teksti {
-    font-size: 20px;
-    -unity-text-align: middle-center;
+.mk-nosto__sulje .mk-ikoni {
+    width: 24px;
+    height: 24px;
+    --mk-ikoni-viiva: 1.3;
 }
 
 .mk-nosto__ylarivi {
@@ -1222,6 +1249,11 @@
     font-size: 11.5px;
     white-space: normal;
     color: rgba(58, 38, 16, 0.7);
+}
+
+/* Lähderivi linkkinä (web .pollo-kuvalahde: pulun Wikipedia-kuva). */
+.mk-nosto__lahde--linkki {
+    color: #7a5514;
 }
 
 /* Täkynosto ja syvennys (web css/fokusnosto.css, fokusvirta.css) ja kohdekortin ihme ja
@@ -1610,6 +1642,22 @@
 
 .mk-nosto-merkki__rengas {
     color: #4b3a1c;
+}
+
+/* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
+.mk-nosto-merkki__levy-pohja {
+    color: #efdcb4;
+    opacity: 0.95;
+}
+
+.mk-nosto-merkki__levy-vari {
+    opacity: 0.5;
+}
+
+.mk-nosto-merkki__levy-keha {
+    color: #4b3a1c;
+    opacity: 0.85;
+    --mk-ikoni-viiva: 1.1;
 }
 
 .mk-nosto-merkki__nimio {

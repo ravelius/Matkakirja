@@ -292,4 +292,30 @@ namespace Matkakirja.Natiivi
                 + $" contains {ContainsPoint(this.WorldToLocal(maailma))}";
         }
     }
+
+    /// <summary>
+    /// Pisteviiva-alleviivaus (web text-decoration: underline dotted, 1 px, pisteet 1 px 2 px:n välein): UITK:ssa ei ole
+    /// pisteviivaa, joten pisteet piirretään. Väri USS color. Sijoitetaan absoluuttisesti tekstin alle.
+    /// </summary>
+    public sealed class Pisteviiva : VisualElement
+    {
+        public Pisteviiva()
+        {
+            pickingMode = PickingMode.Ignore;
+            generateVisualContent += mgc =>
+            {
+                var r = contentRect;
+                if (r.width <= 0) return;
+                var p = mgc.painter2D;
+                p.fillColor = resolvedStyle.color;
+                for (float x = r.xMin; x < r.xMax; x += 2f)
+                {
+                    p.BeginPath();
+                    p.MoveTo(new Vector2(x, r.yMin)); p.LineTo(new Vector2(x + 1f, r.yMin));
+                    p.LineTo(new Vector2(x + 1f, r.yMin + 1f)); p.LineTo(new Vector2(x, r.yMin + 1f));
+                    p.ClosePath(); p.Fill();
+                }
+            };
+        }
+    }
 }

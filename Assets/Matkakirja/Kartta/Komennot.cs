@@ -25,6 +25,10 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   kallista aste             kallistus suoraan (0–85; käytetty kallistus rajautuu korkeuden ja maaston mukaan)
+    ///   suunta aste               suuntima suoraan (0 = pohjoinen ylös, 90 = itä ylös)
+    ///   kierra aste s             kahden sormen kiertoele ruudun keskellä (vastapäivään +)
+    ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
@@ -40,7 +44,7 @@ namespace Matkakirja
     ///   renkaat id,id,… [valittu] | renkaat pois   aloitusvalinnan huomiorenkaat (KaupunkiMerkit.Renkaat)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
-    ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 1; ei tallennu)
+    ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
@@ -145,6 +149,27 @@ namespace Matkakirja
                     });
                     break;
                 }
+                case "kallista" when o.Length == 2:
+                    kierto.kallistus = System.Math.Clamp(D(1), 0.0, 85.0);
+                    break;
+                case "suunta":
+                    kierto.suuntima = D(1);
+                    break;
+                case "pohjoinen":
+                    kierto.PalautaPohjoinen(o.Length > 1 ? (float)D(1) : 0.4f);
+                    break;
+                case "kierra":
+                    kierto.AloitaEle(new PalloKierto.Ele
+                    {
+                        kaksi = true,
+                        a0 = new Unity.Mathematics.float2(0.35f, 0.5f),
+                        a1 = new Unity.Mathematics.float2(0.35f, 0.5f),
+                        b0 = new Unity.Mathematics.float2(0.65f, 0.5f),
+                        b1 = new Unity.Mathematics.float2(0.65f, 0.5f),
+                        kiertoAst = (float)D(1),
+                        kesto = (float)D(2),
+                    });
+                    break;
                 case "kallista":
                     kierto.AloitaEle(new PalloKierto.Ele
                     {
