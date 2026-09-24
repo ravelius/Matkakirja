@@ -4414,4 +4414,146 @@ export const SAATIEDOT = {
       + 'Kesä–heinäkuu on selvästi kuivempaa, alle 30 '
       + 'millimetrin sateella.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N4-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain galapagos,kongo,machupicchu,madagaskar,sahara. Asemat: Puerto
+   * Ayora (Galápagos), Kisangani (Kongo-joen keskijuoksu), Machu Picchu,
+   * Antananarivo (Madagaskarin lehti keskittyy Merina-kuningaskunnan
+   * pääkaupunkiin), In Salah (keskinen Sahara, ei sekaannu Ahaggarin
+   * vuoristoon).
+   */
+  galapagos: {
+    lat: -0.7393,
+    lon: -90.3120,
+    keskilampo: [25.3, 26.5, 27.3, 26.5, 25.6, 23.8, 22.8, 22.2, 22.3, 22.8, 23.3, 24.2],
+    ylin: [27, 28, 30, 29, 28, 26, 25, 24, 25, 25, 26, 27],
+    alin: [23, 25, 25, 24, 24, 22, 21, 20, 20, 20, 21, 22],
+    sade: [105, 84, 69, 180, 113, 35, 22, 10, 6, 11, 19, 35],
+    luonnehdinta: 'Galápagossaarilla on lämpimämpää ja sateisempaa '
+      + 'tammi–toukokuussa (23–27 astetta), kun lämmin Panamanvirta '
+      + 'hallitsee. Kesä–marraskuussa kylmä Humboldtin virta jäähdyttää '
+      + 'meren ja saaret, ja tuolloin sataa tuskin nimeksikään.',
+  },
+  kongo: {
+    lat: 0.5165,
+    lon: 25.1974,
+    keskilampo: [25.6, 26.4, 26.1, 25.7, 25.2, 24.9, 24.2, 24.3, 24.1, 24.4, 24.1, 25.2],
+    ylin: [30, 31, 31, 29, 28, 28, 28, 28, 27, 28, 27, 29],
+    alin: [22, 22, 21, 22, 22, 21, 21, 21, 21, 21, 21, 22],
+    sade: [72, 84, 148, 126, 121, 106, 89, 118, 175, 193, 161, 64],
+    luonnehdinta: 'Kongon sademetsässä on tasaisen kuuma, 24–26 '
+      + 'astetta ympäri vuoden, ja sadetta kertyy jokaisena '
+      + 'kuukautena vähintään 60 millimetriä. Runsain sadekausi '
+      + 'osuu syyskuulta marraskuulle.',
+  },
+  machupicchu: {
+    lat: -13.1631,
+    lon: -72.5450,
+    keskilampo: [14.5, 14.5, 14.6, 14.2, 13.6, 12.8, 12.4, 12.8, 13.4, 14.1, 14.4, 14.4],
+    ylin: [17, 17, 18, 17, 17, 17, 17, 18, 17, 18, 18, 17],
+    alin: [12, 12, 12, 11, 10, 9, 8, 8, 9, 10, 11, 12],
+    sade: [244, 256, 242, 160, 91, 78, 41, 77, 99, 170, 221, 280],
+    luonnehdinta: 'Machu Picchun vuoristoilmasto pysyy tasaisen '
+      + 'viileänä, 12–15 asteessa läpi vuoden. Marraskuusta '
+      + 'maaliskuuhun sataa runsaasti, kun eteläinen kesä tuo '
+      + 'sadekauden; kesä–heinäkuu on selvästi kuivinta aikaa.',
+  },
+  madagaskar: {
+    lat: -18.8792,
+    lon: 47.5079,
+    keskilampo: [20.1, 20, 20.2, 18.8, 17.5, 15.2, 13.6, 14.6, 16.3, 18.8, 20.1, 20.2],
+    ylin: [24, 24, 24, 23, 22, 19, 18, 20, 22, 25, 26, 25],
+    alin: [16, 16, 16, 15, 13, 11, 9, 10, 11, 13, 14, 15],
+    sade: [358, 194, 90, 25, 4, 7, 5, 3, 2, 19, 79, 115],
+    luonnehdinta: 'Antananarivon ylängöllä sademäärä vaihtelee '
+      + 'jyrkästi: tammikuu kastelee kaupunkia 358 millimetrillä, '
+      + 'mutta touko–syyskuu on kuiva. Lämpötila laskee eteläisenä '
+      + 'talvena (kesä–elokuu) 13–14 asteeseen, kesällä nousee '
+      + 'kahteenkymmeneen.',
+  },
+  sahara: {
+    lat: 27.1939,
+    lon: 2.4787,
+    keskilampo: [12.4, 17.3, 21, 26.9, 31.1, 35.2, 37.3, 37, 33.1, 27.6, 19.6, 14.6],
+    ylin: [19, 23, 28, 34, 38, 42, 45, 44, 40, 34, 26, 21],
+    alin: [6, 11, 14, 19, 24, 28, 30, 30, 27, 21, 13, 8],
+    sade: [0, 4, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0],
+    luonnehdinta: 'Keskisessä Saharassa lämpötila heittelehtii '
+      + 'tammikuun 12 asteesta heinäkuun 37 asteeseen, ja päivän ja '
+      + 'yön ero on suurimmillaan yli 30 astetta. Sadetta ei '
+      + 'käytännössä ole minään kuukautena.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N5-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain grandcanyon,iguazu,titicaca,uluru,yellowstone. Asemat: Grand
+   * Canyon Village (etelälaidan n. 2100 m), Puerto Iguazú, Puno-puolen
+   * ranta (Titicaca, n. 3800 m), Uluru, Old Faithful -alue (Yellowstone,
+   * n. 2400 m).
+   */
+  grandcanyon: {
+    lat: 36.0544,
+    lon: -112.1401,
+    keskilampo: [-2.1, 1.4, 2.5, 9.8, 15.7, 20.4, 22.2, 21.6, 17.7, 12, 4.1, -2.7],
+    ylin: [3, 7, 8, 17, 23, 28, 29, 28, 24, 19, 10, 2],
+    alin: [-7, -4, -3, 3, 9, 13, 16, 15, 11, 5, -2, -8],
+    sade: [18, 24, 66, 13, 20, 3, 20, 18, 8, 29, 10, 30],
+    luonnehdinta: 'Grand Canyonin etelälaidalla korkeus (n. 2100 '
+      + 'metriä) tekee talvesta ankaran: joulu–tammikuu on '
+      + 'pakkasella. Kesällä (heinäkuu 22 astetta) sää on leudompi, '
+      + 'mutta sadetta tulee vähän ympäri vuoden.',
+  },
+  iguazu: {
+    lat: -25.5952,
+    lon: -54.5734,
+    keskilampo: [26.7, 26.6, 25, 21.6, 18.1, 19.2, 16.9, 18.2, 20.7, 23.9, 24.1, 26.3],
+    ylin: [31, 31, 29, 26, 23, 23, 21, 23, 25, 29, 29, 31],
+    alin: [22, 22, 21, 17, 14, 15, 13, 13, 16, 19, 19, 22],
+    sade: [137, 99, 133, 96, 201, 123, 97, 142, 105, 142, 150, 174],
+    luonnehdinta: 'Iguazússa on lämpimintä joulu–tammikuussa (26–27 '
+      + 'astetta) ja viileintä eteläisenä talvena heinäkuussa (17 '
+      + 'astetta). Sadetta riittää joka kuukausi runsaasti — '
+      + 'putoukset eivät kuivu koskaan.',
+  },
+  titicaca: {
+    lat: -15.8402,
+    lon: -70.0219,
+    keskilampo: [9.4, 9.7, 9.6, 8.7, 8.3, 7.7, 7.2, 7.9, 8.7, 9.4, 10.7, 10.1],
+    ylin: [14, 14, 14, 14, 15, 15, 15, 15, 16, 15, 17, 15],
+    alin: [5, 5, 5, 3, 2, 0, 0, 0, 1, 3, 4, 5],
+    sade: [240, 192, 131, 64, 12, 7, 4, 23, 46, 73, 65, 161],
+    luonnehdinta: 'Titicaca-järven korkealla ylängöllä (n. 3800 '
+      + 'metriä) päivä ja yö eroavat jyrkästi: päivät pysyvät '
+      + 'viileän leutoina, yöt käyvät touko–syyskuussa pakkasella. '
+      + 'Sadekausi on marraskuusta maaliskuuhun.',
+  },
+  uluru: {
+    lat: -25.3444,
+    lon: 131.0369,
+    keskilampo: [29.3, 28.7, 26.9, 21.5, 14.4, 10.7, 10.8, 14.2, 19.3, 21.4, 27.1, 25.6],
+    ylin: [36, 35, 33, 28, 21, 16, 18, 21, 27, 29, 35, 32],
+    alin: [23, 22, 21, 15, 8, 5, 4, 7, 12, 14, 20, 19],
+    sade: [30, 7, 9, 7, 10, 11, 10, 16, 6, 28, 2, 22],
+    luonnehdinta: 'Uluru on eteläisen kesän (joulu–helmikuu) '
+      + 'polttava, yli 29 asteen keskilämmöllä, ja talvella '
+      + '(kesä–heinäkuu) vain reilun kymmenen asteen. Sadetta tulee '
+      + 'vähän ympäri vuoden, aavikon tapaan.',
+  },
+  yellowstone: {
+    lat: 44.4605,
+    lon: -110.8281,
+    keskilampo: [-7.6, -7.4, -3.2, 0.8, 5.6, 11.1, 15.8, 16.4, 10, 2.9, -5, -9],
+    ylin: [-5, -3, 1, 5, 11, 18, 22, 23, 17, 8, -1, -5],
+    alin: [-11, -12, -8, -4, 0, 5, 10, 9, 3, -2, -9, -13],
+    sade: [77, 60, 69, 69, 57, 90, 36, 13, 49, 66, 72, 84],
+    luonnehdinta: 'Yellowstonen korkealla ylängöllä (n. 2400 metriä) '
+      + 'talvi on pitkä ja kylmä, joulu–tammikuu jää reilusti '
+      + 'pakkaselle. Lyhyt kesä (heinä–elokuu) nousee vain 16 '
+      + 'asteeseen, ja sadetta tulee kesäkuussa runsaimmin.',
+  },
 };
