@@ -95,7 +95,13 @@ koodikommentteihin (`tools/hae-viitekuvat.mjs`, `tools/pollo/worker.js`).
   viitteenä tuottaa kuvan, joka näyttää väärältä aikakaudelta.
 - Sisätilat ja yksityiskohdat jäävät jälkeen — hero on ulkokuva.
 - Jokaisesta viitteestä kirjataan tekijä, lisenssi ja lähdesivu
-  tiedostoon `<kohdekansio>/viitekuvat-loki.txt`.
+  repon tiedostoon `tools/hero-viiteloki.tsv` (ennen 23.9.2026
+  kohdekansioon, josta 23.–24.8. ajon loki katosi pilvikontin mukana).
+  Loki committoidaan ajon jälkeen, ja generoidun heron riville pakassa
+  lisätään kenttä `viitteet: [{ nimi, tekija, lisenssi, lisenssiUrl, sivu }]`.
+  Peli näyttää ne lähderivin perässä (js/tekijakortti.js
+  `lisaaPohjaviitteet`), ja BY-SA-pohjainen hero merkitään CC BY-SA 4.0:ksi.
+  Kenttä on `nimi` eikä `tiedosto`, jottei peilaus hae viitekuvia ämpäriin.
 
 ## Työlistan kentät
 

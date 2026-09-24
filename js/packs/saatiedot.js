@@ -3838,6 +3838,77 @@ export const SAATIEDOT = {
   },
 
   /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N2-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain managua,noumea,puertomontt,sanjuan,saoluis.
+   */
+  managua: {
+    lat: 12.1364,
+    lon: -86.2514,
+    keskilampo: [27.3, 27.8, 28.5, 30.1, 29, 27.3, 27.4, 27.7, 27.1, 26.8, 26.8, 27.1],
+    ylin: [32, 33, 34, 36, 34, 31, 30, 31, 31, 30, 30, 31],
+    alin: [23, 23, 23, 24, 24, 24, 24, 24, 23, 24, 24, 23],
+    sade: [3, 5, 4, 6, 151, 143, 75, 80, 160, 167, 135, 22],
+    luonnehdinta: 'Managua on tasaisen kuuma ympäri vuoden, 27–30 '
+      + 'asteen välillä. Kuiva kausi kestää joulukuulta huhtikuulle, '
+      + 'jolloin sadetta tulee tuskin nimeksikään; toukokuusta '
+      + 'lokakuuhun sateet kastelevat kaupunkia yli 130 millimetrillä '
+      + 'kuukaudessa.',
+  },
+  noumea: {
+    lat: -22.2758,
+    lon: 166.4581,
+    keskilampo: [25.3, 25.9, 25.1, 23.7, 21.6, 20.3, 19.4, 19.4, 20.3, 21.2, 23.4, 24.2],
+    ylin: [28, 29, 27, 26, 24, 22, 22, 22, 23, 24, 26, 27],
+    alin: [22, 23, 23, 22, 19, 18, 17, 17, 18, 19, 20, 21],
+    sade: [97, 188, 178, 94, 150, 79, 41, 40, 37, 59, 81, 110],
+    luonnehdinta: 'Nouméan vuosi kääntyy eteläisen pallonpuoliskon '
+      + 'mukaan: joulu–maaliskuu on lämpimintä (24–26 astetta) ja '
+      + 'kesä–elokuu viileintä (19–20 astetta). Sadetta kertyy '
+      + 'runsaimmin helmikuussa, kuivin kuukausi on heinäkuu.',
+  },
+  puertomontt: {
+    lat: -41.4693,
+    lon: -72.9424,
+    keskilampo: [14.9, 14.8, 14, 11.7, 9.4, 8.2, 7, 7.6, 8.5, 9.5, 12.1, 13.4],
+    ylin: [18, 18, 17, 15, 12, 10, 9, 10, 12, 13, 15, 17],
+    alin: [12, 11, 11, 9, 7, 6, 5, 5, 5, 6, 9, 10],
+    sade: [118, 152, 146, 189, 233, 311, 272, 214, 173, 213, 104, 198],
+    luonnehdinta: 'Puerto Montt on koko vuoden kostea: sadetta kertyy '
+      + 'jokaisena kuukautena vähintään sata millimetriä, kesäkuussa '
+      + 'lähes kolmesataa. Lämpötila pysyy maltillisena, '
+      + 'talvikuukausina (kesä–elokuu) noin seitsemän ja kahdeksan '
+      + 'asteen välillä, kesällä (joulu–helmikuu) reilun '
+      + 'neljäntoista.',
+  },
+  sanjuan: {
+    lat: 18.4655,
+    lon: -66.1057,
+    keskilampo: [24.2, 24.6, 24.7, 25.8, 26.6, 27.3, 27.3, 27.4, 27.2, 26.7, 25.5, 24.6],
+    ylin: [27, 28, 28, 29, 30, 31, 31, 31, 31, 30, 29, 28],
+    alin: [21, 21, 21, 22, 23, 24, 24, 24, 24, 24, 22, 22],
+    sade: [78, 31, 68, 95, 137, 69, 81, 89, 95, 96, 101, 43],
+    luonnehdinta: 'San Juanissa lämpötila pysyy koko vuoden 24–27 '
+      + 'asteessa, viileimpänä tammikuussa ja lämpimimpänä '
+      + 'heinä–elokuussa. Sadetta riittää jokaisena kuukautena, '
+      + 'mutta touko–marraskuu on selvästi tammi–helmikuuta '
+      + 'sateisempi.',
+  },
+  saoluis: {
+    lat: -2.5297,
+    lon: -44.3028,
+    keskilampo: [26.5, 26.1, 25.8, 26.1, 26.5, 26.7, 26.7, 27.1, 27.4, 27.5, 27.5, 27.6],
+    ylin: [29, 28, 28, 28, 29, 29, 29, 30, 30, 31, 30, 30],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25],
+    sade: [244, 272, 460, 368, 202, 71, 53, 25, 14, 7, 59, 36],
+    luonnehdinta: 'São Luísissa on tasaisen kuuma, 26–28 astetta '
+      + 'ympäri vuoden. Sadekausi tammi–toukokuussa on runsas — '
+      + 'maaliskuu kastelee kaupunkia yli 450 millimetrillä — ja '
+      + 'syys–lokakuu selvästi kuivempaa aikaa.',
+  },
+
+  /*
    * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N10-kaupungit): Open-Meteon
    * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
    * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
