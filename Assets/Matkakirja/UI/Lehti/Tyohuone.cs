@@ -10,6 +10,8 @@
 // Raamatun sivut ovat muokkauskenttiä: muutos elää istunnon luonnoksessa (web sessionStorage) ja lähtee
 // "Lähetä muutokset" -napilla ehdotuskanavaan lajilla raamattu (Fable kuratoi). Kehittäjälehden rivit
 // kutsuvat samoja avauksia kuin webin rivit; natiivissa ovat nyt Tilannelehti ja Poiminnat.
+// Fable 24.9.: Raamattu-data ei muutu appissa, luonnos ei tallennu pysyvästi, lähetys kulkee ehdotusreittiä
+// (laji raamattu) ja koko työhuone on vain kehittäjätilassa eikä App Store -buildissa (Paavalikko #if).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,13 @@ namespace Matkakirja.Natiivi
         const string TilanneModuuli = "moduulit/js/tyohuone-tilanne.json";
 
         static Lehtinakyma Lehti => UiNakymat.Olemassa ? UiNakymat.Hae().Lehti : null;
+
+        /// <summary>Työhuone vain kehittäjätilassa eikä koskaan App Store -buildissa (Fable 24.9.).</summary>
+#if MATKAKIRJA_APPSTORE
+        static bool Sallittu => false;
+#else
+        static bool Sallittu => Asetukset.Kehittaja;
+#endif
 
         /// <summary>Moduulin exportit (arvo-kääre pois); null, jos moduulia ei ole paketissa.</summary>
         static void HaeVienti(string moduuli, Action<Dictionary<string, object>> valmis)
@@ -78,7 +87,7 @@ namespace Matkakirja.Natiivi
 
         public static void AvaaRaamattu()
         {
-            if (!Asetukset.Kehittaja) return;
+            if (!Sallittu) return;
             HaeVienti(RaamattuModuuli, e =>
             {
                 var r = e != null ? Rakenne.Olio(MiniJson.Kentta(e, "RAAMATTU")) : null;
@@ -181,7 +190,7 @@ namespace Matkakirja.Natiivi
 
         public static void AvaaKehittajalehti()
         {
-            if (!Asetukset.Kehittaja) return;
+            if (!Sallittu) return;
             Lehti?.NaytaLiite("Kehittäjälehti", new List<LehtiSivu>
             {
                 Sivu("Kehittäjälehti", s =>
@@ -204,7 +213,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Tilanne, Testattavaa ja Pöllöpoiminnat; alku = sivu (2 = Pöllöpoiminnat, web avaaPoiminnatLehti).</summary>
         public static void AvaaTilanne(int alku = 0)
         {
-            if (!Asetukset.Kehittaja) return;
+            if (!Sallittu) return;
             HaeVienti(TilanneModuuli, e =>
             {
                 var tilanne = e != null ? Rakenne.Olio(MiniJson.Kentta(e, "TILANNE")) : null;
