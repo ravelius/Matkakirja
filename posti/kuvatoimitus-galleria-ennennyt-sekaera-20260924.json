@@ -22,26 +22,6 @@
       "sourceVariantUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Mammaliatheirva00figu_orig_0254.png"
     },
     {
-      "cityId": "sahara",
-      "tyyppi": "ennenNyt",
-      "loytyi": true,
-      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/ennennyt/sahara-ennennyt.jpg",
-      "sha256": "4eae083d2fa695283fea24a43dab5185288c74389853924056f38d4c8cc03fd8",
-      "tavut": 200889,
-      "mitat": {
-        "leveys": 1800,
-        "korkeus": 730
-      },
-      "lahde": "https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg",
-      "tekija": "tuntematon valokuvaaja",
-      "vuosi": "1920–1950",
-      "lisenssi": "Public domain",
-      "attribuutio": "tuntematon valokuvaaja; https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg; Public domain",
-      "kuvateksti-ehdotus": "Vuosien 1920–1950 välillä otettu valokuva näyttää Saharan erg-tyyppistä dyynialuetta.",
-      "sourceDownloadedSha256": "ae8cee8b00a058c71e458057a86641ea6e00297c65693bb5671fd5121be915e0",
-      "sourceVariantUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg"
-    },
-    {
       "cityId": "appalakit",
       "tyyppi": "galleria",
       "loytyi": true,
@@ -288,6 +268,42 @@
       "tyyppi": "galleria",
       "loytyi": false,
       "huomio": "Commonsista, Sudan Archiven hakemistoista ja 1800-luvun matkakertomuksista ei löytynyt varmennettua juuri Bahr el Ghazalin paikkaa esittävää PD/CC-taideteosta; kartat ja yleiset etnografiakuvat jätettiin pois."
+    }
+  ],
+  "existingInGame": [
+    {
+      "cityId": "sahara",
+      "tyyppi": "ennenNyt",
+      "checkedMainCommit": "9684af91dc4f6088cb1a6cfc2d3a6fabc2f66805",
+      "pack": "js/packs/africa-valokuvat.js",
+      "tiedosto": "ETH-BIB-Fokker in der Sahara-Tschadseeflug 1930-31-LBS MH02-08-0405.tif",
+      "vuosi": "1930–31",
+      "lahde": "ETH-Bibliothek, Mittelholzer (PD)",
+      "modernPair": "Erg Chebbi sunset.jpg",
+      "huomio": "Tilauksen puuttuvuusväite oli vanhentunut; top-level tiedosto+vuosi+lahde sekä uusi löytyvät nykyisestä mainista. Ei korvata automaattisesti."
+    }
+  ],
+  "optionalAlternatives": [
+    {
+      "cityId": "sahara",
+      "tyyppi": "ennenNyt",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/ennennyt/sahara-ennennyt.jpg",
+      "sha256": "4eae083d2fa695283fea24a43dab5185288c74389853924056f38d4c8cc03fd8",
+      "tavut": 200889,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 730
+      },
+      "lahde": "https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg",
+      "tekija": "tuntematon valokuvaaja",
+      "vuosi": "1920–1950",
+      "lisenssi": "Public domain",
+      "attribuutio": "tuntematon valokuvaaja; https://commons.wikimedia.org/wiki/File:D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg; Public domain",
+      "kuvateksti-ehdotus": "Vuosien 1920–1950 välillä otettu valokuva näyttää Saharan erg-tyyppistä dyynialuetta.",
+      "sourceDownloadedSha256": "ae8cee8b00a058c71e458057a86641ea6e00297c65693bb5671fd5121be915e0",
+      "sourceVariantUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/D%C3%BCnenw%C3%BCste_oder_Erg,_Sahara_1920-50.jpg",
+      "integraatioHuomio": "R2:een toimitettu vaihtoehtoinen vanha Sahara-kuva; älä korvaa pelin olemassa olevaa 1930–31 paria ilman erillistä sisältöpäätöstä."
     }
   ]
 }
