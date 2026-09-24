@@ -31,8 +31,9 @@ namespace Matkakirja.Peli.Testit
         static void Vartioi(Paketti p)
         {
             bool vanha = Paataso.RaakaKielletty;
-            bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY");
-            // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.26, koepaketti v33).
+            // 2.0: paketissa ei ole raakadataa, joten se vartioidaan aina raakakiellolla (varareitti ei saa auttaa).
+            bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY") || Pakettiskeema.MajorOf(p.Skeemaversio) >= 2;
+            // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.30, koepaketti v38).
             // Vanhempi paketti (tuotanto v11 = 1.10) luetaan raa'an datan varareitillä, ja se kerrotaan.
             if (kielto && !Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
             {
@@ -164,10 +165,13 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void TuntematonSkeemaversioOnPunainen()
         {
-            Oleta.Tosi(Pakettiskeema.Tunnettu("1.10") && Pakettiskeema.Tunnettu("1.9") && Pakettiskeema.Tunnettu("1.1"), "tunnetut");
+            Oleta.Tosi(Pakettiskeema.Tunnettu("1.10") && Pakettiskeema.Tunnettu("1.9") && Pakettiskeema.Tunnettu("1.1") && Pakettiskeema.Tunnettu("2.0"), "tunnetut");
             Oleta.Tosi(!Pakettiskeema.Tunnettu("1.10.0") && !Pakettiskeema.Tunnettu("x") && !Pakettiskeema.Tunnettu(null), "muoto");
-            Oleta.Tosi(!Pakettiskeema.Tunnettu($"1.{Pakettiskeema.SuurinMinor + 1}") && !Pakettiskeema.Tunnettu("2.0") && !Pakettiskeema.Tunnettu("1.0"), "tuntemattomat");
-            foreach (var v in new[] { $"1.{Pakettiskeema.SuurinMinor + 1}", "2.0" })
+            var seuraava2 = $"2.{Pakettiskeema.SuurinMinor2 + 1}";
+            Oleta.Tosi(!Pakettiskeema.Tunnettu($"1.{Pakettiskeema.SuurinMinor + 1}") && !Pakettiskeema.Tunnettu(seuraava2)
+                && !Pakettiskeema.Tunnettu("3.0") && !Pakettiskeema.Tunnettu("1.0") && !Pakettiskeema.Tunnettu("0.9"), "tuntemattomat");
+            Oleta.Tosi(Pakettiskeema.Vahintaan("2.0", Pakettiskeema.PaatasoTaysi) && !Pakettiskeema.Vahintaan("1.29", "2.0"), "2.0 ≥ 1.30");
+            foreach (var v in new[] { $"1.{Pakettiskeema.SuurinMinor + 1}", seuraava2, "3.0" })
             {
                 var o = new Dictionary<string, object>(Paikallinen.Osoitin) { ["skeemaversio"] = v };
                 var m = new Dictionary<string, object>(Paikallinen.Manifest) { ["skeemaversio"] = v };
@@ -176,12 +180,82 @@ namespace Matkakirja.Peli.Testit
             }
             var runko = Muokkaa("kaupungit", l => { }).Replace("matkakirja-vienti/1/kokoelma", "matkakirja-vienti/2/kokoelma");
             OletaVirhe(Aja(Paikallinen.Korvaa("kaupungit", runko), "kaupungit"), "tuntematon $skeema");
+            // 2.0-paketissa kokoelman $skeema on /2/ (ja /1/ on vieras).
+            var o2 = new Dictionary<string, object>(Paikallinen.Osoitin) { ["skeemaversio"] = "2.0" };
+            var p2 = new Paketti("skeema 2.0", o2, new Dictionary<string, object>(), k => k == "kaupungit" ? runko : Paikallinen.Teksti(k));
+            var t2 = Pakettivartija.Tarkista(p2, Pakettivartija.Saannot.Take(1));
+            Oleta.Tosi(t2.Vihrea, "2.0 + /2/kokoelma vihreä: " + string.Join(" | ", t2.Virheet));
+            var p21 = new Paketti("skeema 2.0, /1/", o2, new Dictionary<string, object>(), Paikallinen.Teksti);
+            OletaVirhe(Pakettivartija.Tarkista(p21, Pakettivartija.Saannot.Take(1)), "tuntematon $skeema matkakirja-vienti/1/kokoelma");
         }
 
         [Testi] static void KopioVastaaManifestia()
         {
             var t = Aja(Paikallinen.Korvaa("kaupungit", Paikallinen.Teksti("kaupungit") + " "), "kaupungit");
             OletaVirhe(t, "sha256 ei täsmää");
+        }
+
+        /// <summary>Äänitaulujen raidat ja pulut vertailtavana tekstinä (tyhjä kenttä näkyy tyhjänä).</summary>
+        static string Raidat(AaniTaulut t) => string.Join("\n",
+            t.Siirtymat.Select(r => $"siirtyma {r.Laji}/{r.Ryhma}/{r.Ampari}/{r.Oma}/{r.Voima:R}/{r.NousuMs}/{r.LaskuMs}")
+                .Concat(t.Tilaraidat.Select(r => $"tila {r.Nimi}={r.Tunnus}"))
+                .Concat(t.Paikkaraidat.Select(r => $"paikka {r.Key}={r.Value}"))
+                .Concat(t.Raitakuvaukset.Select(r => $"kuvaus {r.Key}={r.Value}"))
+                .Concat(t.Pulut.Values.Select(r => $"pulu {r.Nimi}/{r.Juuri}/{r.Tunnus}/{r.Kesto:R}/{r.Voima:R}")));
+
+        static AaniTaulut LueAanitaulut(string json, bool kielto)
+        {
+            var t = new AaniTaulut();
+            Paataso.RaakaKielletty = kielto;
+            try { t.LueAanitaulut(json); } finally { Paataso.RaakaKielletty = false; }
+            return t;
+        }
+
+        /// <summary>
+        /// Skeema 1.30 (koepaketti v38): aanitaulujen siirtymä-, tila- ja paikkaraidat sekä pulut ovat
+        /// päätasolla, joten raakakiellolla ne EIVÄT tyhjene (≤ 1.29: kentät vain data-oliossa → tyhjät).
+        /// Aina: paikallinen kopio (v11, vain raakaa) ja siitä tehty 1.30-muoto; lipulla VARTIJA_KOE myös
+        /// koepaketti, kun sen skeema ≥ Pakettiskeema.PaatasoTaysi.
+        /// </summary>
+        [Testi] static void AanitaulujenRaidatEivatTyhjeneRaakakiellolla()
+        {
+            var vanha = Paikallinen.Teksti("aanitaulut");
+            var ilman = LueAanitaulut(vanha, false);
+            Oleta.Tosi(ilman.Siirtymat.Count == 5 && ilman.Tilaraidat.Count == 2 && ilman.Paikkaraidat.Count == 1 && ilman.Pulut.Count == 16,
+                "v11: 5 siirtymää, 2 tila-, 1 paikkaraita, 16 pulua: " + Raidat(ilman));
+            // Vanha paketti raakakiellolla: rivit löytyvät, mutta kentät tyhjenevät (siksi kielto vain ≥ 1.30).
+            var tyhja = LueAanitaulut(vanha, true);
+            Oleta.Tosi(tyhja.Siirtymat.All(r => r.Ampari == null && r.Ryhma == null) && tyhja.Pulut.Values.All(r => r.Tunnus == null),
+                "v11 raakakiellolla: kentät tyhjiä");
+
+            // 1.30-muoto: data-olion kentät päätasolle (kuten Siirtoseppä), data jää rinnalle.
+            var uusi = Muokkaa("aanitaulut", l =>
+            {
+                foreach (var o in l)
+                    if (o.TryGetValue("data", out var d) && d is Dictionary<string, object> dd)
+                        foreach (var kv in dd) if (!o.ContainsKey(kv.Key)) o[kv.Key] = kv.Value;
+            });
+            Oleta.Sama(Raidat(ilman), Raidat(LueAanitaulut(uusi, true)), "1.30-muoto raakakiellolla = raaka sallittuna");
+
+            var koe = Ymp("VARTIJA_KOE");
+            if (koe == null || koe == "0") return;
+            var p = Paketti.Kansiosta(koe == "1" ? Pakettivartija.KoepakettiOletus : koe, "koepaketti");
+            if (!Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
+            {
+                Console.WriteLine($"  (koepaketti {p.Versio} skeema {p.Skeemaversio} < {Pakettiskeema.PaatasoTaysi}: äänitaulut vain raakana)");
+                return;
+            }
+            var json = p.Teksti("aanitaulut");
+            var sallittu = LueAanitaulut(json, false);
+            var kielletty = LueAanitaulut(json, true);
+            Oleta.Tosi(kielletty.Siirtymat.Count > 0 && kielletty.Tilaraidat.Count > 0 && kielletty.Paikkaraidat.Count > 0 && kielletty.Pulut.Count > 0,
+                $"koepaketti {p.Versio}: raidat ja pulut luettu raakakiellolla");
+            Oleta.Tosi(kielletty.Siirtymat.All(r => r.Ryhma != null && r.Ampari != null && r.Oma != null && r.Voima > 0)
+                && kielletty.Tilaraidat.All(r => r.Tunnus != null) && kielletty.Paikkaraidat.Values.All(x => x != null)
+                && kielletty.Pulut.Values.All(r => r.Tunnus != null && r.Juuri != null && r.Kesto > 0 && r.Voima > 0),
+                $"koepaketti {p.Versio}: raakakiellolla ei tyhjiä kenttiä: " + Raidat(kielletty));
+            Oleta.Sama(Raidat(sallittu), Raidat(kielletty), $"koepaketti {p.Versio}: raakakielto ei muuta raitoja");
+            Console.WriteLine($"  koepaketti {p.Versio} (skeema {p.Skeemaversio}): {kielletty.Siirtymat.Count} siirtymää, {kielletty.Tilaraidat.Count} tila-, {kielletty.Paikkaraidat.Count} paikkaraitaa, {kielletty.Pulut.Count} pulua raakakiellolla");
         }
 
         /// <summary>Vaihe 2: Paataso.RaakaKielletty poistaa data-varareitin lukijalta ja vartijalta.</summary>

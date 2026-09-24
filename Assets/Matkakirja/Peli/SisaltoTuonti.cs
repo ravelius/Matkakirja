@@ -65,9 +65,13 @@ namespace Matkakirja.Peli
                 var b = MiniJson.Teksti(n, "b");
                 if (a == null || b == null) throw new FormatException($"reitiltä {MiniJson.Teksti(o, "id")} puuttuu pää");
 
+                // Maksu päätasolta (skeema 1.30, kaikilla reiteillä webin kaavalla). Puuttuva kenttä (≤ 1.29,
+                // tuotanto v11): web buildBoard fee = type === 'sea' ? (raw.fee ?? SEA_FEE) : 0, raw.fee vain
+                // Paataso-varareitillä.
+                var maksu = MiniJson.Luku(o, "maksu");
                 if (laji == "lento")
                 {
-                    tulos.Add(new Reitti { Id = "lento:" + a + "|" + b, A = a, B = b, Laji = ReitinLaji.Lento, Askeleet = 0, Maksu = 0 });
+                    tulos.Add(new Reitti { Id = "lento:" + a + "|" + b, A = a, B = b, Laji = ReitinLaji.Lento, Askeleet = 0, Maksu = (int)(maksu ?? 0) });
                     continue;
                 }
                 if (laji != "maa" && laji != "sea") throw new FormatException($"tuntematon reitin laji '{laji}'");
@@ -83,7 +87,7 @@ namespace Matkakirja.Peli
                     B = b,
                     Laji = meri ? ReitinLaji.Meri : ReitinLaji.Maa,
                     Askeleet = (int)askeleet,
-                    Maksu = meri ? (int)(MiniJson.Luku(Paataso.Raaka(o), "fee") ?? Vakiot.MeriHinta) : 0,
+                    Maksu = (int)(maksu ?? (meri ? MiniJson.Luku(Paataso.Raaka(o), "fee") ?? Vakiot.MeriHinta : 0)),
                 });
             }
             return tulos;

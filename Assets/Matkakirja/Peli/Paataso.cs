@@ -14,6 +14,11 @@
 // katkaisee sen yhdestä kohdasta. Lukija ei saa lukea `data`-kenttää suoraan (pakettivartija
 // listaa lukukohdat; tyokalut/tarkista.sh ei tätä valvo). 2.0 poistaa data-kentän ja varareitin.
 //
+// SKEEMA 1.30 (Siirtoseppä 24.9.2026, koepaketti v38): viimeiset kentät päätasolla: aanitaulut
+// (siirtyma, tilaraita, paikkaraita, pulu), reitit.maksu ja laattatyyppien suomenkieliset nimet
+// (nimi, symboli, arvo, vari name-, symbol-, value- ja color-kenttien rinnalla). Englanninkieliset
+// nimet ovat vanhan muodon varareitti kuten data: Suomeksi lukee ne vain, kun raaka on sallittu.
+//
 // Pakettiskeema: lukijoiden tuntemat skeemaversiot. Uusi minor paketissa → vartija punainen,
 // kunnes lukijat on käyty läpi ja SuurinMinor nostettu.
 using System.Collections.Generic;
@@ -48,8 +53,9 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Reittialkio: a, b, askelia ← data.steps. Laji on aina päätasolla ("maa", "sea", "lento"; raaka
-        /// data.type toistaa sen). Meren maksulla (data.fee) ei ole päätason kenttää: yksikään paketti ei
-        /// sitä sisällä, joten lukija lukee sen vain raa'asta datasta (Raaka) ja muuten web SEA_FEE.
+        /// data.type toistaa sen). Maksu on päätasolla skeemasta 1.30 alkaen kaikilla reiteillä (webin
+        /// kaava: sea → data.fee ?? SEA_FEE, muut 0). Vanhassa paketissa (≤ 1.29) lukija laskee sen itse:
+        /// meri → Raaka(o).fee ?? SEA_FEE, muut 0 (ei tässä taulukossa, koska maan fee ei webissä kelpaa).
         /// </summary>
         public static readonly IReadOnlyList<(string Uusi, string Vanha)> Reitti = new[]
         {
@@ -114,9 +120,21 @@ namespace Matkakirja.Peli
         public static readonly IReadOnlyList<(string Uusi, string Vanha)> Luento = Samat(
             "id", "kaupunki", "url", "teksti", "paikkarivi", "kesto", "reaktiot", "reaktioHetket");
 
-        /// <summary>Äänitaulun rivi (siirtyma, tilaraita, paikkaraita): samat nimet (v33: vielä vain raa'assa datassa).</summary>
+        /// <summary>
+        /// Äänitaulun rivi (siirtyma, tilaraita, paikkaraita, pulu): samat nimet. Päätasolla skeemasta 1.30
+        /// (koepaketti v38); ≤ 1.29 vain raa'assa datassa (Nakyma-varareitti).
+        /// </summary>
         public static readonly IReadOnlyList<(string Uusi, string Vanha)> Aanitaulu = Samat(
-            "ryhma", "ampari", "oma", "voima", "nousuMs", "laskuMs", "tunnus");
+            "ryhma", "ampari", "oma", "voima", "nousuMs", "laskuMs", "tunnus", "kuvaus", "kesto");
+
+        /// <summary>
+        /// Laattatyypin olio (laatat.tyypit.*, mannerTyypit.*.*): suomenkielinen ← englanninkielinen
+        /// (skeema 1.30: molemmat; 2.0 jättää vain suomenkieliset). Luetaan Suomeksi-näkymän kautta.
+        /// </summary>
+        public static readonly IReadOnlyList<(string Uusi, string Vanha)> Laattatyyppi = new[]
+        {
+            ("nimi", "name"), ("symboli", "symbol"), ("arvo", "value"), ("vari", "color"),
+        };
 
         /// <summary>Kentät, joilla päätason ja raa'an datan nimi on sama.</summary>
         public static (string Uusi, string Vanha)[] Samat(params string[] nimet)
@@ -147,6 +165,26 @@ namespace Matkakirja.Peli
                 foreach (var (uusi, vanha) in kentat)
                     if ((!tulos.TryGetValue(uusi, out var v) || v == null) && raaka.TryGetValue(vanha, out var r) && r != null)
                         tulos[uusi] = r;
+            return tulos;
+        }
+
+        /// <summary>
+        /// Sisäkkäisen olion suomenkielinen näkymä (esim. laattatyyppi {nimi, symboli, arvo, vari}): kopio,
+        /// josta englanninkieliset vanhat nimet on poistettu. Puuttuva tai null suomenkielinen kenttä
+        /// täydentyy vanhasta nimestä vain, kun raaka on sallittu (vanhat paketit ≤ 1.29); RaakaKielletty
+        /// = englanninkielisiä nimiä ei lueta. null, jos olio ei ole olio.
+        /// </summary>
+        public static Dictionary<string, object> Suomeksi(object olio, IReadOnlyList<(string Uusi, string Vanha)> kentat)
+        {
+            if (!(olio is Dictionary<string, object> d)) return null;
+            var tulos = new Dictionary<string, object>(d);
+            foreach (var (uusi, vanha) in kentat)
+            {
+                if (uusi == vanha) continue;
+                tulos.Remove(vanha);
+                if (!RaakaKielletty && (!d.TryGetValue(uusi, out var v) || v == null) && d.TryGetValue(vanha, out var r) && r != null)
+                    tulos[uusi] = r;
+            }
             return tulos;
         }
 
@@ -188,20 +226,31 @@ namespace Matkakirja.Peli
 
     /// <summary>
     /// Sisältöpaketin skeemaversiot, jotka natiivin lukijat tuntevat (osoitin/manifest `skeemaversio`
-    /// "major.minor", vertailu numeroina: 1.10 > 1.9). Tuntematon versio = pakettivartija punainen.
+    /// "major.minor", vertailu numeroina: 1.10 > 1.9, 2.0 > 1.30). Tuntematon versio = pakettivartija punainen.
+    /// 2.0 (Siirtoseppä 24.9.2026, koepaketti sisalto-koe-2/v1): $skeema matkakirja-vienti/2/…, alkioilla ei
+    /// data-oliota eikä laattatyypeillä englanninkielisiä nimiä; lukijat lukevat sen päätasolta kuten 1.30:n.
     /// </summary>
     public static class Pakettiskeema
     {
+        /// <summary>Skeeman 1.x major (Major..SuurinMajor luetaan; 2.x minorit PieninMinor2–SuurinMinor2).</summary>
         public const int Major = 1;
+        /// <summary>Uusin tunnettu major: 2.0 = ei raakadataa.</summary>
+        public const int SuurinMajor = 2;
+        /// <summary>Uusin läpikäyty 2.x-minor (koepaketti sisalto-koe-2/v1 = 2.0).</summary>
+        public const int SuurinMinor2 = 0;
         /// <summary>Vanhin luettava minor (Kultaiset/paketti = 1.1).</summary>
         public const int PieninMinor = 1;
-        /// <summary>Uusin läpikäyty minor (koepaketti v33 = 1.26, 24.9.2026: kaikki raakakentät päätasolla).</summary>
-        public const int SuurinMinor = 26;
         /// <summary>
-        /// Ensimmäinen skeema, jossa jokainen natiivin lukema raakakenttä on päätasolla (koepaketti v33).
+        /// Uusin läpikäyty minor (koepaketti v38 = 1.30, 24.9.2026: aanitaulut, reitit.maksu ja laattatyyppien
+        /// suomenkieliset nimet päätasolla).
+        /// </summary>
+        public const int SuurinMinor = 30;
+        /// <summary>
+        /// Ensimmäinen skeema, jossa jokainen natiivin lukema kenttä on päätasolla suomeksi (koepaketti v38;
+        /// 1.26 = v33 toi raakakentät, mutta aanitaulut, meren maksu ja laattojen nimet puuttuivat).
         /// Vanhempaa pakettia ei voi lukea raakakiellolla (vartija ajaa sen ilman kieltoa ja kertoo sen).
         /// </summary>
-        public const string PaatasoTaysi = "1.26";
+        public const string PaatasoTaysi = "1.30";
 
         /// <summary>"1.10" → (1, 10); muu muoto → false.</summary>
         public static bool Jasenna(string versio, out int major, out int minor)
@@ -214,12 +263,20 @@ namespace Matkakirja.Peli
                 && int.TryParse(osat[1], NumberStyles.None, CultureInfo.InvariantCulture, out minor);
         }
 
-        /// <summary>Onko versio vähintään raja (sama major, minor ≥); jäsentymätön = false.</summary>
+        /// <summary>Onko versio vähintään raja ((major, minor) ≥, esim. 2.0 ≥ 1.30); jäsentymätön = false.</summary>
         public static bool Vahintaan(string versio, string raja) =>
-            Jasenna(versio, out var a, out var b) && Jasenna(raja, out var c, out var d) && a == c && b >= d;
+            Jasenna(versio, out var a, out var b) && Jasenna(raja, out var c, out var d) && (a > c || (a == c && b >= d));
 
-        /// <summary>Tunteeko lukija version (major sama, minor välillä PieninMinor–SuurinMinor).</summary>
+        /// <summary>Paketin major (skeemaversiosta) tai -1, jos versio ei jäsenny.</summary>
+        public static int MajorOf(string versio) => Jasenna(versio, out var major, out _) ? major : -1;
+
+        /// <summary>Tunteeko lukija version (1.PieninMinor–1.SuurinMinor tai 2.0–2.SuurinMinor2).</summary>
         public static bool Tunnettu(string versio) =>
-            Jasenna(versio, out var major, out var minor) && major == Major && minor >= PieninMinor && minor <= SuurinMinor;
+            Jasenna(versio, out var major, out var minor)
+            && ((major == Major && minor >= PieninMinor && minor <= SuurinMinor) || (major == SuurinMajor && minor <= SuurinMinor2));
+
+        /// <summary>Kokoelman $skeema, jonka lukijat tuntevat: matkakirja-vienti/&lt;major&gt;/kokoelma (major 1 tai 2).</summary>
+        public static bool TunnettuKokoelmaskeema(string skeema, int major) =>
+            major >= Major && major <= SuurinMajor && skeema == $"matkakirja-vienti/{major}/kokoelma";
     }
 }

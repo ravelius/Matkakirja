@@ -6,7 +6,7 @@
 // sekoitus tynkäsoittimella) punastuu, jos web muuttaa niitä.
 //
 // Taulut: sisäänrakennettu oletus (AaniTaulut.Oletus) vastaa webiä a55f2a813. Paketista luetaan
-// kokoelma aanitaulut (skeema ≥ 1.22: siirtyma, tilaraita, paikkaraita, pohjaraita, maisemakori,
+// kokoelma aanitaulut (skeema ≥ 1.22: siirtyma, tilaraita, paikkaraita, pulu, pohjaraita, maisemakori,
 // aarreaihe) ja kaupungit (maa, tyyppi); moduuli aani-ehdokkaat.json antaa KAUPUNKI_EHDOKKAAT,
 // joilla maisemakori lasketaan, jos paketissa ei ole valmiita maisemakori-rivejä.
 using System;
@@ -91,6 +91,18 @@ namespace Matkakirja.Peli
         public int LaskuMs = AaniVakiot.SiirtymaLaskuMs;
     }
 
+    /// <summary>Pulun tehoste (aanitaulut laji "pulu"; Natiivi-UI:n pulukirjasto, §5.3).</summary>
+    public sealed class PuluAani
+    {
+        public string Nimi;
+        /// <summary>Kansion osoite (ämpärin aanet/tehosteet/pulu/).</summary>
+        public string Juuri;
+        public string Tunnus;
+        /// <summary>Kesto sekunteina.</summary>
+        public double Kesto;
+        public double Voima;
+    }
+
     /// <summary>Maisemakori: äänitysten osoitteet (#alku/#voima) ja porras, jolta kori tuli.</summary>
     public sealed class MaisemaKoriRivi
     {
@@ -120,6 +132,10 @@ namespace Matkakirja.Peli
         /// <summary>TILARAIDAT prioriteettijärjestyksessä (nimi, tunnus).</summary>
         public List<(string Nimi, string Tunnus)> Tilaraidat = new List<(string, string)>();
         public Dictionary<string, string> Paikkaraidat = new Dictionary<string, string>();
+        /// <summary>Tila- ja paikkaraitojen kuvaukset (nimi → kuvaus) paketista; oletuksessa tyhjä.</summary>
+        public Dictionary<string, string> Raitakuvaukset = new Dictionary<string, string>();
+        /// <summary>Pulun tehosteet paketista (nimi → tehoste) lisäysjärjestyksessä; oletuksessa tyhjä.</summary>
+        public Dictionary<string, PuluAani> Pulut = new Dictionary<string, PuluAani>();
         public HashSet<string> Kaupunkiraidat = new HashSet<string>();
         public Dictionary<string, string> KaupunginAlue = new Dictionary<string, string>();
         public HashSet<string> Alueraidat = new HashSet<string>();
@@ -253,7 +269,7 @@ namespace Matkakirja.Peli
 
         /// <summary>
         /// Kokoelma aanitaulut (kokoelmat/aanitaulut.json). Luetaan rivit, jotka natiivi tarvitsee:
-        /// siirtyma, tilaraita, paikkaraita, pohjaraita, maisemakori (skeema ≥ 1.22) ja aarreaihe.
+        /// siirtyma, tilaraita, paikkaraita, pulu, pohjaraita, maisemakori (skeema ≥ 1.22) ja aarreaihe.
         /// Tuntemattomat lajit ohitetaan. Palauttaa luettujen maisemakori-rivien määrän.
         /// </summary>
         public int LueAanitaulut(string json)
@@ -265,8 +281,8 @@ namespace Matkakirja.Peli
             {
                 var laji = MiniJson.Teksti(o, "laji");
                 var nimi = MiniJson.Teksti(o, "nimi");
-                // Siirtymä-, tila- ja paikkaraidan kentät: päätaso ensin, raaka data vain Paataso-varareitillä
-                // (koepaketti v33 / skeema 1.26: vielä vain data-oliossa, Siirtosepän tilaus).
+                // Siirtymä-, tila-, paikkaraidan ja pulun kentät: päätaso ensin (skeema 1.30, koepaketti v38),
+                // raaka data vain Paataso-varareitillä (≤ 1.29: vain data-oliossa; RaakaKielletty katkaisee).
                 var data = Paataso.Nakyma(o, Paataso.Aanitaulu);
                 switch (laji)
                 {
@@ -279,8 +295,21 @@ namespace Matkakirja.Peli
                             LaskuMs = (int)(MiniJson.Luku(data, "laskuMs") ?? AaniVakiot.SiirtymaLaskuMs),
                         });
                         break;
-                    case "tilaraita": tilat.Add((nimi, MiniJson.Teksti(data, "tunnus"))); break;
-                    case "paikkaraita": Paikkaraidat[nimi] = MiniJson.Teksti(data, "tunnus"); break;
+                    case "tilaraita":
+                        tilat.Add((nimi, MiniJson.Teksti(data, "tunnus")));
+                        if (MiniJson.Teksti(data, "kuvaus") is string tk) Raitakuvaukset[nimi] = tk;
+                        break;
+                    case "paikkaraita":
+                        Paikkaraidat[nimi] = MiniJson.Teksti(data, "tunnus");
+                        if (MiniJson.Teksti(data, "kuvaus") is string pk) Raitakuvaukset[nimi] = pk;
+                        break;
+                    case "pulu":
+                        Pulut[nimi] = new PuluAani
+                        {
+                            Nimi = nimi, Juuri = MiniJson.Teksti(o, "juuri"), Tunnus = MiniJson.Teksti(data, "tunnus"),
+                            Kesto = MiniJson.Luku(data, "kesto") ?? 0, Voima = MiniJson.Luku(data, "voima") ?? 0,
+                        };
+                        break;
                     case "pohjaraita": Pohjaraita = nimi; break;
                     case "aarreaihe":
                         if (nimi == "paa") AarrePaa = MusaPolku(MiniJson.Teksti(o, "tunnus"));

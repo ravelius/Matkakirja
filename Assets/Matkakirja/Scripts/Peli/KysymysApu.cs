@@ -229,11 +229,12 @@ namespace Matkakirja.Natiivi
                 : "https://matkakirja.app/" + polku;
         }
 
+        /// <summary>Laattatyypin olio: suomenkielinen nimi (skeema 1.30), englanninkielinen name vain Paataso-varareitillä.</summary>
         static Aarre Lue(object o, string url = null)
         {
-            var d = o as Dictionary<string, object>;
+            var d = Paataso.Suomeksi(o, Paataso.Laattatyyppi);
             if (d == null) return null;
-            return new Aarre { Nimi = MiniJson.Teksti(d, "name"), Fakta = MiniJson.Teksti(d, "fakta"), KuvaUrl = url ?? KuvaUrl(MiniJson.Teksti(d, "kuva")) };
+            return new Aarre { Nimi = MiniJson.Teksti(d, "nimi"), Fakta = MiniJson.Teksti(d, "fakta"), KuvaUrl = url ?? KuvaUrl(MiniJson.Teksti(d, "kuva")) };
         }
 
         static void Taulu(Dictionary<string, Aarre> kohde, object o)
@@ -243,8 +244,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Kokoelma laatat (alkio "tokens"): päätason tyypit ja mannerTyypit (skeema 1.26; tyyppiolion
-        /// kentät ovat webin nimin name, fakta, kuva). Vanha paketti: data.types / data.mannerTypes (Paataso).
+        /// Kokoelma laatat (alkio "tokens"): päätason tyypit ja mannerTyypit (skeema 1.26). Tyyppiolion nimi
+        /// suomeksi (skeema 1.30: nimi; ≤ 1.29 webin name Paataso.Suomeksi-varareitillä), fakta ja kuva.
+        /// Vanha paketti: data.types / data.mannerTypes (Paataso).
         /// </summary>
         public void LueLaatat(string json)
         {
