@@ -45,8 +45,8 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | "Aloita seikkailu" | ui.js:17422 | UI/Aloitusnakyma.cs:124 | on | NUI |
 | "Oppiminen on hauskaa" (periaatteet) | ui.js:17454 | Aloitusnakyma.cs:127 | on | NUI |
 | Periaatteet: "Takaisin" | ui.js:17557 | Aloitusnakyma.cs:353 ("Sulje") | on | NUI |
-| Periaatteet: "Pelin GitHub-sivu" -linkki | ui.js:17544 | puuttuu | puuttuu | NUI |
-| Periaatteet: palautelomake "Lähetä palautetta" ja sähköpostikenttä | ui.js:17636 (periaatePalaute) | puuttuu | puuttuu (palautekanava puuttuu natiivista) | NUI, PK |
+| Periaatteet: "Pelin GitHub-sivu" -linkki | ui.js:17544 | puuttuu | on (Aloitusnakyma: "Pelin GitHub-sivu") | NUI |
+| Periaatteet: palautelomake "Lähetä palautetta" ja sähköpostikenttä | ui.js:17636 (periaatePalaute) | puuttuu | on (PalauteLomake.PeriaateLohko) | NUI, PK |
 | Avausteksti: napautus kirjoittaa loppuun | ui.js (typeText) | Aloitusnakyma.cs:91 | on | NUI |
 | "Mistä aloitan?" (intro-valinta) | index.html:657, ui.js:17098 | Aloitusnakyma.cs:97 | on | NUI |
 | Lähtökaupunki valitaan pallolta kohderenkailla | ui.js:10508 (doPickStart) | Aloitusnakyma.cs:276 (lista lippuineen) | osittain: natiivissa listakortti, webissä valinta pallolta | NUI, NS |
@@ -55,11 +55,11 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Logo → tekijätiedot ja lähteet | index.html:125, ui.js:2405 | UI/Ylapalkki.cs:45 (`PickingMode.Ignore`) | puuttuu: logoa ei voi napauttaa | NUI |
+| Logo → tekijätiedot ja lähteet | index.html:125, ui.js:2405 | UI/Ylapalkki.cs:45 (`PickingMode.Ignore`) | on (logo → Tietoja) | NUI |
 | Tilapilleri (raha · päivä · aika) → matkalaukku | index.html:133, main.js:1412 | Ylapalkki.cs:49 → UiNakymat.cs (PilleriPainettu) | on | NUI |
 | Ratas (äänentasot) | index.html:169, main.js:2142 | Ylapalkki.cs:56, UiNakymat.cs | on | NUI |
 | Hampurilainen | index.html:338, main.js:1098 | Ylapalkki.cs:58 | on | NUI |
-| Puhelimen vaaka-asento: "Näytä / Piilota yläpalkki" (väkäsikoni) | ylapalkki-vaaka.js:69 | puuttuu | puuttuu | NUI |
+| Puhelimen vaaka-asento: "Näytä / Piilota yläpalkki" (väkäsikoni) | ylapalkki-vaaka.js:69 | puuttuu | on (väkäsnappi, 24.9. yö) | NUI |
 
 ## 3. Hampurilainen (päävalikko)
 
@@ -70,9 +70,9 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | Äänet: Äänimaisema päällä/pois | main.js:578 | Paavalikko.cs:90 | osittain: kytkin on, mutta äänimaisemaa ei ole | PK, NUI |
 | Kartta: Pieni liike | main.js:686 | Paavalikko.cs | osittain: kytkin on, mutta pulun lento, pilven varjo ja kellonajan sävy puuttuvat | NS |
 | "uusi peli" → varmistus "Peruuta" / "Aloita alusta" | index.html:456, 1139–1140; main.js:1400–1402 | Paavalikko.cs:56–61, UI/Vahvistus.cs:33 | on | NUI |
-| "ehdota sisältöä" (palaute, ehdotus, kuvavinkki, pro, retkikunta) | index.html:458, main.js:1415, ui.js:17749 | puuttuu | puuttuu | NUI, PK |
-| Versionumero → "Mitä uutta" (muutosloki) | index.html:84–100, 501; main.js:1318 | Paavalikko.cs (pelkkä versioteksti) | puuttuu | NUI, SS |
-| Päivityksen jälkeen "Peli päivittyi" + "Jatka" | index.html:105–108, main.js:1723 | puuttuu | puuttuu | NUI, SS |
+| "ehdota sisältöä" (palaute, ehdotus, kuvavinkki, pro, retkikunta) | index.html:458, main.js:1415, ui.js:17749 | puuttuu | on (PalauteIkkuna) | NUI, PK |
+| Versionumero → "Mitä uutta" (muutosloki) | index.html:84–100, 501; main.js:1318 | Paavalikko.cs (pelkkä versioteksti) | on (MitaUutta) | NUI, SS |
+| Päivityksen jälkeen "Peli päivittyi" + "Jatka" | index.html:105–108, main.js:1723 | puuttuu | on (MitaUutta "Peli päivittyi") | NUI, SS |
 | Päivitä-kuvake (hae uusin versio) | index.html:91, 497; main.js:1243, 1252 | – | ei tarvita: App Store päivittää sovelluksen | – |
 | Pelilauta: Karttapallo / Vanha kartta | index.html:443, main.js:1004–1076 | – | ei tarvita: piilossa webissäkin (ui-apurit.js:2396 VANHA_KARTTA_KAYTOSSA = false) | – |
 | Syötekoe, Kerrokset, Kehysprofiili, Suoraan kartalle | index.html:409–419 | – | KOKEET (ks. osio 20) | – |
@@ -94,11 +94,11 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 |---|---|---|---|---|
 | Lähteet-dialogi: nimikilpi ja koko lähdeluettelo linkkeineen | index.html:1112, lahteet.js, ui.js:18413 | UI/Tietoja.cs (moduulit/js/lahteet.json) | on: nimikilpi, tekijänoikeus ja koko luettelo (webissäkään ei linkkejä); v11:ssä moduulit/ 404 → vara | NUI, SS |
 | Lähteet: "Sulje" | index.html:1122 | Tietoja.cs:45 | on | NUI |
-| Palaute "Kerro mitä huomasit": viesti, "Lähetä palautetta", "Takaisin peliin" | ui.js:17613–17762 | puuttuu | puuttuu | NUI |
-| Ehdotuslomake "Lähetä ehdotus" (kuvat, tarkennus, nimimerkki, krediitti, lisenssi) | ehdotukset.js:479–555 | puuttuu | puuttuu | NUI |
-| Pro-hakurasti ja i-seloste "Mikä on pro-sisällöntuottaja?" | ehdotukset.js:1089–1096 | puuttuu | puuttuu | NUI |
-| Kuvavinkki "Lähetä vinkki / palaute" (kuva, paikka, käyttölupa) | kuvavinkki.js:180–288 | puuttuu | puuttuu | NUI |
-| Pro: "Kirjaudu", "Lähetä profiili", "Lähetä materiaali", "Unohda tunnukseni tältä laitteelta" | ehdotukset.js:1145, 1000, 840, 1008 | puuttuu | puuttuu | NUI |
+| Palaute "Kerro mitä huomasit": viesti, "Lähetä palautetta", "Takaisin peliin" | ui.js:17613–17762 | puuttuu | on (palaute = ehdotuskanava, web PALAUTE_LOMAKE tyhjä) | NUI |
+| Ehdotuslomake "Lähetä ehdotus" (kuvat, tarkennus, nimimerkki, krediitti, lisenssi) | ehdotukset.js:479–555 | puuttuu | on (PalauteLomake) | NUI |
+| Pro-hakurasti ja i-seloste "Mikä on pro-sisällöntuottaja?" | ehdotukset.js:1089–1096 | puuttuu | on (ProOsio) | NUI |
+| Kuvavinkki "Lähetä vinkki / palaute" (kuva, paikka, käyttölupa) | kuvavinkki.js:180–288 | puuttuu | on (Kuvavinkki) | NUI |
+| Pro: "Kirjaudu", "Lähetä profiili", "Lähetä materiaali", "Unohda tunnukseni tältä laitteelta" | ehdotukset.js:1145, 1000, 840, 1008 | puuttuu | on (ProOsio) | NUI |
 
 ## 6. Matkustus, noppa ja lento
 
@@ -126,14 +126,14 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 |---|---|---|---|---|
 | Kaupungin napautus → liuska | pallolauta/lauta.js:3699 | Kartta/KaupunkiMerkit.cs → UI/KaupunkiKortti.cs | on (natiivissa kortti ruudun alaosassa) | NUI, NS |
 | Liuskan kaupunkirivi → kaupunkilehti | lauta.js:3670 | KaupunkiKortti "Lue kaupunkilehti" | on | NUI |
-| Liuskan rivi "Nähtävyydet" (kohdekartta) | lauta.js:3671, kaupunkinosto.js:975 | puuttuu | puuttuu | NUI, SS |
-| Liuskan rivi "Turistiopas" | lauta.js:3672, kaupunkinosto.js:690 | puuttuu | puuttuu | NUI, SS |
+| Liuskan rivi "Nähtävyydet" (kohdekartta) | lauta.js:3671, kaupunkinosto.js:975 | puuttuu | on (Nähtävyydet-rivi) | NUI, SS |
+| Liuskan rivi "Turistiopas" | lauta.js:3672, kaupunkinosto.js:690 | puuttuu | on (turistiopas) | NUI, SS |
 | "Liiku tänne" | kaupunkiliuska.js:44, lauta.js:3650 | KaupunkiKortti "Liiku tänne" | on | NUI |
-| Nostokategoriat "Historia (5)" haitarina, nostorivit avaavat noston | kaupunkiliuska.js:225–291, pallolauta/nostot.js:1228 | puuttuu | puuttuu | NUI, NS |
-| Liuskan kelausrivit ylös/alas | nostot.js:4258, kaupunkiliuska.js:318 | puuttuu | puuttuu (tarpeen, kun haitari tulee) | NUI |
+| Nostokategoriat "Historia (5)" haitarina, nostorivit avaavat noston | kaupunkiliuska.js:225–291, pallolauta/nostot.js:1228 | puuttuu | on (nostohaitari) | NUI, NS |
+| Liuskan kelausrivit ylös/alas | nostot.js:4258, kaupunkiliuska.js:318 | puuttuu | on (kelausrivit) | NUI |
 | Turisti-info-merkki kartalla (i) | kaupunkinosto.js:321, lauta.js:3700 | puuttuu | puuttuu | NS, NUI |
-| Turisti-info ja kaupunkipopup: "Kaupunkilehti", ✕, "Lue loppuun", "Lue lisää" | kaupunkinosto.js:494, 602, 791, 956 | puuttuu | puuttuu | NUI |
-| Lisäkaupungin kortti | kaupunkinosto.js:1153 | puuttuu | puuttuu | NUI, SS |
+| Turisti-info ja kaupunkipopup: "Kaupunkilehti", ✕, "Lue loppuun", "Lue lisää" | kaupunkinosto.js:494, 602, 791, 956 | puuttuu | ei tarvita: popupit eivät ole webissä käytössä | NUI |
+| Lisäkaupungin kortti | kaupunkinosto.js:1153 | puuttuu | on (lisäkaupungin kortti) | NUI, SS |
 
 ## 8. Kaupunkilehti ja maalehti (natiivissa WKWebView-kuori)
 
@@ -180,11 +180,11 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Nähtävyysarkki: ☰ muut nähtävyydet, ‹ ›, ← takaisin, "Sulje" | index.html:915–932, nahtavyydet.js:2570, 2726 | puuttuu | puuttuu | NUI, SS |
-| Kohdekartta: zoomi, "⤢ Kokoruutu", × | nahtavyydet.js:953, 980, 1229, 1473 | puuttuu | puuttuu | NUI, SS |
-| "Matkaopas"-nauha, "Lue lisää matkailijan oppaasta →" | nahtavyydet.js:1700, 1743 | puuttuu | puuttuu | NUI, SS |
-| "Lue lisää aiheesta", henkilölinkki | nahtavyydet.js:2213, 2368 | puuttuu | puuttuu | NUI, SS |
-| Opas: vyörivit, säägraafin suurennus, linkit | opas.js:189, 317, 338 | puuttuu | puuttuu | NUI, SS |
+| Nähtävyysarkki: ☰ muut nähtävyydet, ‹ ›, ← takaisin, "Sulje" | index.html:915–932, nahtavyydet.js:2570, 2726 | puuttuu | on | NUI, SS |
+| Kohdekartta: zoomi, "⤢ Kokoruutu", × | nahtavyydet.js:953, 980, 1229, 1473 | puuttuu | on | NUI, SS |
+| "Matkaopas"-nauha, "Lue lisää matkailijan oppaasta →" | nahtavyydet.js:1700, 1743 | puuttuu | on | NUI, SS |
+| "Lue lisää aiheesta", henkilölinkki | nahtavyydet.js:2213, 2368 | puuttuu | on | NUI, SS |
+| Opas: vyörivit, säägraafin suurennus, linkit | opas.js:189, 317, 338 | puuttuu | on | NUI, SS |
 
 ## 10. Kysymykset, tapahtumakortti ja paljastus
 
@@ -196,12 +196,12 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | "Jatka" | index.html:1439, ui.js:2995 | KysymysNakyma.cs:656 | on | NUI |
 | "Aloita peli" | index.html:1431, ui.js:3001 | KysymysNakyma.cs:627 | on | NUI |
 | Lähdelinkki tuloksessa | ui.js:14181 | KysymysNakyma.cs:601 | on | NUI |
-| Kuvan tai lipun napautus → suurennos | ui.js:2643 | puuttuu | puuttuu | NUI |
-| Kohtaamiskuvan napautus → suurennos pitkällä selitteellä | ui.js:2942 | puuttuu | puuttuu | NUI |
-| "Kysy kaverilta" (sähkeen kaveriapu) | sahke.js:893 | puuttuu | puuttuu | NUI, PK |
+| Kuvan tai lipun napautus → suurennos | ui.js:2643 | puuttuu | on | NUI |
+| Kohtaamiskuvan napautus → suurennos pitkällä selitteellä | ui.js:2942 | puuttuu | on | NUI |
+| "Kysy kaverilta" (sähkeen kaveriapu) | sahke.js:893 | puuttuu | on (KysymysNakyma kaveriapu) | NUI, PK |
 | Rosvon kaksintaistelu (50:50 = rosvon apu) | ui.js:2969 | – | ei tarvita: poistettu kaanonista 25.8.2026 (KysymysNakyma.cs:297) | – |
 | Tapahtumakortti "Jatka matkaa" | index.html:947, ui.js:2842 | KysymysNakyma.cs (tapahtumakortti) | on | NUI |
-| Aarteen paljastus koko ruudulle, "Jatka matkaa" | ui.js:20107 (rakennaPaljastus) | UI/LaattaIkoni.cs (vain tulosruudussa) | osittain | NUI |
+| Aarteen paljastus koko ruudulle, "Jatka matkaa" | ui.js:20107 (rakennaPaljastus) | UI/LaattaIkoni.cs (vain tulosruudussa) | on (Paljastus koko ruudulle) | NUI |
 | Säännöt-dialogi "Sulje" | index.html:1249, 1358 | – | ei tarvita: ei avata webissäkään | – |
 
 ## 11. Matkakirjakortti, luennot ja saapuminen
@@ -210,14 +210,14 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 |---|---|---|---|---|
 | Kaiutin (luenta päällä/pois) | index.html:692, ui.js:2806 | UI/Pulu/Matkakirjakortti.cs:72 | on | NUI |
 | Kortin napautus: pieni → iso | ui.js:2903 | Matkakirjakortti.cs:67 | on | NUI |
-| Isoisän vanha valokuva → postikortti | index.html:720, ui.js:2728, 13070 | puuttuu | puuttuu | NUI, SS |
-| "Katso kuva" (ilmiön kuva → wiki) | index.html:725, ui.js:2715 | puuttuu | puuttuu | NUI |
+| Isoisän vanha valokuva → postikortti | index.html:720, ui.js:2728, 13070 | puuttuu | ei tarvita: pienoiskuva piilossa webissäkin (23.8.2026) | NUI, SS |
+| "Katso kuva" (ilmiön kuva → wiki) | index.html:725, ui.js:2715 | puuttuu | on | NUI |
 | Pikkukuvat → suurennos | fokusvirta.js:4143 | Matkakirjakortti.cs:165 | on | NUI |
-| Luentakuva → suurennos ja ‹ › | fokusvirta.js:1764, 2122, 4971 | UI/Pulu/Luentakuvasarja.cs:47 | osittain: suurennoksessa ei selausta | NUI |
+| Luentakuva → suurennos ja ‹ › | fokusvirta.js:1764, 2122, 4971 | UI/Pulu/Luentakuvasarja.cs:47 | on (suurennoksen ‹ ›) | NUI |
 | "Ohita" (luento) | fokusvirta.js:4406 | Luentakuvasarja.cs:40, PeliOhjain.cs:155 | on | NUI |
 | Saapumistrailerin ohitus napautuksella | saapumistraileri.js | UI/Pulu/Saapumistraileri.cs:45 | on | NUI |
 | Fokusvirran kortit (✕, "Jatka", kohtaaminen "Kyllä" / "Ei", pulman vihjelinkki) | fokusvirta.js:1531, 5141, 5241, 5281 | – | ei tarvita nyt: fokusvirta.js:290 FOKUSVIRTA_KORTIT = false | – |
-| Sähketehtävä: "Lähetä sähke", "Lähetä omin sanoin", "Myöhemmin", "Selvä" | fokusvirta.js:6201, 6378–6383 | puuttuu (Peli/Kaupat.cs:45 tuntee palkkion) | puuttuu | NUI, PK |
+| Sähketehtävä: "Lähetä sähke", "Lähetä omin sanoin", "Myöhemmin", "Selvä" | fokusvirta.js:6201, 6378–6383 | puuttuu (Peli/Kaupat.cs:45 tuntee palkkion) | on (Sahketehtava) | NUI, PK |
 
 ## 12. Kartan kalusteet: karttaselite, maakunnat, kartuscha ja maakyltti
 
@@ -236,8 +236,8 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Kartuscha: aiheet → maalehti | maapaneeli.js:1047 | Kartuscha.cs:172 → PeliOhjain.LueMaalehti | on (lehti kuoressa) | NUI |
 | Kartuscha: sija näkyy rivin napautuksesta | maapaneeli.js | Kartuscha.cs:60 | on | NUI |
 | Kartuscha: radio (suora lähetys) | maapaneeli.js:902 | puuttuu (Kartuscha.cs:20 "radio vain webissä") | puuttuu | NUI, LS, SS |
-| Kartuscha: lipun tarina | maapaneeli.js:961, liput.js | puuttuu | puuttuu | NUI, SS |
-| "Maiden lehdet" -nappi kartalla (maatietolinssi päälle/pois) | index.html:562, ui.js:3153 | puuttuu (vain linssivalitsimesta) | puuttuu | NUI |
+| Kartuscha: lipun tarina | maapaneeli.js:961, liput.js | puuttuu | on (Lippuikkuna) | NUI, SS |
+| "Maiden lehdet" -nappi kartalla (maatietolinssi päälle/pois) | index.html:562, ui.js:3153 | puuttuu (vain linssivalitsimesta) | ei tarvita: nappi näkyy vain vanhassa kartassa (kartta-lataus.js) | NUI |
 | Maakyltti "Lue lehti ›" | ui.js:10286 | UI/Linssit/MaidenNakyma.cs:57 | on | NUI |
 | Fokusmoodin kartuutsi, "+" Avaa maan lehti | fokusmitat.js:521, 604 | kartuscha | ei tarvita, jos kartuscha korvaa pallolaudalla (tarkista) | – |
 
@@ -250,20 +250,20 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | ✕ (skandaali, hetki, eläintäky, kohde) | skandaalit.js:192, historian-hetket.js:183, elaintaky.js:616, fokuskohteet.js:6563 | Nostokortti.cs:50 | on | NUI |
 | Kuvasarja ‹ › ja karusellin pisteet | historian-hetket.js:422, elaintaky.js:900, 1060 | Nostokortti.cs:225–226 | on (pisteiden tilalla nuolet) | NUI |
 | Kuvan napautus → suurennos | fokusnosto.js:1329, elaintaky.js:1214, fokuskohteet.js:5316 | Nostokortti.cs:220 | on | NUI |
-| Suurennoksen ‹ › | fokuskohteet.js:5876 | puuttuu | puuttuu | NUI |
+| Suurennoksen ‹ › | fokuskohteet.js:5876 | puuttuu | on | NUI |
 | Skandaalin ja hetken minivisa | skandaalit.js:434, historian-hetket.js:466 | Nostokortti.cs:270 | on | NUI |
 | Eläintäkyn palkkio | elaintaky.js | Nostokortti.cs:297 | on | NUI |
 | Kohdekortti: lukijan kysymys (+25) ja "Kysy pululta" -kysymykset | fokuskohteet.js:5478 | Nostokortti.cs:165 | on | NUI |
-| Kohdekortti: korostetut sanat → "Kysy pululta lisää" | fokuskohteet.js:5390 | puuttuu (Nostokortti.cs:17 "ei korostuksia") | puuttuu | NUI |
+| Kohdekortti: korostetut sanat → "Kysy pululta lisää" | fokuskohteet.js:5390 | puuttuu (Nostokortti.cs:17 "ei korostuksia") | on (korostetut sanat) | NUI |
 | Kohdekortti: kierros ("Avaa kierros", pelin sisäinen kehys, "Avaa selaimessa ↗", ✕) | fokuskohteet.js:5545–5628 | Nostokortti.cs:172 (avaa ulkoisen linkin) | ei tarvita nyt: webin datassa ei yhtään kierrosta (poistettu 26.8.2026) | – |
-| "Koe ihme" | fokuskohteet.js:5103 | puuttuu | puuttuu | NUI, SS |
-| "Livian leikekirja" | fokuskohteet.js:6355 | puuttuu | puuttuu | NUI, SS |
-| Täkynostokortti (kuvat, teksti, visa, "Kysy pululta") | fokusnosto.js:1128, 1737 | puuttuu (NostoSisalto.cs: vain skandaali, hetki, eläintäky ja kohde) | puuttuu | NUI, SS |
-| Täkynosto: "Katso X kartalla" | fokusnosto.js:1070 | puuttuu | puuttuu | NUI, NS |
-| Täkynosto: liitekartta suurena | fokusnosto.js:1503 | puuttuu | puuttuu | NUI |
-| Syvennystarina: ✕, visa, "Lunasta juliste" | syvennys.js:186, 320, 343 | puuttuu | puuttuu | NUI, SS |
-| Kaiutin nostokortissa (lukija) | lukija.js:2176 | puuttuu (Nostokortti.cs:17) | puuttuu | NUI, PK |
-| Reaktiot: hyvä / huono / virheilmoitus ("Lähetä Livialle", "Peru") | reaktiot.js:671, 678, 777, 779, 826 | puuttuu | puuttuu | NUI |
+| "Koe ihme" | fokuskohteet.js:5103 | puuttuu | on | NUI, SS |
+| "Livian leikekirja" | fokuskohteet.js:6355 | puuttuu | on | NUI, SS |
+| Täkynostokortti (kuvat, teksti, visa, "Kysy pululta") | fokusnosto.js:1128, 1737 | puuttuu (NostoSisalto.cs: vain skandaali, hetki, eläintäky ja kohde) | on | NUI, SS |
+| Täkynosto: "Katso X kartalla" | fokusnosto.js:1070 | puuttuu | on | NUI, NS |
+| Täkynosto: liitekartta suurena | fokusnosto.js:1503 | puuttuu | on (karttaliite suurena) | NUI |
+| Syvennystarina: ✕, visa, "Lunasta juliste" | syvennys.js:186, 320, 343 | puuttuu | on | NUI, SS |
+| Kaiutin nostokortissa (lukija) | lukija.js:2176 | puuttuu (Nostokortti.cs:17) | on (KortinLukija) | NUI, PK |
+| Reaktiot: hyvä / huono / virheilmoitus ("Lähetä Livialle", "Peru") | reaktiot.js:671, 678, 777, 779, 826 | puuttuu | on (reaktiot; lähetys odottaa workeria) | NUI |
 
 ## 14. Matkalaukku (passi, julisteet, tietäjägalleria, varusteet)
 
@@ -271,11 +271,11 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 |---|---|---|---|---|
 | Laukun avaus pilleristä, napautus ohi sulkee | main.js:1412, ui.js:2417 | UI/Matkalaukku.cs | on | NUI |
 | "Matkan tilastot" -väkänen | index.html:997, ui.js:2354 | Matkalaukku.cs:47 | on | NUI |
-| Tietäjärivin "i" → tietäjägalleria (10 tasoa) | ui.js:11048, tietajagalleria.js | puuttuu | puuttuu | NUI, PK |
-| Aarnin luettelon "i"-seloste ja sen × | ui.js:2377, 17850, 17890 | puuttuu | puuttuu | NUI |
-| Julisterivi "n/m »" → julistegalleria | index.html:1043, ui.js:2368 | Matkalaukku.cs:144 (teksti, ei napautusta) | puuttuu | NUI |
-| Julistegalleria: vedos → iso juliste, ×, huntu | ui.js:18311, 18351, 18376, 16132 | puuttuu | puuttuu | NUI, SS |
-| Varusteet: linssirivi → esikatselu (kuvaus) | index.html:1075, ui.js:19069 | UI/Linssit/Linssivalitsin.cs (kartalla) | osittain: eri paikka, ei esikatselua | NUI, LS |
+| Tietäjärivin "i" → tietäjägalleria (10 tasoa) | ui.js:11048, tietajagalleria.js | puuttuu | on | NUI, PK |
+| Aarnin luettelon "i"-seloste ja sen × | ui.js:2377, 17850, 17890 | puuttuu | on | NUI |
+| Julisterivi "n/m »" → julistegalleria | index.html:1043, ui.js:2368 | Matkalaukku.cs:144 (teksti, ei napautusta) | on | NUI |
+| Julistegalleria: vedos → iso juliste, ×, huntu | ui.js:18311, 18351, 18376, 16132 | puuttuu | on | NUI, SS |
+| Varusteet: linssirivi → esikatselu (kuvaus) | index.html:1075, ui.js:19069 | UI/Linssit/Linssivalitsin.cs (kartalla) | on (varusteiden esikatselu) | NUI, LS |
 | "Aktivoi linssi" / "Ota linssi pois" / "Katso karttaa paljain silmin" | ui.js:19353 | Linssivalitsin.cs:164, 66 | on | NUI |
 | Passi ja leimat (säilyvät pelistä toiseen) | passport.js | puuttuu | puuttuu | PK |
 
@@ -295,10 +295,10 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Linssin valmiit kysymykset chatissa | pollo.js:2227 | UI/Linssit/MinipulunKortti.cs:110 (vain astronautti) | osittain | NUI, LS |
 | "Ehdota sisältöä" (chatin ylärivi) | pollo.js:1941 | PuluChat.cs (ylärivi) | on | NUI |
 | "Näytä puhekuplat" | pollo.js:1972 | PuluChat.cs (ylärivi) | on | NUI |
-| Vastauksen kuva → "Näytä kuva isompana" | pollo.js:5305 | puuttuu | puuttuu | NUI |
-| Kuvakortti "Avaa juttu" | pollo.js:5098 | puuttuu | puuttuu | NUI |
+| Vastauksen kuva → "Näytä kuva isompana" | pollo.js:5305 | puuttuu | on | NUI |
+| Kuvakortti "Avaa juttu" | pollo.js:5098 | puuttuu | on | NUI |
 | Matkakirjalinkit ("Lue: …") | pollo.js:5477 | PuluChat + UI/Pulu/PuluHaku.cs (web pollo-haku.js: paikallinen tietohaku kontekstiin) | on (master f8fe3cc) | NUI |
-| Käsitelinkit ("Kerro lisää: aihe") | pollo.js:5824 | puuttuu | puuttuu | NUI |
+| Käsitelinkit ("Kerro lisää: aihe") | pollo.js:5824 | puuttuu | on | NUI |
 | "Ehdota tallennettavaksi" (poiminta) | pollo.js:5230 | PuluChat.PoimintaRivi | on (kehittäjätilassa "Tallenna juttuun" samaan kanavaan); webin paketin pillerit artikkelin lopussa (pollo-poiminnat.js, 1 pari) puuttuvat | NUI |
 | Paikkakysymys: kamera lentää, "‹ Palaa" | pulu-paikka.js:742 | PuluChat.cs:125, 452 | on | NUI, NS |
 | Paikkamerkki kartalla | pulu-paikka.js | puuttuu | puuttuu | NS |
@@ -314,7 +314,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Linssivalitsimen rivit | ui.js:19069 | Linssivalitsin.cs:164 | on | NUI, LS |
 | Selitekortin nimi (kutista / avaa) | ui.js:19444 | UI/Linssit/LinssiSelite.cs:33 | on | NUI |
 | "Sulje linssi ja palaa pallolle" | pallolauta/linssikartta.js:117 | UI/Linssit/LinssiUi.cs:60 | on | NUI |
-| Linssin hampurilainen: Poistu / Aloita alusta / Kertoja / Taustamusiikki | aikajana-valikko.js:105 | LinssiUi.cs:60 (vain sulku) | osittain: Aloita alusta ja kytkimet puuttuvat | NUI, LS |
+| Linssin hampurilainen: Poistu / Aloita alusta / Kertoja / Taustamusiikki | aikajana-valikko.js:105 | LinssiUi.cs:60 (vain sulku) | on (linssin hampurilainen) | NUI, LS |
 
 ### 16 b. Astronautin kamera
 
@@ -324,7 +324,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Pikkukuvat (havainnot) | satelliitti.js:1366 | UI/Linssit/Kuvanakyma.cs:205 | on | NUI |
 | ⌄ "Näytä lisätiedot" ja selitteen kelaus | satelliitti.js:655, 663 | Kuvanakyma.cs:80, 86 | on | NUI |
 | × "Sulje havainto" | satelliitti.js:812 | Kuvanakyma.cs:93 | on | NUI |
-| Lähdelinkit | satelliitti.js:461 | Kuvanakyma.cs (lähde tekstinä) | osittain: linkit eivät aukea | NUI |
+| Lähdelinkit | satelliitti.js:461 | Kuvanakyma.cs (lähde tekstinä) | on (ulkolinkit, master ee8c2af) | NUI |
 | Minipulu → kysymyskortti (×, valmiit, kenttä, ↑) | satelliitti.js:848, 907, 922, 1042 | Kuvanakyma.cs:103, MinipulunKortti.cs:52, 74, 110 | on | NUI |
 
 ### 16 c. Vertailu ja maiden tiedot
@@ -335,7 +335,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | "Vertaa" | vertailu.js:495 | MaidenNakyma.cs:147 | on | NUI |
 | Arkin laput (maan kortti pois/päälle) | vertailu.js:561 | MaidenNakyma.cs | on | NUI |
 | "Muuta valintoja" | vertailu.js:573 | MaidenNakyma.cs:216 | on | NUI |
-| Maakäyrät (väkiluku, tulot, V-Dem) | maakayrat.js | puuttuu (MaidenNakyma.cs TODO) | puuttuu | SS, NUI |
+| Maakäyrät (väkiluku, tulot, V-Dem) | maakayrat.js | puuttuu (MaidenNakyma.cs TODO) | on (Maakayrakuva, LS:n geometria) | SS, NUI |
 
 ### 16 d. Keksinnöt ja tiedeliite
 
@@ -343,9 +343,9 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 |---|---|---|---|---|
 | "Käynnistä" | aikajana.js:4507 | UI/Linssit/AikajanaNakyma.cs:118 | on | NUI |
 | Kello ja "Tauko" / "Jatka" | aikajana.js:2666, 2713 | AikajanaNakyma.cs:80 | on | NUI |
-| Aikajanan kortit (siirry keksintöön) | aikajana.js:2759 | AikajanaNakyma.cs:78, 82 (◀ ▶) | osittain | NUI |
+| Aikajanan kortit (siirry keksintöön) | aikajana.js:2759 | AikajanaNakyma.cs:78, 82 (◀ ▶) | on | NUI |
 | Kartan valot (napautus → keksintö) | aikajana.js:3145, 3289 | puuttuu | puuttuu | LS |
-| Lappukahva "Näytä X" | aikajana.js:4151 | puuttuu | puuttuu | NUI |
+| Lappukahva "Näytä X" | aikajana.js:4151 | puuttuu | on (lappukahva, master ee8c2af) | NUI |
 | Välinäytöksen "Jatka" | aikajana.js:771 | AikajanaNakyma.cs:112 | on | NUI |
 | "Katso löydöt" (loppu) | aikajana.js:5005 | AikajanaNakyma.cs:121, 123 | on | NUI |
 | "Lue juttu" → tiedeliite | aikajana.js:5677 | AikajanaNakyma (paneelin nappi) → KeksinnotLinssi.AvaaJuttu (LS) | on (merge-pyynnössä natiivi-ui/tiedeliite) | NUI, LS |
@@ -384,15 +384,15 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Saapuva sähke "Sähke retkikunnalta", ✕ | sahke.js:603–605 | puuttuu | puuttuu | NUI, PK |
-| Kaveriavun veikkaus (vaihtoehdot), "En osaa auttaa" | sahke.js:671, 695 | puuttuu | puuttuu | NUI, PK |
-| Kaveriavun odotus: "Selvä", "Peru odotus" | sahke.js:1051, 1074 | puuttuu | puuttuu | NUI, PK |
-| Nimimerkin valinta, "Arvo uudet nimet" | sahke.js:1149, 1163 | puuttuu | puuttuu | NUI, PK |
-| "Perusta retkikunta" | sahke.js:1169 | puuttuu | puuttuu | NUI, PK |
-| Liittymiskoodi ja "Liity retkikuntaan" | sahke.js:1198, 1207 | puuttuu | puuttuu | NUI, PK |
-| Vinkkisähkeen paikka | sahke.js:1270 | puuttuu | puuttuu | NUI, PK |
-| Sähkepohjat | sahke.js:1294 | puuttuu | puuttuu | NUI, PK |
-| "Eroa retkikunnasta" | sahke.js:1308 | puuttuu | puuttuu | NUI, PK |
+| Saapuva sähke "Sähke retkikunnalta", ✕ | sahke.js:603–605 | puuttuu | on | NUI, PK |
+| Kaveriavun veikkaus (vaihtoehdot), "En osaa auttaa" | sahke.js:671, 695 | puuttuu | on | NUI, PK |
+| Kaveriavun odotus: "Selvä", "Peru odotus" | sahke.js:1051, 1074 | puuttuu | on | NUI, PK |
+| Nimimerkin valinta, "Arvo uudet nimet" | sahke.js:1149, 1163 | puuttuu | on | NUI, PK |
+| "Perusta retkikunta" | sahke.js:1169 | puuttuu | on | NUI, PK |
+| Liittymiskoodi ja "Liity retkikuntaan" | sahke.js:1198, 1207 | puuttuu | on | NUI, PK |
+| Vinkkisähkeen paikka | sahke.js:1270 | puuttuu | on | NUI, PK |
+| Sähkepohjat | sahke.js:1294 | puuttuu | on | NUI, PK |
+| "Eroa retkikunnasta" | sahke.js:1308 | puuttuu | on | NUI, PK |
 
 ## 18. Voitto, pilvitallennus ja iOS-kuoren toiminnot
 
@@ -485,6 +485,13 @@ matkakirjakortti lappuna luennan aikana kaikilla laitteilla (webin TEKSTIT PIILO
 Myöhemmin samana päivänä: sanelu ja "Kirjoita kysymys" (masterissa), Liiku, kulkutapaliuku ja "Vaihda
 matkustustapa" (master 30fe586), B7-äänisoittimen koukut ja tehosteiden webpariteetti (masterissa).
 Odottaa muita: ✈-kohdemerkit (NS), tiedeliite ja aikajanalinssit (LS).
+
+## Taulukon tarkistus (24.9.2026 aamu, Natiivi-UI)
+
+Tila-sarake päivitetty Tehty-osioiden ja koodin mukaan (65 riviä). Avoinna Natiivi-UI:lla: pöllöpoimintojen
+pillerit artikkelin lopussa (pollo-poiminnat.js, 1 pari), "Jaa matka" (PK: iOS-jakoarkki), linssin valmiit
+kysymykset chatissa (LS), maailmanradion rivit (LS), lehden kuori-rivit (osio 8, natiivilehti tehty – rivit
+tarkistetaan erikseen), KOKEET-rivit (osio 20, vain kehittäjätila).
 
 ## Ei webissä, odottaa omistajaa
 
