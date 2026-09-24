@@ -1,3 +1,7 @@
+## 2026-09-24 14.10 UTC — FABLE: tilaus kuvaputkelle: maamerkkien viitekuvat 70 kaupungille (posti/fable-kuvaputki-maamerkit-viitekuvat-20260924.md)
+
+## 2026-09-24 14.10 UTC — FABLE: tilaus kuvaputkelle: renessanssisalin teokset, veistokset, omakuvat ja kartat (posti/fable-kuvaputki-renessanssisali-20260924.md)
+
 ## 2026-09-15 — FABLE: työnjako Fable/Codex (posti/fable-tyonjako-codex-20260915.md)
 
 ## 2026-09-15 — FABLE: pyyntö Codexille: minipulu linssinäkymiin (posti/fable-codex-minipulu-20260915.md)
