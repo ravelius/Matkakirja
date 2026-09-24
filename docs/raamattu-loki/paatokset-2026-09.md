@@ -4219,3 +4219,7 @@ Postivahti ei ollut vielä lähettänyt; sessio tyhjä (0 viestiä). Aloitusvies
 ## OMISTAJA KIRJAUTUI koodaus-KAYTTAJAN XCODEEN (klo 16.5x) → NATIIVISEPPA AJAA ISON iPADIN KAANNOKSEN (24.9.2026 klo 16.31)
 
 Tili näkyy Xcoden tililistassa (IDE.Identifiers.Prod 1 tunniste); tiimilista latautuu. Natiiviseppä: xcodebuild -allowProvisioningUpdates -allowProvisioningDeviceRegistration isolle iPadille 00008103…; onnistuttua Linssisepän 1024×1366-kuvat ja Laitetestaajan laitekäyttö.
+
+## SIIRTOSEPPA NOLLATTU (8 %) — FABLE LAHETTI ALOITUSVIESTIN (4335fdd71) + #2913:N KASITTELY; LAITETESTAAJA KAYNNISSA (12 %, RC); LINSSISEPPA: ISS-RATA KORJATTU (linssiseppa/b10-avaruus b13adaa), 32 → NATIIVI-UI (24.9.2026 klo 16.32)
+
+Postivahti: Laitetestaaja nollautui ja käynnistyi (Fablen aloitusviesti), Siirtoseppä idle 8 % ilman aloitusviestiä → Fable lähetti. Linssiseppä: ISS-rata rakennettiin kerran sekunnissa → nyt joka kehys ilman allokointeja, testit 226/226; Sulje linssi -animaatio (32) on Natiivi-UI:n LinssiUi.cs:ssä → välitetty sille (1,2 s viive, 0,6 s animaatio). Video odottaa ison iPadin käännöstä.
