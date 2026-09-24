@@ -1746,3 +1746,17 @@
 .mk-palstat__palsta--oikea {
     margin-left: 22.4px;
 }
+
+.mk-palstat__anfangikappale {
+    position: relative;
+}
+
+/* Web ::first-letter: American Typewriter 700, 3,1 em, rgba(70, 51, 31, 0.9) paperin #f5f0e2 päällä
+   sRGB-yhdistelmänä (lineaarinen alfa vaalentaisi). */
+.mk-palstat__anfangi {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    color: rgb(88, 70, 51);
+}

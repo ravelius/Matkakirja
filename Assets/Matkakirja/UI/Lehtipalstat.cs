@@ -7,10 +7,13 @@
 // UITK:ssa ei ole column-countia. Palstat ladotaan itse: koko tekstin korkeus palstan leveydellä mitataan,
 // vasen palsta täytetään puoliväliin asti (webin tasapalstat: vasen saa ylimääräisen rivin), ja rajalle osuva
 // kappale jaetaan sanojen välistä. <link>…</link>-jaksoa ei katkaista kesken (Nostokortti.Korosta).
-// Anfangi puuttuu vielä (web .lehtipalsta p:first-of-type::first-letter).
+// Anfangi vain palstoissa (web .lehtipalsta p:first-of-type::first-letter: American Typewriter 700, 3,1 em,
+// line-height 0,82, oikealla 0,12 em, rgba(70, 51, 31, 0.9)); UITK ei kelluta, joten anfangin viereiset rivit
+// ladotaan kapeampaan palstaan kuten lehden AnfangiKappale.
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -46,6 +49,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(mittari, kirjasin);
             mittari.AddToClassList("mk-palstat__mittari");
             var sisus = Rakenne.El("mk-palstat__sisus", kotelo, PickingMode.Ignore);
+            var kirjainMittari = Rakenne.Teksti("", "mk-palstat__anfangi mk-palstat__mittari", kotelo);
+            kirjainMittari.enableRichText = false;
+            Kirjasimet.Aseta(kirjainMittari, Kirjasin.KoneBold);
             float leveys = -1f;
 
             Label Kappale(VisualElement p, string t)
@@ -74,10 +80,15 @@ namespace Matkakirja.Natiivi
                     VisualElement.MeasureMode.Undefined).y;
                 float vali = mittari.resolvedStyle.marginBottom;
                 float rivi = Korkeus("A");
+                float koko = mittari.resolvedStyle.fontSize > 0 ? mittari.resolvedStyle.fontSize : 15.5f;
+                var anf = Anfangi.Mitoita(kappaleet[0], koko, rivi, kirjainMittari, (s, lev) =>
+                    mittari.MeasureTextSize(alku + s, lev, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y, palsta);
+                // Ensimmäisen kappaleen (tai sen alkuosan) korkeus anfangin kanssa.
+                float Korkeus0(string s) => anf == null ? Korkeus(s) : anf.Korkeus(s);
                 int n = kappaleet.Count;
                 var h = new float[n];
                 float yht = 0f;
-                for (int i = 0; i < n; i++) { h[i] = Korkeus(kappaleet[i]); yht += h[i] + (i > 0 ? vali : 0f); }
+                for (int i = 0; i < n; i++) { h[i] = i == 0 ? Korkeus0(kappaleet[i]) : Korkeus(kappaleet[i]); yht += h[i] + (i > 0 ? vali : 0f); }
                 float tavoite = yht / 2f + rivi * 0.5f;
 
                 var vasen = new List<string>();
@@ -95,7 +106,8 @@ namespace Matkakirja.Natiivi
                     while (ala < yla)
                     {
                         int keski = (ala + yla + 1) / 2;
-                        if (Korkeus(string.Join(" ", sanat.GetRange(0, keski))) <= tila) ala = keski; else yla = keski - 1;
+                        string osa = string.Join(" ", sanat.GetRange(0, keski));
+                        if ((j == 0 ? Korkeus0(osa) : Korkeus(osa)) <= tila) ala = keski; else yla = keski - 1;
                     }
                     if (ala > 0)
                     {
@@ -110,8 +122,12 @@ namespace Matkakirja.Natiivi
 
                 var pv = Rakenne.El("mk-palstat__palsta", sisus, PickingMode.Ignore);
                 var po = Rakenne.El("mk-palstat__palsta mk-palstat__palsta--oikea", sisus, PickingMode.Ignore);
-                Label viimeinen = null;
-                foreach (var k in vasen) viimeinen = Kappale(pv, k);
+                VisualElement viimeinen = null;
+                for (int i = 0; i < vasen.Count; i++)
+                {
+                    viimeinen = i == 0 && anf != null ? anf.Luo(pv, vasen[i], Kappale) : Kappale(pv, vasen[i]);
+                    if (i == 0 && anf != null) viimeinen.style.marginBottom = vali;
+                }
                 if (viimeinen != null) viimeinen.style.marginBottom = 0; // web p:last-child / palstan vaihto kesken kappaleen
                 viimeinen = null;
                 foreach (var k in oikea) viimeinen = Kappale(po, k);
@@ -120,6 +136,75 @@ namespace Matkakirja.Natiivi
 
             kotelo.RegisterCallback<GeometryChangedEvent>(_ => Lado());
             return kotelo;
+        }
+
+        /// <summary>Anfangi palstan ensimmäiseen kappaleeseen: kirjain, sen viereen mahtuvat sanat ja loput alle.</summary>
+        sealed class Anfangi
+        {
+            string kirjain;
+            float iso, rivi, sisennys, top;
+            int rivit;
+            Func<string, float, float> mittaa;
+            float palsta;
+
+            /// <summary>null, kun kappale ei ala kirjaimella (esim. korostuslinkki alussa).</summary>
+            public static Anfangi Mitoita(string kappale, float koko, float rivi, Label kirjainMittari, Func<string, float, float> mittaa, float palsta)
+            {
+                if (string.IsNullOrEmpty(kappale) || !char.IsLetterOrDigit(kappale[0])) return null;
+                var a = new Anfangi { kirjain = kappale.Substring(0, 1), rivi = rivi, mittaa = mittaa, palsta = palsta };
+                a.iso = 3.1f * koko;
+                kirjainMittari.style.fontSize = a.iso;
+                // Web kellutuslaatikko 0,06 + 0,82 em: se varaa niin monta tekstiriviä kuin ulottuu.
+                a.rivit = Mathf.Max(1, Mathf.CeilToInt(0.88f * a.iso / rivi - 0.05f));
+                a.sisennys = kirjainMittari.MeasureTextSize(a.kirjain, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x + 0.12f * a.iso;
+                // Anfangin perusviiva viimeisen viereisen rivin perusviivalle (kuten lehden AnfangiKappale).
+                a.top = Mathf.Round(Nousu(Kirjasin.Luku) * koko + (a.rivit - 1) * rivi - Nousu(Kirjasin.KoneBold) * a.iso);
+                return a;
+            }
+
+            /// <summary>Fontin nousu kirjasinkoon osuutena (perusviivan etäisyys rivin yläreunasta).</summary>
+            static float Nousu(Kirjasin k)
+            {
+                var fi = Kirjasimet.Hae(k)?.fontAsset?.faceInfo;
+                return fi is UnityEngine.TextCore.FaceInfo f && f.pointSize > 0 ? f.ascentLine / f.pointSize : 0.8f;
+            }
+
+            (string Vieressa, string Alla) Jaa(string kappale)
+            {
+                var sanat = Sanat(kappale.Substring(kirjain.Length));
+                float kapea = Mathf.Max(1f, palsta - sisennys);
+                float raja = mittaa("A" + string.Concat(Enumerable.Repeat("\nA", rivit - 1)), kapea) + 0.5f;
+                int ala = 0, yla = sanat.Count;
+                while (ala < yla)
+                {
+                    int keski = (ala + yla + 1) / 2;
+                    if (mittaa(string.Join(" ", sanat.GetRange(0, keski)), kapea) <= raja) ala = keski; else yla = keski - 1;
+                }
+                return (string.Join(" ", sanat.GetRange(0, ala)), string.Join(" ", sanat.GetRange(ala, sanat.Count - ala)));
+            }
+
+            public float Korkeus(string kappale)
+            {
+                var (_, alla) = Jaa(kappale);
+                return rivit * rivi + (alla.Length > 0 ? mittaa(alla, palsta) : 0f);
+            }
+
+            public VisualElement Luo(VisualElement isa, string kappale, Func<VisualElement, string, Label> teksti)
+            {
+                var (vieressa, alla) = Jaa(kappale);
+                var kpl = Rakenne.El("mk-palstat__anfangikappale", isa, PickingMode.Ignore);
+                var k = Rakenne.Teksti(kirjain, "mk-palstat__anfangi", kpl);
+                k.enableRichText = false;
+                Kirjasimet.Aseta(k, Kirjasin.KoneBold);
+                k.style.fontSize = iso;
+                k.style.top = top;
+                var v = teksti(kpl, vieressa);
+                v.style.marginLeft = sisennys;
+                v.style.height = rivit * rivi;
+                v.style.marginBottom = 0;
+                if (alla.Length > 0) { var l = teksti(kpl, alla); l.style.marginBottom = 0; }
+                return kpl;
+            }
         }
 
         /// <summary>Välilyönnein erotetut sanat; &lt;link&gt;…&lt;/link&gt; ja muut tagit pysyvät ehjinä.</summary>
