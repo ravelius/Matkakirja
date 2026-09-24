@@ -3535,3 +3535,7 @@ Kaava: Fable kutsuu clear_session self tämän vuoron lopussa.
 ## FABLE ALOITTI UUDEN SESSION klo 10.5x (NOLLAUS ONNISTUI) (24.9.2026 klo 10.52)
 
 Remote Control päällä; luettu CLAUDE.md, Raamatun TYÖTAPA/KÄSKYT/NOLLAUS ja NATIIVI PELI ETUSIJALLE, luovutus -b, lokin 40 otsikkoa. Jono: 1) omistajan build 5 -lisälöydökset (18…), 2) Natiivisepän build 6 -kohdat → SHA → build 6 (Laitetestaaja ajaa tarkistuslistan ensin), 3) D1-oikeus ~11.45 → Julkaisija ajaa sahke-worker.yml, 4) Natiivi-UI Island-taso, 5) julkinen TestFlight-kortti build 6:n jälkeen, 6) nightly 25.9. → Julkaisija Sonnetiin. Web main 9c77ec53f (#3003 v2163 mainissa).
+
+## LINSSISEPPA: KOREOGRAFIA ERAT 1–2 KUVATTU iPHONE-SIMULAATTORISSA (proto-3d/lokit/koreografia-iphone-20260924/avaus/avaus.mp4, arkki.jpg): PISTE VIIPYY TAHDISSA ~4 s, SYOKSY AFRIKKAAN KASVAA TASAISESTI; NOUSU 2,4 s PEHMEANA (koreografia3 df3e2e3 JONOSSA); PIIKKIAJO 5: FONTTIPIIKKI JA VESISTOVERKOT POISSA, JALJELLA ENSIPIIRTO 15–18 ms (NATIIVISEPPA) JA IHMISEN MATKA 12 ms (SAMASSA ERASSA); SEURAAVAKSI KEKSINTOJEN PYSAKKIAJOT (24.9.2026 klo 11.01)
+
+Fable katsoi arkin: avaruusavaus, Afrikka-zoomi ja Marokon lähikuva etenevät webin mukaisesti. Hyväksytty; koreografia3 mergeen Natiivisepän seuraavassa erässä.
