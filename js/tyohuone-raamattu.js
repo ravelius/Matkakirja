@@ -66,7 +66,7 @@ export const RAAMATTU = {
           + 'nimellä /Users/Shared/Claude/Matkakirja-<rooli>; erä-worktreet vain '
           + '/Users/Shared/Claude/wt/<rooli>-<aihe> työkalulla tools/uusi-worktree.sh, poisto '
           + 'HETI mergen tai PR:n sulkemisen jälkeen (--poista), wt/ yhteensä alle 20 (Fable 24.9.2026 klo 13.2x: omistajan kysymys 125 Gt:n kansiosta); ei koskaan käyttäjän kotihakemistoon; Postivahti tarkistaa '
-          + '(tools/tarkista-tyotilat.sh) ja hälyttää yli 20 worktreestä; LEVY (Fable 24.9.2026): lokikansiot proto-3d/lokit siirretään yön siivouksessa NAS:iin kun yli 2 vrk vanhoja, polttojen tulokset suoraan NAS:iin ja paikallisesti vain keskeneräinen, tavoite /Users/Shared/Claude alle 60 Gt; haarat rooli-<aihe> pohjana '
+          + '(tools/tarkista-tyotilat.sh) ja hälyttää yli 20 worktreestä; LEVY (Fable 24.9.2026; omistaja klo 13.3x: ei tuplavarmuuskopioita — GitHub kattaa koodin, sisällön, raportit ja lokin, proto-git pushataan GitHubiin): lokikansiot proto-3d/lokit POISTETAAN yön siivouksessa kun yli 2 vrk vanhoja, ei NAS-kopiota; kuvat, joihin committoitu raportti viittaa, kopioidaan pienennettyinä repon docs/raportit/kuvat/-kansioon ennen poistoa; polttojen tulokset suoraan NAS:iin ja paikallisesti vain keskeneräinen, tavoite /Users/Shared/Claude alle 60 Gt; haarat rooli-<aihe> pohjana '
           + 'origin/<työhaara>; yksi erä = yksi haara; ennen ilmoitusta testit 0 fail ja erän '
           + 'savuke paikallisesti. C) VIESTINTÄ FABLELLE (tärkein tokenisäästö): viesti VAIN '
           + 'kun a) erä on valmis ja pushattu, b) sessio on jumissa tai tarvitsee päätöksen, '
