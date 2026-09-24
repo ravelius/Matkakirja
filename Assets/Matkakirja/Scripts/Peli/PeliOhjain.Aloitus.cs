@@ -2,7 +2,8 @@
 //
 // Uuden matkan lähtökaupunki valitaan kartalta. Valinnan jälkeen kone lentää Lontoosta valittuun
 // kaupunkiin. Omistaja 24.9.2026 (build 7), webin mukaan: intro-puhe.mp3 (luennat.intro) soi jo
-// ALOITUSPORTILLA avaustekstin kanssa (Natiivi-UI kutsuu SoitaIntro), ja koneen lähtiessä moottorin ääni
+// ALOITUSPORTILLA avaustekstin kanssa (Natiivi-UI kutsuu SoitaIntro), sen jälkeen pulun avausesittely
+// (Natiivi-UI; web js/livia.js), ja kohteen valinta keskeyttää molemmat heti. Koneen lähtiessä moottorin ääni
 // ja puhe-lento-alku.mp3 (luennat.lento-alku, web lueLennonRepliikki) alkavat samalla hetkellä. Lento
 // kestää vähintään lentorepliikin verran. Perillä saapuminen kulkee normaalisti (traileri tai lehti).
 //
@@ -56,6 +57,10 @@ namespace Matkakirja.Natiivi
             if (!b.HasValue) return false;
 
             float kesto = AloituslennonKesto();
+            // Valinta keskeyttää avausluennan heti (omistaja 24.9.2026, build 7; web doPickStart vaientaa kertojan
+            // napautuksessa). Pulun avausesittely väistyy samasta hetkestä: Natiivi-UI kuuntelee AloituslentoAlkoi
+            // (web peruLivianAvaus). Lentorepliikki alkaa vasta koneen lähtiessä.
+            OhitaLuento();
             dialogi.Piilota();
             dialogi.PiilotaHeitto();
             PiilotaKortti();
