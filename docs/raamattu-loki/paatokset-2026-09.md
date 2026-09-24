@@ -4215,3 +4215,7 @@ Postivahti ei ollut vielä lähettänyt; sessio tyhjä (0 viestiä). Aloitusvies
 ## OMISTAJAN LOYDOKSET 32–34 (BUILD 9, klo 16.5x, SITOVA): SULJE LINSSI -NAPPI ANIMOITUU ✕:KSI, ISS-VIIVA NYKII, KUVIEN SELAUS SWIPELLA JA REUNANAPAUTUKSELLA (24.9.2026 klo 16.29)
 
 32) Avaruuslinssin 'Sulje linssi' näkyy ensin tekstinä ja pienenee animoidusti kirjain kerrallaan pelkäksi ✕:ksi yläkulmaan; sama kaikkiin linsseihin (omistajan pyytämä natiivin lisäys) → Linssiseppä. 33) ISS-viiva liikkuu nykäyksittäin, pitää liikkua pehmeästi pallon ympäri → Linssiseppä (interpolointi joka kehys). 34) avatut kuvat selattaviksi swipellä ja kuvan reunaa napauttamalla, ei väkäsiä kuvan päälle → Natiivi-UI. Kaikki build 10.
+
+## OMISTAJA KIRJAUTUI koodaus-KAYTTAJAN XCODEEN (klo 16.5x) → NATIIVISEPPA AJAA ISON iPADIN KAANNOKSEN (24.9.2026 klo 16.31)
+
+Tili näkyy Xcoden tililistassa (IDE.Identifiers.Prod 1 tunniste); tiimilista latautuu. Natiiviseppä: xcodebuild -allowProvisioningUpdates -allowProvisioningDeviceRegistration isolle iPadille 00008103…; onnistuttua Linssisepän 1024×1366-kuvat ja Laitetestaajan laitekäyttö.
