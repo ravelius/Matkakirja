@@ -7,7 +7,10 @@ suunnitelma koskee vain natiivia, web pysyy ennallaan.*
 
 Kuvat ovat kansiossa `kaappaukset/radiouudistus-20260924/` (lähdekoodi `lahde/`). Ne ovat havainnekuvia.
 Kartta on natiivin oma kuvakaappaus isosta iPadista (40° kallistus, 47° N 6° E, 2 600 km), ja sen päälle on
-laskettu hämärä. Mastot, renkaat, yövalot ja paneeli on piirretty päälle. Paneelin puu, messinki ja lasi ovat
+laskettu hämärä. Yövalot ovat oikeaa NASA Black Marble -aineistoa (GIBS VIIRS_Black_Marble), joka on projisoitu
+samaan näkymään pelin kameramallilla (`lahde/proj.py`). Mastot ovat oikeissa paikoissa, ja niiden koko tulee
+asukasluvusta (skeema 1.38). Pääkuva päivitettiin omistajan palautteen mukaan 24.9. klo 20.1x: kartta on
+tummempi, yövalot kattavat kaikki kaupungit ja tiet, ja hehku on voimakkaampi. Paneelin puu, messinki ja lasi ovat
 proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae06).
 
 ![Pääkuva: iPad, hämärä kartta, Pariisin masto valittuna](kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg)
@@ -63,7 +66,7 @@ Hämärä ei ole yö. Pergamentti tummuu ja viilenee, ja rannat, rajat, nimet ja
 Tileset-varjostimessa tehdään yksi kerto- ja lisäys lineaarisessa tilassa:
 
 ```
-hämärä = pohja × (0,30, 0,29, 0,36) + (0,010, 0,010, 0,022)
+hämärä = pohja × (0,18, 0,17, 0,24) + (0,006, 0,006, 0,016)     (omistaja 24.9. klo 20.0x: tummempi)
 lopputulos = lerp(pohja, hämärä, h),  h = 0 → 1 linssin avauksessa (1,5 s, Pehmeä)
 ```
 
@@ -75,12 +78,17 @@ lähtee pois (löydös 43, alla), joten kaikki maat näkyvät samassa hämäräs
 satelliittiputkella, ja Natiiviseppä lisää sen hämärään emissiivisenä:
 
 ```
-valo = BlackMarble × (0,25 + 0,75 × paikallinen)
+w     = saturate((R − 48/255) / (170/255)) × saturate((R − B + 10/255) / (40/255))   (vain lämmin valo,
+        ei kuunvalaistua maata eikä lunta; Karttaseppä voi leipoa tämän suoraan polttoon)
+valo  = w × 0,85 × (0,5 + 0,5 × paikallinen) × (1,05, 0,82, 0,52)                   (natriumin sävy)
 paikallinen = smoothstep(230 km, 60 km, etäisyys valittuun mastoon) × syttyminen (0 → 1, 1,2 s Pehmeä)
+hehku = valo + blur(valo, 4 pt) × 1,4 + blur(valo, 14 pt) × 1,9                       (bloom, lisätään)
 ```
 
-Pääkuvassa Black Marblen sijaisena ovat piirretyt pisteet. Oikea aineisto on tiheämpi ja seuraa teitä ja
-rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon yöosuutta.
+Perustaso on 0,5 kaikkialla maailmassa (omistaja: selvästi näkyvä), ja valitun maston ympärillä valot ovat
+täysiä. Bloom on Natiivisepän filmipinossa (URP Bloom: kynnys emissiiviselle, sironta noin 0,7) tai
+tileset-varjostimen oma kahden säteen hehku, kumpi on iPhonella halvempi. Sama kerros palvelee myöhemmin
+yön valot -datalinssiä ja lennon yöosuutta.
 
 ## 4. Radiomastot
 
@@ -92,9 +100,11 @@ rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon y
 | Keski | 0,5–3 milj. | itsekantava ristikkotorni | 2 tasoa (50 %, huippu) | 46 pt | 600 km |
 | Pieni | < 0,5 milj. | putkimasto | huippu | 30 pt | 350 km |
 
-- **Koko tulee kaupungin asukasluvusta.** Kaupungit.json ei vielä sisällä sitä. Ehdotan, että
-  Siirtoseppä lisää kentän `asukkaat` Wikidatasta (P1082, CC0) radiokaupungeille (115). Kentän
-  `tarkeys` jakauma radiokaupungeissa on 81 × 3, 6 × 2, 7 × 1 ja 21 × 0, joten se ei erottele kokoja.
+- **Koko tulee kaupungin asukasluvusta:** kaupungit.json-kenttä `asukkaat` (skeema 1.38, Wikidata P1082,
+  CC0). Jos luku puuttuu (luontokohteet kuten Sahara ja Alpit) tai `asukkaatAlue` on tosi (luku koskee
+  saarta tai valtiota, esim. Angola ja Islanti), masto on Pieni. Koepaketissa v49 jako on 36 Iso, 43 Keski
+  ja 36 Pieni. Huom: P1082 on kaupungin oma raja eikä metropolialue, joten Pariisi (2,1 milj.) ja Rooma
+  (2,7 milj.) ovat Keskiä.
 - **Liioittelu:** 64 pt 2 600 km:n korkeudelta vastaa noin 150 km:n mastoa (oikea on noin 300 m), eli
   liioittelu on noin 500-kertainen. Maston korkeus maailmassa on c × kameran korkeus^0,85, joten koko
   ruudulla kasvaa hieman zoomattaessa lähemmäs mutta ei räjähdä. Mastot seisovat pinnan normaalin
@@ -112,6 +122,9 @@ rannikoita. Sama kerros palvelee myöhemmin yön valot -datalinssiä ja lennon y
 **Muut mastot (lentoestevalot):** kukin vilkkuu omassa vaiheessaan. Jakso on 1,5 s ± 20 % (arvottu
 mastoittain, siemen = aseman tunnus), valo palaa 0,45 s ja nousee ja laskee 0,12 s. Kaikki lasketaan
 varjostimessa, joten prosessori ei tee mitään kehyskohtaista.
+
+**Hehku** (omistaja 24.9. klo 20.0x): lentoestevalon halo on 6,8 × valon säde (valittu 12 ×), eli
+kaksinkertainen ensimmäiseen havainnekuvaan nähden, ja reunan alfa on korkeampi. Maavalon säde on 140 km.
 
 **Valittu masto:** kirkkaus = max(0,25, VU) (aito taso, AVAudioEngine build 8). Kirkkaus nousee 30 ms:ssa
 ja laskee 250 ms:ssa, jotta tahti näkyy mutta ei välky. Kaikki tasot vilkkuvat samassa tahdissa. Maavalo on
