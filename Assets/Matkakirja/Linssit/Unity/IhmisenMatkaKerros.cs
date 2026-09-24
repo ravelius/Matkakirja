@@ -5,8 +5,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Virrat;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -29,6 +31,21 @@ namespace Matkakirja.Natiivi
         public static Action<string, double, string> TunneKasittelija;
         public static Action LoppuKasittelija;
 
+        /// <summary>Auki oleva kerros (null, kun ihmisen matka ei ole auki).</summary>
+        public static IhmisenMatkaKerros Instanssi { get; private set; }
+
+        /// <summary>
+        /// LÖYTÖKUVAN ANKKURI (web .aikajana-kuva: soikio kohdepisteen yläpuolella, seuraa pistettä
+        /// kameran liikkuessa). Nykyisen kuvan kohdepisteen ruutusijainti Unityn ruutupikseleinä
+        /// (origo vasen ALAkulma, kuten Input/Camera.WorldToScreenPoint); UI muuntaa paneeliin
+        /// RuntimePanelUtils.ScreenToPanel(panel, new Vector2(p.x, Screen.height - p.y)). null, kun
+        /// kuvaa ei ole tai piste on pallon takana. Luetaan joka kehys (LateUpdate jälkeen).
+        /// </summary>
+        public static Vector2? KuvanPiste => Instanssi != null ? Instanssi.Ruutupiste(Instanssi.kuvaKohde) : null;
+
+        readonly Dictionary<string, (double Lat, double Lon)> paikkaIndeksi = new Dictionary<string, (double, double)>(StringComparer.Ordinal);
+        string kuvaKohde;
+
         PalloKierto kierto;
         Matkakirja.Natiivi.Valot valot;
         VanaKerros vanat;
@@ -44,6 +61,8 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(g.transform, false);
             var k = go.AddComponent<IhmisenMatkaKerros>();
             k.kierto = kierto;
+            foreach (var p in paikat) if (p.Tunnus != null) k.paikkaIndeksi[p.Tunnus] = (p.Lat, p.Lon);
+            Instanssi = k;
             bool vahennetty = LinssiOhjain.Instanssi?.VahennettyLiike ?? false;
             k.valot = Matkakirja.Natiivi.Valot.Luo(g, paikat.Select(p => (p.Tunnus, p.Lat, p.Lon)).ToList(), vahennetty, kierto.GetComponent<Camera>());
             k.taivas = Tahtitaivas.Luo(g, 1, vahennetty);
@@ -95,7 +114,29 @@ namespace Matkakirja.Natiivi
 
         public void SytytaKohde(string kohde) => valot?.Sytyta(kohde);
 
-        public void Kuva(string kohde) => KuvaKasittelija?.Invoke(kohde);
+        public void Kuva(string kohde)
+        {
+            kuvaKohde = kohde;
+            KuvaKasittelija?.Invoke(kohde);
+        }
+
+        Vector2? Ruutupiste(string tunnus)
+        {
+            if (tunnus == null || kierto == null || !paikkaIndeksi.TryGetValue(tunnus, out var p)) return null;
+            var kamera = kierto.GetComponent<Camera>();
+            var g = kierto.georeferenssi;
+            if (kamera == null || g == null) return null;
+            double3 keskusU = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            double3 u = g.TransformEarthCenteredEarthFixedPositionToUnity(
+                CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.Lon, p.Lat, 0)));
+            Vector3 paikka = g.transform.TransformPoint((float3)u);
+            Vector3 normaali = g.transform.TransformDirection((float3)math.normalize(u - keskusU));
+            Vector3 kohti = kamera.transform.position - paikka;
+            if (Vector3.Dot(normaali, kohti.normalized) <= 0.02f) return null;   // pallon takana
+            Vector3 r = kamera.WorldToScreenPoint(paikka);
+            return r.z > 0 ? new Vector2(r.x, r.y) : (Vector2?)null;
+        }
+
 
         public void Pulu(string teksti) => PuluKasittelija?.Invoke(teksti);
 
@@ -107,6 +148,7 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (Instanssi == this) Instanssi = null;
             valot?.Pura();
             vanat?.Pura();
             if (taivas != null) Destroy(taivas.gameObject);
