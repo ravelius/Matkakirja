@@ -1,0 +1,1492 @@
+[
+ {
+  "id": "A1",
+  "nimi": "Suuret uskonnot syntyvät",
+  "alue": "Lähi-itä, Intia, Kiina",
+  "kaari": "1500 eaa – 632",
+  "pysakit": "Veda-hymnit Punjab · Buddhan ensimmäinen saarna Sarnath · Kungfutse Qufu · Toinen temppeli Jerusalem · Jeesus Galilea ja Jerusalem · Muhammad Mekka ja Medina",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "A2",
+  "nimi": "Kristinusko leviää Eurooppaan",
+  "alue": "Eurooppa",
+  "kaari": "30 – 1000",
+  "pysakit": "Paavali Ateena · Nikaian kirkolliskokous 325 · Iona 563 · Canterbury 597 · Kiovan kaste 988 · Uppsala",
+  "tila": "seuraava",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "A3",
+  "nimi": "Islamin kultakausi",
+  "alue": "Bagdad – Córdoba",
+  "kaari": "750 – 1258",
+  "pysakit": "Bait al-hikma Bagdad · Córdoban suuri moskeija · al-Azhar Kairo · Samarkandin observatorio · Isfahan · Bagdadin tuho 1258",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "A4",
+  "nimi": "Uskonpuhdistus",
+  "alue": "Keski-Eurooppa",
+  "kaari": "1517 – 1648",
+  "pysakit": "Wittenberg 1517 · Zürich · Geneve · Trenton kokous · Pyhän Bartolomeuksen yö Pariisi · Westfalenin rauha",
+  "tila": "seuraava",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "A5",
+  "nimi": "Buddhalaisuuden tie Aasian halki",
+  "alue": "Intia – Japani",
+  "kaari": "250 eaa – 800",
+  "pysakit": "Sanchi · Dunhuangin luolat · Nara · Borobudur · Lhasa",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "A6",
+  "nimi": "Pyhiinvaellusreitit",
+  "alue": "maailma",
+  "kaari": "jatkuva",
+  "pysakit": "Santiago de Compostela · Mekan hajj · Varanasi · Shikokun 88 temppeliä · Jerusalem",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "A7",
+  "nimi": "Luostarit ja kirjat",
+  "alue": "Eurooppa",
+  "kaari": "500 – 1500",
+  "pysakit": "Monte Cassino · Iona · Cluny · Mont-Saint-Michel · Athos",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B1",
+  "nimi": "Keksinnöt Euroopassa",
+  "alue": "Eurooppa",
+  "kaari": "1769 – 1928",
+  "pysakit": "Watt · Stephenson · Daguerre · Siemens · Benz · Marconi · Fleming",
+  "tila": "valmis",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B2",
+  "nimi": "Tiede ennen höyryä",
+  "alue": "Eurooppa",
+  "kaari": "1543 – 1760",
+  "pysakit": "Kopernikus Frombork · Tycho Ven · Galileo Padova · Kepler Praha · Newton Cambridge · Linné Uppsala",
+  "tila": "seuraava",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B3",
+  "nimi": "Lääketieteen läpimurrot",
+  "alue": "Eurooppa",
+  "kaari": "1796 – 1928",
+  "pysakit": "Jenner · Semmelweis Wien · Snow Lontoo 1854 · Pasteur · Koch Berliini · Röntgen Würzburg · Fleming",
+  "tila": "seuraava",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B4",
+  "nimi": "Sähkö ja viestintä",
+  "alue": "Eurooppa – Atlantti",
+  "kaari": "1800 – 1901",
+  "pysakit": "Volta Pavia · Ørsted Kööpenhamina · Faraday Lontoo · Morse · Atlantin kaapeli 1866 · Marconi Poldhu 1901",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B5",
+  "nimi": "Kartografia ja mittaaminen",
+  "alue": "Eurooppa",
+  "kaari": "1569 – 1884",
+  "pysakit": "Mercator Duisburg · Cassini Pariisi · Struven ketju Hammerfest – Izmail · Greenwichin nollameridiaani 1884",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B6",
+  "nimi": "Tähtitieteen observatoriot",
+  "alue": "maailma",
+  "kaari": "1576 – 1900",
+  "pysakit": "Uraniborg · Greenwich · Pulkova · Lick · Ulugh Beg Samarkand",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "B7",
+  "nimi": "Vanhin maailmankuva pallolla",
+  "alue": "Afrikka ja muut mantereet",
+  "kaari": "1507 – 1873",
+  "pysakit": "Waldseemüller 1507 · Ortelius 1570 · Blaeu 1662 · d'Anville 1749 · Stanleyn Kongo 1877 — vanha kartta verhottuna karttapallon pinnalle, liukusäädin vanha → 1873 → nyt",
+  "tila": "idea (vaatii pallolaudan)",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "C1",
+  "nimi": "Suuret löytöretket",
+  "alue": "Atlantti – Intian valtameri",
+  "kaari": "1415 – 1522",
+  "pysakit": "Sagres · Dias 1488 · Kolumbus 1492 · da Gama 1497 · Magalhães 1519",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "C2",
+  "nimi": "Napa-alueiden valloitus",
+  "alue": "Arktis, Antarktis",
+  "kaari": "1845 – 1912",
+  "pysakit": "Franklin · Nordenskiöld Koillisväylä 1878 · Nansen Fram 1893 · Amundsen 1911 · Scott 1912",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Napa-alueet"
+ },
+ {
+  "id": "C3",
+  "nimi": "Rautatiet valloittavat maanosat",
+  "alue": "maailma",
+  "kaari": "1825 – 1916",
+  "pysakit": "Stockton – Darlington · Liverpool – Manchester · Pacific Railroad 1869 · Siperian rata · Orient Express · Berliini – Bagdad",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "C5",
+  "nimi": "Maapallon ympäri 80 päivässä",
+  "alue": "maailma",
+  "kaari": "1872",
+  "pysakit": "Lontoo · Suez · Bombay · Kalkutta · Hongkong · Yokohama · San Francisco · New York · Lontoo",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "C7",
+  "nimi": "Ihmisen matka",
+  "alue": "maailma",
+  "kaari": "300 000 vuotta sitten – n. 1300 jaa.",
+  "pysakit": "Omo Kibish · Jebel Irhoud · Beringia · Sahul · Lapita · Aotearoa 1250",
+  "tila": "rakenteilla",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "C6",
+  "nimi": "Ilmailun synty",
+  "alue": "Eurooppa – USA",
+  "kaari": "1783 – 1927",
+  "pysakit": "Montgolfier Annonay · Lilienthal Berliini · Wrightit Kitty Hawk · Blériot kanaali 1909 · Lindbergh 1927",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "D1",
+  "nimi": "Antiikin kaupungit",
+  "alue": "Välimeri, Lähi-itä",
+  "kaari": "3500 eaa – 476",
+  "pysakit": "Uruk · Memfis · Babylon · Ateena · Aleksandria · Rooma · Konstantinopoli",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "D2",
+  "nimi": "Silkkitie",
+  "alue": "Aasia – Eurooppa",
+  "kaari": "130 eaa – 1453",
+  "pysakit": "Chang’an · Dunhuang · Samarkand · Bagdad · Konstantinopoli · Venetsia",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "D3",
+  "nimi": "Hansa",
+  "alue": "Itämeri, Pohjanmeri",
+  "kaari": "1150 – 1669",
+  "pysakit": "Lyypekki · Visby · Bergen · Novgorod · Brygge · Lontoon Steelyard",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "D4",
+  "nimi": "Vallankumousten Eurooppa",
+  "alue": "Eurooppa",
+  "kaari": "1789 – 1849",
+  "pysakit": "Bastilji · Wien 1848 · Frankfurtin parlamentti · Rooman tasavalta 1849",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "D5",
+  "nimi": "Kansallisvaltiot syntyvät",
+  "alue": "Eurooppa",
+  "kaari": "1830 – 1918",
+  "pysakit": "Belgia 1830 · Italia 1861 · Saksa 1871 · Bulgaria 1878 · Norja 1905 · Suomi 1917",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "E1",
+  "nimi": "Renessanssi",
+  "alue": "Italia",
+  "kaari": "1400 – 1600",
+  "pysakit": "Firenze Brunelleschi · Rooma Sikstus · Venetsia Tizian · Milano Leonardo",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "E2",
+  "nimi": "Säveltäjien Eurooppa",
+  "alue": "Eurooppa",
+  "kaari": "1685 – 1900",
+  "pysakit": "Eisenach Bach · Salzburg Mozart · Wien Beethoven · Leipzig · Bayreuth · Pietari Tšaikovski · Helsinki Sibelius",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "E3",
+  "nimi": "Kirjallisuuden kaupungit",
+  "alue": "Eurooppa",
+  "kaari": "1600 – 1900",
+  "pysakit": "Lontoo Shakespeare · Weimar Goethe · Pietari Dostojevski · Dublin · Pariisi Hugo",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "E4",
+  "nimi": "Maailmannäyttelyt",
+  "alue": "maailma",
+  "kaari": "1851 – 1900",
+  "pysakit": "Lontoo Crystal Palace · Pariisi 1889 Eiffel · Chicago 1893 · Pariisi 1900",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "E5",
+  "nimi": "Arkkitehtuurin ihmeet",
+  "alue": "maailma",
+  "kaari": "2560 eaa – 1889",
+  "pysakit": "Giza · Pantheon · Hagia Sofia · Alhambra · Kölnin tuomiokirkko · Eiffel",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "E6",
+  "nimi": "Museot ja kirjastot syntyvät",
+  "alue": "Eurooppa",
+  "kaari": "1683 – 1900",
+  "pysakit": "Ashmolean · British Museum · Louvre 1793 · Eremitaasi · Ateneum",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "E7",
+  "nimi": "Taidemuseo-linssi (natiivi, 3D-salit)",
+  "alue": "maailma",
+  "kaari": "antiikki – moderni",
+  "pysakit": "antiikki · renessanssi (pilotti Firenze–Rooma–Venetsia) · barokki · romantiikka · impressionismi · moderni",
+  "tila": "seuraava",
+  "tyyppi": "museo",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "E8",
+  "nimi": "Ishtarin portti paikallaan (natiivi, paikkarekonstruktio)",
+  "alue": "Babylon",
+  "kaari": "575 eaa",
+  "pysakit": "portti · Prosessiotie · muuri · palmulehdot · Eufrat Cesiumin maastossa",
+  "tila": "idea",
+  "tyyppi": "museo",
+  "manner": "Aasia"
+ },
+ {
+  "id": "E9",
+  "nimi": "Konstantinopoli kulta-aikanaan (natiivi, dioraama)",
+  "alue": "Konstantinopoli",
+  "kaari": "n. 1000",
+  "pysakit": "Hagia Sofia · Hippodromi · Suuri palatsi · Theodosiuksen muurit · Kultaisen sarven ketju",
+  "tila": "idea",
+  "tyyppi": "museo",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "F3",
+  "nimi": "Kasvien matkat",
+  "alue": "maailma",
+  "kaari": "1492 – 1900",
+  "pysakit": "peruna · kahvi · tee · sokeri · kumi · kaneli",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "G2",
+  "nimi": "Raha ja pankit",
+  "alue": "Eurooppa",
+  "kaari": "1252 – 1873",
+  "pysakit": "Firenzen floriini · Amsterdamin pörssi 1602 · Bank of England 1694 · kultakanta 1873",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "G3",
+  "nimi": "Ruoan ja juoman historia",
+  "alue": "Eurooppa",
+  "kaari": "1500 – 1900",
+  "pysakit": "Pilsen 1842 · Champagne · Lyonin keittiö · Wienin kahvilat · Milanon risotto",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "G4",
+  "nimi": "Urheilun synty",
+  "alue": "Eurooppa",
+  "kaari": "1857 – 1903",
+  "pysakit": "Sheffield FC 1857 · Wimbledon 1877 · Ateena 1896 · Tour de France 1903",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "G5",
+  "nimi": "Naisten oikeudet",
+  "alue": "maailma",
+  "kaari": "1791 – 1918",
+  "pysakit": "Olympe de Gouges · Seneca Falls · Uusi-Seelanti 1893 · Suomi 1906 · Britannia 1918",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "H1",
+  "nimi": "Kiinan keksinnöt",
+  "alue": "Kiina",
+  "kaari": "105 – 1450",
+  "pysakit": "paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "H2",
+  "nimi": "Intian valtakunnat ja tiede",
+  "alue": "Intia",
+  "kaari": "2600 eaa – 1653",
+  "pysakit": "Mohenjo-daro · Ashoka Pataliputra · Nalandan yliopisto · Aryabhata · Taj Mahal Agra 1653",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "H3",
+  "nimi": "Japanin aikakaudet",
+  "alue": "Japani",
+  "kaari": "710 – 1868",
+  "pysakit": "Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "H4",
+  "nimi": "Mongolien maailma",
+  "alue": "Aasia",
+  "kaari": "1206 – 1405",
+  "pysakit": "Karakorum · Peking Kublai · Bagdad 1258 · Samarkand Timur",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "H5",
+  "nimi": "Kaakkois-Aasian temppelit",
+  "alue": "Kaakkois-Aasia",
+  "kaari": "800 – 1431",
+  "pysakit": "Borobudur · Bagan · Angkor · Ayutthaya",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "I1",
+  "nimi": "Sivilisaation synty",
+  "alue": "Mesopotamia, Persia",
+  "kaari": "3500 eaa – 330 eaa",
+  "pysakit": "Uruk · Ur · Babylon · Niniven kirjasto · Persepolis",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "I2",
+  "nimi": "Egyptin dynastiat",
+  "alue": "Egypti",
+  "kaari": "2650 eaa – 30 eaa",
+  "pysakit": "Sakkara · Giza · Theba ja Luxor · Amarna · Aleksandria",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "I3",
+  "nimi": "Osmanien valtakunta",
+  "alue": "Turkki, Balkan, Levantti",
+  "kaari": "1299 – 1923",
+  "pysakit": "Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "I4",
+  "nimi": "Persian puutarhat ja kaupungit",
+  "alue": "Iran",
+  "kaari": "550 eaa – 1722",
+  "pysakit": "Pasargadae · Persepolis · Isfahan · Shiraz",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Aasia"
+ },
+ {
+  "id": "J1",
+  "nimi": "Kultavaltakunnat",
+  "alue": "Länsi-Afrikka",
+  "kaari": "700 – 1591",
+  "pysakit": "Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "J2",
+  "nimi": "Swahilirannikko ja Suuri Zimbabwe",
+  "alue": "Itä- ja Etelä-Afrikka",
+  "kaari": "1000 – 1500",
+  "pysakit": "Kilwa · Sansibar · Mombasa · Suuri Zimbabwe · Sofala",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "J3",
+  "nimi": "Etiopia",
+  "alue": "Etiopia",
+  "kaari": "100 – 1700",
+  "pysakit": "Aksum · Lalibela · Gondar",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "J4",
+  "nimi": "Tutkimusmatkat Afrikassa",
+  "alue": "Afrikka",
+  "kaari": "1795 – 1877",
+  "pysakit": "Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "J5",
+  "nimi": "Siirtomaajako ja rautatiet",
+  "alue": "Afrikka",
+  "kaari": "1869 – 1914",
+  "pysakit": "Suez · Berliinin konferenssi 1884 · Kap–Kairo-hanke · Uganda-rata",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "K1",
+  "nimi": "Mesoamerikka ja Andit",
+  "alue": "Meksiko, Peru",
+  "kaari": "200 – 1532",
+  "pysakit": "Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "K2",
+  "nimi": "Valloitus ja hopea",
+  "alue": "Latinalainen Amerikka",
+  "kaari": "1492 – 1600",
+  "pysakit": "Hispaniola · Tenochtitlán 1521 · Cajamarca 1532 · Potosí · Lima",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Etelä-Amerikka"
+ },
+ {
+  "id": "K3",
+  "nimi": "Yhdysvaltain synty ja länsi",
+  "alue": "USA",
+  "kaari": "1776 – 1869",
+  "pysakit": "Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "K4",
+  "nimi": "Latinalaisen Amerikan itsenäistyminen",
+  "alue": "Etelä-Amerikka",
+  "kaari": "1810 – 1825",
+  "pysakit": "Caracas Bolívar · Buenos Aires San Martín · Chacabuco · Ayacucho 1824",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Etelä-Amerikka"
+ },
+ {
+  "id": "K5",
+  "nimi": "Amerikan keksinnöt",
+  "alue": "USA",
+  "kaari": "1793 – 1903",
+  "pysakit": "Whitney · Morse 1844 · Bell 1876 · Edison Menlo Park · Wrightit 1903",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "K6",
+  "nimi": "Pohjoinen: viikingeistä rautatiehen",
+  "alue": "Grönlanti, Kanada",
+  "kaari": "1000 – 1885",
+  "pysakit": "L’Anse aux Meadows · Hudsonin lahti · Luoteisväylä · Kanadan rata 1885",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "L1",
+  "nimi": "Polynesialaisten merenkulku",
+  "alue": "Tyynimeri",
+  "kaari": "1000 eaa – 1250",
+  "pysakit": "Samoa · Tahiti · Havaiji · Rapa Nui · Aotearoa noin 1250",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Oseania"
+ },
+ {
+  "id": "L2",
+  "nimi": "Cook ja Tyynimeri",
+  "alue": "Tyynimeri",
+  "kaari": "1768 – 1779",
+  "pysakit": "Plymouth 1768 · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Oseania"
+ },
+ {
+  "id": "L3",
+  "nimi": "Australia",
+  "alue": "Australia",
+  "kaari": "1788 – 1901",
+  "pysakit": "Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Oseania"
+ },
+ {
+  "id": "L4",
+  "nimi": "Evoluution saaret",
+  "alue": "Galápagos, Malaijisaaristo",
+  "kaari": "1835 – 1862",
+  "pysakit": "Darwin Galápagos 1835 · Wallace Ternate 1858 · Wallacen linja",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Oseania"
+ },
+ {
+  "id": "M1",
+  "nimi": "Kiinan dynastiat",
+  "alue": "Kiina",
+  "kaari": "221 eaa – 1912",
+  "pysakit": "Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "M2",
+  "nimi": "Rooman nousu ja tuho",
+  "alue": "Välimeri",
+  "kaari": "509 eaa – 476",
+  "pysakit": "tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476",
+  "tila": "seuraava",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "M3",
+  "nimi": "Aleksanteri Suuri",
+  "alue": "Kreikka – Intia",
+  "kaari": "336 eaa – 301 eaa",
+  "pysakit": "Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "M4",
+  "nimi": "Islamin leviäminen",
+  "alue": "Lähi-itä – Espanja",
+  "kaari": "622 – 750",
+  "pysakit": "Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "M5",
+  "nimi": "Mongolien imperiumi",
+  "alue": "Aasia – Eurooppa",
+  "kaari": "1206 – 1368",
+  "pysakit": "Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · jako kaanikuntiin · Yuan kaatuu",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "M6",
+  "nimi": "Bysantti",
+  "alue": "Itäinen Välimeri",
+  "kaari": "395 – 1453",
+  "pysakit": "Justinianus 555 · arabit · Basileios II · 1204 · 1453",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "M7",
+  "nimi": "Osmanien nousu ja lasku",
+  "alue": "Turkki, Balkan, Lähi-itä",
+  "kaari": "1299 – 1923",
+  "pysakit": "Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "M8",
+  "nimi": "Reconquista",
+  "alue": "Iberia",
+  "kaari": "711 – 1492",
+  "pysakit": "Covadonga · Toledo 1085 · Las Navas 1212 · Granada 1492",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "M9",
+  "nimi": "Viikinkien maailma",
+  "alue": "Pohjois-Eurooppa – Atlantti",
+  "kaari": "793 – 1066",
+  "pysakit": "Lindisfarne · Danelaw · Normandia 911 · Islanti · Grönlanti · Vinland · Stamford Bridge 1066",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "M10",
+  "nimi": "Ruotsin suurvalta ja Suomi",
+  "alue": "Itämeri",
+  "kaari": "1561 – 1809",
+  "pysakit": "Tallinna 1561 · Kustaa II Aadolf · Westfalen 1648 · Poltava 1709 · Uusikaupunki 1721 · Hamina 1809",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "M11",
+  "nimi": "Inkat ja atsteekit",
+  "alue": "Andit, Meksiko",
+  "kaari": "1325 – 1572",
+  "pysakit": "Tenochtitlán 1325 · Pachacuti · Huayna Capac · Cortés 1521 · Cajamarca 1532 · Vilcabamba 1572",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Etelä-Amerikka"
+ },
+ {
+  "id": "N1",
+  "nimi": "Napoleonin Eurooppa",
+  "alue": "Eurooppa",
+  "kaari": "1796 – 1815",
+  "pysakit": "Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo 1815",
+  "tila": "seuraava",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "N2",
+  "nimi": "Ensimmäinen maailmansota",
+  "alue": "Eurooppa, Lähi-itä",
+  "kaari": "1914 – 1918",
+  "pysakit": "Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918",
+  "tila": "seuraava",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "N3",
+  "nimi": "Toinen maailmansota",
+  "alue": "Eurooppa, Tyynimeri",
+  "kaari": "1939 – 1945",
+  "pysakit": "Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima",
+  "tila": "seuraava",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "N4",
+  "nimi": "Kolmikymmenvuotinen sota",
+  "alue": "Keski-Eurooppa",
+  "kaari": "1618 – 1648",
+  "pysakit": "Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "N5",
+  "nimi": "Krimin sota",
+  "alue": "Musta meri, Itämeri",
+  "kaari": "1853 – 1856",
+  "pysakit": "Sinope · Sevastopol · Bomarsund · Pariisin rauha",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "N6",
+  "nimi": "Yhdysvaltain sisällissota",
+  "alue": "USA",
+  "kaari": "1861 – 1865",
+  "pysakit": "Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "N7",
+  "nimi": "Balkanin sodat",
+  "alue": "Balkan",
+  "kaari": "1877 – 1913",
+  "pysakit": "Pleven 1877 · San Stefano · Berliini 1878 · 1912 · 1913",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "O1",
+  "nimi": "Espanja ja Portugali maailmalla",
+  "alue": "maailma",
+  "kaari": "1494 – 1825",
+  "pysakit": "Tordesillas 1494 · Filippiinit · Brasilia · itsenäistymiset 1810–1825",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "O2",
+  "nimi": "Britannian imperiumi",
+  "alue": "maailma",
+  "kaari": "1600 – 1922",
+  "pysakit": "Itä-Intian kauppakomppania · Plassey 1757 · Kanada · Australia · Intia 1858 · Egypti 1882 · 1922",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "O3",
+  "nimi": "Afrikan jako",
+  "alue": "Afrikka",
+  "kaari": "1870 – 1914",
+  "pysakit": "Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "O4",
+  "nimi": "Venäjä laajenee Siperiaan",
+  "alue": "Venäjä – Tyynimeri",
+  "kaari": "1582 – 1867",
+  "pysakit": "Jermak 1582 · Jakutsk 1632 · Ohotsk · Kamtšatka · Alaska myydään 1867",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Aasia"
+ },
+ {
+  "id": "O5",
+  "nimi": "Yhdysvallat laajenee",
+  "alue": "Pohjois-Amerikka",
+  "kaari": "1783 – 1912",
+  "pysakit": "1783 · Louisiana 1803 · Texas 1845 · Oregon · Meksiko 1848 · Alaska 1867 · 1912",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Pohjois-Amerikka"
+ },
+ {
+  "id": "O6",
+  "nimi": "Euroopan kartta uusiksi",
+  "alue": "Eurooppa",
+  "kaari": "1815 – 1923",
+  "pysakit": "Wien 1815 · Italia 1861 · Saksa 1871 · Berliini 1878 · Versailles 1919 · Lausanne 1923",
+  "tila": "seuraava",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "P1",
+  "nimi": "Uskontojen levinneisyys",
+  "alue": "maailma",
+  "kaari": "500 eaa – 1900",
+  "pysakit": "buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "P2",
+  "nimi": "Musta surma",
+  "alue": "Eurooppa",
+  "kaari": "1347 – 1353",
+  "pysakit": "Kaffa · Messina 1347 · Marseille · Pariisi 1348 · Lontoo · Bergen 1349 · Moskova 1353",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "P3",
+  "nimi": "Indoeurooppalaiset kielet",
+  "alue": "Euraasia",
+  "kaari": "3500 eaa – 1500",
+  "pysakit": "arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "P4",
+  "nimi": "Rautatieverkon kasvu",
+  "alue": "Eurooppa",
+  "kaari": "1825 – 1900",
+  "pysakit": "Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "P5",
+  "nimi": "Kirjapainon leviäminen",
+  "alue": "Eurooppa",
+  "kaari": "1450 – 1500",
+  "pysakit": "Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "S1",
+  "nimi": "Siirtomaat",
+  "alue": "maailma",
+  "kaari": "1415 – 1960",
+  "pysakit": "Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "S2",
+  "nimi": "Kolmiokauppa",
+  "alue": "Atlantti",
+  "kaari": "1500 – 1867",
+  "pysakit": "Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · viimeinen laiva 1867",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Afrikka"
+ },
+ {
+  "id": "S6",
+  "nimi": "Luonnonvarat valuvat",
+  "alue": "maailma",
+  "kaari": "1850 – 2000",
+  "pysakit": "guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "S7",
+  "nimi": "Lähi-itä ja musta kulta",
+  "alue": "Lähi-itä",
+  "kaari": "1908 – 1973",
+  "pysakit": "Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Aasia"
+ },
+ {
+  "id": "S3",
+  "nimi": "Maustereitit ja teekauppa",
+  "alue": "Intian valtameri – Eurooppa",
+  "kaari": "1500 – 1900",
+  "pysakit": "Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "S4",
+  "nimi": "Hopea ja kulta",
+  "alue": "Amerikat – Eurooppa – Aasia",
+  "kaari": "1545 – 1900",
+  "pysakit": "Potosí 1545 · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "S5",
+  "nimi": "Turkikset ja valaat",
+  "alue": "Pohjoinen",
+  "kaari": "1600 – 1900",
+  "pysakit": "Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Napa-alueet"
+ },
+ {
+  "id": "T1",
+  "nimi": "Siirtolaisuus Amerikkaan",
+  "alue": "Eurooppa – Amerikat",
+  "kaari": "1840 – 1914",
+  "pysakit": "Irlannin nälänhätä 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "T3",
+  "nimi": "Siperian karkotukset ja asutus",
+  "alue": "Venäjä",
+  "kaari": "1590 – 1917",
+  "pysakit": "Tobolsk · Irkutsk · Sahalin · rata 1891",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Aasia"
+ },
+ {
+  "id": "U1",
+  "nimi": "Sähkösanomakaapelit",
+  "alue": "maailma",
+  "kaari": "1851 – 1902",
+  "pysakit": "Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "U2",
+  "nimi": "Postireitit ja höyrylinjat",
+  "alue": "maailma",
+  "kaari": "1840 – 1914",
+  "pysakit": "P&O · Cunard · Suez · Fogg 1872",
+  "tila": "idea",
+  "tyyppi": "virta",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R1",
+  "nimi": "Maailma palaa",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "FIRMS 7 pv (ei tunnusta), GIBS-palokerros",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R2",
+  "nimi": "Savun tie**",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "CAMS AOD (CC BY 4.0, tili), vaihtoehtona GIBS MODIS AOD",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R3",
+  "nimi": "Isoisän sää",
+  "alue": "maailma",
+  "kaari": "animoitu (päivä)",
+  "pysakit": "20CRv3",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R4",
+  "nimi": "Laivat 1873",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "ICOADS R3",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R5",
+  "nimi": "Meriliikenne ennen ja nyt",
+  "alue": "maailma",
+  "kaari": "staattinen vertailu",
+  "pysakit": "ICOADS + Maailmanpankin laivatiheys",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R6",
+  "nimi": "Purjelaivojen tuulet",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "CLIWOC",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R7",
+  "nimi": "Yön valot ennen ja nyt",
+  "alue": "maailma",
+  "kaari": "staattinen + vertailu",
+  "pysakit": "Black Marble (GIBS), EOG VNL, Reba (kaupungit 1875)",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R8",
+  "nimi": "Näetkö Linnunradan?",
+  "alue": "maailma",
+  "kaari": "staattinen",
+  "pysakit": "HYG, Deep Star Maps, EOG VNL (Falchin atlas vain luvalla)",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R9",
+  "nimi": "Isoisän tähtitaivas",
+  "alue": "maailma",
+  "kaari": "animoitu (yö)",
+  "pysakit": "HYG, JPL Horizons, Stellarium-tähtikuviot, NASA Eclipse",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R10",
+  "nimi": "Revontulet nyt",
+  "alue": "maailma",
+  "kaari": "reaaliaika",
+  "pysakit": "NOAA OVATION",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R11",
+  "nimi": "Myrskyjen radat",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "IBTrACS, HURDAT2",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R12",
+  "nimi": "Maa järisee",
+  "alue": "maailma",
+  "kaari": "reaaliaika + historia",
+  "pysakit": "USGS ComCat, NCEI",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R13",
+  "nimi": "Tulen vuoret",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "NCEI Volcanoes, GIBS SO₂",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R14",
+  "nimi": "Lämpenevä meri",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "ERSST v5",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R15",
+  "nimi": "Ilmastovyöhykkeet liikkuvat",
+  "alue": "maailma",
+  "kaari": "jaksot",
+  "pysakit": "Köppen–Geiger (Beck 2023)",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R16",
+  "nimi": "Pellot valtaavat maan",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "HYDE 3.3",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R17",
+  "nimi": "Ihmisiä pallolla",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "HYDE, GHSL",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R18",
+  "nimi": "Kaupungit kasvavat",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Reba ym., GHSL UCDB",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R19",
+  "nimi": "Maailmantalouden painopiste",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Maddison",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R20",
+  "nimi": "Kauppavirrat 1873",
+  "alue": "maailma",
+  "kaari": "animoitu + vertailu",
+  "pysakit": "RICardo, BACI",
+  "tila": "seuraava",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R21",
+  "nimi": "Metsät katoavat",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Hansen GFC, HYDE",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R22",
+  "nimi": "Pisaran matka",
+  "alue": "maailma",
+  "kaari": "interaktiivinen",
+  "pysakit": "HydroRIVERS, HydroBASINS",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R23",
+  "nimi": "Kielten kirjo",
+  "alue": "maailma",
+  "kaari": "staattinen",
+  "pysakit": "Glottolog, Grambank",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R24",
+  "nimi": "Mitä maa kasvaa",
+  "alue": "maailma",
+  "kaari": "staattinen",
+  "pysakit": "MapSPAM, SoilGrids, Köppen",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R25",
+  "nimi": "Sähkö syttyy",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Global Energy Monitor, GPPD, Ember",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R26",
+  "nimi": "Tuulet nyt",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "ECMWF Open Data tai GFS, 20CRv3",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R27",
+  "nimi": "Ilma jota hengitämme",
+  "alue": "maailma",
+  "kaari": "staattinen + kk",
+  "pysakit": "OpenAQ, EDGAR",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R28",
+  "nimi": "Eläinten matkat",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Movebank (CC0/CC BY), OBIS",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R29",
+  "nimi": "Korallien helle",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Coral Reef Watch, Allen Coral Atlas",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R30",
+  "nimi": "Jääkauden rannat",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "GEBCO/ETOPO, Spratt & Lisiecki",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R31",
+  "nimi": "80 päivää → 80 tuntia",
+  "alue": "maailma",
+  "kaari": "staattinen vertailu",
+  "pysakit": "Commons (PD), OurAirports, OpenFlights (2014)",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R32",
+  "nimi": "Lentävä maapallo",
+  "alue": "maailma",
+  "kaari": "animoitu (24 h)",
+  "pysakit": "adsb.lol (ODbL)",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R33",
+  "nimi": "Sähkeet 1873 ja nyt",
+  "alue": "maailma",
+  "kaari": "vertailu",
+  "pysakit": "Commons/LoC-kaapelikartat, OSM-merikaapelit",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "R34",
+  "nimi": "Elinajan kartta",
+  "alue": "maailma",
+  "kaari": "animoitu",
+  "pysakit": "Gapminder, UN WPP",
+  "tila": "idea",
+  "tyyppi": "data",
+  "manner": "Yleiset"
+ },
+ {
+  "id": "B8",
+  "nimi": "Valokuvan synty",
+  "alue": "Eurooppa–USA",
+  "kaari": "1826–1900",
+  "pysakit": "Niépce Chalon 1826 · Daguerre Pariisi 1839 · Talbot Lacock · Nadar Pariisi 1858 · Muybridge 1878 · Kodak Rochester 1888 · Lumière Lyon 1895",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "B9",
+  "nimi": "Aika ja nollameridiaani",
+  "alue": "Britannia–maailma",
+  "kaari": "1675–1884",
+  "pysakit": "Greenwich 1675 · Harrison H4 1761 · rautatieaika Britannia 1840 · Washingtonin meridiaanikonferenssi 1884 · aikavyöhykkeet",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "D7",
+  "nimi": "Suomi isoisän aikaan",
+  "alue": "Suomi",
+  "kaari": "1809–1917",
+  "pysakit": "Porvoon valtiopäivät 1809 · Helsinki pääkaupungiksi 1812 · Saimaan kanava 1856 · markka 1860 ja kultakanta 1877 · rautatie Helsinki–Hämeenlinna 1862 · kansakouluasetus 1866 · nälkävuodet 1866–68 · 1917",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Eurooppa"
+ },
+ {
+  "id": "F5",
+  "nimi": "Elämän matka",
+  "alue": "maailma",
+  "kaari": "4 mrd v sitten → nyt",
+  "pysakit": "ensimmäinen elämä · happi · kambrikausi · maalle nousu · dinosaurukset · asteroidi 66 milj. · nisäkkäät · ihminen",
+  "tila": "idea",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Y7",
+  "nimi": "Maailman ruoat",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "kaupunkien ruoat kartalla · kuva ja yksi lause",
+  "tila": "jonossa",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Y8",
+  "nimi": "Maailman musiikki",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "soittolista kaupungeittain · radion jatke",
+  "tila": "jonossa",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Y9",
+  "nimi": "Maailman eläimet",
+  "alue": "maailma",
+  "kaari": "nykyhetki",
+  "pysakit": "eläimet pallolla ilman kaarta · F2:n lajit",
+  "tila": "jonossa",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Y10",
+  "nimi": "Suurimmat kaupungit",
+  "alue": "maailma",
+  "kaari": "vuosi vuodelta (3700 eaa → nyt)",
+  "pysakit": "suurimmat kaupungit palloina · pallot kasvavat vuosi vuodelta",
+  "tila": "jonossa",
+  "tyyppi": "aikajana",
+  "manner": "Maailma"
+ },
+ {
+  "id": "P6",
+  "nimi": "Mantereet liikkuvat",
+  "alue": "maailma",
+  "kaari": "250 milj. v sitten → nyt",
+  "pysakit": "Pangaea · Gondwana · Atlantti avautuu · Intia törmää · nyt",
+  "tila": "idea",
+  "tyyppi": "alue",
+  "manner": "Maailma"
+ },
+ {
+  "id": "Q1",
+  "nimi": "Isoisän linssi — vuosi 1873",
+  "alue": "maailma",
+  "kaari": "1873",
+  "pysakit": "1873 rajat ja maiden nimet · Horation reitti katkoviivana · isoisän valokuvat · ajan äänet ja media",
+  "tila": "rakenteilla",
+  "tyyppi": "alue",
+  "manner": "Maailma"
+ },
+ {
+  "id": "R36",
+  "nimi": "Maapallon tila",
+  "alue": "maailma",
+  "kaari": "1880 → nyt",
+  "pysakit": "merijää · lämpötila · merenpinta",
+  "tila": "seuraava (data)",
+  "tyyppi": "data",
+  "manner": "Maailma"
+ },
+ {
+  "id": "E10",
+  "nimi": "Rooman kasvu pallolla",
+  "alue": "Rooma",
+  "kaari": "n. 750 eaa–2020",
+  "pysakit": "n. 750 eaa. Palatinus · n. 378 eaa. Serviuksen muuri · n. 200 jaa. huippu (1,2 milj.) · 1377 pohja (17 000) · 1748 Nolli · 1871 pääkaupunki · 2020",
+  "tila": "seuraava (esitys)",
+  "tyyppi": "esitys",
+  "manner": "Eurooppa"
+ }
+]
