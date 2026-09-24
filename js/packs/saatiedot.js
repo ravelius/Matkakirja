@@ -3836,4 +3836,74 @@ export const SAATIEDOT = {
       + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
       + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N6-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain bali,hawaii,milfordsound,mountrushmore,ouropreto. Asemat:
+   * Denpasar (Bali), Honolulu, Milford Sound, Mount Rushmore (Black
+   * Hillsin n. 1600 m), Ouro Preto (n. 1100 m, viilentää tyypillistä
+   * Brasilian rannikkoilmastoa).
+   */
+  bali: {
+    lat: -8.6705,
+    lon: 115.2126,
+    keskilampo: [26.1, 26.1, 26.2, 26.2, 26.2, 25.4, 24.6, 24.4, 24.7, 25.4, 26.1, 25.8],
+    ylin: [28, 28, 28, 28, 28, 27, 26, 26, 26, 27, 28, 28],
+    alin: [24, 24, 24, 24, 24, 24, 23, 23, 23, 23, 24, 24],
+    sade: [325, 273, 303, 200, 146, 59, 37, 44, 63, 95, 170, 382],
+    luonnehdinta: 'Balilla on tasaisen kuuma, 24–26 astetta ympäri '
+      + 'vuoden. Sadekausi marras–maaliskuussa on runsas — '
+      + 'joulukuu kastelee saarta yli 380 millimetrillä — ja '
+      + 'kesä–elokuu selvästi kuivempaa aikaa.',
+  },
+  hawaii: {
+    lat: 21.3069,
+    lon: -157.8583,
+    keskilampo: [22.8, 22.1, 22.5, 23.2, 23.9, 25.3, 25.6, 26, 25.9, 25.7, 24.7, 23.8],
+    ylin: [24, 24, 24, 25, 26, 27, 27, 28, 28, 28, 26, 26],
+    alin: [21, 20, 21, 21, 22, 23, 24, 24, 24, 24, 23, 22],
+    sade: [25, 42, 104, 28, 33, 12, 18, 13, 22, 51, 73, 62],
+    luonnehdinta: 'Havaijilla lämpötila pysyy koko vuoden 22–26 '
+      + 'asteessa, viileimpänä helmikuussa ja lämpimimpänä '
+      + 'elokuussa. Sateisin kuukausi on maaliskuu, kuivin kesä.',
+  },
+  milfordsound: {
+    lat: -44.6414,
+    lon: 167.8974,
+    keskilampo: [15.1, 15.1, 12.9, 11.9, 9.7, 7.1, 7, 7.1, 8.6, 10.7, 12.8, 13.8],
+    ylin: [18, 19, 16, 15, 12, 10, 9, 10, 12, 14, 16, 17],
+    alin: [12, 12, 10, 9, 7, 5, 5, 4, 5, 8, 10, 10],
+    sade: [378, 542, 326, 301, 229, 239, 366, 314, 445, 434, 296, 333],
+    luonnehdinta: 'Milford Sound on yksi maailman sateisimmista '
+      + 'asutuista paikoista: joka kuukausi kertyy vähintään 229 '
+      + 'millimetriä, helmikuussa yli 500. Lämpötila pysyy '
+      + 'leutona, kesäkuun seitsemästä asteesta tammikuun '
+      + 'viiteentoista.',
+  },
+  mountrushmore: {
+    lat: 43.8791,
+    lon: -103.4591,
+    keskilampo: [-1.4, -3.1, 0, 4.9, 10.6, 16.2, 18.8, 18.2, 12.8, 5.5, 0.7, -3.1],
+    ylin: [3, 1, 5, 11, 16, 22, 24, 24, 18, 11, 5, 1],
+    alin: [-6, -8, -5, -2, 5, 11, 13, 13, 7, 0, -4, -8],
+    sade: [12, 25, 66, 73, 96, 120, 133, 76, 50, 37, 22, 14],
+    luonnehdinta: 'Mount Rushmoren ympäristössä talvi on kylmä '
+      + 'ja kuiva, mutta kesä (heinäkuu 19 astetta) on selvästi '
+      + 'sateisin aika — kesäkuun ja heinäkuun ukkoskuurot '
+      + 'kastelevat Black Hillsiä yli 120 millimetrillä.',
+  },
+  ouropreto: {
+    lat: -20.3855,
+    lon: -43.5035,
+    keskilampo: [20.4, 20.6, 19.7, 18.7, 16.7, 15.8, 15.6, 15.9, 17.6, 18.7, 18.7, 19.7],
+    ylin: [24, 24, 23, 22, 21, 20, 20, 21, 22, 23, 22, 23],
+    alin: [17, 17, 16, 15, 13, 11, 11, 11, 13, 15, 16, 17],
+    sade: [302, 163, 183, 107, 45, 10, 15, 33, 108, 200, 296, 299],
+    luonnehdinta: 'Ouro Preto on n. 1100 metrin korkeutensa '
+      + 'ansiosta viileämpi kuin Brasilian rannikko: kesä '
+      + '(joulu–helmikuu) pysyy 20 asteessa, talvi (kesä–heinäkuu) '
+      + 'laskee reiluun viiteentoista. Sadekausi on loka–maaliskuu.',
+  },
 };

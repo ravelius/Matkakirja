@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2167, teksti: 'Sää: Bali, Havaiji, Milford Sound, Rushmore, Ouro Preto' },
   { v: 2164, teksti: 'N13: viisi maailmankohdetta (#3021)' },
   { v: 2163, teksti: 'Ehdotusworkerin natiiviportti, hetket liuskaan (#3003)' },
   { v: 2162, teksti: 'N12: viisi maailmankohdetta (#3020)' },
