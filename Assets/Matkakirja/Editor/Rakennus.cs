@@ -199,6 +199,8 @@ namespace Matkakirja.Editori
             siirtokohteet.kierto = kierto;
             siirtokohteet.fontti = merkit.fontti;
             siirtokohteet.materiaali = Materiaali("Siirtokohde", "Matkakirja/Kohdemerkki", Color.white);
+            // Aloitusvalinnan kohdemerkit (web kohdeElementti huomio: true) samalla varjostimella ja materiaalilla.
+            merkit.kohdemerkkiMateriaali = siirtokohteet.materiaali;
             maaraja.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
             komennot.kierto = kierto;
