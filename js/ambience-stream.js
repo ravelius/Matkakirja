@@ -59,7 +59,7 @@ let arvottu = null; // { cityId, url }
  * sekunneilla 1–4, ja arvottu aloituskohta hyppäsi sen yli, jolloin
  * kabiini kuulosti pelkältä huminalta.
  */
-const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
+export const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
 
 /**
  * Kaupungin äänimaisema: oma kenttä-äänitys ensin, maisematyypin
