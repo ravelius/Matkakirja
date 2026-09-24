@@ -236,3 +236,17 @@ käsin galleria-erän (#3066) omasta Thomas Seller -vesiväristä (1839).
 **Suositus:** N2/N4/N5/N6:n 20 kaupunkia kannattaa tarkistaa samalla
 menetelmällä (valokuvataulu ensin, Commons-haku vasta jos ei löydy)
 heti kun ne mergetään — todennäköinen yield samaa luokkaa.
+
+## 8. N2/N4/N5/N6-erien mergetilanne (tarkistettu 24.9.2026, Fablen pyynnöstä)
+
+`git fetch origin` + `gh pr view #2996/#3002/#3004/#3006` — kaikki
+neljä ovat yhä AUKI, ei yhtään mergetty. 20 kaupungin sää/galleria/
+ennenNyt-käsittely (kohdat 5.1–5.3:n kaava) odottaa siis edelleen:
+
+- N2 (#2996): Managua, São Luís, San Juan, Nouméa, Puerto Montt.
+- N4 (#3002): Sahara, Kongo, Madagaskar, Galápagos, Machu Picchu.
+- N5 (#3004): Yellowstone, Grand Canyon, Uluru, Iguazú, Titicaca.
+- N6 (#3006): Mount Rushmore, Havaiji, Bali, Milford Sound, Ouro Preto.
+
+Ei toimenpidettä ennen mergeä — sama tilanne kuin edellisessä
+luovutuksessa, nyt vain varmistettu tuoreella haulla.
