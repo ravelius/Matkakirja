@@ -171,6 +171,13 @@ namespace Matkakirja
         /// <summary>Napautus näytön pikselikoordinaateissa (KaupunkiMerkit etsii osuman).</summary>
         public event Action<Vector2> Napautettu;
 
+        /// <summary>
+        /// Pelaajan veto tai nipistys pallolla alkoi (kerran elettä kohden, kun liike ylittää
+        /// napautuksen rajan tai sormia on kaksi). Kamera-ajo ei herätä tätä (web kutistaKortinLiikkeesta).
+        /// </summary>
+        public event Action PelaajanEle;
+        bool eleIlmoitettu;
+
         /// <summary>IKamera: kaupunkia napautettiin (KaupunkiMerkit ilmoittaa).</summary>
         public event Action<string> KaupunkiNapautettu;
 
@@ -403,10 +410,16 @@ namespace Matkakirja
                     kosketusAlku = keski;
                     kosketusAika = 0;
                     kosketusMatka = 0;
+                    eleIlmoitettu = false;
                 }
                 kosketusAika += (float)dt;
                 kosketusMatka = math.max(kosketusMatka, math.distance(keski, kosketusAlku) / Kerroin);
                 if (n > 1) kosketusMatka = float.MaxValue; // monisormiele ei ole napautus
+                if (!eleIlmoitettu && kosketusMatka > napautusLiike)
+                {
+                    eleIlmoitettu = true;
+                    PelaajanEle?.Invoke();
+                }
 
                 // Sormien määrän vaihtuessa aloitetaan uusi veto ilman hyppyä.
                 if (n == edellinenSormia)
