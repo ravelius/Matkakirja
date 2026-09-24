@@ -118,6 +118,8 @@ namespace Matkakirja.Natiivi
                 float rivi = mittari.Rivi;
                 Virtaa(new[] { vieri, ala }, new[] { vieriLeveys, w }, new[] { kuvanAla, float.PositiveInfinity }, rivi - 1f,
                     kappaleet, anfangi, mittari);
+                virtaus.userData = vieriLeveys;
+                Loppuriville(virtaus);
             }
             virtaus.RegisterCallback<GeometryChangedEvent>(_ => Lado());
             kuvapalsta.RegisterCallback<GeometryChangedEvent>(_ => Lado());
@@ -127,6 +129,27 @@ namespace Matkakirja.Natiivi
                 float yla = ala.childCount > 0 ? Mathf.Max(0f, KainaloYla + kuvaKorkeus + KainaloAla - vieri.layout.height) : 0f;
                 if (!Mathf.Approximately(ala.resolvedStyle.marginTop, yla)) ala.style.marginTop = yla;
             });
+        }
+
+        /// <summary>
+        /// Web: noston loppurivi ("Lue lisää aiheesta" ja reaktiot) on tekstin jatkoa, joten se asettuu kuvan
+        /// vierelle, jos teksti loppuu ennen kuvan alareunaa; noston alareuna (viiva) tulee silti kuvan alta.
+        /// </summary>
+        static void KainaloonLoppu(VisualElement lohko, VisualElement loppu)
+        {
+            var virtaus = lohko.Q(className: "mk-lehti__kainalo");
+            if (virtaus == null || loppu == null) return;
+            virtaus.Add(loppu);
+            Loppuriville(virtaus);
+        }
+
+        static void Loppuriville(VisualElement virtaus)
+        {
+            var loppu = virtaus.Q(className: "mk-lehti__nostoloppu");
+            var tekstit = virtaus.Query(className: "mk-lehti__kainaloteksti").ToList();
+            if (loppu == null || tekstit.Count < 2 || !(virtaus.userData is float vieriLeveys)) return;
+            bool vierella = tekstit[1].childCount == 0;
+            loppu.style.width = vierella ? vieriLeveys : StyleKeyword.Null;
         }
 
         /// <summary>Kaksi palstaa ja välissä viiva (web .wiki-nosto .leipa columns 2, column-rule).</summary>

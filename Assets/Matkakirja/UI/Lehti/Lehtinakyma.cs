@@ -850,6 +850,7 @@ namespace Matkakirja.Natiivi
             }
             // Loppurivin reaktiot "Lue lisää aiheesta" -napin rinnalle (web leipa-loppurivi, otsikkoAvain).
             Reaktiot.Piirra(loppu, Reaktiot.OtsikkoAvain(sivuAvain, n.Otsikko), n.Otsikko, "mk-reaktiot--loppu");
+            KainaloonLoppu(lohko, loppu); // leveä taitto: loppurivi kuvan vierelle kuten webissä
         }
 
         void Lista(VisualElement s, string otsikko, List<LehtiListaKohde> kohteet, string sivuAvain = null)
