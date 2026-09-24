@@ -142,7 +142,7 @@ export const RAAMATTU = {
           + 'sisältöpaketin (sisalto/1/) kautta. Laattapoltot jatkuvat, koska natiivi käyttää '
           + 'samoja laattoja. Natiivin ensimmäinen pelattava tavoite: matkustus pallolla ja '
           + 'kaupunkilehdet; sen jälkeen korkeusmalli, kallistus ja auringonvalo. Web on ilmainen, '
-          + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot myös natiiviin (23.9. klo 20.2x); lisensseissä '
+          + 'natiivi maksullinen tai 3D-lisäosat IAP:na; radiot myös natiiviin (23.9. klo 20.2x), ja maailmanradioon palaa aito VU-mittari (omistaja 24.9.2026 klo 11.3x, kortti: natiivissa ei WebKitin rajaa — AVPlayer-liitännäiseen äänitappi, todellinen äänitaso Unitylle joka kehys; HLS-asemilla ajastettu varakuvio; build 7, ei viivytä build 6:ta); isoisän luennan kaiutin sykkii aidosta äänitasosta kuten webissä; lisensseissä '
           + 'attribuutio riittää (ei juristia). Peli on mahdollisimman pieni: sisältö, media, '
           + 'laatat ja maasto striimataan ämpäristä, pelaaja voi ladata alueita offline-käyttöön MAANOSITTAIN tai ylimpänä vaihtoehtona KAIKKI (omistaja 23.9.2026 klo 23.2x: ei yksittäisiä maita) '
           + 'halutessaan (omistaja 23.9.). Prototyyppi /Users/Shared/Claude/proto-3d. '
