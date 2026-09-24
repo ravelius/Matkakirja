@@ -53,18 +53,6 @@ namespace Matkakirja.Linssit.Radio
             return Math.Max(0, Math.Min(1, (db - PohjaDb) / (KattoDb - PohjaDb)));
         }
 
-        /// <summary>
-        /// MatkakirjaRadio_Taso palauttaa näyttötason (dBFS −60…0 → 0…1, VuAsteikko), ei RMS:ää. Ilman
-        /// paluumuunnosta −30 dBFS (0,5) luettaisiin −6 dB:ksi ja neula löisi ylälaitaan tavallisella musiikilla.
-        /// −1 (ei saatavilla) säilyy, 0 = hiljaisuus.
-        /// </summary>
-        public static double RmsNayttotasosta(double taso)
-        {
-            if (taso < 0) return -1;
-            if (!(taso > 0)) return 0;
-            return Math.Pow(10, (60 * Math.Min(1, taso) - 60) / 20);
-        }
-
         /// <summary>Varakuvio (web jaljiteltyLukija): lause, tavu ja särmä, kerrottuna äänenvoimakkuudella.</summary>
         public static double Jaljitelma(double tS, double voimakkuus)
         {
