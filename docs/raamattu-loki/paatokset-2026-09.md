@@ -4099,3 +4099,7 @@ Fablen vertaisviestiraja täyttyi (11 viestiä omistajan viimeisen kirjoituksen 
 ## NATIIVI-UI: BUILD 9 iPHONEN VIHJE TODENNETTU (EI KUPLAA SIIRTOVAIHEESSA, KUTEN WEB); E10–E11 TEHTY (natiivi-ui/nostot-web c5e02b2) (24.9.2026 klo 15.45)
 
 Kuvapari proto-3d/lokit/pariteetti-b9/kuvapari-vihje-iphone.jpg; pulun napautus avaa chatin ja 'Näytä puhekuplat'. E10–E11 kuvataan viennin jälkeen; seuraavaksi E3.
+
+## KARTTASEPPA: SATELLIITTIERA VALMIS AMPARISSA (julisteet/pallo/satelliitti/2026-09-24/) (24.9.2026 klo 15.48)
+
+bmng/ (topo) ja bmng-bathy/ 21 845 laattaa kumpikin; s2/ (kaupunkikohtainen värisovitus) ja s2-alkup/ 9 162 kumpikin; omat laatat.json, määrät tarkistettu. EOX-nouto ilman rajoitusvastauksia: 9 162 pyyntöä 39 min, ≤ 4/s. Omistaja valitsee iPadilla meren (topo/bathy) ja S2-sävyn (sovitettu/alkuperäinen), hävinneet poistetaan ämpäristä ja NAS:ista. Polut ja attribuutiot Natiivisepällä (kytkee lennon pintaan, vertailukuvat Fablelle). Huntu Z3–Z4 palautettu. Karttaseppä seuraavaksi #3054:n ristiriita, E28 klo 22.
