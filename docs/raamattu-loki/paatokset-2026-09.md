@@ -4487,3 +4487,7 @@ Hakulista palautunut, gh toimii. Omistaja ajoi set-key-partition-list (ACL:t tar
 ## LAITETESTAAJA: b10c-LISTA VALMIS KOLMELLA KOOLLA (iPhone, iPad, iPad 13" -SIMULAATTORI 1024 pt); HUOMIO: KAUPUNKILEHTI EI TAYTA 1024 px LEVEYTTA (24.9.2026 klo 19.22)
 
 Kuvat proto-3d/lokit/loydos26-pariisi-zoomi/, raportti docs/raportit/loydos26-ja-avausteksti-20260924.md. Fable: lehden leveys mitataan webistä 1024×1366 (löydös 44 jos web täyttää); seuraavaksi build 10:llä esilatauksen lokimittaus ja inventaarion EI TARKISTETTU -osiot.
+
+## JULKAISIJA 70 % → LUOVUTUS JA NOLLAUS KASKETTY; 5 h -KIINTIO NOLLAUTUI (3 %); LEHDEN LEVEYS ISOLLA iPADILLA PASS (WEB 928 / NATIIVI 951 px) (24.9.2026 klo 19.30)
+
+Julkaisijan luovutukseen build 11 -kaava (ordinaali #3107, -nographics, #3110, ei hakulistan vaihtoa, tiimi RCD77XPB7M), jono ja perutut savukkeet; Postivahti lähettää aloitusviestin.
