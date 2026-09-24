@@ -148,9 +148,31 @@ namespace Matkakirja
         [Tooltip("Varalaatan väri (pergamentti, meren ja maan välissä).")]
         public Color32 varavari = new Color32(0xd9, 0xd0, 0xbb, 0xff);
 
+        /// <summary>
+        /// Esilatauksen edistyminen (Pelikoodari 24.9., build 9): Nappula vaihtaa lennon pinnan vasta, kun osa on
+        /// valmiina, ja KarttaKerrokset perii edellisen lennon jonon. Säieturvallinen (taustasäie laskee, pääsäie lukee).
+        /// </summary>
+        public sealed class Esilataus
+        {
+            int yhteensa, valmiit, epaonnistui;
+            volatile bool peruttu;
+            public int Yhteensa => Volatile.Read(ref yhteensa);
+            public int Valmis => Volatile.Read(ref valmiit);
+            public int Epaonnistui => Volatile.Read(ref epaonnistui);
+            public bool Peruttu => peruttu;
+            /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
+            public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
+            /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
+            public void Peru() => peruttu = true;
+            internal void Lisaa(int n) => Interlocked.Add(ref yhteensa, n);
+            internal void Merkitse(bool ok) { if (ok) Interlocked.Increment(ref valmiit); else Interlocked.Increment(ref epaonnistui); }
+        }
+
         sealed class Haku
         {
             public string Polku;
+            /// <summary>Esilatauksen haku (esiJono): peruttu → vapautetaan ilman verkkoa.</summary>
+            public Esilataus Esi;
             public TaskCompletionSource<(int tila, byte[] data)> Valmis =
                 new TaskCompletionSource<(int, byte[])>(TaskCreationOptions.RunContinuationsAsynchronously);
         }
@@ -345,21 +367,36 @@ namespace Matkakirja
             await virta.FlushAsync();
         }
 
-        /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
         /// <summary>
         /// Laatat välimuistiin etukäteen (LENNON PINTA, Fable 24.9.: sileän pinnan laatat latautuivat matkalla
         /// näkyvinä lohkoina). Polut ämpärin polkuina; jo välimuistissa olevat ohitetaan lukematta. Taustasäikeessä,
-        /// ja haut odottavat, kunnes näkyvän kartan jono on tyhjä.
+        /// ja haut odottavat, kunnes näkyvän kartan jono on tyhjä. Palauttaa edistymisen; <paramref name="jatka"/>
+        /// lisää polut samaan esilataukseen (Sentinel-laatat kattavuuden latauduttua).
         /// </summary>
-        public static void Esilataa(IReadOnlyCollection<string> polut)
+        public static Esilataus Esilataa(IReadOnlyCollection<string> polut, Esilataus jatka = null)
         {
+            var e = jatka ?? new Esilataus();
             var p = Instanssi;
-            if (p == null || polut == null || polut.Count == 0) return;
-            Task.Run(() => { foreach (var polku in polut) _ = p.Hae(polku, true); });
+            if (p == null || polut == null || polut.Count == 0 || e.Peruttu) return e;
+            e.Lisaa(polut.Count);
+            var lista = new List<string>(polut);
+            Task.Run(() => { foreach (var polku in lista) _ = Yksi(polku); });
+            async Task Yksi(string polku)
+            {
+                try
+                {
+                    var (tila, _) = await p.Hae(polku, e);
+                    e.Merkitse(tila == 200);
+                }
+                catch (Exception) { e.Merkitse(false); }
+            }
+            return e;
         }
 
-        async Task<(int, byte[])> Hae(string polku, bool esi = false)
+        /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
+        async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
         {
+            bool esi = esilataus != null;
             polku = Uri.UnescapeDataString(polku);
             if (polku.Contains("..")) return (404, null);
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
@@ -380,7 +417,8 @@ namespace Matkakirja
                 try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
                 return (200, sisalto);
             }
-            var h = new Haku { Polku = polku };
+            if (esi && esilataus.Peruttu) return (499, null);
+            var h = new Haku { Polku = polku, Esi = esilataus };
             (varitasoa ? kiireJono : esi ? esiJono : jono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
@@ -422,7 +460,11 @@ namespace Matkakirja
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
-            while (kaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e)) StartCoroutine(Lataa(e));
+            while (kaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
+            {
+                if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
+                StartCoroutine(Lataa(e));
+            }
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
             {
                 seuraavaUusinta = Time.unscaledTime + 10f;
