@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>"Lue kaupunkilehti".</summary>
         public Action LueLehti;
-        /// <summary>"Liiku tänne" → matkavalinta (muu kuin oma kaupunki).</summary>
+        /// <summary>"Liiku tänne": vain nopan siirtokohteessa, valitsee siirron (web liuskan 'liiku'-rivi). null = ei riviä.</summary>
         public Action Liiku;
         public string LiikuTeksti;
         /// <summary>

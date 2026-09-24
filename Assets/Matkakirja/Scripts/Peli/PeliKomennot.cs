@@ -20,7 +20,7 @@
 //   sulje-lehti               sulkee kaupunkilehden kuin pelaaja
 //   ohita-traileri            saapumistrailerin ohitus (Natiivi-UI:n traileri, tila Traileri)
 //   kortti kaupunki           kaupunkikortti (vain jos Natiivi-UI on asettanut PeliNakymat.KaupunkiKortti)
-//   liiku kaupunki            kortin "Liiku tänne" → matkavalinta (ilman korttia kuten napauta)
+//   liiku kaupunki            kortin "Liiku tänne": nopan siirto kaupunkiin (vain siirtokohde, web valitseSiirto)
 //   maalehti ISO3 [aihe]      maan lehti aiheen sivulta (kartuscha)
 //   lue-lehti kaupunki        kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti")
 //   tutki [vaikea]            "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys)
