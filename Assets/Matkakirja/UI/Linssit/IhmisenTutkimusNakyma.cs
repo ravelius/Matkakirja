@@ -74,6 +74,8 @@ namespace Matkakirja.Natiivi
                 string tunnus = v.Tunnus;
                 var b = Rakenne.Nappi(null, "mk-vananappi", () => { if (toiminnassa) LinssiUi.IhmisenMatka?.Tutkimus?.Valitse(tunnus); }, napit);
                 b.tooltip = v.Nimi;
+                // Web ≤ 1000 px: .ihmisen-vananappi { padding: 0.25rem 0.4rem }.
+                if (puhelin) { b.style.paddingLeft = 6.4f; b.style.paddingRight = 6.4f; }
                 var pilkku = Rakenne.El("mk-vananappi__pilkku", b, PickingMode.Ignore);
                 pilkku.style.backgroundColor = Vari(v.Vari?.Rintama);
                 var nimi = Rakenne.Teksti(puhelin && Lyhyet.TryGetValue(tunnus, out var l) ? l : v.Nimi, "mk-vananappi__nimi", b);

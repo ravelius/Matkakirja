@@ -64,7 +64,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "selite":
                     if (a1 == "pois") { l.Selite.Piilota(); return null; }
-                    l.Selite.Nayta("Topografia", Esimerkkiselite(), "Lähde: Copernicus GLO-90 · CC BY 4.0");
+                    l.Selite.Nayta("Topografia", Esimerkkiselite());
                     return null;
                 case "astro":
                     switch (a1)
