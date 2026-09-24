@@ -4087,3 +4087,7 @@ Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b9.md. U
 ## BUILD 9 KASKETTY: NATIIVISEPAN SHA 9a5618b (24.9.2026 klo 15.42)
 
 Sisältö: noppa webin mukaan (4d3fe7a, kuvapari PASS), Natiivi-UI 6d39af4 (päätasolukijat, valintavihje B), b9-korjaukset (kone terävä, huntu zoomihäivytys), maamerkit-paketti, esilataus-edistyminen; tarkista 0, kaanna 261/261, simit asennettu. Julkaisija vie -nographics, Unity kiinni, käännökset tauolla. Löydös build 10:een: saapumisnäkymän zoom — natiivissa Eurooppa, webissä Ranska täyttää ruudun (mitataan webin zoomikaava); nostotaso webin fokuspohjasta 38e424d + skeema 1.35 (maarajat 1.34 olisi muuten rikkonut nostot, FRA bbox −62°). Lennon pinnan topo/bathy-vertailu simulaattorissa Fablelle ennen oletuksen valintaa.
+
+## SIIRTOSEPPA 72 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 15.43)
+
+Luovutus viesti-siirtoseppa-luovutus-20260924-b.md, aloitusviesti päivitettynä (WEB ON MALLI), clear_session self samassa vuorossa; Postivahti lähettää aloitusviestin kun list_events = 0 ja varmistaa RC:n.
