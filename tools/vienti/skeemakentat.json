@@ -11,10 +11,11 @@
   "1.30": "4eacd12cb5266253",
   "1.31": "a7e1d2be199a1a5e",
   "1.32": "39f6e79314ed0da5",
-  "1.33": "081f5d7fd7c62ab5"
+  "1.33": "081f5d7fd7c62ab5",
+  "1.34": "081f5d7fd7c62ab5"
  },
  "uusin": {
-  "skeemaversio": "1.33",
+  "skeemaversio": "1.34",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",

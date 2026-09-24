@@ -929,9 +929,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
         + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
         + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
         + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).'
-        + ' Skeema 1.29: renkaat = maan alue kuten webin korostus ja vertailu (laudan countryShapes-muodon alue, vara 1°: '
-        + 'ei Huippuvuoria, Ranskan merentakaisia alueita, Kanarioita, Azoreita…); muutRenkaat = muut admin-0-renkaat, '
-        + 'bbox = renkaiden laatikko, kokoBbox = kaikkien.',
+        + ' Skeema 1.34: renkaat = kaikki admin-0-renkaat (web piirtää pallon maat samasta Natural Earth 10m '
+        + '-aineistosta, Huippuvuoret Norjalle); muutRenkaat = [] (1.29–1.33:n rajauksen jäänne), bbox = kokoBbox.',
       {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
   // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.

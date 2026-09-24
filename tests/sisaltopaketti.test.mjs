@@ -1052,16 +1052,14 @@ test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
   assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
 });
 
-test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', () => {
+test('skeema 1.34: maarajat = kaikki admin-0-renkaat (NOR Huippuvuorineen, web #3078)', () => {
   const m = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((a) => [a.id, a]));
   const nor = m.get('NOR');
-  assert.ok(nor.bbox[3] < 72 && nor.kokoBbox[3] > 80, `NOR ${nor.bbox} / ${nor.kokoBbox}`);
-  assert.ok(nor.muutRenkaat.some((r) => r.some(([, lat]) => lat > 76)));
-  assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
-  assert.ok(m.get('FIN').muutRenkaat.length === 0);
-  assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+  assert.ok(nor.bbox[3] > 80, `NOR ${nor.bbox}`);
+  assert.ok(nor.renkaat.some((r) => r.some(([, lat]) => lat > 76)), 'Huippuvuoret renkaissa');
+  assert.ok([...m.values()].every((a) => a.muutRenkaat.length === 0 && a.bbox.join() === a.kokoBbox.join()));
+  assert.ok(m.get('FRA').bbox[0] < -60, 'merentakaiset mukana');
 });
-
 test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset avaimet', () => {
   const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
   const a = k('aanitaulut');
