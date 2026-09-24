@@ -32,7 +32,7 @@ namespace Matkakirja
         /// <summary>Linssin rasterin lataus epäonnistui (avain).</summary>
         public event Action<string> KerrosEpaonnistui;
 
-        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; }
+        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; public bool alfaMuutettu; }
         readonly Dictionary<string, Rasteri> rasterit = new Dictionary<string, Rasteri>();
 
         /// <summary>
@@ -143,7 +143,8 @@ namespace Matkakirja
             switch (kerros)
             {
                 case "laatat":
-                    if (pohja != null) pohja.enabled = nakyy;
+                    pohjaPyydetty = nakyy;
+                    if (pohja != null) pohja.enabled = nakyy || pohjaPidossa;
                     if (varitaso != null) varitaso.Nakyvat(nakyy);
                     PaivitaNavat();
                     break;
@@ -722,9 +723,47 @@ namespace Matkakirja
         public void PoistaRasteri(string avain)
         {
             if (!rasterit.TryGetValue(avain, out var r)) return;
+            if (r.alfaMuutettu && Paikka(r.kerros) is int paikka && paikka >= 0) Shader.SetGlobalFloat(PaikanAlfaId[paikka], 1f);
             if (r.kerros != null) { r.kerros.enabled = false; Destroy(r.kerros); }
             rasterit.Remove(avain);
             if (rasterit.Count == 0 && varitaso != null) varitaso.Linssit(false);
+            PaivitaNavat();
+        }
+
+        // ---- Ristihäivytys pohjan ja linssin rasterin välillä (radiouudistus build 12, RadioMastot.Hamara) ----
+
+        static readonly int[] PaikanAlfaId =
+            { Shader.PropertyToID("_overlayAlfa_0"), Shader.PropertyToID("_overlayAlfa_1"), Shader.PropertyToID("_overlayAlfa_2") };
+        bool pohjaPyydetty = true, pohjaPidossa;
+
+        /// <summary>
+        /// Linssin rasterin globaali alfa tileset-varjostimessa (_overlayAlfa_&lt;paikka&gt;, paikka = kerroksen materialKey
+        /// 1 tai 2, jonka LisaaRasteri antoi): 0 = pohja näkyy läpi, 1 = rasteri kokonaan. Palauttaa paikan tai −1, jos
+        /// avainta ei ole. Paikan alfa palautuu 1:een, kun rasteri poistetaan (seuraava käyttäjä saa täyden alfan).
+        /// </summary>
+        public int RasterinAlfa(string avain, float alfa)
+        {
+            if (avain == null || !rasterit.TryGetValue(avain, out var r) || r.kerros == null) return -1;
+            int paikka = Paikka(r.kerros);
+            if (paikka < 0) return -1;
+            Shader.SetGlobalFloat(PaikanAlfaId[paikka], Mathf.Clamp01(alfa));
+            r.alfaMuutettu = true;
+            return paikka;
+        }
+
+        static int Paikka(CesiumRasterOverlay k) =>
+            k != null && k.materialKey != null && k.materialKey.Length == 1 && k.materialKey[0] >= '0' && k.materialKey[0] <= '2'
+                ? k.materialKey[0] - '0' : -1;
+
+        /// <summary>
+        /// Pergamenttipohja (paikka 0) pidetään näkyvissä linssin pyynnöstä riippumatta (Nakyvyys("laatat", false)),
+        /// kun tosi: linssin rasteri häivytetään pohjan päälle, ja pohja saa poistua vasta, kun rasteri on täysi.
+        /// </summary>
+        public void PidaPohja(bool pida)
+        {
+            if (pohjaPidossa == pida) return;
+            pohjaPidossa = pida;
+            if (pohja != null) pohja.enabled = pohjaPyydetty || pida;
             PaivitaNavat();
         }
 
@@ -742,8 +781,10 @@ namespace Matkakirja
         void PaivitaNavat()
         {
             if (napakannet == null) return;
-            bool reliefi = rasterit.TryGetValue(Matkakirja.Linssit.Topografia.Kerros, out var r)
-                           && r.kerros != null && r.kerros.enabled && (pohja == null || !pohja.enabled);
+            // Radion topografiapohja (RadioLinssi.PohjaKerros, omistaja 24.9. klo 22.3x) on sama reliefisarja omalla avaimella.
+            bool Paalla(string avain) => rasterit.TryGetValue(avain, out var r) && r.kerros != null && r.kerros.enabled;
+            bool reliefi = (Paalla(Matkakirja.Linssit.Topografia.Kerros) || Paalla(Matkakirja.Linssit.Radio.RadioLinssi.PohjaKerros))
+                           && (pohja == null || !pohja.enabled);
             napakannet.Reliefi(reliefi);
         }
 
