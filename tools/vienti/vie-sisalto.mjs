@@ -166,8 +166,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
  *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
  *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
+ *   1.34 maarajat: 1.29:n rajaus pois (web #3078 piirtää Natural Earth 10m
+ *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
+ *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
+ *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
  */
-export const SKEEMAVERSIO_TARKKA = '1.33';
+export const SKEEMAVERSIO_TARKKA = '1.35';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

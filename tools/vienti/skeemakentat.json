@@ -11,10 +11,12 @@
   "1.30": "4eacd12cb5266253",
   "1.31": "a7e1d2be199a1a5e",
   "1.32": "39f6e79314ed0da5",
-  "1.33": "081f5d7fd7c62ab5"
+  "1.33": "081f5d7fd7c62ab5",
+  "1.34": "081f5d7fd7c62ab5",
+  "1.35": "7a7178d9759be893"
  },
  "uusin": {
-  "skeemaversio": "1.33",
+  "skeemaversio": "1.35",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -414,6 +416,7 @@
    ],
    "maat": [
     "aiheet",
+    "fokuspohja",
     "id",
     "intro",
     "iso2",
