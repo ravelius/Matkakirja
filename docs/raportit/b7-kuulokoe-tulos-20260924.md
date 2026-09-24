@@ -40,8 +40,27 @@ alla mitä oikeasti todennettiin vs. mitä ei.
 
 ## Ei ehditty / ei testattavissa simulaattorissa
 
-- **Kohta 3 (mannerlento), 4 (jalan-raita/laiva)**: ei ehditty ajaa
-  omana kulkutapana ajan puutteessa.
+- **Kohta 3 (mannerlento)**: BLOKKAUTUU testikomentoon — löysin
+  koodivirheen. `koetila mannerlento` toimii nyt (masterissa 7878cbc,
+  aiemmin puuttui). Sekvenssi `uusi-peli 1 lissabon` → `odota-tila
+  Kartta` → `koetila mannerlento` → `mannerlennot` (siirtyy tilaan
+  Dialogi, ok) → `rivi 0` palauttaa aina "VIRHE rivilista ei ole auki",
+  vaikka tila on oikein Dialogi. Syy: `PeliOhjain.cs`, metodi
+  `AvaaMannerlennot()` (rivi ~1140), asettaa `riviValittu = null;`
+  (rivi 1148) juuri ennen `dialogi.Nayta(...)`-kutsua eikä koskaan
+  aseta sitä valintakäsittelijäksi — vertaa `NaytaRivit`-metodiin
+  (PeliOhjain.Liiku.cs riveillä 121–127), joka tekee
+  `riviValittu = valittu;` ennen näyttöä. `ValitseRivi(int)` (testikomento
+  'rivi') tarkistaa juuri `riviValittu == null` ja epäonnistuu siksi aina
+  mannerlennoissa. OIKEALLE PELAAJALLE kosketusvalinta toimii silti
+  (dialogi.Nayta:n oma `i => Matkusta(...)`-kutsu ajaa suoraan), joten
+  kyse on VAIN testiautomaation aukosta, ei pelibugista — mutta B7-
+  kuulokoetta ei voi ajaa tällä komentosarjalla ennen korjausta. Korjaus:
+  lisää `riviValittu = i => Matkusta(kohteet[i].Kaupunki,
+  Matkakirja.Peli.Kulkutapa.Lento, true);` AvaaMannerlennot-metodiin
+  ennen `dialogi.Nayta`-kutsua.
+- **Kohta 4 (jalan-raita/laiva)**: ei ehditty ajaa omana kulkutapana
+  ajan puutteessa.
 - **Kohta 9 (tausta/takaisin, striimaus isoista tiedostoista,
   2,6 s -ristihäivytys)**: ei testattu.
 - **Kohta 10**: tiedossa oleva puute (kompressori puuttuu vielä) —
