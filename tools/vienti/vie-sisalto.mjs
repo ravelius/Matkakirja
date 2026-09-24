@@ -166,8 +166,21 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
  *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
  *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
+ *   1.34 maarajat: 1.29:n rajaus pois (web #3078 piirtää Natural Earth 10m
+ *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
+ *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
+ *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
+ *   1.36 kokoelma merinimet (Linssiseppä, build 11): webin nimiötason meret
+ *        (nimisto-1873 luokka meri) nimi, lat, lon, kulma, kaari, tasot, lahde,
+ *        lisenssi; juuren tyyli = webin piirto (tools/vienti/merinimet.mjs).
+ *   1.37 kokoelma aluenimet (Karttaseppä, löydös 38 b): assets/data/aluenimet-natiivi.json
+ *        sellaisenaan (meret, maakunnat, nykyalueet väistön jälkeisin ankkurein
+ *        tasoittain + valtameret); juuressa tyylit, fontti, aineistoversio.
+ *   1.38 kaupungit.asukkaat (Linssiseppä, radiouudistus): Wikidata P1082 (CC0),
+ *        asukkaatVuosi, asukkaatAlue (luku koskee saarta/valtiota), asukkaatLahde
+ *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
  */
-export const SKEEMAVERSIO_TARKKA = '1.33';
+export const SKEEMAVERSIO_TARKKA = '1.38';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

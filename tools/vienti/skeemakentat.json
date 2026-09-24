@@ -11,10 +11,15 @@
   "1.30": "4eacd12cb5266253",
   "1.31": "a7e1d2be199a1a5e",
   "1.32": "39f6e79314ed0da5",
-  "1.33": "081f5d7fd7c62ab5"
+  "1.33": "081f5d7fd7c62ab5",
+  "1.34": "081f5d7fd7c62ab5",
+  "1.35": "7a7178d9759be893",
+  "1.36": "da7f54e6ae671424",
+  "1.37": "1f3dae321dc1fa92",
+  "1.38": "8ecfeec7eec821e1"
  },
  "uusin": {
-  "skeemaversio": "1.33",
+  "skeemaversio": "1.38",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -44,6 +49,25 @@
     "url",
     "vakio",
     "voima"
+   ],
+   "aluenimet": [
+    "/aineistoversio",
+    "/fontti",
+    "/tyylit",
+    "id",
+    "iso",
+    "koko_arkki",
+    "korkeus_m",
+    "kulma",
+    "lat",
+    "lon",
+    "luokka",
+    "muste",
+    "paikat",
+    "pallotasot",
+    "tasot",
+    "teksti",
+    "tyyli"
    ],
    "elaintayt": [
     "data",
@@ -151,6 +175,10 @@
    "kaupungit": [
     "aloitus",
     "ambienssi",
+    "asukkaat",
+    "asukkaatAlue",
+    "asukkaatLahde",
+    "asukkaatVuosi",
     "data",
     "id",
     "intro",
@@ -414,6 +442,7 @@
    ],
    "maat": [
     "aiheet",
+    "fokuspohja",
     "id",
     "intro",
     "iso2",
@@ -432,6 +461,18 @@
     "valtiomuoto",
     "vanhaAani",
     "wiki"
+   ],
+   "merinimet": [
+    "/tyyli",
+    "id",
+    "kaari",
+    "kulma",
+    "lahde",
+    "lat",
+    "lisenssi",
+    "lon",
+    "nimi",
+    "tasot"
    ],
    "miniatyyrit": [
     "data",

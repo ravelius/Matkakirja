@@ -24,6 +24,7 @@ import { ISO2 } from './iso2.mjs';
 import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
+import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
@@ -40,6 +41,8 @@ import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './kar
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
+import { merinimiKokoelma } from './merinimet.mjs';
+import { aluenimiKokoelma } from './aluenimet.mjs';
 import { tyohuonetilastot } from './tyohuonetilastot.mjs';
 import * as TYOHUONETILASTOT from '../../js/tyohuone-tilastot.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
@@ -52,6 +55,7 @@ import { existsSync } from 'node:fs';
 import { lueMuutosloki, jarjesta as jarjestaMuutosloki } from './muutosloki-natiivi.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
+const pyorista3 = (v) => Math.round(v * 1000) / 1000;
 
 function taulukko(lahde, kuvaus, viittaukset, alkiot) {
   return { lahde, kuvaus, viittaukset, alkiot: alkiot.map((a) => sarjallista(a)) };
@@ -82,6 +86,13 @@ function lautaKokoelmat(ns) {
   for (const e of [...P.edges, ...P.airRoutes]) {
     for (const id of [e.a, e.b]) reitteja.set(id, (reitteja.get(id) ?? 0) + 1);
   }
+  const asukastiedot = (a) => ({
+    asukkaat: a?.asukkaat ?? null,
+    asukkaatVuosi: a?.asukkaat != null ? a.vuosi ?? null : null,
+    asukkaatAlue: Boolean(a?.asukkaat != null && a.alue),
+    asukkaatLahde: a?.asukkaat != null
+      ? `Wikidata P1082 (CC0)${a.vuosi ? `, ${a.vuosi}` : ''}, ${a.wikidata}` : null,
+  });
   const kaupungit = P.cities.map((c) => {
     const tarkka = c.pallo ?? pallo[c.id];
     const arvio = tarkka ? null : laudaltaAsteiksi('maailmankartta', c.x, c.y);
@@ -110,6 +121,10 @@ function lautaKokoelmat(ns) {
       // Skeema 1.10 (Natiiviseppä): korkeus m EGM2008, 10 m tarkkuus,
       // Copernicus GLO-30 (tools/vienti/korkeudet.mjs); null = ei ruutua.
       korkeus: korkeudet[c.id] ?? null,
+      // Skeema 1.38 (Linssiseppä, radiouudistus): asukasluku Wikidatasta
+      // (tools/vienti/hae-asukkaat.mjs, P1082, CC0). asukkaatAlue = luku
+      // koskee saarta/valtiota (Sumatra, Angola), ei kaupunkia.
+      ...asukastiedot(ASUKASLUVUT.kaupungit[c.id]),
       data: c,
     };
   });
@@ -929,9 +944,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
         + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
         + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
         + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).'
-        + ' Skeema 1.29: renkaat = maan alue kuten webin korostus ja vertailu (laudan countryShapes-muodon alue, vara 1°: '
-        + 'ei Huippuvuoria, Ranskan merentakaisia alueita, Kanarioita, Azoreita…); muutRenkaat = muut admin-0-renkaat, '
-        + 'bbox = renkaiden laatikko, kokoBbox = kaikkien.',
+        + ' Skeema 1.34: renkaat = kaikki admin-0-renkaat (web piirtää pallon maat samasta Natural Earth 10m '
+        + '-aineistosta, Huippuvuoret Norjalle); muutRenkaat = [] (1.29–1.33:n rajauksen jäänne), bbox = kokoBbox.',
       {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
   // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.
@@ -965,6 +979,30 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.tyohuonetilastot = tyohuonetilastot(TYOHUONETILASTOT, taulukko);
   // Skeema 1.33 (Pelikoodari): natiivin 3D-maamerkit (tools/vienti/maamerkit.mjs).
   kokoelmat.maamerkit = maamerkkiKokoelma(taulukko, kaupunkiIdt);
+  // Skeema 1.36 (Linssiseppä, build 11): merinimet kuten webin nimiötasolla.
+  kokoelmat.merinimet = merinimiKokoelma(taulukko);
+  // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
+  kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
+  // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
+  // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
+  // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.
+  const { FOKUS_POHJAT } = hae('js/packs/fokus-grc.js');
+  const asteina = (r) => {
+    if (!r) return null;
+    const a = laudaltaAsteiksi('maailmankartta', r.x, r.y);
+    const b = laudaltaAsteiksi('maailmankartta', r.x + r.w, r.y + r.h);
+    return [pyorista3(a.lon), pyorista3(b.lat), pyorista3(b.lon), pyorista3(a.lat)];
+  };
+  for (const m of kokoelmat.maat.alkiot) {
+    const p = FOKUS_POHJAT[m.id];
+    m.fokuspohja = p ? {
+      bbox: asteina(p.bbox), rajaus: asteina(p.rajaus),
+      laudalla: { bbox: p.bbox ?? null, rajaus: p.rajaus ?? null },
+    } : null;
+  }
+  kokoelmat.maat.kuvaus += ' Skeema 1.35: fokuspohja { bbox, rajaus: [w, s, e, n] asteina, laudalla: { bbox, rajaus } '
+    + '(laudan yksiköt {x, y, w, h}) } | null = webin FOKUS_POHJAT (js/packs/fokus-grc.js). Web laskee nostotason '
+    + '(lehdenOsuus = bbox.w / näkyvä leveys, korkeus samoin) ja kameran rajauksen tästä, ei maarajoista.';
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
