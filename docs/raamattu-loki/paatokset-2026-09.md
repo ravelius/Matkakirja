@@ -3635,3 +3635,7 @@ Fable: build 6 hyväksytty jaettavaksi; Natiiviseppä tutkii frustum-spämmin (k
 ## BUILD 6 TESTFLIGHTISSA: 1.0.0 (202609240852), PROTO 7b3adee, SISAINEN RYHMA klo 11.59 (AJO 35976465318 VIHREA); OMISTAJALLE ILMOITETTU; SISALTO: LOYDOKSET 1–13, 15–17, 19 (NOSTOT, VARITASO, PAIKKAKUPLA, LENNON AIKAJANA + TEMPO + SININEN TAIVAS + 3D-MAASTO, iPHONEN YLAOSA ISLAND-TASOLLA, MAAPANEELI, KERTOJAN LAATIKKO, AVARUUSAVAUS, OFFLINE-LAATAT, NAVAT, SELITE, PULUN CHAT, ALOITUSPALLO + HEHKURENKAAT, KUVIEN SUMENNUS), KOREOGRAFIA, PIIKKIKORJAUKSET; TARKISTUSLISTA 15 PASS; BUILD 7: 18, 20, 21, 22, VU-MITTARI, LAHIKUVA, FRUSTUM-BUGI (24.9.2026 klo 12.00)
 
 Muutoslokirivi Julkaisijalle: 'Build 6 (24.9.): omistajan build 5 -löydökset 1–17 ja 19 korjattu — nostot ja merkit, maan väritaso, iPhonen yläosa Dynamic Islandin tasolla, maapaneeli webin mukaan, lennon aikajana tempolla ja sinisellä taivaalla, avaruusavaus, offline-laatat, navat, selite, pulun chat, aloituspallo hehkurenkailla, kuvien sumennus; koreografiakirjasto ja piikkikorjaukset.'
+
+## OMISTAJA klo 12.0x (SITOVA, BUILD 6 -LOYDOS 23, LENTO): A) LENNON AIKANA NAKYY VAARIA TEKSTEJA (TARKENNUS ODOTTAA OMISTAJAN KUVAA); B) LENNON AIKANA PIILOSSA: YLAKULMIEN NAPIT JA PILLERIT, KARTAN NAPIT (SELITE, SILMALASIT), PULU JA KARTUSCHA (MAAN NIMI ALAKULMASSA) — NAKYVISSA VAIN LENTO JA LUENNAN PALKKI → NATIIVI-UI (UI:N PIILOTUS LENNON TILASSA) + NATIIVISEPPA (LENNON TILA UI:LLE), BUILD 7 (24.9.2026 klo 12.01)
+
+Fable: kysyi omistajalta, mitkä tekstit ovat väärin (kuva).
