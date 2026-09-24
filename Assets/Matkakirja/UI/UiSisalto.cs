@@ -22,6 +22,8 @@ namespace Matkakirja.Natiivi
     public sealed class KaupunkiTiedot
     {
         public string Id, Nimi, Maa, MaaNimi, Johdanto;
+        /// <summary>Wikipedia-otsikko (city.wiki) ja etusivun esittely (web ARTIKKELIT[wiki ?? nimi].intro, paketissa intro.teksti).</summary>
+        public string Wiki, Intro;
         public double Lat = double.NaN, Lon = double.NaN;
         /// <summary>Lipun osoitteet järjestyksessä (url, varat).</summary>
         public List<string> Lippu = new List<string>();
@@ -260,7 +262,8 @@ namespace Matkakirja.Natiivi
                 if (id == null) continue;
                 t[id] = new KaupunkiTiedot
                 {
-                    Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"), Manner = MiniJson.Teksti(a, "manner"),
+                    Id = id, Nimi = MiniJson.Teksti(a, "nimi") ?? id, Maa = MiniJson.Teksti(a, "maa"), Manner = MiniJson.Teksti(a, "manner"), Wiki = MiniJson.Teksti(a, "wiki"),
+                    Intro = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(a, "intro")), "teksti") ?? MiniJson.Teksti(a, "intro"),
                     Lat = MiniJson.Luku(a, "lat") ?? double.NaN, Lon = MiniJson.Luku(a, "lon") ?? double.NaN,
                 };
                 var nayte = Rakenne.Olio(MiniJson.Kentta(a, "kielinayte"));
