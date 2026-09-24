@@ -94,7 +94,9 @@ namespace Matkakirja
             if (File.Exists(koe))
             {
                 Debug.Log("MATKAKIRJA sisältö: koekansiosta " + suhteellinen);
-                valmis(File.ReadAllText(koe));
+                string koeTeksti = null;
+                yield return Taustalla(() => File.ReadAllText(koe), t => koeTeksti = t);
+                valmis(koeTeksti);
                 yield break;
             }
             while (osoitinHaussa) yield return null;
@@ -128,7 +130,9 @@ namespace Matkakirja
             string teksti = null;
             if (File.Exists(tiedosto))
             {
-                teksti = File.ReadAllText(tiedosto);
+                // Välimuistitiedosto on 3–11 Mt: luku ja purku pääsäikeessä maksoi 25–58 ms:n kehyksen
+                // jokaisella kokoelmalla (Natiivi-UI:n piikkimittaus 24.9.), joten luetaan taustasäikeessä.
+                yield return Taustalla(() => File.ReadAllText(tiedosto), t => teksti = t);
             }
             else
             {
@@ -144,12 +148,28 @@ namespace Matkakirja
                     valmis(null);
                     yield break;
                 }
-                teksti = k.downloadHandler.text;
-                Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
-                File.WriteAllText(tiedosto, teksti);
-                File.WriteAllText(ViimeisinPolku, versioPolku);
+                // Purku ja välimuistiin kirjoitus taustasäikeessä (tavut kopioidaan pääsäikeessä).
+                var tavut = k.downloadHandler.data;
+                string versio = versioPolku;
+                yield return Taustalla(() =>
+                {
+                    var s = System.Text.Encoding.UTF8.GetString(tavut);
+                    Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
+                    File.WriteAllText(tiedosto, s);
+                    File.WriteAllText(ViimeisinPolku, versio);
+                    return s;
+                }, t => teksti = t);
             }
             valmis(teksti);
+        }
+
+        /// <summary>Ajaa työn taustasäikeessä ja odottaa kehyksittäin; virheessä tulos on null (kirjataan).</summary>
+        static IEnumerator Taustalla(Func<string> tyo, Action<string> tulos)
+        {
+            var t = System.Threading.Tasks.Task.Run(tyo);
+            while (!t.IsCompleted) yield return null;
+            if (t.IsFaulted) Debug.LogError("MATKAKIRJA sisältö: luku epäonnistui: " + t.Exception?.GetBaseException().Message);
+            tulos(t.IsFaulted ? null : t.Result);
         }
 
         static bool osoitinHaussa;
