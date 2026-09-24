@@ -3836,4 +3836,76 @@ export const SAATIEDOT = {
       + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
       + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N4-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain galapagos,kongo,machupicchu,madagaskar,sahara. Asemat: Puerto
+   * Ayora (Galápagos), Kisangani (Kongo-joen keskijuoksu), Machu Picchu,
+   * Antananarivo (Madagaskarin lehti keskittyy Merina-kuningaskunnan
+   * pääkaupunkiin), In Salah (keskinen Sahara, ei sekaannu Ahaggarin
+   * vuoristoon).
+   */
+  galapagos: {
+    lat: -0.7393,
+    lon: -90.3120,
+    keskilampo: [25.3, 26.5, 27.3, 26.5, 25.6, 23.8, 22.8, 22.2, 22.3, 22.8, 23.3, 24.2],
+    ylin: [27, 28, 30, 29, 28, 26, 25, 24, 25, 25, 26, 27],
+    alin: [23, 25, 25, 24, 24, 22, 21, 20, 20, 20, 21, 22],
+    sade: [105, 84, 69, 180, 113, 35, 22, 10, 6, 11, 19, 35],
+    luonnehdinta: 'Galápagossaarilla on lämpimämpää ja sateisempaa '
+      + 'tammi–toukokuussa (23–27 astetta), kun lämmin Panamanvirta '
+      + 'hallitsee. Kesä–marraskuussa kylmä Humboldtin virta jäähdyttää '
+      + 'meren ja saaret, ja tuolloin sataa tuskin nimeksikään.',
+  },
+  kongo: {
+    lat: 0.5165,
+    lon: 25.1974,
+    keskilampo: [25.6, 26.4, 26.1, 25.7, 25.2, 24.9, 24.2, 24.3, 24.1, 24.4, 24.1, 25.2],
+    ylin: [30, 31, 31, 29, 28, 28, 28, 28, 27, 28, 27, 29],
+    alin: [22, 22, 21, 22, 22, 21, 21, 21, 21, 21, 21, 22],
+    sade: [72, 84, 148, 126, 121, 106, 89, 118, 175, 193, 161, 64],
+    luonnehdinta: 'Kongon sademetsässä on tasaisen kuuma, 24–26 '
+      + 'astetta ympäri vuoden, ja sadetta kertyy jokaisena '
+      + 'kuukautena vähintään 60 millimetriä. Runsain sadekausi '
+      + 'osuu syyskuulta marraskuulle.',
+  },
+  machupicchu: {
+    lat: -13.1631,
+    lon: -72.5450,
+    keskilampo: [14.5, 14.5, 14.6, 14.2, 13.6, 12.8, 12.4, 12.8, 13.4, 14.1, 14.4, 14.4],
+    ylin: [17, 17, 18, 17, 17, 17, 17, 18, 17, 18, 18, 17],
+    alin: [12, 12, 12, 11, 10, 9, 8, 8, 9, 10, 11, 12],
+    sade: [244, 256, 242, 160, 91, 78, 41, 77, 99, 170, 221, 280],
+    luonnehdinta: 'Machu Picchun vuoristoilmasto pysyy tasaisen '
+      + 'viileänä, 12–15 asteessa läpi vuoden. Marraskuusta '
+      + 'maaliskuuhun sataa runsaasti, kun eteläinen kesä tuo '
+      + 'sadekauden; kesä–heinäkuu on selvästi kuivinta aikaa.',
+  },
+  madagaskar: {
+    lat: -18.8792,
+    lon: 47.5079,
+    keskilampo: [20.1, 20, 20.2, 18.8, 17.5, 15.2, 13.6, 14.6, 16.3, 18.8, 20.1, 20.2],
+    ylin: [24, 24, 24, 23, 22, 19, 18, 20, 22, 25, 26, 25],
+    alin: [16, 16, 16, 15, 13, 11, 9, 10, 11, 13, 14, 15],
+    sade: [358, 194, 90, 25, 4, 7, 5, 3, 2, 19, 79, 115],
+    luonnehdinta: 'Antananarivon ylängöllä sademäärä vaihtelee '
+      + 'jyrkästi: tammikuu kastelee kaupunkia 358 millimetrillä, '
+      + 'mutta touko–syyskuu on kuiva. Lämpötila laskee eteläisenä '
+      + 'talvena (kesä–elokuu) 13–14 asteeseen, kesällä nousee '
+      + 'kahteenkymmeneen.',
+  },
+  sahara: {
+    lat: 27.1939,
+    lon: 2.4787,
+    keskilampo: [12.4, 17.3, 21, 26.9, 31.1, 35.2, 37.3, 37, 33.1, 27.6, 19.6, 14.6],
+    ylin: [19, 23, 28, 34, 38, 42, 45, 44, 40, 34, 26, 21],
+    alin: [6, 11, 14, 19, 24, 28, 30, 30, 27, 21, 13, 8],
+    sade: [0, 4, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0],
+    luonnehdinta: 'Keskisessä Saharassa lämpötila heittelehtii '
+      + 'tammikuun 12 asteesta heinäkuun 37 asteeseen, ja päivän ja '
+      + 'yön ero on suurimmillaan yli 30 astetta. Sadetta ei '
+      + 'käytännössä ole minään kuukautena.',
+  },
 };
