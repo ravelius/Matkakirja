@@ -277,7 +277,13 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros.LamppuNapautettu = AvaaNosto;
             IhmisenMatkaKerros.KelloKasittelija = v => { Ala(Tila.Ihminen); AsetaIhmisenKello(v); };
             IhmisenMatkaKerros.KuvaKasittelija = NaytaLoytopaikka;
-            IhmisenMatkaKerros.PuluKasittelija = t => { if (!string.IsNullOrEmpty(t)) Pulu.Hae().Sano(t); };
+            // Pulu on piilossa esityksen ajan (web piilotaPulu): kupla odottaa sisääntuloa, välihuomiot jäävät pois.
+            IhmisenMatkaKerros.PuluKasittelija = t =>
+            {
+                if (string.IsNullOrEmpty(t)) return;
+                if (puluPiilossa) puluOdottaa = t;
+                else Pulu.Hae().Sano(t);
+            };
             IhmisenMatkaKerros.TunneKasittelija = (t, v, _) => Pulu.Hae().Tunne(t, (float)v);
             IhmisenMatkaKerros.LoppuKasittelija = IhmisenLoppu;
             IhmisenMatkaKerros.NostotKasittelija = n => { Ala(Tila.Ihminen); tutkimus.Nostot(n); };
@@ -456,6 +462,7 @@ namespace Matkakirja.Natiivi
             if (tila != Tila.Ei) Pois();
             tila = t;
             if (t == Tila.Keksinnot) ylarivi.style.display = DisplayStyle.Flex;
+            if (t == Tila.Ihminen) PiilotaPulu();
             // Kertomuskaarella palkin toinen rivi väistyy: vuosi on kellossa (web .aikajana.kertomus .aikajana-paikka),
             // eikä otsikko kutistu (web .aikajana.kertomus .aikajana-otsikot flex 0 0 auto).
             paikka.style.display = t == Tila.Ihminen ? DisplayStyle.None : DisplayStyle.Flex;
@@ -473,6 +480,8 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             tila = Tila.Ei;
+            // Linssin sulku palauttaa pulun ilman kävelyelettä (web purku: naytaPulu({ ele: false })).
+            PalautaPulu(false);
             Valikko.Sulje();
             ylarivi.style.display = DisplayStyle.None;
             ylarivi.style.opacity = StyleKeyword.Null;
@@ -1064,6 +1073,7 @@ namespace Matkakirja.Natiivi
         {
             Ala(Tila.Ihminen);
             jakso = i;
+            puluOdottaa = null;
             EsittelyPoisKaynnissa();
             if (j == null) return;
             aikaselain.Aseta(j.Id);
@@ -1244,6 +1254,53 @@ namespace Matkakirja.Natiivi
             osat = null;
             AsetaKertomusteksti("", false);
             PiilotaKertomuskuva();
+            AjastaPulunSisaantulo();
+        }
+
+        // --- pulu esityksen aikana (web piilotaPulu, naytaPulu, ajastaPulunSisaantulo) -------------
+
+        const long PulunSisaantuloMs = 2000, PulunEleenMs = 2200; // web PULUN_SISAANTULO_MS, PULUN_ELEEN_MS
+        bool puluPiilossa;
+        string puluOdottaa;
+        IVisualElementScheduledItem puluAjastin;
+
+        /// <summary>Pulu pois heti linssin auetessa (Raamattu IHMISEN MATKA JATKO 2: "Pulu näkyviin vasta kun linssin animaatio on ohi").</summary>
+        void PiilotaPulu()
+        {
+            var p = Pulu.Hae();
+            if (puluPiilossa || !p.Nakyvissa) return;
+            puluPiilossa = true;
+            p.Nayta(false);
+        }
+
+        void PalautaPulu(bool ele)
+        {
+            puluAjastin?.Pause();
+            puluAjastin = null;
+            if (!puluPiilossa) { puluOdottaa = null; return; }
+            puluPiilossa = false;
+            var p = Pulu.Hae();
+            p.Nayta(true);
+            if (ele) p.Ele("walkBack");
+        }
+
+        /// <summary>Esityksen loppu: hengähdys, pulu kävelee sisään ja sanoo viimeisen jakson repliikin.</summary>
+        void AjastaPulunSisaantulo()
+        {
+            if (!puluPiilossa || puluAjastin != null) return;
+            void Sano()
+            {
+                string t = puluOdottaa;
+                puluOdottaa = null;
+                if (!string.IsNullOrEmpty(t) && tila == Tila.Ihminen) Pulu.Hae().Sano(t);
+            }
+            if (LinssiUi.VahennettyLiike()) { PalautaPulu(false); Sano(); return; }
+            puluAjastin = kertomus.schedule.Execute(() =>
+            {
+                puluAjastin = null;
+                PalautaPulu(true);
+                kertomus.schedule.Execute(Sano).StartingIn(PulunEleenMs);
+            }).StartingIn(PulunSisaantuloMs);
         }
 
         static string Liita(params string[] osat)
