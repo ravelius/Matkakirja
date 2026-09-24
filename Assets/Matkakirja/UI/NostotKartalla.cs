@@ -80,9 +80,17 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web kerroin = saapumisnäkymän kameran korkeus / nykyinen (min 0,2). Natiiviseppä lisää NostoKerros.ZoomKerroin;
-        /// siihen asti Osuus suhteessa saapumisnäkymän osuuteen (≈ 0,92, PalloKierto.taytto).
+        /// siihen asti Osuus suhteessa maan syttymishetken osuuteen.
         /// </summary>
-        static float ZoomKerroin(NostoKerros k) => Mathf.Max(0.2f, k.Osuus / 0.92f);
+        float ZoomKerroin(NostoKerros k)
+        {
+            // Saapumisnäkymä = maan kerroksen syttymishetki: sen osuus on kerroin 1 (b12q: kiinteä 0,92 antoi natiivin
+            // läheisessä saapumisnäkymässä kertoimen ~3 ja nimiöt 16–22 px, web 8,5).
+            if (k.NykyinenMaa != saapumisMaa || osuus0 <= 0f) { saapumisMaa = k.NykyinenMaa; osuus0 = k.Osuus; }
+            return Mathf.Max(0.2f, osuus0 > 0f ? k.Osuus / osuus0 : 1f);
+        }
+        string saapumisMaa;
+        float osuus0;
 
         /// <summary>Datan nimiön kylki (Siirtoseppä, skeema 1.39 karttavalot puoli). Natiiviseppä lisää Nosto.Puoli.</summary>
         static string DatanKylki(NostoKerros.Nosto s) => null;
