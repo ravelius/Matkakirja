@@ -453,12 +453,73 @@ nastoja näkyy, tai pyöriminen pysähtynyt/liian nopea.
 
 ---
 
+## Löydös 18: Liiku-nappi täysin läpinäkyväksi
+
+**Omistaja (11.1x, tarkennus löydös 6:een)**: Liiku-nappi läpinäkyväksi
+— VAIN teksti ja kevyt reuna, EI puoliläpinäkyvää taustaa (aiempi 6-korjaus
+jätti taustan puolilänpinäkyväksi, ei riitä).
+**Vastuu**: Natiivi-UI, master `a33385c` — Fable merkitsi tehdyksi
+kirjoitushetkellä ("LOYDOKSET 18–19 MASTERISSA a33385c").
+
+**Testikomento**: `ui-komento.txt`: `ui liiku`, `kuva liiku-lapinakyva`.
+
+**Odotettu tulos**: EI web-pariteettia (web käyttää täysin peittävää
+kultanappia, ks. löydös 6) — tämä on natiivin oma iPhone-erikoisratkaisu.
+Vain teksti "Liiku" ja ohut reunaviiva näkyvät, tausta täysin läpinäkyvä
+(kartta näkyy suoraan läpi napin alueelta).
+
+**PASS-ehto**: ei minkäänlaista taustavärjäystä napin alueella, vain
+teksti+reunaviiva. **FAIL**: puoliläpinäkyvä tai täysin peittävä tausta
+yhä näkyvissä.
+
+---
+
+## Löydös 19: Kartta kevyesti sumennettuna kuvien aikana
+
+**Omistaja (11.1x)**: kartta kevyesti sumennettuna aina kun isoisän tai
+pulun kuvia näkyvillä (paikkakupla, kohtaamis-/nostokortti, pulun
+puhekupla kuvalla) — sama mekanismi kuin porttiverho (löydös 17) mutta
+miedompi. Web ennallaan (natiivin oma parannus).
+**Vastuu**: Natiivi-UI, master `a33385c` (kuvat
+`natiivi-b6-kuvasumea-luenta/-pulu-iphone.jpg`, Fable hyväksynyt).
+
+**Testikomento**: avaa matkakirjakortti (`ui matkakirja ateena fokus`)
+ja pulun puhekupla kuvalla (`ui chat` tai vastaava), `kuva
+kartta-sumea-luenta`, `kuva kartta-sumea-pulu`.
+
+**Odotettu tulos**: kartta taustalla näkyvästi mutta MIEDOSTI sumea
+(vähemmän kuin porttiverhon 6 px) kun isoisän/pulun kuva on näkyvissä;
+sumennus poistuu kun kuva sulkeutuu.
+
+**PASS-ehto**: selvä mutta kevyt sumennusero kortin ollessa auki vs.
+kiinni. **FAIL**: ei sumennusta ollenkaan tai yhtä voimakas kuin
+porttiverho.
+
+---
+
+## Löydökset 20–21: EIVÄT VIELÄ BUILD 6:SSA — siirretty build 7:ään
+
+Fable (24.9.2026 klo 11.37): "LOYDOKSET 20–21 (NATIIVI-UI, KESKEN)
+MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
+
+- **Löydös 20** (klo 11.2x): iPhonen yläreuna kokonaan uusiksi —
+  matkalaukkuryhmä kahtena pillerinä Islandin vasemmalla puolella
+  ("300£ · 1/80" + kaupungin nimi), hampurilainen+karttanappi oikealla,
+  silmälasinappi poistuu, hammasratas ☰-valikon "Kehittäjä"-riviksi.
+  Kumoaa osan löydös 5:n aiemmasta ratkaisusta.
+- **Löydös 21**: isoisän/pulun tekstit oletuksena piilossa (vain ääni,
+  napautuksesta auki, Raamattu 14.–20.9.), pulun animaatio + matkakirjan
+  sykkivä kaiutin reagoi aidosti äänitasoon (GetOutputData). Liittyy myös
+  radion aitoon VU-mittariin (build 7, ei kiirettä build 6:een).
+
+---
+
 ## Yhteenveto-taulukko (täytetään ajon jälkeen)
 
 | # | Löydös | Tila ennen ajoa | PASS/FAIL | Kuva | Huomio |
 |---|--------|-----------------|-----------|------|--------|
 | 1 | Nostot | Mergetty | | | |
-| 2 | Väritaso/ääriviiva | EI mergetty | | | |
+| 2 | Väritaso/ääriviiva | Mergetty (7b3adee) | | | |
 | 3 | Paikkakupla | Mergetty | | | |
 | 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus), lisävaiheet/taivas/varjot/renkaat tarkista | | | |
 | 5 | iPhone yläosa | Mergetty | | | |
@@ -470,11 +531,17 @@ nastoja näkyy, tai pyöriminen pysähtynyt/liian nopea.
 | 11 | Ihmisen matka: tekstilaatikko | Mergetty | | | |
 | 12 | Ihmisen matka: loppu/kamera | Mergetty | | | |
 | 13 | Offline: mustat laatat | Mergetty | | | |
-| 14 | Navat | EI mergetty | | | |
+| 14 | Navat | Mergetty (7b3adee) | | | |
 | 15 | Karttaselite | Mergetty | | | |
-| 16 | Pulun chat | EI mergetty (iso ominaisuus) | | | |
-| 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Ei tarkistettu | | | |
+| 16 | Pulun chat | Melkein — SSE+haku tehty, odottaa Pelikoodarin allowlistia #3046 | | | |
+| 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Mergetty (7b3adee) | | | |
+| 18 | Liiku-nappi täysin läpinäkyväksi | Mergetty (a33385c) | | | |
+| 19 | Kartta sumea kuvien aikana | Mergetty (a33385c) | | | |
+| 20 | iPhonen yläreuna uusiksi | EI (build 7) — ei testata | — | — | Siirretty |
+| 21 | Isoisän/pulun tekstit piilossa oletuksena | EI (build 7) — ei testata | — | — | Siirretty |
 
-Muista: "Tila ennen ajoa" -sarake on kirjoitushetken (klo 10.3x) tilanne —
-tarkista `git log` proto-3d-repossa uudelleen ennen varsinaista ajoa, koska
-useampi sessio korjaa näitä rinnakkain juuri nyt.
+**Ajon SHA**: proto-master `7b3adee`, asennettu iPhone 18 Pro
+-simulaattoriin (1572C658) Natiiviseppän toimesta 24.9.2026 klo 11.4x.
+Natiiviseppän vinkit tähän ajoon: `komento.txt`: `hiljaa` (mykistää koko
+sovelluksen), `vari FRA` (pakottaa väritason näkyviin), `portti paalle|pois`
+(porttiverho), `renkaat ateena,kairo ateena` (pakottaa hehkurenkaat).
