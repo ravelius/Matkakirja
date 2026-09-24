@@ -309,13 +309,16 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pariteettiajon UI-puu (Pelikoodari 24.9., tools/pariteetti-ajo.mjs vertaa webin DOM-laatikoihin): jokaisen
-        /// kerroksen näkyvät tekstielementit ja piirtävät laatikot (tausta, kuva tai reuna, vähintään 16 × 16) samalla
-        /// tehollisen läpinäkyvyyden kululla kuin Peitteet. Mitat UI-yksiköinä (worldBound), paneelin koko mukana.
+        /// kerroksen näkyvät tekstielementit ja piirtävät laatikot (tausta, kuva, reuna tai Painter2D, vähintään 16 × 16)
+        /// samalla tehollisen läpinäkyvyyden kululla kuin Peitteet. Mitat UI-yksiköinä (worldBound) leikattuna
+        /// overflow: hidden -vanhempien rajaan (ScrollViewin ulkopuoli pois), paneelin koko mukana.
         /// </summary>
         string Puu(string nimi)
         {
             static string J(string t) => "\"" + (t ?? "").Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\n", "\\n").Replace("\r", "").Replace("\t", " ") + "\"";
             static string L(float v) => v.ToString("0.#", CultureInfo.InvariantCulture);
+            static Rect Leikkaa(Rect a, Rect b) => Rect.MinMaxRect(Mathf.Max(a.xMin, b.xMin), Mathf.Max(a.yMin, b.yMin),
+                Mathf.Max(Mathf.Max(a.xMin, b.xMin), Mathf.Min(a.xMax, b.xMax)), Mathf.Max(Mathf.Max(a.yMin, b.yMin), Mathf.Min(a.yMax, b.yMax)));
             var sb = new System.Text.StringBuilder();
             var valikot = UiKerros.Hae().Juuri(UiKerros.Valikot);
             float pw = valikot?.layout.width ?? 0f, ph = valikot?.layout.height ?? 0f;
@@ -328,18 +331,20 @@ namespace Matkakirja.Natiivi
             {
                 if (juuri == null) continue;
                 var koko = juuri.worldBound;
-                void Kay(VisualElement e, float opasiteetti)
+                // Leike: overflow: hidden -vanhempien (ScrollViewin näkymä, kortin runko) rajaama alue; ulkopuoli ei näy.
+                void Kay(VisualElement e, float opasiteetti, Rect leike)
                 {
                     var rs = e.resolvedStyle;
                     if (rs.display == DisplayStyle.None || rs.visibility == Visibility.Hidden) return;
                     opasiteetti *= rs.opacity;
                     if (opasiteetti <= 0.02f) return;
-                    var r = e.worldBound;
+                    var r = Leikkaa(e.worldBound, leike);
                     bool ruudulla = r.width > 0 && r.height > 0 && r.xMax > koko.xMin && r.xMin < koko.xMax && r.yMax > koko.yMin && r.yMin < koko.yMax;
                     string teksti = e is TextElement te ? System.Text.RegularExpressions.Regex.Replace(te.text ?? "", "<[^>]+>", "").Trim() : null;
                     var kuva = rs.backgroundImage;
                     bool kuvallinen = kuva.texture != null || kuva.sprite != null || kuva.renderTexture != null || kuva.vectorImage != null;
-                    bool piirtaa = rs.backgroundColor.a > 0.02f || kuvallinen
+                    // Painter2D-piirto (generateVisualContent: RadioNapit, Kartuscha.Pisteviiva, Pistenaytto) on myös piirtoa.
+                    bool piirtaa = rs.backgroundColor.a > 0.02f || kuvallinen || (e is not TextElement && e.generateVisualContent != null)
                         || (rs.borderTopWidth + rs.borderBottomWidth + rs.borderLeftWidth + rs.borderRightWidth > 0 && rs.borderTopColor.a > 0.02f);
                     if (ruudulla && (!string.IsNullOrEmpty(teksti) || (piirtaa && r.width >= 16 && r.height >= 16)))
                     {
@@ -352,9 +357,14 @@ namespace Matkakirja.Natiivi
                         sb.Append(",\"x\":").Append(L(r.x)).Append(",\"y\":").Append(L(r.y)).Append(",\"w\":").Append(L(r.width)).Append(",\"h\":").Append(L(r.height))
                           .Append(",\"opasiteetti\":").Append(opasiteetti.ToString("0.00", CultureInfo.InvariantCulture)).Append('}');
                     }
-                    foreach (var lapsi in e.hierarchy.Children()) Kay(lapsi, opasiteetti);
+                    // resolvedStyle ei kerro overflow'ta: inline-tyyli tai ScrollViewin näkymä (Unity leikkaa sen aina).
+                    bool leikkaa = (e.style.overflow.keyword == StyleKeyword.Undefined && e.style.overflow.value == Overflow.Hidden)
+                        || e.ClassListContains(ScrollView.viewportUssClassName);
+                    var lapsenLeike = leikkaa ? Leikkaa(e.worldBound, leike) : leike;
+                    if (lapsenLeike.width <= 0 || lapsenLeike.height <= 0) return;
+                    foreach (var lapsi in e.hierarchy.Children()) Kay(lapsi, opasiteetti, lapsenLeike);
                 }
-                Kay(juuri, 1f);
+                Kay(juuri, 1f, koko);
             }
             sb.Append("]}");
             string tiedosto = string.IsNullOrEmpty(nimi) ? "ui-puu.json" : "ui-puu-" + nimi + ".json";
