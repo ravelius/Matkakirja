@@ -229,11 +229,15 @@ namespace Matkakirja.Peli.Testit
             var vanha = Paikallinen.Teksti("aanitaulut");
             var ilman = LueAanitaulut(vanha, false);
             Oleta.Tosi(ilman.Siirtymat.Count == 5 && ilman.Tilaraidat.Count == 2 && ilman.Paikkaraidat.Count == 1 && ilman.Pulut.Count == 16,
-                "v11: 5 siirtymää, 2 tila-, 1 paikkaraita, 16 pulua: " + Raidat(ilman));
-            // Vanha paketti raakakiellolla: rivit löytyvät, mutta kentät tyhjenevät (siksi kielto vain ≥ 1.30).
+                "paikallinen kopio: 5 siirtymää, 2 tila-, 1 paikkaraita, 16 pulua: " + Raidat(ilman));
+            // Vanha paketti (< 1.30) raakakiellolla: rivit löytyvät, mutta kentät tyhjenevät (siksi kielto vain ≥ 1.30).
+            // Paikallinen kopio ≥ 1.30 (v41, 24.9.2026): kentät ovat päätasolla, joten kielto ei muuta mitään.
             var tyhja = LueAanitaulut(vanha, true);
-            Oleta.Tosi(tyhja.Siirtymat.All(r => r.Ampari == null && r.Ryhma == null) && tyhja.Pulut.Values.All(r => r.Tunnus == null),
-                "v11 raakakiellolla: kentät tyhjiä");
+            if (!Pakettiskeema.Vahintaan(Paikallinen.Skeemaversio, Pakettiskeema.PaatasoTaysi))
+                Oleta.Tosi(tyhja.Siirtymat.All(r => r.Ampari == null && r.Ryhma == null) && tyhja.Pulut.Values.All(r => r.Tunnus == null),
+                    $"{Paikallinen.Versio} raakakiellolla: kentät tyhjiä");
+            else
+                Oleta.Sama(Raidat(ilman), Raidat(tyhja), $"{Paikallinen.Versio} (≥ {Pakettiskeema.PaatasoTaysi}) raakakiellolla = raaka sallittuna");
 
             // 1.30-muoto: data-olion kentät päätasolle (kuten Siirtoseppä), data jää rinnalle.
             var uusi = Muokkaa("aanitaulut", l =>
