@@ -177,8 +177,7 @@ namespace Matkakirja.Natiivi
             // tulee kameran puolelta (Natiiviseppä); UI Toolkit ei sumenna 3D-kuvaa.
             Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore),
                 Kuviot.Soikio("aloitus-portti", new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.28f), new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.6f), 0.4f));
-            // Omistaja 24.9.2026 (löydös 24, web showAloitusportti): portissa ei julistetta eikä ingressiä —
-            // vain äänirivi, Aloita seikkailu ja Oppiminen on hauskaa. Elementit jäävät piiloon.
+            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
@@ -190,7 +189,6 @@ namespace Matkakirja.Natiivi
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
-            porttiYla.style.display = DisplayStyle.None;
             var keskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
             aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
@@ -199,9 +197,7 @@ namespace Matkakirja.Natiivi
             jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
-            jatkaNappi.style.display = DisplayStyle.None;
-            // Tallennus olemassa → peli jatkuu; muuten avausruutu (web: sama nappi molemmissa).
-            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", () => { if (jatka != null) Jatka(); else PortistaKartalle(); }, keskus);
+            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
             var linkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
@@ -331,8 +327,11 @@ namespace Matkakirja.Natiivi
             PaivitaAaniNappi();
             this.jatka = jatka;
             this.kohteet = kohteet != null && kohteet.Count > 0 ? kohteet : Array.ConvertAll(Kohteet, id => (id, (string)null));
-            // Löydös 24: ei Jatka matkaa / Uusi matka -paria; Aloita seikkailu jatkaa tallennuksen, jos sellainen on.
-            jatkaNappi.style.display = DisplayStyle.None;
+            jatkaNappi.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
+            aloitaNappi.EnableInClassList("mk-nappi--haamu", jatka != null);
+            aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
+            aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
+            ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
             AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
@@ -373,9 +372,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Aloituskaava webin mukaan (omistaja 24.9.2026, löydös 23a): portti häipyy avaukseen — paikkarivi
-        /// "Heathrow, Lontoo" + kuukausi ja vuosi, INTRO_TEXT kirjoituskoneella luennan intro-puhe.mp3 tahdissa ja
-        /// lopuksi "Valitse aloituskaupunki" → kartta. Lennolla vain flightFirst-rivi (LentoKirjoitus).
+        /// Aloituskaava (omistaja 24.9.2026 klo 12.1x, korvaa erillisen avausruudun): portista suoraan pallovalintaan.
+        /// Pallolla alapalkissa kertojan avaus — "Heathrow, Lontoo" + kuukausi ja vuosi ja INTRO_TEXT intro-puhe-luennan
+        /// tahdissa — ja sen jälkeen pulun ensiesittely (LivianAvaus, web naytaLivianAvaus). Pallo on valittavissa koko
+        /// ajan: kaupungin napautus keskeyttää luennan ja pulun ja aloittaa lennon (flightFirst, LentoKirjoitus).
         /// </summary>
         void PortistaKartalle()
         {
@@ -386,14 +386,42 @@ namespace Matkakirja.Natiivi
             NaytaAvausteksti();
         }
 
+        /// <summary>Kertojan avaus on alapalkissa pallovalinnan aikana (ei vielä pulun esittelyä).</summary>
+        bool avausPallolla;
+
         void NaytaAvausteksti()
         {
-            intro.RemoveFromClassList("mk-aloitus__intro--lento");
+            avausPallolla = true;
+            NaytaValinta();
+            juuri.style.display = DisplayStyle.Flex;
+            juuri.style.opacity = 1f;
+            juuri.pickingMode = PickingMode.Ignore;
+            intro.AddToClassList("mk-aloitus__intro--lento");
+            intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
+            arkki.pickingMode = PickingMode.Ignore; // napautukset pallolle, alapalkki ei peitä valintaa
+            valintaNappi.style.display = DisplayStyle.None;
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;
-            valintaNappi.style.display = DisplayStyle.None;
             var nyt = DateTime.Now;
             AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, true);
+        }
+
+        /// <summary>
+        /// Kertojan avaus päättyi pallolla (omistaja 24.9.2026 klo 12.2x): alapalkki häipyy, kamera zoomaa Lontoosta ulos
+        /// valittavien kohteiden näkymään ja samaan aikaan pulu lentää ruutuun esittelemään valinnan (kerran laitteella).
+        /// </summary>
+        void AvausPallollaValmis()
+        {
+            avausPallolla = false;
+            juuri.schedule.Execute(() =>
+            {
+                if (lennolla || !ValitseePallolla) return;
+                intro.style.opacity = 0f;
+                try { AvausluentaPaattyi?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                if (valintaKierto != null)
+                    valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), UlosZoominKesto, null, UlosZoominPehmennys);
+                LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
+            }).StartingIn(900);
         }
 
         void Jatka()
@@ -542,6 +570,7 @@ namespace Matkakirja.Natiivi
 
         void Valmis()
         {
+            if (avausPallolla) { AvausPallollaValmis(); return; }
             if (lennolla) { LopetaLento(lentoOhi ? 2500 : 5000); return; }
             if (valintaNappi.style.display == DisplayStyle.Flex) return;
             valintaNappi.style.display = DisplayStyle.Flex;
@@ -551,8 +580,9 @@ namespace Matkakirja.Natiivi
 
         void NaytaValinta()
         {
-            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack).
-            Puhe.Instanssi?.Pysayta();
+            // Web aloitaKartalta: avauksen puhe loppuu, kun valinta alkaa; naksahdus (sfx clack). Pallon avauksessa
+            // luenta alkaa vasta tämän jälkeen (NaytaAvausteksti), joten pysäytys ei osu siihen.
+            if (!avausPallolla) Puhe.Instanssi?.Pysayta();
             Aanet.Tehoste("clack");
             UiSisalto.Lataa(() =>
             {
@@ -583,6 +613,11 @@ namespace Matkakirja.Natiivi
         void Valitse(string id)
         {
             Aanet.Tehoste("clack", 2.4f); // web ui.js:12690 aloituskaupungin napautus
+            // Ohitus milloin tahansa: kertojan avaus ja pulun esittely katkeavat heti.
+            avausPallolla = false;
+            Puhe.Instanssi?.Pysayta();
+            LivianAvaus.Peru();
+            arkki.pickingMode = PickingMode.Position;
             var merkit = valintaMerkit;
             LopetaPallovalinta();
             // Valittu kaupunki pitää renkaansa (valittu-asu) aloituslennon loppuun (AloituslentoPaattyi).
@@ -660,6 +695,16 @@ namespace Matkakirja.Natiivi
         // --- valinta pallolla (web aloitaPallolta; lauta.js aloitusnakyma, aloitusKohteet) --
 
         public const double ValintaLat = 30, ValintaLon = 17;
+        /// <summary>Kertojan avauksen aikana kamera on Lontoon (Heathrow) kohdalla (omistaja 24.9.2026 klo 12.2x).</summary>
+        public const double LontooLat = 51.47, LontooLon = -0.45, LontooKorkeus = 1_400_000;
+
+        /// <summary>
+        /// Avausluenta päättyi pallolla: kamera zoomaa ulos valintanäkymään ja pulu lentää ruutuun samaan aikaan.
+        /// Natiiviseppä voi antaa ulos-zoomin käyrän (KAMERA-AJOT) UlosZoominPehmennys-kentällä; null = PalloKierron oletus.
+        /// </summary>
+        public static event Action AvausluentaPaattyi;
+        public static Func<double, double> UlosZoominPehmennys;
+        public const float UlosZoominKesto = 3.2f;
         const double PallonOsuus = 0.55, AnkkuriVara = 0.78;
         /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
         static readonly string[] Ankkurit = { "lontoo", "ateena" };
@@ -688,9 +733,12 @@ namespace Matkakirja.Natiivi
             valintaKierto = kierto;
             ValitseePallolla = true;
 
-            // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
-            juuri.style.opacity = 0f;
-            juuri.schedule.Execute(() => { if (ValitseePallolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen. Kertojan avaus jää alapalkkiin.
+            if (!avausPallolla)
+            {
+                juuri.style.opacity = 0f;
+                juuri.schedule.Execute(() => { if (ValitseePallolla && !avausPallolla) juuri.style.display = DisplayStyle.None; }).StartingIn(900);
+            }
             SyoteLukko.Vapauta(this);
 
             valintaIdt.Clear();
@@ -707,9 +755,12 @@ namespace Matkakirja.Natiivi
             }
             valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
             valintaPisteet.Napautettu += PisteValittu;
-            valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
-            // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella).
-            LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
+            // Kertojan avauksen ajan Lontoon kohdalla; muuten suoraan valintanäkymään.
+            if (avausPallolla) valintaKierto.Aja(LontooLat, LontooLon, LontooKorkeus, 1.6f, null);
+            else valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella) — pallon avauksessa
+            // vasta kertojan jälkeen (AvausPallollaValmis).
+            if (!avausPallolla) LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
             return true;
         }
 
