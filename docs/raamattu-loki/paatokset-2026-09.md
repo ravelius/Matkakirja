@@ -4131,3 +4131,7 @@ Aloitusviesti täydennetty 1f68fd274. Fable: Julkaisija mergeää luovutushaaran
 ## ISO iPAD PYSYVAKSI TESTILAITTEEKSI (omistaja klo 16.1x): iPad Pro 13 (Sami), UDID 00008103-001819421413401E (24.9.2026 klo 16.05)
 
 iPad Pro 12,9" 5. sukupolvi (iPad13,8, M1), iPadOS 26.4.1, kehittäjätila päällä, paritettu devicectl:llä (manage pair) ja kaapelilla kiinni; pistekoko 1024×1366 → iPad-kuvaparit jatkossa myös tässä koossa (PW_W=1024 PW_H=1366). Pieni iPad Pro 11 (00008142…) palautetaan omistajalle, kun Linssisepän käynnissä oleva piikkiajo (langaton) valmistuu; Huippuvuoret-laitekuva ja keksinnöt-kuvapari isolla iPadilla.
+
+## SISALTOKIRJURI: KOHDEKARTAT ERA 2 VALMIS (#3087–#3090); KIMBERLEY HYLATTY (VAIN BIG HOLE) → 11+19 (24.9.2026 klo 16.08)
+
+Santarém, João Pessoa, Macapá, Cayenne; testit 0 fail. Jäljellä Gao ja Al Kufra, sitten kohdekarttavaihe valmis.
