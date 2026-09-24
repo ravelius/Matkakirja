@@ -33,11 +33,24 @@ namespace Matkakirja.Natiivi
         const string KehittajaTiiviste = "2f7f15d0bb83b97a7ce3054be0972e80b60742cfc8b4c36ce06f3330f6f045c6";
         const string KehittajaTiivisteRajattu = "b3282a2f2a28757b3a18ab833de16a9c54518c0b0cf493e3f0a7cf09386f326a";
 
+        /// <summary>
+        /// Kehittäjätila. App Store -käännöksessä (määrite MATKAKIRJA_APPSTORE, Rakennus.IosTestFlight) aina pois
+        /// eikä koodilla kytkettävissä (Fable 24.9.: portti build-määrityksestä, ei vain kytkimestä). Sisäisessä
+        /// TestFlightissä (release, ei määritettä) oletuksena pois ja koodilla päälle kuten webissä.
+        /// </summary>
+#if MATKAKIRJA_APPSTORE
+        public static bool Kehittaja => false;
+#else
         public static bool Kehittaja => Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1";
+#endif
 
         /// <summary>Kytkee kehittäjätilan koodilla (true = onnistui) tai pois (koodi null).</summary>
         public static bool AsetaKehittaja(string koodi)
         {
+#if MATKAKIRJA_APPSTORE
+            PlayerPrefs.DeleteKey(KehittajaAvain);
+            return koodi == null;
+#else
             if (koodi == null)
             {
                 PlayerPrefs.DeleteKey(KehittajaAvain);
@@ -58,6 +71,7 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
             Muuttui?.Invoke("Kehittaja");
             return true;
+#endif
         }
 
         static string Avain(Kytkin k) => k switch

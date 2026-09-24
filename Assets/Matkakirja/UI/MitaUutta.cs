@@ -39,6 +39,7 @@ namespace Matkakirja.Natiivi
             (himmennys, lista) = Dialogi(kerros.Juuri(UiKerros.Valikot), "Mitä uutta", out var napit);
             var kehittaja = Rakenne.Nappi("Kehittäjä", "mk-nappi--haamu", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
             kehittaja.tooltip = "Kehittäjätila";
+            if (avaaKehittaja == null) kehittaja.style.display = DisplayStyle.None;
             Nappi(napit, "Sulje", Sulje);
 
             // Päivitysilmoitus kaiken päälle (myös aloitusnäkymän, joka on Traileri-kerroksessa).

@@ -107,7 +107,12 @@ namespace Matkakirja.Natiivi
             versio = versioNappi.Q<Label>();
             versio.AddToClassList("mk-pudotus__versio");
             kehittaja = new KehittajaIkkuna(kerros);
+#if MATKAKIRJA_APPSTORE
+            // App Storessa ei kehittäjätilaa: "Mitä uutta" ilman Kehittäjä-nappia.
+            MitaUutta = new MitaUutta(kerros, null);
+#else
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
+#endif
             Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
         }
 

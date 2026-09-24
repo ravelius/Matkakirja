@@ -160,7 +160,13 @@ namespace Matkakirja.Natiivi
         const float KierrosTauko = 0.4f;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        static void Kaynnista() => UiKerros.Hae().gameObject.AddComponent<UiKomennot>();
+        static void Kaynnista()
+        {
+#if !MATKAKIRJA_APPSTORE
+            // Testiautomaation rajapinta (Documents/ui-komento.txt) ei kuulu App Store -käännökseen.
+            UiKerros.Hae().gameObject.AddComponent<UiKomennot>();
+#endif
+        }
 
         void Start()
         {
