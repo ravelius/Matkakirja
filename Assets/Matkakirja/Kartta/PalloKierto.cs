@@ -93,6 +93,10 @@ namespace Matkakirja
         public float porttiSumennusPt = 6f;
         [Tooltip("Sumennuksen häivytys sisään ja ulos, sekunteja (web portin häipyminen 400 ms).")]
         public float porttiHaivytysS = 0.4f;
+        [Tooltip("Kuvien aikainen mieto sumennus (löydös 19), pisteinä.")]
+        public float kuvaSumennusPt = 2.25f;
+        [Tooltip("Kuvasumennuksen häivytys, sekunteja.")]
+        public float kuvaHaivytysS = 0.3f;
         [Tooltip("Matkakirja/Sumennus (Rakennus.cs). Ilman sitä portti on vain pieni kuva (renderScale 0,1).")]
         public Material sumennusMateriaali;
 
@@ -106,9 +110,17 @@ namespace Matkakirja
         /// </summary>
         public static bool PorttiSumea { get; set; }
 
+        /// <summary>
+        /// KUVASUMENNUS (omistajan löydös 19; Natiivi-UI: UiNakymat.KuvaSumeaMuuttui → tämä): kartta mieto sumeaksi
+        /// (<see cref="kuvaSumennusPt"/>), kun isoisän tai pulun kuvia on ruudulla — sama keino kuin portin verhossa,
+        /// mutta ei täyttöä, pyöritystä eikä merkkien piilotusta; liukuu päälle ja pois <see cref="kuvaHaivytysS"/>.
+        /// Portti voittaa, jos molemmat ovat päällä.
+        /// </summary>
+        public static bool KuvaSumea { get; set; }
+
         /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaPortti() => PorttiSumea = false;
+        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; }
 
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
@@ -382,14 +394,20 @@ namespace Matkakirja
                     vapaaKuvaus = false;
                     porttiLon = Kiedo(porttiPituus);
                 }
+            }
+            // Sumennuksen tavoite: portti 6 pt, kuvat mieto (löydös 19), muuten pois.
+            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea ? kuvaSumennusPt : 0f;
+            if (tavoite > 0f)
+            {
                 sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);
-                sumennus.sumennusPt = porttiSumennusPt;
-                if (sumea) sumennus.Aseta(true);
+                // Eri voimakkuus = eri pienen kuvan skaala: vaihdetaan (harvinainen: portti ja kuva yhtä aikaa).
+                if (sumennus.Paalla && !Mathf.Approximately(sumennus.sumennusPt, tavoite)) sumennus.Aseta(false);
+                if (!sumennus.Paalla) { sumennus.sumennusPt = tavoite; sumennus.Aseta(true); }
             }
             if (sumennus == null || !sumennus.Paalla) return;
-            float askel = (float)dt / Mathf.Max(0.01f, porttiHaivytysS);
-            sumennus.Osuus += porttiTila ? askel : -askel;
-            if (!porttiTila && sumennus.Osuus <= 0f) sumennus.Aseta(false);
+            float askel = (float)dt / Mathf.Max(0.01f, sumennus.sumennusPt >= porttiSumennusPt ? porttiHaivytysS : kuvaHaivytysS);
+            sumennus.Osuus += tavoite > 0f ? askel : -askel;
+            if (tavoite <= 0f && sumennus.Osuus <= 0f) sumennus.Aseta(false);
         }
 
         /// <summary>Aloituspallo: hidas kierto itään kiinteällä leveydellä ja korkeudella, joka täyttää ruudun.</summary>
