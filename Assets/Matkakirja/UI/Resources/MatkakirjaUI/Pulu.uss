@@ -217,6 +217,16 @@
     overflow: hidden;
 }
 
+/* Offline-pillerin vuoro samassa kulmassa: lappu häipyy (ristihäivytys, OfflineTilaUi.Vuorottele). */
+.mk-matkakirja {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}
+
+.mk-matkakirja.mk-matkakirja--vaistyy {
+    opacity: 0;
+}
+
 .mk-matkakirja__ylarivi {
     flex-direction: row;
     align-items: center;

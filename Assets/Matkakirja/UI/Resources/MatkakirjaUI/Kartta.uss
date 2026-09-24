@@ -706,6 +706,16 @@
     overflow: hidden;
 }
 
+/* Yksi teksti kerrallaan matkakirjan lapun kanssa: ristihäivytys (OfflineTilaUi.Vuorottele). */
+.mk-offlineTila {
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}
+
+.mk-offlineTila--vaistyy {
+    opacity: 0;
+}
+
 .mk-offlineTila:active {
     background-color: rgba(58, 42, 28, 0.95);
 }

@@ -30,6 +30,16 @@ namespace Matkakirja.Natiivi
         bool paivitysPyydetty, sallittu = true;
         bool? testiVerkoton;
 
+        /// <summary>
+        /// Matkakirjan kortti samassa yläkulmassa (UiNakymat asettaa). Yksi teksti kerrallaan (omistajan build 5
+        /// -löydös, iPhone: "Ateena, elokuussa 1873" piirtyi latausrivin päälle): auki olevan kortin aikana pilleri
+        /// väistyy, ja lapun kanssa ne vuorottelevat ristihäivytyksellä (lappu 6 s, pilleri 3 s).
+        /// </summary>
+        public Matkakirjakortti Kortti;
+        const float LappuVuoro = 6f, PilleriVuoro = 3f;
+        float vuoroAlkoi;
+        bool pilleriVuorossa, pilleriKaytossa;
+
         public OfflineTilaUi(UiKerros kerros, Ylapalkki ylapalkki, Action avaaAsetukset)
         {
             this.kerros = kerros;
@@ -45,6 +55,7 @@ namespace Matkakirja.Natiivi
             Asettele();
             // Palvelu syntyy kohtauksen latauduttua; verkon tila ei anna tapahtumaa.
             pilleri.schedule.Execute(Paivita).Every(2000);
+            pilleri.schedule.Execute(Vuorottele).Every(250);
         }
 
         void Asettele() => pilleri.style.top = Ylapalkki.Varaus + 8;
@@ -96,11 +107,32 @@ namespace Matkakirja.Natiivi
             }
             bool nakyy = rivi != null && sallittu;
             pilleri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            pilleriKaytossa = nakyy;
+            Vuorottele();
             if (!nakyy) return;
             teksti.text = rivi;
             pilleri.EnableInClassList("mk-verkoton", verkoton);
             palkki.style.display = osuus >= 0f ? DisplayStyle.Flex : DisplayStyle.None;
             taytto.style.width = Length.Percent(Mathf.Max(0f, osuus) * 100f);
+        }
+
+        void Vuorottele()
+        {
+            var k = Kortti;
+            bool kortti = k != null && k.Nakyy, lappu = kortti && k.Lappuna;
+            bool naytaPilleri;
+            if (!pilleriKaytossa || !kortti) { naytaPilleri = pilleriKaytossa; pilleriVuorossa = false; }
+            else if (!lappu) { naytaPilleri = false; pilleriVuorossa = false; }
+            else
+            {
+                float nyt = Time.realtimeSinceStartup;
+                if (nyt - vuoroAlkoi >= (pilleriVuorossa ? PilleriVuoro : LappuVuoro)) { pilleriVuorossa = !pilleriVuorossa; vuoroAlkoi = nyt; }
+                naytaPilleri = pilleriVuorossa;
+            }
+            if (!pilleriVuorossa && !(pilleriKaytossa && lappu)) vuoroAlkoi = Time.realtimeSinceStartup;
+            pilleri.EnableInClassList("mk-offlineTila--vaistyy", !naytaPilleri);
+            pilleri.pickingMode = naytaPilleri ? PickingMode.Position : PickingMode.Ignore;
+            k?.Vaisty(pilleriKaytossa && lappu && naytaPilleri);
         }
 
         /// <summary>Valmistuminen ja virhe ilmoituksena (vain siirtymä, ei alkutila).</summary>
