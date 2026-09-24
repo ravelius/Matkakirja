@@ -4367,3 +4367,7 @@ Mukana: Natiivi-UI b10-jono 0e8ff30 (yläpalkki ilman ⚙, vaaka/veto → vain �
 ## SMOKE-TESTI f02376b OK; TIIMIRISTIRIITA TIEDOKSI: JULKAISIJAN MUKAAN ACTIONSIN TEAM_ID = F72JLS57C5, OMISTAJAN MEMBERSHIP-SIVU NAYTTAA RCD77XPB7M (24.9.2026 klo 17.42)
 
 Smoke: aloituslento Lontoo→Ateena, satelliittipinta, lasku, lehti, 0 exceptionia, ei suorakulmioita. Ristiriita: koodaus-Xcode näyttää F72JLS57C5:n 'Personal Team' -nimellä, mutta TestFlight-vienti toimii sillä (pilviallekirjoitus ASC-avaimella) → joko secret on eri kuin luultiin tai F72JLS57C5 on gmail-tilin maksullinen tiimi. Muistio: Developer/ASC = me.com. Ei estä buildia: kehityskäännökset RCD77XPB7M + fi.matkakirja.peli.kehitys, TestFlight nykyisellä secretillä; Julkaisija lisää MATKAKIRJA_TEAM-ohituksen jos arkistointi kaatuu. Selvitetään omistajalta: kummalla tilillä App Store Connectin Matkakirja-sovellus on.
+
+## SISALTOKIRJURI: N2/N4/N5/N6:N 20 KAUPUNKIA VALMIS (#3097, #3098, #3101, #3104) — KOKO 91 KAUPUNGIN SAA/GALLERIA/ENNENNYT-KIERROS LAPI (24.9.2026 klo 17.46)
+
+ennenNyt 19/20 (Sahara ilman paria), galleria 6/20 (São Luís 3, Yellowstone/Grand Canyon/Iguazú/Ouro Preto 1–2). Testit 0 fail. Seuraava tehtävä Sisältökirjurille odottaa Fablen viestirajan nollausta: gallerian ja ennenNyt-parien kuvaputkitilaus (43 + 11 + uudet 14 + 1 kaupunkia) valmisteltavaksi listaksi.
