@@ -111836,4 +111836,637 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  alkufra: [
+    {
+      id: 'kaupunki',
+      nimi: 'Al Kufra',
+      johdanto:
+        'Al Kufra on viiden oaasin ryppäs syvällä Kaakkois-Libyan Saharassa, satojen kilometrien päässä lähimmästä naapuristaan. Isoisän matkavuonna 1873 se oli eurooppalaisille yhä täysin tuntematon paikka.',
+      nostot: [
+        {
+          otsikko: 'Al Jawf – oaasiryhmän sydän',
+          teksti:
+            'Kufran oaasiryhmä on soikea, noin 50 kilometriä pitkä ja 20 kilometriä leveä allas, jota reunustavat sata metriä korkeat hiekkakukkulat. Altaan pohjalla on viisi erillistä asutuskeskittymää: suurin niistä, Al Jawf, on runsaat viisi kilometriä pitkä ja kahdesta kolmeen kilometriä leveä, ja sen keskellä kimmeltää suolajärvi. Muualla altaassa vuorottelevat punertava hiekka, palmulehdot ja pienet suolapainanteet. Isoisän aikana tänne ei johtanut yhtään merkittyä tietä — vain karavaanien jättämät jäljet hiekassa kertoivat, että joku oli kulkenut samaa reittiä ennenkin.',
+          tiedosto: 'Kufra SPOT 1301.jpg',
+          lyhyt: 'Al Jawf ja sen ympärillä kaartuvat kastelukehät ilmakuvassa.',
+          selite:
+            'Satelliittikuva näyttää Kufran oaasiryhmän pääkylän Al Jawfin harmaine kortteleineen ja suolajärvineen sekä sen ympärillä hiekkaan piirtyvät kuusikulmaiset ja pyöreät kastelupellot.',
+          lahde: 'CNES – Spot Image, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kufra',
+        },
+        {
+          otsikko: 'Zuwayya valtaa oaasin',
+          teksti:
+            'Kufran alkuperäisasukkaita olivat toubut, joilla oli oaasissa linnoitettuja kyliä jo vuosisatoja ennen arabiheimojen tuloa. 1800-luvun alussa arabialainen zuwayya-heimo hyökkäsi alueelle saatuaan Tripolin ottomaanipashalta aseita ja sotilaita, ja vuoteen 1840 mennessä zuwayyat hallitsivat koko oaasiryhmää; moni toubu joutui pakenemaan tai alistumaan voittajille. Valloittajat kutsuivat alkuperäisasukkaita halventavasti nimellä ”kuffar”, uskottomat — ja tästä sanasta koko oaasi sai lopulta nimensä, Kufra. Zuwayyoista tuli oaasin uusi isäntäheimo, joka hallitsi sen kaivoja ja palmulehtoja seuraavat vuosikymmenet.',
+          tiedosto: 'Kufra 1930-1.jpg',
+          lyhyt: 'Savimuurinen linnoitus ja yksinäinen palmu Kufrassa vuonna 1930.',
+          selite:
+            'Vuonna 1930 otettu valokuva näyttää paksun savimuurin ja sen suojissa kasvavan yksinäisen palmun — tällaisia linnoitettuja muureja sekä toubut että myöhemmin zuwayyat rakensivat oaasin kyliin.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (Public domain)',
+          wiki: 'Zuwayya',
+        },
+        {
+          otsikko: 'Karavaanien risteysasema',
+          teksti:
+            'Kufra makasi juuri siinä kohtaa Saharaa, jossa pohjois-eteläsuuntainen reitti Bengazista Vadai-valtakuntaan risteytyi itä-länsisuuntaisiin karavaaniteihin. Kauppiaat pysähtyivät oaasissa täyttämään vesisäkkinsä ja lepäyttämään kameleitaan ennen seuraavaa, viikkoja kestävää autiomaataivalta. Karavaanien mukana kulki taateleita, strutsinsulkia ja norsunluuta pohjoiseen, kangasta ja aseita etelään — ja koska reitti oli ainoa käytännöllinen tapa ylittää tämä osa Saharaa, kuka tahansa hallitsi Kufraa, hallitsi myös kauppaa. Se teki oaasista sekä haluttavan että vaarallisen paikan: hyvin harva ulkopuolinen pääsi sinne ilman paikallisten lupaa.',
+          tiedosto: 'Caravan in the desert.jpg',
+          lyhyt: 'Kamelikaravaani ylittää hiekkadyynejä Saharassa.',
+          selite:
+            'Nykyvalokuva Marokon Saharasta näyttää kamelikaravaanin ylittämässä dyynejä — samanlaisia näkyjä koki jokainen, joka kulki Kufran kautta kulkeneita karavaanireittejä.',
+          lahde: 'Sergey Pesterev, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Trans-Saharan trade',
+        },
+        {
+          otsikko: 'Rohlfsin vaarallinen matka Kufraan',
+          teksti:
+            'Vain kuusi vuotta isoisän oman matkan jälkeen, joulukuusta 1878 lokakuuhun 1879, saksalainen tutkimusmatkailija Gerhard Rohlfs yritti kulkijatoverinsa Anton Steckerin kanssa Tripolista Kufran kautta Vadai-valtakuntaan. Rohlfs oli ensimmäinen eurooppalainen, joka saapui Kufraan asti — mutta vastaanotto oli kylmä: epäluuloiset zuwayyat ryöstivät retkikunnan karavaanin, ja miehet olisivat tuskin selvinneet hengissä, ellei viestintuoja olisi ehtinyt kertoa, että Suur-Senussi itse oli neuvotellut heille turvan Tripolin ottomaanikuvernöörin kanssa. Rohlfs joutui silti perääntymään saavuttamatta Vadaita ja pääsi rannikolle Bengaziin lokakuussa 1879.',
+          tiedosto:
+            "Übersichtskarte von G. Rohlfs' Expedition in Tripolitanien, Barka und der Oasengruppe von Kufra, Dec. 1878 bis Oct. 1879.png",
+          lyhyt: 'Kartta Rohlfsin Kufran-retkikunnan reitistä vuosilta 1878-1879.',
+          selite:
+            'Vuonna 1880 julkaistu kartta näyttää punaisella Gerhard Rohlfsin retkikunnan reitin Tripolista Kyrenaikan kautta Kufran oaasiryhmään ja takaisin rannikolle Bengaziin.',
+          lahde: 'Bruno Hassenstein, Wikimedia Commons (Public domain)',
+          wiki: 'Friedrich Gerhard Rohlfs',
+        },
+        {
+          otsikko: 'Rebiana – hiekkameri Kufran ympärillä',
+          teksti:
+            'Kufran itä- ja eteläpuolella leviää Rebianan hiekkameri, noin 65 000 neliökilometrin laajuinen dyynialue, joka on yksi koko Saharan autioimmista kolkista. Tuulen muovaamat dyyniharjanteet voivat kohota useita kymmeniä metrejä, ja niiden välissä ei kasva juuri mitään satojen kilometrien matkalla. Juuri tämä äärimmäinen eristyneisyys teki Kufrasta vuosisatojen ajan turvapaikan: hiekkameren ylittäminen vaati niin paljon aikaa ja varusteita, että vain päättäväisimmät karavaanit ja myöhemmin pakolaiset uskalsivat yrittää sitä. Vasta 1900-luvun teknologia, lentokoneet ja moottoriajoneuvot, mursi lopulta tämän suojan.',
+          tiedosto: 'Kufra District, Libya (34446934481).jpg',
+          lyhyt: 'Rebianan hiekkameren dyyniharjanteet Kufran laidalla.',
+          selite:
+            'Landsat-satelliittikuva näyttää Rebianan hiekkameren tuulen muovaamat dyyniharjanteet, jotka työntyvät kohti Kufran oaasin reunaa kuvan oikeassa alakulmassa.',
+          lahde:
+            'O.V.E.R.V.I.E.W. (Landsat 8 / USGS, käsittely Paul Quast), Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Rebiana Sand Sea',
+        },
+      ],
+    },
+    {
+      id: 'senussit',
+      nimi: 'Senussi-veljeskunta',
+      johdanto:
+        'Kufran teki 1800-luvun lopulla kuuluisaksi Senussi-veljeskunta, islamilainen uskonnollinen liike, joka pakeni tänne ottomaanien painostusta ja teki oaasista koko liikkeen uuden pyhän pääkaupungin.',
+      tehtava: {
+        kysymys: 'Minä vuonna Senussien johto pakeni Jaghbubista Kufraan?',
+        vaihtoehdot: ['1873', '1885', '1895', '1902'],
+        oikea: 2,
+        fakta:
+          'Senussien johto siirtyi Jaghbubista Kufraan vuonna 1895 ottomaanien painostuksen vuoksi, ja Muhammad al-Mahdi as-Senussi perusti sinne uuden pyhän kylän, El Tagin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suur-Senussi ja erämaan veljeskunta',
+          teksti:
+            'Algerialaissyntyinen Muhammad ibn Ali as-Senussi, jota kutsuttiin myös Suur-Senussiksi, perusti oman sufilaisen veljeskuntansa Mekassa vuonna 1837, kaksi vuotta sen jälkeen kun hän oli rakentanut ensimmäisen opinahjonsa lähelle kaupunkia. Wahhabien painostus ajoi hänet pian takaisin Pohjois-Afrikkaan, ja Kyrenaikaan hän rakensi uuden päämajan, Zawiya al-Baidan eli ”Valkoisen luostarin”. Sieltä käsin liike levitti zawija-verkostoaan aina Siwan oaasista Kufran kautta Borkuhun asti ja kannusti samalla kauppaa Tripoliin ja Bengaziin — uskonto ja kauppareitit kulkivat Saharassa käsi kädessä.',
+          tiedosto: 'Senussi Map3.png',
+          lyhyt: 'Kartta Senussi-veljeskunnan vaikutusalueesta noin vuonna 1880.',
+          selite:
+            'Jälkikäteen laadittu kartta esittää Senussi-veljeskunnan zawija-verkoston ja vaikutusalueen laajuuden Kyrenaikassa ja Saharassa noin vuonna 1880.',
+          lahde: 'AbdurRahman & Retf, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Senusiyya',
+        },
+        {
+          otsikko: 'Zawiya – erämaan opinahjo',
+          teksti:
+            'Zawiya oli Senussien liikkeen perusyksikkö: samaan pihapiiriin mahtuivat moskeija, koraanikoulu, vierasmaja ja usein myös perustajansa hauta. Zawijoissa opetettiin paitsi islamin oppia ja arabian kieltä, myös käytännön taitoja kuten kirjanpitoa ja kivääreiden käyttöä, ja niissä saatettiin isännöidä satapäisiäkin heimoedustajien kokouksia, kun naapuriheimojen välejä piti sopia. Verkosto teki Senusseista paljon enemmän kuin pelkän uskonlahkon: se oli koko Saharan laajuinen koulutus-, väestönhallinta- ja kauppajärjestelmä, joka piti yllä järjestystä siellä, missä mikään valtio ei ulottunut.',
+          tiedosto: 'Entrée zaouïa Darqawiyya à Salé (Maroc).jpg',
+          lyhyt: 'Zawiyan koristeltu sisäänkäynti Marokon Salésta.',
+          selite:
+            'Valokuva Marokon Salésta näyttää perinteisen zawiyan koristellun sisäänkäyntioven — samantyyppisiä opinahjoja ja rukoushuoneita Senussit rakensivat myös Kufraan ja Jaghbubiin.',
+          lahde: 'Ismael Zniber, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Zawiya (institution)',
+        },
+        {
+          otsikko: 'Pako Jaghbubista Kufraan',
+          teksti:
+            'Vuonna 1895 ottomaanien painostus ajoi Senussien johdon pakenemaan pyhästä kaupungistaan Jaghbubista yhä syvemmälle autiomaahan, Kufraan. Liikkeen uusi johtaja Muhammad al-Mahdi as-Senussi perusti oaasiryhmän pohjoisreunalle uuden kylän, El Tagin, jonne hän rakennutti zawijan, moskeijan ja sukunsa hautapaikan — myöhemmin myös oman hautansa. Aikalaiskartat merkitsivät alueen zawijoita omalla nimellään, kuten tässä vuoden 1891 kartassa näkyvä Zaouya el-Istat, ja samalla ne piirsivät rajan eteläpuolella asuvien tibbujen alueelle — muistutuksena siitä, että Kufra oli yhä kahden maailman raja-aluetta.',
+          tiedosto: 'AFR V2 D049 Kufra oasis.jpg',
+          lyhyt: 'Vuoden 1891 kartta Kufran oaasista ja sen zawijoista.',
+          selite:
+            'Vuodelta 1891 peräisin oleva käsinpiirretty kartta merkitsee Kufran oaasiryhmän asutukset, siellä sijainneen Zaouya el-Istatin zawijan sekä eteläpuolella asuvien tibbujen alueen.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'El Tag',
+        },
+        {
+          otsikko: 'Perintö joka jatkui 1900-luvulle',
+          teksti:
+            'Senussien perustajasuvun perintö ei kadonnut minnekään, vaikka veljeskunta joutuikin pakenemaan yhä syvemmälle autiomaahan. Perustajan pojanpoika Idris as-Senussi kuvattiin tässä lehtikuvassa vuonna 1923, kun hän johti liikettä nuorena miehenä — samaa sukua, joka oli kerran hakenut turvaa Kufran hiekasta. Vuosikymmeniä myöhemmin, vuonna 1951, hänestä tuli itsenäisen Libyan ensimmäinen kuningas: erämaahan paennut uskonnollinen veljeskunta oli lopulta noussut hallitsemaan koko maata, jonka rajojen sisällä Kufrakin sijaitsi.',
+          tiedosto: 'Sheik el Senussi - btv1b53098289v.jpg',
+          lyhyt: 'Idris as-Senussi lehtikuvassa vuonna 1923.',
+          selite:
+            'Vuonna 1923 otettu lehtikuva näyttää nuoren Idris as-Senussin, Senussi-veljeskunnan perustajan pojanpojan, joka nousi myöhemmin itsenäisen Libyan ensimmäiseksi kuninkaaksi.',
+          lahde: 'Agence Rol / Bibliothèque nationale de France, Wikimedia Commons (Public domain)',
+          wiki: 'Idris of Libya',
+        },
+      ],
+    },
+  ],
+  macapa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Macapá',
+      johdanto:
+        'Macapá on ainoa Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja kulkee: se syntyi 1700-luvulla Amazonin suiston rajavartiopaikaksi ja on nykyisin lähes 490 000 asukkaan portti sademetsään.',
+      nostot: [
+        {
+          otsikko: 'Rajalinnake syntyy',
+          teksti:
+            'Portugalilaiset perustivat São José de Macapán 4. helmikuuta 1758 entisen, jo vuodesta 1738 toimineen sotilasvartion paikalle Amazonin suiston pohjoisrannalla. Alue oli kiistanalainen: Ranska hallitsi lähialueita Ranskan Guyanassa, ja myös Alankomaat oli kiinnostunut suistosta. Vuonna 1764 italialainen insinööri Henrique António Galuzzi aloitti Fortaleza de São José de Macapán rakentamisen; tähdenmuotoinen, nelibastioninen linnoitus valmistui vasta 1782, kun kuumeet ja orjien pakenemiset hidastivat 18 vuotta kestänyttä urakkaa. Linnoitusta pidetään nykyisin kaupungin symbolisena syntymäpaikkana.',
+          tiedosto: 'Canhão da Fortaleza de São José de Macapá.JPG',
+          lyhyt: 'Vanha tykki tähtää linnoituksen muuriaukosta kohti Amazon-jokea.',
+          selite:
+            'Kuvassa vanha rautatykki lepää puisilla lavetilla kahden tiilimuurin välisessä aukossa; aukon läpi näkyy leveä, sameanruskea Amazon-joki ja pieni valkoinen vartiotorni muurin kulmassa.',
+          lahde: 'Alécio Cezar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fortaleza de São José de Macapá',
+        },
+        {
+          otsikko: 'Vartiotorni joka tuijotti jokea',
+          teksti:
+            'Fortaleza de São José de Macapán vartiotornista näkyy Amazon-joki niin leveänä, ettei vastarantaa erota: linnoitus seisoo pienellä tasangolla suiston pohjoishaaran partaalla, ja virta kuljettaa mukanaan niin paljon liejua, että vesi näyttää kellanruskealta kymmenien kilometrien päähän rannasta. Isoisän matkavuonna 1873 linnoitus oli seisonut paikallaan jo yli yhdeksänkymmentä vuotta: sen tykit eivät enää vartioineet hyökkääjää, mutta höyrylaivat ja kanootit kulkivat yhä sen ohi kohti sisämaata ja takaisin merelle.',
+          tiedosto: 'Guarita da Fortaleza de São José de Macapá com a vista do Rio Amazonas.JPG',
+          lyhyt: 'Amazon on suistossaan niin leveä, ettei vastarantaa erota linnoituksen tornista.',
+          selite:
+            'Kuvassa valkoiseksi rapattu vartiotorni (garita) linnoituksen muurilla, ja sen takana avautuu näköalattoman leveä, ruskeanharmaa Amazon-joki, jolla kelluu pieni vene; alhaalla kulkee valkokaiteinen rantareitti.',
+          lahde: 'Alécio Cezar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Amazon River',
+        },
+        {
+          otsikko: 'Nollapiiri keskellä kaupunkia',
+          teksti:
+            'Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".',
+          tiedosto: 'Linha do Equador Macapá AP,Brasil - panoramio.jpg',
+          lyhyt: 'Marco Zero -muistomerkki merkitsee tarkan kohdan, jossa päiväntasaaja halkoo Macapán.',
+          selite:
+            'Kuva näyttää alhaalta kuvattuna korkean, kapean betoniobeliskin sinistä taivasta vasten: tornin yläosassa on pyöreä aukko ja sivussa kapea tikapuu, keltavihreä pystyraita jakaa tornin kahtia.',
+          lahde: 'Jose Donizetti Dias, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Macapá',
+        },
+        {
+          otsikko: 'Jalkapalloa kahdella pallonpuoliskolla',
+          teksti:
+            'Macapán jalkapallostadion valmistui vuonna 1990 nimellä Estádio Ayrton Senna suoraan päiväntasaajan päälle: kentän keskiviiva osuu tarkalleen nollaleveyspiirille. Se nimettiin uudelleen vuonna 1994 amapálaisen urheilujohtajan Milton de Souza Corrêan mukaan, mutta kaupunkilaiset kutsuvat sitä yhä lempinimellä Zerão, "Iso nolla". Ottelun aikana toinen joukkue puolustaa maalia pohjoisella pallonpuoliskolla ja toinen eteläisellä. Stadion suljettiin vuonna 2007 ja avattiin seitsemän vuoden peruskorjauksen jälkeen uudelleen 2014; katsomoon mahtuu nykyisin 13 680 katsojaa.',
+          tiedosto: 'Estádio Milton Corrêa 2014.jpg',
+          lyhyt: 'Zerão-stadionin keskiviiva osuu tarkalleen päiväntasaajalle.',
+          selite:
+            'Kuvassa on tyhjä jalkapallokenttä ja maalin verkko etualalla; taustalla kohoaa katettu katsomo, jonka istuimet on maalattu vihreiksi, keltaisiksi ja sinisiksi, ja taivas on pilvinen.',
+          lahde: 'Fabián Berrío, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Zerão',
+        },
+        {
+          otsikko: 'Kävely joen rannalla',
+          teksti:
+            'Macapán ilmasto on tasaisen kostea läpi vuoden: lämpötila pysyttelee aamuisin noin 23 asteessa ja iltapäivisin lähes 31 asteessa, ja sadekausi kestää joulukuusta heinäkuuhun. Kaupungin suosituin kävelyreitti, Orla de Macapá, kiemurtelee puiden varjossa pitkin joen rantaa aivan Fortaleza de São José de Macapán kupeessa. Nykyisin kaupungissa asuu jo lähes 490 000 ihmistä — huomattavasti enemmän kuin isoisän aikana, jolloin Macapá oli vasta pieni, muutaman tuhannen asukkaan satamapaikka suiston reunalla.',
+          tiedosto: 'Orla de Macapá, Amapá.jpg',
+          lyhyt: 'Orla de Macapá on suosittu kävelyreitti joen rannalla lähellä linnoitusta.',
+          selite:
+            'Kuvassa puiden varjostama, kaarteleva kävelytie kulkee valkokaiteisen rantamuurin vieressä; taustalla siintää leveä joki ja vaaleaa linnoitusrakennusta, ja taivaalla on pilviä illan valossa.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Macapá',
+        },
+      ],
+    },
+    {
+      id: 'suisto',
+      nimi: 'Suisto ja sademetsä',
+      johdanto:
+        'Macapán edustalla Amazon ei ole enää yksi joki vaan satojen kilometrien levyinen sokkelo kanavia, jotka työntävät liejuista makeaa vettä kauas Atlantille ja ruokkivat suistoa ympäröivää sademetsää.',
+      tehtava: {
+        kysymys: 'Kuinka monta prosenttia Amapán osavaltion pinta-alasta kuuluu suojelualueiden verkostoon?',
+        vaihtoehdot: ['12 %', '35 %', '72 %', '95 %'],
+        oikea: 2,
+        fakta:
+          'Amapán biodiversiteettikäytävä kattaa 72 prosenttia osavaltion pinta-alasta kahdentoista suojelualueen ja viiden alkuperäiskansojen alueen verkostona.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suisto joka näkyy avaruudesta',
+          teksti:
+            'Amazon tyhjentää suistossaan valtavan vesimäärän mereen: keskimäärin noin 224 000 kuutiometriä sekunnissa, tulva-aikaan jopa 330 000. Joen suu haarautuu kymmeniksi kanaviksi, joiden yhteisleveys kasvaa parhaimmillaan 340 kilometriin, ja satelliittikuvissa ruskea, liejuinen vesi erottuu selvästi sinisestä valtamerestä kymmenien kilometrien päähän rannikosta. Ilmiö oli tuttu jo kauan ennen satelliitteja: espanjalainen merenkulkija Vicente Yáñez Pinzón maistoi makeaa vettä avomerellä vuonna 1500, kaukana ennen kuin mannerta näkyi horisontissa.',
+          tiedosto: 'Cloud and Sediment in the Amazon River Delta (MODIS 2022-06-20).jpg',
+          lyhyt: 'Amazonin suun kanavat levenevät parhaimmillaan 340 kilometriin.',
+          selite:
+            'Satelliittikuva näyttää tummanvihreää sademetsää, jonka keskeltä ruskea, liejuinen vesi virtaa kohti sinistä merta; kuvan päällä leijuu valkoisia pilvenhattaroita.',
+          lahde: 'MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (Public domain)',
+          wiki: 'Amazon River',
+        },
+        {
+          otsikko: 'Pororoca — aalto joka kulkee ylävirtaan',
+          teksti:
+            'Kun Atlantin vuorovesi nousee suiston edustalla, se voi työntyä jokia vastavirtaan yhtenä jyrkkänä aaltoseinänä: ilmiötä kutsutaan pororocaksi, ja aallot voivat kohota jopa neljän metrin korkuisiksi ja kulkea satoja kilometrejä sisämaahan päin. Parhaiten pororocan näkee kevät- ja syystasauksien tienoilla maalis- ja syyskuussa, kun vuorovesi on voimakkaimmillaan. Amapán Araguari-joella pororoca oli vuosikymmeniä tunnettu nähtävyys, kunnes se katosi vuonna 2014: yläjuoksulle rakennetut vesivoimapadot liettivät joen suun niin, ettei aalto enää pääse muodostumaan.',
+          tiedosto: 'Undular bore Araguari River-Brazil-USGS-bws00026.jpg',
+          lyhyt: 'Pororoca-aalto voi kohota jopa neljän metrin korkeuteen suiston joissa.',
+          selite:
+            'Mustavalkoinen ilmakuva pienkoneen siiven alta näyttää leveän joen pinnalla etenevän pyöreähkön aaltorenkaan, jonka reunat kaartuvat kauas vesipinnalla; horisontissa erottuu tumma metsäraja.',
+          lahde: 'Susan Bartsch-Winkler ja David K. Lynch, USGS, Wikimedia Commons (Public domain)',
+          wiki: 'Pororoca',
+        },
+        {
+          otsikko: 'Tulvametsät ja tulipunaiset linnut',
+          teksti:
+            'Macapán ympärillä maisema vaihtelee mangrovemetsien, makeanveden kosteikkojen ja kausittain tulvivien metsien välillä. Aivan kaupungin kupeessa sijaitseva Rio Curiaún suojelualue kattaa yli 20 000 hehtaaria tulvaniittyjä, tulvametsää ja savannia, ja se on rauhoitettu myös alueen perinteisen väestön elämäntavan turvaamiseksi. Kosteikkojen tunnetuin asukas on guará eli tulipunainen ibis, jonka räikeän punainen höyhenpuku erottuu kauas mangrovepuiden ja mutavallien keskeltä; samat vesialueet ovat myös suiston kalastajien tärkeimpiä pyyntipaikkoja.',
+          tiedosto: 'Guarás no Bosque Rodrigues Alves (2025-03-22) 01.jpg',
+          lyhyt: 'Guará eli tulipunainen ibis viihtyy Amapán mangrovekosteikoilla.',
+          selite:
+            'Lehtien ja palmunlehvien raosta näkyy kaksi kirkkaanpunaista ibistä seisomassa metallisella penkillä ja kaiteella vehreän, tiheän kasvillisuuden keskellä.',
+          lahde: 'Avelludo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Scarlet ibis',
+        },
+        {
+          otsikko: 'Maailman suurin sademetsäkansallispuisto',
+          teksti:
+            'Amapán osavaltiosta yli kaksi kolmasosaa kuuluu jonkinlaisen suojelun piiriin: vuonna 2003 perustettu Amapán biodiversiteettikäytävä yhdistää 12 suojelualuetta ja viisi alkuperäiskansojen aluetta yhtenäiseksi, 72 prosenttia osavaltiosta kattavaksi verkostoksi. Käytävän sydämessä on Tumucumaquen vuorten kansallispuisto, joka perustettiin 2002 ja on pinta-alaltaan noin 39 000 neliökilometriä eli maailman suurin trooppisen sademetsän kansallispuisto. Puiston latvuston alta katsottuna aurinko siivilöityy tuhansien lehtien läpi eikä maan pintaa juuri näy.',
+          tiedosto: 'Dossel do Parque Nacional Montanhas do Tumucumaque.jpg',
+          lyhyt: 'Tumucumaquen kansallispuisto on maailman suurin trooppisen sademetsän puisto.',
+          selite:
+            'Kuva on otettu sademetsän pohjalta suoraan ylöspäin: tummien puunrunkojen ja -latvojen lomasta siivilöityy kirkas auringonvalo sinistä taivasta vasten.',
+          lahde: 'Brenda Cunha Pereira, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tumucumaque Mountains National Park',
+        },
+      ],
+    },
+  ],
+  campogrande: [
+    {
+      id: 'kaupunki',
+      nimi: 'Campo Grande',
+      johdanto:
+        'Vuonna 1873 nykyisen Campo Granden seutu ei ollut kenenkään eurooppalaisen kartalla: laajaa cerrado-savannia asuttivat vuosisatoja Terena- ja Guató-kansat, kaupungin perustamista vailla vielä 26 vuotta.',
+      nostot: [
+        {
+          otsikko: 'Cerrado - maailman rikkain savanni',
+          teksti:
+            'Cerrado on Etelä-Amerikan laajin savannialue, lähes kaksi miljoonaa neliökilometriä keskisessä Brasiliassa - myös nykyisen Campo Granden ympäristö kuuluu siihen. Se on maailman lajirikkain savanni: alueella elää yli 160 000 kasvi-, eläin- ja sienilajia, muun muassa noin 200 nisäkäslajia ja lähes 860 lintulajia. Kasvillisuus on sopeutunut jyrkästi vaihteleviin kuiva- ja sadekausiin sekä toistuviin luonnontulipaloihin: puiden paksu, korkkimainen kuori ja väännelty runko suojaavat niitä palolta. Isoisän matkavuonna 1873 tämä savanni oli eurooppalaisille lähes tuntematon erämaa.',
+          tiedosto: 'Vegetação do cerrado no Parque Nacional da Chapada dos Guimarães em Mato Grosso.jpg',
+          lyhyt: 'Väännelty, paksukuorinen puu cerrado-savannin tiheässä kasvillisuudessa.',
+          selite:
+            'Valokuva näyttää cerradolle tyypillistä väännellyttä, paksukuorista puustoa Chapada dos Guimarãesin kansallispuistossa Mato Grossossa - samankaltaista savannimetsää kasvoi myös nykyisen Campo Granden ympäristössä 1870-luvulla.',
+          lahde: 'Attilio Zolin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cerrado',
+        },
+        {
+          otsikko: 'Terena - cerradon maanviljelijät',
+          teksti:
+            'Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.',
+          tiedosto: 'Terena005.jpg',
+          lyhyt: 'Terena-mies perinteisessä sulkapäähineessä ja kasvomaalauksessa.',
+          selite:
+            'Kuva näyttää Terena-miehen perinteisessä sulkapäähineessä ja kasvomaalauksessa Brasilian alkuperäiskansojen kisoissa vuonna 2007 - koristeet kertovat kulttuurista, joka on säilynyt sukupolvien yli.',
+          lahde: 'Valter Campanato/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Terena people',
+        },
+        {
+          otsikko: 'Guató - Pantanalin kanoottikansa',
+          teksti:
+            'Guató-kansa tunnettiin Pantanalin parhaina kanoottisoutajina: he veistivät veneensä yhdestä puunrungosta ja elivät suuren osan vuodesta vedellä, siirtyen kuivalle maalle vain sadekauden tulvien aikana. Ranskalaissyntyinen taiteilija Hercule Florence kuvasi Guató-perheen joulukuussa 1826 osana Langsdorffin tiederetkikuntaa - piirroksessa näkyvät perheen olkikattoinen maja sekä korit ja keihäät, joilla he kalastivat ja metsästivät. Isoisän matkavuonna 1873 Guató eli yhä samaa vesillä liikkuvaa elämää, vuosikymmeniä ennen kuin karjatilat ja taudit ajoivat heidät lähes sukupuuttoon 1900-luvulla.',
+          tiedosto: 'Famille de Nation Guato. Décembre 1826. Hercule Florence, fecit, do acervo do Instituto Hercule Florence.jpg',
+          lyhyt: 'Hercule Florencen vuonna 1826 piirtämä Guató-perhe majansa edessä.',
+          selite:
+            'Hercule Florencen vuonna 1826 tekemä piirros esittää Guató-perheen - isän, äidin ja kaksi lasta - olkikattoisen majansa edessä palmujen katveessa, korit ja keihäät vierellään.',
+          lahde: 'Instituto Hercule Florence, Wikimedia Commons (Public domain)',
+          wiki: 'Guató people',
+        },
+        {
+          otsikko: 'Maracaju-vuoret - tasangon raja',
+          teksti:
+            'Campo Granden länsipuolella kohoaa Serra de Maracaju, hiekkakivestä muodostunut ylänkö, joka jakaa nykyisen Mato Grosso do Sulin kahtia: idässä avautuu Cerrado-savanni, lännessä alkaa Pantanalin kosteikko. Jyrkät, punertavat kalliojyrkänteet nousevat tasaisen tasangon yllä satojen metrien korkeuteen, ja korkeimmat kohdat lähellä Aquidauanaa yltävät noin 750 metriin. Vuorijono tarjosi vuosisatoja seudun alkuperäiskansoille luonnollisen suoja-alueen, jonne muun muassa Terenat vetäytyivät myös Paraguayn sodan miehitysvuosina 1860-luvulla. Isoisän 1873 matkareitti olisi kulkenut tämän ylängön tuntumassa.',
+          tiedosto: 'Serra de Maracaju.jpg',
+          lyhyt: 'Serra de Maracajun punertava kalliojyrkänne kohoaa vihreän tasangon yllä.',
+          selite:
+            'Valokuva näyttää Serra de Maracajun jyrkän, punertavan kalliojyrkänteen kohoamassa vihreän tasangon yllä Aquidauanan seudulla - tyypillistä ylängön maisemaa Campo Granden länsipuolella.',
+          lahde: 'Hectorhhugo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mato Grosso do Sul',
+        },
+        {
+          otsikko: 'Hyökkäys Coimbran linnakkeeseen',
+          teksti:
+            'Joulukuun 27.-29. päivänä 1864 paraguaylaiset joukot hyökkäsivät Coimbran linnakkeeseen Paraguayn joen varrella lähellä Corumbáa - se oli sodan ensimmäisiä taisteluita ja avasi hyökkäyksen koko Mato Grosson provinssiin. Vain noin 190 hengen varuskunta, jossa palveli myös alkuperäiskansojen sotilaita, kesti ylivoimaisen hyökkäyksen kaksi vuorokautta ennen järjestäytynyttä evakuointiaan höyrylaiva Anhambaíssa; hyökkääjät menettivät noin 200 miestä, puolustajat ei yhtään. Paraguaylaiset miehittivät seutua aina vuoteen 1868 asti. Rio de Janeiroon pystytettiin myöhemmin sotasankareille muistomerkki, jonka pronssireliefi kuvaa hyökkäystä.',
+          tiedosto: 'Ataque ao Forte Coimbra.jpg',
+          lyhyt: 'Kulunut pronssireliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen.',
+          selite:
+            "Kuva näyttää kuluneen pronssireliefin Rio de Janeiron sotasankarimuistomerkistä - reliefi kuvaa vuoden 1864 hyökkäystä Coimbran linnakkeeseen, otsikkona 'Ataque ao Forte Coimbra'.",
+          lahde: 'Picture Master, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'New Coimbra Fort',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Pantanal - maailman suurin kosteikko',
+      johdanto:
+        'Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.',
+      tehtava: {
+        kysymys: 'Kuinka monta jacaré-kaimaania Pantanalissa arvioidaan elävän?',
+        vaihtoehdot: ['noin 100 000', 'noin 1 miljoona', 'noin 10 miljoonaa', 'noin 50 miljoonaa'],
+        oikea: 2,
+        fakta:
+          'Pantanalissa arvioidaan elävän noin 10 miljoonaa kaimaania - suurin krokotiilieläinten tiheys koko maailmassa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuosittainen tulva-aalto',
+          teksti:
+            'Pantanal on maailman suurin trooppinen kosteikkoalue, 140 000-195 000 neliökilometriä Brasiliassa, Boliviassa ja Paraguayssa - suurin osa siitä Mato Grosso do Sulissa. Sadekaudella Paraguayn joen vedenpinta nousee kahdesta viiteen metriin ja tulva etenee hitaasti loivan maaston vuoksi, kunnes noin 80 prosenttia koko tasangosta on veden alla. Kuivalla kaudella vesi vetäytyy ja paljastaa laajoja ruohotasankoja, joilla laiduntavat muun muassa pampashirvet (Ozotoceros bezoarticus) - arka, isokorvainen hirvieläin, joka väistyy piiloon korkeaan heinikkoon. Tämä vuosittainen tulvarytmi tekee Pantanalista yhden maailman eläinrikkaimmista elinympäristöistä.',
+          tiedosto: 'Mato Grosso do Sul - Pantanal 01.jpg',
+          lyhyt: 'Pampashirvi piiloutuu korkeaan heinikkoon Pantanalin kuivan kauden tasangolla.',
+          selite:
+            'Valokuva näyttää arka pampashirven kurkistamassa korkeasta heinikosta aidan takaa Pantanalin maatilalla - kuivan kauden ruohotasangoilla laji löytää suojaa ja ravintoa.',
+          lahde: 'Anderson Momesso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pantanal',
+        },
+        {
+          otsikko: 'Kapybara - maailman suurin jyrsijä',
+          teksti:
+            'Kapybara on maailman suurin jyrsijä: aikuinen yksilö painaa jopa 65 kilogrammaa ja muistuttaa kookkaalla ruumiillaan pientä sikaa, vaikka on sukua marsulle. Pantanalin runsaat vesistöt ja ravinteikkaat ruohotasangot tarjoavat sille ihanteellisen elinympäristön, ja laumat voivat kasvaa kymmenien yksilöiden suuruisiksi. Kapybara viihtyy vedessä erinomaisesti: sillä on räpyläjalat, ja se pystyy sukeltamaan useiksi minuuteiksi paetakseen jaguaaria tai muuta petoa. Se laiduntaa lähes yksinomaan ruohoa ja vesikasveja, ja sen elinkierto on kietoutunut tiiviisti Pantanalin vuotuiseen tulvarytmiin.',
+          tiedosto: 'Capybara (Hydrochoerus hydrochaeris) alpha male.JPG',
+          lyhyt: 'Kapybara, maailman suurin jyrsijä, laiduntaa ruohikossa Pantanalissa.',
+          selite:
+            'Valokuva näyttää kapybaran laiduntamassa ruohikolla Pantanalissa - maailman suurimman jyrsijän tunnistaa sen kookkaasta, pyöreähköstä ruumiista ja lyhyistä jaloista.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Capybara',
+        },
+        {
+          otsikko: 'Jaguaari - suokissan valtakunta',
+          teksti:
+            'Pantanalissa elää yksi maailman terveimmistä ja tiheimmistä jaguaarikannoista. Jaguaari on Amerikan mantereen suurin kissaeläin, ja toisin kuin useimmat kissaeläimet se ui mielellään ja saalistaa myös vedessä: sen tehokas purenta murtaa jopa kaimaanin tai valtavan vesikäärmeen panssarin. Pantanalin avoin maasto ja tiheä saalistarjonta - kapybaroista kaimaaneihin - tekevät alueesta poikkeuksellisen paikan tarkkailla muuten arkaa ja vaikeasti nähtävää eläintä päivänvalossa. Paikallinen alalaji tunnetaan nimellä Panthera onca palustris, "suokissa".',
+          tiedosto: 'Jaguar (Panthera onca palustris) female Piquiri River 2.JPG',
+          lyhyt: 'Jaguaari kyyristyy valmiina hyökkäykseen Pantanalin kasvillisuudessa.',
+          selite:
+            'Valokuva näyttää jaguaarin kyyristyneenä matalaan hyökkäysasentoon Pantanalin aluskasvillisuudessa, katse suoraan kameraan - laji saalistaa alueella jopa kaimaaneja.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jaguar',
+        },
+        {
+          otsikko: 'Hyasinttiaara - sininen jättiläinen',
+          teksti:
+            'Hyasinttiaara on maailman suurin lentävä papukaijalaji, jopa metrin pituinen ja kokonaan syvän sinisen värinen lukuun ottamatta silmien ja nokan ympärillä olevaa keltaista ihoa. Pantanalissa elää arviolta noin 3 000 yksilöä, jotka pesivät luonnollisissa koloissa manduvi-puissa ja syövät lähinnä palmupähkinöitä, joiden kuoren vain niiden voimakas nokka pystyy murtamaan. Laji oli 1900-luvulla ajautua sukupuuttoon laittoman lemmikkikaupan vuoksi, kun tuhansia lintuja salakuljetettiin pesistään ulkomaille. Pantanal on nykyään yksi harvoista paikoista, joissa laji on elpynyt suojelutyön ansiosta.',
+          tiedosto: 'Hyacinth macaw (Anodorhynchus hyacinthinus) in flight.JPG',
+          lyhyt: 'Hyasinttiaara, maailman suurin papukaija, lentää matalalla Pantanalissa.',
+          selite:
+            'Valokuva näyttää hyasinttiaaran lennossa siivet levällään - maailman suurimman papukaijalajin tunnistaa sen läpikotaisin sinisestä höyhenpuvusta ja keltaisesta silmänympäryksestä.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hyacinth macaw',
+        },
+        {
+          otsikko: 'Kaimaani - kymmenen miljoonan kanta',
+          teksti:
+            'Pantanalissa arvioidaan elävän noin 10 miljoonaa jacaré-kaimaania - suurin krokotiilieläinten tiheys koko maailmassa. Laji on sopeutunut elämään sekä sadekauden tulva-alueilla että kuivan kauden kutistuvissa vesialtaissa, joihin kalat ja muut saaliseläimet ajautuvat tiiviiksi joukoiksi - kaimaanille katetun pöydän ääreen. Aikuinen yksilö kasvaa yleensä noin kahden metrin mittaiseksi, ja sen tärkein saalis on kala, mutta se ei kaihda myöskään vesilintuja tai pieniä nisäkkäitä. Runsas kaimaanikanta on yksi tärkeimmistä syistä, miksi Pantanal pystyy elättämään myös maailman tiheimmän jaguaaripopulaation.',
+          tiedosto: 'Jacaré do pantanal.jpg',
+          lyhyt: 'Jacaré-kaimaani nousee vedestä saaliinsa kanssa Pantanalissa.',
+          selite:
+            'Valokuva näyttää jacaré-kaimaanin kohottautumassa vedestä saalis leuoissaan Pantanal Matogrossensen kansallispuistossa - laji on yksi Pantanalin noin kymmenestä miljoonasta kaimaanista.',
+          lahde: 'Jairmoreirafotografia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Yacare caiman',
+        },
+      ],
+    },
+  ],
+  exmouth: [
+    {
+      id: 'kaupunki',
+      nimi: 'Exmouth',
+      johdanto:
+        'Exmouthin edustalla kiemurtelee Ningaloo, maailman suurin rantariutta: yli 260 kilometriä koralleja niin lähellä mannerta, että sen reunalle pääsee usein kahlaamalla. Takana kohoavassa kalkkikivessä piilee miljoonien vuosien tarina.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin rantariutta',
+          teksti:
+            'Ningaloo on maailman suurin rantariutta: se seuraa Länsi-Australian rannikkoa yli 260 kilometrin matkan Exmouthista etelään. Toisin kuin useimmat suuret koralliriutat, jotka kasvavat kaukana avomerellä, Ningaloo kiertyy lähes kiinni mantereeseen — paikoin riutan harjalle pääsee jo alle 500 metrin päästä rannasta kahlaamalla. Läheisyys tekee riutasta poikkeuksellisen helposti tavoitettavan: veneen sijaan riittää usein pelkkä uimapuku ja snorkkeli. Alue suojeltiin Ningaloo Marine Parkiksi vuonna 1987, kun rannikon ainutlaatuinen luonto haluttiin turvata pysyvästi tulevillekin sukupolville.',
+          tiedosto: 'Cape Range National Park and Ningaloo Reef from the air.jpg',
+          lyhyt: 'Lentokoneen ikkunasta kuvattu näkymä Ningaloon riutasta ja Cape Rangen rannikosta.',
+          selite:
+            'Ilmakuva näyttää turkoosin koralliriutan kaartuvan aivan kiinni ruskeaan, kuivaan rannikkoon — riutta ja hiekkaranta erottuvat toisistaan vain kapealla aaltoviivalla.',
+          lahde: 'Andrew Turner, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Reef',
+        },
+        {
+          otsikko: 'Muinainen riutta nousi vuoriksi',
+          teksti:
+            'Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.',
+          tiedosto: 'Charles Knife Canyon, Cape Range National Park, Exmouth 2.jpg',
+          lyhyt: 'Charles Knife Canyonin punertavat kalkkikiviseinämät Cape Rangen kansallispuistossa.',
+          selite:
+            'Kuva näyttää syvän, jyrkkäseinäisen rotkon, jonka kerroksellinen kalkkikivi paljastaa muinaisen koralliriutan rakenteen; taustalla siintää meri.',
+          lahde: 'Joshua Tagicakibau, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Range National Park',
+        },
+        {
+          otsikko: 'Maailmanperintöä vuodesta 2011',
+          teksti:
+            'Vuonna 2011 Ningaloo Coast liitettiin Unescon maailmanperintöluetteloon ainoana paikkana Australiassa, jossa mannerta reunustava koralliriutta ja sen takana kohoava karstivuoristo suojellaan yhtenä kokonaisuutena. Suojelualue kattaa yli 700 000 hehtaaria merta ja rannikkoa, mukaan lukien Cape Rangen kansallispuisto ja ulompana meressä sijaitsevat Muiron-saaret. Päätös tuli vasta reilut kaksikymmentä vuotta sen jälkeen, kun riutan ympärille perustettiin ensimmäinen suojelualue vuonna 1987 — silloin moni piti seutua liian syrjäisenä varsinaiseksi matkailukohteeksi.',
+          tiedosto: 'Ningaloo Coast, Western Australia.jpg',
+          lyhyt: 'Auringonlasku Ningaloon rannalla, jonka hiekalle on ajautunut kuivunutta merilevää.',
+          selite:
+            'Kuva näyttää tyynen rantaviivan auringonlaskun aikaan; etualalla hiekalla lojuu tummaa, kuivunutta merilevää ja taustalla siintää matala riutan reuna.',
+          lahde: 'Lizzy5, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Coast',
+        },
+        {
+          otsikko: 'Aallot murtuvat riutan reunalla',
+          teksti:
+            'Ningaloon rannalta näkee harvinaisen näyn: valkoisena kuohuva aaltoviiva, joka merkitsee riutan ulkoreunaa, kulkee usein vain parin sadan metrin päässä hiekasta. Aallot murtuvat koralliharjanteeseen ja menettävät voimansa ennen kuin ehtivät rantaan asti — niinpä riutan ja mantereen väliin jää tyyni, matala laguuni, jossa vesi voi olla lähes tyventä silloinkin, kun ulompana avomeri kuohuu voimakkaasti. Tämä luonnollinen suoja on yksi syy siihen, miksi laguunista on tullut turvallinen kasvupaikka lukemattomille kalanpoikasille ja muille riutan pienille asukkaille.',
+          tiedosto: '.00 0975 Ningaloo Reef (Australia) - Surf on the coral reef.jpg',
+          lyhyt: 'Aallot murtuvat valkoisena viivana Ningaloon riutan ulkoreunalla.',
+          selite:
+            'Panoraamakuva näyttää aaltojen murtuvan riutan ulkoreunalla vaahtoavana viivana, jonka takana avomeri jatkuu, ja edessä levittäytyy tyyni, turkoosi laguuni.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ningaloo Reef',
+        },
+        {
+          otsikko: 'Merilehmät suojaisessa laguunissa',
+          teksti:
+            'Ningaloon suojaisissa, meriruohoa kasvavissa laguuneissa laiduntavat dugongit eli merilehmät, jotka ovat manaatin sukulaisia ja ainoita täysin kasvinsyöjiä meren nisäkkäitä. Ne voivat painaa yli 400 kiloa, mutta liikkuvat hitaasti ja rauhallisesti pohjaa myöten kasvavien merikasvien seassa, joita ne syövät kymmeniä kiloja päivässä. Dugongeja näkee usein pieninä perheryhminä aivan veden pinnan tuntumassa, kun ne nousevat säännöllisin väliajoin hengittämään. Riutan tarjoama suoja avomeren aalloilta on yksi syy siihen, miksi Ningaloon vesillä elää yksi Länsi-Australian merkittävimmistä dugong-kannoista.',
+          tiedosto: 'Dugong family cruising the Ningaloo reef.jpg',
+          lyhyt: 'Kolme dugongia uimassa riutan matalassa, vihertävässä laguunivedessä ilmakuvattuna.',
+          selite:
+            'Ilmakuva näyttää kolme dugongia — yhden aikuisen ja kaksi pienempää — uimassa peräkkäin läpinäkyvässä, vihreässä laguunivedessä merikasvien yllä.',
+          lahde: 'Nicocolll, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dugong',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Valashait — riutan jättiläiset',
+      johdanto:
+        'Joka kevät Ningaloolle kokoontuu maailman suurin kala: valashai. Jättiläinen ei saavu paikalle sattumalta, vaan riutan oma vuosittainen korallien kukoistus kutsuu koolle koko rannikon vaikuttavimman eläinjoukon.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osuus Ningaloolle kokoontuvista valashaista on tutkimusten mukaan nuoria uroksia?',
+        vaihtoehdot: ['noin 25 %', 'noin 50 %', 'noin 85 %', 'noin 99 %'],
+        oikea: 2,
+        fakta: 'Valokuvatunnistuksella kerätty aineisto on paljastanut, että noin 85 prosenttia Ningaloon valashaista on nuoria, alle yhdeksänmetrisiä uroksia, kun taas täysikasvuisia naaraita näkyy riutalla harvoin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman suurin kala',
+          teksti:
+            'Valashai eli Rhincodon typus on maailman suurin nyt elävä kala, ja se voi kasvaa yli 18 metrin mittaiseksi — pidemmäksi kuin linja-auto kahdesti peräkkäin. Silti tämä valtava kalastaja ei ole vaarallinen: sillä ei ole hampaita ruoan pureskeluun, vaan se ui hitaasti suu ammollaan ja suodattaa vedestä pienravintoa. Tutkijat mittasivat vuonna 2001 naarasyksilön, jonka pituudeksi arvioitiin 15 metriä, ja sitä pidetään yhä yhtenä tarkimmin dokumentoiduista jättiläisistä. Ningaloolle kokoontuvat yksilöt jäävät yleensä tätä ennätyskokoa pienemmiksi, mutta ovat silti ihmiseen verrattuna käsittämättömän suuria.',
+          tiedosto: 'Whale-Shark-Scale-Chart-SVG-Steveoc86.svg',
+          lyhyt: 'Kaavio, joka vertaa valashain eri kokoluokkia sukeltajan silhuettiin.',
+          selite:
+            'Kaavio asettaa rinnakkain valashain eri kokoluokkien ääriviivat vastasyntyneestä poikasesta 15-metriseen naaraaseen, ja oikealla pienenä vertailukohtana näkyy ihmisen silhuetti.',
+          lahde: 'Steveoc 86, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Riutan suurin kokoontuma',
+          teksti:
+            'Ningaloolle kokoontuu maalis-elokuussa satoja valashaita — arvioiden mukaan jopa 300–500 yksilöä samaan aikaan, mikä tekee siitä yhden maailman suurimmista tunnetuista valashaikokoontumisista. Syy löytyy riutalta itseltään: maalis-huhtikuun täysikuun jälkeisinä öinä korallit vapauttavat samanaikaisesti miljardeja muna- ja siittiösoluja veteen. Tapahtuma ravitsee valtavia eläinplanktonin ja pikkukatkojen parvia, ja juuri tämä ravintoähky houkuttelee valashait rannikon tuntumaan syömään. Ilman koralleja ei siis olisi valashaitakaan — koko kokoontuminen riippuu riutan omasta vuosittaisesta kukoistuksesta.',
+          tiedosto: 'Whale shark Australia.jpg',
+          lyhyt: 'Valashai ui sinisessä vedessä pienempien kalojen seuratessa sen kylkeä.',
+          selite:
+            'Kuva näyttää pilkullisen valashain sivulta uimassa syvänsinisessä vedessä; sen kupeella ja allapäin ui useita pienempiä kaloja hyötymässä jättiläisen seurasta.',
+          lahde: 'Mbz1, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Suulla joka suodattaa, ei pureskele',
+          teksti:
+            'Valashain suu voi olla lähes 1,5 metriä leveä, mutta sen sisällä ei ole puruhampaita vaan sihdin tapaan toimivat kidusarret. Ui-dessaan suu auki eläin suodattaa vettä läpi yli 6 000 litraa tunnissa, ja sihti pidättää eläinplanktonin, pienet katkaravut, kalanmunat ja pikkukalat, kuten sardiinit, samalla kun vesi virtaa kiduksista ulos. Tätä kutsutaan poikittaisvirtaussuodatukseksi: ravinto kulkeutuu suoraan kurkkuun, kun taas vesi ohjautuu sivuun. Menetelmä on niin tehokas, ettei jättiläisen tarvitse koskaan jahdata saalistaan — riittää, että se ui hitaasti ravinnontäyteisen veden läpi.',
+          tiedosto: 'Whale Shark AdF.jpg',
+          lyhyt: 'Valashai nousee pystyasennossa suu auki kohti pintaa ammentamaan ravintoa yöllä.',
+          selite:
+            'Kuva näyttää valashain uivan pystyasennossa pintaa kohti suu ammollaan yöaikaan; ammottavan suuaukon ympärillä risteilee pieniä kaloja ja vedessä leijuu runsaasti pikkuravintoa.',
+          lahde: 'Arturo de Frias Marques, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Vaaraton jättiläinen',
+          teksti:
+            'Kokonsa vuoksi valashai voisi näyttää pelottavalta, mutta se on yksi meren rauhallisimmista eläimistä. Se ei metsästä eikä puolusta reviiriään, vaan ui tasaisesti eteenpäin välittämättä juuri mitään ympärillä uivista sukeltajista tai kaloista, jotka usein seuraavat sen mukana hyötyen sen liikkeen nostattamista pienemmistä eliöistä. Tämä lauhkeus mahdollistaa sen, että ihminen voi uida jättiläisen rinnalla aivan lähietäisyydeltä ilman että eläin osoittaa merkkejä stressistä tai pakenemisesta. Ainoa todellinen riski syntyy, jos ihminen tulee liian lähelle voimakasta pyrstöä, joka liikkuu hitaastikin valtavalla voimalla.',
+          tiedosto: 'Whale shark Maldives.jpg',
+          lyhyt: 'Valashai ui rauhallisesti, kun snorklaajat uivat aivan sen yläpuolella.',
+          selite:
+            'Kuva näyttää valashain koko pituudeltaan sivulta uimassa, ja aivan sen yläpuolella pinnalla ui useita snorklaajia lähietäisyydeltä ilman että eläin näyttää häiriintyvän.',
+          lahde: 'Tchami, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Vuosirenkaat paljastavat iän',
+          teksti:
+            'Valashain ikää on pitkään ollut vaikea määrittää, koska sillä ei ole samanlaisia selviä vuosirenkaita kuin puulla. Selkärangan nikamista löytyy kuitenkin kasvuvöitä, ja vuonna 2020 julkaistu tutkimus vahvisti radiohiiliajoituksen avulla, että uusi vyö muodostuu nikamaan kerran vuodessa aivan kuin puun vuosirengas. Menetelmä paljasti, että valashait voivat elää 80–130-vuotiaiksi, mikä tekee niistä yhden pisimpään elävistä kalalajeista ylipäätään. Ningaloolle vuosittain palaavat yksilöt saattavatkin viettää koko pitkän elämänsä kiertäen samaa riuttaa kevät toisensa jälkeen.',
+          tiedosto: 'Whale Shark Ningaloo.jpg',
+          lyhyt: 'Valashai lähestyy kameraa edestäpäin Ningaloon vedessä.',
+          selite:
+            'Kuva näyttää valashain edestäpäin uimassa suoraan kuvaajaa kohti; pilkkukuvioinen pää ja kidusraot erottuvat selvästi sinertävässä vedessä.',
+          lahde: 'NeilsPhotography, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Whale shark',
+        },
+        {
+          otsikko: 'Nuorten urosten kokoontumispaikka',
+          teksti:
+            'Tutkijat ovat vuosikymmenten ajan valokuvanneet ja tunnistaneet Ningaloolle saapuvia valashaita niiden ainutlaatuisen pilkkukuvion perusteella, aivan kuin sormenjälkien avulla. Aineisto paljastaa selvän kaavan: noin 85 prosenttia Ningaloon valashaista on nuoria, alle yhdeksänmetrisiä uroksia, kun taas täysikasvuiset naaraat näkyvät riutalla harvoin. Koko laji on silti maailmanlaajuisesti vaarantunut — kanta on pienentynyt yli 50 prosenttia viimeisten 75 vuoden aikana kalastuksen sivusaaliin ja laivojen töytäisyjen vuoksi. Juuri siksi Ningaloon kaltaiset suojellut kokoontumispaikat ovat lajille elintärkeitä.',
+          tiedosto: 'Whale shark (Rhincodon typus) (16222515872).jpg',
+          lyhyt: 'Valashai ui sivuttain, sukeltaja näkyy sen yläpuolella pinnan tuntumassa.',
+          selite:
+            'Kuva näyttää suuren valashain kylkeä sivulta lähietäisyydeltä, ja veden pinnan tuntumassa erottuu sukeltajan siluetti seuraamassa eläintä.',
+          lahde: 'Sylke Rohrlach, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Whale shark',
+        },
+      ],
+    },
+  ],
+  sanambrosio: [
+    {
+      id: 'kaupunki',
+      nimi: 'San Ambrosio',
+      johdanto: 'San Ambrosio on yksi Chilen syrjäisimmistä saarista: tulivuorikallio Tyynellämerellä, jonka jyrkät rinteet putoavat suoraan mereen. Kukaan ei asu siellä pysyvästi – vain merilinnut ja satunnaiset hummerikalastajat käyvät kalliolla.',
+      nostot: [
+        {
+          otsikko: 'Neljäsataa vuotta unohduksissa',
+          teksti: 'Espanjalainen merenkulkija Juan Fernández näki saaren vuonna 1574 purjehtiessaan Callaosta Valparaísoon, ja siitä tuli ensimmäinen varmistettu havainto. Vuonna 1579 kronikoitsija Pedro Sarmiento de Gamboa kirjasi saarten kantavan pyhien Felixin ja Naborin nimiä – mutta ajan mittaan harvinaisempi marttyyri Nabor sekoittui kuuluisampaan piispa Ambrosiukseen, ja nimi jäi elämään väärinkäsityksenä. Vuonna 1789 Espanjan Malaspina-retkikunnan alus Descubierta purjehti ohi, ja sen taiteilija José del Pozo kuvasi saaren kiviseksi ja yksinäiseksi paikaksi, jota karttoivat jopa merileijonat.',
+          tiedosto: 'Plano de la isla San Ambrosio levantado por la Oficialidad de la Goleta Covadonga, al mando del Capitán de la Armada de Chile, Ramón Vidal Gormaz en octubre de 1874.png',
+          lyhyt: 'Saaren nimi syntyi kirjoitusvirheestä, joka muutti pyhän Naborin pyhäksi Ambrosiukseksi.',
+          selite: 'Käsin piirretty merikartta San Ambrosion rannikosta, jonka Chilen laivaston upseerit laativat lokakuussa 1874 kaappiveneen Covadonga kyydistä.',
+          lahde: 'Ramón Vidal Gormaz, Wikimedia Commons (Public domain)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Isoisän aikaan vasta kartalle',
+          teksti: 'Vuonna 1850 brittiläisen HMS Portlandin luutnantti Parkin kiipesi suurin vaivoin saaren lähes pystysuoria rinteitä ylös eikä löytänyt etsimäänsä guanoa – vain kanervamaisia pensaita. Vuonna 1869 Chilen korvetti Chacabuco poimi saarelta ensimmäiset kasvinäytteet, jotka tutkija Rodulfo Amando Philippi tunnisti. Isoisän oman vuoden 1873 matkan tienoilla saari oli siis yhä käytännössä kartoittamaton täplä valtamerellä: vasta lokakuussa 1874 kapteeni Ramón Vidal Gormaz mittasi rannikon tarkasti kaappiveneellä Covadonga, ja ensimmäiset luotettavat kartat julkaistiin vuotta myöhemmin.',
+          tiedosto: 'Plano del grupo de las islas San Félix y San Ambrosio levantado por la Oficialidad de la Goleta Covadonga, al mando del Capitán de la Armada de Chile Ramón Vidal Gormaz, en 1874.png',
+          lyhyt: 'Ensimmäinen luotettava kartta saarista syntyi vasta vuonna 1874.',
+          selite: 'Käsin piirretty merikartta, joka näyttää sekä San Félixin että San Ambrosion samasta vuoden 1874 mittausmatkasta.',
+          lahde: 'Ramón Vidal Gormaz, Wikimedia Commons (Public domain)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Kaukainen tulivuorisaari',
+          teksti: 'San Ambrosio sijaitsee lähes tuhannen kilometrin päässä Chilen rannikosta, eikä sillä ole ainuttakaan hiekkarantaa: jyrkät kalliot putoavat suoraan mereen joka puolella. Saari on oikeastaan paljon suuremman vedenalaisen tulivuoren paljas huippu – sen basalttiset laavavirtaukset ovat geologien mukaan noin 2,9 miljoonaa vuotta vanhoja. Se kuuluu samaan eristyneeseen tulivuorijonoon kuin kaukana lännessä sijaitseva Rapa Nui, vaikka mitään suoraa yhteyttä saarten välillä ei koskaan ollut.',
+          tiedosto: 'Islas Desventuradas locator map.svg',
+          lyhyt: 'Saari on vain tulivuoren huippu, joka nousee suoraan meren pinnalle.',
+          selite: 'Kartta, joka näyttää San Ambrosion, San Félixin ja niiden pikkusaarten sijainnin kaukana Chilen mantereesta.',
+          lahde: 'Henrykez, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Desventuradas Islands',
+        },
+        {
+          otsikko: 'Hummerinpyytäjien tilapäinen koti',
+          teksti: 'San Ambrosiolla ei ole pysyviä asukkaita, mutta hiljaisuus rikkoutuu silloin tällöin, kun Robinson Crusoe -saarelta Juan Fernándezin saariryhmästä saapuu kalastajia pyytämään Chilen hummeria eli langostaa. He pystyttävät rannalle tilapäisen leirin pyyntikauden ajaksi ja purjehtivat sitten satojen kilometrien päähän kotisaarelleen. Sama laji elää sekä Juan Fernándezin että Desventuradas-saarten vesillä, ja se on yksi alueen harvoista vientiin asti riittävistä luonnonvaroista.',
+          tiedosto: 'Jasus frontalis.jpg',
+          lyhyt: 'Ainoat tilapäiset asukkaat ovat Robinson Crusoe -saarelta saapuvat hummerikalastajat.',
+          selite: 'Chilen hummeri eli langosta (Jasus frontalis) kuvattuna Robinson Crusoe -saarella Juan Fernándezin saaristossa.',
+          lahde: 'Erasmo Macaya Horta, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Jasus frontalis',
+        },
+        {
+          otsikko: 'Uusi laji pimeästä syvänteestä',
+          teksti: 'Vuonna 2013 tutkijat Oceanan ja National Geographicin Pristine Seas -hankkeesta sukelsivat San Ambrosion ja San Félixin ympäristöön ja löysivät poikkeuksellisen koskemattoman merenpohjan. Löytö johti lokakuussa 2015 Nazca-Desventuradas-meripuiston perustamiseen – yli 300 000 neliökilometrin suojelualueeseen. Tutkimusmatkat jatkuvat yhä: vuonna 2021 tiede kuvasi saarten lähisyvänteistä ennen tuntemattoman äyriäislajin, pikkuisen Munida diritas -taskurapumaisen, kahdensadan metrin syvyydestä.',
+          tiedosto: 'Munida diritas (10.7717-peerj.10531) Figure 2.png',
+          lyhyt: 'Saarten ympärillä on löydetty tieteelle täysin uusia lajeja.',
+          selite: 'Tieteellinen piirros uudesta Munida diritas -taskurapulajista: kuvassa sen kuori, silmät ja suuosat kolmesta suunnasta.',
+          lahde: 'Gallardo Salamanca et al., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Desventuradas Islands',
+        },
+      ],
+    },
+    {
+      id: 'linnut',
+      nimi: 'Linnut maailman reunalla',
+      johdanto: 'Mannermaisten petojen puuttuminen on tehnyt San Ambrosiosta linnuille poikkeuksellisen turvasataman. Osa lajeista pesii täällä suurempina määrinä kuin missään muualla, ja saarella elää oma, muualla tuntematon haukka-alalaji.',
+      tehtava: {
+        kysymys: 'Kuinka monessa paikassa maailmassa uhanalainen pikkuviistäjä pesii varmuudella?',
+        vaihtoehdot: ['Vain yhdessä', 'Kahdessa', 'Kolmessa', 'Kymmenessä'],
+        oikea: 2,
+        fakta: 'Pikkuviistäjä pesii vain kolmessa paikassa maailmassa, ja kaksi niistä on San Ambrosio ja San Félix.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kymmenientuhansien parien kolonia',
+          teksti: 'Maininkiviistäjä (Pterodroma neglecta) pesii San Ambrosiolla omana alalajinaan yhdessä San Félixin ja Juan Fernándezin saarten kanssa. Tutkijat laskivat pelkästään San Ambrosiolta vähintään 22 686 pesivää paria, vaikka jyrkimmille rinteille ei päästy laskemaan lainkaan – koko maailman kanta on arvioitu vain noin 100 000 pariksi. Linnut esiintyvät kolmena värimuunnoksena tummasta vaaleaan, ja pesäpaikaksi kelpaa vain varjoisa kolo. 1900-luvulla tuodut vuohet ja kanit tuhosivat kasvillisuutta ja uhkasivat pesimäpaikkoja, mutta eläimet ovat sittemmin hävinneet saarelta lähes kokonaan.',
+          tiedosto: 'Kermadec Petrel.jpg',
+          lyhyt: 'San Ambrosiolla pesii kymmeniätuhansia viistäjäpareja.',
+          selite: 'Lähikuva maininkiviistäjästä – ei kuvattu San Ambrosiolla, vaan samaa lajia Ducie-saarella Tyynellämerellä.',
+          lahde: 'Angela K. Kepler, Wikimedia Commons (Public domain)',
+          wiki: 'Kermadec petrel',
+        },
+        {
+          otsikko: 'Yksi kolmesta pesäpaikasta maailmassa',
+          teksti: 'Uhanalainen pikkuviistäjä (Pterodroma cookii) pesii koko maailmassa varmuudella vain kolmessa paikassa, ja kaksi niistä on juuri San Ambrosio ja San Félix – kolmas sijaitsee kaukana Uudessa-Seelannissa. Desventuradas-saarten pieni kanta on siksi äärimmäisen arvokas koko lajin säilymiselle: jos jompikumpi saari menettäisi lintunsa esimerkiksi vieraslajin takia, maailman pesimäpaikkojen määrä tippuisi käytännössä kahteen. Tutkijat pitävät saarten eristyneisyyttä ja mannermaisten petojen puuttumista tärkeimpänä syynä sille, että laji on selvinnyt täällä ylipäätään hengissä.',
+          tiedosto: "Cook's Petrel 0A2A7458.jpg",
+          lyhyt: 'Uhanalainen laji pesii vain kolmessa paikassa koko maailmassa.',
+          selite: 'Pikkuviistäjä lennossa meren yllä – kuvattu Tasmanian rannikolla, ei San Ambrosiolla.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "Cook's petrel",
+        },
+        {
+          otsikko: 'Oma haukka kalliojyrkänteillä',
+          teksti: 'San Ambrosiolla elää amerikantuulihaukan (Falco sparverius) oma alalajinsa, jota ei tavata missään muualla maailmassa. Tutkijat ovat kuvanneet sen erilliseksi Desventuradas-saarten omaksi muodoksi, kun taas kauempana etelässä Juan Fernándezin saarilla elää jälleen oma, tästä erillinen pienen haukan alalajinsa. Kummankin saariryhmän pitkä eristyneisyys on siis synnyttänyt oman linnun aivan itsenäisesti. San Ambrosion haukka pesii saaren jyrkillä kallioseinämillä ja saalistaa lähinnä hyönteisiä ja pieniä lintuja, sillä muuta maaselkärankaisravintoa saarelta ei juuri löydy.',
+          tiedosto: 'American kestrel (44273).jpg',
+          lyhyt: 'San Ambrosiolla elää oma haukka-alalajinsa, joka ei asu missään muualla.',
+          selite: 'Uros amerikantuulihaukka istumassa oksalla – yleiskuva lajista, kuvattu kuntoutuslinnusta New Yorkissa, ei San Ambrosion alalajia.',
+          lahde: 'Rhododendrites, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'American kestrel',
+        },
+        {
+          otsikko: 'Trooppinen pesimäkalenteri',
+          teksti: 'Naamiosuula (Sula dactylatra) ja nokitiira (Sterna fuscata) pesivät Desventuradas-saarilla ympäri vuoden riippumatta vuodenajasta, mikä on tyypillistä trooppisille lajeille mutta poikkeuksellista näin eteläisillä leveysasteilla. Tutkijoiden mukaan käyttäytyminen kertoo siitä, että saaret sijaitsevat lämpimän ja kylmän merivirran rajamailla, jonne mahtuu sekä trooppista että subtrooppista lajistoa. Saarilla pesii kaikkiaan kahdeksan lintulajia ja käy lisäksi useita muita, eikä yhdelläkään ole koskaan ollut luontaisia maanisäkäspetoja väijymässä pesillä.',
+          tiedosto: 'Masked booby with chick.JPG',
+          lyhyt: 'Naamiosuula pesii saarilla ympäri vuoden, poikkeuksellista näillä leveyksillä.',
+          selite: 'Aikuinen naamiosuula untuvaisen poikasensa vieressä paljaalla maalla – kuvattu Tern-saarella Havaijilla, ei San Ambrosiolla.',
+          lahde: 'Duncan Wright / USFWS, Wikimedia Commons (Public domain)',
+          wiki: 'Masked booby',
+        },
+      ],
+    },
+  ],
 };
