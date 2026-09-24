@@ -87,7 +87,7 @@ import {
   stopDiaryVoice, stopIntroVoice,
   // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
   // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
-  soivaPuhuja,
+  soivaPuhuja, puheenKello,
   vapautaPuhuja,
 } from './luenta.js';
 import {
@@ -863,9 +863,9 @@ export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
  *   1. VÄLIRAUHA. Isoisän luennan ja Livian repliikin väliin jää
  *      hengähdys (SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900 ms).
  *      Ilman välirauhaa nappi välähtäisi siinä välissä näkyviin.
- *   2. VARAVENTTIILI. Jos vuoro jää jostain syystä roikkumaan, nappi
- *      tulee näkyviin viimeistään 30 sekunnin kuluttua — piiloon
- *      jäänyt Liiku olisi umpikuja.
+ *   2. VARAVENTTIILI. Jos puhe jää jumiin (mikään soitin ei etene
+ *      30 sekuntiin), nappi tulee näkyviin — piiloon jäänyt Liiku olisi
+ *      umpikuja. Ehjä pitkä luento ei laukaise sitä (löydös 45).
  */
 /** Kuinka usein napin vahti kysyy, onko joku äänessä. */
 const LUENTAVAHDIN_VALI_MS = 200;
@@ -11693,8 +11693,17 @@ export class UI {
      * välkkyi päälle ja pois 400 ms:n välein).
      */
     if (this.luentavahti || typeof document === 'undefined') return;
-    // Puheenvuoron alku: varaventtiilin kello lähtee tästä.
-    let puheAlkoi = 0;
+    /*
+     * VARAVENTTIILI MITTAA PUHEEN EDISTYMISTÄ, EI KESTOA (löydös 45,
+     * 24.9.2026). Ennen kello lähti puheenvuoron alusta, joten jokainen yli
+     * 30 sekunnin luenta välähdytti Liikun (ja palautti hetkeksi tekstit
+     * ja hunnun) kesken puheen ja nollasi kellon (mitattu Ateena
+     * 393 × 852: Liiku näkyvissä t 33,4–33,6 s). Nyt venttiili aukeaa vasta,
+     * kun joku on "äänessä" mutta mikään soitin ei ole edennyt 30 sekuntiin
+     * (pysähtynyt virta) — ehjä pitkä luento ei koskaan laukaise sitä.
+     */
+    let kello = -1;
+    let viimeEdistys = 0;
     // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
     let puheLoppui = 0;
     // Sama kello erikseen kertojalle (tekstipiilo, ks. alempana).
@@ -11703,18 +11712,15 @@ export class UI {
       if (this.dead) return;
       const nyt = Date.now();
       const aanessa = Boolean(soivaPuhuja());
-      if (aanessa) {
-        if (!puheAlkoi) puheAlkoi = nyt;
-        puheLoppui = nyt;
-      } else if (!puheLoppui) {
-        puheAlkoi = 0;
-      }
-      const varaventtiili = puheAlkoi && nyt - puheAlkoi > LUENNAN_VARAVENTTIILI_MS;
+      const nytKello = puheenKello();
+      if (!aanessa || nytKello !== kello) { kello = nytKello; viimeEdistys = nyt; }
+      if (aanessa) puheLoppui = nyt;
+      const varaventtiili = aanessa && nyt - viimeEdistys > LUENNAN_VARAVENTTIILI_MS;
       // Välirauha: kahden puheenvuoron väliin jäävä hengähdys ei
       // paljasta nappia välähdykseksi.
       const valirauhassa = Boolean(puheLoppui) && nyt - puheLoppui < LUENNAN_VALIRAUHA_MS;
       const piiloon = !varaventtiili && (aanessa || valirauhassa);
-      if (!piiloon) { puheAlkoi = 0; puheLoppui = 0; }
+      if (!piiloon) puheLoppui = 0;
       document.body.classList.toggle('luenta-aanessa', piiloon);
       /*
        * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
