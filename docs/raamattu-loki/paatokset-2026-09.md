@@ -3987,3 +3987,7 @@ Kuvat proto-3d/lokit/build6-tarkistus-20260924/. Fable: molemmat Natiivisepälle
 ## PELIKOODARI: MAAMERKIT-KOKOELMAN LUKIJA VALMIS (pelikoodari/maamerkit-paketti 3cf68dc, BUILD 9) (24.9.2026 klo 15.06)
 
 Skeema 1.33 sovittu Siirtosepän kanssa (koepaketti v43, kentät id/kaupunki/lat/lon/maanKorkeus/suunta/mallinKorkeus/malli{url,sha256,tavuja}/lisenssi/tekija/lahde); natiivi hakee GLB:n välimuistiin, tarkistaa shan, oma kapea lukija; Maamerkit.LisaaMalli sovittu Natiivisepän kanssa; pilotti FBX:nä kunnes omistaja kokeillut; Blender --glb tuottaa GLB:n ja rivin (tools/vienti/maamerkit.json). Testit 259/259. Lennon ääni (lento-alku, intro ei lennolla, valinta keskeyttää) masterissa build 8:aan. Fable: kuitattu; seuraavaksi Pelikoodari tarkistaa varalaatan datapuolen (ämpärin pergamenttilaatat z3–z7 Espanja–Algeria), Natiiviseppä koodipuolen.
+
+## SISALTOKIRJURI NOLLATTU JA KAYNNISTETTY klo 15.1x (24.9.2026 klo 15.07)
+
+Postivahti epäili jumia (prosessi poissa 13 min clear_sessionin jälkeen, RC pois). Fable tarkisti: list_events = 0 viestiä → clear onnistui, sessio vain lepäsi; aloitusviesti (docs/raportit/viesti-sisaltokirjuri-aloitus.md, 662b51806) lähetetty session id:llä, RC:n kytkentä pyydetty sessiolta itseltään. Oppi: idle-sessio ei raportoi kontekstia get_usagella — tarkistus list_eventsillä.
