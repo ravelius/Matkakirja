@@ -17,9 +17,12 @@
 // (É → E); muut merkit ovat tyhjiä ruutuja (webin järjestelmäfontin näytteistintä
 // ei ole natiivissa — RadioAineisto.NaytonNimi vaihtaa silloin maan nimeen).
 //
-// Piirto generateVisualContent + Painter2D; rivi kerrallaan omana täyttönään, jotta
-// yksi mesh ei kasva liian suureksi (1425 pistettä). Lineaarinen väriavaruus: himmeät
-// alfat korjataan niin, että tulos vastaa webin sRGB-sekoitusta tummalla lasilla.
+// Piirto generateVisualContent: jokainen piste on tekstuuroitu nelikulmio (sammunut kiekko
+// ja palava kiekko hehkuineen leivotaan kerran pieniksi tekstuureiksi). Painter2D-kaaret
+// tesseloitiin joka vierityskehyksessä (1425 pistettä + hehkut): radion soidessa iPadilla
+// PrepareRepaint 14–15 ms / 110 ms (Linssisepän piikkiajo 4, 24.9.2026). Lineaarinen
+// väriavaruus: himmeät alfat korjataan niin, että tulos vastaa webin sRGB-sekoitusta
+// tummalla lasilla.
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -151,39 +154,112 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(rect.width) || rect.width <= 0 || rect.height <= 0) return;
             float s = Mathf.Min(rect.width / leveys, rect.height / korkeus);
             var o = rect.center - new Vector2(leveys, korkeus) * (s * 0.5f);
-            var p = mgc.painter2D;
-            Color muste = Suodin(Muste), tausta = Suodin(lasi), hehku = Suodin(Hehku);
+            Color muste = Suodin(Muste), tausta = Suodin(lasi);
             var sammunut = muste; sammunut.a = Peitto(SammunutPeitto, muste, tausta);
-            var h1 = hehku; h1.a = Peitto(0.16f, hehku, tausta);
-            var h2 = hehku; h2.a = Peitto(0.22f, hehku, tausta);
             float r = Sade * s;
+            int palavia = 0;
+            foreach (bool b in tilat) if (b) palavia++;
+            int sammuneita = pisterivit * sarakkeita - palavia;
+            // Kiekon reunan pehmennys on tekstuurin sisällä: nelikulmio on hiukan kiekkoa suurempi.
+            if (sammuneita > 0) Pisteet(mgc, KiekkoTekstuuri(), sammuneita, false, o, s, r * TekstuuriVara, sammunut);
+            if (palavia == 0) return;
+            // Hehkut ensin kaikkien palavien alle, sitten kiekot (naapurin hehku ei peitä kiekkoa).
+            Pisteet(mgc, HehkuTekstuuri(himmea, lasi), palavia, true, o, s, r * HehkuSade * TekstuuriVara, Color.white);
+            Pisteet(mgc, KiekkoTekstuuri(), palavia, true, o, s, r * TekstuuriVara, muste);
+        }
+
+        void Pisteet(MeshGenerationContext mgc, Texture2D tekstuuri, int maara, bool palavat, Vector2 o, float s, float puoli, Color vari)
+        {
+            var md = mgc.Allocate(maara * 4, maara * 6, tekstuuri);
+            var uv = md.uvRegion;
+            Color32 tint = vari;
+            int n = 0;
             for (int y = 0; y < pisterivit; y++)
             {
                 float cy = o.y + (Reuna + y * Jako) * s;
-                // Hehku (kaksi rengasta) palavien alle, sitten sammuneet ja palavat.
-                Tayta(p, y, cy, o.x, s, true, r * 1.75f, h1);
-                Tayta(p, y, cy, o.x, s, true, r * 1.3f, h2);
-                Tayta(p, y, cy, o.x, s, false, r, sammunut);
-                Tayta(p, y, cy, o.x, s, true, r, muste);
+                for (int x = 0; x < sarakkeita; x++)
+                {
+                    if (tilat[y, x] != palavat) continue;
+                    float cx = o.x + (Reuna + x * Jako) * s;
+                    md.SetNextVertex(new Vertex { position = new Vector3(cx - puoli, cy - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(uv.xMin, uv.yMax) });
+                    md.SetNextVertex(new Vertex { position = new Vector3(cx + puoli, cy - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(uv.xMax, uv.yMax) });
+                    md.SetNextVertex(new Vertex { position = new Vector3(cx + puoli, cy + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(uv.xMax, uv.yMin) });
+                    md.SetNextVertex(new Vertex { position = new Vector3(cx - puoli, cy + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(uv.xMin, uv.yMin) });
+                    ushort i = (ushort)(n * 4);
+                    md.SetNextIndex(i); md.SetNextIndex((ushort)(i + 1)); md.SetNextIndex((ushort)(i + 2));
+                    md.SetNextIndex(i); md.SetNextIndex((ushort)(i + 2)); md.SetNextIndex((ushort)(i + 3));
+                    n++;
+                }
             }
         }
 
-        void Tayta(Painter2D p, int y, float cy, float x0, float s, bool palavat, float sade, Color vari)
+        // --- pistetekstuurit ------------------------------------------------------------
+
+        /// <summary>Hehkun ulkosäde pisteen säteinä (web drop-shadow piirrettynä kahtena renkaana 1,3 ja 1,75).</summary>
+        const float HehkuSade = 1.75f;
+        const int TekstuuriKoko = 64;
+        /// <summary>Kiekko täyttää tekstuurin säteelle 31 / 32: nelikulmion puolikas = säde · 32 / 31.</summary>
+        const float TekstuuriVara = TekstuuriKoko / 2f / (TekstuuriKoko / 2f - 1f);
+        static Texture2D kiekko;
+        static readonly Dictionary<(bool, Color), Texture2D> hehkut = new Dictionary<(bool, Color), Texture2D>();
+
+        /// <summary>Peitto etäisyydellä d säteestä R tekstuurin pikseleinä (pehmeä reuna).</summary>
+        static float Peitto(float d, float R) => Mathf.Clamp01(R - d + 0.5f);
+
+        static Texture2D UusiTekstuuri(string nimi)
         {
-            bool jotain = false;
-            p.BeginPath();
-            for (int x = 0; x < sarakkeita; x++)
-            {
-                if (tilat[y, x] != palavat) continue;
-                var c = new Vector2(x0 + (Reuna + x * Jako) * s, cy);
-                p.MoveTo(c + new Vector2(sade, 0));
-                p.Arc(c, sade, Angle.Degrees(0f), Angle.Degrees(360f));
-                p.ClosePath();
-                jotain = true;
-            }
-            if (!jotain) return;
-            p.fillColor = vari;
-            p.Fill();
+            var t = new Texture2D(TekstuuriKoko, TekstuuriKoko, TextureFormat.RGBA32, true, false)
+            { name = nimi, wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear, hideFlags = HideFlags.DontSave };
+            return t;
+        }
+
+        /// <summary>Valkoinen kiekko (väri tulee sävytyksestä): sammuneet pisteet.</summary>
+        static Texture2D KiekkoTekstuuri()
+        {
+            if (kiekko != null) return kiekko;
+            kiekko = UusiTekstuuri("Pistenaytto.kiekko");
+            float k = TekstuuriKoko / 2f, R = k - 1f;
+            var px = new Color[TekstuuriKoko * TekstuuriKoko];
+            for (int y = 0; y < TekstuuriKoko; y++)
+                for (int x = 0; x < TekstuuriKoko; x++)
+                    px[y * TekstuuriKoko + x] = new Color(1f, 1f, 1f, Peitto(Vector2.Distance(new Vector2(x + 0.5f, y + 0.5f), new Vector2(k, k)), R));
+            kiekko.SetPixels(px);
+            kiekko.Apply(true, true);
+            return kiekko;
+        }
+
+        /// <summary>
+        /// Palavan pisteen hehku valmiina värinä: renkaat 1,75 r (peitto 0,16) ja 1,3 r (0,22) hehkun värillä
+        /// (kiekko piirretään erikseen päälle).
+        /// </summary>
+        Texture2D HehkuTekstuuri(bool himmeana, Color lasiVari)
+        {
+            if (hehkut.TryGetValue((himmeana, lasiVari), out var t) && t != null) return t;
+            Color tausta = Suodin(lasiVari), hehku = Suodin(Hehku);
+            float a1 = Peitto(0.16f, hehku, tausta), a2 = Peitto(0.22f, hehku, tausta);
+            t = UusiTekstuuri("Pistenaytto.hehku");
+            float k = TekstuuriKoko / 2f, R = k - 1f, r = R / HehkuSade;
+            var px = new Color[TekstuuriKoko * TekstuuriKoko];
+            for (int y = 0; y < TekstuuriKoko; y++)
+                for (int x = 0; x < TekstuuriKoko; x++)
+                {
+                    float d = Vector2.Distance(new Vector2(x + 0.5f, y + 0.5f), new Vector2(k, k));
+                    // Esikerrottu "over"-sekoitus kahdesta renkaasta, lopuksi suora alfa.
+                    Vector3 c = Vector3.zero;
+                    float a = 0f;
+                    void Paalle(Color v, float peitto)
+                    {
+                        c = c * (1f - peitto) + new Vector3(v.r, v.g, v.b) * peitto;
+                        a = a * (1f - peitto) + peitto;
+                    }
+                    Paalle(hehku, a1 * Peitto(d, R));
+                    Paalle(hehku, a2 * Peitto(d, r * 1.3f));
+                    px[y * TekstuuriKoko + x] = a > 0f ? new Color(c.x / a, c.y / a, c.z / a, a) : new Color(hehku.r, hehku.g, hehku.b, 0f);
+                }
+            t.SetPixels(px);
+            t.Apply(true, true);
+            hehkut[(himmeana, lasiVari)] = t;
+            return t;
         }
 
         /// <summary>Sammuksissa: saturate(.55) brightness(.86).</summary>
