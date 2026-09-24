@@ -11,7 +11,7 @@
 // elävät merkit (kaupunkien nimet ja pisteet, nappula, nostot) piiloon.
 //
 // Aineisto: ETOPO 2022 15″ (public domain), poltettu Karttasepän
-// reliefipyramidiksi (Miller, matkakirja/reliefipyramidi/20260920/) ja
+// reliefipyramidiksi (Miller, matkakirja/reliefipyramidi/20260924/) ja
 // siitä Web Mercator -sarjaksi Cesiumille (ks. ReliefiSarja).
 //
 // Avaus kuten webissä: tumma odotuspeite heti, pelin kerrokset piiloon
@@ -36,7 +36,7 @@ namespace Matkakirja.Linssit
         /// sarja on läpinäkymätön. Jos osoite ei vastaa, kerros luovuttaa ja pohja palaa.
         /// </summary>
         public static string ReliefiSarja =
-            "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260920/pallo/{z}/{x}/{y}.jpg";
+            "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260924/pallo/{z}/{x}/{y}.jpg";
         public const int ReliefiMaxTaso = 8;
 
         /// <summary>
