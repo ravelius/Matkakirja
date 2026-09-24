@@ -757,6 +757,7 @@
 }
 
 .mk-lehti__poistu .mk-nappi__teksti {
+    white-space: normal; /* web: POISTU / LEHDESTÄ kahdella rivillä 106 px:n napissa */
     font-size: 12.48px;
     letter-spacing: 1.248px;
     color: rgb(149, 136, 119);

@@ -441,7 +441,9 @@ namespace Matkakirja.Natiivi
                 foreach (var l in b.Query<Label>().ToList())
                 {
                     if (string.IsNullOrEmpty(l.text) || l.resolvedStyle.display == DisplayStyle.None) continue;
-                    float w = l.MeasureTextSize(l.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+                    // Rivittyvän tekstin (Poistu) min-content on pisin sana, rivittymättömän koko rivi.
+                    float Leveys(string t) => l.MeasureTextSize(t, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+                    float w = b == poistu ? l.text.Split(' ').Max(Leveys) : Leveys(l.text);
                     if (l.ClassListContains("mk-lehti__selausaihe")) w = Mathf.Min(w, SelausaiheLeveys);
                     sisalto = Mathf.Max(sisalto, w);
                 }
@@ -462,8 +464,9 @@ namespace Matkakirja.Natiivi
             return b;
         }
 
+        /// <summary>Web sivunNimi: sivu 0 "Etusivu", muuten sivunOtsikko (sama kuin sivun otsikkorivi, esim. "Ateena pintaa syvemmältä").</summary>
         string SivunNimi(int i) =>
-            i < 0 || i >= lehti.Sivut.Count ? "" : lehti.Sivut[i].Laji == LehtiSivuLaji.Etusivu ? "Etusivu" : lehti.Sivut[i].Lyhyt ?? lehti.Sivut[i].Otsikko ?? "";
+            i < 0 || i >= lehti.Sivut.Count ? "" : lehti.Sivut[i].Laji == LehtiSivuLaji.Etusivu ? "Etusivu" : lehti.Sivut[i].Otsikko ?? lehti.Sivut[i].Lyhyt ?? "";
 
         /// <summary>Web etsiKatko: lehti kiinni ja kohtaaminen tai kysymys alkaa (ohjain sulkee lehden).</summary>
         void EtsiKatko()
@@ -493,7 +496,7 @@ namespace Matkakirja.Natiivi
             edellinen.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt - 1).ToUpperInvariant();
             seuraava.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt + 1).ToUpperInvariant();
             alaSisallys.style.display = maalehti && sivut.Count >= 3 ? DisplayStyle.Flex : DisplayStyle.None;
-            poistu.Q<Label>().text = maalehti || viimeinen ? "Poistu" : "Poistu lehdestä";
+            poistu.Q<Label>().text = maalehti || viimeinen ? "POISTU" : "POISTU LEHDESTÄ"; // web text-transform uppercase
             // Tehtävänappi jokaisen kaupunkisivun alareunassa (omistaja 9.8.2026); maalehdessä ei.
             string teksti = maalehti ? null : tila?.TehtavaNappi;
             tehtavaNappi.style.display = teksti != null ? DisplayStyle.Flex : DisplayStyle.None;
