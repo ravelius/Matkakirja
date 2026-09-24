@@ -368,6 +368,27 @@ export const NAKYMAT = [
     palloJalkeen: true,
   },
   {
+    nimi: 'noppa-valintavihje', kuvaus: 'Siirtovaihe + pöllön valintavihje (VALINTAVIHJEEN_VIIVE 15 s lyhennetty 300 ms:iin, ui.valintavihjeViive)',
+    avaa: async () => {
+      const { ui, game } = window.matkakirja;
+      ui.valintavihjeViive = 300;
+      ui.liukuAuki = true; ui.render();
+      const nappi = [...document.querySelectorAll('.toimintorivi button')].find((b) => /^liftaus/i.test(b.textContent.trim()));
+      if (!nappi) return { virhe: 'ei Liftaus-nappia' };
+      nappi.click();
+      const alku = Date.now();
+      while (!(game.phase === 'move' && !ui.busy) && Date.now() - alku < 15000) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 100));
+      }
+      if (game.phase !== 'move') return { virhe: `vaihe ${game.phase}` };
+      await new Promise((ok) => setTimeout(ok, 1800));
+      return { kohteita: game.moves?.size ?? null, vaihe: ui.valintavihjeVaihe, ajastin: Boolean(ui.valintavihjeAjastin),
+        busy: ui.busy, pollo: game.polloLoydetty, radio: ui.radioPaalla?.() ?? null };
+    },
+    palloJalkeen: true,
+  },
+  {
     nimi: 'ratas', kuvaus: 'Hammasratas: äänentasot ja asetukset (#kehittaja-valikko-btn)',
     avaa: () => { document.getElementById('kehittaja-valikko-btn')?.click(); },
     odota: '#kehittaja-valikko:not([hidden])',
@@ -563,6 +584,18 @@ const TODENNUS = {
         return x > 0 && y > 0 && x < innerWidth && y < innerHeight;
       }).length;
       return ruudulla > 0 ? null : `siirtokohteita ${kohteet.length}, ruudulla 0`;
+    },
+  },
+  'noppa-valintavihje': {
+    ehto: () => {
+      const { game } = window.matkakirja;
+      if (game.phase !== 'move') return `vaihe ${game.phase}, odotettiin move`;
+      // Vihjekupla (js/pollo.js polloVihje, VALINTAVIHJEEN_TEKSTI) näkyvissä ruudulla.
+      const el = [...document.querySelectorAll('body *')].find((e) => e.children.length === 0
+        && /Napauta korostettua kohdetta kartalla/.test(e.textContent));
+      const b = el?.getBoundingClientRect();
+      if (!b || b.width < 10 || b.bottom < 0 || b.top > innerHeight) return 'valintavihjeen kupla ei ruudulla';
+      return null;
     },
   },
   ratas: { nakyy: ['#kehittaja-valikko'] },
