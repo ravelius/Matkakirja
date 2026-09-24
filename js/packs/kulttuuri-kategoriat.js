@@ -109769,6 +109769,17 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Churchill, Manitoba',
         },
+        {
+          otsikko: 'Odotus venyy vuosi vuodelta',
+          teksti:
+            'Jääkarhujen syksyinen odotus riippuu suoraan siitä, milloin Hudsoninlahti jäätyy, ja jäätyminen puolestaan riippuu koko Jäämeren tilasta. Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 miljoonaa neliömailia — mittaushistorian kymmenenneksi vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. Tutkijat seuraavat Churchillin karhupopulaatiota tarkemmin kuin lähes mitään muuta juuri siksi, että se on ensimmäisten joukossa kärsimässä lyhenevästä jääkaudesta.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - 3199 print).jpg',
+          lyhyt: 'NASA:n kuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite:
+            'NASA:n Scientific Visualization Studion kuva näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, keltaisen ääriviivan merkitessä vuosien 1981–2010 keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
   ],
