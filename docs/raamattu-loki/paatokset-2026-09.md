@@ -4887,3 +4887,7 @@ Tausta: PARIISI jäi 185 px:n päähän pisteestä ~3/11 ajossa, koska nimi lado
 ## LAITETESTAAJA (5ec42fc48, juna/b12 9e78641): RADION SULKU 0,8 s JA PINNAT PASS; VIIVAIMEN SORMIVETO EI LIIKUTA NEULAA SIMULAATTORISSA (touch_path JA swipe), VAIN NAPAUTUS HYPPAA ASEMALLE — BUGI VAI SIMULAATTORIN RAJOITUS EPASELVA → LINSSISEPPA TUTKII; RAPORTTI docs/raportit/radio-viivain-testi-20260925.md (25.9.2026 klo 01.48)
 
 Sama automaatio liikuttaa ScrollView'ta samassa sessiossa. Aamun raporttiin: omistaja kokeilee viivaimen vetoa laitteella build 12:sta.
+
+## NATIIVI-UI ERAT NATIIVISEPALLE: RADIOPANEELIN SULKU 0,8 s LIUKU (natiivi-ui/radio-sulku, VIDEO), iPHONEN PISTEKERROIN KORJATTU (iPADIN dpi-KAAVA ANTOI ×2, UI 2/3-KOOSSA — MERGE ENNEN TF:AA), KIRJAINVALI KOKO UI:HIN (natiivi-ui/kirjainvali, UITK em/100, 153 ARVOA + TYOKALU, ALOITUSJULISTE PUHELINMITOIN, AIHESIVU #35), PARITEETTI #14, #25–28, #35 JUNASSA; KESKEN LOYDOS 50 VAIHE 1, LOYDOS 51 → iPAD PRO 11 VUOROLLE (FABLE: EI ODOTETA OMISTAJAA) (25.9.2026 klo 01.53)
+
+Saapumiskamera natiivissa selvästi webiä lähempänä → Natiiviseppä + Pelikoodari, mitta webistä kuvapariin.
