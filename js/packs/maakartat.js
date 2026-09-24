@@ -3041,6 +3041,40 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Cayenne (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  cayenne: {
+    polku: 'assets/kartat/cayenne-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326,
+    },
+    esittely: 'Kartan alue on Cayennen vanha kaupunki kapealla '
+      + 'niemellä. Cépéroun kukkulalle nousi 1643 linnoitus, jonka '
+      + 'juurelle koko kaupunki kasvoi; kaupungin puolustusmuurin '
+      + 'paikalle raivattiin 1810-luvulla kuningaspalmuaukio, joka on '
+      + 'yhä keskustan tärkein kohtaamispaikka.',
+    kohteet: [
+      {
+        nimi: 'Fort Cépérou', lat: 4.9377244, lon: -52.3368014,
+        teksti: 'Ranskalaiset kauppiaat pystyttivät linnoituksen '
+          + 'alkuperäiskansan päällikön, Cépéroun, mukaan nimetylle '
+          + 'kukkulalle 1643. Paikka vaihtoi omistajaa moneen kertaan '
+          + 'hollantilaisten, englantilaisten ja portugalilaisten '
+          + 'välillä, ennen kuin Ranska vakiinnutti asemansa '
+          + '1600-luvun lopulla.',
+      },
+      {
+        nimi: 'Place des Palmistes', lat: 4.9395938, lon: -52.3338290,
+        teksti: 'Kun Cayennea ympäröinyt puolustusmuuri purettiin '
+          + '1810-luvulla, sen paikalle raivattiin aukio ja istutettiin '
+          + 'komeita kuningaspalmuja. Aukiosta tuli nopeasti '
+          + 'siirtokunnan tärkein kohtaamispaikka, ja se on sitä yhä.',
+      },
+    ],
+  },
+  /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
    * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,
