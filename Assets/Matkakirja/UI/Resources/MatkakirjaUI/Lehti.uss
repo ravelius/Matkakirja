@@ -226,6 +226,18 @@
     color: rgba(58, 42, 26, 0.95);
 }
 
+/* Anfangi (web ::first-letter: American Typewriter 700, 3,1 em, rgba(70, 51, 31, 0,9)); koko ja paikka koodista. */
+.mk-lehti__anfangi {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    color: rgba(70, 51, 31, 0.9);
+    -unity-text-align: upper-left;
+    white-space: nowrap;
+}
+
 .mk-lehti__osasto {
     font-size: 11px;
     letter-spacing: 2.2px;
@@ -529,7 +541,7 @@
 }
 
 /* Maan pääkirjoitus (web .dialog.lehti #arrival-maa-intro: 1,02rem, riviväli 1,62, #2d2010). */
-.mk-maa__esittely > .mk-lehti__esittely {
+.mk-maa__esittely .mk-lehti__esittely {
     font-size: 16.3px;
     color: #2d2010;
 }
