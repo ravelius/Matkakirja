@@ -4187,3 +4187,7 @@ Natiivisepälle ilmoitettu; 26 (zoomi) ja 27 (nostojen hytinä) pysyvät.
 ## LAITETESTAAJA 71 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 16.21)
 
 Luovutus viesti-laitetestaaja-luovutus-20260924-ilta.md (avoimet pariteettirivit, EI TARKISTETTU -osiot, build 9 -mittaus, kosketuslupa, iso iPad), aloitusviesti päivitettynä; Postivahti lähettää uusimman version kun tyhjä.
+
+## OMISTAJAN LOYDOKSET 28–30 (BUILD 9, klo 16.4x, SITOVA): KALLISTUS SAILYY ZOOMATESSA, KORKEUSEROT PALJON VOIMAKKAAMMIKSI, PALLON PYORITYS KUTEN GOOGLE EARTHISSA (24.9.2026 klo 16.21)
+
+28) eleet: kun kameraa zoomataan lähemmäs tai kauemmas, kallistuksen pitää pysyä — nyt se lähtee heti liikkumaan. 29) korkeuserot saisivat näkyä paljon voimakkaammin (korkeuskerroin). 30) palloa pitää voida pyörittää kuten Google Earthissa eli vaihtaa katselusuuntaa (heading) eleellä. Kaikki → Natiiviseppä, build 10; viesti odottaa Fablen viestirajan nollausta (Postivahdin Laitetestaaja-ohje jäi myös lähettämättä).
