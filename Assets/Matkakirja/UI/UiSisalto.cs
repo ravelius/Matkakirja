@@ -134,8 +134,9 @@ namespace Matkakirja.Natiivi
                     foreach (var a in Alkiot(puheet))
                     {
                         var id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
-                        var d = Rakenne.Olio(MiniJson.Kentta(a, "data"));
-                        if (id != null && d != null && tulos.TryGetValue(id, out var kt)) kt.Iskulause = MiniJson.Teksti(d, "slogan");
+                        // Päätaso ensin (skeema 1.26 iskulause), raaka data vain Paatason kautta (Paataso.Saapumispuhe).
+                        string isku = MiniJson.Teksti(a, "iskulause") ?? MiniJson.Teksti(Paataso.Raaka(a), "slogan");
+                        if (id != null && isku != null && tulos.TryGetValue(id, out var kt)) kt.Iskulause = isku;
                     }
                 }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui sisältö: jäsennys epäonnistui: " + e.Message); }
@@ -168,7 +169,8 @@ namespace Matkakirja.Natiivi
             {
                 var o = Rakenne.Olio(ku);
                 // tiedosto = Commons-nimi, ampari = pelin oma kuva julisteet/-kansiossa (Kuvat.Reitit).
-                var tiedosto = o != null ? (MiniJson.Teksti(o, "tiedosto") ?? MiniJson.Teksti(o, "ampari")) : null;
+                // Skeema 1.26 (kansi.kansikuvat): url valmiina ämpäriin; vanha muoto: Commons-nimi.
+                var tiedosto = o != null ? (MiniJson.Teksti(o, "url") ?? MiniJson.Teksti(o, "tiedosto") ?? MiniJson.Teksti(o, "ampari") ?? MiniJson.Teksti(o, "arvo")) : null;
                 if (tiedosto == null) continue;
                 kohde.Add(new Kuvateksti
                 {
@@ -288,8 +290,10 @@ namespace Matkakirja.Natiivi
             {
                 string id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
                 if (id == null || !t.TryGetValue(id, out var k)) continue;
-                var kategoriat = Rakenne.Lista(MiniJson.Kentta(a, "data"));
+                // Päätaso ensin (skeema 1.26: aiheet + kansi), raaka data-lista vain Paatason kautta.
+                var kategoriat = Rakenne.Lista(MiniJson.Kentta(a, "aiheet")) ?? Rakenne.Lista(Paataso.RaakaArvo(a));
                 if (kategoriat == null) continue;
+                var kansi = Rakenne.Olio(MiniJson.Kentta(a, "kansi"));
                 foreach (var ko in kategoriat)
                 {
                     var kat = Rakenne.Olio(ko);
@@ -298,8 +302,10 @@ namespace Matkakirja.Natiivi
                     {
                         k.Lehti = true;
                         k.Johdanto = MiniJson.Teksti(kat, "johdanto");
-                        LueKuvat(Rakenne.Lista(MiniJson.Kentta(kat, "kansikuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat")), k.Kansikuvat);
-                        LueKuvat(Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat")), k.Avauskuvat);
+                        var kansikuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "kansikuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "kansikuvat"));
+                        var avauskuvat = Rakenne.Lista(MiniJson.Kentta(kansi, "avauskuvat")) ?? Rakenne.Lista(MiniJson.Kentta(kat, "avauskuvat"));
+                        LueKuvat(kansikuvat ?? avauskuvat, k.Kansikuvat);
+                        LueKuvat(avauskuvat, k.Avauskuvat);
                     }
                     else
                     {
@@ -313,19 +319,25 @@ namespace Matkakirja.Natiivi
             foreach (var a in Alkiot(julisteet))
             {
                 string id = MiniJson.Teksti(a, "kaupunki");
-                var d = Rakenne.Olio(MiniJson.Kentta(a, "data"));
-                if (d != null)
-                    kaikki.Add(new JulisteTiedot
-                    {
-                        Id = MiniJson.Teksti(a, "id") ?? id, Kaupunki = id, KaupunkiNimi = MiniJson.Teksti(d, "kaupunki"),
-                        // Skeema 1.20: kuva.url valmiina; vanhempi paketti: tiedosto (Kuvat.Reitit → julisteet/).
-                        Tiedosto = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(a, "kuva")), "url") ?? MiniJson.Teksti(d, "tiedosto"),
-                        Otsikko = MiniJson.Teksti(d, "otsikko"),
-                        Lyhyt = MiniJson.Teksti(d, "lyhyt"), Selite = MiniJson.Teksti(d, "selite"),
-                    });
-                if (id == null || d == null || !t.TryGetValue(id, out var k) || k.JulisteTiedosto != null) continue;
-                k.JulisteTiedosto = MiniJson.Teksti(d, "tiedosto");
-                k.JulisteOtsikko = MiniJson.Teksti(d, "otsikko");
+                // Päätaso ensin (Paataso.Juliste: otsikko, lyhyt, selite; kaupungin nimi päätasolla `nimi`, koska
+                // päätason `kaupunki` on tunnus), raaka data vain Paatason kautta.
+                var d = Paataso.Nakyma(a, Paataso.Juliste);
+                var raaka = Paataso.Raaka(a);
+                string tiedosto = MiniJson.Teksti(Rakenne.Olio(MiniJson.Kentta(a, "kuva")), "url") ?? MiniJson.Teksti(raaka, "tiedosto");
+                string otsikko = MiniJson.Teksti(d, "otsikko");
+                if (tiedosto == null && otsikko == null) continue;
+                kaikki.Add(new JulisteTiedot
+                {
+                    Id = MiniJson.Teksti(a, "id") ?? id, Kaupunki = id,
+                    KaupunkiNimi = MiniJson.Teksti(a, "nimi") ?? MiniJson.Teksti(raaka, "kaupunki"),
+                    // Skeema 1.20: kuva.url valmiina; vanhempi paketti: tiedosto (Kuvat.Reitit → julisteet/).
+                    Tiedosto = tiedosto,
+                    Otsikko = otsikko,
+                    Lyhyt = MiniJson.Teksti(d, "lyhyt"), Selite = MiniJson.Teksti(d, "selite"),
+                });
+                if (id == null || !t.TryGetValue(id, out var k) || k.JulisteTiedosto != null) continue;
+                k.JulisteTiedosto = MiniJson.Teksti(raaka, "tiedosto") ?? tiedosto;
+                k.JulisteOtsikko = otsikko;
             }
             JulisteLista = kaikki;
             return t;
