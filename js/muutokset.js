@@ -13,6 +13,13 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2204, teksti: 'Kohdekartta: Geraldton (#3082)' },
+  { v: 2203, teksti: 'Kohdekartta: Mount Isa (#3080)' },
+  { v: 2202, teksti: 'Sää: Appalakit, Churchill, Karthago, Sierra Leo… (#3053)' },
+  { v: 2201, teksti: 'Sää: Angola, Kap Horn, Namib, Norfolk ja Robins… (#3052)' },
+  { v: 2200, teksti: 'Sää: Bali, Havaiji, Milford Sound, Mount Rushmo… (#3050)' },
+  { v: 2199, teksti: 'Sää: Grand Canyon, Iguazú, Titicaca, Uluru ja Y… (#3049)' },
+  { v: 2198, teksti: 'Liiku: luentavahdin varaventtiili mittaa puheen… (#3116)' },
   { v: 2197, teksti: 'Sää: Galápagos, Kongo, Machu Picchu, Madagaskar… (#3048)' },
   { v: 2196, teksti: 'Vertailulinssi pallolla: Huippuvuoret Norjalle… (#3078)' },
   { v: 2195, teksti: 'Periaatteet: palautenappi on valikossa (#3093)' },

@@ -4486,4 +4486,285 @@ export const SAATIEDOT = {
       + 'yön ero on suurimmillaan yli 30 astetta. Sadetta ei '
       + 'käytännössä ole minään kuukautena.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N5-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain grandcanyon,iguazu,titicaca,uluru,yellowstone. Asemat: Grand
+   * Canyon Village (etelälaidan n. 2100 m), Puerto Iguazú, Puno-puolen
+   * ranta (Titicaca, n. 3800 m), Uluru, Old Faithful -alue (Yellowstone,
+   * n. 2400 m).
+   */
+  grandcanyon: {
+    lat: 36.0544,
+    lon: -112.1401,
+    keskilampo: [-2.1, 1.4, 2.5, 9.8, 15.7, 20.4, 22.2, 21.6, 17.7, 12, 4.1, -2.7],
+    ylin: [3, 7, 8, 17, 23, 28, 29, 28, 24, 19, 10, 2],
+    alin: [-7, -4, -3, 3, 9, 13, 16, 15, 11, 5, -2, -8],
+    sade: [18, 24, 66, 13, 20, 3, 20, 18, 8, 29, 10, 30],
+    luonnehdinta: 'Grand Canyonin etelälaidalla korkeus (n. 2100 '
+      + 'metriä) tekee talvesta ankaran: joulu–tammikuu on '
+      + 'pakkasella. Kesällä (heinäkuu 22 astetta) sää on leudompi, '
+      + 'mutta sadetta tulee vähän ympäri vuoden.',
+  },
+  iguazu: {
+    lat: -25.5952,
+    lon: -54.5734,
+    keskilampo: [26.7, 26.6, 25, 21.6, 18.1, 19.2, 16.9, 18.2, 20.7, 23.9, 24.1, 26.3],
+    ylin: [31, 31, 29, 26, 23, 23, 21, 23, 25, 29, 29, 31],
+    alin: [22, 22, 21, 17, 14, 15, 13, 13, 16, 19, 19, 22],
+    sade: [137, 99, 133, 96, 201, 123, 97, 142, 105, 142, 150, 174],
+    luonnehdinta: 'Iguazússa on lämpimintä joulu–tammikuussa (26–27 '
+      + 'astetta) ja viileintä eteläisenä talvena heinäkuussa (17 '
+      + 'astetta). Sadetta riittää joka kuukausi runsaasti — '
+      + 'putoukset eivät kuivu koskaan.',
+  },
+  titicaca: {
+    lat: -15.8402,
+    lon: -70.0219,
+    keskilampo: [9.4, 9.7, 9.6, 8.7, 8.3, 7.7, 7.2, 7.9, 8.7, 9.4, 10.7, 10.1],
+    ylin: [14, 14, 14, 14, 15, 15, 15, 15, 16, 15, 17, 15],
+    alin: [5, 5, 5, 3, 2, 0, 0, 0, 1, 3, 4, 5],
+    sade: [240, 192, 131, 64, 12, 7, 4, 23, 46, 73, 65, 161],
+    luonnehdinta: 'Titicaca-järven korkealla ylängöllä (n. 3800 '
+      + 'metriä) päivä ja yö eroavat jyrkästi: päivät pysyvät '
+      + 'viileän leutoina, yöt käyvät touko–syyskuussa pakkasella. '
+      + 'Sadekausi on marraskuusta maaliskuuhun.',
+  },
+  uluru: {
+    lat: -25.3444,
+    lon: 131.0369,
+    keskilampo: [29.3, 28.7, 26.9, 21.5, 14.4, 10.7, 10.8, 14.2, 19.3, 21.4, 27.1, 25.6],
+    ylin: [36, 35, 33, 28, 21, 16, 18, 21, 27, 29, 35, 32],
+    alin: [23, 22, 21, 15, 8, 5, 4, 7, 12, 14, 20, 19],
+    sade: [30, 7, 9, 7, 10, 11, 10, 16, 6, 28, 2, 22],
+    luonnehdinta: 'Uluru on eteläisen kesän (joulu–helmikuu) '
+      + 'polttava, yli 29 asteen keskilämmöllä, ja talvella '
+      + '(kesä–heinäkuu) vain reilun kymmenen asteen. Sadetta tulee '
+      + 'vähän ympäri vuoden, aavikon tapaan.',
+  },
+  yellowstone: {
+    lat: 44.4605,
+    lon: -110.8281,
+    keskilampo: [-7.6, -7.4, -3.2, 0.8, 5.6, 11.1, 15.8, 16.4, 10, 2.9, -5, -9],
+    ylin: [-5, -3, 1, 5, 11, 18, 22, 23, 17, 8, -1, -5],
+    alin: [-11, -12, -8, -4, 0, 5, 10, 9, 3, -2, -9, -13],
+    sade: [77, 60, 69, 69, 57, 90, 36, 13, 49, 66, 72, 84],
+    luonnehdinta: 'Yellowstonen korkealla ylängöllä (n. 2400 metriä) '
+      + 'talvi on pitkä ja kylmä, joulu–tammikuu jää reilusti '
+      + 'pakkaselle. Lyhyt kesä (heinä–elokuu) nousee vain 16 '
+      + 'asteeseen, ja sadetta tulee kesäkuussa runsaimmin.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N6-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain bali,hawaii,milfordsound,mountrushmore,ouropreto. Asemat:
+   * Denpasar (Bali), Honolulu, Milford Sound, Mount Rushmore (Black
+   * Hillsin n. 1600 m), Ouro Preto (n. 1100 m, viilentää tyypillistä
+   * Brasilian rannikkoilmastoa).
+   */
+  bali: {
+    lat: -8.6705,
+    lon: 115.2126,
+    keskilampo: [26.1, 26.1, 26.2, 26.2, 26.2, 25.4, 24.6, 24.4, 24.7, 25.4, 26.1, 25.8],
+    ylin: [28, 28, 28, 28, 28, 27, 26, 26, 26, 27, 28, 28],
+    alin: [24, 24, 24, 24, 24, 24, 23, 23, 23, 23, 24, 24],
+    sade: [325, 273, 303, 200, 146, 59, 37, 44, 63, 95, 170, 382],
+    luonnehdinta: 'Balilla on tasaisen kuuma, 24–26 astetta ympäri '
+      + 'vuoden. Sadekausi marras–maaliskuussa on runsas — '
+      + 'joulukuu kastelee saarta yli 380 millimetrillä — ja '
+      + 'kesä–elokuu selvästi kuivempaa aikaa.',
+  },
+  hawaii: {
+    lat: 21.3069,
+    lon: -157.8583,
+    keskilampo: [22.8, 22.1, 22.5, 23.2, 23.9, 25.3, 25.6, 26, 25.9, 25.7, 24.7, 23.8],
+    ylin: [24, 24, 24, 25, 26, 27, 27, 28, 28, 28, 26, 26],
+    alin: [21, 20, 21, 21, 22, 23, 24, 24, 24, 24, 23, 22],
+    sade: [25, 42, 104, 28, 33, 12, 18, 13, 22, 51, 73, 62],
+    luonnehdinta: 'Havaijilla lämpötila pysyy koko vuoden 22–26 '
+      + 'asteessa, viileimpänä helmikuussa ja lämpimimpänä '
+      + 'elokuussa. Sateisin kuukausi on maaliskuu, kuivin kesä.',
+  },
+  milfordsound: {
+    lat: -44.6414,
+    lon: 167.8974,
+    keskilampo: [15.1, 15.1, 12.9, 11.9, 9.7, 7.1, 7, 7.1, 8.6, 10.7, 12.8, 13.8],
+    ylin: [18, 19, 16, 15, 12, 10, 9, 10, 12, 14, 16, 17],
+    alin: [12, 12, 10, 9, 7, 5, 5, 4, 5, 8, 10, 10],
+    sade: [378, 542, 326, 301, 229, 239, 366, 314, 445, 434, 296, 333],
+    luonnehdinta: 'Milford Sound on yksi maailman sateisimmista '
+      + 'asutuista paikoista: joka kuukausi kertyy vähintään 229 '
+      + 'millimetriä, helmikuussa yli 500. Lämpötila pysyy '
+      + 'leutona, kesäkuun seitsemästä asteesta tammikuun '
+      + 'viiteentoista.',
+  },
+  mountrushmore: {
+    lat: 43.8791,
+    lon: -103.4591,
+    keskilampo: [-1.4, -3.1, 0, 4.9, 10.6, 16.2, 18.8, 18.2, 12.8, 5.5, 0.7, -3.1],
+    ylin: [3, 1, 5, 11, 16, 22, 24, 24, 18, 11, 5, 1],
+    alin: [-6, -8, -5, -2, 5, 11, 13, 13, 7, 0, -4, -8],
+    sade: [12, 25, 66, 73, 96, 120, 133, 76, 50, 37, 22, 14],
+    luonnehdinta: 'Mount Rushmoren ympäristössä talvi on kylmä '
+      + 'ja kuiva, mutta kesä (heinäkuu 19 astetta) on selvästi '
+      + 'sateisin aika — kesäkuun ja heinäkuun ukkoskuurot '
+      + 'kastelevat Black Hillsiä yli 120 millimetrillä.',
+  },
+  ouropreto: {
+    lat: -20.3855,
+    lon: -43.5035,
+    keskilampo: [20.4, 20.6, 19.7, 18.7, 16.7, 15.8, 15.6, 15.9, 17.6, 18.7, 18.7, 19.7],
+    ylin: [24, 24, 23, 22, 21, 20, 20, 21, 22, 23, 22, 23],
+    alin: [17, 17, 16, 15, 13, 11, 11, 11, 13, 15, 16, 17],
+    sade: [302, 163, 183, 107, 45, 10, 15, 33, 108, 200, 296, 299],
+    luonnehdinta: 'Ouro Preto on n. 1100 metrin korkeutensa '
+      + 'ansiosta viileämpi kuin Brasilian rannikko: kesä '
+      + '(joulu–helmikuu) pysyy 20 asteessa, talvi (kesä–heinäkuu) '
+      + 'laskee reiluun viiteentoista. Sadekausi on loka–maaliskuu.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N8-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain angola,caphorn,namib,norfolk,robinsoncrusoe. Asemat: Luanda
+   * (Angola), Kap Horn, Sesriem (Namib), Norfolkinsaaren Kingston,
+   * San Juan Bautista (Robinson Crusoe / Juan Fernández).
+   */
+  angola: {
+    lat: -8.8390,
+    lon: 13.2894,
+    keskilampo: [26.7, 27.5, 27.7, 26.7, 25.8, 23.6, 21.2, 21.3, 22.7, 24.6, 25.8, 26],
+    ylin: [31, 32, 32, 30, 30, 28, 26, 26, 27, 28, 29, 29],
+    alin: [23, 23, 24, 24, 22, 19, 17, 17, 19, 21, 22, 23],
+    sade: [46, 63, 32, 106, 3, 0, 0, 2, 3, 12, 57, 28],
+    luonnehdinta: 'Angolan rannikolla Benguelan kylmä virta pitää '
+      + 'ilman kuivana huolimatta trooppisesta leveysasteesta: '
+      + 'kesä–elokuu on sateeton. Huhtikuu on sateisin, ja '
+      + 'lämpötila pysyy koko vuoden 21–28 asteessa.',
+  },
+  caphorn: {
+    lat: -55.9833,
+    lon: -67.2833,
+    keskilampo: [8.6, 8.5, 8.1, 7.4, 6, 4.2, 4, 4.3, 4.2, 5.6, 6.3, 7.3],
+    ylin: [9, 10, 9, 9, 7, 5, 5, 5, 5, 7, 8, 8],
+    alin: [8, 7, 7, 6, 5, 3, 3, 3, 3, 5, 5, 6],
+    sade: [117, 112, 145, 123, 115, 97, 71, 130, 85, 94, 118, 92],
+    luonnehdinta: 'Kap Hornissa on kylmää ja tuulista ympäri '
+      + 'vuoden, keskilämpö vain 4–9 astetta. Sadetta kertyy '
+      + 'joka kuukausi runsaasti, elokuussa yli 130 millimetriä.',
+  },
+  namib: {
+    lat: -24.5,
+    lon: 15.8,
+    keskilampo: [26.7, 26.3, 25.8, 23.5, 20.3, 17.3, 17.3, 17.2, 22.2, 23.5, 24.7, 25.4],
+    ylin: [34, 34, 33, 31, 28, 25, 25, 26, 31, 32, 33, 34],
+    alin: [19, 19, 18, 16, 12, 10, 9, 9, 13, 15, 16, 16],
+    sade: [19, 32, 4, 19, 5, 0, 1, 0, 1, 1, 2, 1],
+    luonnehdinta: 'Namibin aavikossa kesä (joulu–maaliskuu) on '
+      + 'polttava, yli 26 astetta, ja talvi (kesä–elokuu) laskee '
+      + 'reiluun seitsemääntoista. Sadetta ei käytännössä ole '
+      + 'toukokuusta marraskuuhun.',
+  },
+  /*
+   * NORFOLK: Open-Meteon ERA5-ruutu osuu tälle pienelle (n. 8 km)
+   * saarelle enimmäkseen mereen, jolloin vuorokauden vaihteluväli
+   * painui epäuskottavan kapeaksi (tools/hae-saanormaalit.mjs merkitsi
+   * rivin "TARKISTA"). Käytetty siksi Norfolk Island Airport -aseman
+   * omaa normaalia en-Wikipediasta (24.9.2026).
+   */
+  norfolk: {
+    lat: -29.0408,
+    lon: 167.9547,
+    keskilampo: [22.2, 22.8, 22, 20.5, 18.8, 17.2, 16.3, 16, 16.9, 17.8, 19.2, 20.9],
+    ylin: [25, 25, 25, 23, 21, 19, 19, 19, 19, 20, 22, 24],
+    alin: [20, 20, 20, 18, 17, 15, 14, 14, 14, 15, 16, 18],
+    sade: [80, 87, 107, 95, 102, 121, 123, 100, 78, 62, 72, 84],
+    lahde: { nimi: 'en-Wikipedia, Norfolk Island Airport -normaali', kausi: '1991–2020' },
+    luonnehdinta: 'Norfolkinsaarella ilmasto on leuto ympäri '
+      + 'vuoden, 14–25 asteessa. Sadetta riittää joka kuukausi, '
+      + 'runsaimmin touko–heinäkuussa.',
+  },
+  robinsoncrusoe: {
+    lat: -33.6333,
+    lon: -78.8333,
+    keskilampo: [17.3, 17.7, 18.1, 16.8, 15.4, 14.4, 13.2, 12.4, 12.2, 12.6, 13.7, 15.9],
+    ylin: [18, 18, 19, 17, 16, 15, 14, 13, 13, 13, 14, 16],
+    alin: [17, 17, 18, 16, 15, 14, 13, 12, 12, 12, 13, 15],
+    sade: [2, 5, 15, 25, 34, 71, 35, 38, 12, 7, 4, 5],
+    luonnehdinta: 'Robinson Crusoen saarella kesä (tammi–maaliskuu) '
+      + 'on lämpimin ja kuivin, 17–18 astetta. Sadetta kertyy '
+      + 'eniten eteläisenä talvena, kesäkuussa yli 70 millimetriä.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N9-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain appalakit,churchill,karthago,sierraleone,tanganjika. Asemat:
+   * Asheville NC (Appalakit), Churchill (Manitoba), Karthago (Tunisin
+   * lähellä), Freetown (Sierra Leone), Kigoma (Tanganjikajärvi).
+   */
+  appalakit: {
+    lat: 35.5951,
+    lon: -82.5515,
+    keskilampo: [4, 4.2, 8, 12.3, 14.8, 19.5, 22.7, 21.5, 17.9, 12.5, 7.9, 3.2],
+    ylin: [9, 9, 14, 19, 20, 25, 28, 26, 22, 18, 13, 8],
+    alin: [-1, -1, 2, 6, 9, 14, 17, 17, 13, 7, 3, -2],
+    sade: [90, 98, 77, 91, 103, 119, 78, 137, 110, 112, 120, 96],
+    luonnehdinta: 'Appalakeilla on selkeät vuodenajat: talvi '
+      + '(joulu–helmikuu) on kylmä, vain muutama aste, ja kesä '
+      + '(heinäkuu 23 astetta) lämmin. Sadetta kertyy tasaisesti '
+      + 'ympäri vuoden, elokuu on sateisin.',
+  },
+  churchill: {
+    lat: 58.7684,
+    lon: -94.1650,
+    keskilampo: [-22.4, -24.2, -17, -9.1, -1.2, 6.2, 10, 12.1, 6.1, -1.1, -11.6, -19.6],
+    ylin: [-19, -21, -14, -6, 2, 10, 14, 16, 8, 1, -9, -17],
+    alin: [-25, -27, -20, -12, -4, 2, 6, 8, 4, -3, -14, -23],
+    sade: [15, 8, 19, 18, 36, 36, 81, 83, 60, 42, 28, 16],
+    luonnehdinta: 'Churchillissä talvi on ankara: tammi–helmikuu '
+      + 'pysyy yli 20 asteen pakkasessa. Lyhyt kesä (heinä–elokuu) '
+      + 'nousee vain kymmeneen–kahteentoista asteeseen, ja tuolloin '
+      + 'myös sataa enemmän.',
+  },
+  karthago: {
+    lat: 36.8531,
+    lon: 10.3236,
+    keskilampo: [11.3, 12.1, 13.2, 15.9, 19.5, 22.3, 24.8, 26.3, 23.7, 20.6, 17.3, 13.3],
+    ylin: [14, 15, 16, 19, 23, 26, 28, 30, 27, 24, 20, 16],
+    alin: [9, 9, 10, 13, 16, 19, 21, 22, 21, 17, 15, 11],
+    sade: [58, 32, 41, 57, 29, 6, 10, 1, 48, 25, 60, 60],
+    luonnehdinta: 'Karthagossa on tyypillinen Välimeren ilmasto: '
+      + 'kesä (heinä–elokuu) on kuuma ja käytännössä sateeton, '
+      + 'talvi (marras–helmikuu) leuto ja sateinen.',
+  },
+  sierraleone: {
+    lat: 8.4657,
+    lon: -13.2317,
+    keskilampo: [26.4, 26.3, 26.2, 26.7, 26.4, 25.5, 24.6, 24.3, 24.8, 25.5, 26.3, 26.8],
+    ylin: [28, 28, 27, 28, 28, 27, 26, 26, 26, 27, 28, 28],
+    alin: [25, 25, 25, 25, 25, 24, 23, 23, 24, 24, 25, 25],
+    sade: [7, 11, 14, 92, 251, 339, 648, 721, 396, 292, 98, 41],
+    luonnehdinta: 'Freetownissa lämpötila pysyy koko vuoden '
+      + '24–27 asteessa, mutta sademäärä vaihtelee äärimmäisesti: '
+      + 'elokuu kastelee kaupunkia yli 700 millimetrillä, '
+      + 'tammikuu vain seitsemällä.',
+  },
+  tanganjika: {
+    lat: -4.8769,
+    lon: 29.6267,
+    keskilampo: [24.4, 24.7, 24.7, 24, 24.2, 24.2, 23.9, 24.7, 25.5, 25.3, 24, 23.7],
+    ylin: [26, 27, 27, 26, 26, 27, 27, 27, 28, 28, 26, 25],
+    alin: [23, 23, 23, 22, 22, 22, 21, 22, 23, 23, 22, 22],
+    sade: [229, 229, 223, 278, 138, 26, 1, 5, 35, 137, 328, 345],
+    luonnehdinta: 'Tanganjikajärven rannalla on tasaisen lämmin, '
+      + '24–26 astetta ympäri vuoden. Sadekausi marras–huhtikuussa '
+      + 'on runsas, kesä–elokuu käytännössä sateeton.',
+  },
 };

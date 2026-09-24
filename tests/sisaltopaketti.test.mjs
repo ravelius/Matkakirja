@@ -1270,3 +1270,45 @@ test('skeema 1.36: merinimet kuten webin nimiötasolla (Linssiseppä)', async ()
   assert.deepEqual(k.tyyli.kirjainkorkeusPx, Object.fromEntries(Object.entries(W.NIMION_KOOT.meri).map(([z, v]) => [z, v])));
   assert.equal(k.tyyli.versaali, true);
 });
+
+test('skeema 1.37: aluenimet Karttasepän tiedostosta sellaisenaan', () => {
+  const a = JSON.parse(readFileSync(new URL('../assets/data/aluenimet-natiivi.json', import.meta.url), 'utf8'));
+  const k = JSON.parse(tiedostot.get('kokoelmat/aluenimet.json'));
+  assert.equal(k.aineistoversio, a.versio);
+  assert.deepEqual(k.tyylit, a.tyylit);
+  assert.deepEqual(k.fontti, a.fontti);
+  assert.equal(k.alkiot.length, a.nimet.length + a.valtameret.length);
+  const idt = new Map(k.alkiot.map((r) => [r.id, r]));
+  assert.equal(idt.size, k.alkiot.length);
+  for (const n of a.nimet) assert.deepEqual(idt.get(n.id).paikat, n.paikat, n.id);
+  for (const v of a.valtameret) assert.equal(idt.get(v.id).luokka, 'valtameri');
+  for (const r of k.alkiot) assert.ok(k.tyylit[r.tyyli], `${r.id}: tyyli`);
+  // Merinimet (1.36) ovat aluenimien meriosa samoin tunnuksin.
+  const meret = JSON.parse(tiedostot.get('kokoelmat/merinimet.json')).alkiot;
+  for (const m of meret) assert.equal(idt.get(m.id)?.luokka, 'meri', m.id);
+});
+
+test('skeema 1.38: kaupunkien asukasluku Wikidatasta (Linssiseppä)', () => {
+  const a = JSON.parse(readFileSync(new URL('../tools/vienti/kaupunkien-asukkaat.json', import.meta.url), 'utf8'));
+  const k = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot;
+  assert.equal(Object.keys(a.kaupungit).length, k.length);
+  let luvullisia = 0;
+  for (const c of k) {
+    const r = a.kaupungit[c.id];
+    assert.ok(r, c.id);
+    assert.equal(c.asukkaat, r.asukkaat, c.id);
+    if (c.asukkaat == null) {
+      assert.equal(c.asukkaatLahde, null);
+      assert.equal(c.asukkaatAlue, false);
+      continue;
+    }
+    luvullisia += 1;
+    assert.ok(Number.isInteger(c.asukkaat) && c.asukkaat >= 0, c.id);
+    assert.match(c.asukkaatLahde, /^Wikidata P1082 \(CC0\)(, \d{4})?, Q\d+$/);
+    assert.equal(typeof c.asukkaatAlue, 'boolean');
+  }
+  assert.ok(luvullisia >= 220, `asukasluvullisia ${luvullisia}`);
+  const lontoo = k.find((c) => c.id === 'lontoo');
+  assert.ok(lontoo.asukkaat > 3e6 && !lontoo.asukkaatAlue);
+  assert.equal(k.find((c) => c.id === 'sumatra').asukkaatAlue, true);
+});
