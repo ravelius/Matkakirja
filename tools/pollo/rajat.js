@@ -169,7 +169,7 @@ export function sallittuOrigin(origin, lista = []) {
  * kuukausirajoin kuin selain), ei kuvaan, sähkeeseen eikä tilaan.
  */
 export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
-export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
 export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset']);
