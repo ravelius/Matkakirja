@@ -87,8 +87,8 @@ namespace Matkakirja
         [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu (smootherstep).")]
         public double kallistusNollaKm = KameraEleet.KallistusNollaM / 1000.0;
 
-        [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
-        public double kallistusHerkkyys = 0.25;
+        [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa (KameraEleet.KallistusHerkkyys).")]
+        public double kallistusHerkkyys = KameraEleet.KallistusHerkkyys;
 
         [Header("Napautus")]
         [Tooltip("Suurin liike näytön pisteinä, joka vielä on napautus.")]
@@ -594,6 +594,7 @@ namespace Matkakirja
         Elelukko lukko;
         float2 lukkoA0, lukkoB0;          // sormet (pikseleinä), kun kahden sormen ele alkoi
         float2 edellinenA, edellinenB;    // sormet edellisessä kehyksessä (kierto kehyksestä toiseen)
+        readonly KameraEleet.KiertoEstin kiertoEstin = new KameraEleet.KiertoEstin();
         // Tuplanapautus (löydös 30): edellisen napautuksen aika (s, unscaled) ja paikka pisteinä.
         double viimeNapautusAika = -1;
         float2 viimeNapautus;
@@ -660,7 +661,7 @@ namespace Matkakirja
                 keski = Mouse.current.position.ReadValue();
             }
 
-            if (n < 2) lukko = Elelukko.Ei;
+            if (n < 2) { lukko = Elelukko.Ei; kiertoEstin.Nollaa(); }
             if (n > 0)
             {
                 kosketettu = true;
@@ -692,10 +693,11 @@ namespace Matkakirja
                             lukko = KameraEleet.Paata(Pt(lukkoA0, Kerroin), Pt(lukkoB0, Kerroin), Pt(sa, Kerroin), Pt(sb, Kerroin));
                         if (lukko == Elelukko.Kallistus)
                         {
-                            // Yhdensuuntainen pystyveto kallistaa (kuten Apple Mapsissa); zoomi, suunta ja paikka pysyvät.
+                            // Yhdensuuntainen pystyveto kallistaa; zoomi, suunta ja paikka pysyvät. Veto ylös kallistaa
+                            // viistoon, alas palauttaa ylhäältä katsottavaksi (omistaja 24.9. klo 22.4x, KameraEleet.KallistusMuutos).
                             // Lähtö käytetystä kallistuksesta: tallennettu voi olla korkeuden rajaa suurempi.
                             double raja = KallistusRaja();
-                            kallistus = math.clamp(math.min(kallistus, raja) - siirto.y / Kerroin * kallistusHerkkyys, 0, raja);
+                            kallistus = math.clamp(math.min(kallistus, raja) + KameraEleet.KallistusMuutos(siirto.y / Kerroin, kallistusHerkkyys), 0, raja);
                             vetoNopeus = 0;
                         }
                         else if (lukko == Elelukko.NipistysKierto)
@@ -705,7 +707,8 @@ namespace Matkakirja
                             Kierra(siirto, dt);
                             if (edellinenVali > 1f && vali > 1f)
                                 korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
-                            double kierto = KameraEleet.KulmaMuutos(Pt(edellinenA, 1f), Pt(edellinenB, 1f), Pt(sa, 1f), Pt(sb, 1f));
+                            // Tahaton kierto nipistyksessä ei käännä karttaa (KameraEleet.KiertoEstin, kynnys 15°).
+                            double kierto = kiertoEstin.Suodata(KameraEleet.KulmaMuutos(Pt(edellinenA, 1f), Pt(edellinenB, 1f), Pt(sa, 1f), Pt(sb, 1f)));
                             if (kierto != 0)
                             {
                                 suuntima = Kiedo(suuntima + KameraEleet.SuuntimanMuutos(kierto));
@@ -720,6 +723,7 @@ namespace Matkakirja
                 else if (n >= 2)
                 {
                     lukko = Elelukko.Ei;
+                    kiertoEstin.Nollaa();
                     lukkoA0 = sa;
                     lukkoB0 = sb;
                 }
