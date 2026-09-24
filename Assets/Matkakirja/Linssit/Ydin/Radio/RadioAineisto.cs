@@ -56,6 +56,8 @@ namespace Matkakirja.Linssit.Radio
         public long? Asukkaat;
         /// <summary>asukkaatAlue: luku koskee saarta tai valtiota eikä kaupunkia → masto Pieni.</summary>
         public bool AsukkaatAlue;
+        /// <summary>Onko sisältöpaketin skeemassa asukkaat-kenttä (1.38+); vanhassa paketissa masto on Keski.</summary>
+        public bool AsukkaatSkeemassa;
     }
 
     public sealed class RadioAineisto
@@ -162,6 +164,7 @@ namespace Matkakirja.Linssit.Radio
                     Aloitus = MiniJson.Totuus(k, "aloitus"), Lentokentta = MiniJson.Totuus(k, "lentokentta"),
                     Asukkaat = MiniJson.Luku(k, "asukkaat") is double asuk && asuk > 0 ? (long)asuk : (long?)null,
                     AsukkaatAlue = MiniJson.Totuus(k, "asukkaatAlue"),
+                    AsukkaatSkeemassa = k.ContainsKey("asukkaat"),
                 });
 
             foreach (var m in (Lista(MiniJson.Kentta(Ob(maat), "alkiot")) ?? new List<object>()).Select(Ob).Where(m => m != null))

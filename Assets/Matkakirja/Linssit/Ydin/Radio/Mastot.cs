@@ -64,7 +64,12 @@ namespace Matkakirja.Linssit.Radio
         public static MastoKoko Koko(long? asukkaat, bool alue = false) =>
             asukkaat is long a && !alue ? (a >= IsoRaja ? MastoKoko.Iso : a >= KeskiRaja ? MastoKoko.Keski : MastoKoko.Pieni) : MastoKoko.Pieni;
 
-        public static MastoKoko Koko(RadioKaupunki k) => Koko(k?.Asukkaat, k?.AsukkaatAlue ?? false);
+        /// <summary>
+        /// Kaupungin masto. Sisältöpaketti ennen skeemaa 1.38 (ei asukkaat-kenttää lainkaan) → Keski, ettei koko
+        /// maailma näy pieninä mastoina (b12f: tuotannon paketissa kenttää ei vielä ollut).
+        /// </summary>
+        public static MastoKoko Koko(RadioKaupunki k) =>
+            k != null && !k.AsukkaatSkeemassa ? MastoKoko.Keski : Koko(k?.Asukkaat, k?.AsukkaatAlue ?? false);
 
         /// <summary>Maston korkeus ruudulla (pt) 2 600 km:n korkeudelta katsottuna.</summary>
         public static double KorkeusPt(MastoKoko k) => k switch { MastoKoko.Iso => 64, MastoKoko.Keski => 46, _ => 30 };

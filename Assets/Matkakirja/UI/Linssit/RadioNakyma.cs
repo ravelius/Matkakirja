@@ -200,7 +200,10 @@ namespace Matkakirja.Natiivi
             sovitin = s;
             Sido(s.Linssi);
             Nayta(true);
+            // Diagnoosi (b12f/b12i: pinnat puuttuivat laitteella): mitä Resources palauttaa, kerran avauksessa.
+            if (!pinnatKirjattu) { pinnatKirjattu = true; LinssiOhjain.Instanssi?.Kirjaa("radiopinnat: " + RadioPinnat.Diagnoosi() + $", pinnat {pinnat}"); }
         }
+        bool pinnatKirjattu;
 
         void Sido(RadioLinssi l)
         {
@@ -878,8 +881,28 @@ namespace Matkakirja.Natiivi
 
             public static Texture2D Kuva(string nimi)
             {
-                if (!kuvat.TryGetValue(nimi, out var t)) kuvat[nimi] = t = Resources.Load<Texture2D>("Radio/" + nimi);
+                if (!kuvat.TryGetValue(nimi, out var t))
+                {
+                    t = Resources.Load<Texture2D>("Radio/" + nimi);
+                    // Varareitti: tyypitön lataus (jos tuonti antoi muun kuin Texture2D-olion, se näkyy diagnoosissa).
+                    if (t == null) t = Resources.Load("Radio/" + nimi) as Texture2D;
+                    kuvat[nimi] = t;
+                }
                 return t;
+            }
+
+            public static string Diagnoosi()
+            {
+                var sb = new System.Text.StringBuilder();
+                foreach (var n in new[] { "radio-kotelo", "radio-kehys", "radio-lasi", "radio-vu-levy", "radio-viivain" })
+                {
+                    var t = Kuva(n);
+                    var o = Resources.Load("Radio/" + n);
+                    sb.Append($"{n}={(t != null ? $"{t.width}x{t.height} {t.format}" : "null")}/{(o != null ? o.GetType().Name : "ei")} ");
+                }
+                var kaikki = Resources.LoadAll("Radio");
+                sb.Append($"LoadAll(Radio)={kaikki.Length}");
+                return sb.ToString();
             }
 
             static bool Viipaloi(VisualElement e, string nimi, int viipale, float mittakaava)

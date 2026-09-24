@@ -23,6 +23,9 @@ namespace Matkakirja.Natiivi.Editori
             ti.wrapMode = assetPath.EndsWith("radio-viivain.png") ? TextureWrapMode.Repeat : TextureWrapMode.Clamp;
             ti.filterMode = FilterMode.Bilinear;
             ti.maxTextureSize = 1024;
+            // Ei kahden potenssiin skaalausta: kotelo 1024 × 320 ja VU-levy 256 × 180 venyivät 256:een ja 128:aan
+            // (diagnoosi 24.9. simulaattorissa). ASTC ei vaadi kahden potenssia.
+            ti.npotScale = TextureImporterNPOTScale.None;
             ti.SetPlatformTextureSettings(new TextureImporterPlatformSettings
             {
                 name = "iPhone",
