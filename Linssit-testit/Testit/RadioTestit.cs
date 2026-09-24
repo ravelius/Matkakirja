@@ -55,6 +55,7 @@ namespace Matkakirja.Linssit.Testit
             Paketti("maat.json"), Paketti("viritysaanet.json"));
         /// <summary>Tilakoneen testeihin: sama aineisto kaikki asemat "sallittu"-luokassa.</summary>
         static RadioAineisto sallittu;
+        public static RadioAineisto SallittuAineisto() => S();
         static RadioAineisto S()
         {
             if (sallittu != null) return sallittu;

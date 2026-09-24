@@ -21,6 +21,41 @@ namespace Matkakirja.Linssit.Radio
 {
     public enum MastoKoko { Pieni, Keski, Iso }
 
+    /// <summary>Radiomasto pallolla (suunnitelma luku 9): kaupunki, paikka, koko ja mitä se näyttää.</summary>
+    public sealed class Masto
+    {
+        /// <summary>Kaupungin tunnus (sama kuin RadioNappi.Kaupunki); napautus → SoitaKaupunki.</summary>
+        public string Id;
+        /// <summary>Aseman tunnus (maa, ISO3): vilkun jakso ja vaihe (Mastot.Vilkku).</summary>
+        public string Asema;
+        public double Lat, Lon;
+        public MastoKoko Koko;
+        /// <summary>Soitettava asema: valot palavat. false = kanavaton maa: ei valoja, peittävyys 50 %.</summary>
+        public bool Kanava;
+        /// <summary>Linkkiasema (kielletty luokka): valot palavat, renkaita ei synny.</summary>
+        public bool Linkki;
+    }
+
+    /// <summary>
+    /// Mastojen, hämärän, renkaiden ja yövalojen piirto (Natiiviseppä, Unity). Linssi kutsuu näitä; muiden
+    /// mastojen vilkku lasketaan varjostimessa Mastot.VilkunValo-kaavalla (jakso ja vaihe tunnuksesta).
+    /// </summary>
+    public interface IRadioMastot
+    {
+        /// <summary>Kerran avauksessa; null = mastot pois (sulku).</summary>
+        void Mastot(IReadOnlyList<Masto> mastot);
+        /// <summary>Mastojen nousu maasta 0…1 mastoittain (avaus 0,6 s Nousu, porrastettu etäisyyden mukaan).</summary>
+        void Nousu(string id, float osuus);
+        /// <summary>Hämärä 0…1 joka kehys avauksen ja sulun aikana (suunnitelma luku 3).</summary>
+        void Hamara(float h);
+        /// <summary>Valittu masto ja sen kirkkaus (VU-tahti, MastonKirkkaus); null = ei valittua.</summary>
+        void Valittu(string id, float kirkkaus);
+        /// <summary>Radioaaltorenkaat: keskus, kuuluvuussäde ja näkyvien renkaiden osuudet 0…1 (alfa 0,55 × (1 − osuus)).</summary>
+        void Renkaat(double lat, double lon, double sadeKm, IReadOnlyList<double> osuudet);
+        /// <summary>Yövalojen paikallinen tehostus valitun maston ympärillä (0…1).</summary>
+        void YonValot(double lat, double lon, float paikallinen);
+    }
+
     public static class Mastot
     {
         public const long IsoRaja = 2_000_000, KeskiRaja = 500_000;
@@ -126,6 +161,29 @@ namespace Matkakirja.Linssit.Radio
 
         /// <summary>Korkeuden kerroin kaaren keskellä.</summary>
         public static double KaarenKorotus(double matkaKm) => 1 + 0.6 * Math.Min(1, matkaKm / 2500);
+
+        public const double RadionKallistus = 40, AvausS = 1.5, SulkuS = 0.8, NousuS = 0.6, NousunPorras = 0.6, ValojenSyttyminen = 1.2;
+
+        /// <summary>Isoympyrän etäisyys (km).</summary>
+        public static double EtaisyysKm(double lat1, double lon1, double lat2, double lon2)
+        {
+            double r = Math.PI / 180, a = Math.Sin((lat2 - lat1) * r / 2), b = Math.Sin((lon2 - lon1) * r / 2);
+            double h = a * a + Math.Cos(lat1 * r) * Math.Cos(lat2 * r) * b * b;
+            return 2 * 6371 * Math.Asin(Math.Min(1, Math.Sqrt(h)));
+        }
+
+        /// <summary>Piste isoympyrällä osuudella u (0…1, ylitys sallittu kuminauhaa varten).</summary>
+        public static (double lat, double lon) Isoympyra(double lat1, double lon1, double lat2, double lon2, double u)
+        {
+            double r = Math.PI / 180;
+            double x1 = Math.Cos(lat1 * r) * Math.Cos(lon1 * r), y1 = Math.Cos(lat1 * r) * Math.Sin(lon1 * r), z1 = Math.Sin(lat1 * r);
+            double x2 = Math.Cos(lat2 * r) * Math.Cos(lon2 * r), y2 = Math.Cos(lat2 * r) * Math.Sin(lon2 * r), z2 = Math.Sin(lat2 * r);
+            double d = Math.Acos(Math.Clamp(x1 * x2 + y1 * y2 + z1 * z2, -1, 1));
+            if (d < 1e-9) return (lat1, lon1);
+            double a = Math.Sin((1 - u) * d) / Math.Sin(d), b = Math.Sin(u * d) / Math.Sin(d);
+            double x = a * x1 + b * x2, y = a * y1 + b * y2, z = a * z1 + b * z2;
+            return (Math.Atan2(z, Math.Sqrt(x * x + y * y)) / r, Math.Atan2(y, x) / r);
+        }
     }
 
     /// <summary>Valitun maston kirkkaus VU-tasosta: nousu 30 ms, lasku 250 ms, lattia 0,25.</summary>

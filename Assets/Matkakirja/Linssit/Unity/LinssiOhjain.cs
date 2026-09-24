@@ -742,6 +742,11 @@ namespace Matkakirja.Natiivi
             public static bool OmatNapit;
             /// <summary>Radio avataan (Natiivi-UI kytkee NapitMuuttuivat ja piirtää Napit).</summary>
             public static event Action<Matkakirja.Linssit.Radio.RadioLinssi> Avattiin;
+            /// <summary>
+            /// Radiouudistus (build 12): mastojen, hämärän, renkaiden ja yövalojen piirto (Natiiviseppä asettaa,
+            /// RAJAPINTA luku 4 / suunnitelma luku 9). null = ei mastoja eikä kallistusta (entinen radio).
+            /// </summary>
+            public static Func<Matkakirja.Linssit.Radio.IRadioMastot> MastoPiirto;
 
             public void Avaa(ILinssiYmparisto y)
             {
@@ -757,6 +762,7 @@ namespace Matkakirja.Natiivi
                 // Diagnoosi ennen kuin virta suljetaan (Laitetestaajan simulaattorilöydös 23.9.).
                 linssi.VirheSyntyy += syy => o.Kirjaa($"radio: {syy} | soitin: {virta?.Kuvaus ?? "-"}");
                 linssi.OmatNapit = OmatNapit;
+                linssi.Mastot3D = MastoPiirto?.Invoke();
                 Avattiin?.Invoke(linssi);
                 linssi.Avaa(y);
             }

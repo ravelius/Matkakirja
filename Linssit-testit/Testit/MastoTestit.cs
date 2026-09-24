@@ -6,6 +6,24 @@ using Matkakirja.Peli;
 
 namespace Matkakirja.Linssit.Testit
 {
+    public sealed class ValeMastot : IRadioMastot
+    {
+        public System.Collections.Generic.IReadOnlyList<Masto> Lista;
+        public int MastoKutsuja;
+        public float H = -1, Kirkkaus;
+        public string ValittuId;
+        public int Renkaita;
+        public double RengasSade;
+        public float Paikallinen;
+        public readonly System.Collections.Generic.Dictionary<string, float> Nousut = new System.Collections.Generic.Dictionary<string, float>();
+        public void Mastot(System.Collections.Generic.IReadOnlyList<Masto> m) { Lista = m == null ? null : m.ToList(); MastoKutsuja++; }
+        public void Nousu(string id, float o) => Nousut[id] = o;
+        public void Hamara(float h) => H = h;
+        public void Valittu(string id, float k) { ValittuId = id; Kirkkaus = k; }
+        public void Renkaat(double lat, double lon, double sade, System.Collections.Generic.IReadOnlyList<double> o) { Renkaita = o.Count; RengasSade = sade; }
+        public void YonValot(double lat, double lon, float p) => Paikallinen = p;
+    }
+
     public static class MastoTestit
     {
         static void Lahella(double odotettu, double saatu, double tol, string viesti) =>
@@ -91,6 +109,45 @@ namespace Matkakirja.Linssit.Testit
             Lahella(2.28, Mastot.KameraAjonKesto(800), 1e-9, "saapuu lukkoon");
             Oleta.Sama(1.2, Mastot.KameraAjonKesto(100), "lyhyt");
             Lahella(1.6, Mastot.KaarenKorotus(5000), 1e-9, "korotus enintään 1,6");
+        }
+    
+        [Testi] static void AvausSoittoJaSulkuMastoilla()
+        {
+            var y = new ValeYmparisto();
+            var v = new ValeVirta();
+            var k = new ValeRadioKartta();
+            var m = new ValeMastot();
+            var l = new RadioLinssi(RadioTestit.SallittuAineisto(), v, new ValeViritin(), k) { OmatNapit = true, Mastot3D = m };
+            l.Avaa(y);
+            Oleta.Sama(118, m.Lista.Count, "masto per radiokaupunki");
+            Oleta.Tosi(m.Lista.Count(x => x.Kanava) > 80, "kanavalliset");
+            Oleta.Sama(40.0, y.Ajo.Value.Kallistus, "avaus kallistaa 40°");
+            void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
+            Aja(0.75);
+            Oleta.Tosi(m.H > 0.3 && m.H < 0.8, "hämärä puolivälissä: " + m.H);
+            Aja(1.0);
+            Oleta.Tosi(Math.Abs(m.H - 1) < 1e-6, "hämärä valmis");
+            Oleta.Tosi(m.Nousut.Values.All(x => x > 0.99f), "mastot nousseet");
+            // Soitto: kamera-ajo kaarena, valittu ja renkaat vasta Soi-tilassa.
+            y.Asento = new Nakyma(48.85, 2.35, 2_600_000, 40);
+            k.Napauta("helsinki");
+            v.Kuuluu = true;
+            Aja(1.0);
+            Oleta.Sama(null, m.ValittuId, "virittäessä ei valittua");
+            Oleta.Tosi(y.Ajo.Value.Korkeus > 2_600_000 * 1.2, "kaari nousee keskellä: " + y.Ajo.Value.Korkeus);
+            Aja(1.5);
+            Oleta.Tosi(Math.Abs(y.Ajo.Value.Lat - 60.17) < 0.5 && Math.Abs(y.Ajo.Value.Korkeus - 2_600_000) < 1, "perillä: " + y.Ajo.Value);
+            Aja(1.0);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
+            Oleta.Sama("helsinki", m.ValittuId);
+            Oleta.Tosi(m.Kirkkaus >= MastonKirkkaus.Lattia, "kirkkaus lattiasta");
+            Oleta.Tosi(m.Renkaita >= 1, "renkaita: " + m.Renkaita);
+            Oleta.Sama(Mastot.KuuluvuusKm(Mastot.Koko(RadioTestit.SallittuAineisto().Kaupunki("helsinki"))), m.RengasSade);
+            Aja(2);
+            Oleta.Tosi(m.Paikallinen > 0.99f, "yövalot syttyneet");
+            l.Sulje();
+            Oleta.Sama(null, m.Lista, "mastot pois");
+            Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
         }
     }
 }
