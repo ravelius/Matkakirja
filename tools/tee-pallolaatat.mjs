@@ -559,7 +559,19 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     };
     return meri;
   }
-  return { varmista, pikseli, tilasto, mittaaMeri };
+  /** Kuten pikseli, mutta RGBA; palauttaa false, jos lähdelaatta puuttuu (väritaso). */
+  function pikseliRGBA(z, px, py, ulos, o) {
+    const taso = luettelo.tasot.find((t) => t.z === z);
+    const W = taso.leveys;
+    const x = ((Math.floor(px) % W) + W) % W;
+    const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
+    const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
+    if (!k) return false;
+    const i = ((y % L) * k.w + (x % L)) * 4;
+    ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2]; ulos[o + 3] = k.data[i + 3];
+    return true;
+  }
+  return { varmista, pikseli, pikseliRGBA, tilasto, mittaaMeri };
 }
 
 /**
@@ -666,6 +678,76 @@ export function kyllaista(rgb, s) {
     }
   }
   return rgb;
+}
+
+/*
+ * VÄRITASO PALLOLLE (--varitaso ISO, Natiiviseppä 24.9.2026: natiivi
+ * siirtyy webin pohjamalliin, sepiapohja + nykyisen maan väritaso).
+ * Webin väritaso on Miller-pyramidissa (pyramidi.json varitasot[ISO],
+ * <versio>/vari/<ISO>/z…), jota Cesium ei lue, joten se muunnetaan
+ * samalla kaavalla Mercator-laatoiksi — mutta RGBA:na: laatan alfa on
+ * väritason oma häivytys, ja kartan ulkopuoli sekä puuttuva lähdelaatta
+ * ovat läpinäkyviä. Ei täytettä, ei reunanostoa.
+ */
+export function varitasonLuettelo(pohja, iso) {
+  const v = pohja.varitasot?.[iso];
+  if (!v?.versio || !v.tasot?.length) throw new Error(`--varitaso ${iso}: luettelossa ei väritasoa`);
+  return {
+    ...pohja,
+    versio: `${v.versio}/vari${v.maaPolussa && v.maa ? `/${v.maa}` : ''}`,
+    viivataso: null, rantataso: null, nostotaso: null,
+    vari: { maa: iso, versio: v.versio, tasot: v.tasot, alue: v.alue ?? null },
+  };
+}
+
+/** Väritason pallokansio: julisteet/pallo/vari/<versio>/<ISO>/. */
+export const varitasonPallokansio = (versio, iso, tunniste = '') => `julisteet/pallo/vari/${versio}${tunniste ? `-${tunniste}` : ''}/${iso}/`;
+
+/*
+ * ALUEEN ULKOPUOLI KERMAKSI (Natiiviseppä 24.9.2026): webissä kerma-
+ * shader maalaa väritason alueen ulkopuolen, natiivissa sitä ei ole,
+ * joten reunalaattojen ulkopuoli (ja puuttuva lähdelaatta) poltetaan
+ * täydeksi kermaksi. Sama sävy kuin väritason kerma (#faf4d6) peitolla
+ * 0,85 (alfa 217). Maan ympäryksen häivytys ennallaan.
+ */
+export const VARIN_ULKOPUOLI = [250, 244, 214, 217];
+
+/** Yhden Mercator-laatan RGBA-puskuri väritasosta. */
+export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
+  const z = lahdetaso(Z);
+  const taso = luettelo.tasot.find((t) => t.z === z);
+  const n = 2 ** Z;
+  const ulos = Buffer.alloc(LAATTA * LAATTA * 4);
+  const reunat = laatanReunat(Z, X, Y);
+  const vali = julisteenLeveysvali(luettelo);
+  const latY = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.pohjoinen));
+  const latE = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.etela));
+  const a0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, latY);
+  const a1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, latE);
+  if (a0 && a1) {
+    let px1 = a1.px; if (px1 < a0.px) px1 += taso.leveys;
+    await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
+  }
+  for (let r = 0; r < LAATTA; r += 1) {
+    const lat = rivinLeveysaste(Z, Y, r);
+    const kartalla = lat < vali.pohjoinen && lat > vali.etela;
+    for (let s = 0; s < LAATTA; s += 1) {
+      const o = (r * LAATTA + s) * 4;
+      const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
+      const va = luettelo.vari?.alue;
+      const alueella = !va || (lon >= va.lon0 && lon <= va.lon1 && lat >= va.lat0 && lat <= va.lat1);
+      const a = kartalla && alueella ? arkinPikseli(luettelo, taso, lon, lat) : null;
+      /*
+       * Alueen ulkopuoli ja PUUTTUVA lähdelaatta → kerma. Läpinäkyvä
+       * pikseli olemassa olevassa laatassa on maan sisäosa ja jää
+       * läpinäkyväksi (kierros k2 kermasi sen virheellisesti).
+       */
+      if (!a || !lukija.pikseliRGBA(z, a.px, a.py, ulos, o)) {
+        [ulos[o], ulos[o + 1], ulos[o + 2], ulos[o + 3]] = VARIN_ULKOPUOLI;
+      }
+    }
+  }
+  return ulos;
 }
 
 /** Laskee yhden Mercator-laatan RGB-puskurin. */
@@ -883,7 +965,7 @@ async function paa() {
   const min = Number(lippu('--min') ?? 0);
   const max = Number(lippu('--max') ?? 7);
   const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
-  const alue = lippu('--alue')?.split(',').map(Number) ?? null;
+  let alue = lippu('--alue')?.split(',').map(Number) ?? null;
   const nostot = argv.includes('--nostot');
   /*
    * `--ilman-rantaa`: pallon sarja kootaan ilman rantatasoa, koska
@@ -936,6 +1018,13 @@ async function paa() {
     kansio = reliefinKansio(versio, kyllaisyys);
     luettelo.kyllaisyys = kyllaisyys;
   }
+  const variIso = lippu('--varitaso');
+  if (variIso) {
+    if (reliefLahde || nostot) throw new Error('--varitaso: ei --relief- eikä --nostot-lippua');
+    luettelo = varitasonLuettelo(pohjaLuettelo, variIso);
+    // --tunniste = sarjan kierros (laatat ovat vuoden välimuistissa).
+    kansio = varitasonPallokansio(luettelo.vari.versio, variIso, tunniste);
+  }
   /*
    * `--ilman-viivoja` (Linssiseppä 23.9.2026): sarja ilman viivatasoa eli
    * ilman poltettuja nykyrajoja — natiivin isoisän linssi 1873 vaihtaa sen
@@ -947,6 +1036,9 @@ async function paa() {
     if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
     luettelo = { ...luettelo, viivataso: null };
   }
+  // Väritason oletusalue on sen oma laatikko (varitasot[ISO].alue).
+  const va = luettelo.vari?.alue;
+  if (!alue && va) alue = [va.lon0, va.lat0, va.lon1, va.lat1];
   const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;
   if (luettelo.relief) console.log(`reliefi ${luettelo.versio} (pohjan geometria ${pohjaLuettelo.versio})`);
@@ -990,11 +1082,17 @@ async function paa() {
   let tehty = 0;
   const alkuAika = Date.now();
   for (const [Z, X, Y] of lista) {
-    const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
-    if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
-    const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer(); // eslint-disable-line no-await-in-loop
     mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
-    writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
+    if (luettelo.vari) {
+      const rgba = await laskeVariLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+      const webp = await sharp(rgba, { raw: { width: LAATTA, height: LAATTA, channels: 4 } }).webp({ quality: 90, alphaQuality: 100 }).toBuffer(); // eslint-disable-line no-await-in-loop
+      writeFileSync(join(ulos, String(Z), String(X), `${Y}.webp`), webp);
+    } else {
+      const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+      if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
+      const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer(); // eslint-disable-line no-await-in-loop
+      writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
+    }
     tehty += 1;
     if (tehty % 500 === 0 || tehty === yhteensa) {
       const s = Math.round((Date.now() - alkuAika) / 1000);
@@ -1035,6 +1133,7 @@ export function kirjoitaLuettelo(ulos, luettelo, {
     ...(tunniste ? { tunniste } : {}),
     // Reliefisarjan lähde (ETOPO 2022, public domain) attribuutiota varten.
     ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde, kyllaisyys: luettelo.kyllaisyys ?? 1 } : {}),
+    ...(luettelo.vari ? { varitaso: luettelo.vari } : {}),
     tasot: { min, max },
     /*
      * ALUESARJA (23.9.2026, natiivin syvä sarja Z9–Z11): laatat ovat
@@ -1044,7 +1143,7 @@ export function kirjoitaLuettelo(ulos, luettelo, {
      */
     ...(alue ? { alue } : {}),
     laatta: LAATTA,
-    muoto: 'jpg',
+    muoto: luettelo.vari ? 'webp' : 'jpg',
     tehty: new Date().toISOString(),
     // Mitkä nostot ovat laatoissa (ks. tiedoston alku, NOSTOTASON TIIVISTE).
     ...(nostot && luettelo.nostotaso ? { nostotaso: pallonNostotaso(luettelo, min, max) } : {}),
