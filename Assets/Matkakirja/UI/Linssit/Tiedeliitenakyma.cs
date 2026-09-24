@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         readonly KortinLukija lukija;
         readonly Kuvasuurennos suurennos;
         KeksinnotLinssi linssi;
-        int nykyinen = -1, pysakkeja;
+        int nykyinen = -1;
 
         public bool Auki { get; private set; }
 
@@ -73,10 +73,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>KeksinnotLinssi.JuttuPyydetty: sivu auki pysäkille i.</summary>
-        public void Avaa(KeksinnotLinssi l, int i, int pysakkienMaara)
+        public void Avaa(KeksinnotLinssi l, int i)
         {
             linssi = l;
-            pysakkeja = pysakkienMaara;
             nykyinen = -1;
             if (!Vaihda(i)) return;
             if (Auki) return;
@@ -162,18 +161,18 @@ namespace Matkakirja.Natiivi
             lista.AddToClassList("mk-tiedeliite__sisallyslista");
             lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisallys.Add(lista);
-            for (int j = 0; j < pysakkeja; j++)
+            if (linssi == null) return;
+            // Linssisepän Sisallys(): sivulliset pysäkit (indeksi, vuosi, otsikko, henkilö).
+            foreach (var (j, vuosi, otsikko, henkilo) in linssi.Sisallys())
             {
-                var t = linssi?.Tiedeliite(j);
-                if (t == null) continue;
                 int k = j;
                 var rivi = Rakenne.Nappi(null, "mk-tiedeliite__sisallysrivi" + (j == nykyinen ? " mk-valittu" : ""), () =>
                 {
                     sisallys.style.display = DisplayStyle.None;
                     Vaihda(k);
                 }, lista);
-                Kirjasimet.Aseta(Rakenne.Teksti(Ajoitus(t), "mk-tiedeliite__sisallysvuosi", rivi), Kirjasin.Kone);
-                Rakenne.Teksti(t.Henkilo ?? t.Otsikko ?? "", "mk-tiedeliite__sisallysnimi", rivi);
+                Kirjasimet.Aseta(Rakenne.Teksti(vuosi ?? "", "mk-tiedeliite__sisallysvuosi", rivi), Kirjasin.Kone);
+                Rakenne.Teksti(henkilo ?? otsikko ?? "", "mk-tiedeliite__sisallysnimi", rivi);
             }
         }
 

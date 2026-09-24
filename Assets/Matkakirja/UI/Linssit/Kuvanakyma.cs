@@ -250,17 +250,21 @@ namespace Matkakirja.Natiivi
             Rivi("Kuvaustapa", Liita(h.Kuvaustapa, h.Retkikunta, string.IsNullOrEmpty(h.Kuvaaja) ? null : "kuvaaja " + h.Kuvaaja));
             Rivi("Kuvatunnus", h.Id);
             Rivi("Lisenssi", l?.Lisenssi);
-            Rivi("Lähde", h.Sivu);
-            Rivi("Kuvakirjasto", l?.Osoite);
+            // Web ulkolinkki: kuvasivu ja kuvakirjasto avautuvat selaimeen.
+            Rivi("Lähde", string.IsNullOrEmpty(h.Sivu) ? null : "NASAn kuvasivu", h.Sivu);
+            Rivi("Kuvakirjasto", string.IsNullOrEmpty(l?.Osoite) ? null : "NASA Image and Video Library", l?.Osoite);
         }
 
-        void Rivi(string nimi, string arvo)
+        void Rivi(string nimi, string arvo, string osoite = null)
         {
             if (string.IsNullOrEmpty(arvo)) return;
             var r = Rakenne.El("mk-astrokuva__lisarivi", lisatiedot, PickingMode.Ignore);
             var n = Rakenne.Teksti(nimi + ": ", "mk-astrokuva__lisanimi", r);
             Kirjasimet.Aseta(n, Kirjasin.LukuLihava);
-            Rakenne.Teksti(arvo, "mk-astrokuva__lisaarvo", r);
+            var a = Rakenne.Teksti(arvo, "mk-astrokuva__lisaarvo" + (osoite != null ? " mk-astrokuva__linkki" : ""), r);
+            if (osoite == null) return;
+            a.pickingMode = PickingMode.Position;
+            a.AddManipulator(new Clickable(() => Application.OpenURL(osoite)));
         }
 
         static string Liita(params string[] osat)
