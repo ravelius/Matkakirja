@@ -101,3 +101,21 @@ Scarlett Solo USB:hen lopuksi). `peli-komento.txt`/`peli-tila.json`.
 Jäljellä: kohta 3 (mannerlento, vaatii pidemmälle edenneen pelin),
 laiva-raita (kohta 4), 11 (sanelu) ja 12 (äänettömyys/Bluetooth) —
 11 ja 12 vaativat fyysisen laitteen.
+
+## Jatko 2: kohdat 1, 3, 4 (Pelikoodarin ohjeilla, iPhone-simulaattori)
+
+- **Kohta 4 (laiva) PASS**: `uusi-peli 1 lontoo` → `kulkutapa laiva` →
+  `rivi 0` → `heita`. Kulkutapa "Meri", oma maisema-raita
+  (aporee-aporee_37194…, eri kuin lennon matkustamoääni), kompressori
+  2,089, taso/aika etenivät normaalisti.
+- **Kohta 3 (mannerlento)**: `koetila mannerlento` → tuntematon komento.
+  pelikoodari/koetila ei vielä masterissa, jää seuraavaan kierrokseen.
+- **Kohta 1 (intron nosto/purku) PASS, selvitetty tarkasti**: `luento
+  intro` -sarjalla mitattu pohjan taso ennen/aikana/jälkeen (uusi-peli 1
+  lontoo, pohja vakiintunut 0,01971). Aikana taso oli vakaasti 0,00296 =
+  suhde 0,150 — Pelikoodari vahvisti tämän oikeaksi: kaksi kerrointa
+  yhtä aikaa, avauksen ×0,6 ja kertojan puheväistö ×0,25 (0,6×0,25 =
+  0,150). Palautus: puheen loputtua taso oli jo puolivälissä (0,00855,
+  ~45 %) samalla mittaushetkellä ja täysi 0,01971 saavutettu viimeistään
+  ~2 s:n kohdalla — 1,8 s on rampin KESTO, ei viive ennen palautuksen
+  alkua (oma alkuperäinen oletukseni oli väärä). Ei korjaustarvetta.
