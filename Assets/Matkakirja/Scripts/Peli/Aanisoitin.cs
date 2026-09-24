@@ -654,11 +654,15 @@ namespace Matkakirja.Natiivi
             ladataan.Remove(url);
         }
 
-        /// <summary>Klippi levyltä: yli 3 Mt striimattuna (pyyntö elää klipin ajan), muuten purettuna muistiin.</summary>
+        /// <summary>Klippi levyltä: yli 3 Mt striimattuna (pyyntö elää klipin ajan), muuten pakattuna muistiin.</summary>
         IEnumerator Pura(Klippi k, string levy)
         {
             var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, Tyyppi(k.Url));
-            ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = k.Striimi;
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler;
+            dh.streamAudio = k.Striimi;
+            // Pakattuna muistiin (Compressed In Memory): muuten FMOD purkaa koko mp3:n pääsäikeessä
+            // (SoundManager.LoadFMODSound 73 ms iPadilla 2 Mt:n raidalla, Natiiviseppä 24.9.2026).
+            dh.compressed = true;
             yield return p.SendWebRequest();
             AudioClip c = null;
             try { if (p.result == UnityWebRequest.Result.Success) c = DownloadHandlerAudioClip.GetContent(p); }

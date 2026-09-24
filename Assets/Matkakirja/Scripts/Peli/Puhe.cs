@@ -208,6 +208,8 @@ namespace Matkakirja.Natiivi
             AudioClip klippi;
             using (var r = UnityWebRequestMultimedia.GetAudioClip("file://" + tiedosto, TyyppiPaatteesta(tiedosto)))
             {
+                // Pakattuna muistiin: ei koko luennan purkua pääsäikeessä (LoadFMODSound-piikki).
+                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
                 yield return r.SendWebRequest();
                 if (oma != tunnus) yield break;
                 if (r.result != UnityWebRequest.Result.Success)
