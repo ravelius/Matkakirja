@@ -385,7 +385,7 @@ namespace Matkakirja
         bool Leveys(Camera kamera, Vector2 ruutu, out double lat)
         {
             lat = 0;
-            Ray r = kamera.ScreenPointToRay(ruutu);
+            if (!PalloKierto.Sade(kamera, ruutu, out Ray r)) return false;
             var gt = georeferenssi.transform;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             double3 o = (float3)gt.InverseTransformPoint(r.origin);

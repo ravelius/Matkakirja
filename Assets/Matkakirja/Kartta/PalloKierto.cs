@@ -714,6 +714,25 @@ namespace Matkakirja
         (double, double, double, double, double, double) viimeKelvollinen = (25.0, 10.0, 2.0e7, 0, 0, 0);
         bool nanKirjattu;
 
+        /// <summary>
+        /// Näytön pisteen säde (pikseleinä, origo vasen alakulma) kameran FOV:sta ja asennosta ilman Unityn
+        /// ScreenPointToRayta: se kirjaa huonolla projektiolla joka kehys "Screen position out of view frustum"
+        /// (Laitetestaaja 24.9., iPhone, etelänapa). false = kamera ei ole kelvollinen.
+        /// </summary>
+        public static bool Sade(Camera kamera, Vector2 ruutu, out Ray sade)
+        {
+            sade = default;
+            if (kamera == null || Screen.width <= 0 || Screen.height <= 0) return false;
+            var t = kamera.transform;
+            float tanY = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            float nx = ruutu.x / Screen.width * 2f - 1f, ny = ruutu.y / Screen.height * 2f - 1f;
+            Vector3 suunta = t.forward + t.right * (nx * tanY * kamera.aspect) + t.up * (ny * tanY);
+            float pituus = suunta.magnitude;
+            if (!(pituus > 1e-6f) || float.IsNaN(t.position.x + t.position.y + t.position.z)) return false;
+            sade = new Ray(t.position, suunta / pituus);
+            return true;
+        }
+
         bool Kelvollinen() =>
             math.isfinite(leveys) && math.isfinite(pituus) && math.isfinite(korkeus) && korkeus > 0
             && math.isfinite(kallistus) && math.isfinite(suuntima) && math.isfinite(katseKorkeus);
