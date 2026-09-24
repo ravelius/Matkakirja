@@ -432,13 +432,15 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Kiinteä vihjekupla pulun vieressä (web polloVihje: ei ääntä, ei tekoälyä, ei chattia): esim. PeliOhjain.
-        /// ValintavihjeAika "Napauta korostettua kohdetta kartalla…". Näkyy tekstien piilotuksesta riippumatta
-        /// (opastus), kunnes PiilotaVihje tai napautus.
+        /// ValintavihjeAika "Napauta korostettua kohdetta kartalla…", kunnes PiilotaVihje tai napautus. Tekstien
+        /// piilotus koskee myös vihjettä (web lisaaPinoon → imePuhelimenKuplaan lajeille puhe ja vihje, omistaja
+        /// 14.9.; Fable 24.9. build 9): iPhonella ja luennan aikana vihje menee muistiin kuten repliikki, kuplaa ei näy.
         /// </summary>
         public void NaytaVihje(string teksti)
         {
             PiilotaVihje();
             if (string.IsNullOrEmpty(teksti) || !nakyvissa) return;
+            if (TekstitPiilossa) { piilotettu = teksti; piilotettuAika = Aika; return; }
             vihje = Kuplat.Lisaa(teksti, 10 * 60 * 1000f, null, "mk-kupla--vihje", aani: false);
         }
 
