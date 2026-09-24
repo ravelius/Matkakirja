@@ -124,6 +124,12 @@ namespace Matkakirja.Linssit
         void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null);
         /// <summary>Loitonnuksen katto metreinä; null = pelin oma raja.</summary>
         void ZoomiKatto(double? maxKorkeus);
+        /// <summary>
+        /// Kamera heti avaruuteen keskuksen yläpuolelle, korkeus pallon säteinä, kallistus 0 (web ihmisen
+        /// matkan avaaKaukaisuus: AVARUUDEN_KORKEUS 300, katto levennetty hetkeksi). Seuraava AjaKamera lähtee
+        /// tästä korkeudesta, vaikka se on pelin loitonnuksen katon yläpuolella.
+        /// </summary>
+        void KameraAvaruuteen(double lat, double lon, double pallonSateita);
         /// <summary>Korkeus, jolla koko pallo mahtuu ruutuun (web kokoPallonKorkeus).</summary>
         double KokoPallonKorkeus { get; }
         /// <summary>Korkeus, jolla ruudun LEVEYS näyttää annetun kaaren (asteina).</summary>

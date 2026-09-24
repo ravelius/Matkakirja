@@ -45,6 +45,10 @@ namespace Matkakirja.Linssit.Aikajana
     {
         public const double ValojenMs = 2600;
         public const double KehyksenLiukuMs = 500;
+        /// <summary>Avauksen lähtökorkeus pallon säteinä: Maa pisteenä tähtien keskellä (web AVARUUDEN_KORKEUS).</summary>
+        public const double AvaruudenKorkeus = 300;
+        /// <summary>Tähtitaivaan venytys ihmisen matkassa (web TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5).</summary>
+        public const double TahtienKerroin = AvaruudenKorkeus / 5;
         public const double AvaruudenMs = 7000;
         public const double AvaruudenMinMs = 1200;
         public const double ZoominJatkoMs = 4000;

@@ -120,6 +120,25 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Kamera heti annettuun korkeuteen (metreinä, myös MaxKorkeuden yläpuolelle), kallistus ja suuntima 0.
+        /// Ihmisen matkan avaus (Linssiseppä, web avaaKaukaisuus): Maa pisteenä tähtien keskellä, ja seuraava
+        /// Aja lähtee tästä korkeudesta (Etene sallii alkukorkeuden katon yläpuolella). Keskeyttää ajon.
+        /// </summary>
+        public void AsetaKaukaa(double lat, double lon, double korkeusM)
+        {
+            ajo = null;
+            liuku = 0;
+            kosketettu = true;
+            leveys = math.clamp(lat, -maxLeveys, maxLeveys);
+            pituus = Kiedo(lon);
+            korkeus = math.max(MinKorkeus(), korkeusM);
+            kallistus = 0;
+            suuntima = 0;
+            katseKorkeus = 0;
+            Aseta();
+        }
+
+        /// <summary>
         /// Loitontaa niin, että pisteet mahtuvat ruutuun (marginaali = osuus reunasta), jos ne eivät
         /// jo mahdu; keskipiste pysyy. Ei koskaan lähennä. Kaari lasketaan suurimmasta kulmaetäisyydestä
         /// nykyisestä keskipisteestä kapeamman suunnan mukaan.
@@ -530,7 +549,8 @@ namespace Matkakirja
             pituus = Kiedo(math.lerp(ajo.alku.x, ajo.loppu.x, e));
             leveys = math.lerp(ajo.alku.y, ajo.loppu.y, e);
             // Korkeus logaritmisesti (tasainen zoomin tuntu) ja nousu kaaren keskellä.
-            double hMax = MaxKorkeus();
+            // Ajo avaruudesta (AsetaKaukaa) saa lähteä katon yläpuolelta; katto koskee vain pelaajan zoomia.
+            double hMax = math.max(MaxKorkeus(), ajo.alku.z);
             double lh = math.lerp(math.log(ajo.alku.z), math.log(ajo.loppu.z), e);
             double kaari = math.sin(math.PI * e) * ajo.nousu * (math.log(hMax) - lh);
             korkeus = math.min(hMax, math.exp(lh + kaari));
