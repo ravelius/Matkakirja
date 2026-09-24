@@ -53,3 +53,18 @@ satlento2.sh (U=… MERI=bmng-bathy S2=s2-alkup <kansio>: aloituslento-video + k
 korkeuskuvat.sh, maakoe.sh. Merge-kaava: merge --no-ff → tarkista.sh → luo → kohtaus + Filmipino + uudet .metat/assetit
 (+ muuttuneet materiaaliarvot) omaan committiin → checkout Materiaalit/. Unityn loki simulaattorista: simctl launch
 --console-pty (tai Laitetestaajan --stdout=<tiedosto>).
+
+## Mastojen rajapinta (Linssiseppä klo 20.2x, haara linssiseppa/radio-paneeli 795e954:n jälkeinen commit)
+
+Ydin/Radio/Mastot.cs: `IRadioMastot { Mastot(lista|null), Nousu(id, 0…1), Hamara(0…1), Valittu(id, kirkkaus),
+Renkaat(lat, lon, sadeKm, osuudet), YonValot(lat, lon, paikallinen) }` ja `Masto { Id, Asema, Lat, Lon, Koko, Kanava,
+Linkki }`. Muiden mastojen vilkku varjostimessa: `Mastot.VilkunValo(asemaId, t)`, jakso+vaihe `Mastot.Vilkku(id)` (FNV-1a).
+Korkeus `Mastot.KorkeusM(koko, kameran korkeus)`, valotasot `Mastot.Valotasot(koko)`. Kytkentä:
+`LinssiOhjain.RadioSovitin.MastoPiirto = () => sinunPiirtosi`; kun asetettu, radio kallistaa 40° ja ajaa ajoitukset
+itse; null = entinen radio.
+
+## Keskeneräinen agentti
+
+Kamerareitin jatko (≤ 180°, esilataus) oli Opus-agentilla nollaushetkellä; mahdolliset commitit ovat haarassa
+natiiviseppa/kamerareitti 8fe2136:n päällä (worktree /Users/Shared/Claude/wt/proto-natiiviseppa-kamera). Jos haarassa ei
+ole uutta committia, tee työ itse luovutuksen kohdan 1 mukaan.
