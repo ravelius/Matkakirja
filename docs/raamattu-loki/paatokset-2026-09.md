@@ -4163,3 +4163,7 @@ Erä 3: Gao #3091; Al Kufra hylätty (ei toista paikannettavaa kohdetta). Fable:
 ## POSTIVAHTI: wt/sisaltokirjuri-santarem POISTETTIIN VIRHEELLISESTI (PR #3087 AUKI, EI MENETETTYA TYOTA) (24.9.2026 klo 16.16)
 
 Postivahdin ls-remote-tarkistus oli vanhentunut. Kaikki committoitu ja pushattu; haara on originissa. Oppi: poistolista vain 'git branch -r --merged origin/main' -tuloksesta tuoreen fetchin jälkeen ja PR-tilan (gh pr view --json state) tarkistuksella; ei ls-remote-arvauksia.
+
+## BUILD 9 TESTFLIGHTISSA: 1.0.0 (202609241305), PROTO 9a5618b, klo 16.13; SATELLIITTIVERTAILU: BATHY OLETUKSEKSI; #2999 → #3093 (24.9.2026 klo 16.18)
+
+Build 9: noppa webin mukaan, valintavihje, kone terävä, huntu häivytys, esilataus, maamerkit-paketti, päätasolukijat; muutosloki #3092; erä 4 mainissa (#2973 v2177 … #2942 v2181). Natiivisepän satvertailu.jpg (testi/b10 6f2acd5): topon meri lähes musta, bathy sininen ja rantaviivat erottuvat → Fable: bmng-bathy oletukseksi build 10:een; ennen mergeä harmaiden suorakulmioiden syy (S2-lataus vs häivytys) ja S2-sävyn valinta saumakuvalla; ämpärin karsinta vasta omistajan nähtyä build 10:n. #2999 (fable-periaatteet-teksti, 1 200 tiedostoa jäljessä) suljettu, korvattu #3093:lla (1 rivi). #2913 odottaa Siirtosepän uutta sessiota. Julkaisijan jono jatkuu; #3081 pidossa.
