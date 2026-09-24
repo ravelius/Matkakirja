@@ -164,6 +164,7 @@ namespace Matkakirja
             var kaytetyt = new HashSet<string>();
             foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
             if (silea != null) kaytetyt.Add(silea.materialKey);
+            if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
             string avainCesium = !kaytetyt.Contains("1") ? "1" : !kaytetyt.Contains("2") ? "2" : null;
             if (avainCesium == null)
             {
@@ -192,7 +193,69 @@ namespace Matkakirja
         public const string SileaUrl =
             "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923arajaton/{z}/{x}/{reverseY}.jpg";
 
-        CesiumUrlTemplateRasterOverlay silea;
+        CesiumUrlTemplateRasterOverlay silea, sentinel;
+
+        /// <summary>
+        /// Karttasepän satelliittisarjan versio (polttopäivä) tai null = ei vielä ämpärissä → lennon pintana sileä
+        /// sarja. julisteet/pallo/satelliitti/&lt;versio&gt;/bmng/{z}/{x}/{y}.jpg (Blue Marble Z0–Z7, public domain) ja
+        /// …/s2/{z}/{x}/{y}.jpg (Sentinel-2 2016 Z8–Z11 kaupunkien ympärillä, CC BY 4.0: "Contains modified
+        /// Copernicus Sentinel data 2016, EOX IT Services" → Tietoja), kattavuus s2/laatat.json (laatat8).
+        /// </summary>
+        public static string SatelliittiVersio = null;
+        const string SatelliittiJuuri = "https://media.matkakirja.app/julisteet/pallo/satelliitti/";
+        static HashSet<long> sentinelZ8;
+        bool sentinelHaettu;
+
+        static CesiumUrlTemplateRasterOverlay Kerros(GameObject go, string avain, string url, int max)
+        {
+            var k = go.AddComponent<CesiumUrlTemplateRasterOverlay>();
+            k.materialKey = avain;
+            k.templateUrl = Laattapalvelin.Paikallinen(url);
+            k.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
+            k.minimumLevel = 0;
+            k.maximumLevel = max;
+            k.tileWidth = 256;
+            k.tileHeight = 256;
+            return k;
+        }
+
+        /// <summary>Sentinel-kattavuus: Z8-esivanhempi laatat8-listassa; Z0–Z7 läpinäkyviä (Blue Marble alla).</summary>
+        static bool SentinelKattaa(int z, int x, int y)
+        {
+            var lista = sentinelZ8;
+            if (z < 8 || z > 11 || lista == null) return false;
+            int s = z - 8;
+            return lista.Contains(((long)(x >> s) << 32) | (uint)(y >> s));
+        }
+
+        System.Collections.IEnumerator HaeSentinelKattavuus(string versio)
+        {
+            string url = Laattapalvelin.Paikallinen(SatelliittiJuuri + versio + "/s2/laatat.json");
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(url))
+            {
+                yield return r.SendWebRequest();
+                if (r.result != UnityEngine.Networking.UnityWebRequest.Result.Success)
+                {
+                    Debug.LogWarning("MATKAKIRJA lennon pinta: Sentinel-kattavuus ei latautunut: " + r.error);
+                    sentinelHaettu = false;
+                    yield break;
+                }
+                var joukko = new HashSet<long>();
+                string t = r.downloadHandler.text;
+                int i = t.IndexOf("\"laatat8\"", StringComparison.Ordinal);
+                if (i >= 0)
+                {
+                    // [[x,y],[x,y],…] ilman JSON-kirjastoa (Kartta-asmdef): numeroparit ensimmäisestä '[':stä sulkevaan ']]':iin.
+                    int alku = t.IndexOf('[', i), loppu = alku < 0 ? -1 : t.IndexOf("]]", alku, StringComparison.Ordinal);
+                    if (alku < 0 || loppu < 0) { sentinelZ8 = joukko; yield break; }
+                    var luvut = System.Text.RegularExpressions.Regex.Matches(t.Substring(alku, loppu - alku), "\\d+");
+                    for (int k = 0; k + 1 < luvut.Count; k += 2)
+                        joukko.Add(((long)int.Parse(luvut[k].Value) << 32) | (uint)int.Parse(luvut[k + 1].Value));
+                }
+                sentinelZ8 = joukko;
+                Debug.Log($"MATKAKIRJA lennon pinta: Sentinel-kattavuus {joukko.Count} Z8-laattaa");
+            }
+        }
 
         /// <summary>
         /// LENNON KARTTA (omistaja 24.9.2026 klo 13.4x, Fablen päätös): lennon ajaksi sileä sarja pohjan päälle
@@ -206,17 +269,30 @@ namespace Matkakirja
             if (!paalle)
             {
                 if (silea != null) { silea.enabled = false; Destroy(silea); silea = null; }
+                if (sentinel != null)
+                {
+                    sentinel.enabled = false;
+                    Destroy(sentinel);
+                    sentinel = null;
+                    if (varitaso != null && rasterit.Count == 0) varitaso.Linssit(false);
+                }
                 return;
             }
             if (silea != null || rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
-            silea = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
-            silea.materialKey = "1";
-            silea.templateUrl = Laattapalvelin.Paikallinen(SileaUrl);
-            silea.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
-            silea.minimumLevel = 0;
-            silea.maximumLevel = 8;
-            silea.tileWidth = 256;
-            silea.tileHeight = 256;
+            string versio = SatelliittiVersio;
+            if (string.IsNullOrEmpty(versio))
+            {
+                silea = Kerros(pallo.gameObject, "1", SileaUrl, 8);
+                return;
+            }
+            // Satelliitti: Blue Marble paikkaan 1 (Z0–Z7; Cesium venyttää Z7:n syvemmälle), Sentinel paikkaan 2
+            // (väritaso väistyy lennon ajaksi kuten linssille). Cesium Unityssä {reverseY} = XYZ-rivi kuten pohjassa.
+            silea = Kerros(pallo.gameObject, "1", SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg", 7);
+            string s2 = SatelliittiJuuri + versio + "/s2/";
+            Laattapalvelin.Kattavuus(s2.Substring(Laattapalvelin.Ampari.Length), SentinelKattaa);
+            if (!sentinelHaettu) { sentinelHaettu = true; StartCoroutine(HaeSentinelKattavuus(versio)); }
+            if (varitaso != null) varitaso.Linssit(true);
+            sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
         }
 
         public void PoistaRasteri(string avain)
