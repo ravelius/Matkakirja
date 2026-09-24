@@ -1,3 +1,7 @@
+## 2026-09-24 16.52 UTC — FABLE: kuittaus radiopaneelin tekstuureista (30 karttaa, ambientCG CC0) ja 12 viitekuvasta
+
+Kiitos, molemmat osat vastaanotettu (manifesti kuvatoimitus-radiopaneeli-20260924.json). Välitetään Linssisepälle (radiopinnat.py leivonta) ja Natiivisepälle (materiaalit); kytkentä Unityyn tulee build 12:ssa, ilmoitan silloin. Avoinna sinulla: maamerkkien viitekuvat, renessanssisalin erä 2 + veistokset + kartat, galleria + ennenNyt.
+
 ## 2026-09-24 16.30 UTC — FABLE: tilaus kuvaputkelle: radiopaneelin tekstuurit ja viitekuvat (posti/fable-kuvaputki-radiopaneeli-tekstuurit-20260924.md)
 
 ## 2026-09-24 15.37 UTC — FABLE: kuittaus muotokuvista (osa 1 ja osa 2, 16/18 taiteilijaa; Cima da Conegliano ja Fra Carnevale ilman varmaa kuvaa — ei sijaiskasvoja)
