@@ -45,6 +45,13 @@ verkkopelin `Game` (yksinpeli vaellustilassa).
     **Kompressori** (maiseman DynamicsCompressor, Chromiumin dynamics_compressor.cc:n portti;
     Unityssä Scripts/Peli/MaisemaKompressori.cs OnAudioFilterRead), testit KompressoriTestit
     (kultaiset arvot Chromium 151:n OfflineAudioContextista).
+  - **Lukijaaani** (Kehittäjälehden Lukijaääni-dialogi; web js/puhe.js, puhe-oletukset.js, main.js
+    avaaLukijaaani, index.html #puhe-dialog): persoonat, oletukset, äänet, näytteet, säädöt
+    (PlayerPrefs = localStorage-avaimet, JSON kuten JSON.stringify), nopeus 0,6–1,6, voima 0,25–2,5,
+    lukijanTaso, puhepyynnön runko + x-pollo-kehittaja ja välimuistiavain. Kultainen jälki
+    `Kultaiset/lukijaaanijalki.json` (`node Kultaiset/tee-lukijaaanijalki.mjs <web/js>`), testit
+    LukijaaaniTestit. Unityssä Scripts/Peli/Puhe.cs (staattiset apurit, Nayte) ja PuheVahvistin.cs
+    (gain → Kompressori.Lukija, OnAudioFilterRead).
 - WKWebView-lehtikuori (LehtiKuori, MatkakirjaLehti.mm, LehtiOsoite) on poistettu (A4, 23.9.2026):
   lehdet ovat natiiveja (Natiivi-UI, `ILehtiNakyma`).
 

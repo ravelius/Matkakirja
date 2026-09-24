@@ -88,6 +88,12 @@ const vakiot = {
   voima: { oletus: vakio('VOIMA_OLETUS'), min: vakio('VOIMA_MIN'), max: vakio('VOIMA_MAX'), liuku: liuku('puhe-voima') },
   palvelin: (await tuo('packs/pollo-asetukset.js')).POLLOPALVELIN,
 };
+// Lukijan kompressori vahvistimen perässä (puhe.js kytkeVahvistin).
+vakiot.kompressori = Object.fromEntries(['threshold', 'knee', 'ratio', 'attack', 'release'].map((k) => {
+  const m = puheJs.match(new RegExp(`kompressori\\.${k}\\.value = (-?[0-9.]+);`));
+  if (!m) throw new Error('kompressori.' + k + ' puuttuu');
+  return [k, Number(m[1])];
+}));
 // Säilyvät asetukset (main.js SAILYVAT_ASETUKSET): uusi peli ei pyyhi näitä.
 vakiot.sailyvat = [...lauseke(mainJs, 'SAILYVAT_ASETUKSET')];
 

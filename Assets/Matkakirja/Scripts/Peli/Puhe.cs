@@ -19,15 +19,32 @@
 // tunnisteella User-Agentissa (verkkopelin PR #2956, Fablen päätös 23.9.2026).
 // Äänitetyt luennat ovat ensisijaisia; synteesi on välimuistissa kuten äänitteet.
 //
+// LUKIJAÄÄNI (Kehittäjälehden Lukijaääni-dialogi, web js/main.js avaaLukijaaani, 24.9.2026):
+// persoonat, oletukset, säädöt ja pyynnön runko ovat puhtaassa luokassa Peli/Lukijaaani.cs
+// (kultainen jälki), säilönä PlayerPrefs webin localStorage-avaimin. Staattiset apurit alla
+// (Persoonat, Oletus, Aanivaihtoehdot, Asetus/AsetaAsetus/PoistaAsetus, Nopeus, Voima) ja Nayte.
+//   - Ääni ja ohje kulkevat pyynnössä kuten webissä (haePala); worker tottelee niitä vain
+//     kehittäjäkoodilla (x-pollo-kehittaja, PlayerPrefs matkakirja-puhe-kehittaja tai
+//     matkakirja-pollo-kehittajakoodi; TalletaKehittajakoodi).
+//   - Nopeus (oletus 1,15) toteutuu GENEROINNISSA kuten webissä (OpenAI speed, worker `nopeus`),
+//     ei toistossa: AudioSource.pitch pysyy 1:ssä, joten sävelkorkeus ei muutu.
+//   - Voima (oletus 2,0) on synteesin vahvistus ennen kompressoria (PuheVahvistin, web GainNode +
+//     DynamicsCompressor): taso = Voima × Lukija-liuku / 0,9. Äänitteet soivat Lukija-tasolla
+//     kuten webin luenta.js (ei vahvistinta).
+//   - Välimuistiavain = webin haePala-avain (persoona|ääni|ohje|nopeus|teksti) ja luennat
+//     pyytävät workerin säilölohkon (persoona, pöllöllä ei) kuten web lueAaneen.
+//
 // iOS: äänettömyyskytkin mykistäisi Unityn oletusistunnon (Ambient). Web
 // Safarissa media soi kytkimestä huolimatta, joten natiivi asettaa istunnon
 // Playback + MixWithOthers (Plugins/iOS/MatkakirjaAani.mm) ensimmäisellä
 // puheella.
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.Networking;
 #if UNITY_IOS && !UNITY_EDITOR
@@ -39,7 +56,7 @@ namespace Matkakirja.Natiivi
     [DisallowMultipleComponent]
     public sealed class Puhe : MonoBehaviour
     {
-        public const string Puhepalvelin = "https://matkakirja-pollo.samireivinen.workers.dev";
+        public const string Puhepalvelin = Lukijaaani.Palvelin;
         /// <summary>Workerin PUHE_TEKSTIN_KATTO (tools/pollo/rajat.js).</summary>
         public const int TekstinKatto = 1000;
         /// <summary>Luennan loppuhäivytys (web LUENNAN_HAIPYMA_S).</summary>
@@ -53,13 +70,92 @@ namespace Matkakirja.Natiivi
         public event Action<bool> Puhuu;
 
         /// <summary>Puheen taso: Voima.Lukija, nolla kun äänet on mykistetty (Kytkin.Aanimaisema).</summary>
-        public static float Voimakkuus => Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(Voima.Lukija) : 0f;
+        public static float Voimakkuus => Asetukset.Paalla(Kytkin.Aanimaisema) ? Asetukset.Taso(global::Matkakirja.Natiivi.Voima.Lukija) : 0f;
+
+        // --- lukijaääni (Kehittäjälehden dialogi; web js/puhe.js + main.js) --------------------------
+
+        static Lukijaaani saadot;
+
+        /// <summary>Lukijaäänen säädöt PlayerPrefsissä (webin localStorage-avaimet).</summary>
+        public static Lukijaaani Saadot
+        {
+            get
+            {
+                if (saadot != null) return saadot;
+                saadot = new Lukijaaani(
+                    k => PlayerPrefs.HasKey(k) ? PlayerPrefs.GetString(k, null) : null,
+                    (k, v) => { PlayerPrefs.SetString(k, v); PlayerPrefs.Save(); },
+                    k => { PlayerPrefs.DeleteKey(k); PlayerPrefs.Save(); });
+                saadot.Muuttui += () =>
+                {
+                    if (Instanssi != null) Instanssi.PaivitaVahvistus();
+                    try { LukijaaaniMuuttui?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+                };
+                return saadot;
+            }
+        }
+
+        /// <summary>Jokin lukijaäänen säätö muuttui (asetus, nopeus tai voima).</summary>
+        public static event Action LukijaaaniMuuttui;
+
+        /// <summary>Dialogin lukijat: (merkinnat, "Matkakirja — merkinnät"), (kertoja, "Lehdet ja sivut"), (pollo, "Livia").</summary>
+        public static IReadOnlyList<(string Persoona, string Nimi)> Persoonat => Lukijaaani.Persoonat;
+
+        /// <summary>Workerin oletusääni ja -ohje (näytetään dialogissa "(pelin oletus: …)" ja paikkamerkkinä).</summary>
+        public static (string Aani, string Ohje) Oletus(string persoona) => Lukijaaani.Oletus(persoona);
+
+        /// <summary>Äänivalikon vaihtoehdot (tyhjä valinta = pelin oletus).</summary>
+        public static IReadOnlyList<string> Aanivaihtoehdot => Lukijaaani.Aanivaihtoehdot;
+
+        /// <summary>Dialogin kentät: Aani null = pelin oletus, Ohje null = tyhjä kenttä.</summary>
+        public static (string Aani, string Ohje) Asetus(string persoona) => Saadot.Asetus(persoona);
+
+        /// <summary>Tallentaa heti (web tallennaPuheKentat): aani null/"" = oletus, ohje trimmataan.</summary>
+        public static void AsetaAsetus(string persoona, string aani, string ohje) => Saadot.AsetaAsetus(persoona, aani, ohje);
+
+        /// <summary>"Palauta oletus": persoonan säädöt pois.</summary>
+        public static void PoistaAsetus(string persoona) => Saadot.PoistaAsetus(persoona);
+
+        public const float NopeusMin = (float)Lukijaaani.NopeusMin, NopeusMax = (float)Lukijaaani.NopeusMax;
+        public const float VoimaMin = (float)Lukijaaani.VoimaMin, VoimaMax = (float)Lukijaaani.VoimaMax;
+        /// <summary>Liukujen askel (index.html step 0.05).</summary>
+        public const float SaatoAskel = 0.05f;
+
+        /// <summary>Lukunopeus 0,6–1,6 (oletus 1,15). Asetus rajaa ja tallentaa; vaikuttaa seuraavasta generoinnista.</summary>
+        public static float Nopeus
+        {
+            get => (float)Saadot.Nopeus;
+            set => Saadot.AsetaNopeus(Tarkka(value));
+        }
+
+        /// <summary>Lukijaäänen voima 0,25–2,5 (oletus 2,0). Asetus rajaa, tallentaa ja vaikuttaa heti soivaan.</summary>
+        public static float Voima
+        {
+            get => (float)Saadot.Voima;
+            set => Saadot.AsetaVoima(Tarkka(value));
+        }
+
+        /// <summary>Liu'un float → webin desimaaliluku (1,15f → 1.15, ei 1.1499999761581421).</summary>
+        static double Tarkka(float x) =>
+            float.IsNaN(x) || float.IsInfinity(x) ? double.NaN
+            : double.Parse(x.ToString("R", System.Globalization.CultureInfo.InvariantCulture), System.Globalization.CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Kehittäjätilan pääkoodi talteen (web talletaPolloKoodi): kutsu koodilla, kun kehittäjätila
+        /// kytketään pääkoodilla, ja null, kun tila kytketään pois tai koodi on rajattu.
+        /// </summary>
+        public static void TalletaKehittajakoodi(string koodi) => Saadot.TalletaPolloKoodi(koodi);
+
+        /// <summary>Synteesin toistotaso (web lukijanTaso) ilman mykistystä.</summary>
+        public static float LukijanTaso => (float)Saadot.LukijanTaso(Asetukset.Taso(global::Matkakirja.Natiivi.Voima.Lukija));
 
         AudioSource lahde;
+        PuheVahvistin vahvistin;
         Coroutine lataus, haivytys;
         int tunnus;
         Action loppu;
         bool puhuu;
+        bool synteesi; // soiva klippi on puhesynteesiä (vahvistin + kompressori), muuten äänite
 
         /// <summary>Soiva (tai ladattava) äänite, null = hiljaa.</summary>
         public string SoivaUrl { get; private set; }
@@ -77,8 +173,22 @@ namespace Matkakirja.Natiivi
 
         void AsetuksetMuuttuivat(string nimi)
         {
+            PaivitaVahvistus();
             if (!Paalla && (puhuu || lataus != null)) { Pysayta(0.3f); return; }
-            if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Voimakkuus;
+            if (lahde != null && lahde.isPlaying && haivytys == null) lahde.volume = Kohdetaso;
+        }
+
+        /// <summary>
+        /// AudioSource.volume soivalle: äänite = Voimakkuus (Lukija-taso), synteesi = 1 (taso on
+        /// vahvistimessa, jotta se saa ylittää ykkösen). Mykistettynä kumpikin 0.
+        /// </summary>
+        float Kohdetaso => synteesi ? (Asetukset.Paalla(Kytkin.Aanimaisema) ? 1f : 0f) : Voimakkuus;
+
+        void PaivitaVahvistus()
+        {
+            if (vahvistin == null) return;
+            vahvistin.Kaytossa = synteesi;
+            vahvistin.Vahvistus = synteesi ? LukijanTaso : 1f;
         }
 
         static string Kansio => Path.Combine(Application.persistentDataPath, "aani");
@@ -100,6 +210,8 @@ namespace Matkakirja.Natiivi
             lahde.loop = false;
             lahde.spatialBlend = 0;
             lahde.priority = 0;
+            // Suodatin AudioSourcen perään samassa GameObjectissa (web: GainNode + kompressori).
+            vahvistin = gameObject.AddComponent<PuheVahvistin>();
             Asetukset.Muuttui += AsetuksetMuuttuivat;
         }
 
@@ -124,19 +236,40 @@ namespace Matkakirja.Natiivi
             this.loppu = loppu;
             SoivaUrl = url;
             ViimeVirhe = null;
-            lataus = StartCoroutine(LataaJaSoita(url, () => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET), viiveS, oma));
+            lataus = StartCoroutine(LataaJaSoita(url, () => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET), viiveS, oma, false, true));
             return true;
         }
 
         /// <summary>
-        /// Lukee tekstin puhesynteesillä (persoona: merkinnat | kertoja | pulu,
-        /// web PUHE_PERSOONAT). Muuten kuten Soita. Liian pitkä teksti katkaistaan
-        /// virkkeen rajalta workerin kattoon.
+        /// Lukee tekstin puhesynteesillä (persoona: merkinnat | kertoja | pollo, web PUHE_PERSOONAT;
+        /// muu lukee kertojan äänellä). Lukijaäänen säädöt (ääni, ohje, nopeus) kulkevat pyynnössä ja
+        /// voima vahvistimessa. Muuten kuten Soita. Liian pitkä teksti katkaistaan virkkeen rajalta
+        /// workerin kattoon.
         /// </summary>
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null)
         {
-            if (!Paalla || string.IsNullOrWhiteSpace(teksti)) return false;
-            teksti = Katkaise(teksti.Trim(), TekstinKatto);
+            if (!Paalla) return false;
+            return Syntetisoi(teksti, persoona, Lukijaaani.OletusLohko(persoona), true, viiveS, loppu);
+        }
+
+        /// <summary>
+        /// Kuuntele näyte (web #puhe-nayte): persoonan näyteteksti (PUHE_NAYTTEET) nykyisillä
+        /// säädöillä, ilman säilöä: ei välimuistia laitteelle eikä lohkoa workerille. Kutsu
+        /// AsetaAsetus ensin, jos kentissä on tallentamaton muutos (web tallentaa ennen näytettä).
+        /// Soi Kertoja-kytkimestä riippumatta kuten webissä; mykistetty peli ei soita. Pysäytä
+        /// dialogin sulkeutuessa Pysayta()-kutsulla (web pysaytaLukija).
+        /// </summary>
+        public bool Nayte(string persoona)
+        {
+            if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return false;
+            return Syntetisoi(Lukijaaani.NayteTeksti(persoona), persoona, null, false, 0, null);
+        }
+
+        bool Syntetisoi(string teksti, string persoona, string lohko, bool sailo, float viiveS, Action loppu)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return false;
+            persoona ??= "kertoja";
+            teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
             AsetaIstunto();
             int oma = ++tunnus;
             if (lataus != null) StopCoroutine(lataus);
@@ -144,8 +277,9 @@ namespace Matkakirja.Natiivi
             this.loppu = loppu;
             SoivaUrl = "puhe:" + persoona + ":" + teksti;
             ViimeVirhe = null;
-            string runko = "{\"tehtava\":\"puhe\",\"teksti\":" + PeliApu.Json(teksti) + ",\"persoona\":" + PeliApu.Json(persoona) + "}";
-            lataus = StartCoroutine(LataaJaSoita(SoivaUrl, () =>
+            var (runko, koodi) = Saadot.Pyynto(teksti, persoona, lohko);
+            string avain = Saadot.Valimuistiavain(persoona, teksti);
+            lataus = StartCoroutine(LataaJaSoita(avain, () =>
             {
                 var r = new UnityWebRequest(Puhepalvelin, UnityWebRequest.kHttpVerbPOST)
                 {
@@ -154,8 +288,9 @@ namespace Matkakirja.Natiivi
                 r.SetRequestHeader("Content-Type", "application/json");
                 r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
                 r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                if (koodi != null) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
                 return r;
-            }, viiveS, oma));
+            }, viiveS, oma, true, sailo));
             return true;
         }
 
@@ -179,13 +314,18 @@ namespace Matkakirja.Natiivi
             else AsetaPuhuu(false);
         }
 
-        IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma)
+        /// <param name="url">välimuistiavain: äänitteen osoite tai synteesin Lukijaaani.Valimuistiavain</param>
+        /// <param name="synteesi">klippi soi vahvistimen ja kompressorin läpi (web lukijan piiri)</param>
+        /// <param name="sailo">false = näyte: ladataan väliaikaiseen tiedostoon, joka poistetaan heti</param>
+        IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo)
         {
             float alku = Time.unscaledTime;
-            string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
-            if (!File.Exists(tiedosto))
+            string kansio = sailo ? Kansio : Application.temporaryCachePath;
+            string tiedosto = sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
+                : Path.Combine(kansio, "puhenayte-" + oma + ".mp3");
+            if (!sailo || !File.Exists(tiedosto))
             {
-                Directory.CreateDirectory(Kansio);
+                Directory.CreateDirectory(kansio);
                 string valiaikainen = tiedosto + ".lataus";
                 using (var r = pyynto())
                 {
@@ -222,6 +362,8 @@ namespace Matkakirja.Natiivi
                 }
                 klippi = DownloadHandlerAudioClip.GetContent(r);
             }
+            // Näyte ei jää laitteelle (web: sailio null). Pakattu klippi on jo muistissa.
+            if (!sailo) { try { File.Delete(tiedosto); } catch { } }
             float jaljella = viiveS - (Time.unscaledTime - alku);
             if (jaljella > 0) yield return new WaitForSecondsRealtime(jaljella);
             if (oma != tunnus) { Destroy(klippi); yield break; }
@@ -231,13 +373,17 @@ namespace Matkakirja.Natiivi
             lahde.Stop();
             lahde.clip = klippi;
             lahde.volume = 0;
+            lahde.pitch = 1f; // nopeus on generoinnissa (web: ei playbackRatea)
+            this.synteesi = synteesi;
+            PaivitaVahvistus();
+            vahvistin.Nollaa();
             lahde.Play();
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
             if (puhuu) AsetaPuhuu(false);
             AsetaPuhuu(true);
             lataus = null;
-            haivytys = StartCoroutine(Voimakkuuteen(Voimakkuus, Alkuhaivytys, false));
+            haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
 
             // Loppu: äänite soi loppuun (ei pysäytetty eikä korvattu).
             while (oma == tunnus && lahde.isPlaying) yield return null;
@@ -283,8 +429,11 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
-            if (puhuu && haivytys == null && lahde.isPlaying && !Mathf.Approximately(lahde.volume, Voimakkuus))
-                lahde.volume = Voimakkuus;
+            if (puhuu && haivytys == null && lahde.isPlaying)
+            {
+                float kohde = Kohdetaso;
+                if (!Mathf.Approximately(lahde.volume, kohde)) lahde.volume = kohde;
+            }
         }
 
         // --- apurit ------------------------------------------------------------

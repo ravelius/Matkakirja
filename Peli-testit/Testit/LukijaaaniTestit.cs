@@ -77,6 +77,14 @@ namespace Matkakirja.Peli.Testit
                 Oleta.Sama(Luku(liuku["max"]), max, nimi + " liuku");
                 Oleta.Sama(Luku(liuku["askel"]), askel, nimi + " askel");
             }
+            var ko = MiniJson.Objekti(v["kompressori"]);
+            var lk = Kompressori.Lukija();
+            Oleta.Sama((float)Luku(ko["threshold"]), lk.ThresholdDb, "threshold");
+            Oleta.Sama((float)Luku(ko["knee"]), lk.KneeDb, "knee");
+            Oleta.Sama((float)Luku(ko["ratio"]), lk.Ratio, "ratio");
+            Oleta.Sama((float)Luku(ko["attack"]), lk.AttackS, "attack");
+            Oleta.Sama((float)Luku(ko["release"]), lk.ReleaseS, "release");
+
             Rajat("nopeus", Lukijaaani.NopeusOletus, Lukijaaani.NopeusMin, Lukijaaani.NopeusMax, Lukijaaani.NopeusAskel);
             Rajat("voima", Lukijaaani.VoimaOletus, Lukijaaani.VoimaMin, Lukijaaani.VoimaMax, Lukijaaani.VoimaAskel);
         }
