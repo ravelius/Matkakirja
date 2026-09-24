@@ -773,8 +773,11 @@ namespace Matkakirja.Natiivi
         {
             kerrokset.Kytke();
             rekisteri.Paivita();
+#if !MATKAKIRJA_APPSTORE
+            // App Store -käännöksessä ei testikomentoja (kuten ui-komento.txt ja komento.txt).
             komentoKello -= Time.unscaledDeltaTime;
             if (komentoKello <= 0f) { komentoKello = 0.5f; LueKomennot(); }
+#endif
         }
 
         void OnDestroy()
