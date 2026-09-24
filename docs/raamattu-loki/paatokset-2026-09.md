@@ -4507,3 +4507,7 @@ Vastaukset: asukkaat Wikidatasta (Siirtoseppä, uusi skeema), avaus kallistaa 40
 ## JULKAISIJA NOLLATTU (POSTIVAHTI): LUOVUTUS -ilta MAINISSA (#3112), ALOITUSVIESTI MAINISTA, RC PAALLA; #3078 MAINISSA v2196 (24.9.2026 klo 19.40)
 
 Jono (sää, kohdekartat, #3111, #2913, #3094, #3113) ja savukeuusinnat jatkuvat uudella sessiolla luovutuksen osioiden 2–3 mukaan. Nollauksia tänään 24.
+
+## OMISTAJA AJOI AVAINNIPPUKORJAUKSEN A (set-key-partition-list login-avainnippuun) klo 19.5x — BUILD 11 ILMAN HAKULISTAN VAIHTOA (24.9.2026 klo 19.42)
+
+Tarkistettu: hakulista login + System, identiteetit FD3S699799 (RCD77XPB7M) ja 2RX77QMLHA (gmail, poisto vielä tekemättä, ei kiire). Julkaisijalle ilmoitettu.
