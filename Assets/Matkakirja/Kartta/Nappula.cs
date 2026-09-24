@@ -71,6 +71,8 @@ namespace Matkakirja
         public Aurinko aurinko;
         /// <summary>Lähtösumu ja pilvimeri (LENNON PINTA), Rakennus luo.</summary>
         public Usvalevy usva;
+        /// <summary>Kaupunkien tunnusrakennukset (Maamerkit.cs), Rakennus luo.</summary>
+        public Maamerkit maamerkit;
 
         GameObject olio;
         Material oma;
@@ -251,6 +253,8 @@ namespace Matkakirja
             kerrokset?.Nakyvyys("reitit", false);
             lentoMerkit = merkit;
             lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
+            // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
+            if (maamerkit != null) maamerkit.Nayta(lentoIdt);
             if (merkit != null)
             {
                 merkit.Renkaat(lentoIdt, null, LentoPunainen);
@@ -373,6 +377,7 @@ namespace Matkakirja
             {
                 kerrokset.LentoPohja(false);
                 if (usva != null) usva.Tavoite(0f, 1.4f);
+                if (maamerkit != null) maamerkit.Piilota();
                 if (reititEnnen) kerrokset.Nakyvyys("reitit", true);
             }
             if (lentoMerkit != null)

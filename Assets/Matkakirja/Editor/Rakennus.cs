@@ -145,6 +145,7 @@ namespace Matkakirja.Editori
             maamerkit.georeferenssi = georef;
             maamerkit.mallit = Maamerkit.Oletustaulukko()
                 .Select(r => MaamerkkiMalli(r.id)).Where(m => m != null).ToArray();
+            nappula.maamerkit = maamerkit;
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();
