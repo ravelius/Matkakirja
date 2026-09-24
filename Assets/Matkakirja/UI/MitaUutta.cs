@@ -157,6 +157,8 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(Lue(valmis));
         }
 
+        static readonly IReadOnlyList<(string Uusi, string Vanha)> Kentat = Paataso.Samat("versio", "build", "paiva", "teksti");
+
         static IEnumerator Lue(Action valmis)
         {
             string teksti = null;
@@ -168,7 +170,8 @@ namespace Matkakirja.Natiivi
                 foreach (var a in alkiot ?? new List<object>())
                 {
                     var o = a as Dictionary<string, object>;
-                    var d = MiniJson.Kentta(o, "data") as Dictionary<string, object> ?? o;
+                    // Päätaso ensin (versio, build, paiva, teksti), raaka data vain Paatason kautta.
+                    var d = Paataso.Nakyma(o, Kentat);
                     string v = MiniJson.Teksti(d, "versio") ?? MiniJson.Teksti(d, "build") ?? MiniJson.Teksti(o, "id");
                     string t = MiniJson.Teksti(d, "teksti");
                     if (v == null || string.IsNullOrEmpty(t)) continue;

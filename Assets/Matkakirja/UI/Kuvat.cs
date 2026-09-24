@@ -256,7 +256,31 @@ namespace Matkakirja.Natiivi
         /// ~33 ms kehyksiä): UnityWebRequestTexture purkaa JPG/PNG:n taustasäikeessä (nonReadable),
         /// laitevälimuisti luetaan file://-osoitteella samaa reittiä ja kirjoitetaan taustasäikeessä.
         /// </summary>
+        /// <summary>
+        /// Purkuja yhtä aikaa (UI-piikit 24.9.: lehden, kortin ja noston avauksessa EarlyUpdate.ExecuteMainThreadJobs
+        /// 20–37 ms, kun kymmenen kuvan tekstuurit valmistuivat samassa kehyksessä). Jono levittää ne kehyksille.
+        /// </summary>
+        const int PurkujaKerralla = 2;
+        static int purkuja;
+
+        static IEnumerator Vuoro()
+        {
+            while (purkuja >= PurkujaKerralla) yield return null;
+            purkuja++;
+        }
+
         static IEnumerator Lataa(string avain, string[] reitit, Action<Texture2D, Action<Texture2D>> muunna = null)
+        {
+            yield return Vuoro();
+            try
+            {
+                var sisa = LataaVuorossa(avain, reitit, muunna);
+                while (sisa.MoveNext()) yield return sisa.Current;
+            }
+            finally { purkuja--; }
+        }
+
+        static IEnumerator LataaVuorossa(string avain, string[] reitit, Action<Texture2D, Action<Texture2D>> muunna)
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);

@@ -379,7 +379,8 @@ namespace Matkakirja.Natiivi
                         var aid = T(o, "id");
                         if (aid == null) continue;
                         // Maa talteen dataan (skandaalin ja hetken minitehtävän avain).
-                        var data = Ob(MiniJson.Kentta(o, "data")) ?? o;
+                        // Päätaso ensin; tyypitetty kuva-olio jää pois (raaka data.kuva on merkkijono, url → $kuvaUrl).
+                        var data = Rakenne.Paatasolta(o, "kuva", "id");
                         if (T(o, "maa") != null && !data.ContainsKey("$maa")) data["$maa"] = T(o, "maa");
                         // Skeema 1.20+: tyypitetty kuva.url on valmis osoite (esim. elaintayt: tunnus tai
                         // assets/elaimet/… → kohtaamiset/elaimet/…); data.kuva on vain raaka arvo.
