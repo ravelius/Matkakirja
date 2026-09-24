@@ -166,7 +166,7 @@ namespace Matkakirja.Natiivi
             if (mesh == null) return;
             if (kamera == null) kamera = Camera.main;
             // Mitoitus ruutupisteinä kuten KaupunkiMerkit: retinalla piste on 2–3 pikseliä.
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = LinssiOhjain.Pistekerroin;
             materiaali.SetFloat("_RuudunKorkeusPt", Screen.height / kerroin);
             materiaali.SetFloat("_Peitto", Mathf.Clamp01(peitto));
             Vector3 kameraPaikka = kamera != null ? kamera.transform.position : Vector3.zero;

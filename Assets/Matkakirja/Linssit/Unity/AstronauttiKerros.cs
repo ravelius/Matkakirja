@@ -251,7 +251,7 @@ namespace Matkakirja.Natiivi
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = LinssiOhjain.Pistekerroin;
             float pikseleita = Screen.height / kerroin;
             bool ladotaan = nimetNakyvissa && Time.unscaledTime - ladottu >= (float)(Astronauttimatikka.LadonnanValiMs / 1000);
             if (ladotaan) { ladottu = Time.unscaledTime; ladottavat.Clear(); }
@@ -307,7 +307,7 @@ namespace Matkakirja.Natiivi
         void Napautus(Vector2 ruutu)
         {
             if (Linssi == null || kamera == null) return;
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = LinssiOhjain.Pistekerroin;
             Piste paras = null;
             float parasEtaisyys = (float)Astronauttimatikka.OsumaSadePx * kerroin;
             foreach (var p in pisteet)

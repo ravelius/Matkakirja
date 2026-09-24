@@ -55,6 +55,13 @@ namespace Matkakirja.Natiivi
         public static Action<string> LinssiMusiikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
+        /// <summary>
+        /// Laitepikseliä yhdellä pisteellä (CSS px / iOS pt), kuten Natiivi-UI: Round(dpi / 163).
+        /// iPadin 1x-tiheys on 132 dpi, joten pyöristämätön dpi/163 antoi 264 dpi:n iPadille 1,62
+        /// eikä 2: lamput, reikä ja vanat olivat 0,81× webin koosta (kontakti 24.9.).
+        /// </summary>
+        public static float Pistekerroin => Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+
         /// <summary>Vähennetty liike (iOS UIAccessibilityIsReduceMotionEnabled, liitännäinen).</summary>
         public static Func<bool> VahennettyLiikeKysely;
 

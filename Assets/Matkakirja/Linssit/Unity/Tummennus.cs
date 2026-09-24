@@ -87,7 +87,7 @@ namespace Matkakirja.Natiivi
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
                 if (edessa && ruutu.z > 0)
                 {
-                    float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+                    float kerroin = LinssiOhjain.Pistekerroin;
                     r = new Vector4(ruutu.x, ruutu.y, ReianSadePt * kerroin, 1);
                 }
             }
