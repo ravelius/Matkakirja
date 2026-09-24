@@ -61,6 +61,7 @@ namespace Matkakirja.Natiivi
         readonly Label eOtsikko, eTeksti, lOtsikko, lTeksti;
         readonly Button tauko, edellinen, seuraava, kaynnista, kahva, lueJuttu;
         readonly Tiedeliitenakyma tiedeliite;
+        readonly Keksijakaruselli karuselli;
         Tila tila;
         string kelloTeksti;
         int pysakki = -1, jakso = -1;
@@ -154,6 +155,18 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(lueJuttu, Kirjasin.KoneLihava);
             lueJuttu.style.display = DisplayStyle.None;
             tiedeliite = new Tiedeliitenakyma(kerros);
+
+            // Keksijäkaruselli alareunassa (web .aikajana-nauha): veto ja napautus kelaavat kaarta tauolle.
+            karuselli = new Keksijakaruselli(turva);
+            karuselli.VetoAlkoi += () => { SuljeValinaytos(false); var a = LinssiUi.Keksinnot?.Ajo; if (a != null && a.Kaynnissa) a.Tauko(); };
+            karuselli.Valittu += i => { SuljeValinaytos(false); NaytaLappu(); LinssiUi.Keksinnot?.Ajo?.Siirry(i); };
+            karuselli.Avaa += i =>
+            {
+                var l = LinssiUi.Keksinnot;
+                if (l == null || l.Tiedeliite(i) == null) return;
+                if (l.Ajo != null && l.Ajo.Kaynnissa) l.Ajo.Tauko();
+                l.AvaaJuttu(i);
+            };
 
             // Kertojan teksti (ihmisen matka).
             kertomus = Rakenne.El("mk-aikajana-kertomus", turva, PickingMode.Ignore);
@@ -265,6 +278,9 @@ namespace Matkakirja.Natiivi
                     if (tila != Tila.Keksinnot) return;
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
                     if (pysakki < 0 && !lopussa) paikka.text = keksinnot.Jakso;
+                    karuselli.Rakenna(keksinnot.Pysakit);
+                    // Nauha esiin vasta kaaren käynnistyessä (esittelyn aikana tyhjä kartta ja laatikko).
+                    karuselli.Nayta(pysakki >= 0);
                     var l = LinssiUi.Keksinnot;
                     KuunteleKaynnistys(l);
                     var ajo = l?.Ajo;
@@ -293,6 +309,9 @@ namespace Matkakirja.Natiivi
             if (t == Tila.Keksinnot) ylarivi.style.display = DisplayStyle.Flex;
             // Kertomuskaarella palkin toinen rivi väistyy: vuosi on kellossa (web .aikajana.kertomus .aikajana-paikka).
             paikka.style.display = t == Tila.Ihminen ? DisplayStyle.None : DisplayStyle.Flex;
+            // Keksintölinssissä ei ◀▶-nappeja (web: selaus karusellista ja valoista). Ihmisen matkassa ne
+            // jäävät webin aikaselaimen tilalle, kunnes aikaselain on natiivissa.
+            edellinen.style.display = seuraava.style.display = t == Tila.Ihminen ? DisplayStyle.Flex : DisplayStyle.None;
             Valikko.NaytaAlusta(t == Tila.Keksinnot || IhmisenAlustus != null);
             tauolla = false;
             PaivitaTauko();
@@ -312,6 +331,7 @@ namespace Matkakirja.Natiivi
             SuljeValinaytos(false);
             PoisHavainne();
             lopussa = false;
+            karuselli.Nayta(false);
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -492,6 +512,7 @@ namespace Matkakirja.Natiivi
                 Rakenne.Nayta(loppu, false, 0);
                 lopussa = false;
                 paikka.text = keksinnot.Jakso;
+                karuselli.Aseta(0);
                 pysakki = -1;
                 var ajo = LinssiUi.Keksinnot?.Ajo;
                 if (ajo != null) ajo.Alusta(keksinnot.Alku);
@@ -558,6 +579,8 @@ namespace Matkakirja.Natiivi
             if (keksinnot == null) { LataaKeksinnot(() => { if (pysakki == i) NaytaPysakki(i); }); return; }
             if (i < 0 || i >= keksinnot.Pysakit.Count) return;
             var p = keksinnot.Pysakit[i];
+            karuselli.Nayta(true);
+            karuselli.Aseta(i);
             string vuosi = double.IsNaN(p.Vuosi) ? null : ((int)p.Vuosi).ToString(CultureInfo.InvariantCulture);
             // Palkin toinen rivi pysäkillä: ajoitus · paikka (web [ajoitus(t), paikka(t)].join(' · ')).
             paikka.text = Liita(p.Ajoitus ?? vuosi, p.Paikka);

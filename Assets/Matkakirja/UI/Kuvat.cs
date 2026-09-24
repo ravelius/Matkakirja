@@ -115,11 +115,52 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Kuva pienennettynä leveys × korkeus -rajaukseen (peittäen; ylaAsento 1 = yläreuna, 0,5 = keskeltä).
+        /// Sama levy- ja verkkoreitti kuin Hae, mutta muistiin jää vain pieni versio: alkuperäinen
+        /// puretaan, pienennetään GPU:lla ja vapautetaan (keksijäkarusellin 26 muotokuvaa ~1100 × 1400).
+        /// </summary>
+        public static void HaePienena(string tiedostoTaiUrl, int leveys, int korkeus, float ylaAsento, Action<Texture2D> valmis, string kansio = "kuvat")
+        {
+            var reitit = Reitit(tiedostoTaiUrl, kansio);
+            if (reitit.Length == 0) { valmis?.Invoke(null); return; }
+            string avain = reitit[0] + "@" + leveys + "x" + korkeus;
+            if (muisti.TryGetValue(avain, out var t) && t != null) { valmis?.Invoke(t); return; }
+            if (kesken.TryGetValue(avain, out var odottajat)) { odottajat.Add(valmis); return; }
+            kesken[avain] = new List<Action<Texture2D>> { valmis };
+            UiKerros.Hae().StartCoroutine(Lataa(avain, reitit, alkup => Pienenna(alkup, leveys, korkeus, ylaAsento)));
+        }
+
+        /// <summary>Rajaus peittäen (object-fit: cover) ja pienennys GPU:lla luettavaksi tekstuuriksi.</summary>
+        public static Texture2D Pienenna(Texture lahde, int leveys, int korkeus, float ylaAsento = 0.5f)
+        {
+            float suhde = (float)lahde.width / Mathf.Max(1, lahde.height), kohde = (float)leveys / korkeus;
+            Vector2 skaala = Vector2.one, siirto = Vector2.zero;
+            if (suhde > kohde) { skaala.x = kohde / suhde; siirto.x = (1f - skaala.x) * 0.5f; }
+            else { skaala.y = suhde / kohde; siirto.y = (1f - skaala.y) * Mathf.Clamp01(ylaAsento); }
+            var rt = RenderTexture.GetTemporary(leveys, korkeus, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            var ennen = RenderTexture.active;
+            try
+            {
+                Graphics.Blit(lahde, rt, skaala, siirto);
+                RenderTexture.active = rt;
+                var t = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };
+                t.ReadPixels(new Rect(0, 0, leveys, korkeus), 0, 0, false);
+                t.Apply(false, true);
+                return t;
+            }
+            finally
+            {
+                RenderTexture.active = ennen;
+                RenderTexture.ReleaseTemporary(rt);
+            }
+        }
+
+        /// <summary>
         /// Lataus ja purku ilman pääsäikeen piikkiä (Natiiviseppä mittasi kaupunkikortin avauksessa
         /// ~33 ms kehyksiä): UnityWebRequestTexture purkaa JPG/PNG:n taustasäikeessä (nonReadable),
         /// laitevälimuisti luetaan file://-osoitteella samaa reittiä ja kirjoitetaan taustasäikeessä.
         /// </summary>
-        static IEnumerator Lataa(string avain, string[] reitit)
+        static IEnumerator Lataa(string avain, string[] reitit, Func<Texture2D, Texture2D> muunna = null)
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
@@ -149,6 +190,14 @@ namespace Matkakirja.Natiivi
                     }
                     catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
                 });
+            }
+            if (tulos != null && muunna != null)
+            {
+                Texture2D pieni = null;
+                try { pieni = muunna(tulos); }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva: pienennys " + e.Message); }
+                UnityEngine.Object.Destroy(tulos);
+                tulos = pieni != null ? Nimea(pieni, avain) : null;
             }
             if (tulos == null) Debug.LogWarning("MATKAKIRJA ui kuva ei latautunut: " + reitit[0]);
             else Muista(avain, tulos);
