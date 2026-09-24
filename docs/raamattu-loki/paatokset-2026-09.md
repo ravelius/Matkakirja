@@ -4031,3 +4031,7 @@ Omistaja kysyi, miksi natiiviin on tehty asioita ensin väärin tarkistamatta we
 ## LINSSISEPPA: HUIPPUVUORET EI VARITY WEBIN VERTAILULINSSISSA (#3030:N JALKEENKAAN), FINNMARKIN VALKOISET KOLMIOT — FABLE: WEB-BUGI, WEB KORJATAAN, NATIIVI OIKEIN (24.9.2026 klo 15.22)
 
 'Web on malli' = webin tarkoitettu käytös, ei bugit. Huippuvuoret Norjan väriin molemmissa; natiivi (17 rengasta Norjan maarajoissa) tekee oikein; Linssiseppä korjaa webin vertailulinssin ja Finnmarkin täytön kolmiot (bugikorjaus sallittu web-ylläpito), web-PR Julkaisijalle, kirjaus pariteettiraporttiin 'web korjattu natiivin tasolle'. Linssisepällä ei avoimia merge-pyyntöjä; seuraavat linssierät kaavalla web-kuva → mitat → kuvapari. WEB ON MALLI -sääntö lähetetty Natiivisepälle, Natiivi-UI:lle, Pelikoodarille, Laitetestaajalle ja Linssisepälle.
+
+## SISALTOKIRJURI (UUSI SESSIO): KALGOORLIEN KOHDEKARTTA PR #3075 (v2177, 9eb1b1bb2); INVENTAARION KOHTA 5.5 PR #3045:AAN (c1372f119) (24.9.2026 klo 15.24)
+
+Kaksi kohdetta piste.teksti-polulla, pisteet maalla, mittarit ok; 12 hyväksytyn ja 18 hylätyn kaupungin lista perusteineen inventaariossa. Testit 4204/0 fail. Jatkaa: Mount Isa, Broome, Geraldton, Porto Velho. Rutiini → Julkaisija mergeää.
