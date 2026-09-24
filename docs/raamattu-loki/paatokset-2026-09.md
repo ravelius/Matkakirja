@@ -4879,3 +4879,7 @@ Lähteet ladattu ilman tunnusta, putki pelkällä Nodella, siirto ~1,7 Mt + läm
 ## LOYDOS 46 KUVAPARIT VALMIIT (NATIIVISEPPA testi/b12r b6b3e9e, ISO iPAD): proto-3d/lokit/loydos46-b12r2/kallistus-4.jpg + ylhaalta-4.jpg (1 NYKYINEN, 2 RANNAT TAYSILLA, 3 RANNAT 0,25, 4 ILMAN RANTAVIIVAA); HORISONTIN MUSTA OLI KUVAUSSKRIPTIN AJOITUS, USVA KERMA; SUMUVARIANTTIEN KARSINTA KORJATTU — FABLE: VALIAIKAINEN OLETUS 3 JA MERGE JUNAAN (BUILD 12), OMISTAJAN VALINTA AAMUN KORTISSA, 4 ON YKSI VAKIO; nostot-50 OSA B (b0b89bd) JUNAAN KUN SKEEMA 1.39 VALMIS (25.9.2026 klo 01.37)
 
 Omistajan linjaus 25.9. klo 00.0x: rantaviiva himmeänä tai pois → 3 on turvallinen välioletus. Ranska 28 → 64/92, Kreikka 34 → 62/65 nostoa.
+
+## WEB-PR #3135 (PELIKOODARI): NOSTONIMIOT PIIRTYIVAT PYSTYSSA TUOTANNOSSA (ASU LUETTIIN IRROTETULTA svg:LTA JA JAI VALIMUISTIIN; 308/308 PYSTYSSA → 314/314 KURSIIVIA) → JULKAISIJALLE HETI. FABLE (NIMIOLUKKO): LATTIAKERTOIMELLA (KAMERA MATKALLA) LADOTTUA NIMEA EI LUKITA, LUKKO VASTA PERILLA LOPULLISELLA KERTOIMELLA; SAAPUMISESSA EI HYPPYA (LADONTA KOHDEKERTOIMEN GEOMETRIALLA TAI HAIVYTYS PERILLA); SAVUKKEESEEN PARIISI 11 AJOA < 16 px (25.9.2026 klo 01.46)
+
+Tausta: PARIISI jäi 185 px:n päähän pisteestä ~3/11 ajossa, koska nimi ladottiin kertoimella 0,2 ennen kameran saapumista ja lukko skaalautui ×5 purkautumatta (sääntö 5, PR #2882). Omistajan sääntö 23.9. koskee lepotilan näkyvää nimiötä. Natiivissa saapumisen välikortti mitattu webin mukaiseksi; UITK letter-spacing em/100, Natiivi-UI muunsi 153 USS-arvoa.
