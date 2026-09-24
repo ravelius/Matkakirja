@@ -11,22 +11,22 @@ Louvre-teokset Commonsin PD-toisintoina (C2RMF) ja vastaavat.
 ### Erä 2, tilattavat maalaukset (samat kentät ja polut kuin erässä 1)
 
 NGA Washington, open access (CC0) — hae NGA:n open-access-tietokannasta
-tekijän ja nimen mukaan:
+tekijän ja nimen mukaan (objectID:t Linssisepältä, openaccess=1; IIIF-osoitteet docs/raportit/linssi-taidemuseo-teosluettelo-20260924.md):
 
 Rooma:
-1. Rafael — *The Alba Madonna* (c. 1510)
-2. Rafael — *Bindo Altoviti* (c. 1515)
-3. Sebastiano del Piombo — *Cardinal Bandinello Sauli, His Secretary, and Two Geographers* (1516)
-4. Sebastiano del Piombo — *Portrait of a Humanist* (c. 1520)
-5. Luca Signorelli — *The Crucifixion* (c. 1504/1505) (tai NGA:n muu Signorelli, jos tätä ei ole)
-6. Perugino — *Madonna and Child* (c. 1500)
-7. Perugino — *Portrait of Lorenzo di Credi* (1488)
+1. Rafael — *The Alba Madonna* (c. 1510) — NGA objectID 26
+2. Rafael — *Bindo Altoviti* (c. 1515) — NGA 12131
+3. Sebastiano del Piombo — *Cardinal Bandinello Sauli, His Secretary, and Two Geographers* (1516) — NGA 46136
+4. Sebastiano del Piombo — *Portrait of a Humanist* (c. 1520) — NGA 46137
+5. Luca Signorelli — *The Crucifixion* — NGA 41690
+6. Perugino — *Madonna and Child* — NGA 356
+7. Perugino — *Portrait of Lorenzo di Credi* (1488) — NGA 1177
 
 Käsikirjoituksen teokset (luku 3.3):
-8. Botticelli — *The Adoration of the Magi* (c. 1478/1482)
-9. Botticelli — *Giuliano de' Medici* (c. 1478/1480)
-10. Giovanni Bellini ja Tizian — *The Feast of the Gods* (1514/1529)
-11. Tizian — *Venus with a Mirror* (c. 1555)
+8. Botticelli — *The Adoration of the Magi* — NGA 24
+9. Botticelli — *Giuliano de' Medici* — NGA 41671
+10. Giovanni Bellini ja Tizian — *The Feast of the Gods* — NGA 1138
+11. Tizian — *Venus with a Mirror* — NGA 41
 
 Louvre-teos Commonsin kautta:
 12. Leonardo da Vinci — *Mona Lisa*: Commons-tiedosto
