@@ -2,8 +2,8 @@
 // (web js/aikajana.js valokeilanMaski + css .aikajana-ilmiokuva mask-image).
 //
 // UI Toolkitissa ei ole mask-imagea, joten maski lasketaan kuvaan: lähde (ladattu, ei luettava)
-// piirretään RenderTextureen 16:10-rajauksella (object-fit: cover), luetaan takaisin, ja alfa
-// kerrotaan maskilla taustasäikeessä. Maski on webin kerrokset unionina (mask-composite add =
+// piirretään RenderTextureen 16:10-rajauksella (object-fit: cover), luetaan AsyncGPUReadbackilla
+// (Kuvat.PienennaTaustalla, ei pääsäikeen pysähdystä) ja alfa kerrotaan maskilla taustasäikeessä. Maski on webin kerrokset unionina (mask-composite add =
 // lähde yli): pohjasoikio 46 % × 47 % ja kuusi arvottua lohkoa, arpojana sama mulberry32 samalla
 // siemenellä (pysäkin vuosi), joten reuna kumpuilee samoin kuin webissä.
 using System;
@@ -45,20 +45,26 @@ namespace Matkakirja.Natiivi
             {
                 if (lahde == null) { valmis?.Invoke(null); return; }
                 if (muisti.TryGetValue(avain, out var v) && v != null) { valmis?.Invoke(v); return; }
-                Color32[] px;
-                try { px = Lue(lahde, leveys, korkeus); }
-                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui valokeila: " + e.Message); valmis?.Invoke(lahde); return; }
-                var muodot = soikiot();
-                Task.Run(() => Maskaa(px, leveys, korkeus, muodot)).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
+                // Luenta taustalla (AsyncGPUReadback): ei ReadPixelsin pysähdystä pysäkin vaihtuessa.
+                Kuvat.PienennaTaustalla(lahde, leveys, korkeus, 0.5f, px =>
                 {
-                    if (tt.IsFaulted) { valmis?.Invoke(lahde); return; }
-                    var tulos = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "valokeila " + osoite };
-                    tulos.SetPixels32(tt.Result);
-                    tulos.Apply(false, true);
-                    Muista(avain, tulos);
-                    valmis?.Invoke(tulos);
-                }));
+                    if (px == null) { valmis?.Invoke(lahde); return; }
+                    MaskaaTaustalla(avain, px, leveys, korkeus, soikiot(), lahde, valmis);
+                });
             });
+        }
+
+        static void MaskaaTaustalla(string avain, Color32[] px, int leveys, int korkeus, List<Soikio> muodot, Texture2D lahde, Action<Texture2D> valmis)
+        {
+            Task.Run(() => Maskaa(px, leveys, korkeus, muodot)).ContinueWith(tt => UiKerros.PaaSaikeessa(() =>
+            {
+                if (tt.IsFaulted) { valmis?.Invoke(lahde); return; }
+                var tulos = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "valokeila " + avain };
+                tulos.SetPixels32(tt.Result);
+                tulos.Apply(false, true);
+                Muista(avain, tulos);
+                valmis?.Invoke(tulos);
+            }));
         }
 
         static void Muista(string avain, Texture2D t)
@@ -72,15 +78,6 @@ namespace Matkakirja.Natiivi
                 if (muisti.TryGetValue(vanha, out var v) && v != null) UnityEngine.Object.Destroy(v);
                 muisti.Remove(vanha);
             }
-        }
-
-        /// <summary>Lähde 16:10-rajauksella (keskeltä, peittäen) luettavaksi pikselitaulukoksi.</summary>
-        static Color32[] Lue(Texture2D lahde, int leveys, int korkeus)
-        {
-            var luku = Kuvat.Pienenna(lahde, leveys, korkeus);
-            var px = luku.GetPixels32();
-            UnityEngine.Object.Destroy(luku);
-            return px;
         }
 
         struct Soikio { public float Cx, Cy, Rx, Ry; public float[] Asemat, Arvot; }
