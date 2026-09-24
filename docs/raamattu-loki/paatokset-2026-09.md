@@ -4503,3 +4503,7 @@ Raamattu päivitetty (tarkennus yläpalkkikohtaan; iPad ennallaan). Natiivi-UI:l
 ## RADIOUUDISTUKSEN SUUNNITELMA HYVAKSYTTY (docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md, ca38814dd); LOYDOS 43 KORJATTU (efbdb7f); LAITETESTAAJA: INVENTAARION 7 RIVIA SAMA (24.9.2026 klo 19.36)
 
 Vastaukset: asukkaat Wikidatasta (Siirtoseppä, uusi skeema), avaus kallistaa 40°, mastot korvaavat ▶-napit, rahina asteikkoetäisyydestä, linnut Natiivisepän oma erä build 12 (Linssiseppä määrittelee näkyvyyden ja reitit). Suunnitelma PR:ksi mainiin. Havainnekuva omistajalle. Laitetestaaja: Tutki, Aloita peli, Vertailulinssi, Julisterivi, Mitä uutta SAMA; maatiedot-linssi ei enää tyhjä (Linssisepälle); ~24 riviä vaatii kosketuksen → iPhone 18 Pro -simi build 10:llä.
+
+## JULKAISIJA NOLLATTU (POSTIVAHTI): LUOVUTUS -ilta MAINISSA (#3112), ALOITUSVIESTI MAINISTA, RC PAALLA; #3078 MAINISSA v2196 (24.9.2026 klo 19.40)
+
+Jono (sää, kohdekartat, #3111, #2913, #3094, #3113) ja savukeuusinnat jatkuvat uudella sessiolla luovutuksen osioiden 2–3 mukaan. Nollauksia tänään 24.
