@@ -728,6 +728,7 @@ namespace Matkakirja.Natiivi
                     Pelaaja = PelaajanPaikka,
                 };
                 linssi.Avaa(y);
+                kerros.ValoNapautettu += i => { o.Kirjaa("keksinnöt: lamppu " + i); linssi?.NapautaValoa(i); };
                 if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
             }
             public void Paivita() => linssi?.Paivita();

@@ -47,6 +47,33 @@ namespace Matkakirja.Natiivi
             new List<Vector4>(), new List<Vector4>(), new List<Vector4>(), new List<Vector4>(), new List<Vector4>(),
         };
 
+        readonly List<string> tunnusIndeksi = new List<string>();
+        readonly List<float> nakyvyydet = new List<float>();
+
+        /// <summary>Osuman säde ruutupisteinä (web lampun CSS2D-laatikko 44 pt, kuten muut kosketuskohteet).</summary>
+        public const float OsumanSadePt = 22f;
+
+        /// <summary>
+        /// LAMPPU ON NAPAUTETTAVA (web aikajana.js napautaValoa): lähin viimeksi näkynyt lamppu ruudun
+        /// pisteestä (Unityn ruutupikselit, origo alakulma) säteellä OsumanSadePt; null = ei osumaa.
+        /// Vain näkyvä lamppu ottaa osumia (web .aikajana-valo.palaa).
+        /// </summary>
+        public string Osuma(Vector2 ruutu)
+        {
+            if (kamera == null || olio == null) return null;
+            float raja = OsumanSadePt * LinssiOhjain.Pistekerroin, paras = raja * raja;
+            string osuma = null;
+            for (int i = 0; i < paikat.Count && i < nakyvyydet.Count; i++)
+            {
+                if (nakyvyydet[i] <= 0.05f) continue;
+                Vector3 r = kamera.WorldToScreenPoint(olio.TransformPoint(paikat[i]));
+                if (r.z <= 0) continue;
+                float d = (new Vector2(r.x, r.y) - ruutu).sqrMagnitude;
+                if (d <= paras) { paras = d; osuma = tunnusIndeksi[i]; }
+            }
+            return osuma;
+        }
+
         /// <summary>Montako lamppua näkyi viimeisimmässä päivityksessä (mittareille).</summary>
         public int Naytetty { get; private set; }
 
@@ -90,6 +117,8 @@ namespace Matkakirja.Natiivi
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, Nosto));
                 paikat.Add((Vector3)(float3)(georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef) - keskus));
                 if (tunnus != null) tunnukset[tunnus] = valot.Count;
+                tunnusIndeksi.Add(tunnus);
+                nakyvyydet.Add(0);
                 valot.Add(new Liekkivalo(i));
             }
             mesh = Mesh();
@@ -183,6 +212,7 @@ namespace Matkakirja.Natiivi
                     Vector3 kohti = (kameraPaikka - paikka).normalized;
                     nakyvyys = Mathf.SmoothStep(0, 1, Mathf.InverseLerp(NakyvaAlku, NakyvaTaysi, Vector3.Dot(normaali, kohti)));
                 }
+                nakyvyydet[i] = nakyvyys * (float)kuva.Peitto;
                 Kirjoita(i, valo, kuva, nakyvyys, nytMs);
                 if (nakyvyys > 0) naytetty++;
             }

@@ -179,6 +179,19 @@ namespace Matkakirja.Linssit.Aikajana
             y.LinssiMusiikkiHimmennys(Ajo.Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
         }
 
+        /// <summary>
+        /// KARTAN LAMPPU (web aikajana.js napautaValoa, omistaja 3.9.2026: "kartan pisteet saisivat olla
+        /// myös klikattavissa"): nykyisen pysäkin lamppu vain pysäyttää, muu siirtyy siihen tauolle
+        /// selaukseen (kaikki valot palavat) kuten karusellin kortti.
+        /// </summary>
+        public bool NapautaValoa(int i)
+        {
+            if (!Auki || Ajo == null || i < 0 || i >= aineisto.Pysakit.Count) return false;
+            if (i == Ajo.Tila.I) { Ajo.Tauko(); return true; }
+            Ajo.Siirry(i);
+            return true;
+        }
+
         /// <summary>Välinäytöksen Jatka-nappi: välinäytöksen puhe katkeaa (web suljeValinaytos).</summary>
         public void JatkaValinaytoksesta()
         {
