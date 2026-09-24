@@ -6,7 +6,7 @@ docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", ja docs/raportit/viesti-sisalt
 kokonaan.
 
 TILA: Linssikatalogin uudistus (esittelysivu yhteistyökumppaneille) vaihe 1 on PR:ssä
-[TÄYTÄ PR-NUMERO] (haara sisaltokirjuri-linssikatalogi), odottaa Pelikoodarin ulkoasutarkistusta ja Fablen
+#3128 (haara sisaltokirjuri-linssikatalogi), odottaa Pelikoodarin ulkoasutarkistusta ja Fablen
 mergeä — ks. luovutuksen kohta 3 (viisi avointa korjausta: muu-moottorin väri/ikoni, header-lukujen
 laskentatapa, erä 1b:n kuvatekstien lisäystapa, kartta-osio siirretty vaiheeseen 3, Pelikoodarin tarkistus
 kesken). Kuvatilausluonnos (galleria+ennenNyt 59 kaupungille) hyväksytty ja viety postilaatikkoon, raportti

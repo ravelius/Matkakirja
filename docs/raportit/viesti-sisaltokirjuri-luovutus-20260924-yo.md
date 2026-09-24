@@ -19,8 +19,7 @@ aikana).
 
 ### Linssikatalogi (pääerä)
 
-Haara `sisaltokirjuri-linssikatalogi`, PR **[TÄYTÄ PR-NUMERO TÄHÄN ENNEN
-PUSHAA — avattu tämän vuoron lopussa]**. Sisältö:
+Haara `sisaltokirjuri-linssikatalogi`, PR [#3128](https://github.com/ravelius/Matkakirja/pull/3128) (auki, odottaa Pelikoodarin tarkistusta ja Fablen mergeä). Sisältö:
 
 - Uusi visuaalinen esittelysivu (`linssikatalogi.html`): kuusi moottorikorttia
   (aikajana/alue/virta/data/esitys/pohjakartta, Fablen kuvausteksteillä),
