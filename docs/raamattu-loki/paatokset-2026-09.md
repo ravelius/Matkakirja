@@ -4159,3 +4159,7 @@ Erä 3: Gao #3091; Al Kufra hylätty (ei toista paikannettavaa kohdetta). Fable:
 ## OMISTAJA klo 16.1x (SITOVA): AVAUSTEKSTI TAKAISIN ALOITUSNAYTOLLE; LENNON KAMERAREITTI (SIVUKYLKI LAHELTA → LOITTONEE → KIERTO KOHDEKAUPUNGIN VASTAPUOLELLE → ORBIT LASKUUN) (24.9.2026 klo 16.16)
 
 1) 'Ullakolta löytyi matkalaukku…' näytetään aloitusnäytöllä 'Aloita seikkailu' -painalluksen jälkeen ennen karttaa (kartalla Lontoo-zoomissa liian sekava); tekstin jälkeen tai ohituksesta pallonäkymä ja kohdevalinta. 2) Kohdemaan valinnan jälkeen kone lähtee automaattisesti; kamera zoomaa koneeseen niin että se täyttää melkein näytön ja näkyy sivukylki → loittonee kone näkyvissä → kohdekaupungin ilmestyessä kiertää kaupungin vastakkaiselle puolelle (kone tulee kameraa kohti) → pyöreä orbit laskuun asti. Raamattu päivitetty (klo 12.1x:n avaustekstin paikka kumottu, kamerakäsikirjoitus tarkennettu). → Pelikoodari (aloitusteksti, build 10), Natiiviseppä (kamera, build 10).
+
+## POSTIVAHTI: wt/sisaltokirjuri-santarem POISTETTIIN VIRHEELLISESTI (PR #3087 AUKI, EI MENETETTYA TYOTA) (24.9.2026 klo 16.16)
+
+Postivahdin ls-remote-tarkistus oli vanhentunut. Kaikki committoitu ja pushattu; haara on originissa. Oppi: poistolista vain 'git branch -r --merged origin/main' -tuloksesta tuoreen fetchin jälkeen ja PR-tilan (gh pr view --json state) tarkistuksella; ei ls-remote-arvauksia.
