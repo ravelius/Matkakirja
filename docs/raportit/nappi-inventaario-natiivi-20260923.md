@@ -505,6 +505,13 @@ matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + 
 vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
 Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
 
+## Tehty (päivitys 24.9.2026 klo 5.40, Natiivi-UI)
+
+Masterissa (08b1b2c): Tilastot, kuratointiavain iOS Keychainissa, kartan vuorokausisävy multiplyn kirkkaudella ja
+pois linssin ajaksi (sininen lisä), tekstikenttä vapautuu näppäimistön sulkeutuessa (T2 PASS), aikajanan paneeli
+webin tummaan asuun, virtanappien lyhyet nimet ≤ 1000 px ja iPadin UI iOS-pisteisiin (1 yksikkö = web CSS-px,
+Fable 24.9.). Diagnostiikka: `ui peitteet`, `ui piikit`, `ui skaala`. A/C-sarja iPadilla uusitaan (Laitetestaaja).
+
 ## Tehty (päivitys 24.9.2026 klo 5.05, Natiivi-UI)
 
 Lukijoilta masterissa; Fablen vaatimuksesta kuratointiavain pois PlayerPrefsistä (vain muisti, iOS Keychain -liitäntä
@@ -551,7 +558,7 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 klo 5.05, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 5.40, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
