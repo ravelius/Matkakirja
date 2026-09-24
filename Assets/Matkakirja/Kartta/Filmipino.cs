@@ -28,6 +28,9 @@ namespace Matkakirja
         public Volume volyymi;
         [Tooltip("Häivytyksen kesto sisään ja ulos (s).")]
         public float haivytysS = 0.8f;
+        [Tooltip("Konetta seuraava heijastusluotain. Pois: iPad-simulaattorissa 24.9. luotain (vain skybox) antoi mustan\n" +
+                 "kuution, ja täysmetallinen kone muuttui mustaksi. Takaisin, kun luotaimen piirto on todennettu laitteella.")]
+        public bool heijastus = false;
         [Tooltip("Heijastusluotaimen päivitysväli (s).")]
         public float luotainValiS = 1.5f;
 
@@ -85,7 +88,7 @@ namespace Matkakirja
                     syvyys.gaussianMaxRadius.Override(Mathf.Lerp(0.5f, 1.0f, lahikuva));
                 }
             }
-            Luotain(konePaikka);
+            if (heijastus) Luotain(konePaikka);
         }
 
         void Update()
