@@ -4095,3 +4095,7 @@ Luovutus viesti-siirtoseppa-luovutus-20260924-b.md, aloitusviesti päivitettynä
 ## KORJAUS: SIIRTOSEPAN NOLLAUSKASKY EI MENNYT PERILLE (10 VIESTIN RAJA) (24.9.2026 klo 15.43)
 
 Fablen vertaisviestiraja täyttyi (11 viestiä omistajan viimeisen kirjoituksen jälkeen); Siirtosepän luovutuskäsky ja Postivahdin ohje lähetetään heti, kun omistaja kirjoittaa seuraavan viestin. Siirtoseppä 72 % — ei vielä kriittinen (85 %). Oppi: niputa viestit; enintään 10 per omistajan viesti.
+
+## NATIIVI-UI: BUILD 9 iPHONEN VIHJE TODENNETTU (EI KUPLAA SIIRTOVAIHEESSA, KUTEN WEB); E10–E11 TEHTY (natiivi-ui/nostot-web c5e02b2) (24.9.2026 klo 15.45)
+
+Kuvapari proto-3d/lokit/pariteetti-b9/kuvapari-vihje-iphone.jpg; pulun napautus avaa chatin ja 'Näytä puhekuplat'. E10–E11 kuvataan viennin jälkeen; seuraavaksi E3.
