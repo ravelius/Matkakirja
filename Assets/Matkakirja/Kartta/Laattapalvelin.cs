@@ -46,8 +46,25 @@ namespace Matkakirja
         int kaynnissa;
         string offline, valimuisti;
 
-        /// <summary>Tilastot testaukseen: osumat offline / välimuisti / verkko, virheet.</summary>
-        public static int Offline, Valimuistista, Verkosta, Virheita;
+        /// <summary>Tilastot testaukseen: osumat offline / välimuisti / verkko, virheet, varakuvat.</summary>
+        public static int Offline, Valimuistista, Verkosta, Virheita, Varakuvia;
+
+        /// <summary>
+        /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
+        /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
+        /// </summary>
+        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty);
+
+        /// <summary>
+        /// Pohjalaatan polun alku (Rakennus.LaattaUrl ilman ämpäriä): jos tällainen laatta ei tule
+        /// uusintayrityksistä huolimatta, Cesiumille annetaan pergamentin värinen varalaatta eikä virhettä,
+        /// koska Cesium piirtää epäonnistuneen rasterin mustana eikä yritä uudelleen. Varakuvaa ei
+        /// tallenneta välimuistiin, joten laatta haetaan uudelleen, kun Cesium lataa sen seuraavan kerran.
+        /// </summary>
+        public static string PohjaPolku;
+        static byte[] varakuva;
+        [Tooltip("Varalaatan väri (pergamentti, meren ja maan välissä).")]
+        public Color32 varavari = new Color32(0xd9, 0xd0, 0xbb, 0xff);
 
         sealed class Haku
         {
@@ -79,6 +96,16 @@ namespace Matkakirja
 
         void Awake()
         {
+            if (varakuva == null)
+            {
+                var t = new Texture2D(256, 256, TextureFormat.RGB24, false);
+                var px = new Color32[256 * 256];
+                for (int i = 0; i < px.Length; i++) px[i] = varavari;
+                t.SetPixels32(px);
+                t.Apply(false);
+                varakuva = t.EncodeToJPG(85);
+                Destroy(t);
+            }
             if (Instanssi != null && Instanssi != this) { Destroy(this); return; }
             Instanssi = this;
             offline = OfflineKansio;
@@ -136,7 +163,14 @@ namespace Matkakirja
             foreach (var t in FindObjectsByType<CesiumForUnity.Cesium3DTileset>(FindObjectsSortMode.None))
                 t.url = Paikallinen(t.url);
             foreach (var o in FindObjectsByType<CesiumForUnity.CesiumUrlTemplateRasterOverlay>(FindObjectsSortMode.None))
-                o.templateUrl = Paikallinen(o.templateUrl);
+            {
+                // Pohjakerros (taso 0 alkaen) saa varalaatan; linssien ja alueiden kerrokset eivät.
+                string u = o.templateUrl;
+                int z = u != null ? u.IndexOf("{z}", StringComparison.Ordinal) : -1;
+                if (o.minimumLevel == 0 && z > 0 && u.StartsWith(Ampari) && u.Contains("pallo/laatat/"))
+                    PohjaPolku = u.Substring(Ampari.Length, z - Ampari.Length);
+                o.templateUrl = Paikallinen(u);
+            }
         }
 
         void OnDestroy()
@@ -238,6 +272,11 @@ namespace Matkakirja
             var h = new Haku { Polku = polku };
             jono.Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
+            if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
+            {
+                Interlocked.Increment(ref Varakuvia);
+                return (200, varakuva);
+            }
             if (tila == 200 && data != null)
             {
                 Interlocked.Increment(ref Verkosta);
@@ -262,14 +301,21 @@ namespace Matkakirja
         IEnumerator Lataa(Haku h)
         {
             kaynnissa++;
-            using (var r = UnityWebRequest.Get(Ampari + h.Polku))
+            int tila = 502;
+            byte[] data = null;
+            // Tilapäinen virhe (aikakatkaisu, verkko, 5xx) yritetään uudelleen: Cesium ei itse yritä.
+            for (int yritys = 0; yritys < 3; yritys++)
             {
-                r.timeout = 30;
+                if (yritys > 0) yield return new WaitForSecondsRealtime(0.6f * yritys * yritys);
+                using var r = UnityWebRequest.Get(Ampari + h.Polku);
+                r.timeout = 15;
                 yield return r.SendWebRequest();
-                kaynnissa--;
-                if (r.result == UnityWebRequest.Result.Success) h.Valmis.TrySetResult((200, r.downloadHandler.data));
-                else h.Valmis.TrySetResult(((int)(r.responseCode > 0 ? r.responseCode : 502), null));
+                if (r.result == UnityWebRequest.Result.Success) { tila = 200; data = r.downloadHandler.data; break; }
+                tila = (int)(r.responseCode > 0 ? r.responseCode : 502);
+                if (tila == 404 || tila == 403) break;
             }
+            kaynnissa--;
+            h.Valmis.TrySetResult((tila, data));
         }
 
         /// <summary>
