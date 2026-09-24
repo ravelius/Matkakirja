@@ -77,6 +77,8 @@ namespace Matkakirja.Natiivi
             liuku.style.display = DisplayStyle.None;
             liikuNappi = Rakenne.Nappi(null, "mk-liiku__nappi", VaihdaLiuku, liiku, Ikonit.Viiva["kompassi"]);
             liiku.EnableInClassList("mk-liiku--puhelin", Ylapalkki.Puhelin); // iPhone: kevyempi nappi (omistaja 24.9.)
+            // Maakortti avautuu, sulkeutuu ja kasvaa: Liiku seuraa sen yläreunaa (web mittaaLiikunPohja).
+            kerros.JokaRuutu += () => { if (liikuNakyy) AsetteleLiiku(); };
             Rakenne.Teksti(Liikkuminen.LiikuTeksti, "mk-nappi__teksti", liikuNappi);
             Kirjasimet.Aseta(liiku, Kirjasin.KoneLihava);
 
@@ -220,8 +222,32 @@ namespace Matkakirja.Natiivi
             AsetteleLiiku();
         }
 
-        // Heittonappi ja Liiku voivat näkyä yhtä aikaa (Tutki kaupunkia): Liiku sen yläpuolelle.
-        void AsetteleLiiku() => liiku.style.bottom = HeittoAlhaalta + (HeittoNakyy ? 62f : 0f);
+        /// <summary>
+        /// Web .toimintorivi.rivi-yksi .monitoimi-nappi (löydös 44, mitattu 24.9.): keskellä alhaalla, bottom =
+        /// max(--gap + 0,4 rem + turva, --liiku-pohja); --gap 0,45 rem ≤ 560 px, muuten 0,6 rem. --liiku-pohja
+        /// (js/pallolauta/maapaneeli.js mittaaLiikunPohja): kun maakortti ulottuu keskikaistalle (oikea reuna >
+        /// keskilinja − 34), sana nousee kortin yläreunan päälle 2 px:n raolla (enintään puoli ruutua).
+        /// Heittonappi ja Liiku voivat näkyä yhtä aikaa (Tutki kaupunkia): silloin Liiku sen yläpuolelle.
+        /// </summary>
+        void AsetteleLiiku()
+        {
+            float ala;
+            if (HeittoNakyy) ala = HeittoAlhaalta + 62f;
+            else
+            {
+                var pohja = liiku.panel?.visualTree.layout ?? default;
+                float w = pohja.width, h = pohja.height;
+                float turvaAla = UiKerros.Hae().Reunat(UiKerros.Matkavalinta).w;
+                ala = (w > 0 && w <= 560f ? 7.2f : 9.6f) + 6.4f;
+                var kortti = UiNakymat.Olemassa ? UiNakymat.Hae().Kartuscha?.NakyvaKortti : null;
+                if (kortti != null && w > 0 && kortti.worldBound.xMax > w / 2f - 34f)
+                {
+                    float nousu = h - kortti.worldBound.yMin + 2f;
+                    if (nousu > 0 && nousu <= h / 2f) ala = Mathf.Max(ala, nousu - turvaAla);
+                }
+            }
+            if (!Mathf.Approximately(liiku.resolvedStyle.bottom, ala)) liiku.style.bottom = ala;
+        }
 
         /// <summary>Testikomento ui liiku: Liiku-napin napautus.</summary>
         public void TestaaLiiku() { PaivitaLiiku(PeliOhjain.Instanssi); if (!liukuAuki) VaihdaLiuku(); }
