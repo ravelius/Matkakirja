@@ -4899,3 +4899,7 @@ Natiivi-UI antoi luvan RadioNakyma.cs-muutokseen; laitteella tarkistetaan aamun 
 ## NATIIVI-UI 72 % → LUOVUTUS JA NOLLAUS KASKETTY (LUOVUTUS -20260925-k.md, clear_session SAMASSA VUOROSSA, LEPOILMOITUS TILATTU); E28 PALLOLAATAT VALMIIT, VIENTI AMPARIIN KAYNNISSA (199 708 LAATTAA, 1,5 Gt) (25.9.2026 klo 02.44)
 
 Postivahdin ilmoitus klo 01.4x. Aloitusviesti lähetetään kun list_events = 0.
+
+## NATIIVI-UI NOLLATTU (LUOVUTUS -20260925-k.md, natiivi-ui-luovutus-k c51be062e; ALOITUSVIESTI LAHETETTY: LOYDOS 51 DIAGNOOSILOKI ENSIN, MERGE-PYYNNOT JUNAAN, LOYDOS 50 VAIHE 1b, PARITEETIN #8/#29/#18/#1) (25.9.2026 klo 02.46)
+
+Nollaus toteutui kaavan mukaan (clear samassa vuorossa, list_events 0).
