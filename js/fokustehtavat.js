@@ -400,7 +400,7 @@ function aarreAuki(ui, city) {
  * kasvamassa. Maa, jota ei ole taulussa, saa yleisnimen: väärä
  * paikallisnimi olisi pahempi kuin rehellinen yleisnimi.
  */
-const PULLA_NIMET = {
+export const PULLA_NIMET = {
   GRC: 'tsoureki',
   BGR: 'kozunak',
   BIH: 'hurmašica',
@@ -468,7 +468,7 @@ const PULLA_NIMET = {
 };
 
 /** Maa, jota taulussa ei ole. */
-const PULLA_YLEISNIMI = 'makea pulla';
+export const PULLA_YLEISNIMI = 'makea pulla';
 
 /** Kuinka kauan varmistusnappi odottaa toista napautusta. */
 const PULLA_VARMISTUS_MS = 6000;

@@ -731,7 +731,7 @@ const SAAPUMISKUPLA_VAITI = new Set();
  *     sä. Kevyet täytesanat (no, niin, kato) säästellen, ja Kääk vain
  *     aidossa säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
-const LIVIAN_SAAPUMISET = {
+export const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
   venetsia: 'Venetsia. Täs kaupungissa minun sukuni istuu torilla '
     + 'kuin virkamiehet: Columba Livia, jos joku kysyy — ja täällä '
