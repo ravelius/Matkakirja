@@ -66,8 +66,8 @@ namespace Matkakirja.Peli
     /// <summary>
     /// Laudan laattamäärät (web pack.tokens.counts) JÄRJESTYKSESSÄ: pinon
     /// malli syntyy Object.entries-järjestyksessä, joten järjestys on osa
-    /// jakoa. Paketissa: moduulit/js/packs/maailmankartta.json
-    /// exportit.MAAILMANKARTTA.tokens.counts; testeissä Kultaiset/paketti/laatat.json.
+    /// jakoa. Paketissa: kokoelmat/laatat.json, alkion päätason maarat (skeema 1.26; vanha
+    /// paketti data.counts); testeissä Kultaiset/paketti/laatat.json.
     /// </summary>
     public sealed class Laattamaarat
     {
@@ -89,22 +89,30 @@ namespace Matkakirja.Peli
         public int Yhteensa { get { int s = 0; foreach (var m in Maarat) s += m.Value; return s; } }
 
         /// <summary>
-        /// Lukee määrät JSONista. Kelpaa kolme muotoa: {"counts":{…}} (laatat.json
-        /// tai pack.tokens), sisältöpaketin moduuli {"exportit":{"MAAILMANKARTTA":{"tokens":{"counts":…}}}}
-        /// tai pelkkä {"star":7,…}. MiniJson säilyttää avainten järjestyksen.
+        /// Lukee määrät JSONista. Kelpaa: sisältöpaketin kokoelma laatat.json (alkio "tokens": päätason
+        /// maarat, skeema 1.26; vanhassa paketissa data.counts Paataso-varareitillä), natiivin oma muoto
+        /// {"counts":{…}} (välimuisti PeliApu.LaattamaaratJson), pelkkä {"star":7,…} tai (vain raaka
+        /// sallittuna) webin moduuli {"exportit":{"MAAILMANKARTTA":{"tokens":{"counts":…}}}}.
+        /// MiniJson säilyttää avainten järjestyksen.
         /// </summary>
         public static Laattamaarat Lue(string json)
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(json));
+            // Webin moduuli on raakaa dataa (ei päätasoa): Paataso.RaakaKielletty ohittaa sen.
             if (MiniJson.Kentta(o, "exportit") is Dictionary<string, object> ex)
             {
+                if (Paataso.RaakaKielletty) throw new FormatException("webin moduuli on raakaa dataa (Paataso.RaakaKielletty)");
                 foreach (var e in ex.Values)
                     if (e is Dictionary<string, object> lauta && MiniJson.Kentta(lauta, "tokens") is Dictionary<string, object> t)
                     { o = t; break; }
             }
-            // Kokoelma kokoelmat/laatat.json (Siirtoseppä #2944): alkiot[0] = { id: 'tokens', data: { types, mannerTypes, counts } }.
-            if (MiniJson.Kentta(o, "alkiot") is List<object> alkiot && alkiot.Count > 0
-                && alkiot[0] is Dictionary<string, object> alkio && MiniJson.Kentta(alkio, "data") is Dictionary<string, object> data) o = data;
+            // Kokoelma kokoelmat/laatat.json (Siirtoseppä #2944): alkiot[0] = { id: 'tokens', maarat, tyypit, mannerTyypit, data }.
+            if (MiniJson.Kentta(o, "alkiot") is List<object> alkiot)
+            {
+                var alkio = alkiot.Count > 0 ? alkiot[0] as Dictionary<string, object> : null;
+                o = MiniJson.Kentta(Paataso.Nakyma(alkio, Paataso.Laatat), "maarat") as Dictionary<string, object>
+                    ?? throw new FormatException("laattakokoelmasta puuttuu maarat");
+            }
             if (MiniJson.Kentta(o, "tokens") is Dictionary<string, object> tok) o = tok;
             if (MiniJson.Kentta(o, "counts") is Dictionary<string, object> c) o = c;
             var tulos = new Laattamaarat();

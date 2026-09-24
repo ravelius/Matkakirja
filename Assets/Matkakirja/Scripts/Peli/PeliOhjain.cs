@@ -533,15 +533,15 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Aarrelaattojen määrät: kokoelma kokoelmat/laatat.json (Siirtoseppä
-        /// #2944) tai, jos sitä ei vielä ole ämpärissä, laudan moduuli
-        /// moduulit/js/packs/maailmankartta.json (Laattamaarat.Lue lukee molemmat).
-        /// Kumpaakaan ei saatu → null = peli ilman laattoja (erän 1–2 muodot).
+        /// Aarrelaattojen määrät: kokoelma kokoelmat/laatat.json (Siirtoseppä #2944; päätason maarat,
+        /// skeema 1.26). Webin moduulin varareitti (moduulit/js/packs/maailmankartta.json) on poistettu
+        /// 24.9.2026: se oli raakaa dataa, ja jokaisessa ämpärin paketissa on kokoelma laatat.
+        /// Ei saatu → null = peli ilman laattoja (erän 1–2 muodot).
         /// </summary>
         IEnumerator HaeLaattamaarat()
         {
             Laattamaarat = null;
-            // Moduuli on 1,7 Mt: sen määrät kirjoitetaan kerran pieneksi tiedostoksi versiokansion viereen.
+            // Määrät kirjoitetaan kerran pieneksi tiedostoksi versiokansion viereen.
             var tiivis = Valimuisti(versioPolku + "peli/laattamaarat.json");
             try
             {
@@ -550,7 +550,7 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: laattamäärien välimuisti ei kelpaa: " + e.Message); }
             Laattamaarat = null;
-            foreach (var polku in new[] { "kokoelmat/laatat.json", "moduulit/js/packs/maailmankartta.json" })
+            foreach (var polku in new[] { "kokoelmat/laatat.json" })
             {
                 string teksti = null;
                 yield return HaeTiedosto(polku, false, true, t => teksti = t);
@@ -585,11 +585,13 @@ namespace Matkakirja.Natiivi
             string elaintayt = null, julisteet = null;
             yield return HaeTiedosto("kokoelmat/elaintayt.json", false, true, t => elaintayt = t);
             yield return HaeTiedosto("kokoelmat/julisteet.json", false, true, t => julisteet = t);
-            string fokusvirrat = null;
+            string fokusvirrat = null, lehtitehtavat = null;
             yield return HaeTiedosto("kokoelmat/fokusvirrat.json", false, true, t => fokusvirrat = t);
+            // Lehtitehtävien palkinnot (skeema 1.26: fokusvirran päätason lehtitehtavat on id-lista).
+            yield return HaeTiedosto("kokoelmat/lehtitehtavat.json", false, true, t => lehtitehtavat = t);
             try
             {
-                fokus = Fokusdata.Lue(fokusvirrat);
+                fokus = Fokusdata.Lue(fokusvirrat, lehtitehtavat: lehtitehtavat);
                 LueSahketehtavat(fokusvirrat);
                 if (KulttuurivisaTarjolla != null) fokus.Kulttuurivisa = KulttuurivisaTarjolla;
             }

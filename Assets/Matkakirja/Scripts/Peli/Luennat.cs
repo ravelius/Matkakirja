@@ -84,25 +84,28 @@ namespace Matkakirja.Natiivi
         public int Saapumispuheita => saapumispuheet.Count;
         public int Luentoja => luennot.Count;
 
-        /// <summary>Kokoelma saapumispuheet: alkiot[].kaupunki + data.url/text/duration.</summary>
+        /// <summary>
+        /// Kokoelma saapumispuheet: alkiot[].kaupunki + päätason url, teksti, kesto (skeema 1.26;
+        /// vanha paketti data.url/text/duration Paataso-varareitillä).
+        /// </summary>
         public void LueSaapumispuheet(string json)
         {
-            foreach (var (kaupunki, data) in Alkiot(json))
+            foreach (var (kaupunki, data) in Alkiot(json, Paataso.Saapumispuhe))
             {
                 var url = MiniJson.Teksti(data, "url");
                 if (string.IsNullOrEmpty(kaupunki) || string.IsNullOrEmpty(url)) continue;
                 saapumispuheet[kaupunki] = new Luento
                 {
                     Id = "saapumispuhe:" + kaupunki, Kaupunki = kaupunki, Url = url,
-                    Teksti = MiniJson.Teksti(data, "text"), Kesto = Luku(data, "duration"),
+                    Teksti = MiniJson.Teksti(data, "teksti"), Kesto = Luku(data, "kesto"),
                 };
             }
         }
 
         /// <summary>
         /// Kokoelma luennat (Siirtoseppä): alkiot, joissa id, kaupunki, url,
-        /// teksti, paikkarivi, kesto suoraan tai data-kentässä. id "intro" ja
-        /// "lento-alku" korvaavat oletukset.
+        /// teksti, paikkarivi, kesto, reaktiot ja reaktioHetket päätasolla (data-olio
+        /// vain Paataso-varareitillä). id "intro" ja "lento-alku" korvaavat oletukset.
         /// </summary>
         public void LueLuennat(string json)
         {
@@ -111,19 +114,19 @@ namespace Matkakirja.Natiivi
             foreach (var o in alkiot)
             {
                 if (!(o is Dictionary<string, object> a)) continue;
-                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object> ?? a;
+                var d = Paataso.Nakyma(a, Paataso.Luento);
                 var l = new Luento
                 {
-                    Id = MiniJson.Teksti(d, "id") ?? MiniJson.Teksti(a, "id"),
-                    Kaupunki = MiniJson.Teksti(d, "kaupunki") ?? MiniJson.Teksti(a, "kaupunki"),
+                    Id = MiniJson.Teksti(d, "id"),
+                    Kaupunki = MiniJson.Teksti(d, "kaupunki"),
                     Url = MiniJson.Teksti(d, "url"),
                     Teksti = MiniJson.Teksti(d, "teksti"),
                     Paikkarivi = MiniJson.Teksti(d, "paikkarivi"),
                     Kesto = Luku(d, "kesto"),
                 };
                 if (string.IsNullOrEmpty(l.Url)) continue;
-                var hetket = (MiniJson.Kentta(d, "reaktioHetket") ?? MiniJson.Kentta(a, "reaktioHetket")) as Dictionary<string, object>;
-                if ((MiniJson.Kentta(d, "reaktiot") ?? MiniJson.Kentta(a, "reaktiot")) is List<object> reaktiot)
+                var hetket = MiniJson.Kentta(d, "reaktioHetket") as Dictionary<string, object>;
+                if (MiniJson.Kentta(d, "reaktiot") is List<object> reaktiot)
                     foreach (var ro in reaktiot)
                     {
                         if (!(ro is Dictionary<string, object> r)) continue;
@@ -170,16 +173,14 @@ namespace Matkakirja.Natiivi
             return LentoAlku;
         }
 
-        static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
+        static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json, IReadOnlyList<(string Uusi, string Vanha)> kentat)
         {
             var juuri = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(json));
             if (!(MiniJson.Kentta(juuri, "alkiot") is List<object> alkiot)) yield break;
             foreach (var o in alkiot)
             {
                 if (!(o is Dictionary<string, object> a)) continue;
-                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object>;
-                if (d == null) continue;
-                yield return (MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id"), d);
+                yield return (MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id"), Paataso.Nakyma(a, kentat));
             }
         }
 

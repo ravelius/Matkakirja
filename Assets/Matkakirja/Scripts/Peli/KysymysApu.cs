@@ -242,34 +242,40 @@ namespace Matkakirja.Natiivi
             foreach (var kv in d) { var a = Lue(kv.Value); if (a != null) kohde[kv.Key] = a; }
         }
 
-        /// <summary>Kokoelma laatat (alkio "tokens": data.types, data.mannerTypes).</summary>
+        /// <summary>
+        /// Kokoelma laatat (alkio "tokens"): päätason tyypit ja mannerTyypit (skeema 1.26; tyyppiolion
+        /// kentät ovat webin nimin name, fakta, kuva). Vanha paketti: data.types / data.mannerTypes (Paataso).
+        /// </summary>
         public void LueLaatat(string json)
         {
             foreach (var a in MiniJson.Alkiot(json))
             {
-                var d = MiniJson.Kentta(a, "data") as Dictionary<string, object>;
-                if (d == null) continue;
-                Taulu(tyypit, MiniJson.Kentta(d, "types"));
-                if (MiniJson.Kentta(d, "mannerTypes") is Dictionary<string, object> m)
+                var d = Paataso.Nakyma(a, Paataso.Laatat);
+                Taulu(tyypit, MiniJson.Kentta(d, "tyypit"));
+                if (MiniJson.Kentta(d, "mannerTyypit") is Dictionary<string, object> m)
                     foreach (var kv in m) { var t = new Dictionary<string, Aarre>(); Taulu(t, kv.Value); mantereet[kv.Key] = t; }
             }
         }
 
-        /// <summary>Kokoelma paikallisaarteet: maa (ISO3), data.pieniAarre/isoAarre {name, kuva, fakta}, kuvat.*.url.</summary>
+        /// <summary>
+        /// Kokoelma paikallisaarteet: maa (ISO3), päätason pieniAarre/isoAarre {nimi, fakta, kuva, url}
+        /// (skeema 1.26). Vanha paketti: data.pieniAarre/isoAarre {name, fakta, kuva} (Paataso) ja kuvat.*.url.
+        /// </summary>
         public void LuePaikallisaarteet(string json)
         {
             foreach (var o in MiniJson.Alkiot(json))
             {
                 var maa = MiniJson.Teksti(o, "maa") ?? MiniJson.Teksti(o, "id");
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var kuvat = MiniJson.Kentta(o, "kuvat") as Dictionary<string, object>;
-                if (maa == null || d == null) continue;
+                if (maa == null) continue;
                 var t = new Dictionary<string, Aarre>();
                 foreach (var tyyppi in new[] { Laattatyypit.PieniAarre, Laattatyypit.IsoAarre })
                 {
-                    var url = (MiniJson.Kentta(kuvat, tyyppi) as Dictionary<string, object>) is Dictionary<string, object> k ? MiniJson.Teksti(k, "url") : null;
-                    var aarre = Lue(MiniJson.Kentta(d, tyyppi), url);
-                    if (aarre != null) t[tyyppi] = aarre;
+                    var p = Paataso.Olio(o, tyyppi, tyyppi, Paataso.Paikallisaarre);
+                    if (p == null) continue;
+                    var url = MiniJson.Teksti(p, "url")
+                        ?? ((MiniJson.Kentta(kuvat, tyyppi) as Dictionary<string, object>) is Dictionary<string, object> k ? MiniJson.Teksti(k, "url") : null);
+                    t[tyyppi] = new Aarre { Nimi = MiniJson.Teksti(p, "nimi"), Fakta = MiniJson.Teksti(p, "fakta"), KuvaUrl = url ?? KuvaUrl(MiniJson.Teksti(p, "kuva")) };
                 }
                 maat[maa] = t;
             }
@@ -305,20 +311,23 @@ namespace Matkakirja.Natiivi
             return x;
         }
 
-        static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json)
+        /// <summary>Alkiot kaupunkeineen päätason näkymänä (Paataso.Nakyma: raaka data vain varalla).</summary>
+        static IEnumerable<(string Kaupunki, Dictionary<string, object> Data)> Alkiot(string json, IReadOnlyList<(string Uusi, string Vanha)> kentat)
         {
             foreach (var o in MiniJson.Alkiot(json))
             {
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var k = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
-                if (d != null && k != null) yield return (k, d);
+                if (k != null) yield return (k, Paataso.Nakyma(o, kentat));
             }
         }
 
-        /// <summary>Kokoelma kohtaamiset (web KOHTAAMISET): tervehdys, loyto, tyhja, vaarin.</summary>
+        /// <summary>
+        /// Kokoelma kohtaamiset (web KOHTAAMISET): tervehdys, loyto, tyhja, vaarin, hahmo, nappi ja
+        /// tunnetagit päätasolta (skeema 1.26; vanha paketti data.* Paataso-varareitillä).
+        /// </summary>
         public void LueKohtaamiset(string json)
         {
-            foreach (var (k, d) in Alkiot(json))
+            foreach (var (k, d) in Alkiot(json, Paataso.Kohtaaminen))
             {
                 var x = Hae(k);
                 x.Tervehdys = MiniJson.Teksti(d, "tervehdys");
@@ -346,9 +355,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Kokoelma kohtaamiskuvat (web kohtaamiskuvat-data.js): vain tila
-        /// 'tarkistettu' ja aktiivinen ≠ false; kaytto 'tavallinen' → tavallisen
-        /// kohtaamisen kuva, muuten tarinakaaren. Avain kuvaAvain(kohde ?? kaupunki);
-        /// myöhempi alkio voittaa (JS Map).
+        /// 'tarkistettu' ja aktiivinen ≠ false (null = aktiivinen); kaytto 'tavallinen' → tavallisen
+        /// kohtaamisen kuva, muuten tarinakaaren. Avain kuvaAvain(kohde ?? kaupunki); päätason
+        /// kaupunki on id (skeema 1.26), vanhan paketin raaka data.kaupunki kaupungin nimi.
+        /// Myöhempi alkio voittaa (JS Map).
         /// </summary>
         public void LueKohtaamiskuvat(string json)
         {
@@ -356,11 +366,11 @@ namespace Matkakirja.Natiivi
             foreach (var k in Kaupungit.Keys) avaimet[KuvaAvain(k)] = k;
             foreach (var o in MiniJson.Alkiot(json))
             {
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
+                var d = Paataso.Nakyma(o, Paataso.Kohtaamiskuva);
                 var url = MiniJson.Teksti(o, "url");
-                if (d == null || string.IsNullOrEmpty(url)) continue;
+                if (string.IsNullOrEmpty(url)) continue;
                 if (MiniJson.Teksti(d, "tila") != "tarkistettu" || MiniJson.Kentta(d, "aktiivinen") is bool b && !b) continue;
-                var avain = KuvaAvain(MiniJson.Teksti(d, "kohde") ?? MiniJson.Teksti(d, "kaupunki"));
+                var avain = KuvaAvain(MiniJson.Teksti(d, "kohde") ?? MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(Paataso.Raaka(o), "kaupunki"));
                 var kaupunki = avaimet.TryGetValue(avain, out var id) ? id : MiniJson.Teksti(o, "kaupunki");
                 if (string.IsNullOrEmpty(kaupunki)) continue;
                 var kuva = new Kohtaamiskuva
@@ -383,10 +393,10 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Kokoelma tarinakaari (web TARINAKAARI): kohtaaminen ja aarre.</summary>
+        /// <summary>Kokoelma tarinakaari (web TARINAKAARI): kohtaaminen, aarre ja tunnetagit päätasolta (skeema 1.26).</summary>
         public void LueTarinakaari(string json)
         {
-            foreach (var (k, d) in Alkiot(json))
+            foreach (var (k, d) in Alkiot(json, Paataso.Tarinakaari))
             {
                 var x = Hae(k);
                 x.KaariKohtaaminen = MiniJson.Teksti(d, "kohtaaminen");

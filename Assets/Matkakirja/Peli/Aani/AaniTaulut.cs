@@ -265,7 +265,9 @@ namespace Matkakirja.Peli
             {
                 var laji = MiniJson.Teksti(o, "laji");
                 var nimi = MiniJson.Teksti(o, "nimi");
-                var data = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
+                // Siirtymä-, tila- ja paikkaraidan kentät: päätaso ensin, raaka data vain Paataso-varareitillä
+                // (koepaketti v33 / skeema 1.26: vielä vain data-oliossa, Siirtosepän tilaus).
+                var data = Paataso.Nakyma(o, Paataso.Aanitaulu);
                 switch (laji)
                 {
                     case "siirtyma":

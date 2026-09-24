@@ -14,6 +14,8 @@
 // "*" = jokainen taulukon alkio tai olion arvo. Polku, joka alkaa "data.", on RAAKADATAA
 // (webin moduulin olio, sopimuksen mukaan ei nojata). VAIHE 2: Paataso.RaakaKielletty = true →
 // raakapolkuja ei lueta, joten jokainen lukija, joka vielä tarvitsee niitä, punastuu.
+// SKEEMA 1.26 (24.9.2026): säännöt ovat päätaso ensin ("kentta|data.vanha", Tai("a.b")), kuten
+// lukijat (Paataso.Nakyma/Olio). Raaka vaihtoehto on vain vanhoja paketteja varten.
 //
 // Lukijat (kaanna.sh:n tiedostot): SisaltoTuonti, Reittiverkko, Laattamaarat, Aarrenimet,
 // Kysymysdata, Kohtaamiset, Kuvakokoelmat, Pulmadata, Kauppasisalto, Fokusdata, Sahketehtava,
@@ -238,6 +240,9 @@ namespace Matkakirja.Peli.Testit
 
         const JsonTyyppi Kupla = JsonTyyppi.Teksti | JsonTyyppi.Taulukko | JsonTyyppi.Olio;
 
+        /// <summary>Päätason polku ja sen raaka vastine samalla nimellä: "a.b" → "a.b|data.a.b" (päätaso ensin).</summary>
+        static string Tai(string polku) => polku + "|data." + polku;
+
         /// <summary>Kaikki natiivin lukijat. Järjestys = tulosteen järjestys.</summary>
         public static readonly IReadOnlyList<Lukijasaanto> Saannot = new List<Lukijasaanto>
         {
@@ -252,26 +257,28 @@ namespace Matkakirja.Peli.Testit
                     var v = new Reittiverkko(SisaltoTuonti.LueKaupungit(p.Teksti("kaupungit")), r);
                     return (r.Count, $"{v.Reitit.Count} maa/meri, {v.Lennot.Count} lentoa");
                 })
-                .Pakko("data.a|a", T).Pakko("data.b|b", T).Pakko("laji", T)
-                .Voi("data.steps", L).Voi("data.type", T).Voi("data.fee", L)
+                .Pakko("a|data.a", T).Pakko("b|data.b", T).Pakko("laji", T)
+                .Voi("askelia|data.steps", L).Voi("data.fee", L)
                 .Ehto((o, p) => MiniJson.Teksti(o, "laji") is string l && l != "maa" && l != "sea" && l != "lento" ? $"tuntematon laji '{l}'" : null)
-                .Ehto((o, p) => MiniJson.Teksti(o, "laji") != "lento" && Arvo(o, "data.steps") == null ? "puuttuu data.steps (maa/meri)" : null)
-                .Ehto((o, p) => Kaupunki(p, S(o, "data.a", "a"), "a") ?? Kaupunki(p, S(o, "data.b", "b"), "b")),
+                .Ehto((o, p) => MiniJson.Teksti(o, "laji") != "lento" && Ensimmainen(o, "askelia", "data.steps") == null ? "puuttuu askelia (maa/meri)" : null)
+                .Ehto((o, p) => Kaupunki(p, S(o, "a", "data.a"), "a") ?? Kaupunki(p, S(o, "b", "data.b"), "b")),
 
             Saanto("laatat", "Laattamaarat.Lue", p =>
                 {
                     var m = Laattamaarat.Lue(p.Teksti("laatat"));
                     return (m.Yhteensa > 0 ? 1 : 0, $"{m.Yhteensa} laattaa" + (m.Ohitetut.Count > 0 ? $", ohi {string.Join(",", m.Ohitetut)}" : ""));
                 })
-                .Pakko("data.counts", O).Pakko("data.counts.*", L),
+                .Pakko("maarat|data.counts", O).Pakko("maarat.*|data.counts.*", L),
 
             Saanto("laatat", "Aarrenimet.LueLaatat", p =>
                 {
                     var n = new Aarrenimet(); n.LueLaatat(p.Teksti("laatat"));
                     return (n.Hae(Laattatyypit.PieniAarre, null, null)?.Nimi != null ? 1 : 0, $"{n.Mantereet.Count()} mannerta");
                 })
-                .Pakko("data.types", O).Pakko("data.types.*.name", T).Voi("data.types.*.fakta", T).Voi("data.types.*.kuva", T)
-                .Voi("data.mannerTypes", O).Voi("data.mannerTypes.*", O).Voi("data.mannerTypes.*.*.name", T).Voi("data.mannerTypes.*.*.kuva", T),
+                .Pakko("tyypit|data.types", O).Pakko("tyypit.*.name|data.types.*.name", T)
+                .Voi("tyypit.*.fakta|data.types.*.fakta", T).Voi("tyypit.*.kuva|data.types.*.kuva", T)
+                .Voi("mannerTyypit|data.mannerTypes", O).Voi("mannerTyypit.*|data.mannerTypes.*", O)
+                .Voi("mannerTyypit.*.*.name|data.mannerTypes.*.*.name", T).Voi("mannerTyypit.*.*.kuva|data.mannerTypes.*.*.kuva", T),
 
             Saanto("kysymykset", "Kysymysdata.LueKysymykset", p =>
                 {
@@ -298,18 +305,19 @@ namespace Matkakirja.Peli.Testit
                     var d = new Kysymysdata(); d.LueTarinakaari(p.Teksti("tarinakaari"));
                     return (d.Kaaret.Count, null);
                 })
-                .Vain(o => Arvo(o, "data.kysymys") is Dictionary<string, object>, "ei kysymystä")
-                .Pakko("kaupunki|data.id", T).Pakko("data.kysymys.q", T).Pakko("data.kysymys.vaihtoehdot", A).Pakko("data.kysymys.oikea", L)
-                .Voi("data.nimi", T).Voi("data.kysymys.fakta", T).Uniikki("kaupunki|data.id"),
+                .Vain(o => Ensimmainen(o, "kysymys", "data.kysymys") is Dictionary<string, object>, "ei kysymystä")
+                .Pakko("kaupunki|id", T).Pakko("kysymys.kysymys|data.kysymys.q", T)
+                .Pakko("kysymys.vaihtoehdot|data.kysymys.vaihtoehdot", A).Pakko("kysymys.oikea|data.kysymys.oikea", L)
+                .Voi(Tai("nimi"), T).Voi(Tai("kysymys.fakta"), T).Uniikki("kaupunki|id"),
 
             Saanto("tarinakaari", "Kohtaamiset.LueTarinakaari", p =>
                 {
                     var k = new Kohtaamiset(); k.LueTarinakaari(p.Teksti("tarinakaari"));
                     return (k.Kaupungit.Count(x => x.Value.KaariKohtaaminen != null), null);
                 })
-                .Pakko("kaupunki|id", T).Pakko("data", O).Pakko("data.kohtaaminen", T).Pakko("data.aarre", T)
-                .Voi("data.tunneKohtaaminen", O).Voi("data.tunneKohtaaminen.tunne", T).Voi("data.tunneKohtaaminen.voimakkuus", L)
-                .Voi("data.tunneAarre", O).Voi("data.tunneAarre.tunne", T).Voi("data.tunneAarre.voimakkuus", L)
+                .Pakko("kaupunki|id", T).Pakko(Tai("kohtaaminen"), T).Pakko(Tai("aarre"), T)
+                .Voi(Tai("tunneKohtaaminen"), O).Voi(Tai("tunneKohtaaminen.tunne"), T).Voi(Tai("tunneKohtaaminen.voimakkuus"), L)
+                .Voi(Tai("tunneAarre"), O).Voi(Tai("tunneAarre.tunne"), T).Voi(Tai("tunneAarre.voimakkuus"), L)
                 .Uniikki("kaupunki|id"),
 
             Saanto("paikkatiedot", "Kysymysdata.LuePaikkatiedot", p =>
@@ -317,9 +325,10 @@ namespace Matkakirja.Peli.Testit
                     var d = new Kysymysdata(); d.LuePaikkatiedot(p.Teksti("paikkatiedot"));
                     return (d.Paikkatiedot.Sum(x => x.Value.Count), $"{d.Paikkatiedot.Count} kaupunkia");
                 })
-                .Pakko("kaupunki", T).Pakko("data", T | O)
-                .Voi("data.text", T).Voi("data.voice", T).Voi("data.source", T).Voi("data.wiki", T)
-                .Ehto((o, p) => Arvo(o, "data") is Dictionary<string, object> && Arvo(o, "data.text") == null ? "oliolta puuttuu data.text" : null)
+                // Vanha paketti: data on merkkijono (= teksti) tai olio {text, voice, source, wiki}.
+                .Pakko("kaupunki", T).Pakko("teksti|data.text|data", T | O)
+                .Voi("aani|data.voice", T).Voi("lahde|data.source", T).Voi("wiki|data.wiki", T)
+                .Ehto((o, p) => (S(o, "teksti", "data.text") ?? Arvo(o, "data") as string) == null ? "puuttuu teksti" : null)
                 .Ehto((o, p) => Kaupunki(p, MiniJson.Teksti(o, "kaupunki"), "kaupunki")),
 
             Saanto("kohtaamiset", "Kohtaamiset.LueKohtaamiset", p =>
@@ -327,11 +336,11 @@ namespace Matkakirja.Peli.Testit
                     var k = new Kohtaamiset(); k.LueKohtaamiset(p.Teksti("kohtaamiset"));
                     return (k.Kaupungit.Count(x => x.Value.Tervehdys != null), null);
                 })
-                .Pakko("kaupunki|id", T).Pakko("data", O)
-                .Pakko("data.tervehdys", T).Pakko("data.loyto", T).Pakko("data.tyhja", T).Pakko("data.vaarin", T)
-                .Voi("data.hahmo", T).Voi("data.nappi", T)
-                .Voi("data.tunneTervehdys.tunne", T).Voi("data.tunneLoyto.tunne", T).Voi("data.tunneTyhja.tunne", T).Voi("data.tunneVaarin.tunne", T)
-                .Voi("data.tunneTervehdys.voimakkuus", L).Voi("data.tunneLoyto.voimakkuus", L).Voi("data.tunneTyhja.voimakkuus", L).Voi("data.tunneVaarin.voimakkuus", L)
+                .Pakko("kaupunki|id", T)
+                .Pakko(Tai("tervehdys"), T).Pakko(Tai("loyto"), T).Pakko(Tai("tyhja"), T).Pakko(Tai("vaarin"), T)
+                .Voi(Tai("hahmo"), T).Voi(Tai("nappi"), T)
+                .Voi(Tai("tunneTervehdys.tunne"), T).Voi(Tai("tunneLoyto.tunne"), T).Voi(Tai("tunneTyhja.tunne"), T).Voi(Tai("tunneVaarin.tunne"), T)
+                .Voi(Tai("tunneTervehdys.voimakkuus"), L).Voi(Tai("tunneLoyto.voimakkuus"), L).Voi(Tai("tunneTyhja.voimakkuus"), L).Voi(Tai("tunneVaarin.voimakkuus"), L)
                 .Uniikki("kaupunki|id"),
 
             Saanto("kohtaamiskuvat", "Kohtaamiset.LueKohtaamiskuvat", p =>
@@ -339,14 +348,15 @@ namespace Matkakirja.Peli.Testit
                     var k = UudetKohtaamiset(p); k.LueKohtaamiskuvat(p.Teksti("kohtaamiskuvat"));
                     return (null, $"kaari {k.Kaupungit.Count(x => x.Value.KaariKuva != null)}, tavallinen {k.Kaupungit.Count(x => x.Value.TavallinenKuva != null)} kaupungissa");
                 })
-                .Vain(o => MiniJson.Teksti(Arvo(o, "data") as Dictionary<string, object>, "tila") is string t ? t == "tarkistettu" : true, "tila ≠ tarkistettu")
-                .Vain(o => !(Arvo(o, "data.aktiivinen") is bool b) || b, "aktiivinen = false")
-                .Pakko("url", T).Pakko("data", O).Pakko("data.tila", T)
-                .Voi("data.kohde", T).Voi("data.kaupunki", T).Voi("kaupunki", T).Voi("data.aktiivinen", B)
-                .Voi("data.alt", T).Voi("data.lyhyt", T).Voi("data.kuvateksti", T).Voi("data.kaytto", T)
+                .Vain(o => S(o, "tila", "data.tila") is string t ? t == "tarkistettu" : true, "tila ≠ tarkistettu")
+                .Vain(o => !(Ensimmainen(o, "aktiivinen", "data.aktiivinen") is bool b) || b, "aktiivinen = false")
+                .Pakko("url", T).Pakko(Tai("tila"), T)
+                // Päätason kaupunki on id; vanhan paketin data.kaupunki on kaupungin nimi (avain kuvaAvain).
+                .Voi(Tai("kohde"), T).Voi("kaupunki|data.kaupunki", T).Voi(Tai("aktiivinen"), B)
+                .Voi(Tai("alt"), T).Voi(Tai("lyhyt"), T).Voi(Tai("kuvateksti"), T).Voi(Tai("kaytto"), T)
                 .Ehto((o, p) =>
                 {
-                    var avain = Kohtaamiset.KuvaAvain(S(o, "data.kohde", "data.kaupunki"));
+                    var avain = Kohtaamiset.KuvaAvain(S(o, "kohde", "data.kohde", "kaupunki", "data.kaupunki"));
                     return Kaupunkiavaimet(p).Any(k => Kohtaamiset.KuvaAvain(k) == avain) || !string.IsNullOrEmpty(MiniJson.Teksti(o, "kaupunki")) ? null : "kaupunki ei ratkea (kohde/kaupunki)";
                 }),
 
@@ -357,12 +367,13 @@ namespace Matkakirja.Peli.Testit
                         .Count(m => n.Hae(Laattatyypit.PieniAarre, null, m) != null || n.Hae(Laattatyypit.IsoAarre, null, m) != null);
                     return (maara, null);
                 })
-                .Pakko("maa|id", T).Pakko("data", O)
-                .Voi("data.pieniAarre", O).Voi("data.isoAarre", O)
-                .Voi("data.pieniAarre.name", T).Voi("data.isoAarre.name", T).Voi("data.pieniAarre.fakta", T).Voi("data.isoAarre.fakta", T)
-                .Voi("data.pieniAarre.kuva", T).Voi("data.isoAarre.kuva", T)
-                .Voi("kuvat", O).Voi("kuvat.pieniAarre.url", T).Voi("kuvat.isoAarre.url", T)
-                .Ehto((o, p) => Arvo(o, "data.pieniAarre.name") == null && Arvo(o, "data.isoAarre.name") == null ? "ei yhtään aarteen nimeä" : null)
+                .Pakko("maa|id", T)
+                .Voi(Tai("pieniAarre"), O).Voi(Tai("isoAarre"), O)
+                .Voi("pieniAarre.nimi|data.pieniAarre.name", T).Voi("isoAarre.nimi|data.isoAarre.name", T)
+                .Voi(Tai("pieniAarre.fakta"), T).Voi(Tai("isoAarre.fakta"), T).Voi(Tai("pieniAarre.kuva"), T).Voi(Tai("isoAarre.kuva"), T)
+                .Voi("pieniAarre.url|kuvat.pieniAarre.url", T).Voi("isoAarre.url|kuvat.isoAarre.url", T)
+                .Ehto((o, p) => Ensimmainen(o, "pieniAarre.nimi", "isoAarre.nimi", "data.pieniAarre.name", "data.isoAarre.name") == null
+                    ? (Paataso.RaakaKielletty ? "ei yhtään aarteen nimeä päätasolla" : "ei yhtään aarteen nimeä") : null)
                 .Uniikki("maa|id"),
 
             Saanto("saannot", "Kohtaamiset.LueSaannot", p =>
@@ -374,38 +385,51 @@ namespace Matkakirja.Peli.Testit
                 .Pakko("arvo", O).Pakko("arvo.url", T),
 
             Saanto("elaintayt", "Kauppasisalto.Lue (eläintäyt)", p => (Kauppasisalto.Lue(p.Teksti("elaintayt"), null).Elaintayt.Count, null))
-                .Pakko("maa|id", T).Pakko("data", O)
-                .Voi("data.elain", T).Voi("data.otsikko", T).Voi("data.teksti", T).Voi("data.lahde", T).Voi("data.kuva", T)
-                .Voi("data.lat", L).Voi("data.lon", L)
+                .Pakko("maa|id", T).Pakko(Tai("elain"), T).Pakko(Tai("otsikko"), T).Pakko(Tai("teksti"), T)
+                .Voi(Tai("lahde"), T).Voi("kuva.url|data.kuva", T).Voi(Tai("lat"), L).Voi(Tai("lon"), L)
                 .Uniikki("maa|id"),
 
             Saanto("julisteet", "Kauppasisalto.Lue (julisteet)", p => (Kauppasisalto.Lue(null, p.Teksti("julisteet")).Julisteet.Count, null))
-                .Pakko("id", T).Pakko("data", O).Pakko("data.tiedosto", T).Pakko("data.otsikko", T)
-                .Voi("kaupunki", T).Voi("data.lyhyt", T).Voi("data.selite", T)
+                .Pakko("id", T).Pakko("kuva.url|data.tiedosto", T).Pakko(Tai("otsikko"), T)
+                .Voi("kaupunki", T).Voi(Tai("lyhyt"), T).Voi(Tai("selite"), T)
                 .Uniikki("id"),
 
-            Saanto("fokusvirrat", "Fokusdata.Lue", p => (Fokusdata.Lue(p.Teksti("fokusvirrat")).Kaupunkeja, null))
-                .Pakko("kaupunki|id", T).Pakko("data", O)
-                .Voi("data.kohtaamispiste", O).Voi("data.kohtaamispiste.nimi", T).Voi("data.kohtaamispiste.laudat", O)
-                .Voi("data.kohtaamispiste.laudat.maailmankartta.x", L).Voi("data.kohtaamispiste.laudat.maailmankartta.y", L)
-                .Voi("data.lehtitehtavat", A).Pakko("data.lehtitehtavat.*.id", T).Voi("data.lehtitehtavat.*.palkinto", T)
+            Saanto("fokusvirrat", "Fokusdata.Lue", p => (Fokusdata.Lue(p.Teksti("fokusvirrat"), lehtitehtavat: p.Teksti("lehtitehtavat")).Kaupunkeja, null))
+                .Pakko("kaupunki|id", T)
+                .Voi("virta", O).Voi("virta.kohtaaminen|data.kohtaaminen", O)
+                .Voi(Tai("kohtaamispiste"), O).Voi(Tai("kohtaamispiste.nimi"), T).Voi(Tai("kohtaamispiste.laudat"), O)
+                .Voi(Tai("kohtaamispiste.laudat.maailmankartta.x"), L).Voi(Tai("kohtaamispiste.laudat.maailmankartta.y"), L)
+                .Voi(Tai("sahketehtava"), O)
+                // Päätaso: id-lista "kaupunki:tehtava" (palkinto kokoelmasta lehtitehtavat); raaka: olioita {id, palkinto}.
+                .Voi(Tai("lehtitehtavat"), A).Pakko("lehtitehtavat.*|data.lehtitehtavat.*.id", T)
+                // Raaka palkinto luetaan vain, kun päätason listaa ei ole (päätason palkinto: kokoelma lehtitehtavat).
+                .Voi("lehtitehtavat.*|data.lehtitehtavat.*.palkinto", T)
+                .Ehto((o, p) =>
+                {
+                    if (!(MiniJson.Kentta(o, "lehtitehtavat") is List<object> idt) || idt.Count == 0) return null;
+                    var lt = p.Teksti("lehtitehtavat");
+                    if (lt == null) return "päätason lehtitehtavat ilman kokoelmaa lehtitehtavat";
+                    var tunnetut = new HashSet<string>(p.Alkiot("lehtitehtavat").Select(x => MiniJson.Teksti(x, "id")).Where(x => x != null));
+                    var puuttuu = idt.OfType<string>().FirstOrDefault(x => !tunnetut.Contains(x));
+                    return puuttuu == null ? null : $"lehtitehtävä {puuttuu} ei ole kokoelmassa lehtitehtavat";
+                })
                 .Uniikki("kaupunki|id"),
 
             Saanto("fokusvirrat", "Sahketehtava.LueKokoelma", p => (Sahketehtava.LueKokoelma(p.Teksti("fokusvirrat")).Count, null))
-                .Vain(o => Arvo(o, "data.sahketehtava") is Dictionary<string, object>, "ei sähketehtävää")
-                .Pakko("kaupunki|id", T).Pakko("data.sahketehtava.id", T).Pakko("data.sahketehtava.sahke", T)
-                .Pakko("data.sahketehtava.aukot", A).Pakko("data.sahketehtava.aukot.*.id", T).Pakko("data.sahketehtava.aukot.*.tyyppi", T)
-                .Voi("data.sahketehtava.aukot.*.otsake", T).Voi("data.sahketehtava.aukot.*.sahkeSana", T).Voi("data.sahketehtava.aukot.*.vihje", T)
-                .Voi("data.sahketehtava.aukot.*.oikea", T | L).Voi("data.sahketehtava.aukot.*.oikeat", A).Voi("data.sahketehtava.aukot.*.oikeat.*", T | L)
-                .Voi("data.sahketehtava.aukot.*.vapaat", A).Voi("data.sahketehtava.aukot.*.vapaat.*", T | L)
-                .Voi("data.sahketehtava.aukot.*.pienin", L).Voi("data.sahketehtava.aukot.*.suurin", L)
-                .Voi("data.sahketehtava.hahmo", T).Voi("data.sahketehtava.hakemistoMaa", T).Voi("data.sahketehtava.fakta", T)
-                .Voi("data.sahketehtava.palkkio", L)
-                .Voi("data.sahketehtava.johdanto", Kupla).Voi("data.sahketehtava.vinkki", Kupla).Voi("data.sahketehtava.linkkiSaate", Kupla)
-                .Voi("data.sahketehtava.oikein", Kupla).Voi("data.sahketehtava.odotus", Kupla).Voi("data.sahketehtava.paluu", Kupla)
-                .Voi("data.sahketehtava.vastauslinkki", O).Voi("data.sahketehtava.vastauslinkki.tyyppi", T)
-                .Voi("data.sahketehtava.vastauslinkki.maa", T).Voi("data.sahketehtava.vastauslinkki.kohde", T)
-                .Voi("data.sahketehtava.vastauslinkki.kaupunki", T).Voi("data.sahketehtava.vastauslinkki.sivu", L)
+                .Vain(o => Ensimmainen(o, "sahketehtava", "data.sahketehtava") is Dictionary<string, object>, "ei sähketehtävää")
+                .Pakko("kaupunki|id", T).Pakko(Tai("sahketehtava.id"), T).Pakko(Tai("sahketehtava.sahke"), T)
+                .Pakko(Tai("sahketehtava.aukot"), A).Pakko(Tai("sahketehtava.aukot.*.id"), T).Pakko(Tai("sahketehtava.aukot.*.tyyppi"), T)
+                .Voi(Tai("sahketehtava.aukot.*.otsake"), T).Voi(Tai("sahketehtava.aukot.*.sahkeSana"), T).Voi(Tai("sahketehtava.aukot.*.vihje"), T)
+                .Voi(Tai("sahketehtava.aukot.*.oikea"), T | L).Voi(Tai("sahketehtava.aukot.*.oikeat"), A).Voi(Tai("sahketehtava.aukot.*.oikeat.*"), T | L)
+                .Voi(Tai("sahketehtava.aukot.*.vapaat"), A).Voi(Tai("sahketehtava.aukot.*.vapaat.*"), T | L)
+                .Voi(Tai("sahketehtava.aukot.*.pienin"), L).Voi(Tai("sahketehtava.aukot.*.suurin"), L)
+                .Voi(Tai("sahketehtava.hahmo"), T).Voi(Tai("sahketehtava.hakemistoMaa"), T).Voi(Tai("sahketehtava.fakta"), T)
+                .Voi(Tai("sahketehtava.palkkio"), L)
+                .Voi(Tai("sahketehtava.johdanto"), Kupla).Voi(Tai("sahketehtava.vinkki"), Kupla).Voi(Tai("sahketehtava.linkkiSaate"), Kupla)
+                .Voi(Tai("sahketehtava.oikein"), Kupla).Voi(Tai("sahketehtava.odotus"), Kupla).Voi(Tai("sahketehtava.paluu"), Kupla)
+                .Voi(Tai("sahketehtava.vastauslinkki"), O).Voi(Tai("sahketehtava.vastauslinkki.tyyppi"), T)
+                .Voi(Tai("sahketehtava.vastauslinkki.maa"), T).Voi(Tai("sahketehtava.vastauslinkki.kohde"), T)
+                .Voi(Tai("sahketehtava.vastauslinkki.kaupunki"), T).Voi(Tai("sahketehtava.vastauslinkki.sivu"), L)
                 .Uniikki("kaupunki|id"),
 
             Saanto("kuvakysymykset", "Kuvakokoelmat.Lue (kuvat)", p => (Kuvakokoelmat.Lue(p.Teksti("kuvakysymykset"), null).Kuvat.Count, null))
@@ -424,27 +448,27 @@ namespace Matkakirja.Peli.Testit
                     var d = Pulmadata.Lue(p.Teksti("pulmat"));
                     return (d.Pulmat.Count, d.Ohitetut.Count > 0 ? "lukija ohitti: " + string.Join("; ", d.Ohitetut) : null);
                 })
-                // Yhdista: kartoittamattomat kentät (id, city, generaattori, kuvat) raa'asta datasta, jos se on.
-                .Pakko("data.id|id", T).Pakko("data.city|kaupunki", T).Pakko("otsikko|data.title", T).Pakko("kysymys|data.q", T)
+                // Paataso.Yhdista: päätason kentät (myös id, kaupunki, generaattori, kuvat) voittavat raa'an datan.
+                .Pakko("id|data.id", T).Pakko("kaupunki|data.city", T).Pakko("otsikko|data.title", T).Pakko("kysymys|data.q", T)
                 .Voi("selite|data.selite", T).Voi("vihje|data.hint", T).Voi("fakta|data.fact", T).Voi("lahde|data.source", T | A)
-                .Voi("kuvaLahteet|data.kuvaLahteet", T).Voi("luonnos|data.sketch", O).Voi("data.kuvat", A)
+                .Voi("kuvaLahteet|data.kuvaLahteet", T).Voi("luonnos|data.sketch", O).Voi("kuvat|data.kuvat", A)
                 .Voi("vaihtoehdot|data.options", A).Voi("oikea|data.correct", L)
-                .Voi("data.generaattori|generaattori", T).Voi("data.generate", T | O)
+                .Voi("generaattori|data.generaattori", T).Voi("data.generate", T | O)
                 .Ehto((o, p) =>
                 {
-                    var g = S(o, "data.generaattori", "generaattori") ?? (Arvo(o, "data.generate") is Dictionary<string, object> go ? MiniJson.Teksti(go, "$funktio") : S(o, "data.generate"));
+                    var g = S(o, "generaattori", "data.generaattori") ?? (Arvo(o, "data.generate") is Dictionary<string, object> go ? MiniJson.Teksti(go, "$funktio") : S(o, "data.generate"));
                     if (g != null) return Pulmageneraattorit.Hae(g) != null ? null : $"tuntematon generaattori {g}";
                     return Ensimmainen(o, "vaihtoehdot", "data.options") is List<object> && Ensimmainen(o, "oikea", "data.correct") is double ? null : "ei generaattoria eikä vaihtoehtoja";
                 })
-                .Ehto((o, p) => Kaupunki(p, S(o, "data.city", "kaupunki"), "kaupunki"))
-                .Uniikki("data.id|id"),
+                .Ehto((o, p) => Kaupunki(p, S(o, "kaupunki", "data.city"), "kaupunki"))
+                .Uniikki("id|data.id"),
 
             Saanto("saapumispuheet", "Luennat.LueSaapumispuheet", p =>
                 {
                     var l = new Luennat(); l.LueSaapumispuheet(p.Teksti("saapumispuheet"));
                     return (l.Saapumispuheita, null);
                 })
-                .Pakko("kaupunki|id", T).Pakko("data", O).Pakko("data.url", T).Voi("data.text", T).Voi("data.duration", L)
+                .Pakko("kaupunki|id", T).Pakko(Tai("url"), T).Voi("teksti|data.text", T).Voi("kesto|data.duration", L)
                 .Uniikki("kaupunki|id"),
 
             Saanto("luennat", "Luennat.LueLuennat", p =>
@@ -453,18 +477,18 @@ namespace Matkakirja.Peli.Testit
                     int erikois = (l.Intro != Luennat.OletusIntro ? 1 : 0) + (l.LentoAlku != Luennat.OletusLentoAlku ? 1 : 0);
                     return (l.Luentoja + erikois, $"{l.Luentoja} kaupunkia + {erikois} (intro, lento-alku)");
                 })
-                // Lukija: d = data ?? alkio (data ohittaa alkion kokonaan, jos se on).
-                .Pakko("data.id|id", T).Pakko("data.url|url", T)
-                .Voi("data.kaupunki|kaupunki", T).Voi("data.teksti|teksti", T).Voi("data.paikkarivi|paikkarivi", T).Voi("data.kesto|kesto", L)
-                .Voi("data.reaktiot|reaktiot", A).Voi("reaktiot.*.id", T).Voi("reaktiot.*.ankkuri", T).Voi("reaktiot.*.tarkoitus", T)
+                // Lukija: Paataso.Nakyma (päätaso ensin, data-olio vain varalla).
+                .Pakko(Tai("id"), T).Pakko(Tai("url"), T)
+                .Voi(Tai("kaupunki"), T).Voi(Tai("teksti"), T).Voi(Tai("paikkarivi"), T).Voi(Tai("kesto"), L)
+                .Voi(Tai("reaktiot"), A).Voi("reaktiot.*.id", T).Voi("reaktiot.*.ankkuri", T).Voi("reaktiot.*.tarkoitus", T)
                 .Voi("reaktiot.*.voimakkuus", L).Voi("reaktiot.*.siirtyma", L)
-                .Voi("data.reaktioHetket|reaktioHetket", O).Voi("reaktioHetket.*", L)
+                .Voi(Tai("reaktioHetket"), O).Voi("reaktioHetket.*", L)
                 .Ehto((o, p) =>
                 {
-                    var id = S(o, "data.id", "id");
-                    return id == "intro" || id == "lento-alku" || S(o, "data.kaupunki", "kaupunki") != null ? null : "kaupunkiluennolta puuttuu kaupunki";
+                    var id = S(o, "id", "data.id");
+                    return id == "intro" || id == "lento-alku" || S(o, "kaupunki", "data.kaupunki") != null ? null : "kaupunkiluennolta puuttuu kaupunki";
                 })
-                .Uniikki("data.kaupunki|kaupunki"),
+                .Uniikki(Tai("kaupunki")),
 
             // AANITAULUT (B7, haara pelikoodari/aani-logiikka, Assets/Matkakirja/Peli/Aani/): liitä tähän
             //   S("aanitaulut", "AaniTaulut.Lue", p => (…lukijan määrä…, …)).Pakko(…)…
@@ -474,11 +498,12 @@ namespace Matkakirja.Peli.Testit
         /// <summary>Raakadatan lukukohdat, joita vartija ei näe kentistä (kirjataan tulosteeseen).</summary>
         public static readonly string[] MuutRaakaluvut =
         {
-            "Paataso.Yhdista (Peli/Paataso.cs): kysymysten ja pulmien varareitti data-olioon, kun päätason kenttä puuttuu (kytkin Paataso.RaakaKielletty)",
-            "PeliOhjain.HaeLaattamaarat (Scripts/Peli/PeliOhjain.cs): moduulit/js/packs/maailmankartta.json, jos kokoelmat/laatat.json puuttuu",
-            "Laattamaarat.Lue (Peli/Laatat.cs): alkiot[0].data.counts (päätason maarat ≥ 1.2x ei vielä käytössä)",
-            "Aarrenimet.LueLaatat (Scripts/Peli/KysymysApu.cs): data.types / data.mannerTypes (päätason tyypit/mannerTyypit ei vielä käytössä)",
-            "UI/ (Natiivi-UI, ei tässä vartijassa): UiSisalto, Kohdekartat, MitaUutta, Lippuikkuna lukevat data-kenttiä Sisalto.HaeTeksti-reitillä",
+            "Paataso (Peli/Paataso.cs): Raaka, RaakaArvo, Nakyma, Olio, Yhdista = lukijoiden ainoa varareitti data-olioon, kun päätason kenttä puuttuu (kytkin Paataso.RaakaKielletty)",
+            "AaniTaulut.LueAanitaulut (Peli/Aani/AaniTaulut.cs, ei sääntöä): siirtyma/tilaraita/paikkaraita data.ryhma/ampari/oma/voima/nousuMs/laskuMs/tunnus (Paataso.Nakyma; v33: vain raa'assa datassa)",
+            "PeliOhjain.HaeAanitaulut (Scripts/Peli/PeliOhjain.Aanet.cs): moduulit/js/aani-ehdokkaat.json, kun paketissa ei maisemakoreja (skeema < 1.22); ohitetaan raakakiellolla",
+            "Laattamaarat.Lue (Peli/Laatat.cs): webin moduulimuoto exportit (vain testit; raakakiellolla FormatException). PeliOhjainin moduulivarareitti poistettu 24.9.2026",
+            "SisaltoTuonti.LueReitit: data.fee (meren maksu; ei päätason kenttää eikä yhdessäkään paketissa, oletus web SEA_FEE)",
+            "UI/ (Natiivi-UI, ei tässä vartijassa): UiSisalto, Kohdekartat, MitaUutta, Lippuikkuna, NostoSisalto, Pulu/Fokusvirrat, Pulu/Matkakirjamerkinnat, Lehti/LehtiFokus, Lehti/LehtiSisalto lukevat data-kenttiä",
         };
 
         // --- tarkistus -----------------------------------------------------
@@ -667,7 +692,7 @@ namespace Matkakirja.Peli.Testit
                 foreach (var kv in r.Hylkayssyyt)
                     Console.WriteLine($"  {"",-16}   HYLÄTTY {kv.Value.Count}: {kv.Key} — esim. {string.Join(", ", kv.Value.Take(4))}");
             }
-            Console.WriteLine("  aanitaulut       (AaniTaulut, B7: lukija liitetään myöhemmin)");
+            Console.WriteLine("  aanitaulut       (AaniTaulut, B7: ei sääntöä; raakaluku alla)");
             Console.WriteLine("  Raakadatan (data.*) lukukohdat, joita lukijat nyt käyttävät:");
             foreach (var g in t.Rivit.Where(r => r.RaakaPolut.Count > 0))
                 Console.WriteLine($"    {g.Kokoelma} / {g.Lukija}: {string.Join(", ", g.RaakaPolut.Select(kv => $"{kv.Key} {kv.Value}"))}");
@@ -684,8 +709,8 @@ namespace Matkakirja.Peli.Testit
 
         // --- paketin haku (vain lipulla) ------------------------------------
 
-        /// <summary>Kokoelmat, jotka paikallinen kopio ja haku sisältävät (säännöt + aanitaulut B7:lle).</summary>
-        public static IEnumerable<string> KopioitavatKokoelmat => Saannot.Select(s => s.Kokoelma).Append("aanitaulut").Distinct();
+        /// <summary>Kokoelmat, jotka paikallinen kopio ja haku sisältävät (säännöt + aanitaulut B7:lle + lehtitehtavat Fokusdatalle).</summary>
+        public static IEnumerable<string> KopioitavatKokoelmat => Saannot.Select(s => s.Kokoelma).Append("aanitaulut").Append("lehtitehtavat").Distinct();
 
         /// <summary>
         /// Hakee tuotantopaketin osoittimesta kansioon kohde/{uusin.json, v&lt;N&gt;/manifest.json,

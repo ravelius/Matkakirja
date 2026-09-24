@@ -6,9 +6,11 @@
 //                       Alkion data on laudan raakadata sellaisenaan:
 //                       {q, options, correct, level?, hint?, fact, source?, place?}.
 //                       Väittämässä ei ole optionsia ja correct on totuusarvo.
-//   tarinakaari.json  — web TARINAKAARI: kohtaamisen kysymys
-//                       {q, vaihtoehdot, oikea, fakta}.
-//   paikkatiedot.json — web pack.placeFacts: merkkijono tai {text, voice, source, wiki}.
+//   tarinakaari.json  — web TARINAKAARI: kohtaamisen kysymys, päätasolla (skeema 1.26)
+//                       kysymys {kysymys, vaihtoehdot, oikea, fakta} (raaka {q, …}).
+//   paikkatiedot.json — web pack.placeFacts: päätasolla teksti, aani, lahde, wiki (raaka
+//                       merkkijono tai {text, voice, source, wiki}).
+//   Päätason kenttä ensin, raaka data vain Paataso-varareitillä (Paataso.RaakaKielletty).
 //
 // JÄRJESTYS ON OSA SÄÄNTÖÄ: pickQuestion arpoo indeksin suodatetusta
 // pakasta, joten ryhmän kysymykset pidetään paketin järjestyksessä (sama
@@ -155,19 +157,22 @@ namespace Matkakirja.Peli
             }
         }
 
-        /// <summary>Kokoelma tarinakaari: vain kohteet, joilla on kysymys.</summary>
+        /// <summary>
+        /// Kokoelma tarinakaari: vain kohteet, joilla on kysymys. Päätaso (skeema 1.26): nimi ja
+        /// kysymys {kysymys, vaihtoehdot, oikea, fakta}; vanha paketti data.nimi ja data.kysymys.q (Paataso).
+        /// </summary>
         public void LueTarinakaari(string json)
         {
             foreach (var o in Alkiot(json, "tarinakaari"))
             {
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
-                if (!(MiniJson.Kentta(d, "kysymys") is Dictionary<string, object> k)) continue;
-                var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(d, "id");
+                var k = Paataso.Olio(o, "kysymys", "kysymys", Paataso.TarinakaariKysymys);
+                if (k == null) continue;
+                var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
                 Kaaret[id] = new KaariKysymys
                 {
                     Kaupunki = id,
-                    Nimi = MiniJson.Teksti(d, "nimi"),
-                    Q = MiniJson.Teksti(k, "q"),
+                    Nimi = MiniJson.Teksti(Paataso.Nakyma(o, Paataso.Tarinakaari), "nimi"),
+                    Q = MiniJson.Teksti(k, "kysymys"),
                     Vaihtoehdot = Tekstit(MiniJson.Kentta(k, "vaihtoehdot")),
                     Oikea = (int)(MiniJson.Luku(k, "oikea") ?? 0),
                     Fakta = MiniJson.Teksti(k, "fakta"),
@@ -175,22 +180,28 @@ namespace Matkakirja.Peli
             }
         }
 
-        /// <summary>Kokoelma paikkatiedot.</summary>
+        /// <summary>
+        /// Kokoelma paikkatiedot. Päätaso (skeema 1.26): teksti, aani, lahde, wiki; vanha paketti
+        /// data merkkijonona tai {text, voice, source, wiki} (Paataso).
+        /// </summary>
         public void LuePaikkatiedot(string json)
         {
             foreach (var o in Alkiot(json, "paikkatiedot"))
             {
                 var id = MiniJson.Teksti(o, "kaupunki");
-                var d = MiniJson.Kentta(o, "data");
-                var t = d is string s
-                    ? new Paikkatieto { Teksti = s }
-                    : new Paikkatieto
+                Paikkatieto t;
+                if (MiniJson.Kentta(o, "teksti") == null && Paataso.RaakaArvo(o) is string s) t = new Paikkatieto { Teksti = s };
+                else
+                {
+                    var n = Paataso.Nakyma(o, Paataso.Paikkatieto);
+                    t = new Paikkatieto
                     {
-                        Teksti = MiniJson.Teksti(d as Dictionary<string, object>, "text"),
-                        Aani = MiniJson.Teksti(d as Dictionary<string, object>, "voice"),
-                        Lahde = MiniJson.Teksti(d as Dictionary<string, object>, "source"),
-                        Wiki = MiniJson.Teksti(d as Dictionary<string, object>, "wiki"),
+                        Teksti = MiniJson.Teksti(n, "teksti"),
+                        Aani = MiniJson.Teksti(n, "aani"),
+                        Lahde = MiniJson.Teksti(n, "lahde"),
+                        Wiki = MiniJson.Teksti(n, "wiki"),
                     };
+                }
                 if (!Paikkatiedot.TryGetValue(id, out var l)) Paikkatiedot[id] = l = new List<Paikkatieto>();
                 l.Add(t);
             }
