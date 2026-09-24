@@ -39,6 +39,10 @@ namespace Matkakirja.Peli
         public const float MaisemaThresholdDb = -24f, MaisemaKneeDb = 18f, MaisemaRatio = 4f;
         public const float MaisemaAttackS = 0.01f, MaisemaReleaseS = 0.35f;
 
+        // --- webin lukijaäänen asetukset (js/puhe.js kytkeVahvistin: gain → kompressori) ------
+        public const float LukijaThresholdDb = -10f, LukijaKneeDb = 18f, LukijaRatio = 4f;
+        public const float LukijaAttackS = 0.003f, LukijaReleaseS = 0.25f;
+
         /// <summary>Kanavia, joille pre-delay-puskuri on varattu (lomitettu kehys).</summary>
         public const int MaksKanavia = 8;
 
@@ -95,6 +99,10 @@ namespace Matkakirja.Peli
         /// <summary>Webin äänimaiseman kompressori (−24 dB, knee 18, ratio 4, 10 ms, 350 ms).</summary>
         public static Kompressori Maisema() =>
             new Kompressori(MaisemaThresholdDb, MaisemaKneeDb, MaisemaRatio, MaisemaAttackS, MaisemaReleaseS);
+
+        /// <summary>Webin lukijaäänen kompressori vahvistimen perässä (−10 dB, knee 18, ratio 4, 3 ms, 250 ms).</summary>
+        public static Kompressori Lukija() =>
+            new Kompressori(LukijaThresholdDb, LukijaKneeDb, LukijaRatio, LukijaAttackS, LukijaReleaseS);
 
         public Kompressori(float thresholdDb, float kneeDb, float ratio, float attackS, float releaseS)
         {
