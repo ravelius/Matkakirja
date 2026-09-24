@@ -1081,6 +1081,22 @@ karttaan valikon sijaan). Ei komentoa tälle toiminnolle. Vaatii joko
 tarkemman kosketuskoordinaatin seuraavalla kierroksella tai testikomennon
 Natiivi-UI:lta.
 
+**TULOS 24.9. klo 13.4x (SHA 24c9194): ✅ PASS.** Ratkaisu edelliseen
+ongelmaan: `swipe`-ele PANEELIN SISÄLLÄ (ei taustakartalla) vierittää
+listaa luotettavasti — pystysuora veto x=200, y 550→150 (device-
+pisteinä) vieritti koko `LINSSIT`-paneelin alas asti kerralla ja
+paljasti "Uusi peli" -rivin Asetukset/Äänet/Offline-kartat-lohkon
+alla (`b7-8-valikko-uusipeli-rivi.png`). Napautus "Uusi peli" →
+vahvistuskysely näkyi ENSIN, tekstillä "Matka alkaa alusta ja kaikki
+muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat
+ja ääniasetukset. Tätä ei voi perua." + napit "Peruuta"/"Aloita alusta"
+(`b7-8-vahvistuskysely.png`) — täsmää odotukseen. "Aloita alusta" →
+näyttö palasi ALOITUSPORTTIIN ("MATKAKIRJA" + "Aloita seikkailu",
+`b7-8-tulos-aloitusportti.png`) — EI jäänyt Ateenan kartalle. Testattiin
+kesken pelin (Ateenassa, "Uusi matka" -haaran kaupunkivalinnan jälkeen),
+joten portti näytti yhden "Aloita seikkailu" -napin (tuore/tyhjä
+tallennus) eikä Jatka/Uusi-paria — odotettua tyhjennyksen jälkeen.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
@@ -1093,7 +1109,7 @@ Natiivi-UI:lta.
 | B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
 | B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni ❌ FAIL (24c9194, lopullinen) | | Lento soittaa `intro-puhe.mp3`:n hetken lennon alussa, sitten hiljaisuus koko loppulennon; `lento-alku`-luento puuttuu katalogista (`VIRHE luentoa ei ole`) |
-| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ⚠️ EI SAATU TESTATTUA (161fa35) | | Kosketus ei osunut valikon vieritykseen |
+| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ✅ PASS (24c9194) | b7-8-tulos-aloitusportti.png | Swipe paneelin sisällä vieritti listan; vahvistuskysely + palautus porttiin molemmat oikein |
 | B7-9 | Aloitusportti (VAATIMUS PERUTTU — nykyinen sisältö on oikea) | ✅ PASS (24c9194, korjatun määritelmän mukaan) | b7-9-portti-vielakin-vanha.png | Omistaja perui alkuperäisen "vain 3 elementtiä" -vaatimuksen 12.2x |
 | 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
 | 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
