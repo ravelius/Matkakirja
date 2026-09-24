@@ -1,0 +1,439 @@
+{
+  "sourceOrder": "posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md",
+  "deliveryState": "9 JPEGs R2 readback verified; 2 low-resolution candidates retained locally; game integration pending",
+  "images": [
+    {
+      "cityId": "bali",
+      "kaupunki": "Bali",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "a14cb2bb8c1824826af33032a4c85ba460431d164c7ca99138c9894f385ff030",
+      "tavut": 1320052,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1533
+      },
+      "lahde": "Rijksmuseum Amsterdam",
+      "tekija": "Wijnand Otto Jan Nieuwenkamp",
+      "vuosi": "1907–1921 (mahdollisesti 1914)",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribuutio": "Wijnand Otto Jan Nieuwenkamp; Rijksmuseum Amsterdam; CC0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Gezicht_op_Loloan_Barat_op_Bali,_RP-P-1921-1038.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Nieuwenkamp kuvasi Loloan Baratin jokirannan kalastajakylän Balilla 1900-luvun alussa.",
+      "qaKonteksti": "Hollantilaisen matkailijataiteilijan historiallinen näkökulma Baliin; paikan nimi ja tekijä säilytettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Gezicht_op_Loloan_Barat_op_Bali,_RP-P-1921-1038.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Gezicht_op_Loloan_Barat_op_Bali%2C_RP-P-1921-1038.jpg/1920px-Gezicht_op_Loloan_Barat_op_Bali%2C_RP-P-1921-1038.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "c024a2596011837918049d2b341cd4cd6a537b438b9af5b0dc0f6981b6869850",
+      "lähdeTavut": 994996,
+      "alkuperäisenMitat": "3598x3064",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: named Loloan Barat riverside village; printed etching and border legible",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/loloan-barat-1907.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "bali",
+      "kaupunki": "Bali",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "a26b1c6dd79a480be8bd42582dfddeca296699cfc295a5e174763340783d7c0e",
+      "tavut": 1096679,
+      "mitat": {
+        "leveys": 1403,
+        "korkeus": 1800
+      },
+      "lahde": "Rijksmuseum Amsterdam",
+      "tekija": "Wijnand Otto Jan Nieuwenkamp",
+      "vuosi": "1912–1915",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribuutio": "Wijnand Otto Jan Nieuwenkamp; Rijksmuseum Amsterdam; CC0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:De_oogst,_Bali,_RP-P-1921-1057.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Nieuwenkampin grafiikka tallensi sadonkorjuun Balilla 1910-luvulla.",
+      "qaKonteksti": "Hollantilaisen matkailijataiteilijan historiallinen näkökulma Baliin; paikan nimi ja tekijä säilytettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:De_oogst,_Bali,_RP-P-1921-1057.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/De_oogst%2C_Bali%2C_RP-P-1921-1057.jpg/1920px-De_oogst%2C_Bali%2C_RP-P-1921-1057.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "733e8ffdf14e8e8b5a5891a5d09b828d46852dc65bb8b05a2fbee237ef308ab6",
+      "lähdeTavut": 1299539,
+      "alkuperäisenMitat": "5492x7044",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: printed Bali harvest etching with intact paper border",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/bali-harvest-1912.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "bali",
+      "kaupunki": "Bali",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "64975e84a56ebd2b7d3bbb68947b5a14e8ba34e3a9cede2116a0ad0b8c100c47",
+      "tavut": 979087,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1309
+      },
+      "lahde": "Rijksmuseum Amsterdam",
+      "tekija": "Wijnand Otto Jan Nieuwenkamp",
+      "vuosi": "1908",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribuutio": "Wijnand Otto Jan Nieuwenkamp; Rijksmuseum Amsterdam; CC0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Regenbui_boven_de_rijstvelden_bij_Gitgit_op_Bali,_RP-P-1921-1044.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Sadepilvi nousi Gitgitin riisipeltojen ylle Balilla vuonna 1908.",
+      "qaKonteksti": "Hollantilaisen matkailijataiteilijan historiallinen näkökulma Baliin; paikan nimi ja tekijä säilytettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Regenbui_boven_de_rijstvelden_bij_Gitgit_op_Bali,_RP-P-1921-1044.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Regenbui_boven_de_rijstvelden_bij_Gitgit_op_Bali%2C_RP-P-1921-1044.jpg/1920px-Regenbui_boven_de_rijstvelden_bij_Gitgit_op_Bali%2C_RP-P-1921-1044.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "32dcc7cb318947fda01ad212db3cbc45687cb1cf878e26e7bd27b8bcba272a41",
+      "lähdeTavut": 744668,
+      "alkuperäisenMitat": "4658x3386",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: Gitgit rice terraces and storm; etching legible",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/gitgit-rice-fields-1908.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "milfordsound",
+      "kaupunki": "Milford Sound",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "336e619718baf3bb7479dec4cd647609664e1d36ffcbaec3a92b60a035d89187",
+      "tavut": 215601,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 553
+      },
+      "lahde": "Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand",
+      "tekija": "John Gully",
+      "vuosi": "1881",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "John Gully; Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:John_Gully_-_Milford_Sound_-_Sarjeant_Gallery.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "John Gully maalasi Milford Soundin vuorenseinämät vuonna 1881.",
+      "qaKonteksti": "Uusiseelantilaisen eurooppalaistaustaisen taiteilijan vuonomaisema; Piopiotahi on paikan maorinkielinen nimi.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:John_Gully_-_Milford_Sound_-_Sarjeant_Gallery.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/John_Gully_-_Milford_Sound_-_Sarjeant_Gallery.jpg/960px-John_Gully_-_Milford_Sound_-_Sarjeant_Gallery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "ececb62137816080644ae9427795ede4eb1b6884d185cd6740abeb197b4982e4",
+      "lähdeTavut": 137754,
+      "alkuperäisenMitat": "1200x691",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: Milford Sound watercolour, coherent fjord and cliffs",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/gully-milford-1881.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "milfordsound",
+      "kaupunki": "Milford Sound",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "5540047a6d81191edb42e43aed3d9f43e2bcd78d3ebba21efe5dedaf5437587e",
+      "tavut": 163345,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 757
+      },
+      "lahde": "Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand",
+      "tekija": "Charles Heaphy",
+      "vuosi": "1874",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "Charles Heaphy; Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Harrison%27s_cove,_Milford_Sound._C-025-019.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Charles Heaphy ikuisti Milford Soundin Harrison's Coven vesivärityöhönsä vuonna 1874.",
+      "qaKonteksti": "Uusiseelantilaisen eurooppalaistaustaisen taiteilijan vuonomaisema; Piopiotahi on paikan maorinkielinen nimi.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Harrison%27s_cove,_Milford_Sound._C-025-019.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Harrison%27s_cove%2C_Milford_Sound._C-025-019.jpg/960px-Harrison%27s_cove%2C_Milford_Sound._C-025-019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "1cffe0b1d47bf88d597b607883f09d1ac3e1cbd13080d6505bb2a9beccb126de",
+      "lähdeTavut": 106772,
+      "alkuperäisenMitat": "1080x852",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: Harrison Cove watercolour; coherent Milford landscape",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/heaphy-harrisons-cove-1874.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "milfordsound",
+      "kaupunki": "Milford Sound",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "f79dd0ad729aac5ec3f4847a612253593291a7592cf00a34bb6e1071dcf9627a",
+      "tavut": 231600,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 575
+      },
+      "lahde": "Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand",
+      "tekija": "William Mathew Hodgkins",
+      "vuosi": "ennen 1898",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "William Mathew Hodgkins; Te Whare O Rehua Sarjeant Gallery / National Library of New Zealand; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:William_Hodgkins_-_Milford_Sound_-_Sarjeant_Gallery.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "William Mathew Hodgkins maalasi Milford Soundin ennen 1800-luvun loppua.",
+      "qaKonteksti": "Uusiseelantilaisen eurooppalaistaustaisen taiteilijan vuonomaisema; Piopiotahi on paikan maorinkielinen nimi.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:William_Hodgkins_-_Milford_Sound_-_Sarjeant_Gallery.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/William_Hodgkins_-_Milford_Sound_-_Sarjeant_Gallery.jpg/960px-William_Hodgkins_-_Milford_Sound_-_Sarjeant_Gallery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "030e93839fb0c006ea7a6398391ed67fa7e96b9630009d8929c89dd3e7bdf5f7",
+      "lähdeTavut": 153464,
+      "alkuperäisenMitat": "1200x719",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: Milford Sound watercolour, coherent mountains, lake and foreground",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/hodgkins-milford-pre1898.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "noumea",
+      "kaupunki": "Nouméa",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "66593573f3c95148539949eebb7bf8cddf4a51a8341f41ad5a85238fe46abbe7",
+      "tavut": 1360826,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1320
+      },
+      "lahde": "Le Monde illustré / Bibliothèque nationale de France",
+      "tekija": "Louis Le Breton",
+      "vuosi": "1857",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "Louis Le Breton; Le Monde illustré / Bibliothèque nationale de France; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:No02p04_nelle_caledonie-e04-vue_de_la_rade_de_port-de-france.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Louis Le Breton piirsi Port-de-Francen eli nykyisen Nouméan sataman vuonna 1857.",
+      "qaKonteksti": "Uuden-Kaledonian rangaistussiirtolan ja ranskalaisen siirtomaavallan aikainen näkökulma; vanha nimi Port-de-France selitettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:No02p04_nelle_caledonie-e04-vue_de_la_rade_de_port-de-france.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/No02p04_nelle_caledonie-e04-vue_de_la_rade_de_port-de-france.jpg/1920px-No02p04_nelle_caledonie-e04-vue_de_la_rade_de_port-de-france.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "14e1a8159abb2aba9d641d84a981304842693be4a8e4f2d2fd9354ec288d4b67",
+      "lähdeTavut": 1053665,
+      "alkuperäisenMitat": "3650x2677",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: Port-de-France harbour engraving with 1857-era city and ships",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/lebreton-port-de-france-1857.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "noumea",
+      "kaupunki": "Nouméa",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "41cd2cc47e2409203864de1e5901797443c4eaeafefc479640f8ff298f857a3b",
+      "tavut": 284861,
+      "mitat": {
+        "leveys": 960,
+        "korkeus": 588
+      },
+      "lahde": "Le Monde illustré / Bibliothèque nationale de France",
+      "tekija": "Louise Michel",
+      "vuosi": "1875",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "Louise Michel; Le Monde illustré / Bibliothèque nationale de France; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Noum%C3%A9a_by_Louise_Michel.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Louise Michel piirsi näkymän Nouméan hautausmaalle vuonna 1875.",
+      "qaKonteksti": "Uuden-Kaledonian rangaistussiirtolan ja ranskalaisen siirtomaavallan aikainen näkökulma; vanha nimi Port-de-France selitettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Noum%C3%A9a_by_Louise_Michel.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Noum%C3%A9a_by_Louise_Michel.jpg/960px-Noum%C3%A9a_by_Louise_Michel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "bdb15e52542299967107f693044333b4d691747689688bd103cebd9f7cb14c67",
+      "lähdeTavut": 195229,
+      "alkuperäisenMitat": "1332x816",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: soft but legible period Noumea drawing",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/michel-noumea-1875.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    },
+    {
+      "cityId": "uluru",
+      "kaupunki": "Uluru",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "8b0a0ba76650a8f28a70c88162c1246c3e2fa40e6021adada7cdac839f154d27",
+      "tavut": 771175,
+      "mitat": {
+        "leveys": 1800,
+        "korkeus": 1005
+      },
+      "lahde": "History Trust of South Australia",
+      "tekija": "tekijä tuntematon; History Trust of South Australia",
+      "vuosi": "noin 1900",
+      "lisenssi": "CC0",
+      "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribuutio": "tekijä tuntematon; History Trust of South Australia; History Trust of South Australia; CC0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Ayers_Rock,_Northern_Territory_-_drawing(GN00088).jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuosisadanvaihteen maisemapiirros kuvaa Ulurua, jota arkisto nimittää Ayers Rockiksi.",
+      "qaKonteksti": "Anangujen pyhä maisema; kuva on historiallinen maisemapiirros/-maalaus, ei kalliotaiteen nykyvalokuva. Käytä ensisijaisesti nimeä Uluru ja selitä arkiston historiallinen nimi Ayers Rock.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Ayers_Rock,_Northern_Territory_-_drawing(GN00088).jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Ayers_Rock%2C_Northern_Territory_-_drawing%28GN00088%29.jpg/1920px-Ayers_Rock%2C_Northern_Territory_-_drawing%28GN00088%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "15d27c1fdfcef0101ccc28d2225539ebca85d9a749ae46903340adae1bd02aba",
+      "lähdeTavut": 604876,
+      "alkuperäisenMitat": "2581x1441",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed: genuine period engraved landscape labelled Ayers Rock; depicts Uluru, not sacred rock art; archive name explained",
+      "bucket": "matkakirja",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/ayers-rock-drawing-1900.jpg",
+      "deliveryStatus": "R2 verified; game integration pending"
+    }
+  ],
+  "existingInGame": [
+    {
+      "cityId": "geraldton",
+      "tyyppi": "ennenNyt",
+      "fileName": "SS Charon at Geraldton, SLWA b4792667.png",
+      "vuosi": "1922",
+      "lahde": "State Library of Western Australia, Commons (PD)",
+      "verifiedIn": "origin/main:js/packs/oceania-valokuvat.js"
+    },
+    {
+      "cityId": "nullarbor",
+      "tyyppi": "ennenNyt",
+      "fileName": "Camel train crossing Nullarbor Plain(GN00374).jpg",
+      "vuosi": "1910-luku",
+      "lahde": "State Government Photographer / History Trust of South Australia, Commons (CC0)",
+      "verifiedIn": "origin/main:js/packs/oceania-valokuvat.js"
+    }
+  ],
+  "unfound": [
+    {
+      "cityId": "exmouth",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "North West Cape/Exmouth Gulf -haut tuottivat merikarttoja ja nykykuvia, ei aitoa kohdetta esittävää aikakauden taideteosta Commonsissa."
+    },
+    {
+      "cityId": "geraldton",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Geraldton/Champion Bay -haut tuottivat karttoja ja kasviaiheisia teoksia, eivät kaupunkia esittävää aikalaisteosta Commonsissa."
+    },
+    {
+      "cityId": "nullarbor",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Eyre-retkikunnan kuvituksen tarkkaa paikkaa ei voitu todentaa; vuoden 1930 WA-julisteen pieni Nullarbor-sivukuva ei ole itsenäinen paikallisteos."
+    },
+    {
+      "cityId": "broome",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Broomen helmenkalastus löytyi valokuvina, ei aitona Broomea esittävänä aikakauden maalauksena/kaiverruksena Commonsissa; New Yorkin Broome Street -osumat hylätty."
+    },
+    {
+      "cityId": "birdsville",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Birdsville Queensland -osumat olivat valokuvia; Georgian Birdsville Plantation -homonyymit hylätty."
+    },
+    {
+      "cityId": "cooberpedy",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Coober Pedyn varhaiset kaivoskuvat olivat valokuvia, ei tilattua aikakauden maalausta/kaiverrusta."
+    },
+    {
+      "cityId": "kalgoorlie",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Golden Mile -osumat olivat valokuvia; vuoden 1930 WA-julisteen pienoiskuva ei ollut itsenäinen paikallisteos."
+    },
+    {
+      "cityId": "mountisa",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Mount Isan varhaiset kaivoskuvat olivat valokuvia, ei tilattua aikakauden taideteosta."
+    },
+    {
+      "cityId": "sanambrosio",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Commonsista löytyi saariryhmän karttoja, ei saarta esittävää aikakauden teosta. Noin 1841 Lauvergne-kaiverrus löytyi vain lisenssiltään varmentamattomalta huutokauppasivulta."
+    },
+    {
+      "cityId": "sepik",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Sepik-hakujen osumat olivat nykyvalokuvia, karttoja tai alkuperäisväestön esinekuvia vailla riittävää kontekstia, eivät Sepik-jokea esittävää aikalaismaisemateosta."
+    },
+    {
+      "cityId": "exmouth",
+      "tyyppi": "ennenNyt",
+      "loytyi": false,
+      "huomio": "Exmouthin kaupunki perustettiin vasta 1960-luvulla; ennen vuotta 1960 otettua kaupungin kuvaa ei ole."
+    },
+    {
+      "cityId": "sanambrosio",
+      "tyyppi": "ennenNyt",
+      "loytyi": false,
+      "huomio": "San Ambrosio -saaresta ei löytynyt Commonsissa ajoitettua, ennen vuotta 1960 otettua aidosti paikkaa esittävää valokuvaa."
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "cityId": "uluru",
+      "slug": "ayers-rock-painting-1905",
+      "reason": "rejected: image is a lower-contrast photographic reproduction of essentially the same engraved composition as ayers-rock-drawing-1900; duplicate subject and includes archival title strip"
+    }
+  ],
+  "candidateOnly": [
+    {
+      "cityId": "robinsoncrusoe",
+      "kaupunki": "Robinson Crusoe -saari",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "2e5bbd0a02acbf030efb20a6d5a438eddb61d8a969825d88318370cf29d61db0",
+      "tavut": 37260,
+      "mitat": {
+        "leveys": 330,
+        "korkeus": 227
+      },
+      "lahde": "Bibliothèque nationale de France / Colección Patricia Phelps de Cisneros",
+      "tekija": "J. Mason",
+      "vuosi": "1748",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "J. Mason; Bibliothèque nationale de France / Colección Patricia Phelps de Cisneros; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Anson-Mason-1748-18.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Ansonin matkakertomuksen vuoden 1748 kaiverrus esittää nykyistä Robinson Crusoe -saarta.",
+      "qaKonteksti": "Saaren vanha nimi Más a Tierra; Anson-retkikunnan eurooppalainen näkökulma kerrottava.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Anson-Mason-1748-18.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Anson-Mason-1748-18.jpg/330px-Anson-Mason-1748-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "ad8f6fc4c190312e02bbd8799ab780a99d6375c2e0ade3a193d3b4feaf7caf4a",
+      "lähdeTavut": 26018,
+      "alkuperäisenMitat": "743x512",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed with limitation: exact Juan Fernandez island engraving; thumbnail is only 330x227 while origin rate-limited",
+      "bucket": "matkakirja",
+      "url": null,
+      "deliveryStatus": "candidate_only_low_resolution_not_uploaded",
+      "huomio": "Aito historiallinen kuva, mutta saatavilla oleva 330 px lähde on liian pieni täysikokoiseen galleriaan; säilytetty ehdokkaana ilman ylöspäin skaalausta."
+    },
+    {
+      "cityId": "robinsoncrusoe",
+      "kaupunki": "Robinson Crusoe -saari",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "4d5b6f2f332a7c6000e3c82e526c850910ebf98b63739c5149502eea37972f27",
+      "tavut": 33221,
+      "mitat": {
+        "leveys": 330,
+        "korkeus": 203
+      },
+      "lahde": "Bibliothèque nationale de France / Colección Patricia Phelps de Cisneros",
+      "tekija": "Charles Clotsworthy Wood Taylor",
+      "vuosi": "1834",
+      "lisenssi": "Public domain",
+      "lisenssiUrl": "",
+      "attribuutio": "Charles Clotsworthy Wood Taylor; Bibliothèque nationale de France / Colección Patricia Phelps de Cisneros; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Taylor,_Charles_Chatworthy_Wood_-_Town_of_Juan_Fern%C3%A1ndez,_Cumberland_Bay_(Juan_Fern%C3%A1ndez_Island).jpeg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Wood Taylor maalasi nykyisen Robinson Crusoe -saaren Cumberland Bayn kylän vuonna 1834.",
+      "qaKonteksti": "Saaren vanha nimi Más a Tierra; Anson-retkikunnan eurooppalainen näkökulma kerrottava.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Taylor,_Charles_Chatworthy_Wood_-_Town_of_Juan_Fern%C3%A1ndez,_Cumberland_Bay_(Juan_Fern%C3%A1ndez_Island).jpeg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Taylor%2C_Charles_Chatworthy_Wood_-_Town_of_Juan_Fern%C3%A1ndez%2C_Cumberland_Bay_%28Juan_Fern%C3%A1ndez_Island%29.jpeg/330px-Taylor%2C_Charles_Chatworthy_Wood_-_Town_of_Juan_Fern%C3%A1ndez%2C_Cumberland_Bay_%28Juan_Fern%C3%A1ndez_Island%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "lähdeSha256": "f28eb8876b468f825eddb49a3bb7b72449fda22a68111afea1d9be7d28d61cf2",
+      "lähdeTavut": 21633,
+      "alkuperäisenMitat": "496x305",
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta. Commonsin virallinen thumb-variantti säilytetty lähteenä; originaalipalvelin oli rajoitettu.",
+      "qaVisuaalinen": "passed with limitation: authentic 1834 Cumberland Bay watercolor, but official thumbnail variant only 330x203; original is just 496x305",
+      "bucket": "matkakirja",
+      "url": null,
+      "deliveryStatus": "candidate_only_low_resolution_not_uploaded",
+      "huomio": "Aito historiallinen kuva, mutta saatavilla oleva 330 px lähde on liian pieni täysikokoiseen galleriaan; säilytetty ehdokkaana ilman ylöspäin skaalausta."
+    }
+  ]
+}
