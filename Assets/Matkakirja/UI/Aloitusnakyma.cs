@@ -90,6 +90,21 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
 
         /// <summary>
+        /// Aloitus auki / kiinni (portti, avausteksti ja pallovalinta): webin aloitusnäkymässä ei ole
+        /// karttaselitteen eikä linssien nappia (pariteetti 24.9. rivi 2), joten ne piiloutuvat tämän ajan.
+        /// </summary>
+        public static event Action<bool> AukiMuuttui;
+        public static bool AloitusAuki { get; private set; }
+
+        void AsetaAuki(bool auki)
+        {
+            Auki = auki;
+            if (AloitusAuki == auki) return;
+            AloitusAuki = auki;
+            AukiMuuttui?.Invoke(auki);
+        }
+
+        /// <summary>
         /// Portti näkyy (Aloita seikkailu / Jatka matkaa): kameran puoli sumentaa pallon sen ajan (web .start-gate
         /// backdrop-filter 6px; Natiiviseppä, löydös 17). Tapahtuu vain tilan muuttuessa.
         /// </summary>
@@ -101,6 +116,8 @@ namespace Matkakirja.Natiivi
             if (PorttiAuki == auki) return;
             PorttiAuki = auki;
             PorttiMuuttui?.Invoke(auki);
+            // Kameran puoli: pallo täyttää ruudun ja sumenee 6 pt, merkit piiloon (Natiiviseppä, löydös 17).
+            PalloKierto.PorttiSumea = auki;
         }
 
         public Aloitusnakyma(UiKerros kerros)
@@ -300,7 +317,7 @@ namespace Matkakirja.Natiivi
             aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
             aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
             ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
-            Auki = true;
+            AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
             portti.style.display = DisplayStyle.Flex;
@@ -321,7 +338,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             LopetaPallovalinta();
-            Auki = false;
+            AsetaAuki(false);
             AsetaPortti(false);
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
@@ -436,7 +453,11 @@ namespace Matkakirja.Natiivi
         void Valitse(string id)
         {
             Aanet.Tehoste("clack", 2.4f); // web ui.js:12690 aloituskaupungin napautus
+            var merkit = valintaMerkit;
             LopetaPallovalinta();
+            // Valittu kaupunki pitää renkaansa (valittu-asu) aloituslennon loppuun (AloituslentoPaattyi).
+            if (merkit != null) merkit.Renkaat(new[] { id }, id);
+            rengasMerkit = merkit;
             Rakenne.Nayta(valinta, false, 200);
             Piilota();
             aloita?.Invoke(id);
@@ -481,6 +502,8 @@ namespace Matkakirja.Natiivi
         public void AloituslentoPaattyi()
         {
             lentoOhi = true;
+            if (rengasMerkit != null) rengasMerkit.Renkaat(null);
+            rengasMerkit = null;
             if (lennolla && (sanat == null || sana >= sanat.Length)) LopetaLento(1500);
         }
 
@@ -513,6 +536,8 @@ namespace Matkakirja.Natiivi
         const string PisteEtuliite = "aloitus:";
 
         KaupunkiMerkit valintaMerkit;
+        /// <summary>Valitun kaupungin rengas lennon ajan (poistuu AloituslentoPaattyi-kutsussa).</summary>
+        KaupunkiMerkit rengasMerkit;
         Karttapisteet valintaPisteet;
         PalloKierto valintaKierto;
         readonly List<string> valintaIdt = new List<string>();
@@ -540,6 +565,8 @@ namespace Matkakirja.Natiivi
             foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
             var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
             valintaMerkit.NaytaVain(nakyvat);
+            // Valittavien hehkurenkaat (web .pallolauta-huomio; Natiivisepän KaupunkiMerkit.Renkaat).
+            valintaMerkit.Renkaat(valintaIdt);
             foreach (var id in valintaIdt)
             {
                 valintaMerkit.Korosta(id, Huomio);
@@ -580,6 +607,7 @@ namespace Matkakirja.Natiivi
             {
                 foreach (var id in valintaIdt) valintaMerkit.Korosta(id, null);
                 valintaMerkit.NaytaVain(null);
+                valintaMerkit.Renkaat(null);
             }
             valintaIdt.Clear();
         }

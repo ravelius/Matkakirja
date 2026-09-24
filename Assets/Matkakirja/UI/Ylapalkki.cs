@@ -80,13 +80,19 @@ namespace Matkakirja.Natiivi
         public static Rect? PakotaSaari;
 
         /// <summary>
+        /// iPhonen pikseliä pisteessä: lyhyt sivu ≥ 1000 px on @3x (X:stä alkaen, paitsi XR/11 828 px ja SE 750 px @2x).
+        /// Screen.dpi ei kelpaa: simulaattori ilmoitti iPhone 18 Pro:lle @2x:n dpi:n (saari laskettiin 239 pt:hen).
+        /// </summary>
+        public static float PuhelimenSkaala => Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
+
+        /// <summary>
         /// Dynamic Island tai lovi ruudun pisteinä (origo ylhäällä vasemmalla); leveys 0 = ei lovea.
         /// Screen.cutouts ensin (pikselit, origo alhaalla), muuten arvio turva-alueen yläreunasta.
         /// </summary>
         public static Rect Saari()
         {
             if (PakotaSaari.HasValue) return PakotaSaari.Value;
-            float pp = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 3f;
+            float pp = PuhelimenSkaala;
             foreach (var c in Screen.cutouts)
                 if (c.yMax >= Screen.height - 2f * pp && c.width < Screen.width * 0.8f)
                     return new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
@@ -141,6 +147,7 @@ namespace Matkakirja.Natiivi
             raha = Rakenne.Teksti("", "mk-pilleri__raha", pilleri);
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
             pilleri.style.display = DisplayStyle.None;
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => SovitaPilleri());
 
             var napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -173,6 +180,7 @@ namespace Matkakirja.Natiivi
                 kelluvaVaraus = null;
                 palkki.EnableInClassList("mk-ylapalkki--saari", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
+                pilleri.style.fontSize = StyleKeyword.Null;
                 palkki.style.paddingTop = r.y;
                 palkki.style.paddingLeft = r.x + 10;
                 palkki.style.paddingRight = r.z + 10;
@@ -189,7 +197,7 @@ namespace Matkakirja.Natiivi
         {
             var paneeli = palkki.panel;
             if (paneeli == null || Screen.width <= 0) return false;
-            float pp = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 3f;
+            float pp = PuhelimenSkaala;
             // Ruudun pisteet → paneelin yksiköt (viiteskaala ei ole iOS-pisteet kaikilla leveyksillä).
             Vector2 P(float x, float y) => RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(x * pp, y * pp));
             var saari = Saari();
@@ -206,9 +214,39 @@ namespace Matkakirja.Natiivi
             palkki.style.height = yla + rivi;
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
-            pilleri.style.maxWidth = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
+            pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
+            pilleri.style.maxWidth = pilleriMax;
             kelluvaVaraus = Mathf.Max(0f, yla + rivi - r.y);
+            SovitaPilleri();
             return true;
+        }
+
+        float pilleriMax;
+
+        /// <summary>
+        /// Saaririvillä pillerin teksti pienenee (14 → 11 px), kunnes "raha£ päivä/80" mahtuu saaren viereen;
+        /// muuten kello leikkautuisi pois isoilla summilla tai kapealla puhelimella.
+        /// </summary>
+        void SovitaPilleri()
+        {
+            if (!palkki.ClassListContains("mk-ylapalkki--saari") || kello.style.display == DisplayStyle.None)
+            {
+                pilleri.style.fontSize = StyleKeyword.Null;
+                return;
+            }
+            float nyt = raha.resolvedStyle.fontSize;
+            if (float.IsNaN(nyt) || nyt <= 0) return; // GeometryChanged yrittää uudelleen
+            var ikoni = pilleri.Q(className: "mk-ikoni");
+            float kiintea = pilleri.resolvedStyle.paddingLeft + pilleri.resolvedStyle.paddingRight
+                + pilleri.resolvedStyle.borderLeftWidth + pilleri.resolvedStyle.borderRightWidth
+                + kello.resolvedStyle.marginLeft
+                + (ikoni != null ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
+            float teksti = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                + kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (float.IsNaN(kiintea) || teksti <= 0) return;
+            float koko = 14f;
+            while (koko > 11f && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
+            if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
         }
 
         void AsetaKelluva()
@@ -358,6 +396,7 @@ namespace Matkakirja.Natiivi
                 kello.text = "· " + uusiKello;
             }
             pilleri.style.display = teksti.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            SovitaPilleri();
         }
 
         /// <summary>Webin muoto "£250" ("250 puntaa" / "250 £" → "£250"), jotta pilleri mahtuu puhelimeen.</summary>

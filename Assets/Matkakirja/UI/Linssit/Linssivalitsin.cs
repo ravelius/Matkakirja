@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
             nappi = Rakenne.Nappi(null, "mk-linssiNappi", Vaihda, turva, Ikonit.Viiva["taikalasit"]);
             nappi.tooltip = "Linssit";
             nappi.style.display = DisplayStyle.None;
+            Aloitusnakyma.AukiMuuttui += _ => PaivitaNakyvyys();
 
             paneeli = Rakenne.El("mk-linssivalitsin", turva);
             paneeli.style.display = DisplayStyle.None;
@@ -105,7 +106,7 @@ namespace Matkakirja.Natiivi
         }
 
         void PaivitaNakyvyys() =>
-            nappi.style.display = sallittu && (tunnettuja > 0 || testiLinssit != null) ? DisplayStyle.Flex : DisplayStyle.None;
+            nappi.style.display = sallittu && !Aloitusnakyma.AloitusAuki && (tunnettuja > 0 || testiLinssit != null) ? DisplayStyle.Flex : DisplayStyle.None;
 
         /// <summary>Päällä olevan linssin tunnus (null = ei mitään): napin kulta ja rivin korostus.</summary>
         public void Merkitse(string id)

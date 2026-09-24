@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
             nappi.tooltip = "Karttaselitteet";
             nappi.style.top = Ylapalkki.Varaus + 8;
+            Aloitusnakyma.AukiMuuttui += _ => PaivitaNappi();
 
             paneeli = Rakenne.El("mk-selite", turva);
             paneeli.style.top = Ylapalkki.Varaus + 8;
@@ -200,6 +201,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
         public void NaytaNappi(bool nakyy)
         {
+            nappiSallittu = nakyy;
+            PaivitaNappi();
+        }
+
+        bool nappiSallittu = true;
+
+        /// <summary>Linssi ei päällä eikä aloitusnäkymä auki (web: aloituksessa ei selitteen nappia).</summary>
+        void PaivitaNappi()
+        {
+            bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki;
             if (!nakyy) Sulje();
             nappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
         }

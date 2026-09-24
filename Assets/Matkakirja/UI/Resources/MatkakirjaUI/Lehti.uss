@@ -112,8 +112,16 @@
     bottom: 0;
 }
 
-.mk-lehti__sivu > .unity-scroll-view__content-viewport > .unity-scroll-view__content-container {
-    padding: 18px 26px 28px 26px;
+/* Sivun reunus (web --arkki-reunus: puhelimessa 0,95rem, ≥ 700 px 2,2rem). Luokka sisältösäiliöön koodista:
+ * Unity 6:n ScrollView'ssä viewportin ja sivun välissä on content-and-vertical-scroll-container, joten
+ * lapsivalitsin ei osunut ja teksti alkoi ruudun reunasta (pariteetti 24.9. rivi 5). */
+.mk-lehti__sisalto {
+    padding: 18px 15.2px 28px 15.2px;
+}
+
+.mk-lehti--levea .mk-lehti__sisalto {
+    padding-left: 35.2px;
+    padding-right: 35.2px;
 }
 
 .mk-lehti__sivu--liuku {
