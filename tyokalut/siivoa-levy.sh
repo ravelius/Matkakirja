@@ -10,8 +10,9 @@
 #  3) Xcode DerivedData: projektikansiot, joiden WorkspacePath ei ole proto-3d:ssä (välimuistit jäävät)
 #  4) /Users/Shared/Claude/wt/*: pelin repon worktree, jonka haara on mergetty origin/mainiin (tai PR MERGED), työpuu
 #     puhdas ja viimeinen commit yli 1 pv vanha → git worktree remove (haara jää)
-#  5) {pyramidi,reliefi,maasto}-poltto/ajo-*: vain jos kansiossa on Karttasepän merkki .ampari-ok
-#     (laatat tarkistettu ämpäristä); muuten ohitetaan
+#  5) {pyramidi,reliefi,maasto}-poltto/ajo-*, joissa Karttasepän merkki .ampari-ok (laatat tarkistettu
+#     ämpäristä): alikansioiden pohja, viivat, ranta, nostot, pallo, valimuisti ja lahde-levylta tiedostot
+#     paitsi *.json *.txt *.md *.log; tyhjät alikansiot pois; ilman merkkiä ohitetaan
 setopt null_glob
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin   # launchd antaa suppean PATHin (gh)
 C=/Users/Shared/Claude
@@ -64,15 +65,25 @@ for w in $C/wt/*(/); do
   worktreet+=("$w")
 done
 
-# 5) poltot, jotka Karttaseppä on merkinnyt ämpärissä oleviksi
+# 5) poltot, jotka Karttaseppä on merkinnyt ämpärissä oleviksi: vain laatta- ja välimuistialikansioiden
+#    tiedostot; parametrit, lokit ja luettelot (*.json *.txt *.md *.log) jäävät, kansiota ei poisteta kokonaan
 for d in $C/{pyramidi,reliefi,maasto}-poltto/ajo-*(/); do
-  [ -f "$d/.ampari-ok" ] && kohteet+=("$d")
+  [ -f "$d/.ampari-ok" ] || continue
+  for a in $d/{pohja,viivat,ranta,nostot,pallo,valimuisti,lahde-levylta}(/); do
+    while IFS= read -r -d '' f; do kohteet+=("$f"); done < <(find "$a" -type f \
+      ! \( -iname '*.json' -o -iname '*.txt' -o -iname '*.md' -o -iname '*.log' \) -print0)
+  done
 done
 
+# Kansiot du:lla (listataan), yksittäiset tiedostot yhdellä stat-ajolla (laattoja voi olla satoja tuhansia).
 for k in "${kohteet[@]}" "${worktreet[@]}"; do
+  [ -d "$k" ] || continue
   s=$(kb "$k"); yht=$((yht + ${s:-0}))
-  [ $POISTA = 0 ] && [ -d "$k" ] && printf '%8d Mt  %s\n' $(( ${s:-0} / 1024 )) "$k"
+  [ $POISTA = 0 ] && printf '%8d Mt  %s\n' $(( ${s:-0} / 1024 )) "$k"
 done
+tied=$(for k in "${kohteet[@]}"; do [ -f "$k" ] && print -rn -- "$k"$'\0'; done | xargs -0 stat -f %z 2>/dev/null | awk '{s+=$1} END {printf "%d", s/1024}')
+yht=$((yht + ${tied:-0}))
+[ $POISTA = 0 ] && echo "yksittäisiä tiedostoja yhteensä $(( ${tied:-0} / 1024 )) Mt"
 echo "tiedostoja/kansioita ${#kohteet[@]}, worktreitä ${#worktreet[@]}, yhteensä $((yht / 1024)) Mt"
 
 if [ $POISTA = 1 ]; then
@@ -83,7 +94,7 @@ if [ $POISTA = 1 ]; then
       paa=$(git -C "$w" worktree list --porcelain | awk 'NR==1{print $2}')
       git -C "$paa" worktree remove "$w" && echo "worktree pois $w"
     done
-    find $P/lokit -mindepth 1 -type d -empty -delete 2>/dev/null
+    find $P/lokit $C/{pyramidi,reliefi,maasto}-poltto -mindepth 1 -type d -empty -delete 2>/dev/null
     echo "vapaana $(df -h /Users/Shared | awk 'END{print $4}')"
   } >> "$LOKI" 2>&1
   tail -1 "$LOKI"
