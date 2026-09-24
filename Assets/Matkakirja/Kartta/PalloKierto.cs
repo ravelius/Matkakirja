@@ -310,6 +310,9 @@ namespace Matkakirja
             public double kesto, aika, nousu;
             public Action valmis;
             public Func<double, double> pehmennys;
+            /// <summary>Kallistus ajon lopussa (saapumisnäkymä: 0); null = kallistus ei muutu.</summary>
+            public double? kallistukseen;
+            public double kallistusAlku;
         }
 
         bool kosketettu;
@@ -325,7 +328,10 @@ namespace Matkakirja
 
         void OnEnable()
         {
-            if (Application.isPlaying) EnhancedTouchSupport.Enable();
+            if (!Application.isPlaying) return;
+            EnhancedTouchSupport.Enable();
+            // Saapumisnäkymän maarajat (web saapumisrajaus): ladataan kerran taustalla.
+            StartCoroutine(Saapumisrajaus.Lataa());
         }
 
         void OnDisable()
@@ -670,6 +676,48 @@ namespace Matkakirja
             };
         }
 
+        /// <summary>
+        /// SAAPUMISNÄKYMÄ tälle ruudulle (web js/pallolauta/lauta.js saavu → kamera.js kotiin): maan
+        /// saapumislaatikko (<see cref="Saapumisrajaus"/>) sovitettuna kameran kuvaan, tai webin kaupunkinäkymä,
+        /// kun maa on tuntematon, rajat eivät ole vielä latautuneet tai <paramref name="maaRajaus"/> on false
+        /// (web siirto.js laske: avauslento ajaa kotiin ilman laatikkoa). maa = pelaajan kaupungin ISO3
+        /// (reitin varrella null, kuten webin cityOf); lat/lon = pelaajan paikka. Ruutu on kameran kuva
+        /// pisteinä (webin kotelo css-pikseleinä), FOV kameran pystykulma ja dpr <see cref="Pistekerroin"/>.
+        /// </summary>
+        public Saapumisnakyma.Tulos SaapumisNakyma(string maa, double lat, double lon, bool maaRajaus = true)
+        {
+            var kamera = GetComponent<Camera>();
+            double kerroin = Pistekerroin;
+            double leveysPt = (kamera != null ? kamera.pixelWidth : Screen.width) / kerroin;
+            double korkeusPt = (kamera != null ? kamera.pixelHeight : Screen.height) / kerroin;
+            double fov = kamera != null ? kamera.fieldOfView : Saapumisnakyma.PalloFov;
+            var laatikko = maaRajaus ? Saapumisrajaus.Laatikko(maa, lat, lon) : null;
+            return Saapumisnakyma.Laske(laatikko, lat, lon, leveysPt, korkeusPt, fov, kerroin);
+        }
+
+        /// <summary>
+        /// Kamera-ajo saapumisnäkymään (<see cref="SaapumisNakyma"/>): korkeus pallonsäteistä metreiksi
+        /// (× WGS84:n iso akseli, kuten <see cref="KorkeusKaarelle"/>) ja kallistus ajon aikana nollaan (web:
+        /// kallistus 0, pohjoinen ylös; suuntima palautuu jo itsestään, Palauta). Pehmennys on natiivin oletus
+        /// (smootherstep, omistaja 24.9.). Sormi keskeyttää kuten muutkin ajot.
+        /// </summary>
+        public Saapumisnakyma.Tulos AjaSaapumisnakymaan(string maa, double lat, double lon, float kestoS, Action valmis,
+            bool maaRajaus = true)
+        {
+            var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
+            Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, valmis);
+            if (ajo != null)
+            {
+                ajo.kallistusAlku = kallistus;
+                ajo.kallistukseen = 0;
+            }
+            Debug.Log($"MATKAKIRJA saapuminen: {maa ?? "-"} {t.Tapa} → ({t.Lat:0.###}, {t.Lon:0.###}) " +
+                      $"korkeus {t.Korkeus:0.####} R, näkyvä leveys {t.NakyvaLeveys:0} yks" +
+                      (t.Laatikko.HasValue ? $", laatikko {t.Laatikko.Value}" : "") +
+                      (Saapumisrajaus.Valmis ? "" : " (rajat lataamatta)"));
+            return t;
+        }
+
         void Etene(double dt)
         {
             ajo.aika += dt;
@@ -684,6 +732,7 @@ namespace Matkakirja
             double lh = math.lerp(math.log(ajo.alku.z), math.log(ajo.loppu.z), e);
             double kaari = math.sin(math.PI * e) * ajo.nousu * (math.log(hMax) - lh);
             korkeus = math.min(hMax, math.exp(lh + kaari));
+            if (ajo.kallistukseen.HasValue) kallistus = math.lerp(ajo.kallistusAlku, ajo.kallistukseen.Value, e);
             if (t >= 1.0)
             {
                 var valmis = ajo.valmis;
