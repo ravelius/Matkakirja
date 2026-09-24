@@ -226,6 +226,8 @@ namespace Matkakirja
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
             // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
             // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
+            // Lennon pinnan laatat välimuistiin zoomin ja usvan aikana (ei lohkoja matkalla, Fable 24.9.).
+            var esilataus = KarttaKerrokset.Instanssi?.EsilataaLento(lat0, lon0, lat1, lon1);
             if (usva != null)
             {
                 usva.Aseta(lat0, lon0, nosto * 0.5, 0f);
@@ -336,10 +338,17 @@ namespace Matkakirja
                 // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
                 // Vasta lähikuvassa (t ≥ 0,08), kun usva täyttää kuvan: Lontoon zoomissa kamera on niin korkealla, että
                 // usvalevy peittää vain keskustan ja uuden pinnan laatat näkyivät pikselöityinä reunoilla (sim 24.9.).
-                if (!pintaVaihdettu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 || t > 0.2))
+                // Esilataus (build 9): vaihto vasta, kun kolmannes reitin laatoista on välimuistissa (lähtöpää ensin),
+                // muuten viimeistään t > 0,2 ennen kuin usva alkaa hälvetä (t > 0,24).
+                bool pintaValmis = esilataus == null || esilataus.Osuus >= 0.33f;
+                if (!pintaVaihdettu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 && pintaValmis || t > 0.2))
                 {
                     pintaVaihdettu = true;
                     kerrokset?.LentoPohja(true);
+                    // Mittari (Fable 24.9.): montako reitin laattaa ehti välimuistiin ennen pinnan vaihtoa.
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: vaihto t={t:0.00}, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
                 }
                 if (usva != null && t > 0.24 && t < 0.9) usva.Tavoite(0f, kesto * 0.12f);
                 if (usva != null && !laskuSumu && t > 0.9)
@@ -351,6 +360,9 @@ namespace Matkakirja
                 if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
                 {
                     pintaVaihdettu = false;
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: lasku, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
                     kerrokset?.LentoPohja(false);
                     usva.Tavoite(0f, 1.4f);
                 }

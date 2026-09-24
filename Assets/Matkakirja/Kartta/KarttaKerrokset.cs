@@ -270,6 +270,9 @@ namespace Matkakirja
         {
             if (!paalle)
             {
+                // Perillä: lennon jono pois (näkyvä kartta saa paikat takaisin).
+                LennonEsilataus?.Peru();
+                LennonEsilataus = null;
                 if (silea != null) { silea.enabled = false; Destroy(silea); silea = null; }
                 if (sentinel != null)
                 {
@@ -290,11 +293,98 @@ namespace Matkakirja
             // Satelliitti: Blue Marble paikkaan 1 (Z0–Z7; Cesium venyttää Z7:n syvemmälle), Sentinel paikkaan 2
             // (väritaso väistyy lennon ajaksi kuten linssille). Cesium Unityssä {reverseY} = XYZ-rivi kuten pohjassa.
             silea = Kerros(pallo.gameObject, "1", SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg", 7);
+            string s2 = SentinelKaytto(versio);
+            if (varitaso != null) varitaso.Linssit(true);
+            sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
+        }
+
+        /// <summary>Sentinel-sarjan kansio (ämpärin osoite, "/"-loppuinen); kattavuus Laattapalvelimelle ja sen haku.</summary>
+        string SentinelKaytto(string versio)
+        {
             string s2 = SatelliittiJuuri + versio + "/s2/";
             Laattapalvelin.Kattavuus(s2.Substring(Laattapalvelin.Ampari.Length), SentinelKattaa);
             if (!sentinelHaettu) { sentinelHaettu = true; StartCoroutine(HaeSentinelKattavuus(versio)); }
-            if (varitaso != null) varitaso.Linssit(true);
-            sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
+            return s2;
+        }
+
+        /// <summary>Käynnissä oleva lennon esilataus (Nappula vaihtaa pinnan, kun osa on valmiina); null = ei lentoa.</summary>
+        public Laattapalvelin.Esilataus LennonEsilataus { get; private set; }
+
+        /// <summary>
+        /// Lennon pinnan laatat välimuistiin ennen nousua (Fable 24.9., build 9): isoympyrän käytävä Z2–Z6 (reitti
+        /// ja naapurit) sekä lähtö- ja kohdekaupungin lähikuva-alue Z7–Z8 (5 × 5). Noin 150–300 laattaa.
+        /// Satelliitilla lisäksi Sentinel-2 Z8–Z11 päätepisteiden ympäriltä, kun kattavuus on ladattu (vain katetut).
+        /// Edellisen lennon jono perutaan. Palauttaa edistymisen (myös LennonEsilataus).
+        /// </summary>
+        public Laattapalvelin.Esilataus EsilataaLento(double lat0, double lon0, double lat1, double lon1)
+        {
+            LennonEsilataus?.Peru();
+            LennonEsilataus = null;
+            string versio = SatelliittiVersio;
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg";
+            int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
+            if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return null;
+            string pohjaPolku = malli.Substring(Laattapalvelin.Ampari.Length);
+            var joukko = new HashSet<string>();
+            void Lisaa(int z, double lat, double lon, int sade)
+            {
+                int n = 1 << z;
+                double la = Math.Max(-85.0, Math.Min(85.0, lat)) * Math.PI / 180.0;
+                int x = (int)Math.Floor((lon + 180.0) / 360.0 * n);
+                int y = (int)Math.Floor((1.0 - Math.Log(Math.Tan(la) + 1.0 / Math.Cos(la)) / Math.PI) / 2.0 * n);
+                for (int dx = -sade; dx <= sade; dx++)
+                    for (int dy = -sade; dy <= sade; dy++)
+                    {
+                        int xx = ((x + dx) % n + n) % n, yy = y + dy;
+                        if (yy < 0 || yy >= n) continue;
+                        // {reverseY} on Cesium Unityssä XYZ-rivi (Rakennus.LaattaUrl): tiedostopolku on XYZ.
+                        joukko.Add(pohjaPolku.Replace("{z}", z.ToString()).Replace("{x}", xx.ToString()).Replace("{reverseY}", yy.ToString()));
+                    }
+            }
+            for (int z = 2; z <= Math.Min(6, huippu); z++)
+                for (int i = 0; i <= 48; i++)
+                {
+                    var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, i / 48.0);
+                    Lisaa(z, q.x, q.y, 1);
+                }
+            for (int z = 7; z <= huippu; z++) { Lisaa(z, lat0, lon0, 2); Lisaa(z, lat1, lon1, 2); }
+            var e = Laattapalvelin.Esilataa(new List<string>(joukko));
+            LennonEsilataus = e;
+            Debug.Log($"MATKAKIRJA lennon pinta: esilataus {joukko.Count} laattaa");
+            if (!string.IsNullOrEmpty(versio)) StartCoroutine(EsilataaSentinel(versio, lat0, lon0, lat1, lon1, e));
+            return e;
+        }
+
+        /// <summary>
+        /// Sentinel-2 (Z8–Z11, harva) lähtö- ja kohdekaupungin ympäriltä samaan esilataukseen, kun kattavuus on
+        /// ladattu: vain katetut laatat (muut Laattapalvelin antaisi läpinäkyvinä ilman verkkoa). Säde 1–2 laattaa.
+        /// </summary>
+        System.Collections.IEnumerator EsilataaSentinel(string versio, double lat0, double lon0, double lat1, double lon1, Laattapalvelin.Esilataus e)
+        {
+            string s2 = SentinelKaytto(versio).Substring(Laattapalvelin.Ampari.Length);
+            float raja = Time.unscaledTime + 10f;
+            while (sentinelZ8 == null && Time.unscaledTime < raja && !e.Peruttu) yield return null;
+            if (sentinelZ8 == null || e.Peruttu) yield break;
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            foreach (var (lat, lon) in new[] { (lat0, lon0), (lat1, lon1) })
+                for (int z = 8; z <= 11; z++)
+                {
+                    int n = 1 << z, sade = z < 10 ? 1 : 2;
+                    double la = Math.Max(-85.0, Math.Min(85.0, lat)) * Math.PI / 180.0;
+                    int x = (int)Math.Floor((lon + 180.0) / 360.0 * n);
+                    int y = (int)Math.Floor((1.0 - Math.Log(Math.Tan(la) + 1.0 / Math.Cos(la)) / Math.PI) / 2.0 * n);
+                    for (int dx = -sade; dx <= sade; dx++)
+                        for (int dy = -sade; dy <= sade; dy++)
+                        {
+                            int xx = ((x + dx) % n + n) % n, yy = y + dy;
+                            if (yy < 0 || yy >= n || !SentinelKattaa(z, xx, yy)) continue;
+                            string p = s2 + z + "/" + xx + "/" + yy + ".jpg";
+                            if (nahty.Add(p)) polut.Add(p);
+                        }
+                }
+            Laattapalvelin.Esilataa(polut, e);
+            Debug.Log($"MATKAKIRJA lennon pinta: esilataus + Sentinel {polut.Count} laattaa");
         }
 
         public void PoistaRasteri(string avain)
