@@ -4355,3 +4355,7 @@ Kuvaparit pariteetti-b10/merge-pyynto-natiivi-ui-b10b.md; linssinimet natiivi-ui
 ## ALUENIMIEN FONTTI: LIBERATION SERIF (OFL) MOLEMPIIN — WEBIN LAATOISSA ON NYT TIMES, KOSKA POLTTOKONEELTA PUUTTUI PYYDETTY FONTTI (24.9.2026 klo 17.36)
 
 Karttaseppä: nimiötaso 2026-09-22g poltettiin Macilla ilman Liberation Serifiä → Chromium korvasi Timesilla (Applen fontti, ei saa pakata iOS-appiin). Fable: vaihtoehto 2 — Liberation Serif natiiviin (lisenssi tekijätietoihin) ja webin seuraavaan nimiöpolttoon oikeasti rekisteröitynä; polttoon fonttitarkistus (puuttuva fontti pysäyttää); uusintapoltto vasta kun muutenkin tehdään. Natiivin mitat nykyisistä laatoista.
+
+## PELIKOODARI NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA pelikoodari-tyo-20260923 (klo 17.31), RC PAALLA (24.9.2026 klo 17.37)
+
+Karttasepän fonttipäätös odottaa Fablen viestirajan nollausta.
