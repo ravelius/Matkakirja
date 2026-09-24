@@ -108,7 +108,7 @@ await page.evaluate(() => {
   const btn = [...document.querySelectorAll('button')].find((b) => /käynnistä/i.test(b.textContent));
   btn?.click();
 });
-await page.waitForTimeout(4000);
+await page.waitForTimeout(9000);
 await shot('linssi-ihminen');
 
 await browser.close();
