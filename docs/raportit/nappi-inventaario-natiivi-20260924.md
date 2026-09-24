@@ -53,7 +53,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 
 | Web-nappi/toiminto | Natiivi | Tila | Mitattu webistä (px/zoomikynnys) |
 |---|---|---|---|
-| Laukku avautuu raha-pilleristä | Sama, testattu (rivi 20/32 pariteetti-doc, PASS tilaerolla selitettynä); **uudelleenvahvistettu oikealla kosketuksella** (iPhone 18 Pro, build 10) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
+| Laukku avautuu raha-pilleristä | Sama, testattu (rivi 20/32 pariteetti-doc, PASS tilaerolla selitettynä); **uudelleenvahvistettu oikealla kosketuksella** (iPhone 18 Pro, build 10) ja **mitattu** web-kuvaparilla (`openPassport()` vs. rahapilleri-napautus) — sama MATKA/Sijainti/Kukkaro/Untuvikko-rakenne, sama VARUSTEET-ruudukko (glasses+5 linssikuvaketta samassa järjestyksessä). Kuvapari `web-laukku-iphone.jpg` / vastaava natiivikuva. | SAMA | **KYLLÄ** (kuvapari) |
 | "Matkan tilastot" -laajennin | Sama tieto näkyy (Sijainti/Kukkaro/Untuvikko + tilastot); **oikealla kosketuksella laajennettuna näkyy myös Avatut aarteet/Käydyt kaupungit/maat, Aarnin luettelo ja Julisteet-rivi** | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Julisterivi (poster-galleria) | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10, master f02376b): laukku → Matkan tilastot → "JULISTEET 114/114 »" -rivi napautettuna avaa saman ruudukon (Moskova/Lontoo/Pariisi/Rooma/Wien/Ateena/...) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Aarnin luettelo -infonappi | Näkyy laukun "Matkan tilastot" -laajennettuna näkymänä ("AARNIN LUETTELO ⓘ Kateissa 7") oikealla kosketuksella — itse (i)-kuvakkeen napautus ei osunut tällä kierroksella (pieni kohde) | EI TARKISTETTU (info-popupin sisältö), mutta rivi näkyy oikein | EI (rakennevertailu, ei pikselimitattu) |
@@ -70,7 +70,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | "uusi peli" (vahvistusdialogi + palautus porttiin) | Sama, PASS tänään (SHA 24c9194 ja f6de924): vahvistuskysely, palautus aloitusporttiin | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "ehdota sisältöä" / palautelomake | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | RETKIKUNTA-osio (sähke-toiminnot) | Natiivissa oma "Sähke"-toiminto (ks. osio 10), löytyi ☰-valikosta aiemmalla kierroksella | SAMA rakenteeltaan | EI (rakennevertailu, ei pikselimitattu) |
-| "Mitä uutta" / versiotieto | Testattu (`ui mitauutta`, build 10): täysi muutosloki avautuu (sisältö 66, v1.0.0-rivit build-kohtaisin päivämäärin), "Kehittäjä"/"Sulje"-napit | SAMA | EI (rakennevertailu, ei pikselimitattu) |
+| "Mitä uutta" / versiotieto | **KORJAUS**: alun perin merkitty SAMA, mutta web-lähteestä (js/main.js) löytyy vain APP_VERSION-numero + "Peli päivittyi" -minimi-ilmoitus (`ui mitauutta paivittyi`), EI täyttä muutoslokia. Natiivi näyttää build 10:llä kokonaisen, moniriviesen muutoslokin (sisältö 66, v1.0.0-rivit selityksineen per build) — natiivi on selvästi rikkaampi kuin web. | ERI (natiivi rikkaampi) | EI (rakennevertailu, ei pikselimitattu) |
 | Kehittäjän hammasratasvalikko | Natiivissa vastaava KOKEET-valikko, molemmat kehittäjärajattuja — ei App Storeen | SAMA (molemmat piilossa tuotannossa) | EI (rakennevertailu, ei pikselimitattu) |
 
 ## 5. Asetukset
@@ -87,7 +87,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 |---|---|---|---|
 | Edellinen/Seuraava-sivunappi | Sama, testattu useaan otteeseen tänään (esim. Ateena/Marseille aihesivut) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Sisällys-nappi (alapalkki + ylä-hampurilainen pitkällä sivulla) | Sisällys korjattu ja vahvistettu (rivi 8, PASS): korttilista kuvineen, samat otsikot | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Sisällys-paneelin sulkeminen / "Takaisin" | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10): "← Palaa kartalle" -nappi sulkee sisällyksen JA koko lehden, palaa suoraan kartalle. X-kuvake ylhäällä ei reagoinut napautukseen tällä kierroksella (pieni kohde, ei toistettu). | SAMA ("Palaa kartalle"), EI TARKISTETTU (X-kuvake) | EI (rakennevertailu, ei pikselimitattu) |
+| Sisällys-paneelin sulkeminen / "Takaisin" | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10): "← Palaa kartalle" -nappi sulkee sisällyksen JA koko lehden, palaa suoraan kartalle. X-kuvake ylhäällä ei reagoinut napautukseen tällä kierroksella (pieni kohde, ei toistettu). **MITATTU**: web-kuvapari (`avaaSisallysvalikko()`) näyttää saman korttilistan (Etusivu/Ateena pintaa syvemmältä/Arki ja tavat/Historia/Historian hetki/Menovinkit) ja saman "← Palaa kartalle" -napin. Kuvapari `web-sisallys-iphone.jpg` / vastaava natiivikuva. | SAMA ("Palaa kartalle"), EI TARKISTETTU (X-kuvake) | **KYLLÄ** (kuvapari) |
 | Maalehti-liite-linkki (kaupunkilehden viimeiseltä sivulta) | Ei testattu erikseen tänään, `ui maalehti <ISO>` -komento toimii suoraan | EI TARKISTETTU polku lehdestä | EI (rakennevertailu, ei pikselimitattu) |
 | Maalehden kansi: PERUSTIEDOT-lohko + kartta, iPad-leveys | **MITATTU, VAHVISTETTU ERO.** Web (834×1194, `maalehti-kansi-834x1194.png`): kaksipalstainen, PERUSTIEDOT vasemmalla ≈601 px (36 %), kartta oikealla ≈685 px (41 %), rinnakkain. Natiivi (iPad, `9-maalehti.png`): yksipalstainen pino, kartta koko leveydeltä ≈1571 px (94 %) ylhäällä, PERUSTIEDOT koko leveydeltä alla — sama asettelu kuin iPhonella, ei mukaudu iPadin leveyteen. | ERI (mitattu) | **KYLLÄ** (px mitattu molemmista, ks. pariteetti-natiivi-20260924.md rivi 9) |
 | Saapumisdialogi: "Lue lisää" / "Lue lisää maasta" | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
@@ -109,7 +109,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | Ihmisen matka -linssi | **OTSIKKOBUGI KORJATTU JA VAHVISTETTU OIKEALLA KOSKETUKSELLA (build 8, f6de924).** Aiempi epäily: KEKSINNÖT-otsikko jäisi näkyviin linssin vaihdossa. Testattu aidosti: avattiin Keksintölinssi (peli käynnissä), avattiin linssivalitsin PÄÄLLE (ei komennolla), napautettiin "Ihmisen matka" -riviä, sitten "Käynnistä". Otsikko vaihtui oikein "IHMISEN MATKA / 300 000 v. sitten" — EI jäänyt lukemaan "KEKSINNÖT EUROOPASSA". | SAMA (korjattu, vahvistettu kosketuksella) | EI (rakennevertailu natiivin sisäinen, ei web-kuvaparia tälle täsmävaiheelle) |
 | Astronautin kamera | Ei testattu tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | Maailmanradio (viritin) | Sama retro-dial, sama asemaverkosto, todennettu AITO VU-mittari (epäsymmetrinen neula) tänään | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Vertailulinssi | Testattu (`ui linssi vertailu`, build 10): näkyy Suomi/Italia/Japani-valintapainikkeet + "Vertaa"-nappi | SAMA (rakenne) | EI (rakennevertailu, ei pikselimitattu) |
+| Vertailulinssi | **MITATTU**: web (`aktivoiLinssi('vertailu')`) ja natiivi (`ui linssi vertailu`) näyttävät molemmat samat valintachipit (esim. Suomi) + "Vertaa"-napin samassa kohdassa ruutua. Kuvapari `web-linssi-vertailu-iphone.jpg` / `natiivi-linssi-vertailu-iphone.jpg`. | SAMA | **KYLLÄ** (kuvapari samasta tilasta) |
 | Maatiedot-linssi | **PÄIVITYS**: testattu uudelleen (`ui linssi maa`, build 10) — nyt näkyy sisältöä (🇮🇹 ITALIA + "Lue lehti ›"), EI enää tyhjä kuten aiemmin rivillä 41 raportoitiin. Näkymä oli kuitenkin sekoittunut auki jääneen vertailulinssin kanssa (Italia/Japani-chipit näkyivät samalla), joten en vahvista puhdasta ulkoasua — Linssisepän kannattaa tarkistaa oikealla kosketuksella. | EI TARKISTETTU (puhdas näkymä), mutta EI ENÄÄ TYHJÄ | EI (rakennevertailu, ei pikselimitattu) |
 | Linssin selite (per-linssi kuvauskortti) | Sama, uusittu ja vahvistettu (rivi 12/12b) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 
@@ -217,3 +217,11 @@ varten) — sovellus kaatui kerran kesken lennon. Ei enää ristiriitaa
 tarkistushetkellä, mutta jaettua laitetta kannattaa käyttää varoen.
 Web-kuvapareja ei ehditty ottaa näille riveille — mitat puuttuvat yhä
 WEB ON MALLI -vaatimuksen mukaisesti.
+
+**PÄIVITYS 3 (Laitetestaaja, 24.9. klo 20.1x–20.3x):** web-kuvaparit
+otettu kolmelle riville (Vertailulinssi, Laukku+Varusteet, Sisällys+
+"Palaa kartalle") — kaikki MITATTU/SAMA. Tutki-napin ja Julisterivin
+web-vastineita ei saatu auki suoralla funktiokutsulla eikä synteettisellä
+klikkauksella tässä kierroksessa (`avaaKohtaamistesti`/`avaaJulisteGalleria`
+eivät reagoineet odotetusti) — natiivipuoli on silti vahvistettu
+komennolla/kosketuksella, vain web-mitta puuttuu näiltä kahdelta.
