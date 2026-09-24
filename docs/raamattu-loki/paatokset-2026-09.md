@@ -4763,3 +4763,7 @@ Kuvat 2-web-peloponnesos.jpg ja 2-natiivi-nykyinen.jpg kansiossa kartta-46-20260
 ## LOYDOS 46 OSA 2 (KARTTASEPPA 59b5f259e): D1 EI VIIVAA + VINJETTI, D2 EI VIIVAA, C-MERI (RANTA + RELIEFI) — KAIKISSA MERI SAVYLIUKUNA ILMAN KAYRIA; YLEISKUVAT z6 JA LAHIKUVAT; OMISTAJALLE (24.9.2026 klo 23.59)
 
 Osa 3 (Z8 + 1 px vektoriranta) ~10 min. Omistaja katsoo ja valitsee.
+
+## LOYDOS 46 OSA 3 (KARTTASEPPA f1a582883): 2-b-vektoriranta.jpg — D2:N Z8-POHJA ILMAN MUSTETTA + WEBIN GSHHS l4 -VEKTORIRANTA 1 css-px; Z9-ARVIO TULOSSA (25.9.2026 klo 00.00)
+
+Kaikki kolme osaa omistajalla; kortti pohjavalinnasta.
