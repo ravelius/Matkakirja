@@ -166,3 +166,114 @@ pallon suodattimesta.
     AA-maski tarvitaan molemmissa.
 - **Natiivi:** `Maaraja`-kehän leveys kannattaa arvioida uudelleen, kun
   ranta on pohjassa (ks. juurisyy 1).
+
+---
+
+# Jatko 24.–25.9. yö: web vs natiivi, ääriviivaton pohja ja vektoriranta
+
+## 1. Kuvapari samasta näkymästä
+
+`2-web-peloponnesos.jpg` ja `2-natiivi-nykyinen.jpg`. iPad 834 × 1194 pt,
+dpr 2, Fogg Ateenassa. Kartta-ala on 813 × 1111 css-px eli 1626 × 2222
+laitepikseliä. Keskipiste on 37,35 N 22,3 E, ja ruudun leveys on 3,5
+pituusastetta.
+
+- **Web** kaapattiin tuotannosta (matkakirja.app, Playwright/Chromium Metal,
+  kehittäjätila). Ämpäri kulki Noden route-välityksellä. Pallon
+  lepokerros on tasolla z8 (pyramidi, 480 px/°), eli se näkyy lähes 1:1.
+  Rannat ja rajat piirtyvät vektoreina, nimet DOM:ina, ja Kreikan
+  korostuskehä on 3 css-px.
+- **Natiivi:** tuotannon Z8-pallolaatat (`2026-09-23a-pohja-20260923a`),
+  jotka on näytteistetty webin omalla ruutukartoituksella (toGlobeCoords
+  16 css-px:n ruudukossa) bilineaarisesti, kuten GPU. Kuvassa ei ole
+  ylimääräistä suurennusta eikä natiivin Maaraja-kehää.
+- **Mitattu mittakaava:** ruutu 464,6 px/° ja Z8 182,0 px/°, joten natiivi
+  näyttää **2,55 ruutupikseliä laattapikseliä kohti**. Web näyttää saman
+  alan pyramidin z8:lta noin 1:1, eli 2,55 kertaa tiheämpänä.
+- **Ero:** natiivin laatassa ei ole rantaviivaa (`"ranta": null`), sen
+  1-bittinen maskiraja ja 1 px:n isobaatit venyvät 2,55 kertaa, ja lisäksi
+  laatat on näytteistetty lähimmällä pikselillä. Webissä ranta on
+  vektori päällä, joten se pysyy terävänä joka zoomissa.
+
+## 2. Uusi meri, C-meri ja ääriviivaton D
+
+Omistajan linja 24.9. ilta: merellä ei ole syvyyskäyriä eikä
+vesiviivoitusta. Syvyys näkyy vain pergamentin sävyliukuna (SYVYYS-ramppi,
+litistys 0,8). Uusi lippu **`--meri-kohina 0.2`** vaimentaa syvyyden
+±150 m:n kohinan viidennekseen, jolloin merellä ei ole laikkuja.
+
+**Uutta merta käyttävät:** `C-meri-rannat-reliefi.jpg`, `C-meri-lahikuva.jpg`,
+`D1-ei-viivaa-vinjetti*.jpg`, `D2-ei-viivaa*.jpg` ja `2-b-vektoriranta.jpg`.
+Aiemmat A/B/C-kuvat ovat ennallaan.
+
+Yhteinen resepti: A:n yhteiset liput sekä `--maski-aa 4 --dem <glo30>
+--dem-kaikki-tasot --reliefi-koe lammin --meri-kohina 0.2 --resepti-json
+'{"syvyys":{"litistys":0.8}}'`, ilman `--syvyyskayrat`-lippua ja ilman
+`--vesiviivoitus`-lippua. Variantit:
+
+| Variantti | Lisäliput |
+| --- | --- |
+| C-meri | `--rantaleveys 0:0.55,4:0.7,5:0.85,6:0.95,7:1,8:1.1` (ranta poltettuna) |
+| D1 | `--ilman-rantaviivaa --vesiviivoitus ohut`, resepti-jsoniin `"vesiviivoitus":{"harvennus":"haive","voima":0.18,"viivoja":3}` (3 hentoa vinjettiviivaa) |
+| D2 | `--ilman-rantaviivaa` (ei mustetta rannalla, vain maan ja meren AA-väriraja) |
+
+Tiedostot:
+
+- z6-yleiskuvat (sama rajaus kuin A/B/C): `C-meri-rannat-reliefi.jpg`,
+  `D1-ei-viivaa-vinjetti.jpg` ja `D2-ei-viivaa.jpg`.
+- Lähikuvat samasta iPad-ruudusta kuin kohdan 1 kuvapari:
+  `C-meri-lahikuva.jpg`, `D1-ei-viivaa-vinjetti-lahikuva.jpg` ja
+  `D2-ei-viivaa-lahikuva.jpg`. Pyramidi z7 on muunnettu pallon Z8:ksi
+  (`--suodatin laatikko --jpeg-laatu 90 --jpeg-444`), ja viivataso on
+  tuotannon. Lähikuvat on näytetty samalla 2,55 ruutupx/laattapx:n
+  mittakaavalla kuin natiivi.
+
+## 3. Z8-pohja + vektoriranta (`2-b-vektoriranta.jpg`)
+
+Pohjana on D2 Z8:na ilman viivatasoa eli ilman mustetta. Päällä ovat webin
+oma GSHHS-vektorisarja `julisteet/pallo/vektorit/2026-09-21-gshhs/` (taso l4,
+10° solut, int16-delta) ruutuun projisoituna:
+
+- rannikko `#5a4330`, peitto 0,58
+- rajat `#6b5539`, peitto 0,34
+- leveys 1 css-px eli 2 laitepikseliä, antialiasoitu SVG:llä
+
+Viiva osuu D2:n AA-maskin reunaan, koska kumpikin tulee samasta
+GSHHG-aineistosta. Omaa GeoJSON-vientiä ei tehty (Fablen rajaus): natiivi
+voi lukea saman sarjan. Sarjan koot `mitat.json`:sta (rannikko / rajat,
+gzip):
+
+| Taso | Toleranssi | Solut | Rannikko | Rajat |
+| --- | --- | --- | --- | --- |
+| l0 | 0,1° | 1 | 130 kt | 44 kt |
+| l1 | 0,03° | 1 | 467 kt | 90 kt |
+| l2 | 0,008° | 380 | 1,6 Mt | 153 kt |
+| l3 | 0,004° | 380 | 2,8 Mt | 188 kt |
+| l4 | 0 | 380 | 6,3 Mt | 266 kt |
+
+Web valitsee portaan ruudun tiheydestä: `harvennusPorras`,
+suurin poikkeama 0,6 laitepikseliä, portaat 0,05/0,012/0,003/0,0008/0°.
+
+## 4. Pallosarja Z9 koko maailmalle (uusi resepti: D-pohja, meri sävyliukuna, C-reliefi)
+
+- **Laattoja:** kartan alalla (84 N – 66 S) on Z9:llä 188 416 laattaa,
+  joista **60 764 on maalaattoja**. Laskettu ETOPO 3′:stä, 11 × 11
+  näytettä laattaa kohti.
+- **Koko:** Peloponnesoksen Z8-laatta on uudella reseptillä 14 kt (q90
+  4:4:4) ja tuotannossa 10 kt (q80). Maalaatat ovat siis **~0,6–0,85 Gt**.
+  Jos merilaatatkin kirjoitetaan (pallo kirjoittaa oletuksena kaikki),
+  koko on noin 1,1–1,4 Gt, joten Fablen ~2 Gt on turvallinen yläraja.
+- **Lähde:** Z9 lukee pyramidin z8:n, joten koko maailman z8 (69 628
+  laattaa) on poltettava uudella reseptillä.
+- **DEM koko maailmalle:** GLO-30 on vain E28-laatikossa. Muualle tarvitaan
+  GLO-90, jota NAS:issa on 26 476 ruutua; sitä varten `demHakemisto` tarvitsee
+  tunnuksen 30. Lisäksi DEM-ikkuna on koottava lohkoittain eikä shardin
+  koko kaistalle (7,5″ koko kaistalle olisi useita Gt). Koodityötä on noin
+  puoli päivää.
+- **Polttoaika yöllä 16 ytimellä:**
+  - z8 noin 45–50 min piirtoa (23a: 1,55 laattaa/s/ydin)
+  - DEM-luku noin +45 min (mitattu noin 0,1–0,4 M solua/s NAS:ilta)
+  - pallo Z9 laatikkosuodattimella noin 50 min maalaatoille (mitattu noin
+    1,3 laattaa/s/prosessi), noin 2,5 h kaikille laatoille
+  - **Yhteensä noin 2,5–3 h** maalaatoille.
+- **Z10** vasta kattavuuslistalla: 230 279 maalaattaa, noin 4 × Z9.
