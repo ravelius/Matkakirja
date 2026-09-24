@@ -59,7 +59,7 @@ namespace Matkakirja
 
         CesiumUrlTemplateRasterOverlay kerros;
         string haluttu, ladattu;
-        bool linssit, piilossa;
+        bool linssit, piilossa, pelikerroksetPois;
         int tasoMin = AlinTaso, tasoMax = 8;
         Coroutine haku;
 
@@ -153,7 +153,7 @@ namespace Matkakirja
         void Luo()
         {
             Poista();
-            if (ladattu == null || linssit || piilossa || kaukana || pallo == null) return;
+            if (ladattu == null || linssit || piilossa || pelikerroksetPois || kaukana || pallo == null) return;
             kerros = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.materialKey = MateriaaliAvain;
             // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa).
@@ -232,6 +232,18 @@ namespace Matkakirja
             if (paalla == linssit) return;
             linssit = paalla;
             if (paalla) Poista(); else Luo();
+        }
+
+        /// <summary>
+        /// Linssi piilottaa pelikerrokset (LinssiOhjain.Pelikerrokset, Linssiseppä 24.9., löydös 43): huntu pois koko
+        /// linssin ajaksi, kuten webissä (js/pallolauta/lauta.js: "KERMA POIS MYÖS LINSSIN AJAKSI"; radiossa omistajan
+        /// päätös: kaikki maat ilman huntua). Oma lippu, jotta pohjan näkyvyys ("laatat") ei palauta huntua kesken linssin.
+        /// </summary>
+        public void Pelikerrokset(bool nakyvissa)
+        {
+            if (nakyvissa != pelikerroksetPois) return;
+            pelikerroksetPois = !nakyvissa;
+            if (pelikerroksetPois) Poista(); else Luo();
         }
 
         /// <summary>Näkyvyys pohjan mukana (KarttaKerrokset.Nakyvyys "laatat" / "varitaso").</summary>
