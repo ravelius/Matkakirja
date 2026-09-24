@@ -205,11 +205,11 @@ export const ISTANBUL = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää Sulttaanin timantti ja palatkaa lentoasemalle.',
-    starFound: (name, city) => `◈ ${name} löysi SULTTAANIN TIMANTIN: ${city}!`,
+    starFound: '◈ {name} löysi SULTTAANIN TIMANTIN: {city}!',
     starToast: 'SULTTAANIN TIMANTTI!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Sulttaanin timantin turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Sulttaanin timantin kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Sulttaanin timantin kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän karttaan on painettu Konstantinopoli. Kaupunki on sittemmin ehtinyt vaihtaa nimeä, valtakuntaa ja rakentaa sillan mantereiden välille. Minä olen vaihtanut hattua.',

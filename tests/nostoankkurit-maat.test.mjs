@@ -6,8 +6,8 @@
  * VARTIO: jokaisen maan taulun ankkuri on MAALLA (tools/maamaski.mjs,
  * sama ne50-aineisto kuin pelin rantaviiva) — paitsi saari, joka
  * puuttuu 1:50M-maskista, ja tyypin 'meri' nosto (meri on kohde,
- * Fablen päätös K2). Taulussa on vain maan omia nostoja, ja maat eivät
- * ole LUKITUT_MAAT-listalla (hahmotelmat pysyvät elävinä).
+ * Fablen päätös K2). Taulussa on vain maan omia nostoja; LUKITUT_MAAT-
+ * listalla ovat FRA ja ESP (23.9.2026), muut pysyvät elävinä.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -49,7 +49,7 @@ test('maakohteen ankkuri on maalla; saari ja meri pitävät pisteensä', () => {
 });
 
 test('peli lukee maiden taulut, FRA voittaa, eikä poltto muutu', () => {
-  assert.deepEqual([...LUKITUT_MAAT], ['FRA']);
+  assert.deepEqual([...LUKITUT_MAAT], ['FRA', 'ESP']);
   const ita = Object.keys(TAULUT.ITA)[0];
   assert.deepEqual(lukittuAnkkuri(ita), { lat: TAULUT.ITA[ita].lat, lng: TAULUT.ITA[ita].lng });
   const fra = Object.keys(NOSTOANKKURIT_FRA)[0];
