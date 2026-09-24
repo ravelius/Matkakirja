@@ -2,6 +2,7 @@
 //   keksinnöt: Käynnistä → siirry(10) → 12 s → siirry(11) → 12 s → kuva (kontakti-keksinnot-1873)
 //              siirry(25) → jatka → 12 s → kuva (kontakti-keksinnot-loppu)
 //   ihmisen matka: Käynnistä → valitse('levantti') → 12 s → tauko → kuva
+//   KIINTEA=topografia|vesistot: vain se näkymä (45/10/8000 km tai 0/20/9000 km) tuoreella sivulla
 // Oikeat ajastimet (ei nopeutusta), pelaaja Lontoossa kuten natiivin "ui aloita lontoo" (KAUPUNKI=lontoo laitetesti.sh:ssa; webin pallopakassa ei ole Pariisia),
 // iPad Pro 11 -mitta 834 × 1194 pt, dpr 2, GPU Metalilla. Ämpäri Noden kautta (CORS).
 //
@@ -108,6 +109,50 @@ async function avaa(tunnus) {
   await ehto(() => Boolean(document.querySelector('.aikajana-avaus-nappi')), undefined, 30000);
   await odota(1500);
   await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
+}
+
+/*
+ * KIINTEÄT NÄKYMÄT (natiivin laitetesti.sh: "kamera lat lon km"): globe.gl:n altitude on maan
+ * säteinä. Natiivin kameran näkökenttä on 40° (webin PALLO_FOV 50°), joten samalla korkeudella
+ * natiivi näyttää kapeamman alueen: ero kuuluu kameralle, ei linssille.
+ */
+async function kiintea(tunnus, lat, lng, km, nimi) {
+  await s.evaluate((t) => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes(t)) ui.game.player.linssit.push(t);
+    ui.valitseLinssi(t);
+  }, tunnus);
+  await odota(8000);
+  // Saapumisen lähikuva voi viedä kameran: Ohita ja kamera kahdesti, viimeksi juuri ennen kuvaa.
+  // Pelin oma loitonnusraja (pelaajan maa) sitoo vesistölinssiä; topografia ja satelliitti ohittavat
+  // sen itse. Kontaktikuvaa varten sama syrjäytys kaikille (natiivin kamera-komento ei rajaa).
+  const aseta = () => s.evaluate(([la, ln, k]) => {
+    const u = window.matkakirja.ui;
+    u.pallolauta?.zoomirajat?.({ max: 2.5 });
+    u.pallonInstanssi.pointOfView({ lat: la, lng: ln, altitude: k / 6371 }, 0);
+  }, [lat, lng, km]);
+  await ohita();
+  await aseta();
+  await odota(8000);
+  await ohita();
+  await aseta();
+  await odota(3000);
+  console.log(nimi, 'kamera', JSON.stringify(await s.evaluate(() => {
+    const u = window.matkakirja.ui;
+    return { pov: u.pallonInstanssi?.pointOfView?.(), lauta: u.lauta ?? u.laudanTila ?? null, pallolla: Boolean(u.pallolauta?.aktiivinen ?? u.pallolauta) };
+  })));
+  await kuva(nimi);
+  await s.evaluate(() => window.matkakirja.ui.valitseLinssi?.(null));
+  await odota(2000);
+}
+// Yksi kiinteä näkymä ajoa kohti (KIINTEA=topografia|vesistot): linssin sulku käynnistää
+// saapumisen lähikuvan, joka vie seuraavan näkymän tasokartalle.
+const KIINTEAT = { topografia: [45, 10, 8000], vesistot: [0, 20, 9000] };
+if (process.env.KIINTEA) {
+  const [la, ln, km] = KIINTEAT[process.env.KIINTEA];
+  await kiintea(process.env.KIINTEA, la, ln, km, process.env.KIINTEA);
+  await selain.close(); palvelin.close(); process.exit(0);
 }
 
 /* Keksinnöt */

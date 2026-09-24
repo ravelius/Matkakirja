@@ -16,7 +16,7 @@ Shader "Matkakirja/Linssit/Tummennus"
         _Reika("Reikä (x, y px, säde px, käytössä 0/1)", Vector) = (0, 0, 0, 0)
         _Peitto("Peitto", Range(0, 1)) = 1
         _Ruutu("Kameran pikselikoko (x, y)", Vector) = (1, 1, 0, 0)
-        _Eksponentti("Peittävyyden eksponentti lineaarisessa tilassa", Float) = 1.66
+        _Eksponentti("Peittävyyden eksponentti lineaarisessa tilassa", Float) = 1.75
     }
     SubShader
     {
@@ -82,7 +82,7 @@ Shader "Matkakirja/Linssit/Tummennus"
                 // (kontakti 24.9.: meri 95 vs web 49). Peittävyys muunnetaan a → 1 − (1 − a)^_Eksponentti.
                 // Teoria (puhdas potenssi) antaa 2,2, mutta se jätti kartan webiä tummemmaksi (32 vs 49),
                 // koska kalvon oma väri ja pohjan sävy eivät ole mustat. iPadin mittauksista
-                // (0,86 lineaarisena → 91, eksponentilla 2,2 → 32) sovitettu 1,66 antaa webin 49.
+                // (0,86 lineaarisena → 91, eksponentilla 2,2 → 32) sovitettu 1,66 antoi 52–58 (web 49), joten 1,75.
                 c.a = 1 - pow(max(1 - c.a, 0), _Eksponentti);
             #endif
                 return c;
