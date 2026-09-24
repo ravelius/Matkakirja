@@ -4759,3 +4759,7 @@ Pelikoodarin vastaukset suoraan Laitetestaajalle. Laukun Julisteet-rivi natiivis
 ## LOYDOS 46 OSA 1 (KARTTASEPPA 2ca0303b2): MITATTU KUVAPARI PELOPONNESOS — WEB PIIRTAA z8:N 1:1 (464 px/°), NATIIVI VENYTTAA Z8-LAATTAA 2,55× (24.9.2026 klo 23.58)
 
 Kuvat 2-web-peloponnesos.jpg ja 2-natiivi-nykyinen.jpg kansiossa kartta-46-20260924; omistajalle lähetetty. Vahvistaa: natiivin epäselvyys on rasteritason puute (Z9–Z10) + vektorikerroksen puute, ei pelkkä resepti. Osa 2 (ääriviivaton D1/D2 + C-meri sävyliukuna) ~10 min.
+
+## LOYDOS 46 OSA 2 (KARTTASEPPA 59b5f259e): D1 EI VIIVAA + VINJETTI, D2 EI VIIVAA, C-MERI (RANTA + RELIEFI) — KAIKISSA MERI SAVYLIUKUNA ILMAN KAYRIA; YLEISKUVAT z6 JA LAHIKUVAT; OMISTAJALLE (24.9.2026 klo 23.59)
+
+Osa 3 (Z8 + 1 px vektoriranta) ~10 min. Omistaja katsoo ja valitsee.
