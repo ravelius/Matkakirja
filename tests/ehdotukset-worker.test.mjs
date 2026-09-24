@@ -336,7 +336,7 @@ const PELAAJAN_REITIT = {
 
 test('natiivitunniste vaatii listan ja saman tunnisteen User-Agentissa', () => {
   const h = (o) => new Headers(o);
-  assert.deepEqual([...NATIIVIT_OLETUS], ['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+  assert.deepEqual([...NATIIVIT_OLETUS], ['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
   assert.ok(sallittuNatiivi(h(natiiviOtsakkeet())));
   assert.ok(sallittuNatiivi(h(natiiviOtsakkeet('app.matkakirja.peli'))));
   assert.ok(!sallittuNatiivi(h(natiiviOtsakkeet('app.vieras.peli'))));
