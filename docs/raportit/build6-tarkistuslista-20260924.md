@@ -772,6 +772,66 @@ ylimpänä ja "Kehittäjä" (jos kehittäjätila päällä) aivan alimpana.
 vanha yksi-pilleri-asettelu yhä käytössä, silmälasinappi yhä kartalla,
 tai ☰-valikon rivijärjestys väärä.
 
+## B7-7: Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
+
+**Omistaja (Fable 24.9. klo 12.1x)**: portin, avausruudun ja lennon
+tekstien pitää täsmätä webiin sanatarkasti.
+**Vastuu**: Natiivi-UI (portti/avaus), Natiiviseppä (lento), build 7.
+
+**Testikomento**: kylmäkäynnistys → `kuva portti-b7` (etusivu/portti).
+`ui aloita <uusi kaupunki>` → heti avautuvasta ruudusta `kuva avaus-b7`,
+sitten lennon alusta `kuva lento-teksti-b7`. Avaa myös ☰-valikko ja
+tarkista ettei topbar/pulu/kartuscha näy lennon aikana (jatkokuva
+`kuva lento-ui-b7`).
+
+**Odotettu tulos webin mukaan** (`js/ui.js:17372-17409`,
+`js/ui-tekstit.js:23-42`, `js/packs/maailma.js:612-614`):
+- Portti: teksti "Laita äänet päälle" (kaiutin-ikonilla), nappi
+  "Aloita seikkailu" (`start-btn primary`), alempi linkki "Oppiminen
+  on hauskaa".
+- Avausruutu: paikkarivi "Heathrow, Lontoo" + kuukausi ja vuosi laitteen
+  kellosta, sitten `INTRO_TEXT` SANATARKASTI: *"Vintiltä löytyi isoisän
+  matkalaukku ja kulunut matkakirja. Juokset sisälle terminaaliin ja
+  olet varma, että ukko oli löytänyt jotain. Mutta kuka on repinyt
+  kirjasta viimeisen sivun?"* — nappi (kehystetty "1873") tekstillä
+  `INTRO_VALINTA` = "Valitse aloituskaupunki" (EI kysymysmuotoinen
+  "Mistä aloitan?", se on vanha poistettu versio).
+- Lento: `flightFirst`-rivi SANATARKASTI: *"Kone nousee. Isoisän kirja
+  aukeaa sylissäni kuin se olisi odottanut tätä hetkeä."* (yksi virke,
+  toinen virke poistettu tietoisesti 25.8.2026 lyhyempänä pidoksi).
+- UI lennon aikana: pulu piilossa (webissä dokumentoitu), muu
+  UI-elementit (yläpalkki/topbar, karttaselite, kartuscha) eivät näy
+  lennon aikana webissäkään — vain avauksen/lennon oma teksti-ikkuna.
+
+**PASS-ehto**: kaikki kolme tekstikohtaa täsmäävät SANATARKASTI (ei
+parafraaseja), UI-elementit piilossa lennon ajan. **FAIL**: mikä
+tahansa teksti eroaa sanasta sanaan tai UI-elementti näkyy lennolla.
+
+## B7-8: ☰-valikon "Uusi peli" palauttaa aloitusporttiin
+
+**Omistaja/Fable (24.9. klo 12.1x)**: ☰-valikon "Uusi peli" -rivin
+pitää palauttaa aloitusporttiin (kuten webissä), ei vain nollata
+pelitilaa paikalleen jääden.
+**Vastuu**: Natiivi-UI, build 7.
+
+**Testikomento**: pelin ollessa käynnissä (esim. Ateenassa), avaa
+☰-valikko, valitse "Uusi peli", `kuva uusipeli-vahvistus-b7` (vahvistus,
+jos näytetään), hyväksy, `kuva uusipeli-tulos-b7`.
+
+**Odotettu tulos webin mukaan** (`js/main.js:1399-1406`): "Uusi peli"
+kysyy ENSIN vahvistuksen (koska passin leimat ja laukun tavarat ovat
+pelin AINOA pysyvä kertymä eikä niitä saa takaisin) — POIKKEUS:
+voittoruudun oma "Uusi peli" ei kysy eikä tyhjennä, koska pelaaja on
+juuri ansainnut kertymänsä (ei koske tätä testiä, joka on ☰-valikosta
+kesken pelin). Hyväksynnän jälkeen KAIKKI pelin muisti tyhjenee ja
+näyttö palaa ALOITUSPORTTIIN ("Aloita seikkailu" -ruutuun) — EI jää
+kartalle tai nykyiseen kaupunkiin. Laitteen omat asetukset (kehittäjätila,
+lukijaäänen taso) SÄILYVÄT tyhjennyksessä (omistajan tilaus 14.8.2026).
+
+**PASS-ehto**: vahvistuskysely ennen tyhjennystä (kesken pelin), lopputulos
+on aloitusportti eikä pelitila. **FAIL**: ei vahvistusta, tai peli jää
+kartalle/muuhun tilaan tyhjennyksen jälkeen.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
@@ -782,5 +842,7 @@ tai ☰-valikon rivijärjestys väärä.
 | B7-4 | Radion VU-mittari | | | |
 | B7-5 | Lennon lähikuva | | | |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | | | |
+| B7-7 | Portti/avaus/lento-tekstit sanatarkasti | | | |
+| B7-8 | ☰ Uusi peli → aloitusportti | | | |
 | 14 | Navat (uusinta tuoreella pelillä) | | | |
 | 4-renkaat | Hehkurenkaat aloitusvalinnassa (uusinta) | | | |
