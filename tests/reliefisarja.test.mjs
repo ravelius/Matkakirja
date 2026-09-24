@@ -96,4 +96,5 @@ test('väritaso pallolle: luettelo ja kansio', async () => {
   assert.equal(l.vari.maa, 'FRA');
   assert.throws(() => varitasonLuettelo(pohja, 'SWE'), /ei väritasoa/);
   assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA'), 'julisteet/pallo/vari/2026-09-14b-tasoitus/FRA/');
+  assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA', 'k2'), 'julisteet/pallo/vari/2026-09-14b-tasoitus-k2/FRA/');
 });

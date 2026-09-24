@@ -700,7 +700,16 @@ export function varitasonLuettelo(pohja, iso) {
 }
 
 /** Väritason pallokansio: julisteet/pallo/vari/<versio>/<ISO>/. */
-export const varitasonPallokansio = (versio, iso) => `julisteet/pallo/vari/${versio}/${iso}/`;
+export const varitasonPallokansio = (versio, iso, tunniste = '') => `julisteet/pallo/vari/${versio}${tunniste ? `-${tunniste}` : ''}/${iso}/`;
+
+/*
+ * ALUEEN ULKOPUOLI KERMAKSI (Natiiviseppä 24.9.2026): webissä kerma-
+ * shader maalaa väritason alueen ulkopuolen, natiivissa sitä ei ole,
+ * joten reunalaattojen ulkopuoli (ja puuttuva lähdelaatta) poltetaan
+ * täydeksi kermaksi. Sama sävy kuin väritason kerma (#faf4d6) peitolla
+ * 0,85 (alfa 217). Maan ympäryksen häivytys ennallaan.
+ */
+export const VARIN_ULKOPUOLI = [250, 244, 214, 217];
 
 /** Yhden Mercator-laatan RGBA-puskuri väritasosta. */
 export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
@@ -723,8 +732,15 @@ export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
     const kartalla = lat < vali.pohjoinen && lat > vali.etela;
     for (let s = 0; s < LAATTA; s += 1) {
       const o = (r * LAATTA + s) * 4;
-      const a = kartalla ? arkinPikseli(luettelo, taso, ((X + (s + 0.5) / LAATTA) / n) * 360 - 180, lat) : null;
+      const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
+      const va = luettelo.vari?.alue;
+      const alueella = !va || (lon >= va.lon0 && lon <= va.lon1 && lat >= va.lat0 && lat <= va.lat1);
+      const a = kartalla && alueella ? arkinPikseli(luettelo, taso, lon, lat) : null;
       if (a) lukija.pikseliRGBA(z, a.px, a.py, ulos, o);
+      // Alueen ulkopuoli ja puuttuva lähde (alfa 0) → kerma.
+      if (!a || ulos[o + 3] === 0) {
+        [ulos[o], ulos[o + 1], ulos[o + 2], ulos[o + 3]] = VARIN_ULKOPUOLI;
+      }
     }
   }
   return ulos;
@@ -1009,7 +1025,8 @@ async function paa() {
   if (variIso) {
     if (reliefLahde || nostot) throw new Error('--varitaso: ei --relief- eikä --nostot-lippua');
     luettelo = varitasonLuettelo(pohjaLuettelo, variIso);
-    kansio = varitasonPallokansio(luettelo.vari.versio, variIso);
+    // --tunniste = sarjan kierros (laatat ovat vuoden välimuistissa).
+    kansio = varitasonPallokansio(luettelo.vari.versio, variIso, tunniste);
   }
   if (argv.includes('--ilman-viivoja')) {
     if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
