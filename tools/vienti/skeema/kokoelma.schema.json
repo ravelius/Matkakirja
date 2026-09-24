@@ -20,6 +20,11 @@
       "description": "Vain tyohuonetilastot (skeema 1.28): taulun sarakkeet { avain, otsikko, selite, taso, luku }.",
       "type": "array", "items": { "type": "object" }
     },
+    "tyyli": {
+      "description": "Vain merinimet (skeema 1.36): webin nimiötason piirtotyyli (versaali, harvennusEm, fontti, vari, kirjainkorkeusPx tasoittain, halo, tasaus, aaltomerkki).",
+      "type": "object",
+      "required": ["versaali", "harvennusEm", "fontti", "vari", "kirjainkorkeusPx"]
+    },
     "alkiot": {
       "type": "array",
       "items": {

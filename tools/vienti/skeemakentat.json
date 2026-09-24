@@ -13,10 +13,11 @@
   "1.32": "39f6e79314ed0da5",
   "1.33": "081f5d7fd7c62ab5",
   "1.34": "081f5d7fd7c62ab5",
-  "1.35": "7a7178d9759be893"
+  "1.35": "7a7178d9759be893",
+  "1.36": "da7f54e6ae671424"
  },
  "uusin": {
-  "skeemaversio": "1.35",
+  "skeemaversio": "1.36",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -435,6 +436,18 @@
     "valtiomuoto",
     "vanhaAani",
     "wiki"
+   ],
+   "merinimet": [
+    "/tyyli",
+    "id",
+    "kaari",
+    "kulma",
+    "lahde",
+    "lat",
+    "lisenssi",
+    "lon",
+    "nimi",
+    "tasot"
    ],
    "miniatyyrit": [
     "data",
