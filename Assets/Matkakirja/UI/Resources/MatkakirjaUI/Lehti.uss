@@ -60,7 +60,7 @@
 .mk-lehti__ylanimi {
     flex-shrink: 1;
     font-size: 23.2px;
-    letter-spacing: 1.4px;
+    letter-spacing: 6.03px; /* web 1.4px */
     white-space: normal;
     /* Web .aihe-nimi ja .lehti-nimio: rgb(22, 19, 15), American Typewriter 700 (mitattu 24.9.). */
     color: #16130f;
@@ -68,7 +68,7 @@
 }
 
 .mk-lehti__ylaosa--nimio .mk-lehti__ylanimi {
-    letter-spacing: 3.04px;
+    letter-spacing: 13.1px; /* web 3.04px */
     color: #16130f;
 }
 
@@ -141,13 +141,13 @@
 .mk-lehti__nimioyla {
     /* Web .lehti-ylarivi: 9,6 px, harvennus 3,264 px, rgb(90, 67, 38). */
     font-size: 9.6px;
-    letter-spacing: 3.264px;
+    letter-spacing: 34px; /* web 3.264px */
     color: rgb(90, 67, 38);
 }
 
 .mk-lehti__nimio {
     font-size: 38px;
-    letter-spacing: 4px;
+    letter-spacing: 10.53px; /* web 4px */
     color: #16130f;
     -unity-text-align: middle-center;
     white-space: normal;
@@ -167,7 +167,7 @@
 
 .mk-lehti__paivaysteksti {
     font-size: 11.2px;
-    letter-spacing: 1.8px;
+    letter-spacing: 16.07px; /* web 1.8px */
     -unity-text-align: middle-center;
     color: rgba(70, 51, 31, 0.85);
 }
@@ -206,7 +206,7 @@
 .mk-lehti__aiheteksti {
     flex-shrink: 1;
     font-size: 21px;
-    letter-spacing: 1.2px;
+    letter-spacing: 5.71px; /* web 1.2px */
     color: #16130f;
     -unity-text-align: middle-center;
     white-space: normal;
@@ -265,7 +265,7 @@
 
 .mk-lehti__osasto {
     font-size: 11px;
-    letter-spacing: 2.2px;
+    letter-spacing: 20px; /* web 2.2px */
     color: #7a5514;
     margin: 6px 0 8px 0;
 }
@@ -293,7 +293,7 @@
     flex-grow: 1;
     flex-shrink: 1;
     font-size: 15.68px;
-    letter-spacing: 0.31px;
+    letter-spacing: 1.98px; /* web 0.31px */
     white-space: normal;
     margin-bottom: 7.2px;
     color: #46331f;
@@ -342,7 +342,7 @@
 
 .mk-lehti__wiki .mk-nappi__teksti {
     font-size: 12.48px;
-    letter-spacing: 0.62px;
+    letter-spacing: 4.97px; /* web 0.62px */
 }
 
 .mk-lehti__wikiviiva {
@@ -482,7 +482,7 @@
     width: 100%;
     margin-bottom: 2.4px;
     font-size: 10.56px;
-    letter-spacing: 2.5px;
+    letter-spacing: 23.67px; /* web 2.5px */
     color: rgba(70, 51, 31, 0.55);
 }
 
@@ -565,7 +565,7 @@
 .mk-maa__sija {
     flex-shrink: 0;
     font-size: 12.2px;
-    letter-spacing: 0.24px;
+    letter-spacing: 1.97px; /* web 0.24px */
     white-space: nowrap;
     color: rgba(70, 51, 31, 0.62);
 }
@@ -633,7 +633,7 @@
    alla 1 px rgba(60, 44, 26, 0.35) → rgb(176, 164, 144), täyte 0 16,8 5,12, laatikon reunasta reunaan. */
 .mk-lehti__tehtavaotsake {
     font-size: 10.56px;
-    letter-spacing: 3.168px;
+    letter-spacing: 30px; /* web 3.168px */
     color: rgb(99, 85, 66);
     margin: 0 -16.8px 8.8px -16.8px;
     padding: 0 16.8px 5.12px 16.8px;
@@ -716,7 +716,7 @@
 .mk-lehti__julistemerkki {
     margin-top: 5px;
     font-size: 9px;
-    letter-spacing: 2.2px;
+    letter-spacing: 24.44px; /* web 2.2px */
     -unity-text-align: upper-center;
     color: rgba(60, 44, 26, 0.72);
 }
@@ -774,7 +774,7 @@
 .mk-lehti__poistu .mk-nappi__teksti {
     white-space: normal; /* web: POISTU / LEHDESTÄ kahdella rivillä 106 px:n napissa */
     font-size: 12.48px;
-    letter-spacing: 1.248px;
+    letter-spacing: 10px; /* web 1.248px */
     color: rgb(149, 136, 119);
     -unity-text-align: middle-center;
 }
@@ -817,7 +817,7 @@
 /* Web .alanappi-suunta 13,12 px ja .alanappi-aihe 10,56 px opacity 0,72 → rgb(119, 104, 86), max 17ch. */
 .mk-lehti__selaussuunta {
     font-size: 13.12px;
-    letter-spacing: 1.248px;
+    letter-spacing: 9.51px; /* web 1.248px */
     color: rgb(70, 51, 31);
     -unity-text-align: middle-center;
 }
@@ -825,7 +825,7 @@
 .mk-lehti__selausaihe {
     max-width: 114px;
     font-size: 10.56px;
-    letter-spacing: 1.248px;
+    letter-spacing: 11.82px; /* web 1.248px */
     color: rgb(119, 104, 86);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -909,7 +909,7 @@
 
 .mk-lehti__sisallysotsikko {
     font-size: 13.76px;
-    letter-spacing: 2.2px;
+    letter-spacing: 15.99px; /* web 2.2px */
     color: #46331f;
 }
 
@@ -977,7 +977,7 @@
 .mk-lehti__sisallysrivinimi {
     margin-bottom: 2.4px;
     font-size: 13.44px;
-    letter-spacing: 0.54px;
+    letter-spacing: 4.02px; /* web 0.54px */
     white-space: normal;
     color: #46331f;
 }
@@ -1067,7 +1067,7 @@
 .mk-nahtavyys__aika {
     margin-bottom: 2px;
     font-size: 11.5px;
-    letter-spacing: 2.5px;
+    letter-spacing: 21.74px; /* web 2.5px */
     color: rgba(70, 51, 31, 0.72);
 }
 
@@ -1174,7 +1174,7 @@
 .mk-nahtavyys__lahderivi {
     margin-top: 10px;
     font-size: 11.5px;
-    letter-spacing: 0.8px;
+    letter-spacing: 6.96px; /* web 0.8px */
     white-space: normal;
     color: rgba(70, 51, 31, 0.66);
 }
@@ -1211,7 +1211,7 @@
 
 .mk-nahtavyys--opas .mk-nahtavyys__otsikko {
     font-size: 36px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.83px; /* web -0.3px */
     color: #a53a22;
 }
 
@@ -1249,7 +1249,7 @@
     border-bottom-width: 1px;
     border-bottom-color: rgba(165, 58, 34, 0.3);
     font-size: 12px;
-    letter-spacing: 2.6px;
+    letter-spacing: 21.67px; /* web 2.6px */
     color: #a53a22;
 }
 
@@ -1301,7 +1301,7 @@
 .mk-opas__vyootsikko {
     margin-bottom: 5px;
     font-size: 11px;
-    letter-spacing: 2px;
+    letter-spacing: 18.18px; /* web 2px */
     color: #6d5942;
 }
 
@@ -1374,7 +1374,7 @@
 .mk-opas__laatikkootsikko {
     margin-bottom: 9px;
     font-size: 12.8px;
-    letter-spacing: 2.6px;
+    letter-spacing: 20.31px; /* web 2.6px */
     color: #a53a22;
 }
 
@@ -1496,7 +1496,7 @@
 
 .mk-lehti__opasnauha .mk-nappi__teksti {
     font-size: 11.2px;
-    letter-spacing: 1.8px;
+    letter-spacing: 16.07px; /* web 1.8px */
     -unity-text-align: middle-center;
 }
 
@@ -1532,7 +1532,7 @@
 
 .mk-numerot__otsikkoteksti {
     font-size: 21px;
-    letter-spacing: 1.2px;
+    letter-spacing: 5.71px; /* web 1.2px */
     color: #16130f;
     -unity-text-align: middle-center;
     white-space: normal;
@@ -1831,7 +1831,7 @@
 
 .mk-lehti__maalinkki .mk-nappi__teksti {
     font-size: 11.2px;
-    letter-spacing: 1.6px;
+    letter-spacing: 14.29px; /* web 1.6px */
     color: rgba(70, 51, 31, 0.85);
 }
 
@@ -1855,7 +1855,7 @@
 
 .mk-lehti__saateksti {
     font-size: 12.5px;
-    letter-spacing: 0.5px;
+    letter-spacing: 4px; /* web 0.5px */
     white-space: normal;
     color: rgba(70, 51, 31, 0.9);
 }
@@ -1863,7 +1863,7 @@
 .mk-lehti__saavihje {
     margin-left: 6.4px;
     font-size: 10.9px;
-    letter-spacing: 1.1px;
+    letter-spacing: 10.09px; /* web 1.1px */
     color: rgba(122, 85, 20, 0.95);
 }
 
@@ -1878,7 +1878,7 @@
 .mk-uutiset__nimio {
     margin-bottom: 6px;
     font-size: 11.5px;
-    letter-spacing: 1px;
+    letter-spacing: 8.7px; /* web 1px */
     color: rgba(70, 51, 31, 0.75);
 }
 
@@ -1942,7 +1942,7 @@
 
 .mk-uutinen__masto {
     font-size: 12px;
-    letter-spacing: 1.5px;
+    letter-spacing: 12.5px; /* web 1.5px */
     color: #7a5514;
 }
 
@@ -1984,7 +1984,7 @@
 .mk-lehti__aanirooli {
     margin-bottom: 3px;
     font-size: 10.5px;
-    letter-spacing: 2px;
+    letter-spacing: 19.05px; /* web 2px */
     color: rgba(70, 51, 31, 0.8);
 }
 
@@ -2064,7 +2064,7 @@
 
 .mk-lehti__live-teksti {
     font-size: 9.5px;
-    letter-spacing: 1.5px;
+    letter-spacing: 15.79px; /* web 1.5px */
     color: #a3281c;
 }
 
@@ -2174,7 +2174,7 @@
     padding: 2px 9px;
     border-radius: 10px;
     font-size: 11px;
-    letter-spacing: 1px;
+    letter-spacing: 9.09px; /* web 1px */
 }
 
 .mk-tyohuone__tagi--valmis {
@@ -2255,7 +2255,7 @@
 .mk-tyohuone__tuoreetotsikko {
     margin-right: 6px;
     font-size: 11px;
-    letter-spacing: 0.6px;
+    letter-spacing: 5.45px; /* web 0.6px */
     color: rgba(70, 51, 31, 0.7);
 }
 
@@ -2279,7 +2279,7 @@
 .mk-tyohuone__vientiavain {
     margin: 11px 0 3px 0;
     font-size: 11.5px;
-    letter-spacing: 0.6px;
+    letter-spacing: 5.22px; /* web 0.6px */
     color: rgba(58, 42, 26, 0.95);
 }
 
@@ -2389,7 +2389,7 @@
 
 .mk-tyohuone__taulurivi--otsikko > .mk-tyohuone__solu {
     font-size: 11.5px;
-    letter-spacing: 0.4px;
+    letter-spacing: 3.48px; /* web 0.4px */
 }
 
 /* ── TILASTOT (Tilastot.cs; web .tk-taulu, .tk-nimi, .tk-num, .tk-valmis/-kesken/-puuttuu, .tk-kiintio). */
@@ -2403,7 +2403,7 @@
 .mk-tilastot__ohjausnimi {
     margin: 0 6px 0 0;
     font-size: 11px;
-    letter-spacing: 0.6px;
+    letter-spacing: 5.45px; /* web 0.6px */
     color: rgba(70, 51, 31, 0.7);
 }
 
@@ -2665,7 +2665,7 @@
 .mk-nosto__visanappi.mk-fokus__vastaus .mk-nappi__teksti {
     flex-shrink: 1;
     font-size: 15.68px;
-    letter-spacing: 0.31px;
+    letter-spacing: 1.98px; /* web 0.31px */
     color: #211d18;
 }
 

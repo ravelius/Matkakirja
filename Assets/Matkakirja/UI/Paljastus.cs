@@ -261,7 +261,8 @@ namespace Matkakirja.Natiivi
             float W = kerros.layout.width, H = kerros.layout.height;
             if (float.IsNaN(W) || W <= 0 || H <= 0) return;
             bool leve = W > 560f;
-            Aseta(nimi, leve ? 32f : 20f, leve ? 1.6f : 1f);
+            // Web letter-spacing 0,05 em (1 px / 1,6 px); UITK:n yksikkö on em/100 (tyokalut/kirjainvali.py).
+            Aseta(nimi, leve ? 32f : 20f, 5f);
             if (!paikallisNyt)
             {
                 foreach (var e in new VisualElement[] { kuvapaikka, caption, fakta, isoisa, jatka })

@@ -624,8 +624,8 @@ namespace Matkakirja.Natiivi
             bool nimio = ylaosa.ClassListContains("mk-lehti__ylaosa--nimio");
             float koko = nimio ? Mathf.Clamp(w * 0.075f, 30.4f, 44.8f) : 23.2f;
             ylaNimi.style.fontSize = koko;
-            // Web letter-spacing: nimiö 0,1 em (30,4 → 3,04 px, 44,8 → 4,48 px), aihe-nimi 0,06 em (1,39 px).
-            ylaNimi.style.letterSpacing = koko * (nimio ? 0.1f : 0.06f);
+            // Web letter-spacing: nimiö 0,1 em, aihe-nimi 0,06 em. UITK:n letter-spacing on em/100 (tyokalut/kirjainvali.py).
+            ylaNimi.style.letterSpacing = nimio ? 10f : 6f;
         }
 
         void Masto(VisualElement s)

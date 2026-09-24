@@ -753,7 +753,7 @@
 
 .mk-liiku__nappi .mk-nappi__teksti {
     font-size: 11.5px;
-    letter-spacing: 1.15px;
+    letter-spacing: 10px; /* web 1.15px */
     text-shadow: 0 0 3px rgba(244, 232, 205, 0.9);
 }
 
@@ -894,7 +894,7 @@
 /* Web .valikko-otsikko: 0,72 rem, kirjainväli 0,14 em, paino 400; alamarginaali 0,45 rem. */
 .mk-pudotus__otsikko {
     font-size: 11.52px;
-    letter-spacing: 1.61px;
+    letter-spacing: 13.98px; /* web 1.61px */
     color: var(--accent);
     -unity-text-align: middle-center;
     -unity-font-style: normal;
@@ -935,12 +935,12 @@
 .mk-kytkinrivi__nimi {
     flex-grow: 1;
     font-size: 13.5px;
-    letter-spacing: 0.8px;
+    letter-spacing: 5.93px; /* web 0.8px */
 }
 
 .mk-kytkinrivi__tila {
     font-size: 11.5px;
-    letter-spacing: 1.5px;
+    letter-spacing: 13.04px; /* web 1.5px */
     opacity: 0.8;
 }
 
@@ -967,7 +967,7 @@
 
 .mk-komentorivi .mk-nappi__teksti {
     font-size: 14.5px;
-    letter-spacing: 0.6px;
+    letter-spacing: 4.14px; /* web 0.6px */
     -unity-text-align: middle-center;
 }
 
@@ -998,7 +998,7 @@
     width: 118.4px;
     flex-shrink: 0;
     font-size: 12.48px;
-    letter-spacing: 0.62px;
+    letter-spacing: 4.97px; /* web 0.62px */
     color: rgb(189, 174, 148);
 }
 
@@ -1006,7 +1006,7 @@
     width: 48px;
     flex-shrink: 0;
     font-size: 11.52px;
-    letter-spacing: 0.46px;
+    letter-spacing: 3.99px; /* web 0.46px */
     color: var(--kulta);
     -unity-text-align: middle-right;
 }
@@ -1204,13 +1204,13 @@
 
 .mk-masto__maa {
     font-size: 10.5px;
-    letter-spacing: 3.2px;
+    letter-spacing: 30.48px; /* web 3.2px */
     color: rgba(70, 51, 31, 0.7);
 }
 
 .mk-masto__nimio {
     font-size: 30px;
-    letter-spacing: 3px;
+    letter-spacing: 10px; /* web 3px */
     -unity-text-align: middle-center;
     white-space: normal;
     color: var(--map-ink);
@@ -1335,7 +1335,7 @@
 
 .mk-liuska__kelaus > .mk-nappi__teksti {
     font-size: 12.5px;
-    letter-spacing: 1px;
+    letter-spacing: 8px; /* web 1px */
 }
 
 /* --- tekijätiedot ja lähteet --------------------------------------------- */
@@ -1389,14 +1389,14 @@
     border-top-width: 1px;
     border-color: rgba(70, 51, 31, 0.45);
     font-size: 13px;
-    letter-spacing: 1px;
+    letter-spacing: 7.69px; /* web 1px */
 }
 
 .mk-tietoja__ryhma {
     margin-top: 12px;
     margin-bottom: 2px;
     font-size: 13.5px;
-    letter-spacing: 0.5px;
+    letter-spacing: 3.7px; /* web 0.5px */
 }
 
 .mk-tietoja__johdanto {
@@ -1477,7 +1477,7 @@
 .mk-laukku__osio {
     margin: 8px 0 5px 0;
     font-size: 11.5px;
-    letter-spacing: 2px;
+    letter-spacing: 17.39px; /* web 2px */
     color: #9a6c16;
 }
 
@@ -1598,7 +1598,7 @@
 
 .mk-laukku__aarretila {
     font-size: 10.5px;
-    letter-spacing: 1.2px;
+    letter-spacing: 11.43px; /* web 1.2px */
     color: rgba(70, 51, 31, 0.7);
 }
 
@@ -1629,7 +1629,7 @@
 
 .mk-laukku__julistenimio {
     font-size: 11.5px;
-    letter-spacing: 2px;
+    letter-spacing: 17.39px; /* web 2px */
     color: #9a6c16;
     margin-right: 10px;
 }
@@ -1693,23 +1693,23 @@
 
 .mk-juliste__nimi {
     font-size: 44px;
-    letter-spacing: 10px;
+    letter-spacing: 22.73px; /* web 10px */
 }
 
 .mk-juliste__yla {
     font-size: 22px;
-    letter-spacing: 5px;
+    letter-spacing: 22.73px; /* web 5px */
 }
 
 .mk-juliste__ala {
     font-size: 17px;
-    letter-spacing: 4px;
+    letter-spacing: 23.53px; /* web 4px */
 }
 
 .mk-juliste__osa {
     margin-top: 6px;
     font-size: 13px;
-    letter-spacing: 5.5px;
+    letter-spacing: 42.31px; /* web 5.5px */
     color: #9c3a26;
 }
 
@@ -1798,7 +1798,7 @@
 .mk-aloitus__paikka {
     margin-bottom: 14px;
     font-size: 14.5px;
-    letter-spacing: 1px;
+    letter-spacing: 6.9px; /* web 1px */
     color: var(--map-ink);
     -unity-text-align: middle-center;
 }
@@ -1827,7 +1827,7 @@
 
 .mk-aloitus__valinta .mk-nappi__teksti {
     font-size: 15px;
-    letter-spacing: 4px;
+    letter-spacing: 26.67px; /* web 4px */
 }
 
 .mk-aloitus__valinta:active {
@@ -1931,7 +1931,7 @@
 
 .mk-aloitus__aloita .mk-nappi__teksti {
     font-size: 18px;
-    letter-spacing: 0.6px;
+    letter-spacing: 3.33px; /* web 0.6px */
 }
 
 .mk-aloitus__linkki {
@@ -2169,7 +2169,7 @@
 .mk-laukku__linssinimi {
     margin-bottom: 3px;
     font-size: 13.5px;
-    letter-spacing: 0.6px;
+    letter-spacing: 4.44px; /* web 0.6px */
     color: #46331f;
     -unity-text-align: middle-center;
 }
@@ -2199,7 +2199,7 @@
 
 .mk-laukku__aktivoi .mk-nappi__teksti {
     font-size: 12.5px;
-    letter-spacing: 1.9px;
+    letter-spacing: 15.2px; /* web 1.9px */
     -unity-text-align: middle-center;
 }
 
@@ -2321,7 +2321,7 @@
 
 .mk-minipopup__otsikko {
     font-size: 17.5px;
-    letter-spacing: 0.9px;
+    letter-spacing: 5.14px; /* web 0.9px */
     color: #46331f;
 }
 
@@ -2457,7 +2457,7 @@
 .mk-galleria__otsikko {
     margin-right: 8px;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 10px; /* web 1.6px */
     color: rgba(60, 44, 26, 0.92);
 }
 
@@ -2486,7 +2486,7 @@
 .mk-galleria__ryhma {
     margin: 10px 0 6px 0;
     font-size: 12px;
-    letter-spacing: 1.1px;
+    letter-spacing: 9.17px; /* web 1.1px */
     color: rgba(60, 44, 26, 0.7);
 }
 
@@ -2510,7 +2510,7 @@
 .mk-galleria__nimi {
     margin-top: 4px;
     font-size: 10px;
-    letter-spacing: 0.3px;
+    letter-spacing: 3px; /* web 0.3px */
     white-space: normal;
     -unity-text-align: upper-center;
     color: rgba(60, 44, 26, 0.8);
@@ -2614,7 +2614,7 @@
 .mk-saa__kelluke-teksti {
     margin: 5px 0 0 0;
     font-size: 10.2px;
-    letter-spacing: 0.2px;
+    letter-spacing: 1.96px; /* web 0.2px */
     white-space: normal;
     color: rgba(58, 42, 21, 0.7);
 }
@@ -2689,7 +2689,7 @@
 .mk-lippu__valinta {
     margin: 4px 0 10px 0;
     font-size: 11px;
-    letter-spacing: 1.6px;
+    letter-spacing: 14.55px; /* web 1.6px */
     -unity-text-align: upper-center;
     color: rgba(70, 51, 31, 0.65);
 }
@@ -2711,7 +2711,7 @@
 .mk-lippu__versiotyhdys {
     margin: 10px 0 8px 0;
     font-size: 11px;
-    letter-spacing: 1.8px;
+    letter-spacing: 16.36px; /* web 1.8px */
     color: #46331f;
 }
 
@@ -2950,7 +2950,7 @@
 .mk-reaktiot__kuittaus {
     display: none;
     font-size: 11px;
-    letter-spacing: 0.6px;
+    letter-spacing: 5.45px; /* web 0.6px */
     color: rgba(70, 51, 31, 0.72);
 }
 
@@ -3058,7 +3058,7 @@
     margin-top: 16px;
     margin-bottom: 4px;
     font-size: 12.5px;
-    letter-spacing: 1.5px;
+    letter-spacing: 12px; /* web 1.5px */
     white-space: normal;
     color: #8a6a2c;
 }
@@ -3242,7 +3242,7 @@
 .mk-palaute__vakaotsikko {
     flex-shrink: 1;
     font-size: 12.5px;
-    letter-spacing: 1.5px;
+    letter-spacing: 12px; /* web 1.5px */
     white-space: normal;
     color: #8a6a2c;
 }
@@ -3510,6 +3510,6 @@
     right: 11.2px;
     bottom: 7.2px;
     font-size: 11.52px;
-    letter-spacing: 0.46px;
+    letter-spacing: 3.99px; /* web 0.46px */
     color: rgba(74, 55, 26, 0.62);
 }

@@ -97,7 +97,7 @@
 
 .mk-sahke-liuska__teksti {
     font-size: 15px;
-    letter-spacing: 0.9px;
+    letter-spacing: 6px; /* web 0.9px */
     white-space: normal;
     color: #1b1712;
 }
@@ -284,7 +284,7 @@
 .mk-sahke__koodi {
     margin: 6px 0 2px 0;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 18.75px; /* web 3px */
 }
 
 .mk-sahke__koodi > .unity-base-text-field__input {
@@ -310,6 +310,6 @@
 /* Koodi luetaan ruudulta ääneen kaverille: iso ja harva. */
 .mk-sahke__koodiarvo {
     font-size: 18.4px;
-    letter-spacing: 4px;
+    letter-spacing: 21.74px; /* web 4px */
     color: var(--accent);
 }
