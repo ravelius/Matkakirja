@@ -173,8 +173,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.36 kokoelma merinimet (Linssiseppä, build 11): webin nimiötason meret
  *        (nimisto-1873 luokka meri) nimi, lat, lon, kulma, kaari, tasot, lahde,
  *        lisenssi; juuren tyyli = webin piirto (tools/vienti/merinimet.mjs).
+ *   1.37 kokoelma aluenimet (Karttaseppä, löydös 38 b): assets/data/aluenimet-natiivi.json
+ *        sellaisenaan (meret, maakunnat, nykyalueet väistön jälkeisin ankkurein
+ *        tasoittain + valtameret); juuressa tyylit, fontti, aineistoversio.
  */
-export const SKEEMAVERSIO_TARKKA = '1.36';
+export const SKEEMAVERSIO_TARKKA = '1.37';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

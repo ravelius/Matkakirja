@@ -25,6 +25,18 @@
       "type": "object",
       "required": ["versaali", "harvennusEm", "fontti", "vari", "kirjainkorkeusPx"]
     },
+    "tyylit": {
+      "description": "Vain aluenimet (skeema 1.37): tyylit nimen tyyli-avaimen mukaan (versaali, harvennus_em, koot_px tasoittain, vari, halo, …).",
+      "type": "object"
+    },
+    "fontti": {
+      "description": "Vain aluenimet (skeema 1.37): pyydetty fontti ja huomio poltetun tason fontista.",
+      "type": "object"
+    },
+    "aineistoversio": {
+      "description": "Vain aluenimet (skeema 1.37): lähdetiedoston versio (assets/data/aluenimet-natiivi.json).",
+      "type": "string"
+    },
     "alkiot": {
       "type": "array",
       "items": {
