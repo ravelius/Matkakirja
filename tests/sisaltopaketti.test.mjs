@@ -1217,6 +1217,8 @@ test('skeema 1.33: maamerkit-kokoelma, tarkistus ja offline-media', async () => 
   const kanssa = kokoaOffline({ tiedostot: t, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
   assert.ok(kanssa.maat.GBR.media.includes(hyva.malli.url));
   assert.equal(kanssa.maat.GBR.tavuja.media - ilman.maat.GBR.tavuja.media, 123456);
+});
+
 test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari #3057)', async () => {
   const { existsSync } = await import('node:fs');
   const { INTRO_TEXT, FLIGHT_FIRST } = await import('../js/ui-tekstit.js');
