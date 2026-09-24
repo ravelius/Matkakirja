@@ -519,12 +519,18 @@ namespace Matkakirja.Editori
         public static void IosLaite()
         {
             AsetaIos(iOSSdkVersion.DeviceSDK);
+            // Laitteen kehityskäännös omalla App ID:llä maksullisessa tiimissä (omistaja 24.9.2026): erillinen appi
+            // TestFlightin fi.matkakirja.peli -version rinnalla. app.matkakirja.proto3d kuuluu Personal Teamille eikä
+            // rekisteröidy maksulliseen tiimiin; simulaattorikäännökset (ei allekirjoitusta) pitävät sen.
+            PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS, LaiteBundleId);
             bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
             Kaanna("Build/laite", kehitys ? BuildOptions.Development : BuildOptions.None);
         }
 
         /// <summary>Omistajan Developer Program -tiimi (samireivinen@me.com; TestFlight ja kehityskäännökset).</summary>
         const string Tiimi = "RCD77XPB7M";
+        /// <summary>Laitteen kehityskäännöksen App ID (tyokalut/ipad.sh ID).</summary>
+        const string LaiteBundleId = "fi.matkakirja.peli.kehitys";
 
         /// <summary>
         /// Xcode-projekti TestFlightiin: Build/testflight (Julkaisija arkistoi ja lähettää
