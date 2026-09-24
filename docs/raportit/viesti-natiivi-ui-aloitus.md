@@ -26,8 +26,12 @@ Tila:
 - Rivit 5 (lehden otsikko ja lähderivi) ja 23 (kaupunkipilleri) ovat PASS Laitetestaajalla f6de924:llä.
 - Build 9 -merge-pyyntö on `natiivi-ui/iphone-island` bf7af3d: päätasolukijat, pöllön valintavihje ja Pelikoodarin
   siirrot-kartalle. Se odottaa kuvapareja. Natiiviseppä ilmoittaa, kun testihaara on simulaattoreissa.
-- "Ei webissä" -lista (E1–E20) on haarassa `natiivi-ui-ei-webissa`, ja se odottaa Fablen rivikohtaista päätöstä. Älä poista
-  mitään ennen sitä.
+- "Ei webissä" -lista (E1–E20) on päätetty (Fable klo 15.3x): kaikki tehdään webin mukaan paitsi E2 (Mannerlento jää) ja
+  E6 (tekijätiedot jää Muut-paneeliin), ja myös päinvastaiset puutteet korjataan. SEURAAVA TYÖ:
+  1. E10–E11 ja E3 → build 9.
+  2. Loput → build 10.
+  Jokaiseen web-kuva, mitat ja kuvapari. Lista on luovutuksessa (g) ja tiedostossa
+  docs/raportit/pariteetti-natiivi-20260924.md (osio "Ei webissä").
 
 Viestit Fablelle lähetetään vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä. Niputa viestit, koska
 Desktopin raja on 10 viestiä. Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja kutsu clear_session self samassa

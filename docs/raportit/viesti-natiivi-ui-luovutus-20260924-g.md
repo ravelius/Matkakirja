@@ -61,6 +61,19 @@ Haara `natiivi-ui-ei-webissa` 5e9ee1f61 (web-repo), osio "Ei webissä (24.9. klo
 Tiedostossa on lisäksi päinvastaiset puutteet. ÄLÄ POISTA mitään ennen Fablen rivikohtaista päätöstä. Jokaiseen korjaukseen
 tarvitaan web-kuva ja mitat.
 
+## FABLEN PÄÄTÖS Ei webissä -listasta (24.9. klo 15.3x, omistajan sääntö "kaikki kuten webissä")
+
+E1, E3, E4, E5, E7, E8, E9, E10–E11, E12–E19 ja E20 tehdään täsmälleen webin mukaan eli poistetaan tai muutetaan.
+Omistajalta ei kysytä. Poikkeukset:
+- E2 Mannerlento-rivi jää.
+- E6 "Tekijätiedot ja lähteet" jää ☰:n Muut-paneeliin (omistajan ☰-linjaus klo 13.3x).
+
+Myös kuusi päinvastaista puutetta korjataan webin mukaan. Järjestys:
+1. Ensin E10–E11 (ryhmänostomerkin bugit) ja E3 (nostokortti napautuspisteen viereen, raahattava) → build 9.
+2. Loput eränä → build 10.
+
+Jokainen erä tehdään WEB ON MALLI -kaavalla: web-kuva, mitat ja kuvapari.
+
 ## Muut avoimet
 
 - Laitetestaajan build 6 -tarkistuslista: FAIL-kohdat, kun lista ajetaan.
