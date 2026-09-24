@@ -107,7 +107,14 @@
   .valilehti-nappi:hover { color: var(--muste); }
   .valilehti-nappi[aria-selected="true"] { color: var(--muste); border-bottom-color: var(--seepia); }
   .valilehti-nappi:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .valilehti-nappi .lyhyt { display: none; }
   .valilehti[hidden] { display: none; }
+  @media (max-width: 480px) {
+    .valilehdet { gap: 4vw; }
+    .valilehti-nappi { font-size: 11.5px; padding: 8px 0; }
+    .valilehti-nappi .pitka { display: none; }
+    .valilehti-nappi .lyhyt { display: inline; }
+  }
 
   /* --- Moottorikortit --- */
   .moottorit { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
@@ -304,7 +311,7 @@
     <button type="button" class="valilehti-nappi" data-valilehti="moottorit">Moottorit</button>
     <button type="button" class="valilehti-nappi" data-valilehti="pelissa">Pelissä nyt</button>
     <button type="button" class="valilehti-nappi" data-valilehti="seuraavat">Seuraavat</button>
-    <button type="button" class="valilehti-nappi" data-valilehti="katalogi">Koko katalogi</button>
+    <button type="button" class="valilehti-nappi" data-valilehti="katalogi"><span class="pitka">Koko katalogi</span><span class="lyhyt">Katalogi</span></button>
   </nav>
 
   <div class="valilehti" id="valilehti-moottorit">
