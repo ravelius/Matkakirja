@@ -90,6 +90,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Nappi piiloon koko ruudun linssin ajaksi (astronautin kamera: vain ✕).</summary>
+        /// <summary>Karttaselite auki: nappi väistyy selitepaneelin alta (natiivissa nappi on ylemmällä kerroksella).</summary>
+        public void Vaista(bool vaista)
+        {
+            nappi.EnableInClassList("mk-linssiNappi--vaistyy", vaista);
+            nappi.pickingMode = vaista ? PickingMode.Ignore : PickingMode.Position;
+        }
+
         public void NaytaNappi(bool nakyy)
         {
             sallittu = nakyy;

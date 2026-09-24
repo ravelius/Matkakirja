@@ -79,6 +79,14 @@ namespace Matkakirja.Natiivi
         /// <summary>Kortti on yhden rivin lappu (ei auki).</summary>
         public bool Lappuna => Nakyy && pieni;
 
+        /// <summary>Karttaselite auki: kortti väistyy paneelin alta (kortti on ylemmällä kerroksella).</summary>
+        public void SeliteVaisto(bool v)
+        {
+            kortti.EnableInClassList("mk-matkakirja--selite", v);
+            if (v) kortti.pickingMode = PickingMode.Ignore;
+            else if (!kortti.ClassListContains("mk-matkakirja--vaistyy")) kortti.pickingMode = PickingMode.Position;
+        }
+
         /// <summary>Lappu häipyy offline-pillerin vuoron ajaksi (sama yläkulma; OfflineTilaUi.Vuorottele).</summary>
         public void Vaisty(bool v)
         {

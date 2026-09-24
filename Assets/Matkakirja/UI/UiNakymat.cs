@@ -163,6 +163,7 @@ namespace Matkakirja.Natiivi
             });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
+            Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };

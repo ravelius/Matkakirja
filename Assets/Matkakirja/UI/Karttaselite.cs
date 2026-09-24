@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
                 var k = Rakenne.El("mk-selite-rivi__kuva", merkki, PickingMode.Ignore);
                 Kuvat.Hae(NostoMerkit.KuvaJuuri + kuva, t => { if (t != null) k.style.backgroundImage = new StyleBackground(t); });
             }
-            Rakenne.Teksti(r.Nimi, "mk-selite-rivi__nimi", b);
+            Kirjasimet.Aseta(Rakenne.Teksti(r.Nimi, "mk-selite-rivi__nimi", b), Kirjasin.Kone);
             var luku = Rakenne.Teksti("", "mk-selite-rivi__luku", b);
             rivit[r.Id] = (b, luku);
         }
@@ -170,6 +170,12 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
+        /// <summary>
+        /// Paneeli auki/kiinni: kelluvat napit ja lappu, jotka natiivissa ovat ylemmillä kerroksilla (silmälasit,
+        /// matkakirjan lappu), väistyvät paneelin alta (web: paneeli on niiden päällä; build 5 -löydös 15).
+        /// </summary>
+        public event System.Action<bool> AukiMuuttui;
+
         public void Avaa()
         {
             if (Auki) return;
@@ -179,6 +185,7 @@ namespace Matkakirja.Natiivi
             if (maakunnatAuki) Maakunnat.Avautui();
             Rakenne.Nayta(paneeli, true, 220);
             nappi.AddToClassList("mk-valittu");
+            AukiMuuttui?.Invoke(true);
         }
 
         public void Sulje()
@@ -187,6 +194,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             Rakenne.Nayta(paneeli, false, 220);
             nappi.RemoveFromClassList("mk-valittu");
+            AukiMuuttui?.Invoke(false);
         }
 
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
@@ -215,12 +223,17 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             var p = UiPalvelut.KarttaValot;
+            // Web: Kaikki-rivillä kokonaismäärä (laskuri "kaikki" tai aiheiden summa), Ei mitään ilman lukua.
+            int summa = 0;
+            if (p?.Laskurit != null)
+                foreach (var kv in p.Laskurit) if (kv.Key != "kaikki" && kv.Key != "ei" && rivit.ContainsKey(kv.Key)) summa += kv.Value;
             foreach (var pari in rivit)
             {
                 int n = 0;
                 bool laskettu = p != null && p.Laskurit != null && p.Laskurit.TryGetValue(pari.Key, out n);
                 bool erikois = pari.Key == "kaikki" || pari.Key == "ei";
-                pari.Value.Luku.text = p == null || erikois ? "" : (laskettu ? n : 0).ToString();
+                if (pari.Key == "kaikki" && !laskettu) n = summa;
+                pari.Value.Luku.text = p == null || pari.Key == "ei" ? "" : (laskettu || pari.Key == "kaikki" ? n : 0).ToString();
                 pari.Value.Rivi.EnableInClassList("mk-tyhja", p != null && !erikois && n == 0);
                 pari.Value.Rivi.EnableInClassList("mk-valittu", p != null && p.Valittu == pari.Key);
             }
