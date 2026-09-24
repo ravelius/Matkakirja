@@ -362,7 +362,8 @@ namespace Matkakirja.Natiivi
                 tulos(m.Laji + " · " + m.Otsikko + " · " + m.Paikkarivi + (m.Wiki != null ? " · kuva: " + m.Wiki : "")
                       + (m.Lahteet.Count > 0 ? " · lähde: " + string.Join(", ", m.Lahteet) : "")
                       + (m.Valokuvat.Count > 0 ? " · valokuvia " + m.Valokuvat.Count : "")
-                      + (m.AaniUrl != null ? " · äänite: " + m.AaniUrl : m.Lukija != null ? " · lukija " + m.Lukija.Length + " merkkiä" : ""));
+                      + (m.AaniUrl != null ? " · äänite: " + m.AaniUrl : m.Lukija != null ? " · lukija " + m.Lukija.Length + " merkkiä" : "")
+                      + " · kortti: " + kortti.Tila);
             });
         }
     }

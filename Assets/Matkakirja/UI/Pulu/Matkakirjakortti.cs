@@ -151,6 +151,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Web tekstitPiilossa: puhelin tai kertojan luenta.</summary>
         bool TekstitPiilossa => Puhelin || luentaPiilo;
 
+        /// <summary>Testikomentoa varten: miksi kortti on lappu (ui matkakirja).</summary>
+        public string Tila => $"pieni {pieni}, puhelin {Puhelin} (tabletti {UiKerros.Tabletti}, malli {SystemInfo.deviceModel}), luentapiilo {luentaPiilo}, kertoja {Aanet.KertojaPuhuu}";
+
         /// <summary>
         /// Webin luentavahti: kertojan alkaessa auki oleva kortti kutistuu lapuksi; puheenvuorojen
         /// välissä piilo pysyy välirauhan ajan (ei välähdystä). Loppu ei avaa korttia millään laitteella.
