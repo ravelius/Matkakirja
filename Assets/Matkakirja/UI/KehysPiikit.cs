@@ -19,7 +19,10 @@ namespace Matkakirja.Natiivi
 {
     public static class KehysPiikit
     {
-        const int Katto = 400, Karki = 12;
+        const int Katto = 1200, Karki = 12;
+        // Pelisilmukan vaiheet ja UI Toolkitin päämerkit ensin, jottei katto rajaa niitä pois.
+        static readonly Regex Ensin = new Regex("^(PlayerLoop|Initialization|EarlyUpdate|FixedUpdate|PreUpdate|Update|PreLateUpdate|PostLateUpdate|UIElements|UIR|GC)",
+            RegexOptions.CultureInvariant);
         static readonly Regex Suodatin = new Regex(
             "UI|UIR|Panel|Layout|Text|Font|Style|Visual|Update|Script|Coroutine|GC|Load|Shader|Texture|Upload|Render|Cesium|Camera|Audio|Animation|Gfx|Semaphore|WaitFor",
             RegexOptions.CultureInvariant);
@@ -35,13 +38,14 @@ namespace Matkakirja.Natiivi
             Lopeta();
             var kahvat = new List<ProfilerRecorderHandle>();
             ProfilerRecorderHandle.GetAvailable(kahvat);
-            foreach (var h in kahvat)
-            {
-                var d = ProfilerRecorderHandle.GetDescription(h);
-                if (d.UnitType != ProfilerMarkerDataUnit.TimeNanoseconds || string.IsNullOrEmpty(d.Name) || !Suodatin.IsMatch(d.Name)) continue;
-                mittarit.Add((d.Name, new ProfilerRecorder(h, 1, ProfilerRecorderOptions.Default)));
-                if (mittarit.Count >= Katto) break;
-            }
+            var valitut = kahvat.Select(h => (Kahva: h, Kuvaus: ProfilerRecorderHandle.GetDescription(h)))
+                .Where(x => x.Kuvaus.UnitType == ProfilerMarkerDataUnit.TimeNanoseconds && !string.IsNullOrEmpty(x.Kuvaus.Name) && Suodatin.IsMatch(x.Kuvaus.Name))
+                .OrderBy(x => Ensin.IsMatch(x.Kuvaus.Name) ? 0 : 1)
+                .Take(Katto);
+            // Default (WrapAround + SumAllSamplesInFrame) EI käynnistä mittaria: ilman StartImmediately kaikki arvot
+            // olivat nollia (Natiivisepän iPad-ajo 24.9.: piikkirivit tyhjiä).
+            const ProfilerRecorderOptions Valinnat = ProfilerRecorderOptions.Default | ProfilerRecorderOptions.StartImmediately;
+            foreach (var (h, d) in valitut) mittarit.Add((d.Name, new ProfilerRecorder(h, 1, Valinnat)));
             loppu = Time.realtimeSinceStartup + kestoS;
             kynnys = kynnysMs / 1000f;
             piikkeja = 0;
@@ -60,8 +64,10 @@ namespace Matkakirja.Natiivi
             var sb = new StringBuilder();
             sb.Append("MATKAKIRJA piikit: kehys ").Append((dt * 1000f).ToString("0.0", CultureInfo.InvariantCulture)).Append(" ms (frame ")
               .Append(Time.frameCount - 1).Append("):");
-            foreach (var (nimi, ms) in mittarit.Select(m => (m.Nimi, Ms: m.Mittari.LastValue / 1e6)).Where(x => x.Ms >= 0.5).OrderByDescending(x => x.Ms).Take(Karki))
+            var raskaat = mittarit.Select(m => (m.Nimi, Ms: m.Mittari.LastValue / 1e6)).Where(x => x.Ms >= 0.5).OrderByDescending(x => x.Ms).Take(Karki).ToList();
+            foreach (var (nimi, ms) in raskaat)
                 sb.Append(' ').Append(nimi).Append(' ').Append(ms.ToString("0.0", CultureInfo.InvariantCulture)).Append(';');
+            if (raskaat.Count == 0) sb.Append(" (ei arvoja: " + mittarit.Count(m => m.Mittari.Valid && m.Mittari.IsRunning) + "/" + mittarit.Count + " mittaria käynnissä)");
             Debug.Log(sb.ToString());
         }
 
