@@ -4555,3 +4555,7 @@ Linssiseppä päivittää suunnitelman (hämärän kerroin ~0,18, perustaso ~0,5
 ## FABLE NOLLAA ITSENSA klo 20.0x (71 %): LUOVUTUS viesti-fable-luovutus-20260924-d.md, ALOITUS viesti-fable-aloitus.md (24.9.2026 klo 20.05)
 
 Postivahti lähettää aloitusviestin kun sessio on tyhjä (list_events = 0 / get_usage < 10 %) ja varmistaa RC:n.
+
+## JULKAISIJA: PITO PURETTU, 1.x-OSOITIN v68 (1.35, d90d09c0f, AJO 36031628177), JONO JATKUU (24.9.2026 klo 20.05)
+
+Luovutuksen jonon kohta 1 tehty.
