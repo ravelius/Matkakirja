@@ -550,10 +550,13 @@ namespace Matkakirja.Natiivi
                 var kuva = Rakenne.El("mk-postikortti__kuva", kortti, PickingMode.Ignore);
                 kuva.style.height = Mathf.Round(kuvaKorkeus);
                 Kuvat.Hae(k.Osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
-                var teksti = Rakenne.Teksti(k.Selite ?? k.Lyhyt ?? "", "mk-postikortti__teksti", kortti);
+                // Web: lähde (.kuvalahde 0,6rem #8a7a60) kuvatekstin sisällä sen perässä.
+                string kuvateksti = k.Selite ?? k.Lyhyt ?? "";
+                if (!string.IsNullOrEmpty(k.Lahde))
+                    kuvateksti += (kuvateksti.Length > 0 ? " " : "") + "<size=9.6><color=#8a7a60>" + k.Lahde + "</color></size>";
+                var teksti = Rakenne.Teksti(kuvateksti, "mk-postikortti__teksti", kortti);
                 Kirjasimet.Aseta(teksti, Kirjasin.Kone);
-                teksti.style.display = string.IsNullOrEmpty(teksti.text) ? DisplayStyle.None : DisplayStyle.Flex;
-                if (!string.IsNullOrEmpty(k.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lahde, "mk-postikortti__lahde", kortti), Kirjasin.Kone);
+                teksti.style.display = kuvateksti.Length == 0 ? DisplayStyle.None : DisplayStyle.Flex;
                 if (pino.Count > 1) Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1}/{pino.Count}", "mk-postikortti__laskuri", kortti), Kirjasin.Kone);
                 kortit.Add(kortti);
             }

@@ -3385,7 +3385,6 @@
 }
 
 .mk-postikortti__kortti--alla .mk-postikortti__teksti,
-.mk-postikortti__kortti--alla .mk-postikortti__lahde,
 .mk-postikortti__kortti--alla .mk-postikortti__laskuri {
     visibility: hidden;
 }
@@ -3399,16 +3398,10 @@
 
 .mk-postikortti__teksti {
     margin: 5.6px 1.6px 4px 1.6px;
+    padding-right: 36px;
     font-size: 13.76px;
     white-space: normal;
     color: #3a2a1c;
-}
-
-.mk-postikortti__lahde {
-    margin: 2.4px 1.6px 1.6px 1.6px;
-    font-size: 9.6px;
-    white-space: normal;
-    color: #8a7a60;
 }
 
 .mk-postikortti__laskuri {
