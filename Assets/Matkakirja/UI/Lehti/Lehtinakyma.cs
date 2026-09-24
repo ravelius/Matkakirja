@@ -741,11 +741,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-lehti__nosto-otsikko", otsikkorivi), Kirjasin.KoneLihava);
             if (!string.IsNullOrEmpty(n.Aika)) Kirjasimet.Aseta(Rakenne.Teksti(n.Aika, "mk-lehti__aika", otsikkorivi), Kirjasin.Kone);
             var kuvat = n.Galleria.Count > 0 ? n.Galleria : (n.Kuva != null ? new List<LehtiKuva> { n.Kuva } : new List<LehtiKuva>());
-            if (kuvat.Count > 1) Kuvasarja(lohko, kuvat, "mk-lehti__nostokuva");
+            if (kuvat.Count > 1) Kuvasarja(lohko, kuvat, "mk-lehti__nostokuva", true);
             else if (kuvat.Count == 1)
             {
                 Kuva(lohko, kuvat[0], kuvat, 0, "mk-lehti__nostokuva", n.Leveys == "taysi" ? 0.56f : 0.66f);
-                Kuvateksti(lohko, kuvat[0]);
+                Kuvateksti(lohko, kuvat[0], true);
             }
             // Noston kuuntelu- ja musiikkinapit (web lisaaNostonNapit): näyte, musiikkilinkit, vapaa
             // musiikkinäyte tai Apple Musicin esikuuntelu. Sama soitin kuin mediarivillä (Mediarivi.Kuuntele).
@@ -1218,13 +1218,18 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        void Kuvateksti(VisualElement isa, LehtiKuva k)
+        /// <summary>
+        /// Kuvan selite ja lähderivi. vainLahde: aihesivujen nostokuvissa vain lähderivi (web maalehti.js
+        /// "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.2026; selite näkyy suurennoksessa). Pariteetti 24.9.
+        /// (Laitetestaaja: Lascaux'n selite ennen Commons-lähdettä).
+        /// </summary>
+        void Kuvateksti(VisualElement isa, LehtiKuva k, bool vainLahde = false)
         {
-            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-lehti__kuvateksti", isa), Kirjasin.LukuKursiivi);
+            if (!vainLahde && !string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-lehti__kuvateksti", isa), Kirjasin.LukuKursiivi);
             if (!string.IsNullOrEmpty(k.LahdeRivi)) Kirjasimet.Aseta(Rakenne.Teksti(k.LahdeRivi, "mk-lehti__lahde", isa), Kirjasin.Kone);
         }
 
-        void Kuvasarja(VisualElement isa, List<LehtiKuva> kuvat, string luokka)
+        void Kuvasarja(VisualElement isa, List<LehtiKuva> kuvat, string luokka, bool vainLahde = false)
         {
             var lohko = Rakenne.El("mk-lehti__kuvasarja", isa, PickingMode.Ignore);
             var paikka = Rakenne.El("mk-lehti__kuvasarjapaikka", lohko, PickingMode.Ignore);
@@ -1245,7 +1250,7 @@ namespace Matkakirja.Natiivi
                     se.RegisterCallback<ClickEvent>(e => e.StopPropagation());
                     Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys), Kirjasin.Kone);
                 }
-                Kuvateksti(tekstit, kuvat[i]);
+                Kuvateksti(tekstit, kuvat[i], vainLahde);
             }
             Nayta(0);
         }
