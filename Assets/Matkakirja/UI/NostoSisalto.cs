@@ -49,6 +49,8 @@ namespace Matkakirja.Natiivi
         public string Nauha;
         /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web kuva.reaktio "ihme:&lt;nimi&gt;"), muuten null.</summary>
         public string Reaktio, ReaktioOtsikko;
+        /// <summary>Lyhyt on eläintäyn vakioselite (web vakioselite): karusellissa ja suurennoksessa, ei vaiheen 1 kuvassa.</summary>
+        public bool LyhytVara;
     }
 
     public sealed class NostoVisa
@@ -554,8 +556,8 @@ namespace Matkakirja.Natiivi
             string vara = elain == null ? null : char.ToUpperInvariant(elain[0]) + elain.Substring(1)
                 + (UiSisalto.Maa(iso)?.Nimi is string maa ? ", " + maa : "");
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk && kk.Count > 0) Kuvat(n, kk, "url");
-            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
-            foreach (var x in n.Kuvat) { x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
+            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k });
+            foreach (var x in n.Kuvat) { x.LyhytVara = x.Lyhyt == null; x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
             return n;
         }
 

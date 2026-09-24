@@ -620,7 +620,8 @@ namespace Matkakirja.Natiivi
             var kuva = Kuvakehys(sisus, k, Vaihe2, SarjanKuvaLadattu);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
-            Kuvateksti(alarivi, k.Lyhyt ?? nosto.Otsikko ?? "", k);
+            // Web nostokuvaAloita: kuvatekstiLyhyt(kuva), eläintäyn vakioselite vasta karusellissa (pariteetti b12-2 #27).
+            Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
             MitoitaKuvaEdella();
