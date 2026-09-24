@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2178, teksti: 'Syvät tasot z9–z10 DEM-reliefillä (#2962)' },
   { v: 2177, teksti: 'Afrikan faktakorjaukset: Big Hole, Suakin, Vict… (#2973)' },
   { v: 2176, teksti: 'Äänille sama lisenssiportti kuin kuville: NC/ND… (#2898)' },
   { v: 2175, teksti: 'Sisältöpaketti 1.27–1.30: työhuone, tilastot, m… (#3030)' },
