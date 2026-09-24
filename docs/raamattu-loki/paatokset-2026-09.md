@@ -4463,3 +4463,7 @@ Karttasepän arvio: lähde 8 osaa A1–D2 (~200–250 Mt), bmng-putki toimii lä
 ## BUILD 10 KAATUI MYOS b9755e9/F72JLS57C5:LLA → JUURISYY: KEHITYSVARMENTEET koodaus-AVAINNIPUSSA (errSecInternalComponent), EI TIIMI (24.9.2026 klo 19.07)
 
 Julkaisija: build 9 allekirjoitettiin automaation varmenteella 'Apple Development: Created via API'; tämän päivän kehityskäännökset toivat koodauksen login-avainnippuun omistajan kehitysvarmenteet (FD3S699799, 2RX77QMLHA), joita ajuri ei voi käyttää. Korjaus: ajon ajaksi hakulistalla vain TestFlight-avainnippu, lopussa palautus; koeajo 36025102019 haarasta julkaisija-tf-nippu (b9755e9 + #3110). Tiimikysymys erillinen.
+
+## LINSSISEPPA NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA linssiseppa-tyo-20260923 (klo 19.03), RC PAALLA; 5 h -KIINTIO 93 %, NOLLAUTUU 19.19 (24.9.2026 klo 19.08)
+
+Uusi Linssiseppä aloittaa radiouudistuksen suunnitelmasta ja löydöksestä 43.
