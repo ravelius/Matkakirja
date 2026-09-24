@@ -267,8 +267,11 @@ async function ajaLaite(l) {
         v = { ok: auki === linssi, puu: await puuNyt(dokumentit, nimi), osuma: `linssi ${linssi}` }; // eslint-disable-line no-await-in-loop
       } else {
         odotetut = await tunnisteet(r, l, natiivinPerus); // eslint-disable-line no-await-in-loop
-        if (!odotetut.length) odotetut = [normalisoi(PERUSTILA)];
-        v = await vartioi(dokumentit, nimi, odotetut); // eslint-disable-line no-await-in-loop
+        // Ilman erottavia tekstejä (nopan näkymät, pelkkä kartta) tilaa ei voi vartioida teksteillä: perustilaa
+        // ei odoteta, koska näkymä voi piilottaa sen (heitto piilottaa Liikun; b12-2-ajon rivit 19 ja 21b).
+        v = odotetut.length
+          ? await vartioi(dokumentit, nimi, odotetut) // eslint-disable-line no-await-in-loop
+          : { ok: true, puu: await puuNyt(dokumentit, nimi), osuma: 'vartioimaton (ei erottavia tekstejä)' }; // eslint-disable-line no-await-in-loop
       }
       const png = join(NATIIVI, `${nimi}.png`);
       await simctl('io', l.udid, 'screenshot', '--type=png', png); // eslint-disable-line no-await-in-loop
