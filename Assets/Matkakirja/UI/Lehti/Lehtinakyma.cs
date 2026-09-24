@@ -491,7 +491,8 @@ namespace Matkakirja.Natiivi
             if (paakuvat.Count > 0) Kuvasarja(s, paakuvat, "mk-lehti__paakuva");
             var esittely = lehti.Johdanto ?? a.Johdanto;
             // Web #arrival-intro: 1rem, riviväli 1,6, kappaleet <p> (1 em väli), anfangi ensimmäisessä.
-            if (!string.IsNullOrEmpty(esittely)) Leipa(s, esittely, "mk-lehti__esittely", 1.6f, 1f, true);
+            // Web #arrival-intro p: American Typewriter 16 px, #5a4326, riviväli 25,6 (mitattu 24.9.).
+            if (!string.IsNullOrEmpty(esittely)) Leipa(s, esittely, "mk-lehti__esittely", 1.6f, 1f, true, Kirjasin.Kone);
             var rivi = a.EnnenNyt.Count >= 2 ? a.EnnenNyt.Take(2).ToList()
                 : (a.Avauskuvat.Count > 0 ? a.Kansikuvat.Take(2) : a.Kansikuvat.Skip(1).Take(2)).ToList();
             if (rivi.Count > 0)
@@ -702,7 +703,8 @@ namespace Matkakirja.Natiivi
 
             // Reaktioiden sivuavain (web aihesivunAvain → aiheAvain): maalehdessä ISO3, muuten kaupunki.
             string sivuAvain = Reaktiot.AiheAvain(lehti.Omistaja, a.Id);
-            foreach (var n in a.Nostot) Nosto(s, n, sivuAvain);
+            bool ensimmainen = true;
+            foreach (var n in a.Nostot) { Nosto(s, n, sivuAvain, ensimmainen); ensimmainen = false; }
             foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet, sivuAvain);
             // Sivun oma reaktiorivi juttujen perään, ennen tehtävää (web piirraAiheenReaktiot).
             Poimintapillerit.Piirra(s, sivuAvain); // web piirraAiheenPoiminnat: aihesivun loppuun
@@ -734,7 +736,7 @@ namespace Matkakirja.Natiivi
         // Web kulttuuri-musiikkilinkki: nuotti (kaksi kaulaa ja palkki).
         const string Nuotti = "<path d=\"M9 18.5V6.2l9-1.7v11.3\"/><circle class=\"taytto\" cx=\"6.8\" cy=\"18.6\" r=\"2.2\"/><circle class=\"taytto\" cx=\"15.8\" cy=\"15.9\" r=\"2.2\"/>";
 
-        void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null)
+        void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null, bool ensimmainen = false)
         {
             var lohko = Rakenne.El("mk-lehti__nosto", s, PickingMode.Ignore);
             var otsikkorivi = Rakenne.El("mk-lehti__nosto-otsikkorivi", lohko, PickingMode.Ignore);
@@ -767,7 +769,9 @@ namespace Matkakirja.Natiivi
                     Mediarivi.Kuuntele(media, "Kuuntele näyte", null, valmis => Mediarivi.HaeEsikuuntelu(esi, mus, nimi, valmis), "Esikuuntelu Apple Musicista (30 s)");
                 }
             }
-            foreach (var k in Kappaleet(n.Teksti)) Kappale(lohko, k, "mk-lehti__leipa");
+            // Web .teksti (mitattu 24.9.): Iowan 16,32 px, #211d18, riviväli 26,44 (1,62 em), kappaleväli 8 px;
+            // sivun ensimmäisellä nostolla anfangi (.teksti.ensimmainen.anfangi) ja 11,2 px:n väli.
+            if (!string.IsNullOrEmpty(n.Teksti)) Leipa(lohko, n.Teksti, "mk-lehti__teksti", 1.62f, 0.49f, ensimmainen);
             if (n.Lisa != null) { try { n.Lisa(lohko); } catch (Exception e) { Debug.LogException(e); } }
             var loppu = Rakenne.El("mk-lehti__nostoloppu", lohko, PickingMode.Ignore);
             if (!string.IsNullOrEmpty(n.Wiki))
@@ -1271,7 +1275,8 @@ namespace Matkakirja.Natiivi
         /// 0,12 em, rgba(70, 51, 31, 0,9)). UITK ei kelluta: ensimmäisen kappaleen rivit anfangin vieressä ladotaan
         /// kapeampaan palstaan ja loput täysleveänä alle. Ääneenluku lukee piilotetun kokonaisen tekstin.
         /// </summary>
-        static void Leipa(VisualElement isa, string teksti, string luokka, float riviEm, float valiEm, bool anfangi)
+        static void Leipa(VisualElement isa, string teksti, string luokka, float riviEm, float valiEm, bool anfangi,
+            Kirjasin kirjasin = Kirjasin.Luku)
         {
             var lohko = Rakenne.El("mk-lehti__leipa", isa, PickingMode.Ignore);
             var luettava = Rakenne.Teksti(teksti, "mk-lehti__luettava", lohko);
@@ -1280,8 +1285,8 @@ namespace Matkakirja.Natiivi
             var kappaleet = Kappaleet(teksti).ToList();
             for (int i = 0; i < kappaleet.Count; i++)
             {
-                VisualElement kpl = anfangi && i == 0 ? AnfangiKappale(lohko, kappaleet[i], luokka, riviEm)
-                    : Rivitetty(kappaleet[i], luokka, riviEm, lohko);
+                VisualElement kpl = anfangi && i == 0 ? AnfangiKappale(lohko, kappaleet[i], luokka, riviEm, kirjasin)
+                    : Rivitetty(kappaleet[i], luokka, riviEm, lohko, kirjasin);
                 if (i < kappaleet.Count - 1)
                 {
                     var k = kpl;
@@ -1298,11 +1303,11 @@ namespace Matkakirja.Natiivi
         static string Rivivali(string teksti, float riviEm) =>
             "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em><noparse>" + teksti + "</noparse>";
 
-        static Label Rivitetty(string teksti, string luokka, float riviEm, VisualElement isa)
+        static Label Rivitetty(string teksti, string luokka, float riviEm, VisualElement isa, Kirjasin kirjasin = Kirjasin.Luku)
         {
             var l = Rakenne.Teksti(Rivivali(teksti, riviEm), luokka, isa);
             l.enableRichText = true;
-            Kirjasimet.Aseta(l, Kirjasin.Luku);
+            Kirjasimet.Aseta(l, kirjasin);
             return l;
         }
 
@@ -1313,7 +1318,7 @@ namespace Matkakirja.Natiivi
             return fi is UnityEngine.TextCore.FaceInfo f && f.pointSize > 0 ? f.ascentLine / f.pointSize : 0.8f;
         }
 
-        static VisualElement AnfangiKappale(VisualElement isa, string teksti, string luokka, float riviEm)
+        static VisualElement AnfangiKappale(VisualElement isa, string teksti, string luokka, float riviEm, Kirjasin kirjasin = Kirjasin.Luku)
         {
             // ::first-letter ottaa alkuvälimerkit (lainausmerkki) kirjaimen mukaan.
             int n = 0;
@@ -1321,8 +1326,8 @@ namespace Matkakirja.Natiivi
             n = Mathf.Min(teksti.Length, n + 1);
             string eka = teksti.Substring(0, n), loput = teksti.Substring(n);
             var kpl = Rakenne.El("mk-lehti__anfangikappale " + luokka, isa, PickingMode.Ignore);
-            var alku = Rivitetty("", luokka, riviEm, kpl);
-            var loppu = Rivitetty("", luokka, riviEm, kpl);
+            var alku = Rivitetty("", luokka, riviEm, kpl, kirjasin);
+            var loppu = Rivitetty("", luokka, riviEm, kpl, kirjasin);
             alku.style.marginBottom = 0;
             loppu.style.marginBottom = 0;
             var kirjain = Rakenne.Teksti(eka, "mk-lehti__anfangi", kpl);
