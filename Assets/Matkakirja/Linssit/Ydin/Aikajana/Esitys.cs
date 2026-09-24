@@ -603,8 +603,12 @@ namespace Matkakirja.Linssit.Aikajana
 
         bool nousuOdottaa;
 
-        /// <summary>Nousun kesto (ms): enintään 1,8 s ja 60 % ajasta zoomin alkuun, jotta tähdissä ehtii viipyä.</summary>
-        public const double NousuMaxMs = 1800, NousuMinMs = 500;
+        /// <summary>
+        /// Nousun kesto (ms): enintään 2,4 s ja 60 % ajasta zoomin alkuun, jotta tähdissä ehtii viipyä. iPhone-video
+        /// 24.9. (3f70eb8): 1,1 s:n Nousu-käyrällä Eurooppa katosi pisteeksi alle 0,25 s:ssa mustan häipyessä ja
+        /// näytti hypyltä, joten nousu on pidempi ja symmetrinen (Pehmea): irtoaminen näkyy, huippu keskellä.
+        /// </summary>
+        public const double NousuMaxMs = 2400, NousuMinMs = 500;
 
         /// <summary>NOUSU: kaupungista 300 pallonsäteen päähän Afrikan yläpuolelle (Kayra.Nousu), liian lyhyellä ajalla heti.</summary>
         void KaynnistaNousu(double zoomiinMs)
@@ -615,7 +619,7 @@ namespace Matkakirja.Linssit.Aikajana
             double ms = Math.Min(NousuMaxMs, zoomiinMs * 0.6);
             if (ms < NousuMinMs) { y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus); return; }
             y.AjaKamera(new Nakyma(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade), (float)(ms / 1000),
-                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Nousu));
+                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Pehmea));
         }
 
         void KaynnistaAvaruusajo(double? kesto)
