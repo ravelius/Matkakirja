@@ -100,6 +100,8 @@ case "$1" in
     linssi "kamera 20 30 20000"; sleep 8; linssi "isoisa tila"; kuva linssitesti-isoisa-pallo
     linssi "linssi pois"; sleep 3; hae "$2"; grep -a "isoisä\|auki" "$2/linssi-loki.txt" | tail -12 ;;
   kontakti)
+    # Sovellus käyntiin ja aloitusportin ohi (muuten komennot jäävät käsittelemättä, 24.9.).
+    kaynnista; portti
     # Kiinteät näkymät (lat lon korkeus km); keksinnöt, ihmisen matka ja astronautti
     # ohjaavat kameraa itse, joten niistä otetaan linssin oma näkymä.
     linssi "linssi topografia"; sleep 8; linssi "kamera 45 10 8000"; sleep 8; kuva kontakti-topografia

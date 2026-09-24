@@ -10,6 +10,7 @@
 // katkeaa Jatka-napista; selaus ja sulku hiljentävät. Soiva luenta pidättää
 // pysäkin tauon loppua (Kello.PidataLuennalle).
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Aikajana
 {
@@ -128,6 +129,12 @@ namespace Matkakirja.Linssit.Aikajana
         public event Action<int> JuttuPyydetty;
         /// <summary>Auki oleva sivu (pysäkin indeksi) tai -1.</summary>
         public int JuttuAuki { get; private set; } = -1;
+
+        /// <summary>Pysäkkien määrä (sivut indeksoidaan 0…Pysakkeja-1).</summary>
+        public int Pysakkeja => aineisto.Pysakit.Count;
+
+        /// <summary>Hampurilaisen sisällys: sivulliset pysäkit (indeksi, vuosi/ajoitus, otsikko, henkilö).</summary>
+        public IReadOnlyList<(int I, string Vuosi, string Otsikko, string Henkilo)> Sisallys() => Aikajana.Tiedeliite.Sisallys(aineisto.Pysakit);
 
         /// <summary>Sivun sisältö UI:lle (null, jos pysäkillä ei ole sivua).</summary>
         public TiedeliiteSivu Tiedeliite(int i) => Aikajana.Tiedeliite.Sivu(aineisto.Pysakit, i);
