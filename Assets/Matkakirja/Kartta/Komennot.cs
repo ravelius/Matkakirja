@@ -53,6 +53,8 @@ namespace Matkakirja
     ///   maaraja pois|paalle|auto | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja); auto = vain kun vektoriranta
     ///                             ei piirry (omistaja 25.9.), paalle = aina vertailuun
     ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
+    ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
+    ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
     ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
     ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1): taso pakottaa webin tason, syvyys pois =
     ///                             ZTest Always, nosto = syvyysnosto (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen
@@ -450,6 +452,12 @@ namespace Matkakirja
                               $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, paksuus " +
                               (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
                               $" × pistekerroin {PalloKierto.Pistekerroin}");
+                    break;
+                case "vektorit":
+                    // vektorit versio <nimi>|web|oletus (löydös 46: rajakorkeussarja oletuksena, webin sarja vertailuun)
+                    if (o.Length > 2 && o[1] == "versio") Vektorikerros.AsetaVersio(o[2]);
+                    Debug.Log($"MATKAKIRJA vektorit: versio {Vektorikerros.Versio} (oletus {Vektorikerros.OletusVersio}), " +
+                              $"luettelo {(Vektorikerros.Luettelo != null ? Vektorikerros.Luettelo.Versio : "lataamatta")}");
                     break;
                 case "rannikko":
                 case "rajat":

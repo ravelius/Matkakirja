@@ -23,11 +23,39 @@ namespace Matkakirja
     /// </summary>
     public abstract class Vektorikerros : MonoBehaviour
     {
-        /// <summary>Webin PALLOVEKTORIT_VERSIO (js/pallovektorit.js).</summary>
-        public const string Versio = "2026-09-21-gshhs";
+        /// <summary>
+        /// SARJAN VERSIO YHDEN VAKION TAKANA: oletus on Karttasepän rajakorkeussarja (<see cref="KorkeusVersio"/>, PR #3132:
+        /// rajoilla "korkeus": true ja hMin/hMax solukohtaisesti, h = maastoverkon yläraja samalla geoidinollalla kuin
+        /// maasto; rannikko kopioitu webin sarjasta sellaisenaan). Fable ilmoitti 25.9. sarjan olevan ämpärissä (1 530
+        /// tiedostoa tarkistettu). Webin sarja (<see cref="WebVersio"/>, PALLOVEKTORIT_VERSIO) vertailuun komennolla
+        /// "vektorit versio &lt;nimi&gt;|web|oletus" (<see cref="AsetaVersio"/>).
+        /// </summary>
+        public const string OletusVersio = KorkeusVersio;
+        /// <summary>Rajakorkeussarja (tools/maasto/vie-rajakorkeudet.mjs).</summary>
+        public const string KorkeusVersio = "2026-09-25-gshhs-korkeus";
+        /// <summary>Webin sarja ilman korkeuksia (js/pallovektorit.js PALLOVEKTORIT_VERSIO).</summary>
+        public const string WebVersio = "2026-09-21-gshhs";
+        /// <summary>Käytössä oleva sarja (ajossa vaihdettava komennolla).</summary>
+        public static string Versio { get; private set; } = OletusVersio;
         /// <summary>Aineiston kansio ämpärissä (ilman juurta).</summary>
-        public const string Juuri = "julisteet/pallo/vektorit/" + Versio + "/";
-        public const string LuetteloPolku = Juuri + "luettelo.json";
+        public static string Juuri => "julisteet/pallo/vektorit/" + Versio + "/";
+        public static string LuetteloPolku => Juuri + "luettelo.json";
+        static int versioKierros;
+
+        /// <summary>
+        /// Vaihtaa sarjan ajossa (komento "vektorit versio"): luettelo ja kaikki solut ladataan uudelleen uudesta
+        /// kansiosta seuraavalla kehyksellä. null tai "oletus" = <see cref="OletusVersio"/>.
+        /// </summary>
+        public static void AsetaVersio(string nimi)
+        {
+            nimi = string.IsNullOrEmpty(nimi) || nimi == "oletus" ? OletusVersio : nimi == "web" ? WebVersio : nimi.Trim('/');
+            if (nimi == Versio) return;
+            Versio = nimi;
+            versioKierros++;
+            Luettelo = null;
+            luetteloHaussa = false;
+            Debug.Log("MATKAKIRJA vektorit: versio " + nimi);
+        }
         /// <summary>Lajit, joiden solut kuuluvat offline-lataukseen.</summary>
         public static readonly string[] Lajit = { "rannikko", "rajat" };
         public const float HaiveSek = 0.26f;
@@ -53,6 +81,7 @@ namespace Matkakirja
         static void NollaaYhteiset()
         {
             Syvyystesti = true; NostoM = 200f; NostoOsuus = 0.002f; Luettelo = null; luetteloHaussa = false;
+            Versio = OletusVersio; versioKierros = 0;
         }
 
         // ---- Kerroksen omat ----
@@ -140,7 +169,24 @@ namespace Matkakirja
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
             if (kerrokset == null) kerrokset = GetComponent<KarttaKerrokset>();
-            if (materiaali != null && georeferenssi != null && !luetteloHaussa && Luettelo == null) StartCoroutine(LataaLuettelo());
+            omaKierros = versioKierros;
+        }
+
+        int omaKierros;
+
+        /// <summary>Versio vaihtui: kaikki solut, verkot ja kesken olevat haut pois (luettelo haetaan uudelleen).</summary>
+        void Tyhjenna()
+        {
+            StopAllCoroutines();
+            foreach (var s in solut.Values) Vapauta(s, true);
+            solut.Clear();
+            naytetyt.Clear();
+            naytettyTaso = -1;
+            odotusAlku = -1f;
+            latauksia = 0;
+            rakennuksia = 0;
+            tyotaKesken = true;
+            omaKierros = versioKierros;
         }
 
         protected virtual void OnDestroy()
@@ -169,10 +215,12 @@ namespace Matkakirja
         IEnumerator LataaLuettelo()
         {
             luetteloHaussa = true;
+            int kierros = versioKierros;
+            string polku = LuetteloPolku;
             while (Luettelo == null)
             {
                 byte[] tavut = null;
-                using (var pyynto = UnityWebRequest.Get(Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + LuetteloPolku)))
+                using (var pyynto = UnityWebRequest.Get(Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + polku)))
                 {
                     pyynto.timeout = 30;
                     yield return pyynto.SendWebRequest();
@@ -184,6 +232,7 @@ namespace Matkakirja
                     Vektorisolut.Luettelo l = null;
                     var tehtava = Task.Run(() => l = Vektorisolut.LueLuettelo(Encoding.UTF8.GetString(Maaraja.Geojson.Pura(tavut))));
                     while (!tehtava.IsCompleted) yield return null;
+                    if (kierros != versioKierros) yield break; // versio vaihtui kesken: uusi haku hoitaa
                     if (tehtava.IsFaulted) Debug.LogError("MATKAKIRJA vektorit: luettelon jäsennys kaatui: " + tehtava.Exception?.GetBaseException());
                     else if (l == null || l.Lajit.Count == 0) Debug.LogWarning("MATKAKIRJA vektorit: luettelo tyhjä");
                     else
@@ -202,6 +251,7 @@ namespace Matkakirja
                     }
                 }
                 yield return new WaitForSecondsRealtime(UusintaSek);
+                if (kierros != versioKierros) yield break;
             }
         }
 
@@ -210,6 +260,8 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (materiaali == null || georeferenssi == null) return;
+            if (omaKierros != versioKierros) Tyhjenna();
+            if (Luettelo == null && !luetteloHaussa) StartCoroutine(LataaLuettelo());
             bool nakyy = Syy() == null;
             if (juuri == null) Luo();
             if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);

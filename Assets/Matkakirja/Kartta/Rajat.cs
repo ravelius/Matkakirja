@@ -13,10 +13,11 @@ namespace Matkakirja
     /// Järjestys: <see cref="RajaJono"/> 2996, pelaajan maan kehän (2995) päällä ja rannikon (2997) alla (web: rajat ja ranta
     /// samassa renderOrderissa −0,5, korostus −0,55).
     ///
-    /// KORKEUS: Karttaseppä toimittaa rajapisteille korkeudet (luettelossa "korkeus": true, solu (dlon, dlat, h int16),
-    /// Vektorisolut). Silloin viiva on maaston korkeudella ja Rajaviiva nostaa sen korkeuskertoimella kuten tilesetin;
-    /// siihen asti h = 0 ja syvyysnosto (Vektorikerros.NostoM + NostoOsuus × etäisyys) kuten rannikolla. Vuoristossa ilman
-    /// korkeuksia viiva voi painua harjanteen taakse kallistetussa kuvassa.
+    /// KORKEUS: Karttasepän rajakorkeussarja (Vektorikerros.KorkeusVersio, oletus 25.9.): luettelossa "korkeus": true,
+    /// solu (dlon, dlat, h int16), h = maastoverkon yläraja janan matkalta (tools/maasto/vie-rajakorkeudet.mjs). Viiva on
+    /// korkeudella h ja Rajaviiva nostaa sen korkeuskertoimella kuten tilesetin; ajonaikainen harvennus siirtää poistettujen
+    /// pisteiden suurimman h:n säilyviin (Vektorisolut.Harvenna). Syvyysnosto (Vektorikerros.NostoM + NostoOsuus ×
+    /// etäisyys) hoitaa kaukana näkyvän karkeamman maaston. Webin sarjalla (komento "vektorit versio web") h = 0.
     ///
     /// NÄKYVYYS kuten rannikolla; oma kytkin <see cref="Nakyvissa"/>, <see cref="LinssinPaalla"/>, kerros "rajat" ja
     /// komento "rajat pois|paalle|taso &lt;n&gt;|auto|tila|peitto &lt;a&gt;|oletus" (Komennot.cs).

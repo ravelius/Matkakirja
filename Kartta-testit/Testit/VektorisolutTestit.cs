@@ -219,6 +219,100 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void HarvennusSiirtaaKorkeudenSailyviin()
+        {
+            // Suora viiva, jonka keskellä korkea mutta sijainniltaan suoralla oleva piste: DP poistaa sen, h siirtyy päihin.
+            var v = new float[] { 7f, 46f, 1000f, 7.1f, 46f, 2900f, 7.2f, 46f, 1200f, 7.3f, 46.5f, 800f, 7.4f, 46f, 500f };
+            var h = Vektorisolut.Harvenna(v, 0.01);
+            // Säilyvät: 0, 2 (ennen huippua 3), 3, 4; poistettu 1 (h 2900) → pisteet 0 ja 2 saavat 2900.
+            Oleta.Sama(12, h.Length, "yksi piste pois");
+            Oleta.Tosi(h[2] == 2900 && h[5] == 2900, $"h siirtyi: {h[2]} {h[5]}");
+            Oleta.Tosi(h[8] == 800 && h[11] == 500, "muut ennallaan");
+            // Poistettu matala ei laske säilyvän h:ta.
+            var w = new float[] { 0, 0, 900, 1, 0.0001f, 100, 2, 0, 700 };
+            var hw = Vektorisolut.Harvenna(w, 0.01);
+            Oleta.Tosi(hw.Length == 6 && hw[2] == 900 && hw[5] == 700, "matala poistettu ei laske");
+        }
+
+        /// <summary>
+        /// Karttasepän rajakorkeussarja paikallisesta kansiosta: VEKTORIT_KOE=&lt;kansio&gt; (esim.
+        /// /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus); ohitetaan, jos puuttuu.
+        /// Luettelon lippu, pistemäärät ja h-välit luetteloa vastaan kaikista tiedostoista, korkeusmuodon valinta ja Alpit.
+        /// </summary>
+        [Testi]
+        static void RajakorkeussarjaKansiosta()
+        {
+            var kansio = Environment.GetEnvironmentVariable("VEKTORIT_KOE");
+            if (string.IsNullOrEmpty(kansio) || !File.Exists(Path.Combine(kansio, "luettelo.json"))) return;
+            string json = File.ReadAllText(Path.Combine(kansio, "luettelo.json"));
+            var l = Vektorisolut.LueLuettelo(json);
+            Oleta.Tosi(l != null && l.Lodit.Length == 5, "luettelo");
+            var raaka = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(json);
+            var lajit = (Dictionary<string, object>)raaka["lajit"];
+            long tiedostoja = 0, pisteita = 0;
+            double alpitMax = double.NegativeInfinity, pyreneetMax = double.NegativeInfinity;
+            foreach (var laji in new[] { "rannikko", "rajat" })
+            {
+                var tasot = (List<object>)((Dictionary<string, object>)lajit[laji])["tasot"];
+                for (int k = 0; k < tasot.Count; k++)
+                {
+                    var t = l.Tasolle(laji, k);
+                    Oleta.Sama(laji == "rajat", t.Korkeus, $"{laji} l{k} korkeuslippu");
+                    var tied = (Dictionary<string, object>)((Dictionary<string, object>)tasot[k])["tiedostot"];
+                    foreach (var f in tied)
+                    {
+                        var tiedot = (Dictionary<string, object>)f.Value;
+                        var b = File.ReadAllBytes(Path.Combine(kansio, Vektorisolut.SolunPolku(laji, k, f.Key)));
+                        Oleta.Sama((double)tiedot["tavua"], (double)b.Length, $"{laji} l{k} {f.Key} tavut");
+                        // Lukija valitsee muodon luettelon lipusta: oikea muoto antaa luettelon pistemäärän.
+                        var v = Vektorisolut.Pura(b, t.Korkeus);
+                        int n = 0;
+                        float hMin = float.MaxValue, hMax = float.MinValue;
+                        foreach (var x in v)
+                            for (int i = 0; i < x.Length / Vektorisolut.Askel; i++)
+                            {
+                                n++;
+                                float h = x[Vektorisolut.Askel * i + 2];
+                                if (h < hMin) hMin = h;
+                                if (h > hMax) hMax = h;
+                            }
+                        Oleta.Sama((double)tiedot["pisteita"], (double)n, $"{laji} l{k} {f.Key} pisteet");
+                        Oleta.Sama((double)tiedot["viivoja"], (double)v.Count, $"{laji} l{k} {f.Key} viivat");
+                        if (t.Korkeus)
+                        {
+                            Oleta.Tosi(hMin == (double)tiedot["hMin"] && hMax == (double)tiedot["hMax"],
+                                $"{laji} l{k} {f.Key} h {hMin}…{hMax} vs luettelo {tiedot["hMin"]}…{tiedot["hMax"]}");
+                            Oleta.Tosi(hMin >= -500 && hMax <= 9000, $"{laji} l{k} {f.Key} h järkevä {hMin}…{hMax}");
+                            if (k == 4)
+                                foreach (var x in v)
+                                    for (int i = 0; i < x.Length / 3; i++)
+                                    {
+                                        double lon = x[3 * i], lat = x[3 * i + 1], h = x[3 * i + 2];
+                                        if (lon >= 6 && lon <= 14 && lat >= 45.5 && lat <= 47.8) alpitMax = Math.Max(alpitMax, h);
+                                        if (lon >= -1.8 && lon <= 3.2 && lat >= 42.3 && lat <= 43.4) pyreneetMax = Math.Max(pyreneetMax, h);
+                                    }
+                        }
+                        else Oleta.Tosi(hMin == 0 && hMax == 0, $"{laji} ilman korkeutta h = 0");
+                        tiedostoja++;
+                        pisteita += n;
+                    }
+                }
+            }
+            // Väärä muoto ei anna oikeaa pistemäärää (lukija ei voi arvata; lippu ratkaisee).
+            var alppi = File.ReadAllBytes(Path.Combine(kansio, Vektorisolut.SolunPolku("rajat", 4, "18_4")));
+            int vaarin = 0;
+            foreach (var x in Vektorisolut.Pura(alppi, false)) vaarin += x.Length / 3;
+            Oleta.Tosi(vaarin != 1542, "ilman lippua eri pistemäärä: " + vaarin);
+            Console.WriteLine($"      {tiedostoja} tiedostoa, {pisteita} pistettä; Alppien raja enint. {alpitMax} m, Pyreneiden {pyreneetMax} m");
+            Oleta.Tosi(alpitMax > 1500 && pyreneetMax > 1500, "Alpit ja Pyreneet > 1 500 m");
+            // Nauha korkeudella: Alppien solu rakentuu, ja kärkien h on luettelon välillä.
+            var nauha = Vektorisolut.TeeNauha(Vektorisolut.Pura(alppi, true), 0.003, Identiteetti);
+            float nMax = 0;
+            for (int i = 0; i < nauha.Janoja * 4; i++) nMax = Math.Max(nMax, nauha.Karjet[i * Vektorisolut.KarjenFloatit + 9]);
+            Oleta.Tosi(nauha.Janoja > 0 && nMax <= 4739 && nMax > 3000, $"nauha 18_4 porras 0,003: {nauha.Janoja} janaa, h max {nMax}");
+        }
+
+        [Testi]
         static void RajanTyyliKuinWebissa()
         {
             Oleta.Tosi(Math.Abs(Vektorisolut.RajaKatkoM - 700.81) < 0.01 && Math.Abs(Vektorisolut.RajaValiM - 1401.62) < 0.01, "katko 700,8 / 1 401,6 m");

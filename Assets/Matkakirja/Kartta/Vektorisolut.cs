@@ -275,7 +275,13 @@ namespace Matkakirja
 
         // ---- Harvennus ----
 
-        /// <summary>Webin harvennaViiva: Douglas–Peucker asteissa, pituusaste × cos(lat) (keskipisteen leveys). Askel 3.</summary>
+        /// <summary>
+        /// Webin harvennaViiva: Douglas–Peucker asteissa, pituusaste × cos(lat) (keskipisteen leveys). Askel 3.
+        /// KORKEUS (Karttasepän ohje, vie-rajakorkeudet.mjs): pisteen h on sen viereisten janojen maastoylärajan maksimi, ja
+        /// natiivi interpoloi h:n janan päiden välillä. Kun pisteitä poistetaan, uusi jana kattaa poistettujen pisteiden
+        /// matkan, joten poistettujen suurin h siirretään molempiin säilyviin päihin (h_i = max(h_i, max poistetut)); näin
+        /// harvennettu viiva ei painu harjanteen alle. Rannikolla h = 0, jolloin tämä ei muuta mitään.
+        /// </summary>
         public static float[] Harvenna(float[] v, double tol)
         {
             const int A = Askel;
@@ -311,9 +317,22 @@ namespace Matkakirja
                 if (parasD > t2) { pida[paras] = true; pidetty++; pino.Push((a, paras)); pino.Push((paras, b)); }
             }
             var ulos = new float[pidetty * A];
-            int j = 0;
+            int j = 0, edellinen = -1;
+            float poistettuMax = float.NegativeInfinity;
             for (int i = 0; i < n; i++)
-                if (pida[i]) { ulos[j++] = v[A * i]; ulos[j++] = v[A * i + 1]; ulos[j++] = v[A * i + 2]; }
+            {
+                if (!pida[i]) { if (v[A * i + 2] > poistettuMax) poistettuMax = v[A * i + 2]; continue; }
+                float h = v[A * i + 2];
+                if (poistettuMax > float.NegativeInfinity)
+                {
+                    if (poistettuMax > h) h = poistettuMax;
+                    if (edellinen >= 0 && poistettuMax > ulos[A * edellinen + 2]) ulos[A * edellinen + 2] = poistettuMax;
+                    poistettuMax = float.NegativeInfinity;
+                }
+                ulos[j] = v[A * i]; ulos[j + 1] = v[A * i + 1]; ulos[j + 2] = h;
+                edellinen = j / A;
+                j += A;
+            }
             return ulos;
         }
 
