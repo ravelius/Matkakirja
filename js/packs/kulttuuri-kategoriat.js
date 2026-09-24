@@ -109620,4 +109620,642 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  mosambik: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mosambik',
+      johdanto:
+        'Mosambik-saari on kapea koralliriutta Itä-Afrikan rannikolla: isoisän matkavuonna 1873 se oli yhä Portugalin Itä-Afrikan pääkaupunki, jossa kivinen linnoituskaupunki ja Makuti-kaupunginosa elivät rinnakkain.',
+      nostot: [
+        {
+          otsikko: 'São Sebastiãon linnoitus',
+          teksti:
+            'Portugalilaiset aloittivat São Sebastiãon linnoituksen rakentamisen vuonna 1558 suojaamaan syvää laivaväylää saaren ja mantereen välissä – reittiä, jota portugalilaiset alukset purjehtivat kohti Intiaa. Korallikivestä muuratut muurit ja bastionit valmistuivat vasta noin viidenkymmenen vuoden työn jälkeen, 1600-luvun ensimmäisellä vuosikymmenellä. Linnoitus on nykyisin vanhin kokonaisena säilynyt eurooppalainen linnoitus koko Saharan eteläpuolisessa Afrikassa. Isoisän matkavuonna 1873 se oli yhä varuskuntalinnoitus, joka vartioi Portugalin Itä-Afrikan silloista pääkaupunkia.',
+          tiedosto: 'São_Sebastião_Fortress_-_View.jpg',
+          lyhyt: 'Tykki ja turistit São Sebastiãon linnoituksen muurilla saaren kärjessä.',
+          selite:
+            'Valokuva näyttää linnoituksen muurilla vanhan tykin ja pyöreän vartiotornin; taustalla siintää mereen ulottuva bastioni ja rannalla valkoinen rakennus.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: 'Kirkko muurien sisällä',
+          teksti:
+            'Linnoituksen muurien sisällä oli oma kirkko, kaivo ja varastot, sillä varuskunnan piti kestää pitkiäkin piirityksiä ilman apua mantereelta. Puolustus oli niin vahva, että Alankomaiden laivastot yrittivät vallata saaren kahdesti, vuosina 1607 ja 1608, mutta molemmat hyökkäykset torjuttiin muurien takaa. Epäonnistumisten jälkeen hollantilaiset hakivat tukikohtia muualta, ja Mosambikin saaresta tuli entistä tärkeämpi Portugalin ainoa pysyvä tukikohta Itä-Afrikan rannikolla vuosisadoiksi eteenpäin.',
+          tiedosto: 'Forte_de_São_Sebastião_-_Igreja.jpg',
+          lyhyt: 'Linnoituksen sisäpihalla seisova valkoiseksi kalkittu kirkko meren äärellä.',
+          selite:
+            'Valokuva näyttää linnoituksen sisäpihalla olevan kalkitun kirkkorakennuksen, jonka takana avautuu meri ja kannaksen kapea muuri.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: 'Vasco da Gama pysähtyy saarella',
+          teksti:
+            'Portugalilainen purjehtija Vasco da Gama pysähtyi saarella maaliskuussa 1498 matkallaan kohti Intiaa – Portugalin ensimmäinen kosketus koko Itä-Afrikan rannikkoon. Saarella hallitsi tuolloin swahilikauppiaiden sulttaani, jonka nimi tunnettiin muodossa Musa Mbiki; portugalilaiset vääntivät nimen ajan mittaan muotoon Moçambique, ja siitä tuli lopulta koko nykyisen valtion nimi. Da Gaman patsas seisoo nykyään entisen kuvernöörinpalatsin, São Paulon palatsin, edessä – rakennuksessa, joka toimi 1600-luvulla jesuiittojen oppilaitoksena ja myöhemmin siirtomaahallinnon ytimenä.',
+          tiedosto: 'Palácio de São Paulo, Ilha de Moçambique.jpg',
+          lyhyt: 'Vasco da Gaman patsas São Paulon palatsin edessä saaren pääaukiolla.',
+          selite:
+            'Valokuva näyttää tummapatinaisen Vasco da Gaman patsaan aukiolla, taustalla punainen São Paulon palatsi ja valkotorninen kirkko.',
+          lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vasco da Gama',
+        },
+        {
+          otsikko: 'Vihreä moskeija ja swahilikulttuuri',
+          teksti:
+            'Ennen Vasco da Gaman saapumista 1498 saarella kävivät kauppaa swahilinkieliset ja arabikauppiaat jo 900-luvulta lähtien, ja he toivat mukanaan islamin, joka on yhä tänäkin päivänä suuren osan saarelaisista uskonto. Vihreä väri on islamissa pyhä väri, ja se toistuu saaren moskeijoiden julkisivuissa – tämä moskeija sijaitsee Makuti-kaupunginosassa, tavallisten asukkaiden puolella saarta, toisin kuin Portugalin ajan kivirakennukset saaren pohjoiskärjessä. Swahilikulttuurin ja Portugalin siirtomaakulttuurin kerrostumat näkyvät saarella yhä rinnakkain, samaan tapaan kuin isoisän aikana 1870-luvulla.',
+          tiedosto:
+            '23 Moschee auf der Ilha de Moçambique Mosque on Ilha de Moçambique (36259242923).jpg',
+          lyhyt: 'Vihreä moskeija kadunvarrella Makuti-kaupunginosassa.',
+          selite:
+            'Valokuva näyttää vihreäksi maalatun moskeijan minareetteineen kadun varrella, ja kadulla kävelee paikallisia asukkaita ja lapsia.',
+          lahde: 'Cornelius Kibelka from Berlin, Germany, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Swahili coast',
+        },
+        {
+          otsikko: 'Makuti-kaupunginosa ja kalastajat',
+          teksti:
+            'Kolme kilometriä pitkä saari jakautuu kahtia: pohjoiskärjessä on kivikaupunki eli Stone Town, jossa seisovat linnoitus ja Portugalin ajan hallintorakennukset, ja eteläosassa Makuti-kaupunginosa, joka on saanut nimensä makuti-nimisistä palmunlehtikatoista. Makuti-kaupunginosaan asettuivat aikanaan orjuudesta vapautetut ja saaren työläiset, ja siellä asuu nykyään suurin osa saaren noin 14 000 asukkaasta. Kalastus on yhä tärkein elinkeino: perinteiset purjeveneet vedetään hiekkarannalle laskuveden aikaan, aivan kuten kuvassa näkyvien ruokokattoisten talojen edustalla.',
+          tiedosto: 'Island_of_Mozambique-111412.jpg',
+          lyhyt: 'Kalastusveneitä ja ruokokattoisia taloja Makuti-kaupunginosan rannalla.',
+          selite:
+            'Valokuva näyttää hiekkarannalle vedettyjä puuveneitä ja niiden takana ruokokattoisia taloja sekä palmuja Makuti-kaupunginosassa.',
+          lahde: 'Lazare Eloundou Assomo, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Silta joka päätti eristyksen',
+          teksti:
+            'Vuosisatojen ajan Mosambikin saarelle pääsi vain veneellä – juuri tämä teki siitä niin helposti puolustettavan linnoituskaupungin. Sillan rakentamisesta järjestettiin tarjouskilpailu vuonna 1962, ja lähes 3,4 kilometriä pitkä silta valmistui vuonna 1969, sata vuotta isoisän vierailun jälkeen. Silta yhdisti saaren vihdoin mantereeseen autolla ja jalan kuljettavaksi, ja nykyään sitä pitkin kulkee sekä paikallisten arkiliikenne että Unescon maailmanperintökohteeksi vuonna 1991 nimetyllä saarella vierailevat matkailijat.',
+          tiedosto: 'Mozambique_Island_Bridge.jpg',
+          lyhyt: 'Auringonlasku pitkän Mosambikin saaren sillan yllä.',
+          selite:
+            'Valokuva näyttää pitkän, matalan sillan mantereelta saarelle auringonlaskun aikaan, veden pinnan heijastaessa taivaan värejä.',
+          lahde: 'Michael Jack, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mozambique Island Bridge',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Orjakauppa ja unohdettu pääkaupunki',
+      johdanto:
+        'Vuosisatojen ajan Mosambikin saari oli sekä Portugalin tärkein Itä-Afrikan tukikohta että yksi Intian valtameren vilkkaimmista orjakaupan solmukohdista – kunnes pääkaupunki siirrettiin mantereelle ja saari vaipui hiljaiseksi.',
+      tehtava: {
+        kysymys: 'Minä vuonna orjuus lakkautettiin lopullisesti Portugalin Afrikan-siirtomaissa?',
+        vaihtoehdot: ['1836', '1869', '1878', '1898'],
+        oikea: 2,
+        fakta:
+          'Portugali kielsi orjakaupan lailla jo 1836, mutta orjuus itsessään päättyi sen Afrikan-siirtomaissa vasta 1878 – Mosambikin saarella se oli yhä arkea isoisän vierailun aikaan 1873.',
+      },
+      nostot: [
+        {
+          otsikko: 'Piirustus vuodelta 1655',
+          teksti:
+            'Tämä vuonna 1655 piirretty akvarellikartta näyttää São Sebastiãon linnoituksen kolmiomaisen pohjapiirustuksen ja edustan, jossa purjelaivat ankkuroivat syvässä kanavassa saaren ja mantereen välissä. Vahva linnoitus teki saaresta niin turvallisen sataman, että siitä tuli jo 1500-luvun alussa koko Portugalin Itä-Afrikan hallintokeskus. Isoisän matkavuonna 1873 saari oli yhä sama pääkaupunki kuin kartanpiirtäjän aikana kaksi vuosisataa aiemmin: tärkeät päätökset tehtiin edelleen tällä kapealla koralliriutalla, ennen kuin pääkaupunki siirrettiin mantereelle vasta vuonna 1898.',
+          tiedosto:
+            'Planta_da_fortaleza_da_ilha_de_Moçambique,_Leonardo_de_Ferrari,_1655.jpg',
+          lyhyt: 'Käsinmaalattu kartta São Sebastiãon linnoituksesta vuodelta 1655.',
+          selite:
+            'Vanha akvarellikartta näyttää linnoituksen kolmiomaisen muodon ylhäältä sekä edustalla purjehtivan laivan lippuineen.',
+          lahde: 'Leonardo de Ferrari, Wikimedia Commons (Public domain)',
+          wiki: 'Fort São Sebastião (Mozambique)',
+        },
+        {
+          otsikko: "Dhow'lla yli Intian valtameren",
+          teksti:
+            "Tällaiset dhow-purjeveneet kuljettivat vuosisatojen ajan sekä kauppatavaraa että orjia Mosambikin saaren ja Intian valtameren rannikon välillä. Saaresta tuli 1500-luvulta lähtien yksi Itä-Afrikan vilkkaimmista orjakaupan solmukohdista: ihmisiä vietiin niin arabikauppiaiden reittejä kuin portugalilaisilla laivoilla Brasiliaan asti. Joulukuussa 1794 orjalaiva São José Paquete de Africa lastasi saarelta 512 orjaksi otettua ihmistä – laiva haaksirikkoutui jo Etelä-Afrikan rannikolla. Portugali kielsi orjakaupan lailla 1836, mutta orjuus itsessään lakkautettiin sen Afrikan-siirtomaissa vasta 1878, viisi vuotta isoisän vierailun jälkeen.",
+          tiedosto: 'Boats_outside_Island_of_Mozambique.jpg',
+          lyhyt: "Kaksi dhow'ta matalassa vedessä Mosambikin saaren edustalla.",
+          selite:
+            'Valokuva näyttää kaksi perinteistä dhow-purjevenettä matalassa rantavedessä, purjeet ylhäällä ja miehiä veneissä ja niiden vieressä vedessä.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Arab slave trade',
+        },
+        {
+          otsikko: 'Pääkaupungin jälkeinen hiljaisuus',
+          teksti:
+            'Kun pääkaupunki siirrettiin vuonna 1898 mantereen Lourenço Marquesiin, nykyiseen Maputoon, Mosambikin saari menetti nopeasti merkityksensä. Kauppa hiipui, väki muutti pois, ja monet kivikaupungin komeat rakennukset jäivät vaille käyttöä ja huoltoa vuosikymmeniksi. Rannalla seisoo yhä tällaisia pylväikköllisiä raunioita, jotka kertovat ajasta, jolloin saarella riitti sekä rahaa että väkeä komeisiin rakennushankkeisiin. Vasta Unesco otti raunioituneen mutta ainutlaatuisen kaupunkikokonaisuuden maailmanperintöluetteloon vuonna 1991, minkä jälkeen osaa rakennuksista on alettu korjata.',
+          tiedosto: 'Pasado_colonial_(624531296).jpg',
+          lyhyt: 'Romahtanut pylväikkörakennus meren rannalla saaren kärjessä.',
+          selite:
+            'Valokuva näyttää sortuneen pylväikköterassin ja katottoman rakennuksen rannalla, pylväät kaatuneina hiekalle ja meri taustalla.',
+          lahde: 'bachmont, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Island of Mozambique',
+        },
+        {
+          otsikko: 'Saharan eteläpuolen suurin sairaala',
+          teksti:
+            'Portugalilaiset rakensivat saarelle uuden sairaalan vuonna 1877 – vain neljä vuotta isoisän matkan jälkeen. Uusklassillinen rakennus puutarhoineen ja suihkulähteineen oli aikanaan koko Saharan eteläpuolisen Afrikan suurin sairaala, ja se osoitti, että Portugali yhä panosti saareen suurhankkeisiin, vaikka pääkaupungin siirto mantereelle oli jo näköpiirissä. Nykyisin rakennus rapistuu pylväineen ja portaineen, mutta osa siitä toimii edelleen paikallisena sairaalana – yksi harvoista siirtomaa-ajan suurrakennuksista, joita yhä käytetään alkuperäiseen tarkoitukseensa.',
+          tiedosto: 'Hospital Novo, Ilha de Moçambique, Moçambique (1).jpg',
+          lyhyt: 'Rapistunut uusklassillinen sairaalarakennus pylväineen ja leveine portaineen.',
+          selite:
+            'Valokuva näyttää entisen sairaalan pylväikköjulkisivun ja leveän kiviportaikon, seinät säiden kuluttamina ja ikkunat tyhjinä.',
+          lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Island of Mozambique',
+        },
+      ],
+    },
+  ],
+  darfur: [
+    {
+      id: 'kaupunki',
+      nimi: 'Darfur',
+      johdanto:
+        'Kun isoisä matkusti maailmalla 1873, Darfurin sulttaanikunta Länsi-Sudanissa eli viimeisiä itsenäisiä kuukausiaan: jo seuraavana vuonna egyptiläinen kauppias-sotapäällikkö kaatoi Keira-suvun vuosisataisen Fur-valtakunnan.',
+      nostot: [
+        {
+          otsikko: 'Jebel Marra — sulttaanikunnan vuoristosydän',
+          teksti:
+            'Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.',
+          tiedosto: 'Jebel Marra, landscape.jpg',
+          lyhyt: 'Jebel Marran vuoret kohoavat sinisenä taustalla vehreän jokilaakson yllä.',
+          selite:
+            'Valokuva näyttää kivisen puron ja vehreän kasvillisuuden Jebel Marran juurella; kaksi ihmistä kahlaa vedessä, ja sulttaanikunnan ydinalueen vuoret kohoavat sinisinä taustalla.',
+          lahde: 'Wlyeldeen Abkar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jebel Marra',
+        },
+        {
+          otsikko: 'Deriban kaksoisjärvet',
+          teksti:
+            'Jebel Marran laella, sammuneen tulivuoren huipulla, kimaltavat Deriban kaksoisjärvet noin 3000 metrin korkeudessa – toinen makean, toinen rikkipitoisen happaman veden täyttämä. Kraatterijärvet syntyivät viimeisimmän purkauksen jälkeen, ja Fur-kansa piti niitä pyhinä paikkoina, joihin liittyi lukuisia uskomuksia. Vuoristoinen, vaikeakulkuinen ylänkö toimi samalla luonnollisena linnoituksena: se auttoi Keira-suvun sulttaaneja, jotka olivat nousseet valtaan 1500-luvun lopulla ja tehneet islamista valtionuskonnon 1600-luvulla, pitämään valtakuntansa itsenäisenä lähes kolmen vuosisadan ajan naapurien paineesta huolimatta.',
+          tiedosto: 'Sudan Jebel Marra Deriba Lakes edited.jpg',
+          lyhyt: 'Ilmakuva Jebel Marran huipulla kimaltavasta Deriban kraatterijärvestä.',
+          selite:
+            'Kuva näyttää sammuneen tulivuoren kraatteriin syntyneen siniharmaan järven ja sen ympärillä kohoavat jyrkät kraatterinreunat Jebel Marran huipulla.',
+          lahde: 'J Williams (Hammy07), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Jebel Marra',
+        },
+        {
+          otsikko: 'Khedivi Ismail Pasha ja idän uhka',
+          teksti:
+            'Egyptin khedivi Ismail Pasha, joka hallitsi vuosina 1863–1879, pyrki laajentamaan valtaansa Niilin yläjuoksulle ja Sudaniin asti tavoitellen sekä kauppareittejä että arvovaltaa Euroopan silmissä. Hänen aikanaan Egyptin armeijaa nykyaikaistettiin eurooppalaisten upseerien avulla, ja katseet kääntyivät myös länteen, kohti riippumatonta Darfurin sulttaanikuntaa. Kun rajaseudun heimoriita levisi sodaksi vuonna 1873, khedivi näki tilaisuuden: hän liittoutui vaikutusvaltaisen kauppias Zubayr Rahma Mansurin kanssa ja lähetti tämän joukot valtaamaan Darfurin – hanke, joka isoisän matkavuonna oli vasta alkamassa.',
+          tiedosto: "Khedive Isma'il Pasha.png",
+          lyhyt: 'Khedivi Ismail Pasha muotokuvassa täydessä univormussaan kunniamerkkeineen.',
+          selite:
+            'Valokuva näyttää khedivi Ismail Pashan juhla-asussa: turkkilaistyylinen lakki, koruompeluinen univormutakki, lukuisat kunniamerkit ja koristeellinen miekka kädessä.',
+          lahde: 'Gustave Le Gray, Wikimedia Commons (Public domain)',
+          wiki: 'Isma\'il Pasha',
+        },
+        {
+          otsikko: 'Kauppias joka rakensi oman valtakunnan',
+          teksti:
+            'Al-Zubayr Rahma Mansur aloitti norsunluu- ja orjakauppiaana vuonna 1856 Bahr el-Ghazalin alueella, nykyisen Etelä-Sudanin puolella. Hän perusti sinne verkoston linnoitettuja kauppa-asemia, zaribia, joista yksi, Deim Zubeir, kasvoi omaksi pikkukaupungikseen keskelle savannia. Parhaimmillaan Zubayrilla oli komennossaan noin kolmekymmentä tällaista asemaa ja niin vahva yksityisarmeija, että hän löi Egyptin lähettämät palkkasotilaat, kun nämä yrittivät kukistaa hänet. Käytännössä Zubayr oli oma itsenäinen vallanpitäjänsä kauan ennen kuin hänestä tuli khedivin liittolainen Darfurin valloituksessa.',
+          tiedosto: 'DeimZubeir-ByFlorentColmant-LeMouvementGeographique07101899.jpg',
+          lyhyt: 'Belgialaisupseerin 1894 piirtämä näkymä Zubayrin Deim Zubeirin kauppa-asemasta.',
+          selite:
+            'Piirros näyttää rivin savitiilistä rakennettuja, osin raunioituneita kauppa-aseman rakennuksia palmupuineen – tällaisia zaribia Zubayr perusti kymmeniä Bahr el-Ghazalin alueelle.',
+          lahde: 'Florent Colmant, Wikimedia Commons (Public domain)',
+          wiki: 'Al-Zubayr Rahma Mansur',
+        },
+        {
+          otsikko: 'Sota 1873–1874 ja sulttaani Ibrahimin kaatuminen',
+          teksti:
+            'Sota syttyi vuonna 1873 rajaseudun Rizayqat-heimon kahden ryhmittymän kiistasta, kun myös Zubayrin kauppakaravaani joutui hyökkäyksen kohteeksi. Zubayr liittoutui khedivin kanssa, ja Turkin-Egyptin joukkoja komensi Ismail Ayyub Pasha, jonka ja Zubayrin yhteinen sotajoukko käsitti noin 7000 miestä. Helmikuussa 1874 he valtasivat Daran kaupungin, ja syksyllä 1874 sulttaani Ibrahim kaatui taistelussa al-Manawashissa. Hänen setänsä Hassab Allah yritti vielä jatkaa itsenäisyystaistelua, mutta hänet vangittiin seuraavana vuonna ja vietiin perheineen Kairoon – ja viisisataavuotinen Keira-suvun sulttaanikunta lakkasi olemasta.',
+          tiedosto: 'Ismail Eyub Pasha.png',
+          lyhyt: 'Turkin-Egyptin komentaja Ismail Ayyub Pasha muotokuvassa, tarbuusi päässään.',
+          selite:
+            'Kuvassa on puolivartalokuva viiksekkäästä miehestä tummassa univormutakissa ja punaisessa tarbuusissa – Ismail Ayyub Pasha, joka johti yhdessä Zubayrin kanssa Darfurin valloitusta 1873–74.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Conquest of Darfur (1873–1874)',
+        },
+        {
+          otsikko: 'Saksalainen tutkija näki loppunäytöksen',
+          teksti:
+            'Saksalainen lääkäri ja tutkimusmatkailija Gustav Nachtigal saapui Darfuriin tammikuussa 1874 keskellä sotaa ja asettui pääkaupunki El Fasheriin maaliskuusta heinäkuuhun samana vuonna. Hän näki omin silmin, kuinka itsenäinen sulttaanikunta muuttui Egyptin maakunnaksi, ja kirjasi matkakertomukseensa yksityiskohtaisia tietoja Fur-valtion historiasta, hallinnosta ja asukkaista. Isoisän matkatessa Euroopassa vuonna 1873 Darfur eli siis vielä viimeisiä itsenäisiä kuukausiaan – ja juuri kun isoisän oma matka jo lähestyi loppuaan, Nachtigal todisti paikan päällä sulttaanikunnan lopullisen sortumisen.',
+          tiedosto: 'Gustav Nachtigal (1834-1885).jpg',
+          lyhyt: 'Saksalainen tutkimusmatkailija Gustav Nachtigal kaiverruksessa 1880-luvulta.',
+          selite:
+            'Kaiverrus näyttää puolivartalokuvan kiharatukkaisesta, viiksekkäästä miehestä puvussa ja rusetissa – Gustav Nachtigal, joka oleskeli El Fasherissa keväällä ja kesällä 1874.',
+          lahde: 'Albert Fränkel, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+      ],
+    },
+    {
+      id: 'karavaanireitti',
+      nimi: 'Neljänkymmenen päivän tie',
+      johdanto:
+        'Neljänkymmenen päivän tie eli Darb al-Arbain yhdisti Darfurin Egyptiin vuosisatojen ajan: kamelikaravaanit kuljettivat pohjoiseen norsunluuta, strutsinsulkia ja orjia, etelään kankaita ja aseita.',
+      tehtava: {
+        kysymys: 'Kuinka pitkä Neljänkymmenen päivän tien matka oli kilometreinä?',
+        vaihtoehdot: ['900 km', '1 800 km', '2 700 km', '3 600 km'],
+        oikea: 1,
+        fakta:
+          'Neljänkymmenen päivän tie oli noin 1 800 kilometriä pitkä, vaikka matka kesti nimestä huolimatta lähempänä 60 päivää kuin 40.',
+      },
+      nostot: [
+        {
+          otsikko: 'Aavikon valtaväylät',
+          teksti:
+            'Darb al-Arbain eli Neljänkymmenen päivän tie oli itäisin ja tunnetuin Saharan halki kulkevista suurista kauppareiteistä, ja se yhdisti Darfurin pohjoisen Kobbein Egyptin Asyutiin noin 1 800 kilometrin matkalla. Nimestään huolimatta matka kesti todellisuudessa lähempänä 60 päivää, sillä karavaanien piti pysähtyä lepäämään ja juottamaan eläimiä pitkin matkaa. Reitti tunnettiin jo satoja vuosia ennen isoisän aikaa – osa tutkijoista jäljittää sen käytön aina muinaisen Egyptin aikaan asti – ja se pysyi tärkeänä kauppaväylänä aina 1800-luvun loppuun saakka.',
+          tiedosto: 'Great Trading Routes of the Sahara WDL100.png',
+          lyhyt: 'Ranskalaistutkija E. Blancin vuoden 1889 kartta Saharan kauppareiteistä.',
+          selite:
+            'Kartta näyttää Saharan aavikon kauppareitit Marokosta Egyptiin ja Darfouriin (Darfur) asti; reittiviivat ja karavaanien pysähdyspaikat on merkitty kartan selitteeseen.',
+          lahde: 'Édouard Blanc, Wikimedia Commons (Public domain)',
+          wiki: "Darb El Arba'in",
+        },
+        {
+          otsikko: 'Kharga — portti aavikon halki',
+          teksti:
+            'Matkalla Darfurista Egyptiin karavaanit kulkivat oaasiketjun kautta, johon kuuluivat muun muassa Selima- ja Kharga-oaasit sekä Bir Natrunin kaivot – ilman näitä pysähdyspaikkoja koko matka olisi ollut mahdoton kamelien ja ihmisten hengissä pysymiselle. Kharga-solan kaltaiset kapeat kulkuväylät veivät karavaanit Libyan ylängön reunalta alas kohti Niilin laaksoa ja lopulta Asyutin kaupunkiin, jossa tavarat siirtyivät jokiveneisiin. Aavikkoreitti oli hitaudestaan huolimatta usein nopeampi, halvempi ja turvallisempi kuin matkustaminen Niiliä pitkin, jonka kosket ja mutkat hidastivat kuljetuksia.',
+          tiedosto: 'KhargaPass.jpg',
+          lyhyt: 'Nykyinen tie kiemurtelee Kharga-solan halki Egyptin länsiaavikolla.',
+          selite:
+            'Valokuva näyttää kalliopaljastumien halkoman aavikkosolan, jonka pohjalla mutkitteleva tie kulkee kohti autiota tasankoa – samaa reittiä, jota Neljänkymmenen päivän tien karavaanit kulkivat.',
+          lahde: 'Roland Unger, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kharga Oasis',
+        },
+        {
+          otsikko: 'Kamelikaravaani matkalla',
+          teksti:
+            'Pohjoiseen suuntautuvissa karavaaneissa kulki kultaa, norsunluuta, sarvikuonon sarvia, strutsinsulkia ja -munia, eebenpuuta, kumiarabikumia sekä orjia – 1700-luvun eurooppalaisten arvioiden mukaan vuosittain jopa 3000–12 000 orjaa kuljetettiin tätä reittiä pitkin. Etelään päin kamelit kantoivat puolestaan kankaita, aseita, mausteita ja viiniä Egyptistä ja Välimeren rannikolta. Darfurin sulttaani sääti kamelinomistajaheimoille, kuten fazaralaisille, vuosittaisen veron osana karavaanikauppaa – kamelit olivat sekä kulkuneuvo että verotettava omaisuus, ilman jota koko kauppajärjestelmä olisi pysähtynyt.',
+          tiedosto: 'PSM V53 D189 A caravan on its march.jpg',
+          lyhyt: 'Kamelikaravaani matkalla aavikon halki 1890-luvun valokuvassa.',
+          selite:
+            'Valokuvassa kulkee jono kuormattuja kameleita opastajineen aavikkotietä pitkin, palmuja siintää taustalla – samankaltaisia karavaaneja kulki Neljänkymmenen päivän tietä vuosisatojen ajan.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: "Darb El Arba'in",
+        },
+        {
+          otsikko: 'Kauppias joka valloitti sulttaanikunnan',
+          teksti:
+            'Al-Zubayr Rahma Mansur rakensi 1850–60-luvuilla norsunluu- ja orjakaupasta niin vahvan omaisuuden ja yksityisarmeijan, ettei Egyptin hallitus kyennyt häntä kukistamaan. Vuonna 1873 hänen kauppakaravaaninsa joutui hyökkäyksen kohteeksi Darfurin rajaseudulla, ja seuranneessa sodassa hän liittoutui khedivi Ismail Pashan kanssa Darfurin valloittamiseksi. Voiton jälkeen 1874 khedivi palkitsi hänet beyn ja pashan arvonimillä sekä Bahr el-Ghazalin kuvernöörin virasta. Kauppatie, jota pitkin hän oli aiemmin kuljettanut norsunluuta ja orjia, kuljetti nyt myös hänen sanomiaan uuden vallan keskukseen El Fasheriin.',
+          tiedosto: 'SLATIN(1896) p079 ZUBEIR PASHA.jpg',
+          lyhyt: 'Al-Zubayr Rahma Mansur eli Zubeir Pasha juhla-asussaan, käsi miekan kahvalla.',
+          selite:
+            'Kuvassa vanheneva parrakas mies tarbuusissa ja koruommellussa univormussa nojaa miekkaansa – Zubeir Pasha, orjakauppiaasta Darfurin valloittajaksi noussut kauppias-sotapäällikkö.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+          wiki: 'Al-Zubayr Rahma Mansur',
+        },
+        {
+          otsikko: 'Tien loppu',
+          teksti:
+            'Vuonna 1877 kenraali Charles Gordon nimitettiin Sudanin egyptiläishallinnon kenraalikuvernööriksi, ja hänen päätehtäväkseen tuli orjakaupan tukahduttaminen koko alueella, myös Neljänkymmenen päivän tiellä. Zubayrin valta murtui, ja hänet pidätettiin lopulta Kairossa. Brittiläis-egyptiläinen hallinto tehosti orjakaupan vastaisia partioita 1800-luvun viimeisellä vuosikymmenellä, mikä yhdessä uusien höyrylaivareittien kanssa vei vähitellen pohjan koko ikivanhalta karavaanitieltä. Reitti, joka oli kukoistanut vuosisatoja, vaipui unohduksiin vuosisadan vaihteessa.',
+          tiedosto: 'Portrait of General C. G. Gordon, C.B., R.E (4670780).jpg',
+          lyhyt: 'Kenraali Charles Gordon, joka pyrki tukahduttamaan orjakaupan Sudanissa.',
+          selite:
+            'Kaiverrettu muotokuva viiksekkäästä univormupukuisesta miehestä; kuvatekstin mukaan hän oli Sudanin rauhoittaja vuosina 1874–79 ja Khartumin puolustaja.',
+          lahde: 'Henry Sigismund Uhlrich, Wikimedia Commons (Public domain)',
+          wiki: 'Charles George Gordon',
+        },
+      ],
+    },
+  ],
+  tshadjarvi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tšad-järvi',
+      johdanto:
+        'Isoisän matkavuonna 1873 Tšad-järvi oli Keski-Afrikan sisämeri, jonka rannoille saksalaiset Barth ja Nachtigal olivat juuri raivanneet eurooppalaisille tien – ja jonka koko on sittemmin kutistunut murto-osaan entisestä.',
+      nostot: [
+        {
+          otsikko: 'Barth saapuu järvelle',
+          teksti:
+            'Huhtikuun 2. päivänä 1851 saksalainen tutkimusmatkailija Heinrich Barth saapui brittiläisen Richardsonin retkikunnan mukana Tšad-järven rannalle ensimmäisten eurooppalaisten joukossa vuosikymmeniin. Hänen matkatoverinsa Adolf Overweg oli tuonut mukanaan Tripolista puretun veneen ja purjehti järvellä viisi viikkoa – ensimmäisenä eurooppalaisena koskaan. Barth ja Overweg viipyivät alueella viisitoista kuukautta, mittasivat järven vaihtelevaa rantaviivaa ja kirjasivat muistiin seudun kansoja ja valtakuntia. Heidän havaintonsa loivat pohjan sille tiedolle, jonka varaan myös isoisän aikalainen Gustav Nachtigal myöhemmin rakensi oman matkansa.',
+          tiedosto: 'H. Barth - Otto Speckter lith. - btv1b105015633.jpg',
+          lyhyt: 'Otto Speckterin litografia tutkimusmatkailija Heinrich Barthista 1850-luvulta.',
+          selite:
+            'Litografia näyttää Heinrich Barthin muodollisessa istuvassa asennossa: tumma puku, valkoinen kaulaliina, kädet ristissä sylissä – tyypillinen 1850-luvun tutkimusmatkailijan muotokuva, jonka Otto Speckter piirsi kivipiirroksena.',
+          lahde: 'Otto Speckter, Wikimedia Commons (Public domain)',
+          wiki: 'Heinrich Barth',
+        },
+        {
+          otsikko: 'Kartta isoisän ajalta',
+          teksti:
+            'Vuonna 1876 Lontoon kuninkaallinen maantieteellinen seura julkaisi kartan, joka perustui saksalaisen Gustav Nachtigalin 1870-luvun alun matkahavaintoihin Tšad-järven seudulla – samaan aikaan kun isoisä kirjoitti omaa matkapäiväkirjaansa. Kartografi Edward Weller piirsi Nachtigalin muistiinpanojen pohjalta järven rantaviivan, Kanemin ja Bornun alueet sekä Budduma-kansan asuttamat saaret. Kartassa näkyy myös Nachtigalin oma reitti pohjoisesta Tibestin vuoristosta järven rannalle asti. Tällaiset kartat olivat 1870-luvulla ainoa tapa hahmottaa Keski-Afrikan sisäosia eurooppalaisille, joille alue oli yhä suurelta osin valkoinen läiskä kartalla.',
+          tiedosto: 'Map Lake Chad 1876 B002.png',
+          lyhyt: 'Vuonna 1876 julkaistu kartta Tšad-järvestä Nachtigalin matkatietojen pohjalta.',
+          selite:
+            'Vanha painettu kartta otsikolla "Map of Lake Chad and Neighbouring Regions" näyttää järven, sitä ympäröivät alueet Kanemista Bagirmiin sekä ohuen viivan Nachtigalin kulkemasta reitistä pohjoisesta järvelle; kartan on julkaissut Lontoon maantieteellinen seura 1876.',
+          lahde: 'Gustav Nachtigal, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Chad',
+        },
+        {
+          otsikko: 'Joki joka ruokkii järveä',
+          teksti:
+            'Tšad-järveen ei laske vain yksi joki vaan kokonainen jokijärjestelmä: Chari-joki ja sen suurin sivujoki Logone tuovat yhdessä noin 95 prosenttia kaikesta järveen virtaavasta vedestä. Joet saavat alkunsa satojen kilometrien päässä eteläisemmän Afrikan sademetsistä ja savanneilta ja yhtyvät nykyisen N’Djamenan kohdalla ennen laskuaan järveen. Tšad-järvellä itsellään ei ole lainkaan pysyvää laskujokea, joten suurin osa siihen virtaavasta vedestä joko haihtuu polttavassa kuumuudessa tai imeytyy hiekkaan – ainoa poikkeus on ajoittainen Bahr-el-Ghazalin uoma, joka voi sateisimpina vuosina kuljettaa vettä koilliseen.',
+          tiedosto: 'Fleuve chari, vu de Kousseri, qui se jette au lac Tchad.jpg',
+          lyhyt: 'Chari-joki tuo suurimman osan Tšad-järveen virtaavasta vedestä.',
+          selite:
+            'Valokuva näyttää leveän, savisamean Chari-joen Kousserin rannalta: veden toisella puolella siintää N’Djamenan siluetti, ja lähirannalla on kaadettu ruokovene sekä hiekkaista, ruohottunutta rantatörmää.',
+          lahde: 'Nelson_djoub, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chari River',
+        },
+        {
+          otsikko: 'Vihreä ranta savannin keskellä',
+          teksti:
+            'Tšad-järvi sijaitsee Sahelissa, kapealla vyöhykkeellä Saharan autiomaan ja eteläisemmän Afrikan kosteiden savannien välissä, ja sen rannat vaihtelevat rajusti vuodenaikojen mukaan. Sadekauden jälkeen vesi tulvii laajoille ruovikko- ja heinäalueille, ja kun tulva vetäytyy, paljastuneelle mudalle kylvetään nopeasti kasvavia satoja – tätä kutsutaan vetäytymisviljelyksi. Samat rantaniityt toimivat myös karjapaimenten laidunmaina: karja käy juomassa aivan veden äärellä ja laiduntaa tulvan jättämällä vihreällä kaistaleella, joka pysyy rehevänä silloinkin, kun ympäröivä savanni on kuivunut ruskeaksi.',
+          tiedosto: 'An evergreen lake chad shore (detilt).jpg',
+          lyhyt: 'Karjaa laiduntamassa Tšad-järven rehevällä, ruohoisella rannalla.',
+          selite:
+            'Valokuvassa avautuu tyyni järvenselkä, jonka rannalla kasvaa korkeaa heinikkoa ja pensaikkoa; heinikossa näkyy sarvipäisiä nautoja laiduntamassa, ja taustalla kohoaa tiheä puurivi kirkasta taivasta vasten.',
+          lahde: 'Coolthoom1, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lake Chad',
+        },
+        {
+          otsikko: 'Ruokovene ja luonnonsuola',
+          teksti:
+            'Järven saarilla ja rannoilla asuva Buduma-kansa on vuosisatoja elänyt kalastuksesta ja karjanhoidosta, ja sen tunnusmerkki on paksusta järviruo\'osta sidottu vene, jonka keula kaartuu jyrkästi ylöspäin. Isompia veneitä käytettiin karjan ja kokonaisten perheiden kuljettamiseen, pienempiä kalastukseen. Yksi tärkeä rahtilasti oli luonnonsuola eli potaska, jota kerättiin järven pohjasedimenteistä ja kuivuneista altaista ja kuljetettiin näillä ruokoveneillä kauppapaikoille myytäväksi ja käytettäväksi muun muassa saippuan valmistuksessa ja karjan ruokinnassa.',
+          tiedosto: 'Potash boat on the Lake Chad.jpg',
+          lyhyt: 'Vanha valokuva ruo\'osta tehdystä potaskaveneestä Tšad-järvellä.',
+          selite:
+            'Mustavalkoinen postikorttivalokuva "Potash boat, Chad" näyttää pitkän, jyrkästi ylöspäin kaartuvakeulaisen ruokoveneen, jonka kannella on pyöreitä potaskakimppuja ja kolme miestä seisomassa; etualalla kaareutuu palmunrunko.',
+          lahde: 'Steve Bittinger, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Buduma people',
+        },
+        {
+          otsikko: 'Järvi joka katoaa',
+          teksti:
+            'Tšad-järvi oli 1960-luvulla maailman kuudenneksi suurin järvi, noin 25 000 neliökilometrin laajuinen sisämeri neljän maan rajalla. Sen jälkeen järvi on kutistunut rajusti: 2000-luvulla avovettä on ollut jäljellä enää noin 1 350 neliökilometriä, alle kymmenesosa entisestä laajuudesta. Syynä on sekä muuttunut sademäärä että kasvaneen väestön kastelu- ja karjatalousveden käyttö joet ylävirrassa. Satelliittikuvissa erottuu nykyään laaja vihreä, matalan tulvaveden ja ruovikon peittämä alue, jonka keskellä varsinainen avovesi näkyy tummana täplänä – suurin osa entisestä järvestä on jo kuivunutta maata tai kosteikkoa.',
+          tiedosto: 'Lake Chad (MODIS 2024-03-03).jpg',
+          lyhyt: 'Satelliittikuva näyttää Tšad-järven kutistuneen avovesialueen.',
+          selite:
+            'Väärävärinen satelliittikuva näyttää järven tumman sinisen avoveden pienenä läiskänä keskellä paljon laajempaa vaaleanvihreää, kosteikkokasvillisuuden peittämää aluetta, jota ympäröi vaaleanruskea aavikko.',
+          lahde: 'MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (Public domain)',
+          wiki: 'Lake Chad',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Bornun valtakunta',
+      johdanto:
+        'Tšad-järveä hallitsi vuosisatojen ajan Bornun valtakunta, joka oli yhä pystyssä isoisän matkavuonna 1873 – samaan aikaan kun saksalainen Gustav Nachtigal vieraili sen pääkaupungissa Kukawassa sheikki Umarin vieraana.',
+      tehtava: {
+        kysymys:
+          'Missä kaupungissa Gustav Nachtigal tapasi Bornun hallitsijan sheikki Umarin vuonna 1870?',
+        vaihtoehdot: ['Kukawassa', 'Timbuktussa', 'Tripolissa', 'Agadezissa'],
+        oikea: 0,
+        fakta:
+          'Nachtigal saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, ja sheikki Umar otti hänet ystävällisesti vastaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhatvuotinen valtakunta syntyy',
+          teksti:
+            'Kanem-Bornun valtakunta syntyi todennäköisesti 800-luvun puolivälissä, kun paimentolaisheimojen liittouma järjestäytyi Sefuwa-suvun johtamaksi kuningaskunnaksi Tšad-järven koillispuolella. Ensimmäinen pääkaupunki Njimi sijaitsi kauppareittien risteyksessä, mutta sen tarkkaa paikkaa ei ole koskaan pystytty varmuudella löytämään – nykyiset arviot perustuvat vanhoihin kronikoihin ja perimätietoon. Järven keskeinen sijainti Saharan ja Sudanin kauppareittien solmukohdassa toi valtakunnalle vaurautta jo ensimmäisiltä vuosisadoilta lähtien, ja siitä kasvoi lopulta yksi Afrikan pisimpään säilyneistä valtakunnista.',
+          tiedosto: 'Kanem–Bornu, 1300.png',
+          lyhyt: 'Kartta Kanem-Bornun valtakunnan alueesta noin vuonna 1300.',
+          selite:
+            'Kartassa vihreä alue kuvaa Kanem-Bornun valtakunnan laajuutta 1300-luvulla: kapea, pohjoiseen venyvä alue ulottuu Tšad-järven pohjoispuolelta kohti Saharaa, ja kartalle on merkitty ensimmäisen pääkaupungin Njimin oletettu sijainti.',
+          lahde: 'Megartonius, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanem–Bornu Empire',
+        },
+        {
+          otsikko: 'Uusi pääkaupunki ja kulta-aika',
+          teksti:
+            '1300-luvun lopulla Bulala-kansa ajoi Sefuwa-suvun pois Kanemista, ja hallitsijat siirsivät pääkaupunkinsa järven länsipuolelle Borniin, uuteen Birni Ngazargamun kaupunkiin – tästä kaksoisnimestä syntyi koko valtakunnan nimi Kanem-Bornu. Valtakunta saavutti mahtinsa huipun 1500-luvun lopulla hallitsija Idris Aloomen aikana, joka uudisti armeijaa muun muassa tuliaseilla ja laajensi valtakunnan rajoja joka suuntaan. Idris Alooma vahvisti myös hallintoa ja tuomioistuinlaitosta, ja hänen aikanaan Kanem-Bornusta tuli koko Tšad-järven alueen kiistaton mahtivaltio, joka hallitsi seutua vielä isoisän matkavuonna 1873.',
+          tiedosto: 'KanemBornuEmpire-NewMap.png',
+          lyhyt: 'Kartta Kanem-Bornun valtakunnasta laajimmillaan, kahden pääkaupungin kanssa.',
+          selite:
+            'Kartassa tummanvihreä alue kuvaa valtakunnan vakiintunutta ydinaluetta kahden pääkaupungin, Njimin ja Ngazargamun, ympärillä, kun taas vaaleampi vihreä osoittaa laajimman ulottuvuuden pohjoiseen kohti Saharaa.',
+          lahde: 'Megartonius, Wikimedia Commons (CC0)',
+          wiki: 'Idris Alooma',
+        },
+        {
+          otsikko: 'Preussin lahjat sheikille',
+          teksti:
+            'Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.',
+          tiedosto: 'Gustav Nachtigal by Hanfstaengl (cropped).jpg',
+          lyhyt: 'Muotokuva saksalaisesta tutkimusmatkailijasta Gustav Nachtigalista.',
+          selite:
+            'Sepiansävyinen ateljeevalokuva näyttää keski-ikäisen miehen, jolla on tuuhea kihara tukka ja suuret ylöspäin kiertyvät viikset; hänellä on tumma puku, valkoinen paita ja rusetti, ja katse on suunnattu suoraan kameraan.',
+          lahde: 'Erwin Hanfstaengl, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Kartanpiirtäjän Kukawa',
+          teksti:
+            'Kukawa oli suhteellisen nuori kaupunki: uskonnollinen johtaja Muhammad al-Amin al-Kanemi perusti sen 1800-luvun alussa, ja siitä tuli Bornun pääkaupunki vuosina 1846–1893 – juuri se kaupunki, jonka Nachtigal näki vierailullaan. Kaupunki ei ollut yhtenäinen muurin ympäröimä kokonaisuus vaan koostui useista erillisistä, väljästi sijoitetuista kortteleista: keskellä oli kauppatori ja hallitsijan palatsikompleksi, ja niiden ympärillä hajallaan asuinkortteleita sekä hautausmaa. Tällainen väljä kaupunkirakenne oli tyypillinen Bornun alueen kaupungeille ja erosi selvästi tiiviisti muurattujen Pohjois-Afrikan kaupunkien rakenteesta.',
+          tiedosto: 'AFR V3 D431 Kuka (Kukawa), Nigeria.jpg',
+          lyhyt: 'Kukawan kaupungin pohjapiirros 1800-luvun lopulta.',
+          selite:
+            'Vanha pohjapiirros mittakaavassa 1:72 000 näyttää Kukawan hajanaisen kaupunkirakenteen: keskellä on merkitty Market Place (kauppatori) ja Palace (palatsi) suurina rakennusryhminä, niiden ympärillä pienempiä kyläryhmiä sekä erillinen Cemetery (hautausmaa).',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'Kukawa',
+        },
+        {
+          otsikko: 'Panssaroitu ratsuväki',
+          teksti:
+            'Kanem-Bornun sotilaallinen mahti nojasi vuosisatojen ajan raskaaseen ratsuväkeen: sekä hevonen että ratsastaja saatettiin verhota paksuun, tikattuun suojavaatetukseen, joka toimi eräänlaisena panssarina nuolia ja keihäitä vastaan. Perinne periytyi keskiajalta ja oli yhä elossa 1900-luvun alun valokuvissa, jotka siirtomaavirkailijat ottivat Bornun alueella. Tällaisilla raskailla ratsujoukoilla Bornun hallitsijat pystyivät sekä puolustamaan valtakuntaansa että hallitsemaan laajoja alueita ja niiden kauppareittejä, ja juuri tämä sotilaallinen voima piti Kanem-Bornun pystyssä kauemmin kuin yhdenkään toisen läntisen Sudanin valtakunnan.',
+          tiedosto: 'A Bornu cavalryman.jpg',
+          lyhyt: 'Bornulainen ratsumies pehmustetuin panssaroidun hevosensa kanssa.',
+          selite:
+            'Valokuvassa mies turbaanissa ja raidallisessa viitassa seisoo hevosensa vieressä; hevosen ylle on sidottu paksu, tikattu suojapeite kaulan ja rungon ympärille, ja hevonen on kuvattu takajaloillaan seisten, etujalat koholla.',
+          lahde: 'Ernst von Raben, Wikimedia Commons (Public domain)',
+          wiki: 'Kanem–Bornu Empire',
+        },
+      ],
+    },
+  ],
+  rashafun: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ras Hafun',
+      johdanto: 'Ras Hafun on Afrikan mantereen itäisin niemi Somalian rannikolla, kapean hiekkakannaksen päässä. Sen suojaisassa lahdessa on purjehdittu jo yli kaksituhatta vuotta ennen isoisän matkaa.',
+      nostot: [
+        { otsikko: 'Mantereen itäisin kärki',
+          teksti: 'Ras Hafun on sirpinmuotoinen niemi, joka työntyy Guardafui-salmeen Somalian koillisosassa Barin alueella. Se on koko Afrikan mantereen itäisin kohta. Niemi liittyy mantereeseen noin kaksikymmentä kilometriä pitkän ja vain yhdestä kolmeen kilometriä leveän hiekkakannaksen kautta lähellä Foarin kylää. Kalastajakylä sijaitsee itse niemellä, parin kilometrin päässä kannaksesta. Ilmakuvasta paikka näyttää ohuelta, mereen työntyvältä sormelta kahden vedenalueen välissä – juuri tällaista muotoa isoisän kartatkin yrittivät vuonna 1873 tavoittaa.',
+          tiedosto: 'ISS-57 Kenya and Somalia, Indian Ocean coastline.jpg',
+          lyhyt: 'Ras Hafun on koko Afrikan mantereen itäisin kohta.',
+          selite: 'Avaruusasemalta otettu kuva näyttää kapean, tummansävyisen niemekkeen työntyvän siniseen mereen paksujen pilvijonojen keskellä; taustalla erottuu maapallon kaareutuva ilmakehä.',
+          lahde: 'NASA, Wikimedia Commons (Public domain)', wiki: 'Ras Hafun' },
+        { otsikko: 'Antiikin Opone',
+          teksti: 'Muinaiset kreikkalaiset ja roomalaiset merenkulkijat tunsivat tämän rannikon Oponen kauppakaupunkina. Se mainitaan noin ensimmäisellä vuosisadalla jaa. kirjoitetussa merenkulkuoppaassa Periplus Maris Erythraei, joka luetteloi Egyptistä lähtevien kauppareittien satamat aina Intiaan asti. Oppaan mukaan Oponesta vietiin suuria määriä kanelia ja erityisen hienoa kilpikonnankuorta, ja nykyarkeologit yhdistävät kuvauksen juuri Ras Hafunin niemeen. Kaupunki kukoisti vuosisatoja ennen ajanlaskun alkua ja vielä pitkään sen jälkeenkin, kunnes toiminta hiipui noin 500-luvulla jaa.',
+          tiedosto: 'Map of the Periplus of the Erythraean Sea.jpg',
+          lyhyt: 'Ras Hafun tunnistetaan antiikin kauppakaupungiksi Oponeksi.',
+          selite: 'Vanha piirretty kartta esittää Egyptin, Arabian, Itä-Afrikan ja Intian rannikoita väritettyinä; kartalle on merkitty pisteviivoin muinaisia laiva- ja maareittejä sekä satamakaupunkien nimiä Erythraean-meren alueella.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 4.0)', wiki: 'Periplus of the Erythraean Sea' },
+        { otsikko: 'Kauppiaita joka ilmansuunnalta',
+          teksti: 'Periplus-oppaan mukaan Oponeen ja sen naapurisatamiin saapui kauppiaita joka ilmansuunnalta: Foinikiasta, Egyptistä, Kreikasta, Persiasta ja Arabian niemimaalta, myöhemmin myös suoraan Rooman valtakunnasta. Kaukaisimmat kauppiaat tulivat Intiasta ja jopa nykyisen Indonesian ja Malesian seudulta asti. Kunkin alueen laivat toivat mukanaan omia tuotteitaan – silkkiä idästä, jalokiviä Intiasta, viiniä ja metalliesineitä Rooman alueelta – ja veivät mukanaan Afrikan sarven aarteita: mausteita, norsunluuta, suitsuketta ja kilpikonnankuorta. Ras Hafun oli siis paitsi vientisatama, myös vilkas kansainvälinen kohtauspaikka.',
+          tiedosto: 'Periplous of the Erythraean Sea.svg',
+          lyhyt: 'Oponeen saapui kauppiaita Egyptistä, Persiasta ja Intiasta asti.',
+          selite: 'Värillinen kartta esittää pisteviivoin meri- ja maareittejä Rooman valtakunnasta Arabian ja Itä-Afrikan kautta Intiaan ja Kiinaan, sekä värikoodatun selitteen kaupatuista tuotteista kuten mausteista, norsunluusta, kullasta ja silkistä.',
+          lahde: 'George Tsiagalakis, Wikimedia Commons (CC BY-SA 4.0)', wiki: 'Periplus of the Erythraean Sea' },
+        { otsikko: 'Monsuuni aikataulun tekijänä',
+          teksti: 'Purjehdus Egyptistä Oponeen ei olisi onnistunut ilman monsuunituulia. Noin sata vuotta ennen ajanlaskun alkua kreikkalaiset merenkulkijat oppivat, että Intian valtamerellä tuulet kääntyvät säännöllisesti: kesällä ne puhaltavat lounaasta koilliseen ja talvella toiseen suuntaan. Kun tämä rytmi opittiin, laivat saattoivat purjehtia suoraan aavan meren yli sen sijaan, että olisivat kulkeneet hitaasti rannikkoa pitkin. Roomalaisajalla satoja laivoja lähti vuosittain Punaisenmeren satamista kohti Intiaa ja Afrikan sarvea, ja juuri tämä tuulten aikataulu toi kauppiaat Oponeen kerran vuodessa.',
+          tiedosto: 'Monsoon & trade wind chart of the Indian Ocean LOC 2009575919.jpg',
+          lyhyt: 'Monsuunituulet mahdollistivat suoran purjehduksen yli aavan meren.',
+          selite: 'Vanha 1800-luvun merikartta esittää Intian valtamerta ruutuina, joihin on piirretty aaltomaisia värivyöhykkeitä ja nuolia kuvaamaan tuulten suuntaa eri kuukausina ja leveysasteilla.',
+          lahde: 'Matthew Fontaine Maury, US Hydrographic Office / Library of Congress, Wikimedia Commons (Public domain)', wiki: 'Monsoon' },
+        { otsikko: 'Puiset alukset satamassa',
+          teksti: 'Kauppiaiden alukset olivat todennäköisesti nykyisten dhow-veneiden esi-isiä: puurunkoisia, kolmionmuotoisella latinalaispurjeella varustettuja aluksia, jotka soveltuivat hyvin Intian valtameren tuuliin. Samantyyppisiä veneitä nähtiin Somalian rannikolla vielä isoisän matkan aikaan 1800-luvulla. Ras Hafunin alue kuului 1800-luvulla Majeerteenin sulttaanikuntaan, joka oli hallinnut tätä rannikkoa jo 1300-luvulta lähtien ja jonka arvovaltaisin satamakaupunki lähistöllä oli Alula. Antiikin kauppasatamasta oli siis kulunut jo lähes kaksi vuosituhatta, mutta puiset purjeveneet toivat kauppiaita samalle rannikolle yhä uudelleen.',
+          tiedosto: 'Dhow boat Zanzibar.jpg',
+          lyhyt: 'Samantyyppisiä puuveneitä purjehti rannikolla vielä 1800-luvulla.',
+          selite: 'Puinen purjevene kolmionmuotoisella purjeella on ankkuroitu matalaan, tyyneen rantaveteen; keulassa istuu yksi henkilö, ja taivas on pilvinen.',
+          lahde: 'Anton Zelenov, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Dhow' },
+      ],
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Antiikin suitsukekauppa',
+      johdanto: 'Roomalaisajan purjehtijat tunsivat tämän rannikon suitsukkeen, kanelin ja kilpikonnankuoren satamana. Monsuunituulet toivat kauppa-alukset tänne Egyptistä, Arabiasta ja Intiasta asti.',
+      tehtava: { kysymys: 'Minkä tuotteen Periplus-merenkulkuopas mainitsee erikseen Oponen tärkeimmäksi vientitavaraksi?',
+        vaihtoehdot: ['Kaneli', 'Sahrami', 'Vanilja', 'Inkivääri'], oikea: 0,
+        fakta: 'Antiikin merenkulkuopas Periplus mainitsee, että Oponesta vietiin suuria määriä kanelia sekä laadukasta kilpikonnankuorta.' },
+      nostot: [
+        { otsikko: 'Suitsukepuu kalliolla',
+          teksti: 'Suitsukepuut kasvavat kuivilla, kivikkoisilla rinteillä Somaliassa, Jemenissä ja Omanissa, usein näennäisen mahdottomissa paikoissa paljaan kallion raoissa. Puun kaarnaan tehdään viilto, josta tihkuu maitomaista pihkaa; ilmassa se kovettuu muutamassa päivässä kellertäviksi paakuiksi. Somaliassa kasvaa useita lajeja, joista Boswellia frereana ja Boswellia sacra olivat jo antiikin aikaan arvostetuimpia. Paikalliset nimitykset, kuten yagcar, periytyvät sukupolvien ketjussa kerääjiltä toisille, sillä puiden kerääminen ja pihkan tuottaminen vaativat vuosien kokemuksen eivätkä onnistu kiireellä.',
+          tiedosto: 'Boswellia sacra in Wadi Dowkah (Dhofar).JPG',
+          lyhyt: 'Suitsukepuu tuottaa pihkaa, joka kovettuu kellertäviksi paakuiksi.',
+          selite: 'Kivisellä aavikkotasangolla kasvaa matala, monihaarainen suitsukepuu, jonka harmaat, vääntyneet oksat levittäytyvät sateenvarjomaisesti kirkasta sinistä taivasta vasten.',
+          lahde: 'Mauro Raffaelli, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Boswellia sacra' },
+        { otsikko: 'Yhtä arvokasta kuin hopea',
+          teksti: 'Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.',
+          tiedosto: 'Frankincense IMG 9780.JPG',
+          lyhyt: 'Suitsuke oli antiikissa niin arvokasta kuin hopea painoltaan.',
+          selite: 'Lasimaljassa on kymmeniä kellertäviä ja vaaleanruskeita pihkakimpaleita eli suitsukkeen kyyneleitä, valokuvattuna suoraan ylhäältä puisella pöydällä.',
+          lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Frankincense' },
+        { otsikko: 'Oponen kuuluisin vientitavara',
+          teksti: 'Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.',
+          tiedosto: 'Cinnamomum verum spices.jpg',
+          lyhyt: 'Periplus mainitsee Oponen tärkeimmäksi vientituotteeksi kanelin.',
+          selite: 'Kolme rullalle käärittyä kanelitankoa lepää valkoisella pohjalla, edessä kasa kanelijauhetta ja pieni kasa tummia, pyöreitä mausteenpalasia.',
+          lahde: 'Simon A. Eugster (LivingShadow), Wikimedia Commons (CC BY-SA 3.0)', wiki: 'Cinnamon' },
+        { otsikko: 'Merikilpikonnan arvokas kuori',
+          teksti: 'Oponen toinen mainesatu oli kilpikonnankuori, jota Periplus kehuu alueen parhaaksi koko Punaisenmeren ja Intian valtameren rannikolla. Kuori saatiin merikilpikonnista, erityisesti kauniisti kuvioidusta karettikilpikonnasta, ja siitä valmistettiin Roomassa ja Intiassa kampoja, koruja sekä huonekalujen koristekuvioita. Kuorta kerättiin myös naapurisatamista, mutta Oponen kilpikonnankuorta pidettiin erityisen laadukkaana. Yhdessä kanelin ja suitsukkeen kanssa se teki tästä vaatimattomasta niemestä yhden Intian valtameren kauppaverkoston tärkeimmistä pysähdyspaikoista antiikin aikana.',
+          tiedosto: 'Hawksbill Turtle (Eretmochelys imbricata) (8477697277).jpg',
+          lyhyt: 'Oponen kilpikonnankuorta pidettiin antiikissa erityisen laadukkaana.',
+          selite: 'Kirjavakuorinen merikilpikonna ui koralliriutan liepeillä syvässä sinivihreässä vedessä, etutassut levällään ja pää käännettynä sivulle.',
+          lahde: 'Bernard Dupont, Wikimedia Commons (CC BY-SA 2.0)', wiki: 'Hawksbill sea turtle' },
+      ],
+    },
+  ],
+  cayenne: [
+    {
+      id: 'kaupunki',
+      nimi: 'Cayenne',
+      johdanto:
+        'Cayenne oli isoisän matkavuonna 1873 jo kaksisataavuotias siirtomaakaupunki: sen satamasta lähtivät rangaistussiirtolan laivat sademetsän reunaan, ja sen nimi oli antanut maailmalle tulisimman mausteensa.',
+      nostot: [
+        {
+          otsikko: 'Linnake Cépéroun kukkulalla',
+          teksti:
+            'Ranskalaiset kauppiaat pystyttivät linnoituksen alkuperäiskansan päällikön, Cépéroun, mukaan nimetylle kukkulalle vuonna 1643, ja sen juurelle kasvoi Cayennen kaupunki. Paikka vaihtoi omistajaa yhä uudelleen: Alankomaiden Länsi-Intian kauppakomppania valtasi sen 1658, Ranska palautti otteensa 1664, Englanti pyyhkäisi ohi 1667 ja Portugalikin miehitti kaupungin vuosina 1809–1815. Vasta 1600-luvun lopulla Ranska vakiinnutti asemansa pysyvästi, ja kaupunki sai virallisen Cayenne-nimensä vasta 1777. Isoisän saapuessa 1873 kukkulan linnoitus oli jo lähes kaksisataavuotias muistomerkki lukuisista vallanvaihdoista.',
+          tiedosto: 'Fort Cépérou 01.JPG',
+          lyhyt: 'Cépéroun kukkulan linnoitusraunio, jonka juurelle Cayennen kaupunki kasvoi 1600-luvulla.',
+          selite:
+            'Valokuvassa on Cépéroun kukkulan vihreä töyräs: laella näkyy vanhoja kivi- ja betonirakenteita sekä pieni kattoinen näköalapaikka, ja taustalla kohoaa nykyaikainen radiomasto.',
+          lahde: 'Chatsam, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne',
+        },
+        {
+          otsikko: 'Kivi- ja tiilikatedraali',
+          teksti:
+            'Cayennen vanha Saint-Nicolas-kirkko käytiin ahtaaksi, ja pappi Nicolas Guiller sekä siirtokunnan hallintomies Pierre Bernard Milius päättivät 1823 rakentaa tilalle uuden kirkon. Peruskivi muurattiin 9. elokuuta 1823, ja rakennustyöt kestivät aina vuoteen 1833 asti kivestä ja tiilestä. Kirkko vihittiin käyttöön 1861, mutta se toimi tavallisena seurakuntakirkkona vielä vuosikymmeniä ennen kuin siitä tuli virallisesti katedraali 1934. Isoisän vieraillessa kaupungissa 1873 kivi- ja tiilirakennus oli jo neljäkymmentä vuotta vanha ja koko siirtokunnan suurin kirkkorakennus.',
+          tiedosto: 'Cathédrale Saint-Sauveur de Cayenne 01.JPG',
+          lyhyt: 'Cayennen katedraalin sisätila kaarikattoineen ja värillisine lasimaalauksineen.',
+          selite:
+            'Kuva näyttää kirkkosalin sisältä: keltaiset kaaripilarit reunustavat käytävää, värilliset lasimaalausikkunat päästävät valoa sisään, ja alttari erottuu salin perällä puisten penkkirivien takana.',
+          lahde: 'Chatsam, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne Cathedral',
+        },
+        {
+          otsikko: 'Kuningaspalmujen aukio',
+          teksti:
+            'Kun Cayennea ympäröinyt vanha puolustusmuuri purettiin 1810-luvulla, sen paikalle raivattiin avoin aukio, jonka tarkoitus oli yksinkertaisesti tuulettaa ahdasta kaupunkia. Aukiolle istutettiin komeita kuningaspalmuja, joiden ranskankielisen nimen palmiste mukaan paikka tunnettiin pian nimellä Place des Palmistes. Isoisän matkavuonna 1873 palmut olivat jo kasvaneet kookkaiksi, ja aukiosta oli muodostunut siirtokunnan tärkein kohtaamispaikka: siellä kuljettiin, kaupattiin ja vietettiin iltaa palmujen varjossa kaukana Euroopan kylmyydestä.',
+          tiedosto: 'Cayenne Place des palmistes from NNE 2013.jpg',
+          lyhyt: 'Place des Palmistes -aukio kuningaspalmurivistöineen Cayennen keskustassa.',
+          selite:
+            'Kuva näyttää nurmikkoisen aukion, jota reunustaa korkeiden kuningaspalmujen rivistö; taustalla erottuu punakattoinen siirtomaa-arkkitehtuurin rakennus ja pieni kioski.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cayenne',
+        },
+        {
+          otsikko: 'Mausteen mukaan nimetty kaupunki',
+          teksti:
+            'Sana cayenne juontuu Etelä-Amerikan tupikielten sanasta kyynha, joka tarkoitti yksinkertaisesti chiliä eli capsicum-lajin hedelmää. Englantilainen kasvitieteilijä Nicholas Culpeper käytti ilmausta cayenne pepper jo vuonna 1652 — yli sata vuotta ennen kuin kaupunki sai virallisen Cayenne-nimensä 1777. Todennäköisesti siis kaupunki nimettiin mausteen mukaan eikä toisin päin, vaikka mikään cayennepippureiksi kutsutuista chileistä ei alun perin kasvanut juuri tämän kaupungin liepeillä. Isoisän aikana 1870-luvulla nimen alkuperä oli jo unohtunut, ja maailmalla puhuttiin cayennepippurista ikään kuin se olisi aina kuulunut kaupungille.',
+          tiedosto: 'Jardin botanique Henri Gaussen - Piment de cayenne.jpg',
+          lyhyt: 'Punainen cayennepippuri kasvamassa varrellaan, lehdet ja vihreä varsi näkyvissä.',
+          selite:
+            'Kuvassa on kypsä, punainen cayennepippuri vielä kiinni kasvin vihreässä varressa, ympärillä vihreitä lehtiä.',
+          lahde: 'PierreSelim, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne pepper',
+        },
+        {
+          otsikko: 'Sademetsän portilla',
+          teksti:
+            'Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.',
+          tiedosto: 'Morpho Butterfly (Morpho menelaus) resting at night ... (38899467752).jpg',
+          lyhyt: 'Morpho-perhonen lepäämässä lehdellä yöllä, siivet suljettuina ja ruskea alapinta näkyvissä.',
+          selite:
+            'Kuvassa perhonen lepää lehden päällä siivet pystyssä ja suljettuina; näkyvissä on siipien ruskea alapinta, jossa on useita pyöreitä, silmää muistuttavia täpliä.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Morpho menelaus',
+        },
+        {
+          otsikko: 'Kaupunki meren, joen ja metsän välissä',
+          teksti:
+            'Cayennen ilmasto on trooppinen monsuuni-ilmasto: sadetta kertyy vuodessa keskimäärin noin 3500 millimetriä, ja kuiva kausi elo–lokakuussa on lyhyt poikkeus muuten sateisesta vuodesta. Kaupunki on rakennettu Cayenne-joen suistoon entiselle saarelle, ja meri, joki ja sademetsä puristavat sitä joka suunnalta. Isoisän 1873 saapuessa laivalla kaupunki näyttäytyi ensin kosteana usvana ja vasta sitten kattojen ja tornien siluettina rannikolla — näky, joka toistui lähes samanlaisena vielä vuosikymmeniä myöhemmin ilmakuvissa.',
+          tiedosto: 'Cayenne town (8331178717).jpg',
+          lyhyt: 'Ilmakuva Cayennen rannikkokaupungista sumuisessa, kosteassa ilmassa.',
+          selite:
+            'Ilmakuvassa näkyy Cayennen kaupunki rannikolla usvaisen ilman läpi: matalia rakennuksia ja katuja rannan tuntumassa, meri edessä ja tummempi maasto taustalla.',
+          lahde: 'Spotting973, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cayenne',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Bagne — rangaistussiirtolan verkosto',
+      johdanto:
+        'Cayennen satama oli koko Ranskan rangaistussiirtolajärjestelmän portti: sieltä vangit lähetettiin edelleen joen taakse ja saarille, joista harva enää koskaan palasi kotiin Ranskaan.',
+      tehtava: {
+        kysymys: 'Minä vuonna Napoleon III:n laki teki Ranskan Guayanan rangaistussiirtolasta virallisen?',
+        vaihtoehdot: ['1852', '1854', '1858', '1868'],
+        oikea: 1,
+        fakta:
+          'Napoleon III:n laki annettiin 30. toukokuuta 1854, vaikka ensimmäiset vangit oli lähetetty Cayenneen jo kaksi vuotta aiemmin, 1852.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhannet vapaaehtoiset vangit',
+          teksti:
+            'Napoleon kutsui vuonna 1852 hulkkilaivoilla säilytettyjä vankeja vapaaehtoisiksi uuteen rangaistussiirtolaan Ranskan Guayanaan, ja peräti 3000 vankia ilmoittautui. Kaksi vuotta myöhemmin, 30. toukokuuta 1854, Napoleon III:n laki teki järjestelmästä virallisen: siitä lähtien osa raskaimpiin rikoksiin tuomituista lähetettiin määräajaksi tai koko loppuiäkseen Cayenneen ja sen ympäristöön. Cayennessa sijaitsi kirjaamo eli depot, jonne saapuvat vangit ensin tuotiin rekisteröitäviksi ennen kuin heidät jaettiin eri leireille. Isoisän matkavuonna 1873 järjestelmä oli jo lähes kaksikymmentä vuotta vanha ja tunnettu koko Euroopassa.',
+          tiedosto: 'Cayenne - Site pénitencier - Depot 001.jpg',
+          lyhyt: 'Entinen vankien vastaanottorakennus eli depot Cayennessa, nykyisin asuinkäytössä.',
+          selite:
+            'Kuvassa on matala, valkoiseksi ja oranssiksi maalattu siirtomaa-arkkitehtuurin rakennus punatiilisen aidan takana, kadun varrella pysäköidyn auton vieressä.',
+          lahde: 'Ayshka Sene, Sophie Fuggle, Claire Reddleman, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bagne (penal establishment)',
+        },
+        {
+          otsikko: 'Portti joen rannalla',
+          teksti:
+            "Vuonna 1858 avattiin Maroni-joen rannalle Saint-Laurent-du-Maronin kuljetusleiri, josta tuli koko rangaistussiirtolajärjestelmän keskus. Kaikki Ranskasta laivalla saapuneet vangit tuotiin ensin tähän leiriin, jossa heidät lajiteltiin ja jaettiin edelleen eri työleireille tai ankarampaan vankeuteen, kuten Îles du Salut'n saarille. Leirillä oli yli kymmenen rakennusta: selliosastoja pihan ympärillä, sairaala, keittiöt, pesula ja jopa kirjasto. Isoisän matkan aikaan 1873 leiri oli toiminut jo viisitoista vuotta ja käsitellyt tuhansia vankeja, jotka kaikki kulkivat saman portin kautta joelta sisään.",
+          tiedosto: 'Camp de la Transportation, Saint-Laurent-du-Maroni, French Guiana 001.jpg',
+          lyhyt: 'Valkoinen vartiokoju Saint-Laurent-du-Maronin kuljetusleirin portilla joen rannalla.',
+          selite:
+            'Kuvassa on pieni, valkoiseksi maalattu tiilirakennus kaltereineen ja puisine harjakattoineen joen rannalla, vieressä katulyhty ja taustalla leveä jokimaisema.',
+          lahde: 'Ayshka Sene, Sophie Fuggle, Claire Reddleman, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Prison of St-Laurent-du-Maroni',
+        },
+        {
+          otsikko: 'Pelastuksen saaret',
+          teksti:
+            'Cayennen edustan pienet saaret sai ironisen nimensä Îles du Salut, Pelastuksen saaret, jo 1600-luvulla, kun siirtolaiset pakenivat sinne mannermaan kuumetauteja. Vuodesta 1852 saarista tuli osa rangaistussiirtolaa: sinne perustettiin varastoja, laituri ja asuinrakennuksia, ja sieltä käsin hallittiin muun muassa lähellä sijaitsevaa Paholaissaarta. Île Royale toimi koko järjestelmän hallinnollisena keskuksena saarilla, ja sinne saapuivat sekä hallinnon virkamiehet että pahimmat vangit samalla laiturilla. Postikorttien mukaan saarilta lähetettiin kirjeitä Ranskaan vielä vuosikymmeniä isoisän matkan jälkeenkin.',
+          tiedosto: "Vincent Jermolière - 6 - Iles du Salut - L'ile Royale, Magasins et Débarcadère.jpg",
+          lyhyt: 'Vanha postikortti Île Royalen laiturista ja varastorakennuksista 1900-luvun alusta.',
+          selite:
+            'Sepiavärisessä postikortissa näkyy pieni höyrylaiva rannan edustalla, matalia varastorakennuksia rantaviivalla ja palmuja niiden takana; kortissa on vuoden 1907 postileimoja.',
+          lahde: 'Vincent Jermolière, Wikimedia Commons (Public domain)',
+          wiki: "Devil's Island",
+        },
+        {
+          otsikko: 'Ei paluuta kotiin',
+          teksti:
+            'Rangaistussiirtolan olot olivat tunnetusti raskaat: trooppiset taudit ja uupumus nostivat kuolleisuuden pahimmillaan noin 75 prosenttiin vangeista. Vuodesta 1868 lähtien vapautuneen vangin piti itse maksaa paluumatkansa Ranskaan, mutta koska töitä ja rahaa ei siirtokunnasta juuri löytynyt, harva pystyi koskaan maksamaan lipun kotiin. Moni jäi siksi pysyvästi Ranskan Guayanaan vapautumisensa jälkeenkin. Tänään monet leirien selliosastot ovat luhistumassa, ja sademetsä on hitaasti vallannut takaisin niiden kivi- ja betoniseinät, joiden sisällä satojen tuhansien vankien elämä joskus kului.',
+          tiedosto: 'ILES et BAGNE 046.JPG',
+          lyhyt: 'Sademetsän valtaama, luhistuva selliraunio kalterin ja kasvillisuuden peitossa.',
+          selite:
+            'Kuvassa on kostean, sammaloituneen sellin sisäosa: katossa on rautaristikko, josta kasvaa läpi vehreitä köynnöksiä, ja seinät ovat tummuneet kosteudesta ja ajasta.',
+          lahde: 'davric, Wikimedia Commons (Public domain)',
+          wiki: 'History of French Guiana',
+        },
+      ],
+    },
+  ],
 };
