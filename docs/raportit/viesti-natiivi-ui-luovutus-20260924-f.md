@@ -36,7 +36,12 @@ Worktree `/Users/Shared/Claude/wt/proto-natiivi-ui-nostomerkit`, master mergetty
 2. Inventaario: iPhonen yläosa/laukun linssit hyväksytyiksi poikkeamiksi (`nappi-inventaario-natiivi-20260923.md`).
 3. Laitetestaajalle uusinnat: matkakirjakortti-kiinni (iPhone), linssi-selite; maatiedot odottaa Pelikoodarin työkalua.
 4. Chat laitteella, kun #3046 julkaistu (testi kuluttaa omistajan 30/vrk-kiintiötä, käytä kehittäjäkoodia).
-5. Piikit: keksintöjen loppu 42 ms (muotokuvien täysikokoinen upload testinäkymässä), radio 19 ms PrepareRepaint (merkit UI.Linssi.* seuraavaan ajoon).
+5. Piikit: keksintöjen loppu 42 ms (muotokuvien täysikokoinen upload testinäkymässä). Linssisepän ajo 4 (63a2852,
+   proto-3d/lokit/linssit-piikit-20260924/ajo4/konsoli.txt, framet 29002–30247): RADIO SOIDESSA 9 piikkiä 23–33 ms,
+   joka kerta UIElementsRepaintPanels / kerros 25 PrepareRepaint 14–15 ms (RenderTree.UpdateVisuals, ConvertMesh 4 ms)
+   → radiopaneeli piirtyy uudelleen soiton aikana (asteikon/VU-animaatio? generateVisualContent tai MarkDirtyRepaint
+   joka kehys) — etsi RadioNakyma.cs:stä ja rajaa uudelleenpiirto; avaus 32 ms (repaint 17). Keksintöjen avaus Vaihtui 7,3 ms.
+   Maalehti ja vertailu puhtaita.
 6. Nostomerkkien symbolit: luonnon kuva valitaan aiheen ensimmäisestä (vuori), koska karttavaloissa ei ole lajia (webin maastokohteet eivät ryhmity; natiivissa ryhmittyvät).
 7. Linssin selite ja keksintöjen karuselli-kuvat eivät ole vielä pariteettikuvina uudella buildilla.
 
