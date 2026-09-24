@@ -8,6 +8,34 @@ namespace Matkakirja.Natiivi
 {
     public static class Rakenne
     {
+        /// <summary>
+        /// iOS: kun järjestelmän näppäimistö (ja sen syöteikkuna) sulkeutuu, kenttä jää UI Toolkitissa fokukseen, ja
+        /// jokainen seuraava napautus missä tahansa avaa näppäimistön uudelleen eikä osu kohteeseensa (Laitetestaajan
+        /// T2 24.9.: Raamatun kentät). Kenttä vapautetaan fokuksesta heti, kun näppäimistö on ollut näkyvissä ja
+        /// piiloutui. Ei vaikutusta, jos alusta ei käytä kosketusnäppäimistöä.
+        /// </summary>
+        public static void VapautaNappaimistonSulkeutuessa(TextField k)
+        {
+            if (k == null) return;
+            IVisualElementScheduledItem vahti = null;
+            k.RegisterCallback<FocusInEvent>(_ =>
+            {
+                if (!TouchScreenKeyboard.isSupported) return;
+                bool nahty = false;
+                float alku = Time.unscaledTime;
+                vahti?.Pause();
+                vahti = k.schedule.Execute(() =>
+                {
+                    if (TouchScreenKeyboard.visible) { nahty = true; return; }
+                    // Näppäimistö ei avautunut lainkaan (ulkoinen näppäimistö): vahti pois hetken päästä.
+                    if (!nahty) { if (Time.unscaledTime - alku > 2f) vahti?.Pause(); return; }
+                    vahti?.Pause();
+                    k.Blur();
+                }).Every(120);
+            });
+            k.RegisterCallback<FocusOutEvent>(_ => vahti?.Pause());
+        }
+
         public static VisualElement El(string luokka, VisualElement isa = null, PickingMode poiminta = PickingMode.Position)
         {
             var e = new VisualElement { pickingMode = poiminta };

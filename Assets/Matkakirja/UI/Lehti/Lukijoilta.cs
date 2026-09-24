@@ -141,6 +141,7 @@ namespace Matkakirja.Natiivi
             var k = new TextField { isPasswordField = true };
             k.AddToClassList("mk-palaute__kentta");
             k.textEdition.placeholder = "Lukijoilta-avain (EHDOTUS_AVAIN)";
+            Rakenne.VapautaNappaimistonSulkeutuessa(k);
             Kirjasimet.Aseta(k, Kirjasin.Kone);
             isa.Add(k);
             var napit = Rakenne.El("mk-tyohuone__napit", isa, PickingMode.Ignore);
@@ -360,6 +361,7 @@ namespace Matkakirja.Natiivi
             k.AddToClassList("mk-palaute__kentta");
             if (monirivi) k.AddToClassList("mk-palaute__kentta--iso");
             k.textEdition.placeholder = vihje;
+            Rakenne.VapautaNappaimistonSulkeutuessa(k);
             Kirjasimet.Aseta(k, Kirjasin.Kone);
             isa.Add(k);
             return k;

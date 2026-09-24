@@ -154,6 +154,7 @@ namespace Matkakirja.Natiivi
                 k.tooltip = osio + " — " + (kohta == "johdanto" ? "johdanto" : "kohta " + kohta);
                 Kirjasimet.Aseta(k, Kirjasin.Luku);
                 k.RegisterValueChangedCallback(e => luonnos[avain] = e.newValue);
+                Rakenne.VapautaNappaimistonSulkeutuessa(k);
                 kentat.Add(k);
             }
             // Lähetys jokaisen sivun lopussa (web piirraRaamatunLahetys).
