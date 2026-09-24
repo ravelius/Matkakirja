@@ -564,6 +564,7 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 |---|---|
 | Aloituskaupungin vahvistus napautuksen jälkeen (webissä doPickStart suoraan) | Fable 24.9.: pois — napautus valitsee suoraan (natiivi-ui/tyypitys) |
 | Pullatarjous poistuu ratkaistun aarretehtävän jälkeen (webissä jää näkyviin) | omistaja 23.9.: natiivi näin, web korjataan (Pelikoodari) |
+| Ihmisen matkan loppukortti "Kertomus päättyi" (Katso karttaa / Sulje linssi); webissä paata jättää kartan pelaajalle (Loppu pois käytöstä, pulun viimeinen kupla) | Fable 24.9.: pois (EI WEBISSÄ), natiivi-ui/ihmisenloppu 338e95f |
 | "Mitä uutta": webin muutosloki listaa webin versioita | Fable 24.9.: natiivin oma loki (kokoelma muutosloki-natiivi, Julkaisija täyttää); tehty, varana "Ensimmäinen natiiviversio." |
 
 ## Yhteenveto
