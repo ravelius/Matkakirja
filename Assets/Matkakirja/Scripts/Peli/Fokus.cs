@@ -55,22 +55,37 @@ namespace Matkakirja.Natiivi
 
         public int Kaupunkeja => kaupungit.Count;
 
-        /// <summary>Kokoelma fokusvirrat (alkiot: id/kaupunki, data). lauta = kohtaamispisteen laudan tunnus.</summary>
-        public static Fokusdata Lue(string json, string lauta = "maailmankartta")
+        /// <summary>
+        /// Kokoelma fokusvirrat. lauta = kohtaamispisteen laudan tunnus. Päätaso (skeema 1.26):
+        /// kohtaamispiste, sahketehtava, virta.kohtaaminen ja lehtitehtavat (id-lista "kaupunki:tehtava";
+        /// tehtävän tunnus ja palkinto kokoelmasta lehtitehtavat, jonka teksti annetaan lehtitehtavat-
+        /// parametrina). Vanha paketti (ei päätason listaa): data.* Paataso-varareitillä.
+        /// </summary>
+        public static Fokusdata Lue(string json, string lauta = "maailmankartta", string lehtitehtavat = null)
         {
             var f = new Fokusdata();
             if (string.IsNullOrEmpty(json)) return f;
+            Dictionary<string, (string Tehtava, string Palkinto)> tehtavat = null;
+            if (!string.IsNullOrEmpty(lehtitehtavat))
+            {
+                tehtavat = new Dictionary<string, (string, string)>();
+                foreach (var t in MiniJson.Alkiot(lehtitehtavat))
+                    if (MiniJson.Teksti(t, "id") is string lid)
+                        tehtavat[lid] = (MiniJson.Teksti(t, "tehtava"), MiniJson.Teksti(t, "palkinto"));
+            }
             foreach (var o in MiniJson.Alkiot(json))
             {
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
                 var id = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(o, "id");
-                if (d == null || id == null) continue;
+                if (id == null) continue;
+                var raaka = Paataso.Raaka(o);
+                // Päätason virta = webin FOKUSVIRRAT[kaupunki] (raaka data on sama olio).
+                var virta = MiniJson.Kentta(o, "virta") as Dictionary<string, object> ?? raaka;
                 var k = new Kaupunki
                 {
-                    Kohtaaminen = MiniJson.Kentta(d, "kohtaaminen") != null,
-                    Sahketehtava = MiniJson.Kentta(d, "sahketehtava") != null,
+                    Kohtaaminen = MiniJson.Kentta(virta, "kohtaaminen") != null,
+                    Sahketehtava = Paataso.Olio(o, "sahketehtava", "sahketehtava") != null,
                 };
-                if (MiniJson.Kentta(d, "kohtaamispiste") is Dictionary<string, object> kp)
+                if (Paataso.Olio(o, "kohtaamispiste", "kohtaamispiste") is Dictionary<string, object> kp)
                 {
                     k.PisteNimi = MiniJson.Teksti(kp, "nimi");
                     if (MiniJson.Kentta(kp, "laudat") is Dictionary<string, object> laudat
@@ -79,13 +94,28 @@ namespace Matkakirja.Natiivi
                         && !double.IsNaN(x) && !double.IsNaN(y))
                     { k.X = x; k.Y = y; }
                 }
-                if (MiniJson.Kentta(d, "lehtitehtavat") is List<object> tl)
+                var idt = MiniJson.Kentta(o, "lehtitehtavat") as List<object>;
+                if (idt != null && (tehtavat != null || raaka == null))
+                {
+                    if (tehtavat == null) throw new FormatException($"fokusvirran {id} lehtitehtävät tarvitsevat kokoelman lehtitehtavat");
+                    foreach (var tid in idt.OfType<string>())
+                    {
+                        if (!tehtavat.TryGetValue(tid, out var t))
+                            throw new FormatException($"fokusvirran {id} lehtitehtävä {tid} puuttuu kokoelmasta lehtitehtavat");
+                        k.Tehtavat.Add((t.Tehtava ?? Tehtava(tid, id), t.Palkinto));
+                    }
+                }
+                else if (MiniJson.Kentta(raaka, "lehtitehtavat") is List<object> tl)
                     foreach (var t in tl.OfType<Dictionary<string, object>>())
                         if (MiniJson.Teksti(t, "id") is string tid) k.Tehtavat.Add((tid, MiniJson.Teksti(t, "palkinto")));
                 f.kaupungit[id] = k;
             }
             return f;
         }
+
+        /// <summary>Lehtitehtävän kokoelma-id "kaupunki:tehtava" → tehtava (lehden aihe fokus:&lt;tehtava&gt;).</summary>
+        static string Tehtava(string id, string kaupunki) =>
+            id.StartsWith(kaupunki + ":", StringComparison.Ordinal) ? id.Substring(kaupunki.Length + 1) : id;
 
         /// <summary>Web tehtavanAihe: "fokus:&lt;id&gt;" (minitehtävän aihe Kaupat-avaimessa).</summary>
         public static string Aihe(string tehtavaId) => Etuliite + ":" + tehtavaId;

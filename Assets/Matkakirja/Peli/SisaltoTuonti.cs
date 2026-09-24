@@ -59,10 +59,10 @@ namespace Matkakirja.Peli
             foreach (var o in Alkiot(json, "reitit"))
             {
                 var laji = MiniJson.Teksti(o, "laji");
-                var data = MiniJson.Kentta(o, "data") as Dictionary<string, object>;
-                // a ja b ensisijaisesti data-kentästä (laudan raakadata), muuten alkiosta.
-                var a = MiniJson.Teksti(data, "a") ?? MiniJson.Teksti(o, "a");
-                var b = MiniJson.Teksti(data, "b") ?? MiniJson.Teksti(o, "b");
+                // Päätaso (skeema 1.26: a, b, askelia, laji); vanhan paketin varareitti Paataso.Nakyma.
+                var n = Paataso.Nakyma(o, Paataso.Reitti);
+                var a = MiniJson.Teksti(n, "a");
+                var b = MiniJson.Teksti(n, "b");
                 if (a == null || b == null) throw new FormatException($"reitiltä {MiniJson.Teksti(o, "id")} puuttuu pää");
 
                 if (laji == "lento")
@@ -73,10 +73,9 @@ namespace Matkakirja.Peli
                 if (laji != "maa" && laji != "sea") throw new FormatException($"tuntematon reitin laji '{laji}'");
 
                 // Web buildBoard: type = raw.type ?? 'land'; fee = type === 'sea' ? (raw.fee ?? SEA_FEE) : 0.
-                // Laji ja data.type kertovat saman asian; data.type on laudan totuus.
-                var tyyppi = MiniJson.Teksti(data, "type") ?? (laji == "sea" ? "sea" : "land");
-                bool meri = tyyppi == "sea";
-                var askeleet = MiniJson.Luku(data, "steps") ?? throw new FormatException($"reitiltä {a}|{b} puuttuu steps");
+                // Päätason laji = raw.type ("sea") tai "maa" (raw.type puuttuu = 'land').
+                bool meri = laji == "sea";
+                var askeleet = MiniJson.Luku(n, "askelia") ?? throw new FormatException($"reitiltä {a}|{b} puuttuu askelia");
                 tulos.Add(new Reitti
                 {
                     Id = a + "|" + b,
@@ -84,7 +83,7 @@ namespace Matkakirja.Peli
                     B = b,
                     Laji = meri ? ReitinLaji.Meri : ReitinLaji.Maa,
                     Askeleet = (int)askeleet,
-                    Maksu = meri ? (int)(MiniJson.Luku(data, "fee") ?? Vakiot.MeriHinta) : 0,
+                    Maksu = meri ? (int)(MiniJson.Luku(Paataso.Raaka(o), "fee") ?? Vakiot.MeriHinta) : 0,
                 });
             }
             return tulos;

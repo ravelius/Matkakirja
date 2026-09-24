@@ -140,7 +140,14 @@ tuntematon (`Pakettiskeema` Peli/Paataso.cs). Tuloste: kokoelma, lukija, luettu,
 sekä raakadatan (`data.*`) lukukohdat. Oletus ilman verkkoa: paikallinen kopio `Kultaiset/tuotanto`
 (uusin.json + v<N>/manifest.json-ote + kokoelmat). Liput: `--hae` (tuore tuotanto curlilla, kertoo
 vanhentuneen kopion), `--paivita` (kirjoittaa kopion), `--koe [kansio]` (koepaketti
-/Users/Shared/Claude/sisalto-koe), `--raaka-kielletty` (vaihe 2: `Paataso.RaakaKielletty`). Uusi lukija
-= uusi sääntö `Pakettivartija.Saannot`-listaan (AaniTaulut: kohta AANITAULUT).
+/Users/Shared/Claude/sisalto-koe), `--raaka-kielletty` (vaihe 2: `Paataso.RaakaKielletty`; koskee vain
+paketteja, joiden skeema ≥ `Pakettiskeema.PaatasoTaysi` = 1.26, vanhempi luetaan varareitillä ja siitä kerrotaan).
+Uusi lukija = uusi sääntö `Pakettivartija.Saannot`-listaan (AaniTaulut: kohta AANITAULUT).
+
+Skeema 1.26 (koepaketti v33, 24.9.2026): jokainen lukija lukee ENSIN alkion päätason kentän ja vasta sen
+puuttuessa raa'an datan, ja varareitti kulkee aina `Paataso`n kautta (`Nakyma`, `Olio`, `Raaka`, `RaakaArvo`,
+`Yhdista`), jotta raakakielto katkaisee sen. Säännöt ovat samassa järjestyksessä (`"kentta|data.vanha"`,
+`Tai("a.b")`). Fokusdata tarvitsee päätason lehtitehtävälistalle kokoelman `lehtitehtavat` (palkinto).
+Testit: PaatasoTestit (päätaso voittaa raa'an, raakakiellolla päätaso riittää, pelkkä raaka ei kelpaa).
 
 `.meta`-tiedostot eivät ole mukana: Unity luo ne ensimmäisessä tuonnissa (3D-selvittäjän editori).

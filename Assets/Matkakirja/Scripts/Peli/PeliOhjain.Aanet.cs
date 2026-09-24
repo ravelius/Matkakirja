@@ -131,9 +131,10 @@ namespace Matkakirja.Natiivi
                 try { korit = t.LueAanitaulut(teksti); }
                 catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni: aanitaulut ei jäsenny: " + e.Message); }
             }
-            if (korit == 0)
+            if (korit == 0 && !Paataso.RaakaKielletty)
             {
-                // Vanhempi paketti ilman maisemakori-rivejä: kori lasketaan KAUPUNKI_EHDOKKAISTA.
+                // Vanhempi paketti (skeema < 1.22) ilman maisemakori-rivejä: kori lasketaan webin moduulin
+                // KAUPUNKI_EHDOKKAISTA. Moduuli on raakaa dataa, joten Paataso.RaakaKielletty ohittaa sen.
                 string moduuli = null;
                 yield return HaeTiedosto("moduulit/js/aani-ehdokkaat.json", false, true, x => moduuli = x);
                 try
