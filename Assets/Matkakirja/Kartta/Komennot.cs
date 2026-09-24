@@ -53,6 +53,10 @@ namespace Matkakirja
         {
             polku = Path.Combine(Application.persistentDataPath, "komento.txt");
             if (File.Exists(MaastoTiedosto)) Maasto(File.ReadAllText(MaastoTiedosto).Trim() == "paalle");
+#if MATKAKIRJA_APPSTORE
+            // App Store -käännöksessä ei testikomentoja (kuten Natiivi-UI:n ui-komento.txt).
+            enabled = false;
+#endif
         }
 
         static string MaastoTiedosto => Path.Combine(Application.persistentDataPath, "maasto.txt");
