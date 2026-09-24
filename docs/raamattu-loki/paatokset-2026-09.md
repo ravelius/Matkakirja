@@ -4539,3 +4539,7 @@ Fable: 'Mitä uutta' on omistajan ☰ → Muut -linjauksen rivi (24.9. klo 13.3x
 ## KIIREELLINEN: #3081 (SKEEMA 1.34–1.35) MAINISSA ENNEN FOKUSPOHJAA → 1.34 RIKKOISI NOSTOTASON BUILDEISSA 9–10; JULKAISIJA PIDATTAA TUOTANTOVIENNIN v46:EEN, FOKUSPOHJA BUILD 11:EEN HETI (24.9.2026 klo 20.00)
 
 Fablen virhe: vapautti #3081:n luonnostilasta build 10:n TestFlight-tiedolla, vaikka fokuspohja 38e424d oli siirretty build 11:een. Toimet: A) Julkaisija pidättää 1.x-paketin 1.34-viennin (jos jo ämpärissä, osoitin takaisin v46:een); B) Natiiviseppä mergeää fokuspohjan build 11:een ja kuvaa NOR/FRA 1.34-koepaketilla; Linssiseppä tarkistaa MaatAineiston kamerasovituksen bboxiin. Oppi: luonnos-PR:n vapautusehto tarkistetaan luovutuksesta sanatarkasti.
+
+## PERUUTUS: FOKUSPOHJA 38e424d ON JO BUILD 10:SSA (saapumisnakyma-HAARAN MUKANA) → 1.34–1.35 SAA MENNA TUOTANTOON; VAIN BUILD 9 ALTIS (24.9.2026 klo 20.00)
+
+Natiivisepän väärä hälytys peruttu (merge-base --is-ancestor). Julkaisijalle peruutus: ei pidätystä. Natiiviseppä kuvaa NOR/FRA-ääriviivat kun tuotanto on 1.35.
