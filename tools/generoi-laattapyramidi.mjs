@@ -91,6 +91,9 @@ import { fileURLToPath } from 'node:url';
 
 import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
+import { demIkkuna, demVali } from './maasto/dem-ikkuna.mjs';
+import { demHakemisto, LAHDEMAININTA } from './maasto/tee-maasto.mjs';
+import { meriMaski } from './fokuskartta/aineisto.mjs';
 import { yhdistaLuettelo } from './pyramidiluettelo.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
@@ -192,9 +195,17 @@ const lippu = (nimi) => argv.includes(`--${nimi}`);
  * kaista skaalattaisiin puolikkaalla jaolla ja kaistan viimeinen
  * z8-sarake jäisi jokaisesta shardista piirtämättä.
  */
+/*
+ * KATTO 11 (Karttaseppä 23.9.2026): `--tasoja 11` lisää syvät tasot
+ * z9 (960 px/aste) ja z10 (1920 px/aste) natiivipelin pallosarjaa
+ * Z9–Z11 varten. Ne poltetaan VAIN alueelle (`--syva-alue`, ks. SYVÄT
+ * TASOT alempana) ja niiden rinnevarjo tulee Copernicus GLO-30:sta
+ * (`--dem`). Selainpeli ei käytä niitä: js/laattapyramidi.js rajaa
+ * luettelon tasot PELIN_SYVIN_TASO:on.
+ */
 const TASOJA = Number(valitsin('tasoja', 8));
-if (!Number.isInteger(TASOJA) || TASOJA < 1 || TASOJA > 10) {
-  console.error(`--tasoja ${TASOJA}: kokonaisluku 1…10 (tuotanto 8; 9 lisää z8:n).`);
+if (!Number.isInteger(TASOJA) || TASOJA < 1 || TASOJA > 11) {
+  console.error(`--tasoja ${TASOJA}: kokonaisluku 1…11 (tuotanto 8; 9 lisää z8:n, 11 syvät z9–z10).`);
   process.exit(1);
 }
 /*
@@ -314,7 +325,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] [--koristeet <json>] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
-    + '[--tasoja 8|9] '
+    + '[--tasoja 8|9|11] [--syva-alue lon0,lat0,lon1,lat1] [--dem <GLO-30-kansio>] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
@@ -1200,6 +1211,55 @@ if (PAIKKAUS_LAHDE && !ALUE) {
   process.exit(1);
 }
 
+/*
+ * ============ SYVÄT TASOT z9–z10 (Karttaseppä 23.9.2026) ============
+ *
+ * Natiivipeli (Cesium) lukee pallon Web Mercator -sarjan ämpäristä, ja
+ * Z9–Z11 tarvitsevat lähteekseen pyramidin z8–z10 (tee-pallolaatat
+ * lahdetaso Z − 1). z9 ja z10 ovat siksi olemassa, mutta vain ALUEELLA:
+ * koko maailman z10 olisi yli miljoona laattaa, ja 30 metrin aineistoa
+ * on toistaiseksi vain Ranskasta (ja Euroopasta latautumassa).
+ *
+ * `--syva-alue lon0,lat0,lon1,lat1` on SYVIEN TASOJEN ALA, ja se on
+ * YKSI LÄHDE kahdelle asialle:
+ *
+ *   1. työlista: tason ≥ SYVA_ALIN laatta piirretään vain, jos se
+ *      leikkaa alan (sama `alueella`-testi kuin `--alue`-rajauksella),
+ *   2. luettelo: syvän tason `laatasto` on SAMASTA testistä laskettu
+ *      bittikartta eikä levyltä luettu — luettelojobi (--vain-luettelo)
+ *      ei näe shardien levyä, ja ilman bittikarttaa peli ja eheys-
+ *      tarkistus tulkitsisivat "kaikki olemassa" (koko maailma).
+ *
+ * Miksi ei `--alue`: se on luettelossa PYRAMIDIN ala (juuritason
+ * `alue`), ja Ranskan laatikko siellä väittäisi, ettei pyramidissa ole
+ * muuta kuin Ranska. Syvä ala koskee vain syviä tasoja.
+ *
+ * Syvä taso ilman alaa on virhe: se olisi hiljainen koko maailman
+ * z10-ajo tai luettelo, joka lupaa miljoona laattaa.
+ */
+const SYVA_ALIN = 9;
+const syvaAlueTeksti = valitsin('syva-alue', null);
+const SYVA_ALUE = syvaAlueTeksti
+  ? (() => {
+    const [a, b, c, d] = syvaAlueTeksti.split(',').map(Number);
+    return {
+      lon0: Math.min(a, c), lat0: Math.min(b, d), lon1: Math.max(a, c), lat1: Math.max(b, d),
+    };
+  })()
+  : null;
+if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE) {
+  console.error(`--tasot ${TASOT.join(',')}: tasot z${SYVA_ALIN}+ poltetaan vain alueelle — `
+    + 'anna --syva-alue lon0,lat0,lon1,lat1 (esim. Ranska -5.5,41,9.8,51.5).');
+  process.exit(1);
+}
+/*
+ * DEM-KANSIO (`--dem`): Copernicus GLO-30 -ruudut
+ * (Copernicus_DSM_COG_10_N44_00_E003_00_DEM.tif …, tools/maasto/).
+ * Käytössä vain tasoilla ≥ SYVA_ALIN; matalammilla tasoilla lippu ei
+ * muuta yhtään tavua. Ks. tools/maasto/dem-ikkuna.mjs.
+ */
+const DEM_KANSIO = valitsin('dem', null);
+
 /* ------------------------------------------------------------ arkki */
 
 const moduuli = await import(LAUTA.moduuli.replace('./', `${JUURI}/`));
@@ -1596,7 +1656,7 @@ function laatanBbox(mitat, sarake, rivi) {
  * TÄSMÄLLEEN saman laatikon kuin ennen tätä muutosta — 3′-tuotannon
  * laatat pysyvät tavulleen entisinä.
  */
-function korkeudenLaatikko() {
+function korkeudenLaatikko(MARGINAALI = 0.5) {
   if (!lohkot.size) return laatikko;
   const R = PATINA ? reunusTasolle() : 0;
   let ax0 = Infinity; let ax1 = -Infinity;
@@ -1615,7 +1675,6 @@ function korkeudenLaatikko() {
     ay0 = Math.min(ay0, arkinBbox.y + ky0 / mitat.px);
     ay1 = Math.max(ay1, arkinBbox.y + (ky0 + ph + 2 * R) / mitat.px);
   }
-  const MARGINAALI = 0.5;
   return {
     lon0: Math.max(laatikko.lon0, snap(kaava.lautaLon(ax0) - MARGINAALI, true)),
     lon1: Math.min(laatikko.lon1, snap(kaava.lautaLon(ax1) + MARGINAALI, false)),
@@ -1624,13 +1683,18 @@ function korkeudenLaatikko() {
   };
 }
 
-/** Osuuko laatta pyydettyyn alueeseen? Null = koko maailma. */
-function alueella(mitat, sarake, rivi) {
-  if (!ALUE) return true;
+/**
+ * Osuuko laatta pyydettyyn alueeseen? Null = koko maailma.
+ * `alue` on oletuksena `--alue`; syvien tasojen ala (SYVA_ALUE) testataan
+ * samalla funktiolla, jotta työlista ja luettelon bittikartta ovat
+ * samaa mieltä.
+ */
+function alueella(mitat, sarake, rivi, alue = ALUE) {
+  if (!alue) return true;
   const b = laatanBbox(mitat, sarake, rivi);
   const lat1 = kaava.lautaLat(b.y);
   const lat0 = kaava.lautaLat(b.y + b.h);
-  if (lat1 < ALUE.lat0 || lat0 > ALUE.lat1) return false;
+  if (lat1 < alue.lat0 || lat0 > alue.lat1) return false;
   /*
    * PITUUSASTE ON YMPYRÄ, EI JANA. Lauta alkaa asteelta −175, joten sen
    * itälaita on numeroina lännempää kuin länsilaita; suora vertailu
@@ -1643,9 +1707,14 @@ function alueella(mitat, sarake, rivi) {
    */
   const lonA = kaava.lautaLon(b.x);
   const laatanLev = (b.w / projektio.leveys) * 360;
-  const alueenLev = ((((ALUE.lon1 - ALUE.lon0) % 360) + 360) % 360) || 360;
+  const alueenLev = ((((alue.lon1 - alue.lon0) % 360) + 360) % 360) || 360;
   const ero = (a, b2) => (((b2 - a) % 360) + 360) % 360;
-  return ero(lonA, ALUE.lon0) < laatanLev || ero(ALUE.lon0, lonA) < alueenLev;
+  return ero(lonA, alue.lon0) < laatanLev || ero(alue.lon0, lonA) < alueenLev;
+}
+
+/** Syvän tason (z ≥ SYVA_ALIN) laatta vain syvällä alalla; muut aina. */
+function syvallaAlalla(mitat, sarake, rivi) {
+  return mitat.z < SYVA_ALIN || alueella(mitat, sarake, rivi, SYVA_ALUE);
 }
 
 /* ------------------------------------------------- nostotason peite */
@@ -2259,6 +2328,19 @@ function nimiotasonPeite(mitat) {
   return joukko;
 }
 
+/** Syvän tason laatasto syvän alan geometriasta (ks. SYVÄT TASOT). */
+function syvaLaatastoBase64(mitat) {
+  const tavut = Buffer.alloc(Math.ceil((mitat.sarakkeita * mitat.riveja) / 8));
+  for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
+    for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
+      if (!syvallaAlalla(mitat, sarake, rivi)) continue;
+      const i = rivi * mitat.sarakkeita + sarake;
+      tavut[i >> 3] |= 1 << (i & 7);
+    }
+  }
+  return tavut.toString('base64');
+}
+
 function nostotasoBase64(mitat, peite) {
   const tavut = Buffer.alloc(Math.ceil((mitat.sarakkeita * mitat.riveja) / 8));
   for (const avain of peite) {
@@ -2272,6 +2354,27 @@ function nostotasoBase64(mitat, peite) {
 /* ------------------------------------------------------------ luettelo */
 
 const tasot = TASOT.map(tasonMitat);
+/*
+ * MERKKITASOT (nosto, viiva, ranta, nimiö) EIVÄT ULOTU SYVILLE TASOILLE
+ * (23.9.2026). Syvät z9–z10 ovat vain pohjaa natiivin pallosarjaa
+ * varten; merkkitasojen peitteet koko maailman z10:lle olisivat sekä
+ * raskaita laskea että valheellisia (niitä laattoja ei polteta).
+ * Ilman syviä tasoja tämä on sama lista kuin `tasot`.
+ */
+const merkkiTasot = tasot.filter((m) => m.z < SYVA_ALIN);
+/*
+ * DEM KÄYTÖSSÄ vain kun `--dem` on annettu JA ajossa on syviä tasoja;
+ * muuten ajo on tavulleen entinen (1′/3′-ruudukko).
+ */
+const DEM_KAYTOSSA = Boolean(DEM_KANSIO) && TASOT.some((z) => z >= SYVA_ALIN);
+/** DEM-ikkunan reunus asteina: varjon askel ja bilineaarinen naapuri, ei enempää. */
+const DEM_MARGINAALI = 0.02;
+/** Tason DEM-väli: pikseli pituusasteina (lauta on 360° = projektio.leveys). */
+function demValiTasolle(z) {
+  const m = tasonMitat(z);
+  return demVali((m.px * projektio.leveys) / 360);
+}
+
 const tyot = [];
 /*
  * LOHKOT, EI LAATAT. Tarvittavat laatat kerätään joukoksi ja lohkot
@@ -2314,6 +2417,7 @@ for (const mitat of tasot) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
       if ((NOSTOTASO || VIIVATASO || RANTATASO || NIMIOTASO) && !peite.has(`${sarake}:${rivi}`)) continue;
       if (!alueella(mitat, sarake, rivi)) continue;
+      if (!syvallaAlalla(mitat, sarake, rivi)) continue;
       if (SARAKKEET) {
         /*
          * Kaista on annettu syvimmän tason sarakkeina; tällä tasolla
@@ -2495,6 +2599,14 @@ if (KUIVA) {
       + `${(r.leveys * r.korkeus * 2 / 1e6).toFixed(0)} Mt Int16) `
       + `lon ${kl.lon0.toFixed(2)}..${kl.lon1.toFixed(2)} `
       + `lat ${kl.lat0.toFixed(2)}..${kl.lat1.toFixed(2)}`);
+    if (DEM_KAYTOSSA) {
+      const dl = korkeudenLaatikko(DEM_MARGINAALI);
+      const vali = demValiTasolle(TASOT[0]);
+      const w = Math.floor((dl.lon1 - dl.lon0) / vali + 1e-6) + 1;
+      const h = Math.floor((dl.lat1 - dl.lat0) / vali + 1e-6) + 1;
+      console.log(`  DEM-ikkuna      ${w} x ${h} (väli ${(vali * 3600).toFixed(3)}″, `
+        + `${(w * h * 2 / 1e6).toFixed(0)} Mt Int16)`);
+    }
   }
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
   process.exit(0);
@@ -2574,6 +2686,21 @@ if (!ILMAN_AINEISTOA) {
       + `pakota yhtenäinen ajo: --kaariminuutit ${KARKEA_KAARIMINUUTIT}.`);
     process.exit(1);
   }
+  /*
+   * SAMA SÄÄNTÖ DEM-RUUDUKOLLE: sen väli on tason pikseli (z9 3,75″,
+   * z10 1,875″), joten z9 ja z10 ovat eri ruudukot, eikä syvää ja
+   * matalaa tasoa voi ajaa samassa piirtoajossa. Polttoskripti ajaa
+   * ne eri shardeina (tools/polta-paikallisesti.sh --sarjat syva).
+   */
+  if (DEM_KAYTOSSA) {
+    const valit = new Set(TASOT.map((z) => (z >= SYVA_ALIN ? demValiTasolle(z) : 'etopo')));
+    if (valit.size > 1) {
+      console.error(`--dem --tasot ${TASOT.join(',')}: jokainen syvä taso tarvitsee oman `
+        + 'DEM-ruudukkonsa, eikä matalaa ja syvää tasoa voi ajaa yhdessä. '
+        + `Aja tasot erikseen (esim. --tasot ${SYVA_ALIN} ja --tasot ${SYVA_ALIN + 1}).`);
+      process.exit(1);
+    }
+  }
   console.log(`  aineisto        ${dataKansio}`);
   const aineistoAlkoi = Date.now();
   const korkeuslaatikko = korkeudenLaatikko();
@@ -2585,9 +2712,38 @@ if (!ILMAN_AINEISTOA) {
     palat: KORKEUSPALAT,
     harvennus: RANNIKON_HARVENNUS,
   });
+  if (DEM_KAYTOSSA) {
+    /*
+     * DEM-IKKUNA KORVAA 1′-RUUDUKON (ks. tools/maasto/dem-ikkuna.mjs).
+     * 1′-ikkuna koottiin yllä tavalliseen tapaan, koska se on varalla
+     * siellä, missä DEM-ruutua ei ole. Merimaski lasketaan uudestaan
+     * samaan tiheään ruudukkoon: maski ja korkeus ovat aina samaa
+     * ruudukkoa (harva karsinta ja ruudukon merilippu lukevat niitä
+     * rinnakkain).
+     */
+    const vali = demValiTasolle(TASOT[0]);
+    const dem = demHakemisto(DEM_KANSIO);
+    if (!dem.ruutuja) {
+      console.error(`--dem ${DEM_KANSIO}: kansiossa ei ole yhtään GLO-30-ruutua `
+        + '(Copernicus_DSM_COG_10_N44_00_E003_00_DEM.tif …).');
+      process.exit(1);
+    }
+    const karkeaKoko = `${aineisto.korkeus.w} x ${aineisto.korkeus.h}`;
+    const demAlkoi = Date.now();
+    const tihea = demIkkuna({
+      karkea: aineisto.korkeus, laatikko: korkeudenLaatikko(DEM_MARGINAALI), vali, dem,
+    });
+    dem.sulje();
+    aineisto.korkeus = tihea;
+    aineisto.meri = meriMaski(dataKansio, tihea, { laajennus: 1 });
+    console.log(`  DEM-ikkuna      ${tihea.w} x ${tihea.h} (väli ${(vali * 3600).toFixed(3)}″, `
+      + `${(tihea.grid.byteLength / 1e6).toFixed(0)} Mt, DEM ${(tihea.dem.osuus * 100).toFixed(1)} % soluista, `
+      + `${dem.ruutuja} ruutua kansiossa; 1′-varalla ${karkeaKoko}) `
+      + `${((Date.now() - demAlkoi) / 1000).toFixed(1)} s`);
+  }
   const megatavua = (aineisto.korkeus.grid.byteLength / 1e6).toFixed(0);
   console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} `
-    + `(${AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT}′, ${megatavua} Mt) `
+    + `(${DEM_KAYTOSSA ? 'DEM' : `${AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT}′`}, ${megatavua} Mt) `
     + `lon ${korkeuslaatikko.lon0.toFixed(2)}..${korkeuslaatikko.lon1.toFixed(2)} `
     + `lat ${korkeuslaatikko.lat0.toFixed(2)}..${korkeuslaatikko.lat1.toFixed(2)}`);
   console.log(`  rannikko        ${aineisto.rannikot.length} viivaa `
@@ -4001,7 +4157,7 @@ function teeLuettelo() {
      * pohjalaatoissa ei ole nostoja.
      */
     if (NOSTO_MAA) return null;
-    const omat = tasot.filter((m) => m.z >= NOSTO_ALIN);
+    const omat = merkkiTasot.filter((m) => m.z >= NOSTO_ALIN);
     if (!omat.length) return null;
     const laatastot = {};
     for (const m of omat) laatastot[m.z] = nostotasoBase64(m, nostotasonPeite(m));
@@ -4053,12 +4209,12 @@ function teeLuettelo() {
    * kanssa ei rakenna kerrosta eikä pyydä yhtään laattaa.
    */
   viivataso: (() => {
-    if (!tasot.length) return null;
+    if (!merkkiTasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, viivatasonPeite(m, VIIVAOSAT));
+    for (const m of merkkiTasot) laatastot[m.z] = nostotasoBase64(m, viivatasonPeite(m, VIIVAOSAT));
     return {
       versio: VIIVAVERSIO,
-      tasot: tasot.map((m) => m.z),
+      tasot: merkkiTasot.map((m) => m.z),
       rajat: RAJASETTI,
       piirit: PIIRIT,
       // Jokitaso (--eireitit) kirjaa reitit: false; tavallinen ajo ei
@@ -4108,9 +4264,9 @@ function teeLuettelo() {
    * uudelleenmittausta ja kohdemaan nimiöt voi piilottaa/korvata.
    */
   nimiotaso: (() => {
-    if (!NIMIOTASO || !tasot.length) return null;
+    if (!NIMIOTASO || !merkkiTasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, nimiotasonPeite(m));
+    for (const m of merkkiTasot) laatastot[m.z] = nostotasoBase64(m, nimiotasonPeite(m));
     const nimiot = {};
     const tunnus = (n) => (['kompassi', 'laiva', 'kuva'].includes(n.luokka) ? `${n.luokka}-${n.lon}-${n.lat}` : (n.luokka === 'raja' ? `raja-${n.iso ?? 'x'}` : String(n.teksti))).toLowerCase()
       .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
@@ -4120,7 +4276,7 @@ function teeLuettelo() {
       const lx = arkinBbox.x + x; const ly = arkinBbox.y + y;
       return { lon: kaava.lautaLon(lx), lat: kaava.lautaLat(ly), lx, ly };
     };
-    for (const m of tasot) {
+    for (const m of merkkiTasot) {
       for (const { nimio, ladonta } of nimiotasonLadonnat(m)) {
         const id = tunnus(nimio);
         nimiot[id] ??= {
@@ -4143,18 +4299,18 @@ function teeLuettelo() {
     }
     return {
       versio: NIMIOVERSIO,
-      tasot: tasot.map((m) => m.z),
+      tasot: merkkiTasot.map((m) => m.z),
       laatastot,
       nimiot,
     };
   })(),
   rantataso: (() => {
-    if (!(RANTATASO || RANTAVERSIO_ANNETTU) || !tasot.length) return null;
+    if (!(RANTATASO || RANTAVERSIO_ANNETTU) || !merkkiTasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, rantatasonPeite(m));
+    for (const m of merkkiTasot) laatastot[m.z] = nostotasoBase64(m, rantatasonPeite(m));
     return {
       versio: RANTAVERSIO,
-      tasot: tasot.map((m) => m.z),
+      tasot: merkkiTasot.map((m) => m.z),
       laatastot,
     };
   })(),
@@ -4220,7 +4376,7 @@ function teeLuettelo() {
    */
   nostotasot: (() => {
     if (!(NOSTOTASO && NOSTO_MAA)) return null;
-    const omat = tasot.filter((m) => m.z >= NOSTO_ALIN);
+    const omat = merkkiTasot.filter((m) => m.z >= NOSTO_ALIN);
     if (!omat.length) return null;
     const laatastot = {};
     for (const m of omat) laatastot[m.z] = nostotasoBase64(m, nostotasonPeite(m));
@@ -4356,6 +4512,19 @@ function teeLuettelo() {
         ? `ETOPO1 ${k}′ (repon tools/korkeusaineisto)`
         : `ETOPO1 ${k}′ (R2:n 10°-palat)`))
       .join(' + '),
+    /*
+     * SYVÄT TASOT DEM:STÄ (23.9.2026): mitkä tasot, millä alalla ja
+     * pakollinen lähdemaininta (Copernicus-lisenssi). 1′ on yhä varalla
+     * siellä, missä DEM-ruutua ei ole (ks. tools/maasto/dem-ikkuna.mjs).
+     */
+    ...(DEM_KANSIO && tasot.some((m) => m.z >= SYVA_ALIN) ? {
+      syvat: {
+        tasot: tasot.filter((m) => m.z >= SYVA_ALIN).map((m) => m.z),
+        alue: SYVA_ALUE,
+        aineisto: 'Copernicus GLO-30 (1″), varalla ETOPO1 1′',
+        lahdemaininta: LAHDEMAININTA,
+      },
+    } : {}),
   },
   tasot: tasot.map((m) => ({
     z: m.z,
@@ -4386,7 +4555,13 @@ function teeLuettelo() {
      * muita ei ole. Peli tulkitsee puuttuvan laataston "kaikki
      * olemassa" (js/laattapyramidi.js laattaOlemassa).
      */
-    laatasto: HARVA ? laatastoBase64(m) : null,
+    /*
+     * SYVÄT TASOT (z ≥ SYVA_ALIN): bittikartta syvän alan geometriasta
+     * (syvaLaatastoBase64) — sama testi kuin työlistalla, ks. SYVÄT
+     * TASOT. Harvan pyramidin levyluku ei koske niitä.
+     */
+    laatasto: m.z >= SYVA_ALIN ? syvaLaatastoBase64(m) : (HARVA ? laatastoBase64(m) : null),
+    ...(m.z >= SYVA_ALIN && DEM_KANSIO ? { korkeusaineisto: 'Copernicus GLO-30' } : {}),
   })),
   /*
    * ALUE kertoo, MIKÄ OSA PYRAMIDIA TÄSSÄ VERSIOSSA ON OLEMASSA.
