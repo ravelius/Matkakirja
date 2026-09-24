@@ -9,7 +9,8 @@
 //
 // Nimiö (11 px, Iowan kursiivi, pergamenttihalo) merkin oikealla puolella, tärkeillä (tarkeys ≥ 2)
 // hieman isompi. Koko kerros häivähtää Syttyminen-arvon mukaan (0 → 1, 0,7 s). Merkit näkyvät aina; karttaselitteen
-// valinta ohjaa vain karttavalojen hehkua (Natiiviseppä, web). Linssin ajan kerros on piilossa (NaytaSallittu).
+// valinta ohjaa vain karttavalojen hehkua (Natiiviseppä, web). Linssin ajan kerros on piilossa (NaytaSallittu),
+// paitsi linssinimet-tilassa (NostoKerros.LinssiNimet): merkit näkyvät ilman napautusta ja viuhkaa.
 //
 // AIHEMERKIT JA VIUHKA (web js/pallolauta/aihemerkit.js, PAATOKSET 27 ja 32): saman aiheen nostot yhdistyvät
 // yhdeksi merkiksi, kun niiden nimiölaatikot leikkaavat (vara 1 px) tai pisteet ovat sormen säteen (44 px)
@@ -35,6 +36,8 @@ namespace Matkakirja.Natiivi
         NostoKerros lahde;
         IKarttaValot valot;
         bool sallittu = true;
+        /// <summary>Linssinimet-tila: merkit näkyvät linssin aikana ilman napautusta (NostoKerros.LinssiNimet).</summary>
+        bool vainNimet;
 
         sealed class Merkki
         {
@@ -91,8 +94,17 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             var k = lahde;
-            bool nakyy = sallittu && k != null && k.Nakyvissa && juuri.panel != null;
+            // Linssin aikana merkit näkyvät, kun Natiivisepän linssinimet on päällä (web: linssikartan nimet),
+            // mutta ilman napautusta ja viuhkaa: kerros päästää kosketukset kartalle.
+            bool linssinimet = !sallittu && k != null && k.LinssiNimet;
+            bool nakyy = (sallittu || linssinimet) && k != null && k.Nakyvissa && juuri.panel != null;
             juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (linssinimet != vainNimet)
+            {
+                vainNimet = linssinimet;
+                foreach (var mk in merkit) mk.El.pickingMode = vainNimet ? PickingMode.Ignore : PickingMode.Position;
+                if (vainNimet) SuljeViuhka();
+            }
             if (!nakyy) return;
             juuri.style.opacity = Mathf.Clamp01(k.Syttyminen);
             // Merkit näkyvät aina (web fokuskohteet); karttaselitteen valinta ohjaa vain karttavalojen hehkua.
@@ -190,6 +202,7 @@ namespace Matkakirja.Natiivi
 
         void Napautus(Merkki m)
         {
+            if (vainNimet) return;
             if (m.Ryhma == null) { if (m.Id != null) { SuljeViuhka(); UiPalvelut.IlmoitaValo(m.Id); } return; }
             string avain = RyhmanAvain(m.Ryhma);
             if (avain == viuhkanAvain) { SuljeViuhka(); return; }
@@ -255,6 +268,7 @@ namespace Matkakirja.Natiivi
                 var uusi = new Merkki { El = Rakenne.El("mk-nosto-merkki", juuri) };
                 var m0 = uusi;
                 uusi.El.RegisterCallback<ClickEvent>(_ => Napautus(m0));
+                if (vainNimet) uusi.El.pickingMode = PickingMode.Ignore;
                 uusi.Nimio = Rakenne.Teksti("", "mk-nosto-merkki__nimio", uusi.El);
                 uusi.Nimio.pickingMode = PickingMode.Ignore;
                 uusi.Nimio.enableRichText = false;
