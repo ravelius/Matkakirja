@@ -160,6 +160,19 @@ export function demHakemisto(kansio, avaa = avaaGeotiff, { tunnus = '10', lru = 
       while (ti + 1 < g.tasot.length && g.pikselinAsteet(ti + 1) <= vali) ti += 1;
       return g.korkeus(lon, lat, ti);
     },
+    /*
+     * RUUDUN NÄYTTEISTIN (dem-ikkuna.mjs, 25.9.2026): sama arvo kuin
+     * `korkeus(lon, lat, vali)` jokaiselle ruudun (lat, lon) pisteelle,
+     * mutta ruutu ja overview-taso haetaan kerran. Null, jos ruutua ei
+     * ole (korkeus antaisi silloin 0 m).
+     */
+    naytteistin(lat, lon, vali) {
+      const g = ruutu(lat, lon);
+      if (!g) return null;
+      let ti = 0;
+      while (ti + 1 < g.tasot.length && g.pikselinAsteet(ti + 1) <= vali) ti += 1;
+      return (x, y) => g.korkeus(x, y, ti);
+    },
     sulje() { for (const g of auki.values()) g?.sulje(); auki.clear(); },
   };
 }
@@ -191,11 +204,14 @@ export const lahdeJarjestys = (vali, kynnys = GLO30_KYNNYS) => (vali < kynnys ? 
  */
 export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNYS }) {
   const lahteet = { glo30, glo90 };
-  const lahde = (lon, lat, vali) => {
-    const la = Math.floor(lat); const lo = Math.floor(lon);
-    for (const nimi of lahdeJarjestys(vali, kynnys)) if (lahteet[nimi]?.onRuutu(la, lo)) return nimi;
+  /* Järjestys riippuu vain välistä; sama väli toistuu jokaisella näytteellä. */
+  let viimeVali = NaN; let jarjestys = null;
+  const ruudunLahde = (la, lo, vali) => {
+    if (vali !== viimeVali) { viimeVali = vali; jarjestys = lahdeJarjestys(vali, kynnys); }
+    for (const nimi of jarjestys) if (lahteet[nimi]?.onRuutu(la, lo)) return nimi;
     return null;
   };
+  const lahde = (lon, lat, vali) => ruudunLahde(Math.floor(lat), Math.floor(lon), vali);
   return {
     ruutuja: (glo30?.ruutuja ?? 0) + (glo90?.ruutuja ?? 0),
     onRuutu: (lat, lon) => Boolean(glo30?.onRuutu(lat, lon) || glo90?.onRuutu(lat, lon)),
@@ -205,6 +221,13 @@ export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNY
     korkeus(lon, lat, vali) {
       const nimi = lahde(lon, lat, vali);
       return nimi ? lahteet[nimi].korkeus(lon, lat, vali) : 0;
+    },
+    /** Ks. demHakemisto.naytteistin: lähde valitaan ruudulle kerran. */
+    naytteistin(lat, lon, vali) {
+      const nimi = ruudunLahde(lat, lon, vali);
+      if (!nimi) return null;
+      const L = lahteet[nimi];
+      return L.naytteistin ? L.naytteistin(lat, lon, vali) : (x, y) => L.korkeus(x, y, vali);
     },
     sulje() { glo30?.sulje(); glo90?.sulje(); },
   };

@@ -104,7 +104,8 @@ export function demPaino(dem, ramppi = DEM_RAMPPI) {
       for (let dy = -1; dy <= 1; dy += 1) {
         for (let dx = -1; dx <= 1; dx += 1) {
           if (!dx && !dy) continue;
-          if (!dem.onRuutu(ilat + dy, ilon + dx)) m |= 1 << b;
+          /* Naapuri päivämääränrajan takana on ruutu −180 (tai 179). */
+          if (!dem.onRuutu(ilat + dy, kierraAste(ilon + dx))) m |= 1 << b;
           b += 1;
         }
       }
@@ -114,7 +115,7 @@ export function demPaino(dem, ramppi = DEM_RAMPPI) {
   };
   return (lon, lat) => {
     const ilat = Math.floor(lat); const ilon = Math.floor(lon);
-    const m = maski(ilat, ilon);
+    const m = maski(ilat, kierraAste(ilon));
     if (m < 0) return 0;
     if (m === 0 || ramppi <= 0) return 1;
     const kx = Math.cos((lat * Math.PI) / 180);
@@ -132,6 +133,32 @@ export function demPaino(dem, ramppi = DEM_RAMPPI) {
     }
     return smoothstep(lahin / ramppi);
   };
+}
+
+/*
+ * PÄIVÄMÄÄRÄNRAJA (koko maailman ikkuna, 25.9.2026). Lauta alkaa
+ * asteelta −175, joten koko laudan ikkuna ulottuu pituusasteelle 185,
+ * mutta DEM-ruudut ovat välillä −180…179. Ruutuhaku kiertää siksi
+ * asteen tälle välille. Välin sisällä arvoon EI kosketa (ei modulo-
+ * laskua): liukulukuinen (lon + 180) % 360 − 180 voisi siirtää
+ * näytettä viimeisen bitin verran ja muuttaa vanhojen ajojen tavuja.
+ */
+export const kierraAste = (lon) => (lon >= 180 ? lon - 360 : lon < -180 ? lon + 360 : lon);
+
+/**
+ * Ruudukon indeksit ryhmiksi, joissa `avain(i)` pysyy samana: [alku,
+ * loppu] (loppu mukaan lukien). Avain on näytteen 1°-ruutu, joten yksi
+ * ryhmä lukee yhtä DEM-ruutua.
+ */
+export function ruutuRyhmat(n, avain) {
+  const ulos = [];
+  let alku = 0; let a = n ? avain(0) : 0;
+  for (let i = 1; i < n; i += 1) {
+    const b = avain(i);
+    if (b !== a) { ulos.push([alku, i - 1]); alku = i; a = b; }
+  }
+  if (n) ulos.push([alku, n - 1]);
+  return ulos;
 }
 
 /** Catmull–Rom-painot neljälle solmulle osuudella t ∈ [0, 1). */
@@ -202,30 +229,61 @@ export function demIkkuna({
   const paino = demPaino(dem, ramppi);
   const grid = new Int16Array(w * h);
   let demSoluja = 0;
-  for (let y = 0; y < h; y += 1) {
-    const lat = lat1 - y * vali;
-    for (let x = 0; x < w; x += 1) {
-      const lon = lon0 + x * vali;
-      let v = kuutiollinenKorkeus(K, lon, lat);
-      /*
-       * MERELLÄ BILINEAARINEN: syvyysvyöhykkeet ja isobaatit luetaan
-       * korkeudesta, ja z8 piirtää ne bilineaarisesta 1′:stä. Sama
-       * arvo syvillä tasoilla pitää käyrät samoilla paikoilla tasolta
-       * toiselle (koevedos nizza-ranta-z10: kuutiollisena lenkit
-       * siirtyivät). Varjo lasketaan vain maalle, joten kuutiollista
-       * tarvitaan vain siellä.
-       */
-      const b = bilineaarinenKorkeus(K, lon, lat);
-      if (b < 0 && v < 0) v = b;
-      if (!Number.isFinite(v)) v = 0;
-      const p = paino(lon, lat);
-      if (p > 0) {
-        let d = dem.korkeus(lon, lat, vali);
-        if (!(d > 0)) d = Math.min(d, v);
-        v = p * d + (1 - p) * v;
-        demSoluja += 1;
+  /*
+   * LOHKOITTAIN, EI RIVEITTÄIN (koko maailman ikkuna 25.9.2026). Rivi
+   * kerrallaan kulkeva silmukka ylittää koko maailman rivillä satoja
+   * 1°-ruutuja, ja hakemiston LRU (kymmeniä ruutuja) avaisi saman
+   * ruudun NAS:ilta uudestaan joka rivillä: z6:lla 120 kertaa ruutua
+   * kohti. Solut käydään siksi 1°-ruutu kerrallaan (rivit ja sarakkeet
+   * ryhmiteltyinä näytteen ruudun mukaan), jolloin jokainen ruutu
+   * avataan kerran. Solun arvo lasketaan täsmälleen samoista luvuista
+   * kuin ennen (sama lon, sama lat, samat funktiot), joten ikkuna on
+   * tavulleen sama — vain järjestys muuttui.
+   *
+   * RUUDUN NÄYTTEISTIN (`dem.naytteistin`, jos hakemisto tarjoaa sen)
+   * ratkaisee ruudun, lähteen (GLO-30/GLO-90) ja overview-tason kerran
+   * lohkoa kohti; solukohtainen `dem.korkeus` tekisi saman haun
+   * merkkijonoavaimella jokaiselle maasolulle. Arvo on sama.
+   */
+  const rivit = ruutuRyhmat(h, (y) => Math.floor(lat1 - y * vali));
+  const sarakkeet = ruutuRyhmat(w, (x) => Math.floor(lon0 + x * vali));
+  for (const [y0, y1] of rivit) {
+    const ilat = Math.floor(lat1 - y0 * vali);
+    for (const [x0, x1] of sarakkeet) {
+      const ilon = kierraAste(Math.floor(lon0 + x0 * vali));
+      let nayte = null;
+      for (let y = y0; y <= y1; y += 1) {
+        const lat = lat1 - y * vali;
+        for (let x = x0; x <= x1; x += 1) {
+          const lon = lon0 + x * vali;
+          let v = kuutiollinenKorkeus(K, lon, lat);
+          /*
+           * MERELLÄ BILINEAARINEN: syvyysvyöhykkeet ja isobaatit luetaan
+           * korkeudesta, ja z8 piirtää ne bilineaarisesta 1′:stä. Sama
+           * arvo syvillä tasoilla pitää käyrät samoilla paikoilla tasolta
+           * toiselle (koevedos nizza-ranta-z10: kuutiollisena lenkit
+           * siirtyivät). Varjo lasketaan vain maalle, joten kuutiollista
+           * tarvitaan vain siellä.
+           */
+          const b = bilineaarinenKorkeus(K, lon, lat);
+          if (b < 0 && v < 0) v = b;
+          if (!Number.isFinite(v)) v = 0;
+          const lonD = kierraAste(lon);
+          const p = paino(lonD, lat);
+          if (p > 0) {
+            if (!nayte) {
+              nayte = dem.naytteistin
+                ? (dem.naytteistin(ilat, ilon, vali) ?? (() => 0))
+                : (lo, la) => dem.korkeus(lo, la, vali);
+            }
+            let d = nayte(lonD, lat);
+            if (!(d > 0)) d = Math.min(d, v);
+            v = p * d + (1 - p) * v;
+            demSoluja += 1;
+          }
+          grid[y * w + x] = Math.max(-32000, Math.min(32000, Math.round(v)));
+        }
       }
-      grid[y * w + x] = Math.max(-32000, Math.min(32000, Math.round(v)));
     }
   }
   return {
