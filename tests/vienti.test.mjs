@@ -179,6 +179,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     linssiaineisto: 8,
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
     maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
+    merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
     lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
