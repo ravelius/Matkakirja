@@ -106222,6 +106222,28 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Iditarod Trail Sled Dog Race',
         },
+        {
+          otsikko: 'Meri, joka ei enää jäädy samalla tavalla',
+          teksti: 'Nomen edustalla Beringinmeri jäätyy talvisin yhä '
+            + 'ohuemmaksi ja myöhemmin kuin isoisän aikaan, ja koko '
+            + 'Jäämeren jääpeite kutistuu vuosikymmen vuosikymmeneltä. '
+            + 'Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia — mittaushistorian kymmenenneksi '
+            + 'vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. '
+            + 'Nomelle ohuempi jää tarkoittaa pidempää purjehduskautta '
+            + 'mutta myös rajumpaa syysmyrskyjen kuluttamaa '
+            + 'rantaviivaa.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - vertical 3201 print).jpg',
+          lyhyt: 'NASA:n pystykuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion pystykuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
     {
