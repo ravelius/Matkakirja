@@ -176,6 +176,10 @@ namespace Matkakirja.Natiivi
             PeliOhjain.LinssiEstaa = () => KarttaEstetty;
             PorttiMuuttui += _ => PeliOhjain.LinssiPorttiMuuttui();
             PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
+            Linssirekisteri.Mittaa = Mittaa;
+            foreach (var id in MitattavatLinssit)
+                foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto })
+                    Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
             StartCoroutine(LataaAstronautti());
@@ -554,12 +558,13 @@ namespace Matkakirja.Natiivi
                 yield return LinssiSisalto.Hae("tiedostot/assets/data/maakayrat.json", t => teksti = t);
                 kayratHaussa = false;
                 if (teksti == null) { o.Kirjaa("vertailu: maakäyrät puuttuvat"); yield break; }
-                try
-                {
-                    v.Kayrat = Matkakirja.Linssit.Maat.MaakayratAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(teksti));
-                    o.Kirjaa($"vertailu: maakäyrät {v.Kayrat.Maat.Count} maalle");
-                }
-                catch (Exception e) { o.Kirjaa("vertailu: maakäyrät " + e.Message); }
+                // Jäsennys taustasäikeessä: pääsäikeessä 93 ms:n kehys vertailun avauksessa (ui piikit 24.9.).
+                var lataus = System.Threading.Tasks.Task.Run(() =>
+                    Matkakirja.Linssit.Maat.MaakayratAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(teksti)));
+                while (!lataus.IsCompleted) yield return null;
+                if (lataus.IsFaulted) { o.Kirjaa("vertailu: maakäyrät " + lataus.Exception?.InnerException?.Message); yield break; }
+                v.Kayrat = lataus.Result;
+                o.Kirjaa($"vertailu: maakäyrät {v.Kayrat.Maat.Count} maalle");
             }
 
             void Kirjaaja(Matkakirja.Linssit.Maat.MaatilaLinssi l)
@@ -769,12 +774,36 @@ namespace Matkakirja.Natiivi
             public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; }
         }
 
+        // ── Profilointimerkit (`ui piikit`, KehysPiikit.cs) ────────────────
+        // Nimet alkavat "Update.Linssi", jotta KehysPiikit poimii ne (suodatin ja Ensin-järjestys). Merkit
+        // luodaan käynnistyksessä: KehysPiikit ottaa seurantaan vain aloitushetkellä olemassa olevat merkit.
+
+        static readonly string[] MitattavatLinssit =
+            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "vertailu", "maatiedot", "radio", "isoisa-1873" };
+        static readonly Dictionary<(string, string), Unity.Profiling.ProfilerMarker> merkit =
+            new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
+        static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
+        static readonly Unity.Profiling.ProfilerMarker KomennotMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Komennot");
+
+        static Unity.Profiling.ProfilerMarker Merkki(string id, string vaihe)
+        {
+            if (!merkit.TryGetValue((id, vaihe), out var m))
+                merkit[(id, vaihe)] = m = new Unity.Profiling.ProfilerMarker("Update.Linssi." + id + "." + vaihe);
+            return m;
+        }
+
+        static void Mittaa(string id, string vaihe, bool alku)
+        {
+            var m = Merkki(id, vaihe);
+            if (alku) m.Begin(); else m.End();
+        }
+
         void Update()
         {
-            kerrokset.Kytke();
+            using (KytkeMerkki.Auto()) kerrokset.Kytke();
             rekisteri.Paivita();
             komentoKello -= Time.unscaledDeltaTime;
-            if (komentoKello <= 0f) { komentoKello = 0.5f; LueKomennot(); }
+            if (komentoKello <= 0f) { komentoKello = 0.5f; using (KomennotMerkki.Auto()) LueKomennot(); }
         }
 
         void OnDestroy()

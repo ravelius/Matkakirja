@@ -49,7 +49,9 @@ namespace Matkakirja.Natiivi
         {
             float alku = Time.unscaledTime;
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
-            ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = false;
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler;
+            dh.streamAudio = false;
+            dh.compressed = true; // ei mp3:n purkua pääsäikeessä (EsityksenAani, ui piikit 24.9.)
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success)
             {

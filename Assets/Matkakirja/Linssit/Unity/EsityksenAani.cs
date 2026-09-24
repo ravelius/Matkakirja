@@ -41,7 +41,12 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(string osoite)
         {
             using var p = UnityWebRequestMultimedia.GetAudioClip(osoite, AudioType.MPEG);
-            ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = false;
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler;
+            dh.streamAudio = false;
+            // Pakattuna muistiin (Compressed In Memory): muuten FMOD purkaa koko 400 s:n mp3:n
+            // pääsäikeessä (SoundManager.LoadFMODSound 208 ms iPadilla linssin avauksessa, ui piikit 24.9.)
+            // ja PCM vie ~140 Mt. Kelaus (AudioSource.time) toimii pakatullakin.
+            dh.compressed = true;
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success)
             {
