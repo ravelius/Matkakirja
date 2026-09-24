@@ -277,6 +277,17 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     return [r, { media: lista.map(url), tavuja: Math.round(mediaTavut(lista)) }];
   }));
 
+  const kaupunginMaa = new Map(JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.map((k) => [k.id, k.maa]));
+  const maamerkit = new Map();
+  if (tiedostot.has('kokoelmat/maamerkit.json')) {
+    for (const a of JSON.parse(tiedostot.get('kokoelmat/maamerkit.json')).alkiot) {
+      const iso = kaupunginMaa.get(a.kaupunki);
+      if (!iso) continue;
+      if (!maamerkit.has(iso)) maamerkit.set(iso, []);
+      maamerkit.get(iso).push(a.malli);
+    }
+  }
+
   const maat = {};
   for (const [iso, maa] of Object.entries(countryShapes)) {
     if (!maa.renkaat?.length) continue;
@@ -294,10 +305,12 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
     }
     const media = [...(jako.get(iso) ?? [])].sort();
-    const medTavut = mediaTavut(media);
+    // Skeema 1.33: maan kaupunkien 3D-maamerkit (tarkka koko kokoelmasta).
+    const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
+    const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
     maat[iso] = {
       iso2: ISO2[iso] ?? null, nimi: maa.nimi, rasteri, maasto, laattoja,
-      media: media.map(url),
+      media: [...media.map(url), ...mallit.map((m) => m.url)],
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
         yht: Math.round(rTavut + mTavut + medTavut) },
     };
