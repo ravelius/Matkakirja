@@ -3979,3 +3979,7 @@ Natiiviseppä ilmoitti build 8 -SHA:n f6de924 (tarkista 0, kaanna 248/248, linss
 ## OMISTAJA klo 15.0x: EOX-KOHTELIAISUUSVIESTIA EI LAHETETA (24.9.2026 klo 15.01)
 
 Omistaja kysyi, tarvitseeko EOX:lle lähettää viestiä. Fable: ei — CC BY 4.0 sallii noudon ja jakelun attribuutiolla, EOX sanoo itse 'use the service endpoints directly', kertanouto 9 162 laattaa on kevyt; viesti avaisi vain myyntikeskustelun (osajoukot alkaen 1 500 € alv 0). Viesti lähetetään vasta, jos nouto pysähtyy 429/503:een. Päätös 14.5x pysyy muuten ennallaan (nouto CC BY:n nojalla).
+
+## LAITETESTAAJA f6de924 (iPhone 17 -SIMI, KOMENTOAJO): LENNON AANI PASS, ☰ KAKSI RIVIA PASS, PILVIMERI JA RENKAAT PASS; VARALAATTA ESPANJA–SAHARA YHA FAIL; LOYDOS: KONE SUMEA NOUSUN LAHIKUVASSA (24.9.2026 klo 15.05)
+
+Kuvat proto-3d/lokit/build6-tarkistus-20260924/. Fable: molemmat Natiivisepälle build 9:ään (juurisyy varalaatalle, ei uusintayritystä; kone terävä, vain tausta pehmenee); build 8 -vientiä ei keskeytetä. Laitetestaaja committoi kuvat ja päivittää #3059:n. Simulaattorin kosketuslupa iPhone 17 -simille (FB234D08) puuttuu → omistaja sallii Simulator-paneelista.
