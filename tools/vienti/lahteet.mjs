@@ -66,7 +66,7 @@ export const LISAMODUULIT = [
   m('js/livia.js', ['LIVIAN_AVAUS']),
   // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
   // periaatelappu (js/ui.js tuo samat vakiot).
-  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
+  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET', 'FLIGHT_FIRST']),
   // Natiivi-UI 23.9.2026: pullan nimet maittain (js/fokustehtavat.js pullanNimi)
   // ja lehtitehtävien palkkio; hinta on saannoissa (game.js PULLA_HINTA).
   m('js/fokustehtavat.js', ['PULLA_NIMET', 'PULLA_YLEISNIMI', 'FOKUS_TEHTAVA_PALKKIO', 'FOKUS_LEHTITEHTAVAT']),
@@ -105,7 +105,7 @@ export const LISAMODUULIT = [
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),
   m('js/karttatyokalu-maakunnat.js', ['MAAKUNTIEN_NIMET', 'MAAKUNTIEN_MAAT']),
-  m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET']),
+  m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET', 'HILJENNYKSEN_SYY', 'TUNTEMATTOMAT_LAJIT']),
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
@@ -136,6 +136,11 @@ export const LISAMODUULIT = [
   m('js/linssit/satelliitti-aani.js', ['ASTRONAUTIN_HUMINA', 'ASTRONAUTIN_MUSIIKKI', 'ASTRONAUTIN_MUSIIKKI_KAYTOSSA'], 'linssi'),
   m('js/linssit/omistus.js', ['LINSSIKYNNYKSET', 'OPTIKON_HYVITYS', 'PERUSLINSSIT'], 'linssi'),
   m('js/tyohuone-kehitys-data.js', ['KAARI_PAKETIT'], 'kehittaja'),
+  // Skeema 1.27 (Natiivi-UI 24.9.2026): natiivin KOKEET-valikon Raamattu- ja Kehittäjälehti
+  // (webin työhuone). Henkilöiden sähköpostit peitetään viennissä (vie-sisalto.mjs peitaSahkopostit).
+  m('js/tyohuone-raamattu.js', ['RAAMATTU'], 'kehittaja'),
+  m('js/tyohuone-tilanne.js', ['TILANNE', 'TESTATTAVAA', 'TUOREET'], 'kehittaja'),
+  m('js/tyohuone-pelit.js', ['PELIT'], 'kehittaja'),
 ];
 
 /** Valmiit JSON-aineistot, jotka kopioidaan vientiin sellaisenaan. */

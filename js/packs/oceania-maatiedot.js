@@ -197,4 +197,51 @@ export const OCEANIA_MAATIEDOT = {
       { teksti: 'Good morning', kieli: 'englanti (virallinen kieli)', lippu: 'Flag of the United Kingdom.svg', osuus: '2 %' },
     ],
   },
+
+  // VUT (24.9.2026, Fablen hyväksymä täydennys): odotti pelkkää
+  // tervehdystä 7.9.2026 lähtien (muut luvut olivat jo valmiina) —
+  // Wiktionaryssa tai en-Wikipedian Bislama-artikkelissa ei ollut
+  // hakusanaa, mutta Fable hyväksyi 24.9.2026 Wikivoyagen Bislama-
+  // fraasisanaston (Wikimedia-lähde, CC BY-SA) toissijaiseksi
+  // lähteeksi: "Halo" on Bislaman yleistervehdys mihin kellonaikaan
+  // tahansa (https://en.wikivoyage.org/wiki/Bislama_phrasebook).
+  // Osuus: Bislamaa puhuu äidinkielenään n. neljännes väestöstä, mutta
+  // sitä käyttää toisena kielenä ja yleiskielenä suurin osa — kokonais-
+  // puhujamäärä n. 200 000/335 000 ≈ 60 % (en-Wikipedia "Bislama").
+  //
+  // Väkiluku: World Bank SP.POP.TOTL, VUT, 2025 = 335 169; sija 195
+  // suvereenin valtion joukossa (sama menetelmä kuin muualla tässä
+  // tiedostossa). Pinta-ala: World Bank AG.SRF.TOTL.K2, VUT, 2023 =
+  // 12 190 km², sija 194 suvereenilla pinta-alahavainnolla.
+  // Demokratia: V-Dem/OWID liberaalin demokratian indeksi, VUT, 2025 =
+  // 0,62. HUOM sijan nimittäjä: tämän tiedoston muut rivit käyttävät
+  // /172-nimittäjää (V-Demin kattavuus 6.9.2026), mutta V-Dem/OWID on
+  // sittemmin julkaissut lisää maita — 24.9.2026 samalla poisto-
+  // menetelmällä (aggregaatit, Hongkong, Kosovo, Somalimaa, Taiwan
+  // pois) laskettu kattavuus on 181 valtiota. Käytetty tuoreempaa,
+  // oikeaa nimittäjää /181 läpinäkyvyyden vuoksi sen sijaan että olisi
+  // pakotettu vanhentuneeseen /172:een. Keskitulo: World Bank
+  // NY.GNP.PCAP.CD, VUT, 2025 = 4 410 $/v, sija 193 suvereenilla
+  // tuoreella BKTL-Atlas-havainnolla.
+  VUT: {
+    vakiluku: '335 000',
+    vakilukuSija: '174./195',
+    pintaAla: '12 200 km²',
+    pintaAlaSija: '157./195',
+    demokratia: {
+      arvo: '0,62',
+      sija: '42./181',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~VUT',
+      selitys: 'Vanuatussa vaalit ovat aidosti moniarvoiset ja '
+        + 'kansalaisvapaudet ovat pääosin kunnossa, mutta hallitukset '
+        + 'kaatuvat toistuvasti epäluottamuslauseisiin ja puolueen '
+        + 'vaihtoihin: vuosina 2022–2023 maalla oli neljä eri '
+        + 'pääministeriä, minkä vuoksi vuoden 2024 kansanäänestyksellä '
+        + 'yritettiin rajoittaa kansanedustajien puolueloikkauksia.',
+    },
+    keskitulo: { arvo: '4 410 $/v', sija: '124./193' },
+    tervehdykset: [
+      { teksti: 'Halo', kieli: 'bislama (yleiskieli)', lippu: 'Flag of Vanuatu.svg', osuus: '60 %' },
+    ],
+  },
 };
