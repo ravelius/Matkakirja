@@ -13,7 +13,20 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2156, teksti: 'Vesistölinssin joet yhtenäisinä pallolla' },
+  { v: 2168, teksti: 'v2155: Kaupunkiliuska pysyy taas merkin korkeud… (#3014)' },
+  { v: 2167, teksti: 'N16: kuusi kaivoskaupunkia (#3026)' },
+  { v: 2166, teksti: 'N15: viisi maailmankohdetta (#3025)' },
+  { v: 2165, teksti: 'N14: viisi maailmankohdetta (#3022)' },
+  { v: 2164, teksti: 'N13: viisi maailmankohdetta (#3021)' },
+  { v: 2163, teksti: 'Ehdotusworkerin natiiviportti, hetket liuskaan (#3003)' },
+  { v: 2162, teksti: 'N12: viisi maailmankohdetta (#3020)' },
+  { v: 2161, teksti: 'N11: viisi maailmankohdetta (#3018)' },
+  { v: 2160, teksti: 'N10: viisi maailmankohdetta (#3017)' },
+  { v: 2159, teksti: 'N9: viisi maailmankohdetta (#3016)' },
+  { v: 2158, teksti: 'N8: viisi maailmankohdetta (#3015)' },
+  { v: 2157, teksti: 'N7: viisi maailmankohdetta (#3013)' },
+  { v: 2156, teksti: 'Pallon laattaosoitin poltto 2026-09-23a (#2957)' },
+  { v: 2155, teksti: 'Sisältöpaketti 1.17–1.26 natiiville (#3012)' },
   { v: 2154, teksti: 'Sisältöpaketti 1.10–1.16 natiiville (#2984)' },
   { v: 2153, teksti: 'Kohdistus hyvaksyy kuitin oman outputFormatin (#2961)' },
   { v: 2152, teksti: 'Pulu-eleet: elava kohdistus ilman kuittia (#2978)' },

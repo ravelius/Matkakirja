@@ -141,12 +141,16 @@ await sivu.addStyleTag({ content: '.fokusvirta-kortti, .fokusvirta-isokuva, .fok
 await sivu.waitForTimeout(300);
 const kaappausGL = await sivu.screenshot({ type: 'png' });
 writeFileSync(join(ULOS, `glnimiot-nimet-${NAKYMA}-paalla.png`), kaappausGL);
-await sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(false));
-await sivu.waitForTimeout(150);
+// Lepopiirto (v2109, myös automaatiossa) ei piirrä levossa kuin 4 fps:n sykkeellä:
+// pyydä piirto heti ja odota sykkeen yli, muuten kaappaukset ovat samat.
+await sivu.evaluate(() => { const ui = window.matkakirja.ui; ui.pallolautaGL().nakyvyys(false); ui.pallonInstanssi?.__piirto?.tarvitaan?.(); });
+await sivu.waitForTimeout(400);
 const kaappausIlman = await sivu.screenshot({ type: 'png' });
 writeFileSync(join(ULOS, `glnimiot-nimet-${NAKYMA}-ilman.png`), kaappausIlman);
-await sivu.evaluate(() => window.matkakirja.ui.pallolautaGL().nakyvyys(true));
-await sivu.waitForTimeout(150);
+// Lepopiirto (v2109, myös automaatiossa) ei piirrä levossa kuin 4 fps:n sykkeellä:
+// pyydä piirto heti ja odota sykkeen yli, muuten kaappaukset ovat samat.
+await sivu.evaluate(() => { const ui = window.matkakirja.ui; ui.pallolautaGL().nakyvyys(true); ui.pallonInstanssi?.__piirto?.tarvitaan?.(); });
+await sivu.waitForTimeout(400);
 // Kolmas kaappaus kerros taas näkyvissä: vain VAKAAT erot lasketaan (laatta
 // tai lepokerros voi vaihtua kaappausten välissä; se ei ole nimiön ero).
 const kaappausGL3 = await sivu.screenshot({ type: 'png' });

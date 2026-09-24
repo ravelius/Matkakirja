@@ -10,18 +10,33 @@
 # (ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8, TEAM_ID — ks. ios-testflight.yml).
 # Arvoja ei tulosteta eikä talleteta.
 #
-# Ajetaan vain käsin (workflow_dispatch), koska Unity-projekti ei ole
-# tässä gitissä eikä ajoa voi liipaista PR/push-tapahtumalla.
+# Kaksi tapaa ajaa:
+# - käsin (workflow_dispatch): Natiivisepän valmis vienti Build/<vienti_kansio>;
+# - yöllä klo 04 Suomen aikaa (schedule, 01.00 UTC): Unity-vienti proton
+#   masterista batchmodessa kansioon Build/yo ja sama arkistointi + lataus
+#   sisäiselle ryhmälle (omistaja hyväksyi 24.9.2026). Natiivisepän ehdot
+#   (vaihtoehto A): vienti ajetaan päätyökopiossa (ainoa Library), ja ajo
+#   ohitetaan, jos Unity on auki, Library-lukko on varattu, työkopio ei ole
+#   masterissa tai siinä on muutoksia (Materiaalit/ saa olla), master on
+#   jo ladattu, tai levyllä on alle 30 Gt vapaana. Viennin jälkeen
+#   ProjectSettings ja Materiaalit palautetaan,
+#   koska vienti kirjoittaa ne. Muihin Build-kansioihin ei kosketa.
 
 name: proto-3d TestFlight
 
 on:
+  schedule:
+    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       vienti_kansio:
-        description: 'Unity-viennin kansio Build/-alla (Natiiviseppä ilmoittaa uuden kansion jokaista uutta vientiä varten, esim. testflight, testflight-2)'
+        description: 'Unity-viennin kansio Build/-alla (Natiivisepän valmis vienti, esim. testflight-4)'
         type: string
         default: 'testflight'
+      vie_unitysta:
+        description: 'Tee Unity-vienti itse proton masterista kuten yöajo (kansio Build/yo, vienti_kansio ohitetaan)'
+        type: boolean
+        default: false
       bundle_id:
         description: 'Bundle id — sama App Store -tietue kuin webkuorella (fi.matkakirja.peli), natiivi korvaa kuoren siinä'
         type: string
@@ -31,7 +46,7 @@ on:
         type: string
         default: '1.0.0'
       build_numero:
-        description: 'CFBundleVersion — oltava suurempi kuin webkuoren viimeisin ASC-build. Oletus on aikaleima, joka ylittää minkä tahansa pienen juoksevan numeron; vaihda käsin jos tiedät tarkan edellisen buildin.'
+        description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
         type: string
         default: ''
       sisainen_ryhma:
@@ -54,10 +69,17 @@ jobs:
   vienti_ja_lahetys:
     name: Unity-vienti, arkistointi ja TestFlight-lähetys
     runs-on: [self-hosted, macOS, ARM64, savukkeet]
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     env:
       PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+      YOLOKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight.log
+      YOMERKKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight-viimeisin.txt
+      VIE_UNITYSTA: ${{ github.event_name == 'schedule' || inputs.vie_unitysta }}
+      VIENTI_KANSIO: ${{ (github.event_name == 'schedule' || inputs.vie_unitysta) && 'yo' || inputs.vienti_kansio }}
+      BUNDLE_ID: ${{ inputs.bundle_id || 'fi.matkakirja.peli' }}
+      VERSIO: ${{ inputs.versio || '1.0.0' }}
+      SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
 
     steps:
       - name: Onko Unity-projekti paikallaan
@@ -68,38 +90,81 @@ jobs:
             exit 1
           fi
 
-      # Unity-vienti tehdään ERIKSEEN, käsin, Natiivisepän toimesta ennen
-      # tätä ajoa (Unity-editori on yhden session hallussa, Library-lukko
-      # sallii vain yhden ajajan). Tämä työnkulku ei siis kutsu
-      # unity-vahti.sh:aa — se vain olettaa, että Build/testflight/ on jo
-      # tuore ja odottaa arkistointia.
-      - name: Onko Unity-vienti tuore
-        working-directory: ${{ env.PROJEKTI }}
-        run: |
-          set -euo pipefail
-          test -f Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj/project.pbxproj
-          test -f Build/${{ inputs.vienti_kansio }}/Info.plist
-
-      # Ajon numero (github.run_number) on aina uniikki ja kasvava — App
-      # Store Connect hylkää saman versio+build-parin kahdesti. Unity
-      # kirjoittaa CFBundleVersion-kentän literaalina exportin aikana,
-      # joten xcodebuildin CURRENT_PROJECT_VERSION-lippu (kuten
-      # ios-testflight.yml käyttää) ei riitä — asetetaan suoraan Info.plistiin.
-      - name: Aseta build-numero
-        working-directory: ${{ env.PROJEKTI }}
+      # Aikaleima buildinumeroksi: App Store Connect hylkää saman
+      # versio+build-parin kahdesti. Unity-viennissä sama numero menee
+      # MATKAKIRJA_BUILDiin, jolloin sovelluksen rakennus.txt = ASC:n numero.
+      - name: Buildinumero
         run: |
           set -euo pipefail
           build="${{ inputs.build_numero }}"
-          if [ -z "$build" ]; then
-            # Aikaleima (VVVVKKPPTTMM) ylittää minkä tahansa pienen
-            # juoksevan build-numeron, kuten webkuoren aiemmat ASC-buildit.
-            build=$(date -u +%Y%m%d%H%M)
-          fi
+          [ -n "$build" ] || build=$(date -u +%Y%m%d%H%M)
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
-          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $build" Build/${{ inputs.vienti_kansio }}/Info.plist
-          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ inputs.versio }}" Build/${{ inputs.vienti_kansio }}/Info.plist
+          echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
+
+      - name: Yöajon ohitusehdot
+        if: env.VIE_UNITYSTA == 'true'
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$YOLOKI")"
+          syy=""
+          # Vienti (~2 Gt) + arkiston DerivedData (~4 Gt) + IPA; muut sessiot
+          # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
+          vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
+          if [ "$vapaa" -lt 30 ]; then syy="levyllä vain $vapaa Gt vapaana (raja 30 Gt)"; fi
+          if pgrep -f "Unity.app/Contents/MacOS/Unity" >/dev/null; then [ -n "$syy" ] || syy="Unity on käynnissä"; fi
+          if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
+          haara=$(git rev-parse --abbrev-ref HEAD)
+          if [ -z "$syy" ] && [ "$haara" != "master" ]; then syy="työkopio on haarassa $haara, ei masterissa"; fi
+          muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
+          if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
+          master=$(git rev-parse --short master)
+          edellinen=$(cat "$YOMERKKI" 2>/dev/null || true)
+          if [ -z "$syy" ] && [ "$master" = "$edellinen" ]; then syy="master $master on jo ladattu"; fi
+          echo "PROTO_MASTER=$master" >> "$GITHUB_ENV"
+          if [ -n "$syy" ]; then
+            echo "$(date '+%Y-%m-%d %H:%M') OHITETTU: $syy" | tee -a "$YOLOKI"
+            echo "OHITA=1" >> "$GITHUB_ENV"
+            { echo "## Yöajo ohitettu"; echo; echo "$syy"; } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "$(date '+%Y-%m-%d %H:%M') ALKAA: master $master, build $BUILD_NUMERO" | tee -a "$YOLOKI"
+          fi
+
+      # Vienti kirjoittaa ProjectSettingsiin bundleVersionin, buildNumberin
+      # ja iPhoneSdkVersionin sekä koskee Materiaaleihin: palautus aina.
+      - name: Unity-vienti Build/yo
+        if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
+        working-directory: ${{ env.PROJEKTI }}
+        env:
+          MATKAKIRJA_KANSIO: Build/yo
+        run: |
+          set -uo pipefail
+          rm -rf Build/yo
+          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
+            zsh tyokalut/unity-vahti.sh tulokset/yo.log \
+            -batchmode -quit -projectPath . -buildTarget iOS \
+            -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+          tila=$?
+          git checkout -- ProjectSettings/ProjectSettings.asset Assets/Matkakirja/Materiaalit/ || echo "::warning::ProjectSettingsin tai Materiaalien palautus epäonnistui"
+          if [ $tila -ne 0 ]; then
+            echo "$(date '+%Y-%m-%d %H:%M') VIENTI KAATUI ($tila), ks. $PROJEKTI/tulokset/yo.log" | tee -a "$YOLOKI"
+            grep -E "MATKAKIRJA:|error" tulokset/yo.log | tail -20 || true
+            exit $tila
+          fi
+          grep "MATKAKIRJA: TestFlight-vienti" tulokset/yo.log || true
+
+      - name: Onko Unity-vienti paikallaan
+        if: env.OHITA != '1'
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          set -euo pipefail
+          test -f "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj/project.pbxproj"
+          test -f "Build/$VIENTI_KANSIO/Info.plist"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMERO" "Build/$VIENTI_KANSIO/Info.plist"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSIO" "Build/$VIENTI_KANSIO/Info.plist"
 
       - name: Pura App Store Connect -avain
+        if: env.OHITA != '1'
         env:
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
         run: |
@@ -125,6 +190,7 @@ jobs:
       # saattoi luoda varmenteen väliaikaiseen avainnippuun joka poistettiin
       # ajon lopussa — private key katosi vaikka varmenne jäi ASC:hen).
       - name: Diagnoosi ASC-varmenteista
+        if: env.OHITA != '1'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -179,6 +245,7 @@ jobs:
       # listalta lopuksi. Varmenteet luodaan itse ASC-API:lla (seuraava
       # vaihe), joten xcodebuildin ei tarvitse kirjoittaa oletusnippuun.
       - name: Pysyvä avainnippu
+        if: env.OHITA != '1'
         env:
           NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
         run: |
@@ -187,8 +254,10 @@ jobs:
           if [ ! -f "$nippu" ]; then
             security create-keychain -p "$NIPPU_SALASANA" "$nippu"
           fi
-          security set-keychain-settings -lut 21600 "$nippu"
+          # Avaus ensin: lukittuun nippuun set-keychain-settings kaatuu
+          # "User interaction is not allowed" (build 5, 24.9.2026).
           security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
           nykyiset=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
           security list-keychains -d user -s "$nippu" $nykyiset
           echo "Hakulista ajon ajaksi:"; security list-keychains -d user
@@ -200,6 +269,7 @@ jobs:
       # varmenne ja yksityinen avain olisivatkin avainnipussa pareittain.
       # Idempotentti: security import ei virhein jos varmenne on jo tuotu.
       - name: Apple-luottamusketju avainnippuun
+        if: env.OHITA != '1'
         run: |
           set -euo pipefail
           onnistui=0
@@ -229,11 +299,12 @@ jobs:
       # ASC:n varmenne ei pariudu avainnipun avaimeen. Mitään ei peruta
       # automaattisesti. Lokiin vain varmenne-ID:t, ei avaimia.
       - name: Varmista Distribution-identiteetti ja profiili
+        if: env.OHITA != '1'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
-          BUNDLE_ID: ${{ inputs.bundle_id }}
+          BUNDLE_ID: ${{ env.BUNDLE_ID }}
           NIPPU_SALASANA: ${{ secrets.PROTO3D_KEYCHAIN_PASSWORD }}
         run: |
           set -euo pipefail
@@ -412,6 +483,7 @@ jobs:
       # ja UnityFramework ei tue profiilia eikä Distribution-identiteettiä
       # Automatic-tilassa (ajot 23.9.2026).
       - name: Arkistoi ja allekirjoita
+        if: env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
@@ -420,7 +492,7 @@ jobs:
         run: |
           set -euo pipefail
           xcodebuild \
-            -project Build/${{ inputs.vienti_kansio }}/Unity-iPhone.xcodeproj \
+            -project "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj" \
             -scheme Unity-iPhone \
             -configuration Release \
             -destination 'generic/platform=iOS' \
@@ -434,6 +506,7 @@ jobs:
             archive
 
       - name: Vie IPA
+        if: env.OHITA != '1'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -478,6 +551,7 @@ jobs:
       # ios/fastlane/Fastfile:n rekisteroi_appi-kaistan tapaan — ei
       # automatisoitu tässä työnkulussa vielä.
       - name: Lähetä TestFlightiin
+        if: env.OHITA != '1'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -495,13 +569,13 @@ jobs:
       # ryhmään, odotus kunnes Apple on käsitellyt buildin, build ryhmään.
       # Sama skripti kuin testflight-sisainen.yml:ssä (uusinta ilman latausta).
       - uses: actions/checkout@v4
-        if: ${{ success() && inputs.sisainen_ryhma }}
+        if: success() && env.OHITA != '1' && env.SISAINEN_RYHMA == 'true'
         with:
           sparse-checkout: tools/testflight
           path: repo
 
       - name: Build sisäiselle testiryhmälle
-        if: ${{ success() && inputs.sisainen_ryhma }}
+        if: success() && env.OHITA != '1' && env.SISAINEN_RYHMA == 'true'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -509,16 +583,23 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD_NUMERO"
+          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO"
+
+      - name: Merkitse yöajon master ladatuksi
+        if: success() && env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
+        run: |
+          echo "$PROTO_MASTER" > "$YOMERKKI"
+          echo "$(date '+%Y-%m-%d %H:%M') LADATTU: master $PROTO_MASTER, build $BUILD_NUMERO" | tee -a "$YOLOKI"
 
       - name: Kerro mitä lähti
-        if: success()
+        if: success() && env.OHITA != '1'
         run: |
           {
             echo "## proto-3d lähetetty TestFlightiin"
             echo
-            echo "- Bundle id: **${{ inputs.bundle_id }}**"
-            echo "- Versio: **${{ inputs.versio }}**, build **$BUILD_NUMERO**"
+            echo "- Bundle id: **$BUNDLE_ID**"
+            echo "- Versio: **$VERSIO**, build **$BUILD_NUMERO**"
+            [ -z "${PROTO_MASTER:-}" ] || echo "- Proton master: \`$PROTO_MASTER\` (Unity-vienti Build/yo)"
             echo
             echo "Apple käsittelee latauksen omaan tahtiinsa (usein 5–30 min)."
           } >> "$GITHUB_STEP_SUMMARY"
