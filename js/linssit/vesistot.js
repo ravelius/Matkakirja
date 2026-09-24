@@ -492,7 +492,8 @@ export const LINSSI = {
 
   lahde: {
     aineisto: 'Natural Earth 10m: ne_10m_rivers_lake_centerlines ja ne_10m_lakes '
-      + '(Kaspianmeri ne_10m_ocean-aineistosta); pohjana NOAA NGDC ETOPO1',
+      + '(Kaspianmeri ne_10m_ocean-aineistosta); pohjana topografialinssin reliefi '
+      + '(NOAA NCEI ETOPO 2022 15″)',
     lisenssi: 'Public domain',
     osoite: 'https://www.naturalearthdata.com/downloads/10m-physical-vectors/',
     haettu: '2026-07-27',
