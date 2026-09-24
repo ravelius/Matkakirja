@@ -619,3 +619,7 @@ Pelikoodari 21.9.2026 ilta: GL vaihe 4 (pelikoodari-gl-nostot 57f9fd49, vaiheen 
 ## MONUMENTTIEN NYKYKUVAT: 26 RAPPEUTUNUTTA KOHDETTA KYTKETTY (9cffb842); CURTEA VECHE PAALLEKKAIN BUKARESTIN MERKIN KANSSA (21.9.2026 klo 20.07)
 
 Sisältökirjuri 21.9.2026 ilta (sisalto-monumentit-nykykuvat 9cffb842): 26 rappeutunut-kohdetta kytketty 19 maahan + ESP-pilotti: aito Commons-nykykuva R2:ssa, koordinaatit, ihme.osoite odottaa Codexin kulta-aikakuvaa samalla rakenteella. Havainnot: ROU Curtea Veche lähes päällekkäin Bukarestin kaupunkimerkin kanssa, maakartan nosto-linkki puuttuu (Karttaseppä tarkistaa sovittelun); SVK Čachtice ja UKR Kultainen portti muotoiltu harhaanjohtamatta (Báthorya ei syytetty; Kultainen portti on 1982 rekonstruktio). Testit 0 fail. Julkaisijan jonoon. Seuraava: 198 kuvatonta nostoa.
+
+## TILA: Natiiviseppä luovutus 24.9. ilta (24.9.2026 klo 15.55)
+
+Natiiviseppä luovutti klo 15.54 (konteksti 70 %): proto-master 9a5618b = build 9 viennissä; build 10 -jono ja WEB ON MALLI -merge-portti: docs/raportit/viesti-natiiviseppa-luovutus-20260924-ilta.md.
