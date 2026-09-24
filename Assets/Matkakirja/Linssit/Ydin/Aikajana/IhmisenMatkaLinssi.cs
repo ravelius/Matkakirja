@@ -4,6 +4,10 @@
 // lasketaan (sovitin ajaa laskennan taustasäikeessä ja antaa valmiin tuloksen
 // Vanat-ominaisuuteen), ja esitys alkaa, kun laskenta on valmis — webissä
 // Käynnistä-nappi odottaa samoin (odotaVirtoja). Sulkiessa kamera palaa.
+//
+// MUISTI (web aikajana.js tallennaMuisti/lueLinssimuisti/jatkaMuistista): jos edellinen sulku
+// jätti muistin, esitys tai tutkimusvaihe jatkuu siitä ilman avausta ja esittelylaatikkoa
+// (JatkuuMuistista), kun vanat ovat valmiit. Esityksen loppu aloittaa tutkimusvaiheen.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +32,24 @@ namespace Matkakirja.Linssit.Aikajana
         ILinssiYmparisto y;
         Nakyma talteen;
         List<IReadOnlyList<double[]>> vanat = new List<IReadOnlyList<double[]>>();
+        IReadOnlyList<Vana> vanaLista = Array.Empty<Vana>();
+        IReadOnlyList<Virta> virrat = Array.Empty<Virta>();
+        LinssiMuistiTila muisti;
+        bool muistiLukittu;
+
+        /// <summary>Laitteen varasto muistille (Unityssä PlayerPrefs); null = ei muistia.</summary>
+        public ILinssiVarasto Varasto;
+        /// <summary>Tutkimusvaiheen näkymä (Natiivi-UI:n napit, lappu ja pisteet); null = ei vaihetta.</summary>
+        public ITutkimuksenNakyma TutkimuksenNakyma;
+        /// <summary>Tutkimusvaihe esityksen jälkeen (null ennen loppua).</summary>
+        public Tutkimusvaihe Tutkimus { get; private set; }
+        /// <summary>
+        /// Avaus jatkaa muistista (web lueLinssimuisti): esittelylaatikkoa ei näytetä, vaan esitys
+        /// tai tutkimusvaihe jatkuu itse, kun vanat ovat valmiit.
+        /// </summary>
+        public bool JatkuuMuistista => muisti != null;
+        /// <summary>Tutkimusvaihe alkoi (Natiivi-UI kytkee kortin avauksen ja napit).</summary>
+        public event Action<Tutkimusvaihe> TutkimusAlkoi;
 
         public Esitys Esitys { get; private set; }
         public LinssiTiedot Tiedot { get; }
@@ -57,10 +79,16 @@ namespace Matkakirja.Linssit.Aikajana
         }
 
         /// <summary>Lasketut vanat (selkäranka ensin) esityksen kamerarajausta varten.</summary>
-        public void AsetaVanat(VanatTulos tulos)
+        public void AsetaVanat(VanatTulos tulos, IReadOnlyList<Virta> virrat = null)
         {
+            vanaLista = tulos.Vanat;
+            if (virrat != null) this.virrat = virrat;
             vanat = tulos.Vanat.Select(v => (IReadOnlyList<double[]>)v.Pisteet.Select(p => new[] { p.Lat, p.Lon, p.Aika }).ToList()).ToList();
-            if (Auki && Esitys != null && !Esitys.Kaynnissa && !Esitys.Paattynyt && Itsestaan) Esitys.Aloita();
+            if (Auki && Esitys != null && !Esitys.Kaynnissa && !Esitys.Paattynyt && Esitys.I < 0)
+            {
+                if (muisti != null) Jatka();
+                else if (Itsestaan) Esitys.Aloita();
+            }
         }
 
         public bool VanatValmiit => vanat.Count > 0;
@@ -73,8 +101,76 @@ namespace Matkakirja.Linssit.Aikajana
             talteen = y.Kamera;
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
-            if (VanatValmiit && Itsestaan) Esitys.Aloita();
+            muistiLukittu = false;
+            muisti = LueMuisti();
+            Esitys = UusiEsitys();
+            if (!VanatValmiit) return;
+            if (muisti != null) Jatka();
+            else if (Itsestaan) Esitys.Aloita();
+        }
+
+        Esitys UusiEsitys()
+        {
+            var e = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
+            e.Tallenna = () => TallennaMuisti();
+            e.Lopussa = AloitaTutkimus;
+            return e;
+        }
+
+        /// <summary>Web jatkaMuistista: kamera muistin paikkaan ilman liikettä, esitys siitä mihin jäätiin.</summary>
+        void Jatka()
+        {
+            var m = muisti;
+            if (m.Kamera is Nakyma k) y.AjaKamera(k, 0);
+            if (!Esitys.JatkaMuistista(m))
+            {
+                muisti = null;
+                if (Itsestaan) Esitys.Aloita();
+            }
+        }
+
+        /// <summary>Esitys päättyi (web ui.aloitaTutkimusvaihe).</summary>
+        void AloitaTutkimus()
+        {
+            if (!Auki || Tutkimus != null) return;
+            Tutkimus = new Tutkimusvaihe(aineisto, vanaLista, virrat, y, TutkimuksenNakyma, () => TallennaMuisti());
+            var m = muisti;
+            muisti = null;
+            Tutkimus.Aloita(m);
+            TutkimusAlkoi?.Invoke(Tutkimus);
+            TallennaMuisti();
+        }
+
+        /// <summary>Web lueLinssimuisti: tunnetut jaksot, nostot ja virrat.</summary>
+        LinssiMuistiTila LueMuisti()
+        {
+            if (Varasto == null || aineisto.Kertomus.Count == 0) return null;
+            var nostot = aineisto.Paikat.Concat(aineisto.Lisanostot).Select(p => p.Tunnus).Where(t => t != null).ToList();
+            return LinssiMuisti.Lue(Varasto, Tiedot.Id, aineisto.Kertomus.Select(j => j.Id).ToList(), nostot,
+                virrat.Count > 0 ? virrat.Select(v => v.Tunnus).ToList() : null);
+        }
+
+        /// <summary>
+        /// Web tallennaMuisti: vasta kun esitys on käynnistetty, ei mustassa alussa (avaus kesken ei
+        /// ole muistettava paikka), eikä lukon aikana (purku ja Aloita alusta).
+        /// </summary>
+        public bool TallennaMuisti()
+        {
+            if (Varasto == null || muistiLukittu || Esitys == null || aineisto.Kertomus.Count == 0) return false;
+            if (Esitys.I < 0 && !Esitys.Paattynyt) return false;
+            if (Esitys.MustaPaalla && !Esitys.Paattynyt) return false;
+            var jakso = Esitys.I >= 0 && Esitys.I < aineisto.Kertomus.Count ? aineisto.Kertomus[Esitys.I].Id : null;
+            var k = y.Kamera;
+            return LinssiMuisti.Tallenna(Varasto, Tiedot.Id, new LinssiMuistiTila
+            {
+                Vaihe = Esitys.Paattynyt || Tutkimus != null ? "tutkimus" : "esitys",
+                Jakso = jakso,
+                Kulunut = Esitys.Kulunut,
+                PitoMin = double.IsFinite(Esitys.PitoMin) ? Math.Round(Esitys.PitoMin) : (double?)null,
+                Kamera = double.IsFinite(k.Lat) && k.Korkeus > 0 ? new Nakyma(k.Lat, k.Lon, k.Korkeus) : (Nakyma?)null,
+                Kortti = Tutkimus?.Kortti,
+                Virta = Tutkimus?.Valittu,
+            });
         }
 
         /// <summary>Kaaren oma raita (web ihmisen-matka.js aikajana.musiikki).</summary>
@@ -90,15 +186,20 @@ namespace Matkakirja.Linssit.Aikajana
 
         /// <summary>
         /// Valikon "Aloita alusta" (web aikajana.js aloitaAlusta kertomuskaarella: muisti pois ja
-        /// ajo uudestaan samalla linssillä). Esitys puretaan ja aloitetaan alusta; kamera palaa
-        /// linssin sulkiessa yhä sinne, mistä linssi alun perin avattiin. Muistia ei natiivissa
-        /// vielä ole (inventaario: tutkimusvaihe ja muisti porttaamatta).
+        /// ajo uudestaan samalla linssillä). Esitys ja tutkimusvaihe puretaan ja aloitetaan alusta;
+        /// kamera palaa linssin sulkiessa yhä sinne, mistä linssi alun perin avattiin.
         /// </summary>
         public bool AloitaAlusta()
         {
             if (!Auki) return false;
+            muistiLukittu = true;
+            LinssiMuisti.Tyhjenna(Varasto, Tiedot.Id);
+            muisti = null;
+            Tutkimus?.Pura();
+            Tutkimus = null;
             Esitys?.Pura();
-            Esitys = new Esitys(aineisto.Kertomus, aineisto.Kohteet, leimat, () => vanat, y, nakyma, aani) { MusiikkiLaji = MusiikkiLaji };
+            Esitys = UusiEsitys();
+            muistiLukittu = false;
             if (VanatValmiit && Itsestaan) Esitys.Aloita();
             return true;
         }
@@ -149,7 +250,14 @@ namespace Matkakirja.Linssit.Aikajana
         public void Sulje()
         {
             if (!Auki) return;
+            // Muisti talteen ennen purkua ja lukkoon: kortin ja tutkimusvaiheen purku kirjoittaisi
+            // muuten "ei avointa korttia" juuri tallennetun tilan päälle (web pura).
+            TallennaMuisti();
+            muistiLukittu = true;
             Auki = false;
+            muisti = null;
+            Tutkimus?.Pura();
+            Tutkimus = null;
             Esitys?.Pura();
             Esitys = null;
             y.Pelikerrokset(true);

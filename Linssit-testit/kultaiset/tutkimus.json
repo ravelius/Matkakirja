@@ -1,0 +1,241 @@
+{
+ "nostot": [
+  {
+   "tunnus": "jebel-irhoud",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "omo-kibish",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "pinnacle-point",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "skhul-qafzeh",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "blombos",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "al-wusta",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "lida-ajer",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "madjedbebe",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "denisova",
+   "virta": "siperia"
+  },
+  {
+   "tunnus": "bacho-kiro",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "lake-mungo",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "tianyuan",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "niah",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "chauvet",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "yana",
+   "virta": "siperia"
+  },
+  {
+   "tunnus": "white-sands",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "beringia",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "monte-verde",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "lapita",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "aotearoa",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "toba",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "sunda",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "sahul",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "wallacea",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "flores",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "sulawesi-taide",
+   "virta": "paavirta"
+  },
+  {
+   "tunnus": "ust-ishim",
+   "virta": "siperia"
+  },
+  {
+   "tunnus": "kostenki",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "sungir",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "dolni-vestonice",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "malta-poika",
+   "virta": "siperia"
+  },
+  {
+   "tunnus": "lascaux",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "bluefish",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "paisley",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "clovis",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "doggerland",
+   "virta": "eurooppa"
+  },
+  {
+   "tunnus": "teouma",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "madagaskar",
+   "virta": "tyynimeri"
+  },
+  {
+   "tunnus": "saqqaq",
+   "virta": "amerikat"
+  },
+  {
+   "tunnus": "rapa-nui",
+   "virta": "tyynimeri"
+  }
+ ],
+ "virrat": [
+  {
+   "tunnus": "paavirta",
+   "nimi": "Päävirta",
+   "yhteenveto": "Ensimmäinen ja pisin virta: Afrikasta Punaisenmeren kapeikon yli Arabiaan ja siitä Intian rannikkoa pitkin itään. Sunda oli silloin kuivaa maata, mutta viimeinen vesiväli Australiaan piti ylittää veneellä — se on ihmisen ensimmäinen merimatka. Sama virta kääntyi myös pohjoiseen Itä-Aasiaan ja Japaniin.",
+   "rintama": "#FFB347",
+   "pisteita": 400,
+   "rajaus": {
+    "lat": 7.5,
+    "lon": 67.25,
+    "leveysAst": 152,
+    "korkeusAst": 82.5
+   },
+   "leveys046": 6282.666666666667,
+   "leveys16": 6282.666666666667
+  },
+  {
+   "tunnus": "eurooppa",
+   "nimi": "Eurooppa",
+   "yhteenveto": "Eurooppaan tultiin myöhään ja idästä, Balkanin kautta, kun neandertalilaiset asuivat siellä yhä. Jää piti Pohjolan tyhjänä kymmeniätuhansia vuosia, ja vasta sen väistyessä väri nousee Fennoskandiaan ja Brittein saarille. Luolataide, ompeluneula ja mammutinluinen maja kuuluvat tähän vanaan.",
+   "rintama": "#7FAAFF",
+   "pisteita": 76,
+   "rajaus": {
+    "lat": 52.344,
+    "lon": 9,
+    "leveysAst": 36.5,
+    "korkeusAst": 30.811999999999998
+   },
+   "leveys046": 1508.6666666666667,
+   "leveys16": 2037.7002666666665
+  },
+  {
+   "tunnus": "siperia",
+   "nimi": "Siperia",
+   "yhteenveto": "Altailta erkanee haara, joka kulkee kylmään: Siperian arot, jokivarret ja lopulta napapiirin pohjoispuoli. Täällä opittiin se, mitä ilman Amerikkaan ei olisi päässyt — lämmin vaate, tuli puuttomassa maassa ja suurriistan metsästys. Arktinen rannikko aukeaa vasta ilmaston lauhtuessa, ja siitä matka jatkuu itään.",
+   "rintama": "#9BE8E0",
+   "pisteita": 76,
+   "rajaus": {
+    "lat": 60.25,
+    "lon": 135.906,
+    "leveysAst": 105.31200000000001,
+    "korkeusAst": 21
+   },
+   "leveys046": 4352.896000000001,
+   "leveys16": 4352.896000000001
+  },
+  {
+   "tunnus": "amerikat",
+   "nimi": "Amerikat",
+   "yhteenveto": "Beringian maasilta oli kuivaa maata kymmeniätuhansia vuosia, ja sen itäpäässä väki odotti jään väistymistä. Kun rannikko aukesi, matka Alaskasta Chileen kesti vain vuosisatoja: se on koko kertomuksen nopein liike. Väri liukuu Siperian sinivihreästä vihreään, koska väestö eriytyi omakseen matkan aikana.",
+   "rintama": "#8CE38F",
+   "pisteita": 388,
+   "rajaus": {
+    "lat": 14.5,
+    "lon": -101.844,
+    "leveysAst": 133.438,
+    "korkeusAst": 112.5
+   },
+   "leveys046": 5515.437333333333,
+   "leveys16": 7440.000000000002
+  },
+  {
+   "tunnus": "tyynimeri",
+   "nimi": "Tyynimeri",
+   "yhteenveto": "Viimeinen virta ei kävellyt vaan purjehti. Taiwanilta lähtenyt kansa vei saviastiansa ja kanoottinsa saarelta saarelle, ensin Lapita-vyöhykkeelle ja pitkän tauon jälkeen Polynesian äärimmäisiin kolkkiin. Sama merenkulku vei myös lännelle: Madagaskarille purjehdittiin Borneosta Afrikan rannikolle.",
+   "rintama": "#FF9AD0",
+   "pisteita": 34,
+   "rajaus": {
+    "lat": -9,
+    "lon": 150.075,
+    "leveysAst": 201.15,
+    "korkeusAst": 65
+   },
+   "leveys046": 8314.2,
+   "leveys16": 8314.2
+  }
+ ]
+}
