@@ -106788,7 +106788,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Isoisän matkavuonna alkanut ylitys',
           teksti:
-            'Samana vuonna 1873, kun isoisä kirjoitti matkapäiväkirjaansa, Britannian maantieteellinen seura lähetti luutnantti Verney Lovett Cameronin Afrikkaan avuksi Livingstonelle. Matkalla Cameron sai tiedon, että Livingstone oli jo kuollut, ja jatkoi silti yksin mantereen halki: Tanganjika-järveltä Kongon ja Sambesin vedenjakajaa pitkin kohti länsirannikkoa. Marraskuun 7. päivänä 1875 hän saapui Atlantin rannalle Benguelan lähellä Angolassa – ensimmäisenä eurooppalaisena, joka oli ylittänyt koko päiväntasaajan Afrikan mereltä merelle.',
+            'Samana vuonna 1873, kun isoisä kirjoitti matkapäiväkirjaansa, Britannian maantieteellinen seura lähetti luutnantti Verney Lovett Cameronin Afrikkaan avuksi Livingstonelle. Matkalla Cameron sai tiedon, että Livingstone oli jo kuollut, ja jatkoi silti yksin mantereen halki: Tanganjika-järveltä Kongon ja Sambesin vedenjakajaa pitkin kohti länsirannikkoa. Marraskuun 28. päivänä 1875 hän saapui Atlantin rannalle Benguelan lähellä Angolassa – ensimmäisenä eurooppalaisena, joka oli ylittänyt koko päiväntasaajan Afrikan mereltä merelle.',
           tiedosto: 'Tanganjika-Loanda.JPG',
           lyhyt: 'Vuoden 1876 kartta Cameronin reitistä Tanganjika-järveltä Angolan rannikolle.',
           selite:
