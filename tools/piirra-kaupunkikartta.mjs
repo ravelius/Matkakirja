@@ -65,6 +65,12 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  santarem: {
+    // Orla de Santarém (-2.4179/-54.7172, vesien kohtaamisen näköalapaikka)
+    // ja Praça Tiradentes (-2.4194/-54.7235, vanha kaupunginosa) ovat n.
+    // 0,7 km päässä toisistaan (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705 },
+  },
   berliini: {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
