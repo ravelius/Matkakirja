@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2204, teksti: 'Kohdekartta: Geraldton (#3082)' },
   { v: 2203, teksti: 'Kohdekartta: Mount Isa (#3080)' },
   { v: 2202, teksti: 'Sää: Appalakit, Churchill, Karthago, Sierra Leo… (#3053)' },
   { v: 2201, teksti: 'Sää: Angola, Kap Horn, Namib, Norfolk ja Robins… (#3052)' },
