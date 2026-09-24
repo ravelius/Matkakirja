@@ -1706,6 +1706,26 @@
     letter-spacing: 23.53px; /* web 4px */
 }
 
+/* Web @media (max-width: 700px): juliste 1,71 rem = 27,36 px; nimi 1,42 em, yla min(0,86 em, 4,4vw), ala min(0,8 em, 4vw);
+ * harvennus em/100 (0,18 / 0,14 / 0,1 em) ja text-indent samalla määrällä (keskitys). 4vw iPhonella 402 → 16,08. */
+.mk-juliste--kapea .mk-juliste__nimi {
+    font-size: 38.85px;
+    letter-spacing: 18px; /* web 0.18em */
+    padding-left: 7px;
+}
+
+.mk-juliste--kapea .mk-juliste__yla {
+    font-size: 17.69px;
+    letter-spacing: 14px; /* web 0.14em */
+    padding-left: 2.5px;
+}
+
+.mk-juliste--kapea .mk-juliste__ala {
+    font-size: 16.08px;
+    letter-spacing: 10px; /* web 0.1em */
+    padding-left: 1.6px;
+}
+
 .mk-juliste__osa {
     margin-top: 6px;
     font-size: 13px;
