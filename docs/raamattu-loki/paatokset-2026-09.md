@@ -4795,3 +4795,7 @@ Omistajan kuva webin Pariisi-kortista (docs/raportit/kaappaukset/omistaja-202609
 ## LINSSIKATALOGIN ESITTELYSIVU MAINISSA v2209 (#3128, 53e8fb02f, TESTIT 4267/0), pages.yml KOPIOI linssikatalogi-data.js; SISALTOJUNAT 10.03 JA 20.03; BUILD → TF ORDINAALI 12; ULKOASUKORJAUKSET JATKO-PR:NA. OMISTAJA klo 00.1x: LOYDOS 50 NOSTOJEN ASEMOINTI KARTALLA TARKASTI WEBIN MUKAAN; LOYDOS 51 MAALEHDEN TEKSTI VIERITTYY TAHMEASTI NATIIVISSA (25.9.2026 klo 00.16)
 
 Omistaja: 'Toinen tärkeä parity on nostojen asemointi tarkasti kopioiden. Nyt muuten maalehden teksti vierittyy todella tahmeasti natiivissa.' Löydös 50 → Natiivi-UI (nostomerkkien paikat, koot ja tyyppimerkit kartalla mitattuna webistä, kuvaparit Ranska/Kreikka); löydös 51 → Natiivi-UI (maalehden vieritys: UITK ScrollView -inertia ja ruudunpäivitys, mittaus iPadilla vs Safari; todennäköisesti raskas asettelu tai kuvien dekoodaus vierityksen aikana).
+
+## LOYDOS 49 TARKENNUS (OMISTAJA klo 00.2x): EI AANIA VAIKKA MYKISTYS EI OLE PAALLA → PELIKOODARI TUTKII KOKO LAITEPOLUN ETUSIJALLA (25.9.2026 klo 00.18)
+
+Omistaja: 'Ei kuulu ääniä vaikka ei mykistystä.' Pelikoodarille: äänet-asetusten oletus, efektien ja luentojen lataus ämpäristä TestFlight-buildissa (App Transport Security), AVAudioEngine-käynnistys ensimmäisen kosketuksen jälkeen, session aktivointi, Unityn Audio-asetus; mittaus AVAudioEngine-tasosta, raportti 8 riviä; build 12:een.
