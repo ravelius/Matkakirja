@@ -75,10 +75,11 @@ namespace Matkakirja.Linssit.Radio
         /// <summary>Lentoestevalojen korkeudet osuutena maston korkeudesta.</summary>
         public static IReadOnlyList<double> Valotasot(MastoKoko k) => k switch
         {
-            MastoKoko.Iso => new[] { 0.36, 0.68, 1.0 },
-            MastoKoko.Keski => new[] { 0.5, 1.0 },
-            _ => new[] { 1.0 },
+            MastoKoko.Iso => ValotIso,
+            MastoKoko.Keski => ValotKeski,
+            _ => ValotPieni,
         };
+        static readonly double[] ValotIso = { 0.36, 0.68, 1.0 }, ValotKeski = { 0.5, 1.0 }, ValotPieni = { 1.0 };
 
         /// <summary>Maston korkeus maailmassa (m): c × kameran korkeus^0,85 (koko ruudulla kasvaa hieman lähelle mentäessä).</summary>
         public static double KorkeusM(MastoKoko k, double kameranKorkeusM)
@@ -127,9 +128,12 @@ namespace Matkakirja.Linssit.Radio
         /// Näkyvien renkaiden osuudet säteestä (0…1) hetkellä s lukituksesta; tyhjä ennen lukitusta.
         /// Kasvu käyrällä Nousu. Alfa = RenkaanAlfa × (1 − osuus).
         /// </summary>
-        public static List<double> Renkaat(double sLukosta)
+        public static List<double> Renkaat(double sLukosta) => Renkaat(sLukosta, new List<double>());
+
+        /// <summary>Sama annettuun listaan (joka kehys ilman uutta listaa); lista tyhjennetään ensin.</summary>
+        public static List<double> Renkaat(double sLukosta, List<double> o)
         {
-            var o = new List<double>();
+            o.Clear();
             if (sLukosta < 0) return o;
             int uusin = (int)Math.Floor(sLukosta / RenkaanVali);
             for (int i = uusin; i >= 0; i--)

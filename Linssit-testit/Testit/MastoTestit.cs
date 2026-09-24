@@ -122,6 +122,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(118, m.Lista.Count, "masto per radiokaupunki");
             Oleta.Tosi(m.Lista.Count(x => x.Kanava) > 80, "kanavalliset");
             Oleta.Sama(40.0, y.Ajo.Value.Kallistus, "avaus kallistaa 40°");
+            Oleta.Sama((double?)40.0, y.AjonKallistus, "kallistus välitetään kamera-ajolle");
             void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
             Aja(0.75);
             Oleta.Tosi(m.H > 0.3 && m.H < 0.8, "hämärä puolivälissä: " + m.H);
@@ -157,6 +158,7 @@ namespace Matkakirja.Linssit.Testit
             l.Sulje();
             Oleta.Sama(null, m.Lista, "mastot pois");
             Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
+            Oleta.Sama((double?)0.0, y.AjonKallistus, "palautus välitetään");
         }
     }
 }

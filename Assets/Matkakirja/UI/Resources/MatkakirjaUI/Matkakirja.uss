@@ -419,6 +419,13 @@
     background-color: rgba(239, 220, 180, 0.82);
 }
 
+/* Löydös 44: iPhonen matala palkki (Ylapalkki.Matala): ruskea tausta, pilleri ja ☰ saaren rivillä, ei logoa.
+ * Pilleri ja napit webin iPhone-mitoin (.mk-ylapalkki--puhelin); pilleri ei ulotu saaren alle. */
+.mk-ylapalkki--matala .mk-pilleri {
+    margin-left: 0;
+    overflow: hidden;
+}
+
 /* --- hetkellinen viesti (.event-toast) ----------------------------------- */
 
 .mk-ilmoitus {

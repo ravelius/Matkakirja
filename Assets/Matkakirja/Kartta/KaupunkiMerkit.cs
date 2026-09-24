@@ -124,6 +124,27 @@ namespace Matkakirja
             return m?.kaupunki.maa;
         }
 
+        /// <summary>Kaupungin pintakorkeus paketista (m, ennen liioittelua) tai null (RadioMastot: maston juuri).</summary>
+        public double? PintaKorkeus(string id)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            return m?.kaupunki.korkeus;
+        }
+
+        /// <summary>Kaupungin paikka (RadioMastot-koe); false, jos kaupunkia ei ole.</summary>
+        public bool Paikka(string id, out double lat, out double lon)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            lat = m?.kaupunki.lat ?? 0; lon = m?.kaupunki.lon ?? 0;
+            return m != null;
+        }
+
+        /// <summary>Kaikki kaupungit merkkijärjestyksessä (testikomennot, esim. "mastot koe").</summary>
+        public IEnumerable<Sisalto.Kaupunki> Kaupungit()
+        {
+            foreach (var m in merkit) yield return m.kaupunki;
+        }
+
         /// <summary>Lähimmän kaupungin id annetusta pisteestä (enintään maxAste asteen päässä), muuten null.</summary>
         public string LahinId(double lat, double lon, double maxAste = 0.5)
         {

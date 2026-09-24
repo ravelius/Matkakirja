@@ -804,8 +804,10 @@ namespace Matkakirja
         /// kohdeajo. null = verkkopelin siirtoajonPehmennys (ramppi 0,3).
         /// </summary>
         /// <param name="yliKaton">Kohde saa olla loitonnuksen katon yläpuolella (linssien avaruusajot, Linssiseppä 24.9.).</param>
+        /// <param name="kallistukseen">Kallistus (°) ajon lopussa samalla pehmennyksellä; null = pelaajan kallistus säilyy
+        /// (radion avaus 40°, radiouudistus build 12).</param>
         public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis, Func<double, double> pehmennys,
-            bool yliKaton = false)
+            bool yliKaton = false, double? kallistukseen = null)
         {
             kosketettu = true;
             liuku = 0;
@@ -828,6 +830,8 @@ namespace Matkakirja
                 nousu = nousu,
                 valmis = valmis,
                 pehmennys = pehmennys,
+                kallistusAlku = kallistus,
+                kallistukseen = kallistukseen.HasValue ? math.clamp(kallistukseen.Value, 0, 85) : (double?)null,
             };
         }
 
