@@ -4103,3 +4103,7 @@ Kuvapari proto-3d/lokit/pariteetti-b9/kuvapari-vihje-iphone.jpg; pulun napautus 
 ## KARTTASEPPA: SATELLIITTIERA VALMIS AMPARISSA (julisteet/pallo/satelliitti/2026-09-24/) (24.9.2026 klo 15.48)
 
 bmng/ (topo) ja bmng-bathy/ 21 845 laattaa kumpikin; s2/ (kaupunkikohtainen värisovitus) ja s2-alkup/ 9 162 kumpikin; omat laatat.json, määrät tarkistettu. EOX-nouto ilman rajoitusvastauksia: 9 162 pyyntöä 39 min, ≤ 4/s. Omistaja valitsee iPadilla meren (topo/bathy) ja S2-sävyn (sovitettu/alkuperäinen), hävinneet poistetaan ämpäristä ja NAS:ista. Polut ja attribuutiot Natiivisepällä (kytkee lennon pintaan, vertailukuvat Fablelle). Huntu Z3–Z4 palautettu. Karttaseppä seuraavaksi #3054:n ristiriita, E28 klo 22.
+
+## SISALTOKIRJURI: KOHDEKARTAT ERA 1/3 VALMIS (#3075, #3080, #3082, #3083, #3084); O7-PR:T #2966/#2972 SULJETTU (24.9.2026 klo 15.50)
+
+Kalgoorlie, Mount Isa, Geraldton, Broome, Porto Velho; piste.teksti-polku, pisteet maalla, testit 0 fail. Löydös: Mount Isan Lake Moondarra ~18 km kaupungista (nosto liioittelee) → City Lookout, kommentissa. #2966/#2972 suljettu, kaupungit jo mainissa N10–N15. Jatkaa: Santarém, João Pessoa, Macapá, Cayenne, Kimberley.
