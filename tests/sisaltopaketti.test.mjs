@@ -1190,3 +1190,19 @@ test('1.x ja 2.0: sama sisältö (Fablen pyyntö 24.9.2026)', async () => {
     assert.equal(t2.get(polku), tag(tiedostot.get(polku)), polku);
   }
 });
+
+test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari #3057)', async () => {
+  const { existsSync } = await import('node:fs');
+  const { INTRO_TEXT, FLIGHT_FIRST } = await import('../js/ui-tekstit.js');
+  const l = new Map(JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot.map((a) => [a.id, a]));
+  for (const [id, teksti, tiedosto] of [['intro', INTRO_TEXT, 'intro-puhe'], ['lento-alku', FLIGHT_FIRST.join(' '), 'puhe-lento-alku']]) {
+    const a = l.get(id);
+    assert.equal(a.teksti, teksti, id);
+    assert.equal(a.tekstiSha256, createHash('sha256').update(teksti).digest('hex'), id);
+    const repo = new URL(`../assets/aikaleimat/${tiedosto}.aikaleimat.json`, import.meta.url);
+    if (existsSync(repo)) {
+      assert.equal(a.aikaleimaTiedosto, `tiedostot/assets/aikaleimat/${tiedosto}.aikaleimat.json`, id);
+      assert.ok(tiedostot.has(a.aikaleimaTiedosto), `${id}: aikaleimat paketissa`);
+    }
+  }
+});
