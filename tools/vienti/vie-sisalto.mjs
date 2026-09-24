@@ -170,8 +170,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        -rajat): renkaat = kaikki admin-0-renkaat, muutRenkaat = [].
  *   1.35 maat.fokuspohja = webin FOKUS_POHJAT (bbox ja rajaus asteina ja laudalla):
  *        nostotaso ja kameran rajaus kuten webissä (Natiiviseppä).
+ *   1.36 kokoelma merinimet (Linssiseppä, build 11): webin nimiötason meret
+ *        (nimisto-1873 luokka meri) nimi, lat, lon, kulma, kaari, tasot, lahde,
+ *        lisenssi; juuren tyyli = webin piirto (tools/vienti/merinimet.mjs).
  */
-export const SKEEMAVERSIO_TARKKA = '1.35';
+export const SKEEMAVERSIO_TARKKA = '1.36';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

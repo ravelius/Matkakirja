@@ -1243,3 +1243,29 @@ test('skeema 1.35: maat.fokuspohja = webin FOKUS_POHJAT', async () => {
   const fra = maat.get('FRA').fokuspohja.bbox;
   assert.ok(fra[0] > -20 && fra[2] < 25 && fra[1] > 30 && fra[3] < 60, `FRA ${fra}`);
 });
+
+test('skeema 1.36: merinimet kuten webin nimiötasolla (Linssiseppä)', async () => {
+  const { NIMISTO_1873 } = await import('../js/packs/nimisto-1873.js');
+  const W = await import('../tools/fokuskartta/maailmapiirto.js');
+  const k = JSON.parse(tiedostot.get('kokoelmat/merinimet.json'));
+  const lahde = NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva'));
+  assert.equal(k.alkiot.length, lahde.length);
+  assert.ok(k.alkiot.length >= 29);
+  for (const [i, r] of k.alkiot.entries()) {
+    assert.equal(r.nimi, lahde[i].teksti);
+    assert.equal(r.lat, lahde[i].lat);
+    assert.equal(r.lon, lahde[i].lon);
+    assert.match(r.id, /^[a-z0-9-]+$/);
+    assert.equal(typeof r.kulma, 'number');
+    assert.equal(r.kaari, null);
+    assert.deepEqual(r.tasot, [4, 5, 6, 7, 8]);
+    assert.ok(r.lahde && r.lisenssi);
+  }
+  assert.equal(new Set(k.alkiot.map((r) => r.id)).size, k.alkiot.length);
+  assert.ok(k.alkiot.some((r) => r.id === 'englannin-kanaali'));
+  assert.equal(k.tyyli.harvennusEm, W.NIMION_HARVENNUS_EM);
+  assert.equal(k.tyyli.vari, W.NIMION_VARIT.meri);
+  assert.equal(k.tyyli.fontti, W.NIMION_FONTTI);
+  assert.deepEqual(k.tyyli.kirjainkorkeusPx, Object.fromEntries(Object.entries(W.NIMION_KOOT.meri).map(([z, v]) => [z, v])));
+  assert.equal(k.tyyli.versaali, true);
+});
