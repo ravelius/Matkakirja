@@ -441,7 +441,7 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | Pulun "Tallenna juttuun" (kehittäjän poiminta) | pollo.js:5230, pollopoiminnat.js | PuluChat.PoimintaRivi + UI/Pulu/PoimintaVarasto.cs (laite + kanava), omat pillerit, "Poista laitteelta" / "Pyydä poistoa paketista" | KOKEET: on (master) | NUI |
 | Pulun kysymysehdotukset heti nykyiselle näkymälle | index.html:158 (vain kommentti), pollo.js polloGeneroiEhdotukset | – | ei tarvita (webin nappi poistettu, funktiolla ei kutsujaa) | NUI |
 | Poimintavienti "Kopioi lohko" / "Tyhjennä" | lehti.js piirraPoimintavienti | Tyohuone.Poimintavienti (Tilannelehden Pöllöpoiminnat-sivu, leikepöytä) | KOKEET: on (master) | NUI |
-| UI-, peli- ja linssikomennot (Documents/*-komento.txt) | – | UiKomennot.cs, PeliKomennot.cs, LinssiKomennot.cs | ei pelaajalle; osan (nosto, kysymys, huipennus, offline-demo) voi nostaa KOKEET-riveiksi | NUI, PK, LS |
+| UI-, peli- ja linssikomennot (Documents/*-komento.txt) | – | UiKomennot.cs, PeliKomennot.cs, LinssiKomennot.cs | ei tarvita (Fable 24.9.: testiautomaation rajapinta, ei pelin toiminto; KOKEET-valikkoon vain webin koeliput ja mittarit) | NUI, PK, LS |
 
 ---
 
@@ -572,15 +572,15 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
-| Natiivi-UI | 197 | 1 | 0 | 1 | 4 |
+| Natiivi-UI | 197 | 1 | 0 | 0 | 5 |
 | Pelikoodari | 1 | 6 | 5 | 5 | – |
 | Natiiviseppä | – | 2 | 4 | 5 | – |
 | Linssiseppä | 5 | – | 0 | – | – |
 | Siirtoseppä-data | 1 | – | – | – | – |
 | (ei omistajaa) | – | – | – | 2 | 12 |
-| **Yhteensä** | **204** | **9** | **9** | **13** | **16** |
+| **Yhteensä** | **204** | **9** | **9** | **12** | **17** |
 
-Natiivi-UI:n ainoa osittainen on Kehittäjälehti (Tilastot odottaa Siirtosepän vientiä, Lukijaääni on PK:n säädin); jäljellä yksi KOKEET-rivi (testikomennot).
+Natiivi-UI:n ainoa osittainen on Kehittäjälehti (Tilastot odottaa Siirtosepän vientiä, Lukijaääni on PK:n säädin); KOKEET-rivejä ei ole jäljellä (testikomennot = ei tarvita, Fable 24.9.).
 Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
 
 - Siirtoseppä-data on toissijaisena mukana noin 20 puuttuvalla rivillä: nähtävyydet ja opas, muutosloki, liput, radiot, julisteet, tiedeliite, ihme, leikekirja, täkynostot ja syvennykset.
