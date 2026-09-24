@@ -1366,7 +1366,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>tasaa = web text-align: justify (rich text &lt;align=justified&gt;, viimeinen rivi vasemmalle).</summary>
         static string Rivivali(string teksti, float riviEm, bool tasaa = false) =>
-            (tasaa ? "<align=justified>" : "") + "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em>" + Lihavoinnit(teksti);
+            (tasaa ? "<align=\"justified\">" : "") + "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em>" + Lihavoinnit(teksti);
 
         /// <summary>Web piirraLeipateksti: **x** → &lt;strong&gt;; muu teksti sellaisenaan (noparse).</summary>
         /// <summary>Lihavoidun aloituksen merkki (Aloitus → Lihavoinnit): web strong.leipa-aloitus.</summary>
