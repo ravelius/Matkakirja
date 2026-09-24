@@ -1217,4 +1217,18 @@ test('skeema 1.33: maamerkit-kokoelma, tarkistus ja offline-media', async () => 
   const kanssa = kokoaOffline({ tiedostot: t, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
   assert.ok(kanssa.maat.GBR.media.includes(hyva.malli.url));
   assert.equal(kanssa.maat.GBR.tavuja.media - ilman.maat.GBR.tavuja.media, 123456);
+test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari #3057)', async () => {
+  const { existsSync } = await import('node:fs');
+  const { INTRO_TEXT, FLIGHT_FIRST } = await import('../js/ui-tekstit.js');
+  const l = new Map(JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot.map((a) => [a.id, a]));
+  for (const [id, teksti, tiedosto] of [['intro', INTRO_TEXT, 'intro-puhe'], ['lento-alku', FLIGHT_FIRST.join(' '), 'puhe-lento-alku']]) {
+    const a = l.get(id);
+    assert.equal(a.teksti, teksti, id);
+    assert.equal(a.tekstiSha256, createHash('sha256').update(teksti).digest('hex'), id);
+    const repo = new URL(`../assets/aikaleimat/${tiedosto}.aikaleimat.json`, import.meta.url);
+    if (existsSync(repo)) {
+      assert.equal(a.aikaleimaTiedosto, `tiedostot/assets/aikaleimat/${tiedosto}.aikaleimat.json`, id);
+      assert.ok(tiedostot.has(a.aikaleimaTiedosto), `${id}: aikaleimat paketissa`);
+    }
+  }
 });

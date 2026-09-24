@@ -9,7 +9,8 @@
  * Vartija kaatuu, jos
  *   - jokin pelissä oletuksena SOIVA ääni on NC/ND (portin läpi),
  *   - kolmannen osapuolen äänestä puuttuu kirjattu lisenssi,
- *   - uusi NC/ND-äänite lisätään dataan (määrä saa vain pienentyä), tai
+ *   - (uusi NC/ND-äänite dataan: yhteinen laskuri tests/lisenssit.test.mjs,
+ *     joka kattaa kaiken median nimetyllä listalla), tai
  *   - lähdeluettelo väittää NC-ääniä, kun niitä ei enää ole datassa.
  */
 import test from 'node:test';
@@ -21,9 +22,6 @@ import {
   maaKori, tyyppiKori, valittuTaiOletus,
 } from '../js/aani-ehdokkaat.js';
 import { EUROPE_KIELET, EUROPE_KIELET_KAIKKI } from '../js/packs/europe-kielet.js';
-
-/** Inventaarion NC/ND-rivit 23.9.2026 (23 tiedostoa, Kairon yö kahdessa korissa). Saa vain pienentyä. */
-const TUNNETUT_NC_RIVIT = 24;
 
 const juuri = new URL('../', import.meta.url);
 const lue = (p) => readFileSync(new URL(p, juuri), 'utf8');
@@ -67,11 +65,13 @@ test('jokaisella kolmannen osapuolen äänellä on kirjattu lisenssi', () => {
   assert.deepEqual(tuntemattomat.map(([l, n]) => `${l}: ${n}`), []);
 });
 
-test('uusia NC/ND-äänitteitä ei lisätä (inventaarion määrä saa vain pienentyä)', () => {
-  const nc = aanirivit().filter(([, nimi]) => !aaniLisenssiSallittu(nimi));
-  assert.ok(nc.length <= TUNNETUT_NC_RIVIT,
-    `NC/ND-rivejä ${nc.length} > ${TUNNETUT_NC_RIVIT}: ${nc.map(([l, n]) => `${l}: ${n}`).join(' | ')}`);
-});
+/*
+ * Uusien NC/ND-äänitteiden laskuri oli tässä (TUNNETUT_NC_RIVIT = 24). Se
+ * siirtyi yhteiseksi kaikelle medialle: tests/lisenssit.test.mjs ja
+ * tools/vienti/lisenssitarkistus-tunnetut.json (Fable 23.9.2026: ei kahta laskuria).
+ * Nimetty lista on tiukempi kuin määrä: NC-äänitteen vaihto toiseen NC:hen
+ * ei enää mene läpi.
+ */
 
 test('mikään oletuksena soiva ääni ei ole NC/ND (portti)', () => {
   const pura = (() => { globalThis.localStorage = { getItem: () => null, setItem: () => {} }; return () => { delete globalThis.localStorage; }; })();

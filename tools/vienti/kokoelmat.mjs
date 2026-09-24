@@ -21,7 +21,7 @@
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
-import { POISTETUT_SAANNOT } from './lahteet.mjs';
+import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
@@ -665,8 +665,9 @@ function luentoKokoelma(hae) {
     };
   };
   const rivit = [
-    ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: null, kuvaus: l.kuvaus,
-      aanite: l.aanite, ...aani(l.aanite) })),
+    // Avausluentojen teksti = ruututeksti (lahteet.mjs AVAUSLUENTOJEN_TEKSTIT), johon aikaleimat kohdistetaan.
+    ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: AVAUSLUENTOJEN_TEKSTIT[l.aanite] ?? null,
+      kuvaus: l.kuvaus, aanite: l.aanite, ...aani(l.aanite, AVAUSLUENTOJEN_TEKSTIT[l.aanite] ?? null) })),
     ...Object.entries(FOKUSVIRRAT).filter(([, v]) => v?.matkakirja?.aanite).map(([kaupunki, v]) => ({
       id: `matkakirja:${kaupunki}`, kaupunki, paikkarivi: v.matkakirja.paikkarivi ?? null,
       teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite,
