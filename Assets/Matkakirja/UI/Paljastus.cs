@@ -161,6 +161,7 @@ namespace Matkakirja.Natiivi
             int v = ++versio;
             kuva.style.backgroundImage = StyleKeyword.None;
             kuvapaikka.Q<LaattaIkoni>()?.RemoveFromHierarchy();
+            kuvapaikka.style.display = DisplayStyle.Flex;
             // Kuva: löydön oma (manner-/maakohtainen), laattatyypin aarrekuva tai piirros varana.
             string url = pollo ? null : !string.IsNullOrEmpty(d.LoytoKuvaUrl) ? d.LoytoKuvaUrl
                 : LaattaIkoni.AarreKuvat.TryGetValue(tyyppi ?? "", out var u) ? u : null;
@@ -169,9 +170,11 @@ namespace Matkakirja.Natiivi
                 {
                     if (v != versio) return;
                     if (t != null) kuva.style.backgroundImage = new StyleBackground(t);
-                    else Vara(tyyppi);
+                    // E17 (web rakennaPaljastus: puuttuva kuva poistaa kuva-alueen, kortti jatkaa tekstillä).
+                    else kuvapaikka.style.display = DisplayStyle.None;
                 });
-            else Vara(tyyppi);
+            else if (pollo) Vara(tyyppi); // pöllöllä ei ole aarrekuvaa: viivapiirros kuten tulosruudussa
+            else kuvapaikka.style.display = DisplayStyle.None;
 
             // Tila alkuun.
             sulkuSallittu = false;
