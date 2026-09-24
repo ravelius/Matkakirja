@@ -518,27 +518,29 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 
 | # | Löydös | Tila ennen ajoa | PASS/FAIL | Kuva | Huomio |
 |---|--------|-----------------|-----------|------|--------|
-| 1 | Nostot | Mergetty | | | |
-| 2 | Väritaso/ääriviiva | Mergetty (7b3adee) | | | |
-| 3 | Paikkakupla | Mergetty | | | |
-| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus), lisävaiheet/taivas/varjot/renkaat tarkista | | | |
-| 5 | iPhone yläosa | Mergetty | | | |
-| 6 | Liiku-nappi | Mergetty | | | |
-| 7 | Linssit pois laukusta | Mergetty | | | |
-| 8 | Maapaneeli: Liiku peittää | Mergetty | | | |
-| 9 | Maapaneeli: pulu/radio peittää | Mergetty | | | |
-| 10 | Maapaneeli: rivit webin mukaan | Mergetty | | | |
-| 11 | Ihmisen matka: tekstilaatikko | Mergetty | | | |
-| 12 | Ihmisen matka: loppu/kamera | Mergetty | | | |
-| 13 | Offline: mustat laatat | Mergetty | | | |
-| 14 | Navat | Mergetty (7b3adee) | | | |
-| 15 | Karttaselite | Mergetty | | | |
-| 16 | Pulun chat | Melkein — SSE+haku tehty, odottaa Pelikoodarin allowlistia #3046 | | | |
-| 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Mergetty (7b3adee) | | | |
-| 18 | Liiku-nappi täysin läpinäkyväksi | Mergetty (a33385c) | | | |
-| 19 | Kartta sumea kuvien aikana | Mergetty (a33385c) | | | |
+| 1 | Nostot | Mergetty | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka zoomattuna: kymmeniä tyyppimerkkejä (temppeli/vuori/silta/eläin/salama-ikonit), napautus avasi ryhmälistan (Delfoi/Thermopylai) |
+| 2 | Väritaso/ääriviiva | Mergetty (7b3adee) | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka värillinen/teksturoitu + tumma ääriviiva, muu kartta tasaisen sepian värinen |
+| 3 | Paikkakupla | Mergetty | **PASS** | 3-paikkakupla-kohtaaminen.png | "Ateena, elokuussa 1873" -pilleri ei mene päällekkäin kohtaamisdialogin puhekuplan kanssa |
+| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus) | **PASS (kamera+taivas+piste), EI TESTATTU (hehkurenkaat, varjot epävarmoja)** | 4-lento-00/05/09-*.png | Kuvasarja: lähikuva koneesta laskeutuen (frame 0), kaukainen globe-näkymä sininen taivas + vain "Ateena" näkyvissä (frame 5), kiertävä/sukeltava lähestyminen (frame 9). Ei ehditty testata hehkurenkaita aloitusvalinnassa erikseen — laitteen kaupunkivalintaruutua ei käyty tässä ajossa |
+| 5 | iPhone yläosa | Mergetty | **PASS** | (näkyy kaikissa kuvissa) | Ei ruskeaa palkkia/logoa koko ajon läpi, vain kelluva "300£ 1/80" -pilleri + ratas/hampurilainen oikealla |
+| 6 | Liiku-nappi (puoliläpinäkyvä→pienempi) | Mergetty | **KORVATTU löydös 18:lla** | — | Ks. rivi 18 |
+| 7 | Linssit pois laukusta | Mergetty | **PASS** | 7-laukku-ei-linsseja.png | Laukun "Matka"-välilehdellä ei linssilistaa; erillinen silmälasikuvake (🕶) näkyy omana nappinaan kartan reunassa |
+| 8 | Maapaneeli: Liiku peittää | Mergetty | **PASS** | 8-10-maapaneeli-kreikka.png | Liiku ei näy paneelin päällä avatussa kartuscha-näkymässä |
+| 9 | Maapaneeli: pulu/radio peittää | Mergetty | **PASS** | 8-10-maapaneeli-kreikka.png | Pulu näkyy paneelin oikealla puolella tekstin ULKOPUOLELLA, "radio"-ikoni omalla rivillään otsikossa, ei tekstin päällä |
+| 10 | Maapaneeli: rivit webin mukaan | Mergetty | **PASS** | 8-10-maapaneeli-kreikka.png | KREIKKA + lippu, alaotsikko "ΕΛΛΑΣ · Hellas · kuningaskunta v. 1873", sitten Väkiluku/Pinta-ala/Demokratia/Keskitulo, Kielet-rivi rivittyy kahdelle riville |
+| 11 | Ihmisen matka: tekstilaatikko | Mergetty | **EI TESTATTU TÄSSÄ AJOSSA** | — | Ajanpuute — seuraavaan kierrokseen |
+| 12 | Ihmisen matka: loppu/kamera | Mergetty | **EI TESTATTU TÄSSÄ AJOSSA** | — | Ajanpuute — seuraavaan kierrokseen |
+| 13 | Offline: mustat laatat | Mergetty | **EI TESTATTU TÄSSÄ AJOSSA** | — | Ajanpuute — seuraavaan kierrokseen |
+| 14 | Navat | Mergetty (7b3adee) | **EI VOITU LUOTETTAVASTI TESTATA** | 14-napa-pohjoinen-epavarma.png | `aja <lat> 0 <kaari>` -komennolla ei saatu selkeää napanäkymää (tyhjä/haalea alue, kehityskonsoli näytti toistuvia "out of view frustum" -virheitä) — komennon parametrit eivät toimineet oletetusti, tarvitaan Natiiviseppän oikea testikomento tai manuaalinen zoomaus kosketuksella |
+| 15 | Karttaselite | Mergetty | **PASS** | 15-karttaselite.png | Paneeli täysin näkyvissä, ei minkään peittämä, NOSTOT/MAAKUNNAT-välilehdet ja lukumäärät näkyvät selvästi |
+| 16 | Pulun chat | Melkein (odotti allowlistia) | **PASS (yllättäen)** | 16-pulu-chat-vastaus.png | `ui chat "mikä on demokratiaindeksi"` antoi OIKEAN, asiallisen vastauksen (ei enää "ei vielä auki" -tekstiä) — allowlist tms. vaikuttaa olevan jo kunnossa simulaattorissa |
+| 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Mergetty (7b3adee) | **PASS** | 17-etusivupallo-a.png, 17-etusivupallo-b.png | Kaksi kuvaa 5 s välein: selvästi eri maisema (pallo pyörinyt), koko ruudun täyttävä, sumea, ei yhtään kaupunkipistettä kummassakaan |
+| 18 | Liiku-nappi täysin läpinäkyväksi | Mergetty (a33385c) | **EPÄSELVÄ / MAHDOLLINEN FAIL** | 18-liiku-aktiivinen.png | Kulkutapavalitsimen ollessa auki (thumbs-up/tram/boat/plane-rivi näkyvissä) Liiku-nappi on TÄYSIN PEITTÄVÄ kulta/oranssi, ei läpinäkyvä. Voi olla eri komponentti/tila kuin "lepotilan" nappi — tarkistettava kumpaa tilaa löydös 18 koskee |
+| 19 | Kartta sumea kuvien aikana | Mergetty (a33385c) | **EI TESTATTU TÄSSÄ AJOSSA** | — | Ajanpuute — seuraavaan kierrokseen |
 | 20 | iPhonen yläreuna uusiksi | EI (build 7) — ei testata | — | — | Siirretty |
 | 21 | Isoisän/pulun tekstit piilossa oletuksena | EI (build 7) — ei testata | — | — | Siirretty |
+
+**Yhteenveto**: 11 PASS (1,2,3,4-osin,5,7,8,9,10,15,16,17), 1 epäselvä/mahdollinen FAIL (18), 1 ei voitu luotettavasti testata (14), 4 ei ehditty (11,12,13,19), 2 siirretty build 7:ään (20,21). Kuvat: `/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/` (ei repossa, jaettu Mac-polku, CLAUDE.md dist-periaate).
 
 **Ajon SHA**: proto-master `7b3adee`, asennettu iPhone 18 Pro
 -simulaattoriin (1572C658) Natiiviseppän toimesta 24.9.2026 klo 11.4x.
