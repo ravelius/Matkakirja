@@ -196,6 +196,8 @@ jobs:
             fi
           done
           echo "Paketti v$N luettavissa: $JULKINEN/sisalto/1/v$N/"
+          # Ämpäritarkistus (Fable 24.9.2026): jokainen tiedosto HEAD:lla, koko sama kuin paikallisesti.
+          node tools/vienti/amparitarkistus.mjs --url "$JULKINEN/sisalto/1/v$N/" --kansio "dist/sisalto/v$N"
 
       # Osoitin VIIMEISENÄ: sovellus ei koskaan näe osoitinta pakettiin,
       # jota ei vielä ole kokonaan ämpärissä.
