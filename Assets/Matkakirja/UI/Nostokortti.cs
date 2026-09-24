@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
         const float Marginaali = 8f, Rako = 12f, LaitavaraOsuus = 0.1f, LaitavaraEnintaan = 96f, Leveys = 384f,
             LeveysOsuus = 0.86f, Katto = 140f, Raahauskynnys = 8f, Napautuskynnys = 6f, NapautusMs = 700f;
         Vector2? ankkuri;
-        bool ankkuroitu, raahattu, raahaa;
+        bool ankkuroitu, raahattu, raahaa, lisakaupunkiPaikka;
         int eleId = -1;
         Vector2 eleAlku, lahto;
         float eleAika;
@@ -211,6 +211,7 @@ namespace Matkakirja.Natiivi
             kuvaIndeksi = 0;
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
+            lisakaupunkiPaikka = false;
             AsetaPaikka(n.Kuvat.Count == 0);
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
             AvaaKerros();
@@ -235,7 +236,7 @@ namespace Matkakirja.Natiivi
             // Paneelin leveys (pisteinä): kerros voi olla vielä piilossa, jolloin sen oma layout on 0.
             float w = kerros.panel != null ? kerros.panel.visualTree.layout.width : 0f;
             kortti.style.position = Position.Absolute;
-            if (w > 0f) kortti.style.width = Mathf.Round(Mathf.Min(Leveys, w * LeveysOsuus));
+            if (w > 0f) kortti.style.width = HaluttuLeveys(w);
             kortti.style.left = Mathf.Round(ankkuri.Value.x + Rako);
             kortti.style.top = Mathf.Round(ankkuri.Value.y);
             Asemoi();
@@ -246,23 +247,30 @@ namespace Matkakirja.Natiivi
         {
             float w = kerros.layout.width, h = kerros.layout.height;
             if (w <= 0 || h <= 0 || !ankkuri.HasValue) return;
-            float haluttu = Mathf.Round(Mathf.Min(Leveys, w * LeveysOsuus));
+            float haluttu = HaluttuLeveys(w);
             if (kortti.resolvedStyle.width != haluttu) kortti.style.width = haluttu;
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot); // vasen, ylä, oikea, ala
-            float laitavara = Mathf.Min(LaitavaraEnintaan, Mathf.Max(Marginaali, Mathf.Round(h * LaitavaraOsuus)));
-            float ala = h - Mathf.Max(laitavara, t.w + Marginaali), yla = Mathf.Max(laitavara, t.y + Marginaali);
-            float oikea = w - Marginaali - t.z, vasen = Marginaali + t.x;
-            float katto = Mathf.Max(Katto, Mathf.Round(ala - yla));
+            // Lisäkaupunki (web asemoiKaupunkipopup): reuna 10, ei pystyn laitavaraa, katto ≥ 160 ja enintään 74 %.
+            float reuna = lisakaupunkiPaikka ? 10f : Marginaali;
+            float laitavara = lisakaupunkiPaikka ? reuna : Mathf.Min(LaitavaraEnintaan, Mathf.Max(Marginaali, Mathf.Round(h * LaitavaraOsuus)));
+            float ala = h - Mathf.Max(laitavara, t.w + reuna), yla = Mathf.Max(laitavara, t.y + reuna);
+            float oikea = w - reuna - t.z, vasen = reuna + t.x;
+            float katto = Mathf.Max(lisakaupunkiPaikka ? 160f : Katto, Mathf.Round(ala - yla));
+            if (lisakaupunkiPaikka) katto = Mathf.Min(katto, Mathf.Round(h * 0.74f));
             if (kortti.resolvedStyle.maxHeight.value != katto) kortti.style.maxHeight = katto;
             float leveys = kortti.layout.width, korkeus = Mathf.Min(kortti.layout.height, katto);
             if (leveys <= 0 || float.IsNaN(korkeus)) return;
             var m = ankkuri.Value;
-            float x = m.x + Rako;
-            if (x + leveys > oikea) x = m.x - Rako - leveys;
+            float rako = lisakaupunkiPaikka ? 14f : Rako;
+            float x = m.x + rako;
+            if (x + leveys > oikea) x = m.x - rako - leveys;
             x = Mathf.Max(vasen, Mathf.Min(x, oikea - leveys));
             float y = Mathf.Max(yla, Mathf.Min(m.y - korkeus / 2f, ala - korkeus));
             AsetaKohta(Mathf.Round(x), Mathf.Round(y));
         }
+
+        /// <summary>Kohdekortti min(24rem, 86vw) (web .fokuskohde-popup), lisäkaupunki min(34rem, 92vw) (.kaupunkipopup).</summary>
+        float HaluttuLeveys(float w) => Mathf.Round(lisakaupunkiPaikka ? Mathf.Min(544f, w * 0.92f) : Mathf.Min(Leveys, w * LeveysOsuus));
 
         void AsetaKohta(float x, float y)
         {
@@ -359,6 +367,7 @@ namespace Matkakirja.Natiivi
             kortti.RemoveFromClassList("mk-nosto--looppi");
             kortti.RemoveFromClassList("mk-nosto--kohde");
             kortti.RemoveFromClassList("mk-nosto--esittely");
+            lisakaupunkiPaikka = true;
             AsetaPaikka(true);
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
