@@ -4071,3 +4071,7 @@ Webin pallo piirsi laudan tyylitellyt countryShapes-renkaat (loppuvat 76° N, ka
 ## VALINTAVIHJE iPHONELLA: AIEMPI 'WEB-BUGI' KUMOTTU — WEB ON OIKEIN (OMISTAJAN 14.9. PAATOS), NATIIVI PIILOTTAA VIHJEEN PLUSKUPLAAN KUTEN WEB (24.9.2026 klo 15.36)
 
 Pelikoodari mittasi tuotannosta: pöllönappi ei ole piilossa; vihje luodaan mutta imePuhelimenKuplaan vie sen pluskuplaan tekstitPiilossa()-portilla, joka on omistajan 14.9. klo 20.30 päätös (puhelimella isoisän ja pulun tekstit piiloon). Fable: vaihtoehto B — webiä ei muuteta; Natiivi-UI muuttaa Pulu.NaytaVihje noudattamaan tekstipiiloa (iPhone: pluskuplaan, iPad: näkyy), build 9, kuvapari. Noppa kartalle 4d3fe7a: kuvapari PASS (Laitetestaaja) → merge.
+
+## SIIRTOSEPPA: SKEEMA 1.34 — 1.29-RAJAUS POISTETTU (siirtoseppa-maarajat 1db1f917d, KOE v44, TESTIT 77/77) (24.9.2026 klo 15.36)
+
+Maarajojen renkaat = kaikki admin-0-renkaat (Norjassa Huippuvuoret, muutRenkaat = []); merentakaiset alueet (FRA, ESP, PRT) palaavat kuten #3078:n web-pallossa. Natiiviseppä tietää. PR #3074:n ja #3078:n jälkeen. Tuotannossa 1.x v43 ja 2.0 v3 avausluentojen aikaleimoilla.
