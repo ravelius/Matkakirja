@@ -360,7 +360,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | "Tauko" / "Jatka" / "Loppu" | ihmisen-matka-esitys.js:2493 | AikajanaNakyma.cs (palkki) | on | NUI |
 | Aikaselain (nauha: veto esikatselee, irrotus valitsee) | linssit/aikaselain.js | UI/Linssit/Aikaselain.cs + LS:n Esitys.Esikatsele/Valitse; ◀▶ pois | on (merge-pyynnössä natiivi-ui/aikaselain a3d28f9) | NUI, LS |
 | Löytöpaikan kehys → avaa nosto | ihmisen-matka-esitys.js:1759 | löytökuva pisteen yllä (KuvanPiste), napautus avaa paikan kortin | on (master 95dd4d9); nostokortin omat napit alla | NUI, LS |
-| Nostokortti: "Sulje nosto", "Tiedeliite: koko juttu" | linssit/ihmisen-matka-kortti.js:398, 443 | puuttuu | puuttuu | NUI, LS |
+| Nostokortti: "Sulje nosto", "Tiedeliite: koko juttu" | linssit/ihmisen-matka-kortti.js:398, 443 | UI/Linssit/IhmisenNostokortti.cs (✕, kuvat, löytöteksti, pulun kysymykset valmiine vastauksineen, esitys tauolle) | osittain (merge-jonossa natiivi-ui/ihmisen-nostokortti 23a3cbe); kuvatekstit, lähteet ja "Lue lisää" → tiedeliite odottavat LS:n aineistokenttiä | NUI, LS |
 | Tutkimusvaihe (vanat, pulukysymykset) | ihmisen-matka-tutkimus.js:343 | puuttuu (tarkista) | puuttuu | LS, NUI |
 
 ### 16 f. Maailmanradio
