@@ -9,6 +9,26 @@
  */
 
 const nollaksi = (v) => (v === undefined ? null : v);
+
+/**
+ * Raakakentät, joiden päätason vastine on eri niminen (2.0-vartija,
+ * tests/sisaltopaketti.test.mjs). Muut raakakentät ovat päätasolla samalla nimellä.
+ */
+export const RAAKA_VASTINEET = {
+  kaupungit: { name: 'nimi', x: 'lauta', y: 'lauta', airport: 'lentokentta', start: 'aloitus', pallo: 'lat/lon',
+    ambience: 'ambienssi', la: 'nimionAnkkuri', lx: 'nimionAnkkuri', ly: 'nimionAnkkuri' },
+  kysymykset: { q: 'kysymys', options: 'vaihtoehdot', correct: 'oikea', hint: 'vihje', fact: 'fakta', level: 'taso',
+    source: 'lahde', place: 'paikka' },
+  pulmat: { q: 'kysymys', options: 'vaihtoehdot', correct: 'oikea', hint: 'vihje', fact: 'fakta', source: 'lahde',
+    title: 'otsikko', sketch: 'luonnos', city: 'kaupunki' },
+  laatat: { counts: 'maarat', types: 'tyypit', mannerTypes: 'mannerTyypit' },
+  reitit: { steps: 'askelia', type: 'laji' },
+  paikkatiedot: { text: 'teksti', voice: 'aani', source: 'lahde' },
+  saapumispuheet: { name: 'nimi', slogan: 'iskulause', text: 'teksti', duration: 'kesto', singleTake: 'yksiOtto' },
+  kohtaamiset: { frame: 'kehys' },
+  julisteet: { tiedosto: 'kuva' },
+  tapahtumat: { text: 'teksti', effect: 'vaikutus' },
+};
 const poimi = (d, avaimet) => Object.fromEntries(avaimet.map(([ulos, sisaan = ulos]) => [ulos, nollaksi(d?.[sisaan])]));
 
 export function tyypitaLoput(kokoelmat) {
@@ -109,6 +129,16 @@ export function tyypitaLoput(kokoelmat) {
     kokoelmat[nimi].kuvaus += ` Skeema 1.31: päätasolla myös raakakentät sellaisenaan: ${lista.join(', ')}.`;
   };
   for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat']) nostaLoput(nimi);
+
+  // Skeema 1.32 (Linssisepän 2.0-koe, 24.9.2026): linssiaineisto sellaisenaan ja loput
+  // yksittäiset kentät. RAAKA_VASTINEET kertoo kentät, joilla on eri niminen päätaso.
+  nostaLoput('linssiaineisto');
+  for (const a of kokoelmat.tarinakaari.alkiot) Object.assign(a, poimi(a.data, [['kuva'], ['lauta'], ['saapumisLuenta']]));
+  for (const a of kokoelmat.kohtaamiskuvat.alkiot) Object.assign(a, poimi(a.data, [['kansio'], ['tiedosto']]));
+  for (const a of kokoelmat.tapahtumat.alkiot) Object.assign(a, poimi(a.data, [['teksti', 'text'], ['vaikutus', 'effect']]));
+  kokoelmat.tarinakaari.kuvaus += ' Skeema 1.32: päätasolla myös kuva, lauta ja saapumisLuenta.';
+  kokoelmat.kohtaamiskuvat.kuvaus += ' Skeema 1.32: päätasolla myös kansio ja tiedosto (url on valmis osoite).';
+  kokoelmat.tapahtumat.kuvaus += ' Skeema 1.32: päätasolla teksti ja vaikutus (= webin effect sellaisenaan).';
 
   for (const a of kokoelmat.kaupungit.alkiot) {
     const d = a.data ?? {};

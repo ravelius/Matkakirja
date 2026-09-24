@@ -978,11 +978,14 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     id: 'LIVIAN_ASTRONAUTTI_KYPARA', moduuli: 'js/livia-astronautti.js',
     arvo: mediaOsoite('assets/livia/livia-astronauttikypara-2x.png'),
   });
+  const luennat = linssiluennat(hae);
   kokoelmat.linssiaineisto.alkiot.push({
+    // Skeema 1.32: kentät myös päätasolla (keksinnot, ihmisen-matka), kuten muilla linssiaineiston alkioilla.
+    ...luennat,
     id: 'linssiluennat', linssi: null, laji: 'luennat',
     kuvaus: 'Linssien luennat: juuri, pysäkit (runko = luennanRunko, url = luennanOsoite) ja kaaren puheet '
       + '(esittely ?v=tiiviste, välinäytökset, loppu). Musiikki: aanitaulut siirtyma:keksinnot ja siirtyma:ihmisen-matka.',
-    data: linssiluennat(hae),
+    data: luennat,
   });
   return kokoelmat;
 }

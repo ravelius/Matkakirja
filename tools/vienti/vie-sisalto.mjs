@@ -160,8 +160,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.31 ennen 2.0:aa loput raakakentät päätasolle: skandaalit, historianHetket,
  *        monumentit ja fokusvirrat sellaisenaan; kaupungit wiki, ambienssi,
  *        nimionAnkkuri.
+ *   1.32 linssiaineisto sellaisenaan päätasolle (Linssiseppä), tarinakaari kuva,
+ *        lauta, saapumisLuenta; kohtaamiskuvat kansio, tiedosto; tapahtumat teksti,
+ *        vaikutus. Vartija: jokainen raakakenttä päätasolla tai RAAKA_VASTINEET.
  */
-export const SKEEMAVERSIO_TARKKA = '1.31';
+export const SKEEMAVERSIO_TARKKA = '1.32';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

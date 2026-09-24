@@ -1113,3 +1113,18 @@ test('skeema 1.31: ennen 2.0:aa dict-raakadatan jokainen kenttä on päätasolla
   assert.deepEqual(lontoo.nimionAnkkuri, { tasaus: 'end', dx: -20, dy: 5 });
   assert.equal(lontoo.ambienssi, 'kaupunki');
 });
+
+test('2.0-vartija: jokainen dict-raakakenttä on päätasolla tai RAAKA_VASTINEET-listassa', async () => {
+  const { RAAKA_VASTINEET } = await import('../tools/vienti/tyypitys.mjs');
+  const m = JSON.parse(tiedostot.get('manifest.json'));
+  const puuttuu = [];
+  for (const { nimi, tiedosto } of m.kokoelmat) {
+    for (const a of JSON.parse(tiedostot.get(tiedosto)).alkiot) {
+      if (!a.data || typeof a.data !== 'object' || Array.isArray(a.data)) continue;
+      for (const k of Object.keys(a.data)) if (!(k in a) && !RAAKA_VASTINEET[nimi]?.[k]) puuttuu.push(`${nimi}.${k}`);
+    }
+  }
+  assert.deepEqual([...new Set(puuttuu)], []);
+  const la = new Map(JSON.parse(tiedostot.get('kokoelmat/linssiaineisto.json')).alkiot.map((a) => [a.id, a]));
+  assert.ok(la.get('maamaski').juoksut && la.get('pilvet').url && la.get('linssiluennat').keksinnot);
+});

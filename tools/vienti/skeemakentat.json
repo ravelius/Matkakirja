@@ -9,10 +9,11 @@
   "1.28": "f06631f1168799e5",
   "1.29": "5333684225d7cb2b",
   "1.30": "4eacd12cb5266253",
-  "1.31": "a7e1d2be199a1a5e"
+  "1.31": "a7e1d2be199a1a5e",
+  "1.32": "e233c009cad342b9"
  },
  "uusin": {
-  "skeemaversio": "1.31",
+  "skeemaversio": "1.32",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -223,12 +224,14 @@
     "hahmo",
     "hetki",
     "id",
+    "kansio",
     "kaupunki",
     "kaytto",
     "kohde",
     "kuvateksti",
     "lyhyt",
     "maa",
+    "tiedosto",
     "tila",
     "url",
     "vihje"
@@ -286,12 +289,30 @@
     "visa"
    ],
    "linssiaineisto": [
+    "aste",
     "data",
+    "humina",
     "id",
+    "ihmisen-matka",
+    "juoksut",
+    "juuri",
+    "keksinnot",
+    "korkeus",
     "kuvaus",
+    "kynnykset",
+    "lahde",
     "laji",
+    "leveys",
     "linssi",
-    "muoto"
+    "manifesti",
+    "muoto",
+    "musiikki",
+    "musiikkiKaytossa",
+    "optikonHyvitys",
+    "peitot",
+    "perus",
+    "url",
+    "webKynnykset"
    ],
    "lippumaat": [
     "id",
@@ -637,7 +658,9 @@
    "tapahtumat": [
     "data",
     "id",
-    "lauta"
+    "lauta",
+    "teksti",
+    "vaikutus"
    ],
    "tarinakaari": [
     "aarre",
@@ -646,12 +669,15 @@
     "id",
     "kaupunki",
     "kohtaaminen",
+    "kuva",
     "kysymys",
+    "lauta",
     "muotokuva",
     "mykistetyt",
     "nimi",
     "otsikko",
     "saapuminen",
+    "saapumisLuenta",
     "tunneAarre",
     "tunneKohtaaminen"
    ],

@@ -64,6 +64,7 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  '1.32': ['linssiaineisto.manifesti', 'linssiaineisto.juoksut', 'tarinakaari.saapumisLuenta', 'tapahtumat.teksti'],
   '1.31': ['skandaalit.teksti', 'historianHetket.lehti', 'monumentit.teksti', 'fokusvirrat.oppitunti', 'kaupungit.nimionAnkkuri'],
 };
 
