@@ -1612,6 +1612,22 @@
     color: #4b3a1c;
 }
 
+/* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
+.mk-nosto-merkki__levy-pohja {
+    color: #efdcb4;
+    opacity: 0.95;
+}
+
+.mk-nosto-merkki__levy-vari {
+    opacity: 0.5;
+}
+
+.mk-nosto-merkki__levy-keha {
+    color: #4b3a1c;
+    opacity: 0.85;
+    --mk-ikoni-viiva: 1.1;
+}
+
 .mk-nosto-merkki__nimio {
     margin-left: 2px;
     font-size: 11px;

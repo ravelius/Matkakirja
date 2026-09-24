@@ -63,6 +63,9 @@ namespace Matkakirja
         public float Syttyminen { get; private set; }
         /// <summary>Nykyisen maan leveys / näkyvä leveys (web osuus).</summary>
         public float Osuus { get; private set; }
+        /// <summary>Lähizoomi auki (näkyvä leveys alle lahizoomLeveys): sama portti päästää lahizoom-nostot ja
+        /// ryhmämerkkien nimiöt (web lahizoomiAuki / aihenostonNimioNakyy).</summary>
+        public bool Lahella { get; private set; }
         /// <summary>Tämän kehyksen näytettävät nostot (ruudulla, edessä, lähimmät keskeltä, enintään katto).</summary>
         public IReadOnlyList<Nosto> Naytettavat => naytettavat;
         /// <summary>Herää, kun Naytettavat, Nakyvissa tai Syttyminen muuttui tässä kehyksessä.</summary>
@@ -215,6 +218,7 @@ namespace Matkakirja
             naytettavat.Clear();
             var keski = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
             bool lahi = nakyvaLeveys < lahizoomLeveys;
+            Lahella = lahi;
             foreach (var s in nostot)
             {
                 if (s.Lahizoom && !lahi) continue;
