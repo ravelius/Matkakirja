@@ -449,8 +449,8 @@ namespace Matkakirja
 
         public static double AutokyydinVaihe(double t)
         {
-            double x = math.saturate(t);
-            return x < 0.5 ? 2 * x * x : 1 - math.pow(-2 * x + 2, 2) / 2;
+            // KAMERA-AJOT: smootherstep (ennen quad in/out, jonka kiihtyvyys hyppäsi keskellä).
+            return PalloKierto.Smootherstep(t);
         }
 
         public static double MatkanVaihe(double t, int pisteita)

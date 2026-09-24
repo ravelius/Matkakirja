@@ -545,7 +545,8 @@ namespace Matkakirja
         {
             ajo.aika += dt;
             double t = math.saturate(ajo.aika / ajo.kesto);
-            double e = ajo.pehmennys != null ? ajo.pehmennys(t) : Pehmennys(t, ajonRamppi);
+            // KAMERA-AJOT (omistaja 24.9.): oletus smootherstep (ease in/out, ei vakionopeuspätkää keskellä).
+            double e = ajo.pehmennys != null ? ajo.pehmennys(t) : Smootherstep(t);
             pituus = Kiedo(math.lerp(ajo.alku.x, ajo.loppu.x, e));
             leveys = math.lerp(ajo.alku.y, ajo.loppu.y, e);
             // Korkeus logaritmisesti (tasainen zoomin tuntu) ja nousu kaaren keskellä.
@@ -560,6 +561,13 @@ namespace Matkakirja
                 ajo = null;
                 valmis?.Invoke();
             }
+        }
+
+        /// <summary>Smootherstep 6t⁵ − 15t⁴ + 10t³: nopeus ja kiihtyvyys nollassa molemmissa päissä.</summary>
+        public static double Smootherstep(double t)
+        {
+            double x = math.saturate(t);
+            return x * x * x * (x * (x * 6.0 - 15.0) + 10.0);
         }
 
         /// <summary>
