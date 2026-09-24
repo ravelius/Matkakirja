@@ -92,17 +92,17 @@ const kuvat = {};
   const ipad = teePaneeli({ leveys: 640, vuL: 118, vuK: 84, lcdL: 408, lcdK: 84, lamppu: 30, asteikkoK: 42,
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72,
     kaupungit: ['LONTOO', 'MADRID', 'BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM', 'OSLO', 'ROOMA'], soiva: 'PARIISI' });
-  const iphone = teePaneeli({ leveys: 393, vuL: 76, vuK: 56, lcdL: 244, lcdK: 58, lamppu: 20, asteikkoK: 36,
+  const iphone = teePaneeli({ leveys: 393, vuL: 76, vuK: 56, lcdL: 224, lcdK: 58, lamppu: 20, asteikkoK: 36,
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72, pyoristys: '14px 14px 0 0',
     kaupungit: ['BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM'], soiva: 'PARIISI' });
   const mitta = (t) => `<div style="color:#e9d2a8;font:12px/1.4 Menlo,monospace;margin:8px 0 18px">${t}</div>`;
   kuvat['2-paneeli-mitat'] = sivu(`<div style="padding:28px 32px;background:#2a2016;height:100%;box-sizing:border-box">
     <div style="color:#f4e2c0;font:bold 17px Georgia;margin-bottom:12px;letter-spacing:1px">iPad (1024 pt): kotelo 640 × 172 pt, alareunasta 22 pt</div>
     ${ipad}
-    ${mitta('rivi 1: VU 118 × 84 · väli 10 · LCD-lasi 424 × 84 (16 × 2 merkkiä, piste 4,25 pt) · väli 10 · lamppu ⌀ 30<br>rivi 2: viivain 612 × 42 (9 nimeä, viisari keskellä) · kehykset messinkiä 4 pt · kotelon reunus 12–14 pt')}
+    ${mitta('rivi 1: VU 118 × 84 · väli 10 · LCD-lasi 424 × 84 (16 × 2 merkkiä, piste 4,25 pt) · lamppu ⌀ 30 keskellä 60 pt:n tilaa (15 + 30 + 15), LCD:n keskilinjalla<br>rivi 2: viivain 612 × 42 (9 nimeä, viisari keskellä) · kehykset messinkiä 4 pt · kotelon reunus 12–14 pt')}
     <div style="color:#f4e2c0;font:bold 17px Georgia;margin:6px 0 12px;letter-spacing:1px">iPhone (393 pt): kotelo koko leveys × 150 pt + turva-alue puun sisään</div>
     ${iphone}
-    ${mitta('rivi 1: VU 76 × 56 · LCD-lasi 260 × 58 (piste 2,54 pt) · lamppu ⌀ 20<br>rivi 2: viivain 365 × 36 (5 nimeä) · sama rakenne, samat tekstuurit')}
+    ${mitta('rivi 1: VU 76 × 56 · väli 10 · LCD-lasi 240 × 58 (piste 2,33 pt) · lamppu ⌀ 20 keskellä 39 pt:n tilaa, LCD:n keskilinjalla<br>rivi 2: viivain 365 × 36 (5 nimeä) · sama rakenne, samat tekstuurit')}
     <div style="color:#cdb58c;font:12px/1.5 Georgia;max-width:900px">Tekstuurit (kuvaputken tilaus d5928ae06): puu → kotelo, messinki → kehykset ja lampun rengas, lasi (naarmut) → LCD:n ja VU:n kansi, asteikkopaperi → VU-levy ja viivain. Kangasta ei tarvita: kaiutinverkolle ei jää tilaa kummallakaan laitteella. Normal- ja roughness-kartat leivotaan värikuvaan kiinteällä valolla vasemmalta ylhäältä, koska UI Toolkit ei valaise kuvia.</div>
   </div>`, 1024, 580);
 }

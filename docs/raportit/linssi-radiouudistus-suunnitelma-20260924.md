@@ -32,13 +32,19 @@ proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae0
 
 ![Paneeli iPadilla ja iPhonella, mitat](kaappaukset/radiouudistus-20260924/2-paneeli-mitat.jpg)
 
-**iPad (1024 pt):** kotelo on 640 × 172 pt, keskellä ja 22 pt alareunasta.
-- Rivi 1: VU 118 × 84, väli 10 pt, LCD-lasi 424 × 84 (16 × 2 merkkiä, pisteväli 4,25 pt), väli 10 pt ja lamppu ⌀ 30.
+**Lampun paikka** (omistaja 24.9. klo 20.0x, sitova): lamppu on keskellä LCD:n oikean reunan ja kotelon
+sisäreunan välistä tilaa sekä vaaka- että pystysuunnassa, LCD:n rivien keskilinjalla. UI:ssa lampun
+säiliö täyttää jäljelle jäävän tilan (flex-grow 1, align-self stretch), ja lamppu keskitetään sen sisään.
+
+**iPad (1024 pt):** kotelo on 640 × 172 pt, keskellä ja 22 pt alareunasta. Sisäleveys on 612 pt (reunus 14 pt).
+- Rivi 1: VU 118 × 84, väli 10 pt, LCD-lasi 424 × 84 (16 × 2 merkkiä, pisteväli 4,25 pt) ja lamppu ⌀ 30
+  keskellä jäljelle jäävää 60 pt:n tilaa (15 + 30 + 15).
 - Rivi 2: viivain 612 × 42, jossa 9 nimeä ja punainen viisari keskellä.
 - Messinkikehys on 4 pt jokaisen osan ympärillä, ja kotelon reunus on 12–14 pt.
 
 **iPhone (393 pt):** kotelo on koko ruudun levyinen ja 150 pt korkea, ja turva-alue jää puun sisään.
-- Rivi 1: VU 76 × 56, LCD-lasi 260 × 58 (pisteväli 2,54 pt) ja lamppu ⌀ 20.
+- Rivi 1: VU 76 × 56, väli 10 pt, LCD-lasi 240 × 58 (pisteväli 2,33 pt) ja lamppu ⌀ 20 keskellä jäljelle
+  jäävää 39 pt:n tilaa. Aiempi LCD (260 pt) ei mahtunut sisäleveyteen 365 pt lampun kanssa.
 - Rivi 2: viivain 365 × 36, jossa on 5 nimeä.
 - 16 merkin näyttö mahtuu, kun VU pienenee. Nykyinen iPhone-asettelu, jossa VU on omalla rivillään, poistuu.
 
@@ -50,6 +56,8 @@ proseduraalisia sijaisia, kunnes kuvaputki toimittaa tekstuurit (tilaus d5928ae0
 | Messinki | kehykset ja lampun rengas | 9-slice 128 × 128 |
 | Lasi (naarmut) | LCD:n ja VU:n kansi | päällyskuva 512 × 128 (heijastus ja naarmut alfana) |
 | Asteikkopaperi | VU-levy ja viivain | 256 × 180 ja toistuva 512 × 64 |
+
+![Paneeli kuvaputken tekstuureilla (ambientCG CC0), leivottu radiopinnat.py:llä](kaappaukset/radiouudistus-20260924/7-pinnat-koekuva.jpg)
 
 Kangasta ei tarvita, koska kaiutinverkolle ei jää tilaa kummallakaan laitteella. UI Toolkit ei valaise
 kuvia, joten normal- ja roughness-kartat leivotaan värikuvaan kiinteällä valolla vasemmalta ylhäältä
