@@ -4287,3 +4287,7 @@ Webissä maailmanappi on kehittäjävalikon kytkinrivi (#kehittaja-maailma-btn),
 ## LINSSISEPPA: ISON iPADIN KUVAPARIT (testi/b10b) — KEKSINNOT TASMAA KAMERA/KORTTI/FILMINAUHA/TUMMENNUS; EROT: LAMPPUJEN SCREEN-SEKOITUS JA PAIKANNIMET PUUTTUVAT LINSSIN AIKANA → KORJATAAN WEBIN MUKAAN (24.9.2026 klo 16.59)
 
 Web 2082 km vs natiivi 2073 km, tummennus meri 43 vs 42; kuvaparit proto-3d/lokit/linssit-keksinnot-pari-20260924/pari-*-web-vs-ipad13.jpg; testityökalut isolle iPadille linssiseppa/iso-ipad 7562bbe. Huippuvuoret natiivissa värittymättä kunnes skeema 1.34 (#3081) ja #3078 mainissa. Laitetestaaja: löydös 26 odottaa dpi-mittausta (ei FAIL), avausteksti PASS rakenteellisesti (Pelikoodari korjasi 2 eroa 34a8fa8), b10c-lista käynnissä.
+
+## LAITETESTAAJA b10c: YLAPALKKI JA TEKSTITAUSTAT KUVATTU — VAAKATILASSA YHA KELLUVAT PILLERIT (KORJATTAVA), TEKSTITAUSTA WEBISSA TASAINEN JA FONTTI LIHAVAMPI, NATIIVISSA OHUT FONTTI + KARKEA RAE (24.9.2026 klo 17.01)
+
+Kuvat proto-3d/lokit/loydos26-pariisi-zoomi/. Fable Natiivi-UI:lle: vaakatilassa vain ☰ (ei pillereitä); webin --paper-noise on hienojakoinen feTurbulence (baseFrequency 0,9, alpha 0,2, multiply) → natiivin rae yhtä hienoksi tai pois; font-weight ja värit (#211d18, #16130f) webin mukaan; nostokortin web-kuva Playwrightilla klikkaamalla. Tekemättä Laitetestaajalla: noppa-kartalle, astropulu, iso iPad Linssisepän jälkeen.
