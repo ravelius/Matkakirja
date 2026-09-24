@@ -78,7 +78,7 @@ Esitys (data: esitys.json + kertomusmanifesti)
 
 | Paketti | Käyttö |
 |---|---|
-| Cinemachine 3 | kameran ajo ja sekoitus lavojen välillä (CinemachineCamera + SplineDolly salissa; pallolla kamera Cesiumin georeferenssin alla) |
+| Cinemachine 3 | salin kameran ajo (CinemachineCamera + SplineDolly). Lavat eivät sekoitu kameratasolla: esitysaikajana jatkuu, ja kamera vaihtuu pergamentin tai pilvihäivytyksen takana (luku 7). Pallolla on edelleen PalloKierto (Cesium). |
 | Splines | kameran rata (SplineContainer) avainkehyksistä; katseen rata erikseen |
 | Timeline | raitojen synkka editorissa ja esikatselussa; ajonaikana esitys luetaan datasta (Timeline-asset rakennetaan esitys.jsonista, ei käsin) |
 | TextMeshPro | merkintöjen tekstit (Natiivi-UI:n fonttipinta) |
