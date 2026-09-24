@@ -16,11 +16,13 @@
 // raakapolkuja ei lueta, joten jokainen lukija, joka vielä tarvitsee niitä, punastuu.
 // SKEEMA 1.26 (24.9.2026): säännöt ovat päätaso ensin ("kentta|data.vanha", Tai("a.b")), kuten
 // lukijat (Paataso.Nakyma/Olio). Raaka vaihtoehto on vain vanhoja paketteja varten.
+// SKEEMA 1.30 (24.9.2026, koepaketti v38): aanitaulut (oma sääntö), reitit.maksu ja laattatyyppien
+// suomenkieliset nimet päätasolla. Laattatyypin englanninkieliset nimet (name, symbol, value, color)
+// ovat vanhan muodon varareitti: vartija kohtelee niitä kuten data.*-polkuja (Englanninkieliset).
 //
 // Lukijat (kaanna.sh:n tiedostot): SisaltoTuonti, Reittiverkko, Laattamaarat, Aarrenimet,
 // Kysymysdata, Kohtaamiset, Kuvakokoelmat, Pulmadata, Kauppasisalto, Fokusdata, Sahketehtava,
-// Luennat. Laukku ja Lento eivät lue pakettia suoraan (Laukku saa Aarrenimet ja Kauppasisallon).
-// AaniTaulut (B7, haara pelikoodari/aani-logiikka) liitetään kohtaan "AANITAULUT" alla.
+// Luennat, AaniTaulut. Laukku ja Lento eivät lue pakettia suoraan (Laukku saa Aarrenimet ja Kauppasisallon).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -174,7 +176,18 @@ namespace Matkakirja.Peli.Testit
 
         // --- polut -------------------------------------------------------
 
-        static bool OnRaaka(string polku) => polku == "data" || polku.StartsWith("data.", StringComparison.Ordinal);
+        /// <summary>
+        /// Laattatyypin englanninkieliset nimet (skeema ≤ 1.29; 1.30 tuo suomenkieliset rinnalle, 2.0 poistaa):
+        /// raakaa kuten data.*, joten raakakielto katkaisee ne (lukija: Paataso.Suomeksi).
+        /// </summary>
+        public static readonly HashSet<string> Englanninkieliset = new HashSet<string>
+        {
+            "tyypit.*.name", "tyypit.*.symbol", "tyypit.*.value", "tyypit.*.color",
+            "mannerTyypit.*.*.name", "mannerTyypit.*.*.symbol", "mannerTyypit.*.*.value", "mannerTyypit.*.*.color",
+        };
+
+        static bool OnRaaka(string polku) =>
+            polku == "data" || polku.StartsWith("data.", StringComparison.Ordinal) || Englanninkieliset.Contains(polku);
 
         /// <summary>Polun arvot (polku, arvo); puuttuva väliolio tai lehti antaa (polku, null).</summary>
         public static IEnumerable<(string Polku, object Arvo)> Arvot(object juuri, string polku)
@@ -258,8 +271,11 @@ namespace Matkakirja.Peli.Testit
                     return (r.Count, $"{v.Reitit.Count} maa/meri, {v.Lennot.Count} lentoa");
                 })
                 .Pakko("a|data.a", T).Pakko("b|data.b", T).Pakko("laji", T)
-                .Voi("askelia|data.steps", L).Voi("data.fee", L)
+                .Voi("askelia|data.steps", L).Voi("maksu|data.fee", L)
                 .Ehto((o, p) => MiniJson.Teksti(o, "laji") is string l && l != "maa" && l != "sea" && l != "lento" ? $"tuntematon laji '{l}'" : null)
+                // Webin kaava: vain merireitillä on maksu (sea → data.fee ?? SEA_FEE, muut 0).
+                .Ehto((o, p) => MiniJson.Luku(o, "maksu") is double m && (m < 0 || (MiniJson.Teksti(o, "laji") != "sea" && m != 0))
+                    ? $"maksu {m} ei ole webin kaavan mukainen (laji {MiniJson.Teksti(o, "laji")})" : null)
                 .Ehto((o, p) => MiniJson.Teksti(o, "laji") != "lento" && Ensimmainen(o, "askelia", "data.steps") == null ? "puuttuu askelia (maa/meri)" : null)
                 .Ehto((o, p) => Kaupunki(p, S(o, "a", "data.a"), "a") ?? Kaupunki(p, S(o, "b", "data.b"), "b")),
 
@@ -275,10 +291,12 @@ namespace Matkakirja.Peli.Testit
                     var n = new Aarrenimet(); n.LueLaatat(p.Teksti("laatat"));
                     return (n.Hae(Laattatyypit.PieniAarre, null, null)?.Nimi != null ? 1 : 0, $"{n.Mantereet.Count()} mannerta");
                 })
-                .Pakko("tyypit|data.types", O).Pakko("tyypit.*.name|data.types.*.name", T)
+                // Nimi suomeksi (1.30), englanninkielinen vain vanhan paketin varareitti (Paataso.Suomeksi).
+                .Pakko("tyypit|data.types", O).Pakko("tyypit.*.nimi|tyypit.*.name|data.types.*.name", T)
                 .Voi("tyypit.*.fakta|data.types.*.fakta", T).Voi("tyypit.*.kuva|data.types.*.kuva", T)
                 .Voi("mannerTyypit|data.mannerTypes", O).Voi("mannerTyypit.*|data.mannerTypes.*", O)
-                .Voi("mannerTyypit.*.*.name|data.mannerTypes.*.*.name", T).Voi("mannerTyypit.*.*.kuva|data.mannerTypes.*.*.kuva", T),
+                .Voi("mannerTyypit.*.*.nimi|mannerTyypit.*.*.name|data.mannerTypes.*.*.name", T)
+                .Voi("mannerTyypit.*.*.kuva|data.mannerTypes.*.*.kuva", T),
 
             Saanto("kysymykset", "Kysymysdata.LueKysymykset", p =>
                 {
@@ -490,19 +508,57 @@ namespace Matkakirja.Peli.Testit
                 })
                 .Uniikki(Tai("kaupunki")),
 
-            // AANITAULUT (B7, haara pelikoodari/aani-logiikka, Assets/Matkakirja/Peli/Aani/): liitä tähän
-            //   S("aanitaulut", "AaniTaulut.Lue", p => (…lukijan määrä…, …)).Pakko(…)…
-            // Paikallinen kopio (Kultaiset/tuotanto) sisältää jo kokoelman aanitaulut.
+            // AANITAULUT (B7, Peli/Aani/AaniTaulut.cs): rivit, jotka natiivi lukee; muut lajit ohitetaan.
+            // Kentät päätasolla skeemasta 1.30 (v38); vanha paketti data.* (Paataso.Nakyma).
+            Saanto("aanitaulut", "AaniTaulut.LueAanitaulut", p =>
+                {
+                    var t = new AaniTaulut { Pohjaraita = null };
+                    int korit = t.LueAanitaulut(p.Teksti("aanitaulut"));
+                    int maara = t.Siirtymat.Count + t.Tilaraidat.Count + t.Paikkaraidat.Count + t.Pulut.Count + korit
+                        + (t.Pohjaraita != null ? 1 : 0) + (t.AarreTavallinen != null ? 1 : 0) + (t.AarrePaa != null ? 1 : 0);
+                    return (maara, $"{t.Siirtymat.Count} siirtymää, {t.Tilaraidat.Count} tila-, {t.Paikkaraidat.Count} paikkaraitaa, {t.Pulut.Count} pulua, {korit} koria");
+                })
+                .Vain(o => AanitaulunLajit.Contains(MiniJson.Teksti(o, "laji") ?? ""), "laji, jota natiivi ei lue")
+                .Pakko("id", T).Pakko("laji", T).Voi("nimi", T)
+                .Voi(Tai("ryhma"), T).Voi(Tai("ampari"), T).Voi(Tai("oma"), T).Voi(Tai("voima"), L)
+                .Voi(Tai("nousuMs"), L).Voi(Tai("laskuMs"), L)
+                .Voi(Tai("tunnus"), T).Voi(Tai("kuvaus"), T).Voi(Tai("kesto"), L).Voi("juuri", T)
+                .Voi("paikka", T).Voi("tyyppi", T).Voi("porras", T).Voi("vakio", B).Voi("kori", A).Voi("kori.*", T)
+                .Ehto((o, p) => MiniJson.Teksti(o, "laji") switch
+                {
+                    "siirtyma" => Vaadi(o, "nimi", "ryhma", "ampari", "oma", "voima")
+                        ?? (S(o, "ryhma", "data.ryhma") is string r && r != "siirtyma" && r != "linssi" ? $"tuntematon ryhmä '{r}'" : null),
+                    "tilaraita" or "paikkaraita" => Vaadi(o, "nimi", "tunnus"),
+                    "pulu" => Vaadi(o, "nimi", "juuri", "tunnus", "kesto", "voima"),
+                    "pohjaraita" => Vaadi(o, "nimi"),
+                    "aarreaihe" => Vaadi(o, "nimi", "tunnus")
+                        ?? (MiniJson.Teksti(o, "nimi") is string n && n != "paa" && n != "tavallinen" ? $"tuntematon aarreaihe '{n}'" : null),
+                    "maisemakori" => Vaadi(o, "paikka", "kori"),
+                    _ => null,
+                })
+                .Uniikki("id"),
         };
+
+        /// <summary>Äänitaulujen lajit, jotka AaniTaulut.LueAanitaulut lukee (muut: viritys, tehoste, ambienssi, musiikkiketju, tilaraitaUrl).</summary>
+        static readonly HashSet<string> AanitaulunLajit = new HashSet<string>
+            { "siirtyma", "tilaraita", "paikkaraita", "pulu", "pohjaraita", "aarreaihe", "maisemakori" };
+
+        /// <summary>Ensimmäinen puuttuva kenttä (päätaso tai raakana data.&lt;kenttä&gt;, raakakielto huomioiden) tai null.</summary>
+        static string Vaadi(Dictionary<string, object> o, params string[] kentat)
+        {
+            foreach (var k in kentat)
+                if (Ensimmainen(o, k, "data." + k) == null)
+                    return Paataso.RaakaKielletty && Arvot(o, "data." + k).Any(x => x.Arvo != null) ? $"vain raakadatassa: {k}" : $"puuttuu {k}";
+            return null;
+        }
 
         /// <summary>Raakadatan lukukohdat, joita vartija ei näe kentistä (kirjataan tulosteeseen).</summary>
         public static readonly string[] MuutRaakaluvut =
         {
             "Paataso (Peli/Paataso.cs): Raaka, RaakaArvo, Nakyma, Olio, Yhdista = lukijoiden ainoa varareitti data-olioon, kun päätason kenttä puuttuu (kytkin Paataso.RaakaKielletty)",
-            "AaniTaulut.LueAanitaulut (Peli/Aani/AaniTaulut.cs, ei sääntöä): siirtyma/tilaraita/paikkaraita data.ryhma/ampari/oma/voima/nousuMs/laskuMs/tunnus (Paataso.Nakyma; v33: vain raa'assa datassa)",
             "PeliOhjain.HaeAanitaulut (Scripts/Peli/PeliOhjain.Aanet.cs): moduulit/js/aani-ehdokkaat.json, kun paketissa ei maisemakoreja (skeema < 1.22); ohitetaan raakakiellolla",
             "Laattamaarat.Lue (Peli/Laatat.cs): webin moduulimuoto exportit (vain testit; raakakiellolla FormatException). PeliOhjainin moduulivarareitti poistettu 24.9.2026",
-            "SisaltoTuonti.LueReitit: data.fee (meren maksu; ei päätason kenttää eikä yhdessäkään paketissa, oletus web SEA_FEE)",
+            "SisaltoTuonti.LueReitit: data.fee (Paataso.Raaka), vain kun päätason maksu puuttuu (≤ 1.29); fee ei ole yhdessäkään paketissa, joten käytännössä web SEA_FEE",
             "UI/ (Natiivi-UI, ei tässä vartijassa): UiSisalto, Kohdekartat, MitaUutta, Lippuikkuna, NostoSisalto, Pulu/Fokusvirrat, Pulu/Matkakirjamerkinnat, Lehti/LehtiFokus, Lehti/LehtiSisalto lukevat data-kenttiä",
         };
 
@@ -514,6 +570,7 @@ namespace Matkakirja.Peli.Testit
             ("1.10", "kaupungit", "korkeus"),
             ("1.10", "luennat", "reaktiot"),
             ("1.10", "luennat", "tekstiSha256"),
+            ("1.30", "reitit", "maksu"),
         };
 
         public static Vartijatulos Tarkista(Paketti p, IEnumerable<Lukijasaanto> saannot = null)
@@ -692,7 +749,6 @@ namespace Matkakirja.Peli.Testit
                 foreach (var kv in r.Hylkayssyyt)
                     Console.WriteLine($"  {"",-16}   HYLÄTTY {kv.Value.Count}: {kv.Key} — esim. {string.Join(", ", kv.Value.Take(4))}");
             }
-            Console.WriteLine("  aanitaulut       (AaniTaulut, B7: ei sääntöä; raakaluku alla)");
             Console.WriteLine("  Raakadatan (data.*) lukukohdat, joita lukijat nyt käyttävät:");
             foreach (var g in t.Rivit.Where(r => r.RaakaPolut.Count > 0))
                 Console.WriteLine($"    {g.Kokoelma} / {g.Lukija}: {string.Join(", ", g.RaakaPolut.Select(kv => $"{kv.Key} {kv.Value}"))}");
@@ -709,8 +765,8 @@ namespace Matkakirja.Peli.Testit
 
         // --- paketin haku (vain lipulla) ------------------------------------
 
-        /// <summary>Kokoelmat, jotka paikallinen kopio ja haku sisältävät (säännöt + aanitaulut B7:lle + lehtitehtavat Fokusdatalle).</summary>
-        public static IEnumerable<string> KopioitavatKokoelmat => Saannot.Select(s => s.Kokoelma).Append("aanitaulut").Append("lehtitehtavat").Distinct();
+        /// <summary>Kokoelmat, jotka paikallinen kopio ja haku sisältävät (säännöt + lehtitehtavat Fokusdatalle).</summary>
+        public static IEnumerable<string> KopioitavatKokoelmat => Saannot.Select(s => s.Kokoelma).Append("lehtitehtavat").Distinct();
 
         /// <summary>
         /// Hakee tuotantopaketin osoittimesta kansioon kohde/{uusin.json, v&lt;N&gt;/manifest.json,

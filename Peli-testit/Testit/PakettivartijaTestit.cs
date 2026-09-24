@@ -32,7 +32,7 @@ namespace Matkakirja.Peli.Testit
         {
             bool vanha = Paataso.RaakaKielletty;
             bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY");
-            // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.26, koepaketti v33).
+            // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.30, koepaketti v38).
             // Vanhempi paketti (tuotanto v11 = 1.10) luetaan raa'an datan varareitillä, ja se kerrotaan.
             if (kielto && !Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
             {
@@ -182,6 +182,69 @@ namespace Matkakirja.Peli.Testit
         {
             var t = Aja(Paikallinen.Korvaa("kaupungit", Paikallinen.Teksti("kaupungit") + " "), "kaupungit");
             OletaVirhe(t, "sha256 ei täsmää");
+        }
+
+        /// <summary>Äänitaulujen raidat ja pulut vertailtavana tekstinä (tyhjä kenttä näkyy tyhjänä).</summary>
+        static string Raidat(AaniTaulut t) => string.Join("\n",
+            t.Siirtymat.Select(r => $"siirtyma {r.Laji}/{r.Ryhma}/{r.Ampari}/{r.Oma}/{r.Voima:R}/{r.NousuMs}/{r.LaskuMs}")
+                .Concat(t.Tilaraidat.Select(r => $"tila {r.Nimi}={r.Tunnus}"))
+                .Concat(t.Paikkaraidat.Select(r => $"paikka {r.Key}={r.Value}"))
+                .Concat(t.Raitakuvaukset.Select(r => $"kuvaus {r.Key}={r.Value}"))
+                .Concat(t.Pulut.Values.Select(r => $"pulu {r.Nimi}/{r.Juuri}/{r.Tunnus}/{r.Kesto:R}/{r.Voima:R}")));
+
+        static AaniTaulut LueAanitaulut(string json, bool kielto)
+        {
+            var t = new AaniTaulut();
+            Paataso.RaakaKielletty = kielto;
+            try { t.LueAanitaulut(json); } finally { Paataso.RaakaKielletty = false; }
+            return t;
+        }
+
+        /// <summary>
+        /// Skeema 1.30 (koepaketti v38): aanitaulujen siirtymä-, tila- ja paikkaraidat sekä pulut ovat
+        /// päätasolla, joten raakakiellolla ne EIVÄT tyhjene (≤ 1.29: kentät vain data-oliossa → tyhjät).
+        /// Aina: paikallinen kopio (v11, vain raakaa) ja siitä tehty 1.30-muoto; lipulla VARTIJA_KOE myös
+        /// koepaketti, kun sen skeema ≥ Pakettiskeema.PaatasoTaysi.
+        /// </summary>
+        [Testi] static void AanitaulujenRaidatEivatTyhjeneRaakakiellolla()
+        {
+            var vanha = Paikallinen.Teksti("aanitaulut");
+            var ilman = LueAanitaulut(vanha, false);
+            Oleta.Tosi(ilman.Siirtymat.Count == 5 && ilman.Tilaraidat.Count == 2 && ilman.Paikkaraidat.Count == 1 && ilman.Pulut.Count == 16,
+                "v11: 5 siirtymää, 2 tila-, 1 paikkaraita, 16 pulua: " + Raidat(ilman));
+            // Vanha paketti raakakiellolla: rivit löytyvät, mutta kentät tyhjenevät (siksi kielto vain ≥ 1.30).
+            var tyhja = LueAanitaulut(vanha, true);
+            Oleta.Tosi(tyhja.Siirtymat.All(r => r.Ampari == null && r.Ryhma == null) && tyhja.Pulut.Values.All(r => r.Tunnus == null),
+                "v11 raakakiellolla: kentät tyhjiä");
+
+            // 1.30-muoto: data-olion kentät päätasolle (kuten Siirtoseppä), data jää rinnalle.
+            var uusi = Muokkaa("aanitaulut", l =>
+            {
+                foreach (var o in l)
+                    if (o.TryGetValue("data", out var d) && d is Dictionary<string, object> dd)
+                        foreach (var kv in dd) if (!o.ContainsKey(kv.Key)) o[kv.Key] = kv.Value;
+            });
+            Oleta.Sama(Raidat(ilman), Raidat(LueAanitaulut(uusi, true)), "1.30-muoto raakakiellolla = raaka sallittuna");
+
+            var koe = Ymp("VARTIJA_KOE");
+            if (koe == null || koe == "0") return;
+            var p = Paketti.Kansiosta(koe == "1" ? Pakettivartija.KoepakettiOletus : koe, "koepaketti");
+            if (!Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
+            {
+                Console.WriteLine($"  (koepaketti {p.Versio} skeema {p.Skeemaversio} < {Pakettiskeema.PaatasoTaysi}: äänitaulut vain raakana)");
+                return;
+            }
+            var json = p.Teksti("aanitaulut");
+            var sallittu = LueAanitaulut(json, false);
+            var kielletty = LueAanitaulut(json, true);
+            Oleta.Tosi(kielletty.Siirtymat.Count > 0 && kielletty.Tilaraidat.Count > 0 && kielletty.Paikkaraidat.Count > 0 && kielletty.Pulut.Count > 0,
+                $"koepaketti {p.Versio}: raidat ja pulut luettu raakakiellolla");
+            Oleta.Tosi(kielletty.Siirtymat.All(r => r.Ryhma != null && r.Ampari != null && r.Oma != null && r.Voima > 0)
+                && kielletty.Tilaraidat.All(r => r.Tunnus != null) && kielletty.Paikkaraidat.Values.All(x => x != null)
+                && kielletty.Pulut.Values.All(r => r.Tunnus != null && r.Juuri != null && r.Kesto > 0 && r.Voima > 0),
+                $"koepaketti {p.Versio}: raakakiellolla ei tyhjiä kenttiä: " + Raidat(kielletty));
+            Oleta.Sama(Raidat(sallittu), Raidat(kielletty), $"koepaketti {p.Versio}: raakakielto ei muuta raitoja");
+            Console.WriteLine($"  koepaketti {p.Versio} (skeema {p.Skeemaversio}): {kielletty.Siirtymat.Count} siirtymää, {kielletty.Tilaraidat.Count} tila-, {kielletty.Paikkaraidat.Count} paikkaraitaa, {kielletty.Pulut.Count} pulua raakakiellolla");
         }
 
         /// <summary>Vaihe 2: Paataso.RaakaKielletty poistaa data-varareitin lukijalta ja vartijalta.</summary>

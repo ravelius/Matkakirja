@@ -99,10 +99,10 @@ namespace Matkakirja.Peli.Testit
             // Jokaisessa alkiossa päätaso JA eri arvoinen raaka data: päätason pitää voittaa sekä ilman kieltoa
             // että kiellolla; pelkkä raaka (vanha paketti) kelpaa vain ilman kieltoa.
             var reitit = Kokoelma("reitit",
-                "{'id':'r0','laji':'sea','a':'x','b':'y','askelia':4,'data':{'a':'x','b':'y','type':'sea','steps':9}}," +
-                "{'id':'r1','laji':'lento','a':'y','b':'z','askelia':null,'data':{'a':'y','b':'z'}}");
+                "{'id':'r0','laji':'sea','a':'x','b':'y','askelia':4,'maksu':120,'data':{'a':'x','b':'y','type':'sea','steps':9,'fee':90}}," +
+                "{'id':'r1','laji':'lento','a':'y','b':'z','askelia':null,'maksu':0,'data':{'a':'y','b':'z'}}");
             var laatat = Kokoelma("laatat",
-                "{'id':'tokens','maarat':{'star':2,'pieniAarre':3},'tyypit':{'pieniAarre':{'name':'Uusi'}},'mannerTyypit':{'europe':{'pieniAarre':{'name':'Meripihka'}}}," +
+                "{'id':'tokens','maarat':{'star':2,'pieniAarre':3},'tyypit':{'pieniAarre':{'nimi':'Uusi','name':'New'}},'mannerTyypit':{'europe':{'pieniAarre':{'nimi':'Meripihka','name':'Amber'}}}," +
                 "'data':{'counts':{'star':9},'types':{'pieniAarre':{'name':'Vanha'}},'mannerTypes':{}}}");
             var kaari = Kokoelma("tarinakaari",
                 "{'id':'praha','kaupunki':'praha','nimi':'Tomáš','kohtaaminen':'K','aarre':'A','tunneAarre':{'tunne':'ilo','voimakkuus':0.6}," +
@@ -148,7 +148,7 @@ namespace Matkakirja.Peli.Testit
                 var k = ko.Kaupunki("praha");
                 var kk = d.Kaaret["praha"];
                 return string.Join("|",
-                    $"{r[0].Askeleet},{r[0].Laji},{r[1].Laji}",
+                    $"{r[0].Askeleet},{r[0].Laji},{r[1].Laji},{r[0].Maksu}",
                     string.Join(";", m.Maarat.Select(x => x.Key + "=" + x.Value)),
                     n.Hae(Laattatyypit.PieniAarre, null, null)?.Nimi, n.Hae(Laattatyypit.PieniAarre, "europe", null)?.Nimi,
                     n.Hae(Laattatyypit.PieniAarre, "europe", "CZE")?.Nimi + "," + n.Hae(Laattatyypit.PieniAarre, "europe", "CZE")?.KuvaUrl,
@@ -161,7 +161,7 @@ namespace Matkakirja.Peli.Testit
                     string.Join(";", f.Avaajat("praha")) + "," + s["praha"].Sahke,
                     $"{l.Saapumispuhe("praha").Url},{l.Saapumispuhe("praha").Teksti},{l.Saapumispuhe("praha").Kesto}");
             }
-            const string odotus = "4,Meri,Lento|star=2;pieniAarre=3|Uusi|Meripihka|Granaatti,https://u/p.jpg|Tomáš,Q?,a;b,1,F|uusi,,;t,isoisa,L"
+            const string odotus = "4,Meri,Lento,120|star=2;pieniAarre=3|Uusi|Meripihka|Granaatti,https://u/p.jpg|Tomáš,Q?,a;b,1,F|uusi,,;t,isoisa,L"
                 + "|K,A,T,L,Y,V,H,N,ilo,0.7|https://u/1.jpg,Alt,|ilves,https://u/e.jpg,50|Praha 1873,https://u/julisteet/j.png"
                 + "|fokus:aarre,STOP|https://u/a.mp3,Praha.,3.5";
             var kulttuuri = System.Globalization.CultureInfo.CurrentCulture;
@@ -172,6 +172,38 @@ namespace Matkakirja.Peli.Testit
                 Oleta.Sama(odotus, Kiellolla(Lue), "päätaso riittää raakakiellolla");
             }
             finally { System.Globalization.CultureInfo.CurrentCulture = kulttuuri; }
+        }
+
+        /// <summary>
+        /// Skeema 1.30: reitit.maksu ja laattatyyppien suomenkieliset nimet. Puuttuva maksu = webin kaava
+        /// (meri: data.fee ?? SEA_FEE, muut 0); englanninkielinen nimi vain ilman raakakieltoa.
+        /// </summary>
+        [Testi] static void Skeema130MaksuJaSuomenkielisetNimet()
+        {
+            var reitit = Kokoelma("reitit",
+                "{'id':'r0','laji':'sea','a':'x','b':'y','askelia':2,'data':{'fee':90}}," +
+                "{'id':'r1','laji':'sea','a':'y','b':'z','askelia':2}," +
+                "{'id':'r2','laji':'maa','a':'z','b':'w','askelia':2,'data':{'fee':90}}," +
+                "{'id':'r3','laji':'sea','a':'w','b':'v','askelia':2,'maksu':150,'data':{'fee':90}}," +
+                "{'id':'r4','laji':'maa','a':'v','b':'u','askelia':2,'maksu':0}");
+            string Maksut() => string.Join(",", SisaltoTuonti.LueReitit(reitit).Select(r => r.Maksu));
+            Oleta.Sama($"90,{Vakiot.MeriHinta},0,150,0", Maksut(), "maksu: päätaso, muuten webin kaava");
+            Oleta.Sama($"{Vakiot.MeriHinta},{Vakiot.MeriHinta},0,150,0", Kiellolla(Maksut), "kielto: data.fee ei kelpaa");
+
+            var laatat = Kokoelma("laatat",
+                "{'id':'tokens','maarat':{'star':1},'tyypit':{'star':{'name':'Forgotten','symbol':'x'},'pieniAarre':{'nimi':'Hopea','name':'Silver'}}," +
+                "'mannerTyypit':{'europe':{'star':{'name':'Amber'},'isoAarre':{'nimi':'Arkku','name':'Chest'}}}}");
+            string Nimet()
+            {
+                var n = new Aarrenimet(); n.LueLaatat(laatat);
+                return string.Join(",", n.Hae(Laattatyypit.Paaaarre, null, null)?.Nimi, n.Hae(Laattatyypit.PieniAarre, null, null)?.Nimi,
+                    n.Hae(Laattatyypit.Paaaarre, "europe", null)?.Nimi, n.Hae(Laattatyypit.IsoAarre, "europe", null)?.Nimi);
+            }
+            Oleta.Sama("Forgotten,Hopea,Amber,Arkku", Nimet(), "suomi ensin, englanti varalla");
+            Oleta.Sama(",Hopea,,Arkku", Kiellolla(Nimet), "kielto: englanninkielisiä nimiä ei lueta");
+            var d = Paataso.Suomeksi(MiniJson.Jasenna("{\"name\":\"N\",\"symbol\":\"S\",\"value\":5,\"color\":\"#fff\",\"fakta\":\"F\"}"), Paataso.Laattatyyppi);
+            Oleta.Sama("N|S|5|#fff|F", $"{MiniJson.Teksti(d, "nimi")}|{MiniJson.Teksti(d, "symboli")}|{MiniJson.Luku(d, "arvo")}|{MiniJson.Teksti(d, "vari")}|{MiniJson.Teksti(d, "fakta")}", "Suomeksi");
+            Oleta.Tosi(!d.ContainsKey("name") && !d.ContainsKey("color"), "Suomeksi poistaa englanninkieliset");
         }
 
         [Testi] static void PelkkaRaakaEiKelpaaKiellolla()
