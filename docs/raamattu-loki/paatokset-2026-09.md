@@ -4127,3 +4127,7 @@ Luokitin esti poiston; Raamatun mukaan Fable pyysi omistajalta täsmällisen luv
 ## NATIIVISEPPA: 9 WORKTREETA POISTETTU; ALOITUSVIESTIN VANHENTUMISEN SYY: LUOVUTUSHAARA selvittaja-3d-luovutus (16 COMMITTIA) EI MAINISSA (24.9.2026 klo 16.02)
 
 Aloitusviesti täydennetty 1f68fd274. Fable: Julkaisija mergeää luovutushaaran mainiin rutiinina; Postivahti lukee jatkossa aloitusviestin uusimmasta origin-haarasta (git log --all), ei mainin kopiota jos vanhempi. Natiiviseppä odottaa 'vienti ohi' ja jatkaa build 10 -jonoa.
+
+## ISO iPAD PYSYVAKSI TESTILAITTEEKSI (omistaja klo 16.1x): iPad Pro 13 (Sami), UDID 00008103-001819421413401E (24.9.2026 klo 16.05)
+
+iPad Pro 12,9" 5. sukupolvi (iPad13,8, M1), iPadOS 26.4.1, kehittäjätila päällä, paritettu devicectl:llä (manage pair) ja kaapelilla kiinni; pistekoko 1024×1366 → iPad-kuvaparit jatkossa myös tässä koossa (PW_W=1024 PW_H=1366). Pieni iPad Pro 11 (00008142…) palautetaan omistajalle, kun Linssisepän käynnissä oleva piikkiajo (langaton) valmistuu; Huippuvuoret-laitekuva ja keksinnöt-kuvapari isolla iPadilla.
