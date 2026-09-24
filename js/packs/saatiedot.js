@@ -4256,4 +4256,81 @@ export const SAATIEDOT = {
       + 'viilenee alle 13 asteeseen. Sadetta tulee vähän mutta '
       + 'tasaisesti ympäri vuoden.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N15-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain alkufra,campogrande,exmouth,macapa,sanambrosio. Asemat: Al
+   * Kufra, Campo Grande, Exmouth, Macapá, San Ambrosio (Desventuradas-
+   * saaret).
+   */
+  alkufra: {
+    lat: 24.1747,
+    lon: 23.3161,
+    keskilampo: [11.5, 14.1, 19.6, 24.1, 28.1, 31.6, 31.3, 31.7, 28.5, 24.5, 16.5, 13],
+    ylin: [18, 21, 27, 32, 35, 39, 38, 38, 35, 32, 22, 20],
+    alin: [5, 7, 12, 17, 21, 24, 24, 25, 22, 17, 11, 6],
+    sade: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    luonnehdinta: 'Al Kufran oaasissa elokuu on kuumin, yli 31 '
+      + 'astetta, ja tammikuu selvästi viilein. Sadetta ei '
+      + 'käytännössä ole minään kuukautena.',
+  },
+  campogrande: {
+    lat: -20.4697,
+    lon: -54.6201,
+    keskilampo: [25.4, 25.1, 25.1, 23.5, 20.7, 21.8, 20.8, 22.8, 24.4, 25.4, 25, 25.4],
+    ylin: [29, 29, 29, 28, 25, 26, 26, 28, 30, 30, 30, 29],
+    alin: [22, 21, 21, 19, 16, 18, 16, 17, 19, 21, 20, 22],
+    sade: [241, 172, 160, 109, 65, 36, 10, 28, 105, 154, 151, 188],
+    luonnehdinta: 'Campo Grandessa tammikuu on lämpimin ja '
+      + 'sateisin, yli 240 millimetriä. Heinäkuu on selvästi '
+      + 'kuivin, alle 20 asteen viileydessä ja vain kymmenen '
+      + 'millimetrin sateella.',
+  },
+  exmouth: {
+    lat: -21.9341,
+    lon: 114.1281,
+    keskilampo: [27.3, 27.8, 28.7, 26.9, 23.5, 21.1, 20.7, 21, 22.3, 23.4, 25.1, 26.7],
+    ylin: [31, 31, 32, 30, 27, 23, 24, 24, 26, 28, 29, 31],
+    alin: [23, 24, 25, 23, 20, 19, 17, 18, 18, 19, 21, 22],
+    sade: [16, 20, 39, 17, 97, 36, 0, 6, 3, 0, 0, 1],
+    luonnehdinta: 'Exmouthissa kesä (joulu–maaliskuu) on kuuma, '
+      + 'lähes 29 astetta, ja talvi (heinä–elokuu) selvästi '
+      + 'viileämpi. Sadetta tulee epäsäännöllisesti, toisinaan '
+      + 'runsaastikin tropiikin sääjärjestelmien mukana.',
+  },
+  macapa: {
+    lat: 0.0389,
+    lon: -51.0664,
+    keskilampo: [25.8, 25.5, 25.4, 25.6, 26, 25.8, 26.3, 27, 27.6, 28.2, 27.3, 26.7],
+    ylin: [28, 28, 28, 28, 28, 28, 29, 30, 31, 32, 30, 30],
+    alin: [23, 23, 23, 23, 24, 23, 24, 24, 24, 25, 24, 24],
+    sade: [216, 272, 363, 333, 287, 228, 116, 59, 21, 6, 87, 85],
+    luonnehdinta: 'Macapássa maaliskuu on sateisin, yli 360 '
+      + 'millimetriä, kun Amazonin suun sadekausi on huipussaan. '
+      + 'Loka–marraskuu on selvästi kuivempaa ja hieman '
+      + 'lämpimämpää aikaa.',
+  },
+  /*
+   * SAN AMBROSIO: sama ilmiö kuin Norfolkinsaarella ja St. Helenalla —
+   * pieni, asumaton saari, ERA5-ruutu osuu enimmäkseen mereen (TARKISTA-
+   * merkki, vaihteluväli n. 1 asteen). En-Wikipedian "Desventuradas
+   * Islands" -artikkelissa (24.9.2026) ei ole kuukausitaulukkoa
+   * lainkaan, eikä muuta luotettavaa lähdettä löytynyt tälle
+   * asumattomalle saarelle. Ylin/alin ARVIOITU (ei koneen laskema):
+   * +-3 astetta keskilämmön ympäri, samaa suuruusluokkaa kuin
+   * läheisen Robinson Crusoen (Juan Fernández) mitattu vaihteluväli.
+   */
+  sanambrosio: {
+    lat: -26.3333,
+    lon: -79.8667,
+    keskilampo: [19.6, 20, 20, 19, 18.1, 17.1, 16.2, 15.5, 15.2, 15.5, 16.2, 17.8],
+    ylin: [23, 23, 23, 22, 21, 20, 19, 19, 18, 19, 19, 21],
+    alin: [17, 17, 17, 16, 15, 14, 13, 13, 12, 13, 13, 15],
+    sade: [4, 3, 5, 7, 8, 12, 7, 7, 2, 3, 2, 3],
+    luonnehdinta: 'San Ambrosion saarella merituuli pitää '
+      + 'lämpötilan leutona, 15–20 astetta ympäri vuoden. Sadetta '
+      + 'tulee vähän, hieman enemmän kesä–heinäkuussa.',
+  },
 };
