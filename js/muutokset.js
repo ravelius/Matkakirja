@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2157, teksti: 'N7: viisi maailmankohdetta (#3013)' },
   { v: 2156, teksti: 'Pallon laattaosoitin poltto 2026-09-23a (#2957)' },
   { v: 2155, teksti: 'Sisältöpaketti 1.17–1.26 natiiville (#3012)' },
   { v: 2154, teksti: 'Sisältöpaketti 1.10–1.16 natiiville (#2984)' },
