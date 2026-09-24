@@ -1807,7 +1807,7 @@ export function shortIntro(text, maxChars = 280, maxSentences = 3) {
  *   3. ANFANGI ensimmäiseen kappaleeseen sivulla (vain kerran, ks.
  *      kutsuja) — aukeaman avaus.
  */
-const LEIPAN_ALOITUS_SANOJA = 4;
+export const LEIPAN_ALOITUS_SANOJA = 4;
 
 /*
  * VIRKEJAKO, JOKA OSAA SUOMEA.
