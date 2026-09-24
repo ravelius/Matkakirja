@@ -3983,3 +3983,7 @@ Omistaja kysyi, tarvitseeko EOX:lle lähettää viestiä. Fable: ei — CC BY 4.
 ## LAITETESTAAJA f6de924 (iPhone 17 -SIMI, KOMENTOAJO): LENNON AANI PASS, ☰ KAKSI RIVIA PASS, PILVIMERI JA RENKAAT PASS; VARALAATTA ESPANJA–SAHARA YHA FAIL; LOYDOS: KONE SUMEA NOUSUN LAHIKUVASSA (24.9.2026 klo 15.05)
 
 Kuvat proto-3d/lokit/build6-tarkistus-20260924/. Fable: molemmat Natiivisepälle build 9:ään (juurisyy varalaatalle, ei uusintayritystä; kone terävä, vain tausta pehmenee); build 8 -vientiä ei keskeytetä. Laitetestaaja committoi kuvat ja päivittää #3059:n. Simulaattorin kosketuslupa iPhone 17 -simille (FB234D08) puuttuu → omistaja sallii Simulator-paneelista.
+
+## PELIKOODARI: MAAMERKIT-KOKOELMAN LUKIJA VALMIS (pelikoodari/maamerkit-paketti 3cf68dc, BUILD 9) (24.9.2026 klo 15.06)
+
+Skeema 1.33 sovittu Siirtosepän kanssa (koepaketti v43, kentät id/kaupunki/lat/lon/maanKorkeus/suunta/mallinKorkeus/malli{url,sha256,tavuja}/lisenssi/tekija/lahde); natiivi hakee GLB:n välimuistiin, tarkistaa shan, oma kapea lukija; Maamerkit.LisaaMalli sovittu Natiivisepän kanssa; pilotti FBX:nä kunnes omistaja kokeillut; Blender --glb tuottaa GLB:n ja rivin (tools/vienti/maamerkit.json). Testit 259/259. Lennon ääni (lento-alku, intro ei lennolla, valinta keskeyttää) masterissa build 8:aan. Fable: kuitattu; seuraavaksi Pelikoodari tarkistaa varalaatan datapuolen (ämpärin pergamenttilaatat z3–z7 Espanja–Algeria), Natiiviseppä koodipuolen.
