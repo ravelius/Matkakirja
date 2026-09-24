@@ -1194,8 +1194,15 @@ const MUISTI = `() => {
  * reunukseen, jota vasten kirjain luetaan.
  */
 const KONTRASTI = `async () => {
-  const { pyramidinKerrostasot, pyramidinLaattaUrl, pyramidinLaattaOlemassa } =
+  const { pyramidinKerrostasot, pyramidinLaattaUrl, pyramidinLaattaOlemassa, nostotasonNimetElavina } =
     await import('/js/laattapyramidi.js');
+  /*
+   * NIMET ELÄVINÄ (nostotaso 2026-09-23a, kaikki 112 maata nimiot: false):
+   * laatassa on vain piste tai kuvamerkki, ei kirjainta. Mitta poimisi
+   * silloin merkkien umpinaiset sisukset (ks. MEDIAANI alla), ja luku
+   * kertoisi merkistä eikä tekstistä. Kerrotaan tila, mitta jää lokiin.
+   */
+  const nimetLaatassa = !nostotasonNimetElavina();
   const { NIMION_HALO, NIMION_HALO_PX, NIMION_HALO_VETOJA, NIMION_MUSTE } =
     await import('/js/pallolaatat.js');
 
@@ -1418,6 +1425,7 @@ const KONTRASTI = `async () => {
   const nykyinen = kolmanneksiin(tulokset);
   const enintaan = (kentta) => ladonta.reduce((a2, b2) => Math.max(a2, b2[kentta]), -Infinity);
   return {
+    nimetLaatassa,
     taso: taso.z,
     laattoja: osumat.length,
     pikseleita: nykyinen.pikseleita,
@@ -2228,12 +2236,27 @@ console.log(`  vertailu (v1945: poltettu muste, pergamenttireunus × 4): `
 console.log(`  ladonta vs. v1945: leveys ${a.kontrasti?.ladonta?.leveysKasvu} px, `
   + `korkeus ${a.kontrasti?.ladonta?.korkeusKasvu} px; peitto ${a.kontrasti?.ladonta?.peittoSuhde}× muste (ennen `
   + `${a.kontrasti?.ladonta?.peittoEnnen}×, ${a.kontrasti?.ladonta?.musteita} mustepikseliä)`);
-vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 tummimmalla reliefillä`,
-  (a.kontrasti?.tummin?.mediaani ?? 0) >= KONTRASTIN_KATTO,
-  JSON.stringify(a.kontrasti));
-vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 vaaleimmalla reliefillä`,
-  (a.kontrasti?.vaalein?.mediaani ?? 0) >= KONTRASTIN_KATTO,
-  JSON.stringify(a.kontrasti));
+/*
+ * NIMET ELÄVINÄ (24.9.2026): kun kohdemaan nostotaso on poltettu ilman
+ * nimiä (kirjaus `nimiot: false`, js/laattapyramidi.js
+ * nostotasonNimetElavina), laatassa ei ole kirjainta, jonka reunusta
+ * mitata — mediaani putosi 10,3 → 4,0, koska otokseen jäivät vain
+ * kuvamerkkien sisukset. Elävät nimet ovat linssin aikana piilossa
+ * (kohta 2, pelin elementit). Vaatimus on silloin se, että mitta ajoi ja
+ * tila tunnistettiin; poltettujen nimien luettelolla vartio on ennallaan.
+ */
+if (a.kontrasti?.nimetLaatassa === false) {
+  vaadi(`${nimiA}: nostotasolla ei ole poltettuja nimiä (nimiot: false), joten nimiön reunuskontrasti ei koske laattaa`,
+    !a.kontrasti.virhe && a.kontrasti.pikseleita > 0,
+    JSON.stringify(a.kontrasti));
+} else {
+  vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 tummimmalla reliefillä`,
+    (a.kontrasti?.tummin?.mediaani ?? 0) >= KONTRASTIN_KATTO,
+    JSON.stringify(a.kontrasti));
+  vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 vaaleimmalla reliefillä`,
+    (a.kontrasti?.vaalein?.mediaani ?? 0) >= KONTRASTIN_KATTO,
+    JSON.stringify(a.kontrasti));
+}
 
 const b = await ajaAvaus({ peite: false });
 vaadi(`${nimiA}: vastakoe — ilman odotuspeitettä kartta on paljaana`,
