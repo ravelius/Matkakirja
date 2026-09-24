@@ -505,7 +505,7 @@ matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + 
 vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
 Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
 
-## Tehty (päivitys 24.9.2026 klo 5.24, Natiivi-UI)
+## Tehty (päivitys 24.9.2026 klo 4.57, Natiivi-UI)
 
 Masterissa: KOKEET-työhuone (Raamattu taulusivuineen, Kehittäjälehden Tilannelehti, Poiminnat, Grafiikka ja
 Musiikki), pöllöpoimintojen laitevarasto ja vienti, karusellin gaussinen sumennus. Merge-pyynnössä: Lukijoilta
@@ -545,7 +545,7 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 klo 5.24, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 4.57, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
