@@ -69,6 +69,8 @@ namespace Matkakirja
         public float malliPx = 110f;
         public Savujana savu;
         public Aurinko aurinko;
+        /// <summary>Lähtösumu ja pilvimeri (LENNON PINTA), Rakennus luo.</summary>
+        public Usvalevy usva;
 
         GameObject olio;
         Material oma;
@@ -218,6 +220,14 @@ namespace Matkakirja
         {
             kesken = valmis;
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
+            // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
+            // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
+            if (usva != null)
+            {
+                usva.Aseta(lat0, lon0, nosto * 0.5, 0f);
+                usva.Tavoite(1f, math.max(0.8f, zoomS));
+            }
+            bool pintaVaihdettu = false, laskuSumu = false;
             if (kierto != null && zoomS > 0)
             {
                 kierto.Aja(lat0, lon0, saapumisKorkeus, zoomS, null);
@@ -239,7 +249,6 @@ namespace Matkakirja
             var kerrokset = KarttaKerrokset.Instanssi;
             reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
             kerrokset?.Nakyvyys("reitit", false);
-            kerrokset?.LentoPohja(true);
             lentoMerkit = merkit;
             lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
             if (merkit != null)
@@ -316,6 +325,26 @@ namespace Matkakirja
                     else pilvet.Korkeus(math.max(2000.0, (nosto + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
+                // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
+                // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
+                if (!pintaVaihdettu && (usva == null || usva.Peitto > 0.85f || t > 0.2))
+                {
+                    pintaVaihdettu = true;
+                    kerrokset?.LentoPohja(true);
+                }
+                if (usva != null && t > 0.24 && t < 0.9) usva.Tavoite(0f, kesto * 0.12f);
+                if (usva != null && !laskuSumu && t > 0.9)
+                {
+                    laskuSumu = true;
+                    usva.Aseta(lat1, lon1, nosto * 0.5, usva.Peitto);
+                    usva.Tavoite(1f, kesto * 0.05f);
+                }
+                if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
+                {
+                    pintaVaihdettu = false;
+                    kerrokset?.LentoPohja(false);
+                    usva.Tavoite(0f, 1.4f);
+                }
                 if (t >= 1) break;
                 yield return null;
             }
@@ -343,6 +372,7 @@ namespace Matkakirja
             if (kerrokset != null)
             {
                 kerrokset.LentoPohja(false);
+                if (usva != null) usva.Tavoite(0f, 1.4f);
                 if (reititEnnen) kerrokset.Nakyvyys("reitit", true);
             }
             if (lentoMerkit != null)
