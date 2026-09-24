@@ -645,6 +645,19 @@
     border-color: #7a5514;
 }
 
+/* iPhone (löydös 18 tarkennus, Fable 24.9.): kulkutapavalitsin auki → kultainen reuna ja teksti, läpikuultava
+ * kultatäyttö noin 20 %, ei umpikultaa. */
+.mk-liiku--puhelin .mk-liiku__nappi.mk-valittu {
+    background-color: rgba(217, 161, 59, 0.2);
+    border-color: #d9a13b;
+    color: #b07d1e;
+}
+
+.mk-liiku--puhelin .mk-liiku__nappi.mk-valittu > .mk-ikoni,
+.mk-liiku--puhelin .mk-liiku__nappi.mk-valittu .mk-nappi__teksti {
+    color: #b07d1e;
+}
+
 .mk-liiku__nappi:disabled {
     opacity: 0.45;
 }
