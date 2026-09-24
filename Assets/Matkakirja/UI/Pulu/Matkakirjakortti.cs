@@ -367,7 +367,7 @@ namespace Matkakirja.Natiivi
             int n = Mathf.Min(naytetty, sanat.Length);
             string nakyva = Osa(0, n);
             string loput = Osa(n, sanat.Length);
-            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput + "</alpha>" : nakyva;
+            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva;
         }
 
         void Kirjoitettu()

@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
             });
             string pitka = k.Selite ?? k.Lyhyt ?? "";
             string lahde = k.LahdeRivi ?? "";
-            teksti.text = Suojaa(pitka) + (lahde.Length > 0 ? "<size=91%><alpha=#CC>" + (pitka.Length > 0 ? " · " : "") + Suojaa(lahde) + "</alpha></size>" : "");
+            teksti.text = Suojaa(pitka) + (lahde.Length > 0 ? "<size=91%><alpha=#CC>" + (pitka.Length > 0 ? " · " : "") + Suojaa(lahde) + "<alpha=#FF></size>" : "");
             teksti.style.display = pitka.Length + lahde.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (!Auki)
             {
