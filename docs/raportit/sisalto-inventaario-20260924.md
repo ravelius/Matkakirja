@@ -114,21 +114,30 @@ aidosti paikannettavaa, osoitteellista kohdetta kaupungissa (luovutus
 `viesti-sisaltokirjuri-luovutus-20260924-e.md` kohta 4.1) — muuten
 kartta jätetään tekemättä.
 
-**Hyväksytty 11 kaupungin lista** (kaikki mergetyistä N8–N16-kaupungeista,
+**Hyväksytty 10 kaupungin lista** (kaikki mergetyistä N8–N16-kaupungeista,
 täyttävät molemmat ehdot): Kalgoorlie, Mount Isa, Broome, Geraldton,
-Porto Velho, Santarém, João Pessoa, Macapá, Cayenne, Gao, Al Kufra.
+Porto Velho, Santarém, João Pessoa, Macapá, Cayenne, Gao.
 
 **MUUTOS 24.9.2026 (kohdekartta-erä 2):** Kimberley siirretty
 hyväksytystä listasta hylättyyn ryhmään 3 — kaupungin kaikki nostot
 (Big Hole, De Beers, Cecil Rhodes, timanttiryntäys) käsittelevät samaa
 yhtä louhosaluetta, eikä toista aidosti erillistä, osoitteellista
 kohdetta löytynyt (esim. Rudd House ei ole OSM:ssä omalla nimellään).
-Alkuperäinen 12 kaupungin lista oli siis 11 hyväksyttyä + Kimberley,
-joka osoittautui toteutuksessa hylätyksi — 18 hylätyn lista kohdassa 2
-kasvoi tämän myötä 19:ään, mutta poistuma tuli hyväksytystä puolesta,
-ei alkuperäisestä 18:sta.
 
-**Hylätty 19 jakautuu kolmeen ryhmään** (tarkistettu `js/packs/*.js`:stä
+**MUUTOS 24.9.2026 (kohdekartta-erä 3):** Al Kufra siirretty
+hyväksytystä listasta hylättyyn ryhmään 3 — OSM:ssä ei ole yhtään
+Al Jawfin (oaasin pääkylä) kohdetta, joka liittyisi kaupungin omiin
+nostoihin (Senussi-veljeskunta, Rohlfsin retkikunta, Zuwayya-heimo);
+löytyneet moskeijat ja kauppa ovat nimettömiä sivujuonen kannalta,
+eivät osa kerrottua tarinaa. Rebianan hiekkameri ja Kufran oaasiryhmä
+ovat luonnonkohteita, eivät ydinkeskustan kävelykohteita.
+
+Alkuperäinen 12 kaupungin lista oli siis 10 hyväksyttyä + Kimberley +
+Al Kufra, jotka osoittautuivat toteutuksessa hylätyiksi — 18 hylätyn
+lista kohdassa 2 kasvoi tämän myötä 20:een, mutta poistuma tuli
+hyväksytystä puolesta, ei alkuperäisestä 18:sta.
+
+**Hylätty 20 jakautuu kolmeen ryhmään** (tarkistettu `js/packs/*.js`:stä
 tässä haarassa 24.9.2026 — ei koskaan olettaen):
 
 1. **Ei vielä mergetty (6)** — sisältö on auki olevissa N2/N4/N5/N6-erien
@@ -142,7 +151,7 @@ tässä haarassa 24.9.2026 — ei koskaan olettaen):
    raja-alueella), Stanley/Falkland (n. 2 500 as.), Jamestown/St Helena
    (n. 800 as.), Hamilton/Bermuda (itse kaupunkikeskus n. 1 000 as.,
    vaikka territorio on suurempi).
-3. **Riittävä väestö, mutta ei kahta paikannettavaa kohdetta (3)** —
+3. **Riittävä väestö, mutta ei kahta paikannettavaa kohdetta (4)** —
    nostot ovat aluetason tunnelmaa/teemaa tai saman yhden kohteen
    toistoa, eivät kahta erillistä osoitteellista nähtävyyttä: Campo
    Grande (nostot: ara-papukaijat kaupungin puistojen yllä, "portti
@@ -153,7 +162,9 @@ tässä haarassa 24.9.2026 — ei koskaan olettaen):
    teemallisia tekstejä ilman paikkaa), Kimberley (kaikki kuusi nostoa
    — löytö, nimeäminen, Big Hole, Rhodesin De Beers, lajittelupöydät —
    kertovat samasta yhdestä louhosalueesta; toista erillistä,
-   OSM:ssä nimettyä kohdetta ei löytynyt).
+   OSM:ssä nimettyä kohdetta ei löytynyt), Al Kufra (nostot koskevat
+   koko oaasiryhmää, Senussi-liikettä tai Rebianan hiekkamerta —
+   yksikään ei osoita tiettyä rakennusta Al Jawfin kylässä).
 
 Lista ei ole pysyvä poissulkeva sääntö: jos jokin näistä saa myöhemmin
 uuden, paikannettavan noston tai kaupunki mergetään, kohdekartta
