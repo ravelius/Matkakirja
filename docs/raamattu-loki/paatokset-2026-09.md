@@ -4515,3 +4515,7 @@ Tarkistettu: hakulista login + System, identiteetit FD3S699799 (RCD77XPB7M) ja 2
 ## LOYDOS 44 TARKENNUS (NATIIVI-UI, FABLE HYVAKSYI): PILLERI JA ☰ DYNAMIC ISLANDIN RIVILLE, RUSKEA PALKKI TAUSTALLA TURVA-ALUEEN KORKUISENA, LYHYT PILLERI '300£ · 1/80', LOGO POIS, iPAD ENNALLAAN (24.9.2026 klo 19.43)
 
 Kuvan tumma alue pillerin yläpuolella oli iPhonen turva-alue (62 pt), joten pelkkä matalampi palkki ei olisi riittänyt.
+
+## PROTO-MASTER 703eee8 (BUILD 11): RADIO 40/42/43, NOSTOKORTTI LEVEA + LEHTI-OTSIKOT, NIMIKERROS (38) LIBERATION SERIF SDF HYVAKSYTTY, HARMAAT SUORAKULMIOT KORJATTU (Z2-VARAKARTTA KAUKAISEN ESIVANHEMMAN TILALLE), KAPPALEJAKO (24.9.2026 klo 19.43)
+
+Nimikerros: alue- ja merinimet maahan painettuina, väistö, alfa lineaariseen sekoitukseen; kuvat lokit/nimikerros-b11c/. Kylmällä lennolla ei suorakulmioita, yksi ohut sauma yhden kehyksen ajan. Jono: kainalo (testi/b11h), fokuspohja, hytinä 27, lennon kamerareitti, mastot; b9755e9:n peruutus nyt (build 10 TestFlightissa). Build 11 -SHA kun kamerareitti + löydös 44 mukana.
