@@ -2,27 +2,27 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 00:56 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 01:08 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
 | Rooli | Session id | Malli | Konteksti | Tila | Viimeisin valmis erä | Odottaa |
 |---|---|---|---|---|---|---|
-| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 14% | idle | Nollattu klo 00.4x | — |
-| Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 10% | busy | — | PR #3128 (linssikatalogi) |
-| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 55% | idle | — | — |
-| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 27% | busy | — | Testikäännös käännöspalvelulla |
-| Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 10% | idle | Nollattu klo 00.5x (Fablen toimesta) | Radiouudistus build 12 |
-| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 33% | busy | PR #3128 -korjaukset | — |
+| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 15% | idle | — | — |
+| Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 11% | idle | — | PR #3128 (linssikatalogi) |
+| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 58% | idle | — | — |
+| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 36% | idle | — | Testikäännös käännöspalvelulla |
+| Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 10% | idle | — | Radiouudistus build 12 |
+| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 39% | busy | PR #3128 -korjaukset | — |
 | Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 37% | idle | — | — |
 | Siirtoseppä | local_7a1255c5-d525-4323-9438-70e7379ad2fe | Opus | 27% | idle | — | — |
-| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 31% | busy | Nollautunut/kevyt | — |
+| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 36% | busy | — | — |
 | Karttaseppä | local_445a5c7b-4317-4989-b65d-4cb81bd10056 | Opus | 51% | idle | — | E28-poltto (päättyy 02:45) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 71% | busy | (tämä taulu) | — |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 73% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle (yön kooste)
 
-Ei tiedossa olevia avoimia kortteja tällä hetkellä. Yöllä tapahtuneet nollaukset: Julkaisija (klo 23.5x), Sisältökirjuri (klo 23.5x, PR #3128-korjaukset), Fable (klo 00.4x), Linssiseppä (klo 00.5x) — kaikki onnistuneet, ei jumeja. YÖTILA: uusia kortteja ei muistuteta erikseen, kootaan aamuraporttiin.
+Ei tiedossa olevia avoimia kortteja. Yön nollaukset (kaikki onnistuneet, ei jumeja): Julkaisija, Sisältökirjuri, Fable, Linssiseppä (klo 23.5x–00.5x). YÖTILA: uusia kortteja ei muistuteta erikseen, kootaan aamuraporttiin.
 
 ## 3) Avoimet PR:t
 
@@ -41,11 +41,11 @@ Julkaisijan seuraava juna: PR #3128 (linssikatalogi) kun testit valmiit ja Pelik
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 87 Gt vapaana. Raja PALAUTUNUT 35 Gt:hen (NAS-siirron erikoisraja 30 Gt purettu). Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla).
+- **Levy** (/System/Volumes/Data): 84 Gt vapaana. Raja 35 Gt. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla).
 - **wt/-worktreet:** 29 kpl.
-- **5 h -kiintiö:** 12%, nollautuu klo 02:20 UTC (05:20 EEST). Raja 95%/98%, tauko vasta 98%:ssa.
-- **Viikkokiintiö (kaikki mallit):** 71%. **Viikkokiintiö (Fable):** 43%. Nollautuu 2026-09-28 klo 01:00.
+- **5 h -kiintiö:** 15%, nollautuu klo 02:20 UTC (05:20 EEST). Raja 95%/98%, tauko vasta 98%:ssa.
+- **Viikkokiintiö (kaikki mallit):** 72%. **Viikkokiintiö (Fable):** 44%. Nollautuu 2026-09-28 klo 01:00.
 
 ## 6) Kellonaika
 
-2026-09-25 00:56 EEST (`date`-komennolla varmennettu). Yön merkkipaalut: E28-poltto päättyy 02:45, TestFlight-yöajo 04:00.
+2026-09-25 01:08 EEST (`date`-komennolla varmennettu). Yön merkkipaalut: E28-poltto päättyy 02:45, TestFlight-yöajo 04:00.
