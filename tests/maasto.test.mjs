@@ -220,11 +220,12 @@ test('Ranska ennallaan: ilman --dem90:tä laatat ja layer.json tavu tavulta kute
     const dem = demHakemisto(tmp);
     const h = createHash('sha256');
     for (const [z, x, y] of [[0, 1, 0], [5, 33, 24], [8, 264, 192], [8, 265, 192], [8, 266, 192], [9, 530, 384], [9, 533, 385]]) {
-      h.update(teeLaatta(dem, z, x, y, 33).tavut);
+      h.update(gunzipSync(teeLaatta(dem, z, x, y, 33).tavut));
     }
     dem.sulje();
     // Tiivisteet on laskettu muuttamattomalla työkalulla (origin/main 92718465a) samasta aineistosta.
-    assert.equal(h.digest('hex'), 'a96ca6c18483513e73a1c31207cdbe3cc0fdcf16272b67df3b12380db4c827cc');
+    // Puretuista tavuista: zlibin gzip-tuloste eroaa Linux x64:n ja Macin arm64:n välillä (CI punainen 23.9.).
+    assert.equal(h.digest('hex'), '87fe5788d4c89d4310815545d576548af12c2067d133ee06e2266a13670857ec');
     const k = kerroksenKuvaus({ tasot: [0, 12], alue: [-6, 41, 10, 52], versio: '2026-09-23b', maailma: 6 });
     assert.equal(createHash('sha256').update(kerrosTekstiksi(k)).digest('hex'), 'e0fbb7670be1e496251c6f64d073497386f1cbc3f94f0d6a8a37193fd2edd1b5');
   } finally { rmSync(tmp, { recursive: true, force: true }); }
