@@ -21,7 +21,7 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 - **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asennettu.
 - Tuotannon sisältö v15 (skeema 1.16). #3012 (1.17–1.25: maakuntakaaret, offline-maanosat) Julkaisijan jonossa → natiivi lukee jo.
 
-## Päivitys 24.9. ~05.20 (master 62c03b4)
+## Päivitys 24.9. klo 05.08 (master 62c03b4)
 
 - Mergetty: linssiseppa/tummennus-gamma + valo-gamma, natiivi-ui/karuselli-kevyt + karuselli-sumea, kehittajan-liite (1fd601b),
   kehittajalehti-2, lukijoilta, avain-muistiin (Fablen kiire: avain ei PlayerPrefsiin), tilastot, peitteet; pelikoodari/avaimet,
