@@ -289,6 +289,7 @@ namespace Matkakirja.Natiivi
             k.AddToClassList("mk-palaute__kentta");
             if (laji == Kenttalaji.Monirivi) k.AddToClassList("mk-palaute__kentta--iso");
             k.textEdition.placeholder = vihje;
+            Rakenne.VapautaNappaimistonSulkeutuessa(k);
             k.keyboardType = laji == Kenttalaji.Sahkoposti ? TouchScreenKeyboardType.EmailAddress
                 : laji == Kenttalaji.Osoite ? TouchScreenKeyboardType.URL : TouchScreenKeyboardType.Default;
             Kirjasimet.Aseta(k, Kirjasin.Kone);
