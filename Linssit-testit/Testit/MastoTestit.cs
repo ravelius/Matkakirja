@@ -162,6 +162,11 @@ namespace Matkakirja.Linssit.Testit
             Aja(0.5);
             Oleta.Tosi(!l.KameraAjossa && y.Ajo.Value.Equals(ennen), "ele keskeytti, kamera ei enää liiku");
             l.Sulje();
+            // Ulosliuku 0,8 s: hämärä 1 → 0, pohja ja mastot pois vasta lopuksi (Natiiviseppä 25.9.).
+            Oleta.Tosi(l.Sulkeutuu && m.Lista != null && kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros), "liuku alkaa, reliefi vielä");
+            y.Kello += 0.4; Oleta.Tosi(l.PaivitaSulku() && m.H > 0.2 && m.H < 0.8, "puolivälissä: " + m.H);
+            y.Kello += 0.5; Oleta.Tosi(!l.PaivitaSulku(), "valmis");
+            Oleta.Sama(0f, m.H, "hämärä pois");
             Oleta.Sama(null, m.Lista, "mastot pois");
             Oleta.Tosi(!kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros) && kerrokset.Nakyvat["laatat"], "pohja palautettu");
             Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
