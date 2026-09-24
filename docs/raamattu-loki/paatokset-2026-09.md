@@ -4119,3 +4119,7 @@ Luovutus viesti-natiiviseppa-luovutus-20260924-ilta.md (build 10 -jono: saapumis
 ## NATIIVISEPPA NOLLATTU (POSTIVAHTI), RC PAALLA; wt/ 67 → 47 SIIVOUS KAYNNISSA (24.9.2026 klo 15.58)
 
 Natiivisepän aloitusviesti lähetetty origin/mainista. wt/: Pelikoodari poisti 7, Karttaseppä 2, muut roolit tulossa. Siirtoseppä 73 %, ei vielä tyhjentynyt (seuranta 15.42 alkaen).
+
+## OMISTAJA klo 16.0x (KORTTI): NATIIVISEPAN 9 MERGETYN WORKTREEN POISTO SALLITTU SEN OMASSA SESSIOSSA (24.9.2026 klo 16.01)
+
+Luokitin esti poiston; Raamatun mukaan Fable pyysi omistajalta täsmällisen luvan → hyväksytty. Säilyvät proto-natiiviseppa-saapuminen (commitoimaton build 10 -työ) ja -siirtokohteet (haara natiiviseppa/satelliitti). Natiivisepän aloitusviesti oli vanha (klo 10.3x) → Natiiviseppä jatkaa klo 15.54:n luovutuksesta ja päivittää aloitusviestin.
