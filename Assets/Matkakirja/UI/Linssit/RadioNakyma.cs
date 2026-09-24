@@ -1173,26 +1173,36 @@ namespace Matkakirja.Natiivi
 
         readonly VisualElement juuri;
         readonly Dictionary<string, Nappi> napit = new Dictionary<string, Nappi>();
+        // Radiouudistus (build 12, suunnitelma luku 4): mastot korvaavat ▶-napit, ja valitun maston nimi on sen vieressä.
+        readonly Label mastonNimi;
         RadioLinssi linssi;
+
+        /// <summary>Mastot piirretään (Natiiviseppä asettaa MastoPiirto): ▶-napit piiloon, jotteivät ne sieppaa maston juurelta.</summary>
+        static bool Mastot => LinssiOhjain.RadioSovitin.MastoPiirto != null;
 
         public RadioNapit(VisualElement isa)
         {
             juuri = Rakenne.El("mk-radionapit", isa, PickingMode.Ignore);
             juuri.style.display = DisplayStyle.None;
+            mastonNimi = Rakenne.Teksti("", "mk-radio-mastonimi", juuri);
+            mastonNimi.style.visibility = Visibility.Hidden;
+            Kirjasimet.Aseta(mastonNimi, Kirjasin.LukuLihava);
         }
 
         public void Sido(RadioLinssi l)
         {
             if (ReferenceEquals(l, linssi)) return;
-            if (linssi != null) linssi.NapitMuuttuivat -= Rakenna;
+            if (linssi != null) { linssi.NapitMuuttuivat -= Rakenna; linssi.TilaMuuttui -= TilaMuuttui; }
             linssi = l;
-            if (l != null) l.NapitMuuttuivat += Rakenna;
+            if (l != null) { l.NapitMuuttuivat += Rakenna; l.TilaMuuttui += TilaMuuttui; }
             Rakenna();
         }
 
+        void TilaMuuttui(RadioTila _) => Rakenna();
+
         void Rakenna()
         {
-            var tiedot = linssi?.Napit ?? System.Array.Empty<RadioNappi>();
+            var tiedot = Mastot ? System.Array.Empty<RadioNappi>() : linssi?.Napit ?? System.Array.Empty<RadioNappi>();
             var mukana = new HashSet<string>();
             foreach (var d in tiedot)
             {
@@ -1219,13 +1229,18 @@ namespace Matkakirja.Natiivi
                 napit[k].RemoveFromHierarchy();
                 napit.Remove(k);
             }
-            juuri.style.display = napit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            var tila = linssi?.Tila;
+            string nimi = Mastot && tila?.KaupunkiId != null ? tila.KaupunkiNimi : null;
+            mastonNimi.text = (nimi ?? "").ToUpperInvariant();
+            if (string.IsNullOrEmpty(nimi)) mastonNimi.style.visibility = Visibility.Hidden;
+            juuri.style.display = napit.Count > 0 || !string.IsNullOrEmpty(nimi) ? DisplayStyle.Flex : DisplayStyle.None;
             Paivita();
         }
 
         /// <summary>Joka ruutu: napit pallon pisteiden päälle (Unityn ruutupikselit → paneeli).</summary>
         public void Paivita()
         {
+            PaivitaNimi();
             if (napit.Count == 0 || juuri.panel == null) return;
             foreach (var n in napit.Values)
             {
@@ -1236,6 +1251,28 @@ namespace Matkakirja.Natiivi
                 n.style.top = p.y - Laatikko / 2f;
                 if (n.style.visibility.value != Visibility.Visible) n.style.visibility = Visibility.Visible;
             }
+        }
+
+        // Nimen paikka hyväksytystä havainnekuvasta (kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg, 1024 pt):
+        // vasen reuna 15 pt maston keskilinjasta oikealle, tekstin keskikohta 45 pt maston puolivälin alapuolella.
+        const float NimiX = 15f, NimiY = 45f;
+
+        /// <summary>Valitun maston nimi sen viereen (RadioMastot.RuutuPaikka: maston puoliväli, origo vasen alakulma).</summary>
+        void PaivitaNimi()
+        {
+            if (string.IsNullOrEmpty(mastonNimi.text) || juuri.panel == null) return;
+            var mastot = Matkakirja.RadioMastot.Instanssi;
+            string id = linssi?.Tila?.KaupunkiId;
+            if (mastot == null || !mastot.RuutuPaikka(id, out var r))
+            {
+                if (mastonNimi.style.visibility.value != Visibility.Hidden) mastonNimi.style.visibility = Visibility.Hidden;
+                return;
+            }
+            var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
+            float h = mastonNimi.layout.height;
+            mastonNimi.style.left = Mathf.Round(p.x + NimiX);
+            mastonNimi.style.top = Mathf.Round(p.y + NimiY - (float.IsNaN(h) ? 10f : h / 2f));
+            if (mastonNimi.style.visibility.value != Visibility.Visible) mastonNimi.style.visibility = Visibility.Visible;
         }
     }
 }
