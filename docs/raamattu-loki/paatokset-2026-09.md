@@ -4207,3 +4207,7 @@ Natiiviseppä: harmaat myös esiladatulla lennolla, kehys tai kaksi LOD-vaihdoss
 ## SISALTOKIRJURI: CHURCHILL-NOSTO PR #3094; N2/N4/N5/N6 YHA AUKI; 14 SAA-PR:AA RISTIRIIDASSA VAIN VERSIOTIEDOSTOISSA (EI PRE-REBASEA) (24.9.2026 klo 16.26)
 
 Fable: Julkaisija mergeää N-erät (#2996, #3002, #3004, #3006) ensin, sitten sää-PR:t (#3047–#3065, versiotiedostot mergessä), sitten kohdekartat ja #3094. Sisältökirjurin välityö: inventaarion kohta 9 turistioppaan kelvolliset kaupungit (71 + 20) perusteineen, ei sisältöä vielä.
+
+## LAITETESTAAJA NOLLATTU (LUOVUTUS b8f867bb3 klo 16.23) — FABLE LAHETTI ALOITUSVIESTIN ITSE; testi/b10b aa17f73 SIMULAATTOREISSA (24.9.2026 klo 16.29)
+
+Postivahti ei ollut vielä lähettänyt; sessio tyhjä (0 viestiä). Aloitusviesti (viesti-laitetestaaja-aloitus.md ilta) lähetetty session id:llä + heti-tehtävä: Pariisin lähizoomin kuvapari (löydös 26) ja avaustekstin natiivikuvat b10b:stä. Natiiviseppä: b10b = b10-haarat + Natiivi-UI ecc5d2a + saapumisnäkymä b824987 + zoomi aab08db + avausteksti d4950c0 + liiku-tanne; 28–31 ja korkeuskerroin kahdella Opus-agentilla.
