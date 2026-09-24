@@ -40,10 +40,9 @@ namespace Matkakirja.Natiivi
         readonly Button vaihtoNappi, liikuNappi;
         readonly VisualElement liiku, liuku;
         bool liukuAuki, liikuNakyy, sallittu = true;
-        // Nopan siirtolista ("Noppa n") ei sulkeudu ilman valintaa (web, Fablen päätös 24.9.): ei Peruuta-nappia
-        // eikä taustan napautusta. Ohjain avaisi listan muuten heti uudelleen.
+        // Nopan jälkeen ei enää avata siirtolistaa (Pelikoodari 24.9.: web näyttää vain renkaat kartalla), joten
+        // pakollista listaa ei ole; kenttä jää, jos jokin valinta joskus vaatii sen.
         bool pakollinen;
-        static readonly System.Text.RegularExpressions.Regex NoppaOtsikko = new System.Text.RegularExpressions.Regex(@"^Noppa \d+$");
 
         public bool Auki { get; private set; }
         /// <summary>Valinnan himmennys, jonka ensimmäinen lapsi on kortti (pulu hyppää sen yläpuolelle).</summary>
@@ -139,7 +138,7 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti(nimi, "mk-valintarivi__nimi", tekstit);
                 if (!string.IsNullOrEmpty(selite)) Rakenne.Teksti(selite, "mk-valintarivi__selite", tekstit);
             }
-            pakollinen = NoppaOtsikko.IsMatch(otsikkoTeksti ?? "");
+            pakollinen = false;
             if (!pakollinen)
             {
                 var alarivi = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);

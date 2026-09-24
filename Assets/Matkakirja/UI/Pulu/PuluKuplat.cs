@@ -50,8 +50,8 @@ namespace Matkakirja.Natiivi
         public static float Lukuaika(string teksti) =>
             Mathf.Clamp((teksti?.Length ?? 0) * MsPerMerkki, Vahintaan, Enintaan);
 
-        /// <summary>Uusi kupla pinon alimmaiseksi. kestoMs 0 = lukuaika tekstistä.</summary>
-        public Kupla Lisaa(string teksti, float kestoMs = 0, Action kuitattu = null, string luokka = null)
+        /// <summary>Uusi kupla pinon alimmaiseksi. kestoMs 0 = lukuaika tekstistä. aani = pulun sähkeääni.</summary>
+        public Kupla Lisaa(string teksti, float kestoMs = 0, Action kuitattu = null, string luokka = null, bool aani = true)
         {
             var el = Rakenne.El("mk-kupla" + (luokka != null ? " " + luokka : ""), null);
             foreach (var kappale in teksti.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
@@ -66,7 +66,7 @@ namespace Matkakirja.Natiivi
             while (kuplat.Count > PinoEnintaan) Poista(kuplat[0], false);
             AsetaKesto(k, kestoMs > 0 ? kestoMs : Lukuaika(teksti));
             Rakenne.Vierita(vieritys, el, 30);
-            Aanet.PulunTehoste("pulu.sahke");
+            if (aani) Aanet.PulunTehoste("pulu.sahke");
             return k;
         }
 
@@ -98,6 +98,9 @@ namespace Matkakirja.Natiivi
             k.Ajastin?.Pause();
             k.Ajastin = k.El.schedule.Execute(() => Poista(k, false)).StartingIn((long)ms);
         }
+
+        /// <summary>Kupla pois ilman kuittausta (esim. vihjeen peruutus).</summary>
+        public void Poista(Kupla k) { if (k != null && !k.Poistuu) Poista(k, false); }
 
         /// <summary>Napautus: kupla pois ja kuittaus (seuraava repliikki jonosta).</summary>
         public void Kuittaa(Kupla k)
