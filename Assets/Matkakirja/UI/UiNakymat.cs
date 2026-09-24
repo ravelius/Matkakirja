@@ -133,7 +133,6 @@ namespace Matkakirja.Natiivi
 #endif
             v.LisaMuuRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaMuuRivi("Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
-            v.LisaMuuRivi("Äänentasot", Ikonit.Aanimaisema, () => Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet));
             v.LisaMuuRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
             v.LisaMuuRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
             v.LisaMuuRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
