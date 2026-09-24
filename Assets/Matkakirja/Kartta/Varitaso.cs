@@ -29,6 +29,12 @@ namespace Matkakirja
         public const string MateriaaliAvain = "2";
 
         public Cesium3DTileset pallo;
+        /// <summary>
+        /// Huntu kartalle (löydös 22, Fablen korjaus 24.9. klo 12.1x: webissä EI ole huntua muiden maiden päällä —
+        /// maan ulkopuolella paljas pohja, ja maa erottuu vain rajaviivasta, Maaraja). false = komponentti vain
+        /// seuraa nykyistä maata (Kohde/Maa ääriviivalle) eikä lisää raster-kerrosta.
+        /// </summary>
+        public bool huntu;
 
         /// <summary>Maa (ISO3), jonka väritaso on nyt kartalla, tai null.</summary>
         public string Maa { get; private set; }
@@ -85,6 +91,7 @@ namespace Matkakirja
         IEnumerator Vaihda(string maa)
         {
             if (string.IsNullOrEmpty(maa)) { Poista(); ladattu = null; Maa = null; yield break; }
+            if (!huntu) { Poista(); ladattu = null; Maa = maa; yield break; }
             string url = Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + Kansio + maa + "/laatat.json");
             using (var r = UnityWebRequest.Get(url))
             {
