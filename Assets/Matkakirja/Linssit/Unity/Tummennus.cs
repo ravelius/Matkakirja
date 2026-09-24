@@ -92,6 +92,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             materiaali.SetVector("_Reika", r);
+            materiaali.SetVector("_Ruutu", new Vector4(kamera.pixelWidth, kamera.pixelHeight, 0, 0));
         }
 
         void OnDestroy()

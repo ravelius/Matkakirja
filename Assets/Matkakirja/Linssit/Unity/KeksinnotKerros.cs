@@ -40,7 +40,7 @@ namespace Matkakirja.Natiivi
             k.tunnukset = a.Pysakit.Select((p, i) => i.ToString()).ToList();
             k.valot = Valot.Luo(kierto.georeferenssi,
                 a.Pysakit.Select((p, i) => (i.ToString(), p.Paalu ? double.NaN : p.Lat, p.Paalu ? double.NaN : p.Lon)).ToList(),
-                LinssiOhjain.Instanssi?.VahennettyLiike ?? false, kierto.GetComponent<Camera>());
+                LinssiOhjain.Instanssi?.VahennettyLiike ?? false, kierto.GetComponent<Camera>(), tummallaPohjalla: true);
             k.paikat = a.Pysakit.Select(p => p.Paalu ? (double.NaN, double.NaN) : (p.Lat, p.Lon)).ToList();
             k.tummennus = Tummennus.Luo(kierto, go.transform);
             return k;
@@ -54,12 +54,16 @@ namespace Matkakirja.Natiivi
 
         void Aseta(int i, ValonVaihe v) { if (i >= 0 && i < tunnukset.Count) valot?.Tila(tunnukset[i], v, kello); }
 
-        /// <summary>Reikä nykyisen lampun kohdalle; merkkipaalu (ei paikkaa) ja -1 = tasainen.</summary>
+        /// <summary>
+        /// Reikä nykyisen lampun kohdalle; -1 = tasainen. Merkkipaalulla (ei paikkaa, ei lamppua)
+        /// reikä jää edelliseen lamppuun: web siirtää reiän vain lampun tullessa nykyiseksi
+        /// (aikajana.js asetaValonTila).
+        /// </summary>
         void Reika(int i)
         {
             if (tummennus == null) return;
-            if (i >= 0 && i < paikat.Count) tummennus.Reika(paikat[i].Lat, paikat[i].Lon);
-            else tummennus.Reika(double.NaN, double.NaN);
+            if (i < 0 || i >= paikat.Count) { tummennus.Reika(double.NaN, double.NaN); return; }
+            if (double.IsFinite(paikat[i].Lat) && double.IsFinite(paikat[i].Lon)) tummennus.Reika(paikat[i].Lat, paikat[i].Lon);
         }
 
         public void Kello(double vuosi) => KelloKasittelija?.Invoke(vuosi);

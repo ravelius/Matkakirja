@@ -15,6 +15,7 @@ Shader "Matkakirja/Linssit/Tummennus"
         _Keski("Reiän puoliväli", Color) = (0.039, 0.027, 0.020, 0.35)
         _Reika("Reikä (x, y px, säde px, käytössä 0/1)", Vector) = (0, 0, 0, 0)
         _Peitto("Peitto", Range(0, 1)) = 1
+        _Ruutu("Kameran pikselikoko (x, y)", Vector) = (1, 1, 0, 0)
     }
     SubShader
     {
@@ -37,6 +38,7 @@ Shader "Matkakirja/Linssit/Tummennus"
                 half4 _Vari;
                 half4 _Keski;
                 float4 _Reika;
+                float4 _Ruutu;
                 half _Peitto;
             CBUFFER_END
 
@@ -55,8 +57,16 @@ Shader "Matkakirja/Linssit/Tummennus"
                 half4 c = _Vari;
                 if (_Reika.w > 0.5)
                 {
-                    // Ruudun pikseli alavasemmalta (sama kuin Camera.WorldToScreenPoint).
-                    float2 px = GetNormalizedScreenSpaceUV(i.paikka) * _ScaledScreenParams.xy;
+                    // Ruudun kohta alavasemmalta kuten Camera.WorldToScreenPoint. URP:n
+                    // GetNormalizedScreenSpaceUV antaa Metalilla/DX:llä origon YLÄkulmaan, jolloin
+                    // reikä oli iPadilla peilattuna pystysuunnassa (kontakti 24.9.: Lontoon lampun
+                    // reikä ruudun yläosassa). Mittakaava kameran pikseleinä (_Ruutu), ei
+                    // renderScalen skaalaamana.
+                    float2 uv = GetNormalizedScreenSpaceUV(i.paikka);
+                #if UNITY_UV_STARTS_AT_TOP
+                    uv.y = 1.0 - uv.y;
+                #endif
+                    float2 px = uv * _Ruutu.xy;
                     float d = distance(px, _Reika.xy) / max(_Reika.z, 1);
                     half4 lapi = half4(_Keski.rgb, 0);
                     if (d < 0.12) c = lapi;
