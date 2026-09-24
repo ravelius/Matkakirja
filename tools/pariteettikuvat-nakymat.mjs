@@ -169,6 +169,23 @@ export const NAKYMAT = [
     },
     odotaJalkeen: '.intro-valinta:not(.intro-valinta-piilossa)',
   },
+  {
+    nimi: 'aloitusvalinta', kuvaus: 'Avausteksti → "Valitse aloituskaupunki" → pallon valintanäkymä ja Livian esittely (phase pickstart)',
+    tallenne: false, haku: '?koe=suoraan', pallo: false, odota: '.start-btn',
+    jalkeen: async () => {
+      document.querySelector('.start-btn')?.click();
+      const alku = Date.now();
+      const nappi = () => document.querySelector('.intro-valinta');
+      while (!(nappi() && !nappi().classList.contains('intro-valinta-piilossa')) && Date.now() - alku < 40000) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 200));
+      }
+      nappi()?.click();
+      await new Promise((ok) => setTimeout(ok, 4500));
+      return { vaihe: window.matkakirja.game.phase };
+    },
+    palloJalkeen: true,
+  },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
     nimi: 'matkakirjakortti-auki', kuvaus: 'Matkakirjan merkintäkortti auki (ui.asetaPaivakirjanKoko(false))',
@@ -492,6 +509,7 @@ const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
   'avausteksti-kesken': { nakyy: ['.intro-juliste'] },
   'avausteksti-valmis': { nakyy: ['.intro-valinta'] },
+  aloitusvalinta: { ehto: () => (window.matkakirja.game.phase === 'pickstart' ? null : `vaihe ${window.matkakirja.game.phase}`) },
   kartta: {
     nakyy: ['.fact-card'],
     ehto: () => {
