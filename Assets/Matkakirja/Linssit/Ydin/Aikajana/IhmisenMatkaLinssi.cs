@@ -130,11 +130,17 @@ namespace Matkakirja.Linssit.Aikajana
             return e;
         }
 
-        /// <summary>Web jatkaMuistista: kamera muistin paikkaan ilman liikettä, esitys siitä mihin jäätiin.</summary>
+        /// <summary>Muistista jatkon kamera-ajo (s): pehmeä liuku, ei hyppyä (Raamattu KAMERA-AJOT, omistaja 24.9.).</summary>
+        public const float MuistinAjoS = 1.2f;
+
+        /// <summary>
+        /// Web jatkaMuistista: kamera muistin paikkaan, esitys siitä mihin jäätiin. Webissä kamera hyppää;
+        /// natiivissa liu'utaan (KAMERA-AJOT: ei hyppyjä), vähennetyllä liikkeellä heti.
+        /// </summary>
         void Jatka()
         {
             var m = muisti;
-            if (m.Kamera is Nakyma k) y.AjaKamera(k, 0);
+            if (m.Kamera is Nakyma k) y.AjaKamera(k, y.VahennettyLiike ? 0f : MuistinAjoS);
             if (!Esitys.JatkaMuistista(m))
             {
                 muisti = null;
