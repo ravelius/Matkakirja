@@ -151,7 +151,10 @@ export const RAAMATTU = {
           + 'lupakirjeiden lähetys, maksut). JUMI → KORTTI (omistaja 24.9.2026 klo 21.2x, sitova, kaikki sessiot): jos sessio jää '
           + 'jumiin — luokitin estää toimen, päätös puuttuu tai työ ei etene — se tekee AINA AskUserQuestion-'
           + 'kortin omistajalle omassa sessiossaan (vaihtoehdot lyhyesti) eikä jää odottamaan tekstiä; '
-          + 'lisäksi yksi rivi Fablelle lokia varten. '
+          + 'lisäksi yksi rivi Fablelle lokia varten. KORTISTA ILMOITUS PUHELIMEEN (omistaja 24.9.2026 klo 22.5x): '
+          + 'omistaja ei näe etänä avoimia kortteja, joten sessio kutsuu heti kortin avattuaan PushNotification-'
+          + 'työkalua yhdellä rivillä ("<Rooli>: kysymyskortti auki — <aihe>"; Remote Control välittää sen puhelimeen); '
+          + 'Postivahti lähettää saman ilmoituksen kierroksellaan, jos kortti on ollut auki yli 10 minuuttia ilman vastausta. '
           + 'Sallintasäännöt (send_message, clear_session, set_remote_control, gh, aws, xcodebuild, '
           + 'xcrun, security) ovat projektin .claude/settings.json:ssa 23.9.2026 alkaen.',
         'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '

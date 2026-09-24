@@ -4695,3 +4695,7 @@ Omistaja käski Codexin siirtää kaiken datansa NAS:iin (Codexin kansiot /Users
 ## LAITETESTAAJA: PARITEETTIAJON 1. KIERROKSEN LUKUIHIN EI LUOTETA — RIVI 39 (VERTAILU) NAYTTI RADIOLINSSIN (KOMENTOSEKVENSSIN DESYNC: LINSSI EI SULKEUDU ENNEN SEURAAVAA) → PELIKOODARI KORJAA SKRIPTIN, UUSI AJO ENNEN RAPORTTIA (24.9.2026 klo 22.53)
 
 Laitetestaaja tarkisti b12g-1/raportti.md:n (SAMA 0 / ERI 126 / PUUTTUU 50): rivin 39 natiivikuva näytti radiolinssin, vaikka vertailulinssi on manuaalisesti vahvistettu samaksi. Sama desync-bugi kuin käsikierroksella. Ilmoitettu Pelikoodarille suoraan (pysyvä reititys); Laitetestaaja odottaa korjattua ajoa. Fable: pariteettiajon vartija — jokaisen rivin natiivikuva tarkistetaan peli-tila.json:sta (aktiivinen linssi ja näkymä) ennen kuvaa, muuten rivi merkitään VIRHE eikä ERI.
+
+## OMISTAJA klo 22.5x: EI ILMOITUKSIA ETANA AVOIMISTA KORTEISTA → RAAMATTUUN: SESSIO KUTSUU PushNotification-TYOKALUA HETI KORTIN AVATTUAAN; POSTIVAHTI ILMOITTAA YLI 10 min AUKI OLLEISTA (24.9.2026 klo 22.53)
+
+Omistaja: 'harmi että minulle ei tule pop up ilmoituksia ainakaan remotessa jos sessioilla on kysymyskortti'. Desktopissa on PushNotification-työkalu, joka lähettää työpöytäilmoituksen ja Remote Controlin kautta puhelimeen. Raamattuun (JUMI → KORTTI): jokainen sessio kutsuu heti kortin avattuaan PushNotification-työkalua yhdellä rivillä '<Rooli>: kysymyskortti auki — <aihe>'; Postivahti lähettää saman kierroksellaan, jos kortti on ollut auki yli 10 minuuttia. Postivahti välittää säännön kaikille rooleille.
