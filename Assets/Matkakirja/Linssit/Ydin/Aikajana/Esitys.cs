@@ -155,6 +155,12 @@ namespace Matkakirja.Linssit.Aikajana
         KertomusJakso Nykyinen => I >= 0 && I < kertomus.Count ? kertomus[I] : null;
         JaksonLeimat Leimat(KertomusJakso j) => j != null && leimat.TryGetValue(j.Id, out var l) ? l : null;
 
+        /// <summary>
+        /// Jakson aikaleimat (lauseet, sanat) UI:lle: kertojan tekstilaatikko vaihtaa osia lauseleimojen
+        /// tahdissa (web osienHetket). null, jos jaksolla ei ole leimoja (varapolku: merkkiosuus).
+        /// </summary>
+        public JaksonLeimat Leimat(string jaksonId) => jaksonId != null && leimat.TryGetValue(jaksonId, out var l) ? l : null;
+
         /// <summary>Tekstin pituudesta laskettu kesto (web kertomuksenVarakesto).</summary>
         public static double Varakesto(KertomusJakso j, double pohja = 2500)
         {
