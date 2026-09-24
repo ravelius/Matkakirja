@@ -16,7 +16,8 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold }
+    /// <summary>Atlas = web --font-atlas (Liberation Serif kursiivi, UI/Resources/Fontit, OFL): kartan nimiöt ja kaupunkiliuska.</summary>
+    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas }
 
     public static class Kirjasimet
     {
@@ -40,6 +41,15 @@ namespace Matkakirja.Natiivi
         {
             if (valimuisti.TryGetValue(k, out var d)) return d;
             d = null;
+            if (k == Kirjasin.Atlas)
+            {
+                var fontti = Resources.Load<Font>("Fontit/LiberationSerif-Italic");
+                var atlas = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
+                if (atlas != null) { atlas.name = "Liberation Serif Italic"; d = FontDefinition.FromSDFFont(atlas); }
+                else Debug.LogWarning("MATKAKIRJA ui: Liberation Serif puuttuu (Resources/Fontit)");
+                valimuisti[k] = d;
+                return d;
+            }
             foreach (var (perhe, tyyli) in Ehdokkaat(k))
             {
                 FontAsset fa = null;
