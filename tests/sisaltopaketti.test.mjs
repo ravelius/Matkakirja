@@ -1232,3 +1232,14 @@ test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari 
     }
   }
 });
+
+test('skeema 1.35: maat.fokuspohja = webin FOKUS_POHJAT', async () => {
+  const { FOKUS_POHJAT } = await import('../js/packs/fokus-grc.js');
+  const maat = new Map(JSON.parse(tiedostot.get('kokoelmat/maat.json')).alkiot.map((a) => [a.id, a]));
+  for (const [iso, p] of Object.entries(FOKUS_POHJAT)) {
+    if (!maat.has(iso)) continue;
+    assert.deepEqual(maat.get(iso).fokuspohja.laudalla.bbox, p.bbox, iso);
+  }
+  const fra = maat.get('FRA').fokuspohja.bbox;
+  assert.ok(fra[0] > -20 && fra[2] < 25 && fra[1] > 30 && fra[3] < 60, `FRA ${fra}`);
+});

@@ -52,6 +52,7 @@ import { existsSync } from 'node:fs';
 import { lueMuutosloki, jarjesta as jarjestaMuutosloki } from './muutosloki-natiivi.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
+const pyorista3 = (v) => Math.round(v * 1000) / 1000;
 
 function taulukko(lahde, kuvaus, viittaukset, alkiot) {
   return { lahde, kuvaus, viittaukset, alkiot: alkiot.map((a) => sarjallista(a)) };
@@ -964,6 +965,26 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.tyohuonetilastot = tyohuonetilastot(TYOHUONETILASTOT, taulukko);
   // Skeema 1.33 (Pelikoodari): natiivin 3D-maamerkit (tools/vienti/maamerkit.mjs).
   kokoelmat.maamerkit = maamerkkiKokoelma(taulukko, kaupunkiIdt);
+  // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
+  // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
+  // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.
+  const { FOKUS_POHJAT } = hae('js/packs/fokus-grc.js');
+  const asteina = (r) => {
+    if (!r) return null;
+    const a = laudaltaAsteiksi('maailmankartta', r.x, r.y);
+    const b = laudaltaAsteiksi('maailmankartta', r.x + r.w, r.y + r.h);
+    return [pyorista3(a.lon), pyorista3(b.lat), pyorista3(b.lon), pyorista3(a.lat)];
+  };
+  for (const m of kokoelmat.maat.alkiot) {
+    const p = FOKUS_POHJAT[m.id];
+    m.fokuspohja = p ? {
+      bbox: asteina(p.bbox), rajaus: asteina(p.rajaus),
+      laudalla: { bbox: p.bbox ?? null, rajaus: p.rajaus ?? null },
+    } : null;
+  }
+  kokoelmat.maat.kuvaus += ' Skeema 1.35: fokuspohja { bbox, rajaus: [w, s, e, n] asteina, laudalla: { bbox, rajaus } '
+    + '(laudan yksiköt {x, y, w, h}) } | null = webin FOKUS_POHJAT (js/packs/fokus-grc.js). Web laskee nostotason '
+    + '(lehdenOsuus = bbox.w / näkyvä leveys, korkeus samoin) ja kameran rajauksen tästä, ei maarajoista.';
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
