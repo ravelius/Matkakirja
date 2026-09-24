@@ -4799,3 +4799,7 @@ Omistaja: 'Toinen tärkeä parity on nostojen asemointi tarkasti kopioiden. Nyt 
 ## LOYDOS 49 TARKENNUS (OMISTAJA klo 00.2x): EI AANIA VAIKKA MYKISTYS EI OLE PAALLA → PELIKOODARI TUTKII KOKO LAITEPOLUN ETUSIJALLA (25.9.2026 klo 00.18)
 
 Omistaja: 'Ei kuulu ääniä vaikka ei mykistystä.' Pelikoodarille: äänet-asetusten oletus, efektien ja luentojen lataus ämpäristä TestFlight-buildissa (App Transport Security), AVAudioEngine-käynnistys ensimmäisen kosketuksen jälkeen, session aktivointi, Unityn Audio-asetus; mittaus AVAudioEngine-tasosta, raportti 8 riviä; build 12:een.
+
+## OMISTAJA klo 00.2x (SITOVA, LOYDOS 52): ENSIMMAISEN LENNON JALKEEN KOHDEKAUPUNKIIN SAAVUTTAESSA SAMA VALITEKSTI KUIN WEBISSA → PELIKOODARI (SAAPUMISEN KERRONTA WEBIN KAAVALLA, BUILD 12) (25.9.2026 klo 00.19)
+
+Omistaja: 'Saavuttaessa ensi lennon jälkeen kohdekaupunkiin saisi tulla sama väli teksti kuin webissä.' Pelikoodari mittaa webin saapumiskaavan (teksti, ajoitus, näkymä, ääni) ja toteuttaa natiiviin; kuvapari ja video.
