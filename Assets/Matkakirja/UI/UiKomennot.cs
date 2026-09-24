@@ -305,6 +305,10 @@ namespace Matkakirja.Natiivi
                 using (var e = PointerDownEvent.GetPooled(alas)) { e.target = osuma; osuma.SendEvent(e); }
                 using (var e = PointerUpEvent.GetPooled(ylos)) { e.target = osuma; osuma.SendEvent(e); }
                 var nappi = osuma as Button ?? osuma.GetFirstAncestorOfType<Button>();
+                if (nappi == null)
+                    // Laajennuksen selvitys: lähimmät kosketusnapit (keskipiste alle 40 yksikön päässä).
+                    foreach (var kn in juuri.Query<Kosketusnappi>().ToList().Where(k => Vector2.Distance(k.worldBound.center, piste) < 40f))
+                        Debug.Log("MATKAKIRJA ui napauta: " + kn.Diagnoosi(piste));
                 return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): kerros {2}, osuma [{3}]{4}", piste.x, piste.y, kerros,
                     string.Join(".", osuma.GetClasses()), nappi != null && nappi != osuma ? ", nappi [" + string.Join(".", nappi.GetClasses()) + "]" : "");
             }

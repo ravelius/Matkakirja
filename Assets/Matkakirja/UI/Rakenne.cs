@@ -173,9 +173,12 @@ namespace Matkakirja.Natiivi
     /// <summary>
     /// Nappi, jonka kosketusala on vähintään 44 × 44 pt (Applen suositus; Fable 24.9., Laitetestaajan mittaus:
     /// yläpalkin ratas ja hampurilainen 40 pt) ilman ulkoasun muutosta, koska koot ovat webin mukaiset. Laajennus
-    /// koskee vain erillisiä ikoni- ja sulkunappeja (Laajennettavat-luokat, "__sulje"-päätteiset), ja se ei koskaan
-    /// vie osumaa sisarnapin todelliselta alueelta. Näkymätön lapsi "kosketusala" laajentaa rajauslaatikon, jotta
-    /// paneelin poiminta ylipäätään kysyy ContainsPointia laajennetulta alueelta.
+    /// koskee vain erillisiä ikoni- ja sulkunappeja (Laajennettavat-luokat, "__sulje"-päätteiset).
+    ///
+    /// Unity 6.3 poimii natiivisti (NativeTransformUtils.PerformPick) eikä kutsu hallittua ContainsPointia, joten
+    /// laajennus on oikea, poimittava lapsi "kosketusala" (position absolute, negatiiviset reunat). Osuma kuplii siitä
+    /// napille, ja Clickable hyväksyy irrotuksen ContainsPoint-ohituksella samalta alueelta. Kullakin puolella ala
+    /// ulottuu enintään puoleen väliin lähimpään poimittavaan sisareen, joten naapurin painallukset pysyvät sillä.
     /// </summary>
     public sealed class Kosketusnappi : Button
     {
@@ -187,11 +190,25 @@ namespace Matkakirja.Natiivi
         };
 
         VisualElement ala;
+        float vasen, oikea, yla, ala_; // laajennus kullakin puolella (UI-yksiköt)
+        VisualElement kuunneltuIsa;
 
         public Kosketusnappi(Action painettu) : base(painettu)
         {
             RegisterCallback<GeometryChangedEvent>(_ => PaivitaAla());
+            RegisterCallback<AttachToPanelEvent>(_ => KuunteleIsaa());
         }
+
+        void KuunteleIsaa()
+        {
+            var isa = hierarchy.parent;
+            if (isa == kuunneltuIsa) return;
+            kuunneltuIsa?.UnregisterCallback<GeometryChangedEvent>(IsaMuuttui);
+            kuunneltuIsa = isa;
+            isa?.RegisterCallback<GeometryChangedEvent>(IsaMuuttui);
+        }
+
+        void IsaMuuttui(GeometryChangedEvent _) => PaivitaAla();
 
         bool Laajennettava()
         {
@@ -200,39 +217,57 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
-        (float X, float Y) Laajennus()
+        void Laske()
         {
-            float w = layout.width, h = layout.height;
-            if (float.IsNaN(w) || float.IsNaN(h) || !Laajennettava()) return (0f, 0f);
-            return (Mathf.Max(0f, (Vahintaan - w) / 2f), Mathf.Max(0f, (Vahintaan - h) / 2f));
+            vasen = oikea = yla = ala_ = 0f;
+            var r = layout;
+            if (float.IsNaN(r.width) || float.IsNaN(r.height) || !Laajennettava()) return;
+            float lx = Mathf.Max(0f, (Vahintaan - r.width) / 2f), ly = Mathf.Max(0f, (Vahintaan - r.height) / 2f);
+            vasen = oikea = lx;
+            yla = ala_ = ly;
+            var isa = hierarchy.parent;
+            if (isa == null) return;
+            foreach (var s in isa.hierarchy.Children())
+            {
+                if (s == this || s.pickingMode != PickingMode.Position || s.resolvedStyle.display == DisplayStyle.None) continue;
+                var q = s.layout;
+                if (float.IsNaN(q.width)) continue;
+                bool pystyPaallekkain = q.yMax > r.yMin - ly && q.yMin < r.yMax + ly;
+                bool vaakaPaallekkain = q.xMax > r.xMin - lx && q.xMin < r.xMax + lx;
+                if (pystyPaallekkain && q.xMax <= r.xMin) vasen = Mathf.Min(vasen, (r.xMin - q.xMax) / 2f);
+                if (pystyPaallekkain && q.xMin >= r.xMax) oikea = Mathf.Min(oikea, (q.xMin - r.xMax) / 2f);
+                if (vaakaPaallekkain && q.yMax <= r.yMin) yla = Mathf.Min(yla, (r.yMin - q.yMax) / 2f);
+                if (vaakaPaallekkain && q.yMin >= r.yMax) ala_ = Mathf.Min(ala_, (q.yMin - r.yMax) / 2f);
+            }
         }
 
         void PaivitaAla()
         {
-            var (lx, ly) = Laajennus();
-            if (lx <= 0f && ly <= 0f) { ala?.RemoveFromHierarchy(); return; }
-            if (ala == null) ala = new VisualElement { name = "kosketusala", pickingMode = PickingMode.Ignore };
+            KuunteleIsaa();
+            Laske();
+            if (vasen <= 0f && oikea <= 0f && yla <= 0f && ala_ <= 0f) { ala?.RemoveFromHierarchy(); return; }
+            if (ala == null) ala = new VisualElement { name = "kosketusala", pickingMode = PickingMode.Position };
             if (ala.hierarchy.parent != this) hierarchy.Add(ala);
             var st = ala.style;
             st.position = Position.Absolute;
-            st.left = -lx; st.right = -lx; st.top = -ly; st.bottom = -ly;
+            st.left = -vasen; st.right = -oikea; st.top = -yla; st.bottom = -ala_;
         }
 
+        /// <summary>Clickable hyväksyy irrotuksen samalta laajennetulta alueelta (hallittu tarkistus).</summary>
         public override bool ContainsPoint(Vector2 p)
         {
             if (base.ContainsPoint(p)) return true;
-            var (lx, ly) = Laajennus();
-            if (lx <= 0f && ly <= 0f) return false;
             float w = layout.width, h = layout.height;
-            if (p.x < -lx || p.x > w + lx || p.y < -ly || p.y > h + ly) return false;
-            // Sisarnapin oma alue voittaa aina laajennuksen.
-            var isa = hierarchy.parent;
-            if (isa == null) return true;
-            var q = this.ChangeCoordinatesTo(isa, p);
-            foreach (var s in isa.hierarchy.Children())
-                if (s != this && s.pickingMode == PickingMode.Position && s.resolvedStyle.display != DisplayStyle.None && s.layout.Contains(q))
-                    return false;
-            return true;
+            return p.x >= -vasen && p.x <= w + oikea && p.y >= -yla && p.y <= h + ala_;
+        }
+
+        /// <summary>Diagnostiikka (ui napauta): laajennus, kosketusala-lapsi ja rajat.</summary>
+        public string Diagnoosi(Vector2 maailma)
+        {
+            string Rect(Rect r) => $"({r.x:0.#}, {r.y:0.#}, {r.width:0.#} × {r.height:0.#})";
+            return $"[{string.Join(".", GetClasses())}] bound {Rect(worldBound)} laajennus v{vasen:0.#} o{oikea:0.#} y{yla:0.#} a{ala_:0.#}"
+                + (ala == null ? " ala null" : ala.hierarchy.parent != this ? " ala irti" : $" ala {Rect(ala.worldBound)}")
+                + $" contains {ContainsPoint(this.WorldToLocal(maailma))}";
         }
     }
 }
