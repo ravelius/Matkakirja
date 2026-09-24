@@ -52,6 +52,8 @@ namespace Matkakirja.Linssit.Radio
         public string Id, Nimi, Iso3;
         public double Lat, Lon;
         public bool Aloitus, Lentokentta;
+        /// <summary>Asukasluku (kaupungit.json "asukkaat", Wikidata P1082); null ennen skeeman kenttää → masto Keski.</summary>
+        public long? Asukkaat;
     }
 
     public sealed class RadioAineisto
@@ -156,6 +158,7 @@ namespace Matkakirja.Linssit.Radio
                     Id = MiniJson.Teksti(k, "id"), Nimi = MiniJson.Teksti(k, "nimi"), Iso3 = MiniJson.Teksti(k, "maa"),
                     Lat = MiniJson.Luku(k, "lat") ?? double.NaN, Lon = MiniJson.Luku(k, "lon") ?? double.NaN,
                     Aloitus = MiniJson.Totuus(k, "aloitus"), Lentokentta = MiniJson.Totuus(k, "lentokentta"),
+                    Asukkaat = MiniJson.Luku(k, "asukkaat") is double asuk && asuk > 0 ? (long)asuk : (long?)null,
                 });
 
             foreach (var m in (Lista(MiniJson.Kentta(Ob(maat), "alkiot")) ?? new List<object>()).Select(Ob).Where(m => m != null))
