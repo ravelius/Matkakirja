@@ -114,12 +114,21 @@ aidosti paikannettavaa, osoitteellista kohdetta kaupungissa (luovutus
 `viesti-sisaltokirjuri-luovutus-20260924-e.md` kohta 4.1) — muuten
 kartta jätetään tekemättä.
 
-**Hyväksytty 12 kaupungin lista** (kaikki mergetyistä N8–N16-kaupungeista,
+**Hyväksytty 11 kaupungin lista** (kaikki mergetyistä N8–N16-kaupungeista,
 täyttävät molemmat ehdot): Kalgoorlie, Mount Isa, Broome, Geraldton,
-Porto Velho, Santarém, João Pessoa, Macapá, Cayenne, Kimberley, Gao,
-Al Kufra.
+Porto Velho, Santarém, João Pessoa, Macapá, Cayenne, Gao, Al Kufra.
 
-**Hylätty 18 jakautuu kolmeen ryhmään** (tarkistettu `js/packs/*.js`:stä
+**MUUTOS 24.9.2026 (kohdekartta-erä 2):** Kimberley siirretty
+hyväksytystä listasta hylättyyn ryhmään 3 — kaupungin kaikki nostot
+(Big Hole, De Beers, Cecil Rhodes, timanttiryntäys) käsittelevät samaa
+yhtä louhosaluetta, eikä toista aidosti erillistä, osoitteellista
+kohdetta löytynyt (esim. Rudd House ei ole OSM:ssä omalla nimellään).
+Alkuperäinen 12 kaupungin lista oli siis 11 hyväksyttyä + Kimberley,
+joka osoittautui toteutuksessa hylätyksi — 18 hylätyn lista kohdassa 2
+kasvoi tämän myötä 19:ään, mutta poistuma tuli hyväksytystä puolesta,
+ei alkuperäisestä 18:sta.
+
+**Hylätty 19 jakautuu kolmeen ryhmään** (tarkistettu `js/packs/*.js`:stä
 tässä haarassa 24.9.2026 — ei koskaan olettaen):
 
 1. **Ei vielä mergetty (6)** — sisältö on auki olevissa N2/N4/N5/N6-erien
@@ -133,14 +142,18 @@ tässä haarassa 24.9.2026 — ei koskaan olettaen):
    raja-alueella), Stanley/Falkland (n. 2 500 as.), Jamestown/St Helena
    (n. 800 as.), Hamilton/Bermuda (itse kaupunkikeskus n. 1 000 as.,
    vaikka territorio on suurempi).
-3. **Riittävä väestö, mutta ei kahta paikannettavaa kohdetta (2)** —
-   nostot ovat aluetason tunnelmaa/teemaa, eivät yksittäisiä
-   osoitteellisia nähtävyyksiä: Campo Grande (nostot: ara-papukaijat
-   kaupungin puistojen yllä, "portti Pantanaliin" — ei yksittäistä
-   patsasta tai rakennusta; ks. myös kohdan 6 faktavirhehavainto samasta
-   kaupungista), Murzuk (nostot: Tadrart Acacusin kalliomaalaukset ovat
-   kaukana keitaan ulkopuolella eivätkä kävelymatkan päässä, taatelipalmu
-   ja karavaanikieli ovat teemallisia tekstejä ilman paikkaa).
+3. **Riittävä väestö, mutta ei kahta paikannettavaa kohdetta (3)** —
+   nostot ovat aluetason tunnelmaa/teemaa tai saman yhden kohteen
+   toistoa, eivät kahta erillistä osoitteellista nähtävyyttä: Campo
+   Grande (nostot: ara-papukaijat kaupungin puistojen yllä, "portti
+   Pantanaliin" — ei yksittäistä patsasta tai rakennusta; ks. myös
+   kohdan 6 faktavirhehavainto samasta kaupungista), Murzuk (nostot:
+   Tadrart Acacusin kalliomaalaukset ovat kaukana keitaan ulkopuolella
+   eivätkä kävelymatkan päässä, taatelipalmu ja karavaanikieli ovat
+   teemallisia tekstejä ilman paikkaa), Kimberley (kaikki kuusi nostoa
+   — löytö, nimeäminen, Big Hole, Rhodesin De Beers, lajittelupöydät —
+   kertovat samasta yhdestä louhosalueesta; toista erillistä,
+   OSM:ssä nimettyä kohdetta ei löytynyt).
 
 Lista ei ole pysyvä poissulkeva sääntö: jos jokin näistä saa myöhemmin
 uuden, paikannettavan noston tai kaupunki mergetään, kohdekartta
