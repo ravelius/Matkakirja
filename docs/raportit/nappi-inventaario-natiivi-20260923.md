@@ -429,7 +429,7 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | "mittari" (laitemittari) | index.html:244, main.js:2172 | Kartta/KehysMittari.cs (ei kytkintä) | KOKEET | NS |
 | "pallolauta" (piilossa) | index.html:261, main.js:2188 | – | ei tarvita | – |
 | "Raamattu" | index.html:338, main.js:2325, lehti.js avaaRaamattuLehti | UI/Lehti/Tyohuone.cs AvaaRaamattu (Paavalikko KOKEET; muokkauskentät + Lähetä muutokset; Aarteet ja Pelit taulukkona) | KOKEET: on (master) | NUI |
-| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat), Poiminnat, Grafiikka, Musiikki, Lukijoilta (master; kuratointiavain vain muistissa, Keychain tilattu PK:lta) ja Tilastot (merge-pyynnössä natiivi-ui/tilastot, UI/Lehti/Tilastot.cs, Siirtosepän kokoelma tyohuonetilastot 1.28); Lukijaääni = PK:n säädin (rivi alla) | KOKEET: osittain (vain Lukijaääni puuttuu) | NUI, PK |
+| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat), Poiminnat, Grafiikka, Musiikki, Lukijoilta (master; kuratointiavain vain muistissa, Keychain tilattu PK:lta) ja Tilastot (merge-pyynnössä natiivi-ui/tilastot, UI/Lehti/Tilastot.cs, Siirtosepän kokoelma tyohuonetilastot 1.28); Lukijaääni-dialogi (Tyohuone.cs LukijaaaniIkkuna, PK:n Puhe-rajapinta; master 24.9.) | KOKEET: on | NUI, PK |
 | Syötekoe: Oletus / Kosketus suoraan / Yhteinen kello / Molemmat / Paljas kartta / Paljas + nimiöt / + symbolit / + DOM-kerrokset | index.html:409, main.js:749, piirtokoe-asetus.js:50–107 | puuttuu | KOKEET | NS |
 | Kerrokset paljaan kartan päälle (9 kytkintä) | index.html:417, main.js:792, piirtokoe-asetus.js:128–136 | puuttuu | KOKEET | NS |
 | Kehysprofiili | main.js:812 | KehysMittari.cs (ei kytkintä) | KOKEET | NS |
@@ -578,15 +578,15 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
-| Natiivi-UI | 197 | 1 | 0 | 0 | 5 |
+| Natiivi-UI | 198 | 0 | 0 | 0 | 5 |
 | Pelikoodari | 1 | 6 | 5 | 5 | – |
 | Natiiviseppä | – | 2 | 4 | 5 | – |
 | Linssiseppä | 5 | – | 0 | – | – |
 | Siirtoseppä-data | 1 | – | – | – | – |
 | (ei omistajaa) | – | – | – | 2 | 12 |
-| **Yhteensä** | **204** | **9** | **9** | **12** | **17** |
+| **Yhteensä** | **205** | **8** | **9** | **12** | **17** |
 
-Natiivi-UI:n ainoa osittainen on Kehittäjälehti (Tilastot odottaa Siirtosepän vientiä, Lukijaääni on PK:n säädin); KOKEET-rivejä ei ole jäljellä (testikomennot = ei tarvita, Fable 24.9.).
+Natiivi-UI:lla ei ole osittaisia rivejä (Lukijaääni-dialogi masterissa 24.9.); KOKEET-rivejä ei ole jäljellä (testikomennot = ei tarvita, Fable 24.9.).
 Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
 
 - Siirtoseppä-data on toissijaisena mukana noin 20 puuttuvalla rivillä: nähtävyydet ja opas, muutosloki, liput, radiot, julisteet, tiedeliite, ihme, leikekirja, täkynostot ja syvennykset.
