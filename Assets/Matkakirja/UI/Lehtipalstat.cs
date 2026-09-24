@@ -79,7 +79,8 @@ namespace Matkakirja.Natiivi
                 float Korkeus(string s) => mittari.MeasureTextSize(alku + s, palsta, VisualElement.MeasureMode.Exactly, 0,
                     VisualElement.MeasureMode.Undefined).y;
                 float vali = mittari.resolvedStyle.marginBottom;
-                float rivi = Korkeus("A");
+                // Rivin väli (1,58 em), ei yhden rivin korkeutta: ensimmäinen rivi on riviväliä matalampi.
+                float rivi = Korkeus("A\nA") - Korkeus("A");
                 float koko = mittari.resolvedStyle.fontSize > 0 ? mittari.resolvedStyle.fontSize : 15.5f;
                 var anf = Anfangi.Mitoita(kappaleet[0], koko, rivi, kirjainMittari, (s, lev) =>
                     mittari.MeasureTextSize(alku + s, lev, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y, palsta);
@@ -142,7 +143,7 @@ namespace Matkakirja.Natiivi
         sealed class Anfangi
         {
             string kirjain;
-            float iso, rivi, sisennys, top;
+            float iso, rivi, sisennys, top, vieriKorkeus;
             int rivit;
             Func<string, float, float> mittaa;
             float palsta;
@@ -173,7 +174,8 @@ namespace Matkakirja.Natiivi
             {
                 var sanat = Sanat(kappale.Substring(kirjain.Length));
                 float kapea = Mathf.Max(1f, palsta - sisennys);
-                float raja = mittaa("A" + string.Concat(Enumerable.Repeat("\nA", rivit - 1)), kapea) + 0.5f;
+                vieriKorkeus = mittaa("A" + string.Concat(Enumerable.Repeat("\nA", rivit - 1)), kapea);
+                float raja = vieriKorkeus + 0.5f;
                 int ala = 0, yla = sanat.Count;
                 while (ala < yla)
                 {
@@ -186,7 +188,8 @@ namespace Matkakirja.Natiivi
             public float Korkeus(string kappale)
             {
                 var (_, alla) = Jaa(kappale);
-                return rivit * rivi + (alla.Length > 0 ? mittaa(alla, palsta) : 0f);
+                // Alaosa alkaa viereisten rivien alta rivivälin päästä (ensimmäinen rivi on riviväliä matalampi).
+                return vieriKorkeus + (alla.Length > 0 ? (rivi - mittaa("A", palsta)) + mittaa(alla, palsta) : 0f);
             }
 
             public VisualElement Luo(VisualElement isa, string kappale, Func<VisualElement, string, Label> teksti)
@@ -200,9 +203,14 @@ namespace Matkakirja.Natiivi
                 k.style.top = top;
                 var v = teksti(kpl, vieressa);
                 v.style.marginLeft = sisennys;
-                v.style.height = rivit * rivi;
+                v.style.height = vieriKorkeus;
                 v.style.marginBottom = 0;
-                if (alla.Length > 0) { var l = teksti(kpl, alla); l.style.marginBottom = 0; }
+                if (alla.Length > 0)
+                {
+                    var l = teksti(kpl, alla);
+                    l.style.marginBottom = 0;
+                    l.style.marginTop = Mathf.Max(0f, rivi - mittaa("A", palsta)); // rivinväli kappaleen sisällä
+                }
                 return kpl;
             }
         }
