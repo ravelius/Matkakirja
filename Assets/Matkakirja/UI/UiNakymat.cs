@@ -32,6 +32,8 @@ namespace Matkakirja.Natiivi
         public readonly Karttaselite Karttaselite;
         public readonly OfflineTilaUi OfflineTila;
         public readonly Kartuscha Kartuscha;
+        /// <summary>Nostomerkit kartalla (Natiivisepän NostoKerros → merkit, nimiöt, napautus).</summary>
+        public readonly NostotKartalla Nostot;
         public readonly Pulu Pulu;
         public readonly Matkakirjakortti Matkakirja;
         public readonly Saapumisesitys Saapuminen;
@@ -109,6 +111,7 @@ namespace Matkakirja.Natiivi
             Tilarivi.PudotusAuki = () => Valikko.Auki || Aanentasot.Auki || Matkalaukku.Auki;
             Kaupunkikortti = new KaupunkiKortti(kerros);
             Kysymys = new KysymysNakyma(kerros);
+            Nostot = new NostotKartalla(kerros);
             Kartuscha = new Kartuscha(kerros);
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
             Karttaselite = new Karttaselite(kerros);
