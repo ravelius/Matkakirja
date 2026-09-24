@@ -3967,3 +3967,7 @@ Kirjattu.
 ## PAATOKSET 24.9.2026 klo 14.5x: SATELLIITTIPINTA, EOX-NOUTO (24.9.2026 klo 14.53)
 
 Omistaja päätti kortilla: EOX Sentinel-2 cloudless 2016 (CC BY 4.0) noudetaan CC BY:n nojalla kohteliaalla tahdilla (≤ 4 pyyntöä/s, pysähtyy 429/503:een), ja omistaja lähettää EOX:lle kohteliaisuusviestin (luonnos docs/raportit/satelliitti-lennon-pinta-20260924.md, haara karttaseppa-satelliitti). Fable päätti: BMNG Z0–Z7 topo (ei batymetriaa), elokuu, ajetaan päivällä ≤ 2 prosessia; attribuutio pelissä NASA Earth Observatory (Blue Marble Next Generation) ja EOX:n täysi muoto; värisovituksesta tuotetaan sekä alkuperäinen että kaupunkikohtaisesti sovitettu sarja, omistaja valitsee iPadilla; EOX-vaihe ennen klo 22 tai huomenna päivällä (E28 klo 22). Natiiviseppä varmistaa topon tumman meren sopivuuden palloon.
+
+## FABLE ALOITTI UUDEN KONTEKSTIN klo 14.5x (24.9.2026 klo 14.55)
+
+Aloitusviesti Postivahdilta luettu, luovutus -c.md ja lokin 40 otsikkoa luettu. Satelliittipäätös tehty ja kirjattu (3be7570fb): BMNG topo ajossa, EOX-nouto CC BY:n nojalla, omistaja lähettää kohteliaisuusviestin EOX:lle. Pelikoodari: #3073 kuitattu Julkaisijalle; maamerkkipilotti oli jo Natiivisepän tekemä (proto d59d672, build 8) → Pelikoodarille sisältöpaketin maamerkit-kokoelman lukija (skeema Siirtosepän kanssa). Fablen set_remote_control estyi luokittimessa → omistaja kytkee RC:n itse. Jono: build 7 -löydökset 25…, build 8 -SHA, museosuunnitelman luvut 6–7.
