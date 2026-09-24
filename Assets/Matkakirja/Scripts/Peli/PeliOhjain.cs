@@ -1051,9 +1051,14 @@ namespace Matkakirja.Natiivi
         void PysaytaKamera() => kameranOhitus = () => kierto.Aja(kierto.leveys, kierto.pituus, 0, 0.05f, null);
 
         /// <summary>
-        /// Kaupunkikortti (web kaupunkiliuska): Lue kaupunkilehti, Liiku tänne
-        /// (matkavalinta) tai omassa kaupungissa Tutki kaupunkia. Kamera lentää
-        /// kaupunkiin kuten 3D:ssä (KaupunkiMerkit), joten ohitusta ei aseteta.
+        /// Kaupunkikortti (web kaupunkiliuska): Lue kaupunkilehti, Liiku tänne tai omassa kaupungissa
+        /// Mannerlento. Kamera lentää kaupunkiin kuten 3D:ssä (KaupunkiMerkit), joten ohitusta ei aseteta.
+        ///
+        /// "LIIKU TÄNNE" WEBIN MUKAAN (WEB ON MALLI, Natiivi-UI:n havainto 24.9.2026; web js/pallolauta/lauta.js
+        /// napautaKaupunki ja liuskan 'liiku'-rivi): rivi on vain, kun kaupunkiin on nopan siirto tarjolla
+        /// (siirtovaihe, game.moveOptions), ja se valitsee siirron suoraan (valitseSiirto → doMove). Ei
+        /// kulkutapalistaa: webissä kulkutapa valitaan vain Liiku-liuskasta. Kohdekaupungin napautus valitsee
+        /// siirron jo ennen korttia (Napautettu), joten rivi näkyy käytännössä vain webin reunatapauksissa.
         /// </summary>
         public string AvaaKortti(string kaupunki)
         {
@@ -1065,11 +1070,12 @@ namespace Matkakirja.Natiivi
             var p = matka.Tila.Pelaaja;
             bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki;
             bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
+            string siirto = SiirtoAvain(kaupunki);
             var t = new KaupunkiToiminnot
             {
                 LueLehti = LehtiOn ? () => LueLehti(kaupunki) : (Action)null,
-                Liiku = oma ? null : () => { PiilotaKortti(); AvaaDialogi(kaupunki); },
-                LiikuTeksti = oma ? null : "Liiku tänne",
+                Liiku = siirto != null ? () => { PiilotaKortti(); ValitseSiirto(siirto); } : (Action)null,
+                LiikuTeksti = siirto != null ? LiikuNimio : null,
                 Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
                 MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
@@ -1080,11 +1086,19 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        /// <summary>Kortin "Liiku tänne" (testikomento 'liiku'): kortti kiinni ja matkavalinta auki.</summary>
+        /// <summary>Kortin rivin teksti (web js/pallolauta/kaupunkiliuska.js LIIKU_NIMIO).</summary>
+        public const string LiikuNimio = "Liiku tänne";
+
+        /// <summary>
+        /// Kortin "Liiku tänne" (testikomento 'liiku'): vain nopan siirtokohteeseen, valitsee siirron kuten
+        /// kohdemerkki (web valitseSiirto). Muuten virhe: kulkutapa valitaan Liiku-liuskasta.
+        /// </summary>
         public string Liiku(string kaupunki)
         {
+            var avain = SiirtoAvain(kaupunki);
+            if (avain == null) return "ei siirtokohde: " + kaupunki + " (kulkutapa Liiku-liuskasta)";
             PiilotaKortti();
-            return AvaaDialogi(kaupunki);
+            return ValitseSiirto(avain);
         }
 
         void PiilotaKortti()
