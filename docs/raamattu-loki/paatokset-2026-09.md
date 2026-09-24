@@ -4347,3 +4347,7 @@ Astropulu: kysymys oikeaan chattiin, Livia vastaa kuvan perusteella ilman sijain
 ## PROTO-MASTER ac8bf12: LENTOPINTA, SAAPUMISNAKYMA 6c2a287 (6 KUVAPARIA PASS), LIIKU-TANNE, LINSSINIMET, ASTROPULU MERGETTY; FOKUSPOHJA 38e424d → BUILD 11 (24.9.2026 klo 17.33)
 
 Fable hyväksyi fokuspohjan siirron build 11:een (#3081 luonnos, skeema 1.35). Kylmän lennon 2–3 kehyksen suorakulmiot (kylma-b10f.jpg) selvitetään agentilla, 30 min raja, muuten build 11. Build 10 puuttuu: Natiivi-UI b10-jono 0e8ff30 (kuvaparit) ja valintamerkit da29d38 (kuvapari); jos viipyvät yli 19.30, Fable päättää. Löydös 38: piirtotyö 2–3 pv kun data paketissa.
+
+## NATIIVI-UI (UUSI SESSIO): b10-JONON KUVAPARIT VALMIIT, MERGE-PYYNTO NATIIVISEPALLA; UUDET LEHTIEROT BUILD 11:EEN (24.9.2026 klo 17.34)
+
+Kuvaparit pariteetti-b10/merge-pyynto-natiivi-ui-b10b.md; linssinimet natiivi-ui/linssinimet 3277869; hytinä todennetaan laitteella. Build 11: lehden etusivun esittely väärä teksti (web: artikkelin intro, natiivi: sivun 1 ingressi), otsikot webissä 700, kuvateksti pystyssä ei kursiivi, nostokortin asettelu iPadilla (web leveä kaksipalstainen arkki) — Natiivi-UI aloittaa webin mitoilla.
