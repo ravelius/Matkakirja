@@ -3975,3 +3975,7 @@ Aloitusviesti Postivahdilta luettu, luovutus -c.md ja lokin 40 otsikkoa luettu. 
 ## BUILD 8 KASKETTY: NATIIVISEPAN SHA f6de924 (24.9.2026 klo 14.58)
 
 Natiiviseppä ilmoitti build 8 -SHA:n f6de924 (tarkista 0, kaanna 248/248, linssit 225/225, simit asennettu): testi/b8 + Natiivi-UI 3e2ad74 + lento-kartta 9400ee9 + maamerkit Lontoo/Ateena + radio AVAudioEngine + keychain + aloituskaava-web c8c4831 + siivous-lokit + erät 2, 3 (heijastusluotain pois) ja 5; aloituslento 20 s; tunnettu: sileän pinnan laatat latautuvat lohkoina matkalla (build 9). Fable käski Julkaisijan ajaa build 8 heti (-nographics, Unity kiinni) ja Laitetestaajan ajaa B7-listan asennetuilla simuilla ilman käännöksiä. Build 9 -jono: Natiivi-UI bf7af3d, siirrot-kartalle f2b07b3 + siirtokohteet 74aac4e, maamerkit sisältöpaketista. Omistajan Remote Control kytkeytyi itsestään; omistaja ohjaa remoten kautta. EOX-hinta: hintasivun koodin mukaan osajoukot alkaen 1 500 € (alv 0), vanhemmat vuodet alennuksella.
+
+## OMISTAJA klo 15.0x: EOX-KOHTELIAISUUSVIESTIA EI LAHETETA (24.9.2026 klo 15.01)
+
+Omistaja kysyi, tarvitseeko EOX:lle lähettää viestiä. Fable: ei — CC BY 4.0 sallii noudon ja jakelun attribuutiolla, EOX sanoo itse 'use the service endpoints directly', kertanouto 9 162 laattaa on kevyt; viesti avaisi vain myyntikeskustelun (osajoukot alkaen 1 500 € alv 0). Viesti lähetetään vasta, jos nouto pysähtyy 429/503:een. Päätös 14.5x pysyy muuten ennallaan (nouto CC BY:n nojalla).
