@@ -17,8 +17,9 @@
 #   sisäiselle ryhmälle (omistaja hyväksyi 24.9.2026). Natiivisepän ehdot
 #   (vaihtoehto A): vienti ajetaan päätyökopiossa (ainoa Library), ja ajo
 #   ohitetaan, jos Unity on auki, Library-lukko on varattu, työkopio ei ole
-#   masterissa tai siinä on muutoksia (Materiaalit/ saa olla), tai master on
-#   jo ladattu. Viennin jälkeen ProjectSettings ja Materiaalit palautetaan,
+#   masterissa tai siinä on muutoksia (Materiaalit/ saa olla), master on
+#   jo ladattu, tai levyllä on alle 30 Gt vapaana. Viennin jälkeen
+#   ProjectSettings ja Materiaalit palautetaan,
 #   koska vienti kirjoittaa ne. Muihin Build-kansioihin ei kosketa.
 
 name: proto-3d TestFlight
@@ -107,7 +108,11 @@ jobs:
           set -euo pipefail
           mkdir -p "$(dirname "$YOLOKI")"
           syy=""
-          if pgrep -f "Unity.app/Contents/MacOS/Unity" >/dev/null; then syy="Unity on käynnissä"; fi
+          # Vienti (~2 Gt) + arkiston DerivedData (~4 Gt) + IPA; muut sessiot
+          # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
+          vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
+          if [ "$vapaa" -lt 30 ]; then syy="levyllä vain $vapaa Gt vapaana (raja 30 Gt)"; fi
+          if pgrep -f "Unity.app/Contents/MacOS/Unity" >/dev/null; then [ -n "$syy" ] || syy="Unity on käynnissä"; fi
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
           haara=$(git rev-parse --abbrev-ref HEAD)
           if [ -z "$syy" ] && [ "$haara" != "master" ]; then syy="työkopio on haarassa $haara, ei masterissa"; fi
@@ -249,8 +254,10 @@ jobs:
           if [ ! -f "$nippu" ]; then
             security create-keychain -p "$NIPPU_SALASANA" "$nippu"
           fi
-          security set-keychain-settings -lut 21600 "$nippu"
+          # Avaus ensin: lukittuun nippuun set-keychain-settings kaatuu
+          # "User interaction is not allowed" (build 5, 24.9.2026).
           security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
           nykyiset=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
           security list-keychains -d user -s "$nippu" $nykyiset
           echo "Hakulista ajon ajaksi:"; security list-keychains -d user
