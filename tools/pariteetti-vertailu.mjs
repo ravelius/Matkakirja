@@ -43,6 +43,9 @@ export const OLETUSRAJAT = Object.freeze({
   kokoamisSade: 48, // katkelmat kootaan yhdeksi tekstiksi tämän säteen sisältä (web-px siirron jälkeen)
   siirtoOsuus: 0.4, // koko näkymän yhteinen siirto (turva-alue) on huomautus, kun ≤ tämä osuus paneelista
   kuvaSiirto: 0.15, // kuvavertailu hakee parhaan pystysiirron ± tämä osuus korkeudesta
+  // Webin karttanimet (maa-, vesi- ja kaupunkinimet pallolla) ovat natiivissa 3D-kerrosta eivätkä näy UI-puussa:
+  // tekstivertailu ohittaa ne, ja kartan vertaa kuvaero (b12-2-ajo: linssirivien PUUTTUU tuli pelkistä karttanimistä).
+  ohitaWebLuokat: ['pallolauta-merkki'],
 });
 
 // ---------------------------------------------------------------- teksti
@@ -230,7 +233,9 @@ export function parita(web, natiivi, rajat = {}) {
   const r = { ...OLETUSRAJAT, ...rajat };
   const nat = !Array.isArray(natiivi) && !Array.isArray(web) && natiivi?.paneeli && web?.paneeli
     ? skaalaa(natiivi, web) : natiivi;
-  const W = tekstit(web, r), N = tekstit(piilotaPeitetyt(nat), r);
+  const ohita = (e) => r.ohitaWebLuokat.some((l) => String(e.luokat ?? '').split(/\s+/).includes(l));
+  const webIlmanKarttaa = Array.isArray(web) ? web.filter((e) => !ohita(e)) : { ...web, elementit: (web?.elementit || []).filter((e) => !ohita(e)) };
+  const W = tekstit(webIlmanKarttaa, r), N = tekstit(piilotaPeitetyt(nat), r);
   const parit = [];
   const wKaytetty = new Set(), nKaytetty = new Set();
 
