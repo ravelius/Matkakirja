@@ -4563,3 +4563,7 @@ Luovutuksen jonon kohta 1 tehty.
 ## OMISTAJA klo 20.0x (SITOVA): RADIOPANEELIN PUNAINEN NAPPI KESKITETAAN LCD:N OIKEALLE JAAVAAN TYHJAAN TILAAN (iPADILLA OLI SIVUSSA) (24.9.2026 klo 20.05)
 
 Linssiseppä korjaa mitat ja uuden havainnekuvan; raportoi uudelle Fable-sessiolle.
+
+## SIIRTOSEPPA: #3081 MAINISSA, #3099 (MERINIMET 1.36) JA #3103 (ALUENIMET 1.37) JONOSSA, ASUKASLUVUT 1.38 LUONNOS #3114 (WIKIDATA P1082, 229/266) (24.9.2026 klo 20.06)
+
+Tuotannon osoitin on Julkaisijan palauttama v68 (1.35). asukkaatAlue-merkintä saarille/valtioille. Linssisepälle kerrottu. Fable nollautuu tämän jälkeen; uusi sessio jatkaa luovutuksesta -d.
