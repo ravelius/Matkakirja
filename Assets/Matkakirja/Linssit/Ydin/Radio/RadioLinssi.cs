@@ -258,6 +258,12 @@ namespace Matkakirja.Linssit.Radio
             ajoKorotus = Mastot.KaarenKorotus(d);
         }
 
+        /// <summary>Pelaajan veto tai nipistys (PalloKierto.PelaajanEle): kamera-ajo keskeytyy heti (suunnitelma luku 6).</summary>
+        public void PelaajanEle() => ajoAlku = double.NaN;
+
+        /// <summary>Onko kaareva kamera-ajo menossa.</summary>
+        public bool KameraAjossa => !double.IsNaN(ajoAlku);
+
         /// <summary>Joka kehys (Paivita): hämärä, nousu, valittu masto, renkaat, yövalot ja kamera-ajo.</summary>
         void PaivitaMastot()
         {
