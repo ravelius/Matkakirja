@@ -5,10 +5,11 @@
   "1.24": "a74682db468c1664",
   "1.25": "137506a64fb28b4d",
   "1.26": "6ce8cb0b49deb75c",
-  "1.27": "6ce8cb0b49deb75c"
+  "1.27": "6ce8cb0b49deb75c",
+  "1.28": "f06631f1168799e5"
  },
  "uusin": {
-  "skeemaversio": "1.27",
+  "skeemaversio": "1.28",
   "kokoelmat": {
    "aanitaulut": [
     "data",
@@ -588,6 +589,17 @@
     "saapuminen",
     "tunneAarre",
     "tunneKohtaaminen"
+   ],
+   "tyohuonetilastot": [
+    "/sarakkeet",
+    "id",
+    "kaikki",
+    "kaupunkeja",
+    "maat",
+    "nimi",
+    "osuus",
+    "summa",
+    "tehty"
    ]
   },
   "manifest": [

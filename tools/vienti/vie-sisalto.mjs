@@ -149,8 +149,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        TESTATTAVAA ja TUOREET, js/tyohuone-pelit.js PELIT (luokka kehittaja);
  *        tyohuone-musiikki.js HILJENNYKSEN_SYY ja TUNTEMATTOMAT_LAJIT.
  *        Kehittäjämoduulien sähköpostiosoitteet peitetään (peitaSahkopostit).
+ *   1.28 kokoelma tyohuonetilastot (Natiivi-UI): webin laskeTilastot()
+ *        valmiina (alkio = manner), juuressa sarakkeet (KAUPUNGIN_OSAT ja
+ *        MAAN_OSAT ilman laskufunktioita).
  */
-export const SKEEMAVERSIO_TARKKA = '1.27';
+export const SKEEMAVERSIO_TARKKA = '1.28';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

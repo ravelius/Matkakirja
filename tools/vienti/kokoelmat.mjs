@@ -39,6 +39,8 @@ import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
+import { tyohuonetilastot } from './tyohuonetilastot.mjs';
+import * as TYOHUONETILASTOT from '../../js/tyohuone-tilastot.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -954,6 +956,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
   tyypitaLoput(kokoelmat);
+  // Skeema 1.28 (Natiivi-UI): työhuoneen Tilastot-taulu valmiiksi laskettuna.
+  kokoelmat.tyohuonetilastot = tyohuonetilastot(TYOHUONETILASTOT, taulukko);
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);

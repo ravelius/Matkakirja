@@ -1038,3 +1038,13 @@ test('skeema 1.27: työhuoneen moduulit ilman henkilöiden sähköposteja', asyn
     assert.doesNotMatch(t, /@(?!matkakirja\.app)[a-z0-9.-]+\.[a-z]{2,}/i, `${m}: sähköposti`);
   }
 });
+
+test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
+  const t = JSON.parse(tiedostot.get('kokoelmat/tyohuonetilastot.json'));
+  assert.deepEqual(t.alkiot.map((a) => a.id), ['europe', 'middleeast', 'asia', 'africa', 'oceania', 'northamerica', 'southamerica']);
+  const { laskeTilastot } = await import('../js/tyohuone-tilastot.js');
+  assert.equal(t.alkiot[0].kaikki, laskeTilastot()[0].kaikki);
+  assert.ok(t.sarakkeet.length >= 20 && t.sarakkeet.every((s) => s.avain && s.otsikko && ['kaupunki', 'maa'].includes(s.taso)));
+  const avaimet = new Set(t.sarakkeet.map((s) => s.avain));
+  assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
+});

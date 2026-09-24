@@ -61,6 +61,7 @@ export const VAATIMUKSET = {
   '1.26': ['tarinakaari.kohtaaminen', 'paikkatiedot.teksti', 'kohtaamiset.tervehdys', 'kohtaamiskuvat.tila',
     'paikallisaarteet.pieniAarre', 'saapumispuheet.url', 'fokusvirrat.sahketehtava'],
   '1.27': ['moduuli:js/tyohuone-raamattu.js', 'moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
+  '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
 };
 
 export function vertaa(a, b) {
