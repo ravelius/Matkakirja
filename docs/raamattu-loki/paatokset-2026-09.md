@@ -3699,3 +3699,7 @@ Fable: hyväksytty; huomiot — kone jää osassa kehyksiä ~1/3 ruudusta (tavoi
 ## LINSSISEPPA NOLLATTU klo 12.1x (list_events = 0 TARKISTETTU): LUOVUTUS viesti-linssiseppa-luovutus-20260924-1216.md (f5b004b4e), ALOITUSVIESTI LAHETETTY klo 12.2x (PAIVITYS: VU-MITTARI, piikit6, ipad-hae JO MASTERISSA c46d571; SEURAAVAKSI VU-KUVASARJA JA PIIKKIAJO 7) (24.9.2026 klo 12.19)
 
 Nollauksia tänään 13.
+
+## FABLE klo 12.2x: LOYDOS 19 (KARTAN KEVYT SUMENNUS KUVIEN AIKANA) KOSKEE KAIKKIA NATIIVIN LAITTEITA, MYOS iPADIA — OLI KIRJATTU VAHINGOSSA iPHONE-ASETTELUN ALLE; RAAMATTU KORJATTU → NATIIVI-UI LAAJENTAA (Ylapalkki.Kelluva-EHTO POIS KuvaSumeasta), BUILD 7 (24.9.2026 klo 12.21)
+
+Natiivi-UI kysyi Natiivisepän iPad-havainnon perusteella.
