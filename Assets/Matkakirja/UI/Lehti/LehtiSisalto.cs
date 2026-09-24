@@ -16,10 +16,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Matkakirja.Peli;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public enum LehtiLaji { Kaupunki, Maa }
+    /// <summary>Kehittaja = kehittäjän liite (web avaaKehittajaLehti): synteettiset sivut, ei tehtäviä eikä reaktioita.</summary>
+    public enum LehtiLaji { Kaupunki, Maa, Kehittaja }
 
     public sealed class LehtiKuva
     {
@@ -103,6 +105,12 @@ namespace Matkakirja.Natiivi
         public string Otsikko, Lyhyt;
         /// <summary>Minitehtävän avain Kaupat.Minitehtava(kaupunki, aihe): kaupunkilehdessä aiheId, maalehdessä ISO:aiheId.</summary>
         public string TehtavaAihe;
+        /// <summary>
+        /// Kehittäjän liitteen sivun oma piirto (web sivu.rakenna): korvaa nostot, ellei RakennaJatka (web
+        /// rakennaJatka), jolloin nostot piirretään sen perään.
+        /// </summary>
+        public Action<VisualElement> Rakenna;
+        public bool RakennaJatka;
     }
 
     public sealed class Lehti

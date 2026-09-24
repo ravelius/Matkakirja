@@ -980,6 +980,35 @@
     white-space: normal;
 }
 
+/* Laitteen oma pari (web .pollo-pilleri.oma: katkoviiva; UI Toolkitissa ei dashed-reunaa → himmeämpi, läpinäkyvä). */
+.mk-poiminnat__pilleri--oma {
+    border-color: rgba(70, 51, 31, 0.22);
+    background-color: rgba(255, 252, 244, 0.25);
+}
+
+/* Kehittäjän poistorivi minipopupissa (web .minipopup-poistorivi). */
+.mk-minipopup__poistorivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.mk-minipopup__poista {
+    min-height: 32px;
+    margin-right: 8px;
+    padding: 0 12px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(122, 85, 20, 0.55);
+    background-color: rgba(255, 252, 240, 0.7);
+}
+
+.mk-minipopup__poista .mk-nappi__teksti {
+    font-size: 12.5px;
+    color: #7a5514;
+}
+
 /* Linssin valmis vastaus ja sen lähderivi (web .pollo-valmisvastaus, .pollo-valmislahteet). */
 .mk-chat__valmislahteet {
     flex-direction: row;

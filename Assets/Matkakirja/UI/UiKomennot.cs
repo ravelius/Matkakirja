@@ -16,6 +16,10 @@
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
+//   ui tyohuone raamattu | kehittajalehti | tilanne [sivu] | poiminnat   KOKEET-työhuone kehittäjän liitteinä
+//                                             (vain kehittäjätilassa; aineisto sisältöpaketin tyohuone-moduuleista)
+//   ui tyohuone poiminta [avain]              tallentaa testiparin laitteelle (oletus aihe:pariisi:kaupunki) ja
+//                                             avaa Pöllöpoiminnat-vientisivun; ui tyohuone tyhjenna poistaa parit
 //   ui lehti vierita <px|loppu>               auki olevan sivun vieritys (kuvasarjat ilman kosketusta)
 //   ui lehti tehtava | tehtava-pois | viimeinen  alapalkin tehtävänappi (keksitty tila) / viimeinen sivu (Maa-liite)
 //   ui lehti fokus [kaupunki] [juliste]       kaupunkilehti fokustehtävän sivulla (oletus ateena; AARTEEN AVAUS,
@@ -372,6 +376,25 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tyohuone":
+                {
+                    var tk = loput.Split(new[] { ' ' }, 2);
+                    string mita = tk[0].ToLowerInvariant(), arvo = tk.Length > 1 ? tk[1].Trim() : "";
+                    switch (mita)
+                    {
+                        case "raamattu": Tyohuone.AvaaRaamattu(); return null;
+                        case "kehittajalehti": Tyohuone.AvaaKehittajalehti(); return null;
+                        case "tilanne": Tyohuone.AvaaTilanne(int.TryParse(arvo, out var ts) ? ts : 0); return null;
+                        case "poiminnat": Tyohuone.AvaaTilanne(2); return null;
+                        case "poiminta":
+                            Kirjaa("tallennettu " + PoimintaVarasto.Tallenna(arvo.Length > 0 ? arvo : "aihe:pariisi:kaupunki",
+                                "Testikysymys " + System.DateTime.Now.ToString("HH.mm.ss"), "Testivastaus.\n\nToinen kappale."));
+                            Tyohuone.AvaaTilanne(2);
+                            return null;
+                        case "tyhjenna": PoimintaVarasto.Tyhjenna(); return null;
+                        default: return "tuntematon: ui tyohuone " + mita;
+                    }
+                }
                 case "wiki": ui.Wiki.Avaa(loput.Length > 0 ? loput : "Venetsia"); return null;
                 case "media": Mediarivi.Testaa(loput.Length > 0 ? loput.ToLowerInvariant() : "lontoo", t => Kirjaa(t)); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
