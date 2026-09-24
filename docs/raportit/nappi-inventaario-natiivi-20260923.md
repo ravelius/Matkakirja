@@ -463,6 +463,11 @@ Masterissa (proto 12484c5, 3b0c253 ja da399d7) Linssisepän kontaktikuvien UI-er
 - **Radio:** ▶-napit ovat pallolla, ja pelin merkit väistyvät radion ajaksi.
 - **Kartan valot (348):** napautus toimii.
 - **A5 ja A6 (Laitetestaaja):** A5 on chatin kupla ja kuva yhteisessä kääreessä. A6 on matkakirjakortti auki iPad-simulaattorissa.
+- **Myöhemmin (klo 7.57, master 5c7b762):**
+  - Ihmisen matkan loppu webin paata()-kulun mukaan, ilman korttia.
+  - Pulu on piilossa esityksen ajan ja kävelee lopussa sisään.
+  - Aikaselaimen vuosi pysyy nauhalla, ja keksintöpaneelin teksti on 14,4 px.
+  - Pallon napautus, veto ja nipistys kutistavat matkakirjakortin lapuksi (web kutistaKortinLiikkeesta); kamera-ajo ei kutista. Laitetestaajan A5–A7 PASS iPadilla.
 
 ## Tehty (päivitys 24.9.2026 yö, Natiivi-UI)
 
