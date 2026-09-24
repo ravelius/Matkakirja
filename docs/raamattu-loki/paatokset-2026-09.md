@@ -4075,3 +4075,7 @@ Pelikoodari mittasi tuotannosta: pöllönappi ei ole piilossa; vihje luodaan mut
 ## SIIRTOSEPPA: SKEEMA 1.34 — 1.29-RAJAUS POISTETTU (siirtoseppa-maarajat 1db1f917d, KOE v44, TESTIT 77/77) (24.9.2026 klo 15.36)
 
 Maarajojen renkaat = kaikki admin-0-renkaat (Norjassa Huippuvuoret, muutRenkaat = []); merentakaiset alueet (FRA, ESP, PRT) palaavat kuten #3078:n web-pallossa. Natiiviseppä tietää. PR #3074:n ja #3078:n jälkeen. Tuotannossa 1.x v43 ja 2.0 v3 avausluentojen aikaleimoilla.
+
+## LAITETESTAAJA (#3076 818a9a7b1): RIVIT 5, 13, 23 PASS BUILD 8:LLA; NOPPA KARTALLE PASS iPHONE + iPAD; RIVI 9 MAALEHDEN PALSTOITUS MITATTUNA FAIL → NATIIVI-UI (24.9.2026 klo 15.37)
+
+Rivi 13 todennettu oikealla kosketuksella. Noppa-kartalle (testi/b9-ui): listakortti pois, vain renkaat + pöllön vihje, täsmää webiin, kuvaparit tallessa. iPad-portin läpikuultava jäänne seuraavaan erään. Rivi 9 (maalehti) palstoitus mitattuna FAIL, reititetty Natiivi-UI:lle.
