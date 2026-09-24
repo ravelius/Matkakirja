@@ -301,6 +301,25 @@
     background-color: rgba(225, 204, 160, 0.95);
 }
 
+/* Saaririvi (omistaja 24.9.2026): pilleri ja napit Dynamic Islandin korkeudelle (37 pt) sen kummallekin
+ * puolelle; pilleri tiiviimpi, jotta "300£ 1/80" mahtuu saaren vasemmalle puolelle. */
+.mk-ylapalkki--saari .mk-pilleri {
+    padding: 0 10px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.mk-ylapalkki--saari .mk-pilleri__kello {
+    margin-left: 6px;
+}
+
+.mk-ylapalkki--saari .mk-ikoninappi {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    border-radius: 18px;
+}
+
 /* --- hetkellinen viesti (.event-toast) ----------------------------------- */
 
 .mk-ilmoitus {
@@ -589,7 +608,8 @@
 }
 
 /* Maan kortti auki (web body.infotaulu-auki): Liiku väistyy. */
-.mk-liiku--vaistyy {
+/* Nappiin eikä kääreeseen: kääreen opacity on Rakenne.Naytan inline-arvo, joka voittaa luokan. */
+.mk-liiku--vaistyy .mk-liiku__nappi {
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.18s;
