@@ -55,6 +55,9 @@ namespace Matkakirja.Natiivi
 
             void Rakenna()
             {
+                // Loppurivi voi olla siirretty kainaloon (KainaloonLoppu): se säilyy uudelleenrakennuksen yli.
+                var loppu = paikka.Q(className: "mk-lehti__nostoloppu");
+                loppu?.RemoveFromHierarchy();
                 paikka.Clear();
                 if (tila == "kainalo" || tila == "pysty") Kainalo(paikka, n, kuvat, kappaleet, ensimmainen, tila == "pysty", media, suhde =>
                 {
@@ -74,6 +77,11 @@ namespace Matkakirja.Natiivi
                     }
                     media?.Invoke(paikka);
                     Palstat(paikka, kappaleet, ensimmainen);
+                }
+                if (loppu != null)
+                {
+                    if (paikka.Q(className: "mk-lehti__kainalo") != null) KainaloonLoppu(paikka, loppu);
+                    else lohko.Insert(lohko.IndexOf(paikka) + 1, loppu);
                 }
             }
             Rakenna();
