@@ -345,7 +345,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Palkki pelin yläpalkin tilalle, kello ja "Tauko" / "Jatka" / "Loppu" | aikajana.js:2666, 2713, 2847 | AikajanaNakyma.cs (palkki) | on (master cebcf62) | NUI |
 | Keksijäkaruselli (siirry keksintöön, veto, heitto, keskimmäinen → juttu) | aikajana.js:2759, 3951, 6024 | UI/Linssit/Keksijakaruselli.cs; ◀▶ poistettu (ei webissä) | on (master 95dd4d9) | NUI |
 | Havainnekuva soikiona, vuosi ◈ nimi, kuvakierto; loppusanat paneelissa | aikajana.js:5590, 4950 | AikajanaNakyma + Valokeila.cs | on (master cebcf62) | NUI |
-| Kartan valot (napautus → keksintö) | aikajana.js:3145, 3289 | puuttuu | puuttuu | LS |
+| Kartan valot (napautus → keksintö) | aikajana.js:3145, 3289 | puuttuu | on (LS + NUI:n kytkentä: keksinnöt → pysäkki, ihmisen matka → noston kortti; master 3b0c253) | LS |
 | Lappukahva "Näytä X" | aikajana.js:4151 | puuttuu | on (lappukahva, master ee8c2af) | NUI |
 | Välinäytöksen "Jatka" | aikajana.js:771 | palkin nappi hehkuen, teksti kartan päällä ilman korttia | on (master cebcf62) | NUI |
 | "Katso löydöt" (loppu) | aikajana.js:5005 | AikajanaNakyma.cs:121, 123 | on | NUI |
@@ -454,6 +454,16 @@ nostokortin ja luentakuvien suurennoksen ‹ ›, pulun vastauskuva → isompana
 ("Kerro lisää: aihe"). Kesken: "Nähtävyydet"-rivi ja kohdekartta (odottaa Siirtosepän
 kohdekartat-kokoelmaa), pulun "Avaa juttu", radion kuori (työn alla).
 
+## Tehty (päivitys 24.9.2026 klo 7.20, Natiivi-UI)
+
+Masterissa (proto 12484c5, 3b0c253 ja da399d7) Linssisepän kontaktikuvien UI-erot webiin:
+- **Ihmisen matkan palkki:** kello näyttää "N v. sitten" ja pienen yksikön, ja virtanapit ovat kellon perässä.
+- **Kertojan teksti:** tulee webin osina lauseleimojen tahdissa.
+- **Topografian selite:** alkaa kutistettuna, eikä siinä ole lähderiviä.
+- **Radio:** ▶-napit ovat pallolla, ja pelin merkit väistyvät radion ajaksi.
+- **Kartan valot (348):** napautus toimii.
+- **A5 ja A6 (Laitetestaaja):** A5 on chatin kupla ja kuva yhteisessä kääreessä. A6 on matkakirjakortti auki iPad-simulaattorissa.
+
 ## Tehty (päivitys 24.9.2026 yö, Natiivi-UI)
 
 Masterissa: Nähtävyydet-rivi, nähtävyysnäkymä ja kohdekartta (zoom, nipistys, ⤢ Kokoruutu, ×,
@@ -558,17 +568,17 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 klo 5.40, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 7.20, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
 | Natiivi-UI | 197 | 1 | 0 | 1 | 4 |
 | Pelikoodari | 1 | 6 | 5 | 5 | – |
 | Natiiviseppä | – | 2 | 4 | 5 | – |
-| Linssiseppä | 4 | – | 1 | – | – |
+| Linssiseppä | 5 | – | 0 | – | – |
 | Siirtoseppä-data | 1 | – | – | – | – |
 | (ei omistajaa) | – | – | – | 2 | 12 |
-| **Yhteensä** | **203** | **9** | **10** | **13** | **16** |
+| **Yhteensä** | **204** | **9** | **9** | **13** | **16** |
 
 Natiivi-UI:n ainoa osittainen on Kehittäjälehti (Tilastot odottaa Siirtosepän vientiä, Lukijaääni on PK:n säädin); jäljellä yksi KOKEET-rivi (testikomennot).
 Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
