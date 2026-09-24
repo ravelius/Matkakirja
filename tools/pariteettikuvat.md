@@ -84,6 +84,24 @@ Kehittäjän pikatie `?lauta=pallo&dev=<kaupunki>` (js/kehittaja-pikatie.js) on 
 olemassa, mutta se kytkee kehittäjätilan päälle ja ohittaa saapumisen omalla tavallaan, joten tämä
 työkalu käyttää tallennetta.
 
+## Todennus: ok tarkoittaa, että näkymä näkyy
+
+Jokaisella näkymällä on todennus (`nakyy` ja/tai `ehto` tiedostossa
+`tools/pariteettikuvat-nakymat.mjs`, taulukko `TODENNUS`). Se tarkistetaan juuri
+ennen kuvaa (odotus enintään 12 s) ja heti kuvan jälkeen:
+
+- `nakyy`: jokaisen valitsimen elementin pitää oikeasti näkyä. Laatikosta vähintään
+  24 × 24 px on ruudulla, se ei ole piilossa, kertynyt opacity on vähintään 0,9 (häivytys kesken ei kelpaa) ja
+  `elementFromPoint` osuu siihen vähintään kahdessa viidestä näytepisteestä
+  (ei jää muun alle).
+- `ehto`: pelin tila, esimerkiksi siirtovaihe ja näkyvät siirtokohteet, lehden oikea
+  sivu tai linssin moottori käynnissä.
+- Palloa käyttävissä näkymissä myös laattojen pitää valmistua.
+
+Jos todennus ei täyty, kuva tallentuu nimellä `<nakyma>-<koko>-VIRHE.png` ja
+yhteenvedossa on `ok: false` sekä syy (esim. `todennus: .kaupunkipopup: ei DOMissa`).
+Näkymää ilman todennusta ei voi lisätä, koska moduuli kaatuu latautuessaan.
+
 ## Näkymät
 
 | Nimi | Mitä | Oikotie |
@@ -101,7 +119,7 @@ työkalu käyttää tallennetta.
 | kaupunkilehti-kansi / -aihe1 / -aihe2 | Kaupunkilehti ja aihesivut | `ui.openArrival(city)`, `naytaTutkiSivu(n)` |
 | kaupunkilehti-sisallys | Lehden sisällysvalikko | `.lehti-hampurilainen` |
 | kaupunkilehti-luelisaa | "Lue lisää" (wiki) | `.wiki-btn` → `#wiki-dialog` |
-| maalehti-kansi / -aihe1 | Maalehti | `ui.avaaMaalehti(iso)` |
+| maalehti-kansi / -aihe1 | Maalehden etusivu (sivu 1, kantta ei ole) / ensimmäinen aihesivu (sivu 2) | `ui.avaaMaalehti(iso)`, `naytaTutkiSivu(2)` |
 | maalehti-mediarivi | Maalehden etusivun mediarivi (radio) | `#arrival-media` vieritettynä näkyviin |
 | laukku | Matkalaukku = passi | `ui.openPassport()` |
 | laukku-linssit | Laukku, kaikki linssit omistettuina | `player.linssit` + `openPassport()` |

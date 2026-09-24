@@ -18,7 +18,7 @@
  * Virhe yhdessä näkymässä ei kaada muita; lopuksi yhteenveto.
  */
 import http from 'node:http';
-import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync, rmSync, renameSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NAKYMAT } from './pariteettikuvat-nakymat.mjs';
@@ -204,6 +204,91 @@ async function odotaKuvat(sivu, kattoMs = 8000) {
   }), null, { timeout: kattoMs, polling: 150 }).then(() => true).catch(() => false);
 }
 
+/*
+ * NÄKYVYYSTARKISTIN SIVULLE (window.__pariteetti.nakyy). Palauttaa null,
+ * kun jokin valitsimen elementeistä oikeasti näkyy ruudulla, muuten syyn.
+ * "Näkyy" = laatikosta vähintään 24 × 24 px ruudun sisällä, ei
+ * display:none eikä visibility:hidden, kertynyt opacity ≥ 0,9 ja
+ * elementFromPoint osuu elementtiin (tai sen lapseen) vähintään kahdessa
+ * viidestä näytepisteestä. pointer-events:none-elementiltä osumaa ei vaadita.
+ */
+const NAKYVYYSTARKISTIN = () => {
+  const syyYhdelle = (el) => {
+    const b = el.getBoundingClientRect();
+    const x0 = Math.max(0, b.left); const y0 = Math.max(0, b.top);
+    const x1 = Math.min(innerWidth, b.right); const y1 = Math.min(innerHeight, b.bottom);
+    if (x1 - x0 < 24 || y1 - y0 < 24) return `ruudulla vain ${Math.round(Math.max(0, x1 - x0))}×${Math.round(Math.max(0, y1 - y0))} px`;
+    let opasiteetti = 1;
+    for (let e = el; e && e.nodeType === 1; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (cs.display === 'none') return 'display:none';
+      if (e.hidden) return 'hidden';
+      opasiteetti *= Number(cs.opacity);
+    }
+    const cs = getComputedStyle(el);
+    if (cs.visibility === 'hidden') return 'visibility:hidden';
+    // 0,9: häivytys kesken (esim. linssin avauskortti puoliksi näkyvissä) ei kelpaa.
+    if (opasiteetti < 0.9) return `läpinäkyvä tai häivytys kesken (opacity ${opasiteetti.toFixed(2)})`;
+    if (cs.pointerEvents === 'none') return null;
+    const pisteet = [[0.5, 0.5], [0.25, 0.25], [0.75, 0.25], [0.25, 0.75], [0.75, 0.75]]
+      .map(([fx, fy]) => [x0 + (x1 - x0) * fx, y0 + (y1 - y0) * fy]);
+    let osumia = 0; let peittaja = '';
+    for (const [x, y] of pisteet) {
+      const osuma = document.elementFromPoint(x, y);
+      if (osuma && (osuma === el || el.contains(osuma))) osumia += 1;
+      else if (osuma && !peittaja) peittaja = `${osuma.tagName.toLowerCase()}.${String(osuma.className).split(' ')[0]}`;
+    }
+    return osumia >= 2 ? null : `peitossa (osumia ${osumia}/5, päällä ${peittaja || '–'})`;
+  };
+  window.__pariteetti = {
+    nakyy(valitsin) {
+      const kaikki = [...document.querySelectorAll(valitsin)];
+      if (!kaikki.length) return `${valitsin}: ei DOMissa`;
+      let syy = null;
+      for (const el of kaikki) {
+        syy = syyYhdelle(el);
+        if (!syy) return null;
+      }
+      return `${valitsin}: ${syy}${kaikki.length > 1 ? ` (${kaikki.length} ehdokasta)` : ''}`;
+    },
+  };
+};
+
+/** Näkymän todennus sivulla: kaikki nakyy-valitsimet ja ehto(p). null = ok. */
+async function todenna(sivu, nakyma, p) {
+  return sivu.evaluate(async ([valitsimet, ehtoLahde, param]) => {
+    for (const v of valitsimet) {
+      const syy = window.__pariteetti.nakyy(v);
+      if (syy) return syy;
+    }
+    if (ehtoLahde) {
+      // eslint-disable-next-line no-new-func
+      const ehto = new Function(`return (${ehtoLahde});`)();
+      const syy = await ehto(param);
+      if (syy) return syy;
+    }
+    return null;
+  }, [nakyma.nakyy ?? [], nakyma.ehto ? String(nakyma.ehto) : null, p]).catch((e) => `todennus kaatui: ${String(e.message).split('\n')[0]}`);
+}
+
+/** Odottaa todennusta enintään kattoMs; palauttaa viimeisen syyn tai null. */
+async function odotaTodennus(sivu, nakyma, p, kattoMs = 12000) {
+  const alku = Date.now();
+  // Kaksi perättäistä hyväksyntää 400 ms:n välein: ohimenevä tila (häivytys,
+  // sulkeutuva kortti) ei kelpaa kuvaksi.
+  let perakkain = 0;
+  let syy = null;
+  while (Date.now() - alku < kattoMs) {
+    // eslint-disable-next-line no-await-in-loop
+    syy = await todenna(sivu, nakyma, p);
+    perakkain = syy ? 0 : perakkain + 1;
+    if (perakkain >= 2) return null;
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((ok) => { setTimeout(ok, syy ? 200 : 400); });
+  }
+  return syy ?? 'todennus ei vakiintunut';
+}
+
 async function kuvaaYksi(nakyma, koko) {
   const alku = Date.now();
   let ctx = null;
@@ -225,6 +310,7 @@ async function kuvaaYksi(nakyma, koko) {
         if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v);
       }
     }, [nakyma.tallenne === false ? null : TALLENNE, nakyma.localStorage ?? {}]);
+    await ctx.addInitScript(NAKYVYYSTARKISTIN);
     const sivu = await ctx.newPage();
     sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
     const konsoli = [];
@@ -300,8 +386,26 @@ async function kuvaaYksi(nakyma, koko) {
       await new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok)));
     });
     merkitse('asettui');
+    // TODENNUS ennen kuvaa (odottaa enintään 12 s) ja heti kuvan jälkeen:
+    // näkymä ei saa sulkeutua kesken kuvan eikä kuva saa olla pelkkä kartta.
+    let syy = await odotaTodennus(sivu, nakyma, p);
+    if (!syy && nakyma.pallo !== false && pallo === false) syy = 'pallon laatat eivät valmistuneet 25 s:ssa';
+    merkitse('todennettu');
     const polku = join(ULOS, `${nakyma.nimi}-${koko.nimi}.png`);
-    await sivu.screenshot({ path: polku });
+    const virhepolku = join(ULOS, `${nakyma.nimi}-${koko.nimi}-VIRHE.png`);
+    rmSync(polku, { force: true });
+    rmSync(virhepolku, { force: true });
+    await sivu.screenshot({ path: syy ? virhepolku : polku });
+    if (!syy) {
+      const jalkeen = await todenna(sivu, nakyma, p);
+      if (jalkeen) {
+        syy = `sulkeutui kuvan aikana: ${jalkeen}`;
+        renameSync(polku, virhepolku);
+      }
+    }
+    if (syy) {
+      return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: `todennus: ${syy}`, polku: virhepolku, pallo, kuvat, virheet, tulos, vaiheet };
+    }
     return { nakyma: nakyma.nimi, koko: koko.nimi, ok: true, ms: Date.now() - alku, polku, pallo, kuvat, virheet, tulos, vaiheet };
   } catch (e) {
     return { nakyma: nakyma.nimi, koko: koko.nimi, ok: false, ms: Date.now() - alku, virhe: String(e.message ?? e).split('\n')[0], virheet, vaiheet };

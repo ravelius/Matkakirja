@@ -29,14 +29,19 @@ const avaaLehti = (p) => {
   return { sivut: (ui.lehtitila?.tutkiSivut ?? []).map((s) => s.id) };
 };
 
-/** Lehden sivu N (0 = kansi) ilman kääntöanimaatiota (tools/kuvaa-maalehti.mjs). */
+/**
+ * Lehden sivu N ilman kääntöanimaatiota (tools/kuvaa-maalehti.mjs).
+ * Numerointi on js/lehti.js:n: 0 = kaupunkilehden kansi, N ≥ 1 =
+ * tutkiSivut[N − 1]. Maalehdellä ei ole kantta, joten sen etusivu on 1
+ * (tutkiEkaSivu) ja ensimmäinen aihesivu 2.
+ */
 const lehdenSivu = (p) => {
   const ui = window.matkakirja.ui;
   const sivut = ui.lehtitila?.tutkiSivut ?? [];
-  if (p.sivu >= sivut.length) return { virhe: `lehdessä on vain ${sivut.length} sivua` };
+  if (p.sivu > sivut.length) return { virhe: `lehdessä on vain ${sivut.length} sisältösivua` };
   ui.naytaTutkiSivu(p.sivu, { heti: true });
   document.querySelector('#arrival-dialog .dialog-card')?.scrollTo?.(0, 0);
-  return { sivu: sivut[p.sivu]?.id };
+  return { sivu: p.sivu, osio: p.sivu === 0 ? 'kansi' : sivut[p.sivu - 1]?.id };
 };
 
 /** Pallolaudan nosto tunnuksen alulla (lauta.napautaNosto; savuke-nostoklikkaus.mjs). */
@@ -51,15 +56,49 @@ const avaaNosto = (p) => {
 
 const NOSTON_KORTTI = '.kaupunkipopup, .fokuskohde-popup, .fokusnosto-kortti, .fokusnosto-kerros [role="dialog"], .elaintaky-kerros [role="dialog"], .skandaali-kerros [role="dialog"], .hetki-kerros [role="dialog"], .syvennys-kerros [role="dialog"]';
 
-/** Anna linssi pelaajalle ja valitse se (savuke-topografialinssi.mjs:427). */
+/**
+ * Anna linssi pelaajalle ja valitse se: Linssisepän kaava
+ * (Linssit-testit/kontakti-web.mjs; savuke-topografialinssi.mjs:427).
+ * Odottaa, kunnes linssin oma tila on päällä (body.linssi-<id>, pallolla
+ * .pallo-kuori.esilla), ja asettaa sitten saman kiinteän kameran kuin
+ * natiivin laitetesti.sh (`kamera: [lat, lng, km]`). Maatiedoille valitaan
+ * maa (`maa`), kuten kontaktiarkissa.
+ */
 const valitseLinssi = async (p) => {
   const ui = window.matkakirja.ui;
   ui.busy = false;
   if (!ui.game.player.linssit.includes(p.linssi)) ui.game.player.linssit.push(p.linssi);
   await ui.lataaLinssit?.();
   ui.valitseLinssi(p.linssi);
-  await new Promise((ok) => setTimeout(ok, 300));
-  return { linssi: ui.game.player.linssi ?? ui.linssi?.tunnus ?? p.linssi };
+  const paalla = () => (p.linssi === 'pallo'
+    ? Boolean(document.querySelector('.pallo-kuori.esilla'))
+    : document.body.classList.contains(`linssi-${p.linssi}`));
+  const alku = Date.now();
+  while (!paalla() && Date.now() - alku < 15000) {
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((ok) => setTimeout(ok, 150));
+  }
+  if (!paalla()) return { virhe: `linssi ${p.linssi} ei kytkeytynyt 15 s:ssa (valittu ${ui.linssiValittu ?? '–'})` };
+  if (p.maa) {
+    const v = await import('/js/vertailu.js');
+    ui.maatiedotValittu = p.maa;
+    v.piirraMaatiedotMaat(ui);
+  }
+  if (p.kamera) {
+    const [lat, lng, km] = p.kamera;
+    ui.pallolauta?.zoomirajat?.({ max: 2.5 });
+    ui.pallonInstanssi?.pointOfView({ lat, lng, altitude: km / 6371 }, 0);
+  }
+  return { linssi: p.linssi, kamera: p.kamera ?? null };
+};
+
+/** Sama kiinteä kamera uudestaan juuri ennen kuvaa (linssin avaus voi siirtää sitä). */
+const linssinKamera = (p) => {
+  if (!p.kamera) return;
+  const ui = window.matkakirja.ui;
+  const [lat, lng, km] = p.kamera;
+  ui.pallolauta?.zoomirajat?.({ max: 2.5 });
+  ui.pallonInstanssi?.pointOfView({ lat, lng, altitude: km / 6371 }, 0);
 };
 
 /**
@@ -84,8 +123,21 @@ const avaaKohtaaminen = async (p) => {
   return { kaupunki };
 };
 
-// Aktiiviset linssit: js/linssit/rekisteri.js LINSSIT (24.9.2026).
-const LINSSIT = ['ihmisen-matka', 'keksinnot', 'pallo', 'radio', 'satelliitti', 'topografia', 'vertailu', 'maatiedot', 'vesistot'];
+/*
+ * Aktiiviset linssit: js/linssit/rekisteri.js LINSSIT (24.9.2026). Kamerat
+ * natiivin laitetesti.sh:n ja Linssisepän kontaktiarkin mukaan (lat, lng, km).
+ */
+const LINSSIT = {
+  'ihmisen-matka': {},
+  keksinnot: {},
+  pallo: {},
+  radio: { kamera: [50, 10, 6000] },
+  satelliitti: {},
+  topografia: { kamera: [45, 10, 8000] },
+  vertailu: { kamera: [60, 15, 5000] },
+  maatiedot: { kamera: [36, 138, 4000], maa: 'JPN' },
+  vesistot: { kamera: [0, 20, 9000] },
+};
 
 export const NAKYMAT = [
   {
@@ -196,14 +248,14 @@ export const NAKYMAT = [
     parametri: { maa: 'FRA' }, odota: '#arrival-dialog[open]',
   },
   {
-    nimi: 'maalehti-aihe1', kuvaus: 'Maalehden 1. aihesivu (naytaTutkiSivu(1, {heti:true}))',
+    nimi: 'maalehti-aihe1', kuvaus: 'Maalehden 1. aihesivu etusivun jälkeen (naytaTutkiSivu(2, {heti:true}))',
     avaa: (p) => {
       const ui = window.matkakirja.ui;
       const iso = ui.game.board.cityById.get(p.kaupunki)?.country ?? p.maa;
       ui.avaaMaalehti(iso ?? 'FRA');
       return { iso };
     },
-    parametri: { maa: 'FRA', sivu: 1 }, odota: '#arrival-dialog[open]', jalkeen: lehdenSivu,
+    parametri: { maa: 'FRA', sivu: 2 }, odota: '#arrival-dialog[open]', jalkeen: lehdenSivu,
   },
   {
     nimi: 'maalehti-mediarivi', kuvaus: 'Maalehden etusivun mediarivi (radio; #arrival-media vieritettynä keskelle)',
@@ -233,9 +285,10 @@ export const NAKYMAT = [
     },
     odota: '#passport-dialog[open]',
   },
-  ...LINSSIT.map((linssi) => ({
-    nimi: `linssi-${linssi}`, kuvaus: `Linssi ${linssi} (player.linssit + ui.valitseLinssi)`,
-    avaa: valitseLinssi, parametri: { linssi }, palloJalkeen: true,
+  ...Object.entries(LINSSIT).map(([linssi, asetus]) => ({
+    nimi: `linssi-${linssi}`,
+    kuvaus: `Linssi ${linssi} (player.linssit + ui.valitseLinssi${asetus.kamera ? `, kamera ${asetus.kamera.join('/')} km` : ''}${asetus.maa ? `, maa ${asetus.maa}` : ''})`,
+    avaa: valitseLinssi, parametri: { linssi, ...asetus }, palloJalkeen: true, viimeinen: linssinKamera,
   })),
   {
     nimi: 'linssi-selite', kuvaus: 'Linssin selite auki (topografia + .linssi-selite-nappi / ui.vaihdaLinssiSelite)',
@@ -250,10 +303,10 @@ export const NAKYMAT = [
     odotaJalkeen: '.linssi-selite',
   },
   {
-    nimi: 'linssi-karuselli', kuvaus: 'Ihmisen matka: aikajanan palkki ja korttikaruselli (.aikajana-avaus-nappi)',
-    avaa: valitseLinssi, parametri: { linssi: 'ihmisen-matka' }, odota: '.aikajana-avaus-nappi',
+    nimi: 'linssi-karuselli', kuvaus: 'Keksinnöt-linssi käynnissä: yläpalkki ja korttikaruselli (Käynnistä = .aikajana-avaus-nappi)',
+    avaa: valitseLinssi, parametri: { linssi: 'keksinnot' }, odota: '.aikajana-avaus-nappi',
     jalkeen: () => { document.querySelector('.aikajana-avaus-nappi')?.click(); return null; },
-    odotaJalkeen: '.aikajana-palkki, .aikajana-nauha',
+    odotaJalkeen: '.aikajana-nauha',
   },
   {
     nimi: 'liiku', kuvaus: 'Kulkutapaliuska auki (ui.liukuAuki = true; savuke-liiku.mjs)',
@@ -332,3 +385,220 @@ export const NAKYMAT = [
     odotaJalkeen: '.reveal-overlay .reveal-jatka.nakyy',
   },
 ];
+
+/*
+ * TODENNUS (Fablen korjauspyyntö 24.9.2026: kaupunkikortti ja noppa olivat
+ * pelkkää karttaa, vaikka yhteenveto sanoi ok). JOKAISELLA näkymällä on
+ * ehto, joka todentaa juuri ennen kuvaa JA heti sen jälkeen, että näkymän
+ * oma elementti oikeasti näkyy:
+ *   nakyy   valitsimet, joista JOKAISEN pitää näkyä: laatikko ruudulla
+ *           (vähintään 24 × 24 px), ei display:none/visibility:hidden,
+ *           kertynyt läpinäkyvyys ≥ 0,5 ja elementFromPoint osuu siihen
+ *           vähintään kahdessa viidestä näytepisteestä (ei peitossa).
+ *           Tarkistin: window.__pariteetti.nakyy (tools/pariteettikuvat.mjs).
+ *   ehto(p) sivulla ajettava tilatarkistus; palauttaa null tai syyn.
+ *           Sarjallistetaan kuten avaa(): ei viittauksia moduulin muuttujiin.
+ * Jos ehto ei täyty aikarajassa, kuva tallentuu nimellä -VIRHE.png ja
+ * yhteenvedossa on ok:false syineen.
+ */
+const lehtiSivulla = (p) => {
+  const ui = window.matkakirja.ui;
+  const nyt = ui.lehtitila?.tutkiSivu ?? 0;
+  const odotettu = p.sivu ?? 0;
+  return nyt === odotettu ? null : `lehden sivu ${nyt}, odotettiin ${odotettu}`;
+};
+/** Linssin oma tila päällä: body.linssi-<id>, valinta ja moottori (ei linssivirhettä). */
+const linssiKaynnissa = (p) => {
+  const ui = window.matkakirja.ui;
+  if (document.getElementById('linssivirhe')) return 'linssivirhe näkyy';
+  if (p.linssi === 'pallo') return document.querySelector('.pallo-kuori.esilla') ? null : 'astronautin pallo (.pallo-kuori.esilla) ei auki';
+  if (!document.body.classList.contains(`linssi-${p.linssi}`)) return `body.linssi-${p.linssi} puuttuu (valittu ${ui.linssiValittu ?? '–'})`;
+  if (ui.linssiValittu !== p.linssi) return `valittu linssi ${ui.linssiValittu ?? '–'}, odotettiin ${p.linssi}`;
+  const kaynnissa = ui.pallolinssi?.tunnus === p.linssi || ui.linssiTuki?.moottori?.tunnus === p.linssi
+    || ui.aikajanaTunnus === p.linssi;
+  return kaynnissa ? null : `linssi ${p.linssi} valittu mutta moottori ei käynnissä`;
+};
+const TODENNUS = {
+  aloitusportti: { nakyy: ['.start-btn'] },
+  kartta: {
+    nakyy: ['.fact-card'],
+    ehto: () => {
+      if (window.matkakirja.game.phase !== 'action') return `vaihe ${window.matkakirja.game.phase}`;
+      const k = [...document.querySelectorAll('.pallo-kotelo canvas')].find((c) => c.getBoundingClientRect().width > 200);
+      return k ? null : 'pallon kangas ei näy';
+    },
+  },
+  'matkakirjakortti-auki': {
+    nakyy: ['.fact-card:not(.pieni)'],
+    ehto: () => ((document.querySelector('.fact-card .fact-text, #fact-text')?.textContent ?? '').trim().length > 40
+      ? null : 'merkinnän teksti puuttuu kortista'),
+  },
+  'matkakirjakortti-kiinni': { nakyy: ['.fact-card.pieni'] },
+  kaupunkikortti: { nakyy: ['.kaupunkipopup'] },
+  nostokortti: { nakyy: ['.fokuskohde-popup'] },
+  'nostokortti-juttu': {
+    nakyy: ['.fokuskohde-popup'],
+    ehto: () => ((document.querySelector('.fokuskohde-popup')?.innerText ?? '').length > 400
+      ? null : 'jutun teksti ei auennut (alle 400 merkkiä)'),
+  },
+  nostovisa: { nakyy: ['.fokusnosto-visa', '.fokusnosto-visa .kulttuuri-vaihtoehdot button'] },
+  elaintaky: { nakyy: ['.elaintaky-kortti'] },
+  skandaali: { nakyy: ['.skandaali-kortti'] },
+  syvennys: { nakyy: ['.syvennys-kortti'] },
+  kohtaaminen: { nakyy: ['#quiz-dialog .dialog-card', '#quiz-dialog .quiz-aloita'] },
+  visa: {
+    nakyy: ['#quiz-dialog .quiz-option'],
+    ehto: () => (window.matkakirja.game.phase === 'quiz' && window.matkakirja.game.quiz?.options?.length
+      ? null : `visa ei käynnissä (vaihe ${window.matkakirja.game.phase})`),
+  },
+  sahke: { nakyy: ['.fokusvirta-kortti', '.fokusvirta-sahke'] },
+  'kaupunkilehti-kansi': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
+  'kaupunkilehti-aihe1': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
+  'kaupunkilehti-aihe2': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
+  'kaupunkilehti-sisallys': { nakyy: ['.sisallys-levy'] },
+  'kaupunkilehti-luelisaa': { nakyy: ['#wiki-dialog[open]'] },
+  'maalehti-kansi': {
+    nakyy: ['#arrival-dialog .dialog-card'],
+    ehto: () => {
+      const tila = window.matkakirja.ui.lehtitila ?? {};
+      if (tila.tutkiTila !== 'maa') return `lehti ei ole maalehti (tutkiTila ${tila.tutkiTila ?? '–'})`;
+      // Maalehden etusivu on 1 (js/lehti.js tutkiEkaSivu: ei kaupunkikantta).
+      return (tila.tutkiSivu ?? 1) === 1 ? null : `maalehden sivu ${tila.tutkiSivu}, odotettiin etusivu 1`;
+    },
+  },
+  'maalehti-aihe1': {
+    nakyy: ['#arrival-dialog .dialog-card'],
+    ehto: (p) => {
+      const tila = window.matkakirja.ui.lehtitila ?? {};
+      if (tila.tutkiTila !== 'maa') return 'lehti ei ole maalehti';
+      return tila.tutkiSivu === p.sivu ? null : `maalehden sivu ${tila.tutkiSivu}, odotettiin ${p.sivu}`;
+    },
+  },
+  'maalehti-mediarivi': { nakyy: ['#arrival-media'] },
+  laukku: { nakyy: ['#passport-dialog .passport-card'] },
+  'laukku-linssit': {
+    nakyy: ['#passport-dialog .passport-card'],
+    ehto: () => {
+      const n = [...document.querySelectorAll('#passport-dialog [data-linssi]')]
+        .filter((e) => e.getBoundingClientRect().width > 20).length;
+      return n >= 8 ? null : `laukussa näkyy vain ${n} linssinappia`;
+    },
+  },
+  'linssi-selite': { nakyy: ['.linssi-selite'], ehto: linssiKaynnissa },
+  'linssi-karuselli': {
+    nakyy: ['.aikajana-palkki', '.aikajana-nauha'],
+    ehto: (p) => {
+      if (!document.body.classList.contains(`linssi-${p.linssi}`)) return `body.linssi-${p.linssi} puuttuu`;
+      const n = [...document.querySelectorAll('.aikajana-kortti')].filter((e) => {
+        const b = e.getBoundingClientRect();
+        return b.width > 40 && b.right > 0 && b.left < innerWidth && b.bottom > 0 && b.top < innerHeight;
+      }).length;
+      return n >= 2 ? null : `karusellin kortteja ruudulla vain ${n}`;
+    },
+  },
+  liiku: { nakyy: ['.toimintorivi-liuku > button'] },
+  noppa: {
+    ehto: () => {
+      if (!window.matkakirja.game.die) return 'noppaa ei heitetty (game.die tyhjä)';
+      const n = document.querySelector('.board-die');
+      const b = n?.getBoundingClientRect();
+      if (!b || b.width < 10 || b.right < 0 || b.bottom < 0 || b.left > innerWidth || b.top > innerHeight) return 'noppa (.board-die) ei ruudulla';
+      return Number(getComputedStyle(n).opacity) > 0.5 ? null : 'noppa läpinäkyvä';
+    },
+  },
+  'noppa-siirtolista': {
+    ehto: () => {
+      const { game, ui } = window.matkakirja;
+      const n = document.querySelector('.board-die')?.getBoundingClientRect();
+      if (!n || n.width < 10 || n.right < 0 || n.left > innerWidth) return 'noppa (.board-die) ei ruudulla';
+      if (game.phase !== 'move') return `vaihe ${game.phase}, odotettiin move`;
+      if (!(game.moves?.size > 0)) return 'siirtoja ei ole (game.moves tyhjä)';
+      if (ui.busy) return 'UI kesken (busy)';
+      // Kohteet piirtyvät pallolle (GL), eivät DOMiin: laudan oma kohdelista
+      // (merkit.kohteet(), sama jota osumatesti käyttää) ruutupisteiksi.
+      const kohteet = ui.pallolauta?.merkit?.kohteet?.() ?? [];
+      if (!kohteet.length) return 'pallolla ei siirtokohteita (merkit.kohteet() tyhjä)';
+      const pallo = ui.pallonInstanssi;
+      const ruudulla = kohteet.filter((k) => {
+        const r = pallo?.getScreenCoords?.(k.lat, k.lng, 0);
+        const kangas = document.querySelector('.pallo-kotelo canvas')?.getBoundingClientRect();
+        if (!r || !kangas) return false;
+        const x = kangas.left + r.x; const y = kangas.top + r.y;
+        return x > 0 && y > 0 && x < innerWidth && y < innerHeight;
+      }).length;
+      return ruudulla > 0 ? null : `siirtokohteita ${kohteet.length}, ruudulla 0`;
+    },
+  },
+  ratas: { nakyy: ['#kehittaja-valikko'] },
+  valikko: { nakyy: ['#paavalikko'] },
+  karttaselite: { nakyy: ['.karttaselite-levy'] },
+  pollo: { nakyy: ['.pollo-paneeli'] },
+  aarre: { nakyy: ['.reveal-overlay .reveal-aarrekuva', '.reveal-overlay .reveal-caption'] },
+};
+/*
+ * LINSSIKOHTAISET EHDOT (Linssisepän havainto 24.9.2026: vesistöt oli pelkkä
+ * lauta, vaikka ok). Yleinen linssiKaynnissa + linssin oma näkyvä kerros.
+ */
+const LINSSIEHDOT = {
+  'ihmisen-matka': { nakyy: ['.aikajana-avaus', '.aikajana-avaus-nappi'] },
+  keksinnot: { nakyy: ['.aikajana-avaus', '.aikajana-avaus-nappi'] },
+  pallo: { nakyy: ['.pallo-kuori.esilla'] },
+  radio: {
+    ehto2: () => {
+      if (!document.body.classList.contains('radio-tila')) return 'body.radio-tila puuttuu';
+      const n = [...document.querySelectorAll('.pallolauta-radionappi')].filter((e) => {
+        const b = e.getBoundingClientRect();
+        return b.width > 2 && b.right > 0 && b.bottom > 0 && b.left < innerWidth && b.top < innerHeight;
+      }).length;
+      return n >= 3 ? null : `radion kaupunkinappeja ruudulla vain ${n}`;
+    },
+  },
+  satelliitti: { nakyy: ['.satelliitti-linssikehys'] },
+  topografia: { nakyy: ['.linssi-selite'] },
+  vertailu: {
+    ehto2: () => {
+      if (!document.body.classList.contains('vertailu-tila')) return 'body.vertailu-tila puuttuu';
+      const n = [...document.querySelectorAll('.pallolauta-maanimi')].filter((e) => {
+        const b = e.getBoundingClientRect();
+        return b.width > 2 && b.right > 0 && b.bottom > 0 && b.left < innerWidth && b.top < innerHeight;
+      }).length;
+      return n >= 3 ? null : `vertailun maanimiä ruudulla vain ${n}`;
+    },
+  },
+  maatiedot: {
+    ehto2: (p) => {
+      const ui = window.matkakirja.ui;
+      if (!document.body.classList.contains('maatiedot-tila')) return 'body.maatiedot-tila puuttuu';
+      if (p.maa && ui.maatiedotValittu !== p.maa) return `maatiedoissa valittuna ${ui.maatiedotValittu ?? '–'}, odotettiin ${p.maa}`;
+      return ui.pallolauta?.linssit?.paalla?.('maatiedot') ? null : 'maatietojen kerros ei pallolla';
+    },
+  },
+  vesistot: {
+    nakyy: ['.linssi-selite'],
+    ehto2: () => {
+      if (!window.matkakirja.ui.pallolauta?.linssit?.paalla?.('vesistot')) return 'vesistöjen kerros ei pallolla';
+      const n = [...document.querySelectorAll('.pallolauta-vesinimi')].filter((e) => {
+        const b = e.getBoundingClientRect();
+        return b.width > 2 && b.right > 0 && b.bottom > 0 && b.left < innerWidth && b.top < innerHeight
+          && Number(getComputedStyle(e).opacity) > 0.3;
+      }).length;
+      return n >= 3 ? null : `vesistönimiä ruudulla vain ${n} (kerros tyhjä tai kamera väärässä paikassa)`;
+    },
+  },
+};
+for (const [linssi, e] of Object.entries(LINSSIEHDOT)) {
+  // Kaksi sarjallistettavaa ehtoa yhdeksi: yleinen tila ensin, sitten linssin oma.
+  const yleinen = String(linssiKaynnissa);
+  const oma = e.ehto2 ? String(e.ehto2) : null;
+  // eslint-disable-next-line no-new-func
+  const ehto = new Function('p', `return (async () => {
+    const yleinen = (${yleinen});
+    const syy = yleinen(p);
+    if (syy) return syy;
+    ${oma ? `return (${oma})(p);` : 'return null;'}
+  })();`);
+  TODENNUS[`linssi-${linssi}`] = { nakyy: e.nakyy ?? [], ehto };
+}
+for (const n of NAKYMAT) Object.assign(n, TODENNUS[n.nimi] ?? {});
+const ilman = NAKYMAT.filter((n) => !n.nakyy && !n.ehto).map((n) => n.nimi);
+if (ilman.length) throw new Error(`Näkymiltä puuttuu todennus: ${ilman.join(', ')}`);
