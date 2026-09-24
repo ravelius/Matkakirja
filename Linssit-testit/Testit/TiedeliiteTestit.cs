@@ -87,6 +87,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("keksinnot", y.Raita, "raita palaa");
             Oleta.Sama(1.0, y.RaidanTaso, "ajossa täysi");
             Oleta.Sama(-1, l.JuttuAuki);
+            Oleta.Sama(a.Pysakit.Count, l.Pysakkeja);
+            Oleta.Sama(25, l.Sisallys().Count);
         }
     }
 }
