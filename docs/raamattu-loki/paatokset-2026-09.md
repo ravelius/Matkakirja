@@ -4391,3 +4391,7 @@ Raamatun kaava: 90 %:ssa tauko kaikille nollaukseen asti (ei uusia agentteja, k�
 ## RENESSANSSISALI: UFFIZI/ACCADEMIA-PYYNTO PERUTTU (PAATOS 1: ITALIAN VALTION MUSEOT POIS), ERA 2 TILATTU (NGA CC0 11 TEOSTA + MONA LISA C2RMF) (24.9.2026 klo 17.56)
 
 Linssiseppä päivitti suunnitelman luvun 4.0 (bf2748124): 30 teosta, Firenze 15, Venetsia 12, Rooma 3; puuttuvat Rooman NGA-teokset (Alban Madonna, Bindo Altoviti, Sebastiano ×2, Signorelli, Perugino ×2), käsikirjoituksen teokset (Tietäjien kumarrus, Giuliano, Jumalten juhla, Venus peilin edessä) ja Mona Lisa → postilaatikkoon posti/fable-kuvaputki-renessanssisali-era2-20260924.md; käsikirjoitusta ei vaihdeta. Rajaus: ei Italian valtion museoiden kuvia (Uffizi, Accademia, Vatikaani, Brera, Borghese).
+
+## KARTTASEPPA: LIBERATION SERIF TOTEUTETTU — NATIIVIIN TTF:T + OFL (NATIIVISEPPA TEKEE TMP-SDF:T VIENNIN JALKEEN), WEB PR #3105 (POLTTO REKISTEROI FONTIN REPOSTA, PUUTTUVA FONTTI KAATAA), ALUENIMIEN DATA #3100, PAKETTI 1.37 (#3103) (24.9.2026 klo 18.01)
+
+Koepoltto z7 lähes identtinen Times-version kanssa; uusintapolttoa ei ajettu. Seuraava pohjapoltto piirtää valtameret ja kartussin Liberation Serifillä. Attribuutio Natiivi-UI:n Tietoja-näkymään. Natiiviseppä aloitti nimikerroksen (build 11). Sisältökirjuri luovutti (80c43159d): galleria-puute 58 kaupunkia, ennenNyt 12; nollaa itsensä.
