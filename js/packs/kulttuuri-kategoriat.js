@@ -106114,4 +106114,735 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  karthago: [
+    {
+      id: 'kaupunki',
+      nimi: 'Karthago',
+      johdanto:
+        'Isoisän vuonna 1873 Karthago ei ollut avoin muistomerkkipuisto: suurin osa muinaisesta suurkaupungista lepäsi hiekan ja oliivitarhojen alla Tunisinlahden rannalla, odottaen ensimmäisiä järjestelmällisiä kaivauksia.',
+      nostot: [
+        {
+          otsikko: 'Kylpylä hiekan alla',
+          teksti:
+            'Antoninus Pius rakennutti Karthagoon 140-luvulla jaa. Afrikan mantereen suurimmat roomalaiset kylpylät: yli 200 metriä pitkä ja 100 metriä leveä rakennus kohosi 40 metrin korkeuteen ja peitti yli kolme ja puoli hehtaaria. Isoisän matkavuonna 1873 näistä jättiläismäisistä termeistä pilkisti hiekkakumpujen seasta lähinnä muutama pystyssä oleva pylväs: tanskalainen konsuli Christian Tuxen Falbe oli kartoittanut aluetta jo 1830, ja ranskalainen Charles Ernest Beulé oli kaivanut Byrsan kukkulaa 1860, mutta laajempi tutkimustyö alkoi vasta vuonna 1875 – kaksi vuotta isoisän vierailun jälkeen.',
+          tiedosto: '01996 Ruins of Antonine Baths at Carthage.jpg',
+          lyhyt: 'Antoninus Piuksen kylpylän pylväitä ja Tunisinlahti taustalla.',
+          selite:
+            'Kuvassa erottuu Antonine-kylpylöiden yksinäinen korinttilaispylväs ja rauniomuureja, taustalla Tunisinlahden sininen vesi – isoisän aikaan suurin osa rakennuksesta oli vielä hiekan peitossa.',
+          lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Baths of Antoninus',
+        },
+        {
+          otsikko: 'Puunilaisten kaupunkikortteli',
+          teksti:
+            'Byrsan kukkulan laelta on kaivettu esiin 200-luvulla eaa. rakennettu puunilaiskortteli: kivijalustojen päälle nousi kerrostaloja, joiden pohjakerroksessa oli kauppoja ja yläkerroksissa asuntoja, kaikki ryhmiteltynä suorakulmaisten katujen ruudukkoon. Kun roomalaiset myöhemmin tasoittivat kukkulan huipun oman fooruminsa alle, he hautasivat koko puunilaiskorttelin paksun täyttömaan sisään sen sijaan, että olisivat purkaneet sen – niin kadut, kynnykset ja porraskivet säilyivät yllättävän ehjinä lähes 2200 vuoden ajan, kunnes arkeologit löysivät ne uudelleen 1900-luvulla.',
+          tiedosto: 'Quartier Punique.JPG',
+          lyhyt: 'Byrsan kukkulan puunilaiskorttelin raunioita ja näkymä merelle.',
+          selite:
+            'Kuva näyttää Byrsan kukkulan puunilaiskorttelin matalat kivimuurit ja etualan puun, taustalla Tunisin esikaupunkeja ja Välimeri – roomalaiset hautasivat nämä kadut oman fooruminsa alle yli 2000 vuodeksi.',
+          lahde: 'BishkekRocks, Wikimedia Commons (Public domain)',
+          wiki: 'Byrsa',
+        },
+        {
+          otsikko: 'Kaksi satamaa muurien sisällä',
+          teksti:
+            'Karthagon kauppasatama oli suorakulmainen allas, mutta sen takana piileskeli sotasatama Cothon: pyöreä allas, jonka keskellä olevalle saarelle mahtui laivavajoja noin 220 sotalaivalle kerrallaan. Molemmat altaat kaivettiin muurien sisäpuolelle ja suljettiin raskailla ketjuilla, jotta vihollinen ei pääsisi yllättämään laivastoa. Nykyisin altaiden paikalla on vain pieniä lampia keskellä Karthagon Salammbön kaupunginosaa, mutta vuonna 1922 otetusta ilmakuvasta erottuu yhä altaiden tarkka pyöreä ja suorakulmainen muoto – todiste siitä, miten tarkkaan koko satamakompleksi oli aikoinaan suunniteltu.',
+          tiedosto: 'Carthage - Punic port.jpg',
+          lyhyt: 'Karthagon puunilaisen sotasataman jäänteitä nurmikentällä.',
+          selite:
+            'Kuvassa näkyy ruohottunut kenttä, jolla seisoo kivipylväitä ja matalia muurinjäänteitä – näitä pylväitä kannattelivat aikoinaan sotasataman laivavajat, joihin mahtui parisataa alusta.',
+          lahde: 'Neil Rickards, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Carthage Punic Ports',
+        },
+        {
+          otsikko: 'Englantilaisen kaivajan mosaiikit',
+          teksti:
+            'Marraskuussa 1856 englantilainen matkakirjailija ja pastori Nathan Davis aloitti Britannian ulkoministeriön rahoittamat kaivaukset Karthagossa. Tammikuussa 1857 hän löysi ensimmäisen suuren löytönsä, kuukausia ja vuodenaikoja kuvaavan mosaiikkilattian, ja kehitti samalla menetelmän, jolla herkät mosaiikit voitiin irrottaa maasta rikkomatta niitä – tekniikka on käytössä yhä. Vuosina 1857–1860 Lontoon British Museumiin saapui Karthagosta kymmeniä laatikollisia löytöjä, ja isoisän matkavuoteen 1873 mennessä osa kaupungin kauneimmista roomalaisista lattiakuvioista oli jo asetettu näytteille Englannissa, kaukana omalta rannaltaan.',
+          tiedosto: 'Dolphin mosaic from Carthage, British Museum.jpg',
+          lyhyt: 'Roomalaisajan delfiinimosaiikki British Museumin kokoelmasta.',
+          selite:
+            'Valokuvassa on kehystetty mosaiikkipaneeli, jossa kaksi tyyliteltyä delfiiniä uiskentelee vastakkain – tällaisia Karthagon roomalaisista huviloista löytyneitä lattiakuvioita Nathan Davis irrotti ja lähetti Lontooseen 1850-luvulla.',
+          lahde: '14GTR, Wikimedia Commons (CC0)',
+          wiki: 'Nathan Davis (traveller)',
+        },
+        {
+          otsikko: 'Katedraali Byrsan huipulle',
+          teksti:
+            'Vain runsas vuosikymmen isoisän vierailun jälkeen Byrsan kukkulan laelle nousi täysin uusi rakennus: Pyhän Ludvigin katedraali, jonka arkkitehti Joseph Pougnet suunnitteli vanhan puunilaisen parannusjumala Eshmunin temppelin paikalle. Rakennustyöt alkoivat 1884 ja valmistuivat 1890, ja lopputulos yhdisti bysanttilaisia kupoleita maurilaisiin kaariin ja koristeikkoihin. Kirkko lakkautettiin jumalanpalveluskäytöstä 1993 ja sai uuden nimen Acropolium; nykyisin sen holvien alla järjestetään konsertteja eikä messuja, ja rakennus on yhä yksi Karthagon korkeimmista maamerkeistä merelle päin katsottaessa.',
+          tiedosto: 'Acropolium de Carthage 01.jpg',
+          lyhyt: 'Byrsan kukkulan huipulla kohoava entinen Pyhän Ludvigin katedraali.',
+          selite:
+            'Kuvassa auringonlaskun valaisema Acropolium-rakennus kaksine torneineen ja kupoleineen; edustalla pysäköidyt autot muistuttavat, että rakennus palvelee nykyisin konserttisalina, ei kirkkona.',
+          lahde: 'Seif Allah Bouneb, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Acropolium of Carthage',
+        },
+        {
+          otsikko: 'Kristityn Afrikan suurin basilika',
+          teksti:
+            'Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.',
+          tiedosto: 'Basilica Damous El Karita - view from the side of the semi- circular atrium.jpg',
+          lyhyt: 'Damous el Karitan basilikan pylväskenttää ja taustalla moskeija.',
+          selite:
+            'Kuvassa avautuu laaja, autio kenttä täynnä matalia pylväänkatkelmia ja muurinpohjia – jäljellä olevat pylväät merkitsevät entisen valtavan kristillisen basilikan yhdeksää tai yhtätoista pylväsriviä, taustalla nykyinen moskeija.',
+          lahde: 'Aymen FANTAR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Basilica of Damous El Karita',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Karthagon nousu ja tuho',
+      johdanto:
+        'Karthago syntyi legendan mukaan pakolaiskuningattaren siirtokunnasta ja kasvoi Rooman pahimmaksi kilpailijaksi, kunnes kolme raskasta sotaa päättyivät kaupungin täydelliseen tuhoon vuonna 146 eaa.',
+      tehtava: {
+        kysymys:
+          'Minä vuonna tarina Karthagon raunioiden suolaamisesta painettiin ensimmäisen kerran – yli 2000 vuotta itse tuhon jälkeen?',
+        vaihtoehdot: ['146 eaa.', '44 eaa.', '1858', '1930'],
+        oikea: 2,
+        fakta:
+          'Väite Karthagon raunioiden suolaamisesta ilmestyi painettuna vasta yhdysvaltalaisessa tietosanakirjassa vuonna 1858, eikä yksikään antiikin ajan lähde mainitse asiaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Härännahan kokoinen valtakunta',
+          teksti:
+            'Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.',
+          tiedosto: 'Turner Dido Building Carthage.jpg',
+          lyhyt: 'Turnerin maalaus kuvitteellisesta Karthagon rakentamisesta iltahämärässä.',
+          selite:
+            'Maalauksessa auringonlasku heijastuu satama-altaan veteen, jonka reunoja koristavat kuvitteelliset marmoripalatsit; etualalla seisoskelevat hahmot kuvaavat Karthagon rakentajia kuningatar Didon uudessa kaupungissa.',
+          lahde: 'J. M. W. Turner, Wikimedia Commons (Public domain)',
+          wiki: 'Dido building Carthage',
+        },
+        {
+          otsikko: 'Norsut yli Alppien',
+          teksti:
+            'Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.',
+          tiedosto: 'Buste Hannibal Barca.jpg',
+          lyhyt: 'Perinteisesti Hannibaliksi tulkittu marmorinen rintakuva Bardon museossa.',
+          selite:
+            'Rintakuva esittää parrakasta, päähineeseen puettua miestä; taustalla erottuu roomalaisajan mosaiikin reunus – patsas on perinteisesti yhdistetty Hannibaliin, vaikka varmaa tunnistusta ei ole.',
+          lahde: 'Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hannibal',
+        },
+        {
+          otsikko: 'Kaupunki joka ei noussut enää',
+          teksti:
+            'Kolmas puunilaissota (149–146 eaa.) päättyi lähes kolme vuotta kestäneeseen piiritykseen ja Karthagon täydelliseen tuhoon: roomalaiset polttivat kaupungin ja myivät noin 50 000 eloonjäänyttä orjiksi. Kun sotapäällikkö Gaius Marius pakeni Roomasta vuonna 88 eaa., hänet tavattiin istumasta yksin raunioiden keskellä – lähes sata vuotta tuhon jälkeen kivikasat muistuttivat yhä entisestä suurkaupungista. Legenda raunioiden suolaamisesta on sekin vain tarina: väite painettiin ensimmäisen kerran yhdysvaltalaisessa tietosanakirjassa vasta vuonna 1858, eikä yksikään antiikin lähde mainitse suolaa.',
+          tiedosto: 'John Vanderlyn - Caius Marius Amid the Ruins of Carthage - Google Art Project.jpg',
+          lyhyt: 'Vanderlynin maalaus Gaius Mariuksesta Karthagon raunioilla.',
+          selite:
+            'Maalauksessa punaviittainen mies istuu ajatuksissaan pylväänpätkän vieressä autiossa maisemassa – kohtaus kuvaa perimätietoa, jonka mukaan pakolainen Marius löysi lohtua vuosikymmeniä aiemmin tuhotun Karthagon raunioista.',
+          lahde: 'John Vanderlyn, Wikimedia Commons (Public domain)',
+          wiki: 'Gaius Marius',
+        },
+        {
+          otsikko: 'Vesi sadan mailin päästä',
+          teksti:
+            'Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.',
+          tiedosto: 'Zaghouan Aqueduct, built by Hadrian from Zaghouan to Carthage, Tunisia - 52764374311.jpg',
+          lyhyt: 'Hadrianuksen aikaisen Zaghouan–Karthago-vesijohdon holvikaarikatkelma.',
+          selite:
+            'Kuvassa erottuu yksittäinen hiekkakivinen holvikaari mäntyjen keskellä – tällaisia kaaria seurasi peräkkäin kymmenien kilometrien matkalla, kun vesijohto kuljetti vettä Zaghouanin vuorilta aina Karthagoon saakka.',
+          lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Zaghouan Aqueduct',
+        },
+      ],
+    },
+  ],
+  tanganjika: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tanganjika',
+      johdanto:
+        'Tanganjikajärven itärannalla sijaitseva kauppakylä Ujiji oli 1800-luvulla karavaanien päätepiste — ja marraskuussa 1871 näyttämö kohtaamiselle, josta tuli yksi löytöretkien historian tunnetuimmista hetkistä.',
+      nostot: [
+        {
+          otsikko: 'Järvi jota Eurooppa ei tuntenut',
+          teksti:
+            '14. helmikuuta 1858 brittiläiset upseerit Richard Burton ja John Hanning Speke saapuivat Ujijin kylään ensimmäisinä eurooppalaisina, jotka näkivät Tanganjikajärven. He olivat lähteneet etsimään Niilin lähdettä Sansibarilta kuukausia aiemmin, ja matka oli ollut raskas: molemmat sairastuivat vakavasti. Burton uskoi löytäneensä Niilin alkulähteen, mutta erehtyi — todellinen lähde löytyi vasta myöhemmin toisesta järvestä, jonka Speke nimesi kuningatar Viktorian mukaan. Kiista miesten välillä jatkui vuosia.',
+          tiedosto: 'Burton and Speke Monument in Ujiji.jpg',
+          lyhyt: 'Muistolaatta Ujijissa merkitsee päivää, jolloin Burton ja Speke löysivät järven 1858.',
+          selite:
+            'Valokuva näyttää kuluneen kivisen muistolaatan Ujijissa; sen teksti kertoo englanniksi ja swahiliksi, että Burton ja Speke saapuivat paikalle 14. helmikuuta 1858 ja tutkivat sieltä käsin Tanganjikajärveä.',
+          lahde: 'Michael Branz, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'John Hanning Speke',
+        },
+        {
+          otsikko: 'Kauppakylä järven rannalla',
+          teksti:
+            'Ujiji oli 1800-luvun puolivälissä yksi Itä-Afrikan vilkkaimmista kauppapaikoista: Sansibarin sulttaanin alaisuudessa toimineet arabikauppiaat kuljettivat sen kautta norsunluuta ja orjia sisämaasta rannikolle saakka. Kylän kivitaloja rakennettiin swahilityyliin, ja sen kadut täyttyivät karavaanien kantajista, kauppiaista ja matkaajista. Isoisän matkavuonna 1873 Ujiji oli jo tunnettu koko Itä-Afrikassa juuri kaksi vuotta aiemmin tapahtuneesta kuuluisasta tapaamisesta rannallaan.',
+          tiedosto: 'Swahili House in Kasingirima Ward, Ujiji.jpg',
+          lyhyt: 'Swahilityylinen talo Ujijissa muistuttaa kylän menneisyydestä vilkkaana kauppapaikkana.',
+          selite:
+            'Valokuva esittää valkoiseksi rapatun swahilityylisen talon kuistia aaltopeltikatoksineen ja kaksoisovineen Ujijin Kasingiriman kaupunginosassa.',
+          lahde: 'Halidtz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ujiji',
+        },
+        {
+          otsikko: 'Kadonnut lähetyssaarnaaja',
+          teksti:
+            'Skotlantilainen lähetyssaarnaaja ja tutkimusmatkailija David Livingstone oli etsinyt Niilin lähdettä Keski-Afrikassa vuodesta 1866 lähtien, eikä hänestä ollut kuulunut mitään vuosiin. Lääkkeet olivat loppuneet, ja hän saapui lokakuussa 1871 Ujijiin nääntyneenä ja sairaana punatautiin. Euroopassa häntä pidettiin jo lähes kuolleena. Yhdysvaltalainen sanomalehti New York Herald oli kuitenkin lähettänyt toimittaja Henry Morton Stanleyn etsimään kadonnutta miestä — retkikunta, joka lähestyi Ujijiä juuri samoihin aikoihin.',
+          tiedosto: 'Lake Tanganyika.jpg',
+          lyhyt: 'Näkymä Tanganjikajärvelle Kongon puolelta, ei kaukana Livingstonen 1871 reitiltä.',
+          selite:
+            'Valokuva on otettu Kongon puoleiselta kukkulalta: etualalla kasvaa palmuja ja peltikattoisia taloja, ja niiden takana avautuu Tanganjikajärvi ja Tansanian puoleiset vuoret sumuisessa etäisyydessä.',
+          lahde: 'Orrling, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: '"Tohtori Livingstone, oletan?"',
+          teksti:
+            '10. marraskuuta 1871 Stanley saapui karavaaninsa kanssa Ujijiin ja näki väkijoukossa harmaapartaisen valkoisen miehen. Hän astui esiin, nosti hattuaan ja lausui myöhemmin maailmankuuluksi tulleet sanat: "Tohtori Livingstone, oletan?" Stanley jäi Ujijiin neljäksi kuukaudeksi ja pyysi lopuksi Livingstonea palaamaan kanssaan Eurooppaan, mutta tämä kieltäytyi jatkaakseen tutkimustyötään. He eivät tavanneet enää koskaan: Livingstone kuoli puolitoista vuotta myöhemmin nykyisen Sambian alueella.',
+          tiedosto: 'Henry Morton Stanley meeting David Livingstone at Ujiji, in Wellcome V0006855.jpg',
+          lyhyt: 'Stanleyn tilaama kaiverrus kuvaa hetkeä, jolloin hän löysi Livingstonen Ujijistä 1871.',
+          selite:
+            'Väritetty puupiirros näyttää Stanleyn nostavan hattuaan harmaapartaiselle Livingstonelle keskellä olkia kantavien arabikauppiaiden ja kantajien joukkoa; taustalla liehuu Yhdysvaltain lippu ja olkikattoisia majoja.',
+          lahde: 'H. Hall (Wellcome Collection), Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Henry Morton Stanley',
+        },
+        {
+          otsikko: 'Mangopuu joka muisti tapaamisen',
+          teksti:
+            'Livingstone ja Stanley istuttivat tapaamisensa muistoksi mangopuun Ujijin rantaan. Vuosikymmeniä myöhemmin paikalle rakennettiin kivinen muistomerkki puun ympärille — työn tekivät belgialaiset joukot ensimmäisen maailmansodan Itä-Afrikan sotanäyttämön aikana, kun ne miehittivät kylän. 1900-luvun alussa otettu valokuva muistomerkistä päätyi National Geographic -lehteen saakka, ja se muistuttaa yhä siitä, kuinka pieni kyläkohtaus kasvoi maailmanlaajuiseksi tarinaksi.',
+          tiedosto:
+            'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
+          lyhyt: 'Vanha valokuva Livingstonen ja Stanleyn tapaamispaikan muistomerkistä mangopuun juurella.',
+          selite:
+            'Vanha mustavalkoinen valokuva National Geographic -lehden sivulta näyttää ison puunrungon ympärille rakennetun kivimuistomerkin, jonka kylkeen on kaiverrettu "LIVINGSTONE STANLEY 1871"; vieressä istuu paikallisia lapsia.',
+          lahde: 'Albert Percy Godber, Wikimedia Commons (Public domain)',
+          wiki: 'Livingstone–Stanley Monument',
+        },
+        {
+          otsikko: 'Vanha höyrylaiva purjehtii yhä',
+          teksti:
+            'Ujijin kaksoiskaupungissa Kigomassa satamassa lepää yhä laiva, jonka historia ulottuu maailmansotiin: MV Liemba rakennettiin Saksassa 1913 sota-alukseksi nimellä Graf von Goetzen ja tuotiin osina Tanganjikajärvelle. Saksalaiset upottivat sen itse vuonna 1916 brittien tieltä, mutta laiva nostettiin myöhemmin pintaan ja otettiin uudelleen käyttöön. Yli sata vuotta myöhemmin se kuljettaa yhä matkustajia ja rahtia järven rannoilla — yksi maailman vanhimmista edelleen liikennöivistä laivoista.',
+          tiedosto: 'MV.Liemba.jpg',
+          lyhyt: 'MV Liemba, entinen saksalainen sota-alus, purjehtii Tanganjikajärvellä yhä tänään.',
+          selite:
+            'Valokuva Kigoman satamasta näyttää valkoisen ja punaisen matkustaja-aluksen laiturissa vanhemman, ruosteisen laivanrungon vieressä; taustalla siintää järvi ja rantakylän rakennuksia.',
+          lahde: 'Erasmus Kamugisha, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'MV Liemba',
+        },
+      ],
+    },
+    {
+      id: 'kirjoahvenet',
+      nimi: 'Tanganjikan kirjoahvenet',
+      johdanto:
+        'Tanganjikajärvi on yksi maailman vanhimmista ja syvimmistä järvistä, ja miljoonien vuosien eristys on synnyttänyt siihen satoja kirjoahvenlajeja, joita ei tavata missään muualla maapallolla.',
+      tehtava: {
+        kysymys:
+          'Kuinka suuri osa Tanganjikajärven kirjoahvenlajeista elää vain tässä yhdessä järvessä eikä muualla maailmassa?',
+        vaihtoehdot: [
+          'Noin joka kymmenes laji',
+          'Noin puolet lajeista',
+          'Lähes kaikki, noin 98 prosenttia',
+          'Ei yksikään laji',
+        ],
+        oikea: 2,
+        fakta:
+          'Järven ikä ja eristyneisyys ovat tehneet siitä evoluutiotutkijoiden suosikkikohteen, jossa uusia lajeja on syntynyt jatkuvasti miljoonien vuosien ajan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Toiseksi syvin, lähes vanhin',
+          teksti:
+            'Tanganjikajärvi syntyi Itä-Afrikan hautavajoamaan tektonisten liikkeiden muovaamana ja on iältään 9–12 miljoonaa vuotta — yksi vain paristakymmenestä järvestä maailmassa, jotka ovat yli miljoonan vuoden ikäisiä. Se on tilavuudeltaan maailman toiseksi suurin ja syvyydeltään toiseksi syvin makean veden järvi heti Siperian Baikaljärven jälkeen: syvimmillään vettä on lähes 1 500 metriä. Järvi venyy 673 kilometrin matkalta neljän maan — Tansanian, Kongon demokraattisen tasavallan, Burundin ja Sambian — rajojen halki.',
+          tiedosto: 'Sunset over Lake Tanganyika (5943082022).jpg',
+          lyhyt: 'Iltahämärässä otettu valokuva Tanganjikajärvestä, jonka horisontissa näkyy veneiden valoja.',
+          selite:
+            'Valokuva on otettu hämärän laskeuduttua järven rannalta: taivas ja vesi hehkuvat tummansinisinä, ja horisontissa näkyy muutamia pieniä valopisteitä, jotka ovat kongolaisten kalastajaveneiden lyhtyjä.',
+          lahde: 'Felix Dance, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lake Tanganyika',
+        },
+        {
+          otsikko: 'Sadat lajit, jotka syntyivät samassa järvessä',
+          teksti:
+            'Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.',
+          tiedosto: 'Tropheus duboisi Schoenbrunn2008.jpg',
+          lyhyt: 'Nuori Tropheus duboisi -kirjoahven kalliokivikossa.',
+          selite:
+            'Lähikuva harmaanvalkoisesta Tropheus duboisi -kirjoahvenesta, jonka kyljessä näkyy vaalea poikkijuova; taustalla erottuu sammaloitunut kivi, jollaisia laji suosii luonnossa levän kaapimiseen.',
+          lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tropheus duboisi',
+        },
+        {
+          otsikko: 'Järven jättiläinen',
+          teksti:
+            'Boulengerochromis microlepis on maailman suurin tunnettu kirjoahvenlaji: se voi kasvaa lähes metrin mittaiseksi ja saalistaa muita kaloja. Molemmat vanhemmat kaivavat pohjaan suuren pesäkuopan ja vartioivat siinä satoja poikasiaan yhdessä, kunnes nämä ovat tarpeeksi isoja pärjätäkseen omillaan. Poikaset pysyttelevät tiiviinä parvena suojautuakseen saalistajilta, ja sukeltajat ovat kuvanneet öisin, kuinka uteliaat nuoret kalat tulevat tarkastelemaan valoja lähempää vanhempiensa pysytellessä taka-alalla.',
+          tiedosto: 'Curious young cichlids.jpg',
+          lyhyt: 'Nuorten jättiläiskirjoahventen parvi liikkuu tiiviisti hiekkapohjan yllä yöllä.',
+          selite:
+            'Yöllinen sukellusvalokuva näyttää sadoittain pieniä raidallisia Boulengerochromis microlepis -poikasia tiiviinä parvena hiekkapohjan yläpuolella; sukeltajan valo heijastuu niiden kyljistä.',
+          lahde: 'Cethuyghe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Giant cichlid',
+        },
+        {
+          otsikko: 'Kalat jotka syövät suomuja',
+          teksti:
+            'Perissodus microlepis on ainutlaatuinen kirjoahven, joka on erikoistunut syömään muiden kalojen suomuja eikä juuri muuta. Sen suu on epäsymmetrinen: puolella yksilöistä leuka kääntyy vasemmalle ja puolella oikealle, mikä helpottaa hyökkäämistä saaliin vastakkaiselta kyljeltä yllättäen. Tämä jako pysyy luonnossa lähes tasan puolessa ja puolessa, koska saalis oppii varomaan sitä puolta, josta hyökkäyksiä tulee eniten — harvinaisempi suunta on aina hetkellisesti tehokkaampi.',
+          tiedosto: 'Perissodus microlepis 1.jpg',
+          lyhyt: 'Villinä pyydystetty Perissodus microlepis -koiras, suomuja syövä kirjoahven.',
+          selite:
+            'Valokuva näyttää sivuttain kuvatun, vaaleansinisillä pilkuilla kuvioidun Perissodus microlepis -kalan; sen pitkänomainen ruumis ja terävät evät erottuvat selvästi vaaleaa taustaa vasten.',
+          lahde: 'Henrik Kusche, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Perissodus microlepis',
+        },
+        {
+          otsikko: 'Etana antoi kodin',
+          teksti:
+            'Neolamprologus multifasciatus on luultavasti maailman pienin tunnettu kirjoahvenlaji: villinä elävä koiraskin kasvaa vain noin kolme senttimetriä pitkäksi. Se asuttaa niin sanottuja simpukkapenkkoja, joille on kertynyt tuhansien vuosien aikana miljoonia tyhjiä Neothauma-etanankuoria järven pohjalle. Jokainen kala kaivaa itselleen oman kuorensa ja puolustaa sitä ja pientä reviiriään kiivaasti jopa itseään suurempia tunkeilijoita vastaan, vaikka koko reviiri saattaa olla vain kämmenen levyinen.',
+          tiedosto: 'Neolamprologus multifasciatus male.JPG',
+          lyhyt: 'Neolamprologus multifasciatus -kirjoahvenia etanankuorten lomassa akvaariossa.',
+          selite:
+            'Valokuvassa uiskentelee muutama pieni, vaaleanruskea Neolamprologus multifasciatus -kala kasvien ja kivien peittämän pohjan yllä; villinä laji asuttaa vastaavanlaisia tyhjiä etanankuoria järven pohjassa.',
+          lahde: 'Richard A. Ingebrigtsen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Neolamprologus multifasciatus',
+        },
+      ],
+    },
+  ],
+  churchill: [
+    {
+      id: 'kaupunki',
+      nimi: 'Churchill',
+      johdanto:
+        'Churchill oli isoisän matkavuonna 1873 pieni turkiskauppa-asema Hudsoninlahden rannalla, jota vartioi kivilinnoitus — Manitoba oli liittynyt Kanadaan vasta kolme vuotta aiemmin, eikä rautatietä ollut vielä lainkaan.',
+      nostot: [
+        {
+          otsikko: 'Turkiskauppa-asema Hudsoninlahdella',
+          teksti:
+            'Vuonna 1717 Hudson’s Bay Company pystytti Churchillin joen suulle hirsisen kauppa-aseman, jota johti James Knight ja jonka nimi tuli yhtiön silloisen kuvernöörin John Churchillin mukaan. Paikalle virtasi vuosittain chipewyan- ja cree-metsästäjien tuomia turkiksia, jotka vaihdettiin veitsiin, kattiloihin ja huopiin. Isoisän matkavuonna 1873 Churchill oli yhä pieni turkiskauppa-asema: Manitoba oli liittynyt Kanadaan provinssina vasta kolme vuotta aiemmin, heinäkuussa 1870, eikä alueelle johtanut vielä ainuttakaan rautatietä.',
+          tiedosto: 'Prince of Wales Fort - Churchill, Manitoba (26426158577).jpg',
+          lyhyt: 'Prince of Wales Fortin kulmabastioni Hudsoninlahden rannalla.',
+          selite:
+            'Valokuva näyttää linnoituksen kivisen kulmabastionin ja sen takana avautuvan Hudsoninlahden — tälle rannalle Hudson’s Bay Company perusti ensimmäisen kauppapaikkansa vuonna 1717.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+        {
+          otsikko: 'Linnoitus jota rakennettiin kymmenen vuotta',
+          teksti:
+            'Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.',
+          tiedosto: 'Prince of Wales Fort - Churchill, Manitoba (40402156465).jpg',
+          lyhyt: 'Prince of Wales Fortin muuri tykkien ampuma-aukkoineen.',
+          selite:
+            'Kuvassa näkyy linnoituksen matala kivimuuri, jonka aukoista tykit aikanaan tähtäsivät merelle; taustalla erottuu vielä muutama alkuperäinen tykki muurin päällä.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Prince of Wales Fort',
+        },
+        {
+          otsikko: 'Kivimuuriin kaiverrettu nimi',
+          teksti:
+            'Linnoituksen kivimuuriin on kaiverrettu pieni, siisti teksti: "H. ROBINSON 1733". Kuka tahansa rakennustöissä ollut mies saattoi jättää tällaisen jäljen työstään kiveen, ja Robinsonin nimikirjoitus on säilynyt luettavana lähes 300 vuotta, vaikka suuri osa linnoituksen historiasta tunnetaan vain asiakirjoista. Se muistuttaa, että kivimuurit eivät nousseet itsestään: jokainen lohkare piti louhia, kuljettaa ja muurata paikalleen ihmisvoimin subarktisen kesän lyhyinä kuukausina. Tällaisia nimikirjoituksia on löydetty muureista useita, ja ne ovat tavallisten rakentajien ainoa säilynyt jälki suurhankkeesta.',
+          tiedosto: 'H Robinson 1733 Graffiti at Prince of Wales Fort - Churchill, Manitoba (40402090835).jpg',
+          lyhyt: 'Kivimuuriin vuonna 1733 kaiverrettu rakentajan nimikirjoitus.',
+          selite:
+            'Lähikuva linnoituksen kivimuuriin kaiverretusta tekstistä "H. ROBINSON 1733" — yhden rakennustöissä olleen miehen jättämä nimikirjoitus.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Prince of Wales Fort',
+        },
+        {
+          otsikko: 'Samuel Hearne kohti Jäämerta',
+          teksti:
+            'Fort Prince of Walesin kauppias Samuel Hearne lähti joulukuussa 1770 kolmannelle yritykselleen löytää kuparia pohjoisesta — kahden aiemman, oppaattoman matkan epäonnistuttua. Nyt mukana kulki chipewyan-päällikkö Matonabbee, jonka taidot pitivät retkikunnan hengissä. Heinäkuun 14. päivänä 1771 miehet saapuivat Coppermine-joen suulle, ja Hearnesta tuli ensimmäinen eurooppalainen, joka saavutti Jäämeren rannikon maitse. Matka oli raskas: Hearne käveli retkellään arviolta 8 000 kilometriä ja palasi Fort Prince of Walesiin vasta kesäkuussa 1772. Kuparia löytyi lopulta pettymykseksi vain yksi nelikiloinen kimpale.',
+          tiedosto: 'Discovery of Coppermine River by Samuel Hearne, 1771, by Frank Johnston, ca. 1922.jpg',
+          lyhyt: 'Frank Johnstonin maalaus Matonabbeen ja Samuel Hearnen retkikunnasta 1771.',
+          selite:
+            'Frank Johnstonin 1920-luvun maalaus kuvaa hetkeä, jolloin opas Matonabbee osoittaa nuorelle Samuel Hearnelle suuntaa kohti Coppermine-jokea vuonna 1771.',
+          lahde: 'Frank Johnston, Wikimedia Commons (Public domain)',
+          wiki: 'Samuel Hearne',
+        },
+        {
+          otsikko: 'Linnake antautuu ilman taistelua',
+          teksti:
+            'Elokuun 8. päivänä 1782 kolme ranskalaista sotalaivaa ja noin 290 sotilasta komentaja Jean-François de La Pérousen johdolla ilmestyi Hudsoninlahdelle. Fort Prince of Walesin kuvernöörinä tuolloin toiminut Samuel Hearne komensi vain kourallista miehiä eikä nähnyt järkeä puolustautua toivottomia lukuja vastaan: hän antautui ilman yhtään laukausta. Ranskalaiset yrittivät tuhota linnoituksen räjäyttämällä sen muureja, mutta paksu kivi kesti pahimman, ja rauniot seisovat paikallaan yhä tänäänkin. Turkiskaupasta riippuvaiset alkuperäiskansat kärsivät pahiten: kun kauppatavaraa ei enää saapunut, monet joutuivat nälänhätään sinä talvena.',
+          tiedosto: 'Vue du fort prince de Walles dans la baie d’Hudson en 1782.jpg',
+          lyhyt: '1700-luvun kaiverrus Prince of Wales Fortista talvisessa maisemassa.',
+          selite:
+            'Vanha kaiverrus näyttää Prince of Wales Fortin talvisena, brittilipun vielä liehuessa muurien yllä ennen linnoituksen antautumista ranskalaisille elokuussa 1782.',
+          lahde: 'Lieutenant de frégate Lefebvre, Wikimedia Commons (Public domain)',
+          wiki: 'Jean-François de Galaup, comte de Lapérouse',
+        },
+        {
+          otsikko: 'Rautatien pääteasema',
+          teksti:
+            'Vielä vuosikymmeniä isoisän matkan jälkeen Churchilliin ei johtanut rautatietä: viljankasvattajat halusivat oman satamansa Hudsoninlahdelle murtaakseen Canadian Pacific -rautatien yksinvallan, ja ensin valittiin Port Nelson vuonna 1912. Hanke osoittautui liian vaikeaksi, ja työt siirrettiin Churchilliin, jonne rata valmistui vasta vuonna 1929 — yli 200 vuotta sen jälkeen, kun Hudson’s Bay Company oli pystyttänyt paikalle ensimmäisen kauppa-asemansa. Radasta tuli mantereen pohjoisin rautatieyhteys, joka päättyy suoraan Churchilliin: sen jälkeen ei ole enää kiskoja, vain jäätyvä lahti.',
+          tiedosto: 'End of the line, Churchill Manitoba (30352378547).jpg',
+          lyhyt: 'Hudson Bay Railwayn kiskot päättyvät Churchilliin Hudsoninlahden rannalla.',
+          selite:
+            'Valokuva näyttää kiskot, jotka kapenevat kohti horisonttia ja päättyvät Churchilliin — kaukana erottuu kaupungin viljasiilo, radan rakentamisen 1929 alkuperäinen syy.',
+          lahde: 'Mike Beauregard, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hudson Bay Railway',
+        },
+      ],
+    },
+    {
+      id: 'jaakarhut',
+      nimi: 'Jääkarhujen pääkaupunki',
+      johdanto:
+        'Joka syksy satoja jääkarhuja kerääntyy Churchillin edustalle odottamaan Hudsoninlahden jäätymistä, sillä juuri täällä jää muodostuu myöhemmin kuin muualla arktisella alueella — siksi kaupunkia kutsutaan jääkarhujen pääkaupungiksi.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuorokautta jääkarhu voi tutkimusten mukaan uida keskimäärin yhtäjaksoisesti?',
+        vaihtoehdot: ['Noin yhden vuorokauden', 'Noin 3,4 vuorokautta', 'Noin 10 vuorokautta', 'Noin kolme viikkoa'],
+        oikea: 1,
+        fakta:
+          'GPS-pannoilla tehtyjen mittausten mukaan jääkarhu voi uida keskimäärin 3,4 vuorokautta yhtäjaksoisesti ja edetä samalla noin 154 kilometriä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jääkarhujen pääkaupunki',
+          teksti:
+            'Lokakuun puolivälistä marraskuun puoliväliin Churchillin rannikolle kerääntyy keskimäärin noin 600 jääkarhua odottamaan Hudsoninlahden jäätymistä. Karhut ovat viettäneet kesän maalla paastoten, sillä kesäisin lahdella ei ole jäätä, jolla metsästää hylkeitä. Juuri Churchillin kohdalla jää muodostuu myöhemmin kuin monin muin paikoin arktisella alueella, joten karhut viipyvät täällä pidempään ja kokoontuvat tiheämmin kuin lähes missään muualla maailmassa. Ilmiö on tehnyt pikkukaupungista "jääkarhujen pääkaupungin", ja matkailijat saapuvat joka syksy erikoisrakenteisilla tundrabusseilla katsomaan karhuja turvallisen välimatkan päästä.',
+          tiedosto: 'Polar Bear and Tundra Buggy - Churchill, Manitoba (26427267077).jpg',
+          lyhyt: 'Tundrabussi ja jääkarhu kohtaavat Churchillin rannikolla syksyllä.',
+          selite:
+            'Kuvassa suurpyöräinen tundrabussi kohtaa jääkarhun rannan tuntumassa — tällaisilla ajoneuvoilla matkailijat pääsevät katsomaan karhuja turvallisesti syksyn kokoontumisen aikaan.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+        {
+          otsikko: 'Karhut odottavat rannalla',
+          teksti:
+            'Odotusaika on karhuille raskasta paastoa: ne eivät voi metsästää hylkeitä ennen kuin jää kantaa, joten energiaa on säästettävä. Monet karhut makaavat suurimman osan päivästä paikoillaan pensaikkojen tai kivien suojassa, liikkuen vain vähän ja hidastaen aineenvaihduntaansa lähes horrosta muistuttavalla tavalla. Emo saattaa levätä samalla alueella viikkoja poikastensa kanssa, sillä turha liikkuminen kuluttaisi rasvavarastoja, joiden varassa koko perhe on elänyt jo useita kuukausia. Kun ensimmäinen kunnollinen jää vihdoin muodostuu, karhut lähtevät liikkeelle lähes saman tien ja suuntaavat hylkeenpyyntiin.',
+          tiedosto: 'Polar bears in Churchill, Manitoba, October 2013 (11811743773).jpg',
+          lyhyt: 'Jääkarhu lepää lumisella rannalla odottaen lahden jäätymistä.',
+          selite:
+            'Lokakuinen kuva näyttää jääkarhun lepäämässä lumisella rannalla pensaikon suojassa — tyypillinen näky odotusaikana ennen lahden jäätymistä.',
+          lahde: 'Josh Campbell, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Jää joka viipyy',
+          teksti:
+            'Hudsoninlahti on valtava, matala merialue, jonka rannikolla useat joet — niiden joukossa Churchill-joki — laskevat mereen makeaa vettä. Makea vesi jäätyy suolaista merivettä hitaammin, ja rannikon virtaukset pitävät veden liikkeessä pidempään kuin ulompana lahdella. Yhdessä nämä tekijät viivästyttävät jään muodostumista juuri Churchillin edustalla verrattuna moniin muihin arktisiin rannikkoihin. Karhuille tämä tarkoittaa pidempää odotusta, mutta myös sitä, että ne kerääntyvät tälle kapealle rannikkokaistaleelle poikkeuksellisen tiheästi — ja siksi tutkijatkin ovat seuranneet Churchillin jääkarhuja pidempään kuin lähes minkään muun populaation.',
+          tiedosto: 'Sea ice finally starting to form (6375063163).jpg',
+          lyhyt: 'Ohutta sohjojäätä muodostumassa Hudsoninlahden rantavedessä.',
+          selite:
+            'Kuva näyttää Hudsoninlahden rantaa, jolla ohut, sohjoinen jää on vasta alkamassa muodostua vedenpintaan — tällaista jäätä jääkarhut odottavat voidakseen lähteä hylkeenpyyntiin.',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hudson Bay',
+        },
+        {
+          otsikko: 'Uimari joka ei väsy',
+          teksti:
+            'Jääkarhu on erinomainen uimari: sen eturaajat toimivat lähes airojen tavoin, ja paksu rasvakerros pitää sen kelluvana kylmässä vedessä. Tutkijoiden GPS-pannoilla mittaamana karhu voi uida keskimäärin peräti 3,4 vuorokautta yhtäjaksoisesti ja edetä samalla noin 154 kilometriä ilman lepotaukoa, nopeuden ollessa noin 6 kilometriä tunnissa. Pitkät uinnit ovat karhulle silti raskaita, ja etenkin emojen on täytynyt viime vuosikymmeninä uida yhä pidempiä matkoja jään vetäytyessä yhä kauemmas rannikosta. Osa tutkijoista pitää pitkittyviä uintimatkoja yhtenä merkkinä siitä, miten ilmaston lämpeneminen muuttaa karhujen elinympäristöä.',
+          tiedosto: 'Polar Bear in Hudson Bay - Churchill, Manitoba (27426282558).jpg',
+          lyhyt: 'Jääkarhu uimassa Hudsoninlahden matalassa rantavedessä.',
+          selite:
+            'Ilmakuvassa jääkarhu ui matalassa, kirkkaassa rantavedessä jättäen jälkeensä selvän vanaveden.',
+          lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Karhujen vankila',
+          teksti:
+            'Kun nälkäinen jääkarhu eksyy liian lähelle asutusta, Churchillin viranomaiset eivät tapa sitä vaan siirtävät sen usein niin sanottuun "karhujen vankilaan" — virallisesti Polar Bear Holding Facilityyn. Vanhasta lentotukikohdan hallista muutettu rakennus toimii väliaikaisena säilönä, jossa ongelmakarhu odottaa parhaimmillaan viikkoja, kunnes lahti jäätyy tarpeeksi ja se voidaan kuljettaa helikopterilla takaisin luontoon kauas kaupungista. Karhuille ei anneta ruokaa vankilan aikana, jotta ne eivät opi yhdistämään ihmisiä ruokaan. Järjestelmä on osa Polar Bear Alert -ohjelmaa, joka on siirtänyt kaupunkiin eksyneitä karhuja jo vuosikymmenten ajan.',
+          tiedosto: 'Polar Bear Jail (6360633055).jpg',
+          lyhyt: 'Churchillin Polar Bear Holding Facility eli kansanomaisesti "karhujen vankila".',
+          selite:
+            'Kuvassa matala, kaareviin katonmuotoihin rakennettu halli, jonka kylkeen kiinnitetty kyltti kertoo sen olevan Polar Bear Holding Facility — Churchillin "karhujen vankila".',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Polar bear',
+        },
+        {
+          otsikko: 'Karhuhälytys kaupungissa',
+          teksti:
+            'Churchillissa jääkarhu voi kävellä kadulle keskellä päivää, joten kaupungissa on tiukat säännöt: luonnonvaraisen eläimen ruokkiminen on laitonta, ja rikkomuksesta voi seurata syyte. Polar Bear Alert -ohjelman partiot kiertävät kaupunkia ympäri vuorokauden etenkin syksyisin, ja monet paikalliset jättävät autonsa lukitsematta, jotta joku voisi hätätilanteessa piiloutua sisään karhua pakoon. Havaituista karhuista ilmoitetaan puhelimitse, ja tarvittaessa ne karkotetaan äänipommeilla tai kumiluodeilla ennen vangitsemista. Näin ihmiset ja maailman suurimmat maapedot elävät samalla kapealla rannikolla ilman jatkuvia kuolemantapauksia.',
+          tiedosto: 'Polar bear alert (6357573595).jpg',
+          lyhyt: 'Churchillin varoituskyltti: luonnonvaraisten eläinten ruokkiminen on laitonta.',
+          selite:
+            'Kyltti varoittaa: "Polar Bear Alert — luonnonvaraisen eläimen ruokkiminen on laitonta, rikkomuksesta seuraa syyte" — tällaisia varoituksia on ympäri Churchillia.',
+          lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Churchill, Manitoba',
+        },
+      ],
+    },
+  ],
+  sierraleone: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sierra Leone',
+      johdanto:
+        'Isoisän matkavuonna 1873 Freetown oli Britannian Länsi-Afrikan siirtomaan pääkaupunki ja laivaston tukikohta, jonka kaduilla kohtasivat orjuudesta vapautettujen jälkeläiset, brittiupseerit ja kauppiaat kaikkialta maailmasta.',
+      nostot: [
+        {
+          otsikko: 'Puu, jonka alle vapaus istutettiin',
+          teksti:
+            'Maaliskuussa 1792 noin 1 196 entistä orjaa saapui Nova Scotiasta laivoilla Länsi-Afrikan rannikolle. Abolitionisti John Clarkson johti heidät maihin, ja uudisasukkaat raivasivat rantametsää, kunnes löysivät valtavan puuvillapuun: sen alla pidettiin kiitosjumalanpalvelus, josta tuli kaupungin syntyhetki. Paikalle oli yritetty perustaa siirtokuntaa jo 1787, mutta paikallinen päällikkö Jimmy poltti sen 1789. Toisin kuin edeltäjänsä, uusi asutus sai nimen, joka kertoi tarkoituksestaan suoraan: Freetown, vapaiden kaupunki. Puu seisoi keskustassa vielä isoisän aikana ja kauan sen jälkeenkin.',
+          tiedosto: 'Cotton Tree (Sierra Leone).jpg',
+          lyhyt: 'Freetownin tunnuspuu, jonka alla ensimmäiset vapaat uudisasukkaat kokoontuivat 1792.',
+          selite:
+            'Valokuva näyttää korkean, tuuheaoksaisen puuvillapuun keskellä vehreää kaupunkia — Freetownin vanhan keskustan maamerkin, jonka juurelle kaupungin perustajat kokoontuivat.',
+          lahde: 'Christian Trede, Wikimedia Commons (CC BY-SA 2.0 de)',
+          wiki: 'Cotton Tree (Sierra Leone)',
+        },
+        {
+          otsikko: 'Länsi-Afrikan vanhin korkeakoulu',
+          teksti:
+            'Englannin kirkon lähetysseura perusti Freetowniin vuonna 1827 Fourah Bay Collegen, josta tuli koko Saharan eteläpuolisen Afrikan ensimmäinen korkeakoulu. Sen ensimmäinen oppilas oli poika, joka oli itse vapautettu orjalaivalta ja josta kasvoi myöhemmin Afrikan ensimmäinen anglikaaninen piispa. 1800-luvun puoliväliin mennessä oppilaitos veti opiskelijoita ympäri Länsi-Afrikan rannikkoa, ja Freetownia alettiin kutsua "Länsi-Afrikan Ateenaksi". Isoisän vierailun aikaan 1873 koulu oli jo tunnettu oppineisuuden keskus keskellä siirtomaakaupunkia, jonka kaduilla kulki yhtä lailla kauppiaita kuin pappisopiskelijoita.',
+          tiedosto: 'Old building of Fourah Bay College. Cline Town, Freetown, Sierra Leone.jpg',
+          lyhyt: 'Fourah Bay Collegen vanha rakennus Cline Townissa Freetownissa.',
+          selite:
+            'Vanha valokuva näyttää korkean tiilirakennuksen kaarikuisteineen ja parvekkeineen, ympärillä palmuja — yhden Fourah Bay Collegen historiallisista rakennuksista.',
+          lahde: 'Jared & Melanie & Huxley Ponchot, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fourah Bay College',
+        },
+        {
+          otsikko: 'Lääkäri, joka piirsi Afrikan uudelleen',
+          teksti:
+            'James Africanus Beale Horton syntyi noin 1835 Freetownissa vanhemmille, jotka brittilaivasto oli vapauttanut orjalaivalta. Stipendin turvin hän opiskeli lääketiedettä Edinburghissa ja väitteli tohtoriksi 1859 — ensimmäisenä afrikkalaisena Britanniassa. Armeijan lääkärinä Länsi-Afrikassa palvellessaan hän kirjoitti 1868 teoksen "West African Countries and Peoples", jossa hän kumosi aikansa rotuoppeja ja vaati afrikkalaisille itsehallintoa. Samana vuonna hän julkaisi teoksen liitteenä kartan koko Länsi-Afrikan rannikosta, viisi vuotta ennen isoisän matkaa.',
+          tiedosto: '(1868) MAP OF THE WEST COAST OF AFRICA, by Africanus Horton, Sierra Leone.jpg',
+          lyhyt: 'Africanus Hortonin vuonna 1868 julkaisema kartta Länsi-Afrikan rannikosta.',
+          selite:
+            'Vanha painettu kartta esittää koko Länsi-Afrikan rannikkoseudun Saharasta Guineanlahdelle asti, allekirjoituksena "Africanus Horton, M.D., Sierra Leone".',
+          lahde: 'The British Library, Wikimedia Commons (Public domain)',
+          wiki: 'James Africanus Beale Horton',
+        },
+        {
+          otsikko: 'Leijonavuorten satama',
+          teksti:
+            'Portugalilainen merenkulkija Pedro de Sintra purjehti rannikolle 1462 ja nimesi vuoret "Serra Leoa" eli leijonavuoriksi — perimätiedon mukaan joko niiden hammasmaisen muodon tai ukkosen jylinän vuoksi. Vuorten juurelle avautuu valtava suistolahti, jota pidetään yhtenä maailman suurimmista luonnonsatamista: juuri siksi Britannian laivasto valitsi Freetownin Länsi-Afrikan tukikohdakseen. Sademetsän peittämät rinteet nousevat suoraan meren rannasta, ja isoisän aikaan höyrylaivat ankkuroituivat samaan lahteen, jonka muodon portugalilaiset olivat piirtäneet karttoihinsa jo neljäsataa vuotta aiemmin.',
+          tiedosto: 'Freetown-aerialview.jpg',
+          lyhyt: 'Ilmakuva Freetownin lahdesta ja sitä ympäröivistä metsäisistä vuorista.',
+          selite:
+            'Ilmakuva näyttää laajan sinisen lahden, jonka ympärillä kaupunki levittäytyy rannalle metsäisten vuorten juurelle — samat "leijonavuoret", jotka antoivat koko maalle nimen.',
+          lahde: 'David Hond, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Freetown',
+        },
+        {
+          otsikko: 'Kerhotalo kuvalehden sivulla',
+          teksti:
+            'Tammikuussa 1883 lontoolainen kuvalehti The Graphic julkaisi kokonaisen sivun piirroksia matkasta Madeiralta Sierra Leoneen: palmurantoja, tulivuorenhuippuja ja lentäviä kaloja. Sivun oikeassa alakulmassa on kuva "The Club Housesta" Freetownissa — siirtomaan brittiläisten kokoontumispaikasta palmujen keskellä. Vain kymmenen vuotta isoisän matkan jälkeen tällaiset piirrokset olivat yhä yleisölle eksotiikkaa: kotisohvalla istuva lukija näki niiden kautta ensimmäistä kertaa, millaiselta Länsi-Afrikan rannikkokaupunki näytti.',
+          tiedosto: 'The Graphic 1883, p. 52.jpg',
+          lyhyt: 'The Graphic -lehden sivu 1883 Länsi-Afrikan matkakuvista, alhaalla Freetownin kerhotalo.',
+          selite:
+            'Vanhan kuvalehden sivulla on viisi puupiirrosta: Madeiran ja Teneriffan maisemia, lentokala sekä oikeassa alakulmassa Freetownin "Club House" -rakennus palmujen keskellä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Freetown',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Vapautettujen kaupunki',
+      johdanto:
+        'Britannia kielsi orjakaupan 1807, ja Freetownista tuli laivaston partioinnin tukikohta: seuraavien vuosikymmenien aikana kaupunkiin tuotiin kymmeniätuhansia orjalaivoilta vapautettuja ihmisiä aloittamaan elämänsä uudelleen.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta orjaa Britannian laivaston Länsi-Afrikan partio vapautti orjalaivoilta vuosina 1808–1860?',
+        vaihtoehdot: ['15 000', '50 000', '150 000', '400 000'],
+        oikea: 2,
+        fakta:
+          'Partio-osasto takavarikoi noin 1 600 orjalaivaa ja vapautti niiltä yhteensä noin 150 000 ihmistä vuosien 1808 ja 1860 välillä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saari, joka myi ihmisiä',
+          teksti:
+            'Bunce-saari Freetownin lahdella toimi orjalinnakkeena noin vuodesta 1670 lähtien: brittiläiset kauppahuoneet lastasivat sen laitureilta tuhansia ihmisiä laivoihin, jotka veivät heidät Etelä-Carolinan ja Georgian plantaaseille. Kun Britannia kielsi orjakaupan 1807, saaren tarkoitus romahti yhdessä yössä — omistajat yrittivät vielä puuvillaviljelyä ja sahaa, mutta molemmat epäonnistuivat, ja saari autioitui 1840 mennessä. Jäljellä ovat vain sortuneet muurit ja tykkiaukot, joiden ikkunanaukoista kasvaa nyt sademetsän köynnöksiä.',
+          tiedosto: 'Bunce Island Fortress Wall 01.jpg',
+          lyhyt: 'Bunce-saaren orjalinnakkeen rauniomuuri sademetsän valtaamana.',
+          selite:
+            'Valokuva näyttää mustuneen, sammaloituneen kivimuurin tyhjine ikkuna-aukkoineen rehevän vihreän kasvillisuuden keskellä — Bunce-saaren orjalinnakkeen jäljellä olevat rauniot.',
+          lahde: 'Pierre Chrzanowski, Wikimedia Commons (CC0)',
+          wiki: 'Bunce Island',
+        },
+        {
+          otsikko: 'Portti vapauteen',
+          teksti:
+            'Kun brittilaivasto pysäytti orjalaivan merellä, se toi vapautetut ihmiset Freetowniin rekisteröitäväksi ja uudelleenasutettavaksi. Vuonna 1817 kaupunkiin pystytettiin sairaala ja turvakoti, jonka porttikaareen kiinnitetty kivilaatta kertoo yhä tehtävästä: koti "orjuudesta pelastetuille afrikkalaisille". Saapujat olivat kotoisin kymmenistä eri kansoista — joruboja, igboja, akaneja, wolofeja — eivätkä he jakaneet yhteistä kieltä. Vuosikymmenten kuluessa heidän jälkeläisistään ja aiemmista uudisasukkaista kasvoi oma kansanryhmänsä, krio, jolla on tänäkin päivänä oma kielensä.',
+          tiedosto: 'Asylum for Liberated Africans in Freetown, Sierra Leone.jpg',
+          lyhyt: 'Vuonna 1817 pystytetyn Freetownin turvakodin porttikaari ja kivilaatta.',
+          selite:
+            'Valokuva näyttää harmaan kivikaaren, jonka yläpuolelle on kiinnitetty vaalea laatta; laatan haalistunut teksti kertoo rakennuksen olleen orjuudesta pelastettujen afrikkalaisten sairaala ja turvakoti vuodelta 1817.',
+          lahde: 'Caupolicaningles, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sierra Leone Creole people',
+        },
+        {
+          otsikko: 'Pieni laiva, joka jahtasi orjalaivoja',
+          teksti:
+            'Vuonna 1808 perustettu Länsi-Afrikan partio-osasto tukeutui vuodesta 1819 alkaen Freetowniin; parhaimmillaan sillä oli noin 25 alusta ja 2 000 miestä. Yksi sen tunnetuimmista laivoista oli pieni, vain kaksi tykkiä kantanut prikki Black Joke, joka löi helmikuussa 1829 itseään paljon suuremman espanjalaisen orjalaivan El Almirante 80 minuutin taistelussa ja vapautti sen kyydistä 466 ihmistä. Koko partio-osasto takavarikoi toimintansa aikana noin 1 600 orjalaivaa ja vapautti niiltä yhteensä noin 150 000 ihmistä ennen kuin osaston toiminta lakkautettiin 1860-luvulla.',
+          tiedosto: 'HMS Black Joke firing on the Spanish Slaver El Almirante.webp',
+          lyhyt: 'Maalaus laivasto-priki Black Jokesta ampumassa orjalaiva El Almirantea 1829.',
+          selite:
+            'Maalaus näyttää kaksi purjelaivaa avomerellä: pienempi alus ampuu suurempaa kohti, ja savua nousee laukausten kohdalta — kuvaus Black Jokesta taistelemassa orjalaiva El Almirantea vastaan.',
+          lahde: 'Nicholas Matthews Condy, Wikimedia Commons (Public domain)',
+          wiki: 'HMS Black Joke',
+        },
+        {
+          otsikko: 'Kapteeni, joka rahoitti oman laivansa matkan',
+          teksti:
+            'Paul Cuffee oli varakas afroamerikkalainen kveekari ja laivanvarustaja Massachusettsista, joka uskoi vapautettujen mustien tulevaisuuden olevan Afrikassa. Vuonna 1815 hän rahoitti omista varoistaan matkan, jolla hänen laivansa Traveller kuljetti 38 vapaata siirtolaista Yhdysvalloista Freetowniin — ensimmäinen tällainen yksityisrahoitteinen paluumuutto. Cuffee kuoli jo 1817 eikä nähnyt hankettaan jatkuvan suuressa mittakaavassa, mutta hänen esimerkkinsä innoitti myöhempiä siirtolaisliikkeitä, jotka toivat Freetowniin lisää vapaita afroamerikkalaisia asukkaita vuosikymmenten kuluessa.',
+          tiedosto: 'Paul Cuffee.jpg',
+          lyhyt: 'Kapteeni Paul Cuffeen muotokuva vuodelta 1812, taustalla hänen laivansa.',
+          selite:
+            'Vanha kaiverrus näyttää mustana siluettina kapteeni Paul Cuffeen pään ja hartiat koristeellisen kehyksen sisällä; kehyksen alaosassa on kuva kaksimastoisesta purjelaivasta rannikon edustalla.',
+          lahde: 'Mason & Maas, Wikimedia Commons (Public domain)',
+          wiki: 'Paul Cuffe',
+        },
+        {
+          otsikko: 'Orjalaivasta piispaksi',
+          teksti:
+            'Noin 12-vuotias joruba-poika Ajayi joutui fulani-ratsastajien vangiksi 1821 ja myytiin portugalilaisille orjakauppiaille. Ennen kuin laiva ehti lähteä Amerikkaan, brittilaivaston alus pysäytti sen ja vapautti kaikki matkustajat; poika tuotiin Freetowniin, kastettiin nimellä Samuel Ajayi Crowther ja hänestä tuli Fourah Bay Collegen ensimmäinen oppilas. Vuonna 1864 hänet vihittiin ensimmäiseksi afrikkalaiseksi anglikaanipiispaksi. Isoisän matkavuonna 1873 Crowther oli jo tunnettu Nigerin piispa, joka oli kääntänyt Raamattua joruban kielelle — entinen orjalaivan matkustaja, josta oli tullut kirkon johtaja.',
+          tiedosto: 'Bishop Samuel Ajayi Crowther.png',
+          lyhyt: 'Piispa Samuel Ajayi Crowtherin muotokuva, entisen orjalaivan matkustajan.',
+          selite:
+            'Vanha kaiverrus esittää silmälasipäistä, tummaihoista miestä pappispuvussa ja valkoisessa kauluksessa — piispa Samuel Ajayi Crowtherin, joka lapsena vapautettiin orjalaivalta.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Samuel Ajayi Crowther',
+        },
+      ],
+    },
+  ],
+  appalakit: [
+    {
+      id: 'kaupunki',
+      nimi: 'Appalakit',
+      johdanto:
+        'Appalakit ovat Pohjois-Amerikan itälaidan ikivanha vuorijono, joka kohosi kauan ennen dinosauruksia ja kului metsäisiksi, pyöreiksi harjanteiksi. Isoisän matkavuonna 1873 ne olivat yhä harvaan asuttua rajaseutua.',
+      nostot: [
+        {
+          otsikko: 'Vuoret jotka olivat jo vanhoja ennen dinosauruksia',
+          teksti:
+            'Appalakkien tarina alkoi jo lähes miljardi vuotta sitten mannerten yhteentörmäyksissä: viimeisin niistä, noin 270 miljoonaa vuotta sitten tapahtunut Alleghenyn vuorenpoiminta, syntyi kun Pohjois-Amerikka ja Afrika törmäsivät toisiinsa ja kohottivat kertaalleen Himalajan veroisia huippuja. Sen jälkeen 240 miljoonaa vuotta vesi, tuuli, jää ja painovoima ovat kuluttaneet piikit pyöreiksi selänteiksi. Puiden ilmaan päästämä isopreeni verhoaa rinteet vielä tänäkin päivänä siniseen usvaan, josta Blue Ridge -vuoret saivat aikoinaan nimensä.',
+          tiedosto: 'View of Blue Ridge Mountains from Sassafras Mountain, Pickens County SC 20160701 1.jpg',
+          lyhyt: 'Appalakkien metsäiset harjanteet häviävät siniseen usvaan Sassafras-vuorelta katsottuna.',
+          selite:
+            'Valokuva näyttää Appalakkien peräkkäisiä metsäisiä harjanteita, jotka häviävät kauempana sinertävään usvaan – juuri sellaiseen, jonka puiden vapauttama isopreeni saa aikaan.',
+          lahde: 'DXR, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Appalachian Mountains',
+        },
+        {
+          otsikko: 'Vuorijono joka ulottuu mantereen halki',
+          teksti:
+            'Appalakit venyvät lähes 3 300 kilometrin matkan Alabaman eteläosista aina Newfoundlandin saarelle Kanadaan asti ja halkovat matkallaan kymmeniä osavaltioita ja provinsseja. Vuorijonon korkein huippu, Pohjois-Carolinassa kohoava Mount Mitchell, yltää 2 037 metriin merenpinnasta, mikä tekee siitä koko Mississippi-joen itäpuolisen Yhdysvaltain korkeimman kohdan. Huipulle vievää polkua reunustavat tummat kuuset ja vanha lautaportti, ja selkeällä säällä näköala kantaa kymmenien kilometrien päähän toisiin poimuisiin selänteisiin.',
+          tiedosto: 'Panorama on the Mount Mitchell Summit Trail (March 2023).jpg',
+          lyhyt: 'Näköalapolku Mount Mitchellin huipulla, Appalakkien korkeimmalla kohdalla.',
+          selite:
+            'Kuva näyttää Mount Mitchellin huipulle vievän polun vanhaa lautaporttia ja tummia kuusia, joiden takaa avautuu laaja, usvainen näkymä ympäröiviin vuoriin.',
+          lahde: 'DiscoA340, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Mitchell',
+        },
+        {
+          otsikko: 'Enemmän puulajeja kuin koko Euroopassa',
+          teksti:
+            'Appalakkien vuorimetsät kuuluvat maailman monimuotoisimpiin lauhkean vyöhykkeen metsiin: eteläisillä rinteillä kasvaa enemmän puulajeja kuin koko Euroopan mantereella, ja alueelta tunnetaan lähes 10 000 eliölajia. Korkeimmilla huipuilla kuusi- ja pihtakuusimetsät muistuttavat kaukaista Kanadaa, ja niiden vihreiden latvusten seassa seisoo usein harmaita, lehdettömiä pystyyn kuolleita runkoja. Puron- ja lähdevesissä piileskelee myös maailman lajirikkain salamanteriyhteisö, joka viihtyy juuri tällaisessa kosteassa vuoristometsässä.',
+          tiedosto: 'Blue Ridge with spruce-fir forest (Great Smoky Mountains, Tennessee, USA) 1.jpg',
+          lyhyt: 'Kuusi- ja pihtakuusimetsää vuorenrinteellä osana Appalakkien monimuotoista metsää.',
+          selite:
+            'Kuva näyttää havumetsäistä vuorenrinnettä, jossa vihreiden puiden seassa seisoo harmaita, lehdettömiä pystyyn kuolleita runkoja kirkasta taivasta vasten.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Appalachian mixed mesophytic forests',
+        },
+        {
+          otsikko: 'Joki joka on vanhempi kuin vuoret ympärillään',
+          teksti:
+            'New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.',
+          tiedosto: 'New River Gorge Bridge Overlook.jpg',
+          lyhyt: 'New River Gorge -silta kaartuu syvän, metsäisen kanjonin yli Länsi-Virginiassa.',
+          selite:
+            'Kuva näyttää New Riverin kanjonin ylhäältä käsin: joki kimmeltää kapeana nauhana laakson pohjalla, ja oikealla kaartuu teräksinen New River Gorge -silta metsäisten rinteiden yllä.',
+          lahde: 'Gabor Eszes (UED77), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'New River (Kanawha River tributary)',
+        },
+        {
+          otsikko: 'Mustakarhu, vuorten oma tunnuseläin',
+          teksti:
+            'Appalakkien metsät ovat Pohjois-Amerikan mustakarhun vahvinta aluetta, ja etenkin Great Smoky Mountainsin kansallispuistossa karhutiheys kuuluu koko maanosan suurimpiin. Kesän ja syksyn mittaan karhut kiipeävät villimarjapensaisiin ja jopa puiden latvoihin syömään kirsikoita ja muita marjoja ennen talviunta, ja nuori karhu saattaa viettää tunteja yhden puun oksistossa täyttäen vatsaansa. Karhusta on tullut koko vuoriston tunnuseläin: sen kuva koristaa puistojen opasteita, ja moni turisti tulee kauas nähdäkseen villin karhun luonnossa.',
+          tiedosto: 'Bear in Cherry Tree - Flickr - Kevin Crosby.jpg',
+          lyhyt: 'Nuori mustakarhu kiipeää marjaiseen kirsikkapuuhun Great Smoky Mountainsissa.',
+          selite:
+            'Kuva näyttää nuoren mustakarhun kiipeämässä marjaiseen puuhun, ympärillään tuuheat lehdet ja punaiset kirsikanmarjat, joita se syö.',
+          lahde: 'Kevin Crosby, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'American black bear',
+        },
+        {
+          otsikko: 'Yhdysvaltain suosituin kansallispuisto',
+          teksti:
+            'Sumuiset harjanteet kuuluvat Great Smoky Mountains -kansallispuistoon, joka ulottuu Tennesseen ja Pohjois-Carolinan puolelle Appalakkien Blue Ridge -vyöhykkeellä. Puisto on Yhdysvaltain kansallispuistoista kävijämäärältään ylivoimaisesti suosituin: se houkuttelee vuosittain yli 11 miljoonaa kävijää, moninkertaisesti enemmän kuin mikään muu maan kansallispuisto. Suosion taustalla on muun muassa maksuton sisäänpääsy sekä sijainti alle päivämatkan päässä yli puolesta Yhdysvaltain väestöstä, minkä vuoksi sumuiset harjanteet täyttyvät retkeilijöistä etenkin kesäisin ja syksyn ruskassa.',
+          tiedosto:
+            'View of Great Smoky Mountains from Crest of Newfound Gap Road, Great Smoky Mountains National Park at North Carolina-Tennessee Border (5810389499).jpg',
+          lyhyt: 'Sumuiset metsäharjanteet Great Smoky Mountainsissa, USA:n suosituimmassa kansallispuistossa.',
+          selite:
+            'Kuva näyttää sumuisia, tiheän lehtimetsän peittämiä vuorenharjanteita Newfound Gap Roadin varrelta Great Smoky Mountainsin kansallispuistossa.',
+          lahde: 'Ken Lund, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Great Smoky Mountains National Park',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Cumberlandin sola ja vuorten kansa',
+      johdanto:
+        'Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.',
+      tehtava: {
+        kysymys:
+          'Kuka johti vuonna 1775 miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun siirtokuntalaisille kulkukelpoiseksi tieksi?',
+        vaihtoehdot: ['Thomas Walker', 'Daniel Boone', 'Nathaniel Langford', 'David Ansted'],
+        oikea: 1,
+        fakta:
+          'Transylvania-yhtiö palkkasi erämies Daniel Boonen vuonna 1775 raivaamaan Cumberlandin solan läpi kulkevasta polusta Erämaantien, jota pitkin tuhannet uudisasukkaat kulkivat Kentuckyyn.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sola joka avasi tien länteen',
+          teksti:
+            'Appalakkien läpi kulkeva matala solakohta oli alkuperäiskansojen ja bisonilaumojen vuosisatoja käyttämä reitti, mutta virginialainen lääkäri ja tutkimusmatkailija Thomas Walker toi sen siirtokuntien tietoisuuteen retkikuntansa mukana vuonna 1750. Walker nimesi solan Cumberlandin herttuan mukaan, joka oli Britannian kuningas Yrjö II:n poika. Vuorijonon molemmin puolin kohoavat jyrkät harjanteet tekivät sivummalta kulkemisen lähes mahdottomaksi, joten juuri tästä kapeasta aukosta tuli 1700-luvun lopulla koko Kentuckyyn suuntautuvan liikenteen solmukohta.',
+          tiedosto: 'Cumberland Gap Pinnacles Overlook 2025a.jpg',
+          lyhyt: 'Näkymä Cumberlandin solaan Pinnacles-näköalapaikalta, josta Thomas Walker sen löysi 1750.',
+          selite:
+            'Kuva näyttää näkymän Pinnacles-näköalapaikalta alas Cumberlandin solaan ja sen tuntumassa kasvavaan pikkukaupunkiin, jota ympäröivät metsäiset vuorenharjanteet.',
+          lahde: 'Antony-22, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cumberland Gap',
+        },
+        {
+          otsikko: 'Daniel Boone raivaa Erämaantien',
+          teksti:
+            'Vuonna 1775 Transylvania-yhtiö palkkasi metsästäjä ja erämies Daniel Boonen johtamaan miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun kulkukelpoiseksi reitiksi siirtokuntalaisille. Reitti sai nimen Erämaantie, ja 1790-luvulle tultaessa sitä oli levennetty niin, että sitä pitkin pääsivät kulkemaan jo hevoskärrytkin. Aikalaismaalauksissa Boone kuvataan usein oppaana, joka johdattaa hevosen kyydissä matkaavia naisia ja aseistautuneita miehiä kapean, kivisen vuorisolan läpi kohti tuntematonta Kentuckya.',
+          tiedosto: 'George Caleb Bingham - Daniel Boone escorting settlers through the Cumberland Gap.jpg',
+          lyhyt: 'Binghamin 1850-luvun maalaus Daniel Boonesta johtamassa siirtokuntalaisia solan läpi.',
+          selite:
+            'Maalauksessa Daniel Boone johtaa hevosen kyydissä istuvaa naista sekä aseistautuneita miehiä ja koiraa kapean, kivisen vuorisolan läpi kohti Kentuckya.',
+          lahde: 'George Caleb Bingham, Wikimedia Commons (Public domain)',
+          wiki: 'Daniel Boone',
+        },
+        {
+          otsikko: 'Kaksisataatuhatta kulkijaa',
+          teksti:
+            'Ennen vuotta 1810 Cumberlandin solan läpi arvioidaan vaeltaneen 200 000–300 000 eurooppalaista uudisasukasta matkalla kohti Kentuckyn ja Ohionjokilaakson uusia asuinsijoja. Aikakauden reittikartta paljastaa, miten Erämaantie yhtyi solan tuntumassa Suureen laaksotiehen, joka jatkui aina Philadelphiaan asti – näin syntyi yhtenäinen kulkuväylä itärannikolta Kentuckyn erämaahan asti. Suurin osa kulkijoista matkasi jalan tai hevosen selässä, sillä polku oli pitkään liian kapea ja kivikkoinen raskaalle rahtiliikenteelle.',
+          tiedosto: 'NPS cumberland-gap-wilderness-road-map.jpg',
+          lyhyt: 'Kartta Erämaantiestä ja Suuresta laaksotiestä, jotka veivät uudisasukkaat Kentuckyyn.',
+          selite:
+            'Kartassa punainen viiva kuvaa Erämaantietä Cumberlandin solan kautta Kentuckyyn ja violetti viiva Suurta laaksotietä, joka jatkuu aina Philadelphiaan asti.',
+          lahde: 'U.S. National Park Service / National Park Maps, Wikimedia Commons (Public domain)',
+          wiki: 'Wilderness Road',
+        },
+        {
+          otsikko: 'Vuorten eristäytynyt kansa',
+          teksti:
+            'Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.',
+          tiedosto:
+            'Log Cabin, Humpback Rocks Pioneer Farm, Bldg No. 279 (cd54fcc1c5aa43f2a7f0770ba2a3f90d).tif',
+          lyhyt: 'Yksihuoneinen hirsimökki kivipiipuineen Blue Ridge Parkwayn Humpback Rocksin tilalla.',
+          selite:
+            'Arkistokortin valokuvassa näkyy pieni, kattopäreillä katettu hirsimökki kivisine piippuineen ja kuistin katoksineen, tyypillinen 1800-luvun vuoristoasumus.',
+          lahde: 'F. A. Ketterson Jr. / National Park Service, Wikimedia Commons (Public domain)',
+          wiki: 'Appalachia',
+        },
+        {
+          otsikko: 'Hiili nousee vuoren uumenista',
+          teksti:
+            'Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.',
+          tiedosto: 'Coal miner (Polish). Capels, West Virginia.jpg',
+          lyhyt: 'Hiilikaivosmies nojaa aitaan kaivoskylässä Länsi-Virginiassa, kasvot nokeen mustuneina.',
+          selite:
+            'Kuva näyttää hymyilevän kaivosmiehen, jonka kasvot ovat mustuneet hiilipölystä ja jonka kypärässä on karbidilamppu; taustalla erottuu kaivoskylän puutaloja.',
+          lahde: 'Marion Post Wolcott, Wikimedia Commons (Public domain)',
+          wiki: 'Coal mining in the United States',
+        },
+      ],
+    },
+  ],
 };
