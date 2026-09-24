@@ -724,8 +724,12 @@ namespace Matkakirja.Natiivi
 
         public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus);
 
-        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null) =>
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
+        {
+            // Laitetestien jälki: keksintöjen loppukamera jäi iPadilla ajamatta (24.9.), syy selvitettävä.
+            Kirjaa($"kamera-ajo → {kohde} {kestoS:F1} s (nyt {Kamera})");
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null, pehmennys);
+        }
 
         /// <summary>
         /// Pelin oma loitonnuksen katto on jo koko pallo (PalloKierto.MaxKorkeus),
