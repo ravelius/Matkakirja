@@ -395,10 +395,11 @@ namespace Matkakirja.Linssit.Radio
                 kartta.NaytaVain(OmatNapit ? (ICollection<string>)Array.Empty<string>() : nakyvat);
                 kartta.KaupunkiNapautettu += SoitaKaupunki;
             }
+            // Mastot ennen nappeja: UI lukee MastoLista-koon napin osuma-alueen nostoon.
+            AvaaMastot();
             NapitMuuttuivat?.Invoke();
             if (viritin != null) viritin.Voimakkuus = aani;
             AsetaHiljaa();
-            AvaaMastot();
         }
 
         public void Sulje()

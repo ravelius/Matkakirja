@@ -1113,12 +1113,17 @@ namespace Matkakirja.Natiivi
         sealed class Nappi : VisualElement
         {
             public RadioNappi Tieto;
+            /// <summary>Radiouudistus: masto on kohde, nappi vain osuma-alue (ei piirretä rengasta eikä kolmiota).</summary>
+            public bool Mastona;
+            /// <summary>Maston puoliväli ruudulla (pt kannasta ylöspäin), Mastot.KorkeusPt / 2.</summary>
+            public float Nosto;
+            public Label Nimi;
             public Nappi() { generateVisualContent += Piirra; }
 
             void Piirra(MeshGenerationContext mgc)
             {
                 var d = Tieto;
-                if (d == null) return;
+                if (d == null || Mastona) return;
                 var p = mgc.painter2D;
                 var c = new Vector2(Laatikko / 2f, Laatikko / 2f);
                 if (d.Soi)
@@ -1207,8 +1212,24 @@ namespace Matkakirja.Natiivi
                     juuri.Add(n);
                     napit[d.Kaupunki] = n;
                 }
-                bool muuttui = n.Tieto == null || n.Tieto.Soi != d.Soi || n.Tieto.OnKanava != d.OnKanava;
+                bool mastona = linssi?.Mastot3D != null;
+                bool muuttui = n.Tieto == null || n.Tieto.Soi != d.Soi || n.Tieto.OnKanava != d.OnKanava || n.Mastona != mastona;
                 n.Tieto = d;
+                n.Mastona = mastona;
+                if (mastona)
+                {
+                    var masto = linssi.MastoLista.FirstOrDefault(m => m.Id == d.Kaupunki);
+                    n.Nosto = masto == null ? 0f : (float)Mastot.KorkeusPt(masto.Koko) / 2f;
+                    // Valitun maston nimi sen vieressä (suunnitelma luku 4).
+                    if (n.Nimi == null)
+                    {
+                        n.Nimi = Rakenne.Teksti((linssi.Kaupunki(d.Kaupunki)?.Nimi ?? d.Kaupunki).ToUpperInvariant(), "mk-radionappi__nimi", n);
+                        n.Nimi.pickingMode = PickingMode.Ignore;
+                        Kirjasimet.Aseta(n.Nimi, Kirjasin.KoneLihava);
+                    }
+                    n.Nimi.style.display = d.Soi ? DisplayStyle.Flex : DisplayStyle.None;
+                }
+                else { n.Nosto = 0f; if (n.Nimi != null) n.Nimi.style.display = DisplayStyle.None; }
                 n.tooltip = d.OnKanava ? "Soita " + d.Kaupunki : d.Kaupunki;
                 if (muuttui) n.MarkDirtyRepaint();
                 // Soiva päällimmäiseksi, jotta hehku ei jää naapurin alle.
@@ -1233,7 +1254,7 @@ namespace Matkakirja.Natiivi
                 if (!piste.HasValue) { if (n.style.visibility.value != Visibility.Hidden) n.style.visibility = Visibility.Hidden; continue; }
                 var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y));
                 n.style.left = p.x - Laatikko / 2f;
-                n.style.top = p.y - Laatikko / 2f;
+                n.style.top = p.y - Laatikko / 2f - n.Nosto;
                 if (n.style.visibility.value != Visibility.Visible) n.style.visibility = Visibility.Visible;
             }
         }
