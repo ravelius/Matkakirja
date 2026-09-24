@@ -589,7 +589,8 @@
 }
 
 /* Maan kortti auki (web body.infotaulu-auki): Liiku väistyy. */
-.mk-liiku--vaistyy {
+/* Nappiin eikä kääreeseen: kääreen opacity on Rakenne.Naytan inline-arvo, joka voittaa luokan. */
+.mk-liiku--vaistyy .mk-liiku__nappi {
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.18s;
