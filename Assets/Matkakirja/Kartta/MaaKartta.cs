@@ -303,6 +303,8 @@ namespace Matkakirja
             kuori.sharedMaterial.renderQueue = materiaali.renderQueue + jonoLisa;
             kuori.sharedMaterial.SetTexture("_Tunnus", tunnukset);
             kuori.sharedMaterial.SetTexture("_Paletti", paletti);
+            // Raja 1 laitepikseli kuten webin polygonStrokeColor (ei Pistekerrointa).
+            kuori.sharedMaterial.SetFloat("_ReunaLeveys", 0.5f);
             bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
             kuori.sharedMaterial.SetVector("_Alue", rj ? new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y)
                                                        : new Vector4(-180, 90, 360, 180));
