@@ -429,7 +429,7 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | "mittari" (laitemittari) | index.html:244, main.js:2172 | Kartta/KehysMittari.cs (ei kytkintä) | KOKEET | NS |
 | "pallolauta" (piilossa) | index.html:261, main.js:2188 | – | ei tarvita | – |
 | "Raamattu" | index.html:338, main.js:2325, lehti.js avaaRaamattuLehti | UI/Lehti/Tyohuone.cs AvaaRaamattu (Paavalikko KOKEET; muokkauskentät + Lähetä muutokset; Aarteet ja Pelit taulukkona) | KOKEET: on (master) | NUI |
-| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat), Poiminnat, Grafiikka, Musiikki (master) ja Lukijoilta (merge-pyynnössä natiivi-ui/lukijoilta, UI/Lehti/Lukijoilta.cs); Tilastot odottaa Siirtosepän TILASTOT-vientiä; Lukijaääni = PK:n säädin (rivi alla) | KOKEET: osittain | NUI, PK |
+| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat), Poiminnat, Grafiikka, Musiikki, Lukijoilta (master; kuratointiavain vain muistissa, Keychain tilattu PK:lta) ja Tilastot (merge-pyynnössä natiivi-ui/tilastot, UI/Lehti/Tilastot.cs, Siirtosepän kokoelma tyohuonetilastot 1.28); Lukijaääni = PK:n säädin (rivi alla) | KOKEET: osittain (vain Lukijaääni puuttuu) | NUI, PK |
 | Syötekoe: Oletus / Kosketus suoraan / Yhteinen kello / Molemmat / Paljas kartta / Paljas + nimiöt / + symbolit / + DOM-kerrokset | index.html:409, main.js:749, piirtokoe-asetus.js:50–107 | puuttuu | KOKEET | NS |
 | Kerrokset paljaan kartan päälle (9 kytkintä) | index.html:417, main.js:792, piirtokoe-asetus.js:128–136 | puuttuu | KOKEET | NS |
 | Kehysprofiili | main.js:812 | KehysMittari.cs (ei kytkintä) | KOKEET | NS |
@@ -505,6 +505,12 @@ matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + 
 vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
 Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
 
+## Tehty (päivitys 24.9.2026 klo 5.05, Natiivi-UI)
+
+Lukijoilta masterissa; Fablen vaatimuksesta kuratointiavain pois PlayerPrefsistä (vain muisti, iOS Keychain -liitäntä
+tilattu Pelikoodarilta). Merge-pyynnössä: Tilastot (Mantereet, Luvut, Kiintiöt) ja diagnostiikka `ui peitteet`
+(Linssisepän sininen koko ruudun sävy linssien aikana, selvitys kesken).
+
 ## Tehty (päivitys 24.9.2026 klo 4.57, Natiivi-UI)
 
 Masterissa: KOKEET-työhuone (Raamattu taulusivuineen, Kehittäjälehden Tilannelehti, Poiminnat, Grafiikka ja
@@ -545,7 +551,7 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 klo 4.57, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 5.05, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
