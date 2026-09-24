@@ -106734,7 +106734,7 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Neljä jättiläissaukkoa nousemassa rantatörmälle juurakon seassa.',
           selite:
             'Kuvassa neljä jättiläissaukkoa kiipeää mutaista rantatörmää pitkin puiden juurien seassa, yksi vielä puolittain vedessä.',
-          lahde: 'Araguaia.org / Rio Cicica at en.wikipedia, Wikimedia Commons (CC BY 3.0)',
+          lahde: 'Rio Cicica, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Giant otter',
         },
         {
