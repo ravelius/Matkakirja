@@ -17,6 +17,10 @@
 //              nimirivia: siirtyma (liuku uudelle asemalle nykäyksittäin,
 //              1,25 s), haku (pieni edestakainen liike 2,8 s) ja lukittuu
 //              (0,32 s ylitys ja paluu). Vähennetty liike: ei liikettä.
+//   mittari    VU-mittari (Linssisepän VuMittariNakyma, RadioLinssi.Mittari; BUILD 7, omistaja 24.9.2026):
+//              webin v267 .radio-mittari 80 × 57 — leveällä kotelon vasemmassa laidassa keskiön rinnalla,
+//              kapealla (web ≤ 765 px) keskiö omalla rivillään ja mittari sen alla vasemmalla. Asteikko
+//              piirretään kerran, neula kääntyy muunnoksella (ei repaintia).
 //   linkki     (hybridimalli) aseman nimi ja "Avaa aseman sivu" →
 //              Application.OpenURL(RadioTila.Sivu), vain Vaihe Linkki
 //
@@ -58,6 +62,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement juuri, kotelo, lasi, asteikko, nauha, viisari, linkkiRivi;
         readonly Pistenaytto naytto;
         readonly RadioLamppu lamppu;
+        readonly VisualElement keskio;
+        readonly VuMittariNakyma vu;
         readonly Label linkkiNimi;
         readonly Button avaaSivu;
         readonly List<Label> paikat = new List<Label>();
@@ -102,7 +108,13 @@ namespace Matkakirja.Natiivi
             Rakenne.Tausta(kotelo, Puu);
             var varjo = Rakenne.El("mk-radio__varjo", kotelo, PickingMode.Ignore);
             Rakenne.Tausta(varjo, Kuviot.Pysty("radio-varjo", new Color(0, 0, 0, 0), new Color(0.05f, 0.03f, 0.01f, Pistenaytto.Peitto(0.32f, Color.black, new Color(0.5f, 0.45f, 0.35f)))));
-            var keskio = Rakenne.El("mk-radio__keskio", kotelo, PickingMode.Ignore);
+            keskio = Rakenne.El("mk-radio__keskio", kotelo, PickingMode.Ignore);
+            vu = VuMittariNakyma.Luo(() => linssi?.Mittari);
+            vu.AddToClassList("mk-radio__vu");
+            // Web v267 ≤ 800 px: 80 × 57 (elementin oma inline-koko on 112 × 80; piirros skaalautuu leveyden mukaan).
+            vu.style.width = 80f;
+            vu.style.height = 57f;
+            kotelo.Add(vu);
 
             // Näyttö ja merkkivalo.
             var rivi = Rakenne.El("mk-radio__nayttorivi", keskio, PickingMode.Ignore);
@@ -212,6 +224,8 @@ namespace Matkakirja.Natiivi
                 levea = uusiLevea;
                 juuri.EnableInClassList("mk-radio--levea", levea);
                 lamppu.Halkaisija = levea ? 26f : 22f;
+                // Web v267: mittari kotelon vasempaan laitaan; kapealla keskiön alle (toinen rivi).
+                if (levea) vu.PlaceBehind(keskio); else vu.PlaceInFront(keskio);
                 Asettele();
             }
             if (uusiPuoli != perPuoli)
