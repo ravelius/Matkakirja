@@ -4435,3 +4435,7 @@ Sisältökirjuri poisti 13 worktreetä, Natiiviseppä vanhat Build-kansiot (5,8 
 ## LEVY 82 Gt VAPAATA, wt/ 21 (TAVOITE < 20); KARTTASEPPA POISTI 7 (JALJELLA e28-ajo); NATIIVISEPALLA 9 → POSTIVAHTI PYYSI POISTOT (24.9.2026 klo 18.48)
 
 Aluenimet-worktree poistettu, haara pushattu (#3100). Saapuminen ja siirtokohteet säilyvät.
+
+## OMISTAJA klo 19.0x (SITOVA): SAVUKEJONO PERUTTU BUILD 10:N TIELTA (KORTTI); LOYDOS 43: RADIOLINSSISSA KAIKKI MAAT NAKYVIIN ILMAN HUNTUA (24.9.2026 klo 18.52)
+
+Peruttu: Siirtosepän savuke 36004651653 (ajossa) ja jonosta 36021034498, 36015739323, 36014078994, 36012521720, 36010732919, 36001610202 — Julkaisija ajaa uudelleen build 10:n jälkeen; myös Julkaise peli 36020424867 oli peruttu. Löydös 43: natiivin radiolinssissä muut maat harmaan hunnun alla, webissä koko kartta näkyy → Linssiseppä poistaa hunnun radiolinssistä ja tarkistaa muut linssit linssikohtaisesti webin mukaan, build 11. Levy 82 Gt, wt/ 21.
