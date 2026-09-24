@@ -20,6 +20,9 @@
 //                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
 //   ui skaala piste|viite|auto                UI-skaala: iOS-pisteet (iPadin oletus, 1 yksikkö = web CSS-px), puhelimen
 //                                             viiteruutu 393 × 852 tai automaattinen; kirjaa paneelin leveyden
+//   ui napauta x y                            napautus UI Toolkitiin paneelin pisteessä (UI-yksiköt = iPadilla pt):
+//                                             poiminta ylimmästä kerroksesta alkaen (sama polku kuin sormella:
+//                                             rajauslaatikko + ContainsPoint), PointerDown ja PointerUp osumaan; kirjaa osuman
 //   ui peitteet [osuus]                       lokiin näkyvät UI-elementit, jotka peittävät vähintään osuuden (oletus 0,5)
 //                                             ruudusta ja piirtävät jotain (tausta, kuva, reuna): kerros, luokat, tehollinen
 //                                             läpinäkyvyys, taustaväri ja kuva (koko ruudun sävyn etsintä)
@@ -287,6 +290,27 @@ namespace Matkakirja.Natiivi
             Kirjaa("peitteet: " + n + " elementtiä (osuus ≥ " + osuus.ToString("0.00", CultureInfo.InvariantCulture) + ")");
         }
 
+        /// <summary>Testinapautus paneelin pisteeseen: ylin kerros, jonka poiminta osuu (ei juuri), saa Down + Up.</summary>
+        static string Napauta(Vector2 piste)
+        {
+            foreach (var (kerros, juuri) in UiKerros.Hae().Juuret.OrderByDescending(x => x.Kerros))
+            {
+                var paneeli = juuri?.panel;
+                if (paneeli == null || juuri.resolvedStyle.display == DisplayStyle.None) continue;
+                var osuma = paneeli.Pick(piste);
+                if (osuma == null || osuma == juuri) continue;
+                // Tapahtuma samalla pisteellä kuin sormi: IMGUI-tapahtumasta, kohde = poimittu elementti.
+                var alas = new Event { type = EventType.MouseDown, mousePosition = piste, button = 0, clickCount = 1 };
+                var ylos = new Event { type = EventType.MouseUp, mousePosition = piste, button = 0, clickCount = 1 };
+                using (var e = PointerDownEvent.GetPooled(alas)) { e.target = osuma; osuma.SendEvent(e); }
+                using (var e = PointerUpEvent.GetPooled(ylos)) { e.target = osuma; osuma.SendEvent(e); }
+                var nappi = osuma as Button ?? osuma.GetFirstAncestorOfType<Button>();
+                return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): kerros {2}, osuma [{3}]{4}", piste.x, piste.y, kerros,
+                    string.Join(".", osuma.GetClasses()), nappi != null && nappi != osuma ? ", nappi [" + string.Join(".", nappi.GetClasses()) + "]" : "");
+            }
+            return string.Format(CultureInfo.InvariantCulture, "napauta ({0:0.#}, {1:0.#}): ei osumaa UI:ssa (pallolle)", piste.x, piste.y);
+        }
+
         void Kirjaa(string teksti)
         {
             Debug.Log("MATKAKIRJA ui-komento: " + teksti);
@@ -441,6 +465,14 @@ namespace Matkakirja.Natiivi
                     j.schedule.Execute(() => Kirjaa("skaala: " + (UiKerros.Pisteskaala ? "piste ×" + UiKerros.PikseliaPisteessa : "viite")
                         + ", tabletti " + UiKerros.Tabletti + ", paneeli " + j.layout.width.ToString("0", CultureInfo.InvariantCulture) + " × "
                         + j.layout.height.ToString("0", CultureInfo.InvariantCulture))).StartingIn(100);
+                    return null;
+                }
+                case "napauta":
+                {
+                    var nk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (nk.Length < 2 || !float.TryParse(nk[0], NumberStyles.Float, CultureInfo.InvariantCulture, out var nx)
+                        || !float.TryParse(nk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var ny)) return "käyttö: ui napauta x y";
+                    Kirjaa(Napauta(new Vector2(nx, ny)));
                     return null;
                 }
                 case "peitteet":
