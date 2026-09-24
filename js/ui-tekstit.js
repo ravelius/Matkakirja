@@ -1,6 +1,8 @@
 // Käyttöliittymän kiinteät tekstit, jotka myös natiivi lukee sisältöpaketista
 // (tools/vienti/lahteet.mjs). js/ui.js tuo nämä; teksti muutetaan vain täällä.
 
+import { MAAILMA } from './packs/maailma.js';
+
 /*
  * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
  * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
@@ -48,6 +50,14 @@ export const INTRO_VALINTA = 'Valitse aloituskaupunki';
  * varassa eikä ole osa INTRO_TEXTiä.
  */
 export const INTRO_PAIKKA = 'Heathrow, Lontoo';
+
+/*
+ * AVAUSLENNON RUUTUTEKSTI (natiivi: sisältöpaketin ui-tekstit, Natiivi-UI
+ * 24.9.2026). Lähde on laudan texts.flightFirst (js/packs/maailma.js), jonka
+ * tools/generoi-avaus.mjs LENTO_RUUTU pitää samana kuin luenta
+ * puhe-lento-alku.mp3. Tässä vain uudelleenvienti, ei omaa tekstiä.
+ */
+export const FLIGHT_FIRST = MAAILMA.texts.flightFirst;
 
 /*
  * PERIAATTEET-LAPPU ("Oppiminen on hauskaa", js/ui.js naytaPeriaatteet).

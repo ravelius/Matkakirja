@@ -41,6 +41,16 @@
  * worker/ehdotukset/pro.js). Origin-portti on sama kuin
  * ehdotusworkerissa: pelin oma origin tai localhost.
  *
+ * NATIIVIPORTTI (23.9.2026): natiivi iOS-peli (Unity, UnityWebRequest)
+ * ei lähetä Originia. Se pääsee sisään, kun Origin PUUTTUU ja otsake
+ * `x-matkakirja-natiivi` kantaa sallitun bundle id:n, joka esiintyy
+ * myös User-Agentissa (`Matkakirja/<versio> (<bundle id>)`). Sama malli
+ * kuin pöllöworkerissa (tools/pollo/rajat.js). Sallitut tunnisteet:
+ * ympäristömuuttuja SAHKE_NATIIVIT (pilkkulista) tai oletus
+ * NATIIVIT_OLETUS. Natiivi on täysi peli: kaikki reitit ovat sille
+ * auki. Väärä origin ei muutu sallituksi natiiviotsakkeella, eikä
+ * natiivi tarvitse CORS-otsakkeita eikä OPTIONS-esilentoa.
+ *
  * Logiikka on omana moduulinaan, jotta sen voi ajaa Nodessa ilman
  * wrangleria ja ilman D1:tä (tests/sahke-worker.test.mjs).
  */
@@ -145,6 +155,29 @@ export function sallittuOrigin(origin, sallitut) {
   if (!origin) return false;
   if (sallitut.includes(origin)) return true;
   return /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+}
+
+/*
+ * Natiiviportti. Kopio pöllöworkerin apufunktioista (tools/pollo/rajat.js)
+ * eikä tuonti: sähkeworker paketoidaan omasta kansiostaan, eikä sen
+ * kuulu riippua tools/-kansiosta.
+ */
+export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
+
+/** Sallitut natiivitunnisteet: SAHKE_NATIIVIT (pilkkulista) ohittaa oletuksen. */
+export function sallitutNatiivit(env) {
+  const lista = String(env?.SAHKE_NATIIVIT ?? '')
+    .split(',').map((osa) => osa.trim()).filter(Boolean);
+  return lista.length ? lista : NATIIVIT_OLETUS;
+}
+
+/** Onko pyyntö sallitusta natiivista sovelluksesta? `otsakkeet` = Headers tai get(nimi)-olio. */
+export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
+  const tunniste = String(otsakkeet?.get?.(NATIIVI_OTSAKE) ?? '').trim();
+  if (!tunniste || !lista.includes(tunniste)) return false;
+  const agentti = String(otsakkeet?.get?.('user-agent') ?? '');
+  return agentti.includes(tunniste);
 }
 
 function korsOtsakkeet(origin, sallitut) {
@@ -672,7 +705,7 @@ export async function siivoaYmparisto(env, apurit = {}) {
  * Koko workerin käsittely.
  *
  * @param {Request} pyynto pyyntö
- * @param {object} env ympäristö: SAHKE (D1), SAHKE_ORIGINIT
+ * @param {object} env ympäristö: SAHKE (D1), SAHKE_ORIGINIT, SAHKE_NATIIVIT
  * @param {object} apurit testien koukut: { nyt, varasto }
  * @returns {Promise<Response>} vastaus
  */
@@ -688,11 +721,14 @@ export async function kasittele(pyynto, env, apurit = {}) {
   }
 
   /*
-   * Kaikki reitit ovat pelin selaimesta tulevia — myös tilannekuvan
-   * luku, joka palauttaa retkikunnan yksityistä tietoa. Origin-portti
-   * on ensimmäinen lukko ja kolmikko koodi+jasenId+avain toinen.
+   * Kaikki reitit ovat pelin selaimesta tai natiivista pelistä
+   * tulevia — myös tilannekuvan luku, joka palauttaa retkikunnan
+   * yksityistä tietoa. Origin- tai natiiviportti on ensimmäinen lukko
+   * ja kolmikko koodi+jasenId+avain toinen. Natiivi hyväksytään vain
+   * ilman Originia: vieras origin ei pelasta itseään natiiviotsakkeella.
    */
-  if (!sallittuOrigin(origin, sallitut)) {
+  const natiivi = !origin && sallittuNatiivi(pyynto.headers, sallitutNatiivit(env));
+  if (!natiivi && !sallittuOrigin(origin, sallitut)) {
     return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
   }
 
