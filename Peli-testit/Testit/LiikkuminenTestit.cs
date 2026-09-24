@@ -194,6 +194,43 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(M, v.Kosketettu(), "ei vaihetta, ei muutosta");
         }
 
+        /// <summary>
+        /// Löydös 45 (web kaynnistaLuentavahti, mitattu Ateena 393×852 24.9.): Liiku piilossa koko kerronnan ajan,
+        /// myös puheenvuorojen välissä (välirauha 1300 ms), ja palaa välirauhan jälkeen; hiljainen odotus korkeintaan 30 s.
+        /// </summary>
+        [Testi] static void LiikuPiilossaKerronnanAjanKuinWeb()
+        {
+            Oleta.Sama(200, LuentaPiilo.VahtiMs);
+            Oleta.Sama(1300, LuentaPiilo.ValirauhaMs);
+            Oleta.Sama(30000, LuentaPiilo.VaraventtiiliMs);
+            var p = new LuentaPiilo();
+            Oleta.Tosi(!p.Paivita(false, false, 0), "hiljaa: näkyy");
+            Oleta.Tosi(p.Paivita(false, true, 100), "luento pyydetty (lataus): piilossa");
+            Oleta.Tosi(p.Paivita(true, true, 1000), "isoisä äänessä");
+            // Pitkä luento ei välähdä 30 s:n kohdalla (webin venttiili välähtää, natiivi ei).
+            Oleta.Tosi(p.Paivita(true, true, 40000), "yli 30 s puhetta: yhä piilossa");
+            Oleta.Tosi(p.Paivita(true, true, 47900), "luennan viimeinen sana");
+            // Isoisä vaikenee, Livia aloittaa 900 ms:n kuluttua: ei välähdystä.
+            Oleta.Tosi(p.Paivita(false, false, 48000), "välirauha alkaa");
+            Oleta.Tosi(p.Paivita(false, false, 48900), "välirauha");
+            Oleta.Tosi(p.Paivita(true, false, 48900), "Livia äänessä");
+            Oleta.Tosi(p.Paivita(true, false, 51900), "Livian viimeinen sana");
+            Oleta.Tosi(p.Paivita(false, false, 52000), "Livia vaikeni");
+            Oleta.Tosi(p.Paivita(false, false, 53199), "vielä välirauhassa");
+            Oleta.Tosi(!p.Paivita(false, false, 53200), "1300 ms: Liiku palaa");
+            Oleta.Tosi(!p.Piilossa);
+            // Ohita pysäyttää puheen: sama välirauha.
+            Oleta.Tosi(p.Paivita(true, true, 60000));
+            Oleta.Tosi(p.Paivita(false, false, 60200), "ohitettu");
+            Oleta.Tosi(!p.Paivita(false, false, 61400), "palaa ohituksen jälkeen");
+            // Jumiin jäänyt lataus: varaventtiili 30 s.
+            Oleta.Tosi(p.Paivita(false, true, 70000));
+            Oleta.Tosi(p.Paivita(false, true, 99999), "29,9 s");
+            Oleta.Tosi(!p.Paivita(false, true, 100000), "varaventtiili");
+            Oleta.Tosi(!p.Paivita(false, true, 130000), "pysyy näkyvissä samassa odotuksessa");
+            Oleta.Tosi(p.Paivita(true, true, 131000), "ääni alkoi lopulta: piiloon");
+        }
+
         [Testi] static void LaivaRiviSatamasta()
         {
             var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(3), "Fogg", "lontoo");
