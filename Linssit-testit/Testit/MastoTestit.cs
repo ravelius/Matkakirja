@@ -18,16 +18,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(MastoKoko.Keski, Mastot.Koko(2_999_999), "alle 3 milj.");
             Oleta.Sama(MastoKoko.Keski, Mastot.Koko(500_000), "raja 0,5 milj.");
             Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(130_000), "Luxemburg");
-            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(null), "puuttuva");
+            Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(null), "puuttuva (Sahara)");
+            Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(36_749_906, alue: true), "Angola: valtion luku");
         }
 
         [Testi] static void AsukkaatLuetaanKaupungeista()
         {
             var k = MiniJson.Jasenna("{\"alkiot\":[{\"id\":\"lontoo\",\"nimi\":\"Lontoo\",\"maa\":\"GBR\",\"lat\":51.5,\"lon\":-0.1,\"asukkaat\":8900000}," +
-                "{\"id\":\"bern\",\"nimi\":\"Bern\",\"maa\":\"CHE\",\"lat\":46.9,\"lon\":7.4}]}");
+                "{\"id\":\"bern\",\"nimi\":\"Bern\",\"maa\":\"CHE\",\"lat\":46.9,\"lon\":7.4},{\"id\":\"angola\",\"nimi\":\"Angola\",\"maa\":\"AGO\",\"lat\":-8.8,\"lon\":13.2,\"asukkaat\":36749906,\"asukkaatAlue\":true}]}");
             var a = RadioAineisto.Lue(null, MiniJson.Jasenna("{\"exportit\":{\"RADIOT\":{}}}"), k, null, null);
             Oleta.Sama(8_900_000L, a.Kaupungit.First(x => x.Id == "lontoo").Asukkaat, "Lontoo");
             Oleta.Tosi(a.Kaupungit.First(x => x.Id == "bern").Asukkaat == null, "Bern ilman kenttää");
+            Oleta.Sama(MastoKoko.Iso, Mastot.Koko(a.Kaupungit.First(x => x.Id == "lontoo")), "Lontoo iso");
+            Oleta.Sama(MastoKoko.Pieni, Mastot.Koko(a.Kaupungit.First(x => x.Id == "angola")), "Angola alue → pieni");
         }
 
         [Testi] static void KorkeusMitoitettu()

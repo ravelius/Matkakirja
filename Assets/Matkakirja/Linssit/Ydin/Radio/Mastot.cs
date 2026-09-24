@@ -3,7 +3,10 @@
 // Natiiviseppä piirtää mastot, vilkun, maavalon ja renkaat IRadioKartan takana, tämä kertoo mitä.
 //
 //   koko        kaupungin asukasluvusta (kaupungit.json "asukkaat", Wikidata P1082):
-//               ≥ 3 milj. Iso, 0,5–3 milj. Keski, muuten Pieni; puuttuva → Keski
+//               ≥ 3 milj. Iso, 0,5–3 milj. Keski, muuten Pieni. Puuttuva (luontokohteet kuten Sahara,
+//               Alpit) ja asukkaatAlue (luku koskee saarta tai valtiota: Angola, Madagaskar, Islanti) → Pieni:
+//               syrjäinen paikka saa pienen maston, alueen väkiluku ei kerro kaupungista (Linssiseppä 24.9.,
+//               skeema 1.38: radiokaupungeista 36 Iso, 43 Keski, 36 Pieni)
 //   vilkku      muut mastot: jakso 1,5 s ± 20 % ja vaihe aseman tunnuksesta, palaa 0,45 s, reunat 0,12 s
 //   valittu     kirkkaus = max(0,25, VU), nousu 30 ms, lasku 250 ms
 //   renkaat     uusi 1,6 s välein lukituksesta, kasvu kuuluvuussäteeseen 4,8 s käyrällä Nousu,
@@ -22,9 +25,11 @@ namespace Matkakirja.Linssit.Radio
     {
         public const long IsoRaja = 3_000_000, KeskiRaja = 500_000;
 
-        /// <summary>Kokoluokka asukasluvusta; puuttuva (skeema ennen asukkaat-kenttää) → Keski.</summary>
-        public static MastoKoko Koko(long? asukkaat) =>
-            asukkaat is long a ? (a >= IsoRaja ? MastoKoko.Iso : a >= KeskiRaja ? MastoKoko.Keski : MastoKoko.Pieni) : MastoKoko.Keski;
+        /// <summary>Kokoluokka asukasluvusta; puuttuva tai alueen (saari, valtio) luku → Pieni.</summary>
+        public static MastoKoko Koko(long? asukkaat, bool alue = false) =>
+            asukkaat is long a && !alue ? (a >= IsoRaja ? MastoKoko.Iso : a >= KeskiRaja ? MastoKoko.Keski : MastoKoko.Pieni) : MastoKoko.Pieni;
+
+        public static MastoKoko Koko(RadioKaupunki k) => Koko(k?.Asukkaat, k?.AsukkaatAlue ?? false);
 
         /// <summary>Maston korkeus ruudulla (pt) 2 600 km:n korkeudelta katsottuna.</summary>
         public static double KorkeusPt(MastoKoko k) => k switch { MastoKoko.Iso => 64, MastoKoko.Keski => 46, _ => 30 };
