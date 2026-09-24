@@ -142,6 +142,7 @@ namespace Matkakirja.Editori
             nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.025f, 0.03f, 0.035f));
             nappula.ikkunaMateriaali.SetFloat("_Metallic", 0.25f);
             nappula.ikkunaMateriaali.SetFloat("_Smoothness", 0.95f);
+            nappula.kiekkoMateriaali = Materiaali("PotkuriKiekko", "Matkakirja/PotkuriKiekko", new Color(0.30f, 0.31f, 0.33f));
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();

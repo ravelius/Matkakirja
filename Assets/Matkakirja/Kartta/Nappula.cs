@@ -64,6 +64,8 @@ namespace Matkakirja
         public Material koneMateriaali;
         [Tooltip("Raidan (Raita) ja ikkunoiden (Ikkunat) materiaalit; null = koneMateriaali.")]
         public Material raitaMateriaali, ikkunaMateriaali;
+        /// <summary>Potkurikiekko (Shaders/PotkuriKiekko, elokuvalento erä 2).</summary>
+        public Material kiekkoMateriaali;
         [Tooltip("3D-koneen koko ruudulla iOS-pisteinä (siipiväli).")]
         public float malliPx = 110f;
         public Savujana savu;
@@ -415,6 +417,8 @@ namespace Matkakirja
                         if (rajat == null) rajat = r.bounds; else { var b = rajat.Value; b.Encapsulate(r.bounds); rajat = b; }
                     }
                     if (rajat != null) malliKoko = Mathf.Max(0.01f, Mathf.Max(rajat.Value.size.x, rajat.Value.size.z));
+                    // Kiekot vasta koon jälkeen: ne ovat lapojen sisällä eivätkä saa koneen materiaalia.
+                    malli.GetComponent<Potkurit>().Kiekot(kiekkoMateriaali);
                     if (!kerrosNakyy) foreach (var mr in malli.GetComponentsInChildren<Renderer>()) mr.enabled = false;
                     Debug.Log($"MATKAKIRJA nappula: kone {malli.GetComponentsInChildren<Renderer>().Length} osaa, koko {malliKoko:0.##} m, rajat {rajat?.size}");
                 }
