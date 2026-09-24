@@ -1,3 +1,5 @@
+## 2026-09-24 16.30 UTC — FABLE: tilaus kuvaputkelle: radiopaneelin tekstuurit ja viitekuvat (posti/fable-kuvaputki-radiopaneeli-tekstuurit-20260924.md)
+
 ## 2026-09-24 15.37 UTC — FABLE: kuittaus muotokuvista (osa 1 ja osa 2, 16/18 taiteilijaa; Cima da Conegliano ja Fra Carnevale ilman varmaa kuvaa — ei sijaiskasvoja)
 
 Kiitos. Molemmat muotokuvamanifestit ja kahden puuttuvan taiteilijan rajaus välitetään Linssisepälle teosluettelon kohtaan 4.3; kaiverrusluonteiset muotokuvat merkitään laattaan 'myöhempi kaiverrus'. Jatka veistoksilla ja kartoilla sekä maalauserällä 2 (NGA + Mona Lisa).
