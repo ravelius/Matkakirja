@@ -428,8 +428,8 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | "maailma" (maailmanäkymä) | index.html:238, main.js:2166 | puuttuu | KOKEET | NS |
 | "mittari" (laitemittari) | index.html:244, main.js:2172 | Kartta/KehysMittari.cs (ei kytkintä) | KOKEET | NS |
 | "pallolauta" (piilossa) | index.html:261, main.js:2188 | – | ei tarvita | – |
-| "Raamattu" | index.html:338, main.js:2325, lehti.js avaaRaamattuLehti | UI/Lehti/Tyohuone.cs AvaaRaamattu (Paavalikko KOKEET; muokkauskentät + Lähetä muutokset); aarteiden ja kätköpelien taulusivut (tyohuone-tilastot.js raamatunTaulusivu) puuttuvat | KOKEET: osittain (merge-pyynnössä natiivi-ui/kehittajan-liite) | NUI |
-| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat) ja Poiminnat; Tilastot, Grafiikka, Lukijoilta, Musiikki ja Lukijaääni puuttuvat | KOKEET: osittain (merge-pyynnössä) | NUI, PK |
+| "Raamattu" | index.html:338, main.js:2325, lehti.js avaaRaamattuLehti | UI/Lehti/Tyohuone.cs AvaaRaamattu (Paavalikko KOKEET; muokkauskentät + Lähetä muutokset; Aarteet ja Pelit taulukkona) | KOKEET: on (master) | NUI |
+| "Kehittäjälehti": Tilannelehti, Poiminnat, Tilastot, Grafiikka, Lukijoilta, Musiikki, Lukijaääni | index.html:342, tyohuone-kehittajalehti.js | Tyohuone.AvaaKehittajalehti: Tilannelehti (Tilanne, Testattavaa, Pöllöpoiminnat), Poiminnat, Grafiikka, Musiikki (master) ja Lukijoilta (merge-pyynnössä natiivi-ui/lukijoilta, UI/Lehti/Lukijoilta.cs); Tilastot odottaa Siirtosepän TILASTOT-vientiä; Lukijaääni = PK:n säädin (rivi alla) | KOKEET: osittain | NUI, PK |
 | Syötekoe: Oletus / Kosketus suoraan / Yhteinen kello / Molemmat / Paljas kartta / Paljas + nimiöt / + symbolit / + DOM-kerrokset | index.html:409, main.js:749, piirtokoe-asetus.js:50–107 | puuttuu | KOKEET | NS |
 | Kerrokset paljaan kartan päälle (9 kytkintä) | index.html:417, main.js:792, piirtokoe-asetus.js:128–136 | puuttuu | KOKEET | NS |
 | Kehysprofiili | main.js:812 | KehysMittari.cs (ei kytkintä) | KOKEET | NS |
@@ -438,9 +438,9 @@ Kaikki tämän osion rivit puuttuvat natiivista. Pelilogiikka tuntee sähkepalkk
 | Lukijaäänen säädin: persoona, ääni, ohje, nopeus, voima, "Palauta oletus", "Kuuntele näyte", "Valmis" | index.html:1203–1243, main.js:2344–2357 | puuttuu | KOKEET | PK |
 | Kehittäjäsiirto: napautus mihin tahansa kaupunkiin | ui.js:10461 | vain tiedostokomentona (PeliKomennot.cs) | KOKEET | PK |
 | Pikatie `?dev=<kaupunki>` | kehittaja-pikatie.js | `ui aloita` (UiKomennot.cs) | KOKEET | PK |
-| Pulun "Tallenna juttuun" (kehittäjän poiminta) | pollo.js:5230, pollopoiminnat.js | PuluChat.PoimintaRivi + UI/Pulu/PoimintaVarasto.cs (laite + kanava), omat pillerit, "Poista laitteelta" / "Pyydä poistoa paketista" | KOKEET: on (merge-pyynnössä) | NUI |
+| Pulun "Tallenna juttuun" (kehittäjän poiminta) | pollo.js:5230, pollopoiminnat.js | PuluChat.PoimintaRivi + UI/Pulu/PoimintaVarasto.cs (laite + kanava), omat pillerit, "Poista laitteelta" / "Pyydä poistoa paketista" | KOKEET: on (master) | NUI |
 | Pulun kysymysehdotukset heti nykyiselle näkymälle | index.html:158 (vain kommentti), pollo.js polloGeneroiEhdotukset | – | ei tarvita (webin nappi poistettu, funktiolla ei kutsujaa) | NUI |
-| Poimintavienti "Kopioi lohko" / "Tyhjennä" | lehti.js piirraPoimintavienti | Tyohuone.Poimintavienti (Tilannelehden Pöllöpoiminnat-sivu, leikepöytä) | KOKEET: on (merge-pyynnössä) | NUI |
+| Poimintavienti "Kopioi lohko" / "Tyhjennä" | lehti.js piirraPoimintavienti | Tyohuone.Poimintavienti (Tilannelehden Pöllöpoiminnat-sivu, leikepöytä) | KOKEET: on (master) | NUI |
 | UI-, peli- ja linssikomennot (Documents/*-komento.txt) | – | UiKomennot.cs, PeliKomennot.cs, LinssiKomennot.cs | ei pelaajalle; osan (nosto, kysymys, huipennus, offline-demo) voi nostaa KOKEET-riveiksi | NUI, PK, LS |
 
 ---
@@ -505,6 +505,12 @@ matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + 
 vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
 Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
 
+## Tehty (päivitys 24.9.2026 klo 5.24, Natiivi-UI)
+
+Masterissa: KOKEET-työhuone (Raamattu taulusivuineen, Kehittäjälehden Tilannelehti, Poiminnat, Grafiikka ja
+Musiikki), pöllöpoimintojen laitevarasto ja vienti, karusellin gaussinen sumennus. Merge-pyynnössä: Lukijoilta
+(natiivi-ui/lukijoilta 7a196c7). Odottaa: Tilastot (Siirtosepän TILASTOT-vienti), Lukijaääni (PK:n säädin).
+
 ## Tehty (päivitys 24.9.2026 klo 4.47, Natiivi-UI)
 
 KOKEET-työhuone merge-pyynnössä (natiivi-ui/kehittajan-liite f017bc4): Raamattu ja Kehittäjälehti kehittäjän
@@ -539,19 +545,19 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 klo 4.47, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 5.24, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
-| Natiivi-UI | 196 | 2 | 0 | 1 | 4 |
+| Natiivi-UI | 197 | 1 | 0 | 1 | 4 |
 | Pelikoodari | 1 | 6 | 5 | 5 | – |
 | Natiiviseppä | – | 2 | 4 | 5 | – |
 | Linssiseppä | 4 | – | 1 | – | – |
 | Siirtoseppä-data | 1 | – | – | – | – |
 | (ei omistajaa) | – | – | – | 2 | 12 |
-| **Yhteensä** | **202** | **10** | **10** | **13** | **16** |
+| **Yhteensä** | **203** | **9** | **10** | **13** | **16** |
 
-Natiivi-UI:n osittaiset ovat KOKEET-työhuoneen Raamattu (taulusivut) ja Kehittäjälehti (5 riviä); jäljellä yksi KOKEET-rivi (testikomennot).
+Natiivi-UI:n ainoa osittainen on Kehittäjälehti (Tilastot odottaa Siirtosepän vientiä, Lukijaääni on PK:n säädin); jäljellä yksi KOKEET-rivi (testikomennot).
 Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
 
 - Siirtoseppä-data on toissijaisena mukana noin 20 puuttuvalla rivillä: nähtävyydet ja opas, muutosloki, liput, radiot, julisteet, tiedeliite, ihme, leikekirja, täkynostot ja syvennykset.
