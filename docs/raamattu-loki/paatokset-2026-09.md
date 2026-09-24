@@ -4067,3 +4067,7 @@ Nollaus 18. tänään. Uusi Natiivi-UI jatkaa 'Ei webissä' -päätöksistä (E1
 ## LINSSISEPPA: HUIPPUVUORET JA FINNMARK KORJATTU WEBIIN (PR #3078) — JUURISYY countryShapes LOPPUU 76° N (24.9.2026 klo 15.31)
 
 Webin pallo piirsi laudan tyylitellyt countryShapes-renkaat (loppuvat 76° N, karkeat vuonot kolmioituivat valkoisiksi); korjaus: Natural Earth 10m maapolygonit.json harvennettuna 41 000 pisteeseen, kiertosuunta korjattu; testit 4221/4221; kuvapari proto-3d/lokit/linssit-huippuvuoret-20260924/, pariteettirivi 39b. Skeeman 1.29 rajaaWebinMuotoon tarpeeton → Siirtoseppä poistaa seuraavassa skeemassa, Natiivisepälle merge-pyynnössä. Natiivin iPad-kuva laiteajolla myöhemmin.
+
+## VALINTAVIHJE iPHONELLA: AIEMPI 'WEB-BUGI' KUMOTTU — WEB ON OIKEIN (OMISTAJAN 14.9. PAATOS), NATIIVI PIILOTTAA VIHJEEN PLUSKUPLAAN KUTEN WEB (24.9.2026 klo 15.36)
+
+Pelikoodari mittasi tuotannosta: pöllönappi ei ole piilossa; vihje luodaan mutta imePuhelimenKuplaan vie sen pluskuplaan tekstitPiilossa()-portilla, joka on omistajan 14.9. klo 20.30 päätös (puhelimella isoisän ja pulun tekstit piiloon). Fable: vaihtoehto B — webiä ei muuteta; Natiivi-UI muuttaa Pulu.NaytaVihje noudattamaan tekstipiiloa (iPhone: pluskuplaan, iPad: näkyy), build 9, kuvapari. Noppa kartalle 4d3fe7a: kuvapari PASS (Laitetestaaja) → merge.
