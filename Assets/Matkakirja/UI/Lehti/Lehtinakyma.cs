@@ -114,7 +114,7 @@ namespace Matkakirja.Natiivi
             nimioYla = Rakenne.Teksti("UNOHDETTU AARRE", "mk-lehti__nimioyla", ylaosa);
             Kirjasimet.Aseta(nimioYla, Kirjasin.Kone);
             var ylarivi = Rakenne.El("mk-lehti__ylarivi", ylaosa, PickingMode.Ignore);
-            sisallysNappi = Rakenne.Nappi(null, "mk-lehti__ikoninappi", VaihdaSisallys, ylarivi, Ikonit.Valikko);
+            sisallysNappi = Rakenne.Nappi(null, "mk-lehti__ikoninappi", () => VaihdaSisallys(true), ylarivi, Ikonit.Valikko);
             sisallysNappi.tooltip = "Sisällys";
             var nimiRivi = Rakenne.El("mk-lehti__ylanimirivi", ylarivi, PickingMode.Ignore);
             ylaNimi = Rakenne.Teksti("", "mk-lehti__ylanimi", nimiRivi);
@@ -134,7 +134,7 @@ namespace Matkakirja.Natiivi
             var navi = Rakenne.El("mk-lehti__navi", alapalkki, PickingMode.Ignore);
             poistu = Rakenne.Nappi("Poistu lehdestä", "mk-lehti__poistu", Sulje, navi);
             Kirjasimet.Aseta(poistu, Kirjasin.Kone);
-            alaSisallys = Rakenne.Nappi(null, "mk-lehti__selaus mk-lehti__selaus--sisallys", VaihdaSisallys, navi, Ikonit.Valikko);
+            alaSisallys = Rakenne.Nappi(null, "mk-lehti__selaus mk-lehti__selaus--sisallys", () => VaihdaSisallys(false), navi, Ikonit.Valikko);
             alaSisallys.tooltip = "Sisällys";
             edellinen = Selausnappi("Edellinen", "mk-lehti__selaus--edellinen", () => Kaanna(nyt - 1), navi);
             seuraava = Selausnappi("Seuraava", "mk-lehti__selaus--seuraava", () => Kaanna(nyt + 1), navi);
@@ -144,15 +144,36 @@ namespace Matkakirja.Natiivi
             liite = Rakenne.Nappi("", "mk-lehti__liite", AvaaLiite, alapalkki);
             Kirjasimet.Aseta(liite, Kirjasin.Kone);
 
+            // Sisällyslevy (web .sisallys-levy): ylärivin ☰ laskee sen yläreunaan, alapalkin ☰ nostaa alareunasta.
+            // Otsikkorivi "SISÄLLYS ×", vierivä lista ja "← Palaa kartalle" aina näkyvissä levyn pohjalla.
             sisallys = Rakenne.El("mk-lehti__sisallys", arkki);
             sisallys.style.display = DisplayStyle.None;
             var so = Rakenne.El("mk-lehti__sisallysyla", sisallys, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("SISÄLLYS", "mk-lehti__sisallysotsikko", so), Kirjasin.Kone);
-            Rakenne.Nappi("×", "mk-nosto__sulje", () => sisallys.style.display = DisplayStyle.None, so);
+            Rakenne.Nappi("×", "mk-lehti__sisallyssulje", SuljeSisallys, so).tooltip = "Sulje";
             var sv = new ScrollView(ScrollViewMode.Vertical);
             sv.AddToClassList("mk-lehti__sisallysvieritys");
             sisallys.Add(sv);
             sisallysLista = sv.contentContainer;
+            sisallysLista.AddToClassList("mk-lehti__sisallyslista");
+            sisallysLista.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                // Kaksi palstaa vain leveällä (web @media max-width 560px → yksi palsta).
+                bool kaksi = e.newRect.width > 560f;
+                if (sisallysLista.ClassListContains("mk-lehti__sisallyslista--kaksi") != kaksi)
+                    sisallysLista.EnableInClassList("mk-lehti__sisallyslista--kaksi", kaksi);
+            });
+            var paluurivi = Rakenne.El("mk-lehti__sisallyspaluurivi", sisallys, PickingMode.Ignore);
+            var paluu = Rakenne.Nappi("Palaa kartalle", "mk-lehti__sisallyspaluu", () => { SuljeSisallys(); Sulje(); }, paluurivi, Ikonit.Paluu);
+            Kirjasimet.Aseta(paluu, Kirjasin.KoneLihava);
+            // Napautus levyn ulkopuolelta sulkee sen (web ulkosulku); ☰-napit hoitavat itse vaihdon.
+            arkki.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (sisallys.style.display != DisplayStyle.Flex || !(e.target is VisualElement v)) return;
+                for (var x = v; x != null; x = x.parent)
+                    if (x == sisallys || x == sisallysNappi || x == alaSisallys) return;
+                SuljeSisallys();
+            }, TrickleDown.TrickleDown);
 
             suurennos = new Kuvasuurennos(juuri);
             fokus = new LehtiFokus(() => tila, Teko, suurennos);
@@ -659,7 +680,7 @@ namespace Matkakirja.Natiivi
             var a = sivu.Aihe;
             // Maalehden ensimmäinen sivu: masto ja maaosasto (tunnusluvut, tervehdykset), web maa-osasto.
             // Otsikko ja lippu ovat otsikkorivillä (AsetaOtsikko). Maalehden ensimmäinen sivu: maaosasto (web maa-osasto).
-            if (lehti.Laji == LehtiLaji.Maa && nyt == 0) Maaosasto(s, UiSisalto.Maa(lehti.Maa));
+            if (lehti.Laji == LehtiLaji.Maa && nyt == 0) Maaosasto(s, UiSisalto.Maa(lehti.Maa), null, true);
             if (!string.IsNullOrEmpty(a.Johdanto)) Kappale(s, a.Johdanto, "mk-lehti__johdanto", Kirjasin.LukuKursiivi);
 
             // Reaktioiden sivuavain (web aihesivunAvain → aiheAvain): maalehdessä ISO3, muuten kaupunki.
@@ -961,48 +982,191 @@ namespace Matkakirja.Natiivi
                 kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = url, Selite = nimiKartta, LahdeRivi = lahde } }));
                 if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-lehti__lahde", s), Kirjasin.Kone);
             }
-            Maaosasto(s, m);
-            if (LehtiSisalto.Nosto(m?.KarttaNosto) is LehtiNosto nosto) Nosto(s, nosto);
+            Maaosasto(s, m, LehtiSisalto.Nosto(m?.KarttaNosto), true);
         }
 
-        void Maaosasto(VisualElement s, MaaTiedot m)
+        /// <summary>
+        /// Web arrival-maa: PERUSTIEDOT-almanakka (ikoni, arvo, pisteviivajohdin, sijoitus; demokratialle ja
+        /// keskitulolle mittaripalkki), HYVÄÄ PÄIVÄÄ -rivi lippuineen, maan esittely (ARTIKKELIT intro), kartan
+        /// nosto ja lopuksi uutiset ja mediarivi (maa-oikea). Kapealla luvut allekkain, leveällä kahteen palstaan.
+        /// </summary>
+        void Maaosasto(VisualElement s, MaaTiedot m, LehtiNosto nosto = null, bool esittely = false)
         {
-            if (m == null) return;
-            var rivit = new List<(string, string)>();
-            void R(string nimi, string arvo, string sija) { if (!string.IsNullOrEmpty(arvo)) rivit.Add((nimi, arvo + (string.IsNullOrEmpty(sija) ? "" : "  (" + sija + ")"))); }
-            R("Väkiluku", m.Vakiluku, m.VakilukuSija);
-            R("Pinta-ala", m.PintaAla, m.PintaAlaSija);
-            R("Demokratiaindeksi", m.Demokratia, m.DemokratiaSija);
-            R("Keskitulo", m.Keskitulo, m.KeskituloSija);
-            if (!string.IsNullOrEmpty(m.Valtiomuoto)) rivit.Insert(0, ("Valtiomuoto 1873", m.Valtiomuoto));
-            // Ajankohtaiset otsikot maaosaston loppuun (web naytaMaaUutiset), myös ilman tunnuslukuja.
-            if (rivit.Count == 0 && m.Tervehdykset.Count == 0) { Uutiset.Piirra(s, m.Iso3); MaanMedia(s, m.Iso3); return; }
-            var laatikko = Rakenne.El("mk-lehti__maaosasto", s, PickingMode.Ignore);
-            foreach (var (nimi, arvo) in rivit)
+            if (m == null) { if (nosto != null) Nosto(s, nosto); return; }
+            if (m.Vakiluku != null || m.PintaAla != null || m.Demokratia != null || m.Keskitulo != null)
             {
-                var r = Rakenne.El("mk-lehti__tunnusrivi", laatikko, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti(nimi, "mk-lehti__tunnusnimi", r), Kirjasin.Kone);
-                Kirjasimet.Aseta(Rakenne.Teksti(arvo, "mk-lehti__tunnusarvo", r), Kirjasin.LukuLihava);
-            }
-            if (!string.IsNullOrEmpty(m.DemokratiaSelitys))
-            {
-                // Web naytaVdemInfo: V-Demin selitys minipopupissa.
-                string selitys = m.DemokratiaSelitys, linkki = m.DemokratiaLinkki, arvo = m.Demokratia;
-                var b = Rakenne.Nappi($"Demokratiaindeksi {arvo} · V-Dem ›", "mk-lehti__linkki", () => Minipopup.Avaa("Demokratiaindeksi (V-Dem)", c =>
+                var luvut = Rakenne.El("mk-maa__luvut", s, PickingMode.Ignore);
+                Rakenne.El("mk-maa__tuplaviiva", luvut, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti("PERUSTIEDOT", "mk-maa__otsake", luvut), Kirjasin.Kone);
+                var ruudukko = Rakenne.El("mk-maa__ruudukko", luvut, PickingMode.Ignore);
+                ruudukko.RegisterCallback<GeometryChangedEvent>(e =>
                 {
-                    Kirjasimet.Aseta(Rakenne.Teksti(selitys, "mk-minipopup__teksti", c), Kirjasin.Luku);
-                    if (!string.IsNullOrEmpty(linkki))
-                        Kirjasimet.Aseta(Rakenne.Nappi("Avaa lähde ›", "mk-lehti__linkki", () => Application.OpenURL(linkki), c), Kirjasin.Kone);
-                }), laatikko);
-                Kirjasimet.Aseta(b, Kirjasin.Kone);
+                    // Web grid auto-fit minmax(21rem, 1fr), gap 1,5rem: kaksi palstaa, kun tilaa on 2 × 336 + 24 px.
+                    bool kaksi = e.newRect.width >= 696f;
+                    if (ruudukko.ClassListContains("mk-maa__ruudukko--kaksi") != kaksi) ruudukko.EnableInClassList("mk-maa__ruudukko--kaksi", kaksi);
+                });
+                if (m.Vakiluku != null) Tunnus(ruudukko, Ikonit.TunnusVaki, m.Vakiluku, m.VakilukuSija, null);
+                if (m.PintaAla != null) Tunnus(ruudukko, Ikonit.TunnusAla, m.PintaAla, m.PintaAlaSija, null);
+                if (m.Demokratia != null)
+                {
+                    float? osuus = float.TryParse(m.Demokratia.Replace(',', '.'), System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var d) ? d : (float?)null;
+                    var arvo = Tunnus(ruudukko, Ikonit.TunnusVaaka, m.Demokratia + " · V-Dem", m.DemokratiaSija, osuus);
+                    if (!string.IsNullOrEmpty(m.DemokratiaSelitys))
+                    {
+                        // Web .maa-demokratia: arvo on pisteillä alleviivattu nappi → V-Demin selitys minipopupissa.
+                        Rakenne.El("mk-maa__alleviiva", arvo, PickingMode.Ignore).Add(new Johdin(0.45f));
+                        string selitys = m.DemokratiaSelitys, linkki = m.DemokratiaLinkki;
+                        arvo.pickingMode = PickingMode.Position;
+                        arvo.AddManipulator(new Clickable(() => Minipopup.Avaa("Demokratiaindeksi (V-Dem)", c =>
+                        {
+                            Kirjasimet.Aseta(Rakenne.Teksti(selitys, "mk-minipopup__teksti", c), Kirjasin.Luku);
+                            if (!string.IsNullOrEmpty(linkki))
+                                Kirjasimet.Aseta(Rakenne.Nappi("Avaa lähde ›", "mk-lehti__linkki", () => Application.OpenURL(linkki), c), Kirjasin.Kone);
+                        })));
+                    }
+                }
+                if (m.Keskitulo != null)
+                {
+                    string numerot = Regex.Replace(m.Keskitulo, "[^0-9]", "");
+                    float? osuus = int.TryParse(numerot, out var tulo) ? tulo / 100000f : (float?)null;
+                    Tunnus(ruudukko, Ikonit.TunnusRaha, m.Keskitulo, m.KeskituloSija, osuus);
+                }
             }
             if (m.Tervehdykset.Count > 0)
             {
-                string terv = string.Join(" · ", m.Tervehdykset.Select(t => t.Teksti + (string.IsNullOrEmpty(t.Kieli) ? "" : " (" + t.Kieli + ")")));
-                Kirjasimet.Aseta(Rakenne.Teksti("Tervehdys: " + terv, "mk-lehti__tervehdys", laatikko), Kirjasin.LukuKursiivi);
+                var laatikko = Rakenne.El("mk-maa__tervehdykset", s, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti("HYVÄÄ PÄIVÄÄ", "mk-maa__otsake", laatikko), Kirjasin.Kone);
+                var terv = Rakenne.El("mk-maa__tervehdysrivi", laatikko, PickingMode.Ignore);
+                foreach (var t in m.Tervehdykset)
+                {
+                    var osa = Rakenne.El("mk-maa__tervehdys", terv, PickingMode.Ignore);
+                    var teksti = Rakenne.Teksti(t.Teksti ?? "", "mk-maa__tervehdysteksti", osa);
+                    teksti.enableRichText = false;
+                    Kirjasimet.Aseta(teksti, Kirjasin.LukuKursiivi);
+                    if (!string.IsNullOrEmpty(t.Lippu))
+                    {
+                        var lippu = Rakenne.El("mk-maa__tervehdyslippu", osa, PickingMode.Ignore);
+                        lippu.style.display = DisplayStyle.None;
+                        Natiivi.Kuvat.Hae(t.Lippu, tx =>
+                        {
+                            if (tx == null) return;
+                            lippu.style.backgroundImage = new StyleBackground(tx);
+                            lippu.style.width = Mathf.Round(16f * tx.width / Mathf.Max(1, tx.height));
+                            lippu.style.display = DisplayStyle.Flex;
+                        }, "liput");
+                    }
+                    if (!string.IsNullOrEmpty(t.Osuus)) Kirjasimet.Aseta(Rakenne.Teksti(t.Osuus, "mk-maa__sija mk-maa__osuus", osa), Kirjasin.Kone);
+                }
+                Rakenne.El("mk-maa__tuplaviiva mk-maa__tuplaviiva--ala", laatikko, PickingMode.Ignore);
             }
-            Uutiset.Piirra(laatikko, m.Iso3);
-            MaanMedia(laatikko, m.Iso3);
+            if (esittely)
+            {
+                // Maan pääkirjoitus (web #arrival-maa-intro, ARTIKKELIT[maa].intro): kappaleet \n\n:stä.
+                var paikka = Rakenne.El("mk-maa__esittely", s, PickingMode.Ignore);
+                string nimi = m.Nimi;
+                WikiArtikkelit.Lataa(() =>
+                {
+                    if (paikka.panel == null) return;
+                    foreach (var k in Kappaleet(WikiArtikkelit.Intro(nimi))) Kappale(paikka, k, "mk-lehti__esittely");
+                });
+            }
+            if (nosto != null) Nosto(s, nosto);
+            Uutiset.Piirra(s, m.Iso3);
+            MaanMedia(s, m.Iso3);
+        }
+
+        /// <summary>Web maa-tunnus: ikoni, arvo (+ palkki), pisteviivajohdin ja "(sija)". Palauttaa arvon kääreen.</summary>
+        static VisualElement Tunnus(VisualElement isa, string ikoni, string arvo, string sija, float? osuus)
+        {
+            var r = Rakenne.El("mk-maa__tunnus", isa, PickingMode.Ignore);
+            var i = Rakenne.Ikoni(ikoni, "mk-maa__ikoni", r);
+            i.Ruutu = 15f;
+            i.pickingMode = PickingMode.Ignore;
+            var kaare = Rakenne.El("mk-maa__arvo", r, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti(arvo, "mk-maa__arvoteksti", kaare), Kirjasin.KoneLihava);
+            if (osuus is float o) r.Add(new Mittari(o));
+            var johdin = new Johdin(0.45f);
+            johdin.AddToClassList("mk-maa__johdin");
+            r.Add(johdin);
+            if (!string.IsNullOrEmpty(sija)) Kirjasimet.Aseta(Rakenne.Teksti("(" + sija + ")", "mk-maa__sija", r), Kirjasin.Kone);
+            return kaare;
+        }
+
+        /// <summary>Pisteviivajohdin (web .maa-tunnus-johdin): pisteet väliin ~0,45 em, väri USS color.</summary>
+        sealed class Johdin : VisualElement
+        {
+            readonly float vali;
+            public Johdin(float valiEm)
+            {
+                vali = valiEm;
+                pickingMode = PickingMode.Ignore;
+                generateVisualContent += Piirra;
+            }
+
+            void Piirra(MeshGenerationContext mgc)
+            {
+                var r = contentRect;
+                if (r.width <= 0) return;
+                float em = resolvedStyle.fontSize > 0 ? resolvedStyle.fontSize : 15f;
+                float askel = Mathf.Max(3f, vali * em), sade = Mathf.Max(0.8f, em * 0.075f);
+                var p = mgc.painter2D;
+                p.fillColor = resolvedStyle.color;
+                float y = r.yMax - sade;
+                for (float x = r.xMin + askel * 0.5f; x < r.xMax; x += askel)
+                {
+                    p.BeginPath();
+                    p.Arc(new Vector2(x, y), sade, 0f, 360f);
+                    p.Fill();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Web .maa-palkki: kiinteä 3,6 em × 0,66 em -mittari neljännesjaoin; täyte punainen &lt; 1/3,
+        /// keltainen &lt; 2/3, muuten vihreä, ja siinä vaalea vinoviivoitus kuin musteessa.
+        /// </summary>
+        sealed class Mittari : VisualElement
+        {
+            readonly float osuus;
+            public Mittari(float osuus)
+            {
+                this.osuus = osuus;
+                AddToClassList("mk-maa__palkki");
+                pickingMode = PickingMode.Ignore;
+                generateVisualContent += Piirra;
+            }
+
+            void Piirra(MeshGenerationContext mgc)
+            {
+                var r = contentRect;
+                if (r.width <= 0 || r.height <= 0) return;
+                var p = mgc.painter2D;
+                p.lineWidth = 1f;
+                p.strokeColor = new Color(70 / 255f, 51 / 255f, 31 / 255f, 0.16f);
+                for (int i = 1; i < 4; i++)
+                {
+                    float x = r.xMin + r.width * i / 4f;
+                    p.BeginPath(); p.MoveTo(new Vector2(x, r.yMin)); p.LineTo(new Vector2(x, r.yMax)); p.Stroke();
+                }
+                float w = r.width * Mathf.Clamp(osuus, 0.03f, 1f);
+                Color vari = osuus < 1f / 3f ? new Color32(0xbf, 0x3d, 0x2d, 255) : osuus < 2f / 3f ? new Color32(0xd9, 0xa4, 0x1f, 255) : new Color32(0x3e, 0x8f, 0x4a, 255);
+                p.fillColor = vari;
+                p.BeginPath();
+                p.MoveTo(new Vector2(r.xMin, r.yMin)); p.LineTo(new Vector2(r.xMin + w, r.yMin));
+                p.LineTo(new Vector2(r.xMin + w, r.yMax)); p.LineTo(new Vector2(r.xMin, r.yMax));
+                p.ClosePath();
+                p.Fill();
+                p.strokeColor = new Color(252 / 255f, 247 / 255f, 234 / 255f, 0.42f);
+                p.lineWidth = 0.5f;
+                for (float x = r.xMin - r.height; x < r.xMin + w; x += 2.5f)
+                {
+                    float x0 = Mathf.Max(x, r.xMin), y0 = r.yMax - (x0 - x);
+                    float x1 = Mathf.Min(x + r.height, r.xMin + w), y1 = r.yMax - (x1 - x);
+                    if (x1 <= x0) continue;
+                    p.BeginPath(); p.MoveTo(new Vector2(x0, y0)); p.LineTo(new Vector2(x1, y1)); p.Stroke();
+                }
+            }
         }
 
         /// <summary>
@@ -1082,23 +1246,92 @@ namespace Matkakirja.Natiivi
 
         // --- sisällys (maalehti) ------------------------------------------------------------------
 
-        void VaihdaSisallys()
+        void SuljeSisallys() => sisallys.style.display = DisplayStyle.None;
+
+        /// <summary>
+        /// Web avaaSisallysvalikko + rakennaSisallysLista: rivillä 52 px:n pikkukuva, sivun otsikko (sivunOtsikko,
+        /// esim. "Ateena pintaa syvemmältä") ja kaksirivinen ingressi (johdannon ensimmäinen virke, sisallysTiedot).
+        /// Nykyistä sivua ei korosteta.
+        /// </summary>
+        void VaihdaSisallys(bool ylhaalla)
         {
-            if (sisallys.style.display == DisplayStyle.Flex) { sisallys.style.display = DisplayStyle.None; return; }
+            if (sisallys.style.display == DisplayStyle.Flex) { SuljeSisallys(); return; }
+            sisallys.EnableInClassList("mk-lehti__sisallys--ylhaalla", ylhaalla);
             sisallysLista.Clear();
             for (int i = 0; i < lehti.Sivut.Count; i++)
             {
                 int kohde = i;
                 var s = lehti.Sivut[i];
-                var b = Rakenne.Nappi(null, "mk-lehti__sisallysrivi", () => { sisallys.style.display = DisplayStyle.None; Kaanna(kohde); }, sisallysLista);
-                b.EnableInClassList("mk-valittu", i == nyt);
-                var t = Rakenne.El("mk-lehti__listatekstit", b, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti(s.Lyhyt ?? s.Otsikko ?? "", "mk-lehti__listanimi", t), Kirjasin.LukuLihava);
-                if (!string.IsNullOrEmpty(s.Aihe?.Johdanto)) Kirjasimet.Aseta(Rakenne.Teksti(s.Aihe.Johdanto, "mk-lehti__listateksti", t), Kirjasin.Luku);
+                var (kuva, ingressi) = SisallysTiedot(s);
+                var b = Rakenne.Nappi(null, "mk-lehti__sisallysrivi", () => { SuljeSisallys(); Kaanna(kohde); }, sisallysLista);
+                if (kuva != null)
+                {
+                    var k = Rakenne.El("mk-lehti__sisallyskuva", b, PickingMode.Ignore);
+                    NostoSisalto.HaeKuvaPienena(kuva, 104, 104, t => { if (t != null) k.style.backgroundImage = new StyleBackground(t); });
+                }
+                var t2 = Rakenne.El("mk-lehti__sisallysteksti", b, PickingMode.Ignore);
+                string otsikko = s.Laji == LehtiSivuLaji.Etusivu && lehti.Laji == LehtiLaji.Kaupunki ? "Etusivu" : s.Otsikko ?? s.Lyhyt ?? "";
+                Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-lehti__sisallysrivinimi", t2), Kirjasin.KoneLihava);
+                if (!string.IsNullOrEmpty(ingressi))
+                {
+                    var ing = Rakenne.Teksti(ingressi, "mk-lehti__sisallysingressi", t2);
+                    ing.enableRichText = false;
+                    Kirjasimet.Aseta(ing, Kirjasin.LukuLihava);
+                    RajaaRiveihin(ing, 2);
+                }
             }
-            var palaa = Rakenne.Nappi("‹ Palaa kartalle", "mk-lehti__linkki", Sulje, sisallysLista);
-            Kirjasimet.Aseta(palaa, Kirjasin.Kone);
             sisallys.style.display = DisplayStyle.Flex;
+        }
+
+        /// <summary>Web sisallysTiedot: kuva ja ingressi (johdannon tai ensimmäisen kohteen ensimmäinen virke).</summary>
+        (string kuva, string ingressi) SisallysTiedot(LehtiSivu s)
+        {
+            var a = s.Aihe;
+            switch (s.Laji)
+            {
+                case LehtiSivuLaji.MaaEtusivu: return (UiSisalto.Maa(lehti.Maa)?.KarttaUrl, "Kaupungit ja maasto kartalla.");
+                case LehtiSivuLaji.Numeroina: return (null, "Väkiluku, pinta-ala ja muut tunnusluvut.");
+                case LehtiSivuLaji.Etusivu:
+                    // Kansi: kansiosion pääkuva ja johdannon ensimmäinen virke (web etusivuRivi).
+                    return (a?.Kansikuvat.FirstOrDefault()?.Lahde, string.IsNullOrEmpty(a?.Johdanto) ? "Lehden kansi." : EkaVirke(a.Johdanto));
+            }
+            if (a == null) return (null, null);
+            var kohde = a.Lista.Count > 0 ? a.Lista[0].Kohteet.FirstOrDefault() : null;
+            var nosto = kohde == null ? a.Nostot.FirstOrDefault() : null;
+            string johdanto = a.Johdanto ?? kohde?.Teksti ?? nosto?.Teksti ?? "";
+            return (kohde != null ? kohde.Kuva?.Lahde : nosto?.Kuva?.Lahde, EkaVirke(johdanto));
+        }
+
+        /// <summary>Web (teksti.match(/[^.!?]+[.!?]/) ?? [teksti])[0].trim().</summary>
+        static string EkaVirke(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return "";
+            var m = Regex.Match(teksti, @"[^.!?]+[.!?]");
+            return (m.Success ? m.Value : teksti).Trim();
+        }
+
+        /// <summary>Web -webkit-line-clamp: teksti katkaistaan n riviin ja loppuun "…".</summary>
+        static void RajaaRiveihin(Label l, int rivit)
+        {
+            string koko = l.text;
+            l.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float w = e.newRect.width;
+                if (w <= 0 || float.IsNaN(w) || Mathf.Approximately(e.oldRect.width, w)) return;
+                float rivi = l.MeasureTextSize("Ag", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y;
+                float raja = rivi * rivit + 1f;
+                string t = koko;
+                if (l.MeasureTextSize(t, w, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y <= raja) { l.text = t; return; }
+                int ala = 0, yla = koko.Length;
+                while (ala < yla)
+                {
+                    int keski = (ala + yla + 1) / 2;
+                    string koe = koko.Substring(0, keski).TrimEnd() + "…";
+                    if (l.MeasureTextSize(koe, w, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y <= raja) ala = keski;
+                    else yla = keski - 1;
+                }
+                l.text = koko.Substring(0, ala).TrimEnd() + "…";
+            });
         }
 
         // --- luenta (kaiutin) ----------------------------------------------------------------------
@@ -1135,7 +1368,7 @@ namespace Matkakirja.Natiivi
         // --- testi ---------------------------------------------------------------------------------
 
         /// <summary>
-        /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen, "kuva" suurennoksen, "tehtava(-pois)" keksityn
+        /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen (ylärivin ☰, "sisallys-ala" alapalkin), "kuva" suurennoksen, "tehtava(-pois)" keksityn
         /// tehtävänapin, "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää.
         /// </summary>
         public string Testaa(string mita, int n)
@@ -1151,7 +1384,8 @@ namespace Matkakirja.Natiivi
                     PaivitaTila(new LehtiTila { Matkapaiva = 12, TehtavaNappi = mita == "tehtava" ? "Tapaa gondolieeri" : "Gondolieeri ei tavattavissa", TehtavaNappiPois = mita != "tehtava" });
                     break;
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
-                case "sisallys": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(); break;
+                case "sisallys":
+                case "sisallys-ala": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(mita == "sisallys"); break;
                 case "kuva":
                     var k = sivu?.contentContainer.Q(className: "mk-lehti__kuvakehys");
                     if (k != null) using (var e = ClickEvent.GetPooled()) { e.target = k; k.SendEvent(e); }

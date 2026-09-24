@@ -751,6 +751,14 @@ namespace Matkakirja.Natiivi
             Media(() => Natiivi.Kuvat.Hae(media != null && media.TryGetValue(lahde, out var url) ? url : lahde, valmis));
         }
 
+        /// <summary>Kuva pienennettynä leveys × korkeus -ruutuun (peittäen, keskeltä), esim. sisällyksen pikkukuvat.</summary>
+        public static void HaeKuvaPienena(string lahde, int leveys, int korkeus, Action<Texture2D> valmis)
+        {
+            if (string.IsNullOrEmpty(lahde)) { valmis(null); return; }
+            if (lahde.StartsWith("http")) { Natiivi.Kuvat.HaePienena(lahde, leveys, korkeus, 0.5f, valmis); return; }
+            Media(() => Natiivi.Kuvat.HaePienena(media != null && media.TryGetValue(lahde, out var url) ? url : lahde, leveys, korkeus, 0.5f, valmis));
+        }
+
         static void Media(Action valmis)
         {
             if (media != null) { valmis(); return; }
