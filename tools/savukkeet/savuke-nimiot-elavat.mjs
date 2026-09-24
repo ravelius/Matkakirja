@@ -13,7 +13,12 @@
  *      leikkaa kohdemaan korostuskehän janoja (rantaviivasääntö).
  *   4. Yksikään elävä nimiö ei ylitä ruudun reunaa (Sisältökirjurin
  *      mittarin sääntö, 4 px) saapumisnäkymässä eikä Marseillen
- *      lähizoomissa (½ ja ¼ saapumisnäkymän leveydestä).
+ *      lähizoomissa (½ ja ¼ saapumisnäkymän leveydestä). Reunan saa
+ *      ylittää lappu, jonka sovittelu piti lukossa ruudulla (syy 'pakko',
+ *      'nakyva' tai 'palaa' — v2142, omistaja 23.9.2026: *"Mitkään tekstit
+ *      eivät saisi vaihtaa paikkaa panoroitaessa kun ne ovat ruudulla."*,
+ *      sovittelu.js sääntö 5; sama poikkeus kuin savuke-nimiot-vakaat 3).
+ *      Ne raportoidaan kentässä yliLukossa.
  *   5. Ladonta (ladoHeti) pysyy nopeana: 30 toiston mediaani ≤ 12 ms
  *      (mitattu 2,5 ms Macilla kuormassa; prep 2,2 ms).
  *   6. Ei sivuvirheitä.
@@ -116,7 +121,13 @@ const LUE = `async (kohde) => {
   // ruudun ulkopuolinen lappu on tarkoituksellinen. Reunan ylitys on
   // vain lappu, joka on osittain ruudussa ja ylittää reunan > 4 px.
   const ruudussa = (r) => r.x1 > 0 && r.x0 < W && r.y1 > 0 && r.y0 < H;
-  const yli = laput.filter((r) => ruudussa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4)).map((r) => r.nimi);
+  const asennot = l.nostot.sovittelunAsennot();
+  const syyOn = (r, syyt) => syyt.includes(asennot.get(r.avain ?? ('nosto:' + r.id))?.syy) || [...asennot].some(([k, a]) => k.endsWith(':' + r.id) && syyt.includes(a.syy));
+  // NÄKYVÄ NIMIÖ PITÄÄ PUOLENSA (v2142, sovittelu.js sääntö 5): ruudulla lukossa pidetty lappu saa leikkautua reunaan.
+  const lukossa = (r) => syyOn(r, ['pakko', 'nakyva', 'palaa']);
+  const ylittaa = laput.filter((r) => ruudussa(r) && (r.x0 < -4 || r.y0 < -4 || r.x1 > W + 4 || r.y1 > H + 4));
+  const yli = ylittaa.filter((r) => !lukossa(r)).map((r) => r.nimi);
+  const yliLukossa = ylittaa.filter(lukossa).map((r) => r.nimi);
   const { pallonKorostusRenkaat, pallonKorostettuMaa } = await import('/js/maanaariviivat.js');
   const renkaat = pallonKorostusRenkaat(pallonKorostettuMaa());
   const janat = [];
@@ -141,6 +152,7 @@ const LUE = `async (kohde) => {
     nimiollisia: laput.length,
     nimia: document.querySelectorAll('.pallolauta-nimi').length,
     yli,
+    yliLukossa,
     janoja: janat.length,
     valimeri: vm ? { puoli: vm.puoli, dx: vm.dx, dy: vm.dy, leikkaa } : null,
     valimeriOsuma: Boolean(vmOsuma), valimeriNimio: Boolean(vmOsuma?.datum?.nimioNakyy),

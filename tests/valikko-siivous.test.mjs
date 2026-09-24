@@ -16,14 +16,27 @@ const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 /** index.html ilman kommentteja: vain oikeat elementit ratkaisevat. */
 const html = () => lue('../index.html').replace(/<!--[\s\S]*?-->/g, '');
 
-test('Kartta-osiossa vain Pieni liike, Piirtokoe ja kehysprofiili', () => {
+test('Kartta-osiossa vain Pieni liike; kokeet rattaan kehittäjäryhmässä Mittaus', () => {
   const h = html();
   const a = h.indexOf('<p class="valikko-otsikko">Kartta</p>');
   assert.ok(a > 0, 'Kartta-osio löytyy');
-  const osio = h.slice(a, h.indexOf('</div>\n', h.indexOf('id="kehysprofiili-valikko"')));
-  const idt = [...osio.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(idt, ['kartta-valikko', 'piirtokoe-otsikko', 'piirtokoe-valikko', 'piirtokoe-vihje',
-    'paljaat-kerrokset-otsikko', 'paljaat-kerrokset-valikko', 'kehysprofiili-valikko']);
+  const kartta = h.slice(a, h.indexOf('</div>\n', a + 1));
+  assert.deepEqual([...kartta.matchAll(/id="([^"]+)"/g)].map((m) => m[1]), ['kartta-valikko'],
+    'hampurilaisen Kartta-osiossa vain pelaajan Pieni liike');
+  /*
+   * KOKEET RATTAASEEN, VAIN KEHITTÄJÄLLE (omistaja 23.9.2026): Syötekoe,
+   * kerrokset, kehysprofiili ja Suoraan kartalle (kehysprofiili-valikon
+   * rivit) ovat rattaan .kehittaja-ryhmässä, jonka js/main.js piilottaa
+   * ilman kehittäjätilaa.
+   */
+  const r = h.indexOf('id="kehittaja-mittaus"');
+  assert.ok(r > h.indexOf('id="kehittaja-valikko"') && r < h.indexOf('id="paavalikko"'), 'Mittaus on ratasvalikossa');
+  assert.match(h.slice(h.lastIndexOf('<div', r), r + 80), /class="kehittaja-ryhma" hidden/);
+  const mittaus = h.slice(r, h.indexOf('id="kehittaja-tyohuone"'));
+  assert.deepEqual([...mittaus.matchAll(/id="([^"]+)"/g)].map((m) => m[1]), ['kehittaja-mittaus', 'piirtokoe-otsikko',
+    'piirtokoe-valikko', 'piirtokoe-vihje', 'paljaat-kerrokset-otsikko', 'paljaat-kerrokset-valikko', 'kehysprofiili-valikko']);
+  assert.match(lue('../js/main.js'), /const kehittajaRyhmat = \[\.\.\.document\.querySelectorAll\('\.kehittaja-ryhma'\)\];/);
+  assert.match(lue('../js/main.js'), /for \(const ryhma of kehittajaRyhmat\) ryhma\.hidden = !kehittajaTilaPaalla\(\);/);
   assert.doesNotMatch(h, /vedon-seuranta/, 'ei vedon seurannan rivejä');
   assert.doesNotMatch(h, /tarkkuus-valikko/, 'ei tarkkuuden rivejä');
 });

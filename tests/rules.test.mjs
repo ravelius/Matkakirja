@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { pulmanGeneraattori } from '../js/pulmageneraattorit.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
@@ -3067,14 +3068,14 @@ test('Euroopan pulmadata on ehjä', () => {
     assert.ok(p.selite && p.selite.length > 20, `pulmalta ${p.id} puuttuu selite`);
     assert.ok(p.q && p.q.length > 20, `pulman ${p.id} kysymys on liian lyhyt`);
     assert.ok(p.fact && p.fact.length > 40, `pulmalta ${p.id} puuttuu selitys`);
-    assert.equal(typeof p.generate, 'function', `pulmalta ${p.id} puuttuu generate`);
+    assert.equal(typeof pulmanGeneraattori(p), 'function', `pulmalta ${p.id} puuttuu generaattori`);
     checkSources(p.source, `pulma "${p.id}"`);
     kaupungit.push(p.city);
     // Arvonta tuottaa aina neljä eri vaihtoehtoa ja kelvollisen vastauksen,
     // eri siemenillä (numerot ja ajat vaihtelevat generaattorissa).
     for (const siemen of [1, 7, 42, 128, 999]) {
       const rng = mulberry32(siemen);
-      const arvottu = p.generate(rng);
+      const arvottu = pulmanGeneraattori(p)(rng);
       assert.equal(arvottu.options.length, 4, `pulman ${p.id} arvonta ei anna neljää vaihtoehtoa`);
       assert.equal(new Set(arvottu.options).size, 4, `pulman ${p.id} arvonnassa on kaksi samaa vaihtoehtoa (siemen ${siemen})`);
       assert.ok(
@@ -3536,10 +3537,10 @@ test('jokaisella pulmalla ja variantilla on vihje ja selite', () => {
   for (const p of packById('africa').puzzles) {
     assert.ok(typeof p.selite === 'string' && p.selite.length > 20, `${p.id}: selite puuttuu`);
     assert.ok(typeof p.hint === 'string' && p.hint.length > 10, `${p.id}: vihje puuttuu`);
-    if (!p.generate) continue;
+    if (!p.generaattori) continue;
     // Kaikilla arvotuilla varianteilla on oma tai peritty vihje.
     for (let i = 0; i < 30; i++) {
-      const arvottu = p.generate(mulberry32(1000 + i));
+      const arvottu = pulmanGeneraattori(p)(mulberry32(1000 + i));
       const hint = arvottu?.hint ?? p.hint;
       assert.ok(typeof hint === 'string' && hint.length > 10, `${p.id}: variantin vihje puuttuu`);
     }
@@ -3642,8 +3643,8 @@ function seedRng(seed) {
 
 test('arvonta on siemenellä deterministinen', () => {
   for (const p of packById('africa').puzzles) {
-    const a = p.generate(seedRng(42));
-    const b = p.generate(seedRng(42));
+    const a = pulmanGeneraattori(p)(seedRng(42));
+    const b = pulmanGeneraattori(p)(seedRng(42));
     assert.deepEqual(a, b, `${p.id}: sama siemen antoi eri pulman`);
   }
 });
@@ -3651,7 +3652,7 @@ test('arvonta on siemenellä deterministinen', () => {
 test('arvonta tuottaa aina neljä uniikkia vaihtoehtoa ja kelvollisen indeksin', () => {
   for (const p of packById('africa').puzzles) {
     for (let seed = 1; seed <= 100; seed++) {
-      const r = p.generate(seedRng(seed));
+      const r = pulmanGeneraattori(p)(seedRng(seed));
       assert.equal(r.options.length, 4, `${p.id} siemen ${seed}: väärä määrä vaihtoehtoja`);
       assert.equal(new Set(r.options).size, 4, `${p.id} siemen ${seed}: kaksi samaa vaihtoehtoa`);
       assert.ok(
@@ -3667,7 +3668,7 @@ test('variointi todella varioi', () => {
   for (const p of packById('africa').puzzles) {
     const nahdyt = new Set();
     for (let seed = 1; seed <= 10; seed++) {
-      const r = p.generate(seedRng(seed));
+      const r = pulmanGeneraattori(p)(seedRng(seed));
       nahdyt.add(JSON.stringify([r.sketch, r.options[r.correct]]));
     }
     assert.ok(nahdyt.size >= 2, `${p.id}: kymmenellä siemenellä vain ${nahdyt.size} erilaista`);
@@ -3677,7 +3678,7 @@ test('variointi todella varioi', () => {
 test('hieroglyfiluvut pysyvät piirtorajoissa ja vastaus on oikein', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'hieroglyfit');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     const rivit = [...sketch.esimerkit, sketch.kysytty];
     for (const r of rivit) {
       assert.equal(r.length, 3);
@@ -3700,7 +3701,7 @@ test('hieroglyfiluvut pysyvät piirtorajoissa ja vastaus on oikein', () => {
 test('vaaka on tasapainossa vain oikealla vastauksella', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'punnukset');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     const vasenPuoli = sketch.kulta + sketch.vasen;
     const oikeaPuoli = sketch.oikea[0] + sketch.oikea[1];
     // Täsmälleen yksi vaihtoehto tasapainottaa vaa'an.
@@ -3742,7 +3743,7 @@ test('leilipulman oikea sarja tuottaa tavoitteen eivätkä väärät', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'vesileilit');
   const testatut = new Set();
   for (let seed = 1; seed <= 60; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     if (testatut.has(sketch.tavoite)) continue;
     testatut.add(sketch.tavoite);
 
@@ -3766,7 +3767,7 @@ test('leilipulman oikea sarja tuottaa tavoitteen eivätkä väärät', () => {
 test('kuunvaiheiden sarja jatkuu oikein', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'kuunvaiheet');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     assert.equal(sketch.sarja.length, 3);
     for (const k of sketch.sarja) {
       assert.ok(k.v >= 0 && k.v <= 1, `siemen ${seed}: valaistus ${k.v} rajojen ulkoa`);
@@ -4822,7 +4823,7 @@ test('pelaajalle näkyvässä tekstissä ei ole tähti-sanastoa eikä pääaarre
     const tekstit = [
       pack.texts?.intro, pack.texts?.starToast, pack.texts?.starChase,
       pack.texts?.winStar,
-      pack.texts?.starFound?.('A', 'B'), pack.texts?.winnerStar?.('A', 1),
+      pack.texts?.starFound, pack.texts?.winnerStar,
       ...Object.values(pack.tokenTypes ?? {}).map((t) => t?.name),
     ].filter((t) => typeof t === 'string');
     for (const teksti of tekstit) {

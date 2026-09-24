@@ -1,0 +1,65 @@
+# Vie jo ladatun TestFlight-buildin sisäiselle testiryhmälle: testaaja
+# ryhmään, odotus kunnes Apple on käsitellyt buildin, build ryhmään.
+# Sama skripti ajetaan proto3d-testflight.yml:n lopussa; tämä on sitä
+# varten, että vaiheen voi uusia ilman uutta käännöstä ja latausta.
+# Testaaja: salaisuus TESTFLIGHT_TESTAAJA, tai jos sitä ei ole, tilin omistaja.
+
+name: TestFlight sisäinen ryhmä
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_numero:
+        description: 'Ladatun buildin CFBundleVersion (esim. 202609232339)'
+        type: string
+        required: true
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-sisainen
+  cancel-in-progress: false
+
+jobs:
+  ryhma:
+    name: Build sisäiselle ryhmälle
+    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Testaaja ja build sisäiseen ryhmään
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          TESTAAJA: ${{ secrets.TESTFLIGHT_TESTAAJA }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 tools/testflight/sisainen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "${{ inputs.build_numero }}"
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

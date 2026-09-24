@@ -37,6 +37,8 @@ päätöksen pohjaksi.
   generoi mitään, ei käytä avaimia eikä muuta mitään. Tulos on
   **todennäköinen, ei varmistettu**, koska Commons elää: yksi kategoria on
   jo siirretty, ja kaksi parametrioletusta on kirjattu liitteeseen.
+  **Päivitys 23.9. iltapäivällä:** varmistettu ajonaikaista Commonsin
+  tilaa vasten, 60/60 sama ([varmistus](herokuvien-viitteet-20260923-varmistus.md)).
   Kaikki 239 valittua tiedostoa oli ladattu Commonsiin ennen 24.8., joten
   yksikään valinta ei ole mahdoton.
 - **Viitteiden lisenssit (240 viitettä):**

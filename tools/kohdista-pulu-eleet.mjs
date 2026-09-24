@@ -6,10 +6,38 @@
  * Varsinainen ajo lukee valmiin mp3:n mediaämpäristä, lähettää sen ElevenLabsin
  * forced-alignment-päätteeseen ja kirjoittaa sidotun .eleet.json-repokopion.
  * Vienti R2:een tapahtuu vain eksplisiittisellä --vie-lipulla.
+ *
+ * LÖYDÖS 23.9.2026 (Sisältökirjuri): kaikkien 45 city-3-kaupungin kanoninen
+ * ääni (aanet/pulu/livia-<kaupunki>-3.mp3) on ämpärissä yhtenä eränä, jonka
+ * Last-Modified on 12.9.2026 n. klo 20.34 UTC — ENNEN kuin generoi-pulu.yml:n
+ * ensimmäinenkään (ei-kuiva) Actions-ajo generoi mitään samana päivänä
+ * (22.25 alkaen). SHA-256 ei täsmää yhteenkään 12 löydetystä
+ * aanet/pulu/kuitit/pulu-*.completed.json-tuotantokuitista (tarkistettu
+ * julkisilla HTTP-hauilla, ei avainta). Kanoninen ääni on siis peräisin
+ * jostain workflow-historian ulkopuolisesta (todennäköisesti manuaalisesta,
+ * alkuperäisestä "neljän kaupungin pilotti") ajosta, jolle ei ole
+ * löydettävissä olevaa kuittia.
+ *
+ * PÄÄTÖS 23.9.2026 (omistaja Fablen kautta): EI uudelleenäänitystä (maksaa
+ * ja muuttaa Livian ilmaisun). Sen sijaan --elava-tila (ks.
+ * ratkaiseCueAjatElavana/kokoaEledataElavana): kohdistetaan kanonista
+ * ääntä sellaisenaan, ILMAN kuittia ja ilman sointiresepti-/
+ * ulostulomuotovartiointia. Turvana kuitin sijasta: (1) sanakattavuus —
+ * vähintään 95 % tekstin sanoista saa oikean alignment-ajan (loput
+ * arvioidaan naapureista interpoloimalla, jotta cuet silti ratkeavat), ja
+ * (2) kestovarmistus — alignmentin oma kesto verrataan ffprobe-mitattuun
+ * mp3:n todelliseen kestoon (sallittu poikkeama 1500 ms tai 10 %). Kaupunki,
+ * joka ei läpäise kumpaakaan, hylätään eikä sille kirjoiteta mitään.
+ * Kirjoitettuun eleet.json:iin merkitään lahde:"elava-ilman-kuittia" plus
+ * kohdistetun mp3:n oma SHA-256, jotta myöhemmin näkee mihin ääneen data on
+ * sidottu.
  */
 
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import {
+  mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync,
+} from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -171,8 +199,21 @@ export async function tarkistaKohdistustyo(tyo) {
   return { ok: true };
 }
 
-/** Muunna ElevenLabsin merkkiajat kortin pysyviksi cue-aikaväleiksi. */
-export function ratkaiseCueAjat(tyo, vastaus) {
+/**
+ * Muuntaa ElevenLabsin merkkiajat sanakohtaisiksi ajoiksi.
+ *
+ * TIUKKA (oletus, kuitti-kohdistus): jokaiselle tekstin sanalle on löydyttävä
+ * merkkiaika, muuten koko ajo hylätään heti — kuittikohdistus luottaa vain
+ * omistajan hyväksymillä asetuksilla syntyneeseen äänitteeseen, jonka pitää
+ * täsmätä sanatarkasti.
+ *
+ * LEPSU (elävä-kohdistus, ei kuittia): puuttuvan sanan aika arvioidaan
+ * suoraviivaisesti lähimpien löytyneiden naapurisanojen välistä (reunalla
+ * kopioidaan lähin löytynyt), jotta cue voi silti ratketa. `kattavuus`
+ * kertoo, kuinka suuri osuus sanoista löytyi OIKEASTI alignmentista —
+ * kutsuja päättää, onko se riittävä.
+ */
+function sanaAikataulu(tyo, vastaus, { tiukka = true } = {}) {
   const kohdistus = normalisoiAlignment(vastaus);
   const merkit = kohdistus?.characters ?? [];
   const alut = kohdistus?.character_start_times_seconds ?? [];
@@ -183,13 +224,46 @@ export function ratkaiseCueAjat(tyo, vastaus) {
   const paikat = sovitaMerkit(tyo.teksti, merkit);
   const ms = (s) => Math.round(Number(s) * 1000);
   const jasennys = jaksonJasennys(tyo.teksti, { alku: 0, loppu: tyo.teksti.length });
-  const sanat = jasennys.sanat.map(({ sana, merkki }) => {
+  const raaka = jasennys.sanat.map(({ sana, merkki }) => {
     const eka = paikat[merkki];
     const vika = paikat[merkki + sana.length - 1];
-    if (eka == null || vika == null) throw new Error(`sanalle "${sana}" ei löytynyt merkkiaikaa`);
+    if (eka == null || vika == null) {
+      if (tiukka) throw new Error(`sanalle "${sana}" ei löytynyt merkkiaikaa`);
+      return { sana, alku: null, loppu: null };
+    }
     return { sana, alku: ms(alut[eka]), loppu: ms(loput[vika]) };
   });
+  const loydetyt = raaka.filter((s) => s.alku != null).length;
+  const kattavuus = raaka.length ? loydetyt / raaka.length : 0;
+  // Täytä aukot LÖYDETTYJEN (ei jo täytettyjen) naapureiden välisellä
+  // suoraviivaisella arviolla, jotta ankkurinOsumat/cue-ratkaisu saa
+  // jokaiselle sanalle luvut. Peräkkäinen aukko jaetaan tasan todellisten
+  // reunasanojen välille, ei ketjutetusti edellisestä arviosta.
+  const sanat = raaka.map((s) => ({ ...s }));
+  let i = 0;
+  while (i < sanat.length) {
+    if (sanat[i].alku != null) { i += 1; continue; }
+    let loppuIdx = i; while (loppuIdx < sanat.length && sanat[loppuIdx].alku == null) loppuIdx += 1;
+    const e = i > 0 ? raaka[i - 1] : null; // viimeinen löydetty ennen aukkoa
+    const j = loppuIdx < sanat.length ? raaka[loppuIdx] : null; // ensimmäinen löydetty aukon jälkeen
+    const pituus = loppuIdx - i;
+    for (let k = i; k < loppuIdx; k += 1) {
+      const osuus = (k - i + 1) / (pituus + 1);
+      if (e && j) {
+        sanat[k].alku = Math.round(e.loppu + (j.alku - e.loppu) * osuus);
+        sanat[k].loppu = k === loppuIdx - 1 ? sanat[k].alku : Math.round(e.loppu + (j.alku - e.loppu) * (osuus + 1 / (pituus + 1)));
+      } else if (e) { sanat[k].alku = e.loppu; sanat[k].loppu = e.loppu; }
+      else if (j) { sanat[k].alku = j.alku; sanat[k].loppu = j.alku; }
+      else { sanat[k].alku = 0; sanat[k].loppu = 0; }
+    }
+    i = loppuIdx;
+  }
   const kesto = Math.max(...loput.map(ms).filter(Number.isFinite));
+  return { sanat, kesto, kattavuus, puuttuvat: raaka.filter((s) => s.alku == null).map((s) => s.sana) };
+}
+
+/** Ratkaisee kortin cue-ikkunat valmiiksi lasketuista sanan-ajoista. */
+function ratkaiseCuetSanoista(tyo, sanat, kesto) {
   const alkurivit = tyo.cuet.map((cue) => {
     const osumat = ankkurinOsumat(sanat, cue.ankkuri);
     if (osumat.length !== cue.esiintyma) {
@@ -202,10 +276,41 @@ export function ratkaiseCueAjat(tyo, vastaus) {
   return alkurivit.map((cue, i) => {
     const seuraava = alkurivit[i + 1]?.alku ?? kesto;
     const loppu = Math.min(cue.alku + MAX_CUE_MS, seuraava, kesto);
-    if (loppu < cue.ankkuriLoppu || loppu <= cue.alku) throw new Error(`${cue.id}: cueväli ei kata ankkuria`);
+    if (loppu < cue.ankkuriLoppu || loppu <= cue.alku) {
+      throw new Error(`${cue.id}: cueväli ei kata ankkuria (alku ${cue.alku} ms, ankkuriLoppu `
+        + `${cue.ankkuriLoppu} ms, seuraavan cuen alku ${seuraava} ms, kesto ${kesto} ms)`);
+    }
     const { ankkuriLoppu, ...rivi } = cue;
     return { ...rivi, loppu };
   });
+}
+
+/** Muunna ElevenLabsin merkkiajat kortin pysyviksi cue-aikaväleiksi (kuittikohdistus, tiukka). */
+export function ratkaiseCueAjat(tyo, vastaus) {
+  const { sanat, kesto } = sanaAikataulu(tyo, vastaus, { tiukka: true });
+  return ratkaiseCuetSanoista(tyo, sanat, kesto);
+}
+
+/**
+ * ELÄVÄ KOHDISTUS (ei kuittia, omistajan päätös 23.9.2026: ei
+ * uudelleenäänitystä). Sallii yksittäisten sanojen puuttua
+ * alignmentista (arvioidaan naapureista), mutta vaatii KOKONAISKATTAVUUDEN
+ * (oikeasti löytyneiden sanojen osuus) vähintään `vaadittuKattavuus`, tai
+ * kaupunki hylätään kokonaan eikä mitään kirjoiteta.
+ */
+export function ratkaiseCueAjatElavana(tyo, vastaus, { vaadittuKattavuus = 0.95 } = {}) {
+  const { sanat, kesto, kattavuus, puuttuvat } = sanaAikataulu(tyo, vastaus, { tiukka: false });
+  if (kattavuus < vaadittuKattavuus) {
+    throw new Error(`kattavuus ${(kattavuus * 100).toFixed(1)} % < vaadittu `
+      + `${(vaadittuKattavuus * 100).toFixed(0)} % (puuttuvat: ${puuttuvat.join(', ') || '-'})`);
+  }
+  try {
+    const cuet = ratkaiseCuetSanoista(tyo, sanat, kesto);
+    return { cuet, kattavuus, kesto, puuttuvat };
+  } catch (virhe) {
+    throw new Error(`${virhe.message} (kattavuus ${(kattavuus * 100).toFixed(1)} %, puuttuvat: `
+      + `${puuttuvat.join(', ') || '-'})`);
+  }
 }
 
 async function haeAanite(tyo) {
@@ -246,6 +351,66 @@ export async function kokoaEledata(tyo, aanidata, vastaus) {
   return data;
 }
 
+/**
+ * ffprobe lukee mp3:n todellisen keston riippumattomana ristiintarkistuksena.
+ * Putken kautta (stdin) mp3:n VBR/Xing-otsake ei ole luettavissa loppuun asti
+ * ilman siirtymistä (seek), ja ffprobe palauttaa silloin "N/A" — siksi data
+ * kirjoitetaan väliaikaistiedostoon ennen mittausta.
+ */
+function mittaaKesto(aanidata) {
+  const kansio = mkdtempSync(join(tmpdir(), 'pulu-elava-'));
+  const polku = join(kansio, 'aani.mp3');
+  try {
+    writeFileSync(polku, aanidata);
+    const ajo = spawnSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration',
+      '-of', 'default=noprint_wrappers=1:nokey=1', polku], { encoding: 'utf8' });
+    if (ajo.status !== 0) throw new Error(`ffprobe epäonnistui: ${ajo.stderr?.trim() || ajo.status}`);
+    const sekunteina = Number(ajo.stdout.trim());
+    if (!(sekunteina > 0)) throw new Error(`ffprobe ei löytänyt kestoa: "${ajo.stdout.trim()}"`);
+    return Math.round(sekunteina * 1000);
+  } finally {
+    rmSync(kansio, { recursive: true, force: true });
+  }
+}
+
+/**
+ * ELÄVÄ VARIANTTI: ei kuittia, ei lukittua sointireseptiä — kohde on
+ * kanoninen aanet/pulu/livia-<kaupunki>-3.mp3, sellaisena kuin se on NYT
+ * ämpärissä. Vartijat: sanakattavuus (ratkaiseCueAjatElavana) ja tässä
+ * kestovarmistus (alignmentin oma kesto vs. ffprobe-mitattu oikea kesto,
+ * sallittu poikkeama 1500 ms TAI 10 %, kumpi on suurempi — muuten kaupunki
+ * hylätään). Data merkitään kentällä lahde:"elava-ilman-kuittia", jotta
+ * ero kuittikohdistettuun dataan näkyy.
+ */
+export async function kokoaEledataElavana(tyo, aanidata, vastaus, { vaadittuKattavuus = 0.95 } = {}) {
+  const aani = { nimi: tyo.aaniNimi, tavut: aanidata.byteLength, sha256: await laskeSha256(aanidata) };
+  const { cuet, kattavuus, kesto, puuttuvat } = ratkaiseCueAjatElavana(tyo, vastaus, { vaadittuKattavuus });
+  const oikeaKesto = mittaaKesto(aanidata);
+  const poikkeama = Math.abs(oikeaKesto - kesto);
+  const sallittu = Math.max(1500, oikeaKesto * 0.1);
+  if (poikkeama > sallittu) {
+    throw new Error(`kesto ei ole uskottava: alignment ${kesto} ms, ffprobe ${oikeaKesto} ms `
+      + `(ero ${poikkeama} ms > sallittu ${Math.round(sallittu)} ms)`);
+  }
+  const data = {
+    versio: 1,
+    revision: tyo.revision,
+    kaupunki: tyo.kaupunki,
+    avain: tyo.avain,
+    teksti: tyo.teksti,
+    tekstiSha256: await tekstinSha256(tyo.teksti),
+    aani,
+    eleet: cuet,
+    lahde: 'elava-ilman-kuittia',
+    luotu: new Date().toISOString(),
+  };
+  const tarkistus = await tarkistaLivianPilottiData(data, {
+    kaupunki: tyo.kaupunki, teksti: tyo.teksti, aani,
+  });
+  if (!tarkistus.ok) throw new Error(`tuotettu eledata ei kelpaa runtimelle: ${tarkistus.syy}`);
+  return { data, kattavuus, puuttuvat, oikeaKesto, alignmentKesto: kesto };
+}
+
 function vieR2(polku, kohde) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;
@@ -262,11 +427,14 @@ function vieR2(polku, kohde) {
 }
 
 export function lueLiput(argv) {
-  const liput = { kuiva: false, vie: false, kaupungit: [], kuitti: null };
+  const liput = {
+    kuiva: false, vie: false, kaupungit: [], kuitti: null, elava: false,
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
     if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vie = true;
+    else if (pala === '--elava') liput.elava = true;
     else if (pala === '--kaupungit') liput.kaupungit.push(...String(argv[++i] ?? '').split(/[\s,]+/).filter(Boolean));
     else if (pala === '--kuitti') {
       const arvo = argv[++i];
@@ -276,6 +444,7 @@ export function lueLiput(argv) {
     else if (pala.startsWith('--')) throw new Error(`tuntematon lippu: ${pala}`);
     else liput.kaupungit.push(...pala.split(',').filter(Boolean));
   }
+  if (liput.elava && liput.kuitti) throw new Error('--elava ja --kuitti eivät kelpaa yhdessä');
   return liput;
 }
 
@@ -284,8 +453,9 @@ async function main() {
   try { liput = lueLiput(process.argv.slice(2)); } catch (virhe) { console.error(virhe.message); process.exit(1); }
   let kuitit;
   try { kuitit = await lueKuitti(liput.kuitti); } catch (virhe) { console.error(virhe.message); process.exit(1); }
-  if (!liput.kuiva && !liput.kuitti) {
-    console.error('Varsinainen kohdistus vaatii --kuitti-polun tai URLin versionoituun tuotantoerään.');
+  if (!liput.kuiva && !liput.kuitti && !liput.elava) {
+    console.error('Varsinainen kohdistus vaatii --kuitti-polun tai URLin versionoituun tuotantoerään, '
+      + 'tai --elava-lipun (kanoninen ääni ilman kuittia, katevartioitu).');
     process.exit(1);
   }
   const kaupungit = liput.kaupungit.length ? [...new Set(liput.kaupungit)]
@@ -319,6 +489,7 @@ async function main() {
     console.error('ELEVEN_API_KEY puuttuu. Tämä työkalu vain kohdistaa jo generoidut mp3:t; käytä --kuiva ilman avainta.');
     process.exit(1);
   }
+  const hylatyt = [];
   for (const tyo of tyot) {
     try {
       const aanidata = await haeAanite(tyo);
@@ -326,14 +497,34 @@ async function main() {
       if (tyo.kuittiAani && (aanidata.byteLength !== tyo.kuittiAani.bytes || saatuSha !== tyo.kuittiAani.sha256)) {
         throw new Error('versionoidun mp3:n tavumäärä tai SHA-256 ei vastaa tuotantokuittia');
       }
-      const data = await kokoaEledata(tyo, aanidata, await haeKohdistus(aanidata, tyo.teksti, avain));
+      const vastaus = await haeKohdistus(aanidata, tyo.teksti, avain);
       const polku = join(JUURI, tyo.kohde);
-      mkdirSync(dirname(polku), { recursive: true });
-      writeFileSync(polku, `${JSON.stringify(data, null, 2)}\n`);
-      console.log(`${tyo.kaupunki}: ${data.eleet.length} cuea → ${tyo.kohde}`);
-      console.log(`  mp3 ${data.aani.tavut} tavua, SHA-256 ${data.aani.sha256}`);
-      if (liput.vie) { vieR2(polku, tyo.r2Kohde); console.log(`  viety ${tyo.r2Kohde}`); }
-    } catch (virhe) { console.error(`${tyo.kaupunki}: ${virhe.message}`); virheita += 1; }
+      if (liput.elava) {
+        const { data, kattavuus, puuttuvat } = await kokoaEledataElavana(tyo, aanidata, vastaus);
+        mkdirSync(dirname(polku), { recursive: true });
+        writeFileSync(polku, `${JSON.stringify(data, null, 2)}\n`);
+        console.log(`${tyo.kaupunki}: ${data.eleet.length} cuea → ${tyo.kohde} `
+          + `(kattavuus ${(kattavuus * 100).toFixed(1)} %${puuttuvat.length ? `, puuttui: ${puuttuvat.join(' ')}` : ''})`);
+        console.log(`  mp3 ${data.aani.tavut} tavua, SHA-256 ${data.aani.sha256}`);
+        if (liput.vie) { vieR2(polku, tyo.r2Kohde); console.log(`  viety ${tyo.r2Kohde}`); }
+      } else {
+        const data = await kokoaEledata(tyo, aanidata, vastaus);
+        mkdirSync(dirname(polku), { recursive: true });
+        writeFileSync(polku, `${JSON.stringify(data, null, 2)}\n`);
+        console.log(`${tyo.kaupunki}: ${data.eleet.length} cuea → ${tyo.kohde}`);
+        console.log(`  mp3 ${data.aani.tavut} tavua, SHA-256 ${data.aani.sha256}`);
+        if (liput.vie) { vieR2(polku, tyo.r2Kohde); console.log(`  viety ${tyo.r2Kohde}`); }
+      }
+    } catch (virhe) {
+      console.error(`${tyo.kaupunki}: ${virhe.message}`);
+      hylatyt.push(tyo.kaupunki);
+      virheita += 1;
+    }
+  }
+  if (liput.elava) {
+    console.log(`Elävä kohdistus: ${tyot.length - hylatyt.length}/${tyot.length} kaupunkia hyväksytty.`);
+    if (hylatyt.length) console.log(`Hylätyt (${hylatyt.length}): ${hylatyt.join(', ')}`);
+    process.exit(hylatyt.length ? 1 : 0);
   }
   console.log(virheita ? `Valmis, ${virheita} virhettä.` : `Valmis, ${tyot.length} tiedostoa${liput.vie ? ' ja R2-vienti' : ''}.`);
   process.exit(virheita ? 1 : 0);
