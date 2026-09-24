@@ -1,46 +1,47 @@
-# Laitetestaajan aloitusviesti (24.9.2026 klo 13.1x)
+# Laitetestaajan aloitusviesti (24.9.2026 ilta)
 
 Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetestaaja.
-git fetch origin && git checkout laitetestaaja-navat-pass && git reset --hard origin/laitetestaaja-navat-pass
-(jos PR #3059 on mergetty mainiin: git fetch origin main && git checkout -B laitetestaaja origin/main sen sijaan)
+git fetch origin && git checkout laitetestaaja-inventaario-ipad && git reset --hard origin/laitetestaaja-inventaario-ipad
+(jos PR #3076 on mergetty mainiin: git fetch origin main && git checkout -B laitetestaaja origin/main sen sijaan)
 
-Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (myös FABLEN KÄSKYT ILMAN
-OMISTAJAN VÄLITYSTÄ) ja kohta NATIIVI PELI ETUSIJALLE, sekä
-docs/raportit/viesti-laitetestaaja-luovutus-20260924-13.10.md kokonaan
-(korvaa aiemmat -c.md/-b.md-luovutukset).
+Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT ILMAN
+OMISTAJAN VÄLITYSTÄ), kohta NATIIVI PELI ETUSIJALLE, **WEB ON MALLI,
+MITATTUNA (Raamattu 9ebc5784c, sitova — LUE KOKONAAN ENNEN MITÄÄN
+HYVÄKSYNTÄÄ)**, ja docs/raportit/viesti-laitetestaaja-luovutus-20260924-ilta.md
+kokonaan (korvaa aiemmat luovutukset).
 
-Olet iOS-simulaattorin ainoa käyttäjä (iPhone 18 Pro, UDID raportissa;
-iPad-vuoro pyydetään erikseen). Nykyinen asennus: build 7 SHA 24c9194.
+**SITOVA SÄÄNTÖ WEB ON MALLI, MITATTUNA**: älä hyväksy mitään natiivin
+näkymää tai toimintoa PASS:ksi rakennevertailulla ("näyttää samalta").
+Vaaditaan web–natiivi-kuvapari SAMASTA pelitilasta JA mitatut arvot
+(px, zoomikynnykset, vaiheet) ennen hyväksyntää. Työkalut:
+tools/pariteetti-web-kuva.mjs, tools/pariteetti-web-lehti.mjs (iPhone
+393×852, iPad 834×1194).
 
-**Tila**: build 6 -tarkistuslista 17/19 PASS. B7-lista ajettu kahdesti
-(161fa35, 24c9194) — PASS: B7-1, B7-2 (osin), B7-5, B7-9 (vaatimus
-peruttu, nykyinen sisältö oikea), löydös 14 (navat), hehkurenkaat.
-FAIL: B7-3 (huntu, rikkinäinen laattalataus — välitetty Karttasepälle/
-Natiivisepälle build 8:aan), B7-6 (yläreuna, odotettua). EI VOITU
-TESTATA: B7-4 (VU-mittarin viritys), B7-8 (☰-valikon vieritys),
-B7-7:n lennon ääni (todennäköinen syy: `hiljaa`-komento sammuttaa koko
-narraatiojärjestelmän — vaatii uusinnan äänet päällä).
+Laitteet: iPhone 18 Pro (1572C658, kosketus toimii), iPhone 17
+(FB234D08, KOSKETUSLUPA PUUTTUU — käytä peli-komento.txt/ui-komento.txt
+-protokollaa), iPad Pro 11" M5 (503000D1, kosketus toimii, jaettu
+laite — sovi vuorot suoraan muiden sessioiden kanssa). **Uusi laite
+tulossa: iso iPad 00008103… (1024×1366)** — tarkista simulaattori-
+luettelosta.
 
-**TÄRKEIN OPETUS**: `komento.txt: hiljaa` sammuttaa koko narraatio-
-järjestelmän (`peli-tila.json`:n `puhe.paalla` pysyy aina false), ei
-vain äänenvoimakkuutta. Älä käytä sitä jos täytyy todentaa mikä
-ääniraita soi. Luotettavin tapa napauttaa nappeja ei ole kosketustyökalu
-vaan `ui-komento.txt`: `ui napauta <x> <y>` (lokittaa osuiko oikeaan
-elementtiin).
+**Tila**: PR #3076 open. Nappi-inventaario (12 osiota) ja pariteetti-
+natiivi-20260924.md päivitetty tänään. Build 9 (1.0.0, 202609241305,
+proto 9a5618b) sisältää dice-roll-korjauksen (pelikoodari/liiku-tanne),
+todennettu PASS iPhonella (ei listakorttia, ei Liiku tänne -riviä
+oikealla kaupunkikortilla).
 
-Seuraavaksi (järjestyksessä, ks. luovutuksen kohta 3):
-1. B7-7 lennon ääni ÄÄNET PÄÄLLÄ: onko ensimmäisellä lennolla
-   `puhe-lento-alku.mp3` vai `intro-puhe.mp3`?
-2. B7-4 VU-mittarin viritys (löydä oikea kosketus/komento).
-3. B7-8 ☰-valikon vieritys "Uusi peli" -riviin (Natiivi-UI: pyyhkäise
-   valikkoa ylös, linssilista on pitkä).
-4. Zoom-kuminauhaefekti — kysy Fablelta tarkka spesifikaatio ennen testausta.
-5. iPadin kuvasumea — tarkista onko joku muu jo testannut.
-6. Kun build 8 ilmoitetaan (varalaatta, kartuscha, iPad-sumea, valikon
-   järjestys), aja KOKO B7-lista uudelleen.
+Seuraavaksi (järjestyksessä, ks. luovutuksen kohta 7):
+1. iPad-kuvapari testi/b10:n dice-roll-korjaukselle (Pelikoodarille).
+2. Rivi 9:n (maalehden palstoitus, VAHVISTETTU FAIL) korjauksen
+   uusinta kun Natiivi-UI ilmoittaa — MITATTUNA.
+3. Rivit 12/12b (selite), 41 (maatiedot) kun uusinta ilmoitetaan.
+4. iPadin porttijäänne: varmista oikealla kosketuksella.
+5. **Lennon esilatauksen mittaus build 9:llä** — Lontoo→Ateena-lento,
+   lue lokirivi "lennon pinta: vaihto t=…, esilataus V+E/Y,
+   välimuistista/verkosta", raportoi luvut Fablelle.
+6. Jatka nappi-inventaarion EI TARKISTETTU -osioita (ks. luovutuksen
+   kohta 4) mittaamalla, ei arvaamalla.
 
-Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja kutsu
-clear_session "self" samassa vuorossa. Testit ilman ääniä paitsi
-kuulokokeessa (ja B7-7:n ääniraidan tarkistuksessa, ks. yllä). Viestit
-Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä
-(niputa, Desktopin 10 viestin raja).
+Muista: `uusi-peli <n> <kaupunki>` + `odota-tila Kartta` ennen
+seuraavaa komentoa (race condition jos liian nopea peräkkäin). Jaettu
+laite: ilmoita suoraan muille sessioille kun otat/vapautat laitteen.

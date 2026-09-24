@@ -1192,7 +1192,7 @@ export const AFRICA_VALOKUVAT = {
     lyhyt: 'Putousten rautatiesilta 1905, rakennettu niin lähelle että vesisumu kastelee vaunut.',
     selite: 'Putousten rautatiesilta juuri valmistuneena 1905. Se '
       + 'rakennettiin niin lähelle, että vaunuihin sataa vesisumua — '
-      + 'suunnittelijan tarkoituksella.',
+      + 'Cecil Rhodesin nimenomaisesta vaatimuksesta.',
     uusi: {
       tiedosto: 'Victoria Falls Bridge and Zambezi river.jpg',
       lahde: 'Ninaras, Commons (CC BY-SA 4.0)',

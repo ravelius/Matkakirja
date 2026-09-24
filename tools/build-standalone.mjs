@@ -1072,6 +1072,7 @@ const MODULES = [
   // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
+  'js/lehtikuori.js',
   'js/main.js',
 ];
 
