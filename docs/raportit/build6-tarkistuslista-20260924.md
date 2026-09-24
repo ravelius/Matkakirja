@@ -722,6 +722,22 @@ tarkka/yksityiskohtainen kuin webin kuvassa. **FAIL**: mikä tahansa
 neljästä pettää — esim. meri saa kermaa, naapurien nimet peittyvät
 kokonaan, tai raja on yksinkertaistettu polygoni.
 
+**TULOS 24.9. klo 13.0x (SHA 24c9194): FAIL — kaksi eri rikkoutumaa
+havaittu.** 1) Ulos-zoomatussa maailmankuvassa (`b7-3-huntu-rikkinainen-
+suorakulmio.png`) Espanjan/Marokon/Länsi-Saharan alueella näkyy ISO
+SUORAKULMAINEN VAALEA LAATTA jyrkillä suorilla reunoilla — ei seuraa
+maiden rajoja lainkaan, näyttää rikkinäiseltä/lataamattomalta
+tekstuurilaatalta kerman sijaan (kaupunkien nimet Madrid/Sevilla NÄKYVÄT
+sen päällä, joten nimiotaso on erillään ja toimii). 2) Kreikkaan
+zoomattuna (`b7-3-kreikka-tile-glitch.png`) naapurimaan (luultavasti
+Albania/Pohjois-Makedonia) laatta on PUOLIKSI ORANSSIA RELIEFIÄ ja
+PUOLIKSI VAALEAA KERMAA JYRKÄLLÄ VIISTOLLA SAUMALLA keskellä laattaa —
+naapuri saa väärin osan Kreikan väritasosta. Meri itsessään näyttää
+kohtuu hyvältä (harmaa sävy + rantaviivakontuurit), Kreikan oma
+ääriviiva/reliefi näyttää oikealta. **Juurisyy vaikuttaa olevan
+laattarajojen/lataustilan bugi kermakerroksessa, ei suunnitteluvirhe** —
+välitetty Karttasepälle/Natiivisepälle.
+
 ## B7-4: Maailmanradion aito VU-mittari
 
 **Tausta**: webissä poistettiin 5.8.2026 (WebKit ei päästä suoratoistoa
@@ -918,6 +934,17 @@ tässä ajossa. UI-elementtien piilotus lennon aikana kuitenkin VARMISTETTU
 PASS (ks. B7-5:n tulos: topbar/napit/pulu eivät näkyneet yhdessäkään
 lentoruudussa).**
 
+**LISÄTULOS 24.9. klo 13.0x (SHA 24c9194, lennon ääni)**: EI VOITU
+VARMISTAA LUOTETTAVASTI. `peli-tila.json`:n `puhe`-kenttä (`paalla`,
+`url`) oli `false`/`null` KOKO lyhyen Ateena→Kairo-lennon ajan — mikä
+tarkoittaa, ettei mikään narraatioääni (ei intro EIKÄ lento-alku)
+soinut tällä nimenomaisella lennolla. Tämä voi tarkoittaa: (a) lennon
+avausnarraatio soi vain PELIN ENSIMMÄISELLÄ lennolla uudessa pelissä,
+ei myöhemmillä lennoilla (tätä testiä ei tehty ensimmäisellä lennolla),
+tai (b) narraatio ei käynnistynyt lainkaan. Uusinta vaatii testin
+AIVAN ENSIMMÄISELLÄ lennolla tuoreessa pelissä + `puhe.url`-kentän
+tarkistus heti lennon alettua.
+
 ## B7-9 (löydös 24A): Aloitusportin ruutu täsmälleen webin mukaan (ei ylimääräistä)
 
 **Omistaja (Fable 24.9. klo 12.08, SITOVA)**: aloitusportin pitää
@@ -947,6 +974,12 @@ testaa myös se erikseen: `kuva portti-b7-tallennuksella`.
 "Aloita seikkailu", "Oppiminen on hauskaa") — ei otsikkolohkoa, ei
 ingressiä, ei Jatka/Uusi-nappeja. **FAIL**: mikä tahansa ylimääräinen
 elementti näkyy yhä (kuten build 6:ssa).
+
+**TULOS 24.9. klo 13.0x (SHA 24c9194): FAIL — ei muutosta build 6:sta.**
+Kylmäkäynnistyksen portti näyttää yhä täyden otsikkolohkon (MATKAKIRJA/
+MAAILMAN YMPÄRI.../OSA II), ingressin ja "Jatka matkaa"/"Uusi matka"
+-nappiparin (`b7-9-portti-vielakin-vanha.png`) — täsmälleen sama kuin
+build 6:ssa. Ei vielä toteutettu.
 
 ## B7-8 (löydös 24B): ☰-valikon "Uusi peli" palauttaa aloitusporttiin asti
 
@@ -989,12 +1022,13 @@ Natiivi-UI:lta.
 |---|--------|-----------|------|--------|
 | B7-1 | Liiku läpinäkyvä (myös aktiivinen) | ✅ PASS (161fa35) | b7-1-liiku-aktiivinen-PASS.png | |
 | B7-2 | Tekstit piilossa + aito kaiutin | ✅ PASS piilotus, ei testattu kaiutin (161fa35) | b7-2-tekstit-piilossa.png | |
-| B7-3 | Väritaso/huntu/meri/raja | odottaa 24c9194 | | Ei valmis 161fa35:ssä, testataan uudella SHA:lla |
+| B7-3 | Väritaso/huntu/meri/raja | ❌ FAIL (24c9194) | b7-3-huntu-rikkinainen-suorakulmio.png, b7-3-kreikka-tile-glitch.png | Rikkinäinen suorakulmainen laatta (Espanja/Marokko) + puoliksi väärä naapurilaatta (Kreikan vieressä); meri ja Kreikan oma raja OK |
+| Zoom-kuminauha | Ulos-zoomin kuminauhaefekti | ⚠️ EI VOITU TESTATA (24c9194) | | Pinch-zoom-eleet eivät toimineet luotettavasti tässä simulaattoriympäristössä (kosketustyökalu) |
 | B7-4 | Radion VU-mittari | ⚠️ EI VOITU TESTATA (161fa35) | b7-4-vu-mittari-lepotila.png | Ei onnistuttu virittämään asemaa kosketuksella |
 | B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
-| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | "ODOTTAA" (Fablen ohje) / UI-piilotus PASS | | Ääni tarkistetaan 24c9194:lla |
+| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni EI VOITU VARMISTAA (161fa35+24c9194) | | `puhe.url` oli null koko lennon ajan — ei ensimmäinen lento tuoreessa pelissä, uusinta tarvitaan |
 | B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ⚠️ EI SAATU TESTATTUA (161fa35) | | Kosketus ei osunut valikon vieritykseen |
-| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | odottaa (ei testattu 161fa35:llä) | | Testataan 24c9194:lla |
+| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | ❌ FAIL (24c9194) | b7-9-portti-vielakin-vanha.png | Ei muutosta build 6:sta, sama vanha otsikkolohko+napit |
 | 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
 | 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
