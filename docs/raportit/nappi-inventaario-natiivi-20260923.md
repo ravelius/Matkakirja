@@ -108,7 +108,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | "Liftaus" | ui.js:11373 | Matkavalinta.cs:107 (rivi per kulkutapa) | on | NUI |
 | "Bussilla" → "Kaupunki (X p)" | ui.js:11378, 11420 | Matkavalinta.cs:107 | on | NUI |
 | "Laivalla (X p)" | ui.js:11385, 11426 | Matkavalinta.cs:107 | on | NUI |
-| "Lentäen" → lentolista ja ✈-kohdemerkit kartalla | ui.js:11392, 11437, 10540 | Matkavalinta.cs:107 | osittain: ✈-merkit ja kaikkien kohteiden kamerasovitus puuttuvat | NS, NUI |
+| "Lentäen" → lentolista ja ✈-kohdemerkit kartalla | ui.js:11392, 11437, 10540 | Matkavalinta.cs:107; Reitit.Lentokaaret + SovitaKohteet (NS, master 0b30131) | ✈-merkit vain vanhassa SVG-kartassa (ei tarvita); pallon lentokaaret ja kamerasovitus NS:llä, kutsut PK:lta | NS, PK |
 | Mannerlento "Lennä X: kaupunki (p)" | ui.js:11450 | UI/KaupunkiKortti.cs:172, NakymaSopimukset.cs:83 | on | NUI |
 | "Takaisin" (lentolista) | ui.js:11487 | Matkavalinta.cs:113 ("Peruuta") | on | NUI |
 | "Heitä noppa" | ui.js:11248 | Matkavalinta.cs:47 (heittonappi) | on | NUI |
@@ -297,7 +297,7 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | "Näytä puhekuplat" | pollo.js:1972 | PuluChat.cs (ylärivi) | on | NUI |
 | Vastauksen kuva → "Näytä kuva isompana" | pollo.js:5305 | puuttuu | puuttuu | NUI |
 | Kuvakortti "Avaa juttu" | pollo.js:5098 | puuttuu | puuttuu | NUI |
-| Matkakirjalinkit ("Lue: …") | pollo.js:5477 | puuttuu | puuttuu | NUI, PK |
+| Matkakirjalinkit ("Lue: …") | pollo.js:5477 | PuluChat + UI/Pulu/PuluHaku.cs (web pollo-haku.js: paikallinen tietohaku kontekstiin) | on (master f8fe3cc) | NUI |
 | Käsitelinkit ("Kerro lisää: aihe") | pollo.js:5824 | puuttuu | puuttuu | NUI |
 | "Ehdota tallennettavaksi" (poiminta) | pollo.js:5230 | PuluChat.PoimintaRivi | on (kehittäjätilassa "Tallenna juttuun" samaan kanavaan); webin paketin pillerit artikkelin lopussa (pollo-poiminnat.js, 1 pari) puuttuvat | NUI |
 | Paikkakysymys: kamera lentää, "‹ Palaa" | pulu-paikka.js:742 | PuluChat.cs:125, 452 | on | NUI, NS |
@@ -348,8 +348,8 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 | Lappukahva "Näytä X" | aikajana.js:4151 | puuttuu | puuttuu | NUI |
 | Välinäytöksen "Jatka" | aikajana.js:771 | AikajanaNakyma.cs:112 | on | NUI |
 | "Katso löydöt" (loppu) | aikajana.js:5005 | AikajanaNakyma.cs:121, 123 | on | NUI |
-| "Lue juttu" → tiedeliite | aikajana.js:5677 | puuttuu | puuttuu | NUI, LS, SS |
-| Tiedeliite: ✕, ☰ sisällys ja sen rivit, edellinen/seuraava keksijä, karuselli ‹ › ja pisteet, kuvan suurennus | tiedeliite.js:642, 654, 749, 700, 388, 398, 227 | puuttuu | puuttuu | NUI, SS |
+| "Lue juttu" → tiedeliite | aikajana.js:5677 | AikajanaNakyma (paneelin nappi) → KeksinnotLinssi.AvaaJuttu (LS) | on (merge-pyynnössä natiivi-ui/tiedeliite) | NUI, LS |
+| Tiedeliite: ✕, ☰ sisällys ja sen rivit, edellinen/seuraava keksijä, karuselli ‹ › ja pisteet, kuvan suurennus | tiedeliite.js:642, 654, 749, 700, 388, 398, 227 | UI/Linssit/Tiedeliitenakyma.cs | on (merge-pyynnössä); ihmisen matkan tiedeliite tulee LS:n tutkimusvaiheen kanssa | NUI, LS |
 
 ### 16 e. Ihmisen matka
 
