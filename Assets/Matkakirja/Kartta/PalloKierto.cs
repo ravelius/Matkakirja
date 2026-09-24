@@ -915,12 +915,16 @@ namespace Matkakirja
         bool maastoNayteOn;
         float seuraavaMaasto;
 
-        /// <summary>Maaston korkeus (m, ellipsoidista) viimeisimmästä näytteestä, jos se on 30 km:n sisällä; muuten 0.</summary>
+        /// <summary>
+        /// PIIRRETYN maaston korkeus (m, ellipsoidista) viimeisimmästä näytteestä, jos se on 30 km:n sisällä; muuten 0.
+        /// Cesiumin näyte on liioittelematon, piirretty maasto KorkeusKerroin.Sovita(h) (löydös 29, oletus 2): kaikki
+        /// kamera-ajot (Aja, Kuvaa = lennon aikajana, linssit, seuranta) kulkevat Aseta()-metodin raon kautta.
+        /// </summary>
         double MaastoKohdassa(double lat, double lon)
         {
             if (!maastoNayteOn) return 0.0;
             if (ReittiGeometria.Kulma(lat, lon, maastoNaytePaikka.x, maastoNaytePaikka.y) > 30.0 / 111.2) return 0.0;
-            return math.max(0.0, maastoNayte);
+            return math.max(0.0, KorkeusKerroin.Sovita(maastoNayte));
         }
 
         void PaivitaMaasto()
@@ -939,7 +943,7 @@ namespace Matkakirja
                 }
             }
             if (Time.unscaledTime < seuraavaMaasto) return;
-            if (silmanKorkeus > maastonKatto + KameraEleet.VahimmaisRako(korkeus) + 3000.0) return;
+            if (silmanKorkeus > KorkeusKerroin.Sovita(maastonKatto) + KameraEleet.VahimmaisRako(korkeus) + 3000.0) return;
             if (maastoPallo == null && georeferenssi != null) maastoPallo = georeferenssi.GetComponentInChildren<Cesium3DTileset>();
             if (maastoPallo == null || maastoPallo.tilesetSource != CesiumDataSource.FromUrl) { maastoNayteOn = false; return; }
             seuraavaMaasto = Time.unscaledTime + maastoVali;

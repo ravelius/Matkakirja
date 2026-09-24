@@ -44,7 +44,7 @@ namespace Matkakirja
     ///   renkaat id,id,… [valittu] | renkaat pois   aloitusvalinnan huomiorenkaat (KaupunkiMerkit.Renkaat)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
-    ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 1; ei tallennu)
+    ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     /// </summary>
     public class Komennot : MonoBehaviour
     {

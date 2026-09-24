@@ -82,7 +82,8 @@ namespace Matkakirja
                 pisteet[id] = p;
             }
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, nosto));
+            // Nosto ellipsoidista × korkeuskerroin: mikä oli kertoimella 1 maaston yllä, pysyy liioitellun yllä.
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, KorkeusKerroin.Sovita(nosto)));
             double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
             p.Paikka = (float3)u;
             p.Normaali = (float3)math.normalize(u - keskus);

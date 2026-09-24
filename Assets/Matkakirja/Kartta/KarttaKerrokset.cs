@@ -80,8 +80,8 @@ namespace Matkakirja
         {
             // Tileset-varjostimen raster-paikkojen alfat (Shaders/Cesium/MatkakirjaTileset): globaalit, oletus 0 → näkyviin.
             for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
-            // Korkeuskerroin (löydös 29, koelippu): oletus 1 ja maan keskipiste varjostimelle; komento "korkeus <k>".
-            KorkeusKerroin.Aseta(1f, GetComponent<CesiumGeoreference>());
+            // Korkeuskerroin (löydös 29): omistajan valitsema oletus 2 ja maan keskipiste varjostimelle; komento "korkeus <k>".
+            KorkeusKerroin.Aseta(KorkeusKerroin.Oletus, GetComponent<CesiumGeoreference>());
             Instanssi = this;
             CesiumRasterOverlay.OnCesiumRasterOverlayLoadFailure += Epaonnistui;
         }
