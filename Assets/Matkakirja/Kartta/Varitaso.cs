@@ -125,11 +125,16 @@ namespace Matkakirja
             kerros.maximumLevel = tasoMax;
             kerros.tileWidth = 256;
             kerros.tileHeight = 256;
+            Navat(true);
         }
+
+        /// <summary>Napakalotit samaan kermaan kuin laatat (kalotti piirtyy laattojen päälle).</summary>
+        static void Navat(bool kerma) => KarttaKerrokset.Instanssi?.napakannet?.Kerma(kerma);
 
         void Poista()
         {
             if (kerros == null) return;
+            Navat(false);
             // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä.
             kerros.enabled = false;
             Destroy(kerros);

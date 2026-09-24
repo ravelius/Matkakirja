@@ -110,6 +110,20 @@ namespace Matkakirja
             Paivita();
         }
 
+        /// <summary>
+        /// Väritaso päällä (Varitaso): kalotti ja kansi saavat saman kerman kuin laatat (#faf4d6, peitto 0,85),
+        /// muuten navalla näkyisi värillinen kiekko kerman keskellä (iPad 24.9.; Karttasepän suositus).
+        /// </summary>
+        public void Kerma(bool paalla)
+        {
+            var c = new Color(250f / 255f, 244f / 255f, 214f / 255f, paalla ? 217f / 255f : 0f);
+            foreach (var n in navat)
+            {
+                if (n.KansiMateriaali != null) n.KansiMateriaali.SetColor("_Kerma", c);
+                if (n.KalotinMateriaali != null) n.KalotinMateriaali.SetColor("_Kerma", c);
+            }
+        }
+
         /// <summary>Mittareille: onko kalotti ladattu ("pohjoinen" / "etela").</summary>
         public bool KalottiLadattu(string puoli) => navat.Find(n => n.Puoli == puoli)?.Kalotti != null;
 

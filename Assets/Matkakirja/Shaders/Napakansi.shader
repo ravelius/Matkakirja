@@ -20,6 +20,7 @@ Shader "Matkakirja/Napakansi"
         _BaseColor("Väri", Color) = (1, 1, 1, 1)
         _MainTex("Kalotin kuva (esikerrottu)", 2D) = "white" {}
         _Nosto("Syvyyden nosto (m)", Float) = 6000
+        _Kerma("Väritason kerma (a = peitto)", Color) = (0.98, 0.957, 0.839, 0)
     }
     SubShader
     {
@@ -44,6 +45,7 @@ Shader "Matkakirja/Napakansi"
                 half4 _BaseColor;
                 float4 _MainTex_ST;
                 float _Nosto;
+                half4 _Kerma;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; half4 vari : COLOR; float2 uv : TEXCOORD0; };
@@ -79,7 +81,9 @@ Shader "Matkakirja/Napakansi"
                 savy = SRGBToLinear(savy);
             #endif
                 half a = kuva.a * _BaseColor.a * i.vari.a;
-                return half4(savy * _BaseColor.rgb * valaistus * a, a);
+                // Väritason kerma kuten laatoissa (Cesiumin raster-kerros sekoittuu ennen valaistusta).
+                half3 vari = lerp(savy * _BaseColor.rgb, _Kerma.rgb, _Kerma.a);
+                return half4(vari * valaistus * a, a);
             }
             ENDHLSL
         }
