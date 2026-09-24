@@ -2,16 +2,22 @@
 # iPad-apu (Natiiviseppä). UDID oletuksena jaettu iPad Pro 11".
 #   tyokalut/ipad.sh asenna                     # Build/dd-laite:n .app laitteelle ja käynnistys
 #   tyokalut/ipad.sh kaynnista                  # uudelleenkäynnistys (puhdas ajo)
-#   tyokalut/ipad.sh peli <skripti> <s> <kansio># peli-komento.txt, odotus, Documents → kansio
-#   tyokalut/ipad.sh hae <kansio> [tiedosto…]   # Documents → kansio; tiedostonimillä vain ne
-#                                               # (koko Documents on ~750 Mt: levy täyttyy, käytä nimiä)
+#   tyokalut/ipad.sh peli <skripti> <s> <kansio># peli-komento.txt, odotus, lokit → kansio
+#   tyokalut/ipad.sh hae <kansio> [tiedosto…]   # tiedostonimillä vain ne; ilman nimiä Documentsin
+#                                               # ylätason lokit (*.txt). EI KOSKAAN koko konttia
+#                                               # (sisältö, äänet, offline, kuvat ~750 Mt/ajo; Fable 24.9.:
+#                                               # lokikansioon vain kuvat, videot ja konsoli)
 #   tyokalut/ipad.sh konsoli <s> <tiedosto>     # uudelleenkäynnistys ja Unityn loki (stdout) s sekuntia
 #   tyokalut/ipad.sh versio                     # laitteen sisältöpaketin polku (välimuistikopioille)
 UDID=${UDID:-00008142-0019686E02F3801C}
 ID=app.matkakirja.proto3d
 cd "$(dirname "$0")/.."
 kopioi_sinne() { xcrun devicectl device copy to --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "$1" --destination "Documents/$2" >/dev/null; }
-hae() { mkdir -p "$1"; xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source Documents --destination "$1" >/dev/null; }
+yksi() { xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "Documents/$2" --destination "$1/$2" >/dev/null 2>&1 || echo "puuttuu: $2"; }
+# Documentsin ylätason lokit (*.txt) listauksesta; alikansiot (sisalto, aanet, offline, kuvat…) eivät tule.
+lokit() { xcrun devicectl device info files --device $UDID --domain-type appDataContainer --domain-identifier $ID --subdirectory Documents 2>/dev/null \
+  | sed -E 's/  +.*//' | grep -E '^[^/ ]+\.txt$'; }
+hae() { mkdir -p "$1"; for t in $(lokit); do yksi "$1" "$t"; done; }
 case "$1" in
   asenna)
     APP=$(ls -d Build/dd-laite/Build/Products/Release-iphoneos/*.app | head -1)
@@ -24,9 +30,7 @@ case "$1" in
   hae)
     if [ $# -gt 2 ]; then
       mkdir -p "$2"
-      for t in "${@:3}"; do
-        xcrun devicectl device copy from --device $UDID --domain-type appDataContainer --domain-identifier $ID --source "Documents/$t" --destination "$2/$t" >/dev/null 2>&1 || echo "puuttuu: $t"
-      done
+      for t in "${@:3}"; do yksi "$2" "$t"; done
     else hae "$2"; fi ;;
   konsoli)
     timeout "$2" xcrun devicectl device process launch --device $UDID --terminate-existing --console $ID > "$3" 2>&1

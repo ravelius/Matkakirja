@@ -151,6 +151,7 @@ varapallo (z0–z2), jos verkkoa ei ole ensimmäisellä kerralla.
 |---|---|---|
 | `float MatkakirjaRadio_Taso()` | valmis | Soivan virran RMS-taso 0…1 (~30 ms ikkuna, dBFS −60…0 → 0…1) ENNEN voimakkuutta; nopea nousu, vaimennus ~0,3 s; tauolla/ei soi → laskee nollaan. **−1** = ei mitattavissa (HLS-virta: MTAudioProcessingTap ei toimi segmenteillä) → käytä webin ajastettua varakuviota. Halpa: luetaan joka kehys (Linssiseppä: RadioVirta.Taso). |
 | `float MatkakirjaRadio_Huippu()` | valmis | Sama huippuarvosta (|näyte| max), vaimennus ~1 s. |
+| `float MatkakirjaRadio_Rms()` | valmis | Raaka lineaarinen RMS 0…1 (~30 ms), ei tasoitusta eikä dB-asteikkoa, ennen voimakkuutta; 0 ei soi, −1 HLS. VuMittari tasoittaa itse. |
 
 Mittaus: MTAudioProcessingTap AVPlayerItemin audioMixissä (progressiivinen MP3/AAC), MediaToolbox linkitetään
 Rakennus.Kehykset-jälkikäsittelyssä. Koskee kaikkia MatkakirjaRadio_Avaa-virtoja (myös lehden mediarivi).

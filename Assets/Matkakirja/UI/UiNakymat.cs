@@ -99,7 +99,7 @@ namespace Matkakirja.Natiivi
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
         /// <summary>
-        /// iPhone (omistaja 24.9.2026, löydös 19; Raamattu NATIIVIN iPHONE-ASETTELU): kartta kevyesti sumeana aina,
+        /// Omistaja 24.9.2026, löydös 19 (iPhone ja iPad): kartta kevyesti sumeana aina,
         /// kun isoisän tai pulun kuvia on näkyvillä — luennan kuvasarja (isoisän kuvakupla), kohtaamiskortti,
         /// nostokortti ja pulun kuvakortti. Kameran puoli kuuntelee tätä (miedompi kuin portin verho, liukuen).
         /// </summary>
@@ -158,8 +158,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaKuvaSumea()
         {
-            bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
-                && (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki));
+            // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
+            bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki);
             if (s == KuvaSumea) return;
             KuvaSumea = s;
             KuvaSumeaMuuttui?.Invoke(s);
@@ -258,11 +258,15 @@ namespace Matkakirja.Natiivi
             Tilarivi.PilleriPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Vaihda(); };
             Valikko.AukiMuuttui += auki => Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
             Aanentasot.AukiMuuttui += auki => Tilarivi.Ratas.EnableInClassList("mk-valittu", auki);
+            // Löydös 24: Uusi peli palaa aloitusporttiin ilman tallennuksen jatkoa → avausruutu → valinta → lento;
+            // PeliOhjain.UusiMatka korvaa tallennuksen vasta, kun kaupunki valitaan.
             Valikko.UusiPeli += () =>
             {
                 var o = PeliOhjain.Instanssi;
-                if (o != null) o.UusiPeli(null);
-                else Tilarivi.Viesti("Peli ei ole vielä käynnissä");
+                if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
+                SuljeKaikki();
+                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+                Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
             // Pallo ei lue elettä, joka alkaa UI:n päältä (kaikki kerrokset, myös ei-modaaliset napit).

@@ -102,6 +102,8 @@ namespace Matkakirja.Linssit.Radio
 
         readonly RadioAineisto aineisto;
         readonly IRadioVirta virta;
+        /// <summary>Soitin (lokia varten: RadioVirta.Kuvaus kertoo, miksi VU-taso puuttuu).</summary>
+        public IRadioVirta Virta => virta;
         readonly IViritin viritin;
         readonly IRadioKartta kartta;
         readonly ISet<char> fontti;
