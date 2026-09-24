@@ -411,7 +411,20 @@ namespace Matkakirja.Natiivi
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 linssi.Avaa(y);
-                if (vanat != null) using (Merkki("ihmisen-matka", "Avaa.Vanat").Auto()) VanatValmiit(vanat);
+                if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
+            }
+
+            /// <summary>
+            /// Vanat avauksen jälkeisessä kehyksessä (ui piikit ajo 7: Avaa.Vanat 9,6 ms samassa kehyksessä kuin
+            /// linssin luonti → 31,7 ms). Odottaa taustasäikeen valmista piirtoa enintään ~1,5 s, jotta kerros ei
+            /// rakenna sitä pääsäikeessä. Vanat näkyvät vasta avausjakson jälkeen, joten viive ei näy.
+            /// </summary>
+            System.Collections.IEnumerator VanatSeuraavassa(Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi avattu)
+            {
+                yield return null;
+                for (int i = 0; i < 90 && valmis is { IsCompleted: false }; i++) yield return null;
+                if (linssi != avattu || vanat == null) yield break;
+                using (Merkki("ihmisen-matka", "Avaa.Vanat").Auto()) VanatValmiit(vanat);
             }
 
             public void Paivita() => linssi?.Paivita();
