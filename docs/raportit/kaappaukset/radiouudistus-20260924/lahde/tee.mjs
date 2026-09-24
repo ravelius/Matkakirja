@@ -20,6 +20,7 @@ const K = [
   ['Luxemburg', 502, 578, 'pieni'], ['Bern', 560, 662, 'pieni'], ['Ljubljana', 802, 722, 'pieni'], ['Zagreb', 868, 738, 'pieni'],
 ];
 const VALITTU = 'Pariisi';
+const M = JSON.parse(readFileSync(join(T, 'mastot.json'), 'utf8'));
 const mk = (y) => Math.max(0.55, Math.min(1.1, 0.55 + 0.55 * (y - 250) / 800));
 // Satunnainen mutta toistettava vilkkutila
 let siemen = 7; const arpa = () => (siemen = (siemen * 16807) % 2147483647) / 2147483647;
@@ -52,13 +53,13 @@ function renkaat(x, y, sateet, suhde = 0.77) {
 
 function mastokerros(valittu, { vuValo = 1 } = {}) {
   let s = '';
-  const jarj = [...K].sort((a, b) => a[2] - b[2]);
-  for (const [n, x, y, koko] of jarj) {
+  const jarj = [...M].sort((a, b) => a.y - b.y);
+  for (const { nimi: n, x, y, koko, mk: m } of jarj) {
     const v = n === valittu;
-    const valot = KOOT[koko].valot.map(() => v || arpa() > 0.45);
-    if (v) s += `<ellipse cx="${x}" cy="${y}" rx="${110 * vuValo}" ry="${85 * vuValo}" fill="url(#maavalo)"/>`;
-    s += masto(x, y, koko, { mittakaava: mk(y) * (v ? 1.08 : 1), valot, valittu: v });
-    if (v) s += `<text x="${x + 16}" y="${y + 18}" font-family="Georgia,serif" font-size="15" fill="#ffd9b0" letter-spacing="2" style="paint-order:stroke" stroke="#1a0f06" stroke-width="3">PARIISI</text>`;
+    const valot = KOOT[koko].valot.map(() => v || arpa() > 0.4);
+    if (v) s += `<ellipse cx="${x}" cy="${y}" rx="${140 * vuValo}" ry="${108 * vuValo}" fill="url(#maavalo)" style="mix-blend-mode:screen"/>`;
+    s += masto(x, y, koko, { mittakaava: m * (v ? 1.05 : 1), valot, valittu: v });
+    if (v) s += `<text x="${x + 16}" y="${y + 18}" font-family="Georgia,serif" font-size="15" fill="#ffd9b0" letter-spacing="2" style="paint-order:stroke" stroke="#1a0f06" stroke-width="3">${n.toUpperCase()}</text>`;
   }
   return s;
 }
@@ -71,19 +72,18 @@ const kuvat = {};
 
 // 1. PÄÄKUVA: iPad 1024 × 1366, hämärä, mastot, renkaat, paneeli
 {
-  const p = K.find((k) => k[0] === VALITTU);
+  const pm = M.find((k) => k.nimi === VALITTU); const p = [pm.nimi, pm.x, pm.y];
   const paneeli = teePaneeli({ leveys: 640, vuL: 118, vuK: 84, lcdL: 408, lcdK: 84, lamppu: 30, asteikkoK: 42,
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72,
     kaupungit: ['LONTOO', 'MADRID', 'BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM', 'OSLO', 'ROOMA'], soiva: 'PARIISI' });
   kuvat['1-paakuva-ipad'] = sivu(`
-    <div style="position:absolute;inset:0;background:url(${b64('kall-hamara-p.png')}) 0 0/1024px 1366px"></div>
+    <div style="position:absolute;inset:0;background:url(${b64('kall-hamara2.png')}) 0 0/1024px 1366px"></div>
     <svg width="1024" height="1366" style="position:absolute;inset:0"><defs>${MAARITTEET}</defs>
-      <g style="mix-blend-mode:screen">${yovalot(p)}</g>
-      ${renkaat(p[1], p[2], [[95, 0.55], [215, 0.34], [330, 0.16]])}
+      ${renkaat(p[1], p[2], [[110, 0.6], [250, 0.38], [380, 0.18]])}
       ${mastokerros(VALITTU)}
     </svg>
-    <div style="position:absolute;left:0;top:62px;width:370px;height:310px;box-sizing:border-box;padding:18px 18px;background:linear-gradient(180deg,rgba(20,12,5,.97),rgba(20,12,5,.97) 90%,rgba(20,12,5,.0));border-radius:0 0 14px 0;color:#f0d9b5;font:13px/1.45 Georgia,serif">
-      <b style="letter-spacing:1px">HAVAINNEKUVA</b><br>Kartta on natiivin kuvakaappaus hämärän sävyllä (kerroin 0,30/0,29/0,36 lineaarisessa tilassa). Mastot, renkaat ja yövalot on piirretty päälle. Pinnat ovat proseduraalisia sijaisia kuvaputken tekstuureille.</div>
+    <div style="position:absolute;left:0;top:62px;width:370px;height:310px;box-sizing:border-box;padding:18px 18px;background:linear-gradient(180deg,rgba(20,12,5,.98),rgba(20,12,5,.98) 94%,rgba(20,12,5,.0));border-radius:0 0 14px 0;color:#f0d9b5;font:13px/1.45 Georgia,serif">
+      <b style="letter-spacing:1px">HAVAINNEKUVA</b><br>Kartta on natiivin kuvakaappaus (40°, 2 600 km) hämärän kertoimella 0,18/0,17/0,24. Yövalot ovat NASA Black Marble (VIIRS, PD), projisoitu samaan näkymään: perustaso 0,5 kaikkialla, Pariisin ympärillä 1,0, hehku kahdessa kerroksessa. Mastot oikeissa paikoissa, koko asukasluvusta (Wikidata).</div>
     <div style="position:absolute;left:${(1024 - 640) / 2}px;bottom:22px">${paneeli}</div>`, 1024, 1366);
 }
 
@@ -92,17 +92,17 @@ const kuvat = {};
   const ipad = teePaneeli({ leveys: 640, vuL: 118, vuK: 84, lcdL: 408, lcdK: 84, lamppu: 30, asteikkoK: 42,
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72,
     kaupungit: ['LONTOO', 'MADRID', 'BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM', 'OSLO', 'ROOMA'], soiva: 'PARIISI' });
-  const iphone = teePaneeli({ leveys: 393, vuL: 76, vuK: 56, lcdL: 244, lcdK: 58, lamppu: 20, asteikkoK: 36,
+  const iphone = teePaneeli({ leveys: 393, vuL: 76, vuK: 56, lcdL: 224, lcdK: 58, lamppu: 20, asteikkoK: 36,
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72, pyoristys: '14px 14px 0 0',
     kaupungit: ['BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM'], soiva: 'PARIISI' });
   const mitta = (t) => `<div style="color:#e9d2a8;font:12px/1.4 Menlo,monospace;margin:8px 0 18px">${t}</div>`;
   kuvat['2-paneeli-mitat'] = sivu(`<div style="padding:28px 32px;background:#2a2016;height:100%;box-sizing:border-box">
     <div style="color:#f4e2c0;font:bold 17px Georgia;margin-bottom:12px;letter-spacing:1px">iPad (1024 pt): kotelo 640 × 172 pt, alareunasta 22 pt</div>
     ${ipad}
-    ${mitta('rivi 1: VU 118 × 84 · väli 10 · LCD-lasi 424 × 84 (16 × 2 merkkiä, piste 4,25 pt) · väli 10 · lamppu ⌀ 30<br>rivi 2: viivain 612 × 42 (9 nimeä, viisari keskellä) · kehykset messinkiä 4 pt · kotelon reunus 12–14 pt')}
+    ${mitta('rivi 1: VU 118 × 84 · väli 10 · LCD-lasi 424 × 84 (16 × 2 merkkiä, piste 4,25 pt) · lamppu ⌀ 30 keskellä 60 pt:n tilaa (15 + 30 + 15), LCD:n keskilinjalla<br>rivi 2: viivain 612 × 42 (9 nimeä, viisari keskellä) · kehykset messinkiä 4 pt · kotelon reunus 12–14 pt')}
     <div style="color:#f4e2c0;font:bold 17px Georgia;margin:6px 0 12px;letter-spacing:1px">iPhone (393 pt): kotelo koko leveys × 150 pt + turva-alue puun sisään</div>
     ${iphone}
-    ${mitta('rivi 1: VU 76 × 56 · LCD-lasi 260 × 58 (piste 2,54 pt) · lamppu ⌀ 20<br>rivi 2: viivain 365 × 36 (5 nimeä) · sama rakenne, samat tekstuurit')}
+    ${mitta('rivi 1: VU 76 × 56 · väli 10 · LCD-lasi 240 × 58 (piste 2,33 pt) · lamppu ⌀ 20 keskellä 39 pt:n tilaa, LCD:n keskilinjalla<br>rivi 2: viivain 365 × 36 (5 nimeä) · sama rakenne, samat tekstuurit')}
     <div style="color:#cdb58c;font:12px/1.5 Georgia;max-width:900px">Tekstuurit (kuvaputken tilaus d5928ae06): puu → kotelo, messinki → kehykset ja lampun rengas, lasi (naarmut) → LCD:n ja VU:n kansi, asteikkopaperi → VU-levy ja viivain. Kangasta ei tarvita: kaiutinverkolle ei jää tilaa kummallakaan laitteella. Normal- ja roughness-kartat leivotaan värikuvaan kiinteällä valolla vasemmalta ylhäältä, koska UI Toolkit ei valaise kuvia.</div>
   </div>`, 1024, 580);
 }

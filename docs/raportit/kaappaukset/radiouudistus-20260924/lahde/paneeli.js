@@ -66,7 +66,7 @@ export function teePaneeli({ leveys, vuL, vuK, lcdL, lcdK, lamppu, asteikkoK, ri
     <div class="rivi">
       <div class="kehys vu" style="width:${vuL}px;height:${vuK}px">${vuMittari(vuL, vuK, vuTaso)}</div>
       <div class="kehys lcd" style="width:${lcdL + 16}px;height:${lcdK}px"><div class="lasi">${lcdSvg}</div></div>
-      <div class="lamppu" style="width:${lamppu}px;height:${lamppu}px"></div>
+      <div class="lamppualue"><div class="lamppu" style="width:${lamppu}px;height:${lamppu}px"></div></div>
     </div>
     <div class="kehys asteikko" style="height:${asteikkoK}px">
       <div class="paperi"><div class="viivat"></div><div class="nimet">${nimet}</div><div class="viisari"></div></div>
@@ -95,6 +95,7 @@ export const TYYLI = `
   background:radial-gradient(120% 90% at 50% 40%,#2c1806,#170b02);
   box-shadow:0 0 0 1px #000 inset,0 3px 10px rgba(0,0,0,.8) inset;position:relative;overflow:hidden}
 .lasi::after{content:"";position:absolute;inset:0;background:linear-gradient(170deg,rgba(255,255,255,.16),rgba(255,255,255,.02) 38%,transparent 39%)}
+.lamppualue{flex:1;align-self:stretch;display:flex;align-items:center;justify-content:center}
 .lamppu{flex:none;border-radius:50%;
   background:radial-gradient(circle at 38% 32%,#ffd6c8 0,#ff5a3a 22%,#b0180a 55%,#4a0602 100%);
   box-shadow:0 0 0 3px #c9c3b6,0 0 0 4px #6d665a,0 0 14px 4px rgba(255,60,30,.55)}

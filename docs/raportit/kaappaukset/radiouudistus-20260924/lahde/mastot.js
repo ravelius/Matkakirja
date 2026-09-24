@@ -48,7 +48,7 @@ export function masto(x, y, koko, { mittakaava = 1, valot = [], valittu = false,
     const vy = y - h * t, palaa = valot[i] ?? true;
     const r = (valittu ? 2.8 : 2.1) * Math.max(0.7, mittakaava);
     if (palaa) {
-      s += `<circle cx="${x}" cy="${vy}" r="${r * (valittu ? 6 : 3.4)}" fill="url(#hehku${valittu ? 'V' : ''})"/>`;
+      s += `<circle cx="${x}" cy="${vy}" r="${r * (valittu ? 12 : 6.8)}" fill="url(#hehku${valittu ? 'V' : ''})"/>`;
       s += `<circle cx="${x}" cy="${vy}" r="${r}" fill="${valittu ? '#ffd2b0' : '#ff5a3a'}"/>`;
     } else {
       s += `<circle cx="${x}" cy="${vy}" r="${r * 0.8}" fill="#5a1a10"/>`;
@@ -58,8 +58,8 @@ export function masto(x, y, koko, { mittakaava = 1, valot = [], valittu = false,
 }
 
 export const MAARITTEET = `
-  <radialGradient id="hehku"><stop offset="0" stop-color="#ff4a2a" stop-opacity=".85"/><stop offset=".35" stop-color="#ff3a1a" stop-opacity=".35"/><stop offset="1" stop-color="#ff2a0a" stop-opacity="0"/></radialGradient>
-  <radialGradient id="hehkuV"><stop offset="0" stop-color="#ffb08a" stop-opacity="1"/><stop offset=".25" stop-color="#ff4a22" stop-opacity=".6"/><stop offset="1" stop-color="#ff2a0a" stop-opacity="0"/></radialGradient>
-  <radialGradient id="maavalo"><stop offset="0" stop-color="#ff8a4a" stop-opacity=".55"/><stop offset=".45" stop-color="#e0602a" stop-opacity=".22"/><stop offset="1" stop-color="#c04010" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hehku"><stop offset="0" stop-color="#ff5a3a" stop-opacity="1"/><stop offset=".22" stop-color="#ff3a1a" stop-opacity=".55"/><stop offset=".55" stop-color="#ff2a0a" stop-opacity=".16"/><stop offset="1" stop-color="#ff2a0a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hehkuV"><stop offset="0" stop-color="#ffd0b0" stop-opacity="1"/><stop offset=".18" stop-color="#ff5a2a" stop-opacity=".8"/><stop offset=".5" stop-color="#ff3a12" stop-opacity=".25"/><stop offset="1" stop-color="#ff2a0a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="maavalo"><stop offset="0" stop-color="#ff9a5a" stop-opacity=".7"/><stop offset=".45" stop-color="#e0602a" stop-opacity=".28"/><stop offset="1" stop-color="#c04010" stop-opacity="0"/></radialGradient>
   <radialGradient id="kaupunkivalo"><stop offset="0" stop-color="#ffe1a0" stop-opacity=".95"/><stop offset=".4" stop-color="#ffc060" stop-opacity=".35"/><stop offset="1" stop-color="#ffa030" stop-opacity="0"/></radialGradient>
 `;
