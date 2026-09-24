@@ -887,8 +887,9 @@ namespace Matkakirja.Natiivi
             Kirjaa($"kamera-ajo → {kohde} {kestoS:F1} s (nyt {Kamera})");
             // KAMERA-AJOT (Raamattu, omistaja 24.9.): ease in / ease out ilman lineaarisia pätkiä. Pelin oletus
             // (trapetsi, ramppi 0,3) kulkee keskellä vakionopeudella, joten linssien oletus on smootherstep.
+            // Kohde katon yläpuolella (ihmisen matkan nousu avaruuteen): PalloKierto sallii sen vain pyydettäessä.
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null,
-                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys);
+                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys, yliKaton: kohde.Korkeus > KokoPallonKorkeus);
         }
 
         /// <summary>
