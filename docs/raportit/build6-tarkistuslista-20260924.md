@@ -380,6 +380,21 @@ täpliä, ei sumeutta.
 **PASS-ehto**: molemmat navat peittyvät saumattomasti, ei mustaa/harmaata,
 Etelämanner terävä. **FAIL**: mustia sektoreita tai sumeutta näkyy yhä.
 
+**LOPULLINEN TULOS 24.9. klo 12.4x (SHA 161fa35, ScreenPointToRay-lähde
+poistettu + NaN-suoja)**: **PASS.** Tuoreella pelillä, portti suljettu
+ensin (`ui aloita valinta`) kuten Natiiviseppä ohjeisti: `aja 89 0 20 1.5`
+(pohjoisnapa) EI virhettä, harmaanbeige täyttö — Natiiviseppä vahvisti
+tämän vastaavan webin kalottia (hyväksytty pariteetiksi)
+(`14-napa-pohjoinen-b161-PASS.png`). `aja -89 0 20 1.5` (etelänapa) EI
+MYÖSKÄÄN virhettä, Antarktis siisti valkoinen täyttö ilman mustia
+sektoreita tai jumiutumista (`14-napa-etelainen-b161-PASS.png`).
+Frustum-spammi-bugi on korjattu.
+
+**Hehkurenkaat (osa löydös 4:ää) — MYÖS PASS**: `renkaat` + kamera
+Lontooseen (`aja 51.5 -0.1 5 1`) näytti selvän KULTAISEN/ORANSSIN
+HEHKURENKAAN pelaajan nappulan ympärillä (`4-hehkurengas-lontoo-PASS.png`)
+— vastaa webin `.target-ring.pick` (kultabronssi, `#b08a3c`).
+
 ---
 
 ## Löydös 15: Karttaselite avautuu paikkakuplan ja silmälasinapin alle
@@ -542,7 +557,7 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 1 | Nostot | Mergetty | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka zoomattuna: kymmeniä tyyppimerkkejä (temppeli/vuori/silta/eläin/salama-ikonit), napautus avasi ryhmälistan (Delfoi/Thermopylai) |
 | 2 | Väritaso/ääriviiva | Mergetty (7b3adee) | **PASS** | 1-2-nostot-varitaso-kreikka.png | Kreikka värillinen/teksturoitu + tumma ääriviiva, muu kartta tasaisen sepian värinen |
 | 3 | Paikkakupla | Mergetty | **PASS** | 3-paikkakupla-kohtaaminen.png | "Ateena, elokuussa 1873" -pilleri ei mene päällekkäin kohtaamisdialogin puhekuplan kanssa |
-| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus) | **PASS (kamera+taivas+piste), EI VOITU TESTATA (hehkurenkaat)** | 4-lento-00/05/09-*.png | Kuvasarja: lähikuva koneesta laskeutuen (frame 0), kaukainen globe-näkymä sininen taivas + vain "Ateena" näkyvissä (frame 5), kiertävä/sukeltava lähestyminen (frame 9). Hehkurenkaat: yritin Natiiviseppän `renkaat ateena,kairo ateena` -komennolla, mutta kamera oli jumissa samassa tyhjässä näkymässä kuin löydös 14:ssä (ks. rivi 14:n huomio debug-ylivuodosta) — ei nähty renkaita, syy todennäköisesti sama tukos |
+| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Mergetty (161fa35) | **PASS (kaikki osat)** | 4-lento-00/05/09-*.png, 4-hehkurengas-lontoo-PASS.png | Kuvasarja: lähikuva koneesta laskeutuen (frame 0), kaukainen globe-näkymä sininen taivas + vain "Ateena" näkyvissä (frame 5), kiertävä/sukeltava lähestyminen (frame 9). Hehkurenkaat uusittu 161fa35:lla (frustum-korjauksen jälkeen): selvä kultainen/oranssi rengas pelaajan nappulan ympärillä (`renkaat` + `aja 51.5 -0.1 5 1` Lontooseen) |
 | 5 | iPhone yläosa | Mergetty | **PASS** | (näkyy kaikissa kuvissa) | Ei ruskeaa palkkia/logoa koko ajon läpi, vain kelluva "300£ 1/80" -pilleri + ratas/hampurilainen oikealla |
 | 6 | Liiku-nappi (puoliläpinäkyvä→pienempi) | Mergetty | **KORVATTU löydös 18:lla** | — | Ks. rivi 18 |
 | 7 | Linssit pois laukusta | Mergetty | **PASS** | 7-laukku-ei-linsseja.png | Laukun "Matka"-välilehdellä ei linssilistaa; erillinen silmälasikuvake (🕶) näkyy omana nappinaan kartan reunassa |
@@ -552,7 +567,7 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 11 | Ihmisen matka: tekstilaatikko | Mergetty | **PASS** | 11-ihmisen-matka-teksti.png | `linssi ihmisen-matka`: kertojan teksti leveänä nelirivisenä laatikkona, sanat eivät katkea kesken, ei kapeaa pystykaistaa |
 | 12 | Ihmisen matka: loppu/kamera | Mergetty | **PASS (todennäköinen)** | 12-ihmisen-matka-loppu.png | `ihminen tutkimus` (hyppy loppuun): pallo näkyy siistinä, ei mustaa ristikkoa alareunassa. "Afrikasta."-sana oli jo aiemmin Natiivi-UI:n todettu ei-bugiksi (24.9.), joten ei testattu erikseen tässä |
 | 13 | Offline: mustat laatat | Mergetty | **PASS** | 13-offline-lataus.png | `alue lataa BGR`: "Ladataan 2 maata · 11 %" -ilmoitin, EI mustia laattaneliöitä latauksen aikana — tausta pysyy vaaleana |
-| 14 | Navat | Mergetty (7b3adee) | **EI VOITU LUOTETTAVASTI TESTATA — MAHDOLLINEN UUSI ONGELMA** | 14-napa-pohjoinen-epavarma.png | Natiiviseppän oikealla syntaksilla (`aja 89 0 20 1.5`, `ui jatka` ensin) kamera näytti silti täysin tyhjän/tekstuurittoman alueen (Norja/Islanti-nimet näkyivät mutta EI YHTÄÄN reliefiä/väriä/napakalottia). SAMANAIKAISESTI kehityskonsoli spämmäsi jatkuvasti "Screen position out of view frustum (screen pos 603.000000, 1311.000000) (Camera rect 0 0 1206 2622)" koko ajon loppuosan ajan (ilmestyi `ui kartuscha GRC auki` -komennon jälkeen, ei poistunut). Epäilen että tämä debug-ylivuoto (todennäköisesti KREIKKA-paneelin radio-ikoni tms. jäänyt kiinni pelitilaan) esti kameran/kartan normaalin toiminnan lopputestien ajaksi — myös `renkaat`-testi (ks. rivi 4) epäonnistui samasta syystä. SUOSITUS: seuraava kierros TUOREELLA pelillä ilman `ui kartuscha`-kutsua ennen napa-/rengastestejä. |
+| 14 | Navat | Mergetty (161fa35) | **PASS** | 14-napa-pohjoinen-b161-PASS.png, 14-napa-etelainen-b161-PASS.png | Kolme yritystä ennen onnistumista (7b3adee ja 921e0b6 spämmäsivät "out of view frustum" -virhettä, ks. historia alla); 161fa35 (ScreenPointToRay-lähde poistettu) korjasi: molemmat navat siistejä, ei mustaa/harmaata sotkua, ei jumiutumista. Natiiviseppä vahvisti pohjoisnavan harmaanbeigen sävyn vastaavan webin kalottia. |
 | 15 | Karttaselite | Mergetty | **PASS** | 15-karttaselite.png | Paneeli täysin näkyvissä, ei minkään peittämä, NOSTOT/MAAKUNNAT-välilehdet ja lukumäärät näkyvät selvästi |
 | 16 | Pulun chat | Melkein (odotti allowlistia) | **PASS (yllättäen)** | 16-pulu-chat-vastaus.png | `ui chat "mikä on demokratiaindeksi"` antoi OIKEAN, asiallisen vastauksen (ei enää "ei vielä auki" -tekstiä) — allowlist tms. vaikuttaa olevan jo kunnossa simulaattorissa |
 | 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Mergetty (7b3adee) | **PASS** | 17-etusivupallo-a.png, 17-etusivupallo-b.png | Kaksi kuvaa 5 s välein: selvästi eri maisema (pallo pyörinyt), koko ruudun täyttävä, sumea, ei yhtään kaupunkipistettä kummassakaan |
@@ -561,7 +576,13 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 | 20 | iPhonen yläreuna uusiksi | EI (build 7) | — | — | Fable 24.9. klo 11.47: siirretty build 7:ään |
 | 21 | Isoisän/pulun tekstit piilossa oletuksena | EI (build 7) — ei testata | — | — | Siirretty |
 
-**Yhteenveto**: 15 PASS/todennäköinen PASS (1,2,3,4-osin,5,7,8,9,10,11,12,13,15,16,17,19), 1 siirretty build 7:ään Fablen päätöksellä (18: umpikultainen aktiivitila, Natiivi-UI korjaa), 1 ei voitu luotettavasti testata + mahdollinen uusi debug-ylivuoto-ongelma (14), 2 siirretty build 7:ään (20,21). Kuvat: `/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/` (ei repossa, jaettu Mac-polku, CLAUDE.md dist-periaate).
+**Yhteenveto (päivitetty 161fa35:n jälkeen)**: 17 PASS/todennäköinen PASS
+(1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,19), 1 siirretty build 7:ään
+Fablen päätöksellä (18: umpikultainen aktiivitila, Natiivi-UI korjaa),
+2 siirretty build 7:ään (20,21). Kaikki löydös 5-16-alue nyt PASS
+paitsi 18 (tarkoituksella build 7:ään). Kuvat:
+`/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/` (ei
+repossa, jaettu Mac-polku, CLAUDE.md dist-periaate).
 
 **Ajon SHA**: proto-master `7b3adee`, asennettu iPhone 18 Pro
 -simulaattoriin (1572C658) Natiiviseppän toimesta 24.9.2026 klo 11.4x.
@@ -910,5 +931,5 @@ kartalle/muuhun tilaan tyhjennyksen jälkeen.
 | B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | | | |
 | B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | | | |
 | B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | | | |
-| 14 | Navat (uusinta tuoreella pelillä) | | | |
-| 4-renkaat | Hehkurenkaat aloitusvalinnassa (uusinta) | | | |
+| 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | | |
+| 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | | |
