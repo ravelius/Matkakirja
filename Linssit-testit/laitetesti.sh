@@ -26,6 +26,8 @@
 #   ./laitetesti.sh vu <kansio>            VU-mittarin kuvasarja: asemat VU_ASEMAT (oletus "DEU NLD") äänellä
 #                                          AANI (oletus 0,005: tappi mittaa ennen voimakkuutta, 0 lepuuttaa neulan),
 #                                          4 kuvaa + "radio tila" per asema, lopuksi vaiennus → lepo
+#   ./laitetesti.sh keksinnotpari <kansio> keksinnöt pysäkillä 0 (1769 Glasgow) ja 2, kuten webin
+#                                          pariteettikuva linssi-karuselli-* (WEB ON MALLI, MITATTUNA)
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh huippuvuoret <kansio>  vertailu FIN + NOR, kamera 76/18/2500 km (kontakti-web.mjs KIINTEA=huippuvuoret)
 #   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
@@ -114,6 +116,11 @@ case "$1" in
     done
     linssi "radio aani 0"; sleep 3; linssi "radio tila"; kuva vu-vaiennettu
     linssi "radio stop" "linssi pois"; sleep 2; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -16 ;;
+  keksinnotpari)
+    kaynnista; portti
+    linssi "linssi keksinnot"; sleep 8; linssi "keksinnot 0"; sleep 10; kuva pari-keksinnot-1769
+    linssi "keksinnot 2"; sleep 12; kuva pari-keksinnot-1796
+    linssi "linssi pois"; sleep 2; hae "$2"; grep -a "keksinnöt" "$2/linssi-loki.txt" | tail -4 ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
     # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.
