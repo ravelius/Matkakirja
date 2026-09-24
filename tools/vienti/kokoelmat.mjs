@@ -26,17 +26,19 @@ import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
-import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
-import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia, sivustoReitit } from './media.mjs';
-import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
+import { aaniUrl, horatioAanenKesto, musaPolku } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
 import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
+import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
+import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import { saapumisKokoelmat } from './saapumiset.mjs';
+import { tyypitaLoput } from './tyypitys.mjs';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -44,6 +46,7 @@ import {
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { existsSync } from 'node:fs';
+import { lueMuutosloki, jarjesta as jarjestaMuutosloki } from './muutosloki-natiivi.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
 
@@ -456,13 +459,19 @@ function radioKokoelma(hae) {
   const { RADIOT } = hae('js/packs/radiot.js');
   const luokat = JSON.parse(readFileSync(new URL('./radioluokat.json', import.meta.url), 'utf8')).luokat;
   const korvaavat = JSON.parse(readFileSync(new URL('./radiokorvaavat.json', import.meta.url), 'utf8')).asemat;
+  // iOS ATS -kättely (tools/vienti/radiotarkistus.mjs); puuttuva tulos = tarkistamatta.
+  const tarkistus = lueRadiotarkistus();
+  const tila = (url) => {
+    const t = tarkistus.tulokset?.[url];
+    return { toimii: t ? t.toimii : null, tarkistus: t ? { pvm: tarkistus.tarkistettu, virhe: t.virhe, versio: t.versio } : null };
+  };
   const rivit = [];
   for (const iso of Object.keys(RADIOT).sort()) {
     const r = RADIOT[iso]; const l = luokat[iso] ?? {};
     const alkuperainen = {
       iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
       lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
-      perusteLahde: l.lahde ?? null, varaAani: null,
+      perusteLahde: l.lahde ?? null, varaAani: null, ...tila(r.url),
     };
     const k = korvaavat[iso];
     if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
@@ -472,7 +481,7 @@ function radioKokoelma(hae) {
     rivit.push({
       id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
       lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
-      kaupunki: k.kaupunki, kuvaus: k.kuvaus,
+      kaupunki: k.kaupunki, kuvaus: k.kuvaus, ...tila(k.url),
     });
   }
   return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
@@ -480,8 +489,28 @@ function radioKokoelma(hae) {
       + 'natiivissa (url); kielletty näytetään vain nimenä ja "Avaa aseman sivu" -linkkinä (sivu), ei soittoa. '
       + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
       + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
-      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
+      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null). toimii = iOS ATS '
+      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }.',
     { iso3: 'maat' }, rivit);
+}
+
+function maisemakorit(P, hae) {
+  const { kaupunkiKori, maaKori, tyyppiKori } = hae('js/aani-ehdokkaat.js');
+  const { VAKIOPAIKAT } = hae('js/ambience-stream.js');
+  const { JALKAMATKAN_MAISEMA } = hae('js/ui.js');
+  const lauta = P.id;
+  const cc = P.map.cityCountry ?? {};
+  const kori = (paikka, tyyppi) => {
+    const oma = kaupunkiKori(lauta, paikka);
+    const maa = oma.length ? [] : maaKori(lauta, paikka, cc);
+    const [porras, lista] = oma.length ? ['kaupunki', oma] : maa.length ? ['maa', maa] : ['tyyppi', tyyppi ? tyyppiKori(tyyppi, lauta) : []];
+    return { id: `maisemakori:${paikka}`, laji: 'maisemakori', paikka, tyyppi: tyyppi ?? null, porras, vakio: VAKIOPAIKAT.has(paikka), kori: lista };
+  };
+  return [
+    ...P.cities.map((c) => ({ ...kori(c.id, c.ambience ?? null), kaupunki: c.id })),
+    kori('etusivu', 'lentoasema'), kori('lentomatka', 'lentokone'),
+    kori('jalkamatka', JALKAMATKAN_MAISEMA), kori('merimatka', 'meri'),
+  ];
 }
 
 function aaniKokoelma(ns, hae) {
@@ -514,13 +543,28 @@ function aaniKokoelma(ns, hae) {
       id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
       ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
     })),
+    // B7 (Pelikoodari 23.9.2026): äänimaiseman korit pelin omilla funktioilla
+    // (js/ambience-stream.js arvoAani: kaupunkiKori → maaKori → tyyppiKori).
+    ...maisemakorit(P, hae),
+    // Tilaraidat ja aarreaiheet täysin poluin (musaPolku + aaniUrl).
+    ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({
+      id: `tilaraitaUrl:${nimi}`, laji: 'tilaraitaUrl', nimi, url: aaniUrl(musaPolku(v.tunnus)),
+    })),
+    ...Object.entries(hae('js/ui.js').AARRE_MUSIIKKI).map(([nimi, polku]) => ({
+      id: `aarreaihe:${nimi}`, laji: 'aarreaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
+      url: aaniUrl(polku),
+    })),
   ];
   return taulukko('js/sound.js + js/siirtymamusiikki.js + js/musiikkivalitsin.js',
     'Äänitaulut natiiville. tehoste/ambienssi: synteesi = webin Web Audio -synteesi (ei datana), naytte = '
       + 'äänite, jos sellainen on (REAL_SAMPLES; url + credit). pulu: pulun tehosteet (juuri + data). siirtyma: '
       + 'matkan musiikki lajeittain (jalan, laiva, lento). tilaraita/paikkaraita/pohjaraita: musiikin tasot. '
       + 'musiikkiketju: kaupungin raidat parhaasta alkaen (musiikkiketju()); soitin ottaa ensimmäisen olemassa '
-      + 'olevan. Avoin tila (lehti, matkalaukku) menee ketjun kärkeen TILARAIDAT-järjestyksessä.',
+      + 'olevan. Avoin tila (lehti, matkalaukku) menee ketjun kärkeen TILARAIDAT-järjestyksessä. maisemakori '
+      + '(B7): kaupungin tai virtuaalipaikan (etusivu, lentomatka, jalkamatka, merimatka) äänimaisema = kori (url-lista '
+      + '#alku/#voima-fragmentein, js/aani-ehdokkaat.js jaaAlku), porras (kaupunki | maa | tyyppi), tyyppi; vakio = true → '
+      + 'soita kori[0], muuten arvo satunnaisesti. tilaraitaUrl ja aarreaihe (tavallinen = musa-aarre, paa = musa-paaaarre '
+      + 'tähtilaatalle): valmiit osoitteet.',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
@@ -814,14 +858,8 @@ function karttamerkkiKokoelma() {
 }
 
 /*
- * KARTTAVALOT JA MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta).
- * Web ei kokoa karttavaloja yhdeksi listaksi: pisteet syntyvät piirrossa.
- * Tämä kokoaa saman datan (Sonnet-agentin selvitys, tarkistettu):
- *   - fokuskohteet (KOHDE_MAAT, sis. kuratoidut maastokohteet): aihe =
- *     nostosymPaakategoria(kohteenKategoria(k)), sijainti laudalta asteiksi
- *   - eläintäyt (ELAINTAKYT, lat/lon suoraan), historian hetket (vain
- *     kartalla === true), skandaalit (lat/lon suoraan).
- * tarkeys: kaupunkivalolle kaupungin tarkeys, muille kohteen taso ?? 1.
+ * MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta). Karttavalot: skeemasta
+ * 1.24 tools/vienti/karttavalot.mjs (webin pallon nostokerroksen joukko).
  * Maastonimet (MAAILMANKARTAN_NIMET: vuoret, järvet, joet) ovat webissä
  * vain tasokartan nimiökerroksessa, eivät pallolla.
  */
@@ -829,49 +867,6 @@ const asteiksi = (x, y) => {
   const a = laudaltaAsteiksi('maailmankartta', x, y);
   return a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null;
 };
-
-function karttavaloKokoelma(hae, kaupungit) {
-  const tarkeydet = new Map(kaupungit.map((k) => [k.id, k.tarkeys]));
-  const rivit = [];
-  const nahdyt = new Set();
-  const lisaa = (rivi) => {
-    let id = rivi.id; let n = 2;
-    while (nahdyt.has(id)) id = `${rivi.id}~${n++}`;
-    nahdyt.add(id);
-    rivit.push({ ...rivi, id });
-  };
-  for (const [maa, lista] of Object.entries(KOHDE_MAAT)) {
-    for (const k of lista) {
-      const aihe = nostosymPaakategoria(kohteenKategoria(k));
-      const xy = k.laudat?.maailmankartta;
-      const p = xy && asteiksi(xy.x, xy.y);
-      if (!aihe || !p) continue;
-      const kaupunki = tarkeydet.has(k.kaupunki) ? k.kaupunki : (tarkeydet.has(k.id) ? k.id : null);
-      lisaa({ id: `kohde:${k.id}`, aihe, nimi: k.nimi, ...p, maa, kaupunki,
-        tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (k.taso ?? 1), lahde: 'fokuskohde' });
-    }
-  }
-  for (const [maa, t] of Object.entries(hae('js/packs/elaintakyt.js').ELAINTAKYT)) {
-    if (Number.isFinite(t.lat) && Number.isFinite(t.lon)) {
-      lisaa({ id: `elaintaky:${maa}`, aihe: 'elaimet', nimi: t.elain ?? t.otsikko, lat: t.lat, lon: t.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'elaintaky' });
-    }
-  }
-  for (const h of hae('js/packs/historian-hetket.js').HISTORIAN_HETKET) {
-    if (!h.kartalla) continue;
-    lisaa({ id: `hetki:${h.id}`, aihe: 'hetket', nimi: h.nimio ?? h.otsikko, lat: h.lat, lon: h.lon, maa: h.iso ?? null, kaupunki: null, tarkeys: 1, lahde: 'historianHetket' });
-  }
-  for (const [maa, lista] of Object.entries(hae('js/packs/skandaalit.js').SKANDAALIT)) {
-    for (const sk of lista) {
-      lisaa({ id: `skandaali:${sk.id}`, aihe: 'skandaalit', nimi: sk.nimio ?? sk.otsikko, lat: sk.lat, lon: sk.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'skandaalit' });
-    }
-  }
-  return taulukko('js/fokuskohteet.js#KOHDE_MAAT + ELAINTAKYT + HISTORIAN_HETKET + SKANDAALIT',
-    'Karttavalot pallolle: aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; '
-      + 'js/karttavalot.js KARTTAVALO_AIHEET), nimi, lat/lon, maa (ISO3), tarkeys 0–3, lahde = lähdekokoelma. '
-      + 'Aiheen kaupungit valot ovat laudan ulkopuolisia pikkukaupunkeja (laudan kaupungit ovat kokoelmassa kaupungit); '
-      + 'kaupunki on täytetty vain, jos valo on laudan kaupunki, ja silloin tarkeys = kaupungit.tarkeys, muuten kohteen taso tai 1.',
-    { kaupunki: 'kaupungit' }, rivit);
-}
 
 function maastonimiKokoelma() {
   const rivit = [];
@@ -938,12 +933,32 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
       + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
-      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL.',
+      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL. '
+      + 'Skeema 1.25: juuren kaaret [[[lon, lat], …]] = rajaviivat, jokainen sisäraja ja maiden välinen raja '
+      + 'kerran sekä ulkorajat (rannikko); harvennettu kaarina solmusta solmuun, ja renkaat on rakennettu '
+      + 'samoista kaarista, joten täyttö ja viiva osuvat yhteen.',
     {}, maakunnat.alueet);
-  kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
+  kokoelmat.maakuntarajat.kaaret = maakunnat.kaaret ?? [];
+  // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
+  const muutosloki = lueMuutosloki();
+  kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',
+    'Natiivin "Mitä uutta" -rivit uusin ensin: { id = versio, versio (build), paiva (YYYY-MM-DD), teksti }. '
+      + 'Julkaisija lisää rivin jokaisesta TestFlight-buildista. Sisältöpäivitysten rivi on osoittimessa '
+      + '(uusin.json muutos { paiva, teksti }); näytä se listan kärjessä, jos sen päivä on uusin.',
+    {}, jarjestaMuutosloki(muutosloki.rivit).map((r) => ({ id: r.versio, versio: r.versio, paiva: r.paiva, teksti: r.teksti })));
+  // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
+  const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
+  kokoelmat.karttavalot = valot.kokoelma;
   rikastaNippu4(kokoelmat, ns);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
-  rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
+  tyypitaLoput(kokoelmat);
+  // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
+  // saapumistekstit ja Livian saapumisrepliikit.
+  rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
+  kokoelmat.takynostot = takynostoKokoelma(ns, R, taulukko, kokoelmat.karttavalot);
+  Object.assign(kokoelmat, saapumisKokoelmat(ns, hae, R, taulukko));
   // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
   // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.
   kokoelmat.saannot.alkiot.push({
