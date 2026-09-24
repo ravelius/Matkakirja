@@ -2638,6 +2638,43 @@
     color: #46331f;
 }
 
+/* E14 (web .lippu-versio.tarkennettu): kasvaa paikallaan 1,7 ×, paperipohja, selite alla; muut häivyttyvät. */
+.mk-lippu__versio {
+    transition-property: scale, translate, opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-lippu__versio--tarkennettu {
+    scale: 1.7 1.7;
+    background-color: #f5f0e2;
+    border-radius: 3px;
+}
+
+.mk-lippu__versioselite {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% 2.4px;
+    width: 160px;
+    padding: 1.6px 4.8px 2.4px 4.8px;
+    font-size: 8.8px;
+    white-space: normal;
+    color: rgba(33, 29, 24, 0.92);
+    background-color: #f5f0e2;
+    border-radius: 3px;
+}
+
+.mk-lippu__versio--tarkennettu .mk-lippu__versioselite {
+    display: flex;
+}
+
+.mk-lippu__sumea {
+    opacity: 0.3;
+    transition-property: opacity;
+    transition-duration: 0.22s;
+}
+
 .mk-aloitus__periaatelinkki {
     align-self: flex-start;
     margin-top: 8px;

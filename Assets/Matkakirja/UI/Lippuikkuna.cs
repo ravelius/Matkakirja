@@ -1,7 +1,9 @@
 // LIPUN TARINA (Natiivi-UI): webin js/liput.js avaaLippuikkuna (omistaja 15.8.2026: "Tee lipusta
 // klikattava"). Minipopup: maan nimi ja ×, nykyinen lippu isona ("Nykyinen lippu"), symboliikka
 // ("Sininen = järvien ja taivaan väri."), tarinan kappaleet ja "Muut asut ja historialliset
-// liput" -rivi (pikkulippu ja nimi; napautus → suurennos selitteen kanssa). Data: skeeman 1.15
+// liput" -rivi (pikkulippu ja nimi). E14 (web liput.js tarkenna): versiolipun napautus kasvattaa sen paikallaan
+// 1,7-kertaiseksi paperipohjalla, selite sen alla (10rem, 0,55rem), muu kortti häivyttyy (webissä blur 3 px —
+// UITK:ssa ei sumennussuodatinta, joten peitto 0,3); uusi napautus tai napautus muualle palauttaa. Data: skeeman 1.15
 // maat.lipputarina. Avaajat: kartuschan lippu ja maalehden aiheotsikon lippu.
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,6 @@ namespace Matkakirja.Natiivi
 {
     public static class Lippuikkuna
     {
-        static Kuvasuurennos suurennos;
-
         /// <summary>Onko maalla lipun tarina (napautettava lippu).</summary>
         public static bool On(string iso3) => UiSisalto.Maa(iso3)?.Lipputarina != null;
 
@@ -52,19 +52,50 @@ namespace Matkakirja.Natiivi
                 if (versiot.Count == 0) return;
                 Kirjasimet.Aseta(Rakenne.Teksti("MUUT ASUT JA HISTORIALLISET LIPUT", "mk-lippu__versiotyhdys", s), Kirjasin.KoneLihava);
                 var rivi = Rakenne.El("mk-lippu__versiot", s, PickingMode.Ignore);
-                var sarja = versiot.Select(v => new LehtiKuva
+                Button tarkennettu = null;
+                void Tyhjenna()
                 {
-                    Lahde = Osoite(MiniJson.Teksti(v, "polku")), Otsikko = MiniJson.Teksti(v, "nimi"),
-                    Selite = MiniJson.Teksti(v, "selite") ?? MiniJson.Teksti(v, "nimi"), LahdeRivi = MiniJson.Teksti(v, "lahde"),
-                }).ToList();
-                for (int i = 0; i < versiot.Count; i++)
+                    if (tarkennettu == null) return;
+                    tarkennettu.RemoveFromClassList("mk-lippu__versio--tarkennettu");
+                    tarkennettu.style.translate = StyleKeyword.Null;
+                    tarkennettu = null;
+                    foreach (var c in s.Children()) c.RemoveFromClassList("mk-lippu__sumea");
+                    foreach (var c in rivi.Children()) c.RemoveFromClassList("mk-lippu__sumea");
+                }
+                void Tarkenna(Button b)
                 {
-                    int kohta = i;
-                    var b = Rakenne.Nappi(null, "mk-lippu__versio", () => Suurennos().Avaa(sarja, kohta), rivi);
+                    bool auki = tarkennettu == b;
+                    Tyhjenna();
+                    if (auki) return;
+                    tarkennettu = b;
+                    foreach (var c in s.Children()) if (c != rivi) c.AddToClassList("mk-lippu__sumea");
+                    foreach (var c in rivi.Children()) if (c != b) c.AddToClassList("mk-lippu__sumea");
+                    b.AddToClassList("mk-lippu__versio--tarkennettu");
+                    b.BringToFront();
+                    // Web siirraVaakaan: kasvanut laatta ei saa ylittää kortin reunaa (skaala 1,7 keskipisteen ympäri).
+                    float puoli = b.layout.width * 1.7f / 2f, keski = b.layout.center.x;
+                    float ylitys = Mathf.Max(0f, puoli - keski) - Mathf.Max(0f, keski + puoli - rivi.layout.width);
+                    b.style.translate = new Translate(Mathf.Round(ylitys), 0);
+                }
+                s.RegisterCallback<ClickEvent>(e =>
+                {
+                    if (tarkennettu == null) return;
+                    for (var v = e.target as VisualElement; v != null && v != s; v = v.parent)
+                        if (v.ClassListContains("mk-lippu__versio")) return;
+                    Tyhjenna();
+                });
+                foreach (var v in versiot)
+                {
+                    string osoite = Osoite(MiniJson.Teksti(v, "polku"));
+                    Button b = null;
+                    b = Rakenne.Nappi(null, "mk-lippu__versio", () => Tarkenna(b), rivi);
                     var kuva = Rakenne.El("mk-lippu__versiokuva", b, PickingMode.Ignore);
-                    if (sarja[i].Lahde != null)
-                        Kuvat.Hae(sarja[i].Lahde, tx => { if (tx != null) kuva.style.backgroundImage = new StyleBackground(tx); });
-                    Kirjasimet.Aseta(Rakenne.Teksti(sarja[i].Otsikko ?? "", "mk-lippu__versionimi", b), Kirjasin.Kone);
+                    if (osoite != null)
+                        Kuvat.Hae(osoite, tx => { if (tx != null) kuva.style.backgroundImage = new StyleBackground(tx); });
+                    Kirjasimet.Aseta(Rakenne.Teksti(MiniJson.Teksti(v, "nimi") ?? "", "mk-lippu__versionimi", b), Kirjasin.Kone);
+                    string selite = MiniJson.Teksti(v, "selite");
+                    if (!string.IsNullOrEmpty(selite))
+                        Kirjasimet.Aseta(Rakenne.Teksti(selite, "mk-lippu__versioselite", b), Kirjasin.Luku);
                 }
                 Rakenne.Ruudukko(rivi, 96f, 10f);
             }, "mk-minipopup--lippu");
@@ -74,6 +105,5 @@ namespace Matkakirja.Natiivi
         static string Osoite(string polku) =>
             string.IsNullOrEmpty(polku) ? null : polku.StartsWith("http") ? polku : Laukku.SivustoJuuri + polku.TrimStart('/');
 
-        static Kuvasuurennos Suurennos() => suurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Traileri));
     }
 }
