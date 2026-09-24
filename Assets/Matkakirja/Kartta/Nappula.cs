@@ -226,6 +226,8 @@ namespace Matkakirja
             double saapumisKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
             // LÄHTÖSUMU (omistaja 24.9. klo 13.5x, LENNON PINTA): usva nousee koneen alle jo zoomin aikana, ja pallon
             // pinta vaihtuu lennon pintaan vasta sen peitossa (pintaVaihdettu alla).
+            // Lennon pinnan laatat välimuistiin zoomin ja usvan aikana (ei lohkoja matkalla, Fable 24.9.).
+            KarttaKerrokset.Instanssi?.EsilataaLento(lat0, lon0, lat1, lon1);
             if (usva != null)
             {
                 usva.Aseta(lat0, lon0, nosto * 0.5, 0f);

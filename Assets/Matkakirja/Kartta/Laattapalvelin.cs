@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -45,6 +46,8 @@ namespace Matkakirja
         readonly ConcurrentQueue<Haku> jono = new ConcurrentQueue<Haku>();
         /// <summary>Huntulaatat (pieniä, 3 kt) ohi jonon: näkyvän alueen huntu ehtii ennen kuin laatta näkyy ilman sitä.</summary>
         readonly ConcurrentQueue<Haku> kiireJono = new ConcurrentQueue<Haku>();
+        /// <summary>Esilataus (lennon reitti): vain kun tavallinen jono on tyhjä, ja kaksi paikkaa jää näkyvälle kartalle.</summary>
+        readonly ConcurrentQueue<Haku> esiJono = new ConcurrentQueue<Haku>();
         int kaynnissa;
         string offline, valimuisti;
 
@@ -343,7 +346,19 @@ namespace Matkakirja
         }
 
         /// <summary>Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin).</summary>
-        async Task<(int, byte[])> Hae(string polku)
+        /// <summary>
+        /// Laatat välimuistiin etukäteen (LENNON PINTA, Fable 24.9.: sileän pinnan laatat latautuivat matkalla
+        /// näkyvinä lohkoina). Polut ämpärin polkuina; jo välimuistissa olevat ohitetaan lukematta. Taustasäikeessä,
+        /// ja haut odottavat, kunnes näkyvän kartan jono on tyhjä.
+        /// </summary>
+        public static void Esilataa(IReadOnlyCollection<string> polut)
+        {
+            var p = Instanssi;
+            if (p == null || polut == null || polut.Count == 0) return;
+            Task.Run(() => { foreach (var polku in polut) _ = p.Hae(polku, true); });
+        }
+
+        async Task<(int, byte[])> Hae(string polku, bool esi = false)
         {
             polku = Uri.UnescapeDataString(polku);
             if (polku.Contains("..")) return (404, null);
@@ -355,17 +370,18 @@ namespace Matkakirja
                 if (kattavuusTyhja && tyhjakuva != null) return (200, tyhjakuva);
             }
             string f = Tiedosto(offline, polku);
-            if (File.Exists(f)) { Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
+            if (File.Exists(f)) { if (esi) return (200, null); Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
             f = Tiedosto(valimuisti, polku);
             if (File.Exists(f))
             {
+                if (esi) return (200, null);
                 Interlocked.Increment(ref Valimuistista);
                 var sisalto = File.ReadAllBytes(f);
                 try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
                 return (200, sisalto);
             }
             var h = new Haku { Polku = polku };
-            (varitasoa ? kiireJono : jono).Enqueue(h);
+            (varitasoa ? kiireJono : esi ? esiJono : jono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
@@ -406,6 +422,7 @@ namespace Matkakirja
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            while (kaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e)) StartCoroutine(Lataa(e));
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
             {
                 seuraavaUusinta = Time.unscaledTime + 10f;

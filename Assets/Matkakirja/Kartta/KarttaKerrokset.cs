@@ -295,6 +295,44 @@ namespace Matkakirja
             sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
         }
 
+        /// <summary>
+        /// Lennon pinnan laatat välimuistiin ennen nousua (Fable 24.9., build 9): isoympyrän käytävä Z2–Z6 (reitti
+        /// ja naapurit) sekä lähtö- ja kohdekaupungin lähikuva-alue Z7–Z8 (5 × 5). Noin 150–300 laattaa.
+        /// </summary>
+        public void EsilataaLento(double lat0, double lon0, double lat1, double lon1)
+        {
+            string versio = SatelliittiVersio;
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/bmng/{z}/{x}/{reverseY}.jpg";
+            int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
+            if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return;
+            string pohjaPolku = malli.Substring(Laattapalvelin.Ampari.Length);
+            var joukko = new HashSet<string>();
+            void Lisaa(int z, double lat, double lon, int sade)
+            {
+                int n = 1 << z;
+                double la = Math.Max(-85.0, Math.Min(85.0, lat)) * Math.PI / 180.0;
+                int x = (int)Math.Floor((lon + 180.0) / 360.0 * n);
+                int y = (int)Math.Floor((1.0 - Math.Log(Math.Tan(la) + 1.0 / Math.Cos(la)) / Math.PI) / 2.0 * n);
+                for (int dx = -sade; dx <= sade; dx++)
+                    for (int dy = -sade; dy <= sade; dy++)
+                    {
+                        int xx = ((x + dx) % n + n) % n, yy = y + dy;
+                        if (yy < 0 || yy >= n) continue;
+                        // {reverseY} on Cesium Unityssä XYZ-rivi (Rakennus.LaattaUrl): tiedostopolku on XYZ.
+                        joukko.Add(pohjaPolku.Replace("{z}", z.ToString()).Replace("{x}", xx.ToString()).Replace("{reverseY}", yy.ToString()));
+                    }
+            }
+            for (int z = 2; z <= Math.Min(6, huippu); z++)
+                for (int i = 0; i <= 48; i++)
+                {
+                    var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, i / 48.0);
+                    Lisaa(z, q.x, q.y, 1);
+                }
+            for (int z = 7; z <= huippu; z++) { Lisaa(z, lat0, lon0, 2); Lisaa(z, lat1, lon1, 2); }
+            Laattapalvelin.Esilataa(new List<string>(joukko));
+            Debug.Log($"MATKAKIRJA lennon pinta: esilataus {joukko.Count} laattaa");
+        }
+
         public void PoistaRasteri(string avain)
         {
             if (!rasterit.TryGetValue(avain, out var r)) return;
