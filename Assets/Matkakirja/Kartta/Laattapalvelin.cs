@@ -43,6 +43,8 @@ namespace Matkakirja
         TcpListener kuuntelija;
         CancellationTokenSource lopetus;
         readonly ConcurrentQueue<Haku> jono = new ConcurrentQueue<Haku>();
+        /// <summary>Huntulaatat (pieniä, 3 kt) ohi jonon: näkyvän alueen huntu ehtii ennen kuin laatta näkyy ilman sitä.</summary>
+        readonly ConcurrentQueue<Haku> kiireJono = new ConcurrentQueue<Haku>();
         int kaynnissa;
         string offline, valimuisti;
 
@@ -53,7 +55,7 @@ namespace Matkakirja
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
         /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
         /// </summary>
-        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty);
+        public static bool Kiireinen => Instanssi != null && (Instanssi.kaynnissa > 0 || !Instanssi.jono.IsEmpty || !Instanssi.kiireJono.IsEmpty);
 
         /// <summary>
         /// Pohjalaatan polun alku (Rakennus.LaattaUrl ilman ämpäriä): jos tällainen laatta ei tule
@@ -326,7 +328,7 @@ namespace Matkakirja
                 return (200, sisalto);
             }
             var h = new Haku { Polku = polku };
-            jono.Enqueue(h);
+            (varitasoa ? kiireJono : jono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             if (tila != 200 && varakuva != null && PohjaPolku != null && polku.StartsWith(PohjaPolku))
             {
@@ -364,6 +366,8 @@ namespace Matkakirja
 
         void Update()
         {
+            // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
+            while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
             while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
             {
