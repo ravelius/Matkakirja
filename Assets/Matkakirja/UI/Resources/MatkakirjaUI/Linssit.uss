@@ -1123,6 +1123,7 @@
 }
 
 .mk-aikajana-kertomus__teksti {
+    align-self: center;
     font-size: 16.3px;
     white-space: normal;
     -unity-text-align: middle-center;
@@ -1133,6 +1134,11 @@
     font-size: 24px;
     color: #f7eeda;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+}
+
+/* Web @media (max-width: 600px): avausteksti 1,25rem puhelimessa. */
+.mk-aikajana-kertomus--kapea.mk-keskella .mk-aikajana-kertomus__teksti {
+    font-size: 20px;
 }
 
 /* Välinäytös (web .aikajana-valinaytos-teksti): ei korttia, teksti kartan päällä varjolla; vaakanäytöllä

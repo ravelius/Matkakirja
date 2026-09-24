@@ -223,7 +223,8 @@
     transition-duration: 0.4s;
 }
 
-.mk-matkakirja.mk-matkakirja--vaistyy {
+.mk-matkakirja.mk-matkakirja--vaistyy,
+.mk-matkakirja.mk-matkakirja--selite {
     opacity: 0;
 }
 
