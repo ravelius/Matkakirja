@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2198, teksti: 'Liiku: luentavahdin varaventtiili mittaa puheen… (#3116)' },
   { v: 2197, teksti: 'Sää: Galápagos, Kongo, Machu Picchu, Madagaskar… (#3048)' },
   { v: 2196, teksti: 'Vertailulinssi pallolla: Huippuvuoret Norjalle… (#3078)' },
   { v: 2195, teksti: 'Periaatteet: palautenappi on valikossa (#3093)' },
