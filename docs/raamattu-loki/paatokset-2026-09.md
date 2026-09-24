@@ -4551,3 +4551,7 @@ Postikortti + Ohita näkyvissä, Liiku jo näkyvissä. → Pelikoodari mittaa we
 ## OMISTAJA klo 20.0x (SITOVA): RADION HAVAINNEKUVAAN — VALOT KAIKKIIN KAUPUNKEIHIN (BLACK MARBLE), KARTTA TUMMEMPI, VALOT HEHKUVAMMAT; JULKAISIJAN PIDATYS PERUTTU (OSOITIN v68:AAN, JONO JATKUU) (24.9.2026 klo 20.03)
 
 Linssiseppä päivittää suunnitelman (hämärän kerroin ~0,18, perustaso ~0,5, bloom valoille) ja tekee uuden havainnekuvan oikealla Black Marble -näytteellä. Julkaisija oli ehtinyt palauttaa 1.x-osoittimen v67:ään (1.33) ja pysäyttää js/css-merget → peruutus välitetty: v68 (1.35) takaisin, jono jatkuu, työnkulkua ei kytketä pois. Fable 71 % → luovutus -d ja nollaus; Natiivi-UI 72 % → luovutus -i.
+
+## FABLE NOLLAA ITSENSA klo 20.0x (71 %): LUOVUTUS viesti-fable-luovutus-20260924-d.md, ALOITUS viesti-fable-aloitus.md (24.9.2026 klo 20.05)
+
+Postivahti lähettää aloitusviestin kun sessio on tyhjä (list_events = 0 / get_usage < 10 %) ja varmistaa RC:n.
