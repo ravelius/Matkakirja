@@ -117496,4 +117496,754 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  mountrushmore: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mount Rushmore',
+      johdanto:
+        'Isoisän 1873 matkavuonna tämä kallio oli vielä nimetön huippu Mustien vuorten laidalla. Neljä presidentinkasvoa alkoi nousta kiveen vasta puoli vuosisataa myöhemmin, vuosina 1927–1941.',
+      nostot: [
+        {
+          otsikko: 'Vuori sai nimensä sattumalta',
+          teksti:
+            'Lakotat kutsuivat huippua nimellä Kuusi isoisää, ja varhaiset englanninkieliset asukkaat tunsivat sen milloin Cougar Mountainina, milloin Sugarloafina. Nykyinen nimi juontuu newyorkilaisesta asianajaja Charles E. Rushmoresta, joka matkusti alueelle kaivosasioissa vuosina 1884–1885. Perimätiedon mukaan paikallinen opas Bill Challis ehdotti leikillään, että nimetön kallio otettaisiin käyttöön Rushmoren nimellä, koska muutakaan nimeä ei ollut sovittu — ja nimi jäi elämään, vaikka mies itse kävi paikalla vain kerran.',
+          tiedosto: 'Dean Franklin - 06.04.03 Mount Rushmore Monument (by-sa).jpg',
+          lyhyt: 'Neljän presidentin kasvot Mount Rushmoren kalliossa kirkkaana kesäpäivänä.',
+          selite:
+            'Valokuva näyttää valmiin muistomerkin edestä: Washingtonin, Jeffersonin, Rooseveltin ja Lincolnin kasvot vaaleassa graniitissa, edessä mäntyjä ja sinistä taivasta.',
+          lahde: 'Dean Franklin, Wikimedia Commons (Public domain)',
+          wiki: 'Mount Rushmore',
+        },
+        {
+          otsikko: 'Idea neljästä presidentistä',
+          teksti:
+            'Etelä-Dakotan osavaltionhistorioitsija Doane Robinson ehdotti 1920-luvun alussa jättiveistosta houkuttelemaan matkailijoita alueelle. Hän halusi kuvata alueen omia sankareita, mutta kutsuttu kuvanveistäjä Gutzon Borglum vaati kunnianhimoisempaa aihetta: koko kansakunnan tarinaa. Borglum hylkäsi ehdotukset Lewis ja Clarkista tai paikallisista hahmoista ja valitsi sen sijaan neljä presidenttiä kuvaamaan Yhdysvaltain syntyä, kasvua, kehitystä ja säilymistä. Työ alkoi lokakuussa 1927, muutaman kuukauden kuluttua vihkiäisistä.',
+          tiedosto: 'Gutzon Borglum LCCN2014699310.jpg',
+          lyhyt: 'Kuvanveistäjä Gutzon Borglum ateljeessaan pienoismallin äärellä.',
+          selite:
+            'Mustavalkoinen studiokuva näyttää Borglumin istumassa pöydän ääressä, vieressään pieni naispatsas — samanlaisessa ateljeessa hän suunnitteli myös Rushmoren presidenttien mittasuhteet.',
+          lahde: 'Bain News Service, Wikimedia Commons (Public domain)',
+          wiki: 'Gutzon Borglum',
+        },
+        {
+          otsikko: '450 000 tonnia kalliota pois',
+          teksti:
+            'Veistos syntyi enimmäkseen dynamiitilla: työntekijät poraisivat reikiä kallioon ja räjäyttivät sen niin tarkasti, että viimeistelyyn jäi usein vain muutaman sentin verran kiveä pois hakattavaksi käsin. Tätä porausta ja räjäytystä kutsuttiin "hunajakennotukseksi". Noin 400 työntekijää — moni heistä entinen kaivosmies — roikkui turvavaljaissa köysien varassa satojen metrien korkeudessa 14 vuoden ajan. Vaarallisesta työstä huolimatta veistoksen tekeminen saatiin päätökseen ilman yhtään kuolonuhria.',
+          tiedosto: 'Mount Rushmore2.jpg',
+          lyhyt: 'Työmiehiä köysissä Washingtonin jättimäisillä kasvoilla rakennustyön aikana.',
+          selite:
+            'Vanha valokuva näyttää kaksi työmiestä roikkumassa köysissä Washingtonin profiilin edessä, nostolaite kallion laella — tällaisessa asennossa dynamiittireikiä porattiin ja viimeistelyä tehtiin käsin.',
+          lahde: 'Rise Studio, Wikimedia Commons (Public domain)',
+          wiki: 'Mount Rushmore',
+        },
+        {
+          otsikko: 'Jefferson jouduttiin räjäyttämään pois',
+          teksti:
+            'Thomas Jeffersonin kasvot alettiin veistää alun perin Washingtonin oikealle puolelle, ja työtä jatkettiin siinä kohtaa lähes kaksi vuotta. Vuonna 1934 kävi kuitenkin ilmi, että kallio oli liian haljennutta veistettäväksi loppuun asti: koko keskeneräinen Jefferson jouduttiin räjäyttämään pois vuoren kyljestä. Uusi Jefferson aloitettiin Washingtonin vasemmalle puolelle, missä hänen kasvonsa lopulta valmistuivat vuonna 1936 — paikalla, jossa ne yhä näkyvät.',
+          tiedosto: 'RushmoreWithLeftJefferson.jpg',
+          lyhyt: 'Varhainen rakennusvaiheen kuva, jossa vain osa presidenttien kasvoista näkyy.',
+          selite:
+            'Kuvassa erottuvat vasta Washingtonin ja yhden toisen hahmon kasvot keskeneräisinä kalliosta, telineet ja nostolaitteet yhä paikoillaan rinteellä.',
+          lahde: 'Kansallispuistoviraston työntekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Mount Rushmore',
+        },
+        {
+          otsikko: 'Veistäjä joka ei nähnyt työtään valmiina',
+          teksti:
+            'Gutzon Borglum matkusti Chicagoon maaliskuussa 1941 pitämään esitelmää ja kävi siellä eturauhasleikkauksessa. Leikkauksen jälkeisistä verihyytymistä seurasi sydänkohtauksia, ja Borglum kuoli 6. maaliskuuta 1941 — kuukausia ennen kuin veistos julistettiin valmiiksi. Hänen poikansa Lincoln Borglum, joka oli työskennellyt isänsä rinnalla vuosia, viimeisteli projektin ja toimi muistomerkin ensimmäisenä johtajana. Borglumin suunnittelema asiakirjaholvi, Hall of Records, jäi kesken vain reilun 20 metrin syvyyteen Lincolnin pään taakse.',
+          tiedosto: "Mount Rushmore National Memorial - workers on Lincoln's nose.jpg",
+          lyhyt: 'Työntekijä köysissä lähikuvassa presidentin kasvojen yksityiskohtia viimeistelemässä.',
+          selite:
+            'Lähikuva näyttää yhden presidentin kasvot suurennettuna: syvät kulmakarvat ja silmäkuopat, ja telineillä roikkuva työntekijä viimeistelemässä pintaa käsityönä.',
+          lahde: 'Yhdysvaltain kansallispuistovirasto, Wikimedia Commons (Public domain)',
+          wiki: 'Lincoln Borglum',
+        },
+        {
+          otsikko: 'Kaksi miljoonaa kävijää vuodessa',
+          teksti:
+            'Nykyisin Mount Rushmore on yksi Yhdysvaltain tunnetuimmista matkakohteista: muistomerkillä käy vuosittain yli kaksi miljoonaa ihmistä, vuonna 2022 tarkalleen 2 440 449. Suurin osa kävijöistä katsoo presidenttien kasvoja samalta näköalaterassilta, josta Gutzon Borglum aikoinaan valvoi työtä kiikareillaan. Vuori on pysynyt lähes muuttumattomana valmistumisestaan lähtien: graniitti kuluu luonnostaan vain noin 2,5 senttiä 10 000 vuodessa, joten kasvot pysyvät tunnistettavina vielä kauan.',
+          tiedosto: 'Mount Rushmore detail view (100MP).jpg',
+          lyhyt: 'Laaja päivänvalokuva koko vuoresta puiden ja kivikkoisen rinteen yläpuolella.',
+          selite:
+            'Terävä, yksityiskohtainen valokuva näyttää koko muistomerkin: neljä kasvoa kirkkaan sinistä taivasta vasten, alla kivikkoinen rinne ja mäntymetsää.',
+          lahde: 'Thomas Wolf, www.foto-tw.de, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mount Rushmore',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Paha Sápa ennen presidenttejä',
+      johdanto:
+        'Kauan ennen presidenttien kasvoja tämä sama seutu tunnettiin lakotoille pyhänä maana. Isoisän matkavuoden 1873 jälkeisinä vuosina alueen kohtalo muuttui lopullisesti kullan vuoksi.',
+      tehtava: {
+        kysymys: 'Minä vuonna Custerin retkikunta löysi kultaa Mustilta vuorilta?',
+        vaihtoehdot: ['1868', '1874', '1877', '1890'],
+        oikea: 1,
+        fakta:
+          'Custerin retkikunta löysi kultaa Ranskanpurolta heinä-elokuussa 1874, vain vuosi isoisän oman 1873 matkan jälkeen, ja tieto laukaisi kultaryntäyksen jo saman vuoden syksynä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuusi isoisää kalliossa',
+          teksti:
+            'Lakotat kutsuivat Mustia vuoria nimellä Pahá Sápa ja pitivät niitä "kaiken sydämenä" — pyhimpänä paikkana koko heidän maailmassaan. Kallio, josta myöhemmin tuli Mount Rushmore, tunnettiin 1870-luvulta lähtien nimellä Kuusi isoisää, viitaten kuuteen kallionkohoumaan ja pyhän miehen Black Elkin näkyyn. Toinen Mustien vuorten pyhä huippu, nykyinen Black Elk Peak, on koko osavaltion korkein kohta ja edelleen tärkeä paikka lakotojen perinteessä ja tarinankerronnassa.',
+          tiedosto: 'Black Elk Peak, the highest point in South Dakota.jpg',
+          lyhyt: 'Black Elk Peakin kalliohuiput ja palanutta metsää Mustien vuorten sydämessä.',
+          selite:
+            'Kuva näyttää Black Elk Peakin rosoiset graniittihuiput ja paloa kestäneen männikön juurella — maisemaa, joka kuuluu samaan lakotojen pyhänä pitämään Mustien vuorten alueeseen kuin Rushmoren kallio.',
+          lahde: 'Skye Marthaler, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Black Hills',
+        },
+        {
+          otsikko: 'Sopimus joka lupasi vuoret ikuisiksi',
+          teksti:
+            'Vuonna 1868 Yhdysvaltain hallitus ja lakotat solmivat Fort Laramien sopimuksen, joka takasi Mustat vuoret lakotoille "ikuisiksi ajoiksi" osana suurta Sioux-intiaanialuetta. Sopimus allekirjoitettiin useiden päivien neuvottelujen jälkeen komennuskunnan telttaleirissä, johon osallistui sekä armeijan edustajia että lakotapäälliköitä. Sopimuksesta tuli myöhemmin yksi Yhdysvaltain historian kiistellyimmistä, kun sen ehtoja ei pidetty voimassa kuin muutaman vuoden.',
+          tiedosto: 'Photograph of General William T. Sherman and Commissioners in Council with Indian Chiefs at Fort Laramie, Wyoming, ca. 1 - NARA - 531079.jpg',
+          lyhyt: 'Neuvottelu telttaleirissä Fort Laramiessa vuonna 1868.',
+          selite:
+            'Vanha valokuva näyttää suuren teltan edessä istuvan neuvottelun: puvuissa olevia komissaarin jäseniä toisella puolella ja peiton kietoneita lakotamiehiä toisella, sotilas seisomassa vieressä.',
+          lahde: 'Kansallisarkisto NARA, Wikimedia Commons (Public domain)',
+          wiki: 'Treaty of Fort Laramie (1868)',
+        },
+        {
+          otsikko: 'Kenraali joka löysi kultaa',
+          teksti:
+            'Heinäkuussa 1874 eversti George Armstrong Custer johti yli tuhannen sotilaan ja siviilin retkikunnan Mustille vuorille etsimään sopivaa linnoituspaikkaa ja tutkimaan kultahuhuja. Retkikunta leiriytyi Ranskanpuron varrelle, ja elokuun alussa kaivosmiehet löysivät sieltä hyötykäyttöön riittävästi kultaa. Custer lähetti sanansaattajan viemään tiedon eteenpäin, ja uutinen levisi nopeasti — vaikka koko retkikunta liikkui sopimuksella lakotoille taatulla alueella.',
+          tiedosto: "A panoramic view of the camp at Hidden Wood Creek. By Illingworth, 1874, during Custer's Black Hills expedition - NARA - 519425.jpg",
+          lyhyt: 'Custerin retkikunnan telttaleiri Mustilla vuorilla kesällä 1874.',
+          selite:
+            'Ilmakuvamainen valokuva näyttää sadoittain valkoisia telttoja järjestäytyneinä riveihin laaksossa joen mutkan vieressä — tällaisessa laajassa leirissä Custerin yli tuhatpäinen retkikunta majaili.',
+          lahde: 'Kansallisarkisto NARA, Wikimedia Commons (Public domain)',
+          wiki: 'Black Hills Expedition',
+        },
+        {
+          otsikko: 'Kultaryntäys ja sopimuksen murtuminen',
+          teksti:
+            'Tieto kullasta houkutteli tuhansia onnenonkijoita Mustille vuorille jo talvella 1874–1875, vaikka alue kuului sopimuksen mukaan yksinomaan lakotoille. Kaivoskaupunkeja, kuten Deadwood, nousi laaksoihin nopeasti täyteen vaeltavia kaivosmiehiä, kauppiaita ja seikkailijoita. Yhdysvaltain kongressi päätti lopulta vuonna 1877 ottaa Mustat vuoret haltuunsa yksipuolisesti, mikä rikkoi vuoden 1868 sopimuksen ja johti pitkään, yhä jatkuvaan kiistaan alueen omistuksesta.',
+          tiedosto: '"Deadwood in 1876." General view of the Dakota Territory gold rush town from a hillside above. By S. J. Morrow - NARA - 533172.jpg',
+          lyhyt: 'Lumisen Deadwoodin kaivoskaupungin pääkatu vuonna 1876.',
+          selite:
+            'Vanha valokuva näyttää mäenrinteeltä kuvatun kaivoskaupungin: puurakennuksia lumisen kadun varrella, kylttejä kuten "Tin Shop", ja pieni ihmisjoukko kadulla korkeiden mäntyjen keskellä.',
+          lahde: 'Kansallisarkisto NARA, Wikimedia Commons (Public domain)',
+          wiki: 'Black Hills gold rush',
+        },
+        {
+          otsikko: 'Toinen kasvo kalliossa',
+          teksti:
+            'Vuonna 1939 lakotavanhin Henry Standing Bear pyysi kuvanveistäjä Korczak Ziolkowskia veistämään lähistön toiseen kallioon muistomerkin sotapäällikkö Crazy Horsesta, jotta myös alkuperäiskansoilla olisi oma jättiveistoksensa. Ensimmäinen räjäytys tehtiin kesäkuussa 1948, ja hanke on jatkunut siitä lähtien täysin yksityisin lahjoituksin, ilman valtion tukea. Kasvot valmistuivat vasta 1998, ja koko veistoksesta, joka on suunniteltu suuremmaksi kuin Rushmoren neljä päätä yhteensä, on valmiina yhä vain osa.',
+          tiedosto: 'Crazy Horse Memorial.jpg',
+          lyhyt: 'Crazy Horse -muistomerkin keskeneräinen kallio puiden yläpuolella.',
+          selite:
+            'Kuva näyttää suuren kallion, johon on veistetty kasvot ja niiden alle jätetty aukko käsivarren kohdalle — suurin osa kalliosta on yhä muokkaamatonta luonnonkiveä hahmotellun veistoksen ympärillä.',
+          lahde: 'Ahzoov, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Crazy Horse Memorial',
+        },
+      ],
+    },
+  ],
+  hawaii: [
+    {
+      id: 'kaupunki',
+      nimi: 'Havaiji',
+      johdanto:
+        'Vuonna 1873 Havaiji oli yhä oma kuningaskuntansa keskellä Tyyntätamerta: Honolulussa hallitsi juuri kansan valitsema kuningas, ja satamassa risteilivät valaanpyytäjät, kauppa-alukset ja sokerilaivat ympäri maailmaa.',
+      nostot: [
+        {
+          otsikko: 'Kapteeni Cookin löytöretki',
+          teksti:
+            'Tammikuussa 1778 brittiläinen tutkimusmatkailija James Cook purjehti ensimmäisenä eurooppalaisena Havaijin saarille ja nimesi ne Sandwich-saariksi. Vuotta myöhemmin hänen laivansa Resolution ja Discovery ankkuroituivat Havaijin isolla saarella Kealakekuanlahteen juuri makahiki-juhlan aikaan, jolloin paikalliset kunnioittivat sadonkorjuun jumalaa Lonoa – ja osa heistä piti saapunutta Cookia jumalan ruumiillistumana. Vierailu päättyi traagisesti helmikuussa 1779: kiista varastetusta veneestä johti yhteenottoon rannalla, jossa Cook sai surmansa. Kohtaaminen avasi Havaijin pysyvästi eurooppalaisten kauppalaivojen reiteille.',
+          tiedosto: 'Cook-karakakoa-bay.jpg',
+          lyhyt: 'John Webberin kuvaus brittilaivoista Kealakekuanlahdella vuonna 1779.',
+          selite:
+            'Kaiverruksessa näkyvät Cookin laivat Resolution ja Discovery ankkurissa Kealakekuanlahdella, ympärillä havaijilaisten kanootteja ja rannalla pyhäkkörakennus – retkikunnan mukana matkustanut taiteilija John Webber teki näkymän paikan päällä.',
+          lahde: 'John Webber, Wikimedia Commons (Public domain)',
+          wiki: 'Kealakekua Bay',
+        },
+        {
+          otsikko: 'Kamehameha I ja kuningaskunnan synty',
+          teksti:
+            'Havaijin saaret olivat pitkään toisistaan riippumattomia päällikkökuntia, kunnes soturipäällikkö Kamehameha I yhdisti ne sotaretkillä 1790-luvulla ja sai viimeisenkin saaren, Kauain, alistumaan rauhanomaisesti vuonna 1810. Näin syntyi Havaijin kuningaskunta, jota Kamehameha-suku hallitsi isältä pojalle lähes seitsemän vuosikymmentä. Kamehameha V:n kuoltua joulukuussa 1872 ilman nimettyä perillistä suvun suora hallitsijalinja katkesi ensimmäistä kertaa – ja seuraava kuningas jouduttiin valitsemaan, ei perimään. Kamehameha I:n pronssipatsas paljastettiin myöhemmin, vuonna 1883, kunnianosoituksena kuningaskunnan perustajalle.',
+          tiedosto: 'Kamehameha I Statue.jpg',
+          lyhyt: 'Kamehameha I:n patsas Honolulun tuomioistuintalon edessä.',
+          selite:
+            'Kultaisiin vaatteisiin puettu pronssipatsas kuvaa Kamehameha I:tä keihäs kädessään Aliʻiōlani Halen kellotornin edustalla Honolulussa – kuningaskunnan perustajaa kunnioittava muistomerkki paljastettiin vuonna 1883.',
+          lahde: 'Coolcaesar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kamehameha I',
+        },
+        {
+          otsikko: 'Lunalilo – kansan valitsema kuningas',
+          teksti:
+            'Kun Kamehameha V kuoli joulukuussa 1872 nimeämättä seuraajaa, Havaijin perustuslaki määräsi, että lainsäätäjien oli valittava uusi hallitsija sopivien kuninkaallisten joukosta. Ensin äänestivät tavalliset havaijilaiset uudenvuodenpäivänä 1873, ja 8. tammikuuta lainsäätäjät vahvistivat tuloksen: prinssi William Charles Lunalilo voitti ylivoimaisesti vastaehdokkaansa David Kalākauan ja nousi valtaistuimelle Havaijin ensimmäisenä koskaan vaaleilla valittuna kuninkaana. Suosionsa ansiosta hänet tunnettiin nimellä "kansan kuningas", mutta hallituskausi jäi lyhyeksi: Lunalilo kuoli tuberkuloosiin jo helmikuussa 1874, jälleen ilman nimettyä perillistä.',
+          tiedosto:
+            'King William Charles Lunalilo by Menzies Dickson, c. 1873, albumen silver print, from the National Portrait Gallery - NPG-NPG 80 321Lunalilo-000001.jpg',
+          lyhyt: 'Kuningas Lunalilo valokuvassa vuodelta 1873, valintansa vuonna.',
+          selite:
+            'Muotokuvassa istuu vakavailmeinen viiksekäs mies tumma puku yllään – valokuva otettiin noin 1873, samana vuonna kun Lunalilosta tuli Havaijin ensimmäinen vaaleilla valittu kuningas.',
+          lahde: 'Menzies Dickson, Wikimedia Commons (Public domain)',
+          wiki: 'Lunalilo',
+        },
+        {
+          otsikko: 'Sokeri nousee saarten valtatuotteeksi',
+          teksti:
+            '1870-luvulla sokeriruoko oli jo noussut Havaijin tärkeimmäksi vientituotteeksi: rannikoiden jyrkillä rinteillä kohosi yhä uusia plantaaseja ja niiden savupiipuilla varustettuja sokerimyllyjä. Työvoimaa ei riittänyt paikallisista asukkaista, joten viljelijät toivat sopimustyöläisiä ensin Kiinasta ja myöhemmin muun muassa Japanista ja Portugalista. Vuoden 1875 vastavuoroisuussopimus Yhdysvaltojen kanssa poisti tullit havaijilaiselta sokerilta Yhdysvaltain markkinoilla, mikä kasvatti tuotantoa räjähdysmäisesti ja sitoi saarten talouden yhä tiiviimmin suureen naapuriin – kehityskulku, joka vuosikymmeniä myöhemmin johti myös poliittiseen liittämiseen.',
+          tiedosto: 'Papaikou plantation 19th century.jpeg',
+          lyhyt: 'Sokeriplantaasi ja sen savupiippu Havaijin rannikolla 1800-luvun lopulla.',
+          selite:
+            'Vanhassa valokuvassa näkyy rannikolle rakennettu sokeritehdas savuavine piippuineen, ympärillä viljelmiä ja kookospalmuja – tällaiset plantaasit muuttivat Havaijin talouden 1800-luvun jälkipuoliskolla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Sugar plantations in Hawaii',
+        },
+        {
+          otsikko: 'Kuningaskunnan kaataminen 1893',
+          teksti:
+            'Kuningatar Liliʻuokalani nousi valtaistuimelle 1891 ja pyrki vuonna 1893 uuteen perustuslakiin, joka olisi palauttanut äänioikeuden köyhemmille havaijilaisille ja vahvistanut hallitsijan valtaa. Amerikkalaisten ja eurooppalaisten liikemiesten muodostama "turvallisuuskomitea" vastasi kaappauksella: Yhdysvaltain Havaijin-ministeri kutsui rantautumaan sotalaiva Bostonin merijalkaväen, ja tammikuun 17. päivänä 1893 kuningatar joutui aseiden uhalla luopumaan vallasta. Liliʻuokalani antautui protestoiden toivoen presidentti Grover Clevelandin palauttavan hänet valtaistuimelle, mutta kaappaajat julistivat sen sijaan Havaijin tasavallan Sanford Dolen johdolla.',
+          tiedosto: 'Liliuokalani, c. 1891.jpg',
+          lyhyt: 'Kuningatar Liliʻuokalani muotokuvassa, allekirjoituksin varustettuna.',
+          selite:
+            'Sepiansävyisessä muotokuvassa kuningatar istuu koruompelullisessa juhlapuvussa ja olkanauhassa valtaistuimen kaltaisen tuolin edessä; kuvaan on myöhemmin lisätty hänen omakätinen omistuskirjoituksensa vuodelta 1916.',
+          lahde: 'James J. Williams, Wikimedia Commons (Public domain)',
+          wiki: 'Liliʻuokalani',
+        },
+        {
+          otsikko: 'Havaiji liitetään Yhdysvaltoihin',
+          teksti:
+            'Kaappauksen jälkeen syntynyt Havaijin tasavalta ajoi aktiivisesti liittämistä Yhdysvaltoihin, ja espanjalais-amerikkalaisen sodan syttyminen 1898 antoi ratkaisevan sysäyksen: Pearl Harborin satama osoittautui strategisesti niin tärkeäksi, että Yhdysvaltain kongressi hyväksyi liittämisen heinäkuussa 1898 ilman kansanäänestystä. Virallinen seremonia järjestettiin ʻIolani-palatsin edessä 12. elokuuta 1898: havaijilainen lippu laskettiin salkoa alas viimeisen kerran ja tilalle nostettiin Yhdysvaltain tähtilippu. Monille havaijilaisille päivä oli suru, eikä liittämistä koskaan hyväksytty kansanäänestyksellä.',
+          tiedosto: 'Lowering the Hawaiian flag at Annexation ceremony (PP-35-8-001).jpg',
+          lyhyt: 'Havaijin lippua lasketaan alas liittämisseremoniassa vuonna 1898.',
+          selite:
+            'Vanhassa valokuvassa upseeri laskee suurta havaijilaista lippua salosta juhlallisesti pukeutuneen väkijoukon edessä palmujen ympäröimällä terassilla – kuva on liittämisseremoniasta ʻIolani-palatsin edustalla elokuussa 1898.',
+          lahde: 'Frank Davey, Wikimedia Commons (Public domain)',
+          wiki: 'Newlands Resolution',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Tulivuoret ja Pele',
+      johdanto:
+        'Havaijin saaret ovat syntyneet keskellä Tyynenmeren laattaa kytevän kuuman pisteen työstä, ja saariketjun eteläisin jättiläinen pursuaa yhä tulista kiveä – paikka, jossa vanhat havaijilaiset tarinat ja nykyinen geologia kohtaavat.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta vuotta Kilauean Puʻuʻōʻō-purkaus kesti lähes yhtäjaksoisesti (1983–2018)?',
+        vaihtoehdot: ['5 vuotta', '15 vuotta', '35 vuotta', '60 vuotta'],
+        oikea: 2,
+        fakta:
+          'Puʻuʻōʻō-purkauskeskus pysyi käynnissä 35 vuotta ja tuotti noin 4,4 kuutiokilometriä laavaa, ennen kuin sen toiminta hiljeni vuonna 2018.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mauna Loa – maailman suurin aktiivinen tulivuori',
+          teksti:
+            'Mauna Loa on maailman suurin yhä toimiva tulivuori: sen tilavuus on noin 75 000 kuutiokilometriä, ja merenpohjasta laskien se kohoaa lähes 9 kilometrin korkeuteen, vaikka merenpinnan yläpuolelle jää vain reilut 4 170 metriä. Kilpitulivuoreksi kutsuttu Mauna Loa on rakentunut hitaasti valtavien, loivien laavavirtausten kerrostumista vuosituhansien saatossa. Se on purkautunut historiallisena aikana kymmeniä kertoja, ja marraskuussa 2022 se heräsi ensimmäistä kertaa sitten vuoden 1984 – purkaus valaisi yötaivaan oranssinpunaisena kymmenien kilometrien päähän asti.',
+          tiedosto: '2022 Mauna Loa eruption as viewed from Waikoloa.jpg',
+          lyhyt: 'Mauna Loan purkauksen hehku taivaalla marraskuussa 2022.',
+          selite:
+            'Yöllisessä valokuvassa taivaanrannan takaa hehkuu voimakas oranssi valo pilvien alla – näin Mauna Loan vuoden 2022 purkaus näkyi kaukaa Waikoloan suunnalta kuvattuna.',
+          lahde: 'United States Geological Survey, Wikimedia Commons (Public domain)',
+          wiki: 'Mauna Loa',
+        },
+        {
+          otsikko: 'Kuuma piste joka rakensi saariketjun',
+          teksti:
+            'Havaijin saaret eivät synny mannerlaattojen reunoilla niin kuin useimmat tulivuoret, vaan keskellä Tyynenmeren laattaa kytevän kuuman pisteen yllä. Laatta liikkuu hitaasti, muutaman senttimetrin vuodessa, kuuman pisteen pysyessä paikoillaan syvällä vaipassa – tulos on yli 80 miljoonan vuoden aikana syntynyt Havaiji–Keisari-vuorijono, jossa vanhimmat, jo veden alle vajonneet tulivuoret ulottuvat aina Aleuteille asti. Nykyinen Iso saari on ketjun nuorin ja siksi ainoa, jolla on vielä aktiivisia tulivuoria; seuraava saari kasvaa jo salaa meren alla sen kaakkoispuolella.',
+          tiedosto: 'Hawaii hotspot.jpg',
+          lyhyt: 'Väritetty pohjakartta näyttää Havaijin alta Aleuteille ulottuvan vuorijonon.',
+          selite:
+            'Väreillä korostettu merenpohjan korkeuskartta näyttää kaarevan alamerisen vuorijonon, joka kulkee Havaijin saarilta luoteeseen kohti Aleuttien saaria – jäljen jättänyt paikallaan pysyvä kuuma piste ja liikkuva Tyynenmeren laatta.',
+          lahde: 'National Geophysical Data Center/USGS, Wikimedia Commons (Public domain)',
+          wiki: 'Hawaii hotspot',
+        },
+        {
+          otsikko: 'Kilauea – tulivuori joka ei pysähdy',
+          teksti:
+            'Kilauea on yksi maailman aktiivisimmista tulivuorista ja Havaijin nuorin: sen laavakammio purkautuu maan pinnalle säännöllisesti, toisin kuin monilla muilla tulivuorilla. Vuosina 1983–2018 sen Puʻuʻōʻō-purkauskeskus pysyi käynnissä lähes yhtäjaksoisesti peräti 35 vuotta – yksi pisimpään kestäneistä tunnetuista purkauksista koko maailmassa – ja tuotti sinä aikana noin 4,4 kuutiokilometriä laavaa, joka peitti 144 neliökilometriä maata. Vuoden 2018 halkeamapurkauksessa laavasuihkut kohosivat kymmenien metrien korkeuteen ja tuhosivat satoja koteja itäisellä Havaijilla, ennen kuin toiminta hiljeni.',
+          tiedosto: 'Kilauea eastern rift zone fissure eruption May 2018.jpg',
+          lyhyt: 'Laavasuihkuja Kilauean halkeamapurkauksesta yöllä vuonna 2018.',
+          selite:
+            'Yöllisessä kuvassa palmujen siluetit erottuvat korkealle roiskuvan, kipinöivän laavasuihkun edessä – näkymä on Kilauean itäisen riftivyöhykkeen halkeamapurkauksesta toukokuussa 2018.',
+          lahde: 'United States Geological Survey, Wikimedia Commons (Public domain)',
+          wiki: 'Kīlauea',
+        },
+        {
+          otsikko: 'Pele, tulivuorten jumalatar',
+          teksti:
+            'Havaijilaisen tarinaperinteen mukaan tulivuoria hallitsee Pele, tulen ja salamoiden jumalatar, joka matkasi saarelta toiselle kaivaen joka paikkaan asuinkuoppansa, kunnes löysi lopulta pysyvän kotinsa Kilauean huippukalderan Halemaʻumaʻu-kraatterista. Perimätiedon mukaan Pelellä on äkkipikainen luonne, ja hänen suosionsa säilyttämiseksi kraatterin reunalle jätetään yhä nykyäänkin kukkia, ruokaa ja giniä uhrilahjoina. Kraatterin pohjalla kiehunut laavajärvi hehkuu pimeällä niin kirkkaana, että sen loiste heijastuu pilviin – juuri tuollaisen näyn 1800-luvun matkailijat kuvasivat nähneensä yöllä vaeltaessaan kraatterin reunalla.',
+          tiedosto:
+            'Boiling Lava at Halemaumau Lava Lake, April 19th 2018, Vulcanoes National Park, Big Island, Hawaii (42711518742).jpg',
+          lyhyt: 'Halemaʻumaʻu-kraatterin laavajärvi hehkuu pimeässä yössä.',
+          selite:
+            'Pilkkopimeässä kuvassa erottuu kaksi hehkuvaa laava-allasta kraatterin pohjalla, savua nousemassa niiden yltä – Pelen legendaarisena kotina pidetyn Halemaʻumaʻu-kraatterin laavajärvi öisin kuvattuna.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Pele (deity)',
+        },
+        {
+          otsikko: 'Mark Twain kraatterin reunalla',
+          teksti:
+            'Kesäkuussa 1866 nuori sanomalehtimies Samuel Clemens – myöhemmin tunnettu nimellä Mark Twain – matkusti Kilauealle ja majoittui kraatterin reunalla sijainneeseen Volcano House -majataloon, jota hän kehui siistiksi ja mukavaksi. Hän sattui paikalle juuri, kun tulivuori oli poikkeuksellisen aktiivinen, ja kuvaili myöhemmin näkemäänsä sanoin "helvetin ja sen enkelien näky". Twain kirjoitti matkastaan yhteensä 25 kirjettä Sacramento Union -lehteen, ja kokemukset Havaijilla päätyivät vuosia myöhemmin myös osaksi hänen Roughing It -teostaan. Kirjeet olivat monelle amerikkalaiselle ensimmäinen kosketus saarten tulivuoriin.',
+          tiedosto: 'Rainbow and eruption of Halema`uma`u vent at Kilauea.jpg',
+          lyhyt: 'Kilauean kraatterista nousee valtava höyrypilvi ja sen edessä sateenkaari.',
+          selite:
+            'Ilmakuvassa näkyy Kilauean kalderasta kohoava paksu valkoinen höyrypilvi ja sen editse kaartuva sateenkaari sinistä taivasta vasten – samalla kraatterin reunalla Mark Twain vaelsi öisin vuonna 1866.',
+          lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mark Twain',
+        },
+        {
+          otsikko: 'Diamond Head – sammunut tuhkakartio',
+          teksti:
+            'Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.',
+          tiedosto: 'Starr 070515-7093 aerial photograph of Oahu, Diamond Head.jpg',
+          lyhyt: 'Diamond Headin laaja tuhkakraatteri Honolulun kaupungin keskellä.',
+          selite:
+            'Ilmakuvassa erottuu selvästi pyöreä, kasvillisuuden peittämä kraatteri, jota tiheä kaupunkiasutus ympäröi joka puolelta ja jonka takana siintää valtameri – Diamond Headin sammunut tuffikartio Oahun saarella.',
+          lahde: 'Forest & Kim Starr, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Diamond Head, Hawaii',
+        },
+      ],
+    },
+  ],
+  bali: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bali',
+      johdanto:
+        'Isoisän matkavuonna 1873 Bali oli vielä yhdeksän itsenäisen hindulaiskuningaskunnan täplittämä saari, jonka rannoille eurooppalaiset kauppiaat ja sotalaivat olivat tunkeutuneet jo vuosisatojen ajan.',
+      nostot: [
+        {
+          otsikko: 'Nuori Hollanti',
+          teksti:
+            'Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään "Nuoreksi Hollanniksi". Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.',
+          tiedosto: 'Fleet of Cornelis de Houtman.jpg',
+          lyhyt: 'Cornelis de Houtmanin laivue saapumassa Balille vuonna 1597.',
+          selite:
+            '1600-luvun kaiverruksessa neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – purjehtii kohti rantaa savuavine tykkeineen, kaukana näkyy kaupungin ääriviivat.',
+          lahde: '17th century artist, Wikimedia Commons (Public domain)',
+          wiki: 'Cornelis de Houtman',
+        },
+        {
+          otsikko: 'Yhdeksän kuningaskunnan saari',
+          teksti:
+            'Toisin kuin moni eurooppalainen matkakertoja kuvitteli, Bali ei 1800-luvulla ollut yhtenäinen valtakunta vaan noin yhdeksän pienen hindulaiskuningaskunnan – muun muassa Klungkungin, Karangasemin, Badungin ja Bulelengin – kirjava liittouma. Klungkungin hallitsijaa, Dewa Agungia, pidettiin muiden kuningaskuntien hengellisenä ylimpänä herrana, vaikka todellista valtaa hänellä oli enää vähän. Kuningaskunnat kävivät jatkuvaa kauppaa ja välillä sotaakin keskenään, ja juuri tämä hajanaisuus antoi Hollannille myöhemmin tilaisuuden valloittaa saari kuningaskunta kerrallaan – ensin pohjoinen 1849, viimeisenä etelä vasta 1908.',
+          tiedosto: 'Klungkung Karangasem pre 1864.jpg',
+          lyhyt: 'Vanha piirros Klungkungin ja Karangasemin hallitsijoiden tapaamisesta ennen vuotta 1864.',
+          selite:
+            'Repaleisella, yli 150 vuotta vanhalla paperilla kaksi ryhmää perinteisiin sarongeihin pukeutuneita balilaismiehiä kohtaa toisensa – vasemmalla Klungkungin ja oikealla Karangasemin hallitsijan seurue, kuvattuna vain vuosikymmen ennen isoisän matkaa.',
+          lahde: 'HHEHUM, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dewa Agung',
+        },
+        {
+          otsikko: 'Oikeussali, jonka katto tuomitsi',
+          teksti:
+            'Klungkungin palatsin kulmaan rakennettiin 1700-luvun lopulla Kerta Gosa, kuninkaan oikeusistuimen paviljonki. Siellä Dewa Agungin tuomarit ratkoivat riitoja ja rikoksia suoraan katosta katsoen: paviljongin kattoon on maalattu kerros kerrokselta tarina Bhima Swargasta, sankarista joka vaeltaa manalassa näkemässä, miten synnit palkitaan piinalla ja hyveet palkinnolla. Maalaukset muistuttivat sekä tuomareita että syytettyjä siitä, että lopullinen tuomio odottaa joka tapauksessa toisessa elämässä. Kun Hollanti tuhosi Klungkungin palatsin puputan-taistelun jälkeen vuonna 1908, Kerta Gosa oli yksi harvoista rakennuksista, jotka jätettiin pystyyn.',
+          tiedosto: 'Kertha Gosa Pavilion of Klungkung Palace, Bali, Indonesia.jpg',
+          lyhyt: 'Kerta Gosa, Klungkungin palatsin oikeusistuimen paviljonki.',
+          selite:
+            'Kuvassa näkyy punatiilinen, kerroksellisen olkikattoinen paviljonki lammikon keskellä palmujen ja kivipatsaiden ympäröimänä – Klungkungin palatsin harvoja osia, jotka säilyivät hollantilaisten tuholta vuonna 1908.',
+          lahde: 'Ray in Manila, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kertha Gosa Pavilion',
+        },
+        {
+          otsikko: 'Tanskalainen kauppias Kutan rannalla',
+          teksti:
+            'Vuonna 1834 vasta 17-vuotiaana Balille saapunut tanskalainen Mads Johansen Lange perusti pian kauppa-aseman Kutan rannalle. Badungin rajan antamalla maalla hän rakensi varastoja ja kävi kauppaa riisillä, silkillä, kullalla ja kepeng-kolikoilla niin menestyksekkäästi, että hänestä tuli saaren talouden solmukohta. Lange toimi myös rauhanvälittäjänä Balin ruhtinaiden ja Hollannin siirtomaahallinnon välillä ja auttoi neuvottelemaan sopimuksen, joka päätti vuosien 1848–1849 sodan. Hän kuoli myrkytettynä toukokuussa 1856 vain 48-vuotiaana, ja hänen hautansa löytyy yhä Kutasta, tien varrelta joka on nimetty hänen mukaansa.',
+          tiedosto: 'Mads Lange Tomb from front.jpeg',
+          lyhyt: 'Mads Johansen Langen muistokivi Kutan hautausmaalla.',
+          selite:
+            'Mustavalkotäpläinen obeliski kahden koristeellisen balilaisen porttipatsaan välissä kantaa laattaa, joka muistaa tanskalaista kauppiasta Mads Johansen Langea, Kutan kauppa-aseman perustajaa ja hollantilais-balilaisten neuvottelujen välittäjää.',
+          lahde: 'Jack Merridew, Wikimedia Commons (Public domain)',
+          wiki: 'Mads Johansen Lange',
+        },
+        {
+          otsikko: 'Puputan – viimeinen taisto',
+          teksti:
+            'Syyskuun 20. päivänä 1906 hollantilaiset joukot etenivät Sanurin rannalta Denpasariin syyttäen Badungin ruhtinasta haaksirikkoisen laivan ryöstämisestä. Badungin raja perheineen, pappeineen ja seuralaisineen käveli palatsistaan valkoisiin, ruumiinpolton väriin pukeutuneina, kris-tikarit ja korut mukanaan, suoraan hollantilaisten kivääreitä kohti. Kun tulitus ei pysäyttänyt heitä, moni käänsi terän itseensä tai toisiinsa – puputan, "viimeinen taisto", jossa kuoli yhden aamun aikana yli tuhat balilaista. Denpasarin puistoon pystytetty patsas muistuttaa yhä tapahtumasta, jota balilaiset pitävät esimerkkinä vastarinnasta vierasta valtaa vastaan.',
+          tiedosto: 'Taman Puputan 1906-Denpasar Bali.JPG',
+          lyhyt: 'Patsas kolmesta aseistetusta balilaismiehestä Denpasarin Puputan-puistossa.',
+          selite:
+            'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
+          lahde: 'Eric Bajart, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Puputan',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Riisipellot ja jumalten temppelit',
+      johdanto:
+        'Balilaiset ovat enemmistön saarena ainoa hindulaisalue muslimienemmistöisessä Indonesiassa: tuhannen temppelin, riisiterassien ja gamelan-musiikin uskonto läpäisee saaren arkea aamuvarhaisesta iltaan.',
+      tehtava: {
+        kysymys: 'Minä vuonna Balin subak-kastelujärjestelmä merkittiin Unescon maailmanperintölistalle?',
+        vaihtoehdot: ['1998', '2004', '2012', '2019'],
+        oikea: 2,
+        fakta:
+          'Subak merkittiin Unescon maailmanperintölistalle vuonna 2012 viiden riisiterassialueen ja niihin liittyvien vesitemppelien ainutlaatuisena kokonaisuutena.',
+      },
+      nostot: [
+        {
+          otsikko: 'Subak – tuhat vuotta vanha vesidemokratia',
+          teksti:
+            'Balin jyrkillä rinteillä viljelty riisi ei kasva ilman vettä, ja vuosisatoja balilaiset ovat jakaneet sitä subak-järjestelmän kautta: viljelijät muodostavat itsehallinnollisia yhteisöjä, jotka ohjaavat vettä tulivuorijärvistä kanavien ja patojen kautta pelloille. Järjestelmä pohjautuu tri hita karana -filosofiaan, tasapainoon ihmisen, luonnon ja jumalallisen välillä; jokaisen subakin keskuksena toimii vesitemppeli, jossa neuvotellaan jaosta ja rukoillaan hyvää satoa. Vuonna 2012 Unesco merkitsi viisi subak-aluetta, yhteensä yli 19000 hehtaaria riisiterasseja, maailmanperintölistalle ainutlaatuisena maatalouden ja uskonnon liittona.',
+          tiedosto: 'Jatiluwih Rice Terrace - Subak Jatiluwih 30.jpg',
+          lyhyt: 'Riisiterasseja Jatiluwihissa, yhdellä subak-järjestelmän Unesco-alueista.',
+          selite:
+            'Vihreät riisiterassit kiertävät kukkulan rinnettä vyöhykkeittäin palmujen keskellä pilvisen taivaan alla – tällaisia subak-viljelijöiden muokkaamia rinteitä on Jatiluwihissa Länsi-Balilla.',
+          lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Subak (irrigation)',
+        },
+        {
+          otsikko: 'Äititemppeli tulivuoren kupeessa',
+          teksti:
+            'Yli tuhannen metrin korkeudessa Agung-tulivuoren rinteellä kohoaa Pura Besakih, yli kahdeksankymmenen temppelin kokonaisuus, jota balilaiset kutsuvat äititempeliksi. Vanhin maininta paikasta on kivipiirtoon kirjoitettu vuodelta 1007, ja legendan mukaan paikka valittiin, kun tietäjä Rsi Markandeya näki unessa käskyn rakentaa sinne temppeli. 1400-luvulta lähtien Besakihia on pidetty Balin hindulaisuuden keskuksena, ja sen kerroksittaiset meru-tornit näkyvät kauas: mitä useampi kerros, sitä korkea-arvoisempi jumaluus tornissa asuu. Temppeli selvisi myös Agungin purkauksesta vuonna 1963, jolloin laava pysähtyi ihmeenomaisesti porttien viereen.',
+          tiedosto: 'Besakih Bali Indonesia Pura-Besakih-01.jpg',
+          lyhyt: 'Pura Besakihin kerroksittaiset meru-tornit Agung-tulivuoren rinteellä.',
+          selite:
+            'Useita korkeita, mustia olkikattoisia meru-torneja kohoaa portaittain kirkkaan sinistä taivasta ja kaukaista merta vasten – Pura Besakihin pyhäkköjen kattoja, jotka kertovat niissä asuvien jumaluuksien arvoasteesta.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Besakih Temple',
+        },
+        {
+          otsikko: 'Gamelan – pronssin puhetta',
+          teksti:
+            'Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.',
+          tiedosto: 'Gamelan of Bali 200507-4.jpg',
+          lyhyt: 'Balilaisia gamelan-soittimia, pronssisia gongeja ja kattiloita rivissä.',
+          selite:
+            'Rivissä lattialla on pronssisia kupumaisia gong-kattiloita telineissään ja niiden takana suurempi riippuva gong ja pronssiset metallilaattasoittimet – tyypillinen balilaisen gamelan-yhtyeen soitinkokoonpano.',
+          lahde: 'っ, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Gamelan gong gede',
+        },
+        {
+          otsikko: 'Päivä, jolloin koko saari vaikenee',
+          teksti:
+            'Sakan uudenvuoden aattona balilaiset kantavat kylän kaduilla jättimäisiä, bambusta ja paperista rakennettuja hirviöhahmoja, ogoh-ogoheja, jotka esittävät pahoja henkiä. Illan päätteeksi hahmot poltetaan roihuavissa nuotioissa – rituaali, jonka on tarkoitus karkottaa pahuus saarelta ennen uutta vuotta. Seuraava päivä, Nyepi eli hiljaisuuden päivä, on täydellinen pysähdys: ei valoja, ei matkustamista, ei työtä eikä huvia, ei edes turisteille myönnettyjä poikkeuksia. Balilaiset uskovat, että hiljaisuus ja pimeys saavat pahat henget luulemaan saaren autioksi, jolloin ne lentävät ohi eivätkä jää seuraavaksi vuodeksi tuomaan onnettomuutta.',
+          tiedosto: 'Ritual Ogoh Ogoh.jpg',
+          lyhyt: 'Ogoh-ogoh-hirviöhahmon polttaminen Nyepin aattona.',
+          selite:
+            'Bambusta ja paperista rakennettu tummahahmoinen ogoh-ogoh-hirviö palaa liekeissä nurmikentällä, kun valkoisiin juhlapukuihin pukeutuneet balilaiset seuraavat rituaalia vieressä.',
+          lahde: 'Ivuvisual, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nyepi',
+        },
+        {
+          otsikko: 'Aamun ensimmäinen uhrilahja',
+          teksti:
+            'Ennen aamiaista balilaisnainen on jo kutonut palmunlehdestä pienen tarjottimen, täyttänyt sen kukilla, riisillä ja suitsukkeella ja asettanut sen kynnykselle, kaupan eteen tai temppelin portille. Näitä canang sari -uhrilahjoja tehdään ja asetetaan useita kertoja päivässä yhdeksälle suuntien vartijajumalalle kiitokseksi ja rukoukseksi, ja niiden tekeminen on samalla mietiskelyä, jota äidit opettavat tyttärilleen pienestä pitäen. Satojentuhansien päivittäisten uhrilahjojen kirjo katukiveyksillä on yksi Balin tunnetuimmista näyistä, mutta balilaisille se on vain arjen itsestäänselvä osa tasapainon ylläpitämistä ihmisen, luonnon ja jumalten välillä.',
+          tiedosto: 'Canang sari.jpg',
+          lyhyt: 'Kirjava kasa canang sari -uhrilahjoja kadulla.',
+          selite:
+            'Kivilaatalla on rivi pieniä palmunlehdestä kudottuja tarjottimia täynnä värikkäitä kukkia, riisiä ja suitsuketikkuja – päivittäisiä canang sari -uhrilahjoja, joita balilaiset asettavat useita kertoja päivässä.',
+          lahde: 'Dennis Sylvester Hurd, Wikimedia Commons (CC0)',
+          wiki: 'Canang sari',
+        },
+      ],
+    },
+  ],
+  milfordsound: [
+    {
+      id: 'kaupunki',
+      nimi: 'Milford Sound',
+      johdanto:
+        'Isoisän matkavuonna 1873 Piopiotahin vuono oli vielä lähes koskematon: vain neljä vuotta myöhemmin skotti Donald Sutherland asettui yksin sen rantaan ja sai lisänimen Milford Soundin erakko.',
+      nostot: [
+        {
+          otsikko: 'Hylkeenpyytäjä nimeää vuonon',
+          teksti:
+            'Vuonna 1823 englantilainen hylkeenpyytäjä John Grono purjehti veneellään Uuden-Seelannin lounaisrannikon tuntemattomille vesille etsimässä hylkeitä. Kapea, jyrkkien vuorten ympäröimä vuono teki häneen niin vahvan vaikutuksen, että hän nimesi sen kotiseutunsa mukaan Milford Havenin, walesilaisen satamakaupungin, muistoksi. Nimi jäi käyttöön eurooppalaisilla kartoilla vuosikymmeniksi, vaikka paikalla ei vielä ollut yhtään pysyvää asukasta. Vasta vuonna 1998 Ngāi Tahu -heimon kanssa solmittu sopimus vahvisti virallisesti myös alkuperäisen māorinkielisen nimen Piopiotahi vuonon rinnalle.',
+          tiedosto: 'Anita Bay near the entrance to Milford Sound.jpg',
+          lyhyt: 'Anita Bay Milford Soundin suulla, jonne hylkeenpyytäjät purjehtivat 1820-luvulla.',
+          selite:
+            'Kuva näyttää Milford Soundin suulla sijaitsevan Anita Bayn: metsäisen rantavuoren, kivikkoisen rannan ja tyynen, tummanvihreän veden - juuri sellaisen näkymän John Grono kohtasi purjehtiessaan vuonolle vuonna 1823.',
+          lahde: 'Pseudopanax, Wikimedia Commons (Public domain)',
+          wiki: 'John Grono',
+        },
+        {
+          otsikko: 'Yksinäisen linnun nimi',
+          teksti:
+            'Māorien tarinan mukaan sankari Māui yritti kerran voittaa kuoleman mutta epäonnistui ja kuoli. Kun muut linnut surivat häntä yhdessä, yksi piopio-niminen lintu lensi suruissaan yksin kauas etelään, aina tälle jyrkkien vuorten ympäröimälle vuonolle asti. Siitä vuono sai māorinkielisen nimensä Piopiotahi, joka tarkoittaa suunnilleen "yksi piopio". Piopio-lintu itse hävisi luonnosta vieraspetojen vuoksi jo 1900-luvun alussa, mutta sen nimi elää yhä vuonon toisena, virallisena nimenä Milford Soundin rinnalla.',
+          tiedosto: 'A moody Milford Sound. NZ (26721630361).jpg',
+          lyhyt: 'Synkkä pilvitaivas Milford Soundin ylle sopii vuonon surullisen nimitarinan tunnelmaan.',
+          selite:
+            'Kuva näyttää Milford Soundin raskaiden sadepilvien alla: jyrkät vuorenhuiput piirtyvät tummina siluetteina taivasta ja niiden peilikuvaa vasten matalan veden yllä.',
+          lahde: 'Bernard Spragg. NZ, Wikimedia Commons (CC0)',
+          wiki: 'Piopiotahi',
+        },
+        {
+          otsikko: 'Jumala joka veisti vuonot',
+          teksti:
+            'Ngāi Tahu -heimon perimätiedon mukaan jumalhahmo Tū-te-rakiwhanoa muovasi koko Fiordlandin rannikon iskien jyrkkiä kallioseiniä toki-kirveellään nimeltä Te Hamo. Aluksi hänen jälkensä olivat kömpelöitä: eteläisempiin vuonoihin jäi liikaa pieniä saaria, ja työn touhussa maa jopa halkesi hänen jalkojensa alla, minkä perimätieto yhdistää Resolution- ja Secretary-saarten syntyyn. Matkatessaan yhä pohjoisemmaksi Tū-te-rakiwhanoa hioi taitoaan, ja viimeisenä valmistuneesta vuonosta, Piopiotahista, tuli perimätiedon mukaan hänen kaikkien aikojen puhtain ja onnistunein teoksensa.',
+          tiedosto: 'Milford Sound Cliffs Towering Above.jpg',
+          lyhyt: 'Pieni matkustajalaiva näyttää vuonon pystysuorien kallioseinien todellisen mittakaavan.',
+          selite:
+            'Kuva näyttää kaksi lähes pystysuoraa kallioseinää, joiden välissä pieni kaksikerroksinen matkustajalaiva näyttää mitättömän pieneltä; oikeanpuoleiselta kalliolta valuu ohut vesiputous vuonoon.',
+          lahde: 'Ingolfson, Wikimedia Commons (Public domain)',
+          wiki: 'Fiordland',
+        },
+        {
+          otsikko: 'Milford Soundin erakko',
+          teksti:
+            'Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua "Milfordin kaupungiksi", vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.',
+          tiedosto: '2015-01-07-09337-Milford Sound Sutherland.jpg',
+          lyhyt: 'Donald Sutherlandin muistolaatta Milford Soundissa, jonne hän jäi asumaan neljäksi vuosikymmeneksi.',
+          selite:
+            'Kuva näyttää yksinkertaisen kivisen muistolaatan sananjalkojen ja pensaiden keskellä puun juurella - Donald Sutherlandin hautamuiston paikalla, jonne hän jäi vuonolle vuodesta 1877 kuolemaansa 1919 asti.',
+          lahde: 'Grey Geezer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Donald Sutherland (explorer)',
+        },
+        {
+          otsikko: 'Erakko löytää jättiläisputouksen',
+          teksti:
+            'Vuonna 1880 Donald Sutherland löysi matkatoverinsa kanssa Milford Soundin lähistöltä valtavan putouksen, joka syöksyy alas kolmena erillisenä pudotuksena. Innoissaan Sutherland väitti aluksi putouksen olevan yli tuhat metriä korkea - reilusti liioiteltu luku, jonka myöhemmät mittaukset korjasivat todelliseen 580 metriin. Silti se on yhä yksi Uuden-Seelannin korkeimmista putouksista. Putous nimettiin löytäjänsä mukaan Sutherland Fallsiksi, ja sille vettä syöttävä Quill-järvi sai nimensä ensimmäisen sinne kiivenneen tutkijan mukaan vuonna 1890. Myöhemmin hallitus tilasi Sutherlandilta myös reitin putoukselle.',
+          tiedosto: 'Sutherland Falls 2011.jpg',
+          lyhyt: 'Sutherland Falls putoaa kolmena eri pudotuksena Milford Soundin lähimetsässä.',
+          selite:
+            'Kuva näyttää kapean, kolmiosaisen Sutherland Fallsin, joka syöksyy valkoisena vesimassana alas jyrkkää, osin sammaleista kallioseinää tiheän aarniometsän keskellä.',
+          lahde: 'Javier Sánchez Portero, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sutherland Falls',
+        },
+        {
+          otsikko: 'Piispanhiippa vedestä nousee',
+          teksti:
+            'Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.',
+          tiedosto: 'Mitre Peak of Milford Sound, New Zealand; February 2015.jpg',
+          lyhyt: 'Mitre Peak kuvastuu Milford Soundin tyyneen veteen aamun valossa.',
+          selite:
+            'Kuva näyttää terävähuippuisen Mitre Peakin, joka kohoaa suoraan vuonosta ja peilautuu lähes täydellisesti veden tyyneen pintaan kirkkaan sinisen taivaan alla.',
+          lahde: 'Bernard Spragg. NZ, Wikimedia Commons (CC0)',
+          wiki: 'Mitre Peak (New Zealand)',
+        },
+        {
+          otsikko: 'Kahdeksas ihme',
+          teksti:
+            'Brittiläinen kirjailija Rudyard Kipling nimitti tunnetusti Milford Soundia maailman kahdeksanneksi ihmeeksi, ja lausahdus on seurannut paikkaa siitä lähtien matkaesitteissä ja postikorteissa. Kävijämäärä on kasvanut Sutherlandin ajan muutamasta majoittujasta nykyiseen satoihintuhansiin vuosittaisiin matkailijoihin, jotka saapuvat pääasiassa risteilyveneillä ja linja-autoilla Milford Roadia pitkin. Matkailusivusto TripAdvisor äänesti Milford Soundin maailman parhaaksi matkakohteeksi vuonna 2008. Silti vuono on yhä osa asumatonta Fiordlandin kansallispuistoa: pysyviä asukkaita siellä ei Sutherlandin majatalon ajoista lähtien ole juuri ollut.',
+          tiedosto: 'MilfordSound.jpg',
+          lyhyt: 'Risteilyvene kulkee Milford Soundissa lumihuippuisen Mitre Peakin alla.',
+          selite:
+            'Kuva näyttää lumihuippuisen Mitre Peakin ja sen vieressä kohoavat vuoret, joiden juurella pieni risteilyvene ja vuonon kanavamerkit näkyvät tyynen, siniseksi kimaltavan veden äärellä.',
+          lahde: 'Wikikiwiman, Wikimedia Commons (Public domain)',
+          wiki: 'Milford Sound',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sade ja vuonon eläimet',
+      johdanto:
+        'Piopiotahin jyrkät vuorenseinät pakottavat mereltä nousevan kosteuden sataamaan alas lähes joka päivä, ja sadevesi sekä tiheät sademetsät tarjoavat kodin harvinaisille pingviineille ja eteläisimmälle delfiinilaumalle.',
+      tehtava: {
+        kysymys: 'Kuinka monta millimetriä sadetta Milford Soundiin sataa keskimäärin vuodessa?',
+        vaihtoehdot: ['noin 1 200 mm', 'noin 3 000 mm', 'noin 6 400 mm', 'noin 9 000 mm'],
+        oikea: 2,
+        fakta:
+          'Milford Soundiin sataa keskimäärin noin 6 400 millimetriä vuodessa, mikä tekee siitä yhden maailman sateisimmista asutuista paikoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman sateisimpia paikkoja',
+          teksti:
+            'Piopiotahi tunnetaan Uuden-Seelannin sateisimpana asuttuna paikkana: siihen sataa keskimäärin noin 6 400 millimetriä vettä vuodessa, ja sadepäiviä kertyy lähes 185 vuosittain - eli vuono on märkä joka toinen päivä. Rankimmillaan yhden vuorokauden aikana voi sataa jopa 250 millimetriä, mikä muuttaa vuonoa ympäröivät kalliot hetkessä kymmeniksi tilapäisiksi putouksiksi. Kosteus syntyy, kun Tasmaninmereltä puhaltavat länsituulet törmäävät Etelän Alppeihin ja nousevat äkkiä lähes 1 700 metrin korkeuteen, jolloin niiden kantama vesihöyry tiivistyy sateeksi lähes ympäri vuoden.',
+          tiedosto: 'Milford Flood.jpg',
+          lyhyt: 'Rankkasade on synnyttänyt kymmeniä tilapäisiä putouksia Milford Soundin kallioseiniin.',
+          selite:
+            'Kuva näyttää matalalla leijuvien sadepilvien alla olevat jyrkät vuorenrinteet, joita pitkin valuu rankkasateen jäljiltä kymmeniä ohuita, tilapäisiä vesiputouksia vuonon tummaan, tuulen pieksemään veteen.',
+          lahde: 'FearTec, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Milford Sound',
+        },
+        {
+          otsikko: 'Putous joka ei koskaan kuivu',
+          teksti:
+            'Toisin kuin sateen synnyttämät tilapäiset vesijuovat, Bowen Falls on yksi vuonon vain kahdesta pysyvästä putouksesta: se syöksyy Bowen-joesta 162 metrin korkeudesta suoraan vuonon veteen ympäri vuoden. Putous on nimetty Diamantina Bowenin, Uuden-Seelannin silloisen kuvernöörin puolison, mukaan. Donald Sutherland rakensi ensimmäisen mökkinsä juuri tämän putouksen lähelle, koska paikasta avautui hänen mukaansa upea näkymä Mitre Peakille. Nykyisin sama joki tuottaa sähköä ja juomavettä pienelle Milford Soundin kylälle, jossa asuu vakituisesti vain reilut sata ihmistä.',
+          tiedosto: 'Bowen Falls in Fiordland National Park 01.jpg',
+          lyhyt: 'Bowen Falls syöksyy 162 metrin korkeudesta suoraan Milford Soundin veteen.',
+          selite:
+            'Kuva näyttää korkean, kapean Bowen Fallsin, joka putoaa vehreän, sademetsän peittämän kallion reunalta suoraan alapuolellaan olevaan turkoosinvihreään vuonoveteen.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bowen Falls',
+        },
+        {
+          otsikko: 'Eteläisin pullonokkadelfiinilauma',
+          teksti:
+            'Milford Soundissa elää pysyvästi pieni pullonokkadelfiiniryhmä, joka on maailman eteläisimpänä tunnettu villi pullonokkadelfiinilauma. Toisin kuin useimmat lajitoverinsa lämpimissä merissä, nämä delfiinit ovat sopeutuneet elämään Fiordlandin kylmässä vuonovedessä, jonka pintaa peittää sateiden tuoma makea vesikerros. Matkailuveneiden matkustajat näkevät niitä usein uimassa laivan vanaveden lähellä tai sukeltamassa juuri siinä kohtaa vuonoa, jossa vesiputousten sumu synnyttää sateenkaaria. Tutkijat seuraavat laumaa tarkasti, sillä sen pieni koko ja eristyneisyys tekevät siitä erityisen herkän häiriöille.',
+          tiedosto: 'Dolphins in Milford Sound, New Zealand.jpg',
+          lyhyt: 'Pullonokkadelfiini pulahtaa esiin veneen vanavedessä sateenkaaren alla.',
+          selite:
+            'Kuva näyttää delfiinin selän ja evän veden pinnalla aivan matkustajaveneen vieressä, taustalla sumuisilla kallioseinillä leijuva täydellinen sateenkaari.',
+          lahde: 'Delusion23, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Common bottlenose dolphin',
+        },
+        {
+          otsikko: 'Tawaki - sademetsän pingviini',
+          teksti:
+            'Milford Soundia ympäröivissä sademetsissä pesii tawaki eli Fiordlandin töyhtöpingviini, jonka tunnistaa sen silmien ylle kaartuvasta keltaisesta töyhdöstä. Toisin kuin useimmat pingviinilajit, tawaki ei pesi avoimilla hiekkarannoilla vaan piiloutuu puiden juurten ja kivien suojaan tiheän aarniometsän sisään, joskus jopa satojen metrien päähän rannasta. Laji kärsi rajusti eurooppalaisten tuomista vieraspedoista, kuten kissoista, rotista ja hilleristä, ja 1990-luvun laskennoissa pesiviä pareja arvioitiin olevan enää noin 2 500. Nykyisin laji on luokiteltu uhanalaiseksi, ja Fiordland on sille yksi viimeisistä turvapaikoista.',
+          tiedosto: 'Fiordland Crested Penguin.jpg',
+          lyhyt: 'Kaksi tawakia keltaisine töyhtöineen seisoo pesimäpaikallaan rannikkopensaikossa.',
+          selite:
+            'Kuva näyttää kaksi Fiordlandin töyhtöpingviiniä rannikon heinikossa ja pensaikossa - niiden mustavalkoinen höyhenpuku ja silmien ylle kaartuva keltainen töyhtö erottuvat selvästi.',
+          lahde: 'travelwayoflife, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Fiordland crested penguin',
+        },
+        {
+          otsikko: 'Maailman hienoin kävelyretki',
+          teksti:
+            'Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun "The Finest Walk in the World" eli "maailman hienoin kävelyretki", ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.',
+          tiedosto: 'Milford Track - panoramio.jpg',
+          lyhyt: 'Milford Track kulkee sammaleisen aarniometsän läpi kohti Milford Soundia.',
+          selite:
+            'Kuva näyttää kapean, kivisen polun, joka mutkittelee sammaleen peittämien puiden ja tiheän aluskasvillisuuden keskellä - tyypillisen näkymän Milford Trackilta.',
+          lahde: 'Ray Hayward, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Milford Track',
+        },
+      ],
+    },
+  ],
+  ouropreto: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ouro Preto',
+      johdanto:
+        'Ouro Preto kyyristyy Minas Geraisin vuorten rinteille, missä 1690-luvun kultaryntäys teki köyhästä louhosleiristä hetkessä Amerikan rikkaimman kaupungin. Isoisän matkavuonna 1873 se oli yhä provinssin pääkaupunki.',
+      nostot: [
+        {
+          otsikko: 'Vila Rica – kaupunki joka syntyi kullasta',
+          teksti:
+            'Vuosina 1695–1696 löytyi Rio das Velhasin ja Tripuín laaksojen puroista kultaa, ja paikalle nousi nopeasti kaivosleirien rykelmä, joka yhdistettiin vuonna 1711 yhdeksi kunnaksi nimeltä Vila Rica – "Rikas kaupunki". Sana levisi Portugaliin ja koko Brasiliaan, ja onnenonkijoita virtasi vuorille niin paljon, että siirtomaahallinto joutui perustamaan tulliportteja estämään kultaa livahtamasta verottamatta rannikolle. 1700-luvun lopulla Vila Ricasta lähetettiin emämaahan virallisesti yli 800 tonnia kultaa – luku, joka ei sisällä salakuljetusta.',
+          tiedosto: 'Old City View with Wall - Ouro Preto - Minas Gerais - Brazil.jpg',
+          lyhyt: 'Näkymä Ouro Preton vanhalle kaupunginosalle kivimuurin takaa.',
+          selite:
+            'Kuva näyttää Ouro Preton vanhaa kaupunginosaa kivimuurin takaa: valkoiset kirkot kellotorneineen kohoavat punakattoisten talojen keskeltä vihreiden vuorten juurella.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ouro Preto',
+        },
+        {
+          otsikko: 'Rikkaampi kuin monta muuta kaupunkia yhteensä',
+          teksti:
+            'Kulta teki Vila Ricasta 1700-luvun puolivälissä yhden maailman väkirikkaimmista kaupungeista: asukkaita oli parhaimmillaan arviolta jopa 80 000, kun samaan aikaan São Paulossa asui vain reilut 8 000 henkeä. Rikkaus näkyi kaduilla kohoavina barokkikirkkoina ja kullatuilla alttareilla, joita rakennettiin kilpaa eri ammattikuntien ja veljeskuntien varoin. Vuonna 1823, kun Brasilia oli juuri itsenäistynyt, kaupunki sai virallisesti nykyisen nimensä Ouro Preto eli "musta kulta" – nimitys tulee paikallisesta kullasta, jonka pinnan rautaoksidi tummensi lähes mustaksi.',
+          tiedosto: 'Conjunto arquitetônico e urbanístico de Ouro Preto.JPG',
+          lyhyt: 'Ilmakuva Ouro Preton kattojen ja barokkikirkkojen merestä vuorten keskellä.',
+          selite:
+            'Ilta-auringossa otettu kuva näyttää Ouro Preton vanhan keskustan kattojen ja kahden barokkikirkon kellotornien kohoavan vihreiden vuorten katveessa.',
+          lahde: 'Raquel Mendes Silva, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouro Preto',
+        },
+        {
+          otsikko: 'Aleijadinho piirsi kirkon jota kukaan ei ollut nähnyt',
+          teksti:
+            'Antônio Francisco Lisboa, tunnetumpi lisänimellä Aleijadinho ("pikku raajarikko"), oli portugalilaisen rakennusmestarin ja orjuutetun äidin poika, joka vapautettiin kasteessa syntyessään Vila Ricassa. Vuodesta 1777 alkaen etenevä sairaus vei häneltä vähitellen sormet ja liikkumiskyvyn, mutta hän jatkoi työtään avustajien kantamana ja työkalut käsiinsä sidottuina. Vuonna 1766 hän suunnitteli Pyhän Franciscuksen kirkon Vila Ricaan: sen pyöreät kellotornit ja katon pyöreä aukko olivat ennennäkemättömiä Brasilian kirkkoarkkitehtuurissa. Sisustuksen kultaukset ja veistokset valmistuivat vasta vuosikymmeniä hänen kuolemansa jälkeen 1800-luvun lopulla.',
+          tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto, MG) por Rodrigo Tetsuo Argenton.jpg',
+          lyhyt: 'Aleijadinhon suunnittelema Pyhän Franciscuksen kirkko Ouro Pretossa.',
+          selite:
+            'Kuva näyttää Pyhän Franciscuksen kirkon symmetrisen rokokoojulkisivun: kaksi pyöreää kellotornia, keskellä soikea koristereliefi ja vihreä puuovi.',
+          lahde: 'Rodrigo Tetsuo Argenton, Wikimedia Commons (Public domain)',
+          wiki: 'Aleijadinho',
+        },
+        {
+          otsikko: 'Kivikadut jotka rakennuskielto pelasti',
+          teksti:
+            'Presidentti Getúlio Vargas julisti Ouro Preton heinäkuussa 1933 kansallismuistomerkiksi – ensimmäisenä kaupunkina koko Brasiliassa. Päätös suojeli kaupungin jyrkkiä mukulakivikatuja ja siirtomaa-ajan taloja purkamiselta ja "modernisoinnilta" juuri kun monet muut Brasilian kaupungit revittiin uusiksi. Vuonna 1980 Unesco lisäsi Ouro Preton maailmanperintöluetteloon ensimmäisenä brasilialaisena kohteena. Nykyään kaduilla kulkiessa näkyy sama kaupunkikuva, jonka isoisäkin näki 1873: talot nojaavat toisiinsa jyrkillä rinteillä, ja jokainen mutka paljastaa uuden kirkontornin.',
+          tiedosto: 'Vertiginous Streets in Ouro Preto - Minas Gerais - Brazil.jpg',
+          lyhyt: 'Jyrkkä mukulakivikatu laskee Ouro Preton siirtomaa-ajan talojen välistä.',
+          selite:
+            'Kuva näyttää jyrkän mukulakivikadun, joka laskee siirtomaa-ajan talojen välistä kohti laaksoa ja vuoria taustalla.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ouro Preto',
+        },
+        {
+          otsikko: 'Casa dos Contos – kullan kirjanpitäjä',
+          teksti:
+            'Rikas veronvuokraaja João Rodrigues de Macedo rakennutti komean kaupunkitalonsa vuosina 1782–1784; vuonna 1803 se arvioitiin captaincyn kalleimmaksi taloksi. Vuodesta 1792 rakennus toimi Minas Geraisin siirtomaahallinnon tili- ja verotoimistona, josta juontuu sen nimi Casa dos Contos, "tilien talo". Talo muistuttaa siitä, että Vila Rica – vuodesta 1823 Ouro Preto – oli Minas Geraisin pääkaupunki jo vuodesta 1720 aina vuoteen 1897 saakka: isoisän matkavuonna 1873 se oli yhä keisari Pedro II:n valtakunnan provinssihallinnon keskus, jonne kullan verot virtasivat vuoristokylistä.',
+          tiedosto: 'Fachada do Museu Casa dos Contos em Ouro Preto - MG.jpg',
+          lyhyt: 'Casa dos Contosin kivibalkoni ja sen yllä liehuva Brasilian lippu.',
+          selite:
+            'Kuva on otettu alhaalta ylöspäin Casa dos Contosin koristeellista kivibalkonia kohti; sen yllä liehuu Brasilian lippu kirkasta taivasta vasten.',
+          lahde: 'Pedro Henrique Hudson, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouro Preto',
+        },
+        {
+          otsikko: 'Itacolomi – vuori joka näytti tien',
+          teksti:
+            'Ouro Pretoa reunustavista vuorista erottuu Itacolomin 1 772 metrin korkuinen kalliohuippu, jonka tunnisti jo vuonna 1698 kultaa etsinyt bandeirante Antônio Dias de Oliveira: huippu näkyi kauas ja johdatti hänet Tripuín laaksoon, josta Vila Rica sai alkunsa. Matkustajat kutsuivat sitä myöhemmin "bandeirantejen majakaksi", koska sen erottamattoman muodon tunnisti joka suunnasta kuninkaantielle. Taidemaalari Aurélio de Figueiredo maalasi vuonna 1894 näkymän vuorelle – vain parikymmentä vuotta isoisän matkan jälkeen, kun maisema oli yhä lähes koskematon.',
+          tiedosto: 'Aurélio de Figueiredo - Pico do Itacolomi, Ouro Preto.jpg',
+          lyhyt: 'Aurélio de Figueiredon vuonna 1894 maalaama näkymä Itacolomin vuorelle.',
+          selite:
+            'Öljymaalaus näyttää Itacolomin tunnistettavan kalliohuipun vuorijonon takana sekä pienen kylän valkoisine taloineen laakson pohjalla.',
+          lahde: 'Aurélio de Figueiredo, Wikimedia Commons (Public domain)',
+          wiki: 'Ouro Preto',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Salaliitto vuoristokaupungissa',
+      johdanto:
+        'Vuonna 1789 joukko runoilijoita, upseereita ja virkamiehiä suunnitteli Vila Ricassa kapinaa Portugalin kultaveroja vastaan – ja epäonnistui surkeasti. Yksi ainoa heistä maksoi suunnitelmasta hengellään.',
+      tehtava: {
+        kysymys: 'Kuinka moni Inconfidência Mineiran osallistujista lopulta teloitettiin kuolemaan?',
+        vaihtoehdot: [
+          'Ei yksikään, kaikki armahdettiin',
+          'Vain Tiradentes',
+          'Kaikki 34 syytettyä',
+          'Kymmenen sotilasjohtajaa',
+        ],
+        oikea: 1,
+        fakta:
+          'Tiradentes oli ainoa, joka teloitettiin hirttämällä ja paloiteltiin varoitukseksi muille; muiden tuomiot lievennettiin karkotukseksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kultaveron uhka joka suututti eliitin',
+          teksti:
+            'Portugalin kruunu vaati viidenneksen, "quinton", kaikesta löydetystä kullasta, ja kun kaivokset alkoivat 1780-luvulla ehtyä, siirtomaahallinto uhkasi periä puuttuvan osuuden pakkoverolla nimeltä derrama. Uhka raivostutti Minas Geraisin varakasta eliittiä, joka oli jo kyllästynyt Portugalin kireään talouspolitiikkaan ja verotukseen. Vuosina 1788–1789 joukko lakimiehiä, upseereita ja runoilijoita alkoi salaa suunnitella provinssin itsenäistämistä Portugalista Yhdysvaltain vapaussodan innoittamana; Vila Rica, kaupungeista rikkain ja koulutetuin, oli suunnitelman luonnollinen keskus.',
+          tiedosto: 'Praça Tiradentes - Ouro Preto - MG.jpg',
+          lyhyt: 'Praça Tiradentes hämärässä, taustalla Museu da Inconfidência.',
+          selite:
+            'Iltahämärässä otettu kuva Praça Tiradentesista: patsasjalusta aukion keskellä ja taustalla entinen kaupungintalo ja vankila kellotorneineen, nykyinen Museu da Inconfidência.',
+          lahde: 'João André Simiquelli de Souza, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Inconfidência Mineira',
+        },
+        {
+          otsikko: 'Runoilijat, upseeri ja hampaanvetäjä',
+          teksti:
+            'Salaliittolaisten joukossa oli everstiluutnantti Francisco de Paula Freire de Andrade, runoilijat Cláudio Manuel da Costa ja Tomás Antônio Gonzaga, lakimies Alvarenga Peixoto sekä kemian opiskelija José Álvares Maciel – lähes kaikki koulutettua yläluokkaa. Ainoa poikkeus oli Joaquim José da Silva Xavier, everstin apulaisupseeri eli alferes, joka veti sivutyönään hampaita ja sai siksi liikanimen Tiradentes, "hampaanvetäjä". Kun salaliitto paljastui, runoilija Cláudio Manuel da Costa löytyi kuolleena selliltään Vila Rican vankilasta jo vuonna 1789, ennen tuomiota – kuolinsyy jäi kiistanalaiseksi vielä vuosisadaksi.',
+          tiedosto: 'Casa de Camara e Cadeia de Ouro Preto black and white.jpg',
+          lyhyt: 'Entinen kaupungintalo ja vankila, jossa salaliittolaisia pidettiin vangittuina.',
+          selite:
+            'Mustavalkoinen kuva näyttää entisen kaupungintalon ja vankilan komean julkisivun kellotorneineen ja kahden oikeutta symboloivan patsaan kanssa parvekekaiteilla.',
+          lahde: 'Raphael Gustavo Marques da Costa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Inconfidência Mineira',
+        },
+        {
+          otsikko: 'Ilmiantaja ja pysäytetty pakkovero',
+          teksti:
+            '15. maaliskuuta 1789 yksi salaliittolaisista, verovelkainen Joaquim Silvério dos Reis, ilmiantoi koko suunnitelman kuvernöörille, varakreivi de Barbacenalle, toivoen itselleen armahdusta veloistaan. Kuvernööri peruutti pelätyn derrama-veron välittömästi – syy, jonka vuoksi salaliitto oli alun perin syntynyt, katosi siis yhdessä yössä – ja käynnisti tutkinnan, joka johti syytteisiin 34 henkilöä vastaan. Oikeudenkäynnit venyivät kolme vuotta, ja niitä käytiin muun muassa kuvernöörin hallintorakennuksessa, nykyisessä Escola de Minasin talossa Ouro Preton keskustassa.',
+          tiedosto: 'Escola de Minas ou Palácio dos Governadores.JPG',
+          lyhyt: 'Entinen kuvernöörinpalatsi, nykyinen Escola de Minas, Ouro Pretossa.',
+          selite:
+            'Kuva näyttää entisen kuvernöörinpalatsin, nykyisen kaivosopiston, valkoisen julkisivun mukulakivikadun varrella; rakennuksen edessä kulkee nykypäivän liikennettä.',
+          lahde: 'Criscolo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Inconfidência Mineira',
+        },
+        {
+          otsikko: 'Tiradentes – ainoa teloitettu',
+          teksti:
+            'Kun tuomiot julistettiin huhtikuussa 1792, kuningatar Maria I lievensi lähes kaikkien tuomitun rangaistuksen elinikäiseksi karkotukseksi Afrikkaan. Vain Joaquim José da Silva Xavier, Tiradentes, joka oli ottanut oikeudessa täyden vastuun hankkeesta, hirtettiin 21. huhtikuuta 1792 Rio de Janeirossa; hänen ruumiinsa paloiteltiin ja osat vietiin näytille Vila Rican tielle ja muihin kaupunkeihin varoitukseksi muille kapinallisille. Tiradentesista ei ole säilynyt yhtään aikalaiskuvaa, joten kaikki hänen muotokuvansa – kuten tämäkin, maalattu vasta yli sata vuotta hänen kuolemansa jälkeen – ovat myöhempien taiteilijoiden mielikuvituksen tuotetta.',
+          tiedosto:
+            'Oscar Pereira da Silva - Retrato de Joaquim José da Silva Xavier - Tiradentes, Acervo do Museu Paulista da USP.jpg',
+          lyhyt: 'Oscar Pereira da Silvan vuonna 1922 maalaama kuvitteellinen muotokuva Tiradentesista.',
+          selite:
+            'Maalaus kuvittelee Tiradentesin ulkonäön: parrakas mies tummassa asussa, katse suoraan katsojaan – kuva on maalattu vuonna 1922, yli sata vuotta hänen kuolemansa jälkeen.',
+          lahde: 'Oscar Pereira da Silva, Wikimedia Commons (Public domain)',
+          wiki: 'Tiradentes',
+        },
+        {
+          otsikko: 'Aukio joka sai marttyyrin nimen',
+          teksti:
+            'Kun Tiradentesin pää tuotiin Vila Ricaan näytille varoitukseksi, se asetettiin juuri sille aukiolle, joka tunnetaan nykyään nimellä Praça Tiradentes. Brasilian tultua tasavallaksi 1889 Tiradentesista tehtiin kansallissankari ja itsenäisyyden marttyyri: hänen muistomerkkinsä paljastettiin aukiolla 21. huhtikuuta 1894, täsmälleen 102 vuotta teloituksen jälkeen. Samasta päivästä tuli Brasiliassa pysyvä kansallinen vapaapäivä, jota vietetään yhä joka vuosi Tiradentesin muistoksi.',
+          tiedosto: 'Estatua tiradentes.JPG',
+          lyhyt: 'Tiradentesia esittävä rintakuva, kaulassa hirttoköyttä muistuttava naru.',
+          selite:
+            'Pronssinen rintakuva esittää Tiradentesia parrakkaana miehenä, jonka kaulan ympärillä roikkuu köysi hänen hirttämisensä muistoksi.',
+          lahde: 'Andrevruas, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Tiradentes',
+        },
+      ],
+    },
+  ],
 };
