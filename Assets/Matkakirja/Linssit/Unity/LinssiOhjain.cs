@@ -900,7 +900,7 @@ namespace Matkakirja.Natiivi
             Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
         }
 
-        void Kirjaa(string teksti)
+        internal void Kirjaa(string teksti)
         {
             Debug.Log("MATKAKIRJA linssit: " + teksti);
             try { File.AppendAllText(lokiPolku, $"{Aika:F2} {teksti}\n"); } catch (IOException) { }

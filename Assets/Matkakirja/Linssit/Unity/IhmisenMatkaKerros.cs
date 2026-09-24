@@ -95,10 +95,15 @@ namespace Matkakirja.Natiivi
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
         }
 
-        public void Musta(bool paalla, double feidiMs) => MustaKasittelija?.Invoke(paalla, feidiMs);
+        public void Musta(bool paalla, double feidiMs)
+        {
+            LinssiOhjain.Instanssi?.Kirjaa($"esitys: musta {paalla} ({feidiMs:F0} ms)");
+            MustaKasittelija?.Invoke(paalla, feidiMs);
+        }
 
         public void Valot(double feidiMs)
         {
+            LinssiOhjain.Instanssi?.Kirjaa($"esitys: valot ({feidiMs:F0} ms)");
             valoissa = true;
             valotAlkoi = Time.unscaledTime;
             ValotKasittelija?.Invoke(feidiMs);
