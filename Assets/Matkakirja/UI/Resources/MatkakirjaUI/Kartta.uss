@@ -1760,3 +1760,64 @@
     margin: 0;
     color: rgb(88, 70, 51);
 }
+
+/* Nostokortin kaksipalstataitto ≥ 1100 pt (web css/fokusnosto.css osio 13, mitattu 24.9. b12 1194 × 834 ja
+   1366 × 1024): kuvapalsta (kuva ja kuvateksti) vasemmalla, tekstipalsta oikealla, väli 1,5 rem, palstat alkavat
+   samalta yläreunalta (align-items flex-start). Kuvapalstan leveys tulee koodista (Nostokortti.MitoitaKuvapalsta). */
+.mk-nosto__rivi {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-nosto__kuvapalsta {
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.mk-nosto__kuvapalsta > .mk-nosto__kuvasarja {
+    margin-top: 0;
+}
+
+.mk-nosto__tekstipalsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+/* Lyhyt kuvateksti kotelona (Nostokortti.Kuvateksti): rivi rivittyy ja keskittyy kuten webin text-align center. */
+.mk-nosto__kuvateksti--kotelo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-nosto__kuvarivi {
+    flex-shrink: 1;
+    white-space: normal;
+    -unity-text-align: upper-center;
+}
+
+/* Sanaväli Iowan 13,44 px (mitattu Chromiumissa 3,73 px). */
+.mk-nosto__kuvasana--vali {
+    margin-right: 3.73px;
+}
+
+/* Web .kuvateksti-havainne (mitattu 24.9. b12, fokusnosto.css ladattuna): American Typewriter 0,68 em = 9,14 px,
+   versaali, harvennus 0,08 em = 0,73 px, täyte 0 / 3,2 px, reunus 1 px, pyöristys 3, vasemmalla 0,45 em = 4,11 px,
+   korkeus 14,3. Värit sRGB-yhdistelminä kortin #f5f0e2:n päällä (lineaarinen väriavaruus vaalentaisi alfan):
+   teksti rgba(70, 51, 31, 0.72) → rgb(119, 104, 86), reunus rgba(70, 51, 31, 0.28) → rgb(196, 187, 171). */
+.mk-nosto__havainne {
+    margin: 0 0 0 4.11px;
+    padding: 0 3.2px;
+    height: 14.3px;
+    font-size: 9.14px;
+    letter-spacing: 0.73px;
+    color: rgb(119, 104, 86);
+    border-width: 1px;
+    border-color: rgb(196, 187, 171);
+    border-radius: 3px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}

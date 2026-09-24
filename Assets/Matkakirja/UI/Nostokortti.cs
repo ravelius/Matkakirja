@@ -60,6 +60,9 @@ namespace Matkakirja.Natiivi
 
         Nosto nosto;
         int kuvaIndeksi, versio;
+        // Kaksipalstataitto ≥ 1100 pt (web nostoPalstoiksi): rivi = kuvapalsta (kuvasarja) + tekstipalsta (loput).
+        VisualElement rivi, kuvapalsta, tekstipalsta;
+        float korttiPohja, kuvaKorkeusKatto, kuvaSuhde = 2f / 3f;
         /// <summary>Kortin napit nimellä testikomentoja varten (ui nosto … &lt;nappi&gt;, ui ihme, ui leikekirja).</summary>
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
@@ -210,6 +213,7 @@ namespace Matkakirja.Natiivi
         {
             nosto = n;
             kuvaIndeksi = 0;
+            kuvaSuhde = 2f / 3f;
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
             lisakaupunkiPaikka = false;
@@ -276,24 +280,33 @@ namespace Matkakirja.Natiivi
         const float KuvaMarginaali = 12f, KuvaVaakavara = 44f, KuvaPystyvara = 150f, KuvaKapeaKatto = 760f, KuvaVaraArvio = 48f,
             KuvaLeveaRaja = 1100f;
 
+        // Web NOSTOKUVA_LEVEA_KATTO 1100, KUVAPALSTA_OSUUS 0,5 ja PYSTY_OSUUS 0,32; css/fokusnosto.css osio 13:
+        // palstaväli 1,5 rem (24 px), kuvapalsta enintään 50 % (pystykuvalla 34 %) rivistä.
+        const float KuvaLeveaKatto = 1100f, KuvapalstaOsuus = 0.5f, KuvapalstaPystyOsuus = 0.32f, KutistusMs = 260f;
+
         /// <summary>
-        /// Web nostokuvanVakioleveys: vaakakuvan (3:2) leveys ruudulla, katettuna KAPEA_KATTO − VARA_ARVIO (712).
+        /// Web nostokuvanVakioleveys: vaakakuvan (3:2) leveys ruudulla. Alle 1100 pt:n katettuna KAPEA_KATTO −
+        /// VARA_ARVIO (712); leveällä (kapea = false) ilman kattoa (web enintaanLeveys Infinity).
         /// </summary>
-        static float KuvaVakioleveys(float rl, float rk)
+        static float KuvaVakioleveys(float rl, float rk, bool kapea = true)
         {
             const float suhde = 1.5f;
             bool pysty = rk >= rl; // vaakakuva pystyruudulla = vastakkainen
             float leveys = (pysty ? rl * 0.99f : rl * 0.82f) - KuvaVaakavara;
-            leveys = Mathf.Min(leveys, KuvaKapeaKatto - KuvaVaraArvio);
-            float korkeus = Mathf.Max(rk * 0.94f - KuvaPystyvara, rk * 0.28f);
+            if (kapea) leveys = Mathf.Min(leveys, KuvaKapeaKatto - KuvaVaraArvio);
+            float korkeus = KuvaKorkeusKatto(rk);
             if (leveys / suhde > korkeus) leveys = korkeus * suhde;
             return Mathf.Round(leveys);
         }
 
+        /// <summary>Web suurennoksenMitat: kuvan korkeuskatto max(0,94 × ruutu − 150, 0,28 × ruutu).</summary>
+        static float KuvaKorkeusKatto(float rk) => Mathf.Max(rk * 0.94f - KuvaPystyvara, rk * 0.28f);
+
         /// <summary>
-        /// Web jaadytaLeveys: kuva edellä -kortin leveys on sama molemmissa vaiheissa (kuva ei liiku), vakioleveys +
-        /// kortin reunus ja täyte, enintään ruutu − 2 × 12 ja KAPEA_KATTO 760. ≥ 1100 pt:n kaksipalstataitto
-        /// (kuva vasemmalla, teksti oikealla) puuttuu vielä: silloin USS:n leveys.
+        /// Web jaadytaLeveys: kuva edellä -kortin leveys, vakioleveys + kortin reunus ja täyte, enintään ruutu − 2 × 12.
+        /// Alle 1100 pt:n leveys on sama molemmissa vaiheissa (kuva ei liiku) ja enintään KAPEA_KATTO 760.
+        /// ≥ 1100 pt (web NOSTOKUVA_LEVEA_RAJA, iPad vaakana): vaiheessa 1 iso kuva ilman kattoa; vaiheessa 2 pohja
+        /// min(vakioleveys, 1100 − 48), kortti enintään 1100, kuva vasemmalle palstaansa ja teksti oikealle.
         /// </summary>
         void MitoitaKuvaEdella()
         {
@@ -301,15 +314,130 @@ namespace Matkakirja.Natiivi
             var pohja = kerros.panel?.visualTree.layout ?? default;
             var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
             float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
-            if (!kuvaEdella || rl <= 0 || rk <= 0 || rl >= KuvaLeveaRaja)
+            if (!kuvaEdella || rl <= 0 || rk <= 0)
             {
+                Pinoksi();
                 if (!ankkuroitu) { kortti.style.width = StyleKeyword.Null; kortti.style.maxWidth = StyleKeyword.Null; }
                 return;
             }
             // Reunus 1 + täyte 15,2 kummallakin puolella (web .fokuskohde-popup, mitattu 24.9. b11).
             const float vara = 2f * (1f + 15.2f);
-            float leveys = Mathf.Round(Mathf.Min(KuvaVakioleveys(rl, rk) + vara, Mathf.Min(rl - 2f * KuvaMarginaali, KuvaKapeaKatto)));
+            float enintaan = rl - 2f * KuvaMarginaali, leveys;
+            if (rl < KuvaLeveaRaja)
+            {
+                Pinoksi();
+                leveys = Mathf.Min(KuvaVakioleveys(rl, rk) + vara, Mathf.Min(enintaan, KuvaKapeaKatto));
+            }
+            else if (kortti.ClassListContains("mk-nosto--esittely"))
+                leveys = Mathf.Min(KuvaVakioleveys(rl, rk, kapea: false) + vara, enintaan);
+            else
+            {
+                korttiPohja = Mathf.Min(KuvaVakioleveys(rl, rk, kapea: false), KuvaLeveaKatto - KuvaVaraArvio);
+                kuvaKorkeusKatto = KuvaKorkeusKatto(rk);
+                leveys = Mathf.Min(korttiPohja + vara, Mathf.Min(enintaan, KuvaLeveaKatto));
+                Palstoiksi();
+                MitoitaKuvapalsta();
+            }
+            leveys = Mathf.Round(leveys);
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+        }
+
+        /// <summary>
+        /// Web nostoPalstoiksi: kuvasarja (kuva, laskuri ja kuvateksti) vasempaan palstaan, kaikki sen jälkeen
+        /// oikeaan; sitä edeltävät (luokka, otsikko, ingressi, äänet) jäävät koko leveydelle.
+        /// </summary>
+        void Palstoiksi()
+        {
+            if (rivi != null) return;
+            var c = sisus.contentContainer;
+            var lohko = c.Children().FirstOrDefault(x => x.ClassListContains("mk-nosto__kuvasarja"));
+            if (lohko == null) return;
+            int i = c.IndexOf(lohko);
+            var jalkeen = c.Children().Skip(i + 1).ToList();
+            rivi = Rakenne.El("mk-nosto__rivi", null, PickingMode.Ignore);
+            kuvapalsta = Rakenne.El("mk-nosto__kuvapalsta", rivi, PickingMode.Ignore);
+            tekstipalsta = Rakenne.El("mk-nosto__tekstipalsta", rivi, PickingMode.Ignore);
+            c.Insert(i, rivi);
+            kuvapalsta.Add(lohko);
+            foreach (var x in jalkeen) tekstipalsta.Add(x);
+            AsetaKehyksenSuhde(kuvaSuhde);
+        }
+
+        /// <summary>Palstat takaisin pinoksi (kierto alle 1100 pt:n): kuva ylös 3:2-kehykseen, teksti alle.</summary>
+        void Pinoksi()
+        {
+            if (rivi == null) return;
+            var c = sisus.contentContainer;
+            int i = c.IndexOf(rivi);
+            var lapset = kuvapalsta.Children().Concat(tekstipalsta.Children()).ToList();
+            rivi.RemoveFromHierarchy();
+            foreach (var x in lapset) c.Insert(i++, x);
+            rivi = kuvapalsta = tekstipalsta = null;
+            AsetaKehyksenSuhde(null);
+        }
+
+        /// <summary>
+        /// Web: kuva kapenee palstaansa, pohja × 0,5 (pystykuva × 0,32), ja saa oman muotonsa korkeuden enintään
+        /// kuvan korkeuskattoon (nostokuvanSovitus).
+        /// </summary>
+        void MitoitaKuvapalsta()
+        {
+            if (kuvapalsta == null) return;
+            float w = korttiPohja * (kuvaSuhde > 1f ? KuvapalstaPystyOsuus : KuvapalstaOsuus);
+            if (kuvaKorkeusKatto > 0f && w * kuvaSuhde > kuvaKorkeusKatto) w = kuvaKorkeusKatto / kuvaSuhde;
+            w = Mathf.Round(w);
+            if (kuvapalsta.style.width.value.value != w) kuvapalsta.style.width = w;
+        }
+
+        /// <summary>Kuvasarjan kehyksen korkeus/leveys-suhde: palstassa kuvan oma muoto, pinossa (null) 3:2.</summary>
+        void AsetaKehyksenSuhde(float? suhde)
+        {
+            var kehys = sisus.contentContainer.Q(className: "mk-nosto__kuvapaikka")?.Q(className: "mk-nosto__kuvakehys");
+            if (kehys == null) return;
+            kehys.userData = suhde;
+            float w = kehys.layout.width;
+            if (w > 0 && !float.IsNaN(w)) kehys.style.height = Mathf.Round(w * (suhde ?? 2f / 3f));
+        }
+
+        /// <summary>Kuvasarjan kuva latautui: muoto talteen, palstassa kehys ja palstan leveys sen mukaan.</summary>
+        void SarjanKuvaLadattu(Texture2D t)
+        {
+            if (t == null || t.width <= 0 || t.height <= 0) return;
+            kuvaSuhde = t.height / (float)t.width;
+            if (rivi == null) return;
+            AsetaKehyksenSuhde(kuvaSuhde);
+            MitoitaKuvapalsta();
+        }
+
+        /// <summary>
+        /// Web kutistaNakyvasti (FLIP, NOSTOKUVA_KUTISTUS_MS 260): kuva piirretään ensin vaiheen 1 paikkaansa ja
+        /// liukuu ja pienenee palstaansa. Teksti on heti paikallaan.
+        /// </summary>
+        void Kutista(Rect ennen)
+        {
+            var kehys = kuvapalsta?.Q(className: "mk-nosto__kuvakehys");
+            if (kehys == null) return;
+            int v = versio;
+            void Alusta(GeometryChangedEvent g)
+            {
+                var nyt = kehys.worldBound;
+                if (nyt.width <= 0 || float.IsNaN(nyt.width)) return;
+                kehys.UnregisterCallback<GeometryChangedEvent>(Alusta);
+                if (v != versio) return;
+                float s = ennen.width / nyt.width;
+                var d = ennen.position - nyt.position;
+                kehys.style.transformOrigin = new TransformOrigin(0, 0);
+                void Aseta(float k)
+                {
+                    float e = 1f - (1f - k) * (1f - k) * (1f - k); // ease-out
+                    kehys.style.scale = new Scale(Vector2.one * Mathf.Lerp(s, 1f, e));
+                    kehys.style.translate = new Translate(Mathf.Lerp(d.x, 0f, e), Mathf.Lerp(d.y, 0f, e));
+                }
+                Aseta(0f);
+                kehys.experimental.animation.Start(0f, 1f, (int)KutistusMs, (_, k) => Aseta(k))
+                    .OnCompleted(() => { kehys.style.scale = StyleKeyword.Null; kehys.style.translate = StyleKeyword.Null; });
+            }
+            kehys.RegisterCallback<GeometryChangedEvent>(Alusta);
         }
 
         /// <summary>Kohdekortti min(24rem, 86vw) (web .fokuskohde-popup), lisäkaupunki min(34rem, 92vw) (.kaupunkipopup).</summary>
@@ -455,6 +583,7 @@ namespace Matkakirja.Natiivi
         void Vaihe1()
         {
             sisus.Clear();
+            rivi = kuvapalsta = tekstipalsta = null;
             napit.Clear();
             napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
@@ -462,20 +591,24 @@ namespace Matkakirja.Natiivi
             lukija.Aseta(null);
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
-            var kuva = Kuvakehys(sisus, k, Vaihe2);
+            var kuva = Kuvakehys(sisus, k, Vaihe2, SarjanKuvaLadattu);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
-            var lyhyt = Rakenne.Teksti(k.Lyhyt ?? nosto.Otsikko ?? "", "mk-nosto__kuvateksti", alarivi);
-            Kirjasimet.Aseta(lyhyt, Kirjasin.Luku);
+            Kuvateksti(alarivi, k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
+            MitoitaKuvaEdella();
         }
 
         // --- vaihe 2: koko kortti ----------------------------------------------------------
 
         void Vaihe2()
         {
+            // Vaiheen 1 kuvan paikka ruudulla: leveällä kuva kutistuu siitä palstaansa (web kutistaNakyvasti).
+            Rect? ennen = kortti.ClassListContains("mk-nosto--esittely")
+                ? sisus.contentContainer.Q(className: "mk-nosto__kuvakehys")?.worldBound : null;
             sisus.Clear();
+            rivi = kuvapalsta = tekstipalsta = null;
             napit.Clear();
             sisus.scrollOffset = Vector2.zero;
             sulje.style.display = DisplayStyle.Flex;
@@ -561,6 +694,8 @@ namespace Matkakirja.Natiivi
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
                 Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
+            MitoitaKuvaEdella();
+            if (rivi != null && ennen.HasValue && ennen.Value.width > 0) Kutista(ennen.Value);
         }
 
         // --- lajien lohkot ------------------------------------------------------------------
@@ -753,13 +888,16 @@ namespace Matkakirja.Natiivi
 
         // --- kuvat ------------------------------------------------------------------------
 
-        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus)
+        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null)
         {
             var kehys = Rakenne.El("mk-nosto__kuvakehys", isa);
             var kuva = Rakenne.El("mk-nosto__kuva", kehys, PickingMode.Ignore);
             kehys.RegisterCallback<ClickEvent>(_ => napautus?.Invoke());
-            // 3:2-kehys leveyden mukaan (web oletussuhde).
-            kehys.RegisterCallback<GeometryChangedEvent>(e => { if (e.newRect.width > 0) kehys.style.height = Mathf.Round(e.newRect.width * 2f / 3f); });
+            // 3:2-kehys leveyden mukaan (web oletussuhde); kaksipalstataiton kuvapalstassa kuvan oma muoto (userData).
+            kehys.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (e.newRect.width > 0) kehys.style.height = Mathf.Round(e.newRect.width * (kehys.userData is float s ? s : 2f / 3f));
+            });
             var nauha = k.Nauha != null ? Ihmenauha(kuva, k.Nauha) : null;
             if (nauha != null) nauha.style.display = DisplayStyle.None; // näkyviin, kun kuvan kulma tiedetään
             Texture2D ladattu = null;
@@ -770,6 +908,7 @@ namespace Matkakirja.Natiivi
                 if (t == null || v != versio) return;
                 ladattu = t;
                 kuva.style.backgroundImage = new StyleBackground(t);
+                ladattuna?.Invoke(t);
                 if (nauha == null) return;
                 nauha.style.display = DisplayStyle.Flex;
                 SovitaNauha(kuva, nauha, t);
@@ -782,8 +921,7 @@ namespace Matkakirja.Natiivi
             var kuvat = nosto.Kuvat;
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
-            var teksti = Rakenne.Teksti("", "mk-nosto__kuvateksti", lohko);
-            Kirjasimet.Aseta(teksti, Kirjasin.Luku); // web .nostokuva-selite: Iowan pysty, keskitetty
+            var teksti = Kuvateksti(lohko, "", null); // web .nostokuva-selite: Iowan pysty, keskitetty
             Label laskuri = null;
             void Nayta(int i)
             {
@@ -791,9 +929,9 @@ namespace Matkakirja.Natiivi
                 kehysPaikka.Clear();
                 var k = kuvat[kuvaIndeksi];
                 int kohta = kuvaIndeksi;
-                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta));
-                teksti.text = k.Lyhyt ?? "";
-                teksti.style.display = string.IsNullOrEmpty(k.Lyhyt) ? DisplayStyle.None : DisplayStyle.Flex;
+                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), SarjanKuvaLadattu);
+                if (rivi != null) { kehys.userData = kuvaSuhde; MitoitaKuvapalsta(); }
+                AsetaKuvateksti(teksti, k.Lyhyt, k);
                 if (kuvat.Count > 1)
                 {
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
@@ -803,6 +941,52 @@ namespace Matkakirja.Natiivi
             // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
             new KuvaSelaus(kehysPaikka, () => kuvat.Count, s => Nayta(kuvaIndeksi + s), () => kehysPaikka.childCount > 0 ? kehysPaikka[0] : kehysPaikka);
             Nayta(kuvaIndeksi);
+        }
+
+        // --- "Havainnekuva"-merkintä (web js/havainnekuva.js lisaaHavainnekuvaMerkki, css/fokusnosto.css
+        // .kuvateksti-havainne; Fable 24.9. klo 20.3x: tarkoitettu merkki kaikissa korteissa) ----------------
+
+        static readonly System.Text.RegularExpressions.Regex HavainneLahde =
+            new System.Text.RegularExpressions.Regex(@"^\s*Tekoälyllä tuotettu havainnekuva\."),
+            HavainneRivi = new System.Text.RegularExpressions.Regex("Matkakirjan (?:havainnekuva|kuvitus)");
+
+        /// <summary>Web onHavainnekuva: lähderivi alkaa "Tekoälyllä tuotettu havainnekuva." tai mainitsee Matkakirjan havainnekuvan.</summary>
+        static bool OnHavainnekuva(NostoKuva k)
+        {
+            string l = k?.LahdeRivi ?? "";
+            return HavainneLahde.IsMatch(l) || HavainneRivi.IsMatch(l);
+        }
+
+        /// <summary>Lyhyt kuvateksti (web .nostokuva-selite) kotelona, johon havainnekuvan merkki mahtuu rivin jatkoksi.</summary>
+        static VisualElement Kuvateksti(VisualElement isa, string teksti, NostoKuva k)
+        {
+            var kotelo = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", isa, PickingMode.Ignore);
+            Kirjasimet.Aseta(kotelo, Kirjasin.Luku);
+            AsetaKuvateksti(kotelo, teksti, k);
+            return kotelo;
+        }
+
+        /// <summary>
+        /// Web lisaaHavainnekuvaMerkki: &lt;small&gt; inline-block kuvatekstin perässä. UITK ei kellota laatikkoa
+        /// tekstirivin sisään, joten havainnekuvan teksti ladotaan sanoittain rivittyvään keskitettyyn riviin
+        /// (sanaväli Iowan 13,44 px = 3,73 px, mitattu), ja merkki on sen viimeinen alkio. Muu kuvateksti yhtenä tekstinä.
+        /// </summary>
+        static void AsetaKuvateksti(VisualElement kotelo, string teksti, NostoKuva k)
+        {
+            kotelo.Clear();
+            bool merkki = OnHavainnekuva(k);
+            kotelo.style.display = string.IsNullOrEmpty(teksti) && !merkki ? DisplayStyle.None : DisplayStyle.Flex;
+            if (!merkki)
+            {
+                if (!string.IsNullOrEmpty(teksti)) Rakenne.Teksti(teksti, "mk-nosto__kuvarivi", kotelo);
+                return;
+            }
+            var sanat = (teksti ?? "").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < sanat.Length; i++)
+                Rakenne.Teksti(sanat[i], i < sanat.Length - 1 ? "mk-nosto__kuvasana mk-nosto__kuvasana--vali" : "mk-nosto__kuvasana", kotelo);
+            var m = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kotelo);
+            m.tooltip = "Tekoälyllä tuotettu havainnekuva";
+            Kirjasimet.Aseta(m, Kirjasin.Kone);
         }
 
         void Suurenna(int alku) => suurennos.Avaa(nosto.Kuvat.Select(Lehtikuva).ToList(), alku);
