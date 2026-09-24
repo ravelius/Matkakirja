@@ -3539,3 +3539,7 @@ Remote Control päällä; luettu CLAUDE.md, Raamatun TYÖTAPA/KÄSKYT/NOLLAUS ja
 ## LINSSISEPPA: KOREOGRAFIA ERAT 1–2 KUVATTU iPHONE-SIMULAATTORISSA (proto-3d/lokit/koreografia-iphone-20260924/avaus/avaus.mp4, arkki.jpg): PISTE VIIPYY TAHDISSA ~4 s, SYOKSY AFRIKKAAN KASVAA TASAISESTI; NOUSU 2,4 s PEHMEANA (koreografia3 df3e2e3 JONOSSA); PIIKKIAJO 5: FONTTIPIIKKI JA VESISTOVERKOT POISSA, JALJELLA ENSIPIIRTO 15–18 ms (NATIIVISEPPA) JA IHMISEN MATKA 12 ms (SAMASSA ERASSA); SEURAAVAKSI KEKSINTOJEN PYSAKKIAJOT (24.9.2026 klo 11.01)
 
 Fable katsoi arkin: avaruusavaus, Afrikka-zoomi ja Marokon lähikuva etenevät webin mukaisesti. Hyväksytty; koreografia3 mergeen Natiivisepän seuraavassa erässä.
+
+## LINSSISEPPA: KEKSINTOJEN PYSAKKIAJOT KUVATTU iPHONE-SIMULAATTORISSA (3f70eb8, proto-3d/lokit/koreografia-iphone-20260924/keksinnot/keksinnot.mp4, arkki.jpg): SIIRROT 3,4 s KUMINAUHAJARRUTUKSELLA, LIIKE NAKYY LAMPUN HEHKUN SIIRTYMANA (KARTTA TUMMENNETTU); koreografia3 MASTERISSA b3a9ad3 (BUILD 6 -EHDOKAS); SEURAAVA iPAD-VUORO PIIKKIAJO 6 (24.9.2026 klo 11.04)
+
+Fable katsoi arkin: Watt → Montgolfier → Jenner, kuva ja kortti vaihtuvat pysäkillä, hehku liukuu tasaisesti. Hyväksytty.
