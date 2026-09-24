@@ -112469,4 +112469,1698 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  nome: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nome',
+      johdanto: 'Nome on kultaryntäyksen synnyttämä kaupunki '
+        + 'Seward-niemimaalla Beringinsalmen rannalla, sata '
+        + 'kahdeksankymmentä kilometriä Siperiasta. Isoisän matkavuonna '
+        + '1873 tätä kaupunkia ei ollut vielä edes olemassa.',
+      nostot: [
+        {
+          otsikko: 'Nimi, joka syntyi kirjoitusvirheestä',
+          teksti: 'Nimi Nome ei viittaa mihinkään paikalliseen sanaan vaan '
+            + 'brittiläisen laivaston kartoitusvirheeseen. Vuosina '
+            + '1850–1852 HMS Heraldilla purjehtinut kartoittaja merkitsi '
+            + 'nimettömän niemen kohdalle muistiinpanon "? name", '
+            + 'kysymysmerkki ja sana nimi. Ison-Britannian amiraliteetin '
+            + 'selityksen mukaan toinen piirtäjä luki myöhemmin oman '
+            + 'käsialansa väärin: kysymysmerkistä tuli C ja a:sta o, ja '
+            + 'tulokseksi jäi "C. Nome" eli Cape Nome. Virheellinen nimi '
+            + 'painettiin karttoihin, ja kun kultakaupunki perustettiin '
+            + 'niemen juurelle 1899, se peri saman erehdyksen.',
+          wiki: 'Cape Nome',
+        },
+        {
+          otsikko: 'Niemimaa jolla asuttiin kauan ennen kultaa',
+          teksti: 'Ennen kuin kukaan etsi kultaa, Seward-niemimaan '
+            + 'rannikolla asuivat iñupiatit, jotka olivat metsästäneet '
+            + 'aluetta muinaisista ajoista lähtien. Tuoreiden '
+            + 'arkeologisten löytöjen mukaan nykyisen Nomen paikalla oli '
+            + 'iñupiat-asutus nimeltä Sitnasuaq jo ennen vuoden 1898 '
+            + 'kultalöytöä. Asukkaat elivät meren varassa: hylkeenpyynti, '
+            + 'mursunmetsästys ja kalastus veivät vuoden kierrossa '
+            + 'rannalta toiselle. Kun kultaryntäys iski 1899, tuhannet '
+            + 'muukalaiset saapuivat samalle rannalle, jota Sitnasuaqin '
+            + 'asukkaat olivat käyttäneet sukupolvien ajan.',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: '1873: rantaviiva joka oli juuri muuttunut amerikkalaiseksi',
+          teksti: 'Isoisä matkusti maailmalla 1873, jolloin Beringinsalmen '
+            + 'rannikko oli ollut Yhdysvaltain omistuksessa vasta kuusi '
+            + 'vuotta. Ulkoministeri William H. Seward oli neuvotellut '
+            + 'koko Alaskan ostosta Venäjältä 1867 hintaan 7,2 miljoonaa '
+            + 'dollaria, alle kolme senttiä eekkeriltä, ja poliittiset '
+            + 'vastustajat pilkkasivat kauppaa nimillä "Sewardin hulluus" '
+            + 'ja "Sewardin jääkaappi". Seward-niemimaalla ei ollut '
+            + 'yhtäkään pysyvää siirtokuntaa eikä karttaa, joka olisi '
+            + 'merkinnyt tulevan Nomen paikkaa. Vasta kolmekymmentä '
+            + 'vuotta myöhemmin kävi ilmi, että "jääkaappi" kätki '
+            + 'sittenkin aarteen.',
+          wiki: 'Alaska Purchase',
+        },
+        {
+          otsikko: 'Yhdeksänkymmentä kilometriä Siperiaan',
+          teksti: 'Nome on saman Seward-niemimaan pääkaupunki, jonka '
+            + 'kärjessä sata seitsemänkymmentä kilometriä luoteeseen '
+            + 'kohoaa Cape Prince of Wales, Yhdysvaltain manneralueen '
+            + 'läntisin piste ja lähempänä Siperiaa kuin mikään muu '
+            + 'paikka Pohjois-Amerikan mantereella, reilut 88 kilometriä '
+            + 'yli Beringinsalmen. Salmen keskellä kaksi pientä saarta, '
+            + 'Iso- ja Pikku-Diomede, ovat toisistaan vain 3,8 kilometrin '
+            + 'päässä, ja niiden välistä kulkee sekä valtakunnanraja että '
+            + 'kansainvälinen päivämääräraja: Pikku-Diomedeltä katsottuna '
+            + 'huominen alkaa jo naapurisaarella. Talvella salmi jäätyy '
+            + 'niin lujaa, että saarten väliä on kävelty jäätä pitkin.',
+          wiki: 'Bering Strait',
+        },
+        {
+          otsikko: 'Pakkasennätys ja lumivalli keskellä katua',
+          teksti: 'Nomen ilmasto on subarktinen: tammikuun keskilämpötila '
+            + 'on noin -15 astetta ja heinäkuun noin +11, mutta ääripäät '
+            + 'ovat rajumpia. Kylmyysennätys -54 astetta mitattiin '
+            + '27.–28. tammikuuta 1989, ja talvimyrskyt voivat lamauttaa '
+            + 'koko kaupungin: vuoden 1925 kurkkumätäepidemian aikana '
+            + 'juuri tällainen myrsky esti seerumin tuomisen '
+            + 'lentokoneella, koska avoimet ohjaamot ja vesijäähdytteiset '
+            + 'moottorit eivät kestäneet pakkasta. Front Streetin '
+            + 'lumivallit kasvavat talvisin ihmistä korkeammiksi, ja '
+            + 'kadun puhtaana pitäminen vaatii koko kaupungin '
+            + 'aurauskaluston.',
+          tiedosto: 'Nome Alaska front street snow.jpg',
+          lyhyt: 'Front Street talvella: aurattu lumi on kasattu ihmistä korkeammaksi valliksi kadun laitaan.',
+          selite: 'Front Street on aurattu, mutta lumi on kasattu ihmistä '
+            + 'korkeammaksi valliksi kadun vasempaan laitaan, ja '
+            + 'pakettiautoja on pysäköity puhdistetun kaistan varrelle.',
+          lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: 'Maali tuhannen mailin päässä',
+          teksti: 'Iditarod-koiravaljakkokilpailu on ajettu Anchoragesta '
+            + 'Nomeen vuodesta 1973, ja matka on virallisesti 1 049 '
+            + 'mailia, luku on symbolinen viittaus Alaskaan 49. '
+            + 'osavaltiona. Kilpailu syntyi kunnianosoituksena vuoden '
+            + '1925 seerumiajolle, jossa parikymmentä valjakkoa kuljetti '
+            + 'kurkkumätärokotetta Nenanasta Nomeen 674 mailin matkan '
+            + 'viidessä ja puolessa vuorokaudessa. Voittajat ajavat '
+            + 'Nomeen nykyään reilussa viikossa, ja koko kaupunki '
+            + 'kokoontuu Front Streetin maaliportille lipuin '
+            + 'riippumatta kellonajasta tai säästä.',
+          tiedosto: 'Iditarod finish line.jpg',
+          lyhyt: 'Front Streetin maaliportti odottaa Iditarodin valjakoita lippuineen ja mainoskylteineen.',
+          selite: 'Front Streetin puisen maaliportin ylle on ripustettu '
+            + 'lippuja ja sponsorien kylttejä, ja sen alla väkijoukko '
+            + 'odottaa pakkaskelissä valjakon saapumista.',
+          lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Iditarod Trail Sled Dog Race',
+        },
+        {
+          otsikko: 'Meri, joka ei enää jäädy samalla tavalla',
+          teksti: 'Nomen edustalla Beringinmeri jäätyy talvisin yhä '
+            + 'ohuemmaksi ja myöhemmin kuin isoisän aikaan, ja koko '
+            + 'Jäämeren jääpeite kutistuu vuosikymmen vuosikymmeneltä. '
+            + 'Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia — mittaushistorian kymmenenneksi '
+            + 'vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. '
+            + 'Nomelle ohuempi jää tarkoittaa pidempää purjehduskautta '
+            + 'mutta myös rajumpaa syysmyrskyjen kuluttamaa '
+            + 'rantaviivaa.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - vertical 3201 print).jpg',
+          lyhyt: 'NASA:n pystykuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion pystykuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Kultaryntäys',
+      johdanto: 'Vuonna 1898 kolme onnenonkijaa löysi kultaa purosta '
+        + 'lähellä tulevaa Nomea, ja seuraavana kesänä kultaa löytyi '
+        + 'suoraan rantahiekasta. Parissa vuodessa autiosta rannasta '
+        + 'tuli hetkeksi Alaskan suurin kaupunki.',
+      tehtava: {
+        kysymys: 'Kuinka monta uutta tulijaa Nomeen saapui keskimäärin '
+          + 'päivässä kesäkuussa 1900?',
+        vaihtoehdot: [
+          'noin tuhat',
+          'noin sata',
+          'noin kymmenen',
+          'ei yhtään, kultaryntäys oli jo päättynyt',
+        ],
+        oikea: 0,
+        fakta: 'Kesäkuussa 1900 Nomeen saapui keskimäärin tuhat uutta '
+          + 'tulijaa päivässä, kun kultaa löytyi suoraan rantahiekasta '
+          + 'ilman valtausoikeutta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolme onnenonkijaa Anvil Creekillä',
+          teksti: 'Kesällä 1898 norjalaissyntyinen Jafet Lindeberg sekä '
+            + 'ruotsalaiset Erik Lindblom ja John Brynteson löysivät '
+            + 'kultaa Anvil Creekiltä, purosta joka laskee mereen '
+            + 'nykyisen Nomen kohdalla. Kolmikkoa alettiin kutsua '
+            + 'kolmeksi onnekkaaksi ruotsalaiseksi, vaikka Lindeberg oli '
+            + 'norjalainen. Tieto löydöstä levisi ulkomaailmaan vasta '
+            + 'talvella, kun viimeiset laivat olivat jo lähteneet, ja se '
+            + 'riitti sytyttämään koko seuraavan kesän ryntäyksen. Anvil '
+            + 'Creekin varrelle perustettiin nopeasti kymmeniä '
+            + 'valtauksia, ja paikka on nykyään kansallinen '
+            + 'historiallinen maamerkki.',
+          tiedosto: 'Anvil-creek-1902.jpg',
+          lyhyt: 'Miehet seulovat soraa ja vettä Anvil Creekin uomassa lapioin ja rokkerein vuonna 1902.',
+          selite: 'Miehet kaivavat ja huuhtovat soraa Anvil Creekin '
+            + 'uomassa lapioin, kottikärryin ja puisin rokkerein, '
+            + 'taustalla mäkinen tundra ja muutama teltta.',
+          lahde: 'C. H. Graves, Wikimedia Commons (PD)',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Kultaa suoraan hiekasta',
+          teksti: 'Kesällä 1900 kävi ilmi, että kultaa löytyi paitsi '
+            + 'puroista myös suoraan rantahiekasta kymmenien mailien '
+            + 'matkalta rannikkoa, ainutlaatuinen löytö, jota kuka '
+            + 'tahansa saattoi kaivaa ilman valtausoikeutta. Uutinen '
+            + 'levisi salamana, ja kesäkuussa 1900 Nomeen saapui '
+            + 'keskimäärin tuhat uutta tulijaa päivässä laivoilla, jotka '
+            + 'ankkuroituivat avoveteen ja purkivat matkustajat veneillä '
+            + 'suoraan aaltoihin. Vuoden 1900 väestönlaskenta kirjasi '
+            + '12 488 asukasta, jolloin Nomesta tuli hetkeksi koko '
+            + 'Alaskan suurin kaupunki, vaikka sitä ei ollut ollut '
+            + 'olemassa kahta vuotta aiemmin.',
+          tiedosto: 'Nome Beach Miners 1.jpg',
+          lyhyt: 'Nainen pumppaa rokkerin vipua rantahiekalla, mies työntää täyttä kottikärryä taustalla.',
+          selite: 'Nainen pitkässä 1900-luvun hameessa ja hatussa pumppaa '
+            + 'rokkerin vipua rantahiekalla, mies työntää täyttä '
+            + 'kottikärryä ja toinen mies seisoo kärryn vieressä.',
+          lahde: 'Eric A. Hegg, kuvaajaksi arvioitu, Wikimedia Commons (PD)',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Kaupunki, joka nousi ja katosi',
+          teksti: 'Nomen väkiluku romahti yhtä nopeasti kuin se nousi. '
+            + 'Kesällä 1900 kaupungissa saattoi olla parikymmentä '
+            + 'tuhatta ihmistä, mutta virallinen väestönlaskenta vuonna '
+            + '1910 kirjasi enää 2 600 asukasta, ja vuoteen 1934 '
+            + 'mennessä luku oli pudonnut alle 1 500:aan. Silti kultaa '
+            + 'on nostettu Nomen alueelta yhteensä ainakin 3,6 miljoonaa '
+            + 'troyunssia, ja nykyisin merenpohjasta imuruoppaavat '
+            + 'kultalaivat jatkavat samaa perinnettä aivan kaupungin '
+            + 'edustalla, yli sata vuotta ensimmäisen ryntäyksen '
+            + 'jälkeen.',
+          wiki: 'Nome Gold Rush',
+        },
+        {
+          otsikko: 'Wyatt Earp "louhi kaivosmiehiä"',
+          teksti: 'Syyskuussa 1899 lännen legenda Wyatt Earp rakensi '
+            + 'kumppaninsa Charles Hoxien kanssa Dexter-saluunan, '
+            + 'kaupungin ensimmäisen kaksikerroksisen puurakennuksen. '
+            + 'Earp ei etsinyt kultaa purosta vaan kaivosmiesten '
+            + 'taskuista: hän myönsi suoraan tulleensa louhimaan '
+            + 'kaivosmiehiä, ja Dexteristä tuli kaupungin ylellisin '
+            + 'saluuna, jonka ovista kulki niin kirjailija Rex Beach '
+            + 'kuin nuori kaivosinsinööri Herbert Hoover, myöhempi '
+            + 'presidentti. Earp ja hänen vaimonsa Josephine viettivät '
+            + 'Nomessa vain kesät ja myivät osuutensa Hoxielle muutaman '
+            + 'vuoden jälkeen, ennen joulukuuta 1901.',
+          tiedosto: 'Nome Alaska 1900.jpg',
+          lyhyt: 'Front Street 17. heinäkuuta 1900: kadun varrella kohoaa Wyatt Earpin Dexter Saloon.',
+          selite: 'Front Street on täynnä väkeä ja amerikanlippuja 17. '
+            + 'heinäkuuta 1900, ja kadun vasemmalla puolella erottuu '
+            + 'liikkeiden kylttejä, joukossa Dexter-saluunan kyltti.',
+          lahde: 'Carrie M. McLain Memorial Museum, Wikimedia Commons (PD)',
+          wiki: 'Wyatt Earp',
+        },
+        {
+          otsikko: 'Mursunhammas jolla onniteltiin juutalaista uutta vuotta',
+          teksti: 'Iñupiat-taiteilija Angokwazhuk, jota merimiehet '
+            + 'kutsuivat nimellä Happy Jack, oppi mursunhampaan '
+            + 'kaiverruksen valaanpyyntikapteeni Hartson Bodfishilta '
+            + 'Pikku-Diomeden saarella 1892 ja muutti Nomeen '
+            + 'kultaryntäyksen mukana noin 1900. Hänestä tuli '
+            + 'ensimmäinen alkuperäiskansataiteilija, joka tunnettiin '
+            + 'Alaskassa omalla nimellään: hän myi kaiverrettuja '
+            + 'mursunhampaita kaivosmiehille ja kauppiaille. Vuonna 1910 '
+            + 'hän kaiversi mursunhampaaseen juutalaisen uudenvuoden '
+            + 'onnittelun hepreankielisine siunauksineen kahdelle '
+            + 'nomelaiselle kauppiaalle, ainutlaatuinen todiste '
+            + 'kultakaupungin moninaisuudesta.',
+          tiedosto: 'Happy Jack (born Angokwazhuk) - New Year Greeting - Google Art Project.jpg',
+          lyhyt: 'Mursunhampaaseen on kaiverrettu parrakas mies ja peruukkinainen sekä heprealainen teksti.',
+          selite: 'Mursunhampaan pintaan on kaiverrettu parrakas mies '
+            + 'silinterihatussa vasemmalla ja peruukkia käyttävä nainen '
+            + 'oikealla, niiden välissä heprealainen teksti, Daavidin '
+            + 'tähti ja sana Nome, Alaska.',
+          lahde: 'Angokwazhuk ("Happy Jack"), Wikimedia Commons / Google Art Project (PD)',
+          wiki: 'Nome, Alaska',
+        },
+        {
+          otsikko: 'Seerumiajo, josta tuli kilpailu',
+          teksti: 'Tammikuussa 1925 lääkäri Curtis Welch totesi Nomessa '
+            + 'kurkkumädän, ja sairaalan seerumivarasto oli vanhentunut '
+            + 'eikä uutta ehtisi laivalla ennen jäätymistä. Koneiden '
+            + 'avoimet ohjaamot eivät kestäneet pakkasta, joten seerumi '
+            + 'kulki 27. tammikuuta alkaen koiravaljakoilla Nenanasta '
+            + '674 mailin eli reilun tuhannen kilometrin matkan Nomeen. '
+            + 'Parikymmentä ajajaa ja noin 150 koiraa vaihtoivat kuormaa '
+            + 'toisilleen viidessä ja puolessa vuorokaudessa: '
+            + 'vaarallisimman, 261 mailin pätkän ajoi Leonhard Seppala '
+            + 'johtokoiranaan Togo, ja viimeiset 53 mailia toi perille '
+            + 'Gunnar Kaasen johtokoiranaan Balto. Seerumi saapui '
+            + 'Nomeen 2. helmikuuta 1925 aamuviideltä.',
+          wiki: '1925 serum run to Nome',
+        },
+      ],
+    },
+  ],
+
+  portovelho: [
+    {
+      id: 'kaupunki',
+      nimi: 'Porto Velho',
+      johdanto: 'Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle '
+        + 'vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen '
+        + 'leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen '
+        + 'tulvista, kumista, tinasta ja soijasta.',
+      nostot: [
+        {
+          otsikko: 'Jättiläisjoki, joka kantaa kaupungin',
+          teksti: 'Rio Madeira on Amazonin suurin sivujoki ja yksin pidempi '
+            + 'kuin Tonava: se syntyy Andien rinteiltä Bolivian ja Perun '
+            + 'vuorista ja laskee lähes 3 300 kilometrin matkan jälkeen '
+            + 'Amazoniin. Sen ruskea vesi kuljettaa niin paljon hienoa '
+            + 'hietaa ja savea Andeilta, että joki värjää koko '
+            + 'alajuoksunsa mutaiseksi. Sadekaudella, marraskuusta '
+            + 'huhtikuuhun, vedenpinta voi nousta yli kymmenen metriä ja '
+            + 'tulvia lähiöitä, kun taas kuivana kautena hiekkarannat '
+            + 'paljastuvat keskellä kaupunkia. Porto Velholle joki on '
+            + 'ollut vuosisadan ajan tärkein kulkuväylä, sillä kunnollista '
+            + 'maantietä pääkaupunkiin ei ollut vielä 1960-luvullakaan.',
+          tiedosto: 'Rio Madeira Porto Velo Brazil (109758143).jpeg',
+          lyhyt: 'Rio Madeira on Amazonin suurin sivujoki ja pidempi kuin Tonava.',
+          selite: 'Valkoiset kasautumispilvet kohoavat korkealle Rio '
+            + 'Madeiran yllä, ja horisontissa siintää Porto Velhon matala '
+            + 'kaupunkisiluetti.',
+          lahde: 'Henry Vagrant, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Madeira (joki)',
+        },
+        {
+          otsikko: 'Ensimmäinen kivikirkko sademetsän keskellä',
+          teksti: 'Porto Velhon vanha keskusta rakentui rautatien ja joen '
+            + 'risteykseen 1900-luvun alussa, ja sen sydämenä on yhä '
+            + 'Praça Pe. João Nicolettin ympärille avautuva puistoaukio. '
+            + 'Aukion laidalla kohoaa kaupungin ensimmäinen katolinen '
+            + 'kivikirkko, Sagrado Coração de Jesus -katedraali: '
+            + 'peruskivi muurattiin 1917, mutta varsinainen rakentaminen '
+            + 'käynnistyi kunnolla vasta kymmenen vuotta myöhemmin. '
+            + 'Ulkoa katedraali on roomalaistyylinen kaksitorninen '
+            + 'rakennus, mutta sisällä holvit nousevat goottilaisittain '
+            + 'terävinä. Ympärille kasvoi hallintorakennuksia ja '
+            + 'liiketaloja, jotka näkyvät yhä ilmasta katsottuna '
+            + 'keskustan matalana, punakattoisena ruudukkona joen '
+            + 'rannalla.',
+          tiedosto: 'Vista aérea de Porto Velho, RO (4154560872).jpg',
+          lyhyt: 'Kaupungin ensimmäinen kivikirkko, Sagrado Coração de Jesus, aloitettiin 1917.',
+          selite: 'Ilmakuvassa avautuu Porto Velhon vanha keskusta: '
+            + 'kaksitornisen Sagrado Coração de Jesus -katedraalin '
+            + 'edessä on puistoaukio, jota ympäröivät matalat '
+            + 'punakattoiset korttelit.',
+          lahde: 'Cleber Rech from Curitiba, PR, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Aurinko laskee jokeen joka ilta',
+          teksti: 'Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu '
+            + 'ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on '
+            + 'kaupungin vakiintunut ilta-askare siinä missä iltakävely '
+            + 'muualla. Joelta palaa samaan aikaan kalastajaveneitä, '
+            + 'jotka ovat olleet päivän saaliilla, sillä joki on monelle '
+            + 'perheelle yhä tärkein toimeentulon lähde. Saalis myydään '
+            + 'usein heti rantatorilla tuoreena, ennen kuin se ehtii '
+            + 'pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee '
+            + 'illoista kosteita ja lämpimiä ympäri vuoden, joten '
+            + 'auringonlasku on myös hetki, jolloin päivän pahin helle '
+            + 'vihdoin hellittää ja kaupunki herää toiseen elämäänsä.',
+          tiedosto: '2007- por-do-sol em porto velho rio madeira - panoramio.jpg',
+          lyhyt: 'Illalla rantaraitille kokoonnutaan katsomaan auringonlaskua Rio Madeiran ylle.',
+          selite: 'Aurinko laskee tyynen Rio Madeiran taakse metsäiselle '
+            + 'rantaviivalle, ja sen kajo heijastuu pitkänä juovana '
+            + 'veteen.',
+          lahde: 'James Martins, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Satama, josta soija ja tina lähtevät merelle',
+          teksti: 'Koska Porto Velhoon ei ollut rautatietä eikä kunnollista '
+            + 'maantietä vuosikymmeniin, joki on ollut ja on yhä '
+            + 'kaupungin tärkein kauppaväylä. Ilmakuvassa näkyvät suuret '
+            + 'pyöreät säiliöt kuuluvat jokisatamaan, jossa soijaa, '
+            + 'maissia ja polttoainetta lastataan proomuihin Rio '
+            + 'Madeiran rantaan. Proomujonot hinataan tuhansien '
+            + 'kilometrien päähän Amazon-jokea pitkin Atlantille asti, '
+            + 'sillä se on halvempi reitti kuin kuorma-autot huonokuntoi'
+            + 'silla teillä. Samalla rannalla toimi 1900-luvun alussa '
+            + 'kumin ja myöhemmin tinamalmin lastauspaikka, joten satama '
+            + 'on ollut kaupungin elinehto sen koko historian ajan.',
+          tiedosto: 'Porto Velho 1 09072007.jpg',
+          lyhyt: 'Jokisatamasta soija, maissi ja polttoaine lastataan proomuihin kohti Atlanttia.',
+          selite: 'Ilmakuvassa Rio Madeiran rantaan on rakennettu '
+            + 'pyöreitä varastosäiliöitä ja satamalaitureita kaupungin '
+            + 'reunalla, joen toisella puolella siintää keskusta.',
+          lahde: 'Wilson Dias/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Porto Velho',
+        },
+        {
+          otsikko: 'Kylästä puolen miljoonan asukkaan pääkaupungiksi',
+          teksti: 'Porto Velho syntyi virallisesti vasta 1907 rautatyömaan '
+            + 'leirinä, mutta kasvoi nopeasti: kaupungista tuli 1943 '
+            + 'perustetun liittovaltion Rondônian alueen pääkaupunki ja '
+            + '1981 osavaltioksi korotetun Rondônian pääkaupunki. '
+            + 'Väkiluku moninkertaistui 1970- ja 1980-luvuilla, kun '
+            + 'Brasilian hallitus kannusti perheitä muuttamaan maan '
+            + 'tiheämmin asutuilta alueilta tyhjiksi luulluille '
+            + 'sademetsäseuduille uusia teitä pitkin. Ilmakuvan '
+            + 'punakattoiset omakotitalorivit ja suorakulmaiset kadut '
+            + 'ovat tyypillisiä juuri näinä vuosikymmeninä kasvaneille '
+            + 'asuinalueille. Nykyään Porto Velhossa asuu yli 500 000 '
+            + 'ihmistä, ja se on koko Rondônian ylivoimaisesti suurin '
+            + 'kaupunki.',
+          tiedosto: 'Porto Velho 2 09072007.jpg',
+          lyhyt: 'Rautatyömaan leiristä kasvoi 1981 perustetun Rondônian osavaltion pääkaupunki.',
+          selite: 'Ilmakuvassa erottuvat suorakulmaisten katujen '
+            + 'reunustamat punakattoiset omakotitalorivit, jotka '
+            + 'levisivät nopeasti kasvaneen kaupungin laitamille.',
+          lahde: 'Wilson Dias/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          wiki: 'Rondônia',
+        },
+        {
+          otsikko: 'Vaaleanpunainen delfiini joen mutaisessa vedessä',
+          teksti: 'Rio Madeirassa elää amazonindelfiini (Inia '
+            + 'geoffrensis), maailman suurin jokidelfiinilaji ja ainoa, '
+            + 'jonka iho voi värjäytyä vaaleanpunaiseksi aikuisena. '
+            + 'Väri johtuu ihon alla olevasta arpikudoksesta ja '
+            + 'verisuonista, jotka paljastuvat, kun ylempi ihokerros '
+            + 'kuluu iän ja tappeluiden myötä - vanhimmat ja '
+            + 'aktiivisimmat urokset ovat usein väriltään kirkkaimpia. '
+            + 'Toisin kuin merten delfiinit, amazonindelfiinin '
+            + 'kaularanka ei ole yhteen luutunut, joten se pystyy '
+            + 'kääntämään päätään lähes 90 astetta sivulle etsiessään '
+            + 'saalista tulvametsän puiden välistä. Paikallisessa '
+            + 'tarustossa delfiinin uskotaan yöllä muuttuvan mieheksi, '
+            + 'joka viettelee kyläjuhlien naisia.',
+          tiedosto: 'Boto cor-de-rosa - Pink dolphin (46314897644).jpg',
+          lyhyt: 'Amazonindelfiinin iho muuttuu vaaleanpunaiseksi arpien ja verisuonten paljastuessa.',
+          selite: 'Amazonindelfiini pistää päänsä veden pinnalle suu '
+            + 'auki, ja sen vaaleanpunertava iho erottuu selvästi '
+            + 'tummasta jokivedestä.',
+          lahde: 'Just a Brazilian man from Brazil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Amazonindelfiini',
+        },
+      ],
+    },
+    {
+      id: 'perkeleenrata',
+      nimi: 'Perkeleen rautatie',
+      johdanto: 'Rio Madeiran koskien ohitse yritettiin vuosikymmeniä '
+        + 'rakentaa rautatietä, joka vaati tuhansia ihmishenkiä ja sai '
+        + 'liikanimen Perkeleen rata. Sen rippeet ja veturit lepäävät '
+        + 'yhä Porto Velhon museossa ja sademetsän vallassa.',
+      tehtava: {
+        kysymys: 'Miksi Madeira-Mamoré-rataa alettiin kutsua "Perkeleen radaksi"?',
+        vaihtoehdot: [
+          'Koska sen rakentamisessa kuoli tuhansia työläisiä tropiikkitauteihin ja väkivaltaan',
+          'Koska rata rakennettiin kokonaan yhden ainoan sadekauden aikana',
+          'Koska juna suistui raiteilta lähes joka viikko',
+          'Koska rata kulki paikallisten pyhänä pitämän luolaston läpi',
+        ],
+        oikea: 0,
+        fakta: 'Radan rakentamisessa vuosina 1907-1912 kuoli arvioiden '
+          + 'mukaan 6 000-30 000 työläistä lähinnä malariaan, '
+          + 'keltakuumeeseen ja muihin tropiikin tauteihin, minkä vuoksi '
+          + 'rataa alettiin kutsua Perkeleen radaksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuotta ennen isoisän matkaa: rata joka petti jo kerran',
+          teksti: 'Vuonna 1870 eversti George Earl Church sai luvan '
+            + 'rakentaa rautatien Rio Madeiran koskien ohitse Bolivian '
+            + 'kumin viennin helpottamiseksi. Church palkkasi '
+            + 'urakoitsijaksi P. & T. Collinsin yhtiön, joka aloitti '
+            + 'työt 1872 - vain vuosi ennen kuin isoisä alkoi '
+            + 'kirjoittaa matkapäiväkirjaansa. Hanke päättyi '
+            + 'katastrofiin: sademetsän kuumetaudit, ruokapula ja '
+            + 'konfliktit paikallisten kanssa tappoivat lähes 80 '
+            + 'työläistä, ja radasta ehdittiin rakentaa vain nelisen '
+            + 'kilometriä ennen kuin yritys hylättiin. Nykyisen Porto '
+            + 'Velhon paikalla ei siis vielä 1873 ollut kaupunkia, '
+            + 'vaan hylätyn rautatien rappeutuvia raiteita sademetsässä.',
+          tiedosto: 'George Earl Church 1885.jpg',
+          lyhyt: 'Ensimmäinen yritys rakentaa rata alkoi 1872 ja päättyi katastrofiin.',
+          selite: 'Muotokuvassa George Earl Church seisoo '
+            + 'tummanpunaisessa paidassa ja vaaleassa viitassa, '
+            + 'kätensä nojaten kivääriin.',
+          lahde: 'Ethel Morlock, Wikimedia Commons (PD)',
+          wiki: 'George Earl Church',
+        },
+        {
+          otsikko: 'Tuhannet käsiparit kymmenistä maista',
+          teksti: 'Kun rautatie vihdoin valmistui 1907-1912, sen urakoi '
+            + 'rahoittaja Percival Farquhar hyödyntäen vuoden 1903 '
+            + 'Petrópolisin sopimusta. Rakentajia '
+            + 'rekrytoitiin kymmenistä maista: eniten Karibialta, '
+            + 'etenkin Barbadokselta, mutta myös Euroopasta - '
+            + 'kaikkiaan arviolta 20 000-30 000 ihmistä hankkeen eri '
+            + 'vaiheissa. Malaria, keltakuume ja beriberi tappoivat '
+            + 'heistä arvioiden mukaan 6 000-30 000, minkä vuoksi '
+            + 'rataa alettiin kutsua Perkeleen radaksi (Estrada de '
+            + 'Ferro do Diabo). Ruumiit haudattiin usein suoraan '
+            + 'ratapenkan viereen, ja hautapaikat ovat kadonneet '
+            + 'kasvillisuuden alle. Rata valmistui lopulta 366 '
+            + 'kilometrin mittaisena Porto Velhosta Guajará-Mirimiin.',
+          tiedosto: 'Homens posam junto a uma locomotiva.tif',
+          lyhyt: 'Rautatien rakentamisessa 1907-1912 kuoli arvioiden mukaan tuhansia työläisiä.',
+          selite: 'Vanhassa valokuvassa työnjohtajia ja työläisiä eri '
+            + 'asuissa poseeraa höyryveturin edessä radan varrella.',
+          lahde: 'Correio da Manhã, Wikimedia Commons (PD)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Rata raivattiin käsin sademetsän läpi',
+          teksti: 'Radan rakentaminen tarkoitti kilometri kilometriltä '
+            + 'etenevää raivausta: ensin kaadettiin puut, sitten '
+            + 'kaivettiin ratapenger lapioin, ja lopuksi kiskot ja '
+            + 'pölkyt asetettiin paikoilleen. Kuumuus, kosteus ja '
+            + 'hyttyspilvet tekivät työstä hidasta ja vaarallista, ja '
+            + 'moni urakoitsija joutui vaihtamaan työvoimansa useita '
+            + 'kertoja sairastumisten vuoksi. Kumin maailmanmarkkina'
+            + 'hinta oli tuolloin niin korkea, että hanke kannatti '
+            + 'yrittää uudestaan, vaikka aiemmat yritykset olivat '
+            + 'epäonnistuneet. Rata valmistui juuri ajoissa: kumin '
+            + 'hinta romahti pian, kun Kaakkois-Aasian viljelmät '
+            + 'valtasivat markkinat, eikä siitä tullut niin kannattava '
+            + 'kuin toivottiin.',
+          tiedosto: 'Construction of the Madeira-Mamoré Railway in Brazil. Published on 24 May 1913.jpg',
+          lyhyt: 'Rata raivattiin käsin sademetsän läpi kumin maailmanmarkkinahintojen ollessa huipussaan.',
+          selite: 'Mustavalkoisessa valokuvassa hiljattain raivattu '
+            + 'ratapenger kulkee suorana sademetsän keskellä, ja '
+            + 'pieniä ihmishahmoja näkyy penkereellä kaukana.',
+          lahde: 'Ralph Anderson Bennitt, Wikimedia Commons (PD)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Veturi numero 18 seisoo yhä asemapihalla',
+          teksti: 'Rata liikennöi lopulta vuoteen 1972 asti, jolloin uusi '
+            + 'maantie BR-364 teki siitä tarpeettoman ja liikenne '
+            + 'lakkautettiin kokonaan. Porto Velhon vanhalle '
+            + 'rautatieasemalle jäi kuitenkin useita alkuperäisiä '
+            + 'höyryvetureita, jotka on sittemmin kunnostettu museoksi '
+            + 'Complexo Madeira-Mamoré -nimisen puiston alueelle. Yksi '
+            + 'näkyvimmistä on veturi numero 18, jonka kylkeen on '
+            + 'maalattu radan lyhenne E.F.M-M. Museoalueella kiertää '
+            + 'nykyään myös matkailijajuna lyhyen pätkän vanhaa rataa '
+            + 'pitkin muutaman kerran vuodessa, ja paikalliset pitävät '
+            + 'rataa yhtenä kaupungin tärkeimmistä historiallisista '
+            + 'muistomerkeistä, vaikka se syntyi niin raskaan hinnan '
+            + 'kustannuksella.',
+          tiedosto: 'Locomotiva no museu da Estrada de Ferro Madeira-Mamoré (4153821591).jpg',
+          lyhyt: 'Rata liikennöi vuoteen 1972, jolloin uusi maantie teki siitä tarpeettoman.',
+          selite: 'Kunnostettu musta höyryveturi numero 18 seisoo '
+            + 'raiteillaan asemapihan puistoalueella, taustalla näkyy '
+            + 'puita ja pysäköityjä autoja.',
+          lahde: 'Cleber Rech from Curitiba, PR, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+        {
+          otsikko: 'Sademetsä valtasi hylätyn veturin takaisin',
+          teksti: 'Kaikkia radan vetureita ei koskaan siirretty museoon. '
+            + 'Osa jäi seisomaan paikoilleen vanhan linjan varrelle sen '
+            + 'jälkeen, kun liikenne lakkasi 1972, ja sademetsä alkoi '
+            + 'vähitellen vallata ne takaisin. Tässä kuvassa näkyvä '
+            + 'veturi numero 20 tunnettiin nimellä Maquinista Rivero '
+            + 'erään junanajajansa mukaan, ja se ehti ruostua '
+            + 'vuosikymmeniä köynnösten ja pensaiden peitossa, ennen '
+            + 'kuin se otettiin talteen Brasilian kansallisen '
+            + 'kulttuuriperintöviraston Iphanin kokoelmiin. Tällaiset '
+            + 'hylätyt veturit muistuttavat siitä, miten nopeasti '
+            + 'sademetsä peittää ihmisen jäljet, jos niitä ei erikseen '
+            + 'suojella - sama kohtalo odotti alun perin koko rataa.',
+          tiedosto: 'EF-Madeira-Mamoré-Imagem-Acervo-Digital-do-Iphan12.jpg',
+          lyhyt: 'Hylätty veturi numero 20 ruostui vuosikymmeniä sademetsän köynnösten peitossa.',
+          selite: 'Vanhassa valokuvassa ruosteinen höyryveturi seisoo '
+            + 'puiden ja pensaiden ympäröimänä, kyljessä lukee '
+            + '"Maquinista Rivero".',
+          lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Madeira-Mamoré-rautatie',
+        },
+      ],
+    },
+  ],
+  kalgoorlie: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kalgoorlie',
+      johdanto: 'Kalgoorlie nousi Länsi-Australian punaiselle aavikolle '
+        + 'kultaryntäyksen mukana 1893, mutta seutu oli asuttua kauan ennen '
+        + 'sitä: wongatha-kansa tunsi joka vesipaikan ikivanhalla '
+        + 'kultakalliolla.',
+      nostot: [
+        {
+          otsikko: 'Karlkurla, hopeanhohtoinen köynnös',
+          tiedosto: 'Marsdenia australis habit.jpg',
+          teksti: 'Kalgoorlien nimi tulee wangai-kielen sanasta karlkurla, '
+            + 'paikka jossa kasvaa silkkipäärynöitä. Kyseessä on '
+            + 'köynnösmäinen aavikkopensas, jonka makeita hedelmiä ja '
+            + 'mehukkaita juuria alkuperäiskansat söivät tuhansien vuosien '
+            + 'ajan ennen minkään eurooppalaisen näkyä. Seutu kuuluu '
+            + 'wongatha- eli wangkatha-kansojen kielialueeseen: nimitys '
+            + 'kattaa kahdeksan ryhmää Kalgoorlien, Coolgardien, Menziesin, '
+            + 'Leonoran ja Lavertonin ympäristössä. Vuonna 2023, '
+            + 'kolmenkymmenen vuoden oikeustaistelun jälkeen, '
+            + 'liittovaltion tuomioistuin tunnusti wongi-kansan '
+            + 'alkuperäiset maaoikeudet kolmenkymmenentuhannen '
+            + 'neliökilometrin alueeseen kultakentillä.',
+          lyhyt: 'Kalgoorlie sai nimensä alkuperäiskielen sanasta, joka '
+            + 'tarkoittaa silkkipäärynän kasvupaikkaa.',
+          selite: 'Silkkipäärynän köynnös kiipeää aidan tolppaa pitkin '
+            + 'punaisella aavikkohiekalla; kasvin makeita hedelmiä '
+            + 'käytettiin ruokana.',
+          lahde: 'Mark Marathon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wangkatha',
+        },
+        {
+          otsikko: 'Isoisä käveli kullan yli tietämättään',
+          tiedosto: 'Paddy Hannan by John McLeod.jpg',
+          teksti: 'Isoisä kulki näillä samoilla tasangoilla vuonna 1873 '
+            + 'tietämättä, että jalkojen alla lepäsi yksi maailman '
+            + 'rikkaimmista kultasuonista — se löytyi vasta kaksikymmentä '
+            + 'vuotta myöhemmin. Kesäkuussa 1893 kullankaivaja Paddy '
+            + 'Hannan matkasi tovereineen kohti Mount Youlea, kun yhden '
+            + 'hevosen kenkä irtosi. Pysähdyksen aikana miehet huomasivat '
+            + 'kullan kimallusta nykyisen Mount Charlotten juurella. '
+            + 'Hannan jätti löytöilmoituksen 17. kesäkuuta, ja sadat '
+            + 'onnenonkijat tulvivat paikalle: leiristä kasvoi muutamassa '
+            + 'vuodessa kaupunki, joka sai nimensä alkuperäiskielisestä '
+            + 'karlkurla-sanasta.',
+          lyhyt: 'Paddy Hannanin hevosen kengän irtoaminen 1893 synnytti '
+            + 'kultaryntäyksen ja koko kaupungin.',
+          selite: 'Paddy Hannanin pronssipatsas Kalgoorlien pääkadulla: '
+            + 'hän istuu kivellä vesileili sylissään, ja patsas toimii '
+            + 'yhä juomalähteenä.',
+          lahde: 'John McLeod, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Paddy Hannan',
+        },
+        {
+          otsikko: 'Kamelit kantoivat kaupungin tarvikkeet',
+          tiedosto: 'CamelTrainKalgoorlie WEFretwellCollection.jpg',
+          teksti: 'Ennen rautatietä ja vesijohtoa kultakenttien tavarat '
+            + 'kulkivat kameleilla, joita ajoivat Afganistanista, '
+            + 'Intiasta, Egyptistä, Iranista ja Turkista tulleet '
+            + 'siirtolaiset — heitä kutsuttiin yhteisnimellä afgaanit. '
+            + 'Veljekset Faiz ja Tagh Mahomet perustivat 1890-luvulla '
+            + 'kamelien huoltoasemia ja kauppoja pitkin kultakenttiä aina '
+            + 'Geraldtoniin asti. Kamelit kestivät hiekkaa ja kuumuutta '
+            + 'paremmin kuin hevoset, ja karavaanit kuljettivat ruokaa, '
+            + 'työkaluja ja jopa kokonaisia puurakennuksia pyörillä '
+            + 'leiristä toiseen. Rautatie ja vesijohto tekivät '
+            + 'karavaanikaupasta lopulta tarpeettoman 1900-luvun alussa.',
+          lyhyt: 'Afgaanikamelinajajat kuljettivat kultakenttien tavarat '
+            + 'ennen rautatietä ja vesijohtoa.',
+          selite: 'Kameliryhmä vetää kokonaista puutaloa pyörillä '
+            + 'Kalgoorliessa 1900-luvun alussa; savua nousee taustan '
+            + 'tehtaan piipuista.',
+          lahde: 'William E. Fretwell, Wikimedia Commons (Public domain)',
+          wiki: 'Afghan cameleers in Australia',
+        },
+        {
+          otsikko: 'Kaksoiskaupunki, joka ei suostu yhdeksi',
+          tiedosto: 'Boulder railway station, 2016 (01).jpg',
+          teksti: 'Boulder syntyi kivenheiton päähän Kalgoorliesta, mutta '
+            + 'kieltäytyi jyrkästi sulautumasta naapuriinsa: kun rautatie '
+            + 'ulotettiin Kalgoorlieen 1896, boulderilaiset raivostuivat '
+            + 'pelätessään kaupan valuvan ohitse, ja vaativat oman '
+            + 'asemansa. Rata jatkui Boulderiin 1897, ja kultasuonen '
+            + 'ympärille rakennettiin Golden Mile Loopline -niminen '
+            + 'kehärata, joka kuljetti kaivostyöläisiä kaupunkien ja '
+            + 'kymmenien kaivosten välillä. Kaksikko yhdistyi '
+            + 'hallinnollisesti vasta 1989 nimellä Kalgoorlie-Boulder, '
+            + 'mutta paikalliset puhuvat yhä kahdesta eri kaupungista.',
+          lyhyt: 'Boulder kieltäytyi sulautumasta Kalgoorlieen, ja '
+            + 'kaksikko yhdistyi virallisesti vasta 1989.',
+          selite: 'Boulderin rautatieasema punatiilisine katoksineen ja '
+            + 'aaltopeltikattoineen seisoo tyhjän pysäköintialueen '
+            + 'laidalla.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Boulder, Western Australia',
+        },
+        {
+          otsikko: 'Kuiluista nousi metripaksuinen kultasuoni',
+          tiedosto: 'Hannans North Tourist Mine, 2016 (06).jpg',
+          teksti: 'Kultasuoni tunnetaan Golden Milena, maailman '
+            + 'rikkaimpana neliömailina. Vuoteen 1903 mennessä sen alla '
+            + 'toimi neljäkymmentäyhdeksän erillistä kaivosta, sata '
+            + 'nostotornia ja yli kolmetuhatta kilometriä maanalaisia '
+            + 'käytäviä — kaivosmiehet louhivat kultaa kuiluista, jotka '
+            + 'ulottuivat yli kilometrin syvyyteen. Yksi vanhoista '
+            + 'kaivoksista, Hannans North, on säilytetty museona: sen '
+            + 'nostotornit seisovat yhä punaisella hiekalla, ja kävijät '
+            + 'pääsevät laskeutumaan oppaan kanssa samoihin kuiluihin, '
+            + 'joita miehet louhivat kynttilän valossa yli sata vuotta '
+            + 'sitten.',
+          lyhyt: 'Golden Milella oli 1903 jo 49 kaivosta ja yli 3000 '
+            + 'kilometriä maanalaisia käytäviä.',
+          selite: 'Hannans Northin nostotornit ja punainen '
+            + 'pärekattoinen konehuone seisovat aavikon punaisella '
+            + 'hiekalla sinistä taivasta vasten.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kalgoorlie',
+        },
+        {
+          otsikko: 'Piikkipiru piiloutuu punaiseen hiekkaan',
+          tiedosto: 'Moloch horridus 77894454.jpg',
+          teksti: 'Kalgoorlien ympäröivillä hiekka-aavikoilla elää '
+            + 'piikkipiru, kourallisen kokoinen liskolaji, jonka koko '
+            + 'keho on peitetty terävillä piikeillä petoja vastaan. Se '
+            + 'syö pelkkiä muurahaisia — jopa tuhansia päivässä — ja '
+            + 'nappaa niitä kielellään pesän suulta tuntikausia '
+            + 'liikkumatta. Piikit eivät ole ainoa temppu: liskon '
+            + 'nahassa kulkevat mikroskooppiset urat keräävät kastetta ja '
+            + 'sadetta koko rungon pinnalta ja johtavat veden suoraan '
+            + 'suuhun, joten piikkipiru voi juoda melkein mistä tahansa '
+            + 'kohdasta ihoaan.',
+          lyhyt: 'Piikkipiru juo vettä koko ihollaan ja syö pelkkiä '
+            + 'muurahaisia tuhansittain päivässä.',
+          selite: 'Piikkipiru kävelee punaisella hiekkatiellä; koko keho '
+            + 'on peitetty terävillä, epäsymmetrisillä piikeillä.',
+          lahde: 'Richard Fuller, Wikimedia Commons (CC0)',
+          wiki: 'Piikkipiru',
+        },
+      ],
+    },
+    {
+      id: 'superpit',
+      nimi: 'Superpit',
+      johdanto: 'Golden Mile oli sata vuotta satojen erillisten kuilujen '
+        + 'kaupunki, kunnes 1989 kaikki yhdistettiin yhdeksi jättimäiseksi '
+        + 'kuopaksi. Superpit näkyy nykyään jopa satelliittikuvista.',
+      tehtava: {
+        kysymys: 'Kuinka syvä Kalgoorlien Superpit-avolouhos on?',
+        vaihtoehdot: [
+          'Noin 50 metriä',
+          'Noin 200 metriä',
+          'Yli 600 metriä',
+          'Yli kaksi kilometriä',
+        ],
+        oikea: 2,
+        fakta: 'Superpit on noin 3,5 kilometriä pitkä, 1,6 kilometriä '
+          + 'leveä ja yli 600 metriä syvä — yksi maailman suurimmista '
+          + 'käsin kaivetuista kuopista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman suurimpia käsin kaivettuja kuoppia',
+          tiedosto: 'Super Pit Mine, Kalgoorlie, Western Australia.jpg',
+          teksti: 'Superpit eli Fimistonin avolouhos on suunnilleen 3,5 '
+            + 'kilometriä pitkä, 1,6 kilometriä leveä ja yli 600 metriä '
+            + 'syvä — yksi maailman suurimmista ihmisen kaivamista '
+            + 'kuopista. Louhos on niin valtava, että se erottuu selvästi '
+            + 'satelliittikuvista, ja NASAn maapallon '
+            + 'havainnointisatelliitti on kuvannut sen omaksi kohteekseen. '
+            + 'Näköalapaikalta kaupungin laidalla kuopan pohjalla '
+            + 'liikkuvat jättirekat näyttävät leluautoilta, vaikka niiden '
+            + 'lava on kooltaan pientä omakotitaloa vastaava.',
+          lyhyt: 'Superpit on noin 3,5 kilometriä pitkä ja yli 600 '
+            + 'metriä syvä, näkyy satelliittikuvista.',
+          selite: 'NASAn satelliittikuva Kalgoorliesta: kaupungin '
+            + 'ruutukaava erottuu keskellä, ja oikealla avautuu Superpitin '
+            + 'vaaleanharmaa, epäsäännöllisen muotoinen kuilu '
+            + 'kaivosalueineen.',
+          lahde: 'Jesse Allen, NASA Earth Observatory, Wikimedia Commons (Public domain)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Kaksisataa kuoppaa yhdeksi',
+          tiedosto: 'Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg',
+          teksti: 'Golden Milen alla toimi 1980-luvulle asti kymmeniä '
+            + 'erillisiä kaivosyhtiöitä, jotka olivat kaivaneet samaa '
+            + 'kultasuonta yli sata vuotta omilla kuiluillaan ja omilla '
+            + 'säännöillään. Liikemies Alan Bond yritti 1980-luvun '
+            + 'alussa ostaa kaikki lohkot yhteen omistukseen, mutta '
+            + 'hänen yrityksensä kaatui. Homestake Gold of Australia ja '
+            + 'Normandy Miningin tytäryhtiö onnistuivat siinä, missä '
+            + 'Bond epäonnistui: 1989 noin 260 erillistä louhosoikeutta '
+            + 'yhdistettiin Kalgoorlie Consolidated Gold Minesin '
+            + 'hallintaan yhdeksi avolouhokseksi.',
+          lyhyt: 'Vuonna 1989 noin 260 erillistä kaivosoikeutta '
+            + 'yhdistettiin yhdeksi jättiavolouhokseksi.',
+          selite: 'Superpit päiväsaikaan pilvisen taivaan alla; '
+            + 'punaruskeat ja harmaat kivikerrokset erottuvat selvästi '
+            + 'terasseissa.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Kulta syntyi 2,7 miljardia vuotta sitten',
+          tiedosto: 'Calaverite-Gold-t07-83a.jpg',
+          teksti: 'Golden Milen kulta syntyi noin 2,7 miljardia vuotta '
+            + 'sitten, kun Yilgarnin kraatoni — yksi maapallon vanhimmista '
+            + 'säilyneistä kallioperän kappaleista — puristui kokoon '
+            + 'vuoristonmuodostuksessa. Kuumat, mineraaleja kuljettavat '
+            + 'nesteet virtasivat murroksissa noin neljänkymmenenviiden '
+            + 'miljoonan vuoden ajan ja saostivat kultaa yhdessä '
+            + 'harvinaisten kultatelluridien, kuten kalaveriitin, kanssa. '
+            + 'Telluridit tekivät Golden Milesta poikkeuksellisen mutta '
+            + 'myös hämäävän: toisin kuin kimalteleva puhdas kulta, '
+            + 'telluridimalmi näyttää tavalliselta harmaalta tai '
+            + 'ruskehtavalta kiveltä, ja kultaa on ensin louhittava ja '
+            + 'käsiteltävä, ennen kuin se erottuu näkyväksi.',
+          lyhyt: 'Golden Milen kulta on usein sitoutuneena harmailta '
+            + 'näyttäviin kultatelluridimineraaleihin.',
+          selite: 'Kellertävän harmaa, tiivis kivinäyte, jossa tumman '
+            + 'pilkulliset telluridimineraalit erottuvat vaaleasta '
+            + 'kivestä ilman kiiltävää kultaa.',
+          lahde: 'Robert M. Lavinsky, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Yilgarn Craton',
+        },
+        {
+          otsikko: 'Rekka jonka lavalle mahtuisi omakotitalo',
+          tiedosto: 'Cat793C LeTourneau L-1850 Super Pit.JPG',
+          teksti: 'Superpitin pohjalla työskentelevät rekat ovat '
+            + 'kooltaan lähes kaksikerroksisen talon kokoisia: yhden '
+            + 'pyörän halkaisija ylittää aikuisen ihmisen pituuden, ja '
+            + 'yksi lava vetää yli 200 tonnia malmia kerralla. Rekat '
+            + 'kiipeävät kuopan seinämiin louhittuja mutkittelevia '
+            + 'ajoteitä pitkin päivin ja öin, ja niiden matka pohjalta '
+            + 'reunalle voi kestää yli tunnin. Louhinnassa käytetään '
+            + 'myös suuria pyöräkuormaajia, jotka täyttävät rekkojen '
+            + 'lavan muutamassa kauhallisessa — pelin kuvassa näkyvä '
+            + 'kuormaaja yltää rekan renkaan puoliväliin asti.',
+          lyhyt: 'Superpitin jättirekan yksi lava vetää yli 200 tonnia '
+            + 'kultamalmia kerralla.',
+          selite: 'Kaksi keltaista jättirekkaa Superpitin pohjalla: '
+            + 'toinen kuljettaa täyttä lavallista kiveä, toinen on '
+            + 'pyöräkuormaaja.',
+          lahde: 'Geomartin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+        {
+          otsikko: 'Katu jonka kulta rakensi',
+          tiedosto: 'Hannan Street, Kalgoorlie, 2018 (01).jpg',
+          teksti: 'Kultaryntäyksen tuoma raha näkyy yhä Hannan '
+            + 'Streetillä, Kalgoorlien pääkadulla: kadun varrella seisoo '
+            + 'rivi 1890- ja 1900-luvun vaihteen tiilirakennuksia '
+            + 'koristeellisine parvekkeineen ja pylväskäytävineen, jotka '
+            + 'suojaavat jalkakäytävää aavikon polttavalta auringolta. '
+            + 'Rakennukset — pankkeja, hotelleja ja kauppahuoneita — '
+            + 'rakennettiin kertomaan tulijoille, ettei Kalgoorlie ollut '
+            + 'mikä tahansa hetken telttaleiri, vaan kaupunki, joka '
+            + 'aikoi jäädä pysyväksi kultarahan turvin.',
+          lyhyt: 'Hannan Streetin koristeelliset tiilitalot rakennettiin '
+            + 'kultaryntäyksen rahalla 1890-luvulla.',
+          selite: 'Hannan Street aurinkoisena päivänä: katua reunustavat '
+            + 'koristeelliset tiilitalot pylväskäytävineen ja '
+            + 'parvekkeineen.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kalgoorlie',
+        },
+        {
+          otsikko: 'Kulta ei ole vieläkään loppumassa',
+          tiedosto: 'Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg',
+          teksti: 'Superpit ei ole historiaa: avolouhos on tuottanut jo '
+            + 'yli 21 miljoonaa unssia kultaa vuodesta 1989, ja vuonna '
+            + '2020 omistajat saivat luvan jatkaa louhintaa ainakin '
+            + 'vuoteen 2035 asti, minkä myötä kaivokselle palkattiin '
+            + 'sata uutta työntekijää. Samalla vanhat maanalaiset '
+            + 'kaivokset, kuten Mount Charlotte, toimivat yhä kuopan '
+            + 'reunan alla omilla kuiluillaan. Kulta ei ole '
+            + 'Kalgoorliesta loppumassa, vaikka ensimmäinen löytö tehtiin '
+            + 'jo yli sata kolmekymmentä vuotta sitten ja moni ennusti '
+            + 'kaupungin näivettyvän jo vuosikymmeniä sitten.',
+          lyhyt: 'Superpit on tuottanut yli 21 miljoonaa unssia kultaa, '
+            + 'ja lupa louhintaan jatkuu 2035 asti.',
+          selite: 'Panoraama Superpitin yleisöltä avautuvalta '
+            + 'näköalapaikalta: porrastetut louhosseinämät kaartuvat '
+            + 'kuvan poikki, ja mutkitteleva ajotie kiertää pohjalle '
+            + 'asti.',
+          lahde: 'Alexey V. Kurochkin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Super Pit gold mine',
+        },
+      ],
+    },
+  ],
+  birdsville: [
+    {
+      id: 'kaupunki',
+      nimi: 'Birdsville',
+      johdanto: 'Birdsville lymyää Queenslandin lounaiskulmassa, missä '
+        + 'Diamantina-joki hupenee Simpsonin aavikon hiekkaan. '
+        + 'Isoisän matkavuonna 1873 paikkaa ei vielä ollut — mutta '
+        + 'Burke ja Wills leiriytyivät samalle kohdalle jo 1861.',
+      nostot: [
+        {
+          otsikko: 'Leiri numero 76',
+          teksti: 'Vuonna 1861 Robert O\'Hara Burke ja William John '
+            + 'Wills palasivat epäonnistuneelta Pohjois-Australian '
+            + 'ylitykseltä nälkiintyneinä ja aikataulusta jäljessä. '
+            + 'Retkikunnan reitti kulki Diamantina-joen vartta, ja '
+            + 'yksi sen leiripaikoista — virallisissa kartoissa '
+            + 'leiri numero 76 — osui lähes tarkalleen kohtaan, '
+            + 'johon Birdsville parikymmentä vuotta myöhemmin '
+            + 'rakennettiin. Burke ja Wills eivät saaneet tietää '
+            + 'siitä: he kuolivat nälkään muutaman viikon kuluttua '
+            + 'Cooper Creekin varrella. Heidän karttansa jäivät '
+            + 'kuitenkin jäljelle, ja niiden ansiosta tiedetään, '
+            + 'että eurooppalaiset kulkivat Birdsvillen kohdalla jo '
+            + 'kaksitoista vuotta ennen isoisän matkaa.',
+          wiki: 'Burke and Wills expedition',
+        },
+        {
+          otsikko: 'Kaupunki, jolla on kolme syntytarinaa',
+          teksti: 'Kun kauppias Matthew Flynn pystytti 1870-luvun '
+            + 'lopulla karjareitin varrelle karun varastokopin, '
+            + 'paikkaa sanottiin vielä Diamantina Crossingiksi. '
+            + 'Uudesta nimestä on kolme kilpailevaa tarinaa. '
+            + 'Pandie Pandie -aseman Robert Frew ehdotti sitä '
+            + 'seudun runsaan linnuston mukaan. Toisen tarinan '
+            + 'mukaan kauppiaat Percy Bird ja George Field '
+            + 'perustivat kaupan nimeltä "Birdfield", jonka '
+            + 'Adelaiden tukkuliike G. ja R. Wills kirjoitti '
+            + 'vuonna 1882 vahingossa osoitteeseen "Birdsville" — '
+            + 'ja nimi jäi elämään. Kolmannen mukaan alun perin '
+            + 'oli "Burtsville", erään Burt-nimisen miehen mukaan, '
+            + 'joka vain vääntyi ajan myötä nykyiseksi.',
+          wiki: 'Birdsville',
+        },
+        {
+          otsikko: 'Tulliasema keskellä tyhjyyttä',
+          teksti: 'Birdsville seisoo Queenslandin ja Etelä-Australian '
+            + 'rajalla, ja ennen liittovaltion perustamista 1901 '
+            + 'jokainen rajan yli kuljetettu karjalauma tai '
+            + 'tavaraerä maksoi tullia. Kaupunkiin nousi oma '
+            + 'tullitoimisto, ja rahavirta toi mukanaan kolme '
+            + 'hotellia, kauppoja ja poliisiaseman. Väkiluku nousi '
+            + 'noin sadastakymmenestä vuonna 1889 yli kolmeensataan '
+            + 'vuosisadan vaihteessa. Kun liittovaltio poisti '
+            + 'sisärajojen tullit vuonna 1901, tulovirta katkesi '
+            + 'yhtä äkkiä kuin oli alkanutkin: 1950-luvulla '
+            + 'Birdsvillessä asui enää noin viisikymmentä ihmistä, '
+            + 'ja kaupunki eli lähinnä ohikulkevasta karjatiestä.',
+          wiki: 'Birdsville',
+        },
+        {
+          otsikko: 'Pubi, joka piti janon loitolla',
+          teksti: 'Birdsville Hotel rakennettiin noin 1884 palvelemaan '
+            + 'karjapaimenia, jotka olivat ajaneet nautoja satoja '
+            + 'kilometrejä pölyisen aavikkotien läpi eteläisille '
+            + 'markkinoille. Rautalevykatto ja paksut kiviseinät '
+            + 'pitivät sisätilan siedettävänä, vaikka ulkona '
+            + 'lämpötila nousisi yli neljäänkymmeneen asteeseen. '
+            + 'Pubista tuli koko Diamantina-seudun kokoontumispaikka: '
+            + 'sinne pysähdyttiin postin, kaupan ja juoruilun '
+            + 'vuoksi yhtä lailla kuin oluen. Rakennus seisoo '
+            + 'samalla paikalla yhä tänään ja on koko Birdsvillen '
+            + 'tunnetuin maamerkki — moni matkailija ajaa satoja '
+            + 'kilometrejä aavikkoa pelkästään nähdäkseen sen.',
+          tiedosto: 'Birdsville Hotel.jpg',
+          lyhyt: 'Birdsville Hotelin rautakattoinen kivirakennus seisoo yksinään kaupungin pölyisellä pääkadulla.',
+          selite: 'Birdsville Hotelin rautakattoinen kivirakennus '
+            + 'seisoo aamuauringossa kaupungin pölyisellä '
+            + 'pääkadulla, veranta edessään ja lippu tangossa.',
+          lahde: 'Stuart Edwards, Wikimedia Commons (PD)',
+          wiki: 'Birdsville Hotel',
+        },
+        {
+          otsikko: 'Kilpahevoset keskellä autiomaata',
+          teksti: 'Syksyllä 1882 sadatoista karjatilan omistajaa, '
+            + 'isäntää ja paimenta kokoontui Queenslandin ja '
+            + 'Etelä-Australian rajalle kilpailemaan hevosillaan — '
+            + 'ilman lähtökarsinoita, vain hatun pudotuksesta '
+            + 'liikkeelle. Muutamaa kuukautta myöhemmin '
+            + 'neljäkymmentäkaksi osallistujaa perusti Border '
+            + 'Jockey Clubin rautakauppa Burt & Co:n tiloissa, ja '
+            + 'Birdsville Racesista tuli vuotuinen perinne, jota '
+            + 'sanotaan yhä "aavikon Melbourne Cupiksi". Kilparata '
+            + 'siirrettiin 1930-luvulla kaupungin länsilaidalta '
+            + 'nykyiselle paikalleen, ja tapahtuma vetää yhä '
+            + 'syyskuisin tuhansia vieraita paikkaan, jossa on '
+            + 'muina aikoina vain muutama sata asukasta.',
+          tiedosto: 'Birdsville Racecourse in the Queensland outback, circa 1926.JPG',
+          lyhyt: 'Hevoset laukkaavat pölypilvessä avoimella hiekkaradalla vuonna 1926, katsojia radan reunalla.',
+          selite: 'Hevoset laukkaavat pölypilvessä avoimella '
+            + 'hiekkaradalla vuonna 1926, ja katsojia seisoo '
+            + 'rypäissä radan reunalla ilman aitoja.',
+          lahde: 'Cliff Everitt, John Oxley Library, State Library '
+            + 'of Queensland, Wikimedia Commons (PD)',
+          wiki: 'Birdsville Races',
+        },
+        {
+          otsikko: 'Joki, joka ei tiedä mihin virrata',
+          teksti: 'Diamantina-joki ei kulje yhtä uomaa vaan haarautuu '
+            + 'Birdsvillen kohdalla kymmeniksi mataliksi kanaviksi, '
+            + 'jotka risteilevät leveänä sokkelona kohti Etelä-'
+            + 'Australiaa. Suurimman osan vuodesta uomat ovat '
+            + 'kuivia hiekkajuovia, mutta kun sadekauden tulva '
+            + 'saapuu pohjoisesta viikkojen viiveellä, se voi '
+            + 'levitä paikoin kolmenkymmenen kilometrin levyiseksi. '
+            + 'Silloin alaville tulvatasangoille kerääntyy jopa '
+            + 'neljäsataaviisikymmentätuhatta vesilintua, ja alue '
+            + 'on siksi luokiteltu kansainvälisesti tärkeäksi '
+            + 'lintualueeksi. Kuivina vuosina Thundapurtyn kaltaiset '
+            + 'syvät altaat pitävät veden ja kalat hengissä seuraavaan '
+            + 'tulvaan asti.',
+          tiedosto: 'The edge of Thundapurty Waterhole, Birdsville, Queensland, 2021.jpg',
+          lyhyt: 'Thundapurtyn tyyni vesiallas lepää punaruskeiden rantojen ja harvan puuston keskellä.',
+          selite: 'Thundapurtyn tyyni vesiallas lepää Diamantina-joen '
+            + 'uomassa punaruskeiden rantojen ja harvan '
+            + 'puuston keskellä — kuivan kauden viimeinen '
+            + 'suoja kaloille ja linnuille.',
+          lahde: 'Royal Geographical Society of Queensland, '
+            + 'Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Diamantina River',
+        },
+        {
+          otsikko: 'Punainen dyyni autiomaan portilla',
+          teksti: 'Kolmenkymmenenviiden kilometrin päässä '
+            + 'Birdsvillestä länteen alkaa Simpsonin aavikko, ja '
+            + 'sen ensimmäinen dyyni on kaupungin tunnetuin '
+            + 'retkikohde. Big Rediksi kutsuttu hiekkaharju — '
+            + 'alkuperäiseltä nimeltään Nappanerica — on '
+            + 'nelikymmentä metriä korkea ja värjäytynyt punaiseksi '
+            + 'hiekkaan sitoutuneesta raudasta. Se on ensimmäinen '
+            + 'yli tuhannesta samansuuntaisesta dyynistä, jotka '
+            + 'juovittavat koko aavikkoa idästä länteen. Nykyään '
+            + 'harjulle kiivetään auringonlaskun aikaan katsomaan, '
+            + 'kun taivas ja hiekka värjäytyvät molemmat '
+            + 'oranssinpunaisiksi — ja moni yrittää ajaa harjun yli '
+            + 'nelivetoautolla, mikä ei aina onnistu ensiyrittämällä.',
+          tiedosto: 'BigRed.JPG',
+          lyhyt: 'Nelivetoauto kiipeää punaisen hiekkadyynin harjanteelle, taustalla loivasti aaltoileva aavikko.',
+          selite: 'Nelivetoauto kiipeää Big Redin punaisen '
+            + 'hiekkadyynin harjanteelle, ja taustalla aavikko '
+            + 'aaltoilee loivina dyyneinä horisonttiin asti.',
+          lahde: 'Paul Hanly, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Simpson Desert',
+        },
+      ],
+    },
+    {
+      id: 'mikirit',
+      nimi: 'Mikirit — aavikon kaivot',
+      johdanto: 'Ennen karjapaimenia ja kilpahevosia Birdsvillen '
+        + 'seudulla asui wangkangurrukansa, joka selvisi Simpsonin '
+        + 'aavikon keskellä käsin kaivettujen kaivojen, mikirien, '
+        + 'ansiosta — tuhansia vuosia ennen kuin kukaan eurooppalainen '
+        + 'näki seutua.',
+      tehtava: {
+        kysymys: 'Kuinka moneen ihmiseen yksi mikiri-kaivo saattoi parhaimmillaan riittää?',
+        vaihtoehdot: [
+          'Noin kymmeneen',
+          'Noin neljäänkymmeneen',
+          'Noin kahteensataan',
+          'Kaivot riittivät vain yhdelle perheelle kerrallaan',
+        ],
+        oikea: 1,
+        fakta: 'Syvimmät mikirit olivat neljästä kuuteen metriä syviä, '
+          + 'ja parhaat niistä pystyivät tarjoamaan vettä jopa '
+          + 'neljänkymmenen hengen ryhmälle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kansa, joka asui autiomaassa',
+          teksti: 'Wangkangurrukansa on asuttanut Simpsonin aavikkoa '
+            + 'kymmenien tuhansien vuosien ajan, ja heidän '
+            + 'perinteinen alueensa — Munga-Thirri, "suurten '
+            + 'hiekkakumpujen maa" — ulottui Dalhousie Springsiltä '
+            + 'aina nykyisen Birdsvillen kohdalle asti. Alue on '
+            + 'yksi maailman kuivimmista asutuista seuduista: '
+            + 'sadetta tulee harvoin, ja suurin osa vedestä on '
+            + 'piilossa syvällä hiekan alla. Wangkangurrut '
+            + 'ratkaisivat ongelman kaivamalla käsin kymmeniä '
+            + 'kaivoja, joiden sijainti periytyi suvun tiedossa '
+            + 'polvesta toiseen. Vuonna 2014 heidän oikeutensa '
+            + 'omaan maahan tunnustettiin virallisesti, ja alue '
+            + 'kattaa yhä myös Birdsvillen kylän.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Kaivo, joka kantoi neljäkymmentä ihmistä',
+          teksti: 'Mikiri on wangkangurrujen sana käsin kaivetulle '
+            + 'kaivolle, joka johti kapean, vinosti hiekkaan '
+            + 'kaivetun kuilun pohjavedelle asti. Syvimmät '
+            + 'tunnetut mikirit olivat neljästä kuuteen metriä '
+            + 'syviä, ja parhaat niistä riittivät jopa '
+            + 'neljänkymmenen hengen ryhmälle — käytännössä koko '
+            + 'suvulle. Tutkijat ovat tähän mennessä paikantaneet '
+            + 'ainakin kuusitoista tällaista kaivoa, mutta '
+            + 'perimätiedossa niitä mainitaan enemmänkin. Kaivot '
+            + 'olivat samalla leiripaikkoja: niiden ympärille '
+            + 'kokoonnuttiin, kerrottiin tarinoita ja levättiin, '
+            + 'ennen kuin siirryttiin seuraavalle kaivolle, jotta '
+            + 'vesi ehti vähitellen täyttyä uudelleen.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Aavikko tyhjeni vuosisadan vaihteessa',
+          teksti: 'Wangkangurrujen elämä aavikolla jatkui '
+            + 'muuttumattomana kauan sen jälkeen, kun karjatilat '
+            + 'olivat jo levittäytyneet seudun laitamille. Vasta '
+            + 'ankara kuivuus 1800-luvun ja 1900-luvun vaihteessa '
+            + 'pakotti viimeiset perheet jättämään mikirinsä ja '
+            + 'siirtymään lähemmäs karjatiloja ja Birdsvillen '
+            + 'kaltaisia asutuskeskuksia, joissa oli varmempi pääsy '
+            + 'ruokaan ja veteen. Muutto ei ollut helppo: '
+            + 'siirtokuntien hallinto kohteli wangkangurruja '
+            + 'toisen luokan asukkaina, eikä perinteiseen elämään '
+            + 'aavikolla ollut enää paluuta. Kaivojen tarkka '
+            + 'sijainti alkoi unohtua, kun niiden ääressä ei enää '
+            + 'asuttu vuosittain.',
+          wiki: 'Wangkangurru',
+        },
+        {
+          otsikko: 'Kaivo, joka löytyi viisisataa vuotta myöhässä',
+          teksti: 'Vuonna 2019 tutkijat löysivät aavikon '
+            + 'dyynikentästä mikirin, jota ei mainittu yhdessäkään '
+            + 'aiemmassa muistiinpanossa tai sukujen kertomuksessa. '
+            + 'Kaivo oli hylätty jo viisisataa tai kuusisataa '
+            + 'vuotta aiemmin, todennäköisesti siksi, että '
+            + 'pohjaveden pinta oli laskenut niin alas, ettei '
+            + 'kaivo enää antanut vettä. Löytö oli mahdollinen '
+            + 'vain siksi, että Munga-Thirrin puiston vartija Don '
+            + 'Rowlands kutsui arkeologit paikalle etsimään '
+            + 'kaivoa yhdessä. Se osoitti, että aavikon vedenkäyttö '
+            + 'ulottuu paljon pidemmälle historiaan kuin '
+            + 'suullinen perimätieto yksin muistaa.',
+          wiki: 'Simpson Desert',
+        },
+        {
+          otsikko: 'Vartija, joka toi tarinat takaisin',
+          teksti: 'Don Rowlands syntyi 1948 ja on wangkangurru-'
+            + 'yarluyandi-suvun vanhin. Vuonna 1994 hänestä tuli '
+            + 'Munga-Thirrin kansallispuiston vartija — puiston, '
+            + 'joka kattaa suuren osan hänen esi-isiensä '
+            + 'perinteisestä maasta Simpsonin aavikolla. '
+            + 'Kolmenkymmenen vuoden aikana hän on ohjannut '
+            + 'tutkijoita mikirien jäljille, opastanut kävijöitä '
+            + 'ja kirjannut ylös paikkoja ja tarinoita, jotka '
+            + 'olisivat muuten unohtuneet. Työstään hän sai '
+            + 'Australian kunniamerkin OAM. Elokuussa 2026, '
+            + 'kolmenkymmenenkolmen vuoden palveluksen jälkeen, '
+            + 'Rowlands jätti vartijan univormun — mutta lupasi '
+            + 'kävelevänsä aavikolla yhä.',
+        },
+        {
+          otsikko: 'Sisilisko, joka juo ihollaan',
+          teksti: 'Piikkipiru on pienikokoinen, piikkien peittämä '
+            + 'sisiliskolaji, joka elää juuri tällaisilla '
+            + 'aavikoilla — ja sen tapa juoda on ainutlaatuinen '
+            + 'koko eläinkunnassa. Sen suomujen välissä kulkee '
+            + 'verkosto mikroskooppisen kapeita uria, jotka '
+            + 'imevät vettä kapillaari-ilmiöllä mistä tahansa '
+            + 'kohdasta ihoa — kasteesta, kosteasta hiekasta tai '
+            + 'lammikosta — ja kuljettavat sen automaattisesti '
+            + 'suuhun asti. Piikkipiru ei siis tarvitse edes '
+            + 'upottaa päätään veteen: pelkkä jalkojen '
+            + 'kastuminen kosteassa hiekassa riittää juomiseen. '
+            + 'Sama tekniikka toimii myös sateessa, jolloin koko '
+            + 'ruumis kerää vettä yhtä aikaa.',
+          tiedosto: 'Thornydevil.jpg',
+          lyhyt: 'Piikkien peittämä pieni sisilisko seisoo hiekalla, väriltään ruskean ja keltaisen kirjava.',
+          selite: 'Piikkien peittämä pieni piikkipiru seisoo punaisella '
+            + 'hiekalla Länsi-Australiassa — sama laji elää '
+            + 'myös Simpsonin aavikolla.',
+          lahde: 'Bäras, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Thorny devil',
+        },
+        {
+          otsikko: 'Kenguru, joka ei juo, jos ei ole pakko',
+          teksti: 'Jättikenguru eli punajättikenguru on Australian '
+            + 'suurin pussieläin ja aavikon näkyvin asukas: '
+            + 'täysikasvuinen uros voi painaa jopa '
+            + 'yhdeksänkymmentä kiloa. Kuivina kausina se '
+            + 'selviää lähes ilman juomista, koska sen munuaiset '
+            + 'väkevöivät virtsan tavallista tehokkaammin ja '
+            + 'paksusuoli imee ruoansulatuksesta talteen '
+            + 'viimeisenkin kosteuspisaran. Suurin osa '
+            + 'tarvittavasta vedestä tulee ruohosta ja '
+            + 'lehdistä, ei juomapaikoista. Kuumimpina '
+            + 'tunteina jättikenguru pysyttelee varjossa, '
+            + 'nuolee käsivarsiaan viilentyäkseen haihtumalla '
+            + 'ja liikkuu vasta illan viiletessä — sama '
+            + 'käytös, jota wangkangurrujen esi-isät oppivat '
+            + 'lukemaan tuhansien vuosien aikana.',
+          tiedosto: 'Female Red Kangaroo (Macropus rufus).jpg',
+          lyhyt: 'Jättikenguru seisoo pystyssä aidatussa tarhassa, turkki on vaaleanharmaa ja korvat pystyssä.',
+          selite: 'Naaraspuolinen jättikenguru seisoo pystyssä '
+            + 'eläintarhan tarhassa Wagga Waggassa — laji '
+            + 'elää luonnossa samanlaisella kuivalla ruohoaavikolla '
+            + 'kuin Birdsvillen ympäristössä.',
+          lahde: 'Bidgee, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Red kangaroo',
+        },
+      ],
+    },
+  ],
+  mountisa: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mount Isa',
+      johdanto: 'Mount Isa kohoaa Luoteis-Queenslandin punaisella '
+        + 'ylängöllä Leichhardtin joen varrella. Joki sai nimensä jo '
+        + '1856, kauan ennen kuin kukaan tiesi kivien alla lymyävästä '
+        + 'hopeasta ja lyijystä.',
+      nostot: [
+        {
+          otsikko: 'Joki, joka lainasi nimensä kadonneelta',
+          teksti: 'Kaupungin läpi virtaava Leichhardtin joki sai '
+            + 'nimensä vuonna 1856, kun tutkimusmatkailija Augustus '
+            + 'Gregory ylitti sen Pohjois-Australian-retkellään ja '
+            + 'erehtyi pitämään sitä Albert-jokena. Saman virheen oli '
+            + 'tehnyt vuosikymmentä aiemmin Ludwig Leichhardt omalla '
+            + 'tutkimusmatkallaan, joten Gregory nimesi joen kadonneen '
+            + 'kollegansa mukaan: "Tämän joen erehtyi tohtori Leichhardt '
+            + 'pitämään Albert-jokena, ja siksi nimesin sen hänen '
+            + 'mukaansa." Joen lähde on vain parikymmentä kilometriä '
+            + 'Mount Isasta etelään, ja se virtaa suoraan kaupungin '
+            + 'läpi. Vasta lähes seitsemän vuosikymmentä myöhemmin sen '
+            + 'varrelle nousi kaivoskaupunki.',
+          tiedosto: 'Lake Moondarra Panorama.jpg',
+          lyhyt: 'Leichhardtin joki on padottu Lake Moondarraksi aivan '
+            + 'Mount Isan kupeessa.',
+          selite: 'Leichhardtin joki on padottu tekojärveksi nimeltä '
+            + 'Lake Moondarra aivan Mount Isan pohjoispuolella; kuvassa '
+            + 'turkoosi vesi kimmeltää punaisten kivikkokukkuloiden ja '
+            + 'eukalyptuspensaikon keskellä.',
+          lahde: 'Ravenspear82, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Leichhardt River',
+        },
+        {
+          otsikko: 'Kalkatungujen nimi elää kivien välissä',
+          teksti: 'Ennen brittiläisiä uudisasukkaita seutua olivat '
+            + 'asuttaneet kalkatungut eli kalkadoonit tuhansien vuosien '
+            + 'ajan. Kansa tunsi kivikkoiset kukkulat ja niiden '
+            + 'vedenlähteet paremmin kuin kukaan myöhemmin tullut, ja se '
+            + 'puolusti maataan pitkään: syyskuussa 1884 lähistöllä '
+            + 'käytiin ase-etu menettäneen kansan viimeinen suuri '
+            + 'taistelu, jota kutsutaan nimellä Battle Mountain. '
+            + 'Kalkatungujen nimi elää yhä seudun kalliopaljastumilla '
+            + 'pesivässä pikkulinnussa: tummaruohomaluri (Amytornis '
+            + 'ballarae) tavataan vain kapealla vyöhykkeellä Mount Isan '
+            + 'ympäristössä eikä juuri muualla maailmassa.',
+          tiedosto: 'Amytornis ballarae 77542098.jpg',
+          lyhyt: 'Tummaruohomaluri elää vain kapealla vyöhykkeellä '
+            + 'Mount Isan kivikkokukkuloilla.',
+          selite: 'Tummaruohomaluri (Amytornis ballarae) kyyristyy '
+            + 'punaisten kivien keskellä kuivan heinikon suojassa; '
+            + 'oikealla näkyy sen pesä risuista kasattuna kivien väliin.',
+          lahde: 'Kym Nicolson, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Kalkatungu',
+        },
+        {
+          otsikko: 'Maailman rikkain malmisuoni',
+          teksti: 'Mount Isan malmiot ovat maailman suurimpia lyijyn, '
+            + 'sinkin ja hopean kertymiä, ja niiden vieressä louhitaan '
+            + 'erikseen kuparia. Malmi on kerrostunut noin 1,6 miljardia '
+            + 'vuotta sitten syntyneeseen Urquhart-liuskeeseen, ja se '
+            + 'jatkuu maan alla yli neljän ja puolen kilometrin matkalla '
+            + 'ja puolentoista kilometrin syvyyteen. Kaivoskaupungin '
+            + 'maisemaa hallitsevat kaksi piippua: korkeampi kuuluu '
+            + 'lyijysulatolle ja punavalkoraidallinen kuparisulatolle. '
+            + 'Niiden juurella kohoavat avolouhoksen kasat ja vanha '
+            + 'nostotorni, joka on jo poissa käytöstä mutta seisoo yhä '
+            + 'paikallaan kaupungin symbolina.',
+          tiedosto: 'Mt isa mines qld.jpg',
+          lyhyt: 'Mount Isa Minesin piiput ja louhokset hallitsevat '
+            + 'koko kaupungin taivaanrantaa.',
+          selite: 'Mount Isa Minesin tehdasalue levittäytyy laaksoon: '
+            + 'korkeampi piippu kuuluu lyijysulatolle, matalampi '
+            + 'punavalkoraidallinen kuparisulatolle, ja niiden välissä '
+            + 'kohoavat vanhat nostotornit ja louhoksen kasat.',
+          lahde: 'Geomartin, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Mount Isa Mines',
+        },
+        {
+          otsikko: 'Kaivoskaupungin synty levähdystauolla',
+          teksti: 'Prospektori John Campbell Miles löysi 23. helmikuuta '
+            + '1923 levähdystauolla poikkeuksellisen rikasta hopea- ja '
+            + 'lyijymalmia sisältäviä kiviä. Hän nimesi yhden '
+            + 'louhosalueistaan sisarensa Isabellen mukaan, mutta koko '
+            + 'kohteen nimi syntyi toista kautta: Milesin ystävä Moses '
+            + 'Rowlands oli kertonut hänelle Länsi-Australian hylätystä '
+            + 'kaivoskaupungista nimeltä Mount Ida, ja tästä muistista '
+            + 'syntyi vääntyneenä Mount Isa. Ensimmäiset leirit '
+            + 'pystytettiin puiden alle telttoihin ja rakennelmiin, ja '
+            + 'malmia kuljetettiin aluksi hevosilla ja varhaisilla '
+            + 'kuorma-autoilla, sillä rautatietä ei vielä ollut.',
+          tiedosto: 'One of the first camps at Mount Isa, 1923.jpg',
+          lyhyt: 'Ensimmäinen leiri pystytettiin puiden alle pian '
+            + 'malmilöydön jälkeen 1923.',
+          selite: 'Ryhmä miehiä poseeraa varhaisen autonsa ja '
+            + 'hevoskärryn vieressä puiden alla pystytetyn karkean '
+            + 'leirin edessä pian ensimmäisten malmilöytöjen jälkeen '
+            + 'vuonna 1923.',
+          lahde: 'Unknown author, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Riversleigh — kivettynyt aarrearkku',
+          teksti: 'Luoteeseen Mount Isasta, Boodjamullan '
+            + 'kansallispuistossa, sijaitsee Riversleigh: yksi maailman '
+            + 'kymmenestä merkittävimmästä fossiilikohteesta ja Unescon '
+            + 'maailmanperintökohde vuodesta 1994. Kalkkikivikerrostumista '
+            + 'on löydetty yli 20 miljoonan vuoden takaisia oligoseeni- '
+            + 'ja mioseenikautisia nisäkkäiden, lintujen ja matelijoiden '
+            + 'jäänteitä, muun muassa pussileijona Thylacoleon ja '
+            + 'jättimäisten juoksulintujen luita. Löydöt kertovat, miten '
+            + 'Australian ainutlaatuinen eläimistö kehittyi sademetsän '
+            + 'vähitellen väistyessä kuivemman aavikon tieltä – muutos, '
+            + 'joka muovasi koko mantereen myöhempää luontoa.',
+          tiedosto: 'D Site, Riversleigh, Australian Fossil Mammal Site.jpg',
+          lyhyt: 'Riversleighin D-alueen kalkkikivipaljastuma kätkee '
+            + 'miljoonien vuosien fossiileja.',
+          selite: 'Riversleighin D-alueen ruohoinen rinne ja punertava '
+            + 'kalkkikivipaljastuma edustavat maisemaa, josta '
+            + 'ensimmäiset nisäkäsfossiilit löydettiin; etualalla kasvaa '
+            + 'eukalyptuspuu.',
+          lahde: 'James Fitzgerald, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riversleigh World Heritage Area',
+        },
+        {
+          otsikko: 'Punajättikenguru, aavikon jättiläinen',
+          teksti: 'Punajättikenguru on Mount Isan seudun aavikon suurin '
+            + 'asukas ja koko maailman suurin pussieläin: '
+            + 'täysikasvuinen uroskenguru voi olla yli 1,8 metriä '
+            + 'pitkä. Vuonna 1932 Malbonissa, Mount Isan seudulla, '
+            + 'valokuvattiin karjatilan aidatussa pihassa tavallista '
+            + 'suurempi yksilö, jonka omistaja J. Lonergan halusi '
+            + 'ikuistaa kuvaan pystyssä seisomassa. Laji kestää '
+            + 'kuivuutta erinomaisesti: se voi tulla toimeen ilman '
+            + 'juomavettä pitkiäkin aikoja, koska se saa suurimman osan '
+            + 'nesteestään syömästään kasvillisuudesta ja välttää '
+            + 'päivän kuumimmat tunnit lepäämällä varjossa.',
+          tiedosto: 'StateLibQld 2 256626 Big Red Kangaroo, Mt. Isa district, 1932.jpg',
+          lyhyt: 'Vuonna 1932 kuvattiin poikkeuksellisen suuri '
+            + 'punajättikenguru Malbonin karjatilalla.',
+          selite: 'Mustavalkoisessa kuvassa vuodelta 1932 '
+            + 'poikkeuksellisen suuri punajättikenguru seisoo aidatussa '
+            + 'karjatilan pihassa Malbonissa Mount Isan seudulla; '
+            + 'kyltissä lukee "J. Lonergans Kangaroo - Malbon, Q".',
+          lahde: 'L. Plass / State Library of Queensland, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Red kangaroo',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Aavikon kaivoskaupungin arki',
+      johdanto: 'Kaivoskaupunki eli omaa arkeaan kaukana kaikesta: '
+        + 'kamelikaravaanit toivat tavaraa, malmimiehet louhivat maan '
+        + 'alle sairaalankin, ja kerran vuodessa koko seutu kokoontuu '
+        + 'yhä maailman suurimpaan rodeoon.',
+      tehtava: {
+        kysymys: 'Minä vuonna Mount Isassa järjestettiin ensimmäinen '
+          + 'rotaryrodeo, "Centenary Rodeo"?',
+        vaihtoehdot: ['1923', '1942', '1959', '1984'],
+        oikea: 2,
+        fakta: 'Ensimmäinen rodeo, Centenary Rodeo, järjestettiin '
+          + 'elokuussa 1959, ja kilparatsuja jouduttiin taluttamaan '
+          + 'viikkokausia Carandotta-karjatilalta vanhoille '
+          + 'rodeoaitauksille Kalkadoon Parkiin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rodeo, joka toi kaupungin kartalle',
+          teksti: 'Elokuussa 1959 Mount Isassa järjestettiin ensimmäinen '
+            + 'rodeo, "Centenary Rodeo", jossa kilpailtiin muun muassa '
+            + 'sonninratsastuksessa, villihärkäjuoksussa ja avoimessa '
+            + 'hurjastelukilpailussa. Kilparatsuja jouduttiin '
+            + 'taluttamaan viikkokausia Carandotta-karjatilalta '
+            + 'Queenslandin ja Pohjoisterritorion rajalta vanhoille '
+            + 'rodeoaitauksille Kalkadoon Parkiin. Järjestäjien tavoite '
+            + 'oli yksinkertainen: kerätä rahaa hyväntekeväisyyteen ja '
+            + 'saattaa nuori, syrjäinen kaivoskaupunki kartalle. Vuonna '
+            + '1962 kilpailun "All Around Cowboy" -tittelin vei Buddy '
+            + 'Gravener, jonka nimi on säilynyt kaupungin jalkakäytävän '
+            + 'muistolaatassa vielä yli 60 vuotta myöhemmin.',
+          tiedosto: 'Mount Isa Rodeo Capital of Australia plaque, Queensland, 2023.jpg',
+          lyhyt: 'Katukäytävän muistolaatta kunnioittaa rodeon '
+            + 'perustamista ja sen varhaisia kilpailijoita.',
+          selite: 'Kadulle upotetut muistolaatat kertovat rodeon '
+            + 'historiasta: pronssisessa mitalissa lukee "Mount Isa – '
+            + 'Rodeo Capital of Australia" ja "All Around Cowboy Buddy '
+            + 'Gravener 1962", vierellä kaiverretut kuvat '
+            + 'sonninratsastuksesta ja häränpainista.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Eteläisen pallonpuoliskon suurin rodeo',
+          teksti: 'Vuosikymmenten aikana pieni hyväntekeväisyystapahtuma '
+            + 'kasvoi eteläisen pallonpuoliskon suurimmaksi ja '
+            + 'rahakkaimmaksi rodeoksi: elokuun toisena viikonloppuna '
+            + 'kaupungin vakituinen väki, noin 18 000 asukasta, saa '
+            + 'seurakseen yli 25 000 kävijää. Ratsastajia ja '
+            + 'karjankäsittelijöitä saapuu ympäri Australiaa ja '
+            + 'ulkomailtakin kilpailemaan palkintorahoista, jotka ovat '
+            + 'kasvaneet 2000-luvulla ennätyslukemiin. Kolmen päivän '
+            + 'ajan tavallisesti hiljainen kaivoskaupunki täyttyy '
+            + 'karavaaneista, telttamajoituksesta ja live-musiikista, ja '
+            + 'koko seudun vuosikalenteri kiertyy tämän yhden '
+            + 'viikonlopun ympärille.',
+          tiedosto: 'City of Mt Isa surrounded by hills in the Leichhardt Valley, Mt Isa, 2021.jpg',
+          lyhyt: 'Iltahämärässä kaupunki lepää vuorten välissä ennen '
+            + 'rodeoviikonlopun vilskettä.',
+          selite: 'Auringonlaskun väreissä kaupunki levittäytyy '
+            + 'puustoisessa laaksossa, taustalla kohoavat Mount Isa '
+            + 'Minesin piiput ja punaiset kukkulat ympärillä.',
+          lahde: 'Anonymous, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Mount Isa',
+        },
+        {
+          otsikko: 'Ghantownin kamelikuskit',
+          teksti: '1890- ja 1900-luvun vaihteessa Cloncurryn seudulla, '
+            + 'kivenheiton päässä Mount Isasta, toimi Queenslandin '
+            + 'suurin niin kutsuttu ghantown: yli 200 Afganistanista, '
+            + 'Intiasta ja Lähi-idästä tullutta kamelinajajaa ja noin '
+            + '2 000 kamelia. Hevoset ja härät eivät kestäneet '
+            + 'kaivosseudun kuivuutta ja teräviä kiviä yhtä hyvin kuin '
+            + 'kamelit, joten karavaanit kuljettivat malmia, '
+            + 'polttoainetta, ruokaa ja työkaluja kaivoksille ja '
+            + 'takaisin rautatien päästä. Kamelinajajilla oli oma '
+            + 'moskeijansa Coppermine Creekin varrella, ja he pitivät '
+            + 'myös omia kauppapuutarhoja. Viimeiset kamelikaravaanit '
+            + 'väistyivät vasta, kun kuorma-autot yleistyivät '
+            + '1920-luvulla.',
+          tiedosto: 'Horse and camel team, Cloncurry, ca. 1904 (9725658555).jpg',
+          lyhyt: 'Kamelikaravaani kuljetti raskaita laatikoita '
+            + 'Cloncurryn seudulla 1900-luvun alussa.',
+          selite: 'Mustavalkoisessa valokuvassa kaksi kamelinajajaa '
+            + 'johdattaa raskaasti kuormattua kamelijonoa avoimella '
+            + 'tasangolla Cloncurryssä noin 1904; vasemmalla juoksee '
+            + 'pieni koira ja taustalla näkyy tuulimylly.',
+          lahde: 'State Library of Queensland, Wikimedia Commons '
+            + '(ei tunnettuja tekijänoikeusrajoituksia)',
+          wiki: 'Afghan cameleers in Australia',
+        },
+        {
+          otsikko: 'Kaivos, joka ei koskaan avautunut potilaille',
+          teksti: 'Ulkopuolelta Mount Isa näyttää tavalliselta kadulta, '
+            + 'mutta keltaisen kylttitornin alla kävijä pääsee '
+            + 'laskeutumaan oikeaan, entisten kaivosmiesten johtamaan '
+            + 'malmikaivokseen. Hard Times Mine on rakennettu Outback '
+            + 'at Isa -keskuksen yhteyteen, ja kierroksella laskeudutaan '
+            + 'häkkihissillä maan alle kuuntelemaan koneiden jyrinää ja '
+            + 'kokeilemaan painavaa poravasaraa oppaan opastuksella. '
+            + 'Tauolla tarjoillaan teetä, kahvia ja perinteinen pasteija '
+            + 'samassa ruokailuluolassa, jossa oikeat louhosmiehet '
+            + 'aikanaan söivät vuoronsa välissä.',
+          tiedosto: 'Hard Times Mining Company, Barkly Highway in Mount Isa, Queensland, 2023.jpg',
+          lyhyt: 'Hard Times Mine -kierros laskeutuu oikeaan kaivokseen '
+            + 'Outback at Isa -keskuksessa.',
+          selite: 'Korkea puinen nostotorni kyltillä "Hard Times Mining '
+            + 'Company" seisoo Barkly Highwayn varrella; sen alla '
+            + 'vierailijat pääsevät hissillä oikeaan malmikaivokseen '
+            + 'opastetulle kierrokselle.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mount Isa Mines',
+        },
+        {
+          otsikko: 'Kaivosmiehet louhivat oman sairaalansa',
+          teksti: 'Kun Darwiniin pudotettiin pommeja helmikuussa 1942, '
+            + 'Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen '
+            + 'tavoittelevan juuri kaupungin arvokkaita malmivarantoja. '
+            + 'Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta '
+            + 'rinnakkaisesta tunnelista ja niitä yhdistävästä '
+            + 'poikkikäytävästä koostuvan maanalaisen varasairaalan, ja '
+            + 'vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon '
+            + 'parissa viikossa Mount Isa Minesin lainatuilla koneilla. '
+            + 'Leikkaussali, synnytyshuone ja potilasosastot kalustettiin '
+            + 'kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut '
+            + 'eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit '
+            + 'avattiin museona vuonna 2001.',
+          tiedosto: 'Former Underground Hospital, Mount Isa - tunnel (2013).jpg',
+          lyhyt: 'Toisen maailmansodan varasairaalan tunnelit on '
+            + 'säilytetty museona.',
+          selite: 'Hirsituettu maanalainen käytävä on kalustettu '
+            + 'vanhoilla lääkintävälineillä ja hyttysverkolla suojatulla '
+            + 'lastensängyllä; tunneli louhittiin 1942 varasairaalaksi '
+            + 'eikä sitä koskaan tarvittu.',
+          lahde: 'Vic Bushing / Queensland Heritage Branch, Wikimedia '
+            + 'Commons (CC BY 3.0)',
+          wiki: 'Underground Hospital, Mount Isa',
+        },
+        {
+          otsikko: 'Löytöretkeilijä autiomaan halki',
+          teksti: 'Vuosina 1861–62 tutkimusmatkailija William '
+            + 'Landsborough samosi Pohjois-Australian autiomaita etsien '
+            + 'kadonnutta Burke–Wills-retkikuntaa. Matkallaan hän löysi '
+            + 'ja nimesi Gregory-joen ja seurasi sitä lounaaseen, kunnes '
+            + 'seutu muuttui kuivien uomien verkostoksi lähellä paikkaa, '
+            + 'josta myöhemmin tuli Camoowealin kylä – samaa '
+            + 'piirikuntaa, jossa Mount Isa sijaitsee. Landsborough ei '
+            + 'löytänyt jälkeäkään kadonneesta retkikunnasta, mutta '
+            + 'hänen matkansa antoi ensimmäiset eurooppalaiset kuvaukset '
+            + 'koko Barkly-ylängön karusta maastosta – kuusi '
+            + 'vuosikymmentä ennen kuin kukaan aavisti kivien alla '
+            + 'olevan yhtään mitään.',
+          tiedosto: 'William Landsborough.tiff',
+          lyhyt: 'William Landsborough kartoitti seudun autiomaat '
+            + 'etsiessään kadonnutta retkikuntaa.',
+          selite: 'Muotokuvassa 1800-luvulta tutkimusmatkailija William '
+            + 'Landsborough seisoo studion maalatun taustakankaan '
+            + 'edessä hattu kädessään; hän johti 1861–62 retkikuntaa, '
+            + 'joka kulki Mount Isan piirikunnan halki.',
+          lahde: 'John Oxley Library, Wikimedia Commons (PD)',
+          wiki: 'William Landsborough',
+        },
+      ],
+    },
+  ],
+
+  cooberpedy: [
+    {
+      id: 'kaupunki',
+      nimi: 'Coober Pedy',
+      johdanto: 'Coober Pedy kohoaa Etelä-Australian punaisella aavikolla, jonka läpi '
+        + 'tutkimusmatkailija John McDouall Stuart ratsasti jo 1858. Opaali löytyi '
+        + 'vasta 1915, ja siitä lähtien kaupunki on kaivautunut maan alle helteen tieltä.',
+      nostot: [
+        {
+          otsikko: 'Stuart ratsasti ohi tietämättä',
+          teksti: 'Vuonna 1858 tutkimusmatkailija John McDouall Stuart ratsasti kahden '
+            + 'miehen kanssa tämän seudun halki etsien laidunmaita ja mineraaleja. Hän '
+            + 'käänsi kurssin lounaaseen juuri nykyisen Coober Pedyn kohdalla — hevoset '
+            + 'kärsivät terävistä piikivistä, eikä kukaan vielä aavistanut, että kivien '
+            + 'alla piileskeli opaalia. Ylänkö sai myöhemmin hänen mukaansa nimen Stuart '
+            + 'Range. Tällaiset kukkulat, Breakawaysit, ovat sen eroosion kuluttamia '
+            + 'jäänteitä: pehmeä maa-aines on kulunut pois tuulen ja veden mukana, ja '
+            + 'jäljelle on jäänyt vain kovin kerros.',
+          tiedosto: 'Salt & Pepper Breakaways Coober Pedy.jpg',
+          lyhyt: 'Tutkimusmatkailija Stuart ratsasti seudun ohi 1858 aavistamatta opaalia kivien alla.',
+          selite: 'Kaksi eriväristä kumpua Breakawaysin alueella Coober Pedystä pohjoiseen, '
+            + 'kuvattu huhtikuussa 2014: vasemmalla vaaleanharmaa, oikealla okranvärinen '
+            + 'kukkula tasaisen aavikkotasangon keskellä.',
+          lahde: 'Sunil Savur, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Stuart Range',
+        },
+        {
+          otsikko: 'Kupa piti eli valkoisen miehen kuoppa',
+          teksti: 'Kaupungin nimi on väännös kokatha-kielisestä ilmauksesta kupa piti: '
+            + 'kupa viittaa kokemattomaan mieheen tai valkoihoiseen, piti tarkoittaa '
+            + 'kuoppaa tai reikää. Nimi sopii täydellisesti, sillä yli puolet asukkaista '
+            + 'asuu yhä maan alle louhituissa kodeissa, joita kutsutaan nimellä dugout. '
+            + 'Ratkaisu syntyi käytännön pakosta: kesäpäivät nousevat yli 40 asteeseen, '
+            + 'mutta hiekkakiveen kaivetussa huoneessa lämpötila pysyy ympäri vuoden noin '
+            + '23 asteessa. Moni koti alkoi alun perin tyhjäksi jääneenä opaalikuoppana, '
+            + 'jota laajennettiin asuinkelpoiseksi hetki kerrallaan.',
+          tiedosto: 'Coober Pedy - Underground house.jpg',
+          lyhyt: 'Kaupungin nimi tarkoittaa suunnilleen valkoisen miehen kuoppaa alkuperäiskielellä.',
+          selite: 'Kaivettuun hiekkakivirinteeseen tehty asuintalo: keltainen ovi vihreine '
+            + 'kehyksineen kiviverhotussa seinässä, katolla aurinkopaneeli ja sähköpylväs, '
+            + 'ympärillä kuivaa aavikkopensastoa.',
+          lahde: 'Lodo27, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dugout (shelter)',
+        },
+        {
+          otsikko: 'Opaali löytyy, kaupunki kaivautuu maahan',
+          teksti: 'Opaali löytyi seudulta vuonna 1915, kun neljätoistavuotias Willie '
+            + 'Hutchison etsi isänsä kanssa kultaa ja törmäsi sen sijaan hohtaviin '
+            + 'kiviin. Ensimmäisen maailmansodan veteraanit toivat mukanaan '
+            + 'juoksuhaudankaivutaidon, ja pian aavikolle syntyi tuhansia pystysuoria '
+            + 'kuiluja. Jokainen valkoinen kartio on yhden kuilun jäljiltä nostettua '
+            + 'sivukiveä; niitä kertyi vuosikymmenten aikana niin paljon, että maisema '
+            + 'muistuttaa paikoin kuun pintaa. Coober Pedy tuottaa nykyään suuren osan '
+            + 'koko maailman jalo-opaaleista, ja kaivostyötä tehdään yhä pääosin käsin '
+            + 'ja pienillä porakoneilla.',
+          tiedosto: 'CSIRO ScienceImage 3835 Opal fields at Coober Pedy South Australia 1992.jpg',
+          lyhyt: 'Opaali löytyi 1915, ja aavikolle nousi pian tuhansia kaivoskuiluja ja sivukiviläjiä.',
+          selite: 'Kymmeniä vaaleita, kartionmuotoisia sivukiviläjiä pensaikkoisella '
+            + 'aavikolla vuonna 1992; jokainen kartio on jäljiltä yhden kaivetun '
+            + 'opaalikuilun.',
+          lahde: 'John Coppi / CSIRO, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Coober Pedy',
+        },
+        {
+          otsikko: 'Kirkko kalliossa',
+          teksti: 'Coober Pedyssä asuu yli neljäkymmentäviisi kansallisuutta, sillä '
+            + 'toisen maailmansodan jälkeen kaivoksille saapui opaalinetsijöitä ympäri '
+            + 'Etelä- ja Itä-Eurooppaa. Serbialaiset siirtolaiset louhivat 1990-luvun '
+            + 'alussa oman kirkkonsa suoraan hiekkakiveen: seinät kaartuvat '
+            + 'luonnollisina, ja alttarin ikonit hohtavat kynttilänvalossa kuin missä '
+            + 'tahansa kivikirkossa, vaikka koko tila on porattu mäen sisään. Kirkkoa '
+            + 'käyttävät nykyisin sekä serbialainen että kreikkalainen ortodoksiyhteisö, '
+            + 'ja kaupungissa on muitakin maanalaisia kirkkoja sekä moskeija. Yhteinen '
+            + 'kokemus kuumuudesta ja kaivostyöstä on hitsannut hyvin erilaiset taustat '
+            + 'yhteen.',
+          tiedosto: 'Serbian Orthodox Church in Coober Pedy.jpg',
+          lyhyt: 'Sotien jälkeen saapuneet siirtolaiset louhivat Coober Pedyyn oman kirkkonsa kallion sisään.',
+          selite: 'Hiekkakiveen louhitun kirkon sisätila: kaareva, työkalunjälkien uurtama '
+            + 'katto ja seinät, kultareunaisia ikoneita alttarin ikonostaasissa, '
+            + 'kynttilöitä ja valkoinen risti etualalla.',
+          lahde: 'Robert Link, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Serbian Orthodox Church, Coober Pedy',
+        },
+        {
+          otsikko: 'Aavikko täynnä piilokuiluja',
+          teksti: 'Coober Pedyn ympärillä on satojatuhansia kaivettuja opaalikuiluja, '
+            + 'eikä kaikkia ole merkitty tai suljettu. Kuka tahansa kaivoslupaa hakenut '
+            + 'voi merkitä itselleen kaupungin ulkopuolelta noin 50 x 50 metrin '
+            + 'kokoisen alan, ja uusia kuoppia syntyy koko ajan vanhojen viereen. Siksi '
+            + 'kylttien kehotus pysyä valaistuina öisin ja kävellä vain merkityillä '
+            + 'poluilla ei ole liioittelua: pimeällä aavikolla harhaileminen jalan tai '
+            + 'autolla on aidosti vaarallista. Samasta syystä paikallinen kävelykin '
+            + 'poikkeaa muualta totutusta — katse suunnataan usein alas eikä maisemaan.',
+          tiedosto: 'Opal mine shafts, Coober Pedy - panoramio.jpg',
+          lyhyt: 'Merkitsemättömiä vanhoja kaivoskuiluja on aavikolla satojatuhansia, ja niitä varotaan yhä.',
+          selite: 'Kymmeniä vaaleita hiekkakivikartioita levittäytyy laakealle aavikolle '
+            + 'iltavalossa; jokaisen kartion vierestä avautuu pystysuora, merkitsemätön '
+            + 'kaivoskuilu.',
+          lahde: 'Eric Spenle, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Opal mining in Australia',
+        },
+      ],
+    },
+    {
+      id: 'opaali',
+      nimi: 'Opaali',
+      johdanto: 'Coober Pedyn opaali syntyi sata miljoonaa vuotta sitten, kun mannerta '
+        + 'peitti matala sisämeri. Kivi taittaa valoa mikroskooppisen pienten '
+        + 'piidioksidipallojen ansiosta, ja siksi sen väri vaihtuu katselukulman mukaan.',
+      tehtava: {
+        kysymys: 'Mistä opaalin sateenkaarenväriset välähdykset johtuvat?',
+        vaihtoehdot: [
+          'mikroskooppisen pienistä piidioksidipalloista, jotka taittavat valoa',
+          'kiveen sekoittuneista metallisuoloista',
+          'kiveen jääneistä ilmakuplista',
+          'kiteytyneen suolan rakenteesta',
+        ],
+        oikea: 0,
+        fakta: 'Opaali koostuu mikroskooppisen pienistä piidioksidin palloista, jotka '
+          + 'ovat järjestäytyneet säännöllisiksi riveiksi. Rivit taittavat valoa niin, '
+          + 'että kivi hohtaa eri värejä katselukulman mukaan; ilmiötä kutsutaan '
+          + 'nimellä play of colour.',
+      },
+      nostot: [
+        {
+          otsikko: 'Muinainen sisämeri jätti jälkensä',
+          teksti: 'Noin sata miljoonaa vuotta sitten liitukaudella suuri osa '
+            + 'Keski-Australiaa oli matalan Eromanga-sisämeren peitossa. Kun meri '
+            + 'vetäytyi vähitellen, sen pohjalle kerrostuneet hiekka- ja savikerrokset '
+            + 'jäivät paljaiksi ja alkoivat rapautua eri tahtiin. Värikkäät, '
+            + 'kerrokselliset kukkulat kertovat tästä menneisyydestä suoraan: vaaleat '
+            + 'kerrokset ovat hienojakoista hiekkakiveä, oranssit ja punertavat raudan '
+            + 'värjäämiä savikerroksia. Samasta kerrostumasta, jota geologit kutsuvat '
+            + 'Suureksi artesiseksi altaaksi, on peräisin myös alueen opaali — sekä '
+            + 'liikakosteus, joka aikoinaan toi piidioksidin kiveen.',
+          tiedosto: 'Muffin Tops Breakaways Coober Pedy.jpg',
+          lyhyt: 'Alueen värikkäät kukkulat ovat sata miljoonaa vuotta vanhan sisämeren pohjakerrostumia.',
+          selite: 'Kerroksellinen, väreiltään vaihteleva kukkula Breakawaysin alueella: '
+            + 'alaosa vaaleaa hiekkakiveä, yläosa oranssia ja punertavaa raudan '
+            + 'värjäämää kiveä, kuvattu huhtikuussa 2014.',
+          lahde: 'Sunil Savur, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Great Artesian Basin',
+        },
+        {
+          otsikko: 'Piidioksidipallot loihtivat sateenkaaren',
+          teksti: 'Kun sisämeri kuivui, piidioksidipitoinen vesi valui hiekkakiven '
+            + 'halkeamiin ja onkaloihin ja kovettui vuosimiljoonien kuluessa geeliksi '
+            + 'ja lopulta kiveksi. Jos piidioksidin mikroskooppiset pallot '
+            + 'järjestäytyivät kiven sisällä säännöllisiksi riveiksi, ne alkavat '
+            + 'taittaa valoa aivan kuin hila: tuloksena on jalo-opaali, joka hohtaa '
+            + 'eri värejä katselukulman mukaan. Jos pallot ovat epäsäännöllisessä '
+            + 'järjestyksessä, syntyy vain himmeä, väritön opaali. Coober Pedyn kivi '
+            + 'on tyypillisesti vaaleaa niin sanottua valkoista opaalia, koska sen '
+            + 'emokivi on itsessään vaaleaa hiekkakiveä.',
+          tiedosto: 'Coober Pedy Opal.jpg',
+          lyhyt: 'Piidioksidipallojen säännöllinen järjestys kiven sisällä synnyttää opaalin väriloisteen.',
+          selite: 'Käsissä pidelty, hiontaamaton raaka-opaali: harmaanruskean emokiven '
+            + 'pinnalla kirkkaan vihreää, sinistä, oranssia ja violettia väriloistetta.',
+          lahde: 'Dpulitzer, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Opal',
+        },
+        {
+          otsikko: 'Simpukka joka muuttui jalokiveksi',
+          teksti: 'Muinaisen sisämeren pohjaan hautautui myös eläimiä: simpukoita, '
+            + 'etanoita ja meriliskoja. Kun niiden kuoret ja luut lopulta hajosivat '
+            + 'maaperässä, piidioksidipitoinen vesi täytti tyhjäksi jääneen muotin '
+            + 'tarkalleen alkuperäisen kuoren muotoisena. Tulos on opaalikivettymä eli '
+            + 'fossiili, joka on ulkomuodoltaan täsmälleen alkuperäisen eliön näköinen '
+            + 'mutta koostumukseltaan kokonaan opaalia. Coober Pedyn kaivoksista on '
+            + 'löytynyt tällä tavoin kivettyneitä simpukoita, etanoita ja jopa hain '
+            + 'hampaita — pieniä muistoja merestä, joka peitti seudun kauan ennen '
+            + 'ihmisiä.',
+          tiedosto: 'Opalized fossil bivalve, Coober Pedy Opal Field, South Australia.jpg',
+          lyhyt: 'Osa Coober Pedyn opaaleista on muinaisten simpukoiden ja etanoiden opaalikivettymiä.',
+          selite: 'Tummanharmaalla soralla lepäävä, simpukan muotoinen opaalikivettymä: '
+            + 'kuoren reunalla erottuu kirkkaan vihreää ja sinistä väriloistetta.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Opalised fossil',
+        },
+        {
+          otsikko: 'Eric, puolikas löytö meren pohjalta',
+          teksti: 'Vuonna 1987 opaalinkaivaja löysi Coober Pedystä lähes täydellisen, '
+            + 'kokonaan opaaliksi kivettyneen meriliskon luurangon. Sitä alettiin '
+            + 'kutsua nimellä Eric, brittiläisen komediaryhmän laulun mukaan. Yli '
+            + 'yhdeksänkymmentä prosenttia luurangosta oli säilynyt, ja luiden seasta '
+            + 'löytyi jopa pieniä kalanruotoja — jäänteitä eläimen viimeisestä '
+            + 'ateriasta. Kun Ericin omistanut yhtiö ajautui vuonna 1992 konkurssiin '
+            + 'ja luuranko oli vaarassa päätyä ulkomaille, tuhannet australialaiset '
+            + 'lahjoittivat rahaa sen lunastamiseksi. Eric on nykyään esillä '
+            + 'Australian museossa Sydneyssä.',
+          tiedosto: 'Umoonasaurus BW.jpg',
+          lyhyt: 'Coober Pedystä 1987 löytynyt opaalinen meriliskon luuranko sai nimen Eric.',
+          selite: 'Taiteilijan näkemys elävästä Umoonasaurus-meriliskosta: nelilepäinen, '
+            + 'pitkäkaulainen liskoeläin uimassa, ruskehtavanvihreä väritys.',
+          lahde: 'Nobu Tamura, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Umoonasaurus',
+        },
+        {
+          otsikko: 'Vanha kaivos museona',
+          teksti: 'Osa Coober Pedyn ensimmäisistä opaalikaivoksista on säilytetty '
+            + 'museoina, joissa vierailijat pääsevät kävelemään aitoja, käsin '
+            + 'louhittuja kaivoskäytäviä pitkin ja näkemään seinään jääneet '
+            + 'opaalisuonet paikallaan. Kivikehyksinen sisäänkäynti johtaa suoraan '
+            + 'hiekkakivimäen sisään, ja käytävien varrella esitellään vanhoja '
+            + 'poravaunuja ja työkaluja, joilla kaivostyötä tehtiin ennen '
+            + 'koneellistumista. Museokierros on monelle matkailijalle ainoa '
+            + 'tilaisuus nähdä, millaista opaalinetsintä on käytännössä: ahtaissa, '
+            + 'pölyisissä käytävissä, kynttilän tai otsalampun valossa.',
+          tiedosto: 'Coober Pedy, South Australia - Opal Mine & Museum.jpg',
+          lyhyt: 'Vanhoja opaalikaivoksia on säilytetty museoina, joissa opaalisuonet näkyvät yhä seinässä.',
+          selite: 'Kivikehyksinen kaivosmuseon sisäänkäynti hiekkakivimäen kyljessä; '
+            + 'edessä vanha poravaunu ja kolme kävijää sisäänkäynnin edustalla.',
+          lahde: 'Rob Chandler, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Umoona Opal Mine',
+        },
+      ],
+    },
+  ],
 };
