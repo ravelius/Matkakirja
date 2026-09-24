@@ -35,8 +35,8 @@
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
 # Komennot: linssi-komento.txt (LinssiOhjain) ja komento.txt (Kartta/Komennot: kuva).
-UDID=${UDID:-00008142-0019686E02F3801C}
-ID=app.matkakirja.proto3d
+UDID=${UDID:-00008103-001819421413401E}
+ID=${ID:-fi.matkakirja.peli.kehitys}
 KOE=${2:-/Users/Shared/Claude/sisalto-koe/v11}
 # Laitteen välimuistin versiopolku = osoittimen polku (esim. "sisalto/1/v3/").
 VERSIO=${VERSIO:-$(curl -s https://media.matkakirja.app/sisalto/1/uusin.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["polku"].rstrip("/"))')}
