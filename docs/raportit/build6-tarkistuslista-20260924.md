@@ -896,6 +896,14 @@ sijoittelu/kaksoispilleri puuttuu vielä.
 
 ## B7-7 (löydös 23): Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
 
+**PÄIVITYS (Fable 24.9. klo 13.5x): alla oleva "avausruutu ilman
+karttaa" -kuvaus on KUMOTTU NATIIVIN ALOITUSKAAVALLA (Raamattu
+ALOITUKSEN TEKSTIT NATIIVISSA) — avausteksti näytetään alapalkissa
+Lontoo-kartan PÄÄLLÄ, ei erillisenä sivuna; tämä on todennettu PASS
+(ks. Zoom-kuminauha-osio). Lennon aikainen väärä ääni (intro-puhe.mp3
+avaustekstin sijaan puhe-lento-alku.mp3:n) on YHÄ VOIMASSA OLEVA BUGI,
+ks. tulos alla.**
+
 **Omistaja (Fable 24.9. klo 12.1x, tarkennettu löydös 23:na klo 12.0x–12.04)**:
 portin, avausruudun ja lennon tekstien pitää täsmätä webiin sanatarkasti.
 **TUNNETTU BUGI (23A)**: natiivi näyttää/soittaa LENNON AIKANA
@@ -1130,13 +1138,17 @@ liikkeeseen eikä hyppyyn. Kokonaiskesto liikkeen alusta (kuva 2, t=11,0)
 pysähtymiseen (kuva 7, t=13,3) ≈ 2,3 s — spesifikaation "n. 2–3 s"
 -rajoissa. Lopputulos on kaupunginvalintanäkymä (Ateena/Istanbul/
 Moskova/Kairo-ympyrät), kuten spesifikaatio edellyttää.
-**HUOM (ei tämän testin piiriä, mutta havaittu sivussa)**: avausteksti-
-ruutu ("Heathrow, Lontoo..." + INTRO_TEXT) NÄYTETÄÄN erillisenä
-ruutuna ennen zoomia — tämä on ristiriidassa NATIIVIN ALOITUSKAAVAN
-("avaustekstiä ei näytetä erillisellä ruudulla") kanssa, mutta täsmää
-B7-7-testin dokumentoituun "odotettu tulos webin mukaan" -kuvaukseen.
-Kaksi dokumenttia ovat ristiriidassa keskenään — ei korjattu tässä,
-ilmoitettu Fablelle.
+**AVAUSTEKSTIN SIJOITTELU TARKISTETTU (Fable 24.9. klo 13.5x, voimassa
+oleva kaava, Raamattu ALOITUKSEN TEKSTIT NATIIVISSA)**: alun perin
+epäiltiin ristiriitaa NATIIVIN ALOITUSKAAVAN kanssa, mutta kuvasarjan
+kuva 1 (`zoom-kuminauha/1-t10.6s-staattinen.png`) osoittaa selvästi
+että Lontoon KARTTA ON KOKO AJAN TAUSTALLA NÄKYVISSÄ (pallo zoomattuna
+Lontooseen) ja avausteksti ("Heathrow, Lontoo, syyskuu 2026" +
+INTRO_TEXT) näkyy ALAPALKISSA kartan päällä — EI omana erillisenä
+sivunaan ilman karttaa. Tämä on TÄSMÄLLEEN kaavan mukainen oikea
+toteutus. **PASS.** Vanha B7-7-testin "odotettu tulos webin mukaan"
+-kuvaus (avausruutu ilman karttaa) on KUMOTTU tällä uudemmalla
+kaavalla; B7-7:n avausruutu-osuus päivitetty vastaavasti alla.
 
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
