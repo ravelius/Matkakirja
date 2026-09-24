@@ -90,6 +90,21 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
 
         /// <summary>
+        /// Aloitus auki / kiinni (portti, avausteksti ja pallovalinta): webin aloitusnäkymässä ei ole
+        /// karttaselitteen eikä linssien nappia (pariteetti 24.9. rivi 2), joten ne piiloutuvat tämän ajan.
+        /// </summary>
+        public static event Action<bool> AukiMuuttui;
+        public static bool AloitusAuki { get; private set; }
+
+        void AsetaAuki(bool auki)
+        {
+            Auki = auki;
+            if (AloitusAuki == auki) return;
+            AloitusAuki = auki;
+            AukiMuuttui?.Invoke(auki);
+        }
+
+        /// <summary>
         /// Portti näkyy (Aloita seikkailu / Jatka matkaa): kameran puoli sumentaa pallon sen ajan (web .start-gate
         /// backdrop-filter 6px; Natiiviseppä, löydös 17). Tapahtuu vain tilan muuttuessa.
         /// </summary>
@@ -300,7 +315,7 @@ namespace Matkakirja.Natiivi
             aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
             aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
             ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
-            Auki = true;
+            AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
             portti.style.display = DisplayStyle.Flex;
@@ -321,7 +336,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             LopetaPallovalinta();
-            Auki = false;
+            AsetaAuki(false);
             AsetaPortti(false);
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
