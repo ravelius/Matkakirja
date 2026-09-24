@@ -119,9 +119,10 @@ namespace Matkakirja.Linssit
         Nakyma Kamera { get; }
         /// <summary>
         /// Kamera-ajo asentoon (PalloKierto.Aja); 0 s = hyppy. Pehmennys 0…1 → 0…1,
-        /// null = webin oletusprofiili (siirtoajonPehmennys).
+        /// null = webin oletusprofiili (siirtoajonPehmennys). Kallistukseen (asteina): ajo kallistaa kameran
+        /// tähän; null = pelaajan kallistus säilyy (kohde.Kallistus ei vaikuta, kuten ennen radiouudistusta).
         /// </summary>
-        void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null);
+        void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null);
         /// <summary>Loitonnuksen katto metreinä; null = pelin oma raja.</summary>
         void ZoomiKatto(double? maxKorkeus);
         /// <summary>

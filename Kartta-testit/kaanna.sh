@@ -1,6 +1,6 @@
 #!/bin/sh
 # Kartan puhtaat funktiot (Assets/Matkakirja/Kartta/*.cs ilman UnityEngineä: Saapumisnakyma.cs, NimiLadonta.cs,
-# LennonAikajana.cs + Linssien Kamerakoreografia.cs) ja
+# LennonAikajana.cs + Linssien Kamerakoreografia.cs + MastoGeometria.cs) ja
 # testit Unityn mukana tulevalla dotnetilla ja Roslynilla ilman editoria. Sama kaava kuin
 # Peli-testit/kaanna.sh (oma testiajuri Testit/Ajuri.cs); JSON luetaan pelin MiniJsonilla.
 # Käyttö: ./kaanna.sh [testin nimen osa]
@@ -22,7 +22,8 @@ $DN "$R/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nul
   ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs \
   ../Assets/Matkakirja/Kartta/NimiLadonta.cs \
   ../Assets/Matkakirja/Kartta/LennonAikajana.cs \
-  ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs
+  ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs \
+  ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 cat > rakennus/KarttaTestit.runtimeconfig.json <<J
 {"runtimeOptions":{"tfm":"net6.0","framework":{"name":"Microsoft.NETCore.App","version":"6.0.21"}}}
 J

@@ -52,6 +52,12 @@ namespace Matkakirja
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
+    ///   mastot koe [n] | mastot pois   radiomastojen kokeilu ilman radiolinssiä (RadioMastot.Koe): n kaupunkia
+    ///                             (oletus 115), koot vuorotellen, joka viides kanavaton, hämärä 1, valittu lähin,
+    ///                             VU-tahtia jäljittelevä kirkkaus ja renkaat
+    ///   mastot tila               mastot, näkyvät, valot, valittu, renkaat ja hämärä lokiin
+    ///   mastot osoita <id>        napauttaa maston puoliväliä (napautuksen päästä päähän -testi)
+    ///   hamara <0–1>              radion hämärä suoraan (tileset, napakannet, mastot, tausta)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
     /// </summary>
@@ -429,6 +435,24 @@ namespace Matkakirja
                     else if (o[1] == "pois-korostus") mk.KorostusPois(null);
                     break;
                 }
+                case "mastot":
+                {
+                    var rm = RadioMastot.Instanssi;
+                    if (rm == null) { Debug.LogWarning("MATKAKIRJA komento: RadioMastot puuttuu"); break; }
+                    if (o.Length > 1 && o[1] == "koe") rm.Koe(true, o.Length > 2 ? int.Parse(o[2], CultureInfo.InvariantCulture) : 115);
+                    else if (o.Length > 1 && o[1] == "pois") rm.Koe(false);
+                    else if (o.Length > 2 && o[1] == "osoita")
+                    {
+                        if (rm.RuutuPaikka(o[2], out var mp)) kierto.Napauta(mp);
+                        else Debug.LogWarning("MATKAKIRJA mastot: " + o[2] + " ei näy");
+                    }
+                    Debug.Log($"MATKAKIRJA mastot: {rm.Maara} mastoa, näkyvissä {rm.Nakyvia}, valoja {rm.Valoja}, valittu {rm.ValittuId ?? "-"}, " +
+                              $"renkaita {rm.Renkaita}, hämärä {rm.HamaraArvo:F2}");
+                    break;
+                }
+                case "hamara":
+                    RadioMastot.Instanssi?.Hamara((float)D(1));
+                    break;
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
                     break;

@@ -742,6 +742,11 @@ namespace Matkakirja.Natiivi
             public static bool OmatNapit;
             /// <summary>Radio avataan (Natiivi-UI kytkee NapitMuuttuivat ja piirtää Napit).</summary>
             public static event Action<Matkakirja.Linssit.Radio.RadioLinssi> Avattiin;
+            /// <summary>
+            /// Radiouudistus (build 12): mastojen, hämärän, renkaiden ja yövalojen piirto (Natiiviseppä asettaa,
+            /// RAJAPINTA luku 4 / suunnitelma luku 9). null = ei mastoja eikä kallistusta (entinen radio).
+            /// </summary>
+            public static Func<Matkakirja.Linssit.Radio.IRadioMastot> MastoPiirto;
 
             public void Avaa(ILinssiYmparisto y)
             {
@@ -757,12 +762,15 @@ namespace Matkakirja.Natiivi
                 // Diagnoosi ennen kuin virta suljetaan (Laitetestaajan simulaattorilöydös 23.9.).
                 linssi.VirheSyntyy += syy => o.Kirjaa($"radio: {syy} | soitin: {virta?.Kuvaus ?? "-"}");
                 linssi.OmatNapit = OmatNapit;
+                linssi.Mastot3D = MastoPiirto?.Invoke();
                 Avattiin?.Invoke(linssi);
                 linssi.Avaa(y);
+                if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
             }
             public void Paivita() => linssi?.Paivita();
             public void Sulje()
             {
+                if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
                 linssi?.Sulje();
                 linssi = null;
                 if (virta != null) Destroy(virta.gameObject);
@@ -919,7 +927,7 @@ namespace Matkakirja.Natiivi
 
         public Nakyma Kamera => new Nakyma(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus);
 
-        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null)
         {
             // Laitetestien jälki: keksintöjen loppukamera jäi iPadilla ajamatta (24.9.), syy selvitettävä.
             using var _ = KameraMerkki.Auto();
@@ -928,7 +936,8 @@ namespace Matkakirja.Natiivi
             // (trapetsi, ramppi 0,3) kulkee keskellä vakionopeudella, joten linssien oletus on smootherstep.
             // Kohde katon yläpuolella (ihmisen matkan nousu avaruuteen): PalloKierto sallii sen vain pyydettäessä.
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null,
-                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys, yliKaton: kohde.Korkeus > KokoPallonKorkeus);
+                pehmennys ?? Matkakirja.Linssit.Aikajana.Kameramatikka.Pehmennys, yliKaton: kohde.Korkeus > KokoPallonKorkeus,
+                kallistukseen: kallistukseen);
         }
 
         /// <summary>
