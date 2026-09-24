@@ -327,7 +327,9 @@ namespace Matkakirja
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
                 // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
                 // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
-                if (!pintaVaihdettu && (usva == null || usva.Peitto > 0.85f || t > 0.2))
+                // Vasta lähikuvassa (t ≥ 0,08), kun usva täyttää kuvan: Lontoon zoomissa kamera on niin korkealla, että
+                // usvalevy peittää vain keskustan ja uuden pinnan laatat näkyivät pikselöityinä reunoilla (sim 24.9.).
+                if (!pintaVaihdettu && ((usva == null || usva.Peitto > 0.85f) && t >= 0.08 || t > 0.2))
                 {
                     pintaVaihdettu = true;
                     kerrokset?.LentoPohja(true);
