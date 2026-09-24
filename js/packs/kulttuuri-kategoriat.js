@@ -116869,6 +116869,43 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Thomas Moran',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Castle Geyser, Yellowstone National Park-LCCN2008678250.jpg',
+          vuosi: '1898',
+          lyhyt: 'Castle Geyser purkautuu Yellowstonessa, '
+            + 'käsinväritetty photochrom vuodelta 1898.',
+          selite: 'Castle Geyser purkautuu kartiomaisen kekonsa päältä, '
+            + 'etualalla sininen kuuma lähde. Kartio on piikerrostumaa, '
+            + 'jota lähde on kasvattanut vähitellen tuhansien vuosien '
+            + 'ajan.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2514.jpg',
+          vuosi: '2022',
+          lyhyt: 'Grand Prismatic Spring, Yellowstonen suurin kuuma '
+            + 'lähde, vuonna 2022.',
+          selite: 'Grand Prismatic Spring, puiston suurin kuuma lähde. '
+            + 'Renkaiden värit tulevat eri lämpötiloissa viihtyvistä '
+            + 'mikrobeista: keskellä on kuumin ja kirkkaan sininen '
+            + 'vesi, reunoilla viileämpi ja oranssi.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Sateenkaari kanjonin yllä',
+          tiedosto: 'Rainbow over the Grand Canyon of the Yellowstone, 1900, by Thomas Moran - SAAM - DSC00847.JPG',
+          lyhyt: 'Thomas Moranin toinen öljymaalaus Yellowstonen '
+            + 'kanjonista, tällä kertaa sateenkaaren kera (1900).',
+          selite: 'Thomas Moran palasi Yellowstonen kanjonin aiheeseen '
+            + 'vielä lähes kolme vuosikymmentä ensimmäisen '
+            + 'maalauksensa jälkeen: tässä 1900 valmistuneessa '
+            + 'teoksessa sateenkaari kaartuu putouksen yllä.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -117003,6 +117040,52 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Powell Geographic Expedition of 1869',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Grand Canyon)- Burro trains at Indian Gardens LCCN2002715958.jpg',
+          vuosi: '1906',
+          lyhyt: 'Aasijono Indian Gardensin telttaleirissä Grand '
+            + 'Canyonissa vuonna 1906.',
+          selite: 'Aasijono lastattuna Indian Gardensin telttaleirissä '
+            + 'puolimatkassa kanjonin seinämää. Kaikki tavara '
+            + 'kannettiin rotkoon eläinten selässä, koska polku on '
+            + 'liian jyrkkä ja kapea kärryille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Grand Canyon National Park, Bright Angel Trial, Mule Trip 4825 - Flickr - Grand Canyon NPS.jpg',
+          vuosi: '2011',
+          lyhyt: 'Muuliratsastajia Bright Angel -polulla Grand '
+            + 'Canyonissa vuonna 2011.',
+          selite: 'Opas johdattaa muuliratsastajia ylös Bright Angel '
+            + '-polkua. Samaa polkua käytetään yhä sekä matkustajien '
+            + 'että tavaran kuljettamiseen kanjonin pohjalle.',
+          lahde: 'Michael Quinn, National Park Service (PD)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Moranin toinen kanjoni',
+          tiedosto: 'Thomas Moran - Grand Canyon.jpg',
+          lyhyt: 'Thomas Moranin vuoden 1908 maalaus Grand Canyonista, '
+            + 'eri kohteesta kuin hänen tunnetumpi Yellowstone-teoksensa.',
+          selite: 'Thomas Moran maalasi useita kertoja Yhdysvaltain '
+            + 'suuria kanjoneita; tämä 1908 valmistunut teos kuvaa '
+            + 'Colorado-joen Grand Canyonia, ei Yellowstonen '
+            + 'samannimistä kanjonia.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Brownin impressionistinen näkymä',
+          tiedosto: 'Grand Canyon painting by Benjamin Chambers Brown.jpg',
+          lyhyt: 'Benjamin Chambers Brownin impressionistinen maalaus '
+            + 'Colorado-joesta Grand Canyonissa.',
+          selite: 'Yhdysvaltalainen impressionisti Benjamin Chambers '
+            + 'Brown maalasi Colorado-joen mutkittelevan uoman '
+            + 'syvällä kanjonin pohjalla.',
+          lahde: 'Benjamin Chambers Brown, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -117123,6 +117206,32 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ilmasta kuvattuna kallio erottuu selvärajaisena punaisena massana keskellä laakeaa pensasaavikkoa; taustalla taivaalla näkyy ohut savuvana.',
           lahde: 'Emily Cox, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Uluru',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: "Camel team approaching Ayers Rock in search for Lasseter's body - John Bailey.jpg",
+          vuosi: '1930-luku',
+          lyhyt: 'Kamelijono etsimässä Harold Lasseterin ruumista '
+            + 'Ayers Rockin lähellä.',
+          selite: 'Kamelijono lähestymässä Ayers Rockia etsimässä '
+            + 'Harold Lasseterin ruumista. Lasseter väitti '
+            + 'löytäneensä keskisestä Australiasta valtavan '
+            + 'kultasuonen ja katosi lähtiessään uudelleen etsimään '
+            + 'sitä; etsintäretkikunnat liikkuivat aavikolla '
+            + 'kameleilla.',
+          lahde: 'State Library of New South Wales, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Wet Uluru.jpg',
+          vuosi: '2010',
+          lyhyt: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010.',
+          selite: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010. Sade on täällä '
+            + 'harvinaista, mutta kun sitä tulee, kallion sivut '
+            + 'muuttuvat tunneissa vesiputousten verkoksi.',
+          lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -117263,6 +117372,54 @@ export const KULTTUURI_KATEGORIAT = {
             'Ilmakuvassa kenkähevosen muotoinen putoussarja avautuu keskellä laajaa, tiheää sademetsää; joki jatkuu mutkitellen metsän halki kuvan reunoille.',
           lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Iguazú National Park',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Salto Floriano e Garganta do Inferno, na fronteira Brasil-Argentina.jpg',
+          vuosi: '1929–1930',
+          lyhyt: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'Iguazúlla 1929–1930.',
+          selite: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'panoraamavedoksena. Kuva on Brasilian sotaministeriön '
+            + 'rajakomission aineistoa: putouksia mitattiin ja '
+            + 'kuvattiin, koska ne merkitsevät valtakunnanrajaa '
+            + 'Brasilian ja Argentiinan välillä.',
+          lahde: 'B. Rondon, Arquivo Nacional (PD)',
+        },
+        {
+          tiedosto: 'IGUACU FALLS AND CATWALK, BRAZIL.jpg',
+          vuosi: '2009',
+          lyhyt: 'Kävelysilta Iguazún putousten keskelle Paholaisen '
+            + 'kurkkua kohti 2009.',
+          selite: 'Kävelysilta vie keskelle putousryhmää kohti '
+            + 'Paholaisen kurkkua. Sillalla on jatkuva vesisumu, joka '
+            + 'kastelee kulkijat ja kamerat muutamassa minuutissa.',
+          lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Ballerinin panoraama',
+          tiedosto: 'Augusto Ballerini - La cascada del Iguazú - Google Art Project.jpg',
+          lyhyt: 'Argentiinalaisen Augusto Ballerinin 1800-luvun '
+            + 'panoraamamaalaus Iguazún putouksista.',
+          selite: 'Argentiinalainen maisemamaalari Augusto Ballerini '
+            + 'kuvasi putoukset laajana panoraamana — teos on nykyään '
+            + 'esillä osana Trilha das Cataratasin näkymien '
+            + 'kokoelmaa.',
+          lahde: 'Augusto Ballerini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Wiegandtin näkymä 1878',
+          tiedosto: 'Bernhard Wiegandt, Iguazu waterfall, Brazil, 1878.jpg',
+          lyhyt: 'Saksalaisen Bernhard Wiegandtin maalaus Iguazún '
+            + 'putouksista vuodelta 1878.',
+          selite: 'Saksalainen taiteilija Bernhard Wiegandt maalasi '
+            + 'putoukset 1878 — yksi varhaisimmista tunnetuista '
+            + 'eurooppalaisen taiteilijan tekemistä kuvauksista '
+            + 'Iguazústa.',
+          lahde: 'Bernhard Wiegandt, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117417,6 +117574,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Auringonvalo kimmeltää Titicaca-järven pinnalla Punon edustalla; rannan kasvillisuus ja perinteinen kaislavene kehystävät näkymää.',
           lahde: 'H.dav.are, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lake Titicaca',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'N° 308. Lago Titicaca, Balsas de cañas, hechas por los naturales del pais.png',
+          vuosi: '1900',
+          lyhyt: 'Kaislaveneitä Titicacajärvellä vuonna 1900.',
+          selite: 'Kaislaveneitä Titicacajärvellä vuonna 1900. Miehet '
+            + 'seisovat keulassa ja työntävät venettä sauvomalla, ja '
+            + 'tyyni vesi kahdentaa mastot. Veneet punotaan '
+            + 'totora-kaislasta, jota kasvaa järven matalikoilla.',
+          lahde: 'Fernando Garreaud, albumi República Peruana (PD)',
+        },
+        {
+          tiedosto: 'Islas flotantes de los Uros, Lago Titicaca, Perú, 2015-08-01, DD 32.JPG',
+          vuosi: '2015',
+          lyhyt: 'Uros-kansan kelluva kaislasaari Titicacajärvellä '
+            + 'vuonna 2015.',
+          selite: 'Uros-kansan kelluva saari. Sekä alusta että majat '
+            + 'tehdään totora-kaislasta. Pintaan on lisättävä uutta '
+            + 'kaislaa jatkuvasti, koska alta se lahoaa veteen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
