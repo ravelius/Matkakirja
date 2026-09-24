@@ -4359,3 +4359,7 @@ Karttaseppä: nimiötaso 2026-09-22g poltettiin Macilla ilman Liberation Serifi�
 ## PELIKOODARI NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA pelikoodari-tyo-20260923 (klo 17.31), RC PAALLA (24.9.2026 klo 17.37)
 
 Karttasepän fonttipäätös odottaa Fablen viestirajan nollausta.
+
+## BUILD 10 -SHA: PROTO-MASTER f02376b (NATIIVISEPPA klo 18.5x) (24.9.2026 klo 17.38)
+
+Mukana: Natiivi-UI b10-jono 0e8ff30 (yläpalkki ilman ⚙, vaaka/veto → vain ☰, tekstityylit mitattuina, ✕-pilleri, kuvien swipe, maailmarivi kehittäjätilaan), valintamerkit da29d38 (kuvapari, erot nappulan väri ja rajaus kirjattu), eleet 28/30/31 + zoomi 26, avausteksti aloitusnäytöllä, saapumisnäkymä, lentopinta bathy + s2-alkup + korkeuskerroin 2, linssit b10 (ISS, lamput, linssinimet, astropulu), liiku-tanne, kehitystiimi RCD77XPB7M. Build 11: fokuspohja, kylmän lennon suorakulmiot, hytinä 27, merinimet, lehtierot. Natiiviseppä ajaa smoke-testin; Julkaisijan käsky odottaa Fablen viestirajan nollausta.
