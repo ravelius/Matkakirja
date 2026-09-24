@@ -32,7 +32,7 @@ namespace Matkakirja.Natiivi
             peite.style.display = DisplayStyle.None;
             peite.RegisterCallback<PointerDownEvent>(e => { if (e.target == peite) Sulje(); });
             arkki = Rakenne.El("mk-nahtavyydet", peite);
-            Rakenne.Tausta(arkki, Kuviot.Pergamentti);
+            Kuviot.AsetaArkki(arkki);
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
             var yla = Rakenne.El("mk-nahtavyydet__yla", arkki, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("Nähtävyydet", "mk-nahtavyydet__otsikko", yla);

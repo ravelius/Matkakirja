@@ -393,17 +393,21 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__kuvateksti", paikka), Kirjasin.LukuKursiivi);
             }
             // 2. Esittely vain, jos se on kirjoitettu.
-            foreach (var k in Kappaleet(lk.Esittely)) Rakenne.Teksti(k, "mk-nosto__teksti", sisus);
+            foreach (var k in Kappaleet(lk.Esittely)) Rakenne.Teksti(Riviva(k), "mk-nosto__teksti", sisus);
             // 3. Yksi kaupunkiin ankkuroitu nosto nostokortin otsikolla ja tekstillä.
             if (lk.NostoOtsikko != null)
             {
                 Kirjasimet.Aseta(Rakenne.Teksti(lk.NostoOtsikko, "mk-nosto__otsikko", sisus), Kirjasin.KoneLihava);
-                foreach (var k in Kappaleet(lk.NostoTeksti)) Rakenne.Teksti(k, "mk-nosto__teksti", sisus);
+                foreach (var k in Kappaleet(lk.NostoTeksti)) Rakenne.Teksti(Riviva(k), "mk-nosto__teksti", sisus);
             }
             AvaaKerros();
         }
 
         // --- vaihe 1: kuva edellä ------------------------------------------------------------
+
+        // Web nostokortin teksti (mitattu 24.9.): Iowan 15,52 px, #211d18, riviväli 24,52 = 1,58 em.
+        const string RiviValiAlku = "<line-height=1.58em>";
+        static string Riviva(string teksti) => RiviValiAlku + "<noparse>" + teksti + "</noparse>";
 
         void Vaihe1()
         {
@@ -472,7 +476,7 @@ namespace Matkakirja.Natiivi
                 : new List<(string Perus, string Nakyva)>();
             foreach (var k in Kappaleet(n.Teksti))
             {
-                var l = Rakenne.Teksti(Korosta(k, jaljella), "mk-nosto__teksti", sisus);
+                var l = Rakenne.Teksti(RiviValiAlku + Korosta(k, jaljella), "mk-nosto__teksti", sisus);
                 if (!l.text.Contains("<link=")) continue;
                 l.pickingMode = PickingMode.Position;
                 string nimi = n.Otsikko;
@@ -753,14 +757,12 @@ namespace Matkakirja.Natiivi
                 teksti.style.display = string.IsNullOrEmpty(k.Lyhyt) ? DisplayStyle.None : DisplayStyle.Flex;
                 if (kuvat.Count > 1)
                 {
-                    var ed = Rakenne.Nappi("‹", "mk-nosto__selaa mk-nosto__selaa--vasen", () => Nayta(kuvaIndeksi - 1), kehys);
-                    var se = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(kuvaIndeksi + 1), kehys);
-                    ed.RegisterCallback<ClickEvent>(e => e.StopPropagation());
-                    se.RegisterCallback<ClickEvent>(e => e.StopPropagation());
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
                     Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
                 }
             }
+            // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
+            new KuvaSelaus(kehysPaikka, () => kuvat.Count, s => Nayta(kuvaIndeksi + s), () => kehysPaikka.childCount > 0 ? kehysPaikka[0] : kehysPaikka);
             Nayta(kuvaIndeksi);
         }
 

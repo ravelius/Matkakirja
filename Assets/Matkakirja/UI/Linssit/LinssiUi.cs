@@ -68,6 +68,7 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(SulkuKerros);
             sulje = Rakenne.Nappi("Sulje linssi", "mk-linssiSulje", SuljeLinssi, turva);
             sulje.Insert(0, Rakenne.Teksti("×", "mk-linssiSulje__risti"));
+            sulkuTeksti = sulje.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
             sulje.tooltip = "Sulje linssi";
             sulje.style.display = DisplayStyle.None;
@@ -190,6 +191,7 @@ namespace Matkakirja.Natiivi
             Valitsin.Merkitse(id);
             // Linssin vaihtuessa pilleri esiin kuten ennenkin; peittäjät ilmoittavat itsensä uudelleen.
             kuvaPeittaa = arkkiPeittaa = false;
+            sulkuNakyi = false; // uusi linssi: pilleri taas kokonaan ja kutistuu uudelleen
             PaivitaSulku();
             // Selite, maat ja radio seuraavaan kehykseen (keksintöjen avaus 11,4 ms yhdessä kehyksessä,
             // Linssisepän piikkiajo 2); aikajana heti, koska sen palkki korvaa yläpalkin tässä kehyksessä.
@@ -234,6 +236,44 @@ namespace Matkakirja.Natiivi
         {
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyy && !sulkuNakyi) Kutista();
+            else if (!nakyy) { kutistus?.Pause(); kutistus = null; }
+            sulkuNakyi = nakyy;
+        }
+
+        // Löydös 32 (omistaja, build 10; natiivin oma lisäys, webissä ei vastinetta): "✕ Sulje linssi" näkyy ensin
+        // kokonaan, ja 1,2 s:n päästä teksti sulaa oikealta vasemmalle kirjain kerrallaan 0,6 s:ssa pehmeällä
+        // easingillä (smoothstep), kunnes jäljellä on pelkkä ✕ yläkulmassa. Pieni liike pois: suoraan ✕:ksi.
+        const string SulkuTeksti = "Sulje linssi";
+        const float KutistusViive = 1.2f, KutistusKesto = 0.6f;
+        Label sulkuTeksti;
+        bool sulkuNakyi;
+        IVisualElementScheduledItem kutistus;
+
+        void Kutista()
+        {
+            kutistus?.Pause();
+            if (sulkuTeksti == null) return;
+            sulkuTeksti.text = SulkuTeksti;
+            sulkuTeksti.style.display = DisplayStyle.Flex;
+            sulje.RemoveFromClassList("mk-linssiSulje--risti");
+            if (VahennettyLiike()) { sulje.schedule.Execute(Risti).StartingIn((long)(KutistusViive * 1000)); return; }
+            float alku = Time.unscaledTime + KutistusViive;
+            kutistus = sulje.schedule.Execute(() =>
+            {
+                float t = (Time.unscaledTime - alku) / KutistusKesto;
+                if (t < 0f) return;
+                if (t >= 1f) { Risti(); kutistus?.Pause(); return; }
+                int n = Mathf.CeilToInt(SulkuTeksti.Length * (1f - Mathf.SmoothStep(0f, 1f, t)));
+                sulkuTeksti.text = SulkuTeksti.Substring(0, n).TrimEnd();
+            }).Every(16);
+        }
+
+        void Risti()
+        {
+            sulkuTeksti.text = "";
+            sulkuTeksti.style.display = DisplayStyle.None;
+            sulje.AddToClassList("mk-linssiSulje--risti");
         }
 
         /// <summary>Kaikki linssien valikot ja testinäkymät kiinni (UiNakymat.SuljeKaikki).</summary>

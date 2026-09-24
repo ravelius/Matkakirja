@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
             liuku = Rakenne.El("mk-liiku__liuku", liiku, PickingMode.Ignore);
             liuku.style.display = DisplayStyle.None;
             liikuNappi = Rakenne.Nappi(null, "mk-liiku__nappi", VaihdaLiuku, liiku, Ikonit.Viiva["kompassi"]);
-            liiku.EnableInClassList("mk-liiku--puhelin", Ylapalkki.Kelluva); // iPhone: kevyempi nappi (omistaja 24.9.)
+            liiku.EnableInClassList("mk-liiku--puhelin", Ylapalkki.Puhelin); // iPhone: kevyempi nappi (omistaja 24.9.)
             Rakenne.Teksti(Liikkuminen.LiikuTeksti, "mk-nappi__teksti", liikuNappi);
             Kirjasimet.Aseta(liiku, Kirjasin.KoneLihava);
 

@@ -82,7 +82,8 @@
 //   ui nahtavyydet [kaupunki] [kohde n]      nähtävyysnäkymä (oletus firenze); kohde n avaa n:nnen kohteen jutun
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
-//   ui ylapalkki kelluva|palkki               iPhonen kelluva yläosa päälle / pois (auto palauttaa laitteen mukaan)
+//   ui ylapalkki kelluva|palkki               puhelimen tila päälle / pois (auto palauttaa laitteen mukaan)
+//   ui ylapalkki veto|napautus                iPhonen palkki piiloon kuin kartan vedosta / takaisin kuin napautuksesta
 //   ui lentopiilo [pois]                      löydös 23: lennon piilotus käsin (pois = palauta)
 //   ui kuvasumea paalle|pois|auto           löydös 19: kartan kevyt sumennus kuvien aikana pakotettuna / näkymien mukaan
 //   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
@@ -685,6 +686,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "ylapalkki":
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
+                    if (loput == "veto" || loput == "napautus") { ui.Tilarivi.TestaaVeto(loput == "veto"); return Ylapalkki.VetoPiilossa ? "palkki piilossa (veto)" : "palkki näkyvissä"; }
                     if (loput == "kelluva" || loput == "palkki") { Ylapalkki.PakotaKelluva = loput == "kelluva"; ui.Tilarivi.Paivita(); return null; }
                     if (loput.StartsWith("saari"))
                     {

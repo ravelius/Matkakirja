@@ -88,6 +88,12 @@ namespace Matkakirja.Natiivi
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
+            // Maailmanappi (omistajan löydös 36, web #kehittaja-maailma-btn kehittäjävalikossa): vain kehittäjälle;
+            // huntu pois koko pallolta (web: ei kermaa maailmanäkymässä), panorointi on natiivissa jo vapaa.
+            maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
+            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
+            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
+            maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
 #if !MATKAKIRJA_APPSTORE
             // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
             kynnykset = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
@@ -135,7 +141,8 @@ namespace Matkakirja.Natiivi
             var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
             Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
 #endif
-            Asetukset.Muuttui += _ => { if (Auki) Paivita(); };
+            Asetukset.Muuttui += _ => { VarmistaMaailma(); if (Auki) Paivita(); };
+            kerros.Juuri(UiKerros.Valikot).schedule.Execute(VarmistaMaailma).StartingIn(1000);
         }
 
         /// <summary>"uusi peli": varmistus (webin #nollaa-dialog), sitten tyhjennys ja UusiPeli.</summary>
@@ -162,6 +169,31 @@ namespace Matkakirja.Natiivi
         readonly KehittajaIkkuna kehittaja;
         public readonly MitaUutta MitaUutta;
         readonly Label reliefiTila;
+
+        /// <summary>Webin maailmanapin viivaikoni (index.html #kehittaja-maailma-btn).</summary>
+        const string Maapallo = "<circle cx=\"12\" cy=\"12\" r=\"7.5\"/><path d=\"M4.5 12h15\"/><path d=\"M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z\"/>";
+        const string MaailmaAvain = "matkakirja-kehittaja-maailma";
+        Button maailma;
+        Label maailmaTila;
+
+        /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
+        public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
+
+        public static void AsetaMaailma(bool paalla)
+        {
+            PlayerPrefs.SetInt(MaailmaAvain, paalla ? 1 : 0);
+            PlayerPrefs.Save();
+            VarmistaMaailma();
+        }
+
+        /// <summary>Väritason huntu maailmanäkymän mukaan (käynnistys, kytkin, kehittäjätilan vaihto).</summary>
+        public static void VarmistaMaailma()
+        {
+            var v = UnityEngine.Object.FindAnyObjectByType<Varitaso>();
+            if (v == null || v.huntu == !Maailma) return;
+            v.huntu = !Maailma;
+            v.Uudelleen();
+        }
 
         static bool ReliefiTaysi => Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kyllaisyys > 0.9f;
 
@@ -195,6 +227,8 @@ namespace Matkakirja.Natiivi
                 pari.Value.Tila.text = paalla ? "PÄÄLLÄ" : "POIS";
             }
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
+            maailma.EnableInClassList("mk-valittu", Maailma);
+            maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             kokeet.style.display = Asetukset.Kehittaja && osa != Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
             aanentasot.style.display = osa == Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
