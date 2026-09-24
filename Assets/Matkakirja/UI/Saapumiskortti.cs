@@ -170,6 +170,27 @@ namespace Matkakirja.Natiivi
             teksti.style.letterSpacing = koko * Harvennus;
         }
 
+        /// <summary>
+        /// Kalibrointi (testikomento ui saapumiskortti-mitta): rivin leveys MeasureTextSize-mittauksella harvennuksilla
+        /// 0, 1, 2 ja 4 pt nykyisellä fonttikoolla. Kertoo, miten UITK:n letter-spacing kasvattaa leveyttä
+        /// (CSS: jokainen merkki + harvennus); web 402 × 874: 17,69 px, harvennus 2,30 px, leveys 228,3 px.
+        /// </summary>
+        public string Mitta(string rivi)
+        {
+            Mitoita();
+            var alku = teksti.style.letterSpacing;
+            var tulos = new System.Text.StringBuilder();
+            tulos.Append("fontti ").Append(teksti.resolvedStyle.fontSize.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture));
+            foreach (float v in new[] { 0f, 1f, 2f, 4f })
+            {
+                teksti.style.letterSpacing = v;
+                var koko = teksti.MeasureTextSize(rivi, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined);
+                tulos.Append(string.Format(System.Globalization.CultureInfo.InvariantCulture, ", väli {0:0} → {1:0.0}×{2:0.0}", v, koko.x, koko.y));
+            }
+            teksti.style.letterSpacing = alku;
+            return tulos.ToString();
+        }
+
         static void Kutsu(Action a)
         {
             try { a?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
