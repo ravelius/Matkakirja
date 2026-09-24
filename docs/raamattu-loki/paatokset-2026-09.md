@@ -4235,3 +4235,7 @@ Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b10.md; 
 ## SIIRTOSEPPA ALOITETTU (klo 16.32, RC PAALLA): #2913 REBASATTU (b3058360e), MERGEABLE (24.9.2026 klo 16.33)
 
 peilaa-media.mjs: js/linssit-luku + mainin hetkikuvat-suodatus säilytetty. Askel 1 odottaa #3074:ää, askel 2 build 10:tä ja #3078:aa; #3081 luonnos. wt/proto-siirtoseppa poistettu.
+
+## OMISTAJAN LOYDOS 35 (BUILD 9, klo 17.0x, SITOVA): AVARUUSLINSSIN PULU EI OLE OIKEA PULU (VALMIIT VASTAUKSET) (24.9.2026 klo 16.34)
+
+Webissä korjattu aiemmin: pulu toimii avaruuslinssissä kuten muualla pelissä (oikea keskustelu). Natiiviin sama → Linssiseppä (Pelikoodarin kanssa jos chat-putki hänen), build 10, kuvapari.
