@@ -483,7 +483,7 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.simulatorSdkArchitecture = AppleMobileArchitectureSimulator.ARM64;
             PlayerSettings.iOS.targetOSVersionString = "17.0";
             // Tiimi MATKAKIRJA_TEAM-ympäristömuuttujasta (Fable 24.9.2026: kehityskäännökset maksulliseen
-            // Developer Program -tiimiin RCD77XPB7M, samireivinen@me.com; Personal Team F72JLS57C5 pois kokonaan).
+            // Developer Program -tiimiin RCD77XPB7M, samireivinen@me.com; vanha ilmainen Personal Team on poistettu kokonaan).
             var tiimi = Environment.GetEnvironmentVariable("MATKAKIRJA_TEAM");
             PlayerSettings.iOS.appleDeveloperTeamID = string.IsNullOrEmpty(tiimi) ? Tiimi : tiimi;
             PlayerSettings.iOS.appleEnableAutomaticSigning = true;
@@ -555,8 +555,6 @@ namespace Matkakirja.Editori
 
         /// <summary>Omistajan Developer Program -tiimi (samireivinen@me.com; TestFlight ja kehityskäännökset).</summary>
         const string Tiimi = "RCD77XPB7M";
-        /// <summary>TestFlight-jakelun tiimi buildeissa 4–9 (Actionsin TEAM_ID); build 10 kaatui, kun oletus oli Tiimi.</summary>
-        const string JakeluTiimi = "F72JLS57C5";
         /// <summary>Laitteen kehityskäännöksen App ID (tyokalut/ipad.sh ID).</summary>
         const string LaiteBundleId = "fi.matkakirja.peli.kehitys";
 
@@ -564,7 +562,7 @@ namespace Matkakirja.Editori
         /// Xcode-projekti TestFlightiin: Build/testflight (Julkaisija arkistoi ja lähettää
         /// pilviallekirjoituksella). Ympäristömuuttujat:
         ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d)
-        ///   MATKAKIRJA_TEAM       tiimin Team ID (oletus jakelutiimi <see cref="JakeluTiimi"/>, kuten buildeissa 4–9)
+        ///   MATKAKIRJA_TEAM       tiimin Team ID (oletus Developer Program -tiimi <see cref="Tiimi"/>; CI antaa TEAM_ID:n)
         ///   MATKAKIRJA_VERSIO     CFBundleShortVersionString (oletus 0.1.0)
         ///   MATKAKIRJA_BUILD      CFBundleVersion, kasvava kokonaisluku (pakollinen)
         ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE)
@@ -580,7 +578,7 @@ namespace Matkakirja.Editori
             AsetaIos(iOSSdkVersion.DeviceSDK);
             PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS,
                 Ymp("MATKAKIRJA_BUNDLE_ID", "app.matkakirja.proto3d"));
-            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", JakeluTiimi);
+            PlayerSettings.iOS.appleDeveloperTeamID = Ymp("MATKAKIRJA_TEAM", Tiimi);
             PlayerSettings.bundleVersion = Ymp("MATKAKIRJA_VERSIO", "0.1.0");
             PlayerSettings.iOS.buildNumber = build;
             // MATKAKIRJA_APPSTORE=1: App Store -käännös (linssien kehittäjätila pois, kynnykset aina;
