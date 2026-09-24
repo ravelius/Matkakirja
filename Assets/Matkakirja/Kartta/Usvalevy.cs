@@ -26,6 +26,9 @@ namespace Matkakirja
         MaterialPropertyBlock lohko;
         float peitto, tavoite, nopeus = 1f;
 
+        /// <summary>Kokeilu (komento "lentoharmaa usva pois"): levy ei piirry, vaikka peitto olisi päällä.</summary>
+        public static bool Estetty;
+
         /// <summary>Nykyinen peitto 0–1.</summary>
         public float Peitto => peitto;
 
@@ -68,7 +71,7 @@ namespace Matkakirja
             lohko ??= new MaterialPropertyBlock();
             lohko.SetFloat(PeittoId, peitto * peitto * (3f - 2f * peitto));
             piirto.SetPropertyBlock(lohko);
-            piirto.enabled = peitto > 0.001f;
+            piirto.enabled = peitto > 0.001f && !Estetty;
         }
 
         void Tee()

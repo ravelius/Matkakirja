@@ -47,6 +47,11 @@ namespace Matkakirja
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
+    ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
+    ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
+    ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
+    ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
+    ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
     /// </summary>
@@ -98,6 +103,71 @@ namespace Matkakirja
                 }
             }
             while (jono.Count > 0 && Time.unscaledTime >= odotus) Aja(jono.Dequeue());
+        }
+
+        /// <summary>
+        /// Harmaiden suorakulmioiden hypoteesit simulaattorissa (kylmä ensimmäinen lento, loittonus):
+        ///   vara       magenta siellä, missä paikan 1 (Blue Marble) rasteri puuttuu → magenta suorakulmiot = laatta ilman
+        ///              rasteria (ja varakartta laukeaa); harmaa ilman magentaa = rasteri on, mutta sisältö harmaa (c)
+        ///   kattavuus  paikka 1 vihreänä (rasteri) / magentana (puuttuu) koko pallolla
+        ///   uv         varakartan UV väreinä (r = pituus, g = leveys); punainen = maan akselit puuttuvat
+        ///   taso       paikan 1 rasterin absoluuttinen taso: punainen ≤ varataso (varakartta), keltainen→vihreä 2–8,
+        ///              magenta rasteri puuttuu, sininen varakartta puuttuu
+        ///   sumu pois|paalle   etäisyyssumu (Aurinko) pois lennolta
+        ///   varataso z varakartta, kun paikan 1 käytetty rasteri on itse tasolla ≤ z (oletus 2,5, 0 = pois)
+        ///   satloki    Laattapalvelimen satelliittiloki alkaa alusta (minuutti seuraavasta satelliittipyynnöstä)
+        ///   varapois   varakartta pois (vertailu: sama harmaa ilman varaa?)
+        ///   s2         paikan 2 (Sentinel) peitto syaanina (d)
+        ///   paikka n a raster-paikan n globaali alfa (0 = piiloon), esim. paikka 0 0 → pergamentti pois
+        ///   usva pois|paalle, pilvet pois|paalle   usvalevy (a) ja pilvikuori (e) piiloon
+        ///   pois       kaikki normaaliksi
+        /// </summary>
+        void LentoHarmaa(string[] o)
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            string m = o.Length > 1 ? o[1] : "pois";
+            bool paalle = o.Length > 2 && o[2] == "paalle";
+            switch (m)
+            {
+                case "vara": KarttaKerrokset.LentoTesti = 2; break;
+                case "kattavuus": KarttaKerrokset.LentoTesti = 3; break;
+                case "uv": KarttaKerrokset.LentoTesti = 4; break;
+                case "taso": KarttaKerrokset.LentoTesti = 5; break;
+                case "varataso" when o.Length > 2:
+                    KarttaKerrokset.VaraTaso = (float)double.Parse(o[2], CultureInfo.InvariantCulture);
+                    break;
+                case "sumu": Aurinko.SumuEstetty = !paalle; break;
+                case "satloki": SatelliittiLoki.Aloita(); break;
+                case "normaali": KarttaKerrokset.LentoTesti = 0; break;
+                case "varapois": KarttaKerrokset.LentoTestiVaraPois = !(o.Length > 2 && o[2] == "pois"); break;
+                case "s2": KarttaKerrokset.LentoTestiS2 = !(o.Length > 2 && o[2] == "pois"); break;
+                case "paikka" when o.Length > 3:
+                    Shader.SetGlobalFloat("_overlayAlfa_" + o[2], (float)double.Parse(o[3], CultureInfo.InvariantCulture));
+                    break;
+                case "usva": Usvalevy.Estetty = !paalle; break;
+                case "pilvet":
+                {
+                    var kuori = GameObject.Find("Pilvikuori");
+                    var r = kuori != null ? kuori.GetComponent<MeshRenderer>() : null;
+                    if (r != null) r.enabled = paalle;
+                    else Debug.LogWarning("MATKAKIRJA lentoharmaa: pilvikuorta ei ole (vasta lennon aikana)");
+                    break;
+                }
+                default:
+                    KarttaKerrokset.LentoTesti = 0;
+                    KarttaKerrokset.LentoTestiVaraPois = false;
+                    KarttaKerrokset.LentoTestiS2 = false;
+                    Usvalevy.Estetty = false;
+                    Aurinko.SumuEstetty = false;
+                    KarttaKerrokset.VaraTaso = 2.5f;
+                    for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
+                    var pk = GameObject.Find("Pilvikuori");
+                    if (pk != null && pk.TryGetComponent<MeshRenderer>(out var pr)) pr.enabled = true;
+                    break;
+            }
+            kk?.LentoTestiVoimaan();
+            Debug.Log($"MATKAKIRJA lentoharmaa {string.Join(" ", o, 1, o.Length - 1)}: testi {KarttaKerrokset.LentoTesti}, varataso {KarttaKerrokset.VaraTaso}, " +
+                      $"varapois {KarttaKerrokset.LentoTestiVaraPois}, s2 {KarttaKerrokset.LentoTestiS2}, usva estetty {Usvalevy.Estetty}");
         }
 
         void Aja(string rivi)
@@ -289,6 +359,9 @@ namespace Matkakirja
                     if (o.Length > 3) KarttaKerrokset.SatelliittiS2 = o[3];
                     Debug.Log("MATKAKIRJA lennon pinta: satelliitti " + (KarttaKerrokset.SatelliittiVersio ?? "pois (sileä)"));
                     break;
+                case "lentoharmaa":
+                    LentoHarmaa(o);
+                    break;
                 case "s2meri":
                 {
                     // s2meri r g b kynnys: meren värjäys (KarttaKerrokset.S2Meri). Arvot > 1 tulkitaan 0–255-asteikoksi.
@@ -298,6 +371,17 @@ namespace Matkakirja
                     if (r > 1f || g > 1f || b > 1f) { r /= 255f; g /= 255f; b /= 255f; }
                     kk.S2Meri(new Color(r, g, b), (float)D(4));
                     Debug.Log($"MATKAKIRJA lennon pinta: s2meri {KarttaKerrokset.S2MeriVari} kynnys {KarttaKerrokset.S2MeriKynnys:0.###}");
+                    break;
+                }
+                case "nimet":
+                {
+                    // nimet paalle|pois|laske | nimet valtameret paalle|pois | nimet siirto <x> (Nimikerros, löydös 38)
+                    var nk = Nimikerros.Instanssi;
+                    if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nimikerros puuttuu"); break; }
+                    if (o.Length > 1 && (o[1] == "paalle" || o[1] == "pois")) nk.paalla = o[1] == "paalle";
+                    else if (o.Length > 2 && o[1] == "valtameret") nk.valtameret = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "siirto") nk.tasoSiirto = (float)D(2);
+                    Debug.Log(nk.Kuvaus());
                     break;
                 }
                 case "palvelin":

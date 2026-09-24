@@ -986,6 +986,10 @@ namespace Matkakirja.Natiivi
             // Web body.aikajana-paalla piilottaa myös nappulan ja nostot (RAJAPINTA 4, Natiiviseppä c6c83c9).
             k.Nakyvyys("nappula", nakyvissa);
             k.Nakyvyys("pisteet", nakyvissa);
+            // Kermahuntu pois linssin ajaksi (web lauta.js "KERMA POIS MYÖS LINSSIN AJAKSI"; löydös 43: radiossa
+            // kaikki maat ilman huntua). Vertailu ja maatiedot pitävät sen kuten webissä (mitattu 24.9.,
+            // lokit/linssit-loydos43-20260924/web). Rasterilinssit väistävät sen jo (KarttaKerrokset.LisaaRasteri).
+            if (k.varitaso != null && (nakyvissa || !(rekisteri?.Auki is MaatSovitin))) k.varitaso.Pelikerrokset(nakyvissa);
             // Kaupungin nimikortti pois linssin tieltä (web body.aikajana-paalla .fact-card;
             // iPad-kuvassa Pariisin kortti jäi ihmisen matkan päälle). Kortti palaa
             // seuraavasta kaupungin napautuksesta, joten palautusta ei tarvita.

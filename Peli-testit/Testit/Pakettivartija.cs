@@ -16,6 +16,8 @@
 // raakapolkuja ei lueta, joten jokainen lukija, joka vielä tarvitsee niitä, punastuu.
 // SKEEMA 1.26 (24.9.2026): säännöt ovat päätaso ensin ("kentta|data.vanha", Tai("a.b")), kuten
 // lukijat (Paataso.Nakyma/Olio). Raaka vaihtoehto on vain vanhoja paketteja varten.
+// SKEEMA 1.37 (24.9.2026, koepaketti v47 ja 2.0 v8): kokoelmat merinimet (1.36) ja aluenimet (1.37) Nimikerrokselle
+// (Kartta/NimiLadonta.cs, valinnaisia); 1.34–1.35 toivat maarajojen ja maat.fokuspohja-kentät (NostoKerros).
 // SKEEMA 1.33 (24.9.2026, koepaketti v43): kokoelma maamerkit (valinnainen, Maamerkkisisalto.Lue); 1.31–1.32
 // toivat lisää päätason kenttiä (2.0-aukot), jotka eivät muuta natiivin lukijoita.
 // SKEEMA 1.30 (24.9.2026, koepaketti v38): aanitaulut (oma sääntö), reitit.maksu ja laattatyyppien
@@ -481,6 +483,36 @@ namespace Matkakirja.Peli.Testit
                 .Pakko("malli.tavuja", L).Pakko("lisenssi", T).Voi("tekija", T).Voi("lahde", T)
                 .Ehto((o, p) => Kaupunki(p, MiniJson.Teksti(o, "kaupunki"), "kaupunki"))
                 .Uniikki("kaupunki"),
+
+            // Aluenimet (skeema 1.37) ja merinimet (1.36): Nimikerros (Kartta/NimiLadonta.cs Nimisto.Lue), valinnaisia.
+            // Meri, joka on molemmissa, luetaan aluenimistä; merinimet on vanhan paketin varareitti.
+            new Lukijasaanto
+            {
+                Kokoelma = "aluenimet", Lukija = "Nimisto.Lue (aluenimet)", VahintaanLuettu = 0, Alkaen = "1.37",
+                Aja = p =>
+                {
+                    var n = Nimisto.Lue(p.Teksti("aluenimet"), null);
+                    return (n.Nimet.Count, n.Ohitetut.Count > 0 ? "lukija ohitti: " + string.Join("; ", n.Ohitetut) : null);
+                },
+            }
+                .Pakko("id", T).Pakko("teksti", T).Pakko("luokka", T).Pakko("pallotasot", A).Voi("tasot", A)
+                .Voi("tyyli", T).Voi("iso", T).Voi("muste", T).Voi("kulma", L).Voi("paikat", O)
+                .Voi("lon", L).Voi("lat", L).Voi("korkeus_m", L)
+                .Ehto((o, p) => NimiLadonta.Porras(MiniJson.Teksti(o, "luokka")) < 0 ? "tuntematon luokka" : null)
+                .Ehto((o, p) => MiniJson.Kentta(o, "paikat") is Dictionary<string, object> || MiniJson.Luku(o, "korkeus_m") != null ? null : "ei paikkoja eikä korkeutta")
+                .Uniikki("id"),
+
+            new Lukijasaanto
+            {
+                Kokoelma = "merinimet", Lukija = "Nimisto.Lue (merinimet)", VahintaanLuettu = 0, Alkaen = "1.36",
+                Aja = p =>
+                {
+                    var n = Nimisto.Lue(null, p.Teksti("merinimet"));
+                    return (n.Nimet.Count, n.Ohitetut.Count > 0 ? "lukija ohitti: " + string.Join("; ", n.Ohitetut) : null);
+                },
+            }
+                .Pakko("id", T).Pakko("nimi", T).Pakko("lat", L).Pakko("lon", L).Pakko("tasot", A).Voi("kulma", L)
+                .Uniikki("id"),
 
             Saanto("pulmat", "Pulmadata.Lue", p =>
                 {
