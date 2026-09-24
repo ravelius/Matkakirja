@@ -6,6 +6,7 @@
 <title>Linssikatalogi — Matkakirja</title>
 <meta name="robots" content="noindex">
 <!-- Lähde: docs/linssikatalogi.md. Pages kopioi tämän (pages.yml), jotta osoite näkyy kaikilla tileillä. -->
+<!-- Uudistus esittelysivuksi: docs/raportit/linssikatalogi-uudistus-suunnitelma-20260924.md (Fable). Vaihe 1: rakenne ilman kuvia. -->
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap">
@@ -13,38 +14,60 @@
   :root {
     --paperi: #efe6d2;
     --paperi-tumma: #e3d7bc;
+    --paperi-kortti: #f6efe0;
     --muste: #2b241b;
     --muste-haalea: #6b5f4d;
     --seepia: #8a5a2b;
     --sininen: #3f5a7a;
     --kulta: #b8892f;
     --vihrea: #5f6b4a;
+    --terrakotta: #a0522d;
+    --turkoosi: #3f7a72;
+    --violetti: #6a4f8a;
+    --ruusu: #a14b6e;
+    --hiekka: #7a6a4a;
     --viiva: #c9bb9c;
+    --varjo: rgba(43, 36, 27, .14);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --paperi: #1f1a14;
       --paperi-tumma: #2a241b;
+      --paperi-kortti: #2a241a;
       --muste: #ebe0c8;
       --muste-haalea: #a99d86;
       --seepia: #d2a06a;
       --sininen: #9fb6cf;
       --kulta: #d9b25a;
       --vihrea: #a4b087;
+      --terrakotta: #d88a5c;
+      --turkoosi: #8fc2b8;
+      --violetti: #b39ddb;
+      --ruusu: #d98cae;
+      --hiekka: #c4b48a;
       --viiva: #4a4034;
+      --varjo: rgba(0, 0, 0, .35);
     }
   }
   :root[data-theme="dark"] {
     --paperi: #1f1a14;
     --paperi-tumma: #2a241b;
+    --paperi-kortti: #2a241a;
     --muste: #ebe0c8;
     --muste-haalea: #a99d86;
     --seepia: #d2a06a;
     --sininen: #9fb6cf;
     --kulta: #d9b25a;
     --vihrea: #a4b087;
+    --terrakotta: #d88a5c;
+    --turkoosi: #8fc2b8;
+    --violetti: #b39ddb;
+    --ruusu: #d98cae;
+    --hiekka: #c4b48a;
     --viiva: #4a4034;
+    --varjo: rgba(0, 0, 0, .35);
   }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     background: var(--paperi);
@@ -53,44 +76,182 @@
     font-size: 17px;
     line-height: 1.5;
   }
-  .sivu { max-width: 1040px; margin: 0 auto; padding: 40px 24px 80px; }
-  header.otsake { display: grid; gap: 14px; padding-bottom: 28px; border-bottom: 2px solid var(--muste); margin-bottom: 8px; }
-  .yla { font-family: "Special Elite", "Courier New", monospace; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--seepia); }
-  h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1; margin: 0; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
-  .luvut { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 4px; font-family: "Special Elite", monospace; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muste-haalea); }
-  .luvut b { font-family: Vollkorn, serif; font-size: 22px; font-weight: 600; letter-spacing: 0; color: var(--muste); margin-right: 6px; font-variant-numeric: tabular-nums; }
-  nav.suodatin { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 0; background: var(--paperi); border-bottom: 1px solid var(--viiva); margin-bottom: 8px; }
-  nav.suodatin button { font: 13px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste); background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
-  nav.suodatin button[aria-pressed="true"] { background: var(--muste); color: var(--paperi); border-color: var(--muste); }
-  nav.suodatin button:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
-  section.ryhma { margin-top: 40px; }
-  section.ryhma[hidden] { display: none; }
-  section.ryhma > h2 { display: flex; align-items: baseline; gap: 10px; margin: 0 0 6px; font-size: 26px; font-weight: 600; }
-  section.ryhma > h2 .maara { font-family: "Special Elite", monospace; font-size: 14px; letter-spacing: .06em; color: var(--muste-haalea); font-weight: 400; }
-  .rivi { display: grid; grid-template-columns: 52px 1fr 90px; gap: 6px 16px; padding: 14px 0; border-top: 1px solid var(--viiva); align-items: start; }
-  .rivi:last-child { border-bottom: 1px solid var(--viiva); }
-  .rivi[hidden] { display: none; }
-  .koodi { font-family: "Special Elite", monospace; font-size: 14px; color: var(--seepia); padding-top: 4px; }
-  .nimi { font-size: 19px; font-weight: 600; margin: 0; line-height: 1.25; }
-  .meta { font-size: 14px; color: var(--muste-haalea); margin: 2px 0 6px; font-variant-numeric: tabular-nums; }
-  .meta span + span::before { content: " · "; }
-  .pysakit { margin: 0; font-size: 15.5px; color: var(--muste); }
-  .huom { margin: 6px 0 0; font-size: 14px; color: var(--sininen); }
-  .tila { justify-self: end; font: 12px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); white-space: nowrap; padding-top: 4px; }
-  .jarjestys { margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--muste); }
-  .jarjestys h2 { font-size: 24px; margin: 0 0 8px; }
-  .jarjestys ol { margin: 0; padding-left: 22px; max-width: 70ch; }
-  .jarjestys li { margin: 6px 0; }
-  footer { margin-top: 40px; font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .06em; color: var(--muste-haalea); }
-  .teemakytkin { position: fixed; top: 14px; right: 14px; z-index: 3; font: 12px "Special Elite", monospace; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); background: var(--paperi-tumma); border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
-  .teemakytkin:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
-  @media (max-width: 640px) {
-    .rivi { grid-template-columns: 40px 1fr; }
-    .tila { grid-column: 2; justify-self: start; }
-    body { font-size: 16px; }
-    .teemakytkin { top: 8px; right: 8px; padding: 5px 10px; }
+  .mono { font-family: "Special Elite", "Courier New", monospace; }
+  .sivu { max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px; }
+  a { color: inherit; }
+
+  /* --- Otsake --- */
+  header.otsake { display: grid; gap: 10px; padding-bottom: 26px; border-bottom: 2px solid var(--muste); margin-bottom: 32px; }
+  .yla { font-family: "Special Elite", monospace; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--seepia); }
+  h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1; margin: 0; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
+  .johdanto { max-width: 62ch; font-size: 18px; color: var(--muste-haalea); margin: 2px 0 6px; }
+  .luvut { display: flex; flex-wrap: wrap; gap: 22px 30px; margin-top: 10px; }
+  .luvut div { font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); }
+  .luvut b { display: block; font-family: Vollkorn, serif; font-size: 30px; font-weight: 700; letter-spacing: 0; color: var(--muste); font-variant-numeric: tabular-nums; margin-bottom: 2px; }
+
+  h2.otsikko { font-size: 15px; margin: 0 0 16px; font-family: "Special Elite", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--seepia); display: flex; align-items: baseline; gap: 10px; }
+  h2.otsikko .selite { font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--muste-haalea); font-style: italic; }
+  section.lohko { margin: 46px 0; }
+
+  /* --- Moottorikortit --- */
+  .moottorit { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  .moottori { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 16px; display: grid; gap: 8px; }
+  .moottori .ikoni { width: 30px; height: 30px; color: var(--vari, var(--seepia)); }
+  .moottori .ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .moottori b { font-size: 15.5px; font-weight: 700; }
+  .moottori p { margin: 0; font-size: 13.5px; color: var(--muste-haalea); line-height: 1.4; }
+
+  /* --- Pelissä nyt --- */
+  .pelissa-nyt { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pn-kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; overflow: hidden; }
+  .pn-kuva { aspect-ratio: 16/8; background: repeating-linear-gradient(135deg, var(--paperi-tumma), var(--paperi-tumma) 10px, var(--paperi) 10px, var(--paperi) 20px); display: flex; align-items: center; justify-content: center; position: relative; }
+  .pn-kuva .tagi { position: absolute; top: 10px; left: 10px; font: 11px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; background: var(--muste); color: var(--paperi); padding: 4px 8px; border-radius: 999px; }
+  .pn-kuva .merkki { font: 13px "Special Elite", monospace; color: var(--muste-haalea); letter-spacing: .06em; }
+  .pn-teksti { padding: 14px 16px 16px; }
+  .pn-teksti b { font-size: 19px; }
+  .pn-teksti p { margin: 4px 0 0; font-size: 14px; color: var(--muste-haalea); }
+
+  /* --- Seuraavat-kaista --- */
+  .seuraavat-kaista { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 14px; scroll-snap-type: x proximity; }
+  .sk-kortti { scroll-snap-align: start; flex: 0 0 168px; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; padding: 10px; display: grid; gap: 6px; }
+  .sk-numero { font: 12px "Special Elite", monospace; color: var(--seepia); }
+  .sk-kuva { position: relative; aspect-ratio: 4/3; border-radius: 6px; background: var(--tausta, var(--paperi-tumma)); display: flex; align-items: center; justify-content: center; color: var(--vari, var(--muste-haalea)); overflow: hidden; }
+  .sk-kuva svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+  .sk-nimi { font-size: 13.5px; font-weight: 600; line-height: 1.25; }
+  .sk-kaari { font-size: 11.5px; color: var(--muste-haalea); font-variant-numeric: tabular-nums; }
+
+  /* --- Suodattimet --- */
+  nav.suodatin { position: sticky; top: 0; z-index: 5; background: var(--paperi); border-bottom: 1px solid var(--viiva); padding: 12px 0; margin-bottom: 28px; display: grid; gap: 10px; }
+  .suodatin-rivi { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .suodatin-rivi .otsikkopieni { font: 11px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); margin-right: 4px; min-width: 62px; }
+  nav.suodatin button.lippu { font: 12.5px "Special Elite", monospace; letter-spacing: .05em; color: var(--muste); background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+  nav.suodatin button.lippu[aria-pressed="true"] { background: var(--muste); color: var(--paperi); border-color: var(--muste); }
+  nav.suodatin button.lippu:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .haku { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .haku input[type="search"] { font: 14px Vollkorn, serif; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 7px 14px; color: var(--muste); min-width: 200px; }
+  .aikasuodin { display: flex; align-items: center; gap: 8px; flex: 1 1 260px; min-width: 220px; }
+  .aikasuodin input[type="range"] { width: 100%; accent-color: var(--seepia); }
+  .aikasuodin .vuosi { font: 12px "Special Elite", monospace; color: var(--muste-haalea); white-space: nowrap; min-width: 74px; }
+  .osuma-maara { font: 12.5px "Special Elite", monospace; color: var(--muste-haalea); margin-left: auto; white-space: nowrap; }
+
+  /* --- Ruudukko --- */
+  .ruudukko { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 10px; overflow: hidden; cursor: pointer; transition: box-shadow .15s; }
+  .kortti:hover { box-shadow: 0 3px 14px var(--varjo); }
+  .kortti[hidden] { display: none; }
+  .kortti.auki { grid-column: 1 / -1; cursor: default; }
+  .k-kuva { aspect-ratio: 4/3; position: relative; background: var(--tausta, var(--paperi-tumma)); display: flex; align-items: center; justify-content: center; color: var(--vari, var(--muste-haalea)); }
+  .kortti.auki .k-kuva { aspect-ratio: 21/9; }
+  .k-kuva svg { width: 34%; max-width: 64px; height: auto; fill: none; stroke: currentColor; stroke-width: 1.3; opacity: .55; }
+  .k-cc { position: absolute; bottom: 6px; right: 6px; width: 30px; height: 22px; border-radius: 3px; background: var(--paperi); border: 1px solid var(--viiva); object-fit: cover; }
+  .k-kuva-pieni { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .k-lahde { margin: 2px 0 0; font-size: 12px; color: var(--muste-haalea); }
+  .k-lahde a { color: var(--sininen); }
+  .k-tila-piste { position: absolute; top: 8px; left: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--tilavari); box-shadow: 0 0 0 2px var(--paperi-kortti); z-index: 2; }
+  .k-body { padding: 12px 14px 14px; display: grid; gap: 6px; }
+  .k-ylarivi { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .k-tunnus { font: 11.5px "Special Elite", monospace; color: var(--seepia); }
+  .k-tyyppi-ikoni { width: 15px; height: 15px; color: var(--vari, var(--muste-haalea)); }
+  .k-tyyppi-ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.8; }
+  .k-nimi { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.25; }
+  .k-meta { font-size: 12.5px; color: var(--muste-haalea); }
+  .k-aikapalkki { position: relative; height: 7px; border-radius: 4px; background: var(--paperi-tumma); overflow: visible; margin: 3px 0 1px; }
+  .k-aikapalkki .segmentti { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: var(--vari, var(--seepia)); opacity: .8; }
+  .k-aikapalkki .piste1873 { position: absolute; top: -2px; bottom: -2px; width: 2px; background: #b3402f; }
+  .k-aikapalkki .moodi { font-size: 11px; color: var(--muste-haalea); font-style: italic; }
+  .k-pysakit { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0 0; }
+  .k-pysakit span { font-size: 11.5px; background: var(--paperi-tumma); border-radius: 999px; padding: 2px 8px; color: var(--muste); }
+  .k-pysakit span.lisaa { color: var(--muste-haalea); background: transparent; padding-left: 2px; }
+  .k-tila-teksti { font: 11px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--tilavari); }
+  .k-opitaan { font-size: 13px; font-style: italic; color: var(--muste-haalea); margin: 0; }
+  .k-pelikytkos { position: absolute; top: 8px; right: 8px; font: 10.5px "Special Elite", monospace; letter-spacing: .05em; background: var(--muste); color: var(--paperi); padding: 3px 8px; border-radius: 999px; z-index: 2; max-width: 70%; }
+  .k-tahdet { font-size: 12px; letter-spacing: 1px; color: var(--kulta); }
+  .moottori-lohko { margin-bottom: 38px; }
+  .moottori-lohko h3 { display: flex; align-items: center; gap: 8px; font-size: 20px; margin: 0 0 12px; }
+  .moottori-lohko h3 .moottori-ikoni { width: 20px; height: 20px; color: var(--vari); }
+  .moottori-lohko h3 .moottori-ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; }
+  .moottori-lohko h3 .maara { font: 13px "Special Elite", monospace; color: var(--muste-haalea); font-weight: 400; }
+  .moottori .badge { font: 10px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; width: fit-content; }
+  .moottori .badge.rakennettu { background: var(--vihrea); color: var(--paperi); }
+  .moottori .badge.suunnitteilla { background: var(--paperi-tumma); color: var(--muste-haalea); }
+
+  .k-lisatiedot { display: none; padding: 0 14px 18px; gap: 14px; }
+  .kortti.auki .k-lisatiedot { display: grid; grid-template-columns: 1fr 1fr; }
+  .kortti.auki .k-body { padding-bottom: 4px; }
+  .k-lisatiedot .sarake { display: grid; gap: 10px; align-content: start; }
+  .k-lisatiedot h4 { margin: 0; font: 11px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .07em; color: var(--muste-haalea); }
+  .k-lisatiedot .huom-teksti { font-size: 14px; color: var(--sininen); margin: 0; }
+  .k-lisatiedot .pysakit-koko { margin: 0; font-size: 15px; }
+  .k-sulje { font: 11px "Special Elite", monospace; background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 4px 10px; cursor: pointer; color: var(--muste-haalea); justify-self: start; }
+
+  @media (max-width: 900px) {
+    .moottorit { grid-template-columns: repeat(3, 1fr); }
+    .pelissa-nyt { grid-template-columns: 1fr; }
+    .ruudukko { grid-template-columns: 1fr; }
+    .kortti.auki .k-lisatiedot { grid-template-columns: 1fr; }
   }
-  @media (prefers-reduced-motion: no-preference) { nav.suodatin button { transition: background .15s, color .15s; } }
+  @media (max-width: 480px) {
+    .moottorit { grid-template-columns: 1fr 1fr; }
+    body { font-size: 16px; }
+    .sivu { padding: 24px 16px 60px; }
+    .luvut { gap: 16px 22px; }
+    .luvut b { font-size: 24px; }
+  }
+
+  /* --- Tiekartta --- */
+  .tiekartta { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .tk-sarake { background: var(--paperi-tumma); border-radius: 10px; padding: 10px; min-width: 0; }
+  .tk-otsikko { display: flex; align-items: center; gap: 8px; font: 11.5px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; padding: 4px 4px 10px; }
+  .tk-piste { width: 9px; height: 9px; border-radius: 50%; background: var(--vari); flex: none; }
+  .tk-maara { margin-left: auto; color: var(--muste-haalea); }
+  .tk-kortti { background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 7px; padding: 7px 9px; margin-bottom: 6px; font-size: 12.5px; cursor: pointer; }
+  .tk-kortti b { display: block; font-size: 13px; margin-bottom: 1px; }
+  .tk-kortti span { color: var(--muste-haalea); font-size: 11px; }
+  @media (max-width: 900px) {
+    .tiekartta { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .tiekartta { grid-template-columns: 1fr; }
+  }
+
+  /* --- Alatunniste ja napit --- */
+  .alanapit { display: flex; gap: 10px; flex-wrap: wrap; margin: 44px 0 18px; }
+  .alanapit button { font: 12.5px "Special Elite", monospace; letter-spacing: .06em; text-transform: uppercase; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 8px 16px; cursor: pointer; color: var(--muste); }
+  footer { margin-top: 10px; font-family: "Special Elite", monospace; font-size: 12px; letter-spacing: .05em; color: var(--muste-haalea); line-height: 1.7; }
+  .teemakytkin { position: fixed; top: 14px; right: 14px; z-index: 6; font: 12px "Special Elite", monospace; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); background: var(--paperi-tumma); border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .teemakytkin:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  @media (max-width: 640px) { .teemakytkin { top: 8px; right: 8px; padding: 5px 10px; } }
+
+  /* --- Esitystila --- */
+  #esitys { position: fixed; inset: 0; z-index: 20; background: var(--paperi); display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px; text-align: center; }
+  body.esitys-paalla #esitys { display: flex; }
+  body.esitys-paalla > .sivu, body.esitys-paalla .teemakytkin { display: none; }
+  #esitys .e-kuva { position: relative; overflow: hidden; width: min(70vw, 640px); aspect-ratio: 4/3; border-radius: 14px; background: var(--tausta, var(--paperi-tumma)); color: var(--vari, var(--muste-haalea)); display: flex; align-items: center; justify-content: center; margin-bottom: 26px; }
+  #esitys .e-kuva svg { width: 90px; height: 90px; fill: none; stroke: currentColor; stroke-width: 1.2; opacity: .6; }
+  #esitys .e-nimi { font-size: clamp(26px, 4vw, 42px); font-weight: 700; margin: 0 0 8px; }
+  #esitys .e-kaari { font-family: "Special Elite", monospace; color: var(--muste-haalea); font-size: 15px; margin-bottom: 0; }
+  #esitys .e-opitaan { font-style: italic; color: var(--muste-haalea); font-size: 16px; max-width: 60ch; margin: 14px 0 0; }
+  #esitys .e-cc { display: flex; align-items: center; gap: 10px; margin: 18px 0 24px; font-size: 12px; color: var(--muste-haalea); }
+  #esitys .e-cc img { width: 46px; height: 34px; object-fit: cover; border-radius: 4px; border: 1px solid var(--viiva); }
+  #esitys .e-cc a { color: var(--sininen); }
+  #esitys .e-ohjaus { display: flex; align-items: center; gap: 18px; }
+  #esitys .e-ohjaus button { font: 13px "Special Elite", monospace; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 8px 18px; cursor: pointer; color: var(--muste); }
+  #esitys .e-laskuri { font: 12px "Special Elite", monospace; color: var(--muste-haalea); position: absolute; top: 20px; left: 50%; transform: translateX(-50%); }
+  #esitys .e-poistu { position: absolute; top: 20px; right: 24px; font: 12px "Special Elite", monospace; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 14px; cursor: pointer; color: var(--muste); }
+
+  /* --- Tulostus --- */
+  @media print {
+    :root, :root[data-theme] { --paperi: #fff; --paperi-tumma: #f0ede4; --paperi-kortti: #fff; --muste: #111; --muste-haalea: #555; --viiva: #ccc; }
+    body { font-size: 11px; }
+    .teemakytkin, nav.suodatin, .seuraavat-kaista, .moottorit, .pelissa-nyt, .tiekartta, .alanapit, #esitys, .k-lisatiedot, section.lohko > h2.otsikko + p { display: none !important; }
+    section.lohko#ruudukko-lohko { margin: 0; }
+    .ruudukko { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .kortti { break-inside: avoid; border: 1px solid #ccc; }
+    .k-kuva { display: none; }
+    .sivu { max-width: none; padding: 0; }
+    @page { size: A4 landscape; margin: 10mm; }
+  }
+  @media (prefers-reduced-motion: no-preference) { .kortti { transition: box-shadow .15s; } }
 </style>
 
 <button type="button" class="teemakytkin" id="teemakytkin"></button>
@@ -99,226 +260,439 @@
   <header class="otsake">
     <div class="yla">Matkakirja ja unohdettu aarre · linssikatalogi</div>
     <h1>Linssikatalogi</h1>
+    <p class="johdanto">Linssi on kartan päälle laskeutuva kerros, joka näyttää yhden ilmiön ajassa ja paikassa — historian aikajanan, valtakunnan rajat, kaupan virran tai oikean satelliittiaineiston.</p>
     <div class="luvut" id="luvut"></div>
   </header>
 
-  <nav class="suodatin" aria-label="Suodata mantereen mukaan" id="mannersuodatin"></nav>
+  <section class="lohko" id="moottorit-lohko">
+    <h2 class="otsikko">Kuusi moottoria</h2>
+    <div class="moottorit" id="moottorit"></div>
+  </section>
 
-  <div id="ryhmat"></div>
+  <section class="lohko" id="pelissa-nyt-lohko">
+    <h2 class="otsikko">Pelissä nyt</h2>
+    <div class="pelissa-nyt" id="pelissa-nyt"></div>
+  </section>
 
-  <div class="jarjestys">
-    <h2>Järjestys</h2>
-    <ol>
-      <li>Keksinnöt Euroopassa hiotaan valmiiksi: pelillinen ovi, kuvat kuvaputkelta, musiikki kuunneltu.</li>
-      <li>A1 Suuret uskonnot syntyvät ja A4 Uskonpuhdistus. Kuvat tilataan H4-eränä, kun H3 on hyväksytty.</li>
-      <li>B2, B3, C1, C2: pysäkeistä iso osa on jo pelin hetkiä tai kohteita.</li>
-      <li>C5 Maapallon ympäri 80 päivässä: pelin oma tarina, tarvitsee maailmankartan.</li>
-      <li>Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook. Järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.</li>
-      <li>Aluelinssit (omistajan päätös 2.9.2026 ilta): M1 Kiinan dynastiat → N1 Napoleon → N2 ensimmäinen maailmansota → M2 Rooma → N3 toinen maailmansota. Aloitus, kun aikajanamoottori on hiottu; pohjakartan ja rajojen aineistotyö ensin.</li>
-      <li>Loput ideasta seuraavaksi omistajan päätöksellä.</li>
-      <li>Datalinssit (R, 24.9.2026) omalla moottorillaan rinnakkain: Maapallon tila → R4+R5 laivat 1873 → R7 yön valot → R1+R2 palot ja savu → R11 myrskyt → R12+R13 järistykset ja tulivuoret → R16–R18 väestö → R20 kauppavirrat 1873 → R3+R9 isoisän sää ja taivas → R14+R15 lämpenevä meri.</li>
-    </ol>
+  <section class="lohko" id="seuraavat-lohko">
+    <h2 class="otsikko">Seuraavat <span class="selite">— kehitysjono numeroituna</span></h2>
+    <div class="seuraavat-kaista" id="seuraavat"></div>
+  </section>
+
+  <nav class="suodatin" aria-label="Suodata ja hae" id="suodatin">
+    <div class="suodatin-rivi">
+      <span class="otsikkopieni">Tila</span>
+      <div id="tilasuodatin"></div>
+    </div>
+    <div class="suodatin-rivi">
+      <span class="otsikkopieni">Manner</span>
+      <div id="mannersuodatin"></div>
+    </div>
+    <div class="suodatin-rivi haku">
+      <input type="search" id="tekstihaku" placeholder="Hae nimellä, alueella tai pysäkillä…">
+      <div class="aikasuodin">
+        <span class="vuosi" id="aika-min-teksti"></span>
+        <input type="range" id="aika-min" min="-3500" max="2026" value="-3500" step="10">
+        <input type="range" id="aika-max" min="-3500" max="2026" value="2026" step="10">
+        <span class="vuosi" id="aika-max-teksti"></span>
+      </div>
+      <span class="osuma-maara" id="osumamaara"></span>
+    </div>
+  </nav>
+
+  <section class="lohko" id="ruudukko-lohko">
+    <h2 class="otsikko">Koko katalogi <span class="selite">— jaettu moottorin (toteutustavan) mukaan</span></h2>
+    <div id="ruudukko-kaikki"></div>
+  </section>
+
+  <section class="lohko" id="tiekartta-lohko">
+    <h2 class="otsikko">Tiekartta</h2>
+    <div class="tiekartta" id="tiekartta"></div>
+  </section>
+
+  <div class="alanapit">
+    <button type="button" id="esitysnappi">Esitys</button>
+    <button type="button" id="tulostanappi">Tulosta / PDF</button>
   </div>
 
-  <footer>Lähde: docs/linssikatalogi.md · päivitetty 24.9.2026 · tyyppi: aikajana, alue, virta, data (osa R, selvitys docs/raportit/datalahteet-linsseille-20260924.md) · tilat: valmis, rakenteilla, seuraava, idea</footer>
+  <footer>
+    Lähde: <a href="docs/linssikatalogi.md">docs/linssikatalogi.md</a> · päivitetty 24.9.2026 ·
+    tyyppi: aikajana, alue, virta, data, museo · tilat: valmis, rakenteilla, seuraava, idea ·
+    kuvat kuvaputkelta, tulossa myöhemmin
+  </footer>
 </div>
 
+<div id="esitys">
+  <div class="e-laskuri" id="e-laskuri"></div>
+  <button type="button" class="e-poistu mono" id="e-poistu">✕ Poistu (Esc)</button>
+  <div class="e-kuva" id="e-kuva"></div>
+  <p class="e-nimi" id="e-nimi"></p>
+  <p class="e-kaari" id="e-kaari"></p>
+  <p class="e-opitaan" id="e-opitaan"></p>
+  <div class="e-cc" id="e-cc"></div>
+  <div class="e-ohjaus">
+    <button type="button" id="e-edellinen">← Edellinen</button>
+    <button type="button" id="e-seuraava">Seuraava →</button>
+  </div>
+</div>
+
+<script src="linssikatalogi-data.js"></script>
 <script>
-const LINSSIT = [
-  { id: "A1", nimi: "Suuret uskonnot syntyvät", alue: "Lähi-itä, Intia, Kiina", kaari: "1500 eaa – 632", pysakit: "Veda-hymnit Punjab · Buddhan ensimmäinen saarna Sarnath · Kungfutse Qufu · Toinen temppeli Jerusalem · Jeesus Galilea ja Jerusalem · Muhammad Mekka ja Medina", tila: "idea", huom: "Kuvat H4-tilauksena.", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "A2", nimi: "Kristinusko leviää Eurooppaan", alue: "Eurooppa", kaari: "30 – 1000", pysakit: "Paavali Ateena · Nikaian kirkolliskokous 325 · Iona 563 · Canterbury 597 · Kiovan kaste 988 · Uppsala", tila: "seuraava", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "A3", nimi: "Islamin kultakausi", alue: "Bagdad – Córdoba", kaari: "750 – 1258", pysakit: "Bait al-hikma Bagdad · Córdoban suuri moskeija · al-Azhar Kairo · Samarkandin observatorio · Isfahan · Bagdadin tuho 1258", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "A4", nimi: "Uskonpuhdistus", alue: "Keski-Eurooppa", kaari: "1517 – 1648", pysakit: "Wittenberg 1517 · Zürich · Geneve · Trenton kokous · Pyhän Bartolomeuksen yö Pariisi · Westfalenin rauha", tila: "seuraava", huom: "Kuvat H4-tilauksena.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "A5", nimi: "Buddhalaisuuden tie Aasian halki", alue: "Intia – Japani", kaari: "250 eaa – 800", pysakit: "Sanchi · Dunhuangin luolat · Nara · Borobudur · Lhasa", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "A6", nimi: "Pyhiinvaellusreitit", alue: "maailma", kaari: "jatkuva", pysakit: "Santiago de Compostela · Mekan hajj · Varanasi · Shikokun 88 temppeliä · Jerusalem", tila: "idea", huom: "Reittilinssi: valo kulkee reittiä.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "A7", nimi: "Luostarit ja kirjat", alue: "Eurooppa", kaari: "500 – 1500", pysakit: "Monte Cassino · Iona · Cluny · Mont-Saint-Michel · Athos", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B1", nimi: "Keksinnöt Euroopassa", alue: "Eurooppa", kaari: "1769 – 1928", pysakit: "Watt · Stephenson · Daguerre · Siemens · Benz · Marconi · Fleming", tila: "valmis", huom: "Pilotti (v1470), hiotaan ensin.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B2", nimi: "Tiede ennen höyryä", alue: "Eurooppa", kaari: "1543 – 1760", pysakit: "Kopernikus Frombork · Tycho Ven · Galileo Padova · Kepler Praha · Newton Cambridge · Linné Uppsala", tila: "seuraava", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B3", nimi: "Lääketieteen läpimurrot", alue: "Eurooppa", kaari: "1796 – 1928", pysakit: "Jenner · Semmelweis Wien · Snow Lontoo 1854 · Pasteur · Koch Berliini · Röntgen Würzburg · Fleming", tila: "seuraava", huom: "H3-kuvat arvioinnissa.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B4", nimi: "Sähkö ja viestintä", alue: "Eurooppa – Atlantti", kaari: "1800 – 1901", pysakit: "Volta Pavia · Ørsted Kööpenhamina · Faraday Lontoo · Morse · Atlantin kaapeli 1866 · Marconi Poldhu 1901", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B5", nimi: "Kartografia ja mittaaminen", alue: "Eurooppa", kaari: "1569 – 1884", pysakit: "Mercator Duisburg · Cassini Pariisi · Struven ketju Hammerfest – Izmail · Greenwichin nollameridiaani 1884", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "B6", nimi: "Tähtitieteen observatoriot", alue: "maailma", kaari: "1576 – 1900", pysakit: "Uraniborg · Greenwich · Pulkova · Lick · Ulugh Beg Samarkand", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "B7", nimi: "Vanhin maailmankuva pallolla", alue: "Afrikka ja muut mantereet", kaari: "1507 – 1873", pysakit: "Waldseemüller 1507 · Ortelius 1570 · Blaeu 1662 · d'Anville 1749 · Stanleyn Kongo 1877 — vanha kartta verhottuna karttapallon pinnalle, liukusäädin vanha → 1873 → nyt", tila: "idea (vaatii pallolaudan)", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "C1", nimi: "Suuret löytöretket", alue: "Atlantti – Intian valtameri", kaari: "1415 – 1522", pysakit: "Sagres · Dias 1488 · Kolumbus 1492 · da Gama 1497 · Magalhães 1519", tila: "idea", huom: "H1/H2-hetket valmiina.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C2", nimi: "Napa-alueiden valloitus", alue: "Arktis, Antarktis", kaari: "1845 – 1912", pysakit: "Franklin · Nordenskiöld Koillisväylä 1878 · Nansen Fram 1893 · Amundsen 1911 · Scott 1912", tila: "idea", tyyppi: "aikajana", manner: "Napa-alueet" },
-  { id: "C3", nimi: "Rautatiet valloittavat maanosat", alue: "maailma", kaari: "1825 – 1916", pysakit: "Stockton – Darlington · Liverpool – Manchester · Pacific Railroad 1869 · Siperian rata · Orient Express · Berliini – Bagdad", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C4", nimi: "Höyrylaivat ja kanavat", alue: "maailma", kaari: "1807 – 1914", pysakit: "Clermont · Great Eastern · Suez 1869 · Kielin kanava · Panama 1914 · Titanic", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C5", nimi: "Maapallon ympäri 80 päivässä", alue: "maailma", kaari: "1872", pysakit: "Lontoo · Suez · Bombay · Kalkutta · Hongkong · Yokohama · San Francisco · New York · Lontoo", tila: "idea", huom: "Pelin oma tarina: Foggin reitti isoisän 1873 matkan rinnalla.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C7", nimi: "Ihmisen matka", alue: "maailma", kaari: "300 000 vuotta sitten – n. 1300 jaa.", pysakit: "Omo Kibish · Jebel Irhoud · Beringia · Sahul · Lapita · Aotearoa 1250", tila: "rakenteilla", huom: "Omistajan päätös 5.9.2026; moottori 5.9.2026 (vuotta sitten -kello, reittiviiva, hyppykamera), aineisto työn alla.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "C6", nimi: "Ilmailun synty", alue: "Eurooppa – USA", kaari: "1783 – 1927", pysakit: "Montgolfier Annonay · Lilienthal Berliini · Wrightit Kitty Hawk · Blériot kanaali 1909 · Lindbergh 1927", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "D1", nimi: "Antiikin kaupungit", alue: "Välimeri, Lähi-itä", kaari: "3500 eaa – 476", pysakit: "Uruk · Memfis · Babylon · Ateena · Aleksandria · Rooma · Konstantinopoli", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "D2", nimi: "Silkkitie", alue: "Aasia – Eurooppa", kaari: "130 eaa – 1453", pysakit: "Chang’an · Dunhuang · Samarkand · Bagdad · Konstantinopoli · Venetsia", tila: "idea", huom: "Reittilinssi.", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "D3", nimi: "Hansa", alue: "Itämeri, Pohjanmeri", kaari: "1150 – 1669", pysakit: "Lyypekki · Visby · Bergen · Novgorod · Brygge · Lontoon Steelyard", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "D4", nimi: "Vallankumousten Eurooppa", alue: "Eurooppa", kaari: "1789 – 1849", pysakit: "Bastilji · Wien 1848 · Frankfurtin parlamentti · Rooman tasavalta 1849", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "D5", nimi: "Kansallisvaltiot syntyvät", alue: "Eurooppa", kaari: "1830 – 1918", pysakit: "Belgia 1830 · Italia 1861 · Saksa 1871 · Bulgaria 1878 · Norja 1905 · Suomi 1917", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "D6", nimi: "Imperiumit ja siirtomaat", alue: "maailma", kaari: "1600 – 1914", pysakit: "VOC Amsterdam · Kalkutta · Kap · Berliinin konferenssi 1884", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "E1", nimi: "Renessanssi", alue: "Italia", kaari: "1400 – 1600", pysakit: "Firenze Brunelleschi · Rooma Sikstus · Venetsia Tizian · Milano Leonardo", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "E2", nimi: "Säveltäjien Eurooppa", alue: "Eurooppa", kaari: "1685 – 1900", pysakit: "Eisenach Bach · Salzburg Mozart · Wien Beethoven · Leipzig · Bayreuth · Pietari Tšaikovski · Helsinki Sibelius", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "E3", nimi: "Kirjallisuuden kaupungit", alue: "Eurooppa", kaari: "1600 – 1900", pysakit: "Lontoo Shakespeare · Weimar Goethe · Pietari Dostojevski · Dublin · Pariisi Hugo", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "E4", nimi: "Maailmannäyttelyt", alue: "maailma", kaari: "1851 – 1900", pysakit: "Lontoo Crystal Palace · Pariisi 1889 Eiffel · Chicago 1893 · Pariisi 1900", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "E5", nimi: "Arkkitehtuurin ihmeet", alue: "maailma", kaari: "2560 eaa – 1889", pysakit: "Giza · Pantheon · Hagia Sofia · Alhambra · Kölnin tuomiokirkko · Eiffel", tila: "idea", huom: "Ihmesarjan jatko.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "E6", nimi: "Museot ja kirjastot syntyvät", alue: "Eurooppa", kaari: "1683 – 1900", pysakit: "Ashmolean · British Museum · Louvre 1793 · Eremitaasi · Ateneum", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "F1", nimi: "Suuret tulivuorenpurkaukset", alue: "maailma", kaari: "1600 eaa – 1883", pysakit: "Thera · Vesuvius 79 · Laki 1783 · Tambora 1815 (vuosi ilman kesää) · Krakatau 1883", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "F2", nimi: "Eläinten muuttoreitit", alue: "maailma", kaari: "vuodenkierto", pysakit: "kurjet · valaat · gnut · monarkkiperhoset · lohet", tila: "idea", huom: "Jatkuva animaatio, M7+-linssialusta.", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "F3", nimi: "Kasvien matkat", alue: "maailma", kaari: "1492 – 1900", pysakit: "peruna · kahvi · tee · sokeri · kumi · kaneli", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "F4", nimi: "Maanjäristykset ja kaupungit", alue: "maailma", kaari: "1755 – 1908", pysakit: "Lissabon 1755 · San Francisco 1906 · Messina 1908", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "G1", nimi: "Taudit ja rokotukset", alue: "Eurooppa", kaari: "1347 – 1918", pysakit: "Musta surma Messina 1347 · Lontoon kolera 1854 · Jenner · Pasteur · espanjantauti 1918", tila: "idea", huom: "Osin sama kuin B3.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "G2", nimi: "Raha ja pankit", alue: "Eurooppa", kaari: "1252 – 1873", pysakit: "Firenzen floriini · Amsterdamin pörssi 1602 · Bank of England 1694 · kultakanta 1873", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "G3", nimi: "Ruoan ja juoman historia", alue: "Eurooppa", kaari: "1500 – 1900", pysakit: "Pilsen 1842 · Champagne · Lyonin keittiö · Wienin kahvilat · Milanon risotto", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "G4", nimi: "Urheilun synty", alue: "Eurooppa", kaari: "1857 – 1903", pysakit: "Sheffield FC 1857 · Wimbledon 1877 · Ateena 1896 · Tour de France 1903", tila: "idea", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "G5", nimi: "Naisten oikeudet", alue: "maailma", kaari: "1791 – 1918", pysakit: "Olympe de Gouges · Seneca Falls · Uusi-Seelanti 1893 · Suomi 1906 · Britannia 1918", tila: "idea", tyyppi: "aikajana", manner: "Yleiset" },
-  { id: "G6", nimi: "Posti ja sähkösanoma", alue: "Eurooppa", kaari: "1840 – 1901", pysakit: "Penny Black · Morse Washington 1844 · Reuters Aachen · Atlantin kaapeli · Marconi", tila: "idea", huom: "Sopii pelin sähkeisiin.", tyyppi: "aikajana", manner: "Eurooppa" },
-  { id: "H1", nimi: "Kiinan keksinnöt", alue: "Kiina", kaari: "105 – 1450", pysakit: "paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H2", nimi: "Intian valtakunnat ja tiede", alue: "Intia", kaari: "2600 eaa – 1653", pysakit: "Mohenjo-daro · Ashoka Pataliputra · Nalandan yliopisto · Aryabhata · Taj Mahal Agra 1653", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H3", nimi: "Japanin aikakaudet", alue: "Japani", kaari: "710 – 1868", pysakit: "Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868", tila: "idea", huom: "Yokohama on isoisän reitillä.", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H4", nimi: "Mongolien maailma", alue: "Aasia", kaari: "1206 – 1405", pysakit: "Karakorum · Peking Kublai · Bagdad 1258 · Samarkand Timur", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H5", nimi: "Kaakkois-Aasian temppelit", alue: "Kaakkois-Aasia", kaari: "800 – 1431", pysakit: "Borobudur · Bagan · Angkor · Ayutthaya", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "H6", nimi: "Maustereitit", alue: "Intian valtameri", kaari: "1000 – 1700", pysakit: "Malabar · Malakka · Molukit · Batavia · Lissabon", tila: "idea", huom: "Reittilinssi.", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "I1", nimi: "Sivilisaation synty", alue: "Mesopotamia, Persia", kaari: "3500 eaa – 330 eaa", pysakit: "Uruk · Ur · Babylon · Niniven kirjasto · Persepolis", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "I2", nimi: "Egyptin dynastiat", alue: "Egypti", kaari: "2650 eaa – 30 eaa", pysakit: "Sakkara · Giza · Theba ja Luxor · Amarna · Aleksandria", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "I3", nimi: "Osmanien valtakunta", alue: "Turkki, Balkan, Levantti", kaari: "1299 – 1923", pysakit: "Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923", tila: "idea", huom: "Bulgaria 1878 on jo pelissä.", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "I4", nimi: "Persian puutarhat ja kaupungit", alue: "Iran", kaari: "550 eaa – 1722", pysakit: "Pasargadae · Persepolis · Isfahan · Shiraz", tila: "idea", tyyppi: "aikajana", manner: "Aasia" },
-  { id: "J1", nimi: "Kultavaltakunnat", alue: "Länsi-Afrikka", kaari: "700 – 1591", pysakit: "Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "J2", nimi: "Swahilirannikko ja Suuri Zimbabwe", alue: "Itä- ja Etelä-Afrikka", kaari: "1000 – 1500", pysakit: "Kilwa · Sansibar · Mombasa · Suuri Zimbabwe · Sofala", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "J3", nimi: "Etiopia", alue: "Etiopia", kaari: "100 – 1700", pysakit: "Aksum · Lalibela · Gondar", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "J4", nimi: "Tutkimusmatkat Afrikassa", alue: "Afrikka", kaari: "1795 – 1877", pysakit: "Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "J5", nimi: "Siirtomaajako ja rautatiet", alue: "Afrikka", kaari: "1869 – 1914", pysakit: "Suez · Berliinin konferenssi 1884 · Kap–Kairo-hanke · Uganda-rata", tila: "idea", tyyppi: "aikajana", manner: "Afrikka" },
-  { id: "K1", nimi: "Mesoamerikka ja Andit", alue: "Meksiko, Peru", kaari: "200 – 1532", pysakit: "Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu", tila: "idea", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
-  { id: "K2", nimi: "Valloitus ja hopea", alue: "Latinalainen Amerikka", kaari: "1492 – 1600", pysakit: "Hispaniola · Tenochtitlán 1521 · Cajamarca 1532 · Potosí · Lima", tila: "idea", tyyppi: "aikajana", manner: "Etelä-Amerikka" },
-  { id: "K3", nimi: "Yhdysvaltain synty ja länsi", alue: "USA", kaari: "1776 – 1869", pysakit: "Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869", tila: "idea", huom: "Foggin reitti kulkee tästä.", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
-  { id: "K4", nimi: "Latinalaisen Amerikan itsenäistyminen", alue: "Etelä-Amerikka", kaari: "1810 – 1825", pysakit: "Caracas Bolívar · Buenos Aires San Martín · Chacabuco · Ayacucho 1824", tila: "idea", tyyppi: "aikajana", manner: "Etelä-Amerikka" },
-  { id: "K5", nimi: "Amerikan keksinnöt", alue: "USA", kaari: "1793 – 1903", pysakit: "Whitney · Morse 1844 · Bell 1876 · Edison Menlo Park · Wrightit 1903", tila: "idea", huom: "Keksinnöt Euroopassa -linssin sisar.", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
-  { id: "K6", nimi: "Pohjoinen: viikingeistä rautatiehen", alue: "Grönlanti, Kanada", kaari: "1000 – 1885", pysakit: "L’Anse aux Meadows · Hudsonin lahti · Luoteisväylä · Kanadan rata 1885", tila: "idea", tyyppi: "aikajana", manner: "Pohjois-Amerikka" },
-  { id: "L1", nimi: "Polynesialaisten merenkulku", alue: "Tyynimeri", kaari: "1000 eaa – 1250", pysakit: "Samoa · Tahiti · Havaiji · Rapa Nui · Aotearoa noin 1250", tila: "idea", huom: "Reittilinssi.", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "L2", nimi: "Cook ja Tyynimeri", alue: "Tyynimeri", kaari: "1768 – 1779", pysakit: "Plymouth 1768 · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779", tila: "idea", huom: "Plymouth on jo Historian hetki.", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "L3", nimi: "Australia", alue: "Australia", kaari: "1788 – 1901", pysakit: "Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901", tila: "idea", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "L4", nimi: "Evoluution saaret", alue: "Galápagos, Malaijisaaristo", kaari: "1835 – 1862", pysakit: "Darwin Galápagos 1835 · Wallace Ternate 1858 · Wallacen linja", tila: "idea", huom: "Galápagos on jo Historian hetki.", tyyppi: "aikajana", manner: "Oseania" },
-  { id: "M1", nimi: "Kiinan dynastiat", alue: "Kiina", kaari: "221 eaa – 1912", pysakit: "Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912", tila: "idea", huom: "1. aluelinssi (omistajan esimerkki).", tyyppi: "alue", manner: "Aasia" },
-  { id: "M2", nimi: "Rooman nousu ja tuho", alue: "Välimeri", kaari: "509 eaa – 476", pysakit: "tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476", tila: "seuraava", huom: "4. aluelinssi.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M3", nimi: "Aleksanteri Suuri", alue: "Kreikka – Intia", kaari: "336 eaa – 301 eaa", pysakit: "Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit", tila: "idea", tyyppi: "alue", manner: "Aasia" },
-  { id: "M4", nimi: "Islamin leviäminen", alue: "Lähi-itä – Espanja", kaari: "622 – 750", pysakit: "Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732", tila: "idea", tyyppi: "alue", manner: "Aasia" },
-  { id: "M5", nimi: "Mongolien imperiumi", alue: "Aasia – Eurooppa", kaari: "1206 – 1368", pysakit: "Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · jako kaanikuntiin · Yuan kaatuu", tila: "idea", tyyppi: "alue", manner: "Aasia" },
-  { id: "M6", nimi: "Bysantti", alue: "Itäinen Välimeri", kaari: "395 – 1453", pysakit: "Justinianus 555 · arabit · Basileios II · 1204 · 1453", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M7", nimi: "Osmanien nousu ja lasku", alue: "Turkki, Balkan, Lähi-itä", kaari: "1299 – 1923", pysakit: "Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923", tila: "idea", huom: "Bulgaria 1878 on pelissä.", tyyppi: "alue", manner: "Aasia" },
-  { id: "M8", nimi: "Reconquista", alue: "Iberia", kaari: "711 – 1492", pysakit: "Covadonga · Toledo 1085 · Las Navas 1212 · Granada 1492", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M9", nimi: "Viikinkien maailma", alue: "Pohjois-Eurooppa – Atlantti", kaari: "793 – 1066", pysakit: "Lindisfarne · Danelaw · Normandia 911 · Islanti · Grönlanti · Vinland · Stamford Bridge 1066", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M10", nimi: "Ruotsin suurvalta ja Suomi", alue: "Itämeri", kaari: "1561 – 1809", pysakit: "Tallinna 1561 · Kustaa II Aadolf · Westfalen 1648 · Poltava 1709 · Uusikaupunki 1721 · Hamina 1809", tila: "idea", huom: "Suomen rajat 1323–1947 omana jatkona.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "M11", nimi: "Inkat ja atsteekit", alue: "Andit, Meksiko", kaari: "1325 – 1572", pysakit: "Tenochtitlán 1325 · Pachacuti · Huayna Capac · Cortés 1521 · Cajamarca 1532 · Vilcabamba 1572", tila: "idea", tyyppi: "alue", manner: "Etelä-Amerikka" },
-  { id: "N1", nimi: "Napoleonin Eurooppa", alue: "Eurooppa", kaari: "1796 – 1815", pysakit: "Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo 1815", tila: "seuraava", huom: "2. aluelinssi (omistajan esimerkki).", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "N2", nimi: "Ensimmäinen maailmansota", alue: "Eurooppa, Lähi-itä", kaari: "1914 – 1918", pysakit: "Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918", tila: "seuraava", huom: "3. aluelinssi (omistajan esimerkki).", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "N3", nimi: "Toinen maailmansota", alue: "Eurooppa, Tyynimeri", kaari: "1939 – 1945", pysakit: "Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima", tila: "seuraava", huom: "5. aluelinssi. Pelin aikakauden ulkopuolella, mutta linssi voi katsoa eteenpäin. Sävy 13+: rintamat ja rauhat, ei kauhukuvia.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "N4", nimi: "Kolmikymmenvuotinen sota", alue: "Keski-Eurooppa", kaari: "1618 – 1648", pysakit: "Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "N5", nimi: "Krimin sota", alue: "Musta meri, Itämeri", kaari: "1853 – 1856", pysakit: "Sinope · Sevastopol · Bomarsund · Pariisin rauha", tila: "idea", huom: "Isoisän aikalaisten sota; Ahvenanmaa.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "N6", nimi: "Yhdysvaltain sisällissota", alue: "USA", kaari: "1861 – 1865", pysakit: "Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox", tila: "idea", tyyppi: "alue", manner: "Pohjois-Amerikka" },
-  { id: "N7", nimi: "Balkanin sodat", alue: "Balkan", kaari: "1877 – 1913", pysakit: "Pleven 1877 · San Stefano · Berliini 1878 · 1912 · 1913", tila: "idea", huom: "Bulgarian lauta.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "O1", nimi: "Espanja ja Portugali maailmalla", alue: "maailma", kaari: "1494 – 1825", pysakit: "Tordesillas 1494 · Filippiinit · Brasilia · itsenäistymiset 1810–1825", tila: "idea", tyyppi: "alue", manner: "Yleiset" },
-  { id: "O2", nimi: "Britannian imperiumi", alue: "maailma", kaari: "1600 – 1922", pysakit: "Itä-Intian kauppakomppania · Plassey 1757 · Kanada · Australia · Intia 1858 · Egypti 1882 · 1922", tila: "idea", tyyppi: "alue", manner: "Yleiset" },
-  { id: "O3", nimi: "Afrikan jako", alue: "Afrikka", kaari: "1870 – 1914", pysakit: "Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914", tila: "idea", tyyppi: "alue", manner: "Afrikka" },
-  { id: "O4", nimi: "Venäjä laajenee Siperiaan", alue: "Venäjä – Tyynimeri", kaari: "1582 – 1867", pysakit: "Jermak 1582 · Jakutsk 1632 · Ohotsk · Kamtšatka · Alaska myydään 1867", tila: "idea", huom: "Siperian laudat ovat pelissä.", tyyppi: "alue", manner: "Aasia" },
-  { id: "O5", nimi: "Yhdysvallat laajenee", alue: "Pohjois-Amerikka", kaari: "1783 – 1912", pysakit: "1783 · Louisiana 1803 · Texas 1845 · Oregon · Meksiko 1848 · Alaska 1867 · 1912", tila: "idea", tyyppi: "alue", manner: "Pohjois-Amerikka" },
-  { id: "O6", nimi: "Euroopan kartta uusiksi", alue: "Eurooppa", kaari: "1815 – 1923", pysakit: "Wien 1815 · Italia 1861 · Saksa 1871 · Berliini 1878 · Versailles 1919 · Lausanne 1923", tila: "seuraava", huom: "Isoisän Eurooppa 1873 keskellä.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "P1", nimi: "Uskontojen levinneisyys", alue: "maailma", kaari: "500 eaa – 1900", pysakit: "buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö", tila: "idea", huom: "Uskontojen aikajanalinssien pari.", tyyppi: "alue", manner: "Yleiset" },
-  { id: "P2", nimi: "Musta surma", alue: "Eurooppa", kaari: "1347 – 1353", pysakit: "Kaffa · Messina 1347 · Marseille · Pariisi 1348 · Lontoo · Bergen 1349 · Moskova 1353", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "P3", nimi: "Indoeurooppalaiset kielet", alue: "Euraasia", kaari: "3500 eaa – 1500", pysakit: "arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "P4", nimi: "Rautatieverkon kasvu", alue: "Eurooppa", kaari: "1825 – 1900", pysakit: "Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862", tila: "idea", huom: "Verkko piirtyy vuosi vuodelta.", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "P5", nimi: "Kirjapainon leviäminen", alue: "Eurooppa", kaari: "1450 – 1500", pysakit: "Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483", tila: "idea", tyyppi: "alue", manner: "Eurooppa" },
-  { id: "S1", nimi: "Siirtomaat", alue: "maailma", kaari: "1415 – 1960", pysakit: "Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960", tila: "idea", huom: "Omistajan esimerkki: salama emämaasta alueelle, sitten lastilaivat vuosien mukaan.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S2", nimi: "Kolmiokauppa", alue: "Atlantti", kaari: "1500 – 1867", pysakit: "Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · viimeinen laiva 1867", tila: "idea", huom: "Orjat kuulutetaan kuten muu lasti, koska niin heihin silloin suhtauduttiin; orjalaivat vetävät mustaa viivaa, Pulu selittää, merelle projisoidaan aikalaiskuvia (13+, totuudellisesti).", tyyppi: "virta", manner: "Afrikka" },
-  { id: "S6", nimi: "Luonnonvarat valuvat", alue: "maailma", kaari: "1850 – 2000", pysakit: "guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit", tila: "idea", huom: "Louhintamaa värilänttinä, joka valuu eri puolille maailmaa; jokainen raaka-aine omalla värillään.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S7", nimi: "Lähi-itä ja musta kulta", alue: "Lähi-itä", kaari: "1908 – 1973", pysakit: "Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973", tila: "idea", huom: "Omistaja 2.9.2026: Lähi-itäkin oli aluksi siirtomaa ja alistettu. Ensin salama ja mandaatin väri, sitten öljy valuu ulos; Pulu kertoo, kenelle tuotto meni.", tyyppi: "virta", manner: "Aasia" },
-  { id: "S3", nimi: "Maustereitit ja teekauppa", alue: "Intian valtameri – Eurooppa", kaari: "1500 – 1900", pysakit: "Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S4", nimi: "Hopea ja kulta", alue: "Amerikat – Eurooppa – Aasia", kaari: "1545 – 1900", pysakit: "Potosí 1545 · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
-  { id: "S5", nimi: "Turkikset ja valaat", alue: "Pohjoinen", kaari: "1600 – 1900", pysakit: "Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri", tila: "idea", tyyppi: "virta", manner: "Napa-alueet" },
-  { id: "T1", nimi: "Siirtolaisuus Amerikkaan", alue: "Eurooppa – Amerikat", kaari: "1840 – 1914", pysakit: "Irlannin nälänhätä 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York", tila: "idea", huom: "Suomalaiset siirtolaiset mukana.", tyyppi: "virta", manner: "Eurooppa" },
-  { id: "T2", nimi: "Pyhiinvaellukset", alue: "maailma", kaari: "vuodenkierto", pysakit: "Santiago · Mekka · Varanasi · Jerusalem", tila: "idea", huom: "Aikajanalinssin A6 virtaversio.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "T3", nimi: "Siperian karkotukset ja asutus", alue: "Venäjä", kaari: "1590 – 1917", pysakit: "Tobolsk · Irkutsk · Sahalin · rata 1891", tila: "idea", tyyppi: "virta", manner: "Aasia" },
-  { id: "U1", nimi: "Sähkösanomakaapelit", alue: "maailma", kaari: "1851 – 1902", pysakit: "Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902", tila: "idea", huom: "Pelin sähkeet kulkevat näitä; 1873 keskellä.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "U2", nimi: "Postireitit ja höyrylinjat", alue: "maailma", kaari: "1840 – 1914", pysakit: "P&O · Cunard · Suez · Fogg 1872", tila: "idea", tyyppi: "virta", manner: "Yleiset" },
-  { id: "U3", nimi: "Muuttolinnut", alue: "maailma", kaari: "vuodenkierto", pysakit: "kurjet · haarapääskyt · valaat", tila: "idea", huom: "Sama moottori kuin F2.", tyyppi: "virta", manner: "Yleiset" },
-  { id: "R1", nimi: "Maailma palaa", alue: "maailma", kaari: "animoitu", pysakit: "FIRMS 7 pv (ei tunnusta), GIBS-palokerros", tila: "seuraava", huom: "keski · 1873 ★ (Peshtigo 1871 ja Chicago 1871 pysäkkeinä) · Viimeisen viikon palot hehkuvat pallolla, ja valitun kuukauden palot syttyvät ja sammuvat päivä kerrallaan.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R2", nimi: "Savun tie**", alue: "maailma", kaari: "animoitu", pysakit: "CAMS AOD (CC BY 4.0, tili), vaihtoehtona GIBS MODIS AOD", tila: "seuraava", huom: "vaikea · 1873 ★ (Krakatau 1883: auringonlaskut punaisina ympäri maailman) · Palojen ja pölyn aerosolipilvet kulkevat mantereelta toiselle kolmen kuukauden ajan.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R3", nimi: "Isoisän sää", alue: "maailma", kaari: "animoitu (päivä)", pysakit: "20CRv3", tila: "seuraava", huom: "vaikea · 1873 ★★★ · Pelaaja valitsee päiväkirjan päivän, ja pallolle piirtyvät sen päivän matalapaineet ja tuulet vuonna 1873.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R4", nimi: "Laivat 1873", alue: "maailma", kaari: "animoitu", pysakit: "ICOADS R3", tila: "seuraava", huom: "keski · 1873 ★★★ · Jokainen vuoden 1873 laivahavainto piirtyy pisteenä, ja reitit piirtyvät vähitellen kuukausi kerrallaan.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R5", nimi: "Meriliikenne ennen ja nyt", alue: "maailma", kaari: "staattinen vertailu", pysakit: "ICOADS + Maailmanpankin laivatiheys", tila: "seuraava", huom: "helppo · 1873 ★★★ · Liukusäädin vaihtaa ICOADS 1873:n harvat reitit nykypäivän AIS-tiheyteen.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R6", nimi: "Purjelaivojen tuulet", alue: "maailma", kaari: "animoitu", pysakit: "CLIWOC", tila: "idea", huom: "keski · 1873 ★★ · 1750–1854 lokikirjojen reitit ja tuulihavainnot näyttävät, miksi laivat kiersivät Atlantin kaarena.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R7", nimi: "Yön valot ennen ja nyt", alue: "maailma", kaari: "staattinen + vertailu", pysakit: "Black Marble (GIBS), EOG VNL, Reba (kaupungit 1875)", tila: "seuraava", huom: "helppo · 1873 ★★ · Pallo pimenee yöksi: nyt kaupungit loistavat, ja vuoden 1873 asetuksella palaa vain kaasuvalojen kaupunkeja.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R8", nimi: "Näetkö Linnunradan?", alue: "maailma", kaari: "staattinen", pysakit: "HYG, Deep Star Maps, EOG VNL (Falchin atlas vain luvalla)", tila: "idea", huom: "keski · 1873 ★★ · Valitun paikan taivas: tähtien määrä vähenee valosaasteen mukaan, ja vuoden 1873 taivas on täynnä tähtiä.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R9", nimi: "Isoisän tähtitaivas", alue: "maailma", kaari: "animoitu (yö)", pysakit: "HYG, JPL Horizons, Stellarium-tähtikuviot, NASA Eclipse", tila: "seuraava", huom: "keski · 1873 ★★★ · Päiväkirjan yön taivas planeettoineen oikeasta paikasta nähtynä, ja Venuksen ylikulku 9.12.1874 omana pysäkkinään.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R10", nimi: "Revontulet nyt", alue: "maailma", kaari: "reaaliaika", pysakit: "NOAA OVATION", tila: "idea", huom: "helppo · 1873 ★★ · Revontuliovaali elää napojen ympärillä reaaliajassa, ja vertailuna on suuri revontulimyrsky helmikuussa 1872.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R11", nimi: "Myrskyjen radat", alue: "maailma", kaari: "animoitu", pysakit: "IBTrACS, HURDAT2", tila: "seuraava", huom: "helppo · 1873 ★★★ (1873 Nova Scotian hurrikaani) · Kaikki trooppiset myrskyt 1850-luvulta alkaen piirtyvät vuosi kerrallaan, ja voimakkuus näkyy värinä.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R12", nimi: "Maa järisee", alue: "maailma", kaari: "reaaliaika + historia", pysakit: "USGS ComCat, NCEI", tila: "seuraava", huom: "helppo · 1873 ★★ · Viimeisen 30 päivän järistykset sykkivät, ja historiasta nousevat Lissabon 1755 ja muut merkittävät.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R13", nimi: "Tulen vuoret", alue: "maailma", kaari: "animoitu", pysakit: "NCEI Volcanoes, GIBS SO₂", tila: "seuraava", huom: "helppo · 1873 ★★ (Krakatau 1883 kymmenen vuotta matkan jälkeen) · Merkittävät purkaukset 4 000 vuoden ajalta, ja purkauksen koko (VEI) näkyy renkaana.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R14", nimi: "Lämpenevä meri", alue: "maailma", kaari: "animoitu", pysakit: "ERSST v5", tila: "seuraava", huom: "keski · 1873 ★★★ · Meren pintalämpö 1854→nyt: vuoden 1873 meri on vertailupohja, ja poikkeama värjää pallon.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R15", nimi: "Ilmastovyöhykkeet liikkuvat", alue: "maailma", kaari: "jaksot", pysakit: "Köppen–Geiger (Beck 2023)", tila: "seuraava", huom: "helppo · 1873 ★★ · Köppenin vyöhykkeet 1901–1930 → 1991–2020 → 2071–2099, jolloin Sahara ja tundra siirtyvät.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R16", nimi: "Pellot valtaavat maan", alue: "maailma", kaari: "animoitu", pysakit: "HYDE 3.3", tila: "seuraava", huom: "keski · 1873 ★★★ · Viljelyksen leviäminen 10 000 eaa.→nyt, ja vuosi 1870 on merkkipaalu.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R17", nimi: "Ihmisiä pallolla", alue: "maailma", kaari: "animoitu", pysakit: "HYDE, GHSL", tila: "seuraava", huom: "keski · 1873 ★★★ · Väestötiheys kasvaa ja keskittyy: 1870 (HYDE) → 1975–2030 (GHSL).", tyyppi: "data", manner: "Yleiset" },
-  { id: "R18", nimi: "Kaupungit kasvavat", alue: "maailma", kaari: "animoitu", pysakit: "Reba ym., GHSL UCDB", tila: "seuraava", huom: "helppo · 1873 ★★★ (vuoden 1875 kärkikaupungit isoisän reitillä) · Maailman suurimmat kaupungit 3700 eaa.→2000 pylväinä, ja kärkikymmenikkö vaihtuu.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R19", nimi: "Maailmantalouden painopiste", alue: "maailma", kaari: "animoitu", pysakit: "Maddison", tila: "idea", huom: "keski · 1873 ★★★ · Talouden painopiste vaeltaa Aasiasta Eurooppaan ja takaisin vuodesta 1 jaa. nykyhetkeen.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R20", nimi: "Kauppavirrat 1873", alue: "maailma", kaari: "animoitu + vertailu", pysakit: "RICardo, BACI", tila: "seuraava", huom: "keski · 1873 ★★★ · Maiden väliset kauppavirrat valuvat nuolina, ja paksuus kertoo arvon (RICardo). Nykyvertailu tehdään BACIlla.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R21", nimi: "Metsät katoavat", alue: "maailma", kaari: "animoitu", pysakit: "Hansen GFC, HYDE", tila: "idea", huom: "vaikea (datamäärä) · 1873 ★★ · Metsäkato 2001–2024 punaisena vuosi vuodelta. Pellot 1870 (HYDE) kertovat, mitä raivattiin ennen.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R22", nimi: "Pisaran matka", alue: "maailma", kaari: "interaktiivinen", pysakit: "HydroRIVERS, HydroBASINS", tila: "idea", huom: "keski · 1873 ★★ (Niili, Kongo ja Mississippi isoisän tutkimusmatkoilla) · Pelaaja napauttaa maata, ja pisara virtaa jokia pitkin mereen, jolloin valuma-alue valaistuu.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R23", nimi: "Kielten kirjo", alue: "maailma", kaari: "staattinen", pysakit: "Glottolog, Grambank", tila: "idea", huom: "helppo · 1873 ★★ (monet kielet olivat 1873 elinvoimaisia) · 8 000 kieltä pisteinä, joissa kielisuku on värinä ja uhanalaiset kielet himmenevät.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R24", nimi: "Mitä maa kasvaa", alue: "maailma", kaari: "staattinen", pysakit: "MapSPAM, SoilGrids, Köppen", tila: "idea", huom: "keski · 1873 ★★ (F3 kasvien matkat) · Kahvin, teen, riisin ja perunan viljelyalueet, joiden alle maaperän pH ja ilmastovyöhyke valaisevat syyn.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R25", nimi: "Sähkö syttyy", alue: "maailma", kaari: "animoitu", pysakit: "Global Energy Monitor, GPPD, Ember", tila: "idea", huom: "keski · 1873 ★★ · Voimalaitokset syttyvät avausvuosinaan: hiili, vesi, ydin, tuuli ja aurinko. Vuonna 1873 ei vielä yhtään.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R26", nimi: "Tuulet nyt", alue: "maailma", kaari: "animoitu", pysakit: "ECMWF Open Data tai GFS, 20CRv3", tila: "idea", huom: "vaikea · 1873 ★★ · Nullschool-tyyliset tuulihiukkaset huomisen ennusteesta, ja vertailuna isoisän 1873 tuulet samasta kuukaudesta.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R27", nimi: "Ilma jota hengitämme", alue: "maailma", kaari: "staattinen + kk", pysakit: "OpenAQ, EDGAR", tila: "idea", huom: "keski · 1873 ★ (hiilisavu 1873 Lontoossa pysäkkinä) · Asemien PM2.5-pallot ja EDGAR-päästöhila kertovat, mistä saaste tulee.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R28", nimi: "Eläinten matkat", alue: "maailma", kaari: "animoitu", pysakit: "Movebank (CC0/CC BY), OBIS", tila: "idea", huom: "keski · 1873 ★ (F2) · Kurkien, haikaroiden, gnujen ja merikilpikonnien GPS-jäljet liikkuvat vuodenkierrossa.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R29", nimi: "Korallien helle", alue: "maailma", kaari: "animoitu", pysakit: "Coral Reef Watch, Allen Coral Atlas", tila: "idea", huom: "keski · 1873 ★ · Lämpöstressin viikot värjäävät riutat, ja korallien vaalenemisvuodet sykkivät.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R30", nimi: "Jääkauden rannat", alue: "maailma", kaari: "animoitu", pysakit: "GEBCO/ETOPO, Spratt & Lisiecki", tila: "idea", huom: "helppo · 1873 ★★ (C7:n tausta) · Merenpinta laskee 120 m, jolloin Beringia, Doggerland ja Sahul nousevat ja uppoavat uudelleen.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R31", nimi: "80 päivää → 80 tuntia", alue: "maailma", kaari: "staattinen vertailu", pysakit: "Commons (PD), OurAirports, OpenFlights (2014)", tila: "idea", huom: "keski · 1873 ★★★ (Fogg 1872 ja isoisä 1873) · Matka-ajan kartta Lontoosta: Bartholomew'n isokrooninen kartta 1914 (PD) rinnakkain nykyisten lentoyhteyksien kanssa.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R32", nimi: "Lentävä maapallo", alue: "maailma", kaari: "animoitu (24 h)", pysakit: "adsb.lol (ODbL)", tila: "idea", huom: "vaikea · 1873 ★★ · Yhden vuorokauden kaikki lennot valojuovina (adsb.lol), ja vertailuna Foggin laivareitti.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R33", nimi: "Sähkeet 1873 ja nyt", alue: "maailma", kaari: "vertailu", pysakit: "Commons/LoC-kaapelikartat, OSM-merikaapelit", tila: "idea", huom: "keski · 1873 ★★★ (pelin sähkeet) · Vuoden 1873 kaapelit (digitoitu PD-kartoista) välähtävät, ja nykyinen merikaapeliverkko häivytetään päälle.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R34", nimi: "Elinajan kartta", alue: "maailma", kaari: "animoitu", pysakit: "Gapminder, UN WPP", tila: "idea", huom: "helppo · 1873 ★★★ · Elinajanodote maittain 1800→nyt: vuonna 1873 kaikkialla alle 45 vuotta.", tyyppi: "data", manner: "Yleiset" },
-  { id: "R35", nimi: "Suomen sää 1844→nyt", alue: "maailma", kaari: "animoitu", pysakit: "Ilmatieteen laitos (CC BY 4.0)", tila: "idea", huom: "helppo · 1873 ★★ · Helsingin ja muiden asemien pitkät sarjat pylväinä Suomen päällä.", tyyppi: "data", manner: "Eurooppa" },
-];
+const LINSSIT = window.LINSSIKATALOGI.linssit;
+const MOOTTORIT_DATA = window.LINSSIKATALOGI.moottorit;
 
 const MANTEREET = ['Eurooppa', 'Aasia', 'Afrikka', 'Pohjois-Amerikka', 'Etelä-Amerikka', 'Oseania', 'Napa-alueet', 'Yleiset'];
+const MOOTTORIT_LINSSEISSA = ['aikajana', 'alue', 'virta', 'data', 'esitys', 'pohjakartta', 'muu'];
 
-const juuri = document.getElementById('ryhmat');
-for (const manner of MANTEREET) {
-  const linssit = LINSSIT.filter((l) => l.manner === manner);
-  if (!linssit.length) continue;
-  const s = document.createElement('section');
-  s.className = 'ryhma';
-  s.dataset.manner = manner;
-  s.innerHTML = `<h2>${manner}<span class="maara">(${linssit.length})</span></h2>`;
-  for (const l of linssit) {
-    const d = document.createElement('div');
-    d.className = 'rivi';
-    d.dataset.manner = manner;
-    d.innerHTML = `<div class="koodi">${l.id}</div>
-      <div><p class="nimi">${l.nimi}</p><p class="meta"><span>${l.alue}</span><span>${l.kaari}</span><span>${l.tyyppi}</span></p><p class="pysakit">${l.pysakit}</p>${l.huom ? `<p class="huom">${l.huom}</p>` : ''}</div>
-      <div class="tila">${l.tila}</div>`;
-    s.appendChild(d);
+// SVG-ikonit yhtenäisellä 0 0 24 24 -ruudukolla, viiva currentColor.
+const IKONIT = {
+  aikajana: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>',
+  alue: '<svg viewBox="0 0 24 24"><path d="M9 3 3 5.5v15L9 18l6 2.5 6-2.5v-15L15 5.5 9 3Z"/><path d="M9 3v15M15 5.5v15"/></svg>',
+  virta: '<svg viewBox="0 0 24 24"><path d="M2 12c4-6 8 6 12 0s6-6 8 0"/><path d="M2 17c4-6 8 6 12 0s6-6 8 0" opacity=".5"/></svg>',
+  data: '<svg viewBox="0 0 24 24"><path d="M4 20V11M10 20V4M16 20V14M22 20V8" stroke-linejoin="round"/></svg>',
+  esitys: '<svg viewBox="0 0 24 24"><path d="M3 4h18v13H3z"/><path d="M8 21h8M12 17v4"/></svg>',
+  pohjakartta: '<svg viewBox="0 0 24 24"><path d="M2 21h20M3 21V10M21 21V10M1.5 10 12 3.5 22.5 10"/><path d="M6.5 10v11M11 10v11M13 10v11M17.5 10v11"/></svg>',
+  muu: '<svg viewBox="0 0 24 24"><path d="M9 3v3.3a2 2 0 1 0 4 0V3h3.5a1.5 1.5 0 0 1 1.5 1.5V8h-1.5a2 2 0 1 0 0 4H18v4.5A1.5 1.5 0 0 1 16.5 18H13v-1.5a2 2 0 1 0-4 0V18H5.5A1.5 1.5 0 0 1 4 16.5V13h1.5a2 2 0 1 0 0-4H4V4.5A1.5 1.5 0 0 1 5.5 3H9Z"/></svg>',
+};
+
+const MOOTTORIVARIT = {
+  aikajana:    { nimi: 'Aikajana',    vari: 'var(--sininen)' },
+  alue:        { nimi: 'Alue',        vari: 'var(--terrakotta)' },
+  virta:       { nimi: 'Virta',       vari: 'var(--turkoosi)' },
+  data:        { nimi: 'Data',        vari: 'var(--violetti)' },
+  esitys:      { nimi: 'Esitys',      vari: 'var(--ruusu)' },
+  pohjakartta: { nimi: 'Pohjakartat', vari: 'var(--hiekka)' },
+  muu:         { nimi: 'Leikki',      vari: 'var(--vihrea)' },
+};
+
+const TILAT = {
+  valmis:      { nimi: 'Valmis',      vari: 'var(--vihrea)' },
+  rakenteilla: { nimi: 'Rakenteilla', vari: 'var(--kulta)' },
+  seuraava:    { nimi: 'Seuraava',    vari: 'var(--seepia)' },
+  jonossa:     { nimi: 'Jonossa',     vari: 'var(--sininen)' },
+  idea:        { nimi: 'Idea',        vari: 'var(--muste-haalea)' },
+};
+
+const AXIS_MIN = -3500;
+const AXIS_MAX = 2026;
+
+// Kuvaputken erä 1:n (posti/kuvatoimitus-linssikatalogi-era1-20260924.json) kuvatekstit ja
+// CC-lähdetiedot, joita linssikatalogi-data.js:n kuvat-kentän pelkät URL:t eivät sisällä.
+// h = havainnekuvan kuvateksti, c = aikalaiskuvan {cap, tek, nimi, vuo, lis, url}.
+const ERA1_KUVATEKSTIT = {"A2": {"h": "Kultaiset pisteet seuraavat kristinuskon leviämisen pysäkkejä Välimereltä Pohjois-Eurooppaan.", "c": {"cap": "Bukarestin Stavropoleos-kirkon vanha seinämaalaus esittää Nikaian kirkolliskokousta; kuva on myöhempi taiteellinen tulkinta vuoden 325 tapahtumasta.", "tek": "Kostisl (valokuva); 1700-luvun tuntematon maalari", "nimi": "Nikaian ensimmäinen kirkolliskokous, Stavropoleos-kirkon seinämaalaus", "vuo": "1700-luku; valokuva 2008", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:First_Council_of_Nicea-stavropoleos_church.JPG"}}, "A4": {"h": "Uskonpuhdistuksen keskukset syttyvät Keski-Euroopan pergamenttikartalle.", "c": {"cap": "Vuoden 1915 postikortti näyttää Wittenbergin linnankirkon, jonka 1517 teesit liittivät uskonpuhdistuksen historiaan.", "tek": "Brück & Sohn, Meißen", "nimi": "Schlosskirche und Schlosskaserne, Wittenberg (postikortti)", "vuo": "1915", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Wittenberg,_Lutherstadt,_Sachsen-Anhalt_-_Schlosskirche_und_Schlosskaserne_(Zeno_Ansichtskarten).jpg"}}, "B1": {"h": "Eurooppalaisten keksintöjen aikajana kulkee höyrykoneesta valokuvaukseen ja radioon.", "c": {"cap": "Vuoden 1860 mezzotinto kuvaa James Wattia höyrykoneen äärellä, myöhempänä tulkintana eurooppalaisen teollistumisen alkuvaiheesta.", "tek": "James Scott (kaiverrus), James Eckford Lauderin maalauksen mukaan", "nimi": "James Watt and the Steam Engine", "vuo": "1860", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:James_Watt_and_the_Steam_Engine_-_DPLA_-_4ce34483443e96928d1e5b2fb1866ff7.jpg"}}, "B2": {"h": "Tieteen varhaiset pysäkit yhdistyvät tähtitaivaan kaariin Euroopan kartalla.", "c": {"cap": "Jan Matejkon maalaus esittää Kopernikusta Fromborkissa tähtitieteen murroksen äärellä; näkymä on 1800-luvun tulkinta.", "tek": "Jan Matejko", "nimi": "Astronom Kopernik, czyli rozmowa z Bogiem (Astronomer Copernicus, or Conversations with God)", "vuo": "1872–1873 (Commonsin päiväys 1872; maalauksen signeeraus 19.2.1873)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Jan_Matejko-Astronomer_Copernicus-Conversation_with_God.jpg"}}, "B3": {"h": "Lääketieteen läpimurtojen solmut valaisevat Euroopan karttaa.", "c": {"cap": "Vuoden 1884 litografia esittää Edward Jennerin rokottamassa lasta; kyse on myöhemmästä historiallisesta tulkinnasta.", "tek": "Tuntematon litografi Eugène-Ernest Hillemacherin mukaan", "nimi": "A young Edward Jenner vaccinates an anxious looking child seated on its mother's lap", "vuo": "1884", "lis": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:A_young_Edward_Jenner_vaccinates_an_anxious_looking_child_se_Wellcome_V0018752.jpg"}}, "B7": {"h": "Vanha maailmankartta kietoutuu pallon pinnalle kartoituksen muuttuessa.", "c": {"cap": "Waldseemüllerin vuoden 1507 kartta näyttää aikansa käsityksen mantereista, ei nykyisen maantieteen tarkkaa kuvaa.", "tek": "Martin Waldseemüller", "nimi": "Universalis Cosmographia (Waldseemüllerin maailmankartta)", "vuo": "1507", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map.jpg"}}, "C7": {"h": "Ihmisen pitkät muuttoreitit haarautuvat Afrikasta eri mantereille."}, "E7": {"h": "Kolmiulotteinen taidemuseon sali avautuu teosten ja aikakausien läpi.", "c": {"cap": "Botticellin Venuksen syntymä on Firenzen renessanssin tunnettu teos Uffizin kokoelmissa.", "tek": "Sandro Botticelli", "nimi": "The Birth of Venus", "vuo": "noin 1485", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg"}}, "M2": {"h": "Rooman valtakunnan alue piirtyy Välimeren ympärille punaisena kerroksena.", "c": {"cap": "Claude Lorrainin etsaus näyttää Rooman forumin raunioita 1600-luvulla, kauan keisarikunnan päättymisen jälkeen.", "tek": "Claude Lorrain", "nimi": "Forum Romanum te Rome: Le Campo Vaccino", "vuo": "1636–1637", "lis": "CC0 1.0", "url": "https://commons.wikimedia.org/wiki/File:Forum_Romanum_te_Rome_Le_Campo_Vaccino,_RP-P-OB-5700.jpg"}}, "N1": {"h": "Napoleonin vaikutusalue ja sotareittien solmut levittäytyvät Euroopan kartalle.", "c": {"cap": "Jacques-Louis Davidin vuoden 1801 ratsastajamuotokuva rakentaa Napoleonista sankarikuvaa, eikä ole valokuva tapahtumasta.", "tek": "Jacques-Louis David", "nimi": "Napoleon Crossing the Alps (Charlottenburgin toinen versio)", "vuo": "toukokuu 1801", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Schloss_Charlottenburg.jpg"}}, "N2": {"h": "Ensimmäisen maailmansodan rintamalinjat näkyvät Euroopan hillityllä kartalla.", "c": {"cap": "John Warwick Brooken valokuva näyttää skotlantilaisia sotilaita reservihaudassa Sommen taistelun aikana marraskuussa 1916.", "tek": "John Warwick Brooke", "nimi": "Gordon Highlanders in a reserve trench, Bazentin-le-Petit (Battle of the Somme)", "vuo": "marraskuu 1916", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_the_Somme,_July-november_1916_Q4475.jpg"}}, "N3": {"h": "Toisen maailmansodan Euroopan ja Tyynenmeren rintamat hahmottuvat maailmankartalla.", "c": {"cap": "Robert Sargentin historiallisessa valokuvassa yhdysvaltalaissotilaat nousevat maihin Normandiassa 6. kesäkuuta 1944.", "tek": "Robert F. Sargent, U.S. Coast Guard", "nimi": "Into the Jaws of Death", "vuo": "6.6.1944", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_(6414569).jpg"}}, "O6": {"h": "Euroopan muuttuvat aluerajat näkyvät päällekkäisinä historiallisina karttakerroksina.", "c": {"cap": "Vuoden 1815 käsin väritetty etsaus esittää diplomaattien neuvottelua Wienin kongressissa Euroopan rajoista.", "tek": "Tuntematon hollantilainen etsaaja", "nimi": "Het Congres der Geallieerde Mogendhen te Weenen", "vuo": "1815", "lis": "CC0 1.0", "url": "https://commons.wikimedia.org/wiki/File:Congres_van_Wenen,_1815_Het_Congres_der_Geallieerde_Mogendhen_te_Weenen_(titel_op_object),_RP-P-1898-A-19819.jpg"}}, "R1": {"h": "Paloalueet syttyvät historiallisen karttapallon pintaan.", "c": {"cap": "NASA:n FIRMS-havainnot näyttävät aktiiviset palot maailman kartalla.", "tek": "NASA's Scientific Visualization Studio -", "nimi": "Current Active Fires from FIRMS (SVS5546 - 1 Main01 FIRMS global 1920x1080)", "vuo": "2 June 2025, 13:41:00 (upload date)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Current_Active_Fires_from_FIRMS_(SVS5546_-_1_Main01_FIRMS_global_1920x1080).png"}}, "R2": {"h": "Ilmakehän savuverho leviää tuulten mukana mantereelta toiselle.", "c": {"cap": "MODIS Terran vuosien 2007–2011 havaintojen keskiarvo näyttää ilmakehän aerosolien optisen paksuuden.", "tek": "Giorgiogp2", "nimi": "Modis Terra aerosol optical depth at 550nm, 2007–2011 average", "vuo": "2012", "lis": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Modis_aerosol_optical_depth.png"}}, "R3": {"h": "Säärintamat kulkevat isoisän ajan Atlantin ja Euroopan yllä.", "c": {"cap": "NOAA:n 20CRv3 rekonstruoi Kalifornian vuoden 1862 tulvasään paineen, lämpötilan ja sateen.", "tek": "NOAA Physical Sciences Laboratory / CIRES / DOE", "nimi": "NOAA-CIRES-DOE Twentieth Century Reanalysis V3: Great California Flood weather, 27 December 1861", "vuo": "vuosi ei ilmoitettu", "lis": "Public domain", "url": "https://psl.noaa.gov/data/20thC_Rean/"}}, "R4": {"h": "Vuoden 1873 laivareitit yhdistävät Atlantin ja Intian valtameren satamia."}, "R5": {"h": "Merireittien vanha ja uusi verkosto erottuvat kahdella karttakerroksella.", "c": {"cap": "Meriliikenteen reitit piirtyvät vaaleina viivoina maailman merille.", "tek": "Grolltech  (derived from  Hengl  (derived from B.S. Halpern))", "nimi": "Shipping routes red black", "vuo": "2012-03-19", "lis": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Shipping_routes_red_black.png"}}, "R7": {"h": "Sama yöpuolen karttapallo näyttää harvat vanhat ja tiheät nykyiset valot.", "c": {"cap": "NASA:n Black Marble näyttää Amerikan kaupunkien valot yöpuolen Maassa.", "tek": "NASA Earth Observatory", "nimi": "Black Marble Americas", "vuo": "between 18 April 2012 and 23 October 2012 date QS:P,+2012-00-00T00:00:00Z/9,P1319,+2012-04-18T00:00:00Z/11,P1326,+2012-10-23T00:00:00Z/11", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Black_Marble_Americas.jpg"}}, "R9": {"h": "Tähtitaivas ja tähtikuviot asettuvat isoisän matkakartan ylle.", "c": {"cap": "NASA:n TESS-havaintojen kooste näyttää tähtitaivaan himmeät ja kirkkaat vyöhykkeet.", "tek": "NASA's Scientific Visualization Studio - University of Maryland College Park/Jeanette Kazmierczak, eMITS/Scott Wiessinger", "nimi": "TESS Reveals Dazzling Night Sky (SVS14985 - TESS pc bin4 noplanets)", "vuo": "13 May 2026 (upload date)", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:TESS_Reveals_Dazzling_Night_Sky_(SVS14985_-_TESS_pc_bin4_noplanets).jpg"}}, "R11": {"h": "Trooppisten myrskyjen kaarevat radat piirtyvät maailman merille.", "c": {"cap": "Tropiikin hirmumyrskyjen radat vuosilta 1950–2005 kiertävät maapallon valtameriä.", "tek": "Nilfanion", "nimi": "Global tropical cyclone tracks", "vuo": "1950–2005", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Global_tropical_cyclone_tracks.jpg"}}, "R12": {"h": "Maanjäristysten keskukset tihentyvät laattojen rajavyöhykkeille.", "c": {"cap": "USGS:n historialliset maanjäristykset paljastavat mannerlaattojen saumakohdat.", "tek": "United States Geological Survey", "nimi": "USGS Earthquake Catalog Service Map: Historical Seismicity (1900–2024)", "vuo": "2026 (palveluvienti; aineisto 1900–2024)", "lis": "Public domain", "url": "https://earthquake.usgs.gov/arcgis/rest/services/eq/EQ_Catalog/MapServer"}}, "R13": {"h": "Tulivuorten pisteet ja vaaleat rikkidioksidivanat seuraavat vulkaanisia kaaria.", "c": {"cap": "La Palman tulivuoren rikkidioksidipilvi erottuu NASA:n Aura-satelliitin kartassa.", "tek": "Joshua Stevens", "nimi": "Sulfur Skies over La Palma", "vuo": "2021", "lis": "Public domain", "url": "https://science.nasa.gov/earth/earth-observatory/sulfur-skies-over-la-palma-148978/"}}, "R14": {"h": "Meren lämpötilakerros hehkuu lämpimin ja viilein vyöhykkein.", "c": {"cap": "NOAA:n meriveden lämpötilapoikkeamat näyttävät lämpimän veden Kalifornian rannikolla.", "tek": "NASA Earth Observatory image by Lauren Dauphin, and sea surface temperature data from Coral Reef Watch. Story by Kathryn Hansen.", "nimi": "Lajolla crw 2018214 lrg", "vuo": "2018-08-02", "lis": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Lajolla_crw_2018214_lrg.jpg"}}, "R15": {"h": "Ilmastovyöhykkeet piirtyvät mantereille ja niiden rajat siirtyvät ajassa.", "c": {"cap": "Köppen–Geigerin kartta jakaa maailman ilmastovyöhykkeisiin vuosien 1991–2020 aineistolla.", "tek": "Beck, H.E., McVicar, T.R., Vergopolan, N., Alexis, B., Lutsko, N.J., Dufour, A., Zeng, Z., Jian, X., van Dijk, A.I.J.M., Miralles, D.G.", "nimi": "Koppen-Geiger Map v2 World 1991–2020", "vuo": "2024-03-19", "lis": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:Koppen-Geiger_Map_v2_World_1991%E2%80%932020.svg"}}, "R16": {"h": "Viljelyalat levittäytyvät jokilaaksoista yli maanosien.", "c": {"cap": "MODIS-satelliitin maanpeitekartassa viljelymaat ovat yksi erikseen luokiteltu peiteluokka.", "tek": "Ivan Shmakov  ( talk )", "nimi": "MCD12C1 A2003001 051 2012264185451 LCT-1", "vuo": "2014-03-27", "lis": "CC0", "url": "https://commons.wikimedia.org/wiki/File:MCD12C1_A2003001_051_2012264185451_LCT-1.png"}}, "R17": {"h": "Valopisteiden tihentymät näyttävät ihmisten jakautumisen maapallolla.", "c": {"cap": "GHSL-aineistosta tehty kartta näyttää nykyisen väestötiheyden maailmanlaajuisesti.", "tek": "MrThe1And0nly", "nimi": "WorldPopulationDensity", "vuo": "2026-04-25", "lis": "CC0", "url": "https://commons.wikimedia.org/wiki/File:WorldPopulationDensity.png"}}, "R18": {"h": "Kaupunkikeskusten kasvavat kehät leviävät kartalla ympäröivään maaseutuun.", "c": {"cap": "DLR:n satelliittiaineisto näyttää Kairon ja Shanghain asutuksen laajenemisen vuosien 1985 ja 2015 välillä.", "tek": "German Aerospace Center (DLR), Earth Observation Center; nelikentän kooste Matkakirjan kuvaputki", "nimi": "World Settlement Footprint Evolution: Cairo and Shanghai, 1985 and 2015", "vuo": "1985 ja 2015 (aineiston havaintovuodet); 2026 (nelikentän kooste)", "lis": "CC BY 4.0", "url": "https://geoservice.dlr.de/web/maps/eoc:wsfevolution"}}, "R20": {"h": "Vuoden 1873 kauppareitit yhdistävät satamia purje- ja höyrylaivojen aikaan."}};
+
+// Normalisoi tila-arvon perustyyppiin (esim. "seuraava (data)" → "seuraava").
+function tilaAvain(tila) {
+  if (!tila) return 'idea';
+  if (tila.startsWith('idea')) return 'idea';
+  if (tila.startsWith('seuraava')) return 'seuraava';
+  return tila;
+}
+
+// Kuvaputken tiedostonimikäytäntö: <id>-havainne.jpg + <id>-havainne-480.jpg (sama cc:lle).
+function url480(url) {
+  return url.replace(/(\.[a-z]+)$/i, '-480$1');
+}
+
+function aikapalkkiHTML(l) {
+  const vari = MOOTTORIVARIT[l.moottori]?.vari || 'var(--seepia)';
+  if (l.alkuvuosi == null || l.loppuvuosi == null) {
+    return `<div class="k-aikapalkki"><span class="moodi">${l.kaari}</span></div>`;
   }
-  juuri.appendChild(s);
+  const alkuPros = Math.max(0, Math.min(100, (l.alkuvuosi - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100));
+  const loppuPros = Math.max(0, Math.min(100, (l.loppuvuosi - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100));
+  const leveys = Math.max(loppuPros - alkuPros, l.alkuvuosi === l.loppuvuosi ? 1.2 : 0.6);
+  const merkkipaalu1873 = (1873 - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+  return `<div class="k-aikapalkki" style="--vari:${vari}">
+    <div class="segmentti" style="left:${alkuPros}%;width:${leveys}%"></div>
+    <div class="piste1873" style="left:${merkkipaalu1873}%" title="1873"></div>
+  </div>`;
 }
 
-document.getElementById('luvut').innerHTML =
-  `<span><b>${LINSSIT.length}</b>linssiä</span><span><b>${MANTEREET.length}</b>mannerta</span>`;
+// --- Luvut ---
+const lahdeSetti = new Set();
+LINSSIT.filter((l) => l.moottori === 'data' && l.aineisto).forEach((l) => l.aineisto.split(',').map((s) => s.trim()).filter(Boolean).forEach((s) => lahdeSetti.add(s.toLowerCase())));
 
-const suodatin = document.getElementById('mannersuodatin');
-for (const manner of MANTEREET) {
-  const maara = LINSSIT.filter((l) => l.manner === manner).length;
-  const b = document.createElement('button');
-  b.type = 'button';
-  b.dataset.manner = manner;
-  b.setAttribute('aria-pressed', 'false');
-  b.textContent = `${manner} (${maara})`;
-  suodatin.appendChild(b);
+document.getElementById('luvut').innerHTML = [
+  ['linssiä', LINSSIT.length],
+  ['pelissä nyt', LINSSIT.filter((l) => l.pelissa).length],
+  ['seuraavaksi', LINSSIT.filter((l) => tilaAvain(l.tila) === 'seuraava').length],
+  ['aineistolähteitä', lahdeSetti.size],
+].map(([nimi, luku]) => `<div><b>${luku}</b>${nimi}</div>`).join('');
+
+// --- Moottorikortit (linssikatalogi-data.js:stä) ---
+document.getElementById('moottorit').innerHTML = MOOTTORIT_DATA.map((m) => {
+  const vari = MOOTTORIVARIT[m.avain]?.vari || 'var(--seepia)';
+  const rakennettu = !/^ei\b/i.test((m.rakennettu || '').trim());
+  return `<div class="moottori">
+    <div class="ikoni" style="--vari:${vari}">${IKONIT[m.avain] || ''}</div>
+    <b>${m.nimi}</b>
+    <span class="badge ${rakennettu ? 'rakennettu' : 'suunnitteilla'}" title="${(m.rakennettu || '').replace(/"/g, '&quot;')}">${rakennettu ? 'rakennettu' : 'suunnitteilla'}</span>
+    <p>${m.kuvaus}</p>
+    ${m.pilotti ? `<p class="mono" style="font-size:11px">Pilotti: ${m.pilotti}</p>` : ''}
+  </div>`;
+}).join('');
+
+// --- Pelissä nyt (data-vetoinen: kentän pelissa=true linssit) ---
+const pelissaNytLista = LINSSIT.filter((l) => l.pelissa).sort((a, b) => {
+  const jarjesta = (id) => id.startsWith('X') ? parseInt(id.slice(1), 10) : 100 + id.charCodeAt(0);
+  return jarjesta(a.id) - jarjesta(b.id);
+});
+document.getElementById('pelissa-nyt').innerHTML = pelissaNytLista.map((l) => {
+  const t = TILAT[tilaAvain(l.tila)] || TILAT.idea;
+  return `<div class="pn-kortti">
+    <div class="pn-kuva">
+      <span class="tagi">${t.nimi.toUpperCase()}</span>
+      <span class="merkki">kuvakaappaus pelistä — tulossa</span>
+    </div>
+    <div class="pn-teksti">
+      <b>${l.nimi}</b>
+      <p>${l.alue} · ${l.kaari}</p>
+    </div>
+  </div>`;
+}).join('');
+
+// --- Seuraavat-kaista ---
+const seuraavatJarjestyksessa = LINSSIT.filter((l) => l.jarjestys != null).sort((a, b) => a.jarjestys - b.jarjestys);
+document.getElementById('seuraavat').innerHTML = seuraavatJarjestyksessa.map((l) => {
+  const t = MOOTTORIVARIT[l.moottori];
+  const havainne = l.kuvat && l.kuvat.havainne;
+  return `<div class="sk-kortti">
+    <div class="sk-numero mono">#${l.jarjestys}</div>
+    <div class="sk-kuva" style="--vari:${t.vari}">${IKONIT[l.moottori]}${havainne ? `<img src="${url480(havainne)}" alt="" loading="lazy" onerror="this.remove()" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:6px">` : ''}</div>
+    <div class="sk-nimi">${l.nimi}</div>
+    <div class="sk-kaari">${l.kaari}</div>
+  </div>`;
+}).join('');
+
+// --- Ruudukko: yksi lohko per lensejä sisältävä moottori ---
+function tahdetHTML(n) {
+  if (!n) return '';
+  return `<span class="k-tahdet" title="1873-sidos">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
 }
-suodatin.addEventListener('click', (ev) => {
-  const b = ev.target.closest('button');
-  if (!b) return;
-  const aktiivinen = b.getAttribute('aria-pressed') === 'true';
-  document.querySelectorAll('nav.suodatin button').forEach((x) => x.setAttribute('aria-pressed', 'false'));
-  const valittu = aktiivinen ? null : b.dataset.manner;
-  if (valittu) b.setAttribute('aria-pressed', 'true');
-  document.querySelectorAll('section.ryhma').forEach((s) => {
-    s.hidden = valittu !== null && s.dataset.manner !== valittu;
-  });
+function korttiHTML(l) {
+  const t = TILAT[tilaAvain(l.tila)] || TILAT.idea;
+  const ty = MOOTTORIVARIT[l.moottori] || { vari: 'var(--seepia)' };
+  const pysakit = l.pysakit || [];
+  const nayta = pysakit.slice(0, 6);
+  const loput = pysakit.length - nayta.length;
+  const havainneUrl = l.kuvat && l.kuvat.havainne;
+  const ccUrl = l.kuvat && l.kuvat.cc;
+  const tekstit = ERA1_KUVATEKSTIT[l.id];
+  return `
+    <div class="k-kuva" style="--vari:${ty.vari}">
+      <div class="k-tila-piste" style="--tilavari:${t.vari}" title="${t.nimi}"></div>
+      ${l.pelikytkos ? `<span class="k-pelikytkos">${l.pelikytkos}</span>` : ''}
+      ${IKONIT[l.moottori] || ''}
+      ${havainneUrl ? `<img class="k-kuva-pieni" src="${url480(havainneUrl)}" data-iso="${havainneUrl}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+      ${ccUrl ? `<img class="k-cc" src="${url480(ccUrl)}" data-iso="${ccUrl}" alt="" loading="lazy" onerror="this.remove()" title="${tekstit && tekstit.c ? (tekstit.c.tek + ' — ' + tekstit.c.lis).replace(/"/g, '&quot;') : 'aikalaiskuva'}">` : ''}
+    </div>
+    <div class="k-body">
+      <div class="k-ylarivi">
+        <span class="k-tunnus mono">${l.id}</span>
+        ${tahdetHTML(l.sidos1873)}
+      </div>
+      <p class="k-nimi">${l.nimi}</p>
+      <p class="k-meta">${l.alue} · ${l.kaari}</p>
+      ${aikapalkkiHTML(l)}
+      ${l.mitaOpitaan ? `<p class="k-opitaan">${l.mitaOpitaan}</p>` : ''}
+      <div class="k-pysakit">
+        ${nayta.map((p) => `<span>${p}</span>`).join('')}
+        ${loput > 0 ? `<span class="lisaa">+${loput}</span>` : ''}
+      </div>
+      <span class="k-tila-teksti" style="--tilavari:${t.vari}">${t.nimi}</span>
+    </div>
+    <div class="k-lisatiedot">
+      <div class="sarake">
+        <h4>Pysäkit (kaikki)</h4>
+        <p class="pysakit-koko">${pysakit.join(' · ') || '—'}</p>
+        ${l.aineisto ? `<div><h4>Aineisto</h4><p class="huom-teksti">${l.aineisto}</p></div>` : ''}
+        ${l.huom ? `<div><h4>Huomio</h4><p class="huom-teksti">${l.huom}</p></div>` : ''}
+      </div>
+      <div class="sarake">
+        ${tekstit && tekstit.h ? `<div><h4>Havainnekuva</h4><p class="huom-teksti">${tekstit.h}</p></div>` : ''}
+        ${tekstit && tekstit.c ? `<div><h4>Aikalaiskuva</h4><p class="huom-teksti">${tekstit.c.cap}</p><p class="k-lahde">${tekstit.c.tek} · ${tekstit.c.nimi} (${tekstit.c.vuo}) · ${tekstit.c.lis} · <a href="${tekstit.c.url}" target="_blank" rel="noopener">lähde</a></p></div>` : ''}
+        <button type="button" class="k-sulje">Sulje</button>
+      </div>
+    </div>`;
+}
+
+const juuriKaikki = document.getElementById('ruudukko-kaikki');
+for (const moottori of MOOTTORIT_LINSSEISSA) {
+  const linssitTassa = LINSSIT.filter((l) => l.moottori === moottori);
+  if (!linssitTassa.length) continue;
+  const vari = MOOTTORIVARIT[moottori].vari;
+  const lohko = document.createElement('div');
+  lohko.className = 'moottori-lohko';
+  lohko.innerHTML = `<h3 style="--vari:${vari}"><span class="moottori-ikoni">${IKONIT[moottori]}</span>${MOOTTORIVARIT[moottori].nimi}<span class="maara">(${linssitTassa.length})</span></h3>
+    <div class="ruudukko" data-moottori="${moottori}"></div>`;
+  juuriKaikki.appendChild(lohko);
+  const ruudukko = lohko.querySelector('.ruudukko');
+  for (const l of linssitTassa) {
+    const d = document.createElement('div');
+    d.className = 'kortti';
+    d.dataset.id = l.id;
+    d.dataset.moottori = l.moottori;
+    d.dataset.tila = tilaAvain(l.tila);
+    d.dataset.manner = l.manner;
+    d.dataset.haku = `${l.nimi} ${l.alue} ${(l.pysakit || []).join(' ')} ${l.id}`.toLowerCase();
+    if (l.alkuvuosi != null) { d.dataset.alku = l.alkuvuosi; d.dataset.loppu = l.loppuvuosi; }
+    d.innerHTML = korttiHTML(l);
+    ruudukko.appendChild(d);
+  }
+}
+
+juuriKaikki.addEventListener('click', (ev) => {
+  if (ev.target.closest('.k-sulje')) {
+    ev.target.closest('.kortti').classList.remove('auki');
+    return;
+  }
+  const kortti = ev.target.closest('.kortti');
+  if (!kortti) return;
+  const oliAuki = kortti.classList.contains('auki');
+  document.querySelectorAll('.kortti.auki').forEach((k) => k.classList.remove('auki'));
+  if (!oliAuki) {
+    kortti.classList.add('auki');
+    const kuva = kortti.querySelector('.k-kuva-pieni');
+    if (kuva && kuva.dataset.iso) kuva.src = kuva.dataset.iso;
+  }
 });
 
+// --- Suodattimet (tila, manner, aika, haku — moottori jakaa jo osioihin) ---
+const tilaAktiivi = new Set();
+const mannerAktiivi = new Set();
+let hakuteksti = '';
+let aikaMin = AXIS_MIN;
+let aikaMax = AXIS_MAX;
+
+function lippurivi(kohde, avaimet, nimikartta, aktiiviSetti) {
+  const juuri = document.getElementById(kohde);
+  juuri.innerHTML = avaimet.map((a) => {
+    const maara = LINSSIT.filter((l) => (kohde === 'mannersuodatin' ? l.manner === a : tilaAvain(l.tila) === a)).length;
+    return `<button type="button" class="lippu" data-avain="${a}" aria-pressed="false">${nimikartta[a]?.nimi || a} (${maara})</button>`;
+  }).join('');
+  juuri.addEventListener('click', (ev) => {
+    const b = ev.target.closest('button');
+    if (!b) return;
+    const avain = b.dataset.avain;
+    if (aktiiviSetti.has(avain)) { aktiiviSetti.delete(avain); b.setAttribute('aria-pressed', 'false'); }
+    else { aktiiviSetti.add(avain); b.setAttribute('aria-pressed', 'true'); }
+    suodataRuudukko();
+  });
+}
+lippurivi('tilasuodatin', Object.keys(TILAT), TILAT, tilaAktiivi);
+lippurivi('mannersuodatin', MANTEREET, {}, mannerAktiivi);
+
+document.getElementById('tekstihaku').addEventListener('input', (ev) => {
+  hakuteksti = ev.target.value.trim().toLowerCase();
+  suodataRuudukko();
+});
+
+const aikaMinEl = document.getElementById('aika-min');
+const aikaMaxEl = document.getElementById('aika-max');
+function vuosiTeksti(v) { return v < 0 ? `${Math.abs(v)} eaa.` : `${v}`; }
+function paivitaAikatekstit() {
+  document.getElementById('aika-min-teksti').textContent = vuosiTeksti(aikaMin);
+  document.getElementById('aika-max-teksti').textContent = vuosiTeksti(aikaMax);
+}
+function aikakasittelija() {
+  aikaMin = Math.min(parseInt(aikaMinEl.value, 10), parseInt(aikaMaxEl.value, 10));
+  aikaMax = Math.max(parseInt(aikaMinEl.value, 10), parseInt(aikaMaxEl.value, 10));
+  paivitaAikatekstit();
+  suodataRuudukko();
+}
+aikaMinEl.addEventListener('input', aikakasittelija);
+aikaMaxEl.addEventListener('input', aikakasittelija);
+paivitaAikatekstit();
+
+function suodataRuudukko() {
+  const ajanSuodinPaalla = aikaMin > AXIS_MIN || aikaMax < AXIS_MAX;
+  let nakyvia = 0;
+  document.querySelectorAll('.kortti').forEach((k) => {
+    let n = true;
+    if (tilaAktiivi.size && !tilaAktiivi.has(k.dataset.tila)) n = false;
+    if (mannerAktiivi.size && !mannerAktiivi.has(k.dataset.manner)) n = false;
+    if (hakuteksti && !k.dataset.haku.includes(hakuteksti)) n = false;
+    if (ajanSuodinPaalla) {
+      if (k.dataset.alku === undefined) n = false;
+      else {
+        const alku = parseInt(k.dataset.alku, 10);
+        const loppu = parseInt(k.dataset.loppu, 10);
+        if (loppu < aikaMin || alku > aikaMax) n = false;
+      }
+    }
+    k.hidden = !n;
+    if (n) nakyvia++;
+  });
+  document.getElementById('osumamaara').textContent = `${nakyvia} / ${LINSSIT.length} linssiä`;
+}
+suodataRuudukko();
+
+// --- Tiekartta ---
+const tiekarttaJuuri = document.getElementById('tiekartta');
+const TILA_JARJESTYS = ['valmis', 'rakenteilla', 'seuraava', 'jonossa', 'idea'];
+tiekarttaJuuri.innerHTML = TILA_JARJESTYS.map((tila) => {
+  const t = TILAT[tila];
+  const linssit = LINSSIT.filter((l) => tilaAvain(l.tila) === tila);
+  return `<div class="tk-sarake">
+    <div class="tk-otsikko"><span class="tk-piste" style="--vari:${t.vari}"></span>${t.nimi}<span class="tk-maara">${linssit.length}</span></div>
+    ${linssit.map((l) => `<div class="tk-kortti" data-id="${l.id}"><b>${l.nimi}</b><span>${l.id} · ${l.manner}</span></div>`).join('')}
+  </div>`;
+}).join('');
+
+tiekarttaJuuri.addEventListener('click', (ev) => {
+  const kortti = ev.target.closest('.tk-kortti');
+  if (!kortti) return;
+  const kohde = document.querySelector(`.kortti[data-id="${kortti.dataset.id}"]`);
+  if (!kohde) return;
+  kohde.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  document.querySelectorAll('.kortti.auki').forEach((k) => k.classList.remove('auki'));
+  kohde.classList.add('auki');
+});
+
+// --- Esitystila ---
+let esitysIndeksi = 0;
+function esitysLista() {
+  const nakyvat = [...document.querySelectorAll('.kortti')].filter((k) => !k.hidden).map((k) => k.dataset.id);
+  return nakyvat.length ? nakyvat : LINSSIT.map((l) => l.id);
+}
+function nayttaEsitys() {
+  const lista = esitysLista();
+  esitysIndeksi = ((esitysIndeksi % lista.length) + lista.length) % lista.length;
+  const l = LINSSIT.find((x) => x.id === lista[esitysIndeksi]);
+  const ty = MOOTTORIVARIT[l.moottori] || { vari: 'var(--seepia)' };
+  const havainneUrl = l.kuvat && l.kuvat.havainne;
+  document.getElementById('e-kuva').style.setProperty('--vari', ty.vari);
+  document.getElementById('e-kuva').innerHTML = `${IKONIT[l.moottori] || ''}${havainneUrl ? `<img src="${havainneUrl}" alt="" onerror="this.remove()" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px">` : ''}`;
+  document.getElementById('e-nimi').textContent = l.nimi;
+  document.getElementById('e-kaari').textContent = `${l.alue} · ${l.kaari}`;
+  document.getElementById('e-opitaan').textContent = l.mitaOpitaan || '';
+  const ccUrl = l.kuvat && l.kuvat.cc;
+  const tekstit = ERA1_KUVATEKSTIT[l.id];
+  document.getElementById('e-cc').innerHTML = (ccUrl && tekstit && tekstit.c)
+    ? `<img src="${url480(ccUrl)}" alt="" onerror="this.remove()"><span>${tekstit.c.tek} · ${tekstit.c.lis} · <a href="${tekstit.c.url}" target="_blank" rel="noopener">lähde</a></span>`
+    : '';
+  document.getElementById('e-laskuri').textContent = `${esitysIndeksi + 1} / ${lista.length}`;
+}
+document.getElementById('esitysnappi').addEventListener('click', () => {
+  esitysIndeksi = 0;
+  document.body.classList.add('esitys-paalla');
+  nayttaEsitys();
+});
+document.getElementById('e-poistu').addEventListener('click', () => document.body.classList.remove('esitys-paalla'));
+document.getElementById('e-edellinen').addEventListener('click', () => { esitysIndeksi--; nayttaEsitys(); });
+document.getElementById('e-seuraava').addEventListener('click', () => { esitysIndeksi++; nayttaEsitys(); });
+document.addEventListener('keydown', (ev) => {
+  if (!document.body.classList.contains('esitys-paalla')) return;
+  if (ev.key === 'Escape') document.body.classList.remove('esitys-paalla');
+  else if (ev.key === 'ArrowLeft') { esitysIndeksi--; nayttaEsitys(); }
+  else if (ev.key === 'ArrowRight') { esitysIndeksi++; nayttaEsitys(); }
+});
+
+// --- Tulostus ---
+document.getElementById('tulostanappi').addEventListener('click', () => window.print());
+
+// --- Teema ---
 const TEEMA_AVAIN = 'matkakirja-teema';
 function nykyinenTeema() {
   return document.documentElement.dataset.theme
