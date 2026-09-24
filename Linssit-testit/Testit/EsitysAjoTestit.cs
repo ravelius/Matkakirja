@@ -131,7 +131,7 @@ namespace Matkakirja.Linssit.Testit
             Lahella(1.0, y.Ajo.Value.Lat, "nousun keskus lat (−35…37)", 1e-9);
             Lahella(17.0, y.Ajo.Value.Lon, "nousun keskus lon (−18…52)", 1e-9);
             Oleta.Tosi(y.AjonKesto > 0 && y.AjonKesto <= Esitys.NousuMaxMs / 1000 + 1e-6, "nousun kesto " + y.AjonKesto);
-            Oleta.Tosi(y.AjonPehmennys != null && y.AjonPehmennys(0.3) > Kamerakayrat.Pehmea(0.3), "nousu nopea alussa");
+            Oleta.Tosi(y.AjonPehmennys != null && Math.Abs(y.AjonPehmennys(0.3) - Kamerakayrat.Pehmea(0.3)) < 1e-12, "nousu symmetrinen (Pehmea)");
             int ajoja = y.Loki.Count(l => l == "ajo");
             Aja(e, y, (v.ZoomAlku - v.Musta - 300) / 1000.0);
             Oleta.Sama(ajoja, y.Loki.Count(l => l == "ajo"), "hetki tähdissä: ei uutta ajoa ennen zoomia");

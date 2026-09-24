@@ -205,6 +205,17 @@ namespace Matkakirja.Natiivi
             tavutTehtava = System.Threading.Tasks.Task.Run(() => MaskinTavut(r));
         }
 
+        /// <summary>
+        /// Jaettu tekstuuri valmiiksi latausvaiheessa, kun taustasäikeen tavut ovat valmiit (ajo 5, 24.9.: ensimmäinen
+        /// ihmisen matkan avaus loi 4 Mt:n tekstuurin ja latasi sen GPU:lle avauksen kehyksessä).
+        /// </summary>
+        public static System.Collections.IEnumerator EsilataaMaski(Ruutumaski r)
+        {
+            if (r?.Maa == null) yield break;
+            while (jaetunLahde != r && r == tavujenLahde && tavutTehtava != null && !tavutTehtava.IsCompleted) yield return null;
+            if (jaetunLahde != r) JaettuMaski(r);
+        }
+
         static Texture2D JaettuMaski(Ruutumaski r)
         {
             if (jaettu != null && jaetunLahde == r) return jaettu;
