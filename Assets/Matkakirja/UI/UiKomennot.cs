@@ -610,6 +610,14 @@ namespace Matkakirja.Natiivi
                 case "wiki": ui.Wiki.Avaa(loput.Length > 0 ? loput : "Venetsia"); return null;
                 case "media": Mediarivi.Testaa(loput.Length > 0 ? loput.ToLowerInvariant() : "lontoo", t => Kirjaa(t)); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
+                case "tasaus":
+                {
+                    // Intron tasauksen kokeilu ilman uutta käännöstä (avaa lehti uudelleen): lainaus, ilman, flush, pois.
+                    string t = loput.Trim().ToLowerInvariant();
+                    Lehtinakyma.TasausTagi = t == "pois" ? "" : t == "ilman" ? "<align=justified>" : t == "flush" ? "<align=\"flush\">"
+                        : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
+                    return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
+                }
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
