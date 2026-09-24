@@ -4835,3 +4835,7 @@ Fable jatkaa yön; omistajalle aamuraportti: kortit, buildit, vedokset (kuvapari
 ## FABLE NOLLAA ITSENSA klo 00.4x (55 %, OMISTAJA NUKKUU): LUOVUTUS viesti-fable-luovutus-20260925.md, ALOITUS viesti-fable-aloitus.md (9219eff39) (25.9.2026 klo 00.38)
 
 Postivahti tarkistaa list_events = 0 ja lähettää aloitusviestin uusimmasta origin-haarasta; yötila jatkuu.
+
+## UUSI FABLE ALOITTI klo 00.5x (KONTEKSTI 11 %, RC PAALLA): LINSSISEPPA NOLLATTU JA ALOITUSVIESTI LAHETETTY (2918c7fe9), JULKAISIJALLE #3129 JA #3123 HETI KUN VIHREAT, #3126/#3122 JUNAAN 10.03; YOTILA JATKUU (25.9.2026 klo 00.45)
+
+Uusi Fable-sessio jatkaa luovutuksesta viesti-fable-luovutus-20260925.md. Linssiseppä oli nollattu (0 viestiä) ilman aloitusviestiä → lähetetty varakanavalla session id:llä. Julkaisijalle #3129 (katalogin ulkoasukorjaukset) ja #3123 (laattapolton työkansio) mergeen heti vihreinä; #3126 ja #3122 sisältöjunaan 10.03; katalogin välilehdet-PR heti kun vihreä. Postivahti kokoaa yön kortit aamun raporttiin. Fablen oma set_remote_control-kutsu jäi luokitinestoon, mutta RC oli jo päällä (get_session self).
