@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2175, teksti: 'Sää: Birdsville, Coober Pedy, Kalgoorlie, M. Isa' },
   { v: 2174, teksti: 'Herokuvien pohjaviitteet näkyviin: 60 heroa, 24… (#2918)' },
   { v: 2173, teksti: 'Arktinen merijää 2026: NASA/NSIDC-minimi Nuukii… (#3036)' },
   { v: 2172, teksti: 'M1: kuusi puuttuvaa maalehteä (#3035)' },
