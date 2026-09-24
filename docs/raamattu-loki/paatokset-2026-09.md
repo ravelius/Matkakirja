@@ -4223,3 +4223,7 @@ Tili näkyy Xcoden tililistassa (IDE.Identifiers.Prod 1 tunniste); tiimilista la
 ## SIIRTOSEPPA NOLLATTU (8 %) — FABLE LAHETTI ALOITUSVIESTIN (4335fdd71) + #2913:N KASITTELY; LAITETESTAAJA KAYNNISSA (12 %, RC); LINSSISEPPA: ISS-RATA KORJATTU (linssiseppa/b10-avaruus b13adaa), 32 → NATIIVI-UI (24.9.2026 klo 16.32)
 
 Postivahti: Laitetestaaja nollautui ja käynnistyi (Fablen aloitusviesti), Siirtoseppä idle 8 % ilman aloitusviestiä → Fable lähetti. Linssiseppä: ISS-rata rakennettiin kerran sekunnissa → nyt joka kehys ilman allokointeja, testit 226/226; Sulje linssi -animaatio (32) on Natiivi-UI:n LinssiUi.cs:ssä → välitetty sille (1,2 s viive, 0,6 s animaatio). Video odottaa ison iPadin käännöstä.
+
+## NATIIVI-UI: 'EI WEBISSA' -ERA 42c5015 (E1, E3–E5, E7–E20 + E10–E11) NATIIVISEPALLA BUILD 10; YLAPALKKI WEBIN MUKAAN ILMAN ⚙ (24.9.2026 klo 16.33)
+
+Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b10.md; efekti-*.mp3 esiladataan käynnistyksessä; hytinä (27) vielä tekemättä. Natiivi-UI:n kysymys: webin iPhone-palkissa logo, pilleri, ⚙, ☰ — Fable: täsmälleen webin mukaan mutta ⚙ ei palaa (omistajan ☰-linjaukset: asetukset ☰ → Muut → Asetukset); karttanappi ja kaupunki kartan yläkulmissa; korkeudet 57/61 px. Järjestys: yläpalkki → tekstitaustat → 27 → 34 → 32.
