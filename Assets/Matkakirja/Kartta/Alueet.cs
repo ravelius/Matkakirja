@@ -202,9 +202,41 @@ namespace Matkakirja
             if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());
             // Samoin pelaajan maan tarkka ääriviiva (Maaraja): ilman sitä offline-kehä on karkea varamonikulmio.
             if (a.Id == "maailma") polut.Add(Maaraja.GeojsonPolku);
+            // Rantaviiva vektorina (Rannikko, löydös 46 E1): maailmalle luettelo ja karkeat tasot, maalle tarkat solut.
+            if (a.Id == "maailma") polut.AddRange(Rannikko.OfflinePolut(true, null));
+            else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Rannikko.OfflinePolut(false, laatikko));
             if (a.Tiedot.TryGetValue("media", out var me) && me is List<object> media)
                 foreach (var u in media) if (u is string us && Suhteellinen(us) is string s) polut.Add(s);
             return polut;
+        }
+
+        /// <summary>
+        /// Alueen laatikko asteina offline.jsonin rasterivälien syvimmältä tasolta (XYZ-laatat, rivi 0 pohjoisessa).
+        /// false, jos rasteria ei ole.
+        /// </summary>
+        static bool RasterinLaatikko(Dictionary<string, object> tiedot, out Vektorisolut.Alue laatikko)
+        {
+            laatikko = default;
+            if (tiedot == null || !tiedot.TryGetValue("rasteri", out var k) || !(k is Dictionary<string, object> tasot)) return false;
+            int zMax = -1;
+            List<object> valit = null;
+            foreach (var t in tasot)
+                if (int.TryParse(t.Key, out int z) && z > zMax && t.Value is List<object> l && l.Count > 0) { zMax = z; valit = l; }
+            if (valit == null) return false;
+            var lista = new List<List<object>>();
+            if (valit[0] is List<object>) foreach (var v in valit) lista.Add((List<object>)v);
+            else lista.Add(valit);
+            double w = double.MaxValue, s = double.MaxValue, e = double.MinValue, n = double.MinValue;
+            foreach (var v in lista)
+            {
+                if (v.Count < 4) continue;
+                var a = Vektorisolut.MercatorLaatta(zMax, (int)(double)v[0], (int)(double)v[1]);
+                var b = Vektorisolut.MercatorLaatta(zMax, (int)(double)v[2], (int)(double)v[3]);
+                w = Math.Min(w, a.W); n = Math.Max(n, a.N); e = Math.Max(e, b.E); s = Math.Min(s, b.S);
+            }
+            if (!(e > w) || !(n > s)) return false;
+            laatikko = new Vektorisolut.Alue { Lon0 = w, Lon1 = e, Lat0 = s, Lat1 = n };
+            return true;
         }
 
         IEnumerator Tyojono()

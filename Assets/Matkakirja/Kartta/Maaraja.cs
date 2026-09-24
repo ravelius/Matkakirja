@@ -387,33 +387,7 @@ namespace Matkakirja
         {
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             if (kamera == null) kamera = Camera.main;
-            if (kamera == null) return 0f;
-            float matka = MittamatkaCss * PalloKierto.Pistekerroin;
-            var keski = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-            if (!Leveys(kamera, keski, out double lat0) || !Leveys(kamera, keski - new Vector2(0f, matka), out double lat1))
-                return 0f;
-            double ero = math.abs(lat0 - lat1);
-            return ero > 1e-6 ? (float)(matka / ero) : 0f;
-        }
-
-        /// <summary>Näytön pisteen leveysaste ellipsoidilla (pallotesti kuten MaaKartta.RuutuPallolle).</summary>
-        bool Leveys(Camera kamera, Vector2 ruutu, out double lat)
-        {
-            lat = 0;
-            if (!PalloKierto.Sade(kamera, ruutu, out Ray r)) return false;
-            var gt = georeferenssi.transform;
-            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            double3 o = (float3)gt.InverseTransformPoint(r.origin);
-            double3 s = math.normalize((double3)(float3)gt.InverseTransformDirection(r.direction));
-            double3 oc = o - keskus;
-            const double a = 6378137.0;
-            double B = math.dot(oc, s), C = math.dot(oc, oc) - a * a;
-            double D = B * B - C;
-            if (D < 0 || -B - math.sqrt(D) < 0) return false;
-            double3 osuma = o + s * (-B - math.sqrt(D));
-            double3 ecef = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed(osuma);
-            lat = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef).y;
-            return true;
+            return Pintaosuma.Tiheys(georeferenssi, kamera);
         }
 
         /// <summary>

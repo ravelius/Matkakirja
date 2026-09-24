@@ -51,6 +51,10 @@ namespace Matkakirja
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
     ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
     ///   maaraja pois|paalle | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja) mittaukseen
+    ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
+    ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1): taso pakottaa webin tason, syvyys pois =
+    ///                             ZTest Always, nosto = syvyysnosto (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen
+    ///                             alfa (oletus 0,732 = webin 0,58 sRGB-sekoituksena); tila lokiin
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
@@ -442,6 +446,19 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA maaraja: näkyvissä {Maaraja.Sallittu}, paksuus " +
                               (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
                               $" × pistekerroin {PalloKierto.Pistekerroin}");
+                    break;
+                case "rannikko":
+                    // rannikko pois|paalle|tila | taso <n>|auto | syvyys pois|paalle | nosto <m> [osuus] (löydös 46 E1)
+                    if (o.Length > 2 && o[1] == "taso") Rannikko.PakotettuTaso = o[2] == "auto" ? -1 : (int)D(2);
+                    else if (o.Length > 2 && o[1] == "syvyys") Rannikko.Syvyystesti = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "peitto") Rannikko.PeittoOhitus = o[2] == "oletus" ? float.NaN : (float)D(2);
+                    else if (o.Length > 2 && o[1] == "nosto")
+                    {
+                        Rannikko.NostoM = (float)D(2);
+                        if (o.Length > 3) Rannikko.NostoOsuus = (float)D(3);
+                    }
+                    else if (o.Length > 1 && (o[1] == "pois" || o[1] == "paalle")) Rannikko.Sallittu = o[1] == "paalle";
+                    Debug.Log("MATKAKIRJA rannikko: " + (Rannikko.Instanssi != null ? Rannikko.Instanssi.Tila() : "ei kohtauksessa"));
                     break;
                 case "alue":
                 case "offline":

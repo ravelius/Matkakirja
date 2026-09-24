@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet", "varitaso", "aariviiva", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva", "rannikko", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -26,6 +26,8 @@ namespace Matkakirja
         public Varitaso varitaso;
         /// <summary>Pelaajan maan ääriviiva (web korostuskehä), samaa maata kuin väritaso.</summary>
         public Maaraja maaraja;
+        /// <summary>Rantaviiva vektorina (löydös 46 E1, webin GSHHS-solut).</summary>
+        public Rannikko rannikko;
 
         /// <summary>Linssin rasterin näkyvä alue on ladattu (avain).</summary>
         public event Action<string> KerrosValmis;
@@ -74,6 +76,9 @@ namespace Matkakirja
 
         /// <summary>Linssi on asettanut oman taustavärin (astronautin avaruus): horisonttiusva ei koske taustaan.</summary>
         public bool OmaTausta => alkuperainenTausta.HasValue;
+
+        /// <summary>Lennon pinta on satelliittisarja (LentoPohja, Blue Marble + Sentinel): rannikkoviiva väistyy (Rannikko).</summary>
+        public bool SatelliittiLento => satelliittiLento;
 
         // MAASTON TARKKUUS (omistajan löydös 46, lisäys 5, 24.9.2026 klo 22.4x: Google Earth -vertailu). Maasto on
         // Karttasepän quantized-mesh (Rakennus.MaastoUrl, layer.json maxzoom 12, tasot 11–12 vain osin), haettuna
@@ -197,6 +202,7 @@ namespace Matkakirja
                     break;
                 case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
                 case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
+                case "rannikko": if (rannikko != null) rannikko.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
                 // Alue-, meri- ja valtamerinimet (Nimikerros, build 11); seuraavat myös "kaupungit"- ja "nimiot"-porttia.
                 case "aluenimet": if (Nimikerros.Instanssi != null) Nimikerros.Instanssi.paalla = nakyy; break;
