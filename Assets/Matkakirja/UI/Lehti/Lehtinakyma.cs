@@ -104,7 +104,7 @@ namespace Matkakirja.Natiivi
             peite = Rakenne.El("mk-lehti__peite", juuri);
             peite.style.display = DisplayStyle.None;
             arkki = Rakenne.El("mk-lehti", peite);
-            Rakenne.Tausta(arkki, Kuviot.Pergamentti);
+            Kuviot.AsetaArkki(arkki); // web .dialog.arkki: #f5f0e2 + paperikohina, ei säteittäistä liukua
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
             arkki.RegisterCallback<GeometryChangedEvent>(e => arkki.EnableInClassList("mk-lehti--levea", e.newRect.width >= 700f));
 

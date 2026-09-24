@@ -10,6 +10,7 @@
 //   Pergamentti   radial-gradient(circle at 42% 34%, #f6e7c6, #ecd8ae 58%, #d9be8d)
 //                 × fraktaalikohina (multiply)                          (.dialog-card)
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -159,6 +160,61 @@ namespace Matkakirja.Natiivi
                 valimuisti[nimi] = t;
                 return t;
             }
+        }
+
+        /// <summary>
+        /// Lehden arkki (web .dialog.arkki .dialog-card: background-color #f5f0e2 ja --paper-noise multiply): tasainen
+        /// paperi ja hieno rae. Webin kohina on feTurbulence fractalNoise 0,9 / 4 oktaavia värillä (0,42, 0,33, 0,19)
+        /// ja alfalla 0,2 × kohina; multiply-sekoitus = pohja × (1 − α + α × väri). 140 × 140 laatta toistuu
+        /// (AsetaArkki), joten rae on pikselin kokoista kuten webissä eikä veny arkin mukana.
+        /// </summary>
+        public static Texture2D Arkkipaperi
+        {
+            get
+            {
+                const string nimi = "arkkipaperi";
+                if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+                const int N = 140;
+                t = Uusi(nimi, N, N);
+                t.wrapMode = TextureWrapMode.Repeat;
+                var pohja = Vari("#f5f0e2");
+                var vari = new Color(0.42f, 0.33f, 0.19f);
+                var rnd = new System.Random(140);
+                var hila = new float[N * N];
+                for (int i = 0; i < hila.Length; i++) hila[i] = (float)rnd.NextDouble();
+                // Jaksollinen arvokohina (toistuu saumattomasti): oktaavit 1, 2, 4 ja 8 px, painot 1/2, 1/4, ….
+                float Arvo(int x, int y, int askel)
+                {
+                    int x0 = x / askel * askel, y0 = y / askel * askel;
+                    float fx = (x - x0) / (float)askel, fy = (y - y0) / (float)askel;
+                    float H(int a, int b) => hila[((b % N + N) % N) * N + ((a % N + N) % N)];
+                    float yla = Mathf.Lerp(H(x0, y0), H(x0 + askel, y0), fx), ala = Mathf.Lerp(H(x0, y0 + askel), H(x0 + askel, y0 + askel), fx);
+                    return Mathf.Lerp(yla, ala, fy);
+                }
+                var px = new Color[N * N];
+                for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                {
+                    float n = 0.5f * Arvo(x, y, 1) + 0.25f * Arvo(x, y, 2) + 0.15f * Arvo(x, y, 4) + 0.1f * Arvo(x, y, 8);
+                    float a = 0.2f * Mathf.Clamp01(0.5f + (n - 0.5f) * 1.6f);
+                    px[y * N + x] = new Color(pohja.r * (1f - a + a * vari.r), pohja.g * (1f - a + a * vari.g), pohja.b * (1f - a + a * vari.b), 1f);
+                }
+                t.SetPixels(px);
+                t.Apply(false, true);
+                valimuisti[nimi] = t;
+                return t;
+            }
+        }
+
+        /// <summary>Arkkipaperi toistuvana 140 × 140 -laattana (web background-image toistuu luonnollisessa koossaan).</summary>
+        public static void AsetaArkki(VisualElement e)
+        {
+            e.style.backgroundColor = Vari("#f5f0e2");
+            e.style.backgroundImage = new StyleBackground(Arkkipaperi);
+            e.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.Repeat);
+            e.style.backgroundSize = new BackgroundSize(new Length(140f), new Length(140f));
+            e.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left);
+            e.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top);
         }
 
         static Texture2D Uusi(string nimi, int w, int h) => new Texture2D(w, h, TextureFormat.RGBA32, false)

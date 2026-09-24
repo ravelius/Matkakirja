@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
             peite.style.display = DisplayStyle.None;
             peite.RegisterCallback<PointerDownEvent>(e => { if (e.target == peite) Sulje(); });
             arkki = Rakenne.El("mk-nahtavyys", peite);
-            Rakenne.Tausta(arkki, Kuviot.Pergamentti);
+            Kuviot.AsetaArkki(arkki);
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
 
             ylaosa = Rakenne.El("mk-nahtavyys__yla", arkki, PickingMode.Ignore);
