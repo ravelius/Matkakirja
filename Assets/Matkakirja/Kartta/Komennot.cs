@@ -226,7 +226,12 @@ namespace Matkakirja
                     // vari <ISO3> | vari pelaaja | vari pois | vari paalle
                     var vt = FindAnyObjectByType<Varitaso>();
                     if (vt == null) break;
-                    if (o[1] == "pois" || o[1] == "paalle") vt.Nakyvat(o[1] == "paalle");
+                    if (o[1] == "alin" && o.Length > 2 && int.TryParse(o[2], out int alin))
+                    {
+                        Varitaso.AlinKaytetty = alin;
+                        vt.Uudelleen();
+                    }
+                    else if (o[1] == "pois" || o[1] == "paalle") vt.Nakyvat(o[1] == "paalle");
                     else vt.Pakotettu = o[1] == "pelaaja" ? null : o[1];
                     Debug.Log($"MATKAKIRJA väritaso: komento {o[1]}, nyt {vt.Maa ?? "ei"}");
                     break;

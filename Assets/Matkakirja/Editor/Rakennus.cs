@@ -60,6 +60,9 @@ namespace Matkakirja.Editori
             // Ei reikiä lataamattomien laattojen kohdalle (lennon lähikuva 24.9.: taivas näkyi maaston läpi):
             // vanhempi laatta pysyy, kunnes kaikki lapset ovat ladattuja.
             pallo.forbidHoles = true;
+            // Oma tileset-materiaali: Cesiumin oletuskaavio + raster-paikkojen globaali alfa (huntu häivytetään zoomin
+            // mukaan, Fable 24.9.). Kopio Cesiumin oletusmateriaalista (renderQueue, avainsanat), varjostin vaihdettu.
+            pallo.opaqueMaterial = TilesetMateriaali();
 
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.templateUrl = LaattaUrl;
@@ -293,6 +296,21 @@ namespace Matkakirja.Editori
             m.SetVector("_Katko", katko);
             EditorUtility.SetDirty(m);
             return m;
+        }
+
+        static Material TilesetMateriaali()
+        {
+            const string polku = "Assets/Matkakirja/Materiaalit/Pallo.mat";
+            var varjostin = Shader.Find("Matkakirja/MatkakirjaTileset");
+            if (varjostin == null) { Debug.LogWarning("MATKAKIRJA rakennus: MatkakirjaTileset puuttuu, Cesiumin oletus"); return null; }
+            var oletus = AssetDatabase.LoadAssetAtPath<Material>(
+                "Packages/com.cesium.unity/Source/Runtime/Resources/CesiumDefaultTilesetMaterial.mat");
+            var m = oletus != null ? new Material(oletus) : new Material(varjostin);
+            m.shader = varjostin;
+            if (oletus != null) m.renderQueue = oletus.renderQueue;
+            AssetDatabase.DeleteAsset(polku);
+            AssetDatabase.CreateAsset(m, polku);
+            return AssetDatabase.LoadAssetAtPath<Material>(polku);
         }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);

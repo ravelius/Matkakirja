@@ -78,6 +78,8 @@ namespace Matkakirja
 
         void Awake()
         {
+            // Tileset-varjostimen raster-paikkojen alfat (Shaders/Cesium/MatkakirjaTileset): globaalit, oletus 0 → näkyviin.
+            for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
             Instanssi = this;
             CesiumRasterOverlay.OnCesiumRasterOverlayLoadFailure += Epaonnistui;
         }
