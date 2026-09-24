@@ -4019,3 +4019,7 @@ Karttaseppä oli poistanut ne perumisen mukaisesti; Natiivisepän perustelu hyv�
 ## PELIKOODARI: PARITEETTIRIVI 13 EI OLE KOODIVIKA; ESILATAUKSEN MITTAUS BUILD 9:LLA LAITETESTAAJALTA (24.9.2026 klo 15.16)
 
 Kytke(linssi) asettaa otsikon 'IHMISEN MATKA' oikein; vanha kuva tuli testikomennon polulta, jonka Natiivi-UI korjasi e536f8e:ssä → Laitetestaaja varmistaa build 8:lla oikealla vaihdolla (rivit 5, 13, 23). Esilatauksen mittari fee30eb (lokirivi 'lennon pinta: vaihto t=… esilataus V+E/Y') tulee build 9:ään; Laitetestaaja mittaa lokista, Pelikoodari ei käytä simulaattoria (roolitus). Pelikoodarilla nyt nopan listakortin poisto.
+
+## PELIKOODARI: NOPAN LISTAKORTTI POISTETTU (pelikoodari/siirrot-kartalle 4d3fe7a, BUILD 9 ENSIMMAISENA) (24.9.2026 klo 15.17)
+
+Noppa → kartalle ilman korttia ja tekstiä (webin vaihe 'move'); Siirtokohdemerkit piirtää renkaat saavutettaviin kaupunkeihin ja reitin varren pisteisiin, napautus renkaasta tai kaupungista valitsee; 15 s:n jälkeen pöllön vihje kuten webissä; testikomento 'rivi i'. kaanna 250/250, unity-tarkistus 0. Merge-pyyntö Natiivisepällä.
