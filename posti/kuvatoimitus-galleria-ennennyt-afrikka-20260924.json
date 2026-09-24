@@ -1,0 +1,372 @@
+{
+  "sourceOrder": "posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md",
+  "images": [
+    {
+      "cityId": "angola",
+      "kaupunki": "Angola",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "d51f89e15ac4673ef90cf45dcf50e0ed9266028c43f1524ce04c019fd635374c",
+      "tavut": 964912,
+      "mitat": {
+        "leveys": 2400,
+        "korkeus": 1382
+      },
+      "lahde": "Atlas of Mutual Heritage / Koninklijke Bibliotheek",
+      "tekija": "Jacob van Meurs",
+      "vuosi": "n. 1668",
+      "lisenssi": "Public domain",
+      "attribuutio": "Jacob van Meurs; Atlas of Mutual Heritage / Koninklijke Bibliotheek; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:AMH-6863-KB_View_of_Loanda.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Jacob van Meursin noin vuonna 1668 julkaistu näkymä näyttää Luandan sataman hollantilaisen siirtomaavallan aikaisena.",
+      "qaKonteksti": "Kuva liittyy Alankomaiden Länsi-Intian kauppakomppanian valloitukseen; kuvateksti ei saa esittää siirtomaavaltaa neutraalina paikallishistoriana.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:AMH-6863-KB_View_of_Loanda.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/5/5f/AMH-6863-KB_View_of_Loanda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/AMH-6863-KB_View_of_Loanda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "2539d328b2a5cd71a2bd26762807a476fd7f33ac56385825f09c329eb0782dc1",
+      "lähdeTavut": 768200,
+      "lähdeMitat": [
+        2400,
+        1382
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: nimetty Luandan sataman aikakauden kuparikaiverrus; vuosiluku ja kolonialistinen tuotantokonteksti kirjattu.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/angola-galleria.jpg"
+    },
+    {
+      "cityId": "sierraleone",
+      "kaupunki": "Sierra Leone",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "b2424a3d574f952ace122ebac5d4c39cc37af6ca81b04c5cf4ca379bbc107102",
+      "tavut": 290922,
+      "mitat": {
+        "leveys": 1255,
+        "korkeus": 744
+      },
+      "lahde": "John Leighton Wilson, Western Africa (1856)",
+      "tekija": "John Leighton Wilson tai nimetön kuvittaja",
+      "vuosi": "1856",
+      "lisenssi": "Public domain",
+      "attribuutio": "John Leighton Wilson tai nimetön kuvittaja; John Leighton Wilson, Western Africa (1856); Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Freetown,_Sierra_Leone_ca_1856.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1856 eurooppalais-amerikkalainen kirjankuva näyttää Freetownin satamakaupungin siirtomaa-ajalta.",
+      "qaKonteksti": "Kyse on eurooppalaisesta/amerikkalaisesta siirtomaa-ajan lähteestä; ajallinen ja näkökulman konteksti säilytettävä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Freetown,_Sierra_Leone_ca_1856.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Freetown%2C_Sierra_Leone_ca_1856.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Freetown%2C_Sierra_Leone_ca_1856.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "d65ab68a037c8d03d206ec8b0124e7293d747e92e2141e047d76334de8f30609",
+      "lähdeTavut": 279504,
+      "lähdeMitat": [
+        1255,
+        744
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: nimetty Freetownin kaupunkinäkymä; selkeä painokuva, ei muu Sierra Leone.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/sierraleone-galleria.jpg"
+    },
+    {
+      "cityId": "viktoria",
+      "kaupunki": "Viktoria Nyanza",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "5e1cf2960507ee63fef5e88ea37437dd0946997ea03cee0f78d2166b35c6f20b",
+      "tavut": 3991981,
+      "mitat": {
+        "leveys": 3000,
+        "korkeus": 2094
+      },
+      "lahde": "Wellcome Collection",
+      "tekija": "F. Meaulle",
+      "vuosi": "1890",
+      "lisenssi": "CC BY 4.0",
+      "attribuutio": "F. Meaulle; Wellcome Collection; CC BY 4.0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Camp_on_the_shores_of_Lake_Victoria._Wellcome_L0034853.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1890 etsaus näyttää eurooppalaisen retkikunnan leirin Viktorianjärven lounaisrannalla.",
+      "qaKonteksti": "Retkikunnan kolonialistinen näkökulma mainittava; teos ei kuvaa kaikkia järven ranta-asukkaita.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Camp_on_the_shores_of_Lake_Victoria._Wellcome_L0034853.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/4/47/Camp_on_the_shores_of_Lake_Victoria._Wellcome_L0034853.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Camp_on_the_shores_of_Lake_Victoria._Wellcome_L0034853.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "d3820383f862b78c46e5dbfd9dfcae1fa5dab126ecae386600a5055bdc3e15c3",
+      "lähdeTavut": 6000908,
+      "lähdeMitat": [
+        3989,
+        2784
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: painokuva kertoo eksplisiittisesti Viktorianjärven lounaisrannasta; retkikunnan näkökulma kirjattu.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/viktoria-galleria.jpg"
+    },
+    {
+      "cityId": "tanganjika",
+      "kaupunki": "Tanganjika",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "2d2571caa67b9086dbdf407f526e8caed862e8ee2c0f86f93d2a76cab23705ef",
+      "tavut": 3119141,
+      "mitat": {
+        "leveys": 2086,
+        "korkeus": 3000
+      },
+      "lahde": "Wellcome Collection",
+      "tekija": "tekijä tuntematon",
+      "vuosi": "1800-luku",
+      "lisenssi": "CC BY 4.0",
+      "attribuutio": "tekijä tuntematon; Wellcome Collection; CC BY 4.0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Henry_Morton_Stanley_and_David_Livingstone_on_Lake_Tanganyik_Wellcome_V0018842.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Aikakauden litografia nostaa eurooppalaiset tutkimusmatkailijat Stanleyn ja Livingstonen Tanganjikajärven kuvan keskiöön.",
+      "qaKonteksti": "Tutkimusmatkailijoiden keskeisyys on kuvan historiallinen rajaus, ei paikallisten näkökulma.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Henry_Morton_Stanley_and_David_Livingstone_on_Lake_Tanganyik_Wellcome_V0018842.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/0/07/Henry_Morton_Stanley_and_David_Livingstone_on_Lake_Tanganyik_Wellcome_V0018842.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Henry_Morton_Stanley_and_David_Livingstone_on_Lake_Tanganyik_Wellcome_V0018842.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "e806e04b0a78556e38063de7777115eed424c39ad2f1963653fc5882751c8475",
+      "lähdeTavut": 3192182,
+      "lähdeMitat": [
+        2220,
+        3192
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: alkuperäisessä kuvatekstissä nimetty Tanganjikajärvi; litografia ehjä ja luettava.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/tanganjika-galleria.jpg"
+    },
+    {
+      "cityId": "kappalmas",
+      "kaupunki": "Kap Palmas",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "97503187bcc47e2c8bdbc1f272cbb9f344ab5ab94959d6ceb48f519cc4560ffa",
+      "tavut": 414981,
+      "mitat": {
+        "leveys": 1215,
+        "korkeus": 807
+      },
+      "lahde": "Liberia Past and Present / Wikimedia Commons",
+      "tekija": "Wagner & C., Lith., Philadelphia",
+      "vuosi": "1853",
+      "lisenssi": "Public domain",
+      "attribuutio": "Wagner & C., Lith., Philadelphia; Liberia Past and Present / Wikimedia Commons; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Cape_Palmas_etch.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1853 litografia kuvaa Liberian Kap Palmasin rannikkoa siirtolaisasutuksen aikaisessa julkaisussa.",
+      "qaKonteksti": "Julkaisu liittyy Liberian siirtolaisasutuksen kuvastoon; kuvatekstin tulee pysyä dokumentaarisena.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Cape_Palmas_etch.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/0/05/Cape_Palmas_etch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Cape_Palmas_etch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "2fb94c79ade9d6074e8aae7bc3874df3e1b23a47ce6609acc07aa889c1b547d0",
+      "lähdeTavut": 352402,
+      "lähdeMitat": [
+        1215,
+        807
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: teoksessa lukee Cape Palmas ja näkymä esittää nimenomaista rannikkoa.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/kappalmas-galleria.jpg"
+    },
+    {
+      "cityId": "kimberley",
+      "kaupunki": "Kimberley",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "c0dcfd35809ea508e4c4da8cd4256a501aa59619d9fe6592a3c5f6a2a4d3aef7",
+      "tavut": 955600,
+      "mitat": {
+        "leveys": 1920,
+        "korkeus": 1083
+      },
+      "lahde": "Popular Science Monthly, osa 41 (1892)",
+      "tekija": "tekijä tuntematon",
+      "vuosi": "1892",
+      "lisenssi": "Public domain",
+      "attribuutio": "tekijä tuntematon; Popular Science Monthly, osa 41 (1892); Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:PSM_V41_D472_Kimberly_and_its_diamond_mine.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1892 kaiverrus näyttää Kimberleyn kaupungin ja siirtomaa-ajan timanttikaivoksen.",
+      "qaKonteksti": "Siirtomaa-ajan kaivostyö ja työläisten olot on kontekstoitava; kaksi muuta vedosta hylättiin kuvan laadun vuoksi.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:PSM_V41_D472_Kimberly_and_its_diamond_mine.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/PSM_V41_D472_Kimberly_and_its_diamond_mine.jpg/1920px-PSM_V41_D472_Kimberly_and_its_diamond_mine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/PSM_V41_D472_Kimberly_and_its_diamond_mine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "6da64d694105d97ecb778d052ad2c4615f5734222f8c8c7c69b44201ef275169",
+      "lähdeTavut": 855406,
+      "lähdeMitat": [
+        1920,
+        1083
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: tarkka Kimberleyn kaivos- ja kaupunkikaiverrus; kolmas vaihtoehto, kaksi viallista vedosta säilytetty hylätyissä.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/kimberley-galleria.jpg"
+    },
+    {
+      "cityId": "ahaggar",
+      "kaupunki": "Ahaggar",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "333ae09c8abc5782eec9dfd1b2b4f45281b822decf429f568429727e6aa7f8f8",
+      "tavut": 1908002,
+      "mitat": {
+        "leveys": 3000,
+        "korkeus": 2675
+      },
+      "lahde": "Musée des Années 30 / Wikimedia Commons",
+      "tekija": "Paul-Élie Dubois (maalaus), Francesco Bini (valokuva)",
+      "vuosi": "1947",
+      "lisenssi": "CC BY-SA 4.0",
+      "attribuutio": "Paul-Élie Dubois (maalaus), Francesco Bini (valokuva); Musée des Années 30 / Wikimedia Commons; CC BY-SA 4.0; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Paul-%C3%A9lie_dubois,_pastorale_a_hoggar,_1947.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Ranskalaisen Paul-Élie Dubois’n vuoden 1947 maalaus tulkitsee Ahaggarin paimentolaiselämää ulkopuolisen katseesta.",
+      "qaKonteksti": "Maalaus on ranskalaisen ulkopuolisen tulkinta alueesta; tekijä kuoli 1949 ja teos on EU:ssa public domain, valokuva CC BY-SA 4.0.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Paul-%C3%A9lie_dubois,_pastorale_a_hoggar,_1947.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Paul-%C3%A9lie_dubois%2C_pastorale_a_hoggar%2C_1947.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Paul-%C3%A9lie_dubois%2C_pastorale_a_hoggar%2C_1947.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "258ce7842f0671d2023bdc1042304b3d68f8328cbfd80e852f35ac72d8e8aaac",
+      "lähdeTavut": 8020520,
+      "lähdeMitat": [
+        4488,
+        4002
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty varauksin: vuoden 1947 Hoggar-niminen maalaus, ei 1800-luvun maisema; kehys kuuluu alkuperäiseen digitointiin, CC BY-SA -attribuutio säilytettävä.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/ahaggar-galleria.jpg"
+    },
+    {
+      "cityId": "kamerun",
+      "kaupunki": "Kamerunvuori",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "95e814bff81955095a26741a16443ef421cbde94870a2ebc1d665fd1aa75a642",
+      "tavut": 152715,
+      "mitat": {
+        "leveys": 760,
+        "korkeus": 554
+      },
+      "lahde": "The Earth and Its Inhabitants, Africa (1892)",
+      "tekija": "Élisée Reclus (julkaisija)",
+      "vuosi": "1892",
+      "lisenssi": "Public domain",
+      "attribuutio": "Élisée Reclus (julkaisija); The Earth and Its Inhabitants, Africa (1892); Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:View_taken_at_the_foot_of_the_Cameroons.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1892 eurooppalainen kirjankuva näyttää maiseman Kamerunvuoren juurelta.",
+      "qaKonteksti": "Paikannus käy ilmi lähdetietueesta; tekijän tarkka kuvanpiirtäjä ei ole tiedossa.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:View_taken_at_the_foot_of_the_Cameroons.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/d/d2/View_taken_at_the_foot_of_the_Cameroons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/View_taken_at_the_foot_of_the_Cameroons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "fa75c5352a718ddbf0e287c591353a7e1208fc83bcee32e737a39eb84c35baae",
+      "lähdeTavut": 123050,
+      "lähdeMitat": [
+        760,
+        554
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: lähde nimeää paikan Kamerunvuoren juureksi ja painokuvassa näkyy vuoren siluetti.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/kamerun-galleria.jpg"
+    },
+    {
+      "cityId": "suakin",
+      "kaupunki": "Suakin",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "cd42d0d8df4741e50c5898320dd768692a8ee8df9f6c8af759b3944f5250f155",
+      "tavut": 1157333,
+      "mitat": {
+        "leveys": 3000,
+        "korkeus": 2032
+      },
+      "lahde": "Bibliothèque nationale de France / Gallica",
+      "tekija": "D. Morionas",
+      "vuosi": "1875",
+      "lisenssi": "Public domain",
+      "attribuutio": "D. Morionas; Bibliothèque nationale de France / Gallica; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:%22L%27%C3%AEle_de_Souakim_(mer_rouge)_vue_prise_de_l%27entr%C3%A9e_du_port%22_-_par_D._Morionas_-_btv1b8459557r.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "D. Morionasin vuoden 1875 piirros kuvaa Suakinin saaren satamaa eurooppalaisen matkailijan näkökulmasta.",
+      "qaKonteksti": "Aikakauden eurooppalainen näkymä, ei nykyisen kaupungin kuva.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:%22L%27%C3%AEle_de_Souakim_(mer_rouge)_vue_prise_de_l%27entr%C3%A9e_du_port%22_-_par_D._Morionas_-_btv1b8459557r.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/4/41/%22L%27%C3%AEle_de_Souakim_%28mer_rouge%29_vue_prise_de_l%27entr%C3%A9e_du_port%22_-_par_D._Morionas_-_btv1b8459557r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/%22L%27%C3%AEle_de_Souakim_%28mer_rouge%29_vue_prise_de_l%27entr%C3%A9e_du_port%22_-_par_D._Morionas_-_btv1b8459557r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "d0a714c3ca3ffe65323c7d22547517294682ee7ea9faec5fa73342f1417ae7b0",
+      "lähdeTavut": 4805028,
+      "lähdeMitat": [
+        9048,
+        6128
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: piirroksen omassa tekstissä Suakinin saari ja sataman sisääntulo; paperin reunamerkinnät säilytetty.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/suakin-galleria.jpg"
+    },
+    {
+      "cityId": "mosambik",
+      "kaupunki": "Mosambikin saari",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "3518fc2d5f77885d7084488c1ad40deaa2c9b7d0b3696890ea780525014988c6",
+      "tavut": 803715,
+      "mitat": {
+        "leveys": 2400,
+        "korkeus": 1689
+      },
+      "lahde": "Atlas of Mutual Heritage / Nationaal Archief",
+      "tekija": "Johannes Vingboons",
+      "vuosi": "n. 1665",
+      "lisenssi": "Public domain",
+      "attribuutio": "Johannes Vingboons; Atlas of Mutual Heritage / Nationaal Archief; Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:AMH-6803-NA_Bird%27s_eye_view_of_Mozambique_island.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Johannes Vingboonsin noin vuoden 1665 lintuperspektiivi näyttää Mosambikin saaren eurooppalaisen merivallan kartoituksessa.",
+      "qaKonteksti": "Kuva on eurooppalaisen merivallan tuottama historiallinen näkymä.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:AMH-6803-NA_Bird%27s_eye_view_of_Mozambique_island.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/7/71/AMH-6803-NA_Bird%27s_eye_view_of_Mozambique_island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/AMH-6803-NA_Bird%27s_eye_view_of_Mozambique_island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "4c1828b835a724e0cf841ecc79f3c4ed919ff510b0285886637be1224e33ac42",
+      "lähdeTavut": 541819,
+      "lähdeMitat": [
+        2400,
+        1689
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: Mosambikin saaren nimetty lintuperspektiivivedos, ei koko Mosambikin valtio; kädenjälki näkyy.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/mosambik-galleria.jpg"
+    },
+    {
+      "cityId": "tshadjarvi",
+      "kaupunki": "Tšad-järvi",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "sha256": "df4b01017caa9b2c52220b1a9778b9ba0b2d72d21676d91353f56621260e2df7",
+      "tavut": 1966478,
+      "mitat": {
+        "leveys": 1920,
+        "korkeus": 1531
+      },
+      "lahde": "Meyer's Universum, osa 20 (1859)",
+      "tekija": "tekijä tuntematon (Meyer's Universum)",
+      "vuosi": "1859",
+      "lisenssi": "Public domain",
+      "attribuutio": "tekijä tuntematon (Meyer's Universum); Meyer's Universum, osa 20 (1859); Public domain; Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Meyers_Universum_Band_20_04.jpg); JPG/sRGB-muunnos Matkakirja.",
+      "kuvateksti-ehdotus": "Vuoden 1859 eurooppalainen kaiverrus näyttää Tšadjärven rantamaiseman.",
+      "qaKonteksti": "Kuvan lähde on eurooppalainen matkakirjallisuus; tulkinta ei korvaa paikallista näkökulmaa.",
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Meyers_Universum_Band_20_04.jpg",
+      "lähdeTiedosto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Meyers_Universum_Band_20_04.jpg/1920px-Meyers_Universum_Band_20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "commonsAlkuperainenUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Meyers_Universum_Band_20_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "lähdeSha256": "c29116e4c7fb60342230e77853740dc89d0a4dddc5e973e660a69bc0a8a4fcfb",
+      "lähdeTavut": 1678845,
+      "lähdeMitat": [
+        1920,
+        1531
+      ],
+      "qaTekninen": "JPG, upotettu sRGB ICC, mitat ja SHA-256 tarkistettu; ei ylöspäin skaalausta.",
+      "qaVisuaalinen": "Hyväksytty: alkuperäisen kaiverruksen tekstissä Tšadjärven rannat (Die Ufer des Tsad); tarkka paikannus.",
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/tshadjarvi-galleria.jpg"
+    }
+  ],
+  "unfound": [
+    {
+      "cityId": "namib",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Thomas Bainesin Walvis Bay 1861 -maalaus löytyi (Commons PD/CC0), mutta tarkistuksessa se oli merimaisema ilman näkyvää Namibin aavikkoa; jätetty pois. 1988 painoksen Namib-vedoksen lisenssi oli NC."
+    },
+    {
+      "cityId": "gao",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Gao + Mali + Caillié/Barth/Gallica ja Commons: löytyi moderneja kuvia; Barth 1850-luvun luonnos liittyy Gaoon mutta tutkijat pitävät sen kuvaa ristiriitaisena kuvauksen kanssa, joten paikkatarkkuus ei riitä."
+    },
+    {
+      "cityId": "darfur",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Darfur + Sudan Archive/Wellcome/Commons; al-Tūnisīn vuoden 1845 Darfur-kirjan kuvitus löytyi, mutta yksittäisiä juuri tietyn paikan näkymiä tai Commonsin kelvollista tiedostoa ei voitu varmistaa."
+    },
+    {
+      "cityId": "rashafun",
+      "tyyppi": "galleria",
+      "loytyi": false,
+      "huomio": "Ras Hafun/Hafun + British Library/Commons: löytyi vuoden 1893 karttapiirros, mutta ei kohdetta esittävää historiallista näkymäteosta."
+    }
+  ]
+}
