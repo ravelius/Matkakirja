@@ -4179,3 +4179,7 @@ Natiiviseppä: p8-avainta ei ole Macilla (Raamattu: käyttö vain työnkulkujen 
 ## OMISTAJAN LOYDOKSET 25–27 (BUILD 9, klo 16.3x): KALLISTUS POIS KARTASTA, ZOOMI LAHEMMAS WEBIN RAJAAN, NOSTOT HYTISEVAT PANOROINNIN JALKEEN (24.9.2026 klo 16.20)
 
 25) kahden sormen kallistus pois; kallistus vain animoiduissa kamera-ajoissa → Natiiviseppä. 26) zoomi ei mene tarpeeksi lähelle, nostoja vaikea nähdä → Natiiviseppä mittaa webin lähizoomin rajan ja tekee saman (kuvapari). 27) nostot hytisevät hetken panoroinnin jälkeen → Natiivi-UI (merkit lukitaan kameran kehykseen). Omistaja odottaa nostojen muuta työstöä tulevissa buildeissa (E10–E11, E3 tulossa). Kaikki build 10.
+
+## OMISTAJA klo 16.3x: LOYDOS 25 KUMOTTU — KAHDEN SORMEN KALLISTUS JAA KARTTAAN (24.9.2026 klo 16.21)
+
+Natiivisepälle ilmoitettu; 26 (zoomi) ja 27 (nostojen hytinä) pysyvät.
