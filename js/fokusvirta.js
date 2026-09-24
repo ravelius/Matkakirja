@@ -154,7 +154,7 @@ import {
   livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
-import { luennanLoppuun, stopDiaryVoice } from './luenta.js';
+import { aaniKuuluu, luennanLoppuun, stopDiaryVoice } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
 // mietintärepliikit ja saman välityspalvelinosoitteen kuin chat.
@@ -3838,17 +3838,66 @@ const SARJAN_ALKUVAHTI_MS = 200;
 const SARJAN_LYKKAYSKATTO_MS = 120000;
 
 /**
+ * Kuinka kauan kuva odottaa isoisän äänen 'playing'-tapahtumaa, kun luenta
+ * on jo käynnistetty (Fable 24.9.2026, löydös 45 kohta B varaventtiilillä).
+ */
+const SARJAN_AANIVARA_MS = 1500;
+
+/**
  * Odota, että isoisän luenta oikeasti alkaa — ja vasta sitten kuva.
  * Odotus on peruttavissa: `ui.luentakuvaOdotus` nollataan
  * piilotaLuentakuvassa, joten kaupungista lähtö ei jätä kuvaa
  * ilmestymään jälkijunassa.
+ *
+ * KUVA ÄÄNEN MUKANA, EI PLAY()-KUTSUN (löydös 45, Fablen päätös B
+ * 24.9.2026). `ui.luentaKesken()` kääntyy todeksi jo, kun soitin on
+ * luotu ja play() kutsuttu; ääni alkoi kuulua mitattuna noin 1,1 s
+ * myöhemmin (Ateena, tuotanto), ja sen ajan iso kuva ja Ohita olivat
+ * ruudulla Liiku-napin kanssa, koska Liiku piiloutuu vasta kuuluvasta
+ * äänestä (15.9.2026: epäonnistunut play() ei saa piilottaa mitään).
+ * Nyt kuva odottaa äänen 'playing'-tapahtumaa, jolloin kuva, ääni ja
+ * Liikun piilo alkavat yhdessä.
+ *
+ * VARAVENTTIILI: kuva ei saa koskaan jäädä tulematta äänen takia. Se
+ * avautuu heti ennallaan, jos luenta on striimattu lukija (ei <audio>-
+ * soitinta), soitin kaatuu ('error') tai loppuu, ja viimeistään
+ * SARJAN_AANIVARA_MS:n kuluttua, jos 'playing' ei tule (play() hylätty,
+ * hidas verkko). Äänet pois päältä -tilassa luenta ei ala lainkaan, ja
+ * kuva tulee alkukaton polulla kuten ennenkin.
  */
 function odotaLuennanAlku(ui, city, aloita) {
   clearTimeout(ui.luentakuvaOdotus);
   ui.luentakuvaOdotus = null;
+  const odotaAanta = (aani) => {
+    let valmis = false;
+    const ajastin = setTimeout(() => avaa(), SARJAN_AANIVARA_MS);
+    const avaa = () => {
+      if (valmis) return;
+      valmis = true;
+      clearTimeout(ajastin);
+      aani.removeEventListener('playing', avaa);
+      aani.removeEventListener('error', avaa);
+      aani.removeEventListener('ended', avaa);
+      // Peruttu (piilotaLuentakuva nollasi kahvan) tai kaupunki vaihtui.
+      if (ui.luentakuvaOdotus !== ajastin) return;
+      ui.luentakuvaOdotus = null;
+      if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+      aloita();
+    };
+    ui.luentakuvaOdotus = ajastin;
+    aani.addEventListener('playing', avaa);
+    aani.addEventListener('error', avaa);
+    aani.addEventListener('ended', avaa);
+  };
   const vahti = (kulunut = 0) => {
     if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
-    if (ui.luentaKesken?.() === true) { aloita(); return; }
+    if (ui.luentaKesken?.() === true) {
+      const aani = ui.diaryVoice;
+      const soitin = typeof aani?.addEventListener === 'function';
+      if (!soitin || aaniKuuluu(aani) || aani.error || aani.ended) { aloita(); return; }
+      odotaAanta(aani);
+      return;
+    }
     const lykkays = ui.luennanLykkays === true;
     const katko = lykkays ? SARJAN_LYKKAYSKATTO_MS : SARJAN_LUENNAN_ALKUKATTO_MS;
     if (kulunut >= katko) { aloita(); return; }
