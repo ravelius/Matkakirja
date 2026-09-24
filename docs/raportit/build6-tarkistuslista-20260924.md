@@ -622,6 +622,12 @@ ohutreunainen tausta), riippumatta siitä onko kulkutapavalitsin auki.
 kulkutapavalitsimen ollessa auki. **FAIL**: kumpi tahansa tila yhä
 umpikultainen.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): PASS.** `ui liiku` aktiivisen
+pelin kanssa avasi oikean kulkutapavalitsimen (thumbs-up/tram/boat/
+plane), ja Liiku-nappi näkyi ohutreunaisena/läpikuultavana kultatekstillä
+— EI umpikultaista täyttöä (`b7-1-liiku-aktiivinen-PASS.png`, vrt. build
+6:n `18-liiku-aktiivinen.png`).
+
 ## B7-2: Isoisän/pulun tekstit piilossa oletuksena + aito äänitasokaiutin
 
 **Omistaja (Fable 24.9. klo 11.33, Raamattu 14.–20.9.)**: isoisän ja
@@ -658,6 +664,14 @@ ei koske natiivia).
 kaiutin selvästi eri kokoinen/muotoinen eri hetkinä äänekkyyden mukaan
 (ei tasainen sykli). **FAIL**: teksti näkyy heti tai kaiutin ei muutu
 äänen mukana.
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): PASS (tekstin piilotus), EI
+TESTATTU (kaiutin)**. `ui matkakirja lontoo fokus` -lokirivi vahvisti
+`kortti: pieni True, puhelin True` — kortti näkyy pelkkänä kaupunkinimi-
+pillerinä ilman avattua tekstiä (`b7-2-tekstit-piilossa.png`). Kaiuttimen
+äänitasoreaktiota ei testattu tässä ajossa (vaatisi äänen päälle
+kytkemisen ja nopean kuvasarjan luennan aikana — säästetty
+kuulokoekierrokselle).
 
 ## B7-3 (löydös 22): Maan väritaso, huntu ja meri
 
@@ -739,6 +753,16 @@ nousulla/laskulla progressiivisilla asemilla. **FAIL**: neula
 paikallaan/tasainen tai symmetrinen ajastettu liike myös
 progressiivisilla asemilla.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): EI VOITU TESTATA TÄSSÄ AJOSSA.**
+Radiolinssi avautui ja mittari näkyi lepoasennossa ("RADIO POIS ·
+VALITSE KAUPUNKI", `b7-4-vu-mittari-lepotila.png`), mutta en onnistunut
+virittämään asemaa kosketuksella (tapit ja vedot ruudulla eivät
+osuneet oikeaan kontrolliin — asemavalinta vaatii ilmeisesti tarkan
+kosketuseleen jota en löytänyt tässä ajassa) enkä löytänyt komentoa
+asematiedon pakottamiseksi. Ei komentoa Linssisepältä/Natiivisepältä
+tälle. Uusinta vaatii joko täsmällisen kosketuskoordinaatin/-eleen tai
+testikomennon.
+
 ## B7-5: Aloituslennon lähikuva (vaiheet 1–2)
 
 **Omistaja (Fable 24.9. klo 11.38, RAAMATUN LENNON ESITYS -tarkennus)**:
@@ -770,6 +794,23 @@ luennan tekstipalkki). Potkurit voivat vielä näyttää hitailta/pysähtyneilt�
 **PASS-ehto**: rajaus+taivas+ei-jättivarjoa+napit piilossa kaikki
 täyttyvät. **FAIL**: mikä tahansa neljästä puuttuu (potkureita
 lukuun ottamatta).
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): TODENNÄKÖINEN PASS, osin
+epävarma.** Myöhäisessä lentokuvassa (`b7-5-lento-lahikuva.png`, ~3,6 s
+komennosta) näkyy: kone kohtuullisen suurena (~50 % leveydestä, ei aivan
+2/3 mutta lähellä), TAIVAS JA HORISONTTI koneen TAKANA (ei pelkkä
+maasto), pilvenvarjoja/uria maastossa mutta EI jättimäistä sumeaa
+läiskää, potkurit näyttävät PYÖRIVÄN (sumea kiekko, ei paikallaan) —
+parannus aiempaan. UI (topbar, napit, pulu) EI näkynyt yhdessäkään
+lentoruudussa — täsmää 23B:n korjaukseen. EPÄVARMA OSA: aikaisemmassa
+ruudussa (~2,1 s) kone näkyi pienenä ja suoraan ylhäältä kuin vanhassa
+tyylissä ennen tätä läheisempää kuvaa — vaiheiden järjestys/ajoitus jäi
+epäselväksi tässä ajossa, suositellaan tarkempaa kuvasarjaa (0,2 s
+välein heti komennon jälkeen) seuraavalla kierroksella. Myös huomio:
+"KREIKKA"-kartuscha-paneeli näkyi jälleen jumiutuneena ruudulla vaikka
+pelaaja oli jo Lontoossa/matkalla Ateenaan — sama jumibugi kuin löydös
+14:n aiemmissa yrityksissä, mutta EI estänyt navigointia tai
+komentojen toimintaa tällä kertaa (vain visuaalinen roska).
 
 ## B7-6 (löydös 20): iPhonen yläreuna kokonaan uusiksi
 
@@ -810,6 +851,16 @@ ylimpänä ja "Kehittäjä" (jos kehittäjätila päällä) aivan alimpana.
 **PASS-ehto**: kaikki edellä mainitut rakenneosat täsmäävät. **FAIL**:
 vanha yksi-pilleri-asettelu yhä käytössä, silmälasinappi yhä kartalla,
 tai ☰-valikon rivijärjestys väärä.
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): FAIL — EI VIELÄ IMPLEMENTOITU
+(odotettua, löydös 20 → build 7 oli jo tiedossa).** Yläosa näyttää yhä
+VANHAN asettelun: yksi "300£ 1/80" -pilleri + erillinen kaupunkinimi-
+pilleri sen alla, ei Dynamic Island -korkeudella (`b7-6-ylaosa-vanha-
+layout.png`). Silmälasinappia ei näy kartalla erikseen (jo korjattu
+aiemmin löydös 7:ssä), joten tältä osin OK. ☰-valikko AVAUTUU ja
+"LINSSIT" on ylimpänä listassa kuten pitää (`b7-6-hampurilaisvalikko-
+linssit-ylimpana.png`) — tämä osa siis JO KUNNOSSA, vain pillerien
+sijoittelu/kaksoispilleri puuttuu vielä.
 
 ## B7-7 (löydös 23): Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
 
@@ -860,6 +911,12 @@ tarkista ettei topbar/pulu/kartuscha näy lennon aikana (jatkokuva
 flightFirst+puhe-lento-alku (EI avausteksti toistu lennolla), UI-elementit
 piilossa lennon ajan. **FAIL**: lento näyttää/soittaa yhä avaustekstin
 tai UI-elementti näkyy lennolla.
+
+**TULOS 24.9. klo 12.5x (SHA 161fa35): "ODOTTAA" (Fablen ohje) — lennon
+ääni on yhä intro, Pelikoodarin korjaus kesken, ei testattu tarkemmin
+tässä ajossa. UI-elementtien piilotus lennon aikana kuitenkin VARMISTETTU
+PASS (ks. B7-5:n tulos: topbar/napit/pulu eivät näkyneet yhdessäkään
+lentoruudussa).**
 
 ## B7-9 (löydös 24A): Aloitusportin ruutu täsmälleen webin mukaan (ei ylimääräistä)
 
@@ -918,18 +975,26 @@ lukijaäänen taso) SÄILYVÄT tyhjennyksessä (omistajan tilaus 14.8.2026).
 on aloitusportti eikä pelitila. **FAIL**: ei vahvistusta, tai peli jää
 kartalle/muuhun tilaan tyhjennyksen jälkeen.
 
+**TULOS 24.9. klo 12.5x (SHA 161fa35): EI SAATU TESTATTUA TÄSSÄ AJOSSA.**
+☰-valikko avautui onnistuneesti (linssit ylimpänä, ks. B7-6), mutta en
+onnistunut kosketuksella vierittämään listaa alas "Uusi peli" -riviin
+asti tässä ympäristössä (kosketukset osuivat toistuvasti taustan
+karttaan valikon sijaan). Ei komentoa tälle toiminnolle. Vaatii joko
+tarkemman kosketuskoordinaatin seuraavalla kierroksella tai testikomennon
+Natiivi-UI:lta.
+
 ## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
 
 | # | Löydös | PASS/FAIL | Kuva | Huomio |
 |---|--------|-----------|------|--------|
-| B7-1 | Liiku läpinäkyvä (myös aktiivinen) | | | |
-| B7-2 | Tekstit piilossa + aito kaiutin | | | |
-| B7-3 | Väritaso/huntu/meri/raja | | | |
-| B7-4 | Radion VU-mittari | | | |
-| B7-5 | Lennon lähikuva | | | |
-| B7-6 | iPhonen yläreuna uusiksi (löydös 20) | | | |
-| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | | | |
-| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | | | |
-| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | | | |
-| 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | | |
-| 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | | |
+| B7-1 | Liiku läpinäkyvä (myös aktiivinen) | ✅ PASS (161fa35) | b7-1-liiku-aktiivinen-PASS.png | |
+| B7-2 | Tekstit piilossa + aito kaiutin | ✅ PASS piilotus, ei testattu kaiutin (161fa35) | b7-2-tekstit-piilossa.png | |
+| B7-3 | Väritaso/huntu/meri/raja | odottaa 24c9194 | | Ei valmis 161fa35:ssä, testataan uudella SHA:lla |
+| B7-4 | Radion VU-mittari | ⚠️ EI VOITU TESTATA (161fa35) | b7-4-vu-mittari-lepotila.png | Ei onnistuttu virittämään asemaa kosketuksella |
+| B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
+| B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
+| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | "ODOTTAA" (Fablen ohje) / UI-piilotus PASS | | Ääni tarkistetaan 24c9194:lla |
+| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | ⚠️ EI SAATU TESTATTUA (161fa35) | | Kosketus ei osunut valikon vieritykseen |
+| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | odottaa (ei testattu 161fa35:llä) | | Testataan 24c9194:lla |
+| 14 | Navat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
+| 4-renkaat | Hehkurenkaat | ✅ PASS (161fa35, ei kuulu build 7:ään erikseen) | | |
