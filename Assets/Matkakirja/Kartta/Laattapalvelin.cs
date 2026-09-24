@@ -48,7 +48,13 @@ namespace Matkakirja
         readonly ConcurrentQueue<Haku> kiireJono = new ConcurrentQueue<Haku>();
         /// <summary>Esilataus (lennon reitti): vain kun tavallinen jono on tyhjä, ja kaksi paikkaa jää näkyvälle kartalle.</summary>
         readonly ConcurrentQueue<Haku> esiJono = new ConcurrentQueue<Haku>();
-        int kaynnissa;
+        /// <summary>
+        /// Etusijan esilataus (lennon kohdealue, Esilataus.Etusija): omat <see cref="KohdePaikat"/> rinnakkaista hakua
+        /// näkyvän kartan paikkojen lisäksi, joten se etenee lennon aikana eikä viivästytä näkyviä laattoja.
+        /// </summary>
+        readonly ConcurrentQueue<Haku> kohdeJono = new ConcurrentQueue<Haku>();
+        const int KohdePaikat = 4;
+        int kaynnissa, kohdeKaynnissa;
         string offline, valimuisti;
 
         /// <summary>Tilastot testaukseen: osumat offline / välimuisti / verkko, virheet, varakuvat.</summary>
@@ -160,6 +166,12 @@ namespace Matkakirja
             public int Valmis => Volatile.Read(ref valmiit);
             public int Epaonnistui => Volatile.Read(ref epaonnistui);
             public bool Peruttu => peruttu;
+            /// <summary>
+            /// Etusija (lennon kohdealue, build 11): haut omaan jonoonsa omilla paikoillaan (kohdeJono) eikä esilatausjonoon,
+            /// jota palvellaan vain näkyvän jonon ollessa tyhjä (lennon aikana harvoin), jotta laskeutumisnäkymän laatat
+            /// ovat perillä ajoissa.
+            /// </summary>
+            public bool Etusija { get; set; }
             /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
             public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
             /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
@@ -463,7 +475,7 @@ namespace Matkakirja
             }
             if (esi && esilataus.Peruttu) return (499, null);
             var h = new Haku { Polku = polku, Esi = esilataus };
-            (varitasoa ? kiireJono : esi ? esiJono : jono).Enqueue(h);
+            (varitasoa ? kiireJono : !esi ? jono : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             lahde.Nimi = "verkko";
             if (tila == 200 && !KuvaEhja(polku, data))
@@ -511,9 +523,15 @@ namespace Matkakirja
         {
             SatelliittiLoki.Yhteenveto();
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
-            while (kaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
-            while (kaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
-            while (kaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
+            // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
+            while (kaynnissa - kohdeKaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
+            while (kaynnissa - kohdeKaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            while (kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
+            {
+                if (c.Esi != null && c.Esi.Peruttu) { c.Valmis.TrySetResult((499, null)); continue; }
+                StartCoroutine(LataaKohde(c));
+            }
+            while (kaynnissa - kohdeKaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
             {
                 if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
                 StartCoroutine(Lataa(e));
@@ -552,6 +570,13 @@ namespace Matkakirja
                 Debug.Log($"MATKAKIRJA laattapalvelin: {onnistui} varalaattaa korvattu oikealla, pohja ladattu uudelleen ({varalla.Count} jäljellä)");
             }
             uusintaKesken = false;
+        }
+
+        IEnumerator LataaKohde(Haku h)
+        {
+            kohdeKaynnissa++;
+            try { yield return Lataa(h); }
+            finally { kohdeKaynnissa--; }
         }
 
         IEnumerator Lataa(Haku h)

@@ -18,17 +18,17 @@ namespace Matkakirja
     ///                              pari (nopeus sama saumassa), kohde = kone koko ajan (ruudun keskellä), koko ei alle
     ///                              merkkikoon (Nappula: max(malliPx, Kone × ruudun leveys))
     ///       LIUKU       11,0–12,0 s lähes paikallaan, kohdekaupunki tulee näkyviin
-    ///   (c) KIERTO      12,0–15,5 s kohde koneesta kaupunkiin, kamera kaupungin VASTAKKAISELLE puolelle (katse lentosuuntaa
-    ///                              vastaan, kone tulee kameraa kohti), 3000 → 250 km, kallistus 35° → 55° smootherstep,
-    ///                              kulmanopeus kasvaa (kiihtyvä)
+    ///   (c) KIERTO      12,0–15,5 s kohde koneesta kaupunkiin, kamera kiertää kaupunkia, 3000 → 250 km, kallistus
+    ///                              35° → 55° smootherstep, kulmanopeus kasvaa (kiihtyvä)
     ///   (d) ORBIT       15,5–20,0 s sama kierto jatkuu vakiokulmanopeudella ja laskeutuu saapumisnäkymään (webin
     ///                              kaupunkinäkymä, PalloKierto.SaapumisNakyma: kallistus 0, pohjoinen ylös); jarrutus vasta
     ///                              viimeisen 1/3:n (1,5 s) aikana, ei pysähdystä kesken.
     /// Kesto skaalautuu reitin pituuden mukaan 16–26 s (<see cref="Kesto"/>, Fable 24.9.), suhteet pysyvät, mutta
-    /// sivukylki ≥ 1,4 s ja orbit ≥ 4 s (<see cref="Jaa"/>). Kiertosuunta (myötä- tai vastapäivään) valitaan niin, että
-    /// orbit kulkee kaupungin maiseman yli (<see cref="Kaupungit"/>, Fable 24.9.: maisemasuunta ratkaisee VAIN
-    /// kiertosuunnan); kameran paikka on kaupungin vastakkainen puoli. Sivukylki otetaan samalta puolelta, jolle kierto
-    /// kääntyy (peilaus: 90/110/120 tai 270/250/240), jotta kierto jatkuu yhteen suuntaan koko lennon.
+    /// sivukylki ≥ 1,4 s ja orbit ≥ 4 s (<see cref="Jaa"/>). Kierron (c + d) kokonaiskulma on enintään 180° lyhyempään
+    /// suuntaan (Fable 24.9. klo 18, video kamerareitti-b11k), tavoitenopeus ~35°/s; maisemasuunta (<see cref="Kaupungit"/>)
+    /// ratkaisee vain tasatilanteen (180° ± 15°). Sivukylki (90/110/120 tai peilattuna 270/250/240) valitaan sille
+    /// puolelle, jolta kierto on lähimpänä tavoitenopeutta (<see cref="Kaari"/>). Ensimmäinen versio (build 11 k) kiersi
+    /// kaupungin vastakkaisen puolen ja maiseman kautta 360–410° (64–90°/s), mikä korvattiin.
     ///
     /// KORVATTU (build 10:n aikajana, 24.9.): SIIVEN OHI -syöksy (kone 1,25 ruutua, suunta 100°) ja LÄHIKUVAN panorointi
     /// 205°:een (32 km, kone 0,74) → sivukylki 90° → 110° (30 km, kone 0,9); IRTAUTUMINEN 245°:een ja MATKA 270°:ssa
@@ -59,7 +59,7 @@ namespace Matkakirja
 
         /// <summary>
         /// Kohdekaupungin maisema: katsesuunta (°), josta maisema näkyy parhaiten. Uudessa kamerareitissä (Fable 24.9.)
-        /// vain Suunta on käytössä ja ratkaisee kiertosuunnan; Kallistus, EtaisyysKm ja Laajuus ovat build 10:n
+        /// vain Suunta on käytössä ja ratkaisee kiertosuunnan tasatilanteessa; Kallistus, EtaisyysKm ja Laajuus ovat build 10:n
         /// viistokierron arvoja (talteen, jos kierto palaa).
         /// </summary>
         public readonly struct Kierto
@@ -174,11 +174,13 @@ namespace Matkakirja
         {
             // Loittonuksen huippu: pallon kaarevuus näkyy, ja pitkillä reiteillä kohde tulee näkyviin liu'ussa.
             double kauko = Rajaa(reittiM * 1.2, 3_000_000.0, 9_000_000.0);
-            // Kameran paikka kierron lopussa: kaupungin vastakkainen puoli, katse lentosuuntaa vastaan.
-            double vastaan = Kiedo(lentosuunta(1.0) + 180.0);
-            int kierto = Kiertosuunta(vastaan, k.Suunta);
-            // Suhteellinen suunta peilattuna kierron puolelle (90 → 270 jne.): kierto jatkuu samaan suuntaan.
-            double P(double x) => kierto > 0 ? x : 360.0 - x;
+            // Kierron (c) + (d) kokonaiskulma (Fable 24.9. klo 18, video kamerareitti-b11k): enintään 180° lyhyempään
+            // suuntaan, tavoitenopeus ~35°/s; sivukylki valitaan sille puolelle, jolta kulma on lähimpänä tavoitetta.
+            double tc = j.Kierto - j.Liuku, t1 = j.Tasainen - j.Kierto, tb = 1.0 - j.Tasainen;
+            double tehollinen = tc / 3.0 + t1 + tb / 3.0;
+            double kaari = Kaari(lentosuunta(j.Liuku), k.Suunta, TavoiteNopeus * tehollinen * j.KestoS, out int puoli);
+            // Suhteellinen suunta peilattuna valitulle puolelle (90 → 270 jne.).
+            double P(double x) => puoli > 0 ? x : 360.0 - x;
 
             var a = new List<Avain>
             {
@@ -196,25 +198,20 @@ namespace Matkakirja
             a.Add(loitto);
             // LIUKU: lähes paikallaan. Suunta muuttuu tässä absoluuttiseksi (lentosuunta liu'un lopussa), jotta
             // kierto (c) ja orbit (d) ovat yksi yhtenäinen kulmaraita.
-            double liukuSuunta = lentosuunta(j.Liuku) + P(121.5);
+            double liukuSuunta = lentosuunta(j.Liuku) + P(LiukuSuhteellinen);
             a.Add(new Avain { Osuus = j.Liuku, Kayra = Kayra.Pehmea, SuuntaAbs = true, Etaisyys = kauko * 0.96, Kallistus = KaukoKallistus, Suunta = liukuSuunta, Kohde = 0 });
 
-            // (c) + (d) YHTENÄ KULMARAITANA: kiihtyvä (c) → vakio (d) → jarruttava (viimeinen 1/3 orbitista).
-            // Kaari: liu'un suunnasta vastakkaiselle puolelle (≈ 60°) ja sieltä pohjoiseen kiertosuunnassa.
-            double tilleen = Kiedo(kierto * (vastaan - liukuSuunta) + 90.0) - 90.0;
-            double pohjoiseen = Kiedo(-kierto * vastaan);
-            double kaari = tilleen + pohjoiseen;
-            if (kaari < 20.0) kaari += 360.0; // lentosuunta kääntyi liu'un jälkeen niin, että pohjoinen jäi taakse
-            double tc = j.Kierto - j.Liuku, t1 = j.Tasainen - j.Kierto, tb = 1.0 - j.Tasainen;
-            // Kiihtyvä t³ päättyy nopeuteen 3Δ/T ja jarruttava alkaa siitä: ω = 3Δc/Tc = Δ1/T1 = 3Δ2/Tb.
-            double w = kaari / (tc / 3.0 + t1 + tb / 3.0);
+            // (c) + (d) YHTENÄ KULMARAITANA: kiihtyvä (c) → vakio (d) → jarruttava (viimeinen 1/3 orbitista), liu'un
+            // suunnasta pohjoiseen. Kiihtyvä t³ päättyy nopeuteen 3Δ/T ja jarruttava alkaa siitä: ω = 3Δc/Tc = Δ1/T1 = 3Δ2/Tb.
+            // (Build 11 k: kaari kulki vastakkaisen puolen ja maiseman kautta, 360–410° ja 64–90°/s; Fable rajasi.)
+            double w = kaari / tehollinen;
             double dc = w * tc / 3.0, d1 = w * t1;
-            double loppuSuunta = Math.Round((liukuSuunta + kierto * kaari) / 360.0) * 360.0;
+            double loppuSuunta = Math.Round((liukuSuunta + kaari) / 360.0) * 360.0;
 
             var kaupunki = new Avain
             {
                 Osuus = j.Kierto, Kayra = Kayra.Pehmea, SuuntaKayra = Kayra.Kiihtyva, SuuntaAbs = true, Kohde = 1,
-                Etaisyys = KiertoM, Kallistus = KiertoKallistus, Suunta = liukuSuunta + kierto * dc,
+                Etaisyys = KiertoM, Kallistus = KiertoKallistus, Suunta = liukuSuunta + dc,
             };
             a.Add(kaupunki);
             var lasku = new Avain
@@ -225,22 +222,46 @@ namespace Matkakirja
             // (d) ORBIT: etäisyys, kallistus ja kohde kiihtyvä + jarruttava pari, suunta vakionopeudella.
             var orbit = Pari(kaupunki, lasku, j.Tasainen);
             orbit.SuuntaKayra = Kayra.Tasainen;
-            orbit.Suunta = liukuSuunta + kierto * (dc + d1);
+            orbit.Suunta = liukuSuunta + dc + d1;
             a.Add(orbit);
             a.Add(lasku);
             return a.ToArray();
         }
 
+        /// <summary>Kierron (c + d) tavoitekulmanopeus (°/s) vakio-osuudella (Fable 24.9.).</summary>
+        public const double TavoiteNopeus = 35.0;
+        /// <summary>Tasatilanne: jos lyhyempi kaari on vähintään 180° − tämä, maisemasuunta ratkaisee kiertosuunnan.</summary>
+        public const double TasatilanneAste = 15.0;
+        /// <summary>Loittonuksen loppusuunta + liu'un ajelehtiminen (suhteellinen, oikea puoli; peilattuna 238,5°).</summary>
+        public const double LiukuSuhteellinen = 121.5;
+
         /// <summary>
-        /// Kiertosuunta (+1 = myötäpäivään eli suunta kasvaa, −1 = vastapäivään): orbit vastakkaiselta puolelta
-        /// (katse <paramref name="vastaan"/>) pohjoiseen kulkee maiseman katsesuunnan kautta. Ilman maisemaa lyhyempi.
+        /// Kierron (c + d) etumerkillinen kokonaiskulma (+ = suunta kasvaa eli myötäpäivään) liu'un lopusta pohjoiseen
+        /// (Fable 24.9.): lyhyempi suunta, joten |kulma| ≤ 180°. Sivukylki (puoli +1 = 90°, −1 = 270°) valitaan niin,
+        /// että kulma on lähimpänä tavoitekulmaa (≈ 35°/s); lähes tasan ollessa puoli, joka kiertää samaan suuntaan kuin
+        /// sivukyljen liuku. Tasatilanteessa (lyhyempi ≥ 165°) maisemasuunta ratkaisee: kaari, joka pyyhkäisee maiseman
+        /// katsesuunnan yli (enintään 195°). Ilman maisemaa (NaN) aina lyhyempi.
         /// </summary>
-        public static int Kiertosuunta(double vastaan, double maisema)
+        public static double Kaari(double lentosuuntaLiuku, double maisema, double tavoiteKaari, out int puoli)
         {
-            double myota = Kiedo(-vastaan);
-            if (double.IsNaN(maisema)) return myota <= Kiedo(vastaan) ? 1 : -1;
-            return Kiedo(maisema - vastaan) <= myota ? 1 : -1;
+            double Lyhin(int s) => Kiedo180(-(lentosuuntaLiuku + (s > 0 ? LiukuSuhteellinen : 360.0 - LiukuSuhteellinen)));
+            double a = Lyhin(1), b = Lyhin(-1);
+            double ea = Math.Abs(Math.Abs(a) - tavoiteKaari), eb = Math.Abs(Math.Abs(b) - tavoiteKaari);
+            if (Math.Abs(ea - eb) < 5.0) { ea -= a > 0 ? 1 : 0; eb -= b < 0 ? 1 : 0; }
+            puoli = ea <= eb ? 1 : -1;
+            double kaari = puoli > 0 ? a : b;
+            if (!double.IsNaN(maisema) && Math.Abs(kaari) >= 180.0 - TasatilanneAste)
+            {
+                double alku = lentosuuntaLiuku + (puoli > 0 ? LiukuSuhteellinen : 360.0 - LiukuSuhteellinen);
+                double toinen = kaari - Math.Sign(kaari) * 360.0;
+                if (!Pyyhkaisee(alku, kaari, maisema) && Pyyhkaisee(alku, toinen, maisema)) kaari = toinen;
+            }
+            return kaari;
         }
+
+        /// <summary>Kulkeeko katse suunnasta alku kulman kaari verran kiertäessään suunnan x kautta.</summary>
+        static bool Pyyhkaisee(double alku, double kaari, double x) =>
+            kaari >= 0 ? Kiedo(x - alku) <= kaari : Kiedo(alku - x) <= -kaari;
 
         /// <summary>
         /// Kiihtyvä väliavain a → (b) → c niin, että kiihtyvän loppunopeus = jarruttavan alkunopeus:

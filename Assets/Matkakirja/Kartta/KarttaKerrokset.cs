@@ -589,6 +589,104 @@ namespace Matkakirja
             return e;
         }
 
+        /// <summary>Käynnissä oleva lennon kohdealueen esilataus (EsilataaKohde); null = ei lentoa.</summary>
+        public Laattapalvelin.Esilataus LennonKohdeEsilataus { get; private set; }
+
+        /// <summary>Laatan (x, y) XYZ-ruudukossa tasolla z (Web Mercator).</summary>
+        static (int x, int y) LaattaXY(int z, double lat, double lon)
+        {
+            int n = 1 << z;
+            double la = Math.Max(-85.0, Math.Min(85.0, lat)) * Math.PI / 180.0;
+            int x = (int)Math.Floor((lon + 180.0) / 360.0 * n);
+            int y = (int)Math.Floor((1.0 - Math.Log(Math.Tan(la) + 1.0 / Math.Cos(la)) / Math.PI) / 2.0 * n);
+            return (((x % n) + n) % n, Math.Max(0, Math.Min(n - 1, y)));
+        }
+
+        /// <summary>Laatikon (lat/lon, asteina) laatat tasolla z lähimmästä alkaen (kaupungin laatta ensin).</summary>
+        static List<(int x, int y)> LaatikonLaatat(int z, double latMin, double latMax, double lonMin, double lonMax, double lat, double lon)
+        {
+            int n = 1 << z;
+            var (x0, y0) = LaattaXY(z, latMax, lonMin);
+            var (x1, y1) = LaattaXY(z, latMin, lonMax);
+            var (cx, cy) = LaattaXY(z, lat, lon);
+            int leveys = ((x1 - x0) % n + n) % n;
+            var tulos = new List<(int x, int y)>();
+            for (int dx = 0; dx <= leveys; dx++)
+                for (int y = y0; y <= y1; y++) tulos.Add(((x0 + dx) % n, y));
+            int Etaisyys((int x, int y) t) { int d = Math.Abs(t.x - cx); d = Math.Min(d, n - d); return Math.Max(d, Math.Abs(t.y - cy)); }
+            tulos.Sort((a, b) => Etaisyys(a).CompareTo(Etaisyys(b)));
+            return tulos;
+        }
+
+        /// <summary>Sentinel Z9 kohdealueelta enintään näin monta laattaa (lähimmät ensin; harva kattavuus karsii lisää).</summary>
+        const int KohdeZ9Enintaan = 160;
+
+        /// <summary>
+        /// LASKUN LAATAT (Fable 24.9. klo 18, video kamerareitti-b11k: laskun sumeat laatat): lennon kohdealueen laatat
+        /// välimuistiin heti lennon alussa ETUSIJALLA (Esilataus.Etusija: oma jono ja 4 omaa hakupaikkaa näkyvän kartan lisäksi). Laatikko = orbitin
+        /// loppunäkymä (saapumisnäkymä väljennettynä, Nappula). EsilataaLento hakee kohteesta vain 5 × 5 Z7–Z8 ja Sentinel
+        /// Z8–Z11 säteellä 1–2 esilatausjonossa, jota palvellaan vain näkyvän jonon ollessa tyhjä: saapumisnäkymä on
+        /// ~7° × 10° (kaupunki alakolmanneksella, näkymä ulottuu ~8° pohjoiseen), eli Z7 ±2 ja Sentinel Z8 ±1 eivät
+        /// kata sitä, ja jono ehti lennon aikana harvoin kohteeseen asti. Satelliitilla Blue Marble Z5–Z7 ja Sentinel Z8
+        /// koko laatikosta, Z9 (lähimmät, kattavuuden mukaan) ja Z10 säde 2 kaupungin ympäriltä (orbit 250 km:stä);
+        /// sileällä pohjalla Z5–Z8. Edellisen lennon kohdelataus perutaan.
+        /// </summary>
+        public Laattapalvelin.Esilataus EsilataaKohde(double latMin, double latMax, double lonMin, double lonMax, double lat, double lon)
+        {
+            LennonKohdeEsilataus?.Peru();
+            LennonKohdeEsilataus = null;
+            string versio = SatelliittiVersio;
+            string malli = string.IsNullOrEmpty(versio) ? SileaUrl : SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg";
+            int huippu = string.IsNullOrEmpty(versio) ? 8 : 7;
+            if (!malli.StartsWith(Laattapalvelin.Ampari, StringComparison.Ordinal)) return null;
+            string pohjaPolku = malli.Substring(Laattapalvelin.Ampari.Length);
+            var polut = new List<string>();
+            var nahty = new HashSet<string>();
+            // Lähin taso ensin: laskeutumisnäkymän tarkin pohjataso, sitten karkeammat varalle.
+            for (int z = huippu; z >= 5; z--)
+                foreach (var (x, y) in LaatikonLaatat(z, latMin, latMax, lonMin, lonMax, lat, lon))
+                {
+                    string p = pohjaPolku.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{reverseY}", y.ToString());
+                    if (nahty.Add(p)) polut.Add(p);
+                }
+            var e = new Laattapalvelin.Esilataus { Etusija = true };
+            Laattapalvelin.Esilataa(polut, e);
+            LennonKohdeEsilataus = e;
+            Debug.Log($"MATKAKIRJA lennon pinta: kohdealue {polut.Count} laattaa etusijalla " +
+                      $"(lat {latMin:0.0}–{latMax:0.0}, lon {lonMin:0.0}–{lonMax:0.0})");
+            if (!string.IsNullOrEmpty(versio)) StartCoroutine(EsilataaKohdeSentinel(versio, latMin, latMax, lonMin, lonMax, lat, lon, e));
+            return e;
+        }
+
+        System.Collections.IEnumerator EsilataaKohdeSentinel(string versio, double latMin, double latMax, double lonMin, double lonMax,
+            double lat, double lon, Laattapalvelin.Esilataus e)
+        {
+            string s2 = SentinelKaytto(versio).Substring(Laattapalvelin.Ampari.Length);
+            float raja = Time.unscaledTime + 10f;
+            while (sentinelZ8 == null && Time.unscaledTime < raja && !e.Peruttu) yield return null;
+            if (sentinelZ8 == null || e.Peruttu) yield break;
+            var polut = new List<string>();
+            void Lisaa(int z, IEnumerable<(int x, int y)> laatat, int enintaan)
+            {
+                int n = 0;
+                foreach (var (x, y) in laatat)
+                {
+                    if (!SentinelKattaa(z, x, y)) continue;
+                    polut.Add(s2 + z + "/" + x + "/" + y + ".jpg");
+                    if (++n >= enintaan) break;
+                }
+            }
+            // Z10 kaupungin ympäriltä ensin (orbit 250 km:stä), sitten saapumisnäkymän Z8 ja Z9.
+            var (cx, cy) = LaattaXY(10, lat, lon);
+            var z10 = new List<(int x, int y)>();
+            for (int dx = -2; dx <= 2; dx++) for (int dy = -2; dy <= 2; dy++) z10.Add(((cx + dx + 1024) % 1024, Math.Max(0, Math.Min(1023, cy + dy))));
+            Lisaa(10, z10, 25);
+            Lisaa(8, LaatikonLaatat(8, latMin, latMax, lonMin, lonMax, lat, lon), int.MaxValue);
+            Lisaa(9, LaatikonLaatat(9, latMin, latMax, lonMin, lonMax, lat, lon), KohdeZ9Enintaan);
+            Laattapalvelin.Esilataa(polut, e);
+            Debug.Log($"MATKAKIRJA lennon pinta: kohdealue + Sentinel {polut.Count} laattaa etusijalla");
+        }
+
         /// <summary>
         /// Sentinel-2 (Z8–Z11, harva) lähtö- ja kohdekaupungin ympäriltä samaan esilataukseen, kun kattavuus on
         /// ladattu: vain katetut laatat (muut Laattapalvelin antaisi läpinäkyvinä ilman verkkoa). Säde 1–2 laattaa.
