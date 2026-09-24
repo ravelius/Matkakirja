@@ -48,6 +48,8 @@ namespace Matkakirja.Linssit.Aikajana
         /// tai tutkimusvaihe jatkuu itse, kun vanat ovat valmiit.
         /// </summary>
         public bool JatkuuMuistista => muisti != null;
+        /// <summary>Värivirrat palkin legendaan ja nappeihin (Natiivi-UI, web rakennaKertomuksenPalkki).</summary>
+        public IReadOnlyList<Virta> Virrat => virrat;
         /// <summary>Tutkimusvaihe alkoi (Natiivi-UI kytkee kortin avauksen ja napit).</summary>
         public event Action<Tutkimusvaihe> TutkimusAlkoi;
 

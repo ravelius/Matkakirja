@@ -68,6 +68,8 @@ namespace Matkakirja.Natiivi
         bool kertomuskuvaEsilla;
         // Löytökuvan napautuksen kortti (web luoNostokortti) ja sen löytöpaikka.
         readonly IhmisenNostokortti nostokortti;
+        // Tutkimusvaihe (web luoTutkimusvaihe): palkin virtanapit, nostopisteet ja vanalappu.
+        readonly IhmisenTutkimusNakyma tutkimus;
         Loytopaikka kuvanPaikka;
         Tila tila;
         string kelloTeksti;
@@ -167,11 +169,16 @@ namespace Matkakirja.Natiivi
             // "Lue lisää" (web avaaNostonJuttu): ihmisen matkan tiedeliite samalla näkymällä kuin keksinnöissä.
             nostokortti = new IhmisenNostokortti(turva, kerros.Juuri(LinssiUi.Kerros), p =>
             {
+                // Linssi avaa sivun (JuttuPyydetty → tiedeliite) ja väistää oman raitansa sivun ajaksi.
                 var l = LinssiUi.IhmisenMatka;
                 int i = l?.TiedeliitteenSivu(p.Tunnus) ?? -1;
-                if (i >= 0) tiedeliite.Avaa(l, i);
+                if (i >= 0) l.AvaaJuttu(i);
             });
             LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
+            // Kortin tila tutkimusvaiheen muistiin (web tallennaMuisti: kortti auki / kiinni).
+            nostokortti.Muuttui += () => LinssiUi.IhmisenMatka?.Tutkimus?.KorttiAuki(nostokortti.Auki);
+            // Virtanapit palkkiin otsikoiden perään (web: otsikot, virrat, kello).
+            tutkimus = new IhmisenTutkimusNakyma(kerros, ylarivi, 1, nostokortti);
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Ihmisen matkan aikaselain alareunassa (web luoAikaselain): veto esikatselee, irrotus valitsee.
@@ -254,6 +261,9 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros.PuluKasittelija = t => { if (!string.IsNullOrEmpty(t)) Pulu.Hae().Sano(t); };
             IhmisenMatkaKerros.TunneKasittelija = (t, v, _) => Pulu.Hae().Tunne(t, (float)v);
             IhmisenMatkaKerros.LoppuKasittelija = IhmisenLoppu;
+            IhmisenMatkaKerros.NostotKasittelija = n => { Ala(Tila.Ihminen); tutkimus.Nostot(n); };
+            IhmisenMatkaKerros.NapitKasittelija = paalla => { if (paalla) RakennaVirrat(); tutkimus.Napit(paalla); };
+            IhmisenMatkaKerros.ValittuKasittelija = tutkimus.Valittu;
         }
 
         static VisualElement Laatikko(VisualElement juuri, out Label otsikko, out Label teksti, out VisualElement napit)
@@ -346,11 +356,58 @@ namespace Matkakirja.Natiivi
                 {
                     if (tila != Tila.Ihminen) return;
                     var e = LinssiUi.IhmisenMatka?.Esitys;
+                    KuunteleIhminen(LinssiUi.IhmisenMatka);
+                    RakennaVirrat();
                     RakennaAikaselain();
                     LinssiKysymykset.Lataa();
-                    if (IhmisenMatkaKerros.EsittelyUIssa && e != null && !e.Kaynnissa && !e.Paattynyt && e.I < 0) NaytaIhmisenAloitus();
+                    // Muistista jatkettaessa ei esittelyä (web jatkaMuistista): esitys tai tutkimus jatkuu itse.
+                    if (IhmisenMatkaKerros.EsittelyUIssa && e != null && !e.Kaynnissa && !e.Paattynyt && e.I < 0
+                        && LinssiUi.IhmisenMatka?.JatkuuMuistista != true) NaytaIhmisenAloitus();
                 });
             }
+        }
+
+        IhmisenMatkaLinssi kuunneltuIhminen;
+
+        /// <summary>Ihmisen matkan tapahtumat: tiedeliitteen sivu (JuttuPyydetty) ja tutkimusvaiheen alku.</summary>
+        void KuunteleIhminen(IhmisenMatkaLinssi l)
+        {
+            if (ReferenceEquals(l, kuunneltuIhminen)) return;
+            if (kuunneltuIhminen != null) { kuunneltuIhminen.JuttuPyydetty -= IhmisenJuttu; kuunneltuIhminen.TutkimusAlkoi -= TutkimusAlkoi; }
+            kuunneltuIhminen = l;
+            if (l == null) return;
+            l.JuttuPyydetty += IhmisenJuttu;
+            l.TutkimusAlkoi += TutkimusAlkoi;
+            if (l.Tutkimus != null) TutkimusAlkoi(l.Tutkimus);
+        }
+
+        void IhmisenJuttu(int i) => UiKerros.PaaSaikeessa(() => { if (kuunneltuIhminen != null) tiedeliite.Avaa(kuunneltuIhminen, i); });
+
+        Tutkimusvaihe kuunneltuTutkimus;
+
+        /// <summary>Tutkimusvaihe alkoi: kortti avautuu pyynnöstä (muisti, web AvaaKortti) ja muistin kortti heti.</summary>
+        void TutkimusAlkoi(Tutkimusvaihe t) => UiKerros.PaaSaikeessa(() =>
+        {
+            if (!ReferenceEquals(t, kuunneltuTutkimus))
+            {
+                if (kuunneltuTutkimus != null) kuunneltuTutkimus.AvaaKortti -= AvaaTutkimuksenKortti;
+                kuunneltuTutkimus = t;
+                t.AvaaKortti += AvaaTutkimuksenKortti;
+            }
+            RakennaVirrat();
+            if (t.Kortti != null) AvaaTutkimuksenKortti(t.Kortti);
+        });
+
+        void AvaaTutkimuksenKortti(string tunnus) => UiKerros.PaaSaikeessa(() =>
+        {
+            var n = kuunneltuTutkimus?.Nostot.FirstOrDefault(x => x.Tunnus == tunnus);
+            if (n?.Paikka != null && nostokortti.Auki != tunnus) nostokortti.Avaa(n.Paikka);
+        });
+
+        void RakennaVirrat()
+        {
+            var v = LinssiUi.IhmisenMatka?.Virrat;
+            if (v != null && v.Count > 0) tutkimus.Rakenna(v);
         }
 
         /// <summary>Aikaselaimen pisteet linssiltä (IhmisenMatkaLinssi.AikaselaimenPisteet), vuosi kellon muodossa.</summary>
@@ -399,6 +456,7 @@ namespace Matkakirja.Natiivi
             PiilotaKertomuskuva();
             kuvanPaikka = null;
             nostokortti.Pois();
+            tutkimus.Pois();
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -914,6 +972,7 @@ namespace Matkakirja.Natiivi
             ylarivi.style.opacity = 0f;
             ylarivi.style.display = DisplayStyle.Flex;
             ylarivi.schedule.Execute(() => ylarivi.style.opacity = 1f);
+            RakennaVirrat();
             PaivitaAikaselain();
         }
 

@@ -277,6 +277,8 @@ namespace Matkakirja.Natiivi
         void UusiMatka(PeliOhjain o)
         {
             SuljeKaikki();
+            // Uusi peli unohtaa linssin muistin (web: linssimuisti kuuluu matkaan).
+            PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
             Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
         }
 
