@@ -73,12 +73,48 @@ namespace Matkakirja.Natiivi
             viesti = Teksti(vrt, "Teksti", 13, FontStyles.Italic);
         }
 
-        /// <summary>Sama mitoitus kuin NimiKortissa (iPhone 15 -pisteet, leveys ja korkeus puoliksi).</summary>
+        /// <summary>
+        /// Mitoitus kuten Natiivi-UI:n UiKerros (Fable 24.9.2026): iPadilla 1 UI-yksikkö = 1 iOS-piste = webin
+        /// CSS-px (ConstantPixelSize, UiKerros.PikseliaPisteessa); puhelimella viiteruutu 393 × 852
+        /// (iPhone 15 -pisteet) kuten NimiKortissa. `ui skaala piste|viite|auto` vaihtaa ajon aikana.
+        /// </summary>
         internal static void Skaalain(CanvasScaler s)
         {
-            s.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            s.referenceResolution = new Vector2(393, 852);
-            s.matchWidthOrHeight = 0.5f;
+            AsetaSkaala(s);
+            if (s.GetComponent<PisteSkaalain>() == null) s.gameObject.AddComponent<PisteSkaalain>();
+        }
+
+        internal static void AsetaSkaala(CanvasScaler s)
+        {
+            if (UiKerros.Pisteskaala)
+            {
+                s.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
+                s.scaleFactor = UiKerros.PikseliaPisteessa;
+            }
+            else
+            {
+                s.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+                s.referenceResolution = new Vector2(393, 852);
+                s.matchWidthOrHeight = 0.5f;
+            }
+        }
+
+        /// <summary>Seuraa UiKerros-skaalan vaihtoa (testikomento, kierto) ja asettaa canvasin uudelleen.</summary>
+        sealed class PisteSkaalain : MonoBehaviour
+        {
+            CanvasScaler s;
+            bool piste;
+            float kerroin;
+            void Awake() { s = GetComponent<CanvasScaler>(); piste = UiKerros.Pisteskaala; kerroin = UiKerros.PikseliaPisteessa; }
+            void Update()
+            {
+                if (s == null) return;
+                bool p = UiKerros.Pisteskaala;
+                float k = UiKerros.PikseliaPisteessa;
+                if (p == piste && k == kerroin) return;
+                piste = p; kerroin = k;
+                AsetaSkaala(s);
+            }
         }
 
         /// <summary>Koko ruudun lapsi, jonka ankkurit seurataan Screen.safeAreaan (PaivitaTurvaalue).</summary>
