@@ -175,6 +175,12 @@ namespace Matkakirja.Natiivi
             kierto.PelaajanEle += KartanLiike;
         }
 
+        /// <summary>Lappu auki (web asetaPaivakirjanKoko(false), lapun napautus); testikomento ui matkakirja auki.</summary>
+        public void Avaa()
+        {
+            if (Nakyy) AsetaPieni(false);
+        }
+
         public void KartanLiike()
         {
             if (Nakyy && !pieni) AsetaPieni(true);
