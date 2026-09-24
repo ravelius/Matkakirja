@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
         Transform iss;
         GameObject rata;
         Mesh rataMesh;
-        float rataPaivitetty = -1;
+        Vector3[] rataPaikat, rataSeuraavat, rataU;
         bool nimetNakyvissa;
         readonly Dictionary<string, Kylki> kyljet = new Dictionary<string, Kylki>();
         readonly List<NimionKohde> ladottavat = new List<NimionKohde>();
@@ -192,12 +192,9 @@ namespace Matkakirja.Natiivi
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
                 new double3(paikka.Lon, paikka.Lat, Astronauttimatikka.IssKorkeus * MaanSade));
             issPinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-            // Rata kiertyy hitaasti (solmu 360°/900 s): uusi mesh sekunnin välein riittää.
-            if (rataMateriaali != null && Time.unscaledTime - rataPaivitetty >= 1f)
-            {
-                rataPaivitetty = Time.unscaledTime;
-                RakennaRata(kaari);
-            }
+            // Rata päivittyy joka kehys (omistajan build 9 -löydös 33: sekunnin välein rakennettu rata
+            // nykäisi). Kolmiot tehdään kerran, joka kehys vain kärkipisteet taulukoihin ilman allokointia.
+            if (rataMateriaali != null) RakennaRata(kaari);
         }
 
         Vector3 issPinta;
@@ -218,46 +215,57 @@ namespace Matkakirja.Natiivi
         void RakennaRata(IReadOnlyList<LatLon> kaari)
         {
             int n = kaari.Count;
-            var paikat = new Vector3[n * 2];
-            var seuraavat = new Vector3[n * 2];
-            var puolet = new Vector2[n * 2];
-            var u = new Vector3[n];
+            if (n < 2) return;
+            bool uusi = rataU == null || rataU.Length != n;
+            if (uusi)
+            {
+                rataPaikat = new Vector3[n * 2];
+                rataSeuraavat = new Vector3[n * 2];
+                rataU = new Vector3[n];
+            }
             for (int i = 0; i < n; i++)
             {
                 var e = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
                     new double3(kaari[i].Lon, kaari[i].Lat, Astronauttimatikka.IssKorkeus * MaanSade));
-                u[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(e);
+                rataU[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(e);
             }
             for (int i = 0; i < n; i++)
             {
-                Vector3 seur = i < n - 1 ? u[i + 1] : u[i] + (u[i] - u[i - 1]);
-                for (int s = 0; s < 2; s++)
-                {
-                    paikat[i * 2 + s] = u[i];
-                    seuraavat[i * 2 + s] = seur;
-                    puolet[i * 2 + s] = new Vector2(s == 0 ? -1 : 1, i);
-                }
-            }
-            var kolmiot = new int[(n - 1) * 6];
-            for (int i = 0, t = 0; i < n - 1; i++)
-            {
-                int a = i * 2;
-                kolmiot[t++] = a; kolmiot[t++] = a + 1; kolmiot[t++] = a + 2;
-                kolmiot[t++] = a + 1; kolmiot[t++] = a + 3; kolmiot[t++] = a + 2;
+                Vector3 seur = i < n - 1 ? rataU[i + 1] : rataU[i] + (rataU[i] - rataU[i - 1]);
+                rataPaikat[i * 2] = rataPaikat[i * 2 + 1] = rataU[i];
+                rataSeuraavat[i * 2] = rataSeuraavat[i * 2 + 1] = seur;
             }
             if (rata == null)
             {
                 rata = new GameObject("ISS-rata");
                 rata.transform.SetParent(transform, false);
                 rataMesh = new Mesh { name = "ISS-rata" };
+                rataMesh.MarkDynamic();
                 rata.AddComponent<MeshFilter>().sharedMesh = rataMesh;
                 rata.AddComponent<MeshRenderer>().sharedMaterial = rataMateriaali;
             }
-            rataMesh.Clear();
-            rataMesh.vertices = paikat;
-            rataMesh.SetUVs(0, seuraavat);
-            rataMesh.SetUVs(1, puolet);
-            rataMesh.triangles = kolmiot;
+            if (uusi)
+            {
+                var puolet = new Vector2[n * 2];
+                for (int i = 0; i < n; i++) { puolet[i * 2] = new Vector2(-1, i); puolet[i * 2 + 1] = new Vector2(1, i); }
+                var kolmiot = new int[(n - 1) * 6];
+                for (int i = 0, t = 0; i < n - 1; i++)
+                {
+                    int a = i * 2;
+                    kolmiot[t++] = a; kolmiot[t++] = a + 1; kolmiot[t++] = a + 2;
+                    kolmiot[t++] = a + 1; kolmiot[t++] = a + 3; kolmiot[t++] = a + 2;
+                }
+                rataMesh.Clear();
+                rataMesh.vertices = rataPaikat;
+                rataMesh.SetUVs(0, rataSeuraavat);
+                rataMesh.SetUVs(1, puolet);
+                rataMesh.triangles = kolmiot;
+            }
+            else
+            {
+                rataMesh.vertices = rataPaikat;
+                rataMesh.SetUVs(0, rataSeuraavat);
+            }
             rataMesh.RecalculateBounds();
         }
 
