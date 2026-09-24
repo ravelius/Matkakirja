@@ -2,6 +2,7 @@
 //   keksinnöt: Käynnistä → siirry(10) → 12 s → siirry(11) → 12 s → kuva (kontakti-keksinnot-1873)
 //              siirry(25) → jatka → 12 s → kuva (kontakti-keksinnot-loppu)
 //   ihmisen matka: Käynnistä → valitse('levantti') → 12 s → tauko → kuva
+//   KIINTEA=maat: vertailu (FIN; +SWE, NOR, DNK) ja maatiedot (JPN)
 //   KIINTEA=topografia|vesistot: vain se näkymä (45/10/8000 km tai 0/20/9000 km) tuoreella sivulla
 // Oikeat ajastimet (ei nopeutusta), pelaaja Lontoossa kuten natiivin "ui aloita lontoo" (KAUPUNKI=lontoo laitetesti.sh:ssa; webin pallopakassa ei ole Pariisia),
 // iPad Pro 11 -mitta 834 × 1194 pt, dpr 2, GPU Metalilla. Ämpäri Noden kautta (CORS).
@@ -149,6 +150,43 @@ async function kiintea(tunnus, lat, lng, km, nimi) {
 // Yksi kiinteä näkymä ajoa kohti (KIINTEA=topografia|vesistot): linssin sulku käynnistää
 // saapumisen lähikuvan, joka vie seuraavan näkymän tasokartalle.
 const KIINTEAT = { topografia: [45, 10, 8000], vesistot: [0, 20, 9000] };
+/*
+ * MAAT (natiivin laitetesti.sh maat): vertailu kamera 60/15/5000 km, Suomi oletuksena, sitten
+ * SWE, NOR, DNK (js/vertailu.js valitseVertailuMaa); maatiedot 36/138/4000 km ja Japani.
+ */
+if (process.env.KIINTEA === 'maat') {
+  const kamera = (la, ln, km) => s.evaluate(([a, b, k]) => {
+    const u = window.matkakirja.ui;
+    u.pallolauta?.zoomirajat?.({ max: 2.5 });
+    u.pallonInstanssi.pointOfView({ lat: a, lng: b, altitude: k / 6371 }, 0);
+  }, [la, ln, km]);
+  const valitse = (t) => s.evaluate((x) => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes(x)) ui.game.player.linssit.push(x);
+    ui.valitseLinssi(x);
+  }, t);
+  await valitse('vertailu');
+  await odota(5000); await ohita(); await kamera(60, 15, 5000); await odota(6000);
+  await kuva('vertailu-fin');
+  await s.evaluate(async () => {
+    const v = await import('/js/vertailu.js');
+    for (const iso of ['SWE', 'NOR', 'DNK']) v.valitseVertailuMaa(window.matkakirja.ui, iso);
+  });
+  await odota(4000); await kamera(60, 15, 5000); await odota(2000);
+  await kuva('vertailu');
+  await valitse('maatiedot');
+  await odota(5000); await ohita(); await kamera(36, 138, 4000); await odota(5000);
+  await s.evaluate(async () => {
+    const v = await import('/js/vertailu.js');
+    const { ui } = window.matkakirja;
+    ui.maatiedotValittu = 'JPN';
+    v.piirraMaatiedotMaat(ui);
+  });
+  await odota(4000); await kamera(36, 138, 4000); await odota(2000);
+  await kuva('maatiedot');
+  await selain.close(); palvelin.close(); process.exit(0);
+}
 if (process.env.KIINTEA) {
   const [la, ln, km] = KIINTEAT[process.env.KIINTEA];
   await kiintea(process.env.KIINTEA, la, ln, km, process.env.KIINTEA);
