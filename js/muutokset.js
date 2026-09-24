@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2181, teksti: 'Lehtikuori: ?lehti=<kaupunki> pelkkä kaupunkile… (#2942)' },
   { v: 2180, teksti: 'Sähke ja pulla natiivin mukaisiksi (#2997)' },
   { v: 2179, teksti: 'Reliefipyramidin osoitin 20260924 (#3044)' },
   { v: 2178, teksti: 'Syvät tasot z9–z10 DEM-reliefillä (#2962)' },
