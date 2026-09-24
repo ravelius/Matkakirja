@@ -4499,3 +4499,7 @@ Oppi: xcrun simctl launch --stdout=/--stderr= näyttää Unityn Debug.Log-virran
 ## OMISTAJAN LOYDOS 44 (BUILD 10, klo 19.4x, SITOVA): iPHONEN YLAPALKKI MATALAMMAKSI, LOGO POIS, PILLERI VASEMPAAN JA ☰ OIKEAAN, PALKKI JAA TAUSTAA RAUHOITTAMAAN (24.9.2026 klo 19.35)
 
 Raamattu päivitetty (tarkennus yläpalkkikohtaan; iPad ennallaan). Natiivi-UI:lle build 11:een; samalla mittaus: Liiku-nappi kuvassa ruudun keskellä nappulan päällä ja pulu peittää nostonimen → verrataan webiin.
+
+## RADIOUUDISTUKSEN SUUNNITELMA HYVAKSYTTY (docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md, ca38814dd); LOYDOS 43 KORJATTU (efbdb7f); LAITETESTAAJA: INVENTAARION 7 RIVIA SAMA (24.9.2026 klo 19.36)
+
+Vastaukset: asukkaat Wikidatasta (Siirtoseppä, uusi skeema), avaus kallistaa 40°, mastot korvaavat ▶-napit, rahina asteikkoetäisyydestä, linnut Natiivisepän oma erä build 12 (Linssiseppä määrittelee näkyvyyden ja reitit). Suunnitelma PR:ksi mainiin. Havainnekuva omistajalle. Laitetestaaja: Tutki, Aloita peli, Vertailulinssi, Julisterivi, Mitä uutta SAMA; maatiedot-linssi ei enää tyhjä (Linssisepälle); ~24 riviä vaatii kosketuksen → iPhone 18 Pro -simi build 10:llä.
