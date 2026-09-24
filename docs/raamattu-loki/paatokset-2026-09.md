@@ -4351,3 +4351,7 @@ Fable hyväksyi fokuspohjan siirron build 11:een (#3081 luonnos, skeema 1.35). K
 ## NATIIVI-UI (UUSI SESSIO): b10-JONON KUVAPARIT VALMIIT, MERGE-PYYNTO NATIIVISEPALLA; UUDET LEHTIEROT BUILD 11:EEN (24.9.2026 klo 17.34)
 
 Kuvaparit pariteetti-b10/merge-pyynto-natiivi-ui-b10b.md; linssinimet natiivi-ui/linssinimet 3277869; hytinä todennetaan laitteella. Build 11: lehden etusivun esittely väärä teksti (web: artikkelin intro, natiivi: sivun 1 ingressi), otsikot webissä 700, kuvateksti pystyssä ei kursiivi, nostokortin asettelu iPadilla (web leveä kaksipalstainen arkki) — Natiivi-UI aloittaa webin mitoilla.
+
+## ALUENIMIEN FONTTI: LIBERATION SERIF (OFL) MOLEMPIIN — WEBIN LAATOISSA ON NYT TIMES, KOSKA POLTTOKONEELTA PUUTTUI PYYDETTY FONTTI (24.9.2026 klo 17.36)
+
+Karttaseppä: nimiötaso 2026-09-22g poltettiin Macilla ilman Liberation Serifiä → Chromium korvasi Timesilla (Applen fontti, ei saa pakata iOS-appiin). Fable: vaihtoehto 2 — Liberation Serif natiiviin (lisenssi tekijätietoihin) ja webin seuraavaan nimiöpolttoon oikeasti rekisteröitynä; polttoon fonttitarkistus (puuttuva fontti pysäyttää); uusintapoltto vasta kun muutenkin tehdään. Natiivin mitat nykyisistä laatoista.
