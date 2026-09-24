@@ -128,8 +128,10 @@ export const RAAMATTU = {
           + 'TestFlight-ajot sisäiseen ryhmään, omien samana päivänä luotujen varmenteiden peruminen). '
           + 'Omistajalta kysytään vain Raamatun mukaan kysyttävät asiat (ei webissä oleva toiminto, '
           + 'julkisen TestFlight-linkin ryhmä, App Store -lähetys ja hinta, kuoriappin varmenteet, '
-          + 'lupakirjeiden lähetys, maksut). Jos session oma luokitin pysäyttää yksittäisen toimen, '
-          + 'sessio ilmoittaa Fablelle, joka pyytää omistajalta täsmällisen luvan kyseiseen sessioon. '
+          + 'lupakirjeiden lähetys, maksut). JUMI → KORTTI (omistaja 24.9.2026 klo 21.2x, sitova, kaikki sessiot): jos sessio jää '
+          + 'jumiin — luokitin estää toimen, päätös puuttuu tai työ ei etene — se tekee AINA AskUserQuestion-'
+          + 'kortin omistajalle omassa sessiossaan (vaihtoehdot lyhyesti) eikä jää odottamaan tekstiä; '
+          + 'lisäksi yksi rivi Fablelle lokia varten. '
           + 'Sallintasäännöt (send_message, clear_session, set_remote_control, gh, aws, xcodebuild, '
           + 'xcrun, security) ovat projektin .claude/settings.json:ssa 23.9.2026 alkaen.',
         'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '
