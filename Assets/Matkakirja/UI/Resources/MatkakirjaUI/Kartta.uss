@@ -872,7 +872,8 @@
     width: 100%;
     max-width: 544px;
     max-height: 88%;
-    padding: 11px 13px 12px 13px;
+    /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px molemmissa vaiheissa (mitattu 24.9. b11). */
+    padding: 13.6px 15.2px 15.2px 15.2px;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.32);
     border-radius: 12px;
@@ -892,8 +893,6 @@
 
 .mk-nosto--esittely {
     max-width: 760px;
-    /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px myös vaiheessa 1. */
-    padding: 13.6px 15.2px 15.2px 15.2px;
 }
 
 .mk-nosto__sisus {
@@ -1724,4 +1723,26 @@
     font-size: 13px;
     white-space: nowrap;
     color: rgba(58, 40, 25, 0.92);
+}
+
+/* Lehtipalstat (web .lehtipalsta, css/styles.css @container 600 px): kaksi palstaa, väli 1,4 rem, vasen tasaus. */
+.mk-palstat__mittari {
+    position: absolute;
+    visibility: hidden;
+}
+
+.mk-palstat--kaksi > .mk-palstat__sisus {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-palstat__palsta {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.mk-palstat__palsta--oikea {
+    margin-left: 22.4px;
 }
