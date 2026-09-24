@@ -942,8 +942,9 @@ test('skeema 1.15: lehdet natiiville', async () => {
   assert.equal(lontoo.menovinkitMaalta, 'GBR');
   assert.equal(lontoo.sivut.at(-1), 'menovinkit');
   // Elämää: litteät nostot yhtenä kappaleena, kuten webin vanha piirto.
+  // Lajia ei vaadita: kun viimeisetkin Elämää-kaupungit saavat oman lehden
+  // (N4: kongo, sahara, madagaskar), niitä on 0. Muoto tarkistetaan, jos on.
   const elama = [...kl.values()].filter((a) => a.laji === 'elama');
-  assert.ok(elama.length > 0);
   for (const a of elama) {
     assert.equal(a.kansi, null);
     assert.deepEqual(a.aiheet.map((x) => x.id), ['elama']);
@@ -1189,6 +1190,34 @@ test('1.x ja 2.0: sama sisältö (Fablen pyyntö 24.9.2026)', async () => {
   for (const polku of [m1.offline.tiedosto, m1.lisenssit.tiedosto, ...m1.lisatiedostot.map((l) => l.tiedosto)]) {
     assert.equal(t2.get(polku), tag(tiedostot.get(polku)), polku);
   }
+});
+
+test('skeema 1.33: maamerkit-kokoelma, tarkistus ja offline-media', async () => {
+  const { tarkistaMaamerkit } = await import('../tools/vienti/maamerkit.mjs');
+  const { kokoaOffline } = await import('../tools/vienti/offline.mjs');
+  const k = JSON.parse(tiedostot.get('kokoelmat/maamerkit.json'));
+  assert.ok(Array.isArray(k.alkiot));
+  const sha = 'ab12cd34'.padEnd(64, '0');
+  const hyva = {
+    id: 'lontoo', kaupunki: 'lontoo', lat: 51.5051, lon: -0.115, maanKorkeus: 10, suunta: 0, mallinKorkeus: 97.2,
+    malli: { url: `https://media.matkakirja.app/maamerkit/lontoo-${sha.slice(0, 8)}.glb`, sha256: sha, tavuja: 123456 },
+    lisenssi: 'CC0-1.0', tekija: 'Matkakirja (oma työ)', lahde: 'Blender-skripti',
+  };
+  const idt = new Set(['lontoo']);
+  assert.deepEqual(tarkistaMaamerkit([hyva], idt), []);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, maanKorkeus: '10' }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, malli: { ...hyva.malli, url: 'maamerkit/lontoo.glb' } }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, malli: { ...hyva.malli, sha256: 'f'.repeat(64) } }], idt).length);
+  assert.ok(tarkistaMaamerkit([{ ...hyva, kaupunki: 'atlantis' }], idt).length);
+  // Offline: malli maan medialistaan ja tavuihin.
+  const t = new Map(tiedostot);
+  t.set('kokoelmat/maamerkit.json', JSON.stringify({ ...k, alkiot: [hyva] }));
+  const mf = JSON.parse(t.get('manifest.json'));
+  const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
+  const ilman = kokoaOffline({ tiedostot, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
+  const kanssa = kokoaOffline({ tiedostot: t, manifest: mf, countryShapes: MAAILMANKARTTA.map.countryShapes });
+  assert.ok(kanssa.maat.GBR.media.includes(hyva.malli.url));
+  assert.equal(kanssa.maat.GBR.tavuja.media - ilman.maat.GBR.tavuja.media, 123456);
 });
 
 test('avausluennat: teksti ja aikaleimat kohdistettu ruututekstiin (Pelikoodari #3057)', async () => {
