@@ -72,6 +72,15 @@ const KAUPUNGIT = {
     // molemmat samaan rajaukseen (sisältöinventaario #3045 kohta 5.5).
     rajat: { pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492 },
   },
+  mountisa: {
+    // Mount Isa Mines (-20.7279/139.4831, Nominatim: Mines Power Station)
+    // ja City Lookout (-20.7235/139.4984, Lookout Park/The Gap) ovat
+    // ainoat kaksi aidosti paikannettavaa kohdetta — Lake Moondarra, jota
+    // kulttuurinosto kuvaa "aivan kaupungin kupeessa", on todellisuudessa
+    // n. 18 km kaupungista eikä mahdu samaan rajaukseen (sisältöinventaario
+    // #3045 kohta 5.5).
+    rajat: { pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518 },
+  },
   berliini: {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
