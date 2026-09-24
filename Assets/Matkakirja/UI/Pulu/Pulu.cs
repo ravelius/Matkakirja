@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             var r = kerros.Reunat(Kerros);
-            alue.style.right = Oikea(r.z, SyoteLukko.Estetty);
+            alue.style.right = Oikea(r.z);
             alue.style.bottom = Alareuna(r.w);
         }
 
@@ -105,7 +105,12 @@ namespace Matkakirja.Natiivi
         /// (.pollo-kelluu-kartalla.livia-kasvot-valmis), puhelimen lehdessä 0,6 rem (9,6). Piirros on napin
         /// oikeassa alakulmassa kuten webin kasvopinta (mitattu: linnun oikea reuna 11 pt ankkurin sisällä molemmissa).
         /// </summary>
-        static float Oikea(float turvaOikea, bool modaali) => turvaOikea + (modaali && Ylapalkki.Puhelin ? 9.6f : 57.6f);
+        static float Oikea(float turvaOikea)
+        {
+            // Web #arrival-dialog.lehti[open] (max-width 600 px): vain lehti, ei nostokortit eikä muut dialogit.
+            bool lehti = UiNakymat.Olemassa && UiNakymat.Hae().Lehti.Auki;
+            return turvaOikea + (lehti && Ylapalkki.Puhelin ? 9.6f : 57.6f);
+        }
 
         /// <summary>Webin 3,6rem/5,3rem + turva; alareunan kortin yläpuolelle, jos kortti on auki.</summary>
         float Alareuna(float turvaAla)
@@ -165,7 +170,7 @@ namespace Matkakirja.Natiivi
             var reunat = kerros.Reunat(Kerros);
             alue.style.bottom = Alareuna(reunat.w);
             bool modaali = SyoteLukko.Estetty;
-            alue.style.right = Oikea(reunat.z, modaali);
+            alue.style.right = Oikea(reunat.z);
             alue.EnableInClassList("mk-pulu--pieni", modaali);
         }
 
