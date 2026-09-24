@@ -4675,3 +4675,7 @@ Postivahti hälytti 29 Gt:stä. Mittaus: lokit 31 Gt kaikki 22.–24.9. (isoimma
 ## KUVAPUTKI TOIMITTI LINSSIKATALOGIN ERAN 1 (29 HAVAINNEKUVAA, 26 CC-KUVAA, 110 TIEDOSTOA AMPARISSA, 0c7a43ae8) — KUITATTU; TAYDENNYSERA 1b: 23 PAATETTYA LINSSIA (M1, S1, A1, H1 …), JOIDEN TILA OLI SIVUN TAULUKOSSA VANHENTUNUT (24.9.2026 klo 22.50)
 
 Codex toimitti erän 1 noin 25 minuutissa: manifesti posti/kuvatoimitus-linssikatalogi-era1-20260924.json, kaikki 110 objektia luettu takaisin (HTTP, MIME, sRGB, SHA-256, CORS). Fable katsoi otokset (B1, A4, R7 havainnekuvat, B1 CC): laatu vastaa tilausta. C7, R4, R20 ilman CC-kuvaa (ei sijaiskuvia). Havaittu: linssikatalogi.html:n LINSSIT-taulukon tila-kenttä oli md:tä jäljessä (M1, S1, A1, H1 ym. 23 päätettyä linssiä 'idea') → täydennyserä 1b tilattu ennen erää 2 (posti/fable-kuvaputki-linssikatalogi-era1b-20260924.md); agentin uudelleenjärjestely yhdistää md:n ja datan.
+
+## LEVYN JUURISYY LOYTYI: generoi-laattapyramidi.mjs JATTI 429 ORPOA TYOKANSIOTA (tmp/pyramidi-<pid>, 35 Gt) — KARTTASEPPA POISTI, 68 Gt VAPAANA, KORJAUS PR #3123; E28 JATKUU (32/101 SHARDIA), VAHTI PYSAYTTAA klo 02.45 TAI ALLE 25 Gt (24.9.2026 klo 22.50)
+
+Karttaseppä klo 22.5x: levyvahti pysäytti E28:n klo 22.43 (22 Gt); syy laattapyramidin työkansiot, joita ei koskaan poistettu (429 kpl, 35 Gt). Orvot poistettu, vapaata 68 Gt, siivous lopussa ja SIGTERM-pysäytyksessä PR #3123 (käytössä yön ajossa). E28 jatkui 22.49, 69 shardia jäljellä. Fablen vapautusskripti (lokit ~15 Gt) jää varalle, ei tarvitse ajaa nyt.
