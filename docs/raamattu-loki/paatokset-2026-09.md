@@ -4387,3 +4387,7 @@ Julkaisija vie f02376b:n (-nographics, Unity kiinni, käännökset tauolla), muu
 ## 5 h -KIINTIO 81 % klo 17.5x (NOLLAUTUU 19.19); SISALTOKIRJURI VIELA NOLLAUTUMATTA (24.9.2026 klo 17.55)
 
 Raamatun kaava: 90 %:ssa tauko kaikille nollaukseen asti (ei uusia agentteja, käännöksiä eikä pitkiä ajoja); build 10 -vienti CI:llä ei kuluta kiintiötä. Postivahti seuraa Sisältökirjurin nollausta.
+
+## RENESSANSSISALI: UFFIZI/ACCADEMIA-PYYNTO PERUTTU (PAATOS 1: ITALIAN VALTION MUSEOT POIS), ERA 2 TILATTU (NGA CC0 11 TEOSTA + MONA LISA C2RMF) (24.9.2026 klo 17.56)
+
+Linssiseppä päivitti suunnitelman luvun 4.0 (bf2748124): 30 teosta, Firenze 15, Venetsia 12, Rooma 3; puuttuvat Rooman NGA-teokset (Alban Madonna, Bindo Altoviti, Sebastiano ×2, Signorelli, Perugino ×2), käsikirjoituksen teokset (Tietäjien kumarrus, Giuliano, Jumalten juhla, Venus peilin edessä) ja Mona Lisa → postilaatikkoon posti/fable-kuvaputki-renessanssisali-era2-20260924.md; käsikirjoitusta ei vaihdeta. Rajaus: ei Italian valtion museoiden kuvia (Uffizi, Accademia, Vatikaani, Brera, Borghese).
