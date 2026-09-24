@@ -3041,6 +3041,42 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Broome (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  broome: {
+    polku: 'assets/kartat/broome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633,
+    },
+    esittely: 'Kartan alue on Broomen ydinkeskusta, joka kasvoi '
+      + '1880-luvulla maailman johtavaksi helmisatamaksi. Bedford '
+      + 'Parkissa muistetaan naisia, jotka pakotettiin sukeltamaan '
+      + 'helmiäissimpukkaa; Chinatownin kapeat kujat syntyivät '
+      + 'aikanaan Aasiasta saapuneiden sukeltajien ja kauppiaiden '
+      + 'korttelina.',
+    kohteet: [
+      {
+        nimi: 'Women of Pearling -patsas', lat: -17.9628799, lon: 122.2388728,
+        teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
+          + 'odottivat lugger-veneiden palaavan merten takaa, '
+          + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
+          + 'aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka '
+          + 'kädessään — muistomerkki naisille, joita pakotettiin '
+          + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
+      },
+      {
+        nimi: 'Chinatown', lat: -17.9544454, lon: 122.2433213,
+        teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
+          + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
+          + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
+          + 'nimen Chinatown. Vuoteen 1910 mennessä noin 3 500 kaupungin '
+          + '5 000 asukkaasta sai leipänsä helmiteollisuudesta.',
+      },
+    ],
+  },
+  /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
    * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,
