@@ -66,7 +66,15 @@ namespace Matkakirja.Natiivi
             aanisoitin = go.AddComponent<Aanisoitin>();
             var koukut = aanisoitin.Koukut;
 
-            LuentoAlkoi += (_, l) => introSoi = l != null && l == luennat.Intro;
+            // Avauksen sekoitus (web aloitaAvauksenAani: musiikki ×0,6, etusivun maisema ×1,45) kuuluu
+            // intron luennan ajaksi. Webissä intro alkaa portin painalluksesta; natiivin aloituskaavassa
+            // intro alkaa vasta lennon lähtiessä, joten sekoitus alkaa intron alkaessa eikä portista
+            // (Laitetestaajan kuulokoe 24.9.2026: nosto jäi kaupunkivalinnan ajaksi ilman introa).
+            LuentoAlkoi += (_, l) =>
+            {
+                introSoi = l != null && l == luennat.Intro;
+                if (introSoi) aanisoitin?.Tila.Avaus(true);
+            };
             LuentoLoppui += _ =>
             {
                 if (!introSoi) return;

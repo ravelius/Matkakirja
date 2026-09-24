@@ -82,7 +82,11 @@ namespace Matkakirja.Natiivi
         public static void MusiikkiTila(string nimi, bool auki) => Instanssi?.Tila.Tila(nimi, auki);
 
         /// <summary>Portin "Aloita seikkailu" (web aloitaAvauksenAani). Purku tulee pelistä (intron loppu / kartalle).</summary>
-        public static void AvausAlkoi() => Instanssi?.Tila.Avaus(true);
+        /// <summary>
+        /// Portin "Aloita seikkailu" (UI). Ei tee mitään: avauksen sekoitus alkaa intron luennan alkaessa
+        /// (PeliOhjain.Aanet.cs), koska natiivin aloituskaavassa intro alkaa vasta lennolla.
+        /// </summary>
+        public static void AvausAlkoi() { }
 
         /// <summary>Paljastuskortti näkyy (laattatyyppi: star, mannerAarre, isoAarre, pieniAarre; muut = ei aihetta).</summary>
         public static void AarrePaljastui(string tyyppi) => Instanssi?.Tila.AarrePaljastui(tyyppi);
