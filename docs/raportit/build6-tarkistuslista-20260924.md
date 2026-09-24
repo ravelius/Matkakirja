@@ -779,6 +779,22 @@ asematiedon pakottamiseksi. Ei komentoa Linssisepältä/Natiivisepältä
 tälle. Uusinta vaatii joko täsmällisen kosketuskoordinaatin/-eleen tai
 testikomennon.
 
+**TULOS 24.9. klo 13.3x (SHA 24c9194): ✅ PASS.** Löytyi oikea reitti:
+☰-valikko (kartalla oikea ylänurkka) → "Maailmanradio" (listan 7.
+rivi) avaa linssin — kaupungit ovat pieniä ▶-nappeja kartalla.
+Napautin Ateenan ▶-nappia (kaupunki jossa jo oltiin): näyttö vaihtui
+"VIRITTÄÄ... KREIKKA" (lamppu oranssi) → n. 1,5 s kuluttua "KREIKKA /
+ATEENA · KREIKKA" (lamppu punainen, soi). Kuvasarja `b7-4-radio-vu-1/
+2/3.png` (n. 1 s välein virityksen jälkeen): neula liikkui SELVÄSTI
+JOKAISESSA KUVASSA ERI ASENTOON asteikolla (kuva 1: lähellä -5…0,
+jyrkkä kulma oikealle; kuva 2: lähes pystyssä, ~-5; kuva 3: kallistunut
+vasemmalle, ~-8…-10) — epäsymmetrinen, jatkuva liike, EI paikallaan
+eikä tasainen ajastettu heilunta. Täsmää PASS-ehtoon. HLS-asemaa ei
+testattu tässä ajossa (progressiivinen/AAC-asema Ateena/Kreikka
+riitti todentamaan aidon reagoinnin). Kuvat tallennettu
+`/Users/Shared/Claude/proto-3d/lokit/build6-tarkistus-20260924/
+b7-4-radio-vu-{lepo,1,2,3}.png`.
+
 ## B7-5: Aloituslennon lähikuva (vaiheet 1–2)
 
 **Omistaja (Fable 24.9. klo 11.38, RAAMATUN LENNON ESITYS -tarkennus)**:
@@ -1073,7 +1089,7 @@ Natiivi-UI:lta.
 | B7-2 | Tekstit piilossa + aito kaiutin | ✅ PASS piilotus, ei testattu kaiutin (161fa35) | b7-2-tekstit-piilossa.png | |
 | B7-3 | Väritaso/huntu/meri/raja | ❌ FAIL (24c9194) | b7-3-huntu-rikkinainen-suorakulmio.png, b7-3-kreikka-tile-glitch.png | Rikkinäinen suorakulmainen laatta (Espanja/Marokko) + puoliksi väärä naapurilaatta (Kreikan vieressä); meri ja Kreikan oma raja OK |
 | Zoom-kuminauha | Ulos-zoomin kuminauhaefekti | ⚠️ EI VOITU TESTATA (24c9194) | | Pinch-zoom-eleet eivät toimineet luotettavasti tässä simulaattoriympäristössä (kosketustyökalu) |
-| B7-4 | Radion VU-mittari | ⚠️ EI VOITU TESTATA (161fa35) | b7-4-vu-mittari-lepotila.png | Ei onnistuttu virittämään asemaa kosketuksella |
+| B7-4 | Radion VU-mittari | ✅ PASS (24c9194) | b7-4-radio-vu-1/2/3.png | ☰ → Maailmanradio → kaupungin ▶-nappi; neula liikkui epäsymmetrisesti joka kuvassa |
 | B7-5 | Lennon lähikuva | ✅ TODENNÄKÖINEN PASS (161fa35) | b7-5-lento-lahikuva.png | Vaiheiden ajoitus epäselvä, ks. huomio |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | ❌ FAIL — ei vielä toteutettu (161fa35) | b7-6-ylaosa-vanha-layout.png | Odotettua, tiedossa jo ennen ajoa |
 | B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | UI-piilotus ✅ PASS; ääni ❌ FAIL (24c9194, lopullinen) | | Lento soittaa `intro-puhe.mp3`:n hetken lennon alussa, sitten hiljaisuus koko loppulennon; `lento-alku`-luento puuttuu katalogista (`VIRHE luentoa ei ole`) |
