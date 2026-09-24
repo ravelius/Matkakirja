@@ -3838,6 +3838,291 @@ export const SAATIEDOT = {
   },
 
   /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N2-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain managua,noumea,puertomontt,sanjuan,saoluis.
+   */
+  managua: {
+    lat: 12.1364,
+    lon: -86.2514,
+    keskilampo: [27.3, 27.8, 28.5, 30.1, 29, 27.3, 27.4, 27.7, 27.1, 26.8, 26.8, 27.1],
+    ylin: [32, 33, 34, 36, 34, 31, 30, 31, 31, 30, 30, 31],
+    alin: [23, 23, 23, 24, 24, 24, 24, 24, 23, 24, 24, 23],
+    sade: [3, 5, 4, 6, 151, 143, 75, 80, 160, 167, 135, 22],
+    luonnehdinta: 'Managua on tasaisen kuuma ympäri vuoden, 27–30 '
+      + 'asteen välillä. Kuiva kausi kestää joulukuulta huhtikuulle, '
+      + 'jolloin sadetta tulee tuskin nimeksikään; toukokuusta '
+      + 'lokakuuhun sateet kastelevat kaupunkia yli 130 millimetrillä '
+      + 'kuukaudessa.',
+  },
+  noumea: {
+    lat: -22.2758,
+    lon: 166.4581,
+    keskilampo: [25.3, 25.9, 25.1, 23.7, 21.6, 20.3, 19.4, 19.4, 20.3, 21.2, 23.4, 24.2],
+    ylin: [28, 29, 27, 26, 24, 22, 22, 22, 23, 24, 26, 27],
+    alin: [22, 23, 23, 22, 19, 18, 17, 17, 18, 19, 20, 21],
+    sade: [97, 188, 178, 94, 150, 79, 41, 40, 37, 59, 81, 110],
+    luonnehdinta: 'Nouméan vuosi kääntyy eteläisen pallonpuoliskon '
+      + 'mukaan: joulu–maaliskuu on lämpimintä (24–26 astetta) ja '
+      + 'kesä–elokuu viileintä (19–20 astetta). Sadetta kertyy '
+      + 'runsaimmin helmikuussa, kuivin kuukausi on heinäkuu.',
+  },
+  puertomontt: {
+    lat: -41.4693,
+    lon: -72.9424,
+    keskilampo: [14.9, 14.8, 14, 11.7, 9.4, 8.2, 7, 7.6, 8.5, 9.5, 12.1, 13.4],
+    ylin: [18, 18, 17, 15, 12, 10, 9, 10, 12, 13, 15, 17],
+    alin: [12, 11, 11, 9, 7, 6, 5, 5, 5, 6, 9, 10],
+    sade: [118, 152, 146, 189, 233, 311, 272, 214, 173, 213, 104, 198],
+    luonnehdinta: 'Puerto Montt on koko vuoden kostea: sadetta kertyy '
+      + 'jokaisena kuukautena vähintään sata millimetriä, kesäkuussa '
+      + 'lähes kolmesataa. Lämpötila pysyy maltillisena, '
+      + 'talvikuukausina (kesä–elokuu) noin seitsemän ja kahdeksan '
+      + 'asteen välillä, kesällä (joulu–helmikuu) reilun '
+      + 'neljäntoista.',
+  },
+  sanjuan: {
+    lat: 18.4655,
+    lon: -66.1057,
+    keskilampo: [24.2, 24.6, 24.7, 25.8, 26.6, 27.3, 27.3, 27.4, 27.2, 26.7, 25.5, 24.6],
+    ylin: [27, 28, 28, 29, 30, 31, 31, 31, 31, 30, 29, 28],
+    alin: [21, 21, 21, 22, 23, 24, 24, 24, 24, 24, 22, 22],
+    sade: [78, 31, 68, 95, 137, 69, 81, 89, 95, 96, 101, 43],
+    luonnehdinta: 'San Juanissa lämpötila pysyy koko vuoden 24–27 '
+      + 'asteessa, viileimpänä tammikuussa ja lämpimimpänä '
+      + 'heinä–elokuussa. Sadetta riittää jokaisena kuukautena, '
+      + 'mutta touko–marraskuu on selvästi tammi–helmikuuta '
+      + 'sateisempi.',
+  },
+  saoluis: {
+    lat: -2.5297,
+    lon: -44.3028,
+    keskilampo: [26.5, 26.1, 25.8, 26.1, 26.5, 26.7, 26.7, 27.1, 27.4, 27.5, 27.5, 27.6],
+    ylin: [29, 28, 28, 28, 29, 29, 29, 30, 30, 31, 30, 30],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25],
+    sade: [244, 272, 460, 368, 202, 71, 53, 25, 14, 7, 59, 36],
+    luonnehdinta: 'São Luísissa on tasaisen kuuma, 26–28 astetta '
+      + 'ympäri vuoden. Sadekausi tammi–toukokuussa on runsas — '
+      + 'maaliskuu kastelee kaupunkia yli 450 millimetrillä — ja '
+      + 'syys–lokakuu selvästi kuivempaa aikaa.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N10-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain boavista,kappalmas,kimberley,labrador,sthelena. Asemat: Sal
+   * Rei (Boa Vista, Kap Verde), Kap Point (Hyväntoivonniemi), Kimberley
+   * (Etelä-Afrikka), Happy Valley-Goose Bay (Labrador), Jamestown
+   * (St. Helena).
+   */
+  boavista: {
+    lat: 16.1167,
+    lon: -22.8333,
+    keskilampo: [21.8, 21.9, 22.1, 22.4, 22.9, 24, 25.1, 26.6, 27.1, 26.5, 25.5, 22.8],
+    ylin: [24, 25, 26, 25, 26, 27, 28, 30, 30, 29, 29, 25],
+    alin: [19, 19, 19, 19, 20, 21, 22, 24, 24, 24, 22, 20],
+    sade: [2, 1, 0, 0, 1, 0, 3, 9, 39, 11, 1, 1],
+    luonnehdinta: 'Boa Vistalla on tasaisen lämmin, 22–27 asteen '
+      + 'aavikkosaaren ilmasto. Sadetta ei käytännössä ole '
+      + 'muulloin kuin syyskuun kostean kauden aikaan.',
+  },
+  kappalmas: {
+    lat: -34.3568,
+    lon: 18.4740,
+    keskilampo: [20, 20.2, 18.7, 17.1, 15.7, 14.8, 14.2, 13.7, 14.5, 15.8, 17.4, 18.9],
+    ylin: [22, 22, 21, 19, 18, 17, 16, 15, 16, 18, 19, 21],
+    alin: [18, 18, 17, 15, 14, 13, 12, 12, 13, 14, 16, 17],
+    sade: [14, 20, 12, 41, 75, 97, 82, 79, 38, 59, 31, 19],
+    luonnehdinta: 'Hyväntoivonniemellä on Välimeren tapainen '
+      + 'ilmasto: eteläinen kesä (joulu–helmikuu) on lämmin ja '
+      + 'kuiva, talvi (touko–elokuu) leuto mutta selvästi '
+      + 'sateisempi.',
+  },
+  kimberley: {
+    lat: -28.7282,
+    lon: 24.7499,
+    keskilampo: [25.9, 24.1, 21.3, 17.8, 12.5, 9.8, 10.6, 11.6, 17.8, 21, 21.9, 25.4],
+    ylin: [33, 30, 29, 24, 20, 18, 18, 19, 26, 29, 29, 33],
+    alin: [19, 18, 14, 11, 5, 2, 3, 4, 9, 13, 15, 17],
+    sade: [54, 109, 42, 38, 7, 9, 4, 31, 2, 27, 73, 43],
+    luonnehdinta: 'Kimberleyssä eteläinen kesä (joulu–helmikuu) '
+      + 'on kuuma, yli 24 astetta, ja talvi (kesä–elokuu) käy '
+      + 'yöllä pakkasen puolella. Sadetta tulee etupäässä kesällä '
+      + 'ja alkusyksyllä.',
+  },
+  labrador: {
+    lat: 53.3017,
+    lon: -60.3260,
+    keskilampo: [-15.7, -17.3, -7.9, -1.6, 5.1, 12, 15.3, 14.6, 11, 4.2, -4.4, -10.4],
+    ylin: [-12, -13, -4, 2, 10, 17, 20, 19, 15, 7, -1, -7],
+    alin: [-19, -21, -12, -5, 0, 7, 10, 10, 7, 1, -8, -14],
+    sade: [71, 34, 89, 74, 107, 97, 110, 132, 76, 100, 94, 85],
+    luonnehdinta: 'Labradorissa talvi (joulu–helmikuu) on ankaran '
+      + 'kylmä, yli 15 asteen pakkasessa. Lyhyt kesä (heinäkuu 15 '
+      + 'astetta) tuo mukanaan myös vuoden sateisimmat kuukaudet.',
+  },
+  /*
+   * ST. HELENA: ERA5-ruutu osuu tälle pienelle (n. 16 km) saarelle
+   * enimmäkseen mereen, vaihteluväli painui epäuskottavan kapeaksi
+   * (tools/hae-saanormaalit.mjs merkitsi rivin "TARKISTA"). En-
+   * Wikipediassa ei ole kuukausitaulukkoa, mutta artikkeli antaa
+   * Jamestownin lämpötilahaarukan sanallisesti: "21–28 °C kesällä
+   * (tammi–huhtikuu), 17–24 °C muina kuukausina" (24.9.2026). Sade
+   * ERA5:stä (Jamestown on saaren kuivin ranta, ~105 mm/v — sopii
+   * artikkelin mainitsemaan "very low annual rainfall" -kuvaukseen,
+   * toisin kuin saaren ylängön 750–1000 mm/v).
+   */
+  sthelena: {
+    lat: -15.9387,
+    lon: -5.7178,
+    keskilampo: [24.5, 24.5, 24.5, 24.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5],
+    ylin: [28, 28, 28, 28, 24, 24, 24, 24, 24, 24, 24, 24],
+    alin: [21, 21, 21, 21, 17, 17, 17, 17, 17, 17, 17, 17],
+    sade: [8, 10, 9, 14, 7, 11, 8, 11, 9, 6, 7, 5],
+    lahde: { nimi: 'en-Wikipedia, Jamestownin lämpötilakuvaus (sanallinen)', kausi: '1991–2020' },
+    luonnehdinta: 'Jamestownissa kesä (tammi–huhtikuu) on '
+      + 'lämpimin, 21–28 astetta, ja loppuvuosi viilenee '
+      + '17–24 asteeseen. Sadetta on rannalla vähän — saaren '
+      + 'ylängöllä sitä kertyy moninkertaisesti enemmän.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N11-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain ahaggar,gao,kamerun,suakin,viktoria. Asemat: Tamanrasset
+   * (Ahaggar, n. 1400 m), Gao, Buea (Kamerunvuoren juurella), Suakin,
+   * Mwanza (Viktoriajärven ranta).
+   */
+  ahaggar: {
+    lat: 22.7850,
+    lon: 5.5228,
+    keskilampo: [11.8, 15.7, 18.8, 23.6, 26.5, 30.1, 29.5, 28.9, 26.7, 23.4, 15.8, 13.8],
+    ylin: [19, 22, 26, 31, 33, 36, 36, 35, 33, 30, 22, 21],
+    alin: [5, 9, 12, 16, 20, 24, 23, 23, 21, 17, 10, 7],
+    sade: [5, 1, 1, 0, 0, 0, 1, 0, 2, 2, 0, 0],
+    luonnehdinta: 'Ahaggarin vuoriston korkeus (n. 1400 metriä) '
+      + 'tekee talvesta viileän, 12 astetta, kun ympäröivä Sahara '
+      + 'on lämpimämpi. Kesäkuussa lämpötila kohoaa 30 asteeseen. '
+      + 'Sadetta ei käytännössä ole.',
+  },
+  gao: {
+    lat: 16.2666,
+    lon: -0.0500,
+    keskilampo: [22.1, 25.3, 28.6, 32.9, 34.8, 36, 33.1, 31, 32.8, 32.3, 26.6, 24.2],
+    ylin: [30, 33, 37, 41, 43, 42, 39, 36, 39, 39, 34, 32],
+    alin: [15, 18, 20, 25, 27, 30, 27, 26, 27, 26, 19, 16],
+    sade: [2, 0, 0, 0, 2, 2, 23, 53, 8, 1, 0, 0],
+    luonnehdinta: 'Gaossa toukokuu on polttavan kuuma, yli 34 '
+      + 'astetta, ja lämpötila pysyy korkeana läpi vuoden. Sadetta '
+      + 'kertyy vain lyhyen sadekauden aikana heinä–elokuussa.',
+  },
+  kamerun: {
+    lat: 4.1553,
+    lon: 9.2920,
+    keskilampo: [24, 24.4, 24.2, 24, 23.5, 22.4, 21.2, 21.1, 21.5, 22.4, 23.1, 23.6],
+    ylin: [27, 27, 27, 27, 26, 25, 23, 23, 24, 25, 26, 26],
+    alin: [21, 21, 21, 21, 21, 20, 19, 19, 19, 20, 20, 21],
+    sade: [52, 70, 203, 166, 201, 346, 929, 835, 840, 307, 141, 39],
+    luonnehdinta: 'Kamerunvuoren juurella on maailman '
+      + 'sateisimpia paikkoja: heinäkuu ja elokuu kastelevat '
+      + 'seutua yli 800 millimetrillä, ja koko vuoden kertymä on '
+      + 'moninkertainen Keski-Euroopan lukuihin verrattuna.',
+  },
+  suakin: {
+    lat: 19.1058,
+    lon: 37.3321,
+    keskilampo: [21.6, 21.6, 23.4, 25.7, 29.3, 31.8, 33.3, 34.3, 32.2, 29.2, 25.8, 23.2],
+    ylin: [24, 24, 27, 29, 33, 36, 38, 39, 37, 33, 28, 25],
+    alin: [19, 19, 20, 22, 26, 27, 28, 30, 28, 26, 24, 21],
+    sade: [35, 17, 5, 4, 2, 0, 1, 5, 2, 22, 103, 68],
+    luonnehdinta: 'Suakinissa kesä (kesä–syyskuu) on polttava, '
+      + 'yli 32 astetta, ja sade puuttuu kokonaan. Marraskuu tuo '
+      + 'Punaisenmeren rannikolle vuoden ainoan runsaan sadekauden.',
+  },
+  viktoria: {
+    lat: -2.5164,
+    lon: 32.9175,
+    keskilampo: [22.6, 22.8, 22.7, 22.2, 22.3, 22.5, 22.3, 22.3, 22.7, 22.4, 21.6, 21.4],
+    ylin: [25, 25, 25, 25, 25, 26, 26, 25, 26, 25, 24, 23],
+    alin: [20, 20, 20, 20, 20, 19, 19, 19, 20, 20, 19, 19],
+    sade: [130, 155, 208, 204, 91, 31, 7, 44, 91, 219, 297, 294],
+    luonnehdinta: 'Viktoriajärven rannalla lämpötila pysyy '
+      + 'tasaisen leutona, 21–23 astetta ympäri vuoden. Sadetta '
+      + 'kertyy kahdessa kaudessa: maalis–huhtikuussa ja '
+      + 'loka–joulukuussa, heinäkuu on selvästi kuivin.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N12-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain cayenne,darfur,mosambik,rashafun,tshadjarvi. Asemat: Cayenne,
+   * El Fasher (Darfur), Mosambikin saari, Ras Hafun, Bol (Tšad-järvi).
+   */
+  cayenne: {
+    lat: 4.9224,
+    lon: -52.3135,
+    keskilampo: [25.2, 25.4, 25.7, 25.6, 25.5, 25.2, 25.7, 26.5, 27.1, 27.3, 26, 25.5],
+    ylin: [27, 27, 28, 28, 28, 27, 28, 29, 31, 30, 29, 28],
+    alin: [23, 23, 24, 24, 23, 23, 23, 24, 24, 24, 23, 23],
+    sade: [287, 200, 171, 458, 467, 410, 238, 151, 51, 72, 261, 298],
+    luonnehdinta: 'Cayennessa lämpötila pysyy tasaisen kuumana, '
+      + '25–27 astetta ympäri vuoden. Sadekausi huhti–kesäkuussa '
+      + 'on runsain — toukokuu tuo yli 460 millimetriä — ja '
+      + 'syyskuu selvästi kuivempaa aikaa.',
+  },
+  darfur: {
+    lat: 13.6289,
+    lon: 25.3494,
+    keskilampo: [19.2, 21, 26.3, 28.6, 30.7, 31.2, 29.5, 25.7, 27.6, 28.6, 23, 19.7],
+    ylin: [27, 30, 35, 37, 39, 38, 35, 30, 33, 35, 30, 28],
+    alin: [11, 12, 18, 20, 23, 24, 24, 21, 22, 22, 16, 11],
+    sade: [0, 0, 0, 0, 1, 2, 28, 133, 31, 2, 0, 0],
+    luonnehdinta: 'Darfurissa sade on käytännössä olematon '
+      + 'lokakuusta kesäkuuhun. Elokuu tuo lyhyen sadekauden '
+      + 'huipun, ja lämpötila on korkeimmillaan touko–kesäkuussa, '
+      + 'yli 30 astetta.',
+  },
+  mosambik: {
+    lat: -15.0342,
+    lon: 40.7358,
+    keskilampo: [27, 27.1, 26.9, 26.4, 25.2, 23.8, 22.8, 23.1, 24.1, 25.6, 27, 27.5],
+    ylin: [29, 30, 29, 29, 28, 26, 26, 26, 27, 29, 30, 30],
+    alin: [25, 25, 24, 24, 23, 21, 20, 20, 21, 23, 24, 25],
+    sade: [258, 170, 157, 78, 18, 17, 30, 10, 8, 10, 68, 123],
+    luonnehdinta: 'Mosambikin saarella on trooppinen '
+      + 'monsuuni-ilmasto: joulu–maaliskuu on lämpimin ja '
+      + 'sateisin, eteläinen talvi (touko–syyskuu) selvästi '
+      + 'kuivempi ja viileämpi.',
+  },
+  rashafun: {
+    lat: 10.4306,
+    lon: 51.2683,
+    keskilampo: [24.6, 24.9, 25.9, 27.6, 28.5, 27.2, 26.1, 25.2, 25.5, 25.7, 25.7, 25.1],
+    ylin: [26, 26, 28, 29, 30, 29, 28, 28, 28, 27, 27, 26],
+    alin: [23, 24, 24, 26, 27, 25, 24, 23, 23, 24, 24, 24],
+    sade: [23, 3, 19, 10, 6, 0, 0, 0, 0, 13, 72, 57],
+    luonnehdinta: 'Ras Hafunin niemellä on kuiva, tasaisen '
+      + 'lämmin rannikkoilmasto, 25–29 astetta. Sadetta tulee '
+      + 'vain marras–joulukuun kaudella, kesäkuukaudet ovat '
+      + 'käytännössä sateettomia.',
+  },
+  tshadjarvi: {
+    lat: 13.4594,
+    lon: 14.7136,
+    keskilampo: [22.3, 24.4, 29.9, 32.8, 34.1, 33.8, 30.2, 28.1, 29.7, 30.9, 25.9, 23],
+    ylin: [29, 32, 38, 40, 41, 40, 35, 31, 33, 37, 32, 30],
+    alin: [15, 17, 22, 25, 27, 28, 26, 25, 26, 25, 19, 16],
+    sade: [0, 0, 0, 0, 4, 6, 45, 112, 47, 1, 0, 0],
+    luonnehdinta: 'Tšad-järven rannalla toukokuu on polttavan '
+      + 'kuuma, yli 34 astetta. Sadekausi heinä–elokuussa tuo '
+      + 'lyhyen helpotuksen, muulloin sadetta ei juuri ole.',
+  },
+
+  /*
    * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N13-kaupungit): Open-Meteon
    * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
    * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs

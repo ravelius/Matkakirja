@@ -71,7 +71,12 @@ const ALIPOLKU = 'matkakirja/reliefipyramidi/';
  * ennen kuin luetteloa on kädessä — jos luettelossa on `versio`, se
  * voittaa seuraavasta noudosta alkaen.
  */
-export const VERSIO_VARALLA = '20260920';
+/*
+ * 20260924 (Karttaseppä 24.9.2026): 20260920:sta puuttui arkin itäisin
+ * kaistale lon −179…−175 (z7 sarakkeet 167–168 jäivät polttamatta,
+ * alemmilla tasoilla tuottajan merivärinä). Muut laatat tavulleen samat.
+ */
+export const VERSIO_VARALLA = '20260924';
 
 /*
  * AVOMEREN VÄRI. Polttotyökalu ei kirjoita avomerestä laattaa

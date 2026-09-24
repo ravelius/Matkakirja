@@ -1,0 +1,186 @@
+#!/usr/bin/env node
+/*
+ * PALLON KERMAHUNTU NATIIVILLE — webin laattakerma-shaderin sääntö
+ * poltettuna Web Mercator -laatoiksi (Karttaseppä 24.9.2026, Fable:
+ * löydös 22 vaihtoehto A).
+ *
+ *   node tools/tee-pallokerma.mjs --pohja <kansio Z/X/Y.jpg> --polygonit <maapolygonit.geojson>
+ *        --ulos <kansio> (--maa ISO --alue lon0,lat0,lon1,lat1 | --maailma)
+ *        [--min 5] [--max 8] [--osa i/n] [--vain-luettelo]
+ *
+ * WEBIN SÄÄNTÖ (js/laattakerma-shader.js, js/laattapyramidi.js
+ * pyramidinTasoitus): pallon pohjalaatan jokaiselle texelille
+ *
+ *   ero = (R − B) sRGB-arvoina (0…255)
+ *   t   = smoothstep(KERMA_MERI_ERO 36, KERMA_MAA_ERO 52, ero)   maa vs. meri
+ *   a   = t × KERMAN_PEITTO_KIINTEA 0,80 × (1 − sisällä)
+ *   väri = mix(texel, kerma #faf4d6, a)
+ *
+ * missä `sisällä` on nykyisen maan renkaiden maski (assets/data/
+ * maapolygonit.json; tässä sen lon/lat-muunnos). Natiivissa ei ole
+ * shaderia, joten laatta on RGBA-kerros: väri = kerma, alfa = a.
+ * Meri (pieni R − B) jää läpinäkyväksi ja naapurimaiden nimet ja relief
+ * näkyvät 20 %:n läpi — kuten webissä.
+ *
+ * KAKSI SARJAA. `--maa ISO` tekee maan laatikon (varitasot[ISO].alue)
+ * laatat, joissa oma maa on reikä; `--maailma` saman säännön ilman
+ * reikää koko maailmalle. Natiivi ottaa laatikon sisällä maan sarjan ja
+ * muualla maailman sarjan. Täysin läpinäkyvää laattaa ei kirjoiteta
+ * (natiivi: puuttuva laatta = läpinäkyvä).
+ *
+ * MASKIN REUNA. Web rasteroi renkaat 2048 px:n maskiin maan laatikon
+ * yli ja lukee sen bilineaarisesti, joten reuna on noin yhden maskipikselin
+ * pehmeä. Tässä renkaat rasteroidaan laatan tarkkuudella (antialiasoitu
+ * SVG) ja sumennetaan saman maskipikselin levyisesti.
+ */
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+export const KERMA = [0xfa, 0xf4, 0xd6];
+export const KERMA_PEITTO = 0.8;
+export const KERMA_MERI_ERO = 36;
+export const KERMA_MAA_ERO = 52;
+export const LAATTA = 256;
+const MASKIN_SIVU = 2048;
+const RAD = Math.PI / 180;
+
+const smoothstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+
+/** Kerman alfa (0…255) texelin sRGB-arvoista. */
+export function kermanAlfa(r, b, sisalla = 0) {
+  return Math.round(255 * smoothstep(KERMA_MERI_ERO, KERMA_MAA_ERO, r - b) * KERMA_PEITTO * (1 - sisalla));
+}
+
+/** Web Mercator: lon/lat → maailman pikseli tasolla Z. */
+export function maailmanPikseli(lon, lat, Z) {
+  const n = LAATTA * 2 ** Z;
+  const s = Math.sin(Math.max(-85.06, Math.min(85.06, lat)) * RAD);
+  return [((lon + 180) / 360) * n, (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * n];
+}
+
+/** Laatan (Z, X, Y) reunat asteina. */
+export function laatanReunat(Z, X, Y) {
+  const n = 2 ** Z;
+  const lat = (y) => Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) / RAD;
+  return { lansi: (X / n) * 360 - 180, ita: ((X + 1) / n) * 360 - 180, pohjoinen: lat(Y), etela: lat(Y + 1) };
+}
+
+/** Tason laatat alueella [lon0, lat0, lon1, lat1] (tai kaikki). */
+export function tasonLaatat(Z, alue = null) {
+  const n = 2 ** Z; const ulos = [];
+  for (let X = 0; X < n; X += 1) {
+    for (let Y = 0; Y < n; Y += 1) {
+      if (alue) {
+        const r = laatanReunat(Z, X, Y);
+        if (r.ita <= alue[0] || r.lansi >= alue[2] || r.pohjoinen <= alue[1] || r.etela >= alue[3]) continue;
+      }
+      ulos.push([X, Y]);
+    }
+  }
+  return ulos;
+}
+
+/** Maan renkaat [[lon, lat]…] ja niiden rajaavat laatikot. */
+export function maanRenkaat(geojson, iso) {
+  const f = geojson.features.find((x) => x.properties?.iso === iso);
+  if (!f) throw new Error(`--maa ${iso}: ei polygonia`);
+  const renkaat = [];
+  for (const p of f.geometry.coordinates) {
+    for (const r of p) {
+      let l0 = 180; let l1 = -180; let b0 = 90; let b1 = -90;
+      for (const [x, y] of r) { l0 = Math.min(l0, x); l1 = Math.max(l1, x); b0 = Math.min(b0, y); b1 = Math.max(b1, y); }
+      renkaat.push({ r, laatikko: [l0, b0, l1, b1] });
+    }
+  }
+  return renkaat;
+}
+
+/** Maan maskin reunan pehmeys asteina (webin maski: laatikko + 5 % / 2048 px). */
+export function maskinPikseliAsteina(renkaat) {
+  let l0 = 180; let l1 = -180; let b0 = 90; let b1 = -90;
+  for (const { laatikko: [a, b, c, d] } of renkaat) { l0 = Math.min(l0, a); b0 = Math.min(b0, b); l1 = Math.max(l1, c); b1 = Math.max(b1, d); }
+  return (Math.max(l1 - l0, b1 - b0) * 1.1) / MASKIN_SIVU;
+}
+
+/** Oman maan maski laatalle (Float32Array 0…1) tai null, jos laatta ei osu maahan. */
+async function maskiLaatalle(sharp, renkaat, Z, X, Y, sumeusAsteina) {
+  const rj = laatanReunat(Z, X, Y);
+  const osuvat = renkaat.filter(({ laatikko: [a, b, c, d] }) => !(c < rj.lansi || a > rj.ita || d < rj.etela || b > rj.pohjoinen));
+  if (!osuvat.length) return null;
+  const polut = osuvat.map(({ r }) => `M${r.map(([lon, lat]) => {
+    const [gx, gy] = maailmanPikseli(lon, lat, Z);
+    return `${(gx - X * LAATTA).toFixed(2)},${(gy - Y * LAATTA).toFixed(2)}`;
+  }).join('L')}Z`).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${LAATTA}" height="${LAATTA}"><path d="${polut}" fill="#fff" fill-rule="nonzero"/></svg>`;
+  // Maskipikseli laatan pikseleinä (leveysasteen keskellä).
+  const pxAsteella = (LAATTA * 2 ** Z) / 360;
+  const sigma = Math.max(0.3, (sumeusAsteina * pxAsteella) / 2);
+  let kuva = sharp(Buffer.from(svg)).ensureAlpha();
+  if (sigma >= 0.3) kuva = kuva.blur(sigma);
+  const { data } = await kuva.raw().toBuffer({ resolveWithObject: true });
+  const m = new Float32Array(LAATTA * LAATTA);
+  for (let i = 0; i < m.length; i += 1) m[i] = data[i * 4 + 3] / 255;
+  return m;
+}
+
+/** Yhden laatan RGBA-huntu; null, jos laatta on kokonaan läpinäkyvä. */
+export async function kermaLaatta(sharp, pohjaJpg, maski) {
+  const { data, info } = await sharp(pohjaJpg).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const ulos = Buffer.alloc(LAATTA * LAATTA * 4);
+  let jotain = false;
+  for (let i = 0; i < LAATTA * LAATTA; i += 1) {
+    const o = i * info.channels;
+    const a = kermanAlfa(data[o], data[o + 2], maski ? maski[i] : 0);
+    ulos[i * 4] = KERMA[0]; ulos[i * 4 + 1] = KERMA[1]; ulos[i * 4 + 2] = KERMA[2]; ulos[i * 4 + 3] = a;
+    if (a > 0) jotain = true;
+  }
+  return jotain ? ulos : null;
+}
+
+async function paa() {
+  const argv = process.argv.slice(2);
+  const lippu = (n) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : null; };
+  const pohja = lippu('--pohja'); const ulos = lippu('--ulos');
+  const iso = lippu('--maa'); const maailma = argv.includes('--maailma');
+  if (!pohja || !ulos || (!iso && !maailma)) throw new Error('käyttö: --pohja --ulos (--maa ISO --alue … | --maailma) [--polygonit]');
+  const min = Number(lippu('--min') ?? 5); const max = Number(lippu('--max') ?? 8);
+  const alue = lippu('--alue')?.split(',').map(Number) ?? null;
+  if (iso && !alue) throw new Error('--maa vaatii --alue (varitasot[ISO].alue)');
+  const osa = lippu('--osa')?.split('/').map(Number) ?? null;
+  mkdirSync(ulos, { recursive: true });
+  const luettelo = {
+    lahde: 'webin laattakerma-shaderin sääntö (js/laattakerma-shader.js), pohja 2026-09-23a-pohja-20260923a',
+    kerma: '#faf4d6', peitto: KERMA_PEITTO, ero: [KERMA_MERI_ERO, KERMA_MAA_ERO],
+    ...(iso ? { maa: iso, varitaso: { alue: { lon0: alue[0], lat0: alue[1], lon1: alue[2], lat1: alue[3] } } } : { maailma: true }),
+    tasot: { min, max }, laatta: LAATTA, muoto: 'webp', puuttuva: 'läpinäkyvä', tehty: new Date().toISOString(),
+  };
+  if (argv.includes('--vain-luettelo')) { writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify(luettelo, null, 1)}\n`); return; }
+  const sharp = (await import('sharp')).default;
+  let renkaat = null; let sumeus = 0;
+  if (iso) {
+    renkaat = maanRenkaat(JSON.parse(readFileSync(lippu('--polygonit'), 'utf8')), iso);
+    sumeus = maskinPikseliAsteina(renkaat);
+  }
+  let tehty = 0; let kirjoitettu = 0;
+  for (let Z = min; Z <= max; Z += 1) {
+    for (const [X, Y] of tasonLaatat(Z, alue)) {
+      if (osa && X % osa[1] !== osa[0] - 1) continue;
+      const lahde = join(pohja, String(Z), String(X), `${Y}.jpg`);
+      tehty += 1;
+      if (!existsSync(lahde)) continue;
+      const maski = renkaat ? await maskiLaatalle(sharp, renkaat, Z, X, Y, sumeus) : null; // eslint-disable-line no-await-in-loop
+      const rgba = await kermaLaatta(sharp, readFileSync(lahde), maski); // eslint-disable-line no-await-in-loop
+      if (!rgba) continue;
+      const webp = await sharp(rgba, { raw: { width: LAATTA, height: LAATTA, channels: 4 } }).webp({ quality: 90, alphaQuality: 90 }).toBuffer(); // eslint-disable-line no-await-in-loop
+      mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
+      writeFileSync(join(ulos, String(Z), String(X), `${Y}.webp`), webp);
+      kirjoitettu += 1;
+    }
+  }
+  if (!osa) writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify(luettelo, null, 1)}\n`);
+  console.log(`${iso ?? 'maailma'}: ${tehty} laattaa käyty, ${kirjoitettu} kirjoitettu (loput läpinäkyviä)`);
+}
+
+if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
+  paa().catch((e) => { console.error(e.message ?? e); process.exit(1); });
+}
