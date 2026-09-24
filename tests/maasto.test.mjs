@@ -7,13 +7,19 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { deflateSync, gunzipSync } from 'node:zlib';
 
 import { avaaGeotiff } from '../tools/maasto/geotiff.mjs';
 import { rtinVerkko } from '../tools/maasto/rtin.mjs';
 import { koodaaLaatta, puraLaatta } from '../tools/maasto/quantized-mesh.mjs';
 import {
-  janteenPainuma, kerroksenKuvaus, laatanAlue, tasonLaatat, teeLaatta, CESIUM_TASO0_VIRHE, LAHDEMAININTA,
+  aja, demHakemisto, demNimi, janteenPainuma, kaksiLahdetta, kerroksenKuvaus, kerrosTekstiksi, laatanAlue,
+  laattaOnMaalla, lahdeJarjestys, sarakeRyhma, tasonLaatat, tasonLaatatJarjestyksessa, tasonSaatavuus,
+  tasonSuunnitelma, teeLaatta, CESIUM_TASO0_VIRHE, GLO30_KYNNYS, LAHDEMAININTA, LAHDEMAININTA_90,
 } from '../tools/maasto/tee-maasto.mjs';
 
 /** Pieni COG: w × h float32, ruutu r, prediktori 3, DEFLATE, lon0/lat1 ja askel. */
@@ -185,4 +191,186 @@ test('--maailma: matalat tasot koko maailmalle, syvät vain alueelle', () => {
   const l = kerroksenKuvaus({ tasot: [0, 4], alue: [-6, 41, 10, 52], versio: 'x', maailma: 2 });
   assert.deepEqual(l.available[2], [{ startX: 0, startY: 0, endX: 7, endY: 3 }]);
   assert.ok(l.available[3][0].endX < 15);
+});
+
+/*
+ * MAAILMA-AJO (24.9.2026): kaksi lähdettä (GLO-30 + GLO-90), vain maalaatat
+ * syvillä tasoilla ja tasokohtainen alue. Keinotekoiset 1°-ruudut
+ * kirjoitetaan väliaikaiskansioon Copernicuksen nimillä.
+ */
+const maasto = (lon, lat) => 800 + 600 * Math.sin(lon * 5) * Math.cos(lat * 3);
+
+/** Kansio 1°-ruuduista: [{ tunnus '10' | '30', lat, lon, lisa (m) }], 64 px/°. */
+function teeDemKansio(kansio, ruudut) {
+  mkdirSync(kansio, { recursive: true });
+  for (const { tunnus = '10', lat, lon, lisa = 0 } of ruudut) {
+    const px = 64;
+    const b = teeTiff(px, px, 32, (x, y) => maasto(lon + (x + 0.5) / px, lat + 1 - (y + 0.5) / px) + lisa, { lon0: lon, lat1: lat + 1, askel: 1 / px });
+    const ns = `${lat >= 0 ? 'N' : 'S'}${String(Math.abs(lat)).padStart(2, '0')}`;
+    const ew = `${lon >= 0 ? 'E' : 'W'}${String(Math.abs(lon)).padStart(3, '0')}`;
+    writeFileSync(join(kansio, `Copernicus_DSM_COG_${tunnus}_${ns}_00_${ew}_00_DEM.tif`), b);
+  }
+  return kansio;
+}
+
+test('Ranska ennallaan: ilman --dem90:tä laatat ja layer.json tavu tavulta kuten ennen', () => {
+  const tmp = mkdtempSync(join(tmpdir(), 'maasto-ranska-'));
+  try {
+    teeDemKansio(tmp, [{ lat: 45, lon: 6 }, { lat: 45, lon: 7 }]);
+    const dem = demHakemisto(tmp);
+    const h = createHash('sha256');
+    for (const [z, x, y] of [[0, 1, 0], [5, 33, 24], [8, 264, 192], [8, 265, 192], [8, 266, 192], [9, 530, 384], [9, 533, 385]]) {
+      h.update(gunzipSync(teeLaatta(dem, z, x, y, 33).tavut));
+    }
+    dem.sulje();
+    // Tiivisteet on laskettu muuttamattomalla työkalulla (origin/main 92718465a) samasta aineistosta.
+    // Puretuista tavuista: zlibin gzip-tuloste eroaa Linux x64:n ja Macin arm64:n välillä (CI punainen 23.9.).
+    // Myös liukulukujen viimeiset bitit eroavat alustoittain (V8:n trigonometria / FMA arm64:llä), joten
+    // tiiviste on alustakohtainen. arm64-arvo on todettu tavulleen samaksi kuin origin/main 92718465a;
+    // koodi on sama molemmilla alustoilla, joten x64-arvo (CI 24.9.2026) kuvaa samaa tulosta Linuxilla.
+    const odotettu = {
+      arm64: '87fe5788d4c89d4310815545d576548af12c2067d133ee06e2266a13670857ec',
+      x64: 'ebefa6d7fcdc8748aab8d7df3b9a321664916041f0b697550d240e6b03160e8e',
+    }[process.arch];
+    if (odotettu) assert.equal(h.digest('hex'), odotettu);
+    const k = kerroksenKuvaus({ tasot: [0, 12], alue: [-6, 41, 10, 52], versio: '2026-09-23b', maailma: 6 });
+    assert.equal(createHash('sha256').update(kerrosTekstiksi(k)).digest('hex'), 'e0fbb7670be1e496251c6f64d073497386f1cbc3f94f0d6a8a37193fd2edd1b5');
+  } finally { rmSync(tmp, { recursive: true, force: true }); }
+});
+
+test('DEM-nimet: GLO-30-kansio lukee vain COG_10, GLO-90 vain COG_30, ._-tiedostot ohitetaan', () => {
+  assert.deepEqual(demNimi('Copernicus_DSM_COG_30_S12_00_W077_00_DEM.tif'), { tunnus: '30', lat: -12, lon: -77 });
+  assert.equal(demNimi('._Copernicus_DSM_COG_10_N45_00_E006_00_DEM.tif'), null);
+  const tmp = mkdtempSync(join(tmpdir(), 'maasto-nimet-'));
+  try {
+    teeDemKansio(tmp, [{ lat: 45, lon: 6 }, { tunnus: '30', lat: 38, lon: 46 }]);
+    writeFileSync(join(tmp, '._Copernicus_DSM_COG_10_N44_00_E006_00_DEM.tif'), 'AppleDouble');
+    writeFileSync(join(tmp, 'LUEMINUT.md'), '#');
+    const g30 = demHakemisto(tmp, undefined, { tunnus: '10' });
+    const g90 = demHakemisto(tmp, undefined, { tunnus: '30' });
+    assert.equal(g30.ruutuja, 1); assert.ok(g30.onRuutu(45, 6)); assert.ok(!g30.onRuutu(38, 46)); assert.ok(!g30.onRuutu(44, 6));
+    assert.equal(g90.ruutuja, 1); assert.ok(g90.onRuutu(38, 46)); assert.ok(!g90.onRuutu(45, 6));
+  } finally { rmSync(tmp, { recursive: true, force: true }); }
+});
+
+test('tasonSuunnitelma: maailma z0–z10 GLO-90, z11–z12 E28-laatikko, vain maa z7:stä, GLO-30 z12:sta', () => {
+  const asetukset = { alue: [-25, 34, 45, 72], maailma: 10, vainMaaAlkaen: 7 };
+  const s = (z) => tasonSuunnitelma(z, asetukset);
+  for (let z = 0; z <= 10; z += 1) assert.deepEqual(s(z).alue, [-180, -90, 180, 90], `z${z}`);
+  assert.deepEqual(s(11).alue, [-25, 34, 45, 72]); assert.deepEqual(s(12).alue, [-25, 34, 45, 72]);
+  assert.deepEqual([0, 6, 7, 12].map((z) => s(z).vainMaa), [false, false, true, true]);
+  assert.equal(tasonSuunnitelma(0, { ...asetukset, vainMaaAlkaen: 0 }).vainMaa, false, 'juuri aina');
+  for (let z = 0; z <= 11; z += 1) assert.equal(s(z).lahteet[0], 'glo90', `z${z}`);
+  assert.deepEqual(s(12).lahteet, ['glo30', 'glo90']);
+  // Kynnys on z11:n (0,00137°) ja z12:n (0,00069°) näytevälien välissä.
+  assert.ok(s(11).vali > GLO30_KYNNYS && s(12).vali < GLO30_KYNNYS);
+  assert.deepEqual(lahdeJarjestys(0.002), ['glo90', 'glo30']);
+  // Ilman --maailma/--vain-maa-alkaen: Ranska-käytös.
+  assert.deepEqual(tasonSuunnitelma(9, { alue: [-6, 41, 10, 52] }), { z: 9, alue: [-6, 41, 10, 52], vainMaa: false, vali: 180 / 512 / 64, lahteet: ['glo90', 'glo30'] });
+});
+
+test('kaksi lähdettä: valinta tasosta ja ruudusta, varalähde, 0 m merellä; saumat täsmäävät peiton reunalla', () => {
+  const tmp = mkdtempSync(join(tmpdir(), 'maasto-lahteet-'));
+  try {
+    const k30 = teeDemKansio(join(tmp, '30'), [{ lat: 45, lon: 6 }, { lat: 46, lon: 8 }]);
+    // GLO-90 eri arvoilla (+50 m), jotta lähde näkyy korkeudesta.
+    const k90 = teeDemKansio(join(tmp, '90'), [{ tunnus: '30', lat: 45, lon: 6, lisa: 50 }, { tunnus: '30', lat: 45, lon: 7, lisa: 50 }]);
+    const dem = kaksiLahdetta({ glo30: demHakemisto(k30), glo90: demHakemisto(k90, undefined, { tunnus: '30' }) });
+    const z12 = tasonSuunnitelma(12, { alue: [0, 0, 1, 1] }).vali;
+    const z11 = tasonSuunnitelma(11, { alue: [0, 0, 1, 1] }).vali;
+    assert.equal(dem.lahde(6.5, 45.5, z12), 'glo30');
+    assert.equal(dem.lahde(6.5, 45.5, z11), 'glo90');
+    assert.equal(dem.lahde(7.5, 45.5, z12), 'glo90', 'GLO-30 puuttuu → GLO-90');
+    assert.equal(dem.lahde(8.5, 46.5, z11), 'glo30', 'GLO-90 puuttuu → GLO-30');
+    assert.equal(dem.lahde(9.5, 45.5, z12), null);
+    assert.equal(dem.korkeus(9.5, 45.5, z12), 0);
+    const p = [6.4, 45.3];
+    assert.ok(Math.abs(dem.korkeus(...p, z12) - maasto(...p)) < 5);
+    assert.ok(Math.abs(dem.korkeus(...p, z11) - maasto(...p) - 50) < 5);
+    assert.ok(dem.onRuutu(46, 8) && dem.onRuutu(45, 7) && !dem.onRuutu(46, 7));
+
+    // z12: GLO-30:n itäraja lon 7 on laatan sisällä; naapurien yhteiset reunapisteet täsmäävät.
+    const x = Math.floor((7 + 180) / (180 / 4096)); const y = Math.floor((45.5 + 90) / (180 / 4096));
+    const korkeus = (l, i) => l.otsake.hMin + (l.pisteet[i][2] / 32767) * (l.otsake.hMax - l.otsake.hMin);
+    const pura = (lx, ly) => puraLaatta(gunzipSync(teeLaatta(dem, 12, lx, ly).tavut));
+    const keski = pura(x, y);
+    assert.ok(keski.otsake.hMax - keski.otsake.hMin > 40, 'lähteiden porras laatan sisällä');
+    const sallittu = (a, b) => Math.max(a.otsake.hMax - a.otsake.hMin, b.otsake.hMax - b.otsake.hMin) / 32767 * 2 + 1e-3;
+    for (const [naapuri, oma, sen, akseli] of [[pura(x + 1, y), 2, 0, 1], [pura(x - 1, y), 0, 2, 1], [pura(x, y + 1), 3, 1, 0]]) {
+      const a = new Map(keski.reunat[oma].map((i) => [keski.pisteet[i][akseli], korkeus(keski, i)]));
+      const b = new Map(naapuri.reunat[sen].map((i) => [naapuri.pisteet[i][akseli], korkeus(naapuri, i)]));
+      let yhteisia = 0;
+      for (const [v, h] of a) {
+        if (!b.has(v)) continue;
+        yhteisia += 1;
+        assert.ok(Math.abs(h - b.get(v)) <= sallittu(keski, naapuri), `reuna ${oma}, ${v}: ${h} vs ${b.get(v)}`);
+      }
+      assert.ok(yhteisia >= 2);
+    }
+    dem.sulje();
+  } finally { rmSync(tmp, { recursive: true, force: true }); }
+});
+
+test('vain maa: suorakulmiot kattavat täsmälleen tehtävät laatat, osat jakavat ne ilman päällekkäisyyttä', () => {
+  const maa = new Set(['45,6', '45,7', '46,8', '44,-1', '60,20', '-34,18']);
+  const onRuutu = (lat, lon) => maa.has(`${lat},${lon}`);
+  for (const [z, alue] of [[7, [-180, -90, 180, 90]], [9, [-180, -90, 180, 90]], [11, [-25, 34, 45, 72]]]) {
+    const s = tasonSuunnitelma(z, { alue, maailma: -1, vainMaaAlkaen: 7 });
+    const tehdyt = new Set();
+    for (let osa = 0; osa < 3; osa += 1) {
+      for (const [x, y] of tasonLaatatJarjestyksessa(s, onRuutu, osa, 3)) {
+        const k = `${x},${y}`;
+        assert.ok(!tehdyt.has(k), `z${z} ${k} kahdesti`);
+        tehdyt.add(k);
+        // Osa on sarakeryhmän (z7-sarakkeen) mukaan.
+        assert.equal(Math.floor(x / sarakeRyhma(z)) % 3, osa);
+      }
+    }
+    const luettelossa = new Set();
+    for (const r of tasonSaatavuus(s, onRuutu)) {
+      for (let y = r.startY; y <= r.endY; y += 1) for (let x = r.startX; x <= r.endX; x += 1) luettelossa.add(`${x},${y}`);
+    }
+    assert.deepEqual([...luettelossa].sort(), [...tehdyt].sort(), `z${z}`);
+    for (const k of tehdyt) assert.ok(laattaOnMaalla(z, ...k.split(',').map(Number), onRuutu));
+    // Ruudun (45, 6) laatat ovat mukana, z11:ssä laatikon ulkopuolinen (−34, 18) ei.
+    assert.ok(tehdyt.size > 0);
+    if (z === 11) assert.ok(![...tehdyt].some((k) => laatanAlue(11, ...k.split(',').map(Number)).south < 0));
+  }
+  // Pystysuuntainen yhdistäminen: yksi 1°-ruutu z9:ssä = yksi suorakulmio (0,35° laatat, 1° ei tasan → 3–4 riviä).
+  const yksi = tasonSaatavuus(tasonSuunnitelma(9, { alue: [-180, -90, 180, 90], vainMaaAlkaen: 7 }), (lat, lon) => lat === 45 && lon === 6);
+  assert.equal(yksi.length, 1);
+});
+
+test('aja: kaksi lähdettä, kaksi osaa ja --luettelo → levyllä täsmälleen layer.jsonin laatat', async () => {
+  const tmp = mkdtempSync(join(tmpdir(), 'maasto-aja-'));
+  try {
+    const k30 = teeDemKansio(join(tmp, 'glo30'), [{ lat: 45, lon: 6 }, { tunnus: '30', lat: 20, lon: 20 }]);
+    const k90 = teeDemKansio(join(tmp, 'glo90'), [{ tunnus: '30', lat: 45, lon: 6 }, { tunnus: '30', lat: 45, lon: 7 }, { tunnus: '30', lat: 44, lon: 8 }]);
+    const ulos = join(tmp, 'ulos');
+    const yhteiset = ['--dem', k30, '--dem90', k90, '--ulos', ulos, '--tasot', '0-9', '--maailma', '3',
+      '--alue', '5,44,9,47', '--vain-maa-alkaen', '5', '--ruudukko', '17', '--versio', 'koe', '--glo30-kynnys', '0.0005'];
+    const hiljaa = () => {};
+    const m0 = await aja([...yhteiset, '--osa', '0/2'], hiljaa);
+    const m1 = await aja([...yhteiset, '--osa', '1/2'], hiljaa);
+    await aja([...yhteiset, '--luettelo'], hiljaa);
+    const l = JSON.parse(readFileSync(join(ulos, 'layer.json'), 'utf8'));
+    assert.equal(l.attribution, `${LAHDEMAININTA} ${LAHDEMAININTA_90}`);
+    assert.equal(l.available.length, 10);
+    for (let z = 0; z <= 9; z += 1) {
+      const odotettu = new Set();
+      for (const r of l.available[z]) for (let y = r.startY; y <= r.endY; y += 1) for (let x = r.startX; x <= r.endX; x += 1) odotettu.add(`${x}/${y}`);
+      const levy = new Set();
+      const d = join(ulos, String(z));
+      if (existsSync(d)) for (const x of readdirSync(d)) for (const f of readdirSync(join(d, x))) levy.add(`${x}/${f.replace('.terrain', '')}`);
+      assert.deepEqual([...levy].sort(), [...odotettu].sort(), `z${z}`);
+      assert.equal((m0[z] ?? 0) + (m1[z] ?? 0), levy.size);
+    }
+    // z0–z3 koko maailma, z9 vain ruutujen (45,6) (45,7) (44,8) laatat: 0,35° → 3 × 3 kukin, osin yhteisiä.
+    assert.equal(m0[3] + m1[3], 128);
+    assert.ok(m0[9] + m1[9] > 0 && m0[9] + m1[9] <= 36);
+    // Syvän laatan korkeus tulee DEM:stä (ei 0 m).
+    const z9 = readdirSync(join(ulos, '9'))[0];
+    const laatta = puraLaatta(gunzipSync(readFileSync(join(ulos, '9', z9, readdirSync(join(ulos, '9', z9))[0]))));
+    assert.ok(laatta.otsake.hMax > 100);
+  } finally { rmSync(tmp, { recursive: true, force: true }); }
 });

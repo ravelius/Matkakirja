@@ -409,11 +409,14 @@ export const LINSSI = {
   laudat: ['maailmankartta'],
 
   lahde: {
-    aineisto: 'NOAA NGDC ETOPO1 Global Relief Model, Ice Surface, 1 kaariminuutti '
+    // Oletuksena reliefipyramidi (js/reliefipyramidi.js, ETOPO 2022 15″);
+    // ?reliefipyramidi=0 palauttaa vanhan ETOPO1-kuvan.
+    aineisto: 'NOAA NCEI ETOPO 2022 15 Arc-Second Global Relief Model, surface '
+      + '(doi:10.25921/fd45-gt74); varakuvana NOAA NGDC ETOPO1, 1 kaariminuutti '
       + '(Amante & Eakins 2009, doi:10.7289/V5C8276M)',
     lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
-    osoite: 'https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo360',
-    haettu: '2026-08-04',
+    osoite: 'https://www.ncei.noaa.gov/products/etopo-global-relief-model',
+    haettu: '2026-09-20',
   },
 
   /**

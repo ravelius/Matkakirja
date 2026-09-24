@@ -21,7 +21,7 @@
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
-import { POISTETUT_SAANNOT } from './lahteet.mjs';
+import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
 import { lueKorkeudet } from './korkeudet.mjs';
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
@@ -39,6 +39,11 @@ import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
+import { maamerkkiKokoelma } from './maamerkit.mjs';
+import { merinimiKokoelma } from './merinimet.mjs';
+import { aluenimiKokoelma } from './aluenimet.mjs';
+import { tyohuonetilastot } from './tyohuonetilastot.mjs';
+import * as TYOHUONETILASTOT from '../../js/tyohuone-tilastot.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -49,6 +54,7 @@ import { existsSync } from 'node:fs';
 import { lueMuutosloki, jarjesta as jarjestaMuutosloki } from './muutosloki-natiivi.mjs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
+const pyorista3 = (v) => Math.round(v * 1000) / 1000;
 
 function taulukko(lahde, kuvaus, viittaukset, alkiot) {
   return { lahde, kuvaus, viittaukset, alkiot: alkiot.map((a) => sarjallista(a)) };
@@ -662,8 +668,9 @@ function luentoKokoelma(hae) {
     };
   };
   const rivit = [
-    ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: null, kuvaus: l.kuvaus,
-      aanite: l.aanite, ...aani(l.aanite) })),
+    // Avausluentojen teksti = ruututeksti (lahteet.mjs AVAUSLUENTOJEN_TEKSTIT), johon aikaleimat kohdistetaan.
+    ...ERIKOISLUENNAT.map((l) => ({ id: l.id, kaupunki: null, paikkarivi: null, teksti: AVAUSLUENTOJEN_TEKSTIT[l.aanite] ?? null,
+      kuvaus: l.kuvaus, aanite: l.aanite, ...aani(l.aanite, AVAUSLUENTOJEN_TEKSTIT[l.aanite] ?? null) })),
     ...Object.entries(FOKUSVIRRAT).filter(([, v]) => v?.matkakirja?.aanite).map(([kaupunki, v]) => ({
       id: `matkakirja:${kaupunki}`, kaupunki, paikkarivi: v.matkakirja.paikkarivi ?? null,
       teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite,
@@ -924,7 +931,9 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
       `Maarajat asteina (id = ISO3, iso2, bbox [w, s, e, n], renkaat [[[lon, lat], …]]), harvennettu `
         + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
         + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
-        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).',
+        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).'
+        + ' Skeema 1.34: renkaat = kaikki admin-0-renkaat (web piirtää pallon maat samasta Natural Earth 10m '
+        + '-aineistosta, Huippuvuoret Norjalle); muutRenkaat = [] (1.29–1.33:n rajauksen jäänne), bbox = kokoBbox.',
       {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
   // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.
@@ -954,6 +963,34 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
   tyypitaLoput(kokoelmat);
+  // Skeema 1.28 (Natiivi-UI): työhuoneen Tilastot-taulu valmiiksi laskettuna.
+  kokoelmat.tyohuonetilastot = tyohuonetilastot(TYOHUONETILASTOT, taulukko);
+  // Skeema 1.33 (Pelikoodari): natiivin 3D-maamerkit (tools/vienti/maamerkit.mjs).
+  kokoelmat.maamerkit = maamerkkiKokoelma(taulukko, kaupunkiIdt);
+  // Skeema 1.36 (Linssiseppä, build 11): merinimet kuten webin nimiötasolla.
+  kokoelmat.merinimet = merinimiKokoelma(taulukko);
+  // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
+  kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
+  // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
+  // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
+  // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.
+  const { FOKUS_POHJAT } = hae('js/packs/fokus-grc.js');
+  const asteina = (r) => {
+    if (!r) return null;
+    const a = laudaltaAsteiksi('maailmankartta', r.x, r.y);
+    const b = laudaltaAsteiksi('maailmankartta', r.x + r.w, r.y + r.h);
+    return [pyorista3(a.lon), pyorista3(b.lat), pyorista3(b.lon), pyorista3(a.lat)];
+  };
+  for (const m of kokoelmat.maat.alkiot) {
+    const p = FOKUS_POHJAT[m.id];
+    m.fokuspohja = p ? {
+      bbox: asteina(p.bbox), rajaus: asteina(p.rajaus),
+      laudalla: { bbox: p.bbox ?? null, rajaus: p.rajaus ?? null },
+    } : null;
+  }
+  kokoelmat.maat.kuvaus += ' Skeema 1.35: fokuspohja { bbox, rajaus: [w, s, e, n] asteina, laudalla: { bbox, rajaus } '
+    + '(laudan yksiköt {x, y, w, h}) } | null = webin FOKUS_POHJAT (js/packs/fokus-grc.js). Web laskee nostotason '
+    + '(lehdenOsuus = bbox.w / näkyvä leveys, korkeus samoin) ja kameran rajauksen tästä, ei maarajoista.';
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
@@ -971,11 +1008,14 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     id: 'LIVIAN_ASTRONAUTTI_KYPARA', moduuli: 'js/livia-astronautti.js',
     arvo: mediaOsoite('assets/livia/livia-astronauttikypara-2x.png'),
   });
+  const luennat = linssiluennat(hae);
   kokoelmat.linssiaineisto.alkiot.push({
+    // Skeema 1.32: kentät myös päätasolla (keksinnot, ihmisen-matka), kuten muilla linssiaineiston alkioilla.
+    ...luennat,
     id: 'linssiluennat', linssi: null, laji: 'luennat',
     kuvaus: 'Linssien luennat: juuri, pysäkit (runko = luennanRunko, url = luennanOsoite) ja kaaren puheet '
       + '(esittely ?v=tiiviste, välinäytökset, loppu). Musiikki: aanitaulut siirtyma:keksinnot ja siirtyma:ihmisen-matka.',
-    data: linssiluennat(hae),
+    data: luennat,
   });
   return kokoelmat;
 }
