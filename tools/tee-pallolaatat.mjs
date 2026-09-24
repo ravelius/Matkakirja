@@ -622,10 +622,16 @@ export function reliefinLuettelo(pohja, relief, versio) {
 /*
  * RELIEFIN KATTAVUUS JA TÄYTE (mitattu reliefipyramidista 20260920,
  * 23.9.2026): laatat kattavat 84° N … 65,43° S (z7 rivit 6–95), ja
- * kattavuuden ulkopuoli — myös arkin itäisin osittainen sarake lon
- * −179…−175 — on tuottajan omaa täytettä RGB 37, 78, 144. Sarja käyttää
- * samaa sävyä kartan ulkopuolella ja puuttuvissa laatoissa, joten
- * saumoja ei synny eikä reunan värejä venytetä raidoiksi.
+ * kattavuuden ulkopuoli on tuottajan omaa täytettä RGB 37, 78, 144
+ * (työkalun MERIVARI webp-pakattuna). Sarja käyttää samaa sävyä kartan
+ * ulkopuolella ja puuttuvissa laatoissa, joten saumoja ei synny eikä
+ * reunan värejä venytetä raidoiksi.
+ *
+ * Versiossa 20260920 täytettä oli myös arkin itäisin kaistale lon
+ * −178,7…−175 (z7 sarakkeet 167–168 puuttuivat). Versio 20260924
+ * (Karttaseppä 24.9.2026) paikkasi ne: rivit ja kattavuus ovat samat,
+ * joten VALI ja TAYTE pätevät sellaisinaan, mutta kaistale on nyt
+ * reliefiä.
  */
 export const RELIEFIN_VALI = { pohjoinen: 84, etela: -65.43 };
 export const RELIEFIN_TAYTE = [37, 78, 144];
