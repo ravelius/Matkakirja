@@ -1143,16 +1143,11 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             var kohteet = kaupat.MannerLennot();
             if (kohteet.Count == 0) return "mannerlentoa ei ole tarjolla";
-            vaihtoehdot = kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList();
-            DialogiKohde = null;
-            riviValittu = null;
-            Tila = SilmukanTila.Dialogi;
-            dialogi.PiilotaHeitto();
             var p = matka.Tila.Pelaaja;
-            dialogi.Nayta("Mannerlento", $"{p.Raha} {PeliApu.Valuutta} · mantereen aarre löytyi, matka voi jatkua",
-                vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
-                i => Matkusta(kohteet[i].Kaupunki, Kulkutapa.Lento, true),
-                () => Kartalle(false));
+            // NaytaRivit asettaa riviValittu-käsittelijän, joten myös testikomento `rivi i` toimii (Laitetestaaja 24.9.2026).
+            NaytaRivit("Mannerlento", $"{p.Raha} {PeliApu.Valuutta} · mantereen aarre löytyi, matka voi jatkua",
+                kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList(),
+                i => Matkusta(kohteet[i].Kaupunki, Kulkutapa.Lento, true));
             return null;
         }
 
