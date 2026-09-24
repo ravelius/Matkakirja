@@ -121,3 +121,20 @@ Pelikoodarin `pariteettikuvat.mjs` merkitsee nämä `ok:true` vaikka
 kuvassa ei ole linssin/kortin sisältöä. Korjaus on jo työn alla
 (DOM-ehto per näkymä + aktiivinen pelitila kaupunkikortille ja
 noppa/siirtolistalle, Pelikoodarin viesti 24.9.2026).
+
+## Uusinta 24.9. klo 14.1x (Pelikoodarin korjatut web-kuvat, PR #3038)
+
+Pelikoodari korjasi ja otti uudelleen 6 web-kuvaa
+(`proto-3d/lokit/pariteetti-web-2026-09-24/`). Laitetestaaja vertasi
+natiiviin uudelleen:
+
+| # | Näkymä | Tulos |
+|---|--------|-------|
+| 17 | Kaupunkikortti | **PASS.** Ei enää tyhjä — näyttää oikean kortin (Lyon), rakenne täsmää natiiviin. |
+| 19 | Noppa-siirtolista | **YHÄ EI VERTAILUKELPOINEN, eri vaihe.** Ei enää tyhjä, mutta näyttää nopanheiton JÄLKEISEN kartan (tavoitettavat kaupungit rengastettuna) eikä itse siirtolistakorttia (Bussi/Lento/Liftaus/Laiva). |
+| 31 | Linssi: vesistöt | **PASS.** Jokiviivat näkyvät oikein, sama rakenne kuin natiivissa. |
+| 13 | Linssi: ihmisen matka | **YHÄ EI VERTAILUKELPOINEN.** Web näyttää nyt lensin oman aloituskortin ("IHMISEN MATKA" + Käynnistä) — eri vaihe kuin kumpikaan natiivikuva (musta kysymysruutu tai käynnissä oleva pallo). |
+| 40 | Linssi: ihmisen matka, karuselli-intro | **REGRESSIO EPÄILTY.** `linssi-karuselli-393x852.png` näyttää nyt KEKSINNÖT-linssin sisältöä (James Watt/1769) eikä "Ihmisen matka" -aloituskorttia kuten aiemmin (joka oli PASS). Sisältö/tiedostonimi vaikuttaa menneen sekaisin rivien 13 ja 40 web-kuvien välillä. |
+| 35 | Maalehti: aihesivu 1 | **LÄHES PASS.** Lascaux-artikkeli täsmää sanatarkasti. Pieni ero: natiivin kuvatekstissä ylimääräinen lause ("Lascaux'n luolaston seinillä on yli 600 maalausta...") ennen Commons-lisenssiä, webissä ei. |
+
+Ilmoitettu Pelikoodarille (24.9. klo 14.1x).
