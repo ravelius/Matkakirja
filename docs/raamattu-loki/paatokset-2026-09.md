@@ -4831,3 +4831,7 @@ Sisältökirjuri: #3129 testit 4282/0 kahdesti; neljän välilehden rakenne uude
 ## OMISTAJA NUKKUMAAN klo 00.4x — YOTILA: KORTIT + YKSI PUSH, EI MUISTUTUSPUSHEJA; YON OHJELMA: E28 → 02.45, TESTFLIGHT 04, KARTTASEPAN RESEPTIKOODAUS JA POLTTO, KATALOGIN VALILEHDET, VEKTORIRANNAT E1–E3, AANET b12q, PARITEETIN REITITYS (25.9.2026 klo 00.36)
 
 Fable jatkaa yön; omistajalle aamuraportti: kortit, buildit, vedokset (kuvapari Kreikka Z6 + Peloponnesos Z9 uudesta reseptistä), katalogin välilehdet.
+
+## FABLE NOLLAA ITSENSA klo 00.4x (55 %, OMISTAJA NUKKUU): LUOVUTUS viesti-fable-luovutus-20260925.md, ALOITUS viesti-fable-aloitus.md (9219eff39) (25.9.2026 klo 00.38)
+
+Postivahti tarkistaa list_events = 0 ja lähettää aloitusviestin uusimmasta origin-haarasta; yötila jatkuu.
