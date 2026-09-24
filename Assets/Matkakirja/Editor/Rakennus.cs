@@ -192,6 +192,13 @@ namespace Matkakirja.Editori
             kierto.sumennusMateriaali = Materiaali("Sumennus", "Matkakirja/Sumennus", Color.white);
             merkit.kamera = kamera;
             merkit.kierto = kierto;
+            // Siirtokohteet kartalla (web vaihe 'move', Pelikoodarin tilaus 24.9.): PeliOhjain syöttää kohteet.
+            var siirtokohteet = georefGo.AddComponent<Siirtokohdemerkit>();
+            siirtokohteet.georeferenssi = georef;
+            siirtokohteet.kamera = kamera;
+            siirtokohteet.kierto = kierto;
+            siirtokohteet.fontti = merkit.fontti;
+            siirtokohteet.materiaali = Materiaali("Siirtokohde", "Matkakirja/Kohdemerkki", Color.white);
             maaraja.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
             komennot.kierto = kierto;

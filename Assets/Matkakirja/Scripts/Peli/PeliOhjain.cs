@@ -355,7 +355,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (Instanssi == this) Instanssi = null;
-            if (kierto != null) kierto.KaupunkiNapautettu -= Napautettu;
+            if (kierto != null) { kierto.KaupunkiNapautettu -= Napautettu; kierto.Napautettu -= PalloNapautettu; kierto.PelaajanEle -= KarttaKosketettu; }
             if (lehtiNakyma != null) lehtiNakyma.Suljettu -= LehtiSuljettu;
         }
 
@@ -389,6 +389,9 @@ namespace Matkakirja.Natiivi
             puhe.Puhuu += PuheMuuttui;
 
             ((IKamera)kierto).KaupunkiNapautettu += Napautettu;
+            // Pallon kosketus peruu pöllön valintavihjeen (web kartallaKosketettu, PeliOhjain.Liiku.cs).
+            kierto.Napautettu += PalloNapautettu;
+            kierto.PelaajanEle += KarttaKosketettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
             // Lehti peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
@@ -829,8 +832,9 @@ namespace Matkakirja.Natiivi
             if (Tavoite != null && !verkko.Kaupungit.ContainsKey(Tavoite)) Tavoite = null;
             // Auki jäänyt kysymys avataan uudelleen, kun kysymykset on ladattu (KytkeKysely).
             Kartalle(true);
-            // Heiton ja siirron väliin jäänyt tallennus: siirrytään heti.
-            if (matka.Tila.Vaihe == Vaihe.Siirto)
+            // Heiton ja siirron väliin jäänyt tallennus: tavoitteen kanssa siirrytään heti, muuten kohteet
+            // odottavat kartalla (web: vaihe 'move' latautuu korostettuine kohteineen).
+            if (matka.Tila.Vaihe == Vaihe.Siirto && Tavoite != null)
                 Matkusta(Tavoite, matka.Tila.Kulkutapa ?? Kulkutapa.Maa);
         }
 
@@ -994,12 +998,11 @@ namespace Matkakirja.Natiivi
                 NaytaHeittonappi(Tavoite != null ? "Heitä noppaa → " + PeliApu.KaupunginNimi(verkko, Tavoite) : "Heitä noppaa", () => Heita());
             else if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto && Tavoite != null)
                 NaytaHeittonappi("Jatka matkaa → " + PeliApu.KaupunginNimi(verkko, Tavoite), () => Heita());
-            else if (Tila == SilmukanTila.Kartta && Kaytossa && matka.Tila.Vaihe == Vaihe.Siirto)
-                // Noppa heitetty, kohde valitsematta (esim. tallennus jäi siirtovaiheeseen): web näyttää siirrot
-                // suoraan (vaihe 'move'), eikä listaa voi sulkea ilman valintaa (Fable 24.9.2026).
-                AvaaSiirrot();
             else
+                // Myös siirtovaihe ilman tavoitetta: ei nappia eikä listaa, kohteet korostuvat kartalla (web
+                // vaihe 'move', PaivitaSiirtoKohteet; Laitetestaajan pariteettiero 24.9.2026).
                 dialogi.PiilotaHeitto();
+            PaivitaSiirtoKohteet();
             LiikuMuuttui?.Invoke();
         }
 
@@ -1019,8 +1022,8 @@ namespace Matkakirja.Natiivi
 
             switch (Tila)
             {
-                case SilmukanTila.Dialogi when SiirtoKohde(kaupunki) != null:
-                    Siirry(SiirtoKohde(kaupunki));
+                case SilmukanTila.Dialogi when SiirtoAvain(kaupunki) != null:
+                    Siirry(SiirtoAvain(kaupunki));
                     return;
                 case SilmukanTila.Dialogi:
                 case SilmukanTila.Kysymys:
@@ -1035,7 +1038,8 @@ namespace Matkakirja.Natiivi
                     return;
                 case SilmukanTila.Kartta:
                     if (uiPaalla) { PysaytaKamera(); return; }
-                    if (SiirtoKohde(kaupunki) != null) { Siirry(SiirtoKohde(kaupunki)); return; }
+                    // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
+                    if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
                     if (kaupunkiKortti != null) { AvaaKortti(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
@@ -1864,6 +1868,7 @@ namespace Matkakirja.Natiivi
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();
+            if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
                                      || Tila == SilmukanTila.Traileri || Tila == SilmukanTila.Sahketehtava || AloituslentoKaynnissa);
@@ -1931,6 +1936,8 @@ namespace Matkakirja.Natiivi
                 + ",\"ajoitus\":" + PeliApu.Json(viimeAjoitus)
                 + ",\"lento\":" + (Lento == null ? "null" : "{\"vaihe\":" + PeliApu.Json(lennonVaihe.ToString()) + ",\"kohde\":" + PeliApu.Json(Lento.Kohde)
                     + ",\"kesto\":" + Lento.Kesto.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture) + ",\"aloitus\":" + (Lento.Aloitus ? "true" : "false") + "}")
+                + ",\"siirtoKohteet\":[" + string.Join(",", siirtoKohteet.Select(k => "{\"avain\":" + PeliApu.Json(k.Avain) + ",\"kaupunki\":" + PeliApu.Json(k.Kaupunki)
+                    + ",\"askeleet\":" + k.Askeleet + "}")) + "],\"valintavihje\":{\"kay\":" + (valintavihje.Kay ? "true" : "false") + ",\"nakyy\":" + (valintavihje.Nakyy ? "true" : "false") + "}"
                 + ",\"tehtavaNappi\":" + PeliApu.Json(matka != null && matka.Tila.Pelaaja.Sijainti.Kaupungissa ? LehtiTilaNyt(matka.Tila.Pelaaja.Sijainti.Kaupunki).TehtavaNappi : null);
             return json.Substring(0, json.Length - 1) + lisa + "}";
         }
