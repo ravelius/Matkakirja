@@ -43,7 +43,7 @@ Julkaisijan seuraava juna: seuraavaksi Natiivi-UI:n testikäännös uudella kä�
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 68 Gt vapaana — palautunut yli 35 Gt rajan (oli 29 Gt).
+- **Levy** (/System/Volumes/Data): 68 Gt vapaana — palautunut yli 35 Gt rajan (oli 29 Gt). **Omistaja siirtää Codexin dataa NAS:iin** (vapautuu ~100 Gt), kuvaputki tauolla siirron ajan — postilaatikon Codex-toimituksia ei odoteta ennen kuin siirto valmis. Seurataan: ilmoitus Fablelle kun tila nousee selvästi (siirto valmis) tai laskee alle 30 Gt.
 - **wt/-worktreet:** 25 kpl. Rajoissa lähes kaikilla rooleilla.
 - **5 h -kiintiö:** 45%, nollautuu klo 21:20 EEST (raja 95%/98%, tauko vasta 98%:ssa).
 - **Viikkokiintiö (kaikki mallit):** 62%. **Viikkokiintiö (Fable):** 38%. Nollautuu 2026-09-28 klo 01:00.
