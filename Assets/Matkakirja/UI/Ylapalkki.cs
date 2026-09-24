@@ -230,6 +230,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Testikomento ui ylapalkki veto|napautus: kartan veto piilottaa / napautus näyttää (simulaattorissa ei eleitä).</summary>
+        public void TestaaVeto(bool piiloon)
+        {
+            if (piiloon) { VetoPiilossa = true; PaivitaVeto(); }
+            else NaytaVedonJalkeen();
+        }
+
         void NaytaVedonJalkeen()
         {
             if (!VetoPiilossa) return;
