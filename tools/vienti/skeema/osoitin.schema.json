@@ -4,26 +4,113 @@
   "title": "Matkakirja-vienti: sisältöpaketin osoitin",
   "description": "sisalto/1/uusin.json ämpärissä, ja sama sisältö kunkin version kansiossa (sisalto/1/v<N>/osoitin.json) palautusta varten. Sovellus lukee tämän ensin, vertaa versiota ja minSovellusta ja lataa paketin polusta. Kirjoitetaan viimeisenä, kun paketti on jo ämpärissä.",
   "type": "object",
-  "required": ["$skeema", "versio", "polku", "sha256", "skeemaversio", "minSovellus", "edellinen", "commit", "appVersion", "julkaistu"],
+  "required": [
+    "$skeema",
+    "versio",
+    "polku",
+    "sha256",
+    "skeemaversio",
+    "minSovellus",
+    "edellinen",
+    "commit",
+    "appVersion",
+    "julkaistu"
+  ],
   "properties": {
-    "$skeema": { "const": "matkakirja-vienti/1/osoitin" },
-    "versio": { "type": "integer", "minimum": 1, "description": "sisältöversio N: CI:n laskuri, erillään APP_VERSIONista" },
-    "polku": { "type": "string", "pattern": "^sisalto/1/v[1-9][0-9]*/$" },
-    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$", "description": "koko paketin tiiviste (tiedostopolut ja niiden sha256)" },
-    "skeemaversio": { "type": "string", "pattern": "^1\\.[0-9]+$", "description": "major.minor; major = polun numero" },
+    "$skeema": {
+      "const": "matkakirja-vienti/1/osoitin"
+    },
+    "versio": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "sisältöversio N: CI:n laskuri, erillään APP_VERSIONista"
+    },
+    "polku": {
+      "type": "string",
+      "pattern": "^sisalto/1/v[1-9][0-9]*/$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "koko paketin tiiviste (tiedostopolut ja niiden sha256)"
+    },
+    "skeemaversio": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$",
+      "description": "major.minor; major = polun numero"
+    },
     "minSovellus": {
       "type": "object",
-      "required": ["ios", "web"],
+      "required": [
+        "ios",
+        "web"
+      ],
       "properties": {
-        "ios": { "type": ["integer", "null"], "minimum": 1, "description": "pienin natiivin sisältötaso, joka osaa lukea paketin" },
-        "web": { "type": ["integer", "null"], "minimum": 1, "description": "web ei lue pakettia (Pages julkaisee packit), siksi null" }
+        "ios": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "description": "pienin natiivin sisältötaso, joka osaa lukea paketin"
+        },
+        "web": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "description": "web ei lue pakettia (Pages julkaisee packit), siksi null"
+        }
       },
       "additionalProperties": false
     },
-    "edellinen": { "type": ["integer", "null"], "minimum": 1 },
-    "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
-    "appVersion": { "type": ["string", "null"] },
-    "julkaistu": { "type": "string", "format": "date-time" }
+    "edellinen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{7,40}$"
+    },
+    "appVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "julkaistu": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "kokoelmaLkm": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "description": "kokoelmien alkiomäärät; seuraava versio laskee muutosrivin näistä (skeema 1.22)"
+    },
+    "muutos": {
+      "type": "object",
+      "required": [
+        "paiva",
+        "teksti"
+      ],
+      "properties": {
+        "paiva": {
+          "type": "string"
+        },
+        "teksti": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "natiivin \"Mitä uutta\" -rivi tästä sisältöversiosta (skeema 1.22)"
+    }
   },
   "additionalProperties": false
 }
