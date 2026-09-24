@@ -163,6 +163,7 @@ namespace Matkakirja
             if (varitaso != null) varitaso.Linssit(true);
             var kaytetyt = new HashSet<string>();
             foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
+            if (silea != null) kaytetyt.Add(silea.materialKey);
             string avainCesium = !kaytetyt.Contains("1") ? "1" : !kaytetyt.Contains("2") ? "2" : null;
             if (avainCesium == null)
             {
@@ -182,6 +183,40 @@ namespace Matkakirja
             rasterit[avain] = new Rasteri { kerros = k, lisatty = Time.unscaledTime };
             PaivitaNavat();
             return avain;
+        }
+
+        /// <summary>
+        /// Karttasepän sileä 23a-sarja: sama pohja ilman poltettua viivatasoa (ei teitä, rajoja eikä kaupunkipisteitä;
+        /// joet, vesiviivoitus ja syvyyskäyrät jäävät). Z0–Z8 kuten pohja.
+        /// </summary>
+        public const string SileaUrl =
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923arajaton/{z}/{x}/{reverseY}.jpg";
+
+        CesiumUrlTemplateRasterOverlay silea;
+
+        /// <summary>
+        /// LENNON KARTTA (omistaja 24.9.2026 klo 13.4x, Fablen päätös): lennon ajaksi sileä sarja pohjan päälle
+        /// Cesiumin raster-paikkaan 1. Pohja latautuu sen alla, joten paluu perillä on välitön (tiet ja rajat
+        /// palaavat samasta välimuistista). Väritaso (paikka 2) jää ennalleen. Ohitetaan, jos linssi käyttää
+        /// raster-paikkoja tai pohja on pois (tyhjän arkin linssit). Offline-alueella sarjaa ei ole: laatta jää
+        /// lataamatta ja pohja näkyy.
+        /// </summary>
+        public void LentoPohja(bool paalle)
+        {
+            if (!paalle)
+            {
+                if (silea != null) { silea.enabled = false; Destroy(silea); silea = null; }
+                return;
+            }
+            if (silea != null || rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
+            silea = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
+            silea.materialKey = "1";
+            silea.templateUrl = Laattapalvelin.Paikallinen(SileaUrl);
+            silea.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
+            silea.minimumLevel = 0;
+            silea.maximumLevel = 8;
+            silea.tileWidth = 256;
+            silea.tileHeight = 256;
         }
 
         public void PoistaRasteri(string avain)
