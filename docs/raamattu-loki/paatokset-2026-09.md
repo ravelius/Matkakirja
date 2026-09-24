@@ -3207,3 +3207,7 @@ Poistot pysyvät omistajan käsissä; automaatio on omistajan asentama.
 ## LEVYSIIVOUKSEN AUTOMAATIO VALMIS (NATIIVISEPPA, PROTO-MASTER 597b025): tyokalut/siivoa-levy.sh (LISTAA / poista, LOKI lokit/siivous.log; LOKIKOPIOT > 2 pv, SIMULAATTORIKAANNOKSET > 1 pv, DerivedData, MERGETYT WORKTREET KUN TYOPUU PUHDAS JA COMMIT > 1 pv, POLTOT VAIN .ampari-ok-MERKILLA; Unity/xcodebuild KAYNNISSA → Build/ OHITETAAN) + launchd fi.matkakirja.siivous.plist klo 03.00 (KAYTTAJA koodaus); ASENNUSKOMENTO ANNETTU OMISTAJALLE; KARTTASEPPA LUO .ampari-ok VIETYIHIN AJOIHIN (24.9.2026 klo 08.32)
 
 Poistoa ei vielä koeajettu (0 kohdetta tänään).
+
+## OMISTAJA klo 08.3x: EI PAASE AJAMAAN SIIVOUSTA → FABLE ASENSI YOLLISEN SIIVOUKSEN launchd-AGENTIN (fi.matkakirja.siivous, klo 03.00, KAYTTAJA koodaus, LOKI proto-3d/lokit/siivous-launchd.log) OMISTAJAN PYYNNOSTA; TAMAN PAIVAN POISTOJA FABLE EI TEE (SAANTO); VAPAANA 49 Gt, RIITTAA BUILD 5:LLE (24.9.2026 klo 08.32)
+
+Ensimmäinen automaattinen ajo 25.9. klo 03.00.
