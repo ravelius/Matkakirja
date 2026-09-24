@@ -113,34 +113,76 @@ vuorottelu selkeä. **FAIL**: kaksi tekstiä päällekkäin samanaikaisesti.
 
 ---
 
-## Löydös 4: Aloituslennon kamera ja pisteet
+## Löydös 4: Aloituslennon kamerakäsikirjoitus, taivas/maasto ja pisteet (+ hehkurenkaat aloitusvalinnassa)
 
-**Omistaja**: aloituslennossa kaikkien kaupunkien pisteet pitäisi olla
+**Omistaja (alkuperäinen)**: aloituslennossa kaikkien kaupunkien pisteet
 piilossa paitsi kohdekaupunki; kamera lentokoneen etuviistosta ja
-lähempää (ei yläviistosta kaukaa), kamera muuttaa jatkuvasti hitaasti
-kulmaa ja korkeutta.
-**Vastuu**: Natiiviseppä. Haara `natiiviseppa/nostot` + `natiiviseppa/
+lähempää, kamera muuttaa jatkuvasti hitaasti kulmaa ja korkeutta.
+**Omistaja (Fable 24.9. klo 10.4x, tarkennus RAAMATUN LENTO-ESITYKSEEN)**:
+kamerakäsikirjoitus lähelle konetta → kauemmas → kohdekaupungin kierto;
+tempo; sininen taivas; 3D-maasto auringon varjoineen; vain kohdepiste
+näkyy. Lisäksi: **hehkurenkaat aloitusvalinnassa** (kaupunkivalintaruutu
+ennen lentoa) — pariteettikierroksen rivi 2 löysi tämän jo puuttuvana
+natiivista.
+**Vastuu**: Natiiviseppä. Haarat `natiiviseppa/nostot` + `natiiviseppa/
 lento-kamera` (mergetty 21b3baa/18dd519: "lentokamera etuviistosta,
-aloituslennolla vain kohdekaupunki").
+aloituslennolla vain kohdekaupunki") — kameran LISÄVAIHEET (lähelle →
+kauemmas → kierto), taivas ja maasto/varjot eivät vielä olleet
+mergetyissä committeissa kirjoitushetkellä, tarkista uudelleen. Hehkurenkaat
+aloitusvalinnassa: ei vielä nähty korjauskommittia — tarkista.
 
-**Testikomento**: `peli-komento.txt`: `uusi-matka ateena` (HUOM: pelkkä
-`uusi-peli` EI laukaise lentoa, se asettaa tilan suoraan) tai
-`ui-komento.txt`: `ui aloita ateena` jos PeliOhjain on jo olemassa.
-Ota useita kuvia lennon aikana (`kuva lento-1`, `kuva lento-2` muutaman
-sekunnin välein) kamerakulman muutoksen todentamiseksi.
+**TÄRKEÄÄ: todenna kuvasarjana, ei yhdellä kuvalla.** Ota vähintään 5–6
+kuvaa tasavälein koko lennon keston ajalta (esim. 0,5 s / 1,5 s / 3 s /
+5 s / 7 s / perillä), jotta kameran vaiheet (lähelle/kauemmas/kierto) ja
+tempon muutos näkyvät sarjasta, ei arvauksena yhdestä ruudusta.
 
-**Odotettu tulos webin mukaan** (`js/kartta.js:2201` `aloituslennonNiukkuus()`,
-`js/ui.js:615-741`): vain lähtö- ja kohdekaupungin pisteet/nimet näkyvät
-(`.aloituslento-piste`/`-nimi`), muu kartta sumun (`.fokus-sumu-harso.
-aloituslento-harso`) alla. Kaari kaartaa aina pohjoiseen. Ei eksplisiittistä
-"jatkuvasti muuttuva kulma" -mainintaa webin koodissa — tämä on OMISTAJAN
-UUSI TOIVE natiivin omalle esitykselle (RAAMATUN LENTO-ESITYS), ei suora
-web-pariteettivaatimus; vertaa silti ettei natiivi näytä muita kaupunkeja
-kuin kohteen.
+**Testikomento — aloitusvalinnan hehkurenkaat**: `ui-komento.txt`:
+`ui aloitus valinta` (tai vastaava pikakomento kaupunkivalintaruutuun,
+tarkista UiKomennot.cs jos nimi muuttunut) ennen minkään kaupungin
+valintaa. `kuva aloitusvalinta-renkaat`.
 
-**PASS-ehto**: vain kohdekaupunki näkyy koko lennon ajan, kamera liikkuu
-näkyvästi lähempää/etuviistosta eikä ole paikallaan. **FAIL**: muita
-kaupunkeja/nastoja näkyvissä TAI kamera pysähtyy/on kaukainen yläviisto.
+**Testikomento — lentokäsikirjoitus**: `peli-komento.txt`: `uusi-matka
+ateena` (HUOM: pelkkä `uusi-peli` EI laukaise lentoa) tai `ui-komento.txt`:
+`ui aloita ateena`. Heti komennon jälkeen ota kuvasarja: `kuva lento-00`,
+`kuva lento-05`, `kuva lento-15`, `kuva lento-30`, `kuva lento-50`,
+`kuva lento-perilla` (aikaleimat sekunteina komennosta, säädä todellisen
+lennon kestoon).
+
+**Odotettu tulos**:
+- *Pisteet ja kaari (web-pariteetti, `js/kartta.js:2201`
+  `aloituslennonNiukkuus()`, `js/ui.js:615-741`)*: vain lähtö- ja
+  kohdekaupungin pisteet/nimet näkyvät, muu kartta sumun alla, kaari
+  kaartaa pohjoiseen.
+- *Hehkurenkaat aloitusvalinnassa (web-pariteetti, `css/styles.css:
+  8105-8129`, `js/ui.js:10460`)*: valittavissa olevilla kaupungeilla
+  `.target-ring.pick` — kultabronssi ääriviiva `#b08a3c`, leveys 2 px,
+  EI hehkusuodatinta (tarkoituksella, suorituskyvyn takia) mutta SYKKIVÄ
+  opasiteetti-animaatio `kohde-syke` (0,55→1→0,55, 2,6 s silmukka).
+  Kosketuksessa täyttö `rgba(176,138,60,0.18)`, valittuna väri vaihtuu
+  `#e8b23c`:iin ja leveys 3 px:ään. Natiivin pitää näyttää sama sykkivä
+  rengas jokaisella valittavissa olevalla kaupungilla.
+- *Kamerakäsikirjoitus, taivas, maasto/varjot — EI WEB-PARITEETTIA,
+  omistajan oma spesifikaatio natiiville*: WEB EI TEE mitään näistä —
+  tutkittu ja vahvistettu ettei web-koodissa (`js/pallolauta/avaus.js:
+  58-90`) ole lähelle→kauemmas→kierto-vaiheistusta (omistaja on aiemmin
+  NIMENOMAAN POISTANUT vastaavan monivaiheisen/nykivän kameran webistä
+  ja korvannut sen yhdellä jatkuvalla kaarella/zoomilla), ei sinistä
+  taivasta (tausta on tähtitaivas, `js/pallolauta/tahdet.js:130-132`),
+  eikä maaston varjostusta (ei `castShadow`/`shadowMap`-koodia, pelkkä
+  tasainen valaistus). Tämä on siis PUHTAASTI natiivin oma RAAMATUN
+  LENTO-ESITYS-vaatimus — testaa omistajan sanallista kuvausta vasten
+  (lähelle konetta → kauemmas → kohdekaupungin kierto, sopiva tempo,
+  sininen taivas, 3D-maasto auringonvalolla ja varjoilla), ÄLÄ webin
+  koodia vasten, koska web ei tarjoa vertailukohtaa tälle osalle.
+
+**PASS-ehto**: (a) vain kohdekaupunki näkyy koko lennon ajan; (b)
+kuvasarjassa erottuu selvästi vähintään kaksi kameran etäisyys-/
+kulmavaihetta (lähempänä alussa, kauempana/kiertäen myöhemmin), ei
+paikallaan pysyvä kamera; (c) taivas sininen (ei tähtitaivas/musta)
+ja maastossa näkyy varjostusta lennon aikana; (d) aloitusvalintaruudussa
+kaikilla valittavissa olevilla kaupungeilla sykkivä hehkurengas.
+**FAIL**: mikä tahansa yllä olevista puuttuu tai kuvasarja näyttää
+staattisen/muuttumattoman kameran.
 
 ---
 
@@ -379,6 +421,38 @@ raportoida uutena löydöksenä ellei Fable ole ilmoittanut valmiiksi).
 
 ---
 
+## Löydös 17: Aloitusnäyttö — pallo täyttää ruudun, pisteet pois, hidas pyöritys, sumea
+
+**Omistaja (Fable 24.9. klo 10.4x)**: aloitusnäytön (etusivun) pallon
+pitää täyttää ruutu, pyöriä hitaasti, olla sumennettu, eikä siinä saa
+näkyä kaupunkipisteitä — verrattava webin etusivupalloon.
+**Vastuu**: ei vielä nimetty — kirjaa löydös eteenpäin jos ero löytyy.
+
+**Testikomento**: aloitusnäyttö tulee esiin sovelluksen käynnistyessä
+ennen mitään pelikomentoa (ei vaadi `uusi-peli`). Käynnistä sovellus
+kylmästi simulaattorissa ja ota kuva heti (`ui-komento.txt`: `kuva
+etusivu-heti`), ja uudestaan ~5 s myöhemmin (`kuva etusivu-5s`)
+pyörimisen näkemiseksi.
+
+**Odotettu tulos webin mukaan** (`js/etusivupallo.js`,
+`tools/tee-etusivupallo.mjs`): pallo on ENNALTA RENDERÖITY video
+(ei live-3D), 6 px:n sumennus (`SUMENNUS=6`) leivottu videoon
+`filter: blur(6px)` esikäsittelyssä. Pallo TÄYTTÄÄ KOKO etusivun ja
+jatkuu ruudun reunojen yli (`KIEKON_YLITYS`). EI mitään pisteitä/
+nastoja/nimiä koskaan — Globe.gl-alustuksessa ei kutsuta
+`.pointsData()`/`.labelsData()`/`.htmlElementsData()` lainkaan, joten
+niitä ei tarvitse edes piilottaa, niitä ei koskaan luoda. Pyörimisnopeus
+on kiinteä videon reitin/keston mukaan (ei erillistä käyntiaikaista
+asetusta) — vertaa silmämääräisesti "hitaaseen" tahtiin, ei tarkkaan
+astelukuun koska web ei anna sitä numerona.
+
+**PASS-ehto**: natiivin pallo täyttää ruudun reunasta reunaan, näkyvästi
+sumea, pyörii hitaasti kahden kuvan välillä, ei yhtään pistettä/nastaa
+näkyvissä. **FAIL**: pallo ei täytä ruutua, terävä (ei sumea), pistoja/
+nastoja näkyy, tai pyöriminen pysähtynyt/liian nopea.
+
+---
+
 ## Yhteenveto-taulukko (täytetään ajon jälkeen)
 
 | # | Löydös | Tila ennen ajoa | PASS/FAIL | Kuva | Huomio |
@@ -386,7 +460,7 @@ raportoida uutena löydöksenä ellei Fable ole ilmoittanut valmiiksi).
 | 1 | Nostot | Mergetty | | | |
 | 2 | Väritaso/ääriviiva | EI mergetty | | | |
 | 3 | Paikkakupla | Mergetty | | | |
-| 4 | Aloituslento kamera | Mergetty | | | |
+| 4 | Aloituslento kamera+taivas+maasto+hehkurenkaat | Osin mergetty (perus), lisävaiheet/taivas/varjot/renkaat tarkista | | | |
 | 5 | iPhone yläosa | Mergetty | | | |
 | 6 | Liiku-nappi | Mergetty | | | |
 | 7 | Linssit pois laukusta | Mergetty | | | |
@@ -399,6 +473,7 @@ raportoida uutena löydöksenä ellei Fable ole ilmoittanut valmiiksi).
 | 14 | Navat | EI mergetty | | | |
 | 15 | Karttaselite | Mergetty | | | |
 | 16 | Pulun chat | EI mergetty (iso ominaisuus) | | | |
+| 17 | Aloitusnäyttö: pallo, sumennus, pyöritys | Ei tarkistettu | | | |
 
 Muista: "Tila ennen ajoa" -sarake on kirjoitushetken (klo 10.3x) tilanne —
 tarkista `git log` proto-3d-repossa uudelleen ennen varsinaista ajoa, koska
