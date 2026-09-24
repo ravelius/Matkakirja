@@ -167,9 +167,9 @@ namespace Matkakirja.Natiivi
                 {
                     var o = Ob(a);
                     string id = T(o, avain) ?? T(o, "id");
-                    // Raaka data ensin: skeema 1.15 säilyttää sen ennallaan tyypitetyn kopion (aiheet +
-                    // kansi) rinnalla. Tyypitetty aiheet vain, kun dataa ei ole (Elämää-kaupungit).
-                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? PaatasonAiheet(o);
+                    // Päätaso ensin (skeema 1.26+, 2.0): aiheet + kansi, ja vain päätasolla ovat mm. aiheen tehtava,
+                    // lista ja sivunOtsikko (v40: 332 / 581 aihetta). Raaka data vain varana Paataso-reitin kautta.
+                    var aiheet = PaatasonAiheet(o) ?? Rakenne.Lista(Paataso.RaakaArvo(o));
                     if (id != null && aiheet != null) t[id] = aiheet;
                     // Skeema 1.15: sivujärjestys (maa-etusivu, aiheet, maa-numeroina).
                     if (sivut != null && id != null && Rakenne.Lista(MiniJson.Kentta(o, "sivut")) is List<object> sl)
