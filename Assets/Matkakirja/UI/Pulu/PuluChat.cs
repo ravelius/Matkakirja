@@ -1023,7 +1023,25 @@ namespace Matkakirja.Natiivi
             var o = PeliOhjain.Instanssi;
             sb.Append("Lauta: Maailmankartta");
             string kaupunki = null;
-            if (o?.Matka != null)
+            /*
+             * ASTRONAUTIN KAMERASSA EI OLE SIJAINTIA (web pollo.js lueNakyma + astronautinKameraPaalla,
+             * omistajan build 9 -löydös 35): pelaaja on radalla, ei kaupungissa, joten kaupunki, maa,
+             * matkapäivä ja isoisän merkintä jäävät pois. Tilalle avoin valokuva ja sen näkyvä selite
+             * (web kokoaKonteksti: heti näkymärivin perässä).
+             */
+            var linssit = UiNakymat.Hae()?.Linssit;
+            bool avaruudessa = linssit?.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId;
+            if (avaruudessa)
+            {
+                sb.Append("\nNäkymä: Astronautin kamera: valokuva avaruudesta, ei pelaajan sijaintia");
+                if (linssit.Astronautti?.Kuva?.AvoinKuva is var (nimi, seutu, selite) && !string.IsNullOrWhiteSpace(nimi))
+                {
+                    sb.Append("\nAvattu valokuva avaruudesta: ").Append(nimi.Trim());
+                    if (!string.IsNullOrWhiteSpace(seutu)) sb.Append(" (").Append(seutu.Trim()).Append(')');
+                    if (!string.IsNullOrWhiteSpace(selite)) sb.Append("\nValokuvan selite: ").Append(selite.Trim());
+                }
+            }
+            else if (o?.Matka != null)
             {
                 var s = o.Matka.Tila.Pelaaja.Sijainti;
                 if (s.Kaupungissa) kaupunki = s.Kaupunki;
@@ -1036,7 +1054,7 @@ namespace Matkakirja.Natiivi
                 sb.Append("\nMatkapäivä: ").Append(o.Matka.Tila.Paiva());
                 sb.Append("\nNäkymä: ").Append(o.LehtiAuki ? "kaupunkilehti" : o.KorttiKaupunki != null ? "kaupunkikortti: " + (UiSisalto.Kaupunki(o.KorttiKaupunki)?.Nimi ?? o.KorttiKaupunki) : "kartta");
             }
-            var v = Fokusvirrat.Hae(kaupunki);
+            var v = avaruudessa ? null : Fokusvirrat.Hae(kaupunki);
             if (v?.Teksti != null)
                 sb.Append("\nIsoisän matkakirjamerkintä: ").Append(v.Teksti.Length > 900 ? v.Teksti.Substring(0, 900) : v.Teksti);
             var t = sb.ToString();

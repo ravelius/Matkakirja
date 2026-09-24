@@ -165,6 +165,13 @@ namespace Matkakirja.Natiivi
 
         void SuljeKuva() => Sulje(true);
 
+        /// <summary>
+        /// Avoin kuva pulun kontekstiin (web pollo.js avoinAvaruuskuva): nimi, seutu ja pelaajan näkemä
+        /// selite; null, kun kuva on kiinni (vanhentunut kuva kontekstissa olisi pahempi kuin puuttuva).
+        /// </summary>
+        public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
+            Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
+
         /// <summary>Testikomento: minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
 
