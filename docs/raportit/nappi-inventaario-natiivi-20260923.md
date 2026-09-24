@@ -60,6 +60,7 @@ KOKEET-osion sijainti rikkoo omistajan linjausta: natiivin KOKEET-osio (Astronau
 | Ratas (äänentasot) | index.html:169, main.js:2142 | Ylapalkki.cs:56, UiNakymat.cs | on | NUI |
 | Hampurilainen | index.html:338, main.js:1098 | Ylapalkki.cs:58 | on | NUI |
 | Puhelimen vaaka-asento: "Näytä / Piilota yläpalkki" (väkäsikoni) | ylapalkki-vaaka.js:69 | puuttuu | on (väkäsnappi, 24.9. yö) | NUI |
+| **Hyväksytty poikkeama (iPhone, omistaja 24.9.2026, build 5 -löydökset 5–7):** ei palkkia eikä logoa; pilleri "300£ 1/80" ja ☰ (kehittäjätilassa ⚙) kelluvat Dynamic Islandin rivillä sen kummallakin puolella; linssit eivät ole laukussa (valitaan kartan linssinapista). iPad ja web ennallaan | — | Ylapalkki.cs (Kelluva, saaririvi), Matkalaukku.cs | on (master; saaririvi merge-pyynnössä natiivi-ui/iphone-island) | NUI |
 
 ## 3. Hampurilainen (päävalikko)
 
