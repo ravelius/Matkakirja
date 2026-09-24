@@ -4231,3 +4231,7 @@ Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b10.md; 
 ## SISALTOKIRJURI: TURISTIOPPAAN KELVOLLISET KAUPUNGIT (INVENTAARIO KOHTA 9, #3045 661282559) (24.9.2026 klo 16.33)
 
 71:stä 56 sopii, 9 hylätty konfliktin takia (Darfur, Suakin, Gao, Murzuk, Al Kufra, Bahr el Ghazal, Ras Hafun, Tšadjärvi, Kamerun/Buea), 1 asumaton saari (San Ambrosio), 4 epävarmaa (Kongo, Sahara, Tanganjika, Ahaggar). Arvio yleistiedon varassa; konfliktilista silmäillään ennen sisältötilausta. Sisältökirjuri odottaa N2/N4/N5/N6-mergeä.
+
+## SIIRTOSEPPA ALOITETTU (klo 16.32, RC PAALLA): #2913 REBASATTU (b3058360e), MERGEABLE (24.9.2026 klo 16.33)
+
+peilaa-media.mjs: js/linssit-luku + mainin hetkikuvat-suodatus säilytetty. Askel 1 odottaa #3074:ää, askel 2 build 10:tä ja #3078:aa; #3081 luonnos. wt/proto-siirtoseppa poistettu.
