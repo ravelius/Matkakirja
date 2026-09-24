@@ -2596,3 +2596,36 @@
     flex-grow: 1;
     flex-shrink: 1;
 }
+
+/* iPhonen ☰-valikko (omistaja 24.9.2026, löydös 20): sama pergamenttipaneeli, matala yläkaista, linssit ja
+ * valikon rivit vievät koko korkeuden; rivit ohuen viivan jälkeen. */
+.mk-linssivalitsin--valikko {
+    width: 300px;
+    max-height: 82%;
+    padding: 4px 8px 8px 8px;
+}
+
+.mk-linssivalitsin--valikko .mk-selite__ylarivi {
+    padding: 0 2px 2px 5.6px;
+    margin-bottom: 2px;
+}
+
+.mk-linssivalitsin--valikko .mk-selite__sulje {
+    height: 24px;
+    min-height: 24px;
+}
+
+.mk-linssivalitsin__lisaosa {
+    flex-direction: column;
+}
+
+.mk-linssivalitsin__erotin {
+    height: 1px;
+    margin: 6px 4px;
+    background-color: rgba(70, 51, 31, 0.25);
+}
+
+.mk-linssirivi--valikko {
+    min-height: 44px;
+    padding: 6px 10px;
+}

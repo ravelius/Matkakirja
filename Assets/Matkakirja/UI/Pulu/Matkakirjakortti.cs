@@ -16,6 +16,10 @@
 // omistaja 25.8.2026) ja sen kolme kaarta toimivat VU-mittarina kertojan äänestä
 // (kynnykset 0,04 / 0,10 / 0,20; vain opacity).
 //
+// iPHONE (omistaja 24.9.2026, löydös 20): lappu on kaupunkipilleri rahapillerin alla, samanlevyinen ja samaa
+// tyyliä ("Ateena"; pitkä nimi lyhenee yhdelle riville). Napautus avaa kortin kuten ennenkin; auki oleva
+// kortti asettuu pillereiden alle (Kiinnita(Ylapalkki)).
+//
 // Kortin sisällön valitsee Saapumisesitys (Matkakirjamerkinnat.cs): fokusvirran
 // merkintä, aarremerkintä, pakin saapumisteksti, saapumishavainto tai arvottu
 // paikkatieto ("Matkalla — X"). Saapumistekstillä ja -havainnolla on kaupungin
@@ -148,7 +152,50 @@ namespace Matkakirja.Natiivi
             PaivitaKaiutin();
         }
 
-        void Asettele() => kortti.style.top = Ylapalkki.Varaus + 8;
+        Ylapalkki ylapalkki;
+
+        /// <summary>iPhonen kaupunkipilleri seuraa rahapilleriä (UiNakymat kytkee).</summary>
+        public void Kiinnita(Ylapalkki y)
+        {
+            ylapalkki = y;
+            y.PilleriMuuttui += Asettele;
+            Asettele();
+        }
+
+        static bool Kaupunkipilleri => Ylapalkki.Kelluva;
+
+        void Asettele()
+        {
+            var ylapilleri = ylapalkki?.Pilleri;
+            bool kiinni = Kaupunkipilleri && ylapilleri != null && ylapilleri.panel != null
+                && ylapilleri.resolvedStyle.display == DisplayStyle.Flex && ylapilleri.worldBound.width > 0 && kortti.parent != null;
+            kortti.EnableInClassList("mk-matkakirja--pilleri", Kaupunkipilleri);
+            if (!kiinni)
+            {
+                kortti.style.top = Ylapalkki.Varaus + 8;
+                kortti.style.left = StyleKeyword.Null;
+                kortti.style.width = StyleKeyword.Null;
+                return;
+            }
+            var paikka = kortti.parent.WorldToLocal(ylapilleri.worldBound);
+            kortti.style.top = paikka.yMax + 6;
+            kortti.style.left = paikka.xMin;
+            // Lappu samanlevyisenä kuin rahapilleri; auki oleva kortti omalla leveydellään (USS).
+            if (pieni) kortti.style.width = paikka.width;
+            else kortti.style.width = StyleKeyword.Null;
+            // Pillerin kaiutin on mittari, ei kytkin: napautus avaa kortin (tekstin) kuten muu pilleri.
+            kaiutin.pickingMode = pieni ? PickingMode.Ignore : PickingMode.Position;
+        }
+
+        /// <summary>Kaupunkipillerin teksti: kaupungin nimi (sisällöstä, muuten otsikon alku ennen pilkkua).</summary>
+        static string KaupunginNimi(Merkinta m)
+        {
+            string nimi = m.Kaupunki != null ? UiSisalto.Kaupunki(m.Kaupunki)?.Nimi : null;
+            if (!string.IsNullOrEmpty(nimi)) return nimi;
+            string o = m.Otsikko ?? "";
+            int i = o.IndexOfAny(new[] { ',', '·' });
+            return (i > 0 ? o.Substring(0, i) : o).Trim();
+        }
 
         /// <summary>
         /// Linssi päällä (web: satelliitti peittää kortin, keksinnöt/topografia/radio piilottavat .fact-card):
@@ -233,7 +280,7 @@ namespace Matkakirja.Natiivi
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
             // Lappu: otsikko ja lyhyt paikkarivi (web #fact-voice + .fact-place-lyhyt).
             string ly = m.Lyhyt ?? m.Paikkarivi;
-            lyhyt.text = otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
+            lyhyt.text = Kaupunkipilleri ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
             tunnelma.text = m.Paikkarivi ?? "";
             tunnelma.EnableInClassList("mk-matkakirja__tunnelma--paikka", !m.Tunnelma);
             Piiloon(tunnelma, string.IsNullOrEmpty(m.Paikkarivi));
@@ -320,7 +367,7 @@ namespace Matkakirja.Natiivi
             int n = Mathf.Min(naytetty, sanat.Length);
             string nakyva = Osa(0, n);
             string loput = Osa(n, sanat.Length);
-            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput + "</alpha>" : nakyva;
+            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva;
         }
 
         void Kirjoitettu()
@@ -335,6 +382,7 @@ namespace Matkakirja.Natiivi
         {
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
+            Asettele();
         }
 
         /// <summary>Luennan jälkeen: pikkukuvat kortin loppuun (webin paivitaMatkakirjanPikkukuvat).</summary>
@@ -425,11 +473,15 @@ namespace Matkakirja.Natiivi
 
         void Mittari()
         {
-            if (!Nakyy || pieni) return;
+            // iPhonen kaupunkipillerissä kaiutin näkyy lapussakin (löydös 21: sykkii luennan aikana).
+            if (!Nakyy || (pieni && !Kaupunkipilleri)) return;
             float rms = 0;
             if (Aanet.KertojaPuhuu)
             {
-                AudioListener.GetOutputData(naytteet, 0);
+                // Aito äänitaso: kertojan oma AudioSource, kun luenta soi siitä; muuten (Pelikoodarin Puhe) kuulijan miksaus.
+                var lahde = Aanet.Kertojasoitin;
+                if (lahde != null && lahde.isPlaying) lahde.GetOutputData(naytteet, 0);
+                else AudioListener.GetOutputData(naytteet, 0);
                 double s = 0;
                 for (int i = 0; i < naytteet.Length; i++) s += naytteet[i] * naytteet[i];
                 rms = Mathf.Sqrt((float)(s / naytteet.Length));
