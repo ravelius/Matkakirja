@@ -200,6 +200,16 @@ namespace Matkakirja.Editori
             aurinko.valo = valo;
             nappula.aurinko = aurinko;
             aurinko.taivas = Materiaali("Taivas", "Matkakirja/Taivas", new Color(0.80f, 0.87f, 0.94f));
+            // Filmiefektipino (elokuvalento erä 3): profiili assetiksi, jottei URP karsi jälkikäsittelyvariantteja.
+            var pino = kameraGo.AddComponent<Filmipino>();
+            pino.kamera = kamera;
+            var pinoGo = new GameObject("Filmipino");
+            var volyymi = pinoGo.AddComponent<UnityEngine.Rendering.Volume>();
+            volyymi.isGlobal = true;
+            volyymi.priority = 10;
+            volyymi.weight = 0f;
+            volyymi.sharedProfile = FilmipinoProfiili();
+            pino.volyymi = volyymi;
             RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
 
@@ -312,6 +322,57 @@ namespace Matkakirja.Editori
             m.EnableKeyword("_OCCLUSIONMAP");
             EditorUtility.SetDirty(m);
             return m;
+        }
+
+        const string FilmipinoPolku = "Assets/Matkakirja/Asetukset/Filmipino.asset";
+
+        /// <summary>
+        /// Lennon jälkikäsittelyprofiili (Filmipino.cs). Arvot hillittyjä: filmin tuntu, ei suodinta. Syväterävyys
+        /// on profiilissa pois päältä; Filmipino kytkee sen lähikuvassa ja asettaa etäisyydet.
+        /// </summary>
+        static UnityEngine.Rendering.VolumeProfile FilmipinoProfiili()
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(FilmipinoPolku));
+            AssetDatabase.DeleteAsset(FilmipinoPolku);
+            var p = ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
+            AssetDatabase.CreateAsset(p, FilmipinoPolku);
+            T Lisaa<T>() where T : UnityEngine.Rendering.VolumeComponent
+            {
+                var k = p.Add<T>(false);
+                k.name = typeof(T).Name;
+                AssetDatabase.AddObjectToAsset(k, p);
+                return k;
+            }
+            var savy = Lisaa<UnityEngine.Rendering.Universal.Tonemapping>();
+            savy.mode.Override(UnityEngine.Rendering.Universal.TonemappingMode.Neutral);
+            var vari = Lisaa<UnityEngine.Rendering.Universal.ColorAdjustments>();
+            vari.contrast.Override(8f);
+            vari.saturation.Override(-6f);
+            var valko = Lisaa<UnityEngine.Rendering.Universal.WhiteBalance>();
+            valko.temperature.Override(7f);
+            var jako = Lisaa<UnityEngine.Rendering.Universal.SplitToning>();
+            jako.shadows.Override(new Color(0.46f, 0.52f, 0.58f));
+            jako.highlights.Override(new Color(0.62f, 0.56f, 0.46f));
+            var hehku = Lisaa<UnityEngine.Rendering.Universal.Bloom>();
+            hehku.threshold.Override(0.95f);
+            hehku.intensity.Override(0.3f);
+            hehku.scatter.Override(0.6f);
+            hehku.highQualityFiltering.Override(false);
+            hehku.maxIterations.Override(5);
+            var vinjetti = Lisaa<UnityEngine.Rendering.Universal.Vignette>();
+            vinjetti.intensity.Override(0.24f);
+            vinjetti.smoothness.Override(0.45f);
+            var rae = Lisaa<UnityEngine.Rendering.Universal.FilmGrain>();
+            rae.type.Override(UnityEngine.Rendering.Universal.FilmGrainLookup.Thin1);
+            rae.intensity.Override(0.22f);
+            rae.response.Override(0.8f);
+            var syvyys = Lisaa<UnityEngine.Rendering.Universal.DepthOfField>();
+            syvyys.mode.Override(UnityEngine.Rendering.Universal.DepthOfFieldMode.Gaussian);
+            syvyys.highQualitySampling.Override(false);
+            syvyys.active = false;
+            EditorUtility.SetDirty(p);
+            AssetDatabase.SaveAssets();
+            return AssetDatabase.LoadAssetAtPath<UnityEngine.Rendering.VolumeProfile>(FilmipinoPolku);
         }
 
         /// <summary>Materiaali assetiksi annetulla shaderilla ja värillä.</summary>
