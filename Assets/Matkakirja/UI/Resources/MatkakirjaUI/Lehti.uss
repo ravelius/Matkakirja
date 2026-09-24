@@ -62,12 +62,13 @@
     font-size: 23.2px;
     letter-spacing: 1.4px;
     white-space: normal;
-    color: rgba(70, 51, 31, 0.92);
+    /* Web .aihe-nimi ja .lehti-nimio: rgb(22, 19, 15), American Typewriter 700 (mitattu 24.9.). */
+    color: #16130f;
     -unity-text-align: middle-center;
 }
 
 .mk-lehti__ylaosa--nimio .mk-lehti__ylanimi {
-    letter-spacing: 3.5px;
+    letter-spacing: 3.04px;
     color: #16130f;
 }
 
@@ -138,9 +139,10 @@
 }
 
 .mk-lehti__nimioyla {
-    font-size: 9.5px;
-    letter-spacing: 3.3px;
-    color: rgba(70, 51, 31, 0.7);
+    /* Web .lehti-ylarivi: 9,6 px, harvennus 3,264 px, rgb(90, 67, 38). */
+    font-size: 9.6px;
+    letter-spacing: 3.264px;
+    color: rgb(90, 67, 38);
 }
 
 .mk-lehti__nimio {
@@ -365,6 +367,12 @@
     white-space: normal;
     color: rgba(33, 29, 24, 0.78);
     margin-bottom: 2px;
+}
+
+.mk-lehti__kuvateksti--selite {
+    font-size: 14.08px;
+    color: rgb(70, 51, 31);
+    -unity-font-style: normal;
 }
 
 .mk-lehti__lahde {

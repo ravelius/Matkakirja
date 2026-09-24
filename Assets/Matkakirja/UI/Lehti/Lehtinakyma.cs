@@ -119,7 +119,8 @@ namespace Matkakirja.Natiivi
             sisallysNappi.tooltip = "Sisällys";
             var nimiRivi = Rakenne.El("mk-lehti__ylanimirivi", ylarivi, PickingMode.Ignore);
             ylaNimi = Rakenne.Teksti("", "mk-lehti__ylanimi", nimiRivi);
-            Kirjasimet.Aseta(ylaNimi, Kirjasin.KoneLihava);
+            // Web .lehti-nimio ja .aihe-nimi: font-weight 700 (mitattu 24.9.) → American Typewriter Bold.
+            Kirjasimet.Aseta(ylaNimi, Kirjasin.KoneBold);
             ylaLippu = Rakenne.El("mk-lehti__lippu", nimiRivi);
             ylaLippu.style.display = DisplayStyle.None;
             kaiutin = Rakenne.Nappi(null, "mk-lehti__ikoninappi mk-lehti__ikoninappi--oikea", VaihdaLuenta, ylarivi, Ikonit.Viiva["kaiutin"]);
@@ -483,16 +484,24 @@ namespace Matkakirja.Natiivi
 
         // --- etusivu ----------------------------------------------------------------------------
 
+        /// <summary>Web LEHDEN_VAKIOESITTELY (js/lehti.js): kun kaupungilla ei ole omaa artikkelia.</summary>
+        const string LehdenVakioesittely = "Isoisä on merkinnyt tämän paikan karttaansa.";
+
         void Etusivu(VisualElement s, LehtiSivu sivu)
         {
             var a = sivu.Aihe;
             Masto(s);
             var paakuvat = a.Avauskuvat.Count > 0 ? a.Avauskuvat : a.Kansikuvat.Take(1).ToList();
-            if (paakuvat.Count > 0) Kuvasarja(s, paakuvat, "mk-lehti__paakuva");
-            var esittely = lehti.Johdanto ?? a.Johdanto;
-            // Web #arrival-intro: 1rem, riviväli 1,6, kappaleet <p> (1 em väli), anfangi ensimmäisessä.
-            // Web #arrival-intro p: American Typewriter 16 px, #5a4326, riviväli 25,6 (mitattu 24.9.).
-            if (!string.IsNullOrEmpty(esittely)) Leipa(s, esittely, "mk-lehti__esittely", 1.6f, 1f, true, Kirjasin.Kone);
+            // Web etusivun pääkuva: selite näkyy, lähde vain suurennoksessa (kuvalahde-vain-suurennoksessa, omistaja 19.9.).
+            if (paakuvat.Count > 0) Kuvasarja(s, paakuvat, "mk-lehti__paakuva", lahde: false);
+            // Web #arrival-intro = kaupunginEsittely(city) = ARTIKKELIT[city.wiki ?? city.name].intro (js/lehti.js),
+            // ilman sitä LEHDEN_VAKIOESITTELY. Kategorian "kaupunki" johdanto on webissä sivun 1 ingressi, ei etusivulla.
+            // Web #arrival-intro p: American Typewriter 16 px, #5a4326, riviväli 25,6, kappaleet 1 em välein, anfangi
+            // ensimmäisessä, **lihavoinnit** <strong> (piirraLeipateksti; mitattu 24.9.).
+            // Sisältöpaketti kantaa introt kaupungin tietueessa (kaupungit.json intro.teksti, Siirtoseppä).
+            string intro = UiSisalto.Kaupunki(lehti.Omistaja)?.Intro;
+            if (!string.IsNullOrEmpty(intro)) Leipa(s, intro, "mk-lehti__esittely", 1.6f, 1f, true, Kirjasin.Kone);
+            else Rivitetty(LehdenVakioesittely, "mk-lehti__esittely", 1.6f, s, Kirjasin.Kone);
             var rivi = a.EnnenNyt.Count >= 2 ? a.EnnenNyt.Take(2).ToList()
                 : (a.Avauskuvat.Count > 0 ? a.Kansikuvat.Take(2) : a.Kansikuvat.Skip(1).Take(2)).ToList();
             if (rivi.Count > 0)
@@ -577,7 +586,11 @@ namespace Matkakirja.Natiivi
             }
             float w = UiKerros.Hae().Juuri(Kerros).layout.width;
             if (float.IsNaN(w) || w <= 0) w = 393f;
-            ylaNimi.style.fontSize = ylaosa.ClassListContains("mk-lehti__ylaosa--nimio") ? Mathf.Clamp(w * 0.075f, 30.4f, 44.8f) : 23.2f;
+            bool nimio = ylaosa.ClassListContains("mk-lehti__ylaosa--nimio");
+            float koko = nimio ? Mathf.Clamp(w * 0.075f, 30.4f, 44.8f) : 23.2f;
+            ylaNimi.style.fontSize = koko;
+            // Web letter-spacing: nimiö 0,1 em (30,4 → 3,04 px, 44,8 → 4,48 px), aihe-nimi 0,06 em (1,39 px).
+            ylaNimi.style.letterSpacing = koko * (nimio ? 0.1f : 0.06f);
         }
 
         void Masto(VisualElement s)
@@ -600,7 +613,7 @@ namespace Matkakirja.Natiivi
             if (linkki)
             {
                 var l = Rakenne.Nappi((lehti.MaaNimi + "-liite").ToUpperInvariant(), "mk-lehti__maalinkki", AvaaLiite, p);
-                Kirjasimet.Aseta(l, Kirjasin.Kone);
+                Kirjasimet.Aseta(l, Kirjasin.KoneLihava); // web .maa-linkki font-weight 600
             }
             SaaRivi(m, lehti.Omistaja);
         }
@@ -644,6 +657,7 @@ namespace Matkakirja.Natiivi
                 var ikoni = Rakenne.Ikoni(SaaIkonit["pilvi"], "mk-ikoni", rivi);
                 var teksti = Rakenne.Teksti($"{KuukausissaNimet[kk]} keskimäärin {Mathf.RoundToInt(t.Keskilampo[kk])}°, sadetta {Mathf.RoundToInt(t.Sade[kk])} mm",
                     "mk-lehti__saateksti", rivi);
+                Kirjasimet.Aseta(teksti, Kirjasin.KoneLihava); // web .saa-teksti American Typewriter 600
                 Kirjasimet.Aseta(Rakenne.Teksti("VUOSIENNUSTE ›", "mk-lehti__saavihje", rivi), Kirjasin.Kone);
                 rivi.clicked += () => Saagraafi.NaytaIsona(t, "Sää vuoden mittaan — " + lehti.Nimi);
                 rivi.style.display = DisplayStyle.Flex;
@@ -1231,13 +1245,14 @@ namespace Matkakirja.Natiivi
         /// "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.2026; selite näkyy suurennoksessa). Pariteetti 24.9.
         /// (Laitetestaaja: Lascaux'n selite ennen Commons-lähdettä).
         /// </summary>
-        void Kuvateksti(VisualElement isa, LehtiKuva k, bool vainLahde = false)
+        void Kuvateksti(VisualElement isa, LehtiKuva k, bool vainLahde = false, bool lahde = true)
         {
-            if (!vainLahde && !string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-lehti__kuvateksti", isa), Kirjasin.LukuKursiivi);
-            if (!string.IsNullOrEmpty(k.LahdeRivi)) Kirjasimet.Aseta(Rakenne.Teksti(k.LahdeRivi, "mk-lehti__lahde", isa), Kirjasin.Kone);
+            // Web .nahtavyys-selite: American Typewriter 14,08 px, #46331f, pysty (mitattu 24.9.).
+            if (!vainLahde && !string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-lehti__kuvateksti mk-lehti__kuvateksti--selite", isa), Kirjasin.Kone);
+            if (lahde && !string.IsNullOrEmpty(k.LahdeRivi)) Kirjasimet.Aseta(Rakenne.Teksti(k.LahdeRivi, "mk-lehti__lahde", isa), Kirjasin.Kone);
         }
 
-        void Kuvasarja(VisualElement isa, List<LehtiKuva> kuvat, string luokka, bool vainLahde = false)
+        void Kuvasarja(VisualElement isa, List<LehtiKuva> kuvat, string luokka, bool vainLahde = false, bool lahde = true)
         {
             var lohko = Rakenne.El("mk-lehti__kuvasarja", isa, PickingMode.Ignore);
             var paikka = Rakenne.El("mk-lehti__kuvasarjapaikka", lohko, PickingMode.Ignore);
@@ -1254,7 +1269,7 @@ namespace Matkakirja.Natiivi
                 {
                     Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys), Kirjasin.Kone);
                 }
-                Kuvateksti(tekstit, kuvat[i], vainLahde);
+                Kuvateksti(tekstit, kuvat[i], vainLahde, lahde);
             }
             // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
             new KuvaSelaus(paikka, () => kuvat.Count, s => Nayta(i + s), () => paikka.Q(className: "mk-lehti__kuvakehys") ?? paikka);
@@ -1279,7 +1294,7 @@ namespace Matkakirja.Natiivi
             Kirjasin kirjasin = Kirjasin.Luku)
         {
             var lohko = Rakenne.El("mk-lehti__leipa", isa, PickingMode.Ignore);
-            var luettava = Rakenne.Teksti(teksti, "mk-lehti__luettava", lohko);
+            var luettava = Rakenne.Teksti(teksti.Replace("**", ""), "mk-lehti__luettava", lohko);
             luettava.enableRichText = false;
             luettava.style.display = DisplayStyle.None;
             var kappaleet = Kappaleet(teksti).ToList();
@@ -1301,7 +1316,29 @@ namespace Matkakirja.Natiivi
         }
 
         static string Rivivali(string teksti, float riviEm) =>
-            "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em><noparse>" + teksti + "</noparse>";
+            "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em>" + Lihavoinnit(teksti);
+
+        /// <summary>Web piirraLeipateksti: **x** → &lt;strong&gt;; muu teksti sellaisenaan (noparse).</summary>
+        static string Lihavoinnit(string teksti)
+        {
+            var palat = teksti.Split(new[] { "**" }, System.StringSplitOptions.None);
+            var sb = new System.Text.StringBuilder();
+            for (int i = 0; i < palat.Length; i++)
+            {
+                if (palat[i].Length == 0) continue;
+                if (i % 2 == 1) sb.Append("<b><noparse>").Append(palat[i]).Append("</noparse></b>");
+                else sb.Append("<noparse>").Append(palat[i]).Append("</noparse>");
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>Anfangin rivijako voi katkaista lihavoinnin: pariton ** alkuosassa suljetaan ja avataan loppuosassa.</summary>
+        static (string, string) JaaLihavointi(string alku, string loppu)
+        {
+            int n = 0;
+            for (int i = alku.IndexOf("**", System.StringComparison.Ordinal); i >= 0; i = alku.IndexOf("**", i + 2, System.StringComparison.Ordinal)) n++;
+            return n % 2 == 1 && loppu.Length > 0 ? (alku + "**", "**" + loppu) : (alku, loppu);
+        }
 
         static Label Rivitetty(string teksti, string luokka, float riviEm, VisualElement isa, Kirjasin kirjasin = Kirjasin.Luku)
         {
@@ -1357,8 +1394,8 @@ namespace Matkakirja.Natiivi
                     int keski = (ala + yla + 1) / 2;
                     if (Korkeus(string.Join(" ", sanat, 0, keski)) <= raja) ala = keski; else yla = keski - 1;
                 }
-                alku.text = Rivivali(string.Join(" ", sanat, 0, ala), riviEm);
-                string jaljella = string.Join(" ", sanat, ala, sanat.Length - ala).TrimStart();
+                var (alkuosa, jaljella) = JaaLihavointi(string.Join(" ", sanat, 0, ala), string.Join(" ", sanat, ala, sanat.Length - ala).TrimStart());
+                alku.text = Rivivali(alkuosa, riviEm);
                 loppu.text = Rivivali(jaljella, riviEm);
                 loppu.style.display = jaljella.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
                 // Viereiset rivit täyttävät anfangin korkeuden, jotta loppu alkaa sen alta samalla rivivälillä.

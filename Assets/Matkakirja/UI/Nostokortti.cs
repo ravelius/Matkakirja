@@ -97,6 +97,8 @@ namespace Matkakirja.Natiivi
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu && !raahattu) Asemoi(); });
+            // Kierto tai ikkunan koko: kuva edellä -kortin leveys uudelleen (web asemoi resize-kuuntelijassa).
+            kerros.RegisterCallback<GeometryChangedEvent>(e => { if (Auki && !Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaKuvaEdella(); });
             kortti.RegisterCallback<PointerDownEvent>(EleAlkoi, TrickleDown.TrickleDown);
             kortti.RegisterCallback<PointerMoveEvent>(EleLiikkui, TrickleDown.TrickleDown);
             kortti.RegisterCallback<PointerUpEvent>(EleLoppui, TrickleDown.TrickleDown);
@@ -214,6 +216,7 @@ namespace Matkakirja.Natiivi
             lisakaupunkiPaikka = false;
             AsetaPaikka(n.Kuvat.Count == 0);
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
+            MitoitaKuvaEdella();
             AvaaKerros();
         }
 
@@ -267,6 +270,47 @@ namespace Matkakirja.Natiivi
             x = Mathf.Max(vasen, Mathf.Min(x, oikea - leveys));
             float y = Mathf.Max(yla, Mathf.Min(m.y - korkeus / 2f, ala - korkeus));
             AsetaKohta(Mathf.Round(x), Mathf.Round(y));
+        }
+
+        // Web js/nostokuva.js (kuva edellä): NOSTOKUVA_MARGINAALI 12, VAAKAVARA 44, PYSTYVARA 150, KAPEA_KATTO 760,
+        // VARA_ARVIO 48, LEVEA_RAJA 1100; suurennoksenMitat (js/ui-apurit.js) kertoimet 0,99 / 0,82 / 0,94 ja vähin 0,28.
+        const float KuvaMarginaali = 12f, KuvaVaakavara = 44f, KuvaPystyvara = 150f, KuvaKapeaKatto = 760f, KuvaVaraArvio = 48f,
+            KuvaLeveaRaja = 1100f;
+
+        /// <summary>
+        /// Web nostokuvanVakioleveys: vaakakuvan (3:2) leveys ruudulla, katettuna KAPEA_KATTO − VARA_ARVIO (712).
+        /// </summary>
+        static float KuvaVakioleveys(float rl, float rk)
+        {
+            const float suhde = 1.5f;
+            bool pysty = rk >= rl; // vaakakuva pystyruudulla = vastakkainen
+            float leveys = (pysty ? rl * 0.99f : rl * 0.82f) - KuvaVaakavara;
+            leveys = Mathf.Min(leveys, KuvaKapeaKatto - KuvaVaraArvio);
+            float korkeus = Mathf.Max(rk * 0.94f - KuvaPystyvara, rk * 0.28f);
+            if (leveys / suhde > korkeus) leveys = korkeus * suhde;
+            return Mathf.Round(leveys);
+        }
+
+        /// <summary>
+        /// Web jaadytaLeveys: kuva edellä -kortin leveys on sama molemmissa vaiheissa (kuva ei liiku), vakioleveys +
+        /// kortin reunus ja täyte, enintään ruutu − 2 × 12 ja KAPEA_KATTO 760. ≥ 1100 pt:n kaksipalstataitto
+        /// (kuva vasemmalla, teksti oikealla) puuttuu vielä: silloin USS:n leveys.
+        /// </summary>
+        void MitoitaKuvaEdella()
+        {
+            bool kuvaEdella = !ankkuroitu && nosto != null && nosto.Kuvat.Count > 0;
+            var pohja = kerros.panel?.visualTree.layout ?? default;
+            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
+            if (!kuvaEdella || rl <= 0 || rk <= 0 || rl >= KuvaLeveaRaja)
+            {
+                if (!ankkuroitu) { kortti.style.width = StyleKeyword.Null; kortti.style.maxWidth = StyleKeyword.Null; }
+                return;
+            }
+            // Reunus 1 + täyte 15,2 kummallakin puolella (web .fokuskohde-popup, mitattu 24.9. b11).
+            const float vara = 2f * (1f + 15.2f);
+            float leveys = Mathf.Round(Mathf.Min(KuvaVakioleveys(rl, rk) + vara, Mathf.Min(rl - 2f * KuvaMarginaali, KuvaKapeaKatto)));
+            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
         }
 
         /// <summary>Kohdekortti min(24rem, 86vw) (web .fokuskohde-popup), lisäkaupunki min(34rem, 92vw) (.kaupunkipopup).</summary>
@@ -381,7 +425,7 @@ namespace Matkakirja.Natiivi
             {
                 Kuvakehys(lohko, lk.Hero, () => Suurenna(0));
                 if (!string.IsNullOrEmpty(lk.Hero.Lyhyt))
-                    Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+                    Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.Luku);
                 if (!string.IsNullOrEmpty(lk.Hero.LahdeRivi)) Rakenne.Teksti(lk.Hero.LahdeRivi, "mk-kansikuva__lahde", lohko);
             }
             else
@@ -421,10 +465,11 @@ namespace Matkakirja.Natiivi
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
+            // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
             var lyhyt = Rakenne.Teksti(k.Lyhyt ?? nosto.Otsikko ?? "", "mk-nosto__kuvateksti", alarivi);
-            Kirjasimet.Aseta(lyhyt, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(lyhyt, Kirjasin.Luku);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
-            Kirjasimet.Aseta(lisaa, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
         }
 
         // --- vaihe 2: koko kortti ----------------------------------------------------------
@@ -459,8 +504,9 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(pt, Kirjasin.Kone);
                 }
             }
-            var otsikko = Rakenne.Teksti(n.Otsikko ?? "", "mk-nosto__otsikko", sisus);
-            Kirjasimet.Aseta(otsikko, n.Laji == NostoLaji.Kohde ? Kirjasin.KoneLihava : Kirjasin.LukuLihava);
+            var otsikko = Rakenne.Teksti(n.Otsikko ?? "", n.Laji == NostoLaji.Kohde ? "mk-nosto__otsikko mk-nosto__otsikko--kohde" : "mk-nosto__otsikko", sisus);
+            // Web .fokuskohde-otsikko: American Typewriter 700, 16,32 px, #211d18 (mitattu 24.9. b11).
+            Kirjasimet.Aseta(otsikko, n.Laji == NostoLaji.Kohde ? Kirjasin.KoneBold : Kirjasin.LukuLihava);
             if (n.Laji == NostoLaji.Hetki && n.Meta != null)
                 Kirjasimet.Aseta(Rakenne.Teksti(n.Meta, "mk-nosto__meta", sisus), Kirjasin.Kone);
             if (!string.IsNullOrEmpty(n.Ingressi))
@@ -474,12 +520,11 @@ namespace Matkakirja.Natiivi
 
             var jaljella = n.Laji == NostoLaji.Kohde ? n.Korostukset.Select(PuraKorostus).Where(x => x.HasValue).Select(x => x.Value).ToList()
                 : new List<(string Perus, string Nakyva)>();
-            foreach (var k in Kappaleet(n.Teksti))
+            string nimi = n.Otsikko;
+            void Linkit(Label l)
             {
-                var l = Rakenne.Teksti(RiviValiAlku + Korosta(k, jaljella), "mk-nosto__teksti", sisus);
-                if (!l.text.Contains("<link=")) continue;
+                if (!l.text.Contains("<link=")) return;
                 l.pickingMode = PickingMode.Position;
-                string nimi = n.Otsikko;
                 l.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
                 {
                     if (string.IsNullOrEmpty(e.linkID)) return;
@@ -487,6 +532,12 @@ namespace Matkakirja.Natiivi
                     UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})");
                 });
             }
+            var kappaleet = Kappaleet(n.Teksti).Select(k => Korosta(k, jaljella)).ToList();
+            // Web lehtipalstaKotelo: pitkä teksti kahdelle palstalle, kun sen oma leveys ≥ 600 (iPadin kuvakortti).
+            if (Lehtipalstat.OnPitka(n.Teksti, kappaleet.Count))
+                Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit);
+            else
+                foreach (var k in kappaleet) Linkit(Rakenne.Teksti(RiviValiAlku + k, "mk-nosto__teksti", sisus));
 
             // Täkynosto: valokuva ja karttaliite jutun jälkeen, ennen kysymystä (web piirraNostonSisus).
             if (n.Valokuva != null) Valokuva(sisus, n.Valokuva);
@@ -560,7 +611,7 @@ namespace Matkakirja.Natiivi
         {
             var lohko = Rakenne.El("mk-nosto__valokuva", isa, PickingMode.Ignore);
             Kuvakehys(lohko, k, () => SuurennaYksi(k));
-            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.Luku);
             napit["valokuva"] = () => SuurennaYksi(k);
         }
 
@@ -744,7 +795,7 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
             var teksti = Rakenne.Teksti("", "mk-nosto__kuvateksti", lohko);
-            Kirjasimet.Aseta(teksti, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(teksti, Kirjasin.Luku); // web .nostokuva-selite: Iowan pysty, keskitetty
             Label laskuri = null;
             void Nayta(int i)
             {
