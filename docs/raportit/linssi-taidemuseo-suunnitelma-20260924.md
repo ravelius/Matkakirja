@@ -219,7 +219,57 @@ Täysi varmennettu luettelo (ID:t, IIIF-osoitteet, resoluutiot ja lisenssit rivi
 **linssi-taidemuseo-teosluettelo-20260924.md**. Kaikki rivit on varmennettu 24.9.2026 museoiden avoimista
 rajapinnoista. Italialaisten museoiden kuvia ei ole käytetty.
 
-### 4.1 Maalaukset: 28, kaikki National Gallery of Art, Washington (openaccess = CC0)
+### 4.0 Toimitettu erä 1 (kuvaputki 24.9.2026, Fable): 30 maalausta R2:ssa
+
+Manifesti: `origin/claude/postilaatikko:posti/kuvatoimitus-renessanssisali-maalaukset-20260924.json`, R2
+`matkakirja/museo/renessanssi/maalaus/` (sali- ja korttiversio, SHA-256 ja takaisinluku tarkistettu). Lähteet: Met CC0 22
+ja NGA PD 8, yhteensä 18 taiteilijaa. Salikuvan pitkä sivu on enintään 4000 px ilman suurennusta, joten luvun 5
+yksityiskohtaruudut ulottuvat 4000 px:iin eivätkä 8192 px:iin. Hylätty: Met 435643 *Ympärileikkaus* (lähdekuva mustavalkoinen).
+Osa-sarake on salin osa koulukunnan mukaan; manifestin `syntymakaupunki` oli "muu" 14 teoksella.
+
+| Tunnus | Taiteilija | Teos | Vuosi | Osa | Lisenssi | Salikuva px |
+|---|---|---|---|---|---|---|
+| met-435729 | Botticelli | Pyhän Zenobiuksen kolme ihmettä | ca. 1500 | Firenze | CC0 1.0 | 4000×1855 |
+| met-435728 | Botticelli | Pyhän Hieronymuksen viimeinen ehtoollinen | early 1490s | Firenze | CC0 1.0 | 3019×4000 |
+| met-459016 | Botticelli | Ilmestys | ca. 1490 | Firenze | CC0 1.0 | 3913×2571 |
+| met-435641 | Giovanni Bellini | Madonna ja lapsi | late 1480s | Venetsia | CC0 1.0 | 3019×3718 |
+| met-435640 | Giovanni Bellini | Madonna palvoo nukkuvaa lasta | early 1460s | Venetsia | CC0 1.0 | 2415×3722 |
+| met-435642 | Giovanni Bellini | Madonna ja lapsi pyhimysten kanssa | ca. 1505–10 | Venetsia | CC0 1.0 | 3767×2396 |
+| met-437372 | Raphael | Valtaistuimella istuva Madonna, lapsi ja pyhimykset | ca. 1504 | Rooma | CC0 1.0 | 3067×4000 |
+| met-437373 | Raphael | Giuliano de’ Medici, Nemoursin herttua | museotietueessa ei päiväystä | Rooma | CC0 1.0 | 1502×1935 |
+| met-437824 | Titian | Madonna ja lapsi | ca. 1508 | Venetsia | CC0 1.0 | 4000×3265 |
+| met-436489 | Domenico Ghirlandaio | Francesco Sassetti ja hänen poikansa Teodoro | ca. 1488 | Firenze | CC0 1.0 | 2822×3722 |
+| met-437283 | Piero di Cosimo | Metsästyskohtaus | ca. 1494–1500 | Firenze | CC0 1.0 | 4000×1798 |
+| met-437284 | Piero di Cosimo | Paluu metsästyksestä | ca. 1494–1500 | Firenze | CC0 1.0 | 4000×1782 |
+| met-436895 | Fra Filippo Lippi | Valtaistuimella istuva Madonna ja lapsi sekä kaksi enkeliä | ca. 1440 | Firenze | CC0 1.0 | 2118×4000 |
+| met-436896 | Fra Filippo Lippi | Naisen ja miehen muotokuva ikkunan ääressä | ca. 1440 | Firenze | CC0 1.0 | 2568×3875 |
+| met-435901 | Cima da Conegliano | Madonna ja lapsi pyhien Franciscuksen ja Claran kanssa | ca. 1510 | Venetsia | CC0 1.0 | 4000×3008 |
+| met-435902 | Cima da Conegliano | Kolme pyhimystä: Rochus, Antonius ja Lucia | ca. 1513 | Venetsia | CC0 1.0 | 3636×3841 |
+| met-436910 | Lorenzo di Credi | Nuoren naisen muotokuva | ca. 1490–1500 | Firenze | CC0 1.0 | 2712×3871 |
+| met-436909 | Lorenzo di Credi | Madonna palvoo lasta Johannes Kastajan ja enkelin kanssa | early 1490s | Firenze | CC0 1.0 | 3793×3845 |
+| met-435614 | Fra Bartolomeo | Madonna ja lapsi sekä nuori Johannes Kastaja | ca. 1497 | Firenze | CC0 1.0 | 3177×4000 |
+| met-435848 | Fra Carnevale | Neitsyt Marian syntymä | 1467 | (Urbino) → Firenze | CC0 1.0 | 2565×3823 |
+| met-437826 | Titian | Venus ja Adonis | 1550s | Venetsia | CC0 1.0 | 4000×3234 |
+| met-437371 | Raphael | Rukous Getsemanessa | ca. 1504 | Rooma | CC0 1.0 | 3851×3330 |
+| nga-50724 | Leonardo da Vinci | Ginevra de’ Bencin muotokuva | c. 1474/1478 | Firenze | Public Domain | 3878×4000 |
+| nga-432 | Giorgione | Paimenten kumarrus | 1505/1510 | Venetsia | Public Domain | 4000×3272 |
+| nga-41584 | Andrea Mantegna | Miehen muotokuva | c. 1470 | (Mantova) → Venetsia | Public Domain | 3142×4000 |
+| nga-46189 | Jacopo Tintoretto | Kesä | c. 1546/1548 | Venetsia | Public Domain | 4000×2141 |
+| nga-45 | Paolo Veronese | Mooseksen löytyminen | c. 1581/1582 | Venetsia | Public Domain | 3025×4000 |
+| nga-41629 | Attributed to Piero della Francesca | Pyhä Apollonia | c. 1455/1460 | (Sansepolcro) → Firenze | Public Domain | 2904×4000 |
+| nga-1143 | Agnolo Bronzino | Nuori nainen ja hänen poikansa | c. 1540 | Firenze | Public Domain | 3057×4000 |
+| nga-41697 | Veronese and Workshop | Rebekka kaivolla | c. 1582/1588 | Venetsia | Public Domain | 4000×2024 |
+
+**Jakauma:** Firenze 15, Venetsia 12, Rooma 3.
+
+**Puuttuu vielä (tilattava tai päätettävä):**
+1. **Rooman osa on ohut**, vain kolme Rafaelia. Luvun 4.1 NGA-ehdokkaista tilataan Alban Madonna ja Bindo Altoviti (Rafael), *Kardinaali Sauli* ja *Humanistin muotokuva* (Sebastiano del Piombo), *Ristiinnaulitseminen* (Signorelli) sekä Perugino (*Madonna ja lapsi*, *Lorenzo di Credi*).
+2. **Mona Lisa** (Fablen päätös 1, Commons C2RMF PD) ei ole erässä.
+3. **Botticellin NGA-teokset** (*Tietäjien kumarrus*, *Giuliano de' Medici*), **Bellini ja Tizian: *Jumalten juhla*** ja **Tizian: *Venus peilin edessä*** puuttuvat. Luvun 3.3 käsikirjoitus käyttää niitä; vaihtoehtona käsikirjoitus päivitetään toimitettuihin (Met *Ilmestys*, *Venus ja Adonis*).
+4. **Veistokset** (SMK, 3D), **taiteilijoiden muotokuvat** (Rijksmuseum ja NGA, luku 4.3) ja **karttapiirrokset** tulevat erikseen.
+5. **Ristiriita:** toiseksi maalauseräksi on pyydetty Uffizin ja Accademian PD-Art-kuvia, mutta Fablen päätös 1 rajaa Italian valtion museoiden kuvat pilotista pois (kaupallinen riski). Erä vaatii Fablen vahvistuksen ennen käyttöä.
+
+### 4.1 Ehdokkaat: 28 maalausta, kaikki National Gallery of Art, Washington (openaccess = CC0)
 
 | Osa | Teokset |
 |---|---|
