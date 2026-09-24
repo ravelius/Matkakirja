@@ -1,0 +1,519 @@
+{
+  "tilaus": "posti/fable-kuvaputki-radiopaneeli-tekstuurit-20260924.md",
+  "tila": "Tekstuuriosuus toimitettu R2:een ja tarkistettu; viitekuvat seuraavat erikseen",
+  "tekstuurit": [
+    {
+      "nimi": "dark-lacquered-wood-color-2048.png",
+      "tyyppi": "color",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-color-2048.png",
+      "sha256": "b034685eb6ce75317ecb2115217e5742baddf30fcaef8f7b027abd5bef150e8d",
+      "tavut": 5036395,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Dark, fine-grained wood base. Unity material's specular/roughness settings create the lacquer; the base color alone does not represent a glossy coating."
+    },
+    {
+      "nimi": "dark-lacquered-wood-color-1024.png",
+      "tyyppi": "color",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-color-1024.png",
+      "sha256": "906d18345020244b09d0480ffb10d97bb3d36c33655b21f4a9e9198efa83537e",
+      "tavut": 1337394,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Dark, fine-grained wood base. Unity material's specular/roughness settings create the lacquer; the base color alone does not represent a glossy coating."
+    },
+    {
+      "nimi": "dark-lacquered-wood-normal-gl-2048.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-normal-gl-2048.png",
+      "sha256": "fa7f068d8fd0df0c631d3b8740738c736092f6b876f7eed02f1652bdf15bd7e8",
+      "tavut": 7245865,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "dark-lacquered-wood-normal-gl-1024.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-normal-gl-1024.png",
+      "sha256": "5fda9107e8ba844c393363cd34b32398e641bf4107a7d18034fa421a62f0d2b7",
+      "tavut": 1657282,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "dark-lacquered-wood-roughness-2048.png",
+      "tyyppi": "roughness",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-roughness-2048.png",
+      "sha256": "6b4be08b9ac6b712658d7d453ce46bf339e6570922731e995239cf021ff2883b",
+      "tavut": 2087225,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "dark-lacquered-wood-roughness-1024.png",
+      "tyyppi": "roughness",
+      "materiaali": "dark-lacquered-wood",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/dark-lacquered-wood-roughness-1024.png",
+      "sha256": "6b24bf5239c7b760a70032b58aa70b865a2da7d90292e14bea6cababf6eace86",
+      "tavut": 541351,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Wood027",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Wood027 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "brushed-aluminium-color-2048.png",
+      "tyyppi": "color",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-color-2048.png",
+      "sha256": "c017c98f842424203775e84cb5d970f5c66a5b307eb35d0686fd3daa765f4795",
+      "tavut": 2548630,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Horizontal brushed steel/aluminium look for frames and knobs; set shader metallic=1."
+    },
+    {
+      "nimi": "brushed-aluminium-color-1024.png",
+      "tyyppi": "color",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-color-1024.png",
+      "sha256": "dd77bcdd64cc0be24a1e80f43be132f7061b10444e0d5c726560b1e85a1cedf2",
+      "tavut": 798957,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Horizontal brushed steel/aluminium look for frames and knobs; set shader metallic=1."
+    },
+    {
+      "nimi": "brushed-aluminium-normal-gl-2048.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-normal-gl-2048.png",
+      "sha256": "c23036aa3c86c750f2ba51d043708d78d7280208278de93ce43089ac4c8fe351",
+      "tavut": 4045420,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "brushed-aluminium-normal-gl-1024.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-normal-gl-1024.png",
+      "sha256": "da824d27492f2bd1c653b99718a6c499427b40d0e558c1e3dd2b2d653a70f495",
+      "tavut": 837153,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "brushed-aluminium-roughness-2048.png",
+      "tyyppi": "roughness",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-roughness-2048.png",
+      "sha256": "57b3e627a4480c5e32bac517a1558f65b8ea9d46b5e85454860550c2b0cb9e5b",
+      "tavut": 1744951,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "brushed-aluminium-roughness-1024.png",
+      "tyyppi": "roughness",
+      "materiaali": "brushed-aluminium",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/brushed-aluminium-roughness-1024.png",
+      "sha256": "cd240bf2d166873d67b518d630c703a270b4bfce7f398106794184b0c660decc",
+      "tavut": 491119,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Metal009",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Metal009 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "speaker-fabric-color-2048.png",
+      "tyyppi": "color",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-color-2048.png",
+      "sha256": "ad0f7ea682e711a799599899d7cdf2b34b036030fea3fbd0f57aceac99bd4f72",
+      "tavut": 8062672,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Tight grey woven fabric suitable for a mid-century speaker grille."
+    },
+    {
+      "nimi": "speaker-fabric-color-1024.png",
+      "tyyppi": "color",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-color-1024.png",
+      "sha256": "f69072e443a863173637dbc9f4ce9f6a0964fa56ca1a8b404beb1dce96ddd958",
+      "tavut": 2081955,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Tight grey woven fabric suitable for a mid-century speaker grille."
+    },
+    {
+      "nimi": "speaker-fabric-normal-gl-2048.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-normal-gl-2048.png",
+      "sha256": "a8add4d36cad3511133b7ccb164cc72f1e74a054e94c75d405ad811e00c14ef3",
+      "tavut": 10248655,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "speaker-fabric-normal-gl-1024.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-normal-gl-1024.png",
+      "sha256": "b4145cbe05a394c8e32ef00d96de959b946c7e41affcd313b46e610d4c3c5b51",
+      "tavut": 2415033,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "speaker-fabric-roughness-2048.png",
+      "tyyppi": "roughness",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-roughness-2048.png",
+      "sha256": "20d151fd25f747778ea124ea388876db2446c88faecb35a2775ccc62b81b3377",
+      "tavut": 2156943,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "speaker-fabric-roughness-1024.png",
+      "tyyppi": "roughness",
+      "materiaali": "speaker-fabric",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/speaker-fabric-roughness-1024.png",
+      "sha256": "355c6d3faa4040d7835d82745f3004950d5dc55af61d43cfa1eda81eb1015101",
+      "tavut": 545195,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Fabric031",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Fabric031 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "scratched-acrylic-color-2048.png",
+      "tyyppi": "color",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-color-2048.png",
+      "sha256": "d6a3cdda4b2ab078d2a1c33e831f846480bc403d41681ce00c3f92b7f0c2e940",
+      "tavut": 2774443,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Faint-scratch RGBA overlay derived from CC0 white-plastic pattern. Preserve transparency with a Unity alpha-blended transparent material; RGB alone is opaque-looking."
+    },
+    {
+      "nimi": "scratched-acrylic-color-1024.png",
+      "tyyppi": "color",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-color-1024.png",
+      "sha256": "64d671822ecbdc13608e8d9ca48a3964d9fe964c8b8a0b9f5f9a7b255e414e88",
+      "tavut": 1175008,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Faint-scratch RGBA overlay derived from CC0 white-plastic pattern. Preserve transparency with a Unity alpha-blended transparent material; RGB alone is opaque-looking."
+    },
+    {
+      "nimi": "scratched-acrylic-normal-gl-2048.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-normal-gl-2048.png",
+      "sha256": "25c7f5cffd3e73ae5dedea5a0ab477efd02e805d628781d42a007094351ed76c",
+      "tavut": 9073045,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "scratched-acrylic-normal-gl-1024.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-normal-gl-1024.png",
+      "sha256": "b5761a2efe41561cd6b8495249c4a1ca2c6b78db491e6d583bd8345140efa6b2",
+      "tavut": 2006727,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "scratched-acrylic-roughness-2048.png",
+      "tyyppi": "roughness",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-roughness-2048.png",
+      "sha256": "ab3148663a2c5c9df0a4fbf32e1f7420f6030a9ce152e700d801a967b2132b97",
+      "tavut": 2673247,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "scratched-acrylic-roughness-1024.png",
+      "tyyppi": "roughness",
+      "materiaali": "scratched-acrylic",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/scratched-acrylic-roughness-1024.png",
+      "sha256": "a567327e900bf4ab21450212b9b534f59dbbce0af4f4146200800cb0dca66179",
+      "tavut": 674638,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Plastic013B",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Plastic013B (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "yellowed-vu-paper-color-2048.png",
+      "tyyppi": "color",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-color-2048.png",
+      "sha256": "18d8a82795cafe627705722f5d56cfc776bc5f3681352132064507936aee7f9f",
+      "tavut": 7239963,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Blank beige paper for the VU meter background; no markings or text."
+    },
+    {
+      "nimi": "yellowed-vu-paper-color-1024.png",
+      "tyyppi": "color",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-color-1024.png",
+      "sha256": "b0c9d770789fc4cf9d4f9459d5f11a6807276df5e449c424d96029f5916ac075",
+      "tavut": 1755378,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Blank beige paper for the VU meter background; no markings or text."
+    },
+    {
+      "nimi": "yellowed-vu-paper-normal-gl-2048.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-normal-gl-2048.png",
+      "sha256": "af0c79e90f19cc073d6fb89d94c61e678e48040d801915d4f71dbbceec0a11cc",
+      "tavut": 3736515,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "yellowed-vu-paper-normal-gl-1024.png",
+      "tyyppi": "normal-gl",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-normal-gl-1024.png",
+      "sha256": "520bcd3015217733d8a8771ac842bb0c78225783cc3752e7646251ad2854146d",
+      "tavut": 698399,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "yellowed-vu-paper-roughness-2048.png",
+      "tyyppi": "roughness",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-roughness-2048.png",
+      "sha256": "3f674ddd5b91637ed1d20b2d447b28b653c51171b0f8d1c58528d2ef6e4a9618",
+      "tavut": 2601654,
+      "mitat": [
+        2048,
+        2048
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    },
+    {
+      "nimi": "yellowed-vu-paper-roughness-1024.png",
+      "tyyppi": "roughness",
+      "materiaali": "yellowed-vu-paper",
+      "url": "https://media.matkakirja.app/linssit/radio/tekstuurit/yellowed-vu-paper-roughness-1024.png",
+      "sha256": "3cc9a292714ad1e4b1e49afe7bab269d567c4c75cb9685e647cd3fc2592f112d",
+      "tavut": 663016,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "lahde": "https://ambientcg.com/view?id=Paper006",
+      "tekija": "ambientCG",
+      "lisenssi": "CC0-1.0",
+      "attribuutio": "ambientCG, Paper006 (optional)",
+      "huomiot": "Color map is sRGB; normal-gl and roughness are linear data maps. Do not sample data maps as sRGB."
+    }
+  ],
+  "viitekuvat": [],
+  "todennus": "R2-kokorunko luettu takaisin; HTTP 200, image/png, mitat, tavut, SHA-256 ja CORS tarkistettu. Värikartoissa upotettu sRGB ICC; normal- ja roughness-kartat ovat lineaarisia datakarttoja.",
+  "kytkenta": "Ei liitetty Unity-materiaaleihin eikä todennettu julkaistussa pelissä."
+}
