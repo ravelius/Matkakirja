@@ -4411,3 +4411,7 @@ Uusi sessio aloittaa kuvatilausluonnoksesta (galleria 58 + ennenNyt 12).
 ## OMISTAJA klo 18.2x (SITOVA): 5 h -KIINTION TAUKORAJA 98 % (OLI 90 %) (24.9.2026 klo 18.23)
 
 Omistaja: 'Voit tehdä 5h 98% asti'. Raamattu päivitetty (VIIKKOKIINTIÖ-kohta). Postivahdille: tauko-ilmoitus vasta 98 %:ssa; nykyinen kiintiö 84 %, nollautuu 19.19.
+
+## OMISTAJA klo 18.2x: BUILD-NUMERO NAKYVIIN TESTFLIGHTIIN → VERSIO 1.0.<n> BUILD 11:STA ALKAEN (24.9.2026 klo 18.24)
+
+TestFlight näyttää '1.0.0 (202609241305)'; build-tunniste ei saa pienentyä, joten ordinaali menee versionumeroon: build 11 = 1.0.11 (aikaleima). Julkaisija tekee PR:n workflowiin (MARKETING_VERSION ordinaalista, ei käsin); build 10 jatkaa vanhalla muodolla.
