@@ -4423,3 +4423,7 @@ TestFlight näyttää '1.0.0 (202609241305)'; build-tunniste ei saa pienentyä, 
 ## BUILD 10 JONOSSA AJURIN TAKANA: SAVUKE 36001474913 PAATTYI ITSESTAAN (FAILURE) ENNEN PERUMISTA; AJURILLA 'JULKAISE PELI MAIN' 36020424867; RADIO 41 EI MUUTOSTA (24.9.2026 klo 18.31)
 
 Omistaja hyväksyi kortilla savukkeen perumisen (Julkaisijan luokitin esti); gh run cancel palautti 'already completed'. Build 10 alkaa web-julkaisun jälkeen; Julkaisijalle: ei uusia ajurijonoja ennen build 10:tä. PR #3107: versio 1.0.<ordinaali> build 11:stä (laskuri 10), aikaleima säilyy. Linssiseppä: 41) webkin näyttää soidessa 'KREIKKA / ATEENA · KREIKKA' (ΕΡΤ ei piirry 5×7-fontilla → maan nimi; aseman nimi vain ruudunlukijalle) → ei muutosta; 39, 40, 42 välitetty Natiivi-UI:lle webin mittoineen.
+
+## LEVYHALYTYS klo 18.4x: VAPAANA 23 Gt (RAJA 35) — SYYT wt/ 60 Gt (23 SISALTOKIRJURI-WORKTREETA À 1,1 Gt node_modules), proto-3d/lokit 28 Gt, Build/ 17 Gt (24.9.2026 klo 18.35)
+
+Käsketty: Sisältökirjuri poistaa pushatut worktreensä (PR:n ei tarvitse olla mergetty) ja käyttää jatkossa PLAYWRIGHT_JS-polkua roolikansion node_modulesiin (ei npm ci per worktree); Natiiviseppä poistaa vanhat Build-kansiot (yo, testflight-4, laite ~6 Gt), ei Library/; Linssiseppä poistaa raakakehykset (piikit 2,4 Gt + ~6 Gt); Postivahti seuraa 10 min välein, hälytys alle 15 Gt. DerivedData 4,6 Gt jätetään (käännökset kesken).
