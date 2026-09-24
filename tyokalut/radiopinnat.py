@@ -28,6 +28,17 @@ import sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageMath
 
 VALO = (-0.4, 0.6, 0.7)
+# Kuvaputki toimitti harjatun alumiinin (ambientCG Metal009): messingin sävy kerrotaan päälle.
+MESSINKI = (1.0, 0.80, 0.46)
+# Sävyt ja kirkkaus kotelon webin liukuvärin (#8f5f2f → #33200f) ja webin asteikkopaperin (#efdcb4) suuntaan.
+SAVYT = {'puu': (1.45, 1.30, 1.15), 'messinki': MESSINKI, 'paperi': (1.08, 1.0, 0.80)}
+# Lähteet (kuvaputki 24.9.2026, posti/kuvatoimitus-radiopaneeli-20260924.json; CC0, attribuutio vapaaehtoinen).
+LAHTEET = {
+    'puu': 'ambientCG Wood027 (CC0) https://ambientcg.com/view?id=Wood027',
+    'messinki': 'ambientCG Metal009 (CC0) https://ambientcg.com/view?id=Metal009, messingin sävy',
+    'lasi': 'ambientCG Plastic013B (CC0) https://ambientcg.com/view?id=Plastic013B',
+    'paperi': 'ambientCG Paper006 (CC0) https://ambientcg.com/view?id=Paper006',
+}
 AMBIENT, DIFFUUSI, KIILTO = 0.55, 0.6, 0.25
 
 _n = math.sqrt(sum(c * c for c in VALO))
@@ -119,18 +130,22 @@ def kehys(messinki, koko=128, reika=96):
     return k
 
 
+def savyta(kuva, savy):
+    return Image.merge('RGB', [c.point(lambda v, k=k: min(255, int(v * k))) for c, k in zip(kuva.split(), savy)])
+
+
 def lasi(naarmut, koko):
     """Heijastus viistona kaistana ja naarmut alfana (valkoinen päällyskuva)."""
     w, h = koko
-    n = rajaa(naarmut, koko).convert('L')
+    n = rajaa(naarmut.convert('RGB'), koko).convert('L')
     pehmea = n.filter(ImageFilter.GaussianBlur(3))
     ylipaasto = ImageChops.subtract(n, pehmea, scale=1, offset=0)
-    naarmualfa = Image.eval(ylipaasto, lambda v: min(90, v * 2))
+    naarmualfa = Image.eval(ylipaasto, lambda v: min(46, v))
     heijastus = Image.new('L', (w, h), 0)
     d = ImageDraw.Draw(heijastus)
     for y in range(h):
         a = max(0.0, 1 - y / (h * 0.38))
-        d.line([(0, y), (w, y - h * 0.1)], fill=int(40 * a))
+        d.line([(0, y), (w, y - h * 0.1)], fill=int(34 * a))
     alfa = ImageChops.add(heijastus, naarmualfa)
     tulos = Image.new('RGBA', (w, h), (255, 255, 255, 0))
     tulos.putalpha(alfa)
@@ -176,8 +191,10 @@ def main(argv):
         if v is None:
             print(f'puuttuu: {nimi}.png')
             return 1
+        if nimi in SAVYT:
+            v = savyta(v, SAVYT[nimi])
         leivotut[nimi] = leivo(v, lue(lahde, nimi + '-normal'), lue(lahde, nimi + '-roughness', 'L'))
-    naarmut = lue(lahde, 'lasi')
+    naarmut = lue(lahde, 'lasi', 'RGBA')
     if naarmut is None:
         print('puuttuu: lasi.png')
         return 1
@@ -193,6 +210,11 @@ def main(argv):
         p = os.path.join(ulos, tiedosto + '.png')
         kuva.save(p, optimize=True)
         print(f'{tiedosto}.png {kuva.size[0]} × {kuva.size[1]} {os.path.getsize(p) // 1024} kt')
+    # Tekijätiedot (Raamattu: attribuutio ambientCG) samaan kansioon; Natiivi-UI:n tekijäsivu lukee tämän.
+    with open(os.path.join(ulos, 'radio-pinnat-lahteet.txt'), 'w', encoding='utf-8') as f:
+        f.write('Radiopaneelin pinnat (tyokalut/radiopinnat.py, valo leivottu vasemmalta ylhäältä)\n')
+        for nimi, rivi in LAHTEET.items():
+            f.write(f'{nimi}: {rivi}\n')
     return 0
 
 
