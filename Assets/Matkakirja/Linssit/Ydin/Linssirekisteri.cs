@@ -84,6 +84,14 @@ namespace Matkakirja.Linssit
         public event Action<ILinssi> Vaihtui;
 
         /// <summary>
+        /// PROFILOINTIKOUKKU (linssi, vaihe, alku): LinssiOhjain avaa ja sulkee tällä ProfilerMarkerin
+        /// vaiheille Avaus, Paivitys, Sulku ja Vaihtui (Natiivi-UI:n kuuntelijat), jotta `ui piikit`
+        /// erottelee linssien oman ajan (ydin ei viittaa Unityyn).
+        /// </summary>
+        public static Action<string, string, bool> Mittaa;
+        public const string Avaus = "Avaa", Paivitys = "Paivita", Sulku = "Sulje", Vaihto = "Vaihtui";
+
+        /// <summary>
         /// LINSSIN PORTTI (web js/ui.js linssikarttaEstaa + js/ui-apurit.js linssiEstaa, omistaja 4.9.2026:
         /// "pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa"): näiden linssien ajan Liiku ja
         /// Matkusta ovat harmaana, kaupungin napautus ei liikuta eikä avaa lehteä. Webissä luokan
@@ -130,26 +138,43 @@ namespace Matkakirja.Linssit
             if (!Saatavilla(id)) return Auki != null;
             SuljeHiljaa();
             Auki = linssi;
-            linssi.Avaa(ymparisto);
-            Vaihtui?.Invoke(linssi);
+            var m = Mittaa;
+            m?.Invoke(id, Avaus, true);
+            try { linssi.Avaa(ymparisto); } finally { m?.Invoke(id, Avaus, false); }
+            m?.Invoke(id, Vaihto, true);
+            try { Vaihtui?.Invoke(linssi); } finally { m?.Invoke(id, Vaihto, false); }
             return true;
         }
 
         public void Sulje()
         {
             if (Auki == null) return;
+            string id = Auki.Tiedot.Id;
             SuljeHiljaa();
-            Vaihtui?.Invoke(null);
+            var m = Mittaa;
+            m?.Invoke(id, Vaihto, true);
+            try { Vaihtui?.Invoke(null); } finally { m?.Invoke(id, Vaihto, false); }
         }
 
         /// <summary>Kutsutaan joka kehys.</summary>
-        public void Paivita() => Auki?.Paivita();
+        public void Paivita()
+        {
+            var l = Auki;
+            if (l == null) return;
+            var m = Mittaa;
+            if (m == null) { l.Paivita(); return; }
+            m(l.Tiedot.Id, Paivitys, true);
+            try { l.Paivita(); } finally { m(l.Tiedot.Id, Paivitys, false); }
+        }
 
         void SuljeHiljaa()
         {
             var vanha = Auki;
             Auki = null;
-            vanha?.Sulje();
+            if (vanha == null) return;
+            var m = Mittaa;
+            m?.Invoke(vanha.Tiedot.Id, Sulku, true);
+            try { vanha.Sulje(); } finally { m?.Invoke(vanha.Tiedot.Id, Sulku, false); }
         }
     }
 }

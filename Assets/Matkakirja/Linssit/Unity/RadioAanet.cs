@@ -148,6 +148,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(string url)
         {
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+            ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true; // ei mp3:n purkua pääsäikeessä (EsityksenAani)
             yield return p.SendWebRequest();
             if (p.result == UnityWebRequest.Result.Success) ladatut[url] = DownloadHandlerAudioClip.GetContent(p);
             else Debug.LogWarning($"MATKAKIRJA radio: viritysääni {url} ei latautunut: {p.error}");
