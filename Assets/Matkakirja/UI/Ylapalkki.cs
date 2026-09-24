@@ -27,9 +27,13 @@
 // kummallakin puolella (pilleri vasemmalla, napit oikealla, pilleri ei ulotu saaren alle); lovellisella laitteella
 // loven riville, ilman lovea tilarivin korkeudelle (tilarivi on piilotettu). Saari luetaan Screen.cutoutsista,
 // muuten arvioidaan turva-alueen yläreunasta (≥ 55 pt Dynamic Island 126 × 37 pt ylhäällä 11 pt, ≥ 40 pt lovi).
+// LÖYDÖS 20 (omistaja 24.9. klo 11.2x): oikealla vain karttanappi (Karttaselite, Vieras) ja ☰; ratas ei ole
+// yläreunassa (kehittäjän säätimet ovat ☰-valikon Kehittäjä-rivillä). Pillerin alle asettuu matkakirjan lappu
+// samanlevyisenä kaupunkipillerinä (Matkakirjakortti lukee PilleriMuuttui-tapahtuman).
 //
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -112,6 +116,11 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly VisualElement palkki, pilleri, ilmoitus, logo;
         bool? kelluvaNyt;
+        readonly VisualElement napit;
+        readonly List<(VisualElement Nappi, VisualElement Koti)> vieraat = new List<(VisualElement, VisualElement)>();
+
+        /// <summary>Pillerin paikka tai koko muuttui (kaupunkipilleri seuraa sitä iPhonella).</summary>
+        public event Action PilleriMuuttui;
         readonly Button vakasnappi;
         bool piilossa, nakyy = true;
         readonly Label raha, kello, ilmoitusTeksti;
@@ -147,9 +156,9 @@ namespace Matkakirja.Natiivi
             raha = Rakenne.Teksti("", "mk-pilleri__raha", pilleri);
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
             pilleri.style.display = DisplayStyle.None;
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => SovitaPilleri());
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
-            var napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
+            napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
             Ratas.tooltip = "Äänentasot ja asetukset";
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
@@ -252,9 +261,10 @@ namespace Matkakirja.Natiivi
         void AsetaKelluva()
         {
             bool k = Kelluva;
-            Ratas.style.display = !k || Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            Ratas.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
             if (kelluvaNyt == k) return;
             kelluvaNyt = k;
+            SiirraVieraat();
             palkki.EnableInClassList("mk-ylapalkki--kelluva", k);
             palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
             logo.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
@@ -265,6 +275,29 @@ namespace Matkakirja.Natiivi
             rivi = null;
             kelloTeksti = "";
             Aseta(r);
+        }
+
+        /// <summary>
+        /// iPhonen yläriville tuleva muun näkymän nappi (karttaselitteen nappi ☰:n vasemmalle puolelle). Kelluvassa
+        /// tilassa nappi siirretään riviin (luokka mk-ylapalkki__vieras), muuten se palaa omaan isäänsä.
+        /// </summary>
+        public void Vieras(VisualElement nappi)
+        {
+            if (nappi == null || vieraat.Exists(v => v.Nappi == nappi)) return;
+            vieraat.Add((nappi, nappi.parent));
+            SiirraVieraat();
+            Paivita();
+        }
+
+        void SiirraVieraat()
+        {
+            bool k = kelluvaNyt == true;
+            foreach (var (n, koti) in vieraat)
+            {
+                n.EnableInClassList("mk-ylapalkki__vieras", k);
+                if (k) { if (n.parent != napit) napit.Insert(0, n); }
+                else if (n.parent != koti) koti?.Add(n);
+            }
         }
 
         /// <summary>Ruudun koko tai testikomento muutti tilaa: näkymät asettuvat uudelleen (TurvaMuuttui).</summary>

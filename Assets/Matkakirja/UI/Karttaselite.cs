@@ -199,6 +199,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
+        /// <summary>Karttanappi (iPhonella yläpalkin riviin, Ylapalkki.Vieras).</summary>
+        public VisualElement Nappi => nappi;
+
         public void NaytaNappi(bool nakyy)
         {
             nappiSallittu = nakyy;
@@ -271,9 +274,11 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             float yla = Ylapalkki.Varaus + 8, oikea = Ylapalkki.Piilossa ? 10 + 40 + 6 : 10;
-            nappi.style.top = yla;
+            // iPhonella nappi on yläpalkin rivissä (Ylapalkki.Vieras): ei omaa sijaintia.
+            bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
+            nappi.style.top = rivissa ? StyleKeyword.Null : yla;
+            nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
             paneeli.style.top = yla;
-            nappi.style.right = oikea;
             paneeli.style.right = oikea;
         }
 

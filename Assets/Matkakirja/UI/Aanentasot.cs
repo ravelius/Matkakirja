@@ -19,6 +19,7 @@
 // Liukusäätimet: kultainen (--kulta #eab84e) täyttö ja nuppi, arvo kultaisena
 // tasalevein numeroin. Kehittäjän kytkimet (maailma, mittari) ja työhuone
 // jäävät verkkopeliin.
+// iPHONE (löydös 20): ☰-valikon riveiltä paneeli aukeaa osana — Äänet (liukusäätimet) tai Offline-kartat.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,8 +44,19 @@ namespace Matkakirja.Natiivi
             public Button Nappi;
         }
 
+        public enum Osa { Kaikki, Aanet, Offline }
+        Osa osa;
+
+        public void AvaaOsa(Osa o)
+        {
+            if (Auki) Sulje();
+            osa = o;
+            Avaa();
+        }
+
         public Aanentasot(UiKerros kerros, Func<float> alareuna) : base(kerros, alareuna, "mk-aanentasot")
         {
+            AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
             Otsikko("Äänentasot");
             foreach (var v in Asetukset.VoimaJarjestys) Saadinrivi(v);
 
@@ -80,6 +92,8 @@ namespace Matkakirja.Natiivi
 
         protected override void Paivita()
         {
+            foreach (var e in Sisalto.Children())
+                if (e != offlineOsio) e.style.display = osa == Osa.Offline ? DisplayStyle.None : DisplayStyle.Flex;
             foreach (var pari in saatimet)
             {
                 int p = Mathf.RoundToInt(Asetukset.Taso(pari.Key) * 100f);
@@ -100,7 +114,7 @@ namespace Matkakirja.Natiivi
                 kuunneltu = palvelu;
                 if (palvelu != null) palvelu.Muuttui += OfflineMuuttui;
             }
-            offlineOsio.style.display = palvelu != null ? DisplayStyle.Flex : DisplayStyle.None;
+            offlineOsio.style.display = palvelu != null && osa != Osa.Aanet ? DisplayStyle.Flex : DisplayStyle.None;
             if (palvelu == null) return;
 
             var nahty = new HashSet<string>();

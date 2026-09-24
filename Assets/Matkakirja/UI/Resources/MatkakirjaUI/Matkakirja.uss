@@ -320,6 +320,24 @@
     border-radius: 18px;
 }
 
+/* Löydös 20: karttaselitteen nappi ☰:n vieressä saaren rivillä (Ylapalkki.Vieras). */
+.mk-ylapalkki__napit > .mk-ylapalkki__vieras {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: 7px;
+}
+
+.mk-ylapalkki--saari .mk-ylapalkki__napit > .mk-ylapalkki__vieras {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    border-width: 1px;
+    border-radius: 18px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.82);
+}
+
 /* --- hetkellinen viesti (.event-toast) ----------------------------------- */
 
 .mk-ilmoitus {
