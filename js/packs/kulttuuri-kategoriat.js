@@ -97481,6 +97481,29 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Vikebe, Wikimedia Commons (CC0)',
           wiki: 'University of Greenland',
         },
+        {
+          otsikko: 'Kymmenenneksi vähiten jäätä satelliittiajassa',
+          teksti: 'Grönlannin edustalla ei jää sula yksin: koko '
+            + 'Jäämeren kesäjää mitataan joka syksy. Syyskuun 12. '
+            + 'päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia. Se on mittaushistorian '
+            + 'kymmenenneksi vähiten, saman verran kuin vuosina 2008, '
+            + '2010 ja 2025 — silti viimeisten kahdenkymmenen vuoden '
+            + 'minimit ovat koko satelliittiajan kaksikymmentä '
+            + 'pienintä. Tutkija Linette Boisvert kuvaili tilannetta '
+            + 'NASA:lle: jää on "tasaantunut mutta yhä matalalla '
+            + 'verrattuna sarjan alkupäähän".',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677).png',
+          lyhyt: 'NASA:n visualisointi näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion kuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
   ],
