@@ -194,6 +194,33 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(M, v.Kosketettu(), "ei vaihetta, ei muutosta");
         }
 
+        /// <summary>
+        /// Löydös 45 (web kaynnistaLuentavahti, mitattu Ateena 393×852 24.9.): Liiku piilossa koko kerronnan ajan,
+        /// myös puheenvuorojen välissä (välirauha 1300 ms), ja palaa välirauhan jälkeen; ei välähdystä pitkässä luennossa.
+        /// </summary>
+        [Testi] static void LiikuPiilossaKerronnanAjanKuinWeb()
+        {
+            Oleta.Sama(200, LuentaPiilo.VahtiMs);
+            Oleta.Sama(1300, LuentaPiilo.ValirauhaMs);
+            var p = new LuentaPiilo();
+            Oleta.Tosi(!p.Paivita(false, 0), "hiljaa: näkyy");
+            Oleta.Tosi(p.Paivita(true, 3300), "isoisä äänessä");
+            Oleta.Tosi(p.Paivita(true, 40000), "yli 30 s puhetta: yhä piilossa");
+            Oleta.Tosi(p.Paivita(true, 47900), "luennan viimeinen sana");
+            // Isoisä vaikenee, Livia aloittaa 900 ms:n kuluttua: ei välähdystä.
+            Oleta.Tosi(p.Paivita(false, 48000), "välirauha alkaa");
+            Oleta.Tosi(p.Paivita(false, 48800), "välirauha");
+            Oleta.Tosi(p.Paivita(true, 48800), "Livia äänessä");
+            Oleta.Tosi(p.Paivita(true, 51900), "Livian viimeinen sana");
+            Oleta.Tosi(p.Paivita(false, 53199), "vielä välirauhassa");
+            Oleta.Tosi(!p.Paivita(false, 53200), "1300 ms: Liiku palaa");
+            Oleta.Tosi(!p.Piilossa);
+            // Ohita pysäyttää puheen: sama välirauha.
+            Oleta.Tosi(p.Paivita(true, 60000));
+            Oleta.Tosi(p.Paivita(false, 60200), "ohitettu");
+            Oleta.Tosi(!p.Paivita(false, 61300), "palaa ohituksen jälkeen");
+        }
+
         [Testi] static void LaivaRiviSatamasta()
         {
             var m = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(3), "Fogg", "lontoo");

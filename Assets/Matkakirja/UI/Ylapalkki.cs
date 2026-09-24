@@ -103,6 +103,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
         const float SaariRivi = 36f, SaariReuna = 14f, SaariVali = 6f;
 
+        /// <summary>
+        /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
+        /// matalana ilman logoa; pilleri (raha/päivä) vasemmalle ja ☰ oikealle Dynamic Islandin riville, ruskea palkki
+        /// taustalla vain turva-alueen korkuisena (rivi + 4,8 pt, jos rivi ulottuu turva-alueen alle).
+        /// </summary>
+        public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
+        /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
+        const float MatalaRivi = 40f, MatalaAla = 4.8f;
+        bool? matalaNyt;
+
         /// <summary>Testikomento (ui ylapalkki saari x,y,w,h pisteinä | pois): simulaattorissa ei ole cutouts-tietoa.</summary>
         public static Rect? PakotaSaari;
 
@@ -263,10 +273,22 @@ namespace Matkakirja.Natiivi
         {
             var r = kerros.Reunat(UiKerros.Tilarivi);
             AsetaKelluva();
-            if (!(kelluvaNyt == true && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r)))
+            bool matala = Matala && !Piilossa;
+            if (matala != matalaNyt)
+            {
+                matalaNyt = matala;
+                logo.style.display = matala || kelluvaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
+                // Pillerin muoto vaihtuu ("300£ 1/80" saaren vieressä): sama rivi uudelleen.
+                string rv = rivi;
+                rivi = null;
+                kelloTeksti = "";
+                Aseta(rv);
+            }
+            if (!((kelluvaNyt == true || matala) && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r, matala)))
             {
                 kelluvaVaraus = null;
                 palkki.EnableInClassList("mk-ylapalkki--saari", false);
+                palkki.EnableInClassList("mk-ylapalkki--matala", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
                 pilleri.style.fontSize = StyleKeyword.Null;
                 var t = Tayte;
@@ -284,7 +306,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pilleri ja napit saaren riville (ks. SAARIRIVI yllä); paneelin yksiköt muunnetaan ruudun pisteistä.</summary>
-        bool AsetaSaaririvi(Vector4 r)
+        bool AsetaSaaririvi(Vector4 r, bool matala = false)
         {
             var paneeli = palkki.panel;
             if (paneeli == null || Screen.width <= 0) return false;
@@ -293,21 +315,26 @@ namespace Matkakirja.Natiivi
             Vector2 P(float x, float y) => RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(x * pp, y * pp));
             var saari = Saari();
             float yksikko = P(100f, 0f).x / 100f;
-            float rivi = SaariRivi * yksikko;
+            float rivi = (matala ? MatalaRivi : SaariRivi) * yksikko;
             var ylakulma = P(saari.xMin, saari.yMin);
             var alakulma = P(saari.xMax, saari.yMax);
             float keski = saari.height > 0 ? (ylakulma.y + alakulma.y) / 2f : 0f;
             float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
-            palkki.EnableInClassList("mk-ylapalkki--saari", true);
+            palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
+            palkki.EnableInClassList("mk-ylapalkki--matala", matala);
             palkki.style.paddingTop = yla;
+            palkki.style.paddingBottom = 0;
             palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
             palkki.style.paddingRight = r.z + SaariReuna * yksikko;
-            palkki.style.height = yla + rivi;
+            // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
+            float korkeus = matala ? Mathf.Max(r.y, yla + rivi + MatalaAla * yksikko) : yla + rivi;
+            palkki.style.height = korkeus;
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
             pilleri.style.maxWidth = pilleriMax;
-            kelluvaVaraus = Mathf.Max(0f, yla + rivi - r.y);
+            // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
+            kelluvaVaraus = Mathf.Max(0f, korkeus - r.y);
             SovitaPilleri();
             return true;
         }
@@ -320,7 +347,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void SovitaPilleri()
         {
-            if (!palkki.ClassListContains("mk-ylapalkki--saari") || kello.style.display == DisplayStyle.None)
+            bool matala = palkki.ClassListContains("mk-ylapalkki--matala");
+            if (!(palkki.ClassListContains("mk-ylapalkki--saari") || matala) || kello.style.display == DisplayStyle.None)
             {
                 pilleri.style.fontSize = StyleKeyword.Null;
                 return;
@@ -335,7 +363,7 @@ namespace Matkakirja.Natiivi
             float teksti = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
                 + kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             if (float.IsNaN(kiintea) || teksti <= 0) return;
-            float koko = 14f;
+            float koko = matala ? 12.48f : 14f; // matala: webin iPhone-pillerin koko
             while (koko > 11f && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
             if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
         }
@@ -350,7 +378,7 @@ namespace Matkakirja.Natiivi
             SiirraVieraat();
             palkki.EnableInClassList("mk-ylapalkki--kelluva", k);
             palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
-            logo.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
+            logo.style.display = k || matalaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
             if (k) palkki.style.backgroundImage = StyleKeyword.None;
             else Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
             // Pillerin muoto vaihtuu: sama rivi uudelleen.
@@ -485,7 +513,7 @@ namespace Matkakirja.Natiivi
                 kello.text = "";
                 kello.style.display = DisplayStyle.None;
             }
-            else if (kelluvaNyt == true)
+            else if (kelluvaNyt == true || matalaNyt == true)
             {
                 // iPhone: "300£ 1/80" (omistaja 24.9.2026) — raha ja päivä / isoisän ennätys.
                 string luku = Raha(osat[0]).TrimStart('£');
