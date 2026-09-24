@@ -178,7 +178,7 @@ namespace Matkakirja.Natiivi
             PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             Linssirekisteri.Mittaa = Mittaa;
             foreach (var id in MitattavatLinssit)
-                foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto })
+                foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto, OsaKerros, OsaAani, OsaLinssi, OsaTahdet, OsaPilvet })
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
@@ -331,8 +331,9 @@ namespace Matkakirja.Natiivi
 
             public void Avaa(ILinssiYmparisto y)
             {
-                kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
-                aani = EsityksenAani.Luo(kerros.transform, aanite);
+                using (Merkki("ihmisen-matka", OsaKerros).Auto()) kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
+                using (Merkki("ihmisen-matka", OsaAani).Auto()) aani = EsityksenAani.Luo(kerros.transform, aanite);
+                using var _ = Merkki("ihmisen-matka", OsaLinssi).Auto();
                 linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani)
                 {
                     // Linssi muistaa paikkansa (web localStorage → PlayerPrefs, sama avain).
@@ -765,7 +766,8 @@ namespace Matkakirja.Natiivi
             public AstronauttiKerros Kerros => kerros;
             public void Avaa(ILinssiYmparisto y)
             {
-                kerros = AstronauttiKerros.Luo(o.kierto);
+                using (Merkki("satelliitti", OsaKerros).Auto()) kerros = AstronauttiKerros.Luo(o.kierto);
+                using var _ = Merkki("satelliitti", OsaLinssi).Auto();
                 linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
                 kerros.Linssi = linssi;
                 linssi.Avaa(y);
@@ -785,7 +787,11 @@ namespace Matkakirja.Natiivi
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
         static readonly Unity.Profiling.ProfilerMarker KomennotMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Komennot");
 
-        static Unity.Profiling.ProfilerMarker Merkki(string id, string vaihe)
+        /// <summary>Avauksen osat (Merkki(id, Osa…)): 3D-kerroksen luonti, äänen luonti, ytimen linssi.</summary>
+        internal const string OsaKerros = "Avaa.Kerros", OsaAani = "Avaa.Aani", OsaLinssi = "Avaa.Linssi",
+            OsaTahdet = "Avaa.Tahdet", OsaPilvet = "Avaa.Pilvet";
+
+        internal static Unity.Profiling.ProfilerMarker Merkki(string id, string vaihe)
         {
             if (!merkit.TryGetValue((id, vaihe), out var m))
                 merkit[(id, vaihe)] = m = new Unity.Profiling.ProfilerMarker("Update.Linssi." + id + "." + vaihe);

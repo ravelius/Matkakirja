@@ -103,8 +103,10 @@ namespace Matkakirja.Natiivi
 
         public void Kohteet(IReadOnlyList<Havaintokohde> kohteet)
         {
-            taivas ??= Tahtitaivas.Luo(georeferenssi, Matkakirja.Linssit.Tahdet.AstronautinKerroin, LinssiOhjain.Instanssi?.VahennettyLiike ?? false);
-            pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
+            using (LinssiOhjain.Merkki("satelliitti", LinssiOhjain.OsaTahdet).Auto())
+                taivas ??= Tahtitaivas.Luo(georeferenssi, Matkakirja.Linssit.Tahdet.AstronautinKerroin, LinssiOhjain.Instanssi?.VahennettyLiike ?? false);
+            using (LinssiOhjain.Merkki("satelliitti", LinssiOhjain.OsaPilvet).Auto())
+                pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
             // Tumma avaruus ja ilmakehän hehku (web AVARUUDEN_TAUSTA, ILMAKEHAN_VARI).
             avaruus ??= Avaruus.Luo(georeferenssi, georeferenssi.transform);
             if (pisteet.Count > 0) return;
