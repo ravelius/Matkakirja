@@ -769,11 +769,25 @@ ylimpänä ja "Kehittäjä" (jos kehittäjätila päällä) aivan alimpana.
 vanha yksi-pilleri-asettelu yhä käytössä, silmälasinappi yhä kartalla,
 tai ☰-valikon rivijärjestys väärä.
 
-## B7-7: Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
+## B7-7 (löydös 23): Portin/avauksen/lennon tekstit sanatarkasti webin mukaan
 
-**Omistaja (Fable 24.9. klo 12.1x)**: portin, avausruudun ja lennon
-tekstien pitää täsmätä webiin sanatarkasti.
-**Vastuu**: Natiivi-UI (portti/avaus), Natiiviseppä (lento), build 7.
+**Omistaja (Fable 24.9. klo 12.1x, tarkennettu löydös 23:na klo 12.0x–12.04)**:
+portin, avausruudun ja lennon tekstien pitää täsmätä webiin sanatarkasti.
+**TUNNETTU BUGI (23A)**: natiivi näyttää/soittaa LENNON AIKANA
+avaustekstin (INTRO_TEXT "Vintiltä löytyi…" + "Heathrow, Lontoo" +
+intro-puhe.mp3) — VÄÄRIN. Webin kaava: avausruudulla (ennen lentoa)
+INTRO_PAIKKA "Heathrow, Lontoo" + kuukausi/vuosi laitteen kellosta +
+INTRO_TEXT + luenta `intro-puhe.mp3` (kokoelma id `intro`), nappi
+"Valitse aloituskaupunki". LENNON AIKANA vain `flightFirst`-repliikki +
+luenta `puhe-lento-alku.mp3` (id `lento-alku`). Lennon jälkeen normaali
+saapuminen.
+**23B JO KORJATTU** (Natiivi-UI, `natiivi-ui/iphone-island` b779dc8):
+`PeliOhjain.LennonVaiheMuuttui` häivyttää yläpalkin, pillerit, ☰/⚙,
+kartta-/linssinapin, nostot, Liiku, kartuschan, matkakirjan ja pulun
+(0,6 s pois / 0,8 s takaisin), vain tekstikaista jää — TARKISTA tämä
+osa silti uudelleen build 7:ssä varmistukseksi.
+**Vastuu**: Natiivi-UI (portti/avaus/UI-piilotus), Natiiviseppä (lennon
+tila), build 7.
 
 **Testikomento**: kylmäkäynnistys → `kuva portti-b7` (etusivu/portti).
 `ui aloita <uusi kaupunki>` → heti avautuvasta ruudusta `kuva avaus-b7`,
@@ -800,15 +814,48 @@ tarkista ettei topbar/pulu/kartuscha näy lennon aikana (jatkokuva
   UI-elementit (yläpalkki/topbar, karttaselite, kartuscha) eivät näy
   lennon aikana webissäkään — vain avauksen/lennon oma teksti-ikkuna.
 
-**PASS-ehto**: kaikki kolme tekstikohtaa täsmäävät SANATARKASTI (ei
-parafraaseja), UI-elementit piilossa lennon ajan. **FAIL**: mikä
-tahansa teksti eroaa sanasta sanaan tai UI-elementti näkyy lennolla.
+**PASS-ehto**: avausruudulla INTRO_TEXT+intro-puhe, LENNOLLA
+flightFirst+puhe-lento-alku (EI avausteksti toistu lennolla), UI-elementit
+piilossa lennon ajan. **FAIL**: lento näyttää/soittaa yhä avaustekstin
+tai UI-elementti näkyy lennolla.
 
-## B7-8: ☰-valikon "Uusi peli" palauttaa aloitusporttiin
+## B7-9 (löydös 24A): Aloitusportin ruutu täsmälleen webin mukaan (ei ylimääräistä)
 
-**Omistaja/Fable (24.9. klo 12.1x)**: ☰-valikon "Uusi peli" -rivin
-pitää palauttaa aloitusporttiin (kuten webissä), ei vain nollata
-pelitilaa paikalleen jääden.
+**Omistaja (Fable 24.9. klo 12.08, SITOVA)**: aloitusportin pitää
+näyttää TÄSMÄLLEEN sen minkä web näyttää — EI MITÄÄN MUUTA. Webissä
+(`js/ui.js` showAloitusportti) portilla on VAIN: "Laita äänet päälle"
++ kaiutin-ikoni, nappi "Aloita seikkailu", alhaalla linkki "Oppiminen
+on hauskaa" (Periaatteet-lappu). EI otsikkolohkoa ("MATKAKIRJA /
+MAAILMAN YMPÄRI.../OSA II"), EI "Seuraa isoisän..." -ingressiä, EI
+"Jatka matkaa" / "Uusi matka" -nappeja. Portin jälkeen tallennus jatkuu
+TAI (jos ei tallennusta) avausruutu (Heathrow + INTRO_TEXT + "Valitse
+aloituskaupunki").
+**TUNNETTU BUGI (havaittu jo tämän session ALKUPUOLELLA, build 6:n
+ensimmäisessä kylmäkäynnistyskuvassa, ks. proto-3d/lokit/
+build6-tarkistus-20260924/17-etusivupallo-a.png)**: natiivi näyttää
+ison otsikkolohkon ("MATKAKIRJA / MAAILMAN YMPÄRI KAHDEKSASSA-
+KYMMENESSÄ PÄIVÄSSÄ / OSA II · UNOHDETTU AARRE"), ingressin ("Seuraa
+isoisän matkakirjaa...") SEKÄ "Jatka matkaa"/"Uusi matka" -nappiparin
+yhden "Aloita seikkailu"-napin sijaan — kaikki tämä pitää POISTAA.
+**Vastuu**: Natiivi-UI, build 7.
+
+**Testikomento**: kylmäkäynnistys (poista appi ja asenna uudestaan TAI
+tyhjennä tallennus jos komento löytyy, jotta nähdään aidosti tyhjä
+tallennustila), `kuva portti-b7-tyhjatila`. Jos tallennus on olemassa,
+testaa myös se erikseen: `kuva portti-b7-tallennuksella`.
+
+**PASS-ehto**: portilla näkyy VAIN kolme elementtiä (äänikehote+kaiutin,
+"Aloita seikkailu", "Oppiminen on hauskaa") — ei otsikkolohkoa, ei
+ingressiä, ei Jatka/Uusi-nappeja. **FAIL**: mikä tahansa ylimääräinen
+elementti näkyy yhä (kuten build 6:ssa).
+
+## B7-8 (löydös 24B): ☰-valikon "Uusi peli" palauttaa aloitusporttiin asti
+
+**Omistaja/Fable (24.9. klo 12.1x, tarkennettu 12.08)**: ☰-valikon
+"Uusi peli" -rivin pitää palauttaa ALOITUSNÄYTTÖÖN (porttiin) ja siitä
+avausruudun kautta kaupunkivalintaan — EI suoraan Lontoon kartalle.
+**TUNNETTU BUGI**: build 6:ssa "Uusi peli" vie NYT suoraan Lontoon
+kartalle, ohittaen portin ja avausruudun kokonaan.
 **Vastuu**: Natiivi-UI, build 7.
 
 **Testikomento**: pelin ollessa käynnissä (esim. Ateenassa), avaa
@@ -839,7 +886,8 @@ kartalle/muuhun tilaan tyhjennyksen jälkeen.
 | B7-4 | Radion VU-mittari | | | |
 | B7-5 | Lennon lähikuva | | | |
 | B7-6 | iPhonen yläreuna uusiksi (löydös 20) | | | |
-| B7-7 | Portti/avaus/lento-tekstit sanatarkasti | | | |
-| B7-8 | ☰ Uusi peli → aloitusportti | | | |
+| B7-7 | Lennon oikea teksti (ei avausteksti) + UI piilossa | | | |
+| B7-8 | ☰ Uusi peli → aloitusportti (ei suoraan Lontooseen) | | | |
+| B7-9 | Aloitusportti vain 3 elementtiä (ei otsikkolohkoa/Jatka-Uusi) | | | |
 | 14 | Navat (uusinta tuoreella pelillä) | | | |
 | 4-renkaat | Hehkurenkaat aloitusvalinnassa (uusinta) | | | |
