@@ -156,6 +156,52 @@ namespace Matkakirja
         public static Syy Portti(Syy datanSyy, int taso, bool lahella) =>
             datanSyy != Syy.Nakyy ? datanSyy : (taso == 3 && !lahella ? Syy.Taso3 : Syy.Nakyy);
 
+        /// <summary>
+        /// PIIRTOPISTE karttavalot-alkiosta (skeema 1.39, Siirtoseppä): `ankkuri` {lat, lon} = webin lukittu ankkuri
+        /// (js/pallolauta/nostoankkurit.js lukittuAnkkuri), johon web piirtää merkin; null tai puuttuva → `ladottu`
+        /// (ladonnan piste) → noston oma lat/lon. Vanha paketti ilman ankkuria toimii kuten ennen. false = ei pistettä.
+        /// </summary>
+        public static bool Piirtopiste(IDictionary<string, object> alkio, out double lat, out double lon)
+        {
+            lat = lon = 0;
+            if (alkio == null) return false;
+            foreach (var kentta in PiirtopisteenKentat)
+            {
+                if (kentta == null) { if (Piste(alkio, out lat, out lon)) return true; continue; }
+                if (alkio.TryGetValue(kentta, out var o) && o is IDictionary<string, object> d && Piste(d, out lat, out lon)) return true;
+            }
+            return false;
+        }
+        /// <summary>Onko alkiolla kelvollinen webin ankkuri (skeema 1.39 `ankkuri` {lat, lon}).</summary>
+        public static bool OnAnkkuri(IDictionary<string, object> alkio) =>
+            alkio != null && alkio.TryGetValue("ankkuri", out var o) && o is IDictionary<string, object> d && Piste(d, out _, out _);
+
+        static readonly string[] PiirtopisteenKentat = { "ankkuri", "ladottu", null };
+
+        static bool Piste(IDictionary<string, object> d, out double lat, out double lon)
+        {
+            lat = lon = 0;
+            if (!Luku(d, "lat", out lat) || !Luku(d, "lon", out lon)) return false;
+            return true;
+        }
+
+        static bool Luku(IDictionary<string, object> d, string nimi, out double arvo)
+        {
+            arvo = 0;
+            if (!d.TryGetValue(nimi, out var o) || o == null) return false;
+            try { arvo = Convert.ToDouble(o, System.Globalization.CultureInfo.InvariantCulture); }
+            catch (Exception) { return false; }
+            return !double.IsNaN(arvo);
+        }
+
+        /// <summary>
+        /// Noston oma nimiön kylki (skeema 1.39 `puoli`, web datan puoli / poltettu tynkä): "oikea", "vasen", "yla" tai
+        /// "ala"; muu arvo tai puuttuva = null (UI:n oletus, web 'oikea').
+        /// </summary>
+        public static string Puoli(IDictionary<string, object> alkio) =>
+            alkio != null && alkio.TryGetValue("puoli", out var o) && o is string p
+            && (p == "oikea" || p == "vasen" || p == "yla" || p == "ala") ? p : null;
+
         /// <summary>Merinimien tunnukset aluenimet.json:sta (luokka meri tai valtameri) ja merinimet.json:sta (id).</summary>
         public static void LisaaMerinimet(IEnumerable<Dictionary<string, object>> alkiot, bool vainMeriluokka, ISet<string> ulos)
         {

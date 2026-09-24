@@ -79,6 +79,44 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(NostoSaannot.Karttakerroin(1000, 499.9), NostoSaannot.Karttakerroin(1000, 500.0), "porras: heilahdus ei muuta");
         }
 
+        [Testi]
+        static void PiirtopisteAnkkuristaJaPuoli()
+        {
+            var uusi = (Dictionary<string, object>)MiniJson.Jasenna(
+                "{\"lat\":48.8055,\"lon\":2.12,\"ladottu\":{\"lat\":47.689,\"lon\":2.6138},\"ankkuri\":{\"lat\":48.8055,\"lon\":2.12},\"puoli\":\"vasen\"}");
+            Oleta.Tosi(NostoSaannot.Piirtopiste(uusi, out var la, out var lo) && la == 48.8055 && lo == 2.12, "ankkuri voittaa ladotun");
+            Oleta.Tosi(NostoSaannot.OnAnkkuri(uusi), "ankkuroitu");
+            Oleta.Sama("vasen", NostoSaannot.Puoli(uusi));
+            var nolla = (Dictionary<string, object>)MiniJson.Jasenna(
+                "{\"lat\":48.8622,\"lon\":2.3325,\"ladottu\":{\"lat\":48.4614,\"lon\":2.6138},\"ankkuri\":null,\"puoli\":null}");
+            Oleta.Tosi(NostoSaannot.Piirtopiste(nolla, out la, out lo) && la == 48.4614 && lo == 2.6138, "ankkuri null → ladottu");
+            Oleta.Tosi(!NostoSaannot.OnAnkkuri(nolla), "null ei ankkuri");
+            Oleta.Sama(null, NostoSaannot.Puoli(nolla));
+            var vanha = (Dictionary<string, object>)MiniJson.Jasenna("{\"lat\":35.3415,\"lon\":25.133,\"ladottu\":null}");
+            Oleta.Tosi(NostoSaannot.Piirtopiste(vanha, out la, out lo) && la == 35.3415 && lo == 25.133, "vanha paketti → oma paikka");
+            Oleta.Sama(null, NostoSaannot.Puoli(vanha), "vanha paketti ilman puolta");
+            Oleta.Sama(null, NostoSaannot.Puoli((Dictionary<string, object>)MiniJson.Jasenna("{\"puoli\":\"koillinen\"}")), "tuntematon kylki");
+        }
+
+        /// <summary>Koepaketin v50 ankkurit: Versailles ja Iraklion piirtyvät omaan paikkaansa (web mitat kohta 4).</summary>
+        [Testi]
+        static void KoepaketinAnkkurit()
+        {
+            string kansio = Environment.GetEnvironmentVariable("NOSTOT_KOE_ANKKURI") ?? "/Users/Shared/Claude/sisalto-koe/v50";
+            string kv = Path.Combine(kansio, "kokoelmat", "karttavalot.json");
+            if (!File.Exists(kv)) { Console.WriteLine("  (koepakettia ei ole: " + kv + ")"); return; }
+            var valot = MiniJson.Alkiot(File.ReadAllText(kv)).ToList();
+            int ankkureita = valot.Count(NostoSaannot.OnAnkkuri), puolia = valot.Count(a => NostoSaannot.Puoli(a) != null);
+            Console.WriteLine($"  {kansio}: {valot.Count} valoa, ankkuri {ankkureita}, puoli {puolia}");
+            foreach (var (tunnus, lat, lon) in new[] { ("nosto-maalehti-peilisali", 48.8055, 2.12), ("iraklion", 35.3415, 25.133) })
+            {
+                var a = valot.FirstOrDefault(v => MiniJson.Teksti(v, "tunnus") == tunnus);
+                Oleta.Tosi(a != null && NostoSaannot.OnAnkkuri(a), tunnus + " ankkuroitu");
+                NostoSaannot.Piirtopiste(a, out var la, out var lo);
+                Oleta.Tosi(NostoSaannot.EtaisyysKm(la, lo, lat, lon) < 0.1, tunnus + " ankkurissa, saatu " + la + "," + lo);
+            }
+        }
+
         /// <summary>Koepaketin laskelma: saapumisnäkymän portit (lähizoomi kiinni) Ranskalle ja Kreikalle.</summary>
         [Testi]
         static void KoepaketinRanskaJaKreikka()

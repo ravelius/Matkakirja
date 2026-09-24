@@ -49,8 +49,13 @@ namespace Matkakirja
         public sealed class Nosto
         {
             public string Id, Tunnus, Aihe, Kategoria, Nimi, Nimio, Maa, KaupunkiAvain, TakyNosto;
-            /// <summary>Piirtopiste: viennin `ladottu`, puuttuessa oma paikka.</summary>
+            /// <summary>Piirtopiste (NostoSaannot.Piirtopiste): webin lukittu `ankkuri` (skeema 1.39), muuten viennin
+            /// `ladottu`, puuttuessa oma paikka. Ruutu lasketaan tästä.</summary>
             public double Lat, Lon;
+            /// <summary>Piirtopiste tuli webin ankkurista (skeema 1.39); false = ladottu tai oma paikka.</summary>
+            public bool Ankkuroitu;
+            /// <summary>Nimiön oma kylki datasta (skeema 1.39 `puoli`): "oikea", "vasen", "yla", "ala" tai null (oletus oikea).</summary>
+            public string Puoli;
             /// <summary>Noston OMA paikka (karttavalot lat/lon, kohdekartan piste tai laudan datapiste; web omaLat/omaLng).</summary>
             public double OmaLat, OmaLon;
             /// <summary>Paikkanimi datasta (karttavalot `paikka`, esim. "Pariisi"; web paikkaNimi).</summary>
@@ -184,7 +189,7 @@ namespace Matkakirja
                 {
                     if (!(o is Dictionary<string, object> a)) continue;
                     if (a.GetValueOrDefault("paakartalla") is bool pk && !pk) continue;
-                    var ladottu = MiniJson.Kentta(a, "ladottu") as Dictionary<string, object>;
+                    NostoSaannot.Piirtopiste(a, out double piirtoLat, out double piirtoLon);
                     double? omaLat = MiniJson.Luku(a, "lat"), omaLon = MiniJson.Luku(a, "lon");
                     var s = new Nosto
                     {
@@ -197,8 +202,10 @@ namespace Matkakirja
                         Maa = MiniJson.Teksti(a, "maa"),
                         KaupunkiAvain = MiniJson.Teksti(a, "kaupunkiAvain"),
                         TakyNosto = MiniJson.Teksti(a, "takynosto"),
-                        Lat = (ladottu != null ? MiniJson.Luku(ladottu, "lat") : null) ?? omaLat ?? 0,
-                        Lon = (ladottu != null ? MiniJson.Luku(ladottu, "lon") : null) ?? omaLon ?? 0,
+                        Lat = piirtoLat,
+                        Lon = piirtoLon,
+                        Ankkuroitu = NostoSaannot.OnAnkkuri(a),
+                        Puoli = NostoSaannot.Puoli(a),
                         OmaLat = omaLat ?? double.NaN,
                         OmaLon = omaLon ?? double.NaN,
                         // Skeema: paikka on merkkijono; vanhassa muodossa olio { nimi } (web kohde.paikka?.nimi).
@@ -428,9 +435,9 @@ namespace Matkakirja
                 if (!syyt.TryGetValue(avain, out var nimet)) syyt[avain] = nimet = new List<string>();
                 nimet.Add(s.Nimio ?? s.Nimi);
             }
-            int lahiLippu = 0;
-            foreach (var s in lista) if (s.Lahizoom) lahiLippu++;
-            b.Append($"; nostoja {lista.Count} (lahizoom-lippu {lahiLippu}, ei porttia), porttien läpi {portista}, näkyy {nakyvat.Count}");
+            int lahiLippu = 0, ankkuroituja = 0;
+            foreach (var s in lista) { if (s.Lahizoom) lahiLippu++; if (s.Ankkuroitu) ankkuroituja++; }
+            b.Append($"; nostoja {lista.Count} (lahizoom-lippu {lahiLippu}, ei porttia; webin ankkurissa {ankkuroituja}), porttien läpi {portista}, näkyy {nakyvat.Count}");
             foreach (var p in syyt) b.Append($"\n  {p.Key}: {p.Value.Count} — {string.Join(", ", p.Value)}");
             return b.ToString();
         }
