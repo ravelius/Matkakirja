@@ -1000,8 +1000,8 @@ export const AFRICA_QUESTIONS = {
       options: ['piri-piri', 'sahrami', 'vanilja', 'kaneli'],
       correct: 0,
       level: 3,
-      fact: 'Piri-piri on pieni tuliterä chili. Tapa marinoida kanaa siitä tehdyllä kastikkeella levisi Mosambikista Portugalin kautta ravintoloihin ympäri maailmaa.',
-      hint: 'Nimi tarkoittaa pientä chiliä, ja se sanotaan kahdesti.',
+      fact: 'Piri-piri on tuliterä chili. Portugalilaiset toivat kasvin Afrikkaan Etelä-Amerikasta, ja marinoidun kanaruoan tarkkaa syntypaikkaa ei tiedetä varmasti — myös Mosambikkia ja Angolaa mainitaan.',
+      hint: 'Nimi tarkoittaa pippuria, ja se sanotaan kahdesti.',
     },
   ],
 
@@ -1705,7 +1705,7 @@ export const AFRICA_QUESTIONS = {
       q: 'Kuka tutkimusmatkailija antoi putouksille eurooppalaisen nimensä?',
       options: ['David Livingstone', 'Henry Stanley', 'John Speke', 'Mungo Park'],
       correct: 0,
-      fact: 'David Livingstone näki putoukset 1855 ja nimesi ne kuningattarensa mukaan. Hän kirjoitti, ettei mikään Englannissa vedä niille vertoja.',
+      fact: 'David Livingstone näki putoukset ensimmäisenä eurooppalaisena 16.11.1855 ja nimesi ne kuningattarensa mukaan. Paikallinen nimi Mosi-oa-Tunya, "jylisevä savu", on yhä käytössä sen rinnalla.',
       hint: 'Sama mies, jonka Stanley löysi Tanganjikajärveltä.',
     },
     {

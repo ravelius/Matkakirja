@@ -3838,6 +3838,157 @@ export const SAATIEDOT = {
   },
 
   /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N2-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain managua,noumea,puertomontt,sanjuan,saoluis.
+   */
+  managua: {
+    lat: 12.1364,
+    lon: -86.2514,
+    keskilampo: [27.3, 27.8, 28.5, 30.1, 29, 27.3, 27.4, 27.7, 27.1, 26.8, 26.8, 27.1],
+    ylin: [32, 33, 34, 36, 34, 31, 30, 31, 31, 30, 30, 31],
+    alin: [23, 23, 23, 24, 24, 24, 24, 24, 23, 24, 24, 23],
+    sade: [3, 5, 4, 6, 151, 143, 75, 80, 160, 167, 135, 22],
+    luonnehdinta: 'Managua on tasaisen kuuma ympäri vuoden, 27–30 '
+      + 'asteen välillä. Kuiva kausi kestää joulukuulta huhtikuulle, '
+      + 'jolloin sadetta tulee tuskin nimeksikään; toukokuusta '
+      + 'lokakuuhun sateet kastelevat kaupunkia yli 130 millimetrillä '
+      + 'kuukaudessa.',
+  },
+  noumea: {
+    lat: -22.2758,
+    lon: 166.4581,
+    keskilampo: [25.3, 25.9, 25.1, 23.7, 21.6, 20.3, 19.4, 19.4, 20.3, 21.2, 23.4, 24.2],
+    ylin: [28, 29, 27, 26, 24, 22, 22, 22, 23, 24, 26, 27],
+    alin: [22, 23, 23, 22, 19, 18, 17, 17, 18, 19, 20, 21],
+    sade: [97, 188, 178, 94, 150, 79, 41, 40, 37, 59, 81, 110],
+    luonnehdinta: 'Nouméan vuosi kääntyy eteläisen pallonpuoliskon '
+      + 'mukaan: joulu–maaliskuu on lämpimintä (24–26 astetta) ja '
+      + 'kesä–elokuu viileintä (19–20 astetta). Sadetta kertyy '
+      + 'runsaimmin helmikuussa, kuivin kuukausi on heinäkuu.',
+  },
+  puertomontt: {
+    lat: -41.4693,
+    lon: -72.9424,
+    keskilampo: [14.9, 14.8, 14, 11.7, 9.4, 8.2, 7, 7.6, 8.5, 9.5, 12.1, 13.4],
+    ylin: [18, 18, 17, 15, 12, 10, 9, 10, 12, 13, 15, 17],
+    alin: [12, 11, 11, 9, 7, 6, 5, 5, 5, 6, 9, 10],
+    sade: [118, 152, 146, 189, 233, 311, 272, 214, 173, 213, 104, 198],
+    luonnehdinta: 'Puerto Montt on koko vuoden kostea: sadetta kertyy '
+      + 'jokaisena kuukautena vähintään sata millimetriä, kesäkuussa '
+      + 'lähes kolmesataa. Lämpötila pysyy maltillisena, '
+      + 'talvikuukausina (kesä–elokuu) noin seitsemän ja kahdeksan '
+      + 'asteen välillä, kesällä (joulu–helmikuu) reilun '
+      + 'neljäntoista.',
+  },
+  sanjuan: {
+    lat: 18.4655,
+    lon: -66.1057,
+    keskilampo: [24.2, 24.6, 24.7, 25.8, 26.6, 27.3, 27.3, 27.4, 27.2, 26.7, 25.5, 24.6],
+    ylin: [27, 28, 28, 29, 30, 31, 31, 31, 31, 30, 29, 28],
+    alin: [21, 21, 21, 22, 23, 24, 24, 24, 24, 24, 22, 22],
+    sade: [78, 31, 68, 95, 137, 69, 81, 89, 95, 96, 101, 43],
+    luonnehdinta: 'San Juanissa lämpötila pysyy koko vuoden 24–27 '
+      + 'asteessa, viileimpänä tammikuussa ja lämpimimpänä '
+      + 'heinä–elokuussa. Sadetta riittää jokaisena kuukautena, '
+      + 'mutta touko–marraskuu on selvästi tammi–helmikuuta '
+      + 'sateisempi.',
+  },
+  saoluis: {
+    lat: -2.5297,
+    lon: -44.3028,
+    keskilampo: [26.5, 26.1, 25.8, 26.1, 26.5, 26.7, 26.7, 27.1, 27.4, 27.5, 27.5, 27.6],
+    ylin: [29, 28, 28, 28, 29, 29, 29, 30, 30, 31, 30, 30],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25],
+    sade: [244, 272, 460, 368, 202, 71, 53, 25, 14, 7, 59, 36],
+    luonnehdinta: 'São Luísissa on tasaisen kuuma, 26–28 astetta '
+      + 'ympäri vuoden. Sadekausi tammi–toukokuussa on runsas — '
+      + 'maaliskuu kastelee kaupunkia yli 450 millimetrillä — ja '
+      + 'syys–lokakuu selvästi kuivempaa aikaa.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N10-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain boavista,kappalmas,kimberley,labrador,sthelena. Asemat: Sal
+   * Rei (Boa Vista, Kap Verde), Kap Point (Hyväntoivonniemi), Kimberley
+   * (Etelä-Afrikka), Happy Valley-Goose Bay (Labrador), Jamestown
+   * (St. Helena).
+   */
+  boavista: {
+    lat: 16.1167,
+    lon: -22.8333,
+    keskilampo: [21.8, 21.9, 22.1, 22.4, 22.9, 24, 25.1, 26.6, 27.1, 26.5, 25.5, 22.8],
+    ylin: [24, 25, 26, 25, 26, 27, 28, 30, 30, 29, 29, 25],
+    alin: [19, 19, 19, 19, 20, 21, 22, 24, 24, 24, 22, 20],
+    sade: [2, 1, 0, 0, 1, 0, 3, 9, 39, 11, 1, 1],
+    luonnehdinta: 'Boa Vistalla on tasaisen lämmin, 22–27 asteen '
+      + 'aavikkosaaren ilmasto. Sadetta ei käytännössä ole '
+      + 'muulloin kuin syyskuun kostean kauden aikaan.',
+  },
+  kappalmas: {
+    lat: -34.3568,
+    lon: 18.4740,
+    keskilampo: [20, 20.2, 18.7, 17.1, 15.7, 14.8, 14.2, 13.7, 14.5, 15.8, 17.4, 18.9],
+    ylin: [22, 22, 21, 19, 18, 17, 16, 15, 16, 18, 19, 21],
+    alin: [18, 18, 17, 15, 14, 13, 12, 12, 13, 14, 16, 17],
+    sade: [14, 20, 12, 41, 75, 97, 82, 79, 38, 59, 31, 19],
+    luonnehdinta: 'Hyväntoivonniemellä on Välimeren tapainen '
+      + 'ilmasto: eteläinen kesä (joulu–helmikuu) on lämmin ja '
+      + 'kuiva, talvi (touko–elokuu) leuto mutta selvästi '
+      + 'sateisempi.',
+  },
+  kimberley: {
+    lat: -28.7282,
+    lon: 24.7499,
+    keskilampo: [25.9, 24.1, 21.3, 17.8, 12.5, 9.8, 10.6, 11.6, 17.8, 21, 21.9, 25.4],
+    ylin: [33, 30, 29, 24, 20, 18, 18, 19, 26, 29, 29, 33],
+    alin: [19, 18, 14, 11, 5, 2, 3, 4, 9, 13, 15, 17],
+    sade: [54, 109, 42, 38, 7, 9, 4, 31, 2, 27, 73, 43],
+    luonnehdinta: 'Kimberleyssä eteläinen kesä (joulu–helmikuu) '
+      + 'on kuuma, yli 24 astetta, ja talvi (kesä–elokuu) käy '
+      + 'yöllä pakkasen puolella. Sadetta tulee etupäässä kesällä '
+      + 'ja alkusyksyllä.',
+  },
+  labrador: {
+    lat: 53.3017,
+    lon: -60.3260,
+    keskilampo: [-15.7, -17.3, -7.9, -1.6, 5.1, 12, 15.3, 14.6, 11, 4.2, -4.4, -10.4],
+    ylin: [-12, -13, -4, 2, 10, 17, 20, 19, 15, 7, -1, -7],
+    alin: [-19, -21, -12, -5, 0, 7, 10, 10, 7, 1, -8, -14],
+    sade: [71, 34, 89, 74, 107, 97, 110, 132, 76, 100, 94, 85],
+    luonnehdinta: 'Labradorissa talvi (joulu–helmikuu) on ankaran '
+      + 'kylmä, yli 15 asteen pakkasessa. Lyhyt kesä (heinäkuu 15 '
+      + 'astetta) tuo mukanaan myös vuoden sateisimmat kuukaudet.',
+  },
+  /*
+   * ST. HELENA: ERA5-ruutu osuu tälle pienelle (n. 16 km) saarelle
+   * enimmäkseen mereen, vaihteluväli painui epäuskottavan kapeaksi
+   * (tools/hae-saanormaalit.mjs merkitsi rivin "TARKISTA"). En-
+   * Wikipediassa ei ole kuukausitaulukkoa, mutta artikkeli antaa
+   * Jamestownin lämpötilahaarukan sanallisesti: "21–28 °C kesällä
+   * (tammi–huhtikuu), 17–24 °C muina kuukausina" (24.9.2026). Sade
+   * ERA5:stä (Jamestown on saaren kuivin ranta, ~105 mm/v — sopii
+   * artikkelin mainitsemaan "very low annual rainfall" -kuvaukseen,
+   * toisin kuin saaren ylängön 750–1000 mm/v).
+   */
+  sthelena: {
+    lat: -15.9387,
+    lon: -5.7178,
+    keskilampo: [24.5, 24.5, 24.5, 24.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5],
+    ylin: [28, 28, 28, 28, 24, 24, 24, 24, 24, 24, 24, 24],
+    alin: [21, 21, 21, 21, 17, 17, 17, 17, 17, 17, 17, 17],
+    sade: [8, 10, 9, 14, 7, 11, 8, 11, 9, 6, 7, 5],
+    lahde: { nimi: 'en-Wikipedia, Jamestownin lämpötilakuvaus (sanallinen)', kausi: '1991–2020' },
+    luonnehdinta: 'Jamestownissa kesä (tammi–huhtikuu) on '
+      + 'lämpimin, 21–28 astetta, ja loppuvuosi viilenee '
+      + '17–24 asteeseen. Sadetta on rannalla vähän — saaren '
+      + 'ylängöllä sitä kertyy moninkertaisesti enemmän.',
+  },
+
+  /*
    * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N11-kaupungit): Open-Meteon
    * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
    * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs

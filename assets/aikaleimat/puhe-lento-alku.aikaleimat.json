@@ -1,0 +1,81 @@
+{
+  "versio": 2,
+  "kaupunki": null,
+  "luenta": "lento-alku",
+  "teksti": "Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.",
+  "tekstiSha256": "dd76601ae5593c2dfc9f8ca43da4eaf1396d0b3e9c905bd2ce3ae9818811af03",
+  "aani": {
+    "nimi": "puhe-lento-alku.mp3",
+    "versio": 2,
+    "tavut": 158867,
+    "sha256": "d44c5af556e73471a9b0e979ce6c3b39243e35df2e9fa0e0360f5176ebc87465"
+  },
+  "kesto": 7460,
+  "sanat": [
+    {
+      "sana": "Kone",
+      "alku": 100,
+      "loppu": 320
+    },
+    {
+      "sana": "nousee",
+      "alku": 460,
+      "loppu": 980
+    },
+    {
+      "sana": "Isoisän",
+      "alku": 3360,
+      "loppu": 3820
+    },
+    {
+      "sana": "kirja",
+      "alku": 3880,
+      "loppu": 4220
+    },
+    {
+      "sana": "aukeaa",
+      "alku": 4320,
+      "loppu": 4720
+    },
+    {
+      "sana": "sylissäni",
+      "alku": 4780,
+      "loppu": 5380
+    },
+    {
+      "sana": "kuin",
+      "alku": 5520,
+      "loppu": 5700
+    },
+    {
+      "sana": "se",
+      "alku": 5740,
+      "loppu": 5820
+    },
+    {
+      "sana": "olisi",
+      "alku": 5860,
+      "loppu": 6080
+    },
+    {
+      "sana": "odottanut",
+      "alku": 6140,
+      "loppu": 6640
+    },
+    {
+      "sana": "tätä",
+      "alku": 6680,
+      "loppu": 6900
+    },
+    {
+      "sana": "hetkeä",
+      "alku": 6940,
+      "loppu": 7460
+    }
+  ],
+  "lauseet": [
+    100,
+    3360
+  ],
+  "luotu": "2026-09-24T09:16:07.509Z"
+}
