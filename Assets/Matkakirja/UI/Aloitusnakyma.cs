@@ -177,8 +177,7 @@ namespace Matkakirja.Natiivi
             // tulee kameran puolelta (Natiiviseppä); UI Toolkit ei sumenna 3D-kuvaa.
             Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore),
                 Kuviot.Soikio("aloitus-portti", new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.28f), new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.6f), 0.4f));
-            // Omistaja 24.9.2026 (löydös 24, web showAloitusportti): portissa ei julistetta eikä ingressiä —
-            // vain äänirivi, Aloita seikkailu ja Oppiminen on hauskaa. Elementit jäävät piiloon.
+            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
@@ -190,7 +189,6 @@ namespace Matkakirja.Natiivi
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
-            porttiYla.style.display = DisplayStyle.None;
             var keskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
             aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
@@ -199,9 +197,7 @@ namespace Matkakirja.Natiivi
             jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
-            jatkaNappi.style.display = DisplayStyle.None;
-            // Tallennus olemassa → peli jatkuu; muuten avausruutu (web: sama nappi molemmissa).
-            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", () => { if (jatka != null) Jatka(); else PortistaKartalle(); }, keskus);
+            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
             var linkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
@@ -331,8 +327,11 @@ namespace Matkakirja.Natiivi
             PaivitaAaniNappi();
             this.jatka = jatka;
             this.kohteet = kohteet != null && kohteet.Count > 0 ? kohteet : Array.ConvertAll(Kohteet, id => (id, (string)null));
-            // Löydös 24: ei Jatka matkaa / Uusi matka -paria; Aloita seikkailu jatkaa tallennuksen, jos sellainen on.
-            jatkaNappi.style.display = DisplayStyle.None;
+            jatkaNappi.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
+            aloitaNappi.EnableInClassList("mk-nappi--haamu", jatka != null);
+            aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
+            aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
+            ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
             AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
