@@ -731,7 +731,7 @@ const SAAPUMISKUPLA_VAITI = new Set();
  *     sä. Kevyet täytesanat (no, niin, kato) säästellen, ja Kääk vain
  *     aidossa säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
-const LIVIAN_SAAPUMISET = {
+export const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
   venetsia: 'Venetsia. Täs kaupungissa minun sukuni istuu torilla '
     + 'kuin virkamiehet: Columba Livia, jos joku kysyy — ja täällä '
@@ -6462,29 +6462,44 @@ function aloitaSahkelento(ui, city, data) {
     : SAHKE_LENTO_MS;
   ui.sahkeLentoAjastin = setTimeout(() => {
     if (ui.dead) return;
-    // Pelaaja on voinut lähteä kaupungista tai laatta on jo käännetty
-    // muuta tietä: paluu odottaa silloin seuraavaa pisteen napautusta.
-    if (ui.game?.cityOf?.()?.id !== city.id) return;
-    if (!ui.game.tokens?.has(city.id)) return;
-    const tehtava = data.sahketehtava ?? {};
-    const kuplat = livianKuplat(tehtava.paluu);
-    // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
-    // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
-    // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
-    // LIVIAN_KAIKU).
-    polloKuplasarja(ui, city, 'paluu',
-      kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
-    /*
-     * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
-     * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
-     * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
-     * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
-     * entinen.
-     */
-    clearTimeout(ui.sahkeAarreAjastin);
-    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
-      SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
+    // Laatta käännetty muuta tietä: Livialla ei ole enää mitään tuotavaa.
+    if (!ui.game?.tokens?.has(city.id)) return;
+    // Pelaaja lähti kaupungista lennon aikana: paluu odottaa seuraavaa
+    // pisteen napautusta (sahkePaluuOdottaa, avaaFokusKohtaaminen).
+    if (ui.game?.cityOf?.()?.id !== city.id) {
+      ui.sahkePaluuOdottaa ??= new Set();
+      ui.sahkePaluuOdottaa.add(sahkeAvain(ui, city));
+      return;
+    }
+    sahkePaluu(ui, city, data);
   }, lento);
+}
+
+/**
+ * LIVIA PALAA JA AARRE PALJASTUU (lennon ajastin tai, jos pelaaja oli
+ * poissa, pisteen napautus paluun jälkeen — omistaja 23.9.2026: lennon
+ * aikana lähtenyt saa aarteen, kun palaa pisteelle, eikä vasta uudessa
+ * istunnossa; sama kuin natiivissa).
+ */
+function sahkePaluu(ui, city, data) {
+  const tehtava = data.sahketehtava ?? {};
+  const kuplat = livianKuplat(tehtava.paluu);
+  // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
+  // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
+  // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+  // LIVIAN_KAIKU).
+  polloKuplasarja(ui, city, 'paluu',
+    kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
+  /*
+   * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
+   * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
+   * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
+   * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
+   * entinen.
+   */
+  clearTimeout(ui.sahkeAarreAjastin);
+  ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
+    SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
 }
 
 /**
@@ -6762,6 +6777,14 @@ export function avaaFokusKohtaaminen(ui, city) {
     suljeFokusvirta(ui);
     const pulmaOdottaa = ui.game.pendingPuzzle?.();
     ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
+    return true;
+  }
+  // Livia palasi lennolta pelaajan ollessa poissa: napautus tuo aarteen.
+  const avain = sahkeAvain(ui, city);
+  if (ui.sahkePaluuOdottaa?.has(avain) && ui.game?.tokens?.has(city.id)) {
+    ui.sahkePaluuOdottaa.delete(avain);
+    suljeFokusvirta(ui);
+    sahkePaluu(ui, city, data);
     return true;
   }
   lataaTyyli();
