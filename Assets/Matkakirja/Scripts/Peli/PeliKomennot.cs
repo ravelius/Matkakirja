@@ -33,6 +33,8 @@
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen]        uusi peli Pariisista (siemen = toistettava noppa)
+//   koetila mannerlento       TESTI: oman mantereen pääaarre löydetyksi + raha ≥ 1000 → mannerlennot tarjolla
+//                             (laivareitti: uusi-peli 1 lontoo → kulkutapa laiva, Lontoo–Amsterdam)
 //   peli pois | peli paalle   pelisilmukka pois (3D:n napautus kuten ennen) tai päälle
 //   sahke kaynnista           sähkelinjan terveystarkistus myös ilman Natiivi-UI:n sähkenäkymää
 //   sahke perusta [Adj Subst] retkikunta (nimimerkki arvotaan, jos puuttuu); tulos lokiin
@@ -120,6 +122,8 @@ namespace Matkakirja.Natiivi
                     return ohjain.EtsiKatko(A(1));
                 case "aarrepiste":
                     return ohjain.AvaaAarrepiste();
+                case "koetila":
+                    return A(1) == "mannerlento" ? ohjain.KoetilaMannerlento() : "käyttö: koetila mannerlento";
                 case "mannerlennot":
                     return ohjain.AvaaMannerlennot();
                 case "peruuta":

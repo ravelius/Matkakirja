@@ -205,6 +205,28 @@ namespace Matkakirja.Natiivi
             return Matkusta(s.Kohde.Kaupungissa ? s.Kohde.Kaupunki : null, tapa, siirto: avain);
         }
 
+        /// <summary>
+        /// TESTIKOMENTO `koetila mannerlento` (Laitetestaajan kuulokoe, ei pelaajalle): merkitsee oman mantereen
+        /// pääaarteen löydetyksi ja nostaa rahan vähintään 1000 puntaan, jolloin Liiku → Lentäen tarjoaa
+        /// mannerlennot (web mannerLennot-ehto). Tallentaa tilan. Palauttaa virheen tai null.
+        /// </summary>
+        public string KoetilaMannerlento()
+        {
+            if (matka == null) return "peli ei ole valmis";
+            var p = matka.Tila.Pelaaja;
+            if (!p.Sijainti.Kaupungissa) return "pelaaja ei ole kaupungissa";
+            if (matka.Laatat == null) return "laattoja ei ole";
+            var manner = matka.Laatat.MannerOf(p.Sijainti.Kaupunki);
+            if (manner == null) return "manner tuntematon: " + p.Sijainti.Kaupunki;
+            if (!matka.Laatat.PaaaarreLoytynyt(manner)) matka.Laatat.PaaaarteetLoydetty.Aseta(manner, p.Sijainti.Kaupunki);
+            if (p.Raha < 1000) p.Raha = 1000;
+            Tallenna();
+            PaivitaNakyma();
+            int n = kaupat?.MannerLennot().Count ?? 0;
+            Debug.Log($"MATKAKIRJA peli: koetila mannerlento ({manner}), mannerlentoja {n}");
+            return n > 0 ? null : $"mannerlentoja 0 (vaihe {matka.Tila.Vaihe}; vaaditaan Toiminta ja vaellus)";
+        }
+
         static Reitit KarttaReitit => KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.reitit != null
             ? KarttaKerrokset.Instanssi.reitit : UnityEngine.Object.FindAnyObjectByType<Reitit>();
         bool lentokaaretNakyvissa;
