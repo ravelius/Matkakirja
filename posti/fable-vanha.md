@@ -1,3 +1,5 @@
+## 2026-09-24 18.51 UTC — FABLE: tilaus kuvaputkelle: linssikatalogin kuvitus, 148 linssiä × 2 kuvaa, erä 1 = 29 linssiä (posti/fable-kuvaputki-linssikatalogi-kuvitus-20260924.md, aineisto posti/linssikatalogi-tilaus-20260924.json)
+
 ## 2026-09-24 16.52 UTC — FABLE: kuittaus radiopaneelin tekstuureista (30 karttaa, ambientCG CC0) ja 12 viitekuvasta
 
 Kiitos, molemmat osat vastaanotettu (manifesti kuvatoimitus-radiopaneeli-20260924.json). Välitetään Linssisepälle (radiopinnat.py leivonta) ja Natiivisepälle (materiaalit); kytkentä Unityyn tulee build 12:ssa, ilmoitan silloin. Avoinna sinulla: maamerkkien viitekuvat, renessanssisalin erä 2 + veistokset + kartat, galleria + ennenNyt.
