@@ -510,8 +510,8 @@ namespace Matkakirja.Natiivi
 
     /// <summary>
     /// E13 (web naytaPostikortti ja postikorttiSulkija, css .postikortti): matkakirjan valokuvapino vinoina
-    /// postikortteina ruudun keskellä (leveys min(84 %, 460), nosto −52 %). Päällimmäinen kallistuu −4,5°,
-    /// alemmat +4° ja siirtyvät (14, 30) px ilman tekstejä. Kuva-ikkuna min(48 % korkeudesta, 330 px) rajattuna,
+    /// postikortteina ruudun keskellä (leveys ja kuva-ikkuna webin @media-portain, nosto −52 %). Päällimmäinen kallistuu −4,5°,
+    /// alemmat +4° ja siirtyvät (14, 30) px ilman tekstejä. Kuva-ikkuna rajattuna,
     /// kuvateksti 0,86rem ja lähde 0,6rem kirjoituskoneella, laskuri "i/n" oikeassa alakulmassa. Pinossa
     /// vasen reunakaista (24 %) vie edelliseen ja oikea seuraavaan, keskiosa pitää kortin; napautus kortin
     /// ohi sulkee (yhden kuvan kortti mistä tahansa). Ei varjoa eikä harmaasävyä (UITK:ssa ei box-shadow- eikä
@@ -533,7 +533,14 @@ namespace Matkakirja.Natiivi
             float w = juuri.panel != null ? juuri.panel.visualTree.layout.width : 393f;
             float h = juuri.panel != null ? juuri.panel.visualTree.layout.height : 852f;
             var pinoEl = Rakenne.El("mk-postikortti", verho, PickingMode.Ignore);
-            pinoEl.style.width = Mathf.Round(Mathf.Min(w * 0.84f, 460f));
+            // Web @media: ≥ 700 px min(88vw, 76vh, 720) ja kuva min(52vh, 500); ≥ 1000 × 760 min(84vw, 82vh, 880) ja
+            // min(60vh, 600); ≥ 1500 × 950 min(76vw, 84vh, 1040) ja min(64vh, 760); muuten min(84vw, 460) ja min(48vh, 330).
+            float leveys, kuvaKorkeus;
+            if (w >= 1500f && h >= 950f) { leveys = Mathf.Min(w * 0.76f, h * 0.84f, 1040f); kuvaKorkeus = Mathf.Min(h * 0.64f, 760f); }
+            else if (w >= 1000f && h >= 760f) { leveys = Mathf.Min(w * 0.84f, h * 0.82f, 880f); kuvaKorkeus = Mathf.Min(h * 0.6f, 600f); }
+            else if (w >= 700f) { leveys = Mathf.Min(w * 0.88f, h * 0.76f, 720f); kuvaKorkeus = Mathf.Min(h * 0.52f, 500f); }
+            else { leveys = Mathf.Min(w * 0.84f, 460f); kuvaKorkeus = Mathf.Min(h * 0.48f, 330f); }
+            pinoEl.style.width = Mathf.Round(leveys);
             kortit.Clear();
             indeksi = 0;
             for (int i = 0; i < pino.Count; i++)
@@ -541,7 +548,7 @@ namespace Matkakirja.Natiivi
                 var k = pino[i];
                 var kortti = Rakenne.El("mk-postikortti__kortti", pinoEl, PickingMode.Ignore);
                 var kuva = Rakenne.El("mk-postikortti__kuva", kortti, PickingMode.Ignore);
-                kuva.style.height = Mathf.Round(Mathf.Min(h * 0.48f, 330f));
+                kuva.style.height = Mathf.Round(kuvaKorkeus);
                 Kuvat.Hae(k.Osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
                 var teksti = Rakenne.Teksti(k.Selite ?? k.Lyhyt ?? "", "mk-postikortti__teksti", kortti);
                 Kirjasimet.Aseta(teksti, Kirjasin.Kone);
