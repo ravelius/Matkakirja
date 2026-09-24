@@ -24,6 +24,11 @@ namespace Matkakirja
     /// Horisonttiusva.Sumu) ja kameran tausta pergamentin sävyyn, joten horisontin yllä ei näy mustaa avaruutta.
     /// Voimakkuus kallistuksen mukaan kuten webissä (min(1, kulma / 8°)). Linssin oma tausta (KarttaKerrokset.OmaTausta)
     /// ja lento ohittavat usvan.
+    ///
+    /// SUMUVARIANTIT (b12p-laitekuvat 25.9.: usva ei sumentanut maastoa lainkaan): ProjectSettings/GraphicsSettings
+    /// m_FogStripping oli Automatic, jolloin Unity karsii käännöksestä sumuvariantit, joita kohtauksessa ei ole (Pallo.unity
+    /// m_Fog 0). RenderSettings.fog ajossa ei silloin tee laitteella mitään (myös lennon etäisyyssumu). Nyt Manual ja
+    /// FOG_LINEAR säilytetään (Exp ja Exp2 karsitaan, niitä ei käytetä).
     /// </summary>
     public class Aurinko : MonoBehaviour
     {
@@ -259,7 +264,9 @@ namespace Matkakirja
             return $"rinne {Rinne:0.00} (sallittu {RinnevaloSallittu}, atsimuutti {Atsimuutti:0}°, korkeus {KorkeusAst:0}°, voima {Voima:0.00}), " +
                    $"tasaus {KorkeusKerroin.TasausArvo:0.00}, intensiteetti {valo?.intensity:0.000}, ambientti {RenderSettings.ambientLight}, " +
                    $"ambientProbe[0,0] {RenderSettings.ambientProbe[0, 0]:0.0000}, N·L(kameran akseli) {Vector3.Dot(n0, valo != null ? -valo.transform.forward : n0):0.000}, " +
-                   $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}), sumu {RenderSettings.fog} " +
+                   $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}, taustakartta {taustaKartta:0.00}), " +
+                   $"tausta {(kameraKomp != null ? kameraKomp.backgroundColor.ToString() : "-")} {(kameraKomp != null ? kameraKomp.clearFlags.ToString() : "")}, " +
+                   $"sumu {RenderSettings.fog} (lennon sumu {sumu}) " +
                    $"{RenderSettings.fogStartDistance:0}–{RenderSettings.fogEndDistance:0} m, kallistus {kierto?.KaytettyKallistus:0.0}°, " +
                    $"korkeus {kierto?.korkeus / 1000.0:0} km, lento {osuus:0.00}";
         }
