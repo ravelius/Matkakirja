@@ -4279,3 +4279,7 @@ Natiivi-UI: yläpalkki korjattu 0299fdb (⚙ pois, ☰ = linssivalikko, linssit 
 ## ISO iPAD ASENNETTU (TIIMI RCD77XPB7M, KEHITYS-APP ID fi.matkakirja.peli.kehitys, natiiviseppa/kehitystiimi 0295e8a); PROTO-MASTER 5876005 (ELEET f248117); testi/b10c 67dcc5e SIMUISSA (24.9.2026 klo 16.51)
 
 iPad 11 ja iPhone rekisteröity samaan tiimiin; vanha app.matkakirja.proto3d oli Personal Teamin eikä siirry (omistaja hyväksyi uuden App ID:n). b10c: Natiivi-UI b10-jono, avausteksti, saapumisnäkymä, b10-avaruus, astropulu, korkeuskerroin. Kesken: korkeuskertoimen kuvat (postikortti peitti), Pariisin lähizoomi (natiivi pysähtyy kauemmas → dpi-tunnistus simulaattorissa mittauksessa). Linssiseppä ja Laitetestaaja saivat laitteen.
+
+## NATIIVI-UI: LOYDOS 36 TEHTY (5d65549, b10-jono 9584ae2) — 'MAAILMA' KOKEET-OSION RIVINA KEHITTAJATILASSA (HUNTU POIS KOKO PALLOLTA) (24.9.2026 klo 16.51)
+
+Webissä maailmanappi on kehittäjävalikon kytkinrivi (#kehittaja-maailma-btn), ei kartan päällä → natiivissa vastaava rivi ☰ → Kehittäjä → KOKEET. Panorointi natiivissa jo vapaa. Webin 'napauta kaupunkia siirtyäksesi' -kehittäjätoiminto Pelikoodarille tarvittaessa. b10-jono: palkki, arkkipaperi, hytinä, 32, 34, 36 → kuvaparit b10c:stä tai seuraavasta käännöksestä.
