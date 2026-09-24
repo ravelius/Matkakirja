@@ -78,22 +78,11 @@ namespace Matkakirja.Natiivi
             NimioMerkkeja = 18f, Nousu = 0.891f, Hystereesi = 6f;
         static readonly string[] Kyljet = { "oikea", "vasen", "yla", "ala", "koillinen", "kaakko", "luode", "lounas" };
 
-        /// <summary>
-        /// Web kerroin = saapumisnäkymän kameran korkeus / nykyinen (min 0,2). Natiiviseppä lisää NostoKerros.ZoomKerroin;
-        /// siihen asti Osuus suhteessa maan syttymishetken osuuteen.
-        /// </summary>
-        float ZoomKerroin(NostoKerros k)
-        {
-            // Saapumisnäkymä = maan kerroksen syttymishetki: sen osuus on kerroin 1 (b12q: kiinteä 0,92 antoi natiivin
-            // läheisessä saapumisnäkymässä kertoimen ~3 ja nimiöt 16–22 px, web 8,5).
-            if (k.NykyinenMaa != saapumisMaa || osuus0 <= 0f) { saapumisMaa = k.NykyinenMaa; osuus0 = k.Osuus; }
-            return Mathf.Max(0.2f, osuus0 > 0f ? k.Osuus / osuus0 : 1f);
-        }
-        string saapumisMaa;
-        float osuus0;
+        /// <summary>Web kerroin = saapumisnäkymän kameran korkeus / nykyinen (min 0,2; NostoKerros.ZoomKerroin).</summary>
+        static float ZoomKerroin(NostoKerros k) => k.ZoomKerroin;
 
-        /// <summary>Datan nimiön kylki (Siirtoseppä, skeema 1.39 karttavalot puoli). Natiiviseppä lisää Nosto.Puoli.</summary>
-        static string DatanKylki(NostoKerros.Nosto s) => null;
+        /// <summary>Datan nimiön kylki (skeema 1.39 karttavalot puoli, Nosto.Puoli).</summary>
+        static string DatanKylki(NostoKerros.Nosto s) => s?.Puoli;
 
         /// <summary>Web nostosymNimionKattoPx: 16 px kertoimeen 2, log2-lineaarisesti 22 px:iin kertoimessa 4.</summary>
         static float NimionKatto(float kerroin) =>
