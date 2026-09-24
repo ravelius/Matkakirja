@@ -192,3 +192,9 @@ testattu), 11 rakenteeltaan-PASS jotka odottavat mittausta, 1
 osittainen (kuvan latausviive), 1 sivuhavainto (porttijäänne).
 Uusi opetus: rakennevertailu ei riitä — WEB ON MALLI, MITATTUNA
 -sääntö vaatii kuvaparin JA mitat ennen hyväksyntää.
+
+## Web korjattu natiivin tasolle (Linssiseppä 24.9.2026, Fablen päätös)
+
+| # | Näkymä | Tulos |
+|---|--------|-------|
+| 39b | Linssi: vertailu, Huippuvuoret (FIN + NOR, kamera 76/18/2500 km) | **WEB KORJATTU NATIIVIN TASOLLE.** Webin vertailu- ja maatietotila piirsi pallolle laudan tyylitellyt `countryShapes`-renkaat, jotka loppuvat laudan pohjoisreunaan (76° N): Huippuvuoret jäivät Norjan värittä, ja Finnmarkin karkeat vuonorenkaat kolmioituivat valkoisiksi kolmioiksi. Natiivin maarajat (Natural Earth 10m) värittävät Huippuvuoret oikein. Web piirtää pallolla nyt saman Natural Earth 10m -aineiston kuin korostuskehä (assets/data/maapolygonit.json, harvennus 8 lautayksikköä, kiertosuunta korjattu). Kuvapari ennen/jälkeen: `proto-3d/lokit/linssit-huippuvuoret-20260924/web/` ja `web-jalkeen/`. Seuraus natiiville: skeeman 1.29 `rajaaWebinMuotoon` (Huippuvuoret `muutRenkaat`-listaan) on nyt tarpeeton; Huippuvuoret kuuluvat NOR:n renkaisiin molemmissa. |
