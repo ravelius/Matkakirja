@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet", "varitaso", "aariviiva", "linssinimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -156,6 +156,8 @@ namespace Matkakirja
                 case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
                 case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
+                // Alue-, meri- ja valtamerinimet (Nimikerros, build 11); seuraavat myös "kaupungit"- ja "nimiot"-porttia.
+                case "aluenimet": if (Nimikerros.Instanssi != null) Nimikerros.Instanssi.paalla = nakyy; break;
                 case "reitit": if (reitit != null) reitit.Nakyvat(nakyy); break;
                 case "napakannet": if (napakannet != null) napakannet.Nakyvat(nakyy); break;
                 case "nappula": if (nappula != null) nappula.Nakyvat(nakyy); break;
@@ -175,8 +177,8 @@ namespace Matkakirja
 
         /// <summary>
         /// Webin linssikartan nimet (Linssiseppä, build 10): kaupunkipisteet ja -nimet (KaupunkiMerkit.LinssiNimet)
-        /// ja nostot nimineen (NostoKerros.LinssiNimet) ilman napautuksia ja ilman maan kehää. Merinimiä natiivissa
-        /// ei vielä ole (RAJAPINTA luku 4).
+        /// ja nostot nimineen (NostoKerros.LinssiNimet) ilman napautuksia ja ilman maan kehää. Merinimet näkyvät
+        /// linssin aikana Nimikerroksesta, joka lukee tämän tilan (Linssinimet) itse (RAJAPINTA luku 4).
         /// </summary>
         void PaivitaLinssinimet()
         {

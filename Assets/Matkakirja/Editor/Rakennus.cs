@@ -212,6 +212,19 @@ namespace Matkakirja.Editori
             nostoKerros.kierto = kierto;
             nostoKerros.merkit = merkit;
             nostoKerros.nappula = nappula;
+            // Alue-, meri- ja valtamerinimet maahan painettuina (löydös 38, build 11). Fontit: Liberation Serif
+            // (Fable 24.9.2026) SDF-assetteina, kun ne on tehty; puuttuessa natiivin serif (merkit.fontti) varalla.
+            var nimet = georefGo.AddComponent<Nimikerros>();
+            nimet.georeferenssi = georef;
+            nimet.kamera = kamera;
+            nimet.kierto = kierto;
+            nimet.merkit = merkit;
+            nimet.nappula = nappula;
+            nimet.fonttiPysty = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(NimiFonttiPysty);
+            nimet.fonttiKursiivi = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(NimiFonttiKursiivi);
+            // ZTest Always kuten Rajaviiva: maahan painettu teksti ei jää korotetun maaston alle. Viite vie varjostimen käännökseen.
+            nimet.varjostin = Shader.Find("TextMeshPro/Distance Field Overlay");
+            nimet.aaltoMateriaali = Materiaali("Aaltomerkki", "Matkakirja/Rajaviiva", new Color(58 / 255f, 66 / 255f, 84 / 255f, 0.62f));
 
             // Valo kulkee kameran mukana: näkyvä puolipallo on aina valaistu.
             var valoGo = new GameObject("Valo");
@@ -275,6 +288,10 @@ namespace Matkakirja.Editori
         }
 
         public const string TmpFontti = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset";
+
+        /// <summary>Aluenimien fontit (Nimikerros.fonttiPysty ja fonttiKursiivi): Liberation Serif SDF, kun Natiiviseppä on ne tehnyt.</summary>
+        public const string NimiFonttiPysty = "Assets/Matkakirja/Fontit/LiberationSerif-Regular SDF.asset";
+        public const string NimiFonttiKursiivi = "Assets/Matkakirja/Fontit/LiberationSerif-Italic SDF.asset";
 
         public const string FonttiTiedosto = "Assets/Matkakirja/Fontit/EBGaramond.ttf";
         public const string FonttiAsset = "Assets/Matkakirja/Fontit/EBGaramond SDF.asset";
