@@ -359,7 +359,7 @@ namespace Matkakirja.Natiivi
             {
                 var kohteet = new List<LehtiListaKohde>();
                 foreach (var k in (Rakenne.Lista(MiniJson.Kentta(r, "kohteet")) ?? new List<object>()).Select(Ob).Where(x => x != null))
-                    kohteet.Add(new LehtiListaKohde { Nimi = T(k, "nimi"), Teksti = T(k, "teksti"), Linkki = T(k, "linkki"), Kuva = Kuva(k) });
+                    kohteet.Add(new LehtiListaKohde { Nimi = T(k, "nimi"), Teksti = T(k, "teksti"), Linkki = T(k, "linkki"), Kuva = Kuva(k) ?? Kuva(Ob(MiniJson.Kentta(k, "kuva"))) });
                 a.Lista.Add((T(r, "otsikko"), kohteet));
             }
             return a;
