@@ -1067,3 +1067,16 @@
     color: var(--map-ink);
     -unity-text-align: middle-center;
 }
+
+/* Löydös 21: pillerin oikeassa reunassa kaiutin (VU-mittari luennan äänestä); piilo-luokka voittaa. */
+.mk-matkakirja--pilleri.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    margin-left: 4px;
+}
+
+.mk-matkakirja--pilleri.mk-matkakirja--pieni .mk-matkakirja__kaiutin.mk-matkakirja__piilo {
+    display: none;
+}

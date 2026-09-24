@@ -92,6 +92,7 @@
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
+//   ui pulu tekstit piiloon|nakyviin|auto | ui pulu napauta   löydös 21: repliikkien tekstit / piilotettu kuplaksi
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui pulu juttu [kaupunki] [n]              pulun kuvakortti nähtävyysjutulle (oletus firenze, ensimmäinen
 //                                             kuvallinen juttu tai kohde n) → "Avaa juttu" nähtävyysarkkiin;
@@ -410,6 +411,11 @@ namespace Matkakirja.Natiivi
                     string arvo = pk.Length > 1 ? pk[1] : "";
                     switch (pk[0])
                     {
+                        case "tekstit":
+                            Pulu.PakotaTekstit = arvo == "piiloon" ? true : arvo == "nakyviin" ? false : (bool?)null;
+                            return "tekstit piilossa: " + Pulu.TekstitPiilossa;
+                        case "napauta":
+                            return pu.NaytaPiilotettu() ? null : "ei piilotettua repliikkiä";
                         case "sano": pu.Sano(arvo.Length > 0 ? arvo : "Minä olen Livia. Kirjekyyhky, en mikään pulu."); return null;
                         case "aani":
                         {

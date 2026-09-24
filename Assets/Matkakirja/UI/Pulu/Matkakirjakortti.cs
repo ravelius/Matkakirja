@@ -183,6 +183,8 @@ namespace Matkakirja.Natiivi
             // Lappu samanlevyisenä kuin rahapilleri; auki oleva kortti omalla leveydellään (USS).
             if (pieni) kortti.style.width = paikka.width;
             else kortti.style.width = StyleKeyword.Null;
+            // Pillerin kaiutin on mittari, ei kytkin: napautus avaa kortin (tekstin) kuten muu pilleri.
+            kaiutin.pickingMode = pieni ? PickingMode.Ignore : PickingMode.Position;
         }
 
         /// <summary>Kaupunkipillerin teksti: kaupungin nimi (sisällöstä, muuten otsikon alku ennen pilkkua).</summary>
@@ -471,11 +473,15 @@ namespace Matkakirja.Natiivi
 
         void Mittari()
         {
-            if (!Nakyy || pieni) return;
+            // iPhonen kaupunkipillerissä kaiutin näkyy lapussakin (löydös 21: sykkii luennan aikana).
+            if (!Nakyy || (pieni && !Kaupunkipilleri)) return;
             float rms = 0;
             if (Aanet.KertojaPuhuu)
             {
-                AudioListener.GetOutputData(naytteet, 0);
+                // Aito äänitaso: kertojan oma AudioSource, kun luenta soi siitä; muuten (Pelikoodarin Puhe) kuulijan miksaus.
+                var lahde = Aanet.Kertojasoitin;
+                if (lahde != null && lahde.isPlaying) lahde.GetOutputData(naytteet, 0);
+                else AudioListener.GetOutputData(naytteet, 0);
                 double s = 0;
                 for (int i = 0; i < naytteet.Length; i++) s += naytteet[i] * naytteet[i];
                 rms = Mathf.Sqrt((float)(s / naytteet.Length));

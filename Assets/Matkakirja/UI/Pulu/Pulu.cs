@@ -389,7 +389,11 @@ namespace Matkakirja.Natiivi
             viimeRepliikki = teksti;
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
-            var kupla = Kuplat.Lisaa(teksti, 0, kuitattu);
+            // Löydös 21 (omistaja 24.9.2026): tekstit oletuksena piilossa — vain ääni ja ele. Napautus pulua avaa
+            // viimeisimmän repliikin. Kuittausta odottavat kuplat (esittely, jonot) näkyvät, koska ne ohjaavat.
+            PuluKuplat.Kupla kupla = null;
+            if (TekstitPiilossa && kuitattu == null) { piilotettu = teksti; piilotettuAika = Aika; }
+            else { piilotettu = null; kupla = Kuplat.Lisaa(teksti, 0, kuitattu); }
             puheKupla = kupla;
             var id = eleId ?? RepliikinEle(teksti);
             if (id != "blink" && (ele == null || LiviaEleet.Ryhma(ele) != "Liike")) Toista(id, "speech");
@@ -422,10 +426,33 @@ namespace Matkakirja.Natiivi
 
         public event Action Napautus;
 
+        /// <summary>
+        /// Pulun ja isoisän tekstit piilossa (löydös 21): iPhonella aina, muualla kertojan luennan ajan (web
+        /// tekstitPiilossa). Testikomento ui pulu tekstit piiloon|nakyviin|auto.
+        /// </summary>
+        public static bool TekstitPiilossa => PakotaTekstit ?? (Ylapalkki.Kelluva || Aanet.KertojaPuhuu);
+        public static bool? PakotaTekstit;
+
+        string piilotettu;
+        float piilotettuAika;
+
+        /// <summary>Piilotettu repliikki odottaa napautusta (lukuaika + 20 s), sitten napautus avaa taas keskustelun.</summary>
+        bool PiilotettuVoimassa => piilotettu != null && Aika - piilotettuAika < PuluKuplat.Lukuaika(piilotettu) + 20000f;
+
+        /// <summary>Piilotettu repliikki kuplaksi (pulun napautus); false, jos mitään ei odota.</summary>
+        public bool NaytaPiilotettu()
+        {
+            if (!PiilotettuVoimassa) { piilotettu = null; return false; }
+            Kuplat.Lisaa(piilotettu);
+            piilotettu = null;
+            return true;
+        }
+
         void Napautettu()
         {
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
+            if (NaytaPiilotettu()) return;
             if (Napautus != null) { Napautus(); return; }
             Aanet.PulunTehoste("pulu.kujerrus");
             if (Kuplat.Maara == 0 && viimeRepliikki != null) Kuplat.Lisaa(viimeRepliikki);
