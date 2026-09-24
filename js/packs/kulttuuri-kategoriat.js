@@ -106114,4 +106114,711 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  murzuk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Murzuk',
+      johdanto:
+        'Murzuk oli satoja vuosia Fezzanin pääkaupunki ja Saharan halki kulkevien karavaanien tärkein risteysasema – eurooppalaiset matkalaiset kutsuivat hiekkalinnoineen kaupunkia jopa "Saharan Pariisiksi".',
+      nostot: [
+        {
+          otsikko: 'Qala at Turk — turkkilaisten linna',
+          teksti:
+            'Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.',
+          tiedosto: 'Murzuq - Festung Qala at Turk über dem Ort.jpg',
+          lyhyt: 'Murzukin savitiilistä muurattu ottomaaniaikainen linnoitus Qala at Turk kohoaa kukkulalla.',
+          selite:
+            'Valokuva näyttää auringonlaskun valaiseman, savitiilistä muuratun linnoituksen jyrkät hammastetut muurit ja niiden juurelle kasautuneen hiekan – rakennus on nykyisin raunioitunut mutta yhä pystyssä.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Murzuk',
+        },
+        {
+          otsikko: 'Karavaanien risteys jo Garamantien ajoista',
+          teksti:
+            'Murzukin oaasi oli karavaanikaupungin risteysasemana jo kauan ennen islamin tuloa: viidennestä vuosisadasta eaa. viidennelle vuosisadalle jaa. seudulla vaikuttanut Garamantien valtakunta hallitsi samoja pohjois-etelä-reittejä, joita myöhemmät karavaanit käyttivät. Ottomaanivallan aikana 1500-luvulta 1900-luvun alkuun Murzuk toimi toistuvasti koko Fezzanin maakunnan pääkaupunkina ja karavaanien tärkeimpänä levähdys- ja kauppapaikkana Tripolin ja Sudanin väliä kulkevalla reitillä. Vaurauden ja vilkkaan kaupan ansiosta eurooppalaiset matkakirjailijat antoivat sille liikanimen "Saharan Pariisi", vaikka kaupunki oli tosiasiassa pieni ja karu aavikko-oaasi.',
+          tiedosto: 'AFR V2 D101 General view of Murzuk.jpg',
+          lyhyt: 'Vanha kaivertajan kuva Murzukista palmuineen, kameleineen ja hautausmaineen 1890-luvulta.',
+          selite:
+            'Mustavalkoinen kaiverrus kuvaa palmupuiden reunustamaa tietä, joka johtaa kohti Murzukin muureja ja kukkulalla kohoavaa linnoitusta; edessä kulkee kaksi kuormattua kamelia ja tien vieressä näkyy hautakivien rivistö.',
+          lahde: 'Élisée Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'Garamantes',
+        },
+        {
+          otsikko: 'Brittitutkijoiden vakiotukikohta',
+          teksti:
+            'Tammikuussa 1822 brittiläinen Denhamin, Oudneyn ja Clappertonin retkikunta saapui Murzukiin hankkimaan muonaa ja suojelua ennen jatkoaan tuntemattomille alueille kohti Tšad-järveä. Murzukista tuli seuraavina vuosikymmeninä brittitutkijoiden vakiotukikohta: James Richardson pysähtyi siellä sekä 1846 että lähtiessään viimeiselle matkalleen 1850 Heinrich Barthin ja Adolf Overwegin kanssa. Richardson kuvaili Murzukia "kuumetaudin maaksi", sillä hänen mukaansa kolme neljästä sinne saapuneesta eurooppalaisesta sairastui. Hän kuoli tuntemattomaan tautiin 4. maaliskuuta 1851 lähellä Kukawaa Tšad-järven seudulla, vain 22 vuotta ennen isoisän matkaa.',
+          tiedosto:
+            'The Clapperton expedition at Murzuk (Hugh Clapperton), from 1892 book The Story of Africa and its Explorers.jpg',
+          lyhyt: 'Vuoden 1892 kirjankuvitus Clappertonin retkikunnan pysähdyksestä Murzukissa.',
+          selite:
+            'Kuvituspiirros näyttää eurooppalaisia univormupukuisia tutkimusmatkailijoita kamelin ja paikallisten viittoihin pukeutuneiden miesten seurassa Murzukin kadulla valmistautumassa jatkamaan matkaa etelään.',
+          lahde: 'Robert Brown, Wikimedia Commons (CC0)',
+          wiki: 'Hugh Clapperton',
+        },
+        {
+          otsikko: 'Nachtigalin pakkotalvi Murzukissa',
+          teksti:
+            'Saksalainen lääkäri ja tutkimusmatkailija Gustav Nachtigal lähti helmikuussa 1869 Tripolista kohti Bornun sulttaanikuntaa viemään Preussin kuninkaan lahjoja. Fezzanin eteläpuoliset tiet osoittautuivat niin levottomiksi, että Nachtigal joutui pysähtymään Murzukiin talvehtimaan pitkäksi aikaa. Odotellessaan hän teki yllättävän päätöksen ja suuntasi sen sijaan tuntemattomalle Tibestin ylängölle, josta yksikään eurooppalainen ei ollut aiemmin palannut kertomaan. Nachtigal palasi Murzukiin lokakuussa 1869 lähes vaatteettomana mutta hengissä, ja jatkoi matkaansa Bornuun vasta seuraavana keväänä – kolme vuotta ennen isoisän matkaa 1873.',
+          tiedosto: 'PSM V27 D596 Gustav Nachtigal.jpg',
+          lyhyt: 'Tutkimusmatkailija Gustav Nachtigal, joka talvehti Murzukissa vuonna 1869.',
+          selite:
+            'Vanha kaiverrus esittää tuuheakiharaisen, viiksekkään miehen puolivartalokuvana tummassa puvussa ja rusetissa – Gustav Nachtigalin, joka joutui viettämään yli puoli vuotta Murzukissa ennen kuin pääsi jatkamaan matkaansa Tibestin kautta Bornuun.',
+          lahde: 'Tuntematon kaivertaja, Wikimedia Commons (Public domain)',
+          wiki: 'Gustav Nachtigal',
+        },
+        {
+          otsikko: 'Alexandrine Tinnén viimeinen matka',
+          teksti:
+            'Alkuvuodesta 1869 hollantilainen tutkimusmatkailija Alexandrine Tinné saapui Murzukiin aikeenaan ylittää Sahara ensimmäisenä eurooppalaisena naisena. Kaupungissa hän tapasi Gustav Nachtigalin ja toivoi jatkavansa matkaa tämän kanssa, mutta kun Nachtigal suuntasikin ensin Tibestiin, Tinné lähti omalla karavaanillaan yksin kohti Ghatia. Elokuussa 1869 hänen saattueensa tuhoutui matkalla: oppaiksi palkatut tuaregit surmasivat Tinnén ja kaksi hollantilaista merimiestä, luultavasti uskoen naisen vesitynnyreiden kätkevän kultaa. Murzukista lähtenyt matka jäi Tinnén viimeiseksi, vain neljä vuotta ennen isoisän saapumista samoille reiteille.',
+          tiedosto: 'Murzuk in Fezzan, from 1892 book The Story of Africa and its Explorers.png',
+          lyhyt: 'Kaivertajan 1890-luvun näkymä Murzukin kaupungista karavaaneineen.',
+          selite:
+            'Kaiverruksessa näkyy palmujen ympäröimä Murzuk pylväskäytävineen ja taustalla kohoavine torneineen, kun kamelikaravaani kulkee kaupungin muurien vierellä kohti aavikkoa – samaa reittiä, jota Alexandrine Tinné seurasi viimeisellä matkallaan.',
+          lahde: 'Robert Brown, Wikimedia Commons (CC0)',
+          wiki: 'Alexine Tinne',
+        },
+        {
+          otsikko: 'Berberikorut ja karavaanien tuomat aarteet',
+          teksti:
+            'Fezzanin väestö on vuosisatojen ajan ollut arabien, berbereiden, tubujen ja hausojen sekoitus – karavaanikaupan muovaamia yhteisöjä. Berberinaisten koruperinne yhdisti paikallista hopeasepäntaitoa Saharan yli kulkeneisiin kauppatavaroihin: karavaanit toivat pohjoisesta böömiläistä lasihelmeä ja meripihkaa, jotka sepät yhdistivät koruissa hopeahelmiin ja perinteisiin riipuksiin. Tällaiset korut kulkivat perintönä äidiltä tyttärelle ja kertoivat kantajansa perhesuhteista ja asemasta yhteisössä. Koruperinne elää Fezzanissa yhä, vaikka monet vanhat mallit periytyvät suoraan 1800-luvun karavaanikaupan kukoistuskaudelta.',
+          tiedosto: 'Murzuq - Berberschmuck.jpg',
+          lyhyt: 'Böömiläisistä lasihelmistä ja hopeasta tehty perinteinen berberikoru.',
+          selite:
+            'Lähikuva näyttää kaulassa roikkuvan korun, jossa vihreitä ja keltaisia lasihelmiä sekä hopeisia koristehelmiä on yhdistetty suureen, koristeelliseen hopeariipukseen.',
+          lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Berbers',
+        },
+        {
+          otsikko: 'Italian lippu nousee, ja jälleen laskee',
+          teksti:
+            'Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.',
+          tiedosto: 'Bandiera italiana a Murzuk.jpg',
+          lyhyt: 'Joukko paikallisia miehiä juhlistaa lipunnostoa Murzukin linnoituksen edustalla.',
+          selite:
+            'Vanha mustavalkoinen valokuva näyttää suuren ihmisjoukon viittoihin ja turbaaneihin pukeutuneita miehiä kokoontuneena savitiilisen linnoitusmuurin eteen, tangon huipulla liehuu lippu.',
+          lahde: 'Luigi Giambelli, Wikimedia Commons (Public domain)',
+          wiki: 'Long Range Desert Group',
+        },
+      ],
+    },
+    {
+      id: 'orjakauppa',
+      nimi: 'Orjakaravaanien risteysasema',
+      johdanto:
+        'Murzuk oli 1800-luvulla keskisen Saharan vilkkaimman orjakauppareitin tärkein risteysasema, jonka kautta tuhannet Sudanista ja Bornusta siepatut ihmiset kuljetettiin karavaaneissa kohti Välimeren rannikon markkinoita.',
+      tehtava: {
+        kysymys: 'Minä vuonna Britannia avasi Murzukiin varakonsulaatin seuraamaan orjakaravaanien liikettä?',
+        vaihtoehdot: ['1800', '1840', '1870', '1900'],
+        oikea: 1,
+        fakta:
+          'Britannian ulkoministeriö avasi Murzukiin varakonsulaatin vuonna 1840, koska kaupunki oli tuolloin keskisen Saharan vilkkaimman orjakaravaanireitin tärkein välipysäkki Sudanin ja Tripolin välillä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saharan suuret kauppareitit',
+          teksti:
+            'Murzukin kautta kulki 1800-luvulla useita Saharan halki johtavia karavaanireittejä, jotka yhdistivät Kukawan, Kanon ja muiden Sudanin kaupunkien markkinat Tripolin satamaan. Karavaanit kulkivat myös Ghatin, Ghadamesin ja Bilman oaasien kautta, ja samoja reittejä oli käytetty tavaran ja ihmisten kuljetukseen jo Garamantien ajoista lähtien. Ranskalainen maantieteilijä Edouard Blanc kartoitti nämä "Saharan suuret kauppareitit" vuonna 1889. Murzuk pysyi pitkään reitin solmukohtana, koska aavikon yli oli mahdotonta kulkea ilman sen kaivoja ja majataloja.',
+          tiedosto: 'Commerce transsaharien.jpg',
+          lyhyt: 'Nykyaikainen kartta Saharan kauppareiteistä ja niiden kuljettamista tavaroista.',
+          selite:
+            'Käsin piirretyn näköinen ranskankielinen kartta esittää koko Saharan alueen kauppareitteineen Marokosta Egyptiin ja Länsi-Afrikasta Fezzaniin; punaiset viivat yhdistävät kaupunkeja, ja tekstit kertovat kuljetetuista tavaroista kuten suolasta, kullasta ja orjista.',
+          lahde: 'Critias, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Trans-Saharan trade',
+        },
+        {
+          otsikko: 'Matka kuolettavan hiekkameren yli',
+          teksti:
+            'Karavaanimatka Sudanista Fezzaniin kesti orjiksi siepatuille ihmisille usein kuukausia ja kulki vedettömien hiekkamerien halki, joissa päivälämpötila saattoi nousta yli 45 asteeseen. Kuljetettavat joutuivat kävelemään suurimman osan matkasta jalan kahlittuina toisiinsa, kun kamelit kantoivat vettä, ruokaa ja kauppatavaraa. Aikalaisarvioiden mukaan huomattava osa karavaanien mukana lähteneistä ei koskaan saavuttanut rannikkoa, vaan kuoli janoon tai sairauksiin matkalla. Murzukin oaasi oli usein ensimmäinen paikka, jossa selviytyneet pääsivät lepäämään ylitettyään Saharan laajimmat hiekkasaret.',
+          tiedosto: 'Libya 5230 Wan Caza Dunes Luca Galuzzi 2007.jpg',
+          lyhyt: 'Fezzanin hiekkameren korkeat dyynit lähellä Murzukin oaasia.',
+          selite:
+            'Valokuva näyttää loivasti aaltoilevan hiekkameren korkeine, tuulen muovaamine dyyneineen aina horisonttiin asti – samankaltaista maastoa orjakaravaanit joutuivat ylittämään matkallaan kohti Murzukin oaasia.',
+          lahde: 'Luca Galuzzi, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Trans-Saharan slave trade',
+        },
+        {
+          otsikko: 'Karavaanipihat ja torit',
+          teksti:
+            'Murzukin keskustassa oli pylväskäytävin reunustettuja pihoja ja majataloja, joissa saapuvat karavaanit pysähtyivät lastaamaan ja purkamaan kuormaa. Pihoissa käytiin kauppaa suolalla, taateleilla, kankailla ja kullalla, mutta samoissa tiloissa tarkastettiin ja myytiin myös orjiksi siepattuja ihmisiä osana muuta karavaanin lastia. Kaupungin kauppiaat elivät vauraasti näiden pihojen ympärillä samalla, kun karavaanien mukana kulkeneet vangit odottivat jatkoa matkalle kohti rannikon markkinoita. Murzukin asema kauppa- ja orjareitin risteyksessä teki siitä yhden Fezzanin vauraimmista kaupungeista.',
+          tiedosto: 'Meyers Universum Band 20 32.jpg',
+          lyhyt: 'Kaivertajan näkymä Murzukin pylväskäytävistä ja pihoista 1800-luvulta.',
+          selite:
+            'Kaiverruksessa näkyy avara sisäpiha, jota reunustavat pylväskäytävät ja palmupuut; pihalla kulkee kameleita ja etualalla kaksi miestä istuu matolla, kun taustalla erottuu kaupungin muurin torni.',
+          lahde: 'Bibliographisches Institut Hildburghausen, Wikimedia Commons (Public domain)',
+          wiki: 'Murzuk',
+        },
+        {
+          otsikko: 'Brittiläinen varakonsuli laskee orjia',
+          teksti:
+            'Vuonna 1840 Britannian ulkoministeriö avasi Murzukiin varakonsulaatin, jonka yhtenä tehtävänä oli seurata ja hillitä keskisen Saharan orjakauppaa – kaupunki oli tuolloin sen vilkkaimman reitin tärkein välipysäkki Sudanin ja Tripolin välillä. Varakonsuli Giambattista Gagliuffi raportoi 1843–1854 Lontooseen vuosittaisia tilastoja karavaanien mukana kuljetetuista orjista, ja raporteista on tullut ainutlaatuinen lähde ajalta, jolloin kauppa oli vilkkaimmillaan. Vanha ottomaanilinnoitus toimi samaan aikaan paikallishallinnon tukikohtana, ja sen varjossa varakonsuli seurasi karavaanien tuloa ja lähtöä vuosikymmenten ajan.',
+          tiedosto: 'The Castle and old mosque of Murzuq, Libya 3.jpg',
+          lyhyt: 'Murzukin vanha linnoitus, jonka juurella varakonsuli seurasi karavaaneja.',
+          selite:
+            'Valokuva näyttää alhaalta ylöspäin kuvatun savitiilisen linnoituksen hammastettuine muureineen kirkasta sinistä taivasta vasten – rakennus toimi ottomaanihallinnon tukikohtana samaan aikaan kun Britannia seurasi kaupungin orjakaravaaneja varakonsulaattinsa kautta.',
+          lahde: 'Syed Wali Peeran, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Slavery in Libya',
+        },
+      ],
+    },
+  ],
+  nullarbor: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nullarbor',
+      johdanto:
+        'Nullarbor on maailman suurin yhtenäinen kalkkikivitasanko Etelä- ja Länsi-Australian rajalla: puuton, lähes asumaton aavikko, jonka ensimmäinen eurooppalainen ylitti kävellen vuonna 1841 – lähes hengellään.',
+      nostot: [
+        {
+          otsikko: 'Mies joka uskoi rantaan lännessä',
+          teksti:
+            'Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.',
+          tiedosto: 'Portrait of Edward John Eyre(GN12306).jpg',
+          lyhyt: 'Vanhemmalla iällä otettu valokuva tutkimusmatkailija Edward John Eyrestä.',
+          selite:
+            'Valokuva näyttää iäkkään, pitkäpartaisen Edward John Eyren tummassa puvussa istumassa sivuttain, sanomalehti kädessään – miehen, joka nuorempana ylitti Nullarborin kävellen ensimmäisenä eurooppalaisena.',
+          lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
+          wiki: 'Edward John Eyre',
+        },
+        {
+          otsikko: 'Baxterin kuolema autiolla rannikolla',
+          teksti:
+            '29. huhtikuuta 1841 leiri hiljeni ikuisiksi ajoiksi kahden miehen osalta. Kaksi retkikunnan aboriginaalioppaista, Joey ja Yarri, olivat jo viikkoja vaatineet paluuta, mutta Eyre kieltäytyi. Kun Baxter jäi hetkeksi yksin vartioimaan leiriä, miehet ampuivat hänet, veivät suurimman osan ruoasta ja vedestä sekä kaksi haulikkoa ja katosivat aavikolle. Koska maa oli liian kovaa haudan kaivamiseen, Eyre ja jäljelle jäänyt opas Wylie kääriivät Baxterin ruumiin peitteeseen ja jättivät sen rannikon kalkkikivijyrkänteiden juurelle. Kaksikko jatkoi matkaa nälkiintyneenä, elossa lähinnä kuoren keräämien kastepisaroiden ja Wylien metsästämien lintujen varassa.',
+          tiedosto: 'Great Australian Bight, Eyre Highway scenic lookout no. 3 - 1.jpg',
+          lyhyt: 'Great Australian Bightin autio, pensaikkoinen rantajyrkänne Nullarborin reunalla.',
+          selite:
+            'Valokuva näyttää karun, matalan pensaikon peittämän kalkkikivijyrkänteen, joka putoaa suoraan turkoosiin mereen – samankaltaista autiota rannikkoa Eyren retkikunta seurasi viikkokausia.',
+          lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'John Baxter (explorer)',
+        },
+        {
+          otsikko: 'Pelastus meren rannalta',
+          teksti:
+            'Kuukauden nälkäisen vaelluksen jälkeen Eyre ja Wylie näkivät toukokuussa 1841 jotain, mitä eivät olleet uskaltaneet toivoa: purjelaivan ankkurissa lahdessa lähellä nykyistä Esperancea. Alus oli ranskalainen valaanpyyntilaiva Mississippi, jota komensi englantilaissyntyinen kapteeni Thomas Rossiter. Rossiter otti uupuneet miehet laivaan, ruokki ja lepuutti heitä ennen kuin he jatkoivat viimeistä osuutta kohti Albanya. Wylie, joka oli koko matkan ajan löytänyt vettä ja ruokaa kuolevalta näyttävästä maasta, sai myöhemmin elinikäisen eläkkeen Länsi-Australian siirtokunnalta kiitokseksi uskollisuudestaan.',
+          tiedosto: 'Etching of John Eyre and Wylie when first sighting a ship(GN03284).jpg',
+          lyhyt: 'Kaiverrus Eyrestä ja Wyliestä hetkellä, jolloin he näkivät pelastavan laivan.',
+          selite:
+            'Kaiverrus näyttää kaksi riutunutta, ryysyistä miestä rannalla – toinen kantaa vesiastiaa, toinen asetta – kuvatekstin mukaan juuri sillä hetkellä, kun he ensi kertaa näkivät heidät pelastaneen laivan.',
+          lahde: 'State Government Photographer, Wikimedia Commons (CC0)',
+          wiki: 'Wylie (Australian explorer)',
+        },
+        {
+          otsikko: 'Neljä vuotta isoisän jälkeen: lanka halki tyhjyyden',
+          teksti:
+            'Kun isoisä kirjoitti matkapäiväkirjaansa vuonna 1873, Nullarborin poikki ei kulkenut vielä yhtään pysyvää yhteyttä – vain Eyren 30 vuotta vanha, lähes unohdettu reitti oli tiedossa. Muutos tuli vasta 9. joulukuuta 1877, kun Adelaiden ja Perthin yhdistävä lennätinlinja valmistui kahden vuoden raadannan jälkeen. Linjalla oli kahdeksan toistoasemaa, joista suurin rakennettiin Euclaan: puinen asema, jossa työskenteli aluksi neljä lennätinvirkailijaa. Rakennus laajennettiin 1898 kivestä, mutta hiekkadyynit alkoivat 1890-luvulla peittää koko kylää, kun kaniiniparvet söivät dyynikasvillisuuden paljaaksi – tänään rauniot pilkistävät yhä hiekan alta.',
+          tiedosto: 'Old Telegraph Station, Eucla SA. Main homestead slowly being buried by the sand dunes.jpg',
+          lyhyt: 'Euclan lennätinaseman rauniot hiekkadyynien keskellä Nullarborin länsireunalla.',
+          selite:
+            'Valokuva näyttää vaaleankeltaisista kivistä muuratun rakennuksen raunion, jonka seiniä valkoinen hiekka on vallannut puoliksi – Euclan lennätinasema, joka avattiin 1877 ja hylättiin myöhemmin dyynien alle.',
+          lahde: 'MaryWShields, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Eucla, Western Australia',
+        },
+        {
+          otsikko: "Nimi joka tarkoittaa 'ei puuta'",
+          teksti:
+            "Nullarbor-nimi juontuu latinan sanoista nullus arbor, 'ei puuta' – ja nimi pitää yhä paikkansa. Tasanko on noin 1 100 kilometriä leveä ja kattaa lähes 200 000 neliökilometriä puutonta kalkkikiveä. Kun Eyre Highway vihdoin valmistui vuonna 1941 ja päällystettiin kokonaan 1976, siitä tuli osa reittiä, jolla on Australian pisin suora tieosuus, 146 kilometriä. Vieressä kulkeva Trans-Australian-rautatie menee vielä pidemmälle: sen suorin osuus on 478 kilometriä, maailman pisin suora rautatie. Kuljettaja voi ajaa tunteja ilman yhtään mutkaa – täsmälleen sellaista autiutta, jonka läpi Eyre ja Wylie kerran raahautuivat jalan.",
+          tiedosto: 'Eyre Highway, South Australia (on Nullarbor Plain).jpg',
+          lyhyt: 'Suora, puuton tie katoaa horisonttiin Nullarbor-tasangolla.',
+          selite:
+            'Kuva autonikkunan läpi näyttää täysin suoran, kapean tien, joka jatkuu näkyvissä olevaan horisonttiin asti matalan pensaikon keskellä – ei yhtään puuta eikä mutkaa niin pitkälle kuin silmä kantaa.',
+          lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Eyre Highway',
+        },
+      ],
+    },
+    {
+      id: 'geologia',
+      nimi: 'Kalkkikivitasanko elää maan alla',
+      johdanto:
+        'Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta neliökilometriä Nullarbor-tasanko, maailman suurin yhtenäinen kalkkikivialue, kattaa noin?',
+        vaihtoehdot: ['20 000 km²', '90 000 km²', '197 000 km²', '500 000 km²'],
+        oikea: 2,
+        fakta:
+          'Nullarbor-tasanko kattaa noin 197 000 neliökilometriä entistä merenpohjaa – Maan suurin yhtenäinen kalkkikivialue.',
+      },
+      nostot: [
+        {
+          otsikko: 'Meren pohja joka nousi ilmaan',
+          teksti:
+            'Nullarbor ei ole aina ollut aavikkoa: kalkkikivi, jonka päällä nyt kävellään, kertyi meren pohjaan kerroksittain miljoonien vuosien aikana, kun matala meri peitti alueen. Mioseenikaudella, noin 14 miljoonaa vuotta sitten, merenpohja alkoi kohota, ja vesi vetäytyi paljastaen laakean, lähes täysin tasaisen kalkkikivilevyn. Nykyään tasanko kattaa noin 197 000 neliökilometriä – Maan suurin yhtenäinen kalkkikiviesiintymä, noin 1 100 kilometriä leveä Etelä- ja Länsi-Australian rajan molemmin puolin. Avaruudesta katsottuna tasanko erottuu ympäröivästä punaisesta aavikosta vaaleampana, lähes puuttomana kaistaleena rannikkoa myöten.',
+          tiedosto: 'Australia.A2002231.0145.250m NASA Nullarbor.jpg',
+          lyhyt: 'Satelliittikuva näyttää Nullarborin vaaleana kaistaleena Etelä-Australian rannikolla.',
+          selite:
+            'Kuvassa erottuu tummanpunaisen aavikon keskellä vaaleampi, tasainen kaistale rannikkoa myöten – se on puuton Nullarbor-tasanko, joka näkyy avaruudesta omana väriläikkänään ennen sinistä merta.',
+          lahde: 'NASA, Wikimedia Commons (Public domain)',
+          wiki: 'Nullarbor Plain',
+        },
+        {
+          otsikko: 'Jyrkänne joka paljastaa kerrokset',
+          teksti:
+            'Siellä missä tasanko päättyy äkisti mereen, syntyvät Bunda Cliffsin kalkkikivijyrkänteet: yli 80 kilometriä pitkä, paikoin yli 100 metriä korkea seinämä, joka putoaa suoraan Etelämeren aaltoihin. Jyrkänteen poikkileikkauksesta erottuu selvästi vaaleita kerroksia, jotka kertovat vuosimiljoonien aikana kertyneestä merenpohjan kalkkikivestä – jokainen raita oma aikakautensa. Tuuli ja meri kalvavat jyrkännettä yhä: lohkareita putoaa ajoittain veteen, ja rantaviiva siirtyy hitaasti sisämaahan päin. Samasta kalkkikivestä koostuu koko tasangon pinta, mutta vain täällä sen sisus paljastuu kokonaisena leikkauksena.',
+          tiedosto: 'Bunda Cliffs, 2017 (03).jpg',
+          lyhyt: 'Bunda Cliffsin kalkkikivijyrkänne putoaa suoraan turkoosiin mereen.',
+          selite:
+            'Valokuva näyttää pitkän, tasaisen kalkkikivijyrkänteen, joka jatkuu suorana viivana horisonttiin ja putoaa pystysuorasti kymmenien metrien korkeudesta aaltoilevaan mereen.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bunda Cliffs',
+        },
+        {
+          otsikko: 'Pimeä maailma kalkkikiven alla',
+          teksti:
+            'Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.',
+          tiedosto: 'Thampana cave enterance.png',
+          lyhyt: 'Tutkijat kiipeävät tikkailla Thampana-luolan pyöreästä kattoaukosta.',
+          selite:
+            'Kuva on otettu luolan pohjalta ylöspäin: pyöreästä kattoaukosta lankeaa kirkas valokeila, ja sitä kohti nousee pitkä tikapuu, jonka juurella näkyy kypäräpäisiä tutkijoita.',
+          lahde: 'Cborgey, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Koonalda Cave',
+        },
+        {
+          otsikko: 'Aavikon maanalainen kaivaja',
+          teksti:
+            'Etelänkarvakuonowombatti on ainoa suurikokoinen nisäkäs, joka on tehnyt Nullarborin kalkkikivimaaperästä kotinsa: se kaivaa jopa kaksi metriä syviä ja 30 metriä pitkiä käytäväverkostoja, joissa lämpötila pysyy tasaisena 14–26 asteessa ulkona vallitsevasta helteestä tai yöpakkasesta huolimatta. Laji selviää äärimmäisen niukalla vedellä: sen uloste on niin kuivaa, että vesipitoisuus voi olla vain 40 prosenttia, ja aineenvaihdunta on yksi hitaimmista koko nisäkäskunnassa. Kuivien vuosien jälkeen kannat voivat silti räjähtää: vuoden 2022 laskennassa tutkijat löysivät paikoin jopa 200 wombattia neliökilometriltä sadekausien palattua.',
+          tiedosto: 'A southern hairy-nosed wombat at Brookfield Conservation Park, South Australia.jpg',
+          lyhyt: 'Etelänkarvakuonowombatti lepää iltavalossa Nullarborin kivikkoisella maalla.',
+          selite:
+            'Kuvassa istuu paksuturkkinen, harmaanruskea wombatti kivikkoisella, niukkakasvillisella maalla auringonlaskun valossa – tyypillinen näky Nullarborin reunamilla.',
+          lahde: 'Andrew Katsis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Southern hairy-nosed wombat',
+        },
+      ],
+    },
+  ],
+  geraldton: [
+    {
+      id: 'kaupunki',
+      nimi: 'Geraldton',
+      johdanto:
+        'Geraldton on Länsi-Australian Keskilännen satamakaupunki, jonka kuvernööri Charles Fitzgerald perusti vuonna 1850 lyijynviennin tarpeisiin. Vuonna 1873 se oli jo vakiintunut pieni satamakaupunki Intian valtamerellä.',
+      nostot: [
+        {
+          otsikko: 'Lyijyä ja lahden satama',
+          teksti:
+            'Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.',
+          tiedosto: 'Geraldton harbor.JPG',
+          lyhyt: 'Perinteinen puuvene ankkurissa Geraldtonin satamassa Champion Bayllä.',
+          selite:
+            'Valokuva näyttää perinteisen puisen purjeveneen ankkurissa Geraldtonin nykyisessä marinassa, taustalla kaupungin rantarakennuksia ja purjeveneitä.',
+          lahde: 'Dinkum, Wikimedia Commons (CC0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Rautatie avaa sisämaan',
+          teksti:
+            'Vuonna 1879 valmistui Länsi-Australian ensimmäinen valtion omistama rautatie, joka yhdisti Geraldtonin sataman pohjoisempana sijaitsevaan Northamptonin kaivosseutuun. Ennen rataa malmi ja villa oli kuljetettava satamaan hevosvankkureilla hitaasti ja kalliisti, mikä rajoitti koko seudun kasvua. Rautatie muutti tilanteen käytännössä yhdessä yössä: tavaramäärät satamassa moninkertaistuivat, ja Geraldtonista tuli kiistatta koko Keskilännen alueen talouden ja liikenteen keskus. Nykyinen komea asemarakennus kaupungin keskustassa on rakennettu myöhemmin samalle paikalle, ja se toimii yhä matkailijoiden lähtöpisteenä.',
+          tiedosto: 'OIC geraldton railway stn front.jpg',
+          lyhyt: 'Geraldtonin rautatieaseman julkisivu, joka yhä muistuttaa 1879 rautatiestä.',
+          selite:
+            'Valokuva näyttää Geraldtonin rautatieaseman koristeellisen etujulkisivun, jonka päädyssä lukee kohokirjaimin GERALDTON RAILWAY STATION.',
+          lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Geraldton railway station',
+        },
+        {
+          otsikko: 'Punavalkoinen majakka',
+          teksti:
+            'Geraldtonin rannikko oli 1800-luvulla merenkulkijoille vaarallinen: matalikkoja ja äkkinäisiä tuulia riitti, ja moni laiva ajoi karille ennen kuin valoa saatiin pystyyn. Point Mooren majakka valmistui vuonna 1878 opastamaan laivat turvallisesti satamaan, ja se on nykyisin Länsi-Australian vanhin yhä pystyssä oleva liittovaltion majakka. Kartiomainen terästorni maalattiin punaisin ja valkoisin vaakaraidoin, jotta se erottuisi selvästi sekä päivänvalossa että hämärässä. Torni on lähes 35 metriä korkea, ja sen valo näkyy avomerelle kymmenien kilometrien päähän vielä tänäkin iltana.',
+          tiedosto: 'Point Moore Lighthouse October 2023 01.jpg',
+          lyhyt: 'Point Mooren majakka, Länsi-Australian vanhin yhä toimiva liittovaltion majakka.',
+          selite:
+            'Valokuva näyttää Point Mooren korkean, punavalkoraidallisen majakkatornin Geraldtonissa vaaleaa pilvistä taivasta vasten.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Kaupunki jota tuuli ei jätä rauhaan',
+          teksti:
+            'Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.',
+          tiedosto: '2026 Wave Rally Championship Final.jpg',
+          lyhyt: 'Purjelautailijoita Geraldtonin lähirannikon voimakkaissa iltatuulissa ja aalloissa.',
+          selite:
+            'Valokuva näyttää useita värikkäitä purjelautoja ja niiden ratsastajia kilpailemassa korkeissa aalloissa Geraldtonin lähellä sijaitsevalla Coronation Beachilla.',
+          lahde: 'Waverally, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Geraldton',
+        },
+        {
+          otsikko: 'Läntinen piikkihummeri',
+          teksti:
+            'Geraldton on Australian suurin läntisen piikkihummerin purkusatama, ja koko lajin kalastus on maan arvokkain yksittäisen lajin kalastuselinkeino. Punaruskea, pitkäviiksinen äyriäinen elää matalilla riutoilla ja kallioilla Länsi-Australian rannikolla, ja sitä pyydetään puisista tai muovisista riu\'uista tehdyillä pyydyksillä. Osa saaliista pyydetään kauempana avomerellä, muun muassa Houtman Abrolhosin saarilla, joissa kalastajat asuvat kausiluonteisilla leireillä. Suurin osa saaliista lastataan lopulta Geraldtonin satamaan ja lähetetään sieltä tuoreena tai pakastettuna etenkin Aasian markkinoille.',
+          tiedosto: 'Panulirus cygnus juv 01 gnangarra.jpg',
+          lyhyt: 'Läntinen piikkihummeri, jonka pyynti tekee Geraldtonista Australian suurimman hummerisataman.',
+          selite:
+            'Lähikuva näyttää nuoren läntisen piikkihummerin merenpohjalla pitkine tuntosarvineen, ympärillään merileviä ja pieni meriruusuke.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 3.0 AU)',
+          wiki: 'Panulirus cygnus',
+        },
+      ],
+    },
+    {
+      id: 'batavia',
+      nimi: 'Houtman Abrolhosin haaksirikko',
+      johdanto:
+        'Geraldtonin edustalla, noin 80 kilometriä ulkona merellä, kohoaa Houtman Abrolhosin saariryhmä – paikka, jossa hollantilaisen Batavia-laivan haaksirikko vuonna 1629 johti Australian historian julmimpiin tapahtumiin.',
+      tehtava: {
+        kysymys:
+          'Missä alkuperäinen, Batavian hylystä pelastettu ja VOC:n linnoitukseen tarkoitettu hiekkakivinen holvikaariportaali on nykyään esillä?',
+        vaihtoehdot: [
+          'Amsterdamin merihistoriallisessa museossa',
+          'Geraldtonin Länsi-Australian merenkulkumuseossa',
+          'Fremantlen lentokentän aulassa',
+          'Sydneyn oopperatalon edustalla',
+        ],
+        oikea: 1,
+        fakta:
+          'Alkuperäinen holvikaariportaali on esillä juuri Geraldtonin omassa merenkulkumuseossa; Fremantlen laivanhylkymuseossa nähtävä on siitä tehty jäljennös.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vaarallinen saariryhmä',
+          teksti:
+            'Noin 80 kilometriä Geraldtonin edustalla avomerellä kohoaa Houtman Abrolhos, 122 saaren ja riutan ryhmä, joka on eteläisin aito koralliriuttajärjestelmä Intian valtamerellä. Hollantilainen laivuri Frederick de Houtman havaitsi saariryhmän ensimmäisenä eurooppalaisena vuonna 1619 ja varoitti tulevia purjehtijoita: matala, riuttojen ympäröimä rannikko oli erittäin vaarallinen laivoille. Varoituksesta huolimatta 1600-luvun kartat olivat epätarkkoja, ja Alankomaiden Itä-Intian kauppakomppanian eli VOC:n laivat kulkivat silti usein juuri tätä reittiä kohti nykyistä Indonesiaa. Yksikään kartta ei kuitenkaan pelastanut laivaa, joka ajoi karille kesällä 1629.',
+          tiedosto: 'Admiralty Chart No 1723 The Houtman Rocks, Published 1845.jpg',
+          lyhyt: 'Brittiläinen merikartta Houtman Abrolhosin vaarallisista riutoista ja saarista.',
+          selite:
+            'Vanha brittiläinen merikartta vuodelta 1845 esittää Houtman Abrolhosin saariryhmän riuttoineen ja saariryhmineen Länsi-Australian rannikon edustalla.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (Public domain)',
+          wiki: 'Houtman Abrolhos',
+        },
+        {
+          otsikko: 'Batavian haaksirikko',
+          teksti:
+            'VOC:n uusi lippulaiva Batavia lähti neitsytmatkalleen Amsterdamista kohti Itä-Intiaa lokakuussa 1628, ja se oli aikansa suurimpia ja arvokkaimpia kauppalaivoja. Aamuyöllä 4. kesäkuuta 1629 laiva ajoi karille Morning Reefille Houtman Abrolhosin Wallabi-saariryhmässä. Suurin osa yli 300 matkustajasta ja miehistöstä, joukossa useita naisia ja lapsia, onnistui pelastautumaan pienelle hiekkasaarelle, jota alettiin pian kutsua synkällä nimellä Batavian hautausmaa. Komentaja Francisco Pelsaert lähti pian tämän jälkeen avoveneellä hakemaan apua lähes 3 000 kilometrin päässä sijaitsevasta Batavian kaupungista, ja matka kesti 33 päivää.',
+          tiedosto: 'Beacon Island Abrolhos.jpg',
+          lyhyt: 'Beacon Island eli entinen Batavian hautausmaa, kuvattuna ilmasta.',
+          selite:
+            'Ilmakuva näyttää pienen, kapean hiekkasaaren kirkkaan turkoosin riuttaveden keskellä – tämä Beacon Island tunnettiin aikanaan nimellä Batavian hautausmaa.',
+          lahde: 'Guy de la Bedoyere, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Beacon Island (Houtman Abrolhos)',
+        },
+        {
+          otsikko: 'Kapina ja verinen kesä',
+          teksti:
+            'Pelsaertin lähdettyä hakemaan apua jäljelle jääneiden noin 250 haaksirikkoutuneen johtoon nousi kauppias Jeronimus Cornelisz, joka pelkäsi oman osuutensa laivan väärinkäytöksestä paljastuvan. Turvatakseen asemansa hän järjesti seuraajineen kuukausien väkivallan kierteen, jonka aikana surmattiin ainakin 110 miestä, naista ja lasta – yksi Australian historian julmimmista tapahtumista. Kun Pelsaert lokakuussa 1629 palasi pelastuslaivalla, kapina oli jo osittain kukistettu, ja Cornelisz sekä pahimmat rikoskumppaninsa tuomittiin ja hirtettiin lähisaarella samana kuukautena – Australian ensimmäiset tunnetut oikeuden määräämät teloitukset.',
+          tiedosto: 'Batavia 01 gnangarra.jpg',
+          lyhyt: 'Batavian pelastetun rungon osia esillä Länsi-Australian laivanhylkymuseossa.',
+          selite:
+            'Valokuva näyttää Batavian hylystä pelastetun rungon kaarevat, tummuneet puuosat sekä taustalla kivisen holvikaariportaalin jäljennöksen Fremantlen laivanhylkymuseon galleriassa.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+          wiki: 'Batavia (1628 ship)',
+        },
+        {
+          otsikko: 'Sankarit Vasikkasaarella',
+          teksti:
+            'Cornelisz oli aiemmin lähettänyt noin 20 sotilaan ryhmän Wiebbe Hayesin johdolla naapurisaarelle, jota nykyisin kutsutaan West Wallabiksi, siinä uskossa että miehet kuolisivat janoon vailla vettä. Miehet löysivätkin makeaa vettä ja onnistuivat rakentamaan kalkkikivestä ja korallilohkareista matalan puolustusmuurin. Kun Hayes sai tietää saarilla tapahtuneista murhista, hänen ryhmänsä torjui menestyksekkäästi useita Corneliszin miesten hyökkäyksiä alkeellisin asein. Muurin ja siihen liittyvän kaivon jäänteet ovat säilyneet tähän päivään asti, ja niitä pidetään Australian vanhimpana tunnettuna eurooppalaisten rakentamana rakennelmana.',
+          tiedosto: 'The Fort - West Wallabi Island - Colour.JPG',
+          lyhyt: 'Wiebbe Hayesin miesten vuonna 1629 rakentaman linnakkeen rauniot West Wallabilla.',
+          selite:
+            'Valokuva näyttää matalan, rapistuneen kalkkikivimuurin rauniot kuivassa pensaikossa West Wallabi -saarella – Wiebbe Hayesin miesten 1629 rakentaman puolustusaseman jäänteet.',
+          lahde: 'Rupert Gerritsen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Wiebbe Hayes',
+        },
+        {
+          otsikko: 'Portaali joka palasi kotiin',
+          teksti:
+            'Batavian ruumaan oli lastattu myös valmiiksi veistetty hiekkakivinen holvikaariportaali, joka oli tarkoitus pystyttää VOC:n uuden linnoituksen sisäänkäynniksi nykyisessä Indonesiassa. Haaksirikon jälkeen kivet vajosivat mereen laivan mukana, mutta sukeltajat löysivät ja nostivat ne esiin vasta 1970-luvun hylkytutkimuksissa. Kokoon ladottu, koristeltu holvikaari on nykyisin uudelleen pystytettynä esillä Geraldtonin omassa Länsi-Australian merenkulkumuseossa, lähellä paikkaa, jonne haaksirikkoutuneet aikoinaan tuotiin turvaan. Fremantlen suuremmassa laivanhylkymuseossa on esillä siitä valmistettu tarkka jäljennös.',
+          tiedosto: 'Batavia 05 gnangarra.jpg',
+          lyhyt: 'Batavian lastista pelastetun holvikaariportaalin jäljennös; alkuperäinen on Geraldtonissa.',
+          selite:
+            'Valokuva näyttää uudelleen kootun hiekkakivisen holvikaariportaalin, jonka pinnassa on veistettyjä koristekuvioita – tämä on Fremantlen museon jäljennös, alkuperäinen on esillä Geraldtonissa.',
+          lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+          wiki: 'Batavia (1628 ship)',
+        },
+        {
+          otsikko: 'Hummerileirit riutalla tänään',
+          teksti:
+            'Houtman Abrolhos ei ole vain haaksirikkojen historiaa, vaan myös elävä työpaikka: saarilla toimii yhä kausiluonteisia kalastusleirejä, joissa sadat kalastajat asuvat maalis-kesäkuun pyyntikauden ajan mökeissä keskellä hiekkaa ja pensaikkoa. Leireissä pyydetään läntistä piikkihummeria, jonka saalis puretaan lopulta Geraldtonin satamaan. Samalla saaristo on yksi maailman tärkeimmistä merilintujen pesimäalueista, jossa pesii muun muassa yli miljoona paria kiitäjäliitoruokkeja, joten kalastus ja luonnonsuojelu on täytynyt sovittaa yhteen tarkoin säännöin. Vanhat kalastajamökit ja pinotut hummeripyydykset ovat osa saariston maisemaa jo vuosikymmenten takaa.',
+          tiedosto:
+            "Crayfisherman's shack with big kerosene fridge & little else. North Island Abrolhos W.A. north of Geraldton. Coral Island. (26539019529).jpg",
+          lyhyt: 'Kalastajan mökki ja pinotut hummeripyydykset Houtman Abrolhosilla vuonna 1959.',
+          selite:
+            'Vanha valokuva vuodelta 1959 näyttää pinottuja puisia hummeripyydyksiä, tynnyreitä ja pienen peltikatoksen valkoisella koralliittihiekalla North Islandilla Houtman Abrolhosilla.',
+          lahde: 'Dr Mary Gillham Archive Project, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Houtman Abrolhos',
+        },
+      ],
+    },
+  ],
+  joaopessoa: [
+    {
+      id: 'kaupunki',
+      nimi: 'João Pessoa',
+      johdanto:
+        'João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.',
+      nostot: [
+        {
+          otsikko: 'Kolmanneksi vanhin kaupunki',
+          teksti:
+            'João Pessoa syntyi 5. elokuuta 1585, kun portugalilaiset siirtomaaherrat solmivat rauhan alueella asuneen tabajara-heimon kanssa ja saivat luvan perustaa siirtokunnan Paraíban joen suulle. Ensimmäiset asukkaat asettuivat lokakuun lopussa Porto do Capimin rantaan, ja kaupunki sai nimekseen Cidade Real de Nossa Senhora das Neves – Lumen Neitsyen kuninkaallinen kaupunki. Tästä tuli aikanaan Brasilian kolmanneksi vanhin kaupunki: vain Salvador ja Rio de Janeiro olivat sitä vanhempia. Isoisän matkavuonna 1873 kaupunki oli jo lähes 300-vuotias, mutta yhä samalla joenmutkalla kuin ensimmäiset asukkaat olivat kerran valinneet.',
+          tiedosto: 'Catedral Basílica de Nossa Senhora das Neves.jpg',
+          lyhyt: 'Katedraali kohoaa João Pessoan kattojen ja Paraíban joen yllä.',
+          selite:
+            'Mustavalkoinen ilmakuva näyttää Nossa Senhora das Nevesin katedraalin kaksoistornit kaupungin kattojen ja taustalla siintävän Paraíban joen yllä.',
+          lahde: 'Rogerio121402, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+        {
+          otsikko: 'Filipeiasta Parahybaksi',
+          teksti:
+            'Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.',
+          tiedosto: 'Centro Histórico de João Pessoa - PB.JPG',
+          lyhyt: 'João Pessoan historiallinen keskusta kohoaa Paraíban joen mutkan yllä.',
+          selite:
+            'Valokuva näyttää João Pessoan historiallisen keskustan kirkontorneineen ja punakattoisine taloineen Paraíban joen mutkan yllä.',
+          lahde: 'Jailsoncoutinho, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+        {
+          otsikko: 'Hollantilaisten Frederikstad',
+          teksti:
+            'Vuonna 1585 – samana vuonna kuin kaupunki itse – valmistui Paraíban joen suulle Forte de Santa Catarina, joka puolusti siirtokuntaa ranskalaisten ja hollantilaisten hyökkäyksiltä. Ranskalaiset ja potiguara-intiaanit polttivat linnakkeen jo 1597, mutta se rakennettiin uudelleen ja kesti hollantilaisten hyökkäykset vielä 1630-luvulla. Alankomaiden kauppakomppania valtasi lopulta koko kaupungin 1634 ja nimesi sen Frederikstadiksi; miehityksen aikana hollantilaiset ottivat haltuunsa noin 19 alueen sokerimyllyä. Portugalilaiset karkottivat hollantilaiset 1654, ja linnake seisoo yhä jokisuulla – isoisänkin matka-aikaan jo lähes 300-vuotiaana vartijana.',
+          tiedosto: 'CacioMurilo Forteleza Sta Catarina Cabedelo PB (27018396028).jpg',
+          lyhyt: 'Forte de Santa Catarinan pihapiiri kappeleineen Cabedelon jokisuulla.',
+          selite:
+            'Valokuva näyttää Forte de Santa Catarinan sisäpihan: valkoiseksi kalkitun kappelin ja pitkän rakennussiiven nurmikentän reunalla, linnoituksen muurin siintäessä oikealla.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Forte de Santa Catarina',
+        },
+        {
+          otsikko: 'São Franciscon kultainen luostari',
+          teksti:
+            'Fransiskaanimunkit aloittivat São Franciscon luostarin ja kirkon rakentamisen 1589 auttaakseen jesuiittoja alkuperäiskansojen käännytystyössä. Kirkon pääosat valmistuivat parissa vuodessa, mutta koko kokonaisuus – luostari, kappelit ja pihamaa – täydentyi vasta 1788. Sisätiloja koristavat kullatut puuveistokset, joiden joukossa on Unescon maailmanlaajuisesti ainutlaatuiseksi nostama saarnastuoli, sekä atsulejo-laatat, jotka kuvaavat muun muassa Joosefin tarinaa Egyptissä. Hollantilaismiehitys vaurioitti rakennusta ja karkotti munkit 1636, mutta luostari seisoo yhä – Etelä-Amerikan suurimpana barokkimonumenttina, jonka läpi isoisäkin olisi kulkenut.',
+          tiedosto: 'Igreja São Francisco Paraíba 02.jpg',
+          lyhyt: 'São Franciscon kirkon kullattu alttarikoru ja pyhimyspatsas.',
+          selite:
+            'Valokuva näyttää São Franciscon kirkon kullatun sivukappelin: runsaasti kultakoristellun alttarikehyksen pyhimyspatsaineen sekä seinillä pyhimysmaalauksia.',
+          lahde: 'Monalisa Duarte dos Reis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'São Francisco Cultural Center',
+        },
+        {
+          otsikko: 'Amerikan mantereen aamun ensimmäinen piste',
+          teksti:
+            'Muutaman kilometrin päässä kaupungin keskustasta työntyy mereen Ponta do Seixas, koko Amerikan mantereen itäisin kärki – kaksoismantereen kummallakaan puoliskolla ei ole yhtään pistettä idempänä. Brasilian laivasto vahvisti aseman virallisesti vasta vuonna 1941, mutta maantiede ei ollut muuttunut miksikään: aamuaurinko oli noussut juuri tälle kalliolle ensimmäisenä koko Amerikassa jo isoisän matkavuonna 1873 ja kaikkina aamuina sitä ennen. Nykyään paikkaa merkitsee vuonna 1972 avattu Farol do Cabo Branco -majakka, ja sen vieressä siivekkään näköinen kompassiruusumonumentti osoittaa tarkalleen itään avautuvaa merta.',
+          tiedosto: 'Farol do Cabo Branco (8275471588).jpg',
+          lyhyt: 'Siivekäs kompassiruusumonumentti Amerikan mantereen itäisimmällä kärjellä.',
+          selite:
+            'Valokuva näyttää korkean, kapenevan tornin, jonka alaosasta työntyy kaksi siipimäistä betonilipaa vastakkaisiin suuntiin; torni kohoaa puuston keskellä myrskyisää taivasta vasten, edessä ketjuaita ja pieni ankkuripatsas.',
+          lahde: 'Rafael Vianna Croffi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ponta do Seixas',
+        },
+        {
+          otsikko: 'Sokerin vuosisadat ja kasvava kaupunki',
+          teksti:
+            'Isoisän matkavuonna 1873 Parahyba oli sokerin kaupunki: ruokopellot ja niitä pyörittävät engenho-myllyt olivat hallinneet seudun taloutta jo kolmen vuosisadan ajan perustamisesta lähtien. Väestönlaskennassa vuotta aiemmin, 1872, kaupungissa asui 24 714 henkeä, mikä teki siitä maakunnan neljänneksi väkirikkaimman paikkakunnan. Seuraavina vuosikymmeninä kaupunki vaurastui, ja näkyvin merkki siitä oli 3. marraskuuta 1889 avattu Teatro Santa Roza, Parahyban maakunnan tärkein teatteri. Vaaleanpunainen rakennus seisoo yhä samalla paikalla, muutaman korttelin päässä joenrannasta, jonka varrelle isoisän aikainen sokerikaupunki oli kasvanut.',
+          tiedosto: 'Teatro Santa Roza.jpg',
+          lyhyt: 'Teatro Santa Rozan vaaleanpunainen neoklassinen julkisivu aukiolla.',
+          selite:
+            'Valokuva näyttää Teatro Santa Rozan vaaleanpunaisen, uusklassisen julkisivun aukiolta käsin – rakennuksen otsikkokentässä lukee Theatro Santa Roza.',
+          lahde: 'Rogerio121402, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'João Pessoa, Paraíba',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Riutat, kalliot ja sademetsä',
+      johdanto:
+        'João Pessoan liepeillä luonto tarjoaa vastakohtia: punertava hiekkakivijyrkänne syöksyy mereen, matalan veden riutat nostavat esiin väliaikaisen hiekkasaaren, ja keskellä kaupunkia kasvaa yhä 515 hehtaarin sademetsän jäänne.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta hehtaaria Mata do Buraquinhon sademetsän jäännöstä suojellaan keskellä João Pessoan kaupunkia?',
+        vaihtoehdot: ['120 hehtaaria', '515 hehtaaria', '1 200 hehtaaria', '3 000 hehtaaria'],
+        oikea: 1,
+        fakta:
+          'Mata do Buraquinho eli Jardim Botânico Benjamin Maranhão on 515 hehtaarin suojelualue keskellä João Pessoan kaupunkia – yksi maailman suurimmista tasaisista, luonnontilaisina säilyneistä sademetsän jäänteistä kaupunkialueella.',
+      },
+      nostot: [
+        {
+          otsikko: 'Cabo Brancon punainen kalliojyrkänne',
+          teksti:
+            'Kaupungin eteläreunalla meri on kaivertanut lähes 40 metriä korkean kalliojyrkänteen, jonka punaruskeat kerrostumat kuuluvat niin sanottuun Barreiras-muodostumaan – hiekka- ja savikivikerroksiin, jotka ovat huuhtoutuneet mantereen vanhoista kivilajeista miljoonien vuosien aikana. Kerrostumat ovat pehmeitä ja sortuvat helposti, joten jyrkänne syö itseään taaksepäin: rantaan on aseteltu suuria lohkareita hidastamaan sortumia ja suojaamaan rannan tuntumassa kulkevaa tietä. Jyrkänteen päällä kohoaa Oscar Niemeyerin suunnittelema valkoinen tiedekeskus, ja sen tuntumassa sijaitsee koko Amerikan mantereen itäisin kärki, josta avautuu näkymä turkoosiin mereen.',
+          tiedosto: 'Falésia do Cabo Branco, João Pessoa (PB).jpg',
+          lyhyt: 'Ilmakuva Cabo Brancon punaisesta jyrkänteestä ja rannikkotiestä.',
+          selite:
+            'Ilmakuva näyttää Cabo Brancon punertavan kalliojyrkänteen, sen päällä kohoavan valkoisen tiedekeskuksen sekä alla siintävän turkoosin meren ja riuttakuvioita.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Cabo Branco Lighthouse',
+        },
+        {
+          otsikko: 'Hiekkasärkkä joka nousee merestä',
+          teksti:
+            'Cabedelon edustalla, muutaman kilometrin päässä João Pessoan pohjoispuolella, nousee laskuveden aikaan esiin Areia Vermelha – noin kaksi kilometriä pitkä ja kilometrin levyinen hiekkasärkkä, joka on suurimman osan ajasta veden alla. Riutat suojaavat särkkää avomereltä koko Paraíban rannikon mitalta, ja niiden sisäpuolelle jää lämpimiä, kirkasvetisiä luonnonaltaita, joissa uiskentelee värikkäitä riuttakaloja. Alue rauhoitettiin 28. elokuuta 2000 osavaltion merelliseksi puistoksi, ja suojelualueen pinta-ala on 231 hehtaaria. Veneillä sinne pääsee vain muutamaksi tunniksi laskuveden aikaan, ennen kuin nouseva meri peittää hiekan jälleen näkyvistä.',
+          tiedosto: 'Areia Vermelha, Cabedelo (PB).jpg',
+          lyhyt: 'Ilmakuva Areia Vermelhan hiekkasärkästä ja riutta-altaista.',
+          selite:
+            'Ilmakuva näyttää Areia Vermelhan hiekkasärkän, joka on noussut esiin laskuveden aikana, ja sen ympärillä ihmisiä sekä veneitä matalassa vedessä.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Areia Vermelha Marine State Park',
+        },
+        {
+          otsikko: 'Sademetsä keskellä kaupunkia',
+          teksti:
+            'Kaupungin sisällä, muutaman kilometrin päässä rannikolta, kasvaa Mata do Buraquinho – Atlantin sademetsän jäänne, joka on säilynyt lähes koskemattomana keskellä kasvavaa suurkaupunkia. Suojeltua aluetta on yhteensä 515 hehtaaria, ja siitä 343 hehtaaria on avattu kävijöille Jardim Botânico Benjamin Maranhão -kasvitieteellisenä puutarhana, jossa kulkee kaksitoista opastettua polkua. Metsässä kasvaa yli 540 kasvilajia, muun muassa keltakukkaista ipê-puuta, joiden varjossa viihtyvät lukuisat linnut ja hyönteiset. Tutkijoiden mukaan se on maailman laajin tasainen, luonnontilainen sademetsä, joka on säilynyt yhtenäisenä keskellä kaupunkialuetta.',
+          tiedosto: 'Jardim Botânico Benjamin Maranhão (JBBM), João Pessoa (PB).jpg',
+          lyhyt: 'Lampi heijastaa huvimajaa ja tiheää sademetsää Jardim Botânicossa.',
+          selite:
+            'Valokuva näyttää tyynen lammen, joka heijastaa pientä huvimajaa ja sitä ympäröivää tiheää sademetsää Jardim Botânico Benjamin Maranhãossa.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Atlantic Forest',
+        },
+        {
+          otsikko: 'Riutat jotka rakentavat rannikon',
+          teksti:
+            'João Pessoan rantaviivaa suojaa lähes koko matkaltaan luonnollinen hiekkakivi- ja koralliriuttojen linja, joka kulkee muutaman sadan metrin päässä rannasta. Laskuveden aikaan riutat paljastuvat ja niiden sisäpuolelle jää matalia, lämpimiä vesialtaita, joissa lapset ja aikuiset kahlaavat rauhassa aaltojen ulottumattomissa. Samat riutat hidastavat aaltoja ja hillitsevät rannikkoeroosiota, minkä ansiosta kaupungin hiekkarannat ovat pysyneet leveinä vuosikymmenestä toiseen. Ponta do Seixasin edustalla vesi vaihtaa väriään turkoosista syvänsiniseksi juuri riuttalinjan kohdalla, ja paikalliset kalastajat tuntevat nämä vedet edelleen parhaina kalapaikkoinaan.',
+          tiedosto: 'Ponta do Seixas, João Pessoa (PB).jpg',
+          lyhyt: 'Rauhallinen merinäkymä Ponta do Seixasin rannalta pienine veneineen.',
+          selite:
+            'Valokuva näyttää tyynen meren Ponta do Seixasin edustalla; vedessä on pieni kalastusvene ja etualalla rantakasvillisuutta.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Coral reef',
+        },
+      ],
+    },
+  ],
+  bananal: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ilha do Bananal',
+      johdanto:
+        'Ilha do Bananal on maailman suurin sisämaan jokisaari Araguaia-joen keskellä Keski-Brasiliassa – karajá- ja javaé-kansojen koti jo kauan ennen kuin ulkopuoliset edes tiesivät koko saaren olemassaolosta.',
+      nostot: [
+        {
+          otsikko: 'Maailman suurin jokisaari',
+          teksti:
+            'Ilha do Bananal syntyy, kun Araguaia-joki haarautuu kahtia: läntinen haara säilyttää Araguaia-nimen, itäinen tunnetaan Javaés-jokena, ja nämä kaksi virtaa yhtyvät jälleen vasta 320 kilometrin päässä. Väliin jää maa-alue, joka on lähes 20 000 neliökilometrin kokoinen – enemmän kuin Israel kokonaisuudessaan – ja jota pidetään maailman suurimpana sisämaan jokisaarena, jolla ei ole lainkaan merenrantaa. Saarelle ei vieläkään johda yhtään siltaa: matka tehdään veneellä tai kuivana kautena kahlaten, aivan kuten isoisän aikana 1870-luvulla.',
+          tiedosto: 'Ilha bananal.jpg',
+          lyhyt: 'Aamuvalossa kuvattu hiekkasärkkä Araguaia-joella lähellä Ilha do Bananalia.',
+          selite:
+            'Kuva näyttää auringon värjäämän hiekkarannan ja matalan joen, jonka toisella puolella kasvaa tiheää rantametsää – tyypillisen näkymän saaren ympärillä virtaavasta Araguaia-joesta.',
+          lahde: 'Amanda Leite, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bananal Island',
+        },
+        {
+          otsikko: 'Vielä 1873 tuntematon aarremaa',
+          teksti:
+            'Sertanista José Pinto Fonseca merkitsi saaren löydetyksi jo vuonna 1773, mutta ”löytäminen” tarkoitti käytännössä vain sitä, että sen olemassaolo kirjattiin ylös. Koko 1800-luvun ajan saaren sisäosat pysyivät virallisilla kartoilla tyhjänä läikkänä: sinne tunkeutuivat lähinnä orjametsästäjien retkikunnat, jotka karkottivat karajá- ja javaé-kyliä mutta eivät piirtäneet mitään muistiin. Vasta 1940-luvulla, kun Villas Bôas -veljesten retkikunta lähti Araguaia-joen rannalta Aragarçasista kartoittamaan Keski-Brasilian sisämaata kohti Xingua, alue alkoi vähitellen aueta ulkopuolisen maailman kartoille – lähes 170 vuotta isoisän matkan jälkeen.',
+          tiedosto: 'Rio Araguaia, Aruanã, fronteira entre Goiás e Mato Grosso, agosto de 2025 (19).jpg',
+          lyhyt: 'Leveä Araguaia-joki ja sen rannalle rakennetut pienet mökit.',
+          selite:
+            'Valokuvassa avautuu leveä Araguaia-joki, jonka kaukaisella rannalla erottuu pieniä puumökkejä – joki on edelleen alueen tärkein, usein ainoa kulkuväylä.',
+          lahde: 'Fronteira, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Villas-Bôas brothers',
+        },
+        {
+          otsikko: 'Suojeltu maa vuodesta 1959',
+          teksti:
+            'Brasilian valtio suojeli koko saaren joulukuun viimeisenä päivänä 1959: pohjoisosaan perustettiin Parque Nacional do Araguaia, noin 5 600 neliökilometrin kansallispuisto, kun taas keski- ja eteläosa, noin 13 600 neliökilometriä, varattiin alkuperäiskansojen kulttuurialueeksi vuoden 1973 intiaanilain nojalla. Unesco lisäsi koko saaren biosfäärialueiden verkostoonsa vuonna 1993. Nykyisin saaren koko väestö on alkuperäiskansoja – karajá, javaé, avá-canoeiro ja tapirapé – eikä yksikään ulkopuolinen voi asettua saarelle omin päin.',
+          tiedosto: 'Vista do Parque Nacional do Araguaia.jpg',
+          lyhyt: 'Iltahämärässä kuvattu jokiuoma kansallispuiston sademetsän keskellä.',
+          selite:
+            'Kuva näyttää kapean, puiden reunustaman jokiuoman ja sen pinnalla kelluvia vesikasveja kansallispuiston alueella iltahämärässä.',
+          lahde: 'Rodrigo José Fernandes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Araguaia National Park',
+        },
+        {
+          otsikko: 'Tulvasavannin rytmi',
+          teksti:
+            'Ilha do Bananal elää joen tahdissa. Kuivana kautena, kesä-elokuussa, vedenpinta laskee niin paljon, että joen voi ylittää ajoneuvolla kahlaamalla, ja hiekkarannat paljastuvat laajoina särkkinä. Sadekautena samat alueet peittyvät tulvaveden alle, ja savannin, babassupalmumetsien ja tulvametsien mosaiikki muuttuu järvien ja soiden verkostoksi. Tämä vuosittainen tulvapulssi on koko saaren ekosysteemin ja sen asukkaiden elämän perusta: se täyttää kalavedet, kastelee viljelysmaat ja tarjoaa kilpikonnille ja linnuille pesimäpaikkoja, kun vesi vetäytyy.',
+          tiedosto: 'Rio Javaés.jpg',
+          lyhyt: 'Hiekkaranta Javaés-joen varrella Ilha do Bananalin sisällä, Aldeia Txuirin kohdalla.',
+          selite:
+            'Valokuva on otettu Javaés-joen rannalta saaren sisältä, Aldeia Txuirin kylän kohdalta – rauhallinen vesi ja hiekkaranta paljastuvat kuivana kautena.',
+          lahde: 'Arthur to, Wikimedia Commons (Public domain)',
+          wiki: 'Araguaia River',
+        },
+        {
+          otsikko: 'Jättiläissaukot naapurikosteikossa',
+          teksti:
+            'Naapurissa sijaitsevan Cantãon suojelualueen kosteikoilla, aivan Ilha do Bananalin rajalla, tutkijat ovat seuranneet samaa jättiläissaukkolaumaa (Pteronura brasiliensis) vuodesta 2010 lähtien. Jättiläissaukko on Etelä-Amerikan suurin saukkolaji: aikuinen voi kasvaa yli 1,7-metriseksi ja painaa yli 30 kiloa, ja perhe metsästää yhdessä kalaparvia joen mutkissa. Samoilla vesillä elää myös jaguaari, tunnetusti kissaeläimistä vesiharrastunein: se ui mielellään yli jokien ja saalistaa jopa kaimaaneja rannan tuntumassa.',
+          tiedosto: 'Four Giant Otters.JPG',
+          lyhyt: 'Neljä jättiläissaukkoa nousemassa rantatörmälle juurakon seassa.',
+          selite:
+            'Kuvassa neljä jättiläissaukkoa kiipeää mutaista rantatörmää pitkin puiden juurien seassa, yksi vielä puolittain vedessä.',
+          lahde: 'Araguaia.org / Rio Cicica at en.wikipedia, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Giant otter',
+        },
+        {
+          otsikko: 'Oma jokidelfiinilaji',
+          teksti:
+            'Vuonna 2014 tutkijat julistivat Araguaia-joen delfiinit omaksi lajikseen, Inia araguaiaensis, aiemmin Amazonin jokidelfiinin alalajina pidetyn populaation sijaan. Laji elää vain Araguaia–Tocantins-joen vesistössä, ja sitä on havaittu muun muassa Ilha do Bananalin eteläpuolella aina Santa Isabelin koskille asti. Harmaanpunertava, pitkäkuonoinen delfiini nousee pintaan hengittämään muutaman sekunnin välein ja on koko olemassaolonsa ajan elänyt uhanalaisena: patoja, kalastusverkkoja ja saastumista riittää sen ainoalla kotivedellä.',
+          tiedosto: 'Inia araguaiensis.jpg',
+          lyhyt: 'Araguaian jokidelfiini pulpahtaa pintaan hengittämään.',
+          selite:
+            'Kuva näyttää delfiinin harmaanpunertavan selän ja pitkän kuonon veden pinnalla juuri sen noustessa hengittämään.',
+          lahde: 'Rio Cicica, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Araguaian river dolphin',
+        },
+        {
+          otsikko: 'Maailman suurin kilpikonnien pesimäranta',
+          teksti:
+            'Araguaia-joen hiekkasärkät, myös Bananalin sisällä virtaavan Javaés-joen varrella, muodostavat yhden maailman suurimmista jättiläisten amazoninkilpikonnien (Podocnemis expansa) pesimäalueista. Naaraat kaivavat munapesänsä kuivan kauden paljastamille hiekkarannoille, ja tutkijat ovat havainneet, että pesäpaikan valinta ei ole sattumaa: rannan kaltevuus ja hiekkatason korkeus ratkaisevat, mihin kohtaan munat kaivetaan. Kilpikonnat jakavat rannat pienemmän Podocnemis unifilis -lajin kanssa, joka pesii samoilla särkillä ylempänä.',
+          tiedosto: 'Podocnemis expansa INPA.jpg',
+          lyhyt: 'Amazoninkilpikonna kurkottaa kuoreltaan kameraan.',
+          selite:
+            'Lähikuvassa amazoninkilpikonna kurottaa kaulaansa esiin kilvestään, toisen kilpikonnan pää näkyy vasemmassa yläkulmassa.',
+          lahde: 'Whaldener Endo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Arrau turtle',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Iny-kansat: karajá ja javaé',
+      johdanto:
+        'Karajá ja javaé kutsuvat itseään yhteisesti inyiksi. He ovat kalastaneet Araguaialla ja Ilha do Bananalilla sukupolvien ajan ja muovanneet savesta pieniä maailmoja jo kauan ennen kuin ulkopuoliset matkustivat heidän luokseen.',
+      tehtava: {
+        kysymys: 'Minä vuonna Ritxoko-savinuket julistettiin Brasilian aineettomaksi kulttuuriperinnöksi?',
+        vaihtoehdot: ['1998', '2005', '2012', '2020'],
+        oikea: 2,
+        fakta:
+          'Ritxoko-nuket kirjattiin Brasilian aineettomaksi kulttuuriperinnöksi vuonna 2012, ja karajá-naisten taito tunnustettiin sellaisenaan vaalimisen arvoiseksi tiedoksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksi kansaa, yksi virta',
+          teksti:
+            'Karajá asuu saaren länsiosan kylissä ja javaé Javaés-joen varrella; molemmat puhuvat samaan makro-jé-kieliperheeseen kuuluvaa kieltä, jossa naisten ja miesten puhetavat eroavat toisistaan selvästi. Väkiluku on vaihdellut rajusti: 1770-luvulla alueella arvioitiin asuvan 7 000–8 000 inyä, mutta tautien ja väkivaltaisten kohtaamisten seurauksena luku romahti vain noin 815 henkeen vuoteen 1908 mennessä. Vuoteen 2020 mennessä väestö oli elpynyt jo 4 373 henkeen lähes 30 kylässä – hidas mutta selvä paluu joen rannoille.',
+          tiedosto: 'Canoa de los indios karajá con personas pescando. Siglo XX. Museo de América 01.jpg',
+          lyhyt: 'Savista muovailtu kanootti, jossa kaksi maalattua hahmoa ja kaimaani.',
+          selite:
+            'Keraaminen pienoismalli näyttää kaksi vartaloonsa maalattua hahmoa istumassa kanootissa, niiden välissä pitkänomainen kaimaanihahmo.',
+          lahde: 'Dorieo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+        {
+          otsikko: 'Ritxoko — savi joka opettaa',
+          teksti:
+            'Ritxoko-nuket ovat karajá-naisten savesta muovaamia hahmoja, jotka esittävät kylän ihmisiä eri elämänvaiheissa: raidat, pisteet ja vyöt kertovat iästä, sukupuolesta ja yhteisön asemasta. Perinteisesti niitä on annettu lapsille leikkeihin, joissa opitaan perheen roolit ja yhteisön säännöt jo ennen kuin niitä osataan sanoin selittää. Vuonna 2012 Ritxoko-nuket kirjattiin viralliseksi osaksi Brasilian aineetonta kulttuuriperintöä, ja karajá-naisten taito tunnustettiin sellaisenaan vaalimisen arvoiseksi tiedoksi.',
+          tiedosto: 'Boneca carajá em barro cozido 01.jpg',
+          lyhyt: 'Ritxoko-nukke, jonka vartaloon on maalattu raidoituksia.',
+          selite:
+            'Kuvassa istuva savinukke, jonka kasvoihin, vartaloon ja jalkoihin on maalattu mustavalkoisia raitakuvioita, korvissa punaiset sulkakoristeet.',
+          lahde: 'Uèriko Oexaro (Karajá artisan), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+        {
+          otsikko: 'Jaguaari savenvalajan käsissä',
+          teksti:
+            'Kaikki ritxoko-hahmot eivät esitä ihmisiä: savenvalajat muovaavat myös eläinhahmoja, joissa toistuvat joen ja savannin tutut asukkaat. Pilkullinen turkki ja valpas ilme tekevät jaguaarista yhden suosituimmista aiheista – eläimestä, joka jakaa saman elinympäristön inyjen kanssa ja esiintyy myös heidän kertomuksissaan voimakkaana hahmona. Eläinhahmot syntyvät samalla tekniikalla kuin ihmisfiguurit: savi kuivataan ja poltetaan, minkä jälkeen kuviot maalataan käsin luonnonväreillä ennen kuin figuuri on valmis.',
+          tiedosto: 'Statuette Karajà MHNT.ETH.2010.24.90.jpg',
+          lyhyt: 'Savesta muovailtu ja pilkuin maalattu jaguaarihahmo.',
+          selite:
+            'Kuvassa nelijalkainen savihahmo, jonka vaaleaan pintaan on maalattu mustia pilkkuja ja raitoja jaguaarin turkin tapaan.',
+          lahde: 'Roger Culos, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Jaguar',
+        },
+        {
+          otsikko: 'Sulka, siima ja peili',
+          teksti:
+            'Sulista, siimasta ja pienestä peilistä koottu koriste kerää yhteen inyjen juhlaperinteen monta ainesta: ara- ja papukaijalintujen höyhenet tuotiin usein kauppateitse muilta alueilta, kudonta tehtiin käsin kasvikuiduista, ja lopputulos ripustettiin osaksi juhla-asua. Tämä nimenomainen koriste kerättiin Aldeia Fontouran kylästä Ilha do Bananalin sisältä vuonna 1979, samalta saarelta jolla javaé ja karajá edelleen asuvat. Koristeiden tekeminen vaatii kärsivällisyyttä: yhden sulkakoristeen valmistaminen voi viedä useita päiviä.',
+          tiedosto: 'Testeira - Carajá MN 03.jpg',
+          lyhyt: 'Sulista ja pienestä peilistä koottu juhlakoriste.',
+          selite:
+            'Kuva näyttää pyöreän, kudotun koristeen, jonka keskellä on pieni peili ja reunoilla vihreitä sulkia, alaosassa timantinmuotoinen riipus ja sulkatupsuja.',
+          lahde: 'Dornicke, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Karajá',
+        },
+      ],
+    },
+  ],
 };
