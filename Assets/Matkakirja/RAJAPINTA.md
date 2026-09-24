@@ -17,6 +17,7 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `double pituus, leveys, korkeus, kallistus` | valmis | Nykyinen kameratila. Lukea saa, kirjoittaa vain Natiiviseppä. |
 | `event Action<string> KaupunkiNapautettu` (IKamera) | valmis | Kaupungin id napautuksesta. Herää ennen kameran omaa lentoa, joten kuuntelija voi ohittaa lennon omalla `Aja`-kutsullaan samassa kehyksessä. |
 | `event Action<Vector2> Napautettu` | valmis | Raaka napautus näytön pikseleinä (osumaton napautus = tyhjä kohta). |
+| `event Action PelaajanEle` | valmis | Pelaajan veto tai nipistys pallolla alkoi (kerran elettä kohden, kun liike ylittää napautusrajan tai sormia on kaksi; myös synteettinen `veto`/`nipistys`). Kamera-ajo ei herätä (web kutistaKortinLiikkeesta). |
 | `bool SyoteEstetty` | valmis | Kosketusten esto dialogin, lehden tai linssin oman eleen ajaksi. Pallo ei lue sormia eikä tunnista napautuksia, ja liuku pysähtyy. `Aja` ja synteettiset eleet toimivat edelleen. Asettaja palauttaa arvon `false`, kun oma näkymä sulkeutuu. |
 | `Func<Vector2,bool> UiPeittaa` | valmis | Natiivi-UI:n peittokysely: kosketus, joka alkaa UI:n päältä, ei liikuta palloa koko eleen aikana. |
 | `Func<bool> NakymaPeitetty`, `bool Peitetty` | valmis | Koko näytön peitto (WKWebView-lehti). Asettaa vain `SyoteLukko` (`LisaaNakymaPeitto(Func<bool>)`, Pelikoodari). Peiton aikana pallo piirtää joka `PeitettyVali` (4.) kehyksen, ja kehysmittari kirjaa kehykset luokkaan `peitto`, ei lepoon. |
