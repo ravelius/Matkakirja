@@ -271,6 +271,9 @@ namespace Matkakirja.Natiivi
                 "<path d=\"M3.8 6.5h16.4v11H3.8z\"/><path d=\"m3.8 6.5 8.2 6 8.2-6\"/>", () => Lukijoilta.Avaa()),
             ("Musiikki", "Siirtymä-, linssi- ja palettiraidat sekä tehosteet kuunneltavina.",
                 "<path d=\"M9.5 17.5V6.2l9-1.7v11\"/><path d=\"M9.5 9.7l9-1.7\"/><path d=\"M9.5 17.5a2.2 2.2 0 1 1-2.2-2.2 2.2 2.2 0 0 1 2.2 2.2z\"/><path d=\"M18.5 15.5a2.2 2.2 0 1 1-2.2-2.2 2.2 2.2 0 0 1 2.2 2.2z\"/>", () => AvaaMusiikki()),
+            // Web lukijaaani (js/main.js avaaLukijaaani, index.html #puhe-dialog): vain kehittäjätilassa.
+            ("Lukijaääni", "Lukijan ääni, ohje, nopeus ja voimakkuus persoonittain.",
+                "<path d=\"M5 10v4h3.5l4 3.5v-11L8.5 10z\"/><path d=\"M15.5 9.5a3.6 3.6 0 0 1 0 5\"/><path d=\"M17.5 7.5a6.4 6.4 0 0 1 0 9\"/>", () => LukijaaaniIkkuna.Avaa()),
         };
 
         public static void AvaaKehittajalehti()
@@ -567,6 +570,156 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
                 b.SetEnabled(AanetPaalla);
             }
+        }
+    }
+
+    /// <summary>
+    /// Lukijaäänen säädin (web index.html #puhe-dialog, js/main.js lataaPuheKentat ja tallennaPuheKentat):
+    /// lukija, ääni, prompti ja pelin oletusprompti, nopeus ja voimakkuus, Palauta oletus, Kuuntele näyte, Valmis.
+    /// Säädöt tallentuvat heti Pelikoodarin Puhe-rajapintaan. Vain kehittäjätilassa.
+    /// </summary>
+    public sealed class LukijaaaniIkkuna
+    {
+        static LukijaaaniIkkuna instanssi;
+
+        readonly VisualElement himmennys;
+        readonly DropdownField lukija, aani;
+        readonly TextField ohje;
+        readonly Label oletusOhje, nopeusArvo, voimaArvo;
+        readonly Slider nopeus, voima;
+        bool auki;
+
+        public static void Avaa()
+        {
+            if (!Asetukset.Kehittaja) return;
+            instanssi ??= new LukijaaaniIkkuna(UiKerros.Hae());
+            instanssi.Nayta();
+        }
+
+        LukijaaaniIkkuna(UiKerros kerros)
+        {
+            himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", kerros.Juuri(UiKerros.Valikot));
+            himmennys.style.display = DisplayStyle.None;
+            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Valmis(); });
+            var kortti = new Kortti("mk-lukijaaani");
+            himmennys.Add(kortti);
+            var k = kortti.Sisus;
+            Kirjasimet.Aseta(Rakenne.Teksti("Lukijaääni", "mk-kortti__otsikko", k), Kirjasin.LukuLihava);
+            Rakenne.Teksti("Säädöt tallentuvat tälle laitteelle heti. Kaikille pelaajille valinta viedään workerin persoonatauluun — kerro Fablelle mitä valitsit.",
+                "mk-kortti__teksti", k);
+
+            lukija = Lomake.Valinta(Rivi(k, "Lukija"), Puhe.Persoonat.Select(x => x.Nimi).ToList());
+            lukija.RegisterValueChangedCallback(_ => Lataa());
+            aani = Lomake.Valinta(Rivi(k, "Ääni"), new List<string> { "" });
+            aani.RegisterValueChangedCallback(_ => Tallenna());
+
+            Kirjasimet.Aseta(Rakenne.Teksti("Prompti (tyhjä = pelin oletus)", "mk-lukijaaani__nimi", k), Kirjasin.Kone);
+            ohje = new TextField { multiline = true };
+            ohje.AddToClassList("mk-chat__kentta");
+            ohje.AddToClassList("mk-lukijaaani__ohje");
+            k.Add(ohje);
+            // Web 'change' = kentästä poistuminen.
+            ohje.RegisterCallback<FocusOutEvent>(_ => Tallenna());
+            oletusOhje = Rakenne.Teksti("", "mk-lukijaaani__oletus", k);
+
+            (nopeus, nopeusArvo) = Liuku(k, "Nopeus", Puhe.NopeusMin, Puhe.NopeusMax, v => Puhe.Nopeus = v, () => Puhe.Nopeus);
+            (voima, voimaArvo) = Liuku(k, "Voimakkuus", Puhe.VoimaMin, Puhe.VoimaMax, v => Puhe.Voima = v, () => Puhe.Voima);
+
+            var napit = Rakenne.El("mk-kortti__napit", k, PickingMode.Ignore);
+            Rakenne.Nappi("Palauta oletus", "mk-nappi--haamu", () => { Puhe.PoistaAsetus(Persoona); Lataa(); }, napit);
+            Rakenne.Nappi("Kuuntele näyte", "mk-nappi--haamu", () => { Tallenna(); Puhe.Hae()?.Nayte(Persoona); }, napit);
+            var ok = Rakenne.Nappi("Valmis", "mk-nappi--kulta", Valmis, napit);
+            Rakenne.Tausta(ok, Kuviot.Kulta);
+            Kirjasimet.Aseta(napit, Kirjasin.Kone);
+            Kirjasimet.Aseta(ok, Kirjasin.KoneLihava);
+            Puhe.LukijaaaniMuuttui += () => { if (auki) PaivitaLiuut(); };
+        }
+
+        static VisualElement Rivi(VisualElement isa, string nimi)
+        {
+            var r = Rakenne.El("mk-saadinrivi", isa);
+            Kirjasimet.Aseta(Rakenne.Teksti(nimi, "mk-saadinrivi__nimi", r), Kirjasin.Kone);
+            return r;
+        }
+
+        (Slider, Label) Liuku(VisualElement isa, string nimi, float min, float max, Action<float> aseta, Func<float> lue)
+        {
+            var r = Rivi(isa, nimi);
+            var s = new Slider(min, max) { pageSize = 0, fill = true };
+            s.AddToClassList("mk-saadin");
+            r.Add(s);
+            var arvo = Rakenne.Teksti("", "mk-saadinrivi__arvo", r);
+            s.RegisterValueChangedCallback(e =>
+            {
+                // Web step 0.05: arvo askeleeseen, Puhe rajaa ja tallentaa.
+                aseta(Mathf.Round(e.newValue / Puhe.SaatoAskel) * Puhe.SaatoAskel);
+                arvo.text = Kerroin(lue());
+            });
+            return (s, arvo);
+        }
+
+        static string Kerroin(float v) => v.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture) + "×";
+
+        string Persoona
+        {
+            get
+            {
+                var p = Puhe.Persoonat;
+                int i = Mathf.Clamp(lukija.index, 0, p.Count - 1);
+                return p.Count > 0 ? p[i].Persoona : "kertoja";
+            }
+        }
+
+        void Nayta()
+        {
+            if (lukija.index < 0) lukija.SetValueWithoutNotify(lukija.choices.FirstOrDefault());
+            Lataa();
+            auki = true;
+            Rakenne.Nayta(himmennys, true, 220);
+            SyoteLukko.Esta(this);
+        }
+
+        /// <summary>Web lataaPuheKentat: oletusäänen nimi valintaan, oletusprompti näkyviin ja paikkamerkiksi.</summary>
+        void Lataa()
+        {
+            string p = Persoona;
+            var oletus = Puhe.Oletus(p);
+            var oma = Puhe.Asetus(p);
+            var valinnat = new List<string> { "(pelin oletus: " + oletus.Aani + ")" };
+            valinnat.AddRange(Puhe.Aanivaihtoehdot);
+            aani.choices = valinnat;
+            int i = string.IsNullOrEmpty(oma.Aani) ? 0 : Math.Max(0, valinnat.IndexOf(oma.Aani));
+            aani.SetValueWithoutNotify(valinnat[i]);
+            ohje.SetValueWithoutNotify(oma.Ohje ?? "");
+            ohje.textEdition.placeholder = oletus.Ohje ?? "";
+            oletusOhje.text = "Pelin oletus: " + (oletus.Ohje ?? "");
+            PaivitaLiuut();
+        }
+
+        void PaivitaLiuut()
+        {
+            nopeus.SetValueWithoutNotify(Puhe.Nopeus);
+            nopeusArvo.text = Kerroin(Puhe.Nopeus);
+            voima.SetValueWithoutNotify(Puhe.Voima);
+            voimaArvo.text = Kerroin(Puhe.Voima);
+        }
+
+        /// <summary>Web tallennaPuheKentat: valinta 0 = pelin oletus (null).</summary>
+        void Tallenna()
+        {
+            if (!auki) return;
+            string valittu = aani.index > 0 ? aani.value : null;
+            Puhe.AsetaAsetus(Persoona, valittu, ohje.value);
+        }
+
+        void Valmis()
+        {
+            Tallenna();
+            Puhe.Instanssi?.Pysayta();
+            auki = false;
+            ohje.Blur();
+            Rakenne.Nayta(himmennys, false, 200);
+            SyoteLukko.Vapauta(this);
         }
     }
 }
