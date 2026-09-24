@@ -4079,3 +4079,7 @@ Maarajojen renkaat = kaikki admin-0-renkaat (Norjassa Huippuvuoret, muutRenkaat 
 ## LAITETESTAAJA (#3076 818a9a7b1): RIVIT 5, 13, 23 PASS BUILD 8:LLA; NOPPA KARTALLE PASS iPHONE + iPAD; RIVI 9 MAALEHDEN PALSTOITUS MITATTUNA FAIL → NATIIVI-UI (24.9.2026 klo 15.37)
 
 Rivi 13 todennettu oikealla kosketuksella. Noppa-kartalle (testi/b9-ui): listakortti pois, vain renkaat + pöllön vihje, täsmää webiin, kuvaparit tallessa. iPad-portin läpikuultava jäänne seuraavaan erään. Rivi 9 (maalehti) palstoitus mitattuna FAIL, reititetty Natiivi-UI:lle.
+
+## NATIIVI-UI (UUSI SESSIO): iphone-island 6d39af4 NATIIVISEPALLA (BUILD 9) — UI-LUKIJAT PAATASO ENSIN, VALINTAVIHJE PAATOS B; 4 UUTTA LEHTIEROA BUILD 10 -LISTAAN (24.9.2026 klo 15.41)
+
+Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b9.md. Uudet lehtierot: anfangi/kappalejako, tehtävän vastausrivien tyyli, alanappien kapiteelit, vihjekuplan häntä. Seuraavaksi E10–E11 (ryhmämerkki levy r 3,4 + nimiö vain lähizoomissa) ja E3 (nostokortti napautuspisteen viereen, raahattava).
