@@ -4855,3 +4855,7 @@ Natiivi-UI:n kysymys klo 01.0x. Perustelu: WEB ON MALLI, MITATTUNA — pisteskaa
 ## JULKAISIJA: #3123 JA #3130 MAINISSA (TESTIT 4281/0, EI VERSIONOSTOA), #3129 → #3131 klo 02.52 JALKEEN; SISALTOKIRJURI: #3131 PUHELINKORJAUS VALMIS (KATALOGI-NIMI ALLE 480 px); LINSSIKATALOGIN TILAUSPAIVITYS — FABLE: X1–X7 JA Q1–Q4 MUKAAN, Y1–Y10 POIS, 11 POISTETTUA POIS, POSTILAATIKKOON HETI MERKINNALLA 'AJO VASTA NAS-SIIRRON JALKEEN' (25.9.2026 klo 01.08)
 
 Sisältökirjurin diff vanhaan tilaukseen (posti/linssikatalogi-tilaus-20260924.json): 28 uutta / 11 poistettua; tyyppi muu ja pohjakartta eivät ole koskaan olleet tilauksessa. Luovutuksen '18 uutta' oli vanhempi laskelma. Erittely haarassa sisaltokirjuri-linssikatalogi-tilaus-paivitys (posti/sisaltokirjuri-linssikatalogi-tilaus-paivitys-20260925.md).
+
+## KARTTASEPPA: RAJAKORKEUDET VALMIIT PR #3132 (NATIIVISEPAN LUKIJAN MUOTO), VEKTORISARJA 23 Mt (RAJAT 2,3 Mt) → FABLE: VIE AMPARIIN julisteet/pallo/vektorit/2026-09-25-gshhs-korkeus/; E28 PALLO VALMIS ~02.30. SISALTOKIRJURI: TILAUS POSTILAATIKOSSA 3576ee735 (155 RIVIA) (25.9.2026 klo 01.14)
+
+Vektorisarja on rantojen ja rajojen natiivin viivaverkon aineisto (PERUSKARTAN RESEPTI 2026-09-25); Natiiviseppä lukee sen E1–E3-erissä.
