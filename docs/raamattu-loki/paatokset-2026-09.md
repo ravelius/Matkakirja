@@ -4395,3 +4395,7 @@ Linssiseppä päivitti suunnitelman luvun 4.0 (bf2748124): 30 teosta, Firenze 15
 ## KARTTASEPPA: LIBERATION SERIF TOTEUTETTU — NATIIVIIN TTF:T + OFL (NATIIVISEPPA TEKEE TMP-SDF:T VIENNIN JALKEEN), WEB PR #3105 (POLTTO REKISTEROI FONTIN REPOSTA, PUUTTUVA FONTTI KAATAA), ALUENIMIEN DATA #3100, PAKETTI 1.37 (#3103) (24.9.2026 klo 18.01)
 
 Koepoltto z7 lähes identtinen Times-version kanssa; uusintapolttoa ei ajettu. Seuraava pohjapoltto piirtää valtameret ja kartussin Liberation Serifillä. Attribuutio Natiivi-UI:n Tietoja-näkymään. Natiiviseppä aloitti nimikerroksen (build 11). Sisältökirjuri luovutti (80c43159d): galleria-puute 58 kaupunkia, ennenNyt 12; nollaa itsensä.
+
+## SISALTOKIRJURI NOLLATTU (POSTIVAHTI): ALOITUSVIESTI HAARASTA sisalto-kohdekartta-pilotti-20260924 (klo 17.58), RC PAALLA; 5 h -KIINTIO 84 % (24.9.2026 klo 18.05)
+
+Uusi sessio aloittaa kuvatilausluonnoksesta (galleria 58 + ennenNyt 12).
