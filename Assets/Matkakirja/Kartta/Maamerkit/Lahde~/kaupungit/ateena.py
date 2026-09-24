@@ -1,7 +1,7 @@
 # Ateena: Akropolis — kalliotasanne, Parthenon (kattoton raunio, pylväät ja päätykolmiot), Erekhtheion,
 # Propylaia ja Athena Niken temppeli, oliivipuita rinteillä. Oma työ, CC0.
-# Kallio todellisessa mittakaavassa (tasanne noin 300 × 140 m, 70 m jalan yläpuolella); temppelit
-# liioiteltu 1,4-kertaisiksi, jotta ne erottuvat kallion päältä kaukaa. Karttakehys: X itä, Y pohjoinen.
+# Kallio todellisessa mittakaavassa (tasanne noin 270 × 130 m, 70 m jalan yläpuolella); temppelit
+# liioiteltu 1,7-kertaisiksi, jotta ne erottuvat kallion päältä kaukaa. Karttakehys: X itä, Y pohjoinen.
 import math
 import numpy as np
 import mm_kirjasto as mk
@@ -15,17 +15,17 @@ PAINOT = {KALLIO: 0.5, RINNE: 0.12, HELMA: 0.02, MUURI: 0.8, TASANNE: 0.35, MARM
 AO_ETAISYYS = 18.0
 MAAN_VARI = "#d9c9a0"
 
-S = 1.4                         # temppelien liioittelu
+S = 1.7                         # temppelien liioittelu
 YLA_Z = 70.0                    # tasanteen korkeus jalasta
-PARTHENON = (35.0, -20.0)
-ERE = (0.0, 38.0)
-PROPYLAIA = (-128.0, -2.0)
-NIKE = (-140.0, -34.0)
+PARTHENON = (30.0, -16.0)
+ERE = (-8.0, 34.0)
+PROPYLAIA = (-110.0, -2.0)
+NIKE = (-120.0, -28.0)
 
 NAKYMAT = [
-    ("etuviisto", (-260.0, -760.0, 300.0), (0.0, 0.0, 55.0), 40, (1200, 800)),
-    ("ylaviisto", (320.0, -760.0, 800.0), (0.0, 0.0, 50.0), 42, (1200, 800)),
-    ("kaukaa", (-420.0, -1350.0, 930.0), (0.0, 0.0, 45.0), 60, (320, 200)),
+    ("etuviisto", (-200.0, -600.0, 240.0), (0.0, 0.0, 55.0), 40, (1200, 800)),
+    ("ylaviisto", (260.0, -620.0, 640.0), (0.0, 0.0, 50.0), 42, (1200, 800)),
+    ("kaukaa", (-325.0, -1040.0, 715.0), (0.0, 0.0, 45.0), 60, (320, 200)),
 ]
 
 def suorakaide(cx, cy, hx, hy):
@@ -35,14 +35,14 @@ def suorakaide(cx, cy, hx, hy):
 def tasanteen_reuna(n=48, siemen=7):
     """Tasanteen ääriviiva: pitkulainen (itä-länsi), länsipää kapeampi, satunnainen reuna."""
     rs = np.random.RandomState(siemen)
-    a, b, p = 152.0, 72.0, 2.6
+    a, b, p = 135.0, 64.0, 2.6
     pts, suunnat = [], []
     for j in range(n):
         th = 2 * math.pi * j / n
         c, s = math.cos(th), math.sin(th)
         r = (abs(c / a) ** p + abs(s / b) ** p) ** (-1 / p)
         x, y = r * c, r * s
-        if x < -60: y *= 1 - 0.35 * ((-x - 60) / 92)
+        if x < -60: y *= 1 - 0.35 * ((-x - 60) / 75)
         if y < 0 and x > 0: y *= 1.08          # eteläreuna pullistuu Parthenonin kohdalla
         r_j = 1 + rs.uniform(-0.025, 0.025)
         x, y = x * r_j, y * r_j
@@ -55,15 +55,15 @@ def rakenna_kallio(v):
     n = len(reuna)
     rs = np.random.RandomState(11)
     # (korkeus, siirto ulos, satunnaisuus, osa ylempään väliin)
-    renkaat = [(YLA_Z, 0.0, 0.0), (YLA_Z - 13.0, 2.5, 1.2), (YLA_Z - 30.0, 13.0, 4.0), (YLA_Z - 52.0, 42.0, 9.0),
-               (0.0, 92.0, 12.0), (-30.0, 98.0, 0.0)]
+    renkaat = [(YLA_Z, 0.0, 0.0), (YLA_Z - 13.0, 2.5, 1.2), (YLA_Z - 30.0, 10.0, 3.0), (YLA_Z - 52.0, 30.0, 7.0),
+               (0.0, 62.0, 9.0), (-30.0, 67.0, 0.0)]
     osat = [MUURI, KALLIO, KALLIO, RINNE, HELMA]
     idx = []
     for k, (z, siirto, sat) in enumerate(renkaat):
         rivi = []
         for j in range(n):
             s = siirto + (rs.uniform(-sat, sat) if sat else 0.0)
-            if k and reuna[j][0] < -110 and k >= 2: s *= 0.8      # länsirinne loivempi ja lyhyempi
+            if reuna[j][0] < -95 and k >= 2: s *= 0.8      # länsirinne loivempi ja lyhyempi
             p = reuna[j] + suunta[j] * s
             zz = z + (rs.uniform(-0.4, 0.4) if k == 0 else rs.uniform(-sat, sat) * 0.35 if 0 < k < 5 else 0.0)
             rivi.append(v.piste((p[0], p[1], zz)))
@@ -179,8 +179,8 @@ def rakenna_puut_ja_rauniot(v, reuna, suunta, idx):
         v.pyramidi(kuusi, zc, (c[0], c[1], zc + h * 0.65), KASVI)
         v.pyramidi(kuusi, zc, (c[0], c[1], c[2] - 1.0), KASVI)
     # marmorilohkareita tasanteella
-    for (x, y, s) in ((-70, -30, 4.0), (-60, 22, 3.0), (-95, 30, 3.5), (-30, 5, 2.5), (95, 20, 3.0), (100, -40, 2.8),
-                      (-40, -45, 3.2), (65, 30, 2.6), (-85, -12, 2.4), (20, 12, 2.2)):
+    for (x, y, s) in ((-70, -30, 4.0), (-55, 20, 3.0), (-85, 25, 3.0), (-40, 5, 2.5), (100, 20, 3.0), (100, -35, 2.8),
+                      (-45, -38, 3.2), (60, 30, 2.6), (-80, -12, 2.4), (25, 20, 2.2)):
         a = rs.uniform(0, math.pi)
         pts = [(x + s * 1.6 * math.cos(a + k * math.pi / 2) - s * math.sin(a + k * math.pi / 2) * 0.0,
                 y + s * 1.6 * math.sin(a + k * math.pi / 2)) for k in range(4)]
@@ -209,7 +209,7 @@ def maalaa(g):
 
     # ---- Kallio: kalkkikivi, rautaläikät, kerrokset; rinteillä kuivaa ruohoa ja pensaikkoa ----
     kallio = osa(KALLIO, RINNE, HELMA)
-    kv = mk.hexa("#b5a384") * (0.82 + 0.3 * vaihtelu[..., None]) * (0.93 + 0.12 * hieno[..., None])
+    kv = mk.hexa("#a59a86") * (0.82 + 0.3 * vaihtelu[..., None]) * (0.93 + 0.12 * hieno[..., None])
     ruoste = np.clip((mk.fbm(P, 0.05, 3.0, 3) - 0.5) * 3, 0, 1)
     kv = kv * (1 - 0.35 * ruoste[..., None]) + mk.hexa("#a57a58") * (0.35 * ruoste[..., None])
     kerros = mk.viiva(mk.jakso(z + 2 * mk.kohina(P, 0.05, 4.0), 3.2), 0.35)
@@ -231,8 +231,8 @@ def maalaa(g):
     tv = mk.hexa("#d2c4a3") * (0.86 + 0.24 * vaihtelu[..., None]) * (0.95 + 0.1 * hieno[..., None])
     laikku = mk.fbm(P, 0.1, 12.0, 3) > 0.62
     tv = np.where(laikku[..., None], mk.hexa("#bba986"), tv)
-    polku = np.abs(y - (-2 + (x + 128) * (-18 / 150))) < 5.0
-    tv = np.where((polku & (x > -125) & (x < 5))[..., None], mk.hexa("#e0d6bd"), tv)
+    polku = np.abs(y - (PROPYLAIA[1] + (x - PROPYLAIA[0]) * ((PARTHENON[1] - PROPYLAIA[1]) / (PARTHENON[0] - PROPYLAIA[0])))) < 5.0
+    tv = np.where((polku & (x > PROPYLAIA[0] + 8) & (x < PARTHENON[0] - 60))[..., None], mk.hexa("#e0d6bd"), tv)
     vari = np.where(tas[..., None], tv, vari)
     # ---- Marmori: lämmin valkoinen, hunajainen patina alaosissa ----
     marmori = mk.hexa("#f0e7d2")

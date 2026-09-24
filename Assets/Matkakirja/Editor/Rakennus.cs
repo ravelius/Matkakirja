@@ -140,6 +140,11 @@ namespace Matkakirja.Editori
             nappula.koneMateriaali.SetFloat("_Smoothness", 0.55f);
             nappula.raitaMateriaali = Materiaali("KoneRaita", "Universal Render Pipeline/Lit", new Color32(0x9a, 0x3b, 0x2c, 0xff));
             nappula.ikkunaMateriaali = Materiaali("KoneIkkuna", "Universal Render Pipeline/Lit", new Color(0.12f, 0.10f, 0.09f));
+            // MAAMERKIT (omistajan kortti 24.9.): kaupunkien 3D-tunnusrakennukset, Kartta/Maamerkit/LUE.md.
+            var maamerkit = georefGo.AddComponent<Maamerkit>();
+            maamerkit.georeferenssi = georef;
+            maamerkit.mallit = Maamerkit.Oletustaulukko()
+                .Select(r => MaamerkkiMalli(r.id)).Where(m => m != null).ToArray();
             var savuGo = new GameObject("Savujana");
             savuGo.transform.SetParent(georefGo.transform, false);
             nappula.savu = savuGo.AddComponent<Savujana>();
@@ -271,6 +276,26 @@ namespace Matkakirja.Editori
         }
 
         static Material KansiMateriaali(string nimi, Color vari) => Materiaali(nimi, "Matkakirja/Napakansi", vari);
+
+        public const string MaamerkkiKansio = "Assets/Matkakirja/Kartta/Maamerkit";
+
+        /// <summary>
+        /// Maamerkin prefab (Maamerkit/&lt;id&gt;.fbx) ja URP Lit -materiaali atlaksella (Tekstuurit/&lt;id&gt;_vari.png,
+        /// albedo + leivottu AO, sRGB). null, jos FBX puuttuu.
+        /// </summary>
+        static Maamerkit.Malli MaamerkkiMalli(string id)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{MaamerkkiKansio}/{id}.fbx");
+            if (prefab == null) { Debug.LogWarning("MATKAKIRJA maamerkit: mallia ei löydy: " + id); return null; }
+            var m = Materiaali("Maamerkki-" + id, "Universal Render Pipeline/Lit", Color.white);
+            var atlas = AssetDatabase.LoadAssetAtPath<Texture2D>($"{MaamerkkiKansio}/Tekstuurit/{id}_vari.png");
+            if (atlas != null) m.SetTexture("_BaseMap", atlas);
+            else Debug.LogWarning("MATKAKIRJA maamerkit: atlasta ei löydy: " + id);
+            m.SetFloat("_Metallic", 0f);
+            m.SetFloat("_Smoothness", 0.15f);
+            EditorUtility.SetDirty(m);
+            return new Maamerkit.Malli { id = id, prefab = prefab, materiaali = m };
+        }
 
         /// <summary>Materiaali assetiksi annetulla shaderilla ja värillä.</summary>
         static Material Materiaali(string nimi, string shader, Color vari)
