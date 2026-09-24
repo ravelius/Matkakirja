@@ -4383,3 +4383,7 @@ Etusivulla webin intro, otsikot 700, nostokortin vaihe 1 selite keskellä + LIS�
 ## BUILD 10 KASKETTY (f02376b) klo 19.1x; KYLMAN LENNON SUORAKULMIOT BUILD 11:EEN; VIISI ODOTTANUTTA KASKYA LAHETETTY (24.9.2026 klo 17.54)
 
 Julkaisija vie f02376b:n (-nographics, Unity kiinni, käännökset tauolla), muutoslokirivi annettu; tiimiristiriita: nykyinen secret, MATKAKIRJA_TEAM-ohitus jos arkistointi kaatuu. Natiiviseppä: harmaat suorakulmiot 2–3 kehystä vain ensimmäisellä lennolla asennuksen jälkeen; laatalla rasteri mutta sisältö harmaa → ei varakartan asia, agentti jatkaa (Laattapalvelin / cesium-nativen virheenkäsittely). Lähetetty: Karttasepälle fontti (Liberation Serif molempiin, polttoon fonttitarkistus), Linssisepälle maalausmanifesti (teosluettelo, ei koodia), Sisältökirjurille luovutus -f ja nollaus (seuraava tehtävä: kuvatilausluonnos galleria + ennenNyt), Postivahdille aloitusviestiohje + ei 'jatka'-viestejä viennin aikana.
+
+## 5 h -KIINTIO 81 % klo 17.5x (NOLLAUTUU 19.19); SISALTOKIRJURI VIELA NOLLAUTUMATTA (24.9.2026 klo 17.55)
+
+Raamatun kaava: 90 %:ssa tauko kaikille nollaukseen asti (ei uusia agentteja, käännöksiä eikä pitkiä ajoja); build 10 -vienti CI:llä ei kuluta kiintiötä. Postivahti seuraa Sisältökirjurin nollausta.
