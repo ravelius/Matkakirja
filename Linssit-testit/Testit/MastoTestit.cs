@@ -122,6 +122,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(118, m.Lista.Count, "masto per radiokaupunki");
             Oleta.Tosi(m.Lista.Count(x => x.Kanava) > 80, "kanavalliset");
             Oleta.Sama(40.0, y.Ajo.Value.Kallistus, "avaus kallistaa 40°");
+            Oleta.Sama((double?)40.0, y.AjonKallistus, "kallistus välitetään kamera-ajolle");
             void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
             Aja(0.75);
             Oleta.Tosi(m.H > 0.3 && m.H < 0.8, "hämärä puolivälissä: " + m.H);
@@ -136,6 +137,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(null, m.ValittuId, "virittäessä ei valittua");
             Oleta.Tosi(y.Ajo.Value.Korkeus > 2_600_000 * 1.2, "kaari nousee keskellä: " + y.Ajo.Value.Korkeus);
             Aja(1.5);
+            Oleta.Tosi(!l.KameraAjossa, "ajo valmis");
             Oleta.Tosi(Math.Abs(y.Ajo.Value.Lat - 60.17) < 0.5 && Math.Abs(y.Ajo.Value.Korkeus - 2_600_000) < 1, "perillä: " + y.Ajo.Value);
             Aja(1.0);
             Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
@@ -145,9 +147,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(Mastot.KuuluvuusKm(Mastot.Koko(RadioTestit.SallittuAineisto().Kaupunki("helsinki"))), m.RengasSade);
             Aja(2);
             Oleta.Tosi(m.Paikallinen > 0.99f, "yövalot syttyneet");
+            // Pelaajan ele keskeyttää kamera-ajon heti.
+            k.Napauta("tukholma");
+            Aja(0.3);
+            Oleta.Tosi(l.KameraAjossa, "uusi ajo käynnissä");
+            l.PelaajanEle();
+            var ennen = y.Ajo.Value;
+            Aja(0.5);
+            Oleta.Tosi(!l.KameraAjossa && y.Ajo.Value.Equals(ennen), "ele keskeytti, kamera ei enää liiku");
             l.Sulje();
             Oleta.Sama(null, m.Lista, "mastot pois");
             Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
+            Oleta.Sama((double?)0.0, y.AjonKallistus, "palautus välitetään");
         }
     }
 }
