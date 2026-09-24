@@ -148,31 +148,31 @@ Laitetestaajan lehtivertailun (PR #2970, `lehti-web-vs-natiivi-20260923.md`) ero
 | Maalehden etusivu: korkokartta pisteineen, perustiedot, tervehdykset, V-Dem-selitys, kartan nosto | maalehti.js piirraMaaEtusivu, naytaMaaTunnusluvut | Lehtinakyma.MaaEtusivu (skeema 1.15 `maat.maakartta`) | tekeillä (natiivi-ui/inventaario-11-20); radiowidget tulee radion kuoren kanssa | NUI, SS |
 | Maalehden sivut webin järjestyksessä: maan etusivu, aiheet (myös Tavat, Menovinkit) ja "Maa numeroina" | maalehti.js piirraMaaNumerotSivu, maalehdet.sivut | LehtiSisalto.Maalehti + UI/Lehti/MaaNumeroina.cs | tekeillä: v17:ssä data on (Tavat ja Menovinkit olivat jo natiivissa, testissä vierittämättä) | NUI, SS |
 
-Natiivissa lehti on verkkosivu natiivin päällä (`Scripts/Peli/LehtiKuori.cs`, `?lehti=`). Kaupat kulkevat sillan kautta (`PeliOhjain.cs:1260` LehdenTeko). Linjauksen mukaan lehti tehdään natiiviksi. En varmistanut, mitkä alla olevista toimivat kuoressa.
+**Tarkistettu 24.9.2026 (Natiivi-UI):** alla olevat entiset kuori-rivit on käyty läpi natiivia lehteä (`UI/Lehti/`) vasten; kuorta ei enää käytetä.
 
 | Nappi / toiminto | Web | Natiivi | Tila | Kenelle |
 |---|---|---|---|---|
-| Sivut "Edellinen" / "Seuraava" | lehti.js:1812 | LehtiKuori.cs | kuori | NUI, PK, SS |
-| "Poistu lehdestä" / "Poistu" | lehti.js:1754 (paivitaTutkiAlapalkki) | LehtiKuori.cs | kuori | NUI, PK |
-| Sisällys (alapalkki, hampurilainen, ×, paluu) | lehti.js:1828, 1900, 1950, 1979 | LehtiKuori.cs | kuori | NUI |
-| Maaliite "X-liite" | lehti.js:1790 | LehtiKuori.cs | kuori | NUI, SS |
+| Sivut "Edellinen" / "Seuraava" | lehti.js:1812 | Lehtinakyma alapalkki (sivujen nimin) ja veto | on | NUI, PK, SS |
+| "Poistu lehdestä" / "Poistu" | lehti.js:1754 (paivitaTutkiAlapalkki) | Lehtinakyma "Poistu lehdestä" | on | NUI, PK |
+| Sisällys (alapalkki, hampurilainen, ×, paluu) | lehti.js:1828, 1900, 1950, 1979 | Lehtinakyma.VaihdaSisallys ("‹ Palaa kartalle") | on | NUI |
+| Maaliite "X-liite" | lehti.js:1790 | Lehtinakyma.AvaaLiite | on | NUI, SS |
 | Mastossa maan linkki (maalehti) | index.html:776, ui.js:2609 | Lehtinakyma.Masto "X-liite" | on (merge-pyynnössä) | NUI |
 | Sää-rivi → koko vuoden sää (×) | index.html:781, ui.js:2623, lehti.js:2388 | Lehtinakyma.SaaRivi + Saagraafi | on (merge-pyynnössä natiivi-ui/lehti-kulttuuri) | NUI, SS |
-| Kuvagalleria ‹ ›, kuvan napautus → suurennos | index.html:787–788, ui.js:2525–2539, 16744–16747 | LehtiKuori.cs | kuori | NUI |
+| Kuvagalleria ‹ ›, kuvan napautus → suurennos | index.html:787–788, ui.js:2525–2539, 16744–16747 | Lehtinakyma.Kuvasarja + Kuvasuurennos | on | NUI |
 | "Lue lisää" / "Lue lisää maasta" → wiki-dialogi (liuskat, ‹ ›, "lue artikkeli", "Sulje") | index.html:796, 807, 870–899; ui.js:2545, 2569, 16571 | UI/WikiIkkuna.cs (lehdessä vain noston "Lue lisää aiheesta", web: lehdessä ei Lue lisää -nappia) | on (master 95dd4d9) | NUI, SS |
 | Aiheliuskat ja nostot, "Lue lisää aiheesta" | index.html:847, ui.js:15211 | Lehtinakyma.Nosto → WikiIkkuna | on (master 95dd4d9) | NUI, SS |
-| Uutisotsikot → uutinen (×, "Käännä") | index.html:817, lehti.js:2438, 2490, 2503 | LehtiKuori.cs | kuori | NUI, SS |
+| Uutisotsikot → uutinen (×, "Käännä") | index.html:817, lehti.js:2438, 2490, 2503 | UI/Lehti/Uutiset.cs (UUTISPROXY, MyMemory) | on (master c6c83c9) | NUI, SS |
 | Mediarivi: maan radio ja tv | index.html:822, 836 | UI/Lehti/Mediarivi.cs (Ennen-tallenne, radio LIVE, kielinäyte; tv:tä ei webissä enää ole) | on (master 3e66f72, PASS iPhone + iPad) | NUI, SS |
-| "Kuuntele näyte", "Kuuntele musiikkia", esikuuntelu, musiikkilinkit | ui.js:16265, 16275, 16289, 16326 | LehtiKuori.cs | kuori | NUI, SS |
-| Noston "Avaa sivusto" -linkki | ui.js:16256 | LehtiKuori.cs | kuori | NUI |
+| "Kuuntele näyte", "Kuuntele musiikkia", esikuuntelu, musiikkilinkit | ui.js:16265, 16275, 16289, 16326 | Lehtinakyma.Nosto + Mediarivi.Kuuntele (yhteinen soitin, iTunes-esikuuntelu AVPlayerilla) | on (merge-pyynnössä natiivi-ui/nosto-media f02a5ee) | NUI, SS |
+| Noston "Avaa sivusto" -linkki | ui.js:16256 | Lehtinakyma.Nosto (linkkiNimi ?? "Avaa sivusto") | on | NUI |
 | Kulttuurivisan vaihtoehdot | index.html:851, ui.js:15269 | Lehtinakyma.Kulttuurivisa (kokoelma kulttuurivisat) | on (merge-pyynnössä) | NUI, PK |
-| Minitehtävät ja "Lunasta juliste" | ui.js:16006, 16050; fokustehtavat.js:854, 1003 | LehtiKuori.cs (actionMinitehtava, myonnaJuliste) | kuori | NUI, PK |
-| Pulla-vinkki ("… Livialle", maksaa punnissa) | fokustehtavat.js:578, 666 | LehtiKuori.cs (actionPullaVinkki/Ostos) | kuori | NUI, PK |
-| Lukija (kaiutin, "Tauko" / "Jatka kuuntelua") | lehti.js:697, lukija.js:1835, 2010 | LehtiKuori.cs | kuori | NUI, PK |
-| Reaktiot kuvissa (hyvä / huono / virheilmoitus) | reaktiot.js:671–826 | LehtiKuori.cs | kuori | NUI |
-| Tiivis lehtiarkki ✕ | lehti.js:2767 | LehtiKuori.cs | kuori | NUI |
+| Minitehtävät ja "Lunasta juliste" | ui.js:16006, 16050; fokustehtavat.js:854, 1003 | Lehtinakyma.Tehtava, LehtiFokus, NaytaJuliste | on | NUI, PK |
+| Pulla-vinkki ("… Livialle", maksaa punnissa) | fokustehtavat.js:578, 666 | LehtiFokus (pullanappi, ui lehti fokus-pulla) | on | NUI, PK |
+| Lukija (kaiutin, "Tauko" / "Jatka kuuntelua") | lehti.js:697, lukija.js:1835, 2010 | Lehtinakyma.VaihdaLuenta (kaiutin) | on | NUI, PK |
+| Reaktiot kuvissa (hyvä / huono / virheilmoitus) | reaktiot.js:671–826 | UI/Reaktiot.cs (sivu, kuva, suurennos) | on | NUI |
+| Tiivis lehtiarkki ✕ | lehti.js:2767 | – | ei tarvita: arkin avaa vain kaupunkinosto.js, jonka popupit eivät ole webissä käytössä (rivi osiossa 7) | – |
 | "Etsi kätkö" | index.html:863, ui.js:2630 | KaupunkiKortti "Tutki kaupunkia" | on (kortilla) | NUI |
-| "Jatka matkaa" (sulkee lehden) | index.html:864, ui.js:2631 | LehtiKuori.cs (Suljettu) | kuori | NUI, PK |
+| "Jatka matkaa" (sulkee lehden) | index.html:864, ui.js:2631 | lehtitilassa sama nappi on alapalkin Poistu/Seuraava (paivitaTutkiAlapalkki) → Lehtinakyma | on | NUI, PK |
 
 ## 9. Nähtävyydet, kohdekartta ja turistiopas
 
