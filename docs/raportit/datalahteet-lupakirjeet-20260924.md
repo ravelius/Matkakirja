@@ -13,14 +13,14 @@ joiden lisenssi on NonCommercial. Yhteystiedot ja menettelyt tarkistettiin läht
   käyttötarkoitus, luettelo ehdoista, joihin sitoudumme, ja pyyntö kirjallisesta vastauksesta.
   Lähettäjä on Visuaaliviestinnän Instituutti Tampere Oy. Kohdat [name], [title], [email]
   ja [phone] täytetään ennen lähetystä.
-- Jokainen kirje kertoo, että web-versio on ilmainen ja iOS-versio myydään App Storessa, ja
+- Jokainen kirje kertoo (omistaja 24.9. klo 11.5x), että peli on ilmainen webissä ja iOS:ssä ja tulot tulevat vain valinnaisista maksullisista lisätoiminnoista, ja
   pyytää siksi nimenomaista lupaa NC-ehdosta huolimatta. Kirje ei lupaa raakadatan jakelua:
   vain esikäsitelty johdannainen jaetaan pelin omalta palvelimelta pelille.
 - **Raamatun linjaus:** DATALINSSIT-kohdan mukaan (omistaja 24.9.2026 klo 11.0x–11.2x)
   NC-lisenssit eivät kelpaa. Kirjeet ovat reitti kirjalliseen erillislupaan. Jos lupa tulee,
   aineiston käyttö vaatii silti Fablen kirjauksen Raamattuun ennen toteutusta, ja lupa
   kirjataan lisenssi-inventaarioon ja aineiston `lahde`-kenttään (esim. "erillislupa pvm").
-- **Huomio Fablelle:** kirjeissä ei sanota, että peli on avointa lähdekoodia. Repon
+- **Ratkaistu (omistaja 24.9.):** peli ei ole avointa lähdekoodia (kaikki oikeudet pidätetään); kirjeissä ei väitetä niin. Repon
   LICENSE-tiedoston mukaan kaikki oikeudet pidätetään, kun taas README:n mukaan peli on avointa
   lähdekoodia. Tämä ristiriita kannattaa ratkaista ennen kuin peliä kuvataan ulospäin.
 
@@ -76,8 +76,8 @@ Kanava on sähköposti. Lomaketta ei ole.
 > travel diary around a 3D globe, and optional map "lenses" show how the world has changed.
 >
 > We would like to use the CShapes 2.0 polygons (1886–2019) in lenses that show how states,
-> colonies and borders changed over time. A free web version of the game exists, but the iOS
-> version will be sold on the App Store, so we ask for your explicit permission despite the
+> colonies and borders changed over time. The game is free to play on the web and on iOS; our only revenue comes from optional
+> paid add-ons inside the app. Because of that, we ask for your explicit permission despite the
 > NonCommercial term of the CC BY-NC-SA 4.0 licence.
 >
 > How the data would be used:
@@ -163,8 +163,8 @@ Night Sky Brightness*. GFZ Data Services, doi:10.5880/GFZ.1.4.2016.001. Kartat o
 >
 > We would like to use the World Atlas of Artificial Night Sky Brightness in a lens called
 > "Can you see the Milky Way?". It shows how sky glow hides the stars at a chosen place today,
-> compared with 1873. A free web version exists, but the iOS version will be sold on the App
-> Store, so we ask for your explicit permission despite the NonCommercial term of the
+> compared with 1873. The game is free to play on the web and on iOS; our only revenue comes from optional
+> paid add-ons inside the app. Because of that, we ask for your explicit permission despite the NonCommercial term of the
 > CC BY-NC 4.0 licence.
 >
 > How the data would be used:
@@ -268,7 +268,8 @@ Datatiedostot ovat Downloads-sivulla
 > the Americas and makes clear that the numbers are enslaved people. Besides public-domain
 > historical variables, we would like to use these imputed Trans-Atlantic Slave Trade Database
 > variables: slaximp, slamimp, mjbyptimp, majbyimp, mjslptimp, mjselimp, ptdepimp, yearam and
-> natinimp. A free web version exists, but the iOS version will be sold on the App Store, so we
+> natinimp. The game is free to play on the web and on iOS; our only revenue comes from optional
+> paid add-ons inside the app. Because of that, we
 > ask for your written permission despite the NonCommercial term of the CC BY-NC 3.0 US
 > licence.
 >
