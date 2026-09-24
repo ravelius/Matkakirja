@@ -4155,3 +4155,7 @@ Profiilissa vain 00008142… ja 00008150…; Natiiviseppä rekisteröi laitteen 
 ## SISALTOKIRJURI: KOHDEKARTTAVAIHE VALMIS (10 PR:AA, 10 HYVAKSYTTYA + 20 HYLATTYA); SEURAAVAKSI CHURCHILL-NOSTO JA N2/N4/N5/N6-KAUPUNKIEN SAA/GALLERIA/ENNENNYT (24.9.2026 klo 16.14)
 
 Erä 3: Gao #3091; Al Kufra hylätty (ei toista paikannettavaa kohdetta). Fable: Churchill-nosto (#3016), sitten N-erien mainissa olevat kaupungit 5/PR, ja sää-PR:ien (#3047–#3065) tilan tarkistus.
+
+## OMISTAJA klo 16.1x (SITOVA): AVAUSTEKSTI TAKAISIN ALOITUSNAYTOLLE; LENNON KAMERAREITTI (SIVUKYLKI LAHELTA → LOITTONEE → KIERTO KOHDEKAUPUNGIN VASTAPUOLELLE → ORBIT LASKUUN) (24.9.2026 klo 16.16)
+
+1) 'Ullakolta löytyi matkalaukku…' näytetään aloitusnäytöllä 'Aloita seikkailu' -painalluksen jälkeen ennen karttaa (kartalla Lontoo-zoomissa liian sekava); tekstin jälkeen tai ohituksesta pallonäkymä ja kohdevalinta. 2) Kohdemaan valinnan jälkeen kone lähtee automaattisesti; kamera zoomaa koneeseen niin että se täyttää melkein näytön ja näkyy sivukylki → loittonee kone näkyvissä → kohdekaupungin ilmestyessä kiertää kaupungin vastakkaiselle puolelle (kone tulee kameraa kohti) → pyöreä orbit laskuun asti. Raamattu päivitetty (klo 12.1x:n avaustekstin paikka kumottu, kamerakäsikirjoitus tarkennettu). → Pelikoodari (aloitusteksti, build 10), Natiiviseppä (kamera, build 10).
