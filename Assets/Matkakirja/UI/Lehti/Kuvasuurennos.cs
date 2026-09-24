@@ -34,6 +34,7 @@ namespace Matkakirja.Natiivi
             edellinen = Rakenne.Nappi("‹", "mk-nosto__selaa mk-nosto__selaa--vasen", () => Nayta(i - 1), kuva);
             seuraava = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(i + 1), kuva);
             kuva.pickingMode = PickingMode.Position;
+            new KuvaSelaus(kehys, () => sarja?.Count ?? 0, s => Nayta(i + s), () => kuva);
             laskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuva);
             kuva.RegisterCallback<GeometryChangedEvent>(_ => Nostokortti.SovitaNauha(kuva, nauha, ladattu));
             Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
@@ -93,7 +94,9 @@ namespace Matkakirja.Natiivi
             lahde.EnableInClassList("mk-nosto__lahde--linkki", lahdeUrl != null);
             lahde.style.display = lahde.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             bool monta = sarja.Count > 1;
-            edellinen.style.display = seuraava.style.display = laskuri.style.display = monta ? DisplayStyle.Flex : DisplayStyle.None;
+            // Löydös 34: ei nuolia kuvan päällä; selaus reunanapautuksella ja pyyhkäisyllä (KuvaSelaus).
+            edellinen.style.display = seuraava.style.display = DisplayStyle.None;
+            laskuri.style.display = monta ? DisplayStyle.Flex : DisplayStyle.None;
             laskuri.text = $"{i + 1} / {sarja.Count}";
             // Kuvan oma reaktiorivi paperin alle (web avaaKohdeSuurennos / naytaKulttuuriKuva: kuva.reaktio,
             // käytännössä Matkakirjan ihme); vaihtuu kuvan mukana.

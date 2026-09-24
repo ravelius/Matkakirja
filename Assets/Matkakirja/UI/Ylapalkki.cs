@@ -33,11 +33,12 @@
 //
 // PALKKI TAKAISIN iPHONELLE (omistaja 24.9.2026 klo 16.1x, Raamattu NATIIVIN YLÄPALKKI iPHONELLA JA iPADILLA):
 // kelluva yläosa ja saaririvi poistuivat käytöstä (Kelluva = false). iPhone saa webin ruskean palkin samalla sisällöllä
-// kuin web (logo, pilleri "£300  Päivä 1, aamu", ⚙, ☰) webin mitoin: iPhone 57 pt (täyte 4,8/7,2, logo 92 × 22,
+// kuin web (logo, pilleri "£300  Päivä 1, aamu", ☰; ⚙ ei näy, Fable 24.9.) webin mitoin: iPhone 57 pt (täyte 4,8/7,2, logo 92 × 22,
 // pilleri 12,48 px, napit 40 × 40), iPad 61 pt (täyte 7,2/12,8, logo 130 × 32, pilleri 14,4 px, napit 44 × 36).
 // iPhonella palkki liukuu piiloon, kun pelaaja vetää karttaa, ja palaa kartan tai kaupungin napautuksesta; piilossa
 // oikeassa yläkulmassa on vain ☰, joka tuo palkin takaisin. Vaaka-asennossa palkki on piilossa oletuksena (sama ☰).
-// iPadilla palkki ei piiloudu. Puhelin = iPhone (Pulun tekstipiilo ja Liiku-napin keveys lukevat sitä).
+// iPadilla palkki ei piiloudu. Puhelin = iPhone: ☰ on siellä omistajan linssivalikko (klo 13.3x, hyväksytty poikkeama)
+// eikä laukussa ole linssejä (klo 11.2x); Pulun tekstipiilo ja Liiku-napin keveys lukevat samaa lippua.
 //
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
@@ -334,7 +335,8 @@ namespace Matkakirja.Natiivi
         void AsetaKelluva()
         {
             bool k = Kelluva;
-            Ratas.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
+            // ⚙ ei ole pelaajan näkymässä (omistajan löydös 37, Fable 24.9.): asetukset ☰ → Muut → Asetukset.
+            Ratas.style.display = DisplayStyle.None;
             if (kelluvaNyt == k) return;
             kelluvaNyt = k;
             SiirraVieraat();

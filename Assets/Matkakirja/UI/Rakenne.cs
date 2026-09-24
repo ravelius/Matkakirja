@@ -318,4 +318,55 @@ namespace Matkakirja.Natiivi
             };
         }
     }
+
+    /// <summary>
+    /// Kuvien selaus eleillä (omistajan löydös 34, build 10; web galleria.js ja kuvasarja.js): napautus kuvan vasempaan
+    /// tai oikeaan reunakaistaan (24 % leveydestä, GALLERIAN_REUNAKAISTA) vie edelliseen / seuraavaan, vaakapyyhkäisy
+    /// ≥ 30 px (KUVASARJA_PYYHKAISY_PX, vaaka > pysty) samoin; keskiosa jää kutsujan omalle napautukselle (suurennos).
+    /// Ei nuolia kuvan päällä. Kuuntelee TrickleDown-vaiheessa isäelementissä, joten kulutettu ele ei laukaise kuvan
+    /// omaa ClickEventiä. Kaista mitataan elementistä, jonka mitta() antaa (oletus: kohde).
+    /// </summary>
+    public sealed class KuvaSelaus
+    {
+        public const float Reunakaista = 0.24f, PyyhkaisyPx = 30f;
+        readonly VisualElement kohde;
+        readonly Func<int> maara;
+        readonly Action<int> askel;
+        readonly Func<VisualElement> mitta;
+        Vector2 alku;
+        int osoitin = -1;
+        bool kulutettu;
+
+        public KuvaSelaus(VisualElement kohde, Func<int> maara, Action<int> askel, Func<VisualElement> mitta = null)
+        {
+            this.kohde = kohde;
+            this.maara = maara;
+            this.askel = askel;
+            this.mitta = mitta;
+            kohde.RegisterCallback<PointerDownEvent>(e => { osoitin = e.pointerId; alku = e.position; kulutettu = false; }, TrickleDown.TrickleDown);
+            kohde.RegisterCallback<PointerUpEvent>(Ylos, TrickleDown.TrickleDown);
+            kohde.RegisterCallback<ClickEvent>(e => { if (kulutettu) { kulutettu = false; e.StopPropagation(); } }, TrickleDown.TrickleDown);
+        }
+
+        void Ylos(PointerUpEvent e)
+        {
+            if (e.pointerId != osoitin) return;
+            osoitin = -1;
+            if (maara() < 2) return;
+            var d = (Vector2)e.position - alku;
+            int s = 0;
+            if (Mathf.Abs(d.x) >= PyyhkaisyPx && Mathf.Abs(d.x) > Mathf.Abs(d.y)) s = d.x < 0 ? 1 : -1;
+            else if (d.magnitude < 8f)
+            {
+                var r = (mitta?.Invoke() ?? kohde).worldBound;
+                if (r.width <= 0 || !r.Contains(e.position)) return;
+                float x = (e.position.x - r.xMin) / r.width;
+                s = x < Reunakaista ? -1 : x > 1f - Reunakaista ? 1 : 0;
+            }
+            if (s == 0) return;
+            kulutettu = true;
+            Aanet.PulunTehoste("swipe");
+            askel(s);
+        }
+    }
 }

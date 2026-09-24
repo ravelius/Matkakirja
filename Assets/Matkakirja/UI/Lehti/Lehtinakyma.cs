@@ -1248,14 +1248,12 @@ namespace Matkakirja.Natiivi
                 var kehys = paikka.Q(className: "mk-lehti__kuvakehys");
                 if (kuvat.Count > 1 && kehys != null)
                 {
-                    var ed = Rakenne.Nappi("‹", "mk-nosto__selaa mk-nosto__selaa--vasen", () => Nayta(i - 1), kehys);
-                    var se = Rakenne.Nappi("›", "mk-nosto__selaa mk-nosto__selaa--oikea", () => Nayta(i + 1), kehys);
-                    ed.RegisterCallback<ClickEvent>(e => e.StopPropagation());
-                    se.RegisterCallback<ClickEvent>(e => e.StopPropagation());
                     Kirjasimet.Aseta(Rakenne.Teksti($"{i + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys), Kirjasin.Kone);
                 }
                 Kuvateksti(tekstit, kuvat[i], vainLahde);
             }
+            // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
+            new KuvaSelaus(paikka, () => kuvat.Count, s => Nayta(i + s), () => paikka.Q(className: "mk-lehti__kuvakehys") ?? paikka);
             Nayta(0);
         }
 
