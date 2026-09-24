@@ -264,7 +264,7 @@ namespace Matkakirja
 
         Merkki Osuma(Vector2 ruutu)
         {
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             Merkki paras = null;
             float parasEtaisyys = osumaSade * kerroin;
             foreach (var m in merkit)
@@ -323,7 +323,7 @@ namespace Matkakirja
             var gt = georeferenssi.transform;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             // Retina-näytöllä yksi piste on 2–3 pikseliä; mitoitus tehdään pisteinä.
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             float pikseleita = Screen.height / kerroin;
             varatut.Clear();
             int naytetty = 0;

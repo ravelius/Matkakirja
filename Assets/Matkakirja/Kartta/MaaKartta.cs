@@ -392,7 +392,7 @@ namespace Matkakirja
             rajat = go.AddComponent<MeshRenderer>();
             rajaOma = new Material(rajaMateriaali);
             rajaOma.renderQueue = rajaMateriaali.renderQueue + jonoLisa;
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             rajaOma.SetFloat("_Kerroin", kerroin);
             rajat.sharedMaterial = rajaOma;
             rajat.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;

@@ -78,7 +78,7 @@ namespace Matkakirja
             p.Normaali = (float3)math.normalize(u - keskus);
             // Valopiste laajentaa kärjet ruudulla objektin koordinaateissa: verkko pisteen kohdalle.
             p.Olio.GetComponent<MeshFilter>().sharedMesh = Verkko(p.Paikka, lukittu ? new Color(vari.r, vari.g, vari.b, 0.45f) : vari);
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             p.Koko = sade * kerroin;
             p.Lukittu = lukittu;
             p.Oma.SetFloat("_Koko", p.Koko);
@@ -117,7 +117,7 @@ namespace Matkakirja
             if (merkit != null && merkit.merkitNakyvat && merkit.OsuuKaupunkiin(ruutu)) return;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
             if (kamera == null) return;
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             float paras = osumaSade * kerroin;
             string osuma = null;
             var gt = georeferenssi.transform;

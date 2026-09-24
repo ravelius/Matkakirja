@@ -358,7 +358,7 @@ namespace Matkakirja
             if (eteen.sqrMagnitude > 1e-6f) malli.transform.SetPositionAndRotation(paikka, Quaternion.LookRotation(eteen.normalized, ylos));
             else malli.transform.position = paikka;
             float etaisyys = Vector3.Distance(kamera.transform.position, paikka);
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
             malli.transform.localScale = Vector3.one * (pikseli * malliPx * kerroin / malliKoko);
         }
@@ -417,7 +417,7 @@ namespace Matkakirja
                 if (!paalle) olio.SetActive(true);
                 return;
             }
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             if (paalle && koneKuva == null) koneKuva = Kuva(koneVari, 64, 64, KoneMuoto);
             oma.SetTexture("_MainTex", paalle ? koneKuva : nappulaKuva);
             oma.SetFloat("_Koko", (paalle ? koneKoko : koko) * kerroin);
@@ -509,7 +509,7 @@ namespace Matkakirja
             oma = new Material(materiaali);
             nappulaKuva = Kuva(vari, 64, 72, NappulaMuoto);
             oma.SetTexture("_MainTex", nappulaKuva);
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             oma.SetFloat("_Koko", koko * kerroin);
             r.sharedMaterial = oma;
             r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;

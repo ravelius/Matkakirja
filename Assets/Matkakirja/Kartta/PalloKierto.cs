@@ -274,7 +274,14 @@ namespace Matkakirja
             if (lepo != Levossa) { Levossa = lepo; LepoMuuttui?.Invoke(lepo); }
         }
 
-        float Kerroin => Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+        /// <summary>
+        /// Laitepikseliä yhdellä pisteellä (CSS px / iOS pt), kuten UI ja linssit: Round(dpi / 163).
+        /// Pyöristämätön dpi/163 antoi 264 dpi:n iPadille 1,62 (iPadin 1x on 132 dpi), joten
+        /// merkit ja viivat olivat 0,81× webin koosta.
+        /// </summary>
+        public static float Pistekerroin => Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+
+        float Kerroin => Pistekerroin;
 
         double PuoliKulma()
         {

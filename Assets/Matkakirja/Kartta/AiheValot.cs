@@ -113,7 +113,7 @@ namespace Matkakirja
                 string id = d.TryGetValue("id", out var iv) && iv is string ids ? ids : null;
                 valot.Add(new Valo { Id = id, Aihe = aihe, Paikka = (float3)u, Normaali = (float3)math.normalize(u - keskus) });
             }
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             foreach (var (aihe, vari) in Aiheet)
             {
                 var omat = valot.FindAll(v => v.Aihe == aihe);
@@ -187,7 +187,7 @@ namespace Matkakirja
             if (merkit != null && merkit.merkitNakyvat && merkit.OsuuKaupunkiin(ruutu)) return;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
             if (kamera == null) return;
-            float kerroin = Screen.dpi > 0 ? Mathf.Max(1f, Screen.dpi / 163f) : 1f;
+            float kerroin = PalloKierto.Pistekerroin;
             float paras = osumaSade * kerroin;
             string osuma = null;
             var gt = georeferenssi.transform;
