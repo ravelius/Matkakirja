@@ -168,3 +168,66 @@ test('puuttuva aineisto ei kaada muunnosta', () => {
   const tyhja = vesistotPallolle(null, asteet);
   assert.deepEqual(tyhja, { polut: [], polygonit: [], nimet: [] });
 });
+
+/*
+ * YHTENÄINEN UOMA (Fable 24.9.2026: joet pätkittäisiä ja läpikuultavia).
+ * Uoma ja penger ovat samaa polkua samalla korkeudella, joten niitä ei
+ * erota syvyys vaan kiinteä piirtojärjestys ilman syvyyskirjoitusta
+ * (js/pallolauta/reitit.js KIINTEÄ PIIRTOJÄRJESTYS). Selainvartio:
+ * tools/savukkeet/savuke-vesistolinssi.mjs.
+ */
+test('piirtojärjestys: kalvo < järvi < penger < uoma, pääjoki päällimmäisenä', async () => {
+  const { PALLON_JARJESTYS, UOMAN_KORKEUS } = await import('../js/linssit/vesistot.js');
+  const luokat = new Map(MAAILMANKARTAN_NIMET.joet.map((j) => [j.avain, j.tarkeys]));
+  // Reliefikalvo on renderOrderissa 1 (linssit.js kalvo), GL-nimiöt 5.
+  assert.ok(PALLON_JARJESTYS.jarvi > 1);
+  assert.ok(PALLON_JARJESTYS.uoma[1] < 5);
+  for (const d of tulos.polygonit) assert.equal(d.jarjestys, PALLON_JARJESTYS.jarvi);
+  for (const d of tulos.polut) {
+    if (d.avain.startsWith('penger:')) {
+      assert.equal(d.jarjestys, PALLON_JARJESTYS.penger);
+      assert.ok(d.jarjestys > PALLON_JARJESTYS.jarvi);
+    } else {
+      const luokka = luokat.get(d.nimi) ?? 3;
+      assert.equal(d.jarjestys, PALLON_JARJESTYS.uoma[luokka]);
+      assert.ok(d.jarjestys > PALLON_JARJESTYS.penger);
+    }
+    // Korkeus kulkee pisteissä: viivakerros lukee vain kolmannen luvun.
+    for (const p of d.pisteet) assert.equal(p[2], UOMAN_KORKEUS);
+  }
+  assert.ok(PALLON_JARJESTYS.uoma[1] > PALLON_JARJESTYS.uoma[2]);
+  assert.ok(PALLON_JARJESTYS.uoma[2] > PALLON_JARJESTYS.uoma[3]);
+});
+
+test('asetaPiirtojarjestys: läpinäkyvä jono ilman syvyyskirjoitusta, ja takaisin oletuksiin', async () => {
+  const { asetaPiirtojarjestys } = await import('../js/pallolauta/reitit.js');
+  const viiva = { renderOrder: 0, material: { transparent: false, depthWrite: true, opacity: 1 } };
+  const kansi = {
+    renderOrder: 0,
+    material: [
+      { transparent: true, depthWrite: true, opacity: 0 },
+      { transparent: false, depthWrite: true, opacity: 1 },
+    ],
+  };
+  const ryhma = { renderOrder: 0, children: [viiva, kansi] };
+  // Olio ilman lukua ja ilman aiempaa asetusta jää koskematta.
+  assert.equal(asetaPiirtojarjestys(ryhma, undefined), false);
+  assert.equal(viiva.material.depthWrite, true);
+
+  assert.equal(asetaPiirtojarjestys(ryhma, 1.8), true);
+  for (const o of [ryhma, viiva, kansi]) assert.equal(o.renderOrder, 1.8);
+  for (const m of [viiva.material, ...kansi.material]) {
+    assert.equal(m.transparent, true);
+    assert.equal(m.depthWrite, false);
+  }
+  // Peittävyyteen ei kosketa: viiva on yhä täysin peittävä.
+  assert.equal(viiva.material.opacity, 1);
+
+  // Kirjasto kierrättää olion toiselle datumille → oletukset takaisin.
+  assert.equal(asetaPiirtojarjestys(ryhma, undefined), true);
+  for (const o of [ryhma, viiva, kansi]) assert.equal(o.renderOrder, 0);
+  assert.equal(viiva.material.transparent, false);
+  assert.equal(viiva.material.depthWrite, true);
+  assert.equal(kansi.material[0].transparent, true); // alfa 0 → yhä läpinäkyvä
+  assert.equal(ryhma.__piirtojarjestys, undefined);
+});

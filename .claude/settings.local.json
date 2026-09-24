@@ -4,7 +4,9 @@
       "Bash(aws s3 sync:*)",
       "Bash(aws s3 cp:*)",
       "Bash(aws s3 ls:*)",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
+      "Bash(python3 -)"
     ]
   }
 }
