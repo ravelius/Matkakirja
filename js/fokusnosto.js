@@ -208,7 +208,7 @@ const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY
  * Lauta, jota rivillä ei ole, saa pisteensä kaupunkiin (nostonPaikka):
  * väärään paikkaan ankkuroitu merkki olisi pahempi kuin maan osoite.
  */
-const NOSTO_MAAT = {
+export const NOSTO_MAAT = {
   GRC: [
     {
       /*
@@ -709,7 +709,7 @@ function nostoMaanPooli(ui, city) {
  * ajetaan siksi kummallekin lähteelle. Valmis `teksti` voittaa yhä,
  * joten Kreikan rivit kulkevat läpi koskemattomina.
  */
-function nostoLevitaLunastus(pooli) {
+export function nostoLevitaLunastus(pooli) {
   return pooli.map((n) => (n.teksti ? n : { ...n, teksti: nostonLunastusteksti(n.lunastus) }));
 }
 
