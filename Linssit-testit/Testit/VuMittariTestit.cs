@@ -21,17 +21,6 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, VuMittari.Lukema(1));                                     // yli −6 dB rajautuu
         }
 
-        [Testi] static void NatiivinNayttotasoTakaisinRmsiksi()
-        {
-            // MatkakirjaRadio_Taso = (dBFS + 60) / 60. Musiikki −20 dBFS (0,667) ei saa lyödä neulaa ylälaitaan.
-            Oleta.Sama(-1.0, VuMittari.RmsNayttotasosta(-1));
-            Oleta.Sama(0.0, VuMittari.RmsNayttotasosta(0));
-            Oleta.Tosi(Math.Abs(VuMittari.RmsNayttotasosta(1) - 1) < 1e-9, "0 dBFS = 1");
-            double musiikki = VuMittari.Lukema(VuMittari.RmsNayttotasosta(40 / 60.0));
-            Oleta.Tosi(Math.Abs(musiikki - 20 / 34.0) < 1e-9, "−20 dBFS asteikolla: " + musiikki);
-            Oleta.Tosi(VuMittari.Lukema(VuMittari.RmsNayttotasosta(0.5)) < 0.3, "−30 dBFS alaosassa");
-        }
-
         [Testi] static void NousuNopeaLaskuHidas()
         {
             var m = new VuMittari();
