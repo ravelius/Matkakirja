@@ -866,6 +866,9 @@ namespace Matkakirja
                 ajo.kallistusAlku = kallistus;
                 ajo.kallistukseen = 0;
             }
+            // Webin saapuminen on pohjoinen ylös; eleet (löydös 30) säilyttävät pelaajan suuntiman, joten käännetään
+            // se samassa ajassa takaisin.
+            PalautaPohjoinen(kestoS);
             Debug.Log($"MATKAKIRJA saapuminen: {maa ?? "-"} {t.Tapa} → ({t.Lat:0.###}, {t.Lon:0.###}) " +
                       $"korkeus {t.Korkeus:0.####} R, näkyvä leveys {t.NakyvaLeveys:0} yks" +
                       (t.Laatikko.HasValue ? $", laatikko {t.Laatikko.Value}" : "") +
