@@ -2,6 +2,7 @@
 //   keksinnöt: Käynnistä → siirry(10) → 12 s → siirry(11) → 12 s → kuva (kontakti-keksinnot-1873)
 //              siirry(25) → jatka → 12 s → kuva (kontakti-keksinnot-loppu)
 //   ihmisen matka: Käynnistä → valitse('levantti') → 12 s → tauko → kuva
+//   KIINTEA=satelliitti: linssin oma avaus, kuva 15 s kohdalla
 //   KIINTEA=radio: radio auki (50/10/6000 km) ja Lontoon asema äänettömänä
 //   KIINTEA=maat: vertailu (FIN; +SWE, NOR, DNK) ja maatiedot (JPN)
 //   KIINTEA=topografia|vesistot: vain se näkymä (45/10/8000 km tai 0/20/9000 km) tuoreella sivulla
@@ -160,6 +161,18 @@ const KIINTEAT = { topografia: [45, 10, 8000], vesistot: [0, 20, 9000] };
  * RADIO (natiivi: linssi radio, radio aani 0, kamera 50 10 6000, radio kaupunki lontoo): linssi
  * auki kiinteällä kameralla, sitten Lontoon asema äänettömänä (js/linssit/radio.js).
  */
+/* SATELLIITTI (natiivi: linssi satelliitti, 15 s omaa avausajoa, ei kiinteää kameraa). */
+if (process.env.KIINTEA === 'satelliitti') {
+  await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes('satelliitti')) ui.game.player.linssit.push('satelliitti');
+    ui.valitseLinssi('satelliitti');
+  });
+  await odota(15000);
+  await kuva('satelliitti');
+  await selain.close(); palvelin.close(); process.exit(0);
+}
 if (process.env.KIINTEA === 'radio') {
   const kamera = () => s.evaluate(() => {
     const u = window.matkakirja.ui;

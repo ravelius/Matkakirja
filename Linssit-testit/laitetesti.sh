@@ -21,6 +21,8 @@
 #   ./laitetesti.sh isoisa <kansio> [isoisa-1873.json]
 #                                          striimattava 1873-aineisto koekansioon (sisalto-koe/virta/),
 #                                          uudelleenkäynnistys, linssi Euroopan ja Balkanin yllä
+#   ./laitetesti.sh regressio <kansio>     kaikki linssit (RADIO=1: myös radio), KAUPUNKI oletus lontoo
+#   ./laitetesti.sh tutkimus <kansio>      ihmisen matka suoraan tutkimusvaiheeseen
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
@@ -77,6 +79,18 @@ case "$1" in
     linssi "maa JPN"; sleep 3; kuva kontakti-maatiedot
     linssi "lehti" "maa KOR"; sleep 3; kuva linssitesti-maatiedot-kor
     linssi "linssi pois"; sleep 4; hae "$2"; tail -20 "$2/linssi-loki.txt" ;;
+  tutkimus)
+    # Ihmisen matka suoraan tutkimusvaiheeseen (linssi-komento "ihminen tutkimus"): nostot ja virtanapit.
+    linssi "ihminen tutkimus"; sleep 25; kuva kontakti-ihmisen-tutkimus
+    linssi "linssi pois"; sleep 3; hae "$2"; grep -a "ihminen tutkimus\|tutkimus:" "$2/linssi-loki.txt" | tail -4 ;;
+  regressio)
+    # Kaikki linssit yhdellä kierroksella (Fable 24.9.): kontakti (topografia, vesistöt, satelliitti,
+    # keksinnöt, ihmisen matka), maat (vertailu, maatiedot), isoisä, tutkimus; RADIO=1 lisää radion.
+    KAUPUNKI=${KAUPUNKI:-lontoo}; export KAUPUNKI
+    "$0" kontakti "$2"; "$0" maat "$2"; "$0" isoisa "$2"
+    kaynnista; portti; "$0" tutkimus "$2"
+    [ "$RADIO" = 1 ] && "$0" radiokontakti "$2"
+    ls "$2" | grep -c png ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
     # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.
