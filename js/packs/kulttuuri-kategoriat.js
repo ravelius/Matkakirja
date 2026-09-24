@@ -109769,6 +109769,17 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Churchill, Manitoba',
         },
+        {
+          otsikko: 'Odotus venyy vuosi vuodelta',
+          teksti:
+            'Jääkarhujen syksyinen odotus riippuu suoraan siitä, milloin Hudsoninlahti jäätyy, ja jäätyminen puolestaan riippuu koko Jäämeren tilasta. Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 miljoonaa neliömailia — mittaushistorian kymmenenneksi vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. Tutkijat seuraavat Churchillin karhupopulaatiota tarkemmin kuin lähes mitään muuta juuri siksi, että se on ensimmäisten joukossa kärsimässä lyhenevästä jääkaudesta.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - 3199 print).jpg',
+          lyhyt: 'NASA:n kuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite:
+            'NASA:n Scientific Visualization Studion kuva näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, keltaisen ääriviivan merkitessä vuosien 1981–2010 keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
   ],
@@ -116128,6 +116139,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dennis Martínez',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nicaragua. National Palace, Managua LCCN2016820953.jpg',
+          vuosi: '1910-luku',
+          lyhyt: 'Managuan kansallispalatsi 1910-luvulla, ennen kuin '
+            + 'keskusta tuhoutui kahdesti maanjäristyksissä.',
+          selite: 'Managuan kansallispalatsi 1910-luvulla. Nicaraguan '
+            + 'pääkaupunki oli tuolloin pieni järvenrantakaupunki, ja '
+            + 'keskusta sortui myöhemmin kahdesti maanjäristyksessä, '
+            + 'vuosina 1931 ja 1972.',
+          lahde: 'National Photo Company / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Old Managua Cathedral (3).jpg',
+          vuosi: '2016',
+          lyhyt: 'Managuan vanha katedraali seisoo yhä vuoden 1972 '
+            + 'maanjäristyksen jäljiltä vaurioituneena.',
+          selite: 'Vanha katedraali Managuan keskustassa vuonna 2016. '
+            + 'Kirkko vaurioitui 1972 maanjäristyksessä eikä ole enää '
+            + 'käytössä, mutta managualaiset käyvät sitä yhä katsomassa '
+            + 'joka viikonloppu.',
+          lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116305,6 +116340,67 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Reggae Maranhão Museum',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Largo do Carmo - São Luís - em 1908.jpg',
+          vuosi: '1908',
+          lyhyt: 'Largo do Carmo São Luísissa vuonna 1908, aukio joka '
+            + 'nimettiin pian uudelleen.',
+          selite: 'Largo do Carmo São Luísissa vuonna 1908, raitiotien '
+            + 'kiskoineen ja Carmon kirkkoineen. Aukio sai 1901 uuden '
+            + 'nimen Praça João Lisboa maranhãolaisen kirjailijan '
+            + 'mukaan.',
+          lahde: 'Gaudêncio Cunha, Álbum do Maranhão em 1908, Wikimedia '
+            + 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Mercado das Tulhas - 01.jpg',
+          vuosi: '2019',
+          lyhyt: 'Mercado das Tulhas, vuonna 1861 rakennettu kauppahalli, '
+            + 'on yhä käytössä São Luísissa.',
+          selite: 'Mercado das Tulhas São Luísin vanhassakaupungissa. '
+            + 'Kaarikäytävän yläpuolelle on hakattu vuosiluku 1861, ja '
+            + 'halli on yhä kauppapaikka, nykyään enimmäkseen käsitöille '
+            + 'ja vaatteille.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Vingboonsin näkymä 1665',
+          tiedosto: 'AMH-6765-NA View of Sao Luis de Maranhao.jpg',
+          lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
+            + 'hollantilaismiehityksen jäljiltä.',
+          selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
+            + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
+            + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
+            + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
+            + 'kaupunkia 1641–1644.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Righinin öljyvärinäkymä',
+          tiedosto: 'Joseph Léon Righini - View of São Luis do Maranhão - Google Art Project.jpg',
+          lyhyt: 'Italialaissyntyisen Joseph Léon Righinin maalaus São '
+            + 'Luísista.',
+          selite: 'Italialaissyntyinen Joseph Léon Righini (1820–1884) '
+            + 'kuoli Brasiliassa Belémissä ja maalasi useita näkymiä '
+            + 'maan kaupungeista — tämä esittää São Luísia mereltä '
+            + 'päin.',
+          lahde: 'Joseph Léon Righini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tuntemattoman taiteilijan näkymä',
+          tiedosto: 'Vista de São Luis do Maranhão (atribuído), da Coleção Brasiliana Iconográfica.jpg',
+          lyhyt: 'Tuntemattoman taiteilijan näkymä São Luísista '
+            + 'Brasiliana Iconográfica -kokoelmasta.',
+          selite: 'Nimettömän taiteilijan maalaus kuuluu Brasiliana '
+            + 'Iconográfica -kokoelmaan, joka kokoaa historiallisia '
+            + 'näkymiä Brasilian kaupungeista.',
+          lahde: 'Tuntematon tekijä, Brasiliana Iconográfica -kokoelma, '
+            + 'Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'kuvataide',
@@ -116438,6 +116534,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanha valokuva Casa Blancasta ja sitä ympäröivästä merimuurista; talo oli Ponce de Leónin suvun asuntona lähes 250 vuotta.',
           lahde: 'Detroit Photographic Co., Wikimedia Commons (PD)',
           wiki: 'Casa Blanca (San Juan)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'St. Cristobal Fortress, San Juan, Puerto Rico LCCN96522666.jpg',
+          vuosi: '1908',
+          lyhyt: 'San Cristóbalin linnoitus San Juanissa vuonna 1908, '
+            + 'kymmenen vuotta Yhdysvaltain vallan alkamisesta.',
+          selite: 'San Cristóbalin linnoitus vuonna 1908. Espanjalaisten '
+            + 'rakentama linnake sulkee vanhan kaupungin '
+            + 'maanpuoleisen kannaksen, ja kuva on otettu kymmenen '
+            + 'vuotta sen jälkeen, kun Puerto Rico siirtyi Espanjalta '
+            + 'Yhdysvalloille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Top of homes in La Perla, San Juan, Puerto Rico.jpg',
+          vuosi: '2019',
+          lyhyt: 'La Perlan kattoja San Juanin kaupunginmuurin '
+            + 'ulkopuolella vuonna 2019.',
+          selite: 'La Perlan kattoja kaupunginmuurin ulkopuolella. '
+            + 'Kaupunginosa rakentui muurin ja meren väliin jäävälle '
+            + 'kapealle kaistaleelle, ja talot laskeutuvat portaittain '
+            + 'rantakalliolle.',
+          lahde: 'Šarūnas Burdulis, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -116590,6 +116711,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Nouméa Cathedral',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nouméa - Hauts fourneaux Ballande - Ch. B. Nething - btv1b10121338v.jpg',
+          vuosi: '1900–1920-luku',
+          lyhyt: 'Ballanden masuunit savusivat Nouméan lahdella '
+            + 'nikkelinsulatuksen alkuaikoina.',
+          selite: 'Ballanden masuunit savuavat Nouméan lahden toisella '
+            + 'rannalla. Uuden-Kaledonian nikkeli löydettiin '
+            + '1860-luvulla, ja sitä alettiin sulattaa saarella '
+            + 'itsellään sen sijaan että malmi olisi viety kokonaan '
+            + 'pois.',
+          lahde: 'Ch. B. Nething / Gallica, Ranskan kansalliskirjasto (PD)',
+        },
+        {
+          tiedosto: 'Noumea Market.jpg',
+          vuosi: '2006',
+          lyhyt: 'Bataattikauppias Nouméan rantatorilla varhain aamulla.',
+          selite: 'Bataattikauppias Nouméan torilla. Tori on kaupungin '
+            + 'rannassa ja avautuu varhain aamulla, kun kalastajat '
+            + 'tuovat yön saaliin samaan aikaan kuin viljelijät '
+            + 'juurekset.',
+          lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116721,6 +116866,29 @@ export const KULTTUURI_KATEGORIAT = {
             'Costanera-kadun varrella kohoavia korkeita asuin- ja liiketorneja, edessä rantakivikko ja Reloncavín selän sininen vesi.',
           lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Puerto Montt',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Puerto Montt (ca. 1912).jpg',
+          vuosi: 'noin 1912',
+          lyhyt: 'Puerto Montt noin vuonna 1912, saksalaissiirtolaisten '
+            + '1853 perustama kaupunki.',
+          selite: 'Puerto Montt noin vuonna 1912. Kaupunki perustettiin '
+            + '1853 saksalaisten siirtolaisten asutuskeskukseksi '
+            + 'Reloncavín lahden pohjukkaan ja nimettiin Chilen '
+            + 'silloisen presidentin Manuel Monttin mukaan.',
+          lahde: 'Bulletin of the Pan American Union, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Angelmó 2014 f06 -entrada al mercado.jpg',
+          vuosi: '2014',
+          lyhyt: 'Angelmón kalatorin sisäänkäynti Puerto Montin '
+            + 'satamakylässä.',
+          selite: 'Sisäänkäynti Angelmón torille. Angelmó on Puerto '
+            + 'Montin satamakylä Tenglon salmen varrella, ja sen '
+            + 'kojuista ostetaan kalaa, simpukoita ja merilevää.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -116869,6 +117037,43 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Thomas Moran',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Castle Geyser, Yellowstone National Park-LCCN2008678250.jpg',
+          vuosi: '1898',
+          lyhyt: 'Castle Geyser purkautuu Yellowstonessa, '
+            + 'käsinväritetty photochrom vuodelta 1898.',
+          selite: 'Castle Geyser purkautuu kartiomaisen kekonsa päältä, '
+            + 'etualalla sininen kuuma lähde. Kartio on piikerrostumaa, '
+            + 'jota lähde on kasvattanut vähitellen tuhansien vuosien '
+            + 'ajan.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2514.jpg',
+          vuosi: '2022',
+          lyhyt: 'Grand Prismatic Spring, Yellowstonen suurin kuuma '
+            + 'lähde, vuonna 2022.',
+          selite: 'Grand Prismatic Spring, puiston suurin kuuma lähde. '
+            + 'Renkaiden värit tulevat eri lämpötiloissa viihtyvistä '
+            + 'mikrobeista: keskellä on kuumin ja kirkkaan sininen '
+            + 'vesi, reunoilla viileämpi ja oranssi.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Sateenkaari kanjonin yllä',
+          tiedosto: 'Rainbow over the Grand Canyon of the Yellowstone, 1900, by Thomas Moran - SAAM - DSC00847.JPG',
+          lyhyt: 'Thomas Moranin toinen öljymaalaus Yellowstonen '
+            + 'kanjonista, tällä kertaa sateenkaaren kera (1900).',
+          selite: 'Thomas Moran palasi Yellowstonen kanjonin aiheeseen '
+            + 'vielä lähes kolme vuosikymmentä ensimmäisen '
+            + 'maalauksensa jälkeen: tässä 1900 valmistuneessa '
+            + 'teoksessa sateenkaari kaartuu putouksen yllä.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -117003,6 +117208,52 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Powell Geographic Expedition of 1869',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Grand Canyon)- Burro trains at Indian Gardens LCCN2002715958.jpg',
+          vuosi: '1906',
+          lyhyt: 'Aasijono Indian Gardensin telttaleirissä Grand '
+            + 'Canyonissa vuonna 1906.',
+          selite: 'Aasijono lastattuna Indian Gardensin telttaleirissä '
+            + 'puolimatkassa kanjonin seinämää. Kaikki tavara '
+            + 'kannettiin rotkoon eläinten selässä, koska polku on '
+            + 'liian jyrkkä ja kapea kärryille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Grand Canyon National Park, Bright Angel Trial, Mule Trip 4825 - Flickr - Grand Canyon NPS.jpg',
+          vuosi: '2011',
+          lyhyt: 'Muuliratsastajia Bright Angel -polulla Grand '
+            + 'Canyonissa vuonna 2011.',
+          selite: 'Opas johdattaa muuliratsastajia ylös Bright Angel '
+            + '-polkua. Samaa polkua käytetään yhä sekä matkustajien '
+            + 'että tavaran kuljettamiseen kanjonin pohjalle.',
+          lahde: 'Michael Quinn, National Park Service (PD)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Moranin toinen kanjoni',
+          tiedosto: 'Thomas Moran - Grand Canyon.jpg',
+          lyhyt: 'Thomas Moranin vuoden 1908 maalaus Grand Canyonista, '
+            + 'eri kohteesta kuin hänen tunnetumpi Yellowstone-teoksensa.',
+          selite: 'Thomas Moran maalasi useita kertoja Yhdysvaltain '
+            + 'suuria kanjoneita; tämä 1908 valmistunut teos kuvaa '
+            + 'Colorado-joen Grand Canyonia, ei Yellowstonen '
+            + 'samannimistä kanjonia.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Brownin impressionistinen näkymä',
+          tiedosto: 'Grand Canyon painting by Benjamin Chambers Brown.jpg',
+          lyhyt: 'Benjamin Chambers Brownin impressionistinen maalaus '
+            + 'Colorado-joesta Grand Canyonissa.',
+          selite: 'Yhdysvaltalainen impressionisti Benjamin Chambers '
+            + 'Brown maalasi Colorado-joen mutkittelevan uoman '
+            + 'syvällä kanjonin pohjalla.',
+          lahde: 'Benjamin Chambers Brown, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -117123,6 +117374,32 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ilmasta kuvattuna kallio erottuu selvärajaisena punaisena massana keskellä laakeaa pensasaavikkoa; taustalla taivaalla näkyy ohut savuvana.',
           lahde: 'Emily Cox, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Uluru',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: "Camel team approaching Ayers Rock in search for Lasseter's body - John Bailey.jpg",
+          vuosi: '1930-luku',
+          lyhyt: 'Kamelijono etsimässä Harold Lasseterin ruumista '
+            + 'Ayers Rockin lähellä.',
+          selite: 'Kamelijono lähestymässä Ayers Rockia etsimässä '
+            + 'Harold Lasseterin ruumista. Lasseter väitti '
+            + 'löytäneensä keskisestä Australiasta valtavan '
+            + 'kultasuonen ja katosi lähtiessään uudelleen etsimään '
+            + 'sitä; etsintäretkikunnat liikkuivat aavikolla '
+            + 'kameleilla.',
+          lahde: 'State Library of New South Wales, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Wet Uluru.jpg',
+          vuosi: '2010',
+          lyhyt: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010.',
+          selite: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010. Sade on täällä '
+            + 'harvinaista, mutta kun sitä tulee, kallion sivut '
+            + 'muuttuvat tunneissa vesiputousten verkoksi.',
+          lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -117263,6 +117540,54 @@ export const KULTTUURI_KATEGORIAT = {
             'Ilmakuvassa kenkähevosen muotoinen putoussarja avautuu keskellä laajaa, tiheää sademetsää; joki jatkuu mutkitellen metsän halki kuvan reunoille.',
           lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Iguazú National Park',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Salto Floriano e Garganta do Inferno, na fronteira Brasil-Argentina.jpg',
+          vuosi: '1929–1930',
+          lyhyt: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'Iguazúlla 1929–1930.',
+          selite: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'panoraamavedoksena. Kuva on Brasilian sotaministeriön '
+            + 'rajakomission aineistoa: putouksia mitattiin ja '
+            + 'kuvattiin, koska ne merkitsevät valtakunnanrajaa '
+            + 'Brasilian ja Argentiinan välillä.',
+          lahde: 'B. Rondon, Arquivo Nacional (PD)',
+        },
+        {
+          tiedosto: 'IGUACU FALLS AND CATWALK, BRAZIL.jpg',
+          vuosi: '2009',
+          lyhyt: 'Kävelysilta Iguazún putousten keskelle Paholaisen '
+            + 'kurkkua kohti 2009.',
+          selite: 'Kävelysilta vie keskelle putousryhmää kohti '
+            + 'Paholaisen kurkkua. Sillalla on jatkuva vesisumu, joka '
+            + 'kastelee kulkijat ja kamerat muutamassa minuutissa.',
+          lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Ballerinin panoraama',
+          tiedosto: 'Augusto Ballerini - La cascada del Iguazú - Google Art Project.jpg',
+          lyhyt: 'Argentiinalaisen Augusto Ballerinin 1800-luvun '
+            + 'panoraamamaalaus Iguazún putouksista.',
+          selite: 'Argentiinalainen maisemamaalari Augusto Ballerini '
+            + 'kuvasi putoukset laajana panoraamana — teos on nykyään '
+            + 'esillä osana Trilha das Cataratasin näkymien '
+            + 'kokoelmaa.',
+          lahde: 'Augusto Ballerini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Wiegandtin näkymä 1878',
+          tiedosto: 'Bernhard Wiegandt, Iguazu waterfall, Brazil, 1878.jpg',
+          lyhyt: 'Saksalaisen Bernhard Wiegandtin maalaus Iguazún '
+            + 'putouksista vuodelta 1878.',
+          selite: 'Saksalainen taiteilija Bernhard Wiegandt maalasi '
+            + 'putoukset 1878 — yksi varhaisimmista tunnetuista '
+            + 'eurooppalaisen taiteilijan tekemistä kuvauksista '
+            + 'Iguazústa.',
+          lahde: 'Bernhard Wiegandt, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117419,6 +117744,28 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Lake Titicaca',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'N° 308. Lago Titicaca, Balsas de cañas, hechas por los naturales del pais.png',
+          vuosi: '1900',
+          lyhyt: 'Kaislaveneitä Titicacajärvellä vuonna 1900.',
+          selite: 'Kaislaveneitä Titicacajärvellä vuonna 1900. Miehet '
+            + 'seisovat keulassa ja työntävät venettä sauvomalla, ja '
+            + 'tyyni vesi kahdentaa mastot. Veneet punotaan '
+            + 'totora-kaislasta, jota kasvaa järven matalikoilla.',
+          lahde: 'Fernando Garreaud, albumi República Peruana (PD)',
+        },
+        {
+          tiedosto: 'Islas flotantes de los Uros, Lago Titicaca, Perú, 2015-08-01, DD 32.JPG',
+          vuosi: '2015',
+          lyhyt: 'Uros-kansan kelluva kaislasaari Titicacajärvellä '
+            + 'vuonna 2015.',
+          selite: 'Uros-kansan kelluva saari. Sekä alusta että majat '
+            + 'tehdään totora-kaislasta. Pintaan on lisättävä uutta '
+            + 'kaislaa jatkuvasti, koska alta se lahoaa veteen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -117570,6 +117917,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mount Rushmore',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mount Rushmore unrestored.jpg',
+          vuosi: 'noin 1932',
+          lyhyt: 'Työmiehet kiipeävät Mount Rushmoren keskeneräisillä '
+            + 'kasvoilla noin 1932.',
+          selite: 'Työmiehet kiipeävät tikkaita George Washingtonin '
+            + 'kasvoilla, kun veistos on vielä kesken. Kalliota '
+            + 'muotoiltiin dynamiitilla ja poravasaroilla, ja miehet '
+            + 'laskeutuivat työhön vaijerien varassa.',
+          lahde: 'Rise Studio, Rapid City / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'American Indian Dancers at Mount Rushmore - panoramio.jpg',
+          vuosi: '2008',
+          lyhyt: 'Intiaanitanssijoita Mount Rushmoren alueella Black '
+            + 'Hillsissä vuonna 2008.',
+          selite: 'Intiaanitanssijoita esiintymässä Mount Rushmoren '
+            + 'alueella. Black Hills on lakotoille pyhää maata, ja '
+            + 'veistos on hakattu vuoreen, josta heidät aikanaan '
+            + 'siirrettiin pois.',
+          lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -117715,6 +118086,30 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanhassa valokuvassa upseeri laskee suurta havaijilaista lippua salosta juhlallisesti pukeutuneen väkijoukon edessä palmujen ympäröimällä terassilla – kuva on liittämisseremoniasta ʻIolani-palatsin edustalla elokuussa 1898.',
           lahde: 'Frank Davey, Wikimedia Commons (Public domain)',
           wiki: 'Newlands Resolution',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Native Hawaiian surfer standing with alaia board (PPWD-19-6-019, original).jpg',
+          vuosi: '1898',
+          lyhyt: 'Charles Kauha alaia-lautoineen Waikikin rannalla '
+            + 'vuonna 1898.',
+          selite: 'Charles Kauha ja hänen alaia-lautansa Waikikin '
+            + 'rannalla. Alaia oli ohut ja evätön puulauta, ja '
+            + 'arkiston mukaan tämä oli yksi viimeisistä.',
+          lahde: 'Frank Davey / Hawaii State Archives, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'USGS Lava on Makamae Street.jpg',
+          vuosi: '2018',
+          lyhyt: 'Laavavirta Leilani Estatesin asuinalueella Havaijilla '
+            + '6.5.2018.',
+          selite: 'Laavavirta etenee Makamae-katua pitkin Leilani '
+            + 'Estatesin asuinalueella 6. toukokuuta 2018. Kuvan otti '
+            + 'Yhdysvaltain geologian tutkimuskeskus, joka seuraa '
+            + 'Kīlaueaa päivittäin; tuon kesän purkaus tuhosi noin '
+            + '600 taloa.',
+          lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117863,6 +118258,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
           lahde: 'Eric Bajart, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Puputan',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Strand te Koeta bij Denpasar, KITLV 154735.tiff',
+          vuosi: '1930-luku',
+          lyhyt: 'Kutan ranta Denpasarin lähellä Balilla ennen '
+            + 'matkailun alkua 1920–1930-luvuilla.',
+          selite: 'Kutan ranta Denpasarin lähellä. Rannan takana on '
+            + 'kookospalmuja, aita ja pari olkikattoista majaa — ei '
+            + 'mitään muuta. Ensimmäiset matkailijat alkoivat tulla '
+            + 'Balille 1920- ja 1930-luvulla hollantilaisilla '
+            + 'höyrylaivoilla.',
+          lahde: 'KITLV, Leidenin yliopiston kirjastot (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Jatiluwih Rice Terrace - Subak Jatiluwih Tabanan Bali 01.jpg',
+          vuosi: '2023',
+          lyhyt: 'Riisiterasseja Jatiluwihissa Balilla, '
+            + 'subak-vedenjakojärjestelmän hoitamana.',
+          selite: 'Riisiterasseja Jatiluwihissa Tabananin alueella. '
+            + 'Vesi jaetaan terassilta toiselle subak-järjestelmällä, '
+            + 'jota hoitavat viljelijöiden omat yhdistykset ja '
+            + 'temppelit — ei viranomainen.',
+          lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -118022,6 +118442,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Milford Sound',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mitre Peak. Milford Sound I LCCN2017658061.jpg',
+          vuosi: '1890-luku',
+          lyhyt: 'Mitre Peak Milford Soundin yllä photochrom-vedoksena, '
+            + 'aikana jolloin sinne pääsi vain laivalla.',
+          selite: 'Mitre Peak vuonon yllä käsinvärjättynä '
+            + 'photochrom-vedoksena. Tällaisia vedoksia myytiin '
+            + 'matkailijoille jo silloin, kun paikalle päästiin vain '
+            + 'laivalla tai viikon vaelluksen päästä vuorten yli.',
+          lahde: 'Photoglob Co. / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Stirling Falls, Milford Sound, South Island, New Zealand.jpg',
+          vuosi: '2008',
+          lyhyt: 'Stirlingin putous täydessä virtaamassa Milford '
+            + 'Soundissa sateen jälkeen.',
+          selite: 'Stirlingin putous täydessä virtaamassa sateen '
+            + 'jälkeen. Kalliolta putoava vesi tulee ylhäältä '
+            + 'jäätikön kaivamasta riippuvasta laaksosta, ja '
+            + 'retkiveneet työntävät keulansa suoraan putouksen alle.',
+          lahde: 'Karora, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -118168,6 +118612,54 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ouro Preto',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Ouro preto 1881 00.jpg',
+          vuosi: '1881',
+          lyhyt: 'Ouro Preto vuonna 1881, kultakaupungin '
+            + 'vuorenrinteille rakentuneet korttelit.',
+          selite: 'Ouro Preto vuonna 1881, valokuvattuna Minas '
+            + 'Geraisin osavaltiossa. Kaupunki kasvoi 1700-luvun '
+            + 'kultaryntäyksestä vuorenrinteille, joita se peittää '
+            + 'yhä.',
+          lahde: 'Guilherme (Wilhelm) Liebenau, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto), vista aérea.jpg',
+          vuosi: '2026',
+          lyhyt: 'São Franciscon kirkko ja Ouro Preton '
+            + 'kultakaupungin vanhakaupunki ylhäältä.',
+          selite: 'São Franciscon kirkko ja Ouro Preton tiilikattoinen '
+            + 'vanhakaupunki ylhäältä. Kirkon vuolukiviveistokset ovat '
+            + 'Aleijadinhon, brasilialaisen barokin kuuluisimman '
+            + 'mestarin, käsialaa.',
+          lahde: 'Rafael Lemieszek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Rugendasin vesiväri 1824',
+          tiedosto: 'Johann Moritz Rugendas - Cachoeira de Ouro Preto.jpg',
+          lyhyt: 'Saksalaisen Johann Moritz Rugendasin vesiväri '
+            + 'Ouro Preton putouksesta vuodelta 1824.',
+          selite: 'Saksalainen Johann Moritz Rugendas matkusti Brasiliassa '
+            + '1820-luvulla ja kuvasi maan luontoa ja kaupunkeja '
+            + 'lukuisissa teoksissaan — tämä vesiväri esittää Ouro '
+            + 'Preton lähellä olevaa putousta.',
+          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Bernardellin maisema',
+          tiedosto: 'Henrique Bernardelli - Paisagem de Ouro Preto.jpg',
+          lyhyt: 'Henrique Bernardellin 1870-luvun maisemamaalaus '
+            + 'Ouro Pretosta.',
+          selite: 'Brasilialainen Henrique Bernardelli kuvasi Ouro '
+            + 'Preton vuorenrinteille kiipeäviä kattoja 1870-luvulla, '
+            + 'jolloin kaupunki oli yhä Minas Geraisin pääkaupunki — '
+            + 'asema siirtyi Belo Horizontelle vasta 1897.',
+          lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -118305,6 +118797,30 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vuonna 1964 avattu tutkimusasema Santa Cruzin saarella kasvattaa uhanalaisia jättiläiskilpikonnia ja seuraa saariston lajien tilaa.',
           lahde: 'TriiipleThreat, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Charles Darwin Research Station',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Preparing for the trail LCCN99472325.jpg',
+          vuosi: '1903',
+          lyhyt: 'Keräysretkikunnan miehiä Galápagossaarilla vuonna '
+            + '1903.',
+          selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla '
+            + 'vuonna 1903: maassa on jättiläiskilpikonnien kilpiä, ja '
+            + 'näytteitä valmistellaan kuljetusta varten museoiden '
+            + 'kokoelmiin.',
+          lahde: 'R. H. Beck, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'PtoAyoraMercado.jpg',
+          vuosi: '2018',
+          lyhyt: 'Puerto Ayoran tori Santa Cruzin saarella '
+            + 'Galápagossaarilla vuonna 2018.',
+          selite: 'Puerto Ayoran tori Santa Cruzin saarella. Kaali, '
+            + 'banaani, sipuli ja munat myydään muovilaareista ja '
+            + 'pahvilaatikoista — osa kasvatetaan saaren kosteammalla '
+            + 'ylängöllä, osa tuodaan laivalla mantereelta.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -118445,6 +118961,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Belgian kuningas Leopold II, jonka henkilökohtaiseksi omaisuudeksi Kongo-vapaavaltio julistettiin vuonna 1885.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (Public domain)',
           wiki: 'Congo Free State',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Boma, Congo, ca. 1900-1915 (IMP-CSCNWW33-OS11-74).jpg',
+          vuosi: '1900–1915',
+          lyhyt: 'Boman satama Kongojoen rannalla noin vuosina '
+            + '1900–1915.',
+          selite: 'Lasilevykuva Boman satamasta Kongojoen rannalla — '
+            + 'Boma oli tuolloin Kongo-vapaavaltion pääkaupunki ja '
+            + 'joen tärkein satama sisämaahan.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Aerial view of the Congo River near Kisangani.jpg',
+          vuosi: '2010',
+          lyhyt: 'Kongojoki ilmasta Kisanganin lähellä, haarautuu '
+            + 'vehreiden saarten väliin kuin meri.',
+          selite: 'Kongojoki ilmasta Kisanganin lähellä. Joki haarautuu '
+            + 'vehreiden saarten väliin niin laajaksi, että sitä on '
+            + 'helppo luulla mereksi.',
+          lahde: 'MONUSCO / Myriam Asmani, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -118597,6 +119135,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Huayna Picchu',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Machupicchu hb10.jpg',
+          vuosi: '1912',
+          lyhyt: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen.',
+          selite: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen kasvillisuudesta. '
+            + 'Vuotta aiemmin paikka oli lähes kokonaan viidakon '
+            + 'peitossa, ja raivaus tehtiin käsityönä.',
+          lahde: 'Hiram Bingham, National Geographic 1913 (PD)',
+        },
+        {
+          tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 51.JPG',
+          vuosi: '2015',
+          lyhyt: 'Machu Picchun laastittomia kivimuureja ja '
+            + 'pengerryksiä vuonna 2015.',
+          selite: 'Muureja ja pengerryksiä läheltä. Kivet on hakattu '
+            + 'sopimaan toisiinsa ilman laastia, ja terassien '
+            + 'tukimuurit pitävät jyrkän rinteen paikallaan '
+            + 'sadekaudella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -118739,6 +119301,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Sepiansävyinen ryhmäpotretti noin vuodelta 1880: kuvernööri istuu keskellä ruudullisessa puvussa, ympärillä kymmenkunta perheenjäsentä osin perinteisissä raidallisissa lamba-viitoissa.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Toamasina',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Antananarivo Four Roads c1905.jpg',
+          vuosi: 'noin 1905',
+          lyhyt: 'Postikortti Antananarivon "Neljän tien" risteyksestä '
+            + 'noin 1905.',
+          selite: 'Vanha postikortti Antananarivon "Neljän tien" '
+            + 'risteyksestä ja teatterista noin vuodelta 1905 — '
+            + 'Tananarive oli kaupungin silloinen ranskalainen nimi.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Highlands, Madagascar (22741639463).jpg',
+          vuosi: '2015',
+          lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri '
+            + 'antaa lempinimen "punainen saari".',
+          selite: 'Madagaskarin ylängön punertavia kukkuloita ja kyliä. '
+            + 'Maan väri tulee raudasta, ja se antaa saarelle '
+            + 'lempinimen punainen saari.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
