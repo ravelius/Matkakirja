@@ -583,7 +583,7 @@ namespace Matkakirja.Peli.Testit
             var mv = MiniJson.Teksti(p.Manifest, "skeemaversio");
             foreach (var (mista, v) in new[] { ("osoitin", ov), ("manifest", mv) })
                 if (v != null && !Pakettiskeema.Tunnettu(v))
-                    tulos.Virheet.Add($"{mista}: tuntematon skeemaversio {v} (lukijat tuntevat {Pakettiskeema.Major}.{Pakettiskeema.PieninMinor}–{Pakettiskeema.Major}.{Pakettiskeema.SuurinMinor})");
+                    tulos.Virheet.Add($"{mista}: tuntematon skeemaversio {v} (lukijat tuntevat {Pakettiskeema.Major}.{Pakettiskeema.PieninMinor}–{Pakettiskeema.Major}.{Pakettiskeema.SuurinMinor} ja {Pakettiskeema.SuurinMajor}.0–{Pakettiskeema.SuurinMajor}.{Pakettiskeema.SuurinMinor2})");
             if (ov == null && mv == null) tulos.Virheet.Add("skeemaversio puuttuu osoittimesta ja manifestista");
             if (ov != null && mv != null && ov != mv) tulos.Virheet.Add($"osoittimen skeemaversio {ov} ≠ manifestin {mv}");
             var manifestKokoelmat = (MiniJson.Kentta(p.Manifest, "kokoelmat") as List<object> ?? new List<object>())
@@ -600,7 +600,9 @@ namespace Matkakirja.Peli.Testit
                 catch (Exception e) { tulos.Virheet.Add($"{nimi}: JSON ei jäsenny: {e.Message}"); continue; }
                 if (runko == null) { tulos.Virheet.Add($"{nimi}: runko ei ole olio"); continue; }
                 var skeema = MiniJson.Teksti(runko, "$skeema");
-                if (skeema != null && skeema != $"matkakirja-vienti/{Pakettiskeema.Major}/kokoelma") tulos.Virheet.Add($"{nimi}: tuntematon $skeema {skeema}");
+                // Kokoelman major = paketin major (1.x → /1/, 2.0 → /2/); ilman skeemaversiota 1.
+                int major = Pakettiskeema.MajorOf(p.Skeemaversio) is int m && m > 0 ? m : Pakettiskeema.Major;
+                if (skeema != null && !Pakettiskeema.TunnettuKokoelmaskeema(skeema, major)) tulos.Virheet.Add($"{nimi}: tuntematon $skeema {skeema}");
                 if (MiniJson.Teksti(runko, "nimi") != nimi) tulos.Virheet.Add($"{nimi}: runko.nimi = {MiniJson.Teksti(runko, "nimi") ?? "null"}");
                 if (!(MiniJson.Kentta(runko, "alkiot") is List<object> alkiot)) { tulos.Virheet.Add($"{nimi}: alkiot ei ole taulukko"); continue; }
                 if (alkiot.Any(a => !(a is Dictionary<string, object>))) tulos.Virheet.Add($"{nimi}: alkio, joka ei ole olio");

@@ -226,11 +226,18 @@ namespace Matkakirja.Peli
 
     /// <summary>
     /// Sisältöpaketin skeemaversiot, jotka natiivin lukijat tuntevat (osoitin/manifest `skeemaversio`
-    /// "major.minor", vertailu numeroina: 1.10 > 1.9). Tuntematon versio = pakettivartija punainen.
+    /// "major.minor", vertailu numeroina: 1.10 > 1.9, 2.0 > 1.30). Tuntematon versio = pakettivartija punainen.
+    /// 2.0 (Siirtoseppä 24.9.2026, koepaketti sisalto-koe-2/v1): $skeema matkakirja-vienti/2/…, alkioilla ei
+    /// data-oliota eikä laattatyypeillä englanninkielisiä nimiä; lukijat lukevat sen päätasolta kuten 1.30:n.
     /// </summary>
     public static class Pakettiskeema
     {
+        /// <summary>Skeeman 1.x major (Major..SuurinMajor luetaan; 2.x minorit PieninMinor2–SuurinMinor2).</summary>
         public const int Major = 1;
+        /// <summary>Uusin tunnettu major: 2.0 = ei raakadataa.</summary>
+        public const int SuurinMajor = 2;
+        /// <summary>Uusin läpikäyty 2.x-minor (koepaketti sisalto-koe-2/v1 = 2.0).</summary>
+        public const int SuurinMinor2 = 0;
         /// <summary>Vanhin luettava minor (Kultaiset/paketti = 1.1).</summary>
         public const int PieninMinor = 1;
         /// <summary>
@@ -256,12 +263,20 @@ namespace Matkakirja.Peli
                 && int.TryParse(osat[1], NumberStyles.None, CultureInfo.InvariantCulture, out minor);
         }
 
-        /// <summary>Onko versio vähintään raja (sama major, minor ≥); jäsentymätön = false.</summary>
+        /// <summary>Onko versio vähintään raja ((major, minor) ≥, esim. 2.0 ≥ 1.30); jäsentymätön = false.</summary>
         public static bool Vahintaan(string versio, string raja) =>
-            Jasenna(versio, out var a, out var b) && Jasenna(raja, out var c, out var d) && a == c && b >= d;
+            Jasenna(versio, out var a, out var b) && Jasenna(raja, out var c, out var d) && (a > c || (a == c && b >= d));
 
-        /// <summary>Tunteeko lukija version (major sama, minor välillä PieninMinor–SuurinMinor).</summary>
+        /// <summary>Paketin major (skeemaversiosta) tai -1, jos versio ei jäsenny.</summary>
+        public static int MajorOf(string versio) => Jasenna(versio, out var major, out _) ? major : -1;
+
+        /// <summary>Tunteeko lukija version (1.PieninMinor–1.SuurinMinor tai 2.0–2.SuurinMinor2).</summary>
         public static bool Tunnettu(string versio) =>
-            Jasenna(versio, out var major, out var minor) && major == Major && minor >= PieninMinor && minor <= SuurinMinor;
+            Jasenna(versio, out var major, out var minor)
+            && ((major == Major && minor >= PieninMinor && minor <= SuurinMinor) || (major == SuurinMajor && minor <= SuurinMinor2));
+
+        /// <summary>Kokoelman $skeema, jonka lukijat tuntevat: matkakirja-vienti/&lt;major&gt;/kokoelma (major 1 tai 2).</summary>
+        public static bool TunnettuKokoelmaskeema(string skeema, int major) =>
+            major >= Major && major <= SuurinMajor && skeema == $"matkakirja-vienti/{major}/kokoelma";
     }
 }

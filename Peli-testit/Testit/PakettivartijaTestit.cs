@@ -31,7 +31,8 @@ namespace Matkakirja.Peli.Testit
         static void Vartioi(Paketti p)
         {
             bool vanha = Paataso.RaakaKielletty;
-            bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY");
+            // 2.0: paketissa ei ole raakadataa, joten se vartioidaan aina raakakiellolla (varareitti ei saa auttaa).
+            bool kielto = Paalla("VARTIJA_RAAKA_KIELLETTY") || Pakettiskeema.MajorOf(p.Skeemaversio) >= 2;
             // Raakakielto koskee vain paketteja, joiden skeema lupaa täyden päätason (≥ 1.30, koepaketti v38).
             // Vanhempi paketti (tuotanto v11 = 1.10) luetaan raa'an datan varareitillä, ja se kerrotaan.
             if (kielto && !Pakettiskeema.Vahintaan(p.Skeemaversio, Pakettiskeema.PaatasoTaysi))
@@ -164,10 +165,13 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void TuntematonSkeemaversioOnPunainen()
         {
-            Oleta.Tosi(Pakettiskeema.Tunnettu("1.10") && Pakettiskeema.Tunnettu("1.9") && Pakettiskeema.Tunnettu("1.1"), "tunnetut");
+            Oleta.Tosi(Pakettiskeema.Tunnettu("1.10") && Pakettiskeema.Tunnettu("1.9") && Pakettiskeema.Tunnettu("1.1") && Pakettiskeema.Tunnettu("2.0"), "tunnetut");
             Oleta.Tosi(!Pakettiskeema.Tunnettu("1.10.0") && !Pakettiskeema.Tunnettu("x") && !Pakettiskeema.Tunnettu(null), "muoto");
-            Oleta.Tosi(!Pakettiskeema.Tunnettu($"1.{Pakettiskeema.SuurinMinor + 1}") && !Pakettiskeema.Tunnettu("2.0") && !Pakettiskeema.Tunnettu("1.0"), "tuntemattomat");
-            foreach (var v in new[] { $"1.{Pakettiskeema.SuurinMinor + 1}", "2.0" })
+            var seuraava2 = $"2.{Pakettiskeema.SuurinMinor2 + 1}";
+            Oleta.Tosi(!Pakettiskeema.Tunnettu($"1.{Pakettiskeema.SuurinMinor + 1}") && !Pakettiskeema.Tunnettu(seuraava2)
+                && !Pakettiskeema.Tunnettu("3.0") && !Pakettiskeema.Tunnettu("1.0") && !Pakettiskeema.Tunnettu("0.9"), "tuntemattomat");
+            Oleta.Tosi(Pakettiskeema.Vahintaan("2.0", Pakettiskeema.PaatasoTaysi) && !Pakettiskeema.Vahintaan("1.29", "2.0"), "2.0 ≥ 1.30");
+            foreach (var v in new[] { $"1.{Pakettiskeema.SuurinMinor + 1}", seuraava2, "3.0" })
             {
                 var o = new Dictionary<string, object>(Paikallinen.Osoitin) { ["skeemaversio"] = v };
                 var m = new Dictionary<string, object>(Paikallinen.Manifest) { ["skeemaversio"] = v };
@@ -176,6 +180,13 @@ namespace Matkakirja.Peli.Testit
             }
             var runko = Muokkaa("kaupungit", l => { }).Replace("matkakirja-vienti/1/kokoelma", "matkakirja-vienti/2/kokoelma");
             OletaVirhe(Aja(Paikallinen.Korvaa("kaupungit", runko), "kaupungit"), "tuntematon $skeema");
+            // 2.0-paketissa kokoelman $skeema on /2/ (ja /1/ on vieras).
+            var o2 = new Dictionary<string, object>(Paikallinen.Osoitin) { ["skeemaversio"] = "2.0" };
+            var p2 = new Paketti("skeema 2.0", o2, new Dictionary<string, object>(), k => k == "kaupungit" ? runko : Paikallinen.Teksti(k));
+            var t2 = Pakettivartija.Tarkista(p2, Pakettivartija.Saannot.Take(1));
+            Oleta.Tosi(t2.Vihrea, "2.0 + /2/kokoelma vihreä: " + string.Join(" | ", t2.Virheet));
+            var p21 = new Paketti("skeema 2.0, /1/", o2, new Dictionary<string, object>(), Paikallinen.Teksti);
+            OletaVirhe(Pakettivartija.Tarkista(p21, Pakettivartija.Saannot.Take(1)), "tuntematon $skeema matkakirja-vienti/1/kokoelma");
         }
 
         [Testi] static void KopioVastaaManifestia()
