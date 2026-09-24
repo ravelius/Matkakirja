@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
             var t = Tila?.Invoke();
             if (t == null) return null;
             if (aineisto == null) { Lataa(); return null; }
+            // Auki olevan noston kysymykset ensin (web pulunKysymystilanne avoinNosto).
+            if (AvoinNosto?.Invoke() is string avoin && aineisto.TryGetValue(avoin, out var nosto) && nosto.Kysymykset.Count > 0) return nosto;
             var (kertomus, indeksi) = t.Value;
             if (kertomus == null || indeksi < 0) return null;
             // Web jaksonKysymystunnus: lähin jakso taaksepäin, jonka kohteella on kysymyksiä.
@@ -49,6 +51,16 @@ namespace Matkakirja.Natiivi
             }
             return null;
         }
+
+        /// <summary>Löytöpaikan valmiit kysymykset tunnuksella (web haeIhmisenMatkanKysymykset), tai null.</summary>
+        public static LinssiKysymys Tunnukselle(string tunnus)
+        {
+            if (aineisto == null) { Lataa(); return null; }
+            return tunnus != null && aineisto.TryGetValue(tunnus, out var k) ? k : null;
+        }
+
+        /// <summary>Auki oleva nostokortti (web avoinNosto): sen kysymykset voittavat jakson kysymykset.</summary>
+        public static Func<string> AvoinNosto;
 
         /// <summary>Esilataus (linssin auetessa), jotta chatin ensimmäinen avaus löytää kysymykset.</summary>
         public static void Lataa()
