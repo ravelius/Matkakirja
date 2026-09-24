@@ -141,9 +141,12 @@ namespace Matkakirja.Natiivi
             Kuvat.NaytaSallittu(sallitaan);
         }
 
-        /// <summary>Web puhelinTila (max-width 699 / max-height 520 CSS-pikseliä): iPhone kyllä, iPad ei.</summary>
+        /// <summary>
+        /// Web puhelinTila (max-width 699 / max-height 520 CSS-pikseliä): iPhone kyllä, iPad ei. Tabletti tunnistetaan
+        /// kuten pisteskaalassa (UiKerros.Tabletti), koska simulaattorin deviceModel ei ala "iPad".
+        /// </summary>
         static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
-            ? !SystemInfo.deviceModel.StartsWith("iPad") : Screen.width < Screen.height;
+            ? !UiKerros.Tabletti : Screen.width < Screen.height;
 
         /// <summary>Web tekstitPiilossa: puhelin tai kertojan luenta.</summary>
         bool TekstitPiilossa => Puhelin || luentaPiilo;
