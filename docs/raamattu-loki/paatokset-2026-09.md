@@ -4459,3 +4459,7 @@ Yön valot: Karttaseppä polttaa Black Marble Z0–Z6 satelliittiputkella (E28:n
 ## YOVALOSARJA HYVAKSYTTY: BLACK MARBLE 2016 500 m, Z0–Z6 (5 461 LAATTAA, 25–50 Mt), AJO 25.9. klo 9 JALKEEN (24.9.2026 klo 19.05)
 
 Karttasepän arvio: lähde 8 osaa A1–D2 (~200–250 Mt), bmng-putki toimii lähes sellaisenaan; 3 km -versio liian karkea Z6:lla pohjoisessa; kesto ~20–25 min. wt/ 13 (tavoite alle 20 saavutettu). Codex tarkensi galleriatilauksen lähdevariantit (a62c1ce1).
+
+## BUILD 10 KAATUI MYOS b9755e9/F72JLS57C5:LLA → JUURISYY: KEHITYSVARMENTEET koodaus-AVAINNIPUSSA (errSecInternalComponent), EI TIIMI (24.9.2026 klo 19.07)
+
+Julkaisija: build 9 allekirjoitettiin automaation varmenteella 'Apple Development: Created via API'; tämän päivän kehityskäännökset toivat koodauksen login-avainnippuun omistajan kehitysvarmenteet (FD3S699799, 2RX77QMLHA), joita ajuri ei voi käyttää. Korjaus: ajon ajaksi hakulistalla vain TestFlight-avainnippu, lopussa palautus; koeajo 36025102019 haarasta julkaisija-tf-nippu (b9755e9 + #3110). Tiimikysymys erillinen.
