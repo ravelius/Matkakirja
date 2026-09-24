@@ -55,6 +55,28 @@ namespace Matkakirja.Natiivi
         public static Action<string> LinssiMusiikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
+        /// <summary>
+        /// Pallon pisteen ruutusijainti Unityn ruutupikseleinä (origo vasen ALAkulma, kuten
+        /// Camera.WorldToScreenPoint); null, kun piste on pallon takana. Linssien UI-merkit (radion
+        /// napit) muuntavat paneeliin RuntimePanelUtils.ScreenToPanel(panel, (x, Screen.height − y)).
+        /// </summary>
+        public static Vector2? Ruutupiste(double lat, double lon)
+        {
+            var o = Instanssi;
+            var kierto = o != null ? o.kierto : null;
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            var g = kierto != null ? kierto.georeferenssi : null;
+            if (kamera == null || g == null) return null;
+            var keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(Unity.Mathematics.double3.zero);
+            var u = g.TransformEarthCenteredEarthFixedPositionToUnity(
+                CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new Unity.Mathematics.double3(lon, lat, 0)));
+            Vector3 paikka = g.transform.TransformPoint((Vector3)(Unity.Mathematics.float3)u);
+            Vector3 normaali = g.transform.TransformDirection((Vector3)(Unity.Mathematics.float3)Unity.Mathematics.math.normalize(u - keskus));
+            if (Vector3.Dot(normaali, (kamera.transform.position - paikka).normalized) <= 0.02f) return null;
+            Vector3 r = kamera.WorldToScreenPoint(paikka);
+            return r.z > 0 ? new Vector2(r.x, r.y) : (Vector2?)null;
+        }
+
         /// <summary>Pelaajan paikka pallolla (PeliOhjain + reittiverkko); null ennen matkaa.</summary>
         public static Matkakirja.Linssit.Aikajana.LatLon? PelaajanPaikka()
         {
@@ -625,6 +647,13 @@ namespace Matkakirja.Natiivi
             public Matkakirja.Linssit.Radio.RadioLinssi Linssi => linssi;
             /// <summary>Asemat ilman avaamista (kartuscha: maan asema).</summary>
             public Matkakirja.Linssit.Radio.RadioAineisto Aineisto => aineisto;
+            /// <summary>
+            /// Natiivi-UI piirtää radion ▶-napit itse (web radio.js pallonNapit): tosi piilottaa pelin
+            /// kaupunkimerkit ja nappulan radion ajaksi (RadioLinssi.OmatNapit). Aseta ennen avausta.
+            /// </summary>
+            public static bool OmatNapit;
+            /// <summary>Radio avataan (Natiivi-UI kytkee NapitMuuttuivat ja piirtää Napit).</summary>
+            public static event Action<Matkakirja.Linssit.Radio.RadioLinssi> Avattiin;
 
             public void Avaa(ILinssiYmparisto y)
             {
@@ -639,6 +668,8 @@ namespace Matkakirja.Natiivi
                     $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}"); 
                 // Diagnoosi ennen kuin virta suljetaan (Laitetestaajan simulaattorilöydös 23.9.).
                 linssi.VirheSyntyy += syy => o.Kirjaa($"radio: {syy} | soitin: {virta?.Kuvaus ?? "-"}");
+                linssi.OmatNapit = OmatNapit;
+                Avattiin?.Invoke(linssi);
                 linssi.Avaa(y);
             }
             public void Paivita() => linssi?.Paivita();
