@@ -18,6 +18,8 @@
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
 //   ui piikit [s] [kynnys ms] | ui piikit pois  pitkien kehysten raskaimmat profilointimerkit lokiin (oletus 20 s,
 //                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
+//   ui skaala piste|viite|auto                UI-skaala: iOS-pisteet (iPadin oletus, 1 yksikkö = web CSS-px), puhelimen
+//                                             viiteruutu 393 × 852 tai automaattinen; kirjaa paneelin leveyden
 //   ui peitteet [osuus]                       lokiin näkyvät UI-elementit, jotka peittävät vähintään osuuden (oletus 0,5)
 //                                             ruudusta ja piirtävät jotain (tausta, kuva, reuna): kerros, luokat, tehollinen
 //                                             läpinäkyvyys, taustaväri ja kuva (koko ruudun sävyn etsintä)
@@ -430,6 +432,15 @@ namespace Matkakirja.Natiivi
                     float kesto = pk.Length > 0 && float.TryParse(pk[0], NumberStyles.Float, CultureInfo.InvariantCulture, out var ks) ? ks : 20f;
                     float kynnysMs = pk.Length > 1 && float.TryParse(pk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var ky) ? ky : 40f;
                     Kirjaa("piikit: " + KehysPiikit.Aloita(kesto, kynnysMs) + " merkkiä");
+                    return null;
+                }
+                case "skaala":
+                {
+                    UiKerros.Hae().VaihdaSkaala(loput.Trim().ToLowerInvariant());
+                    var j = UiKerros.Hae().Juuri(UiKerros.Valikot);
+                    j.schedule.Execute(() => Kirjaa("skaala: " + (UiKerros.Pisteskaala ? "piste ×" + UiKerros.PikseliaPisteessa : "viite")
+                        + ", tabletti " + UiKerros.Tabletti + ", paneeli " + j.layout.width.ToString("0", CultureInfo.InvariantCulture) + " × "
+                        + j.layout.height.ToString("0", CultureInfo.InvariantCulture))).StartingIn(100);
                     return null;
                 }
                 case "peitteet":
