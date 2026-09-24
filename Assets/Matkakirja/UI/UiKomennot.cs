@@ -112,6 +112,7 @@
 //                                             minipopupissa keksityllä kuvalla. Lähetys vain napista käsin.
 //   ui haku <kysymys>                         pulun paikallisen haun katkelmat (leima + pisteet)
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
+//   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -534,6 +535,10 @@ namespace Matkakirja.Natiivi
                 case "wiki": ui.Wiki.Avaa(loput.Length > 0 ? loput : "Venetsia"); return null;
                 case "media": Mediarivi.Testaa(loput.Length > 0 ? loput.ToLowerInvariant() : "lontoo", t => Kirjaa(t)); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
+                case "kierto":
+                    Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
+                        : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
+                    return null;
                 case "haku":
                 {
                     // Pulun paikallinen haku: katkelmien leimat ja pisteet (indeksi rakentuu ensimmäisellä kutsulla).
