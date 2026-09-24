@@ -32,11 +32,11 @@ namespace Matkakirja.Editori
         public const int LaattaMaxTaso = 8;
 
         /// <summary>
-        /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30), poltto 23b:
-        /// koko maailma z0–z6 (korjattu RTIN-kaarevuus), Ranska z7–z12. Korkeudet ovat merenpinnasta (EGM2008),
+        /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30/90), poltto 2026-09-24-maailma:
+        /// koko maailma z0–z12 (korvaa 23b:n, jonka DEM päättyi 41° N:iin). Korkeudet ovat merenpinnasta (EGM2008),
         /// ei ellipsoidista; Ranskassa ero on noin 50 m, mikä ei näy pallolla.
         /// </summary>
-        public const string MaastoUrl = "https://media.matkakirja.app/julisteet/maasto/2026-09-23b/layer.json";
+        public const string MaastoUrl = "https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json";
 
         public static void LuoPallo()
         {
