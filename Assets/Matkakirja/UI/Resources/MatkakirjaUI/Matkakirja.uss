@@ -256,6 +256,51 @@
     background-color: var(--panel);
 }
 
+/* iPhonen kelluva yläosa (Ylapalkki.Kelluva, omistaja 24.9.2026): ei palkkia eikä logoa; pilleri ja ☰
+ * puoliläpinäkyvällä pergamentilla kuten karttaselitteen nappi (.mk-seliteNappi). */
+.mk-ylapalkki--kelluva {
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-ylapalkki--kelluva .mk-pilleri {
+    height: 36px;
+    min-height: 36px;
+    margin: 0;
+    padding: 0 12px;
+    border-width: 1px;
+    border-radius: 18px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.82);
+    color: var(--map-ink);
+    font-size: 15px;
+}
+
+.mk-ylapalkki--kelluva .mk-pilleri:active {
+    background-color: rgba(225, 204, 160, 0.95);
+}
+
+.mk-ylapalkki--kelluva .mk-pilleri > .mk-ikoni {
+    color: var(--map-ink);
+}
+
+.mk-ylapalkki--kelluva .mk-pilleri__kello {
+    margin-left: 8px;
+    color: rgba(70, 51, 31, 0.75);
+}
+
+.mk-ylapalkki--kelluva .mk-ikoninappi {
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: rgba(70, 51, 31, 0.35);
+    background-color: rgba(239, 220, 180, 0.82);
+    color: var(--map-ink);
+}
+
+.mk-ylapalkki--kelluva .mk-ikoninappi:active {
+    background-color: rgba(225, 204, 160, 0.95);
+}
+
 /* --- hetkellinen viesti (.event-toast) ----------------------------------- */
 
 .mk-ilmoitus {
@@ -524,6 +569,23 @@
 
 .mk-liiku__nappi .mk-nappi__teksti {
     font-size: 16px;
+}
+
+/* iPhone (omistaja 24.9.2026, löydös 6): Liiku puoliläpinäkyvä ja hieman pienempi, kartta kuultaa läpi. */
+.mk-liiku--puhelin .mk-liiku__nappi {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 19px;
+    background-color: rgba(245, 240, 226, 0.72);
+}
+
+.mk-liiku--puhelin .mk-liiku__nappi .mk-nappi__teksti {
+    font-size: 14.5px;
+}
+
+.mk-liiku--puhelin .mk-liiku__nappi > .mk-ikoni {
+    width: 18px;
+    height: 18px;
 }
 
 .mk-liiku__nappi.mk-valittu {
