@@ -176,8 +176,6 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Soiva luento, tai null.</summary>
         public Luento SoivaLuento => soivaLuento;
-        /// <summary>Luento on pyydetty (lataus tai viive) tai soi: Liiku piilossa (LuentaPiilo, löydös 45).</summary>
-        public bool LuentoKesken => soivaLuento != null || odottavaLuento != null;
 
         /// <summary>Pelisilmukka päälle/pois (Natiivi-UI piilottaa omat näkymänsä).</summary>
         public event Action<bool> KaytossaMuuttui;

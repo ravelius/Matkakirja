@@ -100,14 +100,11 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web kaynnistaLuentavahti (löydös 45): 200 ms välein, soiko isoisä, saapumispuhe tai Livia (Aanet-kanavat
-        /// ja Puhe) tai odottaako pyydetty luento latausta (PeliOhjain.LuentoKesken). Piilossa Liiku ei ota
-        /// kosketuksia (visibility hidden), ja auki jäänyt liuku suljetaan.
+        /// ja Puhe). Piilossa Liiku ei ota kosketuksia (visibility hidden), ja auki jäänyt liuku suljetaan.
         /// </summary>
         void TarkistaLuenta()
         {
-            var o = PeliOhjain.Instanssi;
-            bool piiloon = luentaPiilo.Paivita(Aanet.KertojaPuhuu || Aanet.PuluPuhuu, o != null && o.LuentoKesken,
-                Time.realtimeSinceStartupAsDouble * 1000.0);
+            bool piiloon = luentaPiilo.Paivita(Aanet.KertojaPuhuu || Aanet.PuluPuhuu, Time.realtimeSinceStartupAsDouble * 1000.0);
             if (piiloon == luentaPiilossa) return;
             luentaPiilossa = piiloon;
             Debug.Log("MATKAKIRJA ui liiku: " + (piiloon ? "piiloon (kerronta)" : "esiin (kerronta ohi)"));
