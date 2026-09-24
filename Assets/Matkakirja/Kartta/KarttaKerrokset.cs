@@ -88,7 +88,13 @@ namespace Matkakirja
             CesiumRasterOverlay.OnCesiumRasterOverlayLoadFailure += Epaonnistui;
         }
 
-        void Start() => StartCoroutine(PiilotaRuutukrediitit());
+        void Start()
+        {
+            StartCoroutine(PiilotaRuutukrediitit());
+            // Varakartta (16 × Z2, ~0,2 Mt) jo käynnistyksessä: ensimmäisellä kylmällä lennolla se latautui vasta
+            // nousussa, ja loittonuksen puuttuvat laatat näyttivät vielä pergamenttia (simulaattori 24.9. klo 17.2x).
+            VarmistaVarakartta();
+        }
 
         System.Collections.IEnumerator PiilotaRuutukrediitit()
         {
