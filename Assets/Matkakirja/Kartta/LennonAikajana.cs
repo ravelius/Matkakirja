@@ -81,7 +81,8 @@ namespace Matkakirja
         /// </summary>
         public static Avain[] Laske(double reittiM, double saapumisKorkeus, double loppuKallistus, Kierto k)
         {
-            double kauko = math.clamp(reittiM * 0.6, 1_500_000.0, 6_000_000.0);
+            // Irtautumisen huippu: pallon kaarevuus ja horisontti näkyvät (iPad-simulaattori 24.9.: 1500 km oli vielä kartta).
+            double kauko = math.clamp(reittiM * 1.2, 3_000_000.0, 9_000_000.0);
             double lahi = 32_000.0;
             var a = new List<Avain>
             {
@@ -93,11 +94,11 @@ namespace Matkakirja
                 new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 68, Suunta = 205, Kohde = 0 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).
-            var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 18, Suunta = 360, Kohde = 0 };
+            var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 30, Suunta = 360, Kohde = 0 };
             a.Add(Pari(a[a.Count - 1], loppu, 0.30));
             a.Add(loppu);
             // MATKA: tasainen liuku, kamera kiertää hitaasti koneen taakse.
-            a.Add(new Avain { Osuus = 0.70, Kayra = Kayra.Pehmea, Etaisyys = kauko * 0.85, Kallistus = 28, Suunta = 385, Kohde = 0 });
+            a.Add(new Avain { Osuus = 0.70, Kayra = Kayra.Pehmea, Etaisyys = kauko * 0.85, Kallistus = 36, Suunta = 385, Kohde = 0 });
             // LOPPU: kaupunki viistosta, kierto lähtee kiertosuunnan takaa.
             double suunta = Kiedo(k.Suunta);
             // Kiertosuunta kohti pohjoista, jotta lasku päättyy pohjoinen ylös ilman takaisinkääntöä.
