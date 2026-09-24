@@ -131,7 +131,7 @@ export const RAAMATTU = {
           + 'ja tarvittaessa; jokaiselle buildille lyhyt suunnitelma docs/raportit/build-<n>-suunnitelma.md '
           + '(haarat, omistajat, integrointijärjestys, testikäännösten ajat); Unity-vuoroja ei enää neuvotella '
           + 'viesteillä. 3) TILATAULU JA PYSYVÄT REITITYKSET — Postivahti päivittää 10 minuutin kierroksellaan '
-          + 'yhden sivun docs/raportit/tilataulu.md (sessiot ja viimeisin erä, jumit, avoimet PR:t, viimeisin build, '
+          + 'yhden sivun tilataulu.md (haarassa postivahti, kansiossa docs/raportit; ei mainissa, koska se päivittyy 10 minuutin välein) (sessiot ja viimeisin erä, jumit, avoimet PR:t, viimeisin build, '
           + 'levy ja kiintiöt), jonka omistaja ja uusi Fable lukevat; ilman Fablea kulkevat: webin bugit suoraan '
           + 'Pelikoodarille, natiivin UI-erot suoraan Natiivi-UI:lle, pariteettiajon ERI-rivit suoraan omistavalle '
           + 'sessiolle, ja Julkaisija ajaa TestFlight-buildin automaattisesti jokaisesta proto-master-mergestä, jonka '
