@@ -40,6 +40,7 @@ namespace Matkakirja
     ///   renkaat id,id,… [valittu] | renkaat pois   aloitusvalinnan huomiorenkaat (KaupunkiMerkit.Renkaat)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
+    ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 1; ei tallennu)
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -236,6 +237,11 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA väritaso: komento {o[1]}, nyt {vt.Maa ?? "ei"}");
                     break;
                 }
+                case "korkeus":
+                    // korkeus <kerroin>: löydös 29 -koelippu (vertailukuvat 1 / 1.5 / 2 / 2.5). Rajataan 1–3.
+                    Debug.Log("MATKAKIRJA korkeuskerroin: " + KorkeusKerroin.Aseta(o.Length > 1 ? (float)D(1) : 1f)
+                        .ToString("0.##", CultureInfo.InvariantCulture));
+                    break;
                 case "satelliitti":
                     // satelliitti <versio> | satelliitti pois: lennon pinta Karttasepän satelliittisarjaan (LENNON PINTA).
                     KarttaKerrokset.SatelliittiVersio = o.Length > 1 && o[1] != "pois" ? o[1] : null;
