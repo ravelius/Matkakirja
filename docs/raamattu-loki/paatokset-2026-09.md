@@ -4335,3 +4335,7 @@ Oikeudet ja päiväraja kuten muilla natiiveilla; testit 186/186. Pöllö julkai
 ## PELIKOODARI 70 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 17.29)
 
 Luovutus viesti-pelikoodari-luovutus-20260924-ilta.md, aloitusviesti päivitettynä; Postivahti lähettää uusimman version kun tyhjä.
+
+## PAATOS LOYDOKSEEN 38 (NIMET NATIIVISSA): ELAVAT ALUENIMET SAMASTA DATASTA KUIN WEBIN NIMIOTASO 2026-09-22g, EI POLTTOA (BUILD 11) (24.9.2026 klo 17.31)
+
+Karttasepän ehdotus (karttaseppa-nimet-ehdotus 3f4837f6c, docs/raportit/natiivi-nimet-ehdotus-20260924.md): webin laatoissa nimiötaso z4–z8 (195 riviä: maakunnat, nykyalueet, meret) + valtameret z0–z3; kaupungit ja nostot eläviä; natiivista nimiötaso puuttuu. Fable: b — fontti sama kuin webin poltossa, mitat webin laatasta; aluenimet makaavat pinnalla ja kääntyvät luettaviksi >90° (ei ylösalaisin), kaupunkinimiöt kameraan päin; zoomikynnykset webin mukaan; aloitus Ranskasta, iPad-mittaus; vienti Karttaseppä + Siirtoseppä (~1 pv), piirto Natiiviseppä (3–4 pv). Verdun/Reims: nostoportti lähizoomissa (N1) Natiivisepälle. Pelikoodari luovutti (0b1f576b3) ja nollaa.
