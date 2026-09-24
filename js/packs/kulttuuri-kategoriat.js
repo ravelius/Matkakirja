@@ -106759,4 +106759,748 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  caphorn: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kap Horn',
+      johdanto:
+        'Kap Horn on Etelä-Amerikan eteläisin niemi, jonka ohi purjehtiminen oli isoisän matkavuonna 1873 lähes ainoa tie Atlantilta Tyynelle valtamerelle. Merimiehet kutsuivat sitä kunnioittaen ja kauhulla "purjelaivojen hautausmaaksi".',
+      nostot: [
+        {
+          otsikko: 'Nimi joka syntyi Hoornin kaupungista',
+          teksti:
+            'Tammikuussa 1616 hollantilaiset Willem Schouten ja Jacob Le Maire purjehtivat Tulimaan itäpuolitse ja löysivät uuden salmen Magellaninsalmen eteläpuolelta. Retkikunnan rahoitti Le Maire vanhempi, entinen Itä-Intian kauppakomppanian johtaja, joka riitaantui yhtiön kanssa ja halusi avata sille uuden reitin ohi sen Magellaninsalmeen perustuvan kauppamonopolin. Uuden niemen miehet ristivät Kaap Hooniksi Schoutenin kotikaupungin Hoornin mukaan. Voitto jäi kuitenkin lyhytaikaiseksi: kauppakomppania ei tunnustanut uutta reittiä omakseen, vaan takavarikoi laivan ja pidätti Schoutenin palattua Jaavalle.',
+          tiedosto:
+            "Portraits de Fern. Magellan et de Willem C. Schouten en buste aux deux côtés d'une sphère - estampe - btv1b8400273n.jpg",
+          lyhyt:
+            'Willem Schouten ja Jacob Le Maire nimesivät Kap Hornin kotikaupunkinsa Hoornin mukaan vuonna 1616.',
+          selite:
+            'Vanha kaiverrus näyttää kaksi muotokuvarintakuvaa, Ferdinand Magellanin ja Willem Schoutenin, taivaanpallon kahdella puolen; ylänurkissa purjelaivat Victoria ja Eendracht, alla kaksi pallonpuoliskon karttaa ja reunoilla neljä muiden löytöretkeilijöiden pienoismuotokuvaa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Willem Schouten',
+        },
+        {
+          otsikko: 'Purjelaivojen hautausmaa',
+          teksti:
+            'Kap Hornin ympärillä puhaltavat lähes taukoamatta "pauhaavat neljäkymmentä", "raivoisat viisikymmentä" ja "kiljuvat kuusikymmentä" -nimillä tunnetut länsituulet, joita Andit ja Etelämantereen niemimaa vielä voimistavat suppilomaisesti. Matalikoilla tuuli ja virtaukset nostavat aaltoja, jotka voivat äityä yli 30 metrin korkuisiksi jättiaalloiksi, ja jäävuoret ajautuvat alueelle etenkin talvikuukausina. Charles Darwin kirjoitti rannikosta nähtyään sen: pelkkä näky riittäisi saamaan maakravun näkemään viikon painajaisia haaksirikoista. Satojen vuosien aikana Kap Hornin edustalle onkin uponnut lukemattomia laivoja.',
+          tiedosto: 'Cape Horn (js) 1.jpg',
+          lyhyt:
+            'Kap Hornin raivoisat tuulet ja jättiaallot ovat upottaneet lukemattomia laivoja vuosien varrella.',
+          selite:
+            'Valokuva näyttää Kap Hornin niemen tummana siluettina merenpinnan takana; taivaalla vyöryy raskas sadepilvi, ja etualan meri on tummaa ja kuohuvaa.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Isoisän aikana ainoa laaja reitti',
+          teksti:
+            'Panaman kanava avattiin vasta vuonna 1914, joten isoisän matkavuonna 1873 purjelaivoilla oli käytännössä kaksi tapaa päästä Atlantilta Tyynelle merelle: ahdas ja oikukas Magellaninsalmi tai avoin mutta myrskyinen Kap Hornin reitti. Suurille kolmimastoisille täysiluokan laivoille Magellaninsalmi oli usein liian kapea ja tuuleton, joten villa-, vilja- ja kultalastit kuljetettiin mieluummin Kap Hornin kautta, vaikka se merkitsi viikkoja kestävää taistelua vastatuulta ja jättiaaltoja vastaan. Vasta höyrylaivat ja myöhemmin kanava tekivät reitistä tarpeettoman.',
+          tiedosto: 'Monumento Albatros Cabo de Hornos.JPG',
+          lyhyt:
+            'Ennen Panaman kanavaa 1914 Kap Horn oli purjelaivojen tärkein reitti Atlantilta Tyynelle merelle.',
+          selite:
+            'Kaukokuva Hornosin saaresta merellä: kalliorannan ja ruohoisen mäen takana näkyy Chilen laivaston asemarakennuksia ja lipputanko Chilen lipulla, vasemmalla kallionkielekkeellä erottuu tumma muistomerkin siluetti.',
+          lahde: 'Mariebel, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Saaret jotka löytyvät vain tarkasta kartasta',
+          teksti:
+            'Runsaat sata kilometriä lounaaseen Kap Hornista kohoavat merestä pienet ja karut Diego Ramírezin saaret, jotka espanjalainen Garcia de Nodalin retkikunta löysi helmikuussa 1619 ja nimesi matkan kosmografin mukaan. Saaret olivat pitkään maailman eteläisin tunnettu maa-alue, kunnes Etelä-Sandwichsaaret löydettiin 156 vuotta myöhemmin. Brittiläisen laivaston Beaglen mittaukset vuosilta 1830–1834 painettiin merikartaksi 1841, ja sitä korjattiin vielä vuonna 1871 – juuri sellaista karttaa isoisän aikalaiset merimiehet olisivat käyttäneet purjehtiessaan näiden vaarallisten saarten ohi.',
+          tiedosto:
+            'Admiralty Chart No 1373 The South-Eastern Part of Tierra Del Fuego with Staten Island, Cape Horn and Diego Ramirez Islands Surveyed By Captn. Robert Fitz Roy R.N. and The Officers of H.M.S. Beagle 1836, Published 1841, Corrections to 1871.jpg',
+          lyhyt:
+            'Diego Ramírezin saaret olivat kauan maailman eteläisin tunnettu maa-alue Kap Hornin lounaispuolella.',
+          selite:
+            'Vanha, ruskeansävyinen merikartta esittää Tulimaan rannikkoa; oikeassa alakulmassa Kap Horn ja Diego Ramírezin saariryhmä, ympärillä kompassiruusuja, syvyyslukemia ja rannikon ääriviivapiirroksia kartan alareunassa.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (Public domain)',
+          wiki: 'Diego Ramírez Islands',
+        },
+        {
+          otsikko: 'Maailman eteläisin majakka',
+          teksti:
+            'Kap Hornin läheisellä Hornosin saarella toimii Chilen laivaston pieni asema, jota merivoimat ovat miehittäneet vuosikymmenten ajan kaikista mahdollisista tuulista huolimatta. Aseman punavalkoinen majakka opastaa nykyään aluksia niemen ohi, ja niemellä itsellään on lisäksi pieni, vain nelimetrinen lasikuituinen valotorni – maailman eteläisin perinteinen majakka. Isoisän aikana 1873 tällaista turvaa ei purjelaivoille vielä ollut: kapteenien piti luottaa täysin omiin mittauksiinsa, tähtiin ja onneen löytääkseen oikean reitin sumun ja myrskyjen keskeltä.',
+          tiedosto: 'Cape-horn-phare.jpg',
+          lyhyt:
+            'Hornosin saaren pieni majakka on maailman eteläisimpiä, mutta isoisän aikana sitä ei vielä ollut.',
+          selite:
+            'Lähikuva punavalkoisesta majakasta, jonka lasisen lyhtyhuoneen yläpuolella on punainen kupu; majakka kohoaa pienen tiilirakennuksen katolta harmaan, pilvisen taivaan alla.',
+          lahde: 'Luis Alejandro Bernal Romero, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Cape Horn',
+        },
+        {
+          otsikko: 'Albatrossin muistomerkki',
+          teksti:
+            'Vuonna 1992 Kap Hornin kiertäneiden kapteenien Chilen osasto pystytti niemelle kuvanveistäjä José Balcellsin suunnitteleman muistomerkin: teräksestä leikatun albatrossin siluetin, joka on omistettu kaikille reitillä hukkuneille merimiehille. Paikallisen perimätiedon mukaan albatrossit kantavat hukkuneiden purjehtijoiden sieluja, minkä vuoksi lintua ei koskaan saanut vahingoittaa. Muistomerkki on joutunut alueen raakojen tuulten koettelemaksi: vuonna 2014 myrsky kaatoi koko teräsveistoksen kumoon niemen kalliolta.',
+          tiedosto: '00 4479 Cape Horn.jpg',
+          lyhyt:
+            'José Balcellsin albatrossimuistomerkki kunnioittaa Kap Hornilla hukkuneita merimiehiä.',
+          selite:
+            'Valokuva näyttää mustan, siivekkään muistomerkin siluetin ruohoisella niemenkärjellä; taustalla häämöttää sumuisia Tulimaan vuoria, ja etualalla tumma meri lyö vaahtoavia aaltoja kallioita vasten.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Horn',
+        },
+      ],
+    },
+    {
+      id: 'merenkulku',
+      nimi: 'Kap Hornin kiertäjät',
+      johdanto:
+        '1800-luvun purjelaivat eivät vain kiertäneet Kap Hornia – merimiehille kierto oli myös kunnia-asia, jolle kuului omat tavat ja uskomukset. Osa laivoista käytti reittiä koko maailman ympäri, osa kiersi mieluummin Toivonniemen kautta.',
+      tehtava: {
+        kysymys:
+          'Minkä metallin korvarengasta merimies sai perinteen mukaan kantaa kierrettyään Kap Hornin purjelaivalla?',
+        vaihtoehdot: ['hopeaa', 'kultaa', 'pronssia', 'tinaa'],
+        oikea: 1,
+        fakta:
+          'Kultainen korvarengas kertoi kantajansa kiertäneen Kap Hornin – ja sen arvo riitti tarpeen tullen jopa hautajaisten maksamiseen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Klipperien kiertoreitti maailman ympäri',
+          teksti:
+            '1800-luvun jälkipuoliskolla monet Britanniasta Australiaan ja Uuteen-Seelantiin purjehtineet villa-, vilja- ja kultaklipperit eivät kääntyneet takaisin samaa reittiä, vaan jatkoivat itään ja kiersivät koko maapallon. Menomatka kulki Toivonniemen kautta Etelämantereen tuntumassa puhaltavien länsituulten työntämänä, ja paluumatka jatkui samoja "pauhaavia" tuulia hyödyntäen aina Kap Hornin ohi Atlantille asti. Kap Horn oli tällä maailmanympärysreitillä suunnilleen puolimatkan kohta, ja sen onnistunut kiertäminen kertoi, että pahin osuus koko matkasta oli jo takana.',
+          tiedosto:
+            'Jack Spurling - The square-rigged wool clipper „Argonaut“ under full sail.jpg',
+          lyhyt:
+            'Villa- ja kultaklipperit kiersivät koko maapallon Toivonniemen ja Kap Hornin kautta 1800-luvulla.',
+          selite:
+            'Maalaus näyttää kolmimastoisen täysin takiloidun purjelaivan Argonaut kaikki purjeet nostettuna suurten sinisten aaltojen keskellä; taustalla toinen laiva ja laivan ympärillä lentää merilintuja.',
+          lahde: 'Jack Spurling, Wikimedia Commons (Public domain)',
+          wiki: 'Clipper route',
+        },
+        {
+          otsikko: 'Teeklipperit kulkivat toista kautta',
+          teksti:
+            'Kaikki klipperit eivät nähneet Kap Hornia lainkaan. Kiinasta Lontooseen kilpaa purjehtineet teeklipperit, kuten vuoden 1866 kuuluisassa kisassa toisensa vain 28 minuutilla voittaneet Taeping ja Ariel, kulkivat yli 14 000 mailin matkansa Intian valtameren ja Toivonniemen kautta – ei koskaan Etelä-Amerikan puolelle asti. Vuonna 1869 avattu Suezin kanava teki teereitistä höyrylaivoille vielä nopeamman, ja teeklipperien kulta-aika päättyi nopeasti sen jälkeen. Villa- ja viljalaivat pysyivät sen sijaan uskollisina Kap Hornin reitille vielä vuosikymmeniä.',
+          tiedosto: "'Taeping' and 'Ariel' in the Great Tea Race of 1866.jpg",
+          lyhyt:
+            'Teeklipperit kuten Taeping ja Ariel purjehtivat Kiinasta Lontooseen Toivonniemen kautta, ei Hornin.',
+          selite:
+            'Mustavalkoinen 1800-luvun sanomalehtikaiverrus näyttää kaksi täysin takiloitua teeklipperiä, Taepingin ja Arielin, purjehtimassa rinnakkain avomerellä kaikki purjeet nostettuina; taustalla kolmas laiva.',
+          lahde: 'Edwin Weedon, Wikimedia Commons (Public domain)',
+          wiki: 'Great Tea Race of 1866',
+        },
+        {
+          otsikko: 'Kultainen korvarengas ja täysi laiva ihossa',
+          teksti:
+            'Merimiehellä, joka oli kiertänyt Kap Hornin täysiluokan purjelaivassa, oli oikeus kutsua itseään "Kap Hornin kiertäjäksi" ja käyttää kultaista korvarengasta siinä korvassa, joka matkalla oli osoittanut kohti mannerta. Korun arvon piti riittää tarvittaessa jopa haltijansa hautajaisiin, jos hän kuolisi merellä kaukana kotoa. Toinen tunnusmerkki oli iholle piirretty täysin takiloitu laiva, jonka saattoi ansaita vain todistetusti Hornin kiertänyt purjehtija. Kunniaan kuului perimätiedon mukaan myös oikeus syödä pöydässä toinen jalka pöydällä.',
+          tiedosto: "T G Purvis - 'Port Stanley', a four masted barque in a heavy sea.jpg",
+          lyhyt:
+            'Kap Hornin kiertänyt merimies ansaitsi kultaisen korvarenkaan ja takiloidun laivan tatuoinnin.',
+          selite:
+            'Maalaus näyttää nelimastoisen parkkilaivan Port Stanley kallellaan raskaassa, tummansinisessä merenkäynnissä harmaan myrskytaivaan alla; suuri osa purjeista on reivattu ja aallot lyövät kannelle.',
+          lahde: 'T. G. Purvis, Wikimedia Commons (Public domain)',
+          wiki: 'Cape Horner',
+        },
+        {
+          otsikko: 'Albatrossi jota ei saanut tappaa',
+          teksti:
+            'Kap Hornin ja Diego Ramírezin saarten ympärillä pesii useita albatrossilajeja, jotka seuraavat laivoja tunti- ja päiväkausia liitäen tuulen mukana siipeäkään räpäyttämättä. Merimiesten keskuudessa lintua pidettiin pyhänä: sen näkeminen tiesi onnea, mutta sen tappaminen toisi laivalle kirouksen. Uskomus tuli tunnetuksi laajalle yleisölle Samuel Taylor Coleridgen vuonna 1798 julkaisemasta runosta "Vanhan merimiehen tarina", jossa laivan onni kääntyy, kun päähenkilö ampuu albatrossin. Kap Hornin tuulissa liitävä lintu muistutti purjehtijoita siitä, kuinka vähän he pystyivät hallitsemaan omaa kohtaloaan.',
+          tiedosto: 'Diomedea exulans -Southern Ocean, Drakes Passage -flying-8.jpg',
+          lyhyt:
+            'Albatrossin tappaminen toi uskomuksen mukaan laivalle kirouksen, sen näkeminen sen sijaan onnea.',
+          selite:
+            'Lähikuva valkoisesta albatrossista, jonka siivet ovat levällään sen liitäessä matalalla tummansinisten meriaaltojen yllä Drakensalmella; siipien yläpinnat ovat ruskeankirjavat.',
+          lahde:
+            'Lieutenant Elizabeth Crapo, NOAA Corps / NOAA Photo Library, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Snowy albatross',
+        },
+        {
+          otsikko: 'Kolme suurta niemeä, yksi sitkeä laiva',
+          teksti:
+            'Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.',
+          tiedosto: 'Sailing ship Balclutha (San Francisco).jpg',
+          lyhyt:
+            'Purjelaiva Balclutha kiersi Kap Hornin 17 kertaa kolmessatoista vuodessa vain 26 hengen miehistöllä.',
+          selite:
+            'Mustavalkoinen valokuva näyttää kolmimastoisen purjelaiva Balcluthan takiloinnin laiturissa San Franciscossa; taustalla kaupungin siluetti pilvenpiirtäjineen.',
+          lahde: 'Jet Lowe, Wikimedia Commons (Public domain)',
+          wiki: 'Balclutha (1886)',
+        },
+      ],
+    },
+  ],
+  namib: [
+    {
+      id: 'kaupunki',
+      nimi: 'Namib',
+      johdanto:
+        'Namib on maailman vanhin aavikko, yli 55 miljoonan vuoden ikäinen hiekka- ja sorameri Afrikan lounaisrannikolla. Isoisän matkavuonna 1873 sen sisämaa oli eurooppalaisille yhä lähes täysin tuntematon alue.',
+      nostot: [
+        {
+          otsikko: 'Maailman vanhin aavikko',
+          teksti:
+            'Namib on pysynyt kuivana tai puolikuivana arviolta 55–80 miljoonan vuoden ajan, kauan ennen kuin Alpit tai Himalaja olivat kohonneet nykymuotoonsa. Pitkä eristyneisyys on synnyttänyt aavikolle enemmän omia, muualla tuntemattomia lajeja kuin millään muulla aavikolla. Suuri osa hiekasta on peräisin kaukaa etelästä Oranje-joesta, josta tuuli ja merivirrat ovat vuosimiljoonien kuluessa kuljettaneet sen pohjoiseen pitkin rannikkoa – aavikkoa on kutsuttu jopa "tuulen siirtämäksi Oranje-joen suistoksi". Namib-Naukluftin kansallispuiston kivinen Kuunlaakso, jonka Swakop-joki on kaivertanut, näyttää veden hitaan työn ikivanhassa kalliossa.',
+          tiedosto: 'Vallée de la Lune - Namib-Naukluft National Park 02.jpg',
+          lyhyt: 'Swakop-joen veistämä kivinen Kuunlaakso Namib-Naukluftin kansallispuistossa.',
+          selite:
+            'Kuva näyttää karun, kivisen aavikkomaaston, jonka Swakop-joen vesi on vuosituhansien saatossa uurtanut syviksi, varjoisiksi rotkoiksi lähes kasvittomaan kallioperään.',
+          lahde: 'Lidine Mia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib',
+        },
+        {
+          otsikko: 'Maa jonka Jumala teki vihassaan',
+          teksti:
+            'Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.',
+          tiedosto: 'Laika ac Skeleton Coast (8419496570).jpg',
+          lyhyt: 'Sumu leijuu Luurankorannikon yllä Namibin pohjoisosassa.',
+          selite:
+            'Valokuva näyttää Luurankorannikon peittävän paksun merisumun, joka nousee lähes päivittäin kylmän Benguela-virran yllä ja teki alueesta merenkulkijoille pelätyn.',
+          lahde: 'Laika ac, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Skeleton Coast',
+        },
+        {
+          otsikko: 'Hylky joka vaelsi sisämaahan',
+          teksti:
+            'Rannikon yli tuhannesta hylystä kuuluisin lienee saksalainen rahtilaiva Eduard Bohlen, joka ajoi karille sumussa syyskuussa 1909. Haaksirikon hetkellä laiva makasi vain reilut 500 metriä rannasta, mutta aavikko on sittemmin hivuttautunut kohti merta: nykyään ruostunut hylky lojuu kuivalla hiekalla lähes 400 metrin päässä rantaviivasta, keskellä autiota dyynimaisemaa. Samanlainen kohtalo on odottanut satoja muitakin aluksia, joita sumu, karikot ja Benguela-virran voimakkaat aallot ovat ajaneet karille vuosisatojen ajan. Monista hylyistä on jäljellä enää hajanaisia rautaosia, jotka pilkistävät hiekasta muistutuksena rannikon vaarallisuudesta.',
+          tiedosto: 'Eduoard Bohlen shipwreck.jpg',
+          lyhyt: 'Eduard Bohlenin hylky makaa nykyään syvällä aavikon hiekassa.',
+          selite:
+            'Ilmakuva näyttää ruosteisen laivanhylyn keskellä autiota hiekka-aavikkoa, kaukana nykyisestä rantaviivasta – todiste siitä, miten aavikko on vuosikymmenten aikana vallannut alaa mereltä.',
+          lahde: 'WiPhi267, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Skeleton Coast',
+        },
+        {
+          otsikko: 'Sossusvlein punaiset dyynit',
+          teksti:
+            'Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.',
+          tiedosto: '006 Dune 45 in Sossusvlei at sunrise Photo by Giles Laurent.jpg',
+          lyhyt: 'Dune 45 hehkuu punaisena auringonnousun valossa Sossusvleissa.',
+          selite:
+            'Kuva näyttää Dune 45:n jyrkän harjanteen, jonka toinen rinne hohtaa auringonnousussa oranssinpunaisena ja toinen jää tummaan varjoon – rautapitoisen hiekan värit erottuvat selvästi.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sossusvlei',
+        },
+        {
+          otsikko: 'Deadvlei — kuolleiden puiden tasanko',
+          teksti:
+            'Parin kilometrin päässä Sossusvleistä sijaitsee Deadvlei, valkoinen savitasanne, jolla seisoo mustia, kuolleita kameelipiikkipuita. Puut versoivat noin 900 vuotta sitten, kun Tsauchab-joki tulvi ajoittain ja loi tasangolle hetkellisen kosteikon. Etenevät hiekkadyynit tukkivat lopulta joen reitin, ja puut kuolivat 600–700 vuotta sitten – mutta aavikon äärimmäinen kuivuus on estänyt niitä lahoamasta, joten mustunut puu on säilynyt lähes koskemattomana vuosisatojen ajan. Tulos on omalaatuinen näky: sysimustat rungot kohoavat valkoisesta savesta, ja niitä ympäröivät jyrkät, punaiset dyynit joka puolella horisonttia.',
+          tiedosto: '054e Dead camel thorn tree in Deadvlei Photo by Giles Laurent.jpg',
+          lyhyt: 'Musta, satoja vuosia kuollut kameelipiikkipuu Deadvlein savitasangolla.',
+          selite:
+            'Kuvassa yksinäinen, hiiltyneen musta kameelipiikkipuu seisoo vaalealla savitasangolla, ja taustalla kohoavat Sossusvlein korkeat punaiset dyynit.',
+          lahde: 'Giles Laurent, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sossusvlei',
+        },
+        {
+          otsikko: 'Kuiseb-joen näkymätön raja',
+          teksti:
+            'Kuiseb-joki on Namibin näkymätön raja: sen eteläpuolella leviää valtava hiekkameri punertavine dyyneineen, kun taas pohjoispuolella maasto muuttuu karuksi soratasangoksi. Joki itse virtaa harvoin pintavettä – suurimman osan vuodesta sen uoma on kuiva hiekkajuova syvän kanjonin pohjalla – mutta maan alla kulkeva vesi riittää ylläpitämään kapean vihreän käytävän akaasioita joen varrella. Vuosisatojen ajan alueen paimentolaiset, topnaar-namat, ovat laiduntaneet karjaansa juuri tällä kapealla vyöhykkeellä, ainoalla paikalla, jossa aavikko tarjoaa edes vähän vettä ja varjoa.',
+          tiedosto: 'Kuiseb-Canyon-anagoria.JPG',
+          lyhyt: 'Kuiseb-joen kaivama syvä kanjoni halkoo Namibin karua tasankoa.',
+          selite:
+            'Kuva näyttää Kuiseb-joen kaivaman jyrkkäseinäisen kanjonin, jonka pohjalla mutkitteleva kuiva uoma erottaa pohjoisen soratasangon ja etelän hiekkameren toisistaan.',
+          lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kuiseb River',
+        },
+        {
+          otsikko: 'Valkoinen läiskä kartalla',
+          teksti:
+            'Kun isoisä matkusti maailmalla vuonna 1873, Namibin sisämaa oli eurooppalaisille käytännössä valkoinen läiskä kartalla. Alueella ei ollut siirtomaavaltaa eikä juuri teitä, ja harvat lähetyssaarnaajat ja kauppiaat olivat nähneet vain rannikon tuntumaa. Vasta viisi vuotta isoisän matkan jälkeen, 1878, Britannia liitti Walvis Bayn satamakaupungin alueeseensa, ja varsinainen eurooppalainen siirtomaavalta – Saksan Lounais-Afrikka – syntyi vasta 1884. Sitä ennen hiekka-aallot, kivikkoiset tasangot ja vuoret olivat tuntemattomia kaikille paitsi alkuperäisväestölle, joka oli oppinut elämään sen äärimmäisissä oloissa jo vuosituhansien ajan.',
+          tiedosto: 'Namib-Naukluft National Park (above Namib Desert Lodge).jpg',
+          lyhyt: 'Namibin autio aavikkomaisema, jollaisena eurooppalaiset tunsivat sen 1800-luvulla vain huhuina.',
+          selite:
+            'Kuva näyttää laajan, asumattoman aavikkomaiseman ylhäältä vuorenrinteeltä kuvattuna – juuri tällainen kartoittamaton erämaa levittäytyi isoisän matkavuonna 1873 Namibin sisämaassa.',
+          lahde: 'Rüdiger Wenzel, Wikimedia Commons (CC BY-SA 3.0 DE)',
+          wiki: 'German South West Africa',
+        },
+      ],
+    },
+    {
+      id: 'elaimet',
+      nimi: 'Aavikon selviytyjät',
+      johdanto:
+        'Namibin äärioloissa eläimet ja kasvit ovat kehittäneet keinoja, joita ei löydy muualta: sumusta juovia kovakuoriaisia, kahden lehden ikivanhoja kasveja ja antilooppeja, jotka sietävät polttavan päivän ilman varjoa.',
+      tehtava: {
+        kysymys: 'Miten Namibin sumusta vettä keräävä kovakuoriainen juo?',
+        vaihtoehdot: [
+          'Se kaivaa syvän kuopan hiekkaan ja odottaa pohjaveden nousua',
+          'Se kiipeää dyynin harjalle ja antaa sumun tiivistyä kohotettuun kuoreensa',
+          'Se imee kastetta kasvien lehdiltä yöllä',
+          'Se juo ainoastaan saaliinsa ruumiinnesteitä',
+        ],
+        oikea: 1,
+        fakta:
+          'Kovakuoriainen kiipeää dyynin harjalle, kääntyy tuulta vasten noin 45 asteen kulmaan ja antaa sumun pisaroiden tiivistyä kuorensa kohoumiin, joista vesi valuu suoraan sen suuhun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kovakuoriainen joka juo sumusta',
+          teksti:
+            'Namibin rannikkoalueella elää mustia kovakuoriaisia, jotka ovat oppineet juomaan suoraan ilmasta. Kun aamuinen merisumu vyöryy dyynien yli, kovakuoriainen kiipeää dyynin harjalle, kääntyy noin 45 asteen kulmaan tuulta vasten ja seisoo lähes pystyssä pidennettyjen jalkojensa varassa. Sen koveran selkäkuoren pinnalla on pieniä, vettä puoleensa vetäviä kohoumia ja niiden välissä vettä hylkiviä uurteita: sumun pisarat tiivistyvät kohoumiin, kasvavat ja vierivät lopulta uurteita pitkin suoraan suuhun. Menetelmä on niin tehokas, että insinöörit ovat kopioineet sen sumukeräimien ja jopa ikkunapinnoitteiden suunnittelussa.',
+          tiedosto: 'Onymacris unguicularis MHNT.jpg',
+          lyhyt: 'Sumusta vettä keräävän Namibin kovakuoriaisen selkäpuoli lähikuvassa.',
+          selite:
+            'Tarkkuusvalokuva näyttää museonäytteenä säilytetyn kovakuoriaisen selkäkuoren yksityiskohtaisesti ylhäältä päin – juuri tällaisen kuoren kohoumiin sumun pisarat tiivistyvät.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib Desert beetle',
+        },
+        {
+          otsikko: 'Welwitschia — kahden lehden ikivanha selviytyjä',
+          teksti:
+            'Welwitschia mirabilis on elävä fossiili, joka kasvaa vain Namibin ja Angolan rannikkoaavikolla. Koko elämänsä ajan sillä on vain kaksi lehteä, jotka työntyvät hitaasti kasvupisteestä ja repeytyvät tuulessa ajan myötä nauhamaisiksi suikaleiksi – silti ne voivat venyä yli neljän metrin pituisiksi. Kasvi selviää lähes sateettomalla rannikolla, koska se ottaa kosteutta suoraan merestä nousevasta sumusta. Vanhimpien yksilöiden arvioidaan olevan jopa 2 000 vuotta vanhoja, mikä tekee niistä joitakin maailman pitkäikäisimpiä kasveja. Itävaltalainen kasvitieteilijä Friedrich Welwitsch polvistui ihmetellen ensimmäisen löytämänsä yksilön eteen vuonna 1859.',
+          tiedosto: 'Welwitschia mirabilis kz03.jpg',
+          lyhyt: 'Welwitschia mirabilis -kasvin nauhamaiset, revenneet lehdet levittäytyvät maahan.',
+          selite:
+            'Kuvassa welwitschian kaksi ainoaa lehteä ovat vuosikymmenten mittaan repeytyneet ja rispaantuneet lukuisiksi nauhamaisiksi suikaleiksi, jotka lepäävät kasvin ympärillä maassa.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Welwitschia',
+        },
+        {
+          otsikko: 'Oryx joka sietää polttavan päivän',
+          teksti:
+            'Aavikko-oryx eli gemsbok on Namibin tunnetuin nisäkäs, ja se selviää paikoissa, joissa vettä ei näy viikkoihin. Se saa suurimman osan nesteestään kasveista ja pystyy nostamaan ruumiinlämpönsä jopa noin 40 asteeseen ilman, että sen tarvitsee hikoilla pois kallista vettä – ylimääräinen lämpö varastoituu hetkeksi kehoon ja säteilee pois vasta yön viilentyessä. Erityinen verisuoniverkko nenäontelon lähellä jäähdyttää aivoihin virtaavan veren, joten eläin kestää polttavan päivän ilman lämpöhalvausta. Pitkät, suorat sarvet erottuvat kaukaa dyynien harjalla, ja niitä on pidetty jopa yksisarvistarun yhtenä innoittajana.',
+          tiedosto: 'Oryx in the Namib desert.JPG',
+          lyhyt: 'Yksinäinen oryx seisoo Namibin hiekkadyynillä varhain aamulla.',
+          selite:
+            'Kuvassa yksi oryx-antilooppi seisoo aamuvalossa hiekkadyynin harjalla, pitkät suorat sarvet pystyssä ja karu dyynimaisema ympärillään.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gemsbok',
+        },
+        {
+          otsikko: 'Afrikan suurin suojelualue',
+          teksti:
+            'Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.',
+          tiedosto: 'Namib-Naukluft National Park - désert 01.jpg',
+          lyhyt: 'Karua soratasankoa Namib-Naukluftin kansallispuiston vuoristoisella alueella.',
+          selite:
+            'Kuva näyttää aavan, kivisen aavikkotasangon Namib-Naukluftin kansallispuiston vuoristoalueella – yhden puiston monista, keskenään hyvin erilaisista maisematyypeistä.',
+          lahde: 'Lidine Mia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Namib-Naukluft National Park',
+        },
+        {
+          otsikko: 'Sumu joka pitää aavikon hengissä',
+          teksti:
+            'Namibin rannikolla ei sada juuri koskaan, mutta sumu korvaa sadetta yli 180 päivänä vuodessa. Kylmä Benguela-merivirta jäähdyttää lämpimän ilman, ja syntyvä sumupatja työntyy öisin ja aamuisin kymmeniä kilometrejä sisämaahan päin ennen kuin aurinko haihduttaa sen. Tämä näkymätön kosteuslähde pitää elossa kokonaisen ekosysteemin – jäkälistä welwitschioihin ja sumusta juoviin kovakuoriaisiin – alueella, jossa varsinaista sadetta saattaa tulla vain muutaman millimetrin verran vuodessa. Monet tutkijat pitävät sumua koko Namibin eliöstön tärkeimpänä vedenlähteenä, tärkeämpänä kuin harvinaiset joen tulvat.',
+          tiedosto: 'Oceanic fog sossusvlei4.jpg',
+          lyhyt: 'Atlantilta nouseva sumu vyöryy aamulla Namibin dyynien yli.',
+          selite:
+            'Kuvassa aamuinen merisumu leviää paksuna kerroksena aavikon dyynien ja niukan kasvillisuuden ylle, peittäen kauempana olevat maastonmuodot näkyvistä.',
+          lahde: 'Moongateclimber, Wikimedia Commons (Public domain)',
+          wiki: 'Namib',
+        },
+      ],
+    },
+  ],
+  robinsoncrusoe: [
+    {
+      id: 'kaupunki',
+      nimi: 'Robinson Crusoe',
+      johdanto:
+        'Isoisän matkavuonna 1873 saarta kutsuttiin vielä nimellä Más a Tierra – vasta 1966 Chile nimesi sen virallisesti Robinson Crusoen saareksi kunniaksi tarinalle, jonka todellinen tapahtuma synnytti kaukana Tyynellämerellä.',
+      nostot: [
+        {
+          otsikko: 'Nimi joka vaihtui vasta 1966',
+          teksti:
+            'Espanjalainen merenkulkija Juan Fernández löysi saariryhmän vuonna 1574, ja se tunnettiin pitkään nimellä Más a Tierra, "lähempänä mannerta". Isoisän vieraillessa Tyynellämerellä vuonna 1873 saarella ei virallisesti ollut vielä mitään tekemistä Daniel Defoen romaanihahmon kanssa: Chilen hallitus nimesi sen Robinson Crusoen saareksi vasta vuonna 1966, houkutellakseen matkailijoita kirjan maineella. Nykyinen pääkylä San Juan Bautista sijaitsee Cumberland-lahden rannalla, ja sen kaduilla seisoo puusta veistetty patsas muistuttamassa nimen alkuperästä.',
+          tiedosto: 'Robinson Crusoe Island statue of Robinson Crusoe in the town of San Juan Bautista.jpg',
+          lyhyt: 'Puusta veistetty Robinson Crusoe -patsas San Juan Bautistan kylässä.',
+          selite:
+            'Valokuva näyttää suuren, vuorille katsovan puuveistoksen partaisesta merimiehestä keihäs kädessään San Juan Bautistan kylän raitilla – patsas muistuttaa saaren nimestä, joka vaihtui vasta 1966.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Tulivuorten synnyttämä saaristo',
+          teksti:
+            'Juan Fernándezin saaristo kohosi Tyynestämerestä tulivuoritoiminnan seurauksena, kun Nazca-laatta liikkui niin sanotun Juan Fernándezin kuuman pisteen yli. Saaren korkein huippu El Yunque kohoaa 915 metriin, ja jyrkät vuorenselänteet syöksyvät suoraan mereen. Manner on kaukana: lähimpään Chilen rannikkoon on matkaa noin 670 kilometriä, mikä teki saaresta 1800-luvulla viikkojen purjehduksen päässä olevan erämaan – juuri sellaisen paikan, jonne haaksirikkoutunut tai hylätty merimies saattoi jäädä vuosiksi kenenkään löytämättä.',
+          tiedosto: 'CI-Robinson-pano.jpg',
+          lyhyt: 'Vuoristoinen Robinson Crusoen saari kohoaa jyrkästi Cumberland-lahden rannalta.',
+          selite:
+            'Panoraamakuva näyttää San Juan Bautistan kylän pienten talojen kirjon lahden rannalla ja niiden takana kohoavat jyrkät, tulivuoriperäiset vuorenhuiput.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Kylä lahden rannalla',
+          teksti:
+            'Saaren ainoa taajama San Juan Bautista on rakentunut kapealle rantakaistaleelle Cumberland-lahden ympärille, jyrkkien vuorten ja avomeren väliin. Kylässä asuu nykyisin reilut 800 ihmistä, ja lähes kaikki elävät joko merestä tai matkailusta – tietä muualle saarelle ei juuri ole, joten pieni satama on koko yhteisön elinehto. Vuoden 2010 tsunami tuhosi suuren osan rantarakennuksista ja vaati useita ihmishenkiä, minkä jälkeen kylään rakennettiin uudet evakuointitiet ylemmäs vuorenrinteille. Ahtaudestaan huolimatta paikka on ainoa asutuskeskus koko saaristossa.',
+          tiedosto: 'Robinson Crusoe Island bayside view of the town of San Juan Bautista.jpg',
+          lyhyt: 'San Juan Bautistan kylä kapealla rantakaistaleella Cumberland-lahden vieressä.',
+          selite:
+            'Kuva näyttää pienen kalastajakylän matalat talot ja veneet lahdella, jyrkkien, puuttomien vuorenrinteiden ympäröimänä.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan Bautista, Chile',
+        },
+        {
+          otsikko: 'Langustinpyytäjien saari',
+          teksti:
+            'Saaren talous nojaa lähes kokonaan yhteen saaliiseen: Juan Fernándezin langustiin, jota pyydetään puuveneillä ympäri vuoden lukuun ottamatta muutaman kuukauden rauhoitusaikaa. Langusti on paikallisille niin tärkeä, että sen hinta ja saalismäärät ovat kylän keskeisimpiä puheenaiheita, ja suurin osa saaliista lennätetään tuoreena mantereelle ravintoloihin. Kalastus on säädelty tarkoin kiintiöin, jotta kanta ei ehtyisi pienellä, eristyneellä saarella – toisin kuin monilla muilla merialueilla, jotka on kalastettu tyhjiin. Ammatti kulkee usein suvussa polvesta toiseen.',
+          tiedosto: 'Isla Juan Fernandez- Langostas (Lobsters).jpg',
+          lyhyt: 'Kalastajat esittelevät tuoreita Juan Fernándezin langusteja veneen kannella.',
+          selite:
+            'Valokuvassa kolme kalastajaa puuveneessä nimeltä "Crusoe": yksi heistä pitää molemmissa käsissään suuria oranssinpunaisia langusteja, taustalla saaren paljaat vuorenrinteet.',
+          lahde: 'Serpentus~commonswiki, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Juan Fernández Islands',
+        },
+        {
+          otsikko: 'Maailman harvinaisin kolibri',
+          teksti:
+            'Juan Fernándezin saaristo on Unescon biosfäärialue vuodesta 1977, ja sen tunnetuin asukas on Juan Fernándezin liekkikolibri – pieni, tulipunainen lintu, jota ei tavata missään muualla maailmassa. Laji pesii ainoastaan Robinson Crusoen saarella ja on erittäin uhanalainen: villikissat, rotat ja elinympäristön häviäminen ovat pudottaneet kannan vain muutamaan sataan yksilöön. Saaren kasvilajeista 63 prosenttia yli kahdestasadasta lajista kasvaa vain täällä eikä missään muualla maapallolla, mikä tekee tästä pienestä ja kaukaisesta saaresta yhden maailman biologisesti ainutlaatuisimmista paikoista.',
+          tiedosto: 'Sephanoides Fernandensis Male (178788293).jpeg',
+          lyhyt: 'Juan Fernándezin liekkikolibri lentää punaisten kukkien joukossa.',
+          selite:
+            'Kuvassa punaruskea, siivet levällään leijuva kolibri syöttää pitkällä nokallaan oranssinpunaisten kukkien mettä.',
+          lahde: 'Fraenerys, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Juan Fernández firecrown',
+        },
+        {
+          otsikko: 'Kaalipuu jota ei kasva muualla',
+          teksti:
+            'Robinson Crusoen saarella kasvaa runsaasti kasvilajeja, jotka ovat kehittyneet eristyksissä miljoonien vuosien aikana eikä niitä tavata missään muualla – yksi näistä on Dendroseris litoralis, paikallisesti "kaalipuuksi" kutsuttu pensasmainen kasvi, jonka suuret lehdet ja riippuvat kukat muistuttavat etäisesti kaalia. Saariston kasvillisuutta uhkaavat kuitenkin vakavasti tuodut vieraslajit: villit vadelmapensaat ja maqui-pensaat ovat vallanneet jo 80–90 prosenttia saaren alkuperäismetsästä, ja monet endeemiset lajit ovat siksi äärimmäisen uhanalaisia.',
+          tiedosto: 'Robinson Crusoe Island Dendroseris litoralis – Juan Fernández Cabbage Tree.jpg',
+          lyhyt: 'Dendroseris litoralis eli "kaalipuu" kukkii pensaana saaren rinteellä.',
+          selite:
+            'Kuva näyttää tuuheaa, suurilehtistä pensasta, jonka oksilta riippuu keltaisenoranssiin kukintoihin päättyviä varsia – kasvi tunnetaan vain Robinson Crusoen saarelta.',
+          lahde: 'Richard N Horne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Juan Fernández Islands',
+        },
+        {
+          otsikko: 'Muistolaatta joka odotti isoisää',
+          teksti:
+            'Vuonna 1868 brittiläisen fregatti HMS Topazen upseerit kiipesivät saaren korkealle harjanteelle ja kiinnittivät kallioon pronssisen muistolaatan Alexander Selkirkin kunniaksi – paikkaa kutsutaan nykyisin Selkirkin näköalapaikaksi. Laatassa kerrotaan, että skotlantilainen merimies eli saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta. Kun isoisä matkusti ohitse vuonna 1873, laatta oli ollut paikallaan jo viisi vuotta, ja saari tunnettiin vielä virallisesti nimellä Más a Tierra – Robinson Crusoen tarina eli tuolloin vasta merimiesten kertomuksissa, ei kartoissa.',
+          tiedosto:
+            'Gedenksteen voor Alexander Selkirk 1676 - 1723 opgericht op het onbewoonde eiland in de Stille, SFA005001311.jpg',
+          lyhyt: 'Vuonna 1868 kallioon kiinnitetty pronssinen muistolaatta Alexander Selkirkille.',
+          selite:
+            'Vanha mustavalkoinen valokuva näyttää kallioon kiinnitetyn, kulahtaneen pronssilaatan, jonka kohokirjaimet kertovat Alexander Selkirkin neljän vuoden ja neljän kuukauden yksinäisyydestä saarella.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Selkirk',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Selkirk, Crusoe ja kadonnut aarre',
+      johdanto:
+        'Skotlantilaisen merimiehen aito selviytymistarina synnytti maailman kuuluisimman haaksirikkoromaanin – ja samalle saarelle syntyi myös legenda espanjalaisesta jättiaarteesta, jota etsijät kaivavat yhä tänäkin päivänä.',
+      tehtava: {
+        kysymys: 'Kuinka monta vuotta ja kuukautta Alexander Selkirk eli yksin saarella?',
+        vaihtoehdot: ['2 vuotta 3 kuukautta', '3 vuotta 6 kuukautta', '4 vuotta 4 kuukautta', '6 vuotta 2 kuukautta'],
+        oikea: 2,
+        fakta:
+          'Pelastuslaiva Duke löysi Selkirkin 2. helmikuuta 1709 – siihen mennessä hän oli elänyt saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Neljä vuotta ja neljä kuukautta yksin',
+          teksti:
+            'Syyskuussa 1704 skotlantilainen perämies Alexander Selkirk riitaantui laivansa kunnosta kapteeninsa kanssa ja pyysi itse päästä maihin autiolle saarelle – päätöksen hän katui heti laivan lähdettyä. Selkirk selvisi aluksi rannalla merileijonien häiritsemänä, mutta siirtyi sisämaahan, missä hän metsästi vuohia, rakensi kaksi majaa pippuripuista, valmisti vaatteet vuohennahasta ja kesytti villejä kissoja pitämään rotat loitolla öisin. Pelastuslaiva Duke löysi hänet 2. helmikuuta 1709 – Selkirk oli tuolloin elänyt saarella täydellisessä yksinäisyydessä neljä vuotta ja neljä kuukautta.',
+          tiedosto:
+            "Scene of the story of Robinson Crusoe. Selkirk's Cave. Side view looking up the valley. \"Crusoe's Quibedrada\" LCCN2006687056.jpg",
+          lyhyt: 'Selkirkin luolamainen turvapaikka kapeassa laaksossa saarella.',
+          selite:
+            'Vanha valokuva näyttää kaksi miestä istumassa ison, luolamaisen kivilohkareen suulla kapeassa, kuivassa laaksossa – paikka tunnetaan tarinan mukaan yhtenä Selkirkin turvapaikoista saarella.',
+          lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Selkirk',
+        },
+        {
+          otsikko: 'Kirja joka teki tarinasta kuolemattoman',
+          teksti:
+            'Daniel Defoe julkaisi huhtikuussa 1719 romaanin "The Life and Strange Adventures of Robinson Crusoe", jonka päähahmo joutuu haaksirikkoon ja elää vuosikausia yksin autiolla saarella – Defoe ammensi ideansa osin Selkirkin tositarinasta, vaikka sijoittikin oman kertomuksensa Karibialle Tyynenmeren sijaan. Kirja oli välitön menestys, ja siitä uutisoitiin samana syksynä myös lehdistössä, kuten lontoolaisessa Original London Postissa lokakuussa 1719. Selkirkin oikea saari sai kuitenkin virallisesti Robinson Crusoen nimen vasta lähes kaksisataa vuotta myöhemmin, vuonna 1966.',
+          tiedosto: '1719-heathcot-robinson-crusoe.jpg',
+          lyhyt: 'Lontoolaisen lehden etusivu lokakuulta 1719 esittelee Robinson Crusoen tarinan.',
+          selite:
+            'Kuvassa on vanhan englantilaisen "The Original London Post" -lehden etusivu 7. lokakuuta 1719, jonka pääotsikko kertoo juuri ilmestyneen kirjan Robinson Crusoen elämästä ja seikkailuista.',
+          lahde: 'Daniel Defoe, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe',
+        },
+        {
+          otsikko: 'Amiraali ja aarrelaiva',
+          teksti:
+            'Vuonna 1741 englantilainen komentaja George Anson pysähtyi laivastoineen Juan Fernándezin saarille toivuttaakseen miehistönsä keripukista sen jälkeen, kun myrskyt olivat runnelleet aluksia Kap Hornin kiertämisen aikana ja sadat merimiehet olivat kuolleet matkalla. Pari vuotta myöhemmin Ansonin lippulaiva Centurion valtasi espanjalaisen aarrelaivan Filippiinien edustalla, yhden Britannian laivaston historian arvokkaimmista saaliista. Samasta Ansonista tuli myöhemmin myös saaren toisen aarrelegendan vastaanottaja, kun englantilainen Cornelius Webb lähetti hänelle vuonna 1761 salakirjoitetun kirjeen kätketystä aarteesta.',
+          tiedosto: 'Map-juan-fernandez-island-1753.jpg',
+          lyhyt: 'Ranskalainen 1700-luvun kartta amiraali Ansonin matkan pohjalta.',
+          selite:
+            'Käsin väritetty ranskalainen kartta esittää saaren rantaviivan ylhäältä sekä sen jyrkän vuorijonon merenpuolelta katsottuna – kartta on tehty amiraali Ansonin 1740-luvun matkan tietojen pohjalta.',
+          lahde: 'Jacques Nicolas Bellin, Wikimedia Commons (Public domain)',
+          wiki: "George Anson's voyage around the world",
+        },
+        {
+          otsikko: 'Limasta haudattu aarre',
+          teksti:
+            'Perimätiedon mukaan espanjalainen upseeri Juan Esteban Ubilla y Echeverría kätki saarelle 1710-luvun puolivälissä valtavan aarteen: kahdeksansataa tynnyriä täynnä kultakolikoita, koruja ja jalokiviä, jotka oli kerätty Liman siirtokunnasta. Legendan mukaan englantilainen Cornelius Webb löysi aarteen myöhemmin ja kätki sen uudelleen toiseen paikkaan saarella, minkä hän paljasti vain koodatussa kirjeessä amiraali Ansonille vuonna 1761. Kirje löytyi Englannista vasta vuonna 1950 ja lähetettiin Chileen, mikä käynnisti uuden aallon aarteenetsintöjä – tuloksetta.',
+          tiedosto:
+            'A plan of Juan Fernandes Island in the South Sea, lying in the Latitude of 33d 40m South, and West from the Continent of Chili 110 Leagues - Variation of the COmpass 10d 00m E. (BM 1918,0423.41).jpg',
+          lyhyt: 'Vanha englantilainen kartta saaren lahdista ja rannikosta 1700-luvulta.',
+          selite:
+            'Kartassa näkyy saaren ääriviivat, Cumberland-lahti, Vuohisaari ja kompassiruusu – tällaisten karttojen avulla 1700-luvun merenkulkijat ja aarteenetsijät yrittivät paikantaa saaren lahdet ja legendaarisen kätkön.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe Island',
+        },
+        {
+          otsikko: 'Etsintä joka jatkuu yhä',
+          teksti:
+            'Vuonna 1994 hollantilaissyntyinen liikemies Bernard Keiser saapui saarelle ensimmäistä kertaa etsimään Liman aarretta Cornelius Webbin kirjeen vihjeiden pohjalta, ja hän on jatkanut kaivauksia saarella vuosikymmenten ajan Chilen kansallispuistoviranomaisten valvonnassa. Legendan mukaan kätkössä olisi kultaa, koruja ja jopa useampi paavillinen sormus – yhteisarvoltaan miljardeja dollareita. Mitään aarretta ei ole koskaan löydetty, ja monet historioitsijat pitävät koko tarinaa liioiteltuna, mutta se houkuttelee yhä uusia aarteenetsijöitä saarelle.',
+          tiedosto: 'Descripción de la Ysla Grande de Juan Fernández.JPG',
+          lyhyt: 'Espanjalainen 1700-luvun kartta kuvailee saaren muotoa ja vuohilaumoja.',
+          selite:
+            'Käsin väritetty espanjalainen kartta esittää saaren pitkänomaisen muodon ja sisältää tekstiselityksen, joka mainitsee saarella laiduntavat vuohilaumat ("ganado cabrio").',
+          lahde: 'Antonio Ulloa, Wikimedia Commons (Public domain)',
+          wiki: 'Robinson Crusoe Island',
+        },
+      ],
+    },
+  ],
+  norfolk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Norfolk',
+      johdanto:
+        'Norfolkinsaari oli isoisän matkavuonna 1873 nuori mutta jo värikäs paikka: rangaistussiirtolan pahamaineinen historia oli päättynyt vasta 1855, ja sen tyhjät kasarmit asutti nyt kokonainen yhteisö Bounty-kapinallisten jälkeläisiä.',
+      nostot: [
+        {
+          otsikko: 'Löytöretkeläisen mäntyerhe',
+          teksti:
+            'Kapteeni James Cook näki Norfolkinsaaren lokakuussa 1774 purjehtiessaan toiselle Tyynenmeren löytöretkelleen, ja nimesi sen Norfolkin herttuattaren mukaan. Rannalta pilkottavat suorarunkoiset männyt saivat hänet innostumaan: hän arvioi niiden sopivan mainiosti laivaston mastopuiksi, sillä osa rungoista oli paksumpia kuin kaksi miestä saisi sylissään ympäröityä. Kun Norfolkille perustettiin ensimmäinen brittiläinen siirtokunta jo 1788, unelma murskaantui nopeasti: puu osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin, ja koko idea haudattiin yhtä äkkiä kuin se oli syntynyt.',
+          tiedosto: 'Interior of Norfolk Island mutineersofbount00belcuoft 0292.jpg',
+          lyhyt: 'Piirros Norfolkinsaaren sisämaasta männyn ja puumaisten saniaisten keskellä 1870-luvulta.',
+          selite:
+            'Vuoden 1871 piirroksessa näkyy korkea norfolkinmänty ja puumaisia saniaisia kukkulaisessa maastossa, jonka poikki kaksi ratsastajaa kulkee polkua pitkin.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'Norfolk Island',
+        },
+        {
+          otsikko: 'Helvetti Tyynellämerellä',
+          teksti:
+            'Vuonna 1825 Norfolkille perustettiin uusi, aiempaa ankarampi rangaistussiirtola pahimmille uusintarikollisille. Komentaja Morissetin kaudella 1829–1834 ruoskarangaistuksia käytettiin niin häikäilemättömästi, että saaren maine "helvettinä maan päällä" tunnettiin jo 1830-luvulla kautta Britannian. Vankeja oli enimmillään lähes 700, ja monet heistä oli tuomittu pelkistä omaisuusrikoksista, ei väkivallasta. Kapinoita puhkesi useita vuosina 1826–1846, ja selviytyneiden kertomukset ankarista oloista tekivät Norfolkista pelätyimmän rangaistuspaikan koko brittiläisessä siirtomaajärjestelmässä.',
+          tiedosto: 'Norfolk Island convict buildings.jpg',
+          lyhyt: 'Kingstonin vankisiirtolan kaksikerroksinen kasarmirakennus nykyisin.',
+          selite:
+            'Valokuvassa näkyy Kingstonin entinen vankikasarmi: vaalea, kaksikerroksinen kivirakennus pylväskuistilla ja tummalla liuskekivikatolla kirkkaan sinistä taivasta vasten.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: "Kingston and Arthur's Vale Historic Area",
+        },
+        {
+          otsikko: 'Maconochien armeliaisuuskoe ja siirtolan loppu',
+          teksti:
+            'Vuosina 1840–1844 komentajana toiminut Alexander Maconochie yritti mullistaa Norfolkin rangaistuskäytännön: hänen ansiojärjestelmässään vanki saattoi lyhentää tuomiotaan ahkeruudella ja hyvällä käytöksellä, ei pelkällä ruoskalla. Esimiehet pitivät uudistusta liian lempeänä, ja Maconochien lähdön jälkeen seuraaja Joseph Childs palautti ankarat oikeudet nopeasti. Kuljetukset Norfolkille hiipuivat 1840-luvun lopulla, ja viimeiset vangit lähtivät saarelta toukokuussa 1855. Sen jälkeen Norfolk seisoi asumattomana runsaan vuoden, ennen kuin sinne saapui aivan uudenlaisia asukkaita.',
+          tiedosto: 'Government House, Norfolk Island Wilson AUTAS001125294850.jpg',
+          lyhyt: 'Kynäpiirros komentajan virka-asunnosta Government Housesta vuodelta 1855.',
+          selite:
+            'James Glen Wilsonin vuonna 1855 tekemä kynäpiirros näyttää Government Housen pitkän, kuistillisen puurakennuksen, lipputangon Union Jackineen sekä kaksi ratsastajaa edustan nurmikolla.',
+          lahde: 'James Glen Wilson (1827-1863), Wikimedia Commons (Public domain)',
+          wiki: 'Alexander Maconochie',
+        },
+        {
+          otsikko: 'Pitcairnilaisten pitkä purjehdus',
+          teksti:
+            'Pitcairnsaaren pieni yhteisö, Bounty-kapinallisten ja heidän tahitilaisten kumppaniensa jälkeläiset, oli 1850-lukuun mennessä kasvanut lähes 200 hengen mittaiseksi kahden neliökilometrin saarella — liian ahtaaksi kaikille. Britannian hallitus ja kuningatar Viktoria itse hyväksyivät siirron, ja 8. kesäkuuta 1856 laiva HMS Morayshire toi 194 pitcairnilaista Norfolkinsaarelle. Aluksi he asuivat hylätyn rangaistussiirtolan tyhjissä kasarmeissa, ennen kuin saivat omat 50 eekkerin maatilkkunsa. Saapumispäivästä tuli saaren tärkein juhla, Bounty Day, jota vietetään yhä joka vuosi.',
+          tiedosto: 'Pitcairn Settlement Norfolk Island mutineersofbount00belcuoft 0279.jpg',
+          lyhyt: 'Yleiskuva pitcairnilaisten Kingstonin siirtokunnasta Sydney Bayn rannalla 1871.',
+          selite:
+            'Vuoden 1871 puupiirros näyttää linnunperspektiivistä Kingstonin siirtokunnan rakennukset ja puutarhat Sydney Bayn rantaviivalla, taustalla lahti ja kukkulat.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'Pitcairn Islanders',
+        },
+        {
+          otsikko: 'Bountyn jälkeläiset isoisän aikaan',
+          teksti:
+            'Kun isoisä purjehti ohi vuonna 1873, pitcairnilaisyhteisö oli asuttanut Norfolkia jo lähes seitsemäntoista vuotta. Osa perheistä oli katunut muuttoa ja palannut Pitcairnille — muun muassa suuri Youngin suku vuosina 1858 ja 1863 — mutta suurin osa jäi ja raivasi tiluksia entisen siirtolan raunioiden keskelle. Yhteisön hengellisenä johtajana ja tuomarina toimi pastori George Hunn Nobbs, joka oli tullut Pitcairnilta laivan mukana ja jonka arvovalta piti pientä saarta koossa vuosikymmenten ajan siirron jälkeen.',
+          tiedosto: 'Rev. G.H. Nobbs mutineersofbount00belcuoft 0183.jpg',
+          lyhyt: 'Pastori George Hunn Nobbsin muotokuva 1800-luvun valokuvan pohjalta.',
+          selite:
+            'Piirretty muotokuva esittää tummaan takkiin pukeutuneen pastori George Hunn Nobbsin, pitcairnilaisyhteisön hengellisen johtajan, rintakuvana.',
+          lahde: 'Book author: Lady Belcher (Diana Jolliffe Belcher) 1803-1890, Wikimedia Commons (Public domain)',
+          wiki: 'George Hunn Nobbs',
+        },
+        {
+          otsikko: 'Kingstonin jäljet nykypäivänä',
+          teksti:
+            'Vankityövoimalla 1800-luvulla pystytetyt tiiliset ja kivestä muuratut rakennukset Kingstonin kaupunginosassa selvisivät sekä siirtolan sulkemisesta että pitcairnilaisten asutuksesta lähes vahingoittumattomina, sillä uudet asukkaat ottivat ne suoraan omaan käyttöönsä. Samaa laituria, jolle pitcairnilaiset nousivat maihin 1856, käytetään yhä: koska Norfolkilla ei ole suojaisaa satamaa, kaikki tavara nostetaan edelleen nostureilla veneistä kivijalustalle. Alue tunnetaan nykyisin nimellä Kingston and Arthur\'s Vale Historic Area, ja se on osa Australian rangaistussiirtoloiden Unescon maailmanperintökohdetta.',
+          tiedosto: 'Norfolk Island jetty.jpg',
+          lyhyt: 'Nosturi purkaa venettä Kingstonin laiturilla nykyaikana.',
+          selite:
+            'Nykyvalokuvassa oranssi nosturi nostaa venettä kivetylle laiturille aallokkoisella rannalla, taustalla mäntyinen niemi ja avomeri.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kingston, Norfolk Island',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Selviytyjät',
+      johdanto:
+        'Pieni ja eristynyt Norfolkinsaari on kasvattanut lajeja, joita ei tavata missään muualla maailmassa — osa niistä pelasti ensimmäiset siirtokuntalaiset nälänhädältä, osa selvisi sukupuuton partaalta vain muutaman yksilön turvin.',
+      tehtava: {
+        kysymys:
+          'Minkä linnun ansiosta Norfolkinsaaren ensimmäiset brittiläiset siirtokuntalaiset eivät kuolleet nälkään vuonna 1790?',
+        vaihtoehdot: ['Albatrossi', 'Providence-liitäjä', 'Norfolkinpapukaija', 'Merikotka'],
+        oikea: 1,
+        fakta:
+          'Providence-liitäjiä eli Mount Pitt -lintuja metsästettiin jopa 5000 yksilöä yössä, kunnes siirtokunta selvisi omavaraiseksi vuoteen 1793 mennessä — laji hävisi saarelta kokonaan vuoteen 1800 mennessä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Norfolkinmänty — ei mänty eikä mastopuu',
+          teksti:
+            'Norfolkinmänty ei ole tieteellisesti mänty lainkaan, vaan araukaria-suvun havupuu, joka kasvaa luonnostaan vain Norfolkilla ja sen naapurisaarella Phillip Islandilla. Kapteeni Cook piti puiden suoria, jopa yli 60 metriä kohoavia runkoja täydellisinä laivaston mastoiksi, mutta kun ensimmäiset siirtokuntalaiset kokeilivat puuta 1788, se osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin. Puu jäi silti saaren tunnusmerkiksi: se komeilee yhä Norfolkin lipussa, ja sen luontainen levinneisyys on niin suppea, että laji on nykyisin luokiteltu silmälläpidettäväksi.',
+          tiedosto: 'Araucaria heterophylla Norfolk Island 13.jpg',
+          lyhyt: 'Korkeita norfolkinmäntyjä kehystämässä näkymää saaren rannikolle.',
+          selite:
+            'Valokuvassa korkeat norfolkinmännyt reunustavat vihreää rinnettä, joka laskeutuu pienen lahden rantaan; merellä näkyy risteilyalus.',
+          lahde: 'bertknot from scarborough, australia, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Araucaria heterophylla',
+        },
+        {
+          otsikko: 'Providence-liitäjä pelasti siirtokunnan',
+          teksti:
+            'Maaliskuussa 1790 laiva HMS Sirius haaksirikkoutui Norfolkin riutalle, ja saarelle jäi lähes 500 brittiä ilman kunnollisia varastoja tai toivoa avusta. Pelastus löytyi Mount Pittin rinteiltä, jonne pesi valtava Providence-liitäjien parvi: siirtokuntalaiset metsästivät lintuja jopa 5000 yötä kohti, munineen ja poikasineen, kunnes puutarhat alkoivat tuottaa satoa vuoteen 1793 mennessä. Pelastustyö vaati kuitenkin hirvittävän hinnan — laji, jota kutsuttiin kiitollisuudesta "Providence-linnuksi", oli metsästetty Norfolkilta sukupuuttoon jo vuoteen 1800 mennessä.',
+          tiedosto: 'Providence Petrel.JPG',
+          lyhyt: 'Providence-liitäjä istumassa maassa saniaisten katveessa.',
+          selite:
+            'Lähikuvassa ruskea Providence-liitäjä istuu metsän pohjalla lehtikarikkeen ja saniaisten keskellä, siipi hieman levällään.',
+          lahde: 'EmGer7, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Providence petrel',
+        },
+        {
+          otsikko: 'Norfolkinpapukaija selvisi kuoleman partaalta',
+          teksti:
+            'Norfolkinpapukaija eli Norfolkinsaaren vihreä papukaija oli vielä 1700-luvun lopulla saaren tavallisimpia metsälintuja, mutta metsien raivaus ja tuotuina saapuneet kissat ja rotat ajoivat sen lähes sukupuuttoon: 1970-luvulla yksilöitä arvioitiin olevan enää alle viisikymmentä. Tiukka pesäpönttöjen suojelu, petoeläinten torjunta ja kilpailevan puistopapukaijan kannan hallinta ovat auttaneet lajin verkkaista toipumista, vaikka se on yhä luokiteltu äärimmäisen uhanalaiseksi. Vahvasti punaista otsaa kantava lintu elää enää tällä yhdellä pienellä saarella eikä missään muualla maailmassa.',
+          tiedosto: 'Cyanoramphus cookii -Palm Glen, Norfolk Island, Australia-8.jpg',
+          lyhyt: 'Norfolkinpapukaija oksalla punaisine otsatäplineen.',
+          selite:
+            'Kuvassa kirkkaanvihreä norfolkinpapukaija istuu oksalla, sen otsa on punainen ja nokan juuressa vaalea täplä, taustalla sumeana kasvillisuutta.',
+          lahde: 'Paul Gear, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Norfolk parakeet',
+        },
+        {
+          otsikko: 'Phillip Islandin hibiskus — kaksi pensasta koko maailmassa',
+          teksti:
+            'Norfolkin eteläpuolella kohoava pieni Phillip Island oli vielä 1850-luvulla lähes täysin paljas: 1790-luvulta lähtien saarelle päästetyt siat, vuohet ja kanit olivat syöneet kasvillisuuden loppuun ja jättäneet jäljelle vain punertavan, eroosion kalvaman kallioperän. Eläimet hävitettiin vasta 1980-luvun lopulla, minkä jälkeen saari on vihertynyt uudelleen. Yksi harvinaisimmista selviytyjistä on Phillip Islandin hibiskus, jonka koko luonnonvarainen kanta koostuu edelleen vain kahdesta pensaasta samalla kalliolla — laji kasvaa nykyisin varmuuden vuoksi myös Norfolkin kasvitieteellisessä puutarhassa.',
+          tiedosto: 'Hibiscus insularis Osaka.jpg',
+          lyhyt: 'Phillip Islandin hibiskuksen kaksi vaaleaa kukkaa lähikuvassa.',
+          selite:
+            'Lähikuvassa kaksi vaaleanpunertavaa, tummanpunaisella keskustalla varustettua Phillip Islandin hibiskuksen kukkaa tummanvihreiden lehtien keskellä.',
+          lahde: 'YockeyT, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hibiscus insularis',
+        },
+      ],
+    },
+  ],
+  angola: [
+    {
+      id: 'kaupunki',
+      nimi: 'Angola',
+      johdanto:
+        'Angola oli isoisän matkavuonna 1873 Portugalin vanha siirtomaa Atlantin rannikolla: satamakaupunki Luanda oli perustettu jo 1575, ja sen historiaan kuuluivat sekä orjakauppa että tutkimusmatkailijoiden kulku sisämaahan.',
+      nostot: [
+        {
+          otsikko: 'Kivipylväs rannikon merkkinä',
+          teksti:
+            'Portugalilainen merenkulkija Diogo Cão saapui Kongojoen suulle vuonna 1482 – ensimmäisenä eurooppalaisena, joka tapasi mahtavan Kongon kuningaskunnan hallitsijan. Seuraavalla matkallaan hän purjehti yhä etelämmäksi ja pystytti rannikolle kivisiä padrão-pylväitä Portugalin vaakunoin merkiksi maihinnoususta. Yksi niistä seisoo yhä Cabo Negron niemellä nykyisen Angolan rannikolla, satojen kilometrien päässä siitä, minne isoisä matkusti vuosisatoja myöhemmin. Pylväät olivat aikansa merkkipaaluja: niiden avulla seuraavat purjehtijat tiesivät, kuinka pitkälle edelliset olivat päässeet.',
+          tiedosto: 'Padrão de Diogo Cão no Cabo Negro.jpg',
+          lyhyt: 'Portugalilaisia virkamiehiä Diogo Cãon pystyttämän kivipylvään luona Cabo Negrolla vuonna 1931.',
+          selite:
+            'Mustavalkoisessa vuoden 1931 valokuvassa neljä pukeutunutta miestä – siirtomaahallinnon virkamies, pappi ja kaksi muuta – seisoo kivisen padrão-pylvään ympärillä Cabo Negron niemellä. Pylvään yläosassa on risti ja Portugalin kuninkaallinen vaakuna, joka merkitsi 1480-luvulla Diogo Cãon purjehtineen tälle rannikolle.',
+          lahde: 'Victorcouto, Wikimedia Commons (Public domain)',
+          wiki: 'Diogo Cão',
+        },
+        {
+          otsikko: 'Luanda, kolmesataa vuotta vanha satama',
+          teksti:
+            'Paulo Dias de Novais perusti São Paulo de Loandan eli nykyisen Luandan vuonna 1575 sadan portugalilaisperheen ja nelisadan sotilaan voimin. Kaupungin yllä kohoavalle kalliolle nousi jo seuraavana vuonna Fortaleza de São Miguel, tähdenmuotoinen linnoitus, josta tuli myöhemmin koko siirtokunnan hallintokeskus. Vuoteen 1873 mennessä Luanda oli jo lähes kolmesataa vuotta vanha satamakaupunki – yksi Portugalin vanhimmista ja suurimmista merentakaisista kaupungeista, jonka valkoiset muurit isoisän aikalaiset matkakertomuksissaan mainitsivat.',
+          tiedosto: 'AspectoAereodaFortalezadeSMiguel.JPG',
+          lyhyt: 'Ilmakuva Fortaleza de São Miguelin tähdenmuotoisesta linnoituksesta Luandan lahden rannalla.',
+          selite:
+            'Vanha, kellastunut ilmakuva näyttää Fortaleza de São Miguelin: tähdenmuotoisen, valkoiseksi kalkitun linnoituksen, joka kohoaa kalliolla Luandan lahden yllä. Muurien sisällä erottuvat hallintorakennukset ja niitä ympäröivät maavallit.',
+          lahde: 'Xavier Lopes, Wikimedia Commons (Public domain)',
+          wiki: 'Luanda',
+        },
+        {
+          otsikko: 'Orjasatamasta vientikaupan keskukseksi',
+          teksti:
+            'Vuosisatojen ajan Luandan tärkein vientituote oli ihminen: Angolasta kuljetettiin Atlantin yli enemmän orjia kuin mistään muusta Afrikan alueesta, etenkin Brasiliaan. Portugali kielsi kaupan laillisesti vuonna 1836, mutta salakuljetus jatkui vuosikymmeniä. Kun satamat avattiin viralliselle ulkomaankaupalle 1844, vienti kääntyi vähitellen palmuöljyyn, maapähkinäöljyyn, vahaan, norsunluuhun, puuvillaan, kahviin ja kaakaoon. Vuoteen 1850 mennessä Luanda oli kasvanut yhdeksi Portugalin suurimmista merentakaisista kaupungeista tämän uuden kaupan varassa – muutos, joka näkyi isoisän matkavuonna 1873 jo vakiintuneena arkena.',
+          tiedosto: 'AFR V4 D080 Coffee growing region of Angola.png',
+          lyhyt: 'Vanha reliefikartta Kuanza-joen laakson kukkuloista lähellä Dondoa ja Cambambea.',
+          selite:
+            '1800-luvun lopun reliefikartta esittää Kuanza-joen laakson kukkuloita ja rinteitä lähellä Dondon, Cambamben ja Massanganon kyliä – aluetta, jonka kautta kulki reitti rannikolta ylängön kahvi- ja maanviljelysalueille.',
+          lahde: 'Élisee Reclus, Wikimedia Commons (Public domain)',
+          wiki: 'History of Angola',
+        },
+        {
+          otsikko: 'Livingstone saapuu rannalle nääntyneenä',
+          teksti:
+            'Tutkimusmatkailija David Livingstone lähti marraskuussa 1852 Linyantista, nykyisen Sambian alueelta, mukanaan 27 kololo-heimon miestä oppaina ja tulkkeina. Matka luoteeseen kohti Atlanttia osoittautui äärimmäisen raskaaksi: kuumetaudit veivät Livingstonen lähes hengiltä ennen kuin retkikunta saapui Luandaan toukokuussa 1854. Portugalilaiset hoivasivat hänet kuntoon ja antoivat uudet vaatteet riekaleiden tilalle, mutta Livingstone päätti silti kääntyä takaisin: reitti oli liian vaikea kauppareitiksi, ja hän oli luvannut viedä kololo-miehensä turvallisesti kotiin.',
+          tiedosto: 'Portrait of David Livingstone, Esqre. LL.D (4671613).jpg',
+          lyhyt: 'Aikalaislehden kaiverruskuva David Livingstonesta Englannin konsulina Itä-Afrikassa.',
+          selite:
+            'Vanhassa aikakauslehden kaiverruksessa Livingstone seisoo puvussaan pöydän vieressä, käsi hattunsa päällä – kuvateksti kertoo hänen olleen tuolloin Englannin konsuli Quelimanessa Itä-Afrikassa, muutama vuosi ennen Luandan-matkaansa.',
+          lahde: 'D. J. Pound (kaiverrus valokuvasta, kuvaaja J. J. E. Mayall), Wikimedia Commons (Public domain)',
+          wiki: 'David Livingstone',
+        },
+        {
+          otsikko: 'Isoisän matkavuonna alkanut ylitys',
+          teksti:
+            'Samana vuonna 1873, kun isoisä kirjoitti matkapäiväkirjaansa, Britannian maantieteellinen seura lähetti luutnantti Verney Lovett Cameronin Afrikkaan avuksi Livingstonelle. Matkalla Cameron sai tiedon, että Livingstone oli jo kuollut, ja jatkoi silti yksin mantereen halki: Tanganjika-järveltä Kongon ja Sambesin vedenjakajaa pitkin kohti länsirannikkoa. Marraskuun 28. päivänä 1875 hän saapui Atlantin rannalle Benguelan lähellä Angolassa – ensimmäisenä eurooppalaisena, joka oli ylittänyt koko päiväntasaajan Afrikan mereltä merelle.',
+          tiedosto: 'Tanganjika-Loanda.JPG',
+          lyhyt: 'Vuoden 1876 kartta Cameronin reitistä Tanganjika-järveltä Angolan rannikolle.',
+          selite:
+            'Värillisessä vuoden 1876 kartassa näkyvät Verney Lovett Cameronin reitti Tanganjika-järveltä länteen sekä alueen nimet Kongo, Angola ja Benguela – Cameronin matkan päätepiste Atlantin rannikolla.',
+          lahde: 'J. Perthes, Gotha, Wikimedia Commons (Public domain)',
+          wiki: 'Verney Lovett Cameron',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Savanni ja sen joet',
+      johdanto:
+        'Angolan sydämessä kohoava Bié-ylänkö on Afrikan salainen vesitorni: sen sateista syntyvät viisi suurta jokea, ja sen savanneilla elää maailman harvinaisimpiin lukeutuva jättiläisantilooppi.',
+      tehtava: {
+        kysymys: 'Miltä ylängöltä saavat alkunsa viisi Afrikan suurta jokea, muun muassa Kongo ja Sambesi?',
+        vaihtoehdot: ['Bié-ylänkö', 'Etiopian ylänkö', 'Atlas-vuoret', 'Drakensberg-vuoristo'],
+        oikea: 0,
+        fakta:
+          'Bié-ylänkö kattaa suuren osan Keski-Angolaa, ja sen sateista syntyvät sekä Kongo, Sambesi, Kuanza, Okavango että Cunene-joki.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ylänkö, josta viisi jokea saa alkunsa',
+          teksti:
+            'Angolan keskiosaa hallitsee Bié-ylänkö, laaja ja sateinen tasanko noin 1500–1800 metrin korkeudessa merenpinnasta. Sen savannien alta kumpuavat viiden Afrikan suuren joen latvavedet: Kongo, Sambesi, Kuanza, Okavango ja Cunene. Tutkijat kutsuvat aluetta osuvasti Angolan ylängön vesitorniksi, sillä se on ainoa Okavango-suistoon virtaavan veden lähde – suisto tunnetaan nykyään Unescon maailmanperintökohteena Botswanassa. Sadekausi kestää syyskuusta huhtikuuhun, ja juuri tuolloin ylängön purot muuttuvat jokien alkulähteiksi.',
+          tiedosto: 'Lwange river valley.jpg',
+          lyhyt: 'Kultaisen heinikon peittämä savannirinne Angolan sisämaan laaksossa.',
+          selite:
+            'Valokuvassa avautuu Angolan sisämaan laakso, jonka etualalla kultainen heinikko taipuu tuulessa ja taustalla vihreät, metsäiset kukkulat rajaavat näkymää – tyypillistä Bié-ylängön savannimaisemaa.',
+          lahde: 'Michl-beneriamba, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bié Plateau',
+        },
+        {
+          otsikko: 'Kuanza – maan pisin joki',
+          teksti:
+            'Kuanza-joki saa alkunsa Bié-ylängöltä lähellä Chitemboa ja virtaa lähes tuhat kilometriä luoteeseen ennen laskuaan Atlantille aivan Luandan eteläpuolella. Se on Angolan pisin joki ja oli 1800-luvulla tärkeä kulkuväylä sisämaahan: kanootit ja myöhemmin höyrylaivat kuljettivat sitä pitkin niin ihmisiä kuin kauppatavaraakin. Joen suulla sijaitsevat vanhat linnoituskaupungit Massangano ja Cambambe olivat jo 1600-luvulla portugalilaisten etappeja matkalla kohti ylängön viljelysalueita.',
+          tiedosto: 'Kwanza River.jpg',
+          lyhyt: 'Näkymä veneen keulalta Kuanza-joelle, jonka rantoja reunustavat tiheät puut.',
+          selite:
+            'Veneen keulasta kuvattu näkymä Kuanza-joelle: leveä, tyyni vesiuoma kiemurtelee tiheän puuston reunustamana kirkkaan sinisen taivaan alla.',
+          lahde: 'Patyfessora, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cuanza River',
+        },
+        {
+          otsikko: 'Kalandula – Afrikan toiseksi suurin putous',
+          teksti:
+            'Malanjen maakunnassa Lucala-joki syöksyy 105 metriä alas hevosenkengän muotoisena putouksena, joka on 400 metriä leveä. Vesimäärältään Kalandula on yksi Afrikan suurimmista putouksista, toiseksi suurin heti Victorian putousten jälkeen, mutta se on pysynyt harvinaisen tuntemattomana matkailijoiden keskuudessa syrjäisen sijaintinsa vuoksi. Paikalliset ovat pitäneet putousta pyhänä paikkana, jossa tehtiin rituaaleja hyvinvoinnin ja terveyden toivossa jo kauan ennen kuin ensimmäiset eurooppalaiset matkailijat löysivät sen.',
+          tiedosto: 'Kalandula Falls C.jpg',
+          lyhyt: 'Kalandulan putous syöksyy leveänä verhona sumun peittämään kuiluun.',
+          selite:
+            'Kalandulan putous syöksyy hevosenkengän muotoisena vyöhykkeenä alas kallioseinämää, ja nouseva vesisumu peittää kuilun alaosan – puusto reunustaa putouksen yläreunaa.',
+          lahde: 'Zorglub, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kalandula Falls',
+        },
+        {
+          otsikko: 'Jättiläissapeliantilooppi – kadonneeksi luultu kansallissymboli',
+          teksti:
+            'Vain Angolassa luonnonvaraisena elävä jättiläissapeliantilooppi kuvattiin tieteelle vasta 1916, kun brittiläisen rautatieinsinöörin Frank Varianin löytämä näyte päätyi Lontooseen tutkittavaksi. Uroksen mustaa turkkia, valkoista poskijuovaa ja pitkiä kaarevia sarvia on kuvattu vuoden 1953 postimerkissä. Vuosikymmenten ajan lajista ei saatu varmoja havaintoja, ja monet pitivät sitä sukupuuttoon kuolleena elinympäristön tuhoutumisen vuoksi, kunnes riistakamerat kuvasivat naaraslauman Cangandalan kansallispuistossa 2004. Vuonna 2009 lantanäytteiden DNA johti sadan kilometrin päässä eläneen uroksen jäljille, ja se lennätettiin helikopterilla naaraiden luo.',
+          tiedosto: 'Giant Sable Antelope (22018702922).jpg',
+          lyhyt: 'Luonnontieteellisen museon diorama jättiläissapeliantilooppilaumasta savannimaisemassa.',
+          selite:
+            'Museodioraamassa neljä täytettyä jättiläissapeliantilooppia seisoo ja lepää korkean ruohikon keskellä maalattua savannimaisemaa vasten; oikealla seisova uros kohottaa pitkät, kaarevat sarvensa.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Giant sable antelope',
+        },
+      ],
+    },
+  ],
 };
