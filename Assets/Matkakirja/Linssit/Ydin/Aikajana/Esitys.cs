@@ -434,6 +434,39 @@ namespace Matkakirja.Linssit.Aikajana
             Lopussa?.Invoke();
         }
 
+        /// <summary>
+        /// TESTIKOMENTO (linssi-komento "ihminen tutkimus"): esitys suoraan loppuun ilman ajoa.
+        /// Kertoja vaikenee, avaus ja musta ohitetaan, kaikki löytöpaikat syttyvät, kello nollaan
+        /// (vanat kokonaan) ja Paata ajaa lopun kameran ja Lopussa-koukun kuten luonnollinen loppu.
+        /// </summary>
+        public bool Loppuun()
+        {
+            if (Paattynyt) return false;
+            aani?.Lopeta();
+            selaus = null;
+            avausOdottaa = false;
+            AvausOhi = true;
+            kohdeajo = false;
+            kohdeajonTauko = null;
+            if (MustaPaalla) { MustaPaalla = false; nakyma.Musta(false, 0); }
+            if (!valotPalavat)
+            {
+                valotOdottaa = false;
+                valotPalavat = true;
+                nakyma.Valot(0);
+            }
+            nakyma.VirtojenPito(true);
+            foreach (var j in kertomus)
+            {
+                foreach (var h in j.Hiljaiset ?? Array.Empty<string>()) nakyma.SytytaKohde(h);
+                if (j.Kohde != null) nakyma.SytytaKohde(j.Kohde);
+            }
+            I = kertomus.Count - 1;
+            KirjoitaKello(0);
+            Paata();
+            return true;
+        }
+
         // ── Muisti ────────────────────────────────────────────────────────
 
         /// <summary>

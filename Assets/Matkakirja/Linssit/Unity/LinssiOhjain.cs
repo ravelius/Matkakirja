@@ -861,6 +861,15 @@ namespace Matkakirja.Natiivi
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
                     Esitys(osat[1]);
+                else if (osat[0] == "ihminen" && osat.Length > 1 && osat[1] == "tutkimus")
+                {
+                    // Testikomento: ihmisen matka auki ja suoraan tutkimusvaiheeseen (Laitetestaajan
+                    // virtanappien ja nostopisteiden tarkistus ilman koko esitystä).
+                    if (!(rekisteri.Auki is IhmisenMatkaSovitin)) rekisteri.Valitse("ihmisen-matka");
+                    var l = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi;
+                    bool ok = l?.SiirryTutkimukseen() ?? false;
+                    Kirjaa($"ihminen tutkimus: {(ok ? (l.Tutkimus != null ? $"auki, {l.Tutkimus.Nostot.Count} nostoa" : "odottaa vanoja") : "ei onnistunut")}");
+                }
                 else if (osat[0] == "kamera" && osat.Length > 3)
                     AjaKamera(new Nakyma(Luku(osat[1]), Luku(osat[2]), Luku(osat[3]) * 1000), 0f);
                 else if (osat[0] == "kehittaja" && osat.Length > 1)

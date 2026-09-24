@@ -132,6 +132,22 @@ namespace Matkakirja.Linssit.Aikajana
             }
         }
 
+        /// <summary>
+        /// TESTIKOMENTO "ihminen tutkimus": suoraan tutkimusvaiheeseen oikealla sisällöllä. Ennen vanoja
+        /// asetetaan tutkimusvaiheen muisti (jatko tapahtuu AsetaVanat-kutsussa kuten muistista),
+        /// ennen esitystä jatketaan muistin tavoin, kesken esityksen esitys viedään loppuun.
+        /// </summary>
+        public bool SiirryTutkimukseen()
+        {
+            if (!Auki || Esitys == null) return false;
+            if (Tutkimus != null) return true;
+            var tutkimus = new LinssiMuistiTila { Vaihe = "tutkimus", Kamera = y.Kamera };
+            if (!VanatValmiit) { muisti = tutkimus; return true; }
+            if (Esitys.I < 0 && !Esitys.Kaynnissa) { muisti = tutkimus; Jatka(); return Tutkimus != null; }
+            Esitys.Loppuun();
+            return Tutkimus != null;
+        }
+
         /// <summary>Esitys päättyi (web ui.aloitaTutkimusvaihe).</summary>
         void AloitaTutkimus()
         {
