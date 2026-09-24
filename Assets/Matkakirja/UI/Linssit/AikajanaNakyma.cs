@@ -125,7 +125,7 @@ namespace Matkakirja.Natiivi
             // Paneeli oikealla (webin .aikajana-ilmio): keksinnön tai löytöpaikan kortti.
             paneeli = Rakenne.El("mk-aikajana-paneeli", turva, PickingMode.Ignore);
             paneeli.style.display = DisplayStyle.None;
-            Rakenne.Tausta(paneeli, Kuviot.Pergamentti);
+            // Tumma asu (web --aikajana-paperi #201a14, omistaja 3.9.2026 "kaikkien elementtien pohjat tummiin"): USS.
             paneelinKuva = Rakenne.El("mk-aikajana-paneeli__kuva", paneeli, PickingMode.Ignore);
             havainne = Rakenne.El("mk-aikajana-havainne", paneeli);
             havainne.style.display = DisplayStyle.None;
@@ -804,7 +804,7 @@ namespace Matkakirja.Natiivi
             }).Every(KuvakiertoMs).StartingIn(KuvakiertoMs);
         }
 
-        /// <summary>Tekstipaneeli (web .aikajana-ilmio-teksti): pergamentilla henkilö/merkintä, otsikko, selite.</summary>
+        /// <summary>Tekstipaneeli (web .aikajana-ilmio-teksti): tummalla pohjalla henkilö/merkintä, otsikko, selite.</summary>
         void NaytaTekstipaneeli(string henkilo, string otsikkoTeksti, string selite, bool juttu)
         {
             PoisHavainne();
@@ -826,7 +826,7 @@ namespace Matkakirja.Natiivi
             havainne.style.display = DisplayStyle.None;
             if (!paneeli.ClassListContains("mk-aikajana-paneeli--kuva")) return;
             paneeli.RemoveFromClassList("mk-aikajana-paneeli--kuva");
-            Rakenne.Tausta(paneeli, Kuviot.Pergamentti);
+            paneeli.style.backgroundImage = StyleKeyword.Null;
         }
 
         void SaadaTekstit(bool nakyy)

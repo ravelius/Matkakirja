@@ -2,7 +2,7 @@
 // luoTutkimusvaihe) ja css/ihmisen-tutkimus.css (.ihmisen-vananapit, .ihmisen-nosto, .ihmisen-vanalappu).
 // Moottori on Linssisepän (Tutkimusvaihe, ITutkimuksenNakyma); tämä on pinta:
 //
-//   Virtanapit  palkissa otsikon ja kellon välissä: pilkku virran rintamavärillä ja nimi (puhelimessa lyhyt).
+//   Virtanapit  palkissa otsikon ja kellon välissä: pilkku virran rintamavärillä ja nimi (≤ 1000 px lyhyt).
 //               Esityksen ajan legenda (himmeä, ei napautusta), tutkimusvaiheessa napit (Tutkimus.Valitse).
 //   Nostot      noin 40 sykkivää pistettä (14 px syke 2,6 s + 5 px ydin, virran sävy tai kulta) pallon
 //               pisteissä (IhmisenMatkaKerros.NostonPiste joka ruutu); napautus avaa nostokortin.
@@ -65,7 +65,10 @@ namespace Matkakirja.Natiivi
         {
             napit.Clear();
             virtanapit.Clear();
-            bool puhelin = Screen.width / Mathf.Max(1f, Screen.dpi > 0 ? Mathf.Round(Screen.dpi / 163f) : 1f) <= 600f;
+            // Web @media (max-width: 1000px): lyhyet nimet ("Pää", "Eur.", …) myös iPadilla pystyssä (834 px), koska
+            // kello, otsikko ja napit vievät palkista yli puolet. Leveys UI-yksiköinä (= web CSS px) paneelin juuresta.
+            float leveys = napit.panel?.visualTree?.layout.width ?? 0f;
+            bool puhelin = float.IsNaN(leveys) || leveys <= 0f || leveys <= 1000f;
             foreach (var v in virrat ?? Array.Empty<Virta>())
             {
                 string tunnus = v.Tunnus;
