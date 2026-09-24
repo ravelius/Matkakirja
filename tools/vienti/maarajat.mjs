@@ -45,16 +45,26 @@ export function harvenna(pisteet, tol = MAARAJOJEN_TOLERANSSI) {
 
 const pyorista = (v) => Math.round(v * 1000) / 1000;
 
+const laatikko = (renkaat) => {
+  let [w, s, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
+  for (const r of renkaat) for (const [lon, lat] of r) {
+    w = Math.min(w, lon); e = Math.max(e, lon); s = Math.min(s, lat); n = Math.max(n, lat);
+  }
+  return [w, s, e, n];
+};
+
 export function maarajaRivit(polku) {
   const data = JSON.parse(readFileSync(polku, 'utf8'));
   return Object.keys(data.maat).sort().map((iso) => {
-    const renkaat = maanRenkaatAsteina(data, iso, asteet)
+    const kaikki = maanRenkaatAsteina(data, iso, asteet)
       .map((r) => harvenna(r).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]))
       .filter((r) => r.length >= 4);
-    let [w, s, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
-    for (const r of renkaat) for (const [lon, lat] of r) {
-      w = Math.min(w, lon); e = Math.max(e, lon); s = Math.min(s, lat); n = Math.max(n, lat);
-    }
-    return { id: iso, iso2: ISO2[iso] ?? null, bbox: [w, s, e, n], renkaat };
+    // Skeema 1.34 (Fable 24.9.2026): web piirtää pallon maat nyt Natural Earth 10m
+    // -aineistosta (#3078, Huippuvuoret Norjalle), joten rajausta ei enää tehdä:
+    // renkaat = kaikki admin-0-renkaat. muutRenkaat (tyhjä) ja kokoBbox säilyvät.
+    const renkaat = kaikki;
+    return {
+      id: iso, iso2: ISO2[iso] ?? null, bbox: laatikko(renkaat), renkaat, muutRenkaat: [], kokoBbox: laatikko(kaikki),
+    };
   });
 }
