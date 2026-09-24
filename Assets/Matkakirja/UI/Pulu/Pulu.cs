@@ -383,16 +383,18 @@ namespace Matkakirja.Natiivi
         /// puhu kertojan päälle: silloin kupla näkyy äänettä. aaniLadattu saa äänitteen
         /// (null = ei ääntä), jotta kuplasarja voi odottaa puheen loppuun. Palauttaa kuplan.
         /// </summary>
-        public PuluKuplat.Kupla Sano(string teksti, string aaniUrl = null, string eleId = null, Action kuitattu = null, Action<AudioClip> aaniLadattu = null)
+        public PuluKuplat.Kupla Sano(string teksti, string aaniUrl = null, string eleId = null, Action kuitattu = null, Action<AudioClip> aaniLadattu = null,
+            bool naytaAina = false)
         {
             if (string.IsNullOrEmpty(teksti)) return null;
             viimeRepliikki = teksti;
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
             // Löydös 21 (omistaja 24.9.2026): tekstit oletuksena piilossa — vain ääni ja ele. Napautus pulua avaa
-            // viimeisimmän repliikin. Kuittausta odottavat kuplat (esittely, jonot) näkyvät, koska ne ohjaavat.
+            // viimeisimmän repliikin. Vain naytaAina-kuplat (pulun ensiesittely, joka opastaa valintaan) näkyvät aina;
+            // kuittausjonot etenevät kuplan kestoajastimella ilman napautusta, joten piilotus ei pysäytä niitä.
             PuluKuplat.Kupla kupla = null;
-            if (TekstitPiilossa && kuitattu == null) { piilotettu = teksti; piilotettuAika = Aika; }
+            if (TekstitPiilossa && !naytaAina) { piilotettu = teksti; piilotettuAika = Aika; }
             else { piilotettu = null; kupla = Kuplat.Lisaa(teksti, 0, kuitattu); }
             puheKupla = kupla;
             var id = eleId ?? RepliikinEle(teksti);
