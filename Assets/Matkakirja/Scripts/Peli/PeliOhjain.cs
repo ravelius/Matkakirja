@@ -1315,7 +1315,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
         void Perilla() => Perilla(false);
 
-        void Perilla(bool aloituslento)
+        void Perilla(bool aloituslento, bool kameraPerilla = false)
         {
             if (Tila != SilmukanTila.Matkalla) return;
             Lentoaani(false);
@@ -1327,7 +1327,7 @@ namespace Matkakirja.Natiivi
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
-            if (kaupunki != null) Saavu(maaRajaus: !aloituslento);
+            if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
                 // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).

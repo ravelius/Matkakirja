@@ -168,51 +168,62 @@ namespace Matkakirja.Natiivi
         /// ja alfalla 0,2 × kohina; multiply-sekoitus = pohja × (1 − α + α × väri). 140 × 140 laatta toistuu
         /// (AsetaArkki), joten rae on pikselin kokoista kuten webissä eikä veny arkin mukana.
         /// </summary>
-        public static Texture2D Arkkipaperi
+        public static Texture2D Arkkipaperi => Paperi("arkkipaperi", Vari("#f5f0e2"), kerto: true);
+
+        /// <summary>
+        /// Aloitusverhon ja saapumisen välikortin arkki (web .aloitusverho: background-color --paper #efdcb4 ja
+        /// --paper-noise ilman sekoitustilaa): sama rae kuin arkkipaperissa, mutta tavallisena päällepiirtona
+        /// (pohja × (1 − α) + väri × α).
+        /// </summary>
+        public static Texture2D Verhopaperi => Paperi("verhopaperi", Vari("#efdcb4"), kerto: false);
+
+        static Texture2D Paperi(string nimi, Color pohja, bool kerto)
         {
-            get
+            if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+            // 420 × 420 näytetään 140 pt:n laattana: rae on laitepikselin kokoista (web SVG-kohina renderöityy
+            // Retina-tarkkuudella), joten se on lähes näkymätön kuten webissä (Fable 24.9.: ei karkeaa raetta).
+            const int N = 420;
+            t = Uusi(nimi, N, N);
+            t.wrapMode = TextureWrapMode.Repeat;
+            var vari = new Color(0.42f, 0.33f, 0.19f);
+            var rnd = new System.Random(140);
+            var hila = new float[N * N];
+            for (int i = 0; i < hila.Length; i++) hila[i] = (float)rnd.NextDouble();
+            // Jaksollinen arvokohina (toistuu saumattomasti): oktaavit 1, 2, 4 ja 8 px, painot 1/2, 1/4, ….
+            float Arvo(int x, int y, int askel)
             {
-                const string nimi = "arkkipaperi";
-                if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
-                // 420 × 420 näytetään 140 pt:n laattana: rae on laitepikselin kokoista (web SVG-kohina renderöityy
-                // Retina-tarkkuudella), joten se on lähes näkymätön kuten webissä (Fable 24.9.: ei karkeaa raetta).
-                const int N = 420;
-                t = Uusi(nimi, N, N);
-                t.wrapMode = TextureWrapMode.Repeat;
-                var pohja = Vari("#f5f0e2");
-                var vari = new Color(0.42f, 0.33f, 0.19f);
-                var rnd = new System.Random(140);
-                var hila = new float[N * N];
-                for (int i = 0; i < hila.Length; i++) hila[i] = (float)rnd.NextDouble();
-                // Jaksollinen arvokohina (toistuu saumattomasti): oktaavit 1, 2, 4 ja 8 px, painot 1/2, 1/4, ….
-                float Arvo(int x, int y, int askel)
-                {
-                    int x0 = x / askel * askel, y0 = y / askel * askel;
-                    float fx = (x - x0) / (float)askel, fy = (y - y0) / (float)askel;
-                    float H(int a, int b) => hila[((b % N + N) % N) * N + ((a % N + N) % N)];
-                    float yla = Mathf.Lerp(H(x0, y0), H(x0 + askel, y0), fx), ala = Mathf.Lerp(H(x0, y0 + askel), H(x0 + askel, y0 + askel), fx);
-                    return Mathf.Lerp(yla, ala, fy);
-                }
-                var px = new Color[N * N];
-                for (int y = 0; y < N; y++)
-                for (int x = 0; x < N; x++)
-                {
-                    float n = 0.6f * Arvo(x, y, 1) + 0.3f * Arvo(x, y, 2) + 0.1f * Arvo(x, y, 3);
-                    float a = 0.2f * Mathf.Clamp01(0.5f + (n - 0.5f) * 0.8f);
-                    px[y * N + x] = new Color(pohja.r * (1f - a + a * vari.r), pohja.g * (1f - a + a * vari.g), pohja.b * (1f - a + a * vari.b), 1f);
-                }
-                t.SetPixels(px);
-                t.Apply(false, true);
-                valimuisti[nimi] = t;
-                return t;
+                int x0 = x / askel * askel, y0 = y / askel * askel;
+                float fx = (x - x0) / (float)askel, fy = (y - y0) / (float)askel;
+                float H(int a, int b) => hila[((b % N + N) % N) * N + ((a % N + N) % N)];
+                float yla = Mathf.Lerp(H(x0, y0), H(x0 + askel, y0), fx), ala = Mathf.Lerp(H(x0, y0 + askel), H(x0 + askel, y0 + askel), fx);
+                return Mathf.Lerp(yla, ala, fy);
             }
+            var px = new Color[N * N];
+            for (int y = 0; y < N; y++)
+            for (int x = 0; x < N; x++)
+            {
+                float n = 0.6f * Arvo(x, y, 1) + 0.3f * Arvo(x, y, 2) + 0.1f * Arvo(x, y, 3);
+                float a = 0.2f * Mathf.Clamp01(0.5f + (n - 0.5f) * 0.8f);
+                px[y * N + x] = kerto
+                    ? new Color(pohja.r * (1f - a + a * vari.r), pohja.g * (1f - a + a * vari.g), pohja.b * (1f - a + a * vari.b), 1f)
+                    : new Color(pohja.r * (1f - a) + a * vari.r, pohja.g * (1f - a) + a * vari.g, pohja.b * (1f - a) + a * vari.b, 1f);
+            }
+            t.SetPixels(px);
+            t.Apply(false, true);
+            valimuisti[nimi] = t;
+            return t;
         }
 
         /// <summary>Arkkipaperi toistuvana 140 × 140 -laattana (web background-image toistuu luonnollisessa koossaan).</summary>
-        public static void AsetaArkki(VisualElement e)
+        public static void AsetaArkki(VisualElement e) => AsetaLaatta(e, Vari("#f5f0e2"), Arkkipaperi);
+
+        /// <summary>Verhopaperi (web .aloitusverho) toistuvana 140 × 140 -laattana.</summary>
+        public static void AsetaVerho(VisualElement e) => AsetaLaatta(e, Vari("#efdcb4"), Verhopaperi);
+
+        static void AsetaLaatta(VisualElement e, Color pohja, Texture2D laatta)
         {
-            e.style.backgroundColor = Vari("#f5f0e2");
-            e.style.backgroundImage = new StyleBackground(Arkkipaperi);
+            e.style.backgroundColor = pohja;
+            e.style.backgroundImage = new StyleBackground(laatta);
             e.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.Repeat);
             e.style.backgroundSize = new BackgroundSize(new Length(140f), new Length(140f));
             e.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left);
