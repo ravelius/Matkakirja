@@ -1417,3 +1417,51 @@
     white-space: normal;
     color: var(--muted);
 }
+
+/* Kartuschan radio (web .maapaneeli-radio): merkkivalo ja pieni "radio" maston oikeassa laidassa,
+ * vain avattuna ja vain maille, joilla on asema. Valo palaa soidessa ja vilkkuu kanavan haun ajan. */
+.mk-kartuscha__radio {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 11px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    padding: 2px 3px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-kartuscha.mk-auki .mk-kartuscha__radio--asema {
+    display: flex;
+}
+
+.mk-kartuscha__radiovalo {
+    width: 11px;
+    height: 11px;
+    margin-bottom: 3px;
+    border-width: 1px;
+    border-color: rgba(74, 52, 33, 0.45);
+    border-radius: 6px;
+    background-color: rgba(120, 96, 78, 0.28);
+}
+
+.mk-lehti__kuuntele--soi .mk-kartuscha__radiovalo,
+.mk-kartuscha__radio.mk-etsii.mk-vilkku .mk-kartuscha__radiovalo {
+    border-color: rgba(150, 30, 22, 0.85);
+    background-color: #d8342a;
+}
+
+.mk-kartuscha__radio.mk-etsii .mk-kartuscha__radiovalo {
+    border-color: rgba(150, 30, 22, 0.85);
+    background-color: rgba(120, 96, 78, 0.28);
+}
+
+.mk-kartuscha__radionimi {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: rgba(74, 52, 33, 0.75);
+    opacity: 0.72;
+}

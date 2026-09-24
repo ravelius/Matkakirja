@@ -17,8 +17,9 @@
 //      KIELET      Buongiorno [lippu] italia …
 //      [lippu] I T A L I A
 // Avattu: pergamentti rgba(247,239,219,.94), reuna + sisäviiva, leveys 40 %
-// (puhelimessa koko leveys). Sulkeutuu, kun karttaa kosketaan. Ei ääntä (radio
-// vain webissä). Piilossa, kun pelaaja ei ole kaupungissa, peli ei ole
+// (puhelimessa koko leveys). Sulkeutuu, kun karttaa kosketaan. Avattuna maston
+// oikeassa laidassa radion merkkivalo (web .maapaneeli-radio, Mediarivi.Radionappi):
+// maan suora lähetys, valo palaa soidessa; vain maille, joilla asema on. Piilossa, kun pelaaja ei ole kaupungissa, peli ei ole
 // Kartta-/Dialogi-/Matkalla-tilassa tai linssi on päällä (NaytaSallittu).
 // Data: UiSisalto.Maa (Siirtosepän maat-kokoelma).
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace Matkakirja.Natiivi
     {
         readonly UiKerros kerros;
         readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu;
-        readonly Button masto;
+        readonly Button masto, radio;
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
         string iso, testiIso;
@@ -76,6 +77,7 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-kartuscha__viiva", masto, PickingMode.Ignore);
             alarivi = Rakenne.Teksti("", "mk-kartuscha__alarivi", masto);
             Kirjasimet.Aseta(alarivi, Kirjasin.LukuKursiivi);
+            radio = Mediarivi.Radionappi(masto);
 
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
@@ -119,6 +121,8 @@ namespace Matkakirja.Natiivi
                 return;
             }
             Tayta(UiSisalto.Maa(iso));
+            var mt = UiSisalto.Maa(iso);
+            Mediarivi.AsetaRadionMaa(radio, iso, mt?.Nimi ?? iso);
             Asettele();
             kortti.style.display = DisplayStyle.Flex;
         }

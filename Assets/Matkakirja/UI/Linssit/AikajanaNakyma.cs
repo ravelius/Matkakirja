@@ -66,6 +66,9 @@ namespace Matkakirja.Natiivi
         // Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kohdepisteen yläpuolella, seuraa pistettä.
         readonly VisualElement kertomuskuva;
         bool kertomuskuvaEsilla;
+        // Löytökuvan napautuksen kortti (web luoNostokortti) ja sen löytöpaikka.
+        readonly IhmisenNostokortti nostokortti;
+        Loytopaikka kuvanPaikka;
         Tila tila;
         string kelloTeksti;
         int pysakki = -1, jakso = -1;
@@ -159,8 +162,10 @@ namespace Matkakirja.Natiivi
             // Löytökuva kerroksen juuressa (paneelin koordinaatit = IhmisenMatkaKerros.KuvanPiste muunnettuna).
             kertomuskuva = Rakenne.El("mk-aikajana-kertomuskuva", kerros.Juuri(LinssiUi.Kerros));
             kertomuskuva.style.display = DisplayStyle.None;
-            // Napautus avaa löytöpaikan kortin (web kuvan napautus → nostokortti).
-            kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla) { NaytaLappu(); paneeli.style.display = DisplayStyle.Flex; } });
+            // Napautus avaa noston kortin (web kuvan napautus → nostokortti.avaa).
+            kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla && kuvanPaikka != null) nostokortti.Avaa(kuvanPaikka); });
+            nostokortti = new IhmisenNostokortti(turva);
+            LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Ihmisen matkan aikaselain alareunassa (web luoAikaselain): veto esikatselee, irrotus valitsee.
@@ -268,6 +273,7 @@ namespace Matkakirja.Natiivi
             ylarivi.style.paddingRight = r.z + 8;
             ylarivi.style.height = r.y + Ylapalkki.Korkeus;
             paneeli.style.top = Ylapalkki.Korkeus + 10;
+            nostokortti.Yla = Ylapalkki.Korkeus + 11;
             // Oletusasettelut näyttöluokittain (web .aikajana-ilmio): puhelin pystyssä reunasta reunaan,
             // tabletti pystyssä 66 % hieman oikealle (right 3,5 %), vaakanäyttö 45 % oikeassa yläkulmassa.
             float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
@@ -314,6 +320,10 @@ namespace Matkakirja.Natiivi
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
                     if (pysakki < 0 && !lopussa) paikka.text = keksinnot.Jakso;
                     karuselli.Rakenna(keksinnot.Pysakit);
+                    // Esilämmitys linssin auetessa: GPU-luku ja ensimmäisten pysäkkien kuvat valmiiksi ennen
+                    // käynnistystä, ettei ensimmäinen pysäkinvaihto odota niitä (web esilataa paneelikuvat).
+                    Kuvat.Valmistele();
+                    ValmistaSeuraavat(-1, 4);
                     // Nauha esiin vasta kaaren käynnistyessä (esittelyn aikana tyhjä kartta ja laatikko).
                     karuselli.Nayta(pysakki >= 0);
                     var l = LinssiUi.Keksinnot;
@@ -381,6 +391,8 @@ namespace Matkakirja.Natiivi
             aikaselain.Nayta(false);
             kertomus.style.bottom = StyleKeyword.Null;
             PiilotaKertomuskuva();
+            kuvanPaikka = null;
+            nostokortti.Pois();
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
@@ -641,10 +653,10 @@ namespace Matkakirja.Natiivi
         /// Web valmistaSeuraavat: seuraavien pysäkkien havainnekuvat valmiiksi (lataus, purku, maski),
         /// jotta pysäkin vaihtuessa kuva on jo muistissa eikä vaihtokehys odota verkkoa tai GPU:ta.
         /// </summary>
-        void ValmistaSeuraavat(int i)
+        void ValmistaSeuraavat(int i, int maara = EsilatausPysakkeja)
         {
             if (keksinnot == null) return;
-            for (int n = 1; n <= EsilatausPysakkeja; n++)
+            for (int n = 1; n <= maara; n++)
             {
                 if (i + n >= keksinnot.Pysakit.Count) return;
                 var p = keksinnot.Pysakit[i + n];
@@ -943,6 +955,7 @@ namespace Matkakirja.Natiivi
             paneelinKuva.style.display = DisplayStyle.None;
             paneelinKuva.style.backgroundImage = StyleKeyword.None;
             PiilotaKertomuskuva();
+            kuvanPaikka = p;
             if (!string.IsNullOrEmpty(p.Kuva))
             {
                 Kuvat.Hae(p.Kuva, t =>
