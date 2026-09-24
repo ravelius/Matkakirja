@@ -175,6 +175,20 @@ namespace Matkakirja.Natiivi
                 SuljeSisallys();
             }, TrickleDown.TrickleDown);
 
+            // Turva-alue (Dynamic Island, kotipalkki): arkki on koko ruudun levy, joten otsikkorivi ja alapalkki
+            // siirtyvät reunoista sisään; webissä Safarin palkit ovat näkymän ulkopuolella.
+            ui.Turva(Kerros);
+            void Turvaa()
+            {
+                var r = ui.Reunat(Kerros);
+                turvaYla = r.y;
+                arkki.style.paddingTop = 10f + r.y;
+                arkki.style.paddingBottom = r.w;
+                AsetaSisallysVara();
+            }
+            ui.TurvaMuuttui += Turvaa;
+            Turvaa();
+
             suurennos = new Kuvasuurennos(juuri);
             fokus = new LehtiFokus(() => tila, Teko, suurennos);
         }
@@ -1349,6 +1363,15 @@ namespace Matkakirja.Natiivi
 
         void SuljeSisallys() => sisallys.style.display = DisplayStyle.None;
 
+        float turvaYla;
+
+        /// <summary>Yläreunaan laskeutuva levy alkaa turva-alueen alta (web .ylhaalla: tarttuma + 0,6 rem), alhaalta noustessa USS.</summary>
+        void AsetaSisallysVara()
+        {
+            bool yla = sisallys.ClassListContains("mk-lehti__sisallys--ylhaalla");
+            sisallys.style.paddingTop = yla ? 18.4f + turvaYla : StyleKeyword.Null;
+        }
+
         /// <summary>
         /// Web avaaSisallysvalikko + rakennaSisallysLista: rivillä 52 px:n pikkukuva, sivun otsikko (sivunOtsikko,
         /// esim. "Ateena pintaa syvemmältä") ja kaksirivinen ingressi (johdannon ensimmäinen virke, sisallysTiedot).
@@ -1358,6 +1381,7 @@ namespace Matkakirja.Natiivi
         {
             if (sisallys.style.display == DisplayStyle.Flex) { SuljeSisallys(); return; }
             sisallys.EnableInClassList("mk-lehti__sisallys--ylhaalla", ylhaalla);
+            AsetaSisallysVara();
             sisallysLista.Clear();
             for (int i = 0; i < lehti.Sivut.Count; i++)
             {
