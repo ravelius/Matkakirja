@@ -1251,6 +1251,11 @@
     color: rgba(58, 38, 16, 0.7);
 }
 
+/* Lähderivi linkkinä (web .pollo-kuvalahde: pulun Wikipedia-kuva). */
+.mk-nosto__lahde--linkki {
+    color: #7a5514;
+}
+
 /* Täkynosto ja syvennys (web css/fokusnosto.css, fokusvirta.css) ja kohdekortin ihme ja
  * leikekirja (css/fokuskohteet.css). */
 
