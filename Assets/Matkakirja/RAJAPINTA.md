@@ -69,6 +69,7 @@ Webin pallon nostokerros (js/pallolauta/nostot.js, js/fokuskohteet.js). Kartta p
 | `bool Nakyvissa`, `float Syttyminen` (0→1, 0,7 s), `float Osuus` | Kerros näkyy, kun maan leveys / näkyvä leveys ≥ 0,5 (LEHDEN_VAHIN_OSUUS) ja saapumisesta 1,4 s kamera ja nappula paikallaan (saapumisPortti). |
 | `event Action Paivittyi` | Naytettavat, näkyvyys tai syttyminen muuttui tässä kehyksessä (kuuntele ja siirrä merkit). |
 | `string Maa { get; set; }`, `NykyinenMaa` | Pakotettu maa (ISO3) tai null = nappulan kaupungin maa. |
+| `bool LinssiNimet` | Linssinimet (KarttaKerrokset `"linssinimet"`): saapumisportti ohitetaan ja `Lahella` on tosi. **Natiivi-UI:** näytä merkit linssin aikana, kun tämä on tosi (`NaytaSallittu(false)` ei silloin piilota), ilman napautusta ja viuhkaa. |
 
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
@@ -77,6 +78,7 @@ Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
 | Jäsen | Merkitys |
 |---|---|
 | `void Nakyvyys(string kerros, bool)` | Sisäiset kerrokset: `"laatat"`, `"maasto"`, `"kaupungit"`, `"nimiot"`, `"reitit"`, `"napakannet"` (napakalotit ja niiden varakannet; reliefin ollessa pohjan tilalla kalotti piiloon ja kansi reliefin sävyyn automaattisesti), `"nappula"` (nappula ja kone), `"pisteet"` (Karttapisteet), `"valot"` (karttavalot; valinta säilyy). Linssiportti piilottaa nämä kuten webin body.aikajana-paalla. |
+| `Nakyvyys("linssinimet", bool)`, `bool Linssinimet` | Webin linssikartan nimet (build 10): kun linssi on piilottanut `"kaupungit"`, kaupunkipisteet ja -nimet näkyvät webin linssiasussa (harvennettu kapiteeli 0,14 em, muste rgba(103,88,73,0.92), nimi 9,5/10,5 pt, piste 3,3/4,3 pt) ilman napautusta, huomiorenkaita ja maan kehää, ja `NostoKerros.LinssiNimet` päästää nostot saapumisportin ohi ja avaa `Lahella`-portin (ryhmien nimet). Tila purkautuu, kun `"kaupungit"` palaa. Merinimiä ei vielä ole natiivissa. Testi: `kerros kaupungit pois`, `kerros nimiot pois`, `kerros linssinimet paalle`. |
 | `string LisaaRasteri(avain, urlTemplate, WebMercator/Geographic, minTaso, maxTaso, alfa)` | Linssin oma raster-kerros laattojen päälle (Cesium UrlTemplate). Enintään 2 linssikerrosta kerrallaan (Cesiumin oletusmateriaali tukee kolmea kerrosta). |
 | `void PoistaRasteri(avain)`, `void Alfa(avain, float)` | |
 | `event Action<string> KerrosValmis` | Linssin rasteri ladattu näkyvältä alueelta (Cesium ComputeLoadProgress). |

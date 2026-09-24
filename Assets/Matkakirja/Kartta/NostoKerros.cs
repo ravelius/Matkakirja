@@ -72,6 +72,27 @@ namespace Matkakirja
         public event Action Paivittyi;
         public bool Valmis { get; private set; }
 
+        /// <summary>
+        /// LINSSINIMET (KarttaKerrokset.Nakyvyys("linssinimet"), RAJAPINTA luku 3c ja 4): linssin aikana nostot ja
+        /// niiden nimet näkyvät kuten webissä, jossa nostotaso on poltettu maittain laattoihin (pelin repo
+        /// js/pallolaatat.js:433–441 nostotMaittain, tools/generoi-laattapyramidi.mjs:430 NOSTOTASO) ja jää kartalle,
+        /// kun elävät merkit piilotetaan (css/styles.css:11946 body.aikajana-paalla). Tila ohittaa saapumisportin
+        /// (linssin kamera liikkuu) ja avaa <see cref="Lahella"/>-portin, jotta ryhmämerkkienkin nimet näkyvät ilman
+        /// viuhkaa. Maa ja osuusportti pysyvät (web: kohdemaan laatasto tasoilta z5 alkaen). Natiivi-UI näyttää
+        /// merkit linssin aikana tämän mukaan, ilman napautusta. KarttaKerrokset asettaa tämän.
+        /// </summary>
+        public bool LinssiNimet
+        {
+            get => linssiNimet;
+            set
+            {
+                if (linssiNimet == value) return;
+                linssiNimet = value;
+                muuttui = nakymaMuuttui = true;
+            }
+        }
+        bool linssiNimet;
+
         readonly Dictionary<string, List<Nosto>> maittain = new Dictionary<string, List<Nosto>>();
         readonly Dictionary<string, double4> bboxit = new Dictionary<string, double4>(); // länsi, etelä, itä, pohjoinen
         readonly List<Nosto> naytettavat = new List<Nosto>();
@@ -188,7 +209,7 @@ namespace Matkakirja
             bool liikkuu = kierto.Liikkeessa || (nappula != null && nappula.Vaihe != LennonVaihe.Ei) || (nappula != null && nappula.Liikkeessa);
             if (liikkuu) { if (!Nakyvissa) pysahtyi = -1f; }
             else if (pysahtyi < 0) pysahtyi = Time.unscaledTime;
-            bool porttiAuki = Nakyvissa || (pysahtyi >= 0 && Time.unscaledTime - pysahtyi >= porttiViive);
+            bool porttiAuki = linssiNimet || Nakyvissa || (pysahtyi >= 0 && Time.unscaledTime - pysahtyi >= porttiViive);
 
             // Aloitusportissa (PalloKierto.PorttiSumea) ei nostoja: UI piirtäisi ne terävinä sumean pallon päälle.
             bool nakyvissa = maa != null && Osuus >= vahinOsuus && porttiAuki && !PalloKierto.PorttiSumea;
@@ -218,7 +239,8 @@ namespace Matkakirja
             naytettavat.Clear();
             var keski = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
             bool lahi = nakyvaLeveys < lahizoomLeveys;
-            Lahella = lahi;
+            // Linssinimissä ryhmänkin nimi näkyy (web: poltettu nimiö ei ryhmity); lahizoom-nostot yhä vain lähellä.
+            Lahella = lahi || linssiNimet;
             foreach (var s in nostot)
             {
                 if (s.Lahizoom && !lahi) continue;

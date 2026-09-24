@@ -217,6 +217,16 @@ namespace Matkakirja
                 case "portti":
                     PalloKierto.PorttiSumea = o[1] == "paalle";
                     break;
+                case "kerros":
+                {
+                    // kerros <avain> paalle|pois: KarttaKerrokset.Nakyvyys (esim. "kerros kaupungit pois" +
+                    // "kerros nimiot pois" + "kerros linssinimet paalle" = linssin nimikartta kuvausta varten).
+                    var kk = KarttaKerrokset.Instanssi;
+                    if (kk == null || o.Length < 3) break;
+                    kk.Nakyvyys(o[1], o[2] == "paalle");
+                    Debug.Log($"MATKAKIRJA kerrokset: {o[1]} {o[2]} (linssinimet voimassa {kk.Linssinimet})");
+                    break;
+                }
                 case "renkaat":
                     if (o[1] == "pois") merkit.Renkaat(null, null);
                     else merkit.Renkaat(o[1].Split(','), o.Length > 2 ? o[2] : null);

@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet", "varitaso", "aariviiva". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva", "linssinimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -141,7 +141,9 @@ namespace Matkakirja
                     // Web: maan kehä pois linssin ajaksi samalla portilla kuin kaupunkipisteet
                     // (js/pallolauta/lauta.js linssiPaalla; LinssiOhjain.Pelikerrokset ja maatila piilottavat kaupungit).
                     if (maaraja != null) maaraja.Linssit(!nakyy);
+                    PaivitaLinssinimet();
                     break;
+                case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
                 case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
                 case "reitit": if (reitit != null) reitit.Nakyvat(nakyy); break;
@@ -151,6 +153,27 @@ namespace Matkakirja
                 case "valot": { var av = FindAnyObjectByType<AiheValot>(); if (av != null) av.Nakyvat(nakyy); break; }
                 default: Debug.LogWarning("MATKAKIRJA kerrokset: tuntematon kerros " + kerros); break;
             }
+        }
+
+        bool linssinimet;
+
+        /// <summary>
+        /// LINSSINIMET päällä (pyydetty avaimella "linssinimet") ja voimassa: "kaupungit" on pois eli linssi on
+        /// piilottanut pelikerrokset. Pelikerrosten palatessa tila purkautuu itsestään, vaikka pyyntö jäisi päälle.
+        /// </summary>
+        public bool Linssinimet => linssinimet && merkit != null && !merkit.merkitNakyvat;
+
+        /// <summary>
+        /// Webin linssikartan nimet (Linssiseppä, build 10): kaupunkipisteet ja -nimet (KaupunkiMerkit.LinssiNimet)
+        /// ja nostot nimineen (NostoKerros.LinssiNimet) ilman napautuksia ja ilman maan kehää. Merinimiä natiivissa
+        /// ei vielä ole (RAJAPINTA luku 4).
+        /// </summary>
+        void PaivitaLinssinimet()
+        {
+            bool tila = Linssinimet;
+            if (merkit != null) merkit.LinssiNimet(tila);
+            var nk = NostoKerros.Instanssi;
+            if (nk != null) nk.LinssiNimet = tila;
         }
 
         /// <summary>
