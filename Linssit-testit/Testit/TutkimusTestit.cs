@@ -248,6 +248,30 @@ namespace Matkakirja.Linssit.Testit
             l.Sulje();
         }
 
+        [Testi] static void TestikomentoVieSuoraanTutkimukseen()
+        {
+            var (v, t) = Virrat();
+            var a = NostoKentatTestit.Aineisto();
+            foreach (var vaihe in new[] { "ennen vanoja", "ennen esitystä", "kesken esityksen" })
+            {
+                var y = new ValeYmparisto();
+                var nakyma = new EsitysAjoTestit.ValeNakyma(y);
+                var n = new ValeTutkimus();
+                var l = new IhmisenMatkaLinssi(a, null, nakyma, null) { TutkimuksenNakyma = n, Itsestaan = vaihe != "ennen esitystä" };
+                l.Avaa(y);
+                if (vaihe != "ennen vanoja") l.AsetaVanat(t, v.Virrat);
+                if (vaihe == "kesken esityksen") for (int i = 0; i < 60 * 30; i++) { y.Kello += 1 / 60.0; l.Paivita(); }
+                Oleta.Tosi(l.SiirryTutkimukseen(), vaihe);
+                if (vaihe == "ennen vanoja") { Oleta.Sama(null, l.Tutkimus, "odottaa vanoja"); l.AsetaVanat(t, v.Virrat); }
+                Oleta.Tosi(l.Esitys.Paattynyt && l.Tutkimus != null && n.Napit && n.Nostot.Count == 40, vaihe + ": tutkimusvaihe auki");
+                Oleta.Sama(false, l.Esitys.MustaPaalla, vaihe + ": ei mustaa");
+                if (vaihe == "kesken esityksen")
+                    Oleta.Tosi(a.Kertomus.Where(j => j.Kohde != null).All(j => nakyma.Loki.Any(r => r.mita == "sytyta " + j.Kohde)), "kaikki löytöpaikat syttyivät");
+                Oleta.Tosi(l.SiirryTutkimukseen(), "toinen kutsu ei tee mitään");
+                l.Sulje();
+            }
+        }
+
         static void Lahella(double odotettu, double saatu, string mita, double tol = 1e-9)
         {
             if (Math.Abs(odotettu - saatu) > tol * Math.Max(1, Math.Abs(odotettu)))
