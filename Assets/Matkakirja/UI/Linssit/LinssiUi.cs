@@ -55,6 +55,7 @@ namespace Matkakirja.Natiivi
         public LinssiUi(UiKerros kerros, UiNakymat ui)
         {
             this.ui = ui;
+            kerros.JokaRuutu += AjaOdottava;
             Peite = new LinssiPeite(kerros);
             Selite = new LinssiSelite(kerros);
             Valitsin = new Linssivalitsin(kerros);
@@ -147,6 +148,30 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Rekisterin Vaihtui: uusi auki oleva linssi tai null.</summary>
+        Action odottava;
+        int odottavanKehys;
+
+        /// <summary>Ajaa toiminnon aikaisintaan seuraavassa kehyksessä (uusi korvaa odottavan).</summary>
+        void SeuraavaKehys(Action a)
+        {
+            odottava = a;
+            odottavanKehys = Time.frameCount;
+        }
+
+        void AjaOdottava()
+        {
+            if (odottava == null || Time.frameCount <= odottavanKehys) return;
+            var a = odottava;
+            odottava = null;
+            a();
+        }
+
+        // Piikkiseurannan merkit (KehysPiikit suodattaa nimen "UI"-alkuosasta).
+        static readonly Unity.Profiling.ProfilerMarker MerkkiAikajana = new Unity.Profiling.ProfilerMarker("UI.Linssi.Aikajana");
+        static readonly Unity.Profiling.ProfilerMarker MerkkiSelite = new Unity.Profiling.ProfilerMarker("UI.Linssi.Selite");
+        static readonly Unity.Profiling.ProfilerMarker MerkkiMaat = new Unity.Profiling.ProfilerMarker("UI.Linssi.Maat");
+        static readonly Unity.Profiling.ProfilerMarker MerkkiRadio = new Unity.Profiling.ProfilerMarker("UI.Linssi.Radio");
+
         void Vaihtui(ILinssi linssi)
         {
             // Vaihtui voi tulla LinssiOhjaimen komennoista; UI:ta muutetaan vain pääsäikeessä,
@@ -166,7 +191,9 @@ namespace Matkakirja.Natiivi
             // Linssin vaihtuessa pilleri esiin kuten ennenkin; peittäjät ilmoittavat itsensä uudelleen.
             kuvaPeittaa = arkkiPeittaa = false;
             PaivitaSulku();
-            Selite.Nayta(linssi?.Tiedot);
+            // Selite, maat ja radio seuraavaan kehykseen (keksintöjen avaus 11,4 ms yhdessä kehyksessä,
+            // Linssisepän piikkiajo 2); aikajana heti, koska sen palkki korvaa yläpalkin tässä kehyksessä.
+            if (!paalla) using (MerkkiSelite.Auto()) Selite.Nayta(null);
             // Astronautin kamera (Linssisepän kuvaus 23.9.2026): yläpalkki piiloon, vain ✕
             // oikeassa yläkulmassa; Livialle kypärä.
             bool astro = id == AstronauttiId;
@@ -178,11 +205,25 @@ namespace Matkakirja.Natiivi
             Valitsin.NaytaNappi(!astro && !aikajana);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
-            Maat.Kytke(linssi);
-            Aikajana.Kytke(linssi);
-            Aikajana.VahdiValikkoa(); // hampurilainen korvaa pillerin jo tässä ruudussa
-            Radio.Kytke(linssi);
-            if (!paalla) Peite.Aseta(false);
+            using (MerkkiAikajana.Auto())
+            {
+                Aikajana.Kytke(linssi);
+                Aikajana.VahdiValikkoa(); // hampurilainen korvaa pillerin jo tässä ruudussa
+            }
+            if (!paalla)
+            {
+                using (MerkkiMaat.Auto()) Maat.Kytke(null);
+                using (MerkkiRadio.Auto()) Radio.Kytke(null);
+                Peite.Aseta(false);
+                return;
+            }
+            SeuraavaKehys(() =>
+            {
+                if (Auki != linssi) return;
+                using (MerkkiSelite.Auto()) Selite.Nayta(linssi.Tiedot);
+                using (MerkkiMaat.Auto()) Maat.Kytke(linssi);
+                using (MerkkiRadio.Auto()) Radio.Kytke(linssi);
+            });
         }
 
         /// <summary>
