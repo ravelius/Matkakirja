@@ -220,8 +220,8 @@ namespace Matkakirja.Editori
             nimet.kierto = kierto;
             nimet.merkit = merkit;
             nimet.nappula = nappula;
-            nimet.fonttiPysty = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(NimiFonttiPysty);
-            nimet.fonttiKursiivi = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(NimiFonttiKursiivi);
+            nimet.fonttiPysty = Fontti(NimiTtfPysty, NimiFonttiPysty, "LiberationSerif-Regular SDF");
+            nimet.fonttiKursiivi = Fontti(NimiTtfKursiivi, NimiFonttiKursiivi, "LiberationSerif-Italic SDF");
             // ZTest Always kuten Rajaviiva: maahan painettu teksti ei jää korotetun maaston alle. Viite vie varjostimen käännökseen.
             nimet.varjostin = Shader.Find("TextMeshPro/Distance Field Overlay");
             nimet.aaltoMateriaali = Materiaali("Aaltomerkki", "Matkakirja/Rajaviiva", new Color(58 / 255f, 66 / 255f, 84 / 255f, 0.62f));
@@ -292,6 +292,9 @@ namespace Matkakirja.Editori
         /// <summary>Aluenimien fontit (Nimikerros.fonttiPysty ja fonttiKursiivi): Liberation Serif SDF, kun Natiiviseppä on ne tehnyt.</summary>
         public const string NimiFonttiPysty = "Assets/Matkakirja/Fontit/LiberationSerif-Regular SDF.asset";
         public const string NimiFonttiKursiivi = "Assets/Matkakirja/Fontit/LiberationSerif-Italic SDF.asset";
+        /// <summary>Liberation Serif 2.1.5 (SIL OFL 1.1, Fontit/LiberationSerif-OFL.txt; lähde ja SHA-256 Fontit/LiberationSerif-LAHDE.txt).</summary>
+        public const string NimiTtfPysty = "Assets/Matkakirja/Fontit/LiberationSerif-Regular.ttf";
+        public const string NimiTtfKursiivi = "Assets/Matkakirja/Fontit/LiberationSerif-Italic.ttf";
 
         public const string FonttiTiedosto = "Assets/Matkakirja/Fontit/EBGaramond.ttf";
         public const string FonttiAsset = "Assets/Matkakirja/Fontit/EBGaramond SDF.asset";
@@ -300,22 +303,26 @@ namespace Matkakirja.Editori
         /// EB Garamond (OFL, Fontit/OFL.txt) TextMeshPro-fonttina. Atlas täyttyy
         /// dynaamisesti ajossa, joten kaikki nimien merkit (á ä é ö š ž ’) toimivat.
         /// </summary>
-        static TMPro.TMP_FontAsset Fontti()
+        static TMPro.TMP_FontAsset Fontti() => Fontti(FonttiTiedosto, FonttiAsset, "EBGaramond SDF")
+            ?? throw new Exception("Fonttia ei löydy: " + FonttiTiedosto);
+
+        /// <summary>TTF → dynaaminen SDF-asset (luodaan kerran; null, jos TTF puuttuu).</summary>
+        static TMPro.TMP_FontAsset Fontti(string ttfPolku, string assetPolku, string nimi)
         {
-            var olemassa = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+            var olemassa = AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(assetPolku);
             if (olemassa != null) return olemassa;
-            var ttf = AssetDatabase.LoadAssetAtPath<Font>(FonttiTiedosto)
-                ?? throw new Exception("Fonttia ei löydy: " + FonttiTiedosto);
+            var ttf = AssetDatabase.LoadAssetAtPath<Font>(ttfPolku);
+            if (ttf == null) return null;
             var fa = TMPro.TMP_FontAsset.CreateFontAsset(ttf, 90, 9,
                 UnityEngine.TextCore.LowLevel.GlyphRenderMode.SDFAA, 1024, 1024,
                 TMPro.AtlasPopulationMode.Dynamic, true);
-            fa.name = "EBGaramond SDF";
-            AssetDatabase.CreateAsset(fa, FonttiAsset);
-            fa.material.name = "EBGaramond SDF Material";
+            fa.name = nimi;
+            AssetDatabase.CreateAsset(fa, assetPolku);
+            fa.material.name = nimi + " Material";
             AssetDatabase.AddObjectToAsset(fa.material, fa);
-            foreach (var t in fa.atlasTextures) { t.name = "EBGaramond SDF Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
+            foreach (var t in fa.atlasTextures) { t.name = nimi + " Atlas"; AssetDatabase.AddObjectToAsset(t, fa); }
             AssetDatabase.SaveAssets();
-            return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(FonttiAsset);
+            return AssetDatabase.LoadAssetAtPath<TMPro.TMP_FontAsset>(assetPolku);
         }
 
         static Material Viiva(string nimi, Color vari, float paksuus, Vector4 katko)
