@@ -92,6 +92,14 @@ export function demHakemisto(kansio, avaa = avaaGeotiff) {
   };
   return {
     ruutuja: polut.size,
+    /*
+     * Onko 1°-ruutu (lat, lon = lounaisnurkan kokonaisluvut) kansiossa?
+     * Pyramidin syvät tasot (dem-ikkuna.mjs, 23.9.2026) tarvitsevat eron
+     * "ruutu puuttuu" ja "korkeus on 0 m" välillä: puuttuva ruutu ei ole
+     * merenpinta vaan paikka, jossa käytetään vanhaa 1′-aineistoa.
+     * Ei avaa tiedostoa, joten `korkeus` pysyy entisellään (puuttuva = 0).
+     */
+    onRuutu: (lat, lon) => polut.has(`${lat},${lon}`),
     /** Korkeus (m) näytevälille `vali` (asteina) sopivalta tasolta. */
     korkeus(lon, lat, vali) {
       const g = ruutu(Math.floor(lat), Math.floor(lon));

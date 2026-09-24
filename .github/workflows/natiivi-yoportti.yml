@@ -1,0 +1,94 @@
+# NATIIVIN YÖPORTTI (Pelikoodari 23.9.2026, Fablen tilaus: natiivin CI-portti nightly-putkeen).
+#
+# Natiivi peli (Unity-proto) ei ole tässä repossa: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+# (oma paikallinen git, ei GitHub-remotea; ks. proto3d-testflight.yml). Siksi portti ajetaan
+# Mac Studion self-hosted-ajurilla kerran yössä ja käsin, ja se tarkistaa proton MASTERIN:
+#
+#   1. Pelilogiikan testit ilman editoria: Peli-testit/kaanna.sh (puhdas C#, kultaiset jäljet;
+#      paluukoodi = epäonnistuneiden määrä).
+#   2. Unity-käännöstarkistus ilman editoria: tyokalut/tarkista.sh (Peli-testit/unity-tarkistus.sh;
+#      paluukoodi 1, jos yksikin error CS). Pakettien assemblyt luetaan proton Library-kansiosta.
+#   3. Kultaisten jälkien vartija verkkopelin mainia vasten: tests/natiivi-kultaiset.test.mjs
+#      (tools/natiivi-kultaiset/tee-*.mjs, tiivisteet.json) ja se, että vartijan kopiot
+#      skripteistä ovat samat kuin proton masterin Peli-testit/Kultaiset/tee-*.mjs.
+#
+# Proto kopioidaan `git archive master` -komennolla väliaikaiskansioon, joten ajo ei koske
+# proton työkopioon eikä sen .git-kansioon (ei worktreetä, ei Library-kirjoitusta).
+#
+# Ei PR-laukaisua: repo on julkinen, eikä vieras koodi saa päästä Macille (vrt. savukkeet.yml).
+# Sama Mac ajaa savukkeet, poltot ja Unity-viennin: yhteinen jonoryhmä, yksi raskas ajo kerrallaan.
+# Ajo on kevyt (noin 2–4 min) ja ajoitettu ennen savukkeiden täyttä sarjaa (03.00 UTC).
+
+name: Natiivin yöportti
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: savukkeet-mac-macilla
+  cancel-in-progress: false
+
+jobs:
+  natiivi:
+    name: Proton master — testit, käännös ja kultaiset jäljet
+    if: github.event_name == 'schedule' || github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    timeout-minutes: 30
+    env:
+      PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+      NODE_USE_ENV_PROXY: '1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Homebrew polkuun
+        run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
+
+      - name: Proton master väliaikaiskansioon
+        run: |
+          set -euo pipefail
+          PROTO="$RUNNER_TEMP/proto-master"
+          rm -rf "$PROTO" && mkdir -p "$PROTO"
+          git -C "$PROJEKTI" archive master | tar -x -C "$PROTO"
+          echo "PROTO=$PROTO" >> "$GITHUB_ENV"
+          echo "Proton master: $(git -C "$PROJEKTI" log -1 --format='%h %ci %s' master)"
+
+      - name: Pelilogiikan testit (Peli-testit/kaanna.sh)
+        run: |
+          set -euo pipefail
+          cd "$PROTO/Peli-testit"
+          ./kaanna.sh > "$RUNNER_TEMP/kaanna.txt" 2>&1 || { grep -E "FAIL|error" "$RUNNER_TEMP/kaanna.txt" | head -40; tail -3 "$RUNNER_TEMP/kaanna.txt"; exit 1; }
+          tail -1 "$RUNNER_TEMP/kaanna.txt"
+
+      - name: Unity-käännöstarkistus (tyokalut/tarkista.sh)
+        run: |
+          set -euo pipefail
+          # Pakettien assemblyt (Cesium, UGUI, Input System …) proton omasta Librarystä.
+          export MATKAKIRJA_KIRJASTOT="$PROJEKTI/Library/ScriptAssemblies"
+          cd "$PROTO"
+          zsh tyokalut/tarkista.sh
+
+      - name: Kultaisten jälkien vartija ja kopioiden täsmäys
+        run: |
+          set -euo pipefail
+          node --test tests/natiivi-kultaiset.test.mjs
+          ero=0
+          for f in "$PROTO"/Peli-testit/Kultaiset/tee-*.mjs; do
+            b=$(basename "$f")
+            if [ ! -f "tools/natiivi-kultaiset/$b" ]; then echo "::error::$b puuttuu vartijasta (tools/natiivi-kultaiset/)"; ero=1
+            elif ! cmp -s "$f" "tools/natiivi-kultaiset/$b"; then echo "::error::$b eroaa proton masterista"; ero=1; fi
+          done
+          for f in tools/natiivi-kultaiset/tee-*.mjs; do
+            b=$(basename "$f")
+            [ -f "$PROTO/Peli-testit/Kultaiset/$b" ] || { echo "::error::$b on vartijassa mutta ei proton masterissa"; ero=1; }
+          done
+          [ "$ero" = 0 ] && echo "Vartijan skriptit täsmäävät proton masteriin."
+          exit "$ero"
+
+      - name: Siivous
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/proto-master"

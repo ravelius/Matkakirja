@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2182, teksti: 'Kohdekartta: Kalgoorlie (#3075)' },
+  { v: 2181, teksti: 'Lehtikuori: ?lehti=<kaupunki> pelkkä kaupunkile… (#2942)' },
+  { v: 2180, teksti: 'Sähke ja pulla natiivin mukaisiksi (#2997)' },
+  { v: 2179, teksti: 'Reliefipyramidin osoitin 20260924 (#3044)' },
+  { v: 2178, teksti: 'Syvät tasot z9–z10 DEM-reliefillä (#2962)' },
+  { v: 2177, teksti: 'Afrikan faktakorjaukset: Big Hole, Suakin, Vict… (#2973)' },
   { v: 2176, teksti: 'Äänille sama lisenssiportti kuin kuville: NC/ND… (#2898)' },
   { v: 2175, teksti: 'Sisältöpaketti 1.27–1.30: työhuone, tilastot, m… (#3030)' },
   { v: 2174, teksti: 'Herokuvien pohjaviitteet näkyviin: 60 heroa, 24… (#2918)' },
