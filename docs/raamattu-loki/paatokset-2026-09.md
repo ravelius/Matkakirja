@@ -4591,3 +4591,7 @@ Natiivi-UI kysyi klo 20.3x: webissä Havainnekuva-merkintä näkyy kohdekortissa
 ## BUILD 11 (1c8cdab) KAATUU TODENNAKOISESTI KAYNNISTYKSESSA (Pulu.Oikea LUKEE LEHDEN TILAA ENNEN LEHTEA, NRE) → JULKAISIJA KESKEYTTAA TAI EI JAA; KORJAUS natiivi-ui 323a0b5, UUSI SHA NATIIVISEPALTA (24.9.2026 klo 20.31)
 
 Natiiviseppä klo 20.3x: build 11 (proto-master 1c8cdab) kaatuu todennäköisesti käynnistyksessä — Pulu.Oikea lukee lehden tilaa ennen kuin lehti on olemassa, NRE katkaisee UI:n rakentamisen (Natiivi-UI näki saman b11l:ssä). Korjaus natiivi-ui 323a0b5 (yksi rivi). Natiiviseppä pyysi Julkaisijaa keskeyttämään ajon tai jättämään buildin jakamatta; viennin jälkeen merge, käynnistyksen varmistus omassa simulaattorissa ja uusi SHA → Julkaisija ajaa 1.0.11 uudestaan. Build 12 etenee: mastoagentti (Opus) haarassa, kamerareitti 6c2378e odottaa Unityn vapautumista. Oppi: ennen SHA:n ilmoitusta käynnistys omassa simulaattorissa (tarkista.sh ei kata ajonaikaista NRE:tä).
+
+## JULKAISIJA PERUI BUILD 11 -AJON 36034131150 ENNEN VIENTIA (Pulu.cs:111 NRE); LASKURI 10; UUSINTA HETI UUDESTA SHA:STA ILMAN ERILLISTA KASKYA (24.9.2026 klo 20.32)
+
+Julkaisija perui ajon 36034131150 (1c8cdab) jonosta ennen Unity-vientiä; mitään ei ladattu, laskuri yhä 10. Fable: Julkaisija ajaa 1.0.11:n heti kun Natiiviseppä lähettää korjatun SHA:n (323a0b5 mergettynä ja käynnistys varmistettu simulaattorissa), ilman erillistä käskyä.
