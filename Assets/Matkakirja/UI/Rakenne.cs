@@ -250,7 +250,11 @@ namespace Matkakirja.Natiivi
             if (ala.hierarchy.parent != this) hierarchy.Add(ala);
             var st = ala.style;
             st.position = Position.Absolute;
-            st.left = -vasen; st.right = -oikea; st.top = -yla; st.bottom = -ala_;
+            // Absoluuttinen lapsi asemoidaan reunuksen sisäpuolelta: reunus lisätään, muuten ala jää 2 pt vajaaksi
+            // (iPad-mittaus 24.9.: 42 × 42, alku bound + 1).
+            var rs = resolvedStyle;
+            st.left = -(vasen + rs.borderLeftWidth); st.right = -(oikea + rs.borderRightWidth);
+            st.top = -(yla + rs.borderTopWidth); st.bottom = -(ala_ + rs.borderBottomWidth);
         }
 
         /// <summary>Clickable hyväksyy irrotuksen samalta laajennetulta alueelta (hallittu tarkistus).</summary>
