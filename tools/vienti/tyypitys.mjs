@@ -26,8 +26,25 @@ export const RAAKA_VASTINEET = {
   paikkatiedot: { text: 'teksti', voice: 'aani', source: 'lahde' },
   saapumispuheet: { name: 'nimi', slogan: 'iskulause', text: 'teksti', duration: 'kesto', singleTake: 'yksiOtto' },
   kohtaamiset: { frame: 'kehys' },
-  julisteet: { tiedosto: 'kuva' },
+  julisteet: { tiedosto: 'kuva', kaupunki: 'nimi' },
+  kohtaamiskuvat: { kaupunki: 'kaupunginNimi' },
   tapahtumat: { text: 'teksti', effect: 'vaikutus' },
+};
+
+/**
+ * Samanniminen päätason kenttä, joka on raakaa rikkaampi (tyypitetty): kuvat
+ * olioina, tarinakaaren kysymys, paikallisaarteet, fokusvirtojen lehtitehtävien
+ * id:t. Sisältövertailu (1.x vs 2.0) ei vaadi näiltä samaa arvoa.
+ */
+export const TYYPITETYT = {
+  elaintayt: ['kuva', 'kuvat'], nahtavyydet: ['kuvat'], paikallisaarteet: ['isoAarre', 'pieniAarre'],
+  tarinakaari: ['kysymys'], fokusvirrat: ['lehtitehtavat'],
+};
+
+/** Kokoelmat, joiden raaka data ei ole olio: raaka → päätason kenttä. */
+export const RAAKA_KOKONAAN = {
+  kaupunkilehdet: 'aiheet ja kansi', maalehdet: 'aiheet', miniatyyrit: 'kuva', paikkatiedot: 'teksti (merkkijono-data)',
+  pulmaaineisto: 'aineisto (sama arvo)',
 };
 const poimi = (d, avaimet) => Object.fromEntries(avaimet.map(([ulos, sisaan = ulos]) => [ulos, nollaksi(d?.[sisaan])]));
 
@@ -137,11 +154,13 @@ export function tyypitaLoput(kokoelmat) {
   // yksittäiset kentät. RAAKA_VASTINEET kertoo kentät, joilla on eri niminen päätaso.
   nostaLoput('linssiaineisto');
   for (const a of kokoelmat.tarinakaari.alkiot) Object.assign(a, poimi(a.data, [['kuva'], ['lauta'], ['saapumisLuenta']]));
-  for (const a of kokoelmat.kohtaamiskuvat.alkiot) Object.assign(a, poimi(a.data, [['kansio'], ['tiedosto']]));
+  for (const a of kokoelmat.kohtaamiskuvat.alkiot) Object.assign(a, poimi(a.data, [['kansio'], ['tiedosto'], ['kaupunginNimi', 'kaupunki']]));
   for (const a of kokoelmat.tapahtumat.alkiot) Object.assign(a, poimi(a.data, [['teksti', 'text'], ['vaikutus', 'effect']]));
   kokoelmat.tarinakaari.kuvaus += ' Skeema 1.32: päätasolla myös kuva, lauta ja saapumisLuenta.';
-  kokoelmat.kohtaamiskuvat.kuvaus += ' Skeema 1.32: päätasolla myös kansio ja tiedosto (url on valmis osoite).';
+  kokoelmat.kohtaamiskuvat.kuvaus += ' Skeema 1.32: päätasolla myös kansio, tiedosto (url on valmis osoite) ja kaupunginNimi (kaupunki = id).';
   kokoelmat.tapahtumat.kuvaus += ' Skeema 1.32: päätasolla teksti ja vaikutus (= webin effect sellaisenaan).';
+  for (const a of kokoelmat.pulmaaineisto.alkiot) a.aineisto = nollaksi(a.data);
+  kokoelmat.pulmaaineisto.kuvaus += ' Skeema 1.32: päätasolla aineisto = pulman taulukko sellaisenaan (= data).';
 
   for (const a of kokoelmat.kaupungit.alkiot) {
     const d = a.data ?? {};

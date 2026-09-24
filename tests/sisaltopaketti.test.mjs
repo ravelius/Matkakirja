@@ -1143,3 +1143,50 @@ test('2.0-julkaisu: osoitin sisalto/2/, oma tarkistus', async () => {
   rikki.set('kokoelmat/kaupungit.json', tiedostot.get('kokoelmat/kaupungit.json'));
   assert.ok(tarkistaMajor2(rikki).length > 0);
 });
+
+test('1.x ja 2.0: sama sisältö (Fablen pyyntö 24.9.2026)', async () => {
+  const { johdaMajor2, onNatiivinModuuli } = await import('../tools/vienti/major2.mjs');
+  const { RAAKA_VASTINEET, TYYPITETYT, RAAKA_KOKONAAN } = await import('../tools/vienti/tyypitys.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  const tag = (s) => s.replaceAll('matkakirja-vienti/1/', 'matkakirja-vienti/2/').replaceAll('https://matkakirja.app/vienti/1/', 'https://matkakirja.app/vienti/2/');
+  const m1 = JSON.parse(tiedostot.get('manifest.json'));
+  const ENG = ['name', 'symbol', 'value', 'color'];
+  const ilmanEng = (o) => (o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).map(([k, t]) => [k, Object.fromEntries(Object.entries(t).filter(([a]) => !ENG.includes(a)))])) : o);
+  for (const { nimi, tiedosto } of m1.kokoelmat) {
+    const k1 = JSON.parse(tiedostot.get(tiedosto));
+    const k2 = JSON.parse(t2.get(tiedosto));
+    assert.equal(k2.alkiot.length, k1.alkiot.length, nimi);
+    k1.alkiot.forEach((a, i) => {
+      const { data, ...ilman } = a;
+      if (nimi === 'laatat') {
+        ilman.tyypit = ilmanEng(ilman.tyypit);
+        if (ilman.mannerTyypit) ilman.mannerTyypit = Object.fromEntries(Object.entries(ilman.mannerTyypit).map(([mm, t]) => [mm, ilmanEng(t)]));
+      }
+      assert.deepEqual(k2.alkiot[i], ilman, `${nimi}/${a.id}: 2.0-alkio = 1.x ilman dataa`);
+      // Raakadatan jokainen tieto on 2.0:ssa: sama nimi ja arvo, eri niminen vastine tai tyypitetty kenttä.
+      if (data && typeof data === 'object' && !Array.isArray(data)) {
+        for (const [kk, v] of Object.entries(data)) {
+          if (RAAKA_VASTINEET[nimi]?.[kk] || TYYPITETYT[nimi]?.includes(kk)) continue;
+          assert.deepEqual(k2.alkiot[i][kk], v, `${nimi}/${a.id}.${kk}`);
+        }
+      } else if (data != null) {
+        assert.ok(RAAKA_KOKONAAN[nimi], `${nimi}: ei-olio-data ilman vastinetta`);
+      }
+    });
+    if (nimi === 'julisteet') for (const a of k1.alkiot) assert.equal(a.nimi, a.data.kaupunki);
+    if (nimi === 'kohtaamiskuvat') for (const a of k1.alkiot) assert.equal(a.kaupunginNimi, a.data.kaupunki ?? null);
+    if (nimi === 'paikkatiedot') for (const a of k1.alkiot) if (typeof a.data === 'string') assert.equal(a.teksti, a.data);
+    if (nimi === 'pulmaaineisto') for (const a of k1.alkiot) assert.deepEqual(a.aineisto, a.data);
+    if (nimi === 'miniatyyrit') for (const a of k1.alkiot) assert.equal(a.kuva?.arvo, a.data, a.id);
+  }
+  for (const mo of m1.moduulit) {
+    if (onNatiivinModuuli(mo.moduuli)) assert.equal(t2.get(mo.tiedosto), tag(tiedostot.get(mo.tiedosto)), mo.moduuli);
+    else assert.ok(!t2.has(mo.tiedosto), mo.moduuli);
+  }
+  const med1 = JSON.parse(tiedostot.get(m1.media.tiedosto)).viitteet;
+  const med2 = JSON.parse(t2.get(m1.media.tiedosto)).viitteet;
+  assert.deepEqual(med2, med1.map(({ esiintymat, ...v }) => v));
+  for (const polku of [m1.offline.tiedosto, m1.lisenssit.tiedosto, ...m1.lisatiedostot.map((l) => l.tiedosto)]) {
+    assert.equal(t2.get(polku), tag(tiedostot.get(polku)), polku);
+  }
+});
