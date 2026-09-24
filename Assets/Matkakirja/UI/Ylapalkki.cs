@@ -87,6 +87,13 @@ namespace Matkakirja.Natiivi
         /// <summary>iPhonella kartan veto piilotti palkin (☰ tuo takaisin).</summary>
         public static bool VetoPiilossa { get; private set; }
 
+        /// <summary>
+        /// Palkki piilossa (vaaka-asento tai iPhonen veto): näkyvissä vain ☰ (omistaja 24.9.: ei kelluvia pillereitä eikä
+        /// nappeja), joten karttaselitteen ja linssien napit piiloutuvat tämän mukaan.
+        /// </summary>
+        public static bool PalkkiPiilossa => Piilossa || VetoPiilossa;
+        public static event Action PalkkiPiilossaMuuttui;
+
         /// <summary>Ylhäältä asemoituvien näkymien varaus turva-alueen yläreunasta (0, kun palkki on piilossa).</summary>
         public static float Varaus => Piilossa ? 0f : kelluvaVaraus ?? Korkeus;
 
@@ -249,6 +256,7 @@ namespace Matkakirja.Natiivi
         {
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
             PaivitaNappi();
+            PalkkiPiilossaMuuttui?.Invoke();
         }
 
         void Asettele()
@@ -270,7 +278,7 @@ namespace Matkakirja.Natiivi
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
             bool p = Piilossa;
-            if (p != piilossa) { piilossa = p; if (!p) Sulje(); }
+            if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
             PaivitaNappi();
         }

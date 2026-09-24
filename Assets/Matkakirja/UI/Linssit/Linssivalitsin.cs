@@ -141,7 +141,8 @@ namespace Matkakirja.Natiivi
         }
 
         void PaivitaNakyvyys() =>
-            nappi.style.display = sallittu && !Valikkona && !Aloitusnakyma.AloitusAuki && (tunnettuja > 0 || testiLinssit != null) ? DisplayStyle.Flex : DisplayStyle.None;
+            nappi.style.display = sallittu && !Valikkona && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa
+                && (tunnettuja > 0 || testiLinssit != null) ? DisplayStyle.Flex : DisplayStyle.None;
 
         /// <summary>Päällä olevan linssin tunnus (null = ei mitään): napin kulta ja rivin korostus.</summary>
         public void Merkitse(string id)
