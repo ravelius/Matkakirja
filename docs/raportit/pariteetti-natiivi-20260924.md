@@ -148,13 +148,23 @@ M5 -sim (503000D1), proto-master f6de924. Kuvat
 Tunnettu: iPad-sumea (kuvien epäterävyys) merkitty korjatuksi build
 8:ssa — ei vielä todennettavissa (build 8 ei asennettuna).
 
+**PÄIVITYS omistajan säännön jälkeen (Raamattu 9ebc5784c, "WEB ON
+MALLI, MITATTUNA", klo 15.5x, sitova):** alla olevat "✅ PASS
+rakenteeltaan" -merkinnät ovat SILMÄMÄÄRÄISIÄ rakennevertailuja, EIVÄT
+mitattuja (px, zoomikynnykset) web–natiivi-kuvapareja uuden säännön
+vaatimalla tavalla — vain rivi 9 (maalehti) on jälkikäteen oikeasti
+mitattu, ja se paljasti aiemmin huomaamattoman palstoituserron. Rivi
+30 (topografia) osoittautui mittauksessa vääräksi — linssi ei ollut
+edes auki. Loput rivit vaativat uusintakierroksen mitattuina ennen
+kuin niitä voi pitää sääntöä noudattavina PASS-merkintöinä.
+
 | Rivi | Näkymä | iPad-tulos |
 |---|---|---|
 | 3 | Lehti: kansi (Marseille) | ✅ PASS. Sama otsikkopino, sama rakenne kuin iPhonella, iPadin leveämpi asettelu näyttää sisällön hyvin skaalattuna. |
 | 4 | Lehti: kansi vieritetty | ✅ PASS. Sama Ennen/Nyt-pari ja Matkaopas-liuska näkyvät, ei havaittuja eroja iPhoneen. |
 | 5 | Lehti: aihesivu (Marseille pintaa syvemmältä) | ✅ PASS. Iso, keskitetty otsikko; sama rakenne kuin korjattu iPhone-versio (ks. rivi 5 yllä). |
 | 8 | Lehti: sisällys | ✅ PASS rakenteeltaan (korttilista näkyy). |
-| 9 | Maalehti (Ranska) | ✅ PASS. PERUSTIEDOT-lohko ikonein ja palkkimittarein täsmää webin/iPhonen versioon, isompi näyttö näyttää sen selkeästi. |
+| 9 | Maalehti (Ranska) | ❌ FAIL — MITATTU ERO (korjattu WEB ON MALLI -säännön jälkeen, alkuperäinen PASS oli rakenne-vertailu, ei mitattu). Web iPad-leveydellä (834×1194, `maalehti-kansi-834x1194.png`) käyttää KAKSIPALSTAISTA asettelua: PERUSTIEDOT-lohko VASEMMALLA (≈601 px / 36 % leveydestä, x≈155-756) ja Ranskan kartta OIKEALLA (≈685 px / 41 %, x≈779-1464), rinnakkain samalla korkeudella. Natiivi näyttää YKSIPALSTAISEN pinon: kartta koko leveydeltä (≈1571 px / 94 %, x≈48-1619) YLHÄÄLLÄ, PERUSTIEDOT-lohko koko leveydeltä ALLA — sama mobiili/iPhone-asettelu myös iPadilla, ei mukaudu leveämpään näyttöön kuten web. Kuvat `maalehti-kansi-834x1194.png` (web), `9-maalehti.png` (natiivi). Reititetty Natiivi-UI:lle. |
 | 10 | Matkakirja auki | ✅ PASS rakenteeltaan (avautuu, `tabletti True, malli iPad17,2` tunnistettu oikein laitteen omassa lokissa). |
 | 11 | Linssi: keksinnöt | ✅ PASS rakenteeltaan (pallo+vuosi+Tauko+kuva), sama kaava kuin iPhonella. Kuva otettu osittain limittäin edellisen näkymän kanssa (testausartefakti, ei pelibugi). |
 | 12 | Linssi: selite | ✅ PASS (näkyy oikean linssin kuvauksena). |
@@ -162,7 +172,7 @@ Tunnettu: iPad-sumea (kuvien epäterävyys) merkitty korjatuksi build
 | 18 | ☰-valikko / linssivalitsin | ✅ PASS. Sama LINSSIT-lista kuin iPhonella, leveämpi kortti hyödyntää iPadin tilaa (kaksi saraketta kuvaus+ikoni). |
 | 22 | Kartta (pallo) | ✅ PASS. |
 | 25 | Nostokortti (Pompeji) | ⚠️ OSITTAINEN: teksti ja LISÄÄ-nappi näkyivät oikein, mutta kuva jäi TYHJÄKSI/latautumattomaksi tässä otoksessa — todennäköisesti simulaattorin verkkoajoitus, ei toistettu uudelleen varmistukseksi. |
-| 30 | Linssi: topografia | ✅ PASS. Sama reliefiväritys kuin iPhonella. |
+| 30 | Linssi: topografia | ⚠️ PERUTTU — EI OIKEASTI TESTATTU (korjaus WEB ON MALLI -tarkistuksessa). Aiempi "PASS" perustui kuvaan jossa LINSSIT-valintapaneeli oli yhä auki portin päällä (ks. sivuhavainto alla) — Topografialinssi itsessään ei koskaan avautunut, kosketus listan riviin ei rekisteröitynyt. Uusinta vaatii oikean kosketuksen peliaikana, ei tehty tässä kierroksessa. |
 | 31 | Linssi: vesistöt | ✅ PASS. Sama jokiviivat. |
 | 37 | Linssi: radio | ✅ PASS rakenteeltaan (dial+asemaverkosto näkyivät, joskin limittäin edellisen näkymän kanssa). |
 
@@ -176,6 +186,9 @@ Kuva `portti-bleed-bug.png`. Voi olla testikomennon (ei aidon
 napin) aiheuttama siirtymäjärjestyksen poikkeama — ei varmistettu
 oikealla kosketusvuorolla. Ilmoitettu Fablelle, ei korjattu.
 
-**Yhteenveto**: 13/15 selvä PASS, 1 osittainen (kuvan latausviive,
-ei toistettu), 1 sivuhavainto (porttijäänne, ei rivi-kohtainen).
-Ei uusia rakenne-eroja iPhoneen verrattuna tällä pistokokeella.
+**Yhteenveto (päivitetty)**: 1 mitattu ja VAHVISTETTU FAIL (rivi 9,
+maalehden palstoitus), 1 mitattaessa PERUTTU (rivi 30, ei oikeasti
+testattu), 11 rakenteeltaan-PASS jotka odottavat mittausta, 1
+osittainen (kuvan latausviive), 1 sivuhavainto (porttijäänne).
+Uusi opetus: rakennevertailu ei riitä — WEB ON MALLI, MITATTUNA
+-sääntö vaatii kuvaparin JA mitat ennen hyväksyntää.
