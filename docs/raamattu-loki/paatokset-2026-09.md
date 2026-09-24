@@ -4691,3 +4691,7 @@ Pelikoodari klo 22.5x: eleet merge-pyynnössä Natiivisepällä (video iPad 13:l
 ## OMISTAJA klo 22.5x: CODEX SIIRTAA KAIKEN DATANSA NAS:IIN (~100 Gt VAPAUTUU), KUVAPUTKI TAUOLLA SIIRRON AJAN (24.9.2026 klo 22.51)
 
 Omistaja käski Codexin siirtää kaiken datansa NAS:iin (Codexin kansiot /Users/samireivinen/Documents/Codex ym., ~82 Gt kotihakemisto); onnistuessaan vapautuu yli 100 Gt. Kuvaputki on tauolla siirron ajan → linssikatalogin täydennyserä 1b ja erä 2 sekä galleria 59 odottavat; Fablen vapautusskriptiä ei ajeta. Postivahti seuraa levyä ja ilmoittaa, kun tila palautuu.
+
+## LAITETESTAAJA: PARITEETTIAJON 1. KIERROKSEN LUKUIHIN EI LUOTETA — RIVI 39 (VERTAILU) NAYTTI RADIOLINSSIN (KOMENTOSEKVENSSIN DESYNC: LINSSI EI SULKEUDU ENNEN SEURAAVAA) → PELIKOODARI KORJAA SKRIPTIN, UUSI AJO ENNEN RAPORTTIA (24.9.2026 klo 22.53)
+
+Laitetestaaja tarkisti b12g-1/raportti.md:n (SAMA 0 / ERI 126 / PUUTTUU 50): rivin 39 natiivikuva näytti radiolinssin, vaikka vertailulinssi on manuaalisesti vahvistettu samaksi. Sama desync-bugi kuin käsikierroksella. Ilmoitettu Pelikoodarille suoraan (pysyvä reititys); Laitetestaaja odottaa korjattua ajoa. Fable: pariteettiajon vartija — jokaisen rivin natiivikuva tarkistetaan peli-tila.json:sta (aktiivinen linssi ja näkymä) ennen kuvaa, muuten rivi merkitään VIRHE eikä ERI.
