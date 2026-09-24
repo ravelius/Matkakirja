@@ -1025,6 +1025,34 @@ const SYVYYSKAYRAPEITTO = Number(valitsin('syvyyskayrapeitto', 0.55));
 const SYVYYSKOHINA_LAUDALLA = valitsin('syvyyskohina', 'pikselit') === 'lauta';
 /** `--paperirae ruutu` — kuitu ja rae POIS laatasta (peli piirtää ne ruutuavaruudessa; ks. maailmapiirto.js paperiRaeRuudulla). */
 const PAPERIRAE_RUUDULLA = valitsin('paperirae', 'poltto') === 'ruutu';
+/*
+ * LÖYDÖS 46 -KOE (Karttaseppä 24.9.2026, kuvavedokset; oletuksena kaikki
+ * pois ja piirto tavulleen entinen — ks. maailmapiirto.js `maskiAA`,
+ * `rantaKerroin`, `reliefi`):
+ *   --maski-aa 4              maan ja meren raja peittosuhteena (N aliriviä)
+ *   --rantaleveys "0:0.5,5:0.8,7:1"   rantaviivan leveyskerroin tasoittain
+ *                             (lähin määritelty taso alapuolelta)
+ *   --reliefi-koe lammin|<json>  monisuuntainen rinnevarjo + rinnevarjostus
+ *                             + lämmin hypsometria (json yhdistyy oletuksiin)
+ *   --dem-kaikki-tasot        --dem myös tasoille z0–z8 (muuten vain z9+)
+ */
+const MASKI_AA = Number(valitsin('maski-aa', 0)) || 0;
+const RANTALEVEYS = valitsin('rantaleveys', null)
+  ? String(valitsin('rantaleveys', null)).split(',').map((p) => p.split(':').map(Number))
+    .filter(([z, k]) => Number.isFinite(z) && k > 0).sort((a, b) => a[0] - b[0])
+  : null;
+const rantaKerroinTasolle = (z) => {
+  if (!RANTALEVEYS) return 1;
+  let k = RANTALEVEYS[0][1];
+  for (const [tz, tk] of RANTALEVEYS) if (tz <= z) k = tk;
+  return k;
+};
+const RELIEFI_KOE = (() => {
+  const v = valitsin('reliefi-koe', null);
+  if (!v) return null;
+  return v === 'lammin' ? {} : JSON.parse(v);
+})();
+const DEM_KAIKKI_TASOT = lippu('dem-kaikki-tasot');
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
@@ -2366,7 +2394,7 @@ const merkkiTasot = tasot.filter((m) => m.z < SYVA_ALIN);
  * DEM KÄYTÖSSÄ vain kun `--dem` on annettu JA ajossa on syviä tasoja;
  * muuten ajo on tavulleen entinen (1′/3′-ruudukko).
  */
-const DEM_KAYTOSSA = Boolean(DEM_KANSIO) && TASOT.some((z) => z >= SYVA_ALIN);
+const DEM_KAYTOSSA = Boolean(DEM_KANSIO) && (DEM_KAIKKI_TASOT || TASOT.some((z) => z >= SYVA_ALIN));
 /** DEM-ikkunan reunus asteina: varjon askel ja bilineaarinen naapuri, ei enempää. */
 const DEM_MARGINAALI = 0.02;
 /** Tason DEM-väli: pikseli pituusasteina (lauta on 360° = projektio.leveys). */
@@ -2693,7 +2721,7 @@ if (!ILMAN_AINEISTOA) {
    * ne eri shardeina (tools/polta-paikallisesti.sh --sarjat syva).
    */
   if (DEM_KAYTOSSA) {
-    const valit = new Set(TASOT.map((z) => (z >= SYVA_ALIN ? demValiTasolle(z) : 'etopo')));
+    const valit = new Set(TASOT.map((z) => ((z >= SYVA_ALIN || DEM_KAIKKI_TASOT) ? demValiTasolle(z) : 'etopo')));
     if (valit.size > 1) {
       console.error(`--dem --tasot ${TASOT.join(',')}: jokainen syvä taso tarvitsee oman `
         + 'DEM-ruudukkonsa, eikä matalaa ja syvää tasoa voi ajaa yhdessä. '
@@ -3964,6 +3992,10 @@ for (const { mitat, bx, by } of lohkot.values()) {
     syvyysKayraPeitto: SYVYYSKAYRAPEITTO,
     syvyysKohinaLaudalla: SYVYYSKOHINA_LAUDALLA,
     paperiRaeRuudulla: PAPERIRAE_RUUDULLA,
+    // Löydös 46 -koe (oletuksena pois).
+    ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(RANTALEVEYS ? { rantaKerroin: rantaKerroinTasolle(mitat.z) } : {}),
+    ...(RELIEFI_KOE ? { reliefi: RELIEFI_KOE } : {}),
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
