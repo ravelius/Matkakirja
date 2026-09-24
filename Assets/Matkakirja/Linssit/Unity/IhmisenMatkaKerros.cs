@@ -102,7 +102,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lasketut vanat piirtoon (kutsutaan, kun taustalaskenta on valmis).</summary>
-        public void AsetaVanat(VanatTulos tulos, VirtaAineisto virrat, Ruutumaski rantamaski)
+        public void AsetaVanat(VanatTulos tulos, VirtaAineisto virrat, Ruutumaski rantamaski, VanaPiirto valmis = null)
         {
             var varjostin = Resources.Load<Shader>("Varjostimet/Vana");
             vanat = gameObject.AddComponent<VanaKerros>();
@@ -110,7 +110,8 @@ namespace Matkakirja.Natiivi
             vanat.varjostin = varjostin;
             vanat.kamera = kierto.GetComponent<Camera>();
             vanat.vahennettyLiike = LinssiOhjain.Instanssi?.VahennettyLiike ?? false;
-            vanat.Aseta(tulos, virrat.Virrat, virrat.Vanat?.Kaista, rantamaski, Ruutumaski.Kulkumaskista(virrat.Maamaski));
+            if (valmis != null) vanat.Aseta(valmis, rantamaski);
+            else vanat.Aseta(tulos, virrat.Virrat, virrat.Vanat?.Kaista, rantamaski, Ruutumaski.Kulkumaskista(virrat.Maamaski));
         }
 
         void Update()

@@ -139,19 +139,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetBuffer(IdJanat, puskuri);
             if (p.MaskiKaytossa && rantamaski?.Maa != null)
             {
-                maskiTekstuuri = new Texture2D(rantamaski.Leveys, rantamaski.Korkeus, TextureFormat.R8, false, true)
-                {
-                    name = "Rantamaski",
-                    wrapModeU = TextureWrapMode.Repeat,
-                    wrapModeV = TextureWrapMode.Clamp,
-                    filterMode = FilterMode.Bilinear,
-                    hideFlags = HideFlags.DontSave,
-                };
-                // Rivi 0 = 90°N tekstuurin ensimmäiseksi riviksi (v = 0), kuten webissä (flipY false).
-                var tavut = new byte[rantamaski.Maa.Length];
-                for (var i = 0; i < tavut.Length; i++) tavut[i] = rantamaski.Maa[i] != 0 ? (byte)255 : (byte)0;
-                maskiTekstuuri.SetPixelData(tavut, 0);
-                maskiTekstuuri.Apply(false, true);
+                maskiTekstuuri = JaettuMaski(rantamaski);
                 materiaali.SetTexture(IdRantamaski, maskiTekstuuri);
             }
             materiaali.SetVector(IdMaski, new Vector4(maskiTekstuuri != null ? 1f : 0f,
@@ -184,12 +172,59 @@ namespace Matkakirja.Natiivi
             puskuri = null;
             if (materiaali != null) Destroy(materiaali);
             materiaali = null;
-            if (maskiTekstuuri != null) Destroy(maskiTekstuuri);
+            // Jaettu rantamaski elää istunnon (JaettuMaski): ei tuhota.
             maskiTekstuuri = null;
             janoja = 0;
         }
 
         void OnDestroy() => Pura();
+
+        // ── Jaettu rantamaski ─────────────────────────────────────────────
+        // 2880 × 1440 R8 -tekstuuri (4 Mt) rakennettiin ja ladattiin GPU:lle jokaisella ihmisen matkan
+        // avauksella (tavumuunnos ~13 ms Macilla, ui piikit 24.9.). Nyt tavut muunnetaan taustasäikeessä
+        // (EsivalmisteleMaski) ja tekstuuri luodaan kerran istunnossa ensimmäisellä käytöllä.
+
+        static Ruutumaski jaetunLahde;
+        static Texture2D jaettu;
+        static System.Threading.Tasks.Task<byte[]> tavutTehtava;
+        static Ruutumaski tavujenLahde;
+
+        static byte[] MaskinTavut(Ruutumaski r)
+        {
+            // Rivi 0 = 90°N tekstuurin ensimmäiseksi riviksi (v = 0), kuten webissä (flipY false).
+            var tavut = new byte[r.Maa.Length];
+            for (var i = 0; i < tavut.Length; i++) tavut[i] = r.Maa[i] != 0 ? (byte)255 : (byte)0;
+            return tavut;
+        }
+
+        /// <summary>Muuntaa rantamaskin tavut taustasäikeessä ennen avausta (LinssiOhjain.IhmisenMatkaSovitin).</summary>
+        public static void EsivalmisteleMaski(Ruutumaski r)
+        {
+            if (r?.Maa == null || r == jaetunLahde || r == tavujenLahde) return;
+            tavujenLahde = r;
+            tavutTehtava = System.Threading.Tasks.Task.Run(() => MaskinTavut(r));
+        }
+
+        static Texture2D JaettuMaski(Ruutumaski r)
+        {
+            if (jaettu != null && jaetunLahde == r) return jaettu;
+            if (jaettu != null) Destroy(jaettu);
+            byte[] tavut = r == tavujenLahde && tavutTehtava is { IsCompleted: true, IsFaulted: false } ? tavutTehtava.Result : MaskinTavut(r);
+            tavutTehtava = null;
+            tavujenLahde = null;
+            jaettu = new Texture2D(r.Leveys, r.Korkeus, TextureFormat.R8, false, true)
+            {
+                name = "Rantamaski",
+                wrapModeU = TextureWrapMode.Repeat,
+                wrapModeV = TextureWrapMode.Clamp,
+                filterMode = FilterMode.Bilinear,
+                hideFlags = HideFlags.DontSave,
+            };
+            jaettu.SetPixelData(tavut, 0);
+            jaettu.Apply(false, true);
+            jaetunLahde = r;
+            return jaettu;
+        }
 
         JanaGpu Gpuksi(in VananJana j)
         {
