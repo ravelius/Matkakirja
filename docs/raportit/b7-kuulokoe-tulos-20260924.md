@@ -82,3 +82,61 @@ Ydinlogiikka (tasonvaihdot tilasta toiseen, oikeat raidat, hiljennykset/
 korostukset) vaikuttaa toimivan oikein niissä kohdissa jotka ehdittiin
 mitata. Ei löytynyt virheitä. Kohdat 3, 4, 9, 11, 12, 13 ja intron
 tasonpalautus (kohta 1 loppuosa) jäävät seuraavaan erään.
+
+## Jatko 24.9.2026 (kohdat 3, 4, 9, 13; kompressori nyt masterissa)
+
+Simulaattori iPhone 18 Pro, ääni Mac Studion kaiuttimiin (palautettu
+Scarlett Solo USB:hen lopuksi). `peli-komento.txt`/`peli-tila.json`.
+
+- **Kohta 9 (tausta/takaisin) PASS**: HOME-nappi taustalle (button HOME),
+  8 s odotus, `simctl launch` takaisin etualalle (SAMA PID 32520 — ei
+  uudelleenkäynnistys). Maiseman `aika` oli pysähtynyt taustalla-ajaksi
+  (odotettua: ei etene kun sovellus jäädytetty), jatkoi normaalisti
+  etualalle palatessa (esim. 36,3 → 116,4 s seuraavassa mittauksessa),
+  ei kaatumista, kartta piirtyi heti oikein. **Ei eroteltu** tarkkaa
+  2,6 s -ristihäivytysikkunaa erikseen — mittaus on liian karkea siihen.
+- **Kohta 4 (jalan/maa-raita) PASS, laiva EI TAVOITETTU**: liftaus-
+  kulkutapa (Lontoo→Edinburgh) sai oman `maisema`-raitansa
+  (aporee-aporee_37194…, eri kuin lennon matkustamoääni), taso ja
+  kompressori kunnossa, `aika` eteni normaalisti, vaihtui oikein
+  saapuessa. `kulkutapa laiva` ei löytänyt yhtään reittiä sen paremmin
+  Madridista kuin Edinburghista (tyhjä vaihtoehtolista, ei rahasyy —
+  300 £ tallella) — jäi testaamatta oikealla reitillä, ei tiedetä onko
+  datapuute vai bugi.
+- **Kohta 3 (mannerlento) EI TAVOITETTU**: kaikki tarjolla olleet
+  lennot olivat lyhyitä Euroopan sisäisiä hyppyjä (Madrid/Berliini/
+  Tukholma, 300 p) sekä alkupelissä (päivä 1) että "uusi-peli"
+  -uusinnan jälkeen — mannerlento vaatii ilmeisesti pidemmälle
+  edennyttä peliä/reittien avautumista. Ei uutta yritystä tällä
+  kierroksella ajan puutteessa.
+- **Kohta 13 (levyvälimuistin kasvu)**: `Library/Caches` pysyi
+  tasan 48 Mt useamman raidanvaihdon/kaupunkikäynnin yli — ei
+  kasvua havaittu tässä lyhyessä istunnossa. `kehysajat.jsonl`:ssä
+  yksi 100 ms -piikki (yli15x 1) komentoja nopeasti peräkkäin
+  ajettaessa; simulaattoriluku, ei tulkittu (ks. yllä oleva varaus
+  simulaattorin GPU:sta).
+- **Kohta 10 (kompressori)**: vahvistettu masterissa — jokaisella
+  aktiivisella kanavalla `kompressori`-kenttä (esim. 2,089)
+  peli-tila.json:ssa.
+
+Jäljellä: kohta 3 (mannerlento, vaatii pidemmälle edenneen pelin),
+laiva-raita (kohta 4), 11 (sanelu) ja 12 (äänettömyys/Bluetooth) —
+11 ja 12 vaativat fyysisen laitteen.
+
+## Jatko 2: kohdat 1, 3, 4 (Pelikoodarin ohjeilla, iPhone-simulaattori)
+
+- **Kohta 4 (laiva) PASS**: `uusi-peli 1 lontoo` → `kulkutapa laiva` →
+  `rivi 0` → `heita`. Kulkutapa "Meri", oma maisema-raita
+  (aporee-aporee_37194…, eri kuin lennon matkustamoääni), kompressori
+  2,089, taso/aika etenivät normaalisti.
+- **Kohta 3 (mannerlento)**: `koetila mannerlento` → tuntematon komento.
+  pelikoodari/koetila ei vielä masterissa, jää seuraavaan kierrokseen.
+- **Kohta 1 (intron nosto/purku) PASS, selvitetty tarkasti**: `luento
+  intro` -sarjalla mitattu pohjan taso ennen/aikana/jälkeen (uusi-peli 1
+  lontoo, pohja vakiintunut 0,01971). Aikana taso oli vakaasti 0,00296 =
+  suhde 0,150 — Pelikoodari vahvisti tämän oikeaksi: kaksi kerrointa
+  yhtä aikaa, avauksen ×0,6 ja kertojan puheväistö ×0,25 (0,6×0,25 =
+  0,150). Palautus: puheen loputtua taso oli jo puolivälissä (0,00855,
+  ~45 %) samalla mittaushetkellä ja täysi 0,01971 saavutettu viimeistään
+  ~2 s:n kohdalla — 1,8 s on rampin KESTO, ei viive ennen palautuksen
+  alkua (oma alkuperäinen oletukseni oli väärä). Ei korjaustarvetta.

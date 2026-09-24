@@ -11,26 +11,39 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  ETULIITE, KUVIA_ENINTAAN, TILAT, kasittele, sallittuOrigin, turvallinenPolku,
-  vertaaSalaisuus,
+  ETULIITE, KUVIA_ENINTAAN, NATIIVIT_OLETUS, TILAT, kasittele, sallittuNatiivi,
+  sallittuOrigin, turvallinenPolku, vertaaSalaisuus,
 } from '../worker/ehdotukset/kasittelija.js';
 
 const PELI = 'https://ravelius.github.io';
 const AVAIN = 'salainen-avain-123';
 
-/** Muistissa elävä R2-ämpäri: put, get ja list samoilla nimillä. */
+/**
+ * Muistissa elävä R2-ämpäri: put, get ja list samoilla nimillä. Etag ja
+ * onlyIf-ehto ovat mukana, jotta myös reaktiolaskurit toimivat sillä.
+ */
 function teeAmpari() {
   const sisalto = new Map();
+  let juokseva = 0;
   return {
     sisalto,
     async put(avain, arvo, asetukset = {}) {
+      const vanha = sisalto.get(avain) ?? null;
+      const ehto = asetukset.onlyIf;
+      if (ehto?.etagMatches && vanha?.etag !== ehto.etagMatches) return null;
+      if (ehto?.etagDoesNotMatch === '*' && vanha) return null;
+      juokseva += 1;
       const tavut = typeof arvo === 'string' ? new TextEncoder().encode(arvo).buffer : arvo;
-      sisalto.set(avain, { tavut, httpMetadata: asetukset.httpMetadata ?? {} });
+      sisalto.set(avain, {
+        tavut, etag: `e${juokseva}`, httpMetadata: asetukset.httpMetadata ?? {},
+      });
+      return { etag: `e${juokseva}` };
     },
     async get(avain) {
       const kohde = sisalto.get(avain);
       if (!kohde) return null;
       return {
+        etag: kohde.etag,
         httpMetadata: kohde.httpMetadata,
         async text() { return new TextDecoder().decode(kohde.tavut); },
         async arrayBuffer() { return kohde.tavut; },
@@ -48,14 +61,14 @@ function teeYmparisto(ampari = teeAmpari()) {
   return { EHDOTUKSET: ampari, EHDOTUS_AVAIN: AVAIN, EHDOTUS_ORIGINIT: PELI };
 }
 
-/** Lomakelähetys pelin originista. */
-function lahetys(kentat = {}, kuvat = [], { origin = PELI } = {}) {
+/** Lomakelähetys pelin originista (tai natiivista: origin null + otsakkeet). */
+function lahetys(kentat = {}, kuvat = [], { origin = PELI, otsakkeet = {}, polku = '/laheta' } = {}) {
   const lomake = new FormData();
   for (const [nimi, arvo] of Object.entries(kentat)) lomake.append(nimi, arvo);
   for (const kuva of kuvat) lomake.append('kuvat', kuva);
-  return new Request('https://esimerkki.workers.dev/laheta', {
+  return new Request(`https://esimerkki.workers.dev${polku}`, {
     method: 'POST',
-    headers: origin ? { origin } : {},
+    headers: { ...(origin ? { origin } : {}), ...otsakkeet },
     body: lomake,
   });
 }
@@ -273,4 +286,159 @@ test('tuntematon tila torjutaan', async () => {
   }), ymparisto);
   assert.equal(vastaus.status, 400);
   assert.ok(TILAT.includes('kuratoitu'));
+});
+
+/* ---------------------------------------------------------------- */
+/* Natiiviportti (natiivi iOS-peli ilman Originia, 23.9.2026)        */
+/* ---------------------------------------------------------------- */
+
+const NATIIVI = 'app.matkakirja.proto3d';
+
+/** Natiivin pelin otsakkeet: tunniste omassa otsakkeessaan ja User-Agentissa. */
+function natiiviOtsakkeet(tunniste = NATIIVI, agentti = `Matkakirja/1.0 (${tunniste})`) {
+  return { 'x-matkakirja-natiivi': tunniste, 'user-agent': agentti };
+}
+
+/** JSON- tai GET-pyyntö natiivista (tai annetusta originista). */
+function natiiviPyynto(polku, { metodi = 'POST', runko = null, origin = null, otsakkeet = natiiviOtsakkeet() } = {}) {
+  return new Request(`https://esimerkki.workers.dev${polku}`, {
+    method: metodi,
+    headers: {
+      ...(origin ? { origin } : {}),
+      ...otsakkeet,
+      ...(runko ? { 'content-type': 'application/json' } : {}),
+    },
+    body: runko ? JSON.stringify(runko) : undefined,
+  });
+}
+
+/** Kelvollinen kuvavinkki (sama kuin tests/kuvavinkki-worker.test.mjs). */
+const KUVAVINKKI = {
+  paikka: 'Ritavuoren muistolaatta, Helsinki',
+  teksti: 'Laatta talon seinässä, helppo ohittaa.',
+  omakuva: 'on',
+  kayttolupa: 'sellaisenaan',
+};
+
+/** Pelaajan kuusi reittiä natiivipyyntöinä; `o` = natiiviPyynto-asetukset. */
+const PELAAJAN_REITIT = {
+  '/laheta': (o = {}) => lahetys({ teksti: 'Natiivista' }, [], { origin: o.origin ?? null, otsakkeet: o.otsakkeet ?? natiiviOtsakkeet() }),
+  '/kuvavinkki': (o = {}) => lahetys(KUVAVINKKI, [teeKuva('laatta.jpg', 'image/jpeg')],
+    { origin: o.origin ?? null, otsakkeet: o.otsakkeet ?? natiiviOtsakkeet(), polku: '/kuvavinkki' }),
+  '/pro-tarkista': (o = {}) => natiiviPyynto('/pro-tarkista',
+    { ...o, runko: { sahkoposti: 'kuka@example.com', koodi: 'AAAAAAAA' } }),
+  '/pro-profiili': (o = {}) => lahetys({ sahkoposti: 'kuka@example.com', koodi: 'AAAAAAAA' }, [],
+    { origin: o.origin ?? null, otsakkeet: o.otsakkeet ?? natiiviOtsakkeet(), polku: '/pro-profiili' }),
+  '/reaktiot': (o = {}) => natiiviPyynto('/reaktiot?kohteet=juttu%3Alontoo', { ...o, metodi: 'GET' }),
+  '/reaktio': (o = {}) => natiiviPyynto('/reaktio',
+    { ...o, runko: { kohde: 'juttu:lontoo', symboli: 'hieno', edellinen: null } }),
+};
+
+test('natiivitunniste vaatii listan ja saman tunnisteen User-Agentissa', () => {
+  const h = (o) => new Headers(o);
+  assert.deepEqual([...NATIIVIT_OLETUS], ['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
+  assert.ok(sallittuNatiivi(h(natiiviOtsakkeet())));
+  assert.ok(sallittuNatiivi(h(natiiviOtsakkeet('app.matkakirja.peli'))));
+  assert.ok(!sallittuNatiivi(h(natiiviOtsakkeet('app.vieras.peli'))));
+  assert.ok(!sallittuNatiivi(h(natiiviOtsakkeet(NATIIVI, 'Mozilla/5.0'))));
+  assert.ok(!sallittuNatiivi(h({ 'user-agent': `Matkakirja/1.0 (${NATIIVI})` })));
+});
+
+test('natiivi ilman Originia pääsee kaikille kuudelle pelaajan reitille', async () => {
+  for (const [polku, teePyynto] of Object.entries(PELAAJAN_REITIT)) {
+    const ymparisto = teeYmparisto();
+    const vastaus = await kasittele(teePyynto(), ymparisto, apurit);
+    const data = await vastaus.json();
+    assert.notEqual(vastaus.status, 403, `${polku}: ${JSON.stringify(data)}`);
+    assert.notEqual(data.virhe, 'Origin ei ole sallittu', polku);
+    // Natiivi ei tarvitse CORSia, eikä sille kaiuteta originia.
+    assert.equal(vastaus.headers.get('access-control-allow-origin'), null, polku);
+  }
+});
+
+test('natiivin lähetys ja kuvavinkki tallentuvat kuten selaimen', async () => {
+  const ampari = teeAmpari();
+  const ymparisto = teeYmparisto(ampari);
+  const laheta = await kasittele(PELAAJAN_REITIT['/laheta'](), ymparisto, apurit);
+  assert.equal(laheta.status, 200);
+  const { kansio } = await laheta.json();
+  const meta = JSON.parse(await (await ampari.get(`${kansio}/meta.json`)).text());
+  assert.equal(meta.teksti, 'Natiivista');
+
+  const vinkki = await kasittele(PELAAJAN_REITIT['/kuvavinkki'](), teeYmparisto(), apurit);
+  assert.equal(vinkki.status, 200, JSON.stringify(await vinkki.clone().json()));
+});
+
+test('natiivin ääni kirjautuu reaktiolaskuriin', async () => {
+  const ymparisto = teeYmparisto();
+  const aani = await kasittele(PELAAJAN_REITIT['/reaktio'](), ymparisto, apurit);
+  assert.equal(aani.status, 200, JSON.stringify(await aani.clone().json()));
+  const haku = await kasittele(PELAAJAN_REITIT['/reaktiot'](), ymparisto, apurit);
+  assert.equal(haku.status, 200);
+  assert.match(JSON.stringify(await haku.json()), /"hieno":1/);
+});
+
+test('natiivin rajat ovat samat kuin selaimen: liian iso kuva torjutaan', async () => {
+  const ampari = teeAmpari();
+  const iso = await kasittele(lahetys({ lisenssivakuutus: 'on' },
+    [teeKuva('a.jpg', 'image/jpeg', 9 * 1024 * 1024)], { origin: null, otsakkeet: natiiviOtsakkeet() }),
+  teeYmparisto(ampari), apurit);
+  assert.equal(iso.status, 413);
+  const monta = Array.from({ length: KUVIA_ENINTAAN + 1 }, (_, i) => teeKuva(`k${i}.jpg`, 'image/jpeg'));
+  const liikaa = await kasittele(lahetys({ lisenssivakuutus: 'on' }, monta,
+    { origin: null, otsakkeet: natiiviOtsakkeet() }), teeYmparisto(ampari), apurit);
+  assert.equal(liikaa.status, 400);
+  assert.equal(ampari.sisalto.size, 0);
+});
+
+test('natiiviportti torjuu väärän tunnisteen, väärän User-Agentin ja puuttuvan otsakkeen', async () => {
+  const torjuttavat = [
+    natiiviOtsakkeet('app.vieras.peli'),
+    natiiviOtsakkeet(NATIIVI, 'curl/8.0'),
+    { 'user-agent': `Matkakirja/1.0 (${NATIIVI})` },
+    {},
+  ];
+  for (const [polku, teePyynto] of Object.entries(PELAAJAN_REITIT)) {
+    for (const otsakkeet of torjuttavat) {
+      const ampari = teeAmpari();
+      const vastaus = await kasittele(teePyynto({ otsakkeet }), teeYmparisto(ampari), apurit);
+      assert.equal(vastaus.status, 403, `${polku} ${JSON.stringify(otsakkeet)}`);
+      assert.equal(ampari.sisalto.size, 0, polku);
+    }
+  }
+});
+
+test('vieras origin ei muutu sallituksi natiiviotsakkeella', async () => {
+  for (const [polku, teePyynto] of Object.entries(PELAAJAN_REITIT)) {
+    const ampari = teeAmpari();
+    const vastaus = await kasittele(teePyynto({ origin: 'https://paha.example' }), teeYmparisto(ampari), apurit);
+    assert.equal(vastaus.status, 403, polku);
+    assert.equal(ampari.sisalto.size, 0, polku);
+  }
+});
+
+test('natiiviotsake ei avaa omistajan avainreittejä', async () => {
+  const { ymparisto } = await ampariKahdella();
+  for (const polku of ['/lista', '/reaktio-lista', '/pro-lista']) {
+    const vastaus = await kasittele(natiiviPyynto(polku, { metodi: 'GET' }), ymparisto);
+    assert.equal(vastaus.status, 401, polku);
+  }
+});
+
+test('natiivi ei saa OPTIONS-esilentoa (ei tarvitse CORSia)', async () => {
+  const vastaus = await kasittele(natiiviPyynto('/laheta', { metodi: 'OPTIONS' }), teeYmparisto());
+  assert.equal(vastaus.status, 403);
+});
+
+test('EHDOTUS_NATIIVIT ohittaa oletuslistan, tyhjä = oletus', async () => {
+  const oma = { ...teeYmparisto(), EHDOTUS_NATIIVIT: ' app.matkakirja.testi , app.muu.peli ' };
+  const hyva = await kasittele(lahetys({ teksti: 'Hei' }, [],
+    { origin: null, otsakkeet: natiiviOtsakkeet('app.matkakirja.testi') }), oma, apurit);
+  assert.equal(hyva.status, 200);
+  const oletus = await kasittele(lahetys({ teksti: 'Hei' }, [],
+    { origin: null, otsakkeet: natiiviOtsakkeet(NATIIVI) }), oma, apurit);
+  assert.equal(oletus.status, 403, 'oletuslistan tunniste ei kelpaa, kun lista on annettu');
+  const tyhja = await kasittele(lahetys({ teksti: 'Hei' }, [],
+    { origin: null, otsakkeet: natiiviOtsakkeet(NATIIVI) }), { ...teeYmparisto(), EHDOTUS_NATIIVIT: '' }, apurit);
+  assert.equal(tyhja.status, 200);
 });
