@@ -28,7 +28,7 @@ Natiivisepän RAJAPINTA.md (proto-3d).*
 | 5 | Vesistöt | vesistot.js (700) | Topografia + joet, järvet (Tasavari), nimet | **= web** (värit webin vakioista). Webin pallolla joet z-taistelevat (pätkittäiset): Fable 24.9.: natiivi pitää yhtenäisen uoman, web korjataan bugina |
 | 6 | Vertailu | vertailu.js, js/vertailu.js, maakayrat.js | Maatila (Natiiviseppä), valinnat, laput, Vertaa | **= web iPadilla 24.9.** (MaaKartta: 1 px reuna, täyttö lineaarisena; maarajat webin muodoin skeema 1.29). Maakäyrät (B18): data paketissa v17+, geometria Ydin/Maat/Maakayrat (= web, 550 osaa), Natiivi-UI piirtää |
 | 7 | Maatiedot | maatiedot.js | Maatila, kaksivaiheinen valinta, maalehti | **= web iPadilla 24.9.** |
-| 8 | **Maailmanradio** | radio.js (2215), radiosoitin.js (1248), viritin.js (1209), pistenaytto.js (1430), packs/radiot.js (115 maata) | Karttatila: yksi kaupunki per maa play-nappina, viritys 2,6 s kolmessa vaiheessa, tasatehoinen ristihäivytys, aidot viritysäänet; omistajan hybridimalli (sallittu soitetaan, linkki → aseman sivu, kielletty → vara-äänite) | Soi iPadilla (luokat, tauko, näyttörivit, omistajalukko). **Kartan ▶-napit webin mukaan tulossa** (LS:n data masterissa 12484c5, Natiivi-UI piirtää) |
+| 8 | **Maailmanradio** | radio.js (2215), radiosoitin.js (1248), viritin.js (1209), pistenaytto.js (1430), packs/radiot.js (115 maata) | Karttatila: yksi kaupunki per maa play-nappina, viritys 2,6 s kolmessa vaiheessa, tasatehoinen ristihäivytys, aidot viritysäänet; omistajan hybridimalli (sallittu soitetaan, linkki → aseman sivu, kielletty → vara-äänite) | **= web iPadilla 24.9.** (3b0c253): ▶-napit, soiva punaisena, ei nimiä eikä nappulaa; luokat, tauko, näyttörivit, omistajalukko |
 | 9 | **Isoisän linssi 1873** | haara karttaseppa-isoisan-linssi (erä 1, a65b2eef2): isoisa-1873.js, valtiot-1873.js, rajat-1873.json | Erä 1: rajat 1873 pallolle (viivat), nimet 1873 nimiöinä, nykyrajat piiloon. Erä 2: Horation reitti katkoviivana, retroasu (seepia, tumma muste). Valokuvat, äänet ja media myöhemmin | **Erä 1 valmis, iPad OK 23.9.** (proto isoisa-1873): 185 rajaa, 133 nimeä, GPL-aineisto ämpärissä matkakirja/linssit/isoisa-1873/20260921/ (LICENSE, lähteet). Nykyrajat pois rajattomalla pohjasarjalla (Fable 23.9.: webin rajanpiilotuksen vastine), kun Karttaseppä saa sen valmiiksi. **Erä 2 puuttuu: ei webissä, odottaa omistajaa** (Fable 23.9. klo 22.4x) |
 
 ## Omistus ja kynnykset (A7, C9)
@@ -91,5 +91,7 @@ kehittäjätila avaavat kaikki.
   LinssiOhjain.Ruutupiste), Natiivi-UI piirtää.
 - Nappi-inventaarion LS-rivi "Kartan valot (napautus)" tehty (valojen-napautus).
 - Pohjakartan ero (natiivi 23a-reliefi, webin pergamentti) hyväksytty: sama laattasarja tulee webiin #2957:llä.
-- Seuraavaksi: täysi regressioajo iPadilla kun radionapit ovat masterissa (proto-3d/lokit/linssit-regressio-<pvm>).
+- Regressiokierros master 3b0c253 (kaikki 9 linssiä, radio mukana): proto-3d/lokit/linssit-regressio-20260924/RAPORTTI.md.
+  Kaikki = web paitsi hyväksytyt (pohjakartta, vesistöjen uoma) ja astronautin ISS-kamera (ei vertailukelpoinen).
+  Avoimet: ihmisen matkan "Kertomus päättyi" -kortti (Natiivi-UI, ei webissä), keksintöjen reiän kulku hypyssä (LS).
 
