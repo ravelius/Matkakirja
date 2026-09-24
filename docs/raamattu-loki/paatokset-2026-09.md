@@ -4479,3 +4479,7 @@ CI:n DEVELOPMENT_TEAM=$TEAM_ID ylikirjoittaa Unityn asetuksen → TestFlight-bui
 ## OMISTAJA klo 19.3x (KORTIT): VARMENNEKORJAUS A (set-key-partition-list login-avainnippuun, OMISTAJA AJAA) JA VANHAN gmail-KEHITYSVARMENTEEN 2RX77QMLHA POISTO (OMISTAJA AJAA) (24.9.2026 klo 19.13)
 
 Ei hakulistan vaihtoa jatkossa; build 11 viedään ilman kiertotietä kun omistaja on ajanut komennot. Natiiviseppä peruuttaa b9755e9:n build 10:n jälkeen (RCD77XPB7M kaikkialla). Karttasepällä ja Fablella pushit odottavat avainnippulistan palautusta (build 10 -ajo).
+
+## BUILD 10 TESTFLIGHTISSA: 1.0.0 (202609241607), PROTO b9755e9 (= f02376b + TIIMIHOTFIX), klo 19.15 (AJO 36025102019); AVAINNIPPUKORJAUS A TEHTY (24.9.2026 klo 19.19)
+
+Hakulista palautunut, gh toimii. Omistaja ajoi set-key-partition-list (ACL:t tarkistettu); 2RX77QMLHA:n poisto vielä kesken. Muutosloki #3111, #3110 mainissa. Natiivi-UI build 11: radiolöydökset 40 ja 42 mergetty (master 6ba26c9), lehti-otsikot + leveä nostokortti mergettävissä (d664f5e), rgba-vaaleus korjattu sRGB-yhdistelminä (selite 71, oli 117); avoinna nostokortin tyyppikuvake (webp → png paketista, Siirtoseppä) ja iPadin vaakataitto ≥ 1100 pt.
