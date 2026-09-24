@@ -47,7 +47,8 @@ namespace Matkakirja.Linssit.Virrat
         {
             var o = alkio as Dictionary<string, object> ?? throw new FormatException("rantamaski: odotettiin objektia");
             // Päätaso ensin; raaka data vain Paatason kautta (RaakaKielletty katkaisee sen, Pelikoodari 24.9.).
-            if (!o.ContainsKey("juoksut") && Matkakirja.Peli.Paataso.Raaka(o) is Dictionary<string, object> data) o = data;
+            // 2.0-skeemassa alkiolla voi olla muiden alkioiden kentät null-arvoina: päätaso kelpaa vain arvolla.
+            if (!(o.TryGetValue("juoksut", out var pj) && pj != null) && Matkakirja.Peli.Paataso.Raaka(o) is Dictionary<string, object> data) o = data;
             var juoksut = o.TryGetValue("juoksut", out var j) ? j as string : null;
             if (juoksut == null) throw new FormatException("rantamaski: juoksut puuttuu");
             var leveys = (int)(Luku(o, "leveys") ?? 2880);

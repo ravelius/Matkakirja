@@ -190,6 +190,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaMaat());
             StartCoroutine(LataaRadio());
             StartCoroutine(LataaIsoisa());
+            StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
             rekisteri.Vaihtui += _ =>
             {
@@ -200,6 +201,31 @@ namespace Matkakirja.Natiivi
             };
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
+        }
+
+        /// <summary>
+        /// FONTIN ESILÄMMITYS: linssien 3D-nimet (TextMeshPro, kartan fontti) lataavat ensimmäisellä
+        /// jäsennyksellä fontin OpenType-taulut (GetOpenTypeFontFeatures, GetLigatureSubstitutionRecords):
+        /// ~11 ms satelliitin avauksen kehyksessä iPadilla (ui piikit 24.9., ajo 3). Tehdään kerran heti,
+        /// kun kartan fontti on olemassa, piilotetulla tekstillä, jossa on skandit ja isot kirjaimet.
+        /// </summary>
+        System.Collections.IEnumerator LammitaFontti()
+        {
+            TMPro.TMP_FontAsset fontti = null;
+            for (float t = 0; t < 60 && fontti == null; t += 0.5f)
+            {
+                fontti = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.merkit != null ? KarttaKerrokset.Instanssi.merkit.fontti : null;
+                if (fontti == null) yield return new WaitForSecondsRealtime(0.5f);
+            }
+            if (fontti == null) yield break;
+            var go = new GameObject("Fonttilämmitys");
+            go.SetActive(false);
+            var t0 = go.AddComponent<TMPro.TextMeshPro>();
+            t0.font = fontti;
+            t0.text = "Ääkköset ÅÄÖ åäö Tokio — Île-de-France fi";
+            t0.ForceMeshUpdate(true, true);
+            yield return null;
+            Destroy(go);
         }
 
         /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
@@ -260,7 +286,7 @@ namespace Matkakirja.Natiivi
                     var id = alkio?["id"] as string;
                     if (id == "rantamaski") rantamaski = Matkakirja.Linssit.Virrat.Ruutumaski.Lue(alkio);
                     // Päätaso ensin (2.0: alkiolla ei dataa); raaka data vain Paatason kautta (Pelikoodari 24.9.).
-                    if (id == "kertomus" && (alkio.ContainsKey("manifesti") ? alkio : Matkakirja.Peli.Paataso.Raaka(alkio)) is Dictionary<string, object> k)
+                    if (id == "kertomus" && (alkio.TryGetValue("manifesti", out var pm) && pm != null ? alkio : Matkakirja.Peli.Paataso.Raaka(alkio)) is Dictionary<string, object> k)
                     {
                         manifestinOsoite = k.TryGetValue("manifesti", out var m) ? m as string : null;
                         aanenJuuri = k.TryGetValue("juuri", out var j) ? j as string : null;
@@ -324,11 +350,30 @@ namespace Matkakirja.Natiivi
             public void VanatValmiit(Matkakirja.Linssit.Virrat.VanatTulos tulos)
             {
                 vanat = tulos;
-                if (linssi == null) return;
+                if (linssi == null) { Esirakenna(); return; }
+                // Valmiiksi rakennettu piirto taustasäikeestä, jos ehti (muuten kerros rakentaa itse).
+                var p = valmis is { IsCompleted: true, IsFaulted: false, IsCanceled: false } ? valmis.Result : null;
+                valmis = null;
                 // Rantamaski (linssiaineisto) puuttuu julkaistusta paketista v2: vanat
                 // piirretään silloin ilman rannan leikkausta (VanaPiirto sietää nullin).
-                kerros.AsetaVanat(tulos, virrat, rantamaski);
+                kerros.AsetaVanat(tulos, virrat, rantamaski, p);
                 linssi.AsetaVanat(tulos, virrat.Virrat);
+            }
+
+            /// <summary>
+            /// VANAPIIRTO VALMIIKSI TAUSTASÄIKEESSÄ (ui piikit 24.9.: avauksessa 23 ms, josta piirron rakennus
+            /// ja rantamaskin tekstuuri suurin osa). Rakennetaan, kun vanat valmistuvat, ja uudelleen jokaisen
+            /// sulun jälkeen, koska piirrolla on tila (kello, pito, korostus). Rantamaskin tavut samalla.
+            /// </summary>
+            System.Threading.Tasks.Task<Matkakirja.Linssit.Virrat.VanaPiirto> valmis;
+
+            void Esirakenna()
+            {
+                if (vanat == null || valmis != null) return;
+                var (t, v, r) = (vanat, virrat, rantamaski);
+                valmis = System.Threading.Tasks.Task.Run(() => new Matkakirja.Linssit.Virrat.VanaPiirto(
+                    t, v.Virrat, v.Vanat?.Kaista, r, Matkakirja.Linssit.Virrat.Ruutumaski.Kulkumaskista(v.Maamaski)));
+                VanaKerros.EsivalmisteleMaski(r);
             }
 
             public void Avaa(ILinssiYmparisto y)
@@ -357,6 +402,7 @@ namespace Matkakirja.Natiivi
                 if (kerros != null) Destroy(kerros.gameObject);
                 kerros = null;
                 aani = null;
+                Esirakenna();
             }
         }
 

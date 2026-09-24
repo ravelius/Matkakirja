@@ -60,7 +60,7 @@ namespace Matkakirja.Linssit.Astronautti
         /// null = täysvärinen.
         /// </summary>
         public static string VaimeaSarja =
-            "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260920/pallo-k08/{z}/{x}/{y}.jpg";
+            "https://media.matkakirja.app/matkakirja/reliefipyramidi/20260924/pallo-k08/{z}/{x}/{y}.jpg";
 
         /// <summary>Kytkimen mukainen sarja; vaimea vain, jos se on olemassa.</summary>
         public static string ReliefinSarja() =>
