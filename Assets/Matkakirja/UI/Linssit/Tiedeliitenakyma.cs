@@ -29,7 +29,11 @@ namespace Matkakirja.Natiivi
         readonly Button edellinen, seuraava;
         readonly KortinLukija lukija;
         readonly Kuvasuurennos suurennos;
-        KeksinnotLinssi linssi;
+        // Sivujen lähde: keksintölinssi tai ihmisen matka (sama malli, TiedeliiteSivu).
+        Func<int, TiedeliiteSivu> sivuLahde;
+        Func<IEnumerable<(int I, string Vuosi, string Otsikko, string Henkilo)>> sisallysLahde;
+        Action<int> vaihtui;
+        Action suljettu;
         int nykyinen = -1;
 
         public bool Auki { get; private set; }
@@ -73,9 +77,22 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>KeksinnotLinssi.JuttuPyydetty: sivu auki pysäkille i.</summary>
-        public void Avaa(KeksinnotLinssi l, int i)
+        public void Avaa(KeksinnotLinssi l, int i) =>
+            Avaa(i, l.Tiedeliite, () => l.Sisallys(), l.JuttuVaihtui, l.JuttuSuljettu);
+
+        /// <summary>
+        /// Ihmisen matkan noston "Lue lisää" (web avaaNostonJuttu): sama tiedeliite, sisällyksenä nostot
+        /// ajoituksineen (IhmisenMatkaLinssi.TiedeliitteenSisallys).
+        /// </summary>
+        public void Avaa(IhmisenMatkaLinssi l, int i) =>
+            Avaa(i, l.Tiedeliite, () => l.TiedeliitteenSisallys().Select(x => (x.I, x.Ajoitus, x.Otsikko, (string)null)), null, null);
+
+        void Avaa(int i, Func<int, TiedeliiteSivu> sivu, Func<IEnumerable<(int, string, string, string)>> sisallys, Action<int> vaihto, Action sulku)
         {
-            linssi = l;
+            sivuLahde = sivu;
+            sisallysLahde = sisallys;
+            vaihtui = vaihto;
+            suljettu = sulku;
             nykyinen = -1;
             if (!Vaihda(i)) return;
             if (Auki) return;
@@ -94,12 +111,12 @@ namespace Matkakirja.Natiivi
             sisallys.style.display = DisplayStyle.None;
             Rakenne.Nayta(peite, false, 220);
             SyoteLukko.Vapauta(this);
-            linssi?.JuttuSuljettu();
+            suljettu?.Invoke();
         }
 
         bool Vaihda(int j)
         {
-            var s = linssi?.Tiedeliite(j);
+            var s = sivuLahde?.Invoke(j);
             if (s == null || j == nykyinen) return s != null;
             bool avattu = nykyinen >= 0;
             nykyinen = j;
@@ -112,14 +129,14 @@ namespace Matkakirja.Natiivi
             lukija.Aseta(new[] { s.Otsikko }.Concat(s.Ingressi).Concat(s.Juttu).Concat(s.Henkilojuttu), "Kuuntele tiedeliite");
             Naviteksti(edellinen, s.Edellinen, "‹", true);
             Naviteksti(seuraava, s.Seuraava, "›", false);
-            if (avattu) linssi.JuttuVaihtui(j);
+            if (avattu) vaihtui?.Invoke(j);
             if (sisallys.style.display == DisplayStyle.Flex) TaytaSisallys();
             return true;
         }
 
         void Selaa(int suunta)
         {
-            var s = linssi?.Tiedeliite(nykyinen);
+            var s = sivuLahde?.Invoke(nykyinen);
             int j = s == null ? -1 : suunta < 0 ? s.Edellinen : s.Seuraava;
             if (j < 0) return;
             Aanet.PulunTehoste("paper");
@@ -129,7 +146,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Navinappi: "‹ 1876 Bell" tai päässä "‹ Kaaren alku" harmaana.</summary>
         void Naviteksti(Button nappi, int j, string merkki, bool ennen)
         {
-            var t = j >= 0 ? linssi.Tiedeliite(j) : null;
+            var t = j >= 0 ? sivuLahde?.Invoke(j) : null;
             nappi.SetEnabled(t != null);
             var l = nappi.Q<Label>();
             if (t == null) { l.text = ennen ? merkki + " Kaaren alku" : "Kaaren loppu " + merkki; return; }
@@ -161,9 +178,9 @@ namespace Matkakirja.Natiivi
             lista.AddToClassList("mk-tiedeliite__sisallyslista");
             lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisallys.Add(lista);
-            if (linssi == null) return;
+            if (sisallysLahde == null) return;
             // Linssisepän Sisallys(): sivulliset pysäkit (indeksi, vuosi, otsikko, henkilö).
-            foreach (var (j, vuosi, otsikko, henkilo) in linssi.Sisallys())
+            foreach (var (j, vuosi, otsikko, henkilo) in sisallysLahde())
             {
                 int k = j;
                 var rivi = Rakenne.Nappi(null, "mk-tiedeliite__sisallysrivi" + (j == nykyinen ? " mk-valittu" : ""), () =>
