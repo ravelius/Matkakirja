@@ -4511,3 +4511,7 @@ Jono (sää, kohdekartat, #3111, #2913, #3094, #3113) ja savukeuusinnat jatkuvat
 ## OMISTAJA AJOI AVAINNIPPUKORJAUKSEN A (set-key-partition-list login-avainnippuun) klo 19.5x — BUILD 11 ILMAN HAKULISTAN VAIHTOA (24.9.2026 klo 19.42)
 
 Tarkistettu: hakulista login + System, identiteetit FD3S699799 (RCD77XPB7M) ja 2RX77QMLHA (gmail, poisto vielä tekemättä, ei kiire). Julkaisijalle ilmoitettu.
+
+## LOYDOS 44 TARKENNUS (NATIIVI-UI, FABLE HYVAKSYI): PILLERI JA ☰ DYNAMIC ISLANDIN RIVILLE, RUSKEA PALKKI TAUSTALLA TURVA-ALUEEN KORKUISENA, LYHYT PILLERI '300£ · 1/80', LOGO POIS, iPAD ENNALLAAN (24.9.2026 klo 19.43)
+
+Kuvan tumma alue pillerin yläpuolella oli iPhonen turva-alue (62 pt), joten pelkkä matalampi palkki ei olisi riittänyt.
