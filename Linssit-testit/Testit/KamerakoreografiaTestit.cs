@@ -70,5 +70,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama((2, 1.0), k.Kohta(99));
             Oleta.Sama((-1, 0.0), new Kameraketju(null).Kohta(1));
         }
+
+        [Testi] static void TempoMatkanMukaan()
+        {
+            Oleta.Sama(Kayra.Pehmea, Kamerakayrat.Matkalle(Kamerakayrat.Kulma(48.85, 2.35, 50.85, 4.35)));      // Pariisi–Bryssel
+            Oleta.Sama(Kayra.Kuminauha, Kamerakayrat.Matkalle(Kamerakayrat.Kulma(48.85, 2.35, 41.9, 12.5)));    // Pariisi–Rooma
+            Oleta.Sama(Kayra.SyoksyKuminauha, Kamerakayrat.Matkalle(Kamerakayrat.Kulma(48.85, 2.35, 35.7, 139.7))); // Pariisi–Tokio
+            Oleta.Tosi(Math.Abs(Kamerakayrat.Kulma(0, 0, 0, 90) - 90) < 1e-9, "neljännesympyrä");
+            var f = Kamerakayrat.Matkalle(48.85, 2.35, 35.7, 139.7);
+            Oleta.Tosi(Enumerable.Range(0, 101).Max(i => f(i / 100.0)) > 1, "pitkä matka joustaa perille");
+            var paluu = Kamerakayrat.Funktio(Kayra.Kuminauha, Kamerakayrat.PaluunYlitys);
+            double yli = Enumerable.Range(0, 1001).Max(i => paluu(i / 1000.0));
+            Oleta.Tosi(yli > 1 && yli < Enumerable.Range(0, 1001).Max(i => Kamerakayrat.Arvo(Kayra.Kuminauha, i / 1000.0)), "paluun jousto kevyempi");
+        }
     }
 }

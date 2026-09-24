@@ -710,6 +710,9 @@ namespace Matkakirja.Linssit.Aikajana
         {
             ViimeisinAjo = (keskus, leveysAst, kestoMs);
             double ms = y.VahennettyLiike ? 0 : kestoMs;
+            // Oma käyrä puuttuu → tempo matkan mukaan (Kamerakoreografia.Matkalle, Raamattu KAMERA-AJOT).
+            var nyt = y.Kamera;
+            pehmennys ??= Matkakirja.Linssit.Kamera.Kamerakayrat.Matkalle(nyt.Lat, nyt.Lon, keskus.Lat, keskus.Lon);
             y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000), pehmennys);
         }
     }

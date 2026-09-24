@@ -217,7 +217,7 @@ namespace Matkakirja.Linssit.Aikajana
             if (Ajo.MusiikkiLaji != null) y.LinssiMusiikki(null);
             y.Pelikerrokset(true);
             y.MusiikkiPitoon(false);
-            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f);
+            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
             Ajo = null;
         }
     }
