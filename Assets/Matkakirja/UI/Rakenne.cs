@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Nappi: valinnainen ikoni (Ikonit.*) ja teksti (null = ei tekstiä). Painallus = clicked.</summary>
         public static Button Nappi(string teksti, string luokka, Action painettu, VisualElement isa = null, string ikoni = null)
         {
-            var b = new Button(painettu) { text = "" };
+            var b = new Kosketusnappi(painettu) { text = "" };
             // Oletusteeman napin tyylit pois: ulkoasu kokonaan Matkakirja.uss:stä.
             b.RemoveFromClassList(Button.ussClassName);
             b.AddToClassList("mk-nappi");
@@ -167,6 +167,72 @@ namespace Matkakirja.Natiivi
             }
             r.RegisterCallback<GeometryChangedEvent>(e => { if (!Mathf.Approximately(e.oldRect.width, e.newRect.width)) Asettele(); });
             r.schedule.Execute(Asettele);
+        }
+    }
+
+    /// <summary>
+    /// Nappi, jonka kosketusala on vähintään 44 × 44 pt (Applen suositus; Fable 24.9., Laitetestaajan mittaus:
+    /// yläpalkin ratas ja hampurilainen 40 pt) ilman ulkoasun muutosta, koska koot ovat webin mukaiset. Laajennus
+    /// koskee vain erillisiä ikoni- ja sulkunappeja (Laajennettavat-luokat, "__sulje"-päätteiset), ja se ei koskaan
+    /// vie osumaa sisarnapin todelliselta alueelta. Näkymätön lapsi "kosketusala" laajentaa rajauslaatikon, jotta
+    /// paneelin poiminta ylipäätään kysyy ContainsPointia laajennetulta alueelta.
+    /// </summary>
+    public sealed class Kosketusnappi : Button
+    {
+        public const float Vahintaan = 44f;
+        static readonly string[] Laajennettavat =
+        {
+            "mk-ikoninappi", "mk-vakasnappi", "mk-pilleri", "mk-aikajana-nappi", "mk-lehti__ikoninappi", "mk-chat__nappula",
+            "mk-nahtavyys__valikkonappi", "mk-tiedeliite__ikoninappi", "mk-tiedeliite__navinappi", "mk-linssivalikko__nappi",
+        };
+
+        VisualElement ala;
+
+        public Kosketusnappi(Action painettu) : base(painettu)
+        {
+            RegisterCallback<GeometryChangedEvent>(_ => PaivitaAla());
+        }
+
+        bool Laajennettava()
+        {
+            foreach (var l in GetClasses())
+                if (l.EndsWith("__sulje", StringComparison.Ordinal) || Array.IndexOf(Laajennettavat, l) >= 0) return true;
+            return false;
+        }
+
+        (float X, float Y) Laajennus()
+        {
+            float w = layout.width, h = layout.height;
+            if (float.IsNaN(w) || float.IsNaN(h) || !Laajennettava()) return (0f, 0f);
+            return (Mathf.Max(0f, (Vahintaan - w) / 2f), Mathf.Max(0f, (Vahintaan - h) / 2f));
+        }
+
+        void PaivitaAla()
+        {
+            var (lx, ly) = Laajennus();
+            if (lx <= 0f && ly <= 0f) { ala?.RemoveFromHierarchy(); return; }
+            if (ala == null) ala = new VisualElement { name = "kosketusala", pickingMode = PickingMode.Ignore };
+            if (ala.hierarchy.parent != this) hierarchy.Add(ala);
+            var st = ala.style;
+            st.position = Position.Absolute;
+            st.left = -lx; st.right = -lx; st.top = -ly; st.bottom = -ly;
+        }
+
+        public override bool ContainsPoint(Vector2 p)
+        {
+            if (base.ContainsPoint(p)) return true;
+            var (lx, ly) = Laajennus();
+            if (lx <= 0f && ly <= 0f) return false;
+            float w = layout.width, h = layout.height;
+            if (p.x < -lx || p.x > w + lx || p.y < -ly || p.y > h + ly) return false;
+            // Sisarnapin oma alue voittaa aina laajennuksen.
+            var isa = hierarchy.parent;
+            if (isa == null) return true;
+            var q = this.ChangeCoordinatesTo(isa, p);
+            foreach (var s in isa.hierarchy.Children())
+                if (s != this && s.pickingMode == PickingMode.Position && s.resolvedStyle.display != DisplayStyle.None && s.layout.Contains(q))
+                    return false;
+            return true;
         }
     }
 }
