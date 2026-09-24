@@ -4727,3 +4727,7 @@ Laitetestaaja kirjoitti luovutuksen ja nollasi itsensä klo 23.09; Fable lähett
 ## OMISTAJA klo 23.2x: LOYDOKSEN 46 LAHIKUVAT YHA EPASELVIA VS WEB → SUUNTA: RANNAT JA RAJAT NATIIVIIN VEKTORIKERROKSENA (KUTEN WEB) + SYVEMMAT RASTERITASOT MAALLE; KUVAPARI WEB VS NATIIVI SAMASTA NAKYMASTA ENNEN PAATOSTA (24.9.2026 klo 23.25)
 
 Omistaja: 'nuo uudetkin lähikuvat ovat vielä epäselviä verrattuna web versioon'. Fablen analyysi: web piirtää rannat, rajat ja nimet vektorina jokaisessa zoomissa laatan päälle, natiivi lataa pelkän Z8-rasterin, joten rasteriresepti (B/C) ei yksin riitä lähikuvassa. Karttaseppä: mitattu kuvapari (web tasokartta vs natiivi Z8, Peloponnesos iPad) + vedos Z8-pohja + vektoriranta 1 px + arvio Z9–Z10-sarjasta; Natiiviseppä: Cesium for Unity -vektorikerroksen toteutettavuus (polyline maaston päällä, ruutuleveys) ja rasteritason maksimi. C-resepti yleiskuviin pysyy ehdolla; omistaja päättää kuvista.
+
+## OMISTAJA klo 23.2x: LOYDOKSEEN 46 VEDOS MYOS ILMAN VAHVISTETTUA AARIVIIVAA (EI MUSTETTA RANNALLA, ANTIALIASOITU VARIRAJA, C-RELIEFI; NATIIVIN MAARAJA-KEHA POIS VERTAILUSSA) (24.9.2026 klo 23.26)
+
+Omistaja: 'voisi kokeilla karttaa myös ilman vahvistettua ääriviivaa'. Karttasepälle lisätty vedosvariantti (lähikuva + z6) ilman rantamustetta, vain antialiasoitu maan ja meren raja ja kevyt hachure-vinjetti tai ilman; Natiiviseppä ottaa Maaraja-kehän pois vertailussa.
