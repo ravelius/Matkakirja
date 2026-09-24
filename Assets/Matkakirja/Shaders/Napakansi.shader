@@ -77,12 +77,14 @@ Shader "Matkakirja/Napakansi"
                 half3 valaistus = valo.color * saturate(dot(n, valo.direction)) + SampleSH(n);
                 half4 kuva = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
                 half3 savy = kuva.a > 0.002 ? kuva.rgb / kuva.a : half3(0, 0, 0);
+                // Webin kermasääntö (js/laattakerma-shader.js): vain maa (R − B sRGB-tavuina 36…52), meri jää.
+                half maa = smoothstep(36.0 / 255.0, 52.0 / 255.0, savy.r - savy.b);
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 savy = SRGBToLinear(savy);
             #endif
                 half a = kuva.a * _BaseColor.a * i.vari.a;
                 // Väritason kerma kuten laatoissa (Cesiumin raster-kerros sekoittuu ennen valaistusta).
-                half3 vari = lerp(savy * _BaseColor.rgb, _Kerma.rgb, _Kerma.a);
+                half3 vari = lerp(savy * _BaseColor.rgb, _Kerma.rgb, _Kerma.a * maa);
                 return half4(vari * valaistus * a, a);
             }
             ENDHLSL

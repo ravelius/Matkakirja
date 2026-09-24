@@ -111,12 +111,12 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Väritaso päällä (Varitaso): kalotti ja kansi saavat saman kerman kuin laatat (#faf4d6, peitto 0,85),
-        /// muuten navalla näkyisi värillinen kiekko kerman keskellä (iPad 24.9.; Karttasepän suositus).
+        /// Väritaso päällä (Varitaso): kalotti ja kansi saavat saman kerman kuin laatat (#faf4d6, peitto 0,80,
+        /// vain maalle webin R − B -säännöllä varjostimessa), muuten navalla näkyisi värillinen kiekko.
         /// </summary>
         public void Kerma(bool paalla)
         {
-            var c = new Color(250f / 255f, 244f / 255f, 214f / 255f, paalla ? 217f / 255f : 0f);
+            var c = new Color(250f / 255f, 244f / 255f, 214f / 255f, paalla ? 0.80f : 0f);
             foreach (var n in navat)
             {
                 if (n.KansiMateriaali != null) n.KansiMateriaali.SetColor("_Kerma", c);
