@@ -394,6 +394,15 @@ namespace Matkakirja.Natiivi
                 kuunneltuTutkimus = t;
                 t.AvaaKortti += AvaaTutkimuksenKortti;
             }
+            // Tutkimus alkoi suoraan (Linssisepän testikomento `ihminen tutkimus` tai muu reitti ohi Käynnistä-napin):
+            // aloituslaatikko ja sen tausta pois kuten esityksen alkaessa.
+            if (esittely.style.display.value == DisplayStyle.Flex)
+            {
+                yritys?.Pause();
+                AsetaKaynnistaOdottaa(false);
+                Rakenne.Nayta(esittely, false, 250);
+                avausTausta.Pois(550);
+            }
             RakennaVirrat();
             if (t.Kortti != null) AvaaTutkimuksenKortti(t.Kortti);
         });
