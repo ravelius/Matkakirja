@@ -454,6 +454,7 @@ namespace Matkakirja.Natiivi
             foreach (var n in a.Nostot) Nosto(s, n, sivuAvain);
             foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet, sivuAvain);
             // Sivun oma reaktiorivi juttujen perään, ennen tehtävää (web piirraAiheenReaktiot).
+            Poimintapillerit.Piirra(s, sivuAvain); // web piirraAiheenPoiminnat: aihesivun loppuun
             Reaktiot.Piirra(s, sivuAvain, a.Nimi ?? sivu.Otsikko);
             bool fokustehtava = fokus.Piirra(s, lehti, nyt);
             if (!fokustehtava && a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
