@@ -19,6 +19,9 @@ namespace Matkakirja.Linssit.Aikajana
         public double Lat, Lon;
         public bool Paalu, Hiljainen, Valinaytos;
         public string Otsikko, Paikka, Henkilo;
+        /// <summary>Tiedeliitteen sisältö (web keksinnot.js): ingressi, juttu, henkilöjuttu, kuvat, lähde.</summary>
+        public string Selite, Juttu, Henkilojuttu, Lahde, Ajoitus;
+        public Kuvatieto Kuva, KuvaToinen, KuvaAito, Ilmio, IlmioLisa;
     }
 
     /// <summary>Pysäkkiajon näkyvät asiat (valot, paneeli, kello, välinäytös).</summary>

@@ -157,6 +157,7 @@ namespace Matkakirja.Natiivi
             ui.Kartuscha.NaytaSallittu(!paalla);
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!paalla);
+            ui.Matkakirja.NaytaSallittu(!paalla);
             ui.Karttaselite.NaytaNappi(!paalla);
             if (paalla) ui.Karttaselite.Sulje();
             Valitsin.Sulje();

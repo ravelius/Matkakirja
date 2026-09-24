@@ -958,6 +958,7 @@ namespace Matkakirja.Natiivi
         void Kartalle(bool kameraPelaajaan)
         {
             using var _ = Ajoita("kartalle");
+            PiilotaLentokaaret();
             Lentoaani(false);
             PaataLento();
             dialogi.Piilota();
@@ -1086,6 +1087,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupunkilehti ilman matkaa (kortin "Lue kaupunkilehti"). Palauttaa virheen tai null.</summary>
         public string LueLehti(string kaupunki)
         {
+            if (LinssiAuki) return LinssiAukiSyy;
             if (!LehtiOn) return "lehteä ei ole";
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             PiilotaKortti();
@@ -1191,6 +1193,7 @@ namespace Matkakirja.Natiivi
         {
             using var _ = Ajoita("matka");
             if (matka == null) return "peli ei ole valmis";
+            if (LinssiAuki) return LinssiAukiSyy;
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             if (kohde != null && !verkko.Kaupungit.ContainsKey(kohde)) return "tuntematon kaupunki " + kohde;
             dialogi.Piilota();
@@ -1548,6 +1551,7 @@ namespace Matkakirja.Natiivi
         public string Tutki(bool vaikea = false)
         {
             if (matka == null) return "peli ei ole valmis";
+            if (LinssiAuki) return LinssiAukiSyy;
             if (kysely == null) return "kysymykset eivät ole vielä latautuneet";
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             kysymysLoyto = null;

@@ -131,6 +131,16 @@ namespace Matkakirja.Natiivi
 
         void Asettele() => kortti.style.top = Ylapalkki.Varaus + 8;
 
+        /// <summary>
+        /// Linssi päällä (web: satelliitti peittää kortin, keksinnöt/topografia/radio piilottavat .fact-card):
+        /// kortti ja luentakuvat piiloon näkyvyydellä, jolloin merkintä ja kirjoitus säilyvät.
+        /// </summary>
+        public void NaytaSallittu(bool sallitaan)
+        {
+            kortti.style.visibility = sallitaan ? Visibility.Visible : Visibility.Hidden;
+            Kuvat.NaytaSallittu(sallitaan);
+        }
+
         /// <summary>Web puhelinTila (max-width 699 / max-height 520 CSS-pikseliä): iPhone kyllä, iPad ei.</summary>
         static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
             ? !SystemInfo.deviceModel.StartsWith("iPad") : Screen.width < Screen.height;

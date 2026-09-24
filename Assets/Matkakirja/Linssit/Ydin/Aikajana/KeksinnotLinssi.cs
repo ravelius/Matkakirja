@@ -10,6 +10,7 @@
 // katkeaa Jatka-napista; selaus ja sulku hiljentävät. Soiva luenta pidättää
 // pysäkin tauon loppua (Kello.PidataLuennalle).
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Aikajana
 {
@@ -120,6 +121,52 @@ namespace Matkakirja.Linssit.Aikajana
             Hiljaa();
             Ajo.Jatka();
             if (!OnKaynnistetty) { OnKaynnistetty = true; Kaynnistetty?.Invoke(); }
+        }
+
+        // ── Tiedeliite (web aikajana.js avaaJuttu, vaimennaJutunAjaksi, palautaJutunJalkeen) ──
+
+        /// <summary>Tiedeliitteen sivu pyydettiin auki (kortin "Lue juttu" tai napautus): UI avaa sivun.</summary>
+        public event Action<int> JuttuPyydetty;
+        /// <summary>Auki oleva sivu (pysäkin indeksi) tai -1.</summary>
+        public int JuttuAuki { get; private set; } = -1;
+
+        /// <summary>Pysäkkien määrä (sivut indeksoidaan 0…Pysakkeja-1).</summary>
+        public int Pysakkeja => aineisto.Pysakit.Count;
+
+        /// <summary>Hampurilaisen sisällys: sivulliset pysäkit (indeksi, vuosi/ajoitus, otsikko, henkilö).</summary>
+        public IReadOnlyList<(int I, string Vuosi, string Otsikko, string Henkilo)> Sisallys() => Aikajana.Tiedeliite.Sisallys(aineisto.Pysakit);
+
+        /// <summary>Sivun sisältö UI:lle (null, jos pysäkillä ei ole sivua).</summary>
+        public TiedeliiteSivu Tiedeliite(int i) => Aikajana.Tiedeliite.Sivu(aineisto.Pysakit, i);
+
+        /// <summary>
+        /// Avaa tiedeliitteen pysäkille i. TIEDELIITE ON OMA NÄKYMÄNSÄ: linssin raita väistyy kokonaan
+        /// sivun ajaksi ja palaa sulkiessa; kello ei liiku. Palauttaa false, jos sivua ei ole.
+        /// </summary>
+        public bool AvaaJuttu(int i)
+        {
+            if (!Auki || !Aikajana.Tiedeliite.OnSivu(i >= 0 && i < aineisto.Pysakit.Count ? aineisto.Pysakit[i] : null)) return false;
+            if (JuttuAuki < 0 && Ajo?.MusiikkiLaji != null) y.LinssiMusiikki(null);
+            JuttuAuki = i;
+            JuttuPyydetty?.Invoke(i);
+            return true;
+        }
+
+        /// <summary>Sivua selattiin toiseen keksijään (web kunVaihtuu): linssin paneeli seuraa, kello ei liiku.</summary>
+        public void JuttuVaihtui(int j)
+        {
+            if (JuttuAuki < 0) return;
+            JuttuAuki = j;
+        }
+
+        /// <summary>Sivu suljettiin (web palautaJutunJalkeen): raita palaa ajon tasolle.</summary>
+        public void JuttuSuljettu()
+        {
+            if (JuttuAuki < 0) return;
+            JuttuAuki = -1;
+            if (!Auki || Ajo?.MusiikkiLaji == null) return;
+            y.LinssiMusiikki(Ajo.MusiikkiLaji);
+            y.LinssiMusiikkiHimmennys(Ajo.Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
         }
 
         /// <summary>Välinäytöksen Jatka-nappi: välinäytöksen puhe katkeaa (web suljeValinaytos).</summary>

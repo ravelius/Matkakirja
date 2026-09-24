@@ -164,6 +164,24 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testiavaus ilman peliä: kaupunkilehti (omistaja = kaupunki) tai maalehti (ISO3, aihe aloitussivuksi).</summary>
+        string odottavaAihe;
+
+        /// <summary>
+        /// Ohjaimen avaama lehti tälle aihesivulle (pulun matkakirjalinkki, web siirraSivulle): jo auki
+        /// olevassa lehdessä heti, latautuvassa, kun lehti on valmis.
+        /// </summary>
+        public void SiirryAiheeseen(string aihe)
+        {
+            if (string.IsNullOrEmpty(aihe)) return;
+            if (Auki && lehti != null)
+            {
+                int i = LehtiSisalto.SivuAiheelle(lehti, aihe);
+                if (i >= 0 && i != nyt) NaytaSivu(Mathf.Clamp(i, 0, lehti.Sivut.Count - 1), i > nyt ? 1 : -1);
+                // Lehti voi olla vielä edellinen (uusi latautuu): sama aihe jää odottamaan.
+            }
+            odottavaAihe = aihe;
+        }
+
         public void Nayta(LehtiLaji laji, string omistaja, string aihe = null, int? sivu = null)
         {
             tila = null;
@@ -191,7 +209,8 @@ namespace Matkakirja.Natiivi
                 // Ylärivin ☰ molemmissa lehdissä, kun sivuja on vähintään kaksi (web varmistaLehtiHampurilainen).
                 sisallysNappi.style.display = l.Sivut.Count >= 2 ? DisplayStyle.Flex : DisplayStyle.None;
                 sisallys.style.display = DisplayStyle.None;
-                int alku = sivu ?? LehtiSisalto.SivuAiheelle(l, aihe);
+                int alku = sivu ?? LehtiSisalto.SivuAiheelle(l, aihe ?? odottavaAihe);
+                odottavaAihe = null;
                 nyt = -1;
                 NaytaSivu(Mathf.Clamp(alku, 0, l.Sivut.Count - 1), 0);
                 if (!Auki)
@@ -435,6 +454,7 @@ namespace Matkakirja.Natiivi
             foreach (var n in a.Nostot) Nosto(s, n, sivuAvain);
             foreach (var (otsikko, kohteet) in a.Lista) Lista(s, otsikko, kohteet, sivuAvain);
             // Sivun oma reaktiorivi juttujen perään, ennen tehtävää (web piirraAiheenReaktiot).
+            Poimintapillerit.Piirra(s, sivuAvain); // web piirraAiheenPoiminnat: aihesivun loppuun
             Reaktiot.Piirra(s, sivuAvain, a.Nimi ?? sivu.Otsikko);
             bool fokustehtava = fokus.Piirra(s, lehti, nyt);
             if (!fokustehtava && a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
