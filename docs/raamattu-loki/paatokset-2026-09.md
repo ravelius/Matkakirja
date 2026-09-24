@@ -3691,3 +3691,7 @@ Fable kuittasi; Linssiseppä jatkaa luovutukseen ja nollaukseen.
 ## OMISTAJA AJOI siivoa-lokit-appdata.sh --poista klo 12.1x: 242 DATAKANSIOTA (8,0 Gt) POISTETTU, VAPAANA 54 Gt (OLI 33 Gt); KAKSI 'Directory not empty' -RIVIA = FINDERIN .DS_Store, HARMITON (24.9.2026 klo 12.17)
 
 Levyhälytys ohi; worktree- ja simulaattorisiivous jatkuu rooleilla.
+
+## NATIIVISEPPA klo 12.2x (MASTER c46d571): LOYDOS 22 LINJA A MASTERISSA (KERMA 0,80 VAIN MUIDEN MAIDEN MAALLE, MERI JA OMA MAA AUKI, Z0–4 EI HUNTUA; KARTTASEPAN p080-SARJAT ~2 h, SIIHEN ASTI EI HUNTUA), RAJAVIIVA maapolygonit.geojson NE 10m (KREIKKA 61 RENGASTA; KUVA kreikka-l22-20260924/kreikka-lahi.png — FABLE: RAJA JA MERI NYT WEBIN MUKAAN); FRUSTUM EI TOISTU — SYY KAMERAN NaN-ASENTO (ScreenPointToRay), SUOJA + KERTALOKI LISATTY → LAITETESTAAJA UUSII 14 + RENKAAT; LAHIKUVA: MATALA ETUVIISTO, TAIVAS KONEEN TAKANA (lahikuva-20260924-b/), 'VARJOLANTIT' OLIVAT HEATHROW'N KIITOTEITA; MASTERISSA MYOS 20–21, 23, 24/ALOITUSKAAVA 2ea1345, VU-TAPPI + MITTARI, piikit6, ipad-hae; BUILD 7 -SHA HUNNUN SARJOJEN JALKEEN (24.9.2026 klo 12.18)
+
+Fable: hyväksytty; huomiot — kone jää osassa kehyksiä ~1/3 ruudusta (tavoite 2/3), kuvan aikana kartan kevyt sumennus ei näy iPad-kuvassa (löydös 19 tarkistettava iPadilla).
