@@ -4883,3 +4883,7 @@ Omistajan linjaus 25.9. klo 00.0x: rantaviiva himmeänä tai pois → 3 on turva
 ## WEB-PR #3135 (PELIKOODARI): NOSTONIMIOT PIIRTYIVAT PYSTYSSA TUOTANNOSSA (ASU LUETTIIN IRROTETULTA svg:LTA JA JAI VALIMUISTIIN; 308/308 PYSTYSSA → 314/314 KURSIIVIA) → JULKAISIJALLE HETI. FABLE (NIMIOLUKKO): LATTIAKERTOIMELLA (KAMERA MATKALLA) LADOTTUA NIMEA EI LUKITA, LUKKO VASTA PERILLA LOPULLISELLA KERTOIMELLA; SAAPUMISESSA EI HYPPYA (LADONTA KOHDEKERTOIMEN GEOMETRIALLA TAI HAIVYTYS PERILLA); SAVUKKEESEEN PARIISI 11 AJOA < 16 px (25.9.2026 klo 01.46)
 
 Tausta: PARIISI jäi 185 px:n päähän pisteestä ~3/11 ajossa, koska nimi ladottiin kertoimella 0,2 ennen kameran saapumista ja lukko skaalautui ×5 purkautumatta (sääntö 5, PR #2882). Omistajan sääntö 23.9. koskee lepotilan näkyvää nimiötä. Natiivissa saapumisen välikortti mitattu webin mukaiseksi; UITK letter-spacing em/100, Natiivi-UI muunsi 153 USS-arvoa.
+
+## LAITETESTAAJA (5ec42fc48, juna/b12 9e78641): RADION SULKU 0,8 s JA PINNAT PASS; VIIVAIMEN SORMIVETO EI LIIKUTA NEULAA SIMULAATTORISSA (touch_path JA swipe), VAIN NAPAUTUS HYPPAA ASEMALLE — BUGI VAI SIMULAATTORIN RAJOITUS EPASELVA → LINSSISEPPA TUTKII; RAPORTTI docs/raportit/radio-viivain-testi-20260925.md (25.9.2026 klo 01.48)
+
+Sama automaatio liikuttaa ScrollView'ta samassa sessiossa. Aamun raporttiin: omistaja kokeilee viivaimen vetoa laitteella build 12:sta.
