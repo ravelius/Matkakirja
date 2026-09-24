@@ -24,6 +24,7 @@
  * Live-haut (päivän sää, uutiset, iTunes-esikuuntelu, Wikipedia) eivät
  * tule pakettiin: kokoelmien kuvauksissa on rajapinta, josta natiivi hakee.
  */
+import { assetOsoite } from '../../js/media.js';
 import { readFileSync } from 'node:fs';
 import { sarjallista } from './sarjallista.mjs';
 import { mediaLaji, ratkaiseMedia } from './media.mjs';
@@ -421,4 +422,172 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + '&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&forecast_days=1 (js/saa.js '
       + 'haeSaaTanaan; välimuisti 1 h), rivi "tänään <lampotila>° (<alin>…<ylin>°), <SAAKOODIT-teksti>[, sadetta <mm> mm jos >= 1]".',
     { kaupunki: 'kaupungit' }, saa);
+
+  // Skeema 1.17 (Natiivi-UI:n Nähtävyydet-rivi): kaupunkien kohdekartat
+  // (js/packs/maakartat.js KAUPUNKIKARTAT, js/nahtavyydet.js piirraKaupunkiKartta).
+  const { KAUPUNKIKARTAT } = hae('js/packs/maakartat.js');
+  const karttakuva = (polku) => (polku ? media(polku, 'polku') : null);
+  const kohdekartat = Object.keys(KAUPUNKIKARTAT).sort().map((kaupunki) => {
+    const k = KAUPUNKIKARTAT[kaupunki];
+    return {
+      id: kaupunki, kaupunki,
+      // Web näyttää värikartan, kun sellainen on (omistaja 15.8.2026), muuten julisteen.
+      kuva: karttakuva(k.varikartta ?? k.polku), juliste: karttakuva(k.polku), varikartta: karttakuva(k.varikartta),
+      lahde: k.lahde ?? null, rajat: k.rajat, piirtoRajat: k.piirtoRajat ?? null, kainalot: k.kainalot ?? [],
+      numeroympyrat: k.numeroympyrat ?? [], esittely: k.esittely ?? null,
+      kohteet: k.kohteet.map((kohde) => {
+        const { x, y } = karttapiste(k, kohde.lat, kohde.lon);
+        return {
+          nimi: kohde.nimi, lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
+          wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
+          siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
+          kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
+          kuvat: (kohde.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
+        };
+      }),
+    };
+  });
+  // Skeema 1.17: fokusvirtojen lehtitehtävät (js/fokustehtavat.js
+  // kaupunginTehtavat ja piirraSivunTehtava). Juliste: tehtävän oma avain
+  // voittaa kaupungin oletuksen, jos se on julisteissa (sama sääntö kuin webissä).
+  const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
+  const { JULISTEET } = hae('js/packs/julisteet.js');
+  const { FOKUS_TEHTAVA_PALKKIO } = hae('js/fokustehtavat.js');
+  const lehtitehtavat = Object.keys(FOKUSVIRRAT).sort().flatMap((kaupunki) =>
+    (FOKUSVIRRAT[kaupunki]?.lehtitehtavat ?? []).map((t) => {
+      const julisteAvain = t.juliste && JULISTEET[t.juliste] ? t.juliste : kaupunki;
+      return {
+        id: `${kaupunki}:${t.id}`, kaupunki, tehtava: t.id, sivu: t.sivu, otsake: t.otsake, palkinto: t.palkinto,
+        juliste: t.palkinto === 'juliste' && JULISTEET[julisteAvain] ? julisteAvain : null,
+        palkkio: FOKUS_TEHTAVA_PALKKIO,
+        visa: { kysymys: t.visa.kysymys, vaihtoehdot: t.visa.vaihtoehdot, oikea: t.visa.oikea, fakta: t.visa.fakta ?? null },
+      };
+    }));
+  kokoelmat.lehtitehtavat = taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.lehtitehtavat',
+    'Kaupunkilehden sivuille sidotut tehtävät (fokusvirta). sivu = kaupunkilehden sivun järjestysnumero (0 = etusivu, '
+      + 'kaupunkilehdet.sivut), otsake = tehtävälaatikon otsikko, palkinto: piste = aarrepiste | juliste = juliste-kokoelman id '
+      + '(juliste; tehtävän oma avain voittaa kaupungin oletuksen; null = kaupungille ei ole julistetta), palkkio = puntaa oikeasta vastauksesta '
+      + '(js/fokustehtavat.js FOKUS_TEHTAVA_PALKKIO). visa = { kysymys, vaihtoehdot, oikea (indeksi), fakta }.',
+    { kaupunki: 'kaupungit', juliste: 'julisteet' }, lehtitehtavat);
+
+  // Skeema 1.18 (2.0-polku, Fable 23.9.2026): nahtavyydet ja miniatyyrit
+  // päätasolle (natiivin Kohdekartat.cs lukee niitä). Kappaleet kuten
+  // js/nahtavyydet.js (teksti.split('\n\n')).
+  for (const a of kokoelmat.nahtavyydet.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      aika: d.aika ?? null, teksti: d.teksti ?? null,
+      kappaleet: String(d.teksti ?? '').split('\n\n').filter(Boolean),
+      wiki: d.wiki ?? null, lahde: d.lahde ?? null, nosto: d.nosto ?? null,
+      lainaus: d.lainaus ? { teksti: d.lainaus.teksti ?? null, lahde: d.lainaus.lahde ?? null } : null,
+      kuvat: (d.kuvat ?? []).map((o) => R.kuva(o)).filter(Boolean),
+    });
+  }
+  kokoelmat.nahtavyydet.kuvaus += ' Skeema 1.18: päätasolla aika, teksti, kappaleet (teksti jaettuna tyhjästä rivistä '
+    + 'kuten webissä), wiki, lahde, nosto, lainaus { teksti, lahde } ja kuvat [{ arvo, url, varat, leveys, korkeus, '
+    + 'lyhyt, selite, lahde }]. Avain kaupunki + nimi (kohdekartat.kohteet[].nimi).';
+  for (const a of kokoelmat.miniatyyrit.alkiot) {
+    const arvo = typeof a.data === 'string' ? a.data : a.data?.url ?? null;
+    // Pelkkä tunnus (kuva vain ämpärissä) ratkaistaan pelin assetOsoite-funktiolla.
+    a.kuva = arvo ? { arvo, ...(media(arvo, 'miniatyyri') ?? { url: assetOsoite('miniatyyrit', arvo), varat: [] }) } : null;
+  }
+  kokoelmat.miniatyyrit.kuvaus += ' Skeema 1.18: kuva = { arvo, url, varat, leveys, korkeus } (piirroskuva kohteelle '
+    + 'kaupunki + nimi).';
+
+  // Skeema 1.19 (2.0-polku): kysymykset ja pulmat päätasolle
+  // (natiivin Kysymysdata.cs ja Pulmat.cs lukevat niitä).
+  for (const a of kokoelmat.kysymykset.alkiot) {
+    const d = a.data ?? {};
+    const vaite = !Array.isArray(d.options);
+    Object.assign(a, {
+      laji: vaite ? 'vaite' : 'visa', kysymys: d.q ?? null, vaihtoehdot: vaite ? null : d.options,
+      oikea: d.correct ?? null, taso: d.level ?? null, vihje: d.hint ?? null, fakta: d.fact ?? null,
+      lahde: d.source ?? null, paikka: d.place ?? null,
+    });
+  }
+  kokoelmat.kysymykset.kuvaus += ' Skeema 1.19: päätasolla laji (visa | vaite), kysymys, vaihtoehdot (visa), oikea '
+    + '(visa: indeksi; väite: tosi/epätosi), taso, vihje, fakta, lahde (url tai teksti), paikka (väitteen paikka).';
+  for (const a of kokoelmat.pulmat.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      otsikko: d.title ?? null, selite: d.selite ?? null, vihje: d.hint ?? null, kysymys: d.q ?? null,
+      vaihtoehdot: d.options ?? null, oikea: d.correct ?? null, fakta: d.fact ?? null, lahde: d.source ?? null,
+      luonnos: d.sketch ?? null, kuvaLahteet: d.kuvaLahteet ?? null,
+      // Pelikoodari 23.9.2026: generaattori ja kuvat päätasolle (vartija kieltää datan).
+      generaattori: d.generaattori ?? d.generate ?? null,
+      kuvat: Array.isArray(d.kuvat) ? d.kuvat.map((o) => (typeof o === 'object' ? R.kuva(o) ?? o : o)) : null,
+    });
+  }
+  kokoelmat.pulmat.kuvaus += ' Skeema 1.19: päätasolla otsikko, selite, vihje, kysymys, vaihtoehdot ja oikea (kiinteät '
+    + 'pulmat; generaattoripulmat arpovat nämä), fakta, lahde, luonnos (piirroksen parametrit), kuvaLahteet, generaattori '
+    + '(arvontalogiikan tunniste, js/pulmageneraattorit.js) ja kuvat (vaihtoehtokuvat, jos kiinteitä; null = generaattori tuottaa).';
+
+  // Skeema 1.20 (2.0-polku): elaintayt ja julisteet päätasolle
+  // (natiivin Kaupat.cs, NostoSisalto.cs ja UiSisalto.cs).
+  // assetLaji: pelkkä tunnus (kuva vain ämpärissä) ratkaistaan pelin assetOsoite-funktiolla.
+  const kuvaArvosta = (arvo, assetLaji = null) => {
+    if (!arvo) return null;
+    const m = media(arvo, 'kuva') ?? (assetLaji ? { url: assetOsoite(assetLaji, arvo), varat: [] } : null);
+    return m ? { arvo, ...m } : null;
+  };
+  for (const a of kokoelmat.elaintayt.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      elain: d.elain ?? null, otsikko: d.otsikko ?? null, teksti: d.teksti ?? null, lahde: d.lahde ?? null,
+      lat: d.lat ?? null, lon: d.lon ?? null, nimio: d.nimio ?? null,
+      kuva: kuvaArvosta(d.kuva, 'elaimet'),
+      kuvat: (d.kuvat ?? []).map((o) => R.kuva(o.url && !o.osoite ? { ...o, osoite: o.url } : o)).filter(Boolean),
+    });
+  }
+  kokoelmat.elaintayt.kuvaus += ' Skeema 1.20: päätasolla elain, otsikko, teksti, lahde, lat, lon, nimio, kuva '
+    + '{ arvo, url, varat, leveys, korkeus } | null ja kuvat [{ url, varat, lyhyt, selite, lahde }].';
+  for (const a of kokoelmat.julisteet.alkiot) {
+    const d = a.data ?? {};
+    Object.assign(a, {
+      nimi: d.kaupunki ?? null, otsikko: d.otsikko ?? null, lyhyt: d.lyhyt ?? null, selite: d.selite ?? null,
+      kuva: kuvaArvosta(d.tiedosto),
+    });
+  }
+  kokoelmat.julisteet.kuvaus += ' Skeema 1.20: päätasolla nimi (kaupungin nimi julisteessa), otsikko, lyhyt, selite '
+    + 'ja kuva { arvo, url, varat, leveys, korkeus } (julisteämpäri).';
+
+  // Skeema 1.21 (2.0-polku): fokusvirrat ja laatat päätasolle. virta =
+  // fokusvirran rakenne sellaisenaan, mutta jokainen kuvaolio (osoite |
+  // ampari | tiedosto) on ratkaistu kuten lehdissä (R.kuva: url, varat,
+  // mitat, lyhyt, selite, lahde). Ratkeamaton kuva jää alkuperäiseksi.
+  const ratkaiseKuvat = (x) => {
+    if (Array.isArray(x)) return x.map(ratkaiseKuvat);
+    if (!x || typeof x !== 'object') return x;
+    if (['osoite', 'ampari', 'tiedosto'].some((k) => typeof x[k] === 'string')) {
+      const k = R.kuva(x);
+      if (k) return k;
+    }
+    return Object.fromEntries(Object.entries(x).map(([k, v]) => [k, ratkaiseKuvat(v)]));
+  };
+  for (const a of kokoelmat.fokusvirrat.alkiot) {
+    const { lehtitehtavat, ...muut } = a.data ?? {};
+    a.virta = ratkaiseKuvat(muut);
+    a.lehtitehtavat = (lehtitehtavat ?? []).map((t) => `${a.kaupunki}:${t.id}`);
+  }
+  kokoelmat.fokusvirrat.kuvaus += ' Skeema 1.21: virta = fokusvirran rakenne (matkakirja, pollo, valinta, kohteet, takyt, '
+    + 'takynostot, oppitunti, kohtaaminen, kohtaamispiste, aarremerkinta, sahketehtava…) sellaisenaan, mutta jokainen '
+    + 'kuvaolio on ratkaistu muotoon { arvo, url, varat, leveys?, korkeus?, lyhyt, selite, lahde }. lehtitehtavat = '
+    + 'lehtitehtavat-kokoelman id:t. Luennan ääni ja reaktiot: luennat-kokoelma (id matkakirja:<kaupunki>).';
+  const [laatta] = kokoelmat.laatat.alkiot;
+  Object.assign(laatta, {
+    tyypit: laatta.data.types, mannerTyypit: laatta.data.mannerTypes, maarat: laatta.data.counts,
+  });
+  kokoelmat.laatat.kuvaus += ' Skeema 1.21: päätasolla tyypit (= data.types), mannerTyypit (= data.mannerTypes) ja '
+    + 'maarat (= data.counts) sekä kuvat ja mannerKuvat.';
+
+  kokoelmat.kohdekartat = taulukko('js/packs/maakartat.js#KAUPUNKIKARTAT',
+    'Kaupunkien kohdekartat (Nähtävyydet). kuva = näytettävä kartta (värikartta, jos on, muuten juliste; url/varat/'
+      + 'leveys/korkeus, ämpärissä assets/kartat/), juliste ja varikartta erikseen. rajat = ydinrajaus asteina '
+      + '{ pohjoinen, etela, lansi, ita }; piirtoRajat = kuvan todellinen alue, jos laajempi. kohteet[].x/y = piste '
+      + 'prosentteina kuvasta pelin karttapiste()-funktiolla (kainalot huomioitu). nosto = nähtävyysjutun tunniste '
+      + '(nahtavyydet-kokoelma), wiki = Wikipedia-otsikko. teksti/kappaleet/kuvat = kohteen oma juttu, jos on. '
+      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla.',
+    { kaupunki: 'kaupungit' }, kohdekartat);
+  // Skeema 1.24: rakentajat (R.kuva) saapumisteksteille (tools/vienti/saapumiset.mjs).
+  return R;
 }

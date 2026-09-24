@@ -67,6 +67,9 @@ export const LISAMODUULIT = [
   // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
   // periaatelappu (js/ui.js tuo samat vakiot).
   m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
+  // Natiivi-UI 23.9.2026: pullan nimet maittain (js/fokustehtavat.js pullanNimi)
+  // ja lehtitehtävien palkkio; hinta on saannoissa (game.js PULLA_HINTA).
+  m('js/fokustehtavat.js', ['PULLA_NIMET', 'PULLA_YLEISNIMI', 'FOKUS_TEHTAVA_PALKKIO', 'FOKUS_LEHTITEHTAVAT']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
   // Skeema 1.15 (lehdet natiiville): lehden kiinteät tekstit ja luvut.
   // LEHDEN_VAKIOESITTELY = etusivun esittely, kun kaupungilla ei ole omaa;
@@ -76,7 +79,7 @@ export const LISAMODUULIT = [
   // kuukaudet ja Open-Meteon osoite (kokoelma saatiedot).
   m('js/lehti.js', ['LEHDEN_VAKIOESITTELY']),
   m('js/ui-apurit.js', ['LEIPAN_ALOITUS_SANOJA']),
-  m('js/ui.js', ['MINITEHTAVA_PALKKIO']),
+  m('js/ui.js', ['MINITEHTAVA_PALKKIO', 'AARRE_MUSIIKKI', 'JALKAMATKAN_MAISEMA']),
   m('js/saa.js', ['SAAKOODIT', 'SAA_IKONIT', 'KUUKAUDET_SSA', 'ENNUSTE_OSOITE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
@@ -88,7 +91,7 @@ export const LISAMODUULIT = [
   m('js/livia-pilotti-cuet.js', ['LIVIAN_LUENTA_CUET', 'LIVIAN_LUENTAKAUPUNGIT', 'ERA5_ODOTTAVAT_KAUPUNGIT']),
   m('js/liviapuhe.js', ['LIVIAN_AANIJUURI', 'LIVIAN_AANILAHTEET', 'LIVIAN_KAUPUNKILAHTEET', 'LIVIAN_AANITETYT',
     'LIVIAN_AANIERAT', 'LIVIAN_KESTOT', 'LIVIAN_VERSIOIDUT_AANET', 'LIVIAN_AANITETTY_PALJASTUS']),
-  m('js/media.js', ['AANI_JUURI', 'ASSET_KANSIOT', 'R2_ASSETIT', 'HORATIO_TUOTANTO', 'VERSIOIDUT_HORATIO_AANET', 'UUSITUT_AANET']),
+  m('js/media.js', ['AANI_JUURI', 'ASSET_KANSIOT', 'R2_ASSETIT', 'HORATIO_TUOTANTO', 'VERSIOIDUT_HORATIO_AANET', 'UUSITUT_AANET', 'MUSIIKIN_PAATE']),
   m('js/fokusnosto-symbolit.js', ['NOSTOSYM_LUOKAT', 'NOSTOSYM_PAAKATEGORIAT', 'NOSTOSYM_TYYPIT', 'NOSTOSYM_PISTE_VARIT']),
   m('js/karttaselite.js', ['KARTTASELITE_JARJESTYS', 'KARTTASELITE_KOKONIMET']),
   m('js/kaupunkimusiikki.js', ['ALUERAIDAT', 'ALUEEN_MAAT']),
@@ -96,6 +99,8 @@ export const LISAMODUULIT = [
   m('js/sound.js', ['REAL_SAMPLES', 'PULUN_TEHOSTEET', 'PULUN_TEHOSTEJUURI', 'AMBIENCE_TYPES', 'AANITEHOSTEET']),
   m('js/siirtymamusiikki.js', ['RAIDAT', 'SIIRTYMALAJIT']),
   m('js/musiikkivalitsin.js', ['TILARAIDAT', 'PAIKKARAIDAT', 'POHJARAITA']),
+  // B7: äänimaiseman vakiopaikat (kori[0] ilman arvontaa).
+  m('js/ambience-stream.js', ['VAKIOPAIKAT']),
   m('js/aani-ehdokkaat.js', ['EHDOKKAAT', 'TYYPPI_EHDOKKAAT', 'KAUPUNKI_EHDOKKAAT', 'TYYPPI_NIMET', 'KAUPUNGIT_TYYPEITTAIN', 'HUUDAHDUKSET']),
   m('js/viitekuva-herot.js', ['VIITEKUVA_HEROT']),
   m('js/lahteet.js', ['LAHTEET', 'PELI']),
