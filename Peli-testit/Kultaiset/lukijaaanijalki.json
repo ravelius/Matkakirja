@@ -1,0 +1,1359 @@
+{
+ "lahde": "verkkopeli js/puhe.js, js/puhe-oletukset.js, js/main.js, index.html, tools/pollo/worker.js",
+ "vakiot": {
+  "persoonat": [
+   {
+    "persoona": "merkinnat",
+    "nimi": "Matkakirja — merkinnät"
+   },
+   {
+    "persoona": "kertoja",
+    "nimi": "Lehdet ja sivut"
+   },
+   {
+    "persoona": "pollo",
+    "nimi": "Livia"
+   }
+  ],
+  "tunnetut": [
+   "kertoja",
+   "merkinnat",
+   "pollo"
+  ],
+  "oletukset": {
+   "kertoja": {
+    "aani": "onyx",
+    "ohje": "Speak Finnish. You are a wise, warm storyteller reading aloud from an adventure newspaper and its articles. Calm, unhurried pace with a hint of wonder; clear articulation; natural pauses at sentence boundaries. Never theatrical."
+   },
+   "merkinnat": {
+    "aani": "onyx",
+    "ohje": "Speak Finnish. You are reading aloud entries from a Victorian explorer's travel journal, as a grandfather sharing his own memories. Calm, intimate and slightly weathered narration; unhurried pace; natural pauses at sentence boundaries. Never theatrical."
+   },
+   "pollo": {
+    "aani": "sage",
+    "ohje": "Speak Finnish. You are a knowledgeable carrier pigeon, a seasoned messenger answering a curious traveller. Matter-of-fact and precise, a little quicker than a narrator, clear articulation. Never childish or theatrical."
+   }
+  },
+  "aanet": [
+   "alloy",
+   "ash",
+   "ballad",
+   "coral",
+   "echo",
+   "fable",
+   "nova",
+   "onyx",
+   "sage",
+   "shimmer",
+   "verse"
+  ],
+  "naytteet": {
+   "merkinnat": "Saavuimme kaupunkiin illansuussa, ja teekaravaanin kellot kilisivät kadulla vielä pimeän tultua.",
+   "kertoja": "Niilin tulva toi mudan pelloille joka kesä, ja koko valtakunnan verokalenteri laskettiin sen mukaan.",
+   "pollo": "Hyvä kysymys! Baikal on maailman syvin järvi — sen syvin kohta on yli tuhat kuusisataa metriä."
+  },
+  "avaimet": {
+   "asetukset": "matkakirja-puhe-persoonat",
+   "koodi": "matkakirja-puhe-kehittaja",
+   "polloKoodi": "matkakirja-pollo-kehittajakoodi",
+   "voima": "matkakirja-puhe-voima",
+   "nopeus": "matkakirja-puhe-nopeus"
+  },
+  "nopeus": {
+   "oletus": 1.15,
+   "min": 0.6,
+   "max": 1.6,
+   "liuku": {
+    "min": 0.6,
+    "max": 1.6,
+    "askel": 0.05
+   }
+  },
+  "voima": {
+   "oletus": 2,
+   "min": 0.25,
+   "max": 2.5,
+   "liuku": {
+    "min": 0.25,
+    "max": 2.5,
+    "askel": 0.05
+   }
+  },
+  "palvelin": "https://matkakirja-pollo.samireivinen.workers.dev",
+  "sailyvat": [
+   "matkakirja-kehittaja",
+   "matkakirja-pollo-kehittajakoodi",
+   "matkakirja-puhe-kehittaja",
+   "matkakirja-puhe-voima",
+   "matkakirja-puhe-nopeus",
+   "matkakirja-puhe-persoonat"
+  ]
+ },
+ "askeleet": [
+  {
+   "teko": "kentat",
+   "persoona": "merkinnat",
+   "tulos": {
+    "aani": "",
+    "ohje": "",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Saavuimme kaupunkiin.",
+   "persoona": "merkinnat",
+   "lohko": "merkinnat",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Saavuimme kaupunkiin.\",\"persoona\":\"merkinnat\",\"lohko\":\"merkinnat\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Hyvä kysymys!",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Hyvä kysymys!\",\"persoona\":\"pollo\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "taso",
+   "liuku": 0.9,
+   "voima": 2,
+   "tulos": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 1.3,
+   "tulos": 1.3,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.3",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 0.65,
+   "tulos": 0.65,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "0.65",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 0.1,
+   "tulos": 0.6,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "0.6",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 9,
+   "tulos": 1.6,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.6",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 0,
+   "tulos": 1.15,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.15",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 1,
+   "tulos": 1,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Nopeus yksi.",
+   "persoona": "kertoja",
+   "lohko": "kertoja",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Nopeus yksi.\",\"persoona\":\"kertoja\",\"lohko\":\"kertoja\"}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaNopeus",
+   "arvo": 1.2000000000000002,
+   "tulos": 1.2000000000000002,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.2000000000000002",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "1.4abc",
+   "nopeus": 1.4,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.4abc",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "  0.75",
+   "nopeus": 0.75,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "  0.75",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "abc",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "abc",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "Infinity",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "Infinity",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "-3",
+   "nopeus": 0.6,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "-3",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "1e0",
+   "nopeus": 1,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1e0",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": ".9",
+   "nopeus": 0.9,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": ".9",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "+1.5e-0x",
+   "nopeus": 1.5,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "+1.5e-0x",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": null,
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaVoima",
+   "arvo": 1.5,
+   "tulos": 1.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "taso",
+   "liuku": 0.9,
+   "voima": 1.5,
+   "tulos": 1.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhevoima",
+   "arvo": "0.45",
+   "nopeus": 1.15,
+   "voima": 1.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": "0.45"
+   }
+  },
+  {
+   "teko": "taso",
+   "liuku": 0.45,
+   "voima": 1.5,
+   "tulos": 0.75,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": "0.45"
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhevoima",
+   "arvo": "0",
+   "nopeus": 1.15,
+   "voima": 1.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": "0"
+   }
+  },
+  {
+   "teko": "taso",
+   "liuku": 0,
+   "voima": 1.5,
+   "tulos": 0,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": "0"
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhevoima",
+   "arvo": null,
+   "nopeus": 1.15,
+   "voima": 1.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "1.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaVoima",
+   "arvo": 0.1,
+   "tulos": 0.25,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "0.25",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaVoima",
+   "arvo": 3,
+   "tulos": 2.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "2.5",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaVoima",
+   "arvo": 0,
+   "tulos": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "2",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "asetaVoima",
+   "arvo": 2.25,
+   "tulos": 2.25,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "2.25",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-voima",
+   "arvo": "7",
+   "nopeus": 1.15,
+   "voima": 2.5,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "7",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-voima",
+   "arvo": "x",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": "x",
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-voima",
+   "arvo": null,
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "pollo",
+   "aani": "nova",
+   "ohje": "  Puhu hitaasti.  ",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "pollo",
+   "tulos": {
+    "aani": "nova",
+    "ohje": "Puhu hitaasti.",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Baikal on syvä.",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Baikal on syvä.\",\"persoona\":\"pollo\",\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": null,
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-pollo-kehittajakoodi",
+   "arvo": "KOODI-P",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Baikal on syvä.",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Baikal on syvä.\",\"persoona\":\"pollo\",\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Lehti.",
+   "persoona": "kertoja",
+   "lohko": "kertoja",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Lehti.\",\"persoona\":\"kertoja\",\"lohko\":\"kertoja\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": null,
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-kehittaja",
+   "arvo": "KOODI-T",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": "KOODI-T",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Baikal on syvä.",
+   "persoona": "pollo",
+   "lohko": "pollo",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Baikal on syvä.\",\"persoona\":\"pollo\",\"lohko\":\"pollo\",\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\",\"nopeus\":1.15}",
+    "koodi": "KOODI-T"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": "KOODI-T",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-kehittaja",
+   "arvo": "",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Tyhjä oma koodi.",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Tyhjä oma koodi.\",\"persoona\":\"pollo\",\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "merkinnat",
+   "aani": "",
+   "ohje": "Lue lämpimästi.",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "kertoja",
+   "aani": "ash",
+   "ohje": "",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Merkintä.",
+   "persoona": "merkinnat",
+   "lohko": "merkinnat",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Merkintä.\",\"persoona\":\"merkinnat\",\"lohko\":\"merkinnat\",\"ohje\":\"Lue lämpimästi.\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Sivu.",
+   "persoona": "kertoja",
+   "lohko": "kertoja",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Sivu.\",\"persoona\":\"kertoja\",\"lohko\":\"kertoja\",\"aani\":\"ash\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"nova\",\"ohje\":\"Puhu hitaasti.\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "pollo",
+   "aani": "sage",
+   "ohje": "Rivi \"lainaus\"\nja \\ kenoviiva\t<ä>",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "pollo",
+   "tulos": {
+    "aani": "sage",
+    "ohje": "Rivi \"lainaus\"\nja \\ kenoviiva\t<ä>",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Lainaus \"tässä\".",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Lainaus \\\"tässä\\\".\",\"persoona\":\"pollo\",\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"},\"merkinnat\":{\"aani\":null,\"ohje\":\"Lue lämpimästi.\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "merkinnat",
+   "aani": "",
+   "ohje": "   ",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "merkinnat",
+   "tulos": {
+    "aani": "",
+    "ohje": "",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"},\"kertoja\":{\"aani\":\"ash\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "kertoja",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"sage\",\"ohje\":\"Rivi \\\"lainaus\\\"\\nja \\\\ kenoviiva\\t<ä>\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "pollo",
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "pollo",
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "kertoja",
+   "aani": "verse",
+   "ohje": "",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":\"verse\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "merkinnat",
+   "aani": "fable",
+   "ohje": "Toinen.",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":\"verse\",\"ohje\":null},\"merkinnat\":{\"aani\":\"fable\",\"ohje\":\"Toinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "kertoja",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"merkinnat\":{\"aani\":\"fable\",\"ohje\":\"Toinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "merkinnat",
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-persoonat",
+   "arvo": "ei json",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "ei json",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "kertoja",
+   "tulos": {
+    "aani": "",
+    "ohje": "",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "ei json",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "kertoja",
+   "aani": "",
+   "ohje": "",
+   "sailo": {
+    "matkakirja-puhe-persoonat": null,
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-persoonat",
+   "arvo": "{\"kertoja\":{\"aani\":\"foo\",\"ohje\":\"  x  \"},\"muu\":{\"aani\":\"alloy\",\"lisa\":[1,2.5,true,null,{\"a\":\"\\u00e4\"}]},\"tyhja\":{\"aani\":null,\"ohje\":null},\"2\":{\"aani\":\"echo\"},\"luku\":5}",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":\"foo\",\"ohje\":\"  x  \"},\"muu\":{\"aani\":\"alloy\",\"lisa\":[1,2.5,true,null,{\"a\":\"\\u00e4\"}]},\"tyhja\":{\"aani\":null,\"ohje\":null},\"2\":{\"aani\":\"echo\"},\"luku\":5}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "kertoja",
+   "tulos": {
+    "aani": "",
+    "ohje": "  x  ",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":\"foo\",\"ohje\":\"  x  \"},\"muu\":{\"aani\":\"alloy\",\"lisa\":[1,2.5,true,null,{\"a\":\"\\u00e4\"}]},\"tyhja\":{\"aani\":null,\"ohje\":null},\"2\":{\"aani\":\"echo\"},\"luku\":5}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Vanha säilö.",
+   "persoona": "kertoja",
+   "lohko": "kertoja",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Vanha säilö.\",\"persoona\":\"kertoja\",\"lohko\":\"kertoja\",\"aani\":\"foo\",\"ohje\":\"x\",\"nopeus\":1.15}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":\"foo\",\"ohje\":\"  x  \"},\"muu\":{\"aani\":\"alloy\",\"lisa\":[1,2.5,true,null,{\"a\":\"\\u00e4\"}]},\"tyhja\":{\"aani\":null,\"ohje\":null},\"2\":{\"aani\":\"echo\"},\"luku\":5}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "pollo",
+   "aani": "coral",
+   "ohje": "",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"2\":{\"aani\":\"echo\"},\"kertoja\":{\"aani\":\"foo\",\"ohje\":\"  x  \"},\"muu\":{\"aani\":\"alloy\",\"lisa\":[1,2.5,true,null,{\"a\":\"ä\"}]},\"pollo\":{\"aani\":\"coral\",\"ohje\":null}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-persoonat",
+   "arvo": "{\"merkinnat\":{\"aani\":\"\",\"ohje\":\"   \"},\"kertoja\":{\"aani\":7}}",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"merkinnat\":{\"aani\":\"\",\"ohje\":\"   \"},\"kertoja\":{\"aani\":7}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "merkinnat",
+   "tulos": {
+    "aani": "",
+    "ohje": "   ",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"merkinnat\":{\"aani\":\"\",\"ohje\":\"   \"},\"kertoja\":{\"aani\":7}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Tyhjät säädöt.",
+   "persoona": "merkinnat",
+   "lohko": "merkinnat",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Tyhjät säädöt.\",\"persoona\":\"merkinnat\",\"lohko\":\"merkinnat\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"merkinnat\":{\"aani\":\"\",\"ohje\":\"   \"},\"kertoja\":{\"aani\":7}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Numeroääni.",
+   "persoona": "kertoja",
+   "lohko": "kertoja",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Numeroääni.\",\"persoona\":\"kertoja\",\"lohko\":\"kertoja\",\"nopeus\":1.15}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"merkinnat\":{\"aani\":\"\",\"ohje\":\"   \"},\"kertoja\":{\"aani\":7}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "palauta",
+   "persoona": "pollo",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"kertoja\":{\"aani\":7}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-persoonat",
+   "arvo": "null",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "null",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "pollo",
+   "tulos": {
+    "aani": "",
+    "ohje": "",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "null",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-persoonat",
+   "arvo": "\"merkkijono\"",
+   "nopeus": 1.15,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "\"merkkijono\"",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "kentat",
+   "persoona": "pollo",
+   "tulos": {
+    "aani": "",
+    "ohje": "",
+    "nopeus": 1.15,
+    "voima": 2
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "\"merkkijono\"",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "tallenna",
+   "persoona": "pollo",
+   "aani": "onyx",
+   "ohje": "Viimeinen.",
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"onyx\",\"ohje\":\"Viimeinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": null,
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "raaka",
+   "avain": "matkakirja-puhe-nopeus",
+   "arvo": "1.6",
+   "nopeus": 1.6,
+   "voima": 2,
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"onyx\",\"ohje\":\"Viimeinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.6",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Tuntematon persoona.",
+   "persoona": "vieras",
+   "lohko": "vieras",
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Tuntematon persoona.\",\"persoona\":\"vieras\",\"lohko\":\"vieras\",\"nopeus\":1.6}",
+    "koodi": null
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"onyx\",\"ohje\":\"Viimeinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.6",
+    "matkakirja-puhevoima": null
+   }
+  },
+  {
+   "teko": "pyynto",
+   "teksti": "Pöllö nopeasti.",
+   "persoona": "pollo",
+   "lohko": null,
+   "tulos": {
+    "osoite": "https://matkakirja-pollo.samireivinen.workers.dev",
+    "runko": "{\"tehtava\":\"puhe\",\"teksti\":\"Pöllö nopeasti.\",\"persoona\":\"pollo\",\"aani\":\"onyx\",\"ohje\":\"Viimeinen.\",\"nopeus\":1.6}",
+    "koodi": "KOODI-P"
+   },
+   "sailo": {
+    "matkakirja-puhe-persoonat": "{\"pollo\":{\"aani\":\"onyx\",\"ohje\":\"Viimeinen.\"}}",
+    "matkakirja-puhe-kehittaja": "",
+    "matkakirja-pollo-kehittajakoodi": "KOODI-P",
+    "matkakirja-puhe-voima": null,
+    "matkakirja-puhe-nopeus": "1.6",
+    "matkakirja-puhevoima": null
+   }
+  }
+ ]
+}
