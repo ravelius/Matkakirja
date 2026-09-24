@@ -51,6 +51,8 @@ namespace Matkakirja.Natiivi
         Osa osa;
         readonly List<VisualElement> asetusosat = new List<VisualElement>(), komentoosat = new List<VisualElement>();
         readonly Vahvistus vahvistus;
+        readonly VisualElement aanentasot;
+        readonly Dictionary<Voima, (Slider Saadin, Label Arvo)> saatimet = new Dictionary<Voima, (Slider, Label)>();
         StyleEnum<DisplayStyle>? retkiEnnen;
 
         public void AvaaOsa(Osa o)
@@ -63,7 +65,12 @@ namespace Matkakirja.Natiivi
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
             this.vahvistus = vahvistus;
-            AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
+            AukiMuuttui += auki => { if (!auki) { osa = Osa.Kaikki; Asetukset.Tallenna(); } };
+            // iPhonen Asetukset-osion ylin osio: äänentasot liukusäätimin (Fable 24.9.: ☰-valikon kytkimet ovat
+            // pikakytkimet, säädöt täällä). iPadilla ne ovat rattaan paneelissa, joten osio näkyy vain Asetukset-osana.
+            aanentasot = Rakenne.El("mk-paavalikko__aanentasot", Sisalto, PickingMode.Ignore);
+            Rakenne.Teksti("ÄÄNENTASOT", "mk-pudotus__otsikko", aanentasot);
+            foreach (var v in Asetukset.VoimaJarjestys) saatimet[v] = Aanentasot.LuoSaadinrivi(aanentasot, v);
             Otsikko("Äänet");
             Kytkinrivi(Kytkin.Kertoja, Ikonit.Kertoja);
             Kytkinrivi(Kytkin.Musiikki, Ikonit.Musiikki);
@@ -73,6 +80,7 @@ namespace Matkakirja.Natiivi
             Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", Sisalto, PickingMode.Ignore);
             Retkikunta.style.display = DisplayStyle.None;
             asetusosat.AddRange(Sisalto.Children());
+            asetusosat.Remove(aanentasot);
             // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);
@@ -189,6 +197,8 @@ namespace Matkakirja.Natiivi
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             kokeet.style.display = Asetukset.Kehittaja && osa != Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
+            aanentasot.style.display = osa == Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
+            if (osa == Osa.Asetukset) Aanentasot.PaivitaSaatimet(saatimet);
             foreach (var e in asetusosat) if (e != Retkikunta) e.style.display = osa == Osa.Kehittaja ? DisplayStyle.None : DisplayStyle.Flex;
             // Retkikunnan näkyvyys on SahkeNakyman: Kehittäjä-osassa piiloon ja takaisin entiseen seuraavalla avauksella.
             if (osa == Osa.Kehittaja) { retkiEnnen ??= Retkikunta.style.display; Retkikunta.style.display = DisplayStyle.None; }

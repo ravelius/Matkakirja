@@ -72,9 +72,12 @@ namespace Matkakirja.Natiivi
             Asetukset.Muuttui += nimi => { if (Auki && !Asetukset.OnTaso(nimi)) Paivita(); };
         }
 
-        void Saadinrivi(Voima v)
+        void Saadinrivi(Voima v) => saatimet[v] = LuoSaadinrivi(Sisalto, v);
+
+        /// <summary>Äänentason liukusäädinrivi (myös iPhonen Asetukset-osion yläosa, Paavalikko).</summary>
+        public static (Slider Saadin, Label Arvo) LuoSaadinrivi(VisualElement isa, Voima v)
         {
-            var rivi = Rakenne.El("mk-saadinrivi", Sisalto);
+            var rivi = Rakenne.El("mk-saadinrivi", isa);
             Rakenne.Teksti(Asetukset.Nimi(v), "mk-saadinrivi__nimi", rivi);
             var s = new Slider(0, 100) { pageSize = 0, fill = true };
             s.AddToClassList("mk-saadin");
@@ -87,19 +90,25 @@ namespace Matkakirja.Natiivi
                 Asetukset.AsetaTaso(v, p / 100f, tallenna: false);
             });
             s.RegisterCallback<PointerCaptureOutEvent>(_ => Asetukset.Tallenna());
-            saatimet[v] = (s, arvo);
+            return (s, arvo);
         }
 
-        protected override void Paivita()
+        /// <summary>Säätimien arvot asetuksista (ilman muutostapahtumaa).</summary>
+        public static void PaivitaSaatimet(Dictionary<Voima, (Slider Saadin, Label Arvo)> saatimet)
         {
-            foreach (var e in Sisalto.Children())
-                if (e != offlineOsio) e.style.display = osa == Osa.Offline ? DisplayStyle.None : DisplayStyle.Flex;
             foreach (var pari in saatimet)
             {
                 int p = Mathf.RoundToInt(Asetukset.Taso(pari.Key) * 100f);
                 pari.Value.Saadin.SetValueWithoutNotify(p);
                 pari.Value.Arvo.text = p + " %";
             }
+        }
+
+        protected override void Paivita()
+        {
+            foreach (var e in Sisalto.Children())
+                if (e != offlineOsio) e.style.display = osa == Osa.Offline ? DisplayStyle.None : DisplayStyle.Flex;
+            PaivitaSaatimet(saatimet);
             PaivitaOffline();
         }
 

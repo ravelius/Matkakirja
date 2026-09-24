@@ -165,6 +165,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupungin luento ehdoitta (kaiutinnappi), tai null.</summary>
         public Luento Luento(string kaupunki) => kaupunki != null && luennot.TryGetValue(kaupunki, out var l) ? l : null;
 
+        /// <summary>
+        /// Avauslennon repliikki (web lueLennonRepliikki; lennonLuentaAlkoi nollautuu jokaisessa avauksessa,
+        /// doPickStart): soi AINA avauslennolla, myös Uusi peli -polulla samassa istunnossa. Merkitsee repliikin
+        /// kuulluksi, jottei ensimmäinen tavallinen lento soita sitä uudelleen.
+        /// </summary>
+        public Luento LentoAlkuAvaukseen()
+        {
+            lentoKuultu = true;
+            return LentoAlku;
+        }
+
         /// <summary>Lennon alun repliikki kerran istunnossa (web lennonLuentaAlkoi), tai null.</summary>
         public Luento OtaLentoAlku()
         {
