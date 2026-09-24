@@ -4427,3 +4427,7 @@ Omistaja hyväksyi kortilla savukkeen perumisen (Julkaisijan luokitin esti); gh 
 ## LEVYHALYTYS klo 18.4x: VAPAANA 23 Gt (RAJA 35) — SYYT wt/ 60 Gt (23 SISALTOKIRJURI-WORKTREETA À 1,1 Gt node_modules), proto-3d/lokit 28 Gt, Build/ 17 Gt (24.9.2026 klo 18.35)
 
 Käsketty: Sisältökirjuri poistaa pushatut worktreensä (PR:n ei tarvitse olla mergetty) ja käyttää jatkossa PLAYWRIGHT_JS-polkua roolikansion node_modulesiin (ei npm ci per worktree); Natiiviseppä poistaa vanhat Build-kansiot (yo, testflight-4, laite ~6 Gt), ei Library/; Linssiseppä poistaa raakakehykset (piikit 2,4 Gt + ~6 Gt); Postivahti seuraa 10 min välein, hälytys alle 15 Gt. DerivedData 4,6 Gt jätetään (käännökset kesken).
+
+## LEVY PALAUTUNUT 72 Gt VAPAATA; RAAMATTUUN WORKTREE-KATTO (3 PER ROOLI, POISTO PUSHIN JALKEEN, EI node_modules); CODEX: 5 MUOTOKUVAA LISAA (16/18), KUITATTU (24.9.2026 klo 18.37)
+
+Sisältökirjuri poisti 13 worktreetä, Natiiviseppä vanhat Build-kansiot (5,8 Gt), Julkaisija kaikki pr-worktreet (jono.sh poistaa edellisen ennen seuraavaa), Karttaseppä käsketty karsimaan kolmeen. Linssisepän lokien poisto (3,4 Gt + raakakuvien pienennys 1,2 → 0,1 Gt) skriptillä proto-3d/vapauta-levy-linssiseppa-20260924.sh — omistaja ajaa (lokikansioiden pysyvät poistot omistajalle). Codex-toimitus 7e455f60: Botticelli, Bellini, Piero di Cosimo, Fra Bartolomeo, Bronzino (osin myöhempiä kaiverruksia); Cima ja Fra Carnevale ilman varmaa kuvaa, ei sijaiskasvoja; kuitattu postilaatikkoon (612751936), Linssisepälle kohta 4.3. Build 10 odottaa Julkaise peli -ajoa 36020424867.
