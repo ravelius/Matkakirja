@@ -41,8 +41,9 @@ vesistöjen yhtenäinen uoma (webin pallolla z-taistelubugi, Fable 24.9.).
 
 ## Kesken / seuraavaksi
 
-1. Keksintöjen reiän kulku hypyssä (web aikajana.js siirraReikaMatkalla, AJON_REIAN_KERROIN): ainoa tunnettu
-   puuttuva linssin osa (Tummennus.cs / KeksinnotKerros; Pysakkiajon hyppykaari antaa kohdan).
+1. Keksintöjen reiän kulku hypyssä: EI TARVITA. Web ajaa siirraReikaMatkalla vain ajaValia-hypyssä, joka
+   käynnistyy kaarille, joilla reitti tai hyppykamera; keksinnöillä ei kumpaakaan (tarkistettu 24.9.).
+   Linssit ovat valmiit; seuraava tehtävä omistajan aamukokeilun löydöksistä (Fable).
 2. Natiivi-UI: ihmisen matkan "Kertomus päättyi" -kortti ei ole webissä (ilmoitettu).
 3. Isoisä 1873 erä 2 odottaa omistajaa (ei webissä, ei tehdä).
 4. Webin vesistöjen z-taistelu on Pelikoodarin matalan prioriteetin bugi (Fable).
