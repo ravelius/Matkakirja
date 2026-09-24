@@ -17,7 +17,6 @@
 //   ● Kadonneet ihmeet (2)           (nostokategoriat haitarina, KaupunkiNostot; toisen avaus
 //   ● Skandaalit (3)                  sulkee edellisen, saman napautus sulkee)
 //        Mona Lisan varkaus          (kohderivi: kortti kiinni ja nosto auki, web liuska = null)
-//                              [Sulje]
 //   ▾ lisää / ▴ edelliset            (kelausrivit kortin ala- ja yläreunassa, kun sisältö ei mahdu:
 //                                     web kelattuLiuska ja kelauksenAskel, askel = ikkuna − 2 riviä)
 //
@@ -113,6 +112,36 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(rivit, Kirjasin.Kone);
 
             kerros.TurvaMuuttui += Asettele;
+            kerros.JokaRuutu += TarkistaOhiNapautus;
+        }
+
+        // E1 (web kaupunkiliuska ilman sulkunappia): kartan napautus kortin ohi sulkee, samoin saman merkin
+        // uudelleennapautus (peli avaa saman kaupungin uudelleen → sulku jää voimaan). Veto ei sulje (web
+        // kuunteleSulkevaNapautus: liike < 6 px ja kesto < 700 ms).
+        Vector2 ohiAlku;
+        float ohiAika = -1f;
+
+        void TarkistaOhiNapautus()
+        {
+            if (!Auki) { ohiAika = -1f; return; }
+            var osoitin = UnityEngine.InputSystem.Pointer.current;
+            if (osoitin == null || alue.panel == null) return;
+            var r = osoitin.position.ReadValue();
+            var p = RuntimePanelUtils.ScreenToPanel(alue.panel, new Vector2(r.x, Screen.height - r.y));
+            if (osoitin.press.wasPressedThisFrame)
+            {
+                var kortti = alue.childCount > 0 ? alue[0] : alue;
+                bool sisalla = kortti.worldBound.Contains(p);
+                ohiAika = sisalla ? -1f : Time.unscaledTime;
+                ohiAlku = p;
+            }
+            if (!osoitin.press.wasReleasedThisFrame || ohiAika < 0f) return;
+            bool napautus = (p - ohiAlku).magnitude < 6f && Time.unscaledTime - ohiAika < 0.7f;
+            ohiAika = -1f;
+            if (!napautus) return;
+            string k = kaupunki;
+            // Seuraavassa ruudussa: toisen kaupungin napautus on jo vaihtanut kortin sisällön, eikä sitä suljeta.
+            alue.schedule.Execute(() => { if (Auki && kaupunki == k) Sulje(); }).StartingIn(50);
         }
 
         void Asettele()
@@ -236,8 +265,8 @@ namespace Matkakirja.Natiivi
             if (t.Mannerlento != null) Rivi(Ikonit.Viiva["kone"], t.MannerlentoTeksti ?? "Mannerlento", null, t.Mannerlento);
             if (t.Liiku != null) Rivi(Ikonit.Viiva["kompassi"], t.LiikuTeksti ?? "Liiku tänne", null, t.Liiku);
             Haitari();
-            var napit = Rakenne.El("mk-kortti__napit", rivit, PickingMode.Ignore);
-            Rakenne.Nappi("Sulje", "mk-nappi--haamu", Sulje, napit);
+            // E1: webin kaupunkiliuskassa ei sulkunappia (ui.js "Sulje-nappi poistui"); sulku merkin uudelleen-
+            // napautuksesta tai kartalta (ohi-napautus).
         }
 
         // --- nostokategoriat haitarina (web liuskanRivit) -----------------------------------
