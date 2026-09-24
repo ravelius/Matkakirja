@@ -8,6 +8,7 @@
 // (FontAsset.CreateFontAsset(perhe, tyyli)) eikä sovelluspakettiin lisätä mitään
 // (omistaja: peli mahdollisimman pieni). Jos fonttia ei löydy (esim. Android),
 // varana on projektin EB Garamond (Assets/Matkakirja/Fontit, Resources-viite teemassa).
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -51,6 +52,37 @@ namespace Matkakirja.Natiivi
             if (d == null) Debug.LogWarning("MATKAKIRJA ui: järjestelmäfonttia ei löytynyt: " + k + " (varafontti EB Garamond)");
             valimuisti[k] = d;
             return d;
+        }
+
+        // --- esilämmitys (UI-piikit 24.9.: fontin ensikäyttö 10–13 ms, GPOS-taulu ja glyfien rasterointi) ---------
+
+        /// <summary>Suomen tekstin tavalliset merkit: rasteroidaan atlakseen levossa eikä ensimmäisellä näytöllä.</summary>
+        const string Merkit = "aeinstlokuämvrjhypdögbfcwåzxq AEINSTLOKUÄMVRJHYPDÖGBFCWÅZXQ 0123456789 .,:;!?-–—()\"'’“”…%×·/&+°";
+        const int MerkkejaRuudussa = 12;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KaynnistaEsilammitys() => UiKerros.Hae().StartCoroutine(Esilammita());
+
+        /// <summary>
+        /// Fontit ja niiden merkit valmiiksi pienissä paloissa (yksi fontti tai 12 merkkiä ruutua kohti), jotta
+        /// ensimmäinen lehti, kortti tai linssin selite ei maksa GPOS-taulua ja rasterointia avauskehyksessään.
+        /// </summary>
+        static IEnumerator Esilammita()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            foreach (Kirjasin k in System.Enum.GetValues(typeof(Kirjasin)))
+            {
+                var d = Hae(k);
+                yield return null;
+                var fa = d?.fontAsset;
+                if (fa == null) continue;
+                for (int i = 0; i < Merkit.Length; i += MerkkejaRuudussa)
+                {
+                    try { fa.TryAddCharacters(Merkit.Substring(i, Mathf.Min(MerkkejaRuudussa, Merkit.Length - i)), out _); }
+                    catch (System.Exception e) { Debug.LogWarning("MATKAKIRJA ui: fontin esilämmitys " + k + ": " + e.Message); break; }
+                    yield return null;
+                }
+            }
         }
 
         /// <summary>Asettaa elementin (ja perivien lasten) fontin.</summary>

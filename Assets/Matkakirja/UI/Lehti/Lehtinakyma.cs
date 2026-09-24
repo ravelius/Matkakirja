@@ -305,6 +305,7 @@ namespace Matkakirja.Natiivi
             }
             // Web lehti.js visasivu: kaupunkilehdessä toisella sivulla (yksisivuisessa etusivulla).
             if (lehti.Laji == LehtiLaji.Kaupunki && i == (lehti.Sivut.Count > 1 ? 1 : 0)) Kulttuurivisa(sivu.contentContainer);
+            Porrasta(sivu.contentContainer);
 
             if (vanha != null)
             {
@@ -333,6 +334,47 @@ namespace Matkakirja.Natiivi
                 Laji = LehtiTekoLaji.SivuNakyi, Omistaja = lehti.Omistaja, Aihe = s.Aihe?.Id, Sivu = i, Kaupunki = avausKaupunki,
                 SivunLaji = s.Laji == LehtiSivuLaji.Etusivu ? "etusivu" : lehti.Laji == LehtiLaji.Maa ? "maa" : "aihe",
             });
+        }
+
+        // --- sivun porrastus (UI-piikit 24.9.: maalehden avaus 82 ms, TextJob 28 + asettelu 25 + repaint 22) -----
+
+        const int HetiLohkoja = 4;
+        readonly List<VisualElement> odottavatLohkot = new List<VisualElement>();
+        VisualElement porrasSivu;
+        IVisualElementScheduledItem porras;
+
+        /// <summary>
+        /// Sivun ensimmäiset lohkot heti, loput yksi ruutua kohti: tekstin generointi, asettelu ja piirto jakautuvat
+        /// kehyksille eikä sivun avaus pysäytä ruutua. Lohkot rakennetaan valmiiksi; vain liittäminen porrastuu.
+        /// </summary>
+        void Porrasta(VisualElement c)
+        {
+            // Edellisen sivun liittämättömät lohkot jäävät pois (sivu poistuu).
+            porras?.Pause();
+            porras = null;
+            odottavatLohkot.Clear();
+            porrasSivu = null;
+            if (c.childCount <= HetiLohkoja) return;
+            odottavatLohkot.AddRange(c.Children().Skip(HetiLohkoja).ToList());
+            foreach (var e in odottavatLohkot) e.RemoveFromHierarchy();
+            porrasSivu = c;
+            porras = c.schedule.Execute(() =>
+            {
+                if (odottavatLohkot.Count == 0 || porrasSivu != c) { porras?.Pause(); return; }
+                var e = odottavatLohkot[0];
+                odottavatLohkot.RemoveAt(0);
+                c.Add(e);
+            }).Every(0);
+        }
+
+        /// <summary>Loput lohkot heti (luenta lukee koko sivun, sivu vaihtuu).</summary>
+        void ValmistaSivu()
+        {
+            porras?.Pause();
+            porras = null;
+            if (porrasSivu != null) foreach (var e in odottavatLohkot) porrasSivu.Add(e);
+            odottavatLohkot.Clear();
+            porrasSivu = null;
         }
 
         static Button Selausnappi(string suunta, string luokka, Action painettu, VisualElement isa)
@@ -1020,6 +1062,7 @@ namespace Matkakirja.Natiivi
         void VaihdaLuenta()
         {
             if (luetaan) { PysaytaLuenta(); return; }
+            ValmistaSivu();
             var palat = sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
                 .Concat(lisaLuettavat).Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
             var puhe = Puhe.Hae();
@@ -1053,6 +1096,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string Testaa(string mita, int n)
         {
+            ValmistaSivu();
             switch (mita)
             {
                 case "fokus-vastaa":
@@ -1076,6 +1120,7 @@ namespace Matkakirja.Natiivi
         public string Vierita(string mihin)
         {
             if (!Auki || sivu == null) return "lehti ei ole auki";
+            ValmistaSivu();
             // Asettelu ensin: juuri avatun sivun sisältö on vielä mittaamatta.
             sivu.schedule.Execute(() =>
             {
