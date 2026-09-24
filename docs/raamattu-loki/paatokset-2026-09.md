@@ -4483,3 +4483,7 @@ Ei hakulistan vaihtoa jatkossa; build 11 viedään ilman kiertotietä kun omista
 ## BUILD 10 TESTFLIGHTISSA: 1.0.0 (202609241607), PROTO b9755e9 (= f02376b + TIIMIHOTFIX), klo 19.15 (AJO 36025102019); AVAINNIPPUKORJAUS A TEHTY (24.9.2026 klo 19.19)
 
 Hakulista palautunut, gh toimii. Omistaja ajoi set-key-partition-list (ACL:t tarkistettu); 2RX77QMLHA:n poisto vielä kesken. Muutosloki #3111, #3110 mainissa. Natiivi-UI build 11: radiolöydökset 40 ja 42 mergetty (master 6ba26c9), lehti-otsikot + leveä nostokortti mergettävissä (d664f5e), rgba-vaaleus korjattu sRGB-yhdistelminä (selite 71, oli 117); avoinna nostokortin tyyppikuvake (webp → png paketista, Siirtoseppä) ja iPadin vaakataitto ≥ 1100 pt.
+
+## LAITETESTAAJA: b10c-LISTA VALMIS KOLMELLA KOOLLA (iPhone, iPad, iPad 13" -SIMULAATTORI 1024 pt); HUOMIO: KAUPUNKILEHTI EI TAYTA 1024 px LEVEYTTA (24.9.2026 klo 19.22)
+
+Kuvat proto-3d/lokit/loydos26-pariisi-zoomi/, raportti docs/raportit/loydos26-ja-avausteksti-20260924.md. Fable: lehden leveys mitataan webistä 1024×1366 (löydös 44 jos web täyttää); seuraavaksi build 10:llä esilatauksen lokimittaus ja inventaarion EI TARKISTETTU -osiot.
