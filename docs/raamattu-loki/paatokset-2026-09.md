@@ -4055,3 +4055,7 @@ Espanja 7000 km → z5 iPad-simissä: ei vaaleita suorakulmioita, huntu häivytt
 ## PELIKOODARI: NOPPA-KARTALLE 4d3fe7a — WEB-KUVAT JA MITAT MERGE-PYYNNOSSA; POLLON VALINTAVIHJE EI NAY WEBISSA iPHONELLA → WEB-BUGI, KORJATAAN WEBIIN (24.9.2026 klo 15.29)
 
 Web-kuvat tuotannosta (kartta, noppa, siirtovaihe, valintavihje × iPhone/iPad, proto-3d/lokit/noppa-kartalle-web-20260924/) ja mitat webin koodista merge-pyynnössä; Laitetestaaja ottaa natiivikuvat testihaarasta, sitten merge. Kysymys: js/pollo.js naytaVihje palaa kun pöllönappi on piilossa (iPhone 393 px), joten 15 s:n vihje ei näy. Fable: vahinkokytkentä, web-bugi — Pelikoodari korjaa webiin (vihje omana kuplana), natiivi pitää vihjeen samalla kestolla ja tekstillä; sääntö: web on malli tarkoitetulta käytökseltään, ei bugeiltaan (kuten Huippuvuoret).
+
+## BUILD 8 TESTFLIGHTISSA: 1.0.0 (202609241220), PROTO f6de924, klo 15.28 (AJO 35996178210, -nographics) (24.9.2026 klo 15.30)
+
+Sisältö: uusi DC-3, pilvimeri, punaiset renkaat, maamerkit Lontoo/Ateena, lennon ääni korjattu, ☰ kaksi riviä + Muut-paneeli, äänentasot Asetuksiin, VU AVAudioEngine, iPad-sumennus korjattu, Keychain, aloituskaava. Tunnetut: huntu-suorakulmiot, sumea kone, laatat lohkoina → build 9. Mainissa #2898 v2176, #2932, #3057, #3070, #3072, #3073. Julkaisija: #2966/#2972 (O7) ristiriidassa N-erien kanssa → Sisältökirjuri rebaseaa ja poistaa päällekkäisen, sulkee jos ei uutta. Laitetestaajalle build 8 -rivit 5/13/23 ja noppa-testihaaran kuvat. Omistajalle ilmoitettu.
