@@ -149,7 +149,7 @@ namespace Matkakirja.Editori
             kamera.backgroundColor = new Color(0.10f, 0.08f, 0.06f);
             kamera.nearClipPlane = 10_000f;
             kamera.farClipPlane = 100_000_000f;
-            kamera.fieldOfView = 40f;
+            kamera.fieldOfView = 50f; // webin PALLO_FOV (js/pallolauta/kamera.js), pystysuunta kuten three.js
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
             merkit.kamera = kamera;
