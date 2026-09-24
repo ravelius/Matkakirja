@@ -163,8 +163,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.32 linssiaineisto sellaisenaan päätasolle (Linssiseppä), tarinakaari kuva,
  *        lauta, saapumisLuenta; kohtaamiskuvat kansio, tiedosto; tapahtumat teksti,
  *        vaikutus. Vartija: jokainen raakakenttä päätasolla tai RAAKA_VASTINEET.
+ *   1.33 kokoelma maamerkit (natiivin 3D-maamerkit, Pelikoodari; Raamattu LENNON
+ *        KARTTA JA MAAMERKIT): lat, lon, maanKorkeus, suunta, mallinKorkeus,
+ *        malli { url, sha256, tavuja }; mallit myös offline.json maat[].media.
  */
-export const SKEEMAVERSIO_TARKKA = '1.32';
+export const SKEEMAVERSIO_TARKKA = '1.33';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

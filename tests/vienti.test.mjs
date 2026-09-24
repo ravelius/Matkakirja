@@ -178,6 +178,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tapahtumat: ns('africa.js').AFRICA.events.length,
     linssiaineisto: 8,
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
+    maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
     lehtitehtavat: Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).reduce((a, v) => a + (v?.lehtitehtavat?.length ?? 0), 0),
