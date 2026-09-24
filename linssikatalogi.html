@@ -26,6 +26,7 @@
     --violetti: #6a4f8a;
     --ruusu: #a14b6e;
     --hiekka: #7a6a4a;
+    --harmaasininen: #5c6b78;
     --viiva: #c9bb9c;
     --varjo: rgba(43, 36, 27, .14);
   }
@@ -45,6 +46,7 @@
       --violetti: #b39ddb;
       --ruusu: #d98cae;
       --hiekka: #c4b48a;
+      --harmaasininen: #93a3ae;
       --viiva: #4a4034;
       --varjo: rgba(0, 0, 0, .35);
     }
@@ -64,6 +66,7 @@
     --violetti: #b39ddb;
     --ruusu: #d98cae;
     --hiekka: #c4b48a;
+    --harmaasininen: #93a3ae;
     --viiva: #4a4034;
     --varjo: rgba(0, 0, 0, .35);
   }
@@ -88,6 +91,7 @@
   .luvut { display: flex; flex-wrap: wrap; gap: 22px 30px; margin-top: 10px; }
   .luvut div { font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--muste-haalea); }
   .luvut b { display: block; font-family: Vollkorn, serif; font-size: 30px; font-weight: 700; letter-spacing: 0; color: var(--muste); font-variant-numeric: tabular-nums; margin-bottom: 2px; }
+  .luvut .erittely { display: block; font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 12.5px; font-style: italic; color: var(--muste-haalea); margin-top: 3px; }
 
   h2.otsikko { font-size: 15px; margin: 0 0 16px; font-family: "Special Elite", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--seepia); display: flex; align-items: baseline; gap: 10px; }
   h2.otsikko .selite { font-family: Vollkorn, serif; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--muste-haalea); font-style: italic; }
@@ -100,6 +104,7 @@
   .moottori .ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
   .moottori b { font-size: 15.5px; font-weight: 700; }
   .moottori p { margin: 0; font-size: 13.5px; color: var(--muste-haalea); line-height: 1.4; }
+  .moottori p code { font-family: "Special Elite", monospace; font-size: 12px; background: var(--paperi-tumma); border: 1px solid var(--viiva); padding: 1px 5px; border-radius: 4px; }
 
   /* --- Pelissä nyt --- */
   .pelissa-nyt { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -128,10 +133,25 @@
   nav.suodatin button.lippu[aria-pressed="true"] { background: var(--muste); color: var(--paperi); border-color: var(--muste); }
   nav.suodatin button.lippu:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
   .haku { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .haku input[type="search"] { font: 14px Vollkorn, serif; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 7px 14px; color: var(--muste); min-width: 200px; }
+  .haku input[type="search"] { font: 14px Vollkorn, serif; background: var(--paperi-kortti); border: 1px solid var(--viiva); border-radius: 999px; padding: 7px 14px; color: var(--muste); min-width: 260px; }
   .aikasuodin { display: flex; align-items: center; gap: 8px; flex: 1 1 260px; min-width: 220px; }
-  .aikasuodin input[type="range"] { width: 100%; accent-color: var(--seepia); }
   .aikasuodin .vuosi { font: 12px "Special Elite", monospace; color: var(--muste-haalea); white-space: nowrap; min-width: 74px; }
+  .aikasuodin-rata { position: relative; flex: 1 1 auto; height: 20px; }
+  .aikasuodin-rata::before { content: ''; position: absolute; left: 0; right: 0; top: 9px; height: 2px; border-radius: 2px; background: var(--viiva); }
+  .aikasuodin-rata .aktiivi { position: absolute; top: 9px; height: 2px; border-radius: 2px; background: var(--seepia); }
+  .aikasuodin-rata input[type="range"] {
+    position: absolute; left: 0; top: 0; width: 100%; margin: 0; height: 20px;
+    -webkit-appearance: none; appearance: none; background: transparent; pointer-events: none;
+  }
+  .aikasuodin-rata input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+  .aikasuodin-rata input[type="range"]::-moz-range-track { background: transparent; }
+  .aikasuodin-rata input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--seepia); cursor: pointer; margin-top: 3px;
+  }
+  .aikasuodin-rata input[type="range"]::-moz-range-thumb {
+    pointer-events: auto; width: 14px; height: 14px; border-radius: 50%; background: var(--seepia); border: none; cursor: pointer;
+  }
   .osuma-maara { font: 12.5px "Special Elite", monospace; color: var(--muste-haalea); margin-left: auto; white-space: nowrap; }
 
   /* --- Ruudukko --- */
@@ -160,7 +180,7 @@
   .k-aikapalkki .piste1873 { position: absolute; top: -2px; bottom: -2px; width: 2px; background: #b3402f; }
   .k-aikapalkki .moodi { font-size: 11px; color: var(--muste-haalea); font-style: italic; }
   .k-pysakit { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0 0; }
-  .k-pysakit span { font-size: 11.5px; background: var(--paperi-tumma); border-radius: 999px; padding: 2px 8px; color: var(--muste); }
+  .k-pysakit span { font-size: 11.5px; background: var(--paperi-tumma); border: 1px solid var(--viiva); border-radius: 999px; padding: 2px 8px; color: var(--muste); }
   .k-pysakit span.lisaa { color: var(--muste-haalea); background: transparent; padding-left: 2px; }
   .k-tila-teksti { font: 11px "Special Elite", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--tilavari); }
   .k-opitaan { font-size: 13px; font-style: italic; color: var(--muste-haalea); margin: 0; }
@@ -171,7 +191,7 @@
   .moottori-lohko h3 .moottori-ikoni { width: 20px; height: 20px; color: var(--vari); }
   .moottori-lohko h3 .moottori-ikoni svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; }
   .moottori-lohko h3 .maara { font: 13px "Special Elite", monospace; color: var(--muste-haalea); font-weight: 400; }
-  .moottori .badge { font: 10px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; width: fit-content; }
+  .moottori .badge { font: 10px "Special Elite", monospace; letter-spacing: .05em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; width: fit-content; align-self: flex-start; display: inline-block; line-height: 1; }
   .moottori .badge.rakennettu { background: var(--vihrea); color: var(--paperi); }
   .moottori .badge.suunnitteilla { background: var(--paperi-tumma); color: var(--muste-haalea); }
 
@@ -190,11 +210,13 @@
     .ruudukko { grid-template-columns: 1fr; }
     .kortti.auki .k-lisatiedot { grid-template-columns: 1fr; }
   }
+  @media (max-width: 520px) {
+    .moottorit { grid-template-columns: 1fr; }
+  }
   @media (max-width: 480px) {
-    .moottorit { grid-template-columns: 1fr 1fr; }
     body { font-size: 16px; }
     .sivu { padding: 24px 16px 60px; }
-    .luvut { gap: 16px 22px; }
+    .luvut { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px; }
     .luvut b { font-size: 24px; }
   }
 
@@ -292,8 +314,11 @@
       <input type="search" id="tekstihaku" placeholder="Hae nimellä, alueella tai pysäkillä…">
       <div class="aikasuodin">
         <span class="vuosi" id="aika-min-teksti"></span>
-        <input type="range" id="aika-min" min="-3500" max="2026" value="-3500" step="10">
-        <input type="range" id="aika-max" min="-3500" max="2026" value="2026" step="10">
+        <div class="aikasuodin-rata">
+          <span class="aktiivi" id="aika-aktiivi"></span>
+          <input type="range" id="aika-min" min="-3500" max="2026" value="-3500" step="10">
+          <input type="range" id="aika-max" min="-3500" max="2026" value="2026" step="10">
+        </div>
         <span class="vuosi" id="aika-max-teksti"></span>
       </div>
       <span class="osuma-maara" id="osumamaara"></span>
@@ -362,7 +387,7 @@ const MOOTTORIVARIT = {
   data:        { nimi: 'Data',        vari: 'var(--violetti)' },
   esitys:      { nimi: 'Esitys',      vari: 'var(--ruusu)' },
   pohjakartta: { nimi: 'Pohjakartat', vari: 'var(--hiekka)' },
-  muu:         { nimi: 'Leikki',      vari: 'var(--vihrea)' },
+  muu:         { nimi: 'Leikki',      vari: 'var(--harmaasininen)' },
 };
 
 const TILAT = {
@@ -394,6 +419,11 @@ function url480(url) {
   return url.replace(/(\.[a-z]+)$/i, '-480$1');
 }
 
+// Moottorikuvausten `koodi`-merkinnät koodielementiksi (data sisältää yksittäisiä Markdown-backtickeja).
+function koodiMuotoile(teksti) {
+  return (teksti || '').replace(/`([^`]+)`/g, '<code>$1</code>');
+}
+
 function aikapalkkiHTML(l) {
   const vari = MOOTTORIVARIT[l.moottori]?.vari || 'var(--seepia)';
   if (l.alkuvuosi == null || l.loppuvuosi == null) {
@@ -413,12 +443,18 @@ function aikapalkkiHTML(l) {
 const lahdeSetti = new Set();
 LINSSIT.filter((l) => l.moottori === 'data' && l.aineisto).forEach((l) => l.aineisto.split(',').map((s) => s.trim()).filter(Boolean).forEach((s) => lahdeSetti.add(s.toLowerCase())));
 
+const seuraavatLinssit = LINSSIT.filter((l) => tilaAvain(l.tila) === 'seuraava');
+const seuraavaLuokka = (tila) => tila.includes('(data)') ? 'data' : tila.includes('(esitys)') ? 'esitys' : 'seuraava';
+const seuraavaMaara = seuraavatLinssit.filter((l) => seuraavaLuokka(l.tila) === 'seuraava').length;
+const dataMaara = seuraavatLinssit.filter((l) => seuraavaLuokka(l.tila) === 'data').length;
+const esitysMaara = seuraavatLinssit.filter((l) => seuraavaLuokka(l.tila) === 'esitys').length;
+
 document.getElementById('luvut').innerHTML = [
-  ['linssiä', LINSSIT.length],
-  ['pelissä nyt', LINSSIT.filter((l) => l.pelissa).length],
-  ['seuraavaksi', LINSSIT.filter((l) => tilaAvain(l.tila) === 'seuraava').length],
-  ['aineistolähteitä', lahdeSetti.size],
-].map(([nimi, luku]) => `<div><b>${luku}</b>${nimi}</div>`).join('');
+  ['linssiä', LINSSIT.length, ''],
+  ['pelissä nyt', LINSSIT.filter((l) => l.pelissa).length, ''],
+  ['seuraavaksi', seuraavatLinssit.length, `${seuraavaMaara} seuraavaa · ${dataMaara} dataa · ${esitysMaara} esitystä`],
+  ['aineistolähteitä', lahdeSetti.size, ''],
+].map(([nimi, luku, erittely]) => `<div><b>${luku}</b>${nimi}${erittely ? `<span class="erittely">${erittely}</span>` : ''}</div>`).join('');
 
 // --- Moottorikortit (linssikatalogi-data.js:stä) ---
 document.getElementById('moottorit').innerHTML = MOOTTORIT_DATA.map((m) => {
@@ -428,7 +464,7 @@ document.getElementById('moottorit').innerHTML = MOOTTORIT_DATA.map((m) => {
     <div class="ikoni" style="--vari:${vari}">${IKONIT[m.avain] || ''}</div>
     <b>${m.nimi}</b>
     <span class="badge ${rakennettu ? 'rakennettu' : 'suunnitteilla'}" title="${(m.rakennettu || '').replace(/"/g, '&quot;')}">${rakennettu ? 'rakennettu' : 'suunnitteilla'}</span>
-    <p>${m.kuvaus}</p>
+    <p>${koodiMuotoile(m.kuvaus)}</p>
     ${m.pilotti ? `<p class="mono" style="font-size:11px">Pilotti: ${m.pilotti}</p>` : ''}
   </div>`;
 }).join('');
@@ -484,8 +520,8 @@ function korttiHTML(l) {
       <div class="k-tila-piste" style="--tilavari:${t.vari}" title="${t.nimi}"></div>
       ${l.pelikytkos ? `<span class="k-pelikytkos">${l.pelikytkos}</span>` : ''}
       ${IKONIT[l.moottori] || ''}
-      ${havainneUrl ? `<img class="k-kuva-pieni" src="${url480(havainneUrl)}" data-iso="${havainneUrl}" alt="" loading="lazy" onerror="this.remove()">` : ''}
-      ${ccUrl ? `<img class="k-cc" src="${url480(ccUrl)}" data-iso="${ccUrl}" alt="" loading="lazy" onerror="this.remove()" title="${tekstit && tekstit.c ? (tekstit.c.tek + ' — ' + tekstit.c.lis).replace(/"/g, '&quot;') : 'aikalaiskuva'}">` : ''}
+      ${havainneUrl ? `<img class="k-kuva-pieni" src="${url480(havainneUrl)}" data-iso="${havainneUrl}" alt="" loading="lazy" style="display:none" onload="this.style.display='block'" onerror="this.remove()">` : ''}
+      ${ccUrl ? `<img class="k-cc" src="${url480(ccUrl)}" data-iso="${ccUrl}" alt="" loading="lazy" style="display:none" onload="this.style.display='block'" onerror="this.remove()" title="${tekstit && tekstit.c ? (tekstit.c.tek + ' — ' + tekstit.c.lis).replace(/"/g, '&quot;') : 'aikalaiskuva'}">` : ''}
     </div>
     <div class="k-body">
       <div class="k-ylarivi">
@@ -569,7 +605,7 @@ function lippurivi(kohde, avaimet, nimikartta, aktiiviSetti) {
   const juuri = document.getElementById(kohde);
   juuri.innerHTML = avaimet.map((a) => {
     const maara = LINSSIT.filter((l) => (kohde === 'mannersuodatin' ? l.manner === a : tilaAvain(l.tila) === a)).length;
-    return `<button type="button" class="lippu" data-avain="${a}" aria-pressed="false">${nimikartta[a]?.nimi || a} (${maara})</button>`;
+    return maara > 0 ? `<button type="button" class="lippu" data-avain="${a}" aria-pressed="false">${nimikartta[a]?.nimi || a} (${maara})</button>` : '';
   }).join('');
   juuri.addEventListener('click', (ev) => {
     const b = ev.target.closest('button');
@@ -594,6 +630,11 @@ function vuosiTeksti(v) { return v < 0 ? `${Math.abs(v)} eaa.` : `${v}`; }
 function paivitaAikatekstit() {
   document.getElementById('aika-min-teksti').textContent = vuosiTeksti(aikaMin);
   document.getElementById('aika-max-teksti').textContent = vuosiTeksti(aikaMax);
+  const alkuPros = (aikaMin - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+  const loppuPros = (aikaMax - AXIS_MIN) / (AXIS_MAX - AXIS_MIN) * 100;
+  const aktiivi = document.getElementById('aika-aktiivi');
+  aktiivi.style.left = `${alkuPros}%`;
+  aktiivi.style.width = `${loppuPros - alkuPros}%`;
 }
 function aikakasittelija() {
   aikaMin = Math.min(parseInt(aikaMinEl.value, 10), parseInt(aikaMaxEl.value, 10));
