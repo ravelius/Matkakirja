@@ -9,9 +9,9 @@ pelkkä suunnitelma.*
 ## 0. Fablen päätökset 24.9.2026 (sitovat, ohittavat alla olevat vaihtoehdot)
 
 1. NSIDC:n "vapaa, viittaus ehtona" kelpaa: täysi viite lähdeluetteloon ja linssiin merkintä "NASA / NSIDC".
-2. Ei Earthdata-tunnusta eikä muita uusia tunnuksia. **GRACE (mannerjäätiköt) jää pois.** Merenpinta
-   otetaan avoimesta lähteestä ilman kirjautumista (NOAA:n satelliittialtimetriasarja tai PSMSL:n
-   vuorovesimittarit; lähde ja lisenssi tarkistetaan erässä 1) tai jätetään pois.
+2. Ei Earthdata-tunnusta. **GRACE (mannerjäätiköt) jää pois.** Merenpinta: **NOAA STAR LSA -CSV** ilman tunnusta,
+   PD (Fable 24.9. klo 11.2x, datalähteet-raportti). Omistaja 24.9. klo 11.2x: ilmaiset datatilit sallittu
+   (ECMWF/Copernicus, EOG, GBIF; ei Earthdata), ei NC-lisenssejä, jakoehdolliset samalla lisenssillä.
 3. Linssin järjestys on heti astronautin kameran jälkeen, ja avauskynnys on sama kuin astronautilla.
    **Etelämantereen merijää tulee mukaan** (sama G02135, helmikuun minimi). Vuorijäätiköt (GLIMS) tulevat vaiheessa 2.
 4. Toteutus vasta pariteettikierroksen ja omistajan kokeilun korjausten jälkeen.
@@ -40,7 +40,7 @@ Lähteet on tarkistettu 24.9.2026 (Sonnet-agentti avasi sivut; ne, joita ei saat
 | Merijää, 2026 | NSIDC Arctic Sea Ice News | nsidc.org/arcticseaicenews | 12.9.2026: 4,60 milj. km² (1,78 milj. mi²), jaettu 10. pienin (2008, 2010 ja 2025 samassa) | kuten yllä | NSIDC Arctic Sea Ice News, syyskuu 2026 |
 | Merijää, vertailu | NASA SVS -visualisoinnit arktisesta minimistä | svs.gsfc.nasa.gov (haku "Arctic sea ice minimum") | valmiit kuvasarjat ja videot, vain tiedeliitteeseen | public domain (svs.gsfc.nasa.gov/help); **lisensoitu musiikki ei ole PD**, joten ääniraitaa ei käytetä | "NASA's Scientific Visualization Studio" |
 | Lämpötila | NASA GISTEMP v4 | data.giss.nasa.gov/gistemp/ (data_v4.html) | hila `gistemp1200_GHCNv4_ERSSTv5.nc.gz` (2° × 2°, kuukausittain 1880–, ~23 Mt); maailman vuosiluku `tabledata_v4/GLB.Ts+dSST.csv` | Yhdysvaltain liittovaltion työ, public domain; kiitosmaininta pyydetään | GISTEMP Team, 2026: GISS Surface Temperature Analysis (GISTEMP), version 4. NASA GISS + Lenssen ym. |
-| Merenpinta, korvaava (Fable 24.9.) | NOAA:n satelliittialtimetrian GMSL-sarja tai PSMSL | tarkistetaan erässä 1: julkinen lataus ilman kirjautumista | CSV/teksti | NOAA: liittovaltion työ; PSMSL: oma käyttöehto | tarkistetaan |
+| Merenpinta (Fable 24.9. klo 11.2x) | NOAA STAR LSA Global Mean Sea Level (satelliittialtimetria) | www.star.nesdis.noaa.gov/socd/lsa/SeaLevelRise/LSA_SLR_timeseries_global.php; CSV `slr/slr_sla_gbl_free_all_66.csv` (ja `…_ref_90`), ladattavissa ilman tunnusta (tarkistettu 24.9.) | CSV, 1992–, ~10 pv:n välein, < 1 Mt | NOAA, Yhdysvaltain liittovaltion työ, PD | NOAA/NESDIS/STAR Laboratory for Satellite Altimetry |
 | ~~Merenpinta~~ (vaatii kirjautumisen) | NASA GMSL-indikaattori (satelliittialtimetria) | PO.DAAC `NASA_SSH_GMSL_INDICATOR` (sealevel.nasa.gov) | tekstitiedosto, 1993– | NASA, public domain; **tiedosto vaatii Earthdata-kirjautumisen** | Willis, Hamlington & Fournier 2023, doi:10.5281/zenodo.7702315 |
 | Merenpinta, vertailu | NASA SVS 5516 "Global Mean Sea Level 1993–2024" | svs.gsfc.nasa.gov/5516 | video ja kuvat | public domain | "NASA's Scientific Visualization Studio" |
 | ~~Mannerjäätiköt~~ (pois, Fable 24.9.) | GRACE/GRACE-FO JPL mascon -aikasarjat (Grönlanti, Etelämanner) | PO.DAAC, DOI:t 10.5067/TEMSC-GT613 ja 10.5067/TEMSC-AT613 | aikasarja (Gt), 2002– | NASA/JPL, public domain | **VARMISTAMATTA**: PO.DAAC ei vastannut agentin ympäristöstä. Tuotenimi ja viite tarkistetaan ennen toteutusta. |
