@@ -63,6 +63,11 @@ namespace Matkakirja.Natiivi
 
         void Start()
         {
+#if MATKAKIRJA_APPSTORE
+            // App Store -käännöksessä ei testikomentoja (kuten Komennot.cs ja Natiivi-UI:n ui-komento.txt).
+            enabled = false;
+            return;
+#endif
             polku = Path.Combine(Application.persistentDataPath, "peli-komento.txt");
             loki = Path.Combine(Application.persistentDataPath, "peli-loki.txt");
         }
