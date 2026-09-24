@@ -345,6 +345,10 @@ namespace Matkakirja
                 {
                     pintaVaihdettu = true;
                     kerrokset?.LentoPohja(true);
+                    // Mittari (Fable 24.9.): montako reitin laattaa ehti välimuistiin ennen pinnan vaihtoa.
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: vaihto t={t:0.00}, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
                 }
                 if (usva != null && t > 0.24 && t < 0.9) usva.Tavoite(0f, kesto * 0.12f);
                 if (usva != null && !laskuSumu && t > 0.9)
@@ -356,6 +360,9 @@ namespace Matkakirja
                 if (laskuSumu && pintaVaihdettu && (usva.Peitto > 0.85f || t > 0.985))
                 {
                     pintaVaihdettu = false;
+                    if (esilataus != null)
+                        Debug.Log($"MATKAKIRJA lennon pinta: lasku, esilataus {esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa} "
+                                  + $"({esilataus.Osuus:P0}), välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
                     kerrokset?.LentoPohja(false);
                     usva.Tavoite(0f, 1.4f);
                 }
