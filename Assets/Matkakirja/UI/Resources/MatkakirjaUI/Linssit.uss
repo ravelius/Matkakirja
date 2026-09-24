@@ -2549,3 +2549,19 @@
     white-space: normal;
     color: #5a4a33;
 }
+
+/* --- radion napit pallolla (RadioNapit, web .pallolauta-radionappi) --------- */
+.mk-radionapit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-radionappi {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+}
+
