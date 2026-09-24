@@ -209,6 +209,12 @@ namespace Matkakirja.Natiivi
         /// ~11 ms satelliitin avauksen kehyksessä iPadilla (ui piikit 24.9., ajo 3). Tehdään kerran heti,
         /// kun kartan fontti on olemassa, piilotetulla tekstillä, jossa on skandit ja isot kirjaimet.
         /// </summary>
+        /// <summary>Linssien 3D-nimien merkistö (paikannimet eri kielistä latinalaisin kirjaimin).</summary>
+        const string Merkisto =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .,:;-–—'’\"()/&!?°" +
+            "ÅÄÖÜÉÈÊËÁÀÂÃÍÌÎÏÓÒÔÕÚÙÛÑÇØÆŒÝŠŽČĆĐŁŃŚŹŻĘĄŐŰĞŞİ" +
+            "åäöüéèêëáàâãíìîïóòôõúùûñçøæœýšžčćđłńśźżęąőűğşıß";
+
         System.Collections.IEnumerator LammitaFontti()
         {
             TMPro.TMP_FontAsset fontti = null;
@@ -217,15 +223,29 @@ namespace Matkakirja.Natiivi
                 fontti = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.merkit != null ? KarttaKerrokset.Instanssi.merkit.fontti : null;
                 if (fontti == null) yield return new WaitForSecondsRealtime(0.5f);
             }
-            if (fontti == null) yield break;
+            if (fontti == null) { Kirjaa("fonttilämmitys: kartan fonttia ei löytynyt"); yield break; }
+            // Ajo 4 (24.9.): pelkkä lyhyt teksti ei riittänyt, koska kustannus syntyy jokaisesta UUDESTA merkistä
+            // dynaamiseen atlakseen (glyfin rasterointi + OpenType-tietueet). Siksi koko nimien merkistö
+            // lisätään ennalta (TryAddCharacters) ja jäsennetään kerran näkyvällä, ruudun ulkopuolisella tekstillä.
+            float t1 = Time.realtimeSinceStartup;
+            // Kuusi merkkiä kehyksessä: käynnistyksen aikana ei saa syntyä yhtä pitkää kehystä.
+            var puuttuu = new System.Text.StringBuilder();
+            for (int i = 0; i < Merkisto.Length; i += 6)
+            {
+                if (!fontti.TryAddCharacters(Merkisto.Substring(i, Math.Min(6, Merkisto.Length - i)), out string p)) puuttuu.Append(p);
+                yield return null;
+            }
+            string puuttuvat = puuttuu.ToString();
             var go = new GameObject("Fonttilämmitys");
-            go.SetActive(false);
+            go.transform.position = new Vector3(0, -1e7f, 0);
             var t0 = go.AddComponent<TMPro.TextMeshPro>();
             t0.font = fontti;
-            t0.text = "Ääkköset ÅÄÖ åäö Tokio — Île-de-France fi";
+            t0.text = Merkisto;
             t0.ForceMeshUpdate(true, true);
             yield return null;
             Destroy(go);
+            Kirjaa($"fonttilämmitys: {Merkisto.Length} merkkiä, {(Time.realtimeSinceStartup - t1) * 1000:F0} ms" +
+                (string.IsNullOrEmpty(puuttuvat) ? "" : $", fontista puuttuu {puuttuvat.Length}"));
         }
 
         /// <summary>Astronautin kamera rekisteriin, kun sen aineisto on ladattu paketista.</summary>
