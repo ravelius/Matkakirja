@@ -15,7 +15,7 @@ using Matkakirja.Linssit.Virrat;
 
 namespace Matkakirja.Linssit.Aikajana
 {
-    public sealed class IhmisenMatkaLinssi : ILinssi
+    public sealed class IhmisenMatkaLinssi : ILinssi, ITiedeliitteenLahde
     {
         public static readonly LinssiTiedot IhmisenMatkaTiedot = new LinssiTiedot
         {
@@ -82,6 +82,7 @@ namespace Matkakirja.Linssit.Aikajana
         public void AsetaVanat(VanatTulos tulos, IReadOnlyList<Virta> virrat = null)
         {
             vanaLista = tulos.Vanat;
+            pilkut = null;
             if (virrat != null) this.virrat = virrat;
             vanat = tulos.Vanat.Select(v => (IReadOnlyList<double[]>)v.Pisteet.Select(p => new[] { p.Lat, p.Lon, p.Aika }).ToList()).ToList();
             if (Auki && Esitys != null && !Esitys.Kaynnissa && !Esitys.Paattynyt && Esitys.I < 0)
@@ -245,11 +246,56 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Alkusanat tiedeliitteen ensimmäisen sivun kärkeen (web tiedeliiteAlkusanat); null = ei.</summary>
         public string TiedeliitteenAlkusanat => aineisto.Kaistaselite;
 
+        // ── Tiedeliite (web avaaNostonJuttu, vaimennaJutunAjaksi, palautaJutunJalkeen) ──
+
+        /// <summary>Kortin "Lue lisää" pyysi sivun auki: UI avaa Tiedeliitenäkymän.</summary>
+        public event Action<int> JuttuPyydetty;
+        /// <summary>Auki oleva sivu (löytöpaikan indeksi) tai -1.</summary>
+        public int JuttuAuki { get; private set; } = -1;
+
+        /// <summary>Kortin "Lue lisää" (web ajo.avaaNostonJuttu(indeksi)): raita väistyy sivun ajaksi.</summary>
+        public bool AvaaJuttu(int i)
+        {
+            if (!Auki || Tiedeliite(i) == null) return false;
+            if (JuttuAuki < 0) Esitys?.JutunAjaksi(true);
+            JuttuAuki = i;
+            JuttuPyydetty?.Invoke(i);
+            return true;
+        }
+
+        public void JuttuVaihtui(int j) { if (JuttuAuki >= 0) JuttuAuki = j; }
+
+        /// <summary>Sivu suljettiin (web palautaJutunJalkeen): raita palaa esityksen tasolle.</summary>
+        public void JuttuSuljettu()
+        {
+            if (JuttuAuki < 0) return;
+            JuttuAuki = -1;
+            Esitys?.JutunAjaksi(false);
+        }
+
+        /// <summary>Sisällys keksintöjen muodossa (vuosi = lyhyt ajoitus, ei henkilöä).</summary>
+        public IReadOnlyList<(int I, string Vuosi, string Otsikko, string Henkilo)> Sisallys() =>
+            TiedeliitteenSisallys().Select(r => (r.I, r.Ajoitus, r.Otsikko, (string)null)).ToList();
+
+        public bool SisallysListana => true;
+
+        Dictionary<string, string> pilkut;
+
+        /// <summary>Web pilkku: noston vanan väri (kortin vari); null, ennen kuin vanat ovat valmiit.</summary>
+        public string SisallyksenPilkku(int i)
+        {
+            if (i < 0 || i >= aineisto.Paikat.Count || vanaLista.Count == 0) return null;
+            pilkut ??= Tutkimusvaihe.KokoaNostot(aineisto, vanaLista, virrat).Where(n => n.Tunnus != null)
+                .GroupBy(n => n.Tunnus).ToDictionary(g => g.Key, g => g.First().Vari);
+            return pilkut.TryGetValue(aineisto.Paikat[i].Tunnus ?? "", out var v) ? v : null;
+        }
+
         public void Paivita() => Esitys?.Paivita();
 
         public void Sulje()
         {
             if (!Auki) return;
+            JuttuAuki = -1;
             // Muisti talteen ennen purkua ja lukkoon: kortin ja tutkimusvaiheen purku kirjoittaisi
             // muuten "ei avointa korttia" juuri tallennetun tilan päälle (web pura).
             TallennaMuisti();

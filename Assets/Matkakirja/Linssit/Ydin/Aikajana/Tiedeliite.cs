@@ -42,6 +42,29 @@ namespace Matkakirja.Linssit.Aikajana
         }
     }
 
+    /// <summary>
+    /// Tiedeliitteen lähde Natiivi-UI:n Tiedeliitenäkymälle (web avaaTiedeliite-kutsun parametrit):
+    /// keksinnöt (vuosi + keksijä) ja ihmisen matka (lista: väripilkku, lyhyt ajoitus, otsikko;
+    /// alkusanat ensimmäisen sivun kärkeen). Avaus: JuttuPyydetty(i); selaus → JuttuVaihtui(j);
+    /// sulku → JuttuSuljettu() (linssin raita palaa).
+    /// </summary>
+    public interface ITiedeliitteenLahde
+    {
+        event Action<int> JuttuPyydetty;
+        int JuttuAuki { get; }
+        TiedeliiteSivu Tiedeliite(int i);
+        /// <summary>Sisällys: sivulliset (indeksi, vuosi tai ajoitus, otsikko, henkilö tai null).</summary>
+        IReadOnlyList<(int I, string Vuosi, string Otsikko, string Henkilo)> Sisallys();
+        /// <summary>Web sisallys.lista: yksi aikajärjestyksen lista, rivillä väripilkku.</summary>
+        bool SisallysListana { get; }
+        /// <summary>Sivun väripilkku (#rrggbb) tai null (web sisallys.pilkku).</summary>
+        string SisallyksenPilkku(int i);
+        /// <summary>Alkusanat kaaren ensimmäisen sivun kärkeen (web alkusanat); null = ei.</summary>
+        string TiedeliitteenAlkusanat { get; }
+        void JuttuVaihtui(int j);
+        void JuttuSuljettu();
+    }
+
     /// <summary>Yksi tiedeliitteen sivu piirtojärjestyksessä (web piirraTiedeliitteenSivu).</summary>
     public sealed class TiedeliiteSivu
     {

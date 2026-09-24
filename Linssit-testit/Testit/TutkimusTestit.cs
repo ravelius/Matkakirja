@@ -215,6 +215,39 @@ namespace Matkakirja.Linssit.Testit
             l3.Sulje();
         }
 
+        [Testi] static void TiedeliiteVaistaaRaidanJaPalauttaa()
+        {
+            var (v, t) = Virrat();
+            var a = NostoKentatTestit.Aineisto();
+            var y = new ValeYmparisto();
+            var l = new IhmisenMatkaLinssi(a, null, new EsitysAjoTestit.ValeNakyma(y), null);
+            ITiedeliitteenLahde lahde = l;
+            int pyydetty = -1;
+            lahde.JuttuPyydetty += i => pyydetty = i;
+            l.Avaa(y);
+            Oleta.Sama(false, l.AvaaJuttu(0) && y.Raita != null, "ennen vanoja ei ole raitaa");
+            l.JuttuSuljettu();
+            l.AsetaVanat(t, v.Virrat);
+            for (int i = 0; i < 60 * 40; i++) { y.Kello += 1 / 60.0; l.Paivita(); }
+            Oleta.Sama("ihmisen-matka", y.Raita, "raita soi valojen jälkeen");
+            Oleta.Tosi(l.AvaaJuttu(3), "sivu 3");
+            Oleta.Sama(3, pyydetty);
+            Oleta.Sama(null, y.Raita, "raita väistyy tiedeliitteen ajaksi");
+            l.JuttuVaihtui(5);
+            Oleta.Sama(5, lahde.JuttuAuki);
+            l.Esitys.Tauko();
+            Oleta.Sama(null, y.Raita, "tauko ei tuo raitaa takaisin");
+            l.JuttuSuljettu();
+            Oleta.Sama("ihmisen-matka", y.Raita, "raita palaa");
+            Oleta.Sama(0.5, y.RaidanTaso, "tauon tasolle");
+            Oleta.Sama(false, l.AvaaJuttu(a.Paikat.Count), "lisänostolla ei sivua");
+            Oleta.Tosi(lahde.SisallysListana && lahde.Sisallys().Count == 20, "lista");
+            var nosto = Tutkimusvaihe.KokoaNostot(a, t.Vanat, v.Virrat).First(n => n.Tunnus == a.Paikat[0].Tunnus);
+            Oleta.Sama(nosto.Vari, lahde.SisallyksenPilkku(0), "pilkku = vanan väri");
+            Oleta.Sama(a.Kaistaselite, lahde.TiedeliitteenAlkusanat);
+            l.Sulje();
+        }
+
         static void Lahella(double odotettu, double saatu, string mita, double tol = 1e-9)
         {
             if (Math.Abs(odotettu - saatu) > tol * Math.Max(1, Math.Abs(odotettu)))

@@ -14,7 +14,7 @@ using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.Aikajana
 {
-    public sealed class KeksinnotLinssi : ILinssi
+    public sealed class KeksinnotLinssi : ILinssi, ITiedeliitteenLahde
     {
         readonly KeksinnotAineisto aineisto;
         readonly IPysakkiajonNakyma nakyma;
@@ -135,6 +135,10 @@ namespace Matkakirja.Linssit.Aikajana
 
         /// <summary>Hampurilaisen sisällys: sivulliset pysäkit (indeksi, vuosi/ajoitus, otsikko, henkilö).</summary>
         public IReadOnlyList<(int I, string Vuosi, string Otsikko, string Henkilo)> Sisallys() => Aikajana.Tiedeliite.Sisallys(aineisto.Pysakit);
+
+        public bool SisallysListana => false;
+        public string SisallyksenPilkku(int i) => null;
+        public string TiedeliitteenAlkusanat => null;
 
         /// <summary>Sivun sisältö UI:lle (null, jos pysäkillä ei ole sivua).</summary>
         public TiedeliiteSivu Tiedeliite(int i) => Aikajana.Tiedeliite.Sivu(aineisto.Pysakit, i);

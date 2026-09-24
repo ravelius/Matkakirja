@@ -184,11 +184,28 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (MusiikkiLaji == null || musiikkiAlkoi) return;
             musiikkiAlkoi = true;
+            if (juttuAuki) return;   // raita nousee vasta tiedeliitteen sulkiessa (JutunAjaksi)
             y.LinssiMusiikki(MusiikkiLaji);
             y.LinssiMusiikkiHimmennys(Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
         }
 
-        void MusiikkiTaso(double taso) { if (musiikkiAlkoi) y.LinssiMusiikkiHimmennys(taso); }
+        void MusiikkiTaso(double taso) { if (musiikkiAlkoi && !juttuAuki) y.LinssiMusiikkiHimmennys(taso); }
+
+        bool juttuAuki;
+
+        /// <summary>
+        /// TIEDELIITE ON OMA NÄKYMÄNSÄ (web vaimennaJutunAjaksi / palautaJutunJalkeen): linssin raita
+        /// väistyy kokonaan sivun ajaksi ja palaa sulkiessa esityksen tasolle.
+        /// </summary>
+        public void JutunAjaksi(bool auki)
+        {
+            if (auki == juttuAuki) return;
+            juttuAuki = auki;
+            if (!musiikkiAlkoi) return;
+            if (auki) { y.LinssiMusiikki(null); return; }
+            y.LinssiMusiikki(MusiikkiLaji);
+            y.LinssiMusiikkiHimmennys(Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
+        }
 
         public void Tauko()
         {
