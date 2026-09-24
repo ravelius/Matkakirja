@@ -4035,3 +4035,7 @@ Omistaja kysyi, miksi natiiviin on tehty asioita ensin väärin tarkistamatta we
 ## SISALTOKIRJURI (UUSI SESSIO): KALGOORLIEN KOHDEKARTTA PR #3075 (v2177, 9eb1b1bb2); INVENTAARION KOHTA 5.5 PR #3045:AAN (c1372f119) (24.9.2026 klo 15.24)
 
 Kaksi kohdetta piste.teksti-polulla, pisteet maalla, mittarit ok; 12 hyväksytyn ja 18 hylätyn kaupungin lista perusteineen inventaariossa. Testit 4204/0 fail. Jatkaa: Mount Isa, Broome, Geraldton, Porto Velho. Rutiini → Julkaisija mergeää.
+
+## NATIIVI-UI 82 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 15.25)
+
+Postivahti ilmoitti 82 %. Fable käski luovutuksen (viesti-natiivi-ui-luovutus-20260924-g.md, aloitusviesti päivitettynä WEB ON MALLI -säännöllä) ja clear_session self samassa vuorossa; notify_when_idle ei ole käytettävissä Desktop-sessioille → Postivahti lähettää aloitusviestin kun list_events = 0 ja varmistaa RC:n. Kesken oleva 'Ei webissä' -lista siirtyy luovutuksen kautta.
