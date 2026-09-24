@@ -3687,3 +3687,7 @@ Raamattu päivitetty.
 ## LINSSISEPPA: LOKIKOPIOIDEN SYY KORJATTU — OMA laitetesti.sh KOPIOI VAIN LOKIT JA NIMETYT KUVAT (hae-kevyt, MASTERISSA); YHTEINEN tyokalut/ipad.sh KOPIOI KOKO DOCUMENTSIN → KORJAUS linssiseppa/ipad-hae 32606a9 (VAIN *.txt-LOKIT TAI NIMETYT TIEDOSTOT, TESTATTU LAITTEELLA, NATIIVISEPAN JONOSSA); KERROTTU NATIIVISEPALLE JA LAITETESTAAJALLE; VANHAT KOPIOT POISTAA OMISTAJA (siivoa-lokit-appdata.sh) (24.9.2026 klo 12.16)
 
 Fable kuittasi; Linssiseppä jatkaa luovutukseen ja nollaukseen.
+
+## OMISTAJA AJOI siivoa-lokit-appdata.sh --poista klo 12.1x: 242 DATAKANSIOTA (8,0 Gt) POISTETTU, VAPAANA 54 Gt (OLI 33 Gt); KAKSI 'Directory not empty' -RIVIA = FINDERIN .DS_Store, HARMITON (24.9.2026 klo 12.17)
+
+Levyhälytys ohi; worktree- ja simulaattorisiivous jatkuu rooleilla.
