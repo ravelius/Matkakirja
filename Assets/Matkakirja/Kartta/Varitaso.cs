@@ -63,8 +63,21 @@ namespace Matkakirja
 
         float seuraava;
 
+        [Tooltip("Kameran korkeus (m), jonka yläpuolella huntu on pois (web: ei huntua maailmanäkymässä). Kaukana Cesium\n" +
+                 "sekoittaa huntutasojen alimman tason ja sitä karkeammat (läpinäkyvät) laatat, jolloin huntu näkyi\n" +
+                 "suorakulmioina (Laitetestaaja 24.9., Espanja–Sahara, f6de924). Paluu 85 %:ssa (hystereesi).")]
+        public double kaukoKorkeus = 6_000_000.0;
+        PalloKierto kierto;
+        bool kaukana;
+
         void Update()
         {
+            if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto != null)
+            {
+                bool k = kaukana ? kierto.korkeus > kaukoKorkeus * 0.85 : kierto.korkeus > kaukoKorkeus;
+                if (k != kaukana) { kaukana = k; if (k) Poista(); else Luo(); }
+            }
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
             {
@@ -125,7 +138,7 @@ namespace Matkakirja
         void Luo()
         {
             Poista();
-            if (ladattu == null || linssit || piilossa || pallo == null) return;
+            if (ladattu == null || linssit || piilossa || kaukana || pallo == null) return;
             kerros = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.materialKey = MateriaaliAvain;
             // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa).
