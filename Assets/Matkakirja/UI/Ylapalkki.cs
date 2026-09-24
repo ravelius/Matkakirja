@@ -22,7 +22,11 @@
 // iPHONE (omistaja 24.9.2026, build 5 -löydökset 5–6, Raamattu NATIIVIN iPHONE-ASETTELU; iPad ja web ennallaan):
 // ei ruskeaa palkkia eikä logoa, kartta näkyy koko ruudulta (myös Dynamic Islandin alta). Vasemmassa
 // yläkulmassa kelluva pilleri "300£ 1/80" (raha, päivä/80), oikeassa vain ☰ (kehittäjätilassa myös ratas),
-// puoliläpinäkyvällä pergamenttitaustalla kuten muut kelluvat napit. Napit pysyvät turva-alueen alapuolella.
+// puoliläpinäkyvällä pergamenttitaustalla kuten muut kelluvat napit.
+// SAARIRIVI (omistaja 24.9.2026 tarkennus): pystyasennossa pilleri ja napit ovat Dynamic Islandin riville sen
+// kummallakin puolella (pilleri vasemmalla, napit oikealla, pilleri ei ulotu saaren alle); lovellisella laitteella
+// loven riville, ilman lovea tilarivin korkeudelle (tilarivi on piilotettu). Saari luetaan Screen.cutoutsista,
+// muuten arvioidaan turva-alueen yläreunasta (≥ 55 pt Dynamic Island 126 × 37 pt ylhäällä 11 pt, ≥ 40 pt lovi).
 //
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
@@ -64,7 +68,33 @@ namespace Matkakirja.Natiivi
         public static bool Kelluva => PakotaKelluva ?? (Application.platform == RuntimePlatform.IPhonePlayer && !UiKerros.Tabletti);
 
         /// <summary>Ylhäältä asemoituvien näkymien varaus turva-alueen yläreunasta (0, kun palkki on piilossa).</summary>
-        public static float Varaus => Piilossa ? 0f : Korkeus;
+        public static float Varaus => Piilossa ? 0f : kelluvaVaraus ?? Korkeus;
+
+        /// <summary>Saaririvillä se osa rivistä, joka jää turva-alueen yläreunan alle (0 saaren/loven vieressä).</summary>
+        static float? kelluvaVaraus;
+
+        /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
+        const float SaariRivi = 36f, SaariReuna = 14f, SaariVali = 6f;
+
+        /// <summary>Testikomento (ui ylapalkki saari x,y,w,h pisteinä | pois): simulaattorissa ei ole cutouts-tietoa.</summary>
+        public static Rect? PakotaSaari;
+
+        /// <summary>
+        /// Dynamic Island tai lovi ruudun pisteinä (origo ylhäällä vasemmalla); leveys 0 = ei lovea.
+        /// Screen.cutouts ensin (pikselit, origo alhaalla), muuten arvio turva-alueen yläreunasta.
+        /// </summary>
+        public static Rect Saari()
+        {
+            if (PakotaSaari.HasValue) return PakotaSaari.Value;
+            float pp = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 3f;
+            foreach (var c in Screen.cutouts)
+                if (c.yMax >= Screen.height - 2f * pp && c.width < Screen.width * 0.8f)
+                    return new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+            float yla = (Screen.height - Screen.safeArea.yMax) / pp, w = Screen.width / pp;
+            if (yla >= 55f) return new Rect((w - 126f) / 2f, 11f, 126f, 37f);
+            if (yla >= 40f) return new Rect((w - 162f) / 2f, 0f, 162f, 32f);
+            return new Rect(w / 2f, 0f, 0f, 0f);
+        }
 
         /// <summary>Piilotettu palkki avattiin väkäsnapista tai suljettiin (karttaselitteen nappi väistyy).</summary>
         public static event Action<bool> AukiMuuttui;
@@ -137,15 +167,48 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Tilarivi);
-            palkki.style.paddingTop = r.y;
-            palkki.style.paddingLeft = r.x + 10;
-            palkki.style.paddingRight = r.z + 10;
-            palkki.style.height = r.y + Korkeus;
             AsetaKelluva();
+            if (!(kelluvaNyt == true && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r)))
+            {
+                kelluvaVaraus = null;
+                palkki.EnableInClassList("mk-ylapalkki--saari", false);
+                pilleri.style.maxWidth = StyleKeyword.Null;
+                palkki.style.paddingTop = r.y;
+                palkki.style.paddingLeft = r.x + 10;
+                palkki.style.paddingRight = r.z + 10;
+                palkki.style.height = r.y + Korkeus;
+            }
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa);
             PaivitaNappi();
+        }
+
+        /// <summary>Pilleri ja napit saaren riville (ks. SAARIRIVI yllä); paneelin yksiköt muunnetaan ruudun pisteistä.</summary>
+        bool AsetaSaaririvi(Vector4 r)
+        {
+            var paneeli = palkki.panel;
+            if (paneeli == null || Screen.width <= 0) return false;
+            float pp = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 3f;
+            // Ruudun pisteet → paneelin yksiköt (viiteskaala ei ole iOS-pisteet kaikilla leveyksillä).
+            Vector2 P(float x, float y) => RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(x * pp, y * pp));
+            var saari = Saari();
+            float yksikko = P(100f, 0f).x / 100f;
+            float rivi = SaariRivi * yksikko;
+            var ylakulma = P(saari.xMin, saari.yMin);
+            var alakulma = P(saari.xMax, saari.yMax);
+            float keski = saari.height > 0 ? (ylakulma.y + alakulma.y) / 2f : 0f;
+            float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
+            palkki.EnableInClassList("mk-ylapalkki--saari", true);
+            palkki.style.paddingTop = yla;
+            palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
+            palkki.style.paddingRight = r.z + SaariReuna * yksikko;
+            palkki.style.height = yla + rivi;
+            // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
+            float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
+            pilleri.style.maxWidth = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
+            kelluvaVaraus = Mathf.Max(0f, yla + rivi - r.y);
+            return true;
         }
 
         void AsetaKelluva()

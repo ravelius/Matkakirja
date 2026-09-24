@@ -83,6 +83,7 @@
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
 //   ui ylapalkki kelluva|palkki               iPhonen kelluva yläosa päälle / pois (auto palauttaa laitteen mukaan)
+//   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
 //   ui liike                                  pieni liike: pulu lentää kerran heti (ohittaa levon)
 //   ui leima [muutos] [syy]                   tapahtumakupla: rahan muutos (oletus +10 Lehden minitehtävä ratkesi)
@@ -671,6 +672,21 @@ namespace Matkakirja.Natiivi
                 case "ylapalkki":
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     if (loput == "kelluva" || loput == "palkki") { Ylapalkki.PakotaKelluva = loput == "kelluva"; ui.Tilarivi.Paivita(); return null; }
+                    if (loput.StartsWith("saari"))
+                    {
+                        var luvut = loput.Substring(5).Trim().Split(',');
+                        var ci = CultureInfo.InvariantCulture;
+                        if (luvut.Length == 4 && float.TryParse(luvut[0], NumberStyles.Float, ci, out var sx)
+                            && float.TryParse(luvut[1], NumberStyles.Float, ci, out var sy)
+                            && float.TryParse(luvut[2], NumberStyles.Float, ci, out var sw)
+                            && float.TryParse(luvut[3], NumberStyles.Float, ci, out var sh))
+                            Ylapalkki.PakotaSaari = new Rect(sx, sy, sw, sh);
+                        else Ylapalkki.PakotaSaari = null;
+                        ui.Tilarivi.Paivita();
+                        var saari = Ylapalkki.Saari();
+                        return "saari " + saari.x.ToString("0", ci) + "," + saari.y.ToString("0", ci) + "," + saari.width.ToString("0", ci) + "," + saari.height.ToString("0", ci)
+                            + " varaus " + Ylapalkki.Varaus.ToString("0", ci);
+                    }
                     if (loput == "auto") Ylapalkki.PakotaKelluva = null;
                     Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
                     ui.Tilarivi.Paivita();
