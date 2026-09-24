@@ -250,3 +250,84 @@ ennenNyt-käsittely (kohdat 5.1–5.3:n kaava) odottaa siis edelleen:
 
 Ei toimenpidettä ennen mergeä — sama tilanne kuin edellisessä
 luovutuksessa, nyt vain varmistettu tuoreella haulla.
+
+## 9. Turistiopas: kelvolliset kaupungit (24.9.2026, Fablen pyynnöstä — EI VIELÄ SISÄLTÖÄ)
+
+Käyty läpi kaikki kohdan 3 71 kaupunkia (N2/N4/N5/N6:n 20 sisältyvät jo
+tähän 71:een — ks. kohta 8 lista, kaikki nimet löytyvät kohdan 3
+luokituksesta). Kriteerit (Fable 24.9.): 1) oikea, käytännössä
+vierailtava paikka (ei asumaton saari), 2) turvallinen — ei käynnissä
+olevaa asevoimaista konfliktia, 3) todennäköisesti riittävästi PD/CC-
+matkailuaineistoa. Arvio on tämän session yleistiedon varassa (ei
+reaaliaikaista uutishakua) — merkityt kohdat kannattaa tarkistaa vielä
+kertaalleen ennen sisällön tilaamista.
+
+### Hylätty — käynnissä oleva konflikti tai vakava turvallisuusriski (9)
+
+- **darfur** (Sudan) — sisällissota, El Fasher piiritetty (jo Fablen
+  oma esimerkki 4.3:sta).
+- **suakin** (Sudan) — sama sisällissota koko maassa; lisäksi paikka on
+  jo raunioitunut satamakaupunki, ei toimivaa infraa oppaalle.
+- **gao** (Mali) — islamistinen kapina jatkunut 2012 lähtien, alue
+  aktiivisen konfliktin piirissä (huom: kohdekartta tehtiin, mutta
+  vain 1400–1500-luvun historiasta — turistiopas neuvoisi
+  nykyvierailua, eri riski).
+- **murzuk**, **alkufra** (Libya) — Libya epävakaa 2011 lähtien,
+  Fezzanin alue lisäksi turvattomampi (samat kaupungit hylätty jo
+  kohdekartasta puuttuvan toisen kohteen takia, kohta 5.5).
+- **bahrelghazal** (Etelä-Sudan) — käynnissä oleva
+  levottomuus/konflikti.
+- **rashafun** (Ras Hafun, Somalia/Puntland) — al-Shabaabin alue,
+  korkea turvallisuusriski koko maassa.
+- **tshadjarvi** (Tšadjärvi) — Boko Haramin toiminta-alue Nigerian,
+  Tšadin, Nigerin ja Kamerunin rajaseudulla vuodesta ~2009.
+- **kamerun** (Kamerunvuori/Buea) — vuori sijaitsee Kaakkois-Kamerunin
+  englanninkielisellä alueella, jota Ambazonia-konflikti koskettaa
+  vuodesta 2016.
+
+### Hylätty — ei todellinen vierailtava kohde (1)
+
+- **sanambrosio** — asumaton saari (Fablen oma esimerkki 4.3:sta).
+
+### Epävarma — tarkistettava, mitä paikkaa/maata teksti tarkalleen kuvaa (4)
+
+- **kongo** — nosto kuvaa koko Kongojokea (4700 km); jos kohde
+  rajataan jokisuulle/Kinshasa–Brazzavillelle, riski on maltillinen,
+  mutta koko DR Kongo on matkailuvaroituksissa korkeampi riski kuin
+  monet muut kohteet listalla.
+- **sahara** — riippuu, minkä maan kautta aavikkoa lähestytään
+  (Marokko/Tunisia turvallisia, Libya/Mali/Algerian eteläosat eivät).
+- **tanganjika** (Tanganjikajärvi) — Tansanian ja Sambian rannat
+  turvallisia, DR Kongon ja Burundin rannat eivät.
+- **ahaggar** (Algeria) — Saharan syvä eteläosa lähellä Sahelin
+  levottomuusvyöhykettä; matalampi luottamus kuin Pohjois-Algerian
+  matkailukohteisiin.
+
+### Sopii konseptiin, todennäköisesti riittävästi aineistoa (56)
+
+Loput kohdan 3 kaupungeista/kohteista — mukaan lukien kaikki 20
+N2/N4/N5/N6-kaupunkia paitsi Sahara ja Kongo (ks. yllä): managua,
+noumea, puertomontt, sanjuan, saoluis, ouropreto, bermuda, norfolk,
+churchill, cayenne, broome, santarem, geraldton, joaopessoa,
+campogrande, exmouth, birdsville, cooberpedy, kalgoorlie, mountisa,
+nome, portovelho, kimberley, sitka, falkland, sthelena, angola, bali,
+hawaii, madagaskar, mosambik, robinsoncrusoe, sierraleone, appalakit,
+bananal, boavista, caphorn, galapagos, grandcanyon, iguazu, kappalmas,
+karthago, kilimandzaro, labrador, machupicchu, milfordsound,
+mountrushmore, namib, nullarbor, orjarannikko, sepik, titicaca, uluru,
+viktoria, viktorianputoukset, yellowstone.
+
+(Laskuhuomio: kohdan 3 "kaupunki/taajama (30)" -otsikko listaa
+todellisuudessa 29 nimeä — yksi puuttuu jo alkuperäisestä listasta.
+Kokonaismäärä tässä (9 hylätty + 1 hylätty + 4 epävarma + 56 sopii =
+70) heijastaa siis kohdan 3 todellista nimimäärää, ei otsikoiden
+summaa. Ei korjattu tässä, koska ei kuulu tämän tehtävän piiriin.)
+
+Kolme kevyt huomautus mukaan otetuista: **noumea** (Uuden-Kaledonian
+levottomuudet 2024 ovat laantuneet, ei enää aktiivinen konflikti),
+**sierraleone** (sisällissota päättyi 2002, nyt vakaa ja yhä
+enemmän matkailtu), **mosambik** (saari itse Nampulan maakunnassa
+etelämpänä kuin Cabo Delgadon islamistikapina pohjoisessa — turvallisempi
+kuin maa yleisesti).
+
+Ei toimenpidettä vielä — tämä on vain luokittelu, ei sisältötilaus.
