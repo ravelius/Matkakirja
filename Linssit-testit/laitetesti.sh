@@ -79,6 +79,8 @@ case "$1" in
     linssi "linssi pois"; sleep 4; hae "$2"; tail -20 "$2/linssi-loki.txt" ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
+    # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.
+    kaynnista; portti
     linssi "linssi radio"; sleep 6; linssi "radio aani 0"; sleep 1; linssi "kamera 50 10 6000"; sleep 5; kuva kontakti-radio-auki
     linssi "radio kaupunki lontoo"; sleep 12; linssi "kamera 50 10 6000"; sleep 2; linssi "radio tila"; sleep 1; kuva kontakti-radio-lontoo
     linssi "radio stop" "linssi pois"; sleep 2; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -8 ;;
