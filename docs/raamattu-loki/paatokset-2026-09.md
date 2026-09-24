@@ -4135,3 +4135,7 @@ iPad Pro 12,9" 5. sukupolvi (iPad13,8, M1), iPadOS 26.4.1, kehittäjätila pää
 ## SISALTOKIRJURI: KOHDEKARTAT ERA 2 VALMIS (#3087–#3090); KIMBERLEY HYLATTY (VAIN BIG HOLE) → 11+19 (24.9.2026 klo 16.08)
 
 Santarém, João Pessoa, Macapá, Cayenne; testit 0 fail. Jäljellä Gao ja Al Kufra, sitten kohdekarttavaihe valmis.
+
+## OMISTAJA klo 16.1x (SITOVA): RUSKEA YLAPALKKI TAKAISIN iPHONELLE, AUTOMAATTINEN PIILOTUS, ☰ PALAUTTAA; iPADIN PALKKI KORKEAMMAKSI (24.9.2026 klo 16.11)
+
+Omistajan kuva (Ateena, iPhone): yläosan kelluvat napit ja pillerit liian sekavia. Päätös: iPhonelle webin/iPadin ruskea yläpalkki samalla sisällöllä; palkki piiloutuu kun karttaa vieritetään ja vaakamuodossa oletuksena; piilossa vain ☰ oikeassa yläkulmassa, joka tuo palkin takaisin (ei kelluvia nappeja, myös vaakatilassa); iPadin palkki liian matala → korotetaan webin mittaan; muut piilotustilanteet myöhemmin. Fablen oletukset: palkki palaa myös napautuksesta karttaan; iPadilla ei piiloudu. Raamattu päivitetty (klo 09.5x:n kelluva asettelu kumottu yläpalkin osalta). → Natiivi-UI build 10, WEB ON MALLI -kaavalla (webin palkin mitat).
