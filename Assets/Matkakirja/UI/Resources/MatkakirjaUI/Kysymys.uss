@@ -697,6 +697,7 @@
 }
 
 .mk-paljastus--paikallis {
+    padding: 0;
     background-color: #e6d8ae;
 }
 
@@ -801,22 +802,24 @@
 }
 
 .mk-paljastus__nimi {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 1px;
     white-space: normal;
     -unity-text-align: middle-center;
     color: #f4e7ca;
 }
 
 .mk-paljastus__palkkio {
-    margin-top: 3px;
-    font-size: 15px;
+    margin-top: 3.2px;
+    font-size: 15.68px;
     color: #d9c9a4;
 }
 
 .mk-paljastus__fakta {
-    margin-top: 8px;
-    max-width: 430px;
-    font-size: 15px;
+    margin-top: 11.2px;
+    max-width: 432px;
+    font-size: 15.68px;
+    -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
     color: #cbb992;
@@ -832,9 +835,10 @@
 
 /* Kaaren aarreteksti ja pöllön esittely (web .reveal-isoisa). */
 .mk-paljastus__isoisa {
-    margin-top: 8px;
-    max-width: 430px;
-    font-size: 15px;
+    margin-top: 26.9px;
+    max-width: 416px;
+    font-size: 16px;
+    -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
     color: #cbb992;
@@ -899,7 +903,7 @@
 .mk-paljastus__jatka {
     margin-top: 18px;
     min-height: 48px;
-    padding: 10px 32px;
+    padding: 10.88px 35.2px;
     border-width: 1px;
     border-color: rgba(228, 196, 128, 0.62);
     border-radius: 3px;
@@ -915,9 +919,11 @@
     opacity: 1;
 }
 
+/* Web .reveal-jatka: 14,72 px, letter-spacing 0,2 em (2,944) ja yhtä suuri text-indent. */
 .mk-paljastus__jatka .mk-nappi__teksti {
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: 14.72px;
+    letter-spacing: 2.944px;
+    padding-left: 2.944px;
 }
 
 .mk-paljastus--paikallis .mk-paljastus__jatka {

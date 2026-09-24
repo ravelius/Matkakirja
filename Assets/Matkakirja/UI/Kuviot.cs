@@ -127,6 +127,31 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Paikallisaarteen reunahöyhen (web .reveal-kuva.paikallis mask-image: kaksi linear-gradientia 0 → 9 % → 91 % → 100 %,
+        /// intersect). Valkoinen alfalla, jotta -unity-background-image-tint-color antaa pergamentin sävyn (mitattu 25.9. b12-2 #28).
+        /// </summary>
+        public static Texture2D ReunaHoyhen
+        {
+            get
+            {
+                const string nimi = "reunahoyhen";
+                if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+                const int N = 128;
+                t = Uusi(nimi, N, N);
+                t.wrapMode = TextureWrapMode.Clamp;
+                var px = new Color[N * N];
+                static float S(float x) => Mathf.Clamp01(Mathf.Min(x, 1f - x) / 0.09f);
+                for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                    px[y * N + x] = new Color(1f, 1f, 1f, 1f - S((x + 0.5f) / N) * S((y + 0.5f) / N));
+                t.SetPixels(px);
+                t.Apply(false, true);
+                valimuisti[nimi] = t;
+                return t;
+            }
+        }
+
         /// <summary>Dialogikortin pergamentti: säteittäinen liukuväri kertaa paperin rae.</summary>
         public static Texture2D Pergamentti
         {

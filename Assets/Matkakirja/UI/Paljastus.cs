@@ -55,13 +55,13 @@ namespace Matkakirja.Natiivi
 
         const int KuvaMs = 420, TekstiMs = 760, LeimaMs = 700, PieniLiikeMs = 900;
 
-        readonly VisualElement kerros, tunnus, kuva, kuvapaikka, loyto, leima;
+        readonly VisualElement kerros, scene, tunnus, kuva, kuvapaikka, reuna, caption, loyto, leima;
         readonly Label alaotsake, nimi, palkkio, fakta, isoisa, arvo, leimaPvm;
         readonly Button jatka;
         Action suljettu;
         Action ohitaOdotus;
         int versio;
-        bool sulkuSallittu, aarreNyt;
+        bool sulkuSallittu, aarreNyt, paikallisNyt;
         AudioSource musiikki;
         static readonly System.Random arpa = new System.Random();
 
@@ -81,7 +81,7 @@ namespace Matkakirja.Natiivi
                 if (sulkuSallittu) Sulje();
                 else { var o = ohitaOdotus; ohitaOdotus = null; o?.Invoke(); }
             });
-            var scene = Rakenne.El("mk-paljastus__scene", kerros, PickingMode.Ignore);
+            scene = Rakenne.El("mk-paljastus__scene", kerros, PickingMode.Ignore);
 
             tunnus = Rakenne.El("mk-paljastus__tunnus", scene, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AARNIN LUETTELO", "mk-paljastus__otsake", tunnus), Kirjasin.KoneLihava);
@@ -92,17 +92,22 @@ namespace Matkakirja.Natiivi
 
             kuvapaikka = Rakenne.El("mk-paljastus__kuvapaikka", scene, PickingMode.Ignore);
             kuva = Rakenne.El("mk-paljastus__kuva", kuvapaikka, PickingMode.Ignore);
-            Rakenne.Tausta(Rakenne.El("mk-paljastus__reuna", kuvapaikka, PickingMode.Ignore), Kuviot.Vinjetti);
+            reuna = Rakenne.El("mk-paljastus__reuna", kuvapaikka, PickingMode.Ignore);
+            Rakenne.Tausta(reuna, Kuviot.Vinjetti);
 
-            var caption = Rakenne.El("mk-paljastus__caption", scene, PickingMode.Ignore);
+            // Web .reveal-caption on aina --font-type (American Typewriter): nimi lihava, fakta ja kaaren aarreteksti
+            // kursiivina (Safari ja TextCore vinouttavat, AT:lla ei ole kursiivileikkausta). Mitattu 25.9. b12-2 #28.
+            caption = Rakenne.El("mk-paljastus__caption", scene, PickingMode.Ignore);
             nimi = Rakenne.Teksti("", "mk-paljastus__nimi", caption);
-            Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(nimi, Kirjasin.KoneBold);
             palkkio = Rakenne.Teksti("", "mk-paljastus__palkkio", caption);
-            Kirjasimet.Aseta(palkkio, Kirjasin.Luku);
+            Kirjasimet.Aseta(palkkio, Kirjasin.Kone);
             fakta = Rakenne.Teksti("", "mk-paljastus__fakta", caption);
-            Kirjasimet.Aseta(fakta, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(fakta, Kirjasin.Kone);
             isoisa = Rakenne.Teksti("", "mk-paljastus__isoisa", caption);
-            Kirjasimet.Aseta(isoisa, Kirjasin.Luku);
+            Kirjasimet.Aseta(isoisa, Kirjasin.Kone);
+            kerros.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
+            scene.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
 
             loyto = Rakenne.El("mk-paljastus__loyto", scene, PickingMode.Ignore);
             arvo = Rakenne.Teksti("", "mk-paljastus__arvo", loyto);
@@ -136,6 +141,9 @@ namespace Matkakirja.Natiivi
             // Web: maan oma paikallisaarrekuva → vinjetointimalli; kaikki muut tummassa.
             bool paikallis = !pollo && d.LoytoKuvaUrl != null && d.LoytoKuvaUrl.Contains("/aarteet/paikallis/");
             kerros.EnableInClassList("mk-paljastus--paikallis", paikallis);
+            paikallisNyt = paikallis;
+            // Web: paikallismallin reuna on suorakaiteen höyhen, tummien säteittäinen vinjetti.
+            reuna.style.backgroundImage = new StyleBackground(paikallis ? Kuviot.ReunaHoyhen : Kuviot.Vinjetti);
             tunnus.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
             loyto.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
 
@@ -151,8 +159,9 @@ namespace Matkakirja.Natiivi
             // Alarivi: web REVEAL_SUB[type] ?? "+N puntaa" (löytöhetken arvo).
             string rivi = pollo ? PolloSelite : paa ? PaaaarreRivi : Puntaa(d.Loyto);
             Nakyy(palkkio, rivi);
-            Nakyy(fakta, pollo ? null : d.LoytoFakta);
-            Nakyy(isoisa, pollo ? PolloEsittely : KaarenAarre(d));
+            Nakyy(fakta, pollo ? null : d.LoytoFakta, true);
+            Nakyy(isoisa, pollo ? PolloEsittely : KaarenAarre(d), true);
+            Mitoita();
 
             var nyt = DateTime.Now;
             arvo.text = paa ? $"ARVO {LaattaVakiot.PaaaarrePalkkio} PUNTAA" : "";
@@ -234,10 +243,49 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        static void Nakyy(Label l, string teksti)
+        /// <summary>riviva = web line-height 1,5 (rich text, teksti &lt;noparse&gt;-suojattuna).</summary>
+        static void Nakyy(Label l, string teksti, bool riviva = false)
         {
-            l.text = teksti ?? "";
+            l.enableRichText = riviva || l.enableRichText;
+            l.text = string.IsNullOrEmpty(teksti) ? "" : riviva ? "<line-height=150%><noparse>" + teksti + "</noparse>" : teksti;
             l.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+
+        /// <summary>
+        /// Paikallismalli webin mitoin (web-paljastus-paikallis-mitat.txt, 25.9.): kuva neliö min(78vw, 24rem, 46vh),
+        /// kuvan yläväli 32 (leveällä 50), nimi 20 px (≤ 560) tai 32 px, fakta enintään 432 ja kaaren aarreteksti 416
+        /// (ruutu − 88,4), Jatka matkaa 60,8 (76,9) tekstin alla. Ylivuoto: pino ylhäältä, ettei yläreuna leikkaudu.
+        /// </summary>
+        void Mitoita()
+        {
+            float W = kerros.layout.width, H = kerros.layout.height;
+            if (float.IsNaN(W) || W <= 0 || H <= 0) return;
+            bool leve = W > 560f;
+            Aseta(nimi, leve ? 32f : 20f, leve ? 1.6f : 1f);
+            if (!paikallisNyt)
+            {
+                foreach (var e in new VisualElement[] { kuvapaikka, caption, fakta, isoisa, jatka })
+                    e.style.marginTop = e.style.maxWidth = StyleKeyword.Null;
+                kuvapaikka.style.width = kuvapaikka.style.height = StyleKeyword.Null;
+                kerros.style.justifyContent = StyleKeyword.Null;
+                return;
+            }
+            float koko = Mathf.Round(Mathf.Min(0.78f * W, Mathf.Min(384f, 0.46f * H)));
+            if (kuvapaikka.resolvedStyle.width != koko) { kuvapaikka.style.width = koko; kuvapaikka.style.height = koko; kuvapaikka.style.maxWidth = koko; }
+            kuvapaikka.style.marginTop = leve ? 50f : 32f;
+            caption.style.marginTop = 4f;
+            fakta.style.maxWidth = Mathf.Min(W - 88.4f, 432f);
+            isoisa.style.maxWidth = Mathf.Min(W - 88.4f, 416f);
+            jatka.style.marginTop = leve ? 76.9f : 60.8f;
+            float sh = scene.layout.height;
+            var j = !float.IsNaN(sh) && sh > H ? Justify.FlexStart : Justify.Center;
+            if (kerros.resolvedStyle.justifyContent != j) kerros.style.justifyContent = j;
+        }
+
+        static void Aseta(Label l, float koko, float vali)
+        {
+            if (l.resolvedStyle.fontSize != koko) l.style.fontSize = koko;
+            if (l.resolvedStyle.letterSpacing != vali) l.style.letterSpacing = vali;
         }
 
         /// <summary>"Löysit: X · +640 £" → "+640 puntaa" (web `+${arvo} puntaa`), tai null.</summary>
