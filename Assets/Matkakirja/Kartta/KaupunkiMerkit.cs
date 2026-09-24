@@ -79,6 +79,87 @@ namespace Matkakirja
             }
         }
         MaterialPropertyBlock korostusLohko;
+
+        [Header("Aloitusvalinnan huomiorengas (web .pallolauta-huomio)")]
+        [Tooltip("Matkakirja/Rengas (Rakennus.cs); väri #eab84e (web --kulta).")]
+        public Material rengasMateriaali;
+        [Tooltip("Renkaan säde pisteinä: KOHDEMERKIN_HUOMIO_PX 54 / 2. Napautus renkaan sisällä osuu kaupunkiin.")]
+        public float rengasSade = 27f;
+        [Tooltip("Viivan paksuus pisteinä (web stroke-width 2,6, non-scaling-stroke).")]
+        public float rengasPaksuus = 2.6f;
+        [Tooltip("Valitun kaupungin rengas (web .target-ring.pick.picked: #e8b23c, stroke-width 3).")]
+        public Color rengasValittuVari = new Color32(0xe8, 0xb2, 0x3c, 0xff);
+        public float rengasValittuPaksuus = 3f;
+
+        /// <summary>
+        /// ALOITUSVALINNAN HUOMIORENKAAT (Natiivi-UI:n lähtövalinta; web .pallolauta-huomio, js/pallolauta/merkit.js):
+        /// sykkivä kultarengas (säde 27 pt, viiva 2,6 pt, syke 2,6 s: säde ×1,16 ja peitto 0,92 → 0,42) annettujen
+        /// kaupunkien ympärille; <paramref name="valittu"/> (tai null) piirretään valitun värillä #e8b23c ja 3 pt:n
+        /// viivalla. idt null tai tyhjä = kaikki renkaat pois. Rengas on kaupunkimerkin osa: se näkyy vain, kun
+        /// merkki näkyy (NaytaVain-suodatin, pallon etupuoli, ei aloitusporttia PalloKierto.PorttiSumea), ja
+        /// sen koko on vakio näytön pisteinä (Pistekerroin). Napautus renkaan sisällä osuu kaupunkiin
+        /// (KaupunkiNapautettu). Kutsun voi tehdä ennen kuin merkit on rakennettu; renkaat tulevat valmistuessa.
+        /// </summary>
+        public void Renkaat(IEnumerable<string> idt, string valittu = null)
+        {
+            rengasIdt.Clear();
+            if (idt != null)
+                foreach (var id in idt)
+                    if (!string.IsNullOrEmpty(id)) rengasIdt.Add(id);
+            rengasValittu = valittu;
+            PaivitaRenkaat();
+        }
+
+        readonly HashSet<string> rengasIdt = new HashSet<string>();
+        string rengasValittu;
+        MaterialPropertyBlock rengasLohko;
+        bool rengasVaroitettu;
+        /// <summary>Neliön sivu pisteinä: suurin säde (1,16 × säde) + puolikas viiva + reunan pehmennys.</summary>
+        float RengasNelio => 2f * (rengasSade * 1.16f + Mathf.Max(rengasPaksuus, rengasValittuPaksuus) * 0.5f + 2f);
+
+        void PaivitaRenkaat()
+        {
+            if (rengasMateriaali == null)
+            {
+                if (rengasIdt.Count > 0 && !rengasVaroitettu)
+                {
+                    rengasVaroitettu = true;
+                    Debug.LogWarning("MATKAKIRJA kaupungit: rengasMateriaali puuttuu (kohtaus rakennettava uudelleen, Rakennus.LuoPallo)");
+                }
+                return;
+            }
+            rengasLohko ??= new MaterialPropertyBlock();
+            float sivu = RengasNelio;
+            Color perus = rengasMateriaali.GetColor("_BaseColor");
+            foreach (var m in merkit)
+            {
+                bool paalla = rengasIdt.Contains(m.kaupunki.id);
+                if (paalla && m.rengas == null) m.rengas = TeeRengas(m);
+                if (m.rengas == null) continue;
+                if (m.rengas.gameObject.activeSelf != paalla) m.rengas.gameObject.SetActive(paalla);
+                if (!paalla) continue;
+                bool valittu = m.kaupunki.id == rengasValittu;
+                m.rengas.localScale = new Vector3(sivu, sivu, 1);
+                rengasLohko.Clear();
+                rengasLohko.SetColor("_BaseColor", valittu ? rengasValittuVari : perus);
+                rengasLohko.SetFloat("_Paksuus", valittu ? rengasValittuPaksuus : rengasPaksuus);
+                rengasLohko.SetFloat("_Sade", rengasSade);
+                rengasLohko.SetFloat("_Koko", sivu);
+                m.rengas.GetComponent<MeshRenderer>().SetPropertyBlock(rengasLohko);
+            }
+        }
+
+        Transform TeeRengas(Merkki m)
+        {
+            var t = new GameObject("Rengas").transform;
+            t.SetParent(m.juuri, false);
+            t.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+            var r = t.gameObject.AddComponent<MeshRenderer>();
+            r.sharedMaterial = rengasMateriaali;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
+            return t;
+        }
         [Tooltip("Kaupunkiin saapumisen näkymä: kapeamman suunnan kaari asteina " +
                  "(verkkopelin PALLO_SUKELLUSLEVEYS 620 laudan yksikköä = 18,6°).")]
         public double saapumisKaari = 18.6;
@@ -113,6 +194,7 @@ namespace Matkakirja
             public Sisalto.Kaupunki kaupunki;
             public Transform juuri;
             public Transform pisteT;
+            public Transform rengas; // aloitusvalinnan huomiorengas (Renkaat), luodaan tarvittaessa
             public TextMeshPro nimio;
             public Vector3 normaali;
             public Vector3 pinta; // paikka georeferenssin koordinaateissa
@@ -269,6 +351,7 @@ namespace Matkakirja
             // Tärkeimmät ensin; saman tärkeyden sisällä pidempi nimi ei saa etuoikeutta.
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
             merkit.AddRange(valmiit);
+            PaivitaRenkaat();
             Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä, tärkeys {(paketinTarkeys ? "paketista" : "päätelty")}");
         }
 
@@ -287,12 +370,14 @@ namespace Matkakirja
         {
             float kerroin = PalloKierto.Pistekerroin;
             Merkki paras = null;
-            float parasEtaisyys = osumaSade * kerroin;
+            float parasEtaisyys = float.MaxValue;
             foreach (var m in merkit)
             {
                 if (!m.juuri.gameObject.activeSelf) continue; // suodatetut ja takapuolen merkit ovat pois
                 Vector3 p = kamera.WorldToScreenPoint(m.juuri.position);
                 float d = Vector2.Distance(ruutu, p);
+                // Huomiorenkaan sisällä napautus osuu (säde 27 pt > osumaSade 22 pt).
+                float raja = m.rengas != null && m.rengas.gameObject.activeSelf ? Mathf.Max(osumaSade, rengasSade) * kerroin : osumaSade * kerroin;
                 // Näkyvän nimiön päällä napautus osuu myös.
                 if (m.nimio.enabled)
                 {
@@ -300,7 +385,7 @@ namespace Matkakirja
                     if (ruutu.x >= p.x && ruutu.x <= p.x + koko.x && Mathf.Abs(ruutu.y - p.y) <= koko.y * 0.5f)
                         d = Mathf.Min(d, 1f);
                 }
-                if (d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
+                if (d < raja && d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
             }
             return paras;
         }
@@ -355,7 +440,8 @@ namespace Matkakirja
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
-                bool edessa = merkitNakyvat && (suodatin == null || suodatin.Contains(m.kaupunki.id))
+                // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
+                bool edessa = merkitNakyvat && !PalloKierto.PorttiSumea && (suodatin == null || suodatin.Contains(m.kaupunki.id))
                     && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;

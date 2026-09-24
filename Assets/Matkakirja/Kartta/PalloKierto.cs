@@ -77,8 +77,47 @@ namespace Matkakirja
         [Tooltip("Verkkopelin SAATON_RAMPPI.")]
         public double ajonRamppi = 0.3;
 
+        [Header("Aloitusportti (web etusivupallo, löydös 17)")]
+        [Tooltip("Pituusasteita sekunnissa itään (Lontoosta kohti Aasiaa). Web js/etusivupallo.js: kierros 360° " +
+                 "= 10 jaksoa × JAKSON_POHJA_S 1,0 + 322° × JAKSON_ASTE_S 0,115 + LOPPU_PITO_S 2,6 ≈ 49,6 s.")]
+        public double porttiNopeus = 360.0 / 49.6;
+        [Tooltip("Kameran leveysaste portissa. Web ETUSIVUN_KAMERA: 0,62 × koneen leveys rajattuna 2–38°, " +
+                 "reitin keskiarvo noin 25°.")]
+        public double porttiLeveys = 25.0;
+        [Tooltip("Aloituspituus portin avautuessa: Lontoo (web ETUSIVUN_REITTI alkaa Lontoosta).")]
+        public double porttiPituus = 0.0;
+        [Tooltip("Web KIEKON_YLITYS: pallon kiekon säde / etäisyys ruudun keskeltä nurkkaan. 1,15 vie reunan " +
+                 "selvästi ruudun ulkopuolelle kaikilla kuvasuhteilla.")]
+        public double porttiYlitys = 1.15;
+        [Tooltip("Web .start-gate backdrop-filter: blur(6px): Gaussin keskihajonta pisteinä.")]
+        public float porttiSumennusPt = 6f;
+        [Tooltip("Sumennuksen häivytys sisään ja ulos, sekunteja (web portin häipyminen 400 ms).")]
+        public float porttiHaivytysS = 0.4f;
+        [Tooltip("Matkakirja/Sumennus (Rakennus.cs). Ilman sitä portti on vain pieni kuva (renderScale 0,1).")]
+        public Material sumennusMateriaali;
+
+        /// <summary>
+        /// ALOITUSPORTTI (Natiivi-UI: Aloitusnakyma.PorttiMuuttui → tämä). true = kamera aloituspallotilaan
+        /// kuten webin etusivupallo: pallo täyttää koko ruudun (kiekko 1,15 × nurkkaetäisyys), pyörii hitaasti
+        /// itään (<see cref="porttiNopeus"/>), kaupunkimerkit, nimiöt, karttapisteet, valot ja nostot piiloon,
+        /// sumennus 6 pt päälle (PalloSumennus), sormet eivät liikuta palloa. false = sumennus häipyy
+        /// 0,4 s:ssa ja merkit palaavat; kamera jää paikalleen, ja kutsuja ajaa sen seuraavaan näkymään
+        /// (Aja toimii samassa kehyksessä). Asetettavissa ennen kuin kamera on olemassa.
+        /// </summary>
+        public static bool PorttiSumea { get; set; }
+
+        /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaPortti() => PorttiSumea = false;
+
+        /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
+        public bool Portissa => porttiTila;
+        bool porttiTila;
+        double porttiLon;
+        PalloSumennus sumennus;
+
         /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan;
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila;
 
         /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
         public bool Seurataan { get; private set; }
@@ -280,6 +319,9 @@ namespace Matkakirja
         void OnDisable()
         {
             if (Application.isPlaying) EnhancedTouchSupport.Disable();
+            // Editorissa URP-asetus on tiedosto: renderScale ei saa jäädä portin arvoon.
+            sumennus?.Palauta();
+            porttiTila = false; // uudelleen päälle: PaivitaPortti asettaa portin alusta
         }
 
         void Update()
@@ -289,8 +331,13 @@ namespace Matkakirja
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (Application.isPlaying)
             {
-                Ohjaa(Time.unscaledDeltaTime);
-                if (ajo != null) Etene(Time.unscaledDeltaTime);
+                PaivitaPortti(Time.unscaledDeltaTime);
+                if (porttiTila) PorttiKierto(Time.unscaledDeltaTime);
+                else
+                {
+                    Ohjaa(Time.unscaledDeltaTime);
+                    if (ajo != null) Etene(Time.unscaledDeltaTime);
+                }
             }
             if (!Seurataan && (suuntima != 0 || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
             Aseta();
@@ -315,6 +362,62 @@ namespace Matkakirja
             double pysty = math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0;
             double vaaka = math.atan(math.tan(pysty) * (kamera != null ? kamera.aspect : 1.0));
             return math.min(pysty, vaaka);
+        }
+
+        /// <summary>Portin tilan vaihto (PorttiSumea) ja sumennuksen häivytys.</summary>
+        void PaivitaPortti(double dt)
+        {
+            bool sumea = PorttiSumea;
+            if (sumea != porttiTila)
+            {
+                porttiTila = sumea;
+                if (sumea)
+                {
+                    ajo = null;
+                    ele = null;
+                    liuku = 0;
+                    vetoNopeus = 0;
+                    edellinenSormia = 0;
+                    Seurataan = false;
+                    vapaaKuvaus = false;
+                    porttiLon = Kiedo(porttiPituus);
+                }
+                sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);
+                sumennus.sumennusPt = porttiSumennusPt;
+                if (sumea) sumennus.Aseta(true);
+            }
+            if (sumennus == null || !sumennus.Paalla) return;
+            float askel = (float)dt / Mathf.Max(0.01f, porttiHaivytysS);
+            sumennus.Osuus += porttiTila ? askel : -askel;
+            if (!porttiTila && sumennus.Osuus <= 0f) sumennus.Aseta(false);
+        }
+
+        /// <summary>Aloituspallo: hidas kierto itään kiinteällä leveydellä ja korkeudella, joka täyttää ruudun.</summary>
+        void PorttiKierto(double dt)
+        {
+            porttiLon = Kiedo(porttiLon + porttiNopeus * dt);
+            pituus = porttiLon;
+            leveys = porttiLeveys;
+            korkeus = PorttiKorkeus();
+            kallistus = 0;
+            suuntima = 0;
+            katseKorkeus = 0;
+        }
+
+        /// <summary>
+        /// Portin korkeus (web pallonSovitus, KIEKON_YLITYS): pallon kiekon säde on <see cref="porttiYlitys"/> ×
+        /// etäisyys ruudun keskeltä nurkkaan, joten reuna ei näy millään kuvasuhteella. Kiekon kulmasäde α
+        /// (sin α = r / etäisyys keskipisteestä) näkyy ruudulla säteellä tan α / tan(fov/2) puolikorkeutta;
+        /// nurkka on √(1 + aspect²) puolikorkeuden päässä. iPad pysty: α 33,8°, korkeus 5 100 km.
+        /// </summary>
+        public double PorttiKorkeus()
+        {
+            var kamera = GetComponent<Camera>();
+            double tanPysty = math.tan(math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0);
+            double aspect = kamera != null ? kamera.aspect : 1.0;
+            double tanKiekko = porttiYlitys * math.sqrt(1.0 + aspect * aspect) * tanPysty;
+            double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
+            return r / math.sin(math.atan(tanKiekko)) - r;
         }
 
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>

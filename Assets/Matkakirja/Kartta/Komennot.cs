@@ -35,6 +35,8 @@ namespace Matkakirja
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | aloitus lat0 lon0 lat1 lon1 kesto | pois
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
+    ///   portti paalle|pois        aloitusportin pallo (PalloKierto.PorttiSumea): sumennus 6 pt, täyttö, kierto
+    ///   renkaat id,id,… [valittu] | renkaat pois   aloitusvalinnan huomiorenkaat (KaupunkiMerkit.Renkaat)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
     /// </summary>
@@ -181,6 +183,13 @@ namespace Matkakirja
                     else kp.Aseta(o[1], D(2), D(3), new Color(0.24f, 0.62f, 0.33f), o.Length > 4 && o[4] == "lukittu");
                     break;
                 }
+                case "portti":
+                    PalloKierto.PorttiSumea = o[1] == "paalle";
+                    break;
+                case "renkaat":
+                    if (o[1] == "pois") merkit.Renkaat(null, null);
+                    else merkit.Renkaat(o[1].Split(','), o.Length > 2 ? o[2] : null);
+                    break;
                 case "napauta":
                     // napauta x y: osuus näytöstä 0–1, origo vasen alakulma
                     kierto.Napauta(new Vector2((float)D(1) * Screen.width, (float)D(2) * Screen.height));

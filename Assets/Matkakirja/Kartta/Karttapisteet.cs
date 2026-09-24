@@ -37,8 +37,18 @@ namespace Matkakirja
         public void Nakyvat(bool nakyy)
         {
             nakyvat = nakyy;
+            Paivita();
+        }
+
+        /// <summary>Näkyvyys = kerros päällä eikä aloitusporttia (PalloKierto.PorttiSumea: portissa ei pisteitä).</summary>
+        bool Nakyy => nakyvat && !PalloKierto.PorttiSumea;
+        bool naytetty = true;
+
+        void Paivita()
+        {
+            naytetty = Nakyy;
             foreach (var p in pisteet.Values)
-                if (p.Olio != null && p.Olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = nakyy;
+                if (p.Olio != null && p.Olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = naytetty;
         }
 
         void Start()
@@ -68,7 +78,7 @@ namespace Matkakirja
                 r.sharedMaterial = p.Oma;
                 r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 r.receiveShadows = false;
-                r.enabled = nakyvat;
+                r.enabled = Nakyy;
                 pisteet[id] = p;
             }
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
@@ -88,6 +98,7 @@ namespace Matkakirja
 
         void Update()
         {
+            if (Nakyy != naytetty) Paivita();
             float s = 1f + sykeMaara * 0.5f * (1f + Mathf.Sin(Time.unscaledTime * 2f * Mathf.PI / sykeJakso));
             foreach (var p in pisteet.Values)
                 if (!p.Lukittu) p.Oma.SetFloat("_Koko", p.Koko * s);

@@ -8,7 +8,9 @@
         "Unity.TextMeshPro",
         "UnityEngine.UI",
         "Matkakirja.Peli",
-        "Matkakirja.Linssit.Ydin"
+        "Matkakirja.Linssit.Ydin",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
