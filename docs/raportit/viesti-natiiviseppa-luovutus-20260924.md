@@ -21,6 +21,16 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 - **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asennettu.
 - Tuotannon sisältö v15 (skeema 1.16). #3012 (1.17–1.25: maakuntakaaret, offline-maanosat) Julkaisijan jonossa → natiivi lukee jo.
 
+## Päivitys 24.9. klo 05.39 (master 08b1b2c)
+
+- Mergetty lisäksi: avain-keychain (symbolit linkittyvät), savy-multiply (sininen pois), piikit + piikit-2, kentta-fokus (T2 PASS
+  simulaattorissa), pistekerroin + tummuus-49 + pelaaja-toive (Linssiseppä), vertailu-paneeli, ipad-pisteet (iPad 834×1210 pt),
+  pelikoodari/aanipiikki (`ui jatka` 75 → 25 ms, syy LoadFMODSound). Oma: kartan PalloKierto.Pistekerroin = Round(dpi/163)
+  (merkit/viivat olivat 0,81×), Rakennus MATKAKIRJA_KEHITYS=1 = Development-laitekäännös (`ui piikit` vaatii).
+- Tummuus 1,66: iPad ~52–58 vs web 49 → Linssiselle ehdotettu ~1,8.
+- iPad: release 08b1b2c, Laitetestaajan A/C-sarjassa. Simulaattori: 5a1cfaf.
+- Huom Pelikoodarille (Natiivi-UI): UGUI-canvasit (Tilarivi.Skaalain) ovat yhä viiteruudussa → iPadilla suurempia.
+
 ## Päivitys 24.9. klo 05.08 (master 62c03b4)
 
 - Mergetty: linssiseppa/tummennus-gamma + valo-gamma, natiivi-ui/karuselli-kevyt + karuselli-sumea, kehittajan-liite (1fd601b),
