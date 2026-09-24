@@ -17,6 +17,9 @@
 //                                      lyhyt vaimennus (~300 ms); −1 = tasoa ei saada (HLS: äänitappi ei
 //                                      toimi segmenttivirroilla) → Unity käyttää ajastettua varakuviota
 //   MatkakirjaRadio_Huippu()           sama huippuarvosta (|näyte| max), vaimennus ~1 s
+//   MatkakirjaRadio_Rms()              raaka lineaarinen RMS 0…1 viimeisestä ~30 ms ikkunasta, ei tasoitusta eikä
+//                                      asteikkoa (Linssisepän VuMittari tasoittaa itse), ennen voimakkuutta;
+//                                      0 kun ei soi, −1 HLS
 //
 // "Soi" = timeControlStatus Playing ja kohdan eteneminen (kuten webin 'playing' tai
 // 'timeupdate'): puskurointi ei ole vielä kuulumista.
@@ -103,7 +106,8 @@ static float VuAsteikko(float lineaarinen)
 @property (nonatomic) float voimakkuus;
 @property (nonatomic) BOOL tauolla;    // pelaajan tauko: ei automaattista jatkoa
 @property (nonatomic) float nayttoTaso, nayttoHuippu;
-@property (nonatomic) CFTimeInterval edellinenLuku;
+@property (nonatomic) CFTimeInterval edellinenLuku, vuAlku;
+@property (nonatomic, copy) NSString* vuSyy;
 @end
 
 @implementation MatkakirjaRadio
@@ -169,8 +173,9 @@ static float VuAsteikko(float lineaarinen)
     [self.soitin play];
 }
 
-// VU-tappi kohteen audioMixiin, kun ääniraidat ovat tiedossa. Progressiivisella MP3/AAC-virralla
-// AVURLAssetilla on ääniraita; HLS-virralla raitoja ei ole (segmentit) → taso −1.
+// VU-tappi kohteen audioMixiin, kun ääniraita on tiedossa. Live-Icecastilla AVURLAssetin tracks on tyhjä
+// (Linssisepän iPad-ajo 24.9.: taso −1 koko ajan), joten raita otetaan AVPlayerItem.tracks[].assetTrack-listasta
+// vasta readyToPlay-tilassa; yritetään kehyksittäin (tila/taso kutsuvat) enintään 8 s. HLS: ei raitaa → −1.
 - (void)tappi:(AVPlayerItem*)kohde
 {
     vuTila.store(0);
@@ -178,36 +183,46 @@ static float VuAsteikko(float lineaarinen)
     vuHuippu.store(0.f);
     self.nayttoTaso = 0;
     self.nayttoHuippu = 0;
-    AVAsset* aineisto = kohde.asset;
-    __weak AVPlayerItem* heikkoKohde = kohde;
-    [aineisto loadValuesAsynchronouslyForKeys:@[@"tracks"] completionHandler:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            AVPlayerItem* k = heikkoKohde;
-            if (k == nil || k != self.soitin.currentItem) return;
-            NSError* virhe = nil;
-            if ([aineisto statusOfValueForKey:@"tracks" error:&virhe] != AVKeyValueStatusLoaded) { vuTila.store(-1); return; }
-            AVAssetTrack* raita = [aineisto tracksWithMediaType:AVMediaTypeAudio].firstObject;
-            if (raita == nil) { vuTila.store(-1); return; }
-            MTAudioProcessingTapCallbacks kutsut;
-            kutsut.version = kMTAudioProcessingTapCallbacksVersion_0;
-            kutsut.clientInfo = NULL;
-            kutsut.init = TapInit;
-            kutsut.finalize = TapFinalize;
-            kutsut.prepare = TapPrepare;
-            kutsut.unprepare = TapUnprepare;
-            kutsut.process = TapProcess;
-            MTAudioProcessingTapRef tap = NULL;
-            if (MTAudioProcessingTapCreate(kCFAllocatorDefault, &kutsut, kMTAudioProcessingTapCreationFlag_PostEffects, &tap) != noErr
-                || tap == NULL) { vuTila.store(-1); return; }
-            AVMutableAudioMixInputParameters* parametrit = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:raita];
-            parametrit.audioTapProcessor = tap;
-            CFRelease(tap);
-            AVMutableAudioMix* miksaus = [AVMutableAudioMix audioMix];
-            miksaus.inputParameters = @[parametrit];
-            k.audioMix = miksaus;
-            vuTila.store(1);
-        });
-    }];
+    self.vuSyy = @"odottaa readyToPlay";
+    self.vuAlku = 0;
+}
+
+- (void)yritaTappi
+{
+    if (vuTila.load() != 0 || self.soitin == nil) return;
+    AVPlayerItem* k = self.soitin.currentItem;
+    if (k == nil || k.status != AVPlayerItemStatusReadyToPlay) return;
+    CFTimeInterval nyt = CACurrentMediaTime();
+    if (self.vuAlku <= 0) self.vuAlku = nyt;
+    AVAssetTrack* raita = nil;
+    for (AVPlayerItemTrack* t in k.tracks)
+        if ([t.assetTrack.mediaType isEqualToString:AVMediaTypeAudio]) { raita = t.assetTrack; break; }
+    if (raita == nil && [k.asset statusOfValueForKey:@"tracks" error:NULL] == AVKeyValueStatusLoaded)
+        raita = [k.asset tracksWithMediaType:AVMediaTypeAudio].firstObject;
+    if (raita == nil)
+    {
+        if (nyt - self.vuAlku > 8.0) { vuTila.store(-1); self.vuSyy = [NSString stringWithFormat:@"ei ääniraitaa (%lu raitaa)", (unsigned long)k.tracks.count]; }
+        return;
+    }
+    MTAudioProcessingTapCallbacks kutsut;
+    kutsut.version = kMTAudioProcessingTapCallbacksVersion_0;
+    kutsut.clientInfo = NULL;
+    kutsut.init = TapInit;
+    kutsut.finalize = TapFinalize;
+    kutsut.prepare = TapPrepare;
+    kutsut.unprepare = TapUnprepare;
+    kutsut.process = TapProcess;
+    MTAudioProcessingTapRef tap = NULL;
+    OSStatus tulos = MTAudioProcessingTapCreate(kCFAllocatorDefault, &kutsut, kMTAudioProcessingTapCreationFlag_PostEffects, &tap);
+    if (tulos != noErr || tap == NULL) { vuTila.store(-1); self.vuSyy = [NSString stringWithFormat:@"tap-virhe %d", (int)tulos]; return; }
+    AVMutableAudioMixInputParameters* parametrit = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:raita];
+    parametrit.audioTapProcessor = tap;
+    CFRelease(tap);
+    AVMutableAudioMix* miksaus = [AVMutableAudioMix audioMix];
+    miksaus.inputParameters = @[parametrit];
+    k.audioMix = miksaus;
+    vuTila.store(1);
+    self.vuSyy = [NSString stringWithFormat:@"tappi kytketty (%@)", raita.mediaType];
 }
 
 // Unityn luku joka kehys (halpa): nopea nousu, lyhyt vaimennus (taso ~300 ms, huippu ~1 s). Lähetyksen
@@ -215,6 +230,7 @@ static float VuAsteikko(float lineaarinen)
 - (float)taso:(BOOL)huippu
 {
     if (self.soitin == nil) return 0;
+    [self yritaTappi];
     int t = vuTila.load();
     if (t < 0) return -1;
     CFTimeInterval nyt = CACurrentMediaTime();
@@ -250,18 +266,19 @@ static float VuAsteikko(float lineaarinen)
     AVPlayerItemErrorLogEvent* viime = k.errorLog.events.lastObject;
     AVAudioSession* istunto = [AVAudioSession sharedInstance];
     return [NSString stringWithFormat:@"soitin %ld, kohde %ld, aika %ld (%@), kohta %.2f s, puskuri %@, loppuTila %d, "
-        "soitinvirhe %@, kohdevirhe %@, virheloki %@ %ld %@, istunto %@ %@ reitti %@",
+        "soitinvirhe %@, kohdevirhe %@, virheloki %@ %ld %@, istunto %@ %@ reitti %@, VU %d %@",
         (long)s.status, (long)k.status, (long)s.timeControlStatus, s.reasonForWaitingToPlay ?: @"-",
         CMTimeGetSeconds(k.currentTime), k.playbackBufferEmpty ? @"tyhjä" : @"ei tyhjä", self.loppuTila,
         s.error.localizedDescription ?: @"-", k.error.localizedDescription ?: @"-",
         viime.errorDomain ?: @"-", (long)viime.errorStatusCode, viime.errorComment ?: @"-",
         istunto.category, istunto.isOtherAudioPlaying ? @"muu ääni soi" : @"",
-        istunto.currentRoute.outputs.firstObject.portType ?: @"ei ulostuloa"];
+        istunto.currentRoute.outputs.firstObject.portType ?: @"ei ulostuloa", vuTila.load(), self.vuSyy ?: @"-"];
 }
 
 - (int)tila
 {
     if (self.soitin == nil) return self.loppuTila;
+    [self yritaTappi];
     if (self.loppuTila != 0) return self.loppuTila;
     AVPlayerItem* kohde = self.soitin.currentItem;
     if (self.soitin.status == AVPlayerStatusFailed || kohde.status == AVPlayerItemStatusFailed) return 3;
@@ -311,6 +328,16 @@ const char* MatkakirjaRadio_Kuvaus(void)
 float MatkakirjaRadio_Taso(void)
 {
     return [[MatkakirjaRadio jaettu] taso:NO];
+}
+
+float MatkakirjaRadio_Rms(void)
+{
+    MatkakirjaRadio* radio = [MatkakirjaRadio jaettu];
+    if (radio.soitin == nil) return 0;
+    [radio yritaTappi];
+    if (vuTila.load() < 0) return -1;
+    BOOL soi = !radio.tauolla && radio.soitin.timeControlStatus == AVPlayerTimeControlStatusPlaying;
+    return soi ? vuRms.load() : 0;
 }
 
 float MatkakirjaRadio_Huippu(void)

@@ -113,7 +113,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Lähetyksen todellinen RMS-taso 0…1 VU-mittarille (BUILD 7, Natiiviseppä: MatkakirjaRadio_Taso);
-        /// −1 = ei saatavilla (HLS, ei mittausta, ei auki) → mittarin varakuvio. Editorissa −1.
+        /// −1 = ei saatavilla (HLS, ei mittausta, ei auki) → mittarin varakuvio. Editorissa −1. Natiivi antaa
+        /// näyttötason (dBFS −60…0 → 0…1), joka muunnetaan takaisin RMS:ksi (VuMittari.RmsNayttotasosta).
         /// </summary>
         public float Taso
         {
@@ -121,7 +122,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!auki || !Oma) return -1;
 #if UNITY_IOS && !UNITY_EDITOR
-                return MatkakirjaRadio_Taso();
+                return (float)VuMittari.RmsNayttotasosta(MatkakirjaRadio_Taso());
 #else
                 return -1;
 #endif
