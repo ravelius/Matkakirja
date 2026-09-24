@@ -4703,3 +4703,7 @@ Omistaja: 'harmi että minulle ei tule pop up ilmoituksia ainakaan remotessa jos
 ## OMISTAJA AJOI vapauta-levy-20260924-ilta.sh: 45 → 59 Gt VAPAANA (30 LOKIKANSIOTA, 14 Gt) (24.9.2026 klo 22.55)
 
 Omistaja ajoi Fablen skriptin klo 22.5x: proto-3d/lokit-kansiot ilman raporttiviittausta poistettu, vapaata 45 → 59 Gt. Huom. vapaa tila oli laskenut 69:stä 45:een Karttasepän siivouksen jälkeen (E28-ajo ja käännökset kirjoittavat); Codexin NAS-siirto vapauttaa lisää.
+
+## JULKAISIJAN KORTTI RATKAISTU: #3124 MAINISSA, SISALTOJUNA AJAA TESTEJA, #2913 JUNAN JALKEEN; LAITETESTAAJA 72 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 23.07)
+
+Postivahti klo 23.0x: Julkaisija idle, sisältöjuna käynnissä. Laitetestaaja 72 % → luovutus -20260924-yo.md, aloitusviestiin käännöspalvelu, JUMI → KORTTI + PushNotification ja tilataulu; clear_session self samassa vuorossa, Postivahti lähettää aloitusviestin.
