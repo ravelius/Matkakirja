@@ -40,7 +40,6 @@ namespace Matkakirja.Natiivi
         const string TervehdysLoppu = " Pelin tehtäviä en ratkaise puolestasi.";
         const string EiSaanut = "Livia ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.";
         const string EiTullut = "Vastaus jäi matkalle eikä tullut perille. Kokeile uudelleen.";
-        const string EiNatiivissa = "Livian keskustelu ei vielä ole auki tässä sovelluksessa. Kupla ja äänet toimivat.";
 
         static readonly string[] Yleiset =
         {
@@ -331,6 +330,8 @@ namespace Matkakirja.Natiivi
         {
             public string Vastaus, Virhe;
             public bool Uusittava;
+            /// <summary>Striimi katkesi (virhe-tapahtuma tai virta loppui ilman loppua): Vastaus = kertynyt teksti.</summary>
+            public bool Katkesi;
             public List<string> Jatkot;
             public Dictionary<string, object> Paikka;
         }
@@ -339,7 +340,7 @@ namespace Matkakirja.Natiivi
         /// Pyyntö workerille paneelin kontekstilla, historialla ja kehyksellä; onnistunut
         /// vastaus menee historiaan. Kutsuja pitää kysyy-lukon (yksi pyyntö kerrallaan).
         /// </summary>
-        IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis)
+        IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis, Action<string> osittain = null)
         {
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
@@ -351,14 +352,27 @@ namespace Matkakirja.Natiivi
                 if (i > alku) runko.Append(',');
                 runko.Append("{\"rooli\":").Append(PeliApu.Json(historia[i].Rooli)).Append(",\"teksti\":").Append(PeliApu.Json(historia[i].Teksti)).Append('}');
             }
-            runko.Append("]}");
+            // Striimi (web pyydaStriimi, oletus): palat kuplaan heti, worker jatkaa sanarajaan pysähtyneen vastauksen.
+            runko.Append("],\"striimi\":true}");
 
             var t = new Tulos();
-            using (var r = Pyynto(runko.ToString()))
+            var sse = new SseKasittelija(osittain);
+            using (var r = Pyynto(runko.ToString(), sse, 90))
             {
                 yield return r.SendWebRequest();
-                var json = Rakenne.Olio(Jasenna(r.downloadHandler?.text));
-                if (r.responseCode == 403) t.Virhe = EiNatiivissa;
+                bool striimi = (r.GetResponseHeader("content-type") ?? "").Contains("event-stream");
+                var json = striimi ? sse.Loppu : Rakenne.Olio(Jasenna(sse.Teksti));
+                if (Asetukset.Kehittaja && r.responseCode != 200)
+                    Debug.Log($"MATKAKIRJA pulu: HTTP {r.responseCode} {MiniJson.Teksti(json, "virhe") ?? (r.responseCode == 403 ? sse.Teksti : r.error)}");
+                if (r.responseCode == 403) { t.Virhe = EiSaanut; t.Uusittava = true; }
+                else if (striimi && json == null)
+                {
+                    // Virta katkesi (virhe-tapahtuma tai loppu puuttuu): kertynyt teksti ilman linkkejä, ei historiaan.
+                    t.Katkesi = true;
+                    t.Uusittava = true;
+                    t.Vastaus = sse.Kertynyt;
+                    if (string.IsNullOrWhiteSpace(t.Vastaus)) { t.Katkesi = false; t.Virhe = sse.Virhe ?? EiSaanut; }
+                }
                 else if (r.result != UnityWebRequest.Result.Success)
                 {
                     t.Virhe = MiniJson.Teksti(json, "viesti") ?? EiSaanut;
@@ -634,11 +648,34 @@ namespace Matkakirja.Natiivi
             pulu.Tilanne("answer", "hetkinen");
 
             Tulos t = null;
-            yield return Laheta(kysymys, jatko, x => t = x);
+            Label osittainen = null;
+            yield return Laheta(kysymys, jatko, x => t = x, teksti =>
+            {
+                // Ensimmäinen pala korvaa mietintärivin kuplalla, joka kasvaa paloittain (web striimikupla).
+                if (string.IsNullOrEmpty(teksti)) return;
+                if (osittainen == null)
+                {
+                    pitka.Pause();
+                    odotus.style.display = DisplayStyle.None;
+                    osittainen = Viesti("mk-chat__livia", teksti);
+                    osittainen.enableRichText = false;
+                }
+                else osittainen.text = teksti;
+            });
             pitka.Pause();
             odotus.RemoveFromHierarchy();
+            osittainen?.RemoveFromHierarchy();
             kysyy = false;
 
+            if (t.Katkesi)
+            {
+                // Web: kertynyt teksti ilman linkkejä, "Ajatus katkesi kesken lauseen." ja uusinta; ei historiaan.
+                var kesken = Viesti("mk-chat__livia", Nakyva(t.Vastaus).TrimEnd() + "\n\nAjatus katkesi kesken lauseen.");
+                kesken.enableRichText = false;
+                pulu.Tilanne("emotion", tunne: "hammentynyt", voimakkuus: 0.5f);
+                Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
+                yield break;
+            }
             if (t.Virhe != null)
             {
                 Viesti("mk-chat__livia", t.Virhe);
@@ -744,18 +781,87 @@ namespace Matkakirja.Natiivi
 
         public bool Kysyy => kysyy;
 
-        UnityWebRequest Pyynto(string runko)
+        UnityWebRequest Pyynto(string runko, DownloadHandler lukija = null, int aikaraja = 45)
         {
             var r = new UnityWebRequest(Palvelin, "POST")
             {
                 uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },
-                downloadHandler = new DownloadHandlerBuffer(),
-                timeout = 45,
+                downloadHandler = lukija ?? new DownloadHandlerBuffer(),
+                timeout = aikaraja,
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            // Kehittäjäkoodi (web x-pollo-kehittaja): omistajan laitteella ohittaa päivärajan, jonka web ja natiivi
+            // samasta verkosta jakavat. Vain Keychainista (Asetukset.PolloKoodi), ei koskaan koodissa eikä lokissa;
+            // App Store -käännöksessä ei otsaketta.
+            string koodi = Asetukset.PolloKoodi;
+            if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
             return r;
+        }
+
+        /// <summary>
+        /// Web pyydaStriimi: SSE-virran luku (event: pala | loppu | virhe, data: yksi JSON-rivi, tapahtumat \n\n:llä).
+        /// ReceiveData kutsutaan pääsäikeessä; palat kasataan ja välitetään kuplaan [[…]]-merkinnät poistettuina.
+        /// Jos vastaus ei ole striimi (virhe-JSON tai vanha worker), koko runko jää Tekstiin.
+        /// </summary>
+        sealed class SseKasittelija : DownloadHandlerScript
+        {
+            readonly Action<string> osittain;
+            readonly StringBuilder puskuri = new StringBuilder(), kaikki = new StringBuilder(), kertynyt = new StringBuilder();
+            readonly Decoder dekooderi = Encoding.UTF8.GetDecoder();
+            public Dictionary<string, object> Loppu;
+            public string Virhe;
+            public string Teksti => kaikki.ToString();
+            public string Kertynyt => kertynyt.ToString();
+
+            public SseKasittelija(Action<string> osittain) : base(new byte[4096]) { this.osittain = osittain; }
+
+            protected override bool ReceiveData(byte[] data, int pituus)
+            {
+                if (data == null || pituus <= 0) return true;
+                var merkit = new char[dekooderi.GetCharCount(data, 0, pituus)];
+                dekooderi.GetChars(data, 0, pituus, merkit, 0);
+                kaikki.Append(merkit);
+                puskuri.Append(merkit);
+                Pura();
+                return true;
+            }
+
+            void Pura()
+            {
+                while (true)
+                {
+                    string p = puskuri.ToString().Replace("\r\n", "\n");
+                    int raja = p.IndexOf("\n\n", StringComparison.Ordinal);
+                    if (raja < 0) { puskuri.Clear().Append(p); return; }
+                    string tapahtuma = p.Substring(0, raja);
+                    puskuri.Clear().Append(p.Substring(raja + 2));
+                    string laji = null;
+                    var dataRivit = new StringBuilder();
+                    foreach (var rivi in tapahtuma.Split('\n'))
+                    {
+                        if (rivi.StartsWith("event:", StringComparison.Ordinal)) laji = rivi.Substring(6).Trim();
+                        else if (rivi.StartsWith("data:", StringComparison.Ordinal)) dataRivit.Append(rivi.Substring(5).TrimStart());
+                    }
+                    var o = Rakenne.Olio(Jasenna(dataRivit.ToString()));
+                    if (laji == "pala")
+                    {
+                        kertynyt.Append(MiniJson.Teksti(o, "teksti") ?? "");
+                        osittain?.Invoke(PoistaKesken(kertynyt.ToString()));
+                    }
+                    else if (laji == "loppu") Loppu = o;
+                    else if (laji == "virhe") Virhe = MiniJson.Teksti(o, "viesti");
+                }
+            }
+
+            /// <summary>Web poistaKasiteMerkinnat: valmiit [[a|b]] → b, ja keskeneräinen [[… lopussa piiloon.</summary>
+            static string PoistaKesken(string t)
+            {
+                t = Nakyva(t);
+                int kesken = t.LastIndexOf("[[", StringComparison.Ordinal);
+                return kesken >= 0 && t.IndexOf("]]", kesken, StringComparison.Ordinal) < 0 ? t.Substring(0, kesken) : t;
+            }
         }
 
         static object Jasenna(string t)
