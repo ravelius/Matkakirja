@@ -92,7 +92,7 @@ namespace Matkakirja.Natiivi
             sisus.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
-            sulje = Rakenne.Nappi("×", "mk-nosto__sulje", Sulje, kortti);
+            sulje = Rakenne.Nappi(null, "mk-nosto__sulje", Sulje, kortti, Ikonit.Viiva["rasti"]); // E4: web ✕
             sulje.tooltip = "Sulje";
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
