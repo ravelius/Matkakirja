@@ -6,10 +6,11 @@
   "1.25": "137506a64fb28b4d",
   "1.26": "6ce8cb0b49deb75c",
   "1.27": "6ce8cb0b49deb75c",
-  "1.28": "f06631f1168799e5"
+  "1.28": "f06631f1168799e5",
+  "1.29": "5333684225d7cb2b"
  },
  "uusin": {
-  "skeemaversio": "1.28",
+  "skeemaversio": "1.29",
   "kokoelmat": {
    "aanitaulut": [
     "data",
@@ -335,6 +336,8 @@
     "bbox",
     "id",
     "iso2",
+    "kokoBbox",
+    "muutRenkaat",
     "renkaat"
    ],
    "maastonimet": [

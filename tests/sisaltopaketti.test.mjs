@@ -1048,3 +1048,13 @@ test('skeema 1.28: työhuoneen tilastot valmiina', async () => {
   const avaimet = new Set(t.sarakkeet.map((s) => s.avain));
   assert.ok(Object.keys(t.alkiot[0].summa).every((k) => avaimet.has(k)));
 });
+
+test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', () => {
+  const m = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((a) => [a.id, a]));
+  const nor = m.get('NOR');
+  assert.ok(nor.bbox[3] < 72 && nor.kokoBbox[3] > 80, `NOR ${nor.bbox} / ${nor.kokoBbox}`);
+  assert.ok(nor.muutRenkaat.some((r) => r.some(([, lat]) => lat > 76)));
+  assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
+  assert.ok(m.get('FIN').muutRenkaat.length === 0);
+  assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+});
