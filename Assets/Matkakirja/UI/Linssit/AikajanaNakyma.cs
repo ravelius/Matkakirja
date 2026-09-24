@@ -225,6 +225,10 @@ namespace Matkakirja.Natiivi
             // Koukut.
             KeksinnotKerros.EsittelyUIssa = true;
             IhmisenMatkaKerros.EsittelyUIssa = true;
+            // Pulun chatin linssikysymykset (web kytkePulunKysymykset): ihmisen matkan kertomus ja jakso.
+            LinssiKysymykset.Tila = () => tila == Tila.Ihminen && ihminen != null
+                ? (ihminen.Kertomus, LinssiUi.IhmisenMatka?.Esitys?.I ?? -1)
+                : ((IReadOnlyList<KertomusJakso>, int)?)null;
             KeksinnotKerros.KelloKasittelija = v => { Ala(Tila.Keksinnot); AsetaKello(Mathf.FloorToInt((float)v).ToString(CultureInfo.InvariantCulture)); };
             KeksinnotKerros.PysakkiKasittelija = NaytaPysakki;
             KeksinnotKerros.ValinaytosKasittelija = NaytaValinaytos;
@@ -327,6 +331,7 @@ namespace Matkakirja.Natiivi
                     if (tila != Tila.Ihminen) return;
                     var e = LinssiUi.IhmisenMatka?.Esitys;
                     RakennaAikaselain();
+                    LinssiKysymykset.Lataa();
                     if (IhmisenMatkaKerros.EsittelyUIssa && e != null && !e.Kaynnissa && !e.Paattynyt && e.I < 0) NaytaIhmisenAloitus();
                 });
             }
