@@ -303,8 +303,8 @@ namespace Matkakirja.Editori
                 target = BuildTarget.iOS,
                 options = lisat,
             };
-            // Release-käännös: Development-tila hidastaa ja näyttää kehityskonsolin.
-            EditorUserBuildSettings.development = false;
+            // Release-käännös oletuksena: Development-tila hidastaa ja näyttää kehityskonsolin.
+            EditorUserBuildSettings.development = (lisat & BuildOptions.Development) != 0;
             var raportti = BuildPipeline.BuildPlayer(asetukset);
             var s = raportti.summary;
             Debug.Log($"MATKAKIRJA: käännös {s.result}, {s.totalTime.TotalSeconds:F0} s, virheitä {s.totalErrors}, {kansio}");
@@ -323,11 +323,15 @@ namespace Matkakirja.Editori
             Kaanna("Build/iOS-sim");
         }
 
-        /// <summary>Xcode-projekti laitteelle: Build/laite.</summary>
+        /// <summary>
+        /// Xcode-projekti laitteelle: Build/laite. MATKAKIRJA_KEHITYS=1 = Development-käännös
+        /// (ProfilerRecorderin aikamerkit, esim. Natiivi-UI:n `ui piikit`); ei koskaan TestFlightiin.
+        /// </summary>
         public static void IosLaite()
         {
             AsetaIos(iOSSdkVersion.DeviceSDK);
-            Kaanna("Build/laite");
+            bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
+            Kaanna("Build/laite", kehitys ? BuildOptions.Development : BuildOptions.None);
         }
 
         /// <summary>
