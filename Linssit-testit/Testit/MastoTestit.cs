@@ -164,6 +164,7 @@ namespace Matkakirja.Linssit.Testit
             l.Sulje();
             // Ulosliuku 0,8 s: hämärä 1 → 0, pohja ja mastot pois vasta lopuksi (Natiiviseppä 25.9.).
             Oleta.Tosi(l.Sulkeutuu && m.Lista != null && kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros), "liuku alkaa, reliefi vielä");
+            Oleta.Tosi(kerrokset.Nakyvat["laatat"], "pergamentti latautuu reliefin alla liu'un ajan");
             y.Kello += 0.4; Oleta.Tosi(l.PaivitaSulku() && m.H > 0.2 && m.H < 0.8, "puolivälissä: " + m.H);
             y.Kello += 0.5; Oleta.Tosi(!l.PaivitaSulku(), "valmis");
             Oleta.Sama(0f, m.H, "hämärä pois");
