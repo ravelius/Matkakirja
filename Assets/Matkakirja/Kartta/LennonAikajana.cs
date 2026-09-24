@@ -98,11 +98,13 @@ namespace Matkakirja
                 new Avain { Osuus = 0.22, Kayra = Kayra.Pehmea, Etaisyys = lahi, Kallistus = 83, Suunta = 205, Kohde = 0, Kone = 0.74 },
             };
             // IRTAUTUMINEN: kiihtyvä vetäytyminen + jarruttava asettuminen (nopeus sama saumassa).
-            var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 30, Suunta = 360, Kohde = 0 };
+            // Omistaja 24.9. klo 12.2x: kone etuviistosta tai sivulta, takaa korkeintaan takaviistosta — ei koskaan
+            // suoraan takaa (suunta 0/360 = kamera koneen takana). 180 = edestä, 90/270 = sivulta.
+            var loppu = new Avain { Osuus = 0.40, Kayra = Kayra.Jarruttava, Etaisyys = kauko, Kallistus = 30, Suunta = 245, Kohde = 0 };
             a.Add(Pari(a[a.Count - 1], loppu, 0.30));
             a.Add(loppu);
-            // MATKA: tasainen liuku, kamera kiertää hitaasti koneen taakse.
-            a.Add(new Avain { Osuus = 0.70, Kayra = Kayra.Pehmea, Etaisyys = kauko * 0.85, Kallistus = 36, Suunta = 385, Kohde = 0 });
+            // MATKA: tasainen liuku sivulle (etuviistosta sivuun, ei taakse).
+            a.Add(new Avain { Osuus = 0.70, Kayra = Kayra.Pehmea, Etaisyys = kauko * 0.85, Kallistus = 36, Suunta = 270, Kohde = 0 });
             // LOPPU: kaupunki viistosta, kierto lähtee kiertosuunnan takaa.
             double suunta = Kiedo(k.Suunta);
             // Kiertosuunta kohti pohjoista, jotta lasku päättyy pohjoinen ylös ilman takaisinkääntöä.
