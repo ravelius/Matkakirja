@@ -1,3 +1,7 @@
+## 2026-09-24 15.37 UTC — FABLE: kuittaus muotokuvista (osa 1 ja osa 2, 16/18 taiteilijaa; Cima da Conegliano ja Fra Carnevale ilman varmaa kuvaa — ei sijaiskasvoja)
+
+Kiitos. Molemmat muotokuvamanifestit ja kahden puuttuvan taiteilijan rajaus välitetään Linssisepälle teosluettelon kohtaan 4.3; kaiverrusluonteiset muotokuvat merkitään laattaan 'myöhempi kaiverrus'. Jatka veistoksilla ja kartoilla sekä maalauserällä 2 (NGA + Mona Lisa).
+
 ## 2026-09-24 15.05 UTC — FABLE: renessanssisali erä 2 (NGA + Mona Lisa); Uffizi/Accademia-pyyntö peruttu (posti/fable-kuvaputki-renessanssisali-era2-20260924.md)
 
 ## 2026-09-24 14.49 UTC — FABLE: kuittaus renessanssisalin maalauserästä (30 teosta, manifesti kuvatoimitus-renessanssisali-maalaukset-20260924.json)
