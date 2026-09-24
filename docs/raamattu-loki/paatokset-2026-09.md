@@ -4091,3 +4091,7 @@ Sisältö: noppa webin mukaan (4d3fe7a, kuvapari PASS), Natiivi-UI 6d39af4 (pä�
 ## SIIRTOSEPPA 72 % → LUOVUTUS JA NOLLAUS KASKETTY (24.9.2026 klo 15.43)
 
 Luovutus viesti-siirtoseppa-luovutus-20260924-b.md, aloitusviesti päivitettynä (WEB ON MALLI), clear_session self samassa vuorossa; Postivahti lähettää aloitusviestin kun list_events = 0 ja varmistaa RC:n.
+
+## KORJAUS: SIIRTOSEPAN NOLLAUSKASKY EI MENNYT PERILLE (10 VIESTIN RAJA) (24.9.2026 klo 15.43)
+
+Fablen vertaisviestiraja täyttyi (11 viestiä omistajan viimeisen kirjoituksen jälkeen); Siirtosepän luovutuskäsky ja Postivahdin ohje lähetetään heti, kun omistaja kirjoittaa seuraavan viestin. Siirtoseppä 72 % — ei vielä kriittinen (85 %). Oppi: niputa viestit; enintään 10 per omistajan viesti.
