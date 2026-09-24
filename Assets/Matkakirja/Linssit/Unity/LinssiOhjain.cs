@@ -259,7 +259,8 @@ namespace Matkakirja.Natiivi
                     var alkio = Olio(o);
                     var id = alkio?["id"] as string;
                     if (id == "rantamaski") rantamaski = Matkakirja.Linssit.Virrat.Ruutumaski.Lue(alkio);
-                    if (id == "kertomus" && Olio(alkio["data"]) is Dictionary<string, object> k)
+                    // Päätaso ensin (2.0: alkiolla ei dataa); raaka data vain Paatason kautta (Pelikoodari 24.9.).
+                    if (id == "kertomus" && (alkio.ContainsKey("manifesti") ? alkio : Matkakirja.Peli.Paataso.Raaka(alkio)) is Dictionary<string, object> k)
                     {
                         manifestinOsoite = k.TryGetValue("manifesti", out var m) ? m as string : null;
                         aanenJuuri = k.TryGetValue("juuri", out var j) ? j as string : null;
