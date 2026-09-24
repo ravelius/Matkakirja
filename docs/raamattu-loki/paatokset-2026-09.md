@@ -4903,3 +4903,7 @@ Postivahdin ilmoitus klo 01.4x. Aloitusviesti lähetetään kun list_events = 0.
 ## NATIIVI-UI NOLLATTU (LUOVUTUS -20260925-k.md, natiivi-ui-luovutus-k c51be062e; ALOITUSVIESTI LAHETETTY: LOYDOS 51 DIAGNOOSILOKI ENSIN, MERGE-PYYNNOT JUNAAN, LOYDOS 50 VAIHE 1b, PARITEETIN #8/#29/#18/#1) (25.9.2026 klo 02.46)
 
 Nollaus toteutui kaavan mukaan (clear samassa vuorossa, list_events 0).
+
+## JULKAISIJA JUMI: #3131 RISTIRIIDASSA (#3129 SQUASHATTIIN v2211), LUOKITIN ESTI PUSHIN TOISEN ROOLIN PR-HAARAAN → KORTTI OMISTAJALLE; FABLE: REBASE TEKIJALLE (SISALTOKIRJURI OMAAN HAARAANSA + VERSIONOSTO), JULKAISIJA MERGEAA VIHREANA; MAINISSA #3136 v2210, #3129 v2211; #3135 SAVUKKEET UUSIKSI (E28 OHI) (25.9.2026 klo 02.57)
+
+Oppi: pinotut PR:t squash-mergen jälkeen rebasea aina tekijä omaan haaraansa; Julkaisija ei pushaa toisen roolin haaraan.
