@@ -74,7 +74,11 @@ namespace Matkakirja.Natiivi
 
         // ── IVesistojenNakyma ─────────────────────────────────────────────
 
-        public void Jarvet(IReadOnlyList<Jarvi> jarvet)
+        // Verkot ja nimet rakennetaan Kehysjonolla (2 ms/kehys): vesistöjen avaus vei iPadilla 15,7 ms
+        // (ui piikit 24.9., ajo 4). Järjestys säilyy: järvet, reunat, uomat ryhmittäin, nimet.
+        public void Jarvet(IReadOnlyList<Jarvi> jarvet) => jono.Lisaa(() => RakennaJarvet(jarvet));
+
+        void RakennaJarvet(IReadOnlyList<Jarvi> jarvet)
         {
             if (jarvet.Count == 0) return;
             if (tasavari != null)
@@ -111,10 +115,10 @@ namespace Matkakirja.Natiivi
             foreach (var ryhma in polut.GroupBy(p => (p.Laji, p.Tarkeys, p.Vari, p.Paksuus)))
             {
                 var eka = ryhma.First();
-                int jono = eka.Laji == VesiLaji.Penger ? JonoPenkat : JonoUomat + Mathf.Clamp(3 - eka.Tarkeys, 0, 2);
-                Viivat($"{(eka.Laji == VesiLaji.Penger ? "Penkereet" : "Uomat")} {eka.Tarkeys}",
-                    ryhma.Select(p => (IReadOnlyList<LatLon>)p.Pisteet), VesistotPallolle.Metreina(eka.Korkeus),
-                    eka.Vari, eka.Paksuus, jono);
+                int jonoNro = eka.Laji == VesiLaji.Penger ? JonoPenkat : JonoUomat + Mathf.Clamp(3 - eka.Tarkeys, 0, 2);
+                var pisteet = ryhma.Select(p => (IReadOnlyList<LatLon>)p.Pisteet).ToList();
+                jono.Lisaa(() => Viivat($"{(eka.Laji == VesiLaji.Penger ? "Penkereet" : "Uomat")} {eka.Tarkeys}",
+                    pisteet, VesistotPallolle.Metreina(eka.Korkeus), eka.Vari, eka.Paksuus, jonoNro));
             }
         }
 
