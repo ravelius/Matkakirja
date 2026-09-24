@@ -3041,6 +3041,40 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * João Pessoa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Farol do Cabo Branco/Ponta do
+   * Seixas (Amerikan mantereen itäisin kärki) on muutaman km päässä
+   * keskustasta, ei samassa rajauksessa.
+   */
+  joaopessoa: {
+    polku: 'assets/kartat/joaopessoa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876,
+    },
+    esittely: 'Kartan alue on João Pessoan historiallinen keskusta '
+      + 'Paraíban joen mutkan yllä — Brasilian kolmanneksi vanhin '
+      + 'kaupunki, perustettu 1585. São Franciscon luostari ja Teatro '
+      + 'Santa Roza ovat molemmat vanhan kaupungin ydinalueella.',
+    kohteet: [
+      {
+        nimi: 'São Franciscon luostari', lat: -7.1145883, lon: -34.8825453,
+        teksti: 'Fransiskaanimunkit aloittivat luostarin ja kirkon '
+          + 'rakentamisen 1589; koko kokonaisuus täydentyi vasta 1788. '
+          + 'Sisätiloja koristavat kullatut puuveistokset ja Unescon '
+          + 'ainutlaatuiseksi nostama saarnastuoli — Etelä-Amerikan '
+          + 'suurin barokkimonumentti.',
+      },
+      {
+        nimi: 'Teatro Santa Roza', lat: -7.1177565, lon: -34.8866680,
+        teksti: 'Vaaleanpunainen, uusklassinen teatteri avattiin 3. '
+          + 'marraskuuta 1889 Parahyban maakunnan tärkeimpänä '
+          + 'teatterina. Rakennus seisoo yhä samalla paikalla '
+          + 'muutaman korttelin päässä joenrannasta.',
+      },
+    ],
+  },
+  /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
    * kohteet ovat kulttuurikohteita. Lehti kertoo roomalaisesta,

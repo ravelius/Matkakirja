@@ -65,6 +65,14 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  joaopessoa: {
+    // Centro Cultural São Francisco (-7.1146/-34.8825) ja Theatro Santa
+    // Rosa (-7.1178/-34.8867) ovat n. 0,6 km päässä toisistaan
+    // historiallisessa keskustassa (sisältöinventaario #3045 kohta 5.5).
+    // Farol do Cabo Branco/Ponta do Seixas on muutaman km päässä
+    // keskustasta, ei samassa rajauksessa.
+    rajat: { pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876 },
+  },
   berliini: {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
