@@ -71,7 +71,15 @@ SEKOITUS_RUNKO = (
     "if (vara > 4.5) { float d = log2(1.0 / max(ts.z, 1e-6)); s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0)\n"
     "    : ts.z > 1.01 ? float4(0.0, 1.0, 1.0, 1.0) : d < 0.25 ? float4(0.0, 1.0, 0.0, 1.0)\n"
     "    : float4(1.0, 1.0 - saturate(d / 8.0), 0.0, 1.0); }\n"
-    "else if (vara > 3.5 || (vara > 0.5 && vara < 1.5)) { if (s.a < 0.5 && varaVari.a > 0.5) s = float4(varaVari.rgb, 1.0); }\n"
+    "else if (vara > 3.5 || (vara > 0.5 && vara < 1.5))\n"
+    "{\n"
+    "    // Varakartta myös, kun Cesium antaa kaukaisen esivanhemman rasterin (d >= varaTaso tasoa ylempää) tai kun\n"
+    "    // rasterin UV on [0,1]:n ulkopuolella (clamp venyttäisi reunapikselin); diagnoosi 2, 24.9.2026.\n"
+    "    float d = log2(1.0 / max(ts.z, 1e-6));\n"
+    "    bool ulkona = any(ouv < -0.002) || any(ouv > 1.002);\n"
+    "    bool kaukainen = varaTaso > 0.0 && d >= varaTaso;\n"
+    "    if ((s.a < 0.5 || ulkona || kaukainen) && varaVari.a > 0.5) s = float4(varaVari.rgb, 1.0);\n"
+    "}\n"
     "else if (vara > 2.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : float4(0.0, 1.0, 0.0, 1.0);\n"
     "else if (vara > 1.5) { if (s.a < 0.5) s = float4(1.0, 0.0, 1.0, 1.0); }\n"
     "if (kynnys < 0.0) s = float4(0.0, 1.0, 1.0, s.a);\n"
@@ -89,7 +97,10 @@ SEKOITUS_RUNKO = (
 ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4c5d6e", 710000),
                 ("vara", "_vara", "v1", "c3f6d9e2-5a7b-4c8d-8e1f-2a3b4c5d6e7f", 710001),
                 ("meriVari", "_meriVari", "v4", "d4a7e0f3-6b8c-4d9e-9f2a-3b4c5d6e7f80", 710002),
-                ("meriKynnys", "_meriKynnys", "v1", "e5b8f1a4-7c9d-4eaf-8a3b-4c5d6e7f8091", 710003)]
+                ("meriKynnys", "_meriKynnys", "v1", "e5b8f1a4-7c9d-4eaf-8a3b-4c5d6e7f8091", 710003),
+                ("varaTaso", "_varaTaso", "v1", "f6c9a2b5-8dae-4fb0-9b4c-5d6e7f8091a2", 710004)]
+# Sekoitusfunktion syöttöpaikat ALI_SYOTTEET-järjestyksessä (7 = ulos, 8 = ts, 10 = ouv).
+ALI_CF_PAIKAT = [3, 4, 5, 6, 9]
 
 def ali_ominaisuus(nimi, viite, tyyppi, guid):
     o = {"m_SGVersion": 1, "m_ObjectId": uusi_id(), "m_Guid": {"m_GuidSerialized": guid}, "m_Name": nimi,
@@ -132,7 +143,7 @@ alfa = kellu_ominaisuus("alfa", "_alfa", False)
 alfa_solmu, alfa_ulos = ominaisuussolmu(alfa, 900.0, -30.0)
 V4 = {"x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0}
 def sf_paikka(tyyppi, id_, nimi, suunta):
-    arvo = 0.0 if tyyppi == "Vector1MaterialSlot" else dict(V4)
+    arvo = 0.0 if tyyppi == "Vector1MaterialSlot" else {"x": 0.0, "y": 0.0} if tyyppi == "Vector2MaterialSlot" else dict(V4)
     return {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph." + tyyppi, "m_ObjectId": uusi_id(), "m_Id": id_,
             "m_DisplayName": nimi, "m_SlotType": suunta, "m_Hidden": False, "m_ShaderOutputName": nimi,
             "m_StageCapability": 2, "m_Value": arvo, "m_DefaultValue": arvo, "m_Labels": []}
@@ -140,7 +151,8 @@ sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4M
              sf_paikka("Vector1MaterialSlot", 2, "alfa", 0), sf_paikka("Vector4MaterialSlot", 3, "varaVari", 0),
              sf_paikka("Vector1MaterialSlot", 4, "vara", 0), sf_paikka("Vector4MaterialSlot", 5, "meriVari", 0),
              sf_paikka("Vector1MaterialSlot", 6, "kynnys", 0), sf_paikka("Vector4MaterialSlot", 7, "ulos", 1),
-             sf_paikka("Vector4MaterialSlot", 8, "ts", 0)]
+             sf_paikka("Vector4MaterialSlot", 8, "ts", 0), sf_paikka("Vector1MaterialSlot", 9, "varaTaso", 0),
+             sf_paikka("Vector2MaterialSlot", 10, "ouv", 0)]
 sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
       "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
       "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
@@ -150,14 +162,17 @@ sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", 
 uudet = [alfa, alfa_solmu, alfa_ulos, sf] + sf_paikat
 ts_om = next(o for o in ali if o["m_Type"].endswith("Vector4ShaderProperty") and o["m_Name"] == "translationAndScale")
 ts_solmu = next(o for o in ali if o["m_Type"].endswith("PropertyNode") and o["m_Property"]["m_Id"] == ts_om["m_ObjectId"])
+uv_reuna = next(e for e in g["m_Edges"] if e["m_InputSlot"]["m_Node"]["m_Id"] == naytteenotto["m_ObjectId"]
+                and e["m_InputSlot"]["m_SlotId"] == 2)
 reunat = [reuna(perus_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 0), reuna(naytteenotto["m_ObjectId"], 0, sf["m_ObjectId"], 1),
+          reuna(uv_reuna["m_OutputSlot"]["m_Node"]["m_Id"], uv_reuna["m_OutputSlot"]["m_SlotId"], sf["m_ObjectId"], 10),
           reuna(ts_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 8),
           reuna(alfa_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 2), reuna(sf["m_ObjectId"], 7, ulostulo["m_ObjectId"], 1)]
 omat = [alfa]
 for i, (nimi, viite, tyyppi, guid, _) in enumerate(ALI_SYOTTEET):
     om = ali_ominaisuus(nimi, viite, tyyppi, guid)
     solmu, ulos = (ominaisuussolmu_v4 if tyyppi == "v4" else ominaisuussolmu)(om, 900.0, 40.0 + 60.0 * i)
-    reunat.append(reuna(solmu["m_ObjectId"], 0, sf["m_ObjectId"], 3 + i))
+    reunat.append(reuna(solmu["m_ObjectId"], 0, sf["m_ObjectId"], ALI_CF_PAIKAT[i]))
     uudet += [om, solmu, ulos]
     omat.append(om)
 g["m_Edges"] += reunat
@@ -333,6 +348,7 @@ VARA_UV_RUNKO = (
 SX = paikkasolmut["1"]["m_DrawState"]["m_Position"]["x"] - 900.0
 SY = paikkasolmut["1"]["m_DrawState"]["m_Position"]["y"] + 400.0
 vara_om = kellu_ominaisuus("lentoVara", "_lentoVara", True); vara_om["m_Value"] = 0.0
+varataso_om = kellu_ominaisuus("lentoVaraTaso", "_lentoVaraTaso", True); varataso_om["m_Value"] = 0.0
 meriv_om = vektori_ominaisuus("s2MeriVari", "_s2MeriVari")
 kynnys_om = kellu_ominaisuus("s2MeriKynnys", "_s2MeriKynnys", True); kynnys_om["m_Value"] = 0.0
 nolla_om = vektori_ominaisuus("maaNolla", "_maaNolla")
@@ -397,6 +413,7 @@ vv_cf = solmupohja("CustomFunctionNode", "VaraVari (Custom Function)", SX + 750.
                    synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="VaraVari", m_FunctionSource="",
                    m_FunctionBody=VARA_VARI_RUNKO)
 vara2_solmu, vara2_ulos = ominaisuussolmu(vara_om, SX + 600.0, SY + 360.0)
+varataso_solmu, varataso_ulos = ominaisuussolmu(varataso_om, SX + 600.0, SY + 420.0)
 p1, p2 = paikkasolmut["1"]["m_ObjectId"], paikkasolmut["2"]["m_ObjectId"]
 G["m_Edges"] += [reuna(maailma_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 0),
                  reuna(keski2_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 1),
@@ -410,17 +427,18 @@ G["m_Edges"] += [reuna(maailma_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 0),
                  reuna(vara2_solmu["m_ObjectId"], 0, vv_cf["m_ObjectId"], 2),
                  reuna(vv_cf["m_ObjectId"], 3, p1, 710000),
                  reuna(vara_solmu["m_ObjectId"], 0, p1, 710001),
+                 reuna(varataso_solmu["m_ObjectId"], 0, p1, 710004),
                  reuna(meriv_solmu["m_ObjectId"], 0, p2, 710002),
                  reuna(kynnys_solmu["m_ObjectId"], 0, p2, 710003)]
-for om in (vara_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
+for om in (vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
 satsolmut = [vara_solmu, meriv_solmu, kynnys_solmu, keski2_solmu, akseli2_solmu, nolla_solmu, ita_solmu, kartta_solmu,
-             maailma_solmu, uv_cf, nayte, vv_cf, vara2_solmu]
+             maailma_solmu, uv_cf, nayte, vv_cf, vara2_solmu, varataso_solmu]
 for s in satsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
-lisat += [vara_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om, vara_ulos, meriv_ulos, kynnys_ulos, keski2_ulos,
-          akseli2_ulos, nolla_ulos, ita_ulos, kartta_ulos, maailma_ulos, vara2_ulos] + satsolmut + uv_slotit + nayte_slotit + vv_slotit
+lisat += [vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om, vara_ulos, meriv_ulos, kynnys_ulos, keski2_ulos,
+          akseli2_ulos, nolla_ulos, ita_ulos, kartta_ulos, maailma_ulos, vara2_ulos, varataso_ulos] + satsolmut + uv_slotit + nayte_slotit + vv_slotit
 print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 ← meren värjäys (_s2MeriVari, _s2MeriKynnys)")
 
 kaavio += lisat

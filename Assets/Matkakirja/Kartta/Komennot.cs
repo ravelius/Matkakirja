@@ -113,6 +113,7 @@ namespace Matkakirja
         ///   uv         varakartan UV väreinä (r = pituus, g = leveys); punainen = maan akselit puuttuvat
         ///   taso       paikan 1 rasterin taso: vihreä oma, keltainen→punainen esivanhemman (1–8 tasoa), magenta ei
         ///   sumu pois|paalle   etäisyyssumu (Aurinko) pois lennolta
+        ///   varataso d varakartta, kun paikan 1 rasteri on d tasoa ylemmästä esivanhemmasta (oletus 2, 0 = pois)
         ///   satloki    Laattapalvelimen satelliittiloki alkaa alusta (minuutti seuraavasta satelliittipyynnöstä)
         ///   varapois   varakartta pois (vertailu: sama harmaa ilman varaa?)
         ///   s2         paikan 2 (Sentinel) peitto syaanina (d)
@@ -131,6 +132,9 @@ namespace Matkakirja
                 case "kattavuus": KarttaKerrokset.LentoTesti = 3; break;
                 case "uv": KarttaKerrokset.LentoTesti = 4; break;
                 case "taso": KarttaKerrokset.LentoTesti = 5; break;
+                case "varataso" when o.Length > 2:
+                    KarttaKerrokset.VaraTaso = (float)double.Parse(o[2], CultureInfo.InvariantCulture);
+                    break;
                 case "sumu": Aurinko.SumuEstetty = !paalle; break;
                 case "satloki": SatelliittiLoki.Aloita(); break;
                 case "normaali": KarttaKerrokset.LentoTesti = 0; break;
@@ -154,13 +158,14 @@ namespace Matkakirja
                     KarttaKerrokset.LentoTestiS2 = false;
                     Usvalevy.Estetty = false;
                     Aurinko.SumuEstetty = false;
+                    KarttaKerrokset.VaraTaso = 2f;
                     for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
                     var pk = GameObject.Find("Pilvikuori");
                     if (pk != null && pk.TryGetComponent<MeshRenderer>(out var pr)) pr.enabled = true;
                     break;
             }
             kk?.LentoTestiVoimaan();
-            Debug.Log($"MATKAKIRJA lentoharmaa {string.Join(" ", o, 1, o.Length - 1)}: testi {KarttaKerrokset.LentoTesti}, " +
+            Debug.Log($"MATKAKIRJA lentoharmaa {string.Join(" ", o, 1, o.Length - 1)}: testi {KarttaKerrokset.LentoTesti}, varataso {KarttaKerrokset.VaraTaso}, " +
                       $"varapois {KarttaKerrokset.LentoTestiVaraPois}, s2 {KarttaKerrokset.LentoTestiS2}, usva estetty {Usvalevy.Estetty}");
         }
 

@@ -306,6 +306,7 @@ namespace Matkakirja
             // "varapois" pitää varan pois. Testitilat eivät tarvitse varakarttaa (4 näyttää pelkän UV:n).
             float arvo = !satelliittiLento || LentoTestiVaraPois ? 0f : LentoTesti >= 2 ? LentoTesti : vara ? 1f : 0f;
             Shader.SetGlobalFloat(LentoVaraId, arvo);
+            Shader.SetGlobalFloat(LentoVaraTasoId, VaraTaso);
             if (satelliittiLento)
             {
                 // Maan akselit (_maaNolla/_maaIta/_maaAkseli) uudelleen lennon alussa: varakartan UV ei saa riippua siitä,
@@ -322,6 +323,16 @@ namespace Matkakirja
         /// 4 = varakartan UV väreinä (punainen = maan akselit puuttuvat). Voimaan heti ja seuraavilla lennoilla.
         /// </summary>
         public static int LentoTesti;
+        /// <summary>
+        /// KAUKAINEN ESIVANHEMPI (diagnoosi 2, 24.9.2026, kolme kylmää lentoa): harmaat suorakulmiot ovat laattoja, joille
+        /// Cesium on kiinnittänyt useita tasoja ylemmän esivanhemman rasterin (RasterMappedTo3DTile.cpp:136–167,
+        /// translationAndScale.z = 2^−d), ja sen näyte on tasaisen vaalea. Lennon aikana paikka 1 käyttää silloin
+        /// Z2-varakarttaa (sama Blue Marble, aina valmis): kun d ≥ VaraTaso tai rasterin UV on [0,1]:n ulkopuolella.
+        /// 0 = sääntö pois. Komento "lentoharmaa varataso d".
+        /// </summary>
+        public static float VaraTaso = 2f;
+        static readonly int LentoVaraTasoId = Shader.PropertyToID("_lentoVaraTaso");
+
         /// <summary>Varakartta pois lennolta (hypoteesi: näkyykö harmaa ilman sitä samana).</summary>
         public static bool LentoTestiVaraPois;
         /// <summary>Paikan 2 (Sentinel) peitto syaanina (hypoteesi d).</summary>
