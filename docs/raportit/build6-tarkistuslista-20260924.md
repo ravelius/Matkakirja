@@ -638,36 +638,33 @@ zoomaa ≥50 % ruudusta), `kuva varitaso-b7`. Zoomaa myös ulos niin että
 naapurimaat (Albania/Makedonia/Bulgaria/Turkki) ja meri näkyvät samassa
 kuvassa.
 
-**Odotettu tulos webin mukaan** (`js/maatummennus.js`, tarkistettu
-2.9.2026 poistetuksi täytöltä): "huntu" webissä on VAIN VIIVA, EI
-TÄYTTÖÄ — pelkkä nykyisen maan ääriviiva (`fill:none`,
-`css/styles.css:1830`), väri `#6b5539` (`--raja-muste`, sama kuin
-tavallinen ääriviiva mutta paksumpi/tasaisempi). Koska täyttöä ei ole
-lainkaan, meri ja naapurimaat eivät voi jäädä minkään hunnun alle — ne
-näkyvät AINA pohjakartan omalla sepia-/merivärillä, ei erillisen
-himmennyksen kautta. Naapurimaat: pohjakartta on OLETUKSENA sepia
-KAIKKIALLA, vain nykyinen maa vaihtuu väritettyyn versioon
-(`varitasonKansio`) — naapurit näkyvät siis AINA vaaleana sepiana
-nimineen (nimiotaso on erillinen, aina päällä oleva kerros), ei mitään
-erillistä "paljasta naapurimaat" -toimintoa tarvita. Meren väri ei ole
-kiinteä hex, vaan poltettu per-laatta (`umpimeriSavy`,
-tools/generoi-laattapyramidi.mjs); 3D-pallon reliefilinssillä kiinteä
-`MERIVARI = 'rgb(38, 78, 145)'`. Rajageometria: Natural Earth 10m
+**KORJAUS (Fable 24.9. klo 12.2x, Karttasepän osoitus)**: alempi kappale
+(`js/maatummennus.js`, viiva-vain-huntu) on VANHENTUNUT/VÄÄRÄ lähde —
+oikea, aktiivinen huntumekanismi on `js/laattakerma-shader.js`: kerma
+`#faf4d6` peitolla 0,80 (`KERMAN_PEITTO_KIINTEA`) maalataan MUIDEN
+maiden MAA-ALUEEN päälle, nykyinen maa on reikä kermassa (näkyy
+reliefillä/väritasolla), meri EI SAA kermaa (jää pohjan omaan väriin),
+ja nimiotaso näkyy kerman LÄPI (nimet luettavissa vaalean kerman päältä).
+
+**Odotettu tulos webin mukaan** (`js/laattakerma-shader.js`
+`KERMAN_PEITTO_KIINTEA=0.80`, väri `#faf4d6`): (a) meri pohjan omalla
+värillä (ei kermaa, ei huntua) — meren väri ei ole kiinteä hex vaan
+poltettu per-laatta (`umpimeriSavy`, tools/generoi-laattapyramidi.mjs),
+3D-pallon reliefilinssillä kiinteä `MERIVARI = 'rgb(38, 78, 145)'`;
+(b) naapurimaat vaalean kerman (#faf4d6, 80 % peitto) alla NIMET YHÄ
+NÄKYVISSÄ läpi; (c) nykyinen maa REIKÄ kermassa — näkyy reliefillä/
+väritasolla täydessä kontrastissa; (d) rajageometria Natural Earth 10m
 admin-0-maat (public domain), Douglas-Peucker-yksinkertaistettu
 (mediaani 0,02, maksimi 0,20 laudan yksikköä ≈ alle 0,5 px syvimmässä
-zoomissa) — EI karkea polygoni. **Johtopäätös natiivin korjaukseen**:
-oikea ratkaisu ei ole "mieto taso muille maille" (kuten alkuperäinen
-juurisyyarvio olettaa) vaan HUNNUN TÄYTÖN POISTO KOKONAAN nykyisen maan
-ulkopuolelta — pelkkä ohut ääriviiva riittää, ja meri/naapurit näkyvät
-automaattisesti oikein kun väritasolaatan alue rajataan täsmälleen maan
-alueeseen (alpha 0 sen ulkopuolella, ei erillistä hunnun tarvitse
-kattaa mitään).
+zoomissa) — EI karkea polygoni.
 
-**PASS-ehto**: (a) meri harmaansininen, rantaviivoitus näkyy, EI huntua
-sen päällä; (b) Kreikan raja yhtä tarkka/yksityiskohtainen kuin webin
-kuvassa, ei kulmikas/yksinkertaistettu; (c) naapurimaat näkyvät vaaleana
-sepiana NIMINEEN (ei tyhjänä/piilossa). **FAIL**: mikä tahansa kolmesta
-pettää.
+**PASS-ehto**: (a) meri POHJAN VÄRINEN, EI kermaa/huntua sen päällä;
+(b) naapurimaat vaaleaa kermaa (#faf4d6, ~80 % peitto) NIMET NÄKYVISSÄ
+läpi (ei täysin piilossa, ei täysin paljaana); (c) nykyinen maa reikänä
+kermassa, reliefi/väritaso täydellä kontrastilla; (d) Kreikan raja yhtä
+tarkka/yksityiskohtainen kuin webin kuvassa. **FAIL**: mikä tahansa
+neljästä pettää — esim. meri saa kermaa, naapurien nimet peittyvät
+kokonaan, tai raja on yksinkertaistettu polygoni.
 
 ## B7-4: Maailmanradion aito VU-mittari
 
