@@ -223,11 +223,11 @@ export const SUOMI = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää Lapin kulta ja palatkaa Helsinkiin tai Ouluun.',
-    starFound: (name, city) => `◈ ${name} löysi LAPIN KULLAN: ${city}!`,
+    starFound: '◈ {name} löysi LAPIN KULLAN: {city}!',
     starToast: 'LAPIN KULTA!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Lapin kullan turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Lapin kullan kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Lapin kullan kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän kartta sanoo: Suuriruhtinaskunta. Nykyään tämä on maa, jossa hallitus toimii verkossa ja järvetkin on laskettu — 187 888, he tarkistivat. Isoisä olisi vaatinut nähdä laskutoimituksen.',

@@ -60,6 +60,7 @@ import {
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
+import { hetkiKohdetieto } from '../historian-hetket.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
@@ -1531,6 +1532,29 @@ export function nostonLaatikko(p, d, {
 }
 
 /**
+ * NÄHTÄVYYSKARTALTA SIIRRETYN NOSTON AIHE (kaupunkiliuskan kategoria).
+ *
+ * Aihe tulee noston omasta kohdetiedosta (maanKohdetiedot) saman
+ * kohteenKategoria-säännön kautta kuin kartan merkillä. Kohdekartan
+ * historian hetki (`kartalla: false`, js/packs/historian-hetket.js) ei
+ * ole maan kohdetiedoissa, koska se ei ole pääkartan rivi — sen tieto
+ * haetaan tunnuksella hetkimoduulista (hetkiKohdetieto). Ilman tätä 23
+ * kohdekartan hetkeä putosi liuskan "Muut"-kasaan (korjattu 23.9.2026;
+ * vartija tests/kaupunkiliuska-hetket.test.mjs). Tuntematon tai
+ * aiheeton kohde palauttaa tyhjän aiheen ja menee "Muut"-kasaan kuten
+ * ennenkin (PAATOKSET 34 kohta 11).
+ *
+ * @param {Map<string,object>} kohdetiedot maanKohdetiedot(ui, iso)
+ * @param {string} tunnus siirretyn rivin `id`
+ * @returns {string} aihe (KARTTAVALO_AIHEET) tai '' / null
+ */
+export function siirretynAihe(kohdetiedot, tunnus) {
+  const kohde = kohdetiedot?.get?.(tunnus) ?? hetkiKohdetieto(tunnus);
+  const kategoria = kohde ? kohteenKategoria(kohde) : null;
+  return kategoria ? nostosymPaakategoria(kategoria) : '';
+}
+
+/**
  * NAPAKOHTEEN RIVI: nosto, jonka paikka on datassa asteina eikä laudan
  * pisteenä (js/packs/maastokohteet-ata.js ja -ark.js). Sama tietue kuin
  * tavallisella nostolla, mutta paikka luetaan kohteen omasta
@@ -2847,17 +2871,13 @@ export function luoNostot({
        * merkkiä, jota pitäisi piilottaa (PAATOKSET 33 rajaus a:
        * kaupungin sisäisiä ei polteta laattaan).
        */
-      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => {
-        const kohde = kohdetiedot.get(k.id) ?? null;
-        const kategoria = kohde ? kohteenKategoria(kohde) : null;
-        return {
-          ...k,
-          perhe: 'nosto',
-          kartalta: true,
-          aihe: kategoria ? nostosymPaakategoria(kategoria) : '',
-          ladontaNro: Number.MAX_SAFE_INTEGER,
-        };
-      });
+      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => ({
+        ...k,
+        perhe: 'nosto',
+        kartalta: true,
+        aihe: siirretynAihe(kohdetiedot, k.id),
+        ladontaNro: Number.MAX_SAFE_INTEGER,
+      }));
       const omat = [...kartalta, ...siirretyt];
       if (!omat.length) continue;
       sisaisetKaupungeittain.set(city.avain, omat);

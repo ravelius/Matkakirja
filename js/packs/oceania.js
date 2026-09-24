@@ -381,11 +381,11 @@ export const OCEANIA = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää Eteläristin helmi ja palatkaa Sydneyyn tai Perthiin.',
-    starFound: (name, city) => `◈ ${name} löysi ETELÄRISTIN HELMEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi ETELÄRISTIN HELMEN kaupungista {city}!',
     starToast: 'ETELÄRISTIN HELMI!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Eteläristin helmen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Eteläristin helmen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Eteläristin helmen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [

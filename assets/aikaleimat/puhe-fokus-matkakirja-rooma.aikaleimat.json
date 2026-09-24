@@ -1,263 +1,178 @@
 {
   "versio": 2,
   "kaupunki": "rooma",
-  "teksti": "Rooman Pantheonin katossa on pyöreä aukko, josta satoi sisään. Seisoin kuivassa ja katselin, kuinka sade löysi paikkansa lattialla. Näin vanhalle talolle ei kai enää tohdi huomauttaa katosta. Rooma on nyt Italian pääkaupunki; kaduilla on uusia virkamiehiä ja vanhoja keisareita kivisinä. Pantheon päästää yhä taivaan sisään kysymättä sen nimeä.",
-  "tekstiSha256": "c6f5b4fbad256974fcf6758c38672ca91ea5519d8eecf67f61397f945434ac38",
+  "teksti": "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+  "tekstiSha256": "ba05f059fd0e1e73ce6094d8cc0434f94c0703e33b1b79bb8d78e3616c30340d",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-rooma.mp3",
     "versio": 2,
-    "tavut": 440155,
-    "sha256": "d45a5f85d209c928f3b69ae87dcdf930c4aa4c35c86e9a1f4a4c62e2770d00d3"
+    "tavut": 333993,
+    "sha256": "ec7ced01d1e4522c50174d4ad43c3a56498149f5d957d967e17c51a7a3d8562c"
   },
-  "kesto": 27399,
+  "kesto": 20780,
   "sanat": [
     {
       "sana": "Rooman",
-      "alku": 199,
-      "loppu": 519
+      "alku": 200,
+      "loppu": 480
     },
     {
       "sana": "Pantheonin",
-      "alku": 620,
+      "alku": 580,
       "loppu": 1240
     },
     {
-      "sana": "katossa",
-      "alku": 1299,
-      "loppu": 1779
-    },
-    {
-      "sana": "on",
-      "alku": 1819,
-      "loppu": 2000
-    },
-    {
-      "sana": "pyöreä",
-      "alku": 2019,
-      "loppu": 2480
-    },
-    {
-      "sana": "aukko",
-      "alku": 2559,
-      "loppu": 3019
-    },
-    {
-      "sana": "josta",
-      "alku": 3079,
-      "loppu": 3339
+      "sana": "kattoaukosta",
+      "alku": 1300,
+      "loppu": 2160
     },
     {
       "sana": "satoi",
-      "alku": 3399,
-      "loppu": 3720
+      "alku": 2200,
+      "loppu": 2540
     },
     {
       "sana": "sisään",
-      "alku": 3799,
-      "loppu": 4279
+      "alku": 2600,
+      "loppu": 3220
     },
     {
-      "sana": "Seisoin",
-      "alku": 5539,
-      "loppu": 5939
+      "sana": "Vesi",
+      "alku": 4400,
+      "loppu": 4700
     },
     {
-      "sana": "kuivassa",
-      "alku": 6000,
-      "loppu": 6480
+      "sana": "katosi",
+      "alku": 4740,
+      "loppu": 5120
     },
     {
-      "sana": "ja",
-      "alku": 6519,
-      "loppu": 6559
+      "sana": "lattian",
+      "alku": 5160,
+      "loppu": 5620
     },
     {
-      "sana": "katselin",
-      "alku": 6639,
-      "loppu": 7099
+      "sana": "pieniin",
+      "alku": 5680,
+      "loppu": 6080
     },
     {
-      "sana": "kuinka",
-      "alku": 7139,
-      "loppu": 7419
-    },
-    {
-      "sana": "sade",
-      "alku": 7519,
-      "loppu": 7759
-    },
-    {
-      "sana": "löysi",
-      "alku": 7819,
-      "loppu": 8099
-    },
-    {
-      "sana": "paikkansa",
-      "alku": 8159,
-      "loppu": 8659
-    },
-    {
-      "sana": "lattialla",
-      "alku": 8720,
-      "loppu": 9380
+      "sana": "reikiin",
+      "alku": 6160,
+      "loppu": 6760
     },
     {
       "sana": "Näin",
-      "alku": 10679,
-      "loppu": 10840
+      "alku": 8160,
+      "loppu": 8360
     },
     {
       "sana": "vanhalle",
-      "alku": 10920,
-      "loppu": 11259
+      "alku": 8400,
+      "loppu": 8780
     },
     {
       "sana": "talolle",
-      "alku": 11399,
-      "loppu": 11759
+      "alku": 8900,
+      "loppu": 9360
     },
     {
       "sana": "ei",
-      "alku": 11840,
-      "loppu": 11920
+      "alku": 9460,
+      "loppu": 9580
     },
     {
       "sana": "kai",
-      "alku": 12000,
-      "loppu": 12159
+      "alku": 9620,
+      "loppu": 9780
     },
     {
-      "sana": "enää",
-      "alku": 12179,
-      "loppu": 12399
-    },
-    {
-      "sana": "tohdi",
-      "alku": 12479,
-      "loppu": 12719
+      "sana": "tohtinut",
+      "alku": 9840,
+      "loppu": 10240
     },
     {
       "sana": "huomauttaa",
-      "alku": 12779,
-      "loppu": 13399
+      "alku": 10300,
+      "loppu": 10900
     },
     {
       "sana": "katosta",
-      "alku": 13460,
-      "loppu": 13979
+      "alku": 10960,
+      "loppu": 11460
     },
     {
-      "sana": "Rooma",
-      "alku": 15679,
-      "loppu": 15939
+      "sana": "Kaupungin",
+      "alku": 13100,
+      "loppu": 13560
     },
     {
-      "sana": "on",
-      "alku": 15979,
-      "loppu": 16039
+      "sana": "hallitsijat",
+      "alku": 13600,
+      "loppu": 14180
     },
     {
-      "sana": "nyt",
-      "alku": 16079,
-      "loppu": 16199
+      "sana": "olivat",
+      "alku": 14220,
+      "loppu": 14460
     },
     {
-      "sana": "Italian",
-      "alku": 16260,
-      "loppu": 16639
+      "sana": "vaihtuneet",
+      "alku": 14520,
+      "loppu": 15080
     },
     {
-      "sana": "pääkaupunki",
-      "alku": 16699,
-      "loppu": 17420
+      "sana": "monta",
+      "alku": 15140,
+      "loppu": 15400
     },
     {
-      "sana": "kaduilla",
-      "alku": 18260,
-      "loppu": 18680
-    },
-    {
-      "sana": "on",
-      "alku": 18719,
-      "loppu": 18819
-    },
-    {
-      "sana": "uusia",
-      "alku": 18920,
-      "loppu": 19219
-    },
-    {
-      "sana": "virkamiehiä",
-      "alku": 19319,
-      "loppu": 20100
-    },
-    {
-      "sana": "ja",
-      "alku": 20279,
-      "loppu": 20319
-    },
-    {
-      "sana": "vanhoja",
-      "alku": 20399,
-      "loppu": 20760
-    },
-    {
-      "sana": "keisareita",
-      "alku": 20859,
-      "loppu": 21379
-    },
-    {
-      "sana": "kivisinä",
-      "alku": 21479,
-      "loppu": 22020
+      "sana": "kertaa",
+      "alku": 15460,
+      "loppu": 15900
     },
     {
       "sana": "Pantheon",
-      "alku": 23899,
-      "loppu": 24359
+      "alku": 17660,
+      "loppu": 18160
     },
     {
-      "sana": "päästää",
-      "alku": 24420,
-      "loppu": 24859
+      "sana": "päästi",
+      "alku": 18220,
+      "loppu": 18560
     },
     {
       "sana": "yhä",
-      "alku": 24939,
-      "loppu": 25180
+      "alku": 18640,
+      "loppu": 18820
     },
     {
       "sana": "taivaan",
-      "alku": 25219,
-      "loppu": 25680
+      "alku": 18860,
+      "loppu": 19300
     },
     {
       "sana": "sisään",
-      "alku": 25779,
-      "loppu": 26199
+      "alku": 19360,
+      "loppu": 19860
     },
     {
       "sana": "kysymättä",
-      "alku": 26399,
-      "loppu": 26899
-    },
-    {
-      "sana": "sen",
-      "alku": 26979,
-      "loppu": 27119
+      "alku": 19940,
+      "loppu": 20440
     },
     {
       "sana": "nimeä",
-      "alku": 27159,
-      "loppu": 27399
+      "alku": 20480,
+      "loppu": 20780
     }
   ],
   "lauseet": [
-    199,
-    5539,
-    10679,
-    15679,
-    23899
+    200,
+    4400,
+    8160,
+    13100,
+    17660
   ],
-  "luotu": "2026-09-11T12:04:01.501Z"
+  "luotu": "2026-09-23T15:35:28.586Z"
 }

@@ -1,7 +1,9 @@
-# TestFlight-kokeilun tarkistuslista (build 3, 24.9.2026)
+# TestFlight-kokeilun tarkistuslista (build 4, 24.9.2026)
 
-Lyhyt läpikäynti kohta kohdalta. "Puute" = tiedossa oleva ero build 2:een
-tai kesken oleva asia — ei tarvitse raportoida uudelleen.
+Lyhyt läpikäynti kohta kohdalta. "Puute" = tiedossa oleva ero
+edelliseen buildiin tai kesken oleva asia — ei tarvitse raportoida
+uudelleen. Muutokset build 3:een nähden: kohdat 4, 14, 16, 18 ja
+uusi kohta 19 (iPad-erityiset).
 
 **1. Asennus**
 Pitäisi näkyä: TestFlight asentaa ja avaa suoraan.
@@ -17,10 +19,13 @@ tiedossa, ei tarvitse raportoida.
 Pitäisi näkyä: Heathrow'n koukku ("kuka repi kirjasta viimeisen sivun?").
 Puute: ei tunnettuja.
 
-**4. Aloituskaupunki**
-Pitäisi näkyä: 14 kaupungin ruudukko. Jos jätät valitsematta / käytät
-oletusta: **matka alkaa nyt Lontoosta, ei Pariisista** — tarkoituksellinen
-tarinamuutos (23.9. päätös), ei bugi.
+**4. Aloituskaupunki (MUUTTUNUT)**
+Pitäisi näkyä: sykkivät kultapisteet suoraan pallolla (ei ruudukkoa,
+ei enää valintakorttia välissä) — napautus valittavaan kaupunkiin
+valitsee HETI ja aloituslento Lontoosta alkaa. Matka alkaa aina
+Lontoosta, ei Pariisista — tarkoituksellinen tarinamuutos.
+Puute: jos näet vahvistuskortin ("Valitse toinen" / "Aloita täältä")
+napautuksen jälkeen, se on vanhaa käytöstä jäänyt puute — kerro heti.
 
 **5. Matka (kaupungista toiseen)**
 Pitäisi näkyä: matkavalintadialogi (esim. bussi/liftaus), hinta vähenee
@@ -47,19 +52,18 @@ tarvitse raportoida.
 **9. Kysymykset**
 Pitäisi näkyä: tavalliset kysymystyypit (visa, väite, kuva, pulma jne.),
 vihje ja 50:50 -apu, aikaraja.
-Puute: **rosvon kaksintaistelu on poistettu pelistä kokonaan** (23.9.
+Puute: rosvon kaksintaistelu on poistettu pelistä kokonaan (23.9.
 päätös) — jos et näe sitä, se on oikein.
 
 **10. Aarteen paljastus**
 Pitäisi näkyä: oikean vastauksen jälkeen löytökuva, lyhyt faktateksti ja
 lähdeviite, punnat lisääntyvät.
-Puute: ei tunnettuja, testattu tänään ja toimi hyvin.
+Puute: ei tunnettuja.
 
 **11. Linssit (yleiskatsaus)**
 Pitäisi näkyä: valitsin-lista kuvakkeineen, tumma odotuspeite avatessa,
 selitekortti (väriskaala + maakortti).
-Puute: **Maailmanradio näkyy jo listalla**, vaikka oma näkymä ei vielä
-toimi — ei vielä käytettävissä.
+Puute: ei tunnettuja.
 
 **12. Keksinnöt-aikajana (linssi)**
 Pitäisi näkyä: vuosiluku juoksee, valot syttyvät Euroopan kartalle.
@@ -68,28 +72,49 @@ kaari lähtee käyntiin — kosketa korttia, jatkuu normaalisti.
 
 **13. Muut linssit** (topografia, vesistöt, astronautti, vertailu, maatiedot)
 Pitäisi näkyä: kaikki avautuvat ja piirtyvät kartalle sujuvasti.
-Puute: ei tunnettuja, kaikki testattu tänään.
+Puute: ei tunnettuja.
 
-**14. Offline-lataus**
-Pitäisi näkyä: asetuksista "Lataa offline-käyttöön" -lista maittain,
-lataus etenee ja valmistuu.
-Puute: ei tunnettuja — testattu tänään, toimi täydellisesti (733
-osumaa offline-datasta verkottomana).
+**14. Offline-lataus (MUUTTUNUT)**
+Pitäisi näkyä: asetuksista lataus valittavissa maanosittain TAI
+"Kaikki" kerralla; lataustila näkyy (ladattu / osittain / ei ladattu)
+per maanosa.
+Puute: ei tunnettuja.
 
 **15. Matkan huipennus** (kaikki 6 aarretta löydetty)
 Pitäisi näkyä: "Aarnin luettelo on täynnä" -kortti, matkan tilastot
 (päivät/kaupungit/aarteet), "Jatka vaeltamista" / "Uusi matka" -napit.
-Puute: **korjattu tänään** — jos näet vanhan version (tyhjä ruutu tai
-kaupunkivalinta jää päälle), kerro heti.
+Puute: ei tunnettuja.
 
-**16. Radio**
-Pitäisi näkyä: EI VIELÄ MITÄÄN — radion oma näkymä ei ole tässä
-buildissa. Odota seuraavaa.
+**16. Radio (MUUTTUNUT — nyt mukana)**
+Pitäisi näkyä: maailmanradion oma näkymä (pistenäyttö, viritysasteikko,
+merkkivalo) toimii linssilistalta avattuna; asemat vaihtuvat maittain
+napautuksesta tai virityksestä, useimmat soivat suoraan.
+Puute: juurisyy yhdelle toistuvasti epäonnistuvalle asemalle (Sveitsi/
+Bern, stream.rabe.ch) on jo tiedossa — palvelimen oma TLS-asetus, ei
+sovelluksen vika. Jos JOKIN MUU asema epäonnistuu toistuvasti, kerro
+asema+maa; satunnainen yksittäinen aikakatkaisu ei ole uusi löydös.
 
 **17. Sulavuus**
 Pitäisi näkyä: tasainen liike, ei nykimistä missään kohtaa.
-Puute: ei tunnettuja — mitattu tänään iPadilla, 0 tökkäystä paikallaan
+Puute: ei tunnettuja — mitattu iPadilla, 0 tökkäystä paikallaan
 ollessa (120 Hz).
+
+**18. Aloituslennon esitys (UUSI)**
+Pitäisi näkyä: Lontoosta lähtevä lento kohdekaupunkiin — DC-3-kone ja
+savujana näkyvät koko lennon ajan, pilvet ja aurinko taustalla, kone
+kaartaa laskeutuessa kohteeseen. Avausteksti alareunan kaistaleella ei
+peitä konetta eikä valu kaistaleen ulkopuolelle.
+Puute: ei tunnettuja — juuri korjattu, kerro heti jos kone jää tekstin
+alle tai savujana puuttuu.
+
+**19. iPad-erityiset (UUSI — vain fyysisellä laitteella, ei simulaattorissa)**
+Pitäisi näkyä: (a) sivussa oleva äänettömyyskytkin mykistää pelin äänet
+kuten muidenkin sovellusten; (b) Bluetooth-kuulokkeet/-kaiutin toimivat
+normaalisti parina; (c) jos kuuntelet samaan aikaan muuta ääntä (esim.
+Musiikki-sovellusta), pelin äänet soivat sen PÄÄLLÄ vaimentamatta sitä
+kokonaan (MixWithOthers) — ei kumpaakaan tarvitse kuulua täysin hiljaa.
+Puute: ei tunnettuja — näitä ei voi testata simulaattorissa, joten
+tämä on ensimmäinen kerta kun ne todennetaan oikealla laitteella.
 
 ---
 Jos jokin muu kuin yllä mainitut "puutteet" tuntuu väärältä, se on uusi

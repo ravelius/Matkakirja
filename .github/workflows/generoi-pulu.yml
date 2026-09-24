@@ -66,11 +66,14 @@ on:
         description: >-
           aanet = hae ääniehdokkaat (aja ensin), kuiva = tulosta
           repliikit ja kestot ilman APIa, generoi = generoi ja vie
-          ämpäriin, kohdista = tee valmiin versionoidun erän cue-data.
+          ämpäriin, kohdista = tee valmiin versionoidun erän cue-data,
+          kohdista-elava = kohdista kanoninen ääni ilman kuittia
+          (kattavuus- ja kestovartioitu, ks. tools/kohdista-pulu-eleet.mjs
+          otsikkokommentti 23.9.2026 löydöksestä).
         required: true
         type: choice
         default: 'aanet'
-        options: ['aanet', 'kuiva', 'generoi', 'kohdista']
+        options: ['aanet', 'kuiva', 'generoi', 'kohdista', 'kohdista-elava']
       aani:
         description: >-
           Pulun voice_id (ElevenLabs). Oletus on omistajan 12.9.2026
@@ -184,7 +187,7 @@ jobs:
       # sen jälkeen, kun kutsut on jo maksettu. Arvoja ei tulosteta,
       # vain onko ne asetettu.
       - name: Tarkista että salaisuudet ovat tallessa
-        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista' }}
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista' || inputs.toiminto == 'kohdista-elava' }}
         env:
           AVAIN: ${{ secrets.ELEVEN_API_KEY }}
         run: |
@@ -220,7 +223,7 @@ jobs:
       # ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-KASITTELYA") — juuri se
       # toinen 128 kbps sukupolvi oli kuultu "digitaalinen häiriö".
       - name: Asenna ffmpeg (vain ffprobe lukee keston)
-        if: ${{ inputs.toiminto == 'generoi' }}
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista-elava' }}
         run: |
           set -euo pipefail
           sudo apt-get update -qq
@@ -299,6 +302,48 @@ jobs:
           path: assets/aikaleimat/livia-*.eleet.json
           if-no-files-found: error
 
+      # ELÄVÄ KOHDISTUS: ei kuittia, kanoninen aanet/pulu/livia-<kaupunki>-3.mp3
+      # sellaisenaan. Turvana kattavuus (>=95 % sanoista) ja kestovarmistus
+      # (ffprobe vs. alignment) tools/kohdista-pulu-eleet.mjs:ssä — löydöksen
+      # tausta on työkalun otsikkokommentissa. Osa kaupungeista voi hylätä
+      # itsensä (kattavuus tai kesto ei riitä); loppuosa kirjoitetaan silti.
+      - name: Kohdista kanoninen ääni ilman kuittia (elävä, kattavuusvartioitu)
+        if: ${{ inputs.toiminto == 'kohdista-elava' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          REPLIIKIT: ${{ inputs.repliikit }}
+        run: |
+          set -euo pipefail
+          liput=(--elava --vie)
+          if [ -n "$REPLIIKIT" ]; then
+            kaupungit=()
+            while IFS= read -r avain; do
+              [ -z "$avain" ] && continue
+              if [[ ! "$avain" =~ ^[a-z0-9]+-3$ ]]; then
+                echo "::error::Kohdistuksen repliikin pitää olla exact city-3-avain: $avain"
+                exit 1
+              fi
+              kaupungit+=("${avain%-3}")
+            done < <(printf '%s\n' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            if [ "${#kaupungit[@]}" -eq 0 ]; then
+              echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
+              exit 1
+            fi
+            valitut=$(IFS=,; printf '%s' "${kaupungit[*]}")
+            liput+=(--kaupungit "$valitut")
+          fi
+          node tools/kohdista-pulu-eleet.mjs "${liput[@]}"
+
+      # !cancelled(): tallenna hyväksytyt tiedostot tarkastettavaksi, VAIKKA
+      # osa kaupungeista hylättiin (edellinen askel palautti silloin 1:n).
+      - name: Tallenna elävän kohdistuksen tulokset tarkastettavaksi
+        if: ${{ !cancelled() && inputs.toiminto == 'kohdista-elava' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulu-eleet-elava-${{ github.run_id }}
+          path: assets/aikaleimat/livia-*.eleet.json
+          if-no-files-found: warn
+
       - name: Generoi ja vie ämpäriin
         if: ${{ inputs.toiminto == 'generoi' }}
         env:
@@ -323,7 +368,7 @@ jobs:
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
       - name: Varmista ettei repoon jäänyt mitään
-        if: ${{ inputs.toiminto != 'kohdista' }}
+        if: ${{ inputs.toiminto != 'kohdista' && inputs.toiminto != 'kohdista-elava' }}
         run: |
           set -euo pipefail
           if [ -n "$(git status --porcelain)" ]; then

@@ -1204,10 +1204,10 @@ export const MAAILMANKARTTA = {
     // jättää sen arvoitukseksi) — perityt Euroopan rivit kuuluttaisivat
     // täällä Meripihkahuoneen, vaikka aarre löytyisi vaikka Perusta.
     intro: 'Peli alkaa! Etsi unohdettu aarre ja kerää löytöjä ympäri maailmaa.',
-    starFound: (name, city) => `◈ ${name} löysi UNOHDETUN AARTEEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi UNOHDETUN AARTEEN kaupungista {city}!',
     starToast: 'UNOHDETTU AARRE LÖYTYI!',
     winStar: 'toi unohdetun aarteen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi unohdetun aarteen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi unohdetun aarteen kotiin {money} punnan kanssa.',
   },
 
   decor: {
