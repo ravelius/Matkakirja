@@ -27,7 +27,7 @@
 //   aloita                    tervehdyssivun Aloita peli (kohtaaminen)
 //   vihje | puolita           vihje (40 £) tai 50:50 (80 £)
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
-//   luento kaupunki|intro|lento|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
+//   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   odota s                   seuraava rivi s sekunnin päästä
@@ -198,7 +198,8 @@ namespace Matkakirja.Natiivi
                     {
                         case null: return "käyttö: luento kaupunki|intro|lento|saapuminen kaupunki";
                         case "intro": return ohjain.SoitaLuento(l.Intro);
-                        case "lento": return ohjain.SoitaLuento(l.LentoAlku);
+                        case "lento":
+                        case "lento-alku": return ohjain.SoitaLuento(l.LentoAlku);   // paketin id (Siirtoseppä, build 8)
                         case "saapuminen": return ohjain.SoitaLuento(l.Saapumispuhe(A(2)));
                         default: return ohjain.SoitaLuento(l.Luento(A(1)));
                     }
