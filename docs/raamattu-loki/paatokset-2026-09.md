@@ -2907,3 +2907,7 @@ Rutiinierä, ei päätöksiä.
 ## NATIIVI-UI NOLLATAAN klo 03.2x (78 %): LUOVUTUS viesti-natiivi-ui-luovutus-20260924-b.md (25602e864), PROTO-MASTER 07bc3e4, MERGE-PYYNNOSSA natiivi-ui/lehti-kulttuuri 3d3ee8b (UUTISET); ALOITUS viesti-natiivi-ui-aloitus.md (24.9.2026 klo 03.20)
 
 Kaava: clear_session → 75 s → aloitusviesti.
+
+## NATIIVI-UI KAYNNISTETTY UUDELLEEN klo 03.2x (ALOITUSVIESTI PAIVITETTY: A1–A9-HAVAINNOT ENSIN, OSIO 8, JAA MATKA, INVENTAARIO); NOLLAUSKAAVA TOIMI FABLEN AJAMANA (send_message clear_session self → 80 s → send_message) (24.9.2026 klo 03.22)
+
+Julkaisija ajaa pitkää vuoroa (#3010/#3012/nightly); muut sessiot työssä tai levossa.
