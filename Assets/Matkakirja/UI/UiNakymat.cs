@@ -117,14 +117,13 @@ namespace Matkakirja.Natiivi
         {
             var v = Linssit.Valitsin;
             v.Avaaja = Tilarivi.Valikko;
-            v.LisaErotin();
-            v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
+            // Pelin rivit ylimpänä (Fable 24.9.), linssit viivan alla (Linssivalitsin.Rakenna).
+            v.LisaRivi("Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
             v.LisaRivi("Äänet", Ikonit.Viiva["kaiutin"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet));
             v.LisaRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
-            v.LisaErotin();
-            v.LisaRivi("Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
+            v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
             v.LisaRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
-            v.LisaRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
+            v.LisaRivi("Tekijät ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
             v.LisaRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
 #if !MATKAKIRJA_APPSTORE
             v.LisaRivi("Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);

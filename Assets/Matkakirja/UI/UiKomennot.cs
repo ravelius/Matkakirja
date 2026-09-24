@@ -122,7 +122,7 @@
 //   ui matkakirja auki                        avaa lapuksi alkaneen kortin (web asetaPaivakirjanKoko(false))
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
-//   ui kartuscha [ISO3] [auki]                kartuscha maalle ilman peliä (oletus ITA)
+//   ui kartuscha [ISO3] [auki] | pois         kartuscha maalle ilman peliä (oletus ITA); raukeaa pelaajan maan vaihtuessa
 //   ui heitto [teksti]                        kartan toimintonappi näkyviin
 //   ui viesti teksti                          tilarivin hetkellinen viesti
 //   ui tila teksti                            tilarivin teksti
@@ -784,6 +784,7 @@ namespace Matkakirja.Natiivi
                 case "kartuscha":
                 {
                     var ks = loput.Split(' ');
+                    if (ks[0] == "pois") { ui.Kartuscha.Testaa(null, false); return null; }
                     ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
                     return null;
                 }
