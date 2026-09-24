@@ -226,7 +226,8 @@
     font-size: 16.32px;
     white-space: normal;
     margin-bottom: 17.6px;
-    color: rgba(70, 51, 31, 0.9);
+    /* rgba(70, 51, 31, .9) paperin päällä esisekoitettuna (lineaarinen väriavaruus vaalensi, b12-2 #35). */
+    color: #584632;
 }
 
 .mk-lehti__esittely,
@@ -269,34 +270,48 @@
     margin: 6px 0 8px 0;
 }
 
+/* Web .wiki-nosto: alaväli 1,4 rem, täyte 1,1 rem, katkoviiva .28 (UITK: yhtenäinen). */
 .mk-lehti__nosto {
-    margin-bottom: 18px;
-    padding-bottom: 12px;
+    margin-bottom: 22.4px;
+    padding-bottom: 17.6px;
     border-bottom-width: 1px;
-    border-bottom-color: rgba(70, 51, 31, 0.18);
+    border-bottom-color: rgba(70, 51, 31, 0.28);
 }
 
 /* Web .wiki-nosto h3: --font-type (American Typewriter) 700, 0,98rem, letter-spacing 0,02em, alaväli 0,45rem
  * (pariteetti 24.9. rivi 5: natiivissa oli leipätekstin lihava 19 px). */
+/* Web .kulttuuri-otsikkorivi: flex, rivitys, gap 0,6 rem, alaväli 0,15 rem; aikamerkki margin-left auto
+ * (mitattu 25.9. b12-2 #35, web-maalehti-aihe-mitat.txt): ei mahdu otsikon perään → oma rivi oikeaan reunaan. */
 .mk-lehti__nosto-otsikkorivi {
     flex-direction: row;
-    align-items: flex-end;
-    margin-bottom: 7.2px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2.4px;
 }
 
 .mk-lehti__nosto-otsikko {
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: 15.7px;
-    letter-spacing: 0.3px;
+    font-size: 15.68px;
+    letter-spacing: 0.31px;
     white-space: normal;
-    color: #16130f;
+    margin-bottom: 7.2px;
+    color: #46331f;
 }
 
+/* Web .nosto-aika: American Typewriter 16, täyte 0,12 / 0,45 rem, reuna ja tausta esisekoitettuina. */
 .mk-lehti__aika {
-    margin-left: 10px;
-    font-size: 12px;
-    color: rgba(70, 51, 31, 0.7);
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 1.92px 7.2px;
+    font-size: 16px;
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+    border-width: 1px;
+    border-color: #c4b290;
+    border-radius: 4px;
+    background-color: #eae0ca;
+    color: #46331f;
 }
 
 .mk-lehti__nostoloppu {
@@ -376,9 +391,9 @@
 }
 
 .mk-lehti__lahde {
-    font-size: 10.5px;
+    font-size: 10.56px;
     white-space: normal;
-    color: rgba(70, 51, 31, 0.6);
+    color: #6a5a45;
     margin-bottom: 8px;
 }
 
