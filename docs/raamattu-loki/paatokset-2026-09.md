@@ -4175,3 +4175,7 @@ Vaiheet 20 s lennolle: (a) syöksy sivulle 0–2,6 s + sivukylki 2,6–4,2 s (ka
 ## ISO iPAD: ASC-AVAIMET VAIN ACTIONS-SECRETEINA → OMISTAJA KIRJAUTUU koodaus-KAYTTAJAN XCODEEN (24.9.2026 klo 16.20)
 
 Natiiviseppä: p8-avainta ei ole Macilla (Raamattu: käyttö vain työnkulkujen kautta), luokitin esti etsinnän, ei kierretä. Fable pyysi omistajaa kirjautumaan koodaus-käyttäjän Xcodeen (Settings → Accounts, me.com-tunnus), jolloin automaattinen allekirjoitus rekisteröi laitteen ja tekee profiilin pysyvästi; pelkkä UDID developer.apple.comissa ei riitä. Siihen asti TestFlight-buildit isolla iPadilla.
+
+## OMISTAJAN LOYDOKSET 25–27 (BUILD 9, klo 16.3x): KALLISTUS POIS KARTASTA, ZOOMI LAHEMMAS WEBIN RAJAAN, NOSTOT HYTISEVAT PANOROINNIN JALKEEN (24.9.2026 klo 16.20)
+
+25) kahden sormen kallistus pois; kallistus vain animoiduissa kamera-ajoissa → Natiiviseppä. 26) zoomi ei mene tarpeeksi lähelle, nostoja vaikea nähdä → Natiiviseppä mittaa webin lähizoomin rajan ja tekee saman (kuvapari). 27) nostot hytisevät hetken panoroinnin jälkeen → Natiivi-UI (merkit lukitaan kameran kehykseen). Omistaja odottaa nostojen muuta työstöä tulevissa buildeissa (E10–E11, E3 tulossa). Kaikki build 10.
