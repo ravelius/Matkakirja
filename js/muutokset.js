@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2161, teksti: 'N11: viisi maailmankohdetta (#3018)' },
   { v: 2160, teksti: 'N10: viisi maailmankohdetta (#3017)' },
   { v: 2159, teksti: 'N9: viisi maailmankohdetta (#3016)' },
   { v: 2158, teksti: 'N8: viisi maailmankohdetta (#3015)' },
