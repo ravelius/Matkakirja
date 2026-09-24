@@ -163,7 +163,7 @@ export function sallittuOrigin(origin, sallitut) {
  * kuulu riippua tools/-kansiosta.
  */
 export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
-export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli']);
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
 
 /** Sallitut natiivitunnisteet: SAHKE_NATIIVIT (pilkkulista) ohittaa oletuksen. */
 export function sallitutNatiivit(env) {

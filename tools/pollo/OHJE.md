@@ -133,7 +133,7 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   Originia. Se tunnistetaan otsakkeesta `x-matkakirja-natiivi: <bundle id>`
   ja saman bundle id:n esiintymisestä User-Agentissa (`rajat.js`
   `sallittuNatiivi`). Sallitut tunnisteet: `NATIIVIT_OLETUS`
-  (`app.matkakirja.proto3d`, `app.matkakirja.peli`), tai valinnainen
+  (`app.matkakirja.proto3d`, `app.matkakirja.peli`, `fi.matkakirja.peli` = TestFlight), tai valinnainen
   ympäristömuuttuja `POLLO_NATIIVIT` (pilkkulista), joka korvaa oletuksen.
   Natiivi pääsee puhesynteesiin (`tehtava: 'puhe'`), pöllön chattiin
   (`vastaus`, `ehdotukset`; Fablen päätös 23.9.2026) ja sähketehtävän
