@@ -138,3 +138,9 @@ natiiviin uudelleen:
 | 35 | Maalehti: aihesivu 1 | **KORJATTU (Natiivi-UI, natiivi-ui/iphone-island, build 8 -jonossa).** Juurisyy ei ollut väärä kenttä vaan tarkoituksellinen linjaus: web piilottaa selitteen kokonaan aihesivujen nostokuvista (maalehti.js "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.), näyttää vain lähderivin — selite näkyy vasta suurennoksessa. Natiivi näytti aiemmin lyhyen selitteen + lähteen; korjattu vastaamaan webiä. Sama koskee kaupunkilehden aihesivuja (esim. Ateenan karyatidit). |
 
 Ilmoitettu Pelikoodarille (24.9. klo 14.1x).
+
+## Web korjattu natiivin tasolle (Linssiseppä 24.9.2026, Fablen päätös)
+
+| # | Näkymä | Tulos |
+|---|--------|-------|
+| 39b | Linssi: vertailu, Huippuvuoret (FIN + NOR, kamera 76/18/2500 km) | **WEB KORJATTU NATIIVIN TASOLLE.** Webin vertailu- ja maatietotila piirsi pallolle laudan tyylitellyt `countryShapes`-renkaat, jotka loppuvat laudan pohjoisreunaan (76° N): Huippuvuoret jäivät Norjan värittä, ja Finnmarkin karkeat vuonorenkaat kolmioituivat valkoisiksi kolmioiksi. Natiivin maarajat (Natural Earth 10m) värittävät Huippuvuoret oikein. Web piirtää pallolla nyt saman Natural Earth 10m -aineiston kuin korostuskehä (assets/data/maapolygonit.json, harvennus 8 lautayksikköä, kiertosuunta korjattu). Kuvapari ennen/jälkeen: `proto-3d/lokit/linssit-huippuvuoret-20260924/web/` ja `web-jalkeen/`. Seuraus natiiville: skeeman 1.29 `rajaaWebinMuotoon` (Huippuvuoret `muutRenkaat`-listaan) on nyt tarpeeton; Huippuvuoret kuuluvat NOR:n renkaisiin molemmissa. |
