@@ -711,6 +711,13 @@ namespace Matkakirja
             return v * (x - r / 2.0);
         }
 
+        (double, double, double, double, double, double) viimeKelvollinen = (25.0, 10.0, 2.0e7, 0, 0, 0);
+        bool nanKirjattu;
+
+        bool Kelvollinen() =>
+            math.isfinite(leveys) && math.isfinite(pituus) && math.isfinite(korkeus) && korkeus > 0
+            && math.isfinite(kallistus) && math.isfinite(suuntima) && math.isfinite(katseKorkeus);
+
         /// <summary>Lennon jälkeen suuntima kääntyy lyhintä tietä pohjoiseen ja katse laskeutuu maahan.</summary>
         void Palauta(double dt)
         {
@@ -724,6 +731,22 @@ namespace Matkakirja
         public void Aseta()
         {
             if (georeferenssi == null) return;
+            // Suoja: yksikin ei-äärellinen arvo (NaN) tekee kameran käyttökelvottomaksi — kuva tyhjenee ja
+            // ScreenPointToRay kirjaa joka kehys "Screen position out of view frustum" (Laitetestaaja 24.9.,
+            // build 6). Palautetaan viimeisin kelvollinen asento ja kirjataan kerran, mistä arvo tuli.
+            if (!Kelvollinen())
+            {
+                if (!nanKirjattu)
+                {
+                    nanKirjattu = true;
+                    Debug.LogError($"MATKAKIRJA kamera: ei-äärellinen asento (lev {leveys}, pit {pituus}, kork {korkeus}, " +
+                                   $"kall {kallistus}, suunt {suuntima}, katse {katseKorkeus}) → palautetaan\n{Environment.StackTrace}");
+                }
+                (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus) = viimeKelvollinen;
+                ajo = null;
+                liuku = 0;
+            }
+            else viimeKelvollinen = (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus);
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (!vapaaKuvaus) kallistus = math.min(kallistus, KallistusRaja());
 
