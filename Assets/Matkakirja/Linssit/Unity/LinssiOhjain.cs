@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
             Linssirekisteri.Mittaa = Mittaa;
             foreach (var id in MitattavatLinssit)
                 foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto, OsaKerros, OsaAani, OsaLinssi, OsaTahdet, OsaPilvet,
-                    "Avaa.Muisti", "Avaa.Esitys", "Avaa.Jatka", "Virta.Avaa", "Viritin.Aloita", "Korosta" })
+                    "Avaa.Muisti", "Avaa.Esitys", "Avaa.Jatka", "Avaa.Vanat", "Virta.Avaa", "Viritin.Aloita", "Korosta" })
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
@@ -411,7 +411,20 @@ namespace Matkakirja.Natiivi
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 linssi.Avaa(y);
-                if (vanat != null) VanatValmiit(vanat);
+                if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
+            }
+
+            /// <summary>
+            /// Vanat avauksen jälkeisessä kehyksessä (ui piikit ajo 7: Avaa.Vanat 9,6 ms samassa kehyksessä kuin
+            /// linssin luonti → 31,7 ms). Odottaa taustasäikeen valmista piirtoa enintään ~1,5 s, jotta kerros ei
+            /// rakenna sitä pääsäikeessä. Vanat näkyvät vasta avausjakson jälkeen, joten viive ei näy.
+            /// </summary>
+            System.Collections.IEnumerator VanatSeuraavassa(Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi avattu)
+            {
+                yield return null;
+                for (int i = 0; i < 90 && valmis is { IsCompleted: false }; i++) yield return null;
+                if (linssi != avattu || vanat == null) yield break;
+                using (Merkki("ihmisen-matka", "Avaa.Vanat").Auto()) VanatValmiit(vanat);
             }
 
             public void Paivita() => linssi?.Paivita();
@@ -987,7 +1000,8 @@ namespace Matkakirja.Natiivi
             PeiteKasittelija?.Invoke(paalla);
         }
 
-        public void MusiikkiPitoon(bool pidossa) => MusiikkiKasittelija?.Invoke(pidossa);
+        static readonly Unity.Profiling.ProfilerMarker MusiikkiMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.Musiikki");
+        public void MusiikkiPitoon(bool pidossa) { using (MusiikkiMerkki.Auto()) MusiikkiKasittelija?.Invoke(pidossa); }
 
         public void LinssiMusiikki(string laji) => LinssiMusiikkiKasittelija?.Invoke(laji);
 
@@ -1052,7 +1066,7 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "taajuus" && osat.Length > 2) r.Taajuus(Luku(osat[2]));
                     else if (osat[1] == "tauko" && osat.Length > 2) r.Tauko(osat[2] == "1");
                     else if (osat[1] == "aani" && osat.Length > 2) { r.Voimakkuus = (float)Luku(osat[2]); Kirjaa($"radio: äänenvoimakkuus {Luku(osat[2]):F2}"); }
-                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}");
+                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
@@ -1103,6 +1117,14 @@ namespace Matkakirja.Natiivi
             else if (mita != "tila") e.Valitse(mita);
             var aani = (rekisteri.Auki as IhmisenMatkaSovitin)?.Aani;
             Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
+        }
+
+        /// <summary>Natiivin Kuvauksen loppu "VU <tila> <syy>" (Natiiviseppä 161fa35), muuten koko kuvaus.</summary>
+        static string VuSyy(string kuvaus)
+        {
+            if (string.IsNullOrEmpty(kuvaus)) return "-";
+            int i = kuvaus.LastIndexOf("VU ", StringComparison.Ordinal);
+            return i >= 0 ? kuvaus.Substring(i) : kuvaus;
         }
 
         internal void Kirjaa(string teksti)

@@ -6,29 +6,38 @@ using UnityEngine.Networking;
 namespace Matkakirja
 {
     /// <summary>
-    /// VÄRITASO (omistajan build 5 -löydös 2, web on oletus): webissä vain pelaajan nykyinen maa näkyy
-    /// pohjan omin värein, ja muut maat ja meri haalistuvat kermaan (#faf4d6, peitto 0,85, maan reuna
-    /// häivytetty). Karttaseppä polttaa saman hunnun Mercator-sarjaksi maittain
-    /// (julisteet/pallo/vari/&lt;versio&gt;/&lt;ISO&gt;/{z}/{x}/{y}.webp, Z5–Z9, 256 px RGBA; alue ja tasot
-    /// &lt;ISO&gt;/laatat.json). Maan sisällä laatta on lähes läpinäkyvä, joten 23a-pohja näkyy siinä.
+    /// VÄRITASO eli kermahuntu (omistajan löydökset 2 ja 22, web js/laattakerma-shader.js): pelaajan nykyinen
+    /// maa näkyy pohjan omin värein, muiden maiden MAA saa kerman (#faf4d6) peitolla 0,80 texelin maasäännöllä
+    /// a = smoothstep(36, 52, (R − B)·255) — meri jää pohjan väriin, ja naapurimaiden nimet ja relief näkyvät
+    /// läpi. Karttaseppä laskee hunnun 23a-pohjasta Mercator-sarjoiksi (Z5–Z8, RGBA webp):
+    ///   julisteet/pallo/kerma/&lt;versio&gt;/&lt;ISO&gt;/…   maan alue, oma maa reikänä (alue &lt;ISO&gt;/laatat.json)
+    ///   julisteet/pallo/kerma/&lt;versio&gt;/_maailma/… sama sääntö ilman reikää alueen ulkopuolelle
+    /// Laattapalvelin ohjaa alueen ulkopuoliset pyynnöt maailman sarjaan (Laattapalvelin.VariAlue); tasot Z0–Z4
+    /// ovat läpinäkyviä (web: ei huntua maailmanäkymässä).
     ///
     /// Yksi CesiumUrlTemplateRasterOverlay pohjan päällä (materialKey "2"), osoite vaihdetaan maan
-    /// vaihtuessa (NostoKerros.NykyinenMaa tai nappulan lähimmän kaupungin maa; matkalla ei vaihdu). Alueen ulkopuoliset laatat
-    /// laattapalvelin täyttää itse samalla kermalla ilman verkkoa (Laattapalvelin.VariAlue), koska
-    /// sarjassa on vain alueen laatat. Maa ilman sarjaa → ei kerrosta (web: väritaso ei sammuta karttaa).
+    /// vaihtuessa (NostoKerros.NykyinenMaa tai nappulan lähimmän kaupungin maa; matkalla ei vaihdu).
+    /// Maa ilman sarjaa → ei kerrosta (web: väritaso ei sammuta karttaa).
     ///
     /// Linssit käyttävät Cesiumin raster-paikkoja 1 ja 2 (KarttaKerrokset.LisaaRasteri): linssin
     /// kerroksen ajaksi väritaso väistyy (Linssit), ja tyhjän arkin linssit piilottavat sen pohjan mukana.
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
-        /// <summary>Karttasepän kierros k3: alueen ulkopuoli ja puuttuvat lähdelaatat täytenä kermana, maa läpinäkyvä (k2:ssa maakin oli kermaa).</summary>
-        public const string Versio = "2026-09-14b-tasoitus-k3";
-        public const string Kansio = "julisteet/pallo/vari/" + Versio + "/";
+        /// <summary>Karttasepän kermasarja 23a-pohjasta, peitto 0,80 (löydös 22).</summary>
+        public const string Versio = "2026-09-23a-p080";
+        public const string Kansio = "julisteet/pallo/kerma/" + Versio + "/";
+        /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
+        public const int AlinTaso = 5;
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
 
         public Cesium3DTileset pallo;
+        /// <summary>
+        /// Huntu kartalle (löydös 22, linja A klo 12.2x: webin kermasääntö muiden maiden maalle). false = komponentti
+        /// vain seuraa nykyistä maata (Kohde/Maa ääriviivalle) eikä lisää raster-kerrosta.
+        /// </summary>
+        public bool huntu = true;
 
         /// <summary>Maa (ISO3), jonka väritaso on nyt kartalla, tai null.</summary>
         public string Maa { get; private set; }
@@ -44,7 +53,7 @@ namespace Matkakirja
         CesiumUrlTemplateRasterOverlay kerros;
         string haluttu, ladattu;
         bool linssit, piilossa;
-        int tasoMin = 5, tasoMax = 9;
+        int tasoMin = AlinTaso, tasoMax = 8;
         Coroutine haku;
 
         [System.Serializable] class Alue { public double lon0, lon1, lat0, lat1; }
@@ -85,6 +94,7 @@ namespace Matkakirja
         IEnumerator Vaihda(string maa)
         {
             if (string.IsNullOrEmpty(maa)) { Poista(); ladattu = null; Maa = null; yield break; }
+            if (!huntu) { Poista(); ladattu = null; Maa = maa; yield break; }
             string url = Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + Kansio + maa + "/laatat.json");
             using (var r = UnityWebRequest.Get(url))
             {
@@ -104,7 +114,7 @@ namespace Matkakirja
                 var a = l?.varitaso?.alue;
                 if (a == null) { Poista(); ladattu = null; Maa = null; yield break; }
                 if (l.tasot != null && l.tasot.max > 0) { tasoMin = l.tasot.min; tasoMax = l.tasot.max; }
-                Laattapalvelin.VariAlue(Kansio + maa + "/", a.lon0, a.lat0, a.lon1, a.lat1);
+                Laattapalvelin.VariAlue(Kansio + maa + "/", a.lon0, a.lat0, a.lon1, a.lat1, Kansio + "_maailma/", tasoMin);
             }
             ladattu = maa;
             Maa = maa;
@@ -121,7 +131,8 @@ namespace Matkakirja
             // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa).
             kerros.templateUrl = Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + Kansio + ladattu + "/{z}/{x}/{reverseY}.webp");
             kerros.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
-            kerros.minimumLevel = tasoMin;
+            // Taso 0 alkaen: kaukonäkymän laatat ovat laattapalvelimen läpinäkyviä (ei 1024 laatan pyyntöä tasolla 5).
+            kerros.minimumLevel = 0;
             kerros.maximumLevel = tasoMax;
             kerros.tileWidth = 256;
             kerros.tileHeight = 256;

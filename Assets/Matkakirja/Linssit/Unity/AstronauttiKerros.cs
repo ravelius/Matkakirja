@@ -109,28 +109,37 @@ namespace Matkakirja.Natiivi
                 pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
             // Tumma avaruus ja ilmakehän hehku (web AVARUUDEN_TAUSTA, ILMAKEHAN_VARI).
             avaruus ??= Avaruus.Luo(georeferenssi, georeferenssi.transform);
-            if (pisteet.Count > 0) return;
+            if (kohteetPyydetty) return;
+            kohteetPyydetty = true;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            // Havaintopisteet ja nimet kehys kerrallaan (Kehysjono): 64 pisteen objektit veivät avauksesta
+            // ~9 ms (ui piikit ajo 6); pisteet näkyvät vasta mustan avauksen jälkeen.
             foreach (var k in kohteet)
+                nimijono.Lisaa(() => { var piste = LuoPiste(k, keskus); if (fontti != null) LuoNimi(piste); });
+        }
+
+        bool kohteetPyydetty;
+
+        Piste LuoPiste(Havaintokohde k, double3 keskus)
+        {
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, Nosto));
+            double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            var juuri = new GameObject("Havainto " + k.Tunnus).transform;
+            juuri.SetParent(transform, false);
+            var p = new GameObject("Piste").transform;
+            p.SetParent(juuri, false);
+            p.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+            var r = p.gameObject.AddComponent<MeshRenderer>();
+            r.sharedMaterial = pisteMateriaali;
+            r.shadowCastingMode = ShadowCastingMode.Off;
+            p.localScale = new Vector3(Hehku, Hehku, 1);
+            var piste = new Piste
             {
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, Nosto));
-                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                var juuri = new GameObject("Havainto " + k.Tunnus).transform;
-                juuri.SetParent(transform, false);
-                var p = new GameObject("Piste").transform;
-                p.SetParent(juuri, false);
-                p.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
-                var r = p.gameObject.AddComponent<MeshRenderer>();
-                r.sharedMaterial = pisteMateriaali;
-                r.shadowCastingMode = ShadowCastingMode.Off;
-                p.localScale = new Vector3(Hehku, Hehku, 1);
-                pisteet.Add(new Piste
-                {
-                    kohde = k, juuri = juuri,
-                    pinta = (float3)u, normaali = (float3)math.normalize(u - keskus),
-                });
-            }
-            if (fontti != null) foreach (var p in pisteet) nimijono.Lisaa(() => LuoNimi(p));
+                kohde = k, juuri = juuri,
+                pinta = (float3)u, normaali = (float3)math.normalize(u - keskus),
+            };
+            pisteet.Add(piste);
+            return piste;
         }
 
         // NIMET KEHYS KERRALLAAN: 64 TextMeshPro-nimeä ja niiden mittaus samassa kehyksessä veivät iPadilla

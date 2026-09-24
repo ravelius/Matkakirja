@@ -267,7 +267,8 @@ namespace Matkakirja
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
                 AsetaVaihe(LennonAikajana.Vaihe(t));
 
-                var (etaisyys, kallistusNyt, suuntimaNyt, kohde) = LennonAikajana.Arvo(avaimet, t, suunta);
+                var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = LennonAikajana.Arvo(avaimet, t, suunta);
+                koneRuudusta = (float)koneOsuus;
                 // Kohde: −1 lähtöpiste → 0 kone → 1 kohdekaupunki.
                 double klat, klon, katse;
                 if (kohde < 0)
@@ -313,8 +314,12 @@ namespace Matkakirja
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;
 
+        /// <summary>Koneen leveys osuutena ruudun leveydestä lennon aikajanalta (0 = merkkikoko).</summary>
+        float koneRuudusta;
+
         void Paatalento()
         {
+            koneRuudusta = 0;
             if (aloitusMerkit != null)
             {
                 aloitusMerkit.NaytaVain(null);
@@ -368,7 +373,9 @@ namespace Matkakirja
             float etaisyys = Vector3.Distance(kamera.transform.position, paikka);
             float kerroin = PalloKierto.Pistekerroin;
             float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
-            malli.transform.localScale = Vector3.one * (pikseli * malliPx * kerroin / malliKoko);
+            // Lähikuvassa kone täyttää osan ruudun leveydestä (aikajana), muuten vakiokokoinen merkki.
+            float koko = Mathf.Max(malliPx * kerroin, koneRuudusta * Screen.width);
+            malli.transform.localScale = Vector3.one * (pikseli * koko / malliKoko);
         }
 
         Vector3 Maailmaan(double lat0, double lon0, double lat1, double lon1, double p, double huippu)

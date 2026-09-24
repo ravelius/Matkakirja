@@ -169,7 +169,7 @@ namespace Matkakirja.Natiivi
             var (teksti, indeksi) = sarja[i];
             float puheMs = -1f;
             var kupla = pulu.Sano(teksti, Pulu.AaniOsoite("avaus", indeksi, Aaniversiot[indeksi]), null,
-                () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f);
+                () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, naytaAina: true);
             if (kupla == null) { Lopeta(true); return; }
             if (indeksi == MuotokuvanRepliikki) pulu.Kuplat.LisaaMuotokuva(kupla, MuotokuvaUrl);
             // Lippu vasta kun sarja oikeasti näkyi.

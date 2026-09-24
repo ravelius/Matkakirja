@@ -64,36 +64,48 @@ namespace Matkakirja
         public static string PohjaPolku;
         static byte[] varakuva;
         /// <summary>
-        /// Väritason kerma (Varitaso, Karttasepän tasoitus-sarja): alueen ulkopuoliset laatat täytetään
-        /// tällä ilman verkkoa, samoin puuttuvat. #faf4d6, peitto 0,85 (alfa 217) kuten sarjan reunat.
+        /// Väritason tyhjä laatta (läpinäkyvä, Varitaso): kaukonäkymän tasot (z &lt; alin taso, web: ei huntua
+        /// maailmanäkymässä) ja puuttuvat laatat ilman verkkoa. Cesium piirtäisi epäonnistuneen laatan mustana.
         /// </summary>
-        static byte[] kermakuva;
-        static readonly ConcurrentDictionary<string, double[]> varialueet = new ConcurrentDictionary<string, double[]>();
+        static byte[] tyhjakuva;
+        sealed class VariKansio { public double[] Alue; public string Maailma; public int Alin; }
+        static readonly ConcurrentDictionary<string, VariKansio> varialueet = new ConcurrentDictionary<string, VariKansio>();
 
-        /// <summary>Väritason maakansio (ämpärin polku, "/"-loppuinen) ja sen alue asteina.</summary>
-        public static void VariAlue(string kansio, double lon0, double lat0, double lon1, double lat1) =>
-            varialueet[kansio] = new[] { lon0, lat0, lon1, lat1 };
+        /// <summary>
+        /// Väritason maakansio (ämpärin polku, "/"-loppuinen), sen alue asteina, maailman sarjan kansio
+        /// (alueen ulkopuoliset laatat haetaan sieltä samalla z/x/y:llä; null = läpinäkyvä) ja alin taso.
+        /// </summary>
+        public static void VariAlue(string kansio, double lon0, double lat0, double lon1, double lat1, string maailma, int alin) =>
+            varialueet[kansio] = new VariKansio { Alue = new[] { lon0, lat0, lon1, lat1 }, Maailma = maailma, Alin = alin };
 
-        /// <summary>Väritason laatta kokonaan alueen ulkopuolella → true (kerma); varitasoa = polku on väritason.</summary>
-        static bool VariUlkona(string polku, out bool varitasoa)
+        /// <summary>
+        /// Väritason pyynnön ohjaus: tyhja = läpinäkyvä laatta heti; muuten polku (alueen ulkopuolella maailman
+        /// sarjan laatta). varitasoa = polku kuuluu väritasoon (virhe → tyhjä, ei mustaa).
+        /// </summary>
+        static string VariOhjaus(string polku, out bool varitasoa, out bool tyhja)
         {
-            varitasoa = false;
+            varitasoa = tyhja = false;
             foreach (var p in varialueet)
             {
                 if (!polku.StartsWith(p.Key, StringComparison.Ordinal)) continue;
                 varitasoa = true;
-                var osat = polku.Substring(p.Key.Length).Split('/');
-                if (osat.Length != 3) return false;
+                string loppu = polku.Substring(p.Key.Length);
+                var osat = loppu.Split('/');
+                if (osat.Length != 3) return polku;
                 int piste = osat[2].IndexOf('.');
                 if (!int.TryParse(osat[0], out int z) || !int.TryParse(osat[1], out int x)
-                    || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) return false;
-                double n = 1 << z, a = p.Value[0], e = p.Value[1], i = p.Value[2], ps = p.Value[3];
+                    || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) return polku;
+                if (z < p.Value.Alin) { tyhja = true; return polku; }
+                double n = 1 << z, a = p.Value.Alue[0], e = p.Value.Alue[1], i = p.Value.Alue[2], ps = p.Value.Alue[3];
                 double lonL = x / n * 360 - 180, lonI = (x + 1) / n * 360 - 180;
                 double latP = Math.Atan(Math.Sinh(Math.PI * (1 - 2 * y / n))) * 180 / Math.PI;
                 double latE = Math.Atan(Math.Sinh(Math.PI * (1 - 2 * (y + 1) / n))) * 180 / Math.PI;
-                return lonI <= a || lonL >= i || latP <= e || latE >= ps;
+                bool ulkona = lonI <= a || lonL >= i || latP <= e || latE >= ps;
+                if (!ulkona) return polku;
+                if (p.Value.Maailma == null) { tyhja = true; return polku; }
+                return p.Value.Maailma + loppu;
             }
-            return false;
+            return polku;
         }
 
         [Tooltip("Varalaatan väri (pergamentti, meren ja maan välissä).")]
@@ -139,15 +151,13 @@ namespace Matkakirja
                 varakuva = t.EncodeToJPG(85);
                 Destroy(t);
             }
-            if (kermakuva == null)
+            if (tyhjakuva == null)
             {
                 var t = new Texture2D(256, 256, TextureFormat.RGBA32, false);
-                var px = new Color32[256 * 256];
-                for (int i = 0; i < px.Length; i++) px[i] = new Color32(250, 244, 214, 217);
-                t.SetPixels32(px);
+                t.SetPixels32(new Color32[256 * 256]);
                 t.Apply(false);
                 // PNG .webp-osoitteessa: Cesium tunnistaa kuvan tavuista, ei päätteestä.
-                kermakuva = t.EncodeToPNG();
+                tyhjakuva = t.EncodeToPNG();
                 Destroy(t);
             }
             if (Instanssi != null && Instanssi != this) { Destroy(this); return; }
@@ -285,7 +295,7 @@ namespace Matkakirja
         static async Task Vastaa(NetworkStream virta, int tila, byte[] data, string kohde, bool vainOtsake)
         {
             string tyyppi = kohde.Contains(".terrain") ? "application/vnd.quantized-mesh"
-                : kohde.Contains(".json") ? "application/json"
+                : kohde.Contains(".json") || kohde.Contains(".geojson") ? "application/json"
                 : kohde.Contains(".png") ? "image/png"
                 : kohde.Contains(".webp") ? "image/webp" : "image/jpeg";
             int pituus = data?.Length ?? 0;
@@ -303,8 +313,8 @@ namespace Matkakirja
         {
             polku = Uri.UnescapeDataString(polku);
             if (polku.Contains("..")) return (404, null);
-            bool varitasoa = false;
-            if (kermakuva != null && VariUlkona(polku, out varitasoa)) return (200, kermakuva);
+            polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
+            if (tyhja && tyhjakuva != null) return (200, tyhjakuva);
             string f = Tiedosto(offline, polku);
             if (File.Exists(f)) { Interlocked.Increment(ref Offline); return (200, File.ReadAllBytes(f)); }
             f = Tiedosto(valimuisti, polku);
@@ -323,8 +333,8 @@ namespace Matkakirja
                 Interlocked.Increment(ref Varakuvia);
                 return (200, varakuva);
             }
-            // Väritason puuttuva laatta: kerma (Cesium piirtäisi epäonnistuneen mustana).
-            if (tila != 200 && varitasoa && kermakuva != null) return (200, kermakuva);
+            // Väritason puuttuva laatta: läpinäkyvä (Cesium piirtäisi epäonnistuneen mustana).
+            if (tila != 200 && varitasoa && tyhjakuva != null) return (200, tyhjakuva);
             if (tila == 200 && data != null)
             {
                 Interlocked.Increment(ref Verkosta);

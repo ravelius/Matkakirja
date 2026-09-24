@@ -477,6 +477,21 @@ namespace Matkakirja.Editori
             plist.WriteToFile(plistPolku);
         }
 
+        /// <summary>
+        /// Radion VU-mittari (MatkakirjaRadio.mm: MTAudioProcessingTap) tarvitsee MediaToolbox-kehyksen,
+        /// jota Unityn iOS-projekti ei linkitä oletuksena.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(195)]
+        static void Kehykset(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            string projektiPolku = UnityEditor.iOS.Xcode.PBXProject.GetPBXProjectPath(polku);
+            var projekti = new UnityEditor.iOS.Xcode.PBXProject();
+            projekti.ReadFromFile(projektiPolku);
+            projekti.AddFrameworkToProject(projekti.GetUnityFrameworkTargetGuid(), "MediaToolbox.framework", false);
+            projekti.WriteToFile(projektiPolku);
+        }
+
         [UnityEditor.Callbacks.PostProcessBuild(200)]
         static void TestFlightPlist(BuildTarget kohde, string polku)
         {

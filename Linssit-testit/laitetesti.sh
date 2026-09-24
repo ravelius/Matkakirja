@@ -23,6 +23,9 @@
 #                                          uudelleenkäynnistys, linssi Euroopan ja Balkanin yllä
 #   ./laitetesti.sh regressio <kansio>     kaikki linssit (RADIO=1: myös radio), KAUPUNKI oletus lontoo
 #   ./laitetesti.sh tutkimus <kansio>      ihmisen matka suoraan tutkimusvaiheeseen
+#   ./laitetesti.sh vu <kansio>            VU-mittarin kuvasarja: asemat VU_ASEMAT (oletus "DEU NLD") äänellä
+#                                          AANI (oletus 0,005: tappi mittaa ennen voimakkuutta, 0 lepuuttaa neulan),
+#                                          4 kuvaa + "radio tila" per asema, lopuksi vaiennus → lepo
 #   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh huippuvuoret <kansio>  vertailu FIN + NOR, kamera 76/18/2500 km (kontakti-web.mjs KIINTEA=huippuvuoret)
 #   ./laitetesti.sh piikit <kansio>        kehyspiikit vaiheittain (Development-käännös, ui piikit)
@@ -102,6 +105,15 @@ case "$1" in
     kaynnista; portti; "$0" tutkimus "$2"
     [ "$RADIO" = 1 ] && "$0" radiokontakti "$2"
     ls "$2" | grep -c png ;;
+  vu)
+    kaynnista; portti
+    linssi "linssi radio"; sleep 6; linssi "radio aani ${AANI:-0.005}"; sleep 1
+    for m in ${=${VU_ASEMAT:-DEU NLD}}; do
+      linssi "radio $m"; sleep 12
+      for i in 1 2 3 4; do linssi "radio tila"; kuva vu-$m-$i; done
+    done
+    linssi "radio aani 0"; sleep 3; linssi "radio tila"; kuva vu-vaiennettu
+    linssi "radio stop" "linssi pois"; sleep 2; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -16 ;;
   radiokontakti)
     # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
     # Puhdas käynnistys: edellisen testin maalehti tai linssi ei saa jäädä kuvien päälle.

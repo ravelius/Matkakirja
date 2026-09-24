@@ -99,7 +99,7 @@ namespace Matkakirja.Natiivi
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
         /// <summary>
-        /// iPhone (omistaja 24.9.2026, löydös 19; Raamattu NATIIVIN iPHONE-ASETTELU): kartta kevyesti sumeana aina,
+        /// Omistaja 24.9.2026, löydös 19 (iPhone ja iPad): kartta kevyesti sumeana aina,
         /// kun isoisän tai pulun kuvia on näkyvillä — luennan kuvasarja (isoisän kuvakupla), kohtaamiskortti,
         /// nostokortti ja pulun kuvakortti. Kameran puoli kuuntelee tätä (miedompi kuin portin verho, liukuen).
         /// </summary>
@@ -109,10 +109,57 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento (ui kuvasumea paalle|pois|auto): null = näkymien mukaan.</summary>
         public static bool? PakotaKuvaSumea;
 
+        /// <summary>
+        /// iPhonen ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20): pelaajan asetukset,
+        /// vanhan päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä (ei App Store -käännöksessä).
+        /// </summary>
+        void RakennaPuhelinvalikko()
+        {
+            var v = Linssit.Valitsin;
+            v.Avaaja = Tilarivi.Valikko;
+            v.LisaErotin();
+            v.LisaRivi("Asetukset", Ikonit.Kertoja, () => Valikko.AvaaOsa(Paavalikko.Osa.Asetukset));
+            v.LisaRivi("Äänet", Ikonit.Viiva["kaiutin"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet));
+            v.LisaRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
+            v.LisaErotin();
+            v.LisaRivi("Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
+            v.LisaRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
+            v.LisaRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
+            v.LisaRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
+#if !MATKAKIRJA_APPSTORE
+            v.LisaRivi("Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+#endif
+        }
+
+        /// <summary>
+        /// Lennon aikana piilossa (omistaja 24.9.2026, löydös 23; iPad ja iPhone): yläpalkki ja yläkulmien pillerit ja
+        /// napit (Tilarivi: laukku, ☰, ⚙, karttanappi, kaupunkipilleri, kartuscha, matkakirja), linssinappi, nostot,
+        /// Liiku ja pulu. Näkyvissä vain lento ja luennan tekstipalkki (Traileri-kerros). Häivytys 0,6 s, paluu laskun jälkeen.
+        /// </summary>
+        public static readonly int[] LennonPiilokerrokset = { UiKerros.Nostot, UiKerros.Tilarivi, UiKerros.Matkavalinta, LinssiUi.Kerros, Natiivi.Pulu.Kerros };
+        public bool LentoPiilossa { get; private set; }
+
+        public void LentoPiilo(bool piiloon)
+        {
+            if (piiloon == LentoPiilossa) return;
+            LentoPiilossa = piiloon;
+            var ui = UiKerros.Hae();
+            foreach (int k in LennonPiilokerrokset)
+            {
+                var j = ui.Juuri(k);
+                // Häivytys USS-luokalla (Matkakirja.uss .mk-lentopiilo: opacity 0,6 s); paluu 0,8 s.
+                j.AddToClassList("mk-lentosiirtyma");
+                j.EnableInClassList("mk-lentopiilo", piiloon);
+                // Häivytyksen jälkeen ei napautuksia (näkymätön ei ota osumia); paluu heti näkyväksi.
+                if (piiloon) j.schedule.Execute(() => { if (LentoPiilossa) j.style.visibility = UnityEngine.UIElements.Visibility.Hidden; }).StartingIn(650);
+                else j.style.visibility = UnityEngine.UIElements.StyleKeyword.Null;
+            }
+        }
+
         void PaivitaKuvaSumea()
         {
-            bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
-                && (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki));
+            // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
+            bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki);
             if (s == KuvaSumea) return;
             KuvaSumea = s;
             KuvaSumeaMuuttui?.Invoke(s);
@@ -196,16 +243,30 @@ namespace Matkakirja.Natiivi
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
-            Tilarivi.Valikko.clicked += () => { Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Vaihda(); };
+            // iPhone (löydös 20): ☰ avaa linssivalikon koko pelin valikkona; iPad ja muut: päävalikko.
+            Tilarivi.Valikko.clicked += () =>
+            {
+                Aanentasot.Sulje(); Matkalaukku.Sulje();
+                if (Linssivalitsin.Valikkona) { Valikko.Sulje(); Linssit.Valitsin.Vaihda(); }
+                else Valikko.Vaihda();
+            };
+            Linssit.Valitsin.AukiMuuttui += auki => { if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki); };
+            RakennaPuhelinvalikko();
+            Tilarivi.Vieras(Karttaselite.Nappi);
+            Matkakirja.Kiinnita(Tilarivi);
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
             Tilarivi.PilleriPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Vaihda(); };
             Valikko.AukiMuuttui += auki => Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
             Aanentasot.AukiMuuttui += auki => Tilarivi.Ratas.EnableInClassList("mk-valittu", auki);
+            // Löydös 24: Uusi peli palaa aloitusporttiin ilman tallennuksen jatkoa → avausruutu → valinta → lento;
+            // PeliOhjain.UusiMatka korvaa tallennuksen vasta, kun kaupunki valitaan.
             Valikko.UusiPeli += () =>
             {
                 var o = PeliOhjain.Instanssi;
-                if (o != null) o.UusiPeli(null);
-                else Tilarivi.Viesti("Peli ei ole vielä käynnissä");
+                if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
+                SuljeKaikki();
+                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+                Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
             // Pallo ei lue elettä, joka alkaa UI:n päältä (kaikki kerrokset, myös ei-modaaliset napit).
@@ -248,6 +309,8 @@ namespace Matkakirja.Natiivi
             // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
             // Aloituslento ilman pallovalintaa (testikomento ui aloita, muut polut): avausteksti silti lennolle.
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); });
+            // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
+            o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").

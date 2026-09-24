@@ -13,7 +13,7 @@ using UnityEngine.Networking;
 
 namespace Matkakirja.Natiivi
 {
-    public class RadioVirta : MonoBehaviour, IRadioVirta
+    public class RadioVirta : MonoBehaviour, IRadioVirta, IRadioTaso
     {
 #if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Avaa(string osoite);
@@ -22,6 +22,7 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern int MatkakirjaRadio_Tila();
         [DllImport("__Internal")] static extern void MatkakirjaRadio_Tauko(int paalle);
         [DllImport("__Internal")] static extern string MatkakirjaRadio_Kuvaus();
+        [DllImport("__Internal")] static extern float MatkakirjaRadio_Rms();
 #else
         float aukesi = -1;
         static void MatkakirjaRadio_Voimakkuus(float arvo) { }
@@ -109,6 +110,24 @@ namespace Matkakirja.Natiivi
         }
 
         public bool Kuuluu => Tila == 2;
+
+        /// <summary>
+        /// Lähetyksen raaka RMS 0…1 VU-mittarille (BUILD 7, Natiiviseppä: MatkakirjaRadio_Rms, ~30 ms, ennen
+        /// voimakkuutta, ei tasoitusta — VuMittari tasoittaa); −1 = ei saatavilla (HLS, tappi ei kytkeytynyt,
+        /// ei auki) → mittarin varakuvio, syy Kuvauksen lopussa "VU <tila> <syy>". Editorissa −1.
+        /// </summary>
+        public float Taso
+        {
+            get
+            {
+                if (!auki || !Oma) return -1;
+#if UNITY_IOS && !UNITY_EDITOR
+                return MatkakirjaRadio_Rms();
+#else
+                return -1;
+#endif
+            }
+        }
 
         /// <summary>Soittimen tila lokiin (virheen tai aikakatkaisun hetkellä): AVPlayerin tilat, syyt ja istunto.</summary>
         public string Kuvaus =>
