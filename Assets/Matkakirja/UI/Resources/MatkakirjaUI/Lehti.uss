@@ -2662,3 +2662,40 @@
     border-width: 1px;
     border-color: rgb(122, 109, 89);
 }
+
+/* Leveä taitto ≥ 700 pt (LehtiKainalo.cs, web @media (min-width: 700px)). */
+.mk-lehti__mittari {
+    position: absolute;
+    visibility: hidden;
+}
+
+.mk-lehti__kainalo {
+    position: relative;
+}
+
+/* Web .wiki-nosto.kainalo .kuvakehys: float right, leveys 36 % (pysty 27 %), yläväli 0,2 rem (koodissa). */
+.mk-lehti__kainalokuva {
+    position: absolute;
+    right: 0;
+}
+
+.mk-lehti__kainalokuva .mk-lehti__kuvakehys {
+    margin: 0;
+}
+
+/* Web .wiki-nosto.kainalo.taysileve .kuvakehys: koko palsta, alla 0,9 rem. */
+.mk-lehti__nostokuva--taysi {
+    margin-bottom: 14.4px;
+}
+
+.mk-lehti__palstat {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* Web column-gap 2,2 rem, viiva keskellä. */
+.mk-lehti__palstaviiva {
+    width: 1px;
+    align-self: stretch;
+    margin: 0 17.1px;
+}
