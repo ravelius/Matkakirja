@@ -46,7 +46,7 @@ claude/bold-ride-vow4ki (Matkakirja-fable): 267 jäljessä ja 1488 edellä maini
 
 ## 6. Avoimet
 
-- Build 5 (ks. yllä) ja yöajon ensimmäinen ajo 25.9.
+- Build 5:n muutosloki-natiivi-rivi kirjaamatta (1.0.0 (202609240615): äänitehosteiden korjaus, lukijaääni, linssit = web, maailman maasto). Yöajon ensimmäinen ajo 25.9.
 - ACN2K38688:n peruminen (omistaja).
 - Muutosloki-natiivi: build 2 ja 4 rivit tulivat #3012:n mukana; kirjaa jokaisesta uudesta buildista `node tools/vienti/muutosloki-natiivi.mjs --versio "1.0.0 (<n>)" --teksti "…"`.
 - Julkinen TestFlight-ryhmä vasta omistajan kokeilun jälkeen (ei vielä).
