@@ -28,7 +28,8 @@ namespace Matkakirja.Linssit.Testit
     {
         public readonly List<string> Loki = new List<string>();
         public bool Soi;
-        public float Voimakkuus { set { } }
+        public float V = -1;
+        public float Voimakkuus { set => V = value; }
         public void Aloita() { Loki.Add("aloita"); Soi = true; }
         public void Lopeta(double h) { Loki.Add($"lopeta {h}"); Soi = false; }
     }
@@ -336,6 +337,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("HELSINKI · SUOMI", l.Tila.Rivi2, "soidessa [asema, KAUPUNKI · MAA]");
             Aja(l, y, 1);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi voimakkuus: " + v.V);
+        }
+
+        [Testi] static void ViivaimenVetoRahinallaJaLukitus()
+        {
+            // Radiouudistus (suunnitelma luku 7): veto → rahina asteikkoetäisyyden mukaan, irrotus lukitsee.
+            var (l, y, v, w, k, tilat) = Luo();
+            k.Napauta("helsinki");
+            v.Kuuluu = true;
+            Aja(l, y, 3.5);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
+            l.VetoAlkaa();
+            Oleta.Tosi(w.Soi && w.V == 0, "rahina käyntiin mykkänä");
+            l.Veto(0);
+            Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4 && w.V < 1e-4, "asemalla lähetys täysi");
+            l.Veto(0.25);
+            Oleta.Tosi(v.V < 1e-4 && Math.Abs(w.V - RadioLinssi.OletusAani) < 1e-4, "puolivälissä pelkkä rahina");
+            Aja(l, y, 1);
+            Oleta.Tosi(v.V < 1e-4, "Paivita ei nosta lähetystä vedon aikana");
+            l.Veto(0.1);
+            float kesken = v.V;
+            Oleta.Tosi(kesken > 0 && kesken < RadioLinssi.OletusAani, "osittain: " + kesken);
+            // Irrotus samalle asemalle: taso jatkaa rampilla eikä hyppää.
+            l.VetoLoppuu("helsinki");
+            Oleta.Tosi(!w.Soi, "rahina väistyy");
+            Aja(l, y, 1 / 60.0);
+            Oleta.Tosi(Math.Abs(v.V - kesken) < 0.05, $"ei hyppyä: {kesken} → {v.V}");
+            Aja(l, y, 1);
+            Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi taas");
+            // Irrotus toiselle asemalle: tavallinen viritys, rahina jatkuu.
+            l.VetoAlkaa();
+            l.Veto(0.02);
+            l.VetoLoppuu("tukholma");
+            Oleta.Sama(RadioVaihe.Viritys, l.Tila.Vaihe);
+            Oleta.Sama("tukholma", l.Tila.KaupunkiId);
+            Oleta.Tosi(w.Soi && Math.Abs(w.V - RadioLinssi.OletusAani) < 1e-4, "rahina täysillä virityksessä");
         }
 
         [Testi] static void HidasAsemaJaAikakatkaisu()

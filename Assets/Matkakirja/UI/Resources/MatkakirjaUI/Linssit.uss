@@ -1499,7 +1499,7 @@
 
 .mk-radio__kotelo {
     flex-grow: 1;
-    max-width: 478px;
+    max-width: 640px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -1532,16 +1532,11 @@
 /* VU-mittari (web v267 .radio-mittari ≤ 800 px 80 × 57): kapealla keskiö vie koko rivin ja mittari on alla vasemmalla,
  * leveällä mittari on keskiön vasemmalla puolella ja kotelo levenee sen verran (web 780 → 880). */
 .mk-radio__vu {
-    flex-shrink: 0;
-    margin-top: 6px;
-}
-
-.mk-radio--levea .mk-radio__vu {
-    margin: 0 8px 0 0;
+    flex-grow: 1;
 }
 
 .mk-radio--levea .mk-radio__kotelo {
-    max-width: 566px;
+    max-width: 640px;
     flex-wrap: nowrap;
 }
 
@@ -1554,21 +1549,86 @@
 .mk-radio__nayttorivi {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+}
+
+/* RADIOUUDISTUS (build 12, Linssiseppä; suunnitelma luku 2): messinkikehykset kuvaputken 9-slicenä
+ * (RadioNakyma.RadioPinnat). iPhone: VU 76 × 56, LCD-lasi 240 × 58 (näyttö 224 × 42), viivain 36;
+ * iPad (.mk-radio--levea): VU 118 × 84, LCD-lasi 424 × 84 (näyttö 408 × 68), viivain 42. Lamppu on
+ * keskellä LCD:n oikealle jäävää tilaa (omistaja 24.9. klo 20.0x). */
+.mk-radio--pinnat .mk-radio__kotelo {
+    padding: 12px 14px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-radio--pinnat.mk-radio--levea .mk-radio__kotelo {
+    padding: 14px;
+}
+
+.mk-radio__kehys {
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.mk-radio__vukehys {
+    width: 76px;
+    height: 56px;
+    margin-right: 10px;
+    padding: 4px;
+}
+
+.mk-radio--levea .mk-radio__vukehys {
+    width: 118px;
+    height: 84px;
+}
+
+.mk-radio__lcdkehys {
+    width: 240px;
+    height: 58px;
+    padding: 8px;
+}
+
+.mk-radio--levea .mk-radio__lcdkehys {
+    width: 424px;
+    height: 84px;
+}
+
+.mk-radio__lasipinta {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 3px;
+}
+
+.mk-radio__lamppualue {
+    flex-grow: 1;
+    align-self: stretch;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    min-width: 20px;
+}
+
+.mk-radio__asteikkokehys {
+    height: 36px;
+    margin-top: 8px;
+    padding: 4px;
+}
+
+.mk-radio--levea .mk-radio__asteikkokehys {
+    height: 42px;
+    margin-top: 10px;
 }
 
 .mk-radio__naytto {
-    flex-shrink: 1;
-    width: 324px;
-    height: 54px;
+    flex-grow: 1;
     border-radius: 3px;
     background-color: #221204;
     overflow: hidden;
-}
-
-.mk-radio--levea .mk-radio__naytto {
-    width: 408px;
-    height: 68px;
 }
 
 /* Sammuksissa: saturate(.55) brightness(.86); virheessä lasi punertaa. */
@@ -1604,20 +1664,17 @@
  * väli näyttöön .7rem kuten webissä. */
 .mk-radio__lamppu {
     flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    margin-left: 0.2px;
-    margin-right: 0.2px;
+    width: 36px;
+    height: 36px;
 }
 
 .mk-radio--levea .mk-radio__lamppu {
-    margin-left: 2.2px;
-    margin-right: 2.2px;
+    width: 44px;
+    height: 44px;
 }
 
 .mk-radio__asteikko {
-    height: 30px;
-    margin-top: 5.6px;
+    flex-grow: 1;
     border-width: 1px;
     border-color: rgba(58, 42, 23, 0.5);
     border-radius: 2px;

@@ -134,6 +134,16 @@ def savyta(kuva, savy):
     return Image.merge('RGB', [c.point(lambda v, k=k: min(255, int(v * k))) for c, k in zip(kuva.split(), savy)])
 
 
+def _lin(c):
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def lineaarinen_alfa(a8, tausta=0.08):
+    a = a8 / 255
+    lb = _lin(tausta)
+    return int(round(255 * max(0.0, (_lin(a + (1 - a) * tausta) - lb) / (1 - lb))))
+
+
 def lasi(naarmut, koko):
     """Heijastus viistona kaistana ja naarmut alfana (valkoinen päällyskuva)."""
     w, h = koko
@@ -147,6 +157,10 @@ def lasi(naarmut, koko):
         a = max(0.0, 1 - y / (h * 0.38))
         d.line([(0, y), (w, y - h * 0.1)], fill=int(34 * a))
     alfa = ImageChops.add(heijastus, naarmualfa)
+    # LINEAARINEN VÄRIAVARUUS (Natiivi-UI:n oppi): Unity sekoittaa alfan lineaarisena, joten valkoinen päällyskuva
+    # vaalentaisi tummaa LCD-lasia moninkertaisesti selaimen sRGB-sekoitukseen nähden. Alfa muunnetaan niin, että
+    # tulos tummalla lasilla (B = 0,08) on sama kuin sRGB-sekoituksessa: a' = (lin(a + (1 − a)B) − lin(B)) / (1 − lin(B)).
+    alfa = alfa.point(lineaarinen_alfa)
     tulos = Image.new('RGBA', (w, h), (255, 255, 255, 0))
     tulos.putalpha(alfa)
     return tulos

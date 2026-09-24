@@ -53,6 +53,22 @@ namespace Matkakirja.Natiivi
             schedule.Execute(Paivita).Every(16);
         }
 
+        bool levyKuvana;
+
+        /// <summary>
+        /// Radiouudistus (build 12): levy kuvaputken paperina (Resources/Radio/radio-vu-levy) piirretyn värin tilalle;
+        /// mittari täyttää emonsa (koko USS:stä). null = entinen piirretty levy.
+        /// </summary>
+        public void KaytaLevya(Texture2D levy)
+        {
+            if (levy == null) return;
+            levyKuvana = true;
+            style.backgroundImage = new StyleBackground(levy);
+            style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+            style.flexGrow = 1;
+            MarkDirtyRepaint();
+        }
+
         float Mittakaava => resolvedStyle.width > 0 && !float.IsNaN(resolvedStyle.width) ? resolvedStyle.width / KuvaL : 1;
 
         static Vector2 Piste(float osuus, float r, float s)
@@ -65,15 +81,18 @@ namespace Matkakirja.Natiivi
         {
             float s = Mittakaava;
             var p = mgc.painter2D;
-            // Levy ja kehys.
-            p.fillColor = Levy;
-            p.BeginPath();
-            p.MoveTo(Vector2.zero); p.LineTo(new Vector2(KuvaL * s, 0)); p.LineTo(new Vector2(KuvaL * s, KuvaK * s)); p.LineTo(new Vector2(0, KuvaK * s));
-            p.ClosePath();
-            p.Fill();
-            p.strokeColor = Kehys;
-            p.lineWidth = 2 * s;
-            p.Stroke();
+            // Levy ja kehys (kuvana piirretty levy ja messinkikehys tulevat radion paneelilta).
+            if (!levyKuvana)
+            {
+                p.fillColor = Levy;
+                p.BeginPath();
+                p.MoveTo(Vector2.zero); p.LineTo(new Vector2(KuvaL * s, 0)); p.LineTo(new Vector2(KuvaL * s, KuvaK * s)); p.LineTo(new Vector2(0, KuvaK * s));
+                p.ClosePath();
+                p.Fill();
+                p.strokeColor = Kehys;
+                p.lineWidth = 2 * s;
+                p.Stroke();
+            }
             // Asteikkokaari: musta nollaan asti, punainen siitä ylös.
             float alku = -90 - (float)VuMittari.Kulma, loppu = -90 + (float)VuMittari.Kulma;
             float punainen = alku + (loppu - alku) * (float)VuMittari.Punainen;

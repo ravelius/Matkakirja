@@ -337,6 +337,59 @@ namespace Matkakirja.Linssit.Radio
         }
 
         /// <summary>VU-mittari (BUILD 7): päivittyy joka kehys lähetyksen todellisesta tasosta (IRadioTaso) tai varakuviosta.</summary>
+        // ---- Viivaimen veto (radiouudistus build 12, suunnitelma luku 7) ----
+
+        bool vetaa;
+        /// <summary>Viivainta vedetään sormella (UI: RadioNakyma).</summary>
+        public bool Vetaa => vetaa;
+
+        /// <summary>Veto alkaa: rahina (viritysääni) käyntiin mykkänä, soiva asema jää kuulumaan.</summary>
+        public void VetoAlkaa()
+        {
+            if (!Auki || vetaa) return;
+            if (Tauolla) Tauko(false);
+            vetaa = true;
+            if (viritin != null) { viritin.Voimakkuus = 0; viritin.Aloita(); }
+        }
+
+        /// <summary>
+        /// Viisari on e asemaväliä lähimmästä asemasta (0 … 0,5): rahina ja soivan aseman taso tasatehoisena
+        /// parina (Mastot.Rahina). Soiva asema hiljenee, kun viisari lähtee siltä.
+        /// </summary>
+        public void Veto(double e)
+        {
+            if (!vetaa) return;
+            var (lahetys, rahina) = Mastot.Rahina(e);
+            if (viritin != null) viritin.Voimakkuus = (float)(aani * rahina);
+            if (lukittu && virta != null) virta.Voimakkuus = VirranTaso = (float)(aani * lahetys);
+        }
+
+        /// <summary>
+        /// Irrotus: viisari lukittuu lähimpään asemaan. Sama asema → lähetys nousee takaisin lukituksen käyrällä
+        /// (0,9 s) ja rahina väistyy; uusi asema → tavallinen viritys, jonka rahina on jo käynnissä.
+        /// </summary>
+        public void VetoLoppuu(string lahin)
+        {
+            if (!vetaa) return;
+            vetaa = false;
+            if (lahin != null && lahin == soiva && lukittu)
+            {
+                // Lukituksen ramppi jatkuu nykyisestä tasosta (Nouseva⁻¹), ettei taso hyppää.
+                double nyt = virta == null || aani <= 0 ? 0 : Math.Clamp(VirranTaso / aani, 0, 1);
+                double osuus = Math.Asin(nyt) * 2 / Math.PI;
+                lukittuHetki = Nyt - osuus * LukituksenHaivytysS * 1000;
+                viritin?.Lopeta(LukituksenHaivytysS);
+                return;
+            }
+            if (viritin != null) viritin.Voimakkuus = aani;
+            if (lahin != null && lahin != soiva) { SoitaKaupunki(lahin); return; }
+            // Ei asemaa eikä soivaa: rahina pois. Sama asema kesken virityksen: viritys jatkuu.
+            if (soiva == null) viritin?.Lopeta(PysaytyksenHaiveS);
+        }
+
+        /// <summary>Soivan lähetyksen viimeksi asetettu taso (lukituksen ramppi tai veto).</summary>
+        float VirranTaso;
+
         public readonly VuMittari Mittari = new VuMittari();
         double mittarinKello = double.NaN;
 
@@ -363,7 +416,7 @@ namespace Matkakirja.Linssit.Radio
             if (Tila.Vaihe == RadioVaihe.Viritys)
             {
                 if (Tila.Viritys == ViritysVaihe.Siirtyma && t >= SiirtymaMs) Vaihe(ViritysVaihe.Haku);
-                if (!lukittu && kuuluu && t >= LukitusAikaisintaanMs)
+                if (!lukittu && kuuluu && t >= LukitusAikaisintaanMs && !vetaa)
                 {
                     lukittu = true;
                     lukittuHetki = Nyt;
@@ -373,10 +426,11 @@ namespace Matkakirja.Linssit.Radio
                 else if (!lukittu && t >= AikakatkaisuMs) { Virhe("Asema ei vastaa"); return; }
             }
 
-            if (lukittu)
+            if (lukittu && !vetaa)
             {
                 double osuus = (Nyt - lukittuHetki) / (LukituksenHaivytysS * 1000);
-                if (virta != null) virta.Voimakkuus = (float)(aani * Nouseva(osuus));
+                VirranTaso = (float)(aani * Nouseva(osuus));
+                if (virta != null) virta.Voimakkuus = VirranTaso;
                 if (Tila.Vaihe == RadioVaihe.Viritys && Nyt - lukittuHetki >= LukittuminenMs)
                     Aseta(RadioVaihe.Soi, ViritysVaihe.Ei, soiva, aineisto.MaanAsema(aineisto.Kaupunki(soiva)?.Iso3), null);
             }
