@@ -157,10 +157,13 @@ jobs:
         working-directory: ${{ env.PROJEKTI }}
         env:
           MATKAKIRJA_KANSIO: Build/yo
+          # Rakennus.cs:n oletustiimi on 24.9. alkaen kehitystiimi (RCD77XPB7M); TestFlight-vienti
+          # allekirjoitetaan jakelutiimillä, muuten Xcode valitsee henkilökohtaisen kehitysvarmenteen.
+          TEAM_ID: ${{ secrets.TEAM_ID }}
         run: |
           set -uo pipefail
           rm -rf Build/yo
-          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
+          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" MATKAKIRJA_TEAM="$TEAM_ID" \
             zsh tyokalut/unity-vahti.sh tulokset/yo.log \
             -batchmode -nographics -quit -projectPath . -buildTarget iOS \
             -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
