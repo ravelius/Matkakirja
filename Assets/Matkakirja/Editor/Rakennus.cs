@@ -57,6 +57,9 @@ namespace Matkakirja.Editori
             pallo.showCreditsOnScreen = false;
             // Peli ei käytä fysiikkaa: Cesium paistoi jokaiselle laatalle törmäysverkon (iPad-loki 23.9.).
             pallo.createPhysicsMeshes = false;
+            // Ei reikiä lataamattomien laattojen kohdalle (lennon lähikuva 24.9.: taivas näkyi maaston läpi):
+            // vanhempi laatta pysyy, kunnes kaikki lapset ovat ladattuja.
+            pallo.forbidHoles = true;
 
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.templateUrl = LaattaUrl;
