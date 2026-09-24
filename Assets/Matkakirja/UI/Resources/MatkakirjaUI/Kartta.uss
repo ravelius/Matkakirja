@@ -846,6 +846,16 @@
     background-color: rgba(18, 12, 4, 0.3);
 }
 
+/* E3: kuvaton kortti ja lisäkaupunki napautuspisteen vieressä ilman himmennystä (web .fokuskohde-popup:
+ * kartta näkyy). Vapaa = kortti absoluuttisena (ankkuroitu tai raahattu), kerroksessa ei täytettä. */
+.mk-nosto__kerros--ankkuroitu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-nosto__kerros--vapaa {
+    padding: 0;
+}
+
 .mk-nosto {
     width: 100%;
     max-width: 544px;
