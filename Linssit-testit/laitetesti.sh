@@ -21,6 +21,7 @@
 #   ./laitetesti.sh isoisa <kansio> [isoisa-1873.json]
 #                                          striimattava 1873-aineisto koekansioon (sisalto-koe/virta/),
 #                                          uudelleenkäynnistys, linssi Euroopan ja Balkanin yllä
+#   ./laitetesti.sh radiokontakti <kansio> radio auki ja Lontoo äänettömänä (kontakti-web.mjs KIINTEA=radio)
 #   ./laitetesti.sh kontakti <kansio>      kontaktiarkin natiivikuvat (samat näkymät kuin webin
 #                                          kuvissa, ks. docs/raportit/linssit-kontaktiarkki-*.md)
 #
@@ -76,6 +77,11 @@ case "$1" in
     linssi "maa JPN"; sleep 3; kuva kontakti-maatiedot
     linssi "lehti" "maa KOR"; sleep 3; kuva linssitesti-maatiedot-kor
     linssi "linssi pois"; sleep 4; hae "$2"; tail -20 "$2/linssi-loki.txt" ;;
+  radiokontakti)
+    # Samat näkymät kuin kontakti-web.mjs KIINTEA=radio: auki 50/10/6000 km, sitten Lontoo äänettömänä.
+    linssi "linssi radio"; sleep 6; linssi "radio aani 0"; sleep 1; linssi "kamera 50 10 6000"; sleep 5; kuva kontakti-radio-auki
+    linssi "radio kaupunki lontoo"; sleep 12; linssi "kamera 50 10 6000"; sleep 2; linssi "radio tila"; sleep 1; kuva kontakti-radio-lontoo
+    linssi "radio stop" "linssi pois"; sleep 2; hae "$2"; grep -a "radio" "$2/linssi-loki.txt" | tail -8 ;;
   radio)
     sinne "${3:-/Users/Shared/Claude/proto-3d/lokit/radio-koe/kokoelmat/radiot.json}" sisalto-koe/kokoelmat/radiot.json && echo "koekansioon: kokoelmat/radiot.json"
     kaynnista; portti
