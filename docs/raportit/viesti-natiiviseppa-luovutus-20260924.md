@@ -12,7 +12,7 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 
 ## Tila
 
-- **Proto-master a345a19** (`/Users/Shared/Claude/proto-3d/Matkakirja-proto`, paikallinen git; post-merge-koukku
+- **Proto-master 92b8098** (päivitetty 24.9. ~05; nollaus ei tapahtunut ensimmäisellä kerralla) (`/Users/Shared/Claude/proto-3d/Matkakirja-proto`, paikallinen git; post-merge-koukku
   pushaa varmuuskopioon ravelius/Matkakirja-natiivi, vanhat haarat galleriat/pelikoodari/lehti/rosvo-pois hylkääntyvät non-ff — ei haittaa).
 - **TestFlight build 4** = 7706efd (1.0.0 (4)), TestFlightissa. Build/testflight-4 jätetty; TF1–3 ja Build/iOS-laite poistettu (levy 98 %, ~24 Gt vapaana).
 - **Yöllinen TF klo 04 (Julkaisija)**: vaihtoehto A – sama Library, ohitus jos Unity käynnissä / Temp/UnityLockfile auki /
@@ -21,7 +21,17 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 - **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asennettu.
 - Tuotannon sisältö v15 (skeema 1.16). #3012 (1.17–1.25: maakuntakaaret, offline-maanosat) Julkaisijan jonossa → natiivi lukee jo.
 
-## Avoimet merge-pyynnöt (tee ensin)
+## Päivitys 24.9. ~05
+
+- Mergetty: jaa-matka (+jakaminen, iPadilla "Jaa matka" näkyy, .mm linkittyy), nosto-media, linssin-valmiit, ihmisen-nostokortti,
+  loytopaikka-kentat, kartuscha-radio, nostokortti-kentat, ihmisen-tiedeliite (+tutkimusvaihe), natiivi-ui/tutkimusvaihe. Avoimia pyyntöjä ei ole.
+- Valokeila: 24 ms JOKAISELLA keksintöpysäkin vaihdolla (esilämmitys ei auttanut); Natiivi-UI:n epäily Keksijakaruselli.Asettele →
+  BringToFront() 26 kortille. Korjaus seuraavalle Natiivi-UI:lle; mittaa: linssi-komento `kehittaja 1` + `linssi keksinnot`, sitten `keksinnot 3/7/12`, komento `mittaus alku … / loppu`.
+- Maailman maasto: Karttaseppä vie z12:ta, layer.json viimeisenä ~05 → https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json.
+  Haara natiiviseppa/maailman-maasto on valmiina (vain Rakennus.MaastoUrl vaihdettava), sitten luo + iPad + Espanjan 41° N -tarkistus (aja 42.7 0.6 3 + kallista).
+- iPad: 41bda44 (Linssisepällä kontaktiajo). Simulaattori: 41bda44.
+
+## Avoimet merge-pyynnöt (tee ensin) — HUOM: alla oleva lista on jo tehty
 
 1. `natiivi-ui/jaa-matka` 9230344 (sis. `pelikoodari/jakaminen` 998eeca): .metat Scripts/Peli/Jakaminen.cs ja
    Plugins/iOS/MatkakirjaJako.mm → luo + **laitekäännös .mm:n takia**, testi `ui huipennus` → Jaa matka. Laitetestaaja odottaa (C6).
