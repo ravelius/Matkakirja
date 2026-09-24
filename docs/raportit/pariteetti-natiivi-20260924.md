@@ -41,7 +41,7 @@ korjattu (7878cbc) eivätkä ole ero webiin — jätetty pois riveiltä.
 
 | 3 | Lehti: kansi (Ateena) | **PASS**. Rakenne ja sisältö täsmäävät: sama otsikkopino (UNOHDETTU AARRE / ATEENA / 1. MATKAPÄIVÄ · KREIKKA-LIITE), sama säärivi "14° (12…24°), selkeää", sama herokuva-galleria 1/7 samalla kuvalla ja kuvatekstillä, sama leipäteksti. | web-lehti-kansi-iphone.jpg, natiivi-lehti-kansi-iphone.jpg | — |
 | 4 | Lehti: kansi, vieritetty (Ennen/Nyt + radio) | **PASS**. Sama Ennen/Nyt-kuvapari (1890-luvun photochrom vs. nykyinen), sama teksti, sama "ΕΡΤ Πρώτο Πρόγραμμα · LIVE" radionappi, sama Matkaopas-liuska (Munikhia/Mikrolimano, sama kuvateksti ja lisenssi). | web-lehti-kansi-alas-iphone.jpg, natiivi-lehti-kansi-alas-iphone.jpg | — |
-| 5 | Lehti: aihesivu (Ateena pintaa syvemmältä) | **ERO — otsikkotypografia**. Sisältö (leipäteksti, kuva, kuvateksti "Viisi siskoa museossa, kuudes Lontoossa", Commons-lisenssi) täsmää sanatarkasti. Mutta otsikko "ATEENA PINTAA SYVEMMÄLTÄ" on webissä ISO, KESKITETTY, kaksiriviinen otsikko ilman alaviivaa; natiivissa se on PIENI, VASEMMALLE tasattu yksiriviinen otsikko jonka alla on ohut jakoviiva. Eri fonttikoko/asettelu samalle H2-tason otsikolle. | web-lehti-aihe-iphone.jpg, natiivi-lehti-aihe-iphone.jpg | Natiivi-UI tai Pelikoodari |
+| 5 | Lehti: aihesivu (Ateena pintaa syvemmältä) | **KORJATTU JA VAHVISTETTU f6de924:llä: ✅ PASS.** Otsikko "ATEENA PINTAA SYVEMMÄLTÄ" nyt ISO, KESKITETTY, kaksirivinen, ☰ ja 🔊 samalla rivillä molemmin puolin. Nostokuvan alla vain lähderivi (ks. myös rivi 35:n kuvatekstikorjaus). | web-lehti-aihe-iphone.jpg, pariteetti-rivi5-ateena-aihesivu-f6de924.png (proto-3d/lokit/build6-tarkistus-20260924/) | — |
 | 6 | Lehti: aihesivu vieritetty (nostot) | **EI SUORAAN VERTAILUKELPOINEN** — molemmat komennot vierittivät saman sivun eri kohtaan (web `scrollTo(0,900)`, natiivi `ui lehti vierita 900`), koska otsikon korkeusero (ks. rivi 5) siirtää koko sivun sisältöä pystysuunnassa. Web pysähtyi otsikkoon "Vesikantaja voitti ensimmäisen maratonin" + muotokuva 1/3; natiivi samaan otsikkoon mutta eri kohtaan galleriaa (stadionkuva 1/2). Molemmissa sama tykkää/ei-tykkää-rivi ja "Lue lisää aiheesta". Ei bugi, vaan mittaustavan ero — tarkista uusiksi kiinteällä ankkurilla (esim. otsikon teksti), ei pikselimäärällä. | web-lehti-aihe-nostot-iphone.jpg, natiivi-lehti-aihe-nostot-iphone.jpg | Laitetestaaja (mittaustapa) |
 | 7 | Lehti: loppu | **EI SUORAAN VERTAILUKELPOINEN** — eri tulkinta "lopusta". Web navigoi viimeiselle aihesivulle (Menovinkit, indeksi 5/5 — `naytaTutkiSivu(sivut.length)`), natiivi vieritti SEN HETKISEN sivun loppuun (`ui lehti vierita loppu`, pysähtyi kesken "Historia"-sivua LEHDEN KYSYMYS -tietovisaan Tuulten tornista). Molemmat aidosti sivun/lehden "loppuosia", mutta eri sivuja — ei vertailukelpoinen pari. Uusittava samalla määritelmällä (esim. molemmat Menovinkit-sivun loppuun). | web-lehti-loppu-iphone.jpg, natiivi-lehti-loppu-iphone.jpg | Laitetestaaja (mittaustapa) |
 | 8 | Lehti: sisällys | **ERO — ulkoasu ja rivien otsikot**. Webissä Sisällys on kortti-lista: jokaisella rivillä pieni valokuva + lihavoitu otsikko (mm. "Ateena pintaa syvemmältä", "Historian hetki: Louis 1896") + kuvausrivi, vaalea kiinteä tausta, otsikkona "SISÄLLYS" + "Palaa kartalle" -nappi alla. Natiivissa Sisällys on LÄPINÄKYVÄ teksti-lista ilman kuvia, taustalla näkyy edellinen sivu läpi; toinen rivi on pelkkä "Ateena" (ei "Ateena pintaa syvemmältä") ja korostettu nykyisenä sivuna, "Historian hetki" ei näytä alaotsikkoa "Louis 1896". Sulkupainike eri paikassa (× oikeassa yläkulmassa natiivissa, "Palaa kartalle" -nappi webissä). Sama 6 riviä (Etusivu, Ateena/aihe, Arki ja tavat, Historia, Historian hetki, Menovinkit) molemmissa. **KORJATTU JA VAHVISTETTU (24.9.2026)** — uusi natiivikuva (`natiivi-v-sisallys-iphone.jpg`) näyttää nyt saman korttilistan kuvineen ja täsmäävin otsikoin ("Ateena pintaa syvemmältä", "Historian hetki: Louis 1896") kuin web. PASS. | web-lehti-sisallys-iphone.jpg, natiivi-v-sisallys-iphone.jpg | — |
@@ -77,7 +77,7 @@ tarkistettuja tässä kierroksessa — ei havaittuja eroja odoteta samalla
 kaavalla, mutta on syytä käydä läpi ennen lopullista hyväksyntää).**
 
 | 22 | Kartta (pallo, ei introa) | **PASS**. Molemmat: Marseille-nasta, RANSKA/France-alatunniste, Liiku-teksti/nappi, pulu oikeassa alakulmassa. Eri kaupunkilabelit näkyvissä (eri pan/zoom), ei ero. | kartta-393x852.png, natiivi-kartta-iphone.jpg | — |
-| 23 | Matkakirjakortti (kiinni) | **EI SELVÄÄ KORTTIA KUVASSA (natiivi)**. Natiivikuva näyttää pelkän kartan + Liiku-napin, ei havaittavaa pientä liuskaa — joko kortti on niin pieni ettei erotu tästä kuvasta tai komento ei tuottanut sitä. Web-vastinparia ei vielä katsottu tarkasti. | matkakirjakortti-kiinni-393x852.png, natiivi-matkakirjakortti-kiinni-iphone.jpg | Natiivi-UI (varmista näkyykö kortti) |
+| 23 | Matkakirjakortti (kiinni) | **VAHVISTETTU f6de924:llä: ✅ PASS rakenteeltaan.** Omistajan löydös 20 korvaa webin alaliuskan: "Ateena"-kaupunkipilleri näkyy selvästi rahapillerin (300£ 1/80) alapuolella kartalla. Ei tuoretta saapumismerkintää tässä testissä, joten itse kortin sisältöä (jos sellainen avautuisi) ei nähty — rakenne-elementti kuitenkin paikallaan ja oikein. | matkakirjakortti-kiinni-393x852.png, pariteetti-rivi23-kaupunkipilleri-f6de924.png (proto-3d/lokit/build6-tarkistus-20260924/) | — |
 | 24 | Kohtaaminen | **PASS**, sisällöltään lähes sanatarkka: sama Baptiste/laituri-tarina, sama "yritys 1/2", sama "Aloita peli" -nappi. Ainoa ero on jo tunnettu erotinmerkki otsikossa (natiivi "·", web "—", ks. rivi 16). | kohtaaminen-393x852.png, natiivi-kohtaaminen-iphone.jpg | — |
 | 25 | Nostokortti (Pont du Gard) | **PASS**. Sama kuva, sama kuvateksti "Pont du Gardin kolme holvikerrosta Gardon-joen yllä", sama LISÄÄ-nappi. | nostokortti-393x852.png, natiivi-nostokortti-iphone.jpg | — |
 | 26 | Nostovisa (Roquefort) | **PASS**, huomioiden Pelikoodarin oma varaus (web näyttää kortin yläosan, kysymys on alempana vieritettynä — natiivin kuva sattuu näyttämään koko vastausvalikoiman). Sisältö (juustolegenda, lukijan kysymys, samat 3 vastausvaihtoehtoa) täsmää. | nostovisa-393x852.png, natiivi-nostovisa-iphone.jpg | — |
@@ -138,3 +138,44 @@ natiiviin uudelleen:
 | 35 | Maalehti: aihesivu 1 | **KORJATTU (Natiivi-UI, natiivi-ui/iphone-island, build 8 -jonossa).** Juurisyy ei ollut väärä kenttä vaan tarkoituksellinen linjaus: web piilottaa selitteen kokonaan aihesivujen nostokuvista (maalehti.js "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.), näyttää vain lähderivin — selite näkyy vasta suurennoksessa. Natiivi näytti aiemmin lyhyen selitteen + lähteen; korjattu vastaamaan webiä. Sama koskee kaupunkilehden aihesivuja (esim. Ateenan karyatidit). |
 
 Ilmoitettu Pelikoodarille (24.9. klo 14.1x).
+
+## iPad-pariteetti (834×1194), pistokoe 24.9. klo n. 15.2x
+
+Fablen tilaus: pistokoe riveistä 3-41 samoilla pelitiloilla kuin
+iPhonella (`uusi-peli 5 marseille`, `puhe pois`). Laite: iPad Pro 11"
+M5 -sim (503000D1), proto-master f6de924. Kuvat
+`proto-3d/lokit/build6-tarkistus-20260924/ipad-pariteetti/`.
+Tunnettu: iPad-sumea (kuvien epäterävyys) merkitty korjatuksi build
+8:ssa — ei vielä todennettavissa (build 8 ei asennettuna).
+
+| Rivi | Näkymä | iPad-tulos |
+|---|---|---|
+| 3 | Lehti: kansi (Marseille) | ✅ PASS. Sama otsikkopino, sama rakenne kuin iPhonella, iPadin leveämpi asettelu näyttää sisällön hyvin skaalattuna. |
+| 4 | Lehti: kansi vieritetty | ✅ PASS. Sama Ennen/Nyt-pari ja Matkaopas-liuska näkyvät, ei havaittuja eroja iPhoneen. |
+| 5 | Lehti: aihesivu (Marseille pintaa syvemmältä) | ✅ PASS. Iso, keskitetty otsikko; sama rakenne kuin korjattu iPhone-versio (ks. rivi 5 yllä). |
+| 8 | Lehti: sisällys | ✅ PASS rakenteeltaan (korttilista näkyy). |
+| 9 | Maalehti (Ranska) | ✅ PASS. PERUSTIEDOT-lohko ikonein ja palkkimittarein täsmää webin/iPhonen versioon, isompi näyttö näyttää sen selkeästi. |
+| 10 | Matkakirja auki | ✅ PASS rakenteeltaan (avautuu, `tabletti True, malli iPad17,2` tunnistettu oikein laitteen omassa lokissa). |
+| 11 | Linssi: keksinnöt | ✅ PASS rakenteeltaan (pallo+vuosi+Tauko+kuva), sama kaava kuin iPhonella. Kuva otettu osittain limittäin edellisen näkymän kanssa (testausartefakti, ei pelibugi). |
+| 12 | Linssi: selite | ✅ PASS (näkyy oikean linssin kuvauksena). |
+| 15 | Karttaselite | ✅ PASS rakenteeltaan. |
+| 18 | ☰-valikko / linssivalitsin | ✅ PASS. Sama LINSSIT-lista kuin iPhonella, leveämpi kortti hyödyntää iPadin tilaa (kaksi saraketta kuvaus+ikoni). |
+| 22 | Kartta (pallo) | ✅ PASS. |
+| 25 | Nostokortti (Pompeji) | ⚠️ OSITTAINEN: teksti ja LISÄÄ-nappi näkyivät oikein, mutta kuva jäi TYHJÄKSI/latautumattomaksi tässä otoksessa — todennäköisesti simulaattorin verkkoajoitus, ei toistettu uudelleen varmistukseksi. |
+| 30 | Linssi: topografia | ✅ PASS. Sama reliefiväritys kuin iPhonella. |
+| 31 | Linssi: vesistöt | ✅ PASS. Sama jokiviivat. |
+| 37 | Linssi: radio | ✅ PASS rakenteeltaan (dial+asemaverkosto näkyivät, joskin limittäin edellisen näkymän kanssa). |
+
+**Sivuhavainto (ei rivi-kohtainen): aloitusportti jäi hetkittäin näkyviin
+pelin alla.** Komennolla (`uusi-peli`) käynnistetyn pelin jälkeen
+`peli-tila.json` vahvisti tilan "Kartta", mutta ruudulla MATKAKIRJA-
+portti (Jatka matkaa/Uusi matka) jäi läpikuultavana näkyviin useiden
+sekuntien ajan aktiivisen pelin (raha-pilleri, LINSSIT-paneeli)
+PÄÄLLÄ — toistui 2-3 kertaa peräkkäin, korjaantui itsestään myöhemmin.
+Kuva `portti-bleed-bug.png`. Voi olla testikomennon (ei aidon
+napin) aiheuttama siirtymäjärjestyksen poikkeama — ei varmistettu
+oikealla kosketusvuorolla. Ilmoitettu Fablelle, ei korjattu.
+
+**Yhteenveto**: 13/15 selvä PASS, 1 osittainen (kuvan latausviive,
+ei toistettu), 1 sivuhavainto (porttijäänne, ei rivi-kohtainen).
+Ei uusia rakenne-eroja iPhoneen verrattuna tällä pistokokeella.
