@@ -61,6 +61,14 @@ namespace Matkakirja.Natiivi
         public const string IntroPaikka = "Heathrow, Lontoo";
         public const string IntroValinta = "Valitse aloituskaupunki";
         public const string IntroPuhe = "https://media.matkakirja.app/audio/intro-puhe.mp3?v=2";
+        /// <summary>
+        /// Avauslennon ainoa rivi (web js/packs/maailma.js flightFirst, luenta puhe-lento-alku.mp3 = luennat "lento-alku";
+        /// omistaja 24.9.2026 löydös 23a). Paketin ui-tekstit FLIGHT_FIRST korvaa; tämä on vara.
+        /// </summary>
+        public const string LentoTeksti = "Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.";
+        /// <summary>Lennon luennan tunniste Puhe.SoivaUrl:ssa (Pelikoodari soittaa luennat "lento-alku" koneen lähtiessä).</summary>
+        public const string LentoPuheTunniste = "puhe-lento-alku";
+        public const string LentoPuhe = "https://media.matkakirja.app/audio/puhe-lento-alku.mp3?v=2";
         /// <summary>Varalista, jos pelin Lahtokaupungit() ei ole saatavilla (webin ETUSIVUN_KOHTEET).</summary>
         public static readonly string[] Kohteet =
         {
@@ -169,7 +177,8 @@ namespace Matkakirja.Natiivi
             // tulee kameran puolelta (Natiiviseppä); UI Toolkit ei sumenna 3D-kuvaa.
             Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore),
                 Kuviot.Soikio("aloitus-portti", new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.28f), new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.6f), 0.4f));
-            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
+            // Omistaja 24.9.2026 (löydös 24, web showAloitusportti): portissa ei julistetta eikä ingressiä —
+            // vain äänirivi, Aloita seikkailu ja Oppiminen on hauskaa. Elementit jäävät piiloon.
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
@@ -181,6 +190,7 @@ namespace Matkakirja.Natiivi
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
+            porttiYla.style.display = DisplayStyle.None;
             var keskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
             aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
@@ -189,7 +199,9 @@ namespace Matkakirja.Natiivi
             jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
-            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
+            jatkaNappi.style.display = DisplayStyle.None;
+            // Tallennus olemassa → peli jatkuu; muuten avausruutu (web: sama nappi molemmissa).
+            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", () => { if (jatka != null) Jatka(); else PortistaKartalle(); }, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
             var linkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
@@ -219,7 +231,9 @@ namespace Matkakirja.Natiivi
             aaniNappi.RemoveFromClassList("mk-valittu");
         }
 
-        string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta;
+        string introText = IntroText, introPaikka = IntroPaikka, introValinta = IntroValinta, lentoTeksti = LentoTeksti;
+        /// <summary>Kirjoituskoneen nykyinen teksti (avaus tai lennon rivi).</summary>
+        string teksti = "";
         Label valintaOtsikko, periaateOtsikko;
         ScrollView periaateVieritys;
         VisualElement periaateLinkki, periaatePalaute;
@@ -249,6 +263,11 @@ namespace Matkakirja.Natiivi
                 introText = Arvo("INTRO_TEXT") ?? introText;
                 introPaikka = Arvo("INTRO_PAIKKA") ?? introPaikka;
                 introValinta = Arvo("INTRO_VALINTA") ?? introValinta;
+                // FLIGHT_FIRST voi olla lista (webin flightFirst: [rivi]) tai merkkijono.
+                var ff = MiniJson.Kentta(v, "FLIGHT_FIRST");
+                if (Rakenne.Olio(ff) is Dictionary<string, object> ffo) ff = MiniJson.Kentta(ffo, "arvo") ?? ff;
+                if (ff is List<object> ffl && ffl.Count > 0) ff = ffl[0];
+                if (ff is string ffs && ffs.Length > 0) lentoTeksti = ffs;
                 valintaNappi.Q<Label>().text = introValinta.ToUpperInvariant();
                 valintaOtsikko.text = introValinta;
                 var p = Rakenne.Olio(MiniJson.Kentta(v, "PERIAATTEET"));
@@ -312,11 +331,8 @@ namespace Matkakirja.Natiivi
             PaivitaAaniNappi();
             this.jatka = jatka;
             this.kohteet = kohteet != null && kohteet.Count > 0 ? kohteet : Array.ConvertAll(Kohteet, id => (id, (string)null));
-            jatkaNappi.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
-            aloitaNappi.EnableInClassList("mk-nappi--haamu", jatka != null);
-            aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
-            aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
-            ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
+            // Löydös 24: ei Jatka matkaa / Uusi matka -paria; Aloita seikkailu jatkaa tallennuksen, jos sellainen on.
+            jatkaNappi.style.display = DisplayStyle.None;
             AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
@@ -353,17 +369,31 @@ namespace Matkakirja.Natiivi
             Nayta(aloita, kohteet);
             portti.style.display = DisplayStyle.None;
             AsetaPortti(false);
-            NaytaValinta();
+            NaytaAvausteksti();
         }
 
-        /// <summary>Aloituskaava: portti häipyy suoraan lähtövalintaan kartalla (avausteksti tulee vasta lennolla).</summary>
+        /// <summary>
+        /// Aloituskaava webin mukaan (omistaja 24.9.2026, löydös 23a): portti häipyy avaukseen — paikkarivi
+        /// "Heathrow, Lontoo" + kuukausi ja vuosi, INTRO_TEXT kirjoituskoneella luennan intro-puhe.mp3 tahdissa ja
+        /// lopuksi "Valitse aloituskaupunki" → kartta. Lennolla vain flightFirst-rivi (LentoKirjoitus).
+        /// </summary>
         void PortistaKartalle()
         {
             Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
             portti.style.opacity = 0f;
             AsetaPortti(false);
             portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
-            NaytaValinta();
+            NaytaAvausteksti();
+        }
+
+        void NaytaAvausteksti()
+        {
+            intro.RemoveFromClassList("mk-aloitus__intro--lento");
+            intro.style.opacity = 1f;
+            arkki.style.opacity = 1f;
+            valintaNappi.style.display = DisplayStyle.None;
+            var nyt = DateTime.Now;
+            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, true);
         }
 
         void Jatka()
@@ -373,20 +403,120 @@ namespace Matkakirja.Natiivi
             j?.Invoke();
         }
 
-        void AloitaKirjoitus()
+        /// <summary>
+        /// Kirjoituskone luennan tahdissa: sanat ilmestyvät Puhe.Aika-kellon mukaan, kun luenta (puheUrl:n tiedosto)
+        /// soi — aikaleimoista (luennan .aikaleimat.json, jos saatavilla) tai muuten merkkimäärän suhteessa luennan
+        /// kestoon. Jos luenta ei ala 4 s:ssa (äänet pois, lataus), vara on webin typeText-rytmi (190 ms/sana, tauot).
+        /// soitaItse: UI soittaa luennan (avaus); lennolla sen soittaa peli (Pelikoodari, luennat "lento-alku").
+        /// </summary>
+        void AloitaKirjoitus(string kirjoitettava, string paikkarivi, string puheUrl, bool soitaItse, float odotusS = 4f)
         {
-            var nyt = DateTime.Now;
-            paikka.text = introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year;
-            sanat = introText.Split(' ');
+            teksti = kirjoitettava ?? "";
+            paikka.text = paikkarivi ?? "";
+            paikka.style.display = string.IsNullOrEmpty(paikkarivi) ? DisplayStyle.None : DisplayStyle.Flex;
+            sanat = teksti.Split(' ');
             sana = 0;
             runko.text = "";
-            // Puhe: yksi puhuja kerrallaan ja musiikin vaimennus (Pelikoodarin Puhe.cs).
-            if (!LuentaPelilta) Puhe.Hae()?.Soita(IntroPuhe);
+            sanaAjat = null;
+            puheTunniste = Tunniste(puheUrl);
+            if (soitaItse && !string.IsNullOrEmpty(puheUrl)) Puhe.Hae()?.Soita(puheUrl);
+            HaeAikaleimat(puheUrl, sanat.Length);
             kirjoitus?.Pause();
-            kirjoitus = runko.schedule.Execute(Seuraava).StartingIn(Tahti + 600);
+            float alku = Time.unscaledTime;
+            bool alkoi = false;
+            kirjoitus = runko.schedule.Execute(() =>
+            {
+                if (sanat == null || sana >= sanat.Length) { kirjoitus?.Pause(); return; }
+                var p = Puhe.Instanssi;
+                bool soi = p != null && p.Soi && puheTunniste != null && (p.SoivaUrl ?? "").Contains(puheTunniste);
+                if (soi)
+                {
+                    alkoi = true;
+                    var ajat = sanaAjat ?? SuhteellisetAjat(p.Kesto);
+                    float ms = p.Aika * 1000f;
+                    int n = sana;
+                    while (n < sanat.Length && (ajat == null || ajat[n] <= ms)) n++;
+                    if (n > sana) Nayta(n);
+                    return;
+                }
+                if (alkoi) { KirjoitaLoppuun(); return; }  // luenta päättyi tai katkesi: loput kerralla
+                if (Time.unscaledTime - alku > odotusS)
+                {
+                    // Vara: webin rytmi ilman ääntä.
+                    kirjoitus?.Pause();
+                    kirjoitus = runko.schedule.Execute(Seuraava).StartingIn(Tahti);
+                }
+            }).Every(50);
         }
 
-        /// <summary>Seuraava sana ja sen jälkeinen viive (web typeText + KIRJOITUSTAUOT).</summary>
+        string puheTunniste;
+        float[] sanaAjat;
+
+        static string Tunniste(string url)
+        {
+            if (string.IsNullOrEmpty(url)) return null;
+            string t = url.Split('?')[0];
+            int i = t.LastIndexOf('/');
+            t = i >= 0 ? t.Substring(i + 1) : t;
+            return t.EndsWith(".mp3") ? t.Substring(0, t.Length - 4) : t;
+        }
+
+        /// <summary>Sanan alkuhetket (ms) merkkimäärän suhteessa luennan kestoon (ei aikaleimoja).</summary>
+        float[] SuhteellisetAjat(float kestoS)
+        {
+            if (kestoS <= 0 || sanat == null || sanat.Length == 0) return null;
+            int yht = 0;
+            foreach (var w in sanat) yht += w.Length + 1;
+            var ajat = new float[sanat.Length];
+            int kertyma = 0;
+            // Puhe alkaa ja loppuu pienellä tauolla: 4 % alussa, 94 % kohdalla viimeinen sana.
+            for (int i = 0; i < sanat.Length; i++)
+            {
+                ajat[i] = kestoS * 1000f * (0.04f + 0.9f * kertyma / Mathf.Max(1, yht));
+                kertyma += sanat[i].Length + 1;
+            }
+            sanaAjat = ajat;
+            return ajat;
+        }
+
+        /// <summary>Luennan aikaleimat (web tools: sanat[].alku ms), jos tiedosto on olemassa ja sanamäärä täsmää.</summary>
+        void HaeAikaleimat(string puheUrl, int sanoja)
+        {
+            if (string.IsNullOrEmpty(puheUrl)) return;
+            string osoite = puheUrl.Split('?')[0];
+            if (!osoite.EndsWith(".mp3")) return;
+            osoite = osoite.Substring(0, osoite.Length - 4) + ".aikaleimat.json" + (puheUrl.Contains("?") ? "?" + puheUrl.Split('?')[1] : "");
+            string tunniste = puheTunniste;
+            UiKerros.Hae().StartCoroutine(Hae());
+            System.Collections.IEnumerator Hae()
+            {
+                using (var req = UnityEngine.Networking.UnityWebRequest.Get(osoite))
+                {
+                    req.timeout = 6;
+                    yield return req.SendWebRequest();
+                    if (req.result != UnityEngine.Networking.UnityWebRequest.Result.Success || tunniste != puheTunniste) yield break;
+                    try
+                    {
+                        if (!(MiniJson.Kentta(Rakenne.Olio(MiniJson.Jasenna(req.downloadHandler.text)), "sanat") is List<object> lista)
+                            || lista.Count != sanoja) yield break;
+                        var ajat = new float[lista.Count];
+                        for (int i = 0; i < lista.Count; i++)
+                            ajat[i] = Convert.ToSingle(MiniJson.Kentta(Rakenne.Olio(lista[i]), "alku") ?? 0, CultureInfo.InvariantCulture);
+                        sanaAjat = ajat;
+                    }
+                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA aloitus: aikaleimat " + e.Message); }
+                }
+            }
+        }
+
+        void Nayta(int n)
+        {
+            sana = Mathf.Min(n, sanat.Length);
+            runko.text = string.Join(" ", sanat, 0, sana);
+            if (sana >= sanat.Length) { kirjoitus?.Pause(); Valmis(); }
+        }
+
+        /// <summary>Seuraava sana ja sen jälkeinen viive (web typeText + KIRJOITUSTAUOT): vara ilman luentaa.</summary>
         void Seuraava()
         {
             if (sanat == null || sana >= sanat.Length) { Valmis(); return; }
@@ -406,7 +536,7 @@ namespace Matkakirja.Natiivi
             if (sanat == null || sana >= sanat.Length) return;
             kirjoitus?.Pause();
             sana = sanat.Length;
-            runko.text = introText;
+            runko.text = teksti;
             Valmis();
         }
 
@@ -495,7 +625,9 @@ namespace Matkakirja.Natiivi
             valintaNappi.style.display = DisplayStyle.None;
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;
-            AloitaKirjoitus();
+            // Lennolla vain avauslennon rivi (flightFirst) ilman paikkariviä; luennan soittaa peli.
+            // Kone lähtee kameran lähestymisen jälkeen: luentaa odotetaan pidempään kuin avauksessa.
+            AloitaKirjoitus(lentoTeksti, null, LentoPuhe, false, 10f);
         }
 
         /// <summary>Pelikoodarin/Natiivisepän aloituslento päättyi: kaistale häipyy, kun teksti on valmis.</summary>
