@@ -279,6 +279,8 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros.MustaKasittelija = Musta;
             IhmisenMatkaKerros.ValotKasittelija = Valot;
             IhmisenMatkaKerros.JaksoKasittelija = NaytaJakso;
+            // Löytöpaikan lampun napautus (web napautaValoa → nostokortti.avaa), myös tutkimusvaiheessa.
+            IhmisenMatkaKerros.LamppuNapautettu = AvaaNosto;
             IhmisenMatkaKerros.KelloKasittelija = v => { Ala(Tila.Ihminen); AsetaIhmisenKello(v); };
             IhmisenMatkaKerros.KuvaKasittelija = NaytaLoytopaikka;
             IhmisenMatkaKerros.PuluKasittelija = t => { if (!string.IsNullOrEmpty(t)) Pulu.Hae().Sano(t); };
@@ -1150,6 +1152,14 @@ namespace Matkakirja.Natiivi
             if (nakyy == tekstiNakyy) return;
             tekstiNakyy = nakyy;
             kertomusLaatikko.EnableInClassList("mk-nakyy", nakyy);
+        }
+
+        void AvaaNosto(string tunnus)
+        {
+            if (tila != Tila.Ihminen || string.IsNullOrEmpty(tunnus)) return;
+            if (ihminen == null) { LataaIhminen(() => AvaaNosto(tunnus)); return; }
+            var p = ihminen.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? ihminen.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);
+            if (p != null) nostokortti.Avaa(p);
         }
 
         void NaytaLoytopaikka(string tunnus)
