@@ -42,6 +42,11 @@ namespace Matkakirja
         [Tooltip("Maaston layer.json (sama kuin pallon url).")]
         public string maastoLayer;
         public int rinnakkain = 8;
+        [Tooltip("Rinnakkaisuus, kun näkyvän kartan laattoja haetaan tai näkymä liikkuu (näkyvä ensin).")]
+        public int rinnakkainKiireessa = 2;
+        public PalloKierto kierto;
+
+        int Raja => Laattapalvelin.Kiireinen || (kierto != null && kierto.Liikkeessa) ? rinnakkainKiireessa : rinnakkain;
 
         public IReadOnlyList<Alue> Luettelo => alueet;
         /// <summary>Lista tai tila muuttui (edistyminen enintään 4 kertaa sekunnissa).</summary>
@@ -58,7 +63,11 @@ namespace Matkakirja
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
 
-        void Start() => StartCoroutine(LataaLuettelo());
+        void Start()
+        {
+            if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            StartCoroutine(LataaLuettelo());
+        }
 
         IEnumerator LataaLuettelo()
         {
@@ -210,7 +219,7 @@ namespace Matkakirja
                 float alku = Time.realtimeSinceStartup;
                 for (int i = 0; i < polut.Count && !peruttu; i++)
                 {
-                    while (kesken >= rinnakkain) yield return null;
+                    while (kesken >= Raja) yield return null;
                     kesken++;
                     StartCoroutine(Laataattiedosto(polut[i], b =>
                     {
