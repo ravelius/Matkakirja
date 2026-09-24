@@ -147,6 +147,52 @@ namespace Matkakirja.Natiivi
             return b;
         }
 
+        // --- kartuschan radio (web maapaneeli.js .maapaneeli-radio, soitaRadio) --------------------
+
+        static readonly Dictionary<Button, (Napintila Tila, string Url)> radionapit = new Dictionary<Button, (Napintila, string)>();
+
+        /// <summary>
+        /// Kartuschan radionappi: merkkivalo ja pieni "radio" (web: valo on ainoa merkki, soittimen kuvake ja
+        /// aika piilossa). Sama soitin kuin lehdessä; valo palaa soidessa ja vilkkuu kanavan haun ajan.
+        /// </summary>
+        public static Button Radionappi(VisualElement isa)
+        {
+            var b = Rakenne.Nappi(null, "mk-kartuscha__radio", null, isa);
+            var t = new Napintila { Nappi = b };
+            t.Merkki = Rakenne.Ikoni(Soita, "mk-piilo", b);
+            t.Merkki.style.display = DisplayStyle.None;
+            Rakenne.El("mk-kartuscha__radiovalo", b, PickingMode.Ignore);
+            t.Nimi = Rakenne.Teksti("radio", "mk-kartuscha__radionimi", b);
+            Kirjasimet.Aseta(t.Nimi, Kirjasin.Kone);
+            t.Aika = Rakenne.Teksti("", "mk-piilo", b);
+            t.Aika.style.display = DisplayStyle.None;
+            radionapit[b] = (t, null);
+            // Napautus ei avaa/sulje kartuschaa (masto kuuntelee isäntää).
+            b.RegisterCallback<PointerDownEvent>(e => e.StopPropagation(), TrickleDown.TrickleDown);
+            b.clicked += () =>
+            {
+                var (tila, url) = radionapit[b];
+                if (soiva != null && soiva != tila) Pysayta();
+                Painettu(tila, url, null);
+            };
+            return b;
+        }
+
+        /// <summary>Maa vaihtui (web paivita): asema maalle tai nappi piiloon; soiva lähetys kiinni.</summary>
+        public static void AsetaRadionMaa(Button b, string iso, string maanNimi)
+        {
+            if (!radionapit.TryGetValue(b, out var r)) return;
+            if (soiva == r.Tila) Pysayta();
+            Lataa(() =>
+            {
+                Asema a = iso != null && radiot.TryGetValue(iso, out var x) ? x : null;
+                radionapit[b] = (r.Tila, a?.Url);
+                // Näkyvyys luokalla: isännän tila (kartuscha auki) päättää lopun USS:ssä.
+                b.EnableInClassList("mk-kartuscha__radio--asema", a != null);
+                b.tooltip = a != null ? $"{maanNimi}: kuuntele suoraa lähetystä ({a.Nimi})" : null;
+            });
+        }
+
         // --- soitin (web kulttuuriAaniNapista) ------------------------------------------------------
 
         static Napintila soiva;
@@ -194,6 +240,10 @@ namespace Matkakirja.Natiivi
             if (soiva == null) { kello?.Pause(); return; }
             if (soivaUrl == null)
             {
+                // Kanavan haku (web maapaneeli aloitaHaku): nappi vilkkuu, kunnes lähetys kuuluu.
+                bool etsii = !virta.Kuuluu;
+                soiva.Nappi.EnableInClassList("mk-etsii", etsii);
+                soiva.Nappi.EnableInClassList("mk-vilkku", etsii && !soiva.Nappi.ClassListContains("mk-vilkku"));
                 // Suora lähetys: virhe tai aikaraja → kaupungin kielinäyte, live-merkki sammuu (web petti).
                 bool petti = virta.Virhe != null || (!virta.Kuuluu && Time.unscaledTime - radioAlku > Aikaraja);
                 if (!petti) return;
@@ -236,6 +286,8 @@ namespace Matkakirja.Natiivi
             Aanisoitin.Nayte(false);
             if (t == null) return;
             t.Nappi.RemoveFromClassList("mk-lehti__kuuntele--soi");
+            t.Nappi.RemoveFromClassList("mk-etsii");
+            t.Nappi.RemoveFromClassList("mk-vilkku");
             t.Merkki.Polku = Soita;
             if (t.Kehotus != null) t.Nimi.text = t.Kehotus;
             t.Aika.style.display = DisplayStyle.None;
