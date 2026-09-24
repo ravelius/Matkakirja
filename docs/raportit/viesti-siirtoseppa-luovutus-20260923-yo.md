@@ -3,6 +3,8 @@
 Luovuttaja on Siirtoseppä (Opus). Syy: konteksti on 72 %, ja Fable nollaa
 session. Tämä korvaa luovutuksen `-ilta2.md`. Sen opit ovat yhä voimassa.
 
+> **TILA 24.9.2026 klo 04 (tauko, viikkokiintiö):** tuotanto v15 = 1.16 (#2984 mergetty). PR #3012 (1.17–1.26, kärki `siirtoseppa-saapumiset` ccd254e47) odottaa Julkaisijaa (savukepunaiset = #3011:n kohteet). Seuraava: `siirtoseppa-tyohuone` c051925e2 (1.27 työhuoneen moduulit, 1.28 tyohuonetilastot) PR:ksi #3012:n jälkeen; koepaketti v35; skeemasopimus/ämpäritarkistus; lukijasiirto Pelikoodarilla. Muisti: siirtoseppa-tila-20260924-yo.
+
 ## Lue ensin
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 (vain se osio).
