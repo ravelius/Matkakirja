@@ -13,7 +13,7 @@ namespace Matkakirja
     /// &lt;ISO&gt;/laatat.json). Maan sisällä laatta on lähes läpinäkyvä, joten 23a-pohja näkyy siinä.
     ///
     /// Yksi CesiumUrlTemplateRasterOverlay pohjan päällä (materialKey "2"), osoite vaihdetaan maan
-    /// vaihtuessa (NostoKerros.NykyinenMaa; matkalla viimeisin maa säilyy). Alueen ulkopuoliset laatat
+    /// vaihtuessa (NostoKerros.NykyinenMaa tai nappulan lähimmän kaupungin maa; matkalla ei vaihdu). Alueen ulkopuoliset laatat
     /// laattapalvelin täyttää itse samalla kermalla ilman verkkoa (Laattapalvelin.VariAlue), koska
     /// sarjassa on vain alueen laatat. Maa ilman sarjaa → ei kerrosta (web: väritaso ei sammuta karttaa).
     ///
@@ -46,20 +46,34 @@ namespace Matkakirja
         [System.Serializable] class Tasot { public int min, max; }
         [System.Serializable] class Luettelo { public Tieto varitaso; public Tasot tasot; }
 
+        float seuraava;
+
         void Update()
         {
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
             {
-                var nk = NostoKerros.Instanssi;
-                string nyt = nk != null ? nk.NykyinenMaa : null;
-                // Matkalla (ei lähintä kaupunkia) edellinen maa säilyy, ettei huntu välky lennon aikana.
-                maa = !string.IsNullOrEmpty(nyt) ? nyt : haluttu;
+                // Web: väritason maa vaihtuu saapuessa, ei matkalla ohitettujen kaupunkien mukaan.
+                var k = KarttaKerrokset.Instanssi;
+                if (k != null && k.nappula != null && k.nappula.Liikkeessa) return;
+                if (Time.unscaledTime < seuraava) return;
+                seuraava = Time.unscaledTime + 0.5f;
+                maa = PelaajanMaa(k) ?? haluttu;
             }
             if (maa == haluttu) return;
             haluttu = maa;
             if (haku != null) StopCoroutine(haku);
             haku = StartCoroutine(Vaihda(maa));
+        }
+
+        /// <summary>Nostokerroksen maa, tai sama sääntö suoraan: nappulan lähimmän kaupungin maa.</summary>
+        static string PelaajanMaa(KarttaKerrokset k)
+        {
+            var nk = NostoKerros.Instanssi;
+            if (nk != null && !string.IsNullOrEmpty(nk.NykyinenMaa)) return nk.NykyinenMaa;
+            if (k == null || k.nappula == null || k.merkit == null || !k.nappula.Nakyy) return null;
+            string id = k.merkit.LahinId(k.nappula.Lat, k.nappula.Lon, 0.3);
+            return id != null ? k.merkit.KaupunginMaa(id) : null;
         }
 
         IEnumerator Vaihda(string maa)
