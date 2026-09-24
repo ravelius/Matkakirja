@@ -65,6 +65,16 @@ namespace Matkakirja.Linssit.Aikajana
                     Otsikko = MiniJson.Teksti(t, "otsikko"),
                     Paikka = MiniJson.Teksti(t, "paikka"),
                     Henkilo = MiniJson.Teksti(t, "henkilo"),
+                    Selite = MiniJson.Teksti(t, "selite"),
+                    Juttu = MiniJson.Teksti(t, "juttu"),
+                    Henkilojuttu = MiniJson.Teksti(t, "henkilojuttu"),
+                    Lahde = MiniJson.Teksti(t, "lahde"),
+                    Ajoitus = MiniJson.Teksti(t, "ajoitus"),
+                    Kuva = Kuvatieto.Lue(MiniJson.Kentta(t, "kuva")),
+                    KuvaToinen = Kuvatieto.Lue(MiniJson.Kentta(t, "kuvaToinen")),
+                    KuvaAito = Kuvatieto.Lue(MiniJson.Kentta(t, "kuvaAito")),
+                    Ilmio = Kuvatieto.Lue(MiniJson.Kentta(t, "ilmio")),
+                    IlmioLisa = Kuvatieto.Lue(MiniJson.Kentta(t, "ilmioLisa")),
                 });
             // Web jarjestaTapahtumat: vuoden mukaan, saman vuoden sisällä aineiston järjestys.
             a.Pysakit = a.Pysakit.Select((p, n) => (p, n)).OrderBy(x => x.p.Vuosi).ThenBy(x => x.n).Select(x => x.p).ToList();

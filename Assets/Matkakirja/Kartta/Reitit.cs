@@ -134,6 +134,44 @@ namespace Matkakirja
             return true;
         }
 
+        readonly List<GameObject> lentokaaret = new List<GameObject>();
+        Material kirkasLento;
+
+        /// <summary>
+        /// Lentolista auki (web matkareittienValinta → lennot): kirkkaat lentokaaret lähdöstä jokaiseen
+        /// kohteeseen. Pelikoodarin ohjain kutsuu listan avautuessa; null tai tyhjä = pois.
+        /// Kaaria ei napauteta (valinta listasta).
+        /// </summary>
+        public void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet)
+        {
+            foreach (var g in lentokaaret) Destroy(g);
+            lentokaaret.Clear();
+            if (lahto == null || kohteet == null || !kaupungit.ContainsKey(lahto)) return;
+            if (kirkasLento == null && lento != null)
+            {
+                kirkasLento = new Material(lento) { name = "Lento (lista)" };
+                var c = lento.GetColor("_BaseColor");
+                kirkasLento.SetColor("_BaseColor", new Color(c.r, c.g, c.b, Mathf.Min(1f, c.a * 2f + 0.2f)));
+            }
+            foreach (var k in kohteet)
+                if (k != lahto && kaupungit.ContainsKey(k))
+                    lentokaaret.Add(Piirra(new Reitti { id = "lista:" + lahto + "-" + k, laji = "lento", a = lahto, b = k }, kirkasLento ?? lento));
+        }
+
+        /// <summary>
+        /// Kamera sovittaa kaupungit ruutuun vain loitontaen ja vain, jos ne eivät jo mahdu
+        /// (web sovitaKohteetNakyviin, KOHDESOVITUKSEN_MARGINAALI).
+        /// </summary>
+        public void SovitaKohteet(IEnumerable<string> kohteet, double marginaali = 0.12)
+        {
+            var kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto == null || kohteet == null) return;
+            var pisteet = new List<(double lat, double lon)>();
+            foreach (var k in kohteet)
+                if (k != null && kaupungit.TryGetValue(k, out var c)) pisteet.Add((c.lat, c.lon));
+            kierto.SovitaPisteet(pisteet, marginaali);
+        }
+
         bool nakyvat = true;
 
         /// <summary>KarttaKerrokset "reitit": piirretyt reitit piiloon tai näkyviin.</summary>
@@ -141,6 +179,7 @@ namespace Matkakirja
         {
             nakyvat = nakyy;
             foreach (var g in naytetyt) g.SetActive(nakyy);
+            foreach (var g in lentokaaret) g.SetActive(nakyy);
             if (korostettu != null) korostettu.SetActive(nakyy);
         }
 

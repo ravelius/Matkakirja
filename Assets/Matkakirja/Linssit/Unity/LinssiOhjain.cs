@@ -42,6 +42,15 @@ namespace Matkakirja.Natiivi
         public static Action<bool> PeiteKasittelija;
         /// <summary>Taustamusiikin pito (Pelikoodarin äänet asettavat).</summary>
         public static Action<bool> MusiikkiKasittelija;
+
+        /// <summary>
+        /// Linssin portti (web linssikarttaEstaa): true = auki oleva linssi estää Liikun, siirrot ja lehdet.
+        /// Pelikoodari lukee tämän PeliOhjain.LiikuEstetty-/Kulkutavat-tilaan ja kuuntelee PorttiMuuttui-
+        /// tapahtumaa (→ LiikuMuuttui), jotta Liiku harmaantuu ja palaa heti.
+        /// </summary>
+        public static bool KarttaEstetty => Instanssi?.rekisteri?.EstaaKartan ?? false;
+        public static event Action<bool> PorttiMuuttui;
+        bool porttiOli;
         /// <summary>Linssin oma raita (Pelikoodari: Aanisoitin.LinssiMusiikki): laji tai null = pois.</summary>
         public static Action<string> LinssiMusiikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
@@ -122,7 +131,11 @@ namespace Matkakirja.Natiivi
 #endif
             // Radiotila (web luentaSallittu): kaupungin napautus on play-nappi eikä avaa korttia,
             // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
-            PeliOhjain.NapautusSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
+            // Linssin portti (web linssikarttaEstaa) estää myös kaupungin napautuksen.
+            PeliOhjain.NapautusSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu && !KarttaEstetty;
+            // Liiku, Matkusta, Tutki ja lehdet kiinni portin ajan (Pelikoodarin pelikoodari/linssiportti).
+            PeliOhjain.LinssiEstaa = () => KarttaEstetty;
+            PorttiMuuttui += _ => PeliOhjain.LinssiPorttiMuuttui();
             PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
@@ -134,6 +147,13 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaRadio());
             StartCoroutine(LataaIsoisa());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            rekisteri.Vaihtui += _ =>
+            {
+                bool nyt = rekisteri.EstaaKartan;
+                if (nyt == porttiOli) return;
+                porttiOli = nyt;
+                PorttiMuuttui?.Invoke(nyt);
+            };
             komentoPolku = Path.Combine(Application.persistentDataPath, "linssi-komento.txt");
             lokiPolku = Path.Combine(Application.persistentDataPath, "linssi-loki.txt");
         }

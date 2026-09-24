@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Peli;
 using Unity.Mathematics;
@@ -116,6 +117,30 @@ namespace Matkakirja
             suuntima = suuntimaAsteina;
             katseKorkeus = katseenKorkeus;
             Aseta();
+        }
+
+        /// <summary>
+        /// Loitontaa niin, että pisteet mahtuvat ruutuun (marginaali = osuus reunasta), jos ne eivät
+        /// jo mahdu; keskipiste pysyy. Ei koskaan lähennä. Kaari lasketaan suurimmasta kulmaetäisyydestä
+        /// nykyisestä keskipisteestä kapeamman suunnan mukaan.
+        /// </summary>
+        public void SovitaPisteet(IReadOnlyList<(double lat, double lon)> pisteet, double marginaali = 0.12, float kestoS = 0.9f)
+        {
+            if (pisteet == null || pisteet.Count == 0) return;
+            bool mahtuu = true;
+            var kamera = GetComponent<Camera>();
+            foreach (var p in pisteet)
+            {
+                if (!RuutuPiste(p.lat, p.lon, out var r)) { mahtuu = false; break; }
+                float mx = (float)(Screen.width * marginaali), my = (float)(Screen.height * marginaali);
+                if (r.x < mx || r.x > Screen.width - mx || r.y < my || r.y > Screen.height - my) { mahtuu = false; break; }
+            }
+            if (mahtuu || kamera == null) return;
+            double suurin = 0;
+            foreach (var p in pisteet) suurin = math.max(suurin, ReittiGeometria.Kulma(leveys, pituus, p.lat, p.lon));
+            double tavoite = KorkeusKaarelle(2.0 * suurin * (1.0 + 2.0 * marginaali));
+            if (tavoite <= korkeus) return;
+            Aja(leveys, pituus, tavoite, kestoS, null);
         }
 
         /// <summary>
