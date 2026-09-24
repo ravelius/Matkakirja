@@ -25,6 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _HaloViiva: 3.4
     - _Koko: 48
     - _Sade: 12
     - _Viiva: 3

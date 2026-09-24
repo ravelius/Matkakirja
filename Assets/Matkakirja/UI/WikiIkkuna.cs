@@ -65,6 +65,7 @@ namespace Matkakirja.Natiivi
             kuvakotelo = Rakenne.El("mk-wiki__kuvakotelo", vieritys.contentContainer);
             kuva = Rakenne.El("mk-wiki__kuva", kuvakotelo);
             kuva.RegisterCallback<ClickEvent>(_ => AvaaSuurennos());
+            new KuvaSelaus(kuvakotelo, () => kuvat?.Count ?? 0, Selaa, () => kuva);
             kuva.RegisterCallback<GeometryChangedEvent>(e => MitoitaKuva());
             edellinen = Rakenne.Nappi("‹", "mk-wiki__nuoli mk-wiki__nuoli--edellinen", () => Selaa(-1), kuvakotelo);
             seuraava = Rakenne.Nappi("›", "mk-wiki__nuoli mk-wiki__nuoli--seuraava", () => Selaa(1), kuvakotelo);
@@ -218,7 +219,9 @@ namespace Matkakirja.Natiivi
             bool on = kuvat.Count > 0;
             kuvakotelo.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
             bool useita = kuvat.Count > 1;
-            edellinen.style.display = seuraava.style.display = laskuri.style.display = useita ? DisplayStyle.Flex : DisplayStyle.None;
+            // Löydös 34: ei nuolia kuvan päällä; selaus reunanapautuksella ja pyyhkäisyllä (KuvaSelaus).
+            edellinen.style.display = seuraava.style.display = DisplayStyle.None;
+            laskuri.style.display = useita ? DisplayStyle.Flex : DisplayStyle.None;
             laskuri.text = useita ? $"{kuvaKohdalla + 1} / {kuvat.Count}" : "";
             kuvateksti.text = on ? kuvat[kuvaKohdalla].Kuvateksti ?? "" : "";
             kuvateksti.style.display = kuvateksti.text.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;

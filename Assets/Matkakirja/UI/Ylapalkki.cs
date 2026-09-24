@@ -31,6 +31,15 @@
 // yläreunassa (kehittäjän säätimet ovat ☰-valikon Kehittäjä-rivillä). Pillerin alle asettuu matkakirjan lappu
 // samanlevyisenä kaupunkipillerinä (Matkakirjakortti lukee PilleriMuuttui-tapahtuman).
 //
+// PALKKI TAKAISIN iPHONELLE (omistaja 24.9.2026 klo 16.1x, Raamattu NATIIVIN YLÄPALKKI iPHONELLA JA iPADILLA):
+// kelluva yläosa ja saaririvi poistuivat käytöstä (Kelluva = false). iPhone saa webin ruskean palkin samalla sisällöllä
+// kuin web (logo, pilleri "£300  Päivä 1, aamu", ☰; ⚙ ei näy, Fable 24.9.) webin mitoin: iPhone 57 pt (täyte 4,8/7,2, logo 92 × 22,
+// pilleri 12,48 px, napit 40 × 40), iPad 61 pt (täyte 7,2/12,8, logo 130 × 32, pilleri 14,4 px, napit 44 × 36).
+// iPhonella palkki liukuu piiloon, kun pelaaja vetää karttaa, ja palaa kartan tai kaupungin napautuksesta; piilossa
+// oikeassa yläkulmassa on vain ☰, joka tuo palkin takaisin. Vaaka-asennossa palkki on piilossa oletuksena (sama ☰).
+// iPadilla palkki ei piiloudu. Puhelin = iPhone: ☰ on siellä omistajan linssivalikko (klo 13.3x, hyväksytty poikkeama)
+// eikä laukussa ole linssejä (klo 11.2x); Pulun tekstipiilo ja Liiku-napin keveys lukevat samaa lippua.
+//
 // Toteuttaa Pelikoodarin ITilarivi-rajapinnan (Scripts/Peli/NakymaSopimukset.cs).
 using System;
 using System.Collections.Generic;
@@ -42,9 +51,10 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Ylapalkki : ITilarivi
     {
-        public const float Korkeus = 50f;
-        /// <summary>Väkäsikoni (web js/vakasikoni.js VAKASIKONIN_POLUT).</summary>
-        const string Vakaset = "<path d=\"M4 4.5 L12 8.5 L20 4.5\"/><path d=\"M4 10 L12 14 L20 10\"/><path d=\"M4 15.5 L12 19.5 L20 15.5\"/>";
+        /// <summary>Webin .topbar-korkeus: puhelimella 57, muuten 61 (mitattu 393 × 852 ja 834 × 1194).</summary>
+        public static float Korkeus => Puhelin ? 57f : 61f;
+        /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
+        static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 7.2f) : new Vector2(7.2f, 12.8f);
 
         /// <summary>Testikomento (ui ylapalkki vaaka|pysty|auto): null = ruudun mukaan.</summary>
         public static bool? Pakota;
@@ -68,8 +78,21 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento (ui ylapalkki kelluva|palkki): null = laitteen mukaan.</summary>
         public static bool? PakotaKelluva;
 
-        /// <summary>iPhonen kelluva yläosa (ks. yllä): iOS ilman tablettia; iPad ja muut alustat pitävät palkin.</summary>
-        public static bool Kelluva => PakotaKelluva ?? (Application.platform == RuntimePlatform.IPhonePlayer && !UiKerros.Tabletti);
+        /// <summary>iPhone (iOS ilman tablettia); testikomento ui ylapalkki kelluva|palkki pakottaa.</summary>
+        public static bool Puhelin => PakotaKelluva ?? (Application.platform == RuntimePlatform.IPhonePlayer && !UiKerros.Tabletti);
+
+        /// <summary>Kelluva yläosa poistui käytöstä (omistaja 24.9. klo 16.1x): iPhonellakin ruskea palkki.</summary>
+        public static bool Kelluva => false;
+
+        /// <summary>iPhonella kartan veto piilotti palkin (☰ tuo takaisin).</summary>
+        public static bool VetoPiilossa { get; private set; }
+
+        /// <summary>
+        /// Palkki piilossa (vaaka-asento tai iPhonen veto): näkyvissä vain ☰ (omistaja 24.9.: ei kelluvia pillereitä eikä
+        /// nappeja), joten karttaselitteen ja linssien napit piiloutuvat tämän mukaan.
+        /// </summary>
+        public static bool PalkkiPiilossa => Piilossa || VetoPiilossa;
+        public static event Action PalkkiPiilossaMuuttui;
 
         /// <summary>Ylhäältä asemoituvien näkymien varaus turva-alueen yläreunasta (0, kun palkki on piilossa).</summary>
         public static float Varaus => Piilossa ? 0f : kelluvaVaraus ?? Korkeus;
@@ -171,13 +194,69 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ilmoitus, Kirjasin.KoneLihava);
             ilmoitus.style.display = DisplayStyle.None;
 
-            vakasnappi = Rakenne.Nappi(null, "mk-vakasnappi", () => { if (Auki) Sulje(); else Avaa(); }, turva, Vakaset);
+            // Piilossa ☰ tuo palkin takaisin (omistaja 24.9.: ei kelluvia nappeja, vain palkki).
+            vakasnappi = Rakenne.Nappi(null, "mk-vakasnappi", () =>
+            {
+                if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
+                if (Auki) Sulje(); else Avaa();
+            }, turva, Ikonit.Valikko);
             vakasnappi.tooltip = "Näytä yläpalkki";
 
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
+            kerros.JokaRuutu += TarkistaVeto;
             Asettele();
+        }
+
+        // --- iPhonen automaattinen piilotus (kartan veto piilottaa, napautus tuo takaisin) ---------------------
+        Vector2 vetoAlku;
+        float vetoAika = -1f;
+        bool vetoKartalla;
+
+        void TarkistaVeto()
+        {
+            if (!Puhelin || piilossa || !nakyy) { if (VetoPiilossa && (!Puhelin || piilossa)) NaytaVedonJalkeen(); return; }
+            var o = Pointer.current;
+            if (o == null) return;
+            var r = o.position.ReadValue();
+            if (o.press.wasPressedThisFrame)
+            {
+                // Vain kartalla alkanut ele: UI:n (palkki, kortit, napit) päällä alkanut ei piilota eikä näytä.
+                vetoKartalla = !kerros.PeittaaPisteen(r);
+                vetoAlku = r;
+                vetoAika = Time.unscaledTime;
+                return;
+            }
+            if (!vetoKartalla || vetoAika < 0f) return;
+            float matka = (r - vetoAlku).magnitude / Mathf.Max(1f, PuhelimenSkaala);
+            if (o.press.isPressed && matka >= 8f && !VetoPiilossa) { VetoPiilossa = true; PaivitaVeto(); }
+            if (o.press.wasReleasedThisFrame)
+            {
+                if (matka < 6f && Time.unscaledTime - vetoAika < 0.7f && VetoPiilossa) NaytaVedonJalkeen();
+                vetoAika = -1f;
+            }
+        }
+
+        /// <summary>Testikomento ui ylapalkki veto|napautus: kartan veto piilottaa / napautus näyttää (simulaattorissa ei eleitä).</summary>
+        public void TestaaVeto(bool piiloon)
+        {
+            if (piiloon) { VetoPiilossa = true; PaivitaVeto(); }
+            else NaytaVedonJalkeen();
+        }
+
+        void NaytaVedonJalkeen()
+        {
+            if (!VetoPiilossa) return;
+            VetoPiilossa = false;
+            PaivitaVeto();
+        }
+
+        void PaivitaVeto()
+        {
+            palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
+            PaivitaNappi();
+            PalkkiPiilossaMuuttui?.Invoke();
         }
 
         void Asettele()
@@ -190,14 +269,17 @@ namespace Matkakirja.Natiivi
                 palkki.EnableInClassList("mk-ylapalkki--saari", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
                 pilleri.style.fontSize = StyleKeyword.Null;
-                palkki.style.paddingTop = r.y;
-                palkki.style.paddingLeft = r.x + 10;
-                palkki.style.paddingRight = r.z + 10;
+                var t = Tayte;
+                palkki.style.paddingTop = r.y + t.x;
+                palkki.style.paddingBottom = t.x;
+                palkki.style.paddingLeft = r.x + t.y;
+                palkki.style.paddingRight = r.z + t.y;
                 palkki.style.height = r.y + Korkeus;
             }
+            palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
             bool p = Piilossa;
-            if (p != piilossa) { piilossa = p; if (!p) Sulje(); }
-            palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa);
+            if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
+            palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
             PaivitaNappi();
         }
 
@@ -261,7 +343,8 @@ namespace Matkakirja.Natiivi
         void AsetaKelluva()
         {
             bool k = Kelluva;
-            Ratas.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
+            // ⚙ ei ole pelaajan näkymässä (omistajan löydös 37, Fable 24.9.): asetukset ☰ → Muut → Asetukset.
+            Ratas.style.display = DisplayStyle.None;
             if (kelluvaNyt == k) return;
             kelluvaNyt = k;
             SiirraVieraat();
@@ -341,7 +424,7 @@ namespace Matkakirja.Natiivi
 
         void PaivitaNappi()
         {
-            vakasnappi.style.display = piilossa && nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            vakasnappi.style.display = (piilossa || VetoPiilossa) && nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             vakasnappi.EnableInClassList("mk-vakasnappi--auki", Auki);
             vakasnappi.pickingMode = Auki ? PickingMode.Ignore : PickingMode.Position;
             vakasnappi.tooltip = Auki ? "Piilota yläpalkki" : "Näytä yläpalkki";
@@ -426,7 +509,7 @@ namespace Matkakirja.Natiivi
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
-                kello.text = "· " + uusiKello;
+                kello.text = uusiKello; // web: kello omana tekstinään pillerin välillä, ei pistettä
             }
             pilleri.style.display = teksti.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             SovitaPilleri();

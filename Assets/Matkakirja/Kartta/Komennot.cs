@@ -47,6 +47,8 @@ namespace Matkakirja
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 2; ei tallennu)
     ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
+    ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
+    ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
@@ -363,6 +365,17 @@ namespace Matkakirja
                     if (r > 1f || g > 1f || b > 1f) { r /= 255f; g /= 255f; b /= 255f; }
                     kk.S2Meri(new Color(r, g, b), (float)D(4));
                     Debug.Log($"MATKAKIRJA lennon pinta: s2meri {KarttaKerrokset.S2MeriVari} kynnys {KarttaKerrokset.S2MeriKynnys:0.###}");
+                    break;
+                }
+                case "nimet":
+                {
+                    // nimet paalle|pois|laske | nimet valtameret paalle|pois | nimet siirto <x> (Nimikerros, löydös 38)
+                    var nk = Nimikerros.Instanssi;
+                    if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nimikerros puuttuu"); break; }
+                    if (o.Length > 1 && (o[1] == "paalle" || o[1] == "pois")) nk.paalla = o[1] == "paalle";
+                    else if (o.Length > 2 && o[1] == "valtameret") nk.valtameret = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "siirto") nk.tasoSiirto = (float)D(2);
+                    Debug.Log(nk.Kuvaus());
                     break;
                 }
                 case "palvelin":

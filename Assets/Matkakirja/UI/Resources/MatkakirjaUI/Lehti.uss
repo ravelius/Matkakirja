@@ -220,10 +220,11 @@
 }
 
 .mk-lehti__johdanto {
-    font-size: 16px;
+    /* Web .johdanto: Iowan kursiivi 16,32 px, rgba(70, 51, 31, 0,9), alaväli 17,6. */
+    font-size: 16.32px;
     white-space: normal;
-    margin-bottom: 16px;
-    color: rgba(58, 42, 26, 0.9);
+    margin-bottom: 17.6px;
+    color: rgba(70, 51, 31, 0.9);
 }
 
 .mk-lehti__esittely,
@@ -232,6 +233,19 @@
     white-space: normal;
     margin-bottom: 10px;
     color: rgba(58, 42, 26, 0.95);
+}
+
+/* Web #arrival-intro p: American Typewriter 16 px #5a4326. */
+.mk-lehti__esittely {
+    color: #5a4326;
+}
+
+/* Web .teksti (aihesivun nosto): Iowan 16,32 px #211d18. */
+.mk-lehti__teksti {
+    font-size: 16.32px;
+    white-space: normal;
+    margin-bottom: 8px;
+    color: #211d18;
 }
 
 /* Anfangi (web ::first-letter: American Typewriter 700, 3,1 em, rgba(70, 51, 31, 0,9)); koko ja paikka koodista. */

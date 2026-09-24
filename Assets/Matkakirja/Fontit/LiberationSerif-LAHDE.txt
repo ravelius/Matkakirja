@@ -1,0 +1,9 @@
+Liberation Serif 2.1.5 (Regular, Italic)
+Lisenssi: SIL Open Font License 1.1 (LiberationSerif - OFL.txt)
+Lähde: https://github.com/liberationfonts/liberation-fonts/releases/tag/2.1.5
+Paketti: https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz
+Paketin SHA-256: 7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0
+Attribuutio: Liberation Serif, © 2012 Red Hat, Inc.; digitized data © 2010 Google Corporation. SIL OFL 1.1.
+Käyttö: aluenimet (Fable 24.9.2026, löydös 38) — sama fontti rekisteröidään webin nimiöpolttoon.
+0e3dea9f8d613e006ccfa62201f33e265d19167bd0907725c3e145368b04fc2e  LiberationSerif-Italic.ttf
+058ea80864aef09a23f45cbec2bb5400bc3dfbdea01c3f10538a21fcb497fb74  LiberationSerif-Regular.ttf

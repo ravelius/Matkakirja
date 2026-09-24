@@ -34,6 +34,7 @@ namespace Matkakirja.Natiivi
         readonly List<Merkki> merkit = new List<Merkki>();
         readonly Dictionary<string, NostoMerkit.Rivi> rivit = new Dictionary<string, NostoMerkit.Rivi>();
         NostoKerros lahde;
+        PalloKierto lepoKierto;
         IKarttaValot valot;
         bool sallittu = true;
         /// <summary>Linssinimet-tila: merkit näkyvät linssin aikana ilman napautusta (NostoKerros.LinssiNimet).</summary>
@@ -81,6 +82,13 @@ namespace Matkakirja.Natiivi
                 if (lahde != null) lahde.Paivittyi += Paivita;
                 Paivita();
             }
+            var kierto = k != null ? k.kierto : null;
+            if (kierto != lepoKierto)
+            {
+                if (lepoKierto != null) lepoKierto.LepoMuuttui -= Lepo;
+                lepoKierto = kierto;
+                if (lepoKierto != null) lepoKierto.LepoMuuttui += Lepo;
+            }
             var p = UiPalvelut.KarttaValot;
             if (p != valot)
             {
@@ -90,6 +98,9 @@ namespace Matkakirja.Natiivi
                 Paivita();
             }
         }
+
+        /// <summary>Kamera pysähtyi: merkit pyöristetyille pikseleille (liikkeen aikana ne kulkevat pyöristämättä).</summary>
+        void Lepo(bool levossa) { if (levossa) Paivita(); }
 
         void Paivita()
         {
@@ -136,7 +147,12 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 else m.Ryhma = null;
-                m.El.style.translate = new Translate(Mathf.Round(m.Piste.x), Mathf.Round(m.Piste.y));
+                // Löydös 27 (hytinä panoroinnin jälkeen): liu'un hiipuessa kamera liikkuu alle pikselin, ja kokonaisiin
+                // pikseleihin pyöristetyt merkit hyppivät kartan päällä edestakaisin. Liikkeen aikana pyöristämättä
+                // (merkki kulkee kartan mukana), levossa pikselille (terävä teksti).
+                bool liikkuu = lepoKierto != null && !lepoKierto.Levossa;
+                m.El.style.translate = liikkuu ? new Translate(m.Piste.x, m.Piste.y)
+                    : new Translate(Mathf.Round(m.Piste.x), Mathf.Round(m.Piste.y));
             }
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
             if (viuhkanAvain != null && !viuhkaLoytyi) SuljeViuhka();

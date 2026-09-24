@@ -1,7 +1,8 @@
 // Siirtokohteen merkki (web js/pallolauta/merkit.js kohdeElementti, css .target-piste/.target-halo):
 // kultalevy rgba(246,210,122,0.72), punamullan katkoviiva (--mark #b03a2b, 3 pt, katko 6/4; reitin varren
-// piste 2,2 pt, 4/3, levy 0,55) ja hengittävä halo (--accent #d9a13b, 5 pt, 2,4 s: säde ×1,14 ↔ ×1,42,
-// peitto 0,85 ↔ 0,4). Neliö KaupunkiMerkit-juuressa, yksi yksikkö = yksi näytön piste; _Koko = sivu pisteinä.
+// piste 2,2 pt, 4/3, levy 0,55) ja hengittävä halo (--accent #d9a13b, 2,4 s: säde ×1,14 ↔ ×1,42,
+// peitto 0,85 ↔ 0,4). Halon viiva 3,4 pt (reitin varren piste 2,4): pallolaudan merkki on .target-halo.fokus
+// (css/styles.css:8293, js/pallolauta/merkit.js ympyra('target-halo fokus')), ei laudan 5 yksikön .target-halo. Neliö KaupunkiMerkit-juuressa, yksi yksikkö = yksi näytön piste; _Koko = sivu pisteinä.
 Shader "Matkakirja/Kohdemerkki"
 {
     Properties
@@ -13,6 +14,7 @@ Shader "Matkakirja/Kohdemerkki"
         _Viiva("Viiva (pt)", Float) = 3
         _Katko("Katko ja väli (pt)", Vector) = (6, 4, 0, 0)
         _Koko("Neliön sivu (pt)", Float) = 48
+        _HaloViiva("Halon viiva (pt)", Float) = 3.4
     }
     SubShader
     {
@@ -32,7 +34,7 @@ Shader "Matkakirja/Kohdemerkki"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _Taytto, _Viivavari, _Halovari;
-                float _Sade, _Viiva, _Koko;
+                float _Sade, _Viiva, _Koko, _HaloViiva;
                 float4 _Katko;
             CBUFFER_END
 
@@ -59,7 +61,7 @@ Shader "Matkakirja/Kohdemerkki"
                 float s = t < 0.5 ? t * 2.0 : (1.0 - t) * 2.0;
                 float e = s * s * (3.0 - 2.0 * s);
                 float haloR = _Sade * lerp(1.14, 1.42, e);
-                float haloA = lerp(0.85, 0.40, e) * (1.0 - smoothstep(2.5 - 0.5 * w, 2.5 + 0.5 * w, abs(r - haloR)));
+                float haloA = lerp(0.85, 0.40, e) * (1.0 - smoothstep(_HaloViiva * 0.5 - 0.5 * w, _HaloViiva * 0.5 + 0.5 * w, abs(r - haloR)));
                 half4 c = half4(_Halovari.rgb, haloA * _Halovari.a);
                 // Levy.
                 float levy = 1.0 - smoothstep(_Sade - w, _Sade, r);

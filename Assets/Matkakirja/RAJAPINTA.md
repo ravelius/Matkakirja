@@ -71,6 +71,22 @@ Webin pallon nostokerros (js/pallolauta/nostot.js, js/fokuskohteet.js). Kartta p
 | `string Maa { get; set; }`, `NykyinenMaa` | Pakotettu maa (ISO3) tai null = nappulan kaupungin maa. |
 | `bool LinssiNimet` | Linssinimet (KarttaKerrokset `"linssinimet"`): saapumisportti ohitetaan ja `Lahella` on tosi. **Natiivi-UI:** näytä merkit linssin aikana, kun tämä on tosi (`NaytaSallittu(false)` ei silloin piilota), ilman napautusta ja viuhkaa. |
 
+## 3d. Nimikerros — `Nimikerros` (`Nimikerros.Instanssi`), build 11
+
+Webin poltetun nimiötason maakunnat, nykyalueet ja meret sekä pohjalaattojen valtameret (löydös 38), elävinä mutta
+painettuina maahan: teksti on pinnan tangenttitasossa (koko `korkeus_m` × `leveys_m`, kulma), näkyy vain omilla
+pallotasoillaan (taso kamerakorkeudesta), häivytetään kallistuksessa 65–75°:n katselukulmassa ja käännetään 180°, jos
+se olisi ruudulla ylösalaisin. Merien alla webin aaltomerkki. Aineisto: kokoelma `aluenimet` (skeema 1.37); vanhassa
+paketissa `merinimet` (1.36) varareittinä (meri, joka on molemmissa, luetaan aluenimistä); ei kumpaakaan = tyhjä
+kerros. Puhtaat osat: `Kartta/NimiLadonta.cs` (testit `Kartta-testit/Testit/NimiLadontaTestit.cs`). Nimiin ei voi napauttaa.
+
+| Jäsen | Merkitys |
+|---|---|
+| `Ruutuvaraukset KaupunkiMerkit.Varaukset` | YHTEINEN RUUTUTÖRMÄYS: kehyksen varatut nimiöalueet pikseleinä (origo vasen ala). Kaupungit varaavat ensin, Nimikerros lisää nostojen laatikot (`NostoKerros.Naytettavat`, Natiivi-UI:n mitoin) ja omat nimensä. Prioriteetti kaupunki > nosto > maakunta/nykyalue > meri > valtameri; alempi nimi piilotetaan paikallaan (webin väistö on jo paikoissa). Uusi kirjoittaja: `Varmista(Time.frameCount)` ja `YritaVarata`. |
+| `TMP_FontAsset fonttiPysty, fonttiKursiivi` | Liberation Serif Regular ja Italic SDF (Fable 24.9.2026; Rakennus lukee `Fontit/LiberationSerif-Regular SDF.asset` ja `-Italic SDF.asset`, kun ne on tehty). Tyhjä = `KaupunkiMerkit.fontti` (EB Garamond), kursiivi TMP:n vinona. Yksi materiaali fonttia kohden (TMP Distance Field Overlay, ZTest Always). |
+| `bool paalla`, `bool valtameret` | Koko kerros; valtameret pois oletuksena, koska pohjasarja 2026-09-23a sisältää ne poltettuina Z1–Z4. |
+| `int Taso`, `double JatkuvaTaso`, `int Naytetty`, `string Kuvaus()` | Pallotaso ja mittarit. Testi: `nimet paalle|pois|laske`, `nimet valtameret paalle`, `nimet siirto 0.6`. |
+
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
 Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
@@ -78,7 +94,8 @@ Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
 | Jäsen | Merkitys |
 |---|---|
 | `void Nakyvyys(string kerros, bool)` | Sisäiset kerrokset: `"laatat"`, `"maasto"`, `"kaupungit"`, `"nimiot"`, `"reitit"`, `"napakannet"` (napakalotit ja niiden varakannet; reliefin ollessa pohjan tilalla kalotti piiloon ja kansi reliefin sävyyn automaattisesti), `"nappula"` (nappula ja kone), `"pisteet"` (Karttapisteet), `"valot"` (karttavalot; valinta säilyy). Linssiportti piilottaa nämä kuten webin body.aikajana-paalla. |
-| `Nakyvyys("linssinimet", bool)`, `bool Linssinimet` | Webin linssikartan nimet (build 10): kun linssi on piilottanut `"kaupungit"`, kaupunkipisteet ja -nimet näkyvät webin linssiasussa (harvennettu kapiteeli 0,14 em, muste rgba(103,88,73,0.92), nimi 9,5/10,5 pt, piste 3,3/4,3 pt) ilman napautusta, huomiorenkaita ja maan kehää, ja `NostoKerros.LinssiNimet` päästää nostot saapumisportin ohi ja avaa `Lahella`-portin (ryhmien nimet). Tila purkautuu, kun `"kaupungit"` palaa. Merinimiä ei vielä ole natiivissa. Testi: `kerros kaupungit pois`, `kerros nimiot pois`, `kerros linssinimet paalle`. |
+| `Nakyvyys("aluenimet", bool)` | Alue-, meri- ja valtamerinimet (Nimikerros, luku 3d) päälle tai pois. Ne seuraavat lisäksi `"kaupungit"`- ja `"nimiot"`-porttia (linssin aikana vain meret). |
+| `Nakyvyys("linssinimet", bool)`, `bool Linssinimet` | Webin linssikartan nimet (build 10): kun linssi on piilottanut `"kaupungit"`, kaupunkipisteet ja -nimet näkyvät webin linssiasussa (harvennettu kapiteeli 0,14 em, muste rgba(103,88,73,0.92), nimi 9,5/10,5 pt, piste 3,3/4,3 pt) ilman napautusta, huomiorenkaita ja maan kehää, ja `NostoKerros.LinssiNimet` päästää nostot saapumisportin ohi ja avaa `Lahella`-portin (ryhmien nimet). Tila purkautuu, kun `"kaupungit"` palaa. Merinimet näkyvät linssin aikana Nimikerroksesta (luku 3d). Testi: `kerros kaupungit pois`, `kerros nimiot pois`, `kerros linssinimet paalle`. |
 | `string LisaaRasteri(avain, urlTemplate, WebMercator/Geographic, minTaso, maxTaso, alfa)` | Linssin oma raster-kerros laattojen päälle (Cesium UrlTemplate). Enintään 2 linssikerrosta kerrallaan (Cesiumin oletusmateriaali tukee kolmea kerrosta). |
 | `void PoistaRasteri(avain)`, `void Alfa(avain, float)` | |
 | `event Action<string> KerrosValmis` | Linssin rasteri ladattu näkyvältä alueelta (Cesium ComputeLoadProgress). |

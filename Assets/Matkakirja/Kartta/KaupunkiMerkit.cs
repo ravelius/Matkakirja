@@ -84,10 +84,27 @@ namespace Matkakirja
             // TMP:n characterSpacing on em/100.
             n.characterSpacing = l ? linssiValistysEm * 100f : 0f;
             n.color = l ? linssiMuste : musteenVari;
-            n.transform.localPosition = new Vector3(pk * 0.5f + valistys, 0, 0);
+            if (m.valintamerkki && !l)
+            {
+                // Valittavan nimi kohdemerkin asussa (web .target-nimi): lihava, 13 pt, keskellä huomiorenkaan
+                // yläpuolella (ks. ValintaNimenY). Nimi on kehotus toimia, joten se ei harvennu (LateUpdate).
+                n.fontSize = valintaKirjain;
+                n.fontStyle = FontStyles.Bold;
+                n.color = valintaMuste;
+                n.alignment = TextAlignmentOptions.Bottom;
+                n.rectTransform.pivot = new Vector2(0.5f, 0f);
+                n.transform.localPosition = new Vector3(0, ValintaNimenY, 0);
+            }
+            else
+            {
+                n.alignment = TextAlignmentOptions.MidlineLeft;
+                n.rectTransform.pivot = new Vector2(0, 0.5f);
+                n.transform.localPosition = new Vector3(pk * 0.5f + valistys, 0, 0);
+            }
             n.ForceMeshUpdate(true);
             var koko = n.GetRenderedValues(false) * 10f;
-            m.koko = new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk));
+            m.koko = m.valintamerkki && !l ? new Vector2(koko.x, koko.y)
+                                            : new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk));
         }
 
         /// <summary>
@@ -142,6 +159,34 @@ namespace Matkakirja
             }
         }
         MaterialPropertyBlock korostusLohko;
+
+        [Header("Aloitusvalinnan kohdemerkki (web js/pallolauta/merkit.js kohdeElementti, huomio: true)")]
+        // WEB ON MALLI, MITATTUNA (Pelikoodarin löydös 24.9.2026: natiivissa valittavilla oli vain kultapiste ja
+        // huomiorengas). Webissä jokainen lähtövalinnan kaupunki on nopanheiton kohdemerkki huomiorenkaan sisällä
+        // (js/pallolauta/lauta.js:2481 aloitusKohteet → huomio: true). Lähteet, pelin repo origin/main 24.9.2026:
+        //  - merkki 24 px (js/pallolauta/merkit.js:40 KOHDEMERKIN_PX), kultalevy rgba(246, 210, 122, 0.72) ja
+        //    punamullan katkoviiva --mark #b03a2b, 3 px, katko 6 / väli 4 (css/styles.css:8265 .target-piste,
+        //    :90 --mark); hengittävä halo --accent #d9a13b 3,4 px, 2,4 s: säde ×1,14 ↔ ×1,42, peitto 0,85 ↔ 0,4
+        //    (css/styles.css:8176 .target-halo, :8188 @keyframes kohde-halo, :8293 .target-halo.fokus). Piirto:
+        //    sama Matkakirja/Kohdemerkki-varjostin kuin siirtokohteilla (Siirtokohdemerkit).
+        //  - huomiorengas: KOHDEMERKIN_HUOMIO_PX 54 (merkit.js:84), --kulta #eab84e, viiva 2,6, täyttö 0,08,
+        //    syke 2,6 s: säde ×1 → ×1,16, peitto 0,92 → 0,42 (css/styles.css:26718 .pallolauta-huomio, :26729).
+        //  - nimi: 13 px (merkit.js:44 KOHDEMERKIN_NIMI_PX), paino 600, "Iowan Old Style", väri --map-ink #46331f,
+        //    vaalea reunus rgba(247, 237, 216, 0.92) 3 px (css/styles.css:8310 .target-nimi, :87 --map-ink);
+        //    perusviiva huomiorenkaan säteen (27) + raon 8 (merkit.js:64 KOHDEMERKIN_NIMI_RAKO_PX) yläpuolella
+        //    (merkit.js:214 nimenSade, :240 y = −(nimenSade + rako)).
+        [Tooltip("Matkakirja/Kohdemerkki (Rakennus.cs: sama kuin Siirtokohdemerkit.materiaali). Tyhjä = Siirtokohdemerkit.Instanssi.")]
+        public Material kohdemerkkiMateriaali;
+        [Tooltip("KOHDEMERKIN_PX 24 (merkit.js:40).")]
+        public float kohdemerkkiPx = 24f;
+        [Tooltip("Valittavan nimen koko (pt): KOHDEMERKIN_NIMI_PX 13 (merkit.js:44).")]
+        public float valintaKirjain = 13f;
+        [Tooltip("Nimen rako huomiorenkaan yläpuolella (pt): KOHDEMERKIN_NIMI_RAKO_PX 8 (merkit.js:64).")]
+        public float valintaNimiRako = 8f;
+        [Tooltip("Web --map-ink #46331f (css/styles.css:87).")]
+        public Color valintaMuste = new Color32(0x46, 0x33, 0x1f, 0xff);
+        /// <summary>Nimen alareuna keskipisteestä (pt): web nimenSade = max(12 × 1,42, 54 / 2) = 27, + rako 8.</summary>
+        float ValintaNimenY => Mathf.Max(kohdemerkkiPx * 0.5f * 1.42f, rengasSade) + valintaNimiRako;
 
         [Header("Aloitusvalinnan huomiorengas (web .pallolauta-huomio)")]
         [Tooltip("Matkakirja/Rengas (Rakennus.cs); väri #eab84e (web --kulta).")]
@@ -201,6 +246,9 @@ namespace Matkakirja
             {
                 // Linssinimissä ei huomiorenkaita (web: linssin aikana ei pelin merkkejä).
                 bool paalla = !LinssiTila && rengasIdt.Contains(m.kaupunki.id);
+                // Valinnan aikana (ei valittua, ei lennon väriä) rengas saa sisäänsä kohdemerkin ja nimi
+                // kohdemerkin asun (web kohdeElementti huomio: true); valittu kaupunki lennon ajan pelkällä renkaalla.
+                AsetaValintamerkki(m, paalla && rengasValittu == null && !rengasVari.HasValue);
                 if (paalla && m.rengas == null) m.rengas = TeeRengas(m);
                 if (m.rengas == null) continue;
                 if (m.rengas.gameObject.activeSelf != paalla) m.rengas.gameObject.SetActive(paalla);
@@ -214,7 +262,63 @@ namespace Matkakirja
                 rengasLohko.SetFloat("_Koko", sivu);
                 m.rengas.GetComponent<MeshRenderer>().SetPropertyBlock(rengasLohko);
             }
+            jarjestys.Clear();
+            valintamerkkeja = 0;
+            foreach (var m in merkit) if (m.valintamerkki) { jarjestys.Add(m); valintamerkkeja++; }
+            if (valintamerkkeja > 0) foreach (var m in merkit) if (!m.valintamerkki) jarjestys.Add(m);
         }
+
+        /// <summary>Valittavien järjestys LateUpdatessa: valintamerkit ensin, jotta niiden nimet varaavat tilansa.</summary>
+        readonly List<Merkki> jarjestys = new List<Merkki>();
+        int valintamerkkeja;
+        MaterialPropertyBlock kohdeLohko;
+
+        /// <summary>
+        /// Kohdemerkki huomiorenkaan sisään, kaupunkipiste pois (web: valittavalla ei ole erillistä pistettä,
+        /// vain .target-piste) ja nimi kohdemerkin asuun (Tyyli). Mitat kuten Siirtokohdemerkit (sivu = laajin halo
+        /// + viiva + pehmennys).
+        /// </summary>
+        void AsetaValintamerkki(Merkki m, bool paalla)
+        {
+            if (paalla && m.kohdemerkki == null)
+            {
+                var mat = kohdemerkkiMateriaali != null ? kohdemerkkiMateriaali
+                        : Siirtokohdemerkit.Instanssi != null ? Siirtokohdemerkit.Instanssi.materiaali : null;
+                if (mat != null)
+                {
+                    var t = new GameObject("Kohdemerkki").transform;
+                    t.SetParent(m.juuri, false);
+                    float sivu = kohdemerkkiPx * 1.42f + 8f;
+                    t.localScale = new Vector3(sivu, sivu, 1);
+                    t.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+                    var r = t.gameObject.AddComponent<MeshRenderer>();
+                    r.sharedMaterial = mat;
+                    r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    r.receiveShadows = false;
+                    kohdeLohko ??= new MaterialPropertyBlock();
+                    kohdeLohko.Clear();
+                    kohdeLohko.SetFloat("_Sade", kohdemerkkiPx * 0.5f);
+                    kohdeLohko.SetFloat("_Koko", sivu);
+                    kohdeLohko.SetFloat("_Viiva", 3f);
+                    kohdeLohko.SetFloat("_HaloViiva", 3.4f);
+                    kohdeLohko.SetVector("_Katko", new Vector4(6, 4, 0, 0));
+                    kohdeLohko.SetColor("_Taytto", new Color(0.965f, 0.824f, 0.478f, 0.72f));
+                    r.SetPropertyBlock(kohdeLohko);
+                    m.kohdemerkki = t;
+                }
+                else if (!kohdeVaroitettu)
+                {
+                    kohdeVaroitettu = true;
+                    Debug.LogWarning("MATKAKIRJA kaupungit: kohdemerkkiMateriaali puuttuu (ei Siirtokohdemerkit-instanssia)");
+                }
+            }
+            if (m.kohdemerkki != null && m.kohdemerkki.gameObject.activeSelf != paalla) m.kohdemerkki.gameObject.SetActive(paalla);
+            if (m.pisteT.gameObject.activeSelf == paalla) m.pisteT.gameObject.SetActive(!paalla);
+            if (m.valintamerkki == paalla) return;
+            m.valintamerkki = paalla;
+            Tyyli(m);
+        }
+        bool kohdeVaroitettu;
 
         Transform TeeRengas(Merkki m)
         {
@@ -270,13 +374,21 @@ namespace Matkakirja
             public float pisteKoko;
             public int tyyli; // Tarkeys 0–2: pisteen ja nimiön asu
             public bool korostettu; // Korosta: piste 1,5-kertainen
+            public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
+            public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
         }
 
         /// <summary>Osuus etäisyydestä, jonka verran merkki tuodaan pinnan eteen.</summary>
         const float Etuna = 0.3f;
 
         readonly List<Merkki> merkit = new List<Merkki>();
-        readonly List<Rect> varatut = new List<Rect>();
+
+        /// <summary>
+        /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut nimiöalueet pikseleinä. Kaupungit varaavat
+        /// ensin (LateUpdate), ja Nimikerros lisää samaan nostojen laatikot ja alue-, meri- ja valtamerinimet
+        /// (prioriteetti kaupunki > nosto > maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado).
+        /// </summary>
+        public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
         Mesh nelio;
 
         public int Naytetty { get; private set; }
@@ -444,12 +556,7 @@ namespace Matkakirja
                 // Huomiorenkaan sisällä napautus osuu (säde 27 pt > osumaSade 22 pt).
                 float raja = m.rengas != null && m.rengas.gameObject.activeSelf ? Mathf.Max(osumaSade, rengasSade) * kerroin : osumaSade * kerroin;
                 // Näkyvän nimiön päällä napautus osuu myös.
-                if (m.nimio.enabled)
-                {
-                    var koko = m.koko * kerroin;
-                    if (ruutu.x >= p.x && ruutu.x <= p.x + koko.x && Mathf.Abs(ruutu.y - p.y) <= koko.y * 0.5f)
-                        d = Mathf.Min(d, 1f);
-                }
+                if (m.nimio.enabled && NimenAla(m, p, kerroin).Contains(ruutu)) d = Mathf.Min(d, 1f);
                 if (d < raja && d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
             }
             return paras;
@@ -496,10 +603,11 @@ namespace Matkakirja
             // Retina-näytöllä yksi piste on 2–3 pikseliä; mitoitus tehdään pisteinä.
             float kerroin = PalloKierto.Pistekerroin;
             float pikseleita = Screen.height / kerroin;
-            varatut.Clear();
+            Varaukset.Aloita(Time.frameCount);
             int naytetty = 0;
 
-            foreach (var m in merkit)
+            // Valintamerkit ensin (jarjestys), muuten tärkeysjärjestys (merkit).
+            foreach (var m in valintamerkkeja > 0 ? jarjestys : merkit)
             {
                 // Korkeuskerroin nostaa maastoa: merkki nousee saman verran (paketin pintakorkeudesta).
                 Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
@@ -522,23 +630,34 @@ namespace Matkakirja
                 m.juuri.localScale = Vector3.one * mk;
 
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
-                var koko = m.koko * kerroin;
-                var suorakulmio = new Rect(ruutu.x - 4 * kerroin, ruutu.y - koko.y * 0.5f - 2 * kerroin,
-                    koko.x + 8 * kerroin, koko.y + 4 * kerroin);
-                bool mahtuu = nimiotNakyvat || LinssiTila;
-                foreach (var v in varatut)
-                    if (v.Overlaps(suorakulmio)) { mahtuu = false; break; }
+                var ala = NimenAla(m, ruutu, kerroin);
+                var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
+                // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
+                bool valinta = m.valintamerkki && !LinssiTila;
+                bool mahtuu = valinta || nimiotNakyvat || LinssiTila;
+                if (!valinta && mahtuu && Varaukset.Osuu(Laatikko(suorakulmio))) mahtuu = false;
                 if (mahtuu)
                 {
                     // Varataan nimiö ja oma piste: myöhempi nimiö ei saa peittää kumpaakaan.
                     float pp = m.pisteKoko * kerroin;
-                    varatut.Add(suorakulmio);
-                    varatut.Add(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp));
+                    Varaukset.Varaa(Laatikko(suorakulmio));
+                    Varaukset.Varaa(Laatikko(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp)));
                     naytetty++;
                 }
                 if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
             }
             Naytetty = naytetty;
+        }
+
+        static Ruutulaatikko Laatikko(Rect r) => new Ruutulaatikko(r.xMin, r.yMin, r.xMax, r.yMax);
+
+        /// <summary>Nimiön alue ruudulla (pikseleinä, y ylös): oikealla pisteestä, valintamerkillä keskellä renkaan yläpuolella.</summary>
+        Rect NimenAla(Merkki m, Vector2 p, float kerroin)
+        {
+            var koko = m.koko * kerroin;
+            if (m.valintamerkki && !LinssiTila)
+                return new Rect(p.x - koko.x * 0.5f, p.y + ValintaNimenY * kerroin, koko.x, koko.y);
+            return new Rect(p.x, p.y - koko.y * 0.5f, koko.x, koko.y);
         }
 
         static Mesh Nelio()

@@ -222,7 +222,7 @@ namespace Matkakirja.Natiivi
             var r = LinssiUi.Rekisteri;
             var lista = testiLinssit ?? r?.Valittavat.Select(l => l.Tiedot).ToList();
             // iPhone: linssit vain kartan silmälasinapista, ei laukusta (omistaja 24.9.2026, löydös 7).
-            bool on = !Ylapalkki.Kelluva && lista != null && lista.Count > 0;
+            bool on = !Ylapalkki.Puhelin && lista != null && lista.Count > 0; // iPhone: linssit vain ☰:stä (omistaja 11.2x)
             varusteOtsikko.style.display = varusteet.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
             if (!on) return;
             string auki = testiLinssit != null ? testiAuki : r?.Auki?.Tiedot?.Id;

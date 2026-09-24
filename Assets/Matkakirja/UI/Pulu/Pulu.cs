@@ -455,7 +455,7 @@ namespace Matkakirja.Natiivi
         /// Pulun ja isoisän tekstit piilossa (löydös 21): iPhonella aina, muualla kertojan luennan ajan (web
         /// tekstitPiilossa). Testikomento ui pulu tekstit piiloon|nakyviin|auto.
         /// </summary>
-        public static bool TekstitPiilossa => PakotaTekstit ?? (Ylapalkki.Kelluva || Aanet.KertojaPuhuu);
+        public static bool TekstitPiilossa => PakotaTekstit ?? (Ylapalkki.Puhelin || Aanet.KertojaPuhuu);
         public static bool? PakotaTekstit;
 
         string piilotettu;

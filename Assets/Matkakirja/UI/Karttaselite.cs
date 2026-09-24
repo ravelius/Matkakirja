@@ -94,6 +94,7 @@ namespace Matkakirja.Natiivi
                 nappi.style.opacity = auki ? 0f : 1f;
                 nappi.pickingMode = auki ? PickingMode.Ignore : PickingMode.Position;
             };
+            Ylapalkki.PalkkiPiilossaMuuttui += PaivitaNappi;
             // Napautus paneelin ohi (myös pallolle, jota UI ei näe) sulkee.
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
@@ -213,7 +214,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssi ei päällä eikä aloitusnäkymä auki (web: aloituksessa ei selitteen nappia).</summary>
         void PaivitaNappi()
         {
-            bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki;
+            // Palkki piilossa (vaaka, iPhonen veto): vain ☰ näkyy (omistaja 24.9.).
+            bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa;
             if (!nakyy) Sulje();
             nappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
         }

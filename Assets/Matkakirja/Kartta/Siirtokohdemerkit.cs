@@ -104,6 +104,8 @@ namespace Matkakirja
                 lohko.SetFloat("_Sade", px * 0.5f);
                 lohko.SetFloat("_Koko", sivu);
                 lohko.SetFloat("_Viiva", kaupunki ? 3f : 2.2f);
+                // .target-halo.fokus 3,4 / .far 2,4 (css/styles.css:8293–8298).
+                lohko.SetFloat("_HaloViiva", kaupunki ? 3.4f : 2.4f);
                 lohko.SetVector("_Katko", kaupunki ? new Vector4(6, 4, 0, 0) : new Vector4(4, 3, 0, 0));
                 lohko.SetColor("_Taytto", new Color(0.965f, 0.824f, 0.478f, kaupunki ? 0.72f : 0.55f));
                 r.SetPropertyBlock(lohko);

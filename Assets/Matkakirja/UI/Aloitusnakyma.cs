@@ -641,7 +641,7 @@ namespace Matkakirja.Natiivi
             Puhe.Instanssi?.Pysayta();
             LivianAvaus.Peru();
             var merkit = valintaMerkit;
-            LopetaPallovalinta();
+            LopetaPallovalinta(true);
             // Valittu kaupunki pitää renkaansa (valittu-asu) aloituslennon loppuun (AloituslentoPaattyi).
             if (merkit != null) merkit.Renkaat(new[] { id }, id);
             rengasMerkit = merkit;
@@ -733,6 +733,8 @@ namespace Matkakirja.Natiivi
         KaupunkiMerkit rengasMerkit;
         Karttapisteet valintaPisteet;
         PalloKierto valintaKierto;
+        /// <summary>Pelinappula Lontoossa valinnan ajan (KarttaKerrokset.nappula).</summary>
+        Nappula valintaNappula;
         readonly List<string> valintaIdt = new List<string>();
 
         /// <summary>Lähtövalinta pallolla käynnissä (verho pois, pallon syöte vapaana).</summary>
@@ -760,12 +762,16 @@ namespace Matkakirja.Natiivi
             valintaMerkit.NaytaVain(nakyvat);
             // Valittavien hehkurenkaat (web .pallolauta-huomio; Natiivisepän KaupunkiMerkit.Renkaat).
             valintaMerkit.Renkaat(valintaIdt);
-            foreach (var id in valintaIdt)
-            {
-                valintaMerkit.Korosta(id, Huomio);
-                var k = UiSisalto.Kaupunki(id);
-                if (k != null && !double.IsNaN(k.Lat)) valintaPisteet.Aseta(PisteEtuliite + id, k.Lat, k.Lon, Huomio, false);
-            }
+            // Ei erillistä kultaista Valopistettä (Karttapisteet): webissä valittavan merkki on kohdemerkki
+            // huomiorenkaan sisällä (KaupunkiMerkit.Renkaat piirtää sen), ja napautus osuu renkaaseen.
+            foreach (var id in valintaIdt) valintaMerkit.Korosta(id, Huomio);
+            // Pelaajan nappula lähtöpaikassa (Lontoo) valinnan ajan: web piirtää pickstartissa nappulan pelaajan
+            // paikkaan (js/pallolauta/lauta.js:5058 merkit.paivita nappula; nappulaElementti merkit.js:180, 32 × 36 px,
+            // jalka pisteessä). Natiiviseppä 24.9.2026 (Pelikoodarin löydös: Lontoossa oli pelkkä piste).
+            var lahto = UiSisalto.Kaupunki(Lahto);
+            valintaNappula = kk.nappula;
+            if (valintaNappula != null && !valintaNappula.Liikkeessa && lahto != null && !double.IsNaN(lahto.Lat))
+                valintaNappula.Aseta(lahto.Lat, lahto.Lon);
             valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
             valintaPisteet.Napautettu += PisteValittu;
             // Suoraan valintanäkymään (web lauta.aloitusnakyma); Lontoo-zoomi poistui 24.9. klo 16.1x.
@@ -787,10 +793,13 @@ namespace Matkakirja.Natiivi
             if (valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
         }
 
-        void LopetaPallovalinta()
+        /// <param name="valittiin">Kaupunki valittiin: nappula jää Lontooseen, josta aloituslento lähtee.</param>
+        void LopetaPallovalinta(bool valittiin = false)
         {
             if (!ValitseePallolla) return;
             ValitseePallolla = false;
+            if (!valittiin && valintaNappula != null && !valintaNappula.Liikkeessa) valintaNappula.Piilota();
+            valintaNappula = null;
             if (valintaKierto != null) valintaKierto.KaupunkiNapautettu -= KaupunkiValittu;
             if (valintaPisteet != null)
             {

@@ -256,6 +256,87 @@
     background-color: var(--panel);
 }
 
+/* Web .topbar (omistaja 24.9. klo 16.1x: palkki myös iPhonelle), mitattu 834 × 1194 ja 393 × 852:
+ * logo 130 × 32 / 92 × 22, pilleri #2a1f16 reuna #4b3826 pyöreä, täyte 4 11,2 / 3,2 8, 14,4 / 12,48 px,
+ * väli 7,2 / 4,8, ikoni 15 #b39c7d, kello #b39c7d; napit 44 × 36 / 40 × 40 reuna #4b3826 pyöristys 10,
+ * ikoni 19 / 15, väli 6 / 3. */
+.mk-ylapalkki .mk-logo {
+    width: 130px;
+    height: 32px;
+}
+
+.mk-ylapalkki .mk-pilleri {
+    height: 46px;
+    min-height: 46px;
+    margin: 0 0 0 11px;
+    padding: 4px 11.2px;
+    border-width: 1px;
+    border-radius: 23px;
+    border-color: #4b3826;
+    background-color: #2a1f16;
+    font-size: 14.4px;
+    color: #f3e6d0;
+}
+
+.mk-ylapalkki .mk-pilleri > .mk-ikoni {
+    width: 15px;
+    height: 15px;
+    margin-right: 7.2px;
+    color: #b39c7d;
+}
+
+.mk-ylapalkki .mk-pilleri__kello {
+    margin-left: 7.2px;
+    color: #b39c7d;
+}
+
+.mk-ylapalkki .mk-ikoninappi {
+    width: 44px;
+    height: 36px;
+    min-height: 36px;
+    margin-left: 6px;
+    border-width: 1px;
+    border-color: #4b3826;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-ylapalkki .mk-ikoninappi > .mk-ikoni {
+    width: 19px;
+    height: 19px;
+}
+
+.mk-ylapalkki--puhelin .mk-logo {
+    width: 92px;
+    height: 22px;
+}
+
+.mk-ylapalkki--puhelin .mk-pilleri {
+    margin-left: 5px;
+    padding: 3.2px 8px;
+    font-size: 12.48px;
+}
+
+.mk-ylapalkki--puhelin .mk-pilleri > .mk-ikoni {
+    margin-right: 4.8px;
+}
+
+.mk-ylapalkki--puhelin .mk-pilleri__kello {
+    margin-left: 4.8px;
+}
+
+.mk-ylapalkki--puhelin .mk-ikoninappi {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    margin-left: 3px;
+}
+
+.mk-ylapalkki--puhelin .mk-ikoninappi > .mk-ikoni {
+    width: 15px;
+    height: 15px;
+}
+
 /* iPhonen kelluva yläosa (Ylapalkki.Kelluva, omistaja 24.9.2026): ei palkkia eikä logoa; pilleri ja ☰
  * puoliläpinäkyvällä pergamentilla kuten karttaselitteen nappi (.mk-seliteNappi). */
 .mk-ylapalkki--kelluva {
