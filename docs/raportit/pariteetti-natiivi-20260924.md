@@ -64,11 +64,36 @@ Fable 24.9.2026: kauppaa ei ole (linssit ovat aarteina) ja passi = laukku
 | 18 | Valikko | **PASS (rakenne)**. Molemmissa sama osiorakenne ÄÄNET (Kertoja/Musiikki/Äänimaisema PÄÄLLÄ) ja KARTTA (Pieni liike PÄÄLLÄ). Web näyttää lisäksi "Kallistus POIS" -rivin jota natiivissa ei näy tässä kuvassa, ja natiivissa on RETKIKUNTA- ja KOKEET-osiot (Sähkelinja, Astronautin reliefi, Linssien kynnykset, Raamattu, Kehittäjälehti) joita web ei näytä — nämä ovat todennäköisesti kehittäjätilan/koetilan omia rivejä eivätkä kuulu pelaajan valikkoon, ei siis välttämättä ero. | valikko-393x852.png, natiivi-valikko-iphone.jpg | Laitetestaaja (varmista mitkä rivit ovat kehittäjätilan omia) |
 | 19 | Siirtolista (Lontoo) | **PASS (natiivi), EI VERTAILTAVISSA (web)**. Natiivi näyttää oikein "Lontoo"-kohdekortin (Bussi/Lento/Liftaus/Laiva hintoineen). Web-kuva `noppa-siirtolista-393x852.png` näyttää PELKÄN Ranska-kartan nopan kuvaketta lukuun ottamatta — sama työkaluvika-epäily kuin rivillä 17. | noppa-siirtolista-393x852.png, natiivi-siirtolista-iphone.jpg | Pelikoodari (työkalu) |
 | 20 | Laukku | **ERO — todennäköinen tilaero, ei UI-bugi**. Natiivi näyttää "VARUSTEET"-linssiruudukon ja tekstin "Matka ei ole vielä alkanut" (kortin tallenteessa ei ollut aktiivista matkaa). Web näyttää "MATKA"-yhteenvedon (Sijainti Marseille, Kukkaro £300, Untuvikko-taso, edistymispalkki, "MATKAN TILASTOT"), koska webin tallenne loi valmiiksi aktiivisen pelin. Molemmat lukevat otsikon "MATKA" samalla tavalla — todennäköisesti sama näkymä eri datalla, ei rakenne-ero. Uusittava natiivilla aktiivisen matkan kanssa suoraan vertailukelpoiseksi. | laukku-393x852.png, natiivi-laukku-iphone.jpg | Natiivi-UI (uusi aktiivisella matkalla) |
-| 21 | Noppa, Sähke, Kulkutapaliuska | **EI VERTAILTAVISSA, molemmat puutteelliset**. Kaikki kolme natiivikuvaa (`natiivi-noppa`, `natiivi-sahke`, `natiivi-kulkutapaliuska`) näyttävät PELKÄN maailmanpallon ilman dialogia — sama oire kuin `matkakirja-auki`-rivillä aiemmin (todennäköisesti ui-komento vaatii tarkemman pelitilan/kaupungin kuin pikatie antoi). Webin vastine `noppa-siirtolista` on niin ikään tyhjä (rivi 19); `sahke`-web-kuva EI ole vielä tarkistettu tässä erässä. Kumpaakaan puolta ei voi hyväksyä sellaisenaan — molemmat uusittava aktiivisella pelitilalla (natiivi: `uusi-peli`+`odota-tila Kartta` ennen komentoa; web: tarkista Pelikoodarin skriptin sahke/noppa-polku). | (ei kuvaa vertailukelpoinen) | Natiivi-UI + Pelikoodari (molemmat uusivat) |
+| 21 | Kulkutapaliuska | **PASS**. Natiivi-UI uusi aktiivisessa pelissä (uusi-peli 5 marseille, sama kuin web). Molemmissa sama alarivi: peukku/liftaus, bussi, laiva (harmaana/pois käytöstä), lento — ja "Liiku"-nappi. Natiivissa näkyy lisäksi nopan kuva "Tripoli"-tekstillä oikeassa alakulmassa (liftauksen tulos), web-kuva otettu ennen sitä vaihetta — ei ero, eri hetki. | liiku-393x852.png, natiivi-kulkutapaliuska-iphone.jpg | — |
+| 21b | Noppa | **VERTAILTAVISSA, eri vaihe**. Natiivi (uusittu) näyttää "Noppa 4" -kohdelistan (Alpit, Barcelona, Pariisi… askelmäärineen) liftauksen jälkeen. Web-kuva `noppa-393x852.png` on otettu ENNEN heittoa — pelkkä nopan kuva kartalla, ei listaa. Eri vaihe samassa kulkutapaketjussa, ei suoraan vertailukelpoinen ilman uutta web-kuvaa samasta kohdasta. | noppa-393x852.png, natiivi-noppa-iphone.jpg | Pelikoodari (web-kuva heiton jälkeen) |
+| 21c | Sähke | **PASS**. Natiivi-UI uusi (`ui sahketehtava sofia`, koska web-sähke on Sofian kohtaaminen). Rakenne ja teksti täsmäävät lähes sanatarkasti: "SÄHKE / Pöllöltä, jostain maan alta", sama sähkösanoma-arkki "SÄHKÖSANOMA N:o 1898", sama teksti LIVIALLE STOP / MISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP / VASTAA KOHDE JA VUOSI STOP / PAIKKA ON KARTAN KOHTEISSA STOP / PÖLLÖ STOP, sama KOHDE/VUOSI-lomake. | sahke-393x852.png, natiivi-sahketehtava-iphone.jpg | — |
 
-Jatkuu… (erät 3–4: kaupunkilehden loput [aihe2, lue lisää], maalehden loput
-[aihe1, mediarivi], nostokortit [kaupunkikortti uudelleen, nostokortti,
-nostovisa, elaintaky, skandaali, syvennys], kohtaaminen, aarre, pöllö,
-laukku-linssit, aloitusportti+kartta, loput linssit [maatiedot, pallo,
-radio, satelliitti, topografia, vertailu, vesistot, karuselli] — kaikki
-web-kuvat jo valmiina, Natiivi-UI ottaa vastinparit)
+**Erät 3–4 — Natiivi-UI:n kuvat molemmista laitteista valmiit (kansio
+proto-3d/lokit/pariteetti-20260924/, pelitila `uusi-peli 5 marseille`,
+puhe pois — sama kuin webin tallenne). Build enimmäkseen 3b107c0
+(poikkeus: iPhonen kartta–pollo ja linssi-radio 7878cbc:stä). Alla
+pistokoe 12/25 näkymästä (loput listattu erikseen, eivät vielä
+tarkistettuja tässä kierroksessa — ei havaittuja eroja odoteta samalla
+kaavalla, mutta on syytä käydä läpi ennen lopullista hyväksyntää).**
+
+| 22 | Kartta (pallo, ei introa) | **PASS**. Molemmat: Marseille-nasta, RANSKA/France-alatunniste, Liiku-teksti/nappi, pulu oikeassa alakulmassa. Eri kaupunkilabelit näkyvissä (eri pan/zoom), ei ero. | kartta-393x852.png, natiivi-kartta-iphone.jpg | — |
+| 23 | Matkakirjakortti (kiinni) | **EI SELVÄÄ KORTTIA KUVASSA (natiivi)**. Natiivikuva näyttää pelkän kartan + Liiku-napin, ei havaittavaa pientä liuskaa — joko kortti on niin pieni ettei erotu tästä kuvasta tai komento ei tuottanut sitä. Web-vastinparia ei vielä katsottu tarkasti. | matkakirjakortti-kiinni-393x852.png, natiivi-matkakirjakortti-kiinni-iphone.jpg | Natiivi-UI (varmista näkyykö kortti) |
+| 24 | Kohtaaminen | **PASS**, sisällöltään lähes sanatarkka: sama Baptiste/laituri-tarina, sama "yritys 1/2", sama "Aloita peli" -nappi. Ainoa ero on jo tunnettu erotinmerkki otsikossa (natiivi "·", web "—", ks. rivi 16). | kohtaaminen-393x852.png, natiivi-kohtaaminen-iphone.jpg | — |
+| 25 | Nostokortti (Pont du Gard) | **PASS**. Sama kuva, sama kuvateksti "Pont du Gardin kolme holvikerrosta Gardon-joen yllä", sama LISÄÄ-nappi. | nostokortti-393x852.png, natiivi-nostokortti-iphone.jpg | — |
+| 26 | Nostovisa (Roquefort) | **PASS**, huomioiden Pelikoodarin oma varaus (web näyttää kortin yläosan, kysymys on alempana vieritettynä — natiivin kuva sattuu näyttämään koko vastausvalikoiman). Sisältö (juustolegenda, lukijan kysymys, samat 3 vastausvaihtoehtoa) täsmää. | nostovisa-393x852.png, natiivi-nostovisa-iphone.jpg | — |
+| 27 | Eläintakyy (Camarguenvarsa) | **PASS**. Sama kuva ja kuvateksti "Camarguenvarsa, Ranska", sama LISÄÄ-nappi. | elaintaky-393x852.png, natiivi-elaintaky-iphone.jpg | — |
+| 28 | Aarre (croissantkori) | **PASS**, sisältö lähes sanatarkka ("Kori tuoreita croissanteja +150 puntaa", sama Baptiste-lopputeksti rasiasta). | aarre-393x852.png, natiivi-aarre-iphone.jpg | — |
+| 29 | Pöllö/Livia-chat | **PASS (rakenne)**. Sama tervehdysteksti "Olen Livia, pulu — tuuraan Viisasta Pöllöä…", sama nappirivi (näppäimistö/kaiutin/mikki). Natiivi näytti lisäksi latausviestin "Odotas, pudotin muistiinpanot katolle..", web kaksi valmista kysymysehdotusta — eri hetki latauksessa, ei rakenne-ero. | pollo-393x852.png, natiivi-pollo-iphone.jpg | — |
+| 30 | Linssi: topografia | **PASS**. Sama reliefiväritys (vihreä-ruskea korkeuskartta), sama "TOPOGRAFIALINSSI"-otsikko ja Sulje linssi -nappi. | linssi-topografia-393x852.png, natiivi-linssi-topografia-iphone.jpg | — |
+| 31 | Linssi: vesistöt | **ERO — natiivi ei näytä linssiä**. Natiivikuva on pelkkä peruskartta (Liiku-nappi, ei "VESISTÖLINSSI"-otsikkoa eikä sinisiä jokiviivoja). Web näyttää linssin oikein (siniset joet + "VESISTÖLINSSI"-tunniste). Sama toistuva oire kuin aiemmilla epäonnistuneilla natiivikomennoilla (ks. rivi 21 alkuperäinen matkakirja/noppa/sähke-löydös ennen korjausta). | linssi-vesistot-393x852.png, natiivi-linssi-vesistot-iphone.jpg | Natiivi-UI (uusi komento) |
+
+**Tarkistamatta jääneet tässä kierroksessa (kuvat olemassa molemmin
+puolin, ei vielä katsottu rinnakkain):** kaupunkilehti-aihe2,
+kaupunkilehti-luelisaa, maalehti-aihe1, maalehti-mediarivi,
+laukku-linssit, aloitusportti, matkakirjakortti-auki (uusintaversio),
+linssi-maatiedot, linssi-radio, linssi-satelliitti, linssi-vertailu,
+linssi-karuselli, linssi-selite (uusintaversio). Rivin 31 löydön
+perusteella kannattaa pistokoe erityisesti näistä linsseistä, koska
+sama "tyhjä peruskartta" -oire voi toistua. `linssi-pallo` ei ole
+natiivissa (Natiivi-UI: "ei ole sellaista linssiä") — jätetään
+taulukosta pois pysyvästi.
