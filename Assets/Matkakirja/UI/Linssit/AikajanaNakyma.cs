@@ -20,7 +20,7 @@
 //                  alle 1900 v. sitten tekstinä "n. 1250 jaa.", web kellonVuositeksti)
 //   KuvaKasittelija      löytökuva kohdepisteen yllä (KuvanPiste); napautus avaa paikan kortin
 //   PuluKasittelija / TunneKasittelija → Pulu.Sano / Pulu.Tunne
-//   LoppuKasittelija     loppukortti
+//   LoppuKasittelija     ei korttia (web paata): palkin nappi "Loppu" pois käytöstä, kartta pelaajalle
 // Ohjaimet (palkki, web rakennaPalkki): Tauko/Jatka/Loppu-tekstinappi ja hampurilainen. Selaus:
 // keksinnöissä karuselli (Keksijakaruselli → Ajo.Siirry), ihmisen matkassa aikaselain alareunassa
 // (Aikaselain → Esitys.Esikatsele/Valitse). Linssi-oliot sovittimien takaa: LinssiUi.Keksinnot/IhmisenMatka.
@@ -52,7 +52,7 @@ namespace Matkakirja.Natiivi
 
         readonly LinssiUi linssit;
         readonly UiKerros kerros;
-        readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, kertomusLaatikko, valinaytos, valinaytosRivit, esittely, loppu, musta;
+        readonly VisualElement ylarivi, paneeli, paneelinKuva, kertomus, kertomusLaatikko, valinaytos, valinaytosRivit, esittely, musta;
         readonly VisualElement otsikot, kelloRuutu;
         readonly Label otsikko, paikka, kello, kelloYksikko, pVuosi, pOtsikko, pAlarivi, pTeksti, kertomusTeksti, vOtsikko;
         // Havainnekuva (web .aikajana-ilmiokuva): kaksi kerrosta ristihäivytykseen ja kuvateksti kuvan alareunassa.
@@ -60,7 +60,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement[] havainneKuvat = new VisualElement[2];
         readonly Label hVuosi, hNimi, hKuvateksti;
         readonly SvgIkoni hErotin;
-        readonly Label eOtsikko, eTeksti, lOtsikko, lTeksti;
+        readonly Label eOtsikko, eTeksti;
         readonly Button tauko, kaynnista, kahva, lueJuttu;
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
@@ -241,17 +241,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(vOtsikko, Kirjasin.LukuLihava);
             valinaytosRivit = Rakenne.El("mk-aikajana-valinaytos__rivit", valinaytos, PickingMode.Ignore);
 
-            // Esittely- ja loppukortti: pergamentti keskellä kevyen himmennyksen päällä.
+            // Esittelykortti: pergamentti keskellä kevyen himmennyksen päällä.
             var juuri = kerros.Juuri(LinssiUi.Kerros);
             esittely = Laatikko(juuri, out eOtsikko, out eTeksti, out var eNapit);
             kaynnista = Rakenne.Nappi("Käynnistä", "mk-aikajana-avausnappi", Kaynnista, eNapit);
             Kirjasimet.Aseta(kaynnista, Kirjasin.LukuLihava);
-            loppu = Laatikko(juuri, out lOtsikko, out lTeksti, out var lNapit);
-            var katso = Rakenne.Nappi("Katso karttaa", "mk-nappi--haamu", () => Rakenne.Nayta(loppu, false, 250), lNapit);
-            Kirjasimet.Aseta(katso, Kirjasin.Kone);
-            var suljeLinssi = Rakenne.Nappi("Sulje linssi", "mk-nappi--kulta", () => { Rakenne.Nayta(loppu, false, 250); linssit.SuljeLinssi(); }, lNapit);
-            Rakenne.Tausta(suljeLinssi, Kuviot.Kulta);
-            Kirjasimet.Aseta(suljeLinssi, Kirjasin.KoneLihava);
 
             // Ihmisen matkan musta: tilarivin (15) päällä, linssin tekstien (25) alla.
             musta = Rakenne.El("mk-aikajana-musta", kerros.Juuri(LinssiUi.MustaKerros));
@@ -501,7 +495,6 @@ namespace Matkakirja.Natiivi
             tiedeliite?.Sulje();
             // Rakenne.Nayta mitätöi myös kesken olevan avauksen (versiolaskuri).
             Rakenne.Nayta(esittely, false, 0);
-            Rakenne.Nayta(loppu, false, 0);
             yritys?.Pause();
             AsetaKaynnistaOdottaa(false);
             avausTausta.Pois(0);
@@ -682,7 +675,6 @@ namespace Matkakirja.Natiivi
                 SuljeValinaytos(false);
                 PoisHavainne();
                 paneeli.style.display = DisplayStyle.None;
-                Rakenne.Nayta(loppu, false, 0);
                 lopussa = false;
                 paikka.text = keksinnot.Jakso;
                 karuselli.Aseta(0);
@@ -1238,12 +1230,20 @@ namespace Matkakirja.Natiivi
             kertomuskuva.style.top = p.y - h - 17.6f;
         }
 
+        /// <summary>
+        /// Ihmisen matkan loppu (web paata): ei korttia. Kartta jää pelaajalle, palkin nappi on "Loppu" pois
+        /// käytöstä, virtanapit heräävät (tutkimusvaihe) ja pulun viimeinen kupla tulee linssiltä.
+        /// </summary>
         void IhmisenLoppu()
         {
             Ala(Tila.Ihminen);
-            lOtsikko.text = "Kertomus päättyi";
-            lTeksti.text = "";
-            Rakenne.Nayta(loppu, true, 320);
+            lopussa = true;
+            AsetaTauko(true);
+            // Web: tekstirivi.classList.remove('esilla') ja suljeKuva().
+            kertomus.style.display = DisplayStyle.None;
+            osat = null;
+            AsetaKertomusteksti("", false);
+            PiilotaKertomuskuva();
         }
 
         static string Liita(params string[] osat)
