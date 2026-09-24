@@ -90,8 +90,11 @@ kehittäjätila avaavat kaikki.
   ei kaupunkien nimiä eikä nappulaa): LS:n data ja kytkin masterissa (RadioLinssi.Napit, OmatNapit,
   LinssiOhjain.Ruutupiste), Natiivi-UI piirtää.
 - Nappi-inventaarion LS-rivi "Kartan valot (napautus)" tehty (valojen-napautus).
-- Pohjakartan ero (natiivi 23a-reliefi, webin pergamentti) hyväksytty: sama laattasarja tulee webiin #2957:llä.
+- ~~Pohjakartan ero (natiivi 23a-reliefi, webin pergamentti) hyväksytty~~ — PERUTTU (Fable 24.9., omistajan löydös 2):
+  natiivin pohja siirtyy webin malliin (sepiapohja + vain nykyisen maan värilaatat vari/<ISO> + ääriviiva #6b5539,
+  Natiiviseppä). Linssien omat pohjat (topografia, reliefi 0,8, astronautti) pysyvät; niiden vertailukuvat
+  otetaan uudelleen pohjan vaihdon jälkeen (Linssiseppä).
 - Regressiokierros master 3b0c253 (kaikki 9 linssiä, radio mukana): proto-3d/lokit/linssit-regressio-20260924/RAPORTTI.md.
-  Kaikki = web paitsi hyväksytyt (pohjakartta, vesistöjen uoma) ja astronautin ISS-kamera (ei vertailukelpoinen).
+  Kaikki = web paitsi hyväksytyt (vesistöjen uoma; pohjakartan ero peruttu 24.9.) ja astronautin ISS-kamera (ei vertailukelpoinen).
   Avoimet: ihmisen matkan "Kertomus päättyi" -kortti (Natiivi-UI, ei webissä). (Keksintöjen reiän kulku hypyssä: ei käytössä webissäkään.)
 
