@@ -254,8 +254,10 @@ jobs:
           if [ ! -f "$nippu" ]; then
             security create-keychain -p "$NIPPU_SALASANA" "$nippu"
           fi
-          security set-keychain-settings -lut 21600 "$nippu"
+          # Avaus ensin: lukittuun nippuun set-keychain-settings kaatuu
+          # "User interaction is not allowed" (build 5, 24.9.2026).
           security unlock-keychain -p "$NIPPU_SALASANA" "$nippu"
+          security set-keychain-settings -lut 21600 "$nippu"
           nykyiset=$(security list-keychains -d user | sed 's/"//g' | grep -vF "$nippu" || true)
           security list-keychains -d user -s "$nippu" $nykyiset
           echo "Hakulista ajon ajaksi:"; security list-keychains -d user
