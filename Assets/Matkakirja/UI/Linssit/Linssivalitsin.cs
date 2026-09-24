@@ -108,8 +108,9 @@ namespace Matkakirja.Natiivi
 
         void Asettele()
         {
-            // Linssi auki: karttaselitteen nappi on piilossa, joten taikalasit nousevat sen paikalle.
-            float yla = Ylapalkki.Varaus + 8 + (aukiId != null ? 0 : 48);
+            // Karttaselitteen nappi on paikallaan myös linssin aikana (löydös 42), joten taikalasit pysyvät sen alla.
+            // Linsseissä, joissa selite piiloutuu (aikajana, astronautti), taikalasitkin ovat piilossa.
+            float yla = Ylapalkki.Varaus + 8 + 48;
             nappi.style.top = yla;
             // iPhonen valikkona suoraan saaren rivin alle (turva-alueen yläreuna + 8).
             paneeli.style.top = Valikkona ? Ylapalkki.Varaus + 8 : yla + 48;

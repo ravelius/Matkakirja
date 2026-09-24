@@ -101,7 +101,7 @@ namespace Matkakirja.Natiivi
             LinssiOhjain.RadioSovitin.OmatNapit = true;
             napit = new RadioNapit(kerros.Juuri(LinssiUi.Kerros));
             kerros.JokaRuutu += napit.Paivita;
-            juuri = Rakenne.El("mk-radio", kerros.Juuri(LinssiUi.Kerros), PickingMode.Ignore);
+            juuri = Rakenne.El("mk-radio", kerros.Juuri(LinssiUi.RadioKerros), PickingMode.Ignore);
             juuri.style.display = DisplayStyle.None;
 
             kotelo = Rakenne.El("mk-radio__kotelo", juuri);

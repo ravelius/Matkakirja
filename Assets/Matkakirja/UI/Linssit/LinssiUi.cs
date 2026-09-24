@@ -33,6 +33,11 @@ namespace Matkakirja.Natiivi
     public sealed class LinssiUi
     {
         public const int Kerros = 25, SumuKerros = 5, MustaKerros = 24, Ylakerros = 37, SulkuKerros = 38;
+        /// <summary>
+        /// Radion kotelo pulun (35) päällä (löydös 40): web .radiosoitin z-index 60, pulun nappi 40 ja paneeli 41
+        /// (mitattu 24.9.: iPhonella kotelo peittää pulun, iPadilla pulu jää kotelon oikealle puolelle).
+        /// </summary>
+        public const int RadioKerros = 36;
         /// <summary>Astronautin kameran tunnus (AstronauttiLinssi.AstronauttiTiedot.Id).</summary>
         public const string AstronauttiId = "satelliitti";
 
@@ -185,7 +190,10 @@ namespace Matkakirja.Natiivi
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!paalla);
             ui.Matkakirja.NaytaSallittu(!paalla);
-            ui.Karttaselite.NaytaNappi(!paalla);
+            // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
+            // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
+            bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
+            ui.Karttaselite.NaytaNappi(!selitePiiloon);
             if (paalla) ui.Karttaselite.Sulje();
             Valitsin.Sulje();
             Valitsin.Merkitse(id);
