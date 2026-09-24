@@ -17,6 +17,7 @@ mkdir -p rakennus
 VIITTEET=""
 for f in "$REF"/*.dll; do case "$(basename "$f")" in Microsoft.VisualBasic*|mscorlib.dll|netstandard.dll|System.Private.*) ;; *) VIITTEET="$VIITTEET -r:$f";; esac; done
 VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -r:$REF/mscorlib.dll"
+# Lähteet yksi per rivi (juna yhdistää haarojen lisäykset rivien unionina).
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
