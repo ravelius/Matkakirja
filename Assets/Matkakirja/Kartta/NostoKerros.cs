@@ -93,11 +93,12 @@ namespace Matkakirja
 
         IEnumerator Lataa()
         {
-            string valot = null, rajat = null;
+            string valot = null, rajat = null, maatJson = null;
             yield return Sisalto.HaeTeksti("karttavalot", t => valot = t, true);
             yield return Sisalto.HaeTeksti("maarajat", t => rajat = t, true);
+            yield return Sisalto.HaeTeksti("maat", t => maatJson = t, true);
             if (valot == null) { Debug.LogWarning("MATKAKIRJA nostot: karttavalot.json puuttuu"); yield break; }
-            var tehtava = Task.Run(() => Jasenna(valot, rajat));
+            var tehtava = Task.Run(() => { Jasenna(valot, rajat); JasennaFokuspohjat(maatJson); });
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA nostot: " + tehtava.Exception?.GetBaseException()); yield break; }
             int n = 0;
@@ -149,6 +150,24 @@ namespace Matkakirja
             }
         }
 
+        /// <summary>
+        /// WEB ON MALLI: webin nostotaso lasketaan maan fokuspohjasta (js/pallolauta/nostot.js:707, FOKUS_POHJAT[ISO3]),
+        /// ei maarajoista, joiden bbox sisältää merentakaiset alueet (skeema 1.34: FRA −62°). Siirtoseppä nosti pohjan
+        /// päätasolle skeemassa 1.35: maat.json alkio.fokuspohja.bbox = [w, s, e, n] asteina. Voittaa maarajat.
+        /// </summary>
+        void JasennaFokuspohjat(string maatJson)
+        {
+            if (maatJson == null || !(MiniJson.Jasenna(maatJson) is Dictionary<string, object> r) || !(r.GetValueOrDefault("alkiot") is List<object> maat)) return;
+            foreach (var o in maat)
+            {
+                if (!(o is Dictionary<string, object> m) || !(MiniJson.Kentta(m, "fokuspohja") is Dictionary<string, object> f)
+                    || !(MiniJson.Kentta(f, "bbox") is List<object> b) || b.Count < 4) continue;
+                string id = MiniJson.Teksti(m, "id");
+                if (id != null)
+                    bboxit[id] = new double4(Convert.ToDouble(b[0]), Convert.ToDouble(b[1]), Convert.ToDouble(b[2]), Convert.ToDouble(b[3]));
+            }
+        }
+
         string PelaajanMaa()
         {
             if (!string.IsNullOrEmpty(Maa)) return Maa;
@@ -170,15 +189,16 @@ namespace Matkakirja
                 muuttui = true;
             }
 
-            // Osuus: maan leveys (bbox, lon × cos lat) / näkyvä vaakaleveys asteina.
-            double nakyvaLeveys = NakyvaLeveysAsteina();
+            // Osuus (web lehdenOsuus): max(pohjan leveys / näkyvä leveys, pohjan korkeus / näkyvä korkeus), asteina.
+            double nakyvaLeveys = NakyvaLeveysAsteina(), nakyvaKorkeus = NakyvaKorkeusAsteina();
             Osuus = 0;
             if (maa != null)
             {
                 double4 bb;
                 if (!bboxit.TryGetValue(maa, out bb) && maittain.TryGetValue(maa, out var lista)) bb = PisteidenBbox(lista);
                 double leveys = math.abs(bb.z - bb.x) * math.cos(math.radians((bb.y + bb.w) * 0.5));
-                Osuus = nakyvaLeveys > 0 ? (float)(leveys / nakyvaLeveys) : 0;
+                double korkeus = math.abs(bb.w - bb.y);
+                Osuus = (float)math.max(nakyvaLeveys > 0 ? leveys / nakyvaLeveys : 0, nakyvaKorkeus > 0 ? korkeus / nakyvaKorkeus : 0);
             }
 
             // Saapumisportti: kamera ja nappula paikallaan porttiViiveen ajan (web saapumisPortti).
@@ -240,6 +260,14 @@ namespace Matkakirja
             // Kaari, joka näkyy vaakasuunnassa korkeudelta (pieni kulma: 2·h·tan / R, rajattu puolipalloon).
             double r = 6371000.0;
             return math.degrees(math.min(math.PI, 2.0 * kierto.korkeus * math.tan(vaaka) / r));
+        }
+
+        double NakyvaKorkeusAsteina()
+        {
+            var kamera = kierto.GetComponent<Camera>();
+            if (kamera == null) return 0;
+            double pysty = math.radians(kamera.fieldOfView) * 0.5;
+            return math.degrees(math.min(math.PI, 2.0 * kierto.korkeus * math.tan(pysty) / 6371000.0));
         }
 
         static double4 PisteidenBbox(List<Nosto> l)
