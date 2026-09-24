@@ -2,6 +2,8 @@
 // PALLON_TUMMENNUS): koko ruudun kalvo pallon päällä ja valojen alla (Valo.shader on
 // Transparent+50), reikä nykyisen lampun kohdalla ruutupikseleinä.
 //
+// Peittävyys muunnetaan lineaarisessa väriavaruudessa webin sRGB-sekoitusta vastaavaksi.
+//
 // Kärjet ovat valmiiksi leikkeen koordinaateissa (-1…1), joten kalvo peittää ruudun
 // kameran asennosta riippumatta. Reiän liukuväri kuten webin radial-gradient:
 // läpinäkyvä _Reika.z × 0,12 asti, _Keski 0,5:ssä ja _Vari reunalla (1,0).
@@ -62,6 +64,13 @@ Shader "Matkakirja/Linssit/Tummennus"
                     else if (d < 1) c = lerp(_Keski, _Vari, (d - 0.5) / 0.5);
                 }
                 c.a *= _Peitto;
+            #if !defined(UNITY_COLORSPACE_GAMMA)
+                // Web sekoittaa kalvon sRGB-arvoihin (css-kalvo kanvaasin päällä), projekti on
+                // lineaarinen: sama 0,86 jätti iPadilla kartan kaksi kertaa webiä vaaleammaksi
+                // (kontakti 24.9.: meri 95 vs web 49, ennuste lineaarisekoitukselle 91). Lähes
+                // mustalla kalvolla lin((1-a)·S) = (1-a)^2,2 · lin(S), joten peittävyys muunnetaan.
+                c.a = 1 - pow(max(1 - c.a, 0), 2.2);
+            #endif
                 return c;
             }
             ENDHLSL
