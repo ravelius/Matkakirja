@@ -13875,6 +13875,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valmistumisensa jälkeen maailman parhaaksi uudeksi '
             + 'yleiseksi kirjastoksi.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Helsingin keskustakirjasto Oodi 2022-09-16 01.jpg',
+              tekija: 'Leonhard Lenz',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Helsingin_keskustakirjasto_Oodi_2022-09-16_01.jpg',
+            },
+            {
+              nimi: 'Kansalaistori square and the Central Library in Helsinki, Finland, 2020 April.jpg',
+              tekija: 'Yehia Eweis',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Kansalaistori_square_and_the_Central_Library_in_Helsinki,_Finland,_2020_April.jpg',
+            },
+            {
+              nimi: 'Central Library Oodi in Helsinki, Finland, 2019 September.jpg',
+              tekija: 'ALA Architects',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Central_Library_Oodi_in_Helsinki,_Finland,_2019_September.jpg',
+            },
+            {
+              nimi: 'Helsinki Central Library Oodi, Helsinki, Finland.jpg',
+              tekija: 'Ninara',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Helsinki_Central_Library_Oodi,_Helsinki,_Finland.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg',
@@ -19046,6 +19076,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisellä vuosisadalla, kun Petra eli '
             + 'suitsukekaravaanien rikkaimpia vuosiaan.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Palace Tomb (Petra) 02.jpg',
+              tekija: 'Davide Mauro',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Palace_Tomb_(Petra)_02.jpg',
+            },
+            {
+              nimi: 'Petra Palace Tomb 1999.jpg',
+              tekija: 'Dosseman',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Petra_Palace_Tomb_1999.jpg',
+            },
+            {
+              nimi: 'The Palace Tomb, Corinthian Tomb (12293969153).jpg',
+              tekija: 'Jorge Láscar from Australia',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:The_Palace_Tomb,_Corinthian_Tomb_(12293969153).jpg',
+            },
+            {
+              nimi: 'Palace Tomb in Petra.jpg',
+              tekija: 'Dudva',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Palace_Tomb_in_Petra.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Petra Siq, entrance to the ancient Nabatean city of Petra, Jordan.jpg',
@@ -20003,6 +20063,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'perimätiedon mukaan profeetta Muhammad sai ensimmäisen '
             + 'ilmestyksensä.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Jabal Nur.JPG',
+              tekija: 'Adiput ( talk )',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Jabal_Nur.JPG',
+            },
+            {
+              nimi: 'Jabbal An-Nour - Makkah (2241558560).jpg',
+              tekija: 'Wal N.',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Jabbal_An-Nour_-_Makkah_(2241558560).jpg',
+            },
+            {
+              nimi: 'Jabal al-Nour And cave Hira.jpg',
+              tekija: 'Sadath i',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Jabal_al-Nour_And_cave_Hira.jpg',
+            },
+            {
+              nimi: 'Jabal al-Nur, Mecca, Saudi Arabia (2).jpg',
+              tekija: 'Richard Mortel',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Jabal_al-Nur,_Mecca,_Saudi_Arabia_(2).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Mecca at night.jpg',
@@ -31743,6 +31833,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuuluu vanhaankaupunkiin, joka otettiin maailmanperintö'
             + 'luetteloon 1979.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Citadel of old Damascus.jpg',
+              tekija: 'Soleman aldbeat',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Citadel_of_old_Damascus.jpg',
+            },
+            {
+              nimi: 'Damascus north-western tower of the Citadel 1410.jpg',
+              tekija: 'Dosseman',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Damascus_north-western_tower_of_the_Citadel_1410.jpg',
+            },
+            {
+              nimi: 'Damascus-citadel.JPG',
+              tekija: 'User:Aziz1005',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Damascus-citadel.JPG',
+            },
+            {
+              nimi: 'Damascus Castle Walls 1.jpg',
+              tekija: 'Freedom\'s Falcon',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Damascus_Castle_Walls_1.jpg',
+            },
+          ],
         },
         {
           /*
@@ -53284,6 +53404,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Balasaguni oli kirjoittanut vuonna 1069 turkkilaiskielisen '
             + 'hallitsijan ohjekirjan Kutadgu Bilig.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Mausoleum of Yusuf Khass Hajib Introduction.jpg',
+              tekija: 'Voidvector',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mausoleum_of_Yusuf_Khass_Hajib_Introduction.jpg',
+            },
+            {
+              nimi: 'Mausoleum of Yusuf Khass Hajib main building.jpg',
+              tekija: 'Voidvector',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mausoleum_of_Yusuf_Khass_Hajib_main_building.jpg',
+            },
+            {
+              nimi: 'Mausoleum of Yusuf Khass Hajib front gate.jpg',
+              tekija: 'Voidvector',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mausoleum_of_Yusuf_Khass_Hajib_front_gate.jpg',
+            },
+            {
+              nimi: 'Mausoleum of Yusuf Khass Hajib tomb.jpg',
+              tekija: 'Voidvector',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mausoleum_of_Yusuf_Khass_Hajib_tomb.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-kashgar-ilta.png',
@@ -54901,6 +55051,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lasitetuilla laatoilla, joihin on kirjoitettu '
             + 'omistuskirjoituksia ja runoutta.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Kart-e Sakhi memorial yard in 2009.jpg',
+              tekija: 'vetman',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Kart-e_Sakhi_memorial_yard_in_2009.jpg',
+            },
+            {
+              nimi: 'Sakhi memorial main gate (2009) - panoramio.jpg',
+              tekija: 'Masoud Akbari',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Sakhi_memorial_main_gate_(2009)_-_panoramio.jpg',
+            },
+            {
+              nimi: 'Sakhi memorial - panoramio.jpg',
+              tekija: 'Masoud Akbari',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Sakhi_memorial_-_panoramio.jpg',
+            },
+            {
+              nimi: 'Sakhi memorial back yard - panoramio.jpg',
+              tekija: 'Masoud Akbari',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Sakhi_memorial_back_yard_-_panoramio.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-kabul-keskipaiva.png',
@@ -54910,6 +55090,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'korkeakouluista, ja siellä opiskelee noin 22 000 '
             + 'opiskelijaa.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Angel Center at Kabul University.jpg',
+              tekija: 'Colleen Taugher from Lewiston Idaho, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Angel_Center_at_Kabul_University.jpg',
+            },
+            {
+              nimi: 'Library at Kabul University-2008.jpg',
+              tekija: 'Step from Amherst, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Library_at_Kabul_University-2008.jpg',
+            },
+            {
+              nimi: 'Kabul University Central Library.jpg',
+              tekija: 'stepnout',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Kabul_University_Central_Library.jpg',
+            },
+            {
+              nimi: 'Professor Azim Noorbakhsh, Lecturer for the Faculty of Journalism at Kabul University (111201-N-TH437-002).jpg',
+              tekija: 'NATO Training Mission-Afghanistan',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Professor_Azim_Noorbakhsh,_Lecturer_for_the_Faculty_of_Journalism_at_Kabul_University_(111201-N-TH437-002).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-kabul-ilta.png',
@@ -54919,6 +55129,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vieressä, se on kolmikerroksinen ja peittää 1,4 hehtaarin '
             + 'tontin, ja yksi sen kerroksista on varattu naisille.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Abdul Rahman Mosque in 2010.jpg',
+              tekija: 'Daniel Wilkinson, employee of U.S. Department of State',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Abdul_Rahman_Mosque_in_2010.jpg',
+            },
+            {
+              nimi: 'Abdul Rahman mosque, Kabul.jpg',
+              tekija: 'Hogai Aryoubi',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Abdul_Rahman_mosque,_Kabul.jpg',
+            },
+            {
+              nimi: 'Grand Mosque of Kabul.jpg',
+              tekija: 'Joe Burger from Siegburg, Germany',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Grand_Mosque_of_Kabul.jpg',
+            },
+            {
+              nimi: 'Grand Mosque Kabul.jpg',
+              tekija: 'Casimiri at en.wikipedia',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Grand_Mosque_Kabul.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'باغ بابر.jpg',
@@ -66313,6 +66553,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjasto; sen yli viiden miljoonan esineen kokoelmiin '
             + 'kuuluu myös Ned Kellyn haarniska.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'SLV 2007 front entrance.jpg',
+              tekija: 'Orderinchaos',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:SLV_2007_front_entrance.jpg',
+            },
+            {
+              nimi: 'SLV - Russell St Entrance.jpg',
+              tekija: 'Canley',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:SLV_-_Russell_St_Entrance.jpg',
+            },
+            {
+              nimi: 'Forecourt of the State Library of Victoria.jpg',
+              tekija: 'State Library Victoria',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Forecourt_of_the_State_Library_of_Victoria.jpg',
+            },
+            {
+              nimi: 'State Library of Victoria (26970400544).jpg',
+              tekija: 'Travellers travel photobook',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:State_Library_of_Victoria_(26970400544).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-melbourne-keskipaiva.png',
@@ -66322,6 +66592,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'St Kilda Roadiin; se merkittiin Victorian '
             + 'rakennusperintörekisteriin 20. elokuuta 1982.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Melbourne (AU), Princes Bridge -- 2019 -- 1418.jpg',
+              tekija: 'Dietmar Rabich',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Melbourne_(AU),_Princes_Bridge_--_2019_--_1418.jpg',
+            },
+            {
+              nimi: 'Night view of the Melbourne CBD, over the Yarra River, showing Princes Bridge, St Kilda Road, St Paul\'s Cathedral, and Federation Square. Peter Neaum. - panoramio.jpg',
+              tekija: 'Peter Neaum',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Night_view_of_the_Melbourne_CBD,_over_the_Yarra_River,_showing_Princes_Bridge,_St_Kilda_Road,_St_Paul%27s_Cathedral,_and_Federation_Square._Peter_Neaum._-_panoramio.jpg',
+            },
+            {
+              nimi: 'Melbourne Skyline and Princes Bridge - Dec 2008.jpg',
+              tekija: 'Diliff',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg',
+            },
+            {
+              nimi: 'Melbourne Princes bridge 2017-10-10.jpg',
+              tekija: 'Tangerineduel',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Melbourne_Princes_bridge_2017-10-10.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-melbourne-ilta.png',
@@ -66331,6 +66631,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maailman vanhin yhä toiminnassa oleva vuoristorata, jonka '
             + 'vaunussa seisoo edelleen jarrumies.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Melbourne\'s Luna Park entrance at night.jpg',
+              tekija: 'Nicholas Cole',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Melbourne%27s_Luna_Park_entrance_at_night.jpg',
+            },
+            {
+              nimi: 'Entrance to Luna park (36254211646).jpg',
+              tekija: 'oatsy40',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Entrance_to_Luna_park_(36254211646).jpg',
+            },
+            {
+              nimi: 'Entrance to Melbourne\'s Luna Park 2014.jpg',
+              tekija: 'MusikAnimal',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Entrance_to_Melbourne%27s_Luna_Park_2014.jpg',
+            },
+            {
+              nimi: 'Luna Park as night falls (9181240085).jpg',
+              tekija: 'Scott Cresswell from Melbourne, Australia',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Luna_Park_as_night_falls_(9181240085).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Aerial panorama of Melbourne city taken from Flagstaff Gardens.jpg',
@@ -67092,6 +67422,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriä korkeat ja päähänjänne 473 metriä, ja kolmesta '
             + 'kaistasta keskimmäisen suunta vaihtuu liikenteen mukaan.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'DSC00668-edited.jpg',
+              tekija: 'IanMoVill',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:DSC00668-edited.jpg',
+            },
+            {
+              nimi: 'Lion\'s Gate Bridge.jpg',
+              tekija: 'David J Laporte from Great Falls, Montana, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Lion%27s_Gate_Bridge.jpg',
+            },
+            {
+              nimi: 'Cape Brazil after entering Vancouver harbour.jpg',
+              tekija: 'Tavis Ford from Canada',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Cape_Brazil_after_entering_Vancouver_harbour.jpg',
+            },
+            {
+              nimi: 'CPR Princess Ship Lions Gate Bridge, Vancouver. (50119763427).jpg',
+              tekija: 'William Davies',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:CPR_Princess_Ship_Lions_Gate_Bridge,_Vancouver._(50119763427).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-vancouver-keskipaiva.png',
@@ -67100,6 +67460,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Centreksi vuoden 1986 maailmannäyttelyyn, ja tiedekeskus '
             + 'avattiin siinä 6. toukokuuta 1989 False Creekin itäpäässä.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Science World, Vancouver, west view 20240901 1.jpg',
+              tekija: 'DXR',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Science_World,_Vancouver,_west_view_20240901_1.jpg',
+            },
+            {
+              nimi: 'Science World (10930526533).jpg',
+              tekija: 'GoToVan from Vancouver, Canada',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Science_World_(10930526533).jpg',
+            },
+            {
+              nimi: 'Science World, Vancouver, BC (2012) - 1.JPG',
+              tekija: 'Another Believer',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Science_World,_Vancouver,_BC_(2012)_-_1.JPG',
+            },
+            {
+              nimi: 'Science World Dome (11437379163).jpg',
+              tekija: 'Michael Pereckas from Milwaukee, WI, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Science_World_Dome_(11437379163).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-vancouver-ilta.png',
@@ -67109,6 +67499,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'runsaista meriaiheisista koristeistaan, ja se luetaan '
             + 'maailman parhaiden art deco -rakennusten joukkoon.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Marine Building Vancouver (86584765).jpg',
+              tekija: 'Sandra Cohen-Rose and Colin Rose from Montreal, Canada',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Marine_Building_Vancouver_(86584765).jpg',
+            },
+            {
+              nimi: 'Marine Building from granville.jpg',
+              tekija: 'Bobanny',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Marine_Building_from_granville.jpg',
+            },
+            {
+              nimi: 'Marine Building (8048367519).jpg',
+              tekija: 'Tony Hisgett from Birmingham, UK',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Marine_Building_(8048367519).jpg',
+            },
+            {
+              nimi: 'Marine Building Vancouver BC.jpg',
+              tekija: 'Darren Kirby',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Marine_Building_Vancouver_BC.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Vista de Vancouver desde el parque Stanley, Canadá, 2017-08-14, DD 02-03 PAN.jpg',
@@ -67765,6 +68185,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asti; nimensä silta sai virkamies John Douglas Storyn '
             + 'mukaan.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Brisbane CBD from Story Bridge, Brisbane in August 2018, 04.jpg',
+              tekija: 'Kgbo',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Brisbane_CBD_from_Story_Bridge,_Brisbane_in_August_2018,_04.jpg',
+            },
+            {
+              nimi: 'Altostratus undulatus and Story Bridge from CityCat Gootcha Brisbane River P1260817.jpg',
+              tekija: 'John Robert McPherson',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Altostratus_undulatus_and_Story_Bridge_from_CityCat_Gootcha_Brisbane_River_P1260817.jpg',
+            },
+            {
+              nimi: 'About to travel under Story Bridge-1= (36081209505).jpg',
+              tekija: 'John from Redcliffe, Australia',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:About_to_travel_under_Story_Bridge-1%3D_(36081209505).jpg',
+            },
+            {
+              nimi: 'Brisbane River and Story Bridge-01+ (2743952092).jpg',
+              tekija: 'Sheba_Also 43,000 photos',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Brisbane_River_and_Story_Bridge-01%2B_(2743952092).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-brisbane-keskipaiva.png',
@@ -67775,6 +68225,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vaiheen hiekkakivi louhittiin sadan kilometrin päässä '
             + 'Helidonissa.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'St John\'s Anglican Cathedral from Cathedral Square Ann St Brisbane P1050774.jpg',
+              tekija: 'John Robert McPherson',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_John%27s_Anglican_Cathedral_from_Cathedral_Square_Ann_St_Brisbane_P1050774.jpg',
+            },
+            {
+              nimi: 'Side Door St John\'s Cathedral, Brisbane 052013 664.jpg',
+              tekija: 'Kgbo',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Side_Door_St_John%27s_Cathedral,_Brisbane_052013_664.jpg',
+            },
+            {
+              nimi: 'North Wall St Johns-01+ (201532492).jpg',
+              tekija: 'Sheba_Also 43,000 photos',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:North_Wall_St_Johns-01%2B_(201532492).jpg',
+            },
+            {
+              nimi: 'Brisbain - panoramio (1).jpg',
+              tekija: 'Tanya Dedyukhina',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Brisbain_-_panoramio_(1).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-brisbane-ilta.png',
@@ -67784,6 +68264,36 @@ export const KULTTUURI_KATEGORIAT = {
             + '20-vuotisjuhlaan, ja sen 42 ilmastoituun gondoliin mahtuu '
             + 'kerralla 336 matkustajaa.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'A ferris wheel in Brisbane is pretty small after seeing the London Eye (5019459971).jpg',
+              tekija: 'cogdogblog',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:A_ferris_wheel_in_Brisbane_is_pretty_small_after_seeing_the_London_Eye_(5019459971).jpg',
+            },
+            {
+              nimi: 'Nepalese Peace Pagoda and Wheel of Brisbane Southbank Parklands South Brisbane L1180443.jpg',
+              tekija: 'John Robert McPherson',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Nepalese_Peace_Pagoda_and_Wheel_of_Brisbane_Southbank_Parklands_South_Brisbane_L1180443.jpg',
+            },
+            {
+              nimi: '"Spinning2" - Wheel of Brisbane (6586693905).jpg',
+              tekija: 'Jorge Láscar from Australia',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:%22Spinning2%22_-_Wheel_of_Brisbane_(6586693905).jpg',
+            },
+            {
+              nimi: 'Brisbane Southbank Ferris Wheel-1and (3642392295).jpg',
+              tekija: 'Sheba_Also 43,000 photos',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Brisbane_Southbank_Ferris_Wheel-1and_(3642392295).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Brisbane CBD seen from Kangaroo Point, 2024, 02.jpg',
@@ -68545,6 +69055,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirkkaanvalkoinen julkisivu on päällystetty '
             + 'terrakottalaatoilla.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: '20080615 Wrigley Building clock and Tribune Tower from Sixteen.jpg',
+              tekija: 'flickr user sindlinger',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20080615_Wrigley_Building_clock_and_Tribune_Tower_from_Sixteen.jpg',
+            },
+            {
+              nimi: '20170903 07 Michigan Ave. @ Wrigley Bldg. (48562022752).jpg',
+              tekija: 'David Wilson from Oak Park, Illinois, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20170903_07_Michigan_Ave._@_Wrigley_Bldg._(48562022752).jpg',
+            },
+            {
+              nimi: '20070913 Rush Street Swing Bridge beyond Wrigley Building.JPG',
+              tekija: 'Unknown author Unknown author',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20070913_Rush_Street_Swing_Bridge_beyond_Wrigley_Building.JPG',
+            },
+            {
+              nimi: '20061205 Trump Int Hot & Tower from Columbus Dr. @ Chicago River.JPG',
+              tekija: 'User:TonyTheTiger',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20061205_Trump_Int_Hot_%26_Tower_from_Columbus_Dr._@_Chicago_River.JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-chicago-keskipaiva.png',
@@ -68555,6 +69095,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tasossa on pieni huvivenesatama, josta korttelin nimi '
             + 'tulee.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: '2016 Chicago River IMG 5893.jpg',
+              tekija: 'SecretName101',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:2016_Chicago_River_IMG_5893.jpg',
+            },
+            {
+              nimi: '19680412 24 Marina City (5575890336).jpg',
+              tekija: 'David Wilson from Oak Park, Illinois, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:19680412_24_Marina_City_(5575890336).jpg',
+            },
+            {
+              nimi: '20061205 Trump Int Hot & Tower from Columbus Dr. @ Chicago River.JPG',
+              tekija: 'User:TonyTheTiger',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20061205_Trump_Int_Hot_%26_Tower_from_Columbus_Dr._@_Chicago_River.JPG',
+            },
+            {
+              nimi: '20080524 Daley - Casey Memorial Day Parade.jpg',
+              tekija: 'U.S. Army Public Affairs – Midwest',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:20080524_Daley_-_Casey_Memorial_Day_Parade.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-chicago-ilta.png',
@@ -68565,6 +69135,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vesisuihkut ovat käytössä huhtikuun puolivälistä lokakuun '
             + 'puoliväliin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Buckingham Fountain (7071536267).jpg',
+              tekija: 'Marlin Keesler from Streamwood, IL',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_(7071536267).jpg',
+            },
+            {
+              nimi: 'Bikes at Buckingham Fountain.jpg',
+              tekija: 'Marmstrong21',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bikes_at_Buckingham_Fountain.jpg',
+            },
+            {
+              nimi: 'Buckingham Fountain & close Chicago skyline, Aug 10.jpg',
+              tekija: 'An Errant Knight',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_%26_close_Chicago_skyline,_Aug_10.jpg',
+            },
+            {
+              nimi: 'Beautiful Buckingham Fountain (169404404).jpg',
+              tekija: 'Richie Diesterheft from Santa Barbara, CA, USA',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Beautiful_Buckingham_Fountain_(169404404).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Chicago sunrise 1.jpg',
@@ -69153,6 +69753,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seitsemänkymmenen vuoden jälkeen valmistunut kaareva jatke '
             + 'vihittiin käyttöön vasta joulukuussa 2009.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'St Mary\'s Roman Catholic Cathedral, Perth, 2023, 03.jpg',
+              tekija: 'Kgbo',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_Mary%27s_Roman_Catholic_Cathedral,_Perth,_2023,_03.jpg',
+            },
+            {
+              nimi: 'St Mary\'s Roman Catholic Cathedral, Perth, January 2021 02.jpg',
+              tekija: 'Calistemon',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_Mary%27s_Roman_Catholic_Cathedral,_Perth,_January_2021_02.jpg',
+            },
+            {
+              nimi: 'St Mary\'s Roman Catholic Cathedral (South face).jpg',
+              tekija: 'Travis Saron',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_Mary%27s_Roman_Catholic_Cathedral_(South_face).jpg',
+            },
+            {
+              nimi: 'St Mary\'s Cathedral, Perth (aerial) 02.jpg',
+              tekija: 'Dan arndt',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_Mary%27s_Cathedral,_Perth_(aerial)_02.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-perth-keskipaiva.png',
@@ -69162,6 +69792,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikannimestä Matagarup, joka tarkoittaa kohtaa, jossa '
             + 'joki on vain sääreen asti ja jonka voi kahlata yli.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Matagarup Bridge, July 2018 02.jpg',
+              tekija: 'Samuel Wiki',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Matagarup_Bridge,_July_2018_02.jpg',
+            },
+            {
+              nimi: 'Matagarup Bridge, April 2025.jpg',
+              tekija: 'The editor next door',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Matagarup_Bridge,_April_2025.jpg',
+            },
+            {
+              nimi: 'Matagarup Bridge, Perth, 2023, 03.jpg',
+              tekija: 'Kgbo',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Matagarup_Bridge,_Perth,_2023,_03.jpg',
+            },
+            {
+              nimi: 'Matagarup Bridge at sunset, Western Australia, November 2023.jpg',
+              tekija: 'Chuq',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Matagarup_Bridge_at_sunset,_Western_Australia,_November_2023.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-perth-ilta.png',
@@ -69173,6 +69833,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'säästettiin purku-aikeilta ja vietiin lopulta osavaltion '
             + 'rakennusperintörekisteriin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Council House Lights - Perth, Western Australia (4510840995).jpg',
+              tekija: 'Michael_Spencer from Perth, WA, Australia',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Council_House_Lights_-_Perth,_Western_Australia_(4510840995).jpg',
+            },
+            {
+              nimi: 'City of perth night gnangarra.jpg',
+              tekija: 'Gnangarra',
+              lisenssi: 'CC BY 2.5 au',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5/au/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:City_of_perth_night_gnangarra.jpg',
+            },
+            {
+              nimi: 'AUS Perth, Central Business District, Council House 001.jpg',
+              tekija: '-wuppertaler',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:AUS_Perth,_Central_Business_District,_Council_House_001.jpg',
+            },
+            {
+              nimi: 'Burt Hall and Council house from east end of St Georges Cathedral looking south.jpg',
+              tekija: 'JarrahTree',
+              lisenssi: 'CC BY 2.5 au',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5/au/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Burt_Hall_and_Council_house_from_east_end_of_St_Georges_Cathedral_looking_south.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Perth skyline.jpg',
@@ -69912,6 +70602,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskustan asuintorni, jonka julkisivu kaartuu '
             + 'yhtenäisenä S-mutkana ilman ainuttakaan suoraa seinää.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Brises Copan.jpg',
+              tekija: 'Gabigeraldelli',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Brises_Copan.jpg',
+            },
+            {
+              nimi: 'Edifício Copan (3407143895).jpg',
+              tekija: 'Rodrigo Soldon from Rio de Janeiro, Brazil',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_Copan_(3407143895).jpg',
+            },
+            {
+              nimi: 'Copan sao paulo brasil.jpg',
+              tekija: 'Gabriel de Andrade Fernandes',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Copan_sao_paulo_brasil.jpg',
+            },
+            {
+              nimi: 'Copan (7908313340).jpg',
+              tekija: 'Gabriel Fernandes from São Paulo, Brasil',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Copan_(7908313340).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-saopaulo-ilta.png',
@@ -70553,6 +71273,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulmikkaista metalli- ja lasisärmistä koottu '
             + 'lisärakennus.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Exterior of the Royal Ontario Museum, March 2010.jpg',
+              tekija: 'Pemolo',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Exterior_of_the_Royal_Ontario_Museum,_March_2010.jpg',
+            },
+            {
+              nimi: 'Crystal Carriage (2372666402).jpg',
+              tekija: 'Benson Kua from Toronto, Canada',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Crystal_Carriage_(2372666402).jpg',
+            },
+            {
+              nimi: 'Motto-exterior-Royal-Ontario-Museum-June-2024.jpg',
+              tekija: 'Acediscovery',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Motto-exterior-Royal-Ontario-Museum-June-2024.jpg',
+            },
+            {
+              nimi: 'Royal Ontario Museum, south facade, 1922.jpg',
+              tekija: 'James Salmon',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Royal_Ontario_Museum,_south_facade,_1922.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-toronto-keskipaiva.png',
@@ -70562,6 +71312,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tornia jättää väliinsä lautasen muotoisen '
             + 'valtuustosalin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'At Nathan Phillips Square on May 21, 2022 (4).jpg',
+              tekija: 'Maksim Sokolov (maxergon.com)',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:At_Nathan_Phillips_Square_on_May_21,_2022_(4).jpg',
+            },
+            {
+              nimi: 'City Hall - Toronto, Ontario, Canada - October 16, 2023 04.jpg',
+              tekija: 'Giorgio Galeotti',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:City_Hall_-_Toronto,_Ontario,_Canada_-_October_16,_2023_04.jpg',
+            },
+            {
+              nimi: 'City Hall (41647547975).jpg',
+              tekija: 'Daniel Lobo',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:City_Hall_(41647547975).jpg',
+            },
+            {
+              nimi: 'Couple at City Hall Toronto (15084810785).jpg',
+              tekija: 'Joseph Morris from Toronto, Canada',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Couple_at_City_Hall_Toronto_(15084810785).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'View of Toronto Downtown (54587811913).jpg',
@@ -71201,6 +71981,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päässä Plaza Mayorista, ja luostarin alla kulkevat sen '
             + 'tunnetut katakombit.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Basílica y Convento de San Francisco de Lima, Peru.jpg',
+              tekija: 'BrunoLocatelli',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_y_Convento_de_San_Francisco_de_Lima,_Peru.jpg',
+            },
+            {
+              nimi: '2017 Lima - Iglesia de San Francisco.jpg',
+              tekija: 'Felipe Restrpo Acosta',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:2017_Lima_-_Iglesia_de_San_Francisco.jpg',
+            },
+            {
+              nimi: 'Basilica and Convent of San Francisco, Lima.jpg',
+              tekija: 'CEllen',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Basilica_and_Convent_of_San_Francisco,_Lima.jpg',
+            },
+            {
+              nimi: 'Basílica y Convento de San Francisco de Lima 2019-10-06.jpg',
+              tekija: 'Alexey Komarov',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_y_Convento_de_San_Francisco_de_Lima_2019-10-06.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-lima-keskipaiva.png',
@@ -71210,6 +72020,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mirafloresin Huaca Pucllana; sen tiilet on ladottu '
             + 'pystyyn kirjahyllymäisiin kerroksiin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Huallamarca Archaeological site - adobe.jpg',
+              tekija: 'AgainErick',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Huallamarca_Archaeological_site_-_adobe.jpg',
+            },
+            {
+              nimi: 'Huaca Huallamarca.jpg',
+              tekija: 'Reyniercm',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Huaca_Huallamarca.jpg',
+            },
+            {
+              nimi: 'Huaca Huallamarca in Lima, Peru.jpg',
+              tekija: 'BrunoLocatelli',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Huaca_Huallamarca_in_Lima,_Peru.jpg',
+            },
+            {
+              nimi: 'Huaca Huallamarca, gran monumento.jpg',
+              tekija: 'Lucía Pérez2',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Huaca_Huallamarca,_gran_monumento.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-lima-ilta.png',
@@ -71908,6 +72748,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'presidentin virka-asunto; sen matala julkisivu vie koko '
             + 'aukion sivun, ja alakerrassa kulkee kaarikäytävä.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Carondelet Palace, Flag of Ecuador, UNESCO World Cultural Heritage Site.jpg',
+              tekija: 'David Adam Kess',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Carondelet_Palace,_Flag_of_Ecuador,_UNESCO_World_Cultural_Heritage_Site.jpg',
+            },
+            {
+              nimi: 'Carondelet - Quito.JPG',
+              tekija: 'Taty2007',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Carondelet_-_Quito.JPG',
+            },
+            {
+              nimi: 'Bandera del Ecuador sobre el Palacio de Carondelet.jpg',
+              tekija: 'Martín Vasco',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bandera_del_Ecuador_sobre_el_Palacio_de_Carondelet.jpg',
+            },
+            {
+              nimi: 'ALMUERZO CARONDELET (32044590504).jpg',
+              tekija: 'Agencia de Noticias ANDES',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:ALMUERZO_CARONDELET_(32044590504).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-quito-keskipaiva.png',
@@ -71916,6 +72786,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'joka on rakennettu terasseille Guápulon laakson jyrkkään '
             + 'rinteeseen vanhankaupungin ulkopuolelle.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: '(Guápulo) Iglesia de Guápulo antique wooden exterior door, right side, complete.JPG',
+              tekija: 'David Adam Kess',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:(Gu%C3%A1pulo)_Iglesia_de_Gu%C3%A1pulo_antique_wooden_exterior_door,_right_side,_complete.JPG',
+            },
+            {
+              nimi: 'Iglesia de Guápulo, fachada.jpg',
+              tekija: 'Ranoutofusername',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Iglesia_de_Gu%C3%A1pulo,_fachada.jpg',
+            },
+            {
+              nimi: 'Iglesia de Guápulo y puente.jpg',
+              tekija: 'EcuadorCiencia.org',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Iglesia_de_Gu%C3%A1pulo_y_puente.jpg',
+            },
+            {
+              nimi: 'Iglesia de Guápulo - panoramio.jpg',
+              tekija: 'Ciencia1.com',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Iglesia_de_Gu%C3%A1pulo_-_panoramio.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Touring around Quito, Ecuador - Quito city from the historic center of Quito at the Virgin del Panecillo monument (16039061083).jpg',
@@ -72497,6 +73397,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Yhdysvaltain länsiosien suurin '
             + 'matkustajarautatieterminaali.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Abstract view of Los Angeles Union Station.jpg',
+              tekija: 'Phileven',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Abstract_view_of_Los_Angeles_Union_Station.jpg',
+            },
+            {
+              nimi: 'Las Pasturas Building ( Union Station ) (16665166387).jpg',
+              tekija: 'Prayitno',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Las_Pasturas_Building_(_Union_Station_)_(16665166387).jpg',
+            },
+            {
+              nimi: 'El Monte Busway & Alameda- Union Station- Metro Silver Line.JPG',
+              tekija: 'METRO96',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:El_Monte_Busway_%26_Alameda-_Union_Station-_Metro_Silver_Line.JPG',
+            },
+            {
+              nimi: 'LA Metro A Line Union Station platform, October 2023.jpg',
+              tekija: 'OrdinaryScarlett',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:LA_Metro_A_Line_Union_Station_platform,_October_2023.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-losangeles-keskipaiva.png',
@@ -72505,6 +73435,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakensi Watts Towersin omin käsin vuosina 1921–1955 '
             + 'talonsa takapihalle.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Watts Towers in Los Angeles 03.jpg',
+              tekija: 'Levi Clancy',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Watts_Towers_in_Los_Angeles_03.jpg',
+            },
+            {
+              nimi: 'Watts Towers Arts Center.jpg',
+              tekija: 'Bjlee2020',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Watts_Towers_Arts_Center.jpg',
+            },
+            {
+              nimi: 'Dettaglio delle Watts Towers a Los Angeles.jpg',
+              tekija: 'André Corboz',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Dettaglio_delle_Watts_Towers_a_Los_Angeles.jpg',
+            },
+            {
+              nimi: 'Watts Tower How.JPG',
+              tekija: 'Trackinfo',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Watts_Tower_How.JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-losangeles-ilta.png',
@@ -72513,6 +73473,36 @@ export const KULTTUURI_KATEGORIAT = {
             + '1997 Brentwoodin kukkulalle, ja sen kokoelmat tavoittaa '
             + 'vain raitiovaunulla mäen juurelta.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Los Angeles from the Getty Center (5465683022).jpg',
+              tekija: 'KimonBerlin',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Los_Angeles_from_the_Getty_Center_(5465683022).jpg',
+            },
+            {
+              nimi: 'Getty Center Los Angeles Basin California 2015-08-22.jpg',
+              tekija: 'LucynaPrz',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Getty_Center_Los_Angeles_Basin_California_2015-08-22.jpg',
+            },
+            {
+              nimi: 'Los Angeles - Getty Center - GRI - arch sunset.JPG',
+              tekija: 'Remi Mathis',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Los_Angeles_-_Getty_Center_-_GRI_-_arch_sunset.JPG',
+            },
+            {
+              nimi: 'View of Bel Air, Getty Center, Los Angeles, California (3125793528).jpg',
+              tekija: 'Ken Lund from Reno, Nevada, USA',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:View_of_Bel_Air,_Getty_Center,_Los_Angeles,_California_(3125793528).jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Aerial view of Los Angeles, California LCCN2011634747.tif',
@@ -73105,6 +74095,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulmaan; 105-metrisenä se oli hetken maailman korkein '
             + 'raudoitetusta betonista tehty rakennus.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: '2016 contrapicado del Palacio Salvo en Montevido.jpg',
+              tekija: 'Felipe Restrepo Acosta',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:2016_contrapicado_del_Palacio_Salvo_en_Montevido.jpg',
+            },
+            {
+              nimi: 'Columnas del Palacio Salvo.jpg',
+              tekija: 'Ximegenta16',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Columnas_del_Palacio_Salvo.jpg',
+            },
+            {
+              nimi: 'Conferencia de Prensa Palacio Salvo - dsc3475.jpg',
+              tekija: 'Jorge Sánchez',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Conferencia_de_Prensa_Palacio_Salvo_-_dsc3475.jpg',
+            },
+            {
+              nimi: 'Artigas y el Palacio Salvo..JPG',
+              tekija: 'Carlucha Pérez',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Artigas_y_el_Palacio_Salvo..JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-montevideo-keskipaiva.png',
@@ -73113,6 +74133,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisiä jalkapallon MM-kisoja varten, ja se oli '
             + 'maailman ensimmäinen MM-kisastadion.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Entrevista a Diego Lugano en el Estadio Centenario (Montevideo, Uruguay).jpg',
+              tekija: 'AnselmiJuan',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Entrevista_a_Diego_Lugano_en_el_Estadio_Centenario_(Montevideo,_Uruguay).jpg',
+            },
+            {
+              nimi: 'Estadio Centenario (6031696884).jpg',
+              tekija: 'Sandra Cohen-Rose and Colin Rose from Montreal, Canada',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Estadio_Centenario_(6031696884).jpg',
+            },
+            {
+              nimi: 'Estadio Centenario (Montevideo) Tribuna Colombes.jpg',
+              tekija: 'Uwebart',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Estadio_Centenario_(Montevideo)_Tribuna_Colombes.jpg',
+            },
+            {
+              nimi: 'Estadio Centenario inscription.JPG',
+              tekija: 'Ypsilon from Finland',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Estadio_Centenario_inscription.JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-montevideo-ilta.png',
@@ -73121,6 +74171,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennustöiden alkamisen jälkeen, ja on yksi '
             + 'Etelä-Amerikan vanhimmista teattereista.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Don Giovanni Alvaro Brechner Teatro Solis Opera.jpg',
+              tekija: 'Rob Shcultze',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Don_Giovanni_Alvaro_Brechner_Teatro_Solis_Opera.jpg',
+            },
+            {
+              nimi: 'J34 637 Teatro Solis.jpg',
+              tekija: 'Falk2',
+              lisenssi: 'CC BY-SA 3.0 de',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:J34_637_Teatro_Solis.jpg',
+            },
+            {
+              nimi: '2016 fachada columnas Teatro Solís de Montevideo.jpg',
+              tekija: 'Felipe Restrepo Acosta',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:2016_fachada_columnas_Teatro_Sol%C3%ADs_de_Montevideo.jpg',
+            },
+            {
+              nimi: 'Montevideo Teatro Solis 1030762PSD.jpg',
+              tekija: 'Ermell',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Montevideo_Teatro_Solis_1030762PSD.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Mirador desde el Cerro.JPG',
@@ -73764,6 +74844,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'parlamenttitaloksi, ja sen kupoli merkitsee '
             + 'työläiskaupunginosa Centro Habanan alkua.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Capitolio (Cuba, La Habana, 2017).jpg',
+              tekija: 'Jan Almeida B.',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Capitolio_(Cuba,_La_Habana,_2017).jpg',
+            },
+            {
+              nimi: 'Capitolio, Havana, Cuba (42236033882).jpg',
+              tekija: 'kuhnmi',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Capitolio,_Havana,_Cuba_(42236033882).jpg',
+            },
+            {
+              nimi: 'Capitolio Havanna 184-06.jpg',
+              tekija: 'Mozzihh',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Capitolio_Havanna_184-06.jpg',
+            },
+            {
+              nimi: 'Capitolio (3030095920).jpg',
+              tekija: 'Martin Abegglen from Bern, Switzerland',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Capitolio_(3030095920).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-havanna-keskipaiva.png',
@@ -73772,6 +74882,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vinoin muurein; sen huipulla kääntyvä '
             + 'Giraldilla-tuuliviiri on Havannan tunnus.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Castillo de la Real Fuerza, Habana.jpg',
+              tekija: 'Randolph Croft',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Castillo_de_la_Real_Fuerza,_Habana.jpg',
+            },
+            {
+              nimi: 'Castillo de la Real Fuerza - Havana, Cuba.jpg',
+              tekija: 'Kate Perez',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Castillo_de_la_Real_Fuerza_-_Havana,_Cuba.jpg',
+            },
+            {
+              nimi: 'Castillo de la Real Fuerza rear view.jpg',
+              tekija: 'Jan Pešula',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Castillo_de_la_Real_Fuerza_rear_view.jpg',
+            },
+            {
+              nimi: '2012-Castillo de la Real Fuerza anagoria.JPG',
+              tekija: 'Anagoria',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:2012-Castillo_de_la_Real_Fuerza_anagoria.JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-havanna-ilta.png',
@@ -73780,6 +74920,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Alma Mater -patsas on yksi Havannan tunnetuimmista '
             + 'symboleista.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Entrada de la Universidad de La Habana 20160225.jpg',
+              tekija: 'Aniol',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Entrada_de_la_Universidad_de_La_Habana_20160225.jpg',
+            },
+            {
+              nimi: 'Entrada Universidad de la Habana.jpg',
+              tekija: 'Knomrm',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Entrada_Universidad_de_la_Habana.jpg',
+            },
+            {
+              nimi: 'Biblioteca Central de la Universidad de la Habana.jpg',
+              tekija: 'BTK-UH',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Biblioteca_Central_de_la_Universidad_de_la_Habana.jpg',
+            },
+            {
+              nimi: 'Front view of Universidad de La Habana.jpg',
+              tekija: 'Anton Zelenov',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Front_view_of_Universidad_de_La_Habana.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Skyline Havanna von Castillo del Morro Havanna.jpg',
@@ -74371,6 +75541,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaivauspaikan sattumalta 1978; se on esillä katutasoa '
             + 'alempana aivan katedraalin vieressä.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Etapas - Templo Mayor - Ciudad de México - II.jpg',
+              tekija: 'Juan Carlos Fonseca Mata',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Etapas_-_Templo_Mayor_-_Ciudad_de_M%C3%A9xico_-_II.jpg',
+            },
+            {
+              nimi: 'Exterior of the Templo Mayor IMG 7052.JPG',
+              tekija: 'Deror_avi',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Exterior_of_the_Templo_Mayor_IMG_7052.JPG',
+            },
+            {
+              nimi: 'El Templo Mayor en el año 2003 - 01.jpg',
+              tekija: 'Luis Alvaz',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:El_Templo_Mayor_en_el_a%C3%B1o_2003_-_01.jpg',
+            },
+            {
+              nimi: 'Aztec Great Temple (9780117184).jpg',
+              tekija: 'Gary Todd from Xinzheng, China',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Aztec_Great_Temple_(9780117184).jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-mexico-keskipaiva.png',
@@ -74379,6 +75579,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uusi basilika valmistui 1976 ja mahtuu sisälle noin '
             + '10 000 pyhiinvaeltajaa.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Basilica of Our Lady of Guadalupe - Wiki Loves Pyramids tour 001.jpg',
+              tekija: 'Photograph by Mike Peel ( www.mikepeel.net ).',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Basilica_of_Our_Lady_of_Guadalupe_-_Wiki_Loves_Pyramids_tour_001.jpg',
+            },
+            {
+              nimi: 'Nun talking to women on steps of new Basilica of Our Lady of Guadulupe.jpg',
+              tekija: 'Daniel Case',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Nun_talking_to_women_on_steps_of_new_Basilica_of_Our_Lady_of_Guadulupe.jpg',
+            },
+            {
+              nimi: 'Bazilika de Guadalupe DSC 5562.jpg',
+              tekija: 'Karolja',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bazilika_de_Guadalupe_DSC_5562.jpg',
+            },
+            {
+              nimi: 'Peregrinación llegando a la Basílica de Guadalupe.jpg',
+              tekija: 'ProtoplasmaKid',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Peregrinaci%C3%B3n_llegando_a_la_Bas%C3%ADlica_de_Guadalupe.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-mexico-ilta.png',
@@ -74987,6 +76217,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pohjavesi pakotti hautaamaan maan päälle rakennettuihin '
             + 'kammioihin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Do you know what it means to miss New Orleans? - St Louis Cemetery 1.jpg',
+              tekija: 'Ben Ledbetter, Architect',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Do_you_know_what_it_means_to_miss_New_Orleans%3F_-_St_Louis_Cemetery_1.jpg',
+            },
+            {
+              nimi: 'BasinStStation StLouisCem1Night.jpg',
+              tekija: 'Infrogmation of New Orleans',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:BasinStStation_StLouisCem1Night.jpg',
+            },
+            {
+              nimi: 'Fifty Two, St. Louis Cemetery No. 1 (New Orleans, LA) (6039805945).jpg',
+              tekija: 'takomabibelot',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Fifty_Two,_St._Louis_Cemetery_No._1_(New_Orleans,_LA)_(6039805945).jpg',
+            },
+            {
+              nimi: 'Bolt, St Louis I cemetery 127, New Orleans, Louisiana.jpg',
+              tekija: 'Cory Doctorow',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bolt,_St_Louis_I_cemetery_127,_New_Orleans,_Louisiana.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-neworleans-keskipaiva.png',
@@ -74996,6 +76256,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hurrikaani Katrinan aikana se toimi tuhansien '
             + 'asukkaiden hätämajoituksena.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Caesars Superdome illuminated at night, April 2025.jpg',
+              tekija: 'Paul Lowry',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Caesars_Superdome_illuminated_at_night,_April_2025.jpg',
+            },
+            {
+              nimi: 'SUPERDOME - Poydras Street, New Orleans, 10 August 2021 - 01.jpg',
+              tekija: 'Infrogmation of New Orleans',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:SUPERDOME_-_Poydras_Street,_New_Orleans,_10_August_2021_-_01.jpg',
+            },
+            {
+              nimi: 'Patti LaBelle at the 2026 Essence Festival of Music 03.jpg',
+              tekija: 'LaShawnda Jones',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Patti_LaBelle_at_the_2026_Essence_Festival_of_Music_03.jpg',
+            },
+            {
+              nimi: 'Poydras Street, New Orleans CBD, 24 August 2021 - 09.jpg',
+              tekija: 'Infrogmation of New Orleans',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Poydras_Street,_New_Orleans_CBD,_24_August_2021_-_09.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-neworleans-ilta.png',
@@ -75646,6 +76936,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ja pystytti sinne kaksitoista ruokomajaa apostolien '
             + 'muistoksi.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Plaza del Chorro de Quevedo de Bogotá.JPG',
+              tekija: 'Javier Benítez',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Plaza_del_Chorro_de_Quevedo_de_Bogot%C3%A1.JPG',
+            },
+            {
+              nimi: 'Plaza del Chorro de Quevedo 01.jpg',
+              tekija: 'Guaiquerí',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Plaza_del_Chorro_de_Quevedo_01.jpg',
+            },
+            {
+              nimi: 'Plaza Chorro de Quevedo.JPG',
+              tekija: 'Felipe Restrepo Acosta',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Plaza_Chorro_de_Quevedo.JPG',
+            },
+            {
+              nimi: 'Letreros de la plaza del chorro de Quevedo. Bogotá. Colombia..jpg',
+              tekija: 'Kamilokardona',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Letreros_de_la_plaza_del_chorro_de_Quevedo._Bogot%C3%A1._Colombia..jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-bogota-keskipaiva.png',
@@ -75655,12 +76975,72 @@ export const KULTTUURI_KATEGORIAT = {
             + 'naapureistaan poiketen se on modernistinen eikä '
             + 'siirtomaa-ajan talo.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'MOS 01 ClarkManuelRodriguez (24843596547).jpg',
+              tekija: 'Actividad Cultural Banco de la República',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:MOS_01_ClarkManuelRodriguez_(24843596547).jpg',
+            },
+            {
+              nimi: 'Collar de cuentas de concha Conus.jpg',
+              tekija: 'Banrep cultural',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Collar_de_cuentas_de_concha_Conus.jpg',
+            },
+            {
+              nimi: 'BOG Museo del Oro.JPG',
+              tekija: 'Felipe Restrepo Acosta',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG',
+            },
+            {
+              nimi: 'BOG 04 2012 Museo de Oro 1278.JPG',
+              tekija: 'Mariordo (Mario Roberto Durán Ortiz)',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:BOG_04_2012_Museo_de_Oro_1278.JPG',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-bogota-ilta.png',
           selite: 'Torre Colpatria valmistui 1979 ja on 196 metrillään '
             + 'Bogotán toiseksi korkein rakennus.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Colpatria Tower Bogota.jpg',
+              tekija: 'Gustavo Andres Perdomo Morales from Bogota, Colombia',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Colpatria_Tower_Bogota.jpg',
+            },
+            {
+              nimi: 'Colpatria Tower, Bogotá, Colombia.jpg',
+              tekija: 'CivArmy',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Colpatria_Tower,_Bogot%C3%A1,_Colombia.jpg',
+            },
+            {
+              nimi: 'Bogota Planet II (4213463098).jpg',
+              tekija: 'Tijs Zwinkels',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bogota_Planet_II_(4213463098).jpg',
+            },
+            {
+              nimi: 'Bogota Monserrate desde la Caracas.jpg',
+              tekija: 'Felipe Restrepo Acosta',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Bogota_Monserrate_desde_la_Caracas.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Bogotá, Monserrate, 2023-06 CN-02.jpg',
@@ -76384,6 +77764,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'keskustan länsilaidalla, ja vanhan markkinahallin '
             + 'edustalle valmistui 2019 uusi lasi- ja teräskatos.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'FacadeJuly2018-14.jpg',
+              tekija: 'Adelcentralmarket',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:FacadeJuly2018-14.jpg',
+            },
+            {
+              nimi: 'Adelaide Central Market building in Adelaide, June 2026 (DSCF7266).jpg',
+              tekija: 'Yu Chu Chin',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Adelaide_Central_Market_building_in_Adelaide,_June_2026_(DSCF7266).jpg',
+            },
+            {
+              nimi: 'Central Market, Adelaide on 25 April 2025 02.jpg',
+              tekija: 'Pangalau',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Central_Market,_Adelaide_on_25_April_2025_02.jpg',
+            },
+            {
+              nimi: 'Adelaide\'s Central Market.jpg',
+              tekija: 'Danijel-James Wynyard',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Adelaide%27s_Central_Market.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-adelaide-keskipaiva.png',
@@ -76392,6 +77802,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Cathedral valmistui pääosin 1904, ja se on rakennettu '
             + 'sinikivestä vaalein hiekkakivilistoin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'St Peter\'s Cathedral, Adelaide SA.jpg',
+              tekija: 'Belle Hammond',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:St_Peter%27s_Cathedral,_Adelaide_SA.jpg',
+            },
+            {
+              nimi: 'Adelaide Cathedral. SA.jpg',
+              tekija: 'Amanda Slater',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Adelaide_Cathedral._SA.jpg',
+            },
+            {
+              nimi: 'OIC n adelaide lights vision towards st peters.jpg',
+              tekija: 'User:Orderinchaos',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:OIC_n_adelaide_lights_vision_towards_st_peters.jpg',
+            },
+            {
+              nimi: 'King William Road, North Adelaide.jpg',
+              tekija: 'Jocelyn Kinghorn',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:King_William_Road,_North_Adelaide.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-adelaide-ilta.png',
@@ -76401,6 +77841,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikka tunnetaan yhä kulmatalon mehiläispesäkoristeen '
             + 'mukaan nimellä Beehive Corner.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Beehive Corner at Rundle Mall, Adelaide (DSCF4268).jpg',
+              tekija: 'Yu Chu Chin',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Beehive_Corner_at_Rundle_Mall,_Adelaide_(DSCF4268).jpg',
+            },
+            {
+              nimi: 'Beehive Corner on 25 April 2025.jpg',
+              tekija: 'Pangalau',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Beehive_Corner_on_25_April_2025.jpg',
+            },
+            {
+              nimi: 'Beehive corner Adelaide south Australia.jpg',
+              tekija: 'Andrew McMillan',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Beehive_corner_Adelaide_south_Australia.jpg',
+            },
+            {
+              nimi: 'Beehive Corner Adelaide 159.JPG',
+              tekija: 'Schwede66',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Beehive_Corner_Adelaide_159.JPG',
+            },
+          ],
         },
         {
           tiedosto: 'Adelaide DougBarber.jpg',
@@ -77103,6 +78573,36 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Theatre Royal avasi ovensa maaliskuussa 1837, ja se '
             + 'on Australian vanhin yhtäjaksoisesti toiminut teatteri.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Theatre Royal Campbell Street Hobart Tasmania Australia.jpg',
+              tekija: 'TaswegianSchnapps',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Theatre_Royal_Campbell_Street_Hobart_Tasmania_Australia.jpg',
+            },
+            {
+              nimi: 'The Hedberg performing arts precinct in Hobart.jpg',
+              tekija: 'Canley',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:The_Hedberg_performing_arts_precinct_in_Hobart.jpg',
+            },
+            {
+              nimi: 'David Methuen in the play "Monday Next", Theatre Royal, Hobart, ca. 1950-1952 - photographer unknown (4291796039).jpg',
+              tekija: 'Unknown author Unknown author',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:David_Methuen_in_the_play_%22Monday_Next%22,_Theatre_Royal,_Hobart,_ca._1950-1952_-_photographer_unknown_(4291796039).jpg',
+            },
+            {
+              nimi: 'Earlandgirlaust.jpg',
+              tekija: 'tuntematon',
+              lisenssi: 'Public domain',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Earlandgirlaust.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-hobart-keskipaiva.png',
@@ -77112,6 +78612,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toiminut panimo; sen perusti Hugh Macintosh '
             + 'veljenpoikineen 1832.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Cascade Brewery, South Hobart.jpg',
+              tekija: 'Rakesh Vyas',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Cascade_Brewery,_South_Hobart.jpg',
+            },
+            {
+              nimi: 'Cascade Brewery 2015.jpg',
+              tekija: 'Michael fromholtz',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Cascade_Brewery_2015.jpg',
+            },
+            {
+              nimi: 'Mount Wellington and Cascade Brewery in Hobart.jpg',
+              tekija: 'CHIELO',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mount_Wellington_and_Cascade_Brewery_in_Hobart.jpg',
+            },
+            {
+              nimi: 'Former Cascade Brewery Depot Queenstown Tasmania.jpg',
+              tekija: 'Jimmyjrg',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Former_Cascade_Brewery_Depot_Queenstown_Tasmania.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-hobart-ilta.png',
@@ -77121,6 +78651,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksityisrahoitteisista taidemuseoista eteläisen '
             + 'pallonpuoliskon suurin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'MONA pavilions 20171120-073.jpg',
+              tekija: 'Gary Houston',
+              lisenssi: 'CC0',
+              lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:MONA_pavilions_20171120-073.jpg',
+            },
+            {
+              nimi: 'Museum of Old and New Art (MONA) - Hobart - 49142246651.jpg',
+              tekija: 'Jorge Láscar',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Museum_of_Old_and_New_Art_(MONA)_-_Hobart_-_49142246651.jpg',
+            },
+            {
+              nimi: 'Museum on the Derwent MONA 2023.jpg',
+              tekija: 'Michael Coghlan',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Museum_on_the_Derwent_MONA_2023.jpg',
+            },
+            {
+              nimi: 'Meeting New Zealander Vinnie Trim, Executive Chef at MONA.jpg',
+              tekija: 'New Zealand Government, Office of the Governor-General',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Meeting_New_Zealander_Vinnie_Trim,_Executive_Chef_at_MONA.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Hobart seen from the east.jpg',
@@ -77884,6 +79444,36 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Esplanadin Government House valmistui 1870–1871 ja '
             + 'on Pohjoisterritorion vanhin eurooppalainen rakennus.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Darwin (AU), Government House -- 2019 -- 4353.jpg',
+              tekija: 'Dietmar Rabich',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Darwin_(AU),_Government_House_--_2019_--_4353.jpg',
+            },
+            {
+              nimi: 'Government House in Darwin.jpg',
+              tekija: 'Stephen Michael Barnett',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Government_House_in_Darwin.jpg',
+            },
+            {
+              nimi: 'Government House, Darwin.jpg',
+              tekija: 'kenhodge13',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Government_House,_Darwin.jpg',
+            },
+            {
+              nimi: 'Government House in Darwin photographed in June 2011.jpg',
+              tekija: 'Ken Hodge',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Government_House_in_Darwin_photographed_in_June_2011.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-darwin-keskipaiva.png',
@@ -77892,6 +79482,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alkaen aina syyskuuhun 1979, ja rakennukset ovat '
             + 'nykyään museona.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Fannie Bay Gaol gallows.jpg',
+              tekija: 'Ken Hodge',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Fannie_Bay_Gaol_gallows.jpg',
+            },
+            {
+              nimi: 'Fannie Bay Gaol 2.jpg',
+              tekija: 'D0a5l0e6',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Fannie_Bay_Gaol_2.jpg',
+            },
+            {
+              nimi: 'Fannie Bay Gaol P6200008.jpg',
+              tekija: 'Cuddy Wifter',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Fannie_Bay_Gaol_P6200008.jpg',
+            },
+            {
+              nimi: 'Fannie bay nt.jpg',
+              tekija: 'Bidgee',
+              lisenssi: 'CC BY 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Fannie_bay_nt.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-darwin-ilta.png',
@@ -77901,6 +79521,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rakennuksen 1974; ainoa säilynyt osa, vuonna 1944 '
             + 'rakennettu kuisti, jätettiin näkyviin.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Christ Church Cathedral, Darwin, 2023 (01).jpg',
+              tekija: 'Bahnfrend',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral,_Darwin,_2023_(01).jpg',
+            },
+            {
+              nimi: 'Christ Church Cathedral, Darwin, Australia.jpg',
+              tekija: 'Bernard Gagnon',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral,_Darwin,_Australia.jpg',
+            },
+            {
+              nimi: 'Christ Church Cathedral 2, Darwin.jpg',
+              tekija: 'Torbenbrinker',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral_2,_Darwin.jpg',
+            },
+            {
+              nimi: 'AU-Darwin-christ-church-cathedral-innen.jpg',
+              tekija: 'Balou46',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:AU-Darwin-christ-church-cathedral-innen.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Darwin\'s Changing Skyline January 2010.jpg',
@@ -78618,6 +80268,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kattomuoto on lainattu ylämaiden haus tambaran '
             + '-henkirakennuksista.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Indian Social Activist Dr Harikumar Pallathadka posing in front of the National Parliament House of PNG.JPG',
+              tekija: 'Bharathiya',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Indian_Social_Activist_Dr_Harikumar_Pallathadka_posing_in_front_of_the_National_Parliament_House_of_PNG.JPG',
+            },
+            {
+              nimi: 'Papua New Guinea 1991-039 Parliament House, Port Moresby (33351725760).jpg',
+              tekija: 'Brian ireland',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_1991-039_Parliament_House,_Port_Moresby_(33351725760).jpg',
+            },
+            {
+              nimi: 'PNG National Court after independence.jpg',
+              tekija: 'Masalai',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:PNG_National_Court_after_independence.jpg',
+            },
+            {
+              nimi: 'NahauRooney.jpg',
+              tekija: 'Michelle Rooney',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:NahauRooney.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-portmoresby-keskipaiva.png',
@@ -78627,6 +80307,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Port Moresbyyn ei pääse muualta Papua-Uudesta-Guineasta '
             + 'maanteitse.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Port Moresby Airport looking west.jpg',
+              tekija: 'Masalai',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Port_Moresby_Airport_looking_west.jpg',
+            },
+            {
+              nimi: 'Port Moresby Intl Airport 2008.jpg',
+              tekija: 'Jialiang Gao (peace-on-earth.org)',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Port_Moresby_Intl_Airport_2008.jpg',
+            },
+            {
+              nimi: 'Gg-state-visit-papua-new-guinea-2009-events-acting-pm.jpg',
+              tekija: 'New Zealand Government, Office of the Governor-General',
+              lisenssi: 'CC BY 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Gg-state-visit-papua-new-guinea-2009-events-acting-pm.jpg',
+            },
+            {
+              nimi: 'Secretary of Defense Lloyd Austin greets Joe Zadrozny (center), Chargé d’Affaires, a.i. U.S. Embassy Papua New Guinea and Elias Wohengu, Deputy Chief of Mission in Port Moresby, Papua New Guinea, July 27, 2023 - 230727-D-TT977-0017.jpg',
+              tekija: 'U.S. Secretary of Defense',
+              lisenssi: 'CC BY 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Secretary_of_Defense_Lloyd_Austin_greets_Joe_Zadrozny_(center),_Charg%C3%A9_d%E2%80%99Affaires,_a.i._U.S._Embassy_Papua_New_Guinea_and_Elias_Wohengu,_Deputy_Chief_of_Mission_in_Port_Moresby,_Papua_New_Guinea,_July_27,_2023_-_230727-D-TT977-0017.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-portmoresby-ilta.png',
@@ -79353,6 +81063,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'on kaupungin vanhin yhä kulkeva vinohissi; Valparaísoa '
             + 'on palvellut aikojen saatossa jopa 28 hissiä.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Ascensor Concepción, Valparaíso - ambos carros.JPG',
+              tekija: 'Nereidas',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Ascensor_Concepci%C3%B3n,_Valpara%C3%ADso_-_ambos_carros.JPG',
+            },
+            {
+              nimi: 'Cartel Ascensor Concepción.JPG',
+              tekija: 'PameMV',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Cartel_Ascensor_Concepci%C3%B3n.JPG',
+            },
+            {
+              nimi: 'Ascensor Concepción, Cerro Concepción, Valparaíso 20201102 150.jpg',
+              tekija: 'Carlos Figueroa Rojas',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Ascensor_Concepci%C3%B3n,_Cerro_Concepci%C3%B3n,_Valpara%C3%ADso_20201102_150.jpg',
+            },
+            {
+              nimi: 'Ascensor reina.jpg',
+              tekija: 'Lemurdeformee',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Ascensor_reina.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-valparaiso-keskipaiva.png',
@@ -79361,6 +81101,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kroatialaissyntyisen salpietarikauppiaan kodiksi, ja '
             + 'siinä toimii nykyään kaupungin taidemuseo.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Museo Bellas Artes de Valparaiso (3).jpg',
+              tekija: 'Beyts27',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Museo_Bellas_Artes_de_Valparaiso_(3).jpg',
+            },
+            {
+              nimi: 'Mirador de Valparaiso .jpg',
+              tekija: 'Ric.arredondo',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Mirador_de_Valparaiso_.jpg',
+            },
+            {
+              nimi: 'CL-valpa-palacio-baburizza.jpg',
+              tekija: 'Balou46',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:CL-valpa-palacio-baburizza.jpg',
+            },
+            {
+              nimi: 'Detalle Palacio Baburizza 1.jpg',
+              tekija: 'Joaquin Abarca',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Detalle_Palacio_Baburizza_1.jpg',
+            },
+          ],
         },
         {
           ampari: 'herokoe/hero-valparaiso-ilta.png',
@@ -79369,6 +81139,36 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pablo Nerudan kolmesta talosta, jotka kaikki toimivat '
             + 'nykyään museoina.',
           lahde: 'Matkakirjan havainnekuva',
+          viitteet: [
+            {
+              nimi: 'Casa Museo La Sebastiana - Pablo Neruda, Valparaiso.jpg',
+              tekija: 'Mikel Santamaria',
+              lisenssi: 'CC BY-SA 2.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Casa_Museo_La_Sebastiana_-_Pablo_Neruda,_Valparaiso.jpg',
+            },
+            {
+              nimi: 'La Sebastiana 20171108 fRF07.jpg',
+              tekija: 'Rodrigo Fernández',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:La_Sebastiana_20171108_fRF07.jpg',
+            },
+            {
+              nimi: 'Casa Museo La Sebastiana 02.jpg',
+              tekija: 'Marcelo Ois Lagarde',
+              lisenssi: 'CC BY-SA 3.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:Casa_Museo_La_Sebastiana_02.jpg',
+            },
+            {
+              nimi: 'La Sebastiana, casa de Neruda en Valparaíso.jpg',
+              tekija: 'Luciajimena1990',
+              lisenssi: 'CC BY-SA 4.0',
+              lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+              sivu: 'https://commons.wikimedia.org/wiki/File:La_Sebastiana,_casa_de_Neruda_en_Valpara%C3%ADso.jpg',
+            },
+          ],
         },
         {
           tiedosto: 'Vista aerea Valparaíso, Chile.jpg',
@@ -97480,6 +99280,29 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tundralla kaupungin pohjoislaidalla.',
           lahde: 'Vikebe, Wikimedia Commons (CC0)',
           wiki: 'University of Greenland',
+        },
+        {
+          otsikko: 'Kymmenenneksi vähiten jäätä satelliittiajassa',
+          teksti: 'Grönlannin edustalla ei jää sula yksin: koko '
+            + 'Jäämeren kesäjää mitataan joka syksy. Syyskuun 12. '
+            + 'päivänä 2026 NASA ja Yhdysvaltain lumi- ja '
+            + 'jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi '
+            + 'merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 '
+            + 'miljoonaa neliömailia. Se on mittaushistorian '
+            + 'kymmenenneksi vähiten, saman verran kuin vuosina 2008, '
+            + '2010 ja 2025 — silti viimeisten kahdenkymmenen vuoden '
+            + 'minimit ovat koko satelliittiajan kaksikymmentä '
+            + 'pienintä. Tutkija Linette Boisvert kuvaili tilannetta '
+            + 'NASA:lle: jää on "tasaantunut mutta yhä matalalla '
+            + 'verrattuna sarjan alkupäähän".',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677).png',
+          lyhyt: 'NASA:n visualisointi näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite: 'NASA:n Scientific Visualization Studion kuva '
+            + 'näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, '
+            + 'keltaisen ääriviivan merkitessä vuosien 1981–2010 '
+            + 'keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
         },
       ],
     },

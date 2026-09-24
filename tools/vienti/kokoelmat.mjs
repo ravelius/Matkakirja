@@ -39,6 +39,8 @@ import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
+import { tyohuonetilastot } from './tyohuonetilastot.mjs';
+import * as TYOHUONETILASTOT from '../../js/tyohuone-tilastot.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
 import {
   LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
@@ -924,7 +926,10 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
       `Maarajat asteina (id = ISO3, iso2, bbox [w, s, e, n], renkaat [[[lon, lat], …]]), harvennettu `
         + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
         + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
-        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).',
+        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).'
+        + ' Skeema 1.29: renkaat = maan alue kuten webin korostus ja vertailu (laudan countryShapes-muodon alue, vara 1°: '
+        + 'ei Huippuvuoria, Ranskan merentakaisia alueita, Kanarioita, Azoreita…); muutRenkaat = muut admin-0-renkaat, '
+        + 'bbox = renkaiden laatikko, kokoBbox = kaikkien.',
       {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
   // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.
@@ -954,6 +959,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
   tyypitaLoput(kokoelmat);
+  // Skeema 1.28 (Natiivi-UI): työhuoneen Tilastot-taulu valmiiksi laskettuna.
+  kokoelmat.tyohuonetilastot = tyohuonetilastot(TYOHUONETILASTOT, taulukko);
   // Skeema 1.24 (Natiivi-UI:n toiveet 1, 3 ja 4): kohdekarttojen linkkien aihe,
   // saapumistekstit ja Livian saapumisrepliikit.
   rikastaKohdekartat(kokoelmat.kohdekartat, valot.haeKohde, valot.luokittele);
@@ -971,11 +978,14 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     id: 'LIVIAN_ASTRONAUTTI_KYPARA', moduuli: 'js/livia-astronautti.js',
     arvo: mediaOsoite('assets/livia/livia-astronauttikypara-2x.png'),
   });
+  const luennat = linssiluennat(hae);
   kokoelmat.linssiaineisto.alkiot.push({
+    // Skeema 1.32: kentät myös päätasolla (keksinnot, ihmisen-matka), kuten muilla linssiaineiston alkioilla.
+    ...luennat,
     id: 'linssiluennat', linssi: null, laji: 'luennat',
     kuvaus: 'Linssien luennat: juuri, pysäkit (runko = luennanRunko, url = luennanOsoite) ja kaaren puheet '
       + '(esittely ?v=tiiviste, välinäytökset, loppu). Musiikki: aanitaulut siirtyma:keksinnot ja siirtyma:ihmisen-matka.',
-    data: linssiluennat(hae),
+    data: luennat,
   });
   return kokoelmat;
 }
