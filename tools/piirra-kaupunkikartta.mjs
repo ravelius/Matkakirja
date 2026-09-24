@@ -65,6 +65,12 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  gao: {
+    // Askian mausoleumi (16.2894/-0.0445) ja Gaon suurmoskeija
+    // (16.2793/-0.0493) ovat n. 1,2 km päässä toisistaan
+    // (sisältöinventaario #3045 kohta 5.5).
+    rajat: { pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325 },
+  },
   cayenne: {
     // Fort Cépérou (4.9377/-52.3368) ja Place des Palmistes
     // (4.9396/-52.3338) ovat n. 0,4 km päässä toisistaan vanhassa

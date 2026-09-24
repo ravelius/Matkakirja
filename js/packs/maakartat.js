@@ -3041,6 +3041,41 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Gao (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Peli ei käsittele
+   * nykykonflikteja — molemmat kohteet ja niiden tekstit koskevat vain
+   * Songhain valtakunnan aikaa (1400–1500-luvut).
+   */
+  gao: {
+    polku: 'assets/kartat/gao-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325,
+    },
+    esittely: 'Kartan alue on Gaon ydinkeskusta Nigerjoen rannalla. '
+      + 'Askian mausoleumi, savesta rakennettu pyramidinmuotoinen '
+      + 'hautamonumentti, kohoaa yhä keskustassa; se on Gaon suurin '
+      + 'esikolonialistinen rakennus ja Unescon maailmanperintökohde.',
+    kohteet: [
+      {
+        nimi: 'Askian mausoleumi', lat: 16.2894, lon: -0.0445,
+        teksti: 'Songhain valtakunnan hallitsija Askia Muhammad '
+          + 'rakennutti oman hautamonumenttinsa Gaohon 1495. Pyramidin '
+          + 'muotoinen, 17 metriä korkea savirakennelma on Gaon suurin '
+          + 'esikolonialistinen monumentti ja toimii yhä rukouspaikkana '
+          + '— Unesco liitti sen maailmanperintöluetteloon 2004.',
+      },
+      {
+        nimi: 'Gaon suurmoskeija', lat: 16.2793494, lon: -0.0493098,
+        teksti: 'Kaupungin suurmoskeija sijaitsee Askian mausoleumista '
+          + 'reilun kilometrin päässä, samalla Askia-nimisellä '
+          + 'kadulla — molemmat muistuttavat Gaon asemasta islamilaisen '
+          + 'oppineisuuden ja hallinnon keskuksena Songhain valtakunnan '
+          + 'aikana.',
+      },
+    ],
+  },
+  /*
    * Cayenne (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
    * `teksti`-kenttä, ei `nosto:`-linkkiä.
    */
