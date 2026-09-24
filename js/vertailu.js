@@ -18,7 +18,7 @@
  */
 
 import { el } from './mapart.js';
-import { rengasAsteiksi } from './maanaariviivat.js';
+import { lataaMaapolygonit, puraMaanRenkaat, rengasAsteiksi } from './maanaariviivat.js';
 import { sfx } from './sound.js';
 import { MAATIEDOT } from './sisaltotaulut.js';
 import { TOAST_MS, html } from './ui-apurit.js';
@@ -56,6 +56,67 @@ const VERTAILUVARIT = [
  * tasokartallakin toisistaan riippumatta (`M…Z` kukin erikseen).
  */
 
+/*
+ * TARKAT RAJAT PALLOLLA (Fable 24.9.2026, natiivin pariteettikierros):
+ * laudan `countryShapes` on tasokartan tyylitelty sävytysrengas, joka
+ * loppuu laudan pohjoisreunaan (76° N) — Huippuvuoret puuttuivat Norjalta,
+ * ja karkeat vuonorenkaat kolmioituivat Finnmarkissa valkoisiksi
+ * kolmioiksi. Pallon pohja on oikeaa maantiedettä, joten pallolla
+ * piirretään sama Natural Earth 10m -aineisto kuin pelaajan maan
+ * korostuskehässä (assets/data/maapolygonit.json, lataaMaapolygonit),
+ * harvennettuna. Nimi, keskus ja leveys tulevat yhä laudan muodosta,
+ * ja maa, jota aineistossa ei ole, piirtyy laudan muodosta kuten ennen.
+ *
+ * HARVENNUS ON ETÄISYYSSEULA LAUDAN YKSIKÖISSÄ ennen asteiksi kääntöä:
+ * piste pidetään, kun se on vähintään TARKKA_ASKEL yksikön (8 ≈ 26 km)
+ * päässä edellisestä, ja rengas, jonka laatikko on alle 1,5 askelta,
+ * jätetään pois (luodot). Mitattu 24.9.: 497 000 → 41 000 pistettä ja
+ * 2 627 → 754 rengasta (countryShapes 26 000), 57 ms Macilla koko
+ * maailmalle; Douglas–Peucker olisi vienyt 370 ms. Huippuvuorilta jää
+ * 12 rengasta (pääsaaret).
+ */
+export const TARKKA_ASKEL = 8;
+
+/** Maan tarkat renkaat asteina (GeoJSON-renkaat) tai tyhjä lista. */
+export function tarkatRenkaatPallolle(data, iso, asteet, askel = TARKKA_ASKEL) {
+  const ulos = [];
+  for (const r of puraMaanRenkaat(data, iso)) {
+    let w = Infinity; let e = -Infinity; let s = Infinity; let n = -Infinity;
+    for (const [x, y] of r) {
+      if (x < w) w = x; if (x > e) e = x; if (y < s) s = y; if (y > n) n = y;
+    }
+    if (Math.max(e - w, n - s) < askel * 1.5) continue;
+    const pidetyt = [r[0]];
+    let [px, py] = r[0];
+    for (let i = 1; i < r.length; i += 1) {
+      const [x, y] = r[i];
+      if (Math.hypot(x - px, y - py) >= askel) { pidetyt.push(r[i]); px = x; py = y; }
+    }
+    if (pidetyt.length < 4) continue;
+    const kaannetty = rengasAsteiksi(pidetyt, asteet);
+    if (!kaannetty) continue;
+    /*
+     * KIERTOSUUNTA: pallon monikulmio tulkitsee vastapäivään kiertävän
+     * renkaan koko maapallon komplementiksi (koko pallo maan värissä).
+     * Laudan renkaat kiertävät kaikki myötäpäivään; Natural Earthin
+     * reiät ja harvennuksen kääntämät renkaat käännetään samoin.
+     */
+    let ala = 0;
+    for (let i = 0; i + 1 < kaannetty.length; i += 1) {
+      ala += (kaannetty[i + 1][0] - kaannetty[i][0]) * (kaannetty[i + 1][1] + kaannetty[i][1]);
+    }
+    if (ala < 0) kaannetty.reverse();
+    ulos.push(kaannetty);
+  }
+  return ulos;
+}
+
+/** Onko tarkka aineisto samalla laudalla kuin pakka (maailmankartta)? */
+function samaLauta(map, tarkat) {
+  return Boolean(tarkat?.maat && tarkat.lauta
+    && tarkat.lauta.leveys === map?.width && tarkat.lauta.korkeus === map?.height);
+}
+
 /** Maakerroksen korkeus pallon pinnasta — pelin merkkien tasalla. */
 export const MAAPOLYGONIN_KORKEUS = 0.004;
 
@@ -69,16 +130,20 @@ export const MAAPOLYGONIN_KORKEUS = 0.004;
  * MultiPolygon asteina ja `leveys` on yhä LAUDAN yksiköissä — nimen
  * piirtoehto (leveys >= 60) on sama luku molemmilla laudoilla.
  */
-export function maapolygonitPallolle(map, asteet) {
+export function maapolygonitPallolle(map, asteet, tarkat = null) {
   const tulos = new Map();
   const muodot = map?.countryShapes;
   if (!muodot || typeof asteet !== 'function') return tulos;
+  const tarkka = samaLauta(map, tarkat);
   for (const [iso, maa] of Object.entries(muodot)) {
     if (!maa?.renkaat?.length) continue;
-    const renkaat = [];
-    for (const rengas of maa.renkaat) {
-      const kaannetty = rengasAsteiksi(rengas, asteet);
-      if (kaannetty) renkaat.push(kaannetty);
+    let renkaat = tarkka ? tarkatRenkaatPallolle(tarkat, iso, asteet) : [];
+    if (!renkaat.length) {
+      renkaat = [];
+      for (const rengas of maa.renkaat) {
+        const kaannetty = rengasAsteiksi(rengas, asteet);
+        if (kaannetty) renkaat.push(kaannetty);
+      }
     }
     if (!renkaat.length) continue;
     const k = asteet({ x: maa.keskus?.[0], y: maa.keskus?.[1] });
@@ -100,6 +165,9 @@ export function maapolygonitPallolle(map, asteet) {
  * kohti. WeakMap eikä Map: kartta-olio saa kadota tallenteen mukana.
  */
 const polygoniMuisti = new WeakMap();
+/** Tarkka aineisto (maapolygonit.json), kun se on saapunut; haku kerran. */
+let tarkatMaat = null;
+let tarkatHaussa = false;
 
 /** Onko pallo lauta juuri nyt (tasokartta nukkuu)? */
 function pallolautaPaalla(ui) {
@@ -111,11 +179,27 @@ function pallonMaat(ui) {
   const map = ui.game.pack.map;
   if (!map) return new Map();
   const valmis = polygoniMuisti.get(map);
-  if (valmis) return valmis;
-  const tulos = maapolygonitPallolle(map, ui.pallolauta?.asteet);
+  if (valmis && (valmis.tarkka || !tarkatMaat)) return valmis.maat;
+  /*
+   * Tarkka aineisto on laiska ja jaettu korostuskehän kanssa: kunnes se
+   * saapuu, piirretään laudan muodoista, ja saapuessa auki oleva tila
+   * piirretään kerran uudestaan (Globe.gl vaihtaa geometrian).
+   */
+  if (!tarkatMaat && !tarkatHaussa) {
+    tarkatHaussa = true;
+    Promise.resolve(lataaMaapolygonit()).then((data) => {
+      tarkatHaussa = false;
+      if (!data) return;
+      tarkatMaat = data;
+      if (!pallolautaPaalla(ui)) return;
+      if (vertailuPaalla()) piirraVertailuMaat(ui);
+      if (document.body.classList.contains('maatiedot-tila')) piirraMaatiedotMaat(ui);
+    }).catch(() => { tarkatHaussa = false; });
+  }
+  const tulos = maapolygonitPallolle(map, ui.pallolauta?.asteet, tarkatMaat);
   // Tyhjää tulosta ei muisteta: se tarkoittaa, ettei laudalla ollut
   // vielä käännöstä, ja seuraava piirto saa yrittää uudestaan.
-  if (tulos.size) polygoniMuisti.set(map, tulos);
+  if (tulos.size) polygoniMuisti.set(map, { maat: tulos, tarkka: Boolean(tarkatMaat) });
   return tulos;
 }
 

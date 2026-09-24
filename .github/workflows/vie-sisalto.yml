@@ -142,6 +142,8 @@ jobs:
         run: |
           set -euo pipefail
           node tools/vienti/vie-sisalto.mjs
+          # Skeema 1.33: jokainen maamerkin GLB on ämpärissä oikean kokoisena ennen pakettia.
+          node tools/vienti/maamerkit.mjs --tarkista
           node tools/vienti/julkaise-sisalto.mjs --edellinen edellinen/uusin.json \
             --suurin "${{ steps.tila.outputs.suurin }}" --commit "$GITHUB_SHA"
 
