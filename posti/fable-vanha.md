@@ -1,3 +1,5 @@
+## 2026-09-24 19.50 UTC — FABLE: kuittaus linssikatalogin erästä 1 (29/29 havainnekuvaa, 26/29 CC-kuvaa) ja täydennyserä 1b, 23 päätettyä linssiä ennen erää 2 (posti/fable-kuvaputki-linssikatalogi-era1b-20260924.md)
+
 ## 2026-09-24 18.51 UTC — FABLE: tilaus kuvaputkelle: linssikatalogin kuvitus, 148 linssiä × 2 kuvaa, erä 1 = 29 linssiä (posti/fable-kuvaputki-linssikatalogi-kuvitus-20260924.md, aineisto posti/linssikatalogi-tilaus-20260924.json)
 
 ## 2026-09-24 16.52 UTC — FABLE: kuittaus radiopaneelin tekstuureista (30 karttaa, ambientCG CC0) ja 12 viitekuvasta
