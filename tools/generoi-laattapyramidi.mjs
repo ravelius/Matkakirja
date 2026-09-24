@@ -3175,6 +3175,18 @@ writeFileSync(join(tyokansio, 'vari.json'),
  * jokainen laatta on yksi funktiokutsu jo pystyssä olevaan sivuun.
  */
 const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
+<style>
+  /*
+   * POLTON FONTTI REKISTERÖIDÄÄN (Fable 24.9.2026, löydös 38): nimiöt,
+   * valtameret ja kartussi pyytävät "Liberation Serif" -fonttia, mutta
+   * Macilla sitä ei ole asennettu, ja Chromium korvasi sen hiljaa
+   * macOS:n Timesilla (nimiötaso 2026-09-22g). Fontti tulee nyt repon
+   * tiedostoista (tools/fokuskartta/fontit, OFL 1.1), joten tulos ei
+   * riipu koneesta; sama fontti on natiivin aluenimissä.
+   */
+  @font-face { font-family: "Liberation Serif"; font-style: normal; font-weight: 400; src: url(./fontit/LiberationSerif-Regular.ttf) format("truetype"); }
+  @font-face { font-family: "Liberation Serif"; font-style: italic; font-weight: 400; src: url(./fontit/LiberationSerif-Italic.ttf) format("truetype"); }
+</style>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
   import {
@@ -3646,7 +3658,18 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     }
     return ulos;
   };
-  document.body.dataset.valmis = '1';
+  /*
+   * FONTTITARKISTUS: jos pyydetty fontti ei lataudu, poltto pysähtyy
+   * eikä korvaa sitä hiljaa järjestelmän serif-fontilla (Fable 24.9.2026).
+   */
+  const FONTIT = ['16px "Liberation Serif"', 'italic 16px "Liberation Serif"'];
+  const ladatut = await Promise.all(FONTIT.map((f) => document.fonts.load(f).then((l) => l.length).catch(() => 0)));
+  const puuttuvat = FONTIT.filter((f, i) => !ladatut[i] || !document.fonts.check(f));
+  if (puuttuvat.length) {
+    console.error('FONTTI PUUTTUU: ' + puuttuvat.join(', ') + ' — poltto pysähtyy (ks. tools/fokuskartta/fontit)');
+  } else {
+    document.body.dataset.valmis = '1';
+  }
 </script>`;
 
 const TYYPIT = {
@@ -3658,6 +3681,7 @@ const TYYPIT = {
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
+  '.ttf': 'font/ttf',
 };
 const palvelin = createServer((req, res) => {
   const polku = decodeURIComponent(req.url.split('?')[0]);
@@ -3677,6 +3701,9 @@ const palvelin = createServer((req, res) => {
     '/ranta.json': join(tyokansio, 'ranta.json'),
     // Nimiötason aineisto: nimiölista (ks. NIMIÖTASO).
     '/nimiot.json': join(tyokansio, 'nimiot.json'),
+    // Polton fontti (ks. SIVU @font-face): repon OFL-tiedostot, ei järjestelmän fontti.
+    '/fontit/LiberationSerif-Regular.ttf': join(TAALLA, 'fokuskartta', 'fontit', 'LiberationSerif-Regular.ttf'),
+    '/fontit/LiberationSerif-Italic.ttf': join(TAALLA, 'fokuskartta', 'fontit', 'LiberationSerif-Italic.ttf'),
     // Kuvakoristeet (maailmapiirto.js KUVAKORISTEET): tiedostot nimiölistasta.
     ...Object.fromEntries([
       ...(NIMIOTASO ? nimiotasonNimiot() : []).filter((n) => n.luokka === 'kuva' && n.kuva),
