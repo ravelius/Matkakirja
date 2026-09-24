@@ -25,6 +25,7 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
@@ -97,6 +98,11 @@ namespace Matkakirja
             double D(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
             switch (o[0])
             {
+                case "hiljaa":
+                case "aanet":
+                    // Laitetestit ilman ääniä (Fable 24.9.): koko sovellus mykäksi tai takaisin.
+                    AudioListener.volume = o[0] == "hiljaa" ? 0f : 1f;
+                    break;
                 case "kuva":
                     // Mobiilissa polku on suhteellinen persistentDataPathiin.
                     ScreenCapture.CaptureScreenshot(Application.isMobilePlatform
