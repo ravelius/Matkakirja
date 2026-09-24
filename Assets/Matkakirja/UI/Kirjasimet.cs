@@ -16,7 +16,7 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno }
+    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold }
 
     public static class Kirjasimet
     {
@@ -26,6 +26,8 @@ namespace Matkakirja.Natiivi
         {
             Kirjasin.Kone => new[] { ("American Typewriter", "Regular"), ("Courier New", "Regular"), ("Courier", "Regular") },
             Kirjasin.KoneLihava => new[] { ("American Typewriter", "Semibold"), ("American Typewriter", "Bold"), ("Courier New", "Bold") },
+            // Web font-weight 700 (anfangi): Safari valitsee American Typewriterin Boldin, ei Semiboldia.
+            Kirjasin.KoneBold => new[] { ("American Typewriter", "Bold"), ("American Typewriter", "Semibold"), ("Courier New", "Bold") },
             Kirjasin.Luku => new[] { ("Iowan Old Style", "Roman"), ("Iowan Old Style", "Regular"), ("Charter", "Roman"), ("Palatino", "Regular"), ("Georgia", "Regular") },
             Kirjasin.LukuLihava => new[] { ("Iowan Old Style", "Bold"), ("Charter", "Bold"), ("Palatino", "Bold"), ("Georgia", "Bold") },
             Kirjasin.LukuKursiivi => new[] { ("Iowan Old Style", "Italic"), ("Charter", "Italic"), ("Palatino", "Italic"), ("Georgia", "Italic") },

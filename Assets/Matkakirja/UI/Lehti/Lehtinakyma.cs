@@ -474,7 +474,8 @@ namespace Matkakirja.Natiivi
             var paakuvat = a.Avauskuvat.Count > 0 ? a.Avauskuvat : a.Kansikuvat.Take(1).ToList();
             if (paakuvat.Count > 0) Kuvasarja(s, paakuvat, "mk-lehti__paakuva");
             var esittely = lehti.Johdanto ?? a.Johdanto;
-            if (!string.IsNullOrEmpty(esittely)) Kappale(s, esittely, "mk-lehti__esittely");
+            // Web #arrival-intro: 1rem, riviväli 1,6, kappaleet <p> (1 em väli), anfangi ensimmäisessä.
+            if (!string.IsNullOrEmpty(esittely)) Leipa(s, esittely, "mk-lehti__esittely", 1.6f, 1f, true);
             var rivi = a.EnnenNyt.Count >= 2 ? a.EnnenNyt.Take(2).ToList()
                 : (a.Avauskuvat.Count > 0 ? a.Kansikuvat.Take(2) : a.Kansikuvat.Skip(1).Take(2)).ToList();
             if (rivi.Count > 0)
@@ -1068,7 +1069,9 @@ namespace Matkakirja.Natiivi
                 WikiArtikkelit.Lataa(() =>
                 {
                     if (paikka.panel == null) return;
-                    foreach (var k in Kappaleet(WikiArtikkelit.Intro(nimi))) Kappale(paikka, k, "mk-lehti__esittely");
+                    // Web #arrival-maa-intro: 1,02rem, riviväli 1,62, pre-line (\n\n = tyhjä rivi väliin), anfangi.
+                    string intro = WikiArtikkelit.Intro(nimi);
+                    if (!string.IsNullOrEmpty(intro)) Leipa(paikka, intro, "mk-lehti__esittely", 1.62f, 1.62f, true);
                 });
             }
             if (nosto != null) Nosto(s, nosto);
@@ -1237,6 +1240,104 @@ namespace Matkakirja.Natiivi
             l.enableRichText = false;
             Kirjasimet.Aseta(l, kirjasin);
             l.AddToClassList("mk-lehti__luettava");
+        }
+
+        /// <summary>
+        /// Lehden leipäteksti webin rivivälillä (riviEm × kirjasinkoko) ja kappalevälillä (valiEm), valinnaisesti
+        /// anfangilla (web ::first-letter: float left, American Typewriter 700, 3,1 em, line-height 0,82, oikealla
+        /// 0,12 em, rgba(70, 51, 31, 0,9)). UITK ei kelluta: ensimmäisen kappaleen rivit anfangin vieressä ladotaan
+        /// kapeampaan palstaan ja loput täysleveänä alle. Ääneenluku lukee piilotetun kokonaisen tekstin.
+        /// </summary>
+        static void Leipa(VisualElement isa, string teksti, string luokka, float riviEm, float valiEm, bool anfangi)
+        {
+            var lohko = Rakenne.El("mk-lehti__leipa", isa, PickingMode.Ignore);
+            var luettava = Rakenne.Teksti(teksti, "mk-lehti__luettava", lohko);
+            luettava.enableRichText = false;
+            luettava.style.display = DisplayStyle.None;
+            var kappaleet = Kappaleet(teksti).ToList();
+            for (int i = 0; i < kappaleet.Count; i++)
+            {
+                VisualElement kpl = anfangi && i == 0 ? AnfangiKappale(lohko, kappaleet[i], luokka, riviEm)
+                    : Rivitetty(kappaleet[i], luokka, riviEm, lohko);
+                if (i < kappaleet.Count - 1)
+                {
+                    var k = kpl;
+                    k.RegisterCallback<GeometryChangedEvent>(_ =>
+                    {
+                        float f = k.resolvedStyle.fontSize > 0 ? k.resolvedStyle.fontSize : 16f;
+                        float mb = Mathf.Round(valiEm * f);
+                        if (!Mathf.Approximately(k.resolvedStyle.marginBottom, mb)) k.style.marginBottom = mb;
+                    });
+                }
+            }
+        }
+
+        static string Rivivali(string teksti, float riviEm) =>
+            "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em><noparse>" + teksti + "</noparse>";
+
+        static Label Rivitetty(string teksti, string luokka, float riviEm, VisualElement isa)
+        {
+            var l = Rakenne.Teksti(Rivivali(teksti, riviEm), luokka, isa);
+            l.enableRichText = true;
+            Kirjasimet.Aseta(l, Kirjasin.Luku);
+            return l;
+        }
+
+        /// <summary>Fontin nousu kirjasinkoon osuutena (perusviivan etäisyys rivin yläreunasta).</summary>
+        static float Nousu(Kirjasin k)
+        {
+            var fi = Kirjasimet.Hae(k)?.fontAsset?.faceInfo;
+            return fi is UnityEngine.TextCore.FaceInfo f && f.pointSize > 0 ? f.ascentLine / f.pointSize : 0.8f;
+        }
+
+        static VisualElement AnfangiKappale(VisualElement isa, string teksti, string luokka, float riviEm)
+        {
+            // ::first-letter ottaa alkuvälimerkit (lainausmerkki) kirjaimen mukaan.
+            int n = 0;
+            while (n < teksti.Length && !char.IsLetterOrDigit(teksti[n])) n++;
+            n = Mathf.Min(teksti.Length, n + 1);
+            string eka = teksti.Substring(0, n), loput = teksti.Substring(n);
+            var kpl = Rakenne.El("mk-lehti__anfangikappale " + luokka, isa, PickingMode.Ignore);
+            var alku = Rivitetty("", luokka, riviEm, kpl);
+            var loppu = Rivitetty("", luokka, riviEm, kpl);
+            alku.style.marginBottom = 0;
+            loppu.style.marginBottom = 0;
+            var kirjain = Rakenne.Teksti(eka, "mk-lehti__anfangi", kpl);
+            kirjain.enableRichText = false;
+            Kirjasimet.Aseta(kirjain, Kirjasin.KoneBold);
+            float leveys = -1f;
+            void Lado()
+            {
+                float w = kpl.contentRect.width, f = alku.resolvedStyle.fontSize;
+                if (w <= 0 || float.IsNaN(w) || f <= 0 || Mathf.Approximately(w, leveys)) return;
+                leveys = w;
+                float iso = 3.1f * f, rivi = riviEm * f;
+                kirjain.style.fontSize = iso;
+                // Web: kellutuslaatikko 0,06 + 0,82 em; se varaa niin monta tekstiriviä kuin ulottuu.
+                int rivit = Mathf.Max(1, Mathf.CeilToInt(0.88f * iso / rivi - 0.05f));
+                float sisennys = kirjain.MeasureTextSize(eka, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x + 0.12f * iso;
+                // Anfangin perusviiva viimeisen viereisen rivin perusviivalle.
+                kirjain.style.top = Mathf.Round(Nousu(Kirjasin.Luku) * f + (rivit - 1) * rivi - Nousu(Kirjasin.KoneBold) * iso);
+                alku.style.marginLeft = sisennys;
+                float palsta = Mathf.Max(1f, w - sisennys);
+                float Korkeus(string t) => alku.MeasureTextSize(Rivivali(t, riviEm), palsta, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
+                float raja = Korkeus("A" + string.Concat(Enumerable.Repeat("\nA", rivit - 1))) + 0.5f;
+                var sanat = loput.Split(' ');
+                int ala = 0, yla = sanat.Length;
+                while (ala < yla)
+                {
+                    int keski = (ala + yla + 1) / 2;
+                    if (Korkeus(string.Join(" ", sanat, 0, keski)) <= raja) ala = keski; else yla = keski - 1;
+                }
+                alku.text = Rivivali(string.Join(" ", sanat, 0, ala), riviEm);
+                string jaljella = string.Join(" ", sanat, ala, sanat.Length - ala).TrimStart();
+                loppu.text = Rivivali(jaljella, riviEm);
+                loppu.style.display = jaljella.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+                // Viereiset rivit täyttävät anfangin korkeuden, jotta loppu alkaa sen alta samalla rivivälillä.
+                alku.style.height = rivit * rivi;
+            }
+            kpl.RegisterCallback<GeometryChangedEvent>(_ => Lado());
+            return kpl;
         }
 
         /// <summary>Tyhjä rivi erottaa kappaleet (webin leipäteksti).</summary>
