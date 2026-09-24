@@ -18,7 +18,7 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 - **Yöllinen TF klo 04 (Julkaisija)**: vaihtoehto A – sama Library, ohitus jos Unity käynnissä / Temp/UnityLockfile auki /
   työpuu likainen / master ennallaan; vienti Build/yo, MATKAKIRJA_BUILD = aikaleima; jälkeen
   `git checkout ProjectSettings/ProjectSettings.asset Assets/Matkakirja/Materiaalit/`. Älä pidä Unityä auki klo 04 turhaan.
-- **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asentumassa.
+- **iPad** (00008142-0019686E02F3801C): asennettuna 3afad75, vapaa. **Simulaattori** (1572C658…, Laitetestaaja): a345a19 asennettu.
 - Tuotannon sisältö v15 (skeema 1.16). #3012 (1.17–1.25: maakuntakaaret, offline-maanosat) Julkaisijan jonossa → natiivi lukee jo.
 
 ## Avoimet merge-pyynnöt (tee ensin)
@@ -26,6 +26,8 @@ masterin ainoa mergeääjä, Unity-editorin ja iPad-/simulaattorikäännösten a
 1. `natiivi-ui/jaa-matka` 9230344 (sis. `pelikoodari/jakaminen` 998eeca): .metat Scripts/Peli/Jakaminen.cs ja
    Plugins/iOS/MatkakirjaJako.mm → luo + **laitekäännös .mm:n takia**, testi `ui huipennus` → Jaa matka. Laitetestaaja odottaa (C6).
 2. `natiivi-ui/nosto-media` f02a5ee: ei .metoja; lehden noston kuuntelu/musiikki mediarivin soittimella.
+3. `natiivi-ui/linssin-valmiit` 4bece65 (jaa-matkan ja nosto-median jälkeen): .meta UI/Linssit/LinssiKysymykset.cs;
+   Valokeila Kuvat.HaePienena → mittaa keksintöjen pysäkit 3/7/12 (linssi-komento `kehittaja 1`, `linssi keksinnot`, `keksinnot 3`…), tavoite ei 23 ms:n ensivaihtoa.
 
 ## Tehty tässä sessiossa (tärkeimmät)
 
