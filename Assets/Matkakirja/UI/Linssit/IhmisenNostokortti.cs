@@ -5,8 +5,9 @@
 // kortin sisään lähteineen (LinssiKysymykset), muuten kysymys kulkee pululle (PuluChat.KysyUlkoisesti).
 // Esitys menee kortin ajaksi tauolle ja jatkuu sulkiessa, jos se oli käynnissä.
 //
-// Natiivin aineistosta puuttuvat vielä kuvatekstit, kuvien lähderivit ja noston juttu (web "Lue lisää"
-// → ihmisen matkan tiedeliite), joten niitä ei näytetä.
+// Kuvatekstit (KuvaSelite, EsineSelite, AitoSelite), aidon kuvan suurennos lähderivillä (web
+// kortinKuvalahde: lähde vain suurennoksessa), noston lähderivi ja "Lue lisää" (Tiedeliite: koko juttu →
+// IhmisenMatkaLinssi.TiedeliitteenSivu) tulevat Linssisepän korttikentistä.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace Matkakirja.Natiivi
     {
         readonly VisualElement kortti;
         readonly ScrollView vieritys;
+        readonly Kuvasuurennos suurennos;
+        readonly Action<Loytopaikka> lueLisaa;
         bool pysaytin, kysymysKesken;
         Label kupla;
 
@@ -29,8 +32,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Kortti avautui tai sulkeutui (pulun linssikysymykset seuraavat avointa nostoa).</summary>
         public event Action Muuttui;
 
-        public IhmisenNostokortti(VisualElement isa)
+        public IhmisenNostokortti(VisualElement isa, VisualElement suurennoksenKoti, Action<Loytopaikka> lueLisaa)
         {
+            this.lueLisaa = lueLisaa;
+            suurennos = new Kuvasuurennos(suurennoksenKoti);
             kortti = Rakenne.El("mk-ihmisnosto", isa);
             kortti.style.display = DisplayStyle.None;
             vieritys = new ScrollView(ScrollViewMode.Vertical);
@@ -68,13 +73,28 @@ namespace Matkakirja.Natiivi
 
             // Kuva-alue (web: kuvitus, esine 38 %, aito kuva sovitettuna).
             var kuvat = Rakenne.El("mk-ihmisnosto__kuvat", s, PickingMode.Ignore);
-            if (!string.IsNullOrEmpty(p.Kuva)) Kuva(kuvat, p.Kuva, "mk-ihmisnosto__kuva--kuvitus", 2f / 3f);
-            if (!string.IsNullOrEmpty(p.Esine)) Kuva(kuvat, p.Esine, "mk-ihmisnosto__kuva--esine", 1f);
-            if (!string.IsNullOrEmpty(p.Aito)) Kuva(kuvat, p.Aito, "mk-ihmisnosto__kuva--aito", 2f / 3f);
+            if (!string.IsNullOrEmpty(p.Kuva)) Kuva(kuvat, p.Kuva, p.KuvaSelite, "mk-ihmisnosto__kuvakehys--kuvitus", 2f / 3f, null);
+            if (!string.IsNullOrEmpty(p.Esine)) Kuva(kuvat, p.Esine, p.EsineSelite, "mk-ihmisnosto__kuvakehys--esine", 1f, null);
+            if (!string.IsNullOrEmpty(p.Aito))
+            {
+                // Aito kuva on suurennettava, ja sen lähderivi näkyy suurennoksessa (web KUVALAHDE_VAIN_SUURENNOKSESSA).
+                string aito = p.Aito, selite = p.AitoSelite ?? "Aito kuva";
+                string lahde = p.AidonTiedot != null && p.AidonTiedot.TryGetValue("lahde", out var l) ? l as string : null;
+                Kuva(kuvat, aito, selite, "mk-ihmisnosto__kuvakehys--aito", 2f / 3f,
+                    () => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = aito, Selite = selite, LahdeRivi = lahde } }));
+            }
             if (kuvat.childCount == 0) kuvat.style.display = DisplayStyle.None;
 
-            string teksti = p.Loyto ?? p.Selite ?? "";
+            string teksti = p.KortinTeksti;
             if (teksti.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-ihmisnosto__teksti", s), Kirjasin.Luku);
+            if (!string.IsNullOrEmpty(p.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(p.Lahde, "mk-ihmisnosto__lahde", s), Kirjasin.Luku);
+            if (p.Juttu && lueLisaa != null && (LinssiUi.IhmisenMatka?.TiedeliitteenSivu(p.Tunnus) ?? -1) >= 0)
+            {
+                var paikka = p;
+                var lue = Rakenne.Nappi("Lue lisää", "mk-ihmisnosto__lue", () => lueLisaa(paikka), s);
+                lue.tooltip = "Tiedeliite: koko juttu";
+                Kirjasimet.Aseta(lue, Kirjasin.KoneLihava);
+            }
 
             // Kysymykset: löytöpaikalla valmiit (web haeIhmisenMatkanKysymykset), muuten noston omat; enintään 3.
             var valmiit = !p.Lisanosto ? LinssiKysymykset.Tunnukselle(p.Tunnus) : null;
@@ -109,6 +129,7 @@ namespace Matkakirja.Natiivi
             if (Auki == null) return;
             Auki = null;
             Rakenne.Nayta(kortti, false, 180);
+            suurennos.Sulje();
             foreach (var b in kortti.Children().OfType<Button>().ToList()) b.RemoveFromHierarchy();
             if (pysaytin) { pysaytin = false; LinssiUi.IhmisenMatka?.Esitys?.Jatka(); }
             Muuttui?.Invoke();
@@ -121,16 +142,19 @@ namespace Matkakirja.Natiivi
             Sulje();
         }
 
-        static void Kuva(VisualElement isa, string url, string luokka, float suhde)
+        static void Kuva(VisualElement isa, string url, string selite, string luokka, float suhde, Action suurenna)
         {
-            var k = Rakenne.El("mk-ihmisnosto__kuva " + luokka, isa, PickingMode.Ignore);
+            var kehys = Rakenne.El("mk-ihmisnosto__kuvakehys " + luokka, isa, PickingMode.Ignore);
+            var k = Rakenne.El("mk-ihmisnosto__kuva", kehys, suurenna != null ? PickingMode.Position : PickingMode.Ignore);
+            if (suurenna != null) k.RegisterCallback<ClickEvent>(_ => suurenna());
+            if (!string.IsNullOrEmpty(selite)) Kirjasimet.Aseta(Rakenne.Teksti(selite, "mk-ihmisnosto__kuvateksti", kehys), Kirjasin.Luku);
             k.RegisterCallback<GeometryChangedEvent>(ev =>
             {
                 float h = Mathf.Round(ev.newRect.width * suhde);
                 if (ev.newRect.width > 0 && Mathf.Abs(ev.newRect.height - h) > 0.5f) k.style.height = h;
             });
             // Puuttuva kuva pois (web ilmanVaraa / error → kehys pois).
-            Kuvat.Hae(url, t => { if (t == null) k.RemoveFromHierarchy(); else k.style.backgroundImage = new StyleBackground(t); });
+            Kuvat.Hae(url, t => { if (t == null) kehys.RemoveFromHierarchy(); else k.style.backgroundImage = new StyleBackground(t); });
         }
 
         void KysyPululta(LinssiKysymys valmiit, string kysymys, Button nappi, VisualElement ryhma)

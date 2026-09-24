@@ -164,7 +164,13 @@ namespace Matkakirja.Natiivi
             kertomuskuva.style.display = DisplayStyle.None;
             // Napautus avaa noston kortin (web kuvan napautus → nostokortti.avaa).
             kertomuskuva.RegisterCallback<ClickEvent>(_ => { if (kertomuskuvaEsilla && kuvanPaikka != null) nostokortti.Avaa(kuvanPaikka); });
-            nostokortti = new IhmisenNostokortti(turva);
+            // "Lue lisää" (web avaaNostonJuttu): ihmisen matkan tiedeliite samalla näkymällä kuin keksinnöissä.
+            nostokortti = new IhmisenNostokortti(turva, kerros.Juuri(LinssiUi.Kerros), p =>
+            {
+                var l = LinssiUi.IhmisenMatka;
+                int i = l?.TiedeliitteenSivu(p.Tunnus) ?? -1;
+                if (i >= 0) tiedeliite.Avaa(l, i);
+            });
             LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
