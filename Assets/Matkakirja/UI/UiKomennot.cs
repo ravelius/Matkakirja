@@ -16,6 +16,8 @@
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
+//   ui piikit [s] [kynnys ms] | ui piikit pois  pitkien kehysten raskaimmat profilointimerkit lokiin (oletus 20 s,
+//                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
 //   ui peitteet [osuus]                       lokiin näkyvät UI-elementit, jotka peittävät vähintään osuuden (oletus 0,5)
 //                                             ruudusta ja piirtävät jotain (tausta, kuva, reuna): kerros, luokat, tehollinen
 //                                             läpinäkyvyys, taustaväri ja kuva (koko ruudun sävyn etsintä)
@@ -421,6 +423,15 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "piikit":
+                {
+                    if (loput == "pois") { KehysPiikit.Lopeta(); return null; }
+                    var pk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    float kesto = pk.Length > 0 && float.TryParse(pk[0], NumberStyles.Float, CultureInfo.InvariantCulture, out var ks) ? ks : 20f;
+                    float kynnysMs = pk.Length > 1 && float.TryParse(pk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var ky) ? ky : 40f;
+                    Kirjaa("piikit: " + KehysPiikit.Aloita(kesto, kynnysMs) + " merkkiä");
+                    return null;
+                }
                 case "peitteet":
                     Peitteet(float.TryParse(loput, NumberStyles.Float, CultureInfo.InvariantCulture, out var po) ? po : 0.5f);
                     return null;
