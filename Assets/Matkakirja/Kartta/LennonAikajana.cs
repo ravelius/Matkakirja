@@ -166,11 +166,15 @@ namespace Matkakirja
             double sn = n.SuuntaAbs ? n.Suunta : n.Suunta + lentosuunta;
             // Suhteellinen → absoluuttinen: lyhin kulma, muuten avainten oma kiertosuunta (voi ylittää 180°).
             if (p.SuuntaAbs != n.SuuntaAbs) sn = sp + Kiedo180(sn - sp);
+            // Kuminauhan ylitys (s > 1) vain etäisyyteen, suuntaan ja koneen kokoon. Kohde ja kallistus eivät saa
+            // ampua ohi: syöksyn lopussa kohde > 0 siirsi katseen koneesta kohti kohdekaupunkia (~50 km), ja kone
+            // liukui 0,5 s ruudun reunaan; kallistus yli 80° painoi kameran horisonttiin (iPad-simulaattori 24.9.).
+            double sr = math.saturate(s);
             return (
                 math.exp(math.lerp(math.log(math.max(1, p.Etaisyys)), math.log(math.max(1, n.Etaisyys)), s)),
-                math.lerp(p.Kallistus, n.Kallistus, s),
+                math.lerp(p.Kallistus, n.Kallistus, sr),
                 math.lerp(sp, sn, ss),
-                math.clamp(math.lerp(p.Kohde, n.Kohde, s), -1, 1),
+                math.clamp(math.lerp(p.Kohde, n.Kohde, sr), -1, 1),
                 math.max(0, math.lerp(p.Kone, n.Kone, s)));
         }
 
