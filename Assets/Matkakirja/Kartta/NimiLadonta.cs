@@ -654,6 +654,50 @@ namespace Matkakirja
             return new[] { 70 / 255.0, 48 / 255.0, 29 / 255.0, 0.58 };
         }
 
+        // ---- LINEAARINEN SEKOITUS (webin sRGB-sekoituksen vastine) ----------------------------------------------
+        //
+        // Projekti on lineaarisessa väriavaruudessa, joten GPU sekoittaa alfan lineaarisilla arvoilla, kun selain
+        // sekoittaa sRGB-arvoilla: sama rgba näyttää natiivissa vaaleammalta (Natiivi-UI mittasi UITK:ssa
+        // rgba(33,29,24,.82) → 117 eikä 58). Korjaus säilyttää värin c ja vaihtaa alfan niin, että lineaarinen
+        // sekoitus tyypillisellä pohjalla B antaa saman luminanssin kuin webin sRGB-sekoitus:
+        //   a' = (Y(B) − Y(a·c + (1−a)·B)) / (Y(B) − Y(c)),  rajattuna välille [a, 1],
+        // missä sekoitus a·c + (1−a)·B lasketaan sRGB-arvoilla kanavittain ja Y = 0,2126 R + 0,7152 G + 0,0722 B
+        // lineaarisista (sRGB → lineaarinen) kanavista.
+        // B mitattu pohjasarjan 2026-09-23a laatoista Z6–Z7 (kuvan mediaani, 24.9.2026):
+        //   maa  #f0e1ab (240, 225, 171): Ranska, Saksa, Puola (Espanja #eac787 jätetty pois, kuiva ja tumma),
+        //   meri #d4cdba (212, 205, 186): Välimeri, Biskaja, Pohjanmeri, Itämeri.
+        // Maakunnat ja nykyalueet lasketaan maan pohjalla, meret ja valtameret meren pohjalla.
+
+        /// <summary>Tyypillinen maan pohja (sRGB 0–1), mitattu pohjasarjan 23a laatoista.</summary>
+        public static readonly double[] PohjaMaa = { 240 / 255.0, 225 / 255.0, 171 / 255.0 };
+        /// <summary>Tyypillinen meren pohja (sRGB 0–1), mitattu pohjasarjan 23a laatoista.</summary>
+        public static readonly double[] PohjaMeri = { 212 / 255.0, 205 / 255.0, 186 / 255.0 };
+
+        /// <summary>sRGB-kanava (0–1) → lineaarinen.</summary>
+        public static double Lineaarinen(double c) => c <= 0.04045 ? c / 12.92 : Math.Pow((c + 0.055) / 1.055, 2.4);
+
+        /// <summary>Luminanssi sRGB-väristä (0–1) lineaarisilla kanavilla.</summary>
+        public static double Luminanssi(double r, double g, double b) =>
+            0.2126 * Lineaarinen(r) + 0.7152 * Lineaarinen(g) + 0.0722 * Lineaarinen(b);
+
+        /// <summary>
+        /// Alfa a', jolla lineaarinen sekoitus värillä c pohjalla B vastaa webin sRGB-sekoitusta alfalla a
+        /// (kaava yllä); rajattu välille [a, 1]. c ja pohja sRGB 0–1 (c:n neljäs alkio ohitetaan).
+        /// </summary>
+        public static double LineaarinenAlfa(double[] c, double a, double[] pohja)
+        {
+            if (c == null || pohja == null || a <= 0 || a >= 1) return a;
+            double yb = Luminanssi(pohja[0], pohja[1], pohja[2]);
+            double yc = Luminanssi(c[0], c[1], c[2]);
+            if (Math.Abs(yb - yc) < 1e-6) return a;
+            double ym = Luminanssi(a * c[0] + (1 - a) * pohja[0], a * c[1] + (1 - a) * pohja[1], a * c[2] + (1 - a) * pohja[2]);
+            double uusi = (yb - ym) / (yb - yc);
+            return Math.Min(1.0, Math.Max(a, uusi));
+        }
+
+        /// <summary>Luokan tyypillinen pohja: meri ja valtameri meren päällä, muut maan.</summary>
+        public static double[] Pohja(string luokka) => luokka == "meri" || luokka == "valtameri" ? PohjaMeri : PohjaMaa;
+
         /// <summary>
         /// TextMeshPron rich text rivin tekstistä: versaali ja pienkapiteeli (nykyalue: alkuperäiset isot kirjaimet
         /// täysikokoisina, pienet versaaleina kertoimella, esim. "Grand Est" → G&lt;size=78%&gt;RAND&lt;/size&gt; E…).

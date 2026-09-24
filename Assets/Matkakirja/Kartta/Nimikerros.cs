@@ -204,20 +204,27 @@ namespace Matkakirja
         {
             Nimisto = n;
             rivit.Clear();
+            var alfat = new SortedDictionary<string, string>();
             foreach (var r in n.Nimet)
             {
                 var tyyli = n.Tyyli(r);
                 var v = NimiLadonta.Vari(tyyli, r.Muste);
+                // Lineaarinen väriavaruus: alfa webin sRGB-sekoituksen vastineeksi (NimiLadonta.LineaarinenAlfa).
+                double alfa = NimiLadonta.LineaarinenAlfa(v, v[3], NimiLadonta.Pohja(r.Luokka));
+                alfat[(r.Tyyli ?? r.Luokka) + (r.Muste != null ? ":" + r.Muste : "")] = $"{v[3]:0.00}→{alfa:0.00}";
                 rivit.Add(new Rivi
                 {
                     nimi = r,
                     tyyli = tyyli,
                     teksti = NimiLadonta.Muotoile(r.Teksti, tyyli?.Versaali ?? true, tyyli?.Pienkapiteeli ?? 0),
-                    vari = new Color((float)v[0], (float)v[1], (float)v[2], (float)v[3]),
+                    vari = new Color((float)v[0], (float)v[1], (float)v[2], (float)alfa),
                     kursiivi = tyyli?.Kursiivi ?? r.Luokka == "valtameri",
                     meri = r.Luokka == "meri",
                 });
             }
+            var sb = new StringBuilder("MATKAKIRJA nimet: alfa lineaariseen sekoitukseen");
+            foreach (var p in alfat) sb.Append(' ').Append(p.Key).Append(' ').Append(p.Value);
+            Debug.Log(sb.ToString());
         }
 
         /// <summary>Fonttien merkit atlakseen levossa (12 merkkiä kehyksessä), ei ensimmäisellä näytöllä.</summary>

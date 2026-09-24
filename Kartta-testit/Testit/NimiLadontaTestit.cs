@@ -295,6 +295,32 @@ namespace Matkakirja.Kartta.Testit
 
         // ---- Tyyli -----------------------------------------------------------------------------------------------
 
+        [Testi] static void LineaarinenAlfaVastaaWebinSekoitusta()
+        {
+            // Määritelmä: lineaarinen sekoitus alfalla a' antaa saman luminanssin kuin sRGB-sekoitus alfalla a.
+            foreach (var (css, pohja) in new[] { ("rgba(70, 48, 29, 0.58)", NimiLadonta.PohjaMaa), ("rgba(58, 66, 84, 0.62)", NimiLadonta.PohjaMeri),
+                                                 ("rgba(128, 44, 20, 0.95)", NimiLadonta.PohjaMaa), ("rgba(112, 99, 76, 0.62)", NimiLadonta.PohjaMeri) })
+            {
+                var c = NimiLadonta.Rgba(css);
+                double a = c[3], a2 = NimiLadonta.LineaarinenAlfa(c, a, pohja);
+                Oleta.Tosi(a2 >= a && a2 <= 1, $"{css}: {a} → {a2} välillä [a, 1]");
+                double web = NimiLadonta.Luminanssi(a * c[0] + (1 - a) * pohja[0], a * c[1] + (1 - a) * pohja[1], a * c[2] + (1 - a) * pohja[2]);
+                double yb = NimiLadonta.Luminanssi(pohja[0], pohja[1], pohja[2]), yc = NimiLadonta.Luminanssi(c[0], c[1], c[2]);
+                double natiivi = a2 * yc + (1 - a2) * yb;
+                if (a2 < 1) Lahella(web, natiivi, 1e-9, css + " luminanssi");
+                Console.WriteLine($"  {css}: a {a:0.00} → a' {a2:0.000}");
+            }
+            var maakunta = NimiLadonta.LineaarinenAlfa(NimiLadonta.Rgba("rgba(70, 48, 29, 0.58)"), 0.58, NimiLadonta.PohjaMaa);
+            Oleta.Tosi(maakunta > 0.75 && maakunta < 0.9, "maakunta tummenee selvästi: " + maakunta);
+            double lahes = NimiLadonta.LineaarinenAlfa(new[] { 0.2, 0.2, 0.2 }, 0.99, NimiLadonta.PohjaMaa);
+            Oleta.Tosi(lahes >= 0.99 && lahes <= 1.0, "välillä [a, 1]: " + lahes);
+            Oleta.Sama(1.0, NimiLadonta.LineaarinenAlfa(new[] { 0.2, 0.2, 0.2 }, 1.0, NimiLadonta.PohjaMaa), "täysi pysyy");
+            Oleta.Sama(0.5, NimiLadonta.LineaarinenAlfa(new[] { 0.9, 0.9, 0.9 }, 0.5, new[] { 0.9, 0.9, 0.9 }), "sama väri = ennallaan");
+            Oleta.Tosi(NimiLadonta.Pohja("meri") == NimiLadonta.PohjaMeri && NimiLadonta.Pohja("valtameri") == NimiLadonta.PohjaMeri
+                && NimiLadonta.Pohja("nykyalue") == NimiLadonta.PohjaMaa, "pohja luokittain");
+            Lahella(0.2140, NimiLadonta.Lineaarinen(0.5), 1e-4, "sRGB 0,5 → 0,214");
+        }
+
         [Testi] static void MuotoiluJaVarit()
         {
             Oleta.Sama("G<size=78%>RAND</size> E<size=78%>ST</size>", NimiLadonta.Muotoile("Grand Est", true, 0.78));
