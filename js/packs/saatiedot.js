@@ -4626,4 +4626,145 @@ export const SAATIEDOT = {
       + '(joulu–helmikuu) pysyy 20 asteessa, talvi (kesä–heinäkuu) '
       + 'laskee reiluun viiteentoista. Sadekausi on loka–maaliskuu.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N8-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain angola,caphorn,namib,norfolk,robinsoncrusoe. Asemat: Luanda
+   * (Angola), Kap Horn, Sesriem (Namib), Norfolkinsaaren Kingston,
+   * San Juan Bautista (Robinson Crusoe / Juan Fernández).
+   */
+  angola: {
+    lat: -8.8390,
+    lon: 13.2894,
+    keskilampo: [26.7, 27.5, 27.7, 26.7, 25.8, 23.6, 21.2, 21.3, 22.7, 24.6, 25.8, 26],
+    ylin: [31, 32, 32, 30, 30, 28, 26, 26, 27, 28, 29, 29],
+    alin: [23, 23, 24, 24, 22, 19, 17, 17, 19, 21, 22, 23],
+    sade: [46, 63, 32, 106, 3, 0, 0, 2, 3, 12, 57, 28],
+    luonnehdinta: 'Angolan rannikolla Benguelan kylmä virta pitää '
+      + 'ilman kuivana huolimatta trooppisesta leveysasteesta: '
+      + 'kesä–elokuu on sateeton. Huhtikuu on sateisin, ja '
+      + 'lämpötila pysyy koko vuoden 21–28 asteessa.',
+  },
+  caphorn: {
+    lat: -55.9833,
+    lon: -67.2833,
+    keskilampo: [8.6, 8.5, 8.1, 7.4, 6, 4.2, 4, 4.3, 4.2, 5.6, 6.3, 7.3],
+    ylin: [9, 10, 9, 9, 7, 5, 5, 5, 5, 7, 8, 8],
+    alin: [8, 7, 7, 6, 5, 3, 3, 3, 3, 5, 5, 6],
+    sade: [117, 112, 145, 123, 115, 97, 71, 130, 85, 94, 118, 92],
+    luonnehdinta: 'Kap Hornissa on kylmää ja tuulista ympäri '
+      + 'vuoden, keskilämpö vain 4–9 astetta. Sadetta kertyy '
+      + 'joka kuukausi runsaasti, elokuussa yli 130 millimetriä.',
+  },
+  namib: {
+    lat: -24.5,
+    lon: 15.8,
+    keskilampo: [26.7, 26.3, 25.8, 23.5, 20.3, 17.3, 17.3, 17.2, 22.2, 23.5, 24.7, 25.4],
+    ylin: [34, 34, 33, 31, 28, 25, 25, 26, 31, 32, 33, 34],
+    alin: [19, 19, 18, 16, 12, 10, 9, 9, 13, 15, 16, 16],
+    sade: [19, 32, 4, 19, 5, 0, 1, 0, 1, 1, 2, 1],
+    luonnehdinta: 'Namibin aavikossa kesä (joulu–maaliskuu) on '
+      + 'polttava, yli 26 astetta, ja talvi (kesä–elokuu) laskee '
+      + 'reiluun seitsemääntoista. Sadetta ei käytännössä ole '
+      + 'toukokuusta marraskuuhun.',
+  },
+  /*
+   * NORFOLK: Open-Meteon ERA5-ruutu osuu tälle pienelle (n. 8 km)
+   * saarelle enimmäkseen mereen, jolloin vuorokauden vaihteluväli
+   * painui epäuskottavan kapeaksi (tools/hae-saanormaalit.mjs merkitsi
+   * rivin "TARKISTA"). Käytetty siksi Norfolk Island Airport -aseman
+   * omaa normaalia en-Wikipediasta (24.9.2026).
+   */
+  norfolk: {
+    lat: -29.0408,
+    lon: 167.9547,
+    keskilampo: [22.2, 22.8, 22, 20.5, 18.8, 17.2, 16.3, 16, 16.9, 17.8, 19.2, 20.9],
+    ylin: [25, 25, 25, 23, 21, 19, 19, 19, 19, 20, 22, 24],
+    alin: [20, 20, 20, 18, 17, 15, 14, 14, 14, 15, 16, 18],
+    sade: [80, 87, 107, 95, 102, 121, 123, 100, 78, 62, 72, 84],
+    lahde: { nimi: 'en-Wikipedia, Norfolk Island Airport -normaali', kausi: '1991–2020' },
+    luonnehdinta: 'Norfolkinsaarella ilmasto on leuto ympäri '
+      + 'vuoden, 14–25 asteessa. Sadetta riittää joka kuukausi, '
+      + 'runsaimmin touko–heinäkuussa.',
+  },
+  robinsoncrusoe: {
+    lat: -33.6333,
+    lon: -78.8333,
+    keskilampo: [17.3, 17.7, 18.1, 16.8, 15.4, 14.4, 13.2, 12.4, 12.2, 12.6, 13.7, 15.9],
+    ylin: [18, 18, 19, 17, 16, 15, 14, 13, 13, 13, 14, 16],
+    alin: [17, 17, 18, 16, 15, 14, 13, 12, 12, 12, 13, 15],
+    sade: [2, 5, 15, 25, 34, 71, 35, 38, 12, 7, 4, 5],
+    luonnehdinta: 'Robinson Crusoen saarella kesä (tammi–maaliskuu) '
+      + 'on lämpimin ja kuivin, 17–18 astetta. Sadetta kertyy '
+      + 'eniten eteläisenä talvena, kesäkuussa yli 70 millimetriä.',
+  },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N9-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain appalakit,churchill,karthago,sierraleone,tanganjika. Asemat:
+   * Asheville NC (Appalakit), Churchill (Manitoba), Karthago (Tunisin
+   * lähellä), Freetown (Sierra Leone), Kigoma (Tanganjikajärvi).
+   */
+  appalakit: {
+    lat: 35.5951,
+    lon: -82.5515,
+    keskilampo: [4, 4.2, 8, 12.3, 14.8, 19.5, 22.7, 21.5, 17.9, 12.5, 7.9, 3.2],
+    ylin: [9, 9, 14, 19, 20, 25, 28, 26, 22, 18, 13, 8],
+    alin: [-1, -1, 2, 6, 9, 14, 17, 17, 13, 7, 3, -2],
+    sade: [90, 98, 77, 91, 103, 119, 78, 137, 110, 112, 120, 96],
+    luonnehdinta: 'Appalakeilla on selkeät vuodenajat: talvi '
+      + '(joulu–helmikuu) on kylmä, vain muutama aste, ja kesä '
+      + '(heinäkuu 23 astetta) lämmin. Sadetta kertyy tasaisesti '
+      + 'ympäri vuoden, elokuu on sateisin.',
+  },
+  churchill: {
+    lat: 58.7684,
+    lon: -94.1650,
+    keskilampo: [-22.4, -24.2, -17, -9.1, -1.2, 6.2, 10, 12.1, 6.1, -1.1, -11.6, -19.6],
+    ylin: [-19, -21, -14, -6, 2, 10, 14, 16, 8, 1, -9, -17],
+    alin: [-25, -27, -20, -12, -4, 2, 6, 8, 4, -3, -14, -23],
+    sade: [15, 8, 19, 18, 36, 36, 81, 83, 60, 42, 28, 16],
+    luonnehdinta: 'Churchillissä talvi on ankara: tammi–helmikuu '
+      + 'pysyy yli 20 asteen pakkasessa. Lyhyt kesä (heinä–elokuu) '
+      + 'nousee vain kymmeneen–kahteentoista asteeseen, ja tuolloin '
+      + 'myös sataa enemmän.',
+  },
+  karthago: {
+    lat: 36.8531,
+    lon: 10.3236,
+    keskilampo: [11.3, 12.1, 13.2, 15.9, 19.5, 22.3, 24.8, 26.3, 23.7, 20.6, 17.3, 13.3],
+    ylin: [14, 15, 16, 19, 23, 26, 28, 30, 27, 24, 20, 16],
+    alin: [9, 9, 10, 13, 16, 19, 21, 22, 21, 17, 15, 11],
+    sade: [58, 32, 41, 57, 29, 6, 10, 1, 48, 25, 60, 60],
+    luonnehdinta: 'Karthagossa on tyypillinen Välimeren ilmasto: '
+      + 'kesä (heinä–elokuu) on kuuma ja käytännössä sateeton, '
+      + 'talvi (marras–helmikuu) leuto ja sateinen.',
+  },
+  sierraleone: {
+    lat: 8.4657,
+    lon: -13.2317,
+    keskilampo: [26.4, 26.3, 26.2, 26.7, 26.4, 25.5, 24.6, 24.3, 24.8, 25.5, 26.3, 26.8],
+    ylin: [28, 28, 27, 28, 28, 27, 26, 26, 26, 27, 28, 28],
+    alin: [25, 25, 25, 25, 25, 24, 23, 23, 24, 24, 25, 25],
+    sade: [7, 11, 14, 92, 251, 339, 648, 721, 396, 292, 98, 41],
+    luonnehdinta: 'Freetownissa lämpötila pysyy koko vuoden '
+      + '24–27 asteessa, mutta sademäärä vaihtelee äärimmäisesti: '
+      + 'elokuu kastelee kaupunkia yli 700 millimetrillä, '
+      + 'tammikuu vain seitsemällä.',
+  },
+  tanganjika: {
+    lat: -4.8769,
+    lon: 29.6267,
+    keskilampo: [24.4, 24.7, 24.7, 24, 24.2, 24.2, 23.9, 24.7, 25.5, 25.3, 24, 23.7],
+    ylin: [26, 27, 27, 26, 26, 27, 27, 27, 28, 28, 26, 25],
+    alin: [23, 23, 23, 22, 22, 22, 21, 22, 23, 23, 22, 22],
+    sade: [229, 229, 223, 278, 138, 26, 1, 5, 35, 137, 328, 345],
+    luonnehdinta: 'Tanganjikajärven rannalla on tasaisen lämmin, '
+      + '24–26 astetta ympäri vuoden. Sadekausi marras–huhtikuussa '
+      + 'on runsas, kesä–elokuu käytännössä sateeton.',
+  },
 };
