@@ -277,3 +277,98 @@ suurin poikkeama 0,6 laitepikseliä, portaat 0,05/0,012/0,003/0,0008/0°.
     1,3 laattaa/s/prosessi), noin 2,5 h kaikille laatoille
   - **Yhteensä noin 2,5–3 h** maalaatoille.
 - **Z10** vasta kattavuuslistalla: 230 279 maalaattaa, noin 4 × Z9.
+
+---
+
+# Resepti tuotantoon 25.9.2026: koodi ja koepoltto
+
+Omistajan päätös 25.9.2026 klo 00 (Raamattu "PERUSKARTAN RESEPTI
+2026-09-25"): koko maailmalle D2 + C-reliefi + natiivin vektorirannat.
+
+## Kuvapari hyväksyttäväksi (koepoltto `tools/polttoresepti.mjs` 2026-09-25)
+
+| Tiedosto | Mitä |
+| --- | --- |
+| `3-kreikka-z6.jpg` | Pallon Z6 (lähde pyramidin z5), lon 19,0–30,2, lat 34,2–42,0, bilineaarisesti 2,55 ruutupx/laattapx (natiivin mittakaava, kuten GPU) |
+| `3-peloponnesos-z9.jpg` | Pallon Z9 (lähde z8) samasta iPad-ruudusta kuin `2-natiivi-nykyinen.jpg` (834 × 1194 pt @2x, 37,35 N 22,3 E). Samalla kameralla Z9 näkyy 1,28 ruutupx/laattapx (Z8 2,55) |
+
+Kummassakin viivataso on tuotannon `2026-09-23a-viivat` (reseptin pallosarja
+polttaa viivatason mukaan kuten ennen). Rantaa ei ole (`"ranta": null`),
+eikä natiivin Maaraja-kehää.
+
+Pohja: `--ilman-rantaviivaa --maski-aa 4 --meri-kohina 0.2 --reliefi-koe
+lammin --dem-kaikki-tasot`, 23a:n yhteiset liput ja `--resepti-json
+'{"syvyys":{"litistys":0.8}}'`. DEM: `--dem <glo30> --dem90 <glo90>`.
+Pallo: `--suodatin laatikko --jpeg-laatu 90 --jpeg-444`.
+
+**Ero vedokseen D2:** reliefi luetaan nyt GLO-90:stä (GLO-30 varalla), koska
+lähde valitaan kuten natiivin maastolaatoissa (`kaksiLahdetta`,
+`GLO30_KYNNYS` 0,001°). Pyramidin z0–z9 välit ovat kynnystä harvempia, joten
+GLO-90 on ensisijainen koko maailmassa, myös E28:ssa. GLO-90 on laskettu
+GLO-30:stä, ja näillä väleillä kumpikin luetaan overview-tasolta, joten
+kuvassa ei pitäisi näkyä eroa. z10 lukee ensin GLO-30:tä.
+
+## Koodi
+
+- **DEM-ikkuna lohkoittain** (`tools/maasto/dem-ikkuna.mjs`): solut käydään
+  1°-ruutu kerrallaan, joten jokainen DEM-ruutu avataan kerran (ennen
+  koko maailman rivi avasi saman ruudun NAS:ilta joka rivillä). Ruudun
+  näytteistin ratkaisee lähteen ja overview-tason kerran lohkoa kohti.
+  Päivämääränraja kierretään (lauta ulottuu 185°:een). Arvot ovat
+  tavulleen samat: oikealla GLO-30:llä Kreikan z6-ikkunassa 0 eroavaa
+  solua 1,45 miljoonasta.
+- **GLO-90** (`--dem90`, generaattori): `kaksiLahdetta` kuten
+  `tee-maasto.mjs`; NAS:n `._`-tiedostot ohitetaan nimen perusteella.
+- **Kaistajako** (`tools/polttoresepti.mjs`): jokainen taso on oma shardinsa,
+  koska väli on tason pikseli. z5–z8 jaetaan pituuskaistoiksi, jolloin
+  DEM-ikkuna on enintään ~330 Mt shardia kohti. z0–z4 = 1 shardi/taso,
+  z5 2, z6 6, z7 22 ja z8 85 kaistaa (122 pohjashardia).
+- **Nimetty resepti** (`tools/polta-paikallisesti.sh --resepti 2026-09-25`):
+  pohja-, yhteis- ja pallon liput sekä shardijako reseptistä. Rantataso
+  poltetaan omiin shardeihinsa entiseen tapaan, ja pallosarja (Z0–Z9) saa
+  `--ilman-rantaa`, joten `"ranta": null`. Päätöksen vastaiset lisäliput
+  (`--syvyyskayrat`, `--vesiviivoitus` ym.) pysäyttävät ajon. Luettelo
+  kirjaa `pohja.resepti` ja `korkeus.dem` (lähdemaininnat GLO-90 ja GLO-30).
+- **Vanha resepti on ennallaan:** 23a-reseptin z6-laatta 46/20 on
+  pikseleiltään sama origin/mainin koodilla ja tällä haaralla (tiiviste
+  kirjattu testiin, `darwin-arm64`).
+- **Työkansion siivous** (#3123) on mukana.
+
+## Mitattu koepoltossa (nice 10, kone kuormitettu, kuormitus 300–880)
+
+| Ajo | DEM-ikkuna | DEM-aika | Piirto | Kokonaan | Muisti (RSS) |
+| --- | --- | --- | --- | --- | --- |
+| z5 Kreikka (6 laattaa) | 4165 × 1789, 60″ | 110 s (~2 100 ruutua NAS:ilta) | 41 s | 183 s | 1,9 Gt |
+| z6 Kreikka (12) | 4177 × 3517, 30″ | 36 s | 34 s | 90 s | 2,1 Gt |
+| z7 Peloponnesos (9) | 4177 × 1861, 15″ | 14 s | 41 s | 89 s | 1,5 Gt |
+| z8 Peloponnesos (36) | 4193 × 3657, 7,5″ | 18 s | 51 s | 93 s | 2,2 Gt |
+| pallo Z8–Z9 (83 laattaa) | – | – | – | 58 s | – |
+
+Vedoksen rivi kerrallaan koottu z6-ikkuna kesti 111 s. Ruudun avaus NAS:ilta
+maksaa kuormitetulla koneella noin 50 ms, ja solun laskenta noin 0,7 µs.
+
+## Arvio koko poltosta
+
+- **Pohja + viiva- ja rantataso:** 23a:n piirto kesti 71 min 16 prosessilla.
+  DEM tuo lisää noin 2 min z8-kaistaa kohti (ikkuna 160 M solua ja noin
+  310 ruudun avaus), eli noin 15–25 min 16 prosessilla. z0–z4 avaavat
+  kaikki noin 26 500 GLO-90-ruutua, noin 20–25 min kukin rinnakkain. Ne
+  ovat listan alussa, joten ne eivät jatka kriittistä polkua.
+  Yhteensä **~1,5 h yöllä (16)**, **~6–7 h päivällä (4)**.
+- **Pallo Z0–Z9, laatikkosuodatin:** Z0–Z8 20–35 min yöllä. Z9 on 188 416
+  laattaa, ja mitattu tahti on noin 1,3–1,4 laattaa/s/prosessi, joten
+  **~2,4 h yöllä**. Sarja kirjoittaa myös merilaatat. Päivällä (4) noin
+  10–11 h.
+- **Yhteensä:** noin **4–4,5 h yöllä (16)** ja noin **16–18 h päivällä
+  (4)**. Suositus on pohja päivällä ja pallo yöllä. Klo 03 levysiivouksen
+  ja klo 04–05 TestFlightin ikkunat on kierrettävä kuten E28-ajossa.
+- **Levy (paikallinen):**
+  - pohja noin 3 Gt (z8 ≤ 2,4 Gt, z7 0,6 Gt, z6 0,15 Gt)
+  - viiva ja ranta alle 1 Gt
+  - pallo Z0–Z8 noin 1,2 Gt ja Z9 1,1–1,4 Gt
+  - hetkellisesti korkeus.bin enintään 16 × 330 Mt ≈ 5,3 Gt, joka
+    siivoutuu prosessin lopussa
+  - Huippu on noin **10–12 Gt**. Pallon lähde kootaan levyn shardeista
+    APFS-kloonina, joten pohjashardeja ei saa siivota ennen palloa.
+- **NAS-luku:** noin 240 000 ruudun avausta, noin 50 Gt (z8:n 6″-overview
+  on noin 1 Mt ruutua kohti).

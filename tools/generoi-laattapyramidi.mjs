@@ -81,7 +81,7 @@
  */
 import { createServer } from 'node:http';
 import {
-  mkdirSync, readFileSync, writeFileSync, statSync, existsSync,
+  mkdirSync, readFileSync, writeFileSync, statSync, existsSync, rmSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import {
@@ -92,7 +92,9 @@ import { fileURLToPath } from 'node:url';
 import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { demIkkuna, demVali } from './maasto/dem-ikkuna.mjs';
-import { demHakemisto, LAHDEMAININTA } from './maasto/tee-maasto.mjs';
+import {
+  demHakemisto, kaksiLahdetta, LAHDEMAININTA, LAHDEMAININTA_90,
+} from './maasto/tee-maasto.mjs';
 import { meriMaski } from './fokuskartta/aineisto.mjs';
 import { yhdistaLuettelo } from './pyramidiluettelo.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
@@ -325,7 +327,8 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] [--koristeet <json>] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
-    + '[--tasoja 8|9|11] [--syva-alue lon0,lat0,lon1,lat1] [--dem <GLO-30-kansio>] '
+    + '[--tasoja 8|9|11] [--syva-alue lon0,lat0,lon1,lat1] [--dem <GLO-30-kansio>] [--dem90 <GLO-90-kansio>] '
+    + '[--dem-kaikki-tasot] [--maski-aa 4] [--meri-kohina 0.2] [--reliefi-koe lammin|<json>] [--rantaleveys z:k,…] [--reseptinimi <nimi>] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
@@ -1289,6 +1292,18 @@ if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE) {
  * muuta yhtään tavua. Ks. tools/maasto/dem-ikkuna.mjs.
  */
 const DEM_KANSIO = valitsin('dem', null);
+/*
+ * GLO-90-KANSIO (`--dem90`, peruskartan resepti 2026-09-25): GLO-30 on
+ * NAS:issa vain E28-laatikosta, joten koko maailman reliefi tarvitsee
+ * GLO-90:n. Lähde valitaan täsmälleen kuten natiivin maastolaatoissa
+ * (tools/maasto/tee-maasto.mjs kaksiLahdetta, GLO30_KYNNYS 0,001°):
+ * pyramidin z0–z9 välit ovat kynnystä harvempia, joten niillä GLO-90 on
+ * ensisijainen ja GLO-30 varalla; z10 (0,00052°) lukee ensin GLO-30:tä.
+ * Ilman `--dem90`:tä ajo on tavulleen entinen (vain GLO-30).
+ */
+const DEM90_KANSIO = valitsin('dem90', null);
+/** `--reseptinimi 2026-09-25` — nimetty resepti luetteloon (polta-paikallisesti.sh --resepti). */
+const RESEPTINIMI = valitsin('reseptinimi', null);
 
 /* ------------------------------------------------------------ arkki */
 
@@ -2396,7 +2411,13 @@ const merkkiTasot = tasot.filter((m) => m.z < SYVA_ALIN);
  * DEM KÄYTÖSSÄ vain kun `--dem` on annettu JA ajossa on syviä tasoja;
  * muuten ajo on tavulleen entinen (1′/3′-ruudukko).
  */
-const DEM_KAYTOSSA = Boolean(DEM_KANSIO) && (DEM_KAIKKI_TASOT || TASOT.some((z) => z >= SYVA_ALIN));
+const DEM_KAYTOSSA = Boolean(DEM_KANSIO || DEM90_KANSIO) && (DEM_KAIKKI_TASOT || TASOT.some((z) => z >= SYVA_ALIN));
+/** Käyttääkö taso DEM-ikkunaa (syvä taso tai `--dem-kaikki-tasot`)? */
+const demTasolla = (z) => Boolean(DEM_KANSIO || DEM90_KANSIO) && (z >= SYVA_ALIN || DEM_KAIKKI_TASOT);
+/** Luettelon aineistonimi; pelkällä GLO-30:llä täsmälleen entinen. */
+const DEM_AINEISTO = DEM90_KANSIO
+  ? (DEM_KANSIO ? 'Copernicus GLO-90 (3″) + GLO-30 (1″)' : 'Copernicus GLO-90 (3″)')
+  : 'Copernicus GLO-30';
 /** DEM-ikkunan reunus asteina: varjon askel ja bilineaarinen naapuri, ei enempää. */
 const DEM_MARGINAALI = 0.02;
 /** Tason DEM-väli: pikseli pituusasteina (lauta on 360° = projektio.leveys). */
@@ -2752,10 +2773,17 @@ if (!ILMAN_AINEISTOA) {
      * rinnakkain).
      */
     const vali = demValiTasolle(TASOT[0]);
-    const dem = demHakemisto(DEM_KANSIO);
+    /*
+     * GLO-30 (tunnus 10) ja GLO-90 (tunnus 30) erillisinä hakemistoina,
+     * jotta aineistot eivät sekoitu vaikka kansiossa olisi vieraita
+     * nimiä; NAS:n `._`-tiedostot hylätään nimen perusteella (demNimi).
+     */
+    const glo30 = DEM_KANSIO ? demHakemisto(DEM_KANSIO) : null;
+    const glo90 = DEM90_KANSIO ? demHakemisto(DEM90_KANSIO, undefined, { tunnus: '30' }) : null;
+    const dem = glo90 ? kaksiLahdetta({ glo30, glo90 }) : glo30;
     if (!dem.ruutuja) {
-      console.error(`--dem ${DEM_KANSIO}: kansiossa ei ole yhtään GLO-30-ruutua `
-        + '(Copernicus_DSM_COG_10_N44_00_E003_00_DEM.tif …).');
+      console.error(`--dem ${DEM_KANSIO ?? '-'} --dem90 ${DEM90_KANSIO ?? '-'}: kansioissa ei ole `
+        + 'yhtään Copernicus-ruutua (Copernicus_DSM_COG_10_… tai _30_…_DEM.tif).');
       process.exit(1);
     }
     const karkeaKoko = `${aineisto.korkeus.w} x ${aineisto.korkeus.h}`;
@@ -2768,7 +2796,8 @@ if (!ILMAN_AINEISTOA) {
     aineisto.meri = meriMaski(dataKansio, tihea, { laajennus: 1 });
     console.log(`  DEM-ikkuna      ${tihea.w} x ${tihea.h} (väli ${(vali * 3600).toFixed(3)}″, `
       + `${(tihea.grid.byteLength / 1e6).toFixed(0)} Mt, DEM ${(tihea.dem.osuus * 100).toFixed(1)} % soluista, `
-      + `${dem.ruutuja} ruutua kansiossa; 1′-varalla ${karkeaKoko}) `
+      + `${dem.ruutuja} ruutua ${glo90 ? `(GLO-30 ${glo30?.ruutuja ?? 0}, GLO-90 ${glo90.ruutuja})` : 'kansiossa'}; `
+      + `1′-varalla ${karkeaKoko}) `
       + `${((Date.now() - demAlkoi) / 1000).toFixed(1)} s`);
   }
   const megatavua = (aineisto.korkeus.grid.byteLength / 1e6).toFixed(0);
@@ -3104,6 +3133,15 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
+/*
+ * TYÖKANSIO SIIVOTAAN AINA (Karttaseppä 24.9.2026, PR #3123). Kansiossa on
+ * korkeusruudukko ja merimaski (syvällä sarjalla ~440 Mt), eikä sitä
+ * poistettu koskaan: E28-ajon 16 rinnakkaista shardia jättivät jokainen
+ * omansa, ja 429 orpoa kansiota (35 Gt) täytti levyn kesken ajon.
+ * Poisto sekä normaalissa lopussa että SIGTERM/SIGINT-pysäytyksessä.
+ */
+process.on('exit', () => { try { rmSync(tyokansio, { recursive: true, force: true }); } catch { /* ei väliä */ } });
+for (const s of ['SIGTERM', 'SIGINT']) process.once(s, () => process.exit(143));
 if (!ILMAN_AINEISTOA) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
@@ -4519,7 +4557,21 @@ function teeLuettelo() {
    * kumpi pohja syntyi; merkkitaso kantaa vanhan arvon eteenpäin
    * (tools/pyramidiluettelo.mjs).
    */
-  pohja: MERKKITASO ? undefined : { rantaviiva: !ILMAN_RANTAVIIVAA, ...(lippu('joet-pohjaan') ? { joet: true } : {}) },
+  pohja: MERKKITASO ? undefined : {
+    rantaviiva: !ILMAN_RANTAVIIVAA,
+    ...(lippu('joet-pohjaan') ? { joet: true } : {}),
+    /*
+     * NIMETTY RESEPTI JA LÖYDÖS 46:N ASETUKSET (25.9.2026): kirjataan
+     * vain kun ne ovat päällä, joten vanhan reseptin luettelo on
+     * tavulleen entinen. Peli ei lue näitä; ämpäristä näkee, millä
+     * reseptillä pohja poltettiin.
+     */
+    ...(RESEPTINIMI ? { resepti: RESEPTINIMI } : {}),
+    ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
+    ...(RELIEFI_KOE ? { reliefi: valitsin('reliefi-koe', null) === 'lammin' ? 'lammin' : RELIEFI_KOE } : {}),
+    ...(RANTALEVEYS ? { rantaleveys: RANTALEVEYS } : {}),
+  },
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.
@@ -4556,8 +4608,21 @@ function teeLuettelo() {
       syvat: {
         tasot: tasot.filter((m) => m.z >= SYVA_ALIN).map((m) => m.z),
         alue: SYVA_ALUE,
-        aineisto: 'Copernicus GLO-30 (1″), varalla ETOPO1 1′',
+        aineisto: DEM90_KANSIO ? `${DEM_AINEISTO}, varalla ETOPO1 1′` : 'Copernicus GLO-30 (1″), varalla ETOPO1 1′',
         lahdemaininta: LAHDEMAININTA,
+      },
+    } : {}),
+    /*
+     * KOKO PYRAMIDIN RELIEFI DEM:STÄ (`--dem-kaikki-tasot`, peruskartan
+     * resepti 2026-09-25): tasot, aineisto ja lähdemaininnat. Meri ja
+     * puuttuvat ruudut ovat ETOPO1:tä (ks. dem-ikkuna.mjs).
+     */
+    ...(DEM_KAIKKI_TASOT && (DEM_KANSIO || DEM90_KANSIO) ? {
+      dem: {
+        tasot: tasot.filter((m) => demTasolla(m.z)).map((m) => m.z),
+        aineisto: `${DEM_AINEISTO}, meri ja puuttuvat ruudut ETOPO1`,
+        valinta: 'GLO-90 ensin, kun näyteväli ≥ 0,001° (tools/maasto/tee-maasto.mjs GLO30_KYNNYS)',
+        lahdemaininta: [...(DEM90_KANSIO ? [LAHDEMAININTA_90] : []), ...(DEM_KANSIO ? [LAHDEMAININTA] : [])],
       },
     } : {}),
   },
@@ -4596,7 +4661,7 @@ function teeLuettelo() {
      * TASOT. Harvan pyramidin levyluku ei koske niitä.
      */
     laatasto: m.z >= SYVA_ALIN ? syvaLaatastoBase64(m) : (HARVA ? laatastoBase64(m) : null),
-    ...(m.z >= SYVA_ALIN && DEM_KANSIO ? { korkeusaineisto: 'Copernicus GLO-30' } : {}),
+    ...(demTasolla(m.z) ? { korkeusaineisto: DEM_AINEISTO } : {}),
   })),
   /*
    * ALUE kertoo, MIKÄ OSA PYRAMIDIA TÄSSÄ VERSIOSSA ON OLEMASSA.

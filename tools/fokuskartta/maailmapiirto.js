@@ -1602,8 +1602,8 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * kutsuvat ilman kenttää ja saavat rantaviivan kuten ennenkin; vain
    * `--ilman-rantaviivaa`-pyramidiajo asettaa sen falseksi.
    */
+  // rantaKerroin: löydös 46 -koe (tasokohtainen leveys, `--rantaleveys`; oletus 1).
   if (tyyli.rantaviiva !== false) {
-    // rantaKerroin: löydös 46 -koe (tasokohtainen leveys, `--rantaleveys`).
     piirraRannikkoKankaalle(ctx, viivaPolku, aineisto.rannikot, P * rantaKerroin);
   }
 
