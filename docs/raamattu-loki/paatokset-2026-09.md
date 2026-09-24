@@ -4403,3 +4403,7 @@ Uusi sessio aloittaa kuvatilausluonnoksesta (galleria 58 + ennenNyt 12).
 ## SISALTOKIRJURI (UUSI SESSIO): KUVATILAUSLUONNOS GALLERIA + ENNENNYT HYVAKSYTTY (763f74bf6, docs/raportit/kuvatilaus-galleria-ennennyt-20260924.md) → POSTILAATIKKOON (24.9.2026 klo 18.13)
 
 59 kaupunkia (11 molemmat, 47 vain galleria, 1 vain ennenNyt); säännöt: ei homonyymejä (Campo Grande), ei teemakuvia jotka eivät kuvaa kohdetta, kulttuurisesti herkkä aineisto pois (Uluru, Sepik, Bananal, Kongo), vain PD/CC tarkistettuna, tyhjä jos ei aitoa löytöä, ennenNyt vaatii ajoituksen; avoimet arkistot per alue (Rijksmuseum, LoC, Gallica, Smithsonian, Internet Archive, Wellcome, Trove, Brasiliana, Memoria Chilena, Sudan Archive, HBC, NLNZ, Getty, Europeana). Fable lisäsi: ei tunnistettavia nykyisiä yksityishenkilöitä ennenNyt-kuvissa; toimitus manifestina 15 kaupungin erissä.
+
+## KUVATILAUS GALLERIA + ENNENNYT POSTILAATIKOSSA (847fcdc25, posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md); RAPORTTI PR #3106 (24.9.2026 klo 18.17)
+
+59 kaupunkia, 4 erää á 15, yksityishenkilörajaus mukana. Kuvaputkella nyt kolme avointa tilausta: maamerkkien viitekuvat, renessanssisali erä 2 (+ veistokset, muotokuvat, kartat), galleria + ennenNyt.
