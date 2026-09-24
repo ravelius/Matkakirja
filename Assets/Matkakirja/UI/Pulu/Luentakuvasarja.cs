@@ -117,5 +117,13 @@ namespace Matkakirja.Natiivi
         }
 
         public void Suurenna(VirtaKuva k) => Suurenna(new List<VirtaKuva> { k });
+    
+        /// <summary>Linssi päällä: pakka ja Ohita piiloon näkyvyydellä (tila säilyy), kuten webin linssien piilotus.</summary>
+        public void NaytaSallittu(bool sallitaan)
+        {
+            var v = sallitaan ? Visibility.Visible : Visibility.Hidden;
+            pakka.style.visibility = v;
+            ohita.style.visibility = v;
+        }
     }
 }
