@@ -174,8 +174,8 @@ namespace Matkakirja.Natiivi
             if (k == null || kohde == null) return;
             if (kohde.Juttu == null || string.IsNullOrEmpty(kohde.Juttu.Teksti))
             {
-                if (!string.IsNullOrEmpty(kohde.Wiki))
-                    Application.OpenURL("https://fi.wikipedia.org/wiki/" + Uri.EscapeDataString(kohde.Wiki.Replace(' ', '_')));
+                // Ilman omaa juttua wikin artikkeli pelin omaan Lue lisää -ikkunaan (web openWikiArticle).
+                if (!string.IsNullOrEmpty(kohde.Wiki)) UiNakymat.Hae()?.Wiki.Avaa(kohde.Wiki, kohde.Nimi);
                 return;
             }
             kartta = k;
@@ -306,8 +306,8 @@ namespace Matkakirja.Natiivi
             if (kappaleet.Count == 0 && kuvat.Count > 0) KuvaTaiKaruselli(sisus, kuvat, true);
             if (!string.IsNullOrEmpty(k.Wiki))
             {
-                string wiki = k.Wiki;
-                var b = Rakenne.Nappi("Lue lisää aiheesta", "mk-nahtavyys__wiki", () => Application.OpenURL("https://fi.wikipedia.org/wiki/" + Uri.EscapeDataString(wiki.Replace(' ', '_'))), sisus);
+                string wiki = k.Wiki, nimi = k.Nimi;
+                var b = Rakenne.Nappi("Lue lisää aiheesta", "mk-nahtavyys__wiki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), sisus);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             else Lahderivi(sisus, k.Lahde);
