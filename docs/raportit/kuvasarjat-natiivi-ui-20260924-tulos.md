@@ -141,12 +141,16 @@ Macin äänen heti ja tarkistin `peli-tila.json`:sta, ettei mikään
 musiikkikanava soinut kovaa (pohja/maisema molemmat < 0,02). Ei
 kuulunut mitään, mutta merkitsen tämän rehellisyyden vuoksi.
 
-## C6 (Jaa matka) — odottaa
+## C6 (Jaa matka) — PASS (master 41bda44)
 
-`natiivi-ui/jaa-matka` on nyt masterissa (724ad30), mutta simulaattorini
-on vielä a345a19:ssä. Pyydän uuden asennuksen ja ajan C6:n seuraavaksi
-(`ui huipennus`: Jatka vaeltamista / Jaa matka / Uusi peli — jakoarkki
-avataan mutta EI jaeta oikeasti, peru).
+`ui huipennus`: paneeli "Aarnin luettelo on täynnä" kolmella napilla
+(Jatka vaeltamista / Jaa matka / Uusi peli) — täsmää. (C6-huipennus.png)
+"Jaa matka" avasi OIKEAN natiivin jakoarkin (UIActivityViewController)
+tekstillä "Matkakirja: 83 päivää, 41 kaupunkia, 6…" ja tavallisilla
+vaihtoehdoilla (Muistutukset, Lisää, Kopioi, Tallenna Tiedostoihin).
+(C6-jakoarkki.png) Suljin vetämällä alas — EI jaettu oikeasti, paneeli
+palasi ennalleen. iPadin popover-muodon Natiiviseppä ilmoitti jo
+nähneensä (ff949fe) — en toistanut sitä erikseen.
 
 ## B-osio
 

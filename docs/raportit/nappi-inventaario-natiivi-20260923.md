@@ -358,10 +358,10 @@ Webissä nämä avautuvat kaupunkiliuskasta. Natiivissa niihin ei ole reittiä.
 |---|---|---|---|---|
 | Aloituskortin "Käynnistä" | ihmisen-matka.js | AikajanaNakyma.cs (IHMISEN MATKAN ALOITUS) | on | NUI |
 | "Tauko" / "Jatka" / "Loppu" | ihmisen-matka-esitys.js:2493 | AikajanaNakyma.cs (palkki) | on | NUI |
-| Aikaselain (nauha: veto esikatselee, irrotus valitsee) | linssit/aikaselain.js | UI/Linssit/Aikaselain.cs + LS:n Esitys.Esikatsele/Valitse; ◀▶ pois | on (merge-pyynnössä natiivi-ui/aikaselain a3d28f9) | NUI, LS |
+| Aikaselain (nauha: veto esikatselee, irrotus valitsee) | linssit/aikaselain.js | UI/Linssit/Aikaselain.cs + LS:n Esitys.Esikatsele/Valitse; ◀▶ pois | on (master) | NUI, LS |
 | Löytöpaikan kehys → avaa nosto | ihmisen-matka-esitys.js:1759 | löytökuva pisteen yllä (KuvanPiste), napautus avaa paikan kortin | on (master 95dd4d9); nostokortin omat napit alla | NUI, LS |
-| Nostokortti: "Sulje nosto", "Tiedeliite: koko juttu" | linssit/ihmisen-matka-kortti.js:398, 443 | UI/Linssit/IhmisenNostokortti.cs (✕, kuvat, löytöteksti, pulun kysymykset valmiine vastauksineen, esitys tauolle) | osittain (merge-jonossa natiivi-ui/ihmisen-nostokortti 23a3cbe); kuvatekstit, lähteet ja "Lue lisää" → tiedeliite odottavat LS:n aineistokenttiä | NUI, LS |
-| Tutkimusvaihe (vanat, pulukysymykset) | ihmisen-matka-tutkimus.js:343 | puuttuu (tarkista) | puuttuu | LS, NUI |
+| Nostokortti: "Sulje nosto", "Tiedeliite: koko juttu" | linssit/ihmisen-matka-kortti.js:398, 443 | UI/Linssit/IhmisenNostokortti.cs (✕, kuvat, löytöteksti, pulun kysymykset valmiine vastauksineen, esitys tauolle) | on (master 086b978: kuvatekstit, lähteet ja "Lue lisää" → tiedeliite LS:n kentillä) | NUI, LS |
+| Tutkimusvaihe (vanat, pulukysymykset) | ihmisen-matka-tutkimus.js:343 | LS:n moottori + UI/Linssit/IhmisenTutkimusNakyma.cs (virtanapit, nostopisteet, vanalappu, muisti) | on (master 70c10dc) | LS, NUI |
 
 ### 16 f. Maailmanradio
 
@@ -505,6 +505,12 @@ matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + 
 vanhentuneiksi: lähtökaupunki pallolta (on), turisti-info (ei tarvita), maalehden etusivu ja sivut (on).
 Seuraavaksi: ihmisen matkan tutkimusvaihe (LS:n moottori linssiseppa/tutkimusvaihe), sitten KOKEET-rivit.
 
+## Tehty (päivitys 24.9.2026 klo 4.35, Natiivi-UI)
+
+Masterissa: ihmisen matkan tutkimusvaihe (70c10dc), nostokortin kentät ja tiedeliite (086b978), kartuschan radio.
+Merge-pyynnössä: keksijäkarusellin kevennys pysäkinvaihdon piikkiin (natiivi-ui/karuselli-kevyt 8b6268c).
+Laitetestaaja: C1–C6, A1–A9 ja mediarivi PASS. Seuraavaksi: KOKEET-rivit.
+
 ## Taulukon tarkistus (24.9.2026 aamu, Natiivi-UI)
 
 Tila-sarake päivitetty Tehty-osioiden ja koodin mukaan (65 riviä). Avoinna Natiivi-UI:lla: pöllöpoimintojen
@@ -525,19 +531,19 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 yö klo 4, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 klo 4.35, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
-| Natiivi-UI | 193 | 1 | 0 | 6 | 3 |
+| Natiivi-UI | 194 | 0 | 0 | 6 | 3 |
 | Pelikoodari | 1 | 6 | 5 | 5 | – |
 | Natiiviseppä | – | 2 | 4 | 5 | – |
-| Linssiseppä | 3 | – | 2 | – | – |
+| Linssiseppä | 4 | – | 1 | – | – |
 | Siirtoseppä-data | 1 | – | – | – | – |
 | (ei omistajaa) | – | – | – | 2 | 12 |
-| **Yhteensä** | **198** | **9** | **11** | **18** | **15** |
+| **Yhteensä** | **200** | **8** | **10** | **18** | **15** |
 
-Natiivi-UI:n ainoa osittainen rivi on ihmisen matkan nostokortti (kentät merge-jonossa, natiivi-ui/nostokortti-kentat).
+Natiivi-UI:lla ei ole osittaisia eikä puuttuvia rivejä; jäljellä KOKEET-rivit (osio 20).
 Kuori-rivejä ei enää ole: lehti on natiivi. Vanha taulukko (23.9.2026): NUI puuttuu 71, osittain 13, kuori 20.
 
 - Siirtoseppä-data on toissijaisena mukana noin 20 puuttuvalla rivillä: nähtävyydet ja opas, muutosloki, liput, radiot, julisteet, tiedeliite, ihme, leikekirja, täkynostot ja syvennykset.
