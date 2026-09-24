@@ -4363,3 +4363,7 @@ Karttasepän fonttipäätös odottaa Fablen viestirajan nollausta.
 ## BUILD 10 -SHA: PROTO-MASTER f02376b (NATIIVISEPPA klo 18.5x) (24.9.2026 klo 17.38)
 
 Mukana: Natiivi-UI b10-jono 0e8ff30 (yläpalkki ilman ⚙, vaaka/veto → vain ☰, tekstityylit mitattuina, ✕-pilleri, kuvien swipe, maailmarivi kehittäjätilaan), valintamerkit da29d38 (kuvapari, erot nappulan väri ja rajaus kirjattu), eleet 28/30/31 + zoomi 26, avausteksti aloitusnäytöllä, saapumisnäkymä, lentopinta bathy + s2-alkup + korkeuskerroin 2, linssit b10 (ISS, lamput, linssinimet, astropulu), liiku-tanne, kehitystiimi RCD77XPB7M. Build 11: fokuspohja, kylmän lennon suorakulmiot, hytinä 27, merinimet, lehtierot. Natiiviseppä ajaa smoke-testin; Julkaisijan käsky odottaa Fablen viestirajan nollausta.
+
+## SMOKE-TESTI f02376b OK; TIIMIRISTIRIITA TIEDOKSI: JULKAISIJAN MUKAAN ACTIONSIN TEAM_ID = F72JLS57C5, OMISTAJAN MEMBERSHIP-SIVU NAYTTAA RCD77XPB7M (24.9.2026 klo 17.42)
+
+Smoke: aloituslento Lontoo→Ateena, satelliittipinta, lasku, lehti, 0 exceptionia, ei suorakulmioita. Ristiriita: koodaus-Xcode näyttää F72JLS57C5:n 'Personal Team' -nimellä, mutta TestFlight-vienti toimii sillä (pilviallekirjoitus ASC-avaimella) → joko secret on eri kuin luultiin tai F72JLS57C5 on gmail-tilin maksullinen tiimi. Muistio: Developer/ASC = me.com. Ei estä buildia: kehityskäännökset RCD77XPB7M + fi.matkakirja.peli.kehitys, TestFlight nykyisellä secretillä; Julkaisija lisää MATKAKIRJA_TEAM-ohituksen jos arkistointi kaatuu. Selvitetään omistajalta: kummalla tilillä App Store Connectin Matkakirja-sovellus on.
