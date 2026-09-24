@@ -4123,3 +4123,7 @@ Natiivisepän aloitusviesti lähetetty origin/mainista. wt/: Pelikoodari poisti 
 ## OMISTAJA klo 16.0x (KORTTI): NATIIVISEPAN 9 MERGETYN WORKTREEN POISTO SALLITTU SEN OMASSA SESSIOSSA (24.9.2026 klo 16.01)
 
 Luokitin esti poiston; Raamatun mukaan Fable pyysi omistajalta täsmällisen luvan → hyväksytty. Säilyvät proto-natiiviseppa-saapuminen (commitoimaton build 10 -työ) ja -siirtokohteet (haara natiiviseppa/satelliitti). Natiivisepän aloitusviesti oli vanha (klo 10.3x) → Natiiviseppä jatkaa klo 15.54:n luovutuksesta ja päivittää aloitusviestin.
+
+## NATIIVISEPPA: 9 WORKTREETA POISTETTU; ALOITUSVIESTIN VANHENTUMISEN SYY: LUOVUTUSHAARA selvittaja-3d-luovutus (16 COMMITTIA) EI MAINISSA (24.9.2026 klo 16.02)
+
+Aloitusviesti täydennetty 1f68fd274. Fable: Julkaisija mergeää luovutushaaran mainiin rutiinina; Postivahti lukee jatkossa aloitusviestin uusimmasta origin-haarasta (git log --all), ei mainin kopiota jos vanhempi. Natiiviseppä odottaa 'vienti ohi' ja jatkaa build 10 -jonoa.
