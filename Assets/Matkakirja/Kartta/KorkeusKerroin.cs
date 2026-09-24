@@ -28,6 +28,8 @@ namespace Matkakirja
         static readonly int KerroinId = Shader.PropertyToID("_korkeusKerroin");
         static readonly int KeskiId = Shader.PropertyToID("_maaKeski");
         static readonly int AkseliId = Shader.PropertyToID("_maaAkseli");
+        static readonly int NollaId = Shader.PropertyToID("_maaNolla");
+        static readonly int ItaId = Shader.PropertyToID("_maaIta");
 
         /// <summary>Voimassa oleva kerroin (1 = ennallaan).</summary>
         public static float Arvo { get; private set; } = 1f;
@@ -48,6 +50,14 @@ namespace Matkakirja
                     new double3(0, 0, 1))).normalized;
                 Shader.SetGlobalVector(KeskiId, new Vector4(keski.x, keski.y, keski.z, 0));
                 Shader.SetGlobalVector(AkseliId, new Vector4(akseli.x, akseli.y, akseli.z, 0));
+                // Pituusasteen akselit lennon varakartalle (KarttaKerrokset, tileset-varjostimen LentoVaraUV):
+                // ECEF +X (lon 0°) ja +Y (lon 90° E) Unityn maailmassa.
+                Vector3 nolla = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    new double3(1, 0, 0))).normalized;
+                Vector3 ita = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    new double3(0, 1, 0))).normalized;
+                Shader.SetGlobalVector(NollaId, new Vector4(nolla.x, nolla.y, nolla.z, 0));
+                Shader.SetGlobalVector(ItaId, new Vector4(ita.x, ita.y, ita.z, 0));
             }
             Shader.SetGlobalFloat(KerroinId, Arvo);
             return Arvo;

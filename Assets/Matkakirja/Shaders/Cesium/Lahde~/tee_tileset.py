@@ -3,6 +3,8 @@
 # funktiona, ei laattakohtaisesti). Kopioi com.cesium.unityn CesiumDefaultTilesetShader.shadergraphin ja
 # CesiumRasterOverlay.shadersubgraphin ja lisää raster-paikoille 0–2 globaalin alfan (_overlayAlfa_0/1/2, Shader.SetGlobalFloat):
 # alikaavion lerp-painona on tekstuurin alfa × alfa. Muu kaavio (valaistus, PBR, Clipping) on sanatarkasti Cesiumin.
+# Satelliittilento (24.9.2026): alikaavion lerp on Custom Function MatkakirjaSekoitus (sama tulos oletussyötteillä),
+# joka paikassa 1 korvaa puuttuvan rasterin lennon varakartalla ja paikassa 2 värjää Sentinelin tumman meren.
 # Lisäksi verteksivaiheeseen korkeuserojen liioittelu (globaali _korkeusKerroin, Kartta/KorkeusKerroin.cs; löydös 29).
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
@@ -16,9 +18,14 @@ ALFA_GUID = "a1f4b7c2-3d5e-4f60-8a9b-0c1d2e3f4a5b"
 def lue(p):
     return [json.loads(x) for x in open(p, encoding="utf-8").read().split("\n\n") if x.strip()]
 
+def jarjesta(o):
+    # Unityn järjestys: m_SGVersion, m_Type, m_ObjectId ensin (MultiJson), muut ennallaan.
+    alku = [k for k in ("m_SGVersion", "m_Type", "m_ObjectId") if k in o]
+    return {**{k: o[k] for k in alku}, **{k: v for k, v in o.items() if k not in alku}}
+
 def kirjoita(p, objs):
     with open(p, "w", encoding="utf-8") as f:
-        f.write("\n\n".join(json.dumps(o, indent=4) for o in objs) + "\n")
+        f.write("\n\n".join(json.dumps(jarjesta(o), indent=4) for o in objs) + "\n")
 
 def uusi_id():
     return uuid.uuid4().hex
@@ -46,30 +53,104 @@ def ominaisuussolmu(ominaisuus, x, y):
 def reuna(a, a_slot, b, b_slot):
     return {"m_OutputSlot": {"m_Node": {"m_Id": a}, "m_SlotId": a_slot}, "m_InputSlot": {"m_Node": {"m_Id": b}, "m_SlotId": b_slot}}
 
-# ---- Alikaavio: lerp T = näyte.A × alfa ----
+# ---- Alikaavio: Cesiumin lerp korvataan sekoitusfunktiolla (Natiiviseppä 24.9.2026, satelliittilento) ----
+# Cesiumin alikaavio: Lerp(baseColor, näyte, näyte.A). Tilalle Custom Function MatkakirjaSekoitus, jonka tulos
+# on sama kuin ennen (lerp(base, s, s.a × alfa)), kun uudet syötteet ovat oletusarvoissaan (0). Uudet syötteet:
+#   varaVari, vara   paikka 1 lennon aikana: jos laatan rasteri puuttuu (Cesium ei ole liittänyt tekstuuria →
+#                    varjostimen oletus "black" = (0,0,0,0), a = 0), käytetään varakartan väriä (Z2-mosaiikki).
+#   meriVari, kynnys paikka 2 (Sentinel): tumma sinertävä avomeri värjätään kohti alla olevan paikan 1 (bathy)
+#                    väriä samassa pisteessä; jos se ei itse ole merta (karkea Z7 rannikolla), kohti meriVari-vakiota.
+#                    Luokittelu sRGB-arvoilla (tekstuurit ovat sRGB, varjostin näkee lineaarisen arvon → pow 1/2,2).
+SEKOITUS_RUNKO = (
+    "float4 s = nayte;\n"
+    "if (vara > 0.5 && s.a < 0.5) s = float4(varaVari.rgb, 1.0);\n"
+    "if (kynnys > 0.0)\n"
+    "{\n"
+    "    float3 g = pow(max(s.rgb, 1e-5), 0.4545);\n"
+    "    float3 p = pow(max(base.rgb, 1e-5), 0.4545);\n"
+    "    float luma = dot(g, float3(0.2126, 0.7152, 0.0722));\n"
+    "    float meri = (1.0 - smoothstep(kynnys * 0.8, kynnys, luma)) * smoothstep(0.02, 0.08, g.b - g.r);\n"
+    "    float bathy = smoothstep(0.02, 0.08, p.b - p.r);\n"
+    "    s.rgb = lerp(s.rgb, lerp(meriVari.rgb, base.rgb, bathy.xxx), meri.xxx);\n"
+    "}\n"
+    "ulos = lerp(base, s, (s.a * alfa).xxxx);\n")
+# Alikaavion uudet syötteet: (nimi, viite, tyyppi, kiinteä GUID, solmun paikka-id pääkaaviossa)
+ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4c5d6e", 710000),
+                ("vara", "_vara", "v1", "c3f6d9e2-5a7b-4c8d-8e1f-2a3b4c5d6e7f", 710001),
+                ("meriVari", "_meriVari", "v4", "d4a7e0f3-6b8c-4d9e-9f2a-3b4c5d6e7f80", 710002),
+                ("meriKynnys", "_meriKynnys", "v1", "e5b8f1a4-7c9d-4eaf-8a3b-4c5d6e7f8091", 710003)]
+
+def ali_ominaisuus(nimi, viite, tyyppi, guid):
+    o = {"m_SGVersion": 1, "m_ObjectId": uusi_id(), "m_Guid": {"m_GuidSerialized": guid}, "m_Name": nimi,
+         "m_DefaultRefNameVersion": 1, "m_RefNameGeneratedByDisplayName": nimi, "m_DefaultReferenceName": viite,
+         "m_OverrideReferenceName": "", "m_GeneratePropertyBlock": True, "m_UseCustomSlotLabel": False,
+         "m_CustomSlotLabel": "", "m_Precision": 0, "overrideHLSLDeclaration": False, "hlslDeclarationOverride": 0,
+         "m_Hidden": False}
+    if tyyppi == "v1":
+        o.update({"m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty", "m_Value": 0.0, "m_FloatType": 0,
+                  "m_RangeValues": {"x": 0.0, "y": 1.0}})
+    else:
+        o.update({"m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+                  "m_Value": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0}})
+    return o
+
+def ominaisuussolmu_v4(ominaisuus, x, y):
+    ulos = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot", "m_ObjectId": uusi_id(), "m_Id": 0,
+            "m_DisplayName": ominaisuus["m_Name"], "m_SlotType": 1, "m_Hidden": False, "m_ShaderOutputName": "Out",
+            "m_StageCapability": 3, "m_Value": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0},
+            "m_DefaultValue": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0}, "m_Labels": []}
+    solmu, _ = ominaisuussolmu(ominaisuus, x, y)
+    solmu["m_Slots"] = [{"m_Id": ulos["m_ObjectId"]}]
+    return solmu, ulos
+
 ali = lue(os.path.join(lahde, "CesiumRasterOverlay.shadersubgraph"))
 g = ali[0]
 byid = {o["m_ObjectId"]: o for o in ali}
 lerp = next(o for o in ali if o["m_Type"].endswith("LerpNode"))
 naytteenotto = next(o for o in ali if o["m_Type"].endswith("SampleTexture2DNode"))
-kerto_malli = next(o for o in ali if o["m_Type"].endswith("MultiplyNode"))
+ulostulo = next(o for o in ali if o["m_Type"].endswith("SubGraphOutputNode"))
+perus = next(o for o in ali if o["m_Type"].endswith("ColorShaderProperty"))
+perus_solmu = next(o for o in ali if o["m_Type"].endswith("PropertyNode") and o["m_Property"]["m_Id"] == perus["m_ObjectId"])
+kat = next(o for o in ali if o["m_Type"].endswith("CategoryData"))
+# Lerp ja sen paikat pois; sekoitusfunktio tilalle.
+lerp_paikat = {s["m_Id"] for s in lerp["m_Slots"]}
+ali = [o for o in ali if o["m_ObjectId"] != lerp["m_ObjectId"] and o["m_ObjectId"] not in lerp_paikat]
+g["m_Nodes"] = [n for n in g["m_Nodes"] if n["m_Id"] != lerp["m_ObjectId"]]
+g["m_Edges"] = [e for e in g["m_Edges"] if lerp["m_ObjectId"] not in (e["m_InputSlot"]["m_Node"]["m_Id"], e["m_OutputSlot"]["m_Node"]["m_Id"])]
 alfa = kellu_ominaisuus("alfa", "_alfa", False)
 alfa_solmu, alfa_ulos = ominaisuussolmu(alfa, 900.0, -30.0)
-kerto = json.loads(json.dumps(kerto_malli)); kerto["m_ObjectId"] = uusi_id()
-kerto["m_DrawState"]["m_Position"].update({"x": 1040.0, "y": -120.0})
-paikat = []
-for s in kerto_malli["m_Slots"]:
-    k = json.loads(json.dumps(byid[s["m_Id"]])); k["m_ObjectId"] = uusi_id(); paikat.append(k)
-kerto["m_Slots"] = [{"m_Id": k["m_ObjectId"]} for k in paikat]
-reunat = [e for e in g["m_Edges"] if not (e["m_InputSlot"]["m_Node"]["m_Id"] == lerp["m_ObjectId"] and e["m_InputSlot"]["m_SlotId"] == 2)]
-reunat += [reuna(naytteenotto["m_ObjectId"], 7, kerto["m_ObjectId"], 0), reuna(alfa_solmu["m_ObjectId"], 0, kerto["m_ObjectId"], 1),
-           reuna(kerto["m_ObjectId"], 2, lerp["m_ObjectId"], 2)]
-g["m_Edges"] = reunat
-g["m_Properties"].append({"m_Id": alfa["m_ObjectId"]})
-g["m_Nodes"] += [{"m_Id": alfa_solmu["m_ObjectId"]}, {"m_Id": kerto["m_ObjectId"]}]
-kat = next(o for o in ali if o["m_Type"].endswith("CategoryData"))
-kat["m_ChildObjectList"].append({"m_Id": alfa["m_ObjectId"]})
-ali += [alfa, alfa_solmu, alfa_ulos, kerto] + paikat
+V4 = {"x": 0.0, "y": 0.0, "z": 0.0, "w": 0.0}
+def sf_paikka(tyyppi, id_, nimi, suunta):
+    arvo = 0.0 if tyyppi == "Vector1MaterialSlot" else dict(V4)
+    return {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph." + tyyppi, "m_ObjectId": uusi_id(), "m_Id": id_,
+            "m_DisplayName": nimi, "m_SlotType": suunta, "m_Hidden": False, "m_ShaderOutputName": nimi,
+            "m_StageCapability": 2, "m_Value": arvo, "m_DefaultValue": arvo, "m_Labels": []}
+sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4MaterialSlot", 1, "nayte", 0),
+             sf_paikka("Vector1MaterialSlot", 2, "alfa", 0), sf_paikka("Vector4MaterialSlot", 3, "varaVari", 0),
+             sf_paikka("Vector1MaterialSlot", 4, "vara", 0), sf_paikka("Vector4MaterialSlot", 5, "meriVari", 0),
+             sf_paikka("Vector1MaterialSlot", 6, "kynnys", 0), sf_paikka("Vector4MaterialSlot", 7, "ulos", 1)]
+sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
+      "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
+      "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
+      "m_Slots": [{"m_Id": s["m_ObjectId"]} for s in sf_paikat], "synonyms": ["code", "HLSL"], "m_Precision": 0,
+      "m_PreviewExpanded": False, "m_PreviewMode": 0, "m_CustomColors": {"m_SerializableColors": []},
+      "m_SourceType": 1, "m_FunctionName": "MatkakirjaSekoitus", "m_FunctionSource": "", "m_FunctionBody": SEKOITUS_RUNKO}
+uudet = [alfa, alfa_solmu, alfa_ulos, sf] + sf_paikat
+reunat = [reuna(perus_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 0), reuna(naytteenotto["m_ObjectId"], 0, sf["m_ObjectId"], 1),
+          reuna(alfa_solmu["m_ObjectId"], 0, sf["m_ObjectId"], 2), reuna(sf["m_ObjectId"], 7, ulostulo["m_ObjectId"], 1)]
+omat = [alfa]
+for i, (nimi, viite, tyyppi, guid, _) in enumerate(ALI_SYOTTEET):
+    om = ali_ominaisuus(nimi, viite, tyyppi, guid)
+    solmu, ulos = (ominaisuussolmu_v4 if tyyppi == "v4" else ominaisuussolmu)(om, 900.0, 40.0 + 60.0 * i)
+    reunat.append(reuna(solmu["m_ObjectId"], 0, sf["m_ObjectId"], 3 + i))
+    uudet += [om, solmu, ulos]
+    omat.append(om)
+g["m_Edges"] += reunat
+for om in omat:
+    g["m_Properties"].append({"m_Id": om["m_ObjectId"]})
+    kat["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
+g["m_Nodes"] += [{"m_Id": o["m_ObjectId"]} for o in uudet if o["m_Type"].endswith("Node")]
+ali += uudet
 kirjoita(os.path.join(kohde, "MatkakirjaRasteri.shadersubgraph"), ali)
 
 # ---- Pääkaavio: paikat 0–2 uuteen alikaavioon, alfa globaalista ominaisuudesta ----
@@ -79,6 +160,7 @@ G["m_Path"] = "Matkakirja"
 byid = {o["m_ObjectId"]: o for o in kaavio}
 KAT = next(o for o in kaavio if o["m_Type"].endswith("CategoryData"))
 lisat = []
+paikkasolmut = {}
 for o in list(kaavio):
     if not (o["m_Type"].endswith("SubGraphNode") and CESIUM_ALI in o["m_SerializedSubGraph"]):
         continue
@@ -106,6 +188,19 @@ for o in list(kaavio):
     G["m_Nodes"].append({"m_Id": solmu["m_ObjectId"]})
     G["m_Edges"].append(reuna(solmu["m_ObjectId"], 0, o["m_ObjectId"], paikka_id))
     lisat += [paikka, om, solmu, ulos]
+    # Alikaavion uudet syötteet (sekoitus): oletus 0 = ei vaikutusta; kytketään alempana paikoille 1 ja 2.
+    for nimi, viite, tyyppi, guid, pid in ALI_SYOTTEET:
+        sp = {"m_SGVersion": 0, "m_ObjectId": uusi_id(), "m_Id": pid, "m_DisplayName": nimi, "m_SlotType": 0,
+              "m_Hidden": False, "m_ShaderOutputName": viite, "m_StageCapability": 2, "m_Labels": []}
+        if tyyppi == "v1":
+            sp.update({"m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot", "m_Value": 0.0, "m_DefaultValue": 0.0})
+        else:
+            sp.update({"m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot", "m_Value": dict(V4), "m_DefaultValue": dict(V4)})
+        o["m_Slots"].insert(len(o["m_Slots"]) - 1, {"m_Id": sp["m_ObjectId"]})
+        o["m_PropertyGuids"].append(guid)
+        o["m_PropertyIds"].append(pid)
+        lisat.append(sp)
+    paikkasolmut[n] = o
     print("paikka", n, "→ _overlayAlfa_" + n)
 
 # ---- Korkeuserojen liioittelu (omistajan löydös 29, build 9 → 10; Natiiviseppä 24.9.2026) ----
@@ -204,6 +299,99 @@ for s in (paikka_solmu, normaali_solmu, kerroin_solmu, keski_solmu, akseli_solmu
 lisat += [paikka_solmu, paikka_ulos, normaali_solmu, normaali_ulos, kerroin_om, kerroin_solmu, kerroin_ulos,
           keski_om, keski_solmu, keski_ulos, akseli_om, akseli_solmu, akseli_ulos, cf] + cf_slotit
 print("verteksi → Korkeusliioittelu (_korkeusKerroin, _maaKeski, _maaAkseli)")
+# ---- Satelliittilento (Natiiviseppä 24.9.2026, Fablen päätökset 2 ja 3) ----
+# Paikka 2 (Sentinel-2): meren värjäys globaaleista _s2MeriVari (rgb sRGB→lineaarinen C#:ssa) ja _s2MeriKynnys
+# (sRGB-luma; 0 = pois). Paikka 1 (Blue Marble): lennon varakartta _lentoVaraKartta (Z2-mosaiikki Web Mercatorissa,
+# koko maailma) näytteistetään fragmentin maailmanpisteen leveys- ja pituusasteesta, kun _lentoVara = 1.
+# Maan akselit Unityn maailmassa: _maaKeski ja _maaAkseli (KorkeusKerroin) sekä _maaNolla (ECEF +X, lon 0) ja
+# _maaIta (ECEF +Y, lon 90° E). Geosentrinen leveys riittää (virhe < 0,2°, mosaiikin pikseli 0,35°).
+VARA_UV_RUNKO = (
+    "uv = float2(0.0, 0.0);\n"
+    "if (dot(nolla.xyz, nolla.xyz) > 0.5 && dot(akseli.xyz, akseli.xyz) > 0.5)\n"
+    "{\n"
+    "    float3 n = normalize(pos - keski.xyz);\n"
+    "    float lat = asin(clamp(dot(n, akseli.xyz), -1.0, 1.0));\n"
+    "    float lon = atan2(dot(n, ita.xyz), dot(n, nolla.xyz));\n"
+    "    float la = clamp(lat, -1.4844222, 1.4844222);   // Web Mercator: 85.05 deg\n"
+    "    uv = float2(lon * 0.15915494 + 0.5, log(tan(0.78539816 + la * 0.5)) * 0.15915494 + 0.5);\n"
+    "}\n")
+SX = paikkasolmut["1"]["m_DrawState"]["m_Position"]["x"] - 900.0
+SY = paikkasolmut["1"]["m_DrawState"]["m_Position"]["y"] + 400.0
+vara_om = kellu_ominaisuus("lentoVara", "_lentoVara", True); vara_om["m_Value"] = 0.0
+meriv_om = vektori_ominaisuus("s2MeriVari", "_s2MeriVari")
+kynnys_om = kellu_ominaisuus("s2MeriKynnys", "_s2MeriKynnys", True); kynnys_om["m_Value"] = 0.0
+nolla_om = vektori_ominaisuus("maaNolla", "_maaNolla")
+ita_om = vektori_ominaisuus("maaIta", "_maaIta")
+kartta_om = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty", "m_ObjectId": uusi_id(),
+             "m_Guid": {"m_GuidSerialized": str(uuid.uuid4())}, "m_Name": "lentoVaraKartta", "m_DefaultRefNameVersion": 1,
+             "m_RefNameGeneratedByDisplayName": "lentoVaraKartta", "m_DefaultReferenceName": "_lentoVaraKartta",
+             "m_OverrideReferenceName": "", "m_GeneratePropertyBlock": False, "m_UseCustomSlotLabel": False,
+             "m_CustomSlotLabel": "", "m_Precision": 0, "overrideHLSLDeclaration": True, "hlslDeclarationOverride": 1,
+             "m_Hidden": False, "m_Value": {"m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}", "m_Guid": ""},
+             "isMainTexture": False, "useTilingAndOffset": False, "m_Modifiable": True, "m_DefaultType": 1}
+vara_solmu, vara_ulos = ominaisuussolmu(vara_om, SX + 600.0, SY + 300.0)
+meriv_solmu, meriv_ulos = vektori_ominaisuussolmu(meriv_om, paikkasolmut["2"]["m_DrawState"]["m_Position"]["x"] - 250.0,
+                                                  paikkasolmut["2"]["m_DrawState"]["m_Position"]["y"] + 260.0)
+kynnys_solmu, kynnys_ulos = ominaisuussolmu(kynnys_om, meriv_solmu["m_DrawState"]["m_Position"]["x"],
+                                            meriv_solmu["m_DrawState"]["m_Position"]["y"] + 60.0)
+keski2_solmu, keski2_ulos = vektori_ominaisuussolmu(keski_om, SX - 300.0, SY + 60.0)
+akseli2_solmu, akseli2_ulos = vektori_ominaisuussolmu(akseli_om, SX - 300.0, SY + 120.0)
+nolla_solmu, nolla_ulos = vektori_ominaisuussolmu(nolla_om, SX - 300.0, SY + 180.0)
+ita_solmu, ita_ulos = vektori_ominaisuussolmu(ita_om, SX - 300.0, SY + 240.0)
+kartta_ulos = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot", "m_ObjectId": uusi_id(), "m_Id": 0,
+               "m_DisplayName": "lentoVaraKartta", "m_SlotType": 1, "m_Hidden": False, "m_ShaderOutputName": "Out",
+               "m_StageCapability": 3, "m_BareResource": False}
+kartta_solmu = solmupohja("PropertyNode", "Property", SX + 250.0, SY - 60.0, [kartta_ulos], m_Property={"m_Id": kartta_om["m_ObjectId"]})
+maailma_ulos = slotti("Vector3MaterialSlot", 0, "Out", 1, v3())
+maailma_solmu = solmupohja("PositionNode", "Position", SX - 300.0, SY, [maailma_ulos], m_SGVersion=1, m_Space=4,
+                           m_PositionSource=0, m_DismissedVersion=0)
+uv_slotit = [slotti("Vector3MaterialSlot", 0, "pos", 0, v3()), slotti("Vector4MaterialSlot", 1, "keski", 0, v4()),
+             slotti("Vector4MaterialSlot", 2, "akseli", 0, v4()), slotti("Vector4MaterialSlot", 3, "nolla", 0, v4()),
+             slotti("Vector4MaterialSlot", 4, "ita", 0, v4()), slotti("Vector2MaterialSlot", 5, "uv", 1, {"x": 0.0, "y": 0.0})]
+for s in uv_slotit: s["m_StageCapability"] = 2
+uv_cf = solmupohja("CustomFunctionNode", "LentoVaraUV (Custom Function)", SX, SY, uv_slotit, m_SGVersion=1,
+                   synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="LentoVaraUV", m_FunctionSource="",
+                   m_FunctionBody=VARA_UV_RUNKO)
+nayte_slotit = [slotti("Vector4MaterialSlot", 0, "RGBA", 1, v4()), slotti("Vector1MaterialSlot", 4, "R", 1, 0.0),
+                slotti("Vector1MaterialSlot", 5, "G", 1, 0.0), slotti("Vector1MaterialSlot", 6, "B", 1, 0.0),
+                slotti("Vector1MaterialSlot", 7, "A", 1, 0.0)]
+for s in nayte_slotit: s["m_StageCapability"] = 2
+nayte_tex = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot", "m_ObjectId": uusi_id(), "m_Id": 1,
+             "m_DisplayName": "Texture", "m_SlotType": 0, "m_Hidden": False, "m_ShaderOutputName": "Texture",
+             "m_StageCapability": 3, "m_BareResource": False,
+             "m_Texture": {"m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}", "m_Guid": ""}, "m_DefaultType": 0}
+nayte_uv = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.UVMaterialSlot", "m_ObjectId": uusi_id(), "m_Id": 2,
+            "m_DisplayName": "UV", "m_SlotType": 0, "m_Hidden": False, "m_ShaderOutputName": "UV", "m_StageCapability": 3,
+            "m_Value": {"x": 0.0, "y": 0.0}, "m_DefaultValue": {"x": 0.0, "y": 0.0}, "m_Labels": [], "m_Channel": 0}
+nayte_ss = {"m_SGVersion": 0, "m_Type": "UnityEditor.ShaderGraph.SamplerStateMaterialSlot", "m_ObjectId": uusi_id(), "m_Id": 3,
+            "m_DisplayName": "Sampler", "m_SlotType": 0, "m_Hidden": False, "m_ShaderOutputName": "Sampler",
+            "m_StageCapability": 3, "m_BareResource": False}
+nayte_slotit += [nayte_tex, nayte_uv, nayte_ss]
+nayte = solmupohja("SampleTexture2DNode", "Sample Texture 2D", SX + 500.0, SY, nayte_slotit, m_TextureType=0,
+                   m_NormalMapSpace=0, m_EnableGlobalMipBias=True)
+p1, p2 = paikkasolmut["1"]["m_ObjectId"], paikkasolmut["2"]["m_ObjectId"]
+G["m_Edges"] += [reuna(maailma_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 0),
+                 reuna(keski2_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 1),
+                 reuna(akseli2_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 2),
+                 reuna(nolla_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 3),
+                 reuna(ita_solmu["m_ObjectId"], 0, uv_cf["m_ObjectId"], 4),
+                 reuna(uv_cf["m_ObjectId"], 5, nayte["m_ObjectId"], 2),
+                 reuna(kartta_solmu["m_ObjectId"], 0, nayte["m_ObjectId"], 1),
+                 reuna(nayte["m_ObjectId"], 0, p1, 710000),
+                 reuna(vara_solmu["m_ObjectId"], 0, p1, 710001),
+                 reuna(meriv_solmu["m_ObjectId"], 0, p2, 710002),
+                 reuna(kynnys_solmu["m_ObjectId"], 0, p2, 710003)]
+for om in (vara_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
+    G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
+    KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
+satsolmut = [vara_solmu, meriv_solmu, kynnys_solmu, keski2_solmu, akseli2_solmu, nolla_solmu, ita_solmu, kartta_solmu,
+             maailma_solmu, uv_cf, nayte]
+for s in satsolmut:
+    G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
+lisat += [vara_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om, vara_ulos, meriv_ulos, kynnys_ulos, keski2_ulos,
+          akseli2_ulos, nolla_ulos, ita_ulos, kartta_ulos, maailma_ulos] + satsolmut + uv_slotit + nayte_slotit
+print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 ← meren värjäys (_s2MeriVari, _s2MeriKynnys)")
+
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)
 

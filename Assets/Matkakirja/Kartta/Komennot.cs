@@ -41,6 +41,10 @@ namespace Matkakirja
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
     ///   korkeus <kerroin>         korkeuserojen liioittelu heti (KorkeusKerroin, 1–3, oletus 1; ei tallennu)
+    ///   satelliitti <versio> [bmng|bmng-bathy] [s2|s2-alkup] | satelliitti pois   lennon pinta (oletus
+    ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
+    ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
+    ///                             oletus 17 46 92 0.18)
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -250,6 +254,17 @@ namespace Matkakirja
                     if (o.Length > 3) KarttaKerrokset.SatelliittiS2 = o[3];
                     Debug.Log("MATKAKIRJA lennon pinta: satelliitti " + (KarttaKerrokset.SatelliittiVersio ?? "pois (sileä)"));
                     break;
+                case "s2meri":
+                {
+                    // s2meri r g b kynnys: meren värjäys (KarttaKerrokset.S2Meri). Arvot > 1 tulkitaan 0–255-asteikoksi.
+                    var kk = KarttaKerrokset.Instanssi;
+                    if (kk == null || o.Length < 5) break;
+                    float r = (float)D(1), g = (float)D(2), b = (float)D(3);
+                    if (r > 1f || g > 1f || b > 1f) { r /= 255f; g /= 255f; b /= 255f; }
+                    kk.S2Meri(new Color(r, g, b), (float)D(4));
+                    Debug.Log($"MATKAKIRJA lennon pinta: s2meri {KarttaKerrokset.S2MeriVari} kynnys {KarttaKerrokset.S2MeriKynnys:0.###}");
+                    break;
+                }
                 case "palvelin":
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");

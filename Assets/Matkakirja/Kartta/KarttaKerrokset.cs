@@ -82,6 +82,8 @@ namespace Matkakirja
             for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
             // Korkeuskerroin (löydös 29, koelippu): oletus 1 ja maan keskipiste varjostimelle; komento "korkeus <k>".
             KorkeusKerroin.Aseta(1f, GetComponent<CesiumGeoreference>());
+            // Satelliittilennon varjostinglobaalit pois päältä, kunnes lento alkaa (paikka 2 on muulloin väritaso tai linssi).
+            PaivitaLennonVarjostin();
             Instanssi = this;
             CesiumRasterOverlay.OnCesiumRasterOverlayLoadFailure += Epaonnistui;
         }
@@ -170,6 +172,16 @@ namespace Matkakirja
             if (silea != null) kaytetyt.Add(silea.materialKey);
             if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
             string avainCesium = !kaytetyt.Contains("1") ? "1" : !kaytetyt.Contains("2") ? "2" : null;
+            if (avainCesium == null && sentinel != null)
+            {
+                // Satelliittilento (oletus build 10) vie molemmat paikat: linssi saa Sentinelin paikan 2,
+                // lento jatkuu Blue Marblella.
+                sentinel.enabled = false;
+                Destroy(sentinel);
+                sentinel = null;
+                avainCesium = "2";
+                PaivitaLennonVarjostin();
+            }
             if (avainCesium == null)
             {
                 Debug.LogWarning("MATKAKIRJA kerrokset: enintään kaksi linssikerrosta kerrallaan");
@@ -205,13 +217,141 @@ namespace Matkakirja
         /// …/s2/{z}/{x}/{y}.jpg (Sentinel-2 2016 Z8–Z11 kaupunkien ympärillä, CC BY 4.0: "Contains modified
         /// Copernicus Sentinel data 2016, EOX IT Services" → Tietoja), kattavuus s2/laatat.json (laatat8).
         /// </summary>
-        public static string SatelliittiVersio = null;
+        public static string SatelliittiVersio = "2026-09-24";
         /// <summary>
-        /// Karttasepän sarjat 2026-09-24 (omistaja vertaa, hävinnyt poistetaan): meri "bmng" (topo, tumma meri) tai
-        /// "bmng-bathy" (sininen meri); kaupungit "s2" (EOX sovitettuna Blue Marbleen) tai "s2-alkup" (muuttamaton).
-        /// Kattavuus (s2/laatat.json) on molemmissa sama.
+        /// Karttasepän sarjat 2026-09-24: meri "bmng" (topo, tumma meri) tai "bmng-bathy" (sininen meri); kaupungit
+        /// "s2" (EOX sovitettuna Blue Marbleen) tai "s2-alkup" (muuttamaton). Kattavuus (s2/laatat.json) on molemmissa
+        /// sama. OLETUS build 10 (Fablen päätös 24.9.2026): bmng-bathy + s2-alkup, eli satelliitti on lennon oletuspinta;
+        /// "satelliitti pois" palauttaa sileän sarjan. s2-alkupin musta meri värjätään varjostimessa (S2MeriVari).
         /// </summary>
-        public static string SatelliittiMeri = "bmng", SatelliittiS2 = "s2";
+        public static string SatelliittiMeri = "bmng-bathy", SatelliittiS2 = "s2-alkup";
+
+        /// <summary>
+        /// MEREN VÄRJÄYS (Fablen päätös 24.9.2026): Sentinel-2-alkuperäisen (EOX) meri on lähes musta, joten Z7→Z8-sauma
+        /// näkyi kovana suorakulmiona bathyn sinistä vasten. Tileset-varjostin (MatkakirjaSekoitus, paikka 2) värjää
+        /// Sentinelin pikselin, jonka sRGB-luma &lt; kynnys (pehmeästi 0,8·kynnys…kynnys) ja joka on sinertävä
+        /// (b − r &gt; 0,02…0,08), kohti paikan 1 (bathy) väriä samassa pisteessä; jos bathy ei siinä itse ole merta
+        /// (Z7 on rannikolla karkea), kohti tätä vakiota. Luokittelu on pikselikohtainen, joten rantaviiva pysyy
+        /// Sentinelin terävänä eikä tumma maa (vihreä/ruskea, b &lt; r) värjäydy.
+        /// Vakio on mitattu bmng-bathy Z6–Z7 -laattojen avomeren keskiarvosta Välimereltä (13 laattaa Joonianmereltä
+        /// Levantille, pikselit b &gt; r + 20): sRGB (17, 46, 92) — mediaani (16, 42, 89). Kynnys 0,18 mitattiin
+        /// s2-alkup-laatoista Ateenan ympäriltä (Z8–Z10): avomeren luma on 0,10–0,17, 0,12 jätti puolet merestä mustaksi.
+        /// Komento "s2meri r g b kynnys" (0–1 tai 0–255; kynnys 0 = pois).
+        /// </summary>
+        public static Color S2MeriVari = new Color32(17, 46, 92, 255);
+        public static float S2MeriKynnys = 0.18f;
+
+        static readonly int S2MeriVariId = Shader.PropertyToID("_s2MeriVari");
+        static readonly int S2MeriKynnysId = Shader.PropertyToID("_s2MeriKynnys");
+        static readonly int LentoVaraId = Shader.PropertyToID("_lentoVara");
+        static readonly int LentoVaraKarttaId = Shader.PropertyToID("_lentoVaraKartta");
+
+        /// <summary>Meren värjäys heti (komento s2meri); vaikuttaa vain, kun Sentinel on paikassa 2.</summary>
+        public void S2Meri(Color vari, float kynnys)
+        {
+            S2MeriVari = vari;
+            S2MeriKynnys = Mathf.Max(0f, kynnys);
+            PaivitaLennonVarjostin();
+        }
+
+        /// <summary>
+        /// Lennon varjostinglobaalit sen mukaan, mitä paikoissa 1 ja 2 on: meren värjäys vain Sentinelille (paikassa 2
+        /// on muulloin väritaso tai linssi, joita ei saa värjätä) ja varakartta vain Blue Marblelle.
+        /// </summary>
+        void PaivitaLennonVarjostin()
+        {
+            Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? S2MeriVari.linear : S2MeriVari;
+            Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, 1f));
+            Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? S2MeriKynnys : 0f);
+            bool vara = satelliittiLento && varaKartta != null && varaKarttaAvain == SatelliittiAvain();
+            if (vara) Shader.SetGlobalTexture(LentoVaraKarttaId, varaKartta);
+            Shader.SetGlobalFloat(LentoVaraId, vara ? 1f : 0f);
+        }
+
+        /// <summary>
+        /// LENNON VARAKARTTA (harmaat suorakulmiot loittonuksessa, Fablen päätös 24.9.2026 "isälaatta pysyy näkyvissä").
+        ///
+        /// Juurisyy (cesium-native v0.64.0, Cesium for Unity 1.25.1): Cesium kiinnittää laatalle lähimmän valmiin
+        /// esivanhemman rasterin, kun oma lataa (RasterMappedTo3DTile.cpp:136–167), ja Tile::isRenderable vaatii valmiin
+        /// rasterin (Tile.cpp:218–239). Valinta kuitenkin lisää piirtolistaan myös laatat, jotka eivät ole piirrettäviä
+        /// (TilesetSelection.cpp:611–645 renderLeaf/renderInnerTile ilman isRenderable-ehtoa; 688–786 kick-polku, kun
+        /// notYetRenderableCount &gt; loadingDescendantLimit), ja Cesium for Unity aktivoi jokaisen piirtolistan laatan,
+        /// jonka geometria on valmis (Cesium3DTilesetImpl.cpp:179–195, vain TileLoadState::Done). Jos millään
+        /// esivanhemmalla ei ole valmista rasteria (loittonuksessa uudet karkeat laatat ja näkymään tulevat reunat),
+        /// overlay-tekstuuria ei ole asetettu (detachRasterInMainThread asettaa null, UnityPrepareRendererResources.cpp:
+        /// 1918–1960) ja varjostimen oletus "black" = (0,0,0,0) → alfa 0 → alta näkyy pergamentti tai materiaalin
+        /// vaalea perusväri muutaman kehyksen ajan, laattojen muotoisina portaina.
+        ///
+        /// Tilesetin asetukset eivät riitä: Pallo.unity:ssä forbidHoles ja preloadAncestors ovat jo päällä, eikä
+        /// forbidHoles estä piirtämästä laattaa ilman rasteria (se koskee vain tarkentamista lapsiin); lisäksi jokainen
+        /// asetin (forbidHoles, preload*, loadingDescendantLimit, maximumSimultaneousTileLoads) kutsuu
+        /// RecreateTileset():iä, joten niiden vaihtaminen lennon ajaksi lataisi koko pallon uudelleen.
+        ///
+        /// Ratkaisu varjostimessa (varmin, ei riipu Cesiumin ajoituksesta): "isälaatta" on koko maailman Z2-mosaiikki
+        /// (Blue Marble, 4 × 4 laattaa, 1024², Web Mercator), joka on aina valmiina. Paikka 1 näyttää sen, kun laatan
+        /// oma tai esivanhemman rasteri puuttuu (näyte.a &lt; 0,5), ja Cesiumin tarkempi laatta korvaa sen heti
+        /// latauduttuaan. Varakartta otetaan käyttöön vain, jos kaikki 16 laattaa latautuivat (välimuisti/verkko):
+        /// offline ilman välimuistia käytös on entinen (pergamentti näkyy).
+        /// </summary>
+        static Texture2D varaKartta;
+        static string varaKarttaAvain;
+        bool varaKarttaHaussa, satelliittiLento;
+
+        static string SatelliittiAvain() => SatelliittiVersio + "/" + SatelliittiMeri;
+
+        void VarmistaVarakartta()
+        {
+            if (string.IsNullOrEmpty(SatelliittiVersio) || varaKarttaHaussa) return;
+            if (varaKartta != null && varaKarttaAvain == SatelliittiAvain()) return;
+            varaKarttaHaussa = true;
+            StartCoroutine(LataaVarakartta(SatelliittiAvain()));
+        }
+
+        System.Collections.IEnumerator LataaVarakartta(string avain)
+        {
+            const int Z = 2, N = 1 << Z, K = 256;
+            var haut = new UnityEngine.Networking.UnityWebRequest[N * N];
+            for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                {
+                    // {reverseY} on Cesium Unityssä XYZ-rivi (ks. EsilataaLento), joten tiedostopolku on z/x/y (XYZ).
+                    var r = UnityEngine.Networking.UnityWebRequest.Get(
+                        Laattapalvelin.Paikallinen(SatelliittiJuuri + avain + "/" + Z + "/" + x + "/" + y + ".jpg"));
+                    r.SendWebRequest();
+                    haut[y * N + x] = r;
+                }
+            foreach (var r in haut) while (!r.isDone) yield return null;
+            var atlas = new Texture2D(N * K, N * K, TextureFormat.RGB24, false, false)
+            {
+                name = "LennonVarakartta", wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp,
+                filterMode = FilterMode.Bilinear
+            };
+            var pala = new Texture2D(2, 2, TextureFormat.RGB24, false, false);
+            bool ok = true;
+            for (int i = 0; i < haut.Length && ok; i++)
+            {
+                var r = haut[i];
+                ok = r.result == UnityEngine.Networking.UnityWebRequest.Result.Success
+                     && pala.LoadImage(r.downloadHandler.data) && pala.width == K && pala.height == K;
+                // Unityn tekstuurin rivi 0 on alhaalla, XYZ-rivi 0 pohjoisessa: rivi y menee lohkoon N − 1 − y.
+                if (ok) atlas.SetPixels32(i % N * K, (N - 1 - i / N) * K, K, K, pala.GetPixels32());
+            }
+            foreach (var r in haut) r.Dispose();
+            Destroy(pala);
+            varaKarttaHaussa = false;
+            if (!ok)
+            {
+                Destroy(atlas);
+                Debug.LogWarning("MATKAKIRJA lennon pinta: varakartta (Z2) ei latautunut, puuttuva laatta näyttää pohjan");
+                yield break;
+            }
+            atlas.Apply(false, true);
+            if (varaKartta != null) Destroy(varaKartta);
+            varaKartta = atlas;
+            varaKarttaAvain = avain;
+            Debug.Log("MATKAKIRJA lennon pinta: varakartta Z2 valmis (" + avain + ")");
+            PaivitaLennonVarjostin();
+        }
         const string SatelliittiJuuri = "https://media.matkakirja.app/julisteet/pallo/satelliitti/";
         static HashSet<long> sentinelZ8;
         bool sentinelHaettu;
@@ -289,6 +429,8 @@ namespace Matkakirja
                     sentinel = null;
                     if (varitaso != null && rasterit.Count == 0) varitaso.Linssit(false);
                 }
+                satelliittiLento = false;
+                PaivitaLennonVarjostin();
                 return;
             }
             if (silea != null || rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
@@ -304,6 +446,9 @@ namespace Matkakirja
             string s2 = SentinelKaytto(versio);
             if (varitaso != null) varitaso.Linssit(true);
             sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
+            satelliittiLento = true;
+            VarmistaVarakartta();
+            PaivitaLennonVarjostin();
         }
 
         /// <summary>Sentinel-sarjan kansio (ämpärin osoite, "/"-loppuinen); kattavuus Laattapalvelimelle ja sen haku.</summary>
@@ -359,7 +504,11 @@ namespace Matkakirja
             var e = Laattapalvelin.Esilataa(new List<string>(joukko));
             LennonEsilataus = e;
             Debug.Log($"MATKAKIRJA lennon pinta: esilataus {joukko.Count} laattaa");
-            if (!string.IsNullOrEmpty(versio)) StartCoroutine(EsilataaSentinel(versio, lat0, lon0, lat1, lon1, e));
+            if (!string.IsNullOrEmpty(versio))
+            {
+                StartCoroutine(EsilataaSentinel(versio, lat0, lon0, lat1, lon1, e));
+                VarmistaVarakartta();   // valmiina ennen pinnan vaihtoa (16 pientä laattaa)
+            }
             return e;
         }
 
