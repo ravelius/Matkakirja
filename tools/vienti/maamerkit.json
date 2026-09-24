@@ -1,0 +1,4 @@
+{
+ "kuvaus": "Natiivin 3D-maamerkit kaupungeittain (Raamattu: LENNON KARTTA JA MAAMERKIT, omistajan kortti 24.9.2026). Ylläpitäjä Pelikoodari. Rivi: { id, kaupunki, lat, lon, maanKorkeus (m, EGM2008), suunta (° pohjoisesta myötäpäivään), mallinKorkeus (m), malli { url (https://media.matkakirja.app/maamerkit/<kaupunki>-<sha8>.glb), sha256, tavuja }, lisenssi, tekija, lahde }. GLB:t viedään ämpäriin CI:n tai Julkaisijan kautta, ei repoon. Tarkistus: node tools/vienti/maamerkit.mjs --tarkista.",
+ "rivit": []
+}
