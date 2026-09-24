@@ -56,6 +56,17 @@ namespace Matkakirja.Linssit.Radio
     }
 
     public enum RadioVaihe { Hiljaa, Viritys, Soi, Virhe, Linkki }
+
+    /// <summary>
+    /// Radiotilan kaupunkinappi pallolla (web radio.js pallonNapit): kaupunki, paikka, onko kanavaa
+    /// (ei: katkoviivarengas ilman kolmiota) ja soiko se (punainen hehku, rengas ja kolmio).
+    /// </summary>
+    public sealed class RadioNappi
+    {
+        public string Kaupunki;
+        public double Lat, Lon;
+        public bool OnKanava, Soi;
+    }
     public enum ViritysVaihe { Ei, Siirtyma, Haku, Lukittuu }
 
     /// <summary>Radion tila UI:lle (Natiivi-UI:n toive 23.9.).</summary>
@@ -149,6 +160,32 @@ namespace Matkakirja.Linssit.Radio
             this.fontti = fontti ?? new HashSet<char>();
         }
 
+        /// <summary>
+        /// WEBIN RADIOTILA (radio.js: "kaikki muu toiminto häviää"): kun UI piirtää omat napit (tosi),
+        /// pelin kaupunkimerkit, nappula ja muut kerrokset piiloutuvat linssin ajaksi ja napautus
+        /// tulee UI:lta SoitaKaupunki-kutsuna. Epätosi = vanha tapa (KaupunkiMerkit.NaytaVain).
+        /// </summary>
+        public bool OmatNapit;
+        /// <summary>Napit muuttuivat (avaus, soiva kaupunki, sulku): UI piirtää Napit uudelleen.</summary>
+        public event Action NapitMuuttuivat;
+
+        /// <summary>Radiotilan napit (web pallonNapit); tyhjä, kun linssi on kiinni.</summary>
+        public IReadOnlyList<RadioNappi> Napit => !Auki ? Array.Empty<RadioNappi>() : nakyvat
+            .Select(id => (id, k: aineisto.Kaupunki(id)))
+            .Where(x => x.k != null)
+            .Select(x => new RadioNappi
+            {
+                Kaupunki = x.id, Lat = x.k.Lat, Lon = x.k.Lon,
+                OnKanava = ToimintoAsemalle(aineisto.MaanAsema(x.k.Iso3)) != Toiminto.Ei,
+                Soi = x.id == soiva,
+            }).ToList();
+
+        void Korostus(string kaupunki)
+        {
+            kartta?.Korosta(kaupunki);
+            NapitMuuttuivat?.Invoke();
+        }
+
         /// <summary>Radiotilassa näkyvät kaupungit (yksi per maa).</summary>
         public IReadOnlyCollection<string> Nakyvat => nakyvat;
         /// <summary>Asteikon asemat (kaupunki-id:t) lännestä itään.</summary>
@@ -204,11 +241,13 @@ namespace Matkakirja.Linssit.Radio
             asteikko = nakyvat.Where(id => ToimintoAsemalle(aineisto.MaanAsema(aineisto.Kaupunki(id)?.Iso3)) != Toiminto.Ei)
                 .OrderBy(id => aineisto.Kaupunki(id).Lon).ThenBy(id => id, StringComparer.Ordinal).ToList();
             y?.MusiikkiPitoon(true);
+            if (OmatNapit) y?.Pelikerrokset(false);
             if (kartta != null)
             {
-                kartta.NaytaVain(nakyvat);
+                kartta.NaytaVain(OmatNapit ? (ICollection<string>)Array.Empty<string>() : nakyvat);
                 kartta.KaupunkiNapautettu += SoitaKaupunki;
             }
+            NapitMuuttuivat?.Invoke();
             if (viritin != null) viritin.Voimakkuus = aani;
             AsetaHiljaa();
         }
@@ -222,9 +261,11 @@ namespace Matkakirja.Linssit.Radio
             if (kartta != null)
             {
                 kartta.KaupunkiNapautettu -= SoitaKaupunki;
-                kartta.Korosta(null);
+                Korostus(null);
                 kartta.NaytaVain(null);
             }
+            if (OmatNapit) y?.Pelikerrokset(true);
+            NapitMuuttuivat?.Invoke();
             y?.MusiikkiPitoon(false);
             AsetaHiljaa();
             y = null;
@@ -264,7 +305,7 @@ namespace Matkakirja.Linssit.Radio
             {
                 LopetaAani(0);
                 soiva = null;
-                kartta?.Korosta(kaupunki);
+                Korostus(kaupunki);
                 Aseta(RadioVaihe.Linkki, ViritysVaihe.Ei, kaupunki, asema, null);
                 return;
             }
@@ -272,7 +313,7 @@ namespace Matkakirja.Linssit.Radio
             {
                 LopetaAani(0);
                 soiva = null;
-                kartta?.Korosta(null);
+                Korostus(null);
                 Aseta(RadioVaihe.Virhe, ViritysVaihe.Ei, kaupunki, null, asema == null ? "Ei asemaa" : "Ei lähetystä");
                 return;
             }
@@ -287,7 +328,7 @@ namespace Matkakirja.Linssit.Radio
             virta?.Avaa(aanite ? asema.VaraUrl : asema.Url, aanite ? "mp3" : asema.Tyyppi);
             if (virta != null) virta.Voimakkuus = 0;
             viritin?.Aloita();
-            kartta?.Korosta(kaupunki);
+            Korostus(kaupunki);
             Aseta(RadioVaihe.Viritys, ViritysVaihe.Siirtyma, kaupunki, asema, null);
         }
 
@@ -340,7 +381,7 @@ namespace Matkakirja.Linssit.Radio
             virta?.Sulje();
             if (!viritysJatkuu) viritin?.Lopeta(haiveS);
             kuuluu = lukittu = false;
-            if (!viritysJatkuu) { soiva = null; kartta?.Korosta(null); }
+            if (!viritysJatkuu) { soiva = null; Korostus(null); }
         }
 
         void AsetaHiljaa()

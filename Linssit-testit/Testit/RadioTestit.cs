@@ -283,6 +283,33 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(RadioLinssi.LuentaSallittu && !y.Musiikkipito, "purettu");
         }
 
+        [Testi] static void OmatNapitKutenWebinRadiotila()
+        {
+            // web radio.js pallonNapit: yksi nappi per näkyvä kaupunki, kanavaton katkoviivalla,
+            // soiva punaisena; "kaikki muu toiminto häviää" → pelin merkit ja nappula piiloon.
+            var y = new ValeYmparisto();
+            var k = new ValeRadioKartta();
+            var l = new RadioLinssi(S(), new ValeVirta(), new ValeViritin(), k, Fontti()) { OmatNapit = true };
+            int muutoksia = 0;
+            l.NapitMuuttuivat += () => muutoksia++;
+            Oleta.Sama(0, l.Napit.Count, "kiinni: ei nappeja");
+            l.Avaa(y);
+            Oleta.Sama(false, y.PelikerroksetNakyvissa, "pelin kerrokset piiloon");
+            Oleta.Sama(0, k.Vain.Count, "kaupunkimerkit piiloon");
+            Oleta.Sama(118, l.Napit.Count);
+            Oleta.Sama(l.Asteikko.Count, l.Napit.Count(n => n.OnKanava), "kanavalliset = asteikko");
+            Oleta.Tosi(l.Napit.All(n => !n.Soi), "mikään ei soi");
+            Oleta.Tosi(muutoksia >= 1, "avaus ilmoittaa");
+            l.SoitaKaupunki("helsinki");
+            Oleta.Sama("helsinki", l.Napit.Single(n => n.Soi).Kaupunki);
+            int ennen = muutoksia;
+            l.Keskeyta();
+            Oleta.Tosi(muutoksia > ennen && l.Napit.All(n => !n.Soi), "STOP sammuttaa");
+            l.Sulje();
+            Oleta.Sama(true, y.PelikerroksetNakyvissa, "kerrokset takaisin");
+            Oleta.Sama(0, l.Napit.Count);
+        }
+
         [Testi] static void ViritysKolmessaVaiheessaVahimmaisajalla()
         {
             var (l, y, v, w, k, tilat) = Luo();
