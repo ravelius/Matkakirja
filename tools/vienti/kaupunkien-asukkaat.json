@@ -1,0 +1,1603 @@
+{
+ "lahde": "Wikidata P1082 (väkiluku), CC0 1.0; kohde fi-Wikipedian artikkelin (kaupungit[].wiki) kautta",
+ "valinta": "P518-osajoukot vain jos muita ei ole; suositeltu rank ensin, sitten uusin P585-ajankohta, saman vuoden sisällä suurin. alue = saari, valtio tai merentakainen alue (P31) ilman kaupunki-tyyppiä: luku koskee koko aluetta",
+ "haettu": "2026-09-24",
+ "kaupungit": {
+  "addisabeba": {
+   "asukkaat": 5704000,
+   "vuosi": 2024,
+   "wikidata": "Q3624",
+   "alue": false
+  },
+  "adelaide": {
+   "asukkaat": 1295714,
+   "vuosi": 2016,
+   "wikidata": "Q5112",
+   "alue": false
+  },
+  "aden": {
+   "asukkaat": 1154410,
+   "vuosi": 2025,
+   "wikidata": "Q131694",
+   "alue": false
+  },
+  "ahaggar": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q26399",
+   "alue": false
+  },
+  "alicesprings": {
+   "asukkaat": 31120,
+   "vuosi": 2020,
+   "wikidata": "Q17872",
+   "alue": false
+  },
+  "alkufra": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q172114",
+   "alue": false
+  },
+  "alpit": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q1286",
+   "alue": false
+  },
+  "amsterdam": {
+   "asukkaat": 921468,
+   "vuosi": 2023,
+   "wikidata": "Q727",
+   "alue": false
+  },
+  "anchorage": {
+   "asukkaat": 291247,
+   "vuosi": 2020,
+   "wikidata": "Q39450",
+   "alue": false
+  },
+  "angola": {
+   "asukkaat": 36749906,
+   "vuosi": 2023,
+   "wikidata": "Q916",
+   "alue": true
+  },
+  "ankara": {
+   "asukkaat": 5803482,
+   "vuosi": 2023,
+   "wikidata": "Q3640",
+   "alue": false
+  },
+  "antofagasta": {
+   "asukkaat": 348517,
+   "vuosi": 2017,
+   "wikidata": "Q3612",
+   "alue": false
+  },
+  "appalakit": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q93332",
+   "alue": false
+  },
+  "astana": {
+   "asukkaat": 1078362,
+   "vuosi": 2019,
+   "wikidata": "Q1520",
+   "alue": false
+  },
+  "asuncion": {
+   "asukkaat": 462241,
+   "vuosi": 2022,
+   "wikidata": "Q2933",
+   "alue": false
+  },
+  "ateena": {
+   "asukkaat": 643452,
+   "vuosi": 2021,
+   "wikidata": "Q1524",
+   "alue": false
+  },
+  "auckland": {
+   "asukkaat": 1470100,
+   "vuosi": 2020,
+   "wikidata": "Q37100",
+   "alue": false
+  },
+  "bagdad": {
+   "asukkaat": 8126755,
+   "vuosi": 2018,
+   "wikidata": "Q1530",
+   "alue": false
+  },
+  "bahrelghazal": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q803634",
+   "alue": false
+  },
+  "bali": {
+   "asukkaat": 4404300,
+   "vuosi": 2023,
+   "wikidata": "Q4648",
+   "alue": true
+  },
+  "bananal": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q282059",
+   "alue": true
+  },
+  "bangkok": {
+   "asukkaat": 5676648,
+   "vuosi": 2018,
+   "wikidata": "Q1861",
+   "alue": false
+  },
+  "barcelona": {
+   "asukkaat": 1731649,
+   "vuosi": 2025,
+   "wikidata": "Q1492",
+   "alue": false
+  },
+  "bergen": {
+   "asukkaat": 291189,
+   "vuosi": 2023,
+   "wikidata": "Q26793",
+   "alue": false
+  },
+  "berliini": {
+   "asukkaat": 3782202,
+   "vuosi": 2023,
+   "wikidata": "Q64",
+   "alue": false
+  },
+  "bermuda": {
+   "asukkaat": 65024,
+   "vuosi": 2013,
+   "wikidata": "Q23635",
+   "alue": true
+  },
+  "birdsville": {
+   "asukkaat": 110,
+   "vuosi": 2021,
+   "wikidata": "Q865118",
+   "alue": false
+  },
+  "boavista": {
+   "asukkaat": 413486,
+   "vuosi": 2022,
+   "wikidata": "Q181056",
+   "alue": false
+  },
+  "bogota": {
+   "asukkaat": 8034649,
+   "vuosi": 2024,
+   "wikidata": "Q2841",
+   "alue": false
+  },
+  "borneo": {
+   "asukkaat": 18590000,
+   "vuosi": 2009,
+   "wikidata": "Q36117",
+   "alue": true
+  },
+  "brisbane": {
+   "asukkaat": 2706966,
+   "vuosi": 2023,
+   "wikidata": "Q34932",
+   "alue": false
+  },
+  "broome": {
+   "asukkaat": 11547,
+   "vuosi": 2006,
+   "wikidata": "Q606294",
+   "alue": false
+  },
+  "bryssel": {
+   "asukkaat": 1255795,
+   "vuosi": 2025,
+   "wikidata": "Q240",
+   "alue": false
+  },
+  "budapest": {
+   "asukkaat": 1685209,
+   "vuosi": 2025,
+   "wikidata": "Q1781",
+   "alue": false
+  },
+  "buenosaires": {
+   "asukkaat": 3121707,
+   "vuosi": 2022,
+   "wikidata": "Q1486",
+   "alue": false
+  },
+  "bukarest": {
+   "asukkaat": 1716961,
+   "vuosi": 2021,
+   "wikidata": "Q19660",
+   "alue": false
+  },
+  "cairns": {
+   "asukkaat": 146778,
+   "vuosi": 2014,
+   "wikidata": "Q189133",
+   "alue": false
+  },
+  "campogrande": {
+   "asukkaat": 962883,
+   "vuosi": 2025,
+   "wikidata": "Q168929",
+   "alue": false
+  },
+  "caphorn": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q4078",
+   "alue": false
+  },
+  "caracas": {
+   "asukkaat": 2245744,
+   "vuosi": 2017,
+   "wikidata": "Q1533",
+   "alue": false
+  },
+  "cayenne": {
+   "asukkaat": 62675,
+   "vuosi": 2023,
+   "wikidata": "Q44401",
+   "alue": false
+  },
+  "chennai": {
+   "asukkaat": 6599000,
+   "vuosi": 2024,
+   "wikidata": "Q1352",
+   "alue": false
+  },
+  "chicago": {
+   "asukkaat": 2746388,
+   "vuosi": 2020,
+   "wikidata": "Q1297",
+   "alue": false
+  },
+  "christchurch": {
+   "asukkaat": 383200,
+   "vuosi": 2020,
+   "wikidata": "Q79990",
+   "alue": false
+  },
+  "churchill": {
+   "asukkaat": 870,
+   "vuosi": 2021,
+   "wikidata": "Q744553",
+   "alue": false
+  },
+  "colombo": {
+   "asukkaat": 647557,
+   "vuosi": 2025,
+   "wikidata": "Q35381",
+   "alue": false
+  },
+  "cooberpedy": {
+   "asukkaat": 1762,
+   "vuosi": 2016,
+   "wikidata": "Q779188",
+   "alue": false
+  },
+  "dakar": {
+   "asukkaat": 1438725,
+   "vuosi": 2021,
+   "wikidata": "Q3718",
+   "alue": false
+  },
+  "damaskos": {
+   "asukkaat": 2685360,
+   "vuosi": 2024,
+   "wikidata": "Q3766",
+   "alue": false
+  },
+  "darfur": {
+   "asukkaat": 7515445,
+   "vuosi": 2008,
+   "wikidata": "Q46733",
+   "alue": false
+  },
+  "darwin": {
+   "asukkaat": 136828,
+   "vuosi": 2016,
+   "wikidata": "Q11568",
+   "alue": false
+  },
+  "delhi": {
+   "asukkaat": 26495000,
+   "vuosi": 2016,
+   "wikidata": "Q1353",
+   "alue": false
+  },
+  "denver": {
+   "asukkaat": 715522,
+   "vuosi": 2020,
+   "wikidata": "Q16554",
+   "alue": false
+  },
+  "dili": {
+   "asukkaat": 222323,
+   "vuosi": 2015,
+   "wikidata": "Q9310",
+   "alue": false
+  },
+  "doha": {
+   "asukkaat": 1186023,
+   "vuosi": 2020,
+   "wikidata": "Q3861",
+   "alue": false
+  },
+  "dubai": {
+   "asukkaat": 3944751,
+   "vuosi": 2025,
+   "wikidata": "Q612",
+   "alue": false
+  },
+  "dublin": {
+   "asukkaat": 592713,
+   "vuosi": 2022,
+   "wikidata": "Q1761",
+   "alue": false
+  },
+  "dubrovnik": {
+   "asukkaat": 41562,
+   "vuosi": 2021,
+   "wikidata": "Q1722",
+   "alue": false
+  },
+  "dunedin": {
+   "asukkaat": 106200,
+   "vuosi": 2020,
+   "wikidata": "Q133073",
+   "alue": false
+  },
+  "edinburgh": {
+   "asukkaat": 488050,
+   "vuosi": 2016,
+   "wikidata": "Q23436",
+   "alue": false
+  },
+  "exmouth": {
+   "asukkaat": 2806,
+   "vuosi": 2021,
+   "wikidata": "Q1383990",
+   "alue": false
+  },
+  "falkland": {
+   "asukkaat": 4550,
+   "vuosi": 2018,
+   "wikidata": "Q9648",
+   "alue": true
+  },
+  "fes": {
+   "asukkaat": 1167842,
+   "vuosi": 2024,
+   "wikidata": "Q80985",
+   "alue": false
+  },
+  "firenze": {
+   "asukkaat": 360930,
+   "vuosi": 2023,
+   "wikidata": "Q2044",
+   "alue": false
+  },
+  "galapagos": {
+   "asukkaat": 25000,
+   "vuosi": 2010,
+   "wikidata": "Q38095",
+   "alue": true
+  },
+  "gao": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q253173",
+   "alue": false
+  },
+  "geraldton": {
+   "asukkaat": 32717,
+   "vuosi": 2021,
+   "wikidata": "Q605267",
+   "alue": false
+  },
+  "granada": {
+   "asukkaat": 233975,
+   "vuosi": 2025,
+   "wikidata": "Q8810",
+   "alue": false
+  },
+  "grandcanyon": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q118841",
+   "alue": false
+  },
+  "guatemala": {
+   "asukkaat": 994938,
+   "vuosi": 2025,
+   "wikidata": "Q1555",
+   "alue": false
+  },
+  "halab": {
+   "asukkaat": 2003671,
+   "vuosi": 2021,
+   "wikidata": "Q41183",
+   "alue": false
+  },
+  "halifax": {
+   "asukkaat": 440072,
+   "vuosi": 2021,
+   "wikidata": "Q2141",
+   "alue": false
+  },
+  "hanoi": {
+   "asukkaat": 8717600,
+   "vuosi": 2024,
+   "wikidata": "Q1858",
+   "alue": false
+  },
+  "havanna": {
+   "asukkaat": 2492618,
+   "vuosi": 2022,
+   "wikidata": "Q1563",
+   "alue": false
+  },
+  "hawaii": {
+   "asukkaat": 1455271,
+   "vuosi": 2020,
+   "wikidata": "Q782",
+   "alue": false
+  },
+  "helsinki": {
+   "asukkaat": 694392,
+   "vuosi": 2025,
+   "wikidata": "Q1757",
+   "alue": false
+  },
+  "hobart": {
+   "asukkaat": 222356,
+   "vuosi": 2016,
+   "wikidata": "Q40191",
+   "alue": false
+  },
+  "hongkong": {
+   "asukkaat": 7413070,
+   "vuosi": 2021,
+   "wikidata": "Q8646",
+   "alue": false
+  },
+  "honiara": {
+   "asukkaat": 84520,
+   "vuosi": 2017,
+   "wikidata": "Q40921",
+   "alue": false
+  },
+  "houston": {
+   "asukkaat": 2304580,
+   "vuosi": 2020,
+   "wikidata": "Q16555",
+   "alue": false
+  },
+  "iguazu": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q36332",
+   "alue": false
+  },
+  "iqaluit": {
+   "asukkaat": 7429,
+   "vuosi": 2021,
+   "wikidata": "Q2030",
+   "alue": false
+  },
+  "iquitos": {
+   "asukkaat": 377609,
+   "vuosi": 2017,
+   "wikidata": "Q193289",
+   "alue": false
+  },
+  "irkutsk": {
+   "asukkaat": 605708,
+   "vuosi": 2025,
+   "wikidata": "Q6576",
+   "alue": false
+  },
+  "isfahan": {
+   "asukkaat": 1961260,
+   "vuosi": 2016,
+   "wikidata": "Q42053",
+   "alue": false
+  },
+  "islanti": {
+   "asukkaat": 364260,
+   "vuosi": 2019,
+   "wikidata": "Q189",
+   "alue": true
+  },
+  "istanbul": {
+   "asukkaat": 15655924,
+   "vuosi": 2023,
+   "wikidata": "Q406",
+   "alue": false
+  },
+  "izmir": {
+   "asukkaat": 4493242,
+   "vuosi": 2024,
+   "wikidata": "Q35997",
+   "alue": false
+  },
+  "jakarta": {
+   "asukkaat": 11135191,
+   "vuosi": 2024,
+   "wikidata": "Q3630",
+   "alue": false
+  },
+  "jakutsk": {
+   "asukkaat": 311760,
+   "vuosi": 2018,
+   "wikidata": "Q6610",
+   "alue": false
+  },
+  "jekaterinburg": {
+   "asukkaat": 1468833,
+   "vuosi": 2018,
+   "wikidata": "Q887",
+   "alue": false
+  },
+  "jerusalem": {
+   "asukkaat": 1050151,
+   "vuosi": 2024,
+   "wikidata": "Q1218",
+   "alue": false
+  },
+  "joaopessoa": {
+   "asukkaat": 833932,
+   "vuosi": 2022,
+   "wikidata": "Q167436",
+   "alue": false
+  },
+  "kabul": {
+   "asukkaat": 5333284,
+   "vuosi": 2025,
+   "wikidata": "Q5838",
+   "alue": false
+  },
+  "kairo": {
+   "asukkaat": 9801536,
+   "vuosi": 2023,
+   "wikidata": "Q85",
+   "alue": false
+  },
+  "kalgoorlie": {
+   "asukkaat": 30841,
+   "vuosi": 2011,
+   "wikidata": "Q329503",
+   "alue": false
+  },
+  "kamerun": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q190562",
+   "alue": false
+  },
+  "kamtsatka": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q993",
+   "alue": false
+  },
+  "kano": {
+   "asukkaat": 4348000,
+   "vuosi": 2022,
+   "wikidata": "Q182984",
+   "alue": false
+  },
+  "kanton": {
+   "asukkaat": 13080500,
+   "vuosi": 2014,
+   "wikidata": "Q16572",
+   "alue": false
+  },
+  "kapadokia": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q217265",
+   "alue": false
+  },
+  "kapkaupunki": {
+   "asukkaat": 3776313,
+   "vuosi": 2021,
+   "wikidata": "Q5465",
+   "alue": false
+  },
+  "kappalmas": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q1019486",
+   "alue": false
+  },
+  "karachi": {
+   "asukkaat": 14910352,
+   "vuosi": 2017,
+   "wikidata": "Q8660",
+   "alue": false
+  },
+  "karthago": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q6343",
+   "alue": false
+  },
+  "kashgar": {
+   "asukkaat": 506640,
+   "vuosi": 2010,
+   "wikidata": "Q170521",
+   "alue": false
+  },
+  "kathmandu": {
+   "asukkaat": 845767,
+   "vuosi": 2021,
+   "wikidata": "Q3037",
+   "alue": false
+  },
+  "kilimandzaro": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q7296",
+   "alue": false
+  },
+  "kimberley": {
+   "asukkaat": 225160,
+   "vuosi": 2011,
+   "wikidata": "Q125905",
+   "alue": false
+  },
+  "kioto": {
+   "asukkaat": 1463723,
+   "vuosi": 2020,
+   "wikidata": "Q34600",
+   "alue": false
+  },
+  "kiova": {
+   "asukkaat": 2952301,
+   "vuosi": 2022,
+   "wikidata": "Q1899",
+   "alue": false
+  },
+  "kobenhavn": {
+   "asukkaat": 667099,
+   "vuosi": 2025,
+   "wikidata": "Q1748",
+   "alue": false
+  },
+  "kolkata": {
+   "asukkaat": 4496694,
+   "vuosi": 2011,
+   "wikidata": "Q1348",
+   "alue": false
+  },
+  "kongo": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q3503",
+   "alue": false
+  },
+  "kosice": {
+   "asukkaat": 222286,
+   "vuosi": 2025,
+   "wikidata": "Q25409",
+   "alue": false
+  },
+  "krakova": {
+   "asukkaat": 804237,
+   "vuosi": 2023,
+   "wikidata": "Q31487",
+   "alue": false
+  },
+  "kreeta": {
+   "asukkaat": 623065,
+   "vuosi": 2011,
+   "wikidata": "Q34374",
+   "alue": true
+  },
+  "kumasi": {
+   "asukkaat": 3903480,
+   "vuosi": 2024,
+   "wikidata": "Q182059",
+   "alue": false
+  },
+  "kuwait": {
+   "asukkaat": 2989000,
+   "vuosi": 2018,
+   "wikidata": "Q35178",
+   "alue": false
+  },
+  "labrador": {
+   "asukkaat": 26655,
+   "vuosi": 2021,
+   "wikidata": "Q380307",
+   "alue": false
+  },
+  "lagos": {
+   "asukkaat": 13903620,
+   "vuosi": 2019,
+   "wikidata": "Q8673",
+   "alue": false
+  },
+  "lalibela": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q207590",
+   "alue": false
+  },
+  "lappi": {
+   "asukkaat": 65329,
+   "vuosi": 2024,
+   "wikidata": "Q103717",
+   "alue": false
+  },
+  "lhasa": {
+   "asukkaat": 902500,
+   "vuosi": 2015,
+   "wikidata": "Q5869",
+   "alue": false
+  },
+  "lima": {
+   "asukkaat": 9943800,
+   "vuosi": 2022,
+   "wikidata": "Q2868",
+   "alue": false
+  },
+  "lissabon": {
+   "asukkaat": 545796,
+   "vuosi": 2021,
+   "wikidata": "Q597",
+   "alue": false
+  },
+  "ljubljana": {
+   "asukkaat": 284293,
+   "vuosi": 2022,
+   "wikidata": "Q437",
+   "alue": false
+  },
+  "lontoo": {
+   "asukkaat": 8799728,
+   "vuosi": 2021,
+   "wikidata": "Q84",
+   "alue": false
+  },
+  "losangeles": {
+   "asukkaat": 3898747,
+   "vuosi": 2020,
+   "wikidata": "Q65",
+   "alue": false
+  },
+  "luxemburg": {
+   "asukkaat": 137678,
+   "vuosi": 2026,
+   "wikidata": "Q1842",
+   "alue": false
+  },
+  "luxor": {
+   "asukkaat": 202232,
+   "vuosi": 2006,
+   "wikidata": "Q130514",
+   "alue": false
+  },
+  "macapa": {
+   "asukkaat": 442933,
+   "vuosi": 2022,
+   "wikidata": "Q180215",
+   "alue": false
+  },
+  "machupicchu": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q676203",
+   "alue": false
+  },
+  "madagaskar": {
+   "asukkaat": 31964956,
+   "vuosi": 2024,
+   "wikidata": "Q1019",
+   "alue": true
+  },
+  "madrid": {
+   "asukkaat": 3506730,
+   "vuosi": 2025,
+   "wikidata": "Q2807",
+   "alue": false
+  },
+  "magadan": {
+   "asukkaat": 90421,
+   "vuosi": 2025,
+   "wikidata": "Q7968",
+   "alue": false
+  },
+  "managua": {
+   "asukkaat": 937489,
+   "vuosi": 2005,
+   "wikidata": "Q3274",
+   "alue": false
+  },
+  "manaus": {
+   "asukkaat": 2303732,
+   "vuosi": 2025,
+   "wikidata": "Q40236",
+   "alue": false
+  },
+  "mandalay": {
+   "asukkaat": 1225546,
+   "vuosi": 2014,
+   "wikidata": "Q185518",
+   "alue": false
+  },
+  "manila": {
+   "asukkaat": 1902590,
+   "vuosi": 2024,
+   "wikidata": "Q1461",
+   "alue": false
+  },
+  "marrakech": {
+   "asukkaat": 1002697,
+   "vuosi": 2024,
+   "wikidata": "Q101625",
+   "alue": false
+  },
+  "marseille": {
+   "asukkaat": 886040,
+   "vuosi": 2023,
+   "wikidata": "Q23482",
+   "alue": false
+  },
+  "masqat": {
+   "asukkaat": 1421409,
+   "vuosi": 2019,
+   "wikidata": "Q3826",
+   "alue": false
+  },
+  "medina": {
+   "asukkaat": 1411599,
+   "vuosi": 2022,
+   "wikidata": "Q35484",
+   "alue": false
+  },
+  "mekka": {
+   "asukkaat": 2427924,
+   "vuosi": 2022,
+   "wikidata": "Q5806",
+   "alue": false
+  },
+  "melbourne": {
+   "asukkaat": 5350705,
+   "vuosi": 2024,
+   "wikidata": "Q3141",
+   "alue": false
+  },
+  "merida": {
+   "asukkaat": 892363,
+   "vuosi": 2015,
+   "wikidata": "Q165204",
+   "alue": false
+  },
+  "mexico": {
+   "asukkaat": 9209944,
+   "vuosi": 2020,
+   "wikidata": "Q1489",
+   "alue": false
+  },
+  "miami": {
+   "asukkaat": 442241,
+   "vuosi": 2020,
+   "wikidata": "Q8652",
+   "alue": false
+  },
+  "milfordsound": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q187197",
+   "alue": false
+  },
+  "monterrey": {
+   "asukkaat": 1142952,
+   "vuosi": 2020,
+   "wikidata": "Q81033",
+   "alue": false
+  },
+  "montevideo": {
+   "asukkaat": 1302954,
+   "vuosi": 2023,
+   "wikidata": "Q1335",
+   "alue": false
+  },
+  "montreal": {
+   "asukkaat": 1895211,
+   "vuosi": 2024,
+   "wikidata": "Q340",
+   "alue": false
+  },
+  "mosambik": {
+   "asukkaat": 14000,
+   "vuosi": null,
+   "wikidata": "Q331099",
+   "alue": false
+  },
+  "moskova": {
+   "asukkaat": 13274285,
+   "vuosi": 2025,
+   "wikidata": "Q649",
+   "alue": false
+  },
+  "mosul": {
+   "asukkaat": 1792000,
+   "vuosi": 2023,
+   "wikidata": "Q83317",
+   "alue": false
+  },
+  "mountisa": {
+   "asukkaat": 17936,
+   "vuosi": 2021,
+   "wikidata": "Q606335",
+   "alue": false
+  },
+  "mountrushmore": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q83497",
+   "alue": false
+  },
+  "mumbai": {
+   "asukkaat": 15414288,
+   "vuosi": 2018,
+   "wikidata": "Q1156",
+   "alue": false
+  },
+  "murzuk": {
+   "asukkaat": 47324,
+   "vuosi": 2008,
+   "wikidata": "Q526822",
+   "alue": false
+  },
+  "nairobi": {
+   "asukkaat": 5545000,
+   "vuosi": 2016,
+   "wikidata": "Q3870",
+   "alue": false
+  },
+  "namib": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q131377",
+   "alue": false
+  },
+  "neworleans": {
+   "asukkaat": 383997,
+   "vuosi": 2020,
+   "wikidata": "Q34404",
+   "alue": false
+  },
+  "newyork": {
+   "asukkaat": 8804190,
+   "vuosi": 2020,
+   "wikidata": "Q60",
+   "alue": false
+  },
+  "nikosia": {
+   "asukkaat": 56848,
+   "vuosi": 2021,
+   "wikidata": "Q3856",
+   "alue": false
+  },
+  "nome": {
+   "asukkaat": 3699,
+   "vuosi": 2020,
+   "wikidata": "Q79996",
+   "alue": false
+  },
+  "norfolk": {
+   "asukkaat": 1748,
+   "vuosi": 2016,
+   "wikidata": "Q31057",
+   "alue": false
+  },
+  "noumea": {
+   "asukkaat": 96082,
+   "vuosi": 2019,
+   "wikidata": "Q9733",
+   "alue": false
+  },
+  "novosibirsk": {
+   "asukkaat": 1637266,
+   "vuosi": 2025,
+   "wikidata": "Q883",
+   "alue": false
+  },
+  "nullarbor": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q381050",
+   "alue": false
+  },
+  "nuuk": {
+   "asukkaat": 18326,
+   "vuosi": 2020,
+   "wikidata": "Q226",
+   "alue": false
+  },
+  "odessa": {
+   "asukkaat": 1010537,
+   "vuosi": 2022,
+   "wikidata": "Q1874",
+   "alue": false
+  },
+  "orjarannikko": {
+   "asukkaat": 162034,
+   "vuosi": 2013,
+   "wikidata": "Q850031",
+   "alue": false
+  },
+  "oslo": {
+   "asukkaat": 717710,
+   "vuosi": 2024,
+   "wikidata": "Q585",
+   "alue": false
+  },
+  "ouropreto": {
+   "asukkaat": 74558,
+   "vuosi": 2020,
+   "wikidata": "Q188905",
+   "alue": false
+  },
+  "panama": {
+   "asukkaat": 1540000,
+   "vuosi": 2026,
+   "wikidata": "Q3306",
+   "alue": false
+  },
+  "pariisi": {
+   "asukkaat": 2103778,
+   "vuosi": 2023,
+   "wikidata": "Q90",
+   "alue": false
+  },
+  "peking": {
+   "asukkaat": 21710000,
+   "vuosi": 2017,
+   "wikidata": "Q956",
+   "alue": false
+  },
+  "persepolis": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q129072",
+   "alue": false
+  },
+  "perth": {
+   "asukkaat": 2059484,
+   "vuosi": 2018,
+   "wikidata": "Q3183",
+   "alue": false
+  },
+  "petra": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q5788",
+   "alue": false
+  },
+  "pietari": {
+   "asukkaat": 5652922,
+   "vuosi": 2025,
+   "wikidata": "Q656",
+   "alue": false
+  },
+  "portmoresby": {
+   "asukkaat": 317374,
+   "vuosi": 2012,
+   "wikidata": "Q36526",
+   "alue": false
+  },
+  "portoalegre": {
+   "asukkaat": 1388794,
+   "vuosi": 2025,
+   "wikidata": "Q40269",
+   "alue": false
+  },
+  "portovelho": {
+   "asukkaat": 517709,
+   "vuosi": 2025,
+   "wikidata": "Q172512",
+   "alue": false
+  },
+  "portvila": {
+   "asukkaat": 49034,
+   "vuosi": 2020,
+   "wikidata": "Q37806",
+   "alue": false
+  },
+  "praha": {
+   "asukkaat": 1397880,
+   "vuosi": 2025,
+   "wikidata": "Q1085",
+   "alue": false
+  },
+  "puertomontt": {
+   "asukkaat": 169736,
+   "vuosi": 2017,
+   "wikidata": "Q36214",
+   "alue": false
+  },
+  "puntaarenas": {
+   "asukkaat": 123403,
+   "vuosi": 2017,
+   "wikidata": "Q51599",
+   "alue": false
+  },
+  "quito": {
+   "asukkaat": 1763275,
+   "vuosi": 2022,
+   "wikidata": "Q2900",
+   "alue": false
+  },
+  "rashafun": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q3237966",
+   "alue": false
+  },
+  "riad": {
+   "asukkaat": 7009100,
+   "vuosi": 2022,
+   "wikidata": "Q3692",
+   "alue": false
+  },
+  "riika": {
+   "asukkaat": 588911,
+   "vuosi": 2026,
+   "wikidata": "Q1773",
+   "alue": false
+  },
+  "rio": {
+   "asukkaat": 6211223,
+   "vuosi": 2022,
+   "wikidata": "Q8678",
+   "alue": false
+  },
+  "robinsoncrusoe": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q156325",
+   "alue": true
+  },
+  "rooma": {
+   "asukkaat": 2748109,
+   "vuosi": 2023,
+   "wikidata": "Q220",
+   "alue": false
+  },
+  "rubalkhali": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q229269",
+   "alue": false
+  },
+  "sahalin": {
+   "asukkaat": 673100,
+   "vuosi": null,
+   "wikidata": "Q7792",
+   "alue": true
+  },
+  "sahara": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q6583",
+   "alue": false
+  },
+  "salalah": {
+   "asukkaat": 331949,
+   "vuosi": 2020,
+   "wikidata": "Q1294439",
+   "alue": false
+  },
+  "salta": {
+   "asukkaat": 594772,
+   "vuosi": 2022,
+   "wikidata": "Q36307",
+   "alue": false
+  },
+  "salvador": {
+   "asukkaat": 2417678,
+   "vuosi": 2022,
+   "wikidata": "Q36947",
+   "alue": false
+  },
+  "samarkand": {
+   "asukkaat": 546303,
+   "vuosi": 2020,
+   "wikidata": "Q5753",
+   "alue": false
+  },
+  "sana": {
+   "asukkaat": 2957000,
+   "vuosi": 2015,
+   "wikidata": "Q2471",
+   "alue": false
+  },
+  "sanambrosio": {
+   "asukkaat": 0,
+   "vuosi": 2019,
+   "wikidata": "Q1160526",
+   "alue": true
+  },
+  "sanfrancisco": {
+   "asukkaat": 873965,
+   "vuosi": 2020,
+   "wikidata": "Q62",
+   "alue": false
+  },
+  "sanjuan": {
+   "asukkaat": 342259,
+   "vuosi": 2020,
+   "wikidata": "Q41211",
+   "alue": false
+  },
+  "sansibar": {
+   "asukkaat": 1503569,
+   "vuosi": 2012,
+   "wikidata": "Q1774",
+   "alue": false
+  },
+  "santacruz": {
+   "asukkaat": 3122605,
+   "vuosi": 2024,
+   "wikidata": "Q170688",
+   "alue": false
+  },
+  "santafe": {
+   "asukkaat": 87505,
+   "vuosi": 2020,
+   "wikidata": "Q38555",
+   "alue": false
+  },
+  "santarem": {
+   "asukkaat": 360871,
+   "vuosi": 2025,
+   "wikidata": "Q659450",
+   "alue": false
+  },
+  "saoluis": {
+   "asukkaat": 1037775,
+   "vuosi": 2022,
+   "wikidata": "Q28441",
+   "alue": false
+  },
+  "saopaulo": {
+   "asukkaat": 11451999,
+   "vuosi": 2022,
+   "wikidata": "Q174",
+   "alue": false
+  },
+  "sarajevo": {
+   "asukkaat": 275524,
+   "vuosi": 2013,
+   "wikidata": "Q11194",
+   "alue": false
+  },
+  "sepik": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q848308",
+   "alue": false
+  },
+  "sevilla": {
+   "asukkaat": 689423,
+   "vuosi": 2025,
+   "wikidata": "Q8717",
+   "alue": false
+  },
+  "shanghai": {
+   "asukkaat": 24152700,
+   "vuosi": 2015,
+   "wikidata": "Q8686",
+   "alue": false
+  },
+  "sierraleone": {
+   "asukkaat": 7557212,
+   "vuosi": 2017,
+   "wikidata": "Q1044",
+   "alue": true
+  },
+  "siinai": {
+   "asukkaat": 597000,
+   "vuosi": 2013,
+   "wikidata": "Q36755",
+   "alue": false
+  },
+  "singapore": {
+   "asukkaat": 5866139,
+   "vuosi": 2021,
+   "wikidata": "Q334",
+   "alue": false
+  },
+  "sisilia": {
+   "asukkaat": 5050000,
+   "vuosi": null,
+   "wikidata": "Q4951156",
+   "alue": true
+  },
+  "sitka": {
+   "asukkaat": 8458,
+   "vuosi": 2020,
+   "wikidata": "Q79804",
+   "alue": false
+  },
+  "sofia": {
+   "asukkaat": 1213134,
+   "vuosi": 2025,
+   "wikidata": "Q472",
+   "alue": false
+  },
+  "soul": {
+   "asukkaat": 9668465,
+   "vuosi": 2020,
+   "wikidata": "Q8684",
+   "alue": false
+  },
+  "sthelena": {
+   "asukkaat": 3924,
+   "vuosi": 2022,
+   "wikidata": "Q34497",
+   "alue": true
+  },
+  "stjohns": {
+   "asukkaat": 110525,
+   "vuosi": 2021,
+   "wikidata": "Q2082",
+   "alue": false
+  },
+  "suakin": {
+   "asukkaat": 43337,
+   "vuosi": 2009,
+   "wikidata": "Q571215",
+   "alue": false
+  },
+  "sumatra": {
+   "asukkaat": 60000000,
+   "vuosi": 2021,
+   "wikidata": "Q3492",
+   "alue": true
+  },
+  "suva": {
+   "asukkaat": 88271,
+   "vuosi": 2009,
+   "wikidata": "Q38807",
+   "alue": false
+  },
+  "sydney": {
+   "asukkaat": 5450496,
+   "vuosi": 2023,
+   "wikidata": "Q3130",
+   "alue": false
+  },
+  "tabriz": {
+   "asukkaat": 1558693,
+   "vuosi": 2016,
+   "wikidata": "Q80053",
+   "alue": false
+  },
+  "taipei": {
+   "asukkaat": 2429429,
+   "vuosi": 2026,
+   "wikidata": "Q1867",
+   "alue": false
+  },
+  "tallinna": {
+   "asukkaat": 457572,
+   "vuosi": 2024,
+   "wikidata": "Q1770",
+   "alue": false
+  },
+  "tampere": {
+   "asukkaat": 255333,
+   "vuosi": 2024,
+   "wikidata": "Q40840",
+   "alue": false
+  },
+  "tanganjika": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q5511",
+   "alue": false
+  },
+  "tanger": {
+   "asukkaat": 1275428,
+   "vuosi": 2024,
+   "wikidata": "Q126148",
+   "alue": false
+  },
+  "teheran": {
+   "asukkaat": 8693706,
+   "vuosi": 2016,
+   "wikidata": "Q3616",
+   "alue": false
+  },
+  "timbuktu": {
+   "asukkaat": 35330,
+   "vuosi": 2012,
+   "wikidata": "Q9427",
+   "alue": false
+  },
+  "titicaca": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q35342",
+   "alue": false
+  },
+  "tokio": {
+   "asukkaat": 14264798,
+   "vuosi": 2022,
+   "wikidata": "Q1490",
+   "alue": false
+  },
+  "toronto": {
+   "asukkaat": 2794356,
+   "vuosi": 2021,
+   "wikidata": "Q172",
+   "alue": false
+  },
+  "townsville": {
+   "asukkaat": 178649,
+   "vuosi": 2016,
+   "wikidata": "Q190021",
+   "alue": false
+  },
+  "tripoli": {
+   "asukkaat": 1293016,
+   "vuosi": 2020,
+   "wikidata": "Q3579",
+   "alue": false
+  },
+  "tromssa": {
+   "asukkaat": 79943,
+   "vuosi": 2026,
+   "wikidata": "Q26087",
+   "alue": false
+  },
+  "tshadjarvi": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q125309",
+   "alue": false
+  },
+  "tukholma": {
+   "asukkaat": 984748,
+   "vuosi": 2022,
+   "wikidata": "Q1754",
+   "alue": false
+  },
+  "ulanbator": {
+   "asukkaat": 1396288,
+   "vuosi": 2015,
+   "wikidata": "Q23430",
+   "alue": false
+  },
+  "uluru": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q33910",
+   "alue": false
+  },
+  "valletta": {
+   "asukkaat": 6444,
+   "vuosi": 2014,
+   "wikidata": "Q23800",
+   "alue": false
+  },
+  "valparaiso": {
+   "asukkaat": 296655,
+   "vuosi": 2017,
+   "wikidata": "Q33986",
+   "alue": false
+  },
+  "vancouver": {
+   "asukkaat": 662248,
+   "vuosi": 2021,
+   "wikidata": "Q24639",
+   "alue": false
+  },
+  "varanasi": {
+   "asukkaat": 1198491,
+   "vuosi": 2011,
+   "wikidata": "Q79980",
+   "alue": false
+  },
+  "varsova": {
+   "asukkaat": 1862402,
+   "vuosi": 2024,
+   "wikidata": "Q270",
+   "alue": false
+  },
+  "venetsia": {
+   "asukkaat": 250369,
+   "vuosi": 2023,
+   "wikidata": "Q641",
+   "alue": false
+  },
+  "viktoria": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q5505",
+   "alue": false
+  },
+  "viktorianputoukset": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q43278",
+   "alue": false
+  },
+  "vilna": {
+   "asukkaat": 581475,
+   "vuosi": 2023,
+   "wikidata": "Q216",
+   "alue": false
+  },
+  "vladivostok": {
+   "asukkaat": 591628,
+   "vuosi": 2024,
+   "wikidata": "Q959",
+   "alue": false
+  },
+  "wellington": {
+   "asukkaat": 216200,
+   "vuosi": 2023,
+   "wikidata": "Q23661",
+   "alue": false
+  },
+  "whitehorse": {
+   "asukkaat": 28201,
+   "vuosi": 2021,
+   "wikidata": "Q2055",
+   "alue": false
+  },
+  "wien": {
+   "asukkaat": 2028289,
+   "vuosi": 2025,
+   "wikidata": "Q1741",
+   "alue": false
+  },
+  "winnipeg": {
+   "asukkaat": 749607,
+   "vuosi": 2021,
+   "wikidata": "Q2135",
+   "alue": false
+  },
+  "xian": {
+   "asukkaat": 12952907,
+   "vuosi": 2020,
+   "wikidata": "Q5826",
+   "alue": false
+  },
+  "yangon": {
+   "asukkaat": 6874000,
+   "vuosi": 2022,
+   "wikidata": "Q37995",
+   "alue": false
+  },
+  "yellowknife": {
+   "asukkaat": 20340,
+   "vuosi": 2021,
+   "wikidata": "Q2061",
+   "alue": false
+  },
+  "yellowstone": {
+   "asukkaat": null,
+   "vuosi": null,
+   "wikidata": "Q351",
+   "alue": false
+  }
+ }
+}
