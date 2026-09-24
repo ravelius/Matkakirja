@@ -117570,6 +117570,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mount Rushmore',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mount Rushmore unrestored.jpg',
+          vuosi: 'noin 1932',
+          lyhyt: 'Työmiehet kiipeävät Mount Rushmoren keskeneräisillä '
+            + 'kasvoilla noin 1932.',
+          selite: 'Työmiehet kiipeävät tikkaita George Washingtonin '
+            + 'kasvoilla, kun veistos on vielä kesken. Kalliota '
+            + 'muotoiltiin dynamiitilla ja poravasaroilla, ja miehet '
+            + 'laskeutuivat työhön vaijerien varassa.',
+          lahde: 'Rise Studio, Rapid City / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'American Indian Dancers at Mount Rushmore - panoramio.jpg',
+          vuosi: '2008',
+          lyhyt: 'Intiaanitanssijoita Mount Rushmoren alueella Black '
+            + 'Hillsissä vuonna 2008.',
+          selite: 'Intiaanitanssijoita esiintymässä Mount Rushmoren '
+            + 'alueella. Black Hills on lakotoille pyhää maata, ja '
+            + 'veistos on hakattu vuoreen, josta heidät aikanaan '
+            + 'siirrettiin pois.',
+          lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -117715,6 +117739,30 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanhassa valokuvassa upseeri laskee suurta havaijilaista lippua salosta juhlallisesti pukeutuneen väkijoukon edessä palmujen ympäröimällä terassilla – kuva on liittämisseremoniasta ʻIolani-palatsin edustalla elokuussa 1898.',
           lahde: 'Frank Davey, Wikimedia Commons (Public domain)',
           wiki: 'Newlands Resolution',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Native Hawaiian surfer standing with alaia board (PPWD-19-6-019, original).jpg',
+          vuosi: '1898',
+          lyhyt: 'Charles Kauha alaia-lautoineen Waikikin rannalla '
+            + 'vuonna 1898.',
+          selite: 'Charles Kauha ja hänen alaia-lautansa Waikikin '
+            + 'rannalla. Alaia oli ohut ja evätön puulauta, ja '
+            + 'arkiston mukaan tämä oli yksi viimeisistä.',
+          lahde: 'Frank Davey / Hawaii State Archives, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'USGS Lava on Makamae Street.jpg',
+          vuosi: '2018',
+          lyhyt: 'Laavavirta Leilani Estatesin asuinalueella Havaijilla '
+            + '6.5.2018.',
+          selite: 'Laavavirta etenee Makamae-katua pitkin Leilani '
+            + 'Estatesin asuinalueella 6. toukokuuta 2018. Kuvan otti '
+            + 'Yhdysvaltain geologian tutkimuskeskus, joka seuraa '
+            + 'Kīlaueaa päivittäin; tuon kesän purkaus tuhosi noin '
+            + '600 taloa.',
+          lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117863,6 +117911,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
           lahde: 'Eric Bajart, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Puputan',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Strand te Koeta bij Denpasar, KITLV 154735.tiff',
+          vuosi: '1930-luku',
+          lyhyt: 'Kutan ranta Denpasarin lähellä Balilla ennen '
+            + 'matkailun alkua 1920–1930-luvuilla.',
+          selite: 'Kutan ranta Denpasarin lähellä. Rannan takana on '
+            + 'kookospalmuja, aita ja pari olkikattoista majaa — ei '
+            + 'mitään muuta. Ensimmäiset matkailijat alkoivat tulla '
+            + 'Balille 1920- ja 1930-luvulla hollantilaisilla '
+            + 'höyrylaivoilla.',
+          lahde: 'KITLV, Leidenin yliopiston kirjastot (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Jatiluwih Rice Terrace - Subak Jatiluwih Tabanan Bali 01.jpg',
+          vuosi: '2023',
+          lyhyt: 'Riisiterasseja Jatiluwihissa Balilla, '
+            + 'subak-vedenjakojärjestelmän hoitamana.',
+          selite: 'Riisiterasseja Jatiluwihissa Tabananin alueella. '
+            + 'Vesi jaetaan terassilta toiselle subak-järjestelmällä, '
+            + 'jota hoitavat viljelijöiden omat yhdistykset ja '
+            + 'temppelit — ei viranomainen.',
+          lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -118022,6 +118095,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Milford Sound',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mitre Peak. Milford Sound I LCCN2017658061.jpg',
+          vuosi: '1890-luku',
+          lyhyt: 'Mitre Peak Milford Soundin yllä photochrom-vedoksena, '
+            + 'aikana jolloin sinne pääsi vain laivalla.',
+          selite: 'Mitre Peak vuonon yllä käsinvärjättynä '
+            + 'photochrom-vedoksena. Tällaisia vedoksia myytiin '
+            + 'matkailijoille jo silloin, kun paikalle päästiin vain '
+            + 'laivalla tai viikon vaelluksen päästä vuorten yli.',
+          lahde: 'Photoglob Co. / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Stirling Falls, Milford Sound, South Island, New Zealand.jpg',
+          vuosi: '2008',
+          lyhyt: 'Stirlingin putous täydessä virtaamassa Milford '
+            + 'Soundissa sateen jälkeen.',
+          selite: 'Stirlingin putous täydessä virtaamassa sateen '
+            + 'jälkeen. Kalliolta putoava vesi tulee ylhäältä '
+            + 'jäätikön kaivamasta riippuvasta laaksosta, ja '
+            + 'retkiveneet työntävät keulansa suoraan putouksen alle.',
+          lahde: 'Karora, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -118166,6 +118263,54 @@ export const KULTTUURI_KATEGORIAT = {
             'Öljymaalaus näyttää Itacolomin tunnistettavan kalliohuipun vuorijonon takana sekä pienen kylän valkoisine taloineen laakson pohjalla.',
           lahde: 'Aurélio de Figueiredo, Wikimedia Commons (Public domain)',
           wiki: 'Ouro Preto',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Ouro preto 1881 00.jpg',
+          vuosi: '1881',
+          lyhyt: 'Ouro Preto vuonna 1881, kultakaupungin '
+            + 'vuorenrinteille rakentuneet korttelit.',
+          selite: 'Ouro Preto vuonna 1881, valokuvattuna Minas '
+            + 'Geraisin osavaltiossa. Kaupunki kasvoi 1700-luvun '
+            + 'kultaryntäyksestä vuorenrinteille, joita se peittää '
+            + 'yhä.',
+          lahde: 'Guilherme (Wilhelm) Liebenau, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto), vista aérea.jpg',
+          vuosi: '2026',
+          lyhyt: 'São Franciscon kirkko ja Ouro Preton '
+            + 'kultakaupungin vanhakaupunki ylhäältä.',
+          selite: 'São Franciscon kirkko ja Ouro Preton tiilikattoinen '
+            + 'vanhakaupunki ylhäältä. Kirkon vuolukiviveistokset ovat '
+            + 'Aleijadinhon, brasilialaisen barokin kuuluisimman '
+            + 'mestarin, käsialaa.',
+          lahde: 'Rafael Lemieszek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Rugendasin vesiväri 1824',
+          tiedosto: 'Johann Moritz Rugendas - Cachoeira de Ouro Preto.jpg',
+          lyhyt: 'Saksalaisen Johann Moritz Rugendasin vesiväri '
+            + 'Ouro Preton putouksesta vuodelta 1824.',
+          selite: 'Saksalainen Johann Moritz Rugendas matkusti Brasiliassa '
+            + '1820-luvulla ja kuvasi maan luontoa ja kaupunkeja '
+            + 'lukuisissa teoksissaan — tämä vesiväri esittää Ouro '
+            + 'Preton lähellä olevaa putousta.',
+          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Bernardellin maisema',
+          tiedosto: 'Henrique Bernardelli - Paisagem de Ouro Preto.jpg',
+          lyhyt: 'Henrique Bernardellin 1870-luvun maisemamaalaus '
+            + 'Ouro Pretosta.',
+          selite: 'Brasilialainen Henrique Bernardelli kuvasi Ouro '
+            + 'Preton vuorenrinteille kiipeäviä kattoja 1870-luvulla, '
+            + 'jolloin kaupunki oli yhä Minas Geraisin pääkaupunki — '
+            + 'asema siirtyi Belo Horizontelle vasta 1897.',
+          lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
         },
       ],
     },
