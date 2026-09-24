@@ -64,7 +64,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
         public string AukiSivunNimi => Auki && lehti != null && nyt >= 0 ? SivunNimi(nyt) : null;
         /// <summary>Auki olevan aihesivun poiminta-avain aihe:omistaja:aihe (web aiheAvain) tai null.</summary>
-        public string AukiAvain => Auki && lehti != null && nyt >= 0 && nyt < lehti.Sivut.Count
+        public string AukiAvain => Auki && lehti != null && lehti.Laji != LehtiLaji.Kehittaja && nyt >= 0 && nyt < lehti.Sivut.Count
             ? Reaktiot.AiheAvain(lehti.Omistaja, lehti.Sivut[nyt].Aihe?.Id) : null;
         /// <summary>Lehti avautui (omistaja: kaupunki tai ISO).</summary>
         public event Action<string> Avautui;
@@ -205,24 +205,42 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 // Lehdestä toiseen (Maa-liite) saman avauksen sisällä: Suljettu vasta lopullisesta sulkemisesta.
-                lehti = l;
-                ylaNimi.text = (l.Laji == LehtiLaji.Maa ? l.Nimi + " · maan oma lehti" : l.Nimi).ToUpperInvariant();
-                // Ylärivin ☰ molemmissa lehdissä, kun sivuja on vähintään kaksi (web varmistaLehtiHampurilainen).
-                sisallysNappi.style.display = l.Sivut.Count >= 2 ? DisplayStyle.Flex : DisplayStyle.None;
-                sisallys.style.display = DisplayStyle.None;
                 int alku = sivu ?? LehtiSisalto.SivuAiheelle(l, aihe ?? odottavaAihe);
                 odottavaAihe = null;
-                nyt = -1;
-                NaytaSivu(Mathf.Clamp(alku, 0, l.Sivut.Count - 1), 0);
-                if (!Auki)
-                {
-                    Auki = true;
-                    peite.style.display = DisplayStyle.Flex;
-                    Rakenne.Nayta(peite, true, 220);
-                    SyoteLukko.Esta(this);
-                    Avautui?.Invoke(l.Omistaja);
-                }
+                Esita(l, alku);
             })));
+        }
+
+        /// <summary>
+        /// Kehittäjän liite (web avaaKehittajaLehti): mikä tahansa jäsennelty sisältö lehtenä samalla arkilla ja
+        /// sivunkäännöllä. Vain kehittäjätilassa; sivut ovat synteettisiä (otsikko + nostot tai oma Rakenna).
+        /// </summary>
+        public void NaytaLiite(string otsikko, List<LehtiSivu> sivut, int alku = 0)
+        {
+            if (!Asetukset.Kehittaja || sivut == null || sivut.Count == 0) return;
+            tila = null;
+            teko = null;
+            avausKaupunki = null;
+            Esita(new Lehti { Laji = LehtiLaji.Kehittaja, Nimi = otsikko, Sivut = sivut }, alku);
+        }
+
+        void Esita(Lehti l, int alku)
+        {
+            lehti = l;
+            ylaNimi.text = (l.Laji == LehtiLaji.Maa ? l.Nimi + " · maan oma lehti" : l.Laji == LehtiLaji.Kehittaja ? l.Nimi + " · kehittäjän liite" : l.Nimi).ToUpperInvariant();
+            // Ylärivin ☰ molemmissa lehdissä, kun sivuja on vähintään kaksi (web varmistaLehtiHampurilainen).
+            sisallysNappi.style.display = l.Sivut.Count >= 2 ? DisplayStyle.Flex : DisplayStyle.None;
+            sisallys.style.display = DisplayStyle.None;
+            nyt = -1;
+            NaytaSivu(Mathf.Clamp(alku, 0, l.Sivut.Count - 1), 0);
+            if (!Auki)
+            {
+                Auki = true;
+                peite.style.display = DisplayStyle.Flex;
+                Rakenne.Nayta(peite, true, 220);
+                SyoteLukko.Esta(this);
+                Avautui?.Invoke(l.Omistaja);
+            }
         }
 
         public void Sulje()
@@ -306,6 +324,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             PaivitaAlapalkki();
+            if (lehti.Laji == LehtiLaji.Kehittaja) return; // liite ei ole pelin lehti: ei sivutapahtumia
             SivuNakyi?.Invoke(lehti.Omistaja, s.Aihe?.Id, i);
             Teko(new LehtiTeko
             {
@@ -346,7 +365,7 @@ namespace Matkakirja.Natiivi
         void PaivitaAlapalkki()
         {
             var sivut = lehti.Sivut;
-            bool maalehti = lehti.Laji == LehtiLaji.Maa;
+            bool maalehti = lehti.Laji != LehtiLaji.Kaupunki; // kehittäjän liite on maalehden arkki (web .maalehti)
             bool ensimmainen = nyt == 0, viimeinen = nyt == sivut.Count - 1;
             edellinen.style.display = ensimmainen ? DisplayStyle.None : DisplayStyle.Flex;
             seuraava.style.display = viimeinen ? DisplayStyle.None : DisplayStyle.Flex;
@@ -431,7 +450,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(lehti.Nimi.ToUpperInvariant(), "mk-lehti__nimio", m), Kirjasin.Kone);
             int? p0 = tila != null ? tila.Matkapaiva : PeliOhjain.Instanssi?.Matka?.Tila.Paiva();
             string paiva = p0 > 0 ? p0 + ". matkapäivä" : null;
-            string pvm = lehti.Laji == LehtiLaji.Maa ? "Maan oma lehti" : string.Join(" · ", new[] { lehti.MaaNimi, paiva }.Where(x => !string.IsNullOrEmpty(x)));
+            string pvm = lehti.Laji == LehtiLaji.Maa ? "Maan oma lehti" : lehti.Laji == LehtiLaji.Kehittaja ? "Kehittäjän liite" : string.Join(" · ", new[] { lehti.MaaNimi, paiva }.Where(x => !string.IsNullOrEmpty(x)));
             var p = Rakenne.El("mk-lehti__paivays", m, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(pvm.ToUpperInvariant(), "mk-lehti__paivaysteksti", p), Kirjasin.Kone);
             if (lehti.Laji != LehtiLaji.Kaupunki) return;
@@ -536,6 +555,7 @@ namespace Matkakirja.Natiivi
 
         void Aihesivu(VisualElement s, LehtiSivu sivu)
         {
+            if (lehti.Laji == LehtiLaji.Kehittaja) { Liitesivu(s, sivu); return; }
             var a = sivu.Aihe;
             // Maalehden ensimmäinen sivu: masto ja maaosasto (tunnusluvut, tervehdykset), web maa-osasto.
             if (lehti.Laji == LehtiLaji.Maa && nyt == 0) { Masto(s); Maaosasto(s, UiSisalto.Maa(lehti.Maa)); }
@@ -562,6 +582,25 @@ namespace Matkakirja.Natiivi
             if (!fokustehtava && a.Tehtava != null && sivu.TehtavaAihe != null) Tehtava(s, a.Tehtava, sivu.TehtavaAihe);
             if (a.Nostot.Count == 0 && a.Lista.Count == 0 && a.Tehtava == null && !fokustehtava && string.IsNullOrEmpty(a.Johdanto))
                 Kappale(s, "Tämä sivu täydentyy myöhemmin.", "mk-lehti__leipa");
+        }
+
+        /// <summary>
+        /// Kehittäjän liitteen sivu (web piirraKategoria synteettiselle sivulle): masto ensimmäisellä sivulla,
+        /// aiheotsikko, oma piirto (Rakenna) ja/tai nostot. Ei poimintoja, reaktioita eikä tehtäviä.
+        /// </summary>
+        void Liitesivu(VisualElement s, LehtiSivu sivu)
+        {
+            if (nyt == 0) Masto(s);
+            var ot = Rakenne.El("mk-lehti__aihe", s, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti((sivu.Otsikko ?? "").ToUpperInvariant(), "mk-lehti__aiheteksti", ot), Kirjasin.KoneLihava);
+            var a = sivu.Aihe;
+            if (!string.IsNullOrEmpty(a?.Johdanto)) Kappale(s, a.Johdanto, "mk-lehti__johdanto", Kirjasin.LukuKursiivi);
+            if (sivu.Rakenna != null)
+            {
+                try { sivu.Rakenna(s); } catch (Exception e) { Debug.LogException(e); }
+                if (!sivu.RakennaJatka) return;
+            }
+            if (a != null) foreach (var n in a.Nostot) Nosto(s, n);
         }
 
         // Web kulttuuri-musiikkilinkki: nuotti (kaksi kaulaa ja palkki).

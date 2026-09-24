@@ -660,8 +660,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Hyvän vastauksen perään "Ehdota tallennettavaksi": pari lähtee ehdotuskanavaan omistajan
-        /// kuratointiin (ei näy pelissä ennen hyväksyntää). Kehittäjätilassa "Tallenna juttuun" samaan
-        /// kanavaan tarkenteella (webin laitteen oma varasto ja Pöllöpoiminnat-vienti ovat webin työkaluja).
+        /// kuratointiin (ei näy pelissä ennen hyväksyntää). Kehittäjätilassa "Tallenna juttuun": pari
+        /// tallentuu laitteelle (PoimintaVarasto), näkyy heti pillerinä auki olevassa jutussa ja lähtee
+        /// taustalla myös kanavaan tarkenteella (web liitaPoimintaNapit).
         /// Ei nappia, jos vastausta ei voi kiinnittää artikkeliin (esim. chat avattu kartalta).
         /// </summary>
         void PoimintaRivi(string kysymys, string vastaus)
@@ -675,16 +676,30 @@ namespace Matkakirja.Natiivi
             nappi = Rakenne.Nappi(kehittaja ? "Tallenna juttuun" : "Ehdota tallennettavaksi", "mk-chat__poimintanappi", () =>
             {
                 nappi.SetEnabled(false);
-                tila.text = "Lähetetään…";
                 var kentat = new List<(string, string)>
                 {
                     ("laji", ""), ("teksti", "Pöllöpoiminta\n\nKysymys: " + kysymys + "\n\nVastaus: " + vastaus),
                     ("sivu", avain), ("tarkenne", kehittaja ? "Pöllöpoiminta (kehittäjä)" : "Pöllöpoiminta"),
                 };
+                if (kehittaja)
+                {
+                    bool ok = PoimintaVarasto.Tallenna(avain, kysymys, vastaus);
+                    tila.text = ok ? "Tallennettu juttuun." : "Oli jo tallessa.";
+                    // Alla oleva juttu on yhä auki: pillerit päivittyvät heti.
+                    Poimintapillerit.Paivita(avain);
+                    if (!ok) return;
+                    // Kanava on varareitti: epäonnistuminen ei haittaa (vientilohko Kehittäjälehdessä).
+                    Palautekanava.Postita("/laheta", kentat, null, t =>
+                    {
+                        if (rivi.panel != null && t.Ok) tila.text = "Tallennettu juttuun · lähti myös kuratointijonoon.";
+                    });
+                    return;
+                }
+                tila.text = "Lähetetään…";
                 Palautekanava.Postita("/laheta", kentat, null, t =>
                 {
                     if (rivi.panel == null) return;
-                    if (t.Ok) { tila.text = kehittaja ? "Tallennettu kuratointijonoon." : "Kiitos! Ehdotus lähti kuratointiin."; return; }
+                    if (t.Ok) { tila.text = "Kiitos! Ehdotus lähti kuratointiin."; return; }
                     tila.text = t.Estetty ? Palautekanava.Virheviesti(t) : "Ehdotus ei lähtenyt. Yritä myöhemmin uudelleen.";
                     nappi.SetEnabled(true);
                 });

@@ -72,6 +72,9 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);
             kynnyksetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kynnykset);
 #endif
+            // Työhuone (web #kehittaja-tyohuone): Raamattu ja Kehittäjälehti kehittäjän liitteinä (Tyohuone.cs).
+            Tyohuonerivi("Raamattu", "<path d=\"M5 4.5h6.5v15H6.6A1.6 1.6 0 0 1 5 17.9z\"/><path d=\"M19 4.5h-6.5v15h4.9a1.6 1.6 0 0 0 1.6-1.6z\"/>", Tyohuone.AvaaRaamattu);
+            Tyohuonerivi("Kehittäjälehti", "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9\"/>", Tyohuone.AvaaKehittajalehti);
 
             Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
             var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () =>
@@ -121,6 +124,12 @@ namespace Matkakirja.Natiivi
         {
             LinssiOhjain.AsetaAstronautinKyllaisyys(ReliefiTaysi ? 0.8f : 1f);
             Paivita();
+        }
+
+        void Tyohuonerivi(string nimi, string ikoni, Action avaa)
+        {
+            var b = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); avaa(); }, kokeet, ikoni);
+            Rakenne.Teksti(nimi, "mk-kytkinrivi__nimi", b);
         }
 
         void Kytkinrivi(Kytkin k, string ikoni)
