@@ -13,6 +13,10 @@
  * Sidokset ja muuttujat:
  *   SAHKE           D1-tietokanta (rakenne: worker/sahke/skeema.sql)
  *   SAHKE_ORIGINIT  muuttuja: sallitut originit pilkulla erotettuna
+ *   SAHKE_NATIIVIT  muuttuja (vapaaehtoinen): natiivin iOS-pelin sallitut
+ *                   bundle id:t pilkulla erotettuna (otsake
+ *                   x-matkakirja-natiivi + User-Agent). Puuttuva tai tyhjä
+ *                   = oletus app.matkakirja.proto3d, app.matkakirja.peli.
  *
  * SALAISUUKSIA EI OLE. Jokainen jäsen saa oman avaimensa liittyessään,
  * eikä workerilla ole yhtä pääavainta, jonka vuoto avaisi kaiken.

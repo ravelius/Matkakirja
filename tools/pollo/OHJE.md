@@ -135,10 +135,11 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   `sallittuNatiivi`). Sallitut tunnisteet: `NATIIVIT_OLETUS`
   (`app.matkakirja.proto3d`, `app.matkakirja.peli`, `fi.matkakirja.peli` = TestFlight), tai valinnainen
   ympäristömuuttuja `POLLO_NATIIVIT` (pilkkulista), joka korvaa oletuksen.
-  Natiivi pääsee puhesynteesiin (`tehtava: 'puhe'`) ja pöllön chattiin
-  (`vastaus`, `ehdotukset`; Fablen päätös 23.9.2026) samoin päivä- ja
-  kuukausirajoin kuin selain (30/vrk per IP); kuva, sähke ja tila
-  palauttavat 403 (`NATIIVIN_TEHTAVAT`, `natiivilleSallittu`).
+  Natiivi pääsee puhesynteesiin (`tehtava: 'puhe'`), pöllön chattiin
+  (`vastaus`, `ehdotukset`; Fablen päätös 23.9.2026) ja sähketehtävän
+  tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
+  (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
+  `natiivilleSallittu`).
 - **API-avain**: syötetään wranglerille putkessa, jolloin se ei näy
   komentorivillä eikä lokissa. Cloudflare säilöö sen salaisuutena, eikä
   sitä voi lukea takaisin sen paremmin dashboardista kuin ajostakaan.
