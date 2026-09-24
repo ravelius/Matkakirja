@@ -106114,4 +106114,875 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  orjarannikko: [
+    {
+      id: 'kaupunki',
+      nimi: 'Orjarannikko',
+      johdanto:
+        'Ouidah oli Länsi-Afrikan tärkein orjasatama, jonka kaduilla python-jumalan temppeli ja katolinen basilika seisovat yhä vierekkäin. Kaupunki syntyi maatilasta ja kasvoi Dahomeyn kuningaskunnan tärkeimmäksi ikkunaksi merelle.',
+      nostot: [
+        {
+          otsikko: 'Kolme linnaketta yhden rannan varrella',
+          teksti:
+            "Ouidah'n rannalle nousi 1700-luvulla kolme kilpailevaa eurooppalaista linnaketta: portugalilainen, ranskalainen ja englantilainen, kaikki samaa kauppaa tavoittelemassa. Portugalilaisten São João Baptista de Ajudá valmistui vuonna 1721 kuningas Haffonin lahjoittamalle maalle, ja se pysyi Lissabonin hallinnassa peräti vuoteen 1961 asti, vaikka koko ympäröivä alue oli jo vuosikymmeniä kuulunut ensin Dahomeylle ja sitten Ranskan siirtomaahan. Linnake oli aikanaan yksi orjakaupan solmukohdista; nykyisin sen tiloissa toimii Ouidah'n historiallinen museo, joka kertoo kaupungin menneisyydestä valokuvin ja esinein.",
+          tiedosto: 'Fort Ouidah Benin.JPG',
+          lyhyt: 'Portugalilaisen linnakkeen paikalle rakennettu Ouidah’n historiallinen museo.',
+          selite:
+            "Valokuvassa on Ouidah'n historiallisen museon kaksikerroksinen, vaaleaksi rapattu päärakennus tummine ikkunaluukkuineen ja museon pihalle nouseva leveä ulkoportaikko – rakennus seisoo vanhan portugalilaisen São João Baptista de Ajudá -linnakkeen paikalla.",
+          lahde: 'Tienstwatrankil, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fort of São João Baptista de Ajudá',
+        },
+        {
+          otsikko: 'Käärmejumala joka ei koskaan pure',
+          teksti:
+            "Temple des Pythons on Ouidah'n vodun-uskonnon näkyvin pyhäkkö: sen sisäpihalla asuu kymmeniä kesyjä kuninkaanpythonia, jotka saavat liikkua vapaasti eivätkä ne ole ihmiselle vaarallisia. Käärmeen symboliikka juontuu jumala Dagbesta, jota pidetään tasapainon ja hedelmällisyyden ruumiillistumana. Legendan mukaan pythonit pelastivat kaupungin perustajakuninkaan hänen paetessaan vihollista 1700-luvun alussa, minkä jälkeen käärmeistä tuli koko yhteisölle pyhiä eläimiä. Temppeli sijaitsee vain parinsadan metrin päässä katolisesta basilikasta, ja monet ouidahlaiset harjoittavat molempia uskontoja rinnakkain.",
+          tiedosto: 'Entrée du Temple des Pythons (Ouidah).jpg',
+          lyhyt: 'Temple des Pythonsin portti, josta pyhät käärmeet pääsevät liikkumaan vapaasti.',
+          selite:
+            'Kuvassa on Temple des Pythonsin sinivalkoinen porttirakennelma, jonka kyltissä lukee "Temple des Pythons"; edustalla myydään puuveistoksia ja naamioita, sisäänkäynnin luona istuu vastaanottopöydän ääressä temppelin työntekijä ja pihalla on pysäköity moottoripyörä.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kuningas joka muuttui puuksi',
+          teksti:
+            "Ouidah'n keskustassa säilynyt Kpasséen pyhä metsä on jäänne alkuperäisestä sademetsästä, joka kerran peitti koko rannikkoseudun. Legendan mukaan kaupungin perustajakuningas Kpasse pakeni tänne vihollisiaan ja muuttui iäkkääksi iroko-puuksi välttyäkseen kiinniottamiselta – puu seisoo yhä metsän keskellä ja sitä pidetään pyhänä. Metsän varjoisilla poluilla on kymmeniä patsaita, jotka esittävät vodun-uskonnon jumaluuksia ja esi-isiä, ja paikka toimii yhä sekä uskonnollisena pyhäkkönä että avoimena ulkoilmamuseona kaupungin vieraille.",
+          tiedosto: 'Sacred Forest Ouidah Benin Jan 2018.jpg',
+          lyhyt: 'Kpasséen pyhä metsä, jonne legendan mukaan kuningas Kpasse muuttui puuksi.',
+          selite:
+            'Kuva näyttää pyhän metsän varjoisan polun, joka johtaa ison, tukijuurisen puun juurelle; puun vieressä istuu pieni patsas ja maassa on kaatuneita runkoja – näkymä metsästä, joka on säilynyt keskellä nykyistä Ouidah’ta.',
+          lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Atlantin ranta, jonne kaikki tiet johtivat',
+          teksti:
+            "Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.",
+          tiedosto: 'Plage de Ouidah.jpg',
+          lyhyt: 'Ouidah’n hiekkaranta, jonne Atlantin aallot rantautuvat suoraan avomereltä.',
+          selite:
+            'Kuvassa on Ouidah’n autio hiekkaranta: etualalla leviää vaalea hiekkakenttä, keskellä seisoo pieni valkoinen, olkikattoinen maja lipputankoineen, ja taustalla siintää turkoosinsininen Atlantin valtameri kirkkaan taivaan alla.',
+          lahde: 'jbdodane, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kirkkotorni käärmetemppelin naapurissa',
+          teksti:
+            "Vain parinsadan metrin päässä Temple des Pythonsista kohoaa Ouidah'n katolinen basilika, Notre-Dame de l'Immaculée Conception, joka valmistui 1900-luvun alussa ranskalaisten lähetyssaarnaajien aloitteesta. Kirkon ja käärmetemppelin läheisyys ei ole sattumaa: ranskalaiset lähetyssaarnaajat tietoisesti rakensivat kirkkonsa vanhan uskonnon keskuksen viereen. Silti kilpailu jäi lopulta näennäiseksi, sillä suuri osa asukkaista omaksui molemmat uskonnot rinnakkain sen sijaan, että toinen olisi syrjäyttänyt toisen – ilmiö joka näkyy kaupunkikuvassa edelleen.",
+          tiedosto: 'Basilica of Ouidah.jpg',
+          lyhyt: 'Ouidah’n harmaa basilika seisoo vain parinsadan metrin päässä python-temppelistä.',
+          selite:
+            'Kuvassa on Ouidah’n basilikan harmaa, uusgoottilainen julkisivu: kapea, hammastettu kellotorni kohoaa keskellä, sen alla kaksi suippokaarista ikkunaa, ja tornin huipulla on pieni Neitsyt Marian patsas.',
+          lahde: 'MVN, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Ouidah',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Orjakauppa',
+      johdanto:
+        'Ouidah oli Länsi-Afrikan vilkkain orjasatama Dahomeyn kuningaskunnan vallan alla; sen kautta kuljetettiin Atlantin yli satojatuhansia ihmisiä. Isoisän matkavuonna 1873 laillinen kauppa oli juuri loppunut, mutta jäljet näkyivät yhä.',
+      tehtava: {
+        kysymys: "Minä vuonna Ouidah'sta lähti viimeinen tunnettu orjalaiva kohti Amerikkaa?",
+        vaihtoehdot: ['1807', '1820', '1860', '1873'],
+        oikea: 2,
+        fakta:
+          "Clotilda-niminen laiva lähti Ouidah'sta salaa vuonna 1860, yli 50 vuotta sen jälkeen kun Britannia oli kieltänyt orjakaupan omilta alamaisiltaan.",
+      },
+      nostot: [
+        {
+          otsikko: 'Unohduksen portti',
+          teksti:
+            "Ouidah'n rannalta lähti vuosisatojen aikana laivalasteittain ihmisiä kohti Amerikkaa, ja 1990-luvulla rannalle pystytettiin Unohduksen portti muistuttamaan siitä, mitä täällä tapahtui. Monumentti on nykyaikainen, mutta se merkitsee todellisen reitin päätepistettä: noin neljän kilometrin mittaista Orjien tietä, jota pitkin vangit marssitettiin kahlittuina kaupungin torilta rantaan. Reitin varrella oli pysähdyspaikkoja, joissa vankeja pakotettiin kiertämään pyhää puuta muistin unohtamiseksi – uskottiin, että kierros saisi heidät unohtamaan kotinsa eivätkä he siksi enää yrittäisi paeta tai kostaa.",
+          tiedosto: 'La porte du non retour à ouidah.jpg',
+          lyhyt: 'Unohduksen portti Ouidah’n rannalla muistuttaa orjakaupan uhreista.',
+          selite:
+            'Yöllä kuvattu valokuva näyttää Unohduksen portin alhaalta ylöspäin: valaistu kaari nousee pimeää taivasta vasten, ja portin yläreunassa kulkee pronssinen reliefikuva kahlituista ihmishahmoista jonossa.',
+          lahde: 'Antoine MIASSI, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Door of No Return, Ouidah',
+        },
+        {
+          otsikko: 'Chachan tori',
+          teksti:
+            "Torilla, jota kutsuttiin Chachan toriksi, käytiin Ouidah'n orjakaupan huutokauppoja. Nimi tulee Francisco Félix de Sousasta, brasilialais-portugalilaisesta kauppiaasta, jonka lempinimi oli \"Chacha\": kuningas Ghezo nimitti hänet 1820-luvulla Dahomeyn viralliseksi orjakaupan välittäjäksi ja myönsi hänelle käytännössä yksinoikeuden koko sataman kauppaan. De Sousasta tuli yksi aikansa rikkaimmista miehistä Länsi-Afrikassa, ja hänen jälkeläisensä hallitsivat Ouidah'n kauppaa vielä vuosikymmeniä hänen kuolemansa jälkeen 1849.",
+          tiedosto: 'Marché des esclaves.jpg',
+          lyhyt: 'Chachan tori, jossa orjakaupan hinnat neuvoteltiin ja ihmiset huutokaupattiin.',
+          selite:
+            'Kuvassa on laatoitettu aukio, jonka poikki kulkee rivi tummia, palloa muistuttavia pronssipylväitä; taustalla näkyy palmuja ja matalia rakennuksia kirkkaassa päivänvalossa.',
+          lahde: 'Gbehlon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Francisco Félix de Sousa',
+        },
+        {
+          otsikko: 'Dahomeyn naissoturit',
+          teksti:
+            'Dahomeyn kuninkaan armeijaan kuului ainutlaatuinen naissotilaiden joukko-osasto, jota eurooppalaiset kutsuivat amatsoneiksi ja paikalliset agojieksi. Kuningas Ghezo ja hänen poikansa Glele tekivät 1800-luvulla agojiesta vakinaisen, jopa 6 000 naisen sotajoukon, joka vastasi kolmasosasta koko armeijaa. Glele hallitsi vuosina 1858–1889, joten isoisän matkavuonna 1873 agojiet olivat yhä aktiivinen ja pelätty voima, joka piti yllä kuninkaan valtaa myös Ouidah’n satamassa ja sen kauppareiteillä. Eurooppalaiset vierailijat pitivät heitä toistuvasti kurinalaisempina ja rohkeampina kuin miespuolisia sotilaita.',
+          tiedosto: 'Dahomey Amazons 1793.png',
+          lyhyt: 'Dahomeyn hovin kulkue lippuineen ja rumpuineen 1790-luvun kaiverruksessa.',
+          selite:
+            'Mustavalkoinen kaiverrus 1790-luvulta näyttää marssivan kulkueen, joka kantaa suuria pyöreitä päivänvarjoja, isoa rumpua ja liehuvia lippuja kohti muurattua kylää palmujen keskellä – yksi varhaisimmista painetuista kuvista Dahomeyn hovin joukoista.',
+          lahde: 'Archibald Dalziel, Wikimedia Commons (Public domain)',
+          wiki: 'Dahomey Amazons',
+        },
+        {
+          otsikko: 'Zoungbodjin hiljainen paikka',
+          teksti:
+            'Kaikki orjiksi otetut eivät selvinneet edes rannalle asti. Zoungbodjin kylän liepeillä sijaitsee joukkohauta, johon haudattiin marssin aikana kuolleet tai liian heikoiksi todetut vangit, jotka kauppiaat hylkäsivät ennen laivaan nousua. Monille vangeille pakotettiin suuhun puinen kapula, joka esti puhumisen ja syömisen sekä teki itsemurhan kielen nielaisemalla mahdottomaksi. Paikka on nykyisin rauhoitettu muistoalue, jolla kylttien mukaan vieraita pyydetään pitämään hiljaisuutta kunnioituksesta uhreja kohtaan.',
+          tiedosto: 'Mémorial de Zoungbodji (1).jpg',
+          lyhyt: 'Zoungbodjin muistopatsas esittää suukapulaan pakotettua vankia.',
+          selite:
+            'Kuvassa on tummanvihreä pronssipatsas polvistuneesta miehestä, jonka suuhun on kiinnitetty puinen kapula ja jonka lantiolla on sininen vaate; taustalla on muuri, jossa on kyltti "Ouidah 92" ja teksti muistopaikan hiljaisuudesta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ouidah',
+        },
+        {
+          otsikko: 'Kielletty mutta jatkuva kauppa',
+          teksti:
+            "Britannia kielsi orjakaupan omilta alamaisiltaan jo vuonna 1807 ja alkoi partioida Länsi-Afrikan rannikkoa laivastollaan pysäyttääkseen muidenkin maiden orjalaivoja. Silti salakuljetus jatkui Ouidah'sta vuosikymmeniä kiellon jälkeen, sillä kysyntä Amerikan mantereella ei loppunut lakien myötä. Viimeinen tunnettu orjalaiva, Clotilda, lähti Ouidah'sta vuonna 1860 ja toi yli sata ihmistä salaa Alabamaan – yli 50 vuotta Britannian kiellon jälkeen. Isoisän matkavuonna 1873 tuo viimeinen matka oli vain 13 vuoden takainen muisto, ja monet sen selviytyjät elivät vielä Amerikassa.",
+          tiedosto: 'Brookes slave ship, British Library.jpg',
+          lyhyt: 'Piirros 1700-luvun orjalaivan ahtaasta ruumasta, jollaisia myös Ouidah’sta lähti.',
+          selite:
+            'Vanha englanninkielinen piirros "Description of a Slave Ship" näyttää laivan pohjapiirroksena ja poikkileikkauksina: kannen alle on merkitty riveittäin makaavia ihmishahmoja ahtaasti vierekkäin koko ruuman pituudelta.',
+          lahde: 'James Phillips, Wikimedia Commons (Public domain)',
+          wiki: 'Clotilda (slave ship)',
+        },
+      ],
+    },
+  ],
+  bahrelghazal: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bahr el Ghazal',
+      johdanto:
+        'Bahr el Ghazal, arabiaksi "gasellien meri", on Etelä-Sudanin luoteisosan suoinen ja rautakivitasankoinen alue. Isoisän matkavuonna 1873 se oli Samuel Bakerin orjakaupan vastaisen sotaretken näyttämö ja hänen kautensa päätepiste.',
+      nostot: [
+        {
+          otsikko: 'Gasellien meri',
+          teksti:
+            'Bahr el Ghazal tarkoittaa arabiaksi "gasellien meri", vaikka kyseessä on joki eikä meri: se kokoaa yhteen useita pienempiä jokia, kuten Jur- ja Lol-joen, ja laskee lopulta Bahr al Jabaliin Lake Non luona, mistä yhdistynyt vesi jatkaa Valkoisena Niilinä pohjoiseen. Ympäröivä yli 200 000 neliökilometrin alue on tasaista rautakivitasankoa, joka tulva-aikaan muuttuu laajaksi suoksi — samaa vesistöä, jota paikalliset dinkakalastajat ovat hyödyntäneet vuosisatoja. Vielä 1950-luvulla Lol-joen matalassa vedessä saattoi nähdä kerralla satoja kanootteja, kun kokonaiset kylät kokoontuivat yhteiskalastukseen.',
+          tiedosto:
+            'Photo View of the Lol River in Bahr al-Ghazal, with hundreds of boats belonging to Dinka fishermen 1958 - Touring Club Italiano BBT 127.jpg',
+          lyhyt: 'Satoja dinkakalastajien kanootteja Lol-joella vuonna 1958.',
+          selite:
+            'Mustavalkoinen valokuva vuodelta 1958 näyttää Lol-joen matalassa vedessä kymmeniä kanootteja ja kalastajia keihäineen, rannalla katselijoita hiekkarannalla.',
+          lahde: 'Touring Club Italiano -arkisto, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bahr el Ghazal River',
+        },
+        {
+          otsikko: 'Ilmakuva suosta ja pyöreistä kylistä',
+          teksti:
+            'Bahr el Ghazal laskee lopulta Sudd-suohon, joka tulva-aikaan kasvaa yli 130 000 neliökilometrin laajuiseksi ja nielee haihdunnassaan noin 55 prosenttia siihen virtaavasta vedestä — yksi syy, miksi Niilin lähteiden etsijät joutuivat vuosisatojen ajan kiertämään sen maitse. Jo keisari Neron lähettämät roomalaissotilaat pysähtyivät suohon vuonna 61 jaa. eivätkä päässeet sitä pidemmälle Afrikan sisäosiin. Sveitsiläisen lento-uranuurtajan Walter Mittelholzerin vuosien 1929–1930 Kilimanjaro-lennolla otettu ilmakuva paljastaa, miltä seudun asutus näyttää ylhäältä: pyöreät majat ja karjatarhat ryhmittyvät ympyröiksi joen mutkan ja lammikon tuntumaan.',
+          tiedosto:
+            'ETH-BIB-Sudd, das grüne Pflanzen- und Vogelparadies am Nil-Kilimanjaroflug 1929-30-LBS MH02-07-0018.tif',
+          lyhyt: 'Ilmakuva pyöreistä kyläasutuksista joen mutkan lähellä vuodelta 1929.',
+          selite:
+            'Ilmakuva näyttää pyöreät majaryhmät ja karjatarhat, jotka kiertyvät ympyröiksi joen mutkan ja pienen lammikon ympärille avoimessa savannimaisemassa.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (Public domain)',
+          wiki: 'Sudd',
+        },
+        {
+          otsikko: 'Baker-pasha ja orjakaupan tukahduttaminen',
+          teksti:
+            'Khediivi Ismail nimitti brittiläisen tutkimusmatkailijan Samuel Bakerin huhtikuussa 1869 vasta perustetun Ekvatorian provinssin kenraalikuvernööriksi pashan arvolla: tehtävänä oli ulottaa Egyptin valta Gondokoron eteläpuolelle ja tukahduttaa orjakauppa Ylä-Niilin ja Bahr el Ghazalin alueella. Baker johti noin 1 700 egyptiläisen sotilaan joukkoa — moni heistä oli vapautettu vankilasta armeijaan — höyrylaivoineen ja purjealuksineen. Huhtikuussa 1870 hänen partionsa pysäytti orjaveneen ja vapautti siitä 150 orjaa, yhden harvoista konkreettisista voitoista taistelussa, jota paikalliset kauppiasruhtinaat vastustivat aseellisesti joka käänteessä.',
+          tiedosto: 'Sir Samuel White Baker. Photograph by E. Kelley. Wellcome V0025986.jpg',
+          lyhyt: 'Samuel Baker, Bahr el Ghazalin alueen egyptiläishallinnon rakentaja.',
+          selite:
+            'Muotokuvassa parrakas Samuel Baker istuu valokuvaajan ateljeessa 1800-luvun tapaan pukeutuneena, ja kuvan alle on kirjoitettu hänen oma nimikirjoituksensa "Sam W Baker".',
+          lahde: 'E. Kelley, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Samuel Baker',
+        },
+        {
+          otsikko: 'Bakerin kausi päättyy, Gordon jatkaa',
+          teksti:
+            'Bakerin nelivuotinen kausi Ekvatorian kenraalikuvernöörinä päättyi elokuussa 1873 — juuri samana vuonna, kun isoisä kirjoitti matkapäiväkirjaansa. Hän palasi Kairoon jättäen työnsä jatkajaksi eversti Charles George Gordonin, joka omaksui saman kaksoistehtävän: hallinnon vakiinnuttamisen ja orjakaupan kitkemisen. Bahr el Ghazalin sisäosissa todellista valtaa piti norsunluu- ja orjakauppias, jonka linnoitetut zariba-kauppa-asemat hallitsivat aluetta niin tehokkaasti, että khediivi tunnusti hänet virallisesti alueen kuvernööriksi samana vuonna 1873 — Egypti ei niinkään voittanut kauppiasruhtinaita kuin teki heistä virkamiehiä.',
+          tiedosto: 'General C. G. Gordon.jpg',
+          lyhyt: 'Kenraali Charles Gordon, Bakerin seuraaja Ekvatorian kuvernöörinä.',
+          selite:
+            'Kaiverruksessa harmaapartainen Gordon seisoo tummaan viittaan kietoutuneena katolla kiikari ja kirja kädessään, taustalla Britannian lippu ja palmu.',
+          lahde:
+            'Lowes Cato Dickinson / Samuel Cousins / Thomas Lewis Atkinson, Wikimedia Commons (Public domain)',
+          wiki: 'Charles George Gordon',
+        },
+        {
+          otsikko: 'Jur-joki ja Waun kaupunki',
+          teksti:
+            'Yksi Bahr el Ghazalin vesistön tärkeimmistä sivujoista on Jur-joki, jonka rannalle syntyi alueen suurin asutuskeskus, nykyinen Wau. Samuel Bakerin ja hänen seuraajiensa aikaan 1870-luvulla joen varsi oli täynnä kauppiaiden zaribaa eli piikkipensasaitauksia, joihin norsunluuta ja muita kauppatavaroita koottiin ennen kuljetusta pohjoiseen kohti Niiliä. Jur virtaa edelleen samaa reittiä kohti Bahr el Ghazalia ja lopulta Valkoista Niiliä, ja sen rannat ovat yhä paikallisten tärkein vesilähde: samalla joella, jonka varrella orjakauppiaiden aitaukset kerran seisoivat, pestään nykyään pyykkiä ja kastellaan peltoja.',
+          tiedosto: 'River Jur in Wau city, South Sudan.jpg',
+          lyhyt: 'Jur-joki virtaa Waun kaupungin läpi Bahr el Ghazalissa.',
+          selite:
+            'Valokuvassa Jur-joki virtaa vihreiden rantapensaiden välissä, ylittävän betonisillan alla, ja vedessä lojuu iso kaatunut puunrunko.',
+          lahde: 'Rejoice Martin Kubaya, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wau, South Sudan',
+        },
+        {
+          otsikko: 'Elämä rautakivitasangolla',
+          teksti:
+            'Bahr el Ghazalin maisema vaihtelee sään mukaan jyrkästi: sadekaudella suuret alueet muuttuvat läpipääsemättömäksi suoksi, kun taas kuivana kautena paljastuu kovaa, punaista rautakivimaata. Kylät rakennetaan aina tulvarajan yläpuolelle mataloille harjanteille, ja tyypillinen talo on pyöreä, savesta muurattu ja ruokohatulla katettu tukul-maja, jonka vieressä kasvaa maissia, okraa ja maapähkinää. Sama perusratkaisu — pyöreä maja korkealla kohdalla, viljelyspalsta vieressä — on pitänyt alueen asukkaat kuivalla jalalla jo kauan ennen kuin kukaan piirsi siitä karttaa Bakerin retkikunnalle.',
+          tiedosto: 'Traditional dinka homestead.jpg',
+          lyhyt: 'Perinteinen dinkatalo maissipellon keskellä Bahr el Ghazalissa.',
+          selite:
+            'Valokuvassa kaksi lasta seisoo maissipellon reunalla pyöreän, ruokokattoisen savimajan edessä; taustalla näkyy toisen samanlaisen majan kattoa.',
+          lahde: 'Jayyeass, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dinka people',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Karjapaimentolaisten maailma',
+      johdanto:
+        'Bahr el Ghazalin dinka- ja nuerpaimentolaisille karja ei ole pelkkä elinkeino vaan koko maailmankuvan keskus: sen ympärille rakentuvat nimet, avioliitot ja uskonto, eikä yhtäkään nautaa teurasteta koskaan pelkän huvin vuoksi.',
+      tehtava: {
+        kysymys: 'Minkä värinen helmikorsetti kertoi dinkamiehen olevan valmis avioliittoon?',
+        vaihtoehdot: ['Punainen', 'Keltainen', 'Sininen', 'Valkoinen'],
+        oikea: 1,
+        fakta:
+          'Keltainen malual-korsetti kertoi miehen olevan yli 30-vuotias ja avioliittoon valmis, kun taas punainen merkitsi 15–25-vuotiasta nuorukaista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Karja identiteetin ytimessä',
+          teksti:
+            'Antropologi E. E. Evans-Pritchard tiivisti nuerien suhteen karjaan yhdellä lauseella: nauta on lanka, joka kulkee koko yhteisön kielen, uskonnon ja politiikan läpi. Käytännössä mikään osa eläimestä ei mene hukkaan: nahasta tehdään vaatteita ja kilpiä, ja poltettu lehmänlanta toimii sekä hammastahnana että hyönteiskarkotteena. Nautaa ei koskaan teurasteta pelkän lihan vuoksi — uskomuksen mukaan väärin tapetun härän henki voi kirota tekijänsä — vaan vain vanhat tai kuolevat eläimet syödään, ja silloinkin seremonian ja laulujen saattelemana.',
+          tiedosto: 'Cattle of the Dinka people, Juba, South Sudan - 20101230-04.jpg',
+          lyhyt: 'Pitkäsarvista dinkakarjaa laitumella lähellä Jubaa.',
+          selite:
+            'Kuvassa tummaa ja valkopilkullista karjaa, joiden pitkät, kaartuvat sarvet erottuvat selvästi vihreää kasvillisuutta vasten.',
+          lahde: 'Ranjit Bhaskar / Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Nuer people',
+        },
+        {
+          otsikko: 'Lehmänvärinimi ja aikuistuminen',
+          teksti:
+            'Sekä dinka- että nuerpojat siirtyvät aikuisuuteen initiaatioriitissä, jossa otsaan viilletään teräväkärkisellä esineellä pysyvät arvet — nuereilla tavallisesti kuusi vaakasuoraa viiltoa, dinkoilla useita viiltoja kulmakarvojen yläpuolelle. Seremonian jälkeen nuorukainen saa toisen, niin kutsutun lehmänvärinimen, joka on peräisin hänen perheensä karjasta: nimi voi viitata häränsä turkin väriin, sarvien muotoon tai pilkkujen kuvioon. Nimi ei ole pelkkä lempinimi, vaan se seuraa miestä lopun elämää yhtä vakavasti kuin syntymänimi.',
+          tiedosto: 'Dinka Bull, Wau. Sudan - panoramio.jpg',
+          lyhyt: 'Tällaisen härän väritys voi antaa dinkapojalle hänen aikuisnimensä.',
+          selite:
+            'Kuvassa tumma härkä, jonka valkoiset, korkealle kaartuvat sarvet nousevat pystyyn; taustalla toinen härkä ja tiilirakennus.',
+          lahde: 'Michael Walsh, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Karja morsiamen hintana',
+          teksti:
+            'Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.',
+          tiedosto: 'Cattle of the Dinka people, Juba, South Sudan - 20101230-02.jpg',
+          lyhyt: 'Dinkakarjaa lähikuvassa — samanlaisilla eläimillä maksettiin morsiamen hinta.',
+          selite:
+            'Lähikuvassa mustan ja valkopilkullisen härän päät sarvineen, taustalla kolmas eläin ja punaruskea hiekkatie.',
+          lahde: 'Ranjit Bhaskar / Al Jazeera English, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Helminauhakorsetti joka kertoi iän',
+          teksti:
+            'Nuoret dinkamiehet kantoivat tiukkaa, rautalangalla ja tuhansilla lasihelmillä koristeltua korsettia nimeltä malual lähes yötä päivää. Korsetin väri kertoi katsojalle heti kantajan iän ja aseman: punainen merkitsi 15–25-vuotiasta nuorukaista, keltainen yli 30-vuotiasta ja avioliittoon valmista miestä. Korkea, selässä kohoava piikki puolestaan ilmaisi suvun vaurautta, sillä tuontihelmet ja -lanka olivat kalliita. Kun mies vihdoin meni naimisiin, hän riisui korsetin lopullisesti, siveli ihonsa tuhalla ja pukeutui sen sijaan venetsialaisista kauppahelmistä tehtyihin nauhoihin.',
+          tiedosto:
+            "Man's corset, Dinka people, South Sudan, 20th century, beads, fiber, wire - Brooklyn Museum - Brooklyn, NY - DSC08550.JPG",
+          lyhyt: 'Keltainen helmikorsetti kertoi kantajansa olevan naimisiinmenoiässä.',
+          selite:
+            'Museonäyttelyssä valokuvattu keltainen, turkoosein, punaisin ja tummansinisin raidoin koristeltu helmikorsetti riippuu esittelytelineessä.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Dinka people',
+        },
+        {
+          otsikko: 'Keihäät jotka puolustivat karjaa',
+          teksti:
+            'Karjan suojaaminen niin villieläimiltä kuin karjarosvoilta vaati aseita, ja dinka- ja nuerseppien takomat rautakeihäät olivat perinteisen paimentolaiskulttuurin tärkein työkalu heti karjakepin jälkeen. Keihäänkärjet taottiin eri käyttötarkoituksiin: leveä lehtimäinen terä sopi lähitaisteluun, kun taas piikikäs, sahalaitainen kärki oli tarkoitettu kalastukseen tai haavoittuneen saaliin varmistamiseen, ettei se pääsisi irtoamaan. Waun kaupungin ympäristöstä on säilynyt useita tällaisia 1900-luvun keihäänkärkiä, jotka todistavat saman sepäntaidon jatkuneen sukupolvesta toiseen.',
+          tiedosto: 'Sudan Dinka Spearheads.jpg',
+          lyhyt: 'Kolme dinkojen takomaa rautaista keihäänkärkeä Wausta.',
+          selite:
+            'Kuvassa kolme erilaista rautaista keihäänkärkeä puuvarsineen: ylimpänä sahalaitainen, keskellä leveä lehtimäinen ja alimmaisena väkäsellinen kärki.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dinka people',
+        },
+      ],
+    },
+  ],
+  sepik: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sepik',
+      johdanto:
+        'Sepik on Uuden-Guinean pisin joki: yli tuhat kilometriä sademetsää ja hylättyjä jokimutkia. Isoisän 1873 matkassa kaikuu tuore huhu miehestä, joka asui rannikolla aseettomana jo kaksi vuotta aiemmin.',
+      nostot: [
+        {
+          otsikko: 'Mies joka tuli kaksi vuotta aiemmin',
+          teksti:
+            'Syyskuussa 1871 venäläinen tiedemies Nikolai Miklouho-Maclay nousi maihin Uuden-Guinean koillisrannikolla, lähellä Sepik-joen suistoa – vain kaksi vuotta ennen isoisän omaa matkaa. Hän rakensi majan Astrolabe-lahden rannalle ja asui pariisa-kansan keskuudessa yli vuoden ilman aseita ja tulkkia, ensimmäisenä eurooppalaisena joka teki niin rauhanomaisesti. Miklouho-Maclay oppi paikallisen kielen, piirsi muistiin kasveja ja ihmisiä ja nimesi vuoria karttoihinsa. Hänen tarkat muistiinpanonsa olivat aikansa harvoja luotettavia kuvauksia koko alueesta.',
+          tiedosto: 'Миклухо Маклай 1870е.JPG',
+          lyhyt: 'Nikolai Miklouho-Maclay asui Uuden-Guinean rannikolla ilman aseita vuodesta 1871.',
+          selite:
+            'Vanha painokuva Miklouho-Maclaysta 1870-luvulta: tuuhea kihara tukka, täysparta ja tumma takki, sellaisena kuin hänet julkaistiin venäläisessä Vokrug sveta -aikakauslehdessä.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+          wiki: 'Nicholas Miklouho-Maclay',
+        },
+        {
+          otsikko: 'Kylä joka seisoo vedessä',
+          teksti:
+            'Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.',
+          tiedosto: 'Sepik river IMG 3665.jpg',
+          lyhyt: 'Kambaraman kylän katolinen kirkko seisoo paalujen varassa keskellä Sepik-jokea.',
+          selite:
+            'Valokuvassa Kambaraman kylän St Josephin katolinen kirkko ja sen ympärillä olevat olkikattoiset talot seisovat korkeiden puupaalujen varassa suoraan joen pinnan yläpuolella.',
+          lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Bensatynnyrit Pagwin rannassa',
+          teksti:
+            'Pagwin kylä on koko Keski-Sepikin tärkein portti: sinne asti pääsee vielä maanteitse, mutta siitä eteenpäin kaikki liikkuu vain vettä pitkin. Miehet kantavat rannalla tynnyreitä, joissa on polttoainetta moottorikanooteille – ilman niitä kymmenet joen varren kylät jäisivät käytännössä eristyksiin. Alueella ei ole juuri lainkaan tieverkkoa, joten joki toimii yhtä aikaa valtatienä ja markkinapaikkana. Kanootit kuljettavat sagojauhoa, kalaa ja veistoksia myyntiin ja tuovat tilalle polttoainetta, suolaa ja rakennustarvikkeita kyliin, joihin mikään muu reitti ei johda.',
+          tiedosto: 'Sepik 01835.jpg',
+          lyhyt: 'Miehet purkavat polttoainetynnyreitä Pagwin rantaan Keski-Sepikillä.',
+          selite:
+            'Valokuvassa miehet kantavat ja purkavat isoja polttoainetynnyreitä Pagwin kylän rannassa – tynnyrit on tarkoitettu joella liikkuvien moottorikanoottien polttoaineeksi.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Lasti joen selässä',
+          teksti:
+            'Sepikin varrella ei ole juuri lainkaan teitä, joten suurin osa tavarasta ja ihmisistä liikkuu edelleen veneillä ja pienillä rahtilaivoilla. Tässä alus ylittää joen keskiosan matkustajineen, ympärillä rehottaa sokeriruokoa ja muuta rantakasvillisuutta. Joki on leveä ja ruskea, virtaus tuntuu hitaalta mutta on sadekaudella voimakas: vedenpinta voi nousta useita metrejä ja tulva peittää laajoja alueita viikoiksi. Ilman jokea koko keskiosan talous – kalastus, sagontuotanto ja käsityökauppa – pysähtyisi käytännössä kokonaan, sillä mikään muu kulkuväylä ei korvaa sitä.',
+          tiedosto: 'Sepik 0266.jpg',
+          lyhyt: 'Pieni rahtialus ylittää Sepik-jokea matkustajineen keskiosan lakeudella.',
+          selite:
+            'Valokuvassa matkustajia kuljettava pieni rahtialus ylittää leveän, ruskean Sepik-joen; rannoilla kasvaa tiheää sokeriruokoa ja muuta rehevää kasvillisuutta.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+        {
+          otsikko: 'Arkea joen rannalla',
+          teksti:
+            'Sepikin varren kylät rakennetaan yleensä tulva-alueen paaluille, ja suuri osa arjesta tapahtuu silti rannalla: pyykinpesu, kalastus, kanoottien korjaus ja lasten leikit. Tässä kuvassa kyläläiset kokoontuvat rantaan aivan tavallisena päivänä – näky joka on toistunut sukupolvesta toiseen jo kauan ennen kuin kukaan eurooppalainen näki jokea. Ravinto tulee pääosin sagopalmun ydinjauhosta ja joen kalasta, ei pelloilta, sillä tulva-alue soveltuu huonosti viljelyyn. Joen varren sadan kylän asukkaat puhuvat kymmeniä eri kieliä, vaikka asuvat vain muutaman kanoottimatkan päässä toisistaan.',
+          tiedosto: 'Sepik 0057.jpg',
+          lyhyt: 'Kyläläisiä Sepik-joen rannalla tavallisen arkipäivän askareissa.',
+          selite:
+            'Valokuvassa kyläläisiä on kokoontunut Sepik-joen hiekkarannalle arkisten askareiden pariin, taustalla joen tyyni vedenpinta ja rantakasvillisuutta.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sepik',
+        },
+      ],
+    },
+    {
+      id: 'henkihuoneet',
+      nimi: 'Henkien talot',
+      johdanto:
+        'Sepikin miesten uskonnollinen elämä keskittyy henkien taloon eli haus tambaraniin, jonne vain vihityt pääsevät. Sen katossa asuvat esi-isät, ja pojista tulee siellä miehiä krokotiilin arpien kautta.',
+      tehtava: {
+        kysymys: 'Mitä Sepikin nuorten miesten rintaan ja selkään viillettävät arvet symboloivat?',
+        vaihtoehdot: [
+          'Sotilasarvoa',
+          'Krokotiilin nielemää ja uudestisyntymää',
+          'Naimisiinmenokelpoisuutta',
+          'Metsästystaitoja',
+        ],
+        oikea: 1,
+        fakta:
+          'Arvet jäljittelevät krokotiilin nahkaa ja hampaiden jälkiä, sillä iatmulit uskovat esi-isiensä polveutuvan krokotiilista ja initioitavan symbolisesti sen nielemäksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Talo jossa henget asuvat',
+          teksti:
+            'Haus tambaran on tok pisin -kielinen nimitys henkien talolle, Itä-Sepikin kylien yhteiselle rakennukselle, jossa asuvat esi-isien henget ja jota käytetään kokouksiin, rituaaleihin ja poikien initiaatioon. Rakennus on lähes yksinomaan miesten aluetta: naiset osallistuvat vain juhla-aterioiden valmistajina ja ulkopuolisina katsojina. Katto kohoaa jyrkkänä terävään huippuun ja laskeutuu takaosassa lähes maahan asti – muoto joka toistuu jopa Papua-Uuden-Guinean parlamenttitalon arkkitehtuurissa. Kristinuskon leviäminen on tehnyt perinteisistä henkien taloista harvinaisempia kuin ennen.',
+          tiedosto: 'Haus Tambaran, Apangai.jpg',
+          lyhyt: 'Korkea, jyrkkäkattoinen haus tambaran eli henkien talo Apangain kylässä.',
+          selite:
+            'Valokuvassa jyrkkäharjainen, olkikattoinen haus tambaran kohoaa palmujen keskellä; rakennuksen etuseinässä on värikäs maalattu kuvio ja sen juurella seisoo kaksi ihmistä katsomassa taloa.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Esi-isien kasvot päädyssä',
+          teksti:
+            'Haus tambaranin räystäänalustaa hallitsee suuri, maalattu pääty, joka on täynnä rivi riviltä toistuvia tyylitellyistä kasvoista – esi-isien ja suojelevien henkien, kuten päähengeksi kutsutun Nggwalin, kuvia. Kylän taitavimmat miehet maalaavat kuvion luonnonväreillä, punamullalla, keltamullalla ja mustalla noella, ja kuvio uusitaan säännöllisin väliajoin. Henkien uskotaan asuvan rakennuksessa ja ilmoittavan läsnäolostaan sisältä kuuluvina ääninä, joita naiset ja initioimattomat eivät saa nähdä syntyvän. Maalaus ei siis ole pelkkää koristelua vaan osa rakennuksen pyhyyttä.',
+          tiedosto: 'Haus Tambaran, Apangai - Giebel.jpg',
+          lyhyt: 'Haus tambaranin päätyä koristavat rivit maalattuja esi-isien kasvoja.',
+          selite:
+            'Lähikuva näyttää henkien talon kolmiomaisen päädyn, joka on täynnä punaisia, keltaisia, mustia ja valkoisia maalattuja kasvokuvioita sekä alareunassa rivin veistettyjä ihmishahmoja.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Ei kenen tahansa taloon',
+          teksti:
+            'Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.',
+          tiedosto: 'Sepik 0133.jpg',
+          lyhyt: 'Valokuvaaja kuvaa kunnioittavan etäisyyden päästä haus tambaran -rakennusta.',
+          selite:
+            'Valokuvassa mies kuvaa kaukaa korkeaa, kaksikerroksista haus tambaran -rakennusta, jonka sisällä erottuu tikapuita ja pylväässä veistetty ihmishahmo katon rajassa.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Haus tambaran',
+        },
+        {
+          otsikko: 'Krokotiilin lapset',
+          teksti:
+            'Iatmul-kansan uskomuksen mukaan heidän esi-isänsä polveutuvat krokotiilista, joka loi maailman – siksi nuorten miesten initiaatioon kuuluu ihon leikkaaminen satoja kertoja rinnasta, selästä ja pakaroista bambuveitsellä. Parantuessaan viillot muodostavat koholla olevia arpia, jotka muistuttavat krokotiilin karheaa nahkaa ja hampaiden jälkiä. Poikia pidetään tätä varten eristyksissä haus tambaranissa jopa kaksi kuukautta, ja seremonia toistuu vain noin 4–5 vuoden välein. Arpien uskotaan todistavan, että nuorukainen on symbolisesti krokotiilin nielemä ja syntyy rituaalin päätteeksi uudestaan täysivaltaisena klaanin jäsenenä.',
+          tiedosto: 'Haus Tambaran - nahe Apangai.jpg',
+          lyhyt: 'Haus tambaran lähellä Apangain kylää, initiaatioiden perinteinen näyttämö.',
+          selite:
+            'Valokuvassa toinen korkea, olkikattoinen haus tambaran seisoo puiden keskellä lähellä Apangain kylää – tällaisissa rakennuksissa pojat vietetään eristyksessä initiaatioon valmistautuessaan.',
+          lahde: 'Ingo Kühl, Wikimedia Commons (CC0)',
+          wiki: 'Scarification',
+        },
+        {
+          otsikko: 'Kauppatavaraa esivanhempien kasvoista',
+          teksti:
+            'Sepikin veistoperinne on yksi Uuden-Guinean tunnetuimmista: kylien veistäjät tekevät naamioita, esi-isien patsaita ja pitkänomaisia henkilautoja, joita koristellaan simpukankuorilla, siemenillä ja luonnonväreillä. Perinteisesti veistokset olivat osa haus tambaranin pyhää sisustusta, mutta 1900-luvulta lähtien niitä on myyty myös matkailijoille, keräilijöille ja museoihin ympäri maailmaa. Monet veistäjät oppivat taidon isältään tai enoltaan, vaikka osa teoksista päätyy nykyään kauas Sepikistä koteihin ja gallerioihin. Kierteiset silmät ja pitkä, terävä nenä ovat tyypillisiä keskisepikiläiselle veistostyylille.',
+          tiedosto: '塞皮克河流域木雕面具.jpg',
+          lyhyt: 'Sepikiläistyylinen puuveistos, jossa kaksi kasvokuviota ja simpukkakoristelu.',
+          selite:
+            'Kuvassa pitkänomainen puuveistos, jonka yläosassa on avosuinen, koloksi veistetty kasvo ja alaosassa kierteisin silmin ja terävällä nokalla varustettu toinen kasvo; reunoja koristavat simpukankuoret.',
+          lahde: '丘崈 (Qiu Chong), Wikimedia Commons (CC0)',
+          wiki: 'Oceanic art',
+        },
+      ],
+    },
+  ],
+  broome: [
+    {
+      id: 'kaupunki',
+      nimi: 'Broome',
+      johdanto:
+        'Broome kasvoi 1880-luvulla satamaksi, kun helmiäissimpukka teki siitä hetkeksi maailman johtavan helmikaupungin. Kauan ennen sitä rannikkoa asutti Yawuru-kansa, jolle helmiäinen oli pyhää jo ennen "Broome"-nimen syntyä.',
+      nostot: [
+        {
+          otsikko: 'Helmiäinen ennen Broomea',
+          teksti:
+            'Kauan ennen kuin kukaan kutsui tätä rannikkoa Broomeksi, alueen Yawuru-kansa keräsi matalikoilta helmiäissimpukoita ja kaiversi niiden kuorista rijejä, ockrilla värjättyjä koruja, jotka kulkivat kauppareittejä pitkin satojen, jopa yli tuhannen kilometrin päähän sisämaahan ja etelään asti. Kun isoisä matkusti maailmalla vuonna 1873, tätä paikkaa ei ollut vielä olemassa minään "Broomena" – vain rantaviivaa, jota Yawuru oli asuttanut ja hoitanut sukupolvien ajan, ja helmiäissimpukka oli jo silloin rannikon arvokkainta ainesta.',
+          tiedosto: 'Riji.JPG',
+          lyhyt: 'Yawuru-kansan kaivertama riji eli helmiäiskoru, ockrilla värjätty.',
+          selite:
+            'Valokuva näyttää ockrilla koristellun, helmiäissimpukan kuoresta veistetyn rijin, jonka reunaan on kiinnitetty hiuksista punottu vyönauha.',
+          lahde: 'Schomynv, Wikimedia Commons (Public domain)',
+          wiki: 'Riji',
+        },
+        {
+          otsikko: 'Merirosvo joka purjehti ohi',
+          teksti:
+            'Englantilainen merirosvo ja tutkimusmatkailija William Dampier purjehti Broomen edustan ohi kahdesti, ensin vuonna 1688 laivalla Cygnet ja uudelleen 1699 laivalla HMS Roebuck, jonka mukaan lähellä sijaitseva Roebuck Bay on myöhemmin nimetty. Dampier kartoitti rannikkoa Shark Baystä La Grange Bayhin asti ja kirjasi muistiin kasveja, eläimiä ja tuulia tarkemmin kuin kukaan eurooppalainen ennen häntä, mutta ei koskaan noussut maihin juuri tällä kohdalla. Isoisän matkavuoteen 1873 mennessä Dampierin käynneistä oli kulunut jo lähes kaksi vuosisataa, eikä rannikolle ollut silti syntynyt yhtäkään eurooppalaista asutusta.',
+          tiedosto: "William Dampier (1652-1715) Buccaneer and Explorer of Australia's West and North..jpg",
+          lyhyt: 'William Dampier, merirosvo ja tutkimusmatkailija, purjehti rannikon ohi 1688 ja 1699.',
+          selite:
+            'Muotokuva esittää William Dampieriä, englantilaista merirosvoa ja tutkimusmatkailijaa, jonka kaksi purjehdusta Länsi-Australian rannikolle 1600-luvun lopulla olivat ensimmäisiä eurooppalaisten käyntejä alueella.',
+          lahde: 'Biodiversity Heritage Library, Wikimedia Commons (Public domain)',
+          wiki: 'William Dampier',
+        },
+        {
+          otsikko: 'Kaupunki jonka nimesi kuvernööri',
+          teksti:
+            'Karjatilallinen Charles Harper ehdotti jo 1879, että rannikolle perustettaisiin virka-asema tukemaan kasvavaa helmiäissimpukan pyyntiä. Vasta 1883 tutkimusmatkailija John Forrest valitsi tarkan paikan ja nimesi sen Länsi-Australian silloisen kuvernöörin Sir Frederick Broomen mukaan – kymmenen vuotta isoisän matkan jälkeen. Satama sai lempinimen "Port of Pearls", helmisatama, koska sen laitureilta lastattiin vuosikymmenten ajan maailman arvokkainta helmiäistä laivoihin, jotka veivät saaliin aina Lontooseen ja Pariisiin asti.',
+          tiedosto: 'Port of Pearls House, Broome, September 2025.jpg',
+          lyhyt: 'Port of Pearls -rakennus Broomen satamassa, kaupungin helmiäishistorian muistona.',
+          selite:
+            'Nykyvalokuva näyttää Port of Pearls -nimisen rakennuksen Broomen satama-alueella, joka muistuttaa kaupungin synnystä helmiäissimpukan pyynnin ympärille 1880-luvulla.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Broome, Western Australia',
+        },
+        {
+          otsikko: 'Sukeltajat jotka tekivät kaupungin',
+          teksti:
+            'Vuoteen 1887 mennessä koko Broomen helmilaivasto oli siirtynyt kangaspukuihin, kuparikypäriin ja ilmaletkuihin, jotka mahdollistivat sukelluksen yli 20 metrin syvyyteen. Puvut olivat raskaita ja vieraita, joten pearlerit alkoivat värvätä ammattitaitoisia sukeltajia Japanista sekä Kiinasta, Malesiasta ja Timorilta; vuoteen 1920 mennessä joka kolmas Broomen sukeltaja oli japanilainen ja toisen maailmansodan kynnyksellä lähes joka toinen. Liian nopea nousu pinnalle sai typpikaasun kuplimaan sukeltajan veressä ja aiheutti sukellustaudin eli "taivutuksen"; satama-alueelle rakennettu painekammio oli monelle ainoa toivo selvitä hengissä.',
+          tiedosto: 'Early diving recompression chamber at Broome, Western Australia.jpg',
+          lyhyt: 'Broomen vanha painekammio, jolla hoidettiin sukeltajien sukellustautia.',
+          selite:
+            'Valokuva näyttää vanhan painekammion, jota käytettiin hoitamaan helmisukeltajia, kun sukellustauti eli typen kuplien aiheuttama halvaus iski heidän kehoonsa liian nopean pintaan nousun jälkeen.',
+          lahde: 'Haymanj, Wikimedia Commons (Public domain)',
+          wiki: 'Pearling in Western Australia',
+        },
+        {
+          otsikko: 'Nainen joka nousi merestä',
+          teksti:
+            'Ennen kuin Broomeen tuotiin ammattisukeltajia Aasiasta, ensimmäiset helmiäissimpukan sukeltajat 1860–1880-luvuilla olivat paikallisia aboriginaaleja – miehiä, naisia ja jopa lapsia, joita niin sanotussa "blackbirding"-käytännössä siepattiin väkisin laivoille sukeltamaan alasti jopa 12 metrin syvyyteen ilman minkäänlaista korvausta. Bedford Parkiin, paikkaan jossa perheet aikoinaan odottivat lugger-veneiden palaavan merten takaa, pystytettiin vuonna 2010 kolmimetrinen pronssipatsas aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka kädessään – muistomerkki naisille, joiden työtä pearling-teollisuuden alkuvuodet harvoin mainitsevat.',
+          tiedosto: 'Women of Pearling monument, Bedford Park, Broome, WA, Australia.jpg',
+          lyhyt: 'Bedford Parkin pronssipatsas muistaa naisia, jotka pakotettiin sukeltamaan simpukoita.',
+          selite:
+            'Kolmimetrinen pronssipatsas Bedford Parkissa kuvaa aboriginaalinaista nousemassa merestä helmiäissimpukka kädessään; veistäjät Joan Walsh-Smith ja Charles Smith pystyttivät sen vuonna 2010 naisten muistoksi.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Pearling in Western Australia',
+        },
+        {
+          otsikko: 'Kaupunki jossa kaikki kielet kaikuivat',
+          teksti:
+            'Helmiäissatama veti Broomeen sukeltajia ja kauppiaita Japanista, Kiinasta, Malesiasta, Filippiineiltä ja silloisesta Alankomaiden Itä-Intiasta, ja satamalaitureiden ympärille kasvanut kortteli sai vuorotellen nimet Aasialaiskortteli ja Japanilaiskortteli, kunnes siitä tuli lopulta Chinatown, kun kiinalaisten kauppiaiden osuus kasvoi suurimmaksi. Vuoteen 1910 mennessä noin 3 500 kaupungin 5 000 asukkaasta sai leipänsä pearling-teollisuudesta, ja kapeat kujat pursusivat kauppoja ja ravintoloita kymmenillä eri kielillä – sekoitus, jota ei tuolloin nähnyt missään muualla Australiassa.',
+          tiedosto: 'Johnny Chi Lane, Chinatown, Broome, WA, Australia 01.jpg',
+          lyhyt: 'Johnny Chi Lane, kapea kuja Broomen monikulttuurisessa Chinatownissa.',
+          selite:
+            'Valokuva Johnny Chi Lanesta Chinatownissa näyttää kapean, matalien puurakennusten reunustaman kujan, joka syntyi 1900-luvun alussa helmiäiskauppiaiden ja -sukeltajien kortteriksi.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Broome, Western Australia',
+        },
+        {
+          otsikko: 'Kaapeli joka yhdisti mantereet',
+          teksti:
+            'Vuonna 1889 merenalainen lennätinkaapeli laskettiin Broomesta yli 1 800 kilometrin päähän Banyuwangiin Jaavalle, ja siitä eteenpäin viesti kulki maayhteyksiä pitkin aina Lontooseen asti – matka, joka isoisän 1873 purjehtineelle laivalle olisi vienyt kuukausia, kutistui parissa tunnissa. Kaapelin rantautumispaikka länsipuolella sai nimen Cable Beach, ja siitä tuli myöhemmin 22 kilometrin pituinen valkohiekkainen ranta, joka on nykyään Broomen tunnetuin maamerkki ja suosittu kamelisafarien näyttämö auringonlaskun aikaan.',
+          tiedosto: 'Dusk at Cable Beach, Broome, WA, Australia 01.jpg',
+          lyhyt: 'Cable Beach auringonlaskussa, nimetty vuoden 1889 lennätinkaapelin mukaan.',
+          selite:
+            'Valokuva Cable Beachin auringonlaskusta näyttää loputtoman valkoisen hiekkarannan ja Intian valtameren, paikan josta lennätinkaapeli laskettiin Jaavalle vuonna 1889.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Cable Beach',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Dinosaurukset ja vuorovesi',
+      johdanto:
+        'Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Kuinka monta miljoonaa vuotta sitten Gantheaume Pointin dinosaurusten jalanjäljet arvioidaan syntyneen?',
+        vaihtoehdot: [
+          '13 miljoonaa vuotta sitten',
+          '130 miljoonaa vuotta sitten',
+          '500 miljoonaa vuotta sitten',
+          '4 600 miljoonaa vuotta sitten',
+        ],
+        oikea: 1,
+        fakta:
+          'Jäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, ja ne näkyvät vain harvinaisen alhaisen vuoroveden aikaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jäljet jotka näkyvät vain hetken',
+          teksti:
+            'Gantheaume Pointin liuskekivessä säilyneet dinosaurusten jalanjäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, jolloin alue oli jokisuiston peittämä rantatasanko eikä lainkaan merta. Jäljet löydettiin uudelleen 1960-luvulla, mutta ne paljastuvat edelleen vain muutaman kerran vuodessa, kun vuorovesi vetäytyy poikkeuksellisen alas ja paljastaa noin 30 metrin päässä rannasta piilevän kivilaatan. Jälkien joukossa on tunnistettu useiden eri dinosauruslajien painaumia, mukaan lukien yksi harvoista tunnetuista sauropodin eli pitkäkaulaisen jättiläisen jäljistä koko maailmassa.',
+          tiedosto: 'Dinosaur footprints Broome Australia.jpg',
+          lyhyt: 'Dinosauruksen jalanjälki liuskekivessä Gantheaume Pointissa Broomen rannikolla.',
+          selite:
+            'Valokuva näyttää liuskekiveen painuneen dinosauruksen jalanjäljen Gantheaume Pointissa, paikassa jossa jäljet paljastuvat vain harvinaisen alhaisen vuoroveden aikaan.',
+          lahde: 'Sixcherries, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gantheaume Point',
+        },
+        {
+          otsikko: 'Maailman suurin helmisimpukka',
+          teksti:
+            'Broomen edustan vesissä elää Pinctada maxima, maailman suurin helmiä tuottava simpukkalaji, jonka kuori voi kasvaa yli 20 senttimetrin levyiseksi. Juuri tämän simpukan hopeanhohtoinen tai kullankeltainen helmiäiskerros teki Broomesta 1900-luvun alussa maailman johtavan helmiäissataman, sillä sen kuorista valmistettiin napeista huonekaluihin kaikkea, mihin hienoin helmiäinen kelpasi. Nykyisin samaa lajia kasvatetaan hallitusti helmitiloilla Eighty Mile Beachin edustalla, ja Australia tuottaa sen ansiosta yhä suurimman osan maailman valkoisista etelänmerien helmistä.',
+          tiedosto: 'Views of Broome Historical Museum, Broome, WA, Australia 05.jpg',
+          lyhyt: 'Helmiäissimpukan kuoria näytteillä Broomen historiallisessa museossa.',
+          selite:
+            'Museonäyttelyn valokuva esittelee useita suuria, kiiltäväpintaisia helmiäissimpukan kuoria, joiden sisäpinta hohtaa hopeanvalkoisena – juuri tällaisia kuoria Broomen pearling-teollisuus keräsi vuosikymmenten ajan.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Pinctada maxima',
+        },
+        {
+          otsikko: 'Portaikko joka nousee kuuhun',
+          teksti:
+            'Muutaman illan kuukaudessa, kun täysikuu nousee Roebuck Bayn paljastuneiden mutatasankojen yllä ja vuorovesi on juuri vetäytynyt äärimmilleen, kuun valo heijastuu jäljelle jääneistä vesilammikoista niin, että syntyy illuusio hopeisesta portaikosta, joka näyttää nousevan suoraan taivaalle. Ilmiötä kutsutaan nimellä Staircase to the Moon, ja se toistuu maaliskuusta lokakuuhun muutamana iltana kuukaudessa, aina suurimpien kevätvuorovesien aikaan. Roebuck Bay on ilmiölle poikkeuksellisen suotuisa, koska Broome sijaitsee kapealla niemellä ja lahti avautuu juuri itään, samaan suuntaan josta kuu nousee.',
+          tiedosto: 'Staircasetothemoon.jpg',
+          lyhyt: 'Staircase to the Moon -ilmiö Roebuck Bayn vuorovesitasangolla.',
+          selite:
+            'Valokuva näyttää täysikuun heijastuksen Roebuck Bayn matalassa vedessä hämärän aikaan – juuri tällaisesta näkymästä syntyy Staircase to the Moon -ilmiön hopeinen portaikko.',
+          lahde: 'Johnorchard, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Roebuck Bay',
+        },
+        {
+          otsikko: 'Lahti joka ruokkii sata tuhatta lintua',
+          teksti:
+            'Roebuck Bayn laajat mutatasangot ovat yksi harvoista paikoista maailmassa, joissa pohjaeläimiä elää niin tiheästi, että ne riittävät ruokkimaan kansainvälisesti merkittäviä määriä muuttolintuja. Lahdella on havaittu yli 120 vesilintulajia, joista lähes 40 on Itä-Aasian ja Australasian muuttoreitillä liikkuvia kahlaajia, ja joka vuosi noin 100 000 lintua kerääntyy sinne ennen paluulentoaan pohjoisen pesimäalueille Siperiaan ja Alaskaan asti. Satelliittikuvissa lahden vuorovesitasangot näkyvät laajoina, veden peittäminä tai paljaina alueina sen mukaan, missä vaiheessa vuorovesi kulloinkin on.',
+          tiedosto: 'Bountiful Roebuck Bay (1274788 - oli 20260318 lrg).jpg',
+          lyhyt: 'Satelliittikuva Roebuck Bayn vuorovesitasangoista, muuttolintujen ruokailualueesta.',
+          selite:
+            'Landsat-satelliitin kuva maaliskuulta 2026 näyttää Roebuck Bayn laajat vuorovesitasangot, joiden pohjaeläimet ruokkivat vuosittain kymmeniätuhansia muuttolintuja.',
+          lahde: 'NASA Earth Observatory / Lauren Dauphin, Wikimedia Commons (Public domain)',
+          wiki: 'Roebuck Bay',
+        },
+        {
+          otsikko: 'Metsä joka elää vedessä',
+          teksti:
+            'Broomea ympäröi laaja mangrovevyöhyke, joka tulvii korkean vuoroveden aikaan ja paljastuu jälleen matalan veden aikana – juuri tämä rytmi tekee alueesta niin ravinnerikkaan, että se pystyy ruokkimaan Roebuck Bayn valtavat lintumäärät. Roebuck Bayn ympäristössä kasvaa ainakin 11 eri mangrovelajia, ja koko Kimberleyn rannikolla lajimäärä nousee paikoin jopa 14:ään, mikä tekee alueesta yhden Länsi-Australian monimuotoisimmista mangrovealueista. Sokkeloiset juuristot suojaavat rantaviivaa eroosiolta ja toimivat kalojen ja äyriäisten poikasten kasvupaikkana; lentokoneesta laskeutuessa Broomeen matkustaja lentää usein suoraan vihreiden metsiköiden yli.',
+          tiedosto: 'Mangroves under the flight path to Broome airport, WA, Australia 04.jpg',
+          lyhyt: 'Mangrovemetsikkö Broomen lentoaseman lähellä, vuoroveden muovaamaa rantaa.',
+          selite:
+            'Ilmakuva näyttää tiheän mangrovemetsikön Broomen lentoaseman lähellä, alueen jonka vuorovesi tulvii säännöllisesti ja joka on osa Roebuck Bayn ravinnerikasta rannikkoekosysteemiä.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          wiki: 'Mangrove',
+        },
+      ],
+    },
+  ],
+  santarem: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santarém',
+      johdanto:
+        'Santarém syntyi vuonna 1661 jesuiittalähetysasemana Tapajós-joen suulle, '
+        + 'mutta sen tunnetuin näky on Vesien kohtaaminen: kaksi eriväristä jokea '
+        + 'virtaa vierekkäin kilometrien matkan sekoittumatta.',
+      nostot: [
+        {
+          otsikko: 'Lähetysasema Tapajós-joen suulla',
+          teksti:
+            'Kesäkuun 22. päivänä 1661 portugalilainen jesuiittapappi João Felipe '
+            + 'Bettendorff perusti Tapajós-kansan vanhalle asuinsijalle lähetysaseman '
+            + 'nimeltä Aldeia do Tapajós, ja tätä päivää pidetään Santarémin virallisena '
+            + 'syntyhetkenä. Alueella oli asunut alkuperäiskansaa jo satoja vuosia ennen '
+            + 'eurooppalaisten saapumista, ja lähetysasema rakennettiin pienen kappelin '
+            + 'ympärille. Vasta lähes sata vuotta myöhemmin, vuonna 1758, siirtokunta sai '
+            + 'vilan aseman ja uuden nimensä Santarém, Portugalin samannimisen kaupungin '
+            + 'mukaan; kaupungin arvon se sai 1848.',
+          tiedosto: 'TiagoSilveira CasarioHistorico Santarem Para (40064994385).jpg',
+          lyhyt: 'Jesuiitta Bettendorff perusti Santarémin lähetysasemana vuonna 1661.',
+          selite:
+            'Kuvassa on lähikuva keltaisista ja valkoisista koristeaiheisista '
+            + 'atsulejo-kaakeleista, jollaisilla Santarémin vanhan kaupunginosan '
+            + 'portugalilaistyyliset talot on perinteisesti päällystetty.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Santarém, Pará',
+        },
+        {
+          otsikko: 'Vesien kohtaaminen',
+          teksti:
+            'Santarémin edustalla Amazon-joen sameanruskea, kiintoainesta täynnä oleva '
+            + 'vesi kohtaa Tapajós-joen tumman sinertävän, kirkkaan veden, ja tulos on outo '
+            + 'näky: kaksi väriä virtaa vierekkäin useiden kilometrien matkan sekoittumatta '
+            + 'juuri lainkaan. Syynä ovat jokien erilainen lämpötila, tiheys ja '
+            + 'virtausnopeus: Amazonin lämpimämpi ja kevyempi vesi liukuu Tapajósin '
+            + 'viileämmän ja tiheämmän veden päällä. Paikallisesti ilmiötä kutsutaan '
+            + 'nimellä Encontro das Águas, Vesien kohtaaminen, ja se on yksi koko '
+            + 'Santarémin seudun tunnetuimmista matkailunähtävyyksistä.',
+          tiedosto: 'Santarém 01.jpg',
+          lyhyt: 'Amazonin ja Tapajósin erivärinen vesi virtaa vierekkäin sekoittumatta.',
+          selite:
+            'Kuvassa nähdään korkealta terassilta Santarémin rannan yli avautuva näkymä, '
+            + 'jossa vaaleampi Tapajós-joen vesi ja kauempana vaalean ruskea Amazon-joen '
+            + 'vesi erottuvat selvänä rajana toisistaan.',
+          lahde: 'Redbaobab, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Meeting of Waters (Amazon River)',
+        },
+        {
+          otsikko: 'Tapajós-kansan hautaurna',
+          teksti:
+            'Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui '
+            + 'Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen '
+            + 'eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui '
+            + 'laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla '
+            + 'kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti '
+            + 'taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, '
+            + 'joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään '
+            + 'esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet '
+            + 'lisää muinaisia asuinjälkiä sademetsän alta.',
+          tiedosto: 'TiagoSilveira Ceramica Santarem Para (40249314934).jpg',
+          lyhyt:
+            'Tapajós-kansa asui alueella jo kauan ennen eurooppalaisia ja teki taidokasta '
+            + 'keramiikkaa.',
+          selite:
+            'Kuvassa on museossa esillä oleva punaruskea savista hautaurna, jonka '
+            + 'vierellä oleva kyltti kertoo sen olevan Tapajós-kansan urna mortuária eli '
+            + 'hautausurna.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Tapajós (tribe)',
+        },
+        {
+          otsikko: 'Vilasta kaupungiksi',
+          teksti:
+            'Pitkään pieni Aldeia do Tapajós eli hiljaiseloa jesuiittojen lähetysasemana, '
+            + 'eikä sillä ollut juuri muuta merkitystä kuin paikallinen kauppapaikka joen '
+            + 'varrella. Vuonna 1758 siirtokunta korotettiin vilan asemaan ja se sai nimen '
+            + 'Santarém, ja lopulta 24. lokakuuta 1848 se julistettiin viralliseksi '
+            + 'kaupungiksi. Kasvu jatkui hitaasti mutta varmasti, sillä sijainti kahden '
+            + 'suuren joen risteyskohdassa teki paikasta luontevan levähdys- ja '
+            + 'kauppapaikan kaikelle liikenteelle, joka kulki Amazonia pitkin sisämaahan '
+            + 'tai takaisin merelle päin. Isoisän matkavuonna 1873 Santarém oli jo vilkas, '
+            + 'muutaman tuhannen asukkaan jokikaupunki.',
+          tiedosto: 'Observando o encontro das águas (42070272564).jpg',
+          lyhyt: 'Santarém sai vilan aseman 1758 ja kaupungin arvon 1848.',
+          selite:
+            'Kuvassa nainen istuu rannan penkillä selin katsomassa joelle, jossa on '
+            + 'ankkuroitu pieni puuvenhe; taustalla erottuu vaalea, sameampi vyöhyke veden '
+            + 'pinnassa.',
+          lahde: 'Wellington-stm, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Santarém, Pará',
+        },
+        {
+          otsikko: 'Kumikuume nostaa Santarémin',
+          teksti:
+            '1870-luvulla Amazonin alueella alkoi kumikuume, kun eurooppalaiset ja '
+            + 'pohjoisamerikkalaiset tehtaat tarvitsivat yhä enemmän luonnonkumia '
+            + 'polkupyörien ja myöhemmin autojen renkaisiin. Kumipuuta, hevea '
+            + 'brasiliensistä, kasvoi luonnonvaraisena juuri Santarémin ja Tapajós-joen '
+            + 'seudulla, ja kaupungista tuli nopeasti vilkas satama, josta raakakumia '
+            + 'lastattiin höyrylaivoihin Eurooppaan ja Yhdysvaltoihin. Kumikuume teki '
+            + 'monista paikallisista kauppiaista äkkirikkaita, ja jokirannan kauppahuoneet '
+            + 'ja tulliasemat kasvoivat vuosikymmenen aikana huomattavasti. Todellinen '
+            + 'huippukausi koettiin vasta 1880–1910, mutta nousu oli käynnissä jo isoisän '
+            + 'matkan aikoihin.',
+          tiedosto: 'TiagoSilveira Orla Santarem Para (39148974680).jpg',
+          lyhyt: 'Kumikuume alkoi 1870-luvulla ja teki Santarémista vilkkaan satamakaupungin.',
+          selite:
+            'Kuvassa on Santarémin jokirannan kauppasatama: keltainen kolonialtyylinen '
+            + 'rakennus, rantakatu ja useita pieniä puisia veneitä ankkuroituna tyyneen '
+            + 'veteen.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Amazon rubber boom',
+        },
+        {
+          otsikko: 'Henry Wickhamin varastetut siemenet',
+          teksti:
+            'Vuoden 1876 huhti–toukokuussa englantilainen Henry Wickham keräsi Boimin '
+            + 'kylästä Tapajós-joen varrelta, aivan Santarémin läheltä, noin 70 000 '
+            + 'kumipuun siementä. Hän ilmoitti Brasilian tulliviranomaisille kuljettavansa '
+            + 'vain arkoja kasvitieteellisiä näytteitä Britannian kuninkaalliselle '
+            + 'kasvitieteelliselle puutarhalle, ja vain murto-osa siemenistä, noin 2400, '
+            + 'itikin lopulta Kew Gardensissa. Näistä taimista kasvatettiin istutuksia '
+            + 'Britannian Aasian siirtomaihin, ja muutamassa vuosikymmenessä Aasian '
+            + 'kumiplantaasit murskasivat Brasilian monopolin. Isoisän matkasta oli '
+            + 'tuolloin kulunut vain kolme vuotta.',
+          tiedosto: '“Henry Wickham, who in 1876 directed an operation smuggling 70,000 rubber tree seeds”.jpg',
+          lyhyt: 'Wickham vei 70 000 kumipuun siementä Santarémin seudulta Britanniaan 1876.',
+          selite:
+            'Vanhassa mustavalkoisessa valokuvassa hattupäinen, viiksekäs mies nojaa '
+            + 'keppiin ja koskettaa toisella kädellään suuren kumipuun rungon kaarnaa '
+            + 'sademetsässä.',
+          lahde: 'Biblioteca Nacional Digital Brasil, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Henry Wickham (explorer)',
+        },
+        {
+          otsikko: 'Katedraali kertoo vauraudesta',
+          teksti:
+            'Santarémin keskustaa hallitsee vaaleansininen ja valkoinen Katedraali, jonka '
+            + 'kaksi torneja kohoaa korkealle puiden latvuston yläpuolelle keskustan '
+            + 'puiston laidalla. Kirkko on rakennettu ja laajennettu useassa vaiheessa sitä '
+            + 'mukaa kun kaupungin varallisuus kasvoi ensin joenrannan kauppatulojen ja '
+            + 'myöhemmin kumikuumeen myötä. Kirkon edustalla oleva pieni sininen ja '
+            + 'valkoinen paviljonki, koreto, on ollut vuosikymmeniä paikallisten '
+            + 'iltakävelijöiden ja soittokuntien kokoontumispaikka. Yhä nykyään keskustan '
+            + 'puisto ja katedraali ovat Santarémin sydän, josta kadut haarautuvat kohti '
+            + 'jokirantaa.',
+          tiedosto: 'Catedral Metropolitana de Santarém, Santarém, Pará, 2007.jpg',
+          lyhyt: 'Santarémin keskustan katedraali kohoaa kaupungin puiston laidalla.',
+          selite:
+            'Kuvassa on Santarémin katedraalin kaksi vaaleansinistä, valkoisin listoin '
+            + 'koristeltua tornia, joiden edessä näkyy pieni sininen ja valkoinen '
+            + 'paviljonki puiston keskellä.',
+          lahde: 'Lopmed, Wikimedia Commons (Public domain)',
+          wiki: 'Santarém, Pará',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sademetsä ja joet',
+      johdanto:
+        'Santarémin ympärillä sademetsä, joet ja valkoiset hiekkarannat kietoutuvat '
+        + 'yhteen: lähellä uivat vaaleanpunaiset jokidelfiinit ja tulvametsän vesi '
+        + 'kätkee sekä perhosia että muinaisia asuinjälkiä.',
+      tehtava: {
+        kysymys:
+          'Kuinka monta vuotta luonnontutkija Henry Walter Bates käytti Santarémia '
+          + 'tukikohtanaan hyönteistutkimuksissaan?',
+        vaihtoehdot: [
+          'Yhden vuoden.',
+          'Kolme vuotta.',
+          'Seitsemän vuotta.',
+          'Yksitoista vuotta.',
+        ],
+        oikea: 1,
+        fakta:
+          'Bates saapui Santarémiin lokakuussa 1849 ja piti kaupunkia tukikohtanaan '
+          + 'kolme vuotta osana pidempää Amazon-matkaansa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Amazonin Karibia',
+          teksti:
+            'Vain reilun kolmenkymmenen kilometrin päässä Santarémistä sijaitsee Alter do '
+            + 'Chãon kylä, jota kutsutaan usein Amazonin Karibiaksi sen valkoisten '
+            + 'hiekkarantojen ja kirkkaan Tapajós-joen veden vuoksi. Kylän edustalla '
+            + 'sijaitseva hiekkasärkkä Ilha do Amor eli Rakkauden saari nousee joesta '
+            + 'keskelle vettä, ja sen ympärille on syntynyt rantabaareja ja telttakatoksia. '
+            + 'Alter do Chãon perustivat 1620-luvulla Borari-kansan asuttamalle alueelle '
+            + 'portugalilaiset, ja kylä kuului pitkään Santarémin hallintoalueeseen. '
+            + 'Nykyään paikka on suosituin retkikohde koko seudulla.',
+          tiedosto: 'Ilha do Amor, Álter do Chão.JPG',
+          lyhyt: 'Alter do Chãon valkoiset hiekkarannat tekivät siitä Amazonin Karibian.',
+          selite:
+            'Kuvassa auringonlaskun väreissä lipuu valkoinen vene kohti hiekkaista '
+            + 'särkkää, jonka rannalla on olkikattoisia katoksia ja ihmisiä; taustalla '
+            + 'kohoaa metsäinen rantaviiva.',
+          lahde: 'Lais Castro, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alter do Chão, Pará',
+        },
+        {
+          otsikko: 'Kuivakausi kutsuu esiin hiekan',
+          teksti:
+            'Tapajós-joen hiekkarannat eivät näy ympäri vuoden, sillä ne paljastuvat '
+            + 'vasta kuivan kauden aikana elokuusta tammikuuhun, kun joen vedenpinta laskee '
+            + 'huomattavasti. Parhaimmillaan rannat ovat syys- ja lokakuussa, jolloin esiin '
+            + 'nousee jopa yli sata kilometriä valkoista hiekkaa joen molemmin puolin '
+            + 'Santarémin seudulla. Sadekauden aikana, marraskuusta heinäkuuhun, sama '
+            + 'hiekka jää metrien syvyisen veden alle ja rantaviiva vetäytyy takaisin '
+            + 'puiden juurelle. Paikalliset kalastajat suunnittelevat usein koko vuotensa '
+            + 'tämän veden vaihtelun mukaan.',
+          tiedosto: 'TiagoSilveira AlterDoChao Santarem Para (40249393044).jpg',
+          lyhyt: 'Tapajósin hiekkarannat paljastuvat parhaiten syys-lokakuun kuivalla kaudella.',
+          selite:
+            'Kuvassa auringonlasku heijastuu Tapajós-joen tyyneen veteen, jonka matalassa '
+            + 'rannassa on rivi pieniä puuveneitä ankkuroituna puiden siluettien alla.',
+          lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+          wiki: 'Alter do Chão, Pará',
+        },
+        {
+          otsikko: 'Vaaleanpunainen jokidelfiini',
+          teksti:
+            'Tapajós- ja Amazon-jokien vesissä ui boto, Amazonin jokidelfiini, joka voi '
+            + 'kasvaa yli kaksi ja puoli metriä pitkäksi ja painaa yli 150 kiloa. Sen pitkä '
+            + 'kapea kuono ja notkea kaula erottavat sen merissä elävistä delfiineistä, ja '
+            + 'iän myötä sen iho muuttuu yhä vaaleanpunaisemmaksi. Lähellä Alter do Chãota '
+            + 'sijaitseva Ponta do Cururú on tunnettu paikka, jossa botoja ja harmaita '
+            + 'tucuxi-delfiinejä kokoontuu iltaisin syömään matalikoille. Paikallisessa '
+            + 'Sairé-juhlassa, jonka jesuiitat toivat alueelle jo 1600-luvulla, juhlitaan '
+            + 'yhä sekä botoa että tucuxia.',
+          tiedosto: 'Boto cor-de-rosa - Pink dolphin (46314897644).jpg',
+          lyhyt: 'Boto on Amazonin jokidelfiini, joka muuttuu iän myötä vaaleanpunaiseksi.',
+          selite:
+            'Kuvassa jokidelfiinin pitkä, hampainen kuono kohoaa veden pinnalle suu '
+            + 'raollaan; delfiinin vaaleanpunertava iho erottuu tumman ruskeasta '
+            + 'jokivedestä.',
+          lahde: 'Just a Brazilian man, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Boto',
+        },
+        {
+          otsikko: 'Perhonen joka paljasti valheasun',
+          teksti:
+            'Englantilainen luonnontutkija Henry Walter Bates saapui Santarémiin '
+            + 'lokakuussa 1849 ja piti pientä jokikaupunkia tukikohtanaan peräti kolme '
+            + 'vuotta osana yhdentoista vuoden Amazon-matkaansa. Bates keräsi alueelta '
+            + 'kaikkiaan noin 14 000 hyönteislajia, joista lähes 8 000 oli tiedolle '
+            + 'ennestään tuntemattomia. Tutkiessaan sademetsän perhosia hän huomasi, että '
+            + 'monet syötäväksi kelpaavat lajit olivat kehittyneet muistuttamaan '
+            + 'väritykseltään myrkyllisiä sukulaislajejaan välttyäkseen linnuilta. Ilmiö '
+            + 'tunnetaan nykyään nimellä Batesin mimikry, ja se oli aikansa vahvimpia '
+            + 'todisteita Charles Darwinin luonnonvalinnan puolesta.',
+          tiedosto: 'Numata Longwing with Red Postman.jpg',
+          lyhyt: 'Bates asui Santarémissa kolme vuotta ja löysi perhosten jäljittelyilmiön.',
+          selite:
+            'Kuvassa on lepäävä liekkiperhonen (Heliconius numata), jonka mustan, '
+            + 'oranssin ja keltaisen kirjava siipikuvio muistuttaa muiden Amazonin '
+            + 'myrkyllisten perhoslajien väritystä.',
+          lahde: 'D. Gordon E. Robertson, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Henry Walter Bates',
+        },
+        {
+          otsikko: 'Tulvametsän kätketty kulttuuri',
+          teksti:
+            'Santarémin eteläpuolella leviää Tapajós-kansallismetsä, jonka '
+            + 'igapó-tulvametsät jäävät vuosittain kuukausiksi joen alle ja kuivuvat sitten '
+            + 'taas. Metsän alla piilee myös arkeologinen yllätys: LiDAR-laserkartoitus on '
+            + 'paljastanut Belterran ylängöllä satoja pieniä maakuoppia, poços de água, '
+            + 'jotka liittyvät Tapajós-kansan vuosisatoja vanhaan asutukseen sademetsän '
+            + 'katveessa. Tulvametsän kasvillisuus ja eläimistö ovat sopeutuneet elämään '
+            + 'sekä veden alla että sen yläpuolella, ja monet lajit tunnetaan tästä '
+            + 'metsästä ainoastaan täältä.',
+          tiedosto: 'Floresta Nacional do Tapajós André de Souza 01.jpg',
+          lyhyt: 'Tapajós-kansallismetsän tulvametsän alta on löytynyt muinaisia asuinjälkiä.',
+          selite:
+            'Kuvassa tumma metsälampi on täynnä pyöreitä, vihreän- ja punansävyisiä '
+            + 'lehtiä, jotka kelluvat veden pinnalla ja heijastavat yllä olevaa puustoa.',
+          lahde: 'André de Castro Souza, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tapajós National Forest',
+        },
+      ],
+    },
+  ],
 };
