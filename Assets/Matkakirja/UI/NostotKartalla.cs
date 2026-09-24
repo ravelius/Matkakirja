@@ -8,9 +8,9 @@
 //   [kuva] Delfoi         historia, luonto, kulttuuri, kauppa: tyyppimerkki (merkki-*.png)
 //
 // Nimiö (11 px, Iowan kursiivi, pergamenttihalo) merkin oikealla puolella, tärkeillä (tarkeys ≥ 2)
-// hieman isompi. Koko kerros häivähtää Syttyminen-arvon mukaan (0 → 1, 0,7 s). Karttaselitteen valinta
-// suodattaa (web: yksi aihe kerrallaan; "ei" = ei merkkejä, "kaikki" = kaikki). Linssin ajan kerros on
-// piilossa (NaytaSallittu). Ryhmitys 44 px ja viuhka ovat seuraava vaihe.
+// hieman isompi. Koko kerros häivähtää Syttyminen-arvon mukaan (0 → 1, 0,7 s). Merkit näkyvät aina; karttaselitteen
+// valinta ohjaa vain karttavalojen hehkua (Natiiviseppä, web). Linssin ajan kerros on piilossa (NaytaSallittu).
+// Ryhmitys 44 px ja viuhka ovat seuraava vaihe.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -74,19 +74,15 @@ namespace Matkakirja.Natiivi
             juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!nakyy) return;
             juuri.style.opacity = Mathf.Clamp01(k.Syttyminen);
-            string valittu = valot?.Valittu;
+            // Merkit näkyvät aina (web fokuskohteet); karttaselitteen valinta ohjaa vain karttavalojen hehkua.
             var paneeli = juuri.panel;
             int n = 0;
-            if (valittu != "ei")
+            foreach (var s in k.Naytettavat)
             {
-                foreach (var s in k.Naytettavat)
-                {
-                    if (!string.IsNullOrEmpty(valittu) && valittu != "kaikki" && valittu != s.Aihe) continue;
-                    var m = Hae(n++, s);
-                    // Ruutu: pikselit, origo vasen ala → paneelin pisteet (origo vasen ylä).
-                    var p = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(s.Ruutu.x, Screen.height - s.Ruutu.y));
-                    m.El.style.translate = new Translate(Mathf.Round(p.x), Mathf.Round(p.y));
-                }
+                var m = Hae(n++, s);
+                // Ruutu: pikselit, origo vasen ala → paneelin pisteet (origo vasen ylä).
+                var p = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(s.Ruutu.x, Screen.height - s.Ruutu.y));
+                m.El.style.translate = new Translate(Mathf.Round(p.x), Mathf.Round(p.y));
             }
             for (int i = n; i < merkit.Count; i++) merkit[i].El.style.display = DisplayStyle.None;
         }

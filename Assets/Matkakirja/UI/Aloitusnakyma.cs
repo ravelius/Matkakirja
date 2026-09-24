@@ -89,6 +89,20 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
+        /// <summary>
+        /// Portti näkyy (Aloita seikkailu / Jatka matkaa): kameran puoli sumentaa pallon sen ajan (web .start-gate
+        /// backdrop-filter 6px; Natiiviseppä, löydös 17). Tapahtuu vain tilan muuttuessa.
+        /// </summary>
+        public static event Action<bool> PorttiMuuttui;
+        public static bool PorttiAuki { get; private set; }
+
+        static void AsetaPortti(bool auki)
+        {
+            if (PorttiAuki == auki) return;
+            PorttiAuki = auki;
+            PorttiMuuttui?.Invoke(auki);
+        }
+
         public Aloitusnakyma(UiKerros kerros)
         {
             juuri = Rakenne.El("mk-aloitus", kerros.Juuri(UiKerros.Traileri));
@@ -291,6 +305,7 @@ namespace Matkakirja.Natiivi
             juuri.style.opacity = 1f;
             portti.style.display = DisplayStyle.Flex;
             portti.style.opacity = 1f;
+            AsetaPortti(true);
             intro.style.opacity = 0f;
             arkki.style.opacity = 0f;
             valinta.style.display = DisplayStyle.None;
@@ -307,6 +322,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             LopetaPallovalinta();
             Auki = false;
+            AsetaPortti(false);
             kirjoitus?.Pause();
             juuri.style.opacity = 0f;
             // Ei lennolla: Valitse → Piilota → LentoKirjoitus, ja tämä ajastin piilotti avaustekstin heti (TF4, Laitetestaaja).
@@ -319,6 +335,7 @@ namespace Matkakirja.Natiivi
         {
             Nayta(aloita, kohteet);
             portti.style.display = DisplayStyle.None;
+            AsetaPortti(false);
             NaytaValinta();
         }
 
@@ -327,6 +344,7 @@ namespace Matkakirja.Natiivi
         {
             Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
             portti.style.opacity = 0f;
+            AsetaPortti(false);
             portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
             NaytaValinta();
         }
@@ -451,6 +469,7 @@ namespace Matkakirja.Natiivi
             intro.AddToClassList("mk-aloitus__intro--lento");
             intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
             portti.style.display = DisplayStyle.None;
+            AsetaPortti(false);
             valinta.style.display = DisplayStyle.None;
             valintaNappi.style.display = DisplayStyle.None;
             intro.style.opacity = 1f;
