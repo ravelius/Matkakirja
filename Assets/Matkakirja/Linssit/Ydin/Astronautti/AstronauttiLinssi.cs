@@ -220,7 +220,7 @@ namespace Matkakirja.Linssit.Astronautti
             y.MusiikkiPitoon(false);
             // Pallo palaa täsmälleen lähtötilaan (web pura()); webissä hyppy, natiivissa pehmeä paluu
             // (Raamattu KAMERA-AJOT, omistaja 24.9.: ei hyppyjä), vähennetyllä liikkeellä heti.
-            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : PaluuAjoS);
+            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : PaluuAjoS, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
         }
     }
 }

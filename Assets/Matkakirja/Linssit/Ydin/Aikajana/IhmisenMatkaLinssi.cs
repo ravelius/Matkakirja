@@ -140,7 +140,7 @@ namespace Matkakirja.Linssit.Aikajana
         void Jatka()
         {
             var m = muisti;
-            if (m.Kamera is Nakyma k) y.AjaKamera(k, y.VahennettyLiike ? 0f : MuistinAjoS);
+            if (m.Kamera is Nakyma k) y.AjaKamera(k, y.VahennettyLiike ? 0f : MuistinAjoS, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
             if (!Esitys.JatkaMuistista(m))
             {
                 muisti = null;
@@ -342,7 +342,7 @@ namespace Matkakirja.Linssit.Aikajana
             Esitys = null;
             y.Pelikerrokset(true);
             y.MusiikkiPitoon(false);
-            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f);
+            y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
         }
     }
 }

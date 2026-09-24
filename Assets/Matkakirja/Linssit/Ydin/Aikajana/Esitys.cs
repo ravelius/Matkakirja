@@ -174,14 +174,11 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (Kaynnissa || Paattynyt) return;
             nakyma.Musta(true, 0);
-            // Web avaaKaukaisuus: mustan alla pallo kauas Afrikan keskuksen yläpuolelle, jotta Maa näkyy musta
-            // pois -hetkellä pisteenä tähtien keskellä ja zoomi Afrikkaan lähtee avaruudesta (ei pelaajan
-            // kaupungista: omistajan build 5 -löydös 12, iPhone). Vähennetty liike: pallo heti Afrikassa.
-            if (!y.VahennettyLiike && Esitysmatikka.Alueet.TryGetValue("afrikka", out var a) && a is Laatikko af)
-            {
-                var r = af.Rajaus();
-                y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus);
-            }
+            // Avaruus (web avaaKaukaisuus) ajetaan tempon dramaturgialla (Raamattu KAMERA-AJOT 24.9.):
+            // ensimmäinen virke mustalla kaupungin yllä, NOUSU tähtiin mustan häivyttyä (Nousu), HETKI
+            // TÄHDISSÄ (pito zoomin alkuun), SYÖKSY Afrikkaan KUMINAUHAJARRUTUKSELLA (SyoksyKuminauha).
+            // Vähennetty liike: pallo heti Afrikassa (KaynnistaAvaruusajo).
+            nousuOdottaa = !y.VahennettyLiike;
             Kaynnissa = true;
             AloitaJakso(0);
         }
@@ -243,7 +240,9 @@ namespace Matkakirja.Linssit.Aikajana
                 double k = avaruusTauko;
                 avaruusTauko = double.NaN;
                 avaruusAlku = Nyt - (AvausOhi ? avaruusKesto : k);
-                if (!AvausOhi) AjaAlueeseen("afrikka", AvaruuttaJaljella());
+                // Tauon jälkeen loppumatka levosta kuminauhalla (ei nykäystä syöksyn keskeltä).
+                if (!AvausOhi) AjaAlueeseen("afrikka", AvaruuttaJaljella(),
+                    Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha));
             }
         }
 
@@ -346,6 +345,7 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 var ajat = AvauksenAjat();
                 if (MustaPaalla && Kulunut >= ajat.Musta) { MustaPaalla = false; nakyma.Musta(false, ajat.Feidi); }
+                if (nousuOdottaa && Kulunut >= ajat.Musta) KaynnistaNousu(ajat.ZoomAlku - Kulunut);
                 if (avausOdottaa && Kulunut >= ajat.ZoomAlku) KaynnistaAvaruusajo(ajat.ZoomLoppu - Kulunut);
             }
             if (valotOdottaa && AvaruuttaJaljella() <= 0) SytytaValot();
@@ -601,8 +601,26 @@ namespace Matkakirja.Linssit.Aikajana
             return Math.Max(0, avaruusKesto - kulunut);
         }
 
+        bool nousuOdottaa;
+
+        /// <summary>Nousun kesto (ms): enintään 1,8 s ja 60 % ajasta zoomin alkuun, jotta tähdissä ehtii viipyä.</summary>
+        public const double NousuMaxMs = 1800, NousuMinMs = 500;
+
+        /// <summary>NOUSU: kaupungista 300 pallonsäteen päähän Afrikan yläpuolelle (Kayra.Nousu), liian lyhyellä ajalla heti.</summary>
+        void KaynnistaNousu(double zoomiinMs)
+        {
+            nousuOdottaa = false;
+            if (!Esitysmatikka.Alueet.TryGetValue("afrikka", out var a) || !(a is Laatikko af)) return;
+            var r = af.Rajaus();
+            double ms = Math.Min(NousuMaxMs, zoomiinMs * 0.6);
+            if (ms < NousuMinMs) { y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus); return; }
+            y.AjaKamera(new Nakyma(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade), (float)(ms / 1000),
+                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Nousu));
+        }
+
         void KaynnistaAvaruusajo(double? kesto)
         {
+            nousuOdottaa = false;
             if (!avausOdottaa) return;
             avausOdottaa = false;
             double katto = Esitysmatikka.AvaruudenMs + Esitysmatikka.ZoominJatkoMs;   // AVARUUDEN_KATTO_MS
@@ -610,7 +628,8 @@ namespace Matkakirja.Linssit.Aikajana
             if (MustaPaalla) { MustaPaalla = false; nakyma.Musta(false, 0); }
             if (y.VahennettyLiike) { AjaAlueeseen("afrikka", 0); return; }
             avaruusAlku = Nyt;
-            AjaAlueeseen("afrikka", avaruusKesto);
+            // SYÖKSY + KUMINAUHAJARRUTUS: hidas irtoaminen tähdistä, kiihtyvä pudotus, jousto perille.
+            AjaAlueeseen("afrikka", avaruusKesto, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.SyoksyKuminauha));
         }
 
         void SytytaValot()
@@ -669,7 +688,7 @@ namespace Matkakirja.Linssit.Aikajana
             Aja(keskus, Kameramatikka.LeveysAsteina(leveys), kestoMs, pehmennys);
         }
 
-        void AjaAlueeseen(string alue, double kestoMs)
+        void AjaAlueeseen(string alue, double kestoMs, Func<double, double> pehmennys = null)
         {
             if (!Esitysmatikka.Alueet.TryGetValue(alue, out var laatikko)) return;
             if (laatikko is Laatikko l)
@@ -677,7 +696,7 @@ namespace Matkakirja.Linssit.Aikajana
                 var r = l.Rajaus();
                 // Laatikko mahtuu ruudulle kummassakin suunnassa (web ajaKamera bbox).
                 double leveys = Math.Max(r.LeveysAst, r.KorkeusAst * y.Kuvasuhde);
-                Aja(new LatLon(r.Lat, r.Lon), leveys, kestoMs);
+                Aja(new LatLon(r.Lat, r.Lon), leveys, kestoMs, pehmennys);
             }
             else
             {
@@ -691,6 +710,9 @@ namespace Matkakirja.Linssit.Aikajana
         {
             ViimeisinAjo = (keskus, leveysAst, kestoMs);
             double ms = y.VahennettyLiike ? 0 : kestoMs;
+            // Oma käyrä puuttuu → tempo matkan mukaan (Kamerakoreografia.Matkalle, Raamattu KAMERA-AJOT).
+            var nyt = y.Kamera;
+            pehmennys ??= Matkakirja.Linssit.Kamera.Kamerakayrat.Matkalle(nyt.Lat, nyt.Lon, keskus.Lat, keskus.Lon);
             y.AjaKamera(new Nakyma(keskus.Lat, keskus.Lon, y.KorkeusLeveydelle(leveysAst)), (float)(ms / 1000), pehmennys);
         }
     }
