@@ -3655,3 +3655,7 @@ Fable: Natiivi-UI toteuttaa tekstit, Pelikoodari vaihtaa lennon äänen lento-al
 ## OMISTAJA klo 12.1x (SITOVA, BUILD 6 -LOYDOS 24, ALOITUSNAYTTO): A) ALOITUSPORTIN TEKSTIT WEBIN MUKAAN — WEBISSA (js/ui.js showAloitusportti) VAIN 'Laita äänet päälle' + KAIUTIN, NAPPI 'Aloita seikkailu', ALHAALLA LINKKI 'Oppiminen on hauskaa' (PERIAATTEET-LAPPU); EI OTSIKKOLOHKOA ('MATKAKIRJA / MAAILMAN YMPÄRI…/ OSA II'), EI 'Seuraa isoisän…' -INGRESSIA, EI 'Jatka matkaa' / 'Uusi matka' -NAPPEJA; PORTIN JALKEEN TALLENNUS JATKUU TAI ILMAN TALLENNUSTA AVAUSRUUTU (HEATHROW + INTRO_TEXT + 'Valitse aloituskaupunki'); B) ☰-VALIKON 'Uusi peli' VIE NYT LONTOON KARTALLE — PITAA PALATA ALOITUSNAYTTOON (PORTTI) JA SIITA AVAUSRUUDUN KAUTTA VALINTAAN → NATIIVI-UI, BUILD 7 (24.9.2026 klo 12.08)
 
 Fable: webin viitekuva proto-3d/lokit/pariteetti-web-2026-09-24/aloitusportti-393x852.png; natiivin nykytila build6-tarkistus-20260924/17-etusivupallo-b.png.
+
+## OMISTAJA klo 12.1x: D1 EDIT -OIKEUS LISATTY CLOUDFLARE-TOKENIIN 'Edit Cloudflare Workers' (USER API TOKENS: mac-studio-poltto, Edit Cloudflare Workers, matkakirja-uutiset build token) → JULKAISIJA AJAA sahke-worker.yml UUDELLEEN; JOS 10000 TOISTUU, OIKEUS MYOS 'matkakirja-uutiset build token' -TOKENIIN (24.9.2026 klo 12.08)
+
+Fable käski Julkaisijan.
