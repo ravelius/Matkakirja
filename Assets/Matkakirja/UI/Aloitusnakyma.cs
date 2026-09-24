@@ -700,10 +700,11 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Avausluenta päättyi pallolla: kamera zoomaa ulos valintanäkymään ja pulu lentää ruutuun samaan aikaan.
-        /// Natiiviseppä voi antaa ulos-zoomin käyrän (KAMERA-AJOT) UlosZoominPehmennys-kentällä; null = PalloKierron oletus.
+        /// Ulos-zoomi yhteisellä KAMERA-AJOT-käyrällä (Kuminauha: ~2 % ylitys ja joustava jarrutus; Natiiviseppä 24.9.).
         /// </summary>
         public static event Action AvausluentaPaattyi;
-        public static Func<double, double> UlosZoominPehmennys;
+        public static Func<double, double> UlosZoominPehmennys =
+            Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha);
         public const float UlosZoominKesto = 3.2f;
         const double PallonOsuus = 0.55, AnkkuriVara = 0.78;
         /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
