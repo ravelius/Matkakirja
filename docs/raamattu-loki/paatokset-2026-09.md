@@ -4731,3 +4731,7 @@ Omistaja: 'nuo uudetkin lähikuvat ovat vielä epäselviä verrattuna web versio
 ## OMISTAJA klo 23.2x: LOYDOKSEEN 46 VEDOS MYOS ILMAN VAHVISTETTUA AARIVIIVAA (EI MUSTETTA RANNALLA, ANTIALIASOITU VARIRAJA, C-RELIEFI; NATIIVIN MAARAJA-KEHA POIS VERTAILUSSA) (24.9.2026 klo 23.26)
 
 Omistaja: 'voisi kokeilla karttaa myös ilman vahvistettua ääriviivaa'. Karttasepälle lisätty vedosvariantti (lähikuva + z6) ilman rantamustetta, vain antialiasoitu maan ja meren raja ja kevyt hachure-vinjetti tai ilman; Natiiviseppä ottaa Maaraja-kehän pois vertailussa.
+
+## OMISTAJA klo 23.2x: MERESTA SYVYYSVIIVAT POIS, VAIN SAVYVAIHTELU (LOYDOS 46) (24.9.2026 klo 23.28)
+
+Omistaja: 'merestä voisi ottaa ehkä ne syvyysviivat pois ja jättää vain värivaihtelut niihin'. Karttasepälle: syvyys pehmeänä sävyliukuna pergamentin sävyssä, ei käyriä eikä vesiviivoitusta; yhdistetään ääriviivattomaan ja C-varianttiin.
