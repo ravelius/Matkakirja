@@ -28,15 +28,37 @@ namespace Matkakirja.Natiivi
 #endif
         bool auki;
 
-        public static RadioVirta Luo(Transform isanta)
+        /*
+         * YKSI SOITIN, OMISTAJALUKKO (Natiivi-UI:n mediarivi 24.9.): MatkakirjaRadio.mm:ssä on yksi
+         * globaali AVPlayer, jota maailmanradio ja lehden mediarivi käyttävät omilla RadioVirta-
+         * instansseillaan. Web radio.js: "LINSSIN OMA VIRITYS VOITTAA" — radiolinssin virta
+         * (Etusija) ei väisty lehden tieltä, ja vain soittimen nykyinen omistaja saa sulkea sen,
+         * joten suljettu lehti ei katkaise linssin lähetystä.
+         */
+        static RadioVirta omistaja;
+        /// <summary>Radiolinssin virta: ei väisty muiden (lehden mediarivi) tieltä.</summary>
+        public bool Etusija;
+        /// <summary>Avaus hylättiin, koska radiolinssi soittaa (Varattu).</summary>
+        public bool Estetty { get; private set; }
+        /// <summary>Radiolinssin lähetys soi tai virittyy: muut eivät saa soittaa (UI: näytä syy).</summary>
+        public static bool Varattu => omistaja != null && omistaja.auki && omistaja.Etusija;
+        bool Oma => ReferenceEquals(omistaja, this);
+
+        public static RadioVirta Luo(Transform isanta, bool etusija = false)
         {
             var go = new GameObject("RadioVirta");
             go.transform.SetParent(isanta, false);
-            return go.AddComponent<RadioVirta>();
+            var v = go.AddComponent<RadioVirta>();
+            v.Etusija = etusija;
+            return v;
         }
 
         public void Avaa(string url, string tyyppi)
         {
+            Estetty = false;
+            if (!Etusija && Varattu && !Oma) { Estetty = true; auki = false; return; }
+            if (omistaja != null && !Oma) omistaja.auki = false;   // edellinen menettää soittimen
+            omistaja = this;
             auki = true;
 #if UNITY_IOS && !UNITY_EDITOR
             MatkakirjaRadio_Avaa(url);
@@ -50,6 +72,8 @@ namespace Matkakirja.Natiivi
         {
             if (!auki) return;
             auki = false;
+            if (!Oma) return;   // soitin on jo toisen: ei katkaista sitä
+            omistaja = null;
 #if UNITY_IOS && !UNITY_EDITOR
             MatkakirjaRadio_Sulje();
 #else
@@ -57,12 +81,12 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
-        public float Voimakkuus { set => MatkakirjaRadio_Voimakkuus(value); }
+        public float Voimakkuus { set { if (Oma) MatkakirjaRadio_Voimakkuus(value); } }
 
         /// <summary>Tauko: AVPlayer pause/play (yhteys jää, RadioLinssi ei lue Kuuluu-tilaa tauolla).</summary>
         public void Tauko(bool paalle)
         {
-            if (!auki) return;
+            if (!auki || !Oma) return;
 #if UNITY_IOS && !UNITY_EDITOR
             MatkakirjaRadio_Tauko(paalle ? 1 : 0);
 #else
@@ -74,7 +98,7 @@ namespace Matkakirja.Natiivi
         {
             get
             {
-                if (!auki) return 0;
+                if (!auki || !Oma) return 0;
 #if UNITY_IOS && !UNITY_EDITOR
                 return MatkakirjaRadio_Tila();
 #else
@@ -92,7 +116,7 @@ namespace Matkakirja.Natiivi
 #else
             $"(editori) auki {auki}, tila {Tila}";
 #endif
-        public string Virhe => Tila switch { 3 => "Asema ei vastaa", 4 => "Lähetys katkesi", _ => null };
+        public string Virhe => Estetty ? "Radiolinssi soi" : Tila switch { 3 => "Asema ei vastaa", 4 => "Lähetys katkesi", _ => null };
 
         void OnDestroy() => Sulje();
     }

@@ -598,7 +598,7 @@ namespace Matkakirja.Natiivi
 
             public void Avaa(ILinssiYmparisto y)
             {
-                virta = RadioVirta.Luo(o.transform);
+                virta = RadioVirta.Luo(o.transform, etusija: true);
                 viritin = RadioViritin.Luo(o.transform, aineisto.Viritysaanet);
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
