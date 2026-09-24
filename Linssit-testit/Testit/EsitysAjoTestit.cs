@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using Matkakirja.Linssit.Aikajana;
+using Matkakirja.Linssit.Kamera;
 
 namespace Matkakirja.Linssit.Testit
 {
@@ -117,21 +118,35 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void AvausLahteeAvaruudesta()
         {
-            // Web avaaKaukaisuus: mustan alla kamera 300 pallonsäteen päähän Afrikan keskuksen yläpuolelle,
-            // ja zoomi Afrikkaan lähtee sieltä (omistajan build 5 -löydös 12: iPhonessa zoomi lähti kaupungista).
+            // Web avaaKaukaisuus + tempon dramaturgia (Raamattu KAMERA-AJOT 24.9.): musta kaupungin yllä,
+            // NOUSU tähtiin (300 pallonsädettä Afrikan yllä) mustan häivyttyä, HETKI TÄHDISSÄ, SYÖKSY
+            // Afrikkaan kuminauhajarrutuksella (omistajan build 5 -löydös 12: zoomi lähti kaupungista).
             var (e, y, _, _, _, _) = Luo();
             e.Aloita();
-            Oleta.Tosi(y.Avaruus != null, "kamera ei mennyt avaruuteen");
-            Oleta.Sama(Esitysmatikka.AvaruudenKorkeus, y.Avaruus.Value.Sateita);
-            Lahella(1.0, y.Avaruus.Value.Lat, "keskus lat (−35…37)", 1e-9);
-            Lahella(17.0, y.Avaruus.Value.Lon, "keskus lon (−18…52)", 1e-9);
-            Oleta.Tosi(y.Loki.IndexOf("avaruus 300") >= 0 && !y.Loki.Take(y.Loki.IndexOf("avaruus 300")).Contains("ajo"),
-                "avaruus ennen ensimmäistä kamera-ajoa");
+            var v = e.AvauksenAjat();
+            Oleta.Tosi(y.Ajo == null && y.Avaruus == null, "mustan aikana kamera paikallaan");
+            Aja(e, y, (v.Musta + 100) / 1000.0);
+            Oleta.Tosi(y.Ajo != null, "nousu alkoi mustan häivyttyä");
+            Lahella(Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade, y.Ajo.Value.Korkeus, "nousun korkeus", 1);
+            Lahella(1.0, y.Ajo.Value.Lat, "nousun keskus lat (−35…37)", 1e-9);
+            Lahella(17.0, y.Ajo.Value.Lon, "nousun keskus lon (−18…52)", 1e-9);
+            Oleta.Tosi(y.AjonKesto > 0 && y.AjonKesto <= Esitys.NousuMaxMs / 1000 + 1e-6, "nousun kesto " + y.AjonKesto);
+            Oleta.Tosi(y.AjonPehmennys != null && y.AjonPehmennys(0.3) > Kamerakayrat.Pehmea(0.3), "nousu nopea alussa");
+            int ajoja = y.Loki.Count(l => l == "ajo");
+            Aja(e, y, (v.ZoomAlku - v.Musta - 300) / 1000.0);
+            Oleta.Sama(ajoja, y.Loki.Count(l => l == "ajo"), "hetki tähdissä: ei uutta ajoa ennen zoomia");
+            Aja(e, y, 0.6);
+            Oleta.Tosi(y.Loki.Count(l => l == "ajo") == ajoja + 1, "syöksy Afrikkaan alkoi");
+            Oleta.Tosi(y.Ajo.Value.Korkeus < Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade / 10, "syöksy alas");
+            double yli = Enumerable.Range(0, 101).Max(i => y.AjonPehmennys(i / 100.0));
+            Oleta.Tosi(yli > 1.0, "kuminauhajarrutus ylittää hieman");
 
             var (e2, y2, _, _, _, _) = Luo();
             y2.Vahennetty = true;
             e2.Aloita();
-            Oleta.Tosi(y2.Avaruus == null, "vähennetty liike: ei avaruutta (pallo heti Afrikassa)");
+            Aja(e2, y2, 3);
+            Oleta.Tosi(y2.Avaruus == null && (y2.Ajo == null || y2.Ajo.Value.Korkeus < Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade / 10),
+                "vähennetty liike: ei nousua avaruuteen");
         }
 
         [Testi] static void KoreografiaAlustaLoppuun()

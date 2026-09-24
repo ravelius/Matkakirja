@@ -516,11 +516,14 @@ namespace Matkakirja
         /// Kamera-ajo omalla pehmennyskäyrällä (t 0–1 → osuus 0–1), esim. linssin
         /// kohdeajo. null = verkkopelin siirtoajonPehmennys (ramppi 0,3).
         /// </summary>
-        public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis, Func<double, double> pehmennys)
+        /// <param name="yliKaton">Kohde saa olla loitonnuksen katon yläpuolella (linssien avaruusajot, Linssiseppä 24.9.).</param>
+        public void Aja(double lat, double lon, double kohdeKorkeus, float kestoS, Action valmis, Func<double, double> pehmennys,
+            bool yliKaton = false)
         {
             kosketettu = true;
             liuku = 0;
-            double h1 = kohdeKorkeus > 0 ? math.clamp(kohdeKorkeus, MinKorkeus(), MaxKorkeus()) : korkeus;
+            double katto = yliKaton ? math.max(MaxKorkeus(), kohdeKorkeus) : MaxKorkeus();
+            double h1 = kohdeKorkeus > 0 ? math.clamp(kohdeKorkeus, MinKorkeus(), katto) : korkeus;
             double dLon = Kiedo(lon - pituus);
             double lat1 = math.clamp(lat, -maxLeveys, maxLeveys);
             // Isoympyräkulma alun ja lopun välillä: pitkällä matkalla kamera nousee.
@@ -551,7 +554,7 @@ namespace Matkakirja
             leveys = math.lerp(ajo.alku.y, ajo.loppu.y, e);
             // Korkeus logaritmisesti (tasainen zoomin tuntu) ja nousu kaaren keskellä.
             // Ajo avaruudesta (AsetaKaukaa) saa lähteä katon yläpuolelta; katto koskee vain pelaajan zoomia.
-            double hMax = math.max(MaxKorkeus(), ajo.alku.z);
+            double hMax = math.max(MaxKorkeus(), math.max(ajo.alku.z, ajo.loppu.z));
             double lh = math.lerp(math.log(ajo.alku.z), math.log(ajo.loppu.z), e);
             double kaari = math.sin(math.PI * e) * ajo.nousu * (math.log(hMax) - lh);
             korkeus = math.min(hMax, math.exp(lh + kaari));
