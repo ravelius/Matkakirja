@@ -4803,3 +4803,7 @@ Omistaja: 'Ei kuulu ääniä vaikka ei mykistystä.' Pelikoodarille: äänet-ase
 ## OMISTAJA klo 00.2x (SITOVA, LOYDOS 52): ENSIMMAISEN LENNON JALKEEN KOHDEKAUPUNKIIN SAAVUTTAESSA SAMA VALITEKSTI KUIN WEBISSA → PELIKOODARI (SAAPUMISEN KERRONTA WEBIN KAAVALLA, BUILD 12) (25.9.2026 klo 00.19)
 
 Omistaja: 'Saavuttaessa ensi lennon jälkeen kohdekaupunkiin saisi tulla sama väli teksti kuin webissä.' Pelikoodari mittaa webin saapumiskaavan (teksti, ajoitus, näkymä, ääni) ja toteuttaa natiiviin; kuvapari ja video.
+
+## LINSSIKATALOGIN UUSI SIVU TUOTANNOSSA (https://matkakirja.app/linssikatalogi.html, v2209): 165 LINSSIA, 9 PELISSA NYT, 27 SEURAAVAKSI, 66 AINEISTOLAHDETTA, KUUSI MOOTTORIKORTTIA; DATA.JS 175 kt LATAUTUU; EI KONSOLIVIRHEITA (25.9.2026 klo 00.21)
+
+Fable tarkisti selaimella klo 00.2x. Pieni korjaus Sisältökirjurin jatko-PR:ään: moottorikortin tekstissä näkyy raaka markdown-lainaus (). Huom: 'Seuraavaksi 27' laskee data- ja esitys-kaistat mukaan; tarkistetaan luku (8 + 17 + 4 = 29?).
