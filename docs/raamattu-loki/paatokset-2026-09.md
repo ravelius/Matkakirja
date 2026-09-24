@@ -4323,3 +4323,7 @@ Mainin kopio oli vanhentunut (10.5x) → uusin haarasta, kuten ohjeistettu. Post
 ## ASTROPULU b10d: PILLERI MENEE OIKEAAN CHATTIIN, MUTTA WORKER HYLKAA KEHITYS-APP ID:N (HTTP 403 Origin ei ole sallittu) → PELIKOODARI LISAA fi.matkakirja.peli.kehitys SALLITTUIHIN (24.9.2026 klo 17.21)
 
 Linssisepän korjaus: pöllökoodi ei ole chatin ehto (vain päivärajan ohitus). Kuvat proto-3d/lokit/linssit-astropulu-20260924/. Kuvapari webin kanssa kun worker sallii ID:n.
+
+## LENTOPINTA HYVAKSYTTY MERGEEN (natiiviseppa/satelliitti 70b902c): BATHY + S2-ALKUP, MERI sRGB (17, 46, 92), Z2-VARAKARTTA KAYNNISTYKSESSA, KORKEUSKERROIN 2; PROTO-MASTER a47967d (24.9.2026 klo 17.22)
+
+Fable katsoi lentopinta.jpg (kylmä ja lämmin lento): meri yhtenäisen sininen, Z7→Z8-sauma pehmeä, Kreikan lasku hyvä; kylmällä lennolla yksi suorakulmio kehyksessä 10 → varakartta ladataan käynnistyksessä. Masterissa: b10-avaruus (ISS-video), b10-keksinnot, kehitystiimi, iso-ipad, pelikoodari/uusi-peli-sulkee-aloituksen. Odottaa kuvaparia: linssinimet e8d95dd + f4a5a6d (Natiivi-UI:n NostotKartalla-ehto tehty), astropulu (worker-sallinta). Ämpärin karsinta (bmng topo, s2 sovitettu) vasta omistajan nähtyä build 10:n.
