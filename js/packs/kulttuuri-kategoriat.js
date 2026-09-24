@@ -106615,7 +106615,7 @@ export const KULTTUURI_KATEGORIAT = {
         {
           otsikko: 'Kaapeli joka yhdisti mantereet',
           teksti:
-            'Vuonna 1889 merenalainen lennätinkaapeli laskettiin Broomesta yli 1 800 kilometrin päähän Banyuwangiin Jaavalle, ja siitä eteenpäin viesti kulki maayhteyksiä pitkin aina Lontooseen asti – matka, joka isoisän 1873 purjehtineelle laivalle olisi vienyt kuukausia, kutistui parissa tunnissa. Kaapelin rantautumispaikka länsipuolella sai nimen Cable Beach, ja siitä tuli myöhemmin 22 kilometrin pituinen valkohiekkainen ranta, joka on nykyään Broomen tunnetuin maamerkki ja suosittu kamelisafarien näyttämö auringonlaskun aikaan.',
+            'Vuonna 1889 merenalainen lennätinkaapeli laskettiin Broomesta noin 1 650 kilometrin päähän Banyuwangiin Jaavalle, ja siitä eteenpäin viesti kulki maayhteyksiä pitkin aina Lontooseen asti – matka, joka isoisän 1873 purjehtineelle laivalle olisi vienyt kuukausia, kutistui parissa tunnissa. Kaapelin rantautumispaikka länsipuolella sai nimen Cable Beach, ja siitä tuli myöhemmin 22 kilometrin pituinen valkohiekkainen ranta, joka on nykyään Broomen tunnetuin maamerkki ja suosittu kamelisafarien näyttämö auringonlaskun aikaan.',
           tiedosto: 'Dusk at Cable Beach, Broome, WA, Australia 01.jpg',
           lyhyt: 'Cable Beach auringonlaskussa, nimetty vuoden 1889 lennätinkaapelin mukaan.',
           selite:
