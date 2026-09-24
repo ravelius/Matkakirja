@@ -2,29 +2,29 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 00:17 EEST
+**Päivitetty:** 2026-09-25 00:29 EEST
 
 ## 1) Sessiot
 
 | Rooli | Session id | Malli | Konteksti | Tila | Viimeisin valmis erä | Odottaa |
 |---|---|---|---|---|---|---|
-| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 52% | busy | (koordinoi tilataulua) | — |
-| Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 9% | idle | Nollattu, mergaa jonoa | Sisältökirjurin katalogi-PR #3128 |
-| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 50% | busy | — | — |
-| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 57% | busy | — | Testikäännös käännöspalvelulla |
-| Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 68% | busy | Radiouudistuksen topografiavariantti A hyväksytty | Toteutus (build 12) |
-| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 17% | busy | Nollattu — korjaa PR #3128 (kortit, moottorisarake, CC-neliö, suodatin, väri) | PR valmis Julkaisijalle |
+| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 53% | busy | (koordinoi tilataulua) | — |
+| Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 9% | idle | — | Sisältökirjurin katalogi-PR #3128 (testit taustalla) |
+| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 51% | idle | — | — |
+| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 64% | busy | — | Testikäännös käännöspalvelulla |
+| Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 70% | idle | Radiouudistuksen topografiavariantti A hyväksytty | Toteutus (build 12) |
+| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 23% | idle | PR #3128 -korjaukset valmiit, testataan taustalla ennen committia | — |
 | Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 32% | idle | — | — |
 | Siirtoseppä | local_7a1255c5-d525-4323-9438-70e7379ad2fe | Opus | 27% | idle | — | — |
-| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 68% | busy | Ulkoasutarkistus PR #3128:lle | — |
+| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 73% | busy | Ulkoasutarkistus PR #3128:lle | — |
 | Karttaseppä | local_445a5c7b-4317-4989-b65d-4cb81bd10056 | Opus | 50% | idle | — | E28-ajo |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 67% | busy | (tämä taulu) | — |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 69% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
 Ei avoimia kortteja. JUMI → KORTTI, PushNotification-vaatimus ja VIESTIRAJA JA VARAKANAVAT -sääntö välitetty kaikille rooleille.
 
-**Fablen viimeisin päätös:** Sisältökirjuri nollattu, korjaa Pelikoodarin PR #3128 -kommentit (tilamerkit, moottorisarake puhelimella, tyhjä CC-neliö, "Yleiset (0)" -suodatin, muu-moottorin väri) ennen kuin PR menee Julkaisijalle mergeen.
+**Fablen viimeisin päätös:** PR #3128 (linssikatalogi) korjaukset valmiit Sisältökirjurilta, odottaa taustatestien valmistumista ennen committia; Pelikoodarin ulkoasutarkistus kesken.
 
 ## 3) Avoimet PR:t
 
@@ -33,7 +33,7 @@ Yhteensä ~40 avointa PR:tä (karkea jako otsikon perusteella, ei virallinen luo
 - **Toiminto** (koodi/tekniikka: aluenimet, laattapoltto, radiouudistus, natiivi-muutosloki): ~10
 - **Luonnos/raportti** (inventaariot, luovutukset, ehdotukset): ~9
 
-Julkaisijan seuraava juna: PR #3128 (linssikatalogi) kun Sisältökirjuri korjaa ja Pelikoodari hyväksyy; sisältöjunat jatkossa klo 10 ja 20. TestFlight jatkossa käännöskopiosta. BUILD-sana → automaattinen TestFlight-ajo.
+Julkaisijan seuraava juna: PR #3128 (linssikatalogi) kun testit valmiit ja Pelikoodari hyväksyy; sisältöjunat jatkossa klo 10 ja 20. TestFlight jatkossa käännöskopiosta. BUILD-sana → automaattinen TestFlight-ajo.
 
 ## 4) TestFlight
 
@@ -43,11 +43,11 @@ Julkaisijan seuraava juna: PR #3128 (linssikatalogi) kun Sisältökirjuri korjaa
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 85 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla) — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt) tai laskee alle 30 Gt.
-- **wt/-worktreet:** 26 kpl. Rajoissa lähes kaikilla rooleilla.
-- **5 h -kiintiö:** 68%, nollautuu HETI (klo 21:20 UTC / 00:20 EEST) — raja 95%/98%, tauko vasta 98%:ssa.
-- **Viikkokiintiö (kaikki mallit):** 68%. **Viikkokiintiö (Fable):** 42%. Nollautuu 2026-09-28 klo 01:00.
+- **Levy** (/System/Volumes/Data): 82 Gt vapaana. Omistaja siirtää Codexin dataa NAS:iin (kuvaputki tauolla) — postilaatikon Codex-toimituksia ei odoteta siirron aikana. Seurataan: ilmoitus jos nousee selvästi (>150 Gt) tai laskee alle 30 Gt.
+- **wt/-worktreet:** 25 kpl. Rajoissa lähes kaikilla rooleilla.
+- **5 h -kiintiö:** NOLLAUTUNUT (nyt 3%), seuraava nollaus klo 02:20 UTC (05:20 EEST). Raja 95%/98%, tauko vasta 98%:ssa.
+- **Viikkokiintiö (kaikki mallit):** 69%. **Viikkokiintiö (Fable):** 42%. Nollautuu 2026-09-28 klo 01:00.
 
 ## 6) Kellonaika
 
-2026-09-25 00:17 EEST (`date`-komennolla varmennettu)
+2026-09-25 00:29 EEST (`date`-komennolla varmennettu)
