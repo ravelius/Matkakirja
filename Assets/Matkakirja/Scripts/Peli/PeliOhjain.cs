@@ -956,6 +956,7 @@ namespace Matkakirja.Natiivi
         void Kartalle(bool kameraPelaajaan)
         {
             using var _ = Ajoita("kartalle");
+            PiilotaLentokaaret();
             Lentoaani(false);
             PaataLento();
             dialogi.Piilota();
