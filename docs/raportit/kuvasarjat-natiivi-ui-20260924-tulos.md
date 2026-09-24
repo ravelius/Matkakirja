@@ -95,7 +95,59 @@ sisältö, otsikko "Hold Your Hand Out, …" katkeaa kapeampaan sarakkeeseen
 (ei bugi, vain leveys). Pariisissa yksi nappi, sama kuin iPhonella.
 (ipad-media-20260924/media-lontoo-ipad.png, media-pariisi-ipad.png)
 
-## B ja C -osiot
+## C-sarja (24.9.2026, master a345a19) — C1–C5 PASS, C6 vielä ei
 
-Ei aloitettu ajan puutteessa (B: aiemmat erät, C: äänikierros — B7:n
-yhteydessä osa jo katsottu epäsuorasti).
+Huom komennoista: `linssi keksinnot` heti tuoreen käynnistyksen jälkeen
+epäonnistui ("linssi ei ole auki") — sisältö ei ollut vielä latautunut;
+toimi hetken kuluttua uudelleen yritettynä. Peli piti käynnistää
+(`ui aloita pariisi`) ennen linssin avaamista, muuten portti jäi
+näkyviin linssin päälle.
+
+- **C1** `linssi keksinnot` → `keksinnot kaynnista`: yläpalkin paikalla
+  "KEKSINNÖT EUROOPASSA / 1769 · Glasgow", ei ◀▶-nappeja, "Tauko"
+  tekstinä. Alareunassa karuselli, keskellä kultareunainen kortti
+  (James Watt), paneelissa pehmeäreunainen (soikeahko) kuva ja
+  "1769 ◈ Höyrykoneen lauhdutin". (C1-keksinnot-1769.png)
+- **C2** Välinäytös 1873: `keksinnot 10` + `jatka` ja poll `keksinnot
+  tila` (linssi-loki) kiinni hetkestä, jolloin `välinäytös: True` —
+  suora `keksinnot 11` ei laukaissut sitä (vain luonnollinen eteneminen
+  pysäkiltä 10). Teksti "Isoisä lähtee matkaan." vasemmalla kartan
+  päällä, EI korttia tekstin ympärillä (alareunan karuselli näkyy yhä).
+  Jatka-napin reunassa lievä punertava sävy muutaman sekunnin kohdalla
+  (ei räikeä hehku, mutta värimuutos näkyy). (C2-valinaytos-1873.png)
+  Loppu (`keksinnot 25` + `jatka`): paneeli "KEKSINNÖT EUROOPASSA /
+  Kaari päättyy 1928" ilman nappeja paneelissa, ylärivin nappi "Loppu".
+  (C2-loppu-1928.png)
+- **C3** Keskikortin napautus avasi TIEDELIITTEEN (Penisilliini/Fleming)
+  oikein. Sivukortin napautusta ja vetoa (drag-to-scroll) en ehtinyt
+  erikseen todentaa. (C3-tiedeliite.png)
+- **C4** Ihmisen matka (`linssi ihmisen-matka` → `esitys levantti`):
+  Käynnistä-laatikko poissa, alareunassa aikaselain (pystyviivat, yksi
+  kultainen valittuna, vuosi "106 254 vuotta sitten" ylhäällä).
+  Löytökuva (esi-ihmiset) yläpuolella vastaavaa pistettä kartalla.
+  Vetoa/irrotusta en ehtinyt testata erikseen. (C4-aikaselain.png)
+- **C5** `ui wiki` (Venetsia): oma artikkeli kuvineen (5 kuvaa, oikein
+  päin). `ui wiki Akropolis`: oikea Wikipedia-artikkeli kuvineen — vain
+  yksi kuva tässä artikkelissa, joten kuvanuolia ei päässyt näkemään.
+  `ui lehti ateena` → vieritin "MATKAOPAS"-nostoon ("Lue lisää
+  matkailijan oppaasta →", ei tarkalleen "aiheesta" mutta sama nosto-
+  malli): napautus avasi "Matkailijan Ateena" -ikkunan LEHDEN PÄÄLLE
+  oikein (tähtiluokitukset, Hyvä tietää -listat). (C5-wiki-venetsia.png,
+  C5-wiki-akropolis.png, C5-nosto-ikkuna.png)
+
+**Huom (oma virheeni):** napautin vahingossa lehden radionappia samalla
+rivillä kuin nosto-linkki ennen kuin osuin oikeaan kohtaan — mykistin
+Macin äänen heti ja tarkistin `peli-tila.json`:sta, ettei mikään
+musiikkikanava soinut kovaa (pohja/maisema molemmat < 0,02). Ei
+kuulunut mitään, mutta merkitsen tämän rehellisyyden vuoksi.
+
+## C6 (Jaa matka) — odottaa
+
+`natiivi-ui/jaa-matka` on nyt masterissa (724ad30), mutta simulaattorini
+on vielä a345a19:ssä. Pyydän uuden asennuksen ja ajan C6:n seuraavaksi
+(`ui huipennus`: Jatka vaeltamista / Jaa matka / Uusi peli — jakoarkki
+avataan mutta EI jaeta oikeasti, peru).
+
+## B-osio
+
+Ei aloitettu ajan puutteessa (aiemmat erät).
