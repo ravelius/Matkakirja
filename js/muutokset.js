@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2206, teksti: 'Havainnekuva-merkinnän tyyli styles.css:ään (#3119)' },
   { v: 2205, teksti: 'Isoisän iso kuva äänen \'playing\'-hetkestä, vara… (#3118)' },
   { v: 2204, teksti: 'Kohdekartta: Geraldton (#3082)' },
   { v: 2203, teksti: 'Kohdekartta: Mount Isa (#3080)' },
