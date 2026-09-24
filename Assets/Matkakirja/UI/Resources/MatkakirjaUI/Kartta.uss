@@ -892,7 +892,8 @@
 
 .mk-nosto--esittely {
     max-width: 760px;
-    padding: 8px;
+    /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px myös vaiheessa 1. */
+    padding: 13.6px 15.2px 15.2px 15.2px;
 }
 
 .mk-nosto__sisus {
@@ -931,10 +932,11 @@
 }
 
 .mk-nosto__ylarivi {
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px. */
+    font-size: 10.88px;
+    letter-spacing: 1.52px;
     color: #7a5514;
-    margin: 2px 40px 6px 0;
+    margin: 2px 40px 1.92px 0;
 }
 
 .mk-nosto__nimio {
@@ -966,6 +968,12 @@
     white-space: normal;
     margin: 0 30px 6px 0;
     color: #16130f;
+}
+
+.mk-nosto__otsikko--kohde {
+    font-size: 16.32px;
+    margin: 0 32px 7.2px 0;
+    color: #211d18;
 }
 
 .mk-nosto--looppi .mk-nosto__otsikko {
@@ -1016,38 +1024,47 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
+/* Web .nostokuva-selite (mitattu 24.9. b11): Iowan 13,44 px, rgba(33, 29, 24, 0.82), keskitetty, yllä 5,6 px. */
 .mk-nosto__kuvateksti {
-    margin-top: 5px;
-    font-size: 12.5px;
+    margin-top: 5.6px;
+    font-size: 13.44px;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.78);
+    color: rgba(33, 29, 24, 0.82);
+}
+
+/* Kuvan alla keskitetty (web figcaption.nostokuva-selite text-align center). */
+.mk-nosto__esittelyrivi .mk-nosto__kuvateksti,
+.mk-nosto__kuvasarja > .mk-nosto__kuvateksti {
+    -unity-text-align: upper-center;
 }
 
 .mk-nosto__esittelyrivi {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    margin-top: 6px;
 }
 
 .mk-nosto__esittelyrivi .mk-nosto__kuvateksti {
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 0 10px 0 2px;
+    align-self: stretch;
 }
 
+/* Web .nostokuva-lisaa: 102 × 40, täyte 5,6/25,6, reuna 1 px rgba(122, 85, 20, 0.45), pyöristys 8, pohja
+   rgba(250, 246, 235, 0.96); American Typewriter 13,76 px versaali, harvennus 1,1 px, rgb(92, 63, 14); yllä 8,8 px. */
 .mk-nosto__lisaa {
-    min-height: 36px;
-    padding: 6px 14px;
+    min-height: 40px;
+    margin-top: 8.8px;
+    margin-bottom: 1.6px;
+    padding: 5.6px 25.6px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.6);
-    border-radius: 4px;
-    background-color: rgba(214, 168, 62, 0.2);
-    color: #6d4d12;
+    border-color: rgba(122, 85, 20, 0.45);
+    border-radius: 8px;
+    background-color: rgba(250, 246, 235, 0.96);
+    color: rgb(92, 63, 14);
 }
 
 .mk-nosto__lisaa .mk-nappi__teksti {
-    font-size: 13px;
-    letter-spacing: 1.5px;
+    font-size: 13.76px;
+    letter-spacing: 1.1px;
+    color: rgb(92, 63, 14);
 }
 
 .mk-nosto__selaa {
@@ -1078,15 +1095,17 @@
     color: rgba(255, 255, 255, 0.92);
 }
 
+/* Web .nostosarja-kuvalaskuri: American Typewriter 10,88 px, harvennus 0,44, #f6f0e0 pohjalla rgba(18, 12, 4, 0.55). */
 .mk-nosto__laskuri {
     position: absolute;
     right: 8px;
     bottom: 8px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background-color: rgba(20, 14, 8, 0.6);
-    color: #f3e6d0;
-    font-size: 11px;
+    padding: 0.8px 6.4px;
+    border-radius: 8px;
+    background-color: rgba(18, 12, 4, 0.55);
+    color: rgb(246, 240, 224);
+    font-size: 10.88px;
+    letter-spacing: 0.44px;
 }
 
 .mk-nosto__visa {

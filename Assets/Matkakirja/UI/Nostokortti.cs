@@ -381,7 +381,7 @@ namespace Matkakirja.Natiivi
             {
                 Kuvakehys(lohko, lk.Hero, () => Suurenna(0));
                 if (!string.IsNullOrEmpty(lk.Hero.Lyhyt))
-                    Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+                    Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.Luku);
                 if (!string.IsNullOrEmpty(lk.Hero.LahdeRivi)) Rakenne.Teksti(lk.Hero.LahdeRivi, "mk-kansikuva__lahde", lohko);
             }
             else
@@ -421,10 +421,11 @@ namespace Matkakirja.Natiivi
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
+            // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
             var lyhyt = Rakenne.Teksti(k.Lyhyt ?? nosto.Otsikko ?? "", "mk-nosto__kuvateksti", alarivi);
-            Kirjasimet.Aseta(lyhyt, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(lyhyt, Kirjasin.Luku);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
-            Kirjasimet.Aseta(lisaa, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
         }
 
         // --- vaihe 2: koko kortti ----------------------------------------------------------
@@ -459,8 +460,9 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(pt, Kirjasin.Kone);
                 }
             }
-            var otsikko = Rakenne.Teksti(n.Otsikko ?? "", "mk-nosto__otsikko", sisus);
-            Kirjasimet.Aseta(otsikko, n.Laji == NostoLaji.Kohde ? Kirjasin.KoneLihava : Kirjasin.LukuLihava);
+            var otsikko = Rakenne.Teksti(n.Otsikko ?? "", n.Laji == NostoLaji.Kohde ? "mk-nosto__otsikko mk-nosto__otsikko--kohde" : "mk-nosto__otsikko", sisus);
+            // Web .fokuskohde-otsikko: American Typewriter 700, 16,32 px, #211d18 (mitattu 24.9. b11).
+            Kirjasimet.Aseta(otsikko, n.Laji == NostoLaji.Kohde ? Kirjasin.KoneBold : Kirjasin.LukuLihava);
             if (n.Laji == NostoLaji.Hetki && n.Meta != null)
                 Kirjasimet.Aseta(Rakenne.Teksti(n.Meta, "mk-nosto__meta", sisus), Kirjasin.Kone);
             if (!string.IsNullOrEmpty(n.Ingressi))
@@ -560,7 +562,7 @@ namespace Matkakirja.Natiivi
         {
             var lohko = Rakenne.El("mk-nosto__valokuva", isa, PickingMode.Ignore);
             Kuvakehys(lohko, k, () => SuurennaYksi(k));
-            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.LukuKursiivi);
+            if (!string.IsNullOrEmpty(k.Lyhyt)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.Luku);
             napit["valokuva"] = () => SuurennaYksi(k);
         }
 
@@ -744,7 +746,7 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
             var teksti = Rakenne.Teksti("", "mk-nosto__kuvateksti", lohko);
-            Kirjasimet.Aseta(teksti, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(teksti, Kirjasin.Luku); // web .nostokuva-selite: Iowan pysty, keskitetty
             Label laskuri = null;
             void Nayta(int i)
             {
