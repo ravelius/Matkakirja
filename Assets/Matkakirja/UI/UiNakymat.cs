@@ -99,7 +99,7 @@ namespace Matkakirja.Natiivi
         public static UiNakymat Hae() => instanssi ??= new UiNakymat(UiKerros.Hae());
 
         /// <summary>
-        /// iPhone (omistaja 24.9.2026, löydös 19; Raamattu NATIIVIN iPHONE-ASETTELU): kartta kevyesti sumeana aina,
+        /// Omistaja 24.9.2026, löydös 19 (iPhone ja iPad): kartta kevyesti sumeana aina,
         /// kun isoisän tai pulun kuvia on näkyvillä — luennan kuvasarja (isoisän kuvakupla), kohtaamiskortti,
         /// nostokortti ja pulun kuvakortti. Kameran puoli kuuntelee tätä (miedompi kuin portin verho, liukuen).
         /// </summary>
@@ -158,8 +158,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaKuvaSumea()
         {
-            bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
-                && (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki));
+            // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
+            bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki);
             if (s == KuvaSumea) return;
             KuvaSumea = s;
             KuvaSumeaMuuttui?.Invoke(s);
