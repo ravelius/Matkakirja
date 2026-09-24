@@ -4747,3 +4747,7 @@ Laitetestaaja klo 23.4x: rivi 30 topografia PASS mitattuna; Tutki näyttää web
 ## JULKAISIJAN JONO TYHJA: MAINISSA v2197–v2208, SISALTOJUNA #3125 (12 PR:AA, v2207), #3124 TESTFLIGHT KAANNOSKOPIOSTA NATIIVISEPAN LUKOLLA, MUUTOSLOKI #3121; LUOVUTUS -20260924-yo.md (#3127), JULKAISIJA NOLLAA ITSENSA — MALLI PYSYY OPUKSELLA (24.9.2026 klo 23.47)
 
 Julkaisija klo 23.4x: jono ajettu tyhjäksi, ensimmäinen sisältöjuna toimi (12 PR:ää yhdellä versionostolla). Nollaus omalla luovutuksella; Postivahti lähettää aloitusviestin (uusi Julkaisija mergeää ensin #3127; malli Opus omistajan klo 22.3x linjauksen mukaan, ei Sonnet).
+
+## OMISTAJA klo 23.5x (SITOVA): VIESTIRAJA JA VARAKANAVAT RAAMATTUUN — SendMessage ~10/VUORO → VARAKANAVA mcp send_message SESSION ID:LLA, KOLMANTENA POSTITIEDOSTO docs/raportit/posti-<rooli>-<pvm>.md + POSTIVAHTI; EI OMISTAJAN OK-VIESTEJA; KOSKEE KAIKKIA TILEJA (24.9.2026 klo 23.52)
+
+Omistaja: 'kirjaa nuo varakanavat ylös raamattuun jotta sitten kun vaihdetaan kehitys eri tilille niin ne tulee automaattisesti käyttöön'. Lisätty Ydinajatus kohta 2:een ennen FABLEN KÄSKYT -kohtaa; Postivahti lisää aloitusviestipohjiin.
