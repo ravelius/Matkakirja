@@ -17,6 +17,8 @@ namespace Matkakirja
     ///   kaupunki id               lento kaupunkiin ja nimikortti (kuin napautus)
     ///   aja lat lon kaari [s]     kamera-ajo; kaari = kapeamman suunnan asteet
     ///   pallo                     koko pallo kuvaan
+    ///   panoroi lat lon x y [s]   piste (lat, lon) ruudun kohtaan (x, y) (osuudet 0–1, origo vasen alakulma);
+    ///                             korkeus, kallistus ja suuntima pysyvät (PalloKierto.Panoroi, oletus 0,42 s)
     ///   odota s                   seuraava rivi vasta s sekunnin päästä
     ///   mittaus alku nimi         raakakehysajat talteen (ms, yksi per rivi)
     ///   mittaus loppu             kirjoittaa Documents/mittaus-nimi.txt
@@ -199,6 +201,19 @@ namespace Matkakirja
                 case "aja":
                     kierto.Aja(D(1), D(2), kierto.KorkeusKaarelle(D(3)), o.Length > 4 ? (float)D(4) : 1.4f, null);
                     break;
+                case "panoroi":
+                {
+                    // panoroi lat lon x y [s]: liuskan avausajo (löydös 48); valmis-rivi ja pisteen ruutupaikka lokiin.
+                    double lat = D(1), lon = D(2);
+                    var maali = new Vector2((float)D(3) * Screen.width, (float)D(4) * Screen.height);
+                    kierto.Panoroi(lat, lon, maali, o.Length > 5 ? (float)D(5) : Panorointi.LiuskanAjoS, () =>
+                    {
+                        bool nakyy = kierto.RuutuPiste(lat, lon, out var r);
+                        Debug.Log($"MATKAKIRJA panorointi valmis: maali ({maali.x:0}, {maali.y:0}), piste " +
+                                  (nakyy ? $"({r.x:0}, {r.y:0}), ero {Vector2.Distance(r, maali):0.#} px" : "ei näy"));
+                    });
+                    break;
+                }
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.MaxKorkeus(), 1.4f, null);
                     break;
