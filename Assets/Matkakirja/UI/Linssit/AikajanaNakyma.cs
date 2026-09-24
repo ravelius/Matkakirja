@@ -1125,7 +1125,9 @@ namespace Matkakirja.Natiivi
             double luenta = Math.Max(1, es.Luenta);
             if (osienAjat == null || osienLuenta != luenta)
             {
-                osienAjat = KertomuksenOsat.OsienHetket(osat, luenta);
+                // Lauseleimat voittavat (web osienHetket: kaanonin aikaleimat.lauseet); null → merkkiosuus.
+                string id = ihminen != null && jakso >= 0 && jakso < ihminen.Kertomus.Count ? ihminen.Kertomus[jakso].Id : null;
+                osienAjat = KertomuksenOsat.OsienHetket(osat, luenta, es.Leimat(id)?.Lauseet);
                 osienLuenta = luenta;
             }
             int i = 0;
