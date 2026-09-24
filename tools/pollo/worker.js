@@ -1915,7 +1915,7 @@ export default {
     } catch {
       return vastaa({ virhe: 'kysely', viesti: 'Pyyntö ei ollut JSONia.' }, { status: 400, ...kors });
     }
-    // Natiivi: puhe ja chat (rajat alla samat kuin selaimella), ei kuva, sähke eikä tila.
+    // Natiivi: puhe, chat ja sähketuomio (rajat samat kuin selaimella), ei kuva eikä tila.
     if (natiivi && !natiivilleSallittu(runko?.tehtava)) {
       return new Response('Tehtävä ei ole natiiville sallittu', { status: 403 });
     }

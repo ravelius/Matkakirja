@@ -57,7 +57,8 @@
  * Ohje: docs/moduulit/viitekuvat.md
  */
 import { writeFileSync, existsSync, mkdirSync, appendFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { haeViitekuvat, VIITTEITA_ENINTAAN } from './hae-viitekuvat.mjs';
 
 /** Generointiportin raja: alle tämän ei generoida tarkkaa kohdetta. */
@@ -75,10 +76,17 @@ mkdirSync(kansio, { recursive: true });
 
 /*
  * Lähdeloki: jokainen viitekuva kirjataan tekijöineen ja
- * lisensseineen kohdekansioon (perustuslain pilari 2 — lähde on aina
+ * lisensseineen (perustuslain pilari 2 — lähde on aina
  * jäljitettävissä). Tiedostoa täydennetään, ei ylikirjoiteta.
+ *
+ * LOKI ON REPOSSA (tools/hero-viiteloki.tsv), ei kohdekansiossa: 23.–24.8.
+ * ajon loki jäi pilvikontin kohdekansioon ja katosi kontin mukana, eikä
+ * 60 heron viitteitä voinut enää todentaa (rekonstruoitiin 23.9.2026,
+ * docs/raportit/herokuvien-viitteet-20260923.md). Ajon jälkeen loki
+ * committoidaan ja generoidun heron viitteet kirjataan pakan riville
+ * kenttään `viitteet` (js/tekijakortti.js lisaaPohjaviitteet).
  */
-const lokiPolku = join(kansio, 'viitekuvat-loki.txt');
+const lokiPolku = join(dirname(fileURLToPath(import.meta.url)), 'hero-viiteloki.tsv');
 const loki = (rivi) => appendFileSync(lokiPolku, `${rivi}\n`);
 
 for (const t of TYOLISTA.slice(alku, loppu)) {
