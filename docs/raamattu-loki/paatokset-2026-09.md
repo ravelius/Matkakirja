@@ -4815,3 +4815,7 @@ Pelikoodari 73 % → luovutus ja nollaus käsketty; uusi Pelikoodari jatkaa 49:s
 ## OMISTAJA klo 00.3x (SITOVA): LINSSIKATALOGI NELJAKSI VALISIVUKSI — MOOTTORIT, PELISSA NYT, SEURAAVAT (KAIKKI KERRALLA NAKYVISSA, EI VIERITYSTA), KOKO KATALOGI → SISALTOKIRJURI (25.9.2026 klo 00.31)
 
 Omistaja: 'Väliotsikot saisivat olla omina sivuinaan eli moottorit, pelissä nyt, seuraavat (kaikki näkyvissä kerralla, ei vieritettynä kuin nyt) ja koko katalogi. Eli neljä välisivua.' Välilehdet URL-hashiin, esitystila ja tiekartta katalogivälilehdellä; lisätty suunnitelmaan linssikatalogi-uudistus-suunnitelma-20260924.md:n rakenteeksi.
+
+## NATIIVI-UI 66 % → NOLLAUS (LUOVUTUS j 7323db020, HAARA natiivi-ui-luovutus-j): MERGE-PYYNNOSSA radio-mastonimi 7dd1e45 JA tyyppikuvake 79a49af; TODENNETTAVAT intro-palstat, juliste-url; LOYDOS 48 liuska-48 397b37f (KAMERA: NATIIVISEPPA PANOROI, PELIKOODARI KYTKEE); 51 MITTAUS LAITETESTAAJALLA; 50 JA b12-2-REITITYS JONOSSA (25.9.2026 klo 00.33)
+
+Postivahti lähettää aloitusviestin kun list_events = 0.
