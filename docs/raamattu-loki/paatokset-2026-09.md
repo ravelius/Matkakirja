@@ -4371,3 +4371,7 @@ Smoke: aloituslento Lontoo→Ateena, satelliittipinta, lasku, lehti, 0 exception
 ## SISALTOKIRJURI: N2/N4/N5/N6:N 20 KAUPUNKIA VALMIS (#3097, #3098, #3101, #3104) — KOKO 91 KAUPUNGIN SAA/GALLERIA/ENNENNYT-KIERROS LAPI (24.9.2026 klo 17.46)
 
 ennenNyt 19/20 (Sahara ilman paria), galleria 6/20 (São Luís 3, Yellowstone/Grand Canyon/Iguazú/Ouro Preto 1–2). Testit 0 fail. Seuraava tehtävä Sisältökirjurille odottaa Fablen viestirajan nollausta: gallerian ja ennenNyt-parien kuvaputkitilaus (43 + 11 + uudet 14 + 1 kaupunkia) valmisteltavaksi listaksi.
+
+## CODEX TOIMITTI RENESSANSSISALIN 30 MAALAUSTA (claude/postilaatikko c6a2b732; MANIFESTI kuvatoimitus-renessanssisali-maalaukset-20260924.json) — FABLE KUITTASI POSTILAATIKKOON (24.9.2026 klo 17.49)
+
+Met CC0 22 + NGA PD 8, 18 taiteilijaa (Botticelli, Bellini, Rafael, Tizian, Ghirlandaio, Piero di Cosimo, Lippi, Cima, Credi, Fra Bartolomeo, Fra Carnevale, Leonardo, Giorgione, Mantegna, Tintoretto, Veronese, Piero della Francesca, Bronzino), sali- ja korttiversiot (60 JPEG) polussa matkakirja/museo/renessanssi/maalaus/, SHA-256 ja QA tehty. Veistokset, muotokuvat ja kartat erillisessä erässä; toinen maalauserä Uffizin/Accademian PD-Art-toisinnoista pyydetty. Välitys Linssisepälle ja Sisältökirjurin (70 %) nollauskäsky odottavat Fablen viestirajan nollausta.
