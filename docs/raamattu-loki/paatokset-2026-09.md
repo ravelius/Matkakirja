@@ -4139,3 +4139,7 @@ Santarém, João Pessoa, Macapá, Cayenne; testit 0 fail. Jäljellä Gao ja Al K
 ## OMISTAJA klo 16.1x (SITOVA): RUSKEA YLAPALKKI TAKAISIN iPHONELLE, AUTOMAATTINEN PIILOTUS, ☰ PALAUTTAA; iPADIN PALKKI KORKEAMMAKSI (24.9.2026 klo 16.11)
 
 Omistajan kuva (Ateena, iPhone): yläosan kelluvat napit ja pillerit liian sekavia. Päätös: iPhonelle webin/iPadin ruskea yläpalkki samalla sisällöllä; palkki piiloutuu kun karttaa vieritetään ja vaakamuodossa oletuksena; piilossa vain ☰ oikeassa yläkulmassa, joka tuo palkin takaisin (ei kelluvia nappeja, myös vaakatilassa); iPadin palkki liian matala → korotetaan webin mittaan; muut piilotustilanteet myöhemmin. Fablen oletukset: palkki palaa myös napautuksesta karttaan; iPadilla ei piiloudu. Raamattu päivitetty (klo 09.5x:n kelluva asettelu kumottu yläpalkin osalta). → Natiivi-UI build 10, WEB ON MALLI -kaavalla (webin palkin mitat).
+
+## LINSSISEPPA: PIIKKIAJO 8, HUIPPUVUORET-LAITEKUVA JA KEKSINNOT-KUVAPARI VALMIIT; PIENI iPAD VAPAA (24.9.2026 klo 16.12)
+
+Piikit 8: ihmisen matkan avauksessa ei yli 20 ms:n kehyksiä (ajo 7: 31,7 ms); muut 23–41 ms ensipiirrosta; uusi: topografian sulussa 50 ms sulkuäänen latauksesta → Natiivi-UI esilataa (build 10). Huippuvuoret iPadilla: natiivi ei vielä väritä (skeema 1.29 muutRenkaat) → 1.34 + #3078 korjaavat. Keksinnöt: kuvapari vastaa rakenteeltaan webiä (proto-3d/lokit/linssit-keksinnot-pari-20260924/), Laitetestaajan rivin 40 kuva oli build 5:stä. Omistajalle: pieni iPad saa irrottaa.
