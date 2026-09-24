@@ -4,10 +4,11 @@
   "1.16": "ee8f1651a9311fcd",
   "1.24": "a74682db468c1664",
   "1.25": "137506a64fb28b4d",
-  "1.26": "6ce8cb0b49deb75c"
+  "1.26": "6ce8cb0b49deb75c",
+  "1.27": "6ce8cb0b49deb75c"
  },
  "uusin": {
-  "skeemaversio": "1.26",
+  "skeemaversio": "1.27",
   "kokoelmat": {
    "aanitaulut": [
     "data",

@@ -144,10 +144,23 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        paikkatiedot, kohtaamiset, kohtaamiskuvat, paikallisaarteet,
  *        saapumispuheet sekä fokusvirtojen kohtaamispiste ja sahketehtava
  *        päätasolle (tools/vienti/tyypitys.mjs).
+ *   1.27 työhuoneen moduulit natiivin KOKEET-valikolle (Natiivi-UI):
+ *        js/tyohuone-raamattu.js RAAMATTU, js/tyohuone-tilanne.js TILANNE,
+ *        TESTATTAVAA ja TUOREET, js/tyohuone-pelit.js PELIT (luokka kehittaja);
+ *        tyohuone-musiikki.js HILJENNYKSEN_SYY ja TUNTEMATTOMAT_LAJIT.
+ *        Kehittäjämoduulien sähköpostiosoitteet peitetään (peitaSahkopostit).
  */
-export const SKEEMAVERSIO_TARKKA = '1.26';
+export const SKEEMAVERSIO_TARKKA = '1.27';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
+
+/*
+ * Kehittäjämoduulit (työhuone) ovat julkisia webissäkin, mutta paketti
+ * jaetaan sovelluksen mukana: henkilöiden sähköpostit peitetään.
+ * Pelin omat osoitteet (@matkakirja.app) jäävät.
+ */
+const SAHKOPOSTI = /[A-Za-z0-9._%+-]+@(?!matkakirja\.app\b)[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+export const peitaSahkopostit = (teksti) => teksti.replace(SAHKOPOSTI, '[sähköposti]');
 const tavuja = (s) => Buffer.byteLength(s);
 
 /**
@@ -221,7 +234,8 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
       });
     }
     const tiedosto = `moduulit/${polku.replace(/\.js$/, '.json')}`;
-    const sisalto = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const raaka = JSON.stringify({ $skeema: `${SKEEMAVERSIO}/moduuli`, moduuli: polku, exportit });
+    const sisalto = luokka === 'kehittaja' ? peitaSahkopostit(raaka) : raaka;
     tiedostot.set(tiedosto, sisalto + '\n');
     manifestModuulit.push({
       moduuli: polku,

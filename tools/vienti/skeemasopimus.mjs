@@ -33,6 +33,7 @@ const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset
  *   '<kokoelma>.<kenttä>'       jollakin alkiolla on päätason kenttä
  *   '<kokoelma>#<id>'           alkio tällä id:llä on olemassa
  *   '<kokoelma>/<avain>'        kokoelman juuressa on avain (esim. maakuntarajat/kaaret)
+ *   'moduuli:<polku>'          moduuli on manifestissa (esim. moduuli:js/tyohuone-pelit.js)
  *   'manifest.<avain>' | 'offline.<avain>' | 'offline.maat.*.<avain>' | 'media.<avain>'
  *   '!…'                       ei saa olla (poistot)
  */
@@ -59,6 +60,7 @@ export const VAATIMUKSET = {
   '1.25': ['maakuntarajat/kaaret'],
   '1.26': ['tarinakaari.kohtaaminen', 'paikkatiedot.teksti', 'kohtaamiset.tervehdys', 'kohtaamiskuvat.tila',
     'paikallisaarteet.pieniAarre', 'saapumispuheet.url', 'fokusvirrat.sahketehtava'],
+  '1.27': ['moduuli:js/tyohuone-raamattu.js', 'moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
 };
 
 export function vertaa(a, b) {
@@ -83,6 +85,7 @@ function lukija(tiedostot) {
 
 function tayttyy(ehto, { lue, manifest, kokoelma }) {
   if (ehto.startsWith('kokoelma:')) return Boolean(kokoelma(ehto.slice(9)));
+  if (ehto.startsWith('moduuli:')) return manifest.moduulit.some((m) => m.moduuli === ehto.slice(8));
   if (ehto.startsWith('manifest.')) return manifest[ehto.slice(9)] !== undefined;
   if (ehto.startsWith('offline.')) {
     const o = manifest.offline ? lue(manifest.offline.tiedosto) : null;

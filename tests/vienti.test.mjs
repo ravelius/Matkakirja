@@ -26,7 +26,7 @@ import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
+import { JUURI, kokoaVienti, peitaSahkopostit } from '../tools/vienti/vie-sisalto.mjs';
 import { onSaantoArvo } from '../tools/vienti/kokoelmat.mjs';
 import { palauta } from '../tools/vienti/sarjallista.mjs';
 import { PEILI_JUURI } from '../js/media.js';
@@ -125,7 +125,9 @@ test('jokainen export palautuu viennistä alkuperäisen kanssa samaksi', () => {
     const nimet = m.exportit.map((e) => e.nimi);
     assert.deepEqual(Object.keys(vienti.exportit), nimet, `${m.moduuli}: exportit`);
     for (const nimi of nimet) {
-      samat(ns[nimi], palauta(vienti.exportit[nimi]), `${m.moduuli}#${nimi}`);
+      // Kehittäjämoduuleista henkilöiden sähköpostit on peitetty (skeema 1.27).
+      const alkuperainen = m.luokka === 'kehittaja' ? JSON.parse(peitaSahkopostit(JSON.stringify(ns[nimi]))) : ns[nimi];
+      samat(alkuperainen, palauta(vienti.exportit[nimi]), `${m.moduuli}#${nimi}`);
     }
   }
 });
