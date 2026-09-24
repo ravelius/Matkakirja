@@ -771,12 +771,12 @@ export function puraDelta(puskuri) {
  */
 export {
   NAULAUKSEN_RUUTU_ASTETTA, NAULAUKSEN_TOLERANSSI_ASTETTA, NAULAUKSEN_AUKON_RAJA_ASTETTA,
-  NAULAUKSEN_MUTKAN_RAJA_ASTETTA, NAULAUKSEN_TIHEYS_RAJA, NAULAUKSEN_VAIMENNUS_MS,
+  NAULAUKSEN_MUTKAN_RAJA_ASTETTA, NAULAUKSEN_TIHEYS_RAJA, NAULAUKSEN_TIHEYS_RAJA_SAIE, NAULAUKSEN_VAIMENNUS_MS,
   NAULAUKSEN_JANATOLERANSSI_ASTETTA, rannikkoHakemisto, rannallaHilassa, janahakemisto,
   lahellaJanaa, naulaaKorostus,
 } from './pallovektorit-naulaus.js';
 import {
-  NAULAUKSEN_TIHEYS_RAJA, NAULAUKSEN_VAIMENNUS_MS, asteEtaisyys, naulaaKorostus,
+  NAULAUKSEN_TIHEYS_RAJA, NAULAUKSEN_TIHEYS_RAJA_SAIE, NAULAUKSEN_VAIMENNUS_MS, asteEtaisyys, naulaaKorostus,
 } from './pallovektorit-naulaus.js';
 
 /** Vektorijanan enimmäispituus asteina pallon pinnalla; pidemmät jaetaan. */
@@ -897,6 +897,15 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     rannikkoja: -1,
     /** Milloin naulaus viimeksi rakennettiin (vaimennus). */
     naulattuHetki: -Infinity,
+    /*
+     * Työsäikeen pyyntölaskuri ja odottava pyyntö. ALUSTUS ON PAKKO
+     * (korjaus 23.9.2026, omistaja: "rajaviivassa kaksi erilaista viivaa
+     * taas"): ilman sitä ensimmäinen pyyntö oli undefined + 1 = NaN, ja
+     * koska NaN !== NaN, jokainen säikeen vastaus hylättiin v1990:stä
+     * alkaen — korostus jäi admin_0-geometriaan naulaamatta.
+     */
+    pyynto: 0,
+    odottaa: null,
   };
   /*
    * HIMMEÄ REITTIVERKKO on korostuksen tapaan soluton laji (ks.
@@ -1408,7 +1417,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   }
 
   /** Onko näkymä niin tarkka, että kaksoisviiva näkyisi? (ks. raja) */
-  const naulattava = () => tiheys >= NAULAUKSEN_TIHEYS_RAJA;
+  const naulattava = () => tiheys >= (tyosaie ? NAULAUKSEN_TIHEYS_RAJA_SAIE : NAULAUKSEN_TIHEYS_RAJA);
 
   function rakennaKorostus(haivella = false) {
     if (purettu || !materiaalit || !luokat || !kolmi?.juuri) return;

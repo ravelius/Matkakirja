@@ -13,6 +13,13 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2155, teksti: 'Sisältöpaketti 1.17–1.26 natiiville (#3012)' },
+  { v: 2154, teksti: 'Sisältöpaketti 1.10–1.16 natiiville (#2984)' },
+  { v: 2153, teksti: 'Kohdistus hyvaksyy kuitin oman outputFormatin (#2961)' },
+  { v: 2152, teksti: 'Pulu-eleet: elava kohdistus ilman kuittia (#2978)' },
+  { v: 2151, teksti: 'vie-sisalto.yml: osoitinvartija (#2975)' },
+  { v: 2150, teksti: 'Sisältöpaketti natiiville: skeema 1.2-1.9' },
+  { v: 2149, teksti: 'Pelikoodari+Karttaseppä nippu: sulavuus ja poltetut nostot' },
   { v: 2148, teksti: 'Isoisan etusivukuvat: lahde-kentta taydennetty' },
   { v: 2147, teksti: 'Testitila Suoraan kartalle' },
   { v: 2146, teksti: 'NC/ND-lisenssit: ambienssikorit A ja B' },

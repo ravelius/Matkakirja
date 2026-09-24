@@ -79,6 +79,18 @@ export const NAULAUKSEN_MUTKAN_RAJA_ASTETTA = 2;
  * huolen siitä, ettei naulausta rakenneta joka kehyksellä.
  */
 export const NAULAUKSEN_TIHEYS_RAJA = 300;
+/*
+ * TYÖSÄIKEEN RAJA ON MATALAMPI (23.9.2026, omistaja iPadilla tasolla 7,
+ * Oléron: "rajaviivassa kaksi erilaista viivaa taas"). Yllä oleva 300
+ * mitattiin Natural Earthin rannikolle; GSHHG-rannikon (vektorit
+ * 2026-09-21-gshhs, poltto 22c) ero admin_0-kehään on suurempi:
+ * FRA mediaani 146 m, p95 394 m, suurin 3,7 km
+ * (tools/savukkeet/mittaa-rannikon-naulaus.mjs). p95 on puoli pikseliä
+ * jo tiheydellä 140, ja suiston jänteet näkyvät sitäkin karkeammin.
+ * Säikeessä naulaus ei pysäytä kehystä, joten portti on 100; ilman
+ * säiettä (varapolku pääsäikeessä) hinta-perusteinen 300 pysyy.
+ */
+export const NAULAUKSEN_TIHEYS_RAJA_SAIE = 100;
 /** Naulausta ei rakenneta useammin kuin tämän välein (ms). */
 export const NAULAUKSEN_VAIMENNUS_MS = 400;
 

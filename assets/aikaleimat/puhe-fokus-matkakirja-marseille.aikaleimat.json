@@ -1,249 +1,177 @@
 {
   "versio": 2,
   "kaupunki": "marseille",
-  "teksti": "Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen kyntensä olivat mustat, sillä hän oli juuri auttanut laivan köysissä. Ostin palan. Terva, kala ja suolavesi seurasivat minua majataloon. Maailma ei suostunut pesuun yhdellä yrittämällä, mutta käteni olivat jo toista mieltä.",
-  "tekstiSha256": "4320eece41e963124c42d50c41cf65b41875bdd5b646dfcccfb192900a696551",
+  "teksti": "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
+  "tekstiSha256": "3655157ea05577588eaf53815031a4fd6c90f45443ea82c85c403f83abcd70f7",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-marseille.mp3",
     "versio": 2,
-    "tavut": 469412,
-    "sha256": "bfa7b605763b7b818489c1ce39d47e9f1497c5536cd64c9d7e7fb08914f08b63"
+    "tavut": 360742,
+    "sha256": "afd153e66cff610f77838ceb8c581c79aefa5bfdb8c4698453bdf6352ff342f0"
   },
-  "kesto": 29239,
+  "kesto": 22440,
   "sanat": [
     {
       "sana": "Marseillen",
-      "alku": 140,
-      "loppu": 699
+      "alku": 100,
+      "loppu": 580
     },
     {
       "sana": "satamassa",
-      "alku": 740,
-      "loppu": 1279
-    },
-    {
-      "sana": "myytiin",
-      "alku": 1319,
-      "loppu": 1639
+      "alku": 640,
+      "loppu": 1200
     },
     {
       "sana": "saippuaa",
-      "alku": 1740,
-      "loppu": 2240
+      "alku": 1260,
+      "loppu": 1740
+    },
+    {
+      "sana": "myytiin",
+      "alku": 1800,
+      "loppu": 2200
     },
     {
       "sana": "tiiliskivinä",
-      "alku": 2319,
-      "loppu": 3240
+      "alku": 2260,
+      "loppu": 3060
     },
     {
-      "sana": "Kauppias",
-      "alku": 4420,
-      "loppu": 4859
-    },
-    {
-      "sana": "vakuutti",
-      "alku": 4900,
-      "loppu": 5380
-    },
-    {
-      "sana": "että",
-      "alku": 5440,
-      "loppu": 5639
-    },
-    {
-      "sana": "niillä",
-      "alku": 5679,
-      "loppu": 5960
-    },
-    {
-      "sana": "pesisi",
-      "alku": 6019,
-      "loppu": 6339
-    },
-    {
-      "sana": "vaikka",
-      "alku": 6399,
-      "loppu": 6639
+      "sana": "kuulemma",
+      "alku": 3900,
+      "loppu": 4260
     },
     {
       "sana": "koko",
-      "alku": 6719,
-      "loppu": 6920
+      "alku": 4300,
+      "loppu": 4540
     },
     {
       "sana": "maailman",
-      "alku": 7019,
-      "loppu": 7519
-    },
-    {
-      "sana": "Hänen",
-      "alku": 9119,
-      "loppu": 9319
-    },
-    {
-      "sana": "kyntensä",
-      "alku": 9420,
-      "loppu": 9899
-    },
-    {
-      "sana": "olivat",
-      "alku": 9960,
-      "loppu": 10219
-    },
-    {
-      "sana": "mustat",
-      "alku": 10319,
-      "loppu": 10760
-    },
-    {
-      "sana": "sillä",
-      "alku": 11460,
-      "loppu": 11619
-    },
-    {
-      "sana": "hän",
-      "alku": 11659,
-      "loppu": 11759
-    },
-    {
-      "sana": "oli",
-      "alku": 11819,
-      "loppu": 11960
-    },
-    {
-      "sana": "juuri",
-      "alku": 12019,
-      "loppu": 12259
-    },
-    {
-      "sana": "auttanut",
-      "alku": 12359,
-      "loppu": 12779
-    },
-    {
-      "sana": "laivan",
-      "alku": 12859,
-      "loppu": 13119
-    },
-    {
-      "sana": "köysissä",
-      "alku": 13239,
-      "loppu": 13859
-    },
-    {
-      "sana": "Ostin",
-      "alku": 15639,
-      "loppu": 15880
-    },
-    {
-      "sana": "palan",
-      "alku": 15979,
-      "loppu": 16319
-    },
-    {
-      "sana": "Terva",
-      "alku": 17779,
-      "loppu": 18139
-    },
-    {
-      "sana": "kala",
-      "alku": 18379,
-      "loppu": 18659
-    },
-    {
-      "sana": "ja",
-      "alku": 18739,
-      "loppu": 18779
-    },
-    {
-      "sana": "suolavesi",
-      "alku": 18899,
-      "loppu": 19500
-    },
-    {
-      "sana": "seurasivat",
-      "alku": 19879,
-      "loppu": 20399
-    },
-    {
-      "sana": "minua",
-      "alku": 20459,
-      "loppu": 20680
-    },
-    {
-      "sana": "majataloon",
-      "alku": 20760,
-      "loppu": 21399
-    },
-    {
-      "sana": "Maailma",
-      "alku": 23439,
-      "loppu": 23879
-    },
-    {
-      "sana": "ei",
-      "alku": 23939,
-      "loppu": 24079
-    },
-    {
-      "sana": "suostunut",
-      "alku": 24139,
-      "loppu": 24659
+      "alku": 4600,
+      "loppu": 5040
     },
     {
       "sana": "pesuun",
-      "alku": 24719,
-      "loppu": 25159
+      "alku": 5100,
+      "loppu": 5700
     },
     {
-      "sana": "yhdellä",
-      "alku": 25260,
-      "loppu": 25639
+      "sana": "Kauppiaan",
+      "alku": 7340,
+      "loppu": 7800
     },
     {
-      "sana": "yrittämällä",
-      "alku": 25699,
-      "loppu": 26379
+      "sana": "mustat",
+      "alku": 7860,
+      "loppu": 8200
+    },
+    {
+      "sana": "kynnet",
+      "alku": 8260,
+      "loppu": 8620
+    },
+    {
+      "sana": "kertoivat",
+      "alku": 8680,
+      "loppu": 9200
+    },
+    {
+      "sana": "köysitöistä",
+      "alku": 9260,
+      "loppu": 10040
+    },
+    {
+      "sana": "Ostin",
+      "alku": 11580,
+      "loppu": 11860
+    },
+    {
+      "sana": "palan",
+      "alku": 11920,
+      "loppu": 12220
     },
     {
       "sana": "mutta",
-      "alku": 27420,
-      "loppu": 27599
+      "alku": 12780,
+      "loppu": 13020
+    },
+    {
+      "sana": "terva",
+      "alku": 13100,
+      "loppu": 13440
+    },
+    {
+      "sana": "kala",
+      "alku": 13680,
+      "loppu": 14080
+    },
+    {
+      "sana": "ja",
+      "alku": 14140,
+      "loppu": 14220
+    },
+    {
+      "sana": "suolavesi",
+      "alku": 14280,
+      "loppu": 15020
+    },
+    {
+      "sana": "seurasivat",
+      "alku": 15100,
+      "loppu": 15600
+    },
+    {
+      "sana": "majataloon",
+      "alku": 15640,
+      "loppu": 16340
+    },
+    {
+      "sana": "Maailma",
+      "alku": 18320,
+      "loppu": 18720
+    },
+    {
+      "sana": "jäi",
+      "alku": 18780,
+      "loppu": 18940
+    },
+    {
+      "sana": "likaiseksi",
+      "alku": 18980,
+      "loppu": 19700
     },
     {
       "sana": "käteni",
-      "alku": 27699,
-      "loppu": 28059
+      "alku": 20800,
+      "loppu": 21180
     },
     {
       "sana": "olivat",
-      "alku": 28119,
-      "loppu": 28399
+      "alku": 21240,
+      "loppu": 21540
     },
     {
       "sana": "jo",
-      "alku": 28459,
-      "loppu": 28539
+      "alku": 21580,
+      "loppu": 21660
     },
     {
       "sana": "toista",
-      "alku": 28579,
-      "loppu": 28879
+      "alku": 21700,
+      "loppu": 22040
     },
     {
       "sana": "mieltä",
-      "alku": 28959,
-      "loppu": 29239
+      "alku": 22080,
+      "loppu": 22440
     }
   ],
   "lauseet": [
-    140,
-    4420,
-    9119,
-    15639,
-    17779,
-    23439
+    100,
+    7340,
+    11580,
+    18320
   ],
-  "luotu": "2026-09-11T07:40:00.074Z"
+  "luotu": "2026-09-23T15:37:36.175Z"
 }

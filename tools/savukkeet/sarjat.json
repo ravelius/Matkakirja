@@ -447,7 +447,11 @@
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. TUNNETTU PUNAINEN (Pelikoodari/Julkaisija 21.9.2026, v1984): 8l4 puhelin — liuska x nimio (Skandaalit). Sovittelun lukko luettiin ennen merkit.aseta-kutsua, jolloin ruutu nayttaa datan kyljen eika lasketun asennon (14/68 lappua eri asennossa mitattu 1400 px); piilotustesti ei silloin osu oikeaan nimioon. Korjaus (pelikoodari-camargue) mergetty, mutta rivi on yha punainen CI:n kuormassa 21.9.2026 aamuyolla - seurataan.",
       "tunnetutPunaisetMac": [
         "8l4\\. puhelin: liuska on ruudussa eikä leikkaa"
-      ]
+      ],
+      "tunnetutPunaiset": [
+        "8k\\. puhelin: keskitetty liuska on merkin korkeudella"
+      ],
+      "huomautus8k": "TUNNETTU PUNAINEN (Julkaisija 24.9.2026): 8k punainen jokaisessa ajossa viimeistaan 22.9.2026 klo 23.40 alkaen (run 35781826724), myos paikallisesti ilman kuormaa mainissa 3671682e5: listan keskipiste 78 px merkin ylapuolella (sieto 30 px), lista merkin oikealla. Ei kuormaherkka eika PR-jonon aiheuttama. Pelikoodarille: korjaa asemointi tai paivita odotus, ja poista tama rivi."
     },
     "savuke-pariisi-lahizoom.mjs#1400-perus": {
       "env": {
@@ -626,6 +630,8 @@
       "huomautus": "Pieni liike kartalle (Fable 21.9.2026, js/pallolauta/liike.js): FRA/Pariisi 390 ja 1400 px — kerros laudalla ja levossa, illan savy vain illassa, pulu lentaa levossa ja lento paattyy, kortti auki pysayttaa pilven ja estaa pulun, kytkin pois pyyhkii kaiken, 390: kehysvali liikkeen kanssa <= 105 % ilman (kolme vuorottelevaa ikkunaa). Ampari Noden kautta. ~90 s."
     },
     "savuke-nimiot-sulavat.mjs": {
+      "tunnetutPunaisetMac": ["1\\. panoroinnissa nimiö pysyy maapisteessään", "2\\. zoomissa nimiö pysyy maapisteessään"],
+      "huomautusMac": "KUORMAHERKKA 23.9.2026 (Fablen paatos, Pelikoodari): punainen vain kuormassa rajatapauksena, ei koodimuutoksesta - Mac Studiolla CI-sarja ja savukkeet rinnakkain (load 24-133). Informatiivinen kunnes savukkeet-mac ajaa yhden ajon kerrallaan (concurrency ilman haaraa); poista sen jalkeen ja kahden perakkaisen vihrean ajon jalkeen. Mitattu: p95 2,26/2,82 px (raja 2), zoom mediaani 1,72/1,98 (raja 1).",
       "huomautus": "Nimioiden sulavuus (omistaja 21.9.2026 KARTAN SULAVUUS ENSIN, erat E1 mittari ja E2 liukuva koko): FRA/Marseille 390 dpr 2 ja 1400 — joka kehyksessa nimion siirtyma maapisteesta (koolla normalisoituna) panoroinnissa ja kamera-ajozoomissa seka koon liukuvuus (js/pallolauta/sulavuusmittari.js); E2: katto patee liikkeessa (noston nimio <= 16 px) ja levossa kuori on 1 eika liikkeen luokkaa ole. Headlessissa (2-6 fps) vartiot 1-3 kirjataan tiedoksi; tuomio ikkunallisena SAVUKE_IKKUNA=1 (Mac 60 fps: koko muuttuu 97 % kehyksista, porras 0) ja laitteella (ui.pallolauta.sulavuus). Ampari Noden kautta. ~100 s."
     },
     "savuke-hiomassa-linssi.mjs": {
@@ -666,6 +672,8 @@
       "huomautus": "Nostonimion koko ei riipu ladonnasta eika panoroinnista (omistaja 21.9.2026, iPhone v2021, Camargue: Camarguenvarsa 14 px ja Camarguen hevoset 40 px samassa kuvassa, koko vaihtui panoroidessa). Juurisyy: nimiorasterit.js talletti skaalan ja katon rasterin valimuistiin ensimmaisen datumin mitasta. WebKit puhelin, Camargue kolmella korkeudella (saapuminen 8,7 px, z7 16 px, syvin 22 px): kaikilla nimioilla sama perusmitta luokasta riippumatta ja sama fontti panoroinnin jalkeen. Samassa erassa KATTO NOUSEE LAHIZOOMISSA (16 px kertoimeen 2, 22 px kertoimesta 4). 13/13."
     },
     "savuke-marseille-valkkyy.mjs": {
+      "tunnetutPunaisetMac": ["3\\. musteen osuus nimen laatikossa"],
+      "huomautusMac": "KUORMAHERKKA 23.9.2026 (Fablen paatos, Pelikoodari): punainen vain kuormassa rajatapauksena, ei koodimuutoksesta - Mac Studiolla CI-sarja ja savukkeet rinnakkain (load 24-133). Informatiivinen kunnes savukkeet-mac ajaa yhden ajon kerrallaan (concurrency ilman haaraa); poista sen jalkeen ja kahden perakkaisen vihrean ajon jalkeen. Mitattu: yksi askel 16 -> 12 promillea (raja 80 %).",
       "env": {
         "SAVUKE_MOOTTORI": "webkit"
       },

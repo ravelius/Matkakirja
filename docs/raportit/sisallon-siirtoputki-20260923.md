@@ -19,9 +19,13 @@ Lähde: main `eaeda81cf` (v2143).
   (js/media.js). Lisäksi viitteissä on 1 681 lähde- ja lisenssilinkkiä.
 - 21 kokoelmaa tyypitettyinä entiteetteinä, esimerkiksi kaupungit
   lat/lon-koordinaatein, reitit, kysymykset, lehdet ja kohtaamiset.
-- Skeemaversio on **1.1** (`manifest.skeemaversio`): versiossa 1.1
+- Skeemaversio on **1.14** (`manifest.skeemaversio`): versiossa 1.1
   kaupungit saivat kentät `maa2` (ISO2), `tyyppi`, `lentokentta` ja
-  `aloitus` natiivin 3D-proton tarpeen mukaan.
+  `aloitus` natiivin 3D-proton tarpeen mukaan, versiossa 1.2 `tarkeys`
+  (0–3), ja manifest sai tiedostojen koot (`tavuja`), versiossa 1.3
+  lehden web-riippuvuudet (`web/lehti.json`), versiossa 1.4 kokoelmat
+  `saannot` ja `saapuminen`, versiossa 1.5 funktioiden luettelo
+  `manifest.logiikka` ja kokoelma `esilasketut`.
 - `tests/vienti.test.mjs` (6 testiä, 3 s) todistaa, ettei mitään jää pois.
   Se vertaa jokaista exporttia suoraan lähdemoduuliin. Testi on todettu
   herkäksi: kun Set muutettiin taulukoksi, testi kaatui.
@@ -171,8 +175,15 @@ dist/vienti/
   maa (pelin ISO3; Etelä-Sudan `SDS`), `maa2` (ISO2,
   `tools/vienti/iso2.mjs` Wikidatasta), manner, lat, lon,
   sijaintiLahde, saari, `lentokentta`, `aloitus`, `tyyppi` (laudan
-  ambience) ja data. Natiivin 3D-proton ensimmäinen tarve on id, nimi,
-  lat, lon ja maa2; muita kenttiä käytetään nimien harventamiseen.
+  ambience), `tarkeys` (1.2) ja data. Natiivin 3D-proton ensimmäinen
+  tarve on id, nimi, lat, lon ja maa2; muita kenttiä käytetään nimien
+  harventamiseen. `data` on laudan raakaolio (x, y, la, lx, ly…), johon
+  natiivi ei nojaa.
+- **Tärkeys (skeema 1.2)**: 3 = pääkaupunki (`tools/vienti/paakaupungit.mjs`,
+  staattinen taulu, määritelmä Wikidatan P36) tai aloituskaupunki,
+  2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä,
+  0 = muut. Reitit = laudan `edges` + `airRoutes`. Jakauma 266
+  kaupungilla: 0: 130, 1: 25, 2: 23, 3: 88.
 - **Media** osoittaa ämpäriin eikä kopioi tiedostoja. Natiivi peli voi
   hakea ne ajon aikana tai esiladata paketiksi.
 - **Manifest** antaa tuojalle tarkistuslistan: jos tuoja laskee
@@ -360,18 +371,64 @@ sessiota sisältöversion näyttämiselle (työhuone ja natiivin tietoja-sivu).
 - `minSovellus` on `{ ios: 1, web: null }`, koska web ei lue pakettia.
 - Skeema 1.1: kaupungeille `maa2` (ISO2), `tyyppi`, `lentokentta` ja
   `aloitus` 3D-proton tarpeen mukaan (3D-selvittäjä 23.9.).
+- Skeema 1.4 (osa 2 erä A, matkustus ja saapuminen ensin): kokoelma
+  `saannot` sisältää js/rules.js:n ja js/game.js:n vakiot, jotka kootaan
+  automaattisesti: hinnat SEA_FEE 100, FLIGHT_PRICE 300 ja BUS_FARE 50,
+  aloitusraha, vuoron tunnit, palkkiot ja XP. Nämä puuttuivat paketista
+  kokonaan. Kokoelma `saapuminen` antaa jokaiselle kaupungille pelin
+  saapumishakujen tulokset valmiiksi laskettuina (fokusvirta, juliste,
+  luentakuva, lehti, saapumispuhe, kohtaaminen, paikallisaarteet,
+  historian hetket, radio ja vanha tallenne), joten natiivin ei tarvitse
+  portata näitä apufunktioita. Liikkumisen logiikka (js/rules.js
+  findMoves, reachableCities) on edelleen Pelikoodarin porttaustyötä.
+- Skeema 1.3 (Fablen linjaus 23.9.: natiivi etusijalle, lehti aluksi
+  web-koodina WKWebView-kuoressa): `web/lehti.json` listaa lehden
+  riippuvuudet lähdekoodista laskettuna (`tools/vienti/web-riippuvuudet.mjs`).
+  Kuori avaa sivun `index.html?lehti=<kaupunki-id>` (Pelikoodari, PR #2942,
+  tapahtumat `lehti-auki` ja `lehti-suljettu` kanavaan
+  webkit.messageHandlers.matkakirja). Juuri on js/main.js, koska lehti
+  käyttää ui-olion 44 jäsentä. Mukana ovat index.html, JS-sulkeuma (554
+  moduulia, 24 dynaamista) ja CSS (14 tiedostoa), yhteensä noin 43 Mt
+  koodia. Lisäksi paikallisia tiedostoja ja kansioita on noin 370 Mt,
+  joista kohdekartat 263 Mt, ja ne haetaan ajon aikana osoitteesta `juuriUrl`.
+  Koodin kokoa pienentäisivät laiskat tuonnit laudalle; niistä ei ole
+  vielä päätöstä. Jokaisella
+  tiedostolla on sha256, joten kuori tietää, mitä versiota paketti vastaa.
+  Manifestissa on `webNakymat`. Vientityönkulku käynnistyy nyt myös
+  css/-, assets/- ja index.html-muutoksista.
+- Skeema 1.2 (3D-selvittäjän palaute 23.9. klo 14.29): kaupungeille
+  `tarkeys` 0–3; manifestiin `tavuja` kokoelmille, medialle ja
+  lisätiedostoille (moduuleilla se oli jo); `kaupunki.data` merkitty
+  skeemaan raakaolioksi.
 
 Funktiot tunnisteiksi ja sisältöversion näyttäminen ovat myöhempiä osia.
 
 ### 5.3 Yhteensopivuus: vanha sovellus ja uusi sisältö
 
-- **Skeeman major.minor.** Nykyinen on 1.1 (`SKEEMAVERSIO_TARKKA`,
+- **Skeeman major.minor.** Nykyinen on 1.14 (`SKEEMAVERSIO_TARKKA`,
   manifestissa ja osoittimessa). `matkakirja-vienti/1` on major. Lisäykset
   (uusi kenttä, uusi kokoelma) nostavat minoria, ja vanha sovellus
   ohittaa tuntemattomat kentät. Poisto tai merkityksen muutos nostaa
   majoria, jolloin osoitin vaihtuu (`sisalto/2/…`). Vanha sovellus ei
   koskaan näe uutta majoria, vaan jää viimeiseen yhteensopivaan
-  pakettiin.
+  pakettiin. Historia: 1.0 ensimmäinen vienti; 1.1 kaupunkien maa2,
+  tyyppi, lentokentta, aloitus; 1.2 kaupunkien tarkeys ja manifestin
+  tavuja; 1.3 web-näkymien riippuvuuslistat (web/lehti.json); 1.4 kokoelmat saannot
+  ja saapuminen; 1.5 manifest.logiikka, kokoelma esilasketut ja media.suurennos; 1.6 aarteiden
+  arvovälit ja botin taito saannoissa, kokoelma tapahtumat; 1.7 kokoelma
+  linssiaineisto; 1.8 kokoelma aanitaulut; 1.9 kokoelmat kuvakysymykset,
+  lippumaat, pulmaaineisto, luennat ja livianpuhe sekä offline.json (maittain ladattavat
+  laatat, maasto ja media arvioituine tavuineen, tools/vienti/offline.mjs); 1.10
+  (nippu 4) karttamerkit, karttavalot, maastonimet, maarajat, muotokuvat, laattakuvat,
+  linssiluennat; 1.11 Livian cue-data (livianpuhe.cuet[].ele, alku, loppu,
+  eleetTila; luennat.reaktiot[].ele; kokoelma livianrepliikit); 1.12 repon
+  assets/-kuvat ämpärissä (media.matkakirja.app/assets/…?v=, Pages varana,
+  CI vie ne, tools/vienti/sivustoassetit.mjs); 1.13 media.json leveys ja korkeus; 1.14
+  POISTOT MINORINA (Fablen poikkeus 23.9.2026): kaksintaistelut, DUEL_PRIZE, BOT_SKILL,
+  js/ai.js, laattatyyppi robber ja vanhat mannerlaudat. Poikkeus on sallittu, koska yksikään
+  natiivin haara ei lue niitä ja lukijat sietävät puuttuvan tiedoston. Testi valvoo, ettei
+  paketti viittaa niihin. Versiot verrataan numeroina (1.10 > 1.9). Raakaoliot (`data`) eivät kuulu sopimukseen: niiden kentät
+  voivat muuttua ilman versionnostoa.
 - **Pakolliset kentät.** Jokainen sovellus julistaa, mitkä kokoelmat ja
   kentät se vaatii. Tuoja validoi paketin ennen käyttöönottoa, ja jos
   jokin puuttuu, vanha paketti pysyy käytössä. Skeemat
@@ -400,6 +457,43 @@ datasta**. 125 funktiota, esimerkiksi pulmageneraattorit ja kaksi
 tekstifunktiota, korvataan tunnisteilla (esim. `generaattori:
 'roomalaiset'`), ja kumpikin peli toteuttaa generaattorin omalla
 kielellään. Arvio: 2–3 sessiota Pelikoodarille.
+
+**Tehty, erä 1: kaupunkidata (23.9.2026).** Laudan ja lähdepackien
+(`cities`-exportit ja `*_PUZZLES`) funktiot on poistettu:
+- 11 pulmaa: `generate: fn` → `generaattori: '<tunniste>'`. Rekisteri
+  `js/pulmageneraattorit.js` (`PULMAGENERAATTORIT`, `pulmanGeneraattori`).
+  Natiivi toteuttaa samat 11 tunnistetta; generaattori on
+  `(rng) => { sketch, options, correct }`.
+- 11 packin `texts.starFound` ja `texts.winnerStar`: nuolifunktiot →
+  pohjat, joissa paikkamerkit `{name}`, `{city}` ja `{money}`. Täyttö
+  `js/tekstipohja.js` (`taytaPohja`); tuntematon paikkamerkki jää näkyviin.
+- Vartija `tests/sisaltopaketti.test.mjs` ("kaupunkidatassa ei ole
+  funktioita") kaataa viennin, jos kaupunkidataan lisätään funktio.
+
+**Tehty, erä 2: loput 70 funktiota luokiteltu (skeema 1.5, 23.9.2026).**
+Kolme Sonnet-agenttia analysoi funktiot tiedostoittain.
+`tools/vienti/logiikka.mjs` luokittelee jokaisen, ja
+`manifest.logiikka` on natiivin porttauslista:
+- media (7): kuva- ja lippu-URL:t ovat jo media.json:ssa, ja uusi kenttä
+  `suurennos` (1600 px) vastaa funktiota valokuvaSuurennos().
+- esilaskettu (14): kokoelmat `saapuminen` (erä A) ja `esilasketut`
+  (hetkenKuvat, elaintakynKuvat, maanGenetiivi 135 maalle sisäisine
+  poikkeuksineen, linssien selitteet, piirroksen omaavat pulmat).
+- saanto (16): pieni sääntö sanallisesti (esim. karttaKuvasuhde,
+  viritysPolku, kaariLuentaSoi).
+- logiikka (29): linssien piirto ja pallokytkentä, 11 pulmageneraattoria
+  ja pulmapiirrokset tunnisteilla (`linssi:topografia.piirra`,
+  `pulma:roomalaiset`, `pulmapiirros:<id>`), karttapiste ja mittakaava.
+- kuollut (4): paivanKuva, fokuskohteetDeu, juliste, maanAiheOtsikko.
+- Kaupungeille `lauta: {x, y}` ja reiteille `askelia` ja `via` päätasolle
+  (3D-selvittäjän pyyntö): natiivin reittigeometria lasketaan verkkopelin
+  kaavalla laudan pisteistä, eikä sen tarvitse nojata `data`-kenttiin.
+- Kokoelma `laatat` (Pelikoodarin pyyntö): MAAILMANKARTTA.tokens
+  sellaisenaan yhtenä alkiona, jotta natiivin laattojen jaon ei tarvitse
+  lukea 1,6 Mt:n laudan raakamoduulia.
+Vartija (`tests/sisaltopaketti.test.mjs`) kaatuu, jos pakettiin tulee
+luokittelematon funktio tai jos luettelossa on vanhentunut rivi.
+Lähdeteksti jää raakakerrokseen, mutta natiivi ei aja sitä.
 
 Yhteensä: **3,5–5 sessiota** siihen, että sisältö julkaistaan molempiin
 peleihin yhdellä mergellä. Overlay lisää tähän 2 sessiota, jos sitä

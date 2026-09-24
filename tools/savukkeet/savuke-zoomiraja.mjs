@@ -103,11 +103,15 @@ const tila = (sivu) => sivu.evaluate(() => {
   const R = g.getGlobeRadius();
   const kuori = l.kuori ?? document;
   const merkit = [...kuori.querySelectorAll('.pallolauta-nosto')];
+  // Nostot ovat 21.9.2026 lähtien GL-rungolla (DOM 0): rungon näkyvät
+  // ikonit lasketaan nostomerkeiksi. Pisteiksi putoaminen (zoomikaton
+  // ohi) näkyy rungolla nostojen katoamisena, joten määrä vartioi samaa.
+  const gl = (l.glSovitin?.()?.nostotRungolla?.() ?? []).filter((i) => i.tunnus.endsWith('#ikoni') && i.opacity > 0).length;
   return {
     alt: pov.altitude,
     katto: ohj.maxDistance / R - 1,
-    dom: merkit.length,
-    kuvamerkit: merkit.filter((e) => e.querySelector('image, use')).length,
+    dom: merkit.length + gl,
+    kuvamerkit: merkit.filter((e) => e.querySelector('image, use')).length + gl,
     nimioNakyy: l.nostot?.osumat?.().filter((o) => o.nimioNakyy).length ?? null,
   };
 });

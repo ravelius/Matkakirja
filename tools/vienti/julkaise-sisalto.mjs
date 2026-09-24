@@ -37,6 +37,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSy
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SKEEMAVERSIO, SKEEMAVERSIO_TARKKA, JUURI } from './vie-sisalto.mjs';
+import { tarkistaSopimus } from './skeemasopimus.mjs';
 import { validoiNimella } from './validoi.mjs';
 
 export const MIN_SOVELLUS = { ios: 1, web: null };
@@ -70,6 +71,14 @@ export function tarkistaPaketti(tiedostot) {
       ));
     }
   }
+  if (manifest.offline) {
+    virheet.push(...validoiNimella(lue(manifest.offline.tiedosto), 'offline.schema.json', { polku: manifest.offline.tiedosto }));
+  }
+  for (const w of manifest.webNakymat ?? []) {
+    virheet.push(...validoiNimella(lue(w.tiedosto), 'web-nakyma.schema.json', { polku: w.tiedosto }));
+  }
+  // Skeemanumero vastaa kenttiä (ämpärin v11 oli "1.10" ilman 1.10:n kenttiä).
+  virheet.push(...tarkistaSopimus(tiedostot, manifest.skeemaversio ?? SKEEMAVERSIO_TARKKA));
   return virheet;
 }
 
@@ -83,6 +92,31 @@ export function lueAppVersion(juuri = JUURI) {
  * Valmistelee julkaisun muistissa. Palauttaa { muuttui, versio, osoitin,
  * virheet }. Ei kirjoita mitään, jotta testi voi ajaa tämän sellaisenaan.
  */
+/*
+ * MUUTOSRIVI OSOITTIMEEN (Natiivi-UI:n "Mitä uutta", 23.9.2026). Osoitin
+ * kantaa kokoelmien lukumäärät, ja uusi versio vertaa niitä edelliseen
+ * osoittimeen. Rivi on osoittimessa eikä paketissa, koska versionumero
+ * syntyy vasta paketin tiivisteestä. Käsin kirjoitetut rivit ovat
+ * kokoelmassa muutosloki-natiivi.
+ */
+const MUUTOSNIMET = {
+  kaupunkilehdet: 'kaupunkilehteä', maalehdet: 'maalehteä', nahtavyydet: 'nähtävyyttä', kysymykset: 'kysymystä',
+  kohtaamiset: 'kohtaamista', julisteet: 'julistetta', radiot: 'radioasemaa', kohdekartat: 'kohdekarttaa',
+  luennat: 'luentoa', elaintayt: 'eläinjuttua', kulttuurivisat: 'kulttuurivisaa', lehtitehtavat: 'lehtitehtävää',
+  miniatyyrit: 'pienoismallia', paikallisaarteet: 'paikallisaarretta', historianHetket: 'historian hetkeä',
+};
+export function muutosRivi(edelliset, nykyiset, julkaistu) {
+  const paiva = julkaistu.slice(0, 10);
+  if (!edelliset) return { paiva, teksti: 'Sisältö päivittyi.' };
+  const uudet = Object.entries(MUUTOSNIMET)
+    .map(([nimi, sana]) => [nykyiset[nimi] - (edelliset[nimi] ?? 0), sana])
+    .filter(([n]) => n > 0).sort((a, b) => b[0] - a[0]).slice(0, 3);
+  return {
+    paiva,
+    teksti: uudet.length ? `Sisältö päivittyi: ${uudet.map(([n, sana]) => `${n} uutta ${sana}`).join(', ')}.` : 'Sisältöä päivitettiin.',
+  };
+}
+
 export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit, appVersion = null, julkaistu }) {
   const tiiviste = paketinTiiviste(tiedostot);
   if (edellinen && edellinen.sha256 === tiiviste) {
@@ -102,6 +136,11 @@ export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit,
     appVersion,
     julkaistu,
   };
+  const manifest = tiedostot.has('manifest.json') ? JSON.parse(tiedostot.get('manifest.json')) : null;
+  if (manifest?.kokoelmat) {
+    osoitin.kokoelmaLkm = Object.fromEntries(manifest.kokoelmat.map((k) => [k.nimi, k.lkm]));
+    osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu);
+  }
   virheet.push(...validoiNimella(osoitin, 'osoitin.schema.json', { polku: 'uusin.json' }));
   return { muuttui: true, versio, osoitin, virheet };
 }

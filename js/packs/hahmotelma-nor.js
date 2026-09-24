@@ -1008,7 +1008,12 @@ export const HAHMOTELMA_NOR = [
           + 'restrictions).',
         tekija: 'Tuntematon valokuvaaja / Knut Aune Kunstforlag',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Norge._Lindesnes_fyr_(9912085303).jpg',
-        lisenssi: 'No known copyright restrictions',
+        // "No known copyright restrictions" on Flickr Commons -ohjelman
+        // vakiomerkintä (kansalliskirjastot): käytännössä PD, ei NC/ND-
+        // ehtoja. Rakenteinen lisenssi normalisoitu tunnistettavaksi
+        // (Julkaisijan lisenssiportti js/lisenssi.js, 23.9.2026);
+        // vapaamuotoinen selite lahde-rivillä säilyy ennallaan.
+        lisenssi: 'Public domain',
         lisenssiUrl: 'https://www.flickr.com/commons/usage/',
       },
     ],

@@ -399,7 +399,7 @@ const LUENTA_CUET_20260914 = Object.freeze({
   },
   {
     "id": "budapest.livia.c2",
-    "ankkuri": "onhan siellä",
+    "ankkuri": "suuhun: onhan siellä",
     "esiintyma": 1,
     "tarkoitus": "hammastys",
     "voimakkuus": 0.55
@@ -680,21 +680,25 @@ const LUENTA_CUET_20260914 = Object.freeze({
     "voimakkuus": 0.55
   },
   {
+    // POIKKEUS 23.9.2026 (elävä kohdistus ilman kuittia): alkuperäiset
+    // c4 ("meitä. Meitä!") ja c5 ("Pidin siivet visusti kyljissä") on
+    // yhdistetty tähän yhdeksi cueksi. Todellisessa äänitteessä nämä
+    // sanotaan niin nopeasti peräkkäin, että ElevenLabsin forced
+    // alignment palautti c4:n alulle, sen ankkurin lopulle JA c5:n
+    // alulle täsmälleen saman ajanhetken (5940 ms) — ei tekstiongelma
+    // (sanakattavuus oli 100 %), vaan audion tiivis tahti, joka ei
+    // jätä c4:lle omaa cue-ikkunaa millään sanavalinnalla. Yhdistetty
+    // cue käyttää c5:n ilmettä (miettiva/0.45), koska c5 kesti
+    // pidempään ja on siksi perceptuaalisesti hallitsevampi. Fablen
+    // päätös: ei MAX_CUE_MS-löysennystä, yhdistäminen sen sijaan.
     "id": "bergen.livia.c4",
-    "ankkuri": "meitä. Meitä!",
-    "esiintyma": 1,
-    "tarkoitus": "ilo",
-    "voimakkuus": 0.6
-  },
-  {
-    "id": "bergen.livia.c5",
-    "ankkuri": "Pidin siivet visusti kyljissä",
+    "ankkuri": "meitä. Meitä! Pidin siivet visusti kyljissä",
     "esiintyma": 1,
     "tarkoitus": "miettiva",
     "voimakkuus": 0.45
   },
   {
-    "id": "bergen.livia.c6",
+    "id": "bergen.livia.c5",
     "ankkuri": "En aikonut pilata muodostelmaa",
     "esiintyma": 1,
     "tarkoitus": "lammin",
