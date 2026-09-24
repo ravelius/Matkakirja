@@ -2,6 +2,10 @@
 // (VanaKerros), löytöpaikkojen valot (Valot), tähtitaivas avausjaksossa ja
 // Natiivi-UI:n koukut mustalle ruudulle, kertomuksen tekstille, kellolle,
 // kuville, pulun välihuomioille ja lopulle.
+//
+// TUTKIMUSVAIHE (ITutkimuksenNakyma, web ihmisen-matka-tutkimus.js): vanan korostus on tämän
+// kerroksen; nostojen pisteet, virtanapit ja lappu ovat Natiivi-UI:n (web DOM-merkit ja palkki).
+// UI piirtää pisteet NostonPiste(tunnus)-ruutupisteisiin kuten löytökuvan KuvanPiste.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +17,7 @@ using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public class IhmisenMatkaKerros : MonoBehaviour, IEsityksenNakyma
+    public class IhmisenMatkaKerros : MonoBehaviour, IEsityksenNakyma, ITutkimuksenNakyma
     {
         /// <summary>
         /// Onko UI:ssa esittelylaatikko (Natiivi-UI asettaa). Tosi: esitys ei käynnisty
@@ -30,6 +34,19 @@ namespace Matkakirja.Natiivi
         public static Action<string> PuluKasittelija;
         public static Action<string, double, string> TunneKasittelija;
         public static Action LoppuKasittelija;
+
+        /// <summary>Tutkimusvaiheen nostot pisteiksi (null = pois). Piste: NostonPiste(tunnus), väri: TutkimusNosto.Vari.</summary>
+        public static Action<IReadOnlyList<TutkimusNosto>> NostotKasittelija;
+        /// <summary>Virtanapit toimintaan (tosi) tai legendaksi (epätosi); napautus → IhmisenMatkaLinssi.Tutkimus.Valitse.</summary>
+        public static Action<bool> NapitKasittelija;
+        /// <summary>Valittu virta (null = ei): napin tila ja lappu (Virta.Nimi, Virta.Yhteenveto).</summary>
+        public static Action<Matkakirja.Linssit.Virrat.Virta> ValittuKasittelija;
+
+        /// <summary>
+        /// Noston ruutupiste (kuten KuvanPiste: Unityn ruutupikselit, origo vasen alakulma); null, kun
+        /// piste on pallon takana tai tunnusta ei ole. Luetaan joka kehys.
+        /// </summary>
+        public static Vector2? NostonPiste(string tunnus) => Instanssi != null ? Instanssi.Ruutupiste(tunnus) : null;
 
         /// <summary>Auki oleva kerros (null, kun ihmisen matka ei ole auki).</summary>
         public static IhmisenMatkaKerros Instanssi { get; private set; }
@@ -148,6 +165,26 @@ namespace Matkakirja.Natiivi
         public void Tunne(string tunne, double voimakkuus, string jakso) => TunneKasittelija?.Invoke(tunne, voimakkuus, jakso);
 
         public void VirtojenPito(bool paalla) => pito = paalla;
+
+        /// <summary>Muistista jatko: vanat heti pitona tähän kellolukemaan asti (web pidon pohja).</summary>
+        public void PidonPohja(double vuosiaSitten) => vanat?.Paivita(vuosiaSitten, true);
+
+        public void Nostot(IReadOnlyList<TutkimusNosto> nostot)
+        {
+            if (nostot != null)
+                foreach (var n in nostot) if (n.Tunnus != null) paikkaIndeksi[n.Tunnus] = (n.Lat, n.Lon);
+            LinssiOhjain.Instanssi?.Kirjaa($"tutkimus: nostot {(nostot == null ? "pois" : nostot.Count.ToString())}");
+            NostotKasittelija?.Invoke(nostot);
+        }
+
+        public void Napit(bool toiminnassa) => NapitKasittelija?.Invoke(toiminnassa);
+
+        public void Valittu(Matkakirja.Linssit.Virrat.Virta virta)
+        {
+            vanat?.Korosta(virta?.Tunnus);
+            LinssiOhjain.Instanssi?.Kirjaa($"tutkimus: virta {virta?.Tunnus ?? "pois"}");
+            ValittuKasittelija?.Invoke(virta);
+        }
 
         public void Loppu() => LoppuKasittelija?.Invoke();
 

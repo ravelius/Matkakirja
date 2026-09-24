@@ -158,6 +158,15 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>
+        /// Esilämmitys (Natiivisepän mittaus: ensimmäinen valokeila 24 ms): RenderTexture, Blit-materiaali ja
+        /// AsyncGPUReadback ajetaan kerran koekuvalla ennen ensimmäistä oikeaa kuvaa.
+        /// </summary>
+        public static void Valmistele()
+        {
+            if (luentaKaannetty == null && SystemInfo.supportsAsyncGPUReadback) MittaaLuenta(() => { });
+        }
+
         static bool? luentaKaannetty;
         static List<Action> mittausOdottajat;
 

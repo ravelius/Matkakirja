@@ -31,3 +31,31 @@ const sivut = pysakit.map((t, i) => {
 });
 writeFileSync(join(TAMA, 'nostot.json'), JSON.stringify({ nostot, sivut }, null, 1) + '\n');
 console.log(`nostot.json: ${nostot.length} nostoa, ${sivut.filter((s) => s.sivu).length} sivua`);
+
+/* ------------------------------------------------------ tutkimusvaihe */
+// Noston virta (nostonVirta) web-vanoista ja jokaisen virran rajaus (vananRajaus +
+// rajauksenLeveys) kahdella kuvasuhteella. Vanat: virrat-kultaiset.json (tee-kultaiset.mjs),
+// joiden kanssa C# Vanat.JohdaVanat on jo tarkistettu samaksi.
+import { readFileSync } from 'node:fs';
+const TU = await tuo('js/linssit/ihmisen-matka-tutkimus.js');
+const { IHMISEN_MATKA_VIRRAT } = await tuo('js/linssit/ihmisen-matka-virrat.js');
+const webVanat = JSON.parse(readFileSync(join(TAMA, 'virrat-kultaiset.json'), 'utf8')).vanat.vanat;
+const kaikki = K.kokoaNostot(pysakit, D.IHMISEN_MATKA_LISANOSTOT ?? []);
+const virrat = IHMISEN_MATKA_VIRRAT.map((v) => {
+  const pisteet = [];
+  for (const vana of webVanat) {
+    (vana.pisteet ?? []).forEach((p, k) => { if ((vana.virrat?.[k] ?? vana.virta) === v.tunnus) pisteet.push(p); });
+  }
+  const rajaus = TU.vananRajaus(pisteet);
+  return {
+    tunnus: v.tunnus, nimi: v.nimi, yhteenveto: v.yhteenveto ?? null, rintama: v.vari?.rintama ?? null,
+    pisteita: pisteet.length, rajaus,
+    leveys046: TU.rajauksenLeveys(rajaus, 0.46), leveys16: TU.rajauksenLeveys(rajaus, 1.6),
+  };
+});
+const tutkimus = {
+  nostot: kaikki.map((n) => ({ tunnus: n.tunnus, virta: K.nostonVirta(n, webVanat) })),
+  virrat,
+};
+writeFileSync(join(TAMA, 'tutkimus.json'), JSON.stringify(tutkimus, null, 1) + '\n');
+console.log(`tutkimus.json: ${tutkimus.nostot.length} nostoa, ${virrat.length} virtaa`);

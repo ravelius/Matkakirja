@@ -80,6 +80,8 @@ namespace Matkakirja.Linssit.Aikajana
     {
         void Musta(bool paalla, double feidiMs);
         void Valot(double feidiMs);
+        /// <summary>Vanat piirretään heti pitona tähän kellolukemaan asti (muistista jatko, web pidon pohja).</summary>
+        void PidonPohja(double vuosiaSitten);
         void Jakso(int i, KertomusJakso jakso);
         void Kello(double vuosiaSitten);
         void SytytaKohde(string kohde);
@@ -113,6 +115,14 @@ namespace Matkakirja.Linssit.Aikajana
         public bool Paattynyt { get; private set; }
         public bool AvausOhi { get; private set; }
         public bool MustaPaalla { get; private set; } = true;
+        /// <summary>Pienin kellolukema tähän asti (web tila.pitoMin): muistin pidon pohja.</summary>
+        public double PitoMin { get; private set; } = double.PositiveInfinity;
+        /// <summary>Jatkettiinko muistista (ei mustaa, ei avausta).</summary>
+        public bool Muistista { get; private set; }
+        /// <summary>Esitys päättyi (web ui.aloitaTutkimusvaihe): linssi aloittaa tutkimusvaiheen.</summary>
+        public Action Lopussa;
+        /// <summary>Muisti seuraa jaksoa (web ajo.tallennaMuisti): jakson alku ja valinta lopun jälkeen.</summary>
+        public Action Tallenna;
         double alkuHetki, puluHetki;
         double viimeHaku = double.NegativeInfinity;
 
@@ -174,11 +184,28 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (MusiikkiLaji == null || musiikkiAlkoi) return;
             musiikkiAlkoi = true;
+            if (juttuAuki) return;   // raita nousee vasta tiedeliitteen sulkiessa (JutunAjaksi)
             y.LinssiMusiikki(MusiikkiLaji);
             y.LinssiMusiikkiHimmennys(Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
         }
 
-        void MusiikkiTaso(double taso) { if (musiikkiAlkoi) y.LinssiMusiikkiHimmennys(taso); }
+        void MusiikkiTaso(double taso) { if (musiikkiAlkoi && !juttuAuki) y.LinssiMusiikkiHimmennys(taso); }
+
+        bool juttuAuki;
+
+        /// <summary>
+        /// TIEDELIITE ON OMA NÄKYMÄNSÄ (web vaimennaJutunAjaksi / palautaJutunJalkeen): linssin raita
+        /// väistyy kokonaan sivun ajaksi ja palaa sulkiessa esityksen tasolle.
+        /// </summary>
+        public void JutunAjaksi(bool auki)
+        {
+            if (auki == juttuAuki) return;
+            juttuAuki = auki;
+            if (!musiikkiAlkoi) return;
+            if (auki) { y.LinssiMusiikki(null); return; }
+            y.LinssiMusiikki(MusiikkiLaji);
+            y.LinssiMusiikkiHimmennys(Kaynnissa ? 1 : Pysakkiajo.TaukoHimmennys);
+        }
 
         public void Tauko()
         {
@@ -215,12 +242,15 @@ namespace Matkakirja.Linssit.Aikajana
             // Aikaselaimen irrotus (web valitse): selaus päättyy, pito alkaa valitusta hetkestä.
             bool? oliTauolla = selaus;
             selaus = null;
+            // Pidon pohja alkaa valitusta hetkestä (web valitse: tila.pitoMin = vuosia).
+            PitoMin = kertomus[i].Vuosia ?? Vuosia;
             nakyma.VirtojenPito(true);
             if (Paattynyt)
             {
                 // Esityksen jälkeen valinta on pelkkä kelaus: kello ja vanat hetkeen, kertoja vaiti.
                 I = i;
                 KirjoitaKello(kertomus[i].Vuosia ?? Vuosia);
+                Tallenna?.Invoke();
                 return;
             }
             Kaynnissa = true;
@@ -365,6 +395,8 @@ namespace Matkakirja.Linssit.Aikajana
             double kesto = Math.Max(Esitysmatikka.KameranPohjaMs,
                 Math.Min(Esitysmatikka.KameranKattoMs, Math.Floor(Luenta * Esitysmatikka.KameranOsuus + 0.5)));
             foreach (var h in jakso.Hiljaiset ?? Array.Empty<string>()) nakyma.SytytaKohde(h);
+            // Muisti seuraa jaksoa (web aloitaJakso → ajo.tallennaMuisti).
+            Tallenna?.Invoke();
             if (jakso.Kohde != null)
             {
                 nakyma.SytytaKohde(jakso.Kohde);
@@ -385,7 +417,7 @@ namespace Matkakirja.Linssit.Aikajana
             }
         }
 
-        void Paata()
+        void Paata(bool kamera = true)
         {
             if (Paattynyt) return;
             Paattynyt = true;
@@ -395,9 +427,57 @@ namespace Matkakirja.Linssit.Aikajana
             MusiikkiSisaan();
             MusiikkiTaso(Pysakkiajo.TaukoHimmennys);
             var viimeinen = Nykyinen;
-            if (viimeinen?.Alue != null) AjaAlueeseen(viimeinen.Alue, y.VahennettyLiike ? 0 : Esitysmatikka.LopunAsetusMs);
+            if (kamera && viimeinen?.Alue != null) AjaAlueeseen(viimeinen.Alue, y.VahennettyLiike ? 0 : Esitysmatikka.LopunAsetusMs);
             nakyma.Kuva(null);
             nakyma.Loppu();
+            // Koukku viimeisenä: tutkimusvaihe saa ruudun vasta, kun esitys on siivonnut jälkensä.
+            Lopussa?.Invoke();
+        }
+
+        // ── Muisti ────────────────────────────────────────────────────────
+
+        /// <summary>
+        /// JATKO MUISTISTA (web jatkaMuistista): ei mustaa eikä avausta, valot päällä, musiikki
+        /// nousee, pito kytketään ja sen pohja piirretään ensin (muuten Amerikat olisivat tyhjät,
+        /// jos jatko on Euroopan haarassa). Kamera on linssin muistista jo paikallaan.
+        /// Tutkimusvaihe jatkuu suoraan loppuun ilman kamera-ajoa.
+        /// </summary>
+        public bool JatkaMuistista(LinssiMuistiTila muisti)
+        {
+            if (muisti == null || Kaynnissa || Paattynyt || I >= 0) return false;
+            int i = -1;
+            if (muisti.Vaihe != "tutkimus")
+            {
+                for (int k = 0; k < kertomus.Count; k++) if (kertomus[k].Id == muisti.Jakso) { i = k; break; }
+                if (i < 0) return false;
+            }
+            Muistista = true;
+            AvausOhi = true;
+            avausOdottaa = false;
+            valotOdottaa = false;
+            valotPalavat = true;
+            MustaPaalla = false;
+            nakyma.Musta(false, 0);
+            nakyma.Valot(0);
+            nakyma.VirtojenPito(true);
+            MusiikkiSisaan();
+            if (muisti.PitoMin is double p)
+            {
+                PitoMin = p;
+                nakyma.PidonPohja(p);
+            }
+            if (muisti.Vaihe == "tutkimus")
+            {
+                I = kertomus.Count - 1;
+                KirjoitaKello(0);
+                Paata(kamera: false);
+                return true;
+            }
+            // Jakson kesto tarkentuu äänitteestä; kulunut ei saa ylittää varakestoa.
+            double kulunut = Math.Max(0, Math.Min(muisti.Kulunut, Varakesto(kertomus[i]) - 200));
+            Kaynnissa = true;
+            AloitaJakso(i, kulunut, hyppy: true);
+            return true;
         }
 
         // ── Kello ─────────────────────────────────────────────────────────
@@ -405,7 +485,13 @@ namespace Matkakirja.Linssit.Aikajana
         (double alku, double loppu) Tahti(int i) =>
             Esitysmatikka.JaksonTahti(kertomus.Select(j => j.Vuosia).ToList(), kertomus.Select(j => j.Vaihe).ToList(), i);
 
-        void KirjoitaKello(double v) { Vuosia = v; nakyma.Kello(v); }
+        void KirjoitaKello(double v)
+        {
+            Vuosia = v;
+            // Veto ei kasvata pitoa (web kelaaKello); pohja alkaa irrotuksen valinnasta.
+            if (selaus == null) PitoMin = Math.Min(PitoMin, Math.Max(0, v));
+            nakyma.Kello(v);
+        }
 
         void PaivitaKello()
         {

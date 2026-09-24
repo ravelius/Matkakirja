@@ -326,6 +326,10 @@ namespace Matkakirja.Natiivi
                     if (!string.IsNullOrEmpty(keksinnot.Otsikko)) otsikko.text = keksinnot.Otsikko.ToUpperInvariant();
                     if (pysakki < 0 && !lopussa) paikka.text = keksinnot.Jakso;
                     karuselli.Rakenna(keksinnot.Pysakit);
+                    // Esilämmitys linssin auetessa: GPU-luku ja ensimmäisten pysäkkien kuvat valmiiksi ennen
+                    // käynnistystä, ettei ensimmäinen pysäkinvaihto odota niitä (web esilataa paneelikuvat).
+                    Kuvat.Valmistele();
+                    ValmistaSeuraavat(-1, 4);
                     // Nauha esiin vasta kaaren käynnistyessä (esittelyn aikana tyhjä kartta ja laatikko).
                     karuselli.Nayta(pysakki >= 0);
                     var l = LinssiUi.Keksinnot;
@@ -655,10 +659,10 @@ namespace Matkakirja.Natiivi
         /// Web valmistaSeuraavat: seuraavien pysäkkien havainnekuvat valmiiksi (lataus, purku, maski),
         /// jotta pysäkin vaihtuessa kuva on jo muistissa eikä vaihtokehys odota verkkoa tai GPU:ta.
         /// </summary>
-        void ValmistaSeuraavat(int i)
+        void ValmistaSeuraavat(int i, int maara = EsilatausPysakkeja)
         {
             if (keksinnot == null) return;
-            for (int n = 1; n <= EsilatausPysakkeja; n++)
+            for (int n = 1; n <= maara; n++)
             {
                 if (i + n >= keksinnot.Pysakit.Count) return;
                 var p = keksinnot.Pysakit[i + n];
