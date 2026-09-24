@@ -1177,8 +1177,11 @@ namespace Matkakirja.Natiivi
         readonly Label mastonNimi;
         RadioLinssi linssi;
 
-        /// <summary>Mastot piirretään (Natiiviseppä asettaa MastoPiirto): ▶-napit piiloon, jotteivät ne sieppaa maston juurelta.</summary>
-        static bool Mastot => LinssiOhjain.RadioSovitin.MastoPiirto != null;
+        /// <summary>
+        /// Mastot piirretään (LinssiOhjain asettaa linssi.Mastot3D ennen avausta, RadioSovitin.MastoPiirto): ▶-napit
+        /// piiloon, jotteivät ne sieppaa maston juurelta. Ei riipu MastoListan täyttöjärjestyksestä.
+        /// </summary>
+        bool Mastot => linssi?.Mastot3D != null;
 
         public RadioNapit(VisualElement isa)
         {
