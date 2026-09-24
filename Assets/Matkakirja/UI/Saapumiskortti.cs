@@ -167,7 +167,10 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(leveys) || leveys <= 0f) return;
             float koko = Mathf.Clamp(leveys * FonttiVw, FonttiMin, FonttiMax);
             teksti.style.fontSize = koko;
-            teksti.style.letterSpacing = koko * Harvennus;
+            // UITK:n letter-spacing EI ole pikseleitä vaan em/100 (TextCoren characterSpacing): mitattu 25.9.
+            // (ui saapumiskortti-mitta, 17,27 pt): 0 → 184,2, 1 → 187,4, 2 → 190,4, 4 → 196,5 pt, eli arvo 1 lisää
+            // ~0,17 pt merkkiä kohden = 0,01em. Webin 0,13em on siis 13 (rivi 224 pt; web 228,3 px × 17,27/17,69 = 223).
+            teksti.style.letterSpacing = Harvennus * 100f;
         }
 
         /// <summary>
