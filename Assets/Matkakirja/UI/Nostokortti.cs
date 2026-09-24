@@ -594,8 +594,7 @@ namespace Matkakirja.Natiivi
             var kuva = Kuvakehys(sisus, k, Vaihe2, SarjanKuvaLadattu);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
-            var lyhyt = Rakenne.Teksti(k.Lyhyt ?? nosto.Otsikko ?? "", "mk-nosto__kuvateksti", alarivi);
-            Kirjasimet.Aseta(lyhyt, Kirjasin.Luku);
+            Kuvateksti(alarivi, k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
             MitoitaKuvaEdella();
@@ -922,8 +921,7 @@ namespace Matkakirja.Natiivi
             var kuvat = nosto.Kuvat;
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
-            var teksti = Rakenne.Teksti("", "mk-nosto__kuvateksti", lohko);
-            Kirjasimet.Aseta(teksti, Kirjasin.Luku); // web .nostokuva-selite: Iowan pysty, keskitetty
+            var teksti = Kuvateksti(lohko, "", null); // web .nostokuva-selite: Iowan pysty, keskitetty
             Label laskuri = null;
             void Nayta(int i)
             {
@@ -933,8 +931,7 @@ namespace Matkakirja.Natiivi
                 int kohta = kuvaIndeksi;
                 var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), SarjanKuvaLadattu);
                 if (rivi != null) { kehys.userData = kuvaSuhde; MitoitaKuvapalsta(); }
-                teksti.text = k.Lyhyt ?? "";
-                teksti.style.display = string.IsNullOrEmpty(k.Lyhyt) ? DisplayStyle.None : DisplayStyle.Flex;
+                AsetaKuvateksti(teksti, k.Lyhyt, k);
                 if (kuvat.Count > 1)
                 {
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
@@ -944,6 +941,52 @@ namespace Matkakirja.Natiivi
             // Löydös 34: reunanapautus ja pyyhkäisy selaavat (ei nuolia), keskiosa suurentaa.
             new KuvaSelaus(kehysPaikka, () => kuvat.Count, s => Nayta(kuvaIndeksi + s), () => kehysPaikka.childCount > 0 ? kehysPaikka[0] : kehysPaikka);
             Nayta(kuvaIndeksi);
+        }
+
+        // --- "Havainnekuva"-merkintä (web js/havainnekuva.js lisaaHavainnekuvaMerkki, css/fokusnosto.css
+        // .kuvateksti-havainne; Fable 24.9. klo 20.3x: tarkoitettu merkki kaikissa korteissa) ----------------
+
+        static readonly System.Text.RegularExpressions.Regex HavainneLahde =
+            new System.Text.RegularExpressions.Regex(@"^\s*Tekoälyllä tuotettu havainnekuva\."),
+            HavainneRivi = new System.Text.RegularExpressions.Regex("Matkakirjan (?:havainnekuva|kuvitus)");
+
+        /// <summary>Web onHavainnekuva: lähderivi alkaa "Tekoälyllä tuotettu havainnekuva." tai mainitsee Matkakirjan havainnekuvan.</summary>
+        static bool OnHavainnekuva(NostoKuva k)
+        {
+            string l = k?.LahdeRivi ?? "";
+            return HavainneLahde.IsMatch(l) || HavainneRivi.IsMatch(l);
+        }
+
+        /// <summary>Lyhyt kuvateksti (web .nostokuva-selite) kotelona, johon havainnekuvan merkki mahtuu rivin jatkoksi.</summary>
+        static VisualElement Kuvateksti(VisualElement isa, string teksti, NostoKuva k)
+        {
+            var kotelo = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", isa, PickingMode.Ignore);
+            Kirjasimet.Aseta(kotelo, Kirjasin.Luku);
+            AsetaKuvateksti(kotelo, teksti, k);
+            return kotelo;
+        }
+
+        /// <summary>
+        /// Web lisaaHavainnekuvaMerkki: &lt;small&gt; inline-block kuvatekstin perässä. UITK ei kellota laatikkoa
+        /// tekstirivin sisään, joten havainnekuvan teksti ladotaan sanoittain rivittyvään keskitettyyn riviin
+        /// (sanaväli Iowan 13,44 px = 3,73 px, mitattu), ja merkki on sen viimeinen alkio. Muu kuvateksti yhtenä tekstinä.
+        /// </summary>
+        static void AsetaKuvateksti(VisualElement kotelo, string teksti, NostoKuva k)
+        {
+            kotelo.Clear();
+            bool merkki = OnHavainnekuva(k);
+            kotelo.style.display = string.IsNullOrEmpty(teksti) && !merkki ? DisplayStyle.None : DisplayStyle.Flex;
+            if (!merkki)
+            {
+                if (!string.IsNullOrEmpty(teksti)) Rakenne.Teksti(teksti, "mk-nosto__kuvarivi", kotelo);
+                return;
+            }
+            var sanat = (teksti ?? "").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < sanat.Length; i++)
+                Rakenne.Teksti(sanat[i], i < sanat.Length - 1 ? "mk-nosto__kuvasana mk-nosto__kuvasana--vali" : "mk-nosto__kuvasana", kotelo);
+            var m = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kotelo);
+            m.tooltip = "Tekoälyllä tuotettu havainnekuva";
+            Kirjasimet.Aseta(m, Kirjasin.Kone);
         }
 
         void Suurenna(int alku) => suurennos.Avaa(nosto.Kuvat.Select(Lehtikuva).ToList(), alku);
