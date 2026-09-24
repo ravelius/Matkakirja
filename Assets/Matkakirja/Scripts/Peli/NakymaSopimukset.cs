@@ -272,5 +272,10 @@ namespace Matkakirja.Natiivi
         public static Func<GameObject, ISahkeNakyma> Sahke;
         /// <summary>Pöllön sähketehtäväkortti. Asettamaton = sähkekaupungin piste avaa laattakysymyksen.</summary>
         public static Func<GameObject, ISahketehtavaNakyma> Sahketehtava;
+        /// <summary>
+        /// Aloitusnäkymä (portti, avaus, valinta) pois: testikomento `uusi-peli` (Laitetestaajan löydös 24.9.: peli
+        /// nollautui aloitusnäytön alle, ja kamera jäi portin pyörivään palloon). Asettamaton = ei aloitusnäkymää.
+        /// </summary>
+        public static Action SuljeAloitus;
     }
 }

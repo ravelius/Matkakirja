@@ -34,7 +34,7 @@
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
-//   uusi-peli [siemen]        uusi peli Pariisista (siemen = toistettava noppa)
+//   uusi-peli [siemen] [kaupunki]  uusi peli (oletus Lontoo; siemen = toistettava noppa); sulkee aloitusnäkymän
 //   koetila mannerlento       TESTI: oman mantereen pääaarre löydetyksi + raha ≥ 1000 → mannerlennot tarjolla
 //                             (laivareitti: uusi-peli 1 lontoo → kulkutapa laiva, Lontoo–Amsterdam)
 //   peli pois | peli paalle   pelisilmukka pois (3D:n napautus kuten ennen) tai päälle
@@ -246,6 +246,8 @@ namespace Matkakirja.Natiivi
                 case "uusi-peli":
                     if (ohjain.Verkko == null) return "sisältö ei ole vielä latautunut";
                     // uusi-peli [siemen] [kaupunki]: oletuslähtö on Lontoo (C8); käsikirjoitukset antavat kaupungin.
+                    // Aloitusnäkymä pois ensin (kuten ui aloita): muuten peli jää portin alle (Laitetestaaja 24.9.).
+                    PeliNakymat.SuljeAloitus?.Invoke();
                     ohjain.UusiPeli(long.TryParse(A(1), NumberStyles.Integer, CultureInfo.InvariantCulture, out var s) ? s : (long?)null, A(2));
                     return null;
                 case "sahke":
