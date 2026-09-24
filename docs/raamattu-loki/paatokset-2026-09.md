@@ -4455,3 +4455,7 @@ Radiouudistus: paneeli kuvaputken tekstuureilla, VU + LCD samaan riviin, hämär
 ## OMISTAJA klo 19.3x (SITOVA): RADIOUUDISTUKSEEN YON VALOT (NASA BLACK MARBLE, PD) JA LINTUPARVET; BUILD 10 AJOSSA b9755e9:STA (36024604696), PR #3110 UNITY-TARKISTUS AJURIN KAYTTAJAAN (24.9.2026 klo 19.04)
 
 Yön valot: Karttaseppä polttaa Black Marble Z0–Z6 satelliittiputkella (E28:n jälkeen), Natiiviseppä sekoittaa emissiivisenä hämärään; palvelee myös yön valot -datalinssiä ja lennon yöosuutta. Linnut: boid-parvet 20–40 siluettia hämärässä ja lennolla, muuttolintureitit, ei oletuskarttaan. Raamattu päivitetty. Build 10: kaksi yritystä ohittui 'Unity on käynnissä' (pgrep näki omistajan Unityn) → #3110 rajaa tarkistuksen ajurin käyttäjään, hyväksytty; Unity-vienti alkoi 19.03 tiimillä F72JLS57C5. Kuvaputkelle tilattu radiopaneelin tekstuurit ja viitekuvat (d5928ae06).
+
+## YOVALOSARJA HYVAKSYTTY: BLACK MARBLE 2016 500 m, Z0–Z6 (5 461 LAATTAA, 25–50 Mt), AJO 25.9. klo 9 JALKEEN (24.9.2026 klo 19.05)
+
+Karttasepän arvio: lähde 8 osaa A1–D2 (~200–250 Mt), bmng-putki toimii lähes sellaisenaan; 3 km -versio liian karkea Z6:lla pohjoisessa; kesto ~20–25 min. wt/ 13 (tavoite alle 20 saavutettu). Codex tarkensi galleriatilauksen lähdevariantit (a62c1ce1).
