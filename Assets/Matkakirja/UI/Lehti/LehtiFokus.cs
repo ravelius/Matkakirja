@@ -276,7 +276,7 @@ namespace Matkakirja.Natiivi
             var laatikko = Rakenne.El("mk-lehti__tehtava mk-fokus", s, PickingMode.Ignore);
             if (juliste != null) laatikko.AddToClassList("mk-fokus--palkinnollinen");
             var otsake = Rakenne.Teksti(nimilaatta, "mk-lehti__tehtavaotsake mk-fokus__otsake", laatikko);
-            Kirjasimet.Aseta(otsake, Kirjasin.Kone);
+            Kirjasimet.Aseta(otsake, Kirjasin.KoneBold); // web .minitehtava-otsikko font-weight 700
 
             if (Vastattu(kaupunki, t.Aihe))
             {
@@ -312,6 +312,7 @@ namespace Matkakirja.Natiivi
                 int valinta = i;
                 var b = Rakenne.Nappi(t.Visa.Vaihtoehdot[i], "mk-nosto__visanappi mk-fokus__vastaus", null, vaihtoehdot);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
+                b.Insert(0, Rakenne.El("mk-fokus__ruutu", null, PickingMode.Ignore)); // web ::before-valintaruutu
                 b.clicked += () =>
                 {
                     bool oikein = valinta == t.Visa.Oikea;

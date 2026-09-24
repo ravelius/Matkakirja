@@ -134,12 +134,14 @@ namespace Matkakirja.Natiivi
 
             alapalkki = Rakenne.El("mk-lehti__alapalkki", arkki, PickingMode.Ignore);
             var navi = Rakenne.El("mk-lehti__navi", alapalkki, PickingMode.Ignore);
-            poistu = Rakenne.Nappi("Poistu lehdestä", "mk-lehti__poistu", Sulje, navi);
-            Kirjasimet.Aseta(poistu, Kirjasin.Kone);
+            // Web .dialog.lehti .arrival-card .dialog-actions button: American Typewriter 600 versaalina (text-transform).
+            poistu = Rakenne.Nappi("POISTU LEHDESTÄ", "mk-lehti__poistu", Sulje, navi);
+            Kirjasimet.Aseta(poistu, Kirjasin.KoneLihava);
             alaSisallys = Rakenne.Nappi(null, "mk-lehti__selaus mk-lehti__selaus--sisallys", () => VaihdaSisallys(false), navi, Ikonit.Valikko);
             alaSisallys.tooltip = "Sisällys";
             edellinen = Selausnappi("Edellinen", "mk-lehti__selaus--edellinen", () => Kaanna(nyt - 1), navi);
             seuraava = Selausnappi("Seuraava", "mk-lehti__selaus--seuraava", () => Kaanna(nyt + 1), navi);
+            navi.RegisterCallback<GeometryChangedEvent>(_ => MitoitaAlanapit());
             tehtavaNappi = Rakenne.Nappi("", "mk-lehti__tehtavanappi", EtsiKatko, alapalkki);
             Rakenne.Tausta(tehtavaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(tehtavaNappi, Kirjasin.KoneLihava);
@@ -426,11 +428,37 @@ namespace Matkakirja.Natiivi
             porrasSivu = null;
         }
 
+        /// <summary>
+        /// Web alanapit: flex 1 1 0 ja väli 0,7 rem, mutta flex-item ei kapene sisältöään kapeammaksi (min-width auto):
+        /// iPhonella Poistu 106, Edellinen 129 ja Seuraava 106, iPadilla kaikki 209 (mitattu 24.9. b11).
+        /// </summary>
+        void MitoitaAlanapit()
+        {
+            foreach (var b in new[] { poistu, edellinen, seuraava })
+            {
+                if (b == null || b.resolvedStyle.display == DisplayStyle.None) continue;
+                float sisalto = 0f;
+                foreach (var l in b.Query<Label>().ToList())
+                {
+                    if (string.IsNullOrEmpty(l.text) || l.resolvedStyle.display == DisplayStyle.None) continue;
+                    float w = l.MeasureTextSize(l.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+                    if (l.ClassListContains("mk-lehti__selausaihe")) w = Mathf.Min(w, SelausaiheLeveys);
+                    sisalto = Mathf.Max(sisalto, w);
+                }
+                var s = b.resolvedStyle;
+                float min = Mathf.Ceil(sisalto + s.paddingLeft + s.paddingRight + s.borderLeftWidth + s.borderRightWidth);
+                if (!Mathf.Approximately(s.minWidth.value, min)) b.style.minWidth = min;
+            }
+        }
+
+        /// <summary>Web .alanappi-aihe max-width 17ch (American Typewriter 10,56 px: 114 px, mitattu).</summary>
+        const float SelausaiheLeveys = 114f;
+
         static Button Selausnappi(string suunta, string luokka, Action painettu, VisualElement isa)
         {
             var b = Rakenne.Nappi(null, "mk-lehti__selaus " + luokka, painettu, isa);
-            Kirjasimet.Aseta(Rakenne.Teksti(suunta, "mk-lehti__selaussuunta", b), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti("", "mk-lehti__selausaihe", b), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(suunta.ToUpperInvariant(), "mk-lehti__selaussuunta", b), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti("", "mk-lehti__selausaihe", b), Kirjasin.KoneLihava);
             return b;
         }
 
@@ -462,8 +490,8 @@ namespace Matkakirja.Natiivi
             bool ensimmainen = nyt == 0, viimeinen = nyt == sivut.Count - 1;
             edellinen.style.display = ensimmainen ? DisplayStyle.None : DisplayStyle.Flex;
             seuraava.style.display = viimeinen ? DisplayStyle.None : DisplayStyle.Flex;
-            edellinen.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt - 1);
-            seuraava.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt + 1);
+            edellinen.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt - 1).ToUpperInvariant();
+            seuraava.Q<Label>(className: "mk-lehti__selausaihe").text = SivunNimi(nyt + 1).ToUpperInvariant();
             alaSisallys.style.display = maalehti && sivut.Count >= 3 ? DisplayStyle.Flex : DisplayStyle.None;
             poistu.Q<Label>().text = maalehti || viimeinen ? "Poistu" : "Poistu lehdestä";
             // Tehtävänappi jokaisen kaupunkisivun alareunassa (omistaja 9.8.2026); maalehdessä ei.
