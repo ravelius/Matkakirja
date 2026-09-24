@@ -1987,3 +1987,257 @@
     font-size: 11.5px;
     letter-spacing: 0.4px;
 }
+
+/* ── TILASTOT (Tilastot.cs; web .tk-taulu, .tk-nimi, .tk-num, .tk-valmis/-kesken/-puuttuu, .tk-kiintio). */
+.mk-tilastot__ohjaus {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mk-tilastot__ohjausnimi {
+    margin: 0 6px 0 0;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-tilastot__vipu {
+    flex-direction: row;
+    margin-right: 14px;
+}
+
+.mk-tilastot__vipunappi {
+    min-height: 30px;
+    margin: 2px 4px 2px 0;
+    padding: 0 10px;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: rgba(122, 85, 20, 0.4);
+    background-color: rgba(255, 252, 240, 0.6);
+}
+
+.mk-tilastot__vipunappi .mk-nappi__teksti {
+    font-size: 12px;
+    color: rgba(70, 51, 31, 0.8);
+}
+
+.mk-tilastot__vipunappi.mk-valittu {
+    border-color: rgba(176, 138, 60, 0.95);
+    background-color: rgba(217, 161, 59, 0.25);
+}
+
+.mk-tilastot__vieri {
+    margin-bottom: 10px;
+}
+
+.mk-tilastot__taulu {
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.2);
+}
+
+.mk-tilastot__rivi {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    border-color: rgba(70, 51, 31, 0.12);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-tilastot__rivi--otsikko {
+    background-color: #f0e6cd;
+}
+
+.mk-tilastot__rivi--manner {
+    background-color: rgba(217, 161, 59, 0.1);
+}
+
+.mk-tilastot__rivi--maa {
+    background-color: rgba(217, 161, 59, 0.04);
+}
+
+.mk-tilastot__nimi {
+    flex-shrink: 0;
+    width: 200px;
+    padding: 5px 7px;
+    font-size: 12px;
+    color: rgba(58, 42, 26, 0.95);
+}
+
+.mk-tilastot__nimi--maa {
+    padding-left: 18px;
+}
+
+.mk-tilastot__nimi--kaupunki {
+    padding-left: 34px;
+}
+
+.mk-tilastot__nimi--tuore-valmis {
+    background-color: #e2efdc;
+}
+
+.mk-tilastot__nimi--tuore-tyossa {
+    background-color: #f7ecd2;
+}
+
+.mk-tilastot__nimirivi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mk-tilastot__nuoli {
+    margin-right: 4px;
+    font-size: 11px;
+    color: rgba(70, 51, 31, 0.6);
+}
+
+.mk-auki .mk-tilastot__nuoli {
+    rotate: 90deg;
+}
+
+.mk-tilastot__nimiteksti {
+    flex-shrink: 1;
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(58, 42, 26, 0.95);
+}
+
+.mk-tilastot__osuus {
+    margin-left: 6px;
+    font-size: 10.5px;
+    color: rgba(70, 51, 31, 0.7);
+}
+
+.mk-tilastot__lisa {
+    margin-top: 2px;
+    font-size: 10px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.62);
+}
+
+.mk-tilastot__palkki {
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 2px;
+    background-color: rgba(70, 51, 31, 0.14);
+    overflow: hidden;
+}
+
+.mk-tilastot__palkkitayte {
+    height: 100%;
+    background-color: #8fb886;
+}
+
+.mk-tilastot__tuoremerkki {
+    margin-left: 5px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 9.5px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.mk-tilastot__kaikki {
+    min-height: 22px;
+    margin-left: 6px;
+    padding: 0 6px;
+    border-width: 1px;
+    border-radius: 11px;
+    border-color: rgba(122, 85, 20, 0.35);
+    background-color: rgba(255, 252, 240, 0.6);
+}
+
+.mk-tilastot__kaikki .mk-nappi__teksti {
+    font-size: 10px;
+    color: #7a5514;
+}
+
+.mk-tilastot__num {
+    flex-shrink: 0;
+    width: 58px;
+    padding: 5px 3px;
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    color: rgba(58, 42, 26, 0.9);
+}
+
+.mk-tilastot__num--valmis {
+    background-color: #e2efdc;
+    color: #2c5e2a;
+}
+
+.mk-tilastot__num--kesken {
+    background-color: #f7ecd2;
+    color: #7a5a12;
+}
+
+.mk-tilastot__num--puuttuu {
+    color: rgba(70, 51, 31, 0.45);
+}
+
+.mk-tilastot__num--tyhja {
+    color: rgba(70, 51, 31, 0.28);
+}
+
+.mk-tilastot__taulu--luvut .mk-tilastot__num {
+    width: 80px;
+}
+
+.mk-tilastot__lapset {
+    flex-shrink: 0;
+}
+
+.mk-tilastot__kiintiot {
+    margin: 6px 0 12px 0;
+}
+
+.mk-tilastot__kiintio {
+    margin-bottom: 10px;
+}
+
+.mk-tilastot__kiintio--tyhja {
+    opacity: 0.5;
+}
+
+.mk-tilastot__kiintiorivi {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.mk-tilastot__kiintionimi,
+.mk-tilastot__kiintioarvo {
+    font-size: 12px;
+    color: rgba(58, 42, 26, 0.9);
+}
+
+.mk-tilastot__kiintioura {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(70, 51, 31, 0.12);
+    overflow: hidden;
+}
+
+.mk-tilastot__kiintiotayte {
+    height: 100%;
+    width: 0;
+}
+
+.mk-tilastot__kiintiotayte--vihrea {
+    background-color: #8fb886;
+}
+
+.mk-tilastot__kiintiotayte--keltainen {
+    background-color: #d9b44a;
+}
+
+.mk-tilastot__kiintiotayte--punainen {
+    background-color: #c0533a;
+}

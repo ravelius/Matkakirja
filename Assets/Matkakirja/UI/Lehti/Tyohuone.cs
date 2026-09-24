@@ -10,7 +10,7 @@
 //
 // Raamatun sivut ovat muokkauskenttiä: muutos elää istunnon luonnoksessa (web sessionStorage) ja lähtee
 // "Lähetä muutokset" -napilla ehdotuskanavaan lajilla raamattu (Fable kuratoi). Kehittäjälehden rivit
-// kutsuvat samoja avauksia kuin webin rivit; natiivissa ovat nyt Tilannelehti, Poiminnat, Grafiikka, Lukijoilta (Lukijoilta.cs) ja Musiikki.
+// kutsuvat samoja avauksia kuin webin rivit; natiivissa ovat nyt Tilannelehti, Poiminnat, Tilastot (Tilastot.cs), Grafiikka, Lukijoilta (Lukijoilta.cs) ja Musiikki.
 // Fable 24.9.: Raamattu-data ei muutu appissa, luonnos ei tallennu pysyvästi, lähetys kulkee ehdotusreittiä
 // (laji raamattu) ja koko työhuone on vain kehittäjätilassa eikä App Store -buildissa (Paavalikko #if).
 using System;
@@ -262,6 +262,8 @@ namespace Matkakirja.Natiivi
                 "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9h5.5M7.5 12h9M7.5 15h9\"/><path d=\"M16 9h.5\"/>", () => AvaaTilanne()),
             ("Poiminnat", "Oikotie Tilannelehden Pöllöpoiminnat-sivulle.",
                 "<rect x=\"4.5\" y=\"9\" width=\"15\" height=\"6\" rx=\"3\"/><path d=\"M12 9v6\"/>", () => AvaaTilanne(2)),
+            ("Tilastot", "Rakennustyön tilanne mantereittain, maittain ja kaupungeittain.",
+                "<path d=\"M4.5 19.5h15\"/><path d=\"M7 19.5v-7\"/><path d=\"M12 19.5v-11\"/><path d=\"M17 19.5v-4.5\"/>", () => Tilastot.Avaa()),
             ("Grafiikka", "Julistesuunnan luonnokset yksi juliste sivua kohti.",
                 "<path d=\"M4.5 4.5h15v15h-15z\"/><path d=\"m4.5 15.5 4.5-4.5 3.5 3.5 3-3 4 4\"/><path d=\"M9.5 8.7a.9.9 0 1 1 0 .2\"/>", () => AvaaGrafiikka()),
             ("Lukijoilta", "Lukijoiden ehdotukset, kuvavinkit ja Raamatun muutokset.",
