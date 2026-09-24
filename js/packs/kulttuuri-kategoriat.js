@@ -100801,19 +100801,19 @@ export const KULTTUURI_KATEGORIAT = {
        */
       kansikuvat: [
         {
-          tiedosto: 'St. John’s, Newfoundland and Labrador, 2023.jpg',
+          tiedosto: 'St. John\'s, Newfoundland and Labrador, 2023.jpg',
           selite: 'Signal Hillin rinteeltä näkyy koko satama ja sen '
             + 'takana kaupunki, joka jatkuu kukkuloille asti.',
           lahde: 'CyberDetroit, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'City of St. John’s, Newfoundland.jpg',
+          tiedosto: 'City of St. John\'s, Newfoundland.jpg',
           selite: 'Kalastusaluksia laiturissa, ja rinteen päällä '
             + 'erottuvat basilikan kaksi tornia.',
           lahde: 'Sallyledrew, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: '1998-08-01 St. John’s, Blick vom Signal Hill zum Hafen1.jpg',
+          tiedosto: '1998-08-01 St. John\'s, Blick vom Signal Hill zum Hafen1.jpg',
           selite: 'Rannikkovartioston jäänmurtaja kääntyy altaassa, ja '
             + 'takana nousee kaupunki rinnettä ylös.',
           lahde: 'Eduard47, Wikimedia Commons (CC BY-SA 4.0)',
@@ -100826,7 +100826,7 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          tiedosto: 'Aerial view of Signal Hill, St. John’s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
+          tiedosto: 'Aerial view of Signal Hill, St. John\'s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
           selite: 'Satamansuu ilmasta: kaksi kalliota jättää väliinsä '
             + 'kapean portin, ja kukkulan laella erottuu torni.',
           lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
@@ -100838,7 +100838,7 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Kenny Louie from Vancouver, Canada, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'Basilica of St. John the Baptist, St. John’s, Newfoundland.jpg',
+          tiedosto: 'Basilica of St. John the Baptist, St. John\'s, Newfoundland.jpg',
           selite: 'Basilikan kaksi tornia hallitsevat harjannetta, ja '
             + 'niiden alapuolella kaupunki laskeutuu satamaan.',
           lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
@@ -100938,7 +100938,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nuorempia: kivihiilinoki teki vaaleat maalit '
             + 'mahdottomiksi, ja kirkkaat sävyt tulivat vasta '
             + '1970-luvulla, kun hiilestä luovuttiin.',
-          tiedosto: 'Typical steeply graded street in St. John’s, Nfl (26984982184).jpg',
+          tiedosto: 'Typical steeply graded street in St. John\'s, Nfl (26984982184).jpg',
           selite: 'Jyrkkä asuinkatu, jonka puutalot on maalattu '
             + 'punaiseksi, keltaiseksi ja siniseksi.',
           lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
@@ -101038,7 +101038,7 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Harbour Symphonyn soittavat sataman laivojen torvet '
                 + 'keskipäivällä.',
               kuva: {
-                tiedosto: 'Regatta Start, St. John’s, Newfoundland.jpg',
+                tiedosto: 'Regatta Start, St. John\'s, Newfoundland.jpg',
                 selite: 'Kuuden hengen kilpaveneet lähtevät liikkeelle '
                   + 'Quidi Vidin järvellä, ja rannalla seisoo väkeä.',
                 lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
