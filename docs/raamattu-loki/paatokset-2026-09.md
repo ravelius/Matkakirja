@@ -4303,3 +4303,7 @@ Korkeuskerroin 2 (vertailukuvat proto-3d/lokit/korkeuskerroin-20260924/): Natiiv
 ## KUVAPUTKEN TILAUKSET LAHETETTY CODEXIN POSTILAATIKKOON (claude/postilaatikko 962cf9077); N-ERAT MAINISSA (v2183–v2186); NATIIVI-UI b10-jono 0e8ff30 (24.9.2026 klo 17.09)
 
 Tilaukset: posti/fable-kuvaputki-maamerkit-viitekuvat-20260924.md (70 kaupunkia, 3–4 PD/CC-viitekuvaa per maamerkki, ehdotetut kohteet, manifesti kuvatoimitus-maamerkit-viitekuvat) ja posti/fable-kuvaputki-renessanssisali-20260924.md (20–30 PD/CC0-maalausta 4000 px, 5 veistosta 3D-skannauksina, taiteilijoiden omakuvat, 1500-luvun kaupunkikartat; manifesti kuvatoimitus-renessanssisali). Julkaisija: N2 #2996 v2183, N5 #3004 v2184, N6 #3006 v2185, N4 #3002 v2186 (Siirtosepän testikorjaus #3095); sää-PR:t ajossa; #3093 versionostolla (ui.js, välimuisti). Natiivi-UI: vaaka ja veto → vain ☰ (b80fd27); tekstit webistä mitattuina (b542574: American Typewriter 16 #5a4326 lh 1,6; Iowan 16,32 #211d18 lh 1,62 + anfangi; kohina 3× tiheämpi ja vaimeampi; nostokortin riviväli 1,58); nostokortin web-kuvat napautuksella.
+
+## NATIIVI-UI 70 % (POSTIVAHTI) — NOLLAUSKASKY ODOTTAA FABLEN VIESTIRAJAN NOLLAUSTA (24.9.2026 klo 17.09)
+
+Natiivi-UI:lla b10-jono 0e8ff30 testikäännöksessä, kuvaparit tulossa; luovutus käsketään heti kun omistaja kirjoittaa Fablen sessioon (viestiraja täynnä). Myös Sisältökirjurin N-erien käsky odottaa.
