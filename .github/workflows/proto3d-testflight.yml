@@ -42,9 +42,13 @@ on:
         type: string
         default: 'fi.matkakirja.peli'
       versio:
-        description: 'Näkyvä versionumero (MARKETING_VERSION) — oltava suurempi kuin webkuoren nykyinen (ios/project.yml, tällä hetkellä 0.3.0)'
+        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.0.<build-ordinaali> (omistaja 24.9.2026: TestFlightissa näkyy build-numero)'
         type: string
-        default: '1.0.0'
+        default: ''
+      ordinaali:
+        description: 'Build-ordinaali (build 11 → 1.0.11). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
+        type: string
+        default: ''
       build_numero:
         description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
         type: string
@@ -78,7 +82,10 @@ jobs:
       VIE_UNITYSTA: ${{ github.event_name == 'schedule' || inputs.vie_unitysta }}
       VIENTI_KANSIO: ${{ (github.event_name == 'schedule' || inputs.vie_unitysta) && 'yo' || inputs.vienti_kansio }}
       BUNDLE_ID: ${{ inputs.bundle_id || 'fi.matkakirja.peli' }}
-      VERSIO: ${{ inputs.versio || '1.0.0' }}
+      VERSIO_SYOTE: ${{ inputs.versio }}
+      ORDINAALI_SYOTE: ${{ inputs.ordinaali }}
+      # Viimeisimmän TestFlightiin ladatun buildin ordinaali (ajurin levyllä kuten YOMERKKI).
+      LASKURI: /Users/Shared/Claude/proto-3d/lokit/testflight-ordinaali.txt
       SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
 
     steps:
@@ -99,6 +106,19 @@ jobs:
           build="${{ inputs.build_numero }}"
           [ -n "$build" ] || build=$(date -u +%Y%m%d%H%M)
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
+          # Näkyvä versio = 1.0.<ordinaali> (build 11 → 1.0.11); CFBundleVersion pysyy aikaleimana,
+          # koska se ei saa pienentyä. Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
+          ord=""
+          if [ -n "${VERSIO_SYOTE:-}" ]; then
+            versio="$VERSIO_SYOTE"
+          else
+            ord="${ORDINAALI_SYOTE:-}"
+            [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
+            versio="1.0.$ord"
+          fi
+          echo "VERSIO=$versio" >> "$GITHUB_ENV"
+          echo "ORDINAALI=$ord" >> "$GITHUB_ENV"
+          echo "Versio $versio (ordinaali ${ord:-–})"
           echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
 
       - name: Yöajon ohitusehdot
@@ -589,7 +609,11 @@ jobs:
         if: success() && env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
         run: |
           echo "$PROTO_MASTER" > "$YOMERKKI"
-          echo "$(date '+%Y-%m-%d %H:%M') LADATTU: master $PROTO_MASTER, build $BUILD_NUMERO" | tee -a "$YOLOKI"
+          echo "$(date '+%Y-%m-%d %H:%M') LADATTU: master $PROTO_MASTER, versio $VERSIO, build $BUILD_NUMERO" | tee -a "$YOLOKI"
+
+      - name: Kasvata build-laskuri
+        if: success() && env.OHITA != '1' && env.ORDINAALI != ''
+        run: echo "$ORDINAALI" > "$LASKURI"
 
       - name: Kerro mitä lähti
         if: success() && env.OHITA != '1'
