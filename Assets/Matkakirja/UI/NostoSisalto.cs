@@ -387,6 +387,9 @@ namespace Matkakirja.Natiivi
                         // Skeema 1.20+: tyypitetty kuva.url on valmis osoite (esim. elaintayt: tunnus tai
                         // assets/elaimet/… → kohtaamiset/elaimet/…); data.kuva on vain raaka arvo.
                         if (T(Ob(MiniJson.Kentta(o, "kuva")), "url") is string url && !data.ContainsKey("$kuvaUrl")) data["$kuvaUrl"] = url;
+                        // Täkynosto ja kohde lukevat kuvan oliona (lyhyt, tekijä, lähde): tyypitetty kuva talteen (pariteetti
+                        // b12-2 #26: Roquefortin pääkuva puuttui, ja karuselli 1/2 jäi yhteen galleriakuvaan).
+                        if (MiniJson.Kentta(o, "kuva") is Dictionary<string, object> ko && !data.ContainsKey("$kuva")) data["$kuva"] = ko;
                         taulu[aid] = data;
                     }
                 }
@@ -579,7 +582,7 @@ namespace Matkakirja.Natiivi
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
             };
             var kuvat = new List<object>();
-            if (MiniJson.Kentta(d, "kuva") is object k1) kuvat.Add(k1);
+            if ((MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva")) is object k1) kuvat.Add(k1);
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk) kuvat.AddRange(kk);
             Kuvat(n, kuvat, "osoite");
             n.Kuvat = n.Kuvat.GroupBy(x => x.Lahde).Select(g => g.First()).ToList();
@@ -653,7 +656,7 @@ namespace Matkakirja.Natiivi
                 MusiikkiNayteNimi = T(d, "musiikkiNayteNimi") ?? T(Ob(MiniJson.Kentta(d, "musiikkiNayte")), "nimi"),
             };
             var kuvat = new List<object>();
-            if (MiniJson.Kentta(d, "kuva") is object k1) kuvat.Add(k1);
+            if ((MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva")) is object k1) kuvat.Add(k1);
             if (MiniJson.Kentta(d, "galleria") is List<object> gal) kuvat.AddRange(gal);
             Kuvat(n, kuvat, "url");
             n.Valokuva = Yksi(MiniJson.Kentta(d, "valokuva"));
