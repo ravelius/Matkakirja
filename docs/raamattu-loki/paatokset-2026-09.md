@@ -4111,3 +4111,7 @@ Kalgoorlie, Mount Isa, Geraldton, Broome, Porto Velho; piste.teksti-polku, piste
 ## VIESTIRAJA NOLLAUTUI (OMISTAJAN KUVAKAAPPAUS SIIRTOSEPAN SESSIOSTA) — KOLME VIESTIA LAHETETTY (24.9.2026 klo 15.52)
 
 Siirtosepän luovutus- ja nollauskäsky (#3081 luonnos odottaa build 10:tä, #3074 mergettävissä), Postivahdin aloitusviestiohje ja Linssisepän iPad-laiteajot (piikkiajo 8, Huippuvuoret, keksinnöt; iPad kytketty) toimitettu klo 15.5x. Oppi: mid-turn-viesti ei nollaa rajaa, vain uusi vuoro.
+
+## NATIIVISEPPA 70 % → LUOVUTUS JA NOLLAUS KASKETTY BUILD 9 -VIENNIN AIKANA; wt/ 67 → POSTIVAHTI JAKAA POISTOLISTAT ROOLEILLE (24.9.2026 klo 15.54)
+
+Luovutus viesti-natiiviseppa-luovutus-20260924-ilta.md (build 10 -jono: saapumiszoom, nostotaso fokuspohjasta + 1.35, lennon pinta satelliittisarjoista + topo/bathy-vertailu, nostot-web, E3); Postivahti lähettää aloitusviestin kun tyhjä. Siirtoseppä 73 %, ei vielä tyhjentynyt. wt/ kasvaa (61→67, tavoite < 20): Postivahti listaa per rooli mergetyt/poistetut haarat ja käskee poistot tools/uusi-worktree.sh --poista; rooli-worktreet säilyvät.
