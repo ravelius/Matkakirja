@@ -63,22 +63,27 @@ def reuna(a, a_slot, b, b_slot):
 #                    Luokittelu sRGB-arvoilla (tekstuurit ovat sRGB, varjostin näkee lineaarisen arvon → pow 1/2,2).
 # Testitilat (komento "lentoharmaa", KarttaKerrokset.LentoTesti): vara 2 = magenta, missä varakartta laukeaisi;
 # vara 3 = paikan 1 kattavuus (vihreä = rasteri, magenta = puuttuu); vara 4 = varakartan UV väreinä (r = u, g = v,
-# punainen = maan akselit puuttuvat); vara 5 = paikan 1 rasterin taso: vihreä = oma, keltainen → punainen =
-# esivanhemman rasteri 1…8 tasoa ylempää (translationAndScale.z < 1), syaani = rasteri laattaa pienempi, magenta = ei. varaVari.a < 0,5 = varakartta ei käytettävissä (UV ei kelpaa) → pohja näkyy.
+# punainen = maan akselit puuttuvat); vara 5 = paikan 1 rasterin absoluuttinen taso: punainen = taso <= varaTaso
+# (varakartta käytössä), keltainen → vihreä = tasot 2…8, magenta = rasteri puuttuu, sininen = varakartta puuttuu.
+# varaVari.a = 0: varakartta ei käytettävissä (UV ei kelpaa) → pohja näkyy; muuten 64 + log2(|d uv_vara|).
 # kynnys < 0 = paikan 2 peitto syaanina (alfa sellaisenaan).
+# Rasterin absoluuttinen taso z (Web Mercator): rasterin UV muuttuu 2^z kertaa nopeammin kuin koko maailman
+# varakartan UV (molemmat Mercatorissa lineaarisia), joten z = log2(|d ouv|) − log2(|d uv_vara|). Varakartan
+# derivaatta tulee varaVari.a:ssa koodattuna (VaraVari). Derivaatat ennen haarautumista (tasainen ohjausvuo).
 SEKOITUS_RUNKO = (
     "float4 s = nayte;\n"
-    "if (vara > 4.5) { float d = log2(1.0 / max(ts.z, 1e-6)); s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0)\n"
-    "    : ts.z > 1.01 ? float4(0.0, 1.0, 1.0, 1.0) : d < 0.25 ? float4(0.0, 1.0, 0.0, 1.0)\n"
-    "    : float4(1.0, 1.0 - saturate(d / 8.0), 0.0, 1.0); }\n"
+    "float dr = length(ddx(ouv)) + length(ddy(ouv));\n"
+    "float z = log2(max(dr, 1e-12)) - (varaVari.a - 64.0);\n"
+    "bool varaOk = varaVari.a > 0.5;\n"
+    "if (vara > 4.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : !varaOk ? float4(0.0, 0.0, 1.0, 1.0)\n"
+    "    : z <= varaTaso ? float4(1.0, 0.0, 0.0, 1.0) : float4(1.0 - saturate((z - 2.0) / 6.0), 1.0, 0.0, 1.0);\n"
     "else if (vara > 3.5 || (vara > 0.5 && vara < 1.5))\n"
     "{\n"
-    "    // Varakartta myös, kun Cesium antaa kaukaisen esivanhemman rasterin (d >= varaTaso tasoa ylempää) tai kun\n"
-    "    // rasterin UV on [0,1]:n ulkopuolella (clamp venyttäisi reunapikselin); diagnoosi 2, 24.9.2026.\n"
-    "    float d = log2(1.0 / max(ts.z, 1e-6));\n"
+    "    // Z2 fallback when the raster is missing, when the raster used is itself at level <= varaTaso (the\n"
+    "    // fallback is then never worse), or when the raster UV is outside [0,1] (clamp would smear an edge texel).\n"
     "    bool ulkona = any(ouv < -0.002) || any(ouv > 1.002);\n"
-    "    bool kaukainen = varaTaso > 0.0 && d >= varaTaso;\n"
-    "    if ((s.a < 0.5 || ulkona || kaukainen) && varaVari.a > 0.5) s = float4(varaVari.rgb, 1.0);\n"
+    "    bool karkea = varaTaso > 0.0 && z <= varaTaso;\n"
+    "    if ((s.a < 0.5 || ulkona || karkea) && varaOk) s = float4(varaVari.rgb, 1.0);\n"
     "}\n"
     "else if (vara > 2.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : float4(0.0, 1.0, 0.0, 1.0);\n"
     "else if (vara > 1.5) { if (s.a < 0.5) s = float4(1.0, 0.0, 1.0, 1.0); }\n"
@@ -404,8 +409,9 @@ nayte = solmupohja("SampleTexture2DNode", "Sample Texture 2D", SX + 500.0, SY, n
 # käytetä (ennen: kulman pikseli, Etelämanner, valkoinen). Testitila 4 (_lentoVara) → UV väreinä.
 VARA_VARI_RUNKO = (
     "bool kelpaa = uv.x >= 0.0;\n"
-    "vari = kelpaa ? float4(nayte.rgb, 1.0) : float4(0.0, 0.0, 0.0, 0.0);\n"
-    "if (tila > 3.5) vari = kelpaa ? float4(uv.x, uv.y, 0.0, 1.0) : float4(1.0, 0.0, 0.0, 1.0);\n")
+    "float koodi = 64.0 + log2(max(length(ddx(uv)) + length(ddy(uv)), 1e-12));\n"
+    "vari = kelpaa ? float4(nayte.rgb, koodi) : float4(0.0, 0.0, 0.0, 0.0);\n"
+    "if (tila > 3.5 && tila < 4.5) vari = kelpaa ? float4(uv.x, uv.y, 0.0, koodi) : float4(1.0, 0.0, 0.0, 64.0);\n")
 vv_slotit = [slotti("Vector4MaterialSlot", 0, "nayte", 0, v4()), slotti("Vector2MaterialSlot", 1, "uv", 0, {"x": 0.0, "y": 0.0}),
              slotti("Vector1MaterialSlot", 2, "tila", 0, 0.0), slotti("Vector4MaterialSlot", 3, "vari", 1, v4())]
 for s in vv_slotit: s["m_StageCapability"] = 2

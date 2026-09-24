@@ -111,9 +111,10 @@ namespace Matkakirja
         ///              rasteria (ja varakartta laukeaa); harmaa ilman magentaa = rasteri on, mutta sisältö harmaa (c)
         ///   kattavuus  paikka 1 vihreänä (rasteri) / magentana (puuttuu) koko pallolla
         ///   uv         varakartan UV väreinä (r = pituus, g = leveys); punainen = maan akselit puuttuvat
-        ///   taso       paikan 1 rasterin taso: vihreä oma, keltainen→punainen esivanhemman (1–8 tasoa), magenta ei
+        ///   taso       paikan 1 rasterin absoluuttinen taso: punainen ≤ varataso (varakartta), keltainen→vihreä 2–8,
+        ///              magenta rasteri puuttuu, sininen varakartta puuttuu
         ///   sumu pois|paalle   etäisyyssumu (Aurinko) pois lennolta
-        ///   varataso d varakartta, kun paikan 1 rasteri on d tasoa ylemmästä esivanhemmasta (oletus 2, 0 = pois)
+        ///   varataso z varakartta, kun paikan 1 käytetty rasteri on itse tasolla ≤ z (oletus 2,5, 0 = pois)
         ///   satloki    Laattapalvelimen satelliittiloki alkaa alusta (minuutti seuraavasta satelliittipyynnöstä)
         ///   varapois   varakartta pois (vertailu: sama harmaa ilman varaa?)
         ///   s2         paikan 2 (Sentinel) peitto syaanina (d)
@@ -158,7 +159,7 @@ namespace Matkakirja
                     KarttaKerrokset.LentoTestiS2 = false;
                     Usvalevy.Estetty = false;
                     Aurinko.SumuEstetty = false;
-                    KarttaKerrokset.VaraTaso = 2f;
+                    KarttaKerrokset.VaraTaso = 2.5f;
                     for (int i = 0; i < 3; i++) Shader.SetGlobalFloat("_overlayAlfa_" + i, 1f);
                     var pk = GameObject.Find("Pilvikuori");
                     if (pk != null && pk.TryGetComponent<MeshRenderer>(out var pr)) pr.enabled = true;

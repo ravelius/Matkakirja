@@ -327,10 +327,14 @@ namespace Matkakirja
         /// KAUKAINEN ESIVANHEMPI (diagnoosi 2, 24.9.2026, kolme kylmää lentoa): harmaat suorakulmiot ovat laattoja, joille
         /// Cesium on kiinnittänyt useita tasoja ylemmän esivanhemman rasterin (RasterMappedTo3DTile.cpp:136–167,
         /// translationAndScale.z = 2^−d), ja sen näyte on tasaisen vaalea. Lennon aikana paikka 1 käyttää silloin
-        /// Z2-varakarttaa (sama Blue Marble, aina valmis): kun d ≥ VaraTaso tai rasterin UV on [0,1]:n ulkopuolella.
-        /// 0 = sääntö pois. Komento "lentoharmaa varataso d".
+        /// Z2-varakarttaa (sama Blue Marble, aina valmis), kun käytetty rasteri on itse tasolla ≤ VaraTaso (varakartta ei
+        /// silloin ole koskaan huonompi) tai rasterin UV on [0,1]:n ulkopuolella. Tasoeroa ei käytetä (d3cd945:n
+        /// tasoerosääntö korvasi Ateenan lähikuvan laattoja, joiden oma Z8 latasi). Absoluuttinen taso lasketaan
+        /// varjostimessa UV-derivaattojen suhteesta: z = log2(|d uv_rasteri| / |d uv_varakartta|) — rasterin
+        /// suorakulmion Mercator-taso (Cesium mitoittaa rasterin kuvan laatan kokoon, joten se vastaa kuvan tarkkuutta).
+        /// 0 = sääntö pois. Komento "lentoharmaa varataso z" (oletus 2,5 = tasot 0–2).
         /// </summary>
-        public static float VaraTaso = 2f;
+        public static float VaraTaso = 2.5f;
         static readonly int LentoVaraTasoId = Shader.PropertyToID("_lentoVaraTaso");
 
         /// <summary>Varakartta pois lennolta (hypoteesi: näkyykö harmaa ilman sitä samana).</summary>
