@@ -106620,7 +106620,7 @@ export const KULTTUURI_KATEGORIAT = {
         vaihtoehdot: ['Hiirimaki', 'Indri', 'Kissamaki', 'Sifaka'],
         oikea: 0,
         fakta:
-          'Ruskohiirimaki (Microcebus rufus) painaa vain noin 40 grammaa ja on pienin tunnettu kädellinen – se metsästää öisin Madagaskarin sademetsissä.',
+          'Madame Berthen hiirimaki (Microcebus berthae) painaa vain noin 30 grammaa ja on pienin tunnettu kädellinen – hiirimakien suku sisältää useita samankaltaisia pikkulajeja, jotka metsästävät öisin Madagaskarin sademetsissä.',
       },
       nostot: [
         {
@@ -106668,9 +106668,9 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Fossa (animal)',
         },
         {
-          otsikko: 'Maailman pienin kädellinen',
+          otsikko: 'Hiirimaki mahtuisi kämmenelle',
           teksti:
-            'Ruskohiirimaki mahtuisi kokonaan kämmenelle: aikuinen painaa vain noin 40 grammaa ja on pituudeltaan hännän kanssa alle 30 senttimetriä. Se on yöeläin, joka liikkuu itärannikon sademetsissä, kuten Ranomafanan kansallispuistossa, etsimässä hedelmiä, hyönteisiä ja kasvimehua suurten, hämärässä hyvin näkevien silmiensä avulla. Päivät se viettää nukkuen puunkoloissa tai itse rakentamissaan pallomaisissa pesissä. Vaikka laji on pieni, se on yksi todiste siitä, kuinka moneen suuntaan lemurien sukupuu on Madagaskarilla haarautunut.',
+            'Ruskohiirimaki mahtuisi kokonaan kämmenelle: aikuinen painaa vain noin 40 grammaa ja on pituudeltaan hännän kanssa alle 30 senttimetriä. Se kuuluu hiirimakien sukuun, johon lasketaan yli 20 lajia – niistä pienin, Madame Berthen hiirimaki, painaa vain noin 30 grammaa ja on maailman pienin tunnettu kädellinen. Ruskohiirimaki on yöeläin, joka liikkuu itärannikon sademetsissä, kuten Ranomafanan kansallispuistossa, etsimässä hedelmiä, hyönteisiä ja kasvimehua suurten, hämärässä hyvin näkevien silmiensä avulla. Päivät se viettää nukkuen puunkoloissa tai itse rakentamissaan pallomaisissa pesissä.',
           tiedosto: 'Brown Mouse Lemur (Microcebus rufus) (3442061750).jpg',
           lyhyt: 'Ruskohiirimaki kiipeämässä oksalla yöllä.',
           selite:
