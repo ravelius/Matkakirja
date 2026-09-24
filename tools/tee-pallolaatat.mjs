@@ -945,7 +945,7 @@ async function paa() {
   const min = Number(lippu('--min') ?? 0);
   const max = Number(lippu('--max') ?? 7);
   const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
-  const alue = lippu('--alue')?.split(',').map(Number) ?? null;
+  let alue = lippu('--alue')?.split(',').map(Number) ?? null;
   const nostot = argv.includes('--nostot');
   /*
    * `--ilman-rantaa`: pallon sarja kootaan ilman rantatasoa, koska
@@ -1015,8 +1015,10 @@ async function paa() {
     if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
     luettelo = { ...luettelo, viivataso: null };
   }
+  // Väritason oletusalue on sen oma laatikko (varitasot[ISO].alue).
   const va = luettelo.vari?.alue;
-  const lista = osanLaatat(min, max, alue ?? (va ? [va.lon0, va.lat0, va.lon1, va.lat1] : null), osa);
+  if (!alue && va) alue = [va.lon0, va.lat0, va.lon1, va.lat1];
+  const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;
   if (luettelo.relief) console.log(`reliefi ${luettelo.versio} (pohjan geometria ${pohjaLuettelo.versio})`);
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
