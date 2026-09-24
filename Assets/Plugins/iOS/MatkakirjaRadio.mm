@@ -17,6 +17,9 @@
 //                                      lyhyt vaimennus (~300 ms); −1 = tasoa ei saada (HLS: äänitappi ei
 //                                      toimi segmenttivirroilla) → Unity käyttää ajastettua varakuviota
 //   MatkakirjaRadio_Huippu()           sama huippuarvosta (|näyte| max), vaimennus ~1 s
+//   MatkakirjaRadio_Rms()              raaka lineaarinen RMS 0…1 viimeisestä ~30 ms ikkunasta, ei tasoitusta eikä
+//                                      asteikkoa (Linssisepän VuMittari tasoittaa itse), ennen voimakkuutta;
+//                                      0 kun ei soi, −1 HLS
 //
 // "Soi" = timeControlStatus Playing ja kohdan eteneminen (kuten webin 'playing' tai
 // 'timeupdate'): puskurointi ei ole vielä kuulumista.
@@ -311,6 +314,15 @@ const char* MatkakirjaRadio_Kuvaus(void)
 float MatkakirjaRadio_Taso(void)
 {
     return [[MatkakirjaRadio jaettu] taso:NO];
+}
+
+float MatkakirjaRadio_Rms(void)
+{
+    MatkakirjaRadio* radio = [MatkakirjaRadio jaettu];
+    if (radio.soitin == nil) return 0;
+    if (vuTila.load() < 0) return -1;
+    BOOL soi = !radio.tauolla && radio.soitin.timeControlStatus == AVPlayerTimeControlStatusPlaying;
+    return soi ? vuRms.load() : 0;
 }
 
 float MatkakirjaRadio_Huippu(void)
