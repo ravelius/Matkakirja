@@ -4255,3 +4255,7 @@ Linssiseppä: webissä astronauttipulun pillerit ovat valmiita kysymyksiä oikea
 ## OMISTAJA klo 17.2x: PERSONAL TEAM F72JLS57C5 OLI gmail-TILIN; DEVELOPER-TILI ON me.com (NYT KIRJAUTUNEENA koodaus-XCODESSA) (24.9.2026 klo 16.37)
 
 Koneen kehitysvarmenne 'Apple Development: Sami Reivinen (2RX77QMLHA)' kuuluu gmail-Personal Teamiin. Natiiviseppä vaihtaa kehityskäännökset me.com-tilin Developer Program -tiimiin (sama kuin TestFlight); Team ID pyydetty omistajalta (developer.apple.com Membership), koska Actions-secretiä ei voi lukea.
+
+## LINSSISEPPA: LOYDOS 35 KORJATTU (linssiseppa/astropulu 1b2236e, MERGE-JONOSSA BUILD 10) (24.9.2026 klo 16.38)
+
+Pillerit lähettävät kysymyksen oikeaan chattiin kuten webissä; valmiit vastaukset pois; astronauttikonteksti webin mukaan (ei sijaintia, avoin valokuva + selite). unity-tarkistus 0. Kuvapari isolta iPadilta kun laite on käytössä.
