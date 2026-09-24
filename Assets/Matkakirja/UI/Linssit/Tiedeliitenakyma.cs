@@ -29,11 +29,8 @@ namespace Matkakirja.Natiivi
         readonly Button edellinen, seuraava;
         readonly KortinLukija lukija;
         readonly Kuvasuurennos suurennos;
-        // Sivujen lähde: keksintölinssi tai ihmisen matka (sama malli, TiedeliiteSivu).
-        Func<int, TiedeliiteSivu> sivuLahde;
-        Func<IEnumerable<(int I, string Vuosi, string Otsikko, string Henkilo)>> sisallysLahde;
-        Action<int> vaihtui;
-        Action suljettu;
+        // Sivujen lähde: keksintölinssi tai ihmisen matka (Linssisepän ITiedeliitteenLahde).
+        ITiedeliitteenLahde lahde;
         int nykyinen = -1;
 
         public bool Auki { get; private set; }
@@ -77,22 +74,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>KeksinnotLinssi.JuttuPyydetty: sivu auki pysäkille i.</summary>
-        public void Avaa(KeksinnotLinssi l, int i) =>
-            Avaa(i, l.Tiedeliite, () => l.Sisallys(), l.JuttuVaihtui, l.JuttuSuljettu);
-
-        /// <summary>
-        /// Ihmisen matkan noston "Lue lisää" (web avaaNostonJuttu): sama tiedeliite, sisällyksenä nostot
-        /// ajoituksineen (IhmisenMatkaLinssi.TiedeliitteenSisallys).
-        /// </summary>
-        public void Avaa(IhmisenMatkaLinssi l, int i) =>
-            Avaa(i, l.Tiedeliite, () => l.TiedeliitteenSisallys().Select(x => (x.I, x.Ajoitus, x.Otsikko, (string)null)), null, null);
-
-        void Avaa(int i, Func<int, TiedeliiteSivu> sivu, Func<IEnumerable<(int, string, string, string)>> sisallys, Action<int> vaihto, Action sulku)
+        public void Avaa(ITiedeliitteenLahde l, int i)
         {
-            sivuLahde = sivu;
-            sisallysLahde = sisallys;
-            vaihtui = vaihto;
-            suljettu = sulku;
+            lahde = l;
             nykyinen = -1;
             if (!Vaihda(i)) return;
             if (Auki) return;
@@ -111,12 +95,12 @@ namespace Matkakirja.Natiivi
             sisallys.style.display = DisplayStyle.None;
             Rakenne.Nayta(peite, false, 220);
             SyoteLukko.Vapauta(this);
-            suljettu?.Invoke();
+            lahde?.JuttuSuljettu();
         }
 
         bool Vaihda(int j)
         {
-            var s = sivuLahde?.Invoke(j);
+            var s = lahde?.Tiedeliite(j);
             if (s == null || j == nykyinen) return s != null;
             bool avattu = nykyinen >= 0;
             nykyinen = j;
@@ -125,18 +109,22 @@ namespace Matkakirja.Natiivi
             var sivu = vieritys.contentContainer;
             sivu.Clear();
             vieritys.scrollOffset = Vector2.zero;
+            // Alkusanat kaaren ensimmäisen sivun kärkeen (web alkusanat, ihmisen matkan kaistaselite).
+            var alkusanat = lahde.TiedeliitteenAlkusanat;
+            if (!string.IsNullOrEmpty(alkusanat) && lahde.Sisallys().Count > 0 && lahde.Sisallys()[0].I == j)
+                Kirjasimet.Aseta(Rakenne.Teksti(alkusanat, "mk-tiedeliite__alkusanat", sivu), Kirjasin.LukuKursiivi);
             PiirraSivu(sivu, s);
             lukija.Aseta(new[] { s.Otsikko }.Concat(s.Ingressi).Concat(s.Juttu).Concat(s.Henkilojuttu), "Kuuntele tiedeliite");
             Naviteksti(edellinen, s.Edellinen, "‹", true);
             Naviteksti(seuraava, s.Seuraava, "›", false);
-            if (avattu) vaihtui?.Invoke(j);
+            if (avattu) lahde.JuttuVaihtui(j);
             if (sisallys.style.display == DisplayStyle.Flex) TaytaSisallys();
             return true;
         }
 
         void Selaa(int suunta)
         {
-            var s = sivuLahde?.Invoke(nykyinen);
+            var s = lahde?.Tiedeliite(nykyinen);
             int j = s == null ? -1 : suunta < 0 ? s.Edellinen : s.Seuraava;
             if (j < 0) return;
             Aanet.PulunTehoste("paper");
@@ -146,7 +134,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Navinappi: "‹ 1876 Bell" tai päässä "‹ Kaaren alku" harmaana.</summary>
         void Naviteksti(Button nappi, int j, string merkki, bool ennen)
         {
-            var t = j >= 0 ? sivuLahde?.Invoke(j) : null;
+            var t = j >= 0 ? lahde?.Tiedeliite(j) : null;
             nappi.SetEnabled(t != null);
             var l = nappi.Q<Label>();
             if (t == null) { l.text = ennen ? merkki + " Kaaren alku" : "Kaaren loppu " + merkki; return; }
@@ -178,9 +166,11 @@ namespace Matkakirja.Natiivi
             lista.AddToClassList("mk-tiedeliite__sisallyslista");
             lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisallys.Add(lista);
-            if (sisallysLahde == null) return;
-            // Linssisepän Sisallys(): sivulliset pysäkit (indeksi, vuosi, otsikko, henkilö).
-            foreach (var (j, vuosi, otsikko, henkilo) in sisallysLahde())
+            if (lahde == null) return;
+            // Linssisepän Sisallys(): sivulliset (indeksi, vuosi tai ajoitus, otsikko, henkilö). Listana (web
+            // .tiedeliite-sisallys.lista, ihmisen matka): rivillä väripilkku, lyhyt ajoitus ja otsikko.
+            bool listana = lahde.SisallysListana;
+            foreach (var (j, vuosi, otsikko, henkilo) in lahde.Sisallys())
             {
                 int k = j;
                 var rivi = Rakenne.Nappi(null, "mk-tiedeliite__sisallysrivi" + (j == nykyinen ? " mk-valittu" : ""), () =>
@@ -188,8 +178,13 @@ namespace Matkakirja.Natiivi
                     sisallys.style.display = DisplayStyle.None;
                     Vaihda(k);
                 }, lista);
+                if (listana)
+                {
+                    var pilkku = Rakenne.El("mk-tiedeliite__sisallyspilkku", rivi, PickingMode.Ignore);
+                    if (ColorUtility.TryParseHtmlString(lahde.SisallyksenPilkku(j) ?? "", out var vari)) pilkku.style.backgroundColor = vari;
+                }
                 Kirjasimet.Aseta(Rakenne.Teksti(vuosi ?? "", "mk-tiedeliite__sisallysvuosi", rivi), Kirjasin.Kone);
-                Rakenne.Teksti(henkilo ?? otsikko ?? "", "mk-tiedeliite__sisallysnimi", rivi);
+                Rakenne.Teksti(listana ? otsikko ?? "" : henkilo ?? otsikko ?? "", "mk-tiedeliite__sisallysnimi", rivi);
             }
         }
 
