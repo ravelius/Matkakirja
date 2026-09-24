@@ -697,7 +697,10 @@ namespace Matkakirja.Natiivi
                         ui.Lehti.TestaaFokus(l.Length > 1 && l[1].Length > 0 ? l[1].ToLowerInvariant() : "ateena", l.Length > 2 && l[2] == "juliste");
                         return null;
                     }
-                    if (osat[1] == "maalehti") ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 ? l[1] : null);
+                    // Maalehti: toinen sana on aihe-id tai sivunumero (pariteettiajo `ui maalehti FRA 1` = aihesivu 1).
+                    if (osat[1] == "maalehti")
+                        ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 && !int.TryParse(l[1], out _) ? l[1] : null,
+                            l.Length > 1 && int.TryParse(l[1], out var ms) ? ms : (int?)null);
                     else ui.Lehti.Nayta(LehtiLaji.Kaupunki, l[0].Length > 0 ? l[0] : "firenze", null, l.Length > 1 && int.TryParse(l[1], out var s) ? s : (int?)null);
                     return null;
                 }

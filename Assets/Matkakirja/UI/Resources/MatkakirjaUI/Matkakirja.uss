@@ -859,7 +859,8 @@
     position: absolute;
     width: 300px;
     max-width: 88%;
-    padding: 8px 12px 10px 12px;
+    /* Web .paavalikko täyte 0,85 / 0,8 / 0,7 / 0,8 rem (mitattu 25.9. b12-2 #14, web-aanentasot-mitat.txt). */
+    padding: 13.6px 12.8px 11.2px 12.8px;
     background-color: var(--panel);
     border-width: 1px;
     border-color: var(--line);
@@ -880,17 +881,28 @@
     width: 320px;
 }
 
+/* Web äänipaneeli on sisältönsä levyinen (296,36). */
+.mk-pudotus.mk-aanentasot {
+    width: 296px;
+}
+
 .mk-pudotus__vieritys {
     flex-shrink: 1;
 }
 
+/* Web .valikko-otsikko: 0,72 rem, kirjainväli 0,14 em, paino 400; alamarginaali 0,45 rem. */
 .mk-pudotus__otsikko {
-    font-size: 11.5px;
-    letter-spacing: 2.4px;
+    font-size: 11.52px;
+    letter-spacing: 1.61px;
     color: var(--accent);
     -unity-text-align: middle-center;
-    -unity-font-style: bold;
-    margin: 8px 0 9px 0;
+    -unity-font-style: normal;
+    margin: 8px 0 7.2px 0;
+}
+
+/* Äänentasojen otsikosta ensimmäiseen riviin web 20,8 (7,2 + gap 8,8 + lista 4,8); rivin oma 4 vähennettynä. */
+.mk-aanentasot__otsikko {
+    margin-bottom: 16.8px;
 }
 
 .mk-kytkinrivi {
@@ -971,41 +983,47 @@
 
 /* --- äänentasot (liukusäätimet) ------------------------------------------- */
 
+/* Web .kehittaja-liuku: rivi 21,75, rivijako 25,75 (gap 0,25 rem), täyte 0,18 / 0,45 rem. */
 .mk-saadinrivi {
     flex-direction: row;
     align-items: center;
-    min-height: 38px;
-    padding: 0 2px;
+    min-height: 0;
+    padding: 2.88px 7.2px;
+    margin-top: 4px;
 }
 
+/* Web 0,78 rem, kirjainväli 0,05 em, rgba(230, 214, 184, .78) paneelin päällä esisekoitettuna (lineaarinen väriavaruus). */
 .mk-saadinrivi__nimi {
-    width: 118px;
+    width: 118.4px;
     flex-shrink: 0;
-    font-size: 13.5px;
-    color: var(--ink-light);
+    font-size: 12.48px;
+    letter-spacing: 0.62px;
+    color: rgb(189, 174, 148);
 }
 
 .mk-saadinrivi__arvo {
     width: 48px;
     flex-shrink: 0;
-    font-size: 13px;
+    font-size: 11.52px;
+    letter-spacing: 0.46px;
     color: var(--kulta);
     -unity-text-align: middle-right;
 }
 
+/* Web input: näkyvä korkeus 16 ja välit 8; kosketusala 26 negatiivisella marginaalilla. */
 .mk-saadin {
     flex-grow: 1;
     flex-shrink: 1;
-    height: 30px;
-    margin: 0 4px;
+    height: 26px;
+    margin: -5px 8px;
 }
 
 .mk-saadin .unity-base-slider__input {
-    height: 30px;
+    height: 26px;
 }
 
 .mk-saadin #unity-drag-container {
-    height: 30px;
+    height: 26px;
 }
 
 .mk-saadin #unity-tracker {
@@ -1013,26 +1031,27 @@
     top: 50%;
     left: 0;
     right: 0;
-    height: 5px;
-    margin-top: -2.5px;
-    border-width: 0;
-    border-radius: 3px;
-    background-color: var(--line);
+    height: 8px;
+    margin-top: -4px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(133, 133, 133);
+    background-color: rgb(59, 59, 59);
 }
 
 .mk-saadin .unity-base-slider__fill {
     background-color: var(--kulta);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .mk-saadin #unity-dragger {
     position: absolute;
     top: 50%;
-    width: 18px;
-    height: 18px;
-    margin-top: -9px;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
     border-width: 0;
-    border-radius: 9px;
+    border-radius: 8px;
     background-color: var(--kulta);
 }
 

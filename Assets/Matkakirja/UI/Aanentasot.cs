@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
         public Aanentasot(UiKerros kerros, Func<float> alareuna) : base(kerros, alareuna, "mk-aanentasot")
         {
             AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
-            Otsikko("Äänentasot");
+            Otsikko("Äänentasot").AddToClassList("mk-aanentasot__otsikko");
             foreach (var v in Asetukset.VoimaJarjestys) Saadinrivi(v);
 
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);

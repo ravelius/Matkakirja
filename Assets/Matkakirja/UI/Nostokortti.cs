@@ -101,6 +101,7 @@ namespace Matkakirja.Natiivi
             kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu && !raahattu) Asemoi(); });
             // Kierto tai ikkunan koko: kuva edellä -kortin leveys uudelleen (web asemoi resize-kuuntelijassa).
             kerros.RegisterCallback<GeometryChangedEvent>(e => { if (Auki && !Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaKuvaEdella(); });
+            kortti.RegisterCallback<GeometryChangedEvent>(_ => EsittelynYlin());
             kortti.RegisterCallback<PointerDownEvent>(EleAlkoi, TrickleDown.TrickleDown);
             kortti.RegisterCallback<PointerMoveEvent>(EleLiikkui, TrickleDown.TrickleDown);
             kortti.RegisterCallback<PointerUpEvent>(EleLoppui, TrickleDown.TrickleDown);
@@ -301,6 +302,35 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Web suurennoksenMitat: kuvan korkeuskatto max(0,94 × ruutu − 150, 0,28 × ruutu).</summary>
         static float KuvaKorkeusKatto(float rk) => Mathf.Max(rk * 0.94f - KuvaPystyvara, rk * 0.28f);
+
+        // Web NOSTOKUVA_YLAVARA 88 (omistaja 12.9.): vaiheen 1 kortti ei jää keskitettynä tätä alemmas, jotta vaiheen 2
+        // kortti alkaa yläpalkin kohdalta eikä kartalta.
+        const float KuvaYlavara = 88f;
+
+        /// <summary>
+        /// Web nostokuvanYlin: vaiheen 1 kortti pystysuunnassa keskelle turva-aluetta, mutta enintään
+        /// NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA (100 pt) yläreunasta. Muulloin kerros keskittää (.mk-himmennys).
+        /// </summary>
+        void EsittelynYlin()
+        {
+            bool esittely = Auki && !ankkuroitu && kortti.ClassListContains("mk-nosto--esittely");
+            if (!esittely)
+            {
+                if (kerros.style.justifyContent.keyword != StyleKeyword.Null) { kerros.style.justifyContent = StyleKeyword.Null; kerros.style.paddingTop = StyleKeyword.Null; }
+                return;
+            }
+            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            // iPhonella ei ole yläpalkkia (NATIIVIN iPHONE-ASETTELU): pilleri ja saapumispalkki ovat samoilla y-arvoilla kuin
+            // webin yläpalkki ja palkki Safarin näkymässä, joten ruutu alkaa näytön yläreunasta (b12l: turva-alueesta
+            // mitattuna kortti jäi 62 pt webiä alemmas). iPadilla turva-alueen alta kuten ennen.
+            float yla = UiKerros.Tabletti ? t.y : 0f;
+            float rk = kerros.layout.height - yla - t.w, h = kortti.layout.height;
+            if (rk <= 0 || h <= 0 || float.IsNaN(h)) return;
+            float ylin = Mathf.Max(KuvaMarginaali, Mathf.Min(Mathf.Round((rk - h) / 2f), KuvaMarginaali + KuvaYlavara));
+            kerros.style.justifyContent = Justify.FlexStart;
+            float p = Mathf.Round(Mathf.Max(yla + ylin, t.y + KuvaMarginaali));
+            if (kerros.resolvedStyle.paddingTop != p) kerros.style.paddingTop = p;
+        }
 
         /// <summary>
         /// Web jaadytaLeveys: kuva edellä -kortin leveys, vakioleveys + kortin reunus ja täyte, enintään ruutu − 2 × 12.
@@ -594,7 +624,8 @@ namespace Matkakirja.Natiivi
             var kuva = Kuvakehys(sisus, k, Vaihe2, SarjanKuvaLadattu);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
-            Kuvateksti(alarivi, k.Lyhyt ?? nosto.Otsikko ?? "", k);
+            // Web nostokuvaAloita: kuvatekstiLyhyt(kuva), eläintäyn vakioselite vasta karusellissa (pariteetti b12-2 #27).
+            Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
             MitoitaKuvaEdella();
