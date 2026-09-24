@@ -4407,3 +4407,7 @@ Uusi sessio aloittaa kuvatilausluonnoksesta (galleria 58 + ennenNyt 12).
 ## KUVATILAUS GALLERIA + ENNENNYT POSTILAATIKOSSA (847fcdc25, posti/sisaltokirjuri-kuvaputki-galleria-ennennyt-20260924.md); RAPORTTI PR #3106 (24.9.2026 klo 18.17)
 
 59 kaupunkia, 4 erää á 15, yksityishenkilörajaus mukana. Kuvaputkella nyt kolme avointa tilausta: maamerkkien viitekuvat, renessanssisali erä 2 (+ veistokset, muotokuvat, kartat), galleria + ennenNyt.
+
+## OMISTAJA klo 18.2x (SITOVA): 5 h -KIINTION TAUKORAJA 98 % (OLI 90 %) (24.9.2026 klo 18.23)
+
+Omistaja: 'Voit tehdä 5h 98% asti'. Raamattu päivitetty (VIIKKOKIINTIÖ-kohta). Postivahdille: tauko-ilmoitus vasta 98 %:ssa; nykyinen kiintiö 84 %, nollautuu 19.19.

@@ -105,7 +105,7 @@ export const RAAMATTU = {
           + 'jälkeen Fable tarkistaa list_events(session_id) = 0 viestiä (tai get_usage alle 10 %); jos '
           + 'konteksti on yhä täynnä, pyytää pelkän clear-vuoron uudelleen; 4) vasta sitten '
           + 'send_message(session_id, aloitusviesti docs/raportit/viesti-<rooli>-aloitus.md, päivitetty '
-          + 'luovutuksen mukaan). Remote Controlia ei tarvitse kytkeä pois (koe 23.9.). VIIKKOKIINTIÖ (omistaja 24.9.2026 klo 07.0x): viikkokiintiö ei pysäytä työtä — omistaja ajaa token resetin kun kreditit loppuvat; Fable ei määrää taukoja viikkokiintiön perusteella, vain 5 h -kiintiön 90 %:ssa. Ei /compact, ei "Resume previous session". Worktreen siirto '
+          + 'luovutuksen mukaan). Remote Controlia ei tarvitse kytkeä pois (koe 23.9.). VIIKKOKIINTIÖ (omistaja 24.9.2026 klo 07.0x): viikkokiintiö ei pysäytä työtä — omistaja ajaa token resetin kun kreditit loppuvat; Fable ei määrää taukoja viikkokiintiön perusteella, vain 5 h -kiintiön 98 %:ssa (omistaja 24.9.2026 klo 18.2x: "Voit tehdä 5h 98% asti"; aiemmin 90 %). Ei /compact, ei "Resume previous session". Worktreen siirto '
           + 'roolinimelle tehdään ennen tyhjennystä: mv sisältö uuteen kansioon, git worktree '
           + 'repair, ja symlinkki vanhasta polusta uuteen (session cwd osoittaa vanhaan; ilman '
           + 'symlinkkiä viesti ei mene perille). Omistajaa ei tarvita; "Choose folder" vain '
