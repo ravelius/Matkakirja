@@ -12,7 +12,7 @@ Tila: proto-master 9a5618b = BUILD 9 Julkaisijan viennissä. Unity KIINNI ja ei 
 arvoja ja web–natiivi-kuvaparia (tekniset erät ja Raamatun nimetyt poikkeamat saa). Build 10 -jono: saapumisnäkymä
 webin kaavalla (natiiviseppa/saapumisnakyma, agentin keskeneräinen työ — tarkista), nostotaso fokuspohjasta 38e424d
 (Siirtosepän PR #3081 luonnoksena kunnes build 10 on TestFlightissa), lennon pinta satelliittiin 95226a1 (topo vs
-bathy -vertailukuvat Fablelle ennen oletusta), Natiivi-UI nostot-web (testikäännös kuvapareihin). Viennin jälkeen:
+bathy -vertailukuvat Fablelle ennen oletusta), Natiivi-UI nostot-web (testikäännös kuvapareihin), pelikoodari/liiku-tanne d7a6e4d (Liiku tänne webin mukaan, ristiriidaton; natiivikuva Laitetestaajalle testi/b10:stä, ilmoita Pelikoodarille). Viennin jälkeen:
 testi/b10 molempiin simuihin (iPhone 17 FB234D08, iPad 503000D1). Worktreet (siivottu 24.9. klo 16.0x omistajan
 luvalla): jäljellä vain /Users/Shared/Claude/wt/proto-natiiviseppa-saapuminen (natiiviseppa/saapumisnakyma: 38e424d +
 COMMITOIMATON Saapumisnakyma.cs puhdas funktio, Saapumisrajaus.cs ja PalloKierto-kallistusajo; kutsuja puuttuu,
