@@ -131,6 +131,31 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
+        /// <summary>
+        /// Lennon aikana piilossa (omistaja 24.9.2026, löydös 23; iPad ja iPhone): yläpalkki ja yläkulmien pillerit ja
+        /// napit (Tilarivi: laukku, ☰, ⚙, karttanappi, kaupunkipilleri, kartuscha, matkakirja), linssinappi, nostot,
+        /// Liiku ja pulu. Näkyvissä vain lento ja luennan tekstipalkki (Traileri-kerros). Häivytys 0,6 s, paluu laskun jälkeen.
+        /// </summary>
+        public static readonly int[] LennonPiilokerrokset = { UiKerros.Nostot, UiKerros.Tilarivi, UiKerros.Matkavalinta, LinssiUi.Kerros, Natiivi.Pulu.Kerros };
+        public bool LentoPiilossa { get; private set; }
+
+        public void LentoPiilo(bool piiloon)
+        {
+            if (piiloon == LentoPiilossa) return;
+            LentoPiilossa = piiloon;
+            var ui = UiKerros.Hae();
+            foreach (int k in LennonPiilokerrokset)
+            {
+                var j = ui.Juuri(k);
+                // Häivytys USS-luokalla (Matkakirja.uss .mk-lentopiilo: opacity 0,6 s); paluu 0,8 s.
+                j.AddToClassList("mk-lentosiirtyma");
+                j.EnableInClassList("mk-lentopiilo", piiloon);
+                // Häivytyksen jälkeen ei napautuksia (näkymätön ei ota osumia); paluu heti näkyväksi.
+                if (piiloon) j.schedule.Execute(() => { if (LentoPiilossa) j.style.visibility = UnityEngine.UIElements.Visibility.Hidden; }).StartingIn(650);
+                else j.style.visibility = UnityEngine.UIElements.StyleKeyword.Null;
+            }
+        }
+
         void PaivitaKuvaSumea()
         {
             bool s = PakotaKuvaSumea ?? (Ylapalkki.Kelluva
@@ -280,6 +305,8 @@ namespace Matkakirja.Natiivi
             // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
             // Aloituslento ilman pallovalintaa (testikomento ui aloita, muut polut): avausteksti silti lennolle.
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); });
+            // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
+            o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").

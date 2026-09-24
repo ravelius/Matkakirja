@@ -3243,3 +3243,15 @@
     color: var(--muted);
 }
 
+
+/* Löydös 23: lennon ajaksi UI-kerrokset häipyvät (UiNakymat.LentoPiilo); paluu hieman hitaammin. */
+.mk-lentosiirtyma {
+    transition-property: opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
+.mk-lentosiirtyma.mk-lentopiilo {
+    opacity: 0;
+    transition-duration: 0.6s;
+}

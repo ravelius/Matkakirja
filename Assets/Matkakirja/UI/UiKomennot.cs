@@ -83,6 +83,7 @@
 //   ui opas [kaupunki] [vieritä px]           turistiopas (oletus lontoo), valinnainen vieritys
 //   ui ylapalkki [vaaka|pysty|auto|auki]    vaaka-asennon piilotettu yläpalkki ja väkäsnappi (auki = avaa väkäsistä)
 //   ui ylapalkki kelluva|palkki               iPhonen kelluva yläosa päälle / pois (auto palauttaa laitteen mukaan)
+//   ui lentopiilo [pois]                      löydös 23: lennon piilotus käsin (pois = palauta)
 //   ui kuvasumea paalle|pois|auto           löydös 19: kartan kevyt sumennus kuvien aikana pakotettuna / näkymien mukaan
 //   ui ylapalkki saari x,y,w,h|pois           saaririvin Dynamic Island pisteinä (ei lovea: 0,0,0,0); pois = laitteen mukaan
 //   ui mitauutta [paivittyi]                  "Mitä uutta" (versiorivi) tai "Peli päivittyi" -ilmoitus
@@ -675,6 +676,9 @@ namespace Matkakirja.Natiivi
                 case "noppa":
                     if (loput == "pois") { ui.Noppa.Haivyta(); return null; }
                     ui.HeitaNoppa(int.TryParse(loput, out var silmat) ? Mathf.Clamp(silmat, 1, 6) : UnityEngine.Random.Range(1, 7), 48.857, 2.352, null);
+                    return null;
+                case "lentopiilo":
+                    ui.LentoPiilo(loput != "pois");
                     return null;
                 case "kuvasumea":
                     UiNakymat.PakotaKuvaSumea = loput == "paalle" ? true : loput == "pois" ? false : (bool?)null;
