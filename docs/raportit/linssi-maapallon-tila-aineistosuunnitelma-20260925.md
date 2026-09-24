@@ -167,12 +167,11 @@ Päivitys ei vaadi uutta sovellusversiota (striimattu aineisto, versio `lahde.ha
 Erät 24.9. suunnitelman luvun 8 mukaan, aineisto ensin: erä 1 putki ja kultaiset tarkistukset (tämä dokumentti on
 sen määrittely), erä 2 ydin, erä 3 merijää pallolle, erä 4 lämpökuori, erä 5 merenpinta, UI ja tiedeliite.
 
-## 5. Päätettävää (Fable)
+## 5. Päätökset (Fable 25.9.2026 klo 01.4x, suositukset hyväksytty)
 
-1. **Lämpötilan 2026**: näytetäänkö kuluva vuosi (tammi–elo, +1,22 °C) erikseen merkittynä, vai päättyykö
-   animaatio vuoteen 2025? Suositus: päättyy 2025:een, ja kuluvan vuoden luku näkyy vain tekstinä merkinnällä
-   "tammi–elokuu 2026".
-2. **Arktisen merijään 2026**: sama kysymys (polygoni lokakuussa). Suositus: 2026 näkyy lukuna ja päivittäisestä
-   aineistosta, polygoni lisätään lokakuun päivityksessä.
-3. **Merenpinta**: NASA JPL:n Zenodo-sarja (CC BY 4.0) NOAA LSA:n tilalle. Omistajan 24.9. linjaus salli CC BY:n;
-   vahvista vain, että "NASA JPL (CC BY 4.0)" -merkintä riittää.
+1. **Lämpötila**: animaatio päättyy vuoteen 2025; kuluva vuosi vain tekstinä "tammi–elokuu 2026 +1,22 °C".
+2. **Arktinen merijää 2026**: lukuna päivittäisestä aineistosta (5 pv:n minimi); polygoni lisätään lokakuun päivityksessä.
+3. **Merenpinta**: NASA JPL GMSL Zenodosta; merkintä "NASA JPL (CC BY 4.0)", lisenssi `lahde`-kenttään
+   DATALINSSIT-linjauksen mukaan; ekstrapolaatio 2050:een pois.
+
+Toteutus vasta pariteettikierroksen ja omistajan build-kokeilun jälkeen (Raamattu).
