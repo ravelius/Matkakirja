@@ -765,10 +765,12 @@ namespace Matkakirja.Natiivi
                 linssi.Mastot3D = MastoPiirto?.Invoke();
                 Avattiin?.Invoke(linssi);
                 linssi.Avaa(y);
+                if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
             }
             public void Paivita() => linssi?.Paivita();
             public void Sulje()
             {
+                if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
                 linssi?.Sulje();
                 linssi = null;
                 if (virta != null) Destroy(virta.gameObject);
