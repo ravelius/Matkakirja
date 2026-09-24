@@ -16,7 +16,7 @@
   }
  },
  "maasto": {
-  "poltto": "2026-09-23a",
+  "poltto": "2026-09-23b",
   "available": [
    [
     {
@@ -28,50 +28,50 @@
    ],
    [
     {
-     "startX": 1,
-     "startY": 1,
-     "endX": 2,
+     "startX": 0,
+     "startY": 0,
+     "endX": 3,
      "endY": 1
     }
    ],
    [
     {
-     "startX": 3,
-     "startY": 2,
-     "endX": 4,
+     "startX": 0,
+     "startY": 0,
+     "endX": 7,
      "endY": 3
     }
    ],
    [
     {
-     "startX": 7,
-     "startY": 5,
-     "endX": 8,
-     "endY": 6
+     "startX": 0,
+     "startY": 0,
+     "endX": 15,
+     "endY": 7
     }
    ],
    [
     {
-     "startX": 15,
-     "startY": 11,
-     "endX": 16,
-     "endY": 12
+     "startX": 0,
+     "startY": 0,
+     "endX": 31,
+     "endY": 15
     }
    ],
    [
     {
-     "startX": 30,
-     "startY": 23,
-     "endX": 33,
-     "endY": 25
+     "startX": 0,
+     "startY": 0,
+     "endX": 63,
+     "endY": 31
     }
    ],
    [
     {
-     "startX": 61,
-     "startY": 46,
-     "endX": 67,
-     "endY": 50
+     "startX": 0,
+     "startY": 0,
+     "endX": 127,
+     "endY": 63
     }
    ],
    [
@@ -124,15 +124,15 @@
    ]
   ],
   "keskitavut": {
-   "0": 105,
-   "1": 111,
-   "2": 130,
-   "3": 132,
-   "4": 133,
-   "5": 652,
-   "6": 1748,
-   "7": 3305,
-   "8": 5029,
+   "0": 3261,
+   "1": 2120,
+   "2": 1071,
+   "3": 709,
+   "4": 423,
+   "5": 317,
+   "6": 212,
+   "7": 3327,
+   "8": 5039,
    "9": 6387,
    "10": 6814,
    "11": 7346,
