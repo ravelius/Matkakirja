@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2200, teksti: 'Sää: Grand Canyon, Iguazú, Titicaca, Uluru ja Y… (#3049)' },
   { v: 2199, teksti: 'Sää: Grand Canyon, Iguazú, Titicaca, Uluru ja Y… (#3049)' },
   { v: 2198, teksti: 'Liiku: luentavahdin varaventtiili mittaa puheen… (#3116)' },
   { v: 2197, teksti: 'Sää: Galápagos, Kongo, Machu Picchu, Madagaskar… (#3048)' },
