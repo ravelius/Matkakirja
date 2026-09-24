@@ -46,17 +46,30 @@
     return radio;
 }
 
+// Ääni-istunnon asetus ei saa pysäyttää pääsäiettä: setCategory ja setActive ovat synkronisia kutsuja
+// äänipalvelimelle (iPad 24.9.: asemanvaihdon kehyksessä 16 ms, ui piikit Update.Linssi.radio.Virta.Avaa).
+// Kategoria asetetaan vain, kun se on väärä (ominaisuuksien luku on halpa), ja aktivointi tehdään omassa
+// sarjajonossaan (Apple suosittaa aktivointia pääsäikeen ulkopuolella). AVPlayer voi aloittaa puskuroinnin
+// sillä välin; soitto kuuluu, kun istunto on aktiivinen.
 - (void)istunto
 {
     AVAudioSession* istunto = [AVAudioSession sharedInstance];
-    NSError* virhe = nil;
-    if (![istunto setCategory:AVAudioSessionCategoryPlayback
-                         mode:AVAudioSessionModeDefault
-                      options:AVAudioSessionCategoryOptionMixWithOthers
-                        error:&virhe])
-        NSLog(@"MATKAKIRJA radio: setCategory epäonnistui: %@", virhe);
-    if (![istunto setActive:YES error:&virhe])
-        NSLog(@"MATKAKIRJA radio: setActive epäonnistui: %@", virhe);
+    BOOL oikein = [istunto.category isEqualToString:AVAudioSessionCategoryPlayback]
+        && [istunto.mode isEqualToString:AVAudioSessionModeDefault]
+        && istunto.categoryOptions == AVAudioSessionCategoryOptionMixWithOthers;
+    static dispatch_queue_t jono;
+    static dispatch_once_t kerran;
+    dispatch_once(&kerran, ^{ jono = dispatch_queue_create("app.matkakirja.radio.istunto", DISPATCH_QUEUE_SERIAL); });
+    dispatch_async(jono, ^{
+        NSError* virhe = nil;
+        if (!oikein && ![istunto setCategory:AVAudioSessionCategoryPlayback
+                                        mode:AVAudioSessionModeDefault
+                                     options:AVAudioSessionCategoryOptionMixWithOthers
+                                       error:&virhe])
+            NSLog(@"MATKAKIRJA radio: setCategory epäonnistui: %@", virhe);
+        if (![istunto setActive:YES error:&virhe])
+            NSLog(@"MATKAKIRJA radio: setActive epäonnistui: %@", virhe);
+    });
 }
 
 - (void)avaa:(NSString*)osoite
