@@ -1,0 +1,798 @@
+{
+ "tarkistettu": "2026-09-23",
+ "vaatimus": "TLS 1.3 tai TLS 1.2 + ECDHE (iOS ATS)",
+ "tulokset": {
+  "https://25643.live.streamtheworld.com/UKHOZIFMAAC_SC": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://26733.live.streamtheworld.com/CBLAFM_CBC_SC": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://27863.live.streamtheworld.com/PROGRAM1AAC_SC": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://9090streaming.mobtada.com/9090FMEGYPT": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://a13.asurahosting.com/listen/al_masaa_fm_101/radio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://a7.asurahosting.com/listen/tbc_taifa/radio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://abc.streamguys1.com/live/rnnsw/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://asima.out.airtime.pro/asima_a": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://azura.dzrh.com.ph/listen/dzrh_manila/radio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://c2.radioboss.fm/stream/394": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_mp3_h": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://d131.rndfnk.com/star/crtve/rne5/main/mp3/128/stream.mp3?aggregator=tunein&cid=01GEP4MW5CAHPYP1EXHVKWFJ8W&sid=2OeE42hivuba6dTGvjnMGjKByQe&token=cdczXcnimVx4AY4iamqYbTMdu3cK7oBxmS2UQN9cWc0&tvf=pdPcDBxuVxdkMTMxLnJuZGZuay5jb20": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://dc1.serverse.com/proxy/kjxwtpdt/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://dc5.serverse.com/proxy/pbmhbvxs/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://direct.radiomadagasikara.com/listen/rnm/radio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://edge.iono.fm/xice/159_high.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://edge.iono.fm/xice/193_high.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://edge76.rcs-rds.ro/digifm/digi24fm.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://fm939.wnyc.org/wnycfm": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://fmsetagaya834.out.airtime.pro/fmsetagaya834_a": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://getnanoq.retro-radio.dk/Nanoq-TX-1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://go.webgateready.com/metrofm/radio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://guri.tepuyserver.net/8048/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://icast.connectmedia.hu/4736/mr1.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES256-GCM-SHA384"
+  },
+  "https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://icecast.err.ee/vikerraadio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://icecast.live.yle.fi/radio/YleRadio1Hifi/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://icecast.omroep.nl/radio1-bb-mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://icecast.radiofrance.fr/franceinter-hifi.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://icecast.radiopichincha.com/radiopichincha": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://icecast.rte.ie/radio1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://icecast.stv.livebox.sk/slovensko_128.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://icecast.vrtcdn.be/radio1-high.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://icecast1.sere.plus/RFOne": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://icestreaming.rai.it/1.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://l3.itworkscdn.net/alarabyradiolive/alarabyradio_audio/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://l3.itworkscdn.net/smcradiolive/smcradiolive/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://lhttp.qtfm.cn/live/15318317/64k.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES256-GCM-SHA384"
+  },
+  "https://listen-coopradio.sharp-stream.com/coopradio.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://listen.mixlr.com/e1e2be07dfce2a18e8ee3cdd0dd2d437": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://listen.radioking.com/radio/280804/stream/326527": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://listen.radioking.com/radio/681745/stream/746185": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://live-icy.gss.dr.dk/A/A03H.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://live.qalbimnavosi.uz/qalbimnavosi": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://live.radioswh.lv/plusmp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://live1.sr.se/p1-aac-32": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://mp3.rtvslo.si/ra1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://mpbradio.ice.infomaniak.ch/topcongo3-128.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://n03.rcs.revma.com/78fm9wyy2tzuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://netradio.radio4.dk/radio4": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://netradio.ziniur.lt/ziniur.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES256-GCM-SHA384"
+  },
+  "https://node-27.zeno.fm/ey34mac27vzuv?rj-ttl=5&rj-tok=AAABdyidjk4ACEJncwCTuO-dTg": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://ondemand.rrr.org.au/getstream?id=wsmq": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://online-news.radioplayer.ua/RadioNews": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://orf-live.ors-shoutcast.at/oe1-q2a": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://play.global.audio/testb.aac?dist=RADIOPLAY": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC_SC": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://playerservices.streamtheworld.com/api/livestream-redirect/CAPITAL958FM_PREM.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://playerservices.streamtheworld.com/api/livestream-redirect/CARACOL_RADIOAAC.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_41AAC.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://playerservices.streamtheworld.com/api/livestream-redirect/W_RADIOAAC.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radio-broadcast.ekantipur.com/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://radio-streams.kaztrk.kz/qazradio/qazradio/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://radio.iraninternational.app/iintl_c": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radio.radiobot.org/listen/rvk/rvk.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://radio.shafaq.com/radio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radio.vbtc.vu/paradisefm": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radio12.plathong.net/7234/;stream.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radiocast.rtp.pt/rdpint80a.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://radiochaine1.ice.infomaniak.ch/chaine1.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://radiostream.pl/tuba10-1.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://radiostreaming.ert.gr/ert-proto": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://radiovostok.ice.infomaniak.ch/radiovostok.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://rfienvietnamien64k.ice.infomaniak.ch/rfienvietnamien-64.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://rozhlas.stream/radiozurnal_sport_high.aac": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://s2.free-shoutcast.com/stream/18170": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://s2.radio.co/s418cc827e/listen": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://s4.radio.co/sf3aa4c25a/listen": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://s5.radio.co/se6264cb34/listen": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://sa.mp3.icecast.magma.edge-access.net/sc_rad1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://samaakhi107-itelservices.radioca.st/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://securestream.o94.at/live.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://securestreams7.autopo.st/?uri=https://icecast.teveo.cu/kHKL7tWd": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-CHACHA20-POLY1305"
+  },
+  "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stm1.rthk.hk/radio1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream-154.zeno.fm/pdeizhgrtrstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGVpemhncnRyc3R2IiwiaG9zdCI6InN0cmVhbS0xNTQuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Im9vbng2V1J3UXJ5Q0k5TVV0N01heEEiLCJpYXQiOjE3MjgyMjQ1MTYsImV4cCI6MTcyODIyNDU3Nn0.gpUIWkDBFNNFjqCg2R-xQN4LXT4z8_Ivs7d2UkeFE_8": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream-157.zeno.fm/yerp85sughwtv?zs=bzqHawb1Rha3gGg97iW8xg": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream-25.zeno.fm/2xguamap7yzuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream-32.zeno.fm/xekhrn4zetzuv?zs=KXT1gTNYSemcxyslV6-vdA": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream-node0.rri.co.id/streaming/14/9014/kbrn.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://stream.100komma7.lu/100komma7/live/mp3/128/stream.mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES256-GCM-SHA384"
+  },
+  "https://stream.bnr.nl/bnr_mp3_128_20": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://stream.hydeinnovations.com:2020/stream/bukeddefm/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_east_asia": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.radiohelsinki.fi/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.radionova.no/mp3": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://stream.rcs.revma.com/e3tha8v4dkhvv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://stream.rcs.revma.com/n5vb288kmbpwv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://stream.resonance.fm/resonance": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.ruc.pt/high": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.srg-ssr.ch/m/la-1ere/mp3_128": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.utvarpsaga.is/Hljodver": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_256_GCM_SHA384"
+  },
+  "https://stream.zeno.fm/43q33pgvbphvv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/84652g7meg8uv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/cbd1wweamzzuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/jetj7igyezmtv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/kxud8vhqt1duv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/m7p996vfec9uv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/nvpr0uec8e9uv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/pnwpbyfambruv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/tskpv4vscv8uv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/ud2u96xst5quv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/une3a02mb": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/vyu630hfy4zuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/w3lic6qp9eouv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/xxmnohwx4zyuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zeno.fm/z9wfrdpmgg0uv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://stream.zenolive.com/z96sq8tndseuv": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://streaming.diwanfm.net/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://streaming.kalohan.net/proxy/raliber?mp=/stream": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES128-GCM-SHA256"
+  },
+  "https://streaming.live365.com/a91285": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  },
+  "https://trt.radyotvonline.net/trt1": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://unlimited3-cl.dps.live/biobiotemuco/aac/icecast.audio": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://uplink.byte.fm/bytefm-main/mp3-128/": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-ECDSA-AES256-GCM-SHA384"
+  },
+  "https://urgentstream.radiostudio.be/live": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES128-GCM-SHA256"
+  },
+  "https://wbsradio.kr/wbs-seoul": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.2",
+   "salaus": "ECDHE-RSA-AES256-GCM-SHA384"
+  },
+  "https://www.radiocampusparis.org/stream/": {
+   "toimii": true,
+   "virhe": null,
+   "versio": "TLSv1.3",
+   "salaus": "TLS_AES_128_GCM_SHA256"
+  }
+ }
+}

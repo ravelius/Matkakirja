@@ -518,7 +518,7 @@ const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
  * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
  * siirtymä toistuu pelissä kymmeniä kertoja.
  */
-const JALKAMATKAN_MAISEMA = 'metsa';
+export const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -1048,7 +1048,7 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * eikä niitä esiladata service workerissa, joten peli hakee ne
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
-const AARRE_MUSIIKKI = {
+export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
 };
