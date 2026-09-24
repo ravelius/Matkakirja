@@ -1,31 +1,40 @@
-# Sisältökirjurin aloitusviesti (24.9.2026 klo 14.5x)
+# Sisältökirjurin aloitusviesti (24.9.2026 klo 23.5x)
 
 Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri. Ensimmäinen komento:
 git fetch origin && git checkout -B sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main. Lue CLAUDE.md,
-docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", docs/raportit/sisalto-inventaario-20260924.md (KOKO, kohdat
-1-7), ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260924-e.md kokonaan.
+docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260924-yo.md
+kokonaan.
 
-TILA: sää-vaihe VALMIS kaikille 71 kaupungille (14 PR:ää auki: #3047-#3050, #3052-#3053, #3056, #3058, #3060,
-#3062-#3065). Galleria- ja ennenNyt-tutkimus VALMIS 46/46 mergetylle N8-N16-kaupungille (3 gallerialla, 35
-ennenNyt-parilla, PR:t #3066 #3068 #3069). Turistiopas ohitettu toistaiseksi (ei data-poiminta, moni kaupunki
-ei sovi konseptiin). Kohdekartat KESKEN, rajattu 12 kaupungin listalle (>10-30 tuhatta asukasta — pienemmät
-piirtyvät tyhjiksi, ks. Norfolk-koe).
+TILA: Linssikatalogin uudistus (esittelysivu yhteistyökumppaneille) vaihe 1 on PR:ssä
+#3128 (haara sisaltokirjuri-linssikatalogi), odottaa Pelikoodarin ulkoasutarkistusta ja Fablen
+mergeä — ks. luovutuksen kohta 3 (viisi avointa korjausta: muu-moottorin väri/ikoni, header-lukujen
+laskentatapa, erä 1b:n kuvatekstien lisäystapa, kartta-osio siirretty vaiheeseen 3, Pelikoodarin tarkistus
+kesken). Kuvatilausluonnos (galleria+ennenNyt 59 kaupungille) hyväksytty ja viety postilaatikkoon, raportti
+mainiin PR #3106 (auki, odottaa mergeä).
 
-ENSIMMÄINEN TEHTÄVÄ: jatka kohdekarttoja haarassa sisalto-kohdekartta-pilotti-20260924. Aseta
-export CHROMIUM="/Users/koodaus/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
-ja aja node tools/piirra-kaupunkikartta.mjs kalgoorlie (rajaus jo tiedostossa). Jos Overpass antaa 504:n,
-kokeile OVERPASS_PALVELIMET=https://overpass.kumi.systems/api/interpreter etuliitteenä. Kun kuva on hyvä,
-kirjoita js/packs/maakartat.js:n KAUPUNKIKARTAT-riville kalgoorlie (polku, lahde, rajat, esittely, kohteet:
-plain teksti-kentällä, EI nosto:-linkillä — luovutuksen kohta 4.1 selittää miksi). Pisteet: Paddy Hannanin
-patsas -30.7490175/121.4705657, Hannans North -kaivos -30.7268005/121.4716290. Testaa
-tools/tarkista-karttapisteet.mjs, node --test tests/*.test.mjs (0 fail, nostot-kartalla.test.mjs vihreä),
-versio+build+commit+PR. Jatka samalla kaavalla 11 muulle kaupungille (Mount Isa, Broome, Geraldton, Porto
-Velho, Santarém, João Pessoa, Macapá, Cayenne, Kimberley, Gao, Al Kufra) — 5 kaupunkia/erä. Kirjaa 12
-kaupungin lista ja hylkäysperuste 18:lle inventaarioon ENNEN kuin aloitat (kohta 5.5, puuttuu vielä). Kun
-kohdekartat on tehty: N2/N4/N5/N6:n 20 kaupungin sää/galleria/ennenNyt kun ne mergetään, sekä Churchill-nosto
-(#3016 on mergetty).
+ENSIMMÄINEN TEHTÄVÄ: tarkista onko linssikatalogi-PR mergetty tai onko Pelikoodari/Fable jättänyt kommentteja
+— jos on, tee pyydetyt korjaukset. Jos kuvaputken erä 1b (23 linssiä lisää, sama polku
+linssikatalogi/<id>-havainne.jpg) on saapunut postilaatikkoon, lisää sen kuvatekstit
+linssikatalogi.html:n ERA1_KUVATEKSTIT-taulukkoon (muoto: luovutuksen kohta 3.3) — kuvat itse toimivat
+automaattisesti. Muuten jatka Fablen seuraavaksi antamalla tehtävällä (linssikatalogin vaihe 2/3: kartta-osio,
+tai muu sisältötyö).
 
-npm ci on ajettu tässä checkoutissa (node_modules on olemassa) — ei tarvitse ajaa uudelleen paitsi
-package-lock.json muuttuu. Agentit vain Sonnet/Opus, enintään 4 rinnakkain. Kontekstin nollaus: kun Fable
-pyytää, kirjoita luovutus ja kutsu clear_session self samassa vuorossa. Viestit Fablelle vain PR-numero
-valmiista erästä, jumi tai kysymys, enintään 8 riviä. Testit ilman ääniä. Aikaleimat date-komennolla.
+HUOM Fablelle täsmennettäväksi: edellisessä ohjeessa mainittiin "käännöspalvelu" osana tätä aloitusviestiä,
+mutta tällä sessiolla ei ollut mitään kontekstia siitä mikä se on — kysy Fablelta tai Postivahdilta ennen kuin
+oletat mitään.
+
+SITOVAT KÄYTÄNNÖT TÄLLÄ HETKELLÄ:
+- **JUMI → KORTTI (omistaja 24.9. klo 22.5x):** jos jäät jumiin (luokitin estää toimen, päätös puuttuu, työ ei
+  etene), tee AINA AskUserQuestion-kortti omistajalle SAMASSA VUOROSSA kutsu PushNotification (status
+  proactive, yksi rivi "Sisältökirjuri: kysymyskortti auki — <aihe>") — älä jää odottamaan vapaata tekstiä.
+  Yksi rivi myös Fablelle lokia varten.
+- **Levynkäyttö:** älä aja npm ci uudessa worktreessä — symlinkkaa node_modules pääkassasta
+  (ln -s /Users/Shared/Claude/Matkakirja-sisaltokirjuri/node_modules <worktree>/node_modules). Tarkista
+  git status --short ennen git add:ia, symlinkki näkyy ?? eikä .gitignore poimi sitä.
+- **preview_start ei toimi worktree-hakemistoissa** (käynnistää palvelimen pääkassasta) — käytä
+  python3 -m http.server <portti> --bind 127.0.0.1 worktreesta run_in_background: true -Bash-kutsulla.
+- Agentit vain Sonnet/Opus, enintään 4 rinnakkain. Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja
+  kutsu clear_session self samassa vuorossa. Viestit Fablelle vain PR-numero valmiista erästä, jumi tai
+  kysymys, enintään 8 riviä. Testit ilman ääniä (node --test tests/*.test.mjs — huom: yöllä/kuormitetulla
+  koneella yksi ajo voi kestää 15+ min, käytä run_in_background + Monitor, älä tapa prosessia jos tail näyttää
+  "jumissa" — se voi olla vain tiedostopuskurin viive). Aikaleimat date-komennolla.
