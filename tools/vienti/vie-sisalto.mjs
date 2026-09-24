@@ -176,8 +176,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.37 kokoelma aluenimet (Karttaseppä, löydös 38 b): assets/data/aluenimet-natiivi.json
  *        sellaisenaan (meret, maakunnat, nykyalueet väistön jälkeisin ankkurein
  *        tasoittain + valtameret); juuressa tyylit, fontti, aineistoversio.
+ *   1.38 kaupungit.asukkaat (Linssiseppä, radiouudistus): Wikidata P1082 (CC0),
+ *        asukkaatVuosi, asukkaatAlue (luku koskee saarta/valtiota), asukkaatLahde
+ *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
  */
-export const SKEEMAVERSIO_TARKKA = '1.37';
+export const SKEEMAVERSIO_TARKKA = '1.38';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
