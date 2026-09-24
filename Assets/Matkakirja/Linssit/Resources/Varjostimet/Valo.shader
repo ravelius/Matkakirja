@@ -7,7 +7,8 @@
 // Webissä vedot lasketaan canvasissa yhteen ('lighter') ja canvas sekoittuu
 // sivulle premultiplied source-over -tavalla; tässä summa lasketaan fragmentissa
 // ja tulos sekoitetaan Blend One OneMinusSrcAlpha. Neliö on webin 128 px:n
-// piirtoruutu, joten uloin häntä leikkautuu sen reunaan kuten webissä.
+// piirtoruutu, joten uloin häntä leikkautuu sen reunaan kuten webissä. Lineaarisessa
+// väriavaruudessa tulos muunnetaan webin sRGB-sekoitusta vastaavaksi (ks. frag).
 //
 // OLETUKSET (editoria ei ajettu; Natiiviseppä kääntää):
 //  - Mitat ovat ruutupisteitä (CSS px). _RuudunKorkeusPt = ruudun korkeus
@@ -160,7 +161,16 @@ Shader "Matkakirja/Linssit/Valo"
                 if (d <= S * 0.85 * Reuna(a, i)) c += Veto(d, S * 0.9, min(1.0, k * 0.6), i);
                 c += Veto(d, S * 0.26, min(1.0, k), i);
                 c = min(c, 1.0);
-                return half4(c * (i.p.w * _Peitto));
+                c *= i.p.w * _Peitto;
+            #if !defined(UNITY_COLORSPACE_GAMMA)
+                // Webin canvas sekoittuu sRGB-arvoihin; projekti on lineaarinen. Tummalla
+                // pohjalla (keksintöjen tummennus) lin(c + (1-a)·pohja) ≈ lin(c) + (1-a)^2,2·lin(pohja):
+                // ilman muunnosta hännän 0,05 näkyi 0,26:na ja hehku leveni neliön reunaan asti
+                // (kontakti 24.9.). Sama muunnos kuin Tummennus.shaderissa.
+                c.rgb = pow(max(c.rgb, 0.0), 2.2);
+                c.a = 1.0 - pow(max(1.0 - c.a, 0.0), 2.2);
+            #endif
+                return half4(c);
             }
             ENDHLSL
         }

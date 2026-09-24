@@ -9,7 +9,7 @@
 #
 #   ./laitetesti.sh sisalto [koepaketti]   linssiaineisto + maat (+ MAARAJAT=1) koekansioon,
 #                                          uudelleenkäynnistys ja aloitusportin ohitus
-#   ./laitetesti.sh portti                 aloitusportin ohitus (ui aloita pariisi)
+#   ./laitetesti.sh portti                 aloitusportin ohitus (ui aloita ${KAUPUNKI:-pariisi})
 #   ./laitetesti.sh astronautti <kansio>   kuvasarja ja loki
 #   ./laitetesti.sh keksinnot <kansio>     kuvasarja ja loki
 #   ./laitetesti.sh maat <kansio>          vertailu ja maatiedot: valinnat, täysi lista, lehti
@@ -38,7 +38,7 @@ linssi() { print -l "$@" > $TMP/l.txt; sinne $TMP/l.txt linssi-komento.txt; }
 kartta() { print -l "$@" > $TMP/k.txt; sinne $TMP/k.txt komento.txt; }
 ui() { print -l "$@" > $TMP/u.txt; sinne $TMP/u.txt ui-komento.txt; }
 # Aloitusportin ohitus (Natiivi-UI): muuten Jatka matkaa / Uusi matka jää linssien päälle.
-portti() { sleep ${1:-20}; ui "ui aloita pariisi"; sleep 6; }
+portti() { sleep ${1:-20}; ui "ui aloita ${KAUPUNKI:-pariisi}"; sleep 6; }
 kuva() { kartta "kuva $1"; sleep 3; }
 kaynnista() { xcrun devicectl device process launch --device $UDID --terminate-existing $ID | tail -1; }
 
@@ -107,9 +107,10 @@ case "$1" in
     linssi "linssi topografia"; sleep 8; linssi "kamera 45 10 8000"; sleep 8; kuva kontakti-topografia
     linssi "linssi vesistot"; sleep 8; linssi "kamera 0 20 9000"; sleep 8; kuva kontakti-vesistot
     linssi "linssi satelliitti"; sleep 15; kuva kontakti-satelliitti
-    linssi "linssi keksinnot"; sleep 6; linssi "keksinnot 11"; sleep 6; kuva kontakti-keksinnot-1873
+    # Samat siirrot ja odotukset kuin webin kuvissa (kontakti-web.mjs): kuva vasta ajon jälkeen (12 s).
+    linssi "linssi keksinnot"; sleep 6; linssi "keksinnot 10"; sleep 12; linssi "keksinnot 11"; sleep 12; kuva kontakti-keksinnot-1873
     linssi "keksinnot 25" "keksinnot jatka"; sleep 12; kuva kontakti-keksinnot-loppu
-    linssi "linssi ihmisen-matka"; sleep 20; linssi "esitys levantti"; sleep 6; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
+    linssi "linssi ihmisen-matka"; sleep 45; linssi "esitys levantti"; sleep 12; linssi "esitys tauko"; sleep 2; kuva kontakti-ihmisen-matka-levantti
     linssi "linssi pois"; sleep 4; hae "$2"; tail -12 "$2/linssi-loki.txt" ;;
   *) echo "käyttö: $0 sisalto [koepaketti] | portti | astronautti <kansio> | keksinnot <kansio> | maat <kansio> | kontakti <kansio>"; exit 1 ;;
 esac
