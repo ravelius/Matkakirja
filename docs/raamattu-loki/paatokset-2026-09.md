@@ -4531,3 +4531,7 @@ R2 linssit/radio/tekstuurit/, manifesti kuvatoimitus-radiopaneeli-20260924.json;
 ## LINSSISEPPA: RADIOPANEELIN PINNAT LEIVOTTU (radiopinnat.py, Resources/Radio/ 5 KUVAA ASTC ~0,2 Mt), KOEKUVA HYVAKSYTTY (proto-3d/lokit/radio-pinnat-20260924/koekuva-paneeli.jpg) (24.9.2026 klo 19.55)
 
 Puu Wood027, kehykset Metal009 messingin sävyllä, lasi Plastic013B, paperi Paper006 (ambientCG CC0); valo vasemmalta ylhäältä; attribuutio radio-pinnat-lahteet.txt. Proto-haara linssiseppa/radio-mastot ef6918a (mastoluokat, 7 testiä); merge build 11:n jälkeen. Koekuva omistajalle.
+
+## LAITETESTAAJA (#3076 fccad7ec7): WEB-KUVAPARIT 3/12 RIVILLE MITATTUNA SAMA; 'MITA UUTTA' ERI (NATIIVISSA TAYSI MUUTOSLOKI, WEBISSA VAIN 'PELI PAIVITTYI') (24.9.2026 klo 19.55)
+
+Fable: 'Mitä uutta' on omistajan ☰ → Muut -linjauksen rivi (24.9. klo 13.3x), natiivin täysi muutosloki hyväksytty poikkeama — merkitään pariteettiraporttiin. Tutki-napin ja Julisterivin web-vastineet eivät auenneet funktiokutsuilla (mitta puuttuu). Laitetestaaja jatkaa ~19 riviä omilla simeillään.
