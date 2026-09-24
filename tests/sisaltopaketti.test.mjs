@@ -1270,3 +1270,20 @@ test('skeema 1.36: merinimet kuten webin nimiötasolla (Linssiseppä)', async ()
   assert.deepEqual(k.tyyli.kirjainkorkeusPx, Object.fromEntries(Object.entries(W.NIMION_KOOT.meri).map(([z, v]) => [z, v])));
   assert.equal(k.tyyli.versaali, true);
 });
+
+test('skeema 1.37: aluenimet Karttasepän tiedostosta sellaisenaan', () => {
+  const a = JSON.parse(readFileSync(new URL('../assets/data/aluenimet-natiivi.json', import.meta.url), 'utf8'));
+  const k = JSON.parse(tiedostot.get('kokoelmat/aluenimet.json'));
+  assert.equal(k.aineistoversio, a.versio);
+  assert.deepEqual(k.tyylit, a.tyylit);
+  assert.deepEqual(k.fontti, a.fontti);
+  assert.equal(k.alkiot.length, a.nimet.length + a.valtameret.length);
+  const idt = new Map(k.alkiot.map((r) => [r.id, r]));
+  assert.equal(idt.size, k.alkiot.length);
+  for (const n of a.nimet) assert.deepEqual(idt.get(n.id).paikat, n.paikat, n.id);
+  for (const v of a.valtameret) assert.equal(idt.get(v.id).luokka, 'valtameri');
+  for (const r of k.alkiot) assert.ok(k.tyylit[r.tyyli], `${r.id}: tyyli`);
+  // Merinimet (1.36) ovat aluenimien meriosa samoin tunnuksin.
+  const meret = JSON.parse(tiedostot.get('kokoelmat/merinimet.json')).alkiot;
+  for (const m of meret) assert.equal(idt.get(m.id)?.luokka, 'meri', m.id);
+});

@@ -41,6 +41,7 @@ import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
 import { merinimiKokoelma } from './merinimet.mjs';
+import { aluenimiKokoelma } from './aluenimet.mjs';
 import { tyohuonetilastot } from './tyohuonetilastot.mjs';
 import * as TYOHUONETILASTOT from '../../js/tyohuone-tilastot.js';
 import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
@@ -968,6 +969,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.maamerkit = maamerkkiKokoelma(taulukko, kaupunkiIdt);
   // Skeema 1.36 (Linssiseppä, build 11): merinimet kuten webin nimiötasolla.
   kokoelmat.merinimet = merinimiKokoelma(taulukko);
+  // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
+  kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
   // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
   // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
   // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.
