@@ -4059,3 +4059,7 @@ Web-kuvat tuotannosta (kartta, noppa, siirtovaihe, valintavihje × iPhone/iPad, 
 ## BUILD 8 TESTFLIGHTISSA: 1.0.0 (202609241220), PROTO f6de924, klo 15.28 (AJO 35996178210, -nographics) (24.9.2026 klo 15.30)
 
 Sisältö: uusi DC-3, pilvimeri, punaiset renkaat, maamerkit Lontoo/Ateena, lennon ääni korjattu, ☰ kaksi riviä + Muut-paneeli, äänentasot Asetuksiin, VU AVAudioEngine, iPad-sumennus korjattu, Keychain, aloituskaava. Tunnetut: huntu-suorakulmiot, sumea kone, laatat lohkoina → build 9. Mainissa #2898 v2176, #2932, #3057, #3070, #3072, #3073. Julkaisija: #2966/#2972 (O7) ristiriidassa N-erien kanssa → Sisältökirjuri rebaseaa ja poistaa päällekkäisen, sulkee jos ei uutta. Laitetestaajalle build 8 -rivit 5/13/23 ja noppa-testihaaran kuvat. Omistajalle ilmoitettu.
+
+## NATIIVI-UI NOLLATTU (POSTIVAHTI): LUOVUTUS PR #3077, ALOITUSVIESTI LAHETETTY, RC PAALLA (24.9.2026 klo 15.31)
+
+Nollaus 18. tänään. Uusi Natiivi-UI jatkaa 'Ei webissä' -päätöksistä (E10–E11 + E3 build 9, loput build 10) WEB ON MALLI -kaavalla. iPad irrotettu omistajalta; laiteajot pyydetään erikseen (Linssisepälle ilmoitettu).
