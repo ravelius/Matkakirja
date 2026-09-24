@@ -97,6 +97,11 @@ namespace Matkakirja
             double D(int i) => double.Parse(o[i], CultureInfo.InvariantCulture);
             switch (o[0])
             {
+                case "hiljaa":
+                case "aanet":
+                    // Laitetestit ilman ääniä (Fable 24.9.): koko sovellus mykäksi tai takaisin.
+                    AudioListener.volume = o[0] == "hiljaa" ? 0f : 1f;
+                    break;
                 case "kuva":
                     // Mobiilissa polku on suhteellinen persistentDataPathiin.
                     ScreenCapture.CaptureScreenshot(Application.isMobilePlatform
