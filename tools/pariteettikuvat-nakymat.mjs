@@ -144,6 +144,31 @@ export const NAKYMAT = [
     nimi: 'aloitusportti', kuvaus: 'Aloitusportti: ei tallennetta, "Aloita seikkailu" (ui.showAloitusportti)',
     tallenne: false, haku: '?koe=suoraan', pallo: false, odota: '.start-btn',
   },
+  {
+    nimi: 'avausteksti-kesken', kuvaus: 'Aloita seikkailu → juliste ja avausteksti kirjoituskoneella kesken (AVAUS_KERTOMUS_MS 2850 + ~2 s)',
+    tallenne: false, haku: '?koe=suoraan', pallo: false, odota: '.start-btn',
+    jalkeen: async () => {
+      document.querySelector('.start-btn')?.click();
+      await new Promise((ok) => setTimeout(ok, 5500));
+      return null;
+    },
+  },
+  {
+    nimi: 'avausteksti-valmis', kuvaus: 'Avausteksti kirjoitettu, "Valitse aloituskaupunki" -nappi näkyvissä (.intro-valinta)',
+    tallenne: false, haku: '?koe=suoraan', pallo: false, odota: '.start-btn',
+    jalkeen: async () => {
+      document.querySelector('.start-btn')?.click();
+      const alku = Date.now();
+      const nappi = () => document.querySelector('.intro-valinta');
+      while (!(nappi() && !nappi().classList.contains('intro-valinta-piilossa')) && Date.now() - alku < 40000) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 200));
+      }
+      await new Promise((ok) => setTimeout(ok, 900));
+      return { kestoMs: Date.now() - alku };
+    },
+    odotaJalkeen: '.intro-valinta:not(.intro-valinta-piilossa)',
+  },
   { nimi: 'kartta', kuvaus: 'Intro ohitettu: pallo kaupungissa, toimintavaihe (?koe=suoraan + tallenne)' },
   {
     nimi: 'matkakirjakortti-auki', kuvaus: 'Matkakirjan merkintäkortti auki (ui.asetaPaivakirjanKoko(false))',
@@ -465,6 +490,8 @@ const linssiKaynnissa = (p) => {
 };
 const TODENNUS = {
   aloitusportti: { nakyy: ['.start-btn'] },
+  'avausteksti-kesken': { nakyy: ['.intro-juliste'] },
+  'avausteksti-valmis': { nakyy: ['.intro-valinta'] },
   kartta: {
     nakyy: ['.fact-card'],
     ehto: () => {
