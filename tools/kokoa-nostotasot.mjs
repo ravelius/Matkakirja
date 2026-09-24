@@ -51,9 +51,16 @@ for (const nimi of readdirSync(ulos)) {
     shardeja += 1;
     const v = koottu[iso] ?? {
       versio: k.versio, maa: iso, saanto: k.saanto, tasot: [], nostot: {}, laatastot: {},
+      // Nimet elävinä (generoi --nostot-ilman-nimioita, 23.9.2026).
+      ...(k.nimiot === false ? { nimiot: false } : {}),
     };
     if (v.versio !== k.versio || v.saanto !== k.saanto) {
       throw new Error(`${iso}: shardien versio/saanto eroavat (${v.versio}/${v.saanto} vs ${k.versio}/${k.saanto})`);
+    }
+    // Saman maan shardien on oltava samaa mieltä nimistä: puoliksi poltettu
+    // maa näyttäisi elävän nimen toisella tasolla poltetun päällä.
+    if ((v.nimiot === false) !== (k.nimiot === false)) {
+      throw new Error(`${iso}: shardeista osa poltettu nimillä, osa ilman (--nostot-ilman-nimioita)`);
     }
     for (const z of k.tasot ?? []) if (!v.tasot.includes(z)) v.tasot.push(z);
     Object.assign(v.laatastot, k.laatastot ?? {});

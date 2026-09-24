@@ -15,6 +15,12 @@
 #   tools/generoi-luennat.mjs  kaupunkien matkakirjaluennat.
 #   tools/kohdista-luennat.mjs AIKALEIMAT valmiille matkakirjaluennalle
 #                              (ei generoi ääntä; toiminto: kohdista).
+#                              `toiminto: kohdista` + `avaus: true`
+#                              kohdistaa myös avausluennat (intro-puhe,
+#                              puhe-lento-alku) ilman kuittia; ne viedään
+#                              audio/intro-puhe.aikaleimat.json- ja
+#                              audio/puhe-lento-alku.aikaleimat.json-
+#                              avaimiin (natiivin kirjoituskone, 24.9.2026).
 #
 # SIDONTA EI ÄÄNITÄ EIKÄ KOHDISTA. `toiminto: sido` lukee repossa jo
 # olevan aikaleimatiedoston, hakee äänitteen ja kirjoittaa sen version 2
@@ -86,7 +92,11 @@ on:
         required: false
         default: ''
       avaus:
-        description: Generoi myös etusivun ja avauslennon luennat
+        description: >-
+          Etusivun ja avauslennon luennat. toiminto "generoi": äänittää ne
+          uusiksi. toiminto "kohdista": EI ÄÄNITÄ, vaan hakee valmiille
+          intro-puhe.mp3:lle ja puhe-lento-alku.mp3:lle aikaleimat (kuittia
+          ei tarvita) ja vie ne ämpäriin.
         type: boolean
         default: false
       toiminto:
@@ -159,10 +169,12 @@ jobs:
           echo "::error::Ei mitään generoitavaa — anna kaupungit ja/tai avaus."
           exit 1
 
+      # Avausluennat (avaus: true) eivät tarvitse kuittia: niillä ei ole
+      # Horatio-erää, vaan äänite on pelin oma ?v=-versioitu osoite.
       - name: Tarkista kohdistuksen kuitti
-        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' }}
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' && inputs.avaus == false }}
         run: |
-          echo "::error::Kohdistus vaatii valmiin Horatio-tuotantokuitin HTTPS-osoitteen."
+          echo "::error::Kohdistus vaatii valmiin Horatio-tuotantokuitin HTTPS-osoitteen (tai avaus: true)."
           exit 1
 
       # R2-portti ennen forced-alignment-kutsuja: valmista maksullista
@@ -189,12 +201,14 @@ jobs:
       # Vain avaus-työkalu tarvitsee paketteja (hännän mittaus +
       # hiljaisuuspaddaus). Asennus ilman package.json-muutosta:
       # --no-save, jotta työhakemisto pysyy puhtaana committia varten.
+      # Vain generoi-toiminto äänittää avauksen; kohdista + avaus hakee
+      # pelkät aikaleimat eikä saa koskaan äänittää uusiksi.
       - name: Asenna avaustyökalun paketit
-        if: ${{ inputs.avaus == true }}
+        if: ${{ inputs.avaus == true && inputs.toiminto == 'generoi' }}
         run: npm install --no-save --no-audit --no-fund mpg123-decoder lamejs
 
       - name: Generoi avausluennat
-        if: ${{ inputs.avaus == true }}
+        if: ${{ inputs.avaus == true && inputs.toiminto == 'generoi' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
@@ -247,14 +261,20 @@ jobs:
         env:
           KAUPUNGIT: ${{ inputs.kaupungit }}
           KUITTI: ${{ inputs.kuitti }}
+          AVAUS: ${{ inputs.avaus }}
         run: |
           set -euo pipefail
           if [ "${{ inputs.toiminto }}" = kohdista ]; then
-            case "$KUITTI" in https://media.matkakirja.app/audio/receipts/horatio/*.completed.json) ;; *)
-              echo "::error::Kuitti ei ole Matkakirjan valmistunut Horatio-tuotantokuitti."
-              exit 1
-            esac
-            node tools/kohdista-luennat.mjs --kuiva --kuitti "$KUITTI"
+            if [ "$AVAUS" = true ]; then
+              node tools/kohdista-luennat.mjs --kuiva --avaus
+            fi
+            if [ -n "$KUITTI" ]; then
+              case "$KUITTI" in https://media.matkakirja.app/audio/receipts/horatio/*.completed.json) ;; *)
+                echo "::error::Kuitti ei ole Matkakirjan valmistunut Horatio-tuotantokuitti."
+                exit 1
+              esac
+              node tools/kohdista-luennat.mjs --kuiva --kuitti "$KUITTI"
+            fi
           else
             node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
           fi
@@ -264,6 +284,7 @@ jobs:
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           KUITTI: ${{ inputs.kuitti }}
+          AVAUS: ${{ inputs.avaus }}
           # Samat nimet ja sama endpoint-tyyli kuin muissakin
           # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -273,7 +294,16 @@ jobs:
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: node tools/kohdista-luennat.mjs --vie --kuitti "$KUITTI"
+        # Avausluennat ja kuitin kaupungit ajetaan erikseen: kaupunkien
+        # kohdistus vaatii kuitin, avausluennat eivät.
+        run: |
+          set -euo pipefail
+          if [ "$AVAUS" = true ]; then
+            node tools/kohdista-luennat.mjs --vie --avaus
+          fi
+          if [ -n "$KUITTI" ]; then
+            node tools/kohdista-luennat.mjs --vie --kuitti "$KUITTI"
+          fi
 
       # Sidonta ei kutsu ElevenLabsia, joten avainta ei anneta — mutta
       # R2-tunnukset ovat samat kuin kohdistuksella: tiedosto viedään
@@ -391,6 +421,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: horatio-aikaleimat-${{ github.run_id }}
-          path: assets/aikaleimat/puhe-fokus-matkakirja-*.aikaleimat.json
+          path: |
+            assets/aikaleimat/puhe-fokus-matkakirja-*.aikaleimat.json
+            assets/aikaleimat/intro-puhe.aikaleimat.json
+            assets/aikaleimat/puhe-lento-alku.aikaleimat.json
           retention-days: 14
           if-no-files-found: error

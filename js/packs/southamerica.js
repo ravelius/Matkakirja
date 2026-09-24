@@ -385,11 +385,11 @@ export const SOUTHAMERICA = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää El Doradon aarre ja palatkaa Panamaan, Buenos Airesiin tai Rioon.',
-    starFound: (name, city) => `◈ ${name} löysi EL DORADON AARTEEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi EL DORADON AARTEEN kaupungista {city}!',
     starToast: 'EL DORADON AARRE!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi El Doradon aarteen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi El Doradon aarteen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi El Doradon aarteen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [

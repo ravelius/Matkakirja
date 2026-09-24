@@ -215,7 +215,7 @@ export function lehtiValmius(id) {
   return osat.every(Boolean) ? 'valmis' : 'lahes';
 }
 
-const KAUPUNGIN_OSAT = [
+export const KAUPUNGIN_OSAT = [
   {
     avain: 'lehti',
     otsikko: 'Lehti',
@@ -368,7 +368,7 @@ const KAUPUNGIN_OSAT = [
  * 4–5 nostoa) — siksi se on omana sarakkeenaan eikä kaupunkirivillä
  * toistettuna.
  */
-const MAAN_OSAT = [
+export const MAAN_OSAT = [
   {
     avain: 'maalehti',
     otsikko: 'Maalehti',

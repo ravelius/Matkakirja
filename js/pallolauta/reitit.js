@@ -109,6 +109,84 @@ export const REITTIHELMEN_KORKEUS = 0.0025;
 export const REITTIHELMEN_REUNAN_KORKEUS = 0.0024;
 export const REITIN_KORKEUS = 0.002;
 export const REITIN_VARJON_KORKEUS = 0.0018;
+
+/*
+ * ══════════════════════════════════════════════════════════════
+ * KIINTEÄ PIIRTOJÄRJESTYS KIRJASTON OLIOILLE (datumin `jarjestys`)
+ * ══════════════════════════════════════════════════════════════
+ *
+ * VIKA (Fable 24.9.2026): vesistölinssin joet piirtyivät pallolla
+ * pätkittäisinä ja läpikuultavina. Mitattu näyttämöstä: jokainen
+ * penger ja uoma oli Line2, jonka materiaali oli OPAAKKI ja KIRJOITTI
+ * SYVYYTTÄ, renderOrder 0 ja korkeus sama (0,002) — kapeampi uoma
+ * taisteli leveämmän pengerensä kanssa samasta syvyydestä pätkä
+ * kerrallaan. Linssin reliefikalvo (linssit.js KALVON_SYVYYSSIIRTO −12)
+ * piirtyi opaakkien JÄLKEEN ja voitti syvyystestin osassa viivaa,
+ * jolloin 72 %:n kuva peitti uoman: läpikuultavuus syntyi siis
+ * kerrosten keskinäisestä järjestyksestä eikä viivan omasta väristä.
+ *
+ * KORJAUS ON NATIIVIN (proto-3d Linssit/Unity/VesistotKerros.cs):
+ * kerroksen viivat ja täytöt ovat läpinäkyvässä jonossa ilman
+ * syvyyskirjoitusta, ja järjestys on kiinteä (järvet, penkereet,
+ * uomat luokittain). Syvyystesti jää päälle, joten pallon takapuoli
+ * leikkautuu kuten ennen. Peittävyys pysyy 1:nä: läpinäkyvä jono on
+ * vain järjestystä varten, viiva on yhä täysin peittävä.
+ *
+ * Kirjasto (Globe.gl 2.46) ei tunne renderOrderia eikä depthWritea, ja
+ * se asettaa `transparent`-lipun värin alfasta joka päivityksessä.
+ * Siksi asetus tehdään JÄLKIKÄTEEN: kun kerros on työnnetty, oliot
+ * haetaan näyttämöltä muutamaan kertaan (kirjaston päivitys on
+ * viivästetty, ks. js/pallolauta/tahdet.js OLIOT LÖYTYVÄT VASTA KUN
+ * KIRJASTO ON KOONNUT NE) ja asetetaan datumin `jarjestys`-luvun
+ * mukaan. Olio, jolla lukua ei ole, palautetaan kirjaston oletuksiin
+ * — kirjasto voi kierrättää saman olion toiselle datumille.
+ */
+export const KERROSTUS_VIIVEET_MS = [0, 30, 120, 400, 1200];
+
+/**
+ * Yksi kirjaston olio (ryhmä lapsineen) kiinteään järjestykseen tai
+ * takaisin oletuksiin. Ei hae mitään näyttämöltä, joten sen voi ajaa
+ * Nodessa pelkillä olioilla.
+ */
+export function asetaPiirtojarjestys(ryhma, jarjestys) {
+  const kiintea = Number.isFinite(jarjestys);
+  if (!kiintea && !ryhma.__piirtojarjestys) return false;
+  const kaikki = [ryhma, ...(ryhma.children ?? [])];
+  for (const o of kaikki) {
+    o.renderOrder = kiintea ? jarjestys : 0;
+    const materiaalit = Array.isArray(o.material) ? o.material : (o.material ? [o.material] : []);
+    for (const m of materiaalit) {
+      const lapinakyva = kiintea ? true : (m.opacity ?? 1) < 1;
+      const syvyys = !kiintea;
+      if (m.transparent !== lapinakyva || m.depthWrite !== syvyys) {
+        m.transparent = lapinakyva;
+        m.depthWrite = syvyys;
+        m.needsUpdate = true;
+      }
+    }
+  }
+  if (kiintea) ryhma.__piirtojarjestys = jarjestys;
+  else delete ryhma.__piirtojarjestys;
+  return true;
+}
+
+/**
+ * Kerroksen `laji` (kirjaston `__globeObjType`, esim. 'path' tai
+ * 'polygon') oliot kiinteään järjestykseen. `jarjestysDatumista(data)`
+ * lukee luvun kirjaston datumista; polygoneilla se on `data.data`,
+ * koska kirjasto käärii linssin datumin omaansa.
+ */
+export function kerrostaPallolla(pallo, laji, jarjestysDatumista, ajastin = globalThis) {
+  const aja = () => {
+    const nayttamo = pallo?.scene?.();
+    if (!nayttamo?.traverse) return;
+    nayttamo.traverse((o) => {
+      if (o.__globeObjType !== laji) return;
+      asetaPiirtojarjestys(o, jarjestysDatumista(o.__data));
+    });
+  };
+  for (const ms of KERROSTUS_VIIVEET_MS) ajastin.setTimeout?.(aja, ms);
+}
 /**
  * KAARI ON PUTKI, EI RUUTUVIIVA. `arcStroke` ei mene Line2:n läpi vaan
  * kirjasto tekee siitä TubeGeometryn, jonka säde on `stroke / 2` pallon
@@ -242,6 +320,8 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
    * linssi ei voi pyyhkiä pelin naapurireittejä pois eikä toisin päin.
    */
   const osat = new Map(); // osan nimi → datumit
+  // Oliko edellisessä kerroksessa kiinteän järjestyksen viivoja (ks. tyonna).
+  let kerrostettu = false;
   let edellinenAvain = null;
   let helmet = [];
   /*
@@ -459,6 +539,14 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
     const lista = [];
     for (const o of osat.values()) lista.push(...o);
     pallo.pathsData(lista);
+    /*
+     * Linssin viivat kiinteään järjestykseen (KIINTEÄ PIIRTOJÄRJESTYS).
+     * Yksi kierros vielä sen jälkeen, kun viimeinen kerrostettu viiva
+     * lähti: kirjaston kierrättämät oliot palaavat oletuksiin.
+     */
+    const kerrostettavia = lista.some((d) => Number.isFinite(d?.jarjestys));
+    if (kerrostettavia || kerrostettu) kerrostaPallolla(pallo, 'path', (d) => d?.jarjestys);
+    kerrostettu = kerrostettavia;
   };
 
   /**

@@ -226,6 +226,37 @@ test('ahtaassa ruudussa riviväli kutistuu ennen kuin lista nousee esteen pääl
   assert.ok(alasMahtuvatRivit({ p, ruutu }) >= 13);
 });
 
+test('pysyKeskella: pehmeä muste ei siirrä keskitettyä liuskaa, kova este siirtää', () => {
+  // Savuke-pariisi-lahizoom 8k (390 px, 24.9.2026): v2029:n uusi ihme
+  // Pariisin lähellä nosti listan 78 px merkin yläpuolelle, koska lippu
+  // oli kutsujassa mutta viuhkanAsemat ei lukenut sitä.
+  const p = { x: 125, y: 387 };
+  const ruutu = { leveys: 374, korkeus: 775 };
+  const leveydet = new Array(15).fill(170);
+  const nappula = {
+    x0: 109, x1: 141, y0: 351, y1: 387, paino: KOVAN_ESTEEN_PAINO,
+  };
+  const muste = { x0: 170, x1: 230, y0: 170, y1: 200 };
+  const perus = {
+    p, ruutu, leveydet, esteet: [nappula, muste], vaakaEhdokkaat: [0, 12], vainOikea: true,
+  };
+  const keskipiste = (t) => {
+    const l = laatikot(p, t);
+    return (Math.min(...l.map((b) => b.y0)) + Math.max(...l.map((b) => b.y1))) / 2;
+  };
+  const vanha = viuhkanAsemat(perus);
+  assert.ok(Math.abs(keskipiste(vanha) - p.y) > 20,
+    'vertailukohta: ilman lippua pehmeä muste siirtää listaa');
+  const uusi = viuhkanAsemat({ ...perus, pysyKeskella: true });
+  assert.equal(uusi.kovaSakko, 0);
+  assert.ok(Math.abs(keskipiste(uusi) - p.y) <= 1, 'lista on merkin korkeudella');
+  assert.ok(laatikot(p, uusi).every((l) => !limittyy(l, nappula)), 'lista väistää nappulan');
+  // Kova este listan keskellä siirtää sitä yhä.
+  const kova = { ...muste, paino: KOVAN_ESTEEN_PAINO };
+  const siirretty = viuhkanAsemat({ ...perus, esteet: [nappula, kova], pysyKeskella: true });
+  assert.ok(laatikot(p, siirretty).every((l) => !limittyy(l, kova)), 'kova este väistetään');
+});
+
 test('alasMahtuvatRivit kertoo ikkunan koon merkin alapuolella', () => {
   const ylhaalla = alasMahtuvatRivit({ p: { x: 195, y: 100 }, ruutu: PUHELIN });
   const alhaalla = alasMahtuvatRivit({ p: { x: 195, y: 700 }, ruutu: PUHELIN });

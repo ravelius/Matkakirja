@@ -1317,6 +1317,21 @@ export async function patinoiSelaimessa({
    * paikasta, karkean tason viivat osuvat tarkan tason viivojen päälle.
    */
   const VV_VAHIN_VALI_PX = 3;
+  /*
+   * HARVENNUS HÄIVYTTÄEN (omistaja 23.9.2026 Fablen kautta, 22c-poltto:
+   * "harvennetut viivat vaimeina eikä pois"). Kova harvennus pudottaa
+   * viivaluokan kerralla, kun sen väli alittaa 3 px — ja koska väli
+   * kaksinkertaistuu joka tasolla, sama viiva on tasolla z+1 täysi ja
+   * tasolla z poissa: tasonvaihdon häivytys näyttää sen syttyvän.
+   * `vesiviivoitus.harvennus = 'haive'`: jokaisen viivan paino tulee
+   * sen OMAN luokan välistä (väli × 2^r, r = indeksin kakkosen potenssi),
+   * ja paino kasvaa pehmeästi VV_HAIVE_ALKU_PX:stä (0) VV_VAHIN_VALI_PX:ään
+   * (1). Täydet viivat ovat täsmälleen samat kuin ennen; vain pudotetut
+   * saavat välipainon. Oletus 'pois' = entinen käytös (reseptin valinta,
+   * `--resepti-json '{"vesiviivoitus":{"harvennus":"haive"}}'`).
+   */
+  const VV_HAIVE_ALKU_PX = 1.5;
+  const vvHaive = resepti.vesiviivoitus?.harvennus === 'haive';
 
   /* ------------------------------------------------- pienennetyt kentät */
   /*
@@ -1932,7 +1947,12 @@ export async function patinoiSelaimessa({
             const askel = valiTassa >= VV_VAHIN_VALI_PX
               ? 1
               : 2 ** Math.ceil(Math.log2(VV_VAHIN_VALI_PX / Math.max(0.01, valiTassa)));
-            if (k >= 0 && k < vv.viivoja && k % askel === 0) {
+            /* Häivytyksessä viiva k painotetaan oman luokkansa välistä. */
+            let luokka = 1;
+            if (vvHaive && k > 0) { let q = k; while (q % 2 === 0 && luokka < 1024) { q /= 2; luokka *= 2; } }
+            const luokanPaino = !vvHaive || k === 0 || k % askel === 0 ? 1
+              : pehmene(VV_HAIVE_ALKU_PX, VV_VAHIN_VALI_PX, valiTassa * luokka);
+            if (k >= 0 && k < vv.viivoja && luokanPaino > 0.01) {
               /* Paikallinen viivaväli kasvaa ulospäin, joten murto-osa
                * muunnetaan pikseleiksi sillä välillä, jolla ollaan —
                * viivan PAKSUUS pysyy samana, vain tiheys harvenee. */
@@ -1961,7 +1981,7 @@ export async function patinoiSelaimessa({
                 const roso = Math.max(0, 1 + vv.roso * 2
                   * (kohinaVesiviiva(maailmaX(x) / vv.rosoSkaala + 900.5,
                     maailmaY(y) / vv.rosoSkaala + 401.5) - 0.5));
-                kerroin -= vv.voima * viiva * haip * roso * meriW;
+                kerroin -= vv.voima * viiva * haip * roso * meriW * luokanPaino;
               }
             }
           }
