@@ -103,6 +103,20 @@ namespace Matkakirja.Linssit.Aikajana
             return true;
         }
 
+        /// <summary>
+        /// Aikaselaimen pisteet (web rakennaAikaselain): kaanonin jaksot järjestyksessä, otsikkona
+        /// jakson kohteen nimi (tai alue tai tunnus) ja vuosia. Nauha on Natiivi-UI:n; veto kutsuu
+        /// Esitys.Esikatsele(osuus), irrotus Esitys.Valitse(id), vuositeksti Esitys.SelaimenVuositeksti.
+        /// </summary>
+        public IReadOnlyList<(string Id, string Otsikko, double Vuosia)> AikaselaimenPisteet()
+        {
+            var nimet = aineisto.Paikat.Concat(aineisto.Lisanostot).Where(p => p.Tunnus != null)
+                .GroupBy(p => p.Tunnus).ToDictionary(g => g.Key, g => g.First().Otsikko);
+            return aineisto.Kertomus.Select(j => (j.Id,
+                (j.Kohde != null && nimet.TryGetValue(j.Kohde, out var n) ? n : null) ?? j.Alue ?? j.Id,
+                j.Vuosia ?? 0)).ToList();
+        }
+
         public void Paivita() => Esitys?.Paivita();
 
         public void Sulje()

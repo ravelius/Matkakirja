@@ -218,6 +218,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(valoja, n.Loki.Count(l => l.mita == "valot"), "valot syttyvät kerran");
         }
 
+        [Testi] static void AikaselaimenKelausKutenWebissa()
+        {
+            var (e, y, n, a2, leimat, kertomus) = Luo();
+            var k = JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "aikaselain.json"))).RootElement;
+            foreach (var r in k.GetProperty("kelaus").EnumerateArray())
+            {
+                double odotettu = r[1].GetDouble(), saatu = Esitys.KelauksenLukema(kertomus, r[0].GetDouble());
+                Oleta.Tosi(Math.Abs(odotettu - saatu) <= 1e-9 * Math.Max(1, odotettu), $"osuus {r[0]}: {odotettu} vs {saatu}");
+            }
+            Oleta.Sama("50 000 v. sitten", Esitys.SelaimenVuositeksti(50000));
+            Oleta.Sama("300 000 v. sitten", Esitys.SelaimenVuositeksti(299999.6));
+            Oleta.Tosi(Esitys.SelaimenVuositeksti(150).EndsWith("jaa."), "loppupää kalenterivuosina");
+        }
+
+        [Testi] static void AikaselaimenVetoJaIrrotus()
+        {
+            var (e, y, n, a2, leimat, kertomus) = Luo();
+            e.Aloita();
+            Aja(e, y, 1);
+            Oleta.Tosi(e.Kaynnissa);
+            e.Esikatsele(0.5);
+            Oleta.Tosi(!e.Kaynnissa && e.Selataan, "veto pysäyttää hiljaa");
+            Oleta.Tosi(n.Loki.Any(l => l.mita == "pito False"), "pito pois vedon ajaksi");
+            Oleta.Sama(Esitys.KelauksenLukema(kertomus, 0.5), e.Vuosia);
+            e.Valitse("levantti");
+            Oleta.Tosi(e.Kaynnissa && !e.Selataan, "irrotus jatkaa, koska ajo oli käynnissä");
+            Oleta.Sama("levantti", kertomus[e.I].Id);
+            // Tauolla veto + irrotus: jakso vaihtuu, esitys jää tauolle.
+            e.Tauko();
+            e.Esikatsele(0.8);
+            e.Valitse(kertomus[15].Id);
+            Oleta.Tosi(!e.Kaynnissa, "tauolla pysyy tauolla");
+            Oleta.Sama(15, e.I);
+        }
+
         [Testi] static void EpaonnistunutKelausEiJumita()
         {
             // iPad: hyppy jaksoon, mutta ääni alkaa nollasta (kelaus ei tartu kahdesti).

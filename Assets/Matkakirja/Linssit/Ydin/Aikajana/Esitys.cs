@@ -211,9 +211,67 @@ namespace Matkakirja.Linssit.Aikajana
         {
             int i = -1;
             for (int k = 0; k < kertomus.Count; k++) if (kertomus[k].Id == id) { i = k; break; }
-            if (i < 0 || Paattynyt) return;
+            if (i < 0) return;
+            // Aikaselaimen irrotus (web valitse): selaus päättyy, pito alkaa valitusta hetkestä.
+            bool? oliTauolla = selaus;
+            selaus = null;
+            nakyma.VirtojenPito(true);
+            if (Paattynyt)
+            {
+                // Esityksen jälkeen valinta on pelkkä kelaus: kello ja vanat hetkeen, kertoja vaiti.
+                I = i;
+                KirjoitaKello(kertomus[i].Vuosia ?? Vuosia);
+                return;
+            }
             Kaynnissa = true;
             AloitaJakso(i, 0, hyppy: true);
+            // Pelaaja oli itse tauolla ennen vetoa: jakso vaihtuu, mutta esitys ei lähde.
+            if (oliTauolla == true) Tauko();
+        }
+
+        /// <summary>Aikaselaimen veto alkoi (null = ei selausta): oliko esitys tauolla ennen vetoa.</summary>
+        bool? selaus;
+        public bool Selataan => selaus != null;
+
+        /// <summary>
+        /// AIKASELAIMEN VETO (web esikatsele): esitys menee hiljaa tauolle, pito katkeaa vedon ajaksi,
+        /// ja kello sekä vanat seuraavat sormea (osuus 0…1 nauhalla, geometrinen välilukema).
+        /// </summary>
+        public bool Esikatsele(double osuus)
+        {
+            if (selaus == null)
+            {
+                selaus = !Kaynnissa;
+                if (Kaynnissa) Tauko();
+                nakyma.VirtojenPito(false);
+            }
+            KirjoitaKello(KelauksenLukema(kertomus, osuus));
+            return true;
+        }
+
+        /// <summary>Web kelauksenLukema: nauhan jatkuva osuus → vuosia sitten (geometrinen jaksojen välillä).</summary>
+        public static double KelauksenLukema(IReadOnlyList<KertomusJakso> kertomus, double osuus)
+        {
+            int n = kertomus?.Count ?? 0;
+            if (n == 0) return 0;
+            double t = Math.Max(0, Math.Min(1, double.IsNaN(osuus) ? 0 : osuus)) * (n - 1);
+            int i = Math.Min(n - 2, (int)Math.Floor(t));
+            if (i < 0) return kertomus[0].Vuosia ?? 0;
+            double f = Math.Max(0, Math.Min(1, t - i));
+            if (!(kertomus[i].Vuosia is double a) || !double.IsFinite(a)) return 0;
+            if (!(kertomus[i + 1].Vuosia is double b) || !double.IsFinite(b)) return a;
+            if (!(a > 0) || !(b > 0)) return a + (b - a) * f;
+            return a * Math.Pow(b / a, f);
+        }
+
+        /// <summary>Web selaimenVuositeksti: sama muoto kuin kellossa ("50 000 v. sitten", "n. 1250 jaa.").</summary>
+        public static string SelaimenVuositeksti(double vuosia, string yksikko = "v. sitten")
+        {
+            double arvo = Math.Max(0, double.IsNaN(vuosia) ? 0 : vuosia);
+            var teksti = Asteikko.KellonVuositeksti(arvo);
+            if (teksti != null) return teksti;
+            string luku = Math.Floor(arvo + 0.5).ToString("#,0", new System.Globalization.NumberFormatInfo { NumberGroupSeparator = " ", NumberGroupSizes = new[] { 3 } });
+            return string.IsNullOrEmpty(yksikko) ? luku : luku + " " + yksikko;
         }
 
         /// <summary>Kutsutaan joka kehys (web kehys).</summary>
