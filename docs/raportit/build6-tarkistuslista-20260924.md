@@ -598,7 +598,19 @@ lyhyt kuvasarja (2–3 kuvaa ~0,5 s välein) kaiuttimen ikonista luennan
 aikana nähdäksesi sen reagoivan (koon/sykkeen vaihtelu) — verrattuna
 tasaiseen/ajastettuun animaatioon.
 
-**Odotettu tulos**: [TÄYTETÄÄN WEB-TUTKIMUKSEN JÄLKEEN — ks. alla]
+**Odotettu tulos webin mukaan** (`js/ui-apurit.js:65-79`
+`tekstitPiilossa()`/`luennanTekstipiilo()`, `js/ui.js:11699-11744`
+`kaynnistaLuentavahti()`): tekstit piilossa kun näyttö on puhelinkokoinen
+TAI isoisä puhuu juuri nyt (`body.luenta-tekstit-piiloon`). Matkakirjakortti
+kutistuu yhden rivin `.pieni`-tilaan (`asetaPaivakirjanKoko`,
+`aria-expanded="false"`, `aria-label="Avaa matkapäiväkirjan merkintä"`),
+tapin kohde koko kortti. Pulun uusi puhekupla imeytyy pieneksi
+"+"-merkiksi (`imePuhelimenKuplaan`), avautuu "Näytä puhekuplat"
+-napista. Kaiutin: `js/kaiutinmittari.js` lukee OIKEAN AnalyserNoden
+(`getByteTimeDomainData`, RMS), attack 18 ms / release 120 ms, kolme
+kynnystä (0,04/0,10/0,20) sytyttää 0–3 kaarta ikonissa — EI ajastettu
+kuvio (varakuvio käytössä VAIN jos AudioContext puuttuu kokonaan, mikä
+ei koske natiivia).
 
 **PASS-ehto**: teksti piilossa oletuksena, näkyy vasta napautuksesta;
 kaiutin selvästi eri kokoinen/muotoinen eri hetkinä äänekkyyden mukaan
@@ -626,7 +638,30 @@ zoomaa ≥50 % ruudusta), `kuva varitaso-b7`. Zoomaa myös ulos niin että
 naapurimaat (Albania/Makedonia/Bulgaria/Turkki) ja meri näkyvät samassa
 kuvassa.
 
-**Odotettu tulos**: [TÄYTETÄÄN WEB-TUTKIMUKSEN JÄLKEEN — ks. alla]
+**Odotettu tulos webin mukaan** (`js/maatummennus.js`, tarkistettu
+2.9.2026 poistetuksi täytöltä): "huntu" webissä on VAIN VIIVA, EI
+TÄYTTÖÄ — pelkkä nykyisen maan ääriviiva (`fill:none`,
+`css/styles.css:1830`), väri `#6b5539` (`--raja-muste`, sama kuin
+tavallinen ääriviiva mutta paksumpi/tasaisempi). Koska täyttöä ei ole
+lainkaan, meri ja naapurimaat eivät voi jäädä minkään hunnun alle — ne
+näkyvät AINA pohjakartan omalla sepia-/merivärillä, ei erillisen
+himmennyksen kautta. Naapurimaat: pohjakartta on OLETUKSENA sepia
+KAIKKIALLA, vain nykyinen maa vaihtuu väritettyyn versioon
+(`varitasonKansio`) — naapurit näkyvät siis AINA vaaleana sepiana
+nimineen (nimiotaso on erillinen, aina päällä oleva kerros), ei mitään
+erillistä "paljasta naapurimaat" -toimintoa tarvita. Meren väri ei ole
+kiinteä hex, vaan poltettu per-laatta (`umpimeriSavy`,
+tools/generoi-laattapyramidi.mjs); 3D-pallon reliefilinssillä kiinteä
+`MERIVARI = 'rgb(38, 78, 145)'`. Rajageometria: Natural Earth 10m
+admin-0-maat (public domain), Douglas-Peucker-yksinkertaistettu
+(mediaani 0,02, maksimi 0,20 laudan yksikköä ≈ alle 0,5 px syvimmässä
+zoomissa) — EI karkea polygoni. **Johtopäätös natiivin korjaukseen**:
+oikea ratkaisu ei ole "mieto taso muille maille" (kuten alkuperäinen
+juurisyyarvio olettaa) vaan HUNNUN TÄYTÖN POISTO KOKONAAN nykyisen maan
+ulkopuolelta — pelkkä ohut ääriviiva riittää, ja meri/naapurit näkyvät
+automaattisesti oikein kun väritasolaatan alue rajataan täsmälleen maan
+alueeseen (alpha 0 sen ulkopuolella, ei erillistä hunnun tarvitse
+kattaa mitään).
 
 **PASS-ehto**: (a) meri harmaansininen, rantaviivoitus näkyy, EI huntua
 sen päällä; (b) Kreikan raja yhtä tarkka/yksityiskohtainen kuin webin
