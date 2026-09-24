@@ -110,6 +110,10 @@ namespace Matkakirja.Natiivi
         string TodellinenMaa()
         {
             var o = PeliOhjain.Instanssi;
+            // Aloitus (portti, Lontoo-zoomi, valinta) ja aloituslento: pelaaja on pelissä jo kohdekaupungissa tai
+            // taustalla on vanha matka, mutta kamera on Lontoossa — kartuscha ei kuulu kuvaan (KREIKKA Lontoossa,
+            // Laitetestaaja 24.9. B7).
+            if (Aloitusnakyma.AloitusAuki || (o != null && o.AloituslentoKaynnissa)) return null;
             if (sallittu && o != null && o.Kaytossa && o.Matka != null
                 && (o.Tila == SilmukanTila.Kartta || o.Tila == SilmukanTila.Dialogi || o.Tila == SilmukanTila.Matkalla))
             {
