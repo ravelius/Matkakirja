@@ -1688,11 +1688,11 @@ export const OMAT_ARTIKKELIT = {
   },
   'Kimberley (Etelä-Afrikka)': {
     intro: 'Kimberley on timanttikuumeen synnyttämä kaupunki, jonka '
-      + 'keskellä ammottaa Big Hole — suurin ihmisten käsin kaivama '
-      + 'kuoppa maailmassa.',
+      + 'keskellä ammottaa Big Hole — yksi maailman suurimmista '
+      + 'ihmisten käsin kaivamista kuopista.',
     artikkeli: 'Kimberley syntyi vuonna 1871, kun Colesbergin '
-      + 'kukkulalta löytyi timantteja. Kuukausissa paikalle ryntäsi '
-      + 'kymmeniätuhansia kaivajia, ja kukkula katosi — sen tilalle '
+      + 'kukkulalta löytyi timantteja. Ensimmäisessä kuussa paikalle '
+      + 'ryntäsi tuhansia kaivajia, ja kukkula katosi — sen tilalle '
       + 'syntyi Big Hole, yli kahdensadan metrin syvyinen kuoppa, '
       + 'josta nostettiin lähes kolme tonnia timantteja.'
       + '\n\n== Timanttien kaupunki ==\n'
@@ -1879,25 +1879,22 @@ export const OMAT_ARTIKKELIT = {
   },
   Suakin: {
     intro: 'Suakin oli Punaisenmeren korallikaupunki: pyhiinvaeltajien '
-      + 'satama, jonka talot sahattiin korallikivestä ja jonka '
+      + 'satama, jonka talot nousivat korallikivestä ja jonka '
       + 'rauniot kertovat mahtavista vuosisadoista.',
     artikkeli: 'Suakin rakennettiin pyöreälle saarelle Punaisenmeren '
       + 'poukamaan. Vuosisatojen ajan se oli Sudanin rannikon '
       + 'tärkein satama: sen kautta purjehtivat pyhiinvaeltajat '
-      + 'Mekkaan ja kauppiaat Intiaan, ja basaarissa vaihtuivat '
-      + 'kahvi, helmet ja kankaat.'
+      + 'Mekkaan ja kauppiaat Intiaan.'
       + '\n\n== Korallista rakennettu ==\n'
-      + 'Suakinin talot ja moskeijat sahattiin korallikivestä, joka '
-      + 'hengitti ja viilensi huoneet. Kun uusi satama rakennettiin '
-      + 'pohjoisemmaksi 1900-luvun alussa, kaupunki hiljeni — ja '
-      + 'korallitalot alkoivat sulaa sateisiin kuin sokeri. Rauniot '
-      + 'ovat silti yhä täynnä kauneutta, ja niitä myös '
-      + 'entisöidään.'
+      + 'Suakinin talot ja moskeijat nousivat korallikivestä, joka '
+      + 'nostettiin lohkareina merenpohjasta. Kun uusi satama '
+      + 'rakennettiin pohjoisemmaksi 1900-luvun alussa, kaupunki '
+      + 'hiljeni — ja hoitamattomat rappaamattomat rakennukset '
+      + 'alkoivat rapautua nopeasti. Rauniot ovat silti yhä täynnä '
+      + 'kauneutta, ja niitä myös entisöidään.'
       + '\n\n== Meren aarteet ==\n'
       + 'Suakinin edustan riutat kuuluvat Punaisenmeren '
-      + 'kirkkaimpiin: korallipuutarhoja, kilpikonnia ja delfiinejä. '
-      + 'Helmenkalastajat sukelsivat täällä vapaasukelluksella, ja '
-      + 'heidän laulunsa tahdittivat työtä kuin airot soutua.',
+      + 'kirkkaimpiin: korallipuutarhoja, kilpikonnia ja delfiinejä.',
   },
   'Ras Hafun': {
     intro: 'Ras Hafun on Afrikan itäisin kärki — niemi, jonka ohi '

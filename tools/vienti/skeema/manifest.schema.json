@@ -26,6 +26,7 @@
       "items": { "type": "object", "required": ["nimi", "tiedosto", "sha256", "tavuja"] }
     },
     "offline": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"], "description": "offline.json: maittain ladattavat laatat, maasto ja media (skeema 1.9)" },
+    "lisenssit": { "type": "object", "required": ["tiedosto", "sha256", "tavuja"], "description": "lisenssit.json: aineistojen lisenssit ja attribuutiot (tools/vienti/lisenssit.mjs)" },
     "logiikka": {
       "type": "array",
       "description": "Jokainen paketin funktio ({ $funktio } raakakerroksessa) luokiteltuna: mistä natiivi saa sen tuloksen (skeema 1.5, tools/vienti/logiikka.mjs). Lähdetekstiä ei ajeta.",

@@ -1,215 +1,173 @@
 {
   "versio": 2,
   "kaupunki": "dublin",
-  "teksti": "Guinnessin panimon vuokrasopimus on tehty yhdeksäksituhanneksi vuodeksi. Sellaisen allekirjoittamiseen tarvitaan uskoa joko olueen tai janoon. Portilla tuoksui lämmin mallas, ja kärryille vieritettiin tynnyreitä. Mies pyyhki otsaansa hihalla. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.",
-  "tekstiSha256": "32ba6eb6eba2f4991e307226a2957c4ea3c8defbe1e3e1649af4e241d88d0d1f",
+  "teksti": "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
+  "tekstiSha256": "51ed9ff6ea1bd5d34e0f664578646b96fcdba0a99df6a4fb3144d11cc79d32fe",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-dublin.mp3",
     "versio": 2,
-    "tavut": 496579,
-    "sha256": "e290a37e5b8e5361e60207349d0d7c0a4c5c0789676eb11f3209682077d6e369"
+    "tavut": 364504,
+    "sha256": "255d6db3314cb5635683ada2eadaa43c10ee42d55542d428456790e0bf01be71"
   },
-  "kesto": 30920,
+  "kesto": 22700,
   "sanat": [
     {
       "sana": "Guinnessin",
-      "alku": 159,
-      "loppu": 759
+      "alku": 100,
+      "loppu": 620
     },
     {
       "sana": "panimon",
-      "alku": 779,
-      "loppu": 1220
+      "alku": 660,
+      "loppu": 1080
     },
     {
       "sana": "vuokrasopimus",
-      "alku": 1319,
-      "loppu": 2259
+      "alku": 1140,
+      "loppu": 2180
     },
     {
-      "sana": "on",
-      "alku": 2539,
-      "loppu": 2659
+      "sana": "oli",
+      "alku": 2280,
+      "loppu": 2440
     },
     {
       "sana": "tehty",
-      "alku": 2720,
-      "loppu": 3159
+      "alku": 2480,
+      "loppu": 2800
     },
     {
       "sana": "yhdeksäksituhanneksi",
-      "alku": 3240,
-      "loppu": 4299
+      "alku": 2900,
+      "loppu": 4080
     },
     {
       "sana": "vuodeksi",
-      "alku": 4420,
-      "loppu": 5000
+      "alku": 4120,
+      "loppu": 4680
     },
     {
-      "sana": "Sellaisen",
-      "alku": 6619,
-      "loppu": 7039
+      "sana": "Sellainen",
+      "alku": 6160,
+      "loppu": 6600
     },
     {
-      "sana": "allekirjoittamiseen",
-      "alku": 7139,
-      "loppu": 8199
-    },
-    {
-      "sana": "tarvitaan",
-      "alku": 8239,
-      "loppu": 8739
+      "sana": "vaatii",
+      "alku": 6660,
+      "loppu": 7020
     },
     {
       "sana": "uskoa",
-      "alku": 8819,
-      "loppu": 9219
-    },
-    {
-      "sana": "joko",
-      "alku": 9300,
-      "loppu": 9519
+      "alku": 7140,
+      "loppu": 7520
     },
     {
       "sana": "olueen",
-      "alku": 9659,
-      "loppu": 10099
+      "alku": 7600,
+      "loppu": 8060
     },
     {
       "sana": "tai",
-      "alku": 10539,
-      "loppu": 10659
+      "alku": 8640,
+      "loppu": 8900
     },
     {
       "sana": "janoon",
-      "alku": 10739,
-      "loppu": 11179
+      "alku": 8960,
+      "loppu": 9520
     },
     {
       "sana": "Portilla",
-      "alku": 13179,
-      "loppu": 13599
+      "alku": 11440,
+      "loppu": 11920
     },
     {
-      "sana": "tuoksui",
-      "alku": 13659,
-      "loppu": 14099
+      "sana": "mies",
+      "alku": 12020,
+      "loppu": 12300
     },
     {
-      "sana": "lämmin",
-      "alku": 14159,
-      "loppu": 14480
-    },
-    {
-      "sana": "mallas",
-      "alku": 14579,
-      "loppu": 15059
-    },
-    {
-      "sana": "ja",
-      "alku": 15319,
-      "loppu": 15420
-    },
-    {
-      "sana": "kärryille",
-      "alku": 15479,
-      "loppu": 15960
-    },
-    {
-      "sana": "vieritettiin",
-      "alku": 16020,
-      "loppu": 16680
+      "sana": "vieritti",
+      "alku": 12340,
+      "loppu": 12780
     },
     {
       "sana": "tynnyreitä",
-      "alku": 16739,
-      "loppu": 17379
+      "alku": 12840,
+      "loppu": 13360
     },
     {
-      "sana": "Mies",
-      "alku": 18920,
-      "loppu": 19139
-    },
-    {
-      "sana": "pyyhki",
-      "alku": 19199,
-      "loppu": 19539
-    },
-    {
-      "sana": "otsaansa",
-      "alku": 19619,
-      "loppu": 20100
-    },
-    {
-      "sana": "hihalla",
-      "alku": 20159,
-      "loppu": 20619
+      "sana": "kärryille",
+      "alku": 13420,
+      "loppu": 14060
     },
     {
       "sana": "Kysyin",
-      "alku": 21939,
-      "loppu": 22360
+      "alku": 15300,
+      "loppu": 15740
     },
     {
       "sana": "loppuuko",
-      "alku": 22579,
-      "loppu": 23079
+      "alku": 16120,
+      "loppu": 16660
     },
     {
       "sana": "työ",
-      "alku": 23180,
-      "loppu": 23379
+      "alku": 16700,
+      "loppu": 16900
     },
     {
       "sana": "koskaan",
-      "alku": 23439,
-      "loppu": 24039
+      "alku": 16960,
+      "loppu": 17540
     },
     {
       "sana": "Hän",
-      "alku": 25519,
-      "loppu": 25619
+      "alku": 19360,
+      "loppu": 19500
     },
     {
       "sana": "katsoi",
-      "alku": 25680,
-      "loppu": 26000
+      "alku": 19540,
+      "loppu": 19880
     },
     {
       "sana": "minua",
-      "alku": 26039,
-      "loppu": 26279
+      "alku": 19920,
+      "loppu": 20180
     },
     {
       "sana": "pitkään",
-      "alku": 26340,
-      "loppu": 26859
+      "alku": 20240,
+      "loppu": 20720
     },
     {
-      "sana": "Olin",
-      "alku": 28819,
-      "loppu": 29079
+      "sana": "ja",
+      "alku": 21120,
+      "loppu": 21200
     },
     {
-      "sana": "unohtanut",
-      "alku": 29119,
-      "loppu": 29739
+      "sana": "vieritti",
+      "alku": 21240,
+      "loppu": 21700
     },
     {
-      "sana": "vuokrasopimuksen",
-      "alku": 29859,
-      "loppu": 30920
+      "sana": "seuraavan",
+      "alku": 21760,
+      "loppu": 22300
+    },
+    {
+      "sana": "tynnyrin",
+      "alku": 22340,
+      "loppu": 22700
     }
   ],
   "lauseet": [
-    159,
-    6619,
-    13179,
-    18920,
-    21939,
-    25519,
-    28819
+    100,
+    6160,
+    11440,
+    15300,
+    19360
   ],
-  "luotu": "2026-09-11T12:04:37.092Z"
+  "luotu": "2026-09-23T15:37:23.171Z"
 }

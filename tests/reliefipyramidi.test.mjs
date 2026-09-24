@@ -341,3 +341,64 @@ test('jarviMaski täyttää järven renkaan vain nollan yläpuolella', async () 
   assert.ok(vedella[i + 2] > vedella[i], 'järven sävyn pitää olla sinertävä');
   assert.ok(JARVEN_SYVYYS < 0, 'järven sävy otetaan meriasteikolta');
 });
+
+/*
+ * PÄIVÄMÄÄRÄRAJAN ALUE (Karttaseppä 24.9.2026). Versio 20260920
+ * poltettiin alueella −180…180, ja arkin itäisimmät z7-sarakkeet
+ * 167–168 (lautaLon 181,27…185 eli −178,7…−175) jäivät hakematta:
+ * alinäytteistys maalasi niiden kohdan MERIVARI-täytteellä jokaisella
+ * tasolla. Alue kiertää nyt ±360°.
+ */
+test('laatatAlueelle: −180…180 kattaa koko arkin myös päivämäärärajan takaa', async () => {
+  const { laatatAlueelle, tasonMitat } = await import('../tools/tee-reliefipyramidi.mjs');
+  const mitat = tasonMitat(7);
+  const koko = laatatAlueelle(mitat, [-180, -65.4, 180, 84]);
+  const sarakkeet = new Set(koko.map((l) => l.sarake));
+  assert.equal(sarakkeet.size, mitat.sarakkeita, 'jokin arkin sarake jäi alueen ulkopuolelle');
+  assert.ok(sarakkeet.has(167) && sarakkeet.has(168), 'itäisimmät sarakkeet puuttuvat');
+  assert.equal(koko.length, mitat.sarakkeita * 90, 'rivit 6–95 kaikilla sarakkeilla');
+
+  // Kierretty alue osuu samoihin laattoihin kuin arkin omat koordinaatit.
+  const avaimet = (lista) => lista.map((l) => `${l.sarake}/${l.rivi}`).sort().join(',');
+  assert.equal(
+    avaimet(laatatAlueelle(mitat, [-178, 51, -177, 52])),
+    avaimet(laatatAlueelle(mitat, [182, 51, 183, 52])),
+  );
+  // Tavallinen alue ei muutu: Eurooppa ei saa laattoja maailman toiselta puolelta.
+  const eurooppa = laatatAlueelle(mitat, [5, 40, 15, 48]);
+  assert.ok(eurooppa.every((l) => l.sarake >= 84 && l.sarake <= 89), 'Euroopan alue levisi');
+});
+
+/*
+ * OPeNDAP-VARAREITTI (24.9.2026: NCSS vastasi `No space left on
+ * device`). DAP2-binääri luetaan itse, ja pyynnön indeksit valitaan
+ * solukeskipisteistä niin, ettei 15°:n rajalle jää rakoa.
+ */
+test('lueDods lukee DAP2-gridin ja dodsIndeksit ei jätä rajalle rakoa', async () => {
+  const { lueDods, dodsIndeksit, RUUTU_15S } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  const pituus = (n) => { const b = Buffer.alloc(8); b.writeUInt32BE(n, 0); b.writeUInt32BE(n, 4); return b; };
+  const f32 = (arvot) => { const b = Buffer.alloc(arvot.length * 4); arvot.forEach((v, i) => b.writeFloatBE(v, i * 4)); return b; };
+  const f64 = (arvot) => { const b = Buffer.alloc(arvot.length * 8); arvot.forEach((v, i) => b.writeDoubleBE(v, i * 8)); return b; };
+  const buf = Buffer.concat([
+    Buffer.from('Dataset {\n  Grid { ... } z;\n} koe;\n\nData:\n', 'latin1'),
+    pituus(6), f32([1, 2, 3, 4, 5, 6]),
+    pituus(2), f64([51.95, 51.96]),
+    pituus(3), f64([-179.99, -179.98, -179.97]),
+  ]);
+  const { z, lat, lon } = lueDods(buf);
+  assert.deepEqual([...z], [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual([...lat], [51.95, 51.96]);
+  assert.equal(lon.length, 3);
+  assert.throws(() => lueDods(Buffer.from('Error { message = "x"; };')), /OPeNDAP/);
+
+  // Pala, jonka itäreuna on vedetty puoli solua sisään 15°:n rajalta
+  // (haeIkkuna `rajat`), päättyy lähdelaatan viimeiseen soluun, ja
+  // seuraava pala alkaa seuraavan laatan ensimmäisestä.
+  const [, loppu] = dodsIndeksit(10, 15 - 0.5 * RUUTU_15S, 0);
+  const [alku] = dodsIndeksit(15, 17, 15);
+  assert.equal(loppu, 3599);
+  assert.equal(alku, 0);
+  // Keskipisteet välillä: 0,5 solun sisään osuva väli antaa sen solun.
+  assert.deepEqual(dodsIndeksit(-180 + 240 * RUUTU_15S, -180 + 243.9 * RUUTU_15S, -180), [240, 243]);
+});

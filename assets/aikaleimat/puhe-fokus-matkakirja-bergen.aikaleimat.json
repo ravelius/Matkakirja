@@ -1,223 +1,178 @@
 {
   "versio": 2,
   "kaupunki": "bergen",
-  "teksti": "Bergenin Bryggenissä puutalot seisovat kylki kyljessä, ja niiden välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa kuin hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. Kaupungin arvojärjestys selvisi minulle ilman tulkkia.",
-  "tekstiSha256": "9d9e8edae09f052a496d10d3c9d31d5afca38c1b5073e6a446be17b68c5ff85c",
+  "teksti": "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
+  "tekstiSha256": "5540447ea82fb1beca5cacfe9737e931b29bc084005696a9defd68ace2a3f90a",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-bergen.mp3",
     "versio": 2,
-    "tavut": 441408,
-    "sha256": "1696d30149a365857878360bd592147644275f8c5307b08b7a3f06d29097846f"
+    "tavut": 374953,
+    "sha256": "a36b2714d94255762a2d76dee64f9afd2873d2fcff96e059127fc53750826d11"
   },
-  "kesto": 27479,
+  "kesto": 23340,
   "sanat": [
     {
       "sana": "Bergenin",
-      "alku": 199,
+      "alku": 240,
       "loppu": 680
     },
     {
-      "sana": "Bryggenissä",
-      "alku": 719,
+      "sana": "tuomiokirkon",
+      "alku": 740,
       "loppu": 1480
     },
     {
-      "sana": "puutalot",
-      "alku": 1719,
-      "loppu": 2159
+      "sana": "seinässä",
+      "alku": 1560,
+      "loppu": 2060
     },
     {
-      "sana": "seisovat",
-      "alku": 2200,
-      "loppu": 2700
+      "sana": "törrötti",
+      "alku": 2100,
+      "loppu": 2580
     },
     {
-      "sana": "kylki",
-      "alku": 2740,
-      "loppu": 3079
+      "sana": "tykinkuula",
+      "alku": 2660,
+      "loppu": 3640
     },
     {
-      "sana": "kyljessä",
-      "alku": 3139,
-      "loppu": 3720
+      "sana": "Englannin",
+      "alku": 5140,
+      "loppu": 5500
     },
     {
-      "sana": "ja",
-      "alku": 4259,
-      "loppu": 4319
+      "sana": "laivasto",
+      "alku": 5560,
+      "loppu": 6000
     },
     {
-      "sana": "niiden",
-      "alku": 4380,
-      "loppu": 4639
+      "sana": "oli",
+      "alku": 6060,
+      "loppu": 6140
     },
     {
-      "sana": "välissä",
-      "alku": 4699,
-      "loppu": 5059
+      "sana": "yrittänyt",
+      "alku": 6220,
+      "loppu": 6700
     },
     {
-      "sana": "tuoksuu",
-      "alku": 5119,
-      "loppu": 5539
+      "sana": "ryöstää",
+      "alku": 6780,
+      "loppu": 7260
     },
     {
-      "sana": "kapakala",
-      "alku": 5619,
-      "loppu": 6259
+      "sana": "sataman",
+      "alku": 7360,
+      "loppu": 7780
     },
     {
-      "sana": "Kauppias",
-      "alku": 8079,
-      "loppu": 8519
+      "sana": "hollantilaislaivat",
+      "alku": 7840,
+      "loppu": 9060
     },
     {
-      "sana": "näytti",
-      "alku": 8559,
-      "loppu": 8880
+      "sana": "parisataa",
+      "alku": 9120,
+      "loppu": 9680
     },
     {
-      "sana": "kuivattua",
-      "alku": 8960,
-      "loppu": 9479
+      "sana": "vuotta",
+      "alku": 9720,
+      "loppu": 10040
     },
     {
-      "sana": "turskaa",
-      "alku": 9579,
-      "loppu": 10099
+      "sana": "sitten",
+      "alku": 10100,
+      "loppu": 10620
     },
     {
-      "sana": "kuin",
-      "alku": 10199,
-      "loppu": 10460
+      "sana": "Mainitsin",
+      "alku": 12360,
+      "loppu": 12820
     },
     {
-      "sana": "hopeaharkkoa",
-      "alku": 10500,
-      "loppu": 11519
+      "sana": "oppaalle",
+      "alku": 12900,
+      "loppu": 13400
     },
     {
-      "sana": "Sillä",
-      "alku": 13159,
-      "loppu": 13380
+      "sana": "palvelleeni",
+      "alku": 13460,
+      "loppu": 14020
     },
     {
-      "sana": "on",
-      "alku": 13420,
-      "loppu": 13479
+      "sana": "laivastossa",
+      "alku": 14060,
+      "loppu": 14900
     },
     {
-      "sana": "täällä",
-      "alku": 13539,
-      "loppu": 13779
+      "sana": "Hän",
+      "alku": 16420,
+      "loppu": 16560
     },
     {
-      "sana": "maksettu",
-      "alku": 13840,
-      "loppu": 14359
+      "sana": "katsoi",
+      "alku": 16600,
+      "loppu": 16980
     },
     {
-      "sana": "paljon",
-      "alku": 14399,
-      "loppu": 14659
+      "sana": "minua",
+      "alku": 17040,
+      "loppu": 17340
     },
     {
-      "sana": "muutakin",
-      "alku": 14759,
-      "loppu": 15219
+      "sana": "sitten",
+      "alku": 18120,
+      "loppu": 18440
     },
     {
-      "sana": "kuin",
-      "alku": 15319,
-      "loppu": 15479
+      "sana": "kuulaa",
+      "alku": 18500,
+      "loppu": 18960
     },
     {
-      "sana": "päivällinen",
-      "alku": 15599,
-      "loppu": 16260
+      "sana": "Vakuutin",
+      "alku": 20860,
+      "loppu": 21320
     },
     {
-      "sana": "Sade",
-      "alku": 18020,
-      "loppu": 18219
+      "sana": "että",
+      "alku": 21380,
+      "loppu": 21540
     },
     {
-      "sana": "rummutti",
-      "alku": 18359,
-      "loppu": 18779
+      "sana": "minulla",
+      "alku": 21580,
+      "loppu": 21860
     },
     {
-      "sana": "kattoa",
-      "alku": 18840,
-      "loppu": 19359
+      "sana": "oli",
+      "alku": 21900,
+      "loppu": 22040
     },
     {
-      "sana": "kala",
-      "alku": 20039,
-      "loppu": 20259
+      "sana": "mukana",
+      "alku": 22080,
+      "loppu": 22420
     },
     {
-      "sana": "pysyi",
-      "alku": 20299,
-      "loppu": 20620
+      "sana": "vain",
+      "alku": 22480,
+      "loppu": 22700
     },
     {
-      "sana": "kuivana",
-      "alku": 20719,
-      "loppu": 21180
-    },
-    {
-      "sana": "ja",
-      "alku": 21859,
-      "loppu": 21919
-    },
-    {
-      "sana": "minä",
-      "alku": 22000,
-      "loppu": 22219
-    },
-    {
-      "sana": "en",
-      "alku": 22299,
-      "loppu": 22519
-    },
-    {
-      "sana": "Kaupungin",
-      "alku": 24459,
-      "loppu": 24899
-    },
-    {
-      "sana": "arvojärjestys",
-      "alku": 24979,
-      "loppu": 25739
-    },
-    {
-      "sana": "selvisi",
-      "alku": 25799,
-      "loppu": 26219
-    },
-    {
-      "sana": "minulle",
-      "alku": 26260,
-      "loppu": 26599
-    },
-    {
-      "sana": "ilman",
-      "alku": 26659,
-      "loppu": 26899
-    },
-    {
-      "sana": "tulkkia",
-      "alku": 27000,
-      "loppu": 27479
+      "sana": "lyijykynä",
+      "alku": 22760,
+      "loppu": 23340
     }
   ],
   "lauseet": [
-    199,
-    8079,
-    13159,
-    18020,
-    24459
+    240,
+    5140,
+    12360,
+    16420,
+    20860
   ],
-  "luotu": "2026-09-11T12:04:33.354Z"
+  "luotu": "2026-09-23T15:39:34.048Z"
 }

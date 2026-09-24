@@ -1,224 +1,172 @@
 {
   "versio": 2,
   "kaupunki": "kreeta",
-  "teksti": "Hanian sataman majakan aloittivat venetsialaiset ja korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun kysyin, kenen majakka siis on, hän osoitti merelle. Niiden, jotka tarvitsevat sitä. Piirsin karttaani valon ilman valtakunnan väriä.",
-  "tekstiSha256": "c5cd21f81a6ef2ec6dc102b8792b0c454469ba322d8892b375b4b034b75b7865",
+  "teksti": "Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.",
+  "tekstiSha256": "6bf9cb8bc6c7e687abc031834e064e813f0601629a477965237bf44422df5b2e",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-kreeta.mp3",
     "versio": 2,
-    "tavut": 458127,
-    "sha256": "6665ad756956aca0b94726037bbb6fb411476b61b04512e46066ca3fc0612c34"
+    "tavut": 286346,
+    "sha256": "eda46adfc599704c2bf0feeba4a3a541dada8a0e780a186154c77bfe752f022c"
   },
-  "kesto": 28519,
+  "kesto": 17800,
   "sanat": [
     {
-      "sana": "Hanian",
-      "alku": 79,
-      "loppu": 479
-    },
-    {
-      "sana": "sataman",
-      "alku": 579,
+      "sana": "Falassarnassa",
+      "alku": 160,
       "loppu": 1000
     },
     {
-      "sana": "majakan",
-      "alku": 1079,
-      "loppu": 1559
+      "sana": "kävelin",
+      "alku": 1040,
+      "loppu": 1400
     },
     {
-      "sana": "aloittivat",
-      "alku": 1599,
-      "loppu": 2159
+      "sana": "muinaisen",
+      "alku": 1460,
+      "loppu": 1980
     },
     {
-      "sana": "venetsialaiset",
-      "alku": 2200,
-      "loppu": 3159
+      "sana": "sataman",
+      "alku": 2020,
+      "loppu": 2500
     },
     {
-      "sana": "ja",
-      "alku": 3419,
-      "loppu": 3519
+      "sana": "poikki",
+      "alku": 2560,
+      "loppu": 3000
     },
     {
-      "sana": "korjasivat",
-      "alku": 3559,
-      "loppu": 4179
+      "sana": "mutta",
+      "alku": 3580,
+      "loppu": 3800
     },
     {
-      "sana": "egyptiläiset",
-      "alku": 4259,
-      "loppu": 5219
+      "sana": "saappaani",
+      "alku": 3840,
+      "loppu": 4380
     },
     {
-      "sana": "Nyt",
-      "alku": 6819,
-      "loppu": 6980
+      "sana": "eivät",
+      "alku": 4440,
+      "loppu": 4720
     },
     {
-      "sana": "kaupunki",
-      "alku": 7059,
-      "loppu": 7559
+      "sana": "kastuneet",
+      "alku": 4780,
+      "loppu": 5460
     },
     {
-      "sana": "kuuluu",
-      "alku": 7639,
-      "loppu": 7999
+      "sana": "Meri",
+      "alku": 6800,
+      "loppu": 7040
     },
     {
-      "sana": "sulttaanille",
-      "alku": 8079,
-      "loppu": 8939
+      "sana": "oli",
+      "alku": 7100,
+      "loppu": 7260
     },
     {
-      "sana": "Kalastaja",
-      "alku": 10279,
-      "loppu": 10760
+      "sana": "kaukana",
+      "alku": 7300,
+      "loppu": 7900
     },
     {
-      "sana": "selvitti",
-      "alku": 10819,
-      "loppu": 11219
+      "sana": "Rannikko",
+      "alku": 9200,
+      "loppu": 9640
     },
     {
-      "sana": "minulle",
-      "alku": 11279,
-      "loppu": 11519
+      "sana": "oli",
+      "alku": 9680,
+      "loppu": 9820
     },
     {
-      "sana": "kaikki",
-      "alku": 11639,
-      "loppu": 11960
-    },
-    {
-      "sana": "kolme",
-      "alku": 12039,
-      "loppu": 12359
+      "sana": "kohonnut",
+      "alku": 9880,
+      "loppu": 10360
     },
     {
       "sana": "ja",
-      "alku": 12759,
-      "loppu": 12859
+      "alku": 10400,
+      "loppu": 10460
     },
     {
-      "sana": "paikkasi",
-      "alku": 12899,
-      "loppu": 13359
+      "sana": "nostanut",
+      "alku": 10500,
+      "loppu": 10960
     },
     {
-      "sana": "samalla",
-      "alku": 13420,
-      "loppu": 13719
+      "sana": "koko",
+      "alku": 11000,
+      "loppu": 11220
     },
     {
-      "sana": "verkkoaan",
-      "alku": 13779,
-      "loppu": 14439
+      "sana": "sataman",
+      "alku": 11260,
+      "loppu": 11700
     },
     {
-      "sana": "Kun",
-      "alku": 16399,
-      "loppu": 16520
+      "sana": "kuiville",
+      "alku": 11760,
+      "loppu": 12340
     },
     {
-      "sana": "kysyin",
-      "alku": 16600,
-      "loppu": 16979
+      "sana": "Istuin",
+      "alku": 14080,
+      "loppu": 14380
     },
     {
-      "sana": "kenen",
-      "alku": 17059,
-      "loppu": 17299
+      "sana": "kivelle",
+      "alku": 14440,
+      "loppu": 14820
     },
     {
-      "sana": "majakka",
-      "alku": 17359,
-      "loppu": 17760
+      "sana": "ja",
+      "alku": 14860,
+      "loppu": 14960
     },
     {
-      "sana": "siis",
-      "alku": 17819,
-      "loppu": 18079
+      "sana": "piirsin",
+      "alku": 15020,
+      "loppu": 15400
     },
     {
-      "sana": "on",
-      "alku": 18159,
-      "loppu": 18279
+      "sana": "laivan",
+      "alku": 15440,
+      "loppu": 15800
     },
     {
-      "sana": "hän",
-      "alku": 18899,
-      "loppu": 19020
+      "sana": "siihen",
+      "alku": 15880,
+      "loppu": 16260
     },
     {
-      "sana": "osoitti",
-      "alku": 19079,
-      "loppu": 19459
+      "sana": "missä",
+      "alku": 16420,
+      "loppu": 16680
     },
     {
-      "sana": "merelle",
-      "alku": 19520,
-      "loppu": 19979
+      "sana": "vuohi",
+      "alku": 16760,
+      "loppu": 17100
     },
     {
-      "sana": "Niiden",
-      "alku": 21719,
-      "loppu": 22039
+      "sana": "söi",
+      "alku": 17160,
+      "loppu": 17360
     },
     {
-      "sana": "jotka",
-      "alku": 22159,
-      "loppu": 22399
-    },
-    {
-      "sana": "tarvitsevat",
-      "alku": 22479,
-      "loppu": 23139
-    },
-    {
-      "sana": "sitä",
-      "alku": 23199,
-      "loppu": 23519
-    },
-    {
-      "sana": "Piirsin",
-      "alku": 25719,
-      "loppu": 26119
-    },
-    {
-      "sana": "karttaani",
-      "alku": 26180,
-      "loppu": 26760
-    },
-    {
-      "sana": "valon",
-      "alku": 26819,
-      "loppu": 27199
-    },
-    {
-      "sana": "ilman",
-      "alku": 27279,
-      "loppu": 27559
-    },
-    {
-      "sana": "valtakunnan",
-      "alku": 27639,
-      "loppu": 28180
-    },
-    {
-      "sana": "väriä",
-      "alku": 28239,
-      "loppu": 28519
+      "sana": "ruohoa",
+      "alku": 17440,
+      "loppu": 17800
     }
   ],
   "lauseet": [
-    79,
-    6819,
-    10279,
-    16399,
-    21719,
-    25719
+    160,
+    6800,
+    9200,
+    14080
   ],
-  "luotu": "2026-09-11T12:05:10.958Z"
+  "luotu": "2026-09-23T15:34:46.963Z"
 }
