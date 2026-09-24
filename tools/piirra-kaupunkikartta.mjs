@@ -65,6 +65,13 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 /** Ydinkeskustojen rajaukset. Rajat asteina (WGS84). */
 const KAUPUNGIT = {
+  geraldton: {
+    // Point Mooren majakka (-28.7827/114.5794) ja rautatieasema
+    // (-28.7698/114.6133) ovat n. 3,6 km päässä toisistaan
+    // (sisältöinventaario #3045 kohta 5.5). Houtman Abrolhosin
+    // haaksirikko on 80 km ulkona merellä, ei kartalla.
+    rajat: { pohjoinen: -28.7548, etela: -28.7977, lansi: 114.5644, ita: 114.6283 },
+  },
   berliini: {
     // Mitte Tiergartenista East Side Gallerylle; kaikki kuusi
     // kohdetta (valtiopäivätalo, portti, Museumsinsel, tv-torni,
