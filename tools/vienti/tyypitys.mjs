@@ -125,7 +125,10 @@ export function tyypitaLoput(kokoelmat) {
       if (a.data && typeof a.data === 'object' && !Array.isArray(a.data)) for (const k of Object.keys(a.data)) if (!(k in a)) avaimet.add(k);
     }
     const lista = [...avaimet].sort();
-    for (const a of kokoelmat[nimi].alkiot) for (const k of lista) if (!(k in a)) a[k] = nollaksi(a.data?.[k]);
+    // Alkio saa vain omat raakakenttänsä (ei null-täyttöä: linssiaineiston alkiot ovat eri lajeja).
+    for (const a of kokoelmat[nimi].alkiot) {
+      if (a.data && typeof a.data === 'object' && !Array.isArray(a.data)) for (const [k, v] of Object.entries(a.data)) if (!(k in a)) a[k] = v;
+    }
     kokoelmat[nimi].kuvaus += ` Skeema 1.31: päätasolla myös raakakentät sellaisenaan: ${lista.join(', ')}.`;
   };
   for (const nimi of ['skandaalit', 'historianHetket', 'monumentit', 'fokusvirrat']) nostaLoput(nimi);

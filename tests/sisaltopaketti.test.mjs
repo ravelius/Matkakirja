@@ -1128,3 +1128,18 @@ test('2.0-vartija: jokainen dict-raakakenttä on päätasolla tai RAAKA_VASTINEE
   const la = new Map(JSON.parse(tiedostot.get('kokoelmat/linssiaineisto.json')).alkiot.map((a) => [a.id, a]));
   assert.ok(la.get('maamaski').juoksut && la.get('pilvet').url && la.get('linssiluennat').keksinnot);
 });
+
+test('2.0-julkaisu: osoitin sisalto/2/, oma tarkistus', async () => {
+  const { johdaMajor2 } = await import('../tools/vienti/major2.mjs');
+  const { tarkistaMajor2 } = await import('../tools/vienti/julkaise-sisalto.mjs');
+  const t2 = johdaMajor2(tiedostot);
+  assert.deepEqual(tarkistaMajor2(t2), []);
+  const j = kokoaJulkaisu({ tiedostot: t2, commit: 'abc1234', julkaistu: JULKAISTU, major: 2 });
+  assert.deepEqual(j.virheet, []);
+  assert.equal(j.osoitin.polku, 'sisalto/2/v1/');
+  assert.equal(j.osoitin.$skeema, 'matkakirja-vienti/2/osoitin');
+  assert.equal(j.osoitin.skeemaversio, '2.0');
+  const rikki = new Map(t2);
+  rikki.set('kokoelmat/kaupungit.json', tiedostot.get('kokoelmat/kaupungit.json'));
+  assert.ok(tarkistaMajor2(rikki).length > 0);
+});
