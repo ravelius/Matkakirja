@@ -586,7 +586,7 @@ namespace Matkakirja.Natiivi
             if (l != null) tiedeliite.Avaa(l, i);
         });
 
-        void Kaynnistyi() => UiKerros.PaaSaikeessa(() => Rakenne.Nayta(esittely, false, 250));
+        void Kaynnistyi() => UiKerros.PaaSaikeessa(() => { Rakenne.Nayta(esittely, false, 250); ValmistaSeuraavat(-1); });
 
         void NaytaEsittely()
         {
@@ -632,6 +632,25 @@ namespace Matkakirja.Natiivi
                     i < keksinnot.Selitteet.Count ? keksinnot.Selitteet[i] : null, juttu);
             }
             paneeli.style.display = DisplayStyle.Flex;
+            ValmistaSeuraavat(i);
+        }
+
+        const int EsilatausPysakkeja = 2; // web PANEELIN_ESILATAUS_PYSAKKEJA
+
+        /// <summary>
+        /// Web valmistaSeuraavat: seuraavien pysäkkien havainnekuvat valmiiksi (lataus, purku, maski),
+        /// jotta pysäkin vaihtuessa kuva on jo muistissa eikä vaihtokehys odota verkkoa tai GPU:ta.
+        /// </summary>
+        void ValmistaSeuraavat(int i)
+        {
+            if (keksinnot == null) return;
+            for (int n = 1; n <= EsilatausPysakkeja; n++)
+            {
+                if (i + n >= keksinnot.Pysakit.Count) return;
+                var p = keksinnot.Pysakit[i + n];
+                var u = p.Ilmio != null && p.Ilmio.OnKuva ? p.Ilmio.Osoite ?? p.Ilmio.Tiedosto : null;
+                if (u != null) Valokeila.Hae(u, (int)(double.IsNaN(p.Vuosi) ? 0 : p.Vuosi), null);
+            }
         }
 
         // Webin AIKAJANAN_EROTIN ◈ piirroksena (fonteista puuttuu merkki): vinoneliö, sisällä täytetty pienempi.

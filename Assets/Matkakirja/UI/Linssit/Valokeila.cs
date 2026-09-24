@@ -2,8 +2,8 @@
 // (web js/aikajana.js valokeilanMaski + css .aikajana-ilmiokuva mask-image).
 //
 // UI Toolkitissa ei ole mask-imagea, joten maski lasketaan kuvaan: lähde (ladattu, ei luettava)
-// piirretään RenderTextureen 16:10-rajauksella (object-fit: cover), luetaan AsyncGPUReadbackilla
-// (Kuvat.PienennaTaustalla, ei pääsäikeen pysähdystä) ja alfa kerrotaan maskilla taustasäikeessä. Maski on webin kerrokset unionina (mask-composite add =
+// haetaan valmiiksi rajattuna ja pienennettynä (Kuvat.HaePienena: 16:10, object-fit: cover, luku
+// AsyncGPUReadbackilla, ei pääsäikeen pysähdystä) ja alfa kerrotaan maskilla taustasäikeessä. Maski on webin kerrokset unionina (mask-composite add =
 // lähde yli): pohjasoikio 46 % × 47 % ja kuusi arvottua lohkoa, arpojana sama mulberry32 samalla
 // siemenellä (pysäkin vuosi), joten reuna kumpuilee samoin kuin webissä.
 using System;
@@ -41,16 +41,14 @@ namespace Matkakirja.Natiivi
         {
             string avain = osoite + muoto;
             if (muisti.TryGetValue(avain, out var t) && t != null) { valmis?.Invoke(t); return; }
-            Kuvat.Hae(osoite, lahde =>
+            // Suoraan pienennettynä ja rajattuna (Kuvat.HaePienena: alkuperäinen vapautetaan heti, luku
+            // AsyncGPUReadbackilla), joten täysikokoista kuvaa ei pidetä muistissa eikä ladata GPU:lle.
+            Kuvat.HaePienena(osoite, leveys, korkeus, 0.5f, pieni =>
             {
-                if (lahde == null) { valmis?.Invoke(null); return; }
+                if (pieni == null) { valmis?.Invoke(null); return; }
                 if (muisti.TryGetValue(avain, out var v) && v != null) { valmis?.Invoke(v); return; }
-                // Luenta taustalla (AsyncGPUReadback): ei ReadPixelsin pysähdystä pysäkin vaihtuessa.
-                Kuvat.PienennaTaustalla(lahde, leveys, korkeus, 0.5f, px =>
-                {
-                    if (px == null) { valmis?.Invoke(lahde); return; }
-                    MaskaaTaustalla(avain, px, leveys, korkeus, soikiot(), lahde, valmis);
-                });
+                if (!pieni.isReadable) { valmis?.Invoke(pieni); return; }
+                MaskaaTaustalla(avain, pieni.GetPixels32(), leveys, korkeus, soikiot(), pieni, valmis);
             });
         }
 
