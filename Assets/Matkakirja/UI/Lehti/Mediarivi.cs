@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
                 radionapit[b] = (r.Tila, a?.Url);
                 // Näkyvyys luokalla: isännän tila (kartuscha auki) päättää lopun USS:ssä.
                 b.EnableInClassList("mk-kartuscha__radio--asema", a != null);
-                b.tooltip = a != null ? $"{maanNimi}: kuuntele suoraa lähetystä ({a.Nimi})" : null;
+                b.tooltip = a?.Nimi; // E20: web radio.title = asema
             });
         }
 

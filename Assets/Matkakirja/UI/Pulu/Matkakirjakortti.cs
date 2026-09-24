@@ -477,6 +477,8 @@ namespace Matkakirja.Natiivi
         {
             bool paalla = Asetukset.Paalla(Kytkin.Kertoja);
             kaiutin.EnableInClassList("mk-mykistetty", !paalla);
+            // E20: web paivitaKaiutinTila (title tilan mukaan).
+            kaiutin.tooltip = paalla ? "Luenta päällä — mykistä" : "Luenta pois — kytke päälle";
         }
 
         void Mittari()
