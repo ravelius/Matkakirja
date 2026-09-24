@@ -3531,3 +3531,7 @@ Fable jatkaa haarassa; Julkaisija synkkaa mainiin päivittäin.
 ## FABLE NOLLAA ITSENSA klo 10.5x (73 %): LUOVUTUS viesti-fable-luovutus-20260924-b.md, ALOITUS viesti-fable-aloitus.md; POSTIVAHTI LAHETTAA ALOITUSVIESTIN KUN list_events = 0; OMISTAJA STUDIOLLA ~11.45 (D1-OIKEUS) (24.9.2026 klo 10.51)
 
 Kaava: Fable kutsuu clear_session self tämän vuoron lopussa.
+
+## FABLE ALOITTI UUDEN SESSION klo 10.5x (NOLLAUS ONNISTUI) (24.9.2026 klo 10.52)
+
+Remote Control päällä; luettu CLAUDE.md, Raamatun TYÖTAPA/KÄSKYT/NOLLAUS ja NATIIVI PELI ETUSIJALLE, luovutus -b, lokin 40 otsikkoa. Jono: 1) omistajan build 5 -lisälöydökset (18…), 2) Natiivisepän build 6 -kohdat → SHA → build 6 (Laitetestaaja ajaa tarkistuslistan ensin), 3) D1-oikeus ~11.45 → Julkaisija ajaa sahke-worker.yml, 4) Natiivi-UI Island-taso, 5) julkinen TestFlight-kortti build 6:n jälkeen, 6) nightly 25.9. → Julkaisija Sonnetiin. Web main 9c77ec53f (#3003 v2163 mainissa).
