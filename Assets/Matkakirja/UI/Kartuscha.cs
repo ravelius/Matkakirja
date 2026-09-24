@@ -270,6 +270,10 @@ namespace Matkakirja.Natiivi
         public event System.Action<bool> AukiMuuttui;
 
         /// <summary>Avattu kortti pulun väistöä varten (Pulu.Alareuna), muuten null.</summary>
+        /// <summary>Näkyvä maakortti (kiinni tai auki) tai null: Liiku väistää sen yläreunan (Matkavalinta).</summary>
+        public VisualElement NakyvaKortti =>
+            sallittu && kortti.panel != null && kortti.resolvedStyle.display != DisplayStyle.None && kortti.worldBound.height > 0 ? kortti : null;
+
         public VisualElement AukiKortti => auki && kortti.resolvedStyle.display != DisplayStyle.None ? kortti : null;
 
         /// <summary>Web border-bottom: 1px dotted — UITK:ssa ei ole pisteviivareunaa, joten pisteet piirretään.</summary>

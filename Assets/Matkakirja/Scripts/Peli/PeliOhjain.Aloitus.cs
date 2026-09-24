@@ -4,8 +4,10 @@
 // kaupunkiin. Omistaja 24.9.2026 (build 7), webin mukaan: intro-puhe.mp3 (luennat.intro) soi jo
 // ALOITUSPORTILLA avaustekstin kanssa (Natiivi-UI kutsuu SoitaIntro), sen jälkeen pulun avausesittely
 // (Natiivi-UI; web js/livia.js), ja kohteen valinta keskeyttää molemmat heti. Koneen lähtiessä moottorin ääni
-// ja puhe-lento-alku.mp3 (luennat.lento-alku, web lueLennonRepliikki) alkavat samalla hetkellä. Lento
-// kestää vähintään lentorepliikin verran. Perillä saapuminen kulkee normaalisti (traileri tai lehti).
+// ja puhe-lento-alku.mp3 (luennat.lento-alku, web lueLennonRepliikki) alkavat samalla hetkellä. Lennon kesto
+// skaalautuu reitin pituuden mukaan 16–26 s (Fable 24.9., kamerakäsikirjoitus: Lontoo → Ateena = 20 s,
+// LennonAikajana.Kesto) ja on vähintään lentorepliikin verran (enintään 26 s). Perillä saapuminen kulkee
+// normaalisti (traileri tai lehti).
 //
 // Pelitila EI muutu lennosta: matka alkaa valitusta kaupungista kuten webissä (ei noppaa, ei hintaa,
 // kultaiset jäljet ennallaan). Lento on esitys: Natiivisepän Nappula.AloitusLento (kamera zoomaa
@@ -21,8 +23,6 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Aloituslennon lähtö: Lontoo (tarina alkaa Lontoosta, Fablen tarkastus C8).</summary>
         public const double AloitusLat = 51.507, AloitusLon = -0.128;
-        /// <summary>Lennon vähimmäiskesto (Natiiviseppä: kameran nousu ja seuranta).</summary>
-        const float AloituslentoMinimiS = 20f;
         /// <summary>Lentorepliikin oletuskesto, jos paketti ei kerro sitä (duration puuttuu).</summary>
         const float LentoAlkuOletusS = 15f;
 
@@ -34,9 +34,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Onko aloituslento käynnissä (syöte estetty, kamera seuraa konetta).</summary>
         public bool AloituslentoKaynnissa { get; private set; }
 
-        /// <summary>Lennon kesto: vähintään lentorepliikin pituus ja 20 s (+ 1 s ettei saapuminen katkaise luentaa).</summary>
-        float AloituslennonKesto() =>
-            Mathf.Max(AloituslentoMinimiS, (float)(luennat.LentoAlku?.Kesto ?? LentoAlkuOletusS) + 1f);
+        /// <summary>
+        /// Lennon kesto (kamerareitti, build 11): reitin pituuden mukaan 16–26 s (LennonAikajana.Kesto; ennen
+        /// kiinteä vähintään 20 s). Lentorepliikki (+ 1 s, ettei saapuminen katkaise luentaa) pidentää lentoa
+        /// korkeintaan 26 sekuntiin asti.
+        /// </summary>
+        float AloituslennonKesto(double lat, double lon)
+        {
+            double reitti = LennonAikajana.ReittiM(AloitusLat, AloitusLon, lat, lon);
+            float repliikki = Mathf.Min((float)LennonAikajana.PisinS, (float)(luennat.LentoAlku?.Kesto ?? LentoAlkuOletusS) + 1f);
+            return Mathf.Max((float)LennonAikajana.Kesto(reitti), repliikki);
+        }
 
         /// <summary>
         /// Intro-luenta aloitusportin avaustekstin kanssa (Natiivi-UI, Aloitusnakyma.AloitaKirjoitus; web
@@ -56,7 +64,7 @@ namespace Matkakirja.Natiivi
             var b = PeliApu.Koordinaatti(verkko, Sijainti.KaupungissaSijainti(kohde));
             if (!b.HasValue) return false;
 
-            float kesto = AloituslennonKesto();
+            float kesto = AloituslennonKesto(b.Value.Lat, b.Value.Lon);
             // Valinta keskeyttää avausluennan heti (omistaja 24.9.2026, build 7; web doPickStart vaientaa kertojan
             // napautuksessa). Pulun avausesittely väistyy samasta hetkestä: Natiivi-UI kuuntelee AloituslentoAlkoi
             // (web peruLivianAvaus). Lentorepliikki alkaa vasta koneen lähtiessä.
@@ -87,7 +95,7 @@ namespace Matkakirja.Natiivi
                         IlmoitaLiike(Kulkutapa.Lento, 0, siirtymaraita: false);
                         Lentoaani(true, kesto);
                         AloitaLento(Lentosuunnitelma.Laske("lontoo", kohde, (AloitusLat, AloitusLon), b.Value, kesto,
-                            AloituslennonKesto(), aloitus: true));
+                            kesto, aloitus: true));
                         var repliikki = luennat.LentoAlkuAvaukseen();
                         if (repliikki != null) SoitaLuento(repliikki, 0f);
                     },

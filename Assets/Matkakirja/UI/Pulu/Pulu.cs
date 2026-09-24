@@ -96,8 +96,21 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             var r = kerros.Reunat(Kerros);
-            alue.style.right = r.z + 8;
+            alue.style.right = Oikea(r.z);
             alue.style.bottom = Alareuna(r.w);
+        }
+
+        /// <summary>
+        /// Web (css/styles.css, löydös 44 mitattu 24.9.): kartalla pulun nappi 3,6 rem (57,6) oikeasta reunasta
+        /// (.pollo-kelluu-kartalla.livia-kasvot-valmis), puhelimen lehdessä 0,6 rem (9,6). Piirros on napin
+        /// oikeassa alakulmassa kuten webin kasvopinta (mitattu: linnun oikea reuna 11 pt ankkurin sisällä molemmissa).
+        /// </summary>
+        static float Oikea(float turvaOikea)
+        {
+            // Web #arrival-dialog.lehti[open] (max-width 600 px): vain lehti, ei nostokortit eikä muut dialogit.
+            // Näkymät voivat olla vielä rakenteilla (UiNakymat-konstruktori kutsuu Pulu.Hae ennen lehteä): Lehti ?.
+            bool lehti = UiNakymat.Olemassa && UiNakymat.Hae().Lehti?.Auki == true;
+            return turvaOikea + (lehti && Ylapalkki.Puhelin ? 9.6f : 57.6f);
         }
 
         /// <summary>Webin 3,6rem/5,3rem + turva; alareunan kortin yläpuolelle, jos kortti on auki.</summary>
@@ -155,8 +168,10 @@ namespace Matkakirja.Natiivi
             kuva.Aseta(tila);
 
             // Paikka ja koko (kortti auki → yläpuolelle, modaali → 0,72).
-            alue.style.bottom = Alareuna(kerros.Reunat(Kerros).w);
+            var reunat = kerros.Reunat(Kerros);
+            alue.style.bottom = Alareuna(reunat.w);
             bool modaali = SyoteLukko.Estetty;
+            alue.style.right = Oikea(reunat.z);
             alue.EnableInClassList("mk-pulu--pieni", modaali);
         }
 
