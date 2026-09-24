@@ -259,7 +259,7 @@ namespace Matkakirja.Natiivi
                     var m = new List<Merkinta>();
                     LisaaKategoriat(m, Taulu(kl, "kaupunki"), "kaupunki");
                     LisaaKategoriat(m, Taulu(ml, "maa"), "maa");
-                    var jutut = Alkiot(na).Select(a => (T(a, "kaupunki"), T(a, "nimi"), Rakenne.Olio(MiniJson.Kentta(a, "data"))))
+                    var jutut = Alkiot(na).Select(a => (T(a, "kaupunki"), T(a, "nimi"), Rakenne.Olio(MiniJson.Kentta(a, "data")) ?? a)) // 2.0: päätaso
                         .Where(x => x.Item1 != null && x.Item2 != null && x.Item3 != null).ToList();
                     LisaaNahtavyydet(m, jutut);
                     var kohteet = new List<(string, string)>();

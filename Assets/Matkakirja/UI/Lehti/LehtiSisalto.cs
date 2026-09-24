@@ -169,7 +169,7 @@ namespace Matkakirja.Natiivi
                     string id = T(o, avain) ?? T(o, "id");
                     // Raaka data ensin: skeema 1.15 säilyttää sen ennallaan tyypitetyn kopion (aiheet +
                     // kansi) rinnalla. Tyypitetty aiheet vain, kun dataa ei ole (Elämää-kaupungit).
-                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? Rakenne.Lista(MiniJson.Kentta(o, "aiheet"));
+                    var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? PaatasonAiheet(o);
                     if (id != null && aiheet != null) t[id] = aiheet;
                     // Skeema 1.15: sivujärjestys (maa-etusivu, aiheet, maa-numeroina).
                     if (sivut != null && id != null && Rakenne.Lista(MiniJson.Kentta(o, "sivut")) is List<object> sl)
@@ -178,6 +178,38 @@ namespace Matkakirja.Natiivi
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui lehti: " + e.Message); }
             return t;
+        }
+
+        /// <summary>
+        /// Skeema 2.0 (Siirtosepän kenttäkartta 24.9.2026): ei data-kenttää; aiheet ovat päätasolla, ja kaupunkiaiheen
+        /// kuvat ovat alkion kansi-oliossa (kansi.kansikuvat, avauskuvat, ennenNyt, matkailijalle). Kansi yhdistetään
+        /// kaupunkiaiheeseen (tai luodaan sellainen), jotta etusivu ja turistiopas lukevat sen kuten raa'asta datasta.
+        /// </summary>
+        static List<object> PaatasonAiheet(Dictionary<string, object> alkio)
+        {
+            var aiheet = Rakenne.Lista(MiniJson.Kentta(alkio, "aiheet"));
+            var kansi = Ob(MiniJson.Kentta(alkio, "kansi"));
+            if (aiheet == null || kansi == null) return aiheet;
+            var tulos = new List<object>(aiheet.Count + 1);
+            bool loytyi = false;
+            foreach (var a in aiheet)
+            {
+                var ao = Ob(a);
+                if (ao != null && T(ao, "id") == "kaupunki")
+                {
+                    var yhdistetty = new Dictionary<string, object>(ao);
+                    foreach (var kv in kansi) if (!yhdistetty.ContainsKey(kv.Key) || yhdistetty[kv.Key] == null) yhdistetty[kv.Key] = kv.Value;
+                    tulos.Add(yhdistetty);
+                    loytyi = true;
+                }
+                else tulos.Add(a);
+            }
+            if (!loytyi)
+            {
+                var uusi = new Dictionary<string, object>(kansi) { ["id"] = "kaupunki" };
+                tulos.Insert(0, uusi);
+            }
+            return tulos;
         }
 
         public static bool OnKaupunkilehti(string kaupunki) => kaupungit != null && kaupunki != null && kaupungit.ContainsKey(kaupunki);
