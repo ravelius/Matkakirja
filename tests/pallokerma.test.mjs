@@ -12,6 +12,11 @@ import {
   KERMA_PEITTO, alasnaytaTaso, kermanAlfa, maailmanPikseli, tasonLaatat, vanhemmat,
 } from '../tools/tee-pallokerma.mjs';
 
+// sharp on poltto-koneen riippuvuus (Matkakirja-fable/node_modules), ei CI:n:
+// kuvatestit ohitetaan, jos sitä ei ole.
+const sharp = await import('sharp').then((m) => m.default).catch(() => null);
+const kuvat = sharp ? {} : { skip: 'sharp puuttuu' };
+
 test('kerman alfa: meri läpinäkyvä, maa peitolla 0,80, oma maa reikä', () => {
   assert.equal(kermanAlfa(180, 170), 0); // meri: R − B pieni
   assert.equal(kermanAlfa(230, 170), Math.round(255 * KERMA_PEITTO)); // maa: R − B 60
@@ -32,8 +37,7 @@ test('alasnäyte: vanhemmat 2 × 2 -lapsista', () => {
   assert.deepEqual(vanhemmat([[16, 10], [17, 11], [18, 10]]), [[8, 5], [9, 5]]);
 });
 
-test('alasnäyte: Z4 Z5:stä, puuttuva lapsi läpinäkyvä, kerma säilyy vaaleana', async () => {
-  const sharp = (await import('sharp')).default;
+test('alasnäyte: Z4 Z5:stä, puuttuva lapsi läpinäkyvä, kerma säilyy vaaleana', kuvat, async () => {
   const ulos = mkdtempSync(join(tmpdir(), 'kerma-alas-'));
   try {
     const kerma = await sharp({ create: { width: 256, height: 256, channels: 4, background: { r: 250, g: 244, b: 214, alpha: 0.8 } } }).webp({ quality: 90, alphaQuality: 90 }).toBuffer();
@@ -50,8 +54,7 @@ test('alasnäyte: Z4 Z5:stä, puuttuva lapsi läpinäkyvä, kerma säilyy vaalea
   } finally { rmSync(ulos, { recursive: true, force: true }); }
 });
 
-test('alasnäyte: maan sarjassa laatikon ulkopuoliset lapset maailman sarjasta', async () => {
-  const sharp = (await import('sharp')).default;
+test('alasnäyte: maan sarjassa laatikon ulkopuoliset lapset maailman sarjasta', kuvat, async () => {
   const juuri = mkdtempSync(join(tmpdir(), 'kerma-vara-'));
   try {
     const kerma = await sharp({ create: { width: 256, height: 256, channels: 4, background: { r: 250, g: 244, b: 214, alpha: 0.8 } } }).webp().toBuffer();
