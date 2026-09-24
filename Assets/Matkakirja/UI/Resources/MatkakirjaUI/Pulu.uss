@@ -944,3 +944,37 @@
     color: rgba(33, 29, 24, 0.85);
     white-space: normal;
 }
+
+/* Pöllöpoimintojen pillerit artikkelin lopussa (web .pollo-poiminnat, .pollo-pilleri). */
+.mk-poiminnat {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.18);
+}
+
+.mk-poiminnat__nimio {
+    margin-right: 6px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: rgba(70, 51, 31, 0.62);
+}
+
+.mk-poiminnat__pilleri {
+    min-height: 0;
+    margin: 3px 6px 3px 0;
+    padding: 5px 11px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 14px;
+    background-color: rgba(255, 252, 244, 0.7);
+    color: rgba(50, 36, 22, 0.92);
+}
+
+.mk-poiminnat__pilleri .mk-nappi__teksti {
+    font-size: 13px;
+    white-space: normal;
+}
