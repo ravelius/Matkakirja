@@ -48,6 +48,14 @@ namespace Matkakirja.Natiivi
             nauha.RegisterCallback<PointerMoveEvent>(Liike);
             nauha.RegisterCallback<PointerUpEvent>(Ylos);
             nauha.RegisterCallback<PointerCaptureOutEvent>(_ => { if (vedossa) PaataVeto(); });
+            // Vuoden paikka lasketaan nauhan leveydestä: näkyviin tultaessa leveys oli vielä 0, jolloin
+            // viimeisen tikin vuosi jäi vasempaan laitaan puoliksi ruudun ulkopuolelle (kontakti 794e96f).
+            nauha.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (Mathf.Approximately(e.oldRect.width, e.newRect.width)) return;
+                int i = vedossa ? esikatselu : valittu;
+                if (i >= 0) Piirra(i);
+            });
         }
 
         /// <summary>Pisteet jaksojärjestyksessä (IhmisenMatkaLinssi.AikaselaimenPisteet) ja vuoden muotoilu.</summary>

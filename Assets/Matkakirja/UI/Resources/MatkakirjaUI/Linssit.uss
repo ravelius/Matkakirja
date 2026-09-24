@@ -1073,7 +1073,7 @@
 
 .mk-aikajana-paneeli__teksti {
     margin-top: 6px;
-    font-size: 13.5px;
+    font-size: 14.4px;
     white-space: normal;
     color: #f1e6d0;
 }
