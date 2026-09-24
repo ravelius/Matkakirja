@@ -39,7 +39,7 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Lehtinakyma : ILehtiNakyma
+    public sealed partial class Lehtinakyma : ILehtiNakyma
     {
         const int Kerros = UiKerros.Traileri; // kaiken pelin UI:n päällä kuten webin dialogi
 
@@ -782,21 +782,10 @@ namespace Matkakirja.Natiivi
         // Web kulttuuri-musiikkilinkki: nuotti (kaksi kaulaa ja palkki).
         const string Nuotti = "<path d=\"M9 18.5V6.2l9-1.7v11.3\"/><circle class=\"taytto\" cx=\"6.8\" cy=\"18.6\" r=\"2.2\"/><circle class=\"taytto\" cx=\"15.8\" cy=\"15.9\" r=\"2.2\"/>";
 
-        void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null, bool ensimmainen = false)
-        {
-            var lohko = Rakenne.El("mk-lehti__nosto", s, PickingMode.Ignore);
-            var otsikkorivi = Rakenne.El("mk-lehti__nosto-otsikkorivi", lohko, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-lehti__nosto-otsikko", otsikkorivi), Kirjasin.KoneLihava);
-            if (!string.IsNullOrEmpty(n.Aika)) Kirjasimet.Aseta(Rakenne.Teksti(n.Aika, "mk-lehti__aika", otsikkorivi), Kirjasin.Kone);
-            var kuvat = n.Galleria.Count > 0 ? n.Galleria : (n.Kuva != null ? new List<LehtiKuva> { n.Kuva } : new List<LehtiKuva>());
-            if (kuvat.Count > 1) Kuvasarja(lohko, kuvat, "mk-lehti__nostokuva", true);
-            else if (kuvat.Count == 1)
-            {
-                Kuva(lohko, kuvat[0], kuvat, 0, "mk-lehti__nostokuva", n.Leveys == "taysi" ? 0.56f : 0.66f);
-                Kuvateksti(lohko, kuvat[0], true);
-            }
-            // Noston kuuntelu- ja musiikkinapit (web lisaaNostonNapit): näyte, musiikkilinkit, vapaa
+        // Noston kuuntelu- ja musiikkinapit (web lisaaNostonNapit): näyte, musiikkilinkit, vapaa
             // musiikkinäyte tai Apple Musicin esikuuntelu. Sama soitin kuin mediarivillä (Mediarivi.Kuuntele).
+        void NostoMedia(VisualElement lohko, LehtiNosto n)
+        {
             if (n.Aani != null || n.Musiikkilinkit.Count > 0 || n.Nayte != null || n.Esikuuntelu != null)
             {
                 var media = Rakenne.El("mk-lehti__nostomedia", lohko, PickingMode.Ignore);
@@ -815,11 +804,31 @@ namespace Matkakirja.Natiivi
                     Mediarivi.Kuuntele(media, "Kuuntele näyte", null, valmis => Mediarivi.HaeEsikuuntelu(esi, mus, nimi, valmis), "Esikuuntelu Apple Musicista (30 s)");
                 }
             }
-            // Web .teksti (mitattu 24.9.): Iowan 16,32 px, #211d18, riviväli 26,44 (1,62 em), kappaleväli 8 px;
-            // sivun ensimmäisellä nostolla anfangi (.teksti.ensimmainen.anfangi) ja 11,2 px:n väli.
-            // Web piirraLeipa: jaaKappaleiksi ja ensimmäisen kappaleen neljä ensimmäistä sanaa lihavoituna
-            // (.wiki-nosto .leipa-aloitus 700, rgb(52, 37, 22); LEIPAN_ALOITUS_SANOJA 4) jokaisessa nostossa.
-            if (!string.IsNullOrEmpty(n.Teksti)) Leipa(lohko, n.Teksti, "mk-lehti__teksti", 1.62f, 0.49f, ensimmainen, aloitus: true);
+        }
+
+        void Nosto(VisualElement s, LehtiNosto n, string sivuAvain = null, bool ensimmainen = false)
+        {
+            var lohko = Rakenne.El("mk-lehti__nosto", s, PickingMode.Ignore);
+            var otsikkorivi = Rakenne.El("mk-lehti__nosto-otsikkorivi", lohko, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-lehti__nosto-otsikko", otsikkorivi), Kirjasin.KoneLihava);
+            if (!string.IsNullOrEmpty(n.Aika)) Kirjasimet.Aseta(Rakenne.Teksti(n.Aika, "mk-lehti__aika", otsikkorivi), Kirjasin.Kone);
+            var kuvat = n.Galleria.Count > 0 ? n.Galleria : (n.Kuva != null ? new List<LehtiKuva> { n.Kuva } : new List<LehtiKuva>());
+            // ≥ 700 pt: kainalokuva tai täysleveä kuva + palstat (LehtiKainalo.cs, web @media (min-width: 700px)).
+            if (!LeveaNosto(lohko, n, kuvat, ensimmainen, v => NostoMedia(v, n)))
+            {
+                if (kuvat.Count > 1) Kuvasarja(lohko, kuvat, "mk-lehti__nostokuva", true);
+                else if (kuvat.Count == 1)
+                {
+                    Kuva(lohko, kuvat[0], kuvat, 0, "mk-lehti__nostokuva", n.Leveys == "taysi" ? 0.56f : 0.66f);
+                    Kuvateksti(lohko, kuvat[0], true);
+                }
+                NostoMedia(lohko, n);
+                // Web .teksti (mitattu 24.9.): Iowan 16,32 px, #211d18, riviväli 26,44 (1,62 em), kappaleväli 8 px;
+                // sivun ensimmäisellä nostolla anfangi (.teksti.ensimmainen.anfangi) ja 11,2 px:n väli.
+                // Web piirraLeipa: jaaKappaleiksi ja ensimmäisen kappaleen neljä ensimmäistä sanaa lihavoituna
+                // (.wiki-nosto .leipa-aloitus 700, rgb(52, 37, 22); LEIPAN_ALOITUS_SANOJA 4) jokaisessa nostossa.
+                if (!string.IsNullOrEmpty(n.Teksti)) Leipa(lohko, n.Teksti, "mk-lehti__teksti", 1.62f, 0.49f, ensimmainen, aloitus: true);
+            }
             if (n.Lisa != null) { try { n.Lisa(lohko); } catch (Exception e) { Debug.LogException(e); } }
             var loppu = Rakenne.El("mk-lehti__nostoloppu", lohko, PickingMode.Ignore);
             if (!string.IsNullOrEmpty(n.Wiki))
