@@ -168,7 +168,7 @@ Julkaisija mergeää.
    hidastusta, koska 429 näkyy puuttuvana.
 2. Lisenssiluokittelu on tehty kertakäyttöisillä skripteillä, jotka eivät
    ole repossa. Jos tarkistus halutaan toistuvaksi, siitä tehdään
-   `tools/vienti/lisenssit.mjs`.
+   `tools/vienti/lisenssitarkistus.mjs`.
 3. Media-lajin `tiedosto` 522 viitettä ovat ilman koneellista sääntöä.
    Suurin osa on Map-avaimia ja fokuslehtien vanhoja pohjakuvia.
 
