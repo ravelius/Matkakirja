@@ -178,7 +178,8 @@ namespace Matkakirja.Natiivi
             PeliOhjain.LuentaSallittu = () => Matkakirja.Linssit.Radio.RadioLinssi.LuentaSallittu;
             Linssirekisteri.Mittaa = Mittaa;
             foreach (var id in MitattavatLinssit)
-                foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto, OsaKerros, OsaAani, OsaLinssi, OsaTahdet, OsaPilvet })
+                foreach (var v in new[] { Linssirekisteri.Avaus, Linssirekisteri.Paivitys, Linssirekisteri.Sulku, Linssirekisteri.Vaihto, OsaKerros, OsaAani, OsaLinssi, OsaTahdet, OsaPilvet,
+                    "Avaa.Muisti", "Avaa.Esitys", "Avaa.Jatka", "Virta.Avaa", "Viritin.Aloita", "Korosta" })
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
@@ -700,6 +701,7 @@ namespace Matkakirja.Natiivi
                 public void NaytaVain(ICollection<string> kaupungit) => Merkit?.NaytaVain(kaupungit);
                 public void Korosta(string kaupunki)
                 {
+                    using var _ = Merkki("radio", "Korosta").Auto();
                     var m = Merkit;
                     if (m == null) return;
                     if (edellinen != null && edellinen != kaupunki) m.Korosta(edellinen, null);
@@ -786,6 +788,9 @@ namespace Matkakirja.Natiivi
             new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
         static readonly Unity.Profiling.ProfilerMarker KomennotMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Komennot");
+        static readonly Unity.Profiling.ProfilerMarker PelikerroksetMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.Pelikerrokset");
+        static readonly Unity.Profiling.ProfilerMarker KameraMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.AjaKamera");
+        static readonly Unity.Profiling.ProfilerMarker KirjaaMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.Kirjaa");
 
         /// <summary>Avauksen osat (Merkki(id, Osa…)): 3D-kerroksen luonti, äänen luonti, ytimen linssi.</summary>
         internal const string OsaKerros = "Avaa.Kerros", OsaAani = "Avaa.Aani", OsaLinssi = "Avaa.Linssi",
@@ -831,6 +836,7 @@ namespace Matkakirja.Natiivi
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
         {
             // Laitetestien jälki: keksintöjen loppukamera jäi iPadilla ajamatta (24.9.), syy selvitettävä.
+            using var _ = KameraMerkki.Auto();
             Kirjaa($"kamera-ajo → {kohde} {kestoS:F1} s (nyt {Kamera})");
             kierto.Aja(kohde.Lat, kohde.Lon, kohde.Korkeus, Mathf.Max(0.01f, kestoS), null, pehmennys);
         }
@@ -876,6 +882,7 @@ namespace Matkakirja.Natiivi
 
         public void Pelikerrokset(bool nakyvissa)
         {
+            using var _ = PelikerroksetMerkki.Auto();
             var k = KarttaKerrokset.Instanssi;
             if (k == null) return;
             k.Nakyvyys("kaupungit", nakyvissa);
@@ -886,8 +893,15 @@ namespace Matkakirja.Natiivi
             // Kaupungin nimikortti pois linssin tieltä (web body.aikajana-paalla .fact-card;
             // iPad-kuvassa Pariisin kortti jäi ihmisen matkan päälle). Kortti palaa
             // seuraavasta kaupungin napautuksesta, joten palautusta ei tarvita.
-            if (!nakyvissa) FindAnyObjectByType<NimiKortti>()?.Piilota();
+            if (!nakyvissa)
+            {
+                // Välimuistissa: FindAnyObjectByType käy koko kohtauksen läpi joka avauksessa.
+                if (nimiKortti == null) nimiKortti = FindAnyObjectByType<NimiKortti>();
+                if (nimiKortti != null) nimiKortti.Piilota();
+            }
         }
+
+        NimiKortti nimiKortti;
 
         public void Peite(bool paalla)
         {
@@ -1015,6 +1029,7 @@ namespace Matkakirja.Natiivi
 
         internal void Kirjaa(string teksti)
         {
+            using var _ = KirjaaMerkki.Auto();
             Debug.Log("MATKAKIRJA linssit: " + teksti);
             try { File.AppendAllText(lokiPolku, $"{Aika:F2} {teksti}\n"); } catch (IOException) { }
         }
@@ -1076,6 +1091,30 @@ namespace Matkakirja.Natiivi
 
             public KerrosTila Tila(string avain) =>
                 tilat.TryGetValue(avain, out var t) ? t : KerrosTila.Luovutti;
+        }
+    }
+
+    /// <summary>
+    /// KEHYSJONO: raskas olioiden luonti (TextMeshPro-nimet) usealle kehykselle aikabudjetilla.
+    /// Linssin avaus ei saa venyttää kehystä (tavoite ei yli 16 ms, ui piikit 24.9.: 64 nimeä yhdessä
+    /// kehyksessä vei ~26 ms). Omistaja kutsuu Aja() joka kehys (LateUpdate); Tyhjenna() pudottaa
+    /// odottavat työt, kun kerros puretaan tai sisältö vaihtuu.
+    /// </summary>
+    public sealed class Kehysjono
+    {
+        readonly Queue<Action> jono = new Queue<Action>();
+        readonly System.Diagnostics.Stopwatch kello = new System.Diagnostics.Stopwatch();
+        readonly double budjettiMs;
+        public Kehysjono(double budjettiMs = 2) { this.budjettiMs = budjettiMs; }
+        public int Odottaa => jono.Count;
+        public void Lisaa(Action tyo) => jono.Enqueue(tyo);
+        public void Tyhjenna() => jono.Clear();
+        /// <summary>Ajaa töitä, kunnes budjetti täyttyy (vähintään yhden, jotta jono etenee aina).</summary>
+        public void Aja()
+        {
+            if (jono.Count == 0) return;
+            kello.Restart();
+            do jono.Dequeue()(); while (jono.Count > 0 && kello.Elapsed.TotalMilliseconds < budjettiMs);
         }
     }
 }

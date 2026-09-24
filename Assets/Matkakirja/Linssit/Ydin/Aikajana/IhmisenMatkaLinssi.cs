@@ -105,11 +105,21 @@ namespace Matkakirja.Linssit.Aikajana
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             muistiLukittu = false;
+            var m = Linssirekisteri.Mittaa;
+            m?.Invoke(Tiedot.Id, "Avaa.Muisti", true);
             muisti = LueMuisti();
+            m?.Invoke(Tiedot.Id, "Avaa.Muisti", false);
+            m?.Invoke(Tiedot.Id, "Avaa.Esitys", true);
             Esitys = UusiEsitys();
+            m?.Invoke(Tiedot.Id, "Avaa.Esitys", false);
             if (!VanatValmiit) return;
-            if (muisti != null) Jatka();
-            else if (Itsestaan) Esitys.Aloita();
+            m?.Invoke(Tiedot.Id, "Avaa.Jatka", true);
+            try
+            {
+                if (muisti != null) Jatka();
+                else if (Itsestaan) Esitys.Aloita();
+            }
+            finally { m?.Invoke(Tiedot.Id, "Avaa.Jatka", false); }
         }
 
         Esitys UusiEsitys()

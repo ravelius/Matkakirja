@@ -120,37 +120,44 @@ namespace Matkakirja.Natiivi
 
         public void Nimet(IReadOnlyList<Vesinimi> lista)
         {
-            if (fontti == null || nimet.Count > 0) return;
+            if (fontti == null || nimetPyydetty) return;
+            nimetPyydetty = true;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             var materiaali = new Material(fontti.material) { renderQueue = JonoNimet };
             muut.Add(materiaali);
             double h = VesistotPallolle.Metreina(VesistotPallolle.UomanKorkeus);
-            foreach (var d in lista)
-            {
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(d.Lon, d.Lat, h));
-                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                var juuri = new GameObject("Vesinimi " + d.Teksti).transform;
-                juuri.SetParent(transform, false);
-                var t = new GameObject("Nimi").AddComponent<TextMeshPro>();
-                t.transform.SetParent(juuri, false);
-                t.font = fontti;
-                t.fontSharedMaterial = materiaali;
-                t.text = d.Teksti;
-                // css .pallolauta-vesinimi: kursiivi 13 px, tumma muste, vaalea hehku.
-                t.fontSize = NimenKoko;
-                t.fontStyle = FontStyles.Italic;
-                t.characterSpacing = 6f;   // letter-spacing 0,06 em
-                t.color = new Color32(20, 44, 68, 250);
-                t.alignment = TextAlignmentOptions.Center;
-                t.textWrappingMode = TextWrappingModes.NoWrap;
-                t.outlineWidth = 0.2f;
-                t.outlineColor = new Color32(247, 241, 226, 217);
-                t.rectTransform.sizeDelta = new Vector2(400, 40);
-                // TMP:n 3D-tekstin fonttikoko 10 = 1 yksikkö; juuren mittakaava on 1 yksikkö/piste.
-                t.transform.localScale = Vector3.one * 10f;
-                juuri.gameObject.SetActive(false);
-                nimet.Add(new Nimi { juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
-            }
+            // Nimet kehys kerrallaan (Kehysjono): vesistöjen avaus 13 ms iPadilla (ui piikit 24.9.).
+            foreach (var d in lista) jono.Lisaa(() => LuoNimi(d, keskus, materiaali, h));
+        }
+
+        readonly Kehysjono jono = new Kehysjono();
+        bool nimetPyydetty;
+
+        void LuoNimi(Vesinimi d, double3 keskus, Material materiaali, double h)
+        {
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(d.Lon, d.Lat, h));
+            double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            var juuri = new GameObject("Vesinimi " + d.Teksti).transform;
+            juuri.SetParent(transform, false);
+            var t = new GameObject("Nimi").AddComponent<TextMeshPro>();
+            t.transform.SetParent(juuri, false);
+            t.font = fontti;
+            t.fontSharedMaterial = materiaali;
+            t.text = d.Teksti;
+            // css .pallolauta-vesinimi: kursiivi 13 px, tumma muste, vaalea hehku.
+            t.fontSize = NimenKoko;
+            t.fontStyle = FontStyles.Italic;
+            t.characterSpacing = 6f;   // letter-spacing 0,06 em
+            t.color = new Color32(20, 44, 68, 250);
+            t.alignment = TextAlignmentOptions.Center;
+            t.textWrappingMode = TextWrappingModes.NoWrap;
+            t.outlineWidth = 0.2f;
+            t.outlineColor = new Color32(247, 241, 226, 217);
+            t.rectTransform.sizeDelta = new Vector2(400, 40);
+            // TMP:n 3D-tekstin fonttikoko 10 = 1 yksikkö; juuren mittakaava on 1 yksikkö/piste.
+            t.transform.localScale = Vector3.one * 10f;
+            juuri.gameObject.SetActive(false);
+            nimet.Add(new Nimi { juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
         }
 
         public void Pois() => Destroy(gameObject);
@@ -249,6 +256,7 @@ namespace Matkakirja.Natiivi
 
         void LateUpdate()
         {
+            jono.Aja();
             if (kamera == null || nimet.Count == 0) return;
             var kt = kamera.transform;
             var gt = georeferenssi.transform;

@@ -55,6 +55,7 @@ namespace Matkakirja.Natiivi
 
         public void Avaa(string url, string tyyppi)
         {
+            using var _ = LinssiOhjain.Merkki("radio", "Virta.Avaa").Auto();
             Estetty = false;
             if (!Etusija && Varattu && !Oma) { Estetty = true; auki = false; return; }
             if (omistaja != null && !Oma) omistaja.auki = false;   // edellinen menettää soittimen
@@ -158,6 +159,7 @@ namespace Matkakirja.Natiivi
 
         public void Aloita()
         {
+            using var _ = LinssiOhjain.Merkki("radio", "Viritin.Aloita").Auto();
             haiveKesto = 0;
             if (soi && lahde.isPlaying) { lahde.volume = aani; return; }
             var valmiit = new List<AudioClip>(ladatut.Values);

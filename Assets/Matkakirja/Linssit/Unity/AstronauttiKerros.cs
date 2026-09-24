@@ -124,32 +124,38 @@ namespace Matkakirja.Natiivi
                 r.sharedMaterial = pisteMateriaali;
                 r.shadowCastingMode = ShadowCastingMode.Off;
                 p.localScale = new Vector3(Hehku, Hehku, 1);
-                TextMeshPro nimi = null;
-                Vector2 koko = Vector2.zero;
-                if (fontti != null)
-                {
-                    nimi = new GameObject("Nimi").AddComponent<TextMeshPro>();
-                    nimi.transform.SetParent(juuri, false);
-                    nimi.font = fontti;
-                    nimi.text = k.Nimi;
-                    nimi.fontSize = 12;
-                    nimi.color = new Color(0.92f, 0.97f, 0.94f);
-                    nimi.alignment = TextAlignmentOptions.Center;
-                    nimi.textWrappingMode = TextWrappingModes.NoWrap;
-                    nimi.outlineWidth = 0.25f;
-                    nimi.outlineColor = new Color32(8, 14, 22, 200);
-                    nimi.rectTransform.sizeDelta = new Vector2(400, 40);
-                    nimi.transform.localScale = Vector3.one * 10f;
-                    nimi.ForceMeshUpdate();
-                    koko = nimi.GetRenderedValues(false) * 10f;
-                    nimi.enabled = false;
-                }
                 pisteet.Add(new Piste
                 {
-                    kohde = k, juuri = juuri, nimi = nimi, koko = koko,
+                    kohde = k, juuri = juuri,
                     pinta = (float3)u, normaali = (float3)math.normalize(u - keskus),
                 });
             }
+            if (fontti != null) foreach (var p in pisteet) nimijono.Lisaa(() => LuoNimi(p));
+        }
+
+        // NIMET KEHYS KERRALLAAN: 64 TextMeshPro-nimeä ja niiden mittaus samassa kehyksessä veivät iPadilla
+        // avauksesta ~26 ms (ui piikit 24.9., TMP Parse Text ja fontin OpenType-taulut). Nimet näkyvät vasta
+        // laskeutumisen jälkeen (nimet 0,25 × pallon korkeus), joten ne rakennetaan aikabudjetilla LateUpdatessa.
+        readonly Kehysjono nimijono = new Kehysjono();
+
+        void LuoNimi(Piste p)
+        {
+            var nimi = new GameObject("Nimi").AddComponent<TextMeshPro>();
+            nimi.transform.SetParent(p.juuri, false);
+            nimi.font = fontti;
+            nimi.text = p.kohde.Nimi;
+            nimi.fontSize = 12;
+            nimi.color = new Color(0.92f, 0.97f, 0.94f);
+            nimi.alignment = TextAlignmentOptions.Center;
+            nimi.textWrappingMode = TextWrappingModes.NoWrap;
+            nimi.outlineWidth = 0.25f;
+            nimi.outlineColor = new Color32(8, 14, 22, 200);
+            nimi.rectTransform.sizeDelta = new Vector2(400, 40);
+            nimi.transform.localScale = Vector3.one * 10f;
+            nimi.ForceMeshUpdate();
+            p.koko = nimi.GetRenderedValues(false) * 10f;
+            nimi.enabled = false;
+            p.nimi = nimi;
         }
 
         public void Nimet(bool nakyvissa) => nimetNakyvissa = nakyvissa;
@@ -249,6 +255,7 @@ namespace Matkakirja.Natiivi
         void LateUpdate()
         {
             if (kamera == null) return;
+            nimijono.Aja();
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
             var kt = kamera.transform;
             var gt = georeferenssi.transform;

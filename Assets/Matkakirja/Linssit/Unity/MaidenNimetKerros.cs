@@ -54,42 +54,49 @@ namespace Matkakirja.Natiivi
             if (fontti == null) return;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             materiaali ??= new Material(fontti.material) { renderQueue = JonoNimet };
-            foreach (var m in maat)
-            {
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(m.KeskusLon, m.KeskusLat, Korkeus));
-                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
-                var juuri = new GameObject("Maanimi " + m.Id).transform;
-                juuri.SetParent(transform, false);
-                var t = new GameObject("Nimi").AddComponent<TextMeshPro>();
-                t.transform.SetParent(juuri, false);
-                t.font = fontti;
-                t.fontSharedMaterial = materiaali;
-                t.text = m.Nimi;
-                // css .pallolauta-maanimi: käsiala 13 px, muste rgba(70, 51, 31, 0.85), paperihehku.
-                t.fontSize = NimenKoko;
-                t.color = new Color32(70, 51, 31, 217);
-                t.alignment = TextAlignmentOptions.Center;
-                t.textWrappingMode = TextWrappingModes.NoWrap;
-                t.outlineWidth = 0.2f;
-                t.outlineColor = new Color32(247, 237, 216, 217);
-                t.rectTransform.sizeDelta = new Vector2(400, 40);
-                // TMP:n 3D-tekstin fonttikoko 10 = 1 yksikkö; juuren mittakaava on 1 yksikkö/piste.
-                t.transform.localScale = Vector3.one * 10f;
-                juuri.gameObject.SetActive(false);
-                nimet.Add(new Nimi { juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
-            }
+            // Nimet kehys kerrallaan (Kehysjono): vertailun avaus 15 ms iPadilla (ui piikit 24.9.).
+            foreach (var m in maat) jono.Lisaa(() => LuoNimi(m, keskus));
+        }
+
+        readonly Kehysjono jono = new Kehysjono();
+
+        void LuoNimi(Maa m, double3 keskus)
+        {
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(m.KeskusLon, m.KeskusLat, Korkeus));
+            double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            var juuri = new GameObject("Maanimi " + m.Id).transform;
+            juuri.SetParent(transform, false);
+            var t = new GameObject("Nimi").AddComponent<TextMeshPro>();
+            t.transform.SetParent(juuri, false);
+            t.font = fontti;
+            t.fontSharedMaterial = materiaali;
+            t.text = m.Nimi;
+            // css .pallolauta-maanimi: käsiala 13 px, muste rgba(70, 51, 31, 0.85), paperihehku.
+            t.fontSize = NimenKoko;
+            t.color = new Color32(70, 51, 31, 217);
+            t.alignment = TextAlignmentOptions.Center;
+            t.textWrappingMode = TextWrappingModes.NoWrap;
+            t.outlineWidth = 0.2f;
+            t.outlineColor = new Color32(247, 237, 216, 217);
+            t.rectTransform.sizeDelta = new Vector2(400, 40);
+            // TMP:n 3D-tekstin fonttikoko 10 = 1 yksikkö; juuren mittakaava on 1 yksikkö/piste.
+            t.transform.localScale = Vector3.one * 10f;
+            juuri.gameObject.SetActive(false);
+            nimet.Add(new Nimi { juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
         }
 
         public void Pois() => Destroy(gameObject);
 
         void Tyhjenna()
         {
+            jono.Tyhjenna();
             foreach (var n in nimet) if (n.juuri != null) Destroy(n.juuri.gameObject);
             nimet.Clear();
         }
 
         void LateUpdate()
         {
+            jono.Aja();
             if (kamera == null || nimet.Count == 0) return;
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
