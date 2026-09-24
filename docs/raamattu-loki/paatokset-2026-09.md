@@ -4743,3 +4743,7 @@ Natiivisepän arvio: viivaverkko 30–100k janaa, 4–12 piirtokutsua, < 13 Mt, 
 ## LAITETESTAAJA (ae18c8448, PR #3126): TOPOGRAFIALINSSI VAHVISTETTU KUVAPARILLA; PELIKOODARI AJAA b12-2:N OMILLA SIMEILLA; JULISTERIVI/TUTKI: WEB-FLOW LOYTYI, NATIIVIN KUVAPARI PUUTTUU (KOSKETUSVIIVE LAUKKU-PANEELISSA?); SIVULOYDOS: WEBIN OMAN KAUPUNGIN NAPAUTUS AVAA DOKUMENTOIMATTOMAN 'LOYTOKORTTI'-POSTIKORTIN (24.9.2026 klo 23.43)
 
 Laitetestaaja klo 23.4x: rivi 30 topografia PASS mitattuna; Tutki näyttää webissä vaativan aktiivisen aarrepisteen (tarkistus Pelikoodarilta, suoraan); ~19 EI TARKISTETTU -riviä auki. Fable: löytökortti-havainto Pelikoodarille tarkistettavaksi (onko tarkoituksellinen webin toiminto — jos on, natiivin pariteettilistaan uusi rivi).
+
+## JULKAISIJAN JONO TYHJA: MAINISSA v2197–v2208, SISALTOJUNA #3125 (12 PR:AA, v2207), #3124 TESTFLIGHT KAANNOSKOPIOSTA NATIIVISEPAN LUKOLLA, MUUTOSLOKI #3121; LUOVUTUS -20260924-yo.md (#3127), JULKAISIJA NOLLAA ITSENSA — MALLI PYSYY OPUKSELLA (24.9.2026 klo 23.47)
+
+Julkaisija klo 23.4x: jono ajettu tyhjäksi, ensimmäinen sisältöjuna toimi (12 PR:ää yhdellä versionostolla). Nollaus omalla luovutuksella; Postivahti lähettää aloitusviestin (uusi Julkaisija mergeää ensin #3127; malli Opus omistajan klo 22.3x linjauksen mukaan, ei Sonnet).
