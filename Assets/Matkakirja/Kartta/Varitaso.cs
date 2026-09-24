@@ -34,11 +34,10 @@ namespace Matkakirja
 
         public Cesium3DTileset pallo;
         /// <summary>
-        /// Huntu kartalle (löydös 22, Fablen korjaus 24.9. klo 12.1x: webissä EI ole huntua muiden maiden päällä —
-        /// maan ulkopuolella paljas pohja, ja maa erottuu vain rajaviivasta, Maaraja). false = komponentti vain
-        /// seuraa nykyistä maata (Kohde/Maa ääriviivalle) eikä lisää raster-kerrosta.
+        /// Huntu kartalle (löydös 22, linja A klo 12.2x: webin kermasääntö muiden maiden maalle). false = komponentti
+        /// vain seuraa nykyistä maata (Kohde/Maa ääriviivalle) eikä lisää raster-kerrosta.
         /// </summary>
-        public bool huntu;
+        public bool huntu = true;
 
         /// <summary>Maa (ISO3), jonka väritaso on nyt kartalla, tai null.</summary>
         public string Maa { get; private set; }
