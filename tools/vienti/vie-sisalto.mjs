@@ -155,8 +155,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.29 maarajat: renkaat rajattu webin laudan maamuodon alueelle (Natiiviseppä:
  *        NOR ilman Huippuvuoria kuten webissä), muutRenkaat ja kokoBbox
  *        (tools/vienti/maarajat.mjs rajaaWebinMuotoon).
+ *   1.30 Pelikoodarin tilaus: aanitaulut (siirtyma, tila-/paikkaraita, pulu)
+ *        kentät päätasolle, reitit.maksu, laattatyyppeihin nimi/symboli/arvo/vari.
  */
-export const SKEEMAVERSIO_TARKKA = '1.29';
+export const SKEEMAVERSIO_TARKKA = '1.30';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

@@ -62,4 +62,37 @@ export function tyypitaLoput(kokoelmat) {
   }
   kokoelmat.fokusvirrat.kuvaus += ' Skeema 1.26: päätasolla kohtaamispiste { nimi, laudat { <lauta>: { x, y } } } | null '
     + 'ja sahketehtava (sellaisenaan: id, hahmo, sahke, aukot…) | null. Lehtitehtävien palkinnot: kokoelma lehtitehtavat.';
+
+  // Skeema 1.30 (Pelikoodarin tilaus 24.9.2026): äänitaulujen, reittien ja laattatyyppien loput.
+  const aaniKentat = {
+    siirtyma: [['ryhma'], ['ampari'], ['oma'], ['voima'], ['nousuMs'], ['laskuMs']],
+    tilaraita: [['tunnus'], ['kuvaus']],
+    paikkaraita: [['tunnus'], ['kuvaus']],
+    pulu: [['tunnus'], ['kesto'], ['voima']],
+  };
+  for (const a of kokoelmat.aanitaulut.alkiot) {
+    if (aaniKentat[a.laji]) Object.assign(a, poimi(a.data, aaniKentat[a.laji]));
+  }
+  kokoelmat.aanitaulut.kuvaus += ' Skeema 1.30: päätasolla siirtyma: ryhma, ampari, oma, voima, nousuMs, laskuMs; '
+    + 'tilaraita ja paikkaraita: tunnus, kuvaus; pulu: tunnus, kesto, voima.';
+
+  const merimaksu = kokoelmat.saannot.alkiot.find((s) => s.id === 'SEA_FEE')?.arvo ?? null;
+  for (const a of kokoelmat.reitit.alkiot) {
+    a.maksu = a.laji === 'sea' ? (a.data?.fee ?? merimaksu) : 0;
+  }
+  kokoelmat.reitit.kuvaus += ' Skeema 1.30: maksu = matkan hinta (js/rules.js: merireitti data.fee ?? SEA_FEE, muut 0).';
+
+  // Tyyppiolioihin suomenkieliset avaimet englanninkielisten rinnalle; 2.0 jättää vain suomenkieliset.
+  const tyyppi = (t) => (t && typeof t === 'object' ? {
+    ...t, nimi: nollaksi(t.name), symboli: nollaksi(t.symbol), arvo: nollaksi(t.value), vari: nollaksi(t.color),
+  } : t);
+  for (const a of kokoelmat.laatat.alkiot) {
+    if (a.tyypit) a.tyypit = Object.fromEntries(Object.entries(a.tyypit).map(([k, t]) => [k, tyyppi(t)]));
+    if (a.mannerTyypit) {
+      a.mannerTyypit = Object.fromEntries(Object.entries(a.mannerTyypit)
+        .map(([m, tt]) => [m, Object.fromEntries(Object.entries(tt ?? {}).map(([k, t]) => [k, tyyppi(t)]))]));
+    }
+  }
+  kokoelmat.laatat.kuvaus += ' Skeema 1.30: tyypit ja mannerTyypit sisältävät myös nimi, symboli, arvo ja vari '
+    + '(= name, symbol, value, color; 2.0 jättää vain suomenkieliset).';
 }

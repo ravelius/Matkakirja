@@ -63,6 +63,7 @@ export const VAATIMUKSET = {
   '1.27': ['moduuli:js/tyohuone-raamattu.js', 'moduuli:js/tyohuone-tilanne.js', 'moduuli:js/tyohuone-pelit.js'],
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
+  '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
 };
 
 export function vertaa(a, b) {

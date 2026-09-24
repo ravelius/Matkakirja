@@ -7,12 +7,14 @@
   "1.26": "6ce8cb0b49deb75c",
   "1.27": "6ce8cb0b49deb75c",
   "1.28": "f06631f1168799e5",
-  "1.29": "5333684225d7cb2b"
+  "1.29": "5333684225d7cb2b",
+  "1.30": "4eacd12cb5266253"
  },
  "uusin": {
-  "skeemaversio": "1.29",
+  "skeemaversio": "1.30",
   "kokoelmat": {
    "aanitaulut": [
+    "ampari",
     "data",
     "id",
     "juuri",
@@ -23,17 +25,22 @@
     "kuvaus",
     "lahde",
     "laji",
+    "laskuMs",
     "lisenssi",
     "naytte",
     "nimi",
+    "nousuMs",
+    "oma",
     "paikka",
     "porras",
+    "ryhma",
     "synteesi",
     "tekija",
     "tunnus",
     "tyyppi",
     "url",
-    "vakio"
+    "vakio",
+    "voima"
    ],
    "elaintayt": [
     "data",
@@ -468,6 +475,7 @@
     "data",
     "id",
     "laji",
+    "maksu",
     "via"
    ],
    "saannot": [

@@ -656,7 +656,10 @@ test('skeema 1.21: fokusvirrat ja laatat päätasolla', () => {
   assert.match(ateena.virta.matkakirja.luentakuva.url, /^https:\/\//);
   assert.deepEqual(ateena.lehtitehtavat, ['ateena:aarre', 'ateena:juliste']);
   const [l] = JSON.parse(tiedostot.get('kokoelmat/laatat.json')).alkiot;
-  assert.deepEqual(l.tyypit, l.data.types);
+  // 1.30: tyyppiolioissa myös nimi, symboli, arvo ja vari; alkuperäiset avaimet ennallaan.
+  for (const [id, t] of Object.entries(l.data.types)) {
+    for (const [k, v] of Object.entries(t)) assert.deepEqual(l.tyypit[id][k], v, `${id}.${k}`);
+  }
   assert.deepEqual(l.maarat, l.data.counts);
 });
 
@@ -1057,4 +1060,17 @@ test('skeema 1.29: maarajat rajattu webin maamuotoon (NOR ilman Huippuvuoria)', 
   assert.ok(m.get('FRA').bbox[0] > -6 && m.get('FRA').kokoBbox[0] < -60);
   assert.ok(m.get('FIN').muutRenkaat.length === 0);
   assert.ok(m.get('ISL').renkaat.length > 0 && m.get('MYS').renkaat.length > 0, 'ilman webin muotoa kaikki renkaat');
+});
+
+test('skeema 1.30: äänitaulut, reittien maksu ja laattatyyppien suomenkieliset avaimet', () => {
+  const k = (n) => JSON.parse(tiedostot.get(`kokoelmat/${n}.json`)).alkiot;
+  const a = k('aanitaulut');
+  assert.ok(a.filter((x) => x.laji === 'siirtyma').every((x) => x.ryhma === x.data.ryhma && 'nousuMs' in x));
+  assert.ok(a.filter((x) => x.laji === 'tilaraita' || x.laji === 'paikkaraita').every((x) => x.tunnus));
+  const r = k('reitit');
+  assert.ok(r.filter((x) => x.laji === 'sea').every((x) => x.maksu === 100));
+  assert.ok(r.filter((x) => x.laji !== 'sea').every((x) => x.maksu === 0));
+  const [l] = k('laatat');
+  assert.equal(l.tyypit.star.nimi, l.tyypit.star.name);
+  assert.equal(l.mannerTyypit.europe.star.nimi, l.mannerTyypit.europe.star.name);
 });
