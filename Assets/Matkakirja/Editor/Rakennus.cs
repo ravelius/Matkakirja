@@ -96,6 +96,9 @@ namespace Matkakirja.Editori
             kerrokset.merkit = merkit;
             kerrokset.reitit = reitit;
             kerrokset.napakannet = kannet;
+            var varitaso = georefGo.AddComponent<Varitaso>();
+            varitaso.pallo = pallo;
+            kerrokset.varitaso = varitaso;
             var maat = georefGo.AddComponent<MaaKartta>();
             maat.georeferenssi = georef;
             maat.kerrokset = kerrokset;
