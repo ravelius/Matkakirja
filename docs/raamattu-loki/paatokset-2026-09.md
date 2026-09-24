@@ -3271,3 +3271,7 @@ Churchill-nosto kun #3016 mainissa.
 ## LAITETESTAAJA: koetila mannerlento TOIMII; TESTIAUTOMAATION rivi-KOMENTO EI TOIMI MANNERLENNOISSA — PeliOhjain.AvaaMannerlennot() EI ASETA riviValittu-KASITTELIJAA (NaytaRivit TEKEE) → PELIKOODARI KORJAA; KOSKEE VAIN AUTOMAATIOTA, PELAAJAN KOSKETUS TOIMII; B7 KOHTA 3 ODOTTAA (24.9.2026 klo 09.18)
 
 Korjausehdotus PR #3034:n raportissa.
+
+## NATIIVISEPPA: MERGE-ERA PROTO-MASTER c633408 = NATIIVI-UI:N lehtiporras, paataso JA lehtiotsikko (UI-PIIKKIKORJAUKSET, PAATASON LUKIJAT, LEHDEN OTSIKKORIVI); TARKISTA 0; iPADILLA KAUPUNKIKORTTI, LEHDEN KANSI JA AIHESIVU, MAALEHTI JA NOSTO OIKEIN; ui jatka ALLE 16 ms (proto-3d/lokit/piikit3-20260924/) (24.9.2026 klo 09.23)
+
+Fable: ei uutta buildia vielä — build 5 (7878cbc) on ajossa; seuraava build kun pariteettierä 1:n loput korjaukset ovat masterissa.
