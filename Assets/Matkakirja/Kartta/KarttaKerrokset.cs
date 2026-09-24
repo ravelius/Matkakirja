@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -24,6 +24,8 @@ namespace Matkakirja
         public NapaKannet napakannet;
         /// <summary>Nykyisen maan väritaso (kerma muualle), Cesiumin raster-paikka 2.</summary>
         public Varitaso varitaso;
+        /// <summary>Pelaajan maan ääriviiva (web korostuskehä), samaa maata kuin väritaso.</summary>
+        public Maaraja maaraja;
 
         /// <summary>Linssin rasterin näkyvä alue on ladattu (avain).</summary>
         public event Action<string> KerrosValmis;
@@ -131,7 +133,13 @@ namespace Matkakirja
                     if (pallo != null)
                         pallo.tilesetSource = nakyy ? CesiumDataSource.FromUrl : CesiumDataSource.FromEllipsoid;
                     break;
-                case "kaupungit": if (merkit != null) merkit.merkitNakyvat = nakyy; break;
+                case "kaupungit":
+                    if (merkit != null) merkit.merkitNakyvat = nakyy;
+                    // Web: maan kehä pois linssin ajaksi samalla portilla kuin kaupunkipisteet
+                    // (js/pallolauta/lauta.js linssiPaalla; LinssiOhjain.Pelikerrokset ja maatila piilottavat kaupungit).
+                    if (maaraja != null) maaraja.Linssit(!nakyy);
+                    break;
+                case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
                 case "reitit": if (reitit != null) reitit.Nakyvat(nakyy); break;
                 case "napakannet": if (napakannet != null) napakannet.Nakyvat(nakyy); break;

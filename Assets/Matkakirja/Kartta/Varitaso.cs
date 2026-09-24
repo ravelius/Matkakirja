@@ -13,7 +13,7 @@ namespace Matkakirja
     /// &lt;ISO&gt;/laatat.json). Maan sisällä laatta on lähes läpinäkyvä, joten 23a-pohja näkyy siinä.
     ///
     /// Yksi CesiumUrlTemplateRasterOverlay pohjan päällä (materialKey "2"), osoite vaihdetaan maan
-    /// vaihtuessa (NostoKerros.NykyinenMaa; matkalla viimeisin maa säilyy). Alueen ulkopuoliset laatat
+    /// vaihtuessa (NostoKerros.NykyinenMaa tai nappulan lähimmän kaupungin maa; matkalla ei vaihdu). Alueen ulkopuoliset laatat
     /// laattapalvelin täyttää itse samalla kermalla ilman verkkoa (Laattapalvelin.VariAlue), koska
     /// sarjassa on vain alueen laatat. Maa ilman sarjaa → ei kerrosta (web: väritaso ei sammuta karttaa).
     ///
@@ -22,8 +22,8 @@ namespace Matkakirja
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
-        /// <summary>Karttasepän kierros k2: alueen ulkopuoli ja puuttuvat lähdelaatat täytenä kermana.</summary>
-        public const string Versio = "2026-09-14b-tasoitus-k2";
+        /// <summary>Karttasepän kierros k3: alueen ulkopuoli ja puuttuvat lähdelaatat täytenä kermana, maa läpinäkyvä (k2:ssa maakin oli kermaa).</summary>
+        public const string Versio = "2026-09-14b-tasoitus-k3";
         public const string Kansio = "julisteet/pallo/vari/" + Versio + "/";
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
@@ -34,6 +34,12 @@ namespace Matkakirja
         public string Maa { get; private set; }
         /// <summary>Pakotettu maa testaukseen (Komennot: vari &lt;ISO&gt;), null = pelaajan maa.</summary>
         public string Pakotettu { get; set; }
+        /// <summary>
+        /// Maa, jonka väritasoa nyt tavoitellaan (pakotettu tai pelaajan; matkalla edellinen), myös
+        /// ennen kuin sarja on ladattu tai jos maalla ei ole sarjaa. Maaraja seuraa tätä: webissä
+        /// korostuskehä ja väritaso lukevat saman maan (js/pallolauta/lauta.js korostusIso).
+        /// </summary>
+        public string Kohde => haluttu;
 
         CesiumUrlTemplateRasterOverlay kerros;
         string haluttu, ladattu;
@@ -46,20 +52,34 @@ namespace Matkakirja
         [System.Serializable] class Tasot { public int min, max; }
         [System.Serializable] class Luettelo { public Tieto varitaso; public Tasot tasot; }
 
+        float seuraava;
+
         void Update()
         {
             string maa = Pakotettu;
             if (string.IsNullOrEmpty(maa))
             {
-                var nk = NostoKerros.Instanssi;
-                string nyt = nk != null ? nk.NykyinenMaa : null;
-                // Matkalla (ei lähintä kaupunkia) edellinen maa säilyy, ettei huntu välky lennon aikana.
-                maa = !string.IsNullOrEmpty(nyt) ? nyt : haluttu;
+                // Web: väritason maa vaihtuu saapuessa, ei matkalla ohitettujen kaupunkien mukaan.
+                var k = KarttaKerrokset.Instanssi;
+                if (k != null && k.nappula != null && k.nappula.Liikkeessa) return;
+                if (Time.unscaledTime < seuraava) return;
+                seuraava = Time.unscaledTime + 0.5f;
+                maa = PelaajanMaa(k) ?? haluttu;
             }
             if (maa == haluttu) return;
             haluttu = maa;
             if (haku != null) StopCoroutine(haku);
             haku = StartCoroutine(Vaihda(maa));
+        }
+
+        /// <summary>Nostokerroksen maa, tai sama sääntö suoraan: nappulan lähimmän kaupungin maa.</summary>
+        static string PelaajanMaa(KarttaKerrokset k)
+        {
+            var nk = NostoKerros.Instanssi;
+            if (nk != null && !string.IsNullOrEmpty(nk.NykyinenMaa)) return nk.NykyinenMaa;
+            if (k == null || k.nappula == null || k.merkit == null || !k.nappula.Nakyy) return null;
+            string id = k.merkit.LahinId(k.nappula.Lat, k.nappula.Lon, 0.3);
+            return id != null ? k.merkit.KaupunginMaa(id) : null;
         }
 
         IEnumerator Vaihda(string maa)

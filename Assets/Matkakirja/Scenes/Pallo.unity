@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &309492419
+--- !u!1 &387102952
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,49 +127,153 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 309492421}
-  - component: {fileID: 309492420}
+  - component: {fileID: 387102957}
+  - component: {fileID: 387102956}
+  - component: {fileID: 387102955}
+  - component: {fileID: 387102954}
+  - component: {fileID: 387102953}
   m_Layer: 0
-  m_Name: Savujana
-  m_TagString: Untagged
+  m_Name: Kamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &309492420
+--- !u!114 &387102953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309492419}
+  m_GameObject: {fileID: 387102952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585f570cf38d94fc9bf3a61ef239feb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3efb14ef7fe0d49ec8f0d47a158b54ce, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Savujana
-  georeferenssi: {fileID: 1396822250}
-  materiaali: {fileID: 2100000, guid: 51d84df18f5124b298db2059b653ed6c, type: 2}
-  elinaika: 5
-  naytevali: 0.05
-  leveysPx: 7
-  vari: {r: 1, g: 0.98, b: 0.94, a: 0.85}
---- !u!4 &309492421
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KehysMittari
+  pallo: {fileID: 387102955}
+  jakso: 5
+--- !u!114 &387102954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387102952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cfb3c41238e4e1ca710f83a7c4ab72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Komennot
+  kierto: {fileID: 387102955}
+  merkit: {fileID: 1942458907}
+--- !u!114 &387102955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387102952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a932395275041a298894fc205565e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.PalloKierto
+  georeferenssi: {fileID: 1942458909}
+  pituus: 10
+  leveys: 25
+  korkeus: 0
+  nopeus: 6
+  liukuAika: 0.35
+  minKaari: 3.6
+  taytto: 0.92
+  maxLeveys: 80
+  kallistus: 0
+  maxKallistus: 60
+  suuntima: 0
+  katseKorkeus: 0
+  palautusAika: 0.6
+  kallistusRajaKm: 3000
+  kallistusHerkkyys: 0.25
+  napautusLiike: 10
+  napautusAika: 0.35
+  ajonRamppi: 0.3
+  porttiNopeus: 7.258064516129032
+  porttiLeveys: 25
+  porttiPituus: 0
+  porttiYlitys: 1.15
+  porttiSumennusPt: 6
+  porttiHaivytysS: 0.4
+  sumennusMateriaali: {fileID: 2100000, guid: 77662e97b3cd842f0b2e849643ba400f, type: 2}
+  KaukorajaVahintaan: 0
+--- !u!20 &387102956
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387102952}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.1, g: 0.08, b: 0.06, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 198909.17
+  far clip plane: 22701732
+  field of view: 50
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &387102957
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309492419}
+  m_GameObject: {fileID: 387102952}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.1391247, y: -0.7478862, z: 0.16580237, w: 0.62755096}
+  m_LocalPosition: {x: 14572851, y: 6882207, z: 2569586.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1396822262}
+  m_Children:
+  - {fileID: 2081927219}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &403305345
+--- !u!1 &809961794
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,9 +281,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 403305348}
-  - component: {fileID: 403305346}
-  - component: {fileID: 403305347}
+  - component: {fileID: 809961797}
+  - component: {fileID: 809961795}
+  - component: {fileID: 809961796}
   m_Layer: 0
   m_Name: Pallo
   m_TagString: Untagged
@@ -187,13 +291,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &403305346
+--- !u!114 &809961795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403305345}
+  m_GameObject: {fileID: 809961794}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 844ac86b07dcfa3468f56da55d787510, type: 3}
@@ -229,13 +333,13 @@ MonoBehaviour:
   _updateInEditor: 1
   _logSelectionStats: 0
   _createPhysicsMeshes: 0
---- !u!114 &403305347
+--- !u!114 &809961796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403305345}
+  m_GameObject: {fileID: 809961794}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19f3030f151b6184fb5d0e96c8c582dc, type: 3}
@@ -261,22 +365,22 @@ MonoBehaviour:
   _tileWidth: 256
   _tileHeight: 256
   _requestHeaders: []
---- !u!4 &403305348
+--- !u!4 &809961797
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403305345}
+  m_GameObject: {fileID: 809961794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1396822262}
+  m_Father: {fileID: 1942458922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &480430710
+--- !u!1 &1666999237
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,9 +388,480 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 480430711}
-  - component: {fileID: 480430713}
-  - component: {fileID: 480430712}
+  - component: {fileID: 1666999239}
+  - component: {fileID: 1666999238}
+  m_Layer: 0
+  m_Name: "K\xE4ytt\xF6liittym\xE4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1666999238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666999237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bfbd0a510e9416b9a614e4f40aeca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NimiKortti
+  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
+  pohja: {r: 0.9529412, g: 0.91764706, b: 0.827451, a: 0.9490196}
+  muste: {r: 0.2, g: 0.15294118, b: 0.105882354, a: 1}
+  haive: 0.25
+--- !u!4 &1666999239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666999237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1896919410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896919412}
+  - component: {fileID: 1896919411}
+  m_Layer: 0
+  m_Name: Savujana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1896919411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896919410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585f570cf38d94fc9bf3a61ef239feb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Savujana
+  georeferenssi: {fileID: 1942458909}
+  materiaali: {fileID: 2100000, guid: 51d84df18f5124b298db2059b653ed6c, type: 2}
+  elinaika: 5
+  naytevali: 0.05
+  leveysPx: 7
+  vari: {r: 1, g: 0.98, b: 0.94, a: 0.85}
+--- !u!4 &1896919412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896919410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1942458922}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1942458906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942458922}
+  - component: {fileID: 1942458909}
+  - component: {fileID: 1942458921}
+  - component: {fileID: 1942458907}
+  - component: {fileID: 1942458908}
+  - component: {fileID: 1942458920}
+  - component: {fileID: 1942458919}
+  - component: {fileID: 1942458918}
+  - component: {fileID: 1942458917}
+  - component: {fileID: 1942458916}
+  - component: {fileID: 1942458915}
+  - component: {fileID: 1942458914}
+  - component: {fileID: 1942458913}
+  - component: {fileID: 1942458912}
+  - component: {fileID: 1942458911}
+  - component: {fileID: 1942458910}
+  m_Layer: 0
+  m_Name: CesiumGeoreference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1942458907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7ecae08cac94735b451bfb89713e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KaupunkiMerkit
+  georeferenssi: {fileID: 1942458909}
+  kamera: {fileID: 387102956}
+  kierto: {fileID: 387102955}
+  kortti: {fileID: 1666999238}
+  reitit: {fileID: 1942458908}
+  merkitNakyvat: 1
+  nimiotNakyvat: 1
+  rengasMateriaali: {fileID: 2100000, guid: c742752be49c64c498a702850a66d25b, type: 2}
+  rengasSade: 27
+  rengasPaksuus: 2.6
+  rengasValittuVari: {r: 0.9098039, g: 0.69803923, b: 0.23529412, a: 1}
+  rengasValittuPaksuus: 3
+  saapumisKaari: 18.6
+  saapumisKesto: 1.4
+  osumaSade: 22
+  rakennusKehys: 24
+  pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
+  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
+  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
+  piste: 9
+  tarkeaPiste: 13
+  kirjain: 13
+  tarkeaKirjain: 15
+  valistys: 3
+  nosto: 5000
+  maastoKorkeudet: 0
+  pallo: {fileID: 0}
+--- !u!114 &1942458908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a3dc470a62a48a3acd96771aad4b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Reitit
+  georeferenssi: {fileID: 1942458909}
+  maa: {fileID: 2100000, guid: 1f71a34cc22614d2883a051e44f6ae93, type: 2}
+  meri: {fileID: 2100000, guid: 3a13c7703b28e48e085277bc2d4b5c48, type: 2}
+  lento: {fileID: 2100000, guid: 532cfccab6a86432db49b174a9d6dc80, type: 2}
+  korostus: {fileID: 2100000, guid: 360cf547260fe4a1382116c0266876e8, type: 2}
+  viivanKorkeus: 5000
+  kaarenKorkeus: 0.5
+--- !u!114 &1942458909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1305e05d46db92498ce698a4c366a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CesiumForUnity::CesiumForUnity.CesiumGeoreference
+  _ellipsoidOverride: {fileID: 0}
+  _originPlacement: 0
+  _originAuthority: 0
+  _latitude: 39.736401
+  _longitude: -105.25737
+  _height: 2250
+  _ecefX: -1292934.4950404565
+  _ecefY: -4740026.104285267
+  _ecefZ: 4056960.1513377777
+  _scale: 1
+--- !u!114 &1942458910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d7711d9f67f40e79c0367d572351fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NostoKerros
+  kierto: {fileID: 387102955}
+  merkit: {fileID: 1942458907}
+  nappula: {fileID: 1942458913}
+  vahinOsuus: 0.5
+  katto: 120
+  porttiViive: 1.4
+  syttyminenS: 0.7
+  lahizoomLeveys: 4
+--- !u!114 &1942458911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932e13943127440158d39dfecfdcb938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Karttapisteet
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 0}
+  merkit: {fileID: 0}
+  materiaali: {fileID: 2100000, guid: 0dc2aa0cf33574e8393d791ce96f1e0d, type: 2}
+  sade: 14
+  osumaSade: 22
+  nosto: 5000
+  sykeJakso: 1.6
+  sykeMaara: 0.2
+--- !u!114 &1942458912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2423f26d91b9d4870990ec99e8ffca95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.AiheValot
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 0}
+  materiaali: {fileID: 2100000, guid: 0dc2aa0cf33574e8393d791ce96f1e0d, type: 2}
+  sade: 12
+  korkeus: 5000
+  osumaSade: 22
+  merkit: {fileID: 0}
+--- !u!114 &1942458913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd67d8dcb32b413a9f95c347d2c0915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Nappula
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 0}
+  materiaali: {fileID: 2100000, guid: c9d2aec7a26bd4faba83478426a07248, type: 2}
+  koko: 36
+  nosto: 5000
+  vari: {r: 0.6039216, g: 0.23137255, b: 0.17254902, a: 1}
+  seuraaKamera: 1
+  koneKoko: 44
+  lahtoKaari: 18.6
+  lahtoZoomS: 2.5
+  koneVari: {r: 0.6039216, g: 0.23137255, b: 0.17254902, a: 1}
+  koneMalli: {fileID: 919132149155446097, guid: 9ebbf0b3cabf447bb865075d6842b443, type: 3}
+  koneMateriaali: {fileID: 2100000, guid: ac6bad52f2abf4e7ba08071e9d4d2b5d, type: 2}
+  raitaMateriaali: {fileID: 2100000, guid: fc3ac6a1c37d64a4d8fb1b5774518776, type: 2}
+  ikkunaMateriaali: {fileID: 2100000, guid: e03f5a5bf747046aa862158d9813f5ce, type: 2}
+  malliPx: 110
+  savu: {fileID: 1896919411}
+  aurinko: {fileID: 2081927220}
+--- !u!114 &1942458914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c196141dae14b668f9b7a2c7240b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Maaraja
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 387102955}
+  varitaso: {fileID: 1942458917}
+  materiaali: {fileID: 2100000, guid: 3a1d37140a6334d289e3baddb964312a, type: 2}
+  korkeus: 0
+--- !u!114 &1942458915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5584a6f2e15e5408c819e86002fdf422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.MaaKartta
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 0}
+  kerrokset: {fileID: 1942458918}
+  materiaali: {fileID: 2100000, guid: 22e5f1952ef674c679346a17dea03253, type: 2}
+  leveys: 4096
+  korkeus: 0
+  toleranssi: 0.1
+  kokoelma: maakuntarajat
+  piilotaKaupungit: 0
+  jonoLisa: 1
+  rajaus: {x: -12, y: 35, z: 32, w: 61}
+  rajaMateriaali: {fileID: 2100000, guid: 3a1d37140a6334d289e3baddb964312a, type: 2}
+--- !u!114 &1942458916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5584a6f2e15e5408c819e86002fdf422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.MaaKartta
+  georeferenssi: {fileID: 1942458909}
+  kierto: {fileID: 0}
+  kerrokset: {fileID: 1942458918}
+  materiaali: {fileID: 2100000, guid: 22e5f1952ef674c679346a17dea03253, type: 2}
+  leveys: 4096
+  korkeus: 0
+  toleranssi: 0.5
+  kokoelma: maarajat
+  piilotaKaupungit: 1
+  jonoLisa: 0
+  rajaus: {x: 0, y: 0, z: 0, w: 0}
+  rajaMateriaali: {fileID: 0}
+--- !u!114 &1942458917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bec99ff948144a0eb4a5582f53a2ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Varitaso
+  pallo: {fileID: 809961795}
+--- !u!114 &1942458918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63381173662249ec9d9d5f63ad9f210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KarttaKerrokset
+  pallo: {fileID: 809961795}
+  pohja: {fileID: 809961796}
+  merkit: {fileID: 1942458907}
+  reitit: {fileID: 1942458908}
+  napakannet: {fileID: 1942458921}
+  varitaso: {fileID: 1942458917}
+  maaraja: {fileID: 1942458914}
+  maaKartta: {fileID: 1942458916}
+  maakunnat: {fileID: 1942458915}
+  nappula: {fileID: 1942458913}
+  pisteet: {fileID: 1942458911}
+--- !u!114 &1942458919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3404d6b5f4f77461e9c32cf758d81d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Alueet
+  rasteriPohja: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/{z}/{x}/{y}.jpg
+  maastoLayer: https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json
+  rinnakkain: 8
+  rinnakkainKiireessa: 2
+  kierto: {fileID: 0}
+--- !u!114 &1942458920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a3098ea73ac48b398036b6d7bfd24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Laattapalvelin
+  rinnakkain: 12
+  valimuistiMt: 600
+  varavari:
+    serializedVersion: 2
+    rgba: 4290498777
+--- !u!114 &1942458921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4586f549f226f42acbed6ebd7e9c1834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NapaKannet
+  georeferenssi: {fileID: 1942458909}
+  pohjoinen: {fileID: 2100000, guid: 31340ecd3ed5642ceb46c82452d8daca, type: 2}
+  etela: {fileID: 2100000, guid: 7668f294da8ea421e8f6906dbfe95ec7, type: 2}
+  taysi: 84
+  reuna: 82.5
+  korkeus: 1500
+  sektoreita: 96
+  kehia: 16
+--- !u!4 &1942458922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942458906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 809961797}
+  - {fileID: 1896919412}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2081927218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081927219}
+  - component: {fileID: 2081927221}
+  - component: {fileID: 2081927220}
   m_Layer: 0
   m_Name: Valo
   m_TagString: Untagged
@@ -294,47 +869,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &480430711
+--- !u!4 &2081927219
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480430710}
+  m_GameObject: {fileID: 2081927218}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08641011, y: -0.13002951, z: 0.011376107, w: 0.98767215}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1885741731}
+  m_Father: {fileID: 387102957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &480430712
+--- !u!114 &2081927220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480430710}
+  m_GameObject: {fileID: 2081927218}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad353e1886254825b34f4c6255d3960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Aurinko
-  georeferenssi: {fileID: 1396822250}
-  valo: {fileID: 480430713}
+  georeferenssi: {fileID: 1942458909}
+  valo: {fileID: 2081927221}
   kameraKierto: {x: 10, y: -15, z: 0}
   siirtymaS: 1.5
   sumuVari: {r: 0.86, g: 0.8, b: 0.68, a: 1}
   taivas: {fileID: 2100000, guid: 78d48849eb63c4c9c98dbd11d02eaa5a, type: 2}
   paikallinenTunti: 10
---- !u!108 &480430713
+--- !u!108 &2081927221
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480430710}
+  m_GameObject: {fileID: 2081927218}
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
@@ -393,554 +968,10 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &1163526153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1163526155}
-  - component: {fileID: 1163526154}
-  m_Layer: 0
-  m_Name: "K\xE4ytt\xF6liittym\xE4"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1163526154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163526153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0bfbd0a510e9416b9a614e4f40aeca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NimiKortti
-  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
-  pohja: {r: 0.9529412, g: 0.91764706, b: 0.827451, a: 0.9490196}
-  muste: {r: 0.2, g: 0.15294118, b: 0.105882354, a: 1}
-  haive: 0.25
---- !u!4 &1163526155
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163526153}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1396822247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1396822262}
-  - component: {fileID: 1396822250}
-  - component: {fileID: 1396822261}
-  - component: {fileID: 1396822248}
-  - component: {fileID: 1396822249}
-  - component: {fileID: 1396822260}
-  - component: {fileID: 1396822259}
-  - component: {fileID: 1396822258}
-  - component: {fileID: 1396822257}
-  - component: {fileID: 1396822256}
-  - component: {fileID: 1396822255}
-  - component: {fileID: 1396822254}
-  - component: {fileID: 1396822253}
-  - component: {fileID: 1396822252}
-  - component: {fileID: 1396822251}
-  m_Layer: 0
-  m_Name: CesiumGeoreference
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1396822248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a7ecae08cac94735b451bfb89713e1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KaupunkiMerkit
-  georeferenssi: {fileID: 1396822250}
-  kamera: {fileID: 1885741730}
-  kierto: {fileID: 1885741729}
-  kortti: {fileID: 1163526154}
-  reitit: {fileID: 1396822249}
-  merkitNakyvat: 1
-  nimiotNakyvat: 1
-  saapumisKaari: 18.6
-  saapumisKesto: 1.4
-  osumaSade: 22
-  rakennusKehys: 24
-  pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
-  fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
-  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
-  piste: 9
-  tarkeaPiste: 13
-  kirjain: 13
-  tarkeaKirjain: 15
-  valistys: 3
-  nosto: 5000
-  maastoKorkeudet: 0
-  pallo: {fileID: 0}
---- !u!114 &1396822249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a3dc470a62a48a3acd96771aad4b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Reitit
-  georeferenssi: {fileID: 1396822250}
-  maa: {fileID: 2100000, guid: 1f71a34cc22614d2883a051e44f6ae93, type: 2}
-  meri: {fileID: 2100000, guid: 3a13c7703b28e48e085277bc2d4b5c48, type: 2}
-  lento: {fileID: 2100000, guid: 532cfccab6a86432db49b174a9d6dc80, type: 2}
-  korostus: {fileID: 2100000, guid: 360cf547260fe4a1382116c0266876e8, type: 2}
-  viivanKorkeus: 5000
-  kaarenKorkeus: 0.5
---- !u!114 &1396822250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1305e05d46db92498ce698a4c366a5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CesiumForUnity::CesiumForUnity.CesiumGeoreference
-  _ellipsoidOverride: {fileID: 0}
-  _originPlacement: 0
-  _originAuthority: 0
-  _latitude: 39.736401
-  _longitude: -105.25737
-  _height: 2250
-  _ecefX: -1292934.4950404565
-  _ecefY: -4740026.104285267
-  _ecefZ: 4056960.1513377777
-  _scale: 1
---- !u!114 &1396822251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8d7711d9f67f40e79c0367d572351fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NostoKerros
-  kierto: {fileID: 1885741729}
-  merkit: {fileID: 1396822248}
-  nappula: {fileID: 1396822254}
-  vahinOsuus: 0.5
-  katto: 120
-  porttiViive: 1.4
-  syttyminenS: 0.7
-  lahizoomLeveys: 4
---- !u!114 &1396822252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932e13943127440158d39dfecfdcb938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Karttapisteet
-  georeferenssi: {fileID: 1396822250}
-  kierto: {fileID: 0}
-  merkit: {fileID: 0}
-  materiaali: {fileID: 2100000, guid: 0dc2aa0cf33574e8393d791ce96f1e0d, type: 2}
-  sade: 14
-  osumaSade: 22
-  nosto: 5000
-  sykeJakso: 1.6
-  sykeMaara: 0.2
---- !u!114 &1396822253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2423f26d91b9d4870990ec99e8ffca95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.AiheValot
-  georeferenssi: {fileID: 1396822250}
-  kierto: {fileID: 0}
-  materiaali: {fileID: 2100000, guid: 0dc2aa0cf33574e8393d791ce96f1e0d, type: 2}
-  sade: 12
-  korkeus: 5000
-  osumaSade: 22
-  merkit: {fileID: 0}
---- !u!114 &1396822254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdd67d8dcb32b413a9f95c347d2c0915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Nappula
-  georeferenssi: {fileID: 1396822250}
-  kierto: {fileID: 0}
-  materiaali: {fileID: 2100000, guid: c9d2aec7a26bd4faba83478426a07248, type: 2}
-  koko: 36
-  nosto: 5000
-  vari: {r: 0.6039216, g: 0.23137255, b: 0.17254902, a: 1}
-  seuraaKamera: 1
-  koneKoko: 44
-  lahtoKaari: 18.6
-  lahtoZoomS: 2.5
-  koneVari: {r: 0.6039216, g: 0.23137255, b: 0.17254902, a: 1}
-  koneMalli: {fileID: 919132149155446097, guid: 9ebbf0b3cabf447bb865075d6842b443, type: 3}
-  koneMateriaali: {fileID: 2100000, guid: ac6bad52f2abf4e7ba08071e9d4d2b5d, type: 2}
-  raitaMateriaali: {fileID: 2100000, guid: fc3ac6a1c37d64a4d8fb1b5774518776, type: 2}
-  ikkunaMateriaali: {fileID: 2100000, guid: e03f5a5bf747046aa862158d9813f5ce, type: 2}
-  malliPx: 110
-  savu: {fileID: 309492420}
-  aurinko: {fileID: 480430712}
---- !u!114 &1396822255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5584a6f2e15e5408c819e86002fdf422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.MaaKartta
-  georeferenssi: {fileID: 1396822250}
-  kierto: {fileID: 0}
-  kerrokset: {fileID: 1396822258}
-  materiaali: {fileID: 2100000, guid: 22e5f1952ef674c679346a17dea03253, type: 2}
-  leveys: 4096
-  korkeus: 0
-  toleranssi: 0.1
-  kokoelma: maakuntarajat
-  piilotaKaupungit: 0
-  jonoLisa: 1
-  rajaus: {x: -12, y: 35, z: 32, w: 61}
-  rajaMateriaali: {fileID: 2100000, guid: 3a1d37140a6334d289e3baddb964312a, type: 2}
---- !u!114 &1396822256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5584a6f2e15e5408c819e86002fdf422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.MaaKartta
-  georeferenssi: {fileID: 1396822250}
-  kierto: {fileID: 0}
-  kerrokset: {fileID: 1396822258}
-  materiaali: {fileID: 2100000, guid: 22e5f1952ef674c679346a17dea03253, type: 2}
-  leveys: 4096
-  korkeus: 0
-  toleranssi: 0.5
-  kokoelma: maarajat
-  piilotaKaupungit: 1
-  jonoLisa: 0
-  rajaus: {x: 0, y: 0, z: 0, w: 0}
-  rajaMateriaali: {fileID: 0}
---- !u!114 &1396822257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bec99ff948144a0eb4a5582f53a2ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Varitaso
-  pallo: {fileID: 403305346}
---- !u!114 &1396822258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63381173662249ec9d9d5f63ad9f210, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KarttaKerrokset
-  pallo: {fileID: 403305346}
-  pohja: {fileID: 403305347}
-  merkit: {fileID: 1396822248}
-  reitit: {fileID: 1396822249}
-  napakannet: {fileID: 1396822261}
-  varitaso: {fileID: 1396822257}
-  maaKartta: {fileID: 1396822256}
-  maakunnat: {fileID: 1396822255}
-  nappula: {fileID: 1396822254}
-  pisteet: {fileID: 1396822252}
---- !u!114 &1396822259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3404d6b5f4f77461e9c32cf758d81d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Alueet
-  rasteriPohja: https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/{z}/{x}/{y}.jpg
-  maastoLayer: https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/layer.json
-  rinnakkain: 8
-  rinnakkainKiireessa: 2
-  kierto: {fileID: 0}
---- !u!114 &1396822260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a3098ea73ac48b398036b6d7bfd24e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Laattapalvelin
-  rinnakkain: 12
-  valimuistiMt: 600
-  varavari:
-    serializedVersion: 2
-    rgba: 4290498777
---- !u!114 &1396822261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4586f549f226f42acbed6ebd7e9c1834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.NapaKannet
-  georeferenssi: {fileID: 1396822250}
-  pohjoinen: {fileID: 2100000, guid: 31340ecd3ed5642ceb46c82452d8daca, type: 2}
-  etela: {fileID: 2100000, guid: 7668f294da8ea421e8f6906dbfe95ec7, type: 2}
-  taysi: 84
-  reuna: 82.5
-  korkeus: 1500
-  sektoreita: 96
-  kehia: 16
---- !u!4 &1396822262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396822247}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 403305348}
-  - {fileID: 309492421}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1885741726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885741731}
-  - component: {fileID: 1885741730}
-  - component: {fileID: 1885741729}
-  - component: {fileID: 1885741728}
-  - component: {fileID: 1885741727}
-  m_Layer: 0
-  m_Name: Kamera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1885741727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885741726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3efb14ef7fe0d49ec8f0d47a158b54ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.KehysMittari
-  pallo: {fileID: 1885741729}
-  jakso: 5
---- !u!114 &1885741728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885741726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4cfb3c41238e4e1ca710f83a7c4ab72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.Komennot
-  kierto: {fileID: 1885741729}
-  merkit: {fileID: 1396822248}
---- !u!114 &1885741729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885741726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a932395275041a298894fc205565e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Matkakirja.Kartta::Matkakirja.PalloKierto
-  georeferenssi: {fileID: 1396822250}
-  pituus: 10
-  leveys: 25
-  korkeus: 0
-  nopeus: 6
-  liukuAika: 0.35
-  minKaari: 3.6
-  taytto: 0.92
-  maxLeveys: 80
-  kallistus: 0
-  maxKallistus: 60
-  suuntima: 0
-  katseKorkeus: 0
-  palautusAika: 0.6
-  kallistusRajaKm: 3000
-  kallistusHerkkyys: 0.25
-  napautusLiike: 10
-  napautusAika: 0.35
-  ajonRamppi: 0.3
-  KaukorajaVahintaan: 0
---- !u!20 &1885741730
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885741726}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1, g: 0.08, b: 0.06, a: 1}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 198909.17
-  far clip plane: 22701732
-  field of view: 50
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1885741731
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885741726}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.1391247, y: -0.7478862, z: 0.16580237, w: 0.62755096}
-  m_LocalPosition: {x: 14572851, y: 6882207, z: 2569586.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 480430711}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1396822262}
-  - {fileID: 1163526155}
-  - {fileID: 1885741731}
+  - {fileID: 1942458922}
+  - {fileID: 1666999239}
+  - {fileID: 387102957}

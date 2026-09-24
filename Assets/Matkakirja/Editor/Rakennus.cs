@@ -57,6 +57,9 @@ namespace Matkakirja.Editori
             pallo.showCreditsOnScreen = false;
             // Peli ei käytä fysiikkaa: Cesium paistoi jokaiselle laatalle törmäysverkon (iPad-loki 23.9.).
             pallo.createPhysicsMeshes = false;
+            // Ei reikiä lataamattomien laattojen kohdalle (lennon lähikuva 24.9.: taivas näkyi maaston läpi):
+            // vanhempi laatta pysyy, kunnes kaikki lapset ovat ladattuja.
+            pallo.forbidHoles = true;
 
             var kerros = palloGo.AddComponent<CesiumUrlTemplateRasterOverlay>();
             kerros.templateUrl = LaattaUrl;
@@ -119,6 +122,12 @@ namespace Matkakirja.Editori
             // Rajat vektoriviivoina (Fable 24.9.): täyttö 1,2 km:n tunnuskartasta, rajan tarkkuus aineistosta.
             maakunnat.rajaMateriaali = Materiaali("Rajaviiva", "Matkakirja/Rajaviiva", new Color(0.23f, 0.18f, 0.13f, 0.8f));
             kerrokset.maakunnat = maakunnat;
+            // Pelaajan maan ääriviiva (löydös 2, osa 3): webin korostuskehä, sama maa kuin väritasolla.
+            var maaraja = georefGo.AddComponent<Maaraja>();
+            maaraja.georeferenssi = georef;
+            maaraja.varitaso = varitaso;
+            maaraja.materiaali = maakunnat.rajaMateriaali;
+            kerrokset.maaraja = maaraja;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
@@ -161,6 +170,7 @@ namespace Matkakirja.Editori
             kierto.sumennusMateriaali = Materiaali("Sumennus", "Matkakirja/Sumennus", Color.white);
             merkit.kamera = kamera;
             merkit.kierto = kierto;
+            maaraja.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
             komennot.kierto = kierto;
             komennot.merkit = merkit;

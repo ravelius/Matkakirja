@@ -394,6 +394,7 @@ namespace Matkakirja.Natiivi
                 valmis = System.Threading.Tasks.Task.Run(() => new Matkakirja.Linssit.Virrat.VanaPiirto(
                     t, v.Virrat, v.Vanat?.Kaista, r, Matkakirja.Linssit.Virrat.Ruutumaski.Kulkumaskista(v.Maamaski)));
                 VanaKerros.EsivalmisteleMaski(r);
+                o.StartCoroutine(VanaKerros.EsilataaMaski(r));
             }
 
             public void Avaa(ILinssiYmparisto y)

@@ -134,9 +134,10 @@ namespace Matkakirja
             {
                 // Välimuistitiedosto on 3–11 Mt: luku ja purku pääsäikeessä maksoi 25–58 ms:n kehyksen
                 // jokaisella kokoelmalla (Natiivi-UI:n piikkimittaus 24.9.), joten luetaan taustasäikeessä.
+                // Epäonnistunut luku (esim. toinen haku kirjoittaa samaa tiedostoa) → haetaan verkosta.
                 yield return Taustalla(() => File.ReadAllText(tiedosto), t => teksti = t);
             }
-            else
+            if (teksti == null)
             {
                 using var k = UnityWebRequest.Get(Juuri + polku);
                 k.timeout = 20;
@@ -150,19 +151,39 @@ namespace Matkakirja
                     valmis(null);
                     yield break;
                 }
-                // Purku ja välimuistiin kirjoitus taustasäikeessä (tavut kopioidaan pääsäikeessä).
+                // Purku ja välimuistiin kirjoitus taustasäikeessä (tavut kopioidaan pääsäikeessä). Polut
+                // lasketaan tässä: Application.persistentDataPath toimii vain pääsäikeessä. Kirjoitus
+                // väliaikaistiedostoon ja siirto, koska useampi haku voi kirjoittaa saman kokoelman yhtä aikaa.
                 var tavut = k.downloadHandler.data;
-                string versio = versioPolku;
+                string versio = versioPolku, viimeisin = ViimeisinPolku;
                 yield return Taustalla(() =>
                 {
                     var s = System.Text.Encoding.UTF8.GetString(tavut);
-                    Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
-                    File.WriteAllText(tiedosto, s);
-                    File.WriteAllText(ViimeisinPolku, versio);
+                    try
+                    {
+                        Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
+                        Kirjoita(tiedosto, s);
+                        Kirjoita(viimeisin, versio);
+                    }
+                    catch (Exception) { /* välimuisti on valinnainen */ }
                     return s;
                 }, t => teksti = t);
             }
             valmis(teksti);
+        }
+
+        /// <summary>Kirjoitus väliaikaistiedostoon ja siirto paikalleen (lukija ei näe puolikasta tiedostoa).</summary>
+        static void Kirjoita(string tiedosto, string sisalto)
+        {
+            string tmp = tiedosto + "." + Guid.NewGuid().ToString("N") + ".tmp";
+            File.WriteAllText(tmp, sisalto);
+            try
+            {
+                // Uudelleennimeäminen: samaa tiedostoa lukeva haku ei saa jakamisvirhettä (Mono tarkistaa vain avauksen).
+                if (File.Exists(tiedosto)) File.Replace(tmp, tiedosto, null);
+                else File.Move(tmp, tiedosto);
+            }
+            finally { if (File.Exists(tmp)) File.Delete(tmp); }
         }
 
         /// <summary>Ajaa työn taustasäikeessä ja odottaa kehyksittäin; virheessä tulos on null (kirjataan).</summary>
