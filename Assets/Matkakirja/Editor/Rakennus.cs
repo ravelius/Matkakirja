@@ -195,6 +195,9 @@ namespace Matkakirja.Editori
             kamera.nearClipPlane = 10_000f;
             kamera.farClipPlane = 100_000_000f;
             kamera.fieldOfView = 50f; // webin PALLO_FOV (js/pallolauta/kamera.js), pystysuunta kuten three.js
+            // Löydös 49 (25.9.2026): kohtauksessa ei ollut kuuntelijaa, joten Unity ei miksannut yhtään lähdettä.
+            // Äänet ovat 2D-lähteitä, joten kuuntelijan paikalla ei ole väliä; AaniIstunto lisää varakuuntelijan vain, jos tämä puuttuu.
+            kameraGo.AddComponent<AudioListener>();
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
             // Aloitusportin sumennus (web .start-gate blur 6px, löydös 17): materiaali vie shaderin käännökseen.
