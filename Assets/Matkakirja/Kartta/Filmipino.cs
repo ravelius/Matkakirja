@@ -83,7 +83,7 @@ namespace Matkakirja
                 syvyys.active = paalle;
                 if (paalle)
                 {
-                    syvyys.gaussianStart.Override(koneEtaisyysM * 1.6f);
+                    syvyys.gaussianStart.Override(koneEtaisyysM * 2.0f);   // koneen perä (skaalattu kone ~0,5 etäisyyttä) terävänä
                     syvyys.gaussianEnd.Override(koneEtaisyysM * 7f);
                     syvyys.gaussianMaxRadius.Override(Mathf.Lerp(0.5f, 1.0f, lahikuva));
                 }

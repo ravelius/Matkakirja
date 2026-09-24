@@ -396,7 +396,9 @@ namespace Matkakirja
                 }
             }
             // Sumennuksen tavoite: portti 6 pt, kuvat mieto (löydös 19), muuten pois.
-            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea ? kuvaSumennusPt : 0f;
+            // Lennon kuvauksessa (vapaaKuvaus, Nappula.Lento) ei kuvasumennusta: sumennus on koko ruudun jälkikäsittely ja
+            // sumensi myös koneen, kun lento-alun luenta näytti isoisän kuvan (Laitetestaaja 24.9., iPhone, f6de924).
+            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus ? kuvaSumennusPt : 0f;
             if (tavoite > 0f)
             {
                 sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);
