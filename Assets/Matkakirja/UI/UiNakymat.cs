@@ -45,6 +45,8 @@ namespace Matkakirja.Natiivi
         public readonly Huipennus Huipennus;
         public readonly Nostokortti Nostokortti;
         public readonly Lehtinakyma Lehti;
+        /// <summary>Lue lisää -artikkeli (web #wiki-dialog): lehden ja nähtävyysarkin päällä.</summary>
+        public readonly WikiIkkuna Wiki;
         public readonly Paljastus Paljastus;
         public readonly SahkeNakyma Sahke;
         /// <summary>Pöllön sähketehtävä (sähkösanomalomake, PeliNakymat.Sahketehtava).</summary>
@@ -127,6 +129,7 @@ namespace Matkakirja.Natiivi
             Lehti = new Lehtinakyma(kerros);
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
+            Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
@@ -315,6 +318,7 @@ namespace Matkakirja.Natiivi
             Nahtavyydet.SuljeKokonaan();
             Nahtavyysnakyma.Sulje();
             Lehti.Sulje();
+            Wiki.Sulje();
             Paljastus.Sulje();
             Julistegalleria.Sulje();
             Minipopup.SuljeAuki();

@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
         string[] sanat;
         int naytetty, lihavia;
         IVisualElementScheduledItem kirjoitus;
-        bool pieni, wikiHaussa;
+        bool pieni;
         // Webin luentavahti (ui.js, 200 ms): tekstipiilo päällä kertojan ajan + välirauha.
         const long ValirauhaMs = 900 + 400; // SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS + 400
         bool luentaPiilo;
@@ -352,24 +352,11 @@ namespace Matkakirja.Natiivi
         // Piilotus luokalla eikä inline-tyylillä: lapun (--pieni) USS-säännöt saavat yhä piilottaa.
         static void Piiloon(VisualElement e, bool piiloon) => e.EnableInClassList("mk-matkakirja__piilo", piiloon);
 
-        /// <summary>
-        /// "Katso kuva" (web openWikiArticle): Wikipedian artikkeli, suomi ensin ja
-        /// englanti varalle (web WIKI_LANGS, tynkä alle 200 merkkiä ei kelpaa ensimmäiseksi).
-        /// Natiivissa ei ole pelin omaa artikkelidialogia, joten sivu aukeaa selaimeen.
-        /// </summary>
+        /// <summary>"Katso kuva" (web openWikiArticle): pelin oma Lue lisää -ikkuna (WikiIkkuna).</summary>
         void AvaaWiki()
         {
-            if (string.IsNullOrEmpty(wiki) || wikiHaussa) return;
-            string otsikko = wiki;
-            wikiHaussa = true;
-            kuvanappi.SetEnabled(false);
-            UiKerros.Hae().StartCoroutine(PuluChat.HaeYhteenveto(otsikko, new[] { "fi", "en" }, y =>
-            {
-                wikiHaussa = false;
-                kuvanappi.SetEnabled(true);
-                Application.OpenURL(!string.IsNullOrEmpty(y?.Osoite) ? y.Osoite
-                    : "https://fi.wikipedia.org/wiki/" + Uri.EscapeDataString(otsikko.Replace(' ', '_')));
-            }));
+            if (string.IsNullOrEmpty(wiki)) return;
+            UiNakymat.Hae()?.Wiki.Avaa(wiki);
         }
 
         // --- kaiutin: Kertoja-kytkin ja VU-mittari -----------------------------------

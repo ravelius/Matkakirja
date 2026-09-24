@@ -591,8 +591,9 @@ namespace Matkakirja.Natiivi
             }
             if (!string.IsNullOrEmpty(n.Wiki))
             {
-                string wiki = n.Wiki;
-                var b = Rakenne.Nappi("Lue lisää aiheesta ›", "mk-lehti__linkki", () => Application.OpenURL("https://fi.wikipedia.org/wiki/" + Uri.EscapeDataString(wiki.Replace(' ', '_'))), loppu);
+                string wiki = n.Wiki, nimi = n.Otsikko;
+                // Pelin oma Lue lisää -ikkuna lehden päällä (web ui.openWikiArticle(nosto.wiki, nosto.otsikko)).
+                var b = Rakenne.Nappi("Lue lisää aiheesta ›", "mk-lehti__linkki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), loppu);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             if (!string.IsNullOrEmpty(n.Linkki))
