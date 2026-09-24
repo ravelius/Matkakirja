@@ -215,7 +215,7 @@ MonoBehaviour:
   palautusAika: 0.6
   kallistusTaysiKm: 1500
   kallistusNollaKm: 7000
-  kallistusHerkkyys: 0.25
+  kallistusHerkkyys: 0.2
   napautusLiike: 10
   napautusAika: 0.35
   ajonRamppi: 0.3
