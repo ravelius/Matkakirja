@@ -75,6 +75,9 @@ namespace Matkakirja
         [Tooltip("Korkeus (km), jonka yläpuolella kallistus on nolla; väliltä se liukuu.")]
         public double kallistusRajaKm = 3000.0;
 
+        [Tooltip("Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.")]
+        public double kallistusHerkkyys = 0.25;
+
         [Header("Napautus")]
         [Tooltip("Suurin liike näytön pisteinä, joka vielä on napautus.")]
         public float napautusLiike = 10f;
@@ -585,9 +588,12 @@ namespace Matkakirja
                 if (n == edellinenSormia)
                 {
                     float2 siirto = keski - edellinenKeski;
-                    // Kahden sormen kallistus POIS (omistajan build 9 -löydös 25, 24.9.2026): se häiritsi; kallistusta
-                    // käytetään toistaiseksi vain animoiduissa kamera-ajoissa (lento, saapuminen, linssit). Kahden
-                    // sormen veto siirtää karttaa kuten yhden sormen veto.
+                    if (n >= 2)
+                    {
+                        // Kahden sormen pystyveto kallistaa (kuten Apple Mapsissa), vaakaveto pyörittää.
+                        kallistus = math.clamp(kallistus - siirto.y / Kerroin * kallistusHerkkyys, 0, KallistusRaja());
+                        siirto.y = 0;
+                    }
                     Kierra(siirto, dt);
                     if (n >= 2 && edellinenVali > 1f && vali > 1f)
                         korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
