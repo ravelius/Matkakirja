@@ -55,7 +55,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 |---|---|---|---|
 | Laukku avautuu raha-pilleristä | Sama, testattu (rivi 20/32 pariteetti-doc, PASS tilaerolla selitettynä); **uudelleenvahvistettu oikealla kosketuksella** (iPhone 18 Pro, build 10) ja **mitattu** web-kuvaparilla (`openPassport()` vs. rahapilleri-napautus) — sama MATKA/Sijainti/Kukkaro/Untuvikko-rakenne, sama VARUSTEET-ruudukko (glasses+5 linssikuvaketta samassa järjestyksessä). Kuvapari `web-laukku-iphone.jpg` / vastaava natiivikuva. | SAMA | **KYLLÄ** (kuvapari) |
 | "Matkan tilastot" -laajennin | Sama tieto näkyy (Sijainti/Kukkaro/Untuvikko + tilastot); **oikealla kosketuksella laajennettuna näkyy myös Avatut aarteet/Käydyt kaupungit/maat, Aarnin luettelo ja Julisteet-rivi** | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Julisterivi (poster-galleria) | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10, master f02376b): laukku → Matkan tilastot → "JULISTEET 114/114 »" -rivi napautettuna avaa saman ruudukon (Moskova/Lontoo/Pariisi/Rooma/Wien/Ateena/...) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
+| Julisterivi (poster-galleria) | **EPÄILTY REGRESSIO (Laitetestaaja, 24.9. klo 23.5x, uusi sessio)**: aiempi PÄIVITYS 2 -merkintä väitti PASS build 10:llä (f02376b), mutta ilman kuvatodistetta. Tällä kierroksella "JULISTEET 114/114 »" -rivi ei avautunut 5:stä yrityksestä (eri x/y-koordinaatit rivin sisällä, yksi pitkä painallus) nykyisellä asennetulla buililla (SHA ei tiedossa, viimeisin proto-kaanna.sh-ajo tälle simulaattorille) — laukku itse, ylä-☰-valikko, rahapilleri ja linssin sulkunappi reagoivat samalla kierroksella normaalisti, joten kyse ei ole yleisestä kosketusongelmasta vaan tästä yhdestä rivistä. Ei ehditty testata muulla buililla/laitteella eron rajaamiseksi. | **EI TARKISTETTU (aiempi SAMA kumottu, tarkista regressio)** | EI (rakennevertailu, ei pikselimitattu) |
 | Aarnin luettelo -infonappi | Näkyy laukun "Matkan tilastot" -laajennettuna näkymänä ("AARNIN LUETTELO ⓘ Kateissa 7") oikealla kosketuksella — itse (i)-kuvakkeen napautus ei osunut tällä kierroksella (pieni kohde) | EI TARKISTETTU (info-popupin sisältö), mutta rivi näkyy oikein | EI (rakennevertailu, ei pikselimitattu) |
 | Varusteet (linssi-ruudukko) | Sama ruudukko, harmaat/ei-vielä-löydetyt linssit näkyvät erikseen (rivi 32) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Aktivoi"/"Ota pois" (linssin aktivointi) | Ei testattu erikseen tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
@@ -234,22 +234,35 @@ odotetaan valmistumisilmoitusta ennen Build 11/12 -mittaustilauksen
 jatkoa. Sillä välin: **Topografialinssi uudelleentestattu ja
 VAHVISTETTU** (rivi päivitetty yllä) oikealla `linssi topografia`
 -komennolla (ei `ui linssi`-esimerkkikomennolla, joka aiheutti aiemman
-desyncin) — kuvapari täsmää. Julisterivi avautui uudelleen sekä webissä
-(interaktiivinen selain, oikea klikkaus laukku→Matkan tilastot→
-Julisteet) että natiivissa manuaalisesti aiemmin tänään; tälle
-kierrokselle en kuitenkaan saanut UUTTA natiivi-kuvaparia — kolme
-peräkkäistä `tap`-komentoa samaan JULISTEET-riviin (napautus laukun
-ollessa jo auki) ei rekisteröitynyt UI:hin näkyvästi, kunnes seuraava
-täysin erillinen tap (☰-alueelle) paljasti taustalla jo auki olleen
-topografialinssin — **mahdollinen näytön päivitysviive tai kosketuksen
-rekisteröintiongelma laukku-paneelissa, ei vielä varmistettu bugiksi**;
-Pelikoodarin/Natiivi-UI:n kannattaa tarkistaa jos sama toistuu. Tutki-
-nappia en löytänyt webistä suoralla pallonapautuksella omassa
-kaupungissa (Ateena) — web näytti sen sijaan yllättävän "löytökortti"-
-tyylisen postikorttinäkymän ("Kahviraha kelpasi ilman kertomusta
-alkuperästään") pallon napautuksesta, joka ei ole aiemmin dokumentoitu
-nappi-inventaariossa; web:n Tutki lienee sidottu `tutkiTarjolla`-lippuun
-(vihreä aarrepiste), ei suoraan pallon napautukseen — tarvitsee joko
-pelitilan jossa aarrepiste on auki, tai Pelikoodarin/Natiivi-UI:n
-vahvistuksen oikeasta web-poluksta. Ei ehditty muihin ~19 EI
-TARKISTETTU -riviin tällä kierroksella (konteksti käytetty tutkimiseen).
+desyncin) — kuvapari täsmää. **Pelikoodarilta saadut vastaukset (24.9.
+klo 23.5x)**: 1) web:n "löytökortti" (Ateenan "Kahviraha kelpasi..."
+-postikortti) EI tule oman kaupungin napautuksesta — se on isoisän
+saapumiskerronnan luentakuvasarja (`fokusvirta.js` avaaIsoisanSarja),
+jonka natiivivastine (Luentakuvasarja) on jo olemassa ja katettu
+löydöksessä 45; ei uutta riviä tarvita. 2) Webin pallolla ei ole
+Tutki-nappia lainkaan (poistui 24.8.) — kohtaaminen avautuu vain
+kaupungin LAATAN (aarrepisteen) napautuksesta, kun `tehtavaTarjolla`
+on tosi; tuoreessa pelissä ilman aarrepistettä sitä ei siis pidäkään
+löytyä pallonapautuksella. Rivi "Tutki" pysyy SAMA-tilassa (natiivin
+`tutki`-komento vastaa samaa ehtoa peli-tila.json:n tehtavaNapin
+kautta).
+
+**Julisterivi-löydös TARKENTUI TUTKIMALLA (ei bugi, kalibrointivirhe
+epäiltiin ensin)**: kolme peräkkäistä `tap`-yritystä samaan JULISTEET-
+riviin ei avannut galleriaa, mutta rinnakkaiskoe paljasti, että myös
+ISOISÄN LINSSI 1873:n sulkunappi (×) epäonnistui täsmälleen samalla
+lasketulla koordinaatilla (px/3-muunnos) kahdesti ja onnistui vasta
+2-6 pisteen siirrolla — eli tool-koordinaattien pyöristys osuu pienten
+pyöreiden nappien reunoille. JULISTEET-riviä kokeiltiin tämän jälkeen
+VIIDESTI eri x/y:llä RIVIN SISÄLLÄ (koko rivin leveydeltä, myös pitkä
+painallus) ilman yhtäkään avautumista, kun taas ☰-valikko, rahapilleri
+ja linssin sulkunappi (kalibroituna) toimivat samalla kierroksella —
+**tämä EI selity enää pelkällä koordinaattivirheellä, koska koko rivin
+leveys kokeiltiin**. Rivi merkitty yllä EI TARKISTETTU (aiempi
+"PÄIVITYS 2" SAMA-väite kumottu, sillä sitäkään ei tuolloin vahvistettu
+kuvatodisteella). Reititetty Natiivi-UI:lle tarkistettavaksi build-
+tasolla (ks. viesti alla) — ei vielä varmistettu tuotantobugiksi, koska
+buildia/laitetta ei ehditty vaihtaa eron rajaamiseksi.
+
+Ei ehditty muihin ~19 EI TARKISTETTU -riviin tällä kierroksella
+(konteksti käytetty tutkimiseen).
