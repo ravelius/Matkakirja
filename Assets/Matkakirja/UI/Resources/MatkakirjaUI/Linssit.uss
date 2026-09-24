@@ -70,6 +70,17 @@
     letter-spacing: 0.5px;
 }
 
+/* Löydös 32: kutistunut pilleri = pyöreä ✕ (32 × 32). */
+.mk-linssiSulje--risti {
+    width: 32px;
+    padding: 0;
+    justify-content: center;
+}
+
+.mk-linssiSulje--risti .mk-linssiSulje__risti {
+    margin-right: 0;
+}
+
 /* --- valitsinpaneeli (pergamentti) ----------------------------------------- */
 
 .mk-linssivalitsin {
