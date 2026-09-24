@@ -4783,3 +4783,7 @@ Omistaja: 'Vektori voisi olla himmeämpi tai poissa jos meri. Maalla vektori var
 ## KARTTASEPAN Z9-ARVIO (b8a6574e6): 60 764 MAALAATTAA (0,6–0,85 Gt, MERINEEN 1,1–1,4 Gt), POLTTO 2,5–3 h YOLLA 16 YTIMELLA (SIS. PYRAMIDIN z8 UUSIKSI); ENNEN SITA ~½ pv KOODIA (GLO-30 VAIN E28:N ALUEELLE, MUUALLE GLO-90, DEM LOHKOITTAIN); Z10 MYOHEMMIN 230 279 LAATTAA; VEKTORISARJA 130 kt – 6,3 Mt (25.9.2026 klo 00.06)
 
 Omistajan valinta (D2 + reliefi + vektorirannat, rantaviiva himmeä tai pois) on jo Karttasepällä; poltto E28:n jälkeen.
+
+## JULISTERIVI: NAPPI EHJA (VANHA BUILD/KOORDINAATTI), MUTTA JULISTE-URL KAKSINKERTAISTUI → 404 → TYHJA GALLERIA; KORJAUS de8852b BUILD 12:EEN (NATIIVI-UI); RIVI PASS (LAITETESTAAJA a1f50168f) (25.9.2026 klo 00.07)
+
+Pysyvä reititys toimi: Laitetestaaja → Natiivi-UI suoraan, Fablelle yksi rivi.
