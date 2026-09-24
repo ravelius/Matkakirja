@@ -846,7 +846,7 @@ namespace Matkakirja.Natiivi
             var kuva = Rakenne.El("mk-lehti__julistekuva", kotelo, PickingMode.Ignore);
             var merkki = Rakenne.Teksti("", "mk-lehti__julistemerkki", kotelo);
             Kirjasimet.Aseta(merkki, Kirjasin.KoneLihava);
-            Natiivi.Kuvat.Hae("https://media.matkakirja.app/julisteet/" + k.JulisteTiedosto, t =>
+            Natiivi.Kuvat.Hae(k.JulisteTiedosto.StartsWith("http") ? k.JulisteTiedosto : "https://media.matkakirja.app/julisteet/" + k.JulisteTiedosto, t =>
             {
                 if (t == null) { kotelo.RemoveFromHierarchy(); return; }
                 kuva.style.backgroundImage = new StyleBackground(t);

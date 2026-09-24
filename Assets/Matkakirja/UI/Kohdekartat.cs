@@ -129,9 +129,10 @@ namespace Matkakirja.Natiivi
             var jutut = new Dictionary<string, NahtavyysKohde>();
             foreach (var a in Alkiot(nahtavyydet))
             {
-                var d = Ob(MiniJson.Kentta(a, "data"));
+                // Päätaso ensin (skeema 1.26: aika, teksti, kuvat[url], lainaus, lahde, wiki), raaka data vain Paatason kautta.
+                var d = Paataso.Nakyma(a, JutunKentat);
                 string kaupunki = T(a, "kaupunki"), nimi = T(a, "nimi");
-                if (d == null || kaupunki == null || nimi == null) continue;
+                if (kaupunki == null || nimi == null || (T(d, "teksti") == null && MiniJson.Kentta(d, "kuvat") == null)) continue;
                 jutut[kaupunki + ":" + nimi] = Juttu(nimi, d);
             }
             var piirrokset = new Dictionary<string, string>();
@@ -141,7 +142,8 @@ namespace Matkakirja.Natiivi
                 // ("assets/kartat/miniatyyrit/x.webp") tai pelkkä tunnus ("denver-…"); molemmat ovat
                 // ämpärissä kansiossa kohtaamiset/miniatyyrit/ (pelin assetOsoite, tunnukselle .png).
                 string kaupunki = T(a, "kaupunki"), nimi = T(a, "nimi");
-                string polku = T(Ob(MiniJson.Kentta(a, "kuva")), "url") ?? T(a, "data") ?? T(Ob(MiniJson.Kentta(a, "data")), "url");
+                var raaka = Paataso.RaakaArvo(a);
+                string polku = T(Ob(MiniJson.Kentta(a, "kuva")), "url") ?? raaka as string ?? T(Ob(raaka), "url");
                 if (kaupunki != null && nimi != null && polku != null)
                     piirrokset[kaupunki + ":" + nimi] = MiniatyyriOsoite(polku);
             }
@@ -205,6 +207,8 @@ namespace Matkakirja.Natiivi
             }
             return t;
         }
+
+        static readonly IReadOnlyList<(string Uusi, string Vanha)> JutunKentat = Paataso.Samat("aika", "teksti", "kuvat", "lainaus", "lahde", "wiki");
 
         static NahtavyysKohde Juttu(string nimi, Dictionary<string, object> d)
         {
