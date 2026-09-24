@@ -174,7 +174,9 @@ namespace Matkakirja.Natiivi
             {
                 const string nimi = "arkkipaperi";
                 if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
-                const int N = 140;
+                // 420 × 420 näytetään 140 pt:n laattana: rae on laitepikselin kokoista (web SVG-kohina renderöityy
+                // Retina-tarkkuudella), joten se on lähes näkymätön kuten webissä (Fable 24.9.: ei karkeaa raetta).
+                const int N = 420;
                 t = Uusi(nimi, N, N);
                 t.wrapMode = TextureWrapMode.Repeat;
                 var pohja = Vari("#f5f0e2");
@@ -195,8 +197,8 @@ namespace Matkakirja.Natiivi
                 for (int y = 0; y < N; y++)
                 for (int x = 0; x < N; x++)
                 {
-                    float n = 0.5f * Arvo(x, y, 1) + 0.25f * Arvo(x, y, 2) + 0.15f * Arvo(x, y, 4) + 0.1f * Arvo(x, y, 8);
-                    float a = 0.2f * Mathf.Clamp01(0.5f + (n - 0.5f) * 1.6f);
+                    float n = 0.6f * Arvo(x, y, 1) + 0.3f * Arvo(x, y, 2) + 0.1f * Arvo(x, y, 3);
+                    float a = 0.2f * Mathf.Clamp01(0.5f + (n - 0.5f) * 0.8f);
                     px[y * N + x] = new Color(pohja.r * (1f - a + a * vari.r), pohja.g * (1f - a + a * vari.g), pohja.b * (1f - a + a * vari.b), 1f);
                 }
                 t.SetPixels(px);
