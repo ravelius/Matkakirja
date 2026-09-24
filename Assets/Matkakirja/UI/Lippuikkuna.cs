@@ -23,7 +23,6 @@ namespace Matkakirja.Natiivi
             var m = UiSisalto.Maa(iso3);
             var t = m?.Lipputarina;
             if (t == null) return;
-            Aanet.PulunTehoste("paper");
             Minipopup.Avaa(MiniJson.Teksti(t, "maa") ?? m.Nimi ?? iso3, s =>
             {
                 var iso = Rakenne.El("mk-lippu__iso", s);
