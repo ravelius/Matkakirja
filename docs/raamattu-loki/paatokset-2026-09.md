@@ -4283,3 +4283,7 @@ iPad 11 ja iPhone rekisteröity samaan tiimiin; vanha app.matkakirja.proto3d oli
 ## NATIIVI-UI: LOYDOS 36 TEHTY (5d65549, b10-jono 9584ae2) — 'MAAILMA' KOKEET-OSION RIVINA KEHITTAJATILASSA (HUNTU POIS KOKO PALLOLTA) (24.9.2026 klo 16.51)
 
 Webissä maailmanappi on kehittäjävalikon kytkinrivi (#kehittaja-maailma-btn), ei kartan päällä → natiivissa vastaava rivi ☰ → Kehittäjä → KOKEET. Panorointi natiivissa jo vapaa. Webin 'napauta kaupunkia siirtyäksesi' -kehittäjätoiminto Pelikoodarille tarvittaessa. b10-jono: palkki, arkkipaperi, hytinä, 32, 34, 36 → kuvaparit b10c:stä tai seuraavasta käännöksestä.
+
+## LINSSISEPPA: ISON iPADIN KUVAPARIT (testi/b10b) — KEKSINNOT TASMAA KAMERA/KORTTI/FILMINAUHA/TUMMENNUS; EROT: LAMPPUJEN SCREEN-SEKOITUS JA PAIKANNIMET PUUTTUVAT LINSSIN AIKANA → KORJATAAN WEBIN MUKAAN (24.9.2026 klo 16.59)
+
+Web 2082 km vs natiivi 2073 km, tummennus meri 43 vs 42; kuvaparit proto-3d/lokit/linssit-keksinnot-pari-20260924/pari-*-web-vs-ipad13.jpg; testityökalut isolle iPadille linssiseppa/iso-ipad 7562bbe. Huippuvuoret natiivissa värittymättä kunnes skeema 1.34 (#3081) ja #3078 mainissa. Laitetestaaja: löydös 26 odottaa dpi-mittausta (ei FAIL), avausteksti PASS rakenteellisesti (Pelikoodari korjasi 2 eroa 34a8fa8), b10c-lista käynnissä.
