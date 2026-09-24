@@ -21,6 +21,15 @@
 // näkösädettä pitkin kameraa kohti niin, että se on _Nosto + _NostoOsuus × etäisyys metriä pinnan yläpuolella
 // (ruutupaikka ei muutu). Nosto kattaa maaston karkean tason virheen korkeuskertoimella (virhe kasvaa etäisyyden
 // mukana), joten viiva ei z-fightaa rannan kanssa, mutta sitä korkeampi vuori kallistetussa kuvassa peittää sen.
+//
+// VALTIOIDEN RAJAT (löydös 46 E2, Kartta/Rajat.cs): TEXCOORD2 = (matka viivaa pitkin metreinä, oma h, toisen pään h).
+//  - Katkoviiva: _Katko metriä mustetta, _Vali metriä väliä (web RAJA_KATKO_YKS pallon yksikköinä → 700,8 / 1 401,6 m).
+//    Reuna antialiasoidaan fwidth:llä, ja kun jakso on ruudulla alle ~2 px, kuvio liukuu keskiarvopeittoonsa (ei
+//    välkettä kaukana). _Katko = 0 → yhtenäinen (rannikko, aluerajat, ääriviiva).
+//  - Korkeus: viivan paikka on jo korkeudella h (Karttasepän rajapisteiden DEM-korkeus; puuttuessa 0), ja tämä lisää
+//    tilesetin korkeuskertoimen osuuden n·max(h, 0)·(k − 1) samalla ellipsoidinormaalilla kuin MatkakirjaTileset
+//    (globaalit _korkeusKerroin, _maaKeski, _maaAkseli; Kartta/KorkeusKerroin.cs). Ilman TEXCOORD2:ta (aluerajat,
+//    ääriviiva) kaikki on 0 → ennallaan.
 Shader "Matkakirja/Rajaviiva"
 {
     Properties
@@ -35,6 +44,8 @@ Shader "Matkakirja/Rajaviiva"
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti", Float) = 8
         _Nosto("Syvyysnosto (m)", Float) = 0
         _NostoOsuus("Syvyysnosto etäisyyden osuutena", Float) = 0
+        _Katko("Katkoviivan muste (m, 0 = yhtenäinen)", Float) = 0
+        _Vali("Katkoviivan väli (m)", Float) = 0
     }
     SubShader
     {
@@ -63,25 +74,46 @@ Shader "Matkakirja/Rajaviiva"
                 float _PieninRengas;
                 float _Nosto;
                 float _NostoOsuus;
+                float _Katko;
+                float _Vali;
             CBUFFER_END
 
-            struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; };
-            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; float2 pitkin : TEXCOORD1; };
+            // Tilesetin korkeuskertoimen globaalit (KorkeusKerroin.cs); asettamaton kerroin 0 = 1.
+            float _korkeusKerroin;
+            float4 _maaKeski;
+            float4 _maaAkseli;
+
+            float3 Kohotus(float3 p, float h)
+            {
+                float k = _korkeusKerroin > 0.0 ? _korkeusKerroin : 1.0;
+                if (k == 1.0 || h <= 0.0) return p;
+                const float ekv = 6378137.0;
+                const float nap = 6356752.314245;
+                float3 d = p - _maaKeski.xyz;
+                float3 ak = dot(_maaAkseli.xyz, _maaAkseli.xyz) > 0.5 ? normalize(_maaAkseli.xyz) : float3(0.0, 1.0, 0.0);
+                float z = dot(d, ak);
+                float3 n = normalize(d + ak * z * (ekv * ekv / (nap * nap) - 1.0));
+                return p + n * (h * (k - 1.0));
+            }
+
+            struct Syote { float4 paikka : POSITION; float3 toinen : TEXCOORD0; float2 puoli : TEXCOORD1; float3 lisa : TEXCOORD2; };
+            struct Vali { float4 paikka : SV_POSITION; float reuna : TEXCOORD0; float2 pitkin : TEXCOORD1; float matka : TEXCOORD2; };
 
             Vali vert(Syote i)
             {
                 Vali o;
-                float3 maailma = TransformObjectToWorld(i.paikka.xyz);
+                float3 maailma = Kohotus(TransformObjectToWorld(i.paikka.xyz), i.lisa.y);
+                float3 toinenW = Kohotus(TransformObjectToWorld(i.toinen), i.lisa.z);
                 float3 ylos = normalize(maailma - _Keskus.xyz);
                 float3 kohtiV = _WorldSpaceCameraPos - maailma;
                 float etaisyys = length(kohtiV);
                 float3 kohti = kohtiV / max(etaisyys, 1e-3);
-                // Syvyysnosto (vain rannikko; muilla 0): pinnan normaalin suunnassa h, näkösädettä pitkin siis h / cos.
+                // Syvyysnosto (rannikko ja rajat; muilla 0): pinnan normaalin suunnassa h, näkösädettä pitkin siis h / cos.
                 float c = dot(ylos, kohti);
                 float h = _Nosto + _NostoOsuus * etaisyys;
                 float nosto = h > 0.0 && c > 0.0 ? min(h / max(c, 0.15), etaisyys * 0.5) : 0.0;
                 float4 a = TransformWorldToHClip(maailma + kohti * nosto);
-                float4 b = TransformObjectToHClip(i.toinen);
+                float4 b = TransformWorldToHClip(toinenW);
                 float2 ruutu = _ScreenParams.xy;
                 float2 suunta = b.xy / b.w * ruutu - a.xy / a.w * ruutu;
                 float l = length(suunta);
@@ -97,6 +129,7 @@ Shader "Matkakirja/Rajaviiva"
                 if (paa != 0 && _Tiheys > 0 && (abs(i.puoli.y) - 1.0) * _Tiheys < _PieninRengas) a = float4(2, 2, 2, 1);
                 o.paikka = a;
                 o.reuna = i.puoli.x * px;
+                o.matka = i.lisa.x;
                 // Paikka janan suunnassa a:sta (a-pään kärjet −jatke, b-pään kärjet pituus + jatke) ja janan pituus.
                 // b-pään kärjen oma jana on b → b + (b − a), joten sen pituus on sama kuin a → b. suunta on NDC × ruutu
                 // eli kaksinkertaisina pikseleinä (siirto yllä kertoo 2 / ruutu), joten pituus pikseleinä on l / 2.
@@ -112,6 +145,15 @@ Shader "Matkakirja/Rajaviiva"
                 float yli = max(max(-i.pitkin.x, i.pitkin.x - i.pitkin.y), 0.0);   // 0 janan kohdalla, > 0 jatkeessa
                 float etaisyys = sqrt(i.reuna * i.reuna + yli * yli);
                 half alfa = _BaseColor.a * saturate(px - etaisyys);
+                if (_Katko > 0.0)
+                {
+                    float jakso = _Katko + _Vali;
+                    float fw = max(fwidth(i.matka), 1e-3);
+                    float f = frac(i.matka / jakso) * jakso;
+                    float kuvio = saturate((_Katko - f) / fw + 0.5) * saturate(f / fw + 0.5);
+                    kuvio = lerp(kuvio, _Katko / jakso, saturate(fw * 2.0 / jakso - 1.0));
+                    alfa *= kuvio;
+                }
                 return half4(_BaseColor.rgb, alfa);
             }
             ENDHLSL

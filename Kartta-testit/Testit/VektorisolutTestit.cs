@@ -11,24 +11,38 @@ namespace Matkakirja.Kartta.Testit
         static readonly double[] Lodit = { 0.1, 0.03, 0.008, 0.004, 0 };
 
         /// <summary>Webin muoto: int32 n, int32 lon·1e4, int32 lat·1e4, (n − 1) × (int16 dlon, int16 dlat).</summary>
-        static byte[] Koodaa(params double[][] viivat)
+        static byte[] Koodaa(params double[][] viivat) => KoodaaK(false, viivat);
+
+        /// <summary>Korkeudellinen muoto: viiva lon, lat, h -kolmikkoina; h0 int16 otsakkeessa, sitten (dlon, dlat, h).</summary>
+        static byte[] KoodaaK(bool korkeus, params double[][] viivat)
         {
             var ms = new MemoryStream();
             var w = new BinaryWriter(ms);
+            int a = korkeus ? 3 : 2;
             foreach (var v in viivat)
             {
-                int n = v.Length / 2;
+                int n = v.Length / a;
                 w.Write(n);
                 int x = (int)Math.Round(v[0] * 1e4), y = (int)Math.Round(v[1] * 1e4);
                 w.Write(x); w.Write(y);
+                if (korkeus) w.Write((short)v[2]);
                 for (int k = 1; k < n; k++)
                 {
-                    int x2 = (int)Math.Round(v[2 * k] * 1e4), y2 = (int)Math.Round(v[2 * k + 1] * 1e4);
+                    int x2 = (int)Math.Round(v[a * k] * 1e4), y2 = (int)Math.Round(v[a * k + 1] * 1e4);
                     w.Write((short)(x2 - x)); w.Write((short)(y2 - y));
+                    if (korkeus) w.Write((short)v[a * k + 2]);
                     x = x2; y = y2;
                 }
             }
             return ms.ToArray();
+        }
+
+        /// <summary>lon, lat -parit askeleen 3 viivaksi (h = 0).</summary>
+        static float[] V(params float[] lonLat)
+        {
+            var v = new float[lonLat.Length / 2 * 3];
+            for (int i = 0; i < lonLat.Length / 2; i++) { v[3 * i] = lonLat[2 * i]; v[3 * i + 1] = lonLat[2 * i + 1]; }
+            return v;
         }
 
         [Testi]
@@ -37,14 +51,27 @@ namespace Matkakirja.Kartta.Testit
             var b = Koodaa(new[] { 23.7275, 37.9838, 23.7301, 37.9811, 23.7402, 37.9700 }, new[] { -179.99, 65.5, 179.99, 65.6 });
             var v = Vektorisolut.Pura(b);
             Oleta.Sama(2, v.Count, "viivoja");
-            Oleta.Sama(6, v[0].Length, "ensimmäisen viivan floatit");
-            Oleta.Tosi(Math.Abs(v[0][4] - 23.7402) < 1e-4 && Math.Abs(v[0][5] - 37.97) < 1e-4, "delta kertyy");
+            Oleta.Sama(9, v[0].Length, "ensimmäisen viivan floatit (lon, lat, h)");
+            Oleta.Tosi(Math.Abs(v[0][6] - 23.7402) < 1e-4 && Math.Abs(v[0][7] - 37.97) < 1e-4 && v[0][8] == 0, "delta kertyy, h 0");
             // Sauman yli: delta int16:n ulkopuolella ei ole webissäkään (työkalu katkaisee > 3,2° hypyt) — tässä vain
             // tarkistetaan, että vajaa tiedosto luetaan ehjään kohtaan asti.
             var vajaa = new byte[b.Length - 3];
             Array.Copy(b, vajaa, vajaa.Length);
             Oleta.Sama(1, Vektorisolut.Pura(vajaa).Count, "vajaa tiedosto: ehjä osa");
             Oleta.Sama(0, Vektorisolut.Pura(null).Count, "null");
+        }
+
+        [Testi]
+        static void PurkuKorkeuksineen()
+        {
+            // Karttasepän tuleva rajamuoto: (dlon, dlat, h int16), h absoluuttisena metreinä.
+            var b = KoodaaK(true, new[] { 7.0, 46.0, 1200, 7.01, 46.02, 2950, 7.03, 46.03, -12 }, new[] { 8.0, 47.0, 400, 8.1, 47.0, 410 });
+            var v = Vektorisolut.Pura(b, true);
+            Oleta.Sama(2, v.Count, "viivoja");
+            Oleta.Tosi(v[0][2] == 1200 && v[0][5] == 2950 && v[0][8] == -12 && Math.Abs(v[0][6] - 7.03) < 1e-4, "h ja paikka");
+            Oleta.Tosi(v[1][2] == 400 && v[1][5] == 410, "toinen viiva");
+            // Väärällä lipulla ei kaaduta (luetaan mitä saadaan).
+            Vektorisolut.Pura(b, false);
         }
 
         [Testi]
@@ -55,7 +82,7 @@ namespace Matkakirja.Kartta.Testit
             if (string.IsNullOrEmpty(polku) || !File.Exists(polku)) return;
             var v = Vektorisolut.Pura(File.ReadAllBytes(polku));
             int n = 0;
-            foreach (var x in v) n += x.Length / 2;
+            foreach (var x in v) n += x.Length / Vektorisolut.Askel;
             var odotettu = Environment.GetEnvironmentVariable("RANNIKKO_PISTEITA");
             Console.WriteLine($"      {polku}: {v.Count} viivaa, {n} pistettä");
             if (!string.IsNullOrEmpty(odotettu)) Oleta.Sama(int.Parse(odotettu), n, "pisteitä");
@@ -128,10 +155,11 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void HarvennusDouglasPeucker()
         {
-            var v = new float[] { 0, 0, 1, 0.001f, 2, 0, 3, 0.5f, 4, 0 };
+            var v = V(0, 0, 1, 0.001f, 2, 0, 3, 0.5f, 4, 0);
+            v[3 * 3 + 2] = 777; // huipun h kulkee mukana
             var h = Vektorisolut.Harvenna(v, 0.01);
-            Oleta.Sama(8, h.Length, "pieni mutka pois, iso jää");
-            Oleta.Tosi(h[0] == 0 && h[h.Length - 2] == 4 && h[4] == 3, "päät ja huippu");
+            Oleta.Sama(12, h.Length, "pieni mutka pois, iso jää");
+            Oleta.Tosi(h[0] == 0 && h[h.Length - 3] == 4 && h[6] == 3 && h[8] == 777, "päät, huippu ja sen h");
             Oleta.Tosi(ReferenceEquals(v, Vektorisolut.Harvenna(v, 0)), "tol 0 = sama taulukko");
         }
 
@@ -140,7 +168,7 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void NauhaJanoinaJaPaloina()
         {
-            var viivat = new List<float[]> { new float[] { 20f, 40f, 20.05f, 40f, 20.05f, 40.05f }, new float[] { 5f, 5f } };
+            var viivat = new List<float[]> { V(20f, 40f, 20.05f, 40f, 20.05f, 40.05f), V(5f, 5f) };
             var n = Vektorisolut.TeeNauha(viivat, 0, Identiteetti);
             Oleta.Sama(2, n.Janoja, "kaksi lyhyttä janaa, yhden pisteen viiva pois");
             Oleta.Sama(2 * 4 * Vektorisolut.KarjenFloatit, n.Karjet.Length, "kärjet");
@@ -150,10 +178,14 @@ namespace Matkakirja.Kartta.Testit
             Vektorisolut.Ecef(20, 40, 0, out double ax, out _, out _);
             Vektorisolut.Ecef(20.05, 40, 0, out double bx, out _, out _);
             Oleta.Tosi(Math.Abs(k[0] - ax) < 1 && Math.Abs(k[3] - bx) < 1 && k[6] == -1 && k[7] == 0, "kärki 0");
-            Oleta.Tosi(Math.Abs(k[16] - bx) < 1 && Math.Abs(k[19] - (2 * bx - ax)) < 2 && k[22] == -1 && k[8 + 6] == 1, "kärki 2");
+            int F = Vektorisolut.KarjenFloatit;
+            Oleta.Tosi(Math.Abs(k[2 * F] - bx) < 1 && Math.Abs(k[2 * F + 3] - (2 * bx - ax)) < 2 && k[2 * F + 6] == -1 && k[F + 6] == 1, "kärki 2");
+            // Matka: a-pään kärjet 0, b-pään kärjet janan pituus (0,05° × cos 40° × 111 km ≈ 4,27 km), seuraava jatkaa.
+            Oleta.Tosi(k[8] == 0 && k[F + 8] == 0 && Math.Abs(k[2 * F + 8] - 4270) < 30, $"matka {k[2 * F + 8]}");
+            Oleta.Tosi(Math.Abs(k[4 * F + 8] - k[2 * F + 8]) < 1e-3 && k[6 * F + 8] > k[4 * F + 8] + 5000, "matka kertyy");
             Oleta.Tosi(n.MinX <= ax && n.MaxX >= bx - 1, "rajat");
             // Pitkä jana (1° itään) jaetaan 0,1°:n paloihin (cos 40° → 0,766° → 8 paloa).
-            var pitka = Vektorisolut.TeeNauha(new List<float[]> { new float[] { 20f, 40f, 21f, 40f } }, 0, Identiteetti);
+            var pitka = Vektorisolut.TeeNauha(new List<float[]> { V(20f, 40f, 21f, 40f) }, 0, Identiteetti);
             Oleta.Sama(8, pitka.Janoja, "paloja");
             // Sauman yli lyhintä tietä: 179,95 → −179,95 = 0,1° → yksi pala.
             Oleta.Sama(1, Vektorisolut.Paloja(179.96, 0, -179.96, 0), "sauma 0,08°");
@@ -164,11 +196,38 @@ namespace Matkakirja.Kartta.Testit
         {
             // Siirto + akselien vaihto: paikallinen = (ecef.y, ecef.z, ecef.x) + (1, 2, 3); rivi kerrallaan.
             double[] m = { 0, 1, 0, 1, 0, 0, 1, 2, 1, 0, 0, 3, 0, 0, 0, 1 };
-            var n = Vektorisolut.TeeNauha(new List<float[]> { new float[] { 10f, 0f, 10.01f, 0f } }, 0, m);
+            var n = Vektorisolut.TeeNauha(new List<float[]> { V(10f, 0f, 10.01f, 0f) }, 0, m);
             Vektorisolut.Ecef(10, 0, 0, out double x, out double y, out double z);
             Oleta.Tosi(Math.Abs(n.Karjet[0] - (y + 1)) < 1 && Math.Abs(n.Karjet[1] - (z + 2)) < 1 && Math.Abs(n.Karjet[2] - (x + 3)) < 1,
                 "matriisi rivi kerrallaan");
             Oleta.Sama(0, Vektorisolut.TeeNauha(new List<float[]>(), 0, m).Janoja, "tyhjä");
+        }
+
+        [Testi]
+        static void NauhaKorkeudella()
+        {
+            // Alppien raja: paikka korkeudella h, lisän y = oma h, z = toisen pään h; palat interpoloivat h:n.
+            var v = new float[] { 7f, 46f, 1000f, 7.2f, 46f, 3000f };
+            var n = Vektorisolut.TeeNauha(new List<float[]> { v }, 0, Identiteetti);
+            int F = Vektorisolut.KarjenFloatit;
+            Oleta.Sama(2, n.Janoja, "0,2° × cos 46° = 0,139° → 2 paloa");
+            Vektorisolut.Ecef(7, 46, 1000, out double x, out double y, out double z);
+            Oleta.Tosi(Math.Abs(n.Karjet[0] - x) < 1 && Math.Abs(n.Karjet[2] - z) < 1, "paikka korkeudella");
+            Oleta.Tosi(n.Karjet[9] == 1000 && n.Karjet[10] == 2000, "a-pää: oma 1000, toinen 2000 (puolivälissä)");
+            Oleta.Tosi(n.Karjet[2 * F + 9] == 2000 && n.Karjet[2 * F + 10] == 3000, "b-pää: 2000, jatke 2·2000 − 1000");
+            Oleta.Tosi(n.Karjet[6 * F + 9] == 3000, "viimeinen piste 3000");
+        }
+
+        [Testi]
+        static void RajanTyyliKuinWebissa()
+        {
+            Oleta.Tosi(Math.Abs(Vektorisolut.RajaKatkoM - 700.81) < 0.01 && Math.Abs(Vektorisolut.RajaValiM - 1401.62) < 0.01, "katko 700,8 / 1 401,6 m");
+            double a = Vektorisolut.LineaarinenPeitto(Vektorisolut.RajaMuste, Vektorisolut.RajaPeitto);
+            Console.WriteLine($"      rajat #6b5539: web 0,34 → natiivi {a:0.000}");
+            Oleta.Tosi(a > 0.34 && a < 0.7, "tummenee: " + a);
+            Oleta.Tosi(Viivaleveys.Pt(25, Viivaleveys.RajaKaukana, Viivaleveys.RajaLahella) == 0.65
+                && Viivaleveys.Pt(250, Viivaleveys.RajaKaukana, Viivaleveys.RajaLahella) == 0.95, "leveys 0,65–0,95");
+            Oleta.Sama(30.0, Vektorisolut.RajatTiheys, "näkyy tiheydestä 30 px/°");
         }
 
         [Testi]
@@ -179,7 +238,7 @@ namespace Matkakirja.Kartta.Testit
                 "{\"k\":0,\"tol\":0.1,\"solu\":360,\"soluja\":1,\"pisteita\":30846,\"tiedostot\":{\"0_0\":{\"tavua\":159204,\"viivoja\":4483,\"pisteita\":30835}}}," +
                 "{\"k\":2,\"tol\":0.008,\"solu\":10,\"tiedostot\":{\"20_5\":{\"tavua\":19664},\"19_5\":{\"tavua\":3968}}}," +
                 "{\"k\":1,\"tol\":0.03,\"solu\":360,\"tiedostot\":{\"0_0\":{\"tavua\":604028}}}]}," +
-                "\"rajat\":{\"tasot\":[{\"k\":0,\"tol\":0.1,\"solu\":360,\"tiedostot\":{\"0_0\":{}}}]}}}";
+                "\"rajat\":{\"korkeus\":true,\"tasot\":[{\"k\":0,\"tol\":0.1,\"solu\":360,\"tiedostot\":{\"0_0\":{}}}]}}}";
             var l = Vektorisolut.LueLuettelo(json);
             Oleta.Tosi(l != null && l.Versio == "2026-09-21-gshhs" && l.Lodit.Length == 5 && l.Lodit[2] == 0.008, "perustiedot");
             var t2 = l.Tasolle("rannikko", 2);
@@ -187,6 +246,7 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(l.Tasolle("rannikko", 0).Solu == 360 && l.Tasolle("rannikko", 0).Pisteita == 30846, "taso 0");
             Oleta.Tosi(l.Tasolle("rannikko", 9) == null && l.Tasolle("joet", 0) == null, "puuttuvat");
             Oleta.Sama("rannikko/l4/20_5.bin", Vektorisolut.SolunPolku("rannikko", 4, "20_5"), "polku");
+            Oleta.Tosi(!t2.Korkeus && l.Tasolle("rajat", 0).Korkeus, "korkeuslippu lajilta");
             Oleta.Tosi(Vektorisolut.LueLuettelo("[]") == null && Vektorisolut.LueLuettelo("{\"lodit\":[]}") == null, "rikki");
         }
 

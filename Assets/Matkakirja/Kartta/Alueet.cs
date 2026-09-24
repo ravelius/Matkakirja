@@ -202,9 +202,10 @@ namespace Matkakirja
             if (a.Id == "maailma") polut.AddRange(NapaKannet.OfflinePolut());
             // Samoin pelaajan maan tarkka ääriviiva (Maaraja): ilman sitä offline-kehä on karkea varamonikulmio.
             if (a.Id == "maailma") polut.Add(Maaraja.GeojsonPolku);
-            // Rantaviiva vektorina (Rannikko, löydös 46 E1): maailmalle luettelo ja karkeat tasot, maalle tarkat solut.
-            if (a.Id == "maailma") polut.AddRange(Rannikko.OfflinePolut(true, null));
-            else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Rannikko.OfflinePolut(false, laatikko));
+            // Rannikko ja rajat vektorina (Vektorikerros, löydös 46 E1–E2): maailmalle luettelo ja karkeat tasot, maalle
+            // tarkat solut rasterin laatikosta.
+            if (a.Id == "maailma") polut.AddRange(Vektorikerros.OfflinePolut(true, null));
+            else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Vektorikerros.OfflinePolut(false, laatikko));
             if (a.Tiedot.TryGetValue("media", out var me) && me is List<object> media)
                 foreach (var u in media) if (u is string us && Suhteellinen(us) is string s) polut.Add(s);
             return polut;

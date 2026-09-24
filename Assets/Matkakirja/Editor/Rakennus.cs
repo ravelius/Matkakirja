@@ -138,6 +138,12 @@ namespace Matkakirja.Editori
             rannikko.kerrokset = kerrokset;
             rannikko.materiaali = maakunnat.rajaMateriaali;
             kerrokset.rannikko = rannikko;
+            // Valtioiden rajat vektorina (löydös 46 E2): sama runko, katkoviiva (Rajat.cs).
+            var rajat = georefGo.AddComponent<Rajat>();
+            rajat.georeferenssi = georef;
+            rajat.kerrokset = kerrokset;
+            rajat.materiaali = maakunnat.rajaMateriaali;
+            kerrokset.rajat = rajat;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);

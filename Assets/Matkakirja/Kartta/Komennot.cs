@@ -50,7 +50,9 @@ namespace Matkakirja
     ///   usva pois|paalle | usva raja <k> | usva vari r g b   horisonttiusva kallistuksessa (Aurinko)
     ///   kallistus pois|paalle | kallistus katto pois|paalle   pelaajan kallistus ja horisonttiusvan katto (PalloKierto)
     ///   suodatus                  ladattujen laattojen tekstuurien suodatus lokiin
-    ///   maaraja pois|paalle | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja) mittaukseen
+    ///   maaraja pois|paalle|auto | maaraja paksuus <pt>|web   pelaajan maan kehä (Maaraja); auto = vain kun vektoriranta
+    ///                             ei piirry (omistaja 25.9.), paalle = aina vertailuun
+    ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
     ///   rannikko pois|paalle|tila | rannikko taso <0–4>|auto | rannikko syvyys pois|paalle | rannikko nosto <m> [osuus]
     ///   rannikko peitto <a>|oletus  rantaviiva vektorina (Rannikko, löydös 46 E1): taso pakottaa webin tason, syvyys pois =
     ///                             ZTest Always, nosto = syvyysnosto (oletus 200 m + 0,002 × etäisyys), peitto = lineaarinen
@@ -439,27 +441,46 @@ namespace Matkakirja
                     Suodatus();
                     break;
                 case "maaraja":
-                    // maaraja pois|paalle | maaraja paksuus <pt>|web (löydös 46 jatko, Maaraja.Sallittu/PaksuusPt)
+                    // maaraja pois|paalle|auto | maaraja paksuus <pt>|web (löydös 46 jatko ja E2, Maaraja.Sallittu/Pakota/PaksuusPt):
+                    // auto (oletus) = kehä vain, kun vektoriranta ei piirry; paalle = aina (vertailuun); pois = ei koskaan.
                     if (o.Length > 2 && o[1] == "paksuus")
                         Maaraja.PaksuusPt = o[2] == "web" ? float.NaN : (float)D(2);
-                    else if (o.Length > 1) Maaraja.Sallittu = o[1] == "paalle";
-                    Debug.Log($"MATKAKIRJA maaraja: näkyvissä {Maaraja.Sallittu}, paksuus " +
+                    else if (o.Length > 1) { Maaraja.Sallittu = o[1] != "pois"; Maaraja.Pakota = o[1] == "paalle"; }
+                    Debug.Log($"MATKAKIRJA maaraja: sallittu {Maaraja.Sallittu}, pakotettu {Maaraja.Pakota}, " +
+                              $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, paksuus " +
                               (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt" : "web 1,6–3 pt") +
                               $" × pistekerroin {PalloKierto.Pistekerroin}");
                     break;
                 case "rannikko":
-                    // rannikko pois|paalle|tila | taso <n>|auto | syvyys pois|paalle | nosto <m> [osuus] (löydös 46 E1)
-                    if (o.Length > 2 && o[1] == "taso") Rannikko.PakotettuTaso = o[2] == "auto" ? -1 : (int)D(2);
-                    else if (o.Length > 2 && o[1] == "syvyys") Rannikko.Syvyystesti = o[2] == "paalle";
-                    else if (o.Length > 2 && o[1] == "peitto") Rannikko.PeittoOhitus = o[2] == "oletus" ? float.NaN : (float)D(2);
+                case "rajat":
+                {
+                    // rannikko|rajat pois|paalle|tila | taso <n>|auto | peitto <a>|oletus; rannikko syvyys pois|paalle |
+                    // rannikko nosto <m> [osuus] (yhteiset molemmille; löydös 46 E1–E2)
+                    bool ranta = o[0] == "rannikko";
+                    if (o.Length > 2 && o[1] == "taso")
+                    {
+                        int t = o[2] == "auto" ? -1 : (int)D(2);
+                        if (ranta) Rannikko.PakotettuTaso = t; else Rajat.PakotettuTaso = t;
+                    }
+                    else if (o.Length > 2 && o[1] == "peitto")
+                    {
+                        float p = o[2] == "oletus" ? float.NaN : (float)D(2);
+                        if (ranta) Rannikko.PeittoOhitus = p; else Rajat.PeittoOhitus = p;
+                    }
+                    else if (o.Length > 2 && o[1] == "syvyys") Vektorikerros.Syvyystesti = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "nosto")
                     {
-                        Rannikko.NostoM = (float)D(2);
-                        if (o.Length > 3) Rannikko.NostoOsuus = (float)D(3);
+                        Vektorikerros.NostoM = (float)D(2);
+                        if (o.Length > 3) Vektorikerros.NostoOsuus = (float)D(3);
                     }
-                    else if (o.Length > 1 && (o[1] == "pois" || o[1] == "paalle")) Rannikko.Sallittu = o[1] == "paalle";
-                    Debug.Log("MATKAKIRJA rannikko: " + (Rannikko.Instanssi != null ? Rannikko.Instanssi.Tila() : "ei kohtauksessa"));
+                    else if (o.Length > 1 && (o[1] == "pois" || o[1] == "paalle"))
+                    {
+                        if (ranta) Rannikko.Sallittu = o[1] == "paalle"; else Rajat.Sallittu = o[1] == "paalle";
+                    }
+                    Vektorikerros k = ranta ? (Vektorikerros)Rannikko.Instanssi : Rajat.Instanssi;
+                    Debug.Log($"MATKAKIRJA {o[0]}: " + (k != null ? k.Tila() : "ei kohtauksessa"));
                     break;
+                }
                 case "alue":
                 case "offline":
                 {

@@ -13,14 +13,18 @@ namespace Matkakirja
     ///                    { k, tol, solu (360 = koko maailma yhtenä tiedostona), tiedostot: { "s_r": { tavua, … } } } ] } } }
     ///   &lt;laji&gt;/l&lt;k&gt;/&lt;s&gt;_&lt;r&gt;.bin  viivoja peräkkäin: int32 n, int32 lon·1e4, int32 lat·1e4, (n − 1) × (int16 dlon,
     ///                    int16 dlat) 1e-4°-yksikköinä, little-endian (webin puraDelta).
+    ///   KORKEUDELLINEN MUOTO (E2, Karttasepän tuleva rajasarja; luettelossa "korkeus": true lajille tai tasolle):
+    ///                    int32 n, int32 lon·1e4, int32 lat·1e4, int16 h0, (n − 1) × (int16 dlon, int16 dlat, int16 h), h
+    ///                    ABSOLUUTTISENA metreinä ellipsoidista (maaston DEM, ei delta). Ilman lippua h = 0.
     /// Solun avain s_r: s = floor((lon + 180) / solu), r = floor((90 − lat) / solu) (webin vektorisoluAvain).
     ///
     /// Tason valinta (webin vektoritaso): matalin taso, jonka toleranssi × tiheys ≤ 0,5 laitepikseliä; tiheys on
     /// laitepikseliä leveysastetta kohti ruudun keskellä (sama mitta kuin Maarajalla). Harvennusporras (webin
     /// harvennusPorras) harventaa ladattua solua Douglas–Peuckerilla, kun porras on aineiston omaa toleranssia karkeampi.
     ///
-    /// Nauha (Rajaviiva-varjostin, kuten Maaraja.TeeTaulukot): jana = 4 kärkeä, kärjessä oma paikka, janan toinen pää
-    /// ja puoli (±1, 0). Kärki on lomitettuna 8 floatina: paikka xyz, toinen xyz, puoli xy. Pitkät janat jaetaan
+    /// Nauha (Rajaviiva-varjostin, kuten Maaraja.TeeTaulukot): jana = 4 kärkeä, kärjessä oma paikka, janan toinen pää,
+    /// puoli (±1, 0) ja lisä (matka viivaa pitkin metreinä katkoviivalle, oma h, toisen pään h korkeuskertoimelle).
+    /// Kärki on lomitettuna 11 floatina: paikka xyz, toinen xyz, puoli xy, lisä xyz. Pitkät janat jaetaan
     /// <see cref="JananEnimmaispituus"/>-palasiin (web VEKTORIT_JANAN_ENIMMAISPITUUS_AST), jottei jänne painu maaston alle
     /// nyt kun viiva on syvyystestissä.
     /// </summary>
@@ -36,8 +40,8 @@ namespace Matkakirja
         public const double JananEnimmaispituus = 0.1;
         /// <summary>Näkyvän alueen reunus asteina (web VEKTORIT_VARA_AST).</summary>
         public const double Vara = 1.0;
-        /// <summary>Floatteja kärkeä kohti nauhassa (paikka 3, toinen 3, puoli 2).</summary>
-        public const int KarjenFloatit = 8;
+        /// <summary>Floatteja kärkeä kohti nauhassa (paikka 3, toinen 3, puoli 2, lisä 3).</summary>
+        public const int KarjenFloatit = 11;
 
         // ---- Peitto lineaarisessa väriavaruudessa ----
 
@@ -45,6 +49,17 @@ namespace Matkakirja
         public static readonly double[] RantaMuste = { 0x5a / 255.0, 0x43 / 255.0, 0x30 / 255.0 };
         /// <summary>Web RANTA_PEITTO.</summary>
         public const double RantaPeitto = 0.58;
+        /// <summary>Web RAJA_MUSTE #6b5539 (paletin --raja-muste; kaikkien rajojen muste 14.9.2026 alkaen) sRGB 0–1.</summary>
+        public static readonly double[] RajaMuste = { 0x6b / 255.0, 0x55 / 255.0, 0x39 / 255.0 };
+        /// <summary>Web RAJA_PEITTO.</summary>
+        public const double RajaPeitto = 0.34;
+        /// <summary>
+        /// Rajan katkoviiva metreinä: web RAJA_KATKO_YKS [0,011; 0,022] pallon yksikköinä, pallon säde 100 yksikköä =
+        /// 6 371 km → piste 700,8 m, väli 1 401,6 m (poltettu raja 1,5 R piste ja 3 R väli, R ≈ 1 px z7:llä).
+        /// </summary>
+        public const double RajaKatkoM = 0.011 / 100.0 * 6371000.0, RajaValiM = 0.022 / 100.0 * 6371000.0;
+        /// <summary>Rajat piirretään vasta tästä tiheydestä (web VEKTORIT_RAJAT_PX_ASTE, laitepikseliä/aste).</summary>
+        public const double RajatTiheys = 30;
 
         /// <summary>
         /// Webin sRGB-sekoituksen peitto natiivin lineaariseen sekoitukseen (NimiLadonta.LineaarinenAlfa): rantaviiva on
@@ -65,6 +80,8 @@ namespace Matkakirja
             public HashSet<string> Tiedostot = new HashSet<string>(StringComparer.Ordinal);
             public long Tavuja;
             public long Pisteita;
+            /// <summary>Solut korkeudellisessa muodossa (dlon, dlat, h); ks. luokan kuvaus.</summary>
+            public bool Korkeus;
         }
 
         public sealed class Luettelo
@@ -92,6 +109,7 @@ namespace Matkakirja
             foreach (var laji in lajit)
             {
                 var tasot = new List<Taso>();
+                bool lajiKorkeus = laji.Value is Dictionary<string, object> lk && MiniJson.Totuus(lk, "korkeus");
                 if (laji.Value is Dictionary<string, object> lo && MiniJson.Kentta(lo, "tasot") is List<object> tl)
                     foreach (var o in tl)
                     {
@@ -102,6 +120,7 @@ namespace Matkakirja
                             Tol = MiniJson.Luku(t, "tol") ?? 0,
                             Solu = MiniJson.Luku(t, "solu") ?? l.Solu,
                             Pisteita = (long)(MiniJson.Luku(t, "pisteita") ?? 0),
+                            Korkeus = lajiKorkeus || MiniJson.Totuus(t, "korkeus"),
                         };
                         if (MiniJson.Kentta(t, "tiedostot") is Dictionary<string, object> tied)
                             foreach (var f in tied)
@@ -123,34 +142,41 @@ namespace Matkakirja
         // ---- Purku ----
 
         /// <summary>
-        /// Solun tiedosto viivoiksi (webin puraDelta): viiva = float[] lomitettuna lon, lat. Vajaa tai rikki mennyt
+        /// Solun tiedosto viivoiksi (webin puraDelta): viiva = float[] lomitettuna lon, lat, h (askel 3; h = 0 ilman
+        /// korkeutta). <paramref name="korkeus"/> = korkeudellinen muoto (luettelon "korkeus"). Vajaa tai rikki mennyt
         /// tiedosto luetaan siihen asti, mikä on ehjää.
         /// </summary>
-        public static List<float[]> Pura(byte[] b)
+        public static List<float[]> Pura(byte[] b, bool korkeus = false)
         {
             var viivat = new List<float[]>();
             if (b == null) return viivat;
+            int otsake = korkeus ? 14 : 12, pala = korkeus ? 6 : 4;
             int o = 0;
-            while (o + 12 <= b.Length)
+            while (o + otsake <= b.Length)
             {
                 int n = BitConverter.ToInt32(b, o);
-                if (n < 2 || o + 12 + (long)(n - 1) * 4 > b.Length) break;
+                if (n < 2 || o + otsake + (long)(n - 1) * pala > b.Length) break;
                 o += 4;
                 int x = BitConverter.ToInt32(b, o), y = BitConverter.ToInt32(b, o + 4);
                 o += 8;
-                var v = new float[n * 2];
+                var v = new float[n * Askel];
                 v[0] = (float)(x / 1e4); v[1] = (float)(y / 1e4);
+                if (korkeus) { v[2] = BitConverter.ToInt16(b, o); o += 2; }
                 for (int k = 1; k < n; k++)
                 {
                     x += BitConverter.ToInt16(b, o);
                     y += BitConverter.ToInt16(b, o + 2);
-                    o += 4;
-                    v[2 * k] = (float)(x / 1e4); v[2 * k + 1] = (float)(y / 1e4);
+                    v[Askel * k] = (float)(x / 1e4); v[Askel * k + 1] = (float)(y / 1e4);
+                    if (korkeus) v[Askel * k + 2] = BitConverter.ToInt16(b, o + 4);
+                    o += pala;
                 }
                 viivat.Add(v);
             }
             return viivat;
         }
+
+        /// <summary>Viivan floatit pistettä kohti: lon, lat, h.</summary>
+        public const int Askel = 3;
 
         // ---- Valinnat ----
 
@@ -249,12 +275,13 @@ namespace Matkakirja
 
         // ---- Harvennus ----
 
-        /// <summary>Webin harvennaViiva: Douglas–Peucker asteissa, pituusaste × cos(lat) (keskipisteen leveys).</summary>
+        /// <summary>Webin harvennaViiva: Douglas–Peucker asteissa, pituusaste × cos(lat) (keskipisteen leveys). Askel 3.</summary>
         public static float[] Harvenna(float[] v, double tol)
         {
-            int n = v == null ? 0 : v.Length / 2;
+            const int A = Askel;
+            int n = v == null ? 0 : v.Length / A;
             if (!(tol > 0) || n < 3) return v;
-            double kx = Math.Max(0.05, Math.Cos(v[2 * (n >> 1) + 1] * Math.PI / 180));
+            double kx = Math.Max(0.05, Math.Cos(v[A * (n >> 1) + 1] * Math.PI / 180));
             var pida = new bool[n];
             pida[0] = pida[n - 1] = true;
             var pino = new Stack<(int, int)>();
@@ -265,13 +292,13 @@ namespace Matkakirja
             {
                 var (a, b) = pino.Pop();
                 if (b - a < 2) continue;
-                double ax = v[2 * a] * kx, ay = v[2 * a + 1];
-                double dx = v[2 * b] * kx - ax, dy = v[2 * b + 1] - ay;
+                double ax = v[A * a] * kx, ay = v[A * a + 1];
+                double dx = v[A * b] * kx - ax, dy = v[A * b + 1] - ay;
                 double l2 = dx * dx + dy * dy;
                 int paras = -1; double parasD = -1;
                 for (int i = a + 1; i < b; i++)
                 {
-                    double px = v[2 * i] * kx, py = v[2 * i + 1], d;
+                    double px = v[A * i] * kx, py = v[A * i + 1], d;
                     if (l2 == 0) d = (px - ax) * (px - ax) + (py - ay) * (py - ay);
                     else
                     {
@@ -283,16 +310,16 @@ namespace Matkakirja
                 }
                 if (parasD > t2) { pida[paras] = true; pidetty++; pino.Push((a, paras)); pino.Push((paras, b)); }
             }
-            var ulos = new float[pidetty * 2];
+            var ulos = new float[pidetty * A];
             int j = 0;
             for (int i = 0; i < n; i++)
-                if (pida[i]) { ulos[j++] = v[2 * i]; ulos[j++] = v[2 * i + 1]; }
+                if (pida[i]) { ulos[j++] = v[A * i]; ulos[j++] = v[A * i + 1]; ulos[j++] = v[A * i + 2]; }
             return ulos;
         }
 
         // ---- Nauha ----
 
-        /// <summary>Nauhaverkon taulukot: kärjet lomitettuna (8 floatia), kolmiot, rajat (paikallinen koordinaatisto).</summary>
+        /// <summary>Nauhaverkon taulukot: kärjet lomitettuna (11 floatia), kolmiot, rajat (paikallinen koordinaatisto).</summary>
         public sealed class Nauha
         {
             public int Janoja, Pisteita;
@@ -325,24 +352,27 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Viivat nauhaksi Rajaviiva-varjostimelle. <paramref name="porras"/> &gt; 0 harventaa ensin (webin rakenna).
-        /// <paramref name="m"/> = ECEF → paikallinen, rivi kerrallaan (m[r * 4 + c], kuten double4x4:n rivit), eli
-        /// georeferenssin ecefToLocalMatrix. Puolen y on 0 (ei päätyjatketta eikä rengassuodatinta, kuten aluerajoilla).
+        /// Viivat (askel 3: lon, lat, h) nauhaksi Rajaviiva-varjostimelle. <paramref name="porras"/> &gt; 0 harventaa ensin
+        /// (webin rakenna). <paramref name="m"/> = ECEF → paikallinen, rivi kerrallaan (m[r * 4 + c], kuten double4x4:n
+        /// rivit), eli georeferenssin ecefToLocalMatrix. Puolen y on 0 (ei päätyjatketta eikä rengassuodatinta, kuten
+        /// aluerajoilla). Paikka on korkeudella h (maaston todellinen korkeus; varjostin lisää korkeuskertoimen osuuden
+        /// max(h, 0)·(k − 1) kuten tileset); palat interpoloivat h:n lineaarisesti. Matka kasvaa viivaa pitkin (metreinä,
+        /// ECEF-jänteinä) ja alkaa jokaisen viivan alussa nollasta.
         /// </summary>
-        public static Nauha TeeNauha(List<float[]> viivat, double porras, double[] m, double korkeus = 0,
-            double enimmais = JananEnimmaispituus)
+        public static Nauha TeeNauha(List<float[]> viivat, double porras, double[] m, double enimmais = JananEnimmaispituus)
         {
+            const int A = Askel;
             var harvat = new List<float[]>(viivat?.Count ?? 0);
             int janoja = 0, pisteita = 0;
             if (viivat != null)
                 foreach (var v0 in viivat)
                 {
                     var v = porras > 0 ? Harvenna(v0, porras) : v0;
-                    int n = v == null ? 0 : v.Length / 2;
+                    int n = v == null ? 0 : v.Length / A;
                     if (n < 2) continue;
                     harvat.Add(v);
                     pisteita += n;
-                    for (int k = 1; k < n; k++) janoja += Paloja(v[2 * k - 2], v[2 * k - 1], v[2 * k], v[2 * k + 1], enimmais);
+                    for (int k = 1; k < n; k++) janoja += Paloja(v[A * k - A], v[A * k - A + 1], v[A * k], v[A * k + 1], enimmais);
                 }
             var nauha = new Nauha
             {
@@ -352,56 +382,70 @@ namespace Matkakirja
                 MaxX = float.MinValue, MaxY = float.MinValue, MaxZ = float.MinValue,
             };
             if (janoja == 0) { nauha.MinX = nauha.MinY = nauha.MinZ = nauha.MaxX = nauha.MaxY = nauha.MaxZ = 0; return nauha; }
-            void Paikka(double lon, double lat, out float px, out float py, out float pz)
+            void Paikka(double lon, double lat, double h, out double ex, out double ey, out double ez, out float px, out float py, out float pz)
             {
-                Ecef(lon, lat, korkeus, out double x, out double y, out double z);
-                px = (float)(m[0] * x + m[1] * y + m[2] * z + m[3]);
-                py = (float)(m[4] * x + m[5] * y + m[6] * z + m[7]);
-                pz = (float)(m[8] * x + m[9] * y + m[10] * z + m[11]);
+                Ecef(lon, lat, h, out ex, out ey, out ez);
+                px = (float)(m[0] * ex + m[1] * ey + m[2] * ez + m[3]);
+                py = (float)(m[4] * ex + m[5] * ey + m[6] * ez + m[7]);
+                pz = (float)(m[8] * ex + m[9] * ey + m[10] * ez + m[11]);
             }
             var k8 = nauha.Karjet;
             var kol = nauha.Kolmiot;
             int j = 0;
-            void Karki(int v, float ax, float ay, float az, float bx, float by, float bz, float puoli)
+            void Karki(int v, float ax, float ay, float az, float bx, float by, float bz, float puoli, float matka, float h, float hToinen)
             {
                 int o = v * KarjenFloatit;
                 k8[o] = ax; k8[o + 1] = ay; k8[o + 2] = az;
                 k8[o + 3] = bx; k8[o + 4] = by; k8[o + 5] = bz;
                 k8[o + 6] = puoli; k8[o + 7] = 0;
+                k8[o + 8] = matka; k8[o + 9] = h; k8[o + 10] = hToinen;
+            }
+            void Laajenna(float x, float y, float z)
+            {
+                if (x < nauha.MinX) nauha.MinX = x;
+                if (x > nauha.MaxX) nauha.MaxX = x;
+                if (y < nauha.MinY) nauha.MinY = y;
+                if (y > nauha.MaxY) nauha.MaxY = y;
+                if (z < nauha.MinZ) nauha.MinZ = z;
+                if (z > nauha.MaxZ) nauha.MaxZ = z;
             }
             foreach (var v in harvat)
             {
-                int n = v.Length / 2;
-                Paikka(v[0], v[1], out float ax, out float ay, out float az);
+                int n = v.Length / A;
+                double matka = 0;
+                float ha = v[2];
+                Paikka(v[0], v[1], ha, out double eax, out double eay, out double eaz, out float ax, out float ay, out float az);
+                Laajenna(ax, ay, az);
                 for (int k = 1; k < n; k++)
                 {
-                    double lon0 = v[2 * k - 2], lat0 = v[2 * k - 1], lon1 = v[2 * k], lat1 = v[2 * k + 1];
+                    double lon0 = v[A * k - A], lat0 = v[A * k - A + 1], lon1 = v[A * k], lat1 = v[A * k + 1];
+                    double h0 = v[A * k - A + 2], h1 = v[A * k + 2];
                     int paloja = Paloja(lon0, lat0, lon1, lat1, enimmais);
                     double dLon = lon1 - lon0;
                     if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
                     double dLat = lat1 - lat0;
                     for (int p = 1; p <= paloja; p++)
                     {
-                        float bx, by, bz;
-                        if (p == paloja) Paikka(lon1, lat1, out bx, out by, out bz);
-                        else Paikka(lon0 + dLon * p / paloja, lat0 + dLat * p / paloja, out bx, out by, out bz);
-                        // b-pään kärjille sama suunta kuin a-päälle: toinen = b + (b − a) (Maaraja.TeeTaulukot).
-                        float cx = 2 * bx - ax, cy = 2 * by - ay, cz = 2 * bz - az;
+                        double t = (double)p / paloja;
+                        float hb = (float)(h0 + (h1 - h0) * t);
+                        Paikka(p == paloja ? lon1 : lon0 + dLon * t, p == paloja ? lat1 : lat0 + dLat * t, hb,
+                            out double ebx, out double eby, out double ebz, out float bx, out float by, out float bz);
+                        double pituus = Math.Sqrt((ebx - eax) * (ebx - eax) + (eby - eay) * (eby - eay) + (ebz - eaz) * (ebz - eaz));
+                        float ma = (float)matka, mb = (float)(matka + pituus);
+                        // b-pään kärjille sama suunta kuin a-päälle: toinen = b + (b − a) (Maaraja.TeeTaulukot), h samoin.
+                        float cx = 2 * bx - ax, cy = 2 * by - ay, cz = 2 * bz - az, hc = 2 * hb - ha;
                         int v4 = j * 4;
-                        Karki(v4, ax, ay, az, bx, by, bz, -1);
-                        Karki(v4 + 1, ax, ay, az, bx, by, bz, 1);
-                        Karki(v4 + 2, bx, by, bz, cx, cy, cz, -1);
-                        Karki(v4 + 3, bx, by, bz, cx, cy, cz, 1);
-                        int t = j * 6;
-                        kol[t] = v4; kol[t + 1] = v4 + 1; kol[t + 2] = v4 + 2;
-                        kol[t + 3] = v4 + 1; kol[t + 4] = v4 + 3; kol[t + 5] = v4 + 2;
-                        if (ax < nauha.MinX) nauha.MinX = ax; if (ax > nauha.MaxX) nauha.MaxX = ax;
-                        if (ay < nauha.MinY) nauha.MinY = ay; if (ay > nauha.MaxY) nauha.MaxY = ay;
-                        if (az < nauha.MinZ) nauha.MinZ = az; if (az > nauha.MaxZ) nauha.MaxZ = az;
-                        if (bx < nauha.MinX) nauha.MinX = bx; if (bx > nauha.MaxX) nauha.MaxX = bx;
-                        if (by < nauha.MinY) nauha.MinY = by; if (by > nauha.MaxY) nauha.MaxY = by;
-                        if (bz < nauha.MinZ) nauha.MinZ = bz; if (bz > nauha.MaxZ) nauha.MaxZ = bz;
-                        ax = bx; ay = by; az = bz;
+                        Karki(v4, ax, ay, az, bx, by, bz, -1, ma, ha, hb);
+                        Karki(v4 + 1, ax, ay, az, bx, by, bz, 1, ma, ha, hb);
+                        Karki(v4 + 2, bx, by, bz, cx, cy, cz, -1, mb, hb, hc);
+                        Karki(v4 + 3, bx, by, bz, cx, cy, cz, 1, mb, hb, hc);
+                        int tt = j * 6;
+                        kol[tt] = v4; kol[tt + 1] = v4 + 1; kol[tt + 2] = v4 + 2;
+                        kol[tt + 3] = v4 + 1; kol[tt + 4] = v4 + 3; kol[tt + 5] = v4 + 2;
+                        Laajenna(bx, by, bz);
+                        ax = bx; ay = by; az = bz; ha = hb;
+                        eax = ebx; eay = eby; eaz = ebz;
+                        matka += pituus;
                         j++;
                     }
                 }

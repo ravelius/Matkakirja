@@ -72,13 +72,20 @@ namespace Matkakirja
         /// </summary>
         public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-24/maapolygonit.geojson";
 
-        /// <summary>Kehä piirretään (komento "maaraja pois|paalle", mittaukseen; oletus true).</summary>
+        /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
         public static bool Sallittu = true;
+        /// <summary>
+        /// Kehä myös vektorirannan kanssa (komento "maaraja paalle", vertailuun). Oletus false: OMISTAJAN PÄÄTÖS 25.9.2026
+        /// klo 00.0x (peruskartta D2 + reliefi + vektorirannat): kehä pois, kun Rannikko piirtyy; kehä jää tilanteisiin,
+        /// joissa rannikko on piilossa (lennon satelliittipinta, Rannikko.Nakyvissa = false, luettelo lataamatta).
+        /// Linssien ajan kehä on piilossa kuten ennenkin (kaupungit-portti).
+        /// </summary>
+        public static bool Pakota;
         /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = webin laki [1,6; 3].</summary>
         public static float PaksuusPt = float.NaN;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaKokeilut() { Sallittu = true; PaksuusPt = float.NaN; }
+        static void NollaaKokeilut() { Sallittu = true; Pakota = false; PaksuusPt = float.NaN; }
 
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
@@ -359,7 +366,8 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (piirto == null || georeferenssi == null) return;
-            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa && Sallittu;
+            bool rantaPiirtyy = Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy;
+            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
