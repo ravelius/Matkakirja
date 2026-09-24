@@ -144,3 +144,28 @@ luontokohteilla ja pienillä siirtomaa-ajan jälkeisillä kaupungeilla —
 tätä ei ole. Suositus: ei kannata olettaa tasaista saantia jatkoerissä
 (N2/N4/N5/N6); järjestyksen seuraavat vaiheet (ennenNyt, turistiopas,
 kohdekartta) ovat todennäköisesti tuottavampia.
+
+## 7. EnnenNyt-vaihe — tulokset (24.9.2026, PR #3069)
+
+Yield 35/46 (76 %) — huomattavasti parempi kuin galleria, ja
+mekaaninen: `js/packs/*-valokuvat.js`:n (matkakirjan valokuvataulut)
+top-level `tiedosto`+`vuosi`+`lahde`+`selite` ja `uusi`-alaolio ovat
+TISMALLEEN `ennenNyt`-kentän muotoa (tiedoston oma kommentti rivillä
+21-38 vahvistaa: "kopioidaan valokuvatauluista sellaisinaan"). Ei
+tarvinnut hakea Commonsista uutta — vain kopioida ja lyhentää
+kuvatekstit yhden virkkeen mittaisiksi.
+
+34/46 sai parin suoraan valokuvataulusta (Karthago 1912, Mosambikin
+saari 1655, Kalgoorlie 1901, Suakin 1871, jne.). Norfolk lisättiin
+käsin galleria-erän (#3066) omasta Thomas Seller -vesiväristä (1839).
+
+11/46 ei saanut paria:
+- **Ei vanhaa kuvaa valokuvataulussa (6):** caphorn, boavista,
+  santarem, exmouth (kaupunki perustettu vasta 1960-luvulla — ei voi
+  ollakaan pre-1960 kuvaa), sanambrosio (asumaton saari).
+- **Ei valokuvataulumerkintää lainkaan (6):** churchill, bananal,
+  geraldton, nullarbor, campogrande, nome.
+
+**Suositus:** N2/N4/N5/N6:n 20 kaupunkia kannattaa tarkistaa samalla
+menetelmällä (valokuvataulu ensin, Commons-haku vasta jos ei löydy)
+heti kun ne mergetään — todennäköinen yield samaa luokkaa.
