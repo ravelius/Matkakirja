@@ -25,6 +25,10 @@ namespace Matkakirja
     ///   nipistys cx cy d0 d1 s    kahden sormen nipistys keskipisteen ympäri, sormien
     ///                             väli d0 → d1 (osuus näytön leveydestä)
     ///   kallista y0 y1 s          kahden sormen pystyveto (kallistus), y näytön osuutena
+    ///   kallista aste             kallistus suoraan (0–85; käytetty kallistus rajautuu korkeuden ja maaston mukaan)
+    ///   suunta aste               suuntima suoraan (0 = pohjoinen ylös, 90 = itä ylös)
+    ///   kierra aste s             kahden sormen kiertoele ruudun keskellä (vastapäivään +)
+    ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
@@ -140,6 +144,27 @@ namespace Matkakirja
                     });
                     break;
                 }
+                case "kallista" when o.Length == 2:
+                    kierto.kallistus = System.Math.Clamp(D(1), 0.0, 85.0);
+                    break;
+                case "suunta":
+                    kierto.suuntima = D(1);
+                    break;
+                case "pohjoinen":
+                    kierto.PalautaPohjoinen(o.Length > 1 ? (float)D(1) : 0.4f);
+                    break;
+                case "kierra":
+                    kierto.AloitaEle(new PalloKierto.Ele
+                    {
+                        kaksi = true,
+                        a0 = new Unity.Mathematics.float2(0.35f, 0.5f),
+                        a1 = new Unity.Mathematics.float2(0.35f, 0.5f),
+                        b0 = new Unity.Mathematics.float2(0.65f, 0.5f),
+                        b1 = new Unity.Mathematics.float2(0.65f, 0.5f),
+                        kiertoAst = (float)D(1),
+                        kesto = (float)D(2),
+                    });
+                    break;
                 case "kallista":
                     kierto.AloitaEle(new PalloKierto.Ele
                     {

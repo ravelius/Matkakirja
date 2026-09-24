@@ -575,11 +575,12 @@ MonoBehaviour:
   taytto: 0.92
   maxLeveys: 80
   kallistus: 0
-  maxKallistus: 60
+  maxKallistus: 85
   suuntima: 0
   katseKorkeus: 0
   palautusAika: 0.6
-  kallistusRajaKm: 3000
+  kallistusTaysiKm: 1500
+  kallistusNollaKm: 7000
   kallistusHerkkyys: 0.25
   napautusLiike: 10
   napautusAika: 0.35
