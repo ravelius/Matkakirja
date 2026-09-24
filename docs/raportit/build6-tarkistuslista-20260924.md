@@ -547,3 +547,205 @@ MENEVAT BUILD 7:AAN". Ei testata tässä ajossa.
 Natiiviseppän vinkit tähän ajoon: `komento.txt`: `hiljaa` (mykistää koko
 sovelluksen), `vari FRA` (pakottaa väritason näkyviin), `portti paalle|pois`
 (porttiverho), `renkaat ateena,kairo ateena` (pakottaa hehkurenkaat).
+
+---
+
+# Build 7 -tarkistuslista (runko, kirjoitettu 24.9.2026 klo 12.0x ennen builda)
+
+Fable pyysi rungon valmiiksi ennen build 7:n asennusta, samaan
+tiedostoon. Lähde: docs/raamattu-loki (Fable-haara), tarkistettu
+olennaisin osin webin lähdekoodista. Täytetään PASS/FAIL-sarake ja
+kuvat kun build 7 on asennettu.
+
+## B7-1 (jatkoa löydös 18:aan): Liiku-nappi läpinäkyvä myös aktiivisena
+
+**Omistaja (Fable 24.9. klo 11.52)**: build 6:ssa Liiku on läpinäkyvä
+levossa mutta TÄYSIN PEITTÄVÄ KULTA kulkutapavalitsimen ollessa auki
+(löydös 18:n alkuperäinen korjaus kattoi vain lepotilan). Myös aktiivisen
+tilan pitää olla läpinäkyvä: kultainen reuna ja teksti, kevyt läpikuultava
+täyttö, EI umpikultaa.
+**Vastuu**: Natiivi-UI, build 7.
+
+**Testikomento**: `ui-komento.txt`: `ui liiku` NIIN ETTÄ aktiivinen peli
+on käynnissä (jotta oikea kulkutapavalitsin avautuu, ei mock). `kuva
+liiku-aktiivinen-b7`. Vertaa build 6:n kuvaan
+`18-liiku-aktiivinen.png` (umpikulta).
+
+**Odotettu tulos**: EI web-pariteettia (natiivin oma iPhone-ratkaisu,
+ks. build6-listan löydös 6/18). Nappi näyttää samalta läpinäkyvältä
+kuin lepotilassa (vrt. `zoom-greece2.png`/`l18-liiku.png`-tyylinen
+ohutreunainen tausta), riippumatta siitä onko kulkutapavalitsin auki.
+
+**PASS-ehto**: Liiku-nappi läpikuultava/reunallinen SEKÄ levossa ETTÄ
+kulkutapavalitsimen ollessa auki. **FAIL**: kumpi tahansa tila yhä
+umpikultainen.
+
+## B7-2: Isoisän/pulun tekstit piilossa oletuksena + aito äänitasokaiutin
+
+**Omistaja (Fable 24.9. klo 11.33, Raamattu 14.–20.9.)**: isoisän ja
+pulun tekstit ovat OLETUKSENA PIILOSSA — vain ääni kuuluu, pelaaja
+napauttaa tekstiversion auki halutessaan. Matkakirjan oikean reunan
+sykkivä kaiutin reagoi AIDOSTI luennan äänitasoon (natiivissa
+AudioSource → GetOutputData, ei ajastettu kuvio). Natiivi-UI:n build 6
+-kuvissa (a33385c) tekstit näkyivät oletuksena → korjaus build 7:ään.
+**Vastuu**: Natiivi-UI, build 7.
+
+**Testikomento**: käynnistä matkakirjan/pulun luenta (`ui matkakirja
+<kaupunki> fokus` tai `ui chat`) HETI kun ääni alkaa, ota kuva ENNEN
+mitään napautusta: `kuva teksti-piilossa-b7`. Napauta kaiutinkuvaketta,
+ota kuva uudestaan: `kuva teksti-auki-b7`. Jos mahdollista, ota
+lyhyt kuvasarja (2–3 kuvaa ~0,5 s välein) kaiuttimen ikonista luennan
+aikana nähdäksesi sen reagoivan (koon/sykkeen vaihtelu) — verrattuna
+tasaiseen/ajastettuun animaatioon.
+
+**Odotettu tulos**: [TÄYTETÄÄN WEB-TUTKIMUKSEN JÄLKEEN — ks. alla]
+
+**PASS-ehto**: teksti piilossa oletuksena, näkyy vasta napautuksesta;
+kaiutin selvästi eri kokoinen/muotoinen eri hetkinä äänekkyyden mukaan
+(ei tasainen sykli). **FAIL**: teksti näkyy heti tai kaiutin ei muutu
+äänen mukana.
+
+## B7-3 (löydös 22): Maan väritaso, huntu ja meri
+
+**Omistaja (Fable 24.9. klo 11.57, SITOVA)**: 1) huntu ei saa peittää
+merialueita — meri pysyy webin mukaisena harmaansinisenä
+rantaviivoituksella; 2) Kreikan ääriviiva on liian yksinkertaistettu —
+rajaviivan on oltava yhtä tarkka kuin webissä (sama raja-aineisto ja
+tarkkuus); 3) huntu on liian voimakas — naapurimaat eivät näy lainkaan,
+webissä naapurit näkyvät vaaleana sepiana nimineen (esim. Westfalen,
+Piemonte). Juurisyy todennäköisesti Karttasepän väritasolaatoissa,
+joissa alueen ulkopuoli on kermana (pitää olla läpinäkyvä, alpha 0), ja
+huntu pitää olla erillinen mieto taso VAIN muiden maiden maa-alueille.
+**Vastuu**: Natiiviseppä + Karttaseppä, build 7.
+**Vertailukuva**: `pariteetti-web-2026-09-24/kartta-393x852.png` vs.
+build 6:n `1-2-nostot-varitaso-kreikka.png` — Fable totesi kaikki kolme
+eroa näistä.
+
+**Testikomento**: sama kuin build 6:n löydös 1–2 (saavu Kreikkaan,
+zoomaa ≥50 % ruudusta), `kuva varitaso-b7`. Zoomaa myös ulos niin että
+naapurimaat (Albania/Makedonia/Bulgaria/Turkki) ja meri näkyvät samassa
+kuvassa.
+
+**Odotettu tulos**: [TÄYTETÄÄN WEB-TUTKIMUKSEN JÄLKEEN — ks. alla]
+
+**PASS-ehto**: (a) meri harmaansininen, rantaviivoitus näkyy, EI huntua
+sen päällä; (b) Kreikan raja yhtä tarkka/yksityiskohtainen kuin webin
+kuvassa, ei kulmikas/yksinkertaistettu; (c) naapurimaat näkyvät vaaleana
+sepiana NIMINEEN (ei tyhjänä/piilossa). **FAIL**: mikä tahansa kolmesta
+pettää.
+
+## B7-4: Maailmanradion aito VU-mittari
+
+**Tausta**: webissä poistettiin 5.8.2026 (WebKit ei päästä suoratoistoa
+analysaattoriin). Natiivissa ei ole samaa rajoitusta. Linssiseppä
+toteutti mittarin ytimen webin v267-ballistiikan mukaan: τ = 0,065 s
+nousu / 0,34 s lasku, asteikko −40…−6 dB, nollakohta 0,76, lepoarvo
+0,045; neula liikkuu transformilla ilman uudelleenpiirtoa. Natiiviseppä
+tekee AVPlayer-liitännäisen äänitapin (MTAudioProcessingTap → RMS →
+MatkakirjaRadio_Taso()); HLS-asemilla ajastettu varakuvio koska tap ei
+toimi HLS-virroille. Kotelo Natiivi-UI:lta.
+**Vastuu**: Natiiviseppä (tappi) + Linssiseppä (mittari) + Natiivi-UI
+(kotelo), build 7.
+
+**Testikomento**: avaa maailmanradiolinssi/-toiminto, valitse
+PROGRESSIIVINEN MP3/AAC-asema (ei HLS), tarkkaile neulaa muutaman
+sekunnin ajan musiikin/puheen vaihdellessa. Ota kuvasarja (3–4 kuvaa
+~1 s välein): `kuva radio-vu-1/2/3`. Kokeile myös HLS-asema jos
+tunnistettavissa, varmista varakuvio ei näytä täysin paikallaan
+pysyvältä neulalta.
+
+**Odotettu tulos**: neula liikkuu selvästi äänenvoimakkuuden mukana
+progressiivisilla asemilla (nopea nousu, hitaampi lasku — ei
+symmetrinen), pysyy asteikolla −40…−6 dB, lepoasento lähellä nollaa
+hiljaisuudessa. HLS-asemalla varakuvio liikkuu jonkin verran (ei täysin
+paikallaan), mutta ei väitä olevansa aito.
+
+**PASS-ehto**: neula reagoi äänenvoimakkuuteen epäsymmetrisellä
+nousulla/laskulla progressiivisilla asemilla. **FAIL**: neula
+paikallaan/tasainen tai symmetrinen ajastettu liike myös
+progressiivisilla asemilla.
+
+## B7-5: Aloituslennon lähikuva (vaiheet 1–2)
+
+**Omistaja (Fable 24.9. klo 11.38, RAAMATUN LENNON ESITYS -tarkennus)**:
+lähikuvavaiheessa (1–2) kamera niin lähellä konetta että kone täyttää
+~2/3 ruudusta, maasto ja pilvet näkyvät takana. 7b3adeen lentokuvissa
+kone oli liian pieni lähivaiheessa.
+**Natiiviseppän lähikuvakehys + Fablen lisähuomiot (klo 11.59)**:
+rajaus (koko) jo OK yhdellä kehyksellä, mutta: 1) koneen varjo maastossa
+on jättimäinen/sumea läntti → poistettava tai oikeaan mittakaavaan;
+2) kamera matalammalta etuviistosta niin että TAIVAS JA HORISONTTI
+näkyvät koneen takana (ei pelkkä maasto) — pilvet koneen ALLA; 3) kartan
+napit (selite, silmälasit) ja pulu piiloon introlennon ajaksi, vain
+luennan tekstipalkki näkyy; 4) potkurit näyttävät pysähtyneiltä (kiekko
+tulossa erässä 2, EI vielä build 7:ssä — testaa silti nykytila).
+**Vastuu**: Natiiviseppä, build 7.
+
+**Testikomento**: `peli-komento.txt`: `uusi-matka <kaupunki>` (uusi kaupunki
+jota ei ole vielä käyty), ota kuvasarja HETI lennon alusta (0 s, 1 s, 2 s,
+3 s) tiheämmin kuin build 6:n ajossa, jotta lähikuvavaihe (1–2) saadaan
+tarkasti kiinni ennen kaukokuvaa. `kuva lento-b7-lahikuva-0/1/2/3`.
+
+**Odotettu tulos**: kone täyttää ~2/3 ruudusta lähikuvassa, taivas+
+horisontti näkyvät koneen TAKANA (ei pelkkä alaviisto maastoon), pilvet
+koneen alapuolella, EI jättimäistä sumeaa varjoa maastossa, kartan
+napit (selite/silmälasit) ja pulu EIVÄT näy lennon aikana (vain
+luennan tekstipalkki). Potkurit voivat vielä näyttää hitailta/pysähtyneiltä
+— EI lasketa FAILiksi tässä erässä (kiekko tulee myöhemmin).
+
+**PASS-ehto**: rajaus+taivas+ei-jättivarjoa+napit piilossa kaikki
+täyttyvät. **FAIL**: mikä tahansa neljästä puuttuu (potkureita
+lukuun ottamatta).
+
+## B7-6 (löydös 20): iPhonen yläreuna kokonaan uusiksi
+
+**Omistaja (klo 11.25, SITOVA, kumoaa osan löydös 5:stä)**: vasemmalla
+Dynamic Islandin vieressä matkalaukkuryhmä — kaksi samanlevyistä
+pilleriä päällekkäin samassa tyylissä: ylhäällä "300£ · 1/80", alla
+pelkkä kaupungin nimi (suljettu matkakirja tiivistettynä nimen
+levyiseksi, pitkä nimi lyhennetään). Molemmat avaavat matkalaukun eri
+välilehteen (ylempi Matka-osioon, alempi matkakirjakorttiin liuskana).
+Oikealla hampurilainen ja karttanappi vierekkäin Islandin rivillä, EI
+MUUTA — silmälasinappi POISTUU kokonaan (linssit nyt ☰-valikon kautta,
+samassa teemassa), hammasratas ei yläreunaan vaan ☰-valikon viimeiseksi
+riviksi "Kehittäjä" (vain kehittäjätilassa; App Store/TestFlight
+näyttävät ylhäältä samalta).
+**Tarkennus (klo 10.43)**: pilleri + oikean yläkulman napit siirretään
+YLEMMÄS, Dynamic Islandin korkeudelle sen kummallekin puolelle (sama
+rivi kuin Island, ei sen alapuolelle).
+**Natiivi-UI:n ☰-valikon sisältö (Fable vahvisti klo 11.29)**: Linssit
+ylimpänä; ohut viiva; sitten Äänentasot, Asetukset, Offline-lataus
+(pelaajan toiminnot); ohut viiva; vanhat rivit (Uusi peli, Ehdota
+sisältöä, Tekijät ja lähteet, Mitä uutta); aivan alimpana "Kehittäjä"
+(vain kehittäjätilassa, avaa koeliput/mittarit/avainkentät).
+**Vastuu**: Natiivi-UI, build 7.
+
+**Testikomento**: `ui-komento.txt`: `ui ylapalkki kelluva` (varmista
+kelluva tila), `kuva ylaosa-b7`. Avaa molemmat pillerit erikseen
+(tarvittaessa kosketuksella, koska tarkkaa komentoa ei tiedetä
+etukäteen) ja tarkista kohteet: `kuva pilleri-yla-b7`,
+`kuva pilleri-ala-b7`. Avaa hampurilaisvalikko: `kuva hampurilaisvalikko-b7`
+— tarkista rivijärjestys ja ettei silmälasinappia näy erikseen kartalla.
+
+**Odotettu tulos**: EI web-pariteettia (natiivin oma iPhone-erikoisratkaisu,
+kuten löydös 5/6/7). Kaksi pilleriä päällekkäin Dynamic Islandin
+korkeudella vasemmalla, hampurilainen+karttanappi oikealla samalla
+rivillä, ei erillistä silmälasinappia kartalla, ☰-valikossa Linssit
+ylimpänä ja "Kehittäjä" (jos kehittäjätila päällä) aivan alimpana.
+
+**PASS-ehto**: kaikki edellä mainitut rakenneosat täsmäävät. **FAIL**:
+vanha yksi-pilleri-asettelu yhä käytössä, silmälasinappi yhä kartalla,
+tai ☰-valikon rivijärjestys väärä.
+
+## Yhteenveto-taulukko, build 7 (täytetään ajon jälkeen)
+
+| # | Löydös | PASS/FAIL | Kuva | Huomio |
+|---|--------|-----------|------|--------|
+| B7-1 | Liiku läpinäkyvä (myös aktiivinen) | | | |
+| B7-2 | Tekstit piilossa + aito kaiutin | | | |
+| B7-3 | Väritaso/huntu/meri/raja | | | |
+| B7-4 | Radion VU-mittari | | | |
+| B7-5 | Lennon lähikuva | | | |
+| B7-6 | iPhonen yläreuna uusiksi (löydös 20) | | | |
+| 14 | Navat (uusinta tuoreella pelillä) | | | |
+| 4-renkaat | Hehkurenkaat aloitusvalinnassa (uusinta) | | | |
