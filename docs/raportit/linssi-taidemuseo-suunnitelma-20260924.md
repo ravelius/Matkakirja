@@ -267,7 +267,7 @@ Osa-sarake on salin osa koulukunnan mukaan; manifestin `syntymakaupunki` oli "mu
 2. **Mona Lisa** (Fablen päätös 1, Commons C2RMF PD) ei ole erässä.
 3. **Botticellin NGA-teokset** (*Tietäjien kumarrus*, *Giuliano de' Medici*), **Bellini ja Tizian: *Jumalten juhla*** ja **Tizian: *Venus peilin edessä*** puuttuvat. Luvun 3.3 käsikirjoitus käyttää niitä; vaihtoehtona käsikirjoitus päivitetään toimitettuihin (Met *Ilmestys*, *Venus ja Adonis*).
 4. **Veistokset** (SMK, 3D), **taiteilijoiden muotokuvat** (Rijksmuseum ja NGA, luku 4.3) ja **karttapiirrokset** tulevat erikseen.
-5. **Ristiriita:** toiseksi maalauseräksi on pyydetty Uffizin ja Accademian PD-Art-kuvia, mutta Fablen päätös 1 rajaa Italian valtion museoiden kuvat pilotista pois (kaupallinen riski). Erä vaatii Fablen vahvistuksen ennen käyttöä.
+5. **Uffizin ja Accademian PD-Art-erä peruttu** (Fable 24.9., päätös 1). Toinen erä on tilattu kuvaputkelta: kohdan 1 Rooman osa, Mona Lisa ja kohdan 3 käsikirjoituksen teokset (NGA 26, 12131, 46136, 46137, 41690, 356, 1177, 24, 41671, 1138, 41). Käsikirjoitusta ei vaihdeta.
 
 ### 4.1 Ehdokkaat: 28 maalausta, kaikki National Gallery of Art, Washington (openaccess = CC0)
 
