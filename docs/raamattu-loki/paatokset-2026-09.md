@@ -4523,3 +4523,7 @@ Nimikerros: alue- ja merinimet maahan painettuina, väistö, alfa lineaariseen s
 ## LAITETESTAAJA: KOSKETUSKIERROS iPHONE 18 PRO (BUILD 10) — 12 RIVIA SAMA (#3076 4a0930eea); SIMULAATTORITORMAYS → RAAMATTUUN SIMULAATTORIEN OMISTUS (24.9.2026 klo 19.48)
 
 Laukku, Matkan tilastot, Julisteet, Sisällys + Palaa kartalle, pöllön ehdotukset SAMA; maatiedot-linssi ei enää tyhjä; toinen sessio asensi iPhone 18 Pro -simiin kesken lennon (kaatuminen) → sääntö: simulaattorit roolikohtaisia, Natiiviseppä ja Linssiseppä omilla simeillä. Web-kuvaparit 12 riville vielä ottamatta; ~19 riviä EI TARKISTETTU.
+
+## CODEX TOIMITTI RADIOPANEELIN TEKSTUURIT (30 PNG-KARTTAA, ambientCG CC0) JA 12 VIITEKUVAA (2f18e439) — KUITATTU (24.9.2026 klo 19.52)
+
+R2 linssit/radio/tekstuurit/, manifesti kuvatoimitus-radiopaneeli-20260924.json; värikartat sRGB, normal-GL ja roughness lineaarisia; akryylissä alfa. Viitekuvia ei näytetä pelissä. Linssiseppä leipoo pinnat (radiopinnat.py), Natiiviseppä materiaalit, build 12. wt/ 23 (Natiivisepällä 4 → siivoaa).
