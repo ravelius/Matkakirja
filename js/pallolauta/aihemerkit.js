@@ -423,6 +423,22 @@ export function viuhkanAsemat({
    */
   vainOikea = false,
   /*
+   * KESKITYS ON PÄÄTÖS, EI HAKUTULOS (kaupunkiliuska, PAATOKSET 34
+   * kohta 12). Lippu kirjoitettiin kutsujaan 18.9.2026 (v1938), mutta
+   * tämä funktio ei koskaan lukenut sitä: pehmeä muste ratkaisi yhä
+   * pystysiirron. Savukkeen vartio 8k oli silti vihreä, kunnes v2029
+   * (#2681, 21.9.2026) toi Pariisin lähelle uuden ihmeen, jonka muste
+   * teki kolme riviä ylemmän asennon halvemmaksi — lista nousi 78 px
+   * merkin yläpuolelle (savuke-pariisi-lahizoom 8k, 390 px). Lipun
+   * kanssa vain KOVA sakko (ruudun reuna, kaupungin nimi, nappula,
+   * kalusteet) saa siirtää listaa; vapaiden asentojen tasapelin
+   * ratkaisee järjestys, jossa keskitetty asento on ensin. Pehmeä
+   * muste jää listan alle ja kutsuja piilottaa sen (LISTA EI KOSKAAN
+   * TOISEN TEKSTIN PÄÄLLE). Viuhka ei anna lippua, joten sen haku on
+   * ennallaan.
+   */
+  pysyKeskella = false,
+  /*
    * RIVIN MITAT OVAT PARAMETREJA (kaupunkiliuska, PAATOKSET 34 kohta
    * 13 a). Riviväli ja rivin puolikorkeus seuraavat liuskan kirjasinta
    * (1,45 × fontti); oletukset ovat viuhkan omat vakiot, joten
@@ -483,6 +499,9 @@ export function viuhkanAsemat({
       -korkeus / 2 - VIUHKAN_ALAS_ALKU_PX]
     : [0, -askel, askel, -2 * askel, 2 * askel, -3 * askel, 3 * askel];
   let paras = null;
+  // Haku päättyy ensimmäiseen täysin vapaaseen asentoon; keskitetyllä
+  // listalla (pysyKeskella) riittää, ettei kovaa sakkoa ole.
+  const valmis = (x) => (pysyKeskella ? x.kova <= 0.001 : x.sakko === 0);
   /*
    * VAAKAPAKO KOVAN ESTEEN OHI (Fablen tarkistus 18.9.2026, kaappaus
    * pariisi-liuska-kategoria-390.png: avattu kategoria ladottiin
@@ -558,19 +577,25 @@ export function viuhkanAsemat({
        * omistajan sääntö sanoo oikealle. Viuhkan oma valinta (yksi
        * yhteenlaskettu sakko) on ennallaan.
        */
+      // pysyKeskella: vain kova sakko ratkaisee; pehmeä sakko vain
+      // silloin, kun vapaata asentoa ei ole (kova > 0 molemmissa).
       const parempi = paras === null
-        || (kovaEnsin
+        || (pysyKeskella
           ? (kova < paras.kova - 0.001
-            || (Math.abs(kova - paras.kova) <= 0.001 && sakko < paras.sakko - 0.001))
-          : sakko < paras.sakko - 0.001);
+            || (paras.kova > 0.001 && Math.abs(kova - paras.kova) <= 0.001
+              && sakko < paras.sakko - 0.001))
+          : kovaEnsin
+            ? (kova < paras.kova - 0.001
+              || (Math.abs(kova - paras.kova) <= 0.001 && sakko < paras.sakko - 0.001))
+            : sakko < paras.sakko - 0.001);
       if (parempi) {
         paras = {
           sakko, kova, puoli, leveys, asemat,
         };
       }
-      if (paras.sakko === 0) break;
+      if (valmis(paras)) break;
     }
-    if (paras.sakko === 0) break;
+    if (valmis(paras)) break;
   }
   return {
     puoli: paras.puoli,

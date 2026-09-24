@@ -59,6 +59,15 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 - docs/moduulit/kaupunkilehti.md, docs/moduulit/maalehti.md ja
   docs/tyolista-opukselle.md — lehtimalli ja lehtityön ohjeet.
 
+## Työtilat (omistaja 23.9.2026, sitova)
+
+Kaikki Clauden kansiot ovat /Users/Shared/Claude/ -kansiossa (yhteinen kaikille
+Macin käyttäjille): roolien checkoutit /Users/Shared/Claude/Matkakirja-<rooli>
+ja erä-worktreet /Users/Shared/Claude/wt/<rooli>-<aihe>. Ei koskaan suoraan
+käyttäjän kotihakemistoon. Worktree luodaan `tools/uusi-worktree.sh <rooli>
+<aihe>` -työkalulla ja poistetaan mergen jälkeen `--poista`-lipulla. Postivahti
+ajaa `tools/tarkista-tyotilat.sh` kierroksellaan ja ilmoittaa poikkeamat Fablelle.
+
 ## Mac Studio (18.9.2026 alkaen)
 
 Fable ja agentit ajavat omistajan Mac Studiolla. Uuden session aloitus

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matkakirja.app/vienti/1/kaupunki.schema.json",
+  "title": "Matkakirja-vienti: kaupungit-kokoelman alkio",
+  "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta, aloitus ja tarkeys (skeema 1.2) nimien harvennukseen. data = laudan raakaolio, johon natiivi ei nojaa.",
+  "type": "object",
+  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "tarkeys", "lauta", "korkeus", "data"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
+    "nimi": { "type": "string" },
+    "maa": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$", "description": "pelin maakoodi (ISO3; Etelä-Sudan SDS)" },
+    "maa2": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 (tools/vienti/iso2.mjs)" },
+    "manner": { "type": ["string", "null"] },
+    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+    "sijaintiLahde": { "enum": ["pallopiste", "laudalta-laskettu"] },
+    "saari": { "type": "boolean" },
+    "lentokentta": { "type": "boolean" },
+    "aloitus": { "type": "boolean" },
+    "tyyppi": { "type": ["string", "null"], "description": "laudan ambience (kaupunki, satama, erämaa…)" },
+    "tarkeys": { "type": "integer", "minimum": 0, "maximum": 3, "description": "nimiöiden harvennus: 3 = pääkaupunki (tools/vienti/paakaupungit.mjs) tai aloituskaupunki, 2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä, 0 = muut (skeema 1.2)" },
+    "korkeus": { "type": ["integer", "null"], "description": "Korkeus metreinä EGM2008-geoidin yläpuolella, 10 m tarkkuus (Copernicus GLO-30 DSM, tools/vienti/korkeudet.mjs); null = korkeusruutua ei ole haettu (skeema 1.10)" },
+    "lauta": {
+      "type": "object",
+      "description": "Kaupungin piste laudalla (maailmankartta, Miller-yksiköt); reittien geometria lasketaan näistä ja reitin via-pisteistä (skeema 1.5)",
+      "required": ["x", "y"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" } },
+      "additionalProperties": false
+    },
+    "intro": {
+      "type": ["object", "null"],
+      "description": "Kaupunkilehden etusivun esittely (ARTIKKELIT[wiki ?? nimi].intro); kappaleet = js/ui-apurit.js jaaKappaleiksi, **lihavointi** merkitty tähdillä. null = näytä LEHDEN_VAKIOESITTELY (moduuli js/lehti.js). Skeema 1.15.",
+      "required": ["teksti", "kappaleet"],
+      "properties": { "teksti": { "type": "string" }, "kappaleet": { "type": "array", "items": { "type": "string" } } },
+      "additionalProperties": false
+    },
+    "kielinayte": {
+      "type": ["object", "null"],
+      "description": "Kaupungissa nauhoitettu kielinäyte (js/packs/europe-kielet.js); url ämpärissä, varat = lähde. Skeema 1.15.",
+      "required": ["url", "varat", "nimi", "kesto"],
+      "properties": {
+        "url": { "type": "string" },
+        "varat": { "type": "array", "items": { "type": "string" } },
+        "nimi": { "type": ["string", "null"] },
+        "kesto": { "type": ["number", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "wiki": { "type": ["string", "null"], "description": "Wikipedia-artikkelin nimi (skeema 1.31)" },
+    "ambienssi": { "type": ["string", "null"], "description": "Webin ambienssityyppi (ambience), esim. satama, basaari (skeema 1.31)" },
+    "nimionAnkkuri": {
+      "type": ["object", "null"], "description": "Laudan nimiön paikka pisteeseen nähden (skeema 1.31)",
+      "properties": { "tasaus": { "type": "string" }, "dx": { "type": ["number", "null"] }, "dy": { "type": ["number", "null"] } },
+      "required": ["tasaus", "dx", "dy"], "additionalProperties": false
+    },
+    "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
+  },
+  "additionalProperties": false
+}

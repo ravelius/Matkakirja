@@ -60,6 +60,11 @@ import { turvanimi, peiliKuvaPolku, peiliAaniPolku } from '../js/media.js';
 // ei löydy, joten ilman tätä suodatusta jokainen ajo hakisi niitä
 // turhaan ja jättäisi manifestiin rivin tiedostosta, jota ei ole.
 import { VALOKUVAT_FLICKR } from '../js/packs/valokuvat-flickr.js';
+// Historian hetkien kuvat ovat pelin omia, ämpärissä valmiiksi
+// (kohtaamiset/historian-hetket/), eivät Commons-tiedostoja, vaikka kenttä
+// on `tiedosto`. Ilman suodatusta jokainen ajo haki 108 niistä
+// Commonsista ja sai 404:n (löytyi 23.9.2026).
+import { HISTORIAN_HETKET } from '../js/packs/historian-hetket.js';
 
 /*
  * Taustaäänen enimmäispituus (omistajan linjaus 1.8.2026). Kenttä-
@@ -190,6 +195,7 @@ const nuku = (ms) => execFileSync('sleep', [String(ms / 1000)]);
 // --- kerätään kohteet paketeista -------------------------------------------
 
 function kohteet() {
+  const hetkikuvat = new Set(HISTORIAN_HETKET.flatMap((h) => (h.kuvat ?? []).map((k) => k.tiedosto)));
   /*
    * Linssimoduulit (js/linssit) luetaan pakettien rinnalla. Keksintöjen
    * linssin aidot muotokuvat (`kuvaAito: { tiedosto: … }`) asuvat siellä,
@@ -252,7 +258,12 @@ function kohteet() {
   // kuvasta, jota ei ole olemassa. Äänipääte kertoo eron varmasti.
   const kuvat = [...poimi('tiedosto')]
     .filter((n) => !/\.(mp3|ogg|wav|m4a|opus|flac)$/i.test(n))
-    .filter((n) => !VALOKUVAT_FLICKR.has(n));
+    .filter((n) => !VALOKUVAT_FLICKR.has(n))
+    // Commonsin tiedostonimessä ei voi olla kauttaviivaa: sellainen nimi
+    // on ämpärin oma polku, kuten julisteiden `tuotanto/tuot-*.png`
+    // (julisteet/tuotanto/, 114 kuvaa, jotka haettiin joka ajolla turhaan).
+    .filter((n) => !n.includes('/'))
+    .filter((n) => !hetkikuvat.has(n));
   const liput = poimi('lippu');
   // Hakukuvio löytää kaikki arkisto-osoitteet, myös ne jotka eivät ole
   // äänitiedostoja: kirjaskannien ja viritysäänten lähdeviitteet ovat

@@ -1,239 +1,173 @@
 {
   "versio": 2,
   "kaupunki": "oslo",
-  "teksti": "Christianian vuonolla lastattiin lankkuja laivaan. Metsä matkusti maailmalle siististi pinottuna. Sataman mies näytti rannan sahoja ja sanoi kaupungin kasvavan puusta. Se oli omituista kuultavaa paikassa, jossa kivitalot näyttivät niin ylpeiltä itsestään. Poimin vedestä lastun. Se tuoksui yhä metsältä, vaikka matka oli jo alkanut.",
-  "tekstiSha256": "6b234f611d4f1903e99298580e30200b1d795ca6f9a7e58c001192f525644cff",
+  "teksti": "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
+  "tekstiSha256": "049aacd3f63354eed994764dac549e49507f960db662c3995d378dd7a04488f4",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-oslo.mp3",
     "versio": 2,
-    "tavut": 440155,
-    "sha256": "29b4b5e151e20068f5b0e6a78338cd86de39c46135a66e478724625b1458d491"
+    "tavut": 321036,
+    "sha256": "9a75a5cd0988420ff6d8cd572402997dab161563cdceb8dbb417b8091e3442e7"
   },
-  "kesto": 27379,
+  "kesto": 19980,
   "sanat": [
     {
       "sana": "Christianian",
-      "alku": 159,
-      "loppu": 859
+      "alku": 40,
+      "loppu": 740
     },
     {
-      "sana": "vuonolla",
-      "alku": 939,
-      "loppu": 1539
+      "sana": "laidalla",
+      "alku": 800,
+      "loppu": 1220
     },
     {
-      "sana": "lastattiin",
-      "alku": 1599,
-      "loppu": 2119
+      "sana": "valmistettiin",
+      "alku": 1260,
+      "loppu": 2040
     },
     {
-      "sana": "lankkuja",
-      "alku": 2200,
-      "loppu": 2639
+      "sana": "nitroglyseriiniä",
+      "alku": 2100,
+      "loppu": 3260
     },
     {
-      "sana": "laivaan",
-      "alku": 2720,
-      "loppu": 3279
+      "sana": "Työmies",
+      "alku": 4640,
+      "loppu": 5060
     },
     {
-      "sana": "Metsä",
-      "alku": 4539,
-      "loppu": 4819
+      "sana": "kantoi",
+      "alku": 5100,
+      "loppu": 5420
     },
     {
-      "sana": "matkusti",
-      "alku": 4880,
-      "loppu": 5359
+      "sana": "astiaa",
+      "alku": 5520,
+      "loppu": 5880
     },
     {
-      "sana": "maailmalle",
-      "alku": 5400,
-      "loppu": 5960
+      "sana": "molemmin",
+      "alku": 5920,
+      "loppu": 6320
     },
     {
-      "sana": "siististi",
-      "alku": 6019,
-      "loppu": 6500
+      "sana": "käsin",
+      "alku": 6360,
+      "loppu": 6820
     },
     {
-      "sana": "pinottuna",
-      "alku": 6639,
-      "loppu": 7199
+      "sana": "Yksi",
+      "alku": 7780,
+      "loppu": 8039
     },
     {
-      "sana": "Sataman",
-      "alku": 8880,
-      "loppu": 9260
+      "sana": "kolaus",
+      "alku": 8100,
+      "loppu": 8660
     },
     {
-      "sana": "mies",
-      "alku": 9359,
-      "loppu": 9659
+      "sana": "saattoi",
+      "alku": 8740,
+      "loppu": 9140
     },
     {
-      "sana": "näytti",
-      "alku": 9719,
-      "loppu": 9979
+      "sana": "räjäyttää",
+      "alku": 9180,
+      "loppu": 9740
     },
     {
-      "sana": "rannan",
-      "alku": 10059,
-      "loppu": 10359
+      "sana": "sen",
+      "alku": 9880,
+      "loppu": 10180
     },
     {
-      "sana": "sahoja",
-      "alku": 10439,
-      "loppu": 10880
+      "sana": "Nostin",
+      "alku": 11880,
+      "loppu": 12180
+    },
+    {
+      "sana": "hattua",
+      "alku": 12220,
+      "loppu": 12640
     },
     {
       "sana": "ja",
-      "alku": 11139,
-      "loppu": 11199
+      "alku": 12880,
+      "loppu": 12940
     },
     {
-      "sana": "sanoi",
-      "alku": 11259,
-      "loppu": 11500
+      "sana": "hän",
+      "alku": 12980,
+      "loppu": 13120
     },
     {
-      "sana": "kaupungin",
-      "alku": 11599,
-      "loppu": 12099
+      "sana": "vastasi",
+      "alku": 13160,
+      "loppu": 13580
     },
     {
-      "sana": "kasvavan",
-      "alku": 12139,
-      "loppu": 12599
+      "sana": "pelkällä",
+      "alku": 13640,
+      "loppu": 14020
     },
     {
-      "sana": "puusta",
-      "alku": 12719,
-      "loppu": 13219
+      "sana": "nyökkäyksellä",
+      "alku": 14060,
+      "loppu": 14940
     },
     {
-      "sana": "Se",
-      "alku": 14779,
-      "loppu": 14819
+      "sana": "Minä",
+      "alku": 16480,
+      "loppu": 16660
     },
     {
-      "sana": "oli",
-      "alku": 14859,
-      "loppu": 14960
+      "sana": "en",
+      "alku": 16680,
+      "loppu": 16760
     },
     {
-      "sana": "omituista",
-      "alku": 15039,
-      "loppu": 15519
+      "sana": "ole",
+      "alku": 16800,
+      "loppu": 16940
     },
     {
-      "sana": "kuultavaa",
-      "alku": 15619,
-      "loppu": 16100
+      "sana": "koskaan",
+      "alku": 17000,
+      "loppu": 17420
     },
     {
-      "sana": "paikassa",
-      "alku": 16219,
-      "loppu": 16659
-    },
-    {
-      "sana": "jossa",
-      "alku": 16719,
-      "loppu": 16920
-    },
-    {
-      "sana": "kivitalot",
-      "alku": 17020,
-      "loppu": 17559
-    },
-    {
-      "sana": "näyttivät",
-      "alku": 17619,
-      "loppu": 18039
+      "sana": "ollut",
+      "alku": 17480,
+      "loppu": 17700
     },
     {
       "sana": "niin",
-      "alku": 18100,
-      "loppu": 18279
+      "alku": 17740,
+      "loppu": 17980
     },
     {
-      "sana": "ylpeiltä",
-      "alku": 18359,
-      "loppu": 18819
+      "sana": "kiitollinen",
+      "alku": 18040,
+      "loppu": 18680
     },
     {
-      "sana": "itsestään",
-      "alku": 18899,
-      "loppu": 19539
+      "sana": "huonosta",
+      "alku": 18740,
+      "loppu": 19240
     },
     {
-      "sana": "Poimin",
-      "alku": 21059,
-      "loppu": 21379
-    },
-    {
-      "sana": "vedestä",
-      "alku": 21439,
-      "loppu": 21779
-    },
-    {
-      "sana": "lastun",
-      "alku": 21840,
-      "loppu": 22319
-    },
-    {
-      "sana": "Se",
-      "alku": 24039,
-      "loppu": 24159
-    },
-    {
-      "sana": "tuoksui",
-      "alku": 24219,
-      "loppu": 24719
-    },
-    {
-      "sana": "yhä",
-      "alku": 24819,
-      "loppu": 24939
-    },
-    {
-      "sana": "metsältä",
-      "alku": 25019,
-      "loppu": 25539
-    },
-    {
-      "sana": "vaikka",
-      "alku": 25979,
-      "loppu": 26239
-    },
-    {
-      "sana": "matka",
-      "alku": 26299,
-      "loppu": 26639
-    },
-    {
-      "sana": "oli",
-      "alku": 26699,
-      "loppu": 26799
-    },
-    {
-      "sana": "jo",
-      "alku": 26859,
-      "loppu": 26939
-    },
-    {
-      "sana": "alkanut",
-      "alku": 27019,
-      "loppu": 27379
+      "sana": "käytöksestä",
+      "alku": 19300,
+      "loppu": 19980
     }
   ],
   "lauseet": [
-    159,
-    4539,
-    8880,
-    14779,
-    21059,
-    24039
+    40,
+    4640,
+    7780,
+    11880,
+    16480
   ],
-  "luotu": "2026-09-11T12:04:50.261Z"
+  "luotu": "2026-09-23T15:37:37.919Z"
 }

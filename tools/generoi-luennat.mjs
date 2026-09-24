@@ -155,7 +155,17 @@ export function tuotantoAvaimet(tyo, { batchId, sourceCommit }) {
   };
 }
 
-export function tuotantoEraId(tyot, sourceCommit) {
+/*
+ * outputFormat on valinnainen kolmas parametri (23.9.2026, Fablen
+ * päätös): kohdistus-työkalu tarkistaa VANHOJA kuitteja, joiden oma
+ * tuotantoformaatti (esim. mp3_44100_128) ei enää vastaa tämän
+ * tiedoston nykyistä OUTPUT_FORMAT-vakiota (mp3_44100_192, nostettu
+ * myöhemmin) — sen on siis voitava laskea eräId KUITIN OMALLA
+ * formaatilla eikä nykyisellä. Uusi äänitys (tämän tiedoston oma kutsu
+ * alla) ei anna parametria, joten se käyttää yhä nykyistä vakiota
+ * ennallaan.
+ */
+export function tuotantoEraId(tyot, sourceCommit, outputFormat = OUTPUT_FORMAT) {
   const sisalto = tyot.map((tyo) => ({
     cityId: tyo.id,
     visibleTextSha256: sha256(tyo.nakyvaTeksti),
@@ -163,7 +173,7 @@ export function tuotantoEraId(tyot, sourceCommit) {
   }));
   return `horatio-${sha256(JSON.stringify({
     sourceCommit, voiceId: AANI, model: MALLI, stability: STABILITY,
-    outputFormat: OUTPUT_FORMAT, postprocess: { kind: 'none' }, sisalto,
+    outputFormat, postprocess: { kind: 'none' }, sisalto,
   })).slice(0, 20)}`;
 }
 

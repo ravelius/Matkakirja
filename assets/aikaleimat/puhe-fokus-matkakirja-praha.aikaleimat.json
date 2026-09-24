@@ -1,263 +1,197 @@
 {
   "versio": 2,
   "kaupunki": "praha",
-  "teksti": "Prahan torin kellossa luuranko soittaa kelloa ja apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja unohdin koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan toisenlainen käsitys hukkaan menneestä ajasta.",
-  "tekstiSha256": "e640829336dffcab7b3399250e0465f262adbb011db8a9e15760a714279e1667",
+  "teksti": "Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
+  "tekstiSha256": "8455337101aad970682a3e616570b750b3d64f55f61eb6e419e6e5398e06b5d0",
   "aani": {
     "nimi": "puhe-fokus-matkakirja-praha.mp3",
     "versio": 2,
-    "tavut": 487384,
-    "sha256": "252e8ff6a31da0fbcd883af5933fa517a1b38543b48007903c173b986e8225bc"
+    "tavut": 368266,
+    "sha256": "8ab1dd3f8c7664d93d09bf5a96bf29fdfc6556fbd4c384ba05ae073dec279f2b"
   },
-  "kesto": 30359,
+  "kesto": 22940,
   "sanat": [
     {
       "sana": "Prahan",
-      "alku": 99,
+      "alku": 120,
       "loppu": 500
     },
     {
       "sana": "torin",
-      "alku": 519,
-      "loppu": 799
+      "alku": 540,
+      "loppu": 820
     },
     {
       "sana": "kellossa",
-      "alku": 859,
-      "loppu": 1399
+      "alku": 860,
+      "loppu": 1340
     },
     {
       "sana": "luuranko",
-      "alku": 1639,
-      "loppu": 2059
+      "alku": 1400,
+      "loppu": 1860
     },
     {
-      "sana": "soittaa",
-      "alku": 2079,
-      "loppu": 2559
-    },
-    {
-      "sana": "kelloa",
-      "alku": 2599,
-      "loppu": 3059
-    },
-    {
-      "sana": "ja",
-      "alku": 3539,
-      "loppu": 3599
+      "sana": "soitti",
+      "alku": 1940,
+      "loppu": 2480
     },
     {
       "sana": "apostolit",
-      "alku": 3639,
-      "loppu": 4219
+      "alku": 3440,
+      "loppu": 3980
     },
     {
-      "sana": "kulkevat",
-      "alku": 4279,
-      "loppu": 4739
-    },
-    {
-      "sana": "ikkunan",
-      "alku": 4839,
-      "loppu": 5259
-    },
-    {
-      "sana": "ohi",
-      "alku": 5359,
-      "loppu": 5619
-    },
-    {
-      "sana": "Aioin",
-      "alku": 7319,
-      "loppu": 7599
-    },
-    {
-      "sana": "verrata",
-      "alku": 7659,
-      "loppu": 8079
-    },
-    {
-      "sana": "sitä",
-      "alku": 8119,
-      "loppu": 8279
-    },
-    {
-      "sana": "taskukellooni",
-      "alku": 8359,
-      "loppu": 9239
+      "sana": "kulkivat",
+      "alku": 4040,
+      "loppu": 4940
     },
     {
       "sana": "ja",
-      "alku": 9559,
-      "loppu": 9619
+      "alku": 5000,
+      "loppu": 5060
+    },
+    {
+      "sana": "minä",
+      "alku": 5120,
+      "loppu": 5340
     },
     {
       "sana": "unohdin",
-      "alku": 9699,
-      "loppu": 10039
+      "alku": 5400,
+      "loppu": 5800
     },
     {
-      "sana": "koko",
-      "alku": 10079,
-      "loppu": 10300
+      "sana": "verrata",
+      "alku": 5840,
+      "loppu": 6220
     },
     {
-      "sana": "asian",
-      "alku": 10359,
-      "loppu": 10839
+      "sana": "sitä",
+      "alku": 6280,
+      "loppu": 6480
     },
     {
-      "sana": "Tässä",
-      "alku": 12939,
-      "loppu": 13159
+      "sana": "taskukellooni",
+      "alku": 6520,
+      "loppu": 7540
     },
     {
-      "sana": "koneessa",
-      "alku": 13239,
-      "loppu": 13719
+      "sana": "Koneessa",
+      "alku": 9300,
+      "loppu": 9740
     },
     {
       "sana": "oli",
-      "alku": 13779,
-      "loppu": 13939
+      "alku": 9780,
+      "loppu": 9920
     },
     {
       "sana": "tilaa",
-      "alku": 14000,
-      "loppu": 14380
+      "alku": 9960,
+      "loppu": 10280
     },
     {
       "sana": "auringolle",
-      "alku": 14479,
-      "loppu": 15059
+      "alku": 10400,
+      "loppu": 11040
     },
     {
       "sana": "kuulle",
-      "alku": 15319,
-      "loppu": 15759
+      "alku": 11400,
+      "loppu": 11980
     },
     {
       "sana": "ja",
-      "alku": 15899,
-      "loppu": 15960
+      "alku": 12020,
+      "loppu": 12120
     },
     {
       "sana": "kuolemalle",
-      "alku": 16039,
-      "loppu": 16659
+      "alku": 12180,
+      "loppu": 12760
     },
     {
-      "sana": "mutta",
-      "alku": 17459,
-      "loppu": 17659
-    },
-    {
-      "sana": "minun",
-      "alku": 17719,
-      "loppu": 17940
-    },
-    {
-      "sana": "kellossani",
-      "alku": 18000,
-      "loppu": 18539
+      "sana": "omassani",
+      "alku": 13860,
+      "loppu": 14340
     },
     {
       "sana": "vain",
-      "alku": 18579,
-      "loppu": 18819
+      "alku": 14400,
+      "loppu": 14740
     },
     {
       "sana": "kiireelle",
-      "alku": 18879,
-      "loppu": 19500
+      "alku": 14820,
+      "loppu": 15580
     },
     {
       "sana": "Ajuri",
-      "alku": 21619,
-      "loppu": 21899
+      "alku": 17200,
+      "loppu": 17500
     },
     {
       "sana": "löysi",
-      "alku": 21979,
-      "loppu": 22219
+      "alku": 17540,
+      "loppu": 17840
     },
     {
       "sana": "minut",
-      "alku": 22279,
-      "loppu": 22479
+      "alku": 17880,
+      "loppu": 18140
     },
     {
       "sana": "samasta",
-      "alku": 22519,
-      "loppu": 22840
+      "alku": 18180,
+      "loppu": 18580
     },
     {
       "sana": "paikasta",
-      "alku": 22959,
-      "loppu": 23439
+      "alku": 18620,
+      "loppu": 19120
     },
     {
       "sana": "puoli",
-      "alku": 23600,
-      "loppu": 23859
+      "alku": 19160,
+      "loppu": 19400
     },
     {
       "sana": "tuntia",
-      "alku": 23879,
-      "loppu": 24260
+      "alku": 19440,
+      "loppu": 19780
     },
     {
       "sana": "myöhemmin",
-      "alku": 24319,
-      "loppu": 24899
+      "alku": 19840,
+      "loppu": 20380
     },
     {
-      "sana": "Hänellä",
-      "alku": 26760,
-      "loppu": 27059
+      "sana": "Hän",
+      "alku": 21580,
+      "loppu": 21760
     },
     {
-      "sana": "oli",
-      "alku": 27099,
-      "loppu": 27219
+      "sana": "piti",
+      "alku": 21800,
+      "loppu": 21980
     },
     {
-      "sana": "aivan",
-      "alku": 27299,
-      "loppu": 27579
+      "sana": "aikaa",
+      "alku": 22080,
+      "loppu": 22420
     },
     {
-      "sana": "toisenlainen",
-      "alku": 27639,
-      "loppu": 28299
-    },
-    {
-      "sana": "käsitys",
-      "alku": 28340,
-      "loppu": 28879
-    },
-    {
-      "sana": "hukkaan",
-      "alku": 28939,
-      "loppu": 29419
-    },
-    {
-      "sana": "menneestä",
-      "alku": 29459,
-      "loppu": 29959
-    },
-    {
-      "sana": "ajasta",
-      "alku": 30019,
-      "loppu": 30359
+      "sana": "hukattuna",
+      "alku": 22460,
+      "loppu": 22940
     }
   ],
   "lauseet": [
-    99,
-    7319,
-    12939,
-    21619,
-    26760
+    120,
+    9300,
+    17200,
+    21580
   ],
-  "luotu": "2026-09-11T12:04:19.731Z"
+  "luotu": "2026-09-23T15:39:21.925Z"
 }

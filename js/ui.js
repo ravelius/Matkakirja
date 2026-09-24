@@ -460,7 +460,10 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
  * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
  */
 import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
+import { taytaPohja } from './tekstipohja.js';
+import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -516,7 +519,7 @@ const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
  * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
  * siirtymä toistuu pelissä kymmeniä kertoja.
  */
-const JALKAMATKAN_MAISEMA = 'metsa';
+export const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -1046,7 +1049,7 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * eikä niitä esiladata service workerissa, joten peli hakee ne
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
-const AARRE_MUSIIKKI = {
+export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
 };
@@ -1794,53 +1797,6 @@ const INTRO_KARTTA_ENINTAAN = 0.72;
  * ALAPUOLISEEN pergamenttiin eikä syö karttakuvan alinta kaistaletta.
  */
 const INTRO_HAIVYTYS_EM = 2.2;
-/*
- * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
- * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
- * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
- * 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
- * muutos vain tools/generoi-avaus.mjs:n kautta, jonka INTRO_RUUTU
- * on tämän vakion ainoa lähde (sanasta sanaan).
- *
- * V3/V4 25.8.2026 (omistajan etusivu-uudistus): kirjan nimi pois —
- * se luetaan nyt kansikuvan selästä (assets/etusivu/kansikuva.png) —
- * ja ohjerivi "Valitse kohde kartalta" pois, koska ohjeen tilalle
- * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
- * siis täsmälleen siihen, mihin nauhoitettu luentakin.
- */
-/*
- * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
- * ja revitty sivu yhdessä kappaleessa; paikkarivi naputetaan ensin
- * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
- */
-const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
-  + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko '
-  + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
-  + 'sivun?';
-/*
- * KYSYMYS ON NAPPI (omistajan tilaus 26.8.2026, ilta): "Mistä
- * aloitan?" on samalla se kehystetty 1873-nappi, joka vie kartan
- * lähikuvaan Lontoon kohdalle. Välivaihe, jossa kysymys oli pelkkää
- * tekstiä ja sen alla erillinen ALOITA MATKA -nappi, purettiin — kaksi
- * peräkkäistä kehotusta oli yksi liikaa.
- *
- * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
- * luenta päättyy revittyyn sivuun.
- *
- * TEKSTI ON NYT KEHOTUS EIKÄ KYSYMYS (omistajan pelitestipalaute
- * v1119): *"Mistä aloitan?" → "Valitse aloituskaupunki"*. Nappi vie
- * kartan lähikuvaan, jossa valinta oikeasti tehdään, ja kysymys jätti
- * epäselväksi mitä napista tapahtuu.
- */
-const INTRO_VALINTA = 'Valitse aloituskaupunki';
-/*
- * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
- * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
- * kellosta. Kertoja EI lue tätä (nauhoitettu luenta alkaa vasta
- * varsinaisesta tekstistä), joten rivi elää oman elementtinsä
- * varassa eikä ole osa INTRO_TEXTiä.
- */
-const INTRO_PAIKKA = 'Heathrow, Lontoo';
 
 /*
  * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
@@ -2164,7 +2120,7 @@ function sykkeenArvo(arvot, osuus) {
 
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
-const MINITEHTAVA_PALKKIO = 10;
+export const MINITEHTAVA_PALKKIO = 10;
 /*
  * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
  *
@@ -4364,6 +4320,8 @@ export class UI {
 
   /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
   paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
     if (this.pallolauta) {
       this.pallolauta.paivita();
       return;
@@ -16285,7 +16243,14 @@ export class UI {
       linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
-    if (nosto.musiikkiNayte) {
+    /*
+     * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- tai ND-ehtoinen
+     * näyte ei soi. Silloin nosto käyttäytyy kuin näytettä ei olisi
+     * (esikuuntelu tai linkki voi tulla tilalle alla).
+     */
+    const musiikkiNayte = nosto.musiikkiNayte && aaniLisenssiSallittu(nosto.musiikkiNayteNimi)
+      ? nosto.musiikkiNayte : null;
+    if (musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = nosto.musiikkiNayteNimi ?? 'Vapaasti lisensoitu ääninäyte';
@@ -16295,7 +16260,7 @@ export class UI {
         + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg>'
         + '<span>Kuuntele musiikkia</span><span class="aika" hidden></span>';
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(
-        { aani: nosto.musiikkiNayte, otsikko: nosto.otsikko }, nappi,
+        { aani: musiikkiNayte, otsikko: nosto.otsikko }, nappi,
       ));
       otsikkoRivi.appendChild(nappi);
     }
@@ -16322,7 +16287,7 @@ export class UI {
      * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
      * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
      */
-    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !nosto.musiikkiNayte) {
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -17472,61 +17437,20 @@ export class UI {
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    const otsikko = html('h2', 'periaate-otsikko', 'Oppiminen on hauskaa');
+    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
     kortti.appendChild(otsikko);
 
-    const kappale = (teksti, luokka = '') => {
-      const p = html('p', `periaate-teksti ${luokka}`.trim());
-      p.textContent = teksti;
+    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
+    for (const osa of PERIAATTEET.osat) {
+      if (osa.otsikko) {
+        const h = html('h3', 'periaate-valiotsikko');
+        h.textContent = osa.otsikko;
+        kortti.appendChild(h);
+      }
+      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
+      p.textContent = osa.teksti;
       kortti.appendChild(p);
-    };
-    const valiotsikko = (teksti) => {
-      const h = html('h3', 'periaate-valiotsikko');
-      h.textContent = teksti;
-      kortti.appendChild(h);
-    };
-
-    kappale('Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — '
-      + 'ei oppikirja, johon on liimattu noppa. Pelin pitää olla '
-      + 'koukuttava ensin; tieto tarttuu matkassa.', 'kärki');
-
-    valiotsikko('Mitä pelissä opitaan');
-    kappale('Maiden arkea ja kulttuuria, maantiedettä ja historiaa, '
-      + 'geopolitiikkaa ja poliittista tilannetta — ja ennen kaikkea sitä, '
-      + 'että maailma on suurempi kuin oma ympäristö. Jokaisella '
-      + 'pysähdyksellä on jotain katsottavaa: valokuva silloin ja nyt, '
-      + 'maan tunnusluvut, kaupungin musiikkia ja ruokaa.');
-
-    valiotsikko('Kaksi ääntä');
-    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto '
-      + 'tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on '
-      + 'toivottoman vanhentunut nimissä ja rajoissa.');
-
-    valiotsikko('Totuus ja lähteet');
-    kappale('Jokainen väittämä on tarkistettavissa. Epävarmaa ei väitetä '
-      + 'eikä kiistanalaista esitetä varmana. Politiikka ja historia '
-      + 'kuvataan, ei tuomita: kerrotaan mitä on ja miksi.');
-
-    valiotsikko('Tekoäly apuna, ihminen päättää');
-    kappale('Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan '
-      + 'avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, '
-      + 'ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. '
-      + 'Jokaisen sisällön tarkistaa ja hyväksyy ihminen.');
-
-    valiotsikko('Kunnioitus');
-    kappale('Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, '
-      + 'ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. '
-      + 'Vaikeita aiheita ei kaunistella eikä kauhistella.');
-
-    valiotsikko('Avointa ja ilmaista');
-    kappale('Peli on toistaiseksi ilmainen, ja sen lähdekoodi on '
-      + 'kaikkien luettavissa. Peliä tekee tamperelainen '
-      + 'Visuaaliviestinnän Instituutti (VVI). '
-      + 'Kuvat, äänet ja tiedot tulevat avoimista '
-      + 'lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen '
-      + 'on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata '
-      + 'ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan '
-      + 'tuotteeseen tarvitaan lupa.');
+    }
 
     // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
     // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
@@ -17534,15 +17458,14 @@ export class UI {
     // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
     if (LIPPU_TEKIJAT.length) {
       const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = `Lippukuvat ovat Wikimedia Commonsista. `
-        + `Näiden tekijät lisenssi käskee nimetä: `
+      lippurivi.textContent = PERIAATTEET.lippurivi
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
 
     const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', 'Pelin GitHub-sivu');
-    gh.href = 'https://github.com/ravelius/Matkakirja';
+    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
+    gh.href = PERIAATTEET.linkki.url;
     gh.target = '_blank';
     gh.rel = 'noopener';
     linkit.appendChild(gh);
@@ -17550,8 +17473,7 @@ export class UI {
 
     kortti.appendChild(this.periaatePalaute());
 
-    const oikeudet = html('p', 'periaate-oikeudet',
-      '© Visuaaliviestinnän Instituutti Tampere Oy');
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
@@ -19582,7 +19504,7 @@ export class UI {
     // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
     this.typeText(
       document.getElementById('winner-text'),
-      this.game.pack.texts.winnerStar(w.name, w.money),
+      taytaPohja(this.game.pack.texts.winnerStar, { name: w.name, money: w.money }),
       'winner',
     );
     const roamBtn = document.getElementById('winner-roam');
