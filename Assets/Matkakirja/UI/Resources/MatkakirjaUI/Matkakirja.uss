@@ -3401,7 +3401,7 @@
     padding-right: 36px;
     font-size: 13.76px;
     white-space: normal;
-    color: #3a2a1c;
+    color: #5a4a33;
 }
 
 .mk-postikortti__laskuri {
