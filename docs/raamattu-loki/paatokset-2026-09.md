@@ -4151,3 +4151,7 @@ Natiivi-UI mittaa webin css:n (tausta, läpinäkyvyys, tekstuuri, reunus, varjo,
 ## ISO iPAD: DEVELOPMENT-KAANNOS EI ASENNU (0xe8008012) — LAITE PUUTTUU PERSONAL TEAM F72JLS57C5:N PROFIILISTA (24.9.2026 klo 16.13)
 
 Profiilissa vain 00008142… ja 00008150…; Natiiviseppä rekisteröi laitteen 00008103-001819421413401E ja allekirjoittaa uudelleen (xcodebuild -allowProvisioningUpdates). Sen jälkeen Linssiseppä uusii Huippuvuoret-kuvan ja keksinnöt-kuvaparin 1024×1366:ssa. TestFlight-buildit asentuvat isolle iPadille tästä riippumatta.
+
+## SISALTOKIRJURI: KOHDEKARTTAVAIHE VALMIS (10 PR:AA, 10 HYVAKSYTTYA + 20 HYLATTYA); SEURAAVAKSI CHURCHILL-NOSTO JA N2/N4/N5/N6-KAUPUNKIEN SAA/GALLERIA/ENNENNYT (24.9.2026 klo 16.14)
+
+Erä 3: Gao #3091; Al Kufra hylätty (ei toista paikannettavaa kohdetta). Fable: Churchill-nosto (#3016), sitten N-erien mainissa olevat kaupungit 5/PR, ja sää-PR:ien (#3047–#3065) tilan tarkistus.
