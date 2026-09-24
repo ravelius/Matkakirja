@@ -1257,21 +1257,25 @@ namespace Matkakirja.Natiivi
         }
 
         // Nimen paikka hyväksytystä havainnekuvasta (kaappaukset/radiouudistus-20260924/1-paakuva-ipad.jpg, 1024 pt):
-        // vasen reuna 15 pt maston keskilinjasta oikealle, tekstin keskikohta 45 pt maston puolivälin alapuolella.
-        const float NimiX = 15f, NimiY = 45f;
+        // vasen reuna 15 pt maston juuren oikealla puolella, tekstin keskikohta 14 pt juuren alapuolella. Juuri on
+        // kaupungin pintapiste (LinssiOhjain.Ruutupiste), koska maston ruutukorkeus vaihtelee zoomin ja kallistuksen mukaan.
+        const float NimiX = 15f, NimiY = 14f;
 
-        /// <summary>Valitun maston nimi sen viereen (RadioMastot.RuutuPaikka: maston puoliväli, origo vasen alakulma).</summary>
+        /// <summary>Valitun maston nimi sen juuren viereen; piilossa, kun mastoa ei piirretä (RadioMastot.RuutuPaikka false).</summary>
         void PaivitaNimi()
         {
             if (string.IsNullOrEmpty(mastonNimi.text) || juuri.panel == null) return;
             var mastot = Matkakirja.RadioMastot.Instanssi;
             string id = linssi?.Tila?.KaupunkiId;
-            if (mastot == null || !mastot.RuutuPaikka(id, out var r))
+            RadioNappi d = null;
+            if (id != null && linssi != null) foreach (var x in linssi.Napit) if (x?.Kaupunki == id) { d = x; break; }
+            var piste = d == null ? null : LinssiOhjain.Ruutupiste(d.Lat, d.Lon);
+            if (mastot == null || !mastot.RuutuPaikka(id, out _) || !piste.HasValue)
             {
                 if (mastonNimi.style.visibility.value != Visibility.Hidden) mastonNimi.style.visibility = Visibility.Hidden;
                 return;
             }
-            var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
+            var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y));
             float h = mastonNimi.layout.height;
             mastonNimi.style.left = Mathf.Round(p.x + NimiX);
             mastonNimi.style.top = Mathf.Round(p.y + NimiY - (float.IsNaN(h) ? 10f : h / 2f));
