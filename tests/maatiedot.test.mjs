@@ -70,14 +70,10 @@ const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // EI SUVEREENI, EI VERTAILUKELPOISTA SIJALUKUA (Fable 7.9.2026) —
   // nämä kolme jäävät listalle pysyvästi, eikä niitä yritetä uudelleen.
   'GRL', 'SHN', 'HKG',
-  // Vanuatu odottaa yhä tervehdystä. Päätoimittaja salli 7.9.2026
-  // tervehdyksen en-Wikipedian kieliartikkelista, kun Wiktionarysta ei
-  // löydy — Itä-Timor sai sillä rivinsä ("Bondia", Tetun language) —
-  // mutta artikkelissa "Bislama" ei ole tervehdystä lainkaan, eikä
-  // arvattu sana kelpaa. Muut kolme lukua ovat valmiina raportissa,
-  // joten rivi syntyy heti, kun tervehdykselle löytyy lähde. (Korjattu
-  // erillisessä PR:ssä 24.9.2026 — tämä haara ei riipu siitä.)
-  'VUT',
+  // Vanuatu sai rivinsä 24.9.2026: Fable hyväksyi Wikivoyagen
+  // Bislama-fraasisanaston tervehdyksen lähteeksi, kun Wiktionarysta
+  // ja en-Wikipedian kieliartikkelista ei löytynyt hakusanaa (ks.
+  // js/packs/oceania-maatiedot.js:n VUT-rivin kommentti).
   'BMU', 'PRI', 'GUF', 'FLK', 'NCL', 'NFK',
 ]);
 
