@@ -488,7 +488,7 @@ Myöhemmin samana päivänä: sanelu ja "Kirjoita kysymys" (masterissa), Liiku, 
 matkustustapa" (master 30fe586), B7-äänisoittimen koukut ja tehosteiden webpariteetti (masterissa).
 Odottaa muita: ✈-kohdemerkit (NS), tiedeliite ja aikajanalinssit (LS).
 
-## Tehty (päivitys 24.9.2026 aamupäivä, Natiivi-UI)
+## Tehty (päivitys 24.9.2026 aamuyö klo 3, Natiivi-UI)
 
 Kuvasarjat A4/A5/A7 PASS uusinnassa. Masterissa: ehdotuslomake lehden päälle, lehden mediarivi (osio 8),
 Lue lisää -ikkuna (WikiIkkuna: oma artikkeli tai Wikipedia, galleria, lähderivi, kaiutin; lehti,
@@ -497,7 +497,7 @@ palkki, havainnekuva, välinäytös, loppusanat, karuselli, löytökuva pisteen 
 `ui lehti vierita`, `ui wiki`, `ui media`. Merge-pyynnössä: ihmisen matkan aikaselain ja kuvien GPU-luku
 taustalla (AsyncGPUReadback). Seuraavaksi: Jaa matka (odottaa PK:n Jakaminen-rajapintaa).
 
-## Tehty (päivitys 24.9.2026 iltapäivä, Natiivi-UI)
+## Tehty (päivitys 24.9.2026 yö klo 4, Natiivi-UI)
 
 Masterissa (724ad30): Jaa matka, noston kuuntelu- ja musiikkinapit, linssin valmiit kysymykset chatissa, ihmisen
 matkan nostokortti, havainnekuvien esilataus. Merge-jonossa: kartuschan radio + keksintölinssin esilämmitys
@@ -525,7 +525,7 @@ tehdä, vaan asia kysytään Fablen kautta omistajalta ja kirjataan tähän.
 
 ## Yhteenveto
 
-**Tehty-luku (päivitys 24.9.2026 iltapäivä, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
+**Tehty-luku (päivitys 24.9.2026 yö klo 4, Natiivi-UI; laskettu taulukoista ensisijaisen omistajan mukaan):**
 
 | Omistaja | on | osittain | puuttuu | KOKEET | ei tarvita |
 |---|---|---|---|---|---|
