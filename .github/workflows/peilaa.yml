@@ -67,6 +67,9 @@ on:
       # jäi peilaamatta, kun tämä polku puuttui (löytyi 10.8.2026:
       # matkustamoäänite soi vain varareitin kautta).
       - 'js/aani-ehdokkaat.js'
+      # Linssien kuvat (keksintöjen aidot muotokuvat) — 24 kuvaa jäi
+      # peilaamatta, kun työkalu ei lukenut tätä kansiota (23.9.2026).
+      - 'js/linssit/**'
       # Työkalu päättää mitä ja miten peilataan.
       - 'tools/peilaa-media.mjs'
       - 'tools/leikkaa-mp3.mjs'
