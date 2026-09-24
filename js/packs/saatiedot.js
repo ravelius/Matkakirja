@@ -4121,4 +4121,71 @@ export const SAATIEDOT = {
       + 'kuuma, yli 34 astetta. Sadekausi heinä–elokuussa tuo '
       + 'lyhyen helpotuksen, muulloin sadetta ei juuri ole.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N13-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain bahrelghazal,broome,orjarannikko,santarem,sepik. Asemat: Wau
+   * (Bahr el Ghazal), Broome, Ouidah (Orjarannikko), Santarém, Wewak
+   * (Sepik-joki).
+   */
+  bahrelghazal: {
+    lat: 7.7019,
+    lon: 27.9928,
+    keskilampo: [28.2, 29.7, 32, 31.4, 29, 27.7, 25.7, 25.2, 25.6, 26.8, 27.9, 28.1],
+    ylin: [35, 36, 39, 37, 34, 32, 30, 29, 30, 32, 33, 35],
+    alin: [22, 23, 25, 26, 24, 23, 22, 22, 22, 22, 23, 21],
+    sade: [1, 3, 15, 46, 94, 94, 184, 183, 173, 105, 16, 0],
+    luonnehdinta: 'Bahr el Ghazalissa maaliskuu on kuumin, yli 32 '
+      + 'astetta. Sadekausi kesäkuusta lokakuuhun tuo vuoden '
+      + 'sateet, heinä–syyskuussa jopa 180 millimetriä '
+      + 'kuukaudessa.',
+  },
+  broome: {
+    lat: -17.9614,
+    lon: 122.2359,
+    keskilampo: [28.9, 29.2, 30, 29.3, 26.4, 23.8, 23.1, 24.2, 26.2, 28.1, 29.7, 29.6],
+    ylin: [31, 32, 33, 33, 32, 29, 29, 30, 32, 33, 34, 33],
+    alin: [26, 27, 27, 26, 21, 19, 17, 19, 21, 23, 26, 26],
+    sade: [217, 67, 48, 37, 11, 8, 1, 1, 0, 4, 12, 146],
+    luonnehdinta: 'Broomessa on selkeä trooppinen kuiva-kausi: '
+      + 'kesä–syyskuu on käytännössä sateeton, ja tammikuu on '
+      + 'sekä lämpimin että sateisin, yli 200 millimetrillä.',
+  },
+  orjarannikko: {
+    lat: 6.3628,
+    lon: 2.0852,
+    keskilampo: [26.8, 28, 28.2, 28.1, 27.2, 26, 24.9, 24.4, 25, 26.1, 27.1, 27.4],
+    ylin: [30, 31, 31, 31, 29, 28, 27, 26, 27, 28, 30, 30],
+    alin: [23, 25, 26, 26, 25, 24, 23, 23, 23, 24, 25, 25],
+    sade: [20, 17, 70, 94, 205, 209, 114, 47, 165, 146, 78, 19],
+    luonnehdinta: 'Orjarannikolla toukokuu ja kesäkuu ovat '
+      + 'sateisimmat, yli 200 millimetriä kuukaudessa. Lämpötila '
+      + 'pysyy tasaisen kuumana, 24–28 astetta.',
+  },
+  santarem: {
+    lat: -2.4431,
+    lon: -54.7083,
+    keskilampo: [26.9, 26.6, 26.4, 26.4, 26.6, 26.8, 27.2, 27.9, 28.7, 29.3, 27.8, 27.5],
+    ylin: [29, 29, 28, 28, 29, 29, 29, 30, 31, 32, 30, 30],
+    alin: [25, 25, 24, 24, 25, 25, 25, 25, 26, 27, 25, 25],
+    sade: [328, 349, 463, 468, 363, 156, 86, 78, 42, 33, 263, 205],
+    luonnehdinta: 'Santarémissä maalis–huhtikuu on Amazonin '
+      + 'sadekauden huippu, yli 460 millimetriä kuukaudessa. '
+      + 'Syys–lokakuu on selvästi kuivempi ja lämpimin, lähes '
+      + '29 astetta.',
+  },
+  sepik: {
+    lat: -3.5533,
+    lon: 143.6297,
+    keskilampo: [26.5, 26.5, 26.2, 26.2, 26.3, 26.1, 26, 26, 26.2, 26.3, 26.4, 26.5],
+    ylin: [29, 29, 28, 29, 28, 28, 28, 28, 29, 29, 29, 29],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24],
+    sade: [286, 176, 339, 291, 277, 242, 275, 296, 256, 280, 298, 271],
+    luonnehdinta: 'Sepik-joen varrella lämpötila pysyy '
+      + 'käytännössä muuttumattomana, 26 astetta ympäri vuoden. '
+      + 'Sadetta kertyy runsaasti jokaisena kuukautena, '
+      + 'vähintään 176 millimetriä.',
+  },
 };
