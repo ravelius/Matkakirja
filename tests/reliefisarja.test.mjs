@@ -86,3 +86,14 @@ test('--ilman-viivoja: luettelossa ei viivatasoa, vaatii tunnisteen', () => {
   assert.match(src, /--ilman-viivoja vaatii oman --tunniste-lipun/);
   assert.match(src, /luettelo = \{ \.\.\.luettelo, viivataso: null \}/);
 });
+
+test('väritaso pallolle: luettelo ja kansio', async () => {
+  const { varitasonLuettelo, varitasonPallokansio } = await import('../tools/tee-pallolaatat.mjs');
+  const pohja = { ...POHJA, viivataso: { versio: 'v' }, varitasot: { FRA: { versio: '2026-09-14b-tasoitus', maa: 'FRA', maaPolussa: true, tasot: [4, 5, 6, 7, 8], alue: { lon0: -11, lon1: 16, lat0: 30, lat1: 59 } } } };
+  const l = varitasonLuettelo(pohja, 'FRA');
+  assert.equal(l.versio, '2026-09-14b-tasoitus/vari/FRA');
+  assert.equal(l.viivataso, null);
+  assert.equal(l.vari.maa, 'FRA');
+  assert.throws(() => varitasonLuettelo(pohja, 'SWE'), /ei väritasoa/);
+  assert.equal(varitasonPallokansio('2026-09-14b-tasoitus', 'FRA'), 'julisteet/pallo/vari/2026-09-14b-tasoitus/FRA/');
+});
