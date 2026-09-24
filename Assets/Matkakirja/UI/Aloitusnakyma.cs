@@ -137,8 +137,8 @@ namespace Matkakirja.Natiivi
 
             // 2 AVAUS (portin alla, näkyy kun portti häipyy)
             intro = Rakenne.El("mk-aloitus__intro", juuri, PickingMode.Ignore);
+            // Avauksessa ei omaa taustaa: koko ruudun verho (AvausTausta) kuten webin .intro-verho.
             var ylaosa = Rakenne.El("mk-aloitus__ylaosa", intro, PickingMode.Ignore);
-            Rakenne.Tausta(ylaosa, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var juliste = Rakenne.El("mk-juliste", ylaosa, PickingMode.Ignore);
             Viiva(juliste);
             JulisteRivi(juliste, "MATKAKIRJA", "mk-juliste__nimi");
@@ -148,7 +148,6 @@ namespace Matkakirja.Natiivi
             Viiva(juliste);
 
             arkki = Rakenne.El("mk-aloitus__arkki", intro);
-            Rakenne.Tausta(arkki, Kuviot.Pergamentti);
             // Napautus mihin tahansa avauksessa ohittaa sen suoraan valintaan (omistaja 24.9. klo 16.1x);
             // VALITSE ALOITUSKAUPUNKI hoitaa oman napautuksensa.
             intro.RegisterCallback<PointerDownEvent>(e =>
@@ -410,6 +409,7 @@ namespace Matkakirja.Natiivi
             intro.pickingMode = PickingMode.Position;
             arkki.pickingMode = PickingMode.Position;
             valintaNappi.style.display = DisplayStyle.None;
+            AvausTausta(true);
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;
             // Intro soi pelin kautta (Pelikoodari: PeliOhjain.SoitaIntro — avauksen äänisekoitus seuraa sitä);
@@ -417,7 +417,22 @@ namespace Matkakirja.Natiivi
             var o = PeliOhjain.Instanssi;
             if (o != null) o.SoitaIntro(); else Puhe.Hae()?.Soita(IntroPuhe);
             var nyt = DateTime.Now;
-            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year, IntroPuhe, false);
+            // Web introPaikkaTeksti = `${introPaikkarivi()}:` (kaksoispiste perään).
+            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year + ":", IntroPuhe, false);
+        }
+
+        /// <summary>
+        /// Avauksen tausta webin mukaan (css .intro-verho: rgba(239, 220, 180, 0.3) + blur 3 px; ilman sumennusta
+        /// @supports-vara rgba(239, 220, 180, 0.62), jota natiivi käyttää, koska UI ei sumenna 3D-kuvaa): yksi
+        /// yhtenäinen verho koko ruudun yli, arkilla ei omaa paperia eikä reunaviivaa (.intro-arkki ilman taustaa).
+        /// Lennon kaistale (avaus = false) pitää pergamenttinsa.
+        /// </summary>
+        void AvausTausta(bool avaus)
+        {
+            intro.style.backgroundColor = avaus ? new Color(239 / 255f, 220 / 255f, 180 / 255f, 0.62f) : new StyleColor(StyleKeyword.Null);
+            arkki.style.borderTopWidth = avaus ? 0f : new StyleFloat(StyleKeyword.Null);
+            if (avaus) arkki.style.backgroundImage = new StyleBackground(StyleKeyword.None);
+            else Rakenne.Tausta(arkki, Kuviot.Pergamentti);
         }
 
         /// <summary>
@@ -664,6 +679,7 @@ namespace Matkakirja.Natiivi
             arkki.pickingMode = PickingMode.Ignore;
             intro.AddToClassList("mk-aloitus__intro--lento");
             intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
+            AvausTausta(false);
             portti.style.display = DisplayStyle.None;
             AsetaPortti(false);
             valinta.style.display = DisplayStyle.None;
