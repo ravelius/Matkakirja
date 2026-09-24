@@ -4227,3 +4227,7 @@ Postivahti: Laitetestaaja nollautui ja käynnistyi (Fablen aloitusviesti), Siirt
 ## NATIIVI-UI: 'EI WEBISSA' -ERA 42c5015 (E1, E3–E5, E7–E20 + E10–E11) NATIIVISEPALLA BUILD 10; YLAPALKKI WEBIN MUKAAN ILMAN ⚙ (24.9.2026 klo 16.33)
 
 Kuvaparit ja mitat proto-3d/lokit/pariteetti-b9/merge-pyynto-natiivi-ui-b10.md; efekti-*.mp3 esiladataan käynnistyksessä; hytinä (27) vielä tekemättä. Natiivi-UI:n kysymys: webin iPhone-palkissa logo, pilleri, ⚙, ☰ — Fable: täsmälleen webin mukaan mutta ⚙ ei palaa (omistajan ☰-linjaukset: asetukset ☰ → Muut → Asetukset); karttanappi ja kaupunki kartan yläkulmissa; korkeudet 57/61 px. Järjestys: yläpalkki → tekstitaustat → 27 → 34 → 32.
+
+## SISALTOKIRJURI: TURISTIOPPAAN KELVOLLISET KAUPUNGIT (INVENTAARIO KOHTA 9, #3045 661282559) (24.9.2026 klo 16.33)
+
+71:stä 56 sopii, 9 hylätty konfliktin takia (Darfur, Suakin, Gao, Murzuk, Al Kufra, Bahr el Ghazal, Ras Hafun, Tšadjärvi, Kamerun/Buea), 1 asumaton saari (San Ambrosio), 4 epävarmaa (Kongo, Sahara, Tanganjika, Ahaggar). Arvio yleistiedon varassa; konfliktilista silmäillään ennen sisältötilausta. Sisältökirjuri odottaa N2/N4/N5/N6-mergeä.
