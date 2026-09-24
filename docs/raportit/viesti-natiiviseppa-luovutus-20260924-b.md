@@ -58,6 +58,17 @@ natiiviseppa-tf-sha-viesti.md, lokikansiot-vain-kuvat-konsoli.md.
 - **PalloKierron käyrät** — smootherstep VALMIS; yhteinen käyräkirjasto kaikkiin ajoihin (lennot, matkat, saapuminen, zoomit,
   paljastus, huipennus, aloituspallo) Linssisepän Kamerakoreografian päälle erä kerrallaan, jokaisesta kuvasarja.
 
+## Karttasepän vastaus väritasosta (klo 10.4x)
+
+- Sepiapohja = nykyinen natiivin pohja 23a (julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/, Z0–8): pohjaan EI muutosta.
+- Väritaso webissä: Miller-pyramidi julisteet/pyramidi/<versio>/vari/<ISO>/z{z}/{sarake}/{rivi}.webp (pyramidi.json varitasot[ISO]:
+  versio, tasot 4–8, laatastot-bittikartta, alue), 512 px RGBA: kermainen "tasoitus"-huntu (#faf4d6, peitto 0,85, reuna häivytetty 140),
+  ei kovareunainen väri; lisäksi webin kermashader (js/laattakerma-shader.js) maalaa kerman maamaskilla.
+- Karttaseppä tekee Mercator-sarjan maittain: julisteet/pallo/vari/<versio>/<ISO>/{z}/{x}/{y}.webp, Z5–9, alfa säilyy, alue laatat.jsonissa.
+  FRA ensin, sitten 27 maata; ilmoittaa osoitteen. Natiivissa: toinen CesiumUrlTemplateRasterOverlay nykyisen maan mukaan (NostoKerros.NykyinenMaa),
+  minimumLevel 5 (tarkista Cesiumin webp-tuki ja laattamäärä), vaihdetaan maan vaihtuessa.
+- Ääriviiva: vektorina Siirtosepän maarajoista (ei laattaa) — #6b5539 1,6–3 px, täysi peitto, häivytys 260 ms (MaaKartta/Rajaviiva).
+
 ## Muut tehdyt (tämä sessio)
 
 - 2.0-valmius: Sisalto.Paaversio = 1 (+ Documents/sisalto-2.txt → sisalto/2/), Osoitin ominaisuutena; Reitit päätasolta (lauta, laji, via).
