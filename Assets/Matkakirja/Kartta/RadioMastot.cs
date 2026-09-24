@@ -28,6 +28,7 @@ namespace Matkakirja
     ///              valinnan vaihtuessa (tileset-varjostimen _radioMaavalo, emissiona)
     ///   renkaat    pallokalotti 2 km pinnan yläpuolella yhdellä piirtokutsulla (Shaders/Radiorengas)
     ///   yövalot    uniformit valmiina (_radioYonValot), kerros odottaa Karttasepän Black Marble -polttoa
+    ///   pohja      radion topografiareliefi häivytetään pergamentin päälle samalla h:lla (Pohja)
     ///
     /// Napautus: mastot korvaavat ▶-napit. Osuma-alue on 44 × 44 pt maston puolivälissä (Osuma); osuma ilmoitetaan
     /// PalloKierto.IlmoitaKaupunki-reittiä, jota RadioSovitin kuuntelee (→ RadioLinssi.SoitaKaupunki). Radion aikana
@@ -213,7 +214,7 @@ namespace Matkakirja
             indeksi.Clear();
             valittu = -1;
             osumia = 0;
-            if (lista == null || !valmis) return;
+            if (lista == null || !valmis) { KarttaKerrokset.Instanssi?.PidaPohja(false); return; }
             var gt = georeferenssi.transform;
             for (int i = 0; i < lista.Count && maara < EnintaanMastoja; i++)
             {
@@ -237,6 +238,7 @@ namespace Matkakirja
                 indeksi[m.Id] = maara++;
             }
             mastotAika = Time.unscaledTime;
+            Pohja();
             Debug.Log($"MATKAKIRJA mastot: {maara} mastoa");
         }
 
@@ -250,6 +252,24 @@ namespace Matkakirja
             hamara = Mathf.Clamp01(float.IsNaN(h) ? 0 : h);
             Shader.SetGlobalFloat(HamaraId, hamara);
             Tausta();
+            Pohja();
+        }
+
+        /// <summary>
+        /// POHJAN RISTIHÄIVYTYS (omistaja 24.9. klo 22.3x: radion pohja on värillinen topografia hämärässä). RadioLinssi
+        /// lisää reliefin avaimella RadioLinssi.PohjaKerros (KarttaKerrokset.LisaaRasteri → raster-paikka 1, jos
+        /// lennon pinta ei vie sitä, muuten 2) ja piilottaa pergamentin (Nakyvyys("laatat", false)) heti. Täällä
+        /// reliefin paikan alfa (_overlayAlfa_&lt;paikka&gt;) ajetaan samalla h:lla, ja pergamentti (paikka 0) pidetään
+        /// näkyvissä, kunnes h = 1: tileset-varjostin sekoittaa paikan 1/2 paikan 0 päälle painolla alfa, joten
+        /// pergamentti vaihtuu topografiaan häivyttäen ilman erillistä käänteistä alfaa. Radion auetessa (Mastot)
+        /// pohja pidetään jo ennen kuin reliefi lisätään, ettei pergamentti välähdä pois yhdeksi kehykseksi.
+        /// </summary>
+        void Pohja()
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            int paikka = kk.RasterinAlfa(RadioLinssi.PohjaKerros, hamara);
+            kk.PidaPohja((maara > 0 || paikka >= 0) && hamara < 0.999f);
         }
 
         public void Valittu(string id, float kirkkaus)
@@ -350,6 +370,8 @@ namespace Matkakirja
                 if (maavaloPaalla) AsetaGlobaalit();
                 return;
             }
+            // Reliefi lisätään avauksessa Hamara(0):n jälkeen: alfa asetetaan ennen piirtoa samassa kehyksessä.
+            if (maara > 0) Pohja();
             if (kamera == null) kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
             if (kamera == null) return;
             Vector3 kameraPaikka = kamera.transform.position;
