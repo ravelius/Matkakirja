@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.0 (202609241220)",
+   "paiva": "2026-09-24",
+   "teksti": "Uusi DC-3 ja pilvimeri lennolla, punaiset lähtö- ja kohderenkaat, maamerkit Lontoo ja Ateena, lennon ääni korjattu, ☰-valikko tiiviiksi ja Muut-paneeli, äänentasot Asetuksiin, radion VU-mittari, iPad-sumennus korjattu, uusi aloitus. Tunnetut viat korjataan build 9:ään."
+  },
+  {
    "versio": "1.0.0 (202609241135)",
    "paiva": "2026-09-24",
    "teksti": "Build 7 (24.9.): maan huntu ja tarkka raja webin mukaan, iPhonen yläreuna uusiksi (laukkuryhmä, ☰-linssivalikko), tekstit piiloon luennassa, uusi aloitus (Lontoo-zoomi, pulu), lento ilman UI:ta ja lähikuvasta, napakorjaus, radion VU-mittari (varakuvio)."
