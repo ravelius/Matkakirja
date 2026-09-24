@@ -110,5 +110,35 @@ namespace Matkakirja.Linssit.Testit
             // Eurooppa mahtuu ruutuun: korkeus selvästi alle koko pallon (iPadilla ennen 12 000 km).
             Oleta.Tosi(y.Ajo.Value.Korkeus < 6_000_000 && y.Ajo.Value.Korkeus > 3_000_000, "korkeus " + y.Ajo.Value.Korkeus);
         }
+    
+        [Testi] static void KaarenLoppukameraSeuraaPelaajanPituuspiiria()
+        {
+            // web korkeuteenSovitus: toive = pelaajanAsteet().lng, rajattuna kaaren länsi- ja itäreunaan.
+            // Puhelimen kuvasuhde (390 × 844): iPadilla Euroopan kaari ei jätä vaakavaraa, joten toive
+            // ei siellä vaikuta (sama webissä).
+            const double Suhde = 390.0 / 844;
+            var a = A();
+            var b = Kameramatikka.KaarenKameralaatikko(a.AlueLaudalla, pysty: true);
+            double Loppu(LatLon? pelaaja)
+            {
+                var y = new ValeYmparisto { Kuvasuhde = Suhde, Nakokulma = 50 };
+                var l = new KeksinnotLinssi(a, new TyhjaNakyma()) { Pelaaja = () => pelaaja };
+                l.Avaa(y); l.Kaynnista();
+                l.Ajo.Siirry(25); l.Ajo.Jatka();
+                for (int i = 0; i < 600 && !l.Ajo.Paattynyt; i++) { y.Kello += 1 / 60.0; l.Paivita(); }
+                var odotettu = Kameramatikka.SovitaLaatikko(b, 50, y.Kuvasuhde, 1.06, pelaaja?.Lon).Value;
+                Oleta.Tosi(Math.Abs(y.Ajo.Value.Lon - odotettu.Keski.Lon) < 1e-9, "sama kuin SovitaLaatikko toiveella");
+                return y.Ajo.Value.Lon;
+            }
+            // Euroopan pystylaatikossa korkeus sitoo myös puhelimella: toive ei muuta kuvaa (sama webissä).
+            Oleta.Sama(Loppu(null), Loppu(new LatLon(59.94, 30.31)), "pystylaatikko: ei vaakavaraa");
+            Loppu(new LatLon(51.51, -0.12));
+            // Leveä matala laatikko (Atlantti–Ural) kapealla ruudulla: toive siirtää keskipistettä ja rajautuu reunaan.
+            var leve = new Kameramatikka.LautaLaatikko(4000, 2500, 3500, 600);
+            double Keski(double? toive) => Kameramatikka.SovitaLaatikko(leve, 50, Suhde, 1.06, toive).Value.Keski.Lon;
+            double k0 = Keski(null), kl = Keski(-10), ki = Keski(60);
+            Oleta.Tosi(kl < k0 && k0 < ki, $"länsi {kl:F2} < keski {k0:F2} < itä {ki:F2}");
+            Oleta.Sama(Keski(-170), Keski(-100), "toive rajataan reunaan");
+        }
     }
 }

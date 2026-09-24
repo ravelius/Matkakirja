@@ -55,6 +55,16 @@ namespace Matkakirja.Natiivi
         public static Action<string> LinssiMusiikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
+        /// <summary>Pelaajan paikka pallolla (PeliOhjain + reittiverkko); null ennen matkaa.</summary>
+        public static Matkakirja.Linssit.Aikajana.LatLon? PelaajanPaikka()
+        {
+            var p = PeliOhjain.Instanssi;
+            var m = p?.Matka;
+            if (m == null || p.Verkko == null) return null;
+            var k = PeliApu.Koordinaatti(p.Verkko, m.Tila.Pelaaja.Sijainti);
+            return k is var (lat, lon) ? new Matkakirja.Linssit.Aikajana.LatLon(lat, lon) : (Matkakirja.Linssit.Aikajana.LatLon?)null;
+        }
+
         /// <summary>
         /// Laitepikseliä yhdellä pisteellä (CSS px / iOS pt), kuten Natiivi-UI: Round(dpi / 163).
         /// iPadin 1x-tiheys on 132 dpi, joten pyöristämätön dpi/163 antoi 264 dpi:n iPadille 1,62
@@ -681,7 +691,11 @@ namespace Matkakirja.Natiivi
                 kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
                 // Soitin on kerroksen lapsi: kerroksen tuho sulkee luennan.
                 var soitin = Luennat == null ? null : LuentaSoitin.Luo(kerros.transform);
-                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros, luennat: Luennat, soitin: soitin);
+                linssi = new Matkakirja.Linssit.Aikajana.KeksinnotLinssi(aineisto, kerros, luennat: Luennat, soitin: soitin)
+                {
+                    // Web pelaajanAsteet: pelaajan paikka (myös matkalla) kaaren X-toiveeksi.
+                    Pelaaja = PelaajanPaikka,
+                };
                 linssi.Avaa(y);
                 if (!KeksinnotKerros.EsittelyUIssa) linssi.Kaynnista();
             }

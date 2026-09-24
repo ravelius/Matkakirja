@@ -26,6 +26,11 @@ namespace Matkakirja.Linssit.Aikajana
         double edellinen;
 
         public Pysakkiajo Ajo { get; private set; }
+        /// <summary>
+        /// Pelaajan sijainti (web kamera.js pelaajanAsteet): kapealla ruudulla kaaren kuva keskitetään
+        /// vaakasuunnassa pelaajan pituuspiiriin kaaren sisällä. null = kaaren keskipiste.
+        /// </summary>
+        public Func<LatLon?> Pelaaja;
         public LinssiTiedot Tiedot => aineisto.Tiedot;
         public bool Auki { get; private set; }
 
@@ -92,7 +97,8 @@ namespace Matkakirja.Linssit.Aikajana
             edellinen = y.Aika;
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi) { AlueLaudalla = aineisto.AlueLaudalla };
+            Ajo = new Pysakkiajo(aineisto.Pysakit, aineisto.Alku, aineisto.Alue, y, nakyma, luentaSoi)
+                { AlueLaudalla = aineisto.AlueLaudalla, Pelaaja = Pelaaja };
             // Pimeässä ajettu avauskamera (web AVAUS_KAMERA_MS 700).
             Ajo.SovitaAlkuun(700);
             // Web avaa: pysäkkiajolla musiikki alkaa heti esittelyn alla puolella tasolla
