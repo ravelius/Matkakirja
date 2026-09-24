@@ -171,7 +171,8 @@ export function sallittuOrigin(origin, lista = []) {
  */
 export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
 // fi.matkakirja.peli = TestFlight-/App Store -build (proto3d-testflight.yml BUNDLE_ID), omistajan löydös 16.
-export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli']);
+// fi.matkakirja.peli.kehitys = kehityskäännös (Developer-tiimi RCD77XPB7M, iso iPad; Fable 24.9.2026), samat oikeudet.
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
 export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);

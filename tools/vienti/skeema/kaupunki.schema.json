@@ -46,6 +46,13 @@
       },
       "additionalProperties": false
     },
+    "wiki": { "type": ["string", "null"], "description": "Wikipedia-artikkelin nimi (skeema 1.31)" },
+    "ambienssi": { "type": ["string", "null"], "description": "Webin ambienssityyppi (ambience), esim. satama, basaari (skeema 1.31)" },
+    "nimionAnkkuri": {
+      "type": ["object", "null"], "description": "Laudan nimiön paikka pisteeseen nähden (skeema 1.31)",
+      "properties": { "tasaus": { "type": "string" }, "dx": { "type": ["number", "null"] }, "dy": { "type": ["number", "null"] } },
+      "required": ["tasaus", "dx", "dy"], "additionalProperties": false
+    },
     "data": { "$ref": "arvo.schema.json", "description": "Laudan raakaolio sellaisenaan (x, y, la, lx, ly: laudan Miller-koordinaatit ja nimiön paikka; ambience, airport, start…). Pelin sisäinen muoto: natiivi ei nojaa siihen, ja kentät voivat muuttua ilman skeemaversion nostoa. Käytä päätason kenttiä." }
   },
   "additionalProperties": false
