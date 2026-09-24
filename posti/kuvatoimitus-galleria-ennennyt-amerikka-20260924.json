@@ -303,7 +303,7 @@
       "slots": [
         {
           "tyyppi": "galleria",
-          "state": "local_qa_passed_not_uploaded",
+          "state": "R2_verified_integration_pending",
           "huomio": null
         },
         {
@@ -363,7 +363,7 @@
       "slots": [
         {
           "tyyppi": "galleria",
-          "state": "local_qa_passed_not_uploaded",
+          "state": "R2_verified_integration_pending",
           "huomio": null
         },
         {
@@ -388,7 +388,7 @@
       "slots": [
         {
           "tyyppi": "galleria",
-          "state": "local_qa_passed_not_uploaded",
+          "state": "R2_verified_integration_pending",
           "huomio": null
         }
       ]
@@ -418,7 +418,7 @@
       "slots": [
         {
           "tyyppi": "galleria",
-          "state": "local_qa_passed_not_uploaded",
+          "state": "R2_verified_integration_pending",
           "huomio": null
         }
       ]
@@ -428,7 +428,7 @@
       "slots": [
         {
           "tyyppi": "galleria",
-          "state": "local_qa_passed_not_uploaded",
+          "state": "R2_verified_integration_pending",
           "huomio": null
         }
       ]
