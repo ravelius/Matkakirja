@@ -5,6 +5,7 @@
 //   KIINTEA=satelliitti: linssin oma avaus, kuva 15 s kohdalla
 //   KIINTEA=radio: radio auki (50/10/6000 km) ja Lontoon asema äänettömänä
 //   KIINTEA=maat: vertailu (FIN; +SWE, NOR, DNK) ja maatiedot (JPN)
+//   KIINTEA=huippuvuoret: vertailu (FIN; +NOR), kamera 76/18/2500 km (Norjan rajat Huippuvuorilla)
 //   KIINTEA=topografia|vesistot: vain se näkymä (45/10/8000 km tai 0/20/9000 km) tuoreella sivulla
 // Oikeat ajastimet (ei nopeutusta), pelaaja Lontoossa kuten natiivin "ui aloita lontoo" (KAUPUNKI=lontoo laitetesti.sh:ssa; webin pallopakassa ei ole Pariisia),
 // iPad Pro 11 -mitta 834 × 1194 pt, dpr 2, GPU Metalilla. Ämpäri Noden kautta (CORS).
@@ -200,7 +201,7 @@ if (process.env.KIINTEA === 'radio') {
   console.log('radio tila', JSON.stringify(await s.evaluate(async () => (await import('/js/linssit/radio.js')).tilanne?.())));
   await selain.close(); palvelin.close(); process.exit(0);
 }
-if (process.env.KIINTEA === 'maat') {
+if (process.env.KIINTEA === 'maat' || process.env.KIINTEA === 'huippuvuoret') {
   const kamera = (la, ln, km) => s.evaluate(([a, b, k]) => {
     const u = window.matkakirja.ui;
     u.pallolauta?.zoomirajat?.({ max: 2.5 });
@@ -213,6 +214,13 @@ if (process.env.KIINTEA === 'maat') {
     ui.valitseLinssi(x);
   }, t);
   await valitse('vertailu');
+  if (process.env.KIINTEA === 'huippuvuoret') {
+    await odota(5000); await ohita();
+    await s.evaluate(async () => (await import('/js/vertailu.js')).valitseVertailuMaa(window.matkakirja.ui, 'NOR'));
+    await odota(4000); await kamera(76, 18, 2500); await odota(6000);
+    await kuva('vertailu-huippuvuoret');
+    await selain.close(); palvelin.close(); process.exit(0);
+  }
   await odota(5000); await ohita(); await kamera(60, 15, 5000); await odota(6000);
   await kuva('vertailu-fin');
   await s.evaluate(async () => {
