@@ -184,6 +184,8 @@ namespace Matkakirja.Linssit.Aikajana
 
         /// <summary>Kaaren alue laudalla (web kaari.alue); null = vanha lat/lon-rajaus.</summary>
         public Kameramatikka.LautaLaatikko? AlueLaudalla;
+        /// <summary>Pelaajan sijainti (web pelaajanAsteet) kapean ruudun X-keskipisteeksi; null = kaaren keskipiste.</summary>
+        public Func<LatLon?> Pelaaja;
 
         /// <summary>
         /// Koko kaari ruudulle (web sovitaKaareen): kaarenKameralaatikko + pallonKorkeus marginaalilla
@@ -192,7 +194,7 @@ namespace Matkakirja.Linssit.Aikajana
         void SovitaKaareen()
         {
             if (AlueLaudalla is Kameramatikka.LautaLaatikko a
-                && Kameramatikka.PallonKorkeus(Kameramatikka.KaarenKameralaatikko(a, y.Kuvasuhde < 1), y.Nakokulma, y.Kuvasuhde, 1 + 2 * 0.03) is var (keski, h))
+                && Kameramatikka.SovitaLaatikko(Kameramatikka.KaarenKameralaatikko(a, y.Kuvasuhde < 1), y.Nakokulma, y.Kuvasuhde, 1 + 2 * 0.03, Pelaaja?.Invoke()?.Lon) is var (keski, h))
             {
                 ViimeisinAjo = (keski, double.NaN, Kameramatikka.LoppuAjoMs);
                 y.AjaKamera(new Nakyma(keski.Lat, keski.Lon, h * Kameramatikka.MaanSade), (float)((y.VahennettyLiike ? 0 : Kameramatikka.LoppuAjoMs) / 1000));
