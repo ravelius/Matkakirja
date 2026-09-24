@@ -3991,3 +3991,7 @@ Skeema 1.33 sovittu Siirtosepän kanssa (koepaketti v43, kentät id/kaupunki/lat
 ## SISALTOKIRJURI NOLLATTU JA KAYNNISTETTY klo 15.1x (24.9.2026 klo 15.07)
 
 Postivahti epäili jumia (prosessi poissa 13 min clear_sessionin jälkeen, RC pois). Fable tarkisti: list_events = 0 viestiä → clear onnistui, sessio vain lepäsi; aloitusviesti (docs/raportit/viesti-sisaltokirjuri-aloitus.md, 662b51806) lähetetty session id:llä, RC:n kytkentä pyydetty sessiolta itseltään. Oppi: idle-sessio ei raportoi kontekstia get_usagella — tarkistus list_eventsillä.
+
+## VARALAATAN JUURISYY: HUNTUSARJA ALKAA z5:STA, KORJAUS KOODISSA (EI POLTTOA) (24.9.2026 klo 15.09)
+
+Pelikoodari: pohja 2026-09-23a ja sileä 23a-rajaton lon −10…16, lat 15…48, z3–z7 = 212/212 laattaa ehjiä (pienin 3,7 kt); huntu kerma 2026-09-23a-p080 tasot 5–8, z3–z4 = 404 → Cesiumin sekazoomissa z5-huntulaatat näkyvät vaaleina suorakulmioina. Fable: ei huntupolttoa z3–z4:ään (Raamattu: maailmanäkymässä ei kermahuntua); Natiiviseppä korjaa koodissa — huntu piirtyy vasta kun koko näkymä ≥ z5, häivytys zoomin funktiona (z4.5…z5.5), build 9; Karttasepän z3–z4-pyyntö peruttu. Laitetestaaja päivitti #3059:n (60035286d, 4 kuvaa). Pelikoodarille seuraava: reittilaattojen esilataus lennon ajaksi (sileä + satelliittisarja), build 9.
