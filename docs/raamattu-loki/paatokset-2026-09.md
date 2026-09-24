@@ -4191,3 +4191,7 @@ Luovutus viesti-laitetestaaja-luovutus-20260924-ilta.md (avoimet pariteettirivit
 ## OMISTAJAN LOYDOKSET 28–30 (BUILD 9, klo 16.4x, SITOVA): KALLISTUS SAILYY ZOOMATESSA, KORKEUSEROT PALJON VOIMAKKAAMMIKSI, PALLON PYORITYS KUTEN GOOGLE EARTHISSA (24.9.2026 klo 16.21)
 
 28) eleet: kun kameraa zoomataan lähemmäs tai kauemmas, kallistuksen pitää pysyä — nyt se lähtee heti liikkumaan. 29) korkeuserot saisivat näkyä paljon voimakkaammin (korkeuskerroin). 30) palloa pitää voida pyörittää kuten Google Earthissa eli vaihtaa katselusuuntaa (heading) eleellä. Kaikki → Natiiviseppä, build 10; viesti odottaa Fablen viestirajan nollausta (Postivahdin Laitetestaaja-ohje jäi myös lähettämättä).
+
+## PELIKOODARI: AVAUSTEKSTI ALOITUSNAYTOLLA (pelikoodari/avausteksti-portille d4950c0, BUILD 10) (24.9.2026 klo 16.22)
+
+Portti → juliste ja arkki ('Heathrow, Lontoo, syyskuu 2026' + INTRO_TEXT intro-puhe.mp3:n tahdissa) → VALITSE ALOITUSKAUPUNKI (webin renderIntro); napautus ohittaa; valinta vaientaa kertojan, naksahdus, pallo suoraan valintanäkymään pulun kanssa; Lontoo-zoomi ja ulos-zoomi poistettu. Raja: Pelikoodari portista valintanäkymään, Natiiviseppä valinnasta eteenpäin (kamerareitti). Web-kuvat ja mitat (AVAUS_*_MS, INTRO_TYPE_MS 190) merge-pyynnössä; teksti paketista. liiku-tanne d7a6e4d PASS iPhonella (build 10).
