@@ -22,12 +22,41 @@
  * Sisältö, joka asuu moduulin SISÄISESSÄ muuttujassa (ei exporttia), ei
  * näy tälle työkalulle — raportin "ei mekaaniset" -lista.
  */
-import { readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
+import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+
+function voimassaOlevatAikaleimat() {
+  // Voimassa = kohdistettu täsmälleen nykyiseen matkakirjatekstiin (sama
+  // ehto kuin js/luentareaktiot.js tarkistaAikaleimat).
+  const kansio = join(JUURI, 'assets/aikaleimat');
+  const tekstit = new Map(Object.values(FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite)
+    .map((v) => [v.matkakirja.aanite.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json'), v.matkakirja.teksti]));
+  return readdirSync(kansio).filter((f) => f.endsWith('.json')).sort().filter((f) => {
+    const d = JSON.parse(readFileSync(join(kansio, f), 'utf8'));
+    const teksti = tekstit.get(f);
+    return d.versio === 2 && teksti && d.teksti === teksti
+      && d.tekstiSha256 === createHash('sha256').update(teksti).digest('hex');
+  }).map((f) => `assets/aikaleimat/${f}`);
+}
 const m = (moduuli, exportit, luokka = 'peli') => ({ moduuli, exportit, luokka });
+
+/*
+ * PAKETISTA POISTETUT (skeema 1.14, Fablen tarkastus 23.9.2026 A11 ja C5):
+ * vanhat mannerlaudat eivät kuulu natiiviin (yksi lauta), eikä yksikään
+ * proto-haara lue niitä. Vienti lataa ne yhä muistiin, koska kokoelma
+ * tapahtumat tulee js/packs/africa.js:stä, mutta niitä ei kirjoiteta
+ * pakettiin eikä niiden mediaviitteitä kerätä. Botti (js/ai.js) ja
+ * kaksintaistelu on poistettu natiivista kokonaan.
+ */
+const MANNERLAUDAT = ['africa', 'asia', 'europe', 'istanbul', 'maailma', 'middleeast', 'northamerica', 'oceania',
+  'southamerica', 'suomi'];
+export const PAKETISTA_POISTETUT = new Set(MANNERLAUDAT.flatMap((l) => [`js/packs/${l}.js`, `js/packs/${l}-questions.js`]));
+export const POISTETUT_SAANNOT = new Set(['DUEL_PRIZE', 'BOT_SKILL']);
 
 export const LISAMODUULIT = [
   m('js/kohtaamiskuvat-data.js', ['kohtaamiskuvat', 'KOHTAAMIS_R2_JUURI']),
@@ -35,10 +64,22 @@ export const LISAMODUULIT = [
   m('js/tietajatasot.js', ['TIETAJATASOT']),
   m('js/etusivupallo.js', ['ETUSIVUN_KUVAKIERTO', 'ETUSIVUN_REITTI']),
   m('js/livia.js', ['LIVIAN_AVAUS']),
+  // Natiivi-UI 23.9.2026: avausteksti, paikkarivi, aloitusnappi ja
+  // periaatelappu (js/ui.js tuo samat vakiot).
+  m('js/ui-tekstit.js', ['INTRO_TEXT', 'INTRO_PAIKKA', 'INTRO_VALINTA', 'PERIAATTEET']),
   m('js/pollo.js', ['LIVIAN_MIETINNAT', 'POLLO_AARRE']),
+  // Skeema 1.15 (lehdet natiiville): lehden kiinteät tekstit ja luvut.
+  // LEHDEN_VAKIOESITTELY = etusivun esittely, kun kaupungilla ei ole omaa;
+  // LEIPAN_ALOITUS_SANOJA = leipätekstin lihavoitu aloitus (sanaa);
+  // MINITEHTAVA_PALKKIO = aihesivun minitehtävän palkkio (myös
+  // kaupunkilehdet.aiheet[].tehtava.palkkio); säärivin koodit, kuvakkeet,
+  // kuukaudet ja Open-Meteon osoite (kokoelma saatiedot).
+  m('js/lehti.js', ['LEHDEN_VAKIOESITTELY']),
+  m('js/ui-apurit.js', ['LEIPAN_ALOITUS_SANOJA']),
+  m('js/ui.js', ['MINITEHTAVA_PALKKIO']),
+  m('js/saa.js', ['SAAKOODIT', 'SAA_IKONIT', 'KUUKAUDET_SSA', 'ENNUSTE_OSOITE']),
   m('js/game.js', ['ASKERS', 'MANNER_NIMET', 'FORM_WEIGHTS']),
   m('js/tokens.js', ['TOKEN_TYPES', 'PIENI_AARRE_ARVO', 'ISO_AARRE_ARVO']),
-  m('js/ai.js', ['BOT_SKILL']),
   // Matkustuksen hinnat (laiva, lento, bussi); skeema 1.4 kokoaa ne ja
   // game.js:n vakiot kokoelmaan saannot (tools/vienti/kokoelmat.mjs).
   m('js/rules.js', ['SEA_FEE', 'FLIGHT_PRICE', 'BUS_FARE']),
@@ -62,7 +103,9 @@ export const LISAMODUULIT = [
   m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET']),
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
-  m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET'], 'linssi'),
+  m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
+    // Natiivi-UI 23.9.2026: aloituskortin ja kaistan tekstit.
+    'IHMISEN_MATKA_ESITTELY', 'IHMISEN_MATKA_ALOITUS', 'IHMISEN_MATKA_KAISTASELITE', 'IHMISEN_MATKA_LOPPU'], 'linssi'),
   m('js/linssit/ihmisen-matka-kertomus.js', ['IHMISEN_MATKA_KERTOMUS'], 'linssi'),
   m('js/linssit/ihmisen-matka-kysymykset.js', ['IHMISEN_MATKAN_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-virrat.js', ['IHMISEN_MATKA_VIRRAT', 'IHMISEN_MATKA_RETKI', 'IHMISEN_MATKA_VANHA', 'IHMISEN_MATKA_VANAT'], 'linssi'),
@@ -94,8 +137,9 @@ export const LISAMODUULIT = [
 export const LISATIEDOSTOT = [
   'assets/data/maakayrat.json',
   'assets/data/maapolygonit.json',
-  // Skeema 1.9: matkakirjaluentojen sanatason aikaleimat (luentareaktiot);
-  // kansio luetaan, joten uusi luenta tulee mukaan ilman muutosta tähän.
-  ...readdirSync(join(JUURI, 'assets/aikaleimat')).filter((f) => f.endsWith('.json')).sort()
-    .map((f) => `assets/aikaleimat/${f}`),
+  // Matkakirjaluentojen sanatason aikaleimat (luentareaktiot) vain, kun
+  // ne on kohdistettu nykyiseen luentatekstiin: 23.9.2026 kaikki 45
+  // repon kopiota ovat vanhentuneita (teksti uusittu 14.9.), joten
+  // mukaan ei tule yhtään. Ks. kokoelmat.mjs luentoKokoelma.
+  ...voimassaOlevatAikaleimat(),
 ];

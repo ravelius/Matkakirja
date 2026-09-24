@@ -1,0 +1,175 @@
+{
+ "lahde": "docs/raportit/radio-korvaavat-asemat-20260923.md (Fable 23.9.2026), omistajan tarkennus: sallittu ja epaselva soivat, kielletty on linkki",
+ "asemat": {
+  "FIN": {
+   "nimi": "Radio Helsinki 98,5",
+   "kaupunki": "Helsinki",
+   "kuvaus": "Itsenäinen kaupallinen asema: puhe, kulttuuri, laatumusiikki, uutisia; suomi. Toimiluvan haltija Livelaboratorio Oy (Muusikkojen liiton omistama)",
+   "url": "https://stream.radiohelsinki.fi/stream",
+   "luokka": "epaselva",
+   "sivu": "https://www.radiohelsinki.fi/",
+   "peruste": "Kieltoa ei löydetty. Suora striimilinkki on aseman omalla etusivulla. radiohelsinki.fi, omistus fi.wikipedia",
+   "lahde": "https://www.radiohelsinki.fi/"
+  },
+  "GBR": {
+   "nimi": "Resonance 104.4 FM",
+   "kaupunki": "Lontoo",
+   "kuvaus": "Taide- ja yhteisöradio: puhe, kulttuuri, kokeellinen; englanti",
+   "url": "https://stream.resonance.fm/resonance",
+   "luokka": "epaselva",
+   "sivu": "https://www.resonancefm.com/",
+   "peruste": "Kieltoa ei löydetty. Asema on itse jakelussa TuneInissa ja Radioplayerissa. resonancefm.com, media.info",
+   "lahde": "https://www.resonancefm.com/"
+  },
+  "UGA": {
+   "nimi": "Bukedde FM 100.5",
+   "kaupunki": "Kampala",
+   "kuvaus": "Uutiset, puhe, musiikki; luganda (Vision Group, ei UBC)",
+   "url": "https://stream.hydeinnovations.com:2020/stream/bukeddefm/stream",
+   "luokka": "epaselva",
+   "sivu": "https://www.bukedde.co.ug/",
+   "peruste": "Ehtoja ei löydetty. bukedde.co.ug",
+   "lahde": "https://www.bukedde.co.ug/"
+  },
+  "FRA": {
+   "nimi": "Radio Campus Paris 93,9",
+   "kaupunki": "Pariisi",
+   "kuvaus": "Opiskelija- ja yhdistysradio: puhe, kulttuuri, musiikki; ranska",
+   "url": "https://www.radiocampusparis.org/stream/",
+   "luokka": "epaselva",
+   "sivu": "https://www.radiocampusparis.org/",
+   "peruste": "Kieltoa ei löydetty. Striimi on aseman omalla domainilla. radiocampusparis.org",
+   "lahde": "https://www.radiocampusparis.org/"
+  },
+  "DEU": {
+   "nimi": "ByteFM",
+   "kaupunki": "Hampuri",
+   "kuvaus": "Kuratoitu laatumusiikki ja toimitetut ohjelmat; saksa",
+   "url": "https://uplink.byte.fm/bytefm-main/mp3-128/",
+   "luokka": "sallittu",
+   "sivu": "https://www.byte.fm/",
+   "peruste": "Asema ohjeistaa syöttämään striimiosoitteen \"in einen anderen Player Ihrer Wahl\". Kieltoa ei löydetty. byte.fm: Wie kann man ByteFM hören?",
+   "lahde": "https://www.byte.fm/blog/news/wie-kann-man-bytefm-hoeren-2-87580/"
+  },
+  "ESP": {
+   "nimi": "Radio Vallekas 107.5",
+   "kaupunki": "Madrid",
+   "kuvaus": "Yhteisöradio (AMARC-jäsen): uutiset, keskustelu, kulttuuri; espanja",
+   "url": "https://radio.radiobot.org/listen/rvk/rvk.mp3",
+   "luokka": "epaselva",
+   "sivu": "https://www.radiovallekas.org/",
+   "peruste": "Kieltoa ei löydetty. radiovallekas.org, es.wikipedia",
+   "lahde": "https://www.radiovallekas.org/"
+  },
+  "NOR": {
+   "nimi": "Radio Nova 99,3",
+   "kaupunki": "Oslo",
+   "kuvaus": "Ei-kaupallinen opiskelijaradio (1982): puhe, kulttuuri, musiikki; norja",
+   "url": "https://stream.radionova.no/mp3",
+   "luokka": "epaselva",
+   "sivu": "https://radionova.no/",
+   "peruste": "Kieltoa ei löydetty. Asema julkaisee xspf-soittolistan osoitteessa stream.radionova.no. radionova.no, xspf",
+   "lahde": "https://radionova.no/"
+  },
+  "SWE": {
+   "nimi": "Radio AF 99,1",
+   "kaupunki": "Lund",
+   "kuvaus": "Pohjoismaiden suurin opiskelijaradio: uutiset, puhe, viihde, musiikki; ruotsi",
+   "url": "https://stream.rcs.revma.com/e3tha8v4dkhvv",
+   "luokka": "epaselva",
+   "sivu": "https://www.radioaf.se/",
+   "peruste": "Kieltoa ei löydetty. Osoite on aseman oman sivun soittimessa. radioaf.se, studentradion.se",
+   "lahde": "https://www.radioaf.se/en"
+  },
+  "DNK": {
+   "nimi": "Radio4",
+   "kaupunki": "Kööpenhamina",
+   "kuvaus": "Valtakunnallinen puhe- ja uutisradio (public service -luvalla, ei DR); tanska",
+   "url": "https://netradio.radio4.dk/radio4",
+   "luokka": "epaselva",
+   "sivu": "https://radio4.dk/",
+   "peruste": "Ehtoja ei löydetty (JS-sivu). radio4.dk",
+   "lahde": "https://radio4.dk/"
+  },
+  "AUT": {
+   "nimi": "ORANGE 94.0",
+   "kaupunki": "Wien",
+   "kuvaus": "Vapaa yhteisöradio: puhe, kulttuuri, musiikki; saksa (osin monikielinen)",
+   "url": "https://securestream.o94.at/live.mp3",
+   "luokka": "sallittu",
+   "sivu": "https://o94.at/",
+   "peruste": "Asema ilmoittaa virallisen striimiosoitteen \"für die Einbindung\" ja kertoo striimin olevan \"in vielen Streaming-Apps\" (hakutulos sivulta o94.at/de/hoeren, jota WebFetch ei saanut auki: 404). o94.at",
+   "lahde": "https://o94.at/de"
+  },
+  "CHE": {
+   "nimi": "Radio RaBe 95,6",
+   "kaupunki": "Bern",
+   "kuvaus": "Kulttuuriradio ilman mainoksia: puhe, kulttuuri, musiikki; saksa",
+   "url": "https://stream.rabe.ch/livestream/rabe-mid.mp3",
+   "luokka": "sallittu",
+   "sivu": "https://rabe.ch/",
+   "peruste": "Aseman sivu listaa striimiosoitteet ja kertoo, että RaBea voi kuunnella \"auf Radioapps wie … TuneIn\". Rajoituksia ei mainita. rabe.ch/empfangen, stream.rabe.ch",
+   "lahde": "https://rabe.ch/empfangen"
+  },
+  "NLD": {
+   "nimi": "BNR Nieuwsradio",
+   "kaupunki": "Amsterdam",
+   "kuvaus": "Kaupallinen uutis- ja talousradio (FD Mediagroep); hollanti. Vastaa sisällöltään parhaiten NPO Radio 1:tä",
+   "url": "https://stream.bnr.nl/bnr_mp3_128_20",
+   "luokka": "sallittu",
+   "sivu": "https://www.bnr.nl/",
+   "peruste": "BNR julkaisee artikkelin \"BNR stream-URL's voor losse devices\", jonka mukaan striimiä voi käyttää \"in je favoriete app\". Rajaehtoja ei nähty, koska sivu palautti WebFetchille 403. bnr.nl",
+   "lahde": "https://www.bnr.nl/nieuws/media/10429287/bnr-stream-urls-voor-losse-devices"
+  },
+  "BEL": {
+   "nimi": "Urgent.fm 105.3",
+   "kaupunki": "Gent",
+   "kuvaus": "Yhteisöradio: puhe, kulttuuri, musiikki; hollanti (flaami)",
+   "url": "https://urgentstream.radiostudio.be/live",
+   "luokka": "epaselva",
+   "sivu": "https://urgent.fm/",
+   "peruste": "Kieltoa ei löydetty. Striimilinkit (/live, /aac) ovat aseman etusivulla. urgent.fm",
+   "lahde": "https://urgent.fm/"
+  },
+  "PRT": {
+   "nimi": "RUC – Rádio Universidade de Coimbra 107.9",
+   "kaupunki": "Coimbra",
+   "kuvaus": "Portugalin vanhin yliopistoradio: puhe, kulttuuri, musiikki; portugali",
+   "url": "https://stream.ruc.pt/high",
+   "luokka": "epaselva",
+   "sivu": "https://ruc.pt/",
+   "peruste": "Kieltoa ei löydetty. ruc.pt",
+   "lahde": "https://ruc.pt/"
+  },
+  "CAN": {
+   "nimi": "CFRO Vancouver Co-op Radio 100.5",
+   "kaupunki": "Vancouver",
+   "kuvaus": "Osuuskuntaradio: puhe, yhteiskunta, kulttuuri; englanti",
+   "url": "https://listen-coopradio.sharp-stream.com/coopradio.mp3",
+   "luokka": "epaselva",
+   "sivu": "https://www.coopradio.org/",
+   "peruste": "Kieltoa ei löydetty. Suora mp3-linkki on aseman etusivulla. coopradio.org",
+   "lahde": "https://www.coopradio.org/"
+  },
+  "AUS": {
+   "nimi": "3RRR Triple R 102.7",
+   "kaupunki": "Melbourne",
+   "kuvaus": "Itsenäinen yhteisöradio: puhe, kulttuuri, musiikki; englanti",
+   "url": "https://ondemand.rrr.org.au/getstream?id=wsmq",
+   "luokka": "sallittu",
+   "sivu": "https://www.rrr.org.au/",
+   "peruste": "Aseman sivu \"Other ways to listen\" antaa suorat osoitteet: \"should allow you to select one of our streams to play in your web browser or preferred media player\". Kieltoa ei löydetty. rrr.org.au/streaming-apps",
+   "lahde": "https://www.rrr.org.au/streaming-apps"
+  },
+  "HKG": {
+   "nimi": "D100",
+   "kaupunki": "Hongkong (internetradio)",
+   "kuvaus": "Itsenäinen puheradio (Albert Cheng): ajankohtaiset, keskustelu; kantoninkiina",
+   "url": "https://streaming.live365.com/a91285",
+   "luokka": "epaselva",
+   "sivu": "https://www.d100radio.com/",
+   "peruste": "Ehtoja ei löydetty. Asema jakaa striiminsä TuneInissa ja Radio Gardenissa. d100radio.com, en.wikipedia",
+   "lahde": "https://www.d100radio.com/"
+  }
+ }
+}

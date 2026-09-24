@@ -23,7 +23,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti } from '../tools/vienti/vie-sisalto.mjs';
@@ -86,9 +86,11 @@ test('jokainen paketti ja jokainen export on manifestissa oikealla lukumääräl
   const packit = readdirSync(join(JUURI, 'js/packs')).filter((f) => f.endsWith('.js'));
   const manifestissa = new Map(manifest.moduulit.map((m) => [m.moduuli, m]));
   assert.ok(packit.length > 300, `pakettien määrä ${packit.length}`);
+  const { PAKETISTA_POISTETUT } = await import('../tools/vienti/lahteet.mjs');
   for (const f of packit) {
     const polku = `js/packs/${f}`;
     const m = manifestissa.get(polku);
+    if (PAKETISTA_POISTETUT.has(polku)) { assert.ok(!m, `${polku} on poistettu paketista (skeema 1.14)`); continue; }
     assert.ok(m, `${polku} puuttuu viennistä`);
     const ns = await import(pathToFileURL(join(JUURI, polku)).href);
     assert.deepEqual(m.exportit.map((e) => e.nimi), Object.keys(ns), `${polku}: exportit`);
@@ -145,10 +147,14 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     reitit: P.edges.length + P.airRoutes.length,
     kysymykset: Object.values(P.questions).flat().length,
     paikkatiedot: Object.values(P.placeFacts).flat().length,
-    kaksintaistelut: P.duels.length,
     laatat: 1,
     pulmat: P.puzzles.length,
-    kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT),
+    // Skeema 1.15: + "Elämää"-kaupungit (ei omaa lehteä, litteät nostot).
+    kaupunkilehdet: avaimia(ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT)
+      + P.cities.filter((c) => !(c.id in ns('kulttuuri-kategoriat.js').KULTTUURI_KATEGORIAT)
+        && ns('js/sisaltotaulut.js').KULTTUURIT.maailmankartta[c.id]?.nostot?.length).length,
+    kulttuurivisat: P.cities.filter((c) => ns('js/sisaltotaulut.js').KULTTUURIT.maailmankartta[c.id]?.kysymys).length,
+    saatiedot: avaimia(ns('saatiedot.js').SAATIEDOT),
     maalehdet: avaimia(ns('maa-kategoriat.js').MAA_KATEGORIAT),
     nahtavyydet: sisakkain(ns('nahtavyysjutut.js').NAHTAVYYSJUTUT),
     miniatyyrit: sisakkain(ns('miniatyyrit.js').MINIATYYRIT),
@@ -163,11 +169,12 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     tarinakaari: avaimia(ns('tarinakaari.js').TARINAKAARI),
     saapumispuheet: avaimia(ns('saapumispuheet.js').SAAPUMISPUHEET),
     fokusvirrat: avaimia(ns('fokusvirrat.js').FOKUSVIRRAT),
-    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'].flatMap((f) => Object.entries(ns(f))
-      .filter(([, v]) => onSaantoArvo(v)).map(([n]) => n))).size,
+    saannot: new Set(['js/rules.js', 'js/game.js', 'js/tokens.js'].flatMap((f) => Object.entries(ns(f))
+      .filter(([n, v]) => onSaantoArvo(v) && !['DUEL_PRIZE', 'BOT_SKILL'].includes(n)).map(([n]) => n))).size + 2, // + KATKOKUVA, LIVIAN_ASTRONAUTTI_KYPARA
     tapahtumat: ns('africa.js').AFRICA.events.length,
-    linssiaineisto: 7,
-    aanitaulut: new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
+    linssiaineisto: 8,
+    radiot: avaimia(ns('radiot.js').RADIOT),
+    aanitaulut: ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
       + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
@@ -175,8 +182,14 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
     pulmaaineisto: 7,
+    maastonimet: ['vuoret', 'jarvet', 'joet'].reduce((a, l) => a + ns('maailmankartta-nimet.js').MAAILMANKARTAN_NIMET[l].length, 0),
+    karttavalot: kokoelma('karttavalot').alkiot.length,
+    maarajat: Object.keys(JSON.parse(readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8')).maat).length,
     maat: Object.keys(P.map.countryShapes).length,
+    karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
+    livianrepliikit: avaimia(ns('js/liviapuhe.js').LIVIAN_AANITETYT),
+    maakuntarajat: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json'), 'utf8')).alueet.length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)

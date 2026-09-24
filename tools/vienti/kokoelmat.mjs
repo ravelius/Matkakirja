@@ -21,11 +21,28 @@
 import { sarjallista } from './sarjallista.mjs';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
+import { POISTETUT_SAANNOT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
-import { ratkaiseMedia } from './media.mjs';
+import { lueKorkeudet } from './korkeudet.mjs';
+import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
+import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
+import { KOHDE_MAAT, kohteenKategoria } from '../../js/fokuskohteet.js';
+import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
+import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
+import { ratkaiseMedia, sivustoReitit } from './media.mjs';
 import { aaniUrl, horatioAanenKesto } from '../../js/media.js';
-import { aikaleimojenOsoite } from '../../js/luentareaktiot.js';
+import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
+import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
+import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
+import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
+import { rikastaLehdet } from './lehdet.mjs';
+import { kohtaamiskuvaKohteelle, kohtaamiskuvaTavalliselleKohtaamiselle } from '../../js/kohtaamiskuvat-data.js';
+import {
+  LINSSILUENTA_JUURI, luennanRunko, luennanOsoite, kaarenPuheet, puheenTiiviste,
+} from '../../js/linssipuhe.js';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
 import { existsSync } from 'node:fs';
 
 const LAUTA = 'js/packs/maailmankartta.js';
@@ -54,6 +71,7 @@ function lautaKokoelmat(ns) {
   const P = ns.MAAILMANKARTTA;
   const pallo = ns.PALLON_KAUPUNKIPISTEET ?? {};
   const saaret = new Set(P.islands);
+  const korkeudet = lueKorkeudet().kaupungit ?? {};
   const reitteja = new Map();
   for (const e of [...P.edges, ...P.airRoutes]) {
     for (const id of [e.a, e.b]) reitteja.set(id, (reitteja.get(id) ?? 0) + 1);
@@ -83,6 +101,9 @@ function lautaKokoelmat(ns) {
       // lasketaan verkkopelin kaavalla laudan pisteistä, jotta viiva osuu
       // laattoihin. Laudan Miller-yksiköt (maailmankartta).
       lauta: { x: c.x, y: c.y },
+      // Skeema 1.10 (Natiiviseppä): korkeus m EGM2008, 10 m tarkkuus,
+      // Copernicus GLO-30 (tools/vienti/korkeudet.mjs); null = ei ruutua.
+      korkeus: korkeudet[c.id] ?? null,
       data: c,
     };
   });
@@ -125,7 +146,9 @@ function lautaKokoelmat(ns) {
     laatat: taulukko(`${LAUTA}#MAAILMANKARTTA.tokens`,
       'Aarrelaatat sellaisenaan yhtenä alkiona: data = { types, mannerTypes, counts } '
         + '(laattatyypit, mantereiden omat tyypit, määrät laudalla).',
-      {}, [{ id: 'tokens', data: P.tokens }]),
+      // Skeema 1.14: ryöstäjä (robber) pois, natiivissa ei rosvoa.
+      {}, [{ id: 'tokens', data: { ...P.tokens,
+        types: Object.fromEntries(Object.entries(P.tokens.types).filter(([t]) => t !== 'robber')) } }]),
     // Tapahtumakortit (Fablen kaanonipäätös 23.9.2026): tuodaan sellaisenaan
     // AFRICA.events-taulusta; maailmankartalla niitä ei ole, natiivi tekee
     // mekanismin yleisenä (effect.kind raha | kyyti | viive).
@@ -134,8 +157,6 @@ function lautaKokoelmat(ns) {
         + '(amount, kukkaro ei mene miinukselle), kyyti (ilmainen siirto rideTarget-kaupunkiin), viive '
         + '(yksi ylimääräinen vuoro paikallaan).',
       {}, (ns.AFRICA_EVENTS ?? []).map((e, i) => ({ id: `afrikka:${i}`, lauta: 'africa', data: e }))),
-    kaksintaistelut: taulukko(`${LAUTA}#MAAILMANKARTTA.duels`, 'Kaksintaistelukysymykset.', {},
-      P.duels.map((d, i) => ({ id: `kaksintaistelu:${i}`, data: d }))),
     pulmat: taulukko(`${LAUTA}#MAAILMANKARTTA.puzzles`,
       'Kaupunkipulmat. generaattori = arvontalogiikan tunniste (js/pulmageneraattorit.js); natiivi toteuttaa saman tunnisteen.',
       { kaupunki: 'kaupungit' }, P.puzzles.map((p) => ({ id: p.id, kaupunki: p.city, data: p }))),
@@ -225,7 +246,7 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *
  * Natiivi porttaa matkustuksen ja saapumisen ensin (Fable 23.9.2026).
  * Sen luvut ja kaupunkikohtaiset haut ovat webissä koodia:
- *   - saannot: js/rules.js:n, js/game.js:n, js/tokens.js:n ja js/ai.js:n
+ *   - saannot: js/rules.js:n, js/game.js:n ja js/tokens.js:n
  *     sääntöarvot (hinnat, aloitusraha, vuoron tunnit, XP, aarteiden
  *     arvovälit, botin taito; onSaantoArvo).
  *     Kootaan nimiavaruudesta automaattisesti, joten uusi vakio tulee
@@ -238,7 +259,7 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
  *     natiivin tarvitse toistaa varasääntöjä (esim. vanha tallenne:
  *     kaupungin oma, muuten maan).
  */
-const SAANTOMODUULIT = ['js/rules.js', 'js/game.js', 'js/tokens.js', 'js/ai.js'];
+const SAANTOMODUULIT = ['js/rules.js', 'js/game.js', 'js/tokens.js'];
 
 /*
  * Sääntöarvo = luku, teksti, totuusarvo tai litteä rakenne niistä
@@ -261,7 +282,7 @@ function saantoKokoelma(hae) {
   const nahdyt = new Set();
   for (const moduuli of SAANTOMODUULIT) {
     for (const [nimi, arvo] of Object.entries(hae(moduuli)).sort(([a], [b]) => (a < b ? -1 : 1))) {
-      if (!onSaantoArvo(arvo)) continue;
+      if (!onSaantoArvo(arvo) || POISTETUT_SAANNOT.has(nimi)) continue;
       // game.js vie rules.js:n hinnat edelleen; alkuperäinen moduuli voittaa.
       if (nahdyt.has(nimi)) continue;
       nahdyt.add(nimi);
@@ -270,7 +291,7 @@ function saantoKokoelma(hae) {
   }
   return taulukko(SAANTOMODUULIT.join('+'),
     'Pelin sääntövakiot: matkustuksen hinnat (SEA_FEE laiva, FLIGHT_PRICE lento, BUS_FARE bussi), '
-      + 'aloitusraha, vuoron tunnit, palkkiot, XP, aarteiden arvovälit (PIENI_AARRE_ARVO, ISO_AARRE_ARVO: min–max, 10 punnan askel) ja botin taito (BOT_SKILL). id = vakion nimi koodissa. SEA_FARE (game.js) '
+      + 'aloitusraha, vuoron tunnit, palkkiot, XP, aarteiden arvovälit (PIENI_AARRE_ARVO, ISO_AARRE_ARVO: min–max, 10 punnan askel). id = vakion nimi koodissa. SEA_FARE (game.js) '
       + 'on SEA_FEE:n vanha kaksoiskappale.',
     {}, alkiot);
 }
@@ -420,12 +441,61 @@ function linssiKokoelma(hae) {
  * musiikkiketju()-funktiolla jokaiselle kaupungille ilman tiloja
  * (lehti ja matkalaukku menevät ketjun kärkeen, kun ne ovat auki).
  */
+/*
+ * RADIOT (skeema 1.16, omistajan kortti 23.9.2026: radio hybridinä
+ * luokittain). Asema maittain js/packs/radiot.js RADIOT:sta ja
+ * lisenssiluokka tools/vienti/radioluokat.json:sta
+ * (docs/raportit/lisenssi-inventaario-20260923-liite-radiot-hybridi.md).
+ * sallittu = natiivi saa soittaa urlin; linkki = vain "Avaa aseman
+ * sivu" (sivu). Omistajan tarkennus 23.9.: sallittu ja epaselva soivat,
+ * kielletty on linkki. Nimen saa näyttää, logoa ei ilman lupaa.
+ */
+const radioTyyppi = (url) => (/\.m3u8(\?|$)/i.test(url) ? 'hls' : /\.aac(\?|$)|aac/i.test(url) ? 'aac'
+  : /\.mp3(\?|$)|mp3/i.test(url) ? 'mp3' : null);
+function radioKokoelma(hae) {
+  const { RADIOT } = hae('js/packs/radiot.js');
+  const luokat = JSON.parse(readFileSync(new URL('./radioluokat.json', import.meta.url), 'utf8')).luokat;
+  const korvaavat = JSON.parse(readFileSync(new URL('./radiokorvaavat.json', import.meta.url), 'utf8')).asemat;
+  const rivit = [];
+  for (const iso of Object.keys(RADIOT).sort()) {
+    const r = RADIOT[iso]; const l = luokat[iso] ?? {};
+    const alkuperainen = {
+      iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
+      lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
+      perusteLahde: l.lahde ?? null, varaAani: null,
+    };
+    const k = korvaavat[iso];
+    if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
+    // Kielletyn yleisradion tilalle soiva asema (radio-korvaavat-asemat-20260923.md).
+    // Omistaja 23.9.2026: kielletty yleisradio ei tule pakettiin lainkaan
+    // (se on vain lisenssi-inventaariossa).
+    rivit.push({
+      id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
+      lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
+      kaupunki: k.kaupunki, kuvaus: k.kuvaus,
+    });
+  }
+  return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
+    'Suorat radiolähetykset maittain. Omistajan linjaus 23.9.2026: luokat sallittu ja epaselva SOIVAT '
+      + 'natiivissa (url); kielletty näytetään vain nimenä ja "Avaa aseman sivu" -linkkinä (sivu), ei soittoa. '
+      + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
+      + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
+      + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null).',
+    { iso3: 'maat' }, rivit);
+}
+
 function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
   const valitsin = hae('js/musiikkivalitsin.js');
   const P = ns.MAAILMANKARTTA;
+  // Radioerä (skeema 1.16): viritysäänet (radion haku), pelin osoitteella.
+  const viritys = hae('js/packs/viritysaanet.js');
   const rivit = [
+    ...viritys.VIRITYSAANET.map((a) => ({
+      id: `viritys:${a.tiedosto}`, laji: 'viritys', nimi: a.tiedosto, synteesi: false,
+      url: aaniUrl(viritys.viritysPolku(a)), kesto: a.kesto, kuvaus: a.kuvaus, tekija: a.tekija, lisenssi: a.lisenssi, lahde: a.lahde,
+    })),
     ...aani.AANITEHOSTEET.map((nimi) => ({
       id: `tehoste:${nimi}`, laji: 'tehoste', nimi, synteesi: true, naytte: aani.REAL_SAMPLES[nimi] ?? null,
     })),
@@ -524,12 +594,27 @@ function luentoKokoelma(hae) {
   const { FOKUSVIRRAT } = hae('js/packs/fokusvirrat.js');
   // aikaleimat = sanatason ajoitus (js/luentareaktiot.js aikaleimojenOsoite);
   // aikaleimaTiedosto = sama JSON paketissa, jos se on repossa.
-  const aani = (polku) => {
-    const nimi = polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json');
-    const repo = `assets/aikaleimat/${nimi}`;
+  // Aikaleimat kelpaavat vain, jos ne on kohdistettu täsmälleen nykyiseen
+  // tekstiin (js/luentareaktiot.js tarkistaAikaleimat: versio, teksti,
+  // tekstiSha256). Repon kopio on paketissa vain silloin; muuten
+  // aikaleimaTiedosto ja reaktioHetket ovat null.
+  const sha = (t) => createHash('sha256').update(t).digest('hex');
+  const voimassaOlevat = (polku, teksti) => {
+    const repo = new URL(`../../assets/aikaleimat/${polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json')}`, import.meta.url);
+    if (!teksti || !existsSync(repo)) return null;
+    const data = JSON.parse(readFileSync(repo, 'utf8'));
+    return data.versio === AIKALEIMOJEN_VERSIO && data.teksti === teksti && data.tekstiSha256 === sha(teksti) ? data : null;
+  };
+  const aani = (polku, teksti = null, reaktiot = null) => {
+    const data = voimassaOlevat(polku, teksti);
     return {
       url: aaniUrl(polku), kesto: horatioAanenKesto(polku), aikaleimat: aikaleimojenOsoite(polku),
-      aikaleimaTiedosto: existsSync(new URL(`../../${repo}`, import.meta.url)) ? `tiedostot/${repo}` : null,
+      tekstiSha256: teksti ? sha(teksti) : null,
+      aikaleimaTiedosto: data ? `tiedostot/assets/aikaleimat/${polku.split('/').at(-1).replace(/\.mp3$/, '.aikaleimat.json')}` : null,
+      // Skeema 1.11: ele = Livian tekninen ele (js/livia-tilanteet.js
+      // livianLuentareaktionTiedot), null jos tarkoitukselle ei ole elettä.
+      reaktiot: reaktiot ? reaktiot.map((r) => ({ ...r, ele: livianLuentareaktionTiedot(r)?.ele ?? null })) : null,
+      reaktioHetket: data && reaktiot ? Object.fromEntries(ratkaiseAnkkurit(reaktiot, data).map((r) => [r.id, r.hetki])) : null,
     };
   };
   const rivit = [
@@ -537,13 +622,16 @@ function luentoKokoelma(hae) {
       aanite: l.aanite, ...aani(l.aanite) })),
     ...Object.entries(FOKUSVIRRAT).filter(([, v]) => v?.matkakirja?.aanite).map(([kaupunki, v]) => ({
       id: `matkakirja:${kaupunki}`, kaupunki, paikkarivi: v.matkakirja.paikkarivi ?? null,
-      teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite, ...aani(v.matkakirja.aanite),
+      teksti: v.matkakirja.teksti ?? null, kuvaus: null, aanite: v.matkakirja.aanite,
+      ...aani(v.matkakirja.aanite, v.matkakirja.teksti ?? null, v.matkakirja.reaktiot ?? []),
     })),
   ];
   return taulukko('js/packs/fokusvirrat.js#FOKUSVIRRAT.*.matkakirja + erikoisluennat',
     'Isoisän luennat: intro ja lento-alku sekä matkakirjaluennat kaupungeittain. url = valmis https-osoite '
       + '(aaniUrl), kesto sekunteina tai null, aanite = repopolku, aikaleimat = sanatason ajoitus ämpärissä '
-      + '(url + .aikaleimat.json), aikaleimaTiedosto = sama paketissa (tiedostot/…) tai null.',
+      + '(url + .aikaleimat.json; voi puuttua), tekstiSha256 = nykyisen tekstin tiiviste, jota aikaleimojen on '
+      + 'vastattava, reaktiot = Livian kuuntelureaktiot ({id, ankkuri, tarkoitus, voimakkuus, siirtyma, ele}; ele = tekninen SVG-ele), '
+      + 'reaktioHetket = {id: ms} ja aikaleimaTiedosto vain, kun paketin aikaleimat on kohdistettu nykyiseen tekstiin.',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
@@ -559,22 +647,63 @@ function livianPuheKokoelma(hae) {
   const cuet = hae('js/livia-pilotti-cuet.js');
   const { livianAaniOsoite } = hae('js/liviapuhe.js');
   const odottaa = new Set(cuet.ERA5_ODOTTAVAT_KAUPUNGIT ?? []);
+  const eleet = lueLivianEleet();
   return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
     'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
-      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus }, tekstiSha256 = kommentin tekstin '
-      + 'tiiviste, jota eleet vastaavat. odottaa = eleitä ei vielä ole.',
+      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
+      + 'kommentin tekstin tiiviste, jota eleet vastaavat. ele = tekninen SVG-ele (js/livia-tilanteet.js '
+      + 'livianPuheeleenTiedot). eleetTila: ok = alku/loppu (ms äänen alusta) on tarkistettu pelin validaattorilla '
+      + 'ja aaniTavut/aaniSha256 kertovat, mihin mp3:een ne kuuluvat; puuttuu = ämpärissä ei eleitä (alku/loppu '
+      + 'null); vanhentunut = teksti vaihtunut haun jälkeen. odottaa = teksti ja ääni ovat vielä 13.9.2026 asussa '
+      + '(ERA5_ODOTTAVAT_KAUPUNGIT), ei eleiden puutetta.',
     { kaupunki: 'kaupungit' },
     Object.values(cuet.LIVIAN_LUENTA_CUET).map((c) => {
       // Pelin omat osoitefunktiot: avain <kaupunki>-3 = kommenttikuplan
       // indeksi 2; versioitu polku tai ?v= kuten pelissä.
       const indeksi = Number(c.avain.split('-').at(-1)) - 1;
       const aani = livianAaniOsoite(c.kaupunki, indeksi);
+      // Skeema 1.11: validoidut cue-ajat (tools/vienti/livian-eleet.mjs).
+      const haettu = eleidenTila(eleet.kaupungit[c.kaupunki], c);
+      const ajat = new Map((haettu.tila === 'ok' ? haettu.eleet : []).map((e) => [e.id, e]));
       return {
         id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
         tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
-        odottaa: odottaa.has(c.kaupunki), cuet: c.cuet,
+        eleetTila: haettu.tila,
+        aaniTavut: haettu.aani?.tavut ?? null, aaniSha256: haettu.aani?.sha256 ?? null,
+        odottaa: odottaa.has(c.kaupunki),
+        cuet: c.cuet.map((q) => ({
+          ...q, ele: livianPuheeleenTiedot(q)?.ele ?? null,
+          alku: ajat.get(q.id)?.alku ?? null, loppu: ajat.get(q.id)?.loppu ?? null,
+        })),
       };
     }));
+}
+
+/*
+ * LIVIAN REPLIIKIT (skeema 1.11, Natiivi-UI): kaikki Livian äänitetyt
+ * kuplat yhtenä listana samasta lähteestä kuin äänitystyökalu
+ * (tools/generoi-pulu.mjs repliikit(): tekstit js/livia.js:stä, kaupunkien
+ * pakkauksista ja linssikertomuksista). aani = pelin livianAaniOsoite;
+ * ajanTasalla = pelin livianAaniAjanTasalla (false → peli vaikenee, koska
+ * äänite sanoo eri asian kuin kupla).
+ */
+function livianRepliikkiKokoelma(hae, kaupunkiIdt) {
+  const { livianAaniOsoite, livianAaniAjanTasalla, LIVIAN_KESTOT, LIVIAN_LINSSILAHTEET } = hae('js/liviapuhe.js');
+  return taulukko('tools/generoi-pulu.mjs#repliikit (js/livia.js, js/liviapuhe.js, kaupunkien pakkaukset)',
+    'Livian äänitetyt repliikit: id = avain (<lahde>-<n>), lahde (avaus, paljastus, mannerivihje, lehtivinkki, '
+      + 'kaupunki-id tai linssi), kaupunki tai linssi, indeksi (0-alkuinen), teksti, aani = valmis https-osoite, '
+      + 'kesto sekunteina tai null (lue äänestä), kuplaSekunteina = kuplan näkyvä vähimmäisaika, pinoutuu, saapuu '
+      + '(saapumisrepliikki), ajanTasalla = äänite vastaa tekstiä (false → älä soita).',
+    { kaupunki: 'kaupungit' },
+    livianRepliikit().map((r) => ({
+      id: r.avain, lahde: r.lahde,
+      kaupunki: kaupunkiIdt.has(r.lahde) ? r.lahde : null,
+      linssi: Object.hasOwn(LIVIAN_LINSSILAHTEET, r.lahde) ? r.lahde : null,
+      indeksi: r.indeksi, teksti: r.teksti, aani: livianAaniOsoite(r.lahde, r.indeksi),
+      kesto: LIVIAN_KESTOT[r.avain] ?? null, kuplaSekunteina: r.kuplaSekunteina,
+      pinoutuu: r.pinoutuu, saapuu: r.saapuu,
+      ajanTasalla: livianAaniAjanTasalla(r.lahde, r.indeksi, r.teksti),
+    })));
 }
 
 /*
@@ -610,8 +739,165 @@ function maaKokoelma(ns, hae) {
     { maalehti: 'maalehdet' }, rivit);
 }
 
-/** nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus> */
-export function kokoaKokoelmat(nimiavaruudet) {
+/*
+ * NIPPU 4 (Natiivi-UI:n ja Linssisepän tarpeet 23.9.2026 ilta): kuvat ja
+ * luennat valmiina osoitteina olemassa oleviin kokoelmiin.
+ *   - kohtaamiset[].muotokuva: tavallisen visan kohtaamiskuva
+ *     (kohtaamiskuvaTavalliselleKohtaamiselle), tarinakaari[].muotokuva:
+ *     tarinakaaren kohtaamiskuva (kohtaamiskuvaKohteelle) — samat valinnat
+ *     kuin js/visa.js. Kuvilla ei ole tekijä- eikä lisenssitietoa datassa,
+ *     eikä peli näytä niille lähderiviä: tekija ja lisenssi ovat null.
+ *   - laatat: kuvat tyypeittäin ja mantereittain, paikallisaarteet[].kuvat.
+ *   - karttamerkit: assets/nostotyypit/merkki-*.png (karttaselite), jotka
+ *     viedään ämpäriin (assets/, skeema 1.12, media.mjs sivustoReitit).
+ *   - linssiaineisto: linssiluennat (pysäkkien ja kaaren puheiden osoitteet
+ *     pelin omilla runkosäännöillä, js/linssipuhe.js).
+ */
+
+function muotokuva(kuva) {
+  if (!kuva) return null;
+  return { url: kuva.osoite, varat: [], alt: kuva.alt ?? null, lyhyt: kuva.lyhyt ?? null,
+    kuvateksti: kuva.kuvateksti ?? null, tekija: null, lisenssi: null };
+}
+
+function mediaOsoite(polku) {
+  if (!polku) return null;
+  const { url = null, varat = [] } = ratkaiseMedia(polku, mediaLajiPolulle(polku));
+  return url ? { url, varat } : null;
+}
+// Pelin omat asset-polut (assets/aarteet/…): media.mjs:n laji polusta.
+const mediaLajiPolulle = (polku) => (polku.startsWith('assets/aarteet/') ? 'asset-aarteet' : 'repo');
+
+function linssiluennat(hae) {
+  const tulos = {};
+  for (const [tunnus, moduuli] of [['keksinnot', 'js/linssit/keksinnot.js'], ['ihmisen-matka', 'js/linssit/ihmisen-matka.js']]) {
+    const kaari = hae(moduuli).LINSSI?.aikajana;
+    if (!kaari) continue;
+    const juuri = kaari.luentajuuri ?? LINSSILUENTA_JUURI;
+    const pysakit = (kaari.tapahtumat ?? []).map((t) => ({
+      vuosi: t.vuosi ?? null, otsikko: t.otsikko ?? null, runko: luennanRunko(t), url: luennanOsoite(t, juuri),
+    }));
+    // Esittely saa versiokyselyn tekstin tiivisteestä (js/aikajana.js),
+    // välinäytökset ja loppu eivät.
+    const puheet = kaarenPuheet(kaari).map((p) => ({
+      avain: p.avain, runko: p.runko,
+      url: `${juuri}/${p.runko}.mp3${p.avain === 'esittely' && p.teksti ? `?v=${puheenTiiviste(p.teksti)}` : ''}`,
+    }));
+    tulos[tunnus] = { juuri, pysakit, puheet };
+  }
+  return tulos;
+}
+
+function rikastaNippu4(kokoelmat, ns) {
+  for (const a of kokoelmat.kohtaamiset.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaTavalliselleKohtaamiselle(a.kaupunki)) : null;
+  for (const a of kokoelmat.tarinakaari.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaKohteelle(a.kaupunki)) : null;
+  const tokens = ns.MAAILMANKARTTA.tokens;
+  const [laatta] = kokoelmat.laatat.alkiot;
+  laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).filter(([t]) => t !== 'robber').map(([t, v]) => [t, mediaOsoite(v.kuva)]));
+  laatta.mannerKuvat = Object.fromEntries(Object.entries(tokens.mannerTypes).map(([m, tyypit]) => [m,
+    Object.fromEntries(Object.entries(tyypit).map(([t, v]) => [t, mediaOsoite(v?.kuva)]))]));
+  for (const a of kokoelmat.paikallisaarteet.alkiot) {
+    a.kuvat = { pieniAarre: mediaOsoite(a.data?.pieniAarre?.kuva), isoAarre: mediaOsoite(a.data?.isoAarre?.kuva) };
+  }
+}
+
+function karttamerkkiKokoelma() {
+  const kansio = new URL('../../assets/nostotyypit/', import.meta.url);
+  const rivit = readdirSync(kansio).filter((f) => /^merkki-.+\.png$/.test(f)).sort().map((f) => {
+    const b = readFileSync(new URL(f, kansio));
+    return { id: f.replace(/^merkki-|\.png$/g, ''), tiedosto: `assets/nostotyypit/${f}`, url: sivustoReitit(`assets/nostotyypit/${f}`)[0],
+      tavuja: b.length, sha256: createHash('sha256').update(b).digest('hex') };
+  });
+  return taulukko('assets/nostotyypit/merkki-*.png',
+    'Karttaselitteen nostotyyppien merkit (id = tyyppi). url = Pages (matkakirja.app); ämpärissä niitä ei vielä ole.',
+    {}, rivit);
+}
+
+/*
+ * KARTTAVALOT JA MAASTONIMET (Natiivisepän tarve 23.9.2026 ilta).
+ * Web ei kokoa karttavaloja yhdeksi listaksi: pisteet syntyvät piirrossa.
+ * Tämä kokoaa saman datan (Sonnet-agentin selvitys, tarkistettu):
+ *   - fokuskohteet (KOHDE_MAAT, sis. kuratoidut maastokohteet): aihe =
+ *     nostosymPaakategoria(kohteenKategoria(k)), sijainti laudalta asteiksi
+ *   - eläintäyt (ELAINTAKYT, lat/lon suoraan), historian hetket (vain
+ *     kartalla === true), skandaalit (lat/lon suoraan).
+ * tarkeys: kaupunkivalolle kaupungin tarkeys, muille kohteen taso ?? 1.
+ * Maastonimet (MAAILMANKARTAN_NIMET: vuoret, järvet, joet) ovat webissä
+ * vain tasokartan nimiökerroksessa, eivät pallolla.
+ */
+const asteiksi = (x, y) => {
+  const a = laudaltaAsteiksi('maailmankartta', x, y);
+  return a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null;
+};
+
+function karttavaloKokoelma(hae, kaupungit) {
+  const tarkeydet = new Map(kaupungit.map((k) => [k.id, k.tarkeys]));
+  const rivit = [];
+  const nahdyt = new Set();
+  const lisaa = (rivi) => {
+    let id = rivi.id; let n = 2;
+    while (nahdyt.has(id)) id = `${rivi.id}~${n++}`;
+    nahdyt.add(id);
+    rivit.push({ ...rivi, id });
+  };
+  for (const [maa, lista] of Object.entries(KOHDE_MAAT)) {
+    for (const k of lista) {
+      const aihe = nostosymPaakategoria(kohteenKategoria(k));
+      const xy = k.laudat?.maailmankartta;
+      const p = xy && asteiksi(xy.x, xy.y);
+      if (!aihe || !p) continue;
+      const kaupunki = tarkeydet.has(k.kaupunki) ? k.kaupunki : (tarkeydet.has(k.id) ? k.id : null);
+      lisaa({ id: `kohde:${k.id}`, aihe, nimi: k.nimi, ...p, maa, kaupunki,
+        tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (k.taso ?? 1), lahde: 'fokuskohde' });
+    }
+  }
+  for (const [maa, t] of Object.entries(hae('js/packs/elaintakyt.js').ELAINTAKYT)) {
+    if (Number.isFinite(t.lat) && Number.isFinite(t.lon)) {
+      lisaa({ id: `elaintaky:${maa}`, aihe: 'elaimet', nimi: t.elain ?? t.otsikko, lat: t.lat, lon: t.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'elaintaky' });
+    }
+  }
+  for (const h of hae('js/packs/historian-hetket.js').HISTORIAN_HETKET) {
+    if (!h.kartalla) continue;
+    lisaa({ id: `hetki:${h.id}`, aihe: 'hetket', nimi: h.nimio ?? h.otsikko, lat: h.lat, lon: h.lon, maa: h.iso ?? null, kaupunki: null, tarkeys: 1, lahde: 'historianHetket' });
+  }
+  for (const [maa, lista] of Object.entries(hae('js/packs/skandaalit.js').SKANDAALIT)) {
+    for (const sk of lista) {
+      lisaa({ id: `skandaali:${sk.id}`, aihe: 'skandaalit', nimi: sk.nimio ?? sk.otsikko, lat: sk.lat, lon: sk.lon, maa, kaupunki: null, tarkeys: 1, lahde: 'skandaalit' });
+    }
+  }
+  return taulukko('js/fokuskohteet.js#KOHDE_MAAT + ELAINTAKYT + HISTORIAN_HETKET + SKANDAALIT',
+    'Karttavalot pallolle: aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; '
+      + 'js/karttavalot.js KARTTAVALO_AIHEET), nimi, lat/lon, maa (ISO3), tarkeys 0–3, lahde = lähdekokoelma. '
+      + 'Aiheen kaupungit valot ovat laudan ulkopuolisia pikkukaupunkeja (laudan kaupungit ovat kokoelmassa kaupungit); '
+      + 'kaupunki on täytetty vain, jos valo on laudan kaupunki, ja silloin tarkeys = kaupungit.tarkeys, muuten kohteen taso tai 1.',
+    { kaupunki: 'kaupungit' }, rivit);
+}
+
+function maastonimiKokoelma() {
+  const rivit = [];
+  for (const [laji, lista] of [['vuori', MAAILMANKARTAN_NIMET.vuoret], ['jarvi', MAAILMANKARTAN_NIMET.jarvet]]) {
+    for (const t of lista ?? []) {
+      const p = asteiksi(t.x, t.y);
+      if (p) rivit.push({ id: `${laji}:${t.avain}`, laji, nimi: t.nimi, ...p, tarkeys: t.tarkeys ?? null, viiva: null });
+    }
+  }
+  for (const t of MAAILMANKARTAN_NIMET.joet ?? []) {
+    const viiva = t.pisteet.map(([x, y]) => asteiksi(x, y)).filter(Boolean).map((p) => [p.lon, p.lat]);
+    if (!viiva.length) continue;
+    const [lon, lat] = viiva[Math.floor(viiva.length / 2)];
+    rivit.push({ id: `joki:${t.avain}`, laji: 'joki', nimi: t.nimi, lat, lon, tarkeys: t.tarkeys ?? null, viiva });
+  }
+  return taulukko('js/packs/maailmankartta-nimet.js#MAAILMANKARTAN_NIMET',
+    'Maastonimet (vuoret, järvet, joet) asteina: tarkeys 1–3 (1 = tärkein), joella viiva [[lon, lat], …] ja '
+      + 'ankkuri keskipisteessä. Webissä vain tasokartan nimiökerroksessa, ei pallolla.',
+    {}, rivit);
+}
+
+/**
+ * nimiavaruudet: Map<moduulipolku, moduulin nimiavaruus>; media =
+ * media.json:n rivit (skeema 1.15: lehtien kuvien url, varat ja mitat).
+ */
+export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const ns = {
     AFRICA_EVENTS: nimiavaruudet.get('js/packs/africa.js')?.AFRICA?.events,
     ...nimiavaruudet.get(LAUTA),
@@ -622,7 +908,7 @@ export function kokoaKokoelmat(nimiavaruudet) {
     return nimiavaruudet.get(polku);
   };
   const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
-  return {
+  const kokoelmat = {
     ...lautaKokoelmat(ns),
     ...sisaltoKokoelmat(hae, kaupunkiIdt),
     saannot: saantoKokoelma(hae),
@@ -630,9 +916,51 @@ export function kokoaKokoelmat(nimiavaruudet) {
     esilasketut: esilaskettuKokoelma(ns, hae),
     linssiaineisto: linssiKokoelma(hae),
     aanitaulut: aaniKokoelma(ns, hae),
+    radiot: radioKokoelma(hae),
     ...kysymyskuvaKokoelmat(ns, hae),
     luennat: luentoKokoelma(hae),
     livianpuhe: livianPuheKokoelma(hae),
+    livianrepliikit: livianRepliikkiKokoelma(hae, kaupunkiIdt),
     maat: maaKokoelma(ns, hae),
+    karttamerkit: karttamerkkiKokoelma(),
+    // Natiivisepän tarve 23.9.2026 ilta: sumu (PaljastaMaa) ja maatila.
+    maastonimet: maastonimiKokoelma(),
+    maarajat: taulukko('assets/data/maapolygonit.json (Natural Earth 10m admin-0)',
+      `Maarajat asteina (id = ISO3, iso2, bbox [w, s, e, n], renkaat [[[lon, lat], …]]), harvennettu `
+        + `${MAARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla; sama geometria kuin laattoihin poltettu rajaviiva. `
+        + 'Saaria ja reikiä ei eroteltu: täytä parillisuussäännöllä (even-odd). Päivämäärärajan ylittävän maan '
+        + 'rengas voi jatkua yli ±180° (sauma purettu), joten bbox voi kattaa lähes koko pituusasteen (USA, RUS, FJI).',
+      {}, maarajaRivit(new URL('../../assets/data/maapolygonit.json', import.meta.url))),
   };
+  // Natiivisepän B17 (23.9.2026): maakuntien värjäys pallolla.
+  const maakunnat = lueMaakuntarajat();
+  kokoelmat.maakuntarajat = taulukko(`js/pallomaakunnat.js ämpäriaineisto ${maakunnat.versio ?? ''} (Natural Earth 10m admin-1)`.trim(),
+    'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
+      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
+      + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
+      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL.',
+    {}, maakunnat.alueet);
+  kokoelmat.karttavalot = karttavaloKokoelma(hae, kokoelmat.kaupungit.alkiot);
+  rikastaNippu4(kokoelmat, ns);
+  // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
+  rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
+  // Kätkökuva (Pelikoodari 23.9.2026): web näyttää sen kaaren aarretekstin
+  // yhteydessä (assets/kohtaamiset/kohtaaminen-katko.jpg). Ämpärissä skeemasta 1.12.
+  kokoelmat.saannot.alkiot.push({
+    id: 'KATKOKUVA', moduuli: 'assets/kohtaamiset/kohtaaminen-katko.jpg',
+    arvo: mediaOsoite('assets/kohtaamiset/kohtaaminen-katko.jpg'),
+  });
+  // Livian astronauttikypärä (Natiivi-UI 23.9.2026): ainoa Livian rasteri,
+  // js/livia-astronautti.js LIVIAN_ASTRONAUTTI_KYPARA.
+  kokoelmat.saannot.alkiot.push({
+    id: 'LIVIAN_ASTRONAUTTI_KYPARA', moduuli: 'js/livia-astronautti.js',
+    arvo: mediaOsoite('assets/livia/livia-astronauttikypara-2x.png'),
+  });
+  kokoelmat.linssiaineisto.alkiot.push({
+    id: 'linssiluennat', linssi: null, laji: 'luennat',
+    kuvaus: 'Linssien luennat: juuri, pysäkit (runko = luennanRunko, url = luennanOsoite) ja kaaren puheet '
+      + '(esittely ?v=tiiviste, välinäytökset, loppu). Musiikki: aanitaulut siirtyma:keksinnot ja siirtyma:ihmisen-matka.',
+    data: linssiluennat(hae),
+  });
+  return kokoelmat;
 }
