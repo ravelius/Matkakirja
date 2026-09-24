@@ -4559,3 +4559,7 @@ Postivahti lähettää aloitusviestin kun sessio on tyhjä (list_events = 0 / ge
 ## JULKAISIJA: PITO PURETTU, 1.x-OSOITIN v68 (1.35, d90d09c0f, AJO 36031628177), JONO JATKUU (24.9.2026 klo 20.05)
 
 Luovutuksen jonon kohta 1 tehty.
+
+## OMISTAJA klo 20.0x (SITOVA): RADIOPANEELIN PUNAINEN NAPPI KESKITETAAN LCD:N OIKEALLE JAAVAAN TYHJAAN TILAAN (iPADILLA OLI SIVUSSA) (24.9.2026 klo 20.05)
+
+Linssiseppä korjaa mitat ja uuden havainnekuvan; raportoi uudelle Fable-sessiolle.
