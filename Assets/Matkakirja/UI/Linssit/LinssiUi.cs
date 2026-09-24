@@ -155,6 +155,7 @@ namespace Matkakirja.Natiivi
             bool paalla = linssi != null;
             string id = linssi?.Tiedot?.Id;
             ui.Kartuscha.NaytaSallittu(!paalla);
+            ui.Nostot.NaytaSallittu(!paalla);
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!paalla);
             ui.Matkakirja.NaytaSallittu(!paalla);

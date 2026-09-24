@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
         public static readonly Vector2Int Viiteruutu = new Vector2Int(393, 852);
 
         public const int Tilarivi = 15, Matkavalinta = 20, Pelidialogit = 30, Valikot = 40, Traileri = 45;
+        /// <summary>Nostomerkit kartalla (NostotKartalla): nimikortin (10) yllä, tilarivin (15) alla.</summary>
+        public const int Nostot = 12;
 
         static UiKerros instanssi;
 

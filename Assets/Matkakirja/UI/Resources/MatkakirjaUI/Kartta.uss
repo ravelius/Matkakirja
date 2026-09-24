@@ -1560,3 +1560,66 @@
     color: rgba(74, 52, 33, 0.75);
     opacity: 0.72;
 }
+
+
+/* --- nostomerkit kartalla (NostotKartalla; web .pallolauta-nosto, nostosym-*) ------------------- */
+
+.mk-nostot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Merkin ankkuri on symbolin keskipiste (translate = ruutupiste); nimiö oikealle. */
+.mk-nosto-merkki {
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+}
+
+.mk-nosto-merkki__symboli {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.mk-nosto-merkki__symboli--kuva {
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-nosto-merkki__kuvio {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.mk-nosto-merkki__symboli--piste .mk-nosto-merkki__kuvio {
+    left: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+}
+
+.mk-nosto-merkki__rengas {
+    color: #4b3a1c;
+}
+
+.mk-nosto-merkki__nimio {
+    margin-left: 2px;
+    font-size: 11px;
+    white-space: nowrap;
+    color: rgba(58, 40, 25, 0.9);
+    text-shadow: 0 0 3px rgb(244, 232, 205);
+}
+
+.mk-nosto-merkki--tarkea .mk-nosto-merkki__nimio {
+    font-size: 13.5px;
+}
