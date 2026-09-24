@@ -4051,3 +4051,7 @@ Lista: E1 kaupunkikortin Sulje-nappi, E2 Mannerlento-rivi kortissa, E3 nostokort
 ## NATIIVISEPPA: BUILD 9 TEKNINEN OSA fe35b7e (KONE TERAVA, HUNTU + ZOOMIHAIVYTYS, MAAMERKIT-PAKETTI a6ae948, ESILATAUS fee30eb); HUNTUTESTI Z5+ PASS (24.9.2026 klo 15.29)
 
 Espanja 7000 km → z5 iPad-simissä: ei vaaleita suorakulmioita, huntu häivyttyy tasaisesti (proto-3d/lokit/b9-huntu-z5/); Z3–Z4 ämpärissä mutta natiivi ei käytä (komento 'vari alin 3'). Fable: build 9 odottaa siirrot-kartalle 4d3fe7a ja iphone-island bf7af3d kuvapareineen (WEB ON MALLI); build 8 -vienti 35996178210 yhä käynnissä; takaraja klo 17.00, sitten Fable päättää. Omistajalle: konsolinvaihtoa ei tarvita (-nographics).
+
+## PELIKOODARI: NOPPA-KARTALLE 4d3fe7a — WEB-KUVAT JA MITAT MERGE-PYYNNOSSA; POLLON VALINTAVIHJE EI NAY WEBISSA iPHONELLA → WEB-BUGI, KORJATAAN WEBIIN (24.9.2026 klo 15.29)
+
+Web-kuvat tuotannosta (kartta, noppa, siirtovaihe, valintavihje × iPhone/iPad, proto-3d/lokit/noppa-kartalle-web-20260924/) ja mitat webin koodista merge-pyynnössä; Laitetestaaja ottaa natiivikuvat testihaarasta, sitten merge. Kysymys: js/pollo.js naytaVihje palaa kun pöllönappi on piilossa (iPhone 393 px), joten 15 s:n vihje ei näy. Fable: vahinkokytkentä, web-bugi — Pelikoodari korjaa webiin (vihje omana kuplana), natiivi pitää vihjeen samalla kestolla ja tekstillä; sääntö: web on malli tarkoitetulta käytökseltään, ei bugeiltaan (kuten Huippuvuoret).
