@@ -72,3 +72,7 @@ Moottori on minun (masterissa 95dd4d9):
 
 Fablen järjestys: aikajanalinssit loppuun (kohta 1), sitten linssit yksi kerrallaan samalla kaavalla
 (web on oletus, iPad-kuva todisteena): topografia, vesistöt, vertailu/maatiedot, radio UI:n kanssa.
+
+## Tila 24.9. klo 07 (tauko, Fable)
+
+Kesken 1–4 tehty: aikajanalinssit = web iPadilla (tummennus, valot, reikä, pistekerroin, X-toive), tutkimusvaihe + muisti + ihmisen tiedeliite + `ihminen tutkimus` masterissa; topografia ja vesistöt = web (vesistöt: natiivin yhtenäinen uoma, Fablen päätös); vertailu/maatiedot = web, MaaKartta korjattu (7aca1d5, varmistuskuvat lokit/maat-20260924-7aca1d5 katsomatta); radio: web- ja iPad-kuvat otettu (kontakti-web2/kontakti-radio-*, maat-20260924-7aca1d5/kontakti-radio-*), vertailu aloittamatta (iPadin kaksi radiokuvaa samankokoisia → tarkista). Webin vertailukuvat: Linssit-testit/kontakti-web.mjs (KIINTEA=topografia|vesistot|maat|radio).
