@@ -16,6 +16,9 @@
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
 //   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
+//   ui peitteet [osuus]                       lokiin näkyvät UI-elementit, jotka peittävät vähintään osuuden (oletus 0,5)
+//                                             ruudusta ja piirtävät jotain (tausta, kuva, reuna): kerros, luokat, tehollinen
+//                                             läpinäkyvyys, taustaväri ja kuva (koko ruudun sävyn etsintä)
 //   ui tyohuone raamattu | kehittajalehti | tilanne [sivu] | poiminnat | musiikki | grafiikka | lukijoilta | tilastot
 //                                             KOKEET-työhuone kehittäjän liitteinä
 //                                             (vain kehittäjätilassa; aineisto sisältöpaketin tyohuone-moduuleista)
@@ -239,6 +242,47 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Koko ruudun sävyn etsintä (Linssisepän sininen lisä 24.9.): jokainen näkyvä elementti, joka peittää vähintään
+        /// osuuden kerroksensa juuresta ja piirtää taustaa, kuvaa tai reunaa, tehollisen läpinäkyvyyden kanssa.
+        /// </summary>
+        void Peitteet(float osuus)
+        {
+            int n = 0;
+            foreach (var (kerros, juuri) in UiKerros.Hae().Juuret)
+            {
+                if (juuri == null) continue;
+                var koko = juuri.worldBound;
+                float ala = Mathf.Max(1f, koko.width * koko.height);
+                void Kay(VisualElement e, float opasiteetti)
+                {
+                    var rs = e.resolvedStyle;
+                    if (rs.display == DisplayStyle.None || rs.visibility == Visibility.Hidden) return;
+                    opasiteetti *= rs.opacity;
+                    if (opasiteetti <= 0.001f) return;
+                    var r = e.worldBound;
+                    var leikkaus = Rect.MinMaxRect(Mathf.Max(r.xMin, koko.xMin), Mathf.Max(r.yMin, koko.yMin), Mathf.Min(r.xMax, koko.xMax), Mathf.Min(r.yMax, koko.yMax));
+                    float peitto = leikkaus.width > 0 && leikkaus.height > 0 ? leikkaus.width * leikkaus.height / ala : 0;
+                    var tausta = rs.backgroundColor;
+                    var kuva = rs.backgroundImage;
+                    bool kuvallinen = kuva.texture != null || kuva.sprite != null || kuva.renderTexture != null || kuva.vectorImage != null;
+                    bool reuna = rs.borderTopWidth + rs.borderBottomWidth + rs.borderLeftWidth + rs.borderRightWidth > 0 && rs.borderTopColor.a > 0;
+                    if (peitto >= osuus && (tausta.a > 0 || kuvallinen || reuna))
+                    {
+                        n++;
+                        string nimi = kuvallinen ? (kuva.texture != null ? kuva.texture.name : kuva.sprite != null ? kuva.sprite.name : kuva.renderTexture != null ? kuva.renderTexture.name : "vektori") : "-";
+                        Kirjaa(string.Format(CultureInfo.InvariantCulture,
+                            "peite kerros {0} [{1}] {2}: peitto {3:0.00}, opasiteetti {4:0.000}, tausta ({5:0.000}, {6:0.000}, {7:0.000}, {8:0.000}), kuva {9}, tint ({10:0.00}, {11:0.00}, {12:0.00}, {13:0.00})",
+                            kerros, string.Join(".", e.GetClasses()), e.name, peitto, opasiteetti, tausta.r, tausta.g, tausta.b, tausta.a, nimi,
+                            rs.unityBackgroundImageTintColor.r, rs.unityBackgroundImageTintColor.g, rs.unityBackgroundImageTintColor.b, rs.unityBackgroundImageTintColor.a));
+                    }
+                    foreach (var lapsi in e.hierarchy.Children()) Kay(lapsi, opasiteetti);
+                }
+                Kay(juuri, 1f);
+            }
+            Kirjaa("peitteet: " + n + " elementtiä (osuus ≥ " + osuus.ToString("0.00", CultureInfo.InvariantCulture) + ")");
+        }
+
         void Kirjaa(string teksti)
         {
             Debug.Log("MATKAKIRJA ui-komento: " + teksti);
@@ -377,6 +421,9 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "peitteet":
+                    Peitteet(float.TryParse(loput, NumberStyles.Float, CultureInfo.InvariantCulture, out var po) ? po : 0.5f);
+                    return null;
                 case "tyohuone":
                 {
                     var tk = loput.Split(new[] { ' ' }, 2);
