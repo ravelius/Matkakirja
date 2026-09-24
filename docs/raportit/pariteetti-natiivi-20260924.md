@@ -138,3 +138,47 @@ natiiviin uudelleen:
 | 35 | Maalehti: aihesivu 1 | **KORJATTU (Natiivi-UI, natiivi-ui/iphone-island, build 8 -jonossa).** Juurisyy ei ollut väärä kenttä vaan tarkoituksellinen linjaus: web piilottaa selitteen kokonaan aihesivujen nostokuvista (maalehti.js "KUVATEKSTI POIS AIHESIVUILTA", omistaja 23.8.), näyttää vain lähderivin — selite näkyy vasta suurennoksessa. Natiivi näytti aiemmin lyhyen selitteen + lähteen; korjattu vastaamaan webiä. Sama koskee kaupunkilehden aihesivuja (esim. Ateenan karyatidit). |
 
 Ilmoitettu Pelikoodarille (24.9. klo 14.1x).
+
+## Ei webissä (24.9. klo 15.3x)
+
+Natiivi-UI:n läpikäynti (Fablen erä, omistajan "kaikki kuten webissä"): natiivin elementit ja käytökset, joita webissä
+ei ole. Tarkistettu natiivin koodista (proto natiivi-ui/iphone-island) ja webin koodista (origin/main) rivi riviltä;
+hyväksytyt Raamattu-poikkeamat jätetty pois. Webin vastine = mitä natiivin pitäisi tehdä (WEB ON MALLI, MITATTUNA).
+Ei poistettu mitään — Fable päättää rivikohtaisesti.
+
+| # | Natiivissa (tiedosto:rivi, proto UI/) | Webissä (origin/main) ja mitat | Varmuus |
+|---|---|---|---|
+| E1 | Kaupunkikortissa aina "Sulje"-nappi alareunassa (KaupunkiKortti.cs:239–240) | Kaupunkiliuskassa ei sulkunappia; sulku merkin uudelleennapautuksella tai kartalta (js/pallolauta/kaupunkiliuska.js:213–260 rivilajit lehti/nahtavyydet/opas/liiku/kategoria/kohde/kelaus; js/ui.js:2368 "Sulje-nappi poistui") | varma |
+| E2 | Kaupunkikortissa "Mannerlento"-rivi (KaupunkiKortti.cs:236) | Mannerlento vain matkavalikossa (js/ui.js renderTravelChoice ~11286–11294), ei liuskassa | todennäköinen |
+| E3 | Nostokortti (kohde/lisäkaupunki) aina ruudun keskellä, ei raahattava (Nostokortti.cs:69–86, oma kommentti r. 32) | Ankkuroituu napautuspisteen viereen (js/kaupunkinosto.js:385–388 asemoiKaupunkipopup, avaaKortti r. 586; js/fokuskohteet.js:6464) ja kohdekortti on raahattava (fokuskohteet.js:6215 raahausTaiSulku) | varma |
+| E4 | Sulkumerkki × (U+00D7): Nostokortti.cs:80, Karttaselite.cs:59 | ✕ (U+2715): js/fokusnosto.js:1128, fokuskohteet.js:6563, kaupunkinosto.js:602, karttaselite.js:279 | varma |
+| E5 | Matkavalinta on modaali: koko ruudun himmennys rgba(14,9,4,.35), otsikkona kohdekaupunki, alaotsikko "raha · päivä · aika", "Peruuta"-tekstinappi, kaksirivinen rivi nimi + selite (Matkavalinta.cs:85–146; PeliOhjain.cs:1120–1122) | Napit suoraan toimintoriviin (js/ui.js renderTravelChoice 11289–11460) ilman taustaa ja otsikkoa (11312–11317 "kartan päälle ei kirjoiteta mitään"), paluu ikoninapilla iconButton('nuoli','Takaisin') (11443), rivi yhtenä tekstinä "Pariisi (50 p)" (ikoniTekstiNappi 12432–12437) | varma (1–2), melko varma (3–5) |
+| E6 | Päävalikossa rivi "tekijätiedot ja lähteet" (Paavalikko.cs:116; iPadilla näkyy, iPhonen Muut-paneelissa omistajan listan mukaan) | Hampurilaisvalikossa vain "uusi peli" ja "ehdota sisältöä" (index.html:469–475); tekijätiedot avaa logo (js/ui.js:2359–2361) | varma |
+| E7 | Versiorivillä "· sisältö vN" (Paavalikko.cs:213) | Versiokulma vain "vNNN" / "vNNN · kehittäjä" (js/main.js:1327–1332) | melko varma (natiivin erillinen sisältöpaketti) |
+| E8 | Kertojan kytkeminen päälle asetuksista käynnistää heti ruudulla olevan matkakirjamerkinnän luennan (Pulu/Saapumisesitys.cs:90–99) | Vain kortin oma kaiutinnappi käynnistää (js/ui.js:2762–2789); valikon kytkin ei (js/main.js:608–611 kaannaKertoja) | melko varma |
+| E9 | "Lue lisää aiheesta ›" nuolella ja samalla linkkityylillä kuin ulkoiset linkit (Lehti/Lehtinakyma.cs:778, myös 783 ja 810) | Sisäinen .wiki-btn ilman nuolta (pisteviiva-alleviivaus, css/styles.css:10267–10291); ulkoisissa .nosto-linkki::after ' ↗' (10298–10313) | varma |
+| E10 | Karttanostojen ryhmämerkissä kuvake/kuva (NostotKartalla.cs:246–318) | Ryhmämerkki pelkkä väritetty levy opacity .5 + rengas #4b3a1c 1,1 px, ei sisäglyfiä (css/styles.css:27065–27067; js/pallolauta/aihemerkit.js:817–819) | varma |
+| E11 | Ryhmämerkin nimiö näkyy kaikilla zoomeilla (NostotKartalla.cs:108) | Vain lähizoomissa, muuten pelkkä piste (js/pallolauta/nostot.js:1013–1019 aihenostonNimioNakyy → lahizoomiAuki) | varma |
+| E12 | Pulun chatin Wikipedia-kuvan suurennoksessa artikkelin koko tiivistelmä (Pulu/PuluChat.cs:547–550 → Kuvasuurennos.cs:86) | Kuvatekstinä vain artikkelin otsikko + lähdelinkki "Kuva: Wikipedia — {otsikko}" (js/pollo.js avaaWikiKuva 5341–5385) | varma |
+| E13 | Matkakirjakortin kylkikuva avaa selattavan Kuvasuurennoksen ‹ › (Pulu/Matkakirjakortti.cs:405–424) | Oma postikorttipino: vinot kortit, laskuri "i/n", napautus vaihtaa, ohi sulkee (js/ui.js avaaPostikortti 13020–13151, 2688–2727) | melko varma |
+| E14 | Lipun historiallinen versio avaa kokoruudun suurennoksen nuolin ja laskurilla (Lippuikkuna.cs:64) | Versio tarkentuu paikallaan kortissa (.lippu-versio.tarkennettu, muu kortti sumenee), ei selausta (js/liput.js tarkenna ~190–260) | varma |
+| E15 | Lippuikkunan avaus soittaa paperiäänen (Lippuikkuna.cs:26) | Ei ääntä (js/liput.js avaaLippuikkuna) | todennäköinen |
+| E16 | Nähtävyysarkin kaiutin aina näkyvissä (Nahtavyysarkki.cs:82–83) | Piilossa, jos luettavaa < 80 merkkiä (js/lukija.js:157 LUETTAVAN_VAHIMMAIS, 2086–2090) | varma |
+| E17 | Paljastuskortilla vara-ikoni (laattaikoni), kun kuva puuttuu (Paljastus.cs:270–276) | Kuva-alue poistuu, ei korvaavaa ikonia (js/ui.js rakennaPaljastus 19915–19930; js/media.js:1046–1058) | varma |
+| E18 | Vahvistusdialogi (Uusi peli) peruuntuu taustan napautuksesta (Vahvistus.cs:25) | #nollaa-dialog sulkeutuu vain napeista tai Escistä (js/main.js:1464–1467) | varma |
+| E19 | Esikuuntelun epäonnistuminen tilarivin ilmoituksena "Näytettä ei löytynyt" (Lehti/Mediarivi.cs:123) | Napin teksti "Ei yhteyttä" 2,5 s (js/ui.js:16360) | varma |
+| E20 | Pienet: radionapin tooltip pidempi kuin webin title (Mediarivi.cs:192 vs js/pallolauta/maapaneeli.js:981–982); matkakirjan kaiuttimen tooltip kiinteä "Kertoja" (Matkakirjakortti.cs:128 vs js/ui.js:13187–13200 tilan mukaan) | tooltipit eivät näy kosketuksella | matala merkitys |
+
+Hyväksyttyjä tai alustan pakottamia (ei ehdoteta poistettavaksi): aloitusportin juliste, johdantolause ja "Laita äänet päälle"
+-nappi (omistaja 24.9. klo 12.2x: portti natiivin oma); radion linkkitila "Avaa aseman sivu" ja estoilmoitus (hybridimalli 23.9.);
+sähkelomakkeen valitsimen "Peru" ja Lukijoilta-sivun kentät (web käyttää selaimen select/prompt-ikkunoita); Lukijoilta "Kopioi
+koodi" (pro-tuottajan lisäys, tarkista onko kehittäjätilassa).
+
+Fablen epäilyt: aloitusvalinnan kelluvat ikoninapit (rivi 2) poistettu jo (3374abe: selite- ja linssinappi piiloon aloituksen
+ajaksi); laukun harmaat ei-löydetyt linssit (rivi 32) — tarkistuksessa vastasivat webin varusteruudukon lukkopaikkoja, uusittava
+kuvaparilla samasta tilasta; kortin × vs webin nappi = E1, E3, E4.
+
+Päinvastaiset (natiivista puuttuu, webissä on): vertailukortin pieni maakartta (js/vertailu.js ~543); lippuikkunan "Vaakunat ja
+tunnukset" (js/liput.js tiedot.tunnukset); karttaselitteen peukalolevyn raahaus, näppäimet ja suurentava linssi
+(js/karttaselite-levy.js); kohdekartan + / − -zoomnapit (kartta-vipu-nappi); pulun Wikipedia-kuvan lähdelinkki;
+Mitä uutta -näkymän Päivitä-nappi (natiivissa tarkoituksella pois, App Store).
