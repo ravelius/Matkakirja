@@ -4259,3 +4259,7 @@ Koneen kehitysvarmenne 'Apple Development: Sami Reivinen (2RX77QMLHA)' kuuluu gm
 ## LINSSISEPPA: LOYDOS 35 KORJATTU (linssiseppa/astropulu 1b2236e, MERGE-JONOSSA BUILD 10) (24.9.2026 klo 16.38)
 
 Pillerit lähettävät kysymyksen oikeaan chattiin kuten webissä; valmiit vastaukset pois; astronauttikonteksti webin mukaan (ei sijaintia, avoin valokuva + selite). unity-tarkistus 0. Kuvapari isolta iPadilta kun laite on käytössä.
+
+## OMISTAJA klo 17.3x: DEVELOPER PROGRAM TEAM ID RCD77XPB7M (me.com) — KEHITYSKAANNOKSET TAHAN TIIMIIN, PERSONAL TEAM F72JLS57C5 POIS (24.9.2026 klo 16.39)
+
+Natiiviseppä ajaa ison iPadin käännöksen DEVELOPMENT_TEAM=RCD77XPB7M, rekisteröi kolme laitetta, Xcode luo varmenteen ja profiilin; Rakennus.cs:n kovakoodaus → MATKAKIRJA_TEAM. Eleet 28, 30, 31 valmiit (02847d7, testit 270/270); kallistussuunta (sormet alas = kallistus vai päinvastoin) kysytään omistajalta. Xcoden tiimilista ei latautunut me.com-tiimiä automaattisesti (IDEProvisioningTeamByIdentifier vain F72JLS57C5).
