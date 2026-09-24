@@ -40,11 +40,13 @@
 #endif
 
 // ---- VU-mittari: MTAudioProcessingTap AVPlayerItemin audioMixissä ----------------------------------
+// PreEffects: mittaus ennen AVPlayerin voimakkuutta (PostEffects mittasi vaimennetun äänen, Linssiseppä 24.9.).
 // Tappi saa dekoodatut näytteet äänisäikeessä (yleensä Float32, ei lomitettu). Taso lasketaan ~30 ms
 // ikkunoista, ja viimeisin ikkuna kirjoitetaan atomisiin muuttujiin; Unity lukee pääsäikeessä.
 
 static std::atomic<float> vuRms(0.f), vuHuippu(0.f);
-static std::atomic<int> vuTila(0);      // 0 = ei vielä, 1 = tappi käytössä, -1 = ei tuettu (HLS)
+static std::atomic<int> vuTila(0);
+static std::atomic<long> vuKutsut(0);   // TapProcess-kutsut (diagnoosi: kulkeeko ääni tapin läpi)      // 0 = ei vielä, 1 = tappi käytössä, -1 = ei tuettu (HLS)
 static AudioStreamBasicDescription vuMuoto;
 
 static void TapInit(MTAudioProcessingTapRef tap, void* tieto, void** tallennus) { *tallennus = tieto; }
@@ -59,6 +61,7 @@ static void TapProcess(MTAudioProcessingTapRef tap, CMItemCount kehyksia, MTAudi
                        AudioBufferList* puskurit, CMItemCount* kehyksiaUlos, MTAudioProcessingTapFlags* liputUlos)
 {
     if (MTAudioProcessingTapGetSourceAudio(tap, kehyksia, puskurit, liputUlos, NULL, kehyksiaUlos) != noErr) return;
+    vuKutsut.fetch_add(1);
     bool liuku = (vuMuoto.mFormatFlags & kAudioFormatFlagIsFloat) != 0;
     bool kokonais16 = !liuku && vuMuoto.mBitsPerChannel == 16;
     if (!liuku && !kokonais16) return;
@@ -179,6 +182,7 @@ static float VuAsteikko(float lineaarinen)
 - (void)tappi:(AVPlayerItem*)kohde
 {
     vuTila.store(0);
+    vuKutsut.store(0);
     vuRms.store(0.f);
     vuHuippu.store(0.f);
     self.nayttoTaso = 0;
@@ -213,7 +217,7 @@ static float VuAsteikko(float lineaarinen)
     kutsut.unprepare = TapUnprepare;
     kutsut.process = TapProcess;
     MTAudioProcessingTapRef tap = NULL;
-    OSStatus tulos = MTAudioProcessingTapCreate(kCFAllocatorDefault, &kutsut, kMTAudioProcessingTapCreationFlag_PostEffects, &tap);
+    OSStatus tulos = MTAudioProcessingTapCreate(kCFAllocatorDefault, &kutsut, kMTAudioProcessingTapCreationFlag_PreEffects, &tap);
     if (tulos != noErr || tap == NULL) { vuTila.store(-1); self.vuSyy = [NSString stringWithFormat:@"tap-virhe %d", (int)tulos]; return; }
     AVMutableAudioMixInputParameters* parametrit = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:raita];
     parametrit.audioTapProcessor = tap;
@@ -272,7 +276,10 @@ static float VuAsteikko(float lineaarinen)
         s.error.localizedDescription ?: @"-", k.error.localizedDescription ?: @"-",
         viime.errorDomain ?: @"-", (long)viime.errorStatusCode, viime.errorComment ?: @"-",
         istunto.category, istunto.isOtherAudioPlaying ? @"muu ääni soi" : @"",
-        istunto.currentRoute.outputs.firstObject.portType ?: @"ei ulostuloa", vuTila.load(), self.vuSyy ?: @"-"];
+        istunto.currentRoute.outputs.firstObject.portType ?: @"ei ulostuloa", vuTila.load(),
+        [NSString stringWithFormat:@"%@, tappikutsuja %ld, rms %.4f, muoto %s %u bit %.0f Hz", self.vuSyy ?: @"-",
+            vuKutsut.load(), vuRms.load(), (vuMuoto.mFormatFlags & kAudioFormatFlagIsFloat) ? "float" : "int",
+            (unsigned)vuMuoto.mBitsPerChannel, vuMuoto.mSampleRate]];
 }
 
 - (int)tila
