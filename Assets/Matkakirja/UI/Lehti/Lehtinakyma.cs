@@ -500,6 +500,7 @@ namespace Matkakirja.Natiivi
             // ensimmäisessä, **lihavoinnit** <strong> (piirraLeipateksti; mitattu 24.9.).
             // Sisältöpaketti kantaa introt kaupungin tietueessa (kaupungit.json intro.teksti, Siirtoseppä).
             string intro = UiSisalto.Kaupunki(lehti.Omistaja)?.Intro;
+            // Web piirraLeipateksti → jaaKappaleiksi (≥ 3 virkettä ilman tyhjää riviä → kaksi kappaletta).
             if (!string.IsNullOrEmpty(intro)) Leipa(s, intro, "mk-lehti__esittely", 1.6f, 1f, true, Kirjasin.Kone);
             else Rivitetty(LehdenVakioesittely, "mk-lehti__esittely", 1.6f, s, Kirjasin.Kone);
             var rivi = a.EnnenNyt.Count >= 2 ? a.EnnenNyt.Take(2).ToList()
@@ -785,7 +786,9 @@ namespace Matkakirja.Natiivi
             }
             // Web .teksti (mitattu 24.9.): Iowan 16,32 px, #211d18, riviväli 26,44 (1,62 em), kappaleväli 8 px;
             // sivun ensimmäisellä nostolla anfangi (.teksti.ensimmainen.anfangi) ja 11,2 px:n väli.
-            if (!string.IsNullOrEmpty(n.Teksti)) Leipa(lohko, n.Teksti, "mk-lehti__teksti", 1.62f, 0.49f, ensimmainen);
+            // Web piirraLeipa: jaaKappaleiksi ja ensimmäisen kappaleen neljä ensimmäistä sanaa lihavoituna
+            // (.wiki-nosto .leipa-aloitus 700, rgb(52, 37, 22); LEIPAN_ALOITUS_SANOJA 4) jokaisessa nostossa.
+            if (!string.IsNullOrEmpty(n.Teksti)) Leipa(lohko, n.Teksti, "mk-lehti__teksti", 1.62f, 0.49f, ensimmainen, aloitus: true);
             if (n.Lisa != null) { try { n.Lisa(lohko); } catch (Exception e) { Debug.LogException(e); } }
             var loppu = Rakenne.El("mk-lehti__nostoloppu", lohko, PickingMode.Ignore);
             if (!string.IsNullOrEmpty(n.Wiki))
@@ -1109,7 +1112,8 @@ namespace Matkakirja.Natiivi
                     if (paikka.panel == null) return;
                     // Web #arrival-maa-intro: 1,02rem, riviväli 1,62, pre-line (\n\n = tyhjä rivi väliin), anfangi.
                     string intro = WikiArtikkelit.Intro(nimi);
-                    if (!string.IsNullOrEmpty(intro)) Leipa(paikka, intro, "mk-lehti__esittely", 1.62f, 1.62f, true);
+                    // pre-line: vain kirjoittajan tyhjät rivit, ei automaattista puolitusta.
+                    if (!string.IsNullOrEmpty(intro)) Leipa(paikka, intro, "mk-lehti__esittely", 1.62f, 1.62f, true, jaa: false);
                 });
             }
             if (nosto != null) Nosto(s, nosto);
@@ -1291,13 +1295,14 @@ namespace Matkakirja.Natiivi
         /// kapeampaan palstaan ja loput täysleveänä alle. Ääneenluku lukee piilotetun kokonaisen tekstin.
         /// </summary>
         static void Leipa(VisualElement isa, string teksti, string luokka, float riviEm, float valiEm, bool anfangi,
-            Kirjasin kirjasin = Kirjasin.Luku)
+            Kirjasin kirjasin = Kirjasin.Luku, bool jaa = true, bool aloitus = false)
         {
             var lohko = Rakenne.El("mk-lehti__leipa", isa, PickingMode.Ignore);
             var luettava = Rakenne.Teksti(teksti.Replace("**", ""), "mk-lehti__luettava", lohko);
             luettava.enableRichText = false;
             luettava.style.display = DisplayStyle.None;
-            var kappaleet = Kappaleet(teksti).ToList();
+            var kappaleet = jaa ? Kappalejako.Jaa(teksti) : Kappaleet(teksti).ToList();
+            if (aloitus && kappaleet.Count > 0) kappaleet[0] = Aloitus(kappaleet[0], anfangi);
             for (int i = 0; i < kappaleet.Count; i++)
             {
                 VisualElement kpl = anfangi && i == 0 ? AnfangiKappale(lohko, kappaleet[i], luokka, riviEm, kirjasin)
@@ -1319,8 +1324,43 @@ namespace Matkakirja.Natiivi
             "<line-height=" + riviEm.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + "em>" + Lihavoinnit(teksti);
 
         /// <summary>Web piirraLeipateksti: **x** → &lt;strong&gt;; muu teksti sellaisenaan (noparse).</summary>
+        /// <summary>Lihavoidun aloituksen merkki (Aloitus → Lihavoinnit): web strong.leipa-aloitus.</summary>
+        const char AloitusMerkki = '\u0001';
+        const int AloitusSanoja = 4;
+
+        /// <summary>
+        /// Web piirraLeipa: neljä ensimmäistä sanaa lihavoituna. Anfangin kanssa merkki alkaa ensimmäisen kirjaimen
+        /// jälkeen, koska AnfangiKappale irrottaa kirjaimen omaksi elementikseen.
+        /// </summary>
+        static string Aloitus(string kappale, bool anfangi)
+        {
+            var sanat = kappale.Split(' ');
+            int n = Mathf.Min(AloitusSanoja, sanat.Length);
+            string alku = string.Join(" ", sanat, 0, n), loppu = string.Join(" ", sanat, n, sanat.Length - n);
+            int m = 0;
+            if (anfangi)
+            {
+                while (m < alku.Length && !char.IsLetterOrDigit(alku[m])) m++;
+                m = Mathf.Min(alku.Length, m + 1);
+            }
+            return alku.Substring(0, m) + AloitusMerkki + alku.Substring(m) + AloitusMerkki + (loppu.Length > 0 ? " " + loppu : "");
+        }
+
         static string Lihavoinnit(string teksti)
         {
+            // Aloitus ensin: web .wiki-nosto .leipa-aloitus 700, rgb(52, 37, 22).
+            if (teksti.IndexOf(AloitusMerkki) >= 0)
+            {
+                var osat = teksti.Split(AloitusMerkki);
+                var s = new System.Text.StringBuilder();
+                for (int i = 0; i < osat.Length; i++)
+                {
+                    if (osat[i].Length == 0) continue;
+                    if (i % 2 == 1) s.Append("<b><color=#342516>").Append(Lihavoinnit(osat[i])).Append("</color></b>");
+                    else s.Append(Lihavoinnit(osat[i]));
+                }
+                return s.ToString();
+            }
             var palat = teksti.Split(new[] { "**" }, System.StringSplitOptions.None);
             var sb = new System.Text.StringBuilder();
             for (int i = 0; i < palat.Length; i++)
@@ -1337,7 +1377,11 @@ namespace Matkakirja.Natiivi
         {
             int n = 0;
             for (int i = alku.IndexOf("**", System.StringComparison.Ordinal); i >= 0; i = alku.IndexOf("**", i + 2, System.StringComparison.Ordinal)) n++;
-            return n % 2 == 1 && loppu.Length > 0 ? (alku + "**", "**" + loppu) : (alku, loppu);
+            if (n % 2 == 1 && loppu.Length > 0) { alku += "**"; loppu = "**" + loppu; }
+            // Sama lihavoidulle aloitukselle.
+            int a = alku.Count(c => c == AloitusMerkki);
+            if (a % 2 == 1 && loppu.Length > 0) { alku += AloitusMerkki; loppu = AloitusMerkki + loppu; }
+            return (alku, loppu);
         }
 
         static Label Rivitetty(string teksti, string luokka, float riviEm, VisualElement isa, Kirjasin kirjasin = Kirjasin.Luku)
