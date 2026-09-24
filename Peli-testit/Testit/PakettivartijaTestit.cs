@@ -138,10 +138,17 @@ namespace Matkakirja.Peli.Testit
             var teksti = Muokkaa("kaupungit", l => l[0]["lat"] = "48.85");
             var t = Aja(Paikallinen.Korvaa("kaupungit", teksti), "kaupungit");
             OletaVirhe(t, "lat: odotettu luku, saatu teksti");
+            // Sisäkkäinen tyyppivirhe: päätason id-listaan (skeema ≥ 1.26) luku, vanhassa paketissa raakaan {id}.
+            bool paataso = false;
             var sisakkainen = Muokkaa("fokusvirrat", l =>
-                ((List<object>)((Dictionary<string, object>)l.First(o => ((Dictionary<string, object>)o["data"]).ContainsKey("lehtitehtavat"))["data"])["lehtitehtavat"])
-                    .Add(new Dictionary<string, object> { ["id"] = 7.0 }));
-            OletaVirhe(Aja(Paikallinen.Korvaa("fokusvirrat", sisakkainen), "fokusvirrat"), "data.lehtitehtavat.*.id: odotettu teksti, saatu luku");
+            {
+                var o = l.FirstOrDefault(x => x.ContainsKey("lehtitehtavat"));
+                if (o != null) { paataso = true; ((List<object>)o["lehtitehtavat"]).Add(7.0); return; }
+                ((List<object>)((Dictionary<string, object>)l.First(x => x["data"] is Dictionary<string, object> d && d.ContainsKey("lehtitehtavat"))["data"])["lehtitehtavat"])
+                    .Add(new Dictionary<string, object> { ["id"] = 7.0 });
+            });
+            OletaVirhe(Aja(Paikallinen.Korvaa("fokusvirrat", sisakkainen), "fokusvirrat"),
+                paataso ? "lehtitehtavat.*: odotettu teksti, saatu luku" : "data.lehtitehtavat.*.id: odotettu teksti, saatu luku");
         }
 
         [Testi] static void KaksoisavainJaVierasKaupunkiOvatPunaisia()
