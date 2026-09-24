@@ -4,8 +4,9 @@
 // merkitseVirheKorjatuksi).
 //
 // Ehdotukset haetaan ehdotusworkerilta kuratointiavaimella (GitHubin salaisuus EHDOTUS_AVAIN). Avain syötetään
-// salasanakenttään; se säilyy vain Keychainissa (Fable 24.9.; toistaiseksi vain muistissa), ei koskaan lokissa, ja
-// hylätty avain unohdetaan. Webin window.prompt-kyselyt ovat natiivissa kenttiä sivulla. Sähköposti näkyy vain täällä. Vain kehittäjätilassa eikä
+// salasanakenttään; se säilyy vain iOS Keychainissa (Fable 24.9.), ei koskaan PlayerPrefsissä eikä lokissa, ja
+// hylätty avain poistetaan avainnipusta. Webin window.prompt-kyselyt ovat natiivissa kenttiä sivulla.
+// Sähköposti näkyy vain täällä. Vain kehittäjätilassa eikä
 // App Store -buildissa (Tyohuone.Sallittu).
 using System;
 using System.Collections;
@@ -25,14 +26,41 @@ namespace Matkakirja.Natiivi
         const string Nimi = "Lukijoilta";
         static string Osoite => Palautekanava.Osoite;
 
-        // Fable 24.9.: kuratointiavain vain iOS Keychainiin — ei PlayerPrefsiin, tiedostoon eikä lokiin. Keychain-liitäntä
-        // (Pelikoodarin MatkakirjaAvaimet.mm) on tilattu; siihen asti avain elää vain tämän käynnistyksen muistissa.
+        // Fable 24.9.: kuratointiavain vain iOS Keychainiin — ei PlayerPrefsiin, tiedostoon eikä lokiin. Pelikoodarin
+        // MatkakirjaAvaimet.mm (kSecClassGenericPassword, palvelu fi.matkakirja.avaimet, tili KeychainNimi, vain tällä
+        // laitteella). Editorissa ja muualla kuin iOS:llä avain elää vain käynnistyksen muistissa.
+        const string KeychainNimi = "ehdotus-avain";
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern int MatkakirjaAvaimet_Aseta(string nimi, string arvo);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern string MatkakirjaAvaimet_Hae(string nimi);
+#endif
         static string avain = "";
+        static bool luettu;
 
+        /// <summary>Lue: Keychainista kerran käynnistyksessä. Tallenna: Keychainiin; tyhjä = poisto (hylätty avain).</summary>
         static string Avain
         {
-            get { PoistaVanha(); return avain; }
-            set => avain = value ?? "";
+            get
+            {
+                PoistaVanha();
+                if (!luettu)
+                {
+                    luettu = true;
+#if UNITY_IOS && !UNITY_EDITOR
+                    avain = MatkakirjaAvaimet_Hae(KeychainNimi) ?? "";
+#endif
+                }
+                return avain;
+            }
+            set
+            {
+                avain = value ?? "";
+                luettu = true;
+#if UNITY_IOS && !UNITY_EDITOR
+                if (MatkakirjaAvaimet_Aseta(KeychainNimi, avain.Length > 0 ? avain : null) != 1)
+                    Debug.LogWarning("MATKAKIRJA ui lukijoilta: avainnippuun kirjoitus ei onnistunut (avain vain muistissa)");
+#endif
+            }
         }
 
         /// <summary>Aiempi versio tallensi avaimen PlayerPrefsiin: pois laitteelta ensimmäisellä käytöllä.</summary>
@@ -94,7 +122,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(Avain))
             {
                 Ohje("Ilman avainta ehdotuksia ei voi lukea. Avain on GitHubin salaisuus EHDOTUS_AVAIN, sama jolla worker "
-                    + "julkaistiin. Syötä avain alle.", true);
+                    + "julkaistiin. Syötä avain alle — se tallentuu vain tämän laitteen avainnippuun (Keychain).", true);
                 return;
             }
             Ohje("Haetaan ehdotuksia…");
