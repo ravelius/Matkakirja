@@ -4107,3 +4107,7 @@ bmng/ (topo) ja bmng-bathy/ 21 845 laattaa kumpikin; s2/ (kaupunkikohtainen vär
 ## SISALTOKIRJURI: KOHDEKARTAT ERA 1/3 VALMIS (#3075, #3080, #3082, #3083, #3084); O7-PR:T #2966/#2972 SULJETTU (24.9.2026 klo 15.50)
 
 Kalgoorlie, Mount Isa, Geraldton, Broome, Porto Velho; piste.teksti-polku, pisteet maalla, testit 0 fail. Löydös: Mount Isan Lake Moondarra ~18 km kaupungista (nosto liioittelee) → City Lookout, kommentissa. #2966/#2972 suljettu, kaupungit jo mainissa N10–N15. Jatkaa: Santarém, João Pessoa, Macapá, Cayenne, Kimberley.
+
+## VIESTIRAJA NOLLAUTUI (OMISTAJAN KUVAKAAPPAUS SIIRTOSEPAN SESSIOSTA) — KOLME VIESTIA LAHETETTY (24.9.2026 klo 15.52)
+
+Siirtosepän luovutus- ja nollauskäsky (#3081 luonnos odottaa build 10:tä, #3074 mergettävissä), Postivahdin aloitusviestiohje ja Linssisepän iPad-laiteajot (piikkiajo 8, Huippuvuoret, keksinnöt; iPad kytketty) toimitettu klo 15.5x. Oppi: mid-turn-viesti ei nollaa rajaa, vain uusi vuoro.
