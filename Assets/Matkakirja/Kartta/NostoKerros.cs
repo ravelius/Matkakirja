@@ -187,7 +187,8 @@ namespace Matkakirja
             else if (pysahtyi < 0) pysahtyi = Time.unscaledTime;
             bool porttiAuki = Nakyvissa || (pysahtyi >= 0 && Time.unscaledTime - pysahtyi >= porttiViive);
 
-            bool nakyvissa = maa != null && Osuus >= vahinOsuus && porttiAuki;
+            // Aloitusportissa (PalloKierto.PorttiSumea) ei nostoja: UI piirtäisi ne terävinä sumean pallon päälle.
+            bool nakyvissa = maa != null && Osuus >= vahinOsuus && porttiAuki && !PalloKierto.PorttiSumea;
             if (nakyvissa != Nakyvissa)
             {
                 Nakyvissa = nakyvissa;
