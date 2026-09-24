@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2170, teksti: 'Sää: Appalakit, Churchill, Karthago, Sierra Leone' },
   { v: 2168, teksti: 'v2155: Kaupunkiliuska pysyy taas merkin korkeud… (#3014)' },
   { v: 2167, teksti: 'N16: kuusi kaivoskaupunkia (#3026)' },
   { v: 2166, teksti: 'N15: viisi maailmankohdetta (#3025)' },

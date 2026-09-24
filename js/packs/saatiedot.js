@@ -3836,4 +3836,71 @@ export const SAATIEDOT = {
       + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
       + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
   },
+
+  /*
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N9-kaupungit): Open-Meteon
+   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
+   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
+   * --vain appalakit,churchill,karthago,sierraleone,tanganjika. Asemat:
+   * Asheville NC (Appalakit), Churchill (Manitoba), Karthago (Tunisin
+   * lähellä), Freetown (Sierra Leone), Kigoma (Tanganjikajärvi).
+   */
+  appalakit: {
+    lat: 35.5951,
+    lon: -82.5515,
+    keskilampo: [4, 4.2, 8, 12.3, 14.8, 19.5, 22.7, 21.5, 17.9, 12.5, 7.9, 3.2],
+    ylin: [9, 9, 14, 19, 20, 25, 28, 26, 22, 18, 13, 8],
+    alin: [-1, -1, 2, 6, 9, 14, 17, 17, 13, 7, 3, -2],
+    sade: [90, 98, 77, 91, 103, 119, 78, 137, 110, 112, 120, 96],
+    luonnehdinta: 'Appalakeilla on selkeät vuodenajat: talvi '
+      + '(joulu–helmikuu) on kylmä, vain muutama aste, ja kesä '
+      + '(heinäkuu 23 astetta) lämmin. Sadetta kertyy tasaisesti '
+      + 'ympäri vuoden, elokuu on sateisin.',
+  },
+  churchill: {
+    lat: 58.7684,
+    lon: -94.1650,
+    keskilampo: [-22.4, -24.2, -17, -9.1, -1.2, 6.2, 10, 12.1, 6.1, -1.1, -11.6, -19.6],
+    ylin: [-19, -21, -14, -6, 2, 10, 14, 16, 8, 1, -9, -17],
+    alin: [-25, -27, -20, -12, -4, 2, 6, 8, 4, -3, -14, -23],
+    sade: [15, 8, 19, 18, 36, 36, 81, 83, 60, 42, 28, 16],
+    luonnehdinta: 'Churchillissä talvi on ankara: tammi–helmikuu '
+      + 'pysyy yli 20 asteen pakkasessa. Lyhyt kesä (heinä–elokuu) '
+      + 'nousee vain kymmeneen–kahteentoista asteeseen, ja tuolloin '
+      + 'myös sataa enemmän.',
+  },
+  karthago: {
+    lat: 36.8531,
+    lon: 10.3236,
+    keskilampo: [11.3, 12.1, 13.2, 15.9, 19.5, 22.3, 24.8, 26.3, 23.7, 20.6, 17.3, 13.3],
+    ylin: [14, 15, 16, 19, 23, 26, 28, 30, 27, 24, 20, 16],
+    alin: [9, 9, 10, 13, 16, 19, 21, 22, 21, 17, 15, 11],
+    sade: [58, 32, 41, 57, 29, 6, 10, 1, 48, 25, 60, 60],
+    luonnehdinta: 'Karthagossa on tyypillinen Välimeren ilmasto: '
+      + 'kesä (heinä–elokuu) on kuuma ja käytännössä sateeton, '
+      + 'talvi (marras–helmikuu) leuto ja sateinen.',
+  },
+  sierraleone: {
+    lat: 8.4657,
+    lon: -13.2317,
+    keskilampo: [26.4, 26.3, 26.2, 26.7, 26.4, 25.5, 24.6, 24.3, 24.8, 25.5, 26.3, 26.8],
+    ylin: [28, 28, 27, 28, 28, 27, 26, 26, 26, 27, 28, 28],
+    alin: [25, 25, 25, 25, 25, 24, 23, 23, 24, 24, 25, 25],
+    sade: [7, 11, 14, 92, 251, 339, 648, 721, 396, 292, 98, 41],
+    luonnehdinta: 'Freetownissa lämpötila pysyy koko vuoden '
+      + '24–27 asteessa, mutta sademäärä vaihtelee äärimmäisesti: '
+      + 'elokuu kastelee kaupunkia yli 700 millimetrillä, '
+      + 'tammikuu vain seitsemällä.',
+  },
+  tanganjika: {
+    lat: -4.8769,
+    lon: 29.6267,
+    keskilampo: [24.4, 24.7, 24.7, 24, 24.2, 24.2, 23.9, 24.7, 25.5, 25.3, 24, 23.7],
+    ylin: [26, 27, 27, 26, 26, 27, 27, 27, 28, 28, 26, 25],
+    alin: [23, 23, 23, 22, 22, 22, 21, 22, 23, 23, 22, 22],
+    sade: [229, 229, 223, 278, 138, 26, 1, 5, 35, 137, 328, 345],
+    luonnehdinta: 'Tanganjikajärven rannalla on tasaisen lämmin, '
+      + '24–26 astetta ympäri vuoden. Sadekausi marras–huhtikuussa '
+      + 'on runsas, kesä–elokuu käytännössä sateeton.',
+  },
 };
