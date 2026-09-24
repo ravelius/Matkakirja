@@ -5,7 +5,8 @@
 // Kortti per pysäkki (hiljaiset pois): muotokuva 4:5 ylhäältä rajattuna ja henkilön nimi. Keskimmäinen
 // on 1,45-kertainen kultareunalla, naapurit 0,62 → 0,52 → 0,44, väli kortin mittojen keskiarvo × 1,05.
 // Menneet ovat teräviä ja himmeneviä, tulevat sumeita (valmiiksi sumennettu pieni kuva, ei suodatin).
-// Kortti, joka ei mahdu kokonaan nauhalle, on piilossa (nykyinen näkyy aina).
+// Kortti, joka ei mahdu kokonaan nauhalle, on piilossa (nykyinen näkyy aina); reunan takaisia kauempana
+// olevat ovat display: none, ja piirtojärjestystä korjataan vain keskimmäisen vaihtuessa (pysäkinvaihdon piikki).
 //
 // Veto: 8 px kynnyksen jälkeen nauha seuraa sormea (karusellinVedonPaikka) ilman siirtymää; irrotus heittää
 // nopeuden mukaan enintään kolme korttia (0,18 s) ja asettuu lähimpään → Valittu (ajo.Siirry, jää tauolle).
@@ -69,6 +70,7 @@ namespace Matkakirja.Natiivi
         {
             nauha.Clear();
             kortit.Clear();
+            jarjestettyKeski = -1;
             for (int i = 0; i < pysakit.Count; i++)
             {
                 var p = pysakit[i];
@@ -147,13 +149,22 @@ namespace Matkakirja.Natiivi
             int keski = Mathf.RoundToInt(nyt);
             // Nauhan korkeus: 1,45-kertainen kortti (kuva 4:5 + nimirivi) ja vähän väliä (web .aikajana-nauha).
             nauha.style.height = Mathf.Round((w * 1.25f + 26f) * Mitat[0] + 10f);
+            // Näkyvät kortit ovat yhtenäinen väli keskimmäisen ympärillä (mitta pienenee etäisyyden mukaan).
+            int eka = keski, vika = keski;
+            while (eka > 0 && Mahtuu(eka - 1 - nyt, puolikas)) eka--;
+            while (vika < kortit.Count - 1 && Mahtuu(vika + 1 - nyt, puolikas)) vika++;
+            // Reunan takana yksi läpinäkyvä kortti kummallakin puolella, jotta tuleva kortti liukuu ja
+            // häivyttyy sisään kuten webissä; muut ovat display: none eivätkä maksa asettelua eikä piirtoa.
+            int alku = Mathf.Max(0, eka - 1), loppu = Mathf.Min(kortit.Count - 1, vika + 1);
             for (int i = 0; i < kortit.Count; i++)
             {
                 var k = kortit[i];
+                bool esilla = i >= alku && i <= loppu;
+                k.El.style.display = esilla ? DisplayStyle.Flex : DisplayStyle.None;
+                if (!esilla) { k.El.style.opacity = 0; continue; } // palatessaan häivyttyy nollasta
                 float ero = i - nyt, d = Mathf.Abs(ero), mitta = Mitta(d);
                 float paikka = Mathf.Sign(ero) * Etaisyys(d);
-                bool mahtuu = i == keski || Mathf.Abs(paikka) + mitta / 2f <= puolikas;
-                bool nykyinen = i == keski, tuleva = !nykyinen && mahtuu && ero > 0, piilossa = !mahtuu;
+                bool nykyinen = i == keski, piilossa = i < eka || i > vika, tuleva = !nykyinen && !piilossa && ero > 0;
                 float himmeys = 1f;
                 if (ero < 0) himmeys = d < 1 ? 1 - 0.18f * d : Mathf.Max(0.4f, 0.82f - (d - 1) * 0.14f);
                 else if (ero > 0) himmeys = d < 1 ? 1 - 0.1f * d : Mathf.Max(0.5f, 0.9f - (d - 1) * 0.12f);
@@ -166,15 +177,46 @@ namespace Matkakirja.Natiivi
                 k.El.style.opacity = himmeys;
                 k.El.pickingMode = piilossa ? PickingMode.Ignore : PickingMode.Position;
                 k.El.EnableInClassList("mk-karuselli__kortti--nykyinen", nykyinen);
-                // Lähempänä keskustaa oleva peittää kauemman (web jarjestys 100 − d): piirtojärjestys sisaruksina.
                 k.Tuleva = tuleva;
                 if (!piilossa) Lataa(k);
                 NaytaKuva(k);
             }
-            // Piirtojärjestys: kaukaisimmat ensin, keskimmäinen viimeisenä.
-            var jarjestys = new List<Kortti>(kortit);
-            jarjestys.Sort((a, b) => Mathf.Abs(kortit.IndexOf(b) - nyt).CompareTo(Mathf.Abs(kortit.IndexOf(a) - nyt)));
-            foreach (var k in jarjestys) k.El.BringToFront();
+            Jarjesta(keski);
+        }
+
+        bool Mahtuu(float ero, float puolikas) => Etaisyys(Mathf.Abs(ero)) + Mitta(ero) / 2f <= puolikas;
+
+        int jarjestettyKeski = -1;
+        readonly List<VisualElement> tavoite = new List<VisualElement>();
+
+        /// <summary>
+        /// Piirtojärjestys (web z-index 100 − d): lähempänä keskustaa oleva peittää kauemman. Päällekkäin menevät
+        /// vain naapurit, joten riittää vasen puoli nousevana, oikea laskevana ja keskimmäinen viimeisenä. Järjestys
+        /// vaihtuu vain keskimmäisen vaihtuessa, ja siirretään vain väärässä kohdassa olevat (tavallisesti yksi):
+        /// jokainen siirto on hierarkian muutos, joka rakentaa elementin piirtodatan uudelleen.
+        /// </summary>
+        void Jarjesta(int keski)
+        {
+            if (keski == jarjestettyKeski && nauha.childCount == kortit.Count) return;
+            jarjestettyKeski = keski;
+            tavoite.Clear();
+            for (int i = 0; i < keski; i++) tavoite.Add(kortit[i].El);
+            for (int i = kortit.Count - 1; i > keski; i--) tavoite.Add(kortit[i].El);
+            tavoite.Add(kortit[keski].El);
+            for (int p = 0; p < tavoite.Count; p++)
+            {
+                var nykyinen = nauha[p];
+                if (nykyinen == tavoite[p]) continue;
+                // Jos tässä kohdassa oleva kortti on se, joka on väärässä paikassa (seuraava on jo oikea),
+                // siirretään se omalle paikalleen; muuten tuodaan oikea kortti tähän.
+                if (p + 1 < nauha.childCount && nauha[p + 1] == tavoite[p])
+                {
+                    int oma = tavoite.IndexOf(nykyinen);
+                    nauha.Insert(oma, nykyinen);
+                    if (nauha[p] != tavoite[p]) nauha.Insert(p, tavoite[p]);
+                }
+                else nauha.Insert(p, tavoite[p]);
+            }
         }
 
         void Lataa(Kortti k)

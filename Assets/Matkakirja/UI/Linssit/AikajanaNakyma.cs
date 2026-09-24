@@ -685,8 +685,10 @@ namespace Matkakirja.Natiivi
             if (keksinnot == null) { LataaKeksinnot(() => { if (pysakki == i) NaytaPysakki(i); }); return; }
             if (i < 0 || i >= keksinnot.Pysakit.Count) return;
             var p = keksinnot.Pysakit[i];
+            var kello = System.Diagnostics.Stopwatch.StartNew();
             karuselli.Nayta(true);
             karuselli.Aseta(i);
+            double tKaruselli = kello.Elapsed.TotalMilliseconds;
             string vuosi = double.IsNaN(p.Vuosi) ? null : ((int)p.Vuosi).ToString(CultureInfo.InvariantCulture);
             // Palkin toinen rivi pysäkillä: ajoitus · paikka (web [ajoitus(t), paikka(t)].join(' · ')).
             paikka.text = Liita(p.Ajoitus ?? vuosi, p.Paikka);
@@ -708,7 +710,31 @@ namespace Matkakirja.Natiivi
                     i < keksinnot.Selitteet.Count ? keksinnot.Selitteet[i] : null, juttu);
             }
             paneeli.style.display = DisplayStyle.Flex;
+            double tPaneeli = kello.Elapsed.TotalMilliseconds;
             ValmistaSeuraavat(i);
+            KirjaaVaihto(i, tKaruselli, tPaneeli - tKaruselli, kello.Elapsed.TotalMilliseconds);
+        }
+
+        /// <summary>
+        /// Pysäkinvaihdon ajoitus lokiin (Natiivisepän iPad-mittaus): vaihdon oma työ osittain ja kolmen seuraavan
+        /// kehyksen kesto, joista ensimmäinen sisältää vaihtokehyksen UI Toolkit -asettelun ja piirron.
+        /// </summary>
+        static void KirjaaVaihto(int i, double karuselliMs, double paneeliMs, double yhtMs)
+        {
+            if (!UiKerros.Olemassa) return;
+            var kerros = UiKerros.Hae();
+            var kehykset = new List<string>(3);
+            Action seuraa = null;
+            seuraa = () =>
+            {
+                kehykset.Add((Time.unscaledDeltaTime * 1000f).ToString("0.0", CultureInfo.InvariantCulture));
+                if (kehykset.Count < 3) return;
+                kerros.JokaRuutu -= seuraa;
+                Debug.Log(string.Format(CultureInfo.InvariantCulture,
+                    "MATKAKIRJA ui pysäkinvaihto {0}: karuselli {1:0.00} ms, paneeli {2:0.00} ms, yht {3:0.00} ms; kehykset {4} ms",
+                    i, karuselliMs, paneeliMs, yhtMs, string.Join(" / ", kehykset)));
+            };
+            kerros.JokaRuutu += seuraa;
         }
 
         const int EsilatausPysakkeja = 2; // web PANEELIN_ESILATAUS_PYSAKKEJA
