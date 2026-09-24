@@ -24,6 +24,8 @@ namespace Matkakirja.Natiivi
 {
     public static class PuluHaku
     {
+        static readonly IReadOnlyList<(string Uusi, string Vanha)> NahtavyysKentat = Paataso.Samat("aika", "kuvat", "lahde", "teksti");
+
         public const int PohjaPiste = 15, LinkkiKatto = 2;
         const double SuhdeKynnys = 0.8, AvainsanaRaja = 0.9, SijaintiKerroin = 2;
         const double OtsikonPaino = 2, TekstinPaino = 1, TarkanOsumanKerroin = 2.5;
@@ -259,7 +261,8 @@ namespace Matkakirja.Natiivi
                     var m = new List<Merkinta>();
                     LisaaKategoriat(m, Taulu(kl, "kaupunki"), "kaupunki");
                     LisaaKategoriat(m, Taulu(ml, "maa"), "maa");
-                    var jutut = Alkiot(na).Select(a => (T(a, "kaupunki"), T(a, "nimi"), Rakenne.Olio(MiniJson.Kentta(a, "data")) ?? a)) // 2.0: päätaso
+                    // Päätaso ensin (kappaleet, nosto, wiki vain päätasolla), raaka vain Paataso-reitin kautta.
+                    var jutut = Alkiot(na).Select(a => (T(a, "kaupunki"), T(a, "nimi"), Paataso.Nakyma(a, NahtavyysKentat)))
                         .Where(x => x.Item1 != null && x.Item2 != null && x.Item3 != null).ToList();
                     LisaaNahtavyydet(m, jutut);
                     var kohteet = new List<(string, string)>();
@@ -294,7 +297,7 @@ namespace Matkakirja.Natiivi
             foreach (var o in Alkiot(json))
             {
                 string id = T(o, avain) ?? T(o, "id");
-                var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "data")) ?? Rakenne.Lista(MiniJson.Kentta(o, "aiheet"));
+                var aiheet = Rakenne.Lista(MiniJson.Kentta(o, "aiheet")) ?? Rakenne.Lista(Paataso.RaakaArvo(o));
                 if (id != null && aiheet != null) t[id] = aiheet;
             }
             return t;

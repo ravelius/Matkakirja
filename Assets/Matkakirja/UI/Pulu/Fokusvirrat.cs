@@ -51,6 +51,10 @@ namespace Matkakirja.Natiivi
 
     public static class Fokusvirrat
     {
+        static readonly IReadOnlyList<(string Uusi, string Vanha)> FokusKentat = Paataso.Samat(
+            "aarremerkinta", "kaupunki", "kohtaaminen", "kohtaamispiste", "kohteet", "lehtitehtavat", "matkakirja",
+            "oppitunti", "pollo", "takyt", "valinta", "sahketehtava", "virta");
+
         static Dictionary<string, Saapumisvirta> virrat;
         static bool haussa;
         static readonly List<Action> odottajat = new List<Action>();
@@ -117,7 +121,9 @@ namespace Matkakirja.Natiivi
             foreach (var a in alkiot)
             {
                 var o = a as Dictionary<string, object>;
-                var d = MiniJson.Kentta(o, "data") as Dictionary<string, object> ?? o;
+                // Päätaso ensin (skeema 1.26+: mm. sahketehtava ja virta ovat vain päätasolla), raaka data vain
+                // puuttuvien kenttien varana Paataso-reitin kautta (2.0 poistaa sen).
+                var d = Paataso.Nakyma(o, FokusKentat);
                 string kaupunki = MiniJson.Teksti(o, "kaupunki") ?? MiniJson.Teksti(d, "kaupunki");
                 if (kaupunki == null) continue;
                 var v = new Saapumisvirta { Kaupunki = kaupunki };
