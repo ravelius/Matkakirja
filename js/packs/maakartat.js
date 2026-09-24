@@ -3041,6 +3041,40 @@ export const KAUPUNKIKARTAT = {
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
   /*
+   * Santarém (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  santarem: {
+    polku: 'assets/kartat/santarem-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705,
+    },
+    esittely: 'Kartan alue on Santarémin vanha keskusta siinä kohtaa, '
+      + 'jossa tumma Tapajós-joki ja sameanruskea Amazon virtaavat '
+      + 'vierekkäin sekoittumatta — ilmiö tunnetaan nimellä Vesien '
+      + 'kohtaaminen. Rantaraitilta avautuu paras näköala ilmiöön; '
+      + 'lähellä on kaupungin vanha keskusaukio.',
+    kohteet: [
+      {
+        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', lat: -2.4179024, lon: -54.7172252,
+        teksti: 'Santarémin edustalla Amazonin sameanruskea vesi kohtaa '
+          + 'Tapajós-joen tumman, kirkkaan veden, ja kaksi väriä virtaa '
+          + 'vierekkäin kilometrien matkan sekoittumatta juuri lainkaan. '
+          + 'Ilmiötä kutsutaan nimellä Encontro das Águas, ja rantaraitilta '
+          + 'sen näkee parhaiten.',
+      },
+      {
+        nimi: 'Praça Tiradentes', lat: -2.4194012, lon: -54.7235362,
+        teksti: 'Santarémin vanhan kaupunginosan keskusaukio lähellä '
+          + 'paikkaa, jossa jesuiittapappi João Felipe Bettendorff '
+          + 'perusti lähetysaseman 1661 — kaupungin virallisen '
+          + 'syntyhetken. Ympäröivät talot on perinteisesti '
+          + 'päällystetty portugalilaistyylisillä atsulejo-kaakeleilla.',
+      },
+    ],
+  },
+  /*
    * Porto Velho (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
    * `teksti`-kenttä, ei `nosto:`-linkkiä.
    */
