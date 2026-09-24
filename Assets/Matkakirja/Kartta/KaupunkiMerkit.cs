@@ -38,6 +38,27 @@ namespace Matkakirja
         }
         HashSet<string> suodatin;
 
+        /// <summary>Kaupungin maa (ISO3) tai null.</summary>
+        public string KaupunginMaa(string id)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            return m?.kaupunki.maa;
+        }
+
+        /// <summary>Lähimmän kaupungin id annetusta pisteestä (enintään maxAste asteen päässä), muuten null.</summary>
+        public string LahinId(double lat, double lon, double maxAste = 0.5)
+        {
+            string id = null;
+            double paras = maxAste * maxAste;
+            foreach (var m in merkit)
+            {
+                double dl = m.kaupunki.lat - lat, dp = (m.kaupunki.lon - lon) * math.cos(math.radians(lat));
+                double d = dl * dl + dp * dp;
+                if (d <= paras) { paras = d; id = m.kaupunki.id; }
+            }
+            return id;
+        }
+
         /// <summary>Yksittäisen kaupungin pisteen korostusväri (null = pois). RAJAPINTA luku 2, Korosta.</summary>
         public void Korosta(string id, Color? vari)
         {

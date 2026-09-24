@@ -159,6 +159,11 @@ namespace Matkakirja.Editori
             komennot.merkit = merkit;
             var mittari = kameraGo.AddComponent<KehysMittari>();
             mittari.pallo = kierto;
+            // Nykyisen maan nostot (webin pallon nostokerros); Natiivi-UI piirtää merkit.
+            var nostoKerros = georefGo.AddComponent<NostoKerros>();
+            nostoKerros.kierto = kierto;
+            nostoKerros.merkit = merkit;
+            nostoKerros.nappula = nappula;
 
             // Valo kulkee kameran mukana: näkyvä puolipallo on aina valaistu.
             var valoGo = new GameObject("Valo");

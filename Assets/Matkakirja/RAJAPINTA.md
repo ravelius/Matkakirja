@@ -58,6 +58,17 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `void AloitusLento(lahtoLat, lahtoLon, lat, lon, kestoS, Action lahti, Action valmis)` | valmis | Omistajan aloituskaava: kamera zoomaa lähtöön (`lahtoZoomS` 2,5 s, kaari 18,6°), sitten `lahti` (Pelikoodari: koneen ääni ja intro-luenta), lentokone lentää kaarta pitkin `kestoS` sekuntia kameran seuratessa ja noustessa niin, että kaari näkyy; perillä `valmis` (Pelikoodari: AloituslentoPaattyi → UI) ja kone vaihtuu nappulaksi. Sormi ei pysäytä lentoa. Testi: `nappula aloitus 51.5 -0.13 41.9 12.5 20`. |
 | `LennonVaihe Vaihe`, `event Action<LennonVaihe> VaiheVaihtui` | valmis | LENNON ESITYS (kaikki lennot, `Lenna` ja `AloitusLento`): `Nousu` (p < 0,2), `Matka`, `Lasku` (p > 0,8, puoliorbitti koneen ympäri), `Ei` perillä tai keskeytettäessä. Kamera yläviistosta koneen takaa (`PalloKierto.Kuvaa`), aurinko UTC-ajan mukaan (`Aurinko.Aika` = pelin kello, jos Pelikoodari asettaa), etäisyyssumu matkalennolla, Linssisepän `LentoPilvet`, savujana (`Savujana`) ja DC-3-malli (`koneMalli`). Punaista reittikorostusta ei tarvita lennoilla. |
 
+## 3c. Nostokerros — `NostoKerros` (`NostoKerros.Instanssi`), valmis
+
+Webin pallon nostokerros (js/pallolauta/nostot.js, js/fokuskohteet.js). Kartta päättää, mitkä nostot näkyvät ja missä; **Natiivi-UI piirtää merkit** (NostoMerkit-symbolit, nimiöt, ryhmät 44 px, viuhka) ja avaa kortin napautuksesta.
+
+| Jäsen | Merkitys |
+|---|---|
+| `IReadOnlyList<Nosto> Naytettavat` | Tämän kehyksen nostot: `Id, Tunnus, Aihe, Kategoria, Nimi, Nimio (null = ei nimeä), Maa, KaupunkiAvain, TakyNosto, Lat, Lon, Taso, Tarkeys, Lahizoom, Ruutu (px, origo vasen ala), Keskelta`. Vain ruudulla ja edessä, enintään `katto` 120 lähimpänä keskeltä. |
+| `bool Nakyvissa`, `float Syttyminen` (0→1, 0,7 s), `float Osuus` | Kerros näkyy, kun maan leveys / näkyvä leveys ≥ 0,5 (LEHDEN_VAHIN_OSUUS) ja saapumisesta 1,4 s kamera ja nappula paikallaan (saapumisPortti). |
+| `event Action Paivittyi` | Naytettavat, näkyvyys tai syttyminen muuttui tässä kehyksessä (kuuntele ja siirrä merkit). |
+| `string Maa { get; set; }`, `NykyinenMaa` | Pakotettu maa (ISO3) tai null = nappulan kaupungin maa. |
+
 ## 4. Kerrokset linsseille — `KarttaKerrokset` (valmis, `KarttaKerrokset.Instanssi`)
 
 Linssi ei koske Cesium-komponentteihin suoraan. Se pyytää kerroksen avaimella:
