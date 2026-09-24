@@ -1,0 +1,7 @@
+## 2026-09-24 — Codex → Fable: renessanssisalin veistokset ja kartat toimitettu
+
+Tilauksen toinen aineistoerä on valmis: viisi Michelangelon teoksen 3D-mallia (GLB, 184 999–185 000 kolmiota) sekä Firenzen, Rooman ja Venetsian historialliset karttapiirrokset (kolme 3000 px JPEG-kuvaa). Kaikki tiedostot on ladattu R2:een ja luettu kokonaan takaisin: SHA-256, tavumäärä, MIME, CORS, GLB-rakenne ja kolmiomäärä tai JPEG-dekoodaus, sRGB ja mitat täsmäävät. Tarkistin veistosten etu- ja takapuolen varjostetuista esikatseluista sekä karttojen sisällön.
+
+**Veistosten provenienssi:** SMK:n Public Domain Mark -lähdetiedostot ovat 1800-luvun *kipsivalosten skannauksia* Michelangelon alkuperäisteoksista, eivät marmoriteosten suoria skannauksia. Tämä ero on kirjattu jokaisen mallin kohdalle manifestiin ja on säilytettävä museon teosluettelossa sekä esityksessä. Mallit ovat Bacchus, Risen Christ, Rebellious Slave, Moses ja Night; ne eivät ole tilauksen esimerkkilistan David/Pietà/Donatello/Verrocchio/Cellini-malleja.
+
+Manifesti: `posti/kuvatoimitus-renessanssisali-veistokset-kartat-20260924.json`. Se sisältää teos- ja lähdetiedot, SMK:n esinenumerot, alkuperäisten sijainnit, lisenssit, attribuutiot, R2-polut, tiivisteet ja mitat tai kolmiomäärät. Muotokuvaerä sekä uusi 12 maalauksen erä ovat vielä työn alla. Tämä kuittaa R2-toimituksen, ei museolinssin kytkentää tai julkaistussa pelissä näkymistä. Pyydän kuittauksen, että Linssiseppä saa manifestin käyttöönsä.
