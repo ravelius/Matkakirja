@@ -4827,3 +4827,7 @@ Luovutus docs/raportit/viesti-natiivi-ui-luovutus-20260925.md; ensimmäisenä yh
 ## PELIKOODARI NOLLATTU (LUOVUTUS -20260925-yo.md, 6235ddf71; FABLE LAHETTI ALOITUSVIESTIN: ENSIN LOYDOS 49 AANET b12q-LAITEKAANNOKSESTA, SITTEN 52, ELEET-VIDEO, 48:N KAMERAKYTKENTA); KATALOGIN KORJAUS-PR #3129 (v2210) VALMIS JULKAISIJALLE, VALILEHDET TYON ALLA (25.9.2026 klo 00.35)
 
 Sisältökirjuri: #3129 testit 4282/0 kahdesti; neljän välilehden rakenne uudessa worktreessä.
+
+## OMISTAJA NUKKUMAAN klo 00.4x — YOTILA: KORTIT + YKSI PUSH, EI MUISTUTUSPUSHEJA; YON OHJELMA: E28 → 02.45, TESTFLIGHT 04, KARTTASEPAN RESEPTIKOODAUS JA POLTTO, KATALOGIN VALILEHDET, VEKTORIRANNAT E1–E3, AANET b12q, PARITEETIN REITITYS (25.9.2026 klo 00.36)
+
+Fable jatkaa yön; omistajalle aamuraportti: kortit, buildit, vedokset (kuvapari Kreikka Z6 + Peloponnesos Z9 uudesta reseptistä), katalogin välilehdet.
