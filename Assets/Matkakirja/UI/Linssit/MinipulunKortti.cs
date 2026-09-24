@@ -8,9 +8,10 @@
 //   [kohteen valmis kysymys] [toinen]       ← osa virtaa, vierivät pois kuten chatissa
 //   pelaajan kysymys (oikealla) / Livian vastaus (vasemmalla)
 //   [ Kysy mitä tahansa…            ] [↑]
-// Valmiit kysymykset vastataan aineiston tekstillä ilman mallikutsua
-// (astronaut-kysymykset.json vastaukset); vapaa kysymys menee samaa reittiä kuin
-// kartan pulu (PuluChat.KysyUlkoisesti: sama konteksti, historia ja lukko).
+// Valmiit ovat vain KYSYMYKSIÄ: pilleri lähettää kysymyksen samaa reittiä kuin vapaa
+// kysymys ja kartan pulu (PuluChat.KysyUlkoisesti: sama konteksti, historia ja lukko).
+// Webin sääntö 17.9. (js/linssit/satelliitti.js vastaaKysymykseen, Raamattu ASTRONAUTIN
+// KAMERA LISAYS 14); esikirjoitetut vastaukset poistettu (omistajan build 9 -löydös 35).
 // Ei striimiä (kuten natiivin chatissa): vastaus tulee kerralla, ja virta kelataan
 // niin, että sen alku näkyy (web: vastaus luetaan alusta).
 using System;
@@ -27,8 +28,6 @@ namespace Matkakirja.Natiivi
     public sealed class MinipulunKortti
     {
         const int KysymysKatto = 300;
-        static Dictionary<string, List<(string Kysymys, string Vastaus)>> vastaukset;
-        static bool vastauksetHaussa;
 
         readonly VisualElement kortti, ehdotukset;
         readonly ScrollView virta;
@@ -112,33 +111,18 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
             }
             ehdotukset.style.display = k.Kysymykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            HaeVastaukset(null);
         }
 
         // --- kysymykset ------------------------------------------------------------------
 
-        /// <summary>Valmis kysymys: aineiston vastaus ilman mallikutsua (webin sääntö).</summary>
+        /// <summary>Valmis kysymys: pilleri valituksi ja kysymys mallille kuten vapaa kysymys.</summary>
         void KysyValmis(Button pilleri, string kohde, string kysymys)
         {
+            if (kohde != tunnus) return;
             foreach (var b in ehdotukset.Children()) b.RemoveFromClassList("mk-valittu");
             pilleri.AddToClassList("mk-valittu");
             Kupla(false, kysymys);
-            var odottaa = Kupla(true, "…", odottaa: true);
-            HaeVastaukset(() =>
-            {
-                if (kohde != tunnus) return;
-                string vastaus = null;
-                if (vastaukset != null && vastaukset.TryGetValue(kohde ?? "", out var l))
-                    vastaus = l.FirstOrDefault(x => x.Kysymys == kysymys).Vastaus;
-                if (vastaus == null)
-                {
-                    // Aineistossa ei vastausta: kysytään mallilta kuten vapaa kysymys.
-                    odottaa.RemoveFromHierarchy();
-                    Laheta(kysymys);
-                    return;
-                }
-                Valmis(odottaa, vastaus);
-            });
+            Laheta(kysymys);
         }
 
         void KysyVapaasti(string teksti)
@@ -179,45 +163,6 @@ namespace Matkakirja.Natiivi
             kupla.text = vastaus ?? "";
             // Vastaus luetaan alusta: kuplan yläreuna näkyviin kerran (webin ankkurointi).
             virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)));
-        }
-
-        // --- aineisto --------------------------------------------------------------------
-
-        static readonly List<Action> odottajat = new List<Action>();
-
-        static void HaeVastaukset(Action valmis)
-        {
-            if (vastaukset != null) { valmis?.Invoke(); return; }
-            if (valmis != null) odottajat.Add(valmis);
-            if (vastauksetHaussa) return;
-            vastauksetHaussa = true;
-            UiKerros.Hae().StartCoroutine(LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", teksti =>
-            {
-                vastauksetHaussa = false;
-                vastaukset = new Dictionary<string, List<(string, string)>>();
-                try { if (teksti != null) Lue(teksti); }
-                catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui minipulu: " + e.Message); }
-                var o = odottajat.ToList();
-                odottajat.Clear();
-                foreach (var a in o) a();
-            }));
-        }
-
-        static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
-
-        static void Lue(string json)
-        {
-            var v = Ob(MiniJson.Kentta(Ob(MiniJson.Jasenna(json)), "exportit"));
-            var kaikki = Ob(MiniJson.Kentta(v, "ASTRONAUTIN_KYSYMYKSET"));
-            if (kaikki == null) return;
-            foreach (var pari in kaikki)
-            {
-                var l = new List<(string, string)>();
-                if (MiniJson.Kentta(Ob(pari.Value), "vastaukset") is List<object> vv)
-                    foreach (var x in vv.Select(Ob).Where(x => x != null))
-                        l.Add((MiniJson.Teksti(x, "kysymys"), MiniJson.Teksti(x, "vastaus")));
-                vastaukset[pari.Key] = l;
-            }
         }
     }
 }
