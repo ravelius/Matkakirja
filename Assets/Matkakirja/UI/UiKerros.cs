@@ -6,8 +6,11 @@
 // (RAJAPINTA.md: 10 nimikortti, 15 tilarivi, 20 matkavalinta, 25 linssit,
 // 30 pelidialogit, 40 valikot, kartuscha, pulu).
 //
-// Mitoitus kuten UGUI-näkymissä (Tilarivi.Skaalain): viiteruutu 393 × 852
-// pistettä (iPhone 15), leveys ja korkeus puoliksi. Jokaisen kerroksen juuren
+// Mitoitus puhelimessa kuten UGUI-näkymissä (Tilarivi.Skaalain): viiteruutu 393 × 852
+// pistettä (iPhone 15), leveys ja korkeus puoliksi — iPhonella 1 UI-yksikkö ≈ 1 piste = webin CSS-px.
+// iPadilla (Fable 24.9.2026) 1 UI-yksikkö = 1 iOS-piste = webin CSS-px (ConstantPixelSize, pikseliä
+// pisteessä): viiteruutu teki iPad Pro 11":n UI:sta 1,74-kertaisen webiin verrattuna. Testikomento
+// `ui skaala piste|viite|auto` vaihtaa ajon aikana (PlayerPrefs matkakirja-ui-skaala). Jokaisen kerroksen juuren
 // lapsi "mk-turva" (position absolute) seuraa reunoillaan Screen.safeAreaa (lovi, Dynamic Island, kotipalkki).
 //
 // Kosketukset: PalloKierto lukee Input Systemiä suoraan. PeittaaPisteen kertoo,
@@ -117,10 +120,7 @@ namespace Matkakirja.Natiivi
             var asetukset = pohja != null ? Instantiate(pohja) : ScriptableObject.CreateInstance<PanelSettings>();
             asetukset.name = "Matkakirja UI " + kerros;
             asetukset.themeStyleSheet = teema;
-            asetukset.scaleMode = PanelScaleMode.ScaleWithScreenSize;
-            asetukset.referenceResolution = Viiteruutu;
-            asetukset.screenMatchMode = PanelScreenMatchMode.MatchWidthOrHeight;
-            asetukset.match = 0.5f;
+            AsetaSkaala(asetukset);
             asetukset.sortingOrder = kerros;
             asetukset.clearColor = false;
 
@@ -137,6 +137,58 @@ namespace Matkakirja.Natiivi
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
             dokumentit[kerros] = d;
             return d;
+        }
+
+        const string SkaalaAvain = "matkakirja-ui-skaala";
+
+        /// <summary>Tabletti (iPad): mallinimi tai, simulaattorissa, kuvasuhde alle 1,6 (iPadit 1,33–1,45, iPhonet ≥ 2).</summary>
+        public static bool Tabletti
+        {
+            get
+            {
+                if (SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal)) return true;
+                if (!Application.isMobilePlatform) return false;
+                float pitka = Mathf.Max(Screen.width, Screen.height), lyhyt = Mathf.Max(1, Mathf.Min(Screen.width, Screen.height));
+                return pitka / lyhyt < 1.6f;
+            }
+        }
+
+        /// <summary>Pisteskaala käytössä: iPadilla oletuksena, testikomennolla pakotettavissa (piste | viite).</summary>
+        public static bool Pisteskaala
+        {
+            get
+            {
+                string s = PlayerPrefs.GetString(SkaalaAvain, "");
+                return s == "piste" || (s != "viite" && Tabletti);
+            }
+        }
+
+        /// <summary>Pikseliä iOS-pisteessä: iPadit ovat @2x (dpi / 132, mini 326 dpi → 2); tuntematon dpi → 2.</summary>
+        public static float PikseliaPisteessa => Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
+
+        static void AsetaSkaala(PanelSettings asetukset)
+        {
+            if (Pisteskaala)
+            {
+                asetukset.scaleMode = PanelScaleMode.ConstantPixelSize;
+                asetukset.scale = PikseliaPisteessa;
+                return;
+            }
+            asetukset.scaleMode = PanelScaleMode.ScaleWithScreenSize;
+            asetukset.referenceResolution = Viiteruutu;
+            asetukset.screenMatchMode = PanelScreenMatchMode.MatchWidthOrHeight;
+            asetukset.match = 0.5f;
+            asetukset.scale = 1f;
+        }
+
+        /// <summary>Testikomento: skaala "piste", "viite" tai "auto" (tyhjä) kaikille kerroksille heti.</summary>
+        public void VaihdaSkaala(string tila)
+        {
+            if (tila == "piste" || tila == "viite") PlayerPrefs.SetString(SkaalaAvain, tila);
+            else PlayerPrefs.DeleteKey(SkaalaAvain);
+            PlayerPrefs.Save();
+            foreach (var d in dokumentit.Values) if (d.panelSettings != null) AsetaSkaala(d.panelSettings);
+            viimeKoko = default; // turva-alueet uudelleen uudella skaalalla
         }
 
         /// <summary>Koko UI näkyviin tai pois (PeliOhjain.AsetaKaytossa, 3D-mittaukset).</summary>
