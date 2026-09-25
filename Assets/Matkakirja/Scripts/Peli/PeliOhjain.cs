@@ -363,6 +363,7 @@ namespace Matkakirja.Natiivi
         {
             kierto = k;
             merkit = m;
+            KytkeReitit();
             TMP_FontAsset fontti = m != null ? m.fontti : null;
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
 

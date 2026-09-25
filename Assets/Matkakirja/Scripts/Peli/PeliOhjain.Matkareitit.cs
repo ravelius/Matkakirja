@@ -100,9 +100,54 @@ namespace Matkakirja.Natiivi
             return kaaret.Count > 0 ? kaaret : null;
         }
 
+        /// <summary>
+        /// Kytkee reittien piirron ja pisteet Natiivisepän Reitteihin ja KaupunkiMerkkeihin (natiiviseppa/reitit-b13):
+        /// pelitilassa kaupungin napautus ei enää koske reitteihin, vaan ne tulevat vain tästä säännöstä.
+        /// </summary>
+        void KytkeReitit()
+        {
+            var rt = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.reitit : null;
+            if (merkit != null) merkit.PeliOhjaaReitit = true;
+            if (rt == null) return;
+            MatkareititMuuttuivat = ids => rt.NaytaPeli(ids);
+            PeliApu.ReittiPiste = rt.ReittiPiste;
+        }
+
+        /// <summary>Lentolistan tarjotut kohteet (web tarjotutLennot), kun lentokaaret ovat näkyvissä.</summary>
+        List<string> lentoKohteet;
+        string peliSuodatinAvain;
+
+        /// <summary>
+        /// Web lauta.js pelinKaupunkirajaus (liikkumisen pariteetti D15): tavallisessa pelissä näkyvät ja ovat
+        /// napautettavissa vain pelaajan maan kaupungit, oma kaupunki, nopan siirtokohteet (vaihe Siirto) ja tarjotut
+        /// lentokohteet. Ei rajausta lennolla, reitillä (maa tuntematon) eikä kehittäjän maailmanäkymässä.
+        /// </summary>
+        void PaivitaPeliSuodatin()
+        {
+            if (merkit == null || matka == null) return;
+            var t = matka.Tila;
+            string oma = PelaajanKaupunki;
+            string iso = oma != null && verkko.Kaupungit.TryGetValue(oma, out var ok) ? ok.Maa : null;
+            bool vapaa = !Kaytossa || Tila == SilmukanTila.Matkalla || AloituslentoKaynnissa || Paavalikko.Maailma || iso == null;
+            var kohteet = new List<string>();
+            if (!vapaa)
+            {
+                if (t.Vaihe == Vaihe.Siirto) foreach (var k in siirtoKohteet) if (k.Kaupunki != null) kohteet.Add(k.Kaupunki);
+                if (lentoKohteet != null) kohteet.AddRange(lentoKohteet);
+            }
+            string avain = vapaa ? "" : iso + "|" + oma + "|" + string.Join(",", kohteet);
+            if (avain == peliSuodatinAvain) return;
+            peliSuodatinAvain = avain;
+            if (vapaa) { merkit.PeliSuodatin(null); return; }
+            var joukko = new HashSet<string>(kohteet) { oma };
+            foreach (var kv in verkko.Kaupungit) if (kv.Value.Maa == iso) joukko.Add(kv.Key);
+            merkit.PeliSuodatin(joukko);
+        }
+
         /// <summary>Päivittää reitit, jos valinta muuttui (PaivitaNakyma, saapuminen, liuska, siirron alku).</summary>
         void PaivitaMatkareitit()
         {
+            PaivitaPeliSuodatin();
             var uudet = ValitseMatkareitit(out var avain);
             if (avain == matkareittiAvain) return;
             matkareittiAvain = avain;

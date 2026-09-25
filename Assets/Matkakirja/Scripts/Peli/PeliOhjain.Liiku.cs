@@ -370,15 +370,18 @@ namespace Matkakirja.Natiivi
             var r = KarttaReitit;
             var sijainti = matka.Tila.Pelaaja.Sijainti;
             if (r == null || kohteet.Count == 0 || !sijainti.Kaupungissa) return;
-            try { r.Lentokaaret(sijainti.Kaupunki, kohteet); r.SovitaKohteet(kohteet); lentokaaretNakyvissa = true; }
+            try { r.Lentokaaret(sijainti.Kaupunki, kohteet); r.SovitaKohteet(kohteet); lentokaaretNakyvissa = true; lentoKohteet = kohteet; }
             catch (Exception e) { Debug.LogException(e); }
+            PaivitaPeliSuodatin();
         }
 
         void PiilotaLentokaaret()
         {
             if (!lentokaaretNakyvissa) return;
             lentokaaretNakyvissa = false;
+            lentoKohteet = null;
             try { KarttaReitit?.Lentokaaret(null, null); } catch (Exception e) { Debug.LogException(e); }
+            PaivitaPeliSuodatin();
         }
 
         /// <summary>Heittonappi; vaihda-kutsu vain IHeittoVaihto-näkymälle ja vain kun vaihto on tarjolla.</summary>
