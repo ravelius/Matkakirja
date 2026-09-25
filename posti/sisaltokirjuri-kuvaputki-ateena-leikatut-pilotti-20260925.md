@@ -4,7 +4,7 @@ Fablen päätös 25.9.: **karttanostojen ja nähtävyyksien kuvat ovat leikattuj
 
 ### Tyylisääntö (kuvaputken ohje, tools/generoi-miniatyyrit.mjs)
 
-Kuvassa on YKSI KOHDE (rakennus, esine, henkilö tai pieni ryhmä) tasaisella paperitaustalla, joka leikataan pois: läpinäkyvä webp (RGBA), kohteen ympärillä läpinäkyvää pohjaa. EI maalattua taustaa, taivasta, maisemaa tai huonetta kohteen ympärillä. Malli: assets/kartat/miniatyyrit/ateena-akropolis.webp, ateena-agora.webp, ateena-kallimarmaro.webp (1024×1024, rakennus yksin läpinäkyvällä pohjalla). Vartija tests/miniatyyrit-leikkaus.test.mjs: läpinäkymättömien pikselien osuus koko kuvasta < 0,6 ja kuvan kehästä ≤ 0,35. Katso jokainen kuva silmin.
+Kuvassa on YKSI KOHDE (rakennus, esine, henkilö tai pieni ryhmä) tasaisella paperitaustalla, joka leikataan pois: läpinäkyvä webp (RGBA), kohteen ympärillä läpinäkyvää pohjaa. EI maalattua taustaa, taivasta, maisemaa tai huonetta kohteen ympärillä. Malli: assets/kartat/miniatyyrit/ateena-akropolis.webp, ateena-antiikin-agora.webp, ateena-kallimarmaro.webp (1024×1024, rakennus yksin läpinäkyvällä pohjalla). Vartija tests/miniatyyrit-leikkaus.test.mjs: läpinäkymättömien pikselien osuus koko kuvasta < 0,6 ja kuvan kehästä ≤ 0,35. Katso jokainen kuva silmin.
 
 ### Tilaus: 6 kuvaa (assets/kartat/miniatyyrit/, 1024×1024 webp kuten vanhat nähtävyydet; sama tiedostonimi)
 
