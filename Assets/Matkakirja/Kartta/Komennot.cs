@@ -65,6 +65,9 @@ namespace Matkakirja
     ///                             2026-09-24 bmng-bathy s2-alkup; pois = sileä sarja), voimaan seuraavalla lennolla
     ///   nimet paalle|pois|laske   alue-, meri- ja valtamerinimet (Nimikerros); laske = näkyvät nimiöt, taso ja
     ///                             ladonnan kesto lokiin. nimet valtameret paalle|pois, nimet siirto x (tasovalinta)
+    ///   nostot tila [ISO3] | nostot maa <ISO3|pois>   nostokerroksen portit lokiin (NostoKerros.Kuvaus): näkyvät,
+    ///                             piilotetut syineen (kaupunki nimi/12 km, meri, taso 3, ruutu, katto), uloin osuus,
+    ///                             lähizoomi ja ZoomKerroin; maa = pakotettu maa (NostoKerros.Maa)
     ///   lentoharmaa vara|kattavuus|uv|taso|varapois|s2|sumu|satloki|normaali   harmaiden suorakulmioiden kokeilu (varjostimen
     ///                             testitilat, KarttaKerrokset.LentoTesti); lentoharmaa paikka <0|1|2> <alfa>;
     ///                             lentoharmaa usva|pilvet pois|paalle; lentoharmaa pois = kaikki normaaliksi
@@ -581,6 +584,15 @@ namespace Matkakirja
                     else if (o.Length > 2 && o[1] == "valtameret") nk.valtameret = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "siirto") nk.tasoSiirto = (float)D(2);
                     Debug.Log(nk.Kuvaus());
+                    break;
+                }
+                case "nostot":
+                {
+                    // nostot tila [ISO3] | nostot maa <ISO3|pois> (NostoKerros, löydös 50 B): portit maittain lokiin
+                    var nk = NostoKerros.Instanssi;
+                    if (nk == null) { Debug.LogWarning("MATKAKIRJA komento: nostokerros puuttuu"); break; }
+                    if (o.Length > 2 && o[1] == "maa") nk.Maa = o[2] == "pois" ? null : o[2].ToUpperInvariant();
+                    Debug.Log(nk.Kuvaus(o.Length > 2 && o[1] == "tila" ? o[2] : null));
                     break;
                 }
                 case "palvelin":
