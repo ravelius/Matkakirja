@@ -397,7 +397,8 @@ pakettien otsikkokommentit).
 | --- | --- | --- |
 | radio aporee ::: maps — kenttä-äänitykset (äänimaisemat, "Kuuntele kieltä") | Äänittäjät kohteittain, jakelu archive.org | PD, CC BY, CC BY-SA, CC BY-NC kohteittain |
 | Freesound — äänimaisemat ja tehosteet | Äänittäjät kohteittain (mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal) | CC0, CC BY, CC BY-NC kohteittain |
-| Freesound — Livian ääniefektit ja linssien nauhoitetut äänimaisemat (Ihmisen matka) | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/, aanet/tehosteet/ihmisen-matka/) | CC0 ja CC BY kohteittain |
+| Freesound — Livian ääniefektit | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/) | CC0 ja CC BY kohteittain |
+| Freesound — Ihmisen matka II -linssin äänimaisemat (15) | CC BY 4.0: "Hluhluwe13_unknown_bird.WAV" — reinsamba (freesound.org/s/58233); "Small Creek & Birds" — KasperAugustTopp (freesound.org/s/328140); "Calm Waves" — nsmusic (freesound.org/s/397358); "Doi bo ambi 02 wind up mountain.wav" — fundamental_harmonics (freesound.org/s/437514); "Sailing Ambience - Focus On Cutting Through the Waves" — iainmccurdy (freesound.org/s/645968); "waves and oystercatcher 01 xy90 160717_0917.wav" — klankbeeld (freesound.org/s/355344). CC0: monotraum, gladkiy, emainta, Sclolex, cobratronik, dhallcomposer, felix.blume, DBlover, BenHarmSound. Muokattu: lyhennetty, tasattu −30 LUFS, mp3. Manifesti: aanet/tehosteet/ihmisen-matka/ | CC BY 4.0 (6) ja CC0 (9) |
 | Lyhytaaltoäänitteet — maailmanradion viritysäänet | archive.orgin arkistot, mm. samnewton94 | Public Domain Mark 1.0, CC0 |
 | "Pocket camera start and shut down" — zoomausääni | stephan, pdsounds.org Wikimedia Commonsin kautta | Public domain |
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |

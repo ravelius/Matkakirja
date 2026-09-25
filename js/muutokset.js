@@ -13,6 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2239, teksti: 'Maakunnat erä 6: ARG COL ECU BOL PER VEN URY PR… (#3245)' },
+  { v: 2238, teksti: 'Maakunnat erä 5: BRA MEX CAN CHL THA PHL VNM MY… (#3242)' },
+  { v: 2237, teksti: 'Maakunnat erät 2–4: 27 maata, 693 aluetta lyhyt (#3241)' },
+  { v: 2236, teksti: 'Sisältöjuna: maakuntien luonnehdinnat erät 1–4' },
   { v: 2235, teksti: 'Sisältöpaketti 1.42 takaisin: maakuntarajat 138… (#3225)' },
   { v: 2234, teksti: 'Ranskan lukitut ankkurit uusille maastokohteille (#3235)' },
   { v: 2233, teksti: 'Peruskartta 2026-09-25 webin palloon (#3216)' },

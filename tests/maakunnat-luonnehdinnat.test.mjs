@@ -20,6 +20,61 @@ const ODOTETUT_MAARAT = {
   LVA: 5,
   LTU: 10,
   SVN: 12,
+  ROU: 42,
+  CZE: 14,
+  LUX: 3,
+  MLT: 6,
+  BGR: 28,
+  HRV: 20,
+  MNE: 21,
+  SRB: 24,
+  BIH: 18,
+  MKD: 8,
+  ALB: 12,
+  CYP: 5,
+  MDA: 39,
+  UKR: 25,
+  BLR: 7,
+  ISL: 9,
+  TUR: 81,
+  RUS: 86,
+  EGY: 27,
+  IND: 36,
+  ZAF: 9,
+  KEN: 8,
+  JPN: 47,
+  AUS: 11,
+  NZL: 24,
+  CHN: 32,
+  USA: 51,
+  CHE: 26,
+  PRT: 20,
+  HUN: 20,
+  SWE: 21,
+  NOR: 21,
+  IRL: 30,
+  BRA: 27,
+  MEX: 33,
+  CAN: 13,
+  CHL: 16,
+  THA: 77,
+  PHL: 17,
+  VNM: 63,
+  MYS: 16,
+  SGP: 5,
+  ARG: 24,
+  COL: 34,
+  ECU: 24,
+  BOL: 9,
+  PER: 26,
+  VEN: 26,
+  URY: 19,
+  PRY: 18,
+  IDN: 33,
+  PAK: 8,
+  BGD: 7,
+  LKA: 25,
+  NPL: 14,
 };
 
 /*
@@ -28,9 +83,10 @@ const ODOTETUT_MAARAT = {
  * koskee siis yhä vain alkuperäisiä 97 aluetta (7 maata), kunnes
  * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD, BEL,
  * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
- * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN.
+ * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
+ * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {
