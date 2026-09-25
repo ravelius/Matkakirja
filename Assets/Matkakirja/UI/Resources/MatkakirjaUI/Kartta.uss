@@ -1260,6 +1260,20 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
+/* Löydös 102: täyttötila (Kuvasuurennos.Tayteen) mitoittaa kuvan ja kehyksen koodista. */
+.mk-nosto__suurennos.mk-suurennos--tayteen {
+    padding: 8px; /* web .fokuskohde-zoom 0.5rem */
+}
+
+.mk-suurennos--tayteen .mk-nosto__suurennoskehys {
+    width: auto;
+    max-width: none;
+}
+
+.mk-suurennos--tayteen .mk-nosto__suurennoskuva {
+    max-height: none;
+}
+
 .mk-nosto__suurennosteksti {
     margin-top: 8px;
     font-size: 14.5px;
