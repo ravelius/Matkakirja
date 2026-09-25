@@ -5399,3 +5399,7 @@ Laitetestaajan iPad-raportti on PR #3153:ssa (mergettävissä) → Julkaisijan d
 ## POI-GENETIIVIVIKA (Rouenin., Le Mansin 24.) EI OLE ALUENIMISSA VAAN LYHENNYSSAANNOSSA (18 MERKKIA + PISTE, SAMA WEBISSA): 244 PAAKARTAN NOSTOLTA PUUTTUU nimio (FRA 14) → FABLE: LINJA A — NIMIO DATAAN KOHTEITTAIN, SAANTOA EI MUUTETA; KARTTASEPPA TEKEE EHDOTUSLISTAN, SISALTOKIRJURI TARKISTAA JA VIE DATAAN, SIIRTOSEPPA PAKETTIVERSIO (25.9.2026 klo 13.07)
 
 Lista PR:nä docs/raportit/nimiot-ehdotus-20260925.md (tunniste, nimi, nykyinen lyhennys, ehdotus ≤ 18 merkkiä, ei genetiiviä eikä pistettä). Karttasepän Z9-sync ajaa setsid-irrotettuna klo 12.55 alkaen (LaunchAgentin esti luokitin). Vaihtoehdot B (… pisteen sijaan) ja C (raja 24) hylätty: web on malli, ratkaisu on datassa.
+
+## NIMIOT 244 NOSTOLLE DATAAN (SISALTOKIRJURI PR #3162, 82 TIEDOSTOA, TESTIT 83/83; POIKKEUS UTRECHTIN DOM → 'Utrecht'; Elaintaky-rivit.js LUKI nimio-KENTAN JO) → SIIRTOSEPPA TEKEE PAKETTIVERSION MERGEN JALKEEN JA ILMOITTAA NATIIVISEPALLE + NATIIVI-UI:LLE; TURISTIOPAS ERA 3 PR #3159, ERAT 4–5 AGENTEILLA (25.9.2026 klo 13.16)
+
+Poltto valmis 10.00, Z9-vienti ämpäriin käynnissä 12.55 alkaen, arvio valmis ~14.10; kuorma 685 (Unity-vienti build 13, Codex-runtime, Evoto, Creative Cloud).
