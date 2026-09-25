@@ -108364,6 +108364,247 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German East Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Kilimanjaro: Tourism industry, Trekking
+       * routes, Marangu Route, Safety, Climate; Kilimanjaro National
+       * Park, Kilimanjaro International Airport, Marangu, Altitude
+       * sickness, Kilimanjaro Christian Medical Centre) ja Wikivoyagen
+       * sivuilta Mount Kilimanjaro, Moshi, Arusha, Tanzania, Dar es
+       * Salaam ja Altitude sickness — teksti omaa. Nostojen aiheita
+       * (näkymä savannilta, kolme tulivuorikartiota, Rebmann, Meyerin
+       * ensinousu, Saksan Itä-Afrikka) eikä luonto-kategorian aiheita
+       * (ilmastovyöhykkeet, jättiruusukoivu, jättiloopelia, norsut,
+       * sulava jäätikkö) toisteta. Hintoja ja maksujen summia ei
+       * kirjata, koska puiston maksut ja lentoyhteydet muuttuvat;
+       * Western Breachin sulkeminen tammikuussa 2024 on Wikipedian
+       * tieto, joka voi vanhentua. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Uhuru Peakin kyltin kuva on tekijän vapaaseen käyttöön
+       * luovuttama (PD-self). Pystykuva: vaeltajat Barrancon
+       * seinämällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbers Barranco Wall Kilimanjaro Tanzania.jpg',
+          lyhyt: 'Vaeltajat kiipeävät käsin ja jaloin Barrancon seinämää Kilimanjaron etelärinteellä.',
+          selite: 'Retkeläiset ja oppaat nousevat reppuineen jyrkkää, '
+            + 'jäkälän laikuttamaa laavakivirinnettä Barrancon seinämällä, '
+            + 'jonka Machamen ja Lemoshon reitit ylittävät; yllä on '
+            + 'pilvien vaalentama taivas.',
+          lahde: 'Altezzatravel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kilimanjarolle ei nousta omin päin: kansallispuistoon '
+          + 'pääsee vain luvan saaneen oppaan kanssa, ja useimmat retket '
+          + 'lähtevät Moshista tai Arushasta, joiden puolivälissä on '
+          + 'Kilimanjaron kansainvälinen lentokenttä. Huipulle johtaa '
+          + 'seitsemän virallista reittiä, joista yhdellä nukutaan majoissa '
+          + 'ja muilla teltoissa. Vaikein osa ei ole kiipeily vaan ohut '
+          + 'ilma: liian nopea aikataulu on vuoristotaudin tavallisin syy, '
+          + 'ja jokainen lisäpäivä parantaa mahdollisuuksia päästä perille. '
+          + 'Retkikuntaan kuuluu oppaiden lisäksi kantajia ja kokki, ja '
+          + 'kuivimmat kiipeilykuukaudet osuvat kahden sadekauden väliin.',
+        artikkeli: {
+          nimi: 'Matkailijan Kilimanjaro',
+          teksti: 'Kilimanjarolla hitaasti kulkeva pääsee useimmiten pisimmälle.',
+          nosto: 'Huipulle lähdetään keskiyön tienoilla, kun sora on vielä '
+            + 'jäässä, ja kraatterin reunalla odottaa auringonnousu.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Moshin ja Arushan kautta',
+              teksti: 'Kilimanjaron kansainvälinen lentokenttä avattiin 1971, '
+                + 'ja se on Moshin ja Arushan kaupunkien puolivälissä: '
+                + 'Moshiin on noin puolen tunnin ja Arushaan noin 45 minuutin '
+                + 'ajomatka. Euroopasta sinne lennetään suoraan Amsterdamista, '
+                + 'ja vaihtoyhteyksiä on esimerkiksi Addis Abeban, Dohan ja '
+                + 'Nairobin kautta, mutta reitit muuttuvat. Halvemman lennon voi löytää Dar es '
+                + 'Salaamiin, josta bussimatka Moshiin kestää seitsemästä '
+                + 'kahdeksaan tuntia, tai Nairobiin, josta pääsee bussilla '
+                + 'rajan yli Arushaan ja Moshiin. Wikivoyage varoittaa '
+                + 'säästämästä bussiyhtiössä, sillä halvimpien turvallisuus '
+                + 'on usein heikko. Moshi on vuoren etelärinteen juurella, '
+                + 'ja kiipeily on sen ilmeisin syy matkustaa sinne. '
+                + 'Kaupungista pääsee vuoren kyliin, kuten Machameen ja '
+                + 'Maranguun, daladaloilla eli pienillä minibusseilla, joiden '
+                + 'rahastaja huutaa määränpään ohi ajaessa. Kansallispuiston '
+                + 'päämaja on Maranguissa noin 44 kilometrin päässä Moshista. '
+                + 'Retken voi varata kotimaasta tai paikan päältä, mutta '
+                + 'kannattaa asioida toimistossa eikä kadulla kaupustelevan '
+                + 'kanssa. Useimmat matkailijat tarvitsevat Tansaniaan viisumin, '
+                + 'jonka voi hakea verkossa etukäteen tai lentokentältä, ja '
+                + 'kansallispuistojen maksut peritään ulkomaalaisilta '
+                + 'Yhdysvaltain dollareina. Maksut ja viisumisäännöt '
+                + 'muuttuvat, joten ne kannattaa tarkistaa juuri ennen matkaa. '
+                + 'Rokotuksista ja malarian estolääkityksestä puhutaan '
+                + 'lääkärin kanssa hyvissä ajoin: keltakuumerokotustodistusta '
+                + 'voidaan kysyä, jos matka jatkuu naapurimaihin.',
+              kuva: [
+                {
+                  tiedosto: 'Kilimanjaro Airport Terminal Building.jpg',
+                  lyhyt: 'Kilimanjaron lentokentän terminaali on Moshin ja Arushan puolivälissä.',
+                  selite: 'Matkustajat kävelevät matalan terminaalirakennuksen '
+                    + 'edustalla lokakuussa 2014; asfaltilla seisoo '
+                    + 'matkatavaroiden lastausauto, ja julkisivun edessä kasvaa '
+                    + 'kukkivia pensaita.',
+                  lahde: 'Peter Makholm, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Mount Kilimanjaro from Moshi.jpg',
+                  lyhyt: 'Kibon lumihuippu näkyy kirkkaalla säällä Moshin kattojen yllä.',
+                  selite: 'Moshin keskustan talojen takana kohoaa Kilimanjaron '
+                    + 'loiva massiivi, jonka huipulla on lunta; kuva on otettu '
+                    + 'joulukuussa 2019.',
+                  lahde: 'Ganeshpednekar, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Daladala Moshi.jpg',
+                  lyhyt: 'Daladala-minibussi vie Moshista vuoren juurella oleviin kyliin.',
+                  selite: 'Tumma, vaaleanpunaraitainen minibussi ajaa Moshin '
+                    + 'kadulla lokakuussa 2007; tuulilasin yläreunassa on sen '
+                    + 'nimi ja keulassa reitin paikannimet.',
+                  lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY 2.5)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Seitsemän reittiä huipulle',
+              teksti: 'Kilimanjaron kansallispuistossa saa kulkea vain '
+                + 'nimetyillä reiteillä ja luvan saaneen oppaan kanssa. '
+                + 'Suosituimpana pidetty Marangu on niin sanottu '
+                + 'Coca-Cola-reitti ja ainoa, jolla yövytään majoissa. '
+                + 'Portilta noustaan sademetsän läpi Mandaran majalle, sitten '
+                + 'nummen poikki Horomboon ja lopulta Mawenzin ja Kibon '
+                + 'välisen satulan yli Kibon majalle noin 4700 metriin. '
+                + 'Telttavarusteita ei tarvita, joten Marangu on usein '
+                + 'halvin, mutta lyhyen aikataulunsa vuoksi siltä pääsee '
+                + 'huipulle harvemmin kuin muilta reiteiltä. Machame, jota '
+                + 'sanotaan viskireitiksi, on lounaasta nouseva telttareitti '
+                + 'ja monen mielestä maisemiltaan kaunein. Lemosho lähtee '
+                + 'lännestä Londorossin portilta ja kulkee Shiran ylätasangon '
+                + 'yli; sen ensimmäisenä päivänä ryhmän mukana voi kulkea '
+                + 'aseistettu vartija, koska metsissä liikkuu puhveleita ja '
+                + 'norsuja. Rongai nousee koillisesta Kenian rajan tuntumasta, '
+                + 'ja sitä pidetään telttareiteistä helpoimpana. Lisäksi ovat '
+                + 'Umbwen ja Shiran reitit sekä vähintään seitsemän päivän '
+                + 'Northern Circuit, ja Mwekan reittiä pitkin vain '
+                + 'laskeudutaan. Jyrkkä Western Breach '
+                + 'suljettiin tammikuussa 2024, kun rankkasateet olivat '
+                + 'huuhtoneet rinnettä ja irrottaneet kiviä. Jos huippu ei '
+                + 'houkuttele, Maranguin portilta voi tehdä oppaan kanssa '
+                + 'päivävaelluksen sademetsän läpi Maundin kraatterille ja '
+                + 'nähdä matkalla apinoita ja lintuja.',
+              kuva: {
+                tiedosto: 'Horombo Huts (17053013102).jpg',
+                lyhyt: 'Maranguin reitillä yövytään majoissa, kuten näissä Horombon mökeissä.',
+                selite: 'Horombon tummat, jyrkkäkattoiset puumökit seisovat '
+                  + 'pensaikkoisella nummella noin 3700 metrin korkeudessa, ja '
+                  + 'taustalla kohoaa Kibon lumihuippu helmikuussa 2009.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Hitaasti ylös, heti alas',
+              teksti: 'Kilimanjarolle ei tarvita köysiä, mutta 5895 metrin '
+                + 'korkeus koettelee hyväkuntoisiakin. Heinä- ja elokuussa '
+                + '2005 tehdyssä tutkimuksessa huipulle pääsi 61 prosenttia '
+                + 'yrittäjistä, ja 77 prosenttia sai äkillisen vuoristotaudin '
+                + 'oireita: päänsärkyä, pahoinvointia ja ruokahaluttomuutta. '
+                + 'Vakavimmat muodot, keuhko- ja aivoedeema, ovat '
+                + 'hengenvaarallisia, ja niiden riskiä kasvattavat liian '
+                + 'kiireiset aikataulut, joihin kalliit päivämaksut '
+                + 'houkuttelevat. Moshin Kilimanjaro Christian Medical Centren '
+                + 'mukaan tammikuun 1996 ja lokakuun 2003 välillä vuorella '
+                + 'kuoli 25 kiipeilijää, heistä 14 vuoristotautiin. Swahiliksi hitaasti '
+                + 'on pole pole, ja se on vuoren paras ohje. Yli 3000 metrissä '
+                + 'nukkumiskorkeutta suositellaan nostettavaksi vain noin 300 '
+                + 'metriä yössä, ja moni reitti noudattaa periaatetta nouse '
+                + 'korkealle, nuku alempana: Machamella käydään päivällä Lava '
+                + 'Towerilla 4630 metrissä ja yövytään Barrancossa noin '
+                + '650 metriä alempana. Oireiden alkaessa ei nousta '
+                + 'ylemmäs, ja jos olo pahenee, laskeudutaan heti, yölläkin — '
+                + 'jo sadan metrin lasku auttaa. Asetatsolamidi nopeuttaa '
+                + 'sopeutumista, mutta se on reseptilääke eikä korvaa hidasta '
+                + 'nousua. Huippuyönä lähdetään Barafun leiristä tai Kibon '
+                + 'majalta keskiyön tienoilla, koska jäätynyttä soraa on '
+                + 'helpompi nousta, ja aamulla kraatterin reunalta näkee '
+                + 'auringonnousun.',
+              kuva: {
+                tiedosto: 'Kilimanjaro Uhuru Peak Sign.jpg',
+                lyhyt: 'Uhuru Peakin kyltti onnittelee 5895 metriin ehtinyttä kulkijaa.',
+                selite: 'Huurteinen puukyltti Uhuru Peakilla kertoo englanniksi, '
+                  + 'että kulkija on Afrikan korkeimmassa kohdassa 5895 '
+                  + 'metrissä; laudoissa on retkikuntien tarroja, ja taustalla '
+                  + 'näkyy pilvimeri.',
+                lahde: 'Arne d, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Kantajat, oppaat ja kokki',
+              teksti: 'Ilman opasta vuorelle ei pääse: kiipeilyluvan saa vain '
+                + 'luvan saaneen oppaan kanssa, ja oppaan voi palkata ennen '
+                + 'matkaa tai perillä. Retkikuntaan kuuluu vaeltajien ja '
+                + 'oppaiden lisäksi kokki ja kantajia, jotka kuljettavat '
+                + 'teltat, ruoan ja vaeltajien isot laukut leiristä '
+                + 'toiseen. '
+                + 'Vuonna 2007 vuori antoi epäsäännöllistä, kausiluonteista '
+                + 'työtä noin 11 000 oppaalle, kantajalle ja kokille, ja '
+                + 'heidän huonoista työoloistaan ja palkoistaan on esitetty '
+                + 'huolta. Esimerkiksi Maranguun tulee nuoria eri puolilta '
+                + 'Tansaniaa kantajiksi ja oppaiksi. Kun valitsee '
+                + 'retkiyritystä, kannattaa kysyä, miten se kohtelee ja '
+                + 'varustaa kantajansa: Wikivoyagen mukaan monen kantajan '
+                + 'varusteet eivät riitä vuoren oloihin, ja moni on '
+                + 'kiitollinen, jos vaeltaja voi antaa omiaan. '
+                + 'Retken hinnan päälle maksetaan juomarahat oppaille, '
+                + 'kokeille ja kantajille, ja ne kannattaa antaa jokaiselle '
+                + 'itse eikä yhdelle ihmiselle jaettavaksi. Ruoan laatu '
+                + 'riippuu yrityksestä, joten omat pähkinät ja suklaa ovat '
+                + 'hyvä vara. Kiipeilylupaan on ikäraja kymmenen vuotta.',
+              kuva: {
+                tiedosto: 'Porter at Mount Kilimandjaro 01.jpg',
+                lyhyt: 'Kantaja kuljettaa retkikunnan tavaroita niskallaan sumuisella rinteellä.',
+                selite: 'Kantaja nousee soraista polkua kumarassa ison vihreän '
+                  + 'säkin ja retkituolien kanssa, ja hänen takanaan tulee '
+                  + 'lisää kantajia kuormineen; kuva on otettu marraskuussa '
+                  + '2017.',
+                lahde: 'MelissaW, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sadekaudet ja pakkasyö',
+              teksti: 'Päiväntasaajan tuntumassa ei ole kesää ja talvea vaan '
+                + 'kuivia ja sateisia kausia. Sadekausia on kaksi: '
+                + 'maaliskuusta toukokuuhun ja marraskuun tienoilla. '
+                + 'Tammi- ja helmikuu ovat lämpimimpiä, huhti- ja '
+                + 'toukokuu sateisimpia, kesä- ja heinäkuu viileimpiä ja '
+                + 'elo- ja syyskuu kuivimpia, ja Wikivoyage suosittelee '
+                + 'säänsä puolesta tammi-, helmi- ja syyskuuta. Vuori tekee '
+                + 'silti oman säänsä: lunta voi sataa mihin vuodenaikaan '
+                + 'tahansa, ja sadevaatteet kuuluvat mukaan kuivallakin '
+                + 'kaudella. Portilla voi olla helle, mutta huipun '
+                + 'keskilämpötila on noin seitsemän astetta pakkasta, ja '
+                + 'kirkkaina öinä ja tuulessa on paljon kylmempää, joten '
+                + 'huippuyötä varten tarvitaan lämpimiä vaatekerroksia, '
+                + 'pipo, lapaset ja otsalamppu. Juoda pitää paljon, ja kaikki '
+                + 'vuoren vesi keitetään tai puhdistetaan, koska ihmisjätteen '
+                + 'huolimaton hävittäminen on tehnyt vedestä terveysriskin. Yöpyä saa vain '
+                + 'merkityillä leiripaikoilla, ei luolissa. Sähköä vuorella ei '
+                + 'ole, mutta matkapuhelinverkko kuuluu monin paikoin jopa '
+                + 'huipun tuntumassa, joten varavirtalähde kannattaa pakata.',
+              kuva: {
+                tiedosto: 'Rainbow and Barranco wall, Barranco camp, Kilimanjaro region, Tanzania.jpg',
+                lyhyt: 'Sateenkaari kaartuu Barrancon leirin telttojen ja seinämän yllä.',
+                selite: 'Pilvien peittämän laakson reunalla kohoaa Barrancon jyrkkä '
+                  + 'kallioseinämä, ja sen edessä leiripaikalla on kymmeniä '
+                  + 'värikkäitä telttoja; kuva otettiin joulukuun 2016 '
+                  + 'lopulla illalla.',
+                lahde: 'KpokeJlJla, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
