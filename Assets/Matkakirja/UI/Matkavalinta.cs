@@ -278,6 +278,8 @@ namespace Matkakirja.Natiivi
             if (liikuEstetty || !sallittu) return;
             if (liukuAuki) { SuljeLiuku(); return; }
             liukuAuki = true;
+            // B1 (löydös 57): matkasessio alkaa ja kaupungin naapurireitit näkyvät heti (web liukuAuki).
+            if (PeliOhjain.Instanssi != null) PeliOhjain.Instanssi.LiukuAuki = true;
             // Web: liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
             if (UiNakymat.Olemassa) UiNakymat.Hae().Chat?.Sulje();
             RakennaLiuku();
@@ -289,6 +291,7 @@ namespace Matkakirja.Natiivi
         {
             if (!liukuAuki) return;
             liukuAuki = false;
+            if (PeliOhjain.Instanssi != null) PeliOhjain.Instanssi.LiukuAuki = false;
             liikuNappi.RemoveFromClassList("mk-valittu");
             Rakenne.Nayta(liuku, false, 150);
         }
