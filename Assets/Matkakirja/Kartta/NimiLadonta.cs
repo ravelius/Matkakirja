@@ -89,21 +89,29 @@ namespace Matkakirja
 
         static long Avain(int x, int y) => ((long)x << 32) ^ (uint)y;
 
-        public bool Osuu(Ruutulaatikko a)
+        public bool Osuu(Ruutulaatikko a) => Osuu(a, false, default);
+
+        /// <summary>Osuuko varauksiin muuten kuin täsmälleen laatikon <paramref name="ohita"/> kohdalta (kaupungin oma piste).</summary>
+        public bool OsuuPaitsi(Ruutulaatikko a, Ruutulaatikko ohita) => Osuu(a, true, ohita);
+
+        static bool Sama(Ruutulaatikko a, Ruutulaatikko b) => a.X0 == b.X0 && a.Y0 == b.Y0 && a.X1 == b.X1 && a.Y1 == b.Y1;
+
+        bool Osuu(Ruutulaatikko a, bool ohitetaan, Ruutulaatikko ohita)
         {
+            bool Estaa(Ruutulaatikko b) => a.Leikkaa(b) && !(ohitetaan && Sama(b, ohita));
             int x0 = (int)Math.Floor(a.X0 / solu), x1 = (int)Math.Floor(a.X1 / solu);
             int y0 = (int)Math.Floor(a.Y0 / solu), y1 = (int)Math.Floor(a.Y1 / solu);
             // Hyvin suuri laatikko (valtameri lähellä): suora läpikäynti on halvempi kuin sadat solut.
             if ((long)(x1 - x0 + 1) * (y1 - y0 + 1) > laatikot.Count)
             {
-                foreach (var b in laatikot) if (a.Leikkaa(b)) return true;
+                foreach (var b in laatikot) if (Estaa(b)) return true;
                 return false;
             }
-            foreach (int i in suuret) if (a.Leikkaa(laatikot[i])) return true;
+            foreach (int i in suuret) if (Estaa(laatikot[i])) return true;
             for (int x = x0; x <= x1; x++)
                 for (int y = y0; y <= y1; y++)
                     if (hila.TryGetValue(Avain(x, y), out var l))
-                        foreach (int i in l) if (a.Leikkaa(laatikot[i])) return true;
+                        foreach (int i in l) if (Estaa(laatikot[i])) return true;
             return false;
         }
 
@@ -607,6 +615,34 @@ namespace Matkakirja
             return a.Indeksi.CompareTo(b.Indeksi);
         }
 
+        /// <summary>Kaupungin ehdokas ladonnassa (KaupunkiMerkit): piste ja nimiö ruudulla.</summary>
+        public struct KaupunkiEhdokas
+        {
+            public Ruutulaatikko Piste, Nimio;
+            /// <summary>Nimi näkyy väistöstä riippumatta (valittava kaupunki).</summary>
+            public bool Pakko;
+            /// <summary>Nimiöt ylipäätään sallittu (kerros "nimiot" tai linssinimet); false = vain piste.</summary>
+            public bool Sallittu;
+        }
+
+        /// <summary>
+        /// KAUPUNKIEN LADONTA (löydös 50 vaihe 2, web js/karttanimet.js ladoRuutunimet): varauksissa on jo nostojen
+        /// ikonit; ensin varataan KAIKKIEN kaupunkien pisteet (pelimerkit pysyvät paikallaan), sitten nimiöt
+        /// järjestyksessä. Nimiö näytetään, jos se ei osu mihinkään varattuun paitsi omaan pisteeseensä (nimiö alkaa
+        /// pisteen keskeltä); pakollinen näytetään aina. Näytetty nimiö varataan. naytetaan[i] = ehdokkaan i nimiö.
+        /// </summary>
+        public static void LadoKaupungit(List<KaupunkiEhdokas> ehdokkaat, Ruutuvaraukset varaukset, List<bool> naytetaan)
+        {
+            naytetaan.Clear();
+            foreach (var e in ehdokkaat) varaukset.Varaa(e.Piste);
+            foreach (var e in ehdokkaat)
+            {
+                bool nakyy = e.Pakko || (e.Sallittu && !varaukset.OsuuPaitsi(e.Nimio, e.Piste));
+                if (nakyy) varaukset.Varaa(e.Nimio);
+                naytetaan.Add(nakyy);
+            }
+        }
+
         /// <summary>
         /// Noston merkki ja nimiö ruudulla (Natiivi-UI:n NostotKartalla.Laatikko samoin mitoin): symboli 20 × 20 pt
         /// pisteen ympärillä, nimiö oikealla 0,55 em/merkki (11 pt, tärkeillä 13,5 pt). x, y pikseleinä, kerroin
@@ -661,17 +697,18 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// LADOTTUJEN NIMIEN LAATIKOT (webin nimet.laatikot() -vastine): yhteisen varauslistan <paramref name="kaupunkeja"/>
-        /// ensimmäistä laatikkoa (KaupunkiMerkit: nimiö ja piste) ja näytettäväksi ladottujen aluenimien laatikot ilman
-        /// väistön varaa. <paramref name="ladotut"/> on <see cref="Lado"/>n tulos samasta (jo järjestetystä)
-        /// ehdokaslistasta, joten se on ehdokkaiden järjestyksessä.
+        /// LADOTTUJEN NIMIEN LAATIKOT (webin nimet.laatikot() -vastine): yhteisen varauslistan kaupunkiosuus
+        /// [<paramref name="alku"/>, <paramref name="loppu"/>) (KaupunkiMerkit: pisteet ja nimiöt; alussa olevat
+        /// nostoikonit ohitetaan) ja näytettäväksi ladottujen aluenimien laatikot ilman väistön varaa.
+        /// <paramref name="ladotut"/> on <see cref="Lado"/>n tulos samasta (jo järjestetystä) ehdokaslistasta, joten
+        /// se on ehdokkaiden järjestyksessä.
         /// </summary>
-        public static void NimienLaatikot(IReadOnlyList<Ruutulaatikko> varaukset, int kaupunkeja, List<Ehdokas> ehdokkaat,
+        public static void NimienLaatikot(IReadOnlyList<Ruutulaatikko> varaukset, int alku, int loppu, List<Ehdokas> ehdokkaat,
             List<int> ladotut, List<Ruutulaatikko> ulos)
         {
             ulos.Clear();
-            int n = Math.Min(kaupunkeja, varaukset.Count);
-            for (int i = 0; i < n; i++) ulos.Add(varaukset[i]);
+            int n = Math.Min(loppu, varaukset.Count);
+            for (int i = Math.Max(0, alku); i < n; i++) ulos.Add(varaukset[i]);
             int j = 0;
             foreach (var e in ehdokkaat)
             {
