@@ -458,7 +458,7 @@ namespace Matkakirja.Kartta.Testit
 
         [Testi] static void LukittuEiVaihdaKylkea()
         {
-            // Web LUKKO: lukittu nimi pysyy kyljessään; varattuna se piiloutuu eikä hyppää toiselle puolelle.
+            // Web LUKKO: lukittu nimi pysyy kyljessään niin kauan kuin paikka on vapaa; varattuna se etsii uuden paikan.
             var vasen = new NimiLadonta.NimenPaikka(-7.5f, 0, NimiLadonta.NimenAnkkuri.Loppu);
             var v = new Ruutuvaraukset(); v.Aloita(1);
             var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
@@ -467,7 +467,7 @@ namespace Matkakirja.Kartta.Testit
             v.Aloita(2);
             v.Varaa(new Ruutulaatikko(0, 190, 95, 210));
             NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200, lukittu: true, lukko: vasen) }, null, Ruutu, 1f, v, nayta, paikat);
-            Oleta.Tosi(!nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "varattu lukko piiloon, ei kyljenvaihtoa");
+            Oleta.Tosi(nayta[0] && paikat[0].Ank != NimiLadonta.NimenAnkkuri.Loppu, "varattu lukko vapautuu, uusi paikka: " + paikat[0]);
         }
 
         [Testi] static void LaudanOmaAsetteluEnsin()

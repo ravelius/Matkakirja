@@ -780,9 +780,12 @@ namespace Matkakirja
                 if (e.Pakko) nakyy = true;
                 else if (!e.Sallittu) nakyy = false;
                 else if (e.Leveys <= 0) nakyy = !varaukset.OsuuPaitsi(e.Nimio, e.Piste);
-                else if (e.Lukittu) nakyy = !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste);
+                else if (e.Lukittu && !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste)) nakyy = true;
                 else
                 {
+                    // Lukittu paikka varattu (esim. noston ikoni tai nappula tuli päälle): lukko vapautuu ja nimi etsii
+                    // uuden paikan, eikä jää piiloon niin kauaksi aikaa kuin kaupunki on ruudulla (build 13 -kuva b13-
+                    // yhdistelmä: Pariisi ja Marseille ilman nimeä). Web näyttää lukitun nimen, kun sille löytyy paperia.
                     nakyy = false;
                     Ruutulaatikko? pino = null;
                     if (pinot != null)
