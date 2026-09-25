@@ -4,11 +4,12 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260925-yo.md`](viesti-pelikoodari-luovutus-20260925-yo.md).
-   ENSIMMÄISENÄ löydös 49 (iPadilla ei kuulu ääniä, build 12, etusijalla kaikkeen): mittaa laitteella
-   `aani mittaa` -komennolla Natiivisepän laitekäännöksestä b12q (juna/b12 + pelikoodari/aanet-kuuluviin d14f766).
-   SEN JÄLKEEN löydös 52 (saapumisen välikortti "ATEENA · PÄIVÄ 1/80", webin kaava mitattu). Lisäksi
-   eleet-kierron video, löydös 48:n kamerapyyntö ja pariteettiajon tila.
+   [`viesti-pelikoodari-luovutus-20260925.md`](viesti-pelikoodari-luovutus-20260925.md).
+   PÄÄTEEMA build 13: LIIKKUMISEN JA REITTIEN PARITEETTIKIERROS, lista
+   [`liikkuminen-pariteetti-20260925.md`](liikkuminen-pariteetti-20260925.md) (rivijako Pelikoodari / Natiiviseppä /
+   Natiivi-UI). ENSIMMÄISENÄ todenna simulaattorissa haara `pelikoodari/liikkuminen` fb0a30e (juna/b13 + liikkuminen):
+   55 automaattiheitto, 53/54 vaiennus, 58 maailmahyppy, 57/60 reitit, 56 kohdesovitus, 59 lehti; sitten merge-pyyntö
+   ja videopari. Lisäksi 61 (kortin kamera, nyt b13:ssa), 63 ja 66/67 (mittaukset `proto-3d/lokit/loydos66-67/`).
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
@@ -36,9 +37,12 @@ haarat näkyvät ilman pushia) ja ajetaan VAIN omissa simulaattoreissa (pariteet
 993F8873, -iPad11-834 C1D5E34C, -iPad13 88939C12). Laitekäännökset (iso iPad 00008103) tekee Natiiviseppä;
 laitteella `proto-3d/Matkakirja-proto/tyokalut/ipad.sh peli|hae|konsoli`. Sammuta simulaattorit, joita et tarvitse.
 
-**JUMI → KORTTI** (omistaja 24.9.): jos jäät jumiin (luokitin estää, päätös puuttuu, työ ei etene), tee aina
-AskUserQuestion-kortti omistajalle JA samalla PushNotification (status proactive) "Pelikoodari: kysymyskortti
-auki — <aihe>"; lisäksi yksi rivi Fablelle lokia varten.
+**JUMI → FABLE** (omistaja 25.9. klo 04.4x, korvaa JUMI → KORTTI): jos jäät jumiin (luokitin estää, päätös puuttuu,
+työ ei etene), lähetä Fablelle yksi viesti (tilanne, vaihtoehdot, oma suositus) ja jatka muuta työtä; ei korttia
+omistajalle. Lupaikkunasta ilmoitetaan Fablelle heti.
+
+**PARITEETTISIMULAATTORIT** (Fable 25.9.): pidetään kaikki neljä; `proto-3d/tyokalut/siivoa-pariteettisimut.sh --aja`
+jokaisen pariteettiajon lopussa (Clauden omaa työkalua, ei tarvitse omistajaa).
 
 **VARAKANAVAT** (omistaja 24.9. klo 23.5x): SendMessage ~10 viestiä omistajan vuoroa kohden. Kun raja täyttyy tai
 "Failed to send", käytä `mcp__ccd_session_mgmt__send_message` session id:llä; jos molemmat estyvät,
