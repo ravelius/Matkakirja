@@ -76,6 +76,7 @@ export const HAHMOTELMA_EST = [
   ...EUROOPAN_KADONNEET.EST,
   {
     id: 'hahmotelma-soomaa',
+    nimio: 'Soomaa',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-soomaa-63ffb84a.jpg',
       lyhyt: 'Tulvan peittämä tie Soomaalla, etualalla koverretun kanootin keula.',
@@ -153,6 +154,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-vilsandi',
+    nimio: 'Vilsandi',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-vilsandi-46292358.jpg',
       lyhyt: 'Iltataivas punertaa merenlahden yllä, kaukana Vilsandin majakan siluetti.',
@@ -228,6 +230,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-endla',
+    nimio: 'Endla',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-endla-5166bcd5.jpg',
       lyhyt: 'Näkötornista nähty lankkupolku, joka halkoo suolampia Endlan alueella.',
@@ -916,6 +919,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-kuremae',
+    nimio: 'Pühtitsa',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-kuremae-b478fa87.jpg',
       lyhyt: 'Pühtitsan luostarin pääkirkko tummine kupoleineen.',
@@ -1751,6 +1755,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-dominikaaniluostari',
+    nimio: 'Dominikaanit',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/est-nosto-dominikaaniluostari-fe5c240c.jpg',
       lyhyt: 'Katariina käik, ahdas keskiaikainen käytävä Tallinnan vanhassakaupungissa.',

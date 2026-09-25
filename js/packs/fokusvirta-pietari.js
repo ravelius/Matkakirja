@@ -1163,7 +1163,7 @@ export const FOKUSVIRTA_PIETARI = {
        * ainoa, jossa käsky annettiin veden painolle eikä ihmisille.
        */
       id: 'pietarhovin-suihkulahteet',
-      nimio: 'Pietarhovin kaskadi',
+      nimio: 'Pietarhovi',
       otsikko: 'Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua',
       lunastus: [
         'Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, '

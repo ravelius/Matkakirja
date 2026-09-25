@@ -179,6 +179,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-geevor-tin',
+    nimio: 'Geevor',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-geevor-tin-799121e1.jpg',
       lyhyt: 'Geevorin tinakaivoksen kivi- ja peltirakennuksia Cornwallin rannikolla.',
@@ -284,6 +285,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-liverpool-docks',
+    nimio: 'Albert Dock',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-liverpool-docks-0294c2d5.jpg',
       lyhyt: 'Ilmakuva Liverpoolin Albert Dockista ja Merseyjoesta.',
@@ -345,6 +347,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-oxford',
+    nimio: 'Radcliffe Camera',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-oxford-597505e4.jpg',
       lyhyt: 'Radcliffe Camera ja sitä ympäröivät Oxfordin college-rakennukset.',
@@ -579,6 +582,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-stockton-darlington',
+    nimio: 'Rautatie 1825',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-stockton-darlington-f1532c31.jpg',
       lyhyt: 'Veturi Locomotion No. 1 näytteillä Darlingtonin rautatiemuseossa.',
@@ -863,6 +867,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-dover-strait',
+    nimio: 'Dover',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-dover-strait-c98ece4a.jpg',
       lyhyt: 'Doverin liitukalliot kohoavat jyrkkinä meren yllä.',
@@ -925,6 +930,7 @@ export const HAHMOTELMA_GBR = [
   },
   {
     id: 'hahmotelma-york-minster',
+    nimio: 'York Minster',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/gbr-nosto-york-minster-a0b66d99.jpg',
       lyhyt: 'Yorkin tuomiokirkon länsijulkisivun mittolat ja ikkunakoristelu.',

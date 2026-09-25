@@ -401,6 +401,7 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'petajavedenvanhakirkko',
+    nimio: 'Petäjävesi',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/fin-kohde-petajavedenvanhakirkko-eb06c20d1502.jpg',
       lyhyt: 'Petäjäveden vanhan kirkon paanukatto ja hirsiseinät.',

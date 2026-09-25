@@ -862,6 +862,7 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'lundintuomiokirkko',
+    nimio: 'Lund',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lundintuomiokirkko-e661c473.jpg',
       lyhyt: 'Lundin tuomiokirkon kaksi tornia ja romaaninen julkisivu.',
