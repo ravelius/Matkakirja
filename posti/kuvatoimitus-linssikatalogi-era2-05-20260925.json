@@ -1,0 +1,720 @@
+{
+  "erä": "linssikatalogi-era2-05-20260925",
+  "tila": "40 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 10,
+    "cc_not_found": 0,
+    "objects": 40
+  },
+  "entries": [
+    {
+      "id": "I4",
+      "nimi": "Persian puutarhat ja kaupungit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Persian puutarhojen ja kaupunkien solmut piirtyvät Iranin ylängölle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Persian gardens and cities in Iran, 550 BCE–1722. Oblique antique parchment relief map centered on the Iranian plateau with recognizable Caspian Sea to the north and Persian Gulf to the south. Four warm gold nodes near Pasargadae, Persepolis, Isfahan and Shiraz, connected by delicate chronological routes. Tiny embedded details evoke the stone columns of Persepolis and geometrically planted Persian gardens with water channels near Isfahan and Shiraz; no people or readable script. Cream/sepia land, dark teal water, mountain relief, brass glow, subtle unlabeled time arc along lower edge and gentle vignette. The four Iranian sites remain geographically plausible and readable at thumbnail scale. No UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/I4-havainne.jpg",
+            "objectKey": "linssikatalogi/I4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249663,
+            "sha256": "9b553bd0eaed5353aecbfa70fbf352c244d71f8fecdb5610dee480cfc14df14c"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/I4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/I4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36262,
+            "sha256": "3e25e952b62793653a078e76cf00811cf613e79577a19ebb039ddf5c316c5b23"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Isfahanin suuri aukio Cornelis de Bruijnin 1700-luvun alun kuvassa.",
+        "creator": "Cornelis de Bruijn",
+        "title": "Isfahan Maidan around 1714",
+        "year": "n. 1714",
+        "collection": "New York Public Library Digital Collections, 510d47e1-ce1d-a3d9-e040-e00a18064a99",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Isfahan_Maidan_around_1714.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Isfahan%20Maidan%20around%201714.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen eurooppalainen matkailijankuva Safavidien kaupungista; kuvateksti ei esitä sitä koko Iranin näkökulmana.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/I4-cc.jpg",
+            "objectKey": "linssikatalogi/I4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 284225,
+            "sha256": "aaa2e41ad9e7a2617afed67800c2b75f187397848856953c8b624a57d798f210"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/I4-cc-480.jpg",
+            "objectKey": "linssikatalogi/I4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 53162,
+            "sha256": "d7fffde3cc532928a14ec7f72ed6f52868c8758a64e0167a95d770cdbd5e632d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J2",
+      "nimi": "Swahilirannikko ja Suuri Zimbabwe",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Swahilirannikon satamat ja Suuri Zimbabwe yhdistyvät Itä-Afrikan kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Swahili coast and Great Zimbabwe, 1000–1500. Antique parchment relief map of East and southern Africa and the western Indian Ocean, geographically recognizable. Warm nodes accurately mark Mombasa and Zanzibar on the East African coast, Kilwa farther south, Sofala in Mozambique, and Great Zimbabwe inland in today's Zimbabwe. Delicate coastal dhow routes and one quiet inland link convey exchange without depicting people; tiny engraved coastal stone-town and dry-stone enclosure silhouettes are subordinate to geography. Cream/sepia land, dark indigo sea, brass lights, painterly relief, gentle vignette and an unlabeled time arc. Respectful history, no colonial imagery, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J2-havainne.jpg",
+            "objectKey": "linssikatalogi/J2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245720,
+            "sha256": "18e2c1d75a8a5878cc05276a3c3a1934abf8da9789b3054c1e9525823d84a726"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/J2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29133,
+            "sha256": "c8817363b6ed0736ff77f7c32be2636f7f93d64108c662000490c5c093830a6c"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Kilwa Kisiwanin kivirakennuksia 1900-luvun alun arkistovalokuvassa.",
+        "creator": "tuntematon valokuvaaja",
+        "title": "Kilwa Kisiwani, Tanzania",
+        "year": "1909–1913 (arkistokuvaryhmä)",
+        "collection": "Bulgarian Archives State Agency, 3K-7-349-22",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BASA-3K-7-349-22-Kilwa%2C_Tanzania.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BASA-3K-7-349-22-Kilwa%2C%20Tanzania.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Kilwa Kisiwanin säilyneitä suahilirakennuksia esittävä kolonialismin ajan arkistovalokuva; kuva on 1909–1913 eikä 1000–1500, eikä yksittäinen kuvattu henkilö edusta koko yhteisöä.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J2-cc.jpg",
+            "objectKey": "linssikatalogi/J2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 276407,
+            "sha256": "1490754d867460288a57ce0d26478e5db8225f8e0480e62ed1486c9c30b12cc5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J2-cc-480.jpg",
+            "objectKey": "linssikatalogi/J2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44299,
+            "sha256": "db87ccd6ded42fa0b032822141109f5fb0e2a34a1e760486e8eb0cc068c33849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J3",
+      "nimi": "Etiopia",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Aksumin, Lalibelan ja Gondarin kohteet valaisevat Etiopian ylänköä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Ethiopia from Aksum to Gondar, 100–1700. Close antique parchment relief map focused on the Ethiopian highlands and Red Sea, with the Horn of Africa and Lake Tana geographically recognizable. Three small warm brass nodes at Aksum in the far north, Lalibela in the northern highlands and Gondar near Lake Tana, linked by thin chronological routes. Subtle engraved site silhouettes show Aksumite stelae, Lalibela's rock-hewn church and Gondar stone architecture, with no portraits or readable inscriptions. Terraced highland relief, cream/sepia paper, dark blue Red Sea, cinematic warm light, restrained vignette and unlabeled brass time arc. No people, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J3-havainne.jpg",
+            "objectKey": "linssikatalogi/J3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246256,
+            "sha256": "219410a9434718d593f65985bd398d985edc31e1731ccb6e8d60d304b4c130ef"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/J3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32946,
+            "sha256": "429d984e76c588dac88d5b85b3e2a69e862ebc3b1db4e9ebde35df20284b4d53"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Gondarilainen triptyykki 1600-luvun jälkipuoliskolta.",
+        "creator": "tuntematon etiopialainen maalari; valokuva Sailko",
+        "title": "Gondarin ensimmäisen tyylin triptyykki",
+        "year": "n. 1650–1700; valokuva 2018",
+        "collection": "Ethnological Museum, Addis Ababa",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Primo_stile_di_gondar%2C_trittico_con_madonna_col_bambino_incoronata%2C_apostoli%2C_santi%2C_crocifissione%2C_resurr._e_alleanza_della_misericordia%2C_1650-1700_ca.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Primo%20stile%20di%20gondar%2C%20trittico%20con%20madonna%20col%20bambino%20incoronata%2C%20apostoli%2C%20santi%2C%20crocifissione%2C%20resurr.%20e%20alleanza%20della%20misericordia%2C%201650-1700%20ca.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Etiopialaisen kristillisen taiteen historiallinen esine; nykykuva on alkuperäistä maalausta dokumentoiva CC BY -valokuva.",
+        "attribution_note": "Sailko / Ethnological Museum Addis Ababa, CC BY 3.0; kuvasuhdesovitus, pienennys ja JPEG-pakkaus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J3-cc.jpg",
+            "objectKey": "linssikatalogi/J3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297264,
+            "sha256": "b1c9db47cf5c896982aceeb2ff0296124fc95beb7699d1faca59a703318e7b94"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J3-cc-480.jpg",
+            "objectKey": "linssikatalogi/J3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 69588,
+            "sha256": "428e84483b00f8089f11a5064fdfb8da8d81733f3b288c2f740647fce9b93151"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J5",
+      "nimi": "Siirtomaajako ja rautatiet",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Afrikan siirtomaajaon ajan rautatiehankkeet ja Suez näkyvät kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Colonial partition and railways in Africa, 1869–1914, in a sober educational tone. Antique parchment map with Africa dominant and a small visible portion of Europe at top; coastlines and Nile/Red Sea recognizable. Small warm nodes at Suez, Berlin in Europe, the Cape and the Uganda railway corridor near Kenya and Lake Victoria. A clearly broken, dotted north-south Cape-to-Cairo proposed railway line indicates an unfinished project; a shorter solid railway line appears in East Africa. Very faint uneven historical partition boundary traces sit on the map without implying modern nations. Cream/sepia relief, dark sea, brass time arc, gentle vignette. No people, triumphal empire symbols, colonial propaganda, battle, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J5-havainne.jpg",
+            "objectKey": "linssikatalogi/J5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 237140,
+            "sha256": "ef019dc5545318bee6124340246c277d990dd28730d22b40e5fb98eb8fe623a4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/J5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/J5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 22856,
+            "sha256": "6b3ef48ca5c9d5985e5d1aa083a122fd9ddf44d6458da38a138fe7f8bf70b4f4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Berliinin konferenssin eurooppalaiset osallistujat vuoden 1884 lehtikuvassa.",
+        "creator": "Adalbert von Roessler",
+        "title": "Kongokonferenz / Berliinin konferenssi",
+        "year": "1884",
+        "collection": "Über Land und Meer, Bd. 53, Nr. 14, s. 308",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Kongokonferenz.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kongokonferenz.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Aikalaiskuva esittää eurooppalaisten valtojen kokouksen; Afrikan alueiden asukkaita ei kuultu rajojen teossa.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J5-cc.jpg",
+            "objectKey": "linssikatalogi/J5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 288057,
+            "sha256": "b6a5c5b7d963e7b4151b234c0dbdb6f9cbab956efa61fe64d3d1ffbbf99f97e5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/J5-cc-480.jpg",
+            "objectKey": "linssikatalogi/J5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 57355,
+            "sha256": "d877fca551e33bf78e94a09c88668a72aa2350d21024b81f790f7c32e7e245d4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K2",
+      "nimi": "Valloitus ja hopea",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Valloituksen ja hopean ajan pysäkit piirtyvät Karibialta Andeille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Conquest and silver in Latin America, 1492–1600, shown with a sober age-13+ tone. Antique parchment map of the Caribbean, Mexico, Andes and western South America with recognizable geography. Restrained warm nodes at Hispaniola, Tenochtitlan in central Mexico, Cajamarca in Peru, Potosi in Bolivia and Lima on the Peruvian coast, linked by delicate chronological routes. A faint silver ore vein near Potosi appears as a cartographic layer; other site motifs are small map engravings rather than dramatic scenes. Cream and sepia land, dark indigo water, painterly relief, gentle vignette and an unlabeled time arc. No people, conquest scenes, weapons, suffering, celebratory treasure, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K2-havainne.jpg",
+            "objectKey": "linssikatalogi/K2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 238754,
+            "sha256": "9f2c12eae5faff3f9c0f8c23b8ececd8717153124bf223fcc393d0fd840e156e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29214,
+            "sha256": "c8c66402a841faa64ac0da43709e171ffcd06d29c49c6514260ff116d081d5ce"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Potosín hopeakaupunki 1600-luvun painokuvassa.",
+        "creator": "kuvan kaivertaja tuntematon; julkaisu John Ogilby, Montanuksen teoksen pohjalta",
+        "title": "Potosi",
+        "year": "1670–1671",
+        "collection": "New York Public Library, Lawrence H. Slaughter Collection, b14467885-1505055",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Potosi_%28NYPL_b14467885-1505055%29.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Potosi%20%28NYPL%20b14467885-1505055%29.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Jälkikäteinen eurooppalainen kuva kolonialismin hopeakeskuksesta, julkaistu linssin pääkaaren jälkeen; hopean tuotanto perustui myös alkuperäiskansojen pakkotyöhön.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K2-cc.jpg",
+            "objectKey": "linssikatalogi/K2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 280311,
+            "sha256": "2828b2aa33d80fc723266f05b95abfd7b0915f4ba9f133b213c14996e7983bd4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K2-cc-480.jpg",
+            "objectKey": "linssikatalogi/K2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 40970,
+            "sha256": "7b509035f5d770a725a47ab0a2d5d43c8a2c224f750e2d289e3196a4384243fa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K4",
+      "nimi": "Latinalaisen Amerikan itsenäistyminen",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Latinalaisen Amerikan itsenäistymisen reitit kulkevat Andien yli.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Latin American independence movements, 1810–1825. Accurate antique parchment relief map of South America, north at top, with Andes along the WEST/LEFT edge. Place exactly four warm nodes at these geographic positions: Caracas on Venezuela's northern Caribbean coast (around 10 degrees north), Ayacucho inland in southern Peru (around 13 degrees south), Chacabuco just north of Santiago on the Chilean side of the Andes (around 33 degrees south), and Buenos Aires on the Atlantic coast of Argentina at the Rio de la Plata (around 35 degrees south). Buenos Aires must be on the east coast opposite Chile, far above Patagonia. Fine restrained golden routes track the chronology and cross the Andes once near central Chile; no unnecessary loop toward the southern tip. Cream/sepia terrain, dark blue sea, subtle historic shading without modern country-border grid, brass light, gentle vignette and unlabeled time arc. No flags, battle, weapons, people, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K4-havainne.jpg",
+            "objectKey": "linssikatalogi/K4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245503,
+            "sha256": "8bdcae31ae8abc2382962c814be337b28e07fb9623d4e676654706f64c574714"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 26150,
+            "sha256": "0d3beb40fde1cd95205258710a7cbfd054f78b16984113b3e6c68dc4631136eb"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Ayacuchon vuoden 1824 taistelun karttakaavio, painettu vuonna 1829.",
+        "creator": "tekijä tuntematon; kustantaja Longman",
+        "title": "Battle of Ayacucho, December 9 1824",
+        "year": "1829",
+        "collection": "Bibliothèque nationale de France, btv1b84412146",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Battle_of_Ayacucho%2C_december_9_1824_-_btv1b84412146.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Battle%20of%20Ayacucho%2C%20december%209%201824%20-%20btv1b84412146.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen taistelukuva; 13+ -kontekstissa vältetään väkivallan ihannointia ja huomioidaan itsenäistymisen moninaiset toimijat.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K4-cc.jpg",
+            "objectKey": "linssikatalogi/K4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299780,
+            "sha256": "8113fae3ad61b85321d5c254b082fe292bb47210baa6a0cdd2b2731dfb2f48cd"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K4-cc-480.jpg",
+            "objectKey": "linssikatalogi/K4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42322,
+            "sha256": "3cd3f5f094119c7d621c43862e04164b14645388a816960fda20d6ec01174849"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K5",
+      "nimi": "Amerikan keksinnöt",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Amerikkalaisten keksintöjen aikajana yhdistää viisi historiallista paikkaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. American inventions, 1793–1903. Antique parchment relief map of the continental United States and Atlantic coast, geographically recognizable with no modern state-boundary grid. Small warm gold nodes in the southern United States for Whitney's cotton gin, the Washington-Baltimore corridor for Morse telegraph, Boston for Bell, Menlo Park in New Jersey for Edison, and Kitty Hawk on the North Carolina coast for the Wright brothers. Fine chronological routes join the nodes. Tiny engraved silhouettes of a telegraph key, lamp and early biplane enrich the map without dominating. Cream/sepia land, dark blue sea, brass time arc, painterly relief and gentle vignette. No portraits, people, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K5-havainne.jpg",
+            "objectKey": "linssikatalogi/K5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243256,
+            "sha256": "c1a9cc73cbf24dda7b90940aa4ab9b6c50a32aea07f65a00e8cbe2bf651f4cc2"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 37733,
+            "sha256": "cd566fbf58a7ee6b9beb8b09f710601d24bc685d79fc637c7da03f6bb414470a"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Wrightin veljesten kone ilmassa Kitty Hawkissa 17. joulukuuta 1903.",
+        "creator": "NARA:n tiedossa tuntematon; alkuperäinen ensilentokuva attribuoidaan John T. Danielsille",
+        "title": "Wright Flyer ensimmäisellä lennollaan Kitty Hawkissa",
+        "year": "17.12.1903",
+        "collection": "US National Archives and Records Administration, 17338962",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Airplanes_-_Historical_-_Wright_Brothers%27_1903_Aeroplane_%28%22Kitty_Hawk%22%29_in_first_flight%2C_December_17%2C_1903_at_Kitty_Hawk%2C_N.C._Orville_Wright_at_controls._Wilbur_Wright_standing_at_right._%28First_flight_was_12_sec%28...%29_-_NARA_-_17338962.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Airplanes%20-%20Historical%20-%20Wright%20Brothers%27%201903%20Aeroplane%20%28%22Kitty%20Hawk%22%29%20in%20first%20flight%2C%20December%2017%2C%201903%20at%20Kitty%20Hawk%2C%20N.C.%20Orville%20Wright%20at%20controls.%20Wilbur%20Wright%20standing%20at%20right.%20%28First%20flight%20was%2012%20sec%28...%29%20-%20NARA%20-%2017338962.jpg",
+        "transform_note": "crop original photograph from NARA accession sheet; downsample",
+        "source_context": "Aikalaisvalokuva Wright Flyer -koneen ensimmäisestä lennosta, ei myöhempi rekonstruktio; toimituskuvasta on rajattu arkistokopion vasemman laidan luettelolappu.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K5-cc.jpg",
+            "objectKey": "linssikatalogi/K5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 287194,
+            "sha256": "de585ae149f259a0096048d6b175dba0c8f9c3745f746f12011cebcfbb975bf3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K5-cc-480.jpg",
+            "objectKey": "linssikatalogi/K5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 30682,
+            "sha256": "7a69283b752efec94f0ea19f16dc69a18d42c690b7cca57c9140109c7dc3273a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K6",
+      "nimi": "Pohjoinen: viikingeistä rautatiehen",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Pohjois-Amerikan pohjoiset tutkimus- ja rautatiereitit näkyvät kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Northern North America from Viking settlement to the Canadian railway, c. 1000–1885. Antique parchment polar-leaning relief map of Greenland, Newfoundland, Hudson Bay, Arctic Canadian islands and southern Canada, geographically recognizable. Warm nodes at L'Anse aux Meadows on northern Newfoundland, Hudson Bay, the Northwest Passage in the high Arctic and the Canadian transcontinental railway's 1885 western completion point; subtle chronological lines connect the episodes without inventing a single continuous expedition. A faint gold east-west rail route crosses southern Canada, while the Northwest Passage is a delicate sea trace. Cream/sepia land, cool dark sea, snow and mountain relief, brass time arc, gentle vignette. No people, triumphal colonization imagery, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K6-havainne.jpg",
+            "objectKey": "linssikatalogi/K6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247153,
+            "sha256": "e185d9a2019ac0b19f5a959871f7d2e94d2276462baa99b593f1d7d89d81182c"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/K6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40429,
+            "sha256": "0f55ea74677421f29f20ed2712aedfb838d2e54ff811b13ce5f9d07ca31b7033"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Kanadan Tyynenmeren-radan viimeinen naula Craigellachiessa vuonna 1885.",
+        "creator": "Alexander Ross",
+        "title": "Donald A. Smith driving the Last Spike to complete the Canadian Pacific Railway",
+        "year": "7.11.1885",
+        "collection": "Library and Archives Canada",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Donald_A._Smith_driving_the_Last_Spike_to_complete_the_Canadian_Pacific_Railway%2C_1885.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Donald%20A.%20Smith%20driving%20the%20Last%20Spike%20to%20complete%20the%20Canadian%20Pacific%20Railway%2C%201885.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Aikalaiskuva korostaa rautatiejohtoa; rautatien rakentamisen alkuperäiskansoihin ja kiinalaisiin työntekijöihin kohdistuneet vaikutukset eivät näy kuvassa.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K6-cc.jpg",
+            "objectKey": "linssikatalogi/K6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289542,
+            "sha256": "9ce4fde3c61a24a314d899b523148a3bd910eb50b1fcf2f0655fc13c60b2802b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/K6-cc-480.jpg",
+            "objectKey": "linssikatalogi/K6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 37937,
+            "sha256": "f76b9e78074ad2cb3b494a5e7bf18135a6e26f2e62fe51857b60d2cc81e58d81"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L1",
+      "nimi": "Polynesialaisten merenkulku",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Polynesialaisten merenkulun reitit haarautuvat Tyynenmeren saarille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Polynesian ocean navigation, 1000 BCE–1250 CE. Wide antique parchment map centered on the Pacific Ocean, with island geography carefully arranged: Samoa west of Tahiti, Hawaii far north, Rapa Nui far east and Aotearoa New Zealand southwest of Tahiti. Distinct delicate warm-gold voyaging routes branch from Samoa through central Polynesia toward those destinations, guided by faint star-path geometry and ocean swells. One very small historically evocative double-hulled canoe silhouette may appear, without people. Dark deep-blue sea dominates, islands and nodes glow gently, cream/sepia parchment edge, cinematic dimensional surface, gentle vignette and unlabeled time arc. Respectful indigenous maritime knowledge, no fantasy motifs, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/L1-havainne.jpg",
+            "objectKey": "linssikatalogi/L1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 241738,
+            "sha256": "8c92be390dac256cf23e1e2c02c368c90e9d320275cb05a5759766bb42d2f7c4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/L1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/L1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30180,
+            "sha256": "aa640a37a43df42009c18cb016d25bd4222876c4358d02daa7b6150ea478136b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Polynesialaisen navigaattorin Tupai-an piirtämiä kanootteja Tahitin vesillä.",
+        "creator": "Tupaia",
+        "title": "Canoes near Tahiti",
+        "year": "n. 1769",
+        "collection": "British Library, Add MS 15508",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Canoes_near_Tahiti._Drawing_by_Tupaia%2C_c._1769.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Canoes%20near%20Tahiti.%20Drawing%20by%20Tupaia%2C%20c.%201769.jpg",
+        "transform_note": "crop/downsample; native-size center mount, no upscaling",
+        "source_context": "Raiatealaisen Tupai-an oma historiallinen piirros; syntynyt myöhemmin kuin linssin varhaiset asutusmatkat, mutta kuvaa samaa polynesialaista merenkulkuperinnettä.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/L1-cc.jpg",
+            "objectKey": "linssikatalogi/L1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 290860,
+            "sha256": "fe9a54fbc76c6f3ea12e66ef2c15d5973e866ed2b1886a9ba93c0b2a61965033"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/L1-cc-480.jpg",
+            "objectKey": "linssikatalogi/L1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 48519,
+            "sha256": "7a56372c746919147014b10ee213f77845eb3e98baeecedb4afec179a4126630"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L3",
+      "nimi": "Australia",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Australian 1800-luvun pysäkit muodostavat kartalle hillityn aikajanan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape game-map image. Australia's nineteenth-century chronology, 1788–1901, in a measured age-13+ historical tone. Antique parchment relief map focused on Australia with accurate recognizable coastline. Four small warm nodes: Sydney on the southeast coast, Ballarat west of Melbourne, Burke and Wills' inland expedition route toward the Gulf of Carpentaria, and a diffuse federation-era 1901 highlight across the continent. Delicate chronological lines connect the moments; faint engraved details of an early harbor, a goldfield and a survey path remain subordinate to the map. Warm ochre interior, cream/sepia parchment, dark blue sea, brass time arc and gentle vignette. No people, colonial triumphalism, Indigenous caricatures, UI, buttons, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/L3-havainne.jpg",
+            "objectKey": "linssikatalogi/L3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244576,
+            "sha256": "a292ca97856a29f1884cc3c395d3c41c7115ae0e959e0cdafcb2db4557e45e2b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-05/L3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/L3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 28066,
+            "sha256": "067dc9d1ce73dd80ee4b321aa2a06554bea73b7fb119894d28d80668665a34a1"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Ensimmäinen brittiläinen laivasto saapuu Port Jacksoniin William Bradleyn piirroksessa.",
+        "creator": "William Bradley",
+        "title": "First Fleet entering Port Jackson 27 January 1788",
+        "year": "n. 1802 (kuvaa vuotta 1788)",
+        "collection": "State Library of New South Wales, Safe 1/14",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Fleet_entering_Sydney_1788_Bradley.jpg",
+        "download_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/First%20Fleet%20entering%20Sydney%201788%20Bradley.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Brittiläisen siirtokunnan syntyä kuvaava aikalaispiirros; Warrane/Sydney Cove oli jo aboriginaalien kotiseutua.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/L3-cc.jpg",
+            "objectKey": "linssikatalogi/L3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 280714,
+            "sha256": "c810f115711b0b08d3d680c4cf1de45a55a61f0496f234abe60011b0c6eb3b4a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-05/L3-cc-480.jpg",
+            "objectKey": "linssikatalogi/L3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 31314,
+            "sha256": "74b67699790708b0202579afaf45eebd91ea4089cb1354c6333c0a2fa158596d"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "complete": true,
+    "canonicalUrlsVerified": true,
+    "objects": 40,
+    "receiptLocalPath": "output/fable-20260924/linssikatalogi/era2/ready-05-20260925/r2-receipt.json"
+  }
+}
