@@ -127624,6 +127624,254 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Rushmore, Crazy Horse Memorial, Custer State
+       * Park, South Dakota Highway 87 eli Needles Highway, U.S. Route 16A
+       * eli Iron Mountain Road, Rapid City, Rapid City Regional Airport,
+       * Keystone, Black Hills Central Railroad, Jewel Cave National
+       * Monument, Wind Cave National Park, Sturgis Motorcycle Rally) ja
+       * Wikivoyagesta (Mount Rushmore National Memorial, Badlands and
+       * Black Hills, Rapid City, Custer) — teksti omaa. Hinnat ja
+       * aukioloajat jätetty pois, koska Wikivoyagen tiedot ovat osin
+       * vanhoja. Vuoden 2026 ilotulitus: Commonsin luokka "Donald Trump at
+       * the 2026 Mount Rushmore Fireworks Celebrations" (Valkoisen talon
+       * kuvat 3.7.2026). Nostojen aiheita (nimi, Robinsonin idea,
+       * louhinta, Jefferson, Borglumin kuolema ja Hall of Records,
+       * kävijämäärä ja graniitin kuluminen, Kuusi isoisää, Fort Laramie,
+       * Custer ja kultaryntäys, Crazy Horsen alkuvaiheet) ei toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Avenue of Flags.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Rushmore and State Flags 1.jpg',
+          lyhyt: 'Osavaltioiden liput reunustavat kävelykatua presidenttien kasvojen alla.',
+          selite: 'Avenue of Flags -kävelykatu vie pysäköintialueelta '
+            + 'näköalaterassille, ja sen varrella liehuvat kaikkien '
+            + 'osavaltioiden ja alusmaiden liput. Vasemmalla näkyvät '
+            + 'valonheittimet, joilla kasvot valaistaan kesäiltaisin.',
+          lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Mount Rushmore ei ole kaupunki vaan kansallinen '
+          + 'muistomerkki Mustien vuorten mäntymetsissä, Keystonen '
+          + 'pikkukaupungin kupeessa. Lähin lentoasema on Rapid Cityssä '
+          + 'runsaan 50 kilometrin ajomatkan päässä, eikä seudulla pääse '
+          + 'ilman autoa pitkälle. Kasvot näkee lyhyellä kävelyllä, mutta '
+          + 'moni jää iltaan, sillä kesällä vuori valaistaan hämärän '
+          + 'laskeuduttua. Samaan retkeen mahtuvat lähistöllä yhä veistettävä '
+          + 'Crazy Horse -muistomerkki, Custerin osavaltiopuiston '
+          + 'biisonilaumat ja kapeat vuoristotiet, joiden tunneleista '
+          + 'presidentit näkyvät kuin kehyksissä. Vuoret ovat lakotoille '
+          + 'pyhää maata, ja muistomerkki kertoo nykyään myös heidän '
+          + 'tarinaansa. Paras aika on kesä: lokakuusta toukokuuhun '
+          + 'seudulla sataa lunta, ja osa maisemateistä suljetaan talveksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Mount Rushmore',
+          teksti: 'Mount Rushmorelle tullaan autolla, ja moni jää vuoren juurelle pimeään asti.',
+          nosto: 'Iron Mountain Roadin tunnelit linjattiin niin, että '
+            + 'presidenttien kasvot näkyvät niiden suuaukossa kuin taulussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rapid Citystä vuorille',
+              teksti: 'Lähin liikennelentoasema on Rapid City Regional '
+                + 'Airport, jolle lennetään suurten vaihtokenttien kautta; '
+                + 'sieltä muistomerkille on ajomatkaa noin 51 kilometriä. '
+                + 'Kaukoliikenteen bussit pysähtyvät Rapid Cityssä, mutta '
+                + 'vuorille ne eivät vie, joten useimmat vuokraavat auton. '
+                + 'Moottoritieltä I-90 käännytään Rapid Cityssä valtatielle '
+                + '16, joka nousee Keystoneen, ja sieltä tie 244 kiipeää '
+                + 'muistomerkille. Rapid Cityn keskustassa kannattaa '
+                + 'pysähtyä: kadunkulmissa seisoo luonnollisen kokoinen '
+                + 'pronssipatsas jokaisesta entisestä presidentistä, ja '
+                + 'siksi kaupunkia kutsutaan presidenttien kaupungiksi. '
+                + 'Yksi heistä, Calvin Coolidge, piti kesällä 1927 '
+                + 'kesätoimistoaan Rapid Cityssä ja puhui Mount Rushmoren '
+                + 'vihkiäisissä. Keystone on vuonna 1883 syntynyt '
+                + 'kaivoskylä, jossa asuu vain parisataa ihmistä mutta '
+                + 'jonka pääkatu on täynnä matkamuistokauppoja ja '
+                + 'motelleja. Hill Cityn ja Keystonen väliä kulkee '
+                + 'höyryjuna radalla, jota pitkin aikanaan tuotiin '
+                + 'veistotöiden kalustoa. Idästä tai etelästä tulevan '
+                + 'kannattaa valita Iron Mountain Road: kuvernööri Peter '
+                + 'Norbeck suunnitteli sen hitaaksi maisematieksi, jonka '
+                + 'yksikaistaisista tunneleista presidentit näkyvät '
+                + 'suoraan edessä ja jonka kierresillat kiertyvät '
+                + 'itsensä yli.',
+              kuva: [
+                {
+                  tiedosto: 'Calvin Coolidge statue (54721038957).jpg',
+                  lyhyt: 'Calvin Coolidge nostaa hattuaan Rapid Cityn keskustan kadunkulmassa.',
+                  selite: 'Rapid Cityn keskustassa on pronssipatsas '
+                    + 'jokaisesta entisestä presidentistä. Calvin Coolidge '
+                    + 'vietti kesän 1927 Mustilla vuorilla ja puhui Mount '
+                    + 'Rushmoren vihkiäisissä.',
+                  lahde: 'Gage Skidmore, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Through a tunnel on Iron Mountain Road. (f5007327-155d-4519-3e33-b713ab24ae16).jpg',
+                  lyhyt: 'Iron Mountain Roadin tunnelin suulta presidentit näkyvät mäntymetsän takana.',
+                  selite: 'Iron Mountain Roadin yksikaistaiset tunnelit '
+                    + 'linjattiin niin, että Mount Rushmoren kasvot näkyvät '
+                    + 'niiden läpi kaukana metsän yllä.',
+                  lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Black Hills Central 104 (12690981295).jpg',
+                  lyhyt: 'Höyryveturi 104 vetää museojunaa kohti Hill Cityä.',
+                  selite: 'Black Hills Central Railroad ajaa museojunaa '
+                    + 'Hill Cityn ja Keystonen välillä. Rata valmistui '
+                    + 'Keystoneen vuonna 1900, ja sitä pitkin tuotiin '
+                    + 'myöhemmin Mount Rushmoren veistotöiden kalustoa.',
+                  lahde: 'Drew Jacksich, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippukujalta Presidenttien polulle',
+              teksti: 'Pysäköintialueelta kasvojen eteen on vain lyhyt '
+                + 'kävely. Leveä Avenue of Flags -kävelykatu rakennettiin '
+                + 'Yhdysvaltain 200-vuotisjuhlavuonna 1976, ja sen varrella '
+                + 'liehuvat aakkosjärjestyksessä kaikkien 50 osavaltion, '
+                + 'pääkaupunkipiirin ja alusmaiden liput. Kadun päässä on '
+                + 'vuonna 1998 valmistunut Grand View -terassi, jonka alla '
+                + 'toimiva museo kertoo veistotyöstä ja neljästä '
+                + 'presidentistä. Terassille asti pääsee esteettä. '
+                + 'Kilometrin mittainen Presidential Trail -polku kiertää '
+                + 'kivikkorinteen reunalle, jolta kasvot näkyvät '
+                + 'lähimpää, ja sen varrella on Gutzon Borglumin vuonna '
+                + '1939 rakennuttama ateljee. Siellä kerrotaan kesäisin '
+                + 'veiston työkaluista, ja esillä on kipsimalli, jossa '
+                + 'presidentit ulottuvat vyötäröön asti, kuten ne alun '
+                + 'perin piti veistää. Ateljeelle ja takaisin kuljetaan yli '
+                + '400 porrasta. Rinteillä liikkuu usein vuorikauriita, '
+                + 'jotka eivät ole alueen alkuperäisiä asukkaita: ne '
+                + 'polveutuvat laumasta, jonka Kanada lahjoitti Custerin '
+                + 'osavaltiopuistoon vuonna 1924 ja joka pääsi karkuun. '
+                + 'Muistomerkille pääsee maksutta, mutta pysäköinti '
+                + 'maksaa, eikä kansallispuistojen vuosikortti kelpaa '
+                + 'siihen, koska pysäköintialueen rakensi ja omistaa '
+                + 'yksityinen yhteisö.',
+              kuva: {
+                tiedosto: 'Sculptors Studio Interior Mt Rushmore 2024.jpg',
+                lyhyt: 'Puistonvartija kertoo veistotyöstä ateljeessa kipsimallin edessä.',
+                selite: 'Gutzon Borglumin vuonna 1939 rakennuttamassa '
+                  + 'ateljeessa on veistoksen kipsimalli, jossa presidentit '
+                  + 'ulottuvat vyötäröön asti. Kesäisin puistonvartijat '
+                  + 'kertovat siellä, miten kasvot tehtiin.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kun vuori syttyy valoon',
+              teksti: 'Kesäiltaisin kannattaa jäädä muistomerkille pimeän '
+                + 'tuloon asti. Terassin alla olevassa ulkoamfiteatterissa '
+                + 'puistonvartija puhuu ensin presidenteistä ja maan '
+                + 'historiasta, sitten näytetään lyhyt elokuva, ja lopuksi '
+                + 'valonheittimet sytytetään ja kasvot alkavat hohtaa '
+                + 'mustaa taivasta vasten. Ohjelma järjestetään vain '
+                + 'kesäkaudella ja sään salliessa, ja aikataulu on '
+                + 'nähtävillä vierailukeskuksessa. Itsenäisyyspäivän '
+                + 'ilotulitukset ovat sen sijaan harvinaisia: vuosina '
+                + '1998–2009 ammutut raketit sytyttivät '
+                + 'kansallispuistoviraston mukaan ainakin 27 maastopaloa, '
+                + 'ja geologian tutkimuslaitos löysi alueen vesistä '
+                + 'perkloraattia, jonka lähteeksi se arveli ilotulitukset. '
+                + 'Sen jälkeen niitä on ammuttu vain vuosina 2020 ja 2026. '
+                + 'Iltaohjelma kertoo presidenttien tarinaa, mutta '
+                + 'Presidential Trail -polun alkuosan lakota-, nakota- ja '
+                + 'dakotakylä esittelee niiden kansojen tapoja, joille '
+                + 'vuori oli pyhä jo ennen veistosta. Kansat eivät ole '
+                + 'hyväksyneet Mustien vuorten menetystä: kun Yhdysvaltain '
+                + 'korkein oikeus vuonna 1980 määräsi niille 102 miljoonan '
+                + 'dollarin korvauksen, ne kieltäytyivät rahasta ja '
+                + 'vaativat maata takaisin. Vuonna 2004 muistomerkin '
+                + 'johtajaksi nimitettiin ensimmäistä kertaa '
+                + 'alkuperäisamerikkalainen, Gerard Baker.',
+              kuva: {
+                tiedosto: 'Mount Rushmore Lighting Ceremony.jpg',
+                lyhyt: 'Valonheittimet nostavat presidenttien kasvot esiin yön pimeydestä.',
+                selite: 'Kesäkaudella muistomerkin iltaohjelma päättyy '
+                  + 'siihen, että valonheittimet sytytetään ja '
+                  + 'graniittikasvot alkavat hohtaa mustaa taivasta vasten.',
+                lahde: 'Hardy008, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Crazy Horse, keskeneräinen naapuri',
+              teksti: 'Noin 27 kilometrin päässä Mount Rushmoresta, '
+                + 'Custerin ja Hill Cityn välisen valtatien varrella, '
+                + 'veistetään yhä toista vuorta. Crazy Horse -muistomerkki '
+                + 'on yksityisellä maalla, eikä sen säätiö ota vastaan '
+                + 'valtion rahaa, joten pääsymaksu peritään autokunnittain '
+                + 'ja sillä rahoitetaan sekä veistotyötä että opetusta. '
+                + 'Vierailukeskuksesta näkee kallion, jossa oglalalakotojen '
+                + 'sotapäällikön kasvot ovat valmiina: ne ovat 26,7 metriä '
+                + 'korkeat, kun Rushmoren presidenttien päät ovat '
+                + '18-metrisiä. Samaan rakennuskokonaisuuteen kuuluu '
+                + 'Pohjois-Amerikan intiaanimuseo, ja paikalla toimiva '
+                + 'Indian University of North America on vuodesta 2011 '
+                + 'järjestänyt kesäopintoja alkuperäiskansoihin kuuluville '
+                + 'opiskelijoille. Vuoren kyljessä työ etenee nyt '
+                + 'nopeammin kuin ennen: vuoteen 2025 mennessä pystytetty '
+                + 'torninosturi siirtää louhittuja kivilohkareita ja '
+                + 'kalustoa, ja veistäjät ovat siirtyneet hevosen harjaan '
+                + 'ja ratsastajan oikeaan olkapäähän. Valmistumisvuotta ei '
+                + 'ole ilmoitettu. Kaikki lakotat eivät hanketta hyväksy: '
+                + 'osa pitää pyhän vuoren veistämistä loukkauksena, sillä '
+                + 'Crazy Horse ei antanut valokuvata itseään, ja hänet '
+                + 'haudattiin paikkaan, jota ei haluttu kenenkään '
+                + 'löytävän.',
+              kuva: {
+                tiedosto: 'Museum Crazy Horse Memorial South Dakota 2024.jpg',
+                lyhyt: 'Tiipii seisoo Crazy Horse -muistomerkin museon puupaneloidussa salissa.',
+                selite: 'Crazy Horse -muistomerkin vierailukeskuksen '
+                  + 'museossa on esillä alkuperäiskansojen esineitä ja '
+                  + 'maalauksia, ja keskelle salia on pystytetty tiipii.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Biisoneita ja graniittineuloja',
+              teksti: 'Mount Rushmoren eteläpuolella, Iron Mountain Roadin '
+                + 'päässä, alkaa Custerin osavaltiopuisto, Etelä-Dakotan '
+                + 'ensimmäinen ja suurin: yli 280 neliökilometriä preeriaa '
+                + 'ja vuoristoa, jonne tarvitaan maksullinen ajolupa. '
+                + 'Puistossa elää noin 1 400 biisonin lauma, joka sai '
+                + 'alkunsa 36 eläimestä vuonna 1914. Wildlife Loop '
+                + '-kiertotieltä näkee biisonien lisäksi preeriakoirien '
+                + 'yhdyskuntia, hanka-antilooppeja ja villiintyneitä '
+                + 'aaseja. Vuodesta 1965 lähtien viitisenkymmentä '
+                + 'ratsastajaa on kerran vuodessa ajanut lauman yhteen '
+                + 'terveystarkastukseen, ja näytöstä on seurannut jopa '
+                + '20 000 katsojaa. Biisoneita katsotaan autosta tai '
+                + 'kaukaa, sillä kömpelön näköinen eläin ehtii yllättävän '
+                + 'nopeasti hyökätä, eikä preeriakoiriakaan pidä silittää: '
+                + 'ne purevat. Puiston halki kiemurtelee vuonna 1922 '
+                + 'valmistunut Needles Highway, 23 kilometriä kapeaa tietä '
+                + 'graniittineulojen lomassa ja kolmen kallioon louhitun '
+                + 'tunnelin läpi; talveksi se suljetaan. Mustien vuorten '
+                + 'alla on lisäksi kaksi maailman pisimpiin kuuluvaa '
+                + 'luolaa: Jewel Caven käytäviä on kartoitettu yli 350 '
+                + 'kilometriä, ja Wind Cavessa on valtaosa maailman '
+                + 'tunnetuista kennomaisista boxwork-kalsiittimuodostumista. '
+                + 'Elokuussa majoitus kannattaa varata ajoissa, sillä '
+                + 'Sturgisin moottoripyörätapahtuma tuo seudulle '
+                + 'satojatuhansia ajajia.',
+              kuva: {
+                tiedosto: 'Buffalo at Custer State Park, South Dakota.jpg',
+                lyhyt: 'Biisoni kävelee kohti kameraa Custerin osavaltiopuiston preerialla.',
+                selite: 'Custerin osavaltiopuiston noin 1 400 biisonin '
+                  + 'lauma laiduntaa vapaana preerialla. Lauma kootaan '
+                  + 'kerran vuodessa terveystarkastukseen, ja osa '
+                  + 'eläimistä myydään huutokaupassa.',
+                lahde: 'Jack Siebold, MyTown Black Hills, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
