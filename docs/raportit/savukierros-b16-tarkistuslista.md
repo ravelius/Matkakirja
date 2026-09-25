@@ -26,3 +26,11 @@ tekstitys päälle/pois). Alkuperäinen "ei löytynyt" johtui siitä, että etsi
 ylärivistä (raportti savukierros-b16-20260925.md, Avoinna).
 
 HUOM (Linssiseppä): b16-kierroksella ajettiin vahingossa Ihmisen matka I. II tunnistetaan otsikosta "Ihmisen matka II", lämpimästä valokeilasta Afrikan yllä ja hämärästä pallosta; CC kytkee tekstityksen (oletus pois, vain 1. virke näkyy).
+
+## PYSYVÄ KOHTA (löydös 82, Fable 25.9.) — aja jokaisella kierroksella
+Aloitusnäytön kohdekaupungin valinnassa (Uusi matka → intro → valintanäkymä)
+näkyvät VAIN kohdekaupungit (+ lähtöpiste Lontoo nastalla): ei muiden
+kaupunkien pisteitä eikä nimiä. Ota kuvakaappaus valintanäkymästä (iPhone +
+iPad; kevyesti 1 laite riittää). Build 16 (1aa7c558) iPhone: PASS —
+kaappaukset/savukierros-b16-20260925/2-iphone-valinta.jpg (Lontoo, Moskova,
+Istanbul, Ateena, Kairo; ei muita pisteitä/nimiä).

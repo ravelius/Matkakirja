@@ -55,6 +55,12 @@ Kehittäjätila `defaults write … matkakirja-kehittaja 1`.
   — vastaa 12 s -tavoitetta. Pieni huomio: "Ohita" puuttuu aivan ensimmäisestä
   mustasta kuvasta.
 
+## Löydös 82 (valintanäkymän kaupunkipisteet) — PASS iPhone
+
+Kuva 2: valintanäkymässä vain Lontoo (lähtö, nasta) ja kohteet Moskova, Istanbul,
+Ateena, Kairo; ei muiden kaupunkien pisteitä eikä nimiä. iPad ei ajettu (1 laite
+riitti). Pysyvä kohta lisätty tarkistuslistaan.
+
 ## Ihmisen matka II + CC (iPhone, 21.5x, `linssi ihmisen-matka-2`) — PASS
 
 - II avautuu: johdantokortin otsikko "Ihmisen matka II" (kuva 13); käynnistyksen
