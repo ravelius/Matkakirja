@@ -70,7 +70,21 @@ napautuksesta tauko. LCD:n rivit tulevat edelleen RadioTilasta.
 
 ## 3. Hämärä kartta
 
-Hämärä ei ole yö. Pergamentti tummuu ja viilenee, ja rannat, rajat, nimet ja relief jäävät näkyviin.
+**POHJA ON VÄRILLINEN TOPOGRAFIA** (omistaja 24.9. klo 22.3x, havainnekuva A, Raamattu RADIOLINSSIN
+UUDISTUS, POHJA): radiolinssi ei käytä pergamenttia, vaan sama topografiarasteri kuin topografialinssi
+(väriasteikko vihreästä alamaasta ruskeisiin vuoriin, meri sininen) tummuu hämäräksi ja Black Marble -valot
+syttyvät sen päälle. Toteutus:
+- **Linssiseppä (RadioLinssi):** avaus ottaa topografialinssin rasterin samalla polulla kuin topografialinssi
+  (KarttaKerrokset.LisaaRasteri Topografia.Kerros, pohja "laatat" piiloon), ja sulku palauttaa entisen pohjan.
+- **Natiiviseppä (Kartta):** pehmeä häivytys paikan alfalla (_overlayAlfa_<paikka>) avauksen 1,5 s:n aikana.
+- Hämärän kertoimet (alla) eivät muutu: ne kertovat pohjan värit, oli pohja mikä tahansa.
+
+![A: topografia hämärässä (valittu)](kaappaukset/radiouudistus-20260924/3-topografia-a.jpg)
+
+Vertailuksi B (päivänvalo, ei valittu): `kaappaukset/radiouudistus-20260924/3-topografia-b.jpg`.
+Pääkuva (1) on pergamenttipohjainen ja näyttää mastot, renkaat ja paneelin samasta näkymästä.
+
+Hämärä ei ole yö. Kartta tummuu ja viilenee, ja rannat, rajat, nimet ja relief jäävät näkyviin.
 Tileset-varjostimessa tehdään yksi kerto- ja lisäys lineaarisessa tilassa:
 
 ```
