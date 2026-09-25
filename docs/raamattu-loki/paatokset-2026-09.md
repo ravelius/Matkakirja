@@ -5307,3 +5307,7 @@ Paikallinen proto-git on totuus; GitHub-peili on varmuuskopio.
 ## NATIIVIN VARMUUSKOPIOPEILI KORJATTU (NATIIVISEPPA 8b3660d0): ENSIMMAINEN AJO 10.22 — peili/proto/* 504 HAARAA FORCE, proto/master JA proto/juna/* FAST-FORWARD; HYLKAYKSET proto-3d/lokit/varmuuskopio-VIKA.txt (POSTIVAHTI LUKEE); TUNTIAJO JUNAVAHDIN KAUTTA + post-merge, EI UUTTA launchd-AGENTTIA; KORJAUS: ERILLISTA natiivi-peli-REPOA EI OLE, MITAAN EI JAANYT VARMUUSKOPIOIMATTA (25.9.2026 klo 10.23)
 
 Postivahdille lisätty peilin tarkistus.
+
+## BLACK MARBLE -YOVALOT RADIOON JUNASSA b13 (NATIIVISEPPA natiiviseppa/yovalot dd74df8c → c12ad3ae): EMISSIO HAMARAN PAALLE, KERROS RADION MUKANA, ATTRIBUUTIO TIETOJA-NAKYMASSA, KUVAT lokit/yovalot-b13, KARTTA 144/144; NOPAN SIIRTOKOHTEET POIS LINSSIN AJAKSI (cbf63c96); SEURAAVAKSI LENTOPINNAN KYLMAKOE; KUORMA 95 (25.9.2026 klo 10.29)
+
+Radiouudistus on nyt kokonaan junassa (paneeli, mastot, hämärä, veto, sulku, yövalot).
