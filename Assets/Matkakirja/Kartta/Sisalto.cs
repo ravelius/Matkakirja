@@ -97,11 +97,44 @@ namespace Matkakirja
         /// Kuten yllä; valinnainen = true: puuttuva kokoelma (404, uudempi nippu kuin
         /// julkaistu paketti) kirjataan tavallisena lokirivinä eikä virheenä.
         /// </summary>
-        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis, bool valinnainen) =>
-            HaePaketista("kokoelmat/" + kokoelma + ".json", valmis, valinnainen);
+        public static IEnumerator HaeTeksti(string kokoelma, Action<string> valmis, bool valinnainen, Taso taso = Taso.Nakyva) =>
+            HaePaketista("kokoelmat/" + kokoelma + ".json", valmis, valinnainen, taso);
 
         /// <summary>Hakee paketin tiedoston versiopolun alta (esim. "offline.json"), välimuistin kautta.</summary>
-        public static IEnumerator HaePaketista(string suhteellinen, Action<string> valmis, bool valinnainen)
+        /// <summary>
+        /// Sisältöpaketin versiopolku (uusin.json) kerran istunnossa, jaettu PeliOhjaimen kanssa (Esilataaja erä 1:
+        /// ennen osoitin haettiin kahdesti). Epäonnistunut haku: viimeisin.txt; null = ei verkkoa eikä välimuistia,
+        /// ja seuraava kutsu yrittää uudelleen.
+        /// </summary>
+        public static IEnumerator VersioPolku(Action<string> valmis)
+        {
+            while (osoitinHaussa) yield return null;
+            string versioPolku = istunnonPolku;
+            if (versioPolku == null)
+            {
+                osoitinHaussa = true;
+                string osoitin = null, osoitinVirhe = null;
+                yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Osoitin); q.timeout = 10; return q; }, Taso.Nakyva, "sisalto",
+                    p => { if (p.result == UnityWebRequest.Result.Success) osoitin = p.downloadHandler.text; else osoitinVirhe = p.error; });
+                try
+                {
+                    var o = osoitin != null ? JsonUtility.FromJson<OsoitinTiedot>(osoitin) : null;
+                    versioPolku = string.IsNullOrEmpty(o?.polku) ? null : o.polku;
+                    if (versioPolku != null) Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
+                }
+                catch (Exception e) { osoitinVirhe = "uusin.json ei jäsenny: " + e.Message; }
+                if (versioPolku == null && File.Exists(ViimeisinPolku))
+                {
+                    versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
+                    Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({osoitinVirhe}), käytetään {versioPolku}");
+                }
+                osoitinHaussa = false;
+                istunnonPolku = versioPolku;
+            }
+            valmis(versioPolku);
+        }
+
+        public static IEnumerator HaePaketista(string suhteellinen, Action<string> valmis, bool valinnainen, Taso taso = Taso.Nakyva)
         {
             // Koekansio (testaus laitteella ja simulaattorissa): Documents/sisalto-koe/<suhteellinen>
             // voittaa julkaistun paketin versiosta riippumatta.
@@ -115,30 +148,8 @@ namespace Matkakirja
                 valmis(koeTeksti);
                 yield break;
             }
-            while (osoitinHaussa) yield return null;
-            string versioPolku = istunnonPolku;
-            if (versioPolku == null)
-            {
-                osoitinHaussa = true;
-                using (var p = UnityWebRequest.Get(Osoitin))
-                {
-                    p.timeout = 10;
-                    yield return p.SendWebRequest();
-                    if (p.result == UnityWebRequest.Result.Success)
-                    {
-                        var o = JsonUtility.FromJson<OsoitinTiedot>(p.downloadHandler.text);
-                        versioPolku = o.polku;
-                        Debug.Log($"MATKAKIRJA sisältö: versio {o.versio}, skeema {o.skeemaversio}, {o.polku}");
-                    }
-                    else if (File.Exists(ViimeisinPolku))
-                    {
-                        versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
-                        Debug.LogWarning($"MATKAKIRJA sisältö: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
-                    }
-                }
-                osoitinHaussa = false;
-                istunnonPolku = versioPolku;
-            }
+            string versioPolku = null;
+            yield return VersioPolku(v => versioPolku = v);
             if (versioPolku == null) { valmis(null); yield break; }
 
             string polku = versioPolku + suhteellinen;
@@ -151,26 +162,29 @@ namespace Matkakirja
                 // Epäonnistunut luku (esim. toinen haku kirjoittaa samaa tiedostoa) → haetaan verkosta.
                 yield return Taustalla(() => File.ReadAllText(tiedosto), t => teksti = t);
             }
+            VerkkoOdotus.Osuma("sisalto", teksti != null);
             if (teksti == null)
             {
-                using var k = UnityWebRequest.Get(Juuri + polku);
-                k.timeout = 20;
-                float hakuAlku = Time.realtimeSinceStartup;
-                yield return k.SendWebRequest();
-                VerkkoOdotus.Haku("sisalto", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
-                if (k.result != UnityWebRequest.Result.Success)
+                byte[] tavut = null;
+                long koodi = 0;
+                string virhe = null;
+                yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Juuri + polku); q.timeout = 20; return q; }, taso, "sisalto", k =>
                 {
-                    if (valinnainen && k.responseCode == 404)
+                    koodi = k.responseCode;
+                    if (k.result == UnityWebRequest.Result.Success) tavut = k.downloadHandler.data; else virhe = k.error;
+                });
+                if (tavut == null)
+                {
+                    if (valinnainen && koodi == 404)
                         Debug.Log($"MATKAKIRJA sisältö: {polku} ei ole tässä paketissa (valinnainen)");
                     else
-                        Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {k.error}");
+                        Debug.LogError($"MATKAKIRJA sisältö: {polku} epäonnistui: {virhe}");
                     valmis(null);
                     yield break;
                 }
                 // Purku ja välimuistiin kirjoitus taustasäikeessä (tavut kopioidaan pääsäikeessä). Polut
                 // lasketaan tässä: Application.persistentDataPath toimii vain pääsäikeessä. Kirjoitus
                 // väliaikaistiedostoon ja siirto, koska useampi haku voi kirjoittaa saman kokoelman yhtä aikaa.
-                var tavut = k.downloadHandler.data;
                 string versio = versioPolku, viimeisin = ViimeisinPolku;
                 yield return Taustalla(() =>
                 {

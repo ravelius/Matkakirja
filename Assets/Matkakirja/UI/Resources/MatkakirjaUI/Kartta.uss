@@ -644,6 +644,19 @@
     align-items: flex-start;
 }
 
+/* Löydös 115: maakunnan pikkukuva mini-inforuudussa (4:3, rajattu). */
+.mk-maakunnat__lkuva {
+    width: 64px;
+    height: 48px;
+    flex-shrink: 0;
+    margin: 2px 8px 0 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 2px;
+    background-color: #ded5c2;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
 .mk-maakunnat__lteksti {
     flex-shrink: 1;
     flex-grow: 1;

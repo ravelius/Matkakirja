@@ -485,6 +485,7 @@ namespace Matkakirja.Natiivi
             float alku = Time.unscaledTime;
             eloAjastin = pilleri.schedule.Execute(() =>
             {
+                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
                 float t = Mathf.Clamp01((Time.unscaledTime - alku) / 0.9f);
                 int i = 1;
                 while (i < LaukkuElo.Length - 1 && LaukkuElo[i].T < t) i++;

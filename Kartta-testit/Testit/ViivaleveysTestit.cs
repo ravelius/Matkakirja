@@ -65,5 +65,48 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(Math.Abs(h - 0.5f) < 1e-3f, "ulos samaa tahtia " + h);
             Oleta.Tosi(Viivaleveys.AluerajaHaive(float.NaN, true, 100, 30, -1f) == 0f, "NaN ja negatiivinen dt eivät liikuta");
         }
-    }
+    
+        // ---- Maakuntarajat (löydös 113): webin nimiötason rasteri ----
+
+        [Testi]
+        static void AluerajaTasoKuinWebinPallossa()
+        {
+            // js/pallolaatat.js lepokerroksenTaso: matalin taso, jonka px/° ≥ tiheys (z6 120, z7 240, z8 480).
+            Oleta.Sama(5, Viivaleveys.AluerajaTaso(60));
+            Oleta.Sama(6, Viivaleveys.AluerajaTaso(61));
+            Oleta.Sama(7, Viivaleveys.AluerajaTaso(142));
+            Oleta.Sama(8, Viivaleveys.AluerajaTaso(615));
+            Oleta.Sama(0.0, Viivaleveys.AluerajaLaitePx(50, 46), "alle z6:n ei viivaa");
+        }
+
+        [Testi]
+        static void AluerajaMitatutNakymat()
+        {
+            // 2-provence.jpg: tiheys ~615, 44° → z8: 2,2 · 615 · cos 44° / 480 ≈ 2,0 laitepx (mitattu ~2,4).
+            double p = Viivaleveys.AluerajaLaitePx(615, 44);
+            Oleta.Tosi(p > 1.9 && p < 2.1, $"Provence {p:0.00}");
+            // 1-ranska.jpg: tiheys ~142, 46,4° → z7: 1,5 · 142 · cos / 240 ≈ 0,61 (puhelimen laattakatto antoi z6:n ~0,8–1,0).
+            p = Viivaleveys.AluerajaLaitePx(142, 46.35);
+            Oleta.Tosi(p > 0.55 && p < 0.7, $"Ranska {p:0.00}");
+            // Peitto: seepia 0,45 täytön (0,34) alla = 0,297 sRGB; lineaarisena suurempi, silti alle vanhan 0,55.
+            Oleta.Tosi(Math.Abs(Viivaleveys.AluerajaPeittoWeb - 0.297) < 1e-9, "web 0,297");
+            Oleta.Tosi(Viivaleveys.AluerajaPeittoNatiivi > 0.297 && Viivaleveys.AluerajaPeittoNatiivi < 0.55,
+                $"natiivi {Viivaleveys.AluerajaPeittoNatiivi:0.000}");
+            Console.WriteLine($"      maakuntaraja: peitto web {Viivaleveys.AluerajaPeittoWeb:0.000} → natiivi {Viivaleveys.AluerajaPeittoNatiivi:0.000}");
+        }
+
+        [Testi]
+        static void AluerajaPiirtoSailyttaaPeiton()
+        {
+            // Rajaviiva: puolileveys px = pt·k/2 + 0,75, alfa = saturate(px − |d|); ∫ alfa = laitePx.
+            foreach (double w in new[] { 0.3, 0.6, 0.8, 1.0, 2.0, 3.2 })
+                foreach (double k in new[] { 2.0, 3.0 })
+                {
+                    var (pt, a) = Viivaleveys.AluerajaPiirto(w, k);
+                    double px = 0.5 * pt * k + 0.75, integraali = 0;
+                    for (double d = -5; d <= 5; d += 0.0005) integraali += a * Math.Max(0, Math.Min(1, px - Math.Abs(d))) * 0.0005;
+                    Oleta.Tosi(Math.Abs(integraali - w) < 0.01 && pt >= 0, $"w {w} k {k}: pt {pt:0.000} alfa {a:0.00} → {integraali:0.000}");
+                }
+        }
+}
 }

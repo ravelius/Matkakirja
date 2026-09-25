@@ -190,7 +190,7 @@ namespace Matkakirja.Natiivi
             // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä. Löydös 112: ei vaaleaa verhoa
             // julisteen takana (web: portti on pelkkä tumma soikio), joten etusivulennon kone ja punainen viiva näkyvät
             // otsikon takana kuten webin videossa.
-            var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
+            var porttiYla = this.porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
             Kapea(porttiJuliste);
             Viiva(porttiJuliste);
@@ -201,7 +201,7 @@ namespace Matkakirja.Natiivi
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
-            var keskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
+            var keskus = porttiKeskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
             aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
             Kirjasimet.Aseta(aaniTeksti, Kirjasin.Kone);
@@ -212,7 +212,7 @@ namespace Matkakirja.Natiivi
             aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
-            var linkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
+            var linkki = porttiLinkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
 
             periaatteet = Periaatteet(juuri);
@@ -286,6 +286,10 @@ namespace Matkakirja.Natiivi
         // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
         const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";
         Label porttiLause, aaniTeksti;
+        /// <summary>Portin napit ja alalinkki (löydös 118: häipyvät, kun avausteksti alkaa portin ruudulla).</summary>
+        VisualElement porttiKeskus, porttiLinkki, porttiYla;
+        /// <summary>Löydös 118: avausteksti kirjoittuu portin ruudulle (portti, pallo ja juliste jäävät).</summary>
+        bool avausPortissa;
         Button aaniNappi;
 
         /// <summary>Äänet päälle -nappi: Äänimaisema (koko pelin mykistys) päälle ja kuittaus.</summary>
@@ -418,6 +422,7 @@ namespace Matkakirja.Natiivi
             aloitaNappi.EnableInClassList("mk-nappi--haamu", jatka != null);
             aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
             aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
+            AvausPortissa(false);
             ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
             AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
@@ -465,10 +470,33 @@ namespace Matkakirja.Natiivi
         void PortistaKartalle()
         {
             Aanisoitin.AvausAlkoi(); // web aloitaAvauksenAani (B7-soitin)
-            portti.style.opacity = 0f;
-            AsetaPortti(false);
-            portti.schedule.Execute(() => portti.style.display = DisplayStyle.None).StartingIn(400);
+            // Löydös 118 (omistaja, build 14): "Vintiltä löytyi isoisän matkalaukku" -luenta ja teksti SAMAAN ruutuun kuin
+            // Aloita seikkailu: portti, sumea pallo, etusivulento ja musiikki jatkuvat. Napit ja alalinkki häipyvät, ja
+            // teksti kirjoittuu niiden paikalle julisteen alle. Luenta alkaa painalluksesta (Pelikoodari: intro-118).
+            AvausPortissa(true);
             NaytaAvausteksti();
+        }
+
+        /// <summary>Löydös 118: avausteksti portin päällä (true) tai omalla ruudullaan verhon kanssa (false, Uusi matka).</summary>
+        void AvausPortissa(bool paalla)
+        {
+            avausPortissa = paalla;
+            intro.EnableInClassList("mk-aloitus__intro--portti", paalla);
+            foreach (var e in new[] { porttiKeskus, porttiLinkki })
+            {
+                if (e == null) continue;
+                e.style.transitionProperty = new StyleList<StylePropertyName>(new List<StylePropertyName> { new StylePropertyName("opacity") });
+                e.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(400, TimeUnit.Millisecond) });
+                e.style.opacity = paalla ? 0f : 1f;
+                e.pickingMode = PickingMode.Ignore;
+                var el = e;
+                if (paalla) el.schedule.Execute(() => { if (avausPortissa) el.style.display = DisplayStyle.None; }).StartingIn(420);
+                else el.style.display = DisplayStyle.Flex;
+            }
+            if (porttiLinkki != null) porttiLinkki.pickingMode = PickingMode.Position;
+            // Teksti portin tummennuksen päälle (portti on muuten päällimmäisenä); paluu entiseen järjestykseen.
+            if (paalla) intro.PlaceInFront(portti);
+            else intro.PlaceBehind(valinta);
         }
 
         /// <summary>Avausteksti omalla ruudullaan (portin jälkeen, ennen karttaa).</summary>
@@ -490,6 +518,15 @@ namespace Matkakirja.Natiivi
             arkki.pickingMode = PickingMode.Position;
             valintaNappi.style.display = DisplayStyle.None;
             AvausTausta(true);
+            if (avausPortissa)
+            {
+                // Portin tummennus ja juliste jäävät; avauksella ei omaa verhoa eikä toista julistetta (USS --portti).
+                intro.style.backgroundColor = new StyleColor(StyleKeyword.Null);
+                // Teksti alkaa portin julisteen ja lauseen alta (niiden alareuna + 20 pt).
+                float yla = porttiYla.layout.yMax;
+                arkki.style.paddingTop = float.IsNaN(yla) ? 280f : yla + 20f;
+            }
+            else arkki.style.paddingTop = StyleKeyword.Null;
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;
             // Intro soi pelin kautta (Pelikoodari: PeliOhjain.SoitaIntro — avauksen äänisekoitus seuraa sitä);
@@ -687,6 +724,13 @@ namespace Matkakirja.Natiivi
             var o = PeliOhjain.Instanssi;
             if (o != null) o.OhitaLuento(); else Puhe.Instanssi?.Pysayta();
             Aanet.Tehoste("clack");
+            // Löydös 118: portti oli avauksen taustana; valinnassa pallo terävänä ja portti pois.
+            if (avausPortissa && portti.style.display != DisplayStyle.None)
+            {
+                portti.style.opacity = 0f;
+                AsetaPortti(false);
+                portti.schedule.Execute(() => { if (!PorttiAuki) portti.style.display = DisplayStyle.None; }).StartingIn(400);
+            }
             UiSisalto.Lataa(() =>
             {
                 if (!Auki || ValitseePallolla) return;
@@ -757,6 +801,7 @@ namespace Matkakirja.Natiivi
             // Kaistale ei ota napautuksia (avauksen ohitusnapautus on vain avausruudulla).
             intro.pickingMode = PickingMode.Ignore;
             arkki.pickingMode = PickingMode.Ignore;
+            if (avausPortissa) AvausPortissa(false);
             intro.AddToClassList("mk-aloitus__intro--lento");
             intro.EnableInClassList("mk-aloitus__intro--vaaka", Screen.width > Screen.height);
             AvausTausta(false);

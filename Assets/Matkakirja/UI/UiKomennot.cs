@@ -573,6 +573,10 @@ namespace Matkakirja.Natiivi
                     Kirjaa("piikit: " + KehysPiikit.Aloita(kesto, kynnysMs) + " merkkiä");
                     return null;
                 }
+                case "rauha":
+                    // Lämpöerä: UI:n rauha (UiKerros.Rauhassa) ja ruudunpäivityksen tila.
+                    Kirjaa("rauha: " + UiKerros.Hae().RauhaKuvaus());
+                    return null;
                 case "skaala":
                 {
                     UiKerros.Hae().VaihdaSkaala(loput.Trim().ToLowerInvariant());

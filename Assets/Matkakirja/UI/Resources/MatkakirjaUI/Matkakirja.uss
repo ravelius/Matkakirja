@@ -1859,6 +1859,16 @@
 
 /* Aloituskaava: avausteksti lennon aikana pallon päällä — ei verhoa eikä julistetta, arkki
  * kaistaleena alareunassa (napautus kirjoittaa loppuun). */
+/* Löydös 118: avausteksti portin ruudulla. Portin juliste ja tummennus jäävät, joten avauksen oma juliste on piilossa, ja
+ * arkki alkaa julisteen alta (paddingTop koodista). Teksti on portin lauseen musteella. */
+.mk-aloitus__intro--portti > .mk-aloitus__ylaosa {
+    display: none;
+}
+
+.mk-aloitus__intro--portti > .mk-aloitus__arkki {
+    justify-content: flex-start;
+}
+
 .mk-aloitus__intro--lento {
     justify-content: flex-end;
 }

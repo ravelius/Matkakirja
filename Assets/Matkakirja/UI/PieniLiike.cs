@@ -129,6 +129,7 @@ namespace Matkakirja.Natiivi
             IVisualElementScheduledItem ajo = null;
             ajo = pulu.schedule.Execute(() =>
             {
+                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
                 float t = (Time.realtimeSinceStartup - alku) / LentoS;
                 // Lepo katkesi (kortti aukesi, kamera liikkui): lento loppuu heti.
                 if (t >= 1f || !Levossa() && !pakota)

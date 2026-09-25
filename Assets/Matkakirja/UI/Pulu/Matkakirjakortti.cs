@@ -328,6 +328,7 @@ namespace Matkakirja.Natiivi
             float alku = Time.unscaledTime;
             lyhytAnimaatio = lyhyt.schedule.Execute(() =>
             {
+                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
                 float t = Mathf.Clamp01((Time.unscaledTime - alku) / 0.6f);
                 int n = Mathf.RoundToInt(Mathf.Lerp(vanha.Length, uusi.Length, Mathf.SmoothStep(0f, 1f, t)));
                 lyhyt.text = vanha.Substring(0, n).TrimEnd(' ', ',', '·');
@@ -402,7 +403,10 @@ namespace Matkakirja.Natiivi
             Kirjoittamatta = false;
             // Uusi tieto häivähtää esiin (web .fact-text.fact-in): vain arvotulla havainnolla.
             if (merkinta.Laji == "reitti" || merkinta.Laji == "satunnainen")
+            {
+                Ruudunpaivitys.Herata(0.5f); // lämpö: häivytys täydellä taajuudella
                 teksti.experimental.animation.Start(0f, 1f, 450, (e, v) => e.style.opacity = v);
+            }
             else teksti.style.opacity = 1f;
             Kirjoita(merkinta.Lihava, merkinta.Teksti);
         }

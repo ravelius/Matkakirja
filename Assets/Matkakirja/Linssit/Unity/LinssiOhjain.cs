@@ -325,12 +325,18 @@ namespace Matkakirja.Natiivi
 
             var sovitin = new IhmisenMatkaSovitin(this, a, leimat, aanite, virrat, rantamaski);
             rekisteri.Lisaa(sovitin);
-            Kirjaa($"ihmisen matka: {a.Kertomus.Count} jaksoa, {leimat.Count} aikaleimaa, ääni {(aanite ?? "ei")}");
+            // IHMISEN MATKA II (omistaja 25.9.2026): sama aineisto, kertoja ja vanat, oma näkymän tehostekerros ja muisti.
+            // Piirto esirakennetaan vasta avatessa (VanatSeuraavassa odottaa taustasäiettä), jottei käynnistys tee työtä kahdesti.
+            var sovitin2 = new IhmisenMatkaSovitin(this, a, leimat, aanite, virrat, rantamaski,
+                Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.IhmisenMatka2Tiedot, versio2: true);
+            rekisteri.Lisaa(sovitin2);
+            Kirjaa($"ihmisen matka: {a.Kertomus.Count} jaksoa, {leimat.Count} aikaleimaa, ääni {(aanite ?? "ei")} (I ja II)");
 
             var laskenta = System.Threading.Tasks.Task.Run(() => Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.Laske(virrat));
             while (!laskenta.IsCompleted) yield return null;
             if (laskenta.IsFaulted) { Kirjaa("ihmisen matka: virtojen laskenta: " + laskenta.Exception?.InnerException?.Message); yield break; }
             sovitin.VanatValmiit(laskenta.Result);
+            sovitin2.VanatValmiit(laskenta.Result);
             Kirjaa($"ihmisen matka: {laskenta.Result.Vanat.Count} vanaa laskettu");
         }
 
@@ -354,13 +360,21 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi linssi;
             IhmisenMatkaKerros kerros;
             EsityksenAani aani;
+            readonly LinssiTiedot tiedot;
+            /// <summary>Ihmisen matka II: tehostekerros (IhmisenMatka2Tehosteet) näkymän päälle, esirakennus vasta avatessa.</summary>
+            public readonly bool Versio2;
 
             public IhmisenMatkaSovitin(LinssiOhjain o, Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto a,
                 IReadOnlyDictionary<string, Matkakirja.Linssit.Aikajana.JaksonLeimat> leimat, string aanite,
-                Matkakirja.Linssit.Virrat.VirtaAineisto virrat, Matkakirja.Linssit.Virrat.Ruutumaski rantamaski)
-            { this.o = o; aineisto = a; this.leimat = leimat; this.aanite = aanite; this.virrat = virrat; this.rantamaski = rantamaski; }
+                Matkakirja.Linssit.Virrat.VirtaAineisto virrat, Matkakirja.Linssit.Virrat.Ruutumaski rantamaski,
+                LinssiTiedot tiedot = null, bool versio2 = false)
+            {
+                this.o = o; aineisto = a; this.leimat = leimat; this.aanite = aanite; this.virrat = virrat; this.rantamaski = rantamaski;
+                this.tiedot = tiedot ?? Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.IhmisenMatkaTiedot;
+                Versio2 = versio2;
+            }
 
-            public LinssiTiedot Tiedot => Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.IhmisenMatkaTiedot;
+            public LinssiTiedot Tiedot => tiedot;
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Esitys.Tauko/Jatka/Valitse).</summary>
             public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
@@ -370,7 +384,7 @@ namespace Matkakirja.Natiivi
             public void VanatValmiit(Matkakirja.Linssit.Virrat.VanatTulos tulos)
             {
                 vanat = tulos;
-                if (linssi == null) { Esirakenna(); return; }
+                if (linssi == null) { if (!Versio2) Esirakenna(); return; }
                 // Valmiiksi rakennettu piirto taustasäikeestä, jos ehti (muuten kerros rakentaa itse).
                 var p = valmis is { IsCompleted: true, IsFaulted: false, IsCanceled: false } ? valmis.Result : null;
                 valmis = null;
@@ -399,10 +413,13 @@ namespace Matkakirja.Natiivi
 
             public void Avaa(ILinssiYmparisto y)
             {
-                using (Merkki("ihmisen-matka", OsaKerros).Auto()) kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat);
-                using (Merkki("ihmisen-matka", OsaAani).Auto()) aani = EsityksenAani.Luo(kerros.transform, aanite);
-                using var _ = Merkki("ihmisen-matka", OsaLinssi).Auto();
-                linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani)
+                string id = tiedot.Id;
+                // II esirakentaa piirron vasta nyt (taustasäikeessä); VanatSeuraavassa odottaa sitä ~1,5 s.
+                if (Versio2) Esirakenna();
+                using (Merkki(id, OsaKerros).Auto()) kerros = IhmisenMatkaKerros.Luo(o.kierto, aineisto.Paikat, Versio2);
+                using (Merkki(id, OsaAani).Auto()) aani = EsityksenAani.Luo(kerros.transform, aanite);
+                using var _ = Merkki(id, OsaLinssi).Auto();
+                linssi = new Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi(aineisto, leimat, kerros, aani, tiedot)
                 {
                     // Linssi muistaa paikkansa (web localStorage → PlayerPrefs, sama avain).
                     Varasto = new PlayerPrefsVarasto(),
@@ -424,7 +441,7 @@ namespace Matkakirja.Natiivi
                 yield return null;
                 for (int i = 0; i < 90 && valmis is { IsCompleted: false }; i++) yield return null;
                 if (linssi != avattu || vanat == null) yield break;
-                using (Merkki("ihmisen-matka", "Avaa.Vanat").Auto()) VanatValmiit(vanat);
+                using (Merkki(tiedot.Id, "Avaa.Vanat").Auto()) VanatValmiit(vanat);
             }
 
             public void Paivita() => linssi?.Paivita();
@@ -436,7 +453,9 @@ namespace Matkakirja.Natiivi
                 if (kerros != null) Destroy(kerros.gameObject);
                 kerros = null;
                 aani = null;
-                Esirakenna();
+                // II vapauttaa piirron (ei esirakenneta seuraavaa varten: muisti; I pitää valmiin kuten ennen).
+                if (Versio2) valmis = null;
+                else Esirakenna();
             }
         }
 
@@ -897,7 +916,7 @@ namespace Matkakirja.Natiivi
         // luodaan käynnistyksessä: KehysPiikit ottaa seurantaan vain aloitushetkellä olemassa olevat merkit.
 
         static readonly string[] MitattavatLinssit =
-            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "vertailu", "maatiedot", "radio", "isoisa-1873" };
+            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873" };
         static readonly Dictionary<(string, string), Unity.Profiling.ProfilerMarker> merkit =
             new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
@@ -1108,7 +1127,9 @@ namespace Matkakirja.Natiivi
                 {
                     // Testikomento: ihmisen matka auki ja suoraan tutkimusvaiheeseen (Laitetestaajan
                     // virtanappien ja nostopisteiden tarkistus ilman koko esitystä).
-                    if (!(rekisteri.Auki is IhmisenMatkaSovitin)) rekisteri.Valitse("ihmisen-matka");
+                    // "ihminen tutkimus 2" = Ihmisen matka II.
+                    string haluttu = osat.Length > 2 && osat[2] == "2" ? "ihmisen-matka-2" : "ihmisen-matka";
+                    if (rekisteri.Auki?.Tiedot.Id != haluttu) rekisteri.Valitse(haluttu);
                     var l = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi;
                     bool ok = l?.SiirryTutkimukseen() ?? false;
                     Kirjaa($"ihminen tutkimus: {(ok ? (l.Tutkimus != null ? $"auki, {l.Tutkimus.Nostot.Count} nostoa" : "odottaa vanoja") : "ei onnistunut")}");

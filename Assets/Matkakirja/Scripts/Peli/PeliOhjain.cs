@@ -395,11 +395,14 @@ namespace Matkakirja.Natiivi
             kierto.PelaajanEle += KarttaKosketettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
-            // LÖYDÖS 101 (maalehtien tahmea vieritys laitteella): lehteä EI rekisteröidä näkymäpeitoksi. Peitto asettaa
-            // OnDemandRendering.renderFrameInterval = 4 (PalloKierto.PaivitaPeitto), joka harventaa KOKO Unityn piirron
-            // eikä vain palloa. Se oli tehty WKWebView-lehdelle, jonka iOS piirsi itse; nykyinen lehti on UI Toolkit -näkymä
-            // samassa piirrossa, joten se päivittyi 60 Hz:n näytöllä vain 15 fps:llä, ja vieritys ja heitto nykivät.
-            if (lehtiNakyma != null) lehtiNakyma.Suljettu += LehtiSuljettu;
+            // Lehti peittää pallon: Ruudunpaivitys sammuttaa pallon kameran sen ajaksi (lämpöerä 25.9.2026, Raamattu LÄMPÖ JA
+            // VIRRANKULUTUS: lehden alla pallon piirto seis). Löydös 101: peitto EI enää harvenna koko piirtoa
+            // (renderFrameInterval 4 hidasti UI Toolkit -lehden 15 fps:iin), joten lehti voi taas olla näkymäpeitto.
+            if (lehtiNakyma != null)
+            {
+                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.PeittaaRuudun); // iPadilla arkki ≤ 960 pt ei peitä (Natiivi-UI)
+                lehtiNakyma.Suljettu += LehtiSuljettu;
+            }
             AlustaAanet();
 
             if (File.Exists(PoisPolku))
@@ -442,24 +445,11 @@ namespace Matkakirja.Natiivi
         static string Valimuisti(string polku) =>
             Path.Combine(SisaltoKansio, polku.Replace('/', Path.DirectorySeparatorChar));
 
+        /// <summary>Versiopolku Sisallon kautta (uusin.json kerran istunnossa, Esilataaja erä 1).</summary>
         IEnumerator HaeVersio()
         {
             versioPolku = null;
-            using (var p = UnityWebRequest.Get(Sisalto.Osoitin))
-            {
-                p.timeout = 10;
-                yield return p.SendWebRequest();
-                if (p.result == UnityWebRequest.Result.Success)
-                {
-                    try { versioPolku = JsonUtility.FromJson<Sisalto.OsoitinTiedot>(p.downloadHandler.text)?.polku; }
-                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: uusin.json ei jäsenny: " + e.Message); }
-                }
-                if (string.IsNullOrEmpty(versioPolku) && File.Exists(ViimeisinPolku))
-                {
-                    versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
-                    Debug.LogWarning($"MATKAKIRJA peli: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
-                }
-            }
+            yield return Sisalto.VersioPolku(v => versioPolku = v);
         }
 
         /// <summary>Kokoelma raakatekstinä välimuistista tai ämpäristä. valmis(null) = ei saatu.</summary>
@@ -471,24 +461,27 @@ namespace Matkakirja.Natiivi
         {
             string polku = versioPolku + suhteellinen;
             string tiedosto = Valimuisti(polku);
-            if (!ohitaValimuisti && File.Exists(tiedosto))
+            bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);
+            VerkkoOdotus.Osuma("peli", valimuistissa);
+            if (valimuistissa)
             {
                 valmis(File.ReadAllText(tiedosto));
                 yield break;
             }
-            using var k = UnityWebRequest.Get(Sisalto.Juuri + polku);
-            k.timeout = 30;
-            float hakuAlku = Time.realtimeSinceStartup;
-            yield return k.SendWebRequest();
-            VerkkoOdotus.Haku("peli", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
-            if (k.result != UnityWebRequest.Result.Success)
+            string teksti = null, virhe = null;
+            long koodi = 0;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Sisalto.Juuri + polku); q.timeout = 30; return q; }, Taso.Nakyva, "peli", k =>
             {
-                if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({k.responseCode})");
-                else Debug.LogError($"MATKAKIRJA peli: {polku} epäonnistui: {k.error}");
+                koodi = k.responseCode;
+                if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error;
+            });
+            if (teksti == null)
+            {
+                if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({koodi})");
+                else Debug.LogError($"MATKAKIRJA peli: {polku} epäonnistui: {virhe}");
                 valmis(null);
                 yield break;
             }
-            var teksti = k.downloadHandler.text;
             try
             {
                 // Atomisesti: Sisalto.cs lukee samaa välimuistia rinnakkain.
@@ -518,6 +511,8 @@ namespace Matkakirja.Natiivi
             Tila = SilmukanTila.Lataa;
             tilarivi.Aseta("Haetaan matkakirjaa…");
             VerkkoOdotus.PeliVaihe = VerkkoVaihe;
+            // Ruudunpaivitys: linssin ollessa auki täysi taajuus (aikajanat, radion mittarit, kamera-ajot; lämpöerä 25.9.).
+            Ruudunpaivitys.Aktiivinen.Add(() => LinssiOhjain.Rekisteri?.Auki != null);
             AloituslentoPaattyi += _ => verkkoSaapui = Time.realtimeSinceStartup;
             MatkaPerilla += k => { if (k != null) verkkoSaapui = Time.realtimeSinceStartup; };
             // Verkko-odotus: pelin sisältö (kaupungit, reitit) ennen aloitusta; aloitusnäkymä odottaa tätä.
@@ -556,6 +551,8 @@ namespace Matkakirja.Natiivi
             KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
+            EsilataaIntro();
+            TilaVaihtui += (_, uusi) => { if (uusi == SilmukanTila.Aloitus) EsilataaIntro(); };
         }
 
         /// <summary>

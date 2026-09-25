@@ -62,6 +62,13 @@ namespace Matkakirja.Natiivi
         string avausKaupunki;
 
         public bool Auki { get; private set; }
+        /// <summary>
+        /// Lämpöerä (näkymäpeitto, pallon kamera pois): lehti peittää koko ruudun vasta, kun sisäänhäivytys on valmis
+        /// (peitteen opasiteetti 1) ja arkki on ruudun levyinen. Arkin max-width on 960 pt (web), joten iPad 11:n
+        /// vaaka-asennossa ja iPad 13:lla sivuille jää himmennetty kartta, jonka pitää yhä piirtyä.
+        /// </summary>
+        public bool PeittaaRuudun => Auki && peite.resolvedStyle.opacity >= 0.999f
+            && arkki.resolvedStyle.width >= peite.resolvedStyle.width - 1f && arkki.resolvedStyle.height >= peite.resolvedStyle.height - 1f;
         /// <summary>Auki olevan sivun nimi (palautteen ehdotusSivu) tai null.</summary>
         /// <summary>Auki olevan kehittäjän liitteen nimi (esim. "Lukijoilta") tai null.</summary>
         public string LiiteAuki => Auki && lehti != null && lehti.Laji == LehtiLaji.Kehittaja ? lehti.Nimi : null;

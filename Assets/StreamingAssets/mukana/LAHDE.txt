@@ -1,0 +1,5 @@
+Buildiin mukana (Raamattu ESILATAUSPOLITIIKKA kohta 1; Fable 25.9.2026, löydös 118): nämä tiedostot soivat ilman verkkoa.
+Lähde: ämpäri media.matkakirja.app, sama tiedosto kuin pelin striimauksessa (Mukana.Polku vertaa tiedostonimeä).
+  intro-puhe.mp3          https://media.matkakirja.app/audio/intro-puhe.mp3?v=2   (298 048 t, haettu 25.9.2026)
+  musa-etusivu-lyria.mp3  https://media.matkakirja.app/audio/musa-etusivu-lyria.mp3 (2 155 849 t, haettu 25.9.2026)
+Päivitys: kun ämpärin tiedosto vaihtuu, kopioi uusi tähän (muuten build soittaa vanhaa).

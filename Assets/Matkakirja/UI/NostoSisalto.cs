@@ -149,17 +149,18 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrEmpty(iso)) yield break;
             string pieni = iso.ToLowerInvariant(), suuri = iso.ToUpperInvariant();
-            yield return ValojenMaat();
+            // Esilataaja: tämän kaupungin taso (näkyvä nosto ohittaa).
+            yield return ValojenMaat(Taso.TamaKaupunki);
             foreach (var k in new[] { "skandaalit", "historianHetket", "elaintayt", "takynostot" })
             {
                 yield return null;
-                yield return LataaKokoelma(k);
+                yield return LataaKokoelma(k, Taso.TamaKaupunki);
             }
             foreach (var (tiedosto, vienti) in new[] { ("fokuskohteet", "FOKUSKOHTEET"), ("maastokohteet", "MAASTOKOHTEET"),
                                                        ("hahmotelma", "HAHMOTELMA"), ("nakyvat-kaupungit", "NAKYVAT_KAUPUNGIT") })
             {
                 yield return null;
-                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { });
+                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { }, Taso.TamaKaupunki);
             }
             Debug.Log("MATKAKIRJA ui nostot: esiladattu " + suuri);
         }
@@ -396,12 +397,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kokoelma kerran muistiin (id → data; maa talteen kenttään $maa).</summary>
-        static IEnumerator LataaKokoelma(string kokoelma)
+        static IEnumerator LataaKokoelma(string kokoelma, Taso taso = Taso.Nakyva)
         {
             if (!kokoelmat.TryGetValue(kokoelma, out var taulu))
             {
                 string teksti = null;
-                yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, valinnainen: true);
+                yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, true, taso);
                 taulu = new Dictionary<string, Dictionary<string, object>>();
                 try
                 {
@@ -429,11 +430,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static IEnumerator ValojenMaat()
+        static IEnumerator ValojenMaat(Taso taso = Taso.Nakyva)
         {
             if (valot != null) yield break;
             string teksti = null;
-            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("karttavalot", t => teksti = t, true, taso);
             var m = new Dictionary<string, Valo>();
             try
             {
@@ -530,13 +531,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Moduulin vienti (taulukko tai olio) kerran muistiin; kääre {arvo} puretaan taulukolta.</summary>
-        static IEnumerator ModuuliArvo(string polku, string vienti, Action<object> valmis)
+        static IEnumerator ModuuliArvo(string polku, string vienti, Action<object> valmis, Taso taso = Taso.Nakyva)
         {
             string avain = polku + "#" + vienti;
             if (!moduulit.TryGetValue(avain, out var arvo))
             {
                 string teksti = null;
-                yield return Sisalto.HaePaketista(polku, t => teksti = t, true);
+                yield return Sisalto.HaePaketista(polku, t => teksti = t, true, taso);
                 try
                 {
                     var v = Ob(MiniJson.Kentta(Ob(MiniJson.Jasenna(teksti ?? "{}")), "exportit"));
