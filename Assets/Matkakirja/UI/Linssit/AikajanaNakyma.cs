@@ -769,6 +769,7 @@ namespace Matkakirja.Natiivi
         public void VahdiValikkoa()
         {
             VahdiLappua();
+            linssit.AvausPeittaa(tila != Tila.Ei && esittely.style.display.value == DisplayStyle.Flex);
             bool kaytossa = tila != Tila.Ei
                 && ylarivi.style.display.value == DisplayStyle.Flex
                 && esittely.style.display.value != DisplayStyle.Flex;
