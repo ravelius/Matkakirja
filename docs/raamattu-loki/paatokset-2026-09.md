@@ -5611,3 +5611,7 @@ Build 15 arvio ~klo 19: maakunnat-kaikki + s2-orbit junaan → käännös → La
 ## OMISTAJA klo 16.3x (SITOVA): 1) GLO-30 LADATAAN KOKO MAAILMALLE NAS:IIN (dem/copernicus-glo30; NYT 1 661 RUUTUA / 40 Gt, KOKO SARJA ~26 000 RUUTUA, NAS VAPAANA 5,6 Tt) → KARTTASEPPA ALOITTAA IRROTETTUNA PROSESSINA, ≤ 4 YHTEYTTA; 2) CLAUDE-APPIA EI SIIRRETA KOODAUS-KAYTTAJALLA: OMISTAJA SIIRSI SAMI REIVINEN -KAYTTAJAN APIN ~/Applications-KOPIOON, JOTEN KAKSI ERI APPIA ON JO KAYTOSSA — /Applications/Claude.app JAA KOODAUS-KAYTTAJAN OMAKSI (25.9.2026 klo 16.32)
 
 Aiempi suunnitelma (24.9.) käyttäjäkohtaisesta asennuksesta molemmille peruuntuu koodaus-käyttäjän osalta; CLI-asennus (natiivi vs. brew) jää erilliseksi kysymykseksi.
+
+## GLO-30 KOKO MAAILMA (KARTTASEPPA): 26 450 RUUTUA, 589 Gt, PUUTTUU 24 791 RUUTUA / 547 Gt, ARVIO 5,5 h (28 MB/s), NAS 90 → 91 %; FABLE: ALOITA HETI download-set.sh:LLA, RINNAKKAISUUS 4 PAIVALLA JA 8 klo 22 JALKEEN, IRROTETTUNA, EHEYSTARKISTUS LOPUKSI (25.9.2026 klo 16.33)
+
+Kirjoitus suoraan NAS:iin, ei paikallista levyä.
