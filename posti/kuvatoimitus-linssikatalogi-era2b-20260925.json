@@ -1,0 +1,1262 @@
+{
+  "erä": "linssikatalogi-era2b-20260925",
+  "tila": "72 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 18,
+    "concepts": 18,
+    "cc": 18,
+    "cc_not_found": 0,
+    "objects": 72
+  },
+  "entries": [
+    {
+      "id": "E1",
+      "nimi": "Renessanssi",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Renessanssin Italian kaupunkisolmut yhdistyvät ajalliseksi reitiksi.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. Renaissance in Italy, 1400–1600. Oblique antique parchment relief map centered on northern and central Italy, with geographically recognizable coastline and no modern country-border grid. Four luminous brass nodes at Florence, Rome, Venice and Milan are joined by delicate chronological routes. Subtle engraved architectural and artistic details are embedded in the terrain: a Florentine dome, Roman chapel vault, Venetian painting studio and Milanese design sketch, all without readable marks or portraits. Cream/sepia land, dark blue-brown sea, painterly dimensional cartography, gentle vignette and a small unlabeled brass time arc at the lower edge. The map and four sites dominate at thumbnail size. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E1-havainne.jpg",
+            "objectKey": "linssikatalogi/E1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244604,
+            "sha256": "57d9906b95115c6fc1b3efe75aec54bf0000afaa5379a6e9f94c016c04c90553"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36605,
+            "sha256": "2628f7cdee79451f6e24f8c9654ed528efff581bed0585bc6a32c78f569712d4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "1800-luvun lopun fotokromikuva näyttää Firenzen tuomiokirkon ja Brunelleschin kupolin Palazzo Vecchiosta.",
+        "creator": "Tuntematon valokuvaaja; Photochrom Print Collection",
+        "title": "The Cathedral, panoramic view from Vecchio Palace, Florence, Italy",
+        "year": "n. 1890–1900",
+        "collection": "Library of Congress, Prints and Photographs Division, LCCN 2001700794",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Cathedral%2C_panoramic_view_from_Vecchio_Palace%2C_Florence%2C_Italy-LCCN2001700794.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/The_Cathedral%2C_panoramic_view_from_Vecchio_Palace%2C_Florence%2C_Italy-LCCN2001700794.jpg/3840px-The_Cathedral%2C_panoramic_view_from_Vecchio_Palace%2C_Florence%2C_Italy-LCCN2001700794.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E1-cc.jpg",
+            "objectKey": "linssikatalogi/E1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292712,
+            "sha256": "0fbf49bfc1fdaf32edd3676d570348a7ba5ed6e09a83df776684c6b97f18c5b8"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E1-cc-480.jpg",
+            "objectKey": "linssikatalogi/E1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 58384,
+            "sha256": "0b7e2e3f054d2dda6453c8ee864bd08e320f3df23a2cef4d8e92bf4dabd96888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E2",
+      "nimi": "Säveltäjien Eurooppa",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan säveltäjien kaupungit syttyvät musiikin kaarien alle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. Europe's composers, 1685–1900. Antique parchment relief map of Europe extending from Britain to Finland and Saint Petersburg, no modern country-border grid. Warm luminous nodes near Eisenach, Salzburg, Vienna, Leipzig, Bayreuth, Saint Petersburg and Helsinki, joined by fine routes like a historical timeline. A faint flowing musical staff and abstract notes wind across the map as delicate engraved texture without any words; tiny concert hall silhouettes are subordinate to geography. Cream and sepia, dark teal sea, brass highlights, cinematic grazing light, restrained vignette and an unlabeled time arc along the bottom. Serious elegant music atmosphere, clear thumbnail composition. No portraits, people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E2-havainne.jpg",
+            "objectKey": "linssikatalogi/E2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248359,
+            "sha256": "cb7ec83d286a0e04fbafe923b65d60ee2458dddac42f2d76604e000ec565b429"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 33737,
+            "sha256": "80e45fe8edef51c3aa4c9a6228b537e72b0b510eb24e8afca96fe518cf9f622e"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1723 kaiverrus näyttää Leipzigin Tuomaskirkon ja -koulun Bachin työvuosien alussa.",
+        "creator": "Johann Krügner",
+        "title": "Thomaskirche und Thomasschule zu Leipzig",
+        "year": "1723",
+        "collection": "Stadtgeschichtliches Museum Leipzig, Inv. 2810 a",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomaskirche_und_-schule_1723.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Thomaskirche_und_-schule_1723.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "full portrait mounted without upscaling",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E2-cc.jpg",
+            "objectKey": "linssikatalogi/E2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293354,
+            "sha256": "5a3198b35570a1546c55765c8dd444cd64da8a85cc54f606c2c784cbc5264117"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E2-cc-480.jpg",
+            "objectKey": "linssikatalogi/E2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 35048,
+            "sha256": "eddfabc65be88b51f2cfff994adb706512e3ee3f62d492d78901cea84c785c8e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E3",
+      "nimi": "Kirjallisuuden kaupungit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kirjallisuuden kaupungit liittyvät toisiinsa Euroopan kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. Literary cities of Europe, 1600–1900. Antique parchment relief map of Europe, geographically recognizable and with no modern country-border grid. Five warm brass nodes mark London, Weimar, Saint Petersburg, Dublin and Paris, connected by thin luminous chronological routes. Subtle small silhouettes of closed leather books, quills and historic reading rooms are integrated into the cartography, without legible writing or portraits. Cream/sepia paper, dark ink sea, painterly dimensional terrain, gentle vignette and an unlabeled time arc at bottom. Quiet, thoughtful atmosphere, map remains dominant at thumbnail size. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E3-havainne.jpg",
+            "objectKey": "linssikatalogi/E3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249328,
+            "sha256": "899f9a1c030bc4bf8f7885d9f6eaa550939d442bcd4ee59b5b18eb0675064838"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36693,
+            "sha256": "0c6796b7ac523ad560fbba148d14121ef285680d249c7d4e6d5385c55513c822"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Goethen oma piirros esittää hänen Weimarin puutarhataloaan 1770-luvun lopulla.",
+        "creator": "Johann Wolfgang von Goethe",
+        "title": "Weimar, Goethes Gartenhaus von der Rückseite",
+        "year": "1779–1780",
+        "collection": "Stiftung Weimarer Klassik, Schiller-Museum",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Goethes_Gartenhaus_R%C3%BCckseite%40Drawing_by_Goethe.JPG",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Goethes_Gartenhaus_R%C3%BCckseite%40Drawing_by_Goethe.JPG/3840px-Goethes_Gartenhaus_R%C3%BCckseite%40Drawing_by_Goethe.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E3-cc.jpg",
+            "objectKey": "linssikatalogi/E3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 287262,
+            "sha256": "df49da542600380fa2ba8ee1b20475e7786a36d8fd3c43ffa3283a1aa1f0c26a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E3-cc-480.jpg",
+            "objectKey": "linssikatalogi/E3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 77218,
+            "sha256": "d54525364cbfba97c8bfb8c8c34af399073601a6e88eebf4485bd4b76583e8c2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E4",
+      "nimi": "Maailmannäyttelyt",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Maailmannäyttelyiden solmut kulkevat Lontoosta Pariisiin ja Chicagoon.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. World's fairs, 1851–1900. Precise oblique antique parchment map centered on the North Atlantic, with recognizable northeastern United States on the left and British Isles and France on the right. Exactly three illuminated city sites: Chicago inland near the southwestern shore of Lake Michigan, London in southeast England, Paris inland in northern France. At Chicago place a small white domed fair pavilion; at London place a small 1851 glass exhibition hall; at Paris place a small Eiffel Tower. Make these three structures unambiguously sit over their correct land locations, not across the sea or at any other city. Fine golden timeline arcs connect the city sites. Cream/sepia land, dark blue-brown ocean, restrained brass time arc at lower edge, painterly dimensional relief, gentle vignette. No other buildings, no people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E4-havainne.jpg",
+            "objectKey": "linssikatalogi/E4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248482,
+            "sha256": "1fed8d19e5d6a1f44bf0774281ea33ceada82e80bfae2f2f10a7a393ac98377e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30954,
+            "sha256": "1c11ab447741a80c8cb0bfa19d59b1a5a3c043364c7229e5960af54b4c439252"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1851 kaiverrus esittää Lontoon maailmannäyttelyä varten rakennettua Crystal Palacea Hyde Parkissa.",
+        "creator": "Read & Co. Engravers & Printers",
+        "title": "The Crystal Palace in Hyde Park for Grand International Exhibition of 1851",
+        "year": "1851",
+        "collection": "View from the Knightsbridge Road; Read & Co., London",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Crystal_Palace_in_Hyde_Park_for_Grand_International_Exhibition_of_1851.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/The_Crystal_Palace_in_Hyde_Park_for_Grand_International_Exhibition_of_1851.jpg/3840px-The_Crystal_Palace_in_Hyde_Park_for_Grand_International_Exhibition_of_1851.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E4-cc.jpg",
+            "objectKey": "linssikatalogi/E4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 274800,
+            "sha256": "8ea42b129ead7164823acc78c9f24b7d88131d966b7b5139e1f8db26f134f714"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E4-cc-480.jpg",
+            "objectKey": "linssikatalogi/E4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 62691,
+            "sha256": "21850bccbbccae53c50a982a4bd7902edfe547016a8f9fc373e77ac9f35e2d46"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E5",
+      "nimi": "Arkkitehtuurin ihmeet",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Arkkitehtuurin merkkipaikat hahmottuvat kartalle Gizan ja Pariisin välillä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. Architectural wonders from ancient Giza to the nineteenth-century Eiffel Tower. Elegant antique parchment relief map spanning Egypt, Europe and the eastern Mediterranean, with recognizable coastlines and no modern country-border grid. Warm brass nodes and small embedded architectural silhouettes mark Giza, Rome's Pantheon, Constantinople's Hagia Sophia, Granada's Alhambra, Cologne Cathedral and Paris's Eiffel Tower. Delicate chronological lines connect the sites without suggesting direct travel; monument silhouettes remain modest and clearly separate. Cream/sepia land, dark ink sea, painterly depth, gentle vignette, unlabeled brass time arc at bottom. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E5-havainne.jpg",
+            "objectKey": "linssikatalogi/E5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244019,
+            "sha256": "eeede996de407954b72e8fe70545fd910f3d0400c71a37ace996b2eef280ec06"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34771,
+            "sha256": "bec193de4d4fd025c708c267c388235fc0a144f711775bae56f4c25da6b2174f"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Piranesin vuoden 1761 etsaus esittää Rooman Pantheonia, yhtä antiikin arkkitehtuurin säilyneistä ihmeistä.",
+        "creator": "Giovanni Battista Piranesi",
+        "title": "Veduta del Pantheon d'Agrippa",
+        "year": "1761",
+        "collection": "Statens Museum for Kunst, KKSgb9860/60",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Piranesi%2C_Pantheon%2C_1761%2C_KKSgb9860-60%2C_Statens_Museum_for_Kunst.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Giovanni_Battista_Piranesi%2C_Pantheon%2C_1761%2C_KKSgb9860-60%2C_Statens_Museum_for_Kunst.jpg/3840px-Giovanni_Battista_Piranesi%2C_Pantheon%2C_1761%2C_KKSgb9860-60%2C_Statens_Museum_for_Kunst.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E5-cc.jpg",
+            "objectKey": "linssikatalogi/E5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 278636,
+            "sha256": "497f920a870d59d8c748688853a3b7aa12a59981a8e79136dfce490b17ceed1a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E5-cc-480.jpg",
+            "objectKey": "linssikatalogi/E5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 64006,
+            "sha256": "d36b978718279daba53b05d5afc86915222913eb3655f3c21a46d4cdf57f651e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E6",
+      "nimi": "Museot ja kirjastot syntyvät",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Museoiden ja kirjastojen varhaiset keskukset valaisevat Euroopan karttaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja timeline lens, single 16:9 landscape concept. Museums and libraries emerge across Europe, 1683–1900. Oblique antique parchment relief map of Europe and western Russia, no modern country-border grid. Warm luminous nodes at Oxford, London, Paris, Saint Petersburg and Helsinki, connected by restrained fine chronological routes. Small architecturally distinct silhouettes of museum facades and library halls are lightly engraved into the land; a few closed books and display cabinets are faint decorative map details. Cream and sepia, deep blue-brown sea, brass light, dimensional cartography, gentle vignette and an unlabeled time arc below. Quiet scholarly public-institution theme; map and five nodes readable at thumbnail size. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E6-havainne.jpg",
+            "objectKey": "linssikatalogi/E6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244935,
+            "sha256": "1fde544d464dee524c95f1b12be53aca97b5ab137d92bc95fc66b45cdfaea09b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34892,
+            "sha256": "b5d3cd77ca0eef085496301c725ceeb28f4f113a3e6c6884a14a3f85bb1a76f4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Warrenin vuoden 1805 kaiverrus näyttää British Museumin ensimmäisiä tiloja Montagu Housessa.",
+        "creator": "Alfred William Warren, Robert Blemmell Schnebbelie'n mukaan; digitointi Wellcome Collection",
+        "title": "The British Museum at Montague House: the courtyard",
+        "year": "1805",
+        "collection": "Wellcome Collection, V0013502",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_British_Museum_at_Montague_House%3B_the_courtyard._Engravi_Wellcome_V0013502.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_British_Museum_at_Montague_House%3B_the_courtyard._Engravi_Wellcome_V0013502.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E6-cc.jpg",
+            "objectKey": "linssikatalogi/E6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297961,
+            "sha256": "0240a7b5e572df11d58f65b1e2686b257ee7d4f36d81a3f6d9c18d38d2db6474"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E6-cc-480.jpg",
+            "objectKey": "linssikatalogi/E6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 51958,
+            "sha256": "40e4f979668223567149a8656b97d36c0c77883c6d1fabd7bd8b694de02adef9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E8",
+      "nimi": "Ishtarin portti paikallaan (natiivi, paikkarekonstruktio)",
+      "tyyppi": "museo",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ishtarin portti avautuu muinaisen Babylonin prosessiotien varrella.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja native museum place reconstruction, single 16:9 landscape game concept. Reconstruct the Ishtar Gate in its original setting at Babylon around 575 BCE: a magnificent blue glazed-brick gateway with restrained animal reliefs standing along the Processional Way, adjoining sunlit mud-brick city walls, palm groves and a glimpse of the Euphrates in the distance. Clearly three-dimensional walkable ground-level environment, human-eye perspective looking down the ceremonial street toward the gate, careful historical material texture and broad spatial depth. Warm cream/ochre desert and brick contrast with deep lapis blue glaze, soft atmospheric light and restrained vignette. A place to explore, not a flat map or museum display of fragments. No people, modern buildings, UI, controls, signs, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E8-havainne.jpg",
+            "objectKey": "linssikatalogi/E8-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E8-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249027,
+            "sha256": "8caefa1a74b71e67f915ce26f6d49f1d52d60820d71cb80f7848b35cf1c1b394"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E8-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E8-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E8-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34289,
+            "sha256": "a6a4423783ddc14e0fea11c746ee7edff07a4627a7ca10272ac5206e7f9aaa8b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Koldeweyn vuoden 1914 kaivausjulkaisun kuva näyttää Ishtarin portin muinaisia rakenteita Babylonissa, ei ehjää porttia.",
+        "creator": "Robert Koldewey",
+        "title": "Ishtar Gate from the west",
+        "year": "1914",
+        "collection": "The Excavations at Babylon (1914), kuva 23, s. 37",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ishtar_gate_from_the_west.png",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Ishtar_gate_from_the_west.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E8-cc.jpg",
+            "objectKey": "linssikatalogi/E8-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E8-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 290808,
+            "sha256": "8f9114b436ef62e7ca1758803afcf55f45442f2a40c50980269899e91de331fc"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E8-cc-480.jpg",
+            "objectKey": "linssikatalogi/E8-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E8-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 47729,
+            "sha256": "0a430ecdb1acd00e833ad1d16631b1a99e7ae0b213e08e006da7d5a39110e29c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E9",
+      "nimi": "Konstantinopoli kulta-aikanaan (natiivi, dioraama)",
+      "tyyppi": "museo",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Konstantinopolin kultakauden rakennukset ja satamat näkyvät kolmiulotteisena dioraamana.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja native museum city diorama, single 16:9 landscape game concept. Constantinople around 1000 CE as a clearly three-dimensional hand-built miniature city seen from a high oblique angle. Show the historic peninsula between the Golden Horn and Sea of Marmara, with the Bosporus beyond. Hagia Sophia's great dome, the long Hippodrome, the Great Palace precinct by the water, and the Theodosian land walls to the west are spatially recognizable. The Golden Horn is open water with a subtle harbor chain only near its mouth; absolutely no bridges across any waterway. Warm cream stone, terracotta tile roofs, dark teal sea, painterly 3D model texture, cinematic morning light and elegant spatial depth. This is an in-game historic reconstruction, not a photograph of a modern city or a flat map. No suspension bridges, modern harbor structures, cars, people, combat, UI, controls, signs, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E9-havainne.jpg",
+            "objectKey": "linssikatalogi/E9-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E9-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248068,
+            "sha256": "fca7c91cb8f3ce4d59f6444f7254be453eb024314ce77afcff9842fafd3b98a6"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/E9-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E9-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E9-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38407,
+            "sha256": "3984304231153df8a6e5c416126f9a1c133948871bd1b04c67f3d7d0560c5e22"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1899 historiallinen kartta kokoaa Bysantin Konstantinopolin rakennuksia ja Theodosiuksen muurit; se on myöhempi tulkinta.",
+        "creator": "F. R. von Hübner",
+        "title": "Byzantine Constantinople",
+        "year": "1899",
+        "collection": "Alexander van Millingen, Byzantine Constantinople, John Murray (1899)",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Byzantine_Constantinople.png",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Byzantine_Constantinople.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "native-size center mount, no upscaling",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E9-cc.jpg",
+            "objectKey": "linssikatalogi/E9-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E9-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297571,
+            "sha256": "a57c4b62cb4803e3a0b4f8ef14be476703bb7655f55464e283f1fd7ce3ce69c1"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/E9-cc-480.jpg",
+            "objectKey": "linssikatalogi/E9-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E9-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 57042,
+            "sha256": "fd78fffd63c6625e8c3cc7b031267cb1f44c8c0492c5bc1fdb297595f3577f08"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F3",
+      "nimi": "Kasvien matkat",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kasvien alkuperäalueet ja kulkureitit piirtyvät maailmankartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept. Journeys of useful plants, 1492–1900. Antique parchment world map with recognizable continents and deep dark blue-brown seas, no political borders. Fine distinct golden sea-and-land routes show potato from the Andes toward Europe, coffee from northeast Africa and Arabia toward Europe, tea from China, sugar from South and Southeast Asia, rubber from the Amazon toward Southeast Asia, and cinnamon from Sri Lanka. At each origin a tiny botanical engraving of the relevant plant or tuber is integrated into the map, without labels. Keep routes legible and avoid one tangled global web. Cream/sepia relief, gentle brass glow, unlabeled time arc, soft vignette and dimensional cartography. No people, colonial scenes, UI, controls, panels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/F3-havainne.jpg",
+            "objectKey": "linssikatalogi/F3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244543,
+            "sha256": "1ec3fb7e8c3085496f65ed06aeaf0efee1c3fb26d2d8991f1bb2249c7f38ae4d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/F3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/F3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 33022,
+            "sha256": "97c4f4fa7fe3953f545a0c12bec0e1b7cd8e2290c6870997ef26877f7bbd9544"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "John Gerardin vuoden 1597 kasvikirjan perunapiirros kertoo Amerikan kasvin saapumisesta Euroopan kasvitieteeseen.",
+        "creator": "Tuntematon puupiirtäjä; John Gerard (julkaisu); digitointi Wellcome Collection",
+        "title": "Illustration of Potato of Virginia",
+        "year": "1597",
+        "collection": "Wellcome Collection, L0064345; John Gerard, The Herball",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Illustration_of_Potato_of_Virginia_Wellcome_L0064345.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Illustration_of_Potato_of_Virginia_Wellcome_L0064345.jpg/3840px-Illustration_of_Potato_of_Virginia_Wellcome_L0064345.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "full portrait mounted without upscaling",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/F3-cc.jpg",
+            "objectKey": "linssikatalogi/F3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 283732,
+            "sha256": "376c7e38894ab277494d80edd22db6a3936abf417249e45555325ae10ae3062a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/F3-cc-480.jpg",
+            "objectKey": "linssikatalogi/F3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44369,
+            "sha256": "a5d1a75a89834082edcb85ff9bd0f4a841690dcdf7529efab33b1860977711c1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2",
+      "nimi": "Raha ja pankit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Rahan ja pankkien historialliset solmut muodostavat Euroopan aikajanan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept. Money and banks in Europe, 1252–1873. Antique parchment relief map focused on western and central Europe, no modern country-border grid. Four warm brass nodes suggest Florence's florin, Amsterdam's early stock exchange, London and the Bank of England, and a broad late-nineteenth-century gold standard across Europe; thin chronological routes join the sites. Restrained tiny engraved details of an unmarked coin, ledger and historic exchange hall enrich the map without readable writing, currency marks or modern finance graphics. Cream/sepia paper, dark blue-brown sea, painterly dimensional terrain, soft vignette and an unlabeled time arc below. Clear geography at thumbnail scale. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/G2-havainne.jpg",
+            "objectKey": "linssikatalogi/G2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249431,
+            "sha256": "049734fa05128a44d57ccf36275fe1d11dcad21bba7237c2d2822a499602e16d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-03/G2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/G2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35342,
+            "sha256": "d99859429f1e1a94dc0b5bca9e24ffb7904be49588e440d67b87993380373557"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Boëtius Adamsz. Bolswertin vuoden 1609 vedos esittää Amsterdamin pörssipihaa ja sen kansainvälistä kauppaa.",
+        "creator": "Boëtius Adamsz. Bolswert",
+        "title": "De Beurs van Amsterdam",
+        "year": "1609",
+        "collection": "Rijksmuseum, RP-P-OB-67.488",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:De_Beurs_van_Amsterdam%2C_1609%2C_RP-P-OB-67.488.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/De_Beurs_van_Amsterdam%2C_1609%2C_RP-P-OB-67.488.jpg/3840px-De_Beurs_van_Amsterdam%2C_1609%2C_RP-P-OB-67.488.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/G2-cc.jpg",
+            "objectKey": "linssikatalogi/G2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 294727,
+            "sha256": "adbdfd6be4528cdc63e54bc1679fbed0ff9acfb0f09b00b700fcfd762a8064c5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-03/G2-cc-480.jpg",
+            "objectKey": "linssikatalogi/G2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 63129,
+            "sha256": "1197f22c24add2b58f789335c2427269d086c68cd951b3f0d30be2545743dc95"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G3",
+      "nimi": "Ruoan ja juoman historia",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Pilsenin, Champagnen, Lyonin, Wienin ja Milanon ruoka- ja juomaperinteen pysäkit syttyvät Euroopan kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Original 16:9 painterly concept art for history game map lens G3, History of Food and Drink in Europe 1500–1900. Cream sepia nineteenth-century parchment map of Europe on a wooden scholar's table, focused on Pilsen, Champagne region, Lyon, Vienna and Milan. Five small warm glowing waypoints joined by a fine chronological route. At each waypoint a tiny tasteful still-life illustration integrated into map: amber beer glass, grape cluster and sparkling wine flute, copper chef pot, Vienna coffee cup, risotto grain and pan. Varied but restrained and historically evocative, no modern brands. A faint brass clock arc along lower edge. Elegant ink-and-watercolor cartography, readable Europe, subtle vignette. No people, no words, letters, numbers, labels, fonts, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G3-havainne.jpg",
+            "objectKey": "linssikatalogi/G3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248422,
+            "sha256": "4bbbf96a2d5df4dba305d3a1da0e32809d7fdd5d4c4331ba555dee82e11050ae"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/G3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 56945,
+            "sha256": "db78fadf3b3ed525e2aeb50816ceb0bed39db86aaf12cd14aaeb5755dd81c702"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Norbert Bittnerin kuva Wienin Praterin ensimmäisestä kahvilasta, noin vuodelta 1820.",
+        "creator": "Norbert Bittner",
+        "title": "I Caffée au Pratre",
+        "year": "n. 1820",
+        "collection": "Wien Museum, inv. 62720",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1._Kaffeehaus%2C_Prater_%28Vienna%2C_ca._1820%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/1._Kaffeehaus%2C_Prater_%28Vienna%2C_ca._1820%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen itävaltalainen vedos yhdestä ruokakulttuurilinssin Wienin pysäkistä.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G3-cc.jpg",
+            "objectKey": "linssikatalogi/G3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291891,
+            "sha256": "c1a7d4a39d9c81576baa5c3d814d7676414c0dc557dc27e476ca60e3a8685bf2"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G3-cc-480.jpg",
+            "objectKey": "linssikatalogi/G3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 63363,
+            "sha256": "461dff984549209ee48ab0240fa3ec9c77646f16af4ed6b601f0b3e126eaa39f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G4",
+      "nimi": "Urheilun synty",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Jalkapallo, tennis, olympialaiset ja Ranskan ympäriajo piirtyvät urheilun varhaiseksi aikajanaksi Euroopassa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a new original 16:9 landscape concept illustration for Matkakirja G4, the history of sport in Europe. Draw an elegant 1800s parchment map with the recognizable British Isles, France in the center-left of continental Europe, Italy, and Greece. Four small golden historical moments: Sheffield football (1857), Wimbledon tennis (1877), Athens Olympic athletics (1896), and Tour de France cycling (1903). A thin golden timeline connects the British and Greek city dots. The cycling scene must be INSIDE FRANCE: show a small equal-wheel, chain-drive circa-1903 bicycle in the central French countryside and a winding cycling loop contained wholly WITHIN THE SHAPE OF FRANCE. Do not draw a cycling loop on Spain, Portugal, Britain, Italy or Greece. No penny farthing. Keep four athletic motifs small and map dominant. Cream and sepia watercolor/ink, subdued glow, faint brass clock rim at bottom. No legible text, letters, numbers, labels, logos, UI, buttons or portraits. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G4-havainne.jpg",
+            "objectKey": "linssikatalogi/G4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248299,
+            "sha256": "51d62481cc83f36c2c000356f4617520678f9e549647fa4f837aa1494c2af8d6"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/G4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 55929,
+            "sha256": "d59d5e18d6aa6b211e5d0ce2227e21002f52d2c364428e8e25460fc6db859e5b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Ateenan Panathinaiko-stadion vuoden 1896 ensimmäisten nykyaikaisten olympialaisten aikaan.",
+        "creator": "Tuntematon valokuvaaja",
+        "title": "Athens 1896 – Pan-Athenian stadium",
+        "year": "1896",
+        "collection": "Olympic Games / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Athens_1896-Pan-Athenian_stadium.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Athens_1896-Pan-Athenian_stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Aito vuoden 1896 historiallinen valokuva; koskee linssin Ateenan pysäkkiä.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G4-cc.jpg",
+            "objectKey": "linssikatalogi/G4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 268594,
+            "sha256": "61024bde8690c51413d7b9ba243f856005ff9753563775d8e17ddcf1d1ca4c9a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G4-cc-480.jpg",
+            "objectKey": "linssikatalogi/G4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 51803,
+            "sha256": "aaf6f4686ebc8902713d059091e31b21658380643f4758420c958256c9d42867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G5",
+      "nimi": "Naisten oikeudet",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Naisten oikeuksien historialliset etapit yhdistävät Euroopan, Pohjois-Amerikan ja Uuden-Seelannin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Original 16:9 painterly concept art for history game map lens G5, Women's Rights 1791–1918. Antique parchment world map on a scholar's desk, with a dignified and hopeful visual tone. One elegant luminous chronology links Paris, Seneca Falls in New York, New Zealand, Finland and Britain. At each waypoint use subtle historically resonant motifs such as a quill, open civic assembly hall, ballot box, and illuminated paper, without readable writing or portraits. Five gold-white light points, a thin route line across continents, faint brass clock arc at lower edge. Warm cream sepia cartography and soft violet accent, quiet light, geographically legible. No human faces, no modern political logos, no flags, no legible text, letters, numbers, labels, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G5-havainne.jpg",
+            "objectKey": "linssikatalogi/G5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248639,
+            "sha256": "7650a85d1ded91e7ff074958d8ad12bab236592bc4f956fe000ea24e8338cf78"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/G5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/G5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54069,
+            "sha256": "245e9e83e85e6fbf47746f32b249ffb39017de50c54c5d9e677516fb5f954d59"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Uuden-Seelannin vuoden 1893 naisten äänioikeusadressin ensimmäinen arkki; adressi edelsi äänioikeuslakia.",
+        "creator": "Kate Sheppard ja adressin allekirjoittajat",
+        "title": "Women's Suffrage Petition 1893, first sheet",
+        "year": "1893",
+        "collection": "Archives New Zealand, LE1 1893/7a",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Women%27s_Suffrage_Petition_1893_%289365778997%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Women%27s_Suffrage_Petition_1893_%289365778997%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop to first sheet heading and signatures",
+        "source_context": "Alkuperäinen historiallinen asiakirja, ei nykyaikainen henkilökuva. Skannattu 2011, teos vuodelta 1893.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G5-cc.jpg",
+            "objectKey": "linssikatalogi/G5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 259924,
+            "sha256": "2ffa594995c552542191340760c944e1756aa6b1eaf2e0adbf433cee7b32fbda"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/G5-cc-480.jpg",
+            "objectKey": "linssikatalogi/G5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/G5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42884,
+            "sha256": "7e6fdf53e5a7aaa15d512d911b5c32c33c9a7faf12d23bcc4947a445f54fe694"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H2",
+      "nimi": "Intian valtakunnat ja tiede",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Intian kartalla kohtaavat Indus-kaupungit, valtakunnat, oppineisuus, tähtitiede ja Taj Mahal.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens H2, Indian Kingdoms and Science from Indus Valley to Mughal era. A rich but restrained antique parchment map tightly focused on the Indian subcontinent, readable coasts and rivers. Five soft golden timeline points near Mohenjo-daro, ancient Pataliputra, Nalanda, northern India for astronomer Aryabhata, and Agra. Small distinctive ink-and-watercolor vignettes at map scale: Indus brick ruins, Ashokan column, Nalanda monastery, historical astronomical diagram without symbols or words, Taj Mahal. Thin delicate route, brass clock arc at bottom, cream/brown cartography with muted lapis and saffron accents, cinematic warm light. No people, no legible letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H2-havainne.jpg",
+            "objectKey": "linssikatalogi/H2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249140,
+            "sha256": "88c6af5a43eaad10ec80cb7eed60a78d98753a7897388fa68b0e023c795a7279"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/H2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 62022,
+            "sha256": "5bab470275f0d9238268e963048634ec2ad2cd167fae0bf9d28de29aea5d991d"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "William Hodgesin 1780-luvun piirustus Taj Mahalista Agrassa.",
+        "creator": "William Hodges",
+        "title": "The Taj Mahal",
+        "year": "n. 1783",
+        "collection": "Yale Center for British Art, B1978.43.1735",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:William_Hodges_-_The_Taj_Mahal_-_B1978.43.1735_-_Yale_Center_for_British_Art.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/William_Hodges_-_The_Taj_Mahal_-_B1978.43.1735_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Taj Mahalin historiallinen kuva yhdestä Intia-linssin pysäkistä; brittitaiteilijan aikakauden näkökulma.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H2-cc.jpg",
+            "objectKey": "linssikatalogi/H2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 278504,
+            "sha256": "08a1815322045e3381593781661f4cb509c93935221f7b2017e7316a0bb54216"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H2-cc-480.jpg",
+            "objectKey": "linssikatalogi/H2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42444,
+            "sha256": "f9f4797099bd409cb5fe3a0a9ae26d42044948339d76b638d2af0eaf78aa75e9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H4",
+      "nimi": "Mongolien maailma",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mongolien maailman reitit yhdistävät Karakorumin, Pekingin, Bagdadin ja Samarkandin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens H4, Mongol World 1206–1405. Antique cream sepia Eurasian parchment map centered on the Mongolian steppe and Central Asia, on a wooden historian's desk. Four warm luminous waypoint nodes near Karakorum, Beijing, Baghdad and Samarkand connected by thin long-distance overland routes. Small refined ink-and-watercolor motifs of a steppe horse caravan, a Mongol-era postal relay, Yuan capital architecture, and Timurid Samarkand tilework, kept at map scale and free of violent conquest. A faint brass clock timeline at bottom edge. Wide geography readable, soft vignette, restrained warm light. No portraits, combat, text, letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H4-havainne.jpg",
+            "objectKey": "linssikatalogi/H4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249367,
+            "sha256": "cd49acb01e9cd18520146c91d29f769d6ce52046c34c4d8f1fe2af4afafc6f26"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/H4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 56245,
+            "sha256": "e72e019307338a82142bef606c505fbfffe850d61e0572d7ecc361c78a36776c"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Liu Guandaon vuoden 1280 maalaus Kublai-kaanin metsästysretkestä Yuan-hovissa.",
+        "creator": "Liu Guandao",
+        "title": "Khubilai Khan Hunting (元世祖出獵圖軸)",
+        "year": "1280",
+        "collection": "National Palace Museum, Taipei",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Liu-Kuan-Tao-Jagd.JPG",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Liu-Kuan-Tao-Jagd.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Aikalaismaalaus mongolihallitsijasta; hovin näkökulma, ei koko Mongolien maailman yleiskuva.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H4-cc.jpg",
+            "objectKey": "linssikatalogi/H4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 281147,
+            "sha256": "1f149f273ac3a75595a231f452051e89e5ababd31591acf256bc878d93717238"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H4-cc-480.jpg",
+            "objectKey": "linssikatalogi/H4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 34628,
+            "sha256": "7404d6ccedecd95bbff2d83471a2c602d93d260bc3cc697137789bafeb99e659"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H5",
+      "nimi": "Kaakkois-Aasian temppelit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Borobudurin, Baganin, Angkorin ja Ayutthayan temppelit yhdistyvät Kaakkois-Aasian kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens H5, Temples of Southeast Asia 800–1431. Antique parchment map precisely focused on Southeast Asia from Java through Myanmar and Thailand to Cambodia, viewed on an explorer's desk. Four golden illuminated nodes near Borobudur, Bagan, Angkor and Ayutthaya connected by a delicate itinerary line. Small respectful ink-and-watercolor architectural silhouettes specific to each place: stepped Borobudur stupa, Bagan temple plain, Angkor's lotus towers, Ayutthaya temple spires. Tropical rivers and sea coast rendered as subtle cartography; warm cream brown with restrained green accents and faint brass clock arc at bottom. Geography is main subject. No worshippers or people, no fantasy figures, no legible text, letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H5-havainne.jpg",
+            "objectKey": "linssikatalogi/H5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249866,
+            "sha256": "377d7a288af0a24ad96f46e846bf6d73364f668884bed1c654b1108dbf1b2279"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/H5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54621,
+            "sha256": "af99fb619cd919a7d0d1756543f7d548ae74b1eaaf5b4d380ffe493fbd49daef"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jaavalaisen valokuvaajan Sem Céphasin historiallinen näkymä Borobudurin stupaterassilta noin 1910.",
+        "creator": "Sem Céphas",
+        "title": "Stupa terrace at Borobudur",
+        "year": "n. 1910",
+        "collection": "Leiden University Library / KITLV, 40542",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:KITLV_40542_-_Sem_C%C3%A9phas_-_Stupa_terrace_at_Borobudur_-_Around_1910.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/KITLV_40542_-_Sem_C%C3%A9phas_-_Stupa_terrace_at_Borobudur_-_Around_1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Paikan historiallinen kuva paikallisen valokuvaajan ottamana; Borobudur on buddhalainen pyhä paikka.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H5-cc.jpg",
+            "objectKey": "linssikatalogi/H5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 270400,
+            "sha256": "eb0b955d3430335b3e421454d4a4555ff14ee9cd93bfecfdfcb1eda2655d9210"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H5-cc-480.jpg",
+            "objectKey": "linssikatalogi/H5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 37166,
+            "sha256": "8df80649294047e0e5d63624e55286a49f925eeb0576f316fc4822c1432e5b2b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I1",
+      "nimi": "Sivilisaation synty",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mesopotamian ja Persian varhaisten kaupunkien reitti kulkee Urukista Persepolikseen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens I1, Birth of Civilisation in Mesopotamia and Persia, 3500–330 BCE. A tightly focused antique parchment map of the Tigris-Euphrates river system and Iranian plateau on a scholar's desk. Five warm golden timeline points near Uruk, Ur, Babylon, Nineveh, Persepolis, linked by thin delicate route lines following geography. At map scale show tiny elegant ink-and-watercolor silhouettes of an early Sumerian city and ziggurat, Babylonian gate, Nineveh clay-tablet library, and Persepolis columns. Warm cream brown with lapis-blue rivers, subtle vignette, faint brass clock arc at bottom edge. The land and river shapes are primary. No people or fantasy monsters, no legible text, letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/I1-havainne.jpg",
+            "objectKey": "linssikatalogi/I1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247622,
+            "sha256": "6ef4005029655863d1f501634af2545a273adf5d2a45b2e61e0487a74567fef0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/I1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/I1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54434,
+            "sha256": "a2e470e5db32fd54388dfe2ad272d4d6b8bba56a9b1e3fa15548cb2ee4a3e047"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Eugène Flandinin 1800-luvun piirros Persepoliksen raunioista Iranissa.",
+        "creator": "Eugène Flandin",
+        "title": "Persépolis, vue des ruines",
+        "year": "1840 (julkaistu 1851)",
+        "collection": "Voyage en Perse (Gide et Baudry) / Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Persepolis_%2C_view_the_ruins_5_by_Eug%C3%A8ne_Flandin.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Persepolis_%2C_view_the_ruins_5_by_Eug%C3%A8ne_Flandin.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; native-size center mount, no upscaling",
+        "source_context": "Täsmällinen Persepoliksen pysäkki; 1800-luvun eurooppalaisen matkailijan tulkinta muinaisesta persialaisesta kaupungista.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/I1-cc.jpg",
+            "objectKey": "linssikatalogi/I1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285106,
+            "sha256": "b7d2e3bfb7244e9e020230281596f10269b4008f7bfe1035237ad80dacc2205b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/I1-cc-480.jpg",
+            "objectKey": "linssikatalogi/I1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 40006,
+            "sha256": "0d9fde358a68eadcc06616498578cd163371ac92f640b7041ce186f794804d26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I2",
+      "nimi": "Egyptin dynastiat",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Egyptin dynastioiden pysäkit seuraavat Niiliä Sakkarasta ja Gizasta Luxoriin ja Aleksandriaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens I2, Egyptian Dynasties from 2650 BCE to 30 BCE. Antique parchment map focused on Nile valley and delta from Mediterranean coast south to Thebes and Luxor, on a historian's desk. Five softly glowing golden waypoints near Saqqara, Giza, Thebes/Luxor, Amarna and Alexandria joined by a fine winding timeline alongside the Nile river. Small respectful ink-and-watercolor architectural vignettes of stepped pyramid at Saqqara, Giza pyramids, Luxor temple columns, Amarna ruins, Alexandria harbor lighthouse. Warm cream and brown 1800s cartographic ink, muted turquoise Nile, soft vignette, faint brass clock arc at bottom. Geographically readable, no depictions of pharaoh faces or human figures, no legible text, letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/I2-havainne.jpg",
+            "objectKey": "linssikatalogi/I2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245040,
+            "sha256": "b5dd838abc62557d56d8900376147b059f724225956d9b7e01391a6d18f2692b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/I2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/I2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54966,
+            "sha256": "a6398b7992392761d301a39b2d82e4ff49eabe238a244d6e7128a594f52a317b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "David Robertsin 1800-luvun näkymä Gizan sfinksistä ja pyramideista.",
+        "creator": "David Roberts",
+        "title": "The Great Sphinx and Pyramids of Gizeh",
+        "year": "1839 (Commonsin metatiedoissa myös 1838)",
+        "collection": "Berger Collection, 154",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Great_Sphinx%2C_Pyramids_of_Gizeh-1839%29_by_David_Roberts%2C_RA.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/The_Great_Sphinx%2C_Pyramids_of_Gizeh-1839%29_by_David_Roberts%2C_RA.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Täsmällinen Gizan pysäkki; eurooppalaisen taiteilijan historiallinen tulkinta, ei arkeologinen rekonstruktio.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/I2-cc.jpg",
+            "objectKey": "linssikatalogi/I2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293882,
+            "sha256": "b6a073d2c96f8a1d62ab972684119ac1854927375f9aa0856bda0a95c89b3c12"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/I2-cc-480.jpg",
+            "objectKey": "linssikatalogi/I2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 37166,
+            "sha256": "6841c0cb6ae17d0157475bf5a66be467f75c9fec2ae6e9d13e3bda9aefb26449"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "complete": true,
+    "canonicalUrlsVerified": true,
+    "objects": 72,
+    "receiptLocalPath": "output/fable-20260924/linssikatalogi/era2/ready-2b-20260925/r2-receipt.json"
+  }
+}
