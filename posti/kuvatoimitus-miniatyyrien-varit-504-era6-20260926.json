@@ -1,0 +1,325 @@
+[
+  {
+    "id": "krakova-barbakaani",
+    "replacement_id": "krakova-barbakaani-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-barbakaani-vari2.png",
+    "sha256": "93dc4ffd760179accd504df045d58e505e1d045d3d8fcf9a610b4db6d9d05b4b",
+    "bytes": 1148778,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "krakova-collegium-maius",
+    "replacement_id": "krakova-collegium-maius-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-collegium-maius-vari2.png",
+    "sha256": "d6998d0cbae6125610fcdf60890fa3ca1aebd5918032a6912fdefb242eff516a",
+    "bytes": 1303654,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "krakova-kazimierz",
+    "replacement_id": "krakova-kazimierz-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-kazimierz-vari2.png",
+    "sha256": "e628f1e655e9f8f303b14f1b0628abef3b725caba09756f902b1c0393cd959f1",
+    "bytes": 1009807,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "krakova-mariankirkko",
+    "replacement_id": "krakova-mariankirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-mariankirkko-vari2.png",
+    "sha256": "1f87e3feae8448b563a14c9cab11ffd40ee1017d702d5671d917d5c062d341c2",
+    "bytes": 1065519,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "krakova-wawelin-linna",
+    "replacement_id": "krakova-wawelin-linna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-wawelin-linna-vari2.png",
+    "sha256": "a55872a178afbca4ca185df17812a97c79bdfa8b6fbd46c0d522cf89b31a2e8d",
+    "bytes": 1788204,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "krakova-wawelin-lohikaarme",
+    "replacement_id": "krakova-wawelin-lohikaarme-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/krakova-wawelin-lohikaarme-vari2.png",
+    "sha256": "4eaaebe0065e16788942f76cc93f3805c97db70eeff9209e20b2ec4517db9e96",
+    "bytes": 1452917,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-al-hamra-torni",
+    "replacement_id": "kuwait-al-hamra-torni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-al-hamra-torni-vari2.png",
+    "sha256": "e1e9e427eec496ad839c2405d3c95e1c6e230ab0071a14d171db1a9dc478cb29",
+    "bytes": 634195,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-kuwait-tornit",
+    "replacement_id": "kuwait-kuwait-tornit-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-kuwait-tornit-vari2.png",
+    "sha256": "963d6c78128483b8337d91b0d68657e1908e5bb13aab7f48c3c1719973a42643",
+    "bytes": 517477,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-kuwaitin-suurmoskeija",
+    "replacement_id": "kuwait-kuwaitin-suurmoskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-kuwaitin-suurmoskeija-vari2.png",
+    "sha256": "4d64058bf85e55b6ed91072c22383dc3c6fd8b01bc8903591339bde182ba8bcf",
+    "bytes": 872487,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-mubarakiyan-tori",
+    "replacement_id": "kuwait-mubarakiyan-tori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-mubarakiyan-tori-vari2.png",
+    "sha256": "b3a4382c5df33f7b3871a60270bbbb54918c04bf4d5d907dfb6ce0c877f006a9",
+    "bytes": 1244407,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-sadu-house",
+    "replacement_id": "kuwait-sadu-house-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-sadu-house-vari2.png",
+    "sha256": "0422078d8632cdfc9131a11e5e6b73dada0a303e690f37ed41409978573604aa",
+    "bytes": 1171505,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kuwait-seifin-palatsi",
+    "replacement_id": "kuwait-seifin-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kuwait-seifin-palatsi-vari2.png",
+    "sha256": "46269d9a6651aaf17718aa362d5557f22a5d680aa0bd46d9f6b421763b812946",
+    "bytes": 973332,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-chagpori",
+    "replacement_id": "lhasa-chagpori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-chagpori-vari2.png",
+    "sha256": "2b92e4d01acb1932d895592cfe199c0897da6481ce2e135b015450173fe84671",
+    "bytes": 1334880,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-jokhang-temppeli",
+    "replacement_id": "lhasa-jokhang-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-jokhang-temppeli-vari2.png",
+    "sha256": "5dac73fc5580f1feb484c720f246fee0378972773328fe3d4a443a233f3a99b4",
+    "bytes": 858154,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-lhasan-suuri-moskeija",
+    "replacement_id": "lhasa-lhasan-suuri-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-lhasan-suuri-moskeija-vari2.png",
+    "sha256": "1f30ccf102f728d02e68d681b9764ea6cd2460df45a083b50fc936194719dff2",
+    "bytes": 1022083,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-norbulingka",
+    "replacement_id": "lhasa-norbulingka-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-norbulingka-vari2.png",
+    "sha256": "98b23a3335d427f1946ab19e045fdbe7531b19ffb848c40ee8ce8163dd5e4072",
+    "bytes": 826544,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-potala-palatsi",
+    "replacement_id": "lhasa-potala-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-potala-palatsi-vari2.png",
+    "sha256": "a8a6e4d5d5b29044902a59102b07e75d31784fc62b92cbffd60053c415c3fed8",
+    "bytes": 1097563,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-ramoche-temppeli",
+    "replacement_id": "lhasa-ramoche-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-ramoche-temppeli-vari2.png",
+    "sha256": "cf12df3f954a256b2b01e8a4797347f23ed0f1d86cb1cb80d8726871eb83f708",
+    "bytes": 1032317,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "lhasa-tiibetin-museo",
+    "replacement_id": "lhasa-tiibetin-museo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lhasa-tiibetin-museo-vari2.png",
+    "sha256": "a3c3cc40b7c9d9ef165c75bfeb55a5119f5df56876d45b347dfaa9d6a5fe675d",
+    "bytes": 931845,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
