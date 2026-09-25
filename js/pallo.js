@@ -40,6 +40,7 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
@@ -197,7 +198,16 @@ export const PALLO_LAATTATUNNISTE = '20260923a';
  * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
  */
 export const PALLO_SARJASSA_NOSTOT = false;
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+/*
+ * KOEPYRAMIDI (?pyramidi=<sarja>, js/media.js pyramidiKoe): pallo lukee
+ * saman sarjan laatat kuin koeluettelo, koska lepokerros vaatii pallon
+ * sarjan ja pyramidin luettelon version täsmäävän (js/pallolaatat.js
+ * lepokerroksenKerrokset) — muuten kerros sammuisi kokeessa.
+ */
+const KOEPYRAMIDI = pyramidiKoe();
+/** Tuotannon kansio (sw.js LAATTAKANSIO on sama). */
+export const TUOTANNON_PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+export const PALLO_LAATTAKANSIO = KOEPYRAMIDI ? koepyramidinPallokansio(KOEPYRAMIDI) : TUOTANNON_PALLO_LAATTAKANSIO;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;

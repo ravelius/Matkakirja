@@ -351,6 +351,42 @@ export function pyramidiUrl(polku) {
 }
 
 /*
+ * KOEPYRAMIDI ILMAN OSOITINVAIHTOA (Fable 25.9.2026: omistajan
+ * kuvakokeilu uudesta peruskartasta ennen kuin tuotannon luettelo
+ * vaihtuu). `?pyramidi=<sarja>` (esim. `?pyramidi=2026-09-25`) lukee
+ * luettelon polusta `julisteet/pyramidi/koe/<sarja>/pyramidi.json`
+ * tuotannon `pyramidi.json`:n sijaan, ja pallo lukee saman sarjan
+ * Mercator-laatat (koepyramidinPallokansio). Laattojen versiopolut
+ * tulevat luettelosta kuten aina, joten koe näkee täsmälleen sen
+ * kartan, jonka osoitinvaihto myöhemmin toisi kaikille. Ilman lippua
+ * mikään ei muutu. Arvo hyväksytään vain päivämäärämuodossa, jotta
+ * osoiteriviltä ei voi koota mielivaltaista polkua.
+ */
+export function pyramidiKoe(haku = globalThis.location?.search ?? '') {
+  let arvo = null;
+  try {
+    arvo = new URLSearchParams(haku).get('pyramidi');
+  } catch {
+    return null;
+  }
+  return arvo && /^\d{4}-\d{2}-\d{2}[a-z]?$/.test(arvo) ? arvo : null;
+}
+
+/** Luettelon polku pyramidiUrl:lle: koesarjan kopio tai tuotannon osoitin. */
+export function pyramidinLuettelonPolku(koe = pyramidiKoe()) {
+  return koe ? `koe/${koe}/pyramidi.json` : 'pyramidi.json';
+}
+
+/**
+ * Koesarjan pallokansio julisteet/pallo/laatat/-juuren alla: polton
+ * nimeämä `<sarja>-pohja-<sarja ilman viivoja>` (tools/polta-
+ * paikallisesti.sh --pallotunniste), esim. 2026-09-25-pohja-20260925.
+ */
+export function koepyramidinPallokansio(koe) {
+  return `${koe}-pohja-${koe.replace(/-/g, '')}`;
+}
+
+/*
  * REPON ASSET-KUVAT ÄMPÄRIIN (omistajan päätös 2.9.2026: "R2-ämpäriin,
  * JPG-muodossa").
  *
