@@ -188,6 +188,37 @@
     display: flex;
 }
 
+/* Löydös 142 (omistaja, build 16): vertailupalkki rivin oikeassa reunassa. Kiinteä raita (pisteviiva, sama muste kuin
+   aiheiden alleviivauksissa), jonka päällä täyte = osuus ykkössijasta; palkit ovat samassa sarakkeessa radion kanssa.
+   Kasvuanimaatio Kartuscha.AnimoiVertailut (scale-x, transform-origin vasen). */
+.mk-kartuscha__vertailu {
+    flex-shrink: 0;
+    width: 56px;
+    height: 3px;
+    margin-left: auto;
+}
+
+.mk-kartuscha--tabletti .mk-kartuscha__vertailu {
+    width: 72px;
+}
+
+.mk-kartuscha__vertailuraita {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    height: 1px;
+    color: rgba(74, 52, 33, 0.45);
+}
+
+.mk-kartuscha__vertailupalkki {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: rgba(58, 40, 25, 0.62);
+}
+
 .mk-kartuscha__nyt {
     display: none;
 }
