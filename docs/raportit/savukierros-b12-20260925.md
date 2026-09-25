@@ -49,3 +49,28 @@ omistajan lupakyselyssä koko yön, ei ehditty testata sillä.
 ## Kuvat
 
 `docs/raportit/kaappaukset/savukierros-b12-20260925/`
+
+## PÄIVITYS: iPad-kierros (25.9. klo 04.3x, lupa myöntyi omistajan tultua koneelle)
+
+Build: juna/b12 @ b79f036, iPad Pro 13" M5 -simulaattori (3B4CDACB).
+
+- **Saapuminen + kartta (46):** `ui aloita` käynnisti uuden pelin
+  Lontoosta, postikortti näkyi ja sulkeutui siististi, reliefi/rannat/
+  aluerajat renderöityvät puhtaasti iPadin resoluutiolla.
+- **Kaupunkikortti (48):** `kortti bryssel` avautui oikein oikeassa
+  alakulmassa, ei leikkautumista isommalla ruudulla.
+- **Maalehden vieritys (löydös 51):** 3 pitkää + 3 lyhyttä pyyhkäisyä
+  Ranskan sivulla 2. Kehysajat: 3566 kehystä, p50 16,67 ms, p95
+  16,77 ms, max 22,17 ms, **0 isoa tökkäystä (>33 ms)** — vieläkin
+  siistimpi kuin iPhone-mittaus. **Sama varaus pätee kuin iPhonella:
+  simulaattori renderöi 60 Hz:llä (p50=16,67ms), joten tämä EI todista
+  reaalimaailman ProMotion-sulavuutta.** Ei havaittu kuva/teksti-
+  pop-inia. Sivun kansirakenne on yhä yksipalstainen pino (tunnettu,
+  jo aiemmin Natiivi-UI:lle reititetty ero, ei uusi löydös).
+- **Radio veto/lukitus/sulku:** sama tulos kuin iPhonella — ketju alkaa
+  suoraan `Viritys/Haku` (Lontoosta Timbuktuun), lukittuu 1,58 s:ssa,
+  soi. `linssi pois` sulkee siististi, EI sumua/laikkuja (86ac64e OK
+  iPadillakin). Kuva.
+
+**Kokonaisuus: iPad ja iPhone samaa mieltä kaikista testatuista
+kohdista.** Kuvat/data: `docs/raportit/kaappaukset/savukierros-b12-ipad-20260925/`.
