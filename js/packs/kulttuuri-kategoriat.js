@@ -108759,6 +108759,231 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Elbow Beach, Bermuda',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Transport in Bermuda, Bermuda Railway, Bermuda kite,
+       * Bermudian cuisine, Sports and recreation in Bermuda, Public
+       * holidays in Bermuda, Johnny Barnes, Culture of Bermuda, Bermuda
+       * Day, Horseshoe Bay (Bermuda), L.F. Wade International Airport)
+       * ja Wikivoyagen Bermuda-sivulta — teksti omaa. Nostojen aiheita
+       * (Sea Venture, riutat ja Gibbs Hill, St. George's, sluupit,
+       * sipulit, vaaleanpunainen hiekka, cahow, pikkuriutat, luolat),
+       * gallerian aiheita (Gombey, Dockyardin varasto, Front Street,
+       * sadevesikatot) eikä maalehden aiheita (shortsit, yksi auto
+       * taloutta kohden, kuunportti, kalakeitto, Dark 'n' Stormy,
+       * hummeri) toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pysäkkikuva
+       * on CC0 (tekijän luovutus vapaaseen käyttöön). Pystykuva:
+       * ratapohja kallioleikkauksessa Somerset Bridgen lähellä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bermuda Railway near Somerset Bridge.jpg',
+          lyhyt: 'Vanha ratapohja kulkee Somerset Bridgen lähellä kallioleikkauksessa lehvästön alla.',
+          selite: 'Bermudan rautatien ratapohja Somerset Bridgen lähellä '
+            + 'kulkee kalkkikiveen louhitussa leikkauksessa, ja nykyään sitä '
+            + 'pitkin kävellään ja pyöräillään.',
+          lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bermudalla matkailija ei voi vuokrata tavallista autoa, '
+          + 'vain kaksipaikkaisen sähköpikkuauton tai skootterin, ja koko '
+          + 'saarella suurin sallittu nopeus on 35 kilometriä tunnissa. '
+          + 'Liikkeelle lähdetään siksi vaaleanpunaisilla busseilla ja '
+          + 'lautoilla, jotka lähtevät Hamiltonista joka suuntaan, tai '
+          + 'jalan vanhaa ratapohjaa, josta on tullut saaren halki kulkeva '
+          + 'polku. Kaupassa ja kadulla aloitetaan aina hyvän huomenen '
+          + 'toivotuksella, ja pitkäperjantaina taivas täyttyy '
+          + 'kuusikulmaisista leijoista. Uimakausi alkaa toukokuun lopun '
+          + 'Bermuda Daynä, ja elokuun alussa koko saari pysähtyy kahdeksi '
+          + 'päiväksi seuraamaan yhtä krikettiottelua.',
+        artikkeli: {
+          nimi: 'Matkailijan Bermuda',
+          teksti: 'Bermudalla toivotetaan hyvää huomenta ennen kuin kysytään tietä.',
+          nosto: 'Pitkäperjantaina taivaalle nousee kuusikulmaisia '
+            + 'silkkipaperileijoja, ja pöytään katetaan turskapihviä '
+            + 'pääsiäispullan välissä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Bussilla ja lautalla',
+              teksti: 'Vuokra-autoa Bermudalta ei saa: matkailija voi vuokrata '
+                + 'vain kaksipaikkaisen sähköpikkuauton tai kevyen skootterin, '
+                + 'ja vasemmanpuoleisessa liikenteessä ajetaan enintään 35 '
+                + 'kilometriä tunnissa. Useimmat liikkuvatkin julkisilla. '
+                + 'Hamiltonin keskusterminaalista lähtee yksitoista bussilinjaa '
+                + 'joka puolelle saarta, ja vaaleanpunaisen ja sinisen kirjavat '
+                + 'bussit tunnistaa kaukaa. Pysäkit on merkitty samoilla '
+                + 'väreillä: vaaleanpunainen tolppa tarkoittaa, että bussi on '
+                + 'menossa Hamiltoniin, sininen, että se on tulossa sieltä. '
+                + 'Isojen matkalaukkujen kanssa bussiin ei pääse, joten '
+                + 'lentokentältä hotellille ajetaan yleensä taksilla. Vesillä '
+                + 'kulkevat valtion SeaExpress-lautat, joiden neljä reittiä '
+                + 'lähtevät Hamiltonista: sininen vie saaren länsipäähän ja '
+                + "Dockyardiin, oranssi Dockyardiin ja St. George'siin, vihreä "
+                + 'Southamptonin Rockawayhin ja vaaleanpunainen Pagetin ja '
+                + 'Warwickin laitureille. Samalla usean päivän matkakortilla '
+                + 'pääsee sekä busseihin että lauttoihin, ja Dockyardin '
+                + 'risteilysatamasta lautta on edullisin tapa päästä '
+                + 'pääkaupunkiin.',
+              kuva: [
+                {
+                  tiedosto: 'Bermudabusterminal.JPG',
+                  lyhyt: 'Hamiltonin keskusterminaalista bussit lähtevät joka puolelle Bermudaa.',
+                  selite: 'Vaaleanpunaisen ja sinisen kirjavat bussit odottavat '
+                    + 'matkustajia Hamiltonin keskusterminaalissa, josta saaren '
+                    + 'bussilinjat lähtevät joka suuntaan.',
+                  lahde: 'Ekem, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Bermuda image number 238 bus stop with pink pole.jpg',
+                  lyhyt: 'Vaaleanpunainen tolppa pysäkillä kertoo, että bussi on menossa Hamiltoniin.',
+                  selite: 'Kivisen bussikatoksen kulmassa seisoo vaaleanpunainen '
+                    + 'tolppa: tästä pääsee kohti Hamiltonia, sinisen tolpan '
+                    + 'kohdalta taas pääkaupungista poispäin.',
+                  lahde: 'Tomwsulcer, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Bermuda Ferry Boat.JPG',
+                  lyhyt: 'Matkustajalautta lähtee Dockyardin laiturista Bermudan länsipäässä.',
+                  selite: 'Bermudan valtion matkustajalautta lähtee Royal Naval '
+                    + 'Dockyardista saaren länsipäästä, ja kannella matkustajat '
+                    + 'istuvat Bermudan, Britannian, Yhdysvaltain ja Kanadan '
+                    + 'lippujen alla.',
+                  lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Rautatiestä tuli polku',
+              teksti: 'Bermudalla kulki 1930- ja 1940-luvuilla oma rautatie, '
+                + "joka yhdisti itäpään St. George'sin Hamiltonin kautta "
+                + 'läntiseen Somersetiin. Rakentaminen alkoi 1926, ja '
+                + 'ensimmäiset junat lähtivät Hamiltonista Somersetiin '
+                + 'lokakuussa 1931. Rata vedettiin rantoja myöten, jotta maata '
+                + 'tarvitsi lunastaa vähän, mutta siksi yli kymmenesosa sen 35 '
+                + 'kilometristä kulki 33 puisella tai teräksisellä sillalla '
+                + 'meren yllä, ja rataa sanottiin kilometrihinnaltaan yhdeksi '
+                + 'maailman kalleimmista. Autot sallittiin saarella vasta 1946, '
+                + 'ja siihen asti koululaiset, työmatkalaiset ja matkailijat '
+                + 'ajoivat junalla, jota alettiin kutsua nimellä Rattle and '
+                + 'Shake, suunnilleen kolise ja heilu. Sodan jälkeen puusillat '
+                + 'olivat lahonneet ja matkustajat siirtyivät autoihin. '
+                + 'Viimeinen juna kulki toukokuussa 1948, ja vaunut myytiin '
+                + 'Brittiläiseen Guayanaan, nykyiseen Guyanaan. Vuonna 1984 '
+                + 'radasta 29 kilometriä avattiin Railway Trail -reitiksi '
+                + 'kävelyyn ja päällystetyillä osuuksilla pyöräilyyn. Polku '
+                + 'kulkee kallioleikkauksissa ja rantojen tuntumassa, ja '
+                + 'matkan varrella näkyy yhä asemarakennuksia ja meressä '
+                + 'seisovia siltojen pilareita. Paikoin reitti yhtyy '
+                + 'tavalliseen tiehen, jolla ei ole jalkakäytävää.',
+              kuva: {
+                tiedosto: 'BERMUDA RAILROAD, BERMUDA.jpg',
+                lyhyt: 'Bermudan rautatien sillan pilarit seisovat yhä turkoosissa lahdessa.',
+                selite: 'Vuosina 1931–1948 liikennöineen Bermudan rautatien '
+                  + 'sillasta ovat jäljellä vain pilarit, joiden välistä '
+                  + 'moottorivene ajaa lahden poikki.',
+                lahde: 'Jerrye and Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Leijat ja kriketti',
+              teksti: 'Pitkäperjantaina bermudalaiset lähtevät ulos leijojen '
+                + 'kanssa. Perinteinen bermudalainen leija on kuusikulmainen, '
+                + 'isommat usein kahdeksankulmaisia: litteät rimat asetetaan '
+                + 'pyörän puolien tapaan naulan ympärille, reunat ja sisäkehät '
+                + 'pingotetaan narusta, ja väliin liimataan värikästä '
+                + 'silkkipaperia kuvioiksi. Ilman pitkää kangashäntää leija ei '
+                + 'nouse lainkaan. Leijojen sanotaan kuvaavan Kristuksen '
+                + 'ylösnousemusta, ja vaikka kaupan muovileijat ovat '
+                + 'yleistyneet, taivaalla näkyy yhä enimmäkseen perinteisiä '
+                + 'bermudalaisleijoja. Leijajuhla pidetään Horseshoe Bayn '
+                + 'rannalla, ja päivän ruoka on turskapihvi pääsiäispullan '
+                + 'välissä. Kesällä juhlitaan krikettiä. Elokuun ensimmäistä '
+                + 'maanantaita edeltävät torstai ja perjantai ovat Cup Match '
+                + '-pyhät: orjuuden lakkauttamista muistava Emancipation Day '
+                + 'ja vuodesta 2020 Mary Prince Day, joka on nimetty '
+                + 'orjakertomuksellaan orjuuden lopettamista edistäneen '
+                + "bermudalaisnaisen mukaan. Silloin itäpään St. George's "
+                + 'Cricket Club ja länsipään Somerset Cricket Club pelaavat '
+                + 'keskenään kaksipäiväisen ottelun, kuten ne ovat tehneet '
+                + 'vuodesta 1902. Monet kaupat ja nähtävyydet sulkeutuvat, '
+                + 'rannoille ja teiden varsille nousee telttoja, ja kannattajat '
+                + 'pukeutuvat joukkueensa väreihin.',
+              kuva: {
+                tiedosto: 'Bermuda Kite 01.jpg',
+                lyhyt: 'Kahdeksankulmainen bermudalainen leija on koottu sateenkaaren värisestä paperista.',
+                selite: 'Pääsiäisenä 1999 Hamiltonissa kuvatun leijan kehät '
+                  + 'ovat sateenkaaren väreissä, ja sen reunan yli nousee vino '
+                  + 'rima, joka muodostaa bermudalaisleijan pään.',
+                lahde: 'Aodhdubh, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ensin hyvää huomenta',
+              teksti: 'Bermudalla kysymystä ei esitetä kylmiltään. Kun astuu '
+                + 'kauppaan, nousee bussiin tai pysäyttää ohikulkijan '
+                + 'kysyäkseen tietä, sanotaan ensin good morning, good '
+                + 'afternoon tai good evening, ja lähtiessä sama uudelleen. '
+                + 'Suoraan asiaan meneminen tuntuu saarelaisista tylyltä, ja '
+                + 'moni amerikkalainen tai brittiläinen vieras loukkaa '
+                + 'tahtomattaan. Tervehtimisen mestari oli Johnny Barnes, '
+                + 'entinen rautatien sähkömies ja bussinkuljettaja, joka noin '
+                + 'vuodesta 1986 seisoi arkiaamuisin Hamiltonin Crow Lanen '
+                + 'liikenneympyrässä vähän ennen neljää ja vilkutti töihin '
+                + 'ajaville kymmeneen asti. Hän toivotti ohiajaville "I love '
+                + 'you", ja koska lähes kaikki saaren lännestä ja etelästä '
+                + 'tulevat kulkivat ympyrän kautta, hänet tunsi lähes jokainen '
+                + 'työmatkalainen. Vuonna 1998 hänestä pystytettiin '
+                + 'elämänkokoinen pronssipatsas lähelle paikkaa, jossa hän '
+                + 'jatkoi vilkuttamista vuoden 2015 loppuun. Käytännön asiat '
+                + 'ovat yksinkertaisia: Bermudan dollari on sidottu Yhdysvaltain '
+                + 'dollariin yksi yhteen, ja dollareita otetaan vastaan '
+                + 'kaikkialla. Bermudan omat setelit eivät kuitenkaan kelpaa '
+                + 'muualla maailmassa, joten ne kannattaa käyttää ennen '
+                + 'kotimatkaa. Yhdysvaltoihin lentävät käyvät maan tulli- ja '
+                + 'maahantulotarkastuksen jo Bermudan lentokentällä.',
+              kuva: {
+                tiedosto: 'Johnny Barnes Oct 2007.jpg',
+                lyhyt: 'Johnny Barnes toivotti hyvää huomenta Hamiltoniin ajaville lähes 30 vuotta.',
+                selite: 'Johnny Barnes pitelee lokakuussa 2007 ennen '
+                  + 'auringonnousua kylttiä, joka esittelee hänet kuljettajaksi; '
+                  + 'kyltti on peräisin 1950-luvun bussista.',
+                lahde: 'Loanstarinc, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Uimakausi alkaa Bermuda Daynä',
+              teksti: 'Bermuda ei ole Karibiaa: talvet ovat viileämpiä ja '
+                + 'tuulisia, ja saarelaisten uimakausi alkaa perinteisesti '
+                + 'vasta Bermuda Daynä, toukokuun neljäntenä perjantaina. '
+                + 'Silloin moni menee vuoden ensimmäisen kerran mereen, veneet '
+                + 'lasketaan vesille, Hamiltonissa kulkee paraati ja '
+                + 'pääkaupunkiin juostaan maantiekilpailu, jonka katselupaikat '
+                + 'vallataan jalkakäytäviltä jo edellisenä iltana. Tunnetuin '
+                + 'uimaranta on Horseshoe Bay Southamptonin etelärannalla. '
+                + 'Kesällä siellä on hengenpelastaja kymmenestä kuuteen, '
+                + 'kahvila, suihkut ja jalkojenpesupaikka, ja rinteen yläpuolen '
+                + 'bussipysäkiltä pääsee rantaan kuljetuksella. Ranta kuuluu '
+                + 'Warwick Campin sotilasalueeseen: sen takana oli aikanaan '
+                + 'kiväärirata, ja länsipään hiekasta löytyy yhä vanhojen '
+                + 'Enfield- ja Martini-Henry-kiväärien luoteja. Vedessä '
+                + 'kannattaa varoa portugalinsotalaivoja. Violetit, '
+                + 'kaasurakkonsa varassa pinnalla kelluvat eläimet muistuttavat '
+                + 'meduusoja, vaikka eivät sitä ole, ja niiden polte on kova. '
+                + 'Aurinkorasvaa kuluu enemmän kuin arvaisi, sillä saaren '
+                + 'aurinko on kirkas ja pilviä on vähän.',
+              kuva: {
+                tiedosto: 'Horseshoebay.Bermuda.JPG',
+                lyhyt: 'Horseshoe Bayn vaalea hiekkaranta kaartuu Southamptonin etelärannikolla.',
+                selite: 'Horseshoe Bayn ranta Southamptonin etelärannikolla '
+                  + 'lokakuussa 2009: kaukana hiekalla on aurinkovarjoja, ja '
+                  + 'lahden päässä kohoavat tummat kalliot.',
+                lahde: 'Ekem, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
