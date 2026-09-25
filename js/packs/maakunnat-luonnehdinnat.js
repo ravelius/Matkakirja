@@ -3128,4 +3128,351 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
     },
   },
+  /*
+   * BGR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.BGR:n tunnuksia
+   * TÄSMÄLLEEN ("Grad Sofiya" = pääkaupunki, "Sofia" = sitä ympäröivä
+   * Sofian alue). Vain `lyhyt`. Teksti välttää Sofian fokusvirran
+   * aiheet (Levski, Serdica, Sofia-patsas, eläintarha) ja Pernikin
+   * fokuskohteen (Surva, kukerit). Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Blagoevgrad    — Melnik, Bulgaria (385 as., maan pienin kaupunki;
+   *                    Melnik Earth Pyramids)
+   *   Burgas         — Atanasovsko Lake (suolaa vuodesta 1906, Via Pontica)
+   *   Dobrich        — Balchik Palace (kuningatar Marie; kaktuskokoelma
+   *                    ulkona 1 000 m², Euroopan toiseksi suurin)
+   *   Gabrovo        — Gabrovo ("international capital of humour and
+   *                    satire", House of Humour and Satire)
+   *   Grad Sofiya    — Alexander Nevsky Cathedral, Sofia (kullattu kupoli,
+   *                    5 000 hengen tilat)
+   *   Haskovo        — Haskovo (Jumalanäidin monumentti 32 m, 2003,
+   *                    Guinness 2005)
+   *   Yambol         — Yambol (Bezisten, 510-vuotisjuhla 2019, museo 2015)
+   *   Kardzhali      — Perperikon (Balkanin suurin megaliittikohde,
+   *                    jälkiä noin 5000 eaa.)
+   *   Kyustendil     — Sapareva Banya (geysir 1957, vesi 103 °C)
+   *   Lovech         — Devetashka cave (suu 35 m leveä, lähes 30 000
+   *                    lepakkoa, Expendables 2 kuvattiin 2011)
+   *   Montana        — Chiprovtsi (kelim-perinne Unescon aineettomaan
+   *                    perintöön 2014)
+   *   Pazardzhik     — Velingrad ("Spa Capital of the Balkans", yli 90
+   *                    mineraalilähdettä)
+   *   Pernik         — Pernik (hiilikaivokset 1900-luvulla, Underground
+   *                    Mining Museum)
+   *   Pleven         — Pleven Panorama (115 × 15 m, avattu 1977)
+   *   Plovdiv        — Plovdiv (Euroopan kulttuuripääkaupunki 2019,
+   *                    Kapana-kortteli)
+   *   Razgrad        — Abritus (arkeologinen puisto; taistelu 251, Decius)
+   *   Ruse           — Giurgiu–Ruse Friendship Bridge (1954, 2 223 m;
+   *                    ainoa yhteinen silta New Europe Bridgeen asti)
+   *   Silistra       — Srebarna Nature Reserve (Unesco, kiharapelikaani)
+   *   Sliven         — Sliven Province (Sinite Kamani, yli 1 000
+   *                    kasvilajia; bora-tuuli)
+   *   Smolyan        — Devil's Throat Cave (Trigradin rotko, heitetyt
+   *                    puut katosivat jäljettömiin)
+   *   Sofia          — Koprivshtitsa (kansanperinnefestivaali vuodesta
+   *                    1965, noin viiden vuoden välein)
+   *   Stara Zagora   — Thracian Tomb of Kazanlak (300-luku eaa., Unesco)
+   *   Shumen         — Shumen ("Monument to 1300 Years of Bulgaria" 1981;
+   *                    Shumen Brewery 1882, maan ensimmäinen)
+   *   Targovishte    — Targovishte (yksi Euroopan suurimmista
+   *                    lasitehtaista, 1 500 työntekijää)
+   *   Varna          — Roman Thermae (Varna) (Balkanin suurimmat, holvit
+   *                    20–22 m)
+   *   Veliko Tarnovo — Tsarevets (fortress) (ääni- ja valonäytös)
+   *   Vidin          — Baba Vida ("the only entirely preserved medieval
+   *                    castle in the country")
+   *   Vratsa         — Rogozen Treasure (1985, traktorinkuljettaja,
+   *                    yli 20 kg; Vratsan museo ja Sofian kansallismuseo)
+   */
+  BGR: {
+    Blagoevgrad: {
+      lyhyt: 'Pirinin rinteellä Melnik on Bulgarian pienin kaupunki, alle 400 asukasta, ja sen takana kohoavat sateen ja tuulen veistämät hiekkapyramidit.',
+    },
+    Burgas: {
+      lyhyt: 'Burgasin pohjoispuolella Atanasovskojärvestä nostetaan yhä merisuolaa, ja syksyisin järven yli kulkee lintujen muuttoreitti Via Pontica.',
+    },
+    Dobrich: {
+      lyhyt: 'Baltšikin rannalla on Romanian kuningatar Marian kesäpalatsi, ja sen puutarhassa kasvaa ulkona yksi Euroopan suurimmista kaktuskokoelmista.',
+    },
+    Gabrovo: {
+      lyhyt: 'Gabrovoa kutsutaan huumorin pääkaupungiksi: kaupunkilaisten kitsaudesta kerrotaan vitsejä, ja kaupungissa on oma Huumorin ja satiirin talo.',
+    },
+    'Grad Sofiya': {
+      lyhyt: 'Sofian keskustaa hallitsevat Aleksanteri Nevskin katedraalin kullatut kupolit, ja kirkkoon mahtuu kerralla viisituhatta ihmistä.',
+    },
+    Haskovo: {
+      lyhyt: 'Haskovon kukkulalla seisoo 32-metrinen Jumalanäidin patsas, joka on päässyt Guinnessin ennätysten kirjaan maailman korkeimpana laatuaan.',
+    },
+    Yambol: {
+      lyhyt: 'Jambolin keskustassa seisoo yli viisisataa vuotta vanha katettu kauppahalli Bezisten, joka on nykyään museo.',
+    },
+    Kardzhali: {
+      lyhyt: 'Kardžalin lähellä kalliokukkulalla on Perperikon, Balkanin suurin megaliittikohde, jonka vanhimmat jäljet ovat noin 7 000 vuoden takaa.',
+    },
+    Kyustendil: {
+      lyhyt: 'Rilan juurella Sapareva Banjan keskustassa suihkuaa geysir, jonka mineraalivesi on kuumimmillaan 103-asteista.',
+    },
+    Lovech: {
+      lyhyt: 'Devetaškin luolan suu on 35 metriä leveä, ja sen holveissa elää lähes 30 000 lepakkoa – luolassa on kuvattu myös Hollywood-elokuva.',
+    },
+    Montana: {
+      lyhyt: 'Tšiprovtsissa kudotaan yhä käsin kelim-mattoja, ja kylän mattoperinne otettiin Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
+    },
+    Pazardzhik: {
+      lyhyt: 'Rodopien Velingradia kutsutaan Balkanin kylpyläpääkaupungiksi, sillä kaupungissa ja sen ympärillä on yli 90 mineraalilähdettä.',
+    },
+    Pernik: {
+      lyhyt: 'Pernik kasvoi 1900-luvulla hiilikaivosten varaan, ja kaupungissa voi yhä laskeutua maanalaiseen kaivosmuseoon.',
+    },
+    Pleven: {
+      lyhyt: 'Plevenin panoraamamuseossa 115 metriä pitkä maalaus kiertää katsojan ympäri ja kuvaa kaupungin piiritystä vuodelta 1877.',
+    },
+    Plovdiv: {
+      lyhyt: 'Plovdiv oli Euroopan kulttuuripääkaupunki 2019, ja sen vanhoista Kapanan käsityöläiskujista on tullut kahviloiden ja gallerioiden kortteli.',
+    },
+    Razgrad: {
+      lyhyt: 'Razgradin arkeologisessa puistossa on Abrituksen raunioita; lähistöllä gootit löivät Rooman armeijan vuonna 251, ja keisari Decius kaatui.',
+    },
+    Ruse: {
+      lyhyt: 'Rusesta kulkee Tonavan yli Romaniaan yli kaksikilometrinen Ystävyyden silta, joka oli vuosikymmeniä maiden ainoa yhteinen silta.',
+    },
+    Silistra: {
+      lyhyt: 'Tonavan rannan Srebarnajärvellä pesivät kiharapelikaanit, ja järven luonnonsuojelualue kuuluu Unescon maailmanperintöön.',
+    },
+    Sliven: {
+      lyhyt: 'Slivenin yllä kohoavat Siniset kivet, luonnonpuisto, jossa kasvaa yli tuhat kasvilajia – kaupunki tunnetaan myös puuskaisesta bora-tuulestaan.',
+    },
+    Smolyan: {
+      lyhyt: 'Trigradin rotkossa joki syöksyy vesiputouksena Paholaisen kurkun luolaan, ja veden mukana heitetyt puut ovat kadonneet sinne jäljettömiin.',
+    },
+    Sofia: {
+      lyhyt: 'Koprivštitsan museokaupungissa järjestetään noin viiden vuoden välein Bulgarian kansallinen kansanperinnefestivaali, jo vuodesta 1965.',
+    },
+    'Stara Zagora': {
+      lyhyt: 'Kazanlakin traakialaisen hautakammion seinissä on yli 2 000 vuotta vanhoja maalauksia, ja hauta on Unescon maailmanperintöä.',
+    },
+    Shumen: {
+      lyhyt: 'Šumenin ylängöllä seisoo 1981 rakennettu jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi, ja kaupungin panimo on maan vanhin.',
+    },
+    Targovishte: {
+      lyhyt: 'Targovištessa toimii yksi Euroopan suurimmista lasitehtaista, joka työllistää noin 1 500 ihmistä.',
+    },
+    Varna: {
+      lyhyt: 'Varnan keskustassa ovat Balkanin suurimmat roomalaiset kylpylät, joiden holvit kohosivat aikanaan yli 20 metrin korkeuteen.',
+    },
+    'Veliko Tarnovo': {
+      lyhyt: 'Veliko Tarnovon keskiaikainen Tsarevetsin linnoitus herää iltaisin eloon ääni- ja valonäytöksessä, kun muurit valaistaan värein.',
+    },
+    Vidin: {
+      lyhyt: 'Tonavan rannalla Vidinissä seisoo Baba Vida, Bulgarian ainoa kokonaan säilynyt keskiaikainen linna.',
+    },
+    Vratsa: {
+      lyhyt: 'Rogozenin kylästä löytyi 1985 yli 20 kilon traakialainen hopea-aarre, kun traktorinkuljettaja kaivoi puutarhaansa kasteluputkea varten.',
+    },
+  },
+  /*
+   * HRV (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.HRV:n tunnuksia TÄSMÄLLEEN (osa ilman diakriittejä,
+   * esim. "Dubrovacko-Neretvanska"). Vain `lyhyt`. Dubrovnik-Neretvan
+   * teksti välttää Dubrovnikin fokusvirran aiheet (muurit, Lokrum,
+   * Sponza, Ragusan veronmaksu) ja Istrian teksti Pulan areenan.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026, ellei toisin mainita):
+   *   Bjelovarsko-bilogorska — Daruvar (tšekkiläisvähemmistön keskus,
+   *                            lähteet roomalaisajalta)
+   *   Brodsko-Posavska       — Brod Fortress (1715–1780, 4 000 sotilasta,
+   *                            150 tykkiä)
+   *   Dubrovacko-Neretvanska — Time Out Croatia "Neretva mandarins" ja
+   *                            Croatia Week (yli miljoona puuta, 80 %
+   *                            Kroatian mandariineista); Opuzen
+   *   Istarska               — Hum, Istria County (52 as. 2021, "one of
+   *                            the smallest towns in the world")
+   *   Karlovacka             — Karlovac ("town on four rivers", Aquatika
+   *                            22.10.2016)
+   *   Koprivničko-Križevačka — Vegeta (condiment) (Podravka, Koprivnica,
+   *                            myynnissä 1959)
+   *   Krapinsko-Zagorska     — Krapina (Hušnjakovo 1899, yli 800 fossiilia,
+   *                            museo löytöpaikalla)
+   *   Licko-Senjska          — Nikola Tesla (syntyi Smiljanissa Gospićin
+   *                            lähellä; muistokeskus)
+   *   Medimurska             — Međimurje County (pohjoisin; pienin, kun
+   *                            Zagrebin kaupunkia ei lasketa)
+   *   Osjecko-Baranjska      — Kopački Rit (Draava ja Tonava, noin 260
+   *                            lintulajia)
+   *   Primorsko-Goranska     — Rijeka (Whiteheadin torpedo 1866; Euroopan
+   *                            kulttuuripääkaupunki 2020)
+   *   Šibensko-Kninska       — Šibenik (Pyhän Jaakobin katedraali 2000,
+   *                            Pyhän Nikolauksen linnoitus 2017)
+   *   Sisacko-Moslavacka     — storkvillages.net "Čigoć, Croatia" ja
+   *                            Kuwait Times (EuroNatur 1994, yli 300
+   *                            haikaraa, enemmän kuin asukkaita)
+   *   Splitsko-Dalmatinska   — Sinjska alka (vuodesta 1715, Unesco 2010)
+   *   Varaždinska            — Varaždin (pääkaupunki 1756–1776, Špancirfest)
+   *   Viroviticko-Podravska  — Papuk (Kroatian ensimmäinen geopuisto,
+   *                            Euroopan geopuistoverkostoon 2007)
+   *   Vukovarsko-Srijemska   — Vukovar water tower (yli 600 osumaa 1991,
+   *                            muistomerkkinä avattu 30.10.2020)
+   *   Zadarska               — Sea organ (Nikola Bašić, 15.4.2005)
+   *   Zagrebacka             — Samobor (samoborska kremšnita)
+   *   Grad Zagreb            — Museum of Broken Relationships (2010;
+   *                            Kenneth Hudson -palkinto 2011)
+   */
+  HRV: {
+    'Bjelovarsko-bilogorska': {
+      lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
+    },
+    'Brodsko-Posavska': {
+      lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
+    },
+    'Dubrovacko-Neretvanska': {
+      lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
+    },
+    Istarska: {
+      lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
+    },
+    Karlovacka: {
+      lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
+    },
+    'Koprivničko-Križevačka': {
+      lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
+    },
+    'Krapinsko-Zagorska': {
+      lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
+    },
+    'Licko-Senjska': {
+      lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
+    },
+    Medimurska: {
+      lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
+    },
+    'Osjecko-Baranjska': {
+      lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
+    },
+    'Primorsko-Goranska': {
+      lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
+    },
+    'Šibensko-Kninska': {
+      lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
+    },
+    'Sisacko-Moslavacka': {
+      lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
+    },
+    'Splitsko-Dalmatinska': {
+      lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
+    },
+    'Varaždinska': {
+      lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
+    },
+    'Viroviticko-Podravska': {
+      lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
+    },
+    'Vukovarsko-Srijemska': {
+      lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
+    },
+    Zadarska: {
+      lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
+    },
+    Zagrebacka: {
+      lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
+    },
+    'Grad Zagreb': {
+      lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
+    },
+  },
+  /*
+   * MNE (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MNE:n tunnuksia TÄSMÄLLEEN (kunnat; "Nikšic" ilman
+   * ć-kirjainta kuten datassa). Vain `lyhyt`. Bijelo Poljen tekstissä
+   * EI käytetä Miroslavin evankeliumia, koska en-Wikipedian artikkelit
+   * ovat sen kirjoituspaikasta ristiriidassa (Bijelo Polje vs. Kotor).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Andrijevica  — Komovi (Kom Kučki 2 487 m; Kolašin ja Andrijevica)
+   *   Bar          — Stara Maslina (yli 2 000 v, Stari Bar)
+   *   Berane       — Berane (Đurđevi Stupovi 1100-luvun lopulla, Lim)
+   *   Bijelo Polje — Bijelo Polje (Lim; islam 49,1 %, ortodoksit 45,2 %)
+   *   Budva        — Sveti Stefan (tombolo, hotelliksi Jugoslavian aikana)
+   *   Cetinje      — Cetinje ("Old Royal Capital", Sininen palatsi)
+   *   Danilovgrad  — Ostrog Monastery (1–1,2 miljoonaa kävijää vuodessa)
+   *   Herceg Novi  — Herceg Novi (mimosajuhla, JUK Herceg-Fest)
+   *   Kolašin      — Biogradska Gora (aarniometsä, yli 500-vuotiaita puita)
+   *   Kotor        — Kotor (kissat symbolina, kissamuseo, Trg od mačaka)
+   *   Mojkovac     — Mojkovac (Sinjajevinan laitumet, lampaat)
+   *   Nikšic       — Trebjesa Brewery (1896, maan suurin panimo)
+   *   Plav         — Plav Lake (suurin jäätikköjärvi, lähteet)
+   *   Pljevlja     — Husein-paša's Mosque (1573–1594, minareetti 42 m)
+   *   Plužine      — Piva Monastery (siirretty 1982, yli 1 000
+   *                  freskokappaletta)
+   *   Podgorica    — Podgorica (Titograd 1946–1992, Ribnica ja Morača)
+   *   Rožaje       — Rožaje (noin 1 014 m, Ibarin lähde)
+   *   Šavnik       — Šavnik (perustettu 1861, 364 as. 2023, kolme jokea)
+   *   Tivat        — Tivat (arsenaali 1889, Porto Montenegro)
+   *   Ulcinj       — Velika Plaža (12 km, Montenegron pisin, leijalautailu)
+   *   Žabljak      — Žabljak (1 456 m, "the highest situated Balkan town",
+   *                  Mustajärvi)
+   */
+  MNE: {
+    Andrijevica: {
+      lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+    },
+    Bar: {
+      lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+    },
+    Berane: {
+      lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+    },
+    'Bijelo Polje': {
+      lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+    },
+    Budva: {
+      lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+    },
+    Cetinje: {
+      lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+    },
+    Danilovgrad: {
+      lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+    },
+    'Herceg Novi': {
+      lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+    },
+    'Kolašin': {
+      lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+    },
+    Kotor: {
+      lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+    },
+    Mojkovac: {
+      lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+    },
+    'Nikšic': {
+      lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+    },
+    Plav: {
+      lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+    },
+    Pljevlja: {
+      lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+    },
+    'Plužine': {
+      lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+    },
+    Podgorica: {
+      lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+    },
+    'Rožaje': {
+      lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+    },
+    'Šavnik': {
+      lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+    },
+    Tivat: {
+      lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+    },
+    Ulcinj: {
+      lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+    },
+    'Žabljak': {
+      lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+    },
+  },
 };
