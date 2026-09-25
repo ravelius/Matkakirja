@@ -1,0 +1,1695 @@
+{
+  "erä": "linssikatalogi-era2a-20260925",
+  "tila": "72 R2-objektia todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 18,
+    "concepts": 18,
+    "cc": 18,
+    "cc_not_found": 0,
+    "objects": 72
+  },
+  "entries": [
+    {
+      "id": "A1",
+      "nimi": "Suuret uskonnot syntyvät",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Suurten uskontojen varhaiset paikat valaisevat Aasian ja Lähi-idän karttaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. The birth of major religions, c. 1500 BCE–632 CE. An antique parchment cartographic map spanning the eastern Mediterranean, Arabian Peninsula, Indian subcontinent and eastern China, with recognizable geography and deep blue-brown seas. Warm brass light nodes mark Punjab, Sarnath, Qufu, Jerusalem and Galilee, Mecca and Medina; a few delicate routes thread across the map to suggest different traditions emerging over time without implying one continuous journey. Small purely architectural silhouettes are subdued, culturally respectful, and subordinate to the map. Cream and sepia engraving, painterly relief, gentle vignette, brass time arc at bottom. No founder portraits or human figures, no sacred text or scripture, no UI, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244203,
+            "sha256": "3b0c766a51555f6b45c124009db3166c1c202da8ccc04b2290d3a4aa5892c3ee",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:52:50.287Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34381,
+            "sha256": "6de187973d88abbcbf5ebdb081c01eece94d5d640ac00ea6e5a1c4911935bc48",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:52:52.404Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1873 piirros esittää Herodeksen Jerusalemin temppeliä myöhempänä rekonstruktiona.",
+        "creator": "C. H. Jones; T. H. Hamilton; J. David Williams",
+        "title": "View of the Temple of Herod, from Olivet",
+        "year": "1873",
+        "collection": "David Rumsey Historical Map Collection",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jones%2C_C.H.%3B_Hamilton%2C_T.H.%3B_Williams%2C_J.David._1873._View_of_the_Temple_of_Herod%2C_from_Olivet.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Jones%2C_C.H.%3B_Hamilton%2C_T.H.%3B_Williams%2C_J.David._1873._View_of_the_Temple_of_Herod%2C_from_Olivet.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299375,
+            "sha256": "f00d05ce8f4186d4d167cf2a844919d66df20a298feb1560ee799790d0a2c8e8",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:52:56.000Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 77877,
+            "sha256": "f46e9cb14cf06522feff1636fdeb782ac3bdf3e07f01aa7579941fa0b81308b8",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:52:58.779Z"
+            }
+          }
+        ],
+        "attribution": "C. H. Jones; T. H. Hamilton; J. David Williams, View of the Temple of Herod, from Olivet (1873), David Rumsey Historical Map Collection. Public domain. https://commons.wikimedia.org/wiki/File:Jones%2C_C.H.%3B_Hamilton%2C_T.H.%3B_Williams%2C_J.David._1873._View_of_the_Temple_of_Herod%2C_from_Olivet.jpg"
+      }
+    },
+    {
+      "id": "A3",
+      "nimi": "Islamin kultakausi",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Islamin kultakauden oppikeskukset yhdistyvät Córdobasta Samarkandiin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. The Islamic Golden Age, 750–1258, from Baghdad to Cordoba. An elegant antique parchment relief map spanning Iberia, North Africa, the Middle East and Central Asia. Warm luminous nodes accurately suggest Cordoba, Cairo, Baghdad, Isfahan and Samarkand, connected by fine routes of scholarship and exchange. Faint engraved geometric tile patterns, books and observatory circles appear as map texture, not readable manuscripts or portraits. Cream and dark sepia, muted indigo water, aged brass light, subtle bottom time arc and gentle vignette. Rich but calm historical atmosphere; no battle or destruction scene. No people, sacred calligraphy, UI, buttons, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248100,
+            "sha256": "2a2fb5c5b8e3f60f2e4badcfc88d6dd391590ccbfc9810c28313fb0cea74a1ec",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:00.988Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34664,
+            "sha256": "eb42d87588b12afab0c40d1bf6d1aa549c3d532054e64e7a4b41cfaa9e87e96a",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:02.786Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Córdoban suuren moskeijan sisätila 1890-luvun valokuvassa.",
+        "creator": "Rafael Garzón; Rafael Señán",
+        "title": "Córdoba, interior de la Mezquita",
+        "year": "n. 1890–1900",
+        "collection": "Biblioteca Nacional de España",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:C%C3%B3rdoba%2C_interior_de_la_Mezquita._Garz%C3%B3n_y_Se%C3%B1an.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/C%C3%B3rdoba%2C_interior_de_la_Mezquita._Garz%C3%B3n_y_Se%C3%B1an.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297748,
+            "sha256": "a13f81de410799197667e261381e427073b633b1a3a3afff11fb13318aa969d8",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:06.472Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 48038,
+            "sha256": "aa3c043571211ff6c9a2da20da2d70220d0dd363fbe329281eea17aa72e2f78c",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:09.022Z"
+            }
+          }
+        ],
+        "attribution": "Rafael Garzón; Rafael Señán, Córdoba, interior de la Mezquita (n. 1890–1900), Biblioteca Nacional de España. Public domain. https://commons.wikimedia.org/wiki/File:C%C3%B3rdoba%2C_interior_de_la_Mezquita._Garz%C3%B3n_y_Se%C3%B1an.jpg"
+      }
+    },
+    {
+      "id": "A5",
+      "nimi": "Buddhalaisuuden tie Aasian halki",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Buddhalaisuuden reitit haarautuvat Intiasta Itä- ja Kaakkois-Aasiaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Buddhism's journey across Asia, 250 BCE–800 CE. Oblique antique parchment map from India through Central Asia and China to Japan and Southeast Asia, with recognizable continental coastline and landforms. Small warm gold nodes at Sanchi in India, Dunhuang on the Silk Road, Lhasa on the Tibetan plateau, Nara in Japan and Borobudur on Java, joined by delicate branching trade and pilgrimage routes. A few quiet silhouettes of stupas, caves and temple roofs are engraved into the cartography, without human figures or deity images. Cream, sepia and dark teal palette, gentle cinematic light, brass time hint at bottom, restrained vignette, clear geography at thumbnail scale. No UI, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247703,
+            "sha256": "20ea5fc5242cad6fb478c3a532fc16d0235ddbce1ff9956eefde1fac55ed93be",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:12.175Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35478,
+            "sha256": "d63ca0a37cfb97bc66634db226d4e7cc316945238056dc9ee9acc113309df350",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:14.915Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Percy Brownin vuonna 1900 julkaistu piirros rekonstruoi Sanchin stupia ja luostareita niiden varhaisvaiheessa.",
+        "creator": "Percy Brown",
+        "title": "Stupas and monasteries at Sanchi in the early centuries of the Christian era",
+        "year": "1900",
+        "collection": "Indian Architecture: Buddhist and Hindu (1900)",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stupas_and_monasteries_at_Sanchi_in_the_early_centuries_of_the_Christian_era.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Stupas_and_monasteries_at_Sanchi_in_the_early_centuries_of_the_Christian_era.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289963,
+            "sha256": "1d1de23163097d36333f645ea8a87573a3e7f9e7dff4e4ebad8195c13ea72b52",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:18.069Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 75158,
+            "sha256": "424a1f16340401b022d5ab318513bd0bf33950e605833e3baace5a7321860d33",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:21.790Z"
+            }
+          }
+        ],
+        "attribution": "Percy Brown, Stupas and monasteries at Sanchi in the early centuries of the Christian era (1900), Indian Architecture: Buddhist and Hindu (1900). Public domain. https://commons.wikimedia.org/wiki/File:Stupas_and_monasteries_at_Sanchi_in_the_early_centuries_of_the_Christian_era.jpg"
+      }
+    },
+    {
+      "id": "A6",
+      "nimi": "Pyhiinvaellusreitit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Erilliset pyhiinvaellusreitit näkyvät viidellä maailman alueella.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Pilgrimage routes around the world. An oblique antique parchment map focused on Europe, the Middle East, India and Japan. Show exactly five separate short local walking-path clusters, each ending at one warm gold node: the Camino across northern Spain to Santiago de Compostela; local roads around Jerusalem; routes across Arabia to Mecca; paths in northern India to Varanasi; a small circular path around Japan's Shikoku island. Keep the clusters visually disconnected from each other. No routes crossing oceans, no routes in the Americas or Africa, no ships. Accurate recognizable coastlines, dark blue-brown sea, cream/sepia engraved land relief, subtle brass time arc, gentle vignette, respectful quiet mood, tiny architecture silhouettes only. No people, founders, sacred inscriptions, UI, buttons, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248282,
+            "sha256": "311dd43007763a541a18db9db6a23e9b58e2a86ad0d2e86311163f41cdb972f3",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:24.853Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 28922,
+            "sha256": "2b41bbf67b90a73c82ecced31b6e51b297e52818170af5f115841541f691d2ff",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:26.853Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Dionisio Fierrosin maalaus näyttää pyhiinvaeltajia Santiago de Compostelan lähellä vuonna 1860.",
+        "creator": "Dionisio Fierros",
+        "title": "Una romería en las cercanías de Santiago",
+        "year": "1860",
+        "collection": "Yksityiskokoelma",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Una_romer%C3%ADa_en_las_cercan%C3%ADas_de_Santiago_1860_Dionisio_Fierros.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Una_romer%C3%ADa_en_las_cercan%C3%ADas_de_Santiago_1860_Dionisio_Fierros.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292332,
+            "sha256": "3b76b96f4ed71f1e78c345524992102f93494f3ae3da062921f0f2e74a82d85e",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:29.623Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 59667,
+            "sha256": "e7cdf13debf550995ea8dc7ed977b908669b5d2b02b37c723488108d78f6fa17",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:32.203Z"
+            }
+          }
+        ],
+        "attribution": "Dionisio Fierros, Una romería en las cercanías de Santiago (1860), Yksityiskokoelma. Public domain. https://commons.wikimedia.org/wiki/File:Una_romer%C3%ADa_en_las_cercan%C3%ADas_de_Santiago_1860_Dionisio_Fierros.jpg"
+      }
+    },
+    {
+      "id": "A7",
+      "nimi": "Luostarit ja kirjat",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan luostarit ja kirjojen kulkureitit syttyvät kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Monasteries and books in Europe, 500–1500. Antique parchment relief map focused on Europe and the Mediterranean, no modern country border grid. Small warm brass nodes at Monte Cassino in Italy, Iona near Scotland, Cluny in France, Mont-Saint-Michel, and Mount Athos in Greece. Delicate routes link the sites, while tiny engraved silhouettes of monastery architecture and closed illuminated codices appear integrated into the map, with no legible writing. Cream and sepia, dark water, painterly raised terrain, gentle cinematic highlights and subtle unlabeled brass time arc. Quiet scholarly mood, geography legible at thumbnail scale. No people, UI, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242720,
+            "sha256": "39dc0fac7b17cd7d5d45a87d238649a86aeee0e1e24912e28047fffaee055afa",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:35.452Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36074,
+            "sha256": "2fe6ea64a0049c84fe18cc1b5f190904e1765e90c1f3b92fbab18b2ed32bc9b9",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:37.229Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "William Stanley Haseltinen maisemamaalauksessa Mont-Saint-Michelin luostari kohoaa vuorovesisaarelta.",
+        "creator": "William Stanley Haseltine",
+        "title": "Mont-Saint-Michel",
+        "year": "1868",
+        "collection": "Fine Arts Museums of San Francisco, de Young Museum",
+        "license": "CC0 1.0",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:%27Mont-Saint-Michel%27_by_William_Stanley_Haseltine%2C_1868.JPG",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/%27Mont-Saint-Michel%27_by_William_Stanley_Haseltine%2C_1868.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/A7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 246414,
+            "sha256": "2517380fe5a29d2edf77284284e6fc8c699ded85e5bdd472e476b1bfd3d6f006",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:39.749Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/A7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/A7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 28455,
+            "sha256": "4602713bae707dda71670b1e06481c928209059be3d941a42bf735ea49695e3b",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:42.962Z"
+            }
+          }
+        ],
+        "attribution": "William Stanley Haseltine, Mont-Saint-Michel (1868), Fine Arts Museums of San Francisco, de Young Museum. CC0 1.0. https://commons.wikimedia.org/wiki/File:%27Mont-Saint-Michel%27_by_William_Stanley_Haseltine%2C_1868.JPG"
+      }
+    },
+    {
+      "id": "B4",
+      "nimi": "Sähkö ja viestintä",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Sähkön ja viestinnän solmut yhdistyvät Atlantin kaapelilla ja radioaalloilla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Electricity and communication, 1800–1901. Antique parchment relief map focused on western Europe and the North Atlantic, recognizable coastlines and no modern political border grid. Warm gold nodes at Pavia, Copenhagen, London and Cornwall, plus a transatlantic endpoint in North America; fine glowing lines trace the undersea telegraph cable and later wireless communication as subtle sweeping arcs across the sea. Very faint engraved hints of a voltaic pile, magnetic coil and radio mast remain part of the map surface. Cream, dark blue-brown sea, sepia engraving, brass glow and an unlabeled time arc; clean and legible at thumbnail size. No UI, controls, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248347,
+            "sha256": "0d76d9d9d0029995911e2ab548baa7dcd5b5039b5ba0c19362a4bd9a1c76ed76",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:45.804Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35782,
+            "sha256": "2737dabbbc3cf4fc1f55c0541da78357c460228b26e0ef9454718be11befe40d",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:48.218Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Robert Charles Dudleyn teos kuvaa vuoden 1866 Atlantin lennätinkaapelin rantautumista Newfoundlandiin.",
+        "creator": "Robert Charles Dudley",
+        "title": "Landing of the Atlantic Cable of 1866, Heart's Content, Newfoundland",
+        "year": "1866",
+        "collection": "Library and Archives Canada, Peter Winkworth Collection, e000756702",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Landing_of_the_Atlantic_Cable_of_1866%2C_Heart%27s_Content%2C_Newfoundland.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Landing_of_the_Atlantic_Cable_of_1866%2C_Heart%27s_Content%2C_Newfoundland.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296526,
+            "sha256": "c32ace5a3751b773595c0f37e8cd65be927c7634256f2b48ceea619b9aaafd3c",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:51.729Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 51010,
+            "sha256": "6c62821d0f7bcf948e6dba94275bcefb6e3be62b82ba914078d7422033c098dc",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:53.289Z"
+            }
+          }
+        ],
+        "attribution": "Robert Charles Dudley, Landing of the Atlantic Cable of 1866, Heart's Content, Newfoundland (1866), Library and Archives Canada, Peter Winkworth Collection, e000756702. Public domain. https://commons.wikimedia.org/wiki/File:Landing_of_the_Atlantic_Cable_of_1866%2C_Heart%27s_Content%2C_Newfoundland.jpg"
+      }
+    },
+    {
+      "id": "B5",
+      "nimi": "Kartografia ja mittaaminen",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mittaamisen ketju ja nollameridiaani piirtyvät Euroopan kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Cartography and measurement in Europe, 1569–1884. An antique parchment relief map of Europe and the North Atlantic, with elegantly engraved latitude-longitude graticules and a highlighted prime meridian through Greenwich, no country-border grid. Small gold nodes at Duisburg, Paris, Greenwich, Hammerfest and Izmail; a fine north-south surveying chain links the latter two. An inset-like brass compass and dividers are shallow relief details at the edge, not UI panels. Cream/sepia paper, dark ink sea, measured gold glow, painterly dimensional texture, gentle vignette and tiny unlabeled time hint. Geography and surveying geometry dominate. No readable text, numbers, labels, buttons, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244720,
+            "sha256": "8c6412b2f31db3e10009e5507ddcddc8c8421ee09fff4c1e1b4d31f99c501cee",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:55.125Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35567,
+            "sha256": "e6129723922479d387f64bace4f02b2335df7120b57dbcb7a72c1cb6d9385dea",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:57.123Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Gerardus Mercatorin vuoden 1569 maailmankartta vaikutti merikarttojen suunnistustapaan.",
+        "creator": "Gerardus Mercator",
+        "title": "Mercator 1569 world map (composite)",
+        "year": "1569",
+        "collection": "Bibliothèque nationale de France / Gallica",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mercator_1569_composite.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Mercator_1569_composite.jpg/3840px-Mercator_1569_composite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299990,
+            "sha256": "c0413f8625d77b167d5036fa85d6785559d42de0ed9c60fae178fb4b213f3dbe",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:53:59.353Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 57640,
+            "sha256": "080d04ca9bee2308f192569e4fa8453f87492dd86a6a7e629d7213e443a2d499",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:01.658Z"
+            }
+          }
+        ],
+        "attribution": "Gerardus Mercator, Mercator 1569 world map (composite) (1569), Bibliothèque nationale de France / Gallica. Public domain. https://commons.wikimedia.org/wiki/File:Mercator_1569_composite.jpg"
+      }
+    },
+    {
+      "id": "B6",
+      "nimi": "Tähtitieteen observatoriot",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Historialliset observatoriot yhdistyvät tähtitaivaan kaariin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Astronomy observatories, 1576–1900. Antique parchment oblique world map showing Europe, Central Asia and western North America clearly. Warm luminous nodes at Ven island/Uraniborg, Greenwich, Pulkovo near St Petersburg, Samarkand, and Lick Observatory in California. Subtle gold star trails and orbital rings hover transparently over the map, with fine route arcs between nodes and tiny engraved dome silhouettes integrated into terrain. Cream/sepia continents, deep indigo sea, restrained brass starlight, painterly 3D relief and gentle vignette. A small unlabeled time arc at bottom, no modern borders. No UI, controls, labels, letters, numbers, logos, people, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244356,
+            "sha256": "fb693c0ac1a51cfc340b371f62868dfc3bcabe9cc9edfc38f8d309f92720a19d",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:04.587Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36150,
+            "sha256": "1bfa1b376b5eae2b130d95d69c1a9c242cb7e1e29598824558d0bbbe1334c702",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:06.693Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Tycho Brahen vuoden 1598 puupiirros esittää Uraniborgin observatoriota.",
+        "creator": "Tycho Brahe",
+        "title": "Uraniborg, Astronomiæ instauratæ mechanica",
+        "year": "1598",
+        "collection": "Royal Danish Library",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brahe_Uraniborg_1598.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Brahe_Uraniborg_1598.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/B6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 283796,
+            "sha256": "eeab1d8e85d9950c8d6946de2d6ec6c5f331c633bfdd4e3c03a8831c2dbb3847",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:08.262Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/B6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 51332,
+            "sha256": "786471a59c55f2c17e94cb8729bfed925e8c12398f9927cf04fbe7efd0868fc0",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:09.773Z"
+            }
+          }
+        ],
+        "attribution": "Tycho Brahe, Uraniborg, Astronomiæ instauratæ mechanica (1598), Royal Danish Library. Public domain. https://commons.wikimedia.org/wiki/File:Brahe_Uraniborg_1598.jpg"
+      }
+    },
+    {
+      "id": "C1",
+      "nimi": "Suuret löytöretket",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Varhaiset merimatkat kaartuvat Atlantin ja Intian valtameren yli.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Maritime voyages of the 1400s–early 1500s across the Atlantic and Indian Ocean. Antique parchment world map centered on the Atlantic with the Indian Ocean visible, recognizable coastlines of Europe, Africa, the Americas and Asia. Delicate gold sea routes depart from Portugal/Sagres, curve around the Cape of Good Hope toward India, cross the Atlantic to the Caribbean, and suggest a broad circumnavigation; a few small ship silhouettes act as map symbols. Warm nodes mark key turning points, not colonial ownership. Cream/sepia land, deep dark sea, fine engraved compass roses, brass time arc, cinematic raised-paper texture and gentle vignette. Respectful exploration theme without people or conquest scenes. No UI, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246842,
+            "sha256": "29cd2b0bc61e790828839378f621f359914a69c4de9d5afcfb975d7c65cb1e86",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:11.501Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36526,
+            "sha256": "0b6abb4eab429bed21770025d5b981c78d293010035a6b9c4a6fc7acbde07f54",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:13.104Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1502 Cantinon kartta välittää eurooppalaisten merimatkojen aikana kerättyä maantieteellistä tietoa.",
+        "creator": "Tuntematon kartografi",
+        "title": "Cantinon planisfääri",
+        "year": "1502",
+        "collection": "Biblioteca Estense, Modena",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:CantinoPlanisphere.png",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/CantinoPlanisphere.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291907,
+            "sha256": "b755d7ffc739e29098d596f1c6a791e1b118ca9a3fa3d51d8f9f3427354c196a",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:14.505Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 60731,
+            "sha256": "5670438e4f94eab8034a99db02c37f0542d74e2c677ad06170baaf4c8a4d8588",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:16.012Z"
+            }
+          }
+        ],
+        "attribution": "Tuntematon kartografi, Cantinon planisfääri (1502), Biblioteca Estense, Modena. Public domain. https://commons.wikimedia.org/wiki/File:CantinoPlanisphere.png"
+      }
+    },
+    {
+      "id": "C2",
+      "nimi": "Napa-alueiden valloitus",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Napatutkijoiden reitit hahmottuvat pohjoisen ja eteläisen jääalueen kartoilla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, single 16:9 landscape concept image. Polar exploration, 1845–1912, both Arctic and Antarctic. A dramatic antique parchment double-polar cartographic composition: a larger northern polar map with Arctic sea passages and a smaller southern polar inset-like land sphere integrated naturally into the same map, not UI panels. Thin luminous gold expedition routes suggest Franklin in the Canadian Arctic, Nordenskiold along the Northeast Passage, Nansen's Fram drift, and Amundsen and Scott routes toward the South Pole. Cold blue-gray ice over cream parchment, dark ink oceans, warm brass nodes and subtle engraved time arc, cinematic relief and restrained vignette. Calm and reflective, no hero portraits or disaster scenes. No UI, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246031,
+            "sha256": "310f36f34c60ea6ced078b16d2c55c0dca783e592588a585faf9efb8cb50215f",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:17.496Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 43634,
+            "sha256": "f514f38786a1d8fe1e56d1d67ea8e859a229004d4c160bb45c21624254ae778e",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:19.291Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Johan von der Fehr kuvasi Framin lähdön Bergenistä Nansenin arktiselle retkelle 2. heinäkuuta 1893.",
+        "creator": "Johan von der Fehr",
+        "title": "Frams avreise fra Bergen",
+        "year": "1893",
+        "collection": "Nasjonalbiblioteket, bldsa_q3c002",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:No-nb_bldsa_q3c002.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/No-nb_bldsa_q3c002.jpg/3840px-No-nb_bldsa_q3c002.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 280667,
+            "sha256": "6f285546f95ccb980d04b8c2697ce9d64ca35c0ad4dec1fbe1f70d14c674c673",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:23.688Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 33110,
+            "sha256": "5e41673d80b610c0ab1ac9b3813ad043db0259790e21065104c9ee43992208dc",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:25.963Z"
+            }
+          }
+        ],
+        "attribution": "Johan von der Fehr, Frams avreise fra Bergen (1893), Nasjonalbiblioteket, bldsa_q3c002. Public domain. https://commons.wikimedia.org/wiki/File:No-nb_bldsa_q3c002.jpg"
+      }
+    },
+    {
+      "id": "C3",
+      "nimi": "Rautatiet valloittavat maanosat",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Rautateiden valopisteet ja reitit levittäytyvät kolmelle mantereelle höyryvetureiden aikakaudella.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original painterly concept image for the Matkakirja history-game lens C3, 'Railways conquer continents'. A 16:9 landscape view of an antique world map as if seen on a warm cream and sepia 1800s explorer's desk. Emphasize the rail-network story: delicate glowing route lines and small luminous station points running from Britain across continental Europe, across the North American continent, and across northern Asia, with subtle fine illustrated steam-train silhouettes integrated into the paper cartography. A small brass clock-dial arc is barely visible at the bottom edge, suggesting a time-travel timeline. Restrained cinematic light, elegant ink-and-watercolor cartography, aged paper grain, no modern borders or political coloring, no legible labels, no letters, no numbers, no logos, no buttons, no UI, no people. Composition must feel like a plausible game-map lens, with readable geography and a distinct railroad theme. No other transportation modes. Export high-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249628,
+            "sha256": "e02020568b2d2eb123dbaa7ba6e9da187cf3be97cb65d21ecc4eaeab73786afe",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:28.120Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 52521,
+            "sha256": "fe07f72b3dd7372634ae232b2819c9dc2d92f4696874993d3bd1edf037b0023a",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:29.897Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Andrew J. Russellin valokuva esittää Tyynenmeren radan valmistumisjuhlaa Promontory Summitissa 1869; rata muutti myös alkuperäiskansojen maita.",
+        "creator": "Andrew J. Russell",
+        "title": "East and West Shaking Hands at the Laying of Last Rail",
+        "year": "1869",
+        "collection": "Yale Collection of Western Americana, Beinecke Rare Book and Manuscript Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg/3840px-East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 294749,
+            "sha256": "14f92c379970199375e407525caf6447bb72b30502a6a9de383bc6c60d2789be",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:32.040Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44969,
+            "sha256": "d070e5cab787a9c33d222f1e0da9bfd5b01da477fb6bf01448b62e5aeac658e6",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:33.512Z"
+            }
+          }
+        ],
+        "attribution": "Andrew J. Russell, East and West Shaking Hands at the Laying of Last Rail (1869), Yale Collection of Western Americana, Beinecke Rare Book and Manuscript Library. Public domain. https://commons.wikimedia.org/wiki/File:East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg"
+      }
+    },
+    {
+      "id": "C5",
+      "nimi": "Maapallon ympäri 80 päivässä",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Yksi hehkuva reitti kiertää maapallon Lontoosta Aasian ja Amerikan kautta takaisin lähtöpisteeseen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original painterly 16:9 landscape concept image for Matkakirja history-game lens C5, 'Around the World in 80 Days', year 1872. A warm cream and sepia antique world map on an explorer desk showing ONE continuous glowing journey loop from London through Suez, India, Hong Kong, Yokohama, San Francisco, New York and back across the Atlantic to London. The loop is the unmistakable hero, with distinct small golden waypoint glows and very subtle period steamship and railway motifs near route. Include a finely engraved brass pocket watch partly visible along the bottom edge, evoking the race against time. Elegant ink-and-watercolor cartography, parchment texture, cinematic soft lighting, readable continents. NO legible words or letters or numbers, no logo, no buttons, no UI, no people, no fantasy geography. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249264,
+            "sha256": "165105269c2e56899cfc3a1211755dcd3699e73c36388d039cd04d2c5b5f74cb",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:35.542Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54298,
+            "sha256": "fac4296ff9f0556048f48963604cb22486a5b5bd931bcef9688df3b82c821378",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:37.566Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jules Vernen romaanin jälkeen julkaistu kuvallinen karttapeli seuraa Maailman ympäri 80 päivässä -matkan etappeja.",
+        "creator": "Tuntematon tekijä",
+        "title": "Le Tour du Monde en 80 jours par Jules Verne",
+        "year": "1872 jälkeen, 1870-luku",
+        "collection": "Raremaps.com, gallery 64408",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ca._1870_pictorial_world_map_-Le_Tour_du_Monde_en_80_jours_par_Jules_Verne.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Ca._1870_pictorial_world_map_-Le_Tour_du_Monde_en_80_jours_par_Jules_Verne.png/3840px-Ca._1870_pictorial_world_map_-Le_Tour_du_Monde_en_80_jours_par_Jules_Verne.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 286515,
+            "sha256": "f91132bbf605db3978c5d93aff744aa66d1fb5427cb98182e71fff13911bced6",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:40.443Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 69997,
+            "sha256": "f5fd2c2eecb4b036dee65909432fff4e93ed403d970e4ca2fc8ef84bc730bca9",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:42.260Z"
+            }
+          }
+        ],
+        "attribution": "Tuntematon tekijä, Le Tour du Monde en 80 jours par Jules Verne (1872 jälkeen, 1870-luku), Raremaps.com, gallery 64408. Public domain. https://commons.wikimedia.org/wiki/File:Ca._1870_pictorial_world_map_-Le_Tour_du_Monde_en_80_jours_par_Jules_Verne.png"
+      }
+    },
+    {
+      "id": "C6",
+      "nimi": "Ilmailun synty",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ilmailun kehitys etenee kuumailmapallosta varhaisiin lentokoneisiin Euroopan ja Atlantin yllä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original painterly 16:9 landscape concept image for Matkakirja history-game lens C6, 'Birth of Aviation' (1783–1927). Antique parchment map spanning western Europe and eastern North America across Atlantic, on an explorer's desk. A sparse luminous timeline route connects Annonay in France, Berlin, the English Channel, Kitty Hawk, and New York / Paris across Atlantic; visually tell aviation progression through tiny historically suggestive watercolor vignettes: an eighteenth-century hot-air balloon, a glider, a fragile Wright-style biplane, a Channel-crossing monoplane, an early long-range transatlantic plane. Keep map the hero; objects only tasteful small accents. Brass clock dial hint at bottom edge, restrained golden light, sepia ink, cream paper, legible geography. NO legible text/letters/numbers, no logos, no buttons/UI, no modern jets, no people. Unique composition, high-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 228447,
+            "sha256": "cccde70adb3018d58ec2382a52295336317e893b718c2f8f5ace41888b5ca18f",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:44.308Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45552,
+            "sha256": "fd0bf5bcd3b23494f4afaf86bdae1e40df603badc9359031dd72a9063d8c6c76",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:46.807Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "John T. Danielsin valokuva näyttää Orville Wrightin ensimmäisen moottorilennon Kitty Hawkissa 17. joulukuuta 1903.",
+        "creator": "John T. Daniels",
+        "title": "First flight of the Wright Flyer",
+        "year": "17.12.1903",
+        "collection": "Library of Congress Prints and Photographs Division, LC-DIG-ppprs-00626",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wrightflyer_highres.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Wrightflyer_highres.jpg/3840px-Wrightflyer_highres.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/C6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 253520,
+            "sha256": "d20b763e9a71a7edaec8523e03554ce449c2db00ec1d61b02f5a97dd2fb10c63",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:49.926Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/C6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/C6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 27519,
+            "sha256": "dc57a40411731e97b775538745ee0358c2c6f111fad256efae2d16b4399cb6af",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:53.173Z"
+            }
+          }
+        ],
+        "attribution": "John T. Daniels, First flight of the Wright Flyer (17.12.1903), Library of Congress Prints and Photographs Division, LC-DIG-ppprs-00626. Public domain. https://commons.wikimedia.org/wiki/File:Wrightflyer_highres.jpg"
+      }
+    },
+    {
+      "id": "D1",
+      "nimi": "Antiikin kaupungit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Antiikin kaupunkien ketju kulkee Mesopotamiasta Niilin ja Kreikan kautta Roomaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 painterly concept image for Matkakirja game lens D1, Ancient Cities from Mesopotamia to Rome. Focused antique parchment map of Mediterranean and Near East, around 3500 BCE to late antiquity, on explorer desk. Seven small glowing city nodes approximately at Mesopotamia, Nile delta, Babylon, Athens, Alexandria, Rome, Constantinople, connected by a very fine historical itinerary, with tiny tasteful ink-and-watercolor architecture motifs: ziggurat, Egyptian columns, Greek temple, Roman forum, Byzantine dome. Time-layer motif as a narrow brass clock arc at bottom edge. Cream, sepia, ink, subtle vignette. Readable realistic geography, restrained composition. Absolutely no letters, words, numbers, labels, logos, UI, or people. No modern buildings. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249277,
+            "sha256": "99c8797dafec4ce08baafd73e472de918f341223cd169e3aef90ecb0ee83701c",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:55.623Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 55037,
+            "sha256": "51828b1b405d6ac23781d0a467b56b1fefc70e6e66bab65836a5dcb3573ee3a6",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:57.505Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Johann Michael Wittmerin vuoden 1833 akvarellissa näkyvät antiikin Ateenan raunioita ja Akropolis.",
+        "creator": "Johann Michael Wittmer",
+        "title": "View of Athens from the River Ilissos",
+        "year": "1833",
+        "collection": "Benaki Museum, Athens",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Athens_from_the_river_Ilissos_-_J._M._Wittmer_%281833%29.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/View_of_Athens_from_the_river_Ilissos_-_J._M._Wittmer_%281833%29.jpg/3840px-View_of_Athens_from_the_river_Ilissos_-_J._M._Wittmer_%281833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291925,
+            "sha256": "8081f05396821580d76cd067bf7de651822b98c648319238a36cee448268e86a",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:54:59.654Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 62541,
+            "sha256": "ffa0fe6f6bfffe023c9eafe70130643193cec19de585723ba6653f7a5c9154fd",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:02.159Z"
+            }
+          }
+        ],
+        "attribution": "Johann Michael Wittmer, View of Athens from the River Ilissos (1833), Benaki Museum, Athens. Public domain. https://commons.wikimedia.org/wiki/File:View_of_Athens_from_the_river_Ilissos_-_J._M._Wittmer_%281833%29.jpg"
+      }
+    },
+    {
+      "id": "D2",
+      "nimi": "Silkkitie",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Silkkitien karavaanireitti yhdistää Kiinan, Keski-Aasian ja Välimeren kaupungit.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 painterly concept image for Matkakirja game lens D2, Silk Road across Asia to Europe. A wide antique parchment Eurasian map centered on Central Asia, China on right, Mediterranean on left. One sinuous glowing overland caravan route with small light nodes near Chang'an, Dunhuang, Samarkand, Baghdad, Constantinople, Venice. Distinctive delicate ink-and-watercolor motifs of oasis, mountains, camel caravan silhouette and a silk ribbon pattern, small enough to keep map central. Warm cream and brown 1800s explorer-map aesthetic with subtle vignette and a barely visible brass timeline dial at bottom edge. Geographically plausible paths across desert and passes. No letters, words, numbers, labels, logos, UI, or people close-up. No seagoing route. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247455,
+            "sha256": "1320d4c4ea8d652d76ee1d775c3387dc01af26d7dd66bc90ba355f641da67288",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:04.809Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 54119,
+            "sha256": "d41901a2f0292a3a5f991be1df1b4cfa20c7c2bff17a8970f21f5028ce59cad1",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:07.205Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Katalonialaisen atlaksen karavaanikuva kertoo 1300-luvun eurooppalaisesta käsityksestä Aasian kauppareiteistä.",
+        "creator": "Abraham Cresques",
+        "title": "Katalonialaisen atlaksen karavaanikuva",
+        "year": "n. 1375–1380",
+        "collection": "Katalonialainen atlas; Bibliothèque nationale de France",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Katalanischer_Atlas_01.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Katalanischer_Atlas_01.jpg/3840px-Katalanischer_Atlas_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285251,
+            "sha256": "00063e98ac0c34f2c3c0a5ce744d12f85608b9bd069ef1a5842ef03a485eb22a",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:09.837Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 76288,
+            "sha256": "1ff04d2f360f6e82d4f2b76b5476b6ceb5f59f8a441ac45f7a601dc9321b85d5",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:11.925Z"
+            }
+          }
+        ],
+        "attribution": "Abraham Cresques, Katalonialaisen atlaksen karavaanikuva (n. 1375–1380), Katalonialainen atlas; Bibliothèque nationale de France. Public domain. https://commons.wikimedia.org/wiki/File:Katalanischer_Atlas_01.jpg"
+      }
+    },
+    {
+      "id": "D3",
+      "nimi": "Hansa",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Hansakaupan satamat ja merireitit muodostavat verkoston Itämeren ja Pohjanmeren ympärille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 painterly concept image for Matkakirja game lens D3, Hanseatic League. Antique cream-and-sepia parchment map tightly framing Baltic and North Seas and northern Europe, with luminous port nodes around Lübeck, Visby, Bergen, Novgorod, Bruges, London. Thin glowing maritime trading routes across cold blue-grey seas. Small ink-and-watercolor vignettes of a medieval Hanseatic cog ship, brick gabled warehouses, barrels of trade goods. Subtle brass clock/timeline arc at bottom edge. Elegant detailed cartography, quiet northern light, aged paper, soft vignette, geography readable. No legible letters, words, numbers, city labels, logos, UI, buttons, modern buildings, or people. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247376,
+            "sha256": "0dabfc909e0bf0ac1122abc7c41cd9d4e3e97ef29a2e37766ae3021f2f0221a4",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:13.577Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 64120,
+            "sha256": "6aebf40e24a4e7d65c2d91a6afce3a952d6a6833b97b2e36f5c420d5ae0d6b32",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:15.803Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Matthäus Merianin 1600-luvun kuparipiirros esittää Hansan kaupunkia Lyypekkiä.",
+        "creator": "Matthäus Merian vanhempi",
+        "title": "Lyypekin kaupunkikuva",
+        "year": "1641",
+        "collection": "Topographia Saxoniae Inferioris",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Luebeck-1641-Merian.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Luebeck-1641-Merian.jpg/3840px-Luebeck-1641-Merian.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285429,
+            "sha256": "9107d7e3525c76f3be05eb81be7a970a12072acf45e567c99eec6fe0a6cfb66d",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:17.453Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 68418,
+            "sha256": "9399cab748bd49e30b76a1b5e715a387a801f2b63d142575b46df51d249647ab",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:19.373Z"
+            }
+          }
+        ],
+        "attribution": "Matthäus Merian vanhempi, Lyypekin kaupunkikuva (1641), Topographia Saxoniae Inferioris. Public domain. https://commons.wikimedia.org/wiki/File:Luebeck-1641-Merian.jpg"
+      }
+    },
+    {
+      "id": "D4",
+      "nimi": "Vallankumousten Eurooppa",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan vallankumousvuosien keskeiset kaupungit kytkeytyvät punertavalla aikajanalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 painterly concept image for Matkakirja game lens D4, Revolutionary Europe 1789–1849. Focused parchment map of Europe on antique desk, tracing a sparse luminous timeline between Paris, Vienna, Frankfurt, and Rome. Give Paris a subtle Bastille-fortress ink vignette, Vienna a small 1848 barricade silhouette, Frankfurt a classical parliament hall, Rome a republican civic building, all delicate and subordinate to clear geography. Warm cream/brown 1800s cartographic aesthetic, quiet amber light, soft vignette, faint brass clock dial at bottom edge. Communicate political uprisings with restrained red-brown ink accents, no national flags, no portrait people, no legible letters/words/numbers/labels, no logo, no UI/buttons. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247163,
+            "sha256": "048dcc7346c044a14a62c388b254b029c33f51a0763f2d5925dd845d067d3f5f",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:21.808Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 46499,
+            "sha256": "4ee5fc35225b9843bc975d6c5326834363c044feddf6d238cf9e3ef660e31647",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:23.678Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Charles Théveninin noin vuonna 1793 maalaama teos kuvaa Bastiljin tapahtumia 14. heinäkuuta 1789.",
+        "creator": "Charles Thévenin",
+        "title": "Prise de la Bastille, le 14 juillet 1789",
+        "year": "n. 1793",
+        "collection": "Musée Carnavalet, P572",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Charles_Th%C3%A9venin_-_Prise_de_la_Bastille%2C_le_14_juillet_1789_-_P572_-_Mus%C3%A9e_Carnavalet.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Charles_Th%C3%A9venin_-_Prise_de_la_Bastille%2C_le_14_juillet_1789_-_P572_-_Mus%C3%A9e_Carnavalet.jpg/3840px-Charles_Th%C3%A9venin_-_Prise_de_la_Bastille%2C_le_14_juillet_1789_-_P572_-_Mus%C3%A9e_Carnavalet.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 281008,
+            "sha256": "ff4415e406773a8f9434b00d54fe233dc5c58eac50b8a6ba9ea6306d661ecc7e",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:25.208Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 52432,
+            "sha256": "09d8fc412902e3a73309b975e0be975df09b5917be1f08057d94ea82c334208d",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:27.288Z"
+            }
+          }
+        ],
+        "attribution": "Charles Thévenin, Prise de la Bastille, le 14 juillet 1789 (n. 1793), Musée Carnavalet, P572. CC0 1.0. https://commons.wikimedia.org/wiki/File:Charles_Th%C3%A9venin_-_Prise_de_la_Bastille%2C_le_14_juillet_1789_-_P572_-_Mus%C3%A9e_Carnavalet.jpg"
+      }
+    },
+    {
+      "id": "D5",
+      "nimi": "Kansallisvaltiot syntyvät",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan kansallisvaltioiden synty näkyy kuutena hehkuvana historiallisena etappina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 painterly concept image for Matkakirja game lens D5, Birth of Nation States in Europe 1830–1918. Wide antique Europe map, warm cream parchment on explorer desk. Six luminous historical milestones in Belgium, Italy, Germany, Bulgaria, Norway, and Finland, connected in a subtle chronological arc; use gentle localized watercolor washes and fine map-boundary lines that suggest changing sovereignties without modern borders or big flags. A delicate brass clock timeline along bottom edge with six empty tick positions. Elegant historical ink cartography, subtle vignette, restrained gold light, readable peninsula and northern geography. No text, letters, numbers, labels, logos, buttons, UI, people or modern buildings. Unique composition. High-resolution PNG.",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245812,
+            "sha256": "0301e36918093e2d4da4832f3351f332b804b3eb4d5e21c813cefbcf8623e083",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:29.942Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 56758,
+            "sha256": "88ecc0ef53e97801e11293e487fd25e49c117a74eefce98ee856a7577eaabf7c",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:31.478Z"
+            }
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Anton von Wernerin vuonna 1885 maalaama tulkinta esittää Saksan keisarikunnan julistusta Versaillesissa 1871.",
+        "creator": "Anton von Werner",
+        "title": "Kaiserproklamation im Spiegelsaal von Versailles am 18. Januar 1871",
+        "year": "1885",
+        "collection": "Bismarck-Museum Friedrichsruh",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Anton_von_Werner_-_Kaiserproklamation_am_18._Januar_1871_%283._Fassung_1885%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Anton_von_Werner_-_Kaiserproklamation_am_18._Januar_1871_%283._Fassung_1885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled",
+        "transform_note": "native-size center mount, no upscaling",
+        "files": [
+          {
+            "objectKey": "linssikatalogi/D5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291170,
+            "sha256": "a60347cad4474670a0ffcf1e5d6c44df3c292b228363b8a5d32ee0bcc1bc942e",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:33.805Z"
+            }
+          },
+          {
+            "objectKey": "linssikatalogi/D5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 55955,
+            "sha256": "a64674ae964eb982843571a7b392133f997f532b916327c0df885c7a6427c5bc",
+            "delivery": {
+              "state": "R2 readback verified; game/catalog integration pending",
+              "http_status": 200,
+              "mime": "image/jpeg",
+              "cors": "https://matkakirja.app",
+              "checked_at": "2026-09-25T00:55:35.392Z"
+            }
+          }
+        ],
+        "attribution": "Anton von Werner, Kaiserproklamation im Spiegelsaal von Versailles am 18. Januar 1871 (1885), Bismarck-Museum Friedrichsruh. Public domain. https://commons.wikimedia.org/wiki/File:Anton_von_Werner_-_Kaiserproklamation_am_18._Januar_1871_%283._Fassung_1885%29.jpg"
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 72,
+    "all_http_200": true,
+    "all_mime_jpeg": true,
+    "all_srgb": true,
+    "all_dimensions_size_sha256_cors_checked": true
+  }
+}
