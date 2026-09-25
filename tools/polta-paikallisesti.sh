@@ -547,6 +547,7 @@ if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
   YHTEISLIPUT="$R_YHTEISLIPUT${YHTEISLIPUT:+ $YHTEISLIPUT}"
   POHJALIPUT="$R_POHJALIPUT --dem $DEM --dem90 $DEM90${POHJALIPUT:+ $POHJALIPUT}"
   PALLOLIPUT="$R_PALLOLIPUT"
+  NOSTOLIPUT="$R_NOSTOLIPUT${NOSTOLIPUT:+ $NOSTOLIPUT}"
   [ "$PALLO_TASOT_ANNETTU" -eq 1 ] || PALLO_TASOT="$R_PALLO_TASOT"
   LAATU="${LAATU:-$R_LAATU}"
   PATINA="${PATINA:-$R_PATINA}"
@@ -827,6 +828,8 @@ lue_ampari () {
       ["A_TASOT", (j.tasot ?? []).map((t) => t.z).join(" ")],
       // Pohjan rantaviiva (syvä sarja jatkaa samaa pohjaa, ks. SYVÄT TASOT).
       ["A_POHJA_RANTA", j.pohja?.rantaviiva === false ? "ei" : "kylla"],
+      // Kohdemaan nostotaso ilman nimiöitä (nimiot: false, ks. NOSTOT ILMAN NIMIÖITÄ).
+      ["A_NOSTOT_ILMAN_NIMIOITA", Object.values(j.nostotasot ?? {}).some((k) => k?.nimiot === false) ? 1 : 0],
     ];
     for (const [k, v] of rivit) console.log(`${k}=${JSON.stringify(String(v))}`);
   ' "$t"
@@ -2134,6 +2137,27 @@ RANTAVERSIO="${RANTAVERSIO:-$A_RANTAVERSIO}"
 LAATU="${LAATU:-$A_LAATU}"
 PATINA="${PATINA:-$A_PATINA}"
 PIIRIT="${PIIRIT:-$A_PIIRIT}"
+
+# NOSTOT ILMAN NIMIÖITÄ (25.9.2026, omistajan löydös koepyramidista: nostoja
+# ei voinut klikata). Tuotannon nostotaso on poltettu lipulla
+# --nostot-ilman-nimioita: laattaan tulee vain merkki, luettelon maakirjaus
+# saa `nimiot: false`, ja peli piirtää noston nimen elävänä ja
+# napautettavana (js/laattapyramidi.js nostotasonNimetElavina). Ilman lippua
+# poltettu nostotaso kantaa nimet, eikä kirjauksessa ole kenttää — peli
+# vaientaa silloin elävät nostot EIKÄ latoa kohdemaan nostolaatastoa
+# (KOHDEMAAN_NIMIOT_ELAVINA), joten nostot katoavat kartalta ja niitä ei voi
+# napauttaa. Uusi nostoversio polttaa siksi samalla tavalla kuin ämpärin.
+case " $NOSTOLIPUT " in
+  *" --nostot-ilman-nimioita "*) ;;
+  *)
+    if [ "${A_NOSTOT_ILMAN_NIMIOITA:-0}" = "1" ] && [ "$NOSTOVERSIO" != "${A_NOSTOVERSIO:-}" ] && [ "$ILMAN_NOSTOJA" -eq 0 ] \
+      && { [ "$SARJAT" = "nostot" ] || [ "$SARJAT" = "kaikki" ] || [ "$SARJAT" = "z0-z7" ] || [ "$SARJAT" = "z8" ]; }; then
+      echo "VIRHE: ämpärin nostotaso on poltettu ilman nimiöitä (nimiot: false), mutta" >&2
+      echo "uusi nostoversio $NOSTOVERSIO poltettaisiin nimien kanssa. Anna" >&2
+      echo "--nostoliput \"--nostot-ilman-nimioita\" (resepti 2026-09-25 antaa sen itse)." >&2
+      exit 2
+    fi ;;
+esac
 
 # SYVÄ SARJA JATKAA ÄMPÄRIN POHJAA, joten sen on piirryttävä samoilla
 # pohjalipuilla kuin versio poltettiin (aja-*.sh: --data, --yhteisliput,

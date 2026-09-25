@@ -6,7 +6,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { koepyramidinPallokansio, pyramidiKoe, pyramidinLuettelonPolku } from '../js/media.js';
-import { PALLO_LAATTAKANSIO } from '../js/pallo.js';
+import { PALLO_LAATTAKANSIO, TUOTANNON_PALLO_LAATTAKANSIO } from '../js/pallo.js';
 
 test('pyramidiKoe hyväksyy vain sarjan päivämäärämuodossa', () => {
   assert.equal(pyramidiKoe('?pyramidi=2026-09-25'), '2026-09-25');
@@ -27,5 +27,5 @@ test('luettelon polku: koesarjan kopio tai tuotannon osoitin', () => {
 test('koesarjan pallokansio on polton nimeämä kansio', () => {
   assert.equal(koepyramidinPallokansio('2026-09-25'), '2026-09-25-pohja-20260925');
   // Ilman lippua pallo pysyy tuotannon kansiossa.
-  assert.ok(!PALLO_LAATTAKANSIO.startsWith('2026-09-25-'), PALLO_LAATTAKANSIO);
+  assert.equal(PALLO_LAATTAKANSIO, TUOTANNON_PALLO_LAATTAKANSIO);
 });
