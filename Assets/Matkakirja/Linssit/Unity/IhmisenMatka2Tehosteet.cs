@@ -20,7 +20,18 @@
 //   jaksoissa sininen päivänvalo, merellä kuunvalo, muuten lyhty (3200 K). Kuvan aikana hämärä syvenee (kuva nousee
 //   valosta), aikahypyssä valo sammuu hetkeksi, lopussa keilat sammuvat ja koko pallo syttyy.
 //
-// ERÄT 3–5 (sumu, äänimaisemat, vapaat kädet) rakentuvat samoihin koukkuihin.
+// ERÄ 4 (AIDOT ÄÄNIMAISEMAT): IhmisenMatka2Maisema soittaa jakson `maisema`-tyypin ämpäristä (aanihaku, Freesound
+//   CC0/CC BY) ristihäivytyksellä; kertojan puheen alla väistö. Loppu häivyttää.
+//
+// ERÄ 5 (VAPAAT KÄDET, omistaja: "saat lisätä niin paljon visuaalisia tehosteita kuin vain keksit"):
+//   AAMUNKOITTO: valot syttyvät ensin pienenä kirkkaana pisteenä (tarina alkaa yhdestä paikasta) ja avautuvat mantereen
+//   yli. RINTAMAN HEHKU: vanojen etenevä kärki loistaa ja sykkii (VanaKerros.hehku, Vana.shader _Hehku).
+//   LÄHIKUVAN LASKEUTUMINEN (Fable 25.9.: kallistettu lento maaston yllä): Kuva(kohde) antaa kohteen paikan kameran
+//   kääreelle (IhmisenMatka2Ymparisto), joka laskeutuu jakson ajon jälkeen kohteen ylle kallistettuna.
+//   LOPPUKUVA: loppujaksossa keilat sammuvat, koko pallo syttyy ja kaikki vanat hehkuvat omalla värillään
+//   (VanaKerros.loppuhehku, _Hehku.w); tutkimusvaiheeseen siirryttäessä hehku laskee.
+//
+// ERÄ 3 (sumu) rakentuu samoihin koukkuihin, kun Natiivisepän Sumu-rajapinta on valmis.
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -54,6 +65,9 @@ namespace Matkakirja.Natiivi
         public const float ToisenVoima = 0.45f, ToisenMinKm = 600f;
         /// <summary>Lopun sammutus (s): keilat pois, koko pallo syttyy.</summary>
         public const float LopunSammutusS = 3.2f;
+        /// <summary>Loppukuvan vanahehkun nousu ja lasku (s): loppujaksossa koko vana hehkuu, tutkimusvaiheessa ei.</summary>
+        public const float LoppuhehkuS = 2.5f;
+        float loppuhehku, loppuTavoite;
 
         /// <summary>Seudun valo jakson tunnuksesta (Raamattu IHMISEN MATKA II, vapaat kädet): luolat, kylmä, meri.</summary>
         static readonly HashSet<string> Luolat = new HashSet<string> { "denisova", "chauvet" };
@@ -67,6 +81,7 @@ namespace Matkakirja.Natiivi
         KarttaKerrokset.Keila nykyinen;
         KarttaKerrokset.Keila? toinen;
         (double Lat, double Lon)? edellinenKohde;
+        IhmisenMatka2Maisema maisema;
         string kuvaKohde;
         float kuvanPeitto;
         bool siirtoPaalla;
@@ -79,6 +94,8 @@ namespace Matkakirja.Natiivi
         {
             kerros = k;
             paikat = paikkaIndeksi;
+            maisema = IhmisenMatka2Maisema.Luo(transform);
+            maisema.KertojaSoi = () => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Aani?.KohtaMs != null;
             LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet kytketty");
         }
 
@@ -93,16 +110,31 @@ namespace Matkakirja.Natiivi
 
         public void Valot(double feidiMs)
         {
-            // Valot syttyvät Afrikan ylle: lyhty avautuu mantereen kokoiseksi, muu maailma jää hämärään.
+            // AAMUNKOITTO: ensin pieni kuuma piste (2600 K), sitten lyhty avautuu mantereen kokoiseksi ja muu maailma jää
+            // hämärään. Vähennetyllä liikkeellä suoraan loppukuvaan.
+            float kesto = Kesto((float)(feidiMs / 1000.0));
             nykyinen = new KarttaKerrokset.Keila(2, 20, AfrikanSadeKm, 0.6f, null, 0.1f);
             toinen = null;
-            Nayta(Kesto((float)(feidiMs / 1000.0)));
+            if (kesto <= 0f) { Nayta(0f); return; }
+            StopCoroutine(nameof(Aamunkoitto));
+            StartCoroutine(nameof(Aamunkoitto), kesto);
+        }
+
+        System.Collections.IEnumerator Aamunkoitto(float kesto)
+        {
+            var piste = new KarttaKerrokset.Keila(2, 20, 420f, 0.85f, KarttaKerrokset.KelvinVari(2600f, 0.9f), 0.3f);
+            KarttaKerrokset.Valokeila(piste, null, 0.82f, kesto * 0.25f);
+            keilaPaalla = true;
+            yield return new WaitForSecondsRealtime(kesto * 0.3f);
+            if (!keilaOdottaa) Nayta(kesto * 0.9f);
         }
 
         public void Jakso(int i, KertomusJakso j)
         {
             jakso = j;
             if (j == null) return;
+            maisema?.Aseta(j.Maisema);
+            loppuTavoite = j.Vaihe == "loppu" ? 1f : 0f;
             if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
             if (j.Vaihe == "pimea") return;
             if (j.Vaihe == "hyppy")
@@ -189,6 +221,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Esitys näyttää löytöpaikan kuvan (tai null = kuva pois): kuvan alue ja kartan väistö.</summary>
         public void Kuva(string kohde)
         {
+            // Lähikuvan laskeutuminen: Esitys ajaa kohteen jaksoon heti tämän jälkeen, kääre laskeutuu ajon päätyttyä.
+            (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Kaare?.Lahikuva(
+                kohde != null && paikat != null && paikat.TryGetValue(kohde, out var kp) ? kp : ((double Lat, double Lon)?)null);
             kuvaKohde = kohde;
             bool oli = kuvaPaalla;
             kuvaPaalla = kohde != null;
@@ -206,6 +241,8 @@ namespace Matkakirja.Natiivi
 
         public void Loppu()
         {
+            maisema?.Lopeta();
+            loppuTavoite = 0f;   // tutkimusvaihe: vanat takaisin tavallisiksi
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;
             if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
@@ -268,11 +305,15 @@ namespace Matkakirja.Natiivi
             float tavoite = KuvanAlue.HasValue ? 1f : 0f;
             float kesto = Kesto(KuvanHaivytysS);
             kuvanPeitto = kesto <= 0f ? tavoite : Mathf.MoveTowards(kuvanPeitto, tavoite, Time.unscaledDeltaTime / kesto);
+            float hehkuS = Kesto(LoppuhehkuS);
+            loppuhehku = hehkuS <= 0f ? loppuTavoite : Mathf.MoveTowards(loppuhehku, loppuTavoite, Time.unscaledDeltaTime / hehkuS);
             var v = kerros != null ? kerros.Vanat : null;
             if (v != null)
             {
                 if (KuvanAlue.HasValue) v.kuvanAlue = KuvanAlue.Value;
                 v.kuvanPeitto = kuvanPeitto;
+                v.hehku = 1f;
+                v.loppuhehku = loppuhehku;
             }
         }
 

@@ -80,6 +80,7 @@ Shader "Matkakirja/Vana"
             float4 _Syvyys;           // veto kameraa kohti (yksikköä), vahvuuden lisäveto täydellä peitolla, peiton porras
             float4 _KuvanAlue;        // ruudun uv (origo vasen ala): x0, y0, x1, y1
             float4 _KuvanHaivytys;    // peitto 0–1, reunan pehmeys (uv)
+            float4 _Hehku;            // Ihmisen matka II: rintaman hehku (voima 0–1, hehkun leveys × kaista, sykkeen nopeus)
             float _Kuljettu[VANOJA];
             float _VanaPeitto[VANOJA];
             float4 _Vanha[VIRTOJA];
@@ -233,6 +234,23 @@ Shader "Matkakirja/Vana"
                     float3 vanhaVari = lerp(_Vanha[v0].rgb, _Vanha[v1].rgb, t2);
                     float3 kirkasVari = lerp(_Kirkas[v0].rgb, _Kirkas[v1].rgb, t2);
                     vari = lerp(vanhaVari, kirkasVari, paino);
+                    // RINTAMAN HEHKU (Ihmisen matka II, vapaat kädet): etenevä kärki loistaa kirkkaana ja sen ympärille
+                    // leviää pehmeä halo, joka sykkii hitaasti — kaista maalautuu rannikolle valona. I:ssä _Hehku.x = 0.
+                    // Simulaattori 25.9. (kuutio, 0,55 / 0,4): kärki ei erottunut pergamentilta, joten paino toiseen,
+                    // kärki kohti lämmintä valkoista ja halo vahvemmaksi (leveys ennallaan, mahtuu nelikulmioon).
+                    // LOPPUKUVA (_Hehku.w): koko vana hehkuu omalla kirkkaalla värillään, kun koko pallo syttyy.
+                    if (_Hehku.x > 0.0 || _Hehku.w > 0.0)
+                    {
+                        float syke = 0.8 + 0.2 * sin(_Time.y * _Hehku.z);
+                        float kiilto = paino * paino * _Hehku.x * syke;
+                        float loppu = _Hehku.w * syke;
+                        float3 valo = lerp(kirkasVari, float3(1.0, 0.95, 0.82), 0.55) * 1.2;
+                        vari = lerp(vari, kirkasVari * 1.25, loppu * 0.6);
+                        vari = lerp(vari, valo, kiilto * 0.7);
+                        float hehkuu = max(kiilto * 0.55, loppu * 0.45);
+                        float halo = (1.0 - smoothstep(puoliMaa, puoliMaa * _Hehku.y, d2)) * hehkuu;
+                        alfa = max(saturate(alfa * (1.0 + max(kiilto, loppu) * 0.7)), halo * _VanaPeitto[vana]);
+                    }
                 }
                 // Havainnekuvan alue (II): kaista häipyy kuvan alta pehmeästi.
                 if (_KuvanHaivytys.x > 0.0)
