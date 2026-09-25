@@ -206,7 +206,18 @@ namespace Matkakirja.Natiivi
             float nakyva = virta.contentViewport.layout.height;
             tila.style.height = float.IsNaN(nakyva) ? 240f : nakyva;
             virta.Add(tila);
-            virta.schedule.Execute(() => { if (kupla.parent != null) virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)); });
+            Kelaa(kupla);
+        }
+
+        /// <summary>
+        /// Kupla virran ylimmäksi vasta asettelun jälkeen: ScrollView rajaa scrollOffsetin sen hetkiseen sisällön
+        /// korkeuteen, joten heti seuraavassa tikissä tyhjä tila ei ollut vielä mitoitettu ja kupla jäi pillerien alle.
+        /// </summary>
+        void Kelaa(Label kupla)
+        {
+            void Aja() { if (kupla.parent != null) virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)); }
+            virta.schedule.Execute(Aja).StartingIn(60);
+            virta.schedule.Execute(Aja).StartingIn(250);
         }
 
         /// <summary>Web vapautaTila: tila kutistuu pienimpään, jolla kuplan alku pysyy ylimpänä.</summary>
@@ -219,8 +230,8 @@ namespace Matkakirja.Natiivi
                 float tarve = Mathf.Ceil(virta.contentViewport.layout.height - kupla.layout.height);
                 if (tarve > 0f) tila.style.height = tarve;
                 else tila.RemoveFromHierarchy();
-                virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4));
-            });
+                Kelaa(kupla);
+            }).StartingIn(60);
         }
 
         void Valmis(Label kupla, string vastaus)
