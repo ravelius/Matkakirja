@@ -68,6 +68,8 @@ namespace Matkakirja.Natiivi
         public float kuvanPeitto;
         /// <summary>Rintaman hehku 0–1 (Ihmisen matka II; I:ssä 0 = webin kaista sellaisenaan).</summary>
         public float hehku;
+        /// <summary>Loppukuvan hehku 0–1: koko vana hehkuu omalla kirkkaalla värillään (Ihmisen matka II, loppujakso).</summary>
+        public float loppuhehku;
         /// <summary>Hehkun halon leveys kaistan leveyksinä ja sykkeen nopeus (rad/s).</summary>
         public const float HehkunLeveys = 2.4f, HehkunSyke = 2.2f;
 
@@ -304,7 +306,8 @@ namespace Matkakirja.Natiivi
             // Kuvan alue varjostimen uv:ksi (origo vasen ALAkulma).
             materiaali.SetVector(IdKuvanAlue, new Vector4(kuvanAlue.xMin, 1f - kuvanAlue.yMax, kuvanAlue.xMax, 1f - kuvanAlue.yMin));
             materiaali.SetVector(IdKuvanHaivytys, new Vector4(Mathf.Clamp01(kuvanPeitto), KuvanReunaUv, 0f, 0f));
-            materiaali.SetVector(IdHehku, new Vector4(Mathf.Clamp01(hehku), HehkunLeveys, vahennettyLiike ? 0f : HehkunSyke, 0f));
+            materiaali.SetVector(IdHehku, new Vector4(Mathf.Clamp01(hehku), HehkunLeveys, vahennettyLiike ? 0f : HehkunSyke,
+                Mathf.Clamp01(loppuhehku)));
             materiaali.SetVector(IdKamera, new Vector4((float)kameraU.x, (float)kameraU.y, (float)kameraU.z, 0f));
 
             // Mittakaava ruudun keskellä: km pistettä kohti korkeudella pinnasta

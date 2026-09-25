@@ -28,6 +28,8 @@
 //   yli. RINTAMAN HEHKU: vanojen etenevä kärki loistaa ja sykkii (VanaKerros.hehku, Vana.shader _Hehku).
 //   LÄHIKUVAN LASKEUTUMINEN (Fable 25.9.: kallistettu lento maaston yllä): Kuva(kohde) antaa kohteen paikan kameran
 //   kääreelle (IhmisenMatka2Ymparisto), joka laskeutuu jakson ajon jälkeen kohteen ylle kallistettuna.
+//   LOPPUKUVA: loppujaksossa keilat sammuvat, koko pallo syttyy ja kaikki vanat hehkuvat omalla värillään
+//   (VanaKerros.loppuhehku, _Hehku.w); tutkimusvaiheeseen siirryttäessä hehku laskee.
 //
 // ERÄ 3 (sumu) rakentuu samoihin koukkuihin, kun Natiivisepän Sumu-rajapinta on valmis.
 using System.Collections.Generic;
@@ -63,6 +65,9 @@ namespace Matkakirja.Natiivi
         public const float ToisenVoima = 0.45f, ToisenMinKm = 600f;
         /// <summary>Lopun sammutus (s): keilat pois, koko pallo syttyy.</summary>
         public const float LopunSammutusS = 3.2f;
+        /// <summary>Loppukuvan vanahehkun nousu ja lasku (s): loppujaksossa koko vana hehkuu, tutkimusvaiheessa ei.</summary>
+        public const float LoppuhehkuS = 2.5f;
+        float loppuhehku, loppuTavoite;
 
         /// <summary>Seudun valo jakson tunnuksesta (Raamattu IHMISEN MATKA II, vapaat kädet): luolat, kylmä, meri.</summary>
         static readonly HashSet<string> Luolat = new HashSet<string> { "denisova", "chauvet" };
@@ -129,6 +134,7 @@ namespace Matkakirja.Natiivi
             jakso = j;
             if (j == null) return;
             maisema?.Aseta(j.Maisema);
+            loppuTavoite = j.Vaihe == "loppu" ? 1f : 0f;
             if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
             if (j.Vaihe == "pimea") return;
             if (j.Vaihe == "hyppy")
@@ -236,6 +242,7 @@ namespace Matkakirja.Natiivi
         public void Loppu()
         {
             maisema?.Lopeta();
+            loppuTavoite = 0f;   // tutkimusvaihe: vanat takaisin tavallisiksi
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;
             if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
@@ -298,12 +305,15 @@ namespace Matkakirja.Natiivi
             float tavoite = KuvanAlue.HasValue ? 1f : 0f;
             float kesto = Kesto(KuvanHaivytysS);
             kuvanPeitto = kesto <= 0f ? tavoite : Mathf.MoveTowards(kuvanPeitto, tavoite, Time.unscaledDeltaTime / kesto);
+            float hehkuS = Kesto(LoppuhehkuS);
+            loppuhehku = hehkuS <= 0f ? loppuTavoite : Mathf.MoveTowards(loppuhehku, loppuTavoite, Time.unscaledDeltaTime / hehkuS);
             var v = kerros != null ? kerros.Vanat : null;
             if (v != null)
             {
                 if (KuvanAlue.HasValue) v.kuvanAlue = KuvanAlue.Value;
                 v.kuvanPeitto = kuvanPeitto;
                 v.hehku = 1f;
+                v.loppuhehku = loppuhehku;
             }
         }
 
