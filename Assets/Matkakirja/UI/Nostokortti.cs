@@ -485,6 +485,25 @@ namespace Matkakirja.Natiivi
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
             raahaa = false;
+            eleKahvasta = OnKahva(e.target as VisualElement);
+        }
+
+        /// <summary>Ele alkoi raahauskahvasta (ylärivi tai otsikko).</summary>
+        bool eleKahvasta;
+
+        /// <summary>
+        /// Löydös 79 (omistaja 25.9.2026, sitova): korttia liikutetaan vain yläreunasta eli webin raahauskahvasta
+        /// (css/fokuskohteet.css: .fokuskohde-ylarivi ja .fokuskohde-otsikko, touch-action none). Muu kortti jää
+        /// vieritykselle ja napautuksille.
+        /// </summary>
+        static bool OnKahva(VisualElement v)
+        {
+            for (; v != null; v = v.parent)
+            {
+                if (v.ClassListContains("mk-nosto__ylarivi") || v.ClassListContains("mk-nosto__otsikko")) return true;
+                if (v.ClassListContains("mk-nosto")) return false;
+            }
+            return false;
         }
 
         /// <summary>Web raahausTaiSulku: kynnyksen ylittävä liike siirtää korttia; tekstin päällä pystyveto vierittää.</summary>
@@ -495,9 +514,8 @@ namespace Matkakirja.Natiivi
             if (!raahaa)
             {
                 if (d.magnitude < Raahauskynnys) return;
-                bool vieritettava = sisus.contentContainer.layout.height > sisus.contentViewport.layout.height + 1f;
-                bool tekstinPaalla = e.target is VisualElement v && (v == sisus || sisus.Contains(v));
-                if (vieritettava && tekstinPaalla && Mathf.Abs(d.y) >= Mathf.Abs(d.x)) { eleId = -1; return; }
+                // Löydös 79: vain kahvasta alkanut ele raahaa; muualla ele jää vieritykselle (ei napautus).
+                if (!eleKahvasta) { eleId = -1; return; }
                 raahaa = true;
                 Irrota();
                 lahto = new Vector2(kortti.resolvedStyle.left, kortti.resolvedStyle.top);
