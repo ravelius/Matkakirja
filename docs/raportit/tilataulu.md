@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 10:13 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 10:15 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
@@ -25,6 +25,10 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 Ei avoimia kortteja tiedossa juuri nyt.
 
 **Tuntiraportti sivutuksesta (10:13, ilmoitettu Fablelle):** tilanne EI parantunut — vm.swapusage 22,3→20,2→**22,8 Gt** (nousi takaisin). Simulaattorit 6→3→**8** boottina (uutta testiaktiviteettia käynnistynyt, sammutuspyynnöt purivat vain väliaikaisesti). Ei omaa lisätoimenpidettä, Fablen päätettävissä jatko.
+
+**UUSI SÄÄNTÖ (Fable 10:1x): simulaattorien sammutusvaltuus + tuntiraportointi.** Postivahti saa itse sammuttaa (xcrun simctl shutdown) simulaattorit joissa peli ei ole pyörinyt 20 min tai joiden rooli juuri nollattu; max 4 boottina päivällä, 5. käynnistyessä ilmoita Fablelle kuka. Raportoi vapaan muistin % ja sivutus tunnin välein.
+
+**ESTETTY (10:15):** yritin sammuttaa 5 idle-simulaattoria (1572C658, 993F8873, D0D2CD1E, 3B4CDACB, C1D5E34C — vain FBBD41D7 ja FB234D08 joissa peli aktiivisesti pyörii jätettiin) — oman session luokitin esti komennon ("Interfere With Workloads"). Ei yritetty kiertää, ilmoitettu Fablelle, odotetaan sallintaa tai omistajaroolien omaa toimintaa. Vapaa muisti n. 36 %, sivutus 22,8 Gt.
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
