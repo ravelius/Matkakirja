@@ -4999,3 +4999,7 @@ Löydökset 53–60 ovat saman ketjun oireita; korjataan kerralla tarkistuslista
 ## OMISTAJAN LOYDOKSET 61–64 BUILD 12:STA (klo 05.0x, iPAD, KUVAT docs/raportit/kaappaukset/omistaja-20260925/loydos61-*.png, loydos62-*.png): 61 KAUPUNGIN NAPAUTUS AVAA OIKEAN KORTIN MUTTA KAMERA ZOOMAA YHA ULOS (LOYDOS 48:N KAMERAKYTKENTA PUUTTUU) → PELIKOODARI + NATIIVISEPPA; 62 TURISTIOPPAASSA 'MILLOIN MATKAAN?' JA 'KUUSI SEKTORIA' -KAPPALEET PIIRTYVAT PAALLEKKAIN → NATIIVI-UI; 63 NAHTAVYYDET EI TOIMI → NATIIVI-UI + PELIKOODARI; 64 KAUPUNKILEHTI TOKKII (VIERITYS, VRT. LOYDOS 51 MAALEHDESSA) → NATIIVI-UI; KAIKKI BUILD 13 (25.9.2026 klo 04.59)
 
 Kuvassa 61 kortti Bukarest (Nähtävyydet, Turistiopas, Kadonneet ihmeet 1, Skandaalit 2) näkyy oikein, kamera Z4-tasolla koko Balkan; kuvassa 62 Turistioppaan Milloin matkaan -laatikko ja Kuusi sektoria -otsikko ovat samassa kohdassa.
+
+## OMISTAJA klo 05.0x (SITOVA, LOYDOS 65, iPAD-KUVA loydos65-ipad-valikko-ei-yhdistetty.png): ☰-VALIKKO JA LINSSIT YHDISTETAAN KAIKILLA LAITTEILLA (iPADILLA YHA ERILLINEN LINSSIPANEELI + ASETUSVALIKKO); RETKIKUNTA YHDEN NAPIN TAAKSE; KOKEET-RYHMA POIS PELAAJALTA — VAIN MAAILMA-KYTKIN TARKEA (KARTTA-RYHMAAN), MUUT KEHITTAJA-RIVILLE TAI POIS → NATIIVI-UI, BUILD 13; RAAMATTU PAIVITETTY (KORVAA 'iPAD KATSOTAAN ERIKSEEN') (25.9.2026 klo 05.02)
+
+Omistajan sanoin: 'Eikö tämä hampurilainen ja linssit valikko pitänyt jo yhdistyä? … Saisi olla kaikilla.' Kokeet-ryhmän sisältö b12:ssa: Astronautin reliefi, Maailma, Linssien kynnykset, Raamattu, Kehittäjälehti.
