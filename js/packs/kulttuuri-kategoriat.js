@@ -112957,6 +112957,197 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cayenne',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026, Lontoon mallista). Nykypäivän
+       * matkailija: saapuminen, tori ja keittiö, karnevaali, rannat ja
+       * sademetsäpolku sekä Kouroun päiväretki. Linnake, katedraali,
+       * palmuaukio, mausteen nimi ja Bagnen historia ovat nostoissa, joten
+       * niitä ei toisteta. Taustatiedot Wikipediasta (en/fr), Wikivoyagesta
+       * ja Kwata-yhdistyksen tiedoista — teksti omaa. Kuvien lisenssit
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin
+       * 25.9.2026; yksikään tiedosto ei ole käytössä muissa paketeissa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Touloulou devant son université.jpg',
+          lyhyt: 'Karnevaalin touloulou peittää itsensä päästä varpaisiin, jottei kukaan tunnistaisi häntä.',
+          selite: 'Touloulou seisoo lauantai-iltana Cayennen vanhan tanssisalin '
+            + 'edessä vuoden 2017 karnevaalissa kultainen naamio ja '
+            + 'paljettihuntu kasvoillaan, sillä naamiaistanssien ydin on se, '
+            + 'ettei naista tunnisteta.',
+          lahde: 'AmazoneAourou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Cayenne on Ranskaa päiväntasaajan tuntumassa: kaupoissa '
+          + 'maksetaan euroilla ja aamun patonki haetaan leipomosta, mutta '
+          + 'ilma on kuin kasvihuoneessa ja sademetsä alkaa kaupungin '
+          + 'rajalta. Keskusta on pieni ja kierrettävissä jalan, ja kolmena '
+          + 'aamuna viikossa sen sydän on tori, jossa kreolikeittiön chilit ja '
+          + 'hmong-viljelijöiden vihannekset myydään vierekkäin. Loppiaisesta '
+          + 'tuhkakeskiviikkoon kaupunki juhlii karnevaalia, jonka naamioidut '
+          + 'touloulout valitsevat itse tanssiparinsa. Päiväretken päässä ovat '
+          + 'Euroopan avaruussatama Kourou ja entiset vankisaaret, joilla '
+          + 'vierailijaa vastassa ovat nyt apinat. Sunnuntaina kannattaa '
+          + 'levätä, sillä silloin lähes kaikki on kiinni.',
+        artikkeli: {
+          nimi: 'Matkailijan Cayenne',
+          teksti: 'Cayenne on Ranskaa euroineen ja patonkeineen, mutta sademetsä '
+            + 'alkaa kaupungin laidalta.',
+          nosto: 'Karnevaalin tanssiaisissa nainen hakee miehen tanssimaan, eikä '
+            + 'mies saa kieltäytyä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Pariisista on Cayenneen 7 100 kilometriä, mutta perillä '
+                + 'ollaan yhä Ranskassa: Ranskan Guayana on merentakainen '
+                + 'departementti, joten rahana on euro. Yksi vaatimus erottaa '
+                + 'matkan silti Euroopasta, sillä maahan tulevalta vaaditaan '
+                + 'todistus keltakuumerokotuksesta. Lentoasema on Matouryssa 13 '
+                + 'kilometrin päässä keskustasta, ja se nimettiin vuonna 2012 '
+                + 'Cayennessa syntyneen Félix Ébouén mukaan — hänet haudattiin '
+                + '1949 Pariisin Panthéoniin ensimmäisenä mustana ranskalaisena. '
+                + 'Keskustaan pääsee helpoimmin taksilla tai vuokra-autolla. '
+                + 'Kaupungissa on vain noin 63 000 asukasta, ja vanhan keskustan '
+                + 'kiertää jalan: puisten kreolitalojen parvekkeet ja säleluukut '
+                + 'antavat kävelijälle varjoa. Kaupunkibussit liikennöivät '
+                + 'keskustasta naapurikuntiin. Sunnuntaina kannattaa varautua '
+                + 'hiljaisuuteen, sillä silloin lähes kaikki on kiinni.',
+              kuva: [
+                {
+                  tiedosto: 'Cayenne airport (8332248070).jpg',
+                  lyhyt: 'Lentoaseman hallin banderolli muistuttaa, kenen mukaan kenttä nimettiin 2012.',
+                  selite: 'Cayennen lentoaseman terminaalihallin lasiseinää '
+                    + 'peittää Félix Ébouén muotokuva ja Gaston Monnervillen '
+                    + 'sitaatti, jossa tämä kutsuu Ébouéta valtiomieheksi.',
+                  lahde: 'Spotting973, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Cayenne maison créole 2013.jpg',
+                  lyhyt: 'Kreolitalon säleluukut päästävät tuulen sisään mutta pitävät auringon ulkona.',
+                  selite: 'Kaksikerroksinen puinen kreolitalo Cayennen '
+                    + 'keskustassa: punaiset säleluukut, parveke ja '
+                    + 'ruosteinen peltikatto ovat kaupungin vanhan '
+                    + 'rakennustavan tuntomerkkejä.',
+                  lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Agglo\'bus cayenne n°3 de la RCT.jpg',
+                  lyhyt: 'Agglo\'bus-kaupunkibussi linjalla 3 matkalla Mont Lucasiin Cayennessa.',
+                  selite: 'Cayennen seudun kaupunkibusseja ajaa Centre '
+                    + 'Littoral -kuntayhtymän Agglo\'bus, ja kuvan linjan 3 '
+                    + 'bussi on matkalla Mont Lucasiin toukokuussa 2016.',
+                  lahde: 'Tonnegrande, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tori ja kreolikeittiö',
+              teksti: 'Cayennen tori herää keskiviikkona, perjantaina ja '
+                + 'lauantaina jo neljältä aamulla, ja iltapäivällä se on ohi. '
+                + 'Pöydillä on papaijaa, passionhedelmää, jamssia ja chiliä, ja '
+                + 'moni myyjä on hmong-viljelijä Cacaon seudulta — Laosista '
+                + 'paenneet hmongit asettuivat sinne vuonna 1977. Heidän '
+                + 'ansiostaan torin katetussa osassa syödään aamiaiseksi '
+                + 'höyryävää nuudelikeittoa, ja lauantaina puolenpäivän aikaan '
+                + 'istumapaikasta saa kilpailla. Kreolikeittiön makuja kannattaa '
+                + 'etsiä kojuista: accras ovat suolaturskasta paistettuja '
+                + 'rapeita pyöryköitä, blaff on limetillä ja chilillä '
+                + 'maustettu kalaliemi, ja monen ruoan kanssa tarjotaan '
+                + 'couacia, paahdettua maniokkirouhetta. Pääsiäisenä pöytään '
+                + 'kannetaan bouillon d\'awaraa, palmun hedelmästä keitettyä '
+                + 'pataa. Ranskalaisuus ei silti katoa mihinkään: aamun patonki '
+                + 'ostetaan leipomosta kuten Pariisissa.',
+              kuva: {
+                tiedosto: 'Marchecayenne.JPG',
+                lyhyt: 'Cayennen torilla myydään vihreiden varjojen alla kolmena aamuna viikossa.',
+                selite: 'Torikojujen vihreät aurinkovarjot täyttävät Cayennen '
+                  + 'torikadun, jonka taustalla kohoavat punaiset ja vihreät '
+                  + 'puutalot peltikattoineen.',
+                lahde: 'Didwin973, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Karnevaali, jossa nainen valitsee',
+              teksti: 'Loppiaisesta tuhkakeskiviikkoon Cayenne elää '
+                + 'karnevaalia, joka kestää viikkokausia eikä vain muutamaa '
+                + 'päivää. Sunnuntai-iltapäivisin noin kolmelta ryhmät '
+                + 'kulkevat keskustan kaduilla samoihin asuihin puettuina, '
+                + 'mutta karnevaalin sydän sykkii yöllä. Perjantai- ja '
+                + 'lauantai-iltaisin tanssisaleissa pidetään '
+                + 'naamiaistanssiaiset, joiden kuningatar on touloulou: nainen, '
+                + 'joka on kätkeytynyt päästä varpaisiin naamion, peruukin, '
+                + 'hanskojen ja pitkän hameen alle ja muuttaa äänensäkin, '
+                + 'jottei kukaan tunnistaisi häntä. Touloulou hakee miehen '
+                + 'tanssimaan, eikä mies saa kieltäytyä. Asu jäljittelee '
+                + '1700- ja 1800-lukujen porvarisnaisten juhlavaatteita, ja '
+                + 'alun perin sillä pilkattiin heitä. Laskiaistiistaina kadut '
+                + 'täyttyvät punamustiin pukeutuneista paholaisista, ja '
+                + 'tuhkakeskiviikkona karnevaalin kuningas Vaval poltetaan.',
+              kuva: {
+                tiedosto: 'Carnaval Cayenne 2024 touloulou.jpg',
+                lyhyt: 'Samoin puetut touloulout kulkevat Cayennen karnevaalikulkueessa tammikuussa 2024.',
+                selite: 'Touloulou-ryhmä kulkee Cayennen karnevaalikulkueessa '
+                  + '28. tammikuuta 2024 samanlaisissa vaaleanpunaisissa '
+                  + 'asuissa, kasvoillaan kullatut naamiot ja käsissään '
+                  + 'vihreät hanskat.',
+                lahde: 'G.Mannaerts, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kilpikonnat ja sademetsäpolku',
+              teksti: 'Cayennen rannoilla meri on ruskeaa, koska Amazonin '
+                + 'kuljettama liete värjää rannikon veden, mutta rannoilla käy '
+                + 'harvinainen vieras. Huhtikuusta heinäkuuhun '
+                + 'merinahkakilpikonnat nousevat öisin Cayennen ja naapurikunta '
+                + 'Rémire-Montjolyn hiekkarannoille munimaan. Maailman suurin '
+                + 'kilpikonna voi painaa yli 500 kiloa, ja poikaset kuoriutuvat '
+                + 'noin kahden kuukauden päästä. Kwata-yhdistyksen '
+                + 'vapaaehtoiset partioivat rannoilla ja opastavat katsojia, '
+                + 'ja yllättävin uhka on kotikoira: koirat ovat tappaneet '
+                + 'rannoilla kymmeniä munivia naaraita. Päivällä kannattaa '
+                + 'lähteä Rorotan polulle Mahuryn kukkulalle. Noin kuuden '
+                + 'kilometrin reitti kiertää sademetsässä kolmen tekojärven '
+                + 'ohi, ja rinteiltä näkyy merelle ja Rémiren luodoille. '
+                + 'Sademetsä alkaa siis kirjaimellisesti kaupungin rajalta.',
+              kuva: {
+                tiedosto: 'Ponteluth.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Merinahkakilpikonna munii yöllä Montjolyn rannalla Cayennen kupeessa.',
+                selite: 'Merinahkakilpikonnan takaräpylät kaartuvat '
+                  + 'hiekkakuopan ylle, ja sen pohjalle kasautuu valkoisia '
+                  + 'munia Montjolyn rannalla kesäkuussa 2003.',
+                lahde: 'Raybx973, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki: raketit ja saaret',
+              teksti: 'Kourou on 60 kilometriä Cayennesta luoteeseen, ja siellä '
+                + 'on Euroopan avaruussatama. Guayanan avaruuskeskukseen pääsee '
+                + 'maksuttomalle opastetulle kierrokselle, kun sen varaa '
+                + 'etukäteen ja ottaa henkilöllisyystodistuksen mukaan. '
+                + 'Kierroksella nähdään laukaisualueita, kuten Ariane 6:n '
+                + 'alusta, jolta raketti nousi ensimmäisen kerran 9. heinäkuuta '
+                + '2024. Kouroun satamasta lähtee myös katamaraani noin tunnin '
+                + 'matkalle Pelastuksen saarille 14 kilometrin päähän. Île '
+                + 'Royalella entisessä siirtomaajoukkojen kasarmissa toimii nyt '
+                + 'majatalo ja ravintola, johtajan talossa on museo, ja '
+                + 'polkujen varsilla vierailijoita tarkkailevat '
+                + 'kapusiiniapinat ja agoutit. Paholaissaarelle ei nousta '
+                + 'lainkaan voimakkaiden virtausten takia. Saaret omistaa '
+                + 'Ranskan avaruusjärjestö, koska ne ovat rakettien lentoradan '
+                + 'alla, ja laukaisupäivinä ne tyhjennetään ihmisistä.',
+              kuva: {
+                tiedosto: 'Ile Royale Cebus apella.jpg',
+                lyhyt: 'Île Royalella vierailijaa ovat nykyään vastassa apinat, kuten tämä kapusiiniapina.',
+                selite: 'Ruskea kapusiiniapina (Cebus apella) seisoo Île '
+                  + 'Royalen polun kivireunuksella Pelastuksen saarilla '
+                  + 'huhtikuussa 2013.',
+                lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
       galleria: [
         {
           otsikko: 'Ranskan siirtomaasuunnitelma n. 1760',
@@ -117795,6 +117986,208 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (Turistiopas, 25.9.2026). Nostot kertovat jo
+       * historian, asulejot, bumba-meu-boin ja reggaen synnyn, joten opas
+       * pysyy nykypäivässä: liikkuminen, ruoka, vuorovesi ja Alcântara,
+       * Lençóis Maranhenses sekä reggae-ilta. Taustatiedot en- ja
+       * pt-Wikipediasta (São Luís, Cuxá, Guaraná Jesus, Reggae no Brasil,
+       * Reggae Maranhão Museum, Lençóis Maranhenses) ja Wikivoyagesta;
+       * teksti omaa. Kuvien lisenssit ja kuvaukset tarkistettu Commonsin
+       * tiedostosivuilta 25.9.2026, kaikki kahdeksan katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Beco Catarina Mina São Luís Maranhão 2025-6041.jpg',
+          lyhyt: 'Beco Catarina Minan 35 porrasta tehtiin 1700-luvulla Portugalista tuodusta lioz-kivestä.',
+          selite: 'Värikkäiden paperilippujen alla nouseva Beco Catarina '
+            + 'Minan portaikko on 1700-luvulta, ja kuja on nimetty Catarina '
+            + 'Rosa Ferreira de Jesusin mukaan, joka osti vapautensa '
+            + 'orjuudesta ja asui myöhemmin kujan varrella.',
+          lahde: 'Prburley, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'São Luís on saarikaupunki, jonka vanha keskusta kuljetaan '
+          + 'jalan: jyrkät kivikadut ja portaat laskeutuvat palatseilta '
+          + 'satamaan, ja juuri sinne matkailijan kannattaa majoittua. '
+          + 'Keittiöllä on oma hapan sävynsä — vihreä arroz '
+          + 'de cuxá, katkaravun kanssa syötävä juçara ja vaaleanpunainen '
+          + 'Guaraná Jesus ovat tämän osavaltion omia. Rannoilla vuoroveden '
+          + 'korkeusero voi ylittää seitsemän metriä, ja sama vesi määrää '
+          + 'Alcântaran veneen lähtöajan. Neljän–viiden tunnin bussimatkan päässä '
+          + 'ovat Lençóis Maranhensesin dyynit ja sadevesilammet. Illalla '
+          + 'kuunnellaan reggaeta, jota täällä tanssitaan pareittain.',
+        artikkeli: {
+          nimi: 'Matkailijan São Luís',
+          teksti: 'São Luís kuljetaan jalan, syödään happamana ja tanssitaan '
+            + 'pareittain.',
+          nosto: 'Vuorovesi voi nousta lahdella yli seitsemän metriä, ja se '
+            + 'määrää sekä rannan leveyden että Alcântaran veneen lähtöajan.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Portaita ylös ja alas',
+              teksti: 'São Luís on saari, ja maantie mantereelle kulkee vain '
+                + 'Estreito dos Mosquitosin salmen ylittävää siltaa pitkin. '
+                + 'Lentokenttä on noin viidentoista '
+                + 'kilometrin päässä keskustasta, ja vanhaan kaupunkiin '
+                + 'pääsee taksilla tai kaupunkibussilla. Majoitus kannattaa '
+                + 'hakea historiallisesta keskustasta, sillä sen korttelit '
+                + 'kuljetaan joka tapauksessa jalan. Kaupunki on rakennettu '
+                + 'rinteeseen: ylhäällä ovat palatsit ja Pedro II:n aukio, '
+                + 'alhaalla sataman puoleinen Praia Grande, ja niiden välillä '
+                + 'kulkevat jyrkät kivikadut ja portaikot. Rua do Gizin '
+                + 'virallinen nimi on ollut 28 de Julho vuodesta 1865, mutta '
+                + 'uusi nimi ei koskaan tarttunut kansan suuhun. Beco Catarina Minan 35 '
+                + 'porrasta on tehty Portugalista tuodusta lioz-kivestä, ja '
+                + 'kuja on nimetty vapautensa ostaneen orjan mukaan, josta '
+                + 'tuli talonomistaja. Mukulakivi on sateella liukas, ja '
+                + 'sadekausi kestää tammikuusta kesäkuuhun. Iltaisin tyhjille '
+                + 'sivukaduille ei kannata eksyä: kun puotien ovet '
+                + 'sulkeutuvat, taksi on turvallisin kyyti takaisin.',
+              kuva: [
+                {
+                  tiedosto: 'Escadaria da Rua 28 de Julho.jpg',
+                  lyhyt: 'Rua do Giz nimettiin virallisesti 28 de Julhoksi 1865, mutta kansa käyttää vanhaa nimeä.',
+                  selite: 'Rua do Giz laskeutuu portaina sobrado-talojen '
+                    + 'välistä, ja sen virallinen nimi 28 de Julho muistuttaa '
+                    + 'päivästä vuonna 1823, jolloin portugalilaiset joukot '
+                    + 'antautuivat ja Maranhão liittyi itsenäiseen Brasiliaan.',
+                  lahde: 'Mariza Bezerra, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Rua Portugal iluminada.jpg',
+                  lyhyt: 'Rua Portugal kulkee alhaalla Praia Grandessa, sataman puoleisessa kaupunginosassa.',
+                  selite: 'Ilta-aurinko valaisee Rua Portugalin mukulakivet '
+                    + 'ja laatoitetut julkisivut alhaalla sataman puoleisessa '
+                    + 'Praia Granden kaupunginosassa.',
+                  lahde: 'Mariza Bezerra, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Centro histórico, rain.jpg',
+                  lyhyt: 'Sadekauden kuuro vanhassa kaupungissa tekee mukulakivestä liukkaan hetkessä.',
+                  selite: 'Helmikuun iltakuuro kastelee vanhan kaupungin '
+                    + 'aukion, sillä São Luísin sadekausi kestää tammikuusta '
+                    + 'kesäkuuhun ja sateisin kuukausi on huhtikuu.',
+                  lahde: 'Alan Rodrigues, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Hapan ja vihreä keittiö',
+              teksti: 'Maranhãon keittiö maistuu happamalta. Arroz de cuxán '
+                + 'vihreä väri tulee vinagreirasta, hapokkaasta '
+                + 'hibiskuslajista, jonka lehdet haudutetaan kuivatun '
+                + 'katkaravun, paahdetun seesamin ja maniokkijauhon kanssa; '
+                + 'nimen arvellaan tulevan tupin sanoista, jotka tarkoittavat '
+                + 'suunnilleen "se mikä säilyy happamana". Riisi syödään '
+                + 'usein paistetun kalan kanssa. Juçaraksi kutsutaan täällä '
+                + 'samaa palmunmarjasosetta, jota muualla Brasiliassa myydään '
+                + 'makeana açaína, mutta maranhãolainen voi syödä sen myös '
+                + 'kuivatun katkaravun ja maniokkijauhon kanssa. Marjaa '
+                + 'juhlitaan joka lokakuu Maracanãn kaupunginosassa '
+                + 'festivaalilla, jota on vietetty yli viisikymmentä vuotta. '
+                + 'Janoon tilataan Guaraná Jesusta: vaaleanpunaista, kanelille '
+                + 'tuoksuvaa limonadia, jonka apteekkari Jesus Norberto Gomes '
+                + 'toi myyntiin vuonna 1920. Merkin omistaa nykyään Coca-Cola, '
+                + 'ja kun juomaa tarjotaan, kysytään leikillään: otetaanko '
+                + 'Jesus vastaan?',
+              kuva: {
+                tiedosto: 'Arroz de cuxá.jpg',
+                lyhyt: 'Arroz de cuxán vihreä väri tulee happamista vinagreiran lehdistä.',
+                selite: 'Arroz de cuxá on Maranhãon tunnusruoka, jossa riisin '
+                  + 'sekaan haudutetaan vinagreiran lehtiä, kuivattua '
+                  + 'katkarapua, paahdettua seesamia ja maniokkijauhoa, ja '
+                  + 'tämä kattila kuvattiin lahden toisella puolella '
+                  + 'Alcântarassa.',
+                lahde: 'Ciriice, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vuoroveden tahdissa',
+              teksti: 'Rannalle lähtiessä kannattaa katsoa vuorovesitaulukkoa. '
+                + 'São Marcosin lahdella nousu- ja laskuveden ero voi ylittää '
+                + 'seitsemän metriä: laskuveden aikaan meri vetäytyy paikoin '
+                + 'lähes kilometrin päähän, ja nousuveden aikaan kuivaa '
+                + 'hiekkaa ei jää lainkaan. Suosituin ranta on Ponta '
+                + 'd\'Areia, lähimpänä vanhaa kaupunkia; siitä rannat '
+                + 'jatkuvat Avenida Litorânean varrella itään, ja Calhaun '
+                + 'rantaa pidetään kaupungin parhaana. Kaikki rannat eivät '
+                + 'ole aina uimakelpoisia, joten osavaltion '
+                + 'ympäristöviraston uimavesikartta tarkistetaan samana '
+                + 'päivänä. Vuorovesi määrää myös päiväretken: Alcântaraan '
+                + 'lähtevät veneet ylittävät lahden Praia Granden '
+                + 'vesiliikenneterminaalista runsaassa tunnissa, ja koska '
+                + 'lähtöajat seuraavat vettä, ne kysytään edellisenä päivänä. '
+                + 'Perillä odottaa hiljainen siirtomaakaupunki, jonka '
+                + 'päätorilla São Matiasin kirkosta on jäljellä pelkkä '
+                + 'julkisivu.',
+              kuva: {
+                tiedosto: 'Ponta D\'areia-4 (53225927252).jpg',
+                lyhyt: 'Ponta d\'Areian ranta on São Luísin suosituin, ja vuorovesi muuttaa sen leveyttä.',
+                selite: 'Ponta d\'Areian leveä hiekkaranta ja kerrostalorivi '
+                  + 'São Marcosin lahden rannalla, jossa nousu- ja '
+                  + 'laskuveden ero voi ylittää seitsemän metriä.',
+                lahde: 'Otávio Nogueira, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Dyynit ja sadevesilammet',
+              teksti: 'Maranhãon suurin nähtävyys on neljän–viiden tunnin '
+                + 'bussimatkan päässä. Lençóis Maranhensesin kansallispuiston '
+                + 'portti on Barreirinhasin pikkukaupunki noin 260 kilometriä '
+                + 'São Luísista itään; linja-autot lähtevät kaupungin '
+                + 'bussiasemalta päivittäin, ja tilauslento vie perille '
+                + 'viidessäkymmenessä minuutissa. Barreirinhasista dyyneille '
+                + 'ajetaan nelivetoautoilla, ja viimeinen matka Lagoa Azulin '
+                + 'tai Lagoa Bonitan rantaan kiivetään hiekkaa pitkin jalan. '
+                + 'Toinen reitti kulkee jokea: Preguiças-joen reittivene '
+                + 'suistoon kestää noin neljä tuntia, pikavene puolitoista. '
+                + 'Ajoitus ratkaisee kaiken. Sadekausi täyttää dyynien '
+                + 'väliset painanteet, ja lammet ovat täysimmillään '
+                + 'toukokuusta syyskuuhun; vuodenvaihteessa ne voivat kuivua '
+                + 'lähes kokonaan. Suosio on kasvanut nopeasti: vuonna 2023 '
+                + 'puistossa kävi luonnonsuojeluviraston mukaan noin 408 000 '
+                + 'vierailijaa.',
+              kuva: {
+                tiedosto: 'Lençóis Maranhenses 2018.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Lençóis Maranhensesin lammet ovat täysimmillään toukokuusta syyskuuhun.',
+                selite: 'Ilmakuva Lençóis Maranhensesin kansallispuistosta '
+                  + 'kesäkuussa 2018, kun sadekauden vesi on täyttänyt '
+                  + 'dyynien väliset painanteet makean veden lammiksi.',
+                lahde: 'Julius Dadalti, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Reggae kahdestaan',
+              teksti: 'Reggaeta São Luísissa ei kuunnella istuen. Maranhão on '
+                + 'ensimmäinen paikka maailmassa, jossa reggaeta alettiin '
+                + 'tanssia pareittain, tiukasti toisissa kiinni — tyyliä '
+                + 'kutsutaan nimellä agarradinho. Helpoin tapa päästä mukaan '
+                + 'on torstai-ilta: osavaltion kulttuurisihteeristö järjestää '
+                + 'Praça do Reggaella maksuttoman Quinta do Reggae -illan '
+                + 'kello kuudesta puoli yhteentoista, ja vuorollaan soittavat '
+                + 'bändit ja radiolat. Aukion laidalla Rua da Estrelalla on '
+                + 'Museu do Reggae, joka avattiin tammikuussa 2018 '
+                + 'ensimmäisenä reggaemuseona Jamaikan ulkopuolella; '
+                + 'kokoelmissa on harvinaisia vinyylejä, vanhojen '
+                + 'reggaeklubien muistoja ja pioneeri-DJ Serralheiron radiola. '
+                + 'Sanastoa kannattaa opetella: kappale, josta tulee yleisön '
+                + 'suosikki, on pedra eli kivi. Syyskuussa 2023 voimaan '
+                + 'tullut liittovaltion laki antoi São Luísille virallisen '
+                + 'nimen Brasilian reggaepääkaupunki.',
+              kuva: {
+                tiedosto: 'Museu do Reggae do Maranhão - 10.jpg',
+                lyhyt: 'Serralheiron radiola Voz de Ouro Canarinho kuuluu Maranhãon reggaen pioneereihin.',
+                selite: 'Museu do Reggaessa esillä oleva Voz de Ouro '
+                  + 'Canarinho on DJ Serralheiron eli Edmilson Tomé da Costan '
+                  + 'radiola, jonka vahvistinpinon päällä seisoo pokaaleja.',
+                lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kuvataide',
@@ -120581,6 +120974,238 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (Turistiopas 25.9.2026, Lontoon mallin mukaan).
+       * Taustatiedot: Wikipedia (pt/en: Ouro Preto, Mariana, Topázio
+       * imperial / Imperial topaz, Pão de queijo, Feijão-tropeiro, Tutu de
+       * feijão, Culinária de Minas Gerais, Cachaça, Pedra-sabão, Mina da
+       * Passagem, Repúblicas de Ouro Preto e Mariana, João Capistrano
+       * Bandeira de Melo), Wikivoyage (Ouro Preto, Mariana), Ouro Preton
+       * kaupungin tiedote Semana Santan matoista, Metrópoles (15 tonnia
+       * sahanpurua 2026), Agência Brasil (Unesco ja Minas-juusto 4.12.2024),
+       * Revista Ferroviária (juna seis elokuusta 2020) ja arpschnitger.nl
+       * (Marianan urut) — teksti omaa. Nostojen kultaryntäys-, Aleijadinho-,
+       * rakennuskielto- ja salaliittohistoriaa ei toisteta. Kuvien
+       * lisenssit ja kuvaukset tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin (katukuvan kyltit suurennettuina).
+       */
+      matkailijalle: {
+        /*
+         * Pystykuva ja yksi aihe: Commonsin Quality image jyrkästä kujasta,
+         * jonka seinässä kulkee kävelijän kaide — Ouro Preton arki
+         * yhdessä kuvassa.
+         */
+        kuva: {
+          tiedosto: 'Ouro Preto November 2009-11.jpg',
+          lyhyt: 'Jyrkän kujan seinässä kulkee kaide kävelijän tueksi, ja mäen päällä odottaa Carmon kirkko.',
+          selite: 'Travessa Cônego Camilo Veloso laskee jyrkästi Ouro Preton '
+            + 'keskustassa: talojen seinissä kulkee kaiteita kävelijöiden '
+            + 'tueksi, ja kujan yläpäässä kohoaa Nossa Senhora do Carmon '
+            + 'kirkon kellotorni.',
+          lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Ouro Preto kuljetaan jalan ja hitaasti. Vanha keskusta on '
+          + 'rakennettu yli tuhannen metrin korkeuteen niin jyrkille '
+          + 'rinteille, että jokainen kortteli on joko ylä- tai alamäkeä, '
+          + 'eikä kapeille mukulakivikujille juuri mahdu autoja. Palkkioksi '
+          + 'mäen päältä aukeaa näkymä punaisille katoille ja vuorille. '
+          + 'Nälkä hoidetaan Minas Geraisin maalaiskeittiöllä, jossa pavut, '
+          + 'sianliha, kaali ja juustosämpylät kohtaavat. Koruliikkeiden '
+          + 'ikkunoissa hehkuvat keisaritopaasit, joiden valtaosa louhitaan '
+          + 'kaupungin ympäriltä, ja pääsiäisyönä kadut peitetään värjätyllä '
+          + 'sahanpurulla. Kaupunki on myös opiskelijoiden: kymmenet '
+          + 'opiskelijatalot kantavat julkisivuissaan omia nimikylttejään. '
+          + 'Mukaan kannattaa pakata pitävät kengät ja lämmin pusero, sillä '
+          + 'vuoristoillat ovat viileitä.',
+        artikkeli: {
+          nimi: 'Matkailijan Ouro Preto',
+          teksti: 'Mukulakivet, papupata ja pääsiäisyön sahanpurumatot — '
+            + 'kaupunki, joka kuljetaan jalan.',
+          nosto: 'Pääsiäisaamuna kulkue astelee kahden kilometrin mittaisen '
+            + 'taideteoksen yli — koko yön työ tehdään tallattavaksi.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja jalan',
+              teksti: 'Lähin suuri lentokenttä on Belo Horizonten Confins, ja '
+                + 'osavaltion pääkaupungista Ouro Pretoon on noin sata '
+                + 'kilometriä. Bussi ajaa matkan pariin tuntiin ja jättää '
+                + 'matkustajat kaupungin luoteislaidan linja-autoasemalle, '
+                + 'josta keskustaan kävellään alamäkeä. Sen jälkeen jalat ovat '
+                + 'pääasiallinen kulkuneuvo: kadut ovat kapeita, jyrkkiä ja '
+                + 'kivettyjä, ja vanhassa keskustassa autot mahtuvat niille '
+                + 'juuri ja juuri. Monen kadun keskellä kulkee sileämmistä '
+                + 'laatoista ladottu kaista, capistrana. Se tehtiin 1870-luvun '
+                + 'lopulla jalankulkijoiden avuksi, kun provinssia johti '
+                + 'presidentti João Capistrano Bandeira de Melo, ja kansa '
+                + 'nimesi kaistan hänen mukaansa. Sadekaudella lokakuusta '
+                + 'huhtikuuhun kivet ovat liukkaita, joten pohjallisten '
+                + 'kannattaa pitää. Kirkoissa ja museoissa valokuvaaminen on '
+                + 'yleensä kielletty. Majoitusta tarjoavat myös repúblicat, '
+                + 'yliopiston opiskelijatalot: pelkästään liittovaltion '
+                + 'omistamia taloja on Ouro Pretossa 58, ja monet '
+                + 'opiskelijatalot vuokraavat huoneita edullisesti myös '
+                + 'matkailijoille.',
+              kuva: [
+                {
+                  tiedosto: 'Ângulo da ladeira.jpg',
+                  lyhyt: 'Rua Cláudio Manoelin rinteessä vuolukivikauppa ja opiskelijatalo ovat naapureita.',
+                  selite: 'Rua Cláudio Manoel nousee mukulakivisenä rinnettä '
+                    + 'ylös: vasemmalla kyltti mainostaa vuolukivestä '
+                    + 'veistettyjä kattiloita, oikealla riippuu República '
+                    + 'Maracangalhan, yhden kaupungin opiskelijatalon, '
+                    + 'nimikyltti.',
+                  lahde: 'Ana Luiza Vargas Fotos, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'PedroVilela Rua Direita OuroPreto MG (39056215280).jpg',
+                  lyhyt: 'Vanhalla Rua Direitalla pysäköidyt autot vievät puolet kadun leveydestä.',
+                  selite: 'Rua Direita, virallisesti Rua Conde de Bobadela, '
+                    + 'ylhäältä kuvattuna: parvekkeelliset kaupunkitalot '
+                    + 'reunustavat kivettyä katua, jonka molemmin puolin on '
+                    + 'pysäköity autoja, ja taustalla näkyvät vihreät vuoret.',
+                  lahde: 'Pedro Vilela/MTur, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Ouro Preto - Casario e ladeiras.jpg',
+                  lyhyt: 'Illan ensimmäiset lyhdyt palavat, ja kujan päästä näkyy vastarinteen kattojen meri.',
+                  selite: 'Iltahämärässä katulyhdyt syttyvät kapealla kujalla, '
+                    + 'jonka päästä avautuu näkymä laakson yli vastarinteelle '
+                    + 'täynnä punakattoisia taloja.',
+                  lahde: 'Fbrandao.1963, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Pavut, juusto ja puuhella',
+              teksti: 'Minas Geraisissa syödään runsaasti ja tuhdisti. '
+                + 'Maakunnan keittiö syntyi 1700-luvulla kaivosleireissä, '
+                + 'joihin tarvikkeet tuotiin muulien selässä, ja sen pohjana '
+                + 'ovat yhä maissi, maniokki, pavut, sianliha ja lehtikaali. '
+                + 'Feijão tropeiro on muulikaravaanien ajajien, tropeirojen, '
+                + 'matkaeväs: papuja maniokkijauhon, makkaran, pekonin ja '
+                + 'kananmunan kanssa. Tutu à mineira taas on papumuhennosta, '
+                + 'joka on sakeutettu jauhoilla paksuksi soseeksi, ja sen '
+                + 'rinnalla tarjotaan usein frango com quiabo eli kanaa okran '
+                + 'kanssa. Pão de queijo, pieni ja sitkeä juustosämpylä, '
+                + 'arvellaan syntyneen täällä 1700-luvun puolivälissä, ja sen '
+                + 'taikina tehdään vehnäjauhon sijaan maniokkitärkkelyksestä. '
+                + 'Juusto on seudun ylpeys: raakamaidosta tehdyn Minas-juuston '
+                + 'valmistustavat merkittiin Unescon aineettoman '
+                + 'kulttuuriperinnön luetteloon 4. joulukuuta 2024, '
+                + 'ensimmäisenä brasilialaisena ruokaperinteenä. Monessa '
+                + 'ravintolassa padat lämpiävät puuhellan päällä. Aterian '
+                + 'jälkeen maistetaan cachaçaa, sokeriruo\'on mehusta '
+                + 'tislattua viinaa, jonka hienoimpia pannutislattuja laatuja '
+                + 'tehdään muun muassa Minas Geraisin Salinasissa.',
+              kuva: {
+                tiedosto: 'Comida Mineira in Minas Gerais (20240098865).jpg',
+                lyhyt: 'Parikymmentä pataa lämpiää puuhellan päällä, ja halot palavat hellan alla.',
+                selite: 'Minasilaisen ravintolan noutopöytä on rakennettu '
+                  + 'puuhellan päälle: parikymmentä pataa muhennoksineen pysyy '
+                  + 'lämpimänä, kun hellan alla palavat halot.',
+                lahde: 'Under the same moon..., Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Keisaritopaasi ja vuolukivi',
+              teksti: 'Ouro Preton koruliikkeiden ikkunoissa hehkuu kivi, jota '
+                + 'on vaikea löytää muualta. Keisaritopaasi on topaasin '
+                + 'kullankeltainen, oranssi tai punertava muunnos, ja valtaosa '
+                + 'jalokivilaatuisesta aineksesta tulee yhdeltä kaivosalueelta '
+                + 'kaupungin ympäriltä. Suurin kaivos, Capão do Lana, on noin '
+                + '15 kilometriä länteen Rodrigo Silvan kylän luona: siellä '
+                + 'savea huuhdotaan vesitykeillä, ja vuodessa talteen saadaan '
+                + 'noin 12 kiloa hiottavaa raakakiveä. Nimen alkuperästä '
+                + 'kiistellään yhä — yksi perimätieto liittää sen Venäjän '
+                + 'tsaarin hoviin, toinen Brasilian keisari Pedro II:een. '
+                + 'Aidon keisaritopaasin väri on luonnon oma, kun taas '
+                + 'matkamuistokauppojen halvat siniset topaasit ovat yleensä '
+                + 'värittömiä kiviä, jotka on säteilytetty ja kuumennettu. '
+                + 'Ennen ostoksia kiviä voi vertailla Praça Tiradentesin '
+                + 'laidalla, kaivosopisto Escola de Minasin mineraalimuseossa. '
+                + 'Kukkaroystävällisempi muisto löytyy Largo de Coimbran '
+                + 'torilta, jossa myydään vuolukivestä veistettyjä kattiloita, '
+                + 'mukeja, rasioita ja pikkupatsaita. Pehmeä kivi johtaa lämpöä '
+                + 'tasaisesti, ja siksi minasilainen keittiö on käyttänyt '
+                + 'vuolukivipatoja vuosisatoja.',
+              kuva: {
+                tiedosto: 'Topaze Brésil.jpg',
+                lyhyt: 'Kaksi hiomatonta keisaritopaasia Ouro Preton laidalla olevasta Vermelhãon kaivoksesta.',
+                selite: 'Kaksi hiomatonta keisaritopaasikidettä Vermelhãon '
+                  + 'kaivoksesta Ouro Preton Saramenhasta: suurempi on 30 ja '
+                  + 'pienempi 21 millimetriä pitkä, ja sävy vaihtelee '
+                  + 'persikasta kullankeltaiseen.',
+                lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Pääsiäisyön sahanpurumatot',
+              teksti: 'Ouro Preton suurin vuotuinen näytös on pääsiäinen. '
+                + 'Pääsiäislauantain iltana asukkaat ja matkailijat '
+                + 'polvistuvat kaduille ja alkavat koota mattoja värjätystä '
+                + 'sahanpurusta, kalkista, vehnäjauhosta, jauhetusta kahvista '
+                + 'ja kukista. Työ jatkuu läpi yön, ja aamuun mennessä noin '
+                + 'kahden kilometrin reitti Pilarin ja Conceiçãon kirkkojen '
+                + 'välillä on peitetty maljoilla, karitsoilla, '
+                + 'rauhankyyhkyillä ja geometrisilla kuvioilla. Pääsiäisaamuna '
+                + 'ylösnousemuskulkue kantaa sakramentin mattojen yli kaikkien '
+                + 'kirkonkellojen soidessa, eikä yön työstä jää jäljelle muuta '
+                + 'kuin sekoittunutta purua. Perinne juontuu noin vuoteen 1733, '
+                + 'jolloin Pilarin pääkirkon avaamista juhlittiin kulkueella '
+                + 'kukka- ja lehtimattojen yli. Vuonna 2026 sahanpurua kului yli '
+                + '15 tonnia, ja tekemään saa tulla kuka tahansa — majoitus '
+                + 'kannattaa silti varata hyvissä ajoin. Toinen ruuhkahuippu '
+                + 'on karnevaali, jota opiskelijat juhlivat kaduilla. Jyrkät '
+                + 'rinteet pitävät suuret äänentoistorekat poissa, joten '
+                + 'meno on pienimuotoisempaa kuin Salvadorissa.',
+              kuva: {
+                tiedosto: 'Tapetes Devocionais da Semana Santa Ouro Preto--.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Sahanpurumatto Rua Getúlio Vargasilla pääsiäislauantaina 2017, taustalla Rosárion kirkko.',
+                selite: 'Värjätystä sahanpurusta koottu matto peittää Rua '
+                  + 'Getúlio Vargasin mukulakivet pääsiäislauantaina 2017: '
+                  + 'talojen ikkunoista riippuu valkoisia liinoja, ja kadun '
+                  + 'päässä kohoaa Nossa Senhora do Rosárion kirkko.',
+                lahde: 'Byfreddygutierrez, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki Marianaan',
+              teksti: 'Naapurikaupunki Mariana on reilun kymmenen kilometrin '
+                + 'päässä, ja paikallisbussit kulkevat väliä tiheään. Mariana '
+                + 'oli Minas Geraisin ensimmäinen kauppala, kaupunki, '
+                + 'piispanistuin ja pääkaupunki: kauppala perustettiin '
+                + '1711, ja vuonna 1745 se sai kaupunkioikeudet, piispan ja '
+                + 'Portugalin kuningattaren Maria Anan mukaan nimen. Toisin '
+                + 'kuin Ouro Preton mutkaiset rinnekujat, Marianan keskusta '
+                + 'piirrettiin viivoittimella — sotilasinsinööri José '
+                + 'Fernandes Pinto Alpoim suunnitteli sille suorat kadut ja '
+                + 'suorakulmaiset aukiot. Praça Minas Geraisilla seisovat '
+                + 'vierekkäin São Franciscon ja Carmon kirkot, vanha raastupa '
+                + 'ja kivinen häpeäpaalu. Katedraalin urut valmistuivat '
+                + 'luultavasti Hampurissa vuonna 1701 Arp Schnitgerin '
+                + 'verstaalla, ja Portugalin kruunu lähetti ne Marianaan '
+                + '1753; niillä soitetaan yhä konsertteja. Matkan varrella '
+                + 'Passagemin kylässä kiskovaunu laskee vierailijat 315 metriä '
+                + 'pitkää tunnelia Mina da Passagemin kultakaivokseen, jonka '
+                + 'syvyys on 120 metriä ja jonka pohjalla on maanalainen '
+                + 'järvi. Kaupunkien välillä kulki vuodesta 2006 '
+                + 'höyryveturin vetämä matkailujuna, mutta se on seissyt '
+                + 'elokuusta 2020 lähtien.',
+              kuva: {
+                tiedosto: 'Mariana Praça Minas Gerais.jpg',
+                lyhyt: 'Marianan Praça Minas Gerais: São Francisco vasemmalla, Carmo oikealla, välissä häpeäpaalu.',
+                selite: 'Marianan Praça Minas Geraisilla seisovat vierekkäin '
+                  + 'São Francisco de Assisin (vasemmalla) ja Nossa Senhora do '
+                  + 'Carmon kirkot, ja niiden välissä kohoaa pelourinho, '
+                  + 'siirtomaa-ajan häpeäpaalu.',
+                lahde: 'Halley Pacheco de Oliveira, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
