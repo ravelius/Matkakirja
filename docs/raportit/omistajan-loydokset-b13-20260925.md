@@ -91,3 +91,23 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 127 | Maanraja vain kahden maan välillä, ei niiltä osin, joissa maa loppuu mereen; raja joka tapauksessa kevyempi. Rajadata: maa–maa-segmentit erilleen rannikosta. | Karttaseppä (rajadata) + Natiiviseppä (piirto, paino) |
 | 128 | Kermahuntu peittää nyt liikaa muita maita → peittoa alas (kuvapari, omistaja valitsee). | Natiiviseppä (Karttaseppä: sarjan peitto) |
 | 129 | Meressä syvyyserot näkyvät liian vähän → pohjan meren sävyliuku voimakkaammaksi (poltto, kuvapari). | Karttaseppä |
+
+## Build 16 (1.0.16) — omistajan löydökset klo 22.5x (nostot, matkakirja, kartussi)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 130 | Nostot iPadilla ja iPhonella: kuva aukeaa isompana, ja nostokortti saa olla leveämpi. | Natiivi-UI |
+| 131 | Kuvaa napautettaessa kuva pysyy täysin paikallaan; otsikko ja muut tekstit tulevat sen ympärille (webin työpöydällä kuva pienenee, kun toinen palsta tulee — natiivissa ei). | Natiivi-UI |
+| 132 | Kuva kokoruudulle: tausta pehmennetään (sumennus) sen lisäksi, että se tummenee. | Natiivi-UI (Natiiviseppä: sumennusmekanismi) |
+| 133 | (x) pois noston oikeasta yläkulmasta. | Natiivi-UI |
+| 134 | Nosto aukeaa edelleen liian hitaasti kartalta napautettaessa; pitää aueta välittömästi (mitattu viive ennen/jälkeen). | Pelikoodari (data, esilataus, viive) + Natiivi-UI (avaus) |
+| 135 | Jotkut karttanostot aukeavat paljon pienempinä (esim. Lyon). Kaikki aukeavat samaan kokoon ja tyyliin; vain skandaaleissa tyyli muuttuu, koko pysyy. | Natiivi-UI (Pelikoodari: nostotyypit) |
+| 136 | Pulun valmis kysymys tai chatin avaus: nosto pysyy taustalla auki, chat-ikkuna aukeaa sen päälle. | Natiivi-UI |
+| 137 | Nostojen sivun vieritys tökkii edelleen. Nostojen sijaintia ei tarvitse voida siirtää itse (raahaus pois). | Natiivi-UI + Pelikoodari (piirto) |
+| 138 | Isoisän ja pulun kuvista lisäkehys ja kuvateksti pois kokonaan. | Natiivi-UI |
+| 139 | Matkakirja aukeaa edelleen tummana versiona; pohjan pitää olla sama vaalea kuin pienennettynä. | Natiivi-UI |
+| 140 | Linssit pois matkalaukusta (vain ☰-valikosta, kaikki laitteet). | Natiivi-UI |
+| 141 | Pienennetty kartussi hieman liian iso iPadilla (iPhonella koko hyvä). | Natiivi-UI |
+| 142 | Suurennettu kartussi animoidaan: vertailutiedot piirtyvät animoidusti lukujen perään, kun kartussi aukeaa. Visuaalisesti yksinkertaista, mutta liike ja sisääntulo ensiluokkaista animaatiota (KAMERA-AJOT-henki: ease in/out). | Natiivi-UI |
+| 143 | Pitkät maannimet (Bosnia ja Hertsegovina ym.) jaetaan kahdelle riville; radionappi tasaa korkeutensa ylimmän rivin mukaan. | Natiivi-UI |
+| 144 | Maiden liput animoidaan liikkumaan arvokkaasti kuin tuulessa (omistajan kysymys → toteutetaan: lippu verkkona vertex-aallolla RenderTextureen tai vastaava, hidas ja arvokas, ei lepatus). | Natiiviseppä (tekniikka) + Natiivi-UI (kartussi) |
