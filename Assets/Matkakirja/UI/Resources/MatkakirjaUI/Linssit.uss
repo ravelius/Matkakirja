@@ -1358,30 +1358,22 @@
 }
 
 /* Web .aikajana-lyhty: lämmin keila kummassakin yläkulmassa (keskus 17 % / 7 % laatikosta, joka on 98 % × 118 %). */
-/* Lyhtyjen valo rajataan paperiin (reunan roso jää leikkauksen sisään: sivuilla 3 %). */
+/* Lyhtyjen valo on paperin kokoinen ja jo rajattu repaleiseen reunaan (RepaleinenPergamentti); sijainti C#:ssa. */
 .mk-aikajana-avaus__valo {
     position: absolute;
-    left: 3%;
-    right: 3%;
-    top: 2%;
-    bottom: 2%;
-    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .mk-aikajana-avaus__lyhty {
     position: absolute;
-    width: 110%;
-    height: 72%;
-    top: -30%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     -unity-background-scale-mode: stretch-to-fill;
-}
-
-.mk-aikajana-avaus__lyhty--vasen {
-    left: -50%;
-}
-
-.mk-aikajana-avaus__lyhty--oikea {
-    right: -50%;
 }
 
 /* Web .aikajana-avaus-nappi: 44 px, padding 0,62rem 2,1rem, pilleri, reuna 1,5 px kulta, liukuväri (C#). */

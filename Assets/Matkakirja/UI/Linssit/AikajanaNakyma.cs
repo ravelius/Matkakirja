@@ -61,10 +61,10 @@ namespace Matkakirja.Natiivi
         readonly Label hVuosi, hNimi, hKuvateksti;
         readonly SvgIkoni hErotin;
         readonly Label eOtsikko;
-        readonly VisualElement eTeksti, ePaperi, eKehys;
-        /// <summary>Paperin tekstuuri tälle koolle (RepaleinenPergamentti); uusi vasta koon muuttuessa.</summary>
+        readonly VisualElement eTeksti, ePaperi, eKehys, eValo, eLyhtyV, eLyhtyO;
+        /// <summary>Paperin ja lyhtyjen tekstuurit tälle koolle (RepaleinenPergamentti); uudet vasta koon muuttuessa.</summary>
         Vector2Int paperinKoko;
-        Texture2D paperi;
+        Texture2D paperi, lyhtyV, lyhtyO;
         readonly Button tauko, kaynnista, kahva, lueJuttu;
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
@@ -263,7 +263,7 @@ namespace Matkakirja.Natiivi
                 float w = esittely.layout.width;
                 if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
             });
-            Lyhdyt(eKehys);
+            eValo = Lyhdyt(eKehys, out eLyhtyV, out eLyhtyO);
             kaynnista = Rakenne.Nappi(Kapiteelit("Käynnistä"), "mk-aikajana-avausnappi", Kaynnista, eNapit);
             Kirjasimet.Aseta(kaynnista, Kirjasin.LukuLihava);
             foreach (var l in kaynnista.Query<Label>().ToList()) l.enableRichText = true;
@@ -377,14 +377,21 @@ namespace Matkakirja.Natiivi
             var koko = new Vector2Int(w, h);
             if (koko == paperinKoko) return;
             paperinKoko = koko;
-            RepaleinenPergamentti.Luo(w, h, 1765, (t, m) =>
+            RepaleinenPergamentti.Luo(w, h, 1765, (t, v, o, m) =>
             {
-                if (t == null || paperinKoko != koko) { if (t != null) UnityEngine.Object.Destroy(t); return; }
-                if (paperi != null) UnityEngine.Object.Destroy(paperi);
-                paperi = t;
+                if (t == null || paperinKoko != koko)
+                {
+                    if (t != null) { UnityEngine.Object.Destroy(t); UnityEngine.Object.Destroy(v); UnityEngine.Object.Destroy(o); }
+                    return;
+                }
+                if (paperi != null) { UnityEngine.Object.Destroy(paperi); UnityEngine.Object.Destroy(lyhtyV); UnityEngine.Object.Destroy(lyhtyO); }
+                paperi = t; lyhtyV = v; lyhtyO = o;
                 float reuna = r.width * m / w;
                 ePaperi.style.left = ePaperi.style.right = ePaperi.style.top = ePaperi.style.bottom = -reuna;
                 ePaperi.style.backgroundImage = new StyleBackground(t);
+                eValo.style.left = eValo.style.right = eValo.style.top = eValo.style.bottom = -reuna;
+                eLyhtyV.style.backgroundImage = new StyleBackground(v);
+                eLyhtyO.style.backgroundImage = new StyleBackground(o);
             });
         }
 
@@ -392,16 +399,15 @@ namespace Matkakirja.Natiivi
         /// Web .aikajana-lyhty.vasen/.oikea: kaksi lämmintä valokeilaa paperin yläkulmissa, jotka lepattavat rauhallisesti
         /// (js/lyhty.js; kajo 0,85 ja ydin 0,9 vaihtelevat). UITK:ssa ei ole screen-sekoitusta: läpikuultava lämmin soikio.
         /// </summary>
-        static void Lyhdyt(VisualElement kehys)
+        static VisualElement Lyhdyt(VisualElement kehys, out VisualElement vasen, out VisualElement oikea)
         {
-            var keila = RepaleinenPergamentti.Keila;
-            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi), ja rajattuna paperiin:
-            // webissä valo ei näy paperin ulkopuolella (b13k:ssa keila valui ruudun yläreunaan asti).
+            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi). Webissä valo ei näy paperin
+            // ulkopuolella: keilat ovat paperin kokoisia tekstuureja, jotka on jo rajattu repaleiseen reunaan
+            // (PaivitaPaperi asettaa ne ja valoalueen paperin kohdalle).
             var valo = Rakenne.El("mk-aikajana-avaus__valo", null, PickingMode.Ignore);
             kehys.Insert(1, valo);
-            var vasen = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--vasen", valo, PickingMode.Ignore);
-            var oikea = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--oikea", valo, PickingMode.Ignore);
-            vasen.style.backgroundImage = oikea.style.backgroundImage = new StyleBackground(keila);
+            var v = vasen = Rakenne.El("mk-aikajana-avaus__lyhty", valo, PickingMode.Ignore);
+            var o = oikea = Rakenne.El("mk-aikajana-avaus__lyhty", valo, PickingMode.Ignore);
             var arpa = new System.Random(7);
             float va = 0.85f, oa = 0.85f;
             kehys.schedule.Execute(() =>
@@ -409,9 +415,10 @@ namespace Matkakirja.Natiivi
                 if (kehys.resolvedStyle.display == DisplayStyle.None || kehys.panel == null) return;
                 va = Mathf.Clamp(va + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
                 oa = Mathf.Clamp(oa + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
-                vasen.style.opacity = va;
-                oikea.style.opacity = oa;
+                v.style.opacity = va;
+                o.style.opacity = oa;
             }).Every(140);
+            return valo;
         }
 
         void Asettele()

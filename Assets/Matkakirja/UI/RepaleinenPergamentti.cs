@@ -17,43 +17,28 @@ namespace Matkakirja.Natiivi
         /// <summary>Kajon reunus kuvan pikseleinä laatikon leveydestä (web HEHKU_KASVU 0,15 → sumean osan ulottuma).</summary>
         public const float KajoOsuus = 0.05f;
 
-        static Texture2D keila;
-
         /// <summary>
-        /// Lyhdyn valokeila (web .aikajana-lyhty .kajo/.ydin): lämmin säteittäinen liuku, joka häipyy täysin jo
-        /// elementin reunan keskikohdissa (Kuviot.Soikio häipyy vasta kulmissa, jolloin reunat näkyivät suorakaiteena).
+        /// Lyhdyn valokeila (web .aikajana-lyhty .kajo/.ydin): lämmin säteittäinen liuku, joka häipyy täysin jo soikion
+        /// reunalla. r = etäisyys keskuksesta säteen osina.
         /// </summary>
-        public static Texture2D Keila
+        static Color Keila(float r)
         {
-            get
-            {
-                if (keila != null) return keila;
-                const int N = 128;
-                keila = new Texture2D(N, N, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "avauslyhty" };
-                var px = new Color32[N * N];
-                for (int y = 0; y < N; y++)
-                for (int x = 0; x < N; x++)
-                {
-                    float dx = (x + 0.5f) / N * 2f - 1f, dy = (y + 0.5f) / N * 2f - 1f;
-                    float r = Mathf.Clamp01(Mathf.Sqrt(dx * dx + dy * dy));
-                    float ydin = Mathf.Pow(1f - r, 2.2f), kajo = Mathf.Pow(1f - r, 1.2f);
-                    var c = Color.Lerp(new Color(1f, 0.67f, 0.29f), new Color(1f, 0.94f, 0.77f), ydin);
-                    c.a = 0.55f * kajo * 0.6f + 0.4f * ydin;
-                    px[y * N + x] = c;
-                }
-                keila.SetPixels32(px);
-                keila.Apply(false, true);
-                return keila;
-            }
+            r = Mathf.Clamp01(r);
+            float ydin = Mathf.Pow(1f - r, 2.2f), kajo = Mathf.Pow(1f - r, 1.2f);
+            var c = Color.Lerp(new Color(1f, 0.67f, 0.29f), new Color(1f, 0.94f, 0.77f), ydin);
+            c.a = 0.55f * kajo * 0.6f + 0.4f * ydin;
+            return c;
         }
 
         /// <summary>
-        /// Luo paperin w × h pikseliä (laatikon koko) + kajoreunus joka sivulla. valmis(tekstuuri, reunus) kutsutaan
-        /// pääsäikeessä. siemen muuttaa reunan muotoa (web siemenNimesta).
+        /// Luo paperin w × h pikseliä (laatikon koko) + kajoreunus joka sivulla, sekä vasemman ja oikean lyhdyn valon
+        /// samankokoisina tekstuureina paperin muotoon rajattuina (UITK:ssa ei ole maskeja; suorakaiteeseen rajattu valo
+        /// näkyi repaleisen reunan ulkopuolella). valmis(paperi, vasen lyhty, oikea lyhty, reunus) kutsutaan pääsäikeessä.
+        /// siemen muuttaa reunan muotoa (web siemenNimesta).
         /// </summary>
-        public static void Luo(int w, int h, int siemen, Action<Texture2D, int> valmis)
+        public static void Luo(int w, int h, int siemen, Action<Texture2D, Texture2D, Texture2D, int> valmis)
         {
-            if (w < 8 || h < 8) { valmis(null, 0); return; }
+            if (w < 8 || h < 8) { valmis(null, null, null, 0); return; }
             int m = Mathf.RoundToInt(w * KajoOsuus);
             int W = w + 2 * m, H = h + 2 * m;
             Task.Run(() => Laske(w, h, m, siemen)).ContinueWith(t =>
@@ -61,21 +46,32 @@ namespace Matkakirja.Natiivi
                 var data = t.IsFaulted ? null : t.Result;
                 UiKerros.PaaSaikeessa(() =>
                 {
-                    if (data == null) { valmis(null, 0); return; }
-                    var tex = new Texture2D(W, H, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "repaleinen-pergamentti" };
-                    tex.SetPixelData(data, 0);
-                    tex.Apply(false, true);
-                    valmis(tex, m);
+                    if (data == null) { valmis(null, null, null, 0); return; }
+                    Texture2D Tekstuuri(Color32[] px, string nimi)
+                    {
+                        var tex = new Texture2D(W, H, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = nimi };
+                        tex.SetPixelData(px, 0);
+                        tex.Apply(false, true);
+                        return tex;
+                    }
+                    valmis(Tekstuuri(data[0], "repaleinen-pergamentti"), Tekstuuri(data[1], "avauslyhty-vasen"),
+                        Tekstuuri(data[2], "avauslyhty-oikea"), m);
                 });
             });
         }
 
         // --- laskenta (taustasäie) ---------------------------------------------------------------
 
-        internal static Color32[] Laske(int w, int h, int m, int siemen)
+        /// <summary>Paperi, vasen lyhty ja oikea lyhty (kukin W × H).</summary>
+        internal static Color32[][] Laske(int w, int h, int m, int siemen)
         {
             int W = w + 2 * m, H = h + 2 * m;
             var d = new Color32[W * H];
+            var lv = new Color32[W * H];
+            var lo = new Color32[W * H];
+            // Lyhtyjen keilat laatikon koordinaateissa (web .aikajana-lyhty: keskus 17 % / 7 % laatikosta 98 % × 118 %;
+            // aiempi UITK-asettelu: valoalue 94 % × 96 %, keila 110 % × 72 % siitä, keskus 5 % / 6 %).
+            float lx = 0.077f * w, ly = 0.0776f * h, lrx = 0.517f * w, lry = 0.3456f * h;
             var r = new System.Random(siemen);
             float s = w / 400f; // webin piirtoleveys 400
             float Viiste() => (4f + (float)r.NextDouble() * 6f) * s;
@@ -127,6 +123,14 @@ namespace Matkakirja.Natiivi
                                     + Soikio(u, v, 0.94f, 0.98f, 0.40f, 0.36f) * 0.40f + Soikio(u, v, 0.05f, 0.96f, 0.34f, 0.32f) * 0.34f;
                         c = Color.Lerp(c, c * new Color(0.62f, 0.48f, 0.3f), Mathf.Clamp01(tahra));
                         c.a = paperi;
+                        // Lyhdyt vain paperin päällä (alfa × paperin alfa).
+                        float dy = (y - ly) / lry;
+                        var kv = Keila(Mathf.Sqrt(Sq((x - lx) / lrx) + dy * dy));
+                        var ko = Keila(Mathf.Sqrt(Sq((x - (w - lx)) / lrx) + dy * dy));
+                        kv.a *= paperi;
+                        ko.a *= paperi;
+                        lv[py * W + px] = kv;
+                        lo[py * W + px] = ko;
                     }
                     // Kajo paperin alla: lämmin ja sumea, himmenee reunasta ulos.
                     float kajoA = dist > 0f ? 0.2f * Mathf.Exp(-Sq(dist / kajoSade) * 3f) : 0.2f;
@@ -138,7 +142,7 @@ namespace Matkakirja.Natiivi
                     d[py * W + px] = tulos;
                 }
             }
-            return d;
+            return new[] { d, lv, lo };
         }
 
         static float Sq(float x) => x * x;
