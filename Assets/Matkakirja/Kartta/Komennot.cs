@@ -121,8 +121,10 @@ namespace Matkakirja
     ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
     ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
     ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
-    ///   syke jaatyy|jatkuva|oletus|tila  jatkuvien idle-animaatioiden jäädytys levossa (Joutosyke; oletus jäätyy
-    ///                             3 s levon jälkeen keskiasentoon, jatkuva = kuten ennen lämpöerää); tila lokiin
+    ///   syke jaatyy|jatkuva|oletus|tila  jatkuvien idle-animaatioiden jäädytys levossa (Joutosyke; oletus jatkuva
+    ///                             kehyksen hinta -erästä alkaen, jaatyy = 3 s levon jälkeen keskiasentoon); tila lokiin
+    ///   piilo tila|pois|paalle    piilotettujen UI-alipuiden suotimet (PiiloVartija): poistot, piilossa piirrettävät ja
+    ///                             vartijan hinta lokiin; pois palauttaa suotimet
     /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
     /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
@@ -431,6 +433,15 @@ namespace Matkakirja
                     else if (m == "oletus") Joutosyke.Jaatyy = Lampopaatos.SykeJaatyy;
                     else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: syke jaatyy|jatkuva|oletus|tila, ei " + m); return; }
                     Debug.Log("MATKAKIRJA joutosyke: " + Joutosyke.Kuvaus());
+                    break;
+                }
+                case "piilo":
+                {
+                    // piilo tila|pois|paalle (PiiloVartija, kehyksen hinta -erä 25.9.): piilotettujen alipuiden suotimet.
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "pois" || m == "paalle") PiiloVartija.Paalla = m == "paalle";
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: piilo tila|pois|paalle, ei " + m); return; }
+                    Debug.Log(PiiloVartija.Instanssi != null ? PiiloVartija.Instanssi.Kuvaus() : "MATKAKIRJA piilovartija: ei käynnissä");
                     break;
                 }
                 case "kaupunki":
