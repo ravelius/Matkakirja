@@ -73,10 +73,15 @@ Shader "Matkakirja/MaaTaytto"
             {
                 // Kuoren uv on koko maailma (u: -180…180°, v: 90…-90°); tunnuskartan uv rajauksesta.
                 float lon = i.uv.x * 360.0 - 180.0, lat = 90.0 - i.uv.y * 180.0;
-                i.uv = float2((lon - _Alue.x) / _Alue.z, (_Alue.y - lat) / _Alue.w);
+                float2 raaka = float2((lon - _Alue.x) / _Alue.z, (_Alue.y - lat) / _Alue.w);
+                // Maakuntien rajaus voi ylittää päivämäärärajan (Venäjä 19…192°, Fidži 174…182°): pituus kierretään
+                // välille [länsi, länsi + 360). Derivaatat kiertämättömästä, ettei saumaan tule leveää reunaa.
+                float dl = lon - _Alue.x;
+                dl -= 360.0 * floor(dl / 360.0);
+                i.uv = float2(dl / _Alue.z, raaka.y);
                 // Raja ±_ReunaLeveys pikseliä tekselirajasta (1 px kuten web) myös lähellä, missä teksel on
                 // ruutua suurempi; pieni alaraja vain kaukaa, ettei alle pikselin tekseleistä jää aukkoja.
-                float2 d = max(fwidth(i.uv) * _ReunaLeveys, _Tunnus_TexelSize.xy * 0.05);
+                float2 d = max(fwidth(raaka) * _ReunaLeveys, _Tunnus_TexelSize.xy * 0.05);
                 float k = Tunnus(i.uv);
                 float a = Tunnus(i.uv + float2(d.x, 0));
                 float b = Tunnus(i.uv - float2(d.x, 0));

@@ -1138,7 +1138,10 @@ MonoBehaviour:
   kokoelma: maakuntarajat
   piilotaKaupungit: 0
   jonoLisa: 1
-  rajaus: {x: -12, y: 35, z: 32, w: 61}
+  rajaus: {x: 0, y: 0, z: 0, w: 0}
+  maakohtainen: 1
+  tekseliAste: 0.0107421875
+  tekseleitaEnintaan: 16777216
   rajaMateriaali: {fileID: 2100000, guid: 3a1d37140a6334d289e3baddb964312a, type: 2}
 --- !u!114 &2116600909
 MonoBehaviour:

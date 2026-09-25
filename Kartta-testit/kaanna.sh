@@ -1,6 +1,6 @@
 #!/bin/sh
 # Kartan puhtaat funktiot (Assets/Matkakirja/Kartta/*.cs ilman UnityEngineä: Saapumisnakyma.cs, NimiLadonta.cs,
-# LennonAikajana.cs, Panorointi.cs, NostoSaannot.cs + Linssien Kamerakoreografia.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
+# LennonAikajana.cs, Panorointi.cs, NostoSaannot.cs, Maakuntajako.cs + Linssien Kamerakoreografia.cs, MaatAineisto.cs + MastoGeometria.cs; lista LAHTEET: yksi tiedosto per rivi,
 # jotta haarojen lisäykset yhdistyvät junassa rivien unionina) ja
 # testit Unityn mukana tulevalla dotnetilla ja Roslynilla ilman editoria. Sama kaava kuin
 # Peli-testit/kaanna.sh (oma testiajuri Testit/Ajuri.cs); JSON luetaan pelin MiniJsonilla.
@@ -8,6 +8,7 @@
 # Mittaustaulukko: SAAPUMINEN_MITAT=<polku.md> [SAAPUMINEN_MAARAJAT=<maarajat.json>] ./kaanna.sh Saapumisnakyma
 # Rajakorkeussarja: VEKTORIT_KOE=<kansio> ./kaanna.sh Vektorisolut (esim. /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus)
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
+# Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
@@ -26,6 +27,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
+../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
@@ -36,6 +38,9 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Vektorisolut.cs
 ../Assets/Matkakirja/Kartta/Viivaleveys.cs
 ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs
+../Assets/Matkakirja/Linssit/Ydin/LinssiSopimus.cs
+../Assets/Matkakirja/Linssit/Ydin/Maat/MaaOsuma.cs
+../Assets/Matkakirja/Linssit/Ydin/Maat/MaatAineisto.cs
 "
 $DN "$R/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nullable:disable -target:exe \
   -out:rakennus/KarttaTestit.dll $VIITTEET $(find Testit -name '*.cs') \
