@@ -30,6 +30,7 @@
 //   kääreelle (IhmisenMatka2Ymparisto), joka laskeutuu jakson ajon jälkeen kohteen ylle kallistettuna.
 //   LOPPUKUVA: loppujaksossa keilat sammuvat, koko pallo syttyy ja kaikki vanat hehkuvat omalla värillään
 //   (VanaKerros.loppuhehku, _Hehku.w); tutkimusvaiheeseen siirryttäessä hehku laskee.
+//   SOIHDUN LEPATUS: luolajaksojen (Denisova, Chauvet) soihtukeila värisee levossa kuin liekki (Lepata).
 //
 // ERÄ 3 (KERROKSELLINEN SUMU; Natiiviseppä 25.9.: omana kerroksena Linssit-puolelle): IhmisenMatka2Sumu — avauksen
 //   kolme kuorta, joiden läpi kamera syöksyy, ja jakson seudun matala sumu valokeilan valossa (Pilvikuoret).
@@ -69,6 +70,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Loppukuvan vanahehkun nousu ja lasku (s): loppujaksossa koko vana hehkuu, tutkimusvaiheessa ei.</summary>
         public const float LoppuhehkuS = 2.5f;
         float loppuhehku, loppuTavoite;
+        /// <summary>
+        /// SOIHDUN LEPATUS (erä 5, luolat): levossa oleva soihtukeila värisee kuin liekki — voimakkuus ja keskustan hehku
+        /// kahden kohinataajuuden summana, päivitys LepatusHz (keilan siirtymä kestää saman ajan, joten muutos on pehmeä).
+        /// Vain levossa, ettei liuku pysäkiltä toiselle katkea, eikä vähennetyllä liikkeellä.
+        /// </summary>
+        public const float LepatusHz = 15f, LepatusSyvyys = 0.25f;
+        float lepoAlkaa = -1f, seuraavaLepatus;
 
         /// <summary>Seudun valo jakson tunnuksesta (Raamattu IHMISEN MATKA II, vapaat kädet): luolat, kylmä, meri.</summary>
         static readonly HashSet<string> Luolat = new HashSet<string> { "denisova", "chauvet" };
@@ -213,6 +221,21 @@ namespace Matkakirja.Natiivi
         {
             KarttaKerrokset.Valokeila(nykyinen, toinen, kuvaPaalla ? HamaraKuva : HamaraPerus, kesto);
             keilaPaalla = true;
+            lepoAlkaa = Time.unscaledTime + kesto;
+        }
+
+        /// <summary>Soihdun lepatus levossa olevaan luolakeilaan (ks. LepatusHz).</summary>
+        void Lepata()
+        {
+            float nyt = Time.unscaledTime;
+            if (!keilaPaalla || keilaOdottaa || jakso == null || !Luolat.Contains(jakso.Id) || lepoAlkaa < 0f
+                || nyt < lepoAlkaa || nyt < seuraavaLepatus || Kesto(1f) <= 0f) return;
+            seuraavaLepatus = nyt + 1f / LepatusHz;
+            float n = Mathf.PerlinNoise(nyt * 7.3f, 0.37f) * 0.65f + Mathf.PerlinNoise(nyt * 19.1f, 3.1f) * 0.35f;
+            var k = nykyinen;
+            k.voimakkuus = nykyinen.voimakkuus * (1f - LepatusSyvyys * n);
+            k.kirkkaus = Mathf.Min(0.3f, nykyinen.kirkkaus * (1.15f - 0.5f * n));
+            KarttaKerrokset.Valokeila(k, toinen, kuvaPaalla ? HamaraKuva : HamaraPerus, 1f / LepatusHz);
         }
 
         void Sammuta(float kesto)
@@ -307,6 +330,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (keilaOdottaa) AsetaJaksonKeila();
+            Lepata();
             // Ruudun kierto kesken kuvan: alue ja väistö uudelleen.
             if (kuvaKohde != null && (Screen.width != ruutuW || Screen.height != ruutuH)) Asettele();
             float tavoite = KuvanAlue.HasValue ? 1f : 0f;
