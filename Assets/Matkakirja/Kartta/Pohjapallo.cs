@@ -29,7 +29,7 @@ namespace Matkakirja
     /// sävy (_pallonTummuus), valokeila (_keila*), radion hämärä (_radioHamara) ja usva (Unityn lineaarinen sumu)
     /// vaikuttavat kuten laattoihin. Magentamittauksessa (PalloReiat) piilossa, ellei tila ole Paalle.
     ///
-    /// Komento: "pallo pohja auto|paalle|pois|tila" (Komennot.cs).
+    /// Komennot: "pallo pohja auto|paalle|pois|tila" ja testitila "pallo pohja paljas paalle|pois" (Komennot.cs).
     /// </summary>
     public class Pohjapallo : MonoBehaviour
     {
@@ -38,12 +38,22 @@ namespace Matkakirja
         /// <summary>Komento "pallo pohja …" (oletus Auto: päällä paitsi magenta-mittauksessa).</summary>
         public static Pohjapallolaskenta.Tila Tila = Pohjapallolaskenta.Tila.Auto;
 
+        /// <summary>
+        /// Testikomento "pallo pohja paljas paalle|pois": maastolaattojen renderöijät piiloon (myös uudet laatat), jotta
+        /// pohjapallo näkyy kokonaan: sijainti ja siluetti laattoihin verrattuna, sävy eri tiloissa. Ei pelikäyttöön.
+        /// </summary>
+        public static bool Paljas;
+
         static readonly int VariId = Shader.PropertyToID("_BaseColor");
         static readonly int SadeId = Shader.PropertyToID("_Sade");
 
         /// <summary>Editorin pelitila ilman domain reloadia: kokeilut eivät jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaKokeilut() => Tila = Pohjapallolaskenta.Tila.Auto;
+        static void NollaaKokeilut()
+        {
+            Tila = Pohjapallolaskenta.Tila.Auto;
+            Paljas = false;
+        }
 
         /// <summary>Kohtaus ilman tätä komponenttia (Pallo.unity ennen löydöstä 119): liitetään georeferenssiin ajossa.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -63,6 +73,8 @@ namespace Matkakirja
         Mesh verkko;
         Pohjapallolaskenta.Pinta? pinta;
         int karkia, kolmioita;
+        bool paljastettu;
+        readonly System.Collections.Generic.List<MeshRenderer> laatat = new System.Collections.Generic.List<MeshRenderer>();
         double painuma;
 
         void OnEnable()
@@ -94,6 +106,7 @@ namespace Matkakirja
         {
             if (georeferenssi != null) georeferenssi.changed -= Rakenna;
             if (piirtaja != null) piirtaja.enabled = false;
+            if (paljastettu) { Paljas = false; Paljasta(); }
             if (Instanssi == this) Instanssi = null;
         }
 
@@ -104,7 +117,24 @@ namespace Matkakirja
             if (materiaali != null) Destroy(materiaali);
         }
 
-        void LateUpdate() => Paivita();
+        void LateUpdate()
+        {
+            Paivita();
+            if (Paljas || paljastettu) Paljasta();
+        }
+
+        /// <summary>Testitila: laattojen renderöijät pois (Paljas) tai takaisin (kerran, kun tila päättyy).</summary>
+        void Paljasta()
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            var tileset = kk != null ? kk.pallo : null;
+            if (tileset == null) return;
+            tileset.GetComponentsInChildren(true, laatat);
+            foreach (var r in laatat)
+                if (r.enabled == Paljas) r.enabled = !Paljas;
+            laatat.Clear();
+            paljastettu = Paljas;
+        }
 
         /// <summary>
         /// Verkko georeferenssin nykyisestä muunnoksesta (alussa ja origon siirtyessä): ikosaedrin kärjet ellipsoidin
@@ -188,7 +218,7 @@ namespace Matkakirja
             return $"MATKAKIRJA pohjapallo: tila {Tila}, näkyy {(p.piirtaja != null && p.piirtaja.enabled ? "kyllä" : "ei")} " +
                    $"(magenta {(PalloReiat.Magenta ? "päällä" : "pois")}), pinta {p.pinta?.ToString() ?? "-"} #{r:x2}{g:x2}{b:x2}, " +
                    $"syvyys {Pohjapallolaskenta.SyvyysM:0} m, {p.karkia} kärkeä / {p.kolmioita} kolmiota, jänne ≤ {p.painuma:0} m, " +
-                   $"jono {(p.materiaali != null ? p.materiaali.renderQueue : -1)}";
+                   $"jono {(p.materiaali != null ? p.materiaali.renderQueue : -1)}{(Paljas ? ", laatat piilossa (paljas)" : "")}";
         }
     }
 }
