@@ -76,11 +76,11 @@ namespace Matkakirja
             return $"{ajat.Count} aikamerkkiä → cpu-merkit.txt";
         }
 
-        public static string Mittaa(float s, string suodatin)
+        public static string Mittaa(float s, string suodatin, bool piirto = false)
         {
             Varmista();
             if (instanssi.kaynnissa) return "mittaus jo käynnissä";
-            instanssi.StartCoroutine(instanssi.Aja(s, suodatin));
+            instanssi.StartCoroutine(instanssi.Aja(s, suodatin == "-" ? null : suodatin, piirto));
             return null;
         }
 
@@ -94,9 +94,12 @@ namespace Matkakirja
             public long Kutsuja;
         }
 
-        IEnumerator Aja(float s, string suodatin)
+        IEnumerator Aja(float s, string suodatin, bool piirto)
         {
             kaynnissa = true;
+            // piirto: LEPO joka kehys (UI ei "rauhassa") eikä PAIKALLAAN, jotta renderöinnin CPU-osuus näkyy.
+            var rauha = Ruudunpaivitys.UiRauhassa;
+            if (piirto) Ruudunpaivitys.UiRauhassa = () => false;
             Tila = "mitataan";
             var ajat = Aikamerkit(out var kuvaukset);
             string[] ehdot = suodatin == "kaikki" ? null : string.IsNullOrEmpty(suodatin) ? Oletus : suodatin.Split('|');
@@ -128,6 +131,7 @@ namespace Matkakirja
                 }
             }
             foreach (var m in merkit) m.R.Dispose();
+            if (piirto) Ruudunpaivitys.UiRauhassa = rauha;
             var tulos = merkit.Where(m => m.Ms.Count > 0).Select(m =>
             {
                 var j = m.Ms.OrderBy(x => x).ToList();
