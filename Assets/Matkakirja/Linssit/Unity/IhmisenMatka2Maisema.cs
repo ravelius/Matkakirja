@@ -6,7 +6,9 @@
 // manifestissa). Jakson tekninen kenttä `maisema` (KertomusJakso.Maisema) valitsee tyypin; null = hiljaisuus (avaus).
 //
 //   SAMA TYYPPI PERÄKKÄIN EI TEE MITÄÄN: kolme savannijaksoa on yksi katkeamaton savanni.
-//   VAIHTO: ristihäivytys RistiS (web RISTI_MS 2500, omistajan mitta 2–3 s).
+//   VAIHTO: ristihäivytys RistiS (web RISTI_MS 2500, omistajan mitta 2–3 s), TASATEHOINEN: taso = sin(k·π/2), jolloin
+//   keskellä kumpikin soi 0,71:llä ja yhteisteho pysyy vakiona. Lineaarinen k antoi keskelle −3 dB:n kuopan, joka kuului
+//   jokaisessa vaihdossa ja silmukan saumassa hetken hiljaisuutena (kenttä-äänitteet ovat keskenään korreloimattomia).
 //   SILMUKAN SAUMA: kenttä-äänitteen alku ja loppu eivät osu yhteen, joten kierroksen lopussa (RistiS ennen) aloitetaan
 //   uusi kierros toisella lähteellä ja vanha häivytetään sen alta (web sama koneisto).
 //   TASO: Voima (web MAISEMAN_VOIMA 0,10) × pelaajan taustataso; kertojan puheen alla väistö (web lisaaVaistaja).
@@ -155,13 +157,16 @@ namespace Matkakirja.Natiivi
             return KertojaSoi != null && KertojaSoi() ? t * Vaisto : t;
         }
 
+        /// <summary>Tasatehoinen käyrä: häivytyksen edistymä 0…1 → äänenvoimakkuuden kerroin (sin(k·π/2)).</summary>
+        public static float Teho(float k) => Mathf.Sin(Mathf.Clamp01(k) * Mathf.PI * 0.5f);
+
         void Update()
         {
             float dt = Time.unscaledDeltaTime, taso = Taso();
             if (karki != null)
             {
                 karjenKerroin = Mathf.MoveTowards(karjenKerroin, 1f, dt / RistiS);
-                karki.volume = taso * karjenKerroin;
+                karki.volume = taso * Teho(karjenKerroin);
                 // Silmukan sauma: uusi kierros toisella lähteellä ristihäivytyksen verran ennen loppua.
                 if (karki.clip != null && karki.clip.length > RistiS * 2 && karki.time >= karki.clip.length - RistiS)
                 {
@@ -172,7 +177,7 @@ namespace Matkakirja.Natiivi
             if (hiipuva != null)
             {
                 hiipuvanKerroin = Mathf.MoveTowards(hiipuvanKerroin, 0f, dt / (lopetus ? LoppuS : RistiS));
-                hiipuva.volume = taso * hiipuvanKerroin;
+                hiipuva.volume = taso * Teho(hiipuvanKerroin);
                 if (hiipuvanKerroin <= 0f) { hiipuva.Stop(); hiipuva = null; }
             }
         }
