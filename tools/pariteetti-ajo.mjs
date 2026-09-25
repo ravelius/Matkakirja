@@ -230,6 +230,20 @@ async function odotaPeite(stdout, kattoMs = 16000) {
   }
 }
 
+/** Uuden pelin kerronta: stdout "ui liiku: piiloon (kerronta)" / "esiin (kerronta ohi)" (UI/Matkavalinta.cs). */
+async function odotaKerronta(stdout, kattoMs = 90000) {
+  const alku = Date.now();
+  const laske = (t, s) => t.split(s).length - 1;
+  for (;;) {
+    const t = existsSync(stdout) ? readFileSync(stdout, 'utf8') : '';
+    const piiloon = laske(t, 'ui liiku: piiloon (kerronta)');
+    // Kerronta voi alkaa vasta hetken uuden pelin jälkeen: annetaan sille 5 s aikaa ilmoittautua.
+    if (piiloon <= laske(t, 'ui liiku: esiin (kerronta ohi)') && (piiloon > 0 || Date.now() - alku > 5000)) return Date.now() - alku;
+    if (Date.now() - alku > kattoMs) return -1;
+    await odota(500); // eslint-disable-line no-await-in-loop
+  }
+}
+
 /** UI-puu nyt: kirjoittaa ui puu <nimi>, odottaa tiedoston ja palauttaa sen polun (tai null). */
 async function puuNyt(dokumentit, nimi) {
   const puu = join(dokumentit, `ui-puu-${nimi}.json`);
@@ -275,6 +289,10 @@ async function ajaLaite(l) {
   let natiivinPerus = [];
   const aloitaPeli = async () => {
     for (const a of NATIIVI_ALKU) await askel(dokumentit, a); // eslint-disable-line no-await-in-loop
+    // Uuden pelin kerronta sumentaa pallon kuvillaan (PalloKierto.KuvaSumea) ja piilottaa Liikun: rivit vasta
+    // kun se on ohi (Natiiviseppä 25.9.: ajojen 3b–3f vertailu kuvattiin kerronnan sumennuksen alla).
+    const kerrontaMs = await odotaKerronta(join(NATIIVI, `${tunnus}-stdout.log`));
+    if (kerrontaMs !== 0) console.log(`natiivi ${tunnus} kerronta ${kerrontaMs < 0 ? 'yli katon' : `${(kerrontaMs / 1000).toFixed(1)} s`}`);
     peliKaynnissa = true;
     // Natiivin perustilan tekstit (kartta, pilleri, kartussi): ne eivät kelpaa rivin tunnisteiksi.
     const perus = await puuNyt(dokumentit, `perus-${tunnus}`);
