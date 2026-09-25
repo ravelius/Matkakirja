@@ -108739,6 +108739,235 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: "Devil's Pool (Victoria Falls)",
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Victoria Falls, Victoria Falls Zimbabwe, Livingstone
+       * Zambia, Victoria Falls Airport, Harry Mwaanga Nkumbula
+       * International Airport, Kazungula Bridge, Kasane, Victoria Falls
+       * Bridge, Visa policy of Zambia / of Zimbabwe (KAZA-viisumi),
+       * Mosi-oa-Tunya National Park, Zambezi National Park, Chobe National
+       * Park, Batoka Gorge Hydroelectric Power Station) ja Wikivoyagesta
+       * (Victoria Falls,
+       * Livingstone) — teksti omaa. Nostojen aiheita (Livingstonen löytö,
+       * putousten koko, vuosi 1873, patsas, sillan rakentaminen, sademetsä,
+       * kuunkaari, Veitsenterä-silta, Mosi-oa-Tunya-nimi) ei toisteta;
+       * Devil's Pool mainitaan vain kausi- ja lupatietona. Hinnat,
+       * viisumimaksut ja aikataulut jätetty pois, koska Wikivoyagen tiedot
+       * ovat vuosilta 2019–2026 ja muuttuvat. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: bungeehyppy sillalta (public domain).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'H15bungee.jpg',
+          lyhyt: 'Bungeehyppääjä syöksyy Victoria Falls -sillalta kohti Zambezin rotkoa.',
+          selite: 'Hyppääjä on juuri lähtenyt Victoria Falls -sillan '
+            + 'hyppylavalta, ja lavalla seisovat työntekijät seuraavat, kun '
+            + 'köysi kiristyy rotkon yllä. Sambian ja Zimbabwen rajasillalta '
+            + 'tehtävä bungeehyppy on 111 metriä korkea.',
+          lahde: 'John Walker, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Viktorian putouksille tullaan kahden maan kautta. '
+          + 'Zimbabwen puolella Victoria Fallsin pikkukaupunki on aivan '
+          + 'putousten vieressä, Sambian puolella Livingstone kymmenen '
+          + 'kilometrin päässä joesta, ja niiden välissä kulkee silta, jonka '
+          + 'yli rajan voi ylittää kävellen. Kummallakin rannalla on oma '
+          + 'kansallispuistonsa ja omat näköalapolkunsa, ja kokonaiskuvan saa, '
+          + 'kun käy molemmilla. Vesimäärä vaihtelee vuoden mittaan enemmän '
+          + 'kuin muissa suurissa putouksissa: huhtikuun tulvan aikaan sumu '
+          + 'peittää näkymän, marraskuussa osa kallioseinästä on kuivana. '
+          + 'Putousten alla lasketaan koskia, yläpuolella risteillään '
+          + 'virtahepojen keskellä, ja Botswanan norsulaumat ovat päiväretken '
+          + 'päässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktorian putoukset',
+          teksti: 'Viktorian putouksia katsotaan kahdesta maasta, ja rajan voi '
+            + 'ylittää kävellen.',
+          nosto: 'Marraskuussa putouksen yli virtaa vain noin kymmenesosa '
+            + 'huhtikuun vesimäärästä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi kaupunkia, kaksi lentoasemaa',
+              teksti: 'Putouksilla on kaksi porttikaupunkia. Zimbabwen '
+                + 'Victoria Falls on noin 35 000 asukkaan matkailukaupunki '
+                + 'putousten länsipäässä, ja useimmat hotellit ovat muutaman '
+                + 'kilometrin päässä putouksista. Sen lentoasema on 18 '
+                + 'kilometriä kaupungista etelään, ja terminaali ja kiitotie '
+                + 'uusittiin 2010-luvulla kiinalaisen pankin lainalla. Sambian '
+                + 'Livingstone on selvästi suurempi, lähes 180 000 asukkaan '
+                + 'kaupunki, ja se oli Pohjois-Rhodesian pääkaupunki vuosina '
+                + '1911–1935. Sen lentoasema, joka on nimetty '
+                + 'itsenäisyysliikkeen johtajan Harry Mwaanga Nkumbulan mukaan, '
+                + 'on kaupungin pohjoislaidalla noin 15 kilometrin päässä '
+                + 'putouksista. Suoria lentoja tulee kummallekin puolelle '
+                + 'ainakin Johannesburgista, Kapkaupungista ja Nairobista, mutta '
+                + 'reitit ja lentoyhtiöt vaihtuvat usein. Maata pitkin '
+                + 'Livingstoneen pääsee linja-autolla Lusakasta 470 kilometrin '
+                + 'päästä, ja Victoria Fallsiin kulkee Bulawayosta harvakseltaan '
+                + 'yöjuna. Botswanasta tullaan Kasanen kautta: Kazungulassa '
+                + 'Sambian ja Botswanan yhteistä rajaa on joella vain noin 135 '
+                + 'metriä, ja vanhan lautan korvasi toukokuussa 2021 avattu '
+                + 'silta, joka kaartuu kiertääkseen Zimbabwen ja Namibian rajat.',
+              kuva: [
+                {
+                  tiedosto: 'Victoria Falls International Airport 001.jpeg',
+                  lyhyt: 'Victoria Fallsin lentoasema on 18 kilometrin päässä kaupungista etelään.',
+                  selite: 'Victoria Fallsin kansainvälisen lentoaseman '
+                    + 'terminaalin kaarevaa kattoa kannattelevat vaaleat '
+                    + 'teräsristikot; kuva on otettu marraskuussa 2023.',
+                  lahde: 'Geraldshields11, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Livingstone, Zambia - panoramio (1).jpg',
+                  lyhyt: 'Livingstonen linja-autoasemalla myydään lippuja muun muassa Lusakaan ja Kazungulaan.',
+                  selite: 'Livingstonen linja-autoaseman lippukojun seinään '
+                    + 'on vuonna 2015 maalattu päivittäiset reitit muun muassa '
+                    + 'Lusakaan, Kazungulaan ja Sesheken kautta Monguun sekä '
+                    + 'Lusakasta Johannesburgiin.',
+                  lahde: 'cowbridgeguide.co.uk, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Kazungula-Brücke mit Kapspurgleis in der Fahrbahnmitte.jpg',
+                  lyhyt: 'Kazungulan kaareva silta yhdistää Sambian ja Botswanan vuodesta 2021.',
+                  selite: 'Kazungulan sillan jalkakäytävältä näkyvät sillan '
+                    + 'kaari ja vinoköysipylonit. Ajoratojen väliin on '
+                    + 'rakennettu raide, jota ei vielä ole liitetty kummankaan '
+                    + 'maan rataverkkoon.',
+                  lahde: 'Matthias Hille, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi rantaa ja raja sillan keskellä',
+              teksti: 'Putoukset näkyvät eri tavoin kummaltakin rannalta. '
+                + 'Zimbabwen puolella polku kulkee rotkon vastareunaa pitkin, '
+                + 'ja putouksen läntiset haarat, Paholaisen kaihi ja '
+                + 'Pääputous, näkyvät suoraan edestä. Sambian puolella pääsee '
+                + 'koskettamaan jokea muutaman metrin päässä putouksen '
+                + 'reunasta, ja jyrkkä polku laskeutuu rotkon pohjalle '
+                + 'Kiehuvaksi padaksi kutsutulle pyörteelle, josta '
+                + 'rautatiesilta näkyy alhaalta päin. Sambian puiston portilla '
+                + 'vuokrataan sadevarusteita, ja kamera kannattaa suojata '
+                + 'vesipölyltä. Rajan voi ylittää kävellen sillan yli: '
+                + 'kummassakin päässä on rajatarkastus, ja sillan keskeltä '
+                + 'näkyvät putoukset. Sambia ja Zimbabwe ottivat marraskuussa '
+                + '2014 käyttöön yhteisen KAZA-viisumin, joka kattaa molemmat '
+                + 'maat ja päiväretket Botswanan Choben puistoon. Järjestely '
+                + 'on kuitenkin välillä ollut tauolla, ja kelpoiset maat ja '
+                + 'maksut muuttuvat, joten viisumitilanne kannattaa tarkistaa '
+                + 'juuri ennen matkaa. Käteistä tarvitaan: Zimbabwessa '
+                + 'maksetaan yleensä Yhdysvaltain dollareilla ja Sambiassa '
+                + 'kwachoilla, eikä kwachoja voi vaihtaa Zimbabwen puolella.',
+              kuva: {
+                tiedosto: 'Livingstone, Zambia (48597799226).jpg',
+                lyhyt: 'Kävelijät ylittävät rajan Victoria Falls -sillalla Zimbabwesta Sambiaan.',
+                selite: 'Keltainen kyltti Victoria Falls -sillalla ilmoittaa, '
+                  + 'että kävelijät ovat saapumassa Sambiaan. Vasemmalla '
+                  + 'avautuu jyrkkä rotko, ja oikealla kulkee rautatie.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tulvan jylinä vai kuivan kauden kalliot',
+              teksti: 'Zambezin yläjuoksulla sataa marraskuun lopulta '
+                + 'huhtikuun alkuun, mutta vesi saapuu putouksille viiveellä: '
+                + 'tulva-aika kestää helmikuusta toukokuuhun, ja virtaama on '
+                + 'suurimmillaan huhtikuussa. Silloin putous on '
+                + 'voimakkaimmillaan, mutta sumu peittää sen juuren ja '
+                + 'seinämän, ja polulla kastuu läpimäräksi. Kuivan kauden '
+                + 'edetessä saaret putouksen reunalla levenevät, ja syyskuusta '
+                + 'tammikuuhun jopa puolet kallioseinästä voi olla kuivana. '
+                + 'Pienin virtaama osuu marraskuulle, ja se on vain noin '
+                + 'kymmenesosa huhtikuun huipusta, mikä on suurempi vaihtelu '
+                + 'kuin muissa suurissa putouksissa. Vähäisen veden aikaan näkee '
+                + 'tumman basalttiseinämän ja rotkon pohjan, ja Zimbabwen '
+                + 'puolella pääsee laskeutumaan ensimmäisen rotkon pohjalle. '
+                + 'Vain matalan veden aikaan veneet vievät myös '
+                + 'Livingstone-saarelle ja Devil\'s Poolille, ja sinne pääsee '
+                + 'ainoastaan luvallisten järjestäjien retkillä. Vuodet eivät '
+                + 'ole samanlaisia: vuonna 2019 vähäiset sateet painoivat '
+                + 'virtaaman pienimmäksi sataan vuoteen, ja kuivuusvuodet ovat '
+                + 'yleistyneet, joten kuukausien vesimäärät kannattaa tarkistaa '
+                + 'matkaa suunnitellessa.',
+              kuva: {
+                tiedosto: 'Victoria falls during dry season 2011.jpg',
+                lyhyt: 'Marraskuussa 2011 putouksen kallioseinä oli paikoin lähes kuiva.',
+                selite: 'Marraskuussa 2011 kuvatussa näkymässä putouksen tumma '
+                  + 'basalttiseinä on suurelta osin kuiva, ja vain muutama ohut '
+                  + 'vesinauha putoaa rotkoon; vasemmalla joki kuohuu rotkon '
+                  + 'pohjalla.',
+                lahde: 'BetterWORLDphoto, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Koskien rotko putousten alla',
+              teksti: 'Putouksen alapuolella koko Zambezi puristuu kapeisiin, '
+                + 'siksakkina kulkeviin rotkoihin, joiden kosket ovat '
+                + 'koskenlaskijoiden maailmassa kuuluisia. Laji yleistyi täällä '
+                + '1980-luvulla, kun Zimbabwen itsenäistyminen toi rauhan ja '
+                + 'matkailijat takaisin, ja nykyään päiväretkiä lähtee sekä '
+                + 'Sambian että Zimbabwen puolelta viidennen vaikeusluokan '
+                + 'koskiin. Rotkoissa joen pinta nousee ja laskee kausien '
+                + 'välillä jopa 20 metriä, joten sama koski on eri '
+                + 'vuodenaikoina hyvin erilainen. Laskut ovat fyysisesti '
+                + 'raskaita ja vaarallisia, ja järjestäjä kannattaa valita '
+                + 'huolella. Kosket ovat myös uhattuina: noin 54 kilometriä '
+                + 'putouksista alavirtaan on suunniteltu 181 metriä korkeaa '
+                + 'patoa ja vesivoimalaa, ja arvostelijoiden mukaan sen allas '
+                + 'voisi ulottua lähes putousten juurelle ja hukuttaa kosket. '
+                + 'Hanketta on vastustettu, ja sen sopimukset ovat kaatuneet '
+                + 'useaan kertaan, joten sen tulevaisuus on auki. Putousten '
+                + 'yläpuolella joki on tyyni: iltaisin risteilyveneet lähtevät '
+                + 'auringonlaskuun virtahepojen ja krokotiilien keskelle, ja '
+                + 'helikopterilennolla näkee koko rotkojen ketjun ylhäältä.',
+              kuva: {
+                tiedosto: 'Grade 5 Rafting op de Zambezi Rivier! (6573889969).jpg',
+                lyhyt: 'Kumivene syöksyy viidennen vaikeusluokan koskeen putousten alapuolisessa rotkossa.',
+                selite: 'Kypäräpäiset melojat pelastusliiveissä pitävät kiinni '
+                  + 'kumiveneestä, kun se syöksyy vaahtoavaan koskeen Zambezin '
+                  + 'rotkossa Viktorian putousten alapuolella.',
+                lahde: 'Martijn Munneke, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sarvikuonoja ja norsuja päiväretkellä',
+              teksti: 'Putousten molemmin puolin on eläinpuistoja, joihin '
+                + 'pääsee puolen päivän retkellä. Sambian Mosi-oa-Tunyan '
+                + 'kansallispuiston luoteispäässä elää kirahveja, seeproja, '
+                + 'puhveleita ja antilooppeja sekä Etelä-Afrikasta tuotuja '
+                + 'valkosarvikuonoja. Kaksi ensimmäistä joutui salametsästäjien '
+                + 'ampumiksi kesäkuussa 2007: toinen kuoli, toinen selvisi '
+                + 'vakavasti haavoittuneena. Vuonna 2022 puistossa oli kymmenen '
+                + 'sarvikuonoa, ja niitä vartioidaan ympäri vuorokauden. '
+                + 'Zimbabwen puolella joen yläjuoksulla on Zambezin '
+                + 'kansallispuisto, jossa näkee norsuja, puhveleita ja '
+                + 'soopeliantilooppeja aivan Victoria Fallsin kaupungin '
+                + 'kupeessa. Pidemmälle ehtivä tekee päiväretken Botswanan '
+                + 'Choben kansallispuistoon, jonka noin 50 000 norsua '
+                + 'kerääntyvät kuivalla kaudella toukokuusta lokakuuhun Choben '
+                + 'joen rannoille. Villieläimet '
+                + 'liikkuvat myös kaupunkien laidoilla, joten kaupungin ja '
+                + 'putousten väliä ei suositella kävelemään pimeällä, ja apinat '
+                + 'vievät eväät valvomattomalta pöydältä. Mosi-oa-Tunyan '
+                + 'puistossa on myös Old Driftin hautausmaa, jonne haudattiin '
+                + 'seudun ensimmäisiä eurooppalaisia asukkaita: he kuolivat '
+                + 'malariaan ja luulivat kuumetautia puiden aiheuttamaksi. '
+                + 'Malarian ehkäisystä kannattaa yhä kysyä lääkäriltä ennen '
+                + 'matkaa.',
+              kuva: {
+                tiedosto: 'Rhinos, Mosi-oa-Tunya National Park, Zambia (48597918381) (cropped).jpg',
+                lyhyt: 'Mosi-oa-Tunyan kansallispuiston valkosarvikuonoja vartioidaan ympäri vuorokauden.',
+                selite: 'Valkosarvikuono seisoo puun varjossa Mosi-oa-Tunyan '
+                  + 'kansallispuistossa Livingstonen laidalla, ja sen takana '
+                  + 'lepää toinen sarvikuono. Puiston sarvikuonot on tuotu '
+                  + 'Etelä-Afrikasta.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -111119,6 +111348,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Basilica of Damous El Karita',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Carthage, Carthage (municipality), Carthage Palace,
+       * Carthage amphitheatre, Tophet, Tunis-Goulette-Marsa, International
+       * Festival of Carthage, Sidi Bou Said, Ennejma Ezzahra, Brik, Lablabi,
+       * Bambalouni, Tunisian cuisine), ranskan Wikipediasta (TGM, Festival
+       * international de Carthage, Site archéologique de Carthage),
+       * Wikivoyagesta (Carthage, Sidi Bou Said, Tunis), Unescon
+       * kohdesivulta 1769 (Village of Sidi Bou Saïd, 2026) ja AFP:n
+       * Al-Monitorissa tammikuussa 2026 julkaistusta maanvyöryjutusta —
+       * teksti omaa. Yhteislipun tieto on Wikivoyagesta (huhtikuu 2026);
+       * hinnat ja aukioloajat jätetty pois. Nostojen ja gallerian aiheita
+       * (Antoninuksen termit, puunilaiskortteli, satamat, Nathan Davis,
+       * Acropolium, Damous el Karita, Dido, Hannibal, tuho, vesijohto) ei
+       * toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: tofetin
+       * palmut ja stelat.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tunisise Carthage Tophet Salambo 01.JPG',
+          lyhyt: 'Salammbôn tofetin puunilaiset hiekkakivistelat seisovat palmujen varjossa.',
+          selite: 'Karthagon Salammbôn tofet oli puunilaisten pyhäkkö ja '
+            + 'hautausmaa, jonne pystytettiin hiekkakivisiä muistostelia '
+            + 'noin 650 eaa. alkaen; nykyään se on yksi yhteislipun '
+            + 'kohteista.',
+          lahde: 'GIRAUD Patrick, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        kappale: 'Karthago on nykyään Tunisin varakas esikaupunki, jonka '
+          + 'huviloiden, koulujen ja presidentin palatsin lomassa lepäävät '
+          + 'muinaisen suurkaupungin rauniot. Tunisin keskustasta sinne '
+          + 'pääsee TGM-junalla, joka pysähtyy Karthagossa kuudesti. '
+          + 'Raunioalueet ja museot kierretään yhdellä yhteislipulla, '
+          + 'kesäöinä antiikin teatterissa soi Karthagon kansainvälinen '
+          + 'festivaali, ja heti pohjoisempana odottaa sinivalkoinen '
+          + 'Sidi Bou Saïd, joka hyväksyttiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 2026. Kesät ovat kuumia ja '
+          + 'kuivia, joten raunioilla kävellään mieluiten keväällä tai '
+          + 'syksyllä, ja illalla nälkään syödään harissalla maustettua '
+          + 'brikiä tai lablabia.',
+        artikkeli: {
+          nimi: 'Matkailijan Karthago',
+          teksti: 'Muinaisen suurkaupungin rauniot ovat Tunisin '
+            + 'paikallisjunan varrella.',
+          nosto: 'Rooma ja Karthago solmivat rauhan vasta vuonna 1985, kun '
+            + 'kaupunkien pormestarit allekirjoittivat symbolisen '
+            + 'sopimuksen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla järven poikki',
+              teksti: 'Karthagoon ei tarvita autoa. Tunisin keskustan Tunis '
+                + 'Marine -asemalta lähtee TGM-juna, joka kulkee 19 '
+                + 'kilometrin matkan La Marsan rantaan. Rata on Tunisian '
+                + 'vanhin: ensimmäinen osuus Tunisista La Goulettin '
+                + 'satamaan avattiin vuonna 1872, vuotta ennen isoisän '
+                + 'matkaa, ja jatko La Marsaan kaksi vuotta myöhemmin. '
+                + 'Nykyinen suora reitti Tunisin järven poikki kulkee '
+                + 'kanavan viertä penkereellä, joka valmistui 1905, ja '
+                + 'samasta vuodesta linjaa on kutsuttu päätepisteidensä '
+                + 'alkukirjaimilla TGM: Tunis, Goulette, Marsa. Sähköjunat '
+                + 'korvasivat höyryvedon 1908, ja nykyiset saksalaisen '
+                + 'MAN:n junat tulivat liikenteeseen 1979. Karthagossa '
+                + 'juna pysähtyy kuudesti: Salammbô, Byrsa, Dermech, '
+                + 'Hannibal, Présidence ja Amilcar. Useimmille raunioille '
+                + 'on lyhyin kävelymatka Carthage Hannibalin asemalta, '
+                + 'Salammbôn ja Byrsan asemilta tofetille. Lippu ostetaan '
+                + 'asemalta ennen junaan nousua. Wikivoyagen mukaan Tunis Marinen '
+                + 'opasteet ovat niukat, eikä TGM-nimeä välttämättä näy '
+                + 'missään, ja junan omassa linjakartassa lähtöasema on '
+                + 'nimellä Tunis Nord, joten neuvoa kannattaa kysyä '
+                + 'rohkeasti.',
+              kuva: [
+                {
+                  tiedosto: 'TGM train R216 Apr 2025.jpg',
+                  lyhyt: 'MAN-juna Carthage Hannibalin asemalla, josta kävellään useimmille raunioille.',
+                  selite: 'Saksalaisen MAN:n valmistama TGM-juna Carthage '
+                    + 'Hannibalin asemalla huhtikuussa 2025; asemalta on '
+                    + 'lyhyin kävelymatka useimmille Karthagon '
+                    + 'raunioalueille.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'TGM carriage interior route and stations Apr 2025.jpg',
+                  lyhyt: 'TGM-vaunun linjakartassa ovat kaikki asemat Tunisista La Marsaan.',
+                  selite: 'TGM-vaunun oven yläpuolella oleva kartta luettelee '
+                    + 'linjan asemat arabiaksi ja ranskaksi; lähtöasema on '
+                    + 'merkitty nimellä Tunis Nord, ja Karthagon kuusi '
+                    + 'asemaa ovat kartan keskivaiheilla.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Canal Tunis - Radès.jpg',
+                  lyhyt: 'TGM:n sähkörata kulkee Tunisin järven poikki kivetyn kanavanpenkereen vierellä.',
+                  selite: 'TGM-radan ajojohtopylväät ja kivetty penger '
+                    + 'Tunisin järven halki kulkevan kanavan varrella '
+                    + 'tammikuussa 2026; taustalla siintävät sataman '
+                    + 'nosturit ja kanavan ylittävä silta.',
+                  lahde: 'Smailtn, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Yksi lippu kymmeneen kohteeseen',
+              teksti: 'Muinainen Karthago ei ole yksi aidattu puisto vaan '
+                + 'joukko erillisiä kaivausalueita asuinkortteleiden ja '
+                + 'huviloiden välissä. Wikivoyagen mukaan huhtikuussa 2026 '
+                + 'myynnissä oli enää yksi yhteislippu, joka kattaa '
+                + 'kymmenen raunioaluetta ja museota; yksittäisiin '
+                + 'kohteisiin ei myyty omia lippuja. Kaikkea on vaikea '
+                + 'ehtiä nähdä yhdessä päivässä, eivätkä kaikki kohteet '
+                + 'ole aina auki. Opasteita on niukasti ja englanninkielisiä '
+                + 'kylttejä vielä vähemmän, joten opas tai etukäteen luettu '
+                + 'taustatieto auttaa. Byrsan kukkulan länsipuolella on '
+                + '100-luvun alussa valmistunut amfiteatteri, jonka katsomoihin arvioidaan '
+                + 'mahtuneen 30 000 ihmistä. Katsomoiden kivet vietiin '
+                + 'vuosisatojen mittaan rakennustarpeiksi, ja jäljelle jäi '
+                + 'mäntyjen ympäröimä, noin 65 metriä pitkä areena. '
+                + 'Salammbôn tofet on Karthagon vanhimpia paikkoja: '
+                + 'puunilaisten pyhäkkö ja hautausmaa, johon haudattiin '
+                + 'pienten lasten tuhkaa uurnissa. Tutkijat kiistelevät '
+                + 'yhä, kertovatko löydöt lapsiuhreista vai lasten '
+                + 'hautausmaasta. Byrsan kukkulan kansallismuseo on ollut '
+                + 'pitkiä aikoja osittain suljettuna, joten sen tilanne '
+                + 'kannattaa tarkistaa etukäteen. Varjoa on vähän, joten '
+                + 'mukaan tarvitaan vettä ja hattu. Rauniokierroksella '
+                + 'voi muistella, että Rooma ja Karthago solmivat rauhan '
+                + 'vasta 1985, kun kaupunkien pormestarit allekirjoittivat '
+                + 'symbolisen sopimuksen.',
+              kuva: {
+                tiedosto: 'Amphithéâtre de Carthage 1.JPG',
+                lyhyt: 'Karthagon amfiteatterista on jäljellä mäntymetsän ympäröimä areena.',
+                selite: 'Karthagon roomalaisen amfiteatterin katsomot '
+                  + 'purettiin aikojen kuluessa rakennuskiviksi, ja '
+                  + 'syyskuun iltavalossa näkyy lähinnä areena ja sen '
+                  + 'muurattu reunus mäntyjen keskellä.',
+                lahde: 'IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäyö antiikin teatterissa',
+              teksti: 'Heinä- ja elokuussa Karthagon kansainvälinen '
+                + 'festivaali täyttää kesäyöt musiikilla. Se alkoi 1960-luvun '
+                + 'alussa kaksipäiväisenä jazztapahtumana, ja vuonna 1964 '
+                + 'Tunisian kulttuuriministeriö otti sen hoitaakseen. '
+                + 'Näyttämönä on 100-luvulla rakennettu roomalainen '
+                + 'teatteri, johon mahtui noin 5 000 katsojaa. Siitä oli '
+                + '1900-luvun alussa jäljellä vain vähäisiä raunioita, ja '
+                + 'nykyinen katsomo on suurelta osin entisöintiä. Toisen '
+                + 'maailmansodan aikana samassa teatterissa puhui Winston '
+                + 'Churchill. Festivaalin lavalla ovat esiintyneet '
+                + 'arabimaailman tähdet, kuten Warda ja Majida El Roumi, '
+                + 'sekä Louis Armstrong, Ray Charles, James Brown, Dalida ja '
+                + 'Stromae, ja ohjelmassa on myös teatteria, tanssia ja '
+                + 'kansanmusiikkia. Konsertit alkavat vasta, kun päivän '
+                + 'helle on hellittänyt, ja Wikivoyagen kävijävinkin mukaan '
+                + 'ne päättyvät usein vasta yhden jälkeen yöllä. '
+                + 'Kiviportailla istutaan tuntikausia, joten oma tyyny tai '
+                + 'huopa on moni paikallisen vakiovaruste. Esiintyjät '
+                + 'vaihtuvat vuosittain, joten ohjelma kannattaa katsoa '
+                + 'festivaalin omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Festival de Carthage au théatre romain.JPG',
+                lyhyt: 'Orkesteri soittaa Karthagon festivaalilla roomalaisen teatterin valaistujen muurien edessä.',
+                selite: 'Karthagon kansainvälisen festivaalin konsertti '
+                  + 'roomalaisessa teatterissa elokuussa 2015: orkesteri ja '
+                  + 'laulajat esiintyvät punaisiksi valaistujen antiikin '
+                  + 'muurien edessä myöhään illalla.',
+                lahde: 'Noomen9, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sinivalkoinen Sidi Bou Saïd',
+              teksti: 'Karthagon pohjoisinta asemaa seuraa Sidi Bou '
+                + 'Saïd, meren yllä jyrkänteellä seisova kylä, joka '
+                + 'kasvoi 1200-luvulla kuolleen sufipyhimyksen Abu Said '
+                + 'al-Bajin haudan ympärille ja sai nimensä hänestä. '
+                + 'Valkoiset seinät ja siniset ovet, ikkunaristikot ja '
+                + 'parvekkeet vakiintuivat kylän tunnusmerkiksi 1920-luvulla '
+                + 'paroni Rodolphe d\'Erlangerin ansiosta. Hänen vuosina '
+                + '1912–1922 rakennuttamassaan Ennejma Ezzahran palatsissa '
+                + 'toimii vuodesta 1991 arabialaisen ja välimerellisen '
+                + 'musiikin keskus, jossa on soitinkokoelma ja jossa '
+                + 'pidetään konsertteja. Vuonna 2026 kylä hyväksyttiin '
+                + 'Unescon maailmanperintöluetteloon. Samana vuonna '
+                + 'tammikuussa Tunisiaan satoi rankimmin yli 70 vuoteen, ja '
+                + 'Sidi Bou Saïdin rinteessä alkoi maanvyöryjä: taloja '
+                + 'tyhjennettiin, raskaat ajoneuvot kiellettiin kylässä ja '
+                + 'Ennejma Ezzahran museo suljettiin. Ennen käyntiä '
+                + 'kannattaa tarkistaa, mikä on taas auki. Kahviloissa '
+                + 'juodaan minttuteetä pinjansiemenillä, ja kojuista saa '
+                + 'sokeroituja bambalouni-munkkeja. Hiljaisinta on '
+                + 'keväällä ja myöhäissyksyllä; kesällä pääkatu täyttyy, '
+                + 'mutta sivukujilla on väljempää.',
+              kuva: {
+                tiedosto: 'Sidi Bou Said Allee.jpg',
+                lyhyt: 'Sidi Bou Saïdin kivetty kuja päättyy siniseen, nastoilla koristeltuun oveen.',
+                selite: 'Sidi Bou Saïdin porraskuja valkoisten talojen '
+                  + 'välissä: siniset ikkunaristikot ja nastoin koristeltu '
+                  + 'ovi mustavalkoisen kaaren alla ovat kylän tunnusmerkki.',
+                lahde: 'Amy Keus, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Harissaa, brikiä ja käytännön vinkkejä',
+              teksti: 'Tunisialainen ruoka on Pohjois-Afrikan tulisimpia, ja '
+                + 'lähes kaikkea maustaa harissa, chilistä, valkosipulista '
+                + 'ja mausteista jauhettu tahna, joka hyväksyttiin Unescon '
+                + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022. '
+                + 'Tunnetuin välipala on brik: ohueen malsouka-taikinaan '
+                + 'kolmioksi kääritty kananmuna, jonka seurana on usein '
+                + 'tonnikalaa, persiljaa ja harissaa, paistettuna '
+                + 'rapeaksi. Lablabi on kuminalla ja valkosipulilla '
+                + 'maustettua kikhernelientä kuivien leivänpalojen päällä; '
+                + 'se oli alun perin talviaamujen ruokaa, mutta nyt sitä '
+                + 'syödään mihin aikaan tahansa, myös myöhään illalla. '
+                + 'Kesät ovat kuumia ja kuivia, ja helle voi nousta yli 40 '
+                + 'asteen. Sateet osuvat talveen, mutta silloinkin '
+                + 'sadepäiviä on keskimäärin vain kahdeksan tai yhdeksän '
+                + 'kuussa. Tunisian dinaaria ei saa viedä maasta, joten '
+                + 'ylimääräiset dinaarit vaihdetaan ennen lähtöä. '
+                + 'Karthagossa on myös Tunisian presidentin palatsi, ja '
+                + 'Wikivoyagen mukaan sitä kohti kuvaaminen on kielletty, '
+                + 'myös raunioilta, joilta palatsi näkyy. Ramadanin aikana '
+                + 'moni ravintola on päivällä kiinni.',
+              kuva: {
+                tiedosto: 'Bol de Lablabi, Tunisie, décembre 2017.jpg',
+                lyhyt: 'Lablabi-kulhossa on kikherneitä, leipää, kananmunaa, kapriksia ja harissaa.',
+                selite: 'Tunisialaisen ravintolan lablabi-annos: kuivien '
+                  + 'leivänpalojen ja kikherneiden päällä on kananmuna, '
+                  + 'kapriksia ja punaista harissaa.',
+                lahde: 'Habib M\'henni, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -127993,6 +128459,264 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Bali, Ngurah Rai International Airport, Trans Metro
+       * Dewata, Uluwatu Temple, Kecak, Ubud Monkey Forest, Tegallalang,
+       * Galungan, Penjor, Ngaben, Babi panggang, Sate lilit, Balinese
+       * cuisine, Denpasar) ja Wikivoyagen sivuilta Bali, Indonesia, Ubud,
+       * Bukit Peninsula, Kintamani ja Denpasar — teksti omaa. Maahantulo,
+       * matkailijamaksu ja bussilinjat muuttuvat usein, joten ne on
+       * kirjoitettu varauksin; hinnat ja aukioloajat on jätetty pois.
+       * Nostojen aiheita (Houtman, yhdeksän kuningaskuntaa, Kerta Gosa,
+       * Mads Lange, puputan, subak, Besakih, gamelan, Nyepin merkitys,
+       * canang sari), gallerian Nieuwenkamp-grafiikoita eikä ennen–nyt-
+       * kuvien aiheita (Kutan ranta, Jatiluwih) toisteta. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Uluwatun jyrkänne ja temppeli.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cliffs of Uluwatu, Bali, Indonesia, 20220826 1006 1038.jpg',
+          lyhyt: 'Pura Luhur Uluwatu seisoo kalkkikivijyrkänteen laella Bukitin niemimaan kärjessä.',
+          selite: 'Uluwatun temppelin katot näkyvät korkean, kasvillisuuden '
+            + 'peittämän kalkkikivijyrkänteen laella, ja sen juurella Intian '
+            + 'valtameren aallot vaahtoavat turkoosina elokuussa 2022.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bali ei ole kaupunki vaan tulivuorten saari, jolla '
+          + 'matkailijan päivät jakautuvat etelän rantojen, Ubudin '
+          + 'riisiterassien ja temppelien kesken. Lähes kaikki saapuvat '
+          + 'Kutan kupeessa olevalle lentoasemalle, ja etelän ruuhkissa '
+          + 'liikutaan kyytisovelluksella tai palkatun kuljettajan kanssa. '
+          + 'Temppeliin astutaan aina sarongissa, ja saaren juhlat seuraavat '
+          + '210 päivän kalenteria, joten Galungan-juhlan penjor-salot voivat '
+          + 'kaartua katujen yllä mihin vuodenaikaan tahansa. Warungeissa '
+          + 'syödään paahdettua porsasta ja sitruunaruohovartaita, hanavettä '
+          + 'ei juoda, ja läntinen monsuuni tuo sateet noin lokakuusta '
+          + 'huhtikuuhun. Vuonna 2025 saarella kävi lähes seitsemän miljoonaa '
+          + 'ulkomaista matkailijaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Bali',
+          teksti: 'Balilla sarong kulkee laukussa rantapyyhkeen vieressä.',
+          nosto: 'Uluwatun kalliolla kecak-kuoro toistaa rytmiään '
+            + 'auringonlaskun edessä, ja makakit vahtivat katsojien '
+            + 'aurinkolaseja.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lähes kaikki matkailijat saapuvat Ngurah Rain '
+                + 'kansainväliselle lentoasemalle. Sitä kutsutaan myös '
+                + 'Denpasarin kentäksi, vaikka se on Tubanissa Kutan ja '
+                + 'Jimbaranin välissä, noin 13 kilometriä pääkaupungista '
+                + 'etelään. Kentällä on vain yksi kiitotie, ja sitä on '
+                + 'suunniteltu laajennettavaksi mereen täytetylle maalle. '
+                + 'Indonesian 30 päivän turistiviisumin voi hakea verkosta '
+                + 'etukäteen, ja maahantulokortti täytetään sähköisesti ennen '
+                + 'lentoa; verkkoviisumilla pääsee Balilla automaattiporteista. '
+                + 'Vuonna 2024 maakunta alkoi periä ulkomaisilta matkailijoilta '
+                + 'omaa matkailijamaksua, mutta Wikivoyagen mukaan sitä ei '
+                + 'vuoden 2026 puolivälissä enää tarkastettu kentällä. Säännöt '
+                + 'muuttuvat usein, joten ne kannattaa tarkistaa viranomaisilta '
+                + 'juuri ennen matkaa. Tulohallista pääsee kiinteähintaisella '
+                + 'taksilla, jonka lipun saa kopista, tai Grab-kyytisovelluksen '
+                + 'omalta tiskiltä. Grab ja Gojek toimivat etelässä hyvin, mutta '
+                + 'Canggussa, Jimbaranissa ja Uluwatussa paikalliset taksikuskit '
+                + 'ovat pystyttäneet kylttejä, joiden mukaan sovelluskyydit eivät '
+                + 'saa ottaa siellä matkustajia. Julkinen Trans Metro Dewata '
+                + '-bussi kulkee kuudella linjalla Denpasarin seudulla ja Ubudiin '
+                + 'asti, mutta se on tehty työmatkalaisille: maksu hoidetaan '
+                + 'kortilla tai QR-koodilla, ja bussi jää usein ruuhkaan. Moni '
+                + 'palkkaa koko päiväksi auton ja kuljettajan. Skootterin saa '
+                + 'vuokralle helposti, mutta ajamiseen tarvitaan kansainvälinen '
+                + 'ajokortti moottoripyöräluokalla ja kypärä, eikä matkavakuutus '
+                + 'välttämättä korvaa onnettomuutta ilman niitä. Jaavalta pääsee '
+                + 'lautalla Ketapangista Gilimanukiin puolessa tunnissa ympäri '
+                + 'vuorokauden.',
+              kuva: [
+                {
+                  tiedosto: 'Terminal Internasional Bandara Ngurah Rai Bali.jpg',
+                  lyhyt: 'Matkailijat odottavat laukkuineen Ngurah Rain kansainvälisessä terminaalissa.',
+                  selite: 'Ngurah Rain lentoaseman kansainvälisen terminaalin '
+                    + 'korkean valkoisen kattokaaren alla matkailijat odottavat '
+                    + 'matkalaukkujensa kanssa lentotietotaulun edessä '
+                    + 'marraskuussa 2023.',
+                  lahde: 'Ardfeb, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Traffic on Monkey Forest Road in Ubud, Bali (15009547799).jpg',
+                  lyhyt: 'Skootterit ja autot jonottavat Jalan Monkey Forestilla Ubudin keskustassa.',
+                  selite: 'Ubudin Jalan Monkey Forest -kadulla skootterit '
+                    + 'pujottelevat autojen välissä, ja kadun reunaan on '
+                    + 'pysäköity moottoripyöriä rivissä elokuussa 2014.',
+                  lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Prom ze wschodniej Jawy na Bali, 20220821 1105 9802.jpg',
+                  lyhyt: 'Autolautta ylittää Balinsalmen Jaavan Ketapangin ja Balin Gilimanukin välillä.',
+                  selite: 'KMP Karya Maritim III -autolautta matkalla Itä-Jaavan '
+                    + 'Ketapangista Balin Gilimanukiin elokuussa 2022. Salmen '
+                    + 'ylitys kestää noin puoli tuntia, mutta lastaamista saa '
+                    + 'joskus odottaa pitkään.',
+                  lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Etelän rannat ja Bukitin kalliot',
+              teksti: 'Suurin osa matkailijoista asuu saaren etelässä. Kutan ja '
+                + 'Legianin pitkillä hiekkarannoilla aallot sopivat '
+                + 'surffikoulujen aloittelijoille, Seminyakissa rantaa pitkin '
+                + 'voi kävellä kahviloiden ohi, ja pohjoisempana Canggu on '
+                + 'kasvanut vuoden 2010 jälkeen riisipelloista surffaajien ja '
+                + 'etätyöläisten suosimaksi alueeksi. Etelässä '
+                + 'liikenne on kuitenkin pahimmillaan, ja jalkakäytävät ovat '
+                + 'monin paikoin vain kapeita sadevesiojien kansia. Lentokentän '
+                + 'eteläpuolella alkaa Bukitin niemimaa, kohonneesta '
+                + 'koralliriutasta syntynyt kuiva kalkkikiviylänkö, jossa sataa '
+                + 'selvästi vähemmän kuin muualla saarella. Sen jyrkänteiden '
+                + 'alla murtuvat saaren kovimmat aallot: Uluwatu, Padang-Padang '
+                + 'ja Bingin ovat kokeneiden surffaajien paikkoja. Niemen '
+                + 'lounaiskärjessä kallion reunalla seisoo Pura Luhur Uluwatu, '
+                + 'yksi Balia suojelevista yhdeksästä suuntatemppelistä. Sen '
+                + 'makakit ovat tunnettuja varkaita, jotka nappaavat '
+                + 'aurinkolaseja, sandaaleja ja puhelimia ja luopuvat saaliistaan '
+                + 'vasta hedelmää vastaan. Joka ilta auringonlaskun aikaan '
+                + 'temppelin kalliolla esitetään kecak-tanssi. Kymmenet miehet '
+                + 'istuvat piirissä ja toistavat rytmikästä "tšak"-huutoa ilman '
+                + 'soittimia, kun keskellä tanssijat esittävät Ramayana-eepoksen '
+                + 'kohtauksia. Esitys muokattiin 1930-luvulla vanhasta '
+                + 'transsirituaalista, ja liput voivat loppua kesken. Rannalla '
+                + 'katsotaan lippuja: punainen lippu varoittaa vaarallisista '
+                + 'repivistä virtauksista, ja uimaan mennään keltaisten lippujen '
+                + 'väliin.',
+              kuva: {
+                tiedosto: 'Ramayana Kecak Dancers.jpg',
+                lyhyt: 'Kecak-kuoro nostaa kätensä Uluwatun amfiteatterissa täyden katsomon edessä.',
+                selite: 'Paljasrintaiset, ruudullisiin lannevaatteisiin '
+                  + 'pukeutuneet kecak-laulajat nostavat kätensä ilmaan '
+                  + 'öljylampun ympärillä, ja heidän takanaan katsomo täyttyy '
+                  + 'ilta-auringossa Uluwatun temppelin amfiteatterissa.',
+                lahde: 'Johannnindito Adisuryo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ubud ja riisiterassit',
+              teksti: 'Ubud saaren keskiosassa on Balin taiteen ja käsityön '
+                + 'keskus. Matkailijasta se näyttää yhdeltä pikkukaupungilta, '
+                + 'mutta se on neljätoista kylää, joilla kullakin on oma '
+                + 'banjar-kyläneuvostonsa. Keskustan pääkadut ruuhkautuvat '
+                + 'päivittäin, mutta sivukujilla ja jokilaaksojen riisipelloilla '
+                + 'on yhä hiljaista, ja tanssia tai varjoteatteria esitetään '
+                + 'jossain joka ilta. Jalan Monkey Forestin päässä on pyhä '
+                + 'apinametsä, jossa eli vuonna 2023 noin 1 260 makakia ja '
+                + 'jonka alueella on kolme noin 1350 rakennettua temppeliä. '
+                + 'Apinat eivät pelkää ihmisiä, joten ruokaa ei oteta mukaan, ja '
+                + 'puremasta on hakeuduttava hoitoon raivotaudin takia. Noin '
+                + 'kymmenen kilometriä Ubudista pohjoiseen on Tegallalang, '
+                + 'jonka laaksoon porrastetut riisiterassit ovat saaren '
+                + 'kuvatuimpia. Kojuja ja kauppiaita on paljon, mutta aamulla '
+                + 'ennen kuumuutta ja väkijoukkoja terassien poluilla on vielä '
+                + 'tilaa. Campuhanin harjupolku alkaa Pura Gunung Lebahin '
+                + 'temppelin vierestä ja kulkee noin kaksi kilometriä harjannetta '
+                + 'pitkin; Wikivoyagen mukaan rakentaminen on vuoteen 2026 '
+                + 'mennessä vienyt osan sen maisemista. Ubud on noin 200 metrin '
+                + 'korkeudessa, joten illat ovat rannikkoa viileämpiä, mutta '
+                + 'tammi- ja helmikuussa sataa rankasti. Aikaiset herääjät '
+                + 'lähtevät Kintamanin puolelle Batur-tulivuorelle: noin 1 700 '
+                + 'metrin huipulle kiivetään pimeässä parissa tunnissa '
+                + 'katsomaan, kun aurinko nousee korkeamman Agungin takaa. '
+                + 'Paikallisen oppaan palkkaaminen on pakollista, vaikka reitti '
+                + 'on helppo.',
+              kuva: {
+                tiedosto: 'Rice terraces in Tegallalang 3.jpg',
+                lyhyt: 'Riisiterassit porrastuvat Tegallalangin rinteellä kookospalmujen alla.',
+                selite: 'Vihreät riisipellot nousevat kapeina penkereinä '
+                  + 'Tegallalangin laakson rinnettä ylös kookospalmujen juurelle '
+                  + 'Ubudin pohjoispuolella, ja rinteen laella liehuu värikkäitä '
+                  + 'lippuja.',
+                lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sarong, penjor ja juhlakalenteri',
+              teksti: 'Balilla on arviolta 20 000 temppeliä, ja jokaiseen '
+                + 'astutaan sarongissa ja vyötärölle sidotussa kangasvyössä. '
+                + 'Suurissa matkailijoiden temppeleissä ne saa pääsylipun '
+                + 'yhteydessä tai pientä vuokraa vastaan, mutta oma sarong '
+                + 'kannattaa ostaa heti ensimmäisenä päivänä, sillä '
+                + 'harvemmin käydyissä temppeleissä vuokrausta ei välttämättä '
+                + 'ole. Temppeli '
+                + 'jakautuu kolmeen pihaan. Uloin on ihmisten puoli, jonne muut '
+                + 'kuin hindut pääsevät lähes aina, mutta sisimpään pyhäkköön '
+                + 'pääsy riippuu temppelistä ja käynnissä olevista menoista. '
+                + 'Tavaroita annetaan ja otetaan oikealla kädellä, eikä '
+                + 'kenenkään päähän kosketa. Saaren juhlat seuraavat 210 päivän '
+                + 'pawukon-kalenteria, joten niiden päivämäärät vaeltavat '
+                + 'vuodesta toiseen, ja jokainen temppeli viettää '
+                + 'odalan-juhlaansa ainakin kahdesti vuodessa. Suurin juhlista '
+                + 'on Galungan, jolloin esi-isien henkien uskotaan käyvän '
+                + 'maan päällä. Perheet pystyttävät porttiensa eteen penjorin, '
+                + 'korkean kaarevan bambusalon, joka koristellaan kookoksen '
+                + 'lehdillä, hedelmillä, riisillä ja leivonnaisilla. Juhla '
+                + 'päättyy kymmenen päivää myöhemmin Kuninganiin, ja seuraavat '
+                + 'Galunganit osuvat 13. tammikuuta ja 11. elokuuta 2027. '
+                + 'Nyepi-päivänä, seuraavan kerran 9. maaliskuuta 2027, myös '
+                + 'lentoasema ja satamat ovat kiinni vuorokauden. Ulkomaalaisten '
+                + 'huonoon käytökseen suhtaudutaan nykyään tiukasti: Bali '
+                + 'perusti vuonna 2024 oman turistipoliisin, ja vuonna 2023 '
+                + 'saarelta karkotettiin 340 ulkomaalaista muun muassa '
+                + 'viisumirikkomusten, luvattoman työn ja pyhissä paikoissa '
+                + 'sopimattoman käytöksen vuoksi.',
+              kuva: {
+                tiedosto: 'Penjors (16850614797).jpg',
+                lyhyt: 'Koristellut penjor-salot kaartuvat Ubudin sivukadun yllä.',
+                selite: 'Kaksi korkeaa, kärjestään kaartuvaa bambusaloa on '
+                  + 'koristeltu kookoksenlehtinauhoin Ubudin sivukadulla '
+                  + 'marraskuussa 2013, ja kadun päässä näkyy lisää saloja.',
+                lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Warungista yötorille, kuivakaudesta sateisiin',
+              teksti: 'Balilaista ruokaa syödään edullisimmin ja usein '
+                + 'parhaiten warungeissa, pienissä perheravintoloissa, joista '
+                + 'moni on erikoistunut yhteen ruokalajiin. Nasi campur on '
+                + 'riisiä, jonka ympärille kootaan pieniä annoksia lihaa, '
+                + 'vihanneksia ja sambalia. Toisin kuin muualla '
+                + 'muslimienemmistöisessä Indonesiassa Balin keittiö suosii '
+                + 'sianlihaa. Babi guling on mausteilla täytetty ja vartaassa '
+                + 'pyöritetty porsas, joka oli alun perin juhlamenojen ruokaa. '
+                + 'Bebek betutu on banaaninlehtiin kääritty, hitaasti kypsennetty '
+                + 'ankka, lawar hienonnettua vihannesta, kookosta ja lihaa, ja '
+                + 'sate lilit sitruunaruohon tai bambun ympärille painettua ja '
+                + 'hiilloksella grillattua jauhelihaa. Kasvissyöjän kannattaa '
+                + 'kysyä sambalista, sillä siinä on yleensä katkaraputahnaa. '
+                + 'Pääkaupunki Denpasar jää monelta näkemättä, vaikka sen '
+                + 'Kereneng-yötorilla syödään kojuista aitoa indonesialaista '
+                + 'ruokaa. Hanavettä ei juoda, ja paikallisen arak-viinan '
+                + 'kanssa on syytä olla varovainen, sillä metanolilla jatketut '
+                + 'juomat ovat aiheuttaneet myrkytyksiä ja kuolemia. Päivän '
+                + 'lämpötila on ympäri vuoden noin 20–33 astetta. Läntinen '
+                + 'monsuuni tuo sateita suunnilleen lokakuusta huhtikuuhun, '
+                + 'rankimmin joulu–maaliskuussa, jolloin kuurot tulevat usein '
+                + 'iltapäivällä ja rannoille huuhtoutuu roskia. Kesäkuusta '
+                + 'syyskuuhun on kuivaa, ja heinä–elokuu on vilkkainta sesonkia. '
+                + 'Vuorilla Bedugulissa ja Kintamanissa illat ovat koleita, '
+                + 'joten villapaita kannattaa pakata mukaan.',
+              kuva: {
+                tiedosto: 'Lawar babi guling.jpg',
+                lyhyt: 'Lautasella on babi gulingin rapeaa nahkaa ja lihaa sekä lawar-salaattia.',
+                selite: 'Balilaisessa annoksessa on paahdetun porsaan rapeaa '
+                  + 'nahkaa ja lihaa, hienonnettua lawar-vihannessalaattia ja '
+                  + 'lautasen reunalla jauhelihavarras.',
+                lahde: 'ybs, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',
