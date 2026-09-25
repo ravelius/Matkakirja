@@ -115402,6 +115402,270 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Long Range Desert Group',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Murzuk, Murzuq District, Murzuq Desert, Idehan
+       * Ubari, Gaberoun, Dawada, Waw an Namus, Tourism in Libya, Libyan
+       * cuisine, Libyan dinar, Acacus Mountains, List of World Heritage
+       * Sites in Libya, 2019 Murzuq airstrike, Toubou people, Sabha
+       * Airport) ja Wikivoyagen Libya-, Ghat- ja Sabha-sivuilta,
+       * matkustusvaroitukset Britannian ulkoministeriön Libya-sivulta
+       * (päivitetty 21.7.2026) ja Yhdysvaltain ulkoministeriön tasolta 4
+       * (15.7.2025) — teksti omaa. Suomen ulkoministeriön tiedotteen
+       * tasoa ei mainita, koska sivua ei saatu luettua; lukija ohjataan
+       * sinne. Sebhan ja Murzukin etäisyys (noin 135 km, suunta 202°) on
+       * laskettu Wikipedian koordinaateista. Iskun päivä on otettu
+       * iskun omasta artikkelista (5.8.2019, kaupungintalo), koska
+       * Murzuk-artikkelin maininta (häät 2020) on sen kanssa ristiriidassa.
+       * Nostojen aiheita (linnoitus, garamantit, brittitutkijat,
+       * Nachtigal, Tinné, berberikorut, Italian valta ja LRDG,
+       * orjakauppa), africa-kulttuurin aiheita (Acacusin kalliomaalaukset
+       * vihreän Saharan todisteena, taatelipalmu, karavaanien kieli),
+       * Tripolin teetä pähkinöineen eikä Libyan maalehden aiheita (Waw an
+       * Namusin kaldera ja järvet, Suuri tekojoki ja fossiilivesi, asida,
+       * gideed, bourdeem, hiekkaleipä) toisteta. Galleriaa lohkossa ei
+       * ole. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja tiedostosivuilta, ja kuvat katsottu silmin.
+       * Pystykuva: Murzuqin hiekkameri avaruusasemalta (NASA, PD).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'ISS-42 Murzuq Desert in Libya.jpg',
+          lyhyt: 'Murzuqin hiekkameri avaruusasemalta: dyynikuvio peittää aavikon reunasta reunaan.',
+          selite: 'Astronautti Terry Virts kuvasi Murzuqin hiekkameren '
+            + 'avaruusasemalta helmikuussa 2015 näyttääkseen, kuinka valtava '
+            + 'se on. Oikeassa reunassa hiekka vaihtuu tummempaan kivikkoon, '
+            + 'jonka laidalla erottuu keitaiden ja kastelupeltojen täpliä.',
+          lahde: 'NASA/Terry Virts, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Murzuk on saman nimisen hiekkameren pohjoislaidalla, ja se '
+          + 'on yksi maailman kuivimmista paikoista: sadetta tulee '
+          + 'keskimäärin seitsemän millimetriä vuodessa, ja kesäkuusta '
+          + 'elokuuhun päivän keskimääräinen ylin lämpötila on yli 40 '
+          + 'astetta. Matkailijalle kaupunki on nyt suljettu, sillä Libyan '
+          + 'eteläosa kuuluu alueisiin, joille esimerkiksi Britannian ja '
+          + 'Yhdysvaltain ulkoministeriöt kehottavat olemaan matkustamatta '
+          + 'lainkaan. Tämä opas kertoo, '
+          + 'mitä Fezzan odottaa, kun matkaan joskus voi taas lähteä: '
+          + 'avaruudesta näkyviä hiekkaselänteitä, dyynien väliin kätkeytyviä '
+          + 'suolajärviä, lihakauppoja, joissa myydään kamelia, ja Ghatin '
+          + 'tuaregijuhlaa, johon väkeä tulee Murzukista asti.',
+        artikkeli: {
+          nimi: 'Matkailijan Murzuk',
+          teksti: 'Murzukiin ei nyt matkusteta, mutta hiekkameret odottavat.',
+          nosto: 'Murzukin kaduilla on yhä kanurin- ja kanembunkielisiä '
+            + 'nimiä, muistona ajasta, jolloin kaupunkia hallittiin Bornusta '
+            + 'Tšad-järven seudulta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Varoitukset ensin',
+              teksti: 'Murzuk on alueella, jonne suuret länsimaat kehottavat '
+                + 'olemaan matkustamatta. Britannian ulkoministeriö neuvoo '
+                + 'välttämään kaikkea matkustamista Libyaan lukuun ottamatta '
+                + 'Tripolia, Misrataa ja Benghazin seutua, eikä niihinkään '
+                + 'ilman välttämätöntä syytä, joten koko Fezzan jää '
+                + 'varoituksen piiriin. Yhdysvallat pitää Libyaa korkeimmalla '
+                + '"älä matkusta" -tasollaan ja mainitsee syinä rikollisuuden, '
+                + 'terrorismin, sieppaukset, räjähtämättömät miinat ja '
+                + 'aseelliset selkkaukset. Varoitukset eivät ole teoriaa: '
+                + 'elokuussa 2011 tubujen taistelijoiden kerrottiin vallanneen '
+                + 'Murzukin, helmikuussa 2019 sen ottivat Khalifa Haftarin '
+                + 'joukot, ja saman '
+                + 'vuoden elokuussa lennokki-isku kaupungintaloon surmasi 43 '
+                + 'ihmistä. Vuonna 2021 Isis ilmoitti tehneensä Fezzanissa kaksi '
+                + 'pommi-iskua turvallisuusjoukkoja vastaan. Suomen '
+                + 'ulkoministeriön matkustustiedote kannattaa lukea ennen kuin '
+                + 'matkaa edes harkitsee, sillä matkavakuutus voi raueta '
+                + 'varoituksen vastaisella matkalla, eikä ulkomainen '
+                + 'lääkintälento välttämättä saa lupaa hakea sairastunutta '
+                + 'Libyasta. Kun reitti joskus avautuu, Fezzanin portti on '
+                + 'Sebha, jonka lentokenttä avattiin uudelleen siviililiikenteelle '
+                + '2017. Sieltä Murzukiin on runsaat 130 kilometriä linnuntietä '
+                + 'etelälounaaseen. Libya otti sähköisen viisumin käyttöön '
+                + 'maaliskuussa 2024, ja ilman järjestettyä matkaa tai '
+                + 'libyalaista kutsujaa turistin on Wikivoyagen mukaan '
+                + 'vaihdettava maahan tullessaan tuhat dollaria. Poliisille on '
+                + 'ilmoittauduttava viikon kuluessa saapumisesta, ja passin on '
+                + 'oltava aina mukana. Etelässä Nigerin raja-asema on Tumussa, '
+                + 'mutta rajaseutua pidetään salakuljettajien ja aseellisten '
+                + 'ryhmien maana, jota valtio ei käytännössä valvo.',
+              kuva: [
+                {
+                  tiedosto: 'سبها المدينة القديمة.jpg',
+                  lyhyt: 'Sebhan vanha savikaupunki ja uusi keskusta: täältä Fezzanin matkat alkavat.',
+                  selite: 'Sebhan vanhan kaupungin tiiviisti rakennetut '
+                    + 'savitalot ja katetut kujat päättyvät leveään katuun, '
+                    + 'jonka takana alkaa betonitaloinen uusi kaupunki. Kuva on '
+                    + 'otettu ilmasta helmikuussa 2024.',
+                  lahde: 'Wesam alhmale, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Road from Sabha to Ubari - panoramio.jpg',
+                  lyhyt: 'Sebhasta länteen kulkeva maantie ohittaa savesta tehdyn rakennelman jäänteen.',
+                  selite: 'Päällystetty maantie Sebhasta Ubariin kulkee '
+                    + 'sähkölinjojen, palmujen ja matalien talojen ohi, ja tien '
+                    + 'laidalla seisoo savesta tehdyn rakennelman jäänne. '
+                    + 'Samalta tieltä erkanevat pistet Ubarin järville.',
+                  lahde: 'calind, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Erg Murzuk south of Tmissah.jpg',
+                  lyhyt: 'Maastoauton renkaisiin pumpataan ilmaa, kun Murzuqin hiekkameri on ylitetty.',
+                  selite: 'Maaliskuussa 2002 kuljettaja pumppaa käsipumpulla '
+                    + 'ilmaa maastoauton renkaisiin Tmissahin eteläpuolella: '
+                    + 'Murzuqin hiekkameren pehmeä hiekka on takana, ja edessä '
+                    + 'on taas kovempaa pistettä.',
+                  lahde: 'Bernhard Holub, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi hiekkamerta',
+              teksti: 'Murzuk on Idehan Murzuqin pohjoisreunalla. Noin 58 000 '
+                + 'neliökilometrin hiekkameri on nimetty kaupungin mukaan, ja '
+                + 'pohjoisempana on yhtä laaja Idehan Ubari; tuaregien '
+                + 'tamasheqin kielessä idehan tarkoittaa hienoa hiekkaa. '
+                + 'Etelässä Murzuqin erg rajautuu Tibestin ja Tassili '
+                + 'n’Ajjerin vuoristoihin. Ylhäältä katsottuna hiekkameri ei ole '
+                + 'tasaista dyynikenttää. Sen länsiosaa hallitsevat draat, '
+                + 'valtavat hiekkaselänteet, joiden välissä on sileäpohjaisia ja '
+                + 'lähes hiekattomia altaita. Nimi tulee arabian käsivartta '
+                + 'tarkoittavasta sanasta. Draojen selkään on kasautunut '
+                + 'pienempiä dyynejä kolmea lajia: tuulen suuntaisia '
+                + 'pitkittäisdyynejä, tuulta vastaan kaartuvia poikkidyynejä ja '
+                + 'tähtidyynejä, joiden sakarat kohtaavat yhdessä huipussa. '
+                + 'Suuret selänteet pysyvät lähes paikallaan, mutta pienet dyynit '
+                + 'vaeltavat niiden yli ja hajoavat alatuulen puolella '
+                + 'yksittäisiksi jyviksi, jotka tuuli kuljettaa altaiden poikki. '
+                + 'Geologit arvelevat, että draat syntyivät toisenlaisten '
+                + 'tuulten aikaan kuin nykyiset pohjoiskoillisesta puhaltavat. '
+                + 'Hiekan alla on öljyä: vuodesta 1957 Murzuqin altaasta on '
+                + 'löydetty yksitoista öljykenttää, joista kahta pidetään '
+                + 'jättiläisinä. Kauempana idässä, Sebhan ja Kufran vanhan '
+                + 'karavaanitien varrella, on Waw an Namusin tulivuori. Ennen '
+                + 'sisällissotaa matkailijat ajoivat sinne Sebhasta ja '
+                + 'jatkoivat Rebianan hiekkameren kautta Kufraan, mutta nyt '
+                + 'pitkät etäisyydet ja sota tekevät perille pääsystä vaikeaa.',
+              kuva: {
+                tiedosto: 'Sanddunes marzuq sandsea.jpg',
+                lyhyt: 'Avaruudesta näkyvät Murzuqin draat, ja hiekkaselänteiden välissä on sileitä altaita.',
+                selite: 'Avaruusasemalta otetun kuvan englanninkieliset '
+                  + 'merkinnät nimeävät draat, niiden väliset altaat sekä '
+                  + 'pitkittäis-, poikki- ja tähtidyynit, jotka ovat '
+                  + 'kasautuneet suurten hiekkamassojen selkään.',
+                lahde: 'NASA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Järvet dyynien välissä',
+              teksti: 'Murzukin vesi tulee maan alta, kuten koko Fezzanin, sillä '
+                + 'pysyviä jokia seudulla ei ole ja sadetta tulee tuskin '
+                + 'lainkaan. Näkyvimmin pohjavesi nousee pintaan pohjoisempana '
+                + 'Ubarin hiekkameressä, jonka dyynien väliin on kätkeytynyt '
+                + 'kourallinen järviä palmurenkaineen. Tunnetuin on Gaberoun, '
+                + 'suuri ja hyvin suolainen järvi, jossa uiminen voi silti '
+                + 'olla miellyttävää, vaikka vedessä elää pieniä suolavesiäyriäisiä. '
+                + 'Lähistöllä ovat myös Umm al-Maa eli veden äiti sekä Mandaran '
+                + 'ja Mafon järvet. Järville käännytään Sebhan ja Ubarin '
+                + 'välisen maantien varresta noin 150 kilometriä Sebhasta '
+                + 'länteen, ja viimeiset 36 kilometriä ajetaan nelivedolla '
+                + 'dyynien yli. Järvien hiekkaa kutsutaan nimellä Ramlat al-Dawada. '
+                + 'Dawadat keräsivät järvistä natronia ja suolakatkarapuja, '
+                + 'jotka he kuivasivat, murskasivat ja puristivat kakuiksi, '
+                + 'joskus taatelien kanssa, ja myivät karavaaneille; Fezzanissa '
+                + 'äyriäistä pidettiin lemmenrohtona. Nimi tarkoittaa '
+                + 'arabiaksi matokansaa. Gaberounin asukkaat muutettiin '
+                + '1980-luvulla hiekkameren ulkopuolelle rakennettuun '
+                + 'betonikylään, ja vanhan kylän rauniot ovat yhä palmujen '
+                + 'lomassa järven länsirannalla. Koillisrannalla on ollut '
+                + 'yksinkertainen leiri majoineen ja matkamuistokauppoineen. '
+                + 'Paras vierailuaika on lokakuusta toukokuuhun, sillä kesällä '
+                + 'on kuuma ja hyttysiä on paljon.',
+              kuva: {
+                tiedosto: 'Um el Ma.jpg',
+                lyhyt: 'Umm al-Maan järvi kiiltää dyynien keskellä, ja taustalla on kuivunut Mandara.',
+                selite: 'Ilmasta kuvattu Umm al-Maa on kapea, palmujen '
+                  + 'reunustama järvi Ubarin hiekkameressä. Taaempana näkyvän '
+                  + 'Mandaran järven pohja oli kuvaushetkellä marraskuussa 2010 '
+                  + 'kuivunut.',
+                lahde: 'Jürgen Büttner, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kamelia ja oikea käsi',
+              teksti: 'Lammas on Libyan yleisin liha, mutta etelässä syödään '
+                + 'tavallisemmin kamelia, ja Murzukin lihakaupoissa ruhot '
+                + 'roikkuvat koukuissa tiskin takana. Etelän keittiö on '
+                + 'rannikkoa arabialaisempi ja berberiläisempi: aterioiden '
+                + 'pohjana ovat säilötyt raaka-aineet, kuten kuivattu liha, '
+                + 'hapatettu maito, ohra ja kestävät palkokasvit. Libyassa '
+                + 'juodaan myös lagbia, joidenkin palmujen varresta laskettua '
+                + 'mahlaa. Lounaisen Ghatin tunnetuimmat ruoat ovat fitat, '
+                + 'tammasein ja Ghatin oma kuskus. Alkoholi on ollut Libyassa '
+                + 'kielletty vuodesta 1969, eikä sianlihaa syödä. Ramadanin '
+                + 'aikana julkisella paikalla ei syödä, juoda eikä tupakoida. '
+                + 'Kotiin kutsuttu vieras saa eteensä teetä, kahvia ja '
+                + 'naposteltavaa, eikä tarjoilusta kieltäytyminen ole '
+                + 'kohteliasta. Isäntä kehottaa ottamaan lisää yhä uudelleen, '
+                + 'ja lisän ottaminen jättää hyvän vaikutelman. Ruokaa, rahaa ja tavaroita '
+                + 'ojennetaan oikealla kädellä, koska vasenta pidetään '
+                + 'epäpuhtaana, ja vanhimmat tervehditään ensin. Sotilaita, '
+                + 'poliiseja ja heidän rakennuksiaan ei valokuvata, eikä '
+                + 'politiikasta kannata keskustella. Rahana on Libyan dinaari, '
+                + 'joka jakautuu tuhanteen dirhamiin. Puhekielessä kymmenen '
+                + 'dirhamia on garsh, ja lännessä dinaaria sanotaan jniksi '
+                + 'vanhan englantilaisen guinea-kolikon mukaan. Pankkikortin '
+                + 'toimivuus kannattaa varmistaa ennen kuin lähtee suurista '
+                + 'kaupungeista, sillä muualla pankkiautomaatit voivat olla '
+                + 'rikki tai puuttua kokonaan.',
+              kuva: {
+                tiedosto: 'Butcher at Murzuq Libya.jpg',
+                lyhyt: 'Murzukilainen lihakauppias esittelee kamelin päätä koukuissa roikkuvien ruhojen edessä.',
+                selite: 'Maaliskuussa 2002 kuvatussa murzukilaisessa '
+                  + 'lihakaupassa kamelinlihaa roikkuu koukuissa sinivalkoisen '
+                  + 'kaakeliseinän edessä, ja tiskin laidalla on sininen vaaka.',
+                lahde: 'Bernhard Holub, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kun Fezzan oli retkeilijöiden',
+              teksti: 'Libyassa matkailua jarrutettiin vielä 1970- ja '
+                + '1980-luvuilla, ja vasta 1990-luvulla hallitus alkoi '
+                + 'houkutella matkailijoita. Vuosikymmenen lopulla omilla '
+                + 'maastoautoillaan liikkuvat eurooppalaiset pääsivät maahan '
+                + 'libyalaisten välittäjien kutsuilla, ja vuoteen 2002 asti '
+                + 'Fezzania sai kiertää ilman paikallisen matkatoimiston kallista '
+                + 'saattajaa. Polttoaine maksoi vain muutamia pennejä litralta. '
+                + 'Matkailijoita kävi vuonna 2004 noin 149 000 ja vuonna 2007 '
+                + 'jo 180 000. Aavikolle lähtevät tulivat katsomaan Acacusin ja '
+                + 'Messakin kalliotaidetta, Ubarin dyynijärviä, garamanttien '
+                + 'raunioita ja Murzukin ottomaaniaikaisia linnoituksia, ja '
+                + 'muutaman vuoden ajan Tumun kautta pääsi Nigeriin '
+                + 'salakuljettajien Marlboro-pistettä, Kanem-Bornun vanhaa '
+                + 'karavaanitietä. Bornun vallasta Murzukissa muistuttavat yhä '
+                + 'kadunnimet, joista osa on kanembuksi ja kanuriksi. Vuoden '
+                + '2011 sota katkaisi matkailun. Tadrart Acacusin kalliotaidetta '
+                + 'on turmeltu tahallaan ainakin vuodesta 2009, ja vuonna 2016 '
+                + 'Unesco siirsi kaikki Libyan viisi maailmanperintökohdetta '
+                + 'uhanalaisten luetteloon. Juhlat ovat silti jatkuneet: '
+                + 'Murzukissa pidettiin 2013 Libyan ensimmäinen tubujen '
+                + 'kansallinen festivaali, ja Ghatin tuaregijuhla järjestetään '
+                + 'joka vuosi joulukuun lopussa. Siihen on osallistunut väkeä '
+                + 'myös Murzukista, Ubarista ja Sebhasta. Vuonna 2025 Libyassa '
+                + 'kävi taas noin satatuhatta matkailijaa.',
+              kuva: {
+                tiedosto: 'Tuareg Tradition Dance.jpg',
+                lyhyt: 'Tuaregitanssija loikkaa ilmaan Ghatin tuaregifestivaalilla joulukuussa 2016.',
+                selite: 'Al-Barket-yhtyeen tanssija hyppää Ghatin 22. '
+                  + 'tuaregifestivaalilla, ja katsojat ja rumpalit seuraavat '
+                  + 'kehän laidalla. Taustalla kohoaa dyyni.',
+                lahde: 'Bashar Shglila, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'orjakauppa',
@@ -115651,6 +115915,254 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Panulirus cygnus',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Geraldton; Geraldton Airport; TransGeraldton; Transwa;
+       * Indian Ocean Drive; St Francis Xavier's Cathedral, Geraldton; John
+       * Hawes; Mullewa, Western Australia; Cathedral of the Holy Cross,
+       * Geraldton; Randolph Stow; The Merry-Go-Round in the Sea; Greenough,
+       * Western Australia; Kalbarri National Park; Hutt Lagoon) ja
+       * Wikivoyagen Geraldton-, Kalbarri- ja Mid West -sivuilta — teksti
+       * omaa. Nostojen aiheita (lyijy ja satama, rautatie ja asema, Point
+       * Mooren majakka, tuuli ja purjelautailu, piikkihummeri, Batavia ja
+       * Houtman Abrolhos kalastusleireineen), valokuvien aiheita (Charon,
+       * HMAS Sydneyn muistomerkki, rannan uimalahti ja viljasiilo,
+       * kalastusalus, satama) eikä saapumistekstin aiheita toisteta. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: katedraalin julkisivu (CC BY-SA 4.0).
+       * Leaning Treen wajarrinkielinen nimi Wirnda Ngadara on luettu
+       * paikan opastetaulusta Commonsin kuvassa "Leaning Tree, Greenough,
+       * October 2023 02.jpg" (DaHuzyBru, CC BY-SA 4.0), jota ei käytetä
+       * oppaan kuvana. Bussikuvan linjanumero 853 näkyy kuvan
+       * linjakilvessä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'St Francis Xavier Cathedral, Geraldton, October 2023 02.jpg',
+          lyhyt: 'Pyhän Franciscus Xavierin katedraalin kaksoistornit kohoavat Geraldtonin keskustassa.',
+          selite: 'John Hawesin suunnittelema Pyhän Franciscus Xavierin '
+            + 'katedraali lokakuussa 2023. Kellanruskean kivijulkisivun '
+            + 'kaksoistornien aukoista näkyvät kellot, ja pääoven edessä on '
+            + 'kivetty labyrintti.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Geraldton on Keskilännen ainoa suuri kaupunki runsaan '
+          + 'neljänsadan kilometrin päässä Perthistä, ja monelle pohjoiseen '
+          + 'ajavalle se on matkan ensimmäinen yöpymispaikka. Perille pääsee '
+          + 'rannikkotietä, bussilla tai tunnin lennolla. Keskustassa '
+          + 'kannattaa käydä papin ja arkkitehdin John Hawesin rakentamassa '
+          + 'katedraalissa ja syödä Marine Terracen varrella, ja päiväretket '
+          + 'vievät tuulen taivuttamien puiden luo Greenoughiin, '
+          + 'vaaleanpunaiselle Hutt Lagoonille ja Kalbarrin rotkoille. Kesän '
+          + 'helle voi olla ankara, joten vettä ja polttoainetta on syytä '
+          + 'varata reilusti.',
+        artikkeli: {
+          nimi: 'Matkailijan Geraldton',
+          teksti: 'Geraldtonissa pappi rakensi katedraalin, ja päiväretket vievät punaisille rotkoille.',
+          nosto: 'Geraldtonista lähti 5. joulukuuta 1921 Australian '
+            + 'ensimmäinen säännöllinen lentopostivuoro, joka lensi '
+            + 'Kimberleyn Derbyyn.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rannikkotie, valtatie vai tunnin lento',
+              teksti: 'Perthistä Geraldtoniin on maanteitse runsaat 420 '
+                + 'kilometriä, ja reittejä on kaksi. Rannikkoa seuraava Indian '
+                + 'Ocean Drive päällystettiin koko matkalta vuonna 2010, ja se on '
+                + 'henkilöautolla noin puoli tuntia nopeampi ja maisemiltaan '
+                + 'kauniimpi. Sisämaan Brand Highway on raskaan liikenteen reitti, '
+                + 'ja koska tie on pitkälti yksikaistainen kumpaankin suuntaan, '
+                + 'jättimäisten rekkajunien ohittaminen on vaarallista etenkin '
+                + 'pimeällä. Transwan bussit ajavat Perthistä Geraldtoniin '
+                + 'useita kertoja päivässä rannikon tai sisämaan kautta, ja '
+                + 'matka kestää noin kuusi tuntia; osa vuoroista jatkaa '
+                + 'Northamptonin kautta Kalbarriin. Henkilöjunia kaupunkiin ei '
+                + 'ole kulkenut 1970-luvun jälkeen. Lentäen Perthistä pääsee '
+                + 'noin tunnissa: QantasLink ja Nexus Airlines lentävät '
+                + 'päivittäin, ja kenttä on Moonyoonookassa noin kymmenen '
+                + 'kilometriä kaupungista itään. Kentälle ei kulje julkista '
+                + 'liikennettä, joten sieltä jatketaan taksilla tai etukäteen '
+                + 'varatulla vuokra-autolla. Kentällä on pitkä historia: '
+                + 'joulukuussa 1921 Geraldtonista lähti Australian ensimmäinen '
+                + 'säännöllinen lentopostivuoro, joka lensi Derbyyn. Kaupungin '
+                + 'sisällä liikennöi TransGeraldtonin kahdeksan bussilinjaa, '
+                + 'mutta lähikyliin kuten Greenoughiin ne eivät ulotu, ja '
+                + 'Kalbarriin tai kauemmas pohjoiseen tarvitaan oma auto.',
+              kuva: [
+                {
+                  tiedosto: 'Geraldton Airport main terminal, October 2023 01.jpg',
+                  lyhyt: 'Geraldtonin lentoaseman matala terminaali kaarevine katoksineen.',
+                  selite: 'Geraldtonin lentoaseman pääterminaali lokakuussa '
+                    + '2023. Kaarevien katosten alla on lähtevien matkustajien '
+                    + 'sisäänkäynti, ja kyltti osoittaa pysäkin, jolla vain '
+                    + 'taksit ja kuljetusbussit ottavat kyytiin matkustajia.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'VH-8XN at Geraldton Airport, October 2023 01.jpg',
+                  lyhyt: 'Nexus Airlinesin potkuriturbiinikone odottaa Geraldtonin kentällä.',
+                  selite: 'Nexus Airlinesin Dash 8 -potkuriturbiinikone '
+                    + 'VH-8XN Geraldtonin lentoasemalla lokakuussa 2023. '
+                    + 'Etualalla ovat matkatavaroiden lastaukseen käytettävät '
+                    + 'hihnakärryt, ja kentän takana näkyy kuivaa, matalaa '
+                    + 'maastoa.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'TransGeraldton Mercedes-Benz OC500LE (Volgren CR228L Futurebus) TP2101 at Chapman Road,Geraldton.jpg',
+                  lyhyt: 'TransGeraldtonin linjan 853 bussi ajaa Chapman Roadilla vanhan vankilan ohi.',
+                  selite: 'TransGeraldtonin kaupunkibussi linjalla 853 '
+                    + 'Chapman Roadilla syyskuussa 2023. Taustalla on vanha '
+                    + 'Geraldtonin vankila, jonka rakennuksissa toimii nykyään '
+                    + 'käsityökeskus.',
+                  lahde: 'ZidaneHartono, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Marine Terrace, torit ja oma saalis',
+              teksti: 'Keskustan pääkatu Marine Terrace kulkee rannan '
+                + 'suuntaisesti, ja sen varrella on suurin osa kaupungin '
+                + 'kahviloista, pubeista ja ravintoloista, joissa tarjolla on '
+                + 'esimerkiksi mereneläviä, puu-uunipizzaa sekä thaimaalaista ja '
+                + 'italialaista ruokaa. Paikalliset kutsuvat kaupunkia lyhyesti '
+                + 'Geroksi, ja se on koko Keskilännen kauppapaikka: Carnarvonista, '
+                + 'Exmouthista ja Meekatharrasta asti ajetaan tänne ostoksille. '
+                + 'Pohjoiseen tai sisämaahan lähtevän kannattaakin täydentää '
+                + 'eväät juuri täällä. Lauantaiaamuisin kahdeksasta '
+                + 'puoleenpäivään Maitland Parkissa Cathedral Avenuella pidetään '
+                + 'tuottajatori, ja sunnuntaisin tori kokoontuu vanhalle '
+                + 'rautatieasemalle Chapman Roadin ja Forrest Streetin kulmaan. '
+                + 'Moni hankkii kalansa itse. Rannalta ja laitureilta saa '
+                + 'kalastaa ilman lupaa, mutta veneestä kalastaminen vaatii '
+                + 'kalastusviranomaisen luvan, ja monille lajeille on koko- ja '
+                + 'saaliskiintiöt. Rannalta pyydetään esimerkiksi sinikalaa, '
+                + 'jota australialaiset kutsuvat tailoriksi, ja kauempana '
+                + 'riutoilla dhufishiä ja snapperia. Vajaan kolmen '
+                + 'meripeninkulman päässä rannikosta on kuitenkin alue, jolla '
+                + 'kalastus on kielletty ympäri vuoden. Sinne upotettiin 2004 '
+                + 'South Tomi -alus, joka oli jäänyt kiinni laittomasta '
+                + 'patagonianhammaskalan pyynnistä Australian subantarktisilla '
+                + 'vesillä ja jota oli ajettu takaa neljätoista päivää. Hylystä '
+                + 'tuli keinoriutta ja sukelluskohde, jonka kansi on noin '
+                + 'kolmentoista metrin syvyydessä.',
+              kuva: {
+                tiedosto: 'OIC geraldton cbd marine terrace E from cathedral.jpg',
+                lyhyt: 'Marine Terrace -pääkatu hiljaisena aamuna Cathedral Avenuen kulmasta itään.',
+                selite: 'Marine Terrace itään Cathedral Avenuen kulmasta '
+                  + 'toukokuussa 2014 pian auringonnousun jälkeen. Kadun '
+                  + 'varrella on vanhoja liiketaloja katoksineen, ja '
+                  + 'liikenneympyrän keskellä seisoo majakkaa muistuttava '
+                  + 'pylväs.',
+                lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Pappi, joka rakensi katedraalin',
+              teksti: 'Geraldtonin keskustaa hallitsee Pyhän Franciscus '
+                + 'Xavierin katedraali, jonka suunnitteli englantilainen pappi '
+                + 'ja arkkitehti John Hawes. Hän tuli kaupunkiin vuonna 1915 pian '
+                + 'katoliseksi papiksi vihkimisensä jälkeen. Rakennustyöt '
+                + 'alkoivat 1916, ja valmis katedraali vihittiin käyttöön '
+                + 'vuonna 1938. Kaksoistorneineen se edustaa espanjalaista '
+                + 'lähetysasematyyliä, ja sisällä raidalliset holvikaaret on '
+                + 'maalattu Córdoban moskeijakatedraalin innoittamina. Vuosina '
+                + '2015–2017 rakennus kunnostettiin, ja vuonna 2019 länsitorneihin '
+                + 'asennettiin 27 kellon kellopeli, joka lyö vartit kahdeksasta '
+                + 'aamulla kuuteen illalla. Hawesin muita rakennuksia voi kiertää '
+                + 'Monsignor Hawes Heritage Trail -reitillä; Mullewan kirkon noin '
+                + 'sadan kilometrin päässä sisämaassa hän rakensi pitkälti omin '
+                + 'käsin. Kaupungin anglikaaninen katedraali vuodelta 1964 '
+                + 'tunnetaan puolestaan laajoista lasimaalauksistaan. Wajarrin '
+                + 'kielellä, joka on Keskilännen puhutuin aboriginaalikieli, '
+                + 'Geraldtonin nimi on Jambinu. Yamaji-taiteelle ovat '
+                + 'ominaisia tuhansista okrapisteistä syntyvät kuviot, ja '
+                + 'Geraldtonin museossa on pysyvä näyttely yamajien ja '
+                + 'wajarrien kulttuurista. Kaupungissa syntynyt kirjailija '
+                + 'Randolph Stow sijoitti romaaninsa The Merry-Go-Round in the '
+                + 'Sea (1965) 1940-luvun Geraldtoniin.',
+              kuva: {
+                tiedosto: 'St Francis Xavier Cathedral, Geraldton, October 2023 05.jpg',
+                lyhyt: 'Katedraalin keskilaivan raidalliset holvikaaret on maalattu Córdoban mallin mukaan.',
+                selite: 'Pyhän Franciscus Xavierin katedraalin keskilaiva '
+                  + 'lokakuussa 2023. Harmaavalkoiset seinät ja '
+                  + 'oranssiraidalliset holvikaaret johtavat alttarille, ja '
+                  + 'kaaren yläpuolella kiertää latinankielinen teksti.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaatuneet puut ja punainen rotko',
+              teksti: 'Brand Highwaytä etelään 24 kilometrin päässä on '
+                + 'Greenough, 1800-luvun jälkipuoliskolla vehnänviljelyllä '
+                + 'vaurastunut kylä, jonka kalkkikivirakennuksista monet ovat '
+                + 'nykyään National Trustin hoidossa. Tasangon pelloilla kasvaa '
+                + 'punaeukalyptuksia, jotka jatkuva etelätuuli on taivuttanut '
+                + 'paikoin lähes vaakatasoon; paikan opastetaulun mukaan niiden '
+                + 'wajarrinkielinen nimi on Wirnda Ngadara. Pohjoisessa noin '
+                + '160 kilometrin päässä on Kalbarrin kansallispuisto, jossa '
+                + 'Murchison-joki on kovertanut punavalkoraitaiseen '
+                + 'hiekkakiveen lähes 80 kilometriä pitkän rotkon. Kalbarri '
+                + 'Skywalkin kaksi ulokenäköalatasannetta kurottavat noin sadan '
+                + 'metrin korkeudella joen mutkan ylle, ja ne ovat esteettömiä. '
+                + 'Läheltä lähtevä polku vie Nature\'s Window -kivikaarelle, '
+                + 'puiston tunnetuimpaan kuvauskohteeseen. Puistossa ei ole '
+                + 'juomavettä, ja sisämaan rotkoilla lämpötila nousee '
+                + 'kesällä usein yli 40 asteen. Kalbarrin seudulla kukkii yli '
+                + '800 luonnonkukkalajia, eniten elo–syyskuussa. Matkalla '
+                + 'kannattaa pysähtyä Port Gregoryn kohdalla Hutt Lagoonilla: '
+                + 'suolajärvi on vaaleanpunainen, koska siinä elää '
+                + 'beetakaroteenia tuottavaa levää, ja järven altaissa toimii '
+                + 'maailman suurin mikrolevien viljelylaitos. Sisämaassa Mullewa on '
+                + 'harvoja paikkoja Länsi-Australiassa, joissa kasvaa '
+                + 'wreath flower -niminen luonnonkukka.',
+              kuva: {
+                tiedosto: 'Kalbarri Skywalk Platform Over the Murchison Gorge.jpg',
+                lyhyt: 'Kalbarri Skywalkin ruosteenruskea näköalatasanne kurottaa Murchison-joen rotkon ylle.',
+                selite: 'Kalbarri Skywalkin ulokemainen näköalatasanne '
+                  + 'marraskuussa 2020. Tasanne ulottuu punaisen '
+                  + 'hiekkakivijyrkänteen reunalta rotkon ylle, ja taustalla '
+                  + 'aukeaa matala pensaikko.',
+                lahde: 'Findlay Osborn, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helle, riutan virtaukset ja täysi tankki',
+              teksti: 'Geraldtonissa on välimerellinen ilmasto. Kesällä '
+                + 'päivälämpötila on keskimäärin noin 32 astetta, ja '
+                + 'helleaaltojen aikana mittari voi nousta yli 40 asteen: '
+                + 'helmikuussa 2024 ja uudelleen tammikuussa 2025 kaupungissa '
+                + 'mitattiin kaikkien aikojen ennätys, 49,3 astetta. Iltapäivän '
+                + 'merituuli viilentää rannikon kaupunginosia enemmän kuin '
+                + 'sisämaan puolen asuinalueita. Talvella päivät ovat noin '
+                + 'kahdenkymmenen asteen lämpöisiä, ja suurin osa vuoden '
+                + 'sateesta tulee silloin, eniten kesä- ja heinäkuussa. Talven '
+                + 'isot maininkiaallot tuovat surffaajille hyviä aaltoja, mutta '
+                + 'rannikkoa suojaavan riutan aukoista purkautuva vesi voi '
+                + 'synnyttää vaarallisia paluuvirtauksia. Monella rannalla saa '
+                + 'ajaa nelivetoautolla, mutta nousuveden ja myrskyaaltojen '
+                + 'aikaan ranta voi olla ajokelvoton. Rannikkotiellä on sattunut '
+                + 'paljon onnettomuuksia, ja sen parannustöissä tien varteen on '
+                + 'lisätty opasteita, jotka muistuttavat vasemmanpuoleisesta '
+                + 'liikenteestä myös saksaksi, ranskaksi ja kiinaksi. Tankki '
+                + 'kannattaa täyttää ajoissa: rannikkotiellä huoltoasemia on '
+                + 'harvassa, ja Geraldtonista pohjoiseen polttoainetta, ruokaa '
+                + 'ja majoitusta on yhä harvemmassa aina Carnarvoniin asti. '
+                + 'Kellot käyvät Länsi-Australian ajassa, kahdeksan tuntia '
+                + 'UTC:tä edellä, eikä kesäaikaa käytetä.',
+              kuva: {
+                tiedosto: 'Keep left sign on Indian Ocean Drive in four different languages, September 2021.jpg',
+                lyhyt: 'Kyltti Indian Ocean Drivella neuvoo ajamaan vasemmalla neljällä kielellä.',
+                selite: 'Keep left -kyltti Indian Ocean Drivella Leemanin '
+                  + 'pohjoispuolella syyskuussa 2021. Englannin lisäksi ohje '
+                  + 'ajaa vasemmalla on kirjoitettu saksaksi, ranskaksi ja '
+                  + 'kiinaksi, ja tie jatkuu matalan pensaikon halki.',
+                lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'batavia',
@@ -115840,6 +116352,250 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'João Pessoa, Paraíba',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (João Pessoa, Paraíba; Presidente Castro Pinto
+       * International Airport; Cabedelo; Carne de sol; Queijo coalho;
+       * Baião de dois; Cuscuz; Brazilian cuisine; Festa Junina; Campina
+       * Grande; Tambaba) ja Wikivoyagen sivuilta João Pessoa, Paraíba,
+       * Campina Grande ja Brazil; Jurandy do Saxin ja Jacarén tiedot sekä
+       * coalho-juuston tuotantomaakunnat portugalin Wikipediasta (Jurandy
+       * do Sax, Praia do Jacaré, Queijo coalho) — teksti omaa.
+       * Lentokentän etäisyydestä lähteet eivät ole yksimielisiä (8, 12 tai
+       * 25 km), joten lukua ei anneta. Nostojen aiheita (perustaminen
+       * 1585, nimet Filipeiasta Parahybaan, Frederikstad ja Santa
+       * Catarinan linnake, São Franciscon luostari, Ponta do Seixas ja
+       * majakka, sokeri ja Teatro Santa Roza, Cabo Brancon jyrkänne,
+       * Areia Vermelha, Mata do Buraquinho, riutat ja luonnonaltaat),
+       * gallerian aiheita (Frans Postin maalaus) eikä saapumisen ja
+       * visan aiheita (matala rantarakentaminen, itäisin kärki, postilennot,
+       * forrón soittimet, sokeriruoko) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Tambaban ranta jyrkänteen päältä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Praia de Tambaba e falésias.jpg',
+          lyhyt: 'Tambaban ranta ja kirjavat jyrkänteet João Pessoan eteläpuolella.',
+          selite: 'Tambaban ranta jyrkänteen päältä kuvattuna tammikuussa 2013: '
+            + 'punaisen, valkoisen ja okran sävyiset jyrkänteet laskeutuvat '
+            + 'vaalealle hiekalle, ja turkoosi meri murtuu rantaan.',
+          lahde: 'Raquel Saggin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'João Pessoaan tullaan lentäen tai bussilla naapurikaupungeista '
+          + 'Recifestä ja Natalista, ja keskustasta rantaan vie viiden '
+          + 'kilometrin mittainen valtakatu. Rannoilla grillataan narskuvaa '
+          + 'coalho-juustoa tikun nokassa, ja käsityöstä tuli kaupungin '
+          + 'tunnusmerkki, kun Unesco otti sen luovien kaupunkien verkostoonsa '
+          + 'vuonna 2017. Illalla kannattaa lähteä Cabedelon Jacaréen, jossa '
+          + 'saksofonisti soittaa veneestä Ravelin Boleroa auringon laskiessa '
+          + 'joen taakse, ja etelässä jyrkänteiden reunustamat rannat jatkuvat '
+          + 'Tambaban naturistirannalle asti. Kesäkuussa sisämaan Campina '
+          + 'Grande juhlii São Joãota koko kuukauden. Paras matka-aika on '
+          + 'syyskuusta maaliskuuhun, jolloin sataa vähän.',
+        artikkeli: {
+          nimi: 'Matkailijan João Pessoa',
+          teksti: 'João Pessoassa aurinko laskee jokeen saksofonin soidessa.',
+          nosto: 'Jacarén jokirannassa Jurandy do Sax on soittanut Ravelin '
+            + 'Boleroa auringonlaskulle jo tuhansia kertoja, valkoisiin '
+            + 'pukeutuneena ja pienen veneen keulassa seisten.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentokentältä rantakaduille',
+              teksti: 'Presidente Castro Pinton kansainvälinen lentokenttä on '
+                + 'kaupungin länsipuolella naapurikunnan alueella. Se avattiin '
+                + '1957, ja vuodesta 2019 sitä on hoitanut espanjalainen Aena '
+                + '30 vuoden toimiluvalla. Kansainvälisiä ja edullisempia '
+                + 'lentoja kannattaa etsiä myös Recifeen, Nataliin tai '
+                + 'Maceióhon, joista João Pessoaan pääsee kaukobussilla tai '
+                + 'kimppakyydillä. Kentältä keskustaan ajetaan tavallisesti '
+                + 'Uberilla tai 99-sovelluksen kyydillä, ja paikallisen taksin '
+                + 'hinnasta sovitaan ennen lähtöä. Kaukobussiasema on '
+                + 'keskustassa, ja kadun toiselta puolelta kaupunkibussien '
+                + 'terminaalista lähtevät Tambaún ja Cabo Brancon rannoille '
+                + 'kulkevat linjat. Keskustasta itään vie Avenida Presidente '
+                + 'Epitácio Pessoa, joka valmistui 1940 viiden kilometrin '
+                + 'mittaisena Itsenäisyydenaukiolta Tambaún rantaan, ja sen '
+                + 'varteen syntyi 1950-luvulla kokonaisia uusia kaupunginosia. '
+                + 'Rannassa sama rantakatu vaihtaa nimeään: se on vuoroin '
+                + 'Avenida Cabo Branco, Almirante Tamandaré ja João Maurício, ja '
+                + 'sen vieressä kulkevat kävelykatu ja pyörätie. Pohjoiseen '
+                + 'Cabedeloon pääsee myös lähijunalla. Dieselveturien vetämä '
+                + 'juna ajaa ainoaa, 30 kilometrin rataansa Santa Ritasta '
+                + 'Bayeuxin ja João Pessoan kautta Cabedeloon, ja vuoroja on 28 '
+                + 'päivässä.',
+              kuva: [
+                {
+                  tiedosto: 'Aeroporto Internacional Presidente Castro Pinto, João Pessoa..jpg',
+                  lyhyt: 'Lentokentän terminaalin seinässä ovat kaupungin nimi ja kenttää hoitavan Aenan merkki.',
+                  selite: 'Presidente Castro Pinton kansainvälisen lentokentän '
+                    + 'terminaali lokakuussa 2024. Valkoisessa seinässä lukee '
+                    + 'João Pessoa, ja vieressä on Aenan merkki: espanjalainen '
+                    + 'yhtiö on hoitanut kenttää vuodesta 2019.',
+                  lahde: 'Toin1620, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Avenida Presidente Epitácio Pessoa - João Pessoa (PB).jpg',
+                  lyhyt: 'Leveä Avenida Presidente Epitácio Pessoa johtaa keskustasta kohti rantaa.',
+                  selite: 'Avenida Presidente Epitácio Pessoa maaliskuussa 2023. '
+                    + 'Leveän ja suoran kadun varrella on liiketaloja, '
+                    + 'mainostauluja ja puita, ja taustalla kohoaa kerrostaloja.',
+                  lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Calçadão da praia de Tambaú, João Pessoa (PB).jpg',
+                  lyhyt: 'Tambaún rantakadun vieressä kulkevat punainen pyörätie ja laatoitettu kävelykatu.',
+                  selite: 'Tambaún rannalla maaliskuussa 2023: punaisen pyörätien '
+                    + 'toisella puolella on moottoripyöräparkki, toisella '
+                    + 'laatoitettu kävelykatu, jolla ihmiset kulkevat '
+                    + 'rantavaatteissa palmujen alla.',
+                  lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Aurinkolihaa ja narskuvaa juustoa',
+              teksti: 'Koillis-Brasilian tunnetuin liharuoka on carne de sol, '
+                + 'aurinkoliha. Naudanlihasta leikataan ohuita levyjä, jotka '
+                + 'suolataan kevyesti ja jätetään kuivumaan katettuun ja '
+                + 'tuulettuvaan paikkaan, joten nimestään huolimatta liha ei '
+                + 'kuivu auringossa. Tavan kehittivät kuivan sisämaan asukkaat, '
+                + 'joiden piti saada liha säilymään. Aurinkolihaa paistetaan '
+                + 'leivän väliin, haudutetaan uunissa kerman kanssa tai '
+                + 'survotaan jauhon kanssa paçocaksi. Koillisen rannoilla '
+                + 'edullinen välipala on coalho-juusto, kiinteä juusto, joka '
+                + 'kestää kuumuutta ja narskuu hampaissa. Se grillataan '
+                + 'hiilloksella tikun nokassa ja syödään oreganon tai '
+                + 'valkosipulikastikkeen kanssa, ja Paraíba on yksi sen '
+                + 'suurimmista tuottajista. Juustoa lisätään usein myös baião '
+                + 'de dois -ruokaan, jossa riisi ja pavut keitetään yhdessä; '
+                + 'Paraíbassa ja Pernambucossa sen muunnelma on sisämaassa '
+                + 'suosittu rubacão. Maissijauhosta tehtyä cuscuzia syödään '
+                + 'lihan kanssa kuumana tai maidon kanssa kylmänä. Lounaalla '
+                + 'moni valitsee por quilo -ravintolan, jossa lautanen täytetään '
+                + 'noutopöydästä ja punnitaan ennen syömistä, ja Manaíran '
+                + 'Mangai on tunnettu juuri koillisen ruokien noutopöydästään. '
+                + 'Laskuun lisätään yleensä kymmenen prosentin palvelumaksu, ja '
+                + 'se on Brasiliassa tavallisesti ainoa juomaraha.',
+              kuva: {
+                tiedosto: 'BRUNO LIMA GASTRONOMIA QUEIJO COALHO GRAVATÁ PE (26033995167).jpg',
+                lyhyt: 'Coalho-juustoviipaleet saavat grillipannulla ruskeat raidat mutta eivät sula.',
+                selite: 'Kolme coalho-juustoviipaletta paistuu uurretulla '
+                  + 'valurautapannulla Gravatássa naapurivaltio Pernambucossa. '
+                  + 'Juusto kestää kuumuutta ja pysyy muodossaan, ja rannoilla '
+                  + 'sitä myydään tikkuun pujotettuna.',
+                lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Käsityön kaupunki',
+              teksti: 'Vuonna 2017 Unesco otti João Pessoan luovien kaupunkien '
+                + 'verkostoonsa käsityön kaupunkina, ja käsitöitä kannattaa '
+                + 'etsiä ennen kaikkea Tambaún rannalta. Suurin myyntipaikka on '
+                + 'Mercado de Artesanato Paraibano, jossa on 128 liikettä, ja '
+                + 'pienempiä kojuja on Hotel Tambaún edustan torilla ja Rua '
+                + 'Senador Rui Carneiron varrella. Hotelli on itsekin '
+                + 'nähtävyys: arkkitehti Sérgio Bernardesin suunnittelema '
+                + 'rakennus pystytettiin suoraan rantahiekalle ja avattiin '
+                + 'maaliskuussa 1971. Sama arkkitehti suunnitteli Espaço '
+                + 'Cultural José Lins do Regon, joka avattiin 1982 entisen '
+                + 'lentokerhon kentälle. Kulttuurikeskuksessa on saman katon '
+                + 'alla taidegalleria, planetaario, kirjailija José Lins do '
+                + 'Regon museo, musiikkikoulu ja kaksi teatteria. Vanhassa '
+                + 'keskustassa kannattaa käydä Hotel Globon museossa. Entinen '
+                + 'loistohotelli on rakennettu eklektiseen tyyliin, jossa '
+                + 'näkyvät uusklassismi, jugend ja art déco, ja sen puutarhasta '
+                + 'katsotaan auringonlaskua Sanhauájoen yllä. Keskustan '
+                + 'olohuone on Parque Sólon de Lucenan laguuni. Sen ympärille '
+                + 'istutettiin keisaripalmut 1926, ja puistot suunnitteli 1940 '
+                + 'maisema-arkkitehti Roberto Burle Marx. Laguunin rannan '
+                + 'kojuista saa juomia ja pikkupurtavaa halvalla, ja '
+                + 'sunnuntaisin väkeä on kuin juhlissa.',
+              kuva: {
+                tiedosto: 'Mercado de Artesanato Paraibano, João Pessoa (PB).jpg',
+                lyhyt: 'Mercado de Artesanato Paraibanon tiilikaaret ja valkoiset parvekkeet Tambaússa.',
+                selite: 'Paraíban käsityötori Mercado de Artesanato Paraibano '
+                  + 'Tambaússa maaliskuussa 2018. Tiiliseinässä on kaaria ja '
+                  + 'yläkerroksissa valkoisia parvekkeita, ja edustan pylväässä '
+                  + 'lukee Artesanato, käsityö.',
+                lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Bolero joella ja rannat etelässä',
+              teksti: 'Pohjoisessa Cabedelon puolella Paraíbajoen suistossa on '
+                + 'Jacarén jokiranta, jonne tullaan katsomaan auringonlaskua. '
+                + 'Vuonna 1993 saksofonisti Jurandy do Sax soitti siellä '
+                + 'ensimmäisen kerran Maurice Ravelin Boleron laskevalle '
+                + 'auringolle, ja vuodesta 2000 hän on soittanut sen joka '
+                + 'päivä. Kappale kestää noin 17 minuuttia, suunnilleen yhtä '
+                + 'kauan kuin auringonlasku, ja vuodesta 2001 muusikko on '
+                + 'soittanut valkoisiin pukeutuneena pienessä veneessä '
+                + 'rantabaarien edustalla. Vuonna 2024 esityksiä oli kertynyt '
+                + '9 000, ja joulukuussa 2025 Paraíba julisti ne osavaltion '
+                + 'aineettomaksi kulttuuriperinnöksi. Uimaan Jacaréen ei '
+                + 'kannata mennä, sillä joen ja meren rajalla oleva ranta on '
+                + 'toisinaan uimakelvoton. Etelään pääsee päällystettyä '
+                + 'rantatietä PB-008 Conden kunnan jyrkänteiden reunustamille '
+                + 'rannoille. Tunnetuin niistä on noin kilometrin mittainen '
+                + 'Tambaba, Koillis-Brasilian ensimmäinen virallinen '
+                + 'naturistiranta. Sen perhealueella ollaan alasti, reunoilla '
+                + 'vaatteet saa pitää, ja vieressä on myös tavallinen ranta. '
+                + 'Kesäkuussa kannattaa lähteä sisämaahan Campina Grandeen, '
+                + 'Paraíban toiseksi suurimpaan kaupunkiin noin kahden tunnin '
+                + 'bussimatkan päähän. Siellä São Joãon juhlaa vietetään koko '
+                + 'kuukausi, ja kuukauden aikana juhliin kokoontuu noin kaksi '
+                + 'miljoonaa ihmistä. Keskuksena on Parque do Povo, jota '
+                + 'kutsutaan forrón päämajaksi.',
+              kuva: {
+                tiedosto: 'Jurandy do Sax tocando Bolero de Ravel no rio Paraíba.jpg',
+                lyhyt: 'Valkoisiin pukeutunut Jurandy do Sax soittaa Boleroa veneessä Paraíbajoella.',
+                selite: 'Jurandy do Sax seisoo valkoisissa vaatteissa pienen '
+                  + 'moottoriveneen keulassa ja soittaa Ravelin Boleroa '
+                  + 'Paraíbajoella Jacarén edustalla toukokuussa 2019. '
+                  + 'Perämies ohjaa venettä, ja vastarannan metsä piirtyy '
+                  + 'tummana viivana iltataivasta vasten.',
+                lahde: 'Rosanetur, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kuiva kausi, rantaraportit ja pienet setelit',
+              teksti: 'João Pessoassa on lämmintä ympäri vuoden, ja '
+                + 'keskilämpötilat pysyttelevät 24 ja 30 asteen välillä, koska '
+                + 'pasaatituulet ja merituuli tasaavat helteitä. Sadekausi '
+                + 'kestää yleensä maaliskuusta elokuuhun, ja eniten sataa '
+                + 'touko-, kesä- ja heinäkuussa: kuurot ovat lyhyitä mutta '
+                + 'rankkoja. Syyskuusta helmikuuhun on kuivaa, meri on '
+                + 'kirkkaimmillaan ja veneretket onnistuvat parhaiten, joten '
+                + 'paras matka-aika on syyskuusta maaliskuuhun. Kaikki '
+                + 'kaupungin rannat eivät ole joka päivä uimakelpoisia. '
+                + 'Osavaltion ympäristövirasto SUDEMA julkaisee viikoittain '
+                + 'portugalinkielisen rantaraportin, josta näkee, missä '
+                + 'kannattaa uida. Kalliita kelloja, kameroita ja puhelimia ei '
+                + 'kannata pitää esillä edes varakkaissa rantakaupunginosissa, '
+                + 'ja pimeän tultua rannalta keskustaan mennään taksilla eikä '
+                + 'kävellen. Kaupoista saa pienen capanga-vatsalaukun, johon '
+                + 'voi panna vähän rahaa ryöstön varalle, ja ryöstäjää ei pidä '
+                + 'vastustaa. Käteistä tarvitaan yhä vähemmän, koska kortit '
+                + 'käyvät lähes kaikkialla, mutta pienillä kaupoilla ja '
+                + 'katukauppiailla ei usein ole vaihtorahaa 50, 100 tai 200 '
+                + 'realin seteleille. Brasilialaisten suosimaan Pix-pikamaksuun '
+                + 'tarvitaan yleensä brasilialainen pankkitili tai CPF-numero, '
+                + 'joten matkailija maksaa kortilla tai pienillä seteleillä.',
+              kuva: {
+                tiedosto: 'Turismo na praia de Tambaú, João Pessoa (PB).jpg',
+                lyhyt: 'Tambaún rannalla aurinkovarjot reunustavat hiekkaa ja lapset kahlaavat rannassa.',
+                selite: 'Tambaún ranta maaliskuussa 2023: hiekan reunalla on '
+                  + 'rivi sinisiä ja vihreitä aurinkovarjoja, ihmiset kahlaavat '
+                  + 'matalassa vedessä, ja taustalla kohoavat palmut ja '
+                  + 'kaupungin tornitalot.',
+                lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
