@@ -111166,6 +111166,278 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Verney Lovett Cameron',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko Angola,
+       * painopisteenä Luanda ja sen lähirannikko, kuten lehden
+       * nostoissakin. Taustatiedot englannin Wikipediasta (Dr. António
+       * Agostinho Neto International Airport, Visa policy of Angola,
+       * Angolan kwanza, Luanda, July 2025 Angolan protests, Luanda
+       * Railway, Ilha de Luanda, Mussulo, Mausoleum of António Agostinho
+       * Neto, Palácio de Ferro, Luanda International Jazz Festival, HALO
+       * Trust, Diana, Princess of Wales, Prince Harry, Duke of Sussex),
+       * portugalin Wikipediasta (Miradouro da Lua), Wikivoyagen Angola-
+       * ja Luanda-sivuilta sekä Britannian ulkoministeriön (FCDO)
+       * Angolan matkustustiedotteesta (päivitetty 28.5.2026) — teksti
+       * omaa. Hinnat ja aukioloajat jätetty pois: kwanza on heilunut
+       * voimakkaasti, ja lähteiden hinnat ovat vanhoja. Turvallisuus
+       * kerrotaan FCDO:n ja Wikivoyagen mukaan liioittelematta:
+       * Cabinda (separatistit), Lundan timanttialueet, miinat ja
+       * Luandan katurikollisuus.
+       *
+       * EI TOISTETA: nostojen aiheita (padrão, São Miguelin linnoitus,
+       * orjakauppa, Livingstone, Cameron, Bié-ylänkö, Kuanza, Kalandula,
+       * jättiläissapeliantilooppi), maalehden aiheita (funge, moamba,
+       * kalulu, cocada, berimbau, semba, kuduro, Tundavala, welwitschia,
+       * Tigres, nzimbu, Nzinga, tšokwe-taide) eikä maastokohteiden
+       * aiheita (Quiçama, Iona, Benguelan rata, Cuito Cuanavale).
+       *
+       * KUVAT: kahdeksan Commons-kuvaa, lisenssi ja tekijä tarkistettu
+       * extmetadatasta ja jokainen katsottu silmin. BAI-pankin kuva on
+       * pankin viestinnän itse lataama CC0-kuva. Huambon kuvan
+       * tekijämerkintä on MAG:n pyytämä (Sean Sutton/MAG). Mausoleumin
+       * kuva on vuodelta 2006, jolloin muistomerkki oli vielä kesken.
+       * HYLÄTYT: uuden lentokentän Yezzispapi-kuvat (videokuvakaappauksen
+       * näköisiä, alkuperä epävarma), "Construction site Angola
+       * International Airport1" (ei tunnistettavasti lentokenttä),
+       * seteli- ja kolikkokuvat, "Danger mines 1" (paikka epävarma) ja
+       * "A minefield digger" (virheellinen kuvaus). Palácio de Ferron
+       * ainoa kuva on liian epätarkka. Pystykuva: Miradouro da Lua.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miradouro da Lua - 2.jpg',
+          lyhyt: 'Miradouro da Luan uurteiset savikalliot laskeutuvat kohti Atlanttia.',
+          selite: 'Tuulen ja sateen uurtamat punaiset ja vaaleat savikalliot '
+            + 'Miradouro da Luassa, noin 40 kilometriä Luandasta etelään. '
+            + 'Taustalla avautuvat rannikkotasanko ja harmaa Atlantti.',
+          lahde: 'Felipe Miguel, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Angola on yksi maailman vähiten matkailluista maista, ja se on '
+          + 'avautunut vierailijoille vasta hiljattain: suomalainen pääsee '
+          + 'maahan lomalle ilman viisumia syksystä 2023 lähtien, ja Luandan '
+          + 'uusi lentoasema otti kaukolennot vastaan vuosina 2025–2026. '
+          + 'Rahaa varten tarvitaan käteisiä kwanzoja, kaupungilla liikutaan '
+          + 'sinivalkoisilla candongueiroilla tai sovitulla autolla, ja '
+          + 'viikonloppuisin luandalaiset suuntaavat Ilhan ja Mussulon '
+          + 'rannoille. Kameran kanssa ollaan tarkkana, ja maaseudulla '
+          + 'pysytään vakiintuneilla teillä, koska miinoja on yhä jäljellä.',
+        artikkeli: {
+          nimi: 'Matkailijan Angola',
+          teksti: 'Angolassa käteinen, kärsivällisyys ja portugalin alkeet vievät pitkälle.',
+          nosto: 'Luandalaisten viikonloppu alkaa vesitaksista, joka vie lahden '
+            + 'yli Mussulon palmurannoille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Maahan ilman viisumia',
+              teksti: 'Angola avautui matkailijoille syksyllä 2023, kun maa '
+                + 'poisti turistiviisumin lähes sadalta maalta, muun muassa '
+                + 'Suomelta ja muilta EU-mailta. Lomalle pääsee nyt ilman '
+                + 'viisumia enintään 30 päiväksi kerrallaan ja yhteensä 90 '
+                + 'päiväksi kalenterivuodessa. Passin on oltava voimassa vähintään '
+                + 'kuusi kuukautta saapumisesta, ja siinä on oltava kaksi tyhjää '
+                + 'sivua. Keltakuumerokotusta suositellaan, ja rokotustodistusta '
+                + 'voidaan kysyä maahan tullessa tai viimeistään jatkomatkalla '
+                + 'esimerkiksi Etelä-Afrikkaan. Kaukolennot laskeutuvat nykyään '
+                + 'Dr. António Agostinho Neton kansainväliselle lentoasemalle noin '
+                + '40 kilometriä Luandan keskustasta kaakkoon. Se on suurin '
+                + 'lentoasema, jonka kiinalainen yhtiö on rakentanut Kiinan '
+                + 'ulkopuolelle. Kenttä vihittiin marraskuussa 2023, mutta '
+                + 'reittilentojen siirto vanhalta, keskellä kaupunkia olevalta '
+                + 'Quatro de Fevereiron kentältä valmistui vasta maaliskuussa 2026. '
+                + 'Kaupunkiin kannattaa varata kuljetus etukäteen. Rahassa pärjää '
+                + 'vain käteisellä: useimmat ravintolat ja pienet hotellit '
+                + 'hyväksyvät angolalaisia maksukortteja mutta eivät ulkomaisia. '
+                + 'Pankkiautomaateille on usein jonoa, kerralla saa nostaa vain '
+                + 'rajatun summan ja käteinen voi loppua kesken, joten kwanzoja '
+                + 'kannattaa hankkia hyvissä ajoin. Kwanza menetti touko- ja '
+                + 'kesäkuussa 2023 lähes 40 prosenttia arvostaan dollariin nähden, '
+                + 'joten vanhojen matkaoppaiden hinnat eivät enää pidä. Maasta saa '
+                + 'viedä pois enintään 50 000 kwanzaa, ja sitä voidaan tarkastaa '
+                + 'lentoasemalla. Englantia puhutaan vähän. Luandan ulkopuolella '
+                + 'portugalin alkeet ovat lähes välttämättömät, ja kohtelias bom '
+                + 'dia aloittaa jokaisen kohtaamisen.',
+              kuva: [
+                {
+                  tiedosto: '1.Luanda Airport Aeroporto 4 de Fevereiro LAD.jpg',
+                  lyhyt: 'Vanha Quatro de Fevereiron lentoasema keskellä Luandaa vuonna 2009.',
+                  selite: 'Heinäkuussa 2009 kuvatulla Quatro de Fevereiron '
+                    + 'lentoasemalla seisovat Lufthansan Airbus ja TAAG Angola '
+                    + 'Airlinesin Boeing 747, ja kentän takana leviää Luandan '
+                    + 'asutus. Reittilennot siirtyivät uudelle kentälle 2026.',
+                  lahde: 'Manuel Dohmen, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Angola Entry Stamp.png',
+                  lyhyt: 'Luandan lentoaseman vihreä maahantuloleima elokuulta 2011.',
+                  selite: 'Rajaviranomaisen Migração e Estrangeiros vihreässä '
+                    + 'leimassa ovat päivämäärä 16. elokuuta 2011 ja paikka Luanda. '
+                    + 'Punainen lentokone kertoo, että matkustaja saapui ilmateitse.',
+                  lahde: 'Jimmielin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Agência Sagrada Família - Banco Angolano de Investimentos.jpg',
+                  lyhyt: 'BAI-pankin Sagrada Família -konttorin asiakastila Luandassa vuonna 2018.',
+                  selite: 'Banco Angolano de Investimentosin konttorissa '
+                    + 'asiakkaat odottavat vuoroaan sinisillä raheilla. Ulkomaisella '
+                    + 'kortilla maksaminen onnistuu Angolassa harvoin, joten käteistä '
+                    + 'nostetaan pankkiautomaatista tai vaihdetaan pankissa.',
+                  lahde: 'BAI Comunicação Institucional, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Sinivalkoinen candongueiro',
+              teksti: 'Luandan tärkein joukkoliikenne ei ole bussi eikä juna vaan '
+                + 'candongueiro: yksityinen, valkoiseksi ja siniseksi maalattu '
+                + 'pikkubussi, useimmiten Toyota Hiace. Autoon on tehty paikat '
+                + 'kahdelletoista, mutta kyytiin ahtautuu yleensä vähintään '
+                + 'viisitoista. Kuljettajat ovat kuuluisia siitä, että liikennesäännöt '
+                + 'joustavat: stop-merkeissä ei pysähdytä, ja ruuhkaa kierretään '
+                + 'jalkakäytävää pitkin. Paikalliset käyttävät candongueiroja joka '
+                + 'päivä, mutta esimerkiksi Britannian ulkoministeriö neuvoo '
+                + 'matkailijoita välttämään sekä pikkubusseja että kyytisovelluksia '
+                + 'ja liikkumaan etukäteen sovitulla autolla. Pikkubussien merkitys '
+                + 'koko kaupungille näkyi heinäkuussa 2025. Kun hallitus leikkasi '
+                + 'polttoainetukia ja dieselin hinta nousi kolmanneksen, '
+                + 'taksinkuljettajien liitto julisti Luandaan kolmen päivän lakon. '
+                + 'Lakko laajeni mielenosoituksiksi ja mellakoiksi muissakin '
+                + 'maakunnissa, ja virallisten lukujen mukaan 22 ihmistä kuoli ja '
+                + 'yli 1 200 pidätettiin. Ruuhka kuuluu Luandan arkeen, ja '
+                + 'marraskuusta huhtikuuhun kestävällä sadekaudella rankkasateet '
+                + 'voivat tulvia kaduille hetkessä. Hintataso yllättää: '
+                + 'ulkomaisten työntekijöiden elinkustannuksia vertailevissa '
+                + 'listoissa Luanda on noussut maailman kalleimpien kaupunkien '
+                + 'kärkeen, koska tuontitavara ja turvallisuus maksavat. Kaupungin '
+                + 'laidalle pääsee myös junalla: Luandan radan lähiliikenne kulkee '
+                + 'Vianaan, ja kaukojuna jatkaa sisämaahan Malanjeen.',
+              kuva: {
+                tiedosto: 'Candongueiros.jpg',
+                lyhyt: 'Sinivalkoisia candongueiro-pikkubusseja Luandan kadulla vuonna 2011.',
+                selite: 'Kolme sinivalkoista Toyota Hiace -pikkubussia keltaisen '
+                  + 'talon edessä Luandassa. Etualan autossa istuvat kuljettaja ja '
+                  + 'ensimmäiset matkustajat.',
+                lahde: 'Patyfessora, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ilha, Mussulo ja Kuun näköala',
+              teksti: 'Luandalaiset pakenevat kaupungin hälinää rannikolle. Lähin '
+                + 'pakopaikka on Ilha do Cabo, jota kutsutaan yleensä vain Ilhaksi: '
+                + 'matala hiekkasärkkä lahden edustalla, joka liittyy kaupunkiin '
+                + 'kapealla kannaksella. Sen rannoilla on ravintoloita hyvin '
+                + 'kalliista rentoihin, baareja, venesatamia ja vuonna 1924 '
+                + 'perustettu pursiseura Clube Náutico, jota Wikivoyage suosittelee '
+                + 'auringonlaskun katseluun. Ilhan omia ruokia ovat grillattu kala '
+                + 'eli mufete ja muzongué-liemi. Illalla ravintolasta toiseen ei '
+                + 'kannata kävellä, vaan siirtyä autolla. Etelämpänä on Mussulo, noin '
+                + '30 kilometriä pitkä hiekkaniemi, jonka Kuanza-joen tuoma hiekka '
+                + 'ja pohjoiseen virtaava Benguelan merivirta ovat kasanneet. Sinne '
+                + 'mennään usein vesitaksilla lahden yli. Lahden puoleiset rannat '
+                + 'ovat luandalaisten suosikkeja, mutta niemen Atlantin puolella '
+                + 'virtaukset ja aallot ovat niin voimakkaita, että siellä käy '
+                + 'harva. Noin 40 kilometriä Luandasta etelään rannikkotie kulkee '
+                + 'Miradouro da Luan eli Kuun näköalapaikan ohi. Tuuli ja sade ovat '
+                + 'uurtaneet punaisiin ja vaaleisiin savikallioihin harjanteita, '
+                + 'jotka muistuttavat kuumaisemaa, ja paikkaa pidetään Angolan '
+                + 'käydyimpänä nähtävyytenä. Se on luonteva pysähdys matkalla Barra '
+                + 'do Cuanzan tai Cabo Ledon rannoille, ja siellä kuvattiin vuonna '
+                + '1993 ensimmäinen portugalilais-angolalainen yhteiselokuva. '
+                + 'Luandan eteläpuolella on myös Benfican käsityötori, jolla '
+                + 'myydään veistoksia, maalauksia, koruja ja batiikkikankaita. '
+                + 'Tinkiminen kuuluu asiaan.',
+              kuva: {
+                tiedosto: 'Mussulo, Angola.jpg',
+                lyhyt: 'Mussulon palmujen reunustama ranta vesitaksista kuvattuna.',
+                selite: 'Luandasta Mussuloon kulkevasta vesitaksista kuvattu '
+                  + 'hiekkaranta, jonka takana palmujen keskellä on '
+                  + 'punakattoisia rantataloja.',
+                lahde: 'Juvenalia Brito, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raketti, rautapalatsi ja kamera',
+              teksti: 'Luandan siluetin tunnistaa betonitornista, jota kutsutaan '
+                + 'nimellä Foguetão, raketti. Se on Angolan ensimmäisen presidentin '
+                + 'Agostinho Neton mausoleumi: 120 metriä korkea torni, jonka '
+                + 'juurella olevaan pyramidiin on haudattu Neto ja vuodesta 2022 '
+                + 'myös hänen seuraajansa José Eduardo dos Santos. Neuvostoliittolaiset '
+                + 'suunnittelijat aloittivat työn 1980, ja peruskivi muurattiin '
+                + '1982, mutta rakentaminen pysähtyi sodan ja Neuvostoliiton '
+                + 'hajoamisen vuoksi. Muistomerkin viimeisteli lopulta '
+                + 'pohjoiskorealainen Mansudae Overseas Projects, ja se vihittiin '
+                + 'Neton 90-vuotispäivänä syyskuussa 2012. Alueella on museo, '
+                + 'näyttelytila ja kirjasto, jotka ovat avoinna yleisölle. Toinen '
+                + 'kaupungin erikoisuus on Palácio de Ferro, keltainen '
+                + 'rautarakenteinen talo, jonka suunnittelu yhdistetään Gustave '
+                + 'Eiffeliin tai hänen työpajaansa. Asiakirjoja siitä ei ole, ja '
+                + 'tarina rannikolle ajaneen laivan lastista on legenda eikä '
+                + 'todennettua historiaa. Talo kunnostettiin 2009. Vuodesta 2009 '
+                + 'Luandassa on järjestetty myös kansainvälinen jazzfestivaali, '
+                + 'perinteisesti heinä- ja elokuun vaihteessa. Kameran kanssa on oltava tarkkana. '
+                + 'Hallintorakennusten, sotilasalueiden, poliisien, lentoasemien, '
+                + 'rautatieasemien ja siltojen kuvaaminen voi johtaa vakaviin '
+                + 'vaikeuksiin, ja viranomaiset voivat takavarikoida kameran. '
+                + 'Myös virkamiesten julkinen arvostelu voi olla rangaistavaa. '
+                + 'Mukana on aina oltava henkilöllisyystodistus: turvallisinta on '
+                + 'kantaa passin kuvasivun virallisesti oikeaksi todistettua kopiota '
+                + 'ja jättää alkuperäinen hotellin kassakaappiin. Ilman papereita '
+                + 'poliisi voi määrätä sakon heti.',
+              kuva: {
+                tiedosto: 'Agostinhonetomausoleu.jpg',
+                lyhyt: 'Agostinho Neton mausoleumin torni kohoaa Luandan kattojen yli.',
+                selite: 'Rinteeltä kuvatussa näkymässä Neton muistomerkin kapea '
+                  + 'torni nousee matalien talojen ja työmaiden yläpuolelle. Kuva '
+                  + 'on otettu 2006, jolloin muistomerkki oli vielä kesken; se '
+                  + 'valmistui 2011.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Miinat, Cabinda ja pimeä',
+              teksti: 'Angolaa pidetään yhä yhtenä maailman eniten miinoitetuista '
+                + 'maista. HALO Trust -järjestö on raivannut maata vuodesta 1994, ja '
+                + 'sen työ tuli maailmankuuluksi tammikuussa 1997, kun prinsessa '
+                + 'Diana kulki suojavarusteissa raivattavalla miinakentällä '
+                + 'Huambossa. Hänen poikansa Harry kävi angolalaisella '
+                + 'miinanraivausalueella syyskuussa 2019. Työ on edennyt paljon, '
+                + 'mutta miinoja ja räjähtämättömiä ammuksia on edelleen teillä, '
+                + 'pientareilla ja siltojen luona etenkin maaseudulla. Sääntö on '
+                + 'yksinkertainen: pysy vakiintuneilla teillä ja poluilla, älä '
+                + 'astu punavalkoisten merkkipaalujen tai punaisilla kivillä '
+                + 'rajattujen alueiden toiselle puolelle, ja muista, että sadekauden '
+                + 'tulvat voivat siirtää miinoja myös paikkoihin, joita on pidetty '
+                + 'turvallisina. Britannian ulkoministeriö neuvoo välttämään kaikkea '
+                + 'muuta kuin välttämätöntä matkustamista Cabindan maakuntaan '
+                + 'Cabindan kaupunkia lukuun ottamatta: erillisalueella '
+                + 'separatistiryhmät ovat hyökänneet myös ulkomaalaisia vastaan, ja '
+                + 'sieppausten riski on todellinen. Lunda Norten ja Lunda Sulin '
+                + 'timanttialueilla viranomaiset voivat rajoittaa ulkomaalaisten '
+                + 'liikkumista, ja kaivoksille johtavilla teillä on rosvoja. Luandassa rikollisuus on '
+                + 'korkea ja osa ryöstöistä väkivaltaisia. Pimeän jälkeen ei '
+                + 'kävellä, arvoesineitä ja puhelinta ei näytetä, rahaa nostetaan '
+                + 'sovitun kuljettajan kanssa, ja ryöstäjälle annetaan heti mitä hän '
+                + 'pyytää. Mielenosoitukset voivat kärjistyä nopeasti, joten niitä '
+                + 'ei jäädä katsomaan eikä kuvaamaan. Pääkaupungin ulkopuolelle '
+                + 'lähdetään mieluiten paikallisen oppaan kanssa tai vähintään '
+                + 'kahdella autolla, eikä maanteillä ajeta pimeällä. Malaria on '
+                + 'yleinen, joten estolääkityksestä kannattaa kysyä ennen matkaa. '
+                + 'Vesijohtovettä ei juoda, ja hyviä yksityisklinikoita on lähinnä '
+                + 'Luandassa. Tilanne voi muuttua, joten tuoreet matkustustiedotteet '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Prince Harry, Duke of Sussex, in Huambo, Angola (2019).jpg',
+                lyhyt: 'Prinssi Harry kävelee Huambossa kadulla, jolla oli aiemmin miinakenttä.',
+                selite: 'Syyskuussa 2019 prinssi Harry kulki Huambossa äitinsä '
+                  + 'jalanjäljissä: kuvaajan mukaan kadun kohdalla oli aiemmin '
+                  + 'miinakenttä. Taustalla koululaiset odottavat vierasta tien '
+                  + 'varressa.',
+                lahde: 'Sean Sutton / Mines Advisory Group, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -115075,6 +115347,241 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mozambique Island Bridge',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Mosambikin saari
+       * (Ilha de Moçambique) Nampulan maakunnassa, ei koko maa.
+       * Taustatiedot englannin Wikipediasta (Island of Mozambique, Cidade
+       * de Pedra, Fort São Lourenço (Mozambique), Goa Island, Mozambique
+       * Island Bridge, Luís de Camões, Tufo (dance), Indians in
+       * Mozambique, Insurgency in Cabo Delgado, Cyclone Gombe,
+       * Mozambique), Wikivoyagesta (Ilha de Mozambique, Mozambique;
+       * saarisivun hinnat ja paikat ovat vuodelta 2015, joten hinnat ja
+       * aukioloajat on jätetty pois) sekä Global Voicesin mussiro-jutusta
+       * 1.8.2012 ja Chipenen iskun uutisoinnista (Vatican News, Zitamar,
+       * syyskuu 2022) — teksti omaa. Nostojen ja gallerian aiheita
+       * (São Sebastiãon linnoitus ja sen kirkko, Vasco da Gama ja São
+       * Paulon palatsi, vihreä moskeija, Makuti ja kalastajat, sillan
+       * historia, 1655 kartta, dhow't ja orjakauppa, pääkaupungin siirto,
+       * sairaala) eikä africa-kulttuuri.js:n marrabentaa ja piripiriä
+       * toisteta. Turvallisuus: Cabo Delgadon kapina ja sen 2022
+       * ulottuminen Nampulan pohjoisosaan kerrotaan, mutta saarelle
+       * konflikti ei ole ulottunut. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: tufo-tanssijoiden capulanat (Wiki Loves Africa 2019).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tofo danse - 1.jpg',
+          lyhyt: 'Tufo-tanssijoiden kirkkaat capulana-kankaat ja paljaat jalat Mosambikin saarella.',
+          selite: 'Tufoa tanssivat naiset liikkuvat paljain jaloin '
+            + 'terrakottalaatoilla samanlaisissa sinikuvioisissa '
+            + 'capulana-kankaissa; kuva heinäkuulta 2017.',
+          lahde: 'JCPBFerreira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Mosambikin saari on vain kolme kilometriä pitkä ja '
+          + 'enimmillään puoli kilometriä leveä, joten sen päästä päähän '
+          + 'kävelee parissakymmenessä minuutissa. Matkailija saapuu '
+          + 'yleensä Nampulan lentoasemalta maantietä ja kapeaa siltaa '
+          + 'pitkin, joskus myös risteilyaluksella. Pohjoispään '
+          + 'kivikaupunkia kunnostettiin 2010-luvulla, ja vanhoissa '
+          + 'kauppiastaloissa toimii nyt majataloja ja ravintoloita. '
+          + 'Kaduilla elää makua-kulttuuri: naisten kasvoja peittää '
+          + 'valkoinen mussiro-naamio, ja juhlissa tanssitaan tufoa. '
+          + 'Lähisaarille ja mantereen rannoille pääsee purjeveneellä. '
+          + 'Saari on Nampulan maakunnassa, kaukana etelässä '
+          + 'Cabo Delgadon konfliktialueesta, mutta pohjoisen tilanne '
+          + 'kannattaa silti tarkistaa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Mosambikin saari',
+          teksti: 'Entinen pääkaupunki on nyt pikkukaupunki, jonka kiertää jalan.',
+          nosto: 'Kun Luís de Camões odotti täällä laivaa kotiin, hän oli '
+            + 'niin köyhä, että ystävät joutuivat ruokkimaan häntä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Nampulasta',
+              teksti: 'Lähin säännöllisen matkustajaliikenteen lentoasema on '
+                + 'Nampulassa, Pohjois-Mosambikin suurimmassa kaupungissa, '
+                + 'jonne lennetään Maputosta ja muualta Mosambikista. '
+                + 'Nampulasta ajetaan ensin Nacalan tietä ja käännytään '
+                + 'Monapossa kohti rannikkoa; Wikivoyagen mukaan matka '
+                + 'kestää noin kaksi tuntia. '
+                + 'Halvimmin pääsee chapalla eli pikkubussilla, joka lähtee '
+                + 'Nampulan rautatieaseman läheltä. Mantereen puolella '
+                + 'Lumbossa alkaa yksikaistainen betonisilta, jota pitkin '
+                + 'saarelle ajetaan. Joskus saaren edustalle ankkuroi '
+                + 'risteilyalus, jonka matkustajat tuodaan veneillä maihin, '
+                + 'ja rannassa vastassa on laulava tanssiryhmä. Perillä '
+                + 'autoa ei tarvita: kivikaupunki on vain muutaman korttelin '
+                + 'levyinen. '
+                + 'Mosambikin laki velvoittaa kantamaan henkilöllisyys'
+                + 'todistusta, joten matkaoppaat neuvovat pitämään mukana '
+                + 'notaarin oikeaksi todistamaa kopiota passin kuvasivusta, '
+                + 'viisumista ja maahantuloleimasta. Itse passi kannattaa '
+                + 'jättää majapaikkaan, eikä sitä pidä luovuttaa '
+                + 'kenellekään kadulla.',
+              kuva: [
+                {
+                  tiedosto: 'Nampula Airport.jpg',
+                  lyhyt: 'Nampulan lentoasema on saarta lähin säännöllisen lentoliikenteen kenttä.',
+                  selite: 'Matkustajat kävelevät kentän poikki Nampulan '
+                    + 'lentoaseman terminaaliin, jonka katolla lukee '
+                    + 'kaupungin nimi; kuva toukokuulta 2012.',
+                  lahde: 'Gustavo Sugahara, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Mozambique Island Wharf (32679313634).jpg',
+                  lyhyt: 'Kivikaupungin laituri seisoo paksujen betonipilarien varassa.',
+                  selite: 'Mosambikin saaren laiturin tukevat pilarit '
+                    + 'jatkuvat rantaan asti; taustalla näkyvät kirkon '
+                    + 'kellotorni ja rannan keltainen talo.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Local Dancers (33540660425).jpg',
+                  lyhyt: 'Mussiro-naamioidut laulajat ottavat risteilymatkustajat vastaan saarella.',
+                  selite: 'Oranssiin pukeutuneet naiset laulavat '
+                    + 'mukulakivikadulla kasvoillaan valkoinen '
+                    + 'mussiro-tahna ja toivottavat risteilyaluksen '
+                    + 'matkustajat tervetulleiksi; kuva joulukuulta 2016.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kivikaupunki kävellen',
+              teksti: 'Saaren pohjoispään kivikaupunki rapistui '
+                + 'vuosikymmeniä, mutta vuosina 2010–2015 katuja ja '
+                + 'rakennuksia kunnostettiin, ja monessa vanhassa '
+                + 'kauppiastalossa toimii nyt majatalo tai ravintola. '
+                + 'Kävelykierroksen voi aloittaa Misericórdian kirkosta, '
+                + 'jonka yhteydessä toimii kirkkotaiteen museo; sen '
+                + 'tunnetuimpia esineitä on makonde-tyylinen krusifiksi. '
+                + 'Rua da Contra Costa -rantakadulla seisoo Luís de '
+                + 'Camõesin patsas. Portugalin kansallisrunoilija asui '
+                + 'saarella vuosina 1567–1569 odottaessaan kyytiä kotiin '
+                + 'ja viimeisteli täällä eepostaan Luusiadit. Hänen '
+                + 'ystävänsä, historioitsija Diogo do Couto, löysi hänet '
+                + 'niin köyhänä, että muut joutuivat ruokkimaan häntä ja '
+                + 'keräämään hänelle vaatteet kotimatkaa varten. Kaduilla '
+                + 'näkyy myös, kuinka monta uskontoa saarella on elänyt '
+                + 'rinnakkain: kirkkojen lisäksi siellä on useita '
+                + 'moskeijoita ja hindutemppeli, ja jo 1800-luvulla saarella '
+                + 'asui Intian Diusta tulleita hindukauppiaita. Saaren '
+                + 'eteläkärjestä näkyy merelle pieni kolmiomainen São '
+                + 'Lourençon linnake, joka rakennettiin 1690-luvun lopun ja '
+                + '1700-luvun alun välillä omalle luodolleen vartioimaan '
+                + 'sataman lounaista suuta.',
+              kuva: {
+                tiedosto: 'Misericórdia Church.jpg',
+                lyhyt: 'Misericórdian kirkon kyljessä toimii saaren kirkkotaiteen museo.',
+                selite: 'Misericórdian kirkon kalkittu barokkijulkisivu '
+                  + 'Mosambikin saarella; vasemmalla sivuovella on kyltti '
+                  + 'Museu de Arte Sacra.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Mussiro ja tufo',
+              teksti: 'Saaren arkeen kuuluu kaksi makua-naisten perinnettä, '
+                + 'joihin matkailija törmää lähes varmasti. Ensimmäinen on '
+                + 'mussiro, valkoinen kasvonaamio, joka tehdään hieromalla '
+                + 'Olax dissitiflora -kasvin varsia kiveä vasten '
+                + 'vesitilkan kanssa. Pohjois-Mosambikin rannikolla ja '
+                + 'saarilla, erityisesti Nampulan maakunnassa, sitä '
+                + 'käytetään kauneudenhoitoon ja auringolta suojaamiseen. '
+                + 'Vanhempien naisten kertoman mukaan valkoiset kasvot '
+                + 'kertoivat aikoinaan myös, ettei tyttö ollut vielä '
+                + 'naimisissa. Toinen perinne on tufo, naisten ryhmätanssi, '
+                + 'jota esitetään islamilaisina juhlapäivinä ja muissakin '
+                + 'juhlissa. Tanssi tuli Mosambikiin luultavasti 1930-luvulla '
+                + 'Kilwasta. Ryhmässä on tavallisesti viidestätoista '
+                + 'kahteenkymmeneen naista, ja tahtia lyö neljä soittajaa '
+                + 'litteillä kehysrummuilla, joiden arabiankielisestä '
+                + 'nimestä ad-duff tanssin nimen arvellaan johtuvan. Laulut '
+                + 'ovat useimmiten makuaksi, joskus arabiaksi tai '
+                + 'portugaliksi, ja ne voivat käsitellä myös yhteiskunnallisia '
+                + 'aiheita. Tanssijat pukeutuvat samanlaisiin huiveihin ja '
+                + 'capulana-kankaisiin. Ennen tanssittiin polvillaan, '
+                + 'pelkkää ylävartaloa liikuttaen, mutta nykyään tanssijat '
+                + 'myös nousevat seisomaan. Ihmisiä kannattaa kuvata vain '
+                + 'luvalla.',
+              kuva: {
+                tiedosto: 'Beauty Masks (33565033415).jpg',
+                lyhyt: 'Mosambikin saaren naisten kasvoja peittää valkoinen mussiro-naamio.',
+                selite: 'Neljä naista punaruudullisissa asuissa istuu '
+                  + 'mukulakivikadulla kasvot valkoisen mussiro-tahnan '
+                  + 'peitossa; kuva joulukuulta 2016.',
+                lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Purjeveneellä lahdelle',
+              teksti: 'Saaren rannoilla odottaa aina purjeveneitä, ja niillä '
+                + 'pääsee sekä lähisaarille että mantereen puolelle. Viiden '
+                + 'kilometrin päässä idässä on asumaton Goan saari, '
+                + 'paikalliselta nimeltään Watólofu: matala korallisaari, '
+                + 'jolla on valkoinen hiekkaranta ja kirkas, kalaisa vesi. '
+                + 'Saaren majakka rakennettiin 1870-luvulla, ja vuonna 1923 '
+                + 'sen torni korotettiin 12 metristä 31 metriin. Nykyään '
+                + 'valo toimii aurinkoenergialla, ja majakan huipulle voi '
+                + 'kiivetä katsomaan näkymiä Mossurilinlahden suulle. '
+                + 'Lahden toisella puolella, noin 40 kilometrin päässä '
+                + 'pohjoisessa, on Chocas-Marin pitkä hiekkaranta, joka on '
+                + 'usein lähes autio, ja purjeveneellä pääsee myös '
+                + 'Mossuriliin ja Cabaceirasin kyliin mantereen rannikolle. '
+                + 'Uimaan kannattaa lähteä nimenomaan retkillä, sillä '
+                + 'Wikivoyage ei suosittele uimista Mosambikin saaren omilla '
+                + 'rannoilla veden likaisuuden vuoksi. Veneen kuntoon ja '
+                + 'pelastusliiveihin kannattaa kiinnittää huomiota: '
+                + 'heinäkuussa 2011 veneonnettomuudessa kuoli kahdeksan '
+                + 'ihmistä, ja Goan ja Senan saaret suljettiin matkailulta '
+                + 'turvallisuusselvityksen ajaksi.',
+              kuva: {
+                tiedosto: 'Farol Ilha de Goa 2010.jpg',
+                lyhyt: 'Goan saaren punavalkoraitainen majakka opastaa laivoja Mossurilinlahdelle.',
+                selite: 'Goan saaren neliskulmainen, punavalkoraitainen '
+                  + 'majakkatorni kohoaa matalan valkoisen rakennuksen '
+                  + 'keskeltä rantapensaikon yllä; kuva joulukuulta 2010.',
+                lahde: 'Margarida Ferreira, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Turvallisuus, sää ja terveys',
+              teksti: 'Pohjoisessa Cabo Delgadon maakunnassa on lokakuusta '
+                + '2017 jatkunut islamistikapina, joka on levinnyt myös '
+                + 'Niassan maakuntaan. Syyskuussa 2022 kapinalliset iskivät '
+                + 'Nampulan maakunnan pohjoisosaan Memban piirikuntaan, '
+                + 'jossa Chipenen lähetysasemalla surmattiin iäkäs '
+                + 'italialainen nunna. Mosambikin saari on samassa '
+                + 'maakunnassa mutta paljon etelämpänä, eikä konflikti ole '
+                + 'ulottunut saarelle. Ennen matkaa kannattaa silti '
+                + 'tarkistaa Suomen ulkoministeriön matkustustiedote, eikä '
+                + 'pohjoiseen Cabo Delgadoon pidä lähteä omin päin. Saarella '
+                + 'riskit ovat arkisempia: Wikivoyage neuvoo tavallista '
+                + 'varovaisuutta ryöstöjen ja varkauksien varalta ja '
+                + 'kehottaa naisia välttämään yksin kulkemista rannoilla. '
+                + 'Malariaa esiintyy koko maassa, joten estolääkityksestä '
+                + 'kannattaa kysyä lääkäriltä hyvissä ajoin ennen matkaa. '
+                + 'Sadekausi kestää lokakuusta maaliskuuhun, ja se on myös '
+                + 'hirmumyrskyjen aikaa: maaliskuussa 2022 hirmumyrsky Gombe '
+                + 'tappoi saarella kuusi ihmistä ja kaatoi vuosisatoja '
+                + 'vanhoja puita. Kuivakausi huhtikuusta syyskuuhun on '
+                + 'vähäsateisempi, ja kesä- ja heinäkuussa illat voivat '
+                + 'olla rannikollakin viileitä.',
+              kuva: {
+                tiedosto: 'Beach cleaning.jpg',
+                lyhyt: 'Naiset siivoavat rantaa aamulla, taustalla Santo Antónion kappeli.',
+                selite: 'Aamuvalossa joukko naisia ja mies siivoaa '
+                  + 'hiekkarantaa haravoin ja luudin; merellä taustalla '
+                  + 'kohoaa valkoinen Santo Antónion kappeli pienen '
+                  + 'linnakkeen muurin päällä. Kuva elokuulta 2009.',
+                lahde: 'Rosino, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -130743,6 +131250,246 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko saari;
+       * opas seuraa etelään vievää kansallistie 7:ää (Antsirabe,
+       * Fianarantsoa, Ambalavao, Anja, Isalo) ja FCE-rataa. Taustatiedot
+       * englannin Wikipediasta (Isalo National Park, Anja Community
+       * Reserve, Ring-tailed lemur, Ambalavao, Antemoro people, Route
+       * nationale 7 (Madagascar), Antsirabe, Ivato International Airport,
+       * Transport in Madagascar, Fianarantsoa-Côte Est railway, Malagasy
+       * ariary, Malagasy cuisine, Nosy Boraha), ranskan Wikipedian
+       * Ambalavao-artikkelista (antemoro-paperi, havoha) ja Wikivoyagen
+       * sivuilta Madagascar, Isalo National Park, Ambalavao, Antsirabe ja
+       * Île Sainte-Marie — teksti omaa. Hinnat, viisumimaksut ja
+       * aukioloajat jätetty pois, koska Wikivoyagen luvut ovat vuosilta
+       * 2014–2020; torin viikonpäivät on merkitty Wikivoyagen tiedoksi.
+       * Sebutorin kokoluokasta lähteet eroavat (Wikivoyage: suurin,
+       * fr-Wikipedia: toiseksi suurin), siksi "saaren suurimpia".
+       * Nostojen aiheita (tsingy, Rova, Andafiavaratra, Ranavalona II,
+       * lähetyskirkot, Toamasinan satama, indri ja Andasibe, baobabien
+       * kuja, pantterikameleontti, fossa, hiirimakit ja Ranomafana),
+       * gallerian ja ennen–nyt-kuvien aiheita (sikidy, Neljän tien
+       * risteys, punainen ylänkö), maalehden aiheita (kanootit, Radama,
+       * Rovan palo, ai-ai, elefanttilintu, katarantus, riisiateriat,
+       * romazava ja sakay, vanilja, koba ja mofo gasy, valiha,
+       * hira gasy, salegy, sorabe, Ibonia, kabary, Rabearivelo) eikä
+       * Afrikan kulttuurinostoja (baobab, valiha, fady) toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Isalon Canyon des Makis ja
+       * Canyon des Rats. Hotelyn liitutaulun hinnat ovat vuodelta 2008.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Canyon des Makis & Canyon des Rats - Isalo-Gebirge.jpg',
+          lyhyt: 'Isalon kanjonin jyrkät hiekkakiviseinät kohoavat vihreän vesialtaan yllä.',
+          selite: 'Canyon des Makis ja Canyon des Rats Isalon kansallispuistossa: '
+            + 'tuuli ja vesi ovat uurtaneet hiekkakiveen kapeita, jyrkkäseinäisiä '
+            + 'rotkoja, joiden pohjalla virtaa vesi ja kasvaa rehevä kasvillisuus.',
+          lahde: 'Andrea Schieber, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Madagaskar on niin suuri ja sen tiet niin huonoja, että '
+          + 'matkailija joutuu valitsemaan: lentää tai hyväksyä, että '
+          + 'taksibussi lähtee vasta, kun jokainen paikka on täynnä. Useimmat '
+          + 'tulevat makien vuoksi, ja kansallispuistoihin mennään paikallisen '
+          + 'oppaan kanssa. Etelään vievän kansallistie 7:n varrella ovat '
+          + 'riksakaupunki Antsirabe, sebutoristaan tunnettu Ambalavao ja '
+          + 'Isalon hiekkakivikanjonit, ja Fianarantsoasta itärannikolle '
+          + 'kulkee juna, joka ylittää matkansa lopussa lentokentän '
+          + 'kiitotien. Taskuun kannattaa varata pieniä ariary-seteleitä ja '
+          + 'muutama sana malagassia.',
+        artikkeli: {
+          nimi: 'Matkailijan Madagaskar',
+          teksti: 'Madagaskarilla makeja katsotaan oppaan kanssa, ja taksibussi lähtee vasta täynnä.',
+          nosto: 'Manakaran lentokentällä juna ja lentokone jakavat saman '
+            + 'asfaltin: rata ylittää kiitotien samassa tasossa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kissamakit ja kanjonit',
+              teksti: 'Useimmat Madagaskarin kävijät tulevat katsomaan makeja, '
+                + 'ja siihen tarvitaan paikallinen opas. Esimerkiksi Isalon '
+                + 'kansallispuistoon saaren lounaisosassa ei saa mennä ilman '
+                + 'opasta, ja oppaat ja kantajat palkataan läheisestä '
+                + 'Ranohiran kylästä. Isalo on hiekkakiviylänkö, jonka tuuli '
+                + 'ja vesi ovat uurtaneet jopa 200 metriä syviksi kanjoneiksi. '
+                + 'Retket kestävät muutamasta tunnista viikkoon, ja kanjonien '
+                + 'pohjalla on luonnonaltaita, joissa voi uida. Seudun '
+                + 'bara-kansa hautaa vainajansa vuorten luoliin, joita pidetään '
+                + 'pyhinä, eikä hautoja kuvata ilman lupaa. Kansallistie 7:n '
+                + 'varrella, 13 kilometriä Ambalavaosta etelään, on Anjan '
+                + 'kyläsuojelualue. Kyläläiset perustivat sen vuonna 2001, kun '
+                + 'metsää raivattiin maissipelloiksi ja makeja metsästettiin '
+                + 'ruoaksi. Nykyään alueella elää noin 300 kissamakia, jotka '
+                + 'ovat tottuneet ihmisiin ja päästävät kävijät muutaman metrin '
+                + 'päähän. Ruokkiminen on kuitenkin kielletty, ja '
+                + 'matkailutuloilla rahoitetaan kylän koulutus- ja '
+                + 'terveyshankkeita. Kissamaki, malagassiksi maky, viettää '
+                + 'maassa enemmän aikaa kuin yksikään muu maki, ja viileinä '
+                + 'aamuina lauma istuu yhdessä vatsa aurinkoa kohti '
+                + 'lämmittelemässä.',
+              kuva: [
+                {
+                  tiedosto: 'Ring-Tailed Lemur, Anja Reserve (3953827770).jpg',
+                  lyhyt: 'Kissamaki istuu graniittilohkareella Anjan suojelualueella.',
+                  selite: 'Kissamaki katsoo kameraan graniittilohkareen päältä '
+                    + 'Anjan kyläsuojelualueella; vasemmassa reunassa näkyy '
+                    + 'mustavalkoisesti rengastettua häntää.',
+                  lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Anja Reserve 01.jpg',
+                  lyhyt: 'Anjan lohkareiden takana on järvi, riisipeltoja ja kylä kallioisen kukkulan juurella.',
+                  selite: 'Näkymä Anjan kyläsuojelualueelta Ambalavaon lähellä: '
+                    + 'etualalla graniittilohkareita ja metsää, alempana järvi, '
+                    + 'vihreitä riisipeltoja ja kylä paljaan kalliokukkulan '
+                    + 'juurella.',
+                  lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Isalo - Namaza - piscine naturelle.jpg',
+                  lyhyt: 'Pieni putous laskee luonnonaltaaseen Isalon Namazan reitin varrella.',
+                  selite: 'Luonnonallas Namazan reitin varrella Isalon '
+                    + 'kansallispuistossa: pieni putous laskee kirkkaaseen '
+                    + 'veteen kallioiden, saniaisten ja puiden keskellä.',
+                  lahde: 'Hardscarf, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Taksibussilla etelään',
+              teksti: 'Useimmat kansainväliset lennot laskeutuvat Ivaton '
+                + 'lentokentälle 16 kilometriä Antananarivon keskustasta '
+                + 'luoteeseen, osa Nosy Been saarelle. Maan sisällä lentäminen '
+                + 'säästää päiviä, sillä useimmat tiet ovat kuoppaisia ja '
+                + 'sadekaudella moni muuttuu mutavelliksi. Kotimaan lentoja '
+                + 'kuitenkin perutaan ja siirretään, joten tiukkoja '
+                + 'jatkoyhteyksiä ei kannata varata, ja lähtöaika kannattaa '
+                + 'varmistaa edellisenä iltana. Malagassit itse matkustavat '
+                + 'taksibusseilla (taxi-brousse): noin viidentoista hengen '
+                + 'pikkubusseilla, jotka lähtevät vasta täynnä, joten odotus voi '
+                + 'venyä tunneiksi. Kyyti on ahdas, ilmastointia ei ole ja '
+                + 'kuivalla kaudella pöly tunkee sisään, mutta kuljettaja jättää '
+                + 'matkustajan pyynnöstä reitin varrelle, vaikkapa kansallispuiston '
+                + 'kohdalle. Suosituin reitti on kansallistie 7, joka kulkee '
+                + 'pääkaupungista lähes tuhat kilometriä lounaisrannikon '
+                + 'Toliaraan ja on maan paremmin hoidettuja teitä. Varrella ovat '
+                + 'viileä kylpyläkaupunki Antsirabe, jonka kaduilla kulkee '
+                + 'tuhansia värikkäitä pousse-pousse-riksoja, sekä Fianarantsoa, '
+                + 'Ambalavao ja Isalo. Auton voi vuokrata, mutta lähes aina '
+                + 'kuljettajan kanssa, ja kuljettaja toimii usein myös oppaana '
+                + 'ja tulkkina.',
+              kuva: {
+                tiedosto: 'Madagascar - Taxi brousse Nord Sud.jpg',
+                lyhyt: 'Taksibussi kansallistie 7:llä, katolla matkustajien tavarat.',
+                selite: 'Vihreävalkoinen, Nord-Sud-tekstillä merkitty taksibussi '
+                  + 'ajaa kansallistie 7:llä kesäkuussa 2007; matkatavarat on '
+                  + 'köytetty katolle, ja tien varressa ajaa pyöräilijä '
+                  + 'myyntikojun ohi.',
+                lahde: 'Jean-Louis Vandevivère, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Juna kiitoradan poikki',
+              teksti: 'Ylängön Fianarantsoasta itärannikon Manakaraan kulkee '
+                + '163 kilometrin FCE-rata (Fianarantsoa–Côte Est). Ranskalaiset '
+                + 'rakennuttivat sen vuosina 1926–1936 siirtomaan '
+                + 'pakkotyöjärjestelmällä, ja kiskot saatiin Saksalta '
+                + 'ensimmäisen maailmansodan sotakorvauksina; osassa näkyy yhä '
+                + 'valmistusvuosi 1893. Rata laskeutuu noin 1 100 metristä '
+                + 'meren tasolle maailman uhanalaisimpiin kuuluvien metsien '
+                + 'halki. Vuonna 2000 kaksi peräkkäistä hirmumyrskyä aiheutti '
+                + 'radalle 280 maanvyöryä ja katkaisi liikenteen kuukausiksi, '
+                + 'kunnes rata korjattiin ulkomaisella tuella. Samana vuonna '
+                + 'tehdyn selvityksen mukaan junan pitäminen liikenteessä '
+                + 'säästää 20 vuodessa noin 97 000 hehtaaria metsää: radanvarren '
+                + 'kylät vievät junalla torille puissa kasvavia satojaan, ja '
+                + 'ilman junaa ne joutuisivat kaatamaan puunsa ja viljelemään '
+                + 'riisiä tai maniokkia. Manakarassa rata ylittää lentokentän '
+                + 'kiitotien samassa tasossa, ja tällaisia paikkoja tunnetaan '
+                + 'maailmassa vain kolme. Kalusto on vanhaa, ja katkenneet '
+                + 'kiskot, vaunujen viat ja myrskyjen maanvyöryt keskeyttävät '
+                + 'liikenteen usein. Aikataulu kannattaa siksi tarkistaa paikan '
+                + 'päällä juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Rail-run-way-crossing.jpg',
+                lyhyt: 'FCE-radan juna ja pienkone kohtaavat Manakaran lentokentän kiitotiellä.',
+                selite: 'Manakaran lentokentällä rata leikkaa kiitotien samassa '
+                  + 'tasossa: punainen FCE-veturi seisoo kiskoilla, kun '
+                  + 'yksimoottorinen potkurikone rullaa sateenmärällä '
+                  + 'kiitotiellä lokakuussa 2009.',
+                lahde: 'chirlula, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sebutori ja kukkapaperi',
+              teksti: 'Ambalavao on pieni kaupunki keskiylängön eteläreunalla, '
+                + '56 kilometriä Fianarantsoasta etelään kansallistie 7:n '
+                + 'varrella, ja sen asukkaat ovat enimmäkseen betsileoja. '
+                + 'Kaupungissa pidetään kahdesti viikossa sebumarkkinat, '
+                + 'Wikivoyagen mukaan keskiviikko- ja torstaiaamuisin, ja ne '
+                + 'ovat saaren suurimpia karjatoreja. Kaupungin keskustassa voi '
+                + 'käydä antemoro-paperin pajassa. Paperimassa tehdään '
+                + 'havoha-pensaan, erään mulperilajin, kuoresta, ja vielä '
+                + 'märän arkin pintaan painetaan kukkia ja lehtiä ennen kuin '
+                + 'arkki kuivataan. Taito on peräisin kaakkoisrannikon '
+                + 'antemoro-kansalta, ja nykyään kukka-arkkeja myydään '
+                + 'etenkin matkailijoille ja ulkomaille. Kaupungin '
+                + 'pohjoisosassa voi käydä silkkikutomossa: Ambalavaon silkki '
+                + 'saadaan erityisestä silkkiperhoslajista, jonka toukat '
+                + 'syövät tapia-puun lehtiä. Samaa puuta kasvaa laajimpina '
+                + 'yhtenäisinä metsikköinä juuri Isalossa. Torilla ja kylissä '
+                + 'ihmisiä kuvataan vain luvan kanssa, ja syrjäiseen kylään '
+                + 'asialle tultaessa on tapana tervehtiä ensin kylän '
+                + 'päämiestä.',
+              kuva: {
+                tiedosto: 'Zebu Market Ambalavao Madagascar.jpg',
+                lyhyt: 'Sebukarjaa ja kauppiaita Ambalavaon karjatorilla punamultaisten kukkuloiden keskellä.',
+                selite: 'Ambalavaon sebutorilla karjaa pidetään ryhmissä '
+                  + 'ruohikolla, ja ihmisiä kulkee punamultaista polkua pitkin '
+                  + 'kohti torin keskustaa; monella on kädessään paimensauva.',
+                lahde: 'JialiangGao, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pieniä seteleitä ja tompoko',
+              teksti: 'Madagaskarin raha on ariary. Se on toinen maailman '
+                + 'kahdesta valuutasta, joita ei jaeta sadasosiin tai '
+                + 'kymmenyksiin: ariary jakautuu viiteen iraimbilanjaan, mutta '
+                + 'pikkuyksiköllä ei ole enää käytännössä arvoa. '
+                + 'Pankkiautomaatteja on isommissa kaupungeissa, mutta ne ovat '
+                + 'usein epäkunnossa, joten euroja tai dollareita kannattaa '
+                + 'pitää varalla. Pieniä seteleitä tarvitaan: suurella setelillä '
+                + 'maksaminen herättää huomiota, eikä myyjällä usein ole '
+                + 'vaihtorahaa. Edullisimmin syö hotelyssä. Nimestään huolimatta '
+                + 'se on ruokapaikka eikä hotelli, ja riisin kanssa saa '
+                + 'päivän lisukkeen. Katukioskien kahvi juodaan '
+                + 'makeana kondensoidun maidon kanssa, mutta hanavettä ei '
+                + 'juoda. Koko saarella puhutaan malagassia, ja ranska on '
+                + 'toinen virallinen kieli. Muutama malagassin sana ilahduttaa, '
+                + 'ja vanhempia ihmisiä ja virkailijoita puhutellaan '
+                + 'kohteliaisuussanalla tompoko. Sadekausi kestää marraskuusta '
+                + 'huhtikuuhun, ja silloin itärannikolle iskee hirmumyrskyjä. '
+                + 'Toukokuusta lokakuuhun on kuivempaa ja viileämpää, ja '
+                + 'kesä–syyskuussa ryhävalaat saapuvat Sainte-Marien saaren ja '
+                + 'mantereen väliseen salmeen parittelemaan ja poikimaan. '
+                + 'Antananarivossa ei pidä kävellä pimeällä, ja hyttysiltä on '
+                + 'suojauduttava hämärän tultua. Verkon matkaoppaiden tiedot '
+                + 'vanhenevat nopeasti, joten turvallisuus- ja terveystiedot '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Hotely menu Madagascar.jpg',
+                lyhyt: 'Hotelyn liitutaululle on kirjoitettu päivän ruoat ja niiden hinnat ariaryinä.',
+                selite: 'Hotelyn taulussa lukee Sakafo anio, päivän ruoka: '
+                  + 'listalla on muun muassa kanaa, kalaa, pihviä ja keittoja '
+                  + 'riisin tai ranskalaisten kanssa. Kuva on vuodelta 2008, '
+                  + 'eivätkä hinnat enää päde.',
+                lahde: 'Hery Zo Rakotondramanana, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
