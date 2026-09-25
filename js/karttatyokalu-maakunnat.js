@@ -294,10 +294,17 @@ function tallennaValinta(avain) {
  * samaa funktiota. Siksi tässä ei toisteta pallolaudan omaa hakua
  * erikseen: yksi kutsu kattaa molemmat pelimuodot.
  */
-function oletusIso(ui) {
-  const iso = kohteidenNykyinenIso(ui);
-  return MAAKUNTIEN_MAAT.some((m) => m.iso === iso) ? iso : 'FRA';
+/*
+ * EI ENÄÄ RANSKAA VARALLE (löydös 70, Fable 25.9.2026: Kreikassa
+ * välilehti näytti Ranskan). Maassa, jolla ei ole maakuntia, yhtäkään
+ * ryhmää ei avata; lista kertoo sen tekstillä ja muut maat jäävät
+ * suljettuina sen alle. null = maa ei tiedossa (esim. ennen peliä).
+ */
+export function maakuntienMaa(iso) {
+  return MAAKUNTIEN_MAAT.some((m) => m.iso === iso) ? iso : null;
 }
+
+export const EI_MAAKUNTIA_TEKSTI = 'Tälle maalle ei ole vielä maakuntia';
 
 /* ===========================================================================
    3. LISTA
@@ -322,16 +329,18 @@ function oletusIso(ui) {
  *   pelin UI-olio, jota käytetään vain nykyisen maan päättelyyn ja
  *   `ui.karttatyokaluMaakunta`-koukun kiinnitykseen — kumpikaan ei ole
  *   pakollinen.
- * @returns {{ valitse: (avain: string) => void, paivita: () => void }}
+ * @returns {{ valitse: (avain: string) => void, paivitaMaa: () => void, paivita: () => void }}
  */
 export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
   if (!paneeli) return null;
 
   const juuri = html('div', 'maakunnat-tyokalu');
+  const eiMaakuntia = html('p', 'maakunnat-ei-maakuntia', EI_MAAKUNTIA_TEKSTI);
+  eiMaakuntia.hidden = true;
   const lista = html('div', 'maakunnat-lista');
   const kuvaus = html('div', 'maakunnat-luonnehdinta');
   kuvaus.hidden = true;
-  juuri.append(lista, kuvaus);
+  juuri.append(eiMaakuntia, lista, kuvaus);
   paneeli.appendChild(juuri);
 
   const rivit = [];
@@ -343,7 +352,16 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
   const tallennettu = lueTallennettuValinta();
   let valittuAvain = avainKelpaa(tallennettu) ? tallennettu : null;
-  const avoinIso = valittuAvain ? jaaAvain(valittuAvain).iso : oletusIso(ui);
+  /*
+   * NYKYISEN MAAN RYHMÄ AUKI. Tallennettu valinta ei enää päätä avointa
+   * ryhmää (se jäi Ranskaan Kreikassakin); vain jos maata ei tiedetä,
+   * avataan valitun rivin ryhmä kuten ennen.
+   */
+  let nykyIso = kohteidenNykyinenIso(ui) ?? null;
+  const avoinIso = nykyIso
+    ? maakuntienMaa(nykyIso)
+    : (valittuAvain ? jaaAvain(valittuAvain).iso : null);
+  eiMaakuntia.hidden = !nykyIso || Boolean(avoinIso);
 
   /** Vain yksi maaryhmä auki kerrallaan — sama tila kuin karttaselitteen levyllä. */
   function vaihdaRyhma(iso) {
@@ -356,6 +374,24 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       r.rivitRyhma.hidden = !tuleeAuki;
     }
     // Rivit siirtyivät: levy uudelle paikalle (piiloon, jos valittu rivi on suljetussa ryhmässä).
+    levykahva?.paivita(valittuAvain);
+  }
+
+  /**
+   * Saapuminen toiseen maahan (karttaselitteen paivita kutsuu joka
+   * renderöinnissä): maa vaihtui → sen ryhmä auki tai teksti ja kaikki
+   * kiinni. Saman maan sisällä pelaajan omat avaukset säilyvät.
+   */
+  function paivitaMaa() {
+    const iso = kohteidenNykyinenIso(ui) ?? null;
+    if (!iso || iso === nykyIso) return;
+    nykyIso = iso;
+    const auki = maakuntienMaa(iso);
+    eiMaakuntia.hidden = Boolean(auki);
+    for (const [muuIso, r] of ryhmat) {
+      r.otsikko.setAttribute('aria-expanded', String(muuIso === auki));
+      r.rivitRyhma.hidden = muuIso !== auki;
+    }
     levykahva?.paivita(valittuAvain);
   }
 
@@ -455,7 +491,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
     };
   }
 
-  return { valitse, paivita: () => levykahva?.paivita(valittuAvain) };
+  return { valitse, paivitaMaa, paivita: () => levykahva?.paivita(valittuAvain) };
 }
 
 /* ===========================================================================
