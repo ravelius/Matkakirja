@@ -1,0 +1,79 @@
+{
+  "sourceOrder": "posti/sisaltokirjuri-kuvaputki-galleria-taydennys-20260925.md",
+  "uploadStatus": "2 JPEGs R2 readback verified",
+  "integrationStatus": "Not integrated into game by Codex; Fable wiring pending",
+  "images": [
+    {
+      "cityId": "robinsoncrusoe",
+      "kaupunki": "Robinson Crusoe -saari",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/robinsoncrusoe-galleria.jpg",
+      "objectKey": "kaupunkikuvasto/20260925/galleria/robinsoncrusoe-galleria.jpg",
+      "sha256": "c345054d9aaa288ecafe5e52181c83163699198b8330eabc8b5006e12dc68d72",
+      "tavut": 437540,
+      "leveys": 1600,
+      "korkeus": 1033,
+      "mitat": {
+        "leveys": 1600,
+        "korkeus": 1033
+      },
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Isla_de_Juan_Fernandez_1740.jpg",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/a/af/Isla_de_Juan_Fernandez_1740.jpg",
+      "tekija": "J. Mason (kaiverrus; Richard Walterin piirroksen mukaan)",
+      "vuosi": "1748",
+      "lisenssi": "Public domain / PD-old (Commons); teos julkaistu 1748, joten myös Yhdysvalloissa public domain.",
+      "attribuutio": "J. Mason (kaiverrus; Richard Walterin piirroksen mukaan) / Wikimedia Commons",
+      "kuvateksti-ehdotus": "J. Masonin vuoden 1748 kaiverrus näyttää kommodori Ansonin leirin Juan Fernándezin saarella.",
+      "lahde": "Wikimedia Commons; Juan Fernándezin saaren historiallinen näkymä tunnistettu myös Museo Histórico Nacional de Chilen teosluettelossa",
+      "teos": "A view of the Commodore’s Tent at the Island of Juan Fernandes",
+      "lähdeTavut": 316717,
+      "lähdeMitat": [
+        1600,
+        1033
+      ],
+      "julkaisuvuosi": 1748,
+      "qaKonteksti": "Historiallinen Juan Fernándezin saarta kuvaava 1700-luvun kaiverrus, ei Defoen romaanin kuvitus. Museo Histórico Nacional de Chile vahvistaa saman aiheen ja teoksen vuoden 1748 matkakertomuksessa.",
+      "lähdeSha256": "45b860af663f4e4dfdf1d94afc4eaf1b59384b74991d10fd27727639ceefccaf",
+      "qaTekninen": "R2-luku takaisin: HTTP 200, JPEG RGB, nimetty sRGB ICC, tavut, mitat ja SHA-256 täsmäävät; CORS https://matkakirja.app.",
+      "qaVisuaalinen": "Koko kuva katsottu: aito historiallinen taideteos, oikea kohde, ei AI-kuvaa eikä vesileimaa; alkuperäinen rajaus säilytetty.",
+      "deliveryStatus": "R2 verified; game integration and published playback not yet verified"
+    },
+    {
+      "cityId": "puertomontt",
+      "kaupunki": "Puerto Montt",
+      "tyyppi": "galleria",
+      "loytyi": true,
+      "url": "https://media.matkakirja.app/kaupunkikuvasto/20260925/galleria/puertomontt-galleria.jpg",
+      "objectKey": "kaupunkikuvasto/20260925/galleria/puertomontt-galleria.jpg",
+      "sha256": "0d6490d491534a8f3ea872178db4949b03ffdb46a0636393bb526cc4197a4dc3",
+      "tavut": 91822,
+      "leveys": 890,
+      "korkeus": 362,
+      "mitat": {
+        "leveys": 890,
+        "korkeus": 362
+      },
+      "lähdesivu": "https://commons.wikimedia.org/wiki/File:Puerto_Montt_-_Vista_jeneral_-_Chile_Ilustrado_(1872).png",
+      "lähdeTiedosto": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Puerto_Montt_-_Vista_jeneral_-_Chile_Ilustrado_%281872%29.png",
+      "tekija": "Tuntematon kaivertaja; Recaredo Santos Torneron teos",
+      "vuosi": "1872",
+      "lisenssi": "Public domain / PD-old-100 / PD-US-expired (Wikimedia Commons); Memoria Chilena: patrimonio cultural común.",
+      "attribuutio": "Tuntematon kaivertaja; Recaredo Santos Torneron teos / Wikimedia Commons",
+      "kuvateksti-ehdotus": "Vuoden 1872 kaiverrus avaa näkymän Puerto Monttin taloille ja rannikolle.",
+      "lahde": "Biblioteca Nacional de Chile / Memoria Chilena; Wikimedia Commons",
+      "teos": "Vista jeneral de Puerto Montt (Chile ilustrado, 1872)",
+      "lähdeTavut": 328425,
+      "lähdeMitat": [
+        890,
+        362
+      ],
+      "julkaisuvuosi": 1872,
+      "qaKonteksti": "Vuoden 1872 teoksen nimeltään Puerto Montt -kaupunkinäkymä; alkuperäisen Commons-tiedoston koko 890×362 px, ei suurennettu. Memoria Chilena vahvistaa paikan ja painovuoden.",
+      "lähdeSha256": "5589c81184e6e922ffee3776843b06c0bed158a1a62c6c39976e81f3ff046837",
+      "qaTekninen": "R2-luku takaisin: HTTP 200, JPEG RGB, nimetty sRGB ICC, tavut, mitat ja SHA-256 täsmäävät; CORS https://matkakirja.app.",
+      "qaVisuaalinen": "Koko kuva katsottu: aito historiallinen taideteos, oikea kohde, ei AI-kuvaa eikä vesileimaa; alkuperäinen rajaus säilytetty.",
+      "deliveryStatus": "R2 verified; game integration and published playback not yet verified"
+    }
+  ]
+}
