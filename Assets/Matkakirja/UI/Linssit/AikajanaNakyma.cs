@@ -257,6 +257,12 @@ namespace Matkakirja.Natiivi
             var juuri = kerros.Juuri(LinssiUi.Kerros);
             esittely = Laatikko(juuri, out eOtsikko, out eTeksti, out var eNapit, out ePaperi, out eKehys);
             eKehys.RegisterCallback<GeometryChangedEvent>(_ => PaivitaPaperi());
+            // Web min(31rem, 88 %) .aikajana-avaus-laatikon 1rem:n täytteen sisältä (UITK:n prosentti laski koko leveydestä).
+            esittely.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                float w = esittely.layout.width;
+                if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
+            });
             Lyhdyt(eKehys);
             kaynnista = Rakenne.Nappi(Kapiteelit("Käynnistä"), "mk-aikajana-avausnappi", Kaynnista, eNapit);
             Kirjasimet.Aseta(kaynnista, Kirjasin.LukuLihava);
@@ -385,17 +391,20 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static void Lyhdyt(VisualElement kehys)
         {
-            var keila = Kuviot.Soikio("avauslyhty", new Color(1f, 0.8f, 0.46f, 0.42f), new Color(1f, 0.55f, 0.18f, 0f), 0f);
-            var vasen = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--vasen", kehys, PickingMode.Ignore);
-            var oikea = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--oikea", kehys, PickingMode.Ignore);
+            var keila = RepaleinenPergamentti.Keila;
+            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi).
+            var vasen = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--vasen", null, PickingMode.Ignore);
+            var oikea = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--oikea", null, PickingMode.Ignore);
+            kehys.Insert(1, vasen);
+            kehys.Insert(2, oikea);
             vasen.style.backgroundImage = oikea.style.backgroundImage = new StyleBackground(keila);
             var arpa = new System.Random(7);
             float va = 0.85f, oa = 0.85f;
             kehys.schedule.Execute(() =>
             {
                 if (kehys.resolvedStyle.display == DisplayStyle.None || kehys.panel == null) return;
-                va = Mathf.Clamp(va + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.62f, 1f);
-                oa = Mathf.Clamp(oa + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.62f, 1f);
+                va = Mathf.Clamp(va + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
+                oa = Mathf.Clamp(oa + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
                 vasen.style.opacity = va;
                 oikea.style.opacity = oa;
             }).Every(140);

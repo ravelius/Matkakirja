@@ -15,7 +15,37 @@ namespace Matkakirja.Natiivi
     public static class RepaleinenPergamentti
     {
         /// <summary>Kajon reunus kuvan pikseleinä laatikon leveydestä (web HEHKU_KASVU 0,15 → sumean osan ulottuma).</summary>
-        public const float KajoOsuus = 0.075f;
+        public const float KajoOsuus = 0.05f;
+
+        static Texture2D keila;
+
+        /// <summary>
+        /// Lyhdyn valokeila (web .aikajana-lyhty .kajo/.ydin): lämmin säteittäinen liuku, joka häipyy täysin jo
+        /// elementin reunan keskikohdissa (Kuviot.Soikio häipyy vasta kulmissa, jolloin reunat näkyivät suorakaiteena).
+        /// </summary>
+        public static Texture2D Keila
+        {
+            get
+            {
+                if (keila != null) return keila;
+                const int N = 128;
+                keila = new Texture2D(N, N, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp, name = "avauslyhty" };
+                var px = new Color32[N * N];
+                for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                {
+                    float dx = (x + 0.5f) / N * 2f - 1f, dy = (y + 0.5f) / N * 2f - 1f;
+                    float r = Mathf.Clamp01(Mathf.Sqrt(dx * dx + dy * dy));
+                    float ydin = Mathf.Pow(1f - r, 2.2f), kajo = Mathf.Pow(1f - r, 1.2f);
+                    var c = Color.Lerp(new Color(1f, 0.67f, 0.29f), new Color(1f, 0.94f, 0.77f), ydin);
+                    c.a = 0.55f * kajo * 0.6f + 0.4f * ydin;
+                    px[y * N + x] = c;
+                }
+                keila.SetPixels32(px);
+                keila.Apply(false, true);
+                return keila;
+            }
+        }
 
         /// <summary>
         /// Luo paperin w × h pikseliä (laatikon koko) + kajoreunus joka sivulla. valmis(tekstuuri, reunus) kutsutaan
@@ -96,7 +126,7 @@ namespace Matkakirja.Natiivi
                         c.a = paperi;
                     }
                     // Kajo paperin alla: lämmin ja sumea, himmenee reunasta ulos.
-                    float kajoA = dist > 0f ? 0.24f * Mathf.Exp(-Sq(dist / kajoSade) * 3f) : 0.24f;
+                    float kajoA = dist > 0f ? 0.2f * Mathf.Exp(-Sq(dist / kajoSade) * 3f) : 0.2f;
                     var ulos = new Color(kajo.r, kajo.g, kajo.b, kajoA);
                     // Paperi kajon päällä (lähde yli).
                     float a = c.a + ulos.a * (1f - c.a);

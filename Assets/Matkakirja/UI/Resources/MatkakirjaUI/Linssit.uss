@@ -1285,6 +1285,7 @@
 .mk-aikajana-avaus__kehys {
     width: 88%;
     max-width: 496px;
+    flex-shrink: 0;
 }
 
 .mk-aikajana-avaus__paperi {
@@ -1359,18 +1360,18 @@
 /* Web .aikajana-lyhty: lämmin keila kummassakin yläkulmassa (keskus 17 % / 7 % laatikosta, joka on 98 % × 118 %). */
 .mk-aikajana-avaus__lyhty {
     position: absolute;
-    width: 150%;
-    height: 90%;
-    top: -38%;
+    width: 110%;
+    height: 72%;
+    top: -30%;
     -unity-background-scale-mode: stretch-to-fill;
 }
 
 .mk-aikajana-avaus__lyhty--vasen {
-    left: -75%;
+    left: -50%;
 }
 
 .mk-aikajana-avaus__lyhty--oikea {
-    right: -75%;
+    right: -50%;
 }
 
 /* Web .aikajana-avaus-nappi: 44 px, padding 0,62rem 2,1rem, pilleri, reuna 1,5 px kulta, liukuväri (C#). */
