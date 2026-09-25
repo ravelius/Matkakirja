@@ -332,12 +332,56 @@ namespace Matkakirja.Natiivi
         /// <param name="url">välimuistiavain: äänitteen osoite tai synteesin Lukijaaani.Valimuistiavain</param>
         /// <param name="synteesi">klippi soi vahvistimen ja kompressorin läpi (web lukijan piiri)</param>
         /// <param name="sailo">false = näyte: ladataan väliaikaiseen tiedostoon, joka poistetaan heti</param>
+        /// <summary>Esiladattavat äänitteet (url), joiden lataus on kesken: Soita odottaa niitä eikä lataa rinnalla.</summary>
+        static readonly HashSet<string> esiladataan = new HashSet<string>();
+
+        /// <summary>
+        /// Lataa äänitteen levyvälimuistiin soittamatta (löydös 118: intro-puhe portin aikana, jotta luenta alkaa
+        /// Aloita seikkailu -painalluksesta heti). Ei tee mitään, jos tiedosto on jo välimuistissa tai latauksessa.
+        /// </summary>
+        public void Esilataa(string url)
+        {
+            if (string.IsNullOrEmpty(url) || esiladataan.Contains(url)) return;
+            string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
+            if (File.Exists(tiedosto)) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (välimuistissa)"); return; }
+            StartCoroutine(EsilataaTiedosto(url, tiedosto));
+        }
+
+        IEnumerator EsilataaTiedosto(string url, string tiedosto)
+        {
+            esiladataan.Add(url);
+            Directory.CreateDirectory(Kansio);
+            string valiaikainen = tiedosto + ".esilataus";
+            bool ok;
+            using (var r = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET))
+            {
+                r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
+                r.timeout = 60;
+                float hakuAlku = Time.realtimeSinceStartup;
+                yield return r.SendWebRequest();
+                VerkkoOdotus.Haku("puhe", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
+                ok = r.result == UnityWebRequest.Result.Success;
+            }
+            try
+            {
+                if (ok && !File.Exists(tiedosto)) File.Move(valiaikainen, tiedosto);
+                else if (File.Exists(valiaikainen)) File.Delete(valiaikainen);
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA puhe: esilataus: " + e.Message); }
+            Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} {(ok ? "ok" : "EPÄONNISTUI")}");
+            esiladataan.Remove(url);
+        }
+
         IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo)
         {
             float alku = Time.unscaledTime;
+            bool valimuistista = sailo && File.Exists(Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url))));
             string kansio = sailo ? Kansio : Application.temporaryCachePath;
             string tiedosto = sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
                 : Path.Combine(kansio, "puhenayte-" + oma + ".mp3");
+            // Esilataus kesken (Esilataa): odotetaan sitä, ettei samaa tiedostoa ladata kahdesti rinnakkain.
+            while (sailo && esiladataan.Contains(url)) yield return null;
+            if (oma != tunnus) yield break;
             if (!sailo || !File.Exists(tiedosto))
             {
                 Directory.CreateDirectory(kansio);
@@ -398,6 +442,9 @@ namespace Matkakirja.Natiivi
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
+            // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
+            Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
+                      + Path.GetFileName(url.Split('?')[0]));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
             if (puhuu) AsetaPuhuu(false);
