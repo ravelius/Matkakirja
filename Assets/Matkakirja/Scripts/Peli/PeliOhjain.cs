@@ -357,12 +357,16 @@ namespace Matkakirja.Natiivi
             if (Instanssi == this) Instanssi = null;
             if (kierto != null) { kierto.KaupunkiNapautettu -= Napautettu; kierto.Napautettu -= PalloNapautettu; kierto.PelaajanEle -= KarttaKosketettu; }
             if (lehtiNakyma != null) lehtiNakyma.Suljettu -= LehtiSuljettu;
+            Esilataaja.Joutilas -= Joutilaana;
         }
 
         void Alusta(PalloKierto k, KaupunkiMerkit m)
         {
             kierto = k;
             merkit = m;
+            // ESILATAUSPOLITIIKKA kohta 4 (PeliOhjain.Esilataus).
+            Esilataaja.Joutilas += Joutilaana;
+            Esilataaja.Kaynnista();
             KytkeReitit();
             TMP_FontAsset fontti = m != null ? m.fontti : null;
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
@@ -677,6 +681,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA peli: saapumispuheita {luennat.Saapumispuheita}, luentoja {luennat.Luentoja}");
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: luennat eivät jäsenny: " + e.Message); }
+            LuennatLuettu();
         }
 
         /// <summary>
@@ -1328,6 +1333,7 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = t.Saapui;
             matkaKohde = b.Value;
             Tila = SilmukanTila.Matkalla;
+            if (t.Saapui != null) EsilataaSaapuminen(t.Saapui);
             // Reitit piirretään lähtöpaikasta koko siirron ajan (web siirtoKaynnissa, B8).
             siirtoLahto = t.Lahto;
             saapumisaaniSoi = false;

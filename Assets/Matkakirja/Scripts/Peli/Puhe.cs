@@ -339,27 +339,27 @@ namespace Matkakirja.Natiivi
         /// Lataa äänitteen levyvälimuistiin soittamatta (löydös 118: intro-puhe portin aikana, jotta luenta alkaa
         /// Aloita seikkailu -painalluksesta heti). Ei tee mitään, jos tiedosto on jo välimuistissa tai latauksessa.
         /// </summary>
-        public void Esilataa(string url)
+        public void Esilataa(string url, Taso taso = Taso.SeuraavaRuutu)
         {
             if (string.IsNullOrEmpty(url) || esiladataan.Contains(url)) return;
             if (Mukana.Polku(url) != null) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (buildissa)"); return; }
             string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
             if (File.Exists(tiedosto)) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (välimuistissa)"); return; }
-            StartCoroutine(EsilataaTiedosto(url, tiedosto));
+            StartCoroutine(EsilataaTiedosto(url, tiedosto, taso));
         }
 
-        IEnumerator EsilataaTiedosto(string url, string tiedosto)
+        IEnumerator EsilataaTiedosto(string url, string tiedosto, Taso taso)
         {
             esiladataan.Add(url);
             Directory.CreateDirectory(Kansio);
             string valiaikainen = tiedosto + ".esilataus";
             bool ok = false;
-            // Seuraavan ruudun esilataus (Esilataaja: näkyvä ohittaa).
+            // Esilataus kutsujan tasolla (oletus seuraava ruutu; Esilataaja: näkyvä ohittaa).
             yield return Esilataaja.Hae(() => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET)
             {
                 downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true },
                 timeout = 60,
-            }, Taso.SeuraavaRuutu, "puhe", r => ok = r.result == UnityWebRequest.Result.Success);
+            }, taso, "puhe", r => ok = r.result == UnityWebRequest.Result.Success);
             try
             {
                 if (ok && !File.Exists(tiedosto)) File.Move(valiaikainen, tiedosto);
