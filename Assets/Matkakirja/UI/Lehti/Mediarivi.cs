@@ -173,6 +173,10 @@ namespace Matkakirja.Natiivi
             t.Aika = Rakenne.Teksti("", "mk-piilo", b);
             t.Aika.style.display = DisplayStyle.None;
             radionapit[b] = (t, null);
+            // Löydös 71 (iPhone, Linssisepän juurisyy): lapset eivät ota osumaa, joten nappi on aina kohde. Muuten
+            // sormi osui "radio"-tekstiin, alla oleva trickle-pysäytys katkaisi PointerDownin napin kohdalla, eikä
+            // Clickable saanut sitä (nappi toimi vain tyhjästä reunasta).
+            t.Merkki.pickingMode = t.Nimi.pickingMode = t.Aika.pickingMode = PickingMode.Ignore;
             // Napautus ei avaa/sulje kartuschaa (masto kuuntelee isäntää).
             b.RegisterCallback<PointerDownEvent>(e => e.StopPropagation(), TrickleDown.TrickleDown);
             b.clicked += () =>
