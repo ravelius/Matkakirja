@@ -6,6 +6,10 @@
 // TUTKIMUSVAIHE (ITutkimuksenNakyma, web ihmisen-matka-tutkimus.js): vanan korostus on tämän
 // kerroksen; nostojen pisteet, virtanapit ja lappu ovat Natiivi-UI:n (web DOM-merkit ja palkki).
 // UI piirtää pisteet NostonPiste(tunnus)-ruutupisteisiin kuten löytökuvan KuvanPiste.
+//
+// IHMISEN MATKA II (omistaja 25.9.2026): sama kerros Versio2-lipulla. Esityksen kutsut välitetään lisäksi
+// IhmisenMatka2Tehosteet-komponentille (valo, kartan väistö, kuvan alue, myöhemmin sumu ja äänimaisemat), ja
+// tekstitys on oletuksena pois (CC-nappi, Natiivi-UI; logiikka TekstiNakyvissa/AsetaTekstitys). I ei muutu.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,6 +61,59 @@ namespace Matkakirja.Natiivi
         /// <summary>Auki oleva kerros (null, kun ihmisen matka ei ole auki).</summary>
         public static IhmisenMatkaKerros Instanssi { get; private set; }
 
+        /// <summary>Ihmisen matka II (tehosteet, CC, kuvan alue); epätosi = alkuperäinen esitys sellaisenaan.</summary>
+        public bool Versio2 { get; private set; }
+        /// <summary>II:n tehostekerros (null I:ssä).</summary>
+        public IhmisenMatka2Tehosteet Tehosteet { get; private set; }
+
+        // ── TEKSTITYS (Ihmisen matka II, omistaja 25.9.2026: "tekstitys oletuksena pois, yläpalkkiin CC-nappi … aivan
+        //    ensimmäinen teksti saa jäädä") ─────────────────────────────────────────────────────────────────────
+        /// <summary>Laitteen muisti CC-valinnalle (PlayerPrefs, 0 = pois, oletus pois).</summary>
+        public const string TekstitysAvain = "linssi.ihmisen-matka-2.tekstitys";
+        static bool? tekstitys;
+
+        /// <summary>Näytetäänkö CC-nappi (vain II:ssa, Natiivi-UI:n yläpalkki).</summary>
+        public static bool CcNappi => Instanssi != null && Instanssi.Versio2;
+
+        /// <summary>Tekstitys päällä: I:ssä aina; II:ssa pelaajan valinta (oletus pois).</summary>
+        public static bool TekstitysPaalla
+        {
+            get
+            {
+                if (Instanssi == null || !Instanssi.Versio2) return true;
+                tekstitys ??= PlayerPrefs.GetInt(TekstitysAvain, 0) == 1;
+                return tekstitys.Value;
+            }
+        }
+
+        /// <summary>CC-nappi kytki tekstityksen (tosi = päällä). UI päivittää napin tilan ja tekstin näkyvyyden.</summary>
+        public static event Action<bool> TekstitysMuuttui;
+
+        /// <summary>CC-napin napautus (Natiivi-UI): tallentaa valinnan ja ilmoittaa.</summary>
+        public static void AsetaTekstitys(bool paalla)
+        {
+            tekstitys = paalla;
+            PlayerPrefs.SetInt(TekstitysAvain, paalla ? 1 : 0);
+            PlayerPrefs.Save();
+            LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tekstitys " + (paalla ? "päällä" : "pois"));
+            TekstitysMuuttui?.Invoke(paalla);
+        }
+
+        /// <summary>
+        /// Näytetäänkö kertomuksen osa (jakson indeksi, osan tai avauksen lauseen indeksi): I:ssä aina; II:ssa vain
+        /// tekstitys päällä, paitsi aivan ensimmäinen virke (jakso 0, osa 0: "Tiedätkö, mistä ihmiset lähtivät liikkeelle?").
+        /// Natiivi-UI kutsuu tätä AsetaKertomusteksti-kohdassa.
+        /// </summary>
+        public static bool TekstiNakyvissa(int jakso, int osa) => TekstitysPaalla || (jakso == 0 && osa == 0);
+
+        // ── HAVAINNEKUVAN ALUE (II: kuvat isommiksi, kartta väistää; omistaja 25.9.2026) ─────────────────────────
+        /// <summary>
+        /// II:n havainnekuvan paikka ja koko ruudun osuuksina (origo VASEN YLÄKULMA, kuten UI): puhelimella pystyssä
+        /// yläpuolisko koko leveydeltä, vaakasuunnassa oikea puolisko. null = I:n tapa (soikio kohdepisteen yllä) tai ei kuvaa.
+        /// Natiivi-UI sijoittaa kuvan tähän, kun arvo ei ole null (SijoitaKertomuskuva).
+        /// </summary>
+        public static Rect? KuvanAlue => Instanssi != null && Instanssi.Tehosteet != null ? Instanssi.Tehosteet.KuvanAlue : null;
+
         /// <summary>
         /// LÖYTÖKUVAN ANKKURI (web .aikajana-kuva: soikio kohdepisteen yläpuolella, seuraa pistettä
         /// kameran liikkuessa). Nykyisen kuvan kohdepisteen ruutusijainti Unityn ruutupikseleinä
@@ -77,13 +134,14 @@ namespace Matkakirja.Natiivi
         bool pito, valoissa;
         float tahtienPeitto = 1f, valotAlkoi = -1f;
 
-        public static IhmisenMatkaKerros Luo(PalloKierto kierto, IReadOnlyList<Loytopaikka> paikat)
+        public static IhmisenMatkaKerros Luo(PalloKierto kierto, IReadOnlyList<Loytopaikka> paikat, bool versio2 = false)
         {
             var g = kierto.georeferenssi;
-            var go = new GameObject("IhmisenMatkaKerros");
+            var go = new GameObject(versio2 ? "IhmisenMatka2Kerros" : "IhmisenMatkaKerros");
             go.transform.SetParent(g.transform, false);
             var k = go.AddComponent<IhmisenMatkaKerros>();
             k.kierto = kierto;
+            k.Versio2 = versio2;
             foreach (var p in paikat) if (p.Tunnus != null) k.paikkaIndeksi[p.Tunnus] = (p.Lat, p.Lon);
             Instanssi = k;
             bool vahennetty = LinssiOhjain.Instanssi?.VahennettyLiike ?? false;
@@ -91,8 +149,20 @@ namespace Matkakirja.Natiivi
             // Kerroin 60 (web TAHTIEN_KERROIN): avauksen kamera on 300 pallonsäteen päässä, joten tähtien on oltava sitä kauempana.
             k.taivas = Tahtitaivas.Luo(g, Esitysmatikka.TahtienKerroin, vahennetty);
             kierto.Napautettu += k.Napautettu;
+            if (versio2)
+            {
+                k.Tehosteet = go.AddComponent<IhmisenMatka2Tehosteet>();
+                k.Tehosteet.Kytke(k, kierto, k.paikkaIndeksi);
+            }
             return k;
         }
+
+        /// <summary>Paikan koordinaatit tunnuksella (löytöpaikka tai tutkimusvaiheen nosto); null, jos ei tunneta.</summary>
+        public (double Lat, double Lon)? Paikka(string tunnus) =>
+            tunnus != null && paikkaIndeksi.TryGetValue(tunnus, out var p) ? p : ((double, double)?)null;
+
+        /// <summary>Vanakerros (II: kuvan alueen häivytys varjostimelle); null ennen vanojen laskentaa.</summary>
+        public VanaKerros Vanat => vanat;
 
         void Napautettu(Vector2 ruutu)
         {
@@ -133,6 +203,7 @@ namespace Matkakirja.Natiivi
         {
             LinssiOhjain.Instanssi?.Kirjaa($"esitys: musta {paalla} ({feidiMs:F0} ms)");
             MustaKasittelija?.Invoke(paalla, feidiMs);
+            Tehosteet?.Musta(paalla, feidiMs);
         }
 
         public void Valot(double feidiMs)
@@ -141,9 +212,14 @@ namespace Matkakirja.Natiivi
             valoissa = true;
             valotAlkoi = Time.unscaledTime;
             ValotKasittelija?.Invoke(feidiMs);
+            Tehosteet?.Valot(feidiMs);
         }
 
-        public void Jakso(int i, KertomusJakso jakso) => JaksoKasittelija?.Invoke(i, jakso);
+        public void Jakso(int i, KertomusJakso jakso)
+        {
+            JaksoKasittelija?.Invoke(i, jakso);
+            Tehosteet?.Jakso(i, jakso);
+        }
 
         public void Kello(double v)
         {
@@ -151,11 +227,17 @@ namespace Matkakirja.Natiivi
             KelloKasittelija?.Invoke(v);
         }
 
-        public void SytytaKohde(string kohde) => valot?.Sytyta(kohde);
+        public void SytytaKohde(string kohde)
+        {
+            valot?.Sytyta(kohde);
+            Tehosteet?.SytytaKohde(kohde);
+        }
 
         public void Kuva(string kohde)
         {
             kuvaKohde = kohde;
+            // II ensin: kuvan alue on valmis, kun UI sijoittaa kuvan KuvaKasittelijan kutsussa.
+            Tehosteet?.Kuva(kohde);
             KuvaKasittelija?.Invoke(kohde);
         }
 
@@ -203,7 +285,11 @@ namespace Matkakirja.Natiivi
             ValittuKasittelija?.Invoke(virta);
         }
 
-        public void Loppu() => LoppuKasittelija?.Invoke();
+        public void Loppu()
+        {
+            LoppuKasittelija?.Invoke();
+            Tehosteet?.Loppu();
+        }
 
         void OnDestroy()
         {

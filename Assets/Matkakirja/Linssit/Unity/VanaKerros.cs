@@ -18,19 +18,19 @@
 // Leveydet (km) muunnetaan yksiköiksi jakamalla (a+h):lla; navoilla virhe
 // on 0,3 %, mikä ei näy.
 //
-// SYVYYS: ZTest LEqual pallon syvyyttä vasten, ZWrite Off. Nelikulmio on
-// nostettu pinnan yläpuolelle (webin jänteen painuma + 0,001 säteestä), ja
-// fragmentti laskee oikean pinnan pisteen säde–pallo-leikkauksella: pallon
-// takapuolen janat peittää pallon syvyys, horisontin takaa kurkistava
-// nelikulmio osuu etupinnan pisteeseen, joka on kaukana omasta janasta, ja
-// hylätään. Lisäksi kärkivarjostin kutistaa janat, jotka ovat kokonaan
-// horisontin takana (pallon normaali × suunta kameraan, kuten
-// KaupunkiMerkit), ja janat, joihin kello ei ole vielä ehtinyt.
+// SYVYYS (webin kohta 5, Ihmisen matka II:n erä 1 25.9.2026): fragmentti laskee
+// pinnan pisteen PIKSELIN säteestä (käänteinen VP) ja kirjoittaa syvyyden siitä
+// (SV_Depth, ZWrite On, ZTest Less). Saman pikselin fragmentit saavat täsmälleen
+// saman syvyyden, joten peitto ei summaudu liitoksissa (omistajan näkemä
+// raidoitus: 0,75 joka kärjessä) eikä kahden vanan päällekkäisyydessä;
+// vahvempi peitto voittaa (webin alfabias). Syvyys vedetään 25 km kameraa kohti
+// (SyvyysVetoKm), jotta korostettu maasto ei leikkaa kaistaa. Horisontin takaa
+// kurkistava nelikulmio osuu etupinnan pisteeseen, joka on kaukana omasta
+// janasta, ja hylätään; kärkivarjostin kutistaa janat, jotka ovat kokonaan
+// horisontin takana, ja janat, joihin kello ei ole vielä ehtinyt.
 //
-// PUUTTUU WEBISTÄ: kaista ei kirjoita syvyyttä, joten kahden ERI vanan
-// päällekkäinen alue sekoittuu (webissä syvyystemppu päästää vain
-// vahvemman läpi). Saman vanan sisällä omistussääntö pitää huolen, että
-// jokainen pikseli kuuluu yhdelle janalle.
+// KUVAN ALUE (Ihmisen matka II): kuvanAlue + kuvanPeitto häivyttävät kaistan
+// havainnekuvan alta (IhmisenMatka2Tehosteet asettaa joka kehys).
 //
 // KÄYTTÖ (linssi joka kehys):
 //   var kerros = gameObject.AddComponent<VanaKerros>();
@@ -62,6 +62,19 @@ namespace Matkakirja.Natiivi
         public double nosto = 3000.0;
         [Tooltip("Vähennetty liike: päivitys enintään puolen sekunnin välein.")]
         public bool vahennettyLiike;
+        /// <summary>Havainnekuvan alue ruudun osuuksina (origo VASEN YLÄKULMA, kuten UI); käytössä, kun kuvanPeitto > 0.</summary>
+        public Rect kuvanAlue;
+        /// <summary>Kaistan häivytys kuvan alueelta 0–1 (0 = ei häivytystä, I:ssä aina 0).</summary>
+        public float kuvanPeitto;
+
+        /// <summary>Syvyyden veto pinnan pisteestä kameraa kohti (km): korostetun maaston huiput jäävät kaistan taakse.</summary>
+        public const double SyvyysVetoKm = 25.0;
+        /// <summary>Täyden peiton lisäveto (km): vahvempi fragmentti voittaa (webin KAISTAN_ALFABIAS).</summary>
+        public const double VahvuusVetoKm = 0.3;
+        /// <summary>Peiton portaat syvyydessä: puolittajan tasapelit saavat saman syvyyden.</summary>
+        public const float PeitonPortaat = 16f;
+        /// <summary>Kuvan reunan pehmeys (ruudun uv).</summary>
+        public const float KuvanReunaUv = 0.02f;
 
         /// <summary>Jana GPU:lle (7 × float4 = 112 tavua; sama järjestys kuin Vana.shaderin Jana).</summary>
         [StructLayout(LayoutKind.Sequential)]
@@ -87,6 +100,10 @@ namespace Matkakirja.Natiivi
         static readonly int IdRengasVari = Shader.PropertyToID("_RengasVari");
         static readonly int IdMaski = Shader.PropertyToID("_Maski");
         static readonly int IdRantamaski = Shader.PropertyToID("_Rantamaski");
+        static readonly int IdKaanteinen = Shader.PropertyToID("_MaailmastaYksikkoon");
+        static readonly int IdSyvyys = Shader.PropertyToID("_Syvyys");
+        static readonly int IdKuvanAlue = Shader.PropertyToID("_KuvanAlue");
+        static readonly int IdKuvanHaivytys = Shader.PropertyToID("_KuvanHaivytys");
 
         VanaPiirto piirto;
         GraphicsBuffer puskuri;
@@ -145,6 +162,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdMaski, new Vector4(maskiTekstuuri != null ? 1f : 0f,
                 (float)VanaPiirto.RantamaskinKynnysAla, (float)VanaPiirto.RantamaskinKynnysYla, 0f));
             materiaali.SetFloat(IdLitistys, (float)(skaala.x / skaala.z));
+            materiaali.SetVector(IdSyvyys, new Vector4((float)(SyvyysVetoKm * 1000.0 / skaala.x), (float)(VahvuusVetoKm * 1000.0 / skaala.x), PeitonPortaat, 0f));
+            materiaali.SetVector(IdKuvanHaivytys, Vector4.zero);
             var pv = p.PesanVari;
             materiaali.SetVector(IdRengasVari, new Vector4((float)pv.R, (float)pv.G, (float)pv.B, 1f));
             Debug.Log($"MATKAKIRJA vanat: {p.VanojaPiirrossa} vanaa, {p.Janat.Count} janaa, {p.KotipesiaPiirrossa} kotipesää, maski {(maskiTekstuuri != null)}");
@@ -276,6 +295,10 @@ namespace Matkakirja.Natiivi
             var yksikkoon = math.inverse(yksikosta);
             var kameraU = math.mul(yksikkoon, new double4((float3)kam.transform.position, 1.0)).xyz;
             materiaali.SetMatrix(IdMatriisi, (float4x4)yksikosta);
+            materiaali.SetMatrix(IdKaanteinen, (float4x4)yksikkoon);
+            // Kuvan alue varjostimen uv:ksi (origo vasen ALAkulma).
+            materiaali.SetVector(IdKuvanAlue, new Vector4(kuvanAlue.xMin, 1f - kuvanAlue.yMax, kuvanAlue.xMax, 1f - kuvanAlue.yMin));
+            materiaali.SetVector(IdKuvanHaivytys, new Vector4(Mathf.Clamp01(kuvanPeitto), KuvanReunaUv, 0f, 0f));
             materiaali.SetVector(IdKamera, new Vector4((float)kameraU.x, (float)kameraU.y, (float)kameraU.z, 0f));
 
             // Mittakaava ruudun keskellä: km pistettä kohti korkeudella pinnasta
