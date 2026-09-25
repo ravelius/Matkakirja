@@ -2309,4 +2309,70 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Zeelandin nimi tarkoittaa merimaata, ja vuoden 1953 tuhotulvan jälkeen sen saaria suojaavat Deltatyöt, jättimäiset padot ja sulut.',
     },
   },
+  /*
+   * BEL (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.BEL:n tunnuksia
+   * (Natural Earthin englanninkielinen `name`, esim. "Liege" ilman
+   * aksenttia). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * LÄHTEET (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Antwerp         — Antwerp Province (satama Euroopan 2. suurin)
+   *   Brussels        — Brussels (EU:n toimielimet, Nato, "capital of
+   *                     the comic strip")
+   *   Flemish Brabant — Flemish Brabant (ympäröi Brysselin, Belgian
+   *                     päälentoasema Halle-Vilvoordessa)
+   *   Hainaut         — Hainaut Province (Tournai, frankkien
+   *                     valtakunnan ensimmäinen pääkaupunki)
+   *   East Flanders   — East Flanders (Schelde ja Leie yhtyvät
+   *                     Gentissä, Gentin yliopisto)
+   *   Liege           — Liège Province (ainoa kolmeen maahan rajautuva
+   *                     provinssi, saksankielinen Eupen-Malmedy)
+   *   Limburg         — Limburg (Belgium) (Tongeren, provinssin ainoa
+   *                     roomalaiskaupunki ja Belgian vanhin)
+   *   Luxembourg      — Luxembourg (Belgium) (suurin pinta-ala, pienin
+   *                     väkiluku, n. 80 % Ardenneja)
+   *   West Flanders   — West Flanders + Coast Tram (De Panne–Knokke-
+   *                     Heist, 67 km, maailman pisin metrin raideleveyden
+   *                     raitiolinja)
+   *   Namur           — Dinant + Adolphe Sax (syntyi Dinantissa 1814,
+   *                     saksofonipatentti 28.6.1846; Dinantin linnoitus
+   *                     kallion laella)
+   *   Walloon Brabant — Walloon Brabant (Waterloon taistelu kesäkuu
+   *                     1815, Belgian vaurain provinssi)
+   */
+  BEL: {
+    Antwerp: {
+      lyhyt: 'Antwerpenin satama on Euroopan toiseksi suurin, ja provinssi on koko Belgian väkirikkain – täällä asuu yli 1,9 miljoonaa ihmistä.',
+    },
+    Brussels: {
+      lyhyt: 'Brysselissä istuvat EU:n tärkeimmät toimielimet ja Naton päämaja, mutta kaupunkia kutsutaan myös sarjakuvan pääkaupungiksi.',
+    },
+    'Flemish Brabant': {
+      lyhyt: 'Flanderin Brabant kiertää renkaana Brysselin ympäri, ja Belgian päälentoasema sijaitsee sen puolella eikä pääkaupungissa.',
+    },
+    Hainaut: {
+      lyhyt: 'Scheldejoen varren Tournai on Belgian vanhimpia kaupunkeja – se oli aikanaan frankkien valtakunnan ensimmäinen pääkaupunki.',
+    },
+    'East Flanders': {
+      lyhyt: 'Gent sijaitsee Schelde- ja Leiejoen yhtymäkohdassa, ja sen vanhoja katuja täyttävät nykyään Gentin yliopiston opiskelijat.',
+    },
+    Liege: {
+      lyhyt: 'Liège on Belgian ainoa provinssi, joka rajautuu kolmeen maahan, ja sen itälaidalla Eupenin ja Malmedyn seudulla puhutaan saksaa.',
+    },
+    Limburg: {
+      lyhyt: 'Limburgin Tongerenia pidetään Belgian vanhimpana kaupunkina – se on provinssin ainoa roomalaisten aikainen kaupunki.',
+    },
+    Luxembourg: {
+      lyhyt: 'Luxembourg on Belgian suurin mutta harvimmin asuttu provinssi, ja noin 80 prosenttia siitä kuuluu Ardennien tiheisiin metsiin.',
+    },
+    'West Flanders': {
+      lyhyt: 'Rannikkoraitiovaunu kulkee koko rannikon Ranskan rajalta Alankomaiden rajalle – 67 kilometriä, maailman pisin laatuaan.',
+    },
+    Namur: {
+      lyhyt: 'Dinantin jyrkän kallion laella seisoo linnoitus, ja kaupunki muistaa poikaansa Adolphe Saxia, joka patentoi saksofonin 1846.',
+    },
+    'Walloon Brabant': {
+      lyhyt: 'Waterloon taistelu käytiin täällä kesäkuussa 1815, ja nykyään Vallonian Brabant on Belgian vaurain provinssi.',
+    },
+  },
 };
