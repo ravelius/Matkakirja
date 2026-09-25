@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 04:37 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 04:42 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
@@ -25,6 +25,8 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 Ei avoimia kortteja tiedossa juuri nyt. Sisältökirjuri poisti omat worktreensa mergettyjen PR:ien jälkeen (Julkaisijan havainto).
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa — ei vielä tarkkaa mittaustapaa "vihreille" PR:ille, seurataan.
+
+**UUSI SÄÄNTÖ (Fable 04:4x, sitova, Raamattuun): JUMI → KORTTI korvattu säännöllä JUMI → FABLE.** Jumissa oleva sessio ei enää tee korttia omistajalle eikä odota häntä — se lähettää yhden viestin Fablelle (tilanne, vaihtoehdot, suositus) ja jatkaa muuta työtä; Fable päättää tai vie asian omistajalle omassa sessiossaan. Työpöytäsovelluksen lupaikkunoista (esim. simulaattorin laitelupa) sessio ilmoittaa Fablelle. Postivahdin uusi tehtävä: jos FABLEN OMA kortti on ollut auki yli 10 min, pushaa omistajalle uudelleen; muiden roolien avoimet kortit/lupaikkunat raportoidaan Fablelle heti (ei enää suoraan pushia muiden korteista).
 
 **NAS-siirto valmis:** levy 84→166 Gt. **E28-pallolaatat valmiit.** Postilaatikko: uusi commit 805af5b2e "linssikatalogin seuraavan 18 linssin R2-toimitus" (edellinen oli "18 nykyisen linssin" — sarjan seuraava erä, ei kriittinen, seurataan jatkumona).
 
