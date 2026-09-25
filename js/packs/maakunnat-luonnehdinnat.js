@@ -5866,4 +5866,800 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Yellowstonen Old Faithful -geysir purkautuu noin puolentoista tunnin välein, ja suihku nousee kymmenien metrien korkeuteen.',
     },
   },
+  /*
+   * CHE (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.CHE:n tunnuksia
+   * TÄSMÄLLEEN (26 kantonia, Natural Earthin `name`, esim. "Genève",
+   * "Lucerne" ja "Sankt Gallen"). Vain `lyhyt` tässä erässä.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Aargau                 — Habsburg Castle (rakennettu n. 1020,
+   *                            Habsburgien suvun alkuperäinen kotipaikka)
+   *   Appenzell Ausserrhoden — Henry Dunant + Heiden, Switzerland (Heideniin
+   *                            1887, kuoli siellä 1910, Nobel 1901)
+   *   Appenzell Innerrhoden  — Appenzell Innerrhoden (Landsgemeinde huhtikuun
+   *                            viim. sunnuntaina, n. 4000 osallistujaa;
+   *                            naisten äänioikeus 1991 liittovaltion
+   *                            tuomioistuimen päätöksellä)
+   *   Basel-Landschaft       — Augusta Raurica (Alppien pohjoispuolen suurin
+   *                            roomalainen teatteri, savustetun sianlihan
+   *                            vienti; Augst Basel-Landiin 1833)
+   *   Basel-Stadt            — Basel, osio Ferries (neljä virran voimalla
+   *                            kulkevaa lossia, ei ulkoista energiaa)
+   *   Bern                   — Einsteinhaus (Kramgasse 49, 1903–1905,
+   *                            Annus Mirabilis -artikkelit, patenttivirasto)
+   *   Fribourg               — Fribourg funicular (1899, jätevesi
+   *                            painolastina)
+   *   Genève                 — CERN (Meyrin, WWW 1989 Tim Berners-Lee,
+   *                            LHC:n 27 km:n tunneli rajan yli)
+   *   Glarus                 — Canton of Glarus (äänestysikä 16 v.
+   *                            6.5.2007 ensimmäisenä, Landsgemeinde)
+   *   Graubünden             — Grisons (ainoa kolmikielinen kantoni, ainoa
+   *                            jossa retoromaani virallinen)
+   *   Jura                   — Canton of Jura (uusin kantoni, 1979, erosi
+   *                            Bernistä)
+   *   Lucerne                — Kapellbrücke (Euroopan vanhin katettu
+   *                            puusilta, tulipalo 1993, 1600-luvun maalaukset)
+   *   Neuchâtel              — Absinthe (syntyi Neuchâtelin kantonissa,
+   *                            kielto 1910–2005, Maison de l'Absinthe
+   *                            entisessä oikeustalossa Môtiers'ssa) +
+   *                            Val-de-Travers
+   *   Nidwalden              — Stanserhorn (maailman ensimmäinen "CabriO",
+   *                            avokattoinen kaksikerroksinen köysirata 2012)
+   *   Obwalden               — Pilatus Railway (Alpnachstad, maailman jyrkin
+   *                            hammasrata, enintään 48 %)
+   *   Schaffhausen           — Canton of Schaffhausen (pidempi raja Saksan
+   *                            kuin muiden kantonien kanssa, Büsingenin
+   *                            saareke)
+   *   Schwyz                 — Canton of Schwyz + Federal Charter of 1291
+   *                            (maan nimi ja lippu, liittokirja museossa)
+   *   Solothurn              — Solothurn (Ranskan lähettilään kotipaikka
+   *                            1530–1792, autoton barokkivanhakaupunki)
+   *   Sankt Gallen           — Abbey library of Saint Gall (maailman
+   *                            vanhimpia luostarikirjastoja, rokokoosali,
+   *                            muumio Shep-en-Isis)
+   *   Thurgau                — Thurgau (omena- ja päärynätarhat, sato
+   *                            pääosin siideriksi)
+   *   Ticino                 — Monte San Giorgio (Unesco 2003, keskitrias,
+   *                            yli 21 000 fossiilia vuoteen 2010 mennessä)
+   *   Uri                    — Gotthard Base Tunnel (Erstfeld–Giornico,
+   *                            57,09 km, maailman pisin, syvyys 2 450 m)
+   *   Valais                 — Hérens cattle (lehmätaistelut, loppuottelu
+   *                            vuodesta 1922, "queen of queens")
+   *   Vaud                   — Lausanne (maailman pienin kaupunki, jolla on
+   *                            metro; KOK:n päämaja)
+   *   Zug                    — Canton of Zug (verot bitcoinina tai Etheruminä
+   *                            100 000 frangiin asti vuodesta 2021)
+   *   Zürich                 — Cabaret Voltaire (Zurich) (dadan syntypaikka
+   *                            1916, Spiegelgasse, Lenin samalla kadulla)
+   */
+  CHE: {
+    Aargau: {
+      lyhyt: 'Habsburgin kylän kukkulalla seisoo noin 1020 rakennettu linna, josta yksi Euroopan mahtavimmista hallitsijasuvuista sai nimensä.',
+    },
+    'Appenzell Ausserrhoden': {
+      lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
+    },
+    'Appenzell Innerrhoden': {
+      lyhyt: 'Appenzellin aukiolle kokoontuu joka huhtikuu tuhansia kansalaisia päättämään kantonin asioista – naiset pääsivät mukaan vasta 1991.',
+    },
+    'Basel-Landschaft': {
+      lyhyt: 'Augusta Rauricassa oli Alppien pohjoispuolen suurin roomalainen teatteri, ja kaupungista vietiin savustettua sianlihaa ympäri valtakuntaa.',
+    },
+    'Basel-Stadt': {
+      lyhyt: 'Baselin Rein-lossit kulkevat ilman moottoria: lossari kääntää veneen vinoon virtaan, ja virta työntää sen vaijeria pitkin toiselle rannalle.',
+    },
+    Bern: {
+      lyhyt: 'Bernin Kramgassen talossa 49 Albert Einstein kirjoitti 1905 artikkelit, joissa hän esitteli suhteellisuusteoriansa – päivät hän teki töitä patenttivirastossa.',
+    },
+    Fribourg: {
+      lyhyt: 'Fribourgin köysirataa on vuodesta 1899 liikuttanut jätevesi: yläpään vaunuun lasketaan viemärivettä, ja painava vaunu vetää toisen ylös.',
+    },
+    'Genève': {
+      lyhyt: 'Genevessä CERNissä syntyi 1989 World Wide Web, ja 27 kilometrin hiukkaskiihdytin kiertää maan alla Ranskan rajan yli.',
+    },
+    Glarus: {
+      lyhyt: 'Glarus laski äänestysiän 16 vuoteen 2007 ensimmäisenä Sveitsin kantonina, ja asioista päättää yhä Landsgemeinde-kansankokous.',
+    },
+    'Graubünden': {
+      lyhyt: 'Graubünden on Sveitsin ainoa kolmikielinen kantoni ja ainoa, jossa maan neljäs kansalliskieli retoromaani on virallinen kieli.',
+    },
+    Jura: {
+      lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
+    },
+    Lucerne: {
+      lyhyt: 'Luzernin Kapellbrücke on Euroopan vanhin katettu puusilta, mutta tulipalo tuhosi 1993 suuren osan siitä ja sen 1600-luvun maalauksista.',
+    },
+    'Neuchâtel': {
+      lyhyt: 'Absintti syntyi Neuchâtelissa, ja Môtiers’n absinttimuseo toimii entisessä oikeustalossa, jossa kiellon aikana tuomittiin tislaajia.',
+    },
+    Nidwalden: {
+      lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
+    },
+    Obwalden: {
+      lyhyt: 'Alpnachstadista Pilatukselle kiipeävä hammasrata on maailman jyrkin: jyrkimmässä kohdassa kaltevuus on 48 prosenttia.',
+    },
+    Schaffhausen: {
+      lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
+    },
+    Schwyz: {
+      lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
+    },
+    Solothurn: {
+      lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
+    },
+    'Sankt Gallen': {
+      lyhyt: 'St. Gallenin luostarikirjasto on maailman vanhimpia, ja sen rokokoosalissa lepää keskiaikaisten käsikirjoitusten seassa egyptiläinen muumio.',
+    },
+    Thurgau: {
+      lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
+    },
+    Ticino: {
+      lyhyt: 'Luganonjärven yllä kohoavasta Monte San Giorgiosta on kaivettu yli 21 000 fossiilia triaskauden merestä – vuori on Unescon maailmanperintöä.',
+    },
+    Uri: {
+      lyhyt: 'Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli, ja kalliota on enimmillään 2 450 metriä yllä.',
+    },
+    Valais: {
+      lyhyt: 'Valais’n Hérens-lehmät ottelevat keväisin sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan kuningattarien kuningattareksi.',
+    },
+    Vaud: {
+      lyhyt: 'Lausanne on maailman pienin kaupunki, jolla on oma metro, ja siellä on myös Kansainvälisen olympiakomitean päämaja.',
+    },
+    Zug: {
+      lyhyt: 'Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse frangeiksi.',
+    },
+    'Zürich': {
+      lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
+    },
+  },
+  /*
+   * PRT (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PRT:n tunnuksia
+   * (18 manner-Portugalin piiriä + autonomiset alueet Azorit ja
+   * Madeira). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Aveiro           — Aveiro, Portugal ("Portuguese Venice", moliceiro-
+   *                      veneet keräsivät moliço-levää, nyt matkailijoita)
+   *   Azores           — Mount Pico (2 351 m, Portugalin korkein vuori)
+   *   Beja             — Mértola (Matriz oli moskeija, kirkoksi 1238
+   *                      valloituksen jälkeen, rakenne säilytettiin)
+   *   Braga            — Bom Jesus funicular (25.3.1882, maailman vanhin
+   *                      vesipainolla kulkeva köysirata)
+   *   Bragança         — Mirandese language (laki 7/99, 29.1.1999; noin
+   *                      3 500 puhujaa 2020)
+   *   Castelo Branco   — Monsanto (Idanha-a-Nova) (portugalilaisin kylä
+   *                      1938, talot lohkareiden väliin)
+   *   Coimbra          — Biblioteca Joanina (lepakot syövät hyönteisiä)
+   *   Évora            — Capela dos Ossos (noin 5 000 vainajaa, "We bones
+   *                      that are here await yours")
+   *   Faro             — Cape St. Vincent (Manner-Euroopan lounaisin kärki,
+   *                      majakka näkyy 60 km)
+   *   Guarda           — Guarda, Portugal (1 056 m, korkein kaupunki,
+   *                      viisi F:ää, Fria = kylmä)
+   *   Leiria           — Nazaré Canyon (noin 5 000 m syvä, Praia do Norte,
+   *                      Steudtnerin 26,2 m ennätys 2020)
+   *   Lisboa           — Cabo da Roca (Manner-Euroopan läntisin kärki,
+   *                      Sintra, majakka 165 m merenpinnasta)
+   *   Madeira          — Levada (Madeira) (yli 2 170 km, kävelyreitit)
+   *   Portalegre       — Elvas (maailman suurin kuivien vallihautojen
+   *                      bastionijärjestelmä, Unesco 2012)
+   *   Porto            — Vila Nova de Gaia (portviinikellarit "caves",
+   *                      suuri matkailunähtävyys)
+   *   Santarém         — Festa dos Tabuleiros (Tomar, joka 4. vuosi
+   *                      heinäkuussa, 30 leipää tarjottimessa)
+   *   Setúbal          — Setúbal ("A dolphin colony inhabits the Sado
+   *                      River", Arrábidan kukkulat)
+   *   Viana do Castelo — Gil Eannes (ship) (sairaalalaiva turskalaivastolle
+   *                      1955–1973, museo satamassa)
+   *   Vila Real        — Mateus Palace (Nasoni, antaa nimen Mateus-
+   *                      roseelle)
+   *   Viseu            — Lamego (686 porrasta, Nossa Senhora dos Remédios;
+   *                      "Legend holds" ensimmäiset Cortes 1143)
+   */
+  PRT: {
+    Aveiro: {
+      lyhyt: 'Aveiroa kutsutaan Portugalin Venetsiaksi: moliceiro-veneet keräsivät ennen kanavilla levää, nyt ne kuljettavat matkailijoita.',
+    },
+    Azores: {
+      lyhyt: 'Azorien Pico-saaren tulivuori kohoaa keskellä Atlanttia 2 351 metriin – se on koko Portugalin korkein vuori.',
+    },
+    Beja: {
+      lyhyt: 'Mértolan pääkirkko oli alun perin moskeija, ja kun kaupunki valloitettiin 1238, rakennus muutettiin kirkoksi muotoaan hävittämättä.',
+    },
+    Braga: {
+      lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
+    },
+    'Bragança': {
+      lyhyt: 'Miranda do Douron seudulla puhutaan omaa mirandeesin kieltä, joka tunnustettiin virallisesti 1999 – puhujia on noin 3 500.',
+    },
+    'Castelo Branco': {
+      lyhyt: 'Monsanton kylän talot on muurattu jättimäisten graniittilohkareiden väliin, ja 1938 se valittiin Portugalin portugalilaisimmaksi kyläksi.',
+    },
+    Coimbra: {
+      lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
+    },
+    'Évora': {
+      lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
+    },
+    Faro: {
+      lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
+    },
+    Guarda: {
+      lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
+    },
+    Leiria: {
+      lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
+    },
+    Lisboa: {
+      lyhyt: 'Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta.',
+    },
+    Madeira: {
+      lyhyt: 'Madeiran vuorenrinteillä kiemurtelee yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja.',
+    },
+    Portalegre: {
+      lyhyt: 'Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on Unescon maailmanperintöä.',
+    },
+    Porto: {
+      lyhyt: 'Douron etelärannalla Vila Nova de Gaian kellareissa kypsyy portviini, ja kellareista on tullut Porton seudun suuri nähtävyys.',
+    },
+    'Santarém': {
+      lyhyt: 'Tomarin Festa dos Tabuleirosissa tytöt kantavat päänsä päällä 30 leivästä pinottuja kukkatarjottimia – juhla pidetään joka neljäs vuosi.',
+    },
+    'Setúbal': {
+      lyhyt: 'Setúbalin Sadojoessa elää delfiiniyhdyskunta, ja kaupungin kupeessa kohoavat Arrábidan luonnonpuiston kukkulat.',
+    },
+    'Viana do Castelo': {
+      lyhyt: 'Viana do Castelon satamassa on sairaalalaiva Gil Eannes, joka saattoi turskanpyytäjiä Newfoundlandiin 1955–1973 – nyt se on museo.',
+    },
+    'Vila Real': {
+      lyhyt: 'Vila Realin barokkipalatsi Mateus on antanut nimensä Mateus-roseeviinille, ja sen suunnitteli 1700-luvulla Nicolau Nasoni.',
+    },
+    Viseu: {
+      lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
+    },
+  },
+  /*
+   * HUN (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.HUN:n tunnuksia
+   * (19 lääniä + Budapest). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   * Budapest on pelissä jo kaupunkina (kulttuuri-kategoriat.js,
+   * europe-artikkelit.js): sen lyhyt välttää olemassa olevien
+   * nostojen aiheet (parlamentti, kylpylät, metro, raunioravintolat,
+   * Rubik, keskushalli, kaupunkien yhdistyminen 1873).
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Bács-Kiskun           — Kalocsa (Bács-Kiskun, Paprikamuseo,
+   *                           "red gold", syyskuun punaiset pellot)
+   *   Baranya               — Busójárás (Mohács, naamiot, turkkilaiset
+   *                           pelästyivät melua, Unesco 2009)
+   *   Békés                 — Szarvas (Unkarin maantieteellinen keskipiste
+   *                           ennen Trianonia, tuulimyllymuistomerkki)
+   *   Borsod-Abaúj-Zemplén  — Tokaj wine region (Unesco 2002, Ludvig XIV
+   *                           "Vinum Regum, Rex Vinorum")
+   *   Budapest              — Budapest Children's Railway (10–14-vuotiaat
+   *                           hoitavat kaiken paitsi veturinkuljettajan)
+   *   Csongrád              — Arrival of the Hungarians (Feszty, lähes
+   *                           120 m, Ópusztaszer 1995 alkaen) + Ópusztaszer
+   *                           (Csongrád-Csanád)
+   *   Fejér                 — Székesfehérvár (43 kuningasta kruunattu,
+   *                           basilikan rauniot kaivettu, avoinna)
+   *   Győr-Moson-Sopron     — Pan-European Picnic (Sopron 19.8.1989,
+   *                           661 ylitti rajan)
+   *   Hajdú-Bihar           — Hortobágy National Park (1. kansallispuisto
+   *                           1973, Euroopan suurin puoliluonnontilainen
+   *                           niitty, csikós-paimenet)
+   *   Heves                 — Siege of Eger (1552) (2 100–2 300 puolustajaa,
+   *                           35 000–40 000 osmania, puolustus onnistui)
+   *   Jász-Nagykun-Szolnok  — Palingenia longicauda (Tiszan kukinta
+   *                           kesäkuun puolivälissä, aikuiset elävät
+   *                           tunteja) + Jász-Nagykun-Szolnok County
+   *                           (Tisza virtaa läänin halki)
+   *   Komárom-Esztergom     — Esztergom Basilica (Unkarin suurin kirkko,
+   *                           ulkoa 100 m korkea)
+   *   Nógrád                — Hollókő ("Raven-stone", palócit, Unesco 1987)
+   *   Pest                  — Visegrád, Hungary (kongressi 1335,
+   *                           Visegrád-ryhmä 15.2.1991 viittauksena siihen)
+   *   Somogy                — Siófok ("capital of Lake Balaton", 17 km
+   *                           rantaa, yli 1 000 hotellia, yökerhot)
+   *   Szabolcs-Szatmár-Bereg — Szabolcs–Szatmár–Bereg County (luumut:
+   *                           tuoreena, kuivattuna, lekvár, paloviinat)
+   *   Tolna                 — Gemenc (Szekszárdin ja Bajan välissä,
+   *                           saksanhirvien sarvet maailmankuuluja)
+   *   Vas                   — Szombathely (Unkarin vanhin kaupunki,
+   *                           Savaria 45 jaa., Pyhän Martin syntymäpaikka)
+   *   Veszprém              — Herend Porcelain Manufactory (taideposliini
+   *                           1839 alkaen, Habsburgien hovin hankkija)
+   *   Zala                  — Lake Hévíz (Euroopan suurin uimakelpoinen
+   *                           lämpöjärvi, talvella n. 22 °C ja usva)
+   */
+  HUN: {
+    'Bács-Kiskun': {
+      lyhyt: 'Kalocsassa on oma paprikamuseo, ja syyskuussa kypsyvät pellot hehkuvat niin punaisina, että maustetta kutsutaan punaiseksi kullaksi.',
+    },
+    Baranya: {
+      lyhyt: 'Mohácsin busójárásissa naamioidut busót meluavat helmikuussa kaduilla – tarun mukaan sama meteli ajoi aikoinaan turkkilaiset pakoon.',
+    },
+    'Békés': {
+      lyhyt: 'Szarvasissa Körös-joen rannalla tuulimyllyn muotoinen muistomerkki näyttää, missä Unkarin keskipiste oli ennen vuoden 1920 rajoja.',
+    },
+    'Borsod-Abaúj-Zemplén': {
+      lyhyt: 'Tokajin viinialue on Unescon listalla, ja sen aszú-viini kelpasi jo Ludvig XIV:lle – hän kutsui sitä kuninkaiden viiniksi.',
+    },
+    Budapest: {
+      lyhyt: 'Budan kukkuloilla kulkee Lastenrata, jonka junissa kaikki työt veturinkuljettajaa lukuun ottamatta hoitavat 10–14-vuotiaat lapset.',
+    },
+    'Csongrád': {
+      lyhyt: 'Ópusztaszerissa Feszty-panoraama kiertää katsojan ympäri: lähes 120 metriä pitkä maalaus unkarilaisten saapumisesta tälle tasangolle.',
+    },
+    'Fejér': {
+      lyhyt: 'Székesfehérvárissa kruunattiin keskiajalla 43 Unkarin kuningasta, ja kaivettujen basilikan raunioiden keskellä voi nyt kävellä.',
+    },
+    'Győr-Moson-Sopron': {
+      lyhyt: 'Sopronin lähellä rajaportti avattiin elokuussa 1989 Pan-Eurooppa-piknikillä, ja 661 itäsaksalaista juoksi samana päivänä Itävaltaan.',
+    },
+    'Hajdú-Bihar': {
+      lyhyt: 'Hortobágy on Euroopan suurin puoliluonnontilainen niitty, ja sen arolla karjaa ja hevosia paimentavat yhä ratsastavat csikós-paimenet.',
+    },
+    Heves: {
+      lyhyt: 'Egerin linnassa muistetaan vuotta 1552, kun runsaat 2 000 puolustajaa kesti moninkertaisen osmaniarmeijan piirityksen.',
+    },
+    'Jász-Nagykun-Szolnok': {
+      lyhyt: 'Kesäkuun puolivälissä Tisza kukkii: valtavat päivänkorentoparvet kuoriutuvat joesta, ja aikuisina ne elävät vain muutaman tunnin.',
+    },
+    'Komárom-Esztergom': {
+      lyhyt: 'Esztergomin basilika on Unkarin suurin kirkko, ja sen kupoli kohoaa Tonavan rannalla ulkoa sadan metrin korkeuteen.',
+    },
+    'Nógrád': {
+      lyhyt: 'Hollókő eli Korppikivi on palócien vanha kylä, jonka puiset talot ja kapea raitti ovat olleet Unescon maailmanperintöä vuodesta 1987.',
+    },
+    Pest: {
+      lyhyt: 'Visegrádissa kolme kuningasta neuvotteli rauhasta 1335, ja siksi Unkarin, Puolan ja Tšekkoslovakian yhteistyö sai 1991 nimen Visegrád-ryhmä.',
+    },
+    Somogy: {
+      lyhyt: 'Siófokia kutsutaan Balatonin pääkaupungiksi: 17 kilometrin rannalla on yli tuhat hotellia, ja kesäöisin yökerhot ovat täynnä.',
+    },
+    'Szabolcs-Szatmár-Bereg': {
+      lyhyt: 'Maakunta on kuuluisa luumuistaan: niitä syödään tuoreina, kuivataan, keitetään lekvár-hilloksi ja tislataan tunnetuiksi paloviinoiksi.',
+    },
+    Tolna: {
+      lyhyt: 'Szekszárdin kupeessa Gemencin tulvametsässä elää saksanhirviä, joiden mahtavat sarvet ovat maailmankuulut.',
+    },
+    Vas: {
+      lyhyt: 'Szombathely on Unkarin vanhin kaupunki: roomalaiset perustivat Savarian vuonna 45, ja täällä syntyi myös Pyhä Martti Toursilainen.',
+    },
+    'Veszprém': {
+      lyhyt: 'Herendin tehtaassa on maalattu posliinia käsin vuodesta 1839, ja 1800-luvulla sen astioita toimitettiin Habsburgien hoville.',
+    },
+    Zala: {
+      lyhyt: 'Hévízin järvi on Euroopan suurin lämmin järvi, jossa voi uida – talvellakin vesi pysyy noin 22-asteisena, ja pinnalla leijuu usva.',
+    },
+  },
+  /*
+   * SWE (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SWE:n tunnuksia
+   * (21 lääniä, Natural Earthin `name`; Örebro on avaimena "Orebro"
+   * ilman ääkköstä). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   * Stockholm: Tukholman kaupunki on pelissä jo laajasti (Nobel,
+   * saaret, Vasa, Gamla stan, saaristo, metrotaide), joten läänin
+   * nosto on kaupungin ulkopuolelta (Birka, Ekerö).
+   *
+   * LÄHTEET (en-Wikipedia, tarkistettu 25.9.2026; sv-Wikipedia
+   * mainittu erikseen):
+   *   Blekinge        — Naval Port of Karlskrona (Unesco 1998, köysipunomo
+   *                     maan pisin puurakennus, tukikohta yhä käytössä)
+   *   Dalarna         — Vasaloppet (90 km Berga/Sälen–Mora, 1922 alkaen,
+   *                     maailman vanhin ja osallistujamäärältään suurin)
+   *   Gotland         — Visby City Wall (n. 3,44 km pystyssä, 27 suurta
+   *                     ja 9 pientä tornia jäljellä)
+   *   Gävleborg       — Gävle goat (1966 alkaen, 43/60 pukkia tuhottu tai
+   *                     vahingoitettu joulukuuhun 2025 mennessä)
+   *   Halland         — Bocksten Man (1300-luvun puoliväli, murhattu ja
+   *                     paaluttu suohon, vaatteet säilyneet, Hallandin
+   *                     kulttuurihistoriallinen museo Varbergissa)
+   *   Jämtland        — Storsjöodjuret (maininta 1635, lääni rauhoitti
+   *                     uhanalaisena lajina 1986, kumottiin 2005)
+   *   Jönköping       — Jönköping (tulitikkuteollisuus 1845–1970,
+   *                     Match Museum ensimmäisessä tehtaassa, Vättern)
+   *   Kalmar          — Öland Bridge (6 072 m, avattu 30.9.1972, Euroopan
+   *                     pisin silta 1972–1998)
+   *   Kronoberg       — Älmhult (ensimmäinen IKEA-tavaratalo, IKEA Museum
+   *                     avattu 30.6.2016, Kronobergin lääni)
+   *   Norrbotten      — Icehotel (Jukkasjärvi) (1990, Torniojoen jää,
+   *                     rakennetaan joka talvi ja sulaa keväällä jokeen)
+   *   Skåne           — Ale's Stones (59 kiveä, 67 m, laivan muoto,
+   *                     Kåseberga n. 10 km Ystadista kaakkoon)
+   *   Stockholm       — Birka (Björkö Mälarissa, Ekerön kunta, n. 750–975,
+   *                     Unesco 1993, "Sweden's oldest town")
+   *   Södermanland    — Nyköping Banquet (10.–11.12.1317, Birger vangitsi
+   *                     veljensä Erikin ja Valdemarin, kuolivat tyrmässä)
+   *   Uppsala         — Gamla Uppsala (kolme kuningaskumpua, n. 550–625,
+   *                     perimätieto Odin, Freyr ja Thor)
+   *   Värmland        — Klarälven (uitto päättyi 1991 viimeisenä
+   *                     Ruotsissa) + Visit Värmland / Vildmark i Värmland
+   *                     (matkailijat rakentavat oman tukkilautan)
+   *   Västerbotten    — Västerbottensost (vain Burträskin meijerissä,
+   *                     perimätieto karjapiika Ulrika Eleonora Lindström
+   *                     1870-luvulla)
+   *   Västernorrland  — High Coast (Unesco 2000, maa kohoaa n. 8 mm
+   *                     vuodessa, korkein rantaviiva n. 285 m)
+   *   Västmanland     — Sala Silver Mine (maanalainen yöpymissviitti) +
+   *                     sv: Sala silvergruva (Kaarle IX: "Riksens
+   *                     förnämsta Clenodium")
+   *   Västra Götaland — Rock Carvings in Tanum (pronssikausi, tuhansia
+   *                     kuvia, Vitlyckehällissä lähes 300)
+   *   Orebro          — Svampen (sienenmuotoinen vesitorni 1958, 58 m,
+   *                     hissi yläkertaan, kahvila terassilla)
+   *   Östergötland    — Rök runestone (n. 760 merkkiä, pisin tunnettu
+   *                     kiveen hakattu riimukirjoitus, Rökin kirkko)
+   */
+  SWE: {
+    Blekinge: {
+      lyhyt: 'Karlskronan laivastotukikohta on Unescon maailmanperintöä ja yhä käytössä, ja sen köysipunomo on Ruotsin pisin puurakennus.',
+    },
+    Dalarna: {
+      lyhyt: 'Maaliskuun ensimmäisenä sunnuntaina tuhannet hiihtävät Sälenistä Moraan: 90 kilometrin Vasaloppet on maailman vanhin hiihtokilpailu.',
+    },
+    Gotland: {
+      lyhyt: 'Visbyn keskiaikaista kaupunginmuuria on yhä pystyssä yli kolme kilometriä, ja sen torneista 36 vartioi edelleen vanhaa kaupunkia.',
+    },
+    'Gävleborg': {
+      lyhyt: 'Gävlen keskustaan pystytetään joka joulu jättimäinen olkipukki, ja vuodesta 1966 lähtien se on poltettu tai rikottu yli 40 kertaa.',
+    },
+    Halland: {
+      lyhyt: 'Varbergin museossa on Bockstenin mies, 1300-luvulla murhattu ja suohon paalutettu, jonka keskiaikaiset vaatteet säilyivät lähes kokonaan.',
+    },
+    'Jämtland': {
+      lyhyt: 'Storsjön-järven hirviöstä on kerrottu jo 1600-luvulta, ja 1986 lääni rauhoitti sen uhanalaisena lajina – päätös kumottiin vasta 2005.',
+    },
+    'Jönköping': {
+      lyhyt: 'Vätternin rannalla Jönköpingin ensimmäisessä tulitikkutehtaassa on nyt tulitikkumuseo – täällä tehtiin turvatikkuja yli sata vuotta.',
+    },
+    Kalmar: {
+      lyhyt: 'Ölannin silta kurottaa Kalmarista saarelle yli kuusi kilometriä, ja valmistuessaan 1972 se oli Euroopan pisin silta.',
+    },
+    Kronoberg: {
+      lyhyt: 'Älmhultiin rakennettiin maailman ensimmäinen Ikea-tavaratalo, ja sen paikalla toimii nyt vuonna 2016 avattu Ikea-museo.',
+    },
+    Norrbotten: {
+      lyhyt: 'Jukkasjärven jäähotelli rakennetaan joka talvi uudelleen Torniojoen jäästä, ja keväällä se sulaa takaisin jokeen.',
+    },
+    'Skåne': {
+      lyhyt: 'Kåsebergan rannikolla Ystadin lähellä seisoo Ales stenar: 59 suurta kiveä, jotka muodostavat 67 metriä pitkän laivan muodon.',
+    },
+    Stockholm: {
+      lyhyt: 'Mälarin Björkön saarella oli viikinkiajan kauppakaupunki Birka, jota pidetään Ruotsin vanhimpana kaupunkina ja joka on nyt Unescon listalla.',
+    },
+    'Södermanland': {
+      lyhyt: 'Nyköpingin linnassa kuningas Birger kutsui veljensä joulupitoihin 1317 ja heitti heidät tyrmään – kumpikaan ei päässyt sieltä elävänä.',
+    },
+    Uppsala: {
+      lyhyt: 'Gamla Uppsalan kolme kuningaskumpua kasattiin yli 1 400 vuotta sitten, ja perimätieto liitti ne aikoinaan Odiniin, Freyriin ja Thoriin.',
+    },
+    'Värmland': {
+      lyhyt: 'Klarälvenin uitto loppui 1991 viimeisenä Ruotsissa, mutta nyt matkailijat rakentavat itse tukkilautan ja lipuvat sillä jokea alas.',
+    },
+    'Västerbotten': {
+      lyhyt: 'Västerbottensjuustoa tehdään vain Burträskin meijerissä, ja tarun mukaan sen keksi siellä 1870-luvulla karjapiika Ulrika Eleonora Lindström.',
+    },
+    'Västernorrland': {
+      lyhyt: 'Korkearannikon maa kohoaa yhä lähes sentin vuodessa jääkauden jäljiltä, ja vanha rantaviiva on nyt noin 285 metrin korkeudessa.',
+    },
+    'Västmanland': {
+      lyhyt: 'Kuningas Kaarle IX kutsui Salan hopeakaivosta valtakunnan kalleimmaksi aarteeksi – nyt sen syvyyksissä voi yöpyä maanalaisessa sviitissä.',
+    },
+    'Västra Götaland': {
+      lyhyt: 'Tanumin kallioihin hakattiin pronssikaudella tuhansia kuvia laivoista, vaunuista ja ihmisistä – Vitlyckessä lähes 300 samaan kallioon.',
+    },
+    Orebro: {
+      lyhyt: 'Örebron sienenmuotoinen vesitorni Svampen valmistui 1958, ja 58 metrin korkeuteen hissi vie kahvilaan ja näköalaterassille.',
+    },
+    'Östergötland': {
+      lyhyt: 'Rökin kirkon vieressä seisoo Rökin riimukivi, jossa on noin 760 riimua – se on pisin tunnettu kiveen hakattu riimukirjoitus.',
+    },
+  },
+  /*
+   * NOR (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.NOR:n tunnuksia:
+   * Natural Earthin 19 vanhaa (ennen 2020 uudistusta) fylkeä sekä
+   * Svalbard (Huippuvuoret) ja Bouvet Island. Jan Mayen ei ole omana
+   * avaimenaan. Luonnehdinta kertoo paikan, joka kuului juuri siihen
+   * vanhaan fylkeen. Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Akershus          — Eidsvollsbygningen (perustuslaki 17.5.1814,
+   *                       kansallismonumentti ja museo, Akershus)
+   *   Aust-Agder        — Grimstad Municipality (Ibsen apteekin
+   *                       oppipoikana 1844–1847, Catilina 1848/49,
+   *                       nuoruusvuosien museo) + Aust-Agder (Grimstad)
+   *   Bouvet Island     — Bouvet Island (maailman syrjäisin saari,
+   *                       93 % jäätikköä, 1 700 km Kuningatar Maudin maahan)
+   *   Buskerud          — Kongsberg Silver Mines (1623–1958, yli 4 000
+   *                       työntekijää 1770-luvulla, Norjan suurin
+   *                       esiteollinen työpaikka) + Buskerud (Kongsberg)
+   *   Finnmark          — Rock carvings at Alta (yli 6 000 piirrosta,
+   *                       vanhimmat n. 4200 eaa., Unesco 1985, n. 3 km
+   *                       puisia kulkuteitä Jiepmaluoktassa)
+   *   Hedmark           — Trysil Municipality (Trysilfjellet Norjan
+   *                       suurin talviurheilukeskus, 65 rinnettä;
+   *                       kuului historiallisesti Hedmarkiin)
+   *   Hordaland         — Bryggen (hansakontori n. 1350, Unesco 1979)
+   *                       + Hordaland (Bergen osa läänistä 1972 alkaen)
+   *   Svalbard          — Svalbard (jääkarhut suojeltuja, asutuksen
+   *                       ulkopuolella karkotusvälineet pakollisia,
+   *                       aseen kantamista suositellaan)
+   *   Møre og Romsdal   — Atlantic Ocean Road (8,3 km, kahdeksan
+   *                       siltaa, "world's best road trip")
+   *   Nord-Trøndelag    — Battle of Stiklestad (1030, Olavi II kaatui)
+   *                       + Nord-Trøndelag (Saint Olav Drama 1954 alkaen)
+   *   Nordland          — Saltstraumen (jopa 400 milj. m³ kuuden tunnin
+   *                       välein, pyörteet, Bodø)
+   *   Oppland           — Galdhøpiggen (2 469 m, Pohjois-Euroopan
+   *                       korkein, Galdhøpiggen Summer Ski Centre
+   *                       jäätiköllä) + Oppland (Galdhøpiggen läänissä)
+   *   Oslo              — Nobel Peace Prize (ainoa Nobel, jota ei
+   *                       ojenneta Tukholmassa, 10.12., Oslon
+   *                       kaupungintalo 1990 alkaen, kuninkaan läsnä ollessa)
+   *   Rogaland          — Preikestolen (604 m Lysevuonon yllä,
+   *                       300 000 kävijää 2024)
+   *   Sogn og Fjordane  — Sognefjord (205 km, syvin 1 308 m, "King of
+   *                       the Fjords")
+   *   Sør-Trøndelag     — Nidaros Cathedral (Olavi II:n hautapaikan
+   *                       päällä, maailman pohjoisin keskiaikainen
+   *                       katedraali) + Sør-Trøndelag (Trondheim)
+   *   Telemark          — Rjukan (ei suoraa auringonvaloa syys–
+   *                       maaliskuussa, peilit 2013 heijastavat torille)
+   *   Troms             — Tromsø (keskiyön aurinko 19.5.–27.7. eli 71 vrk, kaamos
+   *                       28.11.–14.1., 48 vrk)
+   *   Vest-Agder        — Lindesnes Lighthouse (majakka paikalla vuodesta
+   *                       1656) + Vest-Agder (Lindesnes manner-Norjan
+   *                       eteläisin kohta)
+   *   Vestfold          — Oseberg ship (hautakumpu Tønsbergin lähellä,
+   *                       kaivaus 1904–1905, kaksi naista, hautaus
+   *                       syksyllä 834)
+   *   Østfold           — Østfold (Glomma Norjan pisin joki, laskee
+   *                       mereen Fredrikstadissa) + Fredrikstad
+   *                       (Pohjois-Euroopan parhaiten säilynyt
+   *                       linnoitettu kaupunki itärannalla)
+   */
+  NOR: {
+    Akershus: {
+      lyhyt: 'Eidsvollin kartanossa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nyt museo ja kansallismonumentti.',
+    },
+    'Aust-Agder': {
+      lyhyt: 'Grimstadissa nuori Henrik Ibsen oli apteekin oppipoikana ja kirjoitti ensimmäisen näytelmänsä – kaupungissa on nyt hänen nuoruutensa museo.',
+    },
+    'Bouvet Island': {
+      lyhyt: 'Bouvet’nsaari on maailman syrjäisin saari: jäätikkö peittää 93 prosenttia siitä, ja Etelämantereen rannikolle on 1 700 kilometriä.',
+    },
+    Buskerud: {
+      lyhyt: 'Kongsbergin hopeakaivokset toimivat 1623–1958, ja 1770-luvulla ne olivat yli 4 000 työntekijällään Norjan suurin työpaikka ennen teollista aikaa.',
+    },
+    Finnmark: {
+      lyhyt: 'Altan kallioihin on hakattu yli 6 000 kuvaa, vanhimmat ainakin vuodelta 4200 eaa., ja ulkoilmamuseossa niiden lomassa kulkee puisia polkuja.',
+    },
+    Hedmark: {
+      lyhyt: 'Trysilfjellet on Norjan suurin talviurheilukeskus, ja tunturin rinteillä on 65 hoidettua laskettelurinnettä.',
+    },
+    Hordaland: {
+      lyhyt: 'Bergenin Bryggenin puiset kauppatalot reunustavat satamaa, jossa hansakauppiailla oli konttori jo noin 1350 – nyt ne ovat Unescon listalla.',
+    },
+    Svalbard: {
+      lyhyt: 'Huippuvuorten jääkarhut ovat suojeltuja, ja asutuksen ulkopuolelle lähtevillä on oltava karkotusvälineet – mukaan neuvotaan ottamaan myös ase.',
+    },
+    'Møre og Romsdal': {
+      lyhyt: 'Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta toiselle kahdeksaa siltaa pitkin, ja sitä on kutsuttu maailman parhaaksi automatkaksi.',
+    },
+    'Nord-Trøndelag': {
+      lyhyt: 'Stiklestadissa kuningas Olavi II kaatui taistelussa 1030, ja vuodesta 1954 paikalla on esitetty taistelusta kertovaa Pyhän Olavin näytelmää.',
+    },
+    Nordland: {
+      lyhyt: 'Bodøn lähellä Saltstraumenin kapeasta salmesta ryöppyää kuuden tunnin välein jopa 400 miljoonaa kuutiota merivettä, ja virtaan syntyy pyörteitä.',
+    },
+    Oppland: {
+      lyhyt: 'Galdhøpiggen on 2 469 metrillään Pohjois-Euroopan korkein vuori, ja sen kupeen jäätiköllä lasketellaan vielä kesälläkin.',
+    },
+    Oslo: {
+      lyhyt: 'Nobelin rauhanpalkinto on ainoa Nobel, jota ei jaeta Tukholmassa: se ojennetaan 10. joulukuuta Oslon kaupungintalolla kuninkaan läsnä ollessa.',
+    },
+    Rogaland: {
+      lyhyt: 'Preikestolen eli Saarnatuoli kohoaa 604 metriä Lysevuonon yläpuolelle, ja sen tasaiselle laelle kiipesi vuonna 2024 noin 300 000 kävijää.',
+    },
+    'Sogn og Fjordane': {
+      lyhyt: 'Vuonojen kuninkaaksi kutsuttu Sognefjord työntyy 205 kilometriä sisämaahan, ja syvimmillään se ulottuu 1 308 metriä merenpinnan alle.',
+    },
+    'Sør-Trøndelag': {
+      lyhyt: 'Trondheimin Nidarosin tuomiokirkko on rakennettu Pyhän Olavin haudan päälle, ja se on maailman pohjoisin keskiaikainen katedraali.',
+    },
+    Telemark: {
+      lyhyt: 'Rjukanin laaksoon ei paista aurinko syyskuusta maaliskuuhun, joten rinteelle rakennettiin 2013 peilejä, jotka heijastavat valoa torille.',
+    },
+    Troms: {
+      lyhyt: 'Tromsøssa keskiyön aurinko pysyy kesällä taivaalla 71 vuorokautta yhtä mittaa, ja talvella kaamos kestää lähes seitsemän viikkoa.',
+    },
+    'Vest-Agder': {
+      lyhyt: 'Lindesnesin majakka seisoo manner-Norjan eteläkärjessä, ja niemellä on näytetty valoa merenkulkijoille jo vuodesta 1656.',
+    },
+    Vestfold: {
+      lyhyt: 'Tønsbergin lähellä hautakummusta kaivettiin 1904 Osebergin viikinkilaiva, johon kaksi naista oli haudattu syksyllä 834.',
+    },
+    'Østfold': {
+      lyhyt: 'Norjan pisin joki Glomma laskee mereen Fredrikstadissa, jonka itärannalla on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki.',
+    },
+  },
+  /*
+   * IRL (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.IRL:n tunnuksia
+   * (26 kreivikuntaa, Dublinin neljä hallintoaluetta erikseen sekä
+   * North ja South Tipperary erikseen = 30). Vain `lyhyt` tässä
+   * erässä, kuten GRC:llä. Dublin (kaupunki) välttää pelin olemassa
+   * olevien Dublin-nostojen aiheet (Kellsin kirja, Guinness, eläintarha
+   * ja Phoenix Park, Ha'penny Bridge, Dublinin linna, Croke Park,
+   * Spire, Joyce).
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Carlow                 — Brownshill dolmen (4000–3000 eaa., kattokivi
+   *                            n. 150 t, "reputed to be the heaviest in Europe")
+   *   Cavan                  — Shannon Pot (Cuilcagh, 16 m leveä, Shannonin
+   *                            perinteinen lähde)
+   *   Clare                  — The Burren (arktis-alpiiniset ja Välimeren
+   *                            kasvit rinnakkain, yli 70 % kukkalajeista)
+   *   Cork                   — Cobh (Queenstown 1849–1920, Titanicin viimeinen
+   *                            satama 11.4.1912)
+   *   Donegal                — Slieve League (601 m, Euroopan korkeimpia
+   *                            merijyrkänteitä)
+   *   Dublin                 — Bull Island (syntyi Bull Wallin 1820–1825
+   *                            jälkeen, Dublin City Council)
+   *   Dún Laoghaire–Rathdown — Forty Foot (Sandycove, uitu ympäri vuoden
+   *                            n. 250 v, ennen vain miehille) + Sandycove
+   *                            (Dún Laoghairen ja Dalkeyn välissä)
+   *   Fingal                 — Lambay Island (punakaulavallabit 1950-luvulta,
+   *                            lisää Dublin Zoosta 1980-luvulla, n. 100 v. 2017)
+   *                            + Portrane (Fingal)
+   *   Galway                 — Kylemore Abbey (benediktiiniluostari 1920,
+   *                            nunnat pakenivat Belgiasta 1. maailmansodassa)
+   *   Kerry                  — Killarney National Park (1. kansallispuisto
+   *                            1932, mantereen ainoa saksanhirvilauma)
+   *   Kildare                — The Curragh (kaikki viisi klassikkolaukkaa,
+   *                            Pyhän Brigidin viittalegenda)
+   *   Kilkenny               — Kilkenny GAA (36 All-Ireland-hurlingmestaruutta,
+   *                            ennätys)
+   *   Laoighis               — Electric Picnic (Stradbally Hall vuodesta 2004,
+   *                            "Ireland's version of Glastonbury")
+   *   Leitrim                — County Leitrim (lyhyin rantaviiva, Tullaghan
+   *                            4,7 km)
+   *   Limerick               — Foynes (Irish coffee 1943, Joe Sheridan,
+   *                            lentovenemuseo) + Irish coffee
+   *   Longford               — Corlea Trackway (tammilankut kaadettu
+   *                            148–147 eaa., Karthagon piirityksen aikaan)
+   *   Louth                  — County Louth (pienin kreivikunta) + Oliver
+   *                            Plunkett (pää Droghedan St Peter's Churchissa
+   *                            29.6.1921 alkaen)
+   *   Mayo                   — Achill Island (suurin saari, kääntösilta) +
+   *                            Croaghaun (Irlannin korkeimmat merijyrkänteet)
+   *   Meath                  — Trim Castle (suurin normannilinna, Braveheartin
+   *                            York)
+   *   Monaghan               — Castle Leslie (Glaslough, McCartneyn häät
+   *                            2002, 300 vierasta)
+   *   Offaly                 — Leviathan of Parsonstown (maailman suurin
+   *                            1845–1917) + Birr Castle (Offaly, entisöity
+   *                            1990-luvun lopulla)
+   *   Roscommon              — Rathcroghan (Oweynagat, "Cave of the Cats",
+   *                            portti Toiseen maailmaan, Samhain)
+   *   Sligo                  — Drumcliff (Yeats haudattu 1948, Ben Bulben)
+   *   South Dublin           — Montpelier Hill (Hell Fire Club -maja n. 1725,
+   *                            South Dublin County Councilin hanke)
+   *   North Tipperary        — Devil's Bit (paholaisen purema, Cashelin
+   *                            kallio) + North Tipperary (Devil's Bit,
+   *                            Templemore)
+   *   South Tipperary        — Clonmel (Bulmers eli Magners, tehdas 2 km
+   *                            kaupungista itään) + South Tipperary
+   *                            (Clonmel pääkaupunki)
+   *   Waterford              — Blaa (EU:n PGI 19.11.2013, neliskanttinen,
+   *                            jauhotettu) + Waterford (Irlannin vanhin
+   *                            kaupunki)
+   *   Westmeath              — Hill of Uisneach (lähellä maantieteellistä
+   *                            keskipistettä, pyhä keskus, Bealtaine)
+   *   Wexford                — Hook Lighthouse (yli 800 v, 2. vanhin toimiva
+   *                            Herkuleen tornin jälkeen)
+   *   Wicklow                — Powerscourt Waterfall (121 m, 2. korkein) +
+   *                            Powerscourt Estate (peurapuisto 1858,
+   *                            japaninpeura Irlantiin)
+   */
+  IRL: {
+    Carlow: {
+      lyhyt: 'Brownshillin dolmen Carlow’n laidalla on yli 5 000 vuotta vanha hauta, jonka noin 150-tonnista kattokiveä pidetään Euroopan painavimpana.',
+    },
+    Cavan: {
+      lyhyt: 'Cuilcaghvuoren juurella on Shannon Pot, 16 metrin levyinen lähdelampi, josta Shannon-joen katsotaan perinteisesti saavan alkunsa.',
+    },
+    Clare: {
+      lyhyt: 'Burrenin kalkkikivikarstilla kasvavat arktiset tunturikasvit ja Välimeren kasvit rinnakkain – siellä on yli 70 % Irlannin kukkalajeista.',
+    },
+    Cork: {
+      lyhyt: 'Cobhin satamasta, jonka nimi oli silloin Queenstown, Titanic lähti 11. huhtikuuta 1912 viimeiseltä pysähdykseltään kohti Atlanttia.',
+    },
+    Donegal: {
+      lyhyt: 'Slieve Leaguen merijyrkänteet kohoavat 601 metriin suoraan Atlantista, ja ne kuuluvat Euroopan korkeimpiin.',
+    },
+    Dublin: {
+      lyhyt: 'Dublininlahden Bull Island syntyi vahingossa: hiekka alkoi kasautua saareksi, kun satamaan rakennettiin Bull Wall -aallonmurtaja 1820–1825.',
+    },
+    'Dún Laoghaire–Rathdown': {
+      lyhyt: 'Sandycoven Forty Footilla on uitu Irlanninmeressä ympäri vuoden jo noin 250 vuotta – ennen vain miehet, nykyään kaikki.',
+    },
+    Fingal: {
+      lyhyt: 'Fingalin rannikon edustalla Lambayn yksityissaarella hyppii noin sata punakaulavallabia, jotka tuotiin sinne 1950- ja 1980-luvuilla.',
+    },
+    Galway: {
+      lyhyt: 'Connemaran Kylemoren linna on ollut vuodesta 1920 luostari, jonka perustivat ensimmäisen maailmansodan aikana Belgiasta paenneet nunnat.',
+    },
+    Kerry: {
+      lyhyt: 'Killarneyn kansallispuisto oli Irlannin ensimmäinen, ja sen tammimetsissä elää mantereen ainoa saksanhirvilauma.',
+    },
+    Kildare: {
+      lyhyt: 'Curraghin tasangolla ajetaan kaikki viisi Irlannin klassikkolaukkaa – tarun mukaan Pyhä Brigid sai maan peittämällä sen viitallaan.',
+    },
+    Kilkenny: {
+      lyhyt: 'Kilkenny on hurlingin mahtikreivikunta: se on voittanut lajin All-Ireland-mestaruuden 36 kertaa, enemmän kuin kukaan muu.',
+    },
+    Laoighis: {
+      lyhyt: 'Stradbally Hallin kartanon mailla järjestetään joka vuosi Electric Picnic -festivaali, jota on kutsuttu Irlannin Glastonburyksi.',
+    },
+    Leitrim: {
+      lyhyt: 'Leitrim ulottuu mereen vain Tullaghanin kohdalla, ja sen 4,7 kilometrin rantaviiva on Irlannin kreivikunnista lyhyin.',
+    },
+    Limerick: {
+      lyhyt: 'Foynesin lentovenesatamassa kokki Joe Sheridan lorautti 1943 viskiä kohmeisten matkustajien kahviin – näin syntyi Irish coffee.',
+    },
+    Longford: {
+      lyhyt: 'Corlean suolta kaivettiin esiin rautakautinen tammilankkutie, jonka puut kaadettiin 148–147 eaa. – samaan aikaan kun Karthagoa piiritettiin.',
+    },
+    Louth: {
+      lyhyt: 'Louth on Irlannin pienin kreivikunta, ja Droghedan Pyhän Pietarin kirkossa on vuodesta 1921 säilytetty pyhimys Oliver Plunkettin päätä.',
+    },
+    Mayo: {
+      lyhyt: 'Achill on Irlannin suurin saari, ja sen Croaghaunin merijyrkänteet ovat maan korkeimmat – mantereelle pääsee kääntösiltaa pitkin.',
+    },
+    Meath: {
+      lyhyt: 'Trimin linna on Irlannin suurin normannilinna, ja elokuvassa Braveheart se esitti muurien ympäröimää Yorkia.',
+    },
+    Monaghan: {
+      lyhyt: 'Glasloughin Castle Leslien kartanon kirkossa Paul McCartney vihittiin 2002, ja linnan hääjuhlassa oli 300 vierasta.',
+    },
+    Offaly: {
+      lyhyt: 'Birrin linnan puistossa seisoo Leviathan-kaukoputki, joka oli maailman suurin 1845–1917 ja entisöitiin 1990-luvun lopulla.',
+    },
+    Roscommon: {
+      lyhyt: 'Rathcroghanin kapea Oweynagat eli Kissojen luola oli tarujen mukaan portti tuonpuoleiseen, ja siihen liitetään Samhain-juhla.',
+    },
+    Sligo: {
+      lyhyt: 'Runoilija W. B. Yeats lepää Drumcliffin kirkkomaalla Benbulbenvuoren juurella – hänen jäännöksensä tuotiin Ranskasta 1948.',
+    },
+    'South Dublin': {
+      lyhyt: 'Montpelier Hillin laella on 1725 rakennetun metsästysmajan raunio, jossa Hellfire Clubin herrojen kerrotaan juhlineen ja jonka sanotaan kummittelevan.',
+    },
+    'North Tipperary': {
+      lyhyt: 'Devil’s Bit -vuoren harjanteessa on lovi: tarun mukaan paholainen puraisi siitä palan, katkaisi hampaansa ja sylki palasta Cashelin kallion.',
+    },
+    'South Tipperary': {
+      lyhyt: 'Clonmelissa perustettua Bulmers-siideriä, muualla Magnersia, valmistetaan yhä kaupungin laidalla omenatarhojen keskellä.',
+    },
+    Waterford: {
+      lyhyt: 'Waterford on Irlannin vanhin kaupunki, ja aamiaiseksi siellä syödään jauhoisia, neliskanttisia blaa-sämpylöitä, joilla on EU:n suoja.',
+    },
+    Westmeath: {
+      lyhyt: 'Uisneachin kukkula lähellä Irlannin maantieteellistä keskipistettä oli taruissa saaren pyhä keskus, jossa druidit viettivät Bealtainea.',
+    },
+    Wexford: {
+      lyhyt: 'Hook Headin majakka on toiminut yli 800 vuotta, ja maailmassa vain Espanjan Herkuleen torni on sitä vanhempi toimiva majakka.',
+    },
+    Wicklow: {
+      lyhyt: 'Powerscourtin vesiputous putoaa 121 metriä, ja sen ympärille 1858 perustettuun peurapuistoon tuotiin Irlannin ensimmäiset japaninpeurat.',
+    },
+  },
 };
