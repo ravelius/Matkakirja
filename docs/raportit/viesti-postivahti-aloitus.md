@@ -20,7 +20,7 @@ Aja normaali kierros heti:
 
 - **JUMI → FABLE:** jumissa oleva rooli viestii Fablelle, ei tee korttia omistajalle. Poikkeus: jos FABLEN OMA kortti on auki >10 min, Postivahti pushaa PushNotificationilla uudelleen.
 - **Viestiraja:** SendMessage ~10 viestiä/vuoro; kun kieltäytyy "Failed to send" tms., käytä `mcp__ccd_session_mgmt__send_message` kohde-session id:llä (ei kuluta rajaa).
-- **Junasääntö:** ilmoita Fablelle jos juna-haaran commit on >30 min vanha ilman käännöstä, tai sisältöjono täyttää ehdon (≥4 vihreää sisältö-PR:ää TAI vanhin >4h) ilman käynnistynyttä junaa.
+- **Junasääntö:** ilmoita Fablelle jos juna-haaran vanhin kääntämätön commit on >25 min vanha ilman käännöstä (Fable 25.9. ~13.5x; aiemmin 30 min; Natiiviseppä lisää niputukselle 20 min ylärajan), tai sisältöjono täyttää ehdon (≥4 vihreää sisältö-PR:ää TAI vanhin >4h) ilman käynnistynyttä junaa.
 - **Muistisääntö:** ks. kohdat 6-7 yllä. >4 rinnakkaista "Google Chrome for Testing" GPU-prosessia → ilmoita Julkaisijalle (ei Fablelle).
 - **coreaudiod-huolto:** jos coreaudiod >200% CPU yli 2 min, aja suoraan `sudo killall coreaudiod` (sallittu `.claude/settings.json`:ssa, PR #3142 mainissa — ei enää luokitinestoa). Kolme muuta huoltokomentoa (CoreSimulatorService, mDNSResponder, purge) ajaa jumissa oleva rooli itse, ei Postivahti.
 - **Ei kuittauksia jos ei muutosta** — vain aidot muutokset/ylitykset raportoidaan Fablelle.
