@@ -34,9 +34,10 @@ joka kehys.
 
 ### Seuraavaksi
 
-1. **Erien 4–5 video.** Käännös `proto-kaanna.sh juna/b13+linssiseppa/ihmisen-matka-2` oli käynnissä klo 18.54
-   (loki `proto-3d/lokit/kaannospalvelu/*juna-b13_linssiseppa-ihmisen-matka-2.log`).
-   - Kopioi .app vasta, kun lokin viimeinen rivi on KÄÄNNETTY.
+1. **Erien 4–5 video.** Käännös on valmis: KÄÄNNETTY b4428138 (juna/b13 + linssiseppa/ihmisen-matka-2, klo 18.56, ei
+   varjostinvirheitä). .app-kopio on kansiossa
+   `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa/54895bc4-ec0e-4550-9d4c-56000f6a52c8/scratchpad/im2c/Matkakirja3D.app`.
+   Käännä uudelleen, jos kopio puuttuu tai juna on muuttunut.
    - Julkaisijalta on pyydetty 15 min vuoro Pelikoodarin lämpöerän jälkeen.
    - Tarkista: äänimaisemat (vaihto ja silmukka; mykistys pois vain kuunneltaessa), aamunkoitto, rintaman hehku, kallistus
      ja kehysaika.
