@@ -36,7 +36,7 @@ namespace Matkakirja
         /// <summary>Linssin rasterin lataus epäonnistui (avain).</summary>
         public event Action<string> KerrosEpaonnistui;
 
-        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; public bool alfaMuutettu; }
+        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; public bool alfaMuutettu; public bool vaistyva; }
         readonly Dictionary<string, Rasteri> rasterit = new Dictionary<string, Rasteri>();
 
         /// <summary>
@@ -246,18 +246,28 @@ namespace Matkakirja
         /// <summary>
         /// Linssin raster-kerros pohjan päälle. Palauttaa avaimen (sama kuin annettu).
         /// Alfa: nyt vain 0 (piilossa) tai 1 (näkyvissä); välimuoto on tulossa.
+        /// vaistyva: kerros luovuttaa paikkansa, jos seuraava LisaaRasteri ei muuten mahdu (radion yövalot: radion
+        /// sulun ulosliu'un aikana avattu toinen linssi saa paikan; kerroksen omistaja huomaa poiston RasterinAlfan
+        /// palauttamasta −1:stä).
         /// </summary>
         public string LisaaRasteri(string avain, string url, CesiumUrlTemplateRasterOverlayProjection projektio,
-                                   int min, int max, float alfa)
+                                   int min, int max, float alfa, bool vaistyva = false)
         {
             PoistaRasteri(avain);
             // Väritaso vapauttaa paikan 2 linssin ajaksi (Cesiumissa kolme raster-paikkaa).
             if (varitaso != null) varitaso.Linssit(true);
-            var kaytetyt = new HashSet<string>();
-            foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
-            if (silea != null) kaytetyt.Add(silea.materialKey);
-            if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
+            var kaytetyt = KaytetytPaikat();
             string avainCesium = !kaytetyt.Contains("1") ? "1" : !kaytetyt.Contains("2") ? "2" : null;
+            if (avainCesium == null && !vaistyva)
+                foreach (var p in rasterit)
+                    if (p.Value.vaistyva && Paikka(p.Value.kerros) is int vp && vp >= 1)
+                    {
+                        Debug.Log($"MATKAKIRJA kerrokset: {p.Key} väistyy kerroksen {avain} tieltä (paikka {vp})");
+                        PoistaRasteri(p.Key);
+                        if (varitaso != null) varitaso.Linssit(true);
+                        avainCesium = vp.ToString();
+                        break;
+                    }
             if (avainCesium == null && sentinel != null)
             {
                 // Satelliittilento (oletus build 10) vie molemmat paikat: linssi saa Sentinelin paikan 2,
@@ -274,9 +284,30 @@ namespace Matkakirja
                 return null;
             }
             var k = UusiKerros(pallo.gameObject, avainCesium, url, projektio, min, max, alfa > 0f);
-            rasterit[avain] = new Rasteri { kerros = k, lisatty = Time.unscaledTime };
+            rasterit[avain] = new Rasteri { kerros = k, lisatty = Time.unscaledTime, vaistyva = vaistyva };
             PaivitaNavat();
             return avain;
+        }
+
+        /// <summary>Linssien ja lennon pinnan käyttämät raster-paikat (materialKey; väritaso väistyy linssin ajaksi).</summary>
+        HashSet<string> KaytetytPaikat()
+        {
+            var kaytetyt = new HashSet<string>();
+            foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
+            if (silea != null) kaytetyt.Add(silea.materialKey);
+            if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
+            return kaytetyt;
+        }
+
+        /// <summary>
+        /// Onko raster-paikka 1 tai 2 vapaana ilman, että lennon pinta joutuu väistymään (LisaaRasteri vie muuten
+        /// Sentinelin paikan). Radion yövalot (RadioMastot) lisätään vain, jos tämä on tosi: kerros ei saa viedä
+        /// paikkaa reliefiltä eikä lennolta.
+        /// </summary>
+        public bool RasteriPaikkaVapaana()
+        {
+            var kaytetyt = KaytetytPaikat();
+            return !kaytetyt.Contains("1") || !kaytetyt.Contains("2");
         }
 
         /// <summary>

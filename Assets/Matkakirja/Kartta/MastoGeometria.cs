@@ -285,5 +285,36 @@ namespace Matkakirja
             float ham = pohja * HamaraKerroin[kanava] + HamaraLisa[kanava];
             return pohja + (ham - pohja) * h;
         }
+
+        // ---- YÖVALOT (NASA Black Marble; suunnitelma luku 3, omistaja 24.9. klo 19.3x: perustaso 0,5 "selvästi
+        //      näkyvä", valitun maston ympärillä täysi). Sama kaava kuin tileset-varjostimen RadioHamara-funktiossa
+        //      (Shaders/Cesium/Lahde~/tee_tileset.py, HAMARA_RUNKO): muuta molempia. ----
+
+        /// <summary>Yövalojen voimakkuus (suunnitelma luku 3: valo = w × 0,85 × …); varjostimelle _radioYovalot.y.</summary>
+        public const float YovalonVoimakkuus = 0.85f;
+        /// <summary>Paikallinen tehostus: täysi 60 km:n sisällä valitusta mastosta, nolla 230 km:stä (smoothstep).</summary>
+        public const float YovaloLahiM = 60_000f, YovaloKaukoM = 230_000f;
+        /// <summary>Natriumin sävy (sRGB-kerroin).</summary>
+        public static readonly float[] Natrium = { 1.05f, 0.82f, 0.52f };
+
+        /// <summary>
+        /// Lämpimän valon paino w (sRGB 0–1): saturate((R − 48/255) / (170/255)) × saturate((R − B + 10/255) / (40/255)).
+        /// Kuunvalaistu maa ja lumi (sinertävä, R ≈ B) ja tumma tausta jäävät pois.
+        /// </summary>
+        public static float YovalonPaino(float r, float b) =>
+            Rajaa01((r - 48f / 255f) / (170f / 255f)) * Rajaa01((r - b + 10f / 255f) / (40f / 255f));
+
+        /// <summary>Paikallinen tehostus 0…1: (1 − smoothstep(60 km, 230 km, etäisyys)) × syttyminen (RadioMastot.YonValot).</summary>
+        public static float YovalonLahi(float etaisyysM, float syttyminen)
+        {
+            float t = Rajaa01((etaisyysM - YovaloLahiM) / (YovaloKaukoM - YovaloLahiM));
+            return (1f - t * t * (3f - 2f * t)) * Rajaa01(syttyminen);
+        }
+
+        /// <summary>Yövalon kanava sRGB-arvona ennen linearisointia: w × voimakkuus × (0,5 + 0,5 × lähi) × natrium.</summary>
+        public static float Yovalo(float w, float voimakkuus, float lahi, int kanava) =>
+            w * voimakkuus * (0.5f + 0.5f * Rajaa01(lahi)) * Natrium[kanava];
+
+        static float Rajaa01(float x) => x < 0f ? 0f : x > 1f ? 1f : x;
     }
 }
