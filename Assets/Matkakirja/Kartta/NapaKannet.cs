@@ -24,8 +24,8 @@ namespace Matkakirja
     ///
     /// KANSI on varakappale: yksivärinen 83,7°:sta napaan ja 0,4°:n häive peitolla 0,4. Se näkyy,
     /// kunnes kalotti on ladattu (verkko poikki tai 404: pallo piirtyy kuten ennen kalotteja).
-    /// Reliefilinssin ajan kalotti on piilossa ja kansi reliefin sävyssä (web NAPAKANSI_RELIEFI_*),
-    /// KarttaKerrokset kertoo tilan (<see cref="Reliefi"/>).
+    /// Reliefilinssin ajan kalotti on piilossa ja kansi reliefin sävyssä (web NAPAKANSI_RELIEFI_*), etelässä
+    /// reliefisarjan reunaan asti (<see cref="ReliefinJaaraja"/>, löydös 99); KarttaKerrokset kertoo tilan (<see cref="Reliefi"/>).
     ///
     /// Kappaleet ovat pinnan korkeudella (ei liukumista laattojen suhteen), ja maaston yli ne nostaa
     /// varjostimen syvyysnosto (Napakansi.shader). Värit sovitetaan laattoihin
@@ -46,6 +46,17 @@ namespace Matkakirja
         /// <summary>Reliefilinssin sävyt: avomeri ja mannerjää (web MERIVARI, JAAVARI).</summary>
         public static readonly Color32 ReliefiPohjoinen = new Color32(38, 78, 145, 0xff);
         public static readonly Color32 ReliefiEtela = new Color32(236, 240, 244, 0xff);
+        /// <summary>
+        /// Reliefilinssin eteläkannen reuna (omistajan löydös 99, build 13: topografian navat pyöreinä reikinä).
+        /// Reliefisarja (Topografia.ReliefiSarja) on poltettu vain −65,4°:een asti (mitattu 25.9. z5-laatoista
+        /// kolmella pituusasteella: viimeinen reliefirivi −65,40…−65,44°), ja sen eteläpuolen poltto maalasi
+        /// avomeren sinisellä (MERIVARI). Etelämanner oli siis valtamerta, ja keskellä 83,7°:sta alkava jäänvalkea
+        /// kansi näkyi pyöreänä reikänä. Web maalaa saman aukon jään sävyllä (js/reliefipyramidi.js JAARAJA_LAT −65 ja
+        /// reliefinTaustavari, käyttö js/pallolaatat.js puuttuvan reliefilaatan taustassa), joten linssin ajaksi
+        /// eteläkansi ulottuu reliefin reunaan asti. Pohjoisessa reliefi ulottuu 84,0°:een ja yläpuoli on MERIVARIa
+        /// kuten kansikin, joten pohjoinen kansi pysyy 83,7°:ssa.
+        /// </summary>
+        public const double ReliefinJaaraja = 65.4;
 
         /// <summary>Kalottikuvien versio ämpärissä (web NAPAKALOTTI_VERSIO).</summary>
         public const string KalottiVersio = "2026-09-11b";
@@ -90,7 +101,8 @@ namespace Matkakirja
             public int Merkki;
             public double Reuna;
             public Color32 Savy, ReliefiSavy;
-            public GameObject Kansi, Kalotti;
+            /// <summary>Reliefilinssin kansi, jos sen reuna on eri kuin kannen (etelä, <see cref="ReliefinJaaraja"/>); muuten null.</summary>
+            public GameObject Kansi, ReliefiKansi, Kalotti;
             public Material KansiMateriaali, KalotinMateriaali;
             public Texture2D Kuva;
         }
@@ -165,6 +177,20 @@ namespace Matkakirja
             leveydet.Add(KannenLeveys); alfat.Add(KannenHaivePeitto);
             leveydet.Add(KannenLeveys - KannenHaive); alfat.Add(KannenHaivePeitto);
             n.Kansi = Kappale("Napakansi " + puoli, Verkko(merkki, leveydet, alfat, sektoreita, 0.0), n.KansiMateriaali);
+            // Reliefin kansi etelässä reliefisarjan reunaan asti, täysi peitto ilman häivettä: reuna osuu sarjan
+            // poltetun alueen reunaan, ja häive näkyisi reliefimeren päällä vaaleana vyönä (webissäkin raja on
+            // laatan reuna). Tiheys kuten kalotilla, jonka ala on samaa kokoluokkaa (60°–90°).
+            if (merkki < 0)
+            {
+                var rl = new List<double>();
+                var ra = new List<float>();
+                for (int k = 0; k <= kalotinKehia; k++)
+                {
+                    rl.Add(90.0 - (90.0 - ReliefinJaaraja) * k / kalotinKehia);
+                    ra.Add(1f);
+                }
+                n.ReliefiKansi = Kappale("Napakansi reliefi " + puoli, Verkko(merkki, rl, ra, kalotinSektoreita, 0.0), n.KansiMateriaali);
+            }
             return n;
         }
 
@@ -175,7 +201,10 @@ namespace Matkakirja
                 bool kuva = n.Kalotti != null;
                 n.KansiMateriaali.SetColor("_BaseColor", Savytetty(reliefi ? n.ReliefiSavy : n.Savy));
                 // Kansi pois, kun kartta on paikallaan (web 11.9.: kansi piirtyi muuten kalotin päälle).
-                n.Kansi.SetActive(nakyvat && (reliefi || !kuva));
+                // Reliefin ajan etelässä leveämpi reliefikansi kannen tilalla (sama materiaali, ks. ReliefinJaaraja).
+                bool reliefikansi = reliefi && n.ReliefiKansi != null;
+                n.Kansi.SetActive(nakyvat && !reliefikansi && (reliefi || !kuva));
+                if (n.ReliefiKansi != null) n.ReliefiKansi.SetActive(nakyvat && reliefikansi);
                 if (kuva) n.Kalotti.SetActive(nakyvat && !reliefi);
             }
         }
