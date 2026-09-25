@@ -740,7 +740,7 @@ namespace Matkakirja
             if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
             if (nappula != null && !LinssiTila && nappula.Pino(kamera, kerroin, NimiLadonta.PelimerkinVara, out var pino)) pinot.Add(pino);
             NimiLadonta.LadoKaupungit(ehdokkaat, pinot, new Ruutulaatikko(0, 0, Screen.width, Screen.height), kerroin,
-                                      Varaukset, naytetaan, nimenPaikat);
+                                      Varaukset, naytetaan, nimenPaikat, NimiLadonta.LiikevaraOsuus * Mathf.Max(Screen.width, Screen.height));
             for (int i = 0; i < nakyvat.Count; i++)
             {
                 var m = nakyvat[i];

@@ -430,6 +430,18 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, paikat[0].ToString());
         }
 
+        [Testi] static void LiikevaraPitaaKyljenReunalla()
+        {
+            // Web liikevara: reunalle tullut kaupunki saa saman kyljen (oikea), mutta ei näy eikä lukitu ennen kuin mahtuu.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(980, 400) }, null, Ruutu, 1f, v, nayta, paikat, 500f);
+            Oleta.Tosi(!nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku, "oikea, piilossa: " + paikat[0]);
+            v.Aloita(2);
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(800, 400) }, null, Ruutu, 1f, v, nayta, paikat, 500f);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku, "mahtuu: näkyy oikealla");
+        }
+
         [Testi] static void NappulanPinoVaistetaanYlos()
         {
             // Web VÄISTÖKEHÄ PELIMERKIN YMPÄRI: piste pinon sisällä → ensin ylös pinon yläpuolelle.
