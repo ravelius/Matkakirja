@@ -181,20 +181,54 @@ namespace Matkakirja.Natiivi
 
         Label Kupla(bool livia, string teksti, bool odottaa = false)
         {
+            // Edellisen vastauksen tyhjä tila pois, jotta pohja on aito pohja (web lisaaKupla 'oma').
+            tila?.RemoveFromHierarchy();
             var k = Rakenne.Teksti(teksti ?? "", livia ? "mk-minipuluKortti__vastaus" : "mk-minipuluKortti__oma", virta);
             Kirjasimet.Aseta(k, livia ? Kirjasin.Luku : Kirjasin.Kone);
             k.EnableInClassList("mk-odottaa", odottaa);
             if (livia) Aanet.PulunTehoste("pulu.kujerrus");
-            Rakenne.Vierita(virta, k);
+            if (livia) Ankkuroi(k);
+            else Rakenne.Vierita(virta, k);
             return k;
+        }
+
+        /// <summary>
+        /// Löydös 96 b (Linssisepän havainto): web satelliitti.js ankkuroiVastaukseen. Vastauskuplan alle lisätään virran
+        /// näkyvän korkuinen tyhjä tila, ja kupla kelataan kerran ylimmäksi. Käytetyt kysymyspillerit vierivät pois
+        /// näkyvistä, ja kasvava vastaus täyttää tilan alta. ScrollView ei vieritä pohjaa pidemmälle, joten ilman tilaa
+        /// lyhyt vastaus jäi pillereiden alle.
+        /// </summary>
+        VisualElement tila;
+
+        void Ankkuroi(Label kupla)
+        {
+            tila ??= Rakenne.El("mk-minipuluKortti__tila", null, PickingMode.Ignore);
+            float nakyva = virta.contentViewport.layout.height;
+            tila.style.height = float.IsNaN(nakyva) ? 240f : nakyva;
+            virta.Add(tila);
+            virta.schedule.Execute(() => { if (kupla.parent != null) virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)); });
+        }
+
+        /// <summary>Web vapautaTila: tila kutistuu pienimpään, jolla kuplan alku pysyy ylimpänä.</summary>
+        void VapautaTila(Label kupla)
+        {
+            virta.schedule.Execute(() =>
+            {
+                if (tila == null || tila.parent == null) return;
+                if (kupla.parent == null) { tila.RemoveFromHierarchy(); return; }
+                float tarve = Mathf.Ceil(virta.contentViewport.layout.height - kupla.layout.height);
+                if (tarve > 0f) tila.style.height = tarve;
+                else tila.RemoveFromHierarchy();
+                virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4));
+            });
         }
 
         void Valmis(Label kupla, string vastaus)
         {
             kupla.RemoveFromClassList("mk-odottaa");
             kupla.text = vastaus ?? "";
-            // Vastaus luetaan alusta: kuplan yläreuna näkyviin kerran (webin ankkurointi).
-            virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)));
+            // Vastaus luetaan alusta: kupla pysyy ylimpänä, ja ylimääräinen tyhjä tila poistetaan sen alta.
+            VapautaTila(kupla);
         }
     }
 }
