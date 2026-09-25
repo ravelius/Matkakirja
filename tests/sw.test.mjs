@@ -599,7 +599,9 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   // 18.9.2026): silloin kansiossa ei ole '-nostot'-osaa (tools/tee-pallolaatat.mjs
   // laattojenKansio).
   const sarjassaNostot = pallo.match(/PALLO_SARJASSA_NOSTOT = (true|false)/)?.[1] === 'true';
-  assert.match(pallo, /PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  assert.match(pallo, /TUOTANNON_PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  // Koepyramidi (?pyramidi=<sarja>, js/media.js pyramidiKoe) on ainoa poikkeus tuotannon kansiosta.
+  assert.match(pallo, /PALLO_LAATTAKANSIO = KOEPYRAMIDI \? koepyramidinPallokansio\(KOEPYRAMIDI\) : TUOTANNON_PALLO_LAATTAKANSIO;/);
   assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');
