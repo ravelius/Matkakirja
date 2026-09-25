@@ -136,8 +136,9 @@ namespace Matkakirja.Natiivi
 
         void Ohita()
         {
-            PeliOhjain.Instanssi?.OhitaLuento();
+            // Lento ensin: OhitaLuento herättää PaikanPuheVaiennettu-tapahtuman, joka tyhjentää pakan.
             Tyhjenna(true);
+            PeliOhjain.Instanssi?.OhitaLuento();
         }
 
         /// <summary>Suurennos sarjasta (luennan kuvat), alkaen kohdasta alku; ‹ › selaa.</summary>
