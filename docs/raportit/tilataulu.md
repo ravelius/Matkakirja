@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 13:20 EEST
+**Päivitetty:** 2026-09-25 13:30 EEST
 
 ## 1) Sessiot
 
@@ -10,15 +10,15 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 37% | running | — |
-| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 15% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 14% | idle | — |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 20% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 39% | running | — |
+| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 17% | running | — |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 15% | idle | — |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 24% | running | — |
 | Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 9% | idle | — |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 16% | idle | PR #3154 |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 19% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 15% | idle | PR #3153 (savukierros B13) |
-| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 11% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 17% | running | — |
+| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 14% | idle | PR #3155 |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 22% | running | — |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 17% | running | — |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
@@ -56,8 +56,8 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 189 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 35 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 2 (pariteetti-iPhone, iPhone 17). **coreaudiod:** 65 %. **Chrome for Testing GPU-prosesseja:** 3.
-- **5 h -kiintiö:** 12 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 4 %. **Viikko (Fable):** 3 %.
-- **Juna:** viimeisin KÄÄNNETTY 12:37 (juna/b13 c168c2e4), ei uutta commitia sen jälkeen. varmuuskopio-VIKA tyhjä.
-- **Postilaatikko:** kärki 7755d9c5a, ei uutta. **Avoimia PR:iä:** 14.
+- **Levy:** 188 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 28 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 1 (iPhone 17). **coreaudiod:** 0 %. **Chrome for Testing GPU-prosesseja:** 2.
+- **5 h -kiintiö:** 15 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 4 %. **Viikko (Fable):** 4 %.
+- **Juna:** viimeisin KÄÄNNETTY 12:37; juna/b13 56b7eace uusi 13:17, odottaa niputusta (seurataan, ilmoitus jos >30 min ilman käännöstä eli ~13:47).
+- **Postilaatikko:** uusi commit 254098189 (Codex → Fable gallerian näkyvyyskorjaus), ilmoitettu Fablelle 13:28. **Avoimia PR:iä:** 15.
