@@ -357,7 +357,7 @@ namespace Matkakirja
             Tee();
             Kone(true);
             Siirra(lat0, lon0, 0);
-            liike = StartCoroutine(Lento(lat0, lon0, lat1, lon1, math.max(0.5f, kestoS), 0f, null, valmis));
+            liike = StartCoroutine(Lento(lat0, lon0, lat1, lon1, math.max(0.5f, kestoS), 0f, null, valmis, naytaLentokaari));
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace Matkakirja
             // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
             if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
-            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis));
+            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis, false));
         }
 
         /// <summary>Lennon vaihe (LENNON ESITYS): Pelikoodari ajoittaa äänet ja luennan, UI tekstit.</summary>
@@ -395,7 +395,7 @@ namespace Matkakirja
             VaiheVaihtui?.Invoke(v);
         }
 
-        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis)
+        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis, bool kaari)
         {
             kesken = valmis;
             // Lähtözoomin korkeus (Lontoo ennen koneen lähtöä).
@@ -472,6 +472,10 @@ namespace Matkakirja
             var kerrokset = KarttaKerrokset.Instanssi;
             reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
             kerrokset?.Nakyvyys("reitit", false);
+            // VALITUN LENNON KAARI (pariteetti B24, web ui.js:20691 ja 11424 lentoKaari, nollaus perillä 20755/11433):
+            // liikkuva katkoviiva lähdöstä laskeutumiseen koneen omaa reittiä pitkin. Ei aloituslennolla (webissä sillä
+            // ei ole lentoKaarta). Lähikuvissa kaari häivytetään (yllä oleva omistajan havainto: juova kameraa kohti).
+            if (kaari) TeeLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
             lentoMerkit = merkit;
             lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
             // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
@@ -571,6 +575,7 @@ namespace Matkakirja
                     else pilvet.Korkeus(math.max(2000.0, (lentoPohja + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
+                if (lentokaari != null) PaivitaLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
                 // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
                 // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
                 // Vasta lähikuvassa (t ≥ 0,08), kun usva täyttää kuvan: Lontoon zoomissa kamera on niin korkealla, että
@@ -635,8 +640,66 @@ namespace Matkakirja
         string[] lentoIdt;
         bool reititEnnen = true;
 
+        [Tooltip("Valitun lennon kaari liikkuvana katkoviivana lennon ajan (pariteetti B24); ei aloituslennolla.")]
+        public bool naytaLentokaari = true;
+        [Tooltip("Kaari häipyy, kun kone täyttää tätä suuremman osan ruudun leveydestä (lähikuvat).")]
+        public float lentokaarenLahikuva = 0.08f;
+
+        GameObject lentokaari;
+        Material lentokaarenMateriaali;
+        double lentokaarenPohja;
+        float lentokaarenAlfa = -1f;
+
+        /// <summary>
+        /// Koneen reitti viivaksi: aikajanan näytteet t = 0…1, koneen osuus KoneenOsuus(t) ja korkeus
+        /// lentoPohja + max(huippu · sin πp, KoneenMinimi(t)), eli täsmälleen koneen kulkema kaari.
+        /// </summary>
+        void TeeLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
+        {
+            PoistaLentokaari();
+            var reitit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.reitit : null;
+            if (reitit == null || reitit.korostus == null) return;
+            if (lentokaarenMateriaali == null) lentokaarenMateriaali = new Material(reitit.korostus) { name = "Valitun lennon kaari" };
+            const int N = 256;
+            var pisteet = new List<double3>(N + 1);
+            double pohja = double.IsNaN(lentoPohja) ? Pohja : lentoPohja;
+            for (int i = 0; i <= N; i++)
+            {
+                double t = (double)i / N;
+                double p = LennonAikajana.KoneenOsuus(t, jako);
+                var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
+                pisteet.Add(new double3(q.x, q.y, pohja + math.max(huippu * math.sin(math.PI * p), LennonAikajana.KoneenMinimi(t, jako))));
+            }
+            lentokaari = reitit.PiirraKaari("valittu-lento", pisteet, lentokaarenMateriaali);
+            lentokaarenPohja = pohja;
+            lentokaarenAlfa = -1f;
+        }
+
+        /// <summary>Kaari lennon pohjan mukana (maastokysely voi nostaa pohjaa) ja häivytys lähikuvissa.</summary>
+        void PaivitaLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
+        {
+            if (!double.IsNaN(lentoPohja) && math.abs(lentoPohja - lentokaarenPohja) > 300.0)
+                TeeLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
+            if (lentokaari == null || lentokaarenMateriaali == null) return;
+            float alfa = 1f - Mathf.SmoothStep(0f, 1f, koneRuudusta / Mathf.Max(0.001f, lentokaarenLahikuva));
+            if (Mathf.Abs(alfa - lentokaarenAlfa) < 0.004f) return;
+            lentokaarenAlfa = alfa;
+            var c = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.reitit != null
+                ? KarttaKerrokset.Instanssi.reitit.korostus.GetColor("_BaseColor") : Color.white;
+            lentokaarenMateriaali.SetColor("_BaseColor", new Color(c.r, c.g, c.b, c.a * alfa));
+            lentokaarenMateriaali.SetFloat("_Kerroin", PalloKierto.Pistekerroin);
+            lentokaari.SetActive(alfa > 0.004f);
+        }
+
+        void PoistaLentokaari()
+        {
+            if (lentokaari != null) Destroy(lentokaari);
+            lentokaari = null;
+        }
+
         void Paatalento()
         {
+            PoistaLentokaari();
             var kerrokset = KarttaKerrokset.Instanssi;
             if (kerrokset != null)
             {
@@ -811,6 +874,7 @@ namespace Matkakirja
             liike = null;
             kesken = null;
             Nosta(0);
+            PoistaLentokaari();
             if (Vaihe != LennonVaihe.Ei) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
