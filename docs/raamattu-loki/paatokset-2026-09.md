@@ -5383,3 +5383,7 @@ Uudet id:t: Julkaisija local_22b29f10-7af8-43fc-a974-1d666f716c97; Natiiviseppä
 ## KAIKKI 10 ROOLISESSIOTA KUITTASIVAT ALOITUSVIESTIN klo 12.5x; JUMI: KARTTASEPAN Z9-SYNKKAUS KUOLI PYSAYTYKSESSA (AMPARISSA x <= ~170/512) → KARTTASEPPA JATKAA SYNCIA TAUSTALLA JA ILMOITTAA NATIIVISEPALLE + SIIRTOSEPALLE; POHJA-25-MERGE JA OFFLINE-Z9 ODOTTAVAT (25.9.2026 klo 12.55)
 
 Työn alla: Julkaisija jonon 1–3 (1.39-ilmoitus, sisältöjuna, tuntihaku :17); Natiiviseppä RasterinLaatikko + avauskaaro-11 + maapilleri-41 junaan; Pelikoodari löydös 61 + D17 iPad11:llä Julkaisijan vuorolla; Natiivi-UI rivit 11 ja 41; Linssiseppä kierros 3 kun 41/11/40 junassa; Siirtoseppä 1.39 tuotantoon + #3155; Sisältökirjuri erä 3; Laitetestaaja odottaa junaa d76c9669+ iPad-kierrokseen; Postivahti tilataulu päivitetty, kiintiöt 5 %/2 %.
+
+## OMISTAJA klo 12.5x (SITOVA, RAAMATTUUN): SESSIOIDEN LUONTI ILMAN OMISTAJAA — JOS ROOLISESSIOITA EI OLE, FABLE LUO NE ITSE OHJAAMALLA CLAUDE-APPIA (osascript + screencapture) MYOS JATKOSSA; TYONKULKU KIRJATTU RAAMATUN YDINAJATUS KOHTAAN 2 HUOLTOKOMENTOJEN PERAAN (25.9.2026 klo 12.59)
+
+Kaava: File > New Session → Open Folder… → '/' + loppupolku erillisenä keystrokena → Avaa → Trust workspace Tab+Return → malli 1/3 → aloitusviesti yhdellä rivillä → list_sessions + set_session_title → id:t lokiin ja Postivahdille. Sallinnat Fablen settings.local.json:ssa. Todennettu 25.9. klo 12.4x–12.5x (10 sessiota).
