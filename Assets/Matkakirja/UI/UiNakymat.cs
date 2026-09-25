@@ -206,11 +206,11 @@ namespace Matkakirja.Natiivi
             Traileri = new Saapumistraileri(kerros);
             // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
             // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
-            Pulu.Napautus += () =>
+            Pulu.Napautus += Chat.Vaihda;
+            Pulu.NapautusEstetty = () =>
             {
                 var l = Linssit;
-                if (!Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId && !l.Astronautti.Kuva.Auki) return;
-                Chat.Vaihda();
+                return !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId && !l.Astronautti.Kuva.Auki;
             };
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);

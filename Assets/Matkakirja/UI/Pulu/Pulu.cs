@@ -549,8 +549,15 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// Napautus ei tee mitään (web pollo.js avaa → linssiEstaaChatin return): astronautin pallonäkymä, jossa
+        /// kaupungin piilotettu repliikki ei kuulu avaruuteen (löydös 96). UiNakymat asettaa.
+        /// </summary>
+        public Func<bool> NapautusEstetty;
+
         void Napautettu()
         {
+            if (NapautusEstetty?.Invoke() == true) return;
             viimeToimi = Aika;
             if (nukkuu) { nukkuu = false; Toista("wake"); }
             if (NaytaPiilotettu()) return;
