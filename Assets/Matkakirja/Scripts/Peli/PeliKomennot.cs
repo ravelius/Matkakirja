@@ -272,6 +272,7 @@ namespace Matkakirja.Natiivi
                     // Kehyksen CPU-hinta (Kartta/CpuMittari.cs): cpu lista | cpu mittaa [s] [suodatin|kaikki] | cpu tila
                     if (A(1) == "lista") return "=" + CpuMittari.Lista();
                     if (A(1) == "tila") return "=" + CpuMittari.Tila;
+                    if (A(1) == "profiler") return "=" + CpuMittari.Profiloi(A(2) != "pois");
                     if (A(1) == "mittaa") return CpuMittari.Mittaa(float.TryParse(A(2), out var cs) ? cs : 10f, A(3));
                     return "cpu lista | cpu mittaa [s] [suodatin|kaikki] | cpu tila";
                 case "ruutu":

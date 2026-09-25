@@ -56,6 +56,18 @@ namespace Matkakirja
             return ajat;
         }
 
+        /// <summary>
+        /// Profiler päälle (Development-käännös): moottori luo skriptien kutsumerkit ("Luokka.Update() [Invoke]") vasta, kun
+        /// profilointi on käynnissä. Data puskuroidaan muistiin (ei tiedostoa, ei yhteyttä).
+        /// </summary>
+        public static string Profiloi(bool paalle)
+        {
+            if (!Debug.isDebugBuild) return "vain Development-käännöksessä";
+            UnityEngine.Profiling.Profiler.maxUsedMemory = 64 * 1024 * 1024;
+            UnityEngine.Profiling.Profiler.enabled = paalle;
+            return "profiler " + (UnityEngine.Profiling.Profiler.enabled ? "päällä" : "pois");
+        }
+
         public static string Lista()
         {
             var ajat = Aikamerkit(out var k);
