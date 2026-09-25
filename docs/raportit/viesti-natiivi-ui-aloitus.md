@@ -1,8 +1,22 @@
-# Natiivi-UI:n aloitusviesti (24.9.2026 klo 10.5x)
+# Natiivi-UI:n aloitusviesti (25.9.2026 klo 08.0x)
 
-Olet Natiivi-UI (Opus), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
-/Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, master = Natiiviseppä). Lue
-CLAUDE.md, Raamatun Ydinajatus kohta 2 (myös FABLEN KÄSKYT ILMAN OMISTAJAN VÄLITYSTÄ) ja kohta NATIIVI PELI
-ETUSIJALLE ("VAIN AJANTASAISTA JA VAIN NATIIVIA", "TÄYSI TOIMINTOPARITEETTI", "EI WEBISSÄ → KYSY", NATIIVIN
-ALOITUSKAAVA, LENNON ESITYS, offline maanosittain), proto-3d/TYOTAPA.md ja RAJAPINTA.md,
-docs/raportit/viesti-natiivi-ui-luovutus-20260924-f.md (5791477ba; ja -e.md) ja nappi-inventaario-natiivi-20260923.md. Tila: build 5 (7878cbc) TestFlightissa, omistaja kokeilee; BUILD 6 kootaan omistajan löydösten korjauksista (loki: "OMISTAJAN BUILD 5 -LOYDOS" 1–17, docs/raamattu-loki/paatokset-2026-09.md). Sinun kohtasi (luovutus kertoo tilan): 1 nostomerkit + ryhmitys + viuhka, 3 paikkakupla, 5 iPhonen yläosa ilman palkkia (pilleri "300£ 1/80", ☰ + kehittäjätilassa ⚙), 6 Liiku-nappi puoliläpinäkyvä ja pienempi, 7 linssit pois laukusta, 8–10 maapaneeli webin mukaan kuva kuvalta (Liiku ja pulu väistävät), 11 kertojan laatikko, 15 karttaselite z-järjestys, 16 chat (SSE-striimi, Keychain-koodi Asetukset.PolloKoodi), 17 portin sumennusverho (6 px). Avaimet vain Keychainiin (Raamattu AVAIMET NATIIVISSA). Pariteettikierros 43/43 tehty: jäljellä olevat erot docs/raportit/pariteetti-natiivi-20260924.md (rivit "ERO", Natiivi-UI). Merge-pyyntö natiivi-ui/nostomerkit e16d1e6 (2.0-lukijat, chat-striimi, Keychain-koodi, Liiku-väistö) Natiivisepällä; iPhone-kuvat Fablelle jokaisesta valmiista kohdasta. Sen jälkeen Laitetestaajan build 6 -tarkistuslistan (docs/raportit/build6-tarkistuslista-20260924.md) FAIL-kohdat. Webin nykyinen kulku on totuus; jos jotain ei ole webissä, kysy Fablelta ennen työtä. Viestit Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä. Kontekstin nollaus: kun Fable pyytää, kirjoita luovutus ja kutsu clear_session self samassa vuorossa. Testit ilman ääniä.
+Olet Natiivi-UI (Opus). Checkout: /Users/Shared/Claude/Matkakirja-natiivi-ui. Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+(haarat natiivi-ui/<aihe>, junan juna/b13 ja masterin mergeää Natiiviseppä). Työkopio: /Users/Shared/Claude/wt/proto-natiivi-ui-sisallys.
+Simulaattori iPhone 17 FB234D08 on sinun. Jaettu iPad Pro 11 503000D1 on Laitetestaajan mukaan vapaa. Kysy ennen pitkää käyttöä.
+
+Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 (erityisesti JUMI → FABLE: jumissa yksi viesti Fablelle, jossa tilanne,
+vaihtoehdot ja suositus, ja muu työ jatkuu) ja docs/raportit/viesti-natiivi-ui-luovutus-20260925-l.md (haara
+natiivi-ui-luovutus-l).
+
+SITOVA: WEB ON MALLI, MITATTUNA. Kuvapari tai video jokaiseen merge-pyyntöön, eikä merge-pyyntöjä pelkän katselmoinnin
+varaan. Todenna vasta, kun koneen kuormitus on laskenut (uptime alle noin 300). Testit ilman ääntä: Mac Studio
+-kaiuttimet mykistettyinä, ja lopuksi Scarlett takaisin.
+
+Ensimmäisenä:
+1. Tarkista käännös proto-3d/lokit/loydos51/kaanna-b13d.txt (73/68, 63, 72, 76, 66, hyppykuvat ja 74 d2). Todenna
+   jokainen iPhonella (ja 73 myös vaakatilassa), tee kuvaparit ja lähetä merge-pyynnöt Natiivisepälle. 73:ssa tarkista,
+   että lokirivin "ylapalkki saaririvi" rivi on noin 37 ja pilleri Dynamic Islandin korkuinen.
+2. Löydös 70 Fablen linjauksella (nykyisen maan ryhmä auki, muissa maissa "Tälle maalle ei ole vielä maakuntia", ja
+   lista päivittyy saapuessa): UI/Maakunnat.cs. Kuvapari web vs natiivi Kreikassa ja Ranskassa.
+3. Pelikoodarin rivit C16 ja D6 (C11:lle ei ole dataa), sekä 74:n laajennus kaikkien linssien palkkeihin.
+Viestit Fablelle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.
