@@ -5419,3 +5419,7 @@ Aiemmat TestFlight-buildit ovat voineet saada vanhan pallon; build 13 on ensimma
 ## coreaudiod JUMISSA (150–200 %, RSS 1,1 → 9,9 Gt YHDELLA SIMULAATTORILLA) — OMISTAJA IRROTTI AirPods-YHDISTELMALAITTEEN JA AF16Rigin (EI AUTTANUT), FABLE AJOI sudo killall coreaudiod klo 13.25 → RSS 87 Mt, CPU 0 %; OPPI: HUOLTOKOMENTO AJETAAN SANATARKASTI YKSIN (sudo -n … && … MENI LUOKITTIMELLE) (25.9.2026 klo 13.26)
 
 Jäljellä äänilaitteet Mac Studio -kaiuttimet (oletus) ja Scarlett Solo. Jos kuorma kasvaa uudelleen tunnin sisällä, syy on simulaattorin AudioListener-äänivirta, ei laitteet.
+
+## CODEXIN POSTI 254098189: GALLERIAN NAKYVYYS — js/maalehti.js LUKEE galleria-KENTAN VAIN NOSTOSTA, JOLLA ON PAAKUVA; PR #3163 KORJAA ROBINSON CRUSOEN JA PUERTO MONTTIN, 28 MUUTA KAUPUNKIKATEGORIAA JUURITASON GALLERIALLA EI NAY → FABLE: KORJAUS DATASSA SAMALLA KAAVALLA (SISALTOKIRJURI, YKSI PR #3163:N JALKEEN + GALLERIATESTIIN TARKISTUS), EI KOODIMUUTOSTA WEBIIN (WEB-KEHITYS TAUOLLA); SISALTOKIRJURI KUITTAA CODEXILLE (25.9.2026 klo 13.28)
+
+Peruste: natiivi ja web lukevat saman sisältöpaketin nostorakenteen; juuritason galleria on datavirhe, ei piirron puute.
