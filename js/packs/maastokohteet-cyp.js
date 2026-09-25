@@ -213,6 +213,7 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'paphoksenmosaiikit',
+    nimio: 'Paphos',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-paphoksenmosaiikit-1a3f75af.jpg',
       lyhyt: 'Narkissos-mosaiikki Paphoksen Dionysoksen talossa.',

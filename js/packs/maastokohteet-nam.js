@@ -182,6 +182,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'fish-riverin-kanjoni',
     nimi: 'Fish Riverin kanjoni',
+    nimio: 'Fish River',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka syvä kanjoni on?',

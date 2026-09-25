@@ -947,6 +947,7 @@ export const ELAINTAKYT = {
     lat: 58.8,
   },
   ARG: {
+    nimio: 'Pingviini',
     elain: 'magellaninpingviini',
     otsikko: 'Ääni tuntee puolison',
     teksti: 'Magellaninpingviini kaivaa pesäkolonsa pensaan alle Patagonian rannikolle, ja Punta Tombo on lajin suurimpia yhdyskuntia. Pari pysyy samana vuodesta toiseen: koiras ottaa vanhan kolonsa haltuun ja odottaa, ja naaras tunnistaa kumppaninsa pelkästä äänestä. Kaksi munaa haudotaan vuorotellen 10–15 päivän vahdeissa, kun toinen käy merellä syömässä. Pesimäkauden jälkeen linnut vaeltavat pohjoiseen Perun ja Brasilian vesille; nimensä laji sai Magalhãesilta, joka näki sen vuonna 1520.',
@@ -1222,6 +1223,7 @@ export const ELAINTAKYT = {
     lat: -14.0,
   },
   COL: {
+    nimio: 'Myrkkysammakko',
     elain: 'kultamyrkkysammakko',
     otsikko: 'Yksi milligramma, kymmenen ihmistä',
     teksti: 'Kultamyrkkysammakko elää vain Kolumbian Tyynenmeren puoleisissa '
@@ -1371,6 +1373,7 @@ export const ELAINTAKYT = {
     lat: -1.5,
   },
   LKA: {
+    nimio: 'Leopardi',
     elain: 'sri lankan leopardi',
     otsikko: 'Saaren ainoa huippupeto',
     teksti: 'Sri Lankan leopardi on saarella elävä leopardin alalaji, jonka kuvaili 1956 srilankalainen eläintieteilijä Paulus Edward Pieris Deraniyagala. Turkki on kellanruskea tai ruosteenkeltainen, ja täplät ovat tiheässä ruusukkeina. Koska leopardi on saaren huippupeto eikä sillä ole kilpailijaa, alalaji on kehittynyt kookkaaksi: yksitoista mitattua urosta painoi keskimäärin 56 kiloa ja suurin 77. Lajia tavataan kaikissa saaren elinympäristöissä aavikkovyöhykkeeltä sademetsään, ja keskiylängöllä se on kirjattu myös teeviljelmiltä, männiköistä ja kotipuutarhoista. Vuodesta 2020 se on ollut vaarantunut: aikuisia yksilöitä arvioidaan olevan alle 800.',
@@ -1447,6 +1450,7 @@ export const ELAINTAKYT = {
     lat: 27.5,
   },
   AGO: {
+    nimio: 'Palanca negra',
     elain: 'jättiläisseeprantilooppi',
     otsikko: 'Antilooppi, joka löydettiin kahdesti',
     teksti: 'Jättiläisseeprantilooppi on vain Angolan keskiylängöllä elävä seeprantiloopin alalaji, jonka kuvaili 1916 brittiläinen eläintieteilijä Oldfield Thomas. Nimen lisäosa variani muistaa Frank Variania, Benguelan rataa rakentanutta insinööriä, joka toi eläimen tieteen tietoon. Nimi jättiläinen viittaa sonnin sarviin, jotka ovat kaikista seeprantiloopeista pisimmät: usein yli 129 senttiä ja pisimmillään mitattuna 165. Aikuinen sonni on kiiltävän musta ja painaa noin 240 kiloa, lehmät jäävät ruskeiksi kuten vasat. Laji katosi sisällissodan vuosiksi ja löydettiin uudelleen, mutta kaikki kuvatut yksilöt olivat naaraita; 2009 sonni paikannettiin ulostenäytteiden DNA:n avulla Luandon luonnonpuistosta ja siirrettiin helikopterilla Cangandalan aitaukseen. Kanta on äärimmäisen uhanalainen: vuonna 2026 yksilöitä arvioidaan olevan noin 310 kahdeksassa laumassa.',
@@ -1767,6 +1771,7 @@ export const ELAINTAKYT = {
     lat: 30.85,
   },
   IRQ: {
+    nimio: 'Ruokokerttunen',
     elain: 'basranruokokerttunen',
     otsikko: 'Kerttunen, joka menetti kotisuonsa',
     teksti: 'Basranruokokerttunen on kerttusiin kuuluva pikkulintu, joka pesii lähes yksinomaan Tigriin ja Eufratin jokijärjestelmässä: Lounais-Iranissa, Itä- ja Etelä-Irakissa sekä Kuwaitissa, ja viime aikoina se on levittäytynyt myös Israelin kosteikoille. Se pesii laajoissa papyrus- ja ruovikoissa ja viihtyy matalan makean tai murtoveden äärellä tiheässä ruovikossa. Lajin erottaa helposti sekoittuvasta rastaskerttusesta pienemmästä koosta, valkoisemmasta alapuolesta ja kapeammasta, pidemmästä ja terävämmästä nokasta; ääni on karhea chaar, syvempi kuin rytikerttusen. Lintu on muuttaja ja talvehtii Itä-Afrikassa, Euroopassa se on hyvin harvinainen harhailija. Kun Mesopotamian suot kuivattiin 1980- ja 1990-luvuilla ja lajin oma elinympäristö tuhoutui lähes kokonaan, siitä tuli erittäin uhanalainen.',
@@ -2013,6 +2018,7 @@ export const ELAINTAKYT = {
    * se ilmestyy kortille ilman koodimuutosta.
    */
   GHA: {
+    nimio: 'Kalliovaris',
     elain: 'valkokaulakalliovaris',
     otsikko: 'Lintu, jonka luultiin kadonneen Ghanasta',
     teksti: 'Valkokaulakalliovaris on keskikokoinen varpuslintu, jota tavataan vain Länsi-Afrikan kallioisissa metsissä Guineasta Ghanaan. Sen pää on lähes höyhenetön: paljas iho on kirkkaan keltainen, ja silmien takana on kaksi suurta pyöreää mustaa laikkua. Yläpuoli on harmaanmusta, alapuoli valkoinen, ja poikkeuksellisen pitkä tummanruskea pyrstö toimii tasapainottajana. Lintu ei juuri lennä pitkiä matkoja vaan liikkuu metsässä hyppien ja loikkien tai lyhyin lennoin matalassa kasvillisuudessa. Se syö hyönteisiä ja seuraa toisinaan ajajamuurahaisten parvia napaten niiden säikyttämiä otuksia; poikasille vanhemmat kantavat pieniä sammakoita. Pesä on syvä savikuppi, joka muurataan kallionpintaan tavallisesti luolassa, ja munia on kaksi kahdesti vuodessa. Ghanassa lajin luultiin kuolleen sukupuuttoon vuoteen 2003 asti, jolloin se löydettiin uudelleen maan eteläkeskiosasta.',
@@ -2060,6 +2066,7 @@ export const ELAINTAKYT = {
     lat: 5.6,
   },
   SLE: {
+    nimio: 'Simpanssi',
     elain: 'länsiafrikansimpanssi',
     otsikko: 'Länsiafrikansimpanssin oma kulttuuri',
     teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Senegalin Fongolissa tämän alalajin yhteisön on havaittu veistävän teräväkärkisiä keppejä ja metsästävän niillä galagoja — tapa on kuvattu juuri sieltä, ei koko alalajilta. Nämä simpanssit käyttävät myös luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
@@ -2257,6 +2264,7 @@ export const ELAINTAKYT = {
     lat: -2,
   },
   PAN: {
+    nimio: 'Kultasammakko',
     elain: 'panamankultasammakko',
     otsikko: 'Sammakko, joka viittoo',
     teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnonkannat romahtivat chytridi-sienitaudin takia, ja viimeiset luonnonhavainnot ennen palautuskokeiluja ovat vuodelta 2009. Lajia kasvatetaan yli viidessäkymmenessä laitoksessa, ja helmikuussa 2026 Smithsonianin sammakkohanke ilmoitti ensimmäisistä kokeellisista luontoonpalautuksista — vakiintuneesta luonnonkannasta ei vielä voi puhua.',
@@ -2313,6 +2321,7 @@ export const ELAINTAKYT = {
     lat: -32.5,
   },
   VEN: {
+    nimio: 'Muurahaiskarhu',
     elain: 'jättimuurahaiskarhu',
     otsikko: 'Kieli, joka käy ulkona kolmesti sekunnissa',
     teksti: 'Jättimuurahaiskarhu on Keski- ja Etelä-Amerikan hyönteissyöjänisäkäs ja neljästä elävästä muurahaiskarhulajista suurin. Toisin kuin sukulaisensa ja laiskiaiset se elää lähes kokonaan maassa. Kokonaispituus on 182–217 senttimetriä, urokset painavat 33–50 ja naaraat 27–47 kilogrammaa. Pää on 30 senttimetriä pitkä ja lieriömäinen kuono vie siitä suurimman osan; näkö on heikko, mutta hajuaisti on noin neljäkymmentä kertaa ihmisen hajuaistia tarkempi. Hampaita ei ole lainkaan, ja noin 60 senttimetrin kieli on kiinnitetty omalla lihaksellaan suoraan rintalastaan; ojennettuna se ulottuu 45 senttimetriä ja liikkuu edestakaisin noin 160 kertaa minuutissa eli lähes kolmesti sekunnissa. Eläin etsii saaliinsa hajun perusteella, repii pesän auki etukynsillään ja kerää muurahaiset ja termiitit tahmealle kielelleen: se käy päivässä jopa kahdessasadassa pesässä, kussakin enintään minuutin, ja syö noin 35 000 hyönteistä. Emo kantaa poikastaan selässään vieroitukseen asti. Kansainvälinen luonnonsuojeluliitto luokittelee lajin vaarantuneeksi.',

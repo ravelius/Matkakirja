@@ -162,6 +162,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'sterkfonteinin-luolat',
     nimi: 'Sterkfonteinin luolat',
+    nimio: 'Sterkfontein',
     tyyppi: 'historia',
     kysymykset: [
       'Kuka oli rouva Ples?',
@@ -315,6 +316,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'vredefortin-kraatteri',
     nimi: 'Vredefortin kraatteri',
+    nimio: 'Vredefort',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka suuri kraatteri oli syntyessään?',

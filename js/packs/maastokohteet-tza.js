@@ -178,6 +178,7 @@ export const MAASTOKOHTEET_TZA = [
   {
     id: 'kondoa',
     nimi: 'Kondoan kalliotaide',
+    nimio: 'Kondoa',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka maalasi Kondoan kuvat?',

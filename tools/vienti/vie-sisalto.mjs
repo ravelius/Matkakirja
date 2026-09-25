@@ -181,8 +181,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
  *   1.39 karttavalot.ankkuri (webin lukittu ankkuri, js/packs/nostoankkurit-<iso>.js) ja
  *        karttavalot.puoli (nimiön poltettu kylki) — Natiivi-UI, löydös 50 C.
+ *   1.40 monumentit.nimio (kartan nimiö, kun nimi ei mahdu 18 merkkiin; web: kohteenKarttanimi =
+ *        nimio ?? nimi) — Sisältökirjurin nimiöt #3162, löydös b13 iPad 3. Karttavalojen nimio
+ *        oli jo kentässä, vain arvot lyhenivät.
  */
-export const SKEEMAVERSIO_TARKKA = '1.39';
+export const SKEEMAVERSIO_TARKKA = '1.40';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

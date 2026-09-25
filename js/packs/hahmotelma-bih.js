@@ -602,6 +602,7 @@ export const HAHMOTELMA_BIH = [
   },
   {
     id: 'hahmotelma-gradacac',
+    nimio: 'Gradačac',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bih-nosto-hahmotelma-gradacac-79c1a7c8.jpg',
       lyhyt: 'Husein-kapetan Gradaščevićin vartiotorni Gradačacin linnoituksessa.',
@@ -767,6 +768,7 @@ export const HAHMOTELMA_BIH = [
   },
   {
     id: 'hahmotelma-kozara',
+    nimio: 'Kozara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bih-nosto-hahmotelma-kozara-575961ac.jpg',
       lyhyt: 'Kozaran kansallispuiston lehtimetsää kesäisin.',

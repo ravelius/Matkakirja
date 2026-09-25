@@ -170,6 +170,7 @@ export const MAASTOKOHTEET_IND = [
   {
     id: 'konark',
     nimi: 'Konarkin aurinkotemppeli',
+    nimio: 'Konark',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Minkä muotoiseksi temppeli rakennettiin?',
@@ -223,6 +224,7 @@ export const MAASTOKOHTEET_IND = [
   {
     id: 'darjeelingin-vuoristorata',
     nimi: 'Darjeelingin vuoristorata',
+    nimio: 'Darjeeling',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miten rata nousee vuorelle ilman hammastankoa?',
