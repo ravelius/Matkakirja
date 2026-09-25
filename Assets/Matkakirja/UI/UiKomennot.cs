@@ -947,6 +947,12 @@ namespace Matkakirja.Natiivi
                 if (osat.Count > 1 && osat[1] == "nollaa") LivianAvaus.NollaaLippu();
                 return LivianAvaus.Nayta() ? null : LivianAvaus.Kaynnissa ? "avaus jo käynnissä" : "avaus jo nähty (ui livia avaus nollaa)";
             }
+            // C16: ui livia paljastus nollaa → seuraava aloituslento näyttää tuurauspaljastuksen uudelleen.
+            if (osat.Count > 0 && osat[0] == "paljastus")
+            {
+                if (osat.Count > 1 && osat[1] == "nollaa") { LivianPaljastus.NollaaLippu(); return null; }
+                return "paljastus " + (LivianPaljastus.Nahty ? "nähty" : "näkemättä") + (LivianPaljastus.Kesken ? ", kesken" : "");
+            }
             if (osat.Count > 0 && osat[0] == "pois")
             {
                 liviaKehys?.RemoveFromHierarchy();

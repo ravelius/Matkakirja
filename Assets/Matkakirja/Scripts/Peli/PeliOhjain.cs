@@ -813,6 +813,7 @@ namespace Matkakirja.Natiivi
             if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
+            PeruLykkays();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
             // SoitaIntro); valintaan siirtyminen ohittaa sen, ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
@@ -1388,6 +1389,8 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = null;
             // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
             if (kaupunki != null) LuentoOhitettu = false;
+            // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
+            AsetaLykkays(kaupunki, aloituslento);
             // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
             siirtoLahto = null;
             PaivitaMatkareitit();
@@ -1461,6 +1464,7 @@ namespace Matkakirja.Natiivi
             Kartalle(false);
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
+            if (l != null && LykkaaLuento(kaupunki, l)) return;
             if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
