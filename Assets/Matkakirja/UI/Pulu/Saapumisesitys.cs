@@ -319,6 +319,9 @@ namespace Matkakirja.Natiivi
             luentoOdotus?.Pause();
             Aanet.Pysayta(AaniKanava.Puhe);
             pulu.Kuplat.TyhjennaKaikki();
+            // Luennan kuvapakka ei jää seuraavan paikan päälle (Pelikoodarin havainto c535aea: maailmahypyssä Ateenan
+            // kuva jäi Lontoon trailerin alle ja sen jälkeen): kuvat lentävät vielä tämän paikan matkakirjaan.
+            kortti.Kuvat.Tyhjenna(true);
         }
 
         void Kommentti(Saapumisvirta v, int i)
