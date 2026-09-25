@@ -439,7 +439,9 @@ namespace Matkakirja
                         case "sumennus" when o.Length > 2: Etusivulento.Sumea = o[2] != "pois"; break;
                     }
                     var lento = kierto.GetComponent<Etusivulento>();
-                    Debug.Log(lento != null ? lento.Tila() : $"MATKAKIRJA etusivu: t {kierto.PorttiAika:0.000} s (kerros luodaan portissa)");
+                    // Tila kirjataan vasta tämän kehyksen projektion jälkeen (Etusivulento.LateUpdate).
+                    if (lento != null) lento.KirjaaTila = true;
+                    else Debug.Log($"MATKAKIRJA etusivu: t {kierto.PorttiAika:0.000} s (kerros luodaan portissa)");
                     break;
                 }
                 case "kerros":

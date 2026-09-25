@@ -103,9 +103,6 @@ namespace Matkakirja
         // KAMERA SEURAA ETUSIVUN LENTOA (löydös 112): ennen tasainen kierto 360° / 49,6 s leveydellä 25° ja
         // Lontoosta alkaen (porttiNopeus, porttiLeveys, porttiPituus); nyt pituus ja leveys ovat webin kameranNakyma
         // (EtusivunLento.KameranNakyma: koneen silotettu paikka ±3,4 s, leveys 0,62 × rajattuna 2–38°).
-        [Tooltip("Web KIEKON_YLITYS: pallon kiekon säde / etäisyys ruudun keskeltä nurkkaan. 1,15 vie reunan " +
-                 "selvästi ruudun ulkopuolelle kaikilla kuvasuhteilla.")]
-        public double porttiYlitys = 1.15;
         [Tooltip("Web .start-gate backdrop-filter: blur(6px): Gaussin keskihajonta pisteinä.")]
         public float porttiSumennusPt = 6f;
         [Tooltip("Sumennuksen häivytys sisään ja ulos, sekunteja (web portin häipyminen 400 ms).")]
@@ -431,6 +428,10 @@ namespace Matkakirja
             // Editorissa URP-asetus on tiedosto: renderScale ei saa jäädä portin arvoon.
             sumennus?.Palauta();
             porttiTila = false; // uudelleen päälle: PaivitaPortti asettaa portin alusta
+            var kamera = GetComponent<Camera>();
+            if (linssiAsetettu && kamera != null) kamera.ResetProjectionMatrix();
+            linssiAsetettu = false;
+            porttiLinssi = 0f;
         }
 
         void Update()
@@ -453,6 +454,7 @@ namespace Matkakirja
             else if (!Seurataan) lennonSuuntima = false;
             if (Application.isPlaying) PaivitaMaasto();
             Aseta();
+            if (Application.isPlaying) PaivitaPorttiLinssi(Time.unscaledDeltaTime);
             var nakyma = new double4(pituus, leveys, korkeus, KaytettyKallistus + suuntima * 1000.0);
             if (!nakyma.Equals(edellinenNakyma)) { edellinenNakyma = nakyma; NakymaMuuttui?.Invoke(); }
             bool lepo = !Liikkeessa && !Peitetty;
@@ -554,19 +556,46 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Portin korkeus (web pallonSovitus, KIEKON_YLITYS): pallon kiekon säde on <see cref="porttiYlitys"/> ×
-        /// etäisyys ruudun keskeltä nurkkaan, joten reuna ei näy millään kuvasuhteella. Kiekon kulmasäde α
-        /// (sin α = r / etäisyys keskipisteestä) näkyy ruudulla säteellä tan α / tan(fov/2) puolikorkeutta;
-        /// nurkka on √(1 + aspect²) puolikorkeuden päässä. iPad pysty: α 33,8°, korkeus 5 100 km.
+        /// Portin korkeus = webin ETUSIVUN_KAMERA.korkeus 1,55 pallon sädettä (D = 2,55), jotta perspektiivi on sama kuin
+        /// webin videossa. Kuvan koko ja kiekon paikka tulevat projektiosta (<see cref="PaivitaPorttiLinssi"/>, web
+        /// pallonSovitus: kiekko 1,15 × nurkkaetäisyys). Ennen löydöstä 112 korkeus sovitti kiekon fov 50°:lla (D ≈ 1,97),
+        /// jolloin reitin pohjoinen osa kulki 50–75 pt webiä ylempänä.
         /// </summary>
-        public double PorttiKorkeus()
+        public double PorttiKorkeus() => EtusivunLento.KameranKorkeus * CesiumWgs84Ellipsoid.GetMaximumRadius();
+
+        float porttiLinssi;
+        bool linssiAsetettu;
+
+        /// <summary>
+        /// PORTIN LINSSI (löydös 112): webin etusivupallo on video, joka on zoomattu (cover × lisays) ja keskitetty
+        /// .intro-paneeliin — sama kuva syntyy kamerasta D = 2,55, jonka pystykulma on 2·atan(ruudun korkeus / 2F) ja
+        /// kuvakeskipiste siirretty kiekon keskelle (EtusivunLento.RuudulleSovitus; iPhone 393 × 852: fov 39,9°,
+        /// keskipiste 25 pt alempana). Vain projektiomatriisi vaihtuu: fieldOfView pysyy 50°:ssa kaikille lukijoille.
+        /// Portista poistuttaessa linssi liukuu takaisin <see cref="porttiHaivytysS"/>:ssa (sumennuksen kanssa), sitten
+        /// ResetProjectionMatrix. Lähi- ja kaukoraja luetaan joka kehys (Aseta).
+        /// </summary>
+        void PaivitaPorttiLinssi(double dt)
         {
             var kamera = GetComponent<Camera>();
-            double tanPysty = math.tan(math.radians(kamera != null ? kamera.fieldOfView : 50.0) / 2.0);
-            double aspect = kamera != null ? kamera.aspect : 1.0;
-            double tanKiekko = porttiYlitys * math.sqrt(1.0 + aspect * aspect) * tanPysty;
-            double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
-            return r / math.sin(math.atan(tanKiekko)) - r;
+            if (kamera == null) return;
+            porttiLinssi = Mathf.MoveTowards(porttiLinssi, porttiTila ? 1f : 0f, (float)dt / Mathf.Max(0.01f, porttiHaivytysS));
+            if (porttiLinssi <= 0f)
+            {
+                if (linssiAsetettu) { kamera.ResetProjectionMatrix(); linssiAsetettu = false; }
+                return;
+            }
+            float kerroin = Pistekerroin;
+            double lev = kamera.pixelWidth / kerroin, kork = kamera.pixelHeight / kerroin;
+            if (lev <= 0 || kork <= 0) return;
+            var sov = EtusivunLento.RuudulleSovitus(lev, kork);
+            float osuus = Mathf.SmoothStep(0f, 1f, porttiLinssi);
+            float fovWeb = (float)(2.0 * math.degrees(math.atan(kork / 2.0 / sov.F)));
+            var p = Matrix4x4.Perspective(Mathf.Lerp(kamera.fieldOfView, fovWeb, osuus), kamera.aspect, kamera.nearClipPlane, kamera.farClipPlane);
+            // Kuvakeskipisteen siirto (lens shift): x_ndc − m02, y_ndc − m12; ruudun y alas = NDC:n y alas.
+            p[0, 2] = -2f * (float)((sov.Cx - lev / 2.0) / lev) * osuus;
+            p[1, 2] = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
+            kamera.projectionMatrix = p;
+            linssiAsetettu = true;
         }
 
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>

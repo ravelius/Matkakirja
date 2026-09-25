@@ -47,6 +47,9 @@ namespace Matkakirja
 
         public PalloKierto kierto;
 
+        /// <summary>Testikomento: tila lokiin tämän kehyksen projektion jälkeen (ei edellisen kehyksen arvoja).</summary>
+        public bool KirjaaTila { get; set; }
+
         UIDocument doc;
         VisualElement kerros, viivaEl, koneEl;
         readonly List<EtusivunLento.Piste> jalki = new List<EtusivunLento.Piste>();
@@ -120,10 +123,11 @@ namespace Matkakirja
             var viivalle = new List<FilterFunction>();
             if (sumennus > 0f) viivalle.Add(Blur());
             viivalle.Add(ryhmapeitto);
-            viivaEl.style.filter = new StyleList<FilterFunction>(viivalle);
-            koneEl.style.filter = sumennus > 0f
-                ? new StyleList<FilterFunction>(new List<FilterFunction> { Blur() })
-                : new StyleList<FilterFunction>(StyleKeyword.None);
+            viivaEl.style.filter = viivalle;
+            // Ei StyleKeyword.Nonea: UI Toolkit (6.3) kaatuu siihen RenderTreeCompositorissa ("Filter IEnumerable is
+            // not a List<FilterFunction>", Natiiviseppä 25.9. simulaattorissa). Null = ei omaa suodinta.
+            if (sumennus > 0f) koneEl.style.filter = new List<FilterFunction> { Blur() };
+            else koneEl.style.filter = StyleKeyword.Null;
         }
 
         void LateUpdate()
@@ -135,6 +139,7 @@ namespace Matkakirja
             if (peitto <= 0f)
             {
                 if (kerros != null && kerros.style.display != DisplayStyle.None) kerros.style.display = DisplayStyle.None;
+                if (KirjaaTila) { KirjaaTila = false; Debug.Log(Tila()); }
                 return;
             }
             if (doc == null) Luo();
@@ -158,6 +163,7 @@ namespace Matkakirja
             Projisoi(paneeli, t);
             viivaEl.MarkDirtyRepaint();
             koneEl.MarkDirtyRepaint();
+            if (KirjaaTila) { KirjaaTila = false; Debug.Log(Tila()); }
         }
 
         void Projisoi(IPanel paneeli, double t)

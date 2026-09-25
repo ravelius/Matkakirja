@@ -124,5 +124,50 @@ namespace Matkakirja.Kartta.Testit
                 }
             Oleta.Tosi(minX == -15 && maxX == 14 && minY == -9 && maxY == 9, "koneen polun rajat");
         }
+
+        // Webin koneen paikka ruudulla (pt, viewport) Nodella: pallonSovitus(.intro-paneeli mitattuna) +
+        // videostaRuudulle(pallonPiste(koneenTila, kameranNakyma)). Kotelo iPhone 376,6 × 785,0 @ (8,2, 58,8),
+        // iPad 812,8 × 1121,1 @ (10,6, 62,3); lasku 0 kummallakin.
+        static readonly (double T, double X, double Y)[] WebIphone =
+        {
+            (10, 209.6, 350.2), (17.833, 208.9, 527.4), (22, 165.0, 314.9), (26, 173.4, 265.9),
+            (30, 191.9, 199.9), (36, 193.6, 271.2), (42, 177.8, 218.4), (47.5, 263.6, 207.5),
+        };
+        static readonly (double T, double X, double Y)[] WebIpad =
+        {
+            (10, 437.8, 462.1), (17.833, 436.8, 743.9), (22, 366.9, 406.0), (26, 380.2, 328.1),
+            (30, 409.7, 223.1), (36, 412.3, 336.5), (42, 387.2, 252.4), (47.5, 523.7, 235.2),
+        };
+
+        [Testi]
+        static void KoneRuudullaKuinWeb()
+        {
+            Lahella(346.6, EtusivunLento.KoneenYlin, 0.1, "koneen ylin (web 346,6 px)");
+            Lahella(639.9, EtusivunLento.KiekonSade, 0.1, "kiekon säde (web 639,9 px)");
+            foreach (var (nimi, lev, kork, taulu) in new[] { ("iPhone", 393.0, 852.0, WebIphone), ("iPad", 834.0, 1194.0, WebIpad) })
+            {
+                var s = EtusivunLento.RuudulleSovitus(lev, kork);
+                Lahella(0, s.Lasku, 1e-9, nimi + " lasku");
+                foreach (var w in taulu)
+                {
+                    var k = EtusivunLento.KoneenTila(w.T);
+                    var r = s.Ruudulle(EtusivunLento.PallonPiste(new EtusivunLento.Piste(k.Lat, k.Lon), EtusivunLento.KameranNakyma(w.T)));
+                    Lahella(w.X, r.X, 0.2, $"{nimi} t {w.T} x");
+                    Lahella(w.Y, r.Y, 0.2, $"{nimi} t {w.T} y");
+                }
+            }
+            // Mitattu videolaatikko: iPhone 938,9 pt (skaala 0,7824), iPad 1493,1 pt (1,2442).
+            Lahella(1200 * 0.78233, EtusivunLento.RuudulleSovitus(393, 852).F / (700 / Math.Tan(25 * Math.PI / 180)) * 1200, 0.5, "iPhone skaala");
+            Lahella(1200 * 1.24418, EtusivunLento.RuudulleSovitus(834, 1194).F / (700 / Math.Tan(25 * Math.PI / 180)) * 1200, 0.5, "iPad skaala");
+            // Vaakaruudulla kiekko laskee (web: matala ruutu), ja kiekko peittää aina ruudun nurkat.
+            var vaaka = EtusivunLento.RuudulleSovitus(874, 402);
+            Oleta.Tosi(vaaka.Lasku > 0, "vaaka lasku");
+            foreach (var (lev, kork) in new[] { (393.0, 852.0), (402.0, 874.0), (834.0, 1194.0), (1032.0, 1376.0), (874.0, 402.0), (1194.0, 834.0) })
+            {
+                var s = EtusivunLento.RuudulleSovitus(lev, kork);
+                double nurkka = Math.Sqrt(Math.Pow(Math.Max(s.Cx, lev - s.Cx), 2) + Math.Pow(Math.Max(s.Cy, kork - s.Cy), 2));
+                Oleta.Tosi(s.Sade >= nurkka - 1e-6, $"kiekko peittää nurkat {lev}×{kork}");
+            }
+        }
     }
 }

@@ -241,5 +241,91 @@ namespace Matkakirja
 
         /// <summary>Koneen suunta: web laskee sen projektiosta hetkillä t ja t + 0,12 s (etusivupallo.js 1264–1274; pidossa suunta jää ennalleen).</summary>
         public const double SuunnanEdellaS = 0.12;
+
+        // PALLON SOVITUS RUUDULLE (web pallonPiste 440–453, kiekonSade 528–535, koneenYlin 561–571, pallonSovitus
+        // 599–629). Webin pallo on video (kamera D = 2,55 sädettä, fov 50°, lava 1400, kuva 1200), joka skaalataan
+        // .intro-paneeliin niin, että kiekon säde on 1,15 × matka nurkkaan, ja kiekko laskee, jos koneen ylin kohta ei
+        // muuten mahdu 34 px paneelin yläreunan alle. Natiivin kamera jäljittelee tätä (PalloKierto.PaivitaPorttiLinssi):
+        // sama D, polttoväli F = f × skaala ja kiekon keskipiste (Cx, Cy) ruudulla. Ilman tätä (build 13, fov 50°,
+        // D ≈ 1,97) kone kulki 50–75 pt webiä ylempänä, otsikon ja vaalean verhon alla (Natiivisepän kuvat t 26–47,5).
+
+        /// <summary>Web ETUSIVUN_KAMERA.korkeus (pallon säteinä), videon fov, lava ja reunaehdot.</summary>
+        public const double KameranKorkeus = 1.55, VideonFov = 50.0, Lava = 1400.0, KiekonYlitys = 1.15, KoneenMarginaali = 34.0;
+
+        /// <summary>.intro-paneelin reunat ruudun reunoista (pt): vasen = oikea = ala, ylä (yläpalkki). iPhone / iPad.</summary>
+        const double ReunaPuhelin = 8.1875, ReunaTabletti = 10.59375, YlaPuhelin = 58.78125, YlaTabletti = 62.34375;
+
+        static double VideonF => Lava / 2 / Math.Tan(VideonFov * Rad / 2);
+
+        /// <summary>Pallon pinnan piste videokuvassa keskipisteestä (x oikealle, y ylös, videopikseleinä), web pallonPiste.</summary>
+        public static (double X, double Y, bool Nakyy) PallonPiste(Piste paikka, Piste kamera)
+        {
+            double D = 1 + KameranKorkeus;
+            var c = Suunta(kamera.Lat, kamera.Lon);
+            var p = Suunta(paikka.Lat, paikka.Lon);
+            // oikea = normi([0,1,0] × c), ylös = c × oikea
+            double ox = c.Z, oz = -c.X, on = Math.Sqrt(ox * ox + oz * oz);
+            if (on < 1e-12) on = 1;
+            var oikea = (ox / on, 0.0, oz / on);
+            var ylos = (c.Y * oikea.Item3 - c.Z * oikea.Item2, c.Z * oikea.Item1 - c.X * oikea.Item3, c.X * oikea.Item2 - c.Y * oikea.Item1);
+            double syvyys = D - Piste3(p, c);
+            return (VideonF * Piste3(p, oikea) / syvyys, VideonF * Piste3(p, ylos) / syvyys, Piste3(p, c) >= 1 / D);
+        }
+
+        /// <summary>Kiekon säde videopikseleinä (web kiekonSade): f · √(1 − 1/D²) / (D − 1/D).</summary>
+        public static double KiekonSade
+        {
+            get { double D = 1 + KameranKorkeus; return VideonF * Math.Sqrt(1 - 1 / (D * D)) / (D - 1 / D); }
+        }
+
+        static double ylin = -1;
+        /// <summary>Koneen ylin kohta videon keskeltä ylöspäin (web koneenYlin, 0,25 s:n askel; ≈ 346,6 px).</summary>
+        public static double KoneenYlin
+        {
+            get
+            {
+                if (ylin >= 0) return ylin;
+                double y = 0;
+                for (double t = 0; t <= Kesto; t += 0.25)
+                {
+                    var k = KoneenTila(t);
+                    y = Math.Max(y, PallonPiste(new Piste(k.Lat, k.Lon), KameranNakyma(t)).Y);
+                }
+                return ylin = y;
+            }
+        }
+
+        /// <summary>Pallon sovitus ruudulle pisteinä: polttoväli F, kiekon keskipiste (Cx, Cy) ylävasemmalta, säde.</summary>
+        public readonly struct Sovitus
+        {
+            public readonly double F, Cx, Cy, Sade, Lasku;
+            public Sovitus(double f, double cx, double cy, double sade, double lasku) { F = f; Cx = cx; Cy = cy; Sade = sade; Lasku = lasku; }
+            /// <summary>Videon piste (PallonPiste) ruudun pisteiksi (y alas).</summary>
+            public (double X, double Y) Ruudulle((double X, double Y, bool Nakyy) p) => (Cx + p.X * F / VideonF, Cy - p.Y * F / VideonF);
+        }
+
+        /// <summary>
+        /// Web pallonSovitus natiiviruudulle (lev × kork pt): kotelo = ruutu webin .intro-paneelin reunoin
+        /// (interpoloitu lyhyen sivun mukaan 393 → 834 pt), cover-skaala alarajana, kiekko 1,15 × nurkkaetäisyys ja
+        /// lasku koneen ylimmän kohdan mukaan. Lisäehto natiiville: kiekko peittää myös ruudun nurkat (paneelin
+        /// ulkopuolen yläpalkin kohdalla), jotta pallon reuna ei näy koko ruudun kamerakuvassa.
+        /// </summary>
+        public static Sovitus RuudulleSovitus(double lev, double kork)
+        {
+            double u = Math.Min(1, Math.Max(0, (Math.Min(lev, kork) - 393.0) / (834.0 - 393.0)));
+            double reuna = ReunaPuhelin + (ReunaTabletti - ReunaPuhelin) * u, yla = YlaPuhelin + (YlaTabletti - YlaPuhelin) * u;
+            double kw = Math.Max(1, lev - 2 * reuna), kh = Math.Max(1, kork - yla - reuna);
+            double cover = Math.Max(kw / VideonSivu, kh / VideonSivu), sade = KiekonSade, ylinY = KoneenYlin;
+            double skaala = cover, lasku = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                lasku = Math.Min(kh / 2, Math.Max(0, KoneenMarginaali - kh / 2 + ylinY * skaala));
+                skaala = Math.Max(cover, KiekonYlitys * Math.Sqrt(kw * kw / 4 + (kh / 2 + lasku) * (kh / 2 + lasku)) / sade);
+            }
+            double cx = reuna + kw / 2, cy = yla + kh / 2 + lasku;
+            double nurkka = Math.Sqrt(Math.Max(cx, lev - cx) * Math.Max(cx, lev - cx) + Math.Max(cy, kork - cy) * Math.Max(cy, kork - cy));
+            skaala = Math.Max(skaala, nurkka / sade);
+            return new Sovitus(VideonF * skaala, cx, cy, sade * skaala, lasku);
+        }
     }
 }
