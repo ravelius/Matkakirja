@@ -214,6 +214,22 @@ async function linssiAuki(dokumentit) {
   return null;
 }
 
+/**
+ * Linssin odotuspeite (Linssit/Ydin/Odotuspeite.cs, katto 15 s): kuva vasta kun peite on laskenut, kuten
+ * webin kaappaus. Sovelluksen stdout kertoo "linssit: peite päälle" / "linssit: peite pois" (Linssiseppä,
+ * kierros 3: iPadin kylmä topografia kuvattiin peitteen alla).
+ */
+async function odotaPeite(stdout, kattoMs = 16000) {
+  const alku = Date.now();
+  const laske = (t, s) => t.split(s).length - 1;
+  for (;;) {
+    const t = existsSync(stdout) ? readFileSync(stdout, 'utf8') : '';
+    if (laske(t, 'linssit: peite päälle') <= laske(t, 'linssit: peite pois')) return Date.now() - alku;
+    if (Date.now() - alku > kattoMs) return -1;
+    await odota(250); // eslint-disable-line no-await-in-loop
+  }
+}
+
 /** UI-puu nyt: kirjoittaa ui puu <nimi>, odottaa tiedoston ja palauttaa sen polun (tai null). */
 async function puuNyt(dokumentit, nimi) {
   const puu = join(dokumentit, `ui-puu-${nimi}.json`);
@@ -280,6 +296,8 @@ async function ajaLaite(l) {
         const alkuL = Date.now();
         let auki = null;
         do auki = await linssiAuki(dokumentit); while (auki !== linssi && Date.now() - alkuL < VARTIJA_MS); // eslint-disable-line no-await-in-loop
+        const peiteMs = await odotaPeite(join(NATIIVI, `${tunnus}-stdout.log`)); // eslint-disable-line no-await-in-loop
+        if (peiteMs !== 0) console.log(`natiivi ${tunnus} ${r.rivi} odotuspeite ${peiteMs < 0 ? 'yli katon' : `${(peiteMs / 1000).toFixed(1)} s`}`);
         odotetut = [`linssi ${linssi} auki (oli: ${auki ?? '–'})`];
         v = { ok: auki === linssi, puu: await puuNyt(dokumentit, nimi), osuma: `linssi ${linssi}` }; // eslint-disable-line no-await-in-loop
       } else {
