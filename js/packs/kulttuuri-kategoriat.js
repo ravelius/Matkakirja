@@ -127164,6 +127164,221 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Lake Titicaca, PeruRail, Belmond Andean Explorer,
+       * Inca Manco Cápac International Airport, Sillustani, Altitude
+       * sickness, Coca tea, Candlemas/Peru, List of Intangible Cultural
+       * Heritage elements in Peru, Diablada, Taquile Island, Amantaní,
+       * Copacabana Bolivia, Basilica of Our Lady of Copacabana, Strait
+       * of Tiquina) ja Wikivoyagesta (Lake Titicaca, Puno, Copacabana,
+       * Isla del Sol, Isla Amantani, Isla Taquile, Sillustani) — teksti
+       * omaa. Hinnat ja aikataulut jätetty pois, koska lähteiden tiedot
+       * ovat osin vanhoja. Nostojen aiheita (korkein purjehduskelpoinen
+       * järvi, Yavari, inkojen luomistaru, Tiwanaku, Isla del Solin
+       * rauniot, järven nimi, Uros-saarten rakenne, totora,
+       * jättiläissammakko, uikku) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvasivuilta, ja
+       * kuvat katsottu silmin. Pystykuva: Taquilen neuloja.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Knitter of Taquile.jpg',
+          lyhyt: 'Taquilen saarella neulominen on miesten työtä, ja taitava neuloja on arvostettu.',
+          selite: 'Taquilen saaren mies neuloo kirjavaa lankaa '
+            + 'sukkapuikoilla, ja päässä hänellä on neulottu punainen myssy. '
+            + 'Saaren tekstiilitaide on UNESCOn aineettoman '
+            + 'kulttuuriperinnön luettelossa.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Titicaca-järvelle on kaksi porttia: Puno Perun puolella '
+          + 'ja Copacabana Bolivian puolella. Kummassakin ollaan lähes '
+          + 'neljän kilometrin korkeudessa, joten matkan tärkein vaihe on '
+          + 'hidas nousu ylös vuoristoon. Punossa järven avointa selkää ei '
+          + 'edes näe, sillä kaupunki on suljetun lahden pohjukassa; '
+          + 'suuri järvi avautuu vasta veneestä ja saarilta, joilla '
+          + 'matkailija voi yöpyä paikallisen perheen luona. Helmikuussa '
+          + 'Puno täyttyy kymmenistätuhansista tanssijoista, kun kaupunki '
+          + 'juhlii suojeluspyhimystään. Bolivian puolella Copacabanan '
+          + 'basilikan edessä siunataan autoja, ja La Paziin vievällä '
+          + 'tiellä bussit ylittävät järven salmen lautalla. Järven vettä '
+          + 'ei pidä juoda puhdistamatta.',
+        artikkeli: {
+          nimi: 'Matkailijan Titicaca-järvi',
+          teksti: 'Titicaca-järvellä matkailijan tärkein matkatavara on aika totutella korkeuteen.',
+          nosto: 'Taquilen saarella neulominen on miesten työtä, ja pojat '
+            + 'oppivat sen jo lapsina.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Punon kautta',
+              teksti: 'Perun puolella matka järvelle kulkee Punon kautta. '
+                + 'Lähin lentoasema on Juliacassa, noin 45 minuutin '
+                + 'ajomatkan päässä: sen kiitotie on Perun pisin, mutta '
+                + 'säännöllisiä kansainvälisiä suoria lentoja kentälle ei '
+                + 'ole. Maisemallisempi tapa on PeruRailin Titicaca-juna, '
+                + 'joka ajaa Cuscosta Punoon noin kymmenessä tunnissa. '
+                + 'Radan korkein kohta on La Rayan sola 4 313 metrissä, ja '
+                + 'siellä juna pysähtyy hetkeksi, jotta matkustajat pääsevät '
+                + 'jaloittelemaan. Vuodesta 2017 samaa rataa on kulkenut '
+                + 'myös Belmond Andean Explorer, Etelä-Amerikan ensimmäinen '
+                + 'luksusmakuujuna, jonka vaunut ajoivat aiemmin Australiassa. '
+                + 'Bussit ajavat Cuscosta kuudessa–kahdeksassa tunnissa '
+                + 'enimmäkseen radan viertä. Punon satamasta lähtevät veneet '
+                + 'Uros-saarille sekä Taquilelle ja Amantanílle. Puolen päivän '
+                + 'retken voi tehdä myös 31 kilometrin päähän Sillustaniin, '
+                + 'jossa Umayo-järveen pistävällä niemellä seisoo 91 '
+                + 'kivistä hautatornia. Collat rakensivat niitä ylhäisilleen '
+                + 'ennen inkoja ja vielä inkavallan aikana.',
+              kuva: [
+                {
+                  tiedosto: 'PeruRail La Raya.jpg',
+                  lyhyt: 'Cuscon ja Titicacan välinen juna pysähtyy La Rayan solassa, radan korkeimmalla kohdalla.',
+                  selite: 'PeruRailin sininen juna seisoo La Rayan asemalla '
+                    + 'yli 4 300 metrin korkeudessa, ja taustalla kohoavat '
+                    + 'kuivan ylängön lumilaikkuiset huiput.',
+                  lahde: 'Unukorno, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Muelle de Puno.jpg',
+                  lyhyt: 'Punon laiturilta lähtevät veneet Taquilen ja Amantanín saarille.',
+                  selite: 'Punon satamassa odottaa rivi matkustajaveneitä, ja '
+                    + 'rannan kyltit osoittavat kohti Taquilen ja Amantanín '
+                    + 'saaria järven avoimella selällä.',
+                  lahde: 'Ciudades, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Urnas funerarias, Sillustani, Perú, 2015-08-01, DD 100.JPG',
+                  lyhyt: 'Sillustanin kiviset hautatornit seisovat Umayo-järven rannalla Punon lähellä.',
+                  selite: 'Sillustanin hautatornit eli chullpat on muurattu '
+                    + 'tarkasti sovitetuista kivilohkareista; oikealla '
+                    + 'pilkottaa Umayo-järven sininen vesi.',
+                  lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Korkeus tulee ensin',
+              teksti: 'Titicaca on niin korkealla, että ohut ilma tuntuu jo '
+                + 'kävellessä. Vuoristotautiin sairastuu nopeasti '
+                + 'noustessa noin viidesosa ihmisistä jo 2 500 metrissä ja '
+                + 'kaksi viidestä 3 000 metrissä, ja järvi on vielä '
+                + 'kahdeksansataa metriä ylempänä. Hyvä kunto ei suojaa. '
+                + 'Tärkein oire on päänsärky, joka alkaa usein kymmenen '
+                + 'tunnin sisällä ja hellittää yleensä parissa päivässä; jos '
+                + 'olo pahenee, ainoa varma hoito on laskeutua alemmas. '
+                + 'Siksi reitti kannattaa rakentaa portaittain, esimerkiksi '
+                + 'Pyhän laakson ja Cuscon kautta, ja ottaa ensimmäiset päivät '
+                + 'Punossa rauhallisesti. Hotellien aamiaispöydissä on usein '
+                + 'kokanlehtiä ja kokateetä, jota paikalliset suosittelevat '
+                + 'vuoristotautiin. Tee on Perussa ja Boliviassa laillista, '
+                + 'mutta jo yksi kupillinen voi näkyä huumetestissä, eikä '
+                + 'lehtiä pidä tuoda kotiin. Päivällä ohut ilma päästää läpi '
+                + 'polttavan auringon: saarille vievän veneen katolle '
+                + 'torkahtanut matkailija voi palaa pahasti. Yöt taas ovat '
+                + 'kylmiä, ja kesä–elokuussa lämpötila voi laskea pakkasen '
+                + 'puolelle.',
+              kuva: {
+                tiedosto: '20150720 Puno Hotelbreakfast.jpg',
+                lyhyt: 'Punolaisen hotellin aamiaispöydässä on tarjolla kokanlehtiä ja kokateepusseja.',
+                selite: 'Punolaisen hotellin aamiaispöydässä on kulhollinen '
+                  + 'kuivattuja kokanlehtiä ja kokateepusseja kamomillateen '
+                  + 'vieressä hotellin vieraille.',
+                lahde: 'Hekaheka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helmikuu kuuluu Candelarialle',
+              teksti: 'Joka helmikuu Puno juhlii suojeluspyhimystään, '
+                + 'Candelarian Neitsyttä, ja kahden viikon ajan kaupunki on '
+                + 'täynnä musiikkia. Juhla on Riossa pidettävän karnevaalin ja '
+                + 'Bolivian Oruron karnevaalin ohella Etelä-Amerikan '
+                + 'suurimpia, ja UNESCO lisäsi sen aineettoman '
+                + 'kulttuuriperinnön luetteloon vuonna 2014. Kaikki alkaa '
+                + 'aamunkoiton messusta ja ikivanhasta puhdistusmenosta, '
+                + 'minkä jälkeen Neitsyen kuvaa kannetaan kulkueessa kaduilla '
+                + 'musiikin ja tanssin saattelemana. Sitten seuraavat kaksi '
+                + 'tanssikilpailua. Mukana on yli 200 eri tanssia: '
+                + 'alkuperäiskylien omia tansseja ja kaupunginosien '
+                + 'loisteliaita pukutansseja. Tanssijoita on noin 40 000 ja '
+                + 'muusikoita 5 000, ja välillisesti mukana on noin 25 000 '
+                + 'muuta, kuten brodeeraajia, naamiontekijöitä ja '
+                + 'soittokuntien väkeä. Tunnetuin on diablada, paholaistanssi, jonka '
+                + 'syntysijasta Peru ja Bolivia kiistelevät yhä. Juhlaviikoille '
+                + 'majoitus kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Diablada Candelaria 2025.jpg',
+                lyhyt: 'Diablada-tanssijat kilpailevat Punon Candelaria-juhlassa helmikuussa 2025.',
+                selite: 'Sarvipäiset diablada-tanssijat kirjailluissa '
+                  + 'asuissaan esiintyvät Candelaria-juhlan tanssikilpailussa '
+                  + 'Punon stadionilla; taustalla katsomo ja kaupungin '
+                  + 'ympäröivät rinteet.',
+                lahde: 'Leyner MCG, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö saarella perheen luona',
+              teksti: 'Titicacan suurta selkää pääsee tuntemaan vasta, kun '
+                + 'jää saarelle yöksi. Perun puolen Amantanílla asuu noin '
+                + '4 000 ihmistä kymmenessä kylässä, eikä saarella ole autoja '
+                + 'eikä hotelleja. Sen sijaan perheet majoittavat vieraita '
+                + 'omiin huoneisiinsa ja kokkaavat heille. Tuliaisiksi sopivat '
+                + 'ruokatarvikkeet kuten riisi ja öljy tai koulutarvikkeet, '
+                + 'mutta ei makeiset, sillä hammashoitoa saarella on niukasti. '
+                + 'Iltapäivällä kiivetään Pachamaman ja Pachatatan huipuille, '
+                + 'Äiti Maan ja Isä Maan temppelien raunioille, ihailemaan '
+                + 'auringonlaskua. Pimeän tultua ilma kylmenee heti, ja '
+                + 'illalla isännät pukevat vieraat omiin juhla-asuihinsa '
+                + 'tanssiaisiin. Taskulamppu on tarpeen, koska sähköä on '
+                + 'vähän. Naapurisaari Taquilelle tulee vuosittain kymmeniä '
+                + 'tuhansia päiväkävijöitä, mutta veneet saapuvat vasta '
+                + 'aamupäivällä ja lähtevät iltapäivällä. Yöpyjä näkee '
+                + 'saaren hiljaisena, ja torilla hinnoista ei tingitä.',
+              kuva: {
+                tiedosto: 'Atardecer en el Apu Pachatata, 2023.jpg',
+                lyhyt: 'Aurinko laskee Titicacan saarten taakse Amantanín Pachatata-vuorelta nähtynä.',
+                selite: 'Satuloitu hevonen seisoo Pachatata-vuoren rinteellä '
+                  + 'Amantanín saarella, kun aurinko laskee järven ja sen '
+                  + 'pienten saarten taakse lokakuussa 2023.',
+                lahde: 'Abelchristian111, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Copacabana ja Bolivian ranta',
+              teksti: 'Punosta Bolivian Copacabanaan ajetaan noin kolme ja '
+                + 'puoli tuntia, ja raja ylitetään Kasanissa noin seitsemän '
+                + 'ja puolen kilometrin päässä kaupungista. Kellot siirretään '
+                + 'rajalla tunnilla eteenpäin. Noin 6 000 asukkaan kaupungin '
+                + 'nimi tulee aimarankielisestä ilmauksesta "näkymä '
+                + 'järvelle", ja siitä sai nimensä myös Rio de Janeiron '
+                + 'kuuluisa ranta. Kaupungin keskus on vuosina 1669–1679 '
+                + 'rakennettu valkoinen basilika. Sen kappelissa säilytetään '
+                + 'Copacabanan Neitsyen kuvaa, Bolivian suojeluspyhimystä, jonka '
+                + 'inkahallitsijoiden sukuun kuulunut Francisco Tito Yupanqui veisti '
+                + '1500-luvun lopulla. Basilikan edessä siunataan '
+                + 'autoja: kukilla koristellut ajoneuvot pirskotetaan '
+                + 'vihkivedellä. Illalla kiivetään puolessa '
+                + 'tunnissa Cerro Calvarion ristintien asemien ohi katsomaan '
+                + 'auringonlaskua, ja rannan kojuista syödään järven taimenta. '
+                + 'Satamasta veneet vievät Isla del Solille, jonka pohjois- ja '
+                + 'keskiosa olivat kylien kiistan vuoksi suljettuina matkailijoilta vuosina '
+                + '2019–2022; tilanne kannattaa tarkistaa. La Paziin '
+                + 'mennessä tie ylittää Tiquinan salmen, joka on '
+                + 'kapeimmillaan 850 metriä. Matkustajat ylittävät sen '
+                + 'veneellä, ja bussit kuljetetaan lautalla perässä.',
+              kuva: {
+                tiedosto: 'Bautismo de autos frente a Catedral de CC (4).JPG',
+                lyhyt: 'Munkki siunaa kukilla koristeltuja pikkubusseja Copacabanan basilikan edessä.',
+                selite: 'Ruskeakaapuinen munkki pirskottaa vihkivettä '
+                  + 'kukkaseppelein koristeltujen pikkubussien ylle '
+                  + 'Copacabanan basilikan edustalla, ja ihmiset seuraavat '
+                  + 'siunausta vieressä.',
+                lahde: 'Elemaki, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
