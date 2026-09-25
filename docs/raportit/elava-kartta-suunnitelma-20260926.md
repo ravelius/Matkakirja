@@ -7,7 +7,7 @@
 ## 1. Saapuminen kohdemaahan (n. 5 s, ohitettava, kerran per maa)
 1. Kermahuntu "kuivuu" pois saapumiskaupungista ulospäin kuin muste paperilla (radiaalinen paljastus, 2–3 s).
 2. Joet piirtyvät viivoina (stroke reveal), maakuntien rajat vedetään kynällä yksi kerrallaan kynän rahinalla, maakuntien nimet nousevat esiin.
-3. Maakunnat syttyvät 5 sävyn täytöllä ISOISÄN 1873-REITIN järjestyksessä (ei sattumanvaraisesti), 1,5 s.
+3. Maakunnat syttyvät 5 sävyn täytöllä saapumiskaupungista ulospäin etäisyysjärjestyksessä (sama säteittäinen liike kuin hunnun kuivuminen), 1,5 s. Tarkennus 26.9.: kaanonissa ei ole kiinteää 1873-reittiä (pelaaja kulkee kaupungit missä järjestyksessä tahansa), joten reittijärjestystä ei keksitä.
 4. Nostot putoavat kartalle musteläikkinä suurimmasta pienimpään, pieni naksahdus.
 5. Matala aamuaurinko pyyhkäisee reliefin yli (pitkät varjot kulkevat maan poikki), kamera tekee hitaan kallistetun kierron (KAMERA-AJOT).
 
