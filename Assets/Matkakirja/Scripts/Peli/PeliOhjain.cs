@@ -400,7 +400,7 @@ namespace Matkakirja.Natiivi
             // (renderFrameInterval 4 hidasti UI Toolkit -lehden 15 fps:iin), joten lehti voi taas olla näkymäpeitto.
             if (lehtiNakyma != null)
             {
-                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
+                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.PeittaaRuudun); // iPadilla arkki ≤ 960 pt ei peitä (Natiivi-UI)
                 lehtiNakyma.Suljettu += LehtiSuljettu;
             }
             AlustaAanet();
