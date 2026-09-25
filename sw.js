@@ -499,6 +499,7 @@ const SHELL = [
   './js/packs/maakunnat-luonnehdinnat.js',
   './js/packs/maakunnat-pulu.js',
   './js/packs/maakunnat-nimet.js',
+  './js/packs/nostojen-kokoluokat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
