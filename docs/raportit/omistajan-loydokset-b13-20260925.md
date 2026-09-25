@@ -9,7 +9,7 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 |---|---|---|
 | 80 | Avauskuva: kermasivun keskellä musta neliö ennen logoa. Esilataus niin, että siirrytään mustasta suoraan valmiiseen näkymään feidillä, tai kaikki elementit ruudulle yhtä aikaa. | Natiiviseppä (Natiivi-UI) |
 | 81 | Aloitusnäytöllä ei ruskeaa yläpalkkia, ei Matkakirja-logoa, ei ☰-nappia. → KORJATTU natiivi-ui/aloitus-81-83 2647976e (juna/b13, build 14) | Natiivi-UI |
-| 82 | Aloituskaupungin valinta: kartalla vain kohdekaupungit, ei muiden kaupunkien pisteitä eikä nimiä. Yläpalkki pois. | Natiivi-UI (Natiiviseppä: pisteet ja nimet) |
+| 82 | Aloituskaupungin valinta: kartalla vain kohdekaupungit, ei muiden kaupunkien pisteitä eikä nimiä. Yläpalkki pois. → KORJATTU ja todennettu build 16:lla (Laitetestaaja 9c4d3844d: vain Lontoo + Moskova/Istanbul/Ateena/Kairo; pysyvä savukekohta) | Natiivi-UI (Natiiviseppä: pisteet ja nimet) |
 | 83 | Lennon aikana yläpalkki pois, pulu pois kuvasta, alareunassa Ohita-nappi, joka ohittaa koko animaation. → KORJATTU natiivi-ui/aloitus-81-83 2647976e + Ohita verhon päällä natiiviseppa/verho-ohita dbcc0eb1 | Natiivi-UI |
 | 84 | Kohteen valinnan jälkeen: feidi mustaan, värillinen topografiakartta latautuu taustalla, feidi takaisin. Vasta sitten kamera lähtee kohti Lontoota, kone on jo nousussa, ja kamera löytää koneen vasta täydessä korkeudessa. | Natiiviseppä |
 | 85 | Lennon loppu: karttaa ei vaihdeta kesken animaation vanhaksi kartaksi. Koko animaatio topografiakartalla, sitten feidi kermanväriselle paperille ja teksti "Ateena, päivä 1", sen jälkeen automaattinen feidi vanhalle kartalle ja peli alkaa kaupungista. | Natiiviseppä (Natiivi-UI: paperi + teksti) |
