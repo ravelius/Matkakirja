@@ -15,3 +15,12 @@ levylinjaus nojaa siihen, että GitHub kattaa kaiken). Päivitys: `tyokalut/palv
 | launchd/*.plist | fi.matkakirja.juna, fi.matkakirja.juna-vahti, app.matkakirja.natiivi-bundle |
 
 Palauttaminen: kopioi tiedostot takaisin polkuihin ja `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/<plist>`.
+
+## Varmuuskopio GitHubiin (Fable 25.9.2026 klo 10.4x, sitova)
+
+Peili on varmuuskopio, jossa **paikallinen proto-git on totuus** (ravelius/Matkakirja-natiivi):
+1. kaikki haarat force-pushataan etuliitteen alle `+refs/heads/*:refs/heads/peili/proto/*`;
+2. `master` ja `juna/*` pushataan lisäksi omilla nimillään (`proto/master`, `proto/juna/*`) **vain fast-forwardina**;
+   hylkäys kirjataan tiedostoon `proto-3d/lokit/varmuuskopio-VIKA.txt` (Postivahti välittää Fablelle rivinä), ajo jatkuu;
+3. ajo: post-merge-koukku (master), juna-ajo.sh:n vahtikierros tunnin välein (`lokit/varmuuskopio-viimeisin.txt`) ja käsin.
+Pelilogiikka on proto-gitissä (Assets/Matkakirja/Peli); erillistä natiivi-peli-repoa ei enää ole.

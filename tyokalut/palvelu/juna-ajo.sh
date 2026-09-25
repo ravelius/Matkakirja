@@ -12,6 +12,13 @@ JUNA=${JUNA:-$(git -C $GIT for-each-ref --format='%(refname:short)' 'refs/heads/
 SIMS=(1572C658-6455-4E55-8C05-3F88CB3C32F6 3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D C1D5E34C-DFA8-4326-AD85-92B58A672AA7 993F8873-E2D9-4230-81CE-CBF9230D9B55)
 TILA=/Users/Shared/Claude/proto-3d/lokit/kaannospalvelu/juna-viimeisin.txt
 aika() { date '+%d.%m. %H:%M'; }
+# Tunnin varmuuskopio GitHubiin (Fable 25.9. klo 10.4x): vahdin 10 min kierros ajaa sen (synkronisesti: launchd lopettaisi taustaprosessin), kun edellisestä
+# onnistuneesta ajosta on yli tunti (varmuuskopioi-natiivi.sh; uutta launchd-agenttia ei tarvita).
+VK=/Users/Shared/Claude/proto-3d/lokit/varmuuskopio-viimeisin.txt
+if [[ ! -f $VK ]] || (( $(date +%s) - $(stat -f %m $VK) > 3600 )); then
+  touch $VK   # ei päällekkäisiä ajoja, jos edellinen on kesken
+  /Users/Shared/Claude/proto-3d/tyokalut/varmuuskopioi-natiivi.sh >> /Users/Shared/Claude/proto-3d/tyokalut/varmuuskopiointi.log 2>&1
+fi
 [[ -n $JUNA ]] || { echo "$(aika) ei junaa"; exit 0; }
 nyt=$(git -C $GIT rev-parse --short "$JUNA" 2>/dev/null) || { echo "$(aika) ei junaa $JUNA"; exit 0; }
 [[ "$(cat $TILA 2>/dev/null)" == "$JUNA $nyt" || "$(cat $TILA 2>/dev/null)" == "$nyt" ]] && { [[ $1 == vahti ]] || echo "$(aika) $JUNA $nyt ennallaan"; exit 0; }
