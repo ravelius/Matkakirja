@@ -2818,6 +2818,3055 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
   },
   /*
+   * ROU (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.ROU:n tunnuksia
+   * TÄSMÄLLEEN (diakriitittömät, paitsi "Dâmbovita" ja "Vâlcea").
+   * Vain `lyhyt`. Bukarestin teksti välttää fokusvirran ja
+   * europe-kulttuurin aiheet (Parlamenttipalatsi, Colțean torni,
+   * Dracula, karhut). Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Alba            — Alba Iulia (Great Union 1.12.1918, kansallispäivä)
+   *   Arad            — 13 Martyrs of Arad (teloitettu 6.10.1849)
+   *   Arges           — Transfăgărășan (huippu noin 2 042 m, auki kesällä)
+   *   Bacau           — Nadia Comăneci (Onești, Montreal 1976, ensimmäinen 10)
+   *   Bihor           — Bears' Cave (avattu räjäyttämällä 17.9.1975,
+   *                     140 luolakarhun luurankoa)
+   *   Bistrita-Nasaud — Dracula (romaani): Bistritz, Borgo Pass = Tihuța
+   *   Botosani        — Mihai Eminescu, Ipotești (muistomuseo)
+   *   Braila          — Brăila Bridge (avattu 2023, Romanian pisin riippusilta)
+   *   Brasov          — Black Church (nimi vuoden 1689 palosta)
+   *   Bucharest       — Dimitrie Gusti National Village Museum (1936)
+   *   Buzau           — Berca Mud Volcanoes
+   *   Calarasi        — Oltenița (Gumelnițan kumpu, 4. vuosituhat eaa.)
+   *   Caras-Severin   — Băile Herculane (roomalaiset kylvyt, Herkuleen patsas)
+   *   Cluj            — Salina Turda
+   *   Constanta       — Port of Constanța, Danube–Black Sea Canal (64 km)
+   *   Covasna         — Covasna (mofetit, hiilidioksidihoidot)
+   *   Dâmbovita       — Trial and execution of the Ceaușescus (25.12.1989)
+   *   Dolj            — Nicolae Romanescu Park (Redont, 1897–1903,
+   *                     riippusilta 1901–1902)
+   *   Galati          — Liberty Galați (Romanian suurin terästehdas)
+   *   Giurgiu         — Giurgiu–Ruse Friendship Bridge (1954, ainoa silta
+   *                     Bulgariaan vuoteen 2013)
+   *   Gorj            — The Endless Column (Brâncuși, Târgu Jiu)
+   *   Harghita        — Lake Sfânta Ana (Romanian ainoa tulivuorijärvi)
+   *   Hunedoara       — Corvin Castle
+   *   Ialomita        — Lake Amara (sapropeelinen hoitomuta)
+   *   Iasi            — Palace of Culture (neljä museota)
+   *   Ilfov           — Snagov Monastery (perimätieto Vladin haudasta)
+   *   Maramures       — Merry Cemetery (Săpânța)
+   *   Mehedinti       — Rock sculpture of Decebalus (55 m, 1994–2004,
+   *                     Euroopan korkein kallioreliefi)
+   *   Mures           — Sighișoara (Vlad III:n syntymäkaupunki, asuttu
+   *                     linnoitus, Unesco)
+   *   Neamt           — Neamț Citadel (Mehmed II:n piiritys 1476)
+   *   Olt             — Alro (Slatina, suurin alumiinintuottaja Keski- ja
+   *                     Itä-Euroopassa IVY-maita lukuun ottamatta)
+   *   Prahova         — Peleș Castle (ensimmäinen kokonaan sähkövaloin
+   *                     valaistu linna Euroopassa, oma voimala)
+   *   Salaj           — Porolissum (Moigrad)
+   *   Satu Mare       — Satu Mare: palokunnan torni (47 m, 1904)
+   *   Sibiu           — Sibiu (Euroopan kulttuuripääkaupunki 2007)
+   *   Suceava         — Voroneț Monastery ("Voronețin sininen")
+   *   Teleorman       — Teleorman County (kuumaanin "hullu metsä",
+   *                     Zimnicea Romanian eteläisin paikkakunta)
+   *   Timis           — Timișoara (sähköinen katuvalaistus 1884)
+   *   Tulcea          — Danube Delta (Unesco, pelikaanit)
+   *   Vaslui          — Battle of Vaslui (1475)
+   *   Vâlcea          — Horezu Monastery + Horezu ceramics (Unesco)
+   *   Vrancea         — 1977 Vrancea earthquake (Bukarestin tuhot)
+   */
+  ROU: {
+    Alba: {
+      lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
+    },
+    Arad: {
+      lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
+    },
+    Arges: {
+      lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
+    },
+    Bacau: {
+      lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
+    },
+    Bihor: {
+      lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
+    },
+    'Bistrita-Nasaud': {
+      lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
+    },
+    Botosani: {
+      lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
+    },
+    Braila: {
+      lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
+    },
+    Brasov: {
+      lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
+    },
+    Bucharest: {
+      lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
+    },
+    Buzau: {
+      lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
+    },
+    Calarasi: {
+      lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
+    },
+    'Caras-Severin': {
+      lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
+    },
+    Cluj: {
+      lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
+    },
+    Constanta: {
+      lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
+    },
+    Covasna: {
+      lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
+    },
+    'Dâmbovita': {
+      lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
+    },
+    Dolj: {
+      lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
+    },
+    Galati: {
+      lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
+    },
+    Giurgiu: {
+      lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
+    },
+    Gorj: {
+      lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
+    },
+    Harghita: {
+      lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
+    },
+    Hunedoara: {
+      lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
+    },
+    Ialomita: {
+      lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
+    },
+    Iasi: {
+      lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
+    },
+    Ilfov: {
+      lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
+    },
+    Maramures: {
+      lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
+    },
+    Mehedinti: {
+      lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
+    },
+    Mures: {
+      lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
+    },
+    Neamt: {
+      lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
+    },
+    Olt: {
+      lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+    },
+    Prahova: {
+      lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
+    },
+    Salaj: {
+      lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
+    },
+    'Satu Mare': {
+      lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
+    },
+    Sibiu: {
+      lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
+    },
+    Suceava: {
+      lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
+    },
+    Teleorman: {
+      lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
+    },
+    Timis: {
+      lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
+    },
+    Tulcea: {
+      lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
+    },
+    Vaslui: {
+      lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
+    },
+    'Vâlcea': {
+      lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
+    },
+    Vrancea: {
+      lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
+    },
+  },
+  /*
+   * CZE (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CZE:n tunnuksia TÄSMÄLLEEN (Prahan tunnus on
+   * "Prague"). Vain `lyhyt`. Prahan teksti välttää fokusvirran aiheet
+   * (Karlštejn, Kultainen kuja, Klementinum, Tycho Brahe, hevoset).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Jihočeský       — Český Krumlov Castle (barokkiteatteri,
+   *                     alkuperäinen lavakoneisto)
+   *   Jihomoravský    — Villa Tugendhat (Mies van der Rohe 1930, Unesco 2001)
+   *   Karlovarský     — Karlovy Vary, Vřídlo (noin 73 °C)
+   *   Královéhradecký — Sněžka (1 603 m, Tšekin korkein, Puolan raja)
+   *   Liberecký       — Ještěd Tower (hotelli + lähetin, 1973)
+   *   Moravskoslezský — Dolní Vítkovice (masuunit suljettu 1998)
+   *   Olomoucký       — Holy Trinity Column (Unesco 2000)
+   *   Pardubický      — Velká pardubická (1874 alkaen, Taxis-oja)
+   *   Plzeňský        — Pilsner Urquell (1842)
+   *   Prague          — Petřín Lookout Tower (1891, Eiffel-tornin mallinen,
+   *                     299 askelmaa)
+   *   Středočeský     — Sedlec Ossuary (40 000–70 000 vainajan luut)
+   *   Ústecký         — Pravčická brána (Euroopan suurin luonnon
+   *                     hiekkakivikaari)
+   *   Vysočina        — Telč (Unesco 1992, renessanssiaukio)
+   *   Zlínský         — Baťa's Skyscraper (johtajan toimisto hississä)
+   */
+  CZE: {
+    'Jihočeský': {
+      lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
+    },
+    'Jihomoravský': {
+      lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
+    },
+    'Karlovarský': {
+      lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
+    },
+    'Královéhradecký': {
+      lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
+    },
+    'Liberecký': {
+      lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
+    },
+    'Moravskoslezský': {
+      lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
+    },
+    'Olomoucký': {
+      lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
+    },
+    'Pardubický': {
+      lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
+    },
+    'Plzeňský': {
+      lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
+    },
+    Prague: {
+      lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
+    },
+    'Středočeský': {
+      lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
+    },
+    'Ústecký': {
+      lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
+    },
+    'Vysočina': {
+      lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
+    },
+    'Zlínský': {
+      lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
+    },
+  },
+  /*
+   * LUX (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LUX:n tunnuksia TÄSMÄLLEEN (entiset piirit, jotka
+   * lakkautettiin hallintoyksikköinä 2015). Vain `lyhyt`. Luxemburgin
+   * teksti välttää fokusvirran aiheen (puretun linnoituksen muuri).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Diekirch     — Vianden Castle + Victor Hugo House (Hugo 1871)
+   *   Grevenmacher — Schengen Agreement (1985, Princesse Marie-Astrid
+   *                  Mosel-joella, kolmen maan rajapiste)
+   *   Luxembourg   — Transport in Luxembourg (maksuton julkinen liikenne
+   *                  29.2.2020 alkaen)
+   */
+  LUX: {
+    Diekirch: {
+      lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+    },
+    Grevenmacher: {
+      lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+    },
+    Luxembourg: {
+      lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+    },
+  },
+  /*
+   * MLT (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MLT:n englanninkielisiä piiritunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Southern Harbourin teksti välttää fokusvirran aiheen
+   * (Pjazza Teatru Rjal). Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Southern Harbour — Saluting Battery (Upper Barrakka, laukaus
+   *                      keskipäivällä)
+   *   Northern Harbour — Malta Railway (1883–1931), Birkirkaran asema:
+   *                      Malta Railway Foundation and Tram Museum 2023
+   *   South Eastern    — Marsaxlokk, luzzu (silmä keulassa)
+   *   Western          — Mdina ("Hiljainen kaupunki", autot vain asukkaille)
+   *   Northern         — Rotunda of Mosta (pommi 9.4.1942, ei räjähtänyt)
+   *   Gozo and Comino  — Azure Window (romahti 8.3.2017)
+   */
+  MLT: {
+    'Southern Harbour': {
+      lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
+    },
+    'Northern Harbour': {
+      lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
+    },
+    'South Eastern': {
+      lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
+    },
+    Western: {
+      lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
+    },
+    Northern: {
+      lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
+    },
+    'Gozo and Comino': {
+      lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
+    },
+  },
+  /*
+   * BGR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.BGR:n tunnuksia
+   * TÄSMÄLLEEN ("Grad Sofiya" = pääkaupunki, "Sofia" = sitä ympäröivä
+   * Sofian alue). Vain `lyhyt`. Teksti välttää Sofian fokusvirran
+   * aiheet (Levski, Serdica, Sofia-patsas, eläintarha) ja Pernikin
+   * fokuskohteen (Surva, kukerit). Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Blagoevgrad    — Melnik, Bulgaria (385 as., maan pienin kaupunki;
+   *                    Melnik Earth Pyramids)
+   *   Burgas         — Atanasovsko Lake (suolaa vuodesta 1906, Via Pontica)
+   *   Dobrich        — Balchik Palace (kuningatar Marie; kaktuskokoelma
+   *                    ulkona 1 000 m², Euroopan toiseksi suurin)
+   *   Gabrovo        — Gabrovo ("international capital of humour and
+   *                    satire", House of Humour and Satire)
+   *   Grad Sofiya    — Alexander Nevsky Cathedral, Sofia (kullattu kupoli,
+   *                    5 000 hengen tilat)
+   *   Haskovo        — Haskovo (Jumalanäidin monumentti 32 m, 2003,
+   *                    Guinness 2005)
+   *   Yambol         — Yambol (Bezisten, 510-vuotisjuhla 2019, museo 2015)
+   *   Kardzhali      — Perperikon (Balkanin suurin megaliittikohde,
+   *                    jälkiä noin 5000 eaa.)
+   *   Kyustendil     — Sapareva Banya (geysir 1957, vesi 103 °C)
+   *   Lovech         — Devetashka cave (suu 35 m leveä, lähes 30 000
+   *                    lepakkoa, Expendables 2 kuvattiin 2011)
+   *   Montana        — Chiprovtsi (kelim-perinne Unescon aineettomaan
+   *                    perintöön 2014)
+   *   Pazardzhik     — Velingrad ("Spa Capital of the Balkans", yli 90
+   *                    mineraalilähdettä)
+   *   Pernik         — Pernik (hiilikaivokset 1900-luvulla, Underground
+   *                    Mining Museum)
+   *   Pleven         — Pleven Panorama (115 × 15 m, avattu 1977)
+   *   Plovdiv        — Plovdiv (Euroopan kulttuuripääkaupunki 2019,
+   *                    Kapana-kortteli)
+   *   Razgrad        — Abritus (arkeologinen puisto; taistelu 251, Decius)
+   *   Ruse           — Giurgiu–Ruse Friendship Bridge (1954, 2 223 m;
+   *                    ainoa yhteinen silta New Europe Bridgeen asti)
+   *   Silistra       — Srebarna Nature Reserve (Unesco, kiharapelikaani)
+   *   Sliven         — Sliven Province (Sinite Kamani, yli 1 000
+   *                    kasvilajia; bora-tuuli)
+   *   Smolyan        — Devil's Throat Cave (Trigradin rotko, heitetyt
+   *                    puut katosivat jäljettömiin)
+   *   Sofia          — Koprivshtitsa (kansanperinnefestivaali vuodesta
+   *                    1965, noin viiden vuoden välein)
+   *   Stara Zagora   — Thracian Tomb of Kazanlak (300-luku eaa., Unesco)
+   *   Shumen         — Shumen ("Monument to 1300 Years of Bulgaria" 1981;
+   *                    Shumen Brewery 1882, maan ensimmäinen)
+   *   Targovishte    — Targovishte (yksi Euroopan suurimmista
+   *                    lasitehtaista, 1 500 työntekijää)
+   *   Varna          — Roman Thermae (Varna) (Balkanin suurimmat, holvit
+   *                    20–22 m)
+   *   Veliko Tarnovo — Tsarevets (fortress) (ääni- ja valonäytös)
+   *   Vidin          — Baba Vida ("the only entirely preserved medieval
+   *                    castle in the country")
+   *   Vratsa         — Rogozen Treasure (1985, traktorinkuljettaja,
+   *                    yli 20 kg; Vratsan museo ja Sofian kansallismuseo)
+   */
+  BGR: {
+    Blagoevgrad: {
+      lyhyt: 'Pirinin rinteellä Melnik on Bulgarian pienin kaupunki, alle 400 asukasta, ja sen takana kohoavat sateen ja tuulen veistämät hiekkapyramidit.',
+    },
+    Burgas: {
+      lyhyt: 'Burgasin pohjoispuolella Atanasovskojärvestä nostetaan yhä merisuolaa, ja syksyisin järven yli kulkee lintujen muuttoreitti Via Pontica.',
+    },
+    Dobrich: {
+      lyhyt: 'Baltšikin rannalla on Romanian kuningatar Marian kesäpalatsi, ja sen puutarhassa kasvaa ulkona yksi Euroopan suurimmista kaktuskokoelmista.',
+    },
+    Gabrovo: {
+      lyhyt: 'Gabrovoa kutsutaan huumorin pääkaupungiksi: kaupunkilaisten kitsaudesta kerrotaan vitsejä, ja kaupungissa on oma Huumorin ja satiirin talo.',
+    },
+    'Grad Sofiya': {
+      lyhyt: 'Sofian keskustaa hallitsevat Aleksanteri Nevskin katedraalin kullatut kupolit, ja kirkkoon mahtuu kerralla viisituhatta ihmistä.',
+    },
+    Haskovo: {
+      lyhyt: 'Haskovon kukkulalla seisoo 32-metrinen Jumalanäidin patsas, joka on päässyt Guinnessin ennätysten kirjaan maailman korkeimpana laatuaan.',
+    },
+    Yambol: {
+      lyhyt: 'Jambolin keskustassa seisoo yli viisisataa vuotta vanha katettu kauppahalli Bezisten, joka on nykyään museo.',
+    },
+    Kardzhali: {
+      lyhyt: 'Kardžalin lähellä kalliokukkulalla on Perperikon, Balkanin suurin megaliittikohde, jonka vanhimmat jäljet ovat noin 7 000 vuoden takaa.',
+    },
+    Kyustendil: {
+      lyhyt: 'Rilan juurella Sapareva Banjan keskustassa suihkuaa geysir, jonka mineraalivesi on kuumimmillaan 103-asteista.',
+    },
+    Lovech: {
+      lyhyt: 'Devetaškin luolan suu on 35 metriä leveä, ja sen holveissa elää lähes 30 000 lepakkoa – luolassa on kuvattu myös Hollywood-elokuva.',
+    },
+    Montana: {
+      lyhyt: 'Tšiprovtsissa kudotaan yhä käsin kelim-mattoja, ja kylän mattoperinne otettiin Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
+    },
+    Pazardzhik: {
+      lyhyt: 'Rodopien Velingradia kutsutaan Balkanin kylpyläpääkaupungiksi, sillä kaupungissa ja sen ympärillä on yli 90 mineraalilähdettä.',
+    },
+    Pernik: {
+      lyhyt: 'Pernik kasvoi 1900-luvulla hiilikaivosten varaan, ja kaupungissa voi yhä laskeutua maanalaiseen kaivosmuseoon.',
+    },
+    Pleven: {
+      lyhyt: 'Plevenin panoraamamuseossa 115 metriä pitkä maalaus kiertää katsojan ympäri ja kuvaa kaupungin piiritystä vuodelta 1877.',
+    },
+    Plovdiv: {
+      lyhyt: 'Plovdiv oli Euroopan kulttuuripääkaupunki 2019, ja sen vanhoista Kapanan käsityöläiskujista on tullut kahviloiden ja gallerioiden kortteli.',
+    },
+    Razgrad: {
+      lyhyt: 'Razgradin arkeologisessa puistossa on Abrituksen raunioita; lähistöllä gootit löivät Rooman armeijan vuonna 251, ja keisari Decius kaatui.',
+    },
+    Ruse: {
+      lyhyt: 'Rusesta kulkee Tonavan yli Romaniaan yli kaksikilometrinen Ystävyyden silta, joka oli vuosikymmeniä maiden ainoa yhteinen silta.',
+    },
+    Silistra: {
+      lyhyt: 'Tonavan rannan Srebarnajärvellä pesivät kiharapelikaanit, ja järven luonnonsuojelualue kuuluu Unescon maailmanperintöön.',
+    },
+    Sliven: {
+      lyhyt: 'Slivenin yllä kohoavat Siniset kivet, luonnonpuisto, jossa kasvaa yli tuhat kasvilajia – kaupunki tunnetaan myös puuskaisesta bora-tuulestaan.',
+    },
+    Smolyan: {
+      lyhyt: 'Trigradin rotkossa joki syöksyy vesiputouksena Paholaisen kurkun luolaan, ja veden mukana heitetyt puut ovat kadonneet sinne jäljettömiin.',
+    },
+    Sofia: {
+      lyhyt: 'Koprivštitsan museokaupungissa järjestetään noin viiden vuoden välein Bulgarian kansallinen kansanperinnefestivaali, jo vuodesta 1965.',
+    },
+    'Stara Zagora': {
+      lyhyt: 'Kazanlakin traakialaisen hautakammion seinissä on yli 2 000 vuotta vanhoja maalauksia, ja hauta on Unescon maailmanperintöä.',
+    },
+    Shumen: {
+      lyhyt: 'Šumenin ylängöllä seisoo 1981 rakennettu jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi, ja kaupungin panimo on maan vanhin.',
+    },
+    Targovishte: {
+      lyhyt: 'Targovištessa toimii yksi Euroopan suurimmista lasitehtaista, joka työllistää noin 1 500 ihmistä.',
+    },
+    Varna: {
+      lyhyt: 'Varnan keskustassa ovat Balkanin suurimmat roomalaiset kylpylät, joiden holvit kohosivat aikanaan yli 20 metrin korkeuteen.',
+    },
+    'Veliko Tarnovo': {
+      lyhyt: 'Veliko Tarnovon keskiaikainen Tsarevetsin linnoitus herää iltaisin eloon ääni- ja valonäytöksessä, kun muurit valaistaan värein.',
+    },
+    Vidin: {
+      lyhyt: 'Tonavan rannalla Vidinissä seisoo Baba Vida, Bulgarian ainoa kokonaan säilynyt keskiaikainen linna.',
+    },
+    Vratsa: {
+      lyhyt: 'Rogozenin kylästä löytyi 1985 yli 20 kilon traakialainen hopea-aarre, kun traktorinkuljettaja kaivoi puutarhaansa kasteluputkea varten.',
+    },
+  },
+  /*
+   * HRV (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.HRV:n tunnuksia TÄSMÄLLEEN (osa ilman diakriittejä,
+   * esim. "Dubrovacko-Neretvanska"). Vain `lyhyt`. Dubrovnik-Neretvan
+   * teksti välttää Dubrovnikin fokusvirran aiheet (muurit, Lokrum,
+   * Sponza, Ragusan veronmaksu) ja Istrian teksti Pulan areenan.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026, ellei toisin mainita):
+   *   Bjelovarsko-bilogorska — Daruvar (tšekkiläisvähemmistön keskus,
+   *                            lähteet roomalaisajalta)
+   *   Brodsko-Posavska       — Brod Fortress (1715–1780, 4 000 sotilasta,
+   *                            150 tykkiä)
+   *   Dubrovacko-Neretvanska — Time Out Croatia "Neretva mandarins" ja
+   *                            Croatia Week (yli miljoona puuta, 80 %
+   *                            Kroatian mandariineista); Opuzen
+   *   Istarska               — Hum, Istria County (52 as. 2021, "one of
+   *                            the smallest towns in the world")
+   *   Karlovacka             — Karlovac ("town on four rivers", Aquatika
+   *                            22.10.2016)
+   *   Koprivničko-Križevačka — Vegeta (condiment) (Podravka, Koprivnica,
+   *                            myynnissä 1959)
+   *   Krapinsko-Zagorska     — Krapina (Hušnjakovo 1899, yli 800 fossiilia,
+   *                            museo löytöpaikalla)
+   *   Licko-Senjska          — Nikola Tesla (syntyi Smiljanissa Gospićin
+   *                            lähellä; muistokeskus)
+   *   Medimurska             — Međimurje County (pohjoisin; pienin, kun
+   *                            Zagrebin kaupunkia ei lasketa)
+   *   Osjecko-Baranjska      — Kopački Rit (Draava ja Tonava, noin 260
+   *                            lintulajia)
+   *   Primorsko-Goranska     — Rijeka (Whiteheadin torpedo 1866; Euroopan
+   *                            kulttuuripääkaupunki 2020)
+   *   Šibensko-Kninska       — Šibenik (Pyhän Jaakobin katedraali 2000,
+   *                            Pyhän Nikolauksen linnoitus 2017)
+   *   Sisacko-Moslavacka     — storkvillages.net "Čigoć, Croatia" ja
+   *                            Kuwait Times (EuroNatur 1994, yli 300
+   *                            haikaraa, enemmän kuin asukkaita)
+   *   Splitsko-Dalmatinska   — Sinjska alka (vuodesta 1715, Unesco 2010)
+   *   Varaždinska            — Varaždin (pääkaupunki 1756–1776, Špancirfest)
+   *   Viroviticko-Podravska  — Papuk (Kroatian ensimmäinen geopuisto,
+   *                            Euroopan geopuistoverkostoon 2007)
+   *   Vukovarsko-Srijemska   — Vukovar water tower (yli 600 osumaa 1991,
+   *                            muistomerkkinä avattu 30.10.2020)
+   *   Zadarska               — Sea organ (Nikola Bašić, 15.4.2005)
+   *   Zagrebacka             — Samobor (samoborska kremšnita)
+   *   Grad Zagreb            — Museum of Broken Relationships (2010;
+   *                            Kenneth Hudson -palkinto 2011)
+   */
+  HRV: {
+    'Bjelovarsko-bilogorska': {
+      lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
+    },
+    'Brodsko-Posavska': {
+      lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
+    },
+    'Dubrovacko-Neretvanska': {
+      lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
+    },
+    Istarska: {
+      lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
+    },
+    Karlovacka: {
+      lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
+    },
+    'Koprivničko-Križevačka': {
+      lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
+    },
+    'Krapinsko-Zagorska': {
+      lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
+    },
+    'Licko-Senjska': {
+      lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
+    },
+    Medimurska: {
+      lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
+    },
+    'Osjecko-Baranjska': {
+      lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
+    },
+    'Primorsko-Goranska': {
+      lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
+    },
+    'Šibensko-Kninska': {
+      lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
+    },
+    'Sisacko-Moslavacka': {
+      lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
+    },
+    'Splitsko-Dalmatinska': {
+      lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
+    },
+    'Varaždinska': {
+      lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
+    },
+    'Viroviticko-Podravska': {
+      lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
+    },
+    'Vukovarsko-Srijemska': {
+      lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
+    },
+    Zadarska: {
+      lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
+    },
+    Zagrebacka: {
+      lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
+    },
+    'Grad Zagreb': {
+      lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
+    },
+  },
+  /*
+   * MNE (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MNE:n tunnuksia TÄSMÄLLEEN (kunnat; "Nikšic" ilman
+   * ć-kirjainta kuten datassa). Vain `lyhyt`. Bijelo Poljen tekstissä
+   * EI käytetä Miroslavin evankeliumia, koska en-Wikipedian artikkelit
+   * ovat sen kirjoituspaikasta ristiriidassa (Bijelo Polje vs. Kotor).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Andrijevica  — Komovi (Kom Kučki 2 487 m; Kolašin ja Andrijevica)
+   *   Bar          — Stara Maslina (yli 2 000 v, Stari Bar)
+   *   Berane       — Berane (Đurđevi Stupovi 1100-luvun lopulla, Lim)
+   *   Bijelo Polje — Bijelo Polje (Lim; islam 49,1 %, ortodoksit 45,2 %)
+   *   Budva        — Sveti Stefan (tombolo, hotelliksi Jugoslavian aikana)
+   *   Cetinje      — Cetinje ("Old Royal Capital", Sininen palatsi)
+   *   Danilovgrad  — Ostrog Monastery (1–1,2 miljoonaa kävijää vuodessa)
+   *   Herceg Novi  — Herceg Novi (mimosajuhla, JUK Herceg-Fest)
+   *   Kolašin      — Biogradska Gora (aarniometsä, yli 500-vuotiaita puita)
+   *   Kotor        — Kotor (kissat symbolina, kissamuseo, Trg od mačaka)
+   *   Mojkovac     — Mojkovac (Sinjajevinan laitumet, lampaat)
+   *   Nikšic       — Trebjesa Brewery (1896, maan suurin panimo)
+   *   Plav         — Plav Lake (suurin jäätikköjärvi, lähteet)
+   *   Pljevlja     — Husein-paša's Mosque (1573–1594, minareetti 42 m)
+   *   Plužine      — Piva Monastery (siirretty 1982, yli 1 000
+   *                  freskokappaletta)
+   *   Podgorica    — Podgorica (Titograd 1946–1992, Ribnica ja Morača)
+   *   Rožaje       — Rožaje (noin 1 014 m, Ibarin lähde)
+   *   Šavnik       — Šavnik (perustettu 1861, 364 as. 2023, kolme jokea)
+   *   Tivat        — Tivat (arsenaali 1889, Porto Montenegro)
+   *   Ulcinj       — Velika Plaža (12 km, Montenegron pisin, leijalautailu)
+   *   Žabljak      — Žabljak (1 456 m, "the highest situated Balkan town",
+   *                  Mustajärvi)
+   */
+  MNE: {
+    Andrijevica: {
+      lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+    },
+    Bar: {
+      lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+    },
+    Berane: {
+      lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+    },
+    'Bijelo Polje': {
+      lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+    },
+    Budva: {
+      lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+    },
+    Cetinje: {
+      lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+    },
+    Danilovgrad: {
+      lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+    },
+    'Herceg Novi': {
+      lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+    },
+    'Kolašin': {
+      lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+    },
+    Kotor: {
+      lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+    },
+    Mojkovac: {
+      lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+    },
+    'Nikšic': {
+      lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+    },
+    Plav: {
+      lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+    },
+    Pljevlja: {
+      lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+    },
+    'Plužine': {
+      lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+    },
+    Podgorica: {
+      lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+    },
+    'Rožaje': {
+      lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+    },
+    'Šavnik': {
+      lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+    },
+    Tivat: {
+      lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+    },
+    Ulcinj: {
+      lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+    },
+    'Žabljak': {
+      lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+    },
+  },
+  /*
+   * SRB (Sisältökirjuri 25.9.2026, erä 2C, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SRB:n tunnuksia
+   * TÄSMÄLLEEN (piirit ilman diakriitteja osassa, esim. "Branicevski").
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja matkailusivut, tarkistettu
+   * 25.9.2026):
+   *   Grad Beograd      — Belgrade Fortress (Kalemegdan, Savan ja Tonavan
+   *                       yhtymäkohta)
+   *   Borski            — Lepenski Vir (Boljetin, Majdanpekin kunta;
+   *                       siirretty 1971 ~100 m alavirtaan ja 30 m ylemmäs
+   *                       Rautaportti I:n padon alta)
+   *   Branicevski       — Viminacium (Ylä-Moesian pääkaupunki, legioonaleiri,
+   *                       Kostolac/Požarevac)
+   *   Južno-Backi       — Petrovaradin Fortress (kellon viisarit
+   *                       käänteiset: iso viisari = tunnit, kalastajia varten)
+   *   Jablanicki        — Leskovac (Roštiljijada syyskuun alussa vuodesta 1989)
+   *   Srednje-Banatski  — Carska Bara (17 km Zrenjaninista etelään,
+   *                       240 lintulajia, ~50 000 tundrahanhea talvella)
+   *   Kolubarski        — Valjevo (Tešnjar, vanha kauppakortteli
+   *                       Kolubaran rannalla)
+   *   Zapadno-Backi     — Franz Eisenhut: Battle of Senta (7 × 4 m,
+   *                       Somborin Županija-talo, Serbian suurin öljymaalaus;
+   *                       serbia.com, visitsombor.org)
+   *   Macvanski         — Tršić (Loznica; Vuk Karadžićin syntymäkylä)
+   *   Moravicki         — Guča Trumpet Festival (Lučani, 1961 alkaen,
+   *                       elokuun alussa, 2024 ~150 000 kävijää/päivä)
+   *   Nišavski          — Niš / Mediana (Konstantinus Suuren syntymäkaupunki
+   *                       Naissus, huvila Mediana)
+   *   Severno-Banatski  — Kikinda (sarvipöllöjen talviyöpymät kaupungin
+   *                       puistoissa, ennätys 743 lintua 2009, "Serbian
+   *                       owl capital")
+   *   Pcinjski          — Vranjska Banja (96 °C, Serbian kuumimmat lähteet)
+   *   Pirotski          — Pirot carpet (maantieteellinen alkuperäsuoja 2002,
+   *                       122 ornamenttia, osuuskunta 1902)
+   *   Podunavski        — Smederevo Fortress (Đurađ Branković, 1400-luku)
+   *   Severno-Backi     — Subotica City Hall (jugend), Palić
+   *   Pomoravski        — Manasija (Despotovac, Stefan Lazarević,
+   *                       1407–1418, linnoitusmuurit). HUOM datavirhe:
+   *                       maakunnat-nimet.js antaa nimiFi "Rasina", vaikka
+   *                       tunnus on Pomoravski (Pomoravlje).
+   *   Raški             — Studenica (Kraljevo, perustettu 1190, Unesco 1986)
+   *   Južno-Banatski    — Deliblato Sands ("the largest sandy terrain in
+   *                       Europe", "European Sahara", Kovin)
+   *   Sremski           — Fruška Gora National Park (1960, Serbian vanhin,
+   *                       16 toimivaa luostaria)
+   *   Šumadijski        — Stellantis Kragujevac (Fiat Grande Panda,
+   *                       sähkö/hybridi/bensiini, 2024–)
+   *   Toplicki          — Đavolja Varoš (Kuršumlija, ~200 maapyramidia)
+   *   Zajecarski        — Gamzigrad / Felix Romuliana (Galerius, Unesco 2007)
+   *   Zlatiborski       — Šargan Eight (Mokra Gora, kapearaiteinen museorata)
+   */
+  SRB: {
+    'Grad Beograd': {
+      lyhyt: 'Kalemegdanin linnoituksen muureilta keskellä Belgradia näkee kohdan, jossa Sava laskee Tonavaan.',
+    },
+    Borski: {
+      lyhyt: 'Lepenski Virin kivikautinen kylä siirrettiin 1971 ylemmäs rinteeseen, kun Rautaportin pato alkoi nostaa Tonavan pintaa.',
+    },
+    Branicevski: {
+      lyhyt: 'Požarevacin lähellä kaivetaan esiin Viminaciumia, joka oli Rooman Ylä-Moesian maakunnan pääkaupunki ja legioonan leiri.',
+    },
+    'Južno-Backi': {
+      lyhyt: 'Novi Sadin Petrovaradinin linnoituksen kellossa iso viisari näyttää tunnit, jotta Tonavan kalastajat erottivat ajan kaukaa.',
+    },
+    Jablanicki: {
+      lyhyt: 'Leskovacin pääkatu suljetaan joka syyskuun alussa Roštiljijada-grillijuhlille, joita on pidetty vuodesta 1989.',
+    },
+    'Srednje-Banatski': {
+      lyhyt: 'Zrenjaninin eteläpuolella on Carska baran kosteikko, jossa on tavattu noin 240 lintulajia ja talvella kymmeniä tuhansia hanhia.',
+    },
+    Kolubarski: {
+      lyhyt: 'Valjevon Tešnjar on vanha kauppakortteli Kolubara-joen rannalla, ja sen kivetyillä kujilla istutaan yhä kahviloissa.',
+    },
+    'Zapadno-Backi': {
+      lyhyt: 'Somborin maakuntatalon juhlasalissa riippuu Sentan taistelu, seitsemän metriä leveä öljymaalaus – Serbian suurin.',
+    },
+    Macvanski: {
+      lyhyt: 'Tršićin kylässä syntyi Vuk Karadžić, joka uudisti serbian kirjakielen niin, että sitä kirjoitetaan niin kuin puhutaan.',
+    },
+    Moravicki: {
+      lyhyt: 'Gučan kylässä soi joka elokuu trumpettifestivaali, joka alkoi 1961 neljän orkesterin kisana ja vetää nyt satoja tuhansia kuulijoita.',
+    },
+    'Nišavski': {
+      lyhyt: 'Niš oli roomalaisten Naissus, jossa syntyi keisari Konstantinus Suuri – hänen Mediana-huvilansa rauniot ovat kaupungin laidalla.',
+    },
+    'Severno-Banatski': {
+      lyhyt: 'Kikindan puistojen puihin kerääntyy talveksi satoja sarvipöllöjä, ja kaupunkia kutsutaan Serbian pöllöpääkaupungiksi.',
+    },
+    Pcinjski: {
+      lyhyt: 'Vranjska Banjan lähteistä purkautuu 96-asteista vettä, ja ne ovat Serbian kuumimmat.',
+    },
+    Pirotski: {
+      lyhyt: 'Pirotissa kudotaan yhä kilim-mattoja, ja niiden yli sata perinteistä kuviota on suojattu alkuperämerkinnällä vuodesta 2002.',
+    },
+    Podunavski: {
+      lyhyt: 'Smederevon linnoitus rakennettiin Tonavan rantaan 1400-luvulla despootti Đurađ Brankovićin pääkaupungiksi, ja sen tornit seisovat yhä.',
+    },
+    'Severno-Backi': {
+      lyhyt: 'Subotican kaupungintalo on unkarilaista jugendia, ja läheisen Palićjärven rannalla on saman aikakauden kylpyläpaviljonkeja.',
+    },
+    Pomoravski: {
+      lyhyt: 'Despotovacin Manasijan luostaria ympäröivät linnoitusmuurit ja tornit – despootti Stefan Lazarević rakennutti sen 1400-luvun alussa.',
+    },
+    'Raški': {
+      lyhyt: 'Kraljevon lähellä oleva Studenican luostari perustettiin 1100-luvun lopulla, ja sen marmorikirkko on Unescon maailmanperintöä.',
+    },
+    'Južno-Banatski': {
+      lyhyt: 'Deliblaton hiekka-alue on Euroopan suurin sisämaan hiekkakenttä, ja sen dyynejä kutsutaan Euroopan Saharaksi.',
+    },
+    Sremski: {
+      lyhyt: 'Fruška Gora on Serbian vanhin kansallispuisto, ja sen metsäisillä rinteillä toimii yhä kuusitoista ortodoksista luostaria.',
+    },
+    'Šumadijski': {
+      lyhyt: 'Kragujevacin autotehtaalla kootaan nykyään Fiatin Grande Panda -malleja, myös sähköautoina.',
+    },
+    Toplicki: {
+      lyhyt: 'Kuršumlijan lähellä on Đavolja varoš eli Paholaisen kaupunki: parisataa maapyramidia, joiden huipuilla keikkuu kivilohkareita.',
+    },
+    Zajecarski: {
+      lyhyt: 'Zaječarin lähellä on Felix Romuliana, keisari Galeriuksen palatsi, joka on ollut Unescon maailmanperintöä vuodesta 2007.',
+    },
+    Zlatiborski: {
+      lyhyt: 'Mokra Goran Šarganin kasi on kapearaiteinen museorata, joka nousee vuoren rinnettä kahdeksikon muotoisena silmukkana.',
+    },
+  },
+  /*
+   * BIH (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BIH:n tunnuksia TÄSMÄLLEEN (sekaisin federaation
+   * kantoneita, Republika Srpskan alueita ja Brčkon piiri, englanninkieliset
+   * tunnukset kuten "Central Bosnia"). Tekstit kuvaavat maisemaa ja
+   * kulttuuria, eivät sotaa tai entiteettirajoja. Sarajevon fokusvirran
+   * aiheet (Mostarin silta, olympialaiset/Bjelašnica, Livnon villihevoset,
+   * haggada) on vältetty. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Banja Luka          — Banja Luka (Vrbas, Kastel)
+   *   Bijeljina           — Stanišići (etnokylä 2003, vanhoja taloja eri
+   *                         puolilta entistä Jugoslaviaa)
+   *   Bosnian Podrinje    — Goražde printing house (1519–1523, ensimmäinen
+   *                         nykyisen BiH:n alueella, kirkkoslaavi)
+   *   Brčko Distrikt      — Brčko District (Sava, oma hallinto)
+   *   Central Bosnia      — Jajce (Plivan putous Vrbakseen, linnoitus)
+   *   Doboj               — Doboj (linnoitus Bosnan laaksossa,
+   *                         rautatieristeys)
+   *   Foča                — Sutjeska National Park (Perućica, Maglić
+   *                         2 386 m, BiH:n korkein)
+   *   Herzegovina-Neretva — Blagaj Tekke / Vrelo Bune (~30 m³/s, yksi
+   *                         Euroopan suurimmista lähteistä, tekke ~1520)
+   *   Posavina            — Posavina Canton (pienin kantoni, 330,85 km²)
+   *   Sarajevo            — Sebilj (Baščaršija, paluulegenda)
+   *   Sarajevo-romanija   — Jahorina (BiH:n suurin laskettelukeskus,
+   *                         Ogorjelica 1 916 m)
+   *   Trebinje            — Trebinje (yli satavuotiaat plataanit torilla,
+   *                         Trebišnjica)
+   *   Tuzla               — Tuzla (Pannonian suolajärvet 2003–2012,
+   *                         nimi = turkin 'suolakaivos')
+   *   Una-Sana            — Štrbački buk (25 m, Unan kansallispuiston
+   *                         korkein putous, Kroatian rajalla)
+   *   Vlasenica           — Birač (region); Drina rajajokena. Neutraali
+   *                         maisemakuvaus tarkoituksella.
+   *   West Bosnia         — Livno cheese (1886, sveitsiläiset juustomestarit,
+   *                         gruyèren menetelmä)
+   *   West Herzegovina    — Kravica (Trebižat, Ljubuški)
+   *   Zenica-Doboj        — Zenica (teräksen tuotanto vuodesta 1892)
+   */
+  BIH: {
+    'Banja Luka': {
+      lyhyt: 'Banja Lukan keskustan halki virtaa Vrbas-joki, jonka rannalla seisoo Kastelin linnoitus ja jonka koskissa lasketaan kumiveneillä.',
+    },
+    Bijeljina: {
+      lyhyt: 'Bijeljinan laitaan on koottu Stanišićin etnokylä, jonne on tuotu vanhoja puutaloja ja myllyjä eri puolilta entistä Jugoslaviaa.',
+    },
+    'Bosnian Podrinje': {
+      lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
+    },
+    'Brčko Distrikt': {
+      lyhyt: 'Brčko on Sava-joen satamakaupunki, ja piirillä on oma pormestarinsa, parlamenttinsa ja hallintonsa.',
+    },
+    'Central Bosnia': {
+      lyhyt: 'Jajcen keskustassa Pliva-joki syöksyy vesiputouksena Vrbakseen, ja putouksen yllä kohoaa vanhan linnoituksen muuri.',
+    },
+    Doboj: {
+      lyhyt: 'Dobojn linnoitus valvoo mäeltä Bosna-joen laaksoa, ja kaupunki on maan rautateiden tärkeä risteysasema.',
+    },
+    'Foča': {
+      lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
+    },
+    'Herzegovina-Neretva': {
+      lyhyt: 'Blagajssa Buna-joki pulppuaa kallion alta yhtenä Euroopan suurimmista lähteistä, ja sen partaalla seisoo 1500-luvun dervissitalo.',
+    },
+    Posavina: {
+      lyhyt: 'Posavina on maan pienin kantoni, vain 331 neliökilometriä, ja sen pohjoisrajana virtaa Sava-joki.',
+    },
+    Sarajevo: {
+      lyhyt: 'Sarajevon Baščaršijan puinen Sebilj-kaivo on vanhankaupungin tunnus, ja tarun mukaan siitä juonut palaa kaupunkiin.',
+    },
+    'Sarajevo-romanija': {
+      lyhyt: 'Jahorina on Bosnia ja Hertsegovinan suurin laskettelukeskus, ja sen korkein huippu Ogorjelica nousee 1 916 metriin.',
+    },
+    Trebinje: {
+      lyhyt: 'Trebinjen vanhaa toria varjostavat yli satavuotiaat plataanit, ja kaupungin halki virtaa kirkas Trebišnjica-joki.',
+    },
+    Tuzla: {
+      lyhyt: 'Tuzla seisoo suolakerrosten päällä, ja keskustaan on kaivettu suolavetisiä uimajärviä – nimikin tarkoittaa turkiksi suolakaivosta.',
+    },
+    'Una-Sana': {
+      lyhyt: 'Una-joen Štrbački buk syöksyy 25 metrin korkeudelta Kroatian rajalla, ja se on Unan kansallispuiston korkein vesiputous.',
+    },
+    Vlasenica: {
+      lyhyt: 'Vlasenican seutu on metsäistä ylänköä, joka laskeutuu idässä Drinan laaksoon – joki on raja Serbian kanssa.',
+    },
+    'West Bosnia': {
+      lyhyt: 'Livnon juustoa tehdään yhä gruyèren tapaan, samalla menetelmällä, jonka sveitsiläiset juustomestarit opettivat seudulle 1886.',
+    },
+    'West Herzegovina': {
+      lyhyt: 'Trebižat-joen Kravican vesiputous valuu leveänä kaarena altaaseen, jossa kesäisin uidaan.',
+    },
+    'Zenica-Doboj': {
+      lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
+    },
+  },
+  /*
+   * MKD (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MKD:n englanninkielisiä tilastoaluetunnuksia
+   * TÄSMÄLLEEN ("Eastern", "Southwestern" ym.). Kokinon observatorio
+   * hylättiin, koska sen tähtitieteellinen tulkinta on kiistanalainen.
+   * Lähteet (en-Wikipedia ja matkailusivut, tarkistettu 25.9.2026):
+   *   Eastern      — Kočani Valley (maan suurin riisinviljelyalue)
+   *   Southeastern — Strumica Carnival (Evliya Çelebi 1670)
+   *   Northeastern — Kratovo (sammuneen tulivuoren kraatteri, kuusi tornia,
+   *                  kivisillat)
+   *   Southwestern — Lake Ohrid (yli miljoona vuotta, ohridintaimen
+   *                  Salmo letnica endeeminen)
+   *   Pelagonia    — Heraclea Lyncestis (Filippos II, 2 km Bitolasta,
+   *                  basilikoiden mosaiikit)
+   *   Polog        — St Nicholas Church, Mavrovo (1850–1857, tekojärvi 1953,
+   *                  nousee esiin kuivuudessa)
+   *   Skopje       — Matka Canyon (nimi = kohtu, Vrelon luola, Saraj)
+   *   Vardar       — Stobi (Vardarin ja Crnan yhtymäkohta, Gradsko)
+   */
+  MKD: {
+    Eastern: {
+      lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+    },
+    Southeastern: {
+      lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+    },
+    Northeastern: {
+      lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+    },
+    Southwestern: {
+      lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+    },
+    Pelagonia: {
+      lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+    },
+    Polog: {
+      lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+    },
+    Skopje: {
+      lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+    },
+    Vardar: {
+      lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+    },
+  },
+  /*
+   * ALB (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.ALB:n prefektuuritunnuksia TÄSMÄLLEEN (diakriitein,
+   * esim. "Dibër", "Tiranë"). Lähteet (en-Wikipedia ja matkailusivut,
+   * tarkistettu 25.9.2026):
+   *   Berat       — Berat ("tuhannen ikkunan kaupunki")
+   *   Dibër       — Korab (2 764 m, Albanian ja Pohjois-Makedonian korkein)
+   *   Durrës      — Amphitheatre of Durrës (löydetty 1966, Balkanin
+   *                 niemimaan suurin roomalainen amfiteatteri)
+   *   Elbasan     — Dita e Verës (14.3., ballokume)
+   *   Fier        — Apollonia (Illyria) (Octavianus opiskeli siellä 44 eaa.)
+   *   Gjirokastër — Gjirokastër (liuskekivikatot, Ismail Kadaren syntymäkaupunki)
+   *   Korçë       — Korçë (ensimmäinen albaniankielinen koulu 1887,
+   *                 Birra Korça)
+   *   Kukës       — Kukës (vanha kaupunki Fierzan altaan alle 1976)
+   *   Lezhë       — Skanderbeg Mausoleum (Pyhän Nikolauksen kirkko, 1468)
+   *   Shkodër     — Lake Skadar (Balkanin suurin järvi), Rozafa Castle
+   *                 (legenda muuriin muuratusta äidistä)
+   *   Tiranë      — Bunk'Art 1 (viisikerroksinen bunkkeri, 106 huonetta)
+   *   Vlorë       — Albanian Declaration of Independence (28.11.1912),
+   *                 Independence Monument, Flag Square
+   */
+  ALB: {
+    Berat: {
+      lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
+    },
+    'Dibër': {
+      lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
+    },
+    'Durrës': {
+      lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
+    },
+    Elbasan: {
+      lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
+    },
+    Fier: {
+      lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
+    },
+    'Gjirokastër': {
+      lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
+    },
+    'Korçë': {
+      lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
+    },
+    'Kukës': {
+      lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
+    },
+    'Lezhë': {
+      lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
+    },
+    'Shkodër': {
+      lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
+    },
+    'Tiranë': {
+      lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
+    },
+    'Vlorë': {
+      lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
+    },
+  },
+  /*
+   * CYP (Sisältökirjuri 25.9.2026, erä 2C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CYP:n piiritunnuksia TÄSMÄLLEEN (viisi piiriä,
+   * Kyreniaa ei datassa). Tekstit kuvaavat luontoa ja kulttuuria, eivät
+   * saaren jakoa; Famagustan teksti on Kap Grecosta. Lähteet
+   * (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Famagusta — Cape Greco (merenrantaluolat, luonnonkaaret, sukellus)
+   *   Larnaca   — Larnaca Salt Lake (flamingot talvella), Hala Sultan Tekke
+   *   Limassol  — Commandaria (vanhin yhä valmistettava nimetty viini,
+   *               Limassolin piirin viinikylät)
+   *   Nicosia   — Kykkos Monastery (Nikosian piiri, Troodos, Luukkaan
+   *               maalaamaksi kerrottu ikoni)
+   *   Paphos    — Petra tou Romiou (Afroditen syntymäpaikka tarussa)
+   */
+  CYP: {
+    Famagusta: {
+      lyhyt: 'Kap Grecon niemellä meri on kovertanut kalkkikiveen luolia ja kallioportteja, ja sen kirkkaassa vedessä sukelletaan.',
+    },
+    Larnaca: {
+      lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
+    },
+    Limassol: {
+      lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
+    },
+    Nicosia: {
+      lyhyt: 'Troodoksen rinteillä Kykkosin luostari vaalii Neitsyt Marian ikonia, jonka perimätieto sanoo evankelista Luukkaan maalaamaksi.',
+    },
+    Paphos: {
+      lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
+    },
+  },
+  /*
+   * MOLDOVA (MDA) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 39 aluetta.
+   * Avaimet kopioitu koneellisesti MAAKUNNAT_KAIKKI.MDA:sta: data sekoittaa
+   * cedilla-merkit (ş U+015F, ţ U+0163) ja pilkkumerkit (ș U+0219), ja osa
+   * avaimista on ilman diakriittejä (Causeni, Donduseni, Hîncesti) — avaimet
+   * pidetään datan mukaisina, tekstit käyttävät oikeaa kirjoitusasua.
+   * Natural Earthin rajaukset: "Stîngă Nistrului" = Dubăsarin piiri (name_alt
+   * Dubăsari), "Transnistria" = pieni alue Dubăsarin kaupungin kohdalla,
+   * "Comrat" = koko Gagauzia, "Bender" ulottuu itään Dnestrin yli. Datassa on
+   * kaksi "Rezina"-aluetta (toinen on Dnestrin itäpuolinen Rîbnițan seutu);
+   * teksti kuvaa Rezinan piiriä. Dnestrin itärannan ja Gagauzian tekstit ovat
+   * neutraaleja (luonto, historia, kulttuuri). Vain `lyhyt`. Lähteet
+   * (en/ro-Wikipedia, tarkistettu 25.9.2026):
+   *   Anenii Noi       — Skirmish at Bender (Kaarle XII:n leiri Varnițassa
+   *                      7/1711–1.2.1713); Varnița (Anenii Noin piiri)
+   *   Bălţi            — Bălți (nimi = lätäköt; Răuțel laskee Răutiin)
+   *   Basarabeasca     — Basarabeasca (Romanovka 1846, nimi 11.9.1957)
+   *   Bender           — Tighina Fortress (Süleyman 1538, Sinan, 10
+   *                      bastionia, valmis 1541)
+   *   Briceni          — Briceni District; Emil Racoviță Cave (Criva, löydetty
+   *                      1959, noin 90 km)
+   *   Cahul            — Giurgiulești (Tonavaa noin 480 m, ainoa Tonavan satama)
+   *   Călărași         — Hîrjauca Monastery (1740, munkit Neamțista)
+   *   Camenca          — Dniester Sanatorium (ampeloterapia)
+   *   Cantemir         — ro: Cantemir, Cantemir (nimi 6.4.1973, 300 v.)
+   *   Causeni          — Căușeni (kirkko yli 0,91 m maan alla, Moldovan ainoa
+   *                      keskiaikainen fresko)
+   *   Chişinău         — Cricova (winery) (120 km teitä, Chișinăun kunnassa)
+   *   Cimişlia         — ro: Râpele de la Cimișlia (fossiilit 1929 alkaen, yli
+   *                      40 selkärankaislajia, 8–6 milj. v.)
+   *   Comrat           — Gagauzia (turkkilainen kieli, 95,9 % ortodokseja)
+   *   Criuleni         — ro: Peștera Surprizelor (1 700 m, toiseksi pisin)
+   *   Donduseni        — Dondușeni District (Țaulin puisto, Moldovan suurin,
+   *                      5 km Dondușenista)
+   *   Drochia          — Drochia (Moldovan suurin sokeritehdas); Drochia
+   *                      District (mustamulta noin 80 %)
+   *   Edineţ           — Edineț District (toltry 15–20 milj. v., Brînzenin
+   *                      riutat ja luolat)
+   *   Făleşti          — Gheorghe Vrabie (Făleștin piiristä; vaakuna, leu)
+   *   Floreşti         — Japca Monastery (ainoa Bessarabian luostari, jota
+   *                      neuvostovalta ei sulkenut)
+   *   Glodeni          — Glodeni District (Pădurea Domnească, visentit
+   *                      Puolasta 2006, yli 3 500 kumpua)
+   *   Grigoriopol      — Grigoriopol (armenialaisten siirtokunta 1792)
+   *   Hîncesti         — Manuc Bei (vetäytyi Hînceștiin, poika rakensi palatsin)
+   *   Ialoveni         — Mileștii Mici (winery) (Guinness 8/2005, lähes
+   *                      2 milj. pulloa)
+   *   Leova            — ro: Raionul Leova (Valul lui Traian); Prut rajajokena
+   *   Nisporeni        — Bălănești Hill (430 m, Moldovan korkein kohta)
+   *   Ocniţa           — Naslavcea (Moldovan pohjoisin kohta)
+   *   Orhei            — Orheiul Vechi (luostari, jossa kourallinen munkkeja)
+   *   Rezina           — Saharna Monastery (pyhiinvaelluskeskus, jalanjälki-
+   *                      taru)
+   *   Rîşcani          — Rîșcani District (Costești–Stânca 1978, noin
+   *                      1,28 mrd m³)
+   *   Sîngerei         — Sîngerei District; Răut (pisin kokonaan Moldovassa)
+   *   Şoldăneşti       — Șoldănești District (metsää 19,3 %, susia)
+   *   Soroca           — Soroca Fort (ympyrä, viisi bastionia, kivi 1543–46)
+   *   Ștefan Vodă      — Purcari (winery) (1827 keisarin asetus)
+   *   Stîngă Nistrului — Dubăsari (pato ja voimala 1951–1954, tekojärvi)
+   *   Străşeni         — Codru Reserve (1971, 5 177 ha)
+   *   Taraclia         — Taraclia (bulgarialaisia 76,3 %, yliopisto 2004)
+   *   Teleneşti        — Telenești (Nachum Gutman 1898–1980); Nahum Gutman
+   *                      Museum, Tel Aviv
+   *   Transnistria     — Dubăsari (nimi sanasta dubăsar = veneentekijä)
+   *   Ungheni          — Eiffel Bridge, Ungheni (avattu 21.4.1877)
+   */
+  MDA: {
+    'Anenii Noi': {
+      lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+    },
+    'Bălţi': {
+      lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+    },
+    Basarabeasca: {
+      lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+    },
+    Bender: {
+      lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+    },
+    Briceni: {
+      lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+    },
+    Cahul: {
+      lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+    },
+    'Călărași': {
+      lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+    },
+    Camenca: {
+      lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+    },
+    Cantemir: {
+      lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+    },
+    Causeni: {
+      lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+    },
+    'Chişinău': {
+      lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+    },
+    'Cimişlia': {
+      lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+    },
+    Comrat: {
+      lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+    },
+    Criuleni: {
+      lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+    },
+    Donduseni: {
+      lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+    },
+    Drochia: {
+      lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+    },
+    'Edineţ': {
+      lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+    },
+    'Făleşti': {
+      lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+    },
+    'Floreşti': {
+      lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+    },
+    Glodeni: {
+      lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+    },
+    Grigoriopol: {
+      lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+    },
+    'Hîncesti': {
+      lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+    },
+    Ialoveni: {
+      lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+    },
+    Leova: {
+      lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+    },
+    Nisporeni: {
+      lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+    },
+    'Ocniţa': {
+      lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+    },
+    Orhei: {
+      lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+    },
+    Rezina: {
+      lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+    },
+    'Rîşcani': {
+      lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+    },
+    'Sîngerei': {
+      lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+    },
+    'Şoldăneşti': {
+      lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+    },
+    Soroca: {
+      lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+    },
+    'Ștefan Vodă': {
+      lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+    },
+    'Stîngă Nistrului': {
+      lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+    },
+    'Străşeni': {
+      lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+    },
+    Taraclia: {
+      lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+    },
+    'Teleneşti': {
+      lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+    },
+    Transnistria: {
+      lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+    },
+    Ungheni: {
+      lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+    },
+  },
+  /*
+   * UKRAINA (UKR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 25 aluetta
+   * (Natural Earthin 24 aluetta + Kiovan kaupunki; Krim ei ole datassa).
+   * Tekstit kuvaavat luontoa, kaupunkeja, kulttuuria ja historiaa neutraalisti
+   * eivätkä käsittele sotaa. Vain `lyhyt`. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Cherkasy         — Taras Hill (Kaniv, Ševtšenko haudattu 1861)
+   *   Chernihiv        — Transfiguration Cathedral, Chernihiv (Mstislav k.
+   *                      1035/36, pre-Mongol Rus)
+   *   Chernivtsi       — Residence of Bukovinian and Dalmatian Metropolitans
+   *                      (yliopisto, Unesco 2011)
+   *   Dnipropetrovs'k  — Petrykivka painting (Unesco 2013)
+   *   Donets'k         — Sviatohirsk Lavra (Siverskyi Donets, maininta 1627)
+   *   Ivano-Frankivs'k — Pysanka Museum (Kolomyia, 14 m, yli 10 000 pysankaa)
+   *   Kharkiv          — Derzhprom (1928, ensimmäinen pilvenpiirtäjä NL:ssa)
+   *   Kherson          — Askania-Nova (Falz-Fein 1898, przewalskinhevoset)
+   *   Khmel'nyts'kyy   — Kamianets-Podilskyi Castle (Smotrytš, 88 m silta)
+   *   Kiev             — Arboretum Oleksandriya (1793, Branicki, Ukrainan
+   *                      suurin dendrologinen puisto)
+   *   Kiev City        — Arsenalna (Kyiv Metro) (105,5 m)
+   *   Kirovohrad       — Dobrovelychkivka (oletettu maantieteellinen keskipiste)
+   *   L'viv            — Market Square (Lviv) (44 taloa, kaivot 1793)
+   *   Luhans'k         — Striltsivskyi Steppe Nature Reserve (arosurmeli)
+   *   Mykolayiv        — Pontic Olbia (Parutyne, Miletos, 600-luku eaa.)
+   *   Odessa           — Odesa Catacombs (jopa 2 500 km, louhoksia)
+   *   Poltava          — Opishnia (keramiikka 1800-luvulta)
+   *   Rivne            — Tunnel of Love (railway) (Klevan, 3–5 km)
+   *   Sumy             — Hlukhiv (hetmanaatin pääkaupunki 1708–1764,
+   *                      laulukoulu 1730)
+   *   Ternopil'        — Optymistychna Cave (noin 264 km, pisin kipsiluola)
+   *   Transcarpathia   — Valley of Narcissi (Kireshi, Khust, 256 ha)
+   *   Vinnytsya        — Mykola Leontovych (Tultšyn 1908–1919, Štšedryk 1914)
+   *   Volyn            — Lubart's Castle (200 hryvnan seteli)
+   *   Zaporizhzhya     — Khortytsia (12,5 km, Dneprin suurin saari)
+   *   Zhytomyr         — Sergei Korolev (s. 1907 Žytomyr, museo vastapäätä)
+   */
+  UKR: {
+    Cherkasy: {
+      lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
+    },
+    Chernihiv: {
+      lyhyt: 'Tšernihivin Kirkastumisen katedraalia alettiin rakentaa 1030-luvulla, ja se on harvoja mongolivalloitusta edeltäneen Kiovan Rusin rakennuksia.',
+    },
+    Chernivtsi: {
+      lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
+    },
+    "Dnipropetrovs'k": {
+      lyhyt: 'Petrykivkan kylästä on lähtöisin valkoiselle pohjalle maalattu kukkakoristelu, joka on ollut Unescon aineetonta kulttuuriperintöä vuodesta 2013.',
+    },
+    "Donets'k": {
+      lyhyt: 'Svjatohirskin luostari kohoaa Siverskyi Donetsin jyrkälle oikealle rannalle liitukallioiden keskelle, ja siitä on kirjallinen maininta vuodelta 1627.',
+    },
+    "Ivano-Frankivs'k": {
+      lyhyt: 'Kolomyjassa on pääsiäismunan muotoinen 14-metrinen museo, jonka kokoelmissa on yli 10 000 koristeltua pysankaa.',
+    },
+    Kharkiv: {
+      lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
+    },
+    Kherson: {
+      lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
+    },
+    "Khmel'nyts'kyy": {
+      lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
+    },
+    Kiev: {
+      lyhyt: 'Bila Tserkvan Oleksandrija on Ukrainan suurin dendrologinen puisto, jonka kreivi Branicki perusti Ros-joen rannalle 1793.',
+    },
+    'Kiev City': {
+      lyhyt: 'Kiovan metron Arsenalna-asema on 105,5 metrin syvyydessä, ja se on yksi maailman syvimmistä metroasemista.',
+    },
+    Kirovohrad: {
+      lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
+    },
+    "L'viv": {
+      lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
+    },
+    "Luhans'k": {
+      lyhyt: 'Alueen pohjoisosan Striltsivskyin aro otettiin suojeluun arosurmelin vuoksi, ja tuo murmeli on yhä suojelualueen tunnuseläin.',
+    },
+    Mykolayiv: {
+      lyhyt: 'Parutynen kylän lähellä Etelä-Bugin suistossa ovat Olbian rauniot – kaupungin perustivat Miletoksen kreikkalaiset 600-luvulla eaa.',
+    },
+    Odessa: {
+      lyhyt: 'Odessan alla kiemurtelee jopa 2 500 kilometriä katakombeja, enimmäkseen louhoksia, joista kaupungin rakennuskivi aikanaan nostettiin.',
+    },
+    Poltava: {
+      lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
+    },
+    Rivne: {
+      lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
+    },
+    Sumy: {
+      lyhyt: 'Hluhiv oli kasakkahetmanaatin pääkaupunki 1708–1764, ja sinne perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu.',
+    },
+    "Ternopil'": {
+      lyhyt: 'Korolivkan kylän alla on Optymistytšna, maailman pisin kipsiluola – sen käytäviä on kartoitettu noin 264 kilometriä.',
+    },
+    Transcarpathia: {
+      lyhyt: 'Hustin lähellä on Narsissien laakso, 256 hehtaarin niitty, jolla villit narsissit kukkivat keväisin valkoisena mattona.',
+    },
+    Vinnytsya: {
+      lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
+    },
+    Volyn: {
+      lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
+    },
+    Zaporizhzhya: {
+      lyhyt: 'Hortytsja on Dneprin suurin saari, 12,5 kilometriä pitkä, ja se on Zaporožjen kasakoiden historian keskeisiä paikkoja.',
+    },
+    Zhytomyr: {
+      lyhyt: 'Žytomyrissa syntyi 1907 rakettisuunnittelija Sergei Koroljov, ja hänen syntymäkotinsa vastapäätä on astronautiikan museo.',
+    },
+  },
+  /*
+   * VALKO-VENÄJÄ (BLR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A),
+   * 7 aluetta. Tekstit kuvaavat luontoa ja kulttuuriperintöä neutraalisti.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Brest         — Białowieża Forest (Brestin ja Hrodnan alueet, yli 800
+   *                   visenttiä)
+   *   Gomel         — Gomel (Rumjantsev–Paskevitš-palatsi, englantilainen
+   *                   puisto Sožin rannalla)
+   *   Grodno        — Mir Castle Complex (1500-luvun alku, Unesco 2000)
+   *   Mogilev       — Mogilev (Pyhän Nikolauksen katedraali 1668,
+   *                   alkuperäinen ikonostaasi)
+   *   Minsk         — Nesvizh Castle (Radziwiłł, Unesco 2005)
+   *   City of Minsk — National Library of Belarus (73,6 m, avattu 16.6.2006)
+   *   Vitebsk       — Vitebsk (Chagallin talo Pokrovskaja-kadulla); Marc
+   *                   Chagall House Museum
+   */
+  BLR: {
+    Brest: {
+      lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+    },
+    Gomel: {
+      lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+    },
+    Grodno: {
+      lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+    },
+    Mogilev: {
+      lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+    },
+    Minsk: {
+      lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+    },
+    'City of Minsk': {
+      lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+    },
+    Vitebsk: {
+      lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+    },
+  },
+  /*
+   * ISLANTI (ISL) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 9 aluetta.
+   * Natural Earthissa Reykjavík ja Höfuðborgarsvæði ovat erillisiä alueita;
+   * jälkimmäinen kuvataan Álftanesin Bessastaðirin kautta. Vain `lyhyt`.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Austurland        — Hallormsstaðaskógur (suojeltu 1905, ensimmäinen
+   *                       kansallismetsä)
+   *   Höfuðborgarsvæði  — Bessastaðir (presidentin asunto 1941, Snorri)
+   *   Vestfirðir        — Látrabjarg (14 km, 440 m, läntisin kohta)
+   *   Norðurland eystra — Húsavík (valaiden katselu, Apollo-astronautit)
+   *   Norðurland vestra — Hvítserkur (15 m, peikkotaru)
+   *   Reykjavík         — Geothermal power in Iceland (Nesjavellirin putki)
+   *   Suðurland         — Þingvellir (Alþingi 930, Unesco 2004)
+   *   Suðurnes          — Bridge Between Continents (15 m, Visit Reykjanes)
+   *   Vesturland        — Snæfellsjökull (1 446 m, Jules Verne)
+   */
+  ISL: {
+    Austurland: {
+      lyhyt: 'Hallormsstaðurin koivikko suojeltiin 1905, ja siitä tuli Islannin ensimmäinen kansallismetsä – nyt se on maan suurimpia metsiä.',
+    },
+    'Höfuðborgarsvæði': {
+      lyhyt: 'Bessastaðir Álftanesin niemellä on ollut Islannin presidentin virka-asunto vuodesta 1941; 1200-luvulla sen omisti Snorri Sturluson.',
+    },
+    'Vestfirðir': {
+      lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
+    },
+    'Norðurland eystra': {
+      lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
+    },
+    'Norðurland vestra': {
+      lyhyt: 'Vatnsnesin rannalla seisova Hvítserkur on 15-metrinen kivipaasi; tarun mukaan se on peikko, jonka nouseva aurinko muutti kiveksi.',
+    },
+    'Reykjavík': {
+      lyhyt: 'Reykjavíkin taloja lämmitetään kuumalla maalämpövedellä, jota johdetaan putkia pitkin muun muassa Nesjavellirin voimalasta.',
+    },
+    'Suðurland': {
+      lyhyt: 'Þingvellirin laaksossa kokoontui Islannin Alþingi ensimmäisen kerran 930, ja paikka on Unescon maailmanperintöä vuodesta 2004.',
+    },
+    'Suðurnes': {
+      lyhyt: 'Reykjanesin niemimaalla 15-metrinen kävelysilta ylittää railon, joka erottaa Pohjois-Amerikan ja Euraasian mannerlaatat.',
+    },
+    Vesturland: {
+      lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
+    },
+  },
+  /*
+   * TUR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 3B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.TUR:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti — myös lähdedatan kirjoitusvirheet
+   * "Kinkkale" (= Kırıkkale) ja "Zinguldak" (= Zonguldak) sekä
+   * diakriittiset sekamuodot ("Bartın", "Iğdir", "Çankiri", "K. Maras").
+   * Vain `lyhyt` tässä erässä. Istanbulin teksti välttää fokusvirran ja
+   * fokuskohteiden aiheet (Kapalıçarşı, Dolmabahçe, hippodromi, muurit,
+   * kissat, Yerebatan), ja fokuskohteiden Troija, Efesos, Pamukkale,
+   * Kappadokia, Göbekli Tepe, Ararat, Vanjärvi ja Vanin kissa jätettiin
+   * maakuntateksteistä pois. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Adana          — Taşköprü (Adana) (moottoriliikenne 2007 asti)
+   *   Adiyaman       — Mount Nemrut (Antiokhos I, päät irrallaan)
+   *   Afyonkarahisar — Afyonkarahisar (maailman suurin lääkeoopiumin
+   *                    tuottaja; linna mustalla kalliolla)
+   *   Agri           — Ishak Pasha Palace (aloitettu 1685, haaremi 1784)
+   *   Aksaray        — Ihlara Valley (15 km, n. 50 kirkkoa)
+   *   Amasya         — Amasya (Pontoksen kuninkaiden kalliohaudat)
+   *   Ankara         — Anıtkabir (valmis 1953, Rauhanpuisto)
+   *   Antalya        — Düden Waterfalls (Ala-Düden 40 m mereen)
+   *   Ardahan        — Lake Çıldır (jäätyy talvella; "lake of shadows")
+   *   Artvin         — Deriner Dam (249 m, Turkin korkein)
+   *   Aydin          — Aydın Province (Turkin suurin viikunantuottaja)
+   *   Balikesir      — Kuşcenneti National Park (1959, 2–3 milj. lintua)
+   *   Bartın         — Bartın (Turkin ainoa laivakulkukelpoinen joki)
+   *   Batman         — Batman, Turkey (Batı Raman, suurin öljykenttä)
+   *   Bayburt        — Bayburt Province (asukasluvultaan pienin, 84 241)
+   *   Bilecik        — Söğüt (Osmanien pääkaupunki 1281–1335)
+   *   Bingöl         — Bingöl ("thousand lakes", ei isoja järviä)
+   *   Bitlis         — Nemrut (volcano) (kaldera, 3 kraatterijärveä,
+   *                    laavavirta padotti Vanjärven)
+   *   Bolu           — Yedigöller National Park (7 maanvyöryjärveä)
+   *   Burdur         — Lake Salda (NASA 2021: lähin vastine Jezerolle)
+   *   Bursa          — Bursa Uludağ Gondola (8,8 km, maailman pisin)
+   *   Çanakkale      — 1915 Çanakkale Bridge (2022, jänne 2 023 m)
+   *   Çankiri        — Çankırı (suolaluola, louhittu antiikista asti)
+   *   Çorum          — Hattusa (Boğazkale, Unesco 1986)
+   *   Denizli        — Denizli (chicken) (kiekaisu 20–25 s, lasiveistos 2013)
+   *   Diyarbakir     — Diyarbakır Fortress (basaltti, Unesco 2015 + Hevsel)
+   *   Düzce          — Düzce (81. maakunta 1999)
+   *   Edirne         — Selimiye Mosque, Edirne (Sinanin mestariteos, 2011)
+   *   Elazig         — Lake Hazar (Tigrisin lähde, uponnut kaupunki)
+   *   Erzincan       — Karanlık Canyon (25 km, 1 000 m, 10–15 m)
+   *   Erzurum        — Cağ kebabı (maantieteellinen merkintä 2010)
+   *   Eskisehir      — Sepiolite (merenvaha, Eskişehirin tasanko)
+   *   Gaziantep      — Zeugma Mosaic Museum (padon alle jäänyt Zeugma)
+   *   Giresun        — Giresun (Kerasous < kerasós "kirsikka", Plinius)
+   *   Gümüshane      — Karaca Cave (Torul, tippukivet)
+   *   Hakkari        — Hakkari Cilo-Sat Mountains National Park
+   *                    (Uludoruk 4 135 m, toiseksi korkein; puisto 2020)
+   *   Hatay          — Titus Tunnel (Vespasianus/Titus, tulvasuoja)
+   *   Iğdir          — Iğdır Province (lämpimin, puuvilla) + Iğdır
+   *                    (puuvilla ja aprikoosit)
+   *   Isparta        — Isparta ("City of Roses", bulgarialaispakolaiset)
+   *   Istanbul       — Marmaray (Bosporin upotettu tunneli, 2013)
+   *   Izmir          — İzmir Clock Tower (1901, Raymond Charles Péré)
+   *   K. Maras       — Dondurma (maraş dondurma, salep ja mastiksi)
+   *   Karabük        — Safranbolu (sahrami, Unesco 1994)
+   *   Karaman        — Karamanoğlu Mehmet Bey (turkin kieli 1277)
+   *   Kars           — Ani ("City of 1,001 Churches", Unesco 2016)
+   *   Kastamonu      — Taşköprü, Kastamonu (valkosipuli, PDO)
+   *   Kayseri        — Erciyes Ski Resort (3 917 m) + Mount Erciyes
+   *   Kilis          — Kilis (Ulu-moskeija 1388, Kilis tava)
+   *   Kinkkale       — Kırıkkale (Tüpraşin jalostamo 1986)
+   *   Kirklareli     — İğneada Floodplain Forests National Park (longoz)
+   *   Kirsehir       — Neşet Ertaş (s. 1938 Kırtıllar, Kırşehir)
+   *   Kocaeli        — Osman Gazi Bridge (Gebze–Yalova, 2016)
+   *   Konya          — Çatalhöyük (Unesco 2012)
+   *   Kütahya        — Kütahya (kaakeli- ja keramiikkakeskus)
+   *   Malatya        — Malatya ("Kayısı Diyarı")
+   *   Manisa         — Manisa + Mesir macunu (maaliskuun juhla, 41 ainesta)
+   *   Mardin         — Mor Hananyo Monastery (patriarkaatti 1166–1932)
+   *   Mersin         — Kızkalesi (linna pienellä saarella)
+   *   Mugla          — İztuzu Beach (Caretta caretta, "Turtle Beach")
+   *   Mus            — Muş Province + Muş (tulppaanit, aamusumu)
+   *   Nevsehir       — Derinkuyu underground city (85 m, 20 000 ihm.)
+   *   Nigde          — Aladağlar National Park (4 huippua yli 3 700 m)
+   *   Ordu           — Ordu Province (hasselpähkinä, 88 % viljelymaasta)
+   *   Osmaniye       — Karatepe (kaksikielinen piirtokirjoitus)
+   *   Rize           — Rize Province + Rize (sateisin, tee 1940-luvulta)
+   *   Sakarya        — Lake Sapanca (16 km, päiväretket)
+   *   Samsun         — Samsun (19.5.1919)
+   *   Sanliurfa      — Balıklıgöl (Nimrod ja Abraham)
+   *   Siirt          — Botan Valley National Park (2019)
+   *   Sinop          — İnceburun (majakka 1863, pohjoisin kärki)
+   *   Sivas          — Kangal Shepherd Dog
+   *   Sirnak         — Mount Judi (Cizre, arkin laskeutumispaikka)
+   *   Tekirdag       — Tekirdağ (Tekirdağ köftesi)
+   *   Tokat          — Zile (Zelan taistelu 47 eaa.)
+   *   Trabzon        — Uzungöl (Çaykara)
+   *   Tunceli        — Munzur Valley National Park (1971, suurin)
+   *   Usak           — Karun Treasure (363 esinettä, palautus 1993)
+   *   Van            — Cathedral of the Holy Cross, Aghtamar (915–921)
+   *   Yalova         — Yalova (Termalin kuumat lähteet)
+   *   Yozgat         — Yozgat Pine Grove National Park (1958, ensimmäinen)
+   *   Zinguldak      — Zonguldak + Zonguldak Province (satama 1849)
+   */
+  TUR: {
+    Adana: {
+      lyhyt: 'Adanan Taşköprü on roomalaisten Seyhan-joelle rakentama kivisilta, ja autot ajoivat sen yli vielä vuoteen 2007 asti.',
+    },
+    Adiyaman: {
+      lyhyt: 'Nemrut Dağın huipulla Kommagenen kuninkaan Antiokhos I:n hautapyhäkön jättipatsaiden kivipäät lepäävät nyt irrallaan maassa.',
+    },
+    Afyonkarahisar: {
+      lyhyt: 'Afyon tarkoittaa turkiksi oopiumia, ja maakunta onkin maailman suurin lääkeoopiumin tuottaja – kaupungin linna kohoaa mustalla kalliolla.',
+    },
+    Agri: {
+      lyhyt: 'Doğubayazıtin rinteellä seisoo İshak Paşan palatsi, jonka rakentaminen alkoi 1685 ja jonka haaremisiipi valmistui vasta 1784.',
+    },
+    Aksaray: {
+      lyhyt: 'Ihlaran laakso on 15 kilometriä pitkä kanjoni, jonka tuffiseinämiin bysanttilaiset munkit kaivoivat noin 50 kirkkoa.',
+    },
+    Amasya: {
+      lyhyt: 'Amasyassa Pontoksen kuninkaiden hautakammiot on hakattu kallioon Yeşilırmak-joen varren vanhojen puutalojen yläpuolelle.',
+    },
+    Ankara: {
+      lyhyt: 'Atatürkin mausoleumi Anıtkabir valmistui Ankaraan 1953, ja sen ympärille on istutettu Rauhanpuistoksi kutsuttu metsikkö.',
+    },
+    Antalya: {
+      lyhyt: 'Antalyan laidalla Düden-joki syöksyy 40 metriä jyrkänteeltä suoraan Välimereen.',
+    },
+    Ardahan: {
+      lyhyt: 'Çıldırjärvi jäätyy talvisin umpeen, ja georgiaksi sen nimi tarkoittaa varjojen järveä.',
+    },
+    Artvin: {
+      lyhyt: 'Çoruh-joen Deriner-pato on 249 metriä korkea kaksoiskaarinen holvipato ja Turkin korkein pato.',
+    },
+    Aydin: {
+      lyhyt: 'Aydın on Turkin suurin viikunantuottaja, ja kuivattuja Aydın-viikunoita viedään kaikkialle maailmaan.',
+    },
+    Balikesir: {
+      lyhyt: 'Manyasjärven Kuşcenneti eli Lintuparatiisi on ollut kansallispuisto vuodesta 1959, ja siellä käy vuosittain 2–3 miljoonaa lintua.',
+    },
+    'Bartın': {
+      lyhyt: 'Bartınjoki on Turkin ainoa laivoilla kulkukelpoinen joki, ja sitä pitkin pääsee kaupungista Mustallemerelle.',
+    },
+    Batman: {
+      lyhyt: 'Batmanin laitamilla on Turkin suurin öljykenttä Batı Raman, ja öljylöydöt kasvattivat seudusta kaupungin 1940-luvulta alkaen.',
+    },
+    Bayburt: {
+      lyhyt: 'Bayburt on asukasluvultaan Turkin pienin maakunta: koko maakunnassa asuu vain noin 84 000 ihmistä.',
+    },
+    Bilecik: {
+      lyhyt: 'Pikkukaupunki Söğüt oli Osmanien valtakunnan syntysija ja sen ensimmäinen pääkaupunki vuosina 1281–1335.',
+    },
+    'Bingöl': {
+      lyhyt: 'Bingöl tarkoittaa turkiksi tuhatta järveä, mutta maakunnan rajojen sisällä ei ole yhtään mainittavan kokoista järveä.',
+    },
+    Bitlis: {
+      lyhyt: 'Tatvanin yllä uinuvan Nemrut-tulivuoren kalderassa on kolme kraatterijärveä, ja sen muinainen laavavirta padotti Vanjärven.',
+    },
+    Bolu: {
+      lyhyt: 'Bolun Yedigöllerin kansallispuistossa on seitsemän maanvyörymien muodostamaa järveä keskellä rehevää metsää.',
+    },
+    Burdur: {
+      lyhyt: 'NASAn mukaan Saldajärven mineraalit muistuttavat maapallolla eniten Marsin Jezero-kraatteria, jonne Perseverance-mönkijä laskeutui.',
+    },
+    Bursa: {
+      lyhyt: 'Bursasta Uludağille nouseva 8,8 kilometrin gondolirata on maailman pisin, ja sen yläasema on vuoren hotellialueella.',
+    },
+    'Çanakkale': {
+      lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+    },
+    'Çankiri': {
+      lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
+    },
+    'Çorum': {
+      lyhyt: 'Boğazkalen lähellä ovat heettiläisten pääkaupungin Hattusan rauniot, jotka ovat olleet Unescon maailmanperintöä vuodesta 1986.',
+    },
+    Denizli: {
+      lyhyt: 'Denizlin kukko voi kiekua 20–25 sekuntia yhteen menoon, ja kaupungin aukiolla seisoo jättimäinen kukko, Turkin suurin lasiveistos.',
+    },
+    Diyarbakir: {
+      lyhyt: 'Diyarbakırin mustat basalttimuurit ja Hevselin puutarhat merkittiin yhdessä Unescon maailmanperintöluetteloon 2015.',
+    },
+    'Düzce': {
+      lyhyt: 'Düzcestä tehtiin vuoden 1999 maanjäristysten jälkeen Turkin 81. maakunta, jotta tuhoutunut seutu saataisiin rakennettua nopeasti uudelleen.',
+    },
+    Edirne: {
+      lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+    },
+    Elazig: {
+      lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
+    },
+    Erzincan: {
+      lyhyt: 'Karanlık eli Pimeä kanjoni on 25 kilometriä pitkä ja kilometrin syvä, mutta pohjaltaan vain 10–15 metriä leveä.',
+    },
+    Erzurum: {
+      lyhyt: 'Erzurumin cağ kebabı paistetaan vaakasuoraan pinotulla, pyörivällä vartaalla, ja sillä on suojattu maantieteellinen merkintä vuodesta 2010.',
+    },
+    Eskisehir: {
+      lyhyt: 'Eskişehirin tasangolta louhitaan merenvahaa eli sepioliittia, josta veistetään kuuluisia merenvahapiippuja.',
+    },
+    Gaziantep: {
+      lyhyt: 'Gaziantepin Zeugma-museoon on siirretty mosaiikit roomalaiskaupungista, joka jäi osittain Eufratin padon altaan alle.',
+    },
+    Giresun: {
+      lyhyt: 'Giresunin nimi juontuu kirsikkaa tarkoittavasta kreikan sanasta, ja Pliniuksen mukaan kirsikka vietiin Eurooppaan juuri täältä.',
+    },
+    'Gümüshane': {
+      lyhyt: 'Torulin lähellä oleva Karacan luola on täynnä tippukiviä, ja sen muodostelmat ovat monen muotoisia ja värisiä.',
+    },
+    Hakkari: {
+      lyhyt: 'Hakkarin Cilo-vuorilla kohoaa Uludoruk, 4 135 metriä, Turkin toiseksi korkein huippu – vuoristo on ollut kansallispuisto vuodesta 2020.',
+    },
+    Hatay: {
+      lyhyt: 'Samandağin lähellä kulkee Titus-tunneli, roomalaisten käsin kallioon louhima vesikanava, joka suojasi Antiokian satamaa tulvilta.',
+    },
+    'Iğdir': {
+      lyhyt: 'Iğdır on Itä-Turkin lämpimin kolkka: Araratin juurella tasangolla kasvaa puuvillaa ja aprikooseja.',
+    },
+    Isparta: {
+      lyhyt: 'Isparta tunnetaan ruusujen kaupunkina, ja sen ruusuvesitaidon toivat mukanaan Bulgariasta tulleet pakolaiset.',
+    },
+    Istanbul: {
+      lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+    },
+    Izmir: {
+      lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
+    },
+    'K. Maras': {
+      lyhyt: 'Maraşin jäätelö saa sitkeytensä orkidean mukuloista jauhetusta salepista ja mastiksista, ja se kestää sulamista tavallista paremmin.',
+    },
+    'Karabük': {
+      lyhyt: 'Safranbolu on saanut nimensä sahramista, ja sen osmanitalot ovat olleet Unescon maailmanperintöä vuodesta 1994.',
+    },
+    Karaman: {
+      lyhyt: 'Karamanin ruhtinas Mehmet Bey määräsi 1277, että virastoissa käytetään turkkia persian ja arabian sijaan.',
+    },
+    Kars: {
+      lyhyt: 'Anin rauniokaupunki Armenian rajalla tunnettiin 1001 kirkon kaupunkina, ja se on ollut Unescon maailmanperintöä vuodesta 2016.',
+    },
+    Kastamonu: {
+      lyhyt: 'Kastamonun Taşköprü on valkosipulin pitäjä: Taşköprün valkosipulilla on suojattu alkuperänimitys.',
+    },
+    Kayseri: {
+      lyhyt: 'Kayserin yllä kohoaa 3 917-metrinen Erciyes, uinuva tulivuori, jonka pohjois- ja itärinteillä on hiihtokeskus.',
+    },
+    Kilis: {
+      lyhyt: 'Kilisin keskustan vanhin rakennus on mamelukkiajan Ulu-moskeija vuodelta 1388, ja kaupungin tunnetuin ruoka on Kilis tava -kebab.',
+    },
+    Kinkkale: {
+      lyhyt: 'Kırıkkale on Ankaran itäpuolinen teollisuuskaupunki, jonka laidalla on toiminut Tüpraşin öljynjalostamo vuodesta 1986.',
+    },
+    Kirklareli: {
+      lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+    },
+    Kirsehir: {
+      lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
+    },
+    Kocaeli: {
+      lyhyt: 'Osman Gazi -silta ylittää İzmitinlahden kapeimmalta kohdalta Gebzestä, ja avattaessa 2016 se oli Turkin pisin riippusilta.',
+    },
+    Konya: {
+      lyhyt: 'Konyan tasangolla on Çatalhöyük, yksi varhaisimmista kivikauden kaupungeista, ja se on ollut Unescon maailmanperintöä vuodesta 2012.',
+    },
+    'Kütahya': {
+      lyhyt: 'Kütahya on vuosisatoja ollut kaakelien ja keramiikan kaupunki, jonka laattoja päätyi moskeijoihin ja kirkkoihin kaikkialla Lähi-idässä.',
+    },
+    Malatya: {
+      lyhyt: 'Malatyaa kutsutaan aprikoosien maaksi, sillä huomattava osa Turkin kuivatuista aprikooseista kasvaa täällä.',
+    },
+    Manisa: {
+      lyhyt: 'Manisa juhlii joka maaliskuu mesir-tahnaa, mausteista makeista, jonka alkuperäisresepti sisältää 41 ainesosaa.',
+    },
+    Mardin: {
+      lyhyt: 'Mardinin lähellä oleva Deyrulzafaranin luostari oli syyrialaisortodoksisen patriarkan istuin vuodesta 1166 vuoteen 1932.',
+    },
+    Mersin: {
+      lyhyt: 'Kızkalesin eli Neitsytlinnan linnoitus seisoo pienellä saarella aivan kylän rannan edustalla.',
+    },
+    Mugla: {
+      lyhyt: 'Dalyanin İztuzun hiekkaranta on yksi Välimeren tärkeimmistä merikilpikonnien pesimärannoista, ja siksi sitä kutsutaan kilpikonnarannaksi.',
+    },
+    Mus: {
+      lyhyt: 'Muşin tasangolla kukkivat keväisin villit tulppaanit, ja aamuisin tasankoa peittää usein sumu.',
+    },
+    Nevsehir: {
+      lyhyt: 'Derinkuyun maanalainen kaupunki ulottuu noin 85 metrin syvyyteen, ja sinne mahtui arviolta 20 000 ihmistä karjoineen.',
+    },
+    Nigde: {
+      lyhyt: 'Niğden Aladağlarin vuoristossa on neljä yli 3 700 metrin huippua, ja sinne tulevat vuorikiipeilijät ja vaeltajat.',
+    },
+    Ordu: {
+      lyhyt: 'Ordu on Turkin suurin hasselpähkinämaakunta, ja pähkinäpensaat peittävät lähes 90 prosenttia sen viljelymaasta.',
+    },
+    Osmaniye: {
+      lyhyt: 'Karatepen ulkoilmamuseossa on 700-luvulta eaa. peräisin oleva kivikirjoitus kahdella kielellä, foinikiaksi ja luvian hieroglyfeillä.',
+    },
+    Rize: {
+      lyhyt: 'Rize on Turkin sateisin kolkka ja maan teen sydän – teepensaat istutettiin rinteille vasta 1940-luvulla.',
+    },
+    Sakarya: {
+      lyhyt: 'Sapancajärvi on 16 kilometriä pitkä makean veden järvi, jonne tullaan päiväretkille ja viikonlopun lomille.',
+    },
+    Samsun: {
+      lyhyt: 'Samsunissa Mustafa Kemal aloitti kansallisen vastarinnan 19.5.1919, ja päivää juhlitaan yhä Turkin nuorison ja urheilun päivänä.',
+    },
+    Sanliurfa: {
+      lyhyt: 'Şanlıurfan Balıklıgöl on pyhä kala-allas, jonne perimätiedon mukaan Nimrod heitti Abrahamin tuleen.',
+    },
+    Siirt: {
+      lyhyt: 'Siirtin Botanin laakso julistettiin kansallispuistoksi 2019, ja sen jyrkät maisemat sopivat koskenlaskuun ja varjoliitoon.',
+    },
+    Sinop: {
+      lyhyt: 'İnceburunin majakka rakennettiin 1863 kallioille Anatolian pohjoisimpaan kärkeen noin 25 kilometriä Sinopista luoteeseen.',
+    },
+    Sivas: {
+      lyhyt: 'Sivasin Kangalista on nimensä saanut kangal, suuri paimenkoira, joka vartioi lammaslaumoja susilta.',
+    },
+    Sirnak: {
+      lyhyt: 'Cizren koillispuolella kohoaa Cudi-vuori, jolle vanhan kristillisen ja islamilaisen perinteen mukaan Nooan arkki laskeutui.',
+    },
+    Tekirdag: {
+      lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+    },
+    Tokat: {
+      lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',
+    },
+    Trabzon: {
+      lyhyt: 'Uzungöl eli Pitkä järvi on vuorilaakson järvi ja kylä Trabzonin eteläpuolella, ja siitä on tullut suosittu matkakohde.',
+    },
+    Tunceli: {
+      lyhyt: 'Munzurin laakson kansallispuisto on Turkin suurin ja lajistoltaan monimuotoisin kansallispuisto, perustettu 1971.',
+    },
+    Usak: {
+      lyhyt: 'Uşakin arkeologisessa museossa on Karunin aarre, 363 lyydialaista esinettä, jotka New Yorkin Metropolitan palautti Turkille 1993.',
+    },
+    Van: {
+      lyhyt: 'Vanjärven Akdamarin saarella seisoo 915–921 punaisesta tuffikivestä rakennettu Pyhän Ristin kirkko, nykyään museo.',
+    },
+    Yalova: {
+      lyhyt: 'Yalovan Termalin kuumat lähteet ovat istanbulilaisten suosima kesäpaikka, ja nimi tulee kreikan lämmintä tarkoittavasta sanasta.',
+    },
+    Yozgat: {
+      lyhyt: 'Yozgatin mäntymetsä perustettiin 1958 Turkin ensimmäiseksi kansallispuistoksi.',
+    },
+    Zinguldak: {
+      lyhyt: 'Zonguldak perustettiin 1849 satamakaupungiksi Ereğlin hiilikaivoksia varten, ja kivihiili on siitä asti ollut sen elinkeino.',
+    },
+  },
+  /*
+   * RUS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 3C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.RUS:n tunnuksia
+   * TÄSMÄLLEEN (Natural Earthin nimet, esim. "Maga Buryatdan" = Magadanin
+   * alue, "Chita" = Taka-Baikalin aluepiiri, "Altay" = Altain aluepiiri,
+   * "Gorno-Altay" = Altain tasavalta, "Yevrey" = Juutalainen autonominen
+   * alue, "RUS+99?" = Natural Earthin nimetön pikkusaari Bajdaratskajan-
+   * lahdella, 68,8° N 67,3° E). Vain `lyhyt` tässä erässä. Crimea ja
+   * Sevastopol kuvaavat vain maisemaa ja kaupunkia. Vältetty Moskovan ja
+   * Pietarin fokusvirtojen sekä maastokohteet-rus.js:n aiheet (Baikalin
+   * repeämä, Kizhi, Pietarhof, Elbrus, Kazanin kreml, Jasnaja Poljana,
+   * Tobolsk, Kolan syväreikä, Tunguska). Lähteet (en-/ru-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Altay            — Altai Krai (tattarista 40–60 % Venäjän sadosta,
+   *                      alueen maatalousministeriö / FAO)
+   *   Buryat           — Selenga River (lähes puolet Baikalin jokivedestä,
+   *                      Ramsar-kohde, yli 170 lintulajia)
+   *   Chelyabinsk      — Chelyabinsk meteor (654 kg:n kappale nostettiin
+   *                      Tšebarkuljärvestä 16.10.2013)
+   *   Chita            — Landscapes of Dauria (Toreijärvet, dzeren)
+   *   Crimea           — Swallow's Nest (Aurora-kallio 40 m, 1911–1912)
+   *   Dagestan         — Sulak Canyon (1 920 m, 63 m Grand Canyonia syvempi)
+   *   Kabardin-Balkar  — Baksan Neutrino Observatory (SN1987A)
+   *   Kaliningrad      — Kaliningrad Amber Combine (noin 90 % louhittavasta
+   *                      meripihkasta Jantarnyin ympäristössä)
+   *   Karachay-Cherkess — BTA-6 (first light 1975, suurin 1990 asti)
+   *   Karelia          — Petroglyphs of Lake Onega and the White Sea (2021)
+   *   Kalmyk           — Elista (Kultainen asumus, Euroopan suurin
+   *                      buddhalainen temppeli, 2005)
+   *   Chechnya         — Kezenoyam (ru: pinta-alaltaan Kaukasuksen suurin,
+   *                      1 854–1 869 m)
+   *   Irkutsk          — Irkutsk (72 km Angaran lähtökohdasta)
+   *   Ivanovo          — Ivanovo ("city of brides")
+   *   Komi             — Manpupuner rock formations (7 pylvästä, 30–42 m)
+   *   Kostroma         — Terem Snegurochki (2008, Volgan ranta)
+   *   Maga Buryatdan   — Magadan Oblast (462 464 km², 136 085 as. 2021)
+   *   North Ossetia    — Dargavs (99 hautaa ja kryptaa)
+   *   Rostov           — Tanais (Nedvigovka, arkeologinen museoalue)
+   *   RUS+99?          — Baydaratskaya Bay (Gazpromin putket pohjaan 2014)
+   *   Saratov          — Saratovskaya garmonika (kaksi kelloa kannessa)
+   *   Smolensk         — Smolensk Kremlin (6,5 km, 1595–1602)
+   *   City of St. Petersburg — Hermitage cats (50–74 kissaa)
+   *   Tambov           — Ivanovka estate (Rahmaninovin kesäkoti 1890–1917)
+   *   Tula             — Tula pryanik (kaiverretut puulaudat, täyte)
+   *   Tver'            — Volgoverkhovye (kappeli lähteen päällä)
+   *   Tyumen'          — Tyumen (1586, ensimmäinen venäläinen asutus
+   *                      Siperiassa)
+   *   Udmurt           — Buranovskiye Babushki (Euroviisut 2012, 2. sija)
+   *   Volgograd        — Lake Elton (Euroopan suurin mineraalijärvi,
+   *                      Dunaliella salina -levä)
+   *   Voronezh         — Kostenki (26 paleoliittista kohdetta,
+   *                      mammutinluurakennelmat)
+   *   Yamal-Nenets     — Salekhard (napapiirillä, muistomerkki)
+   *   Yevrey           — Birobidzhan (Šolem Aleichemin katu)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  RUS: {
+    Adygey: {
+      lyhyt: 'Adygea on kokonaan Krasnodarin aluepiirin ympäröimä, ja sen nimeä kantaa adygeanjuusto, pehmeä tuorejuusto, jota syödään kaikkialla Venäjällä.',
+    },
+    Altay: {
+      lyhyt: 'Altain aluepiirin pelloilta korjataan vuosittain noin puolet koko Venäjän tattarista, ja kesällä tattaripellot kukkivat valkoisina.',
+    },
+    Amur: {
+      lyhyt: 'Amurin alueen taigaan on rakennettu Vostotšnyin avaruuskeskus, josta ensimmäinen raketti nousi huhtikuussa 2016.',
+    },
+    "Arkhangel'sk": {
+      lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+    },
+    "Astrakhan'": {
+      lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+    },
+    Bashkortostan: {
+      lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
+    },
+    Belgorod: {
+      lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
+    },
+    Bryansk: {
+      lyhyt: 'Brjanskin metsän mänty- ja tammimetsät ja Nerussajoen suot on suojeltu, ja ne kuuluvat Unescon biosfäärialueeseen.',
+    },
+    Buryat: {
+      lyhyt: 'Selenga tuo Burjatiasta lähes puolet Baikaliin laskevien jokien vedestä, ja sen suisto on satojen lintulajien levähdyspaikka.',
+    },
+    Chelyabinsk: {
+      lyhyt: 'Helmikuussa 2013 Tšeljabinskin yllä räjähti meteori, ja sen yli 600 kilon kappale nostettiin myöhemmin Tšebarkuljärven pohjasta.',
+    },
+    Chita: {
+      lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
+    },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+    },
+    Dagestan: {
+      lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
+    },
+    'Gorno-Altay': {
+      lyhyt: 'Altain tasavallan Beluha, 4 506 metriä, on Altain vuoriston korkein huippu, ja sen jäätiköiltä saa alkunsa Katunjoki.',
+    },
+    Khakass: {
+      lyhyt: 'Hakassiassa Jenisei on padottu Sajano-Šušenskajan voimalaksi, joka on Venäjän suurin sähkövoimala.',
+    },
+    'Khanty-Mansiy': {
+      lyhyt: 'Hanti-Mansijsk on rakennettu Irtyšin ja Obin yhtymäkohdan lähelle, ja alue on nimetty kahden alkuperäiskansan, hantien ja mansien, mukaan.',
+    },
+    Ingush: {
+      lyhyt: 'Inguššian vuoriston rotkoissa seisoo keskiaikaisia kivitorneja, ja Vovnuškin tornit on rakennettu suoraan kallionhuipuille.',
+    },
+    Irkutsk: {
+      lyhyt: 'Angara on ainoa joki, joka virtaa ulos Baikalista, ja Irkutsk on sen rannalla noin 70 kilometriä järveltä.',
+    },
+    Ivanovo: {
+      lyhyt: 'Ivanovo on vanha tekstiilikaupunki, ja koska kutomoissa työskenteli enimmäkseen naisia, sitä kutsutaan morsiamien kaupungiksi.',
+    },
+    'Kabardin-Balkar': {
+      lyhyt: 'Baksanin laakson vuoren alla on neutriinolaboratorio, jonka ilmaisin tallensi vuonna 1987 kaukaisesta supernovasta tulleita neutriinoja.',
+    },
+    Kaliningrad: {
+      lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+    },
+    Kalmyk: {
+      lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
+    },
+    Kaluga: {
+      lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
+    },
+    Kamchatka: {
+      lyhyt: 'Kamtšatkan Kljutševskaja Sopka, noin 4 750 metriä, on Euraasian korkein toimiva tulivuori, ja se purkautuu yhä usein.',
+    },
+    'Karachay-Cherkess': {
+      lyhyt: 'Karatšai-Tšerkessian vuorilla on BTA-6-kaukoputki, jonka kuusimetrinen peili oli valmistuessaan 1975 maailman suurin.',
+    },
+    Karelia: {
+      lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+    },
+    Kemerovo: {
+      lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
+    },
+    Khabarovsk: {
+      lyhyt: 'Habarovskin kohdalla Amurin ylittävä pitkä silta on kuvattu Venäjän 5 000 ruplan setelin kääntöpuolelle.',
+    },
+    Kirov: {
+      lyhyt: 'Kirovin lähellä Dymkovossa muovaillaan yhä savileluja, jotka kalkitaan valkoisiksi ja maalataan kirkkain värein.',
+    },
+    Komi: {
+      lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+    },
+    Kostroma: {
+      lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+    },
+    Krasnodar: {
+      lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
+    },
+    Krasnoyarsk: {
+      lyhyt: 'Krasnojarskin aluepiiriin kuuluu Tšeljuskininniemi Taimyrin niemimaalla, Euraasian mantereen pohjoisin kärki.',
+    },
+    Kurgan: {
+      lyhyt: 'Kurganissa toimii Ilizarovin keskus, jossa kehitettiin luiden pidentämiseen ja murtumien hoitoon käytetty rengaskehikko.',
+    },
+    Kursk: {
+      lyhyt: 'Kurskin alueen maaperässä on niin paljon rautamalmia, että kompassi näyttää väärin – ilmiö tunnetaan Kurskin magneettisena anomaliana.',
+    },
+    Leningrad: {
+      lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+    },
+    Lipetsk: {
+      lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
+    },
+    'Maga Buryatdan': {
+      lyhyt: 'Magadanin alue on pinta-alaltaan Saksaa suurempi, mutta asukkaita on vain noin 136 000, ja lähes kaikki asuvat kaupungeissa.',
+    },
+    'Mariy-El': {
+      lyhyt: 'Moni mari harjoittaa yhä vanhaa luonnonuskontoaan, ja yhteisiä rukoushetkiä pidetään pyhissä lehdoissa.',
+    },
+    Mordovia: {
+      lyhyt: 'Mordvassa puhutaan kahta suomalais-ugrilaista kieltä, ersää ja mokšaa, jotka ovat tasavallan virallisia kieliä venäjän rinnalla.',
+    },
+    Moskva: {
+      lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+    },
+    Moskovskaya: {
+      lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+    },
+    Murmansk: {
+      lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+    },
+    Nenets: {
+      lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+    },
+    Nizhegorod: {
+      lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
+    },
+    Novgorod: {
+      lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+    },
+    Novosibirsk: {
+      lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
+    },
+    Omsk: {
+      lyhyt: 'Omsk on rakennettu kohtaan, jossa pieni Om-joki laskee Irtyšiin, ja kaupunki on saanut nimensä pienemmältä joelta.',
+    },
+    Orel: {
+      lyhyt: 'Orjolissa syntyi kirjailija Ivan Turgenev, ja hänen sukunsa kartano Spasskoje-Lutovinovo on nykyään museo.',
+    },
+    Orenburg: {
+      lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
+    },
+    Penza: {
+      lyhyt: 'Penzan alueen Tarhanyssa kasvoi runoilija Mihail Lermontov isoäitinsä kartanossa, joka on nyt hänen museonsa.',
+    },
+    "Perm'": {
+      lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+    },
+    'City of St. Petersburg': {
+      lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+    },
+    'North Ossetia': {
+      lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
+    },
+    "Primor'ye": {
+      lyhyt: 'Primorjen Leopardin maan kansallispuistossa elää suurin osa maailman luonnonvaraisista amurinleopardeista.',
+    },
+    Pskov: {
+      lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+    },
+    Rostov: {
+      lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
+    },
+    'RUS+99?': {
+      lyhyt: 'Tämä pieni saari on Karanmeren Bajdaratskajanlahdella, jonka pohjaan laskettiin 2014 kaasuputket Jamalin niemimaalta.',
+    },
+    "Ryazan'": {
+      lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+    },
+    'Sakha (Yakutia)': {
+      lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
+    },
+    Sakhalin: {
+      lyhyt: 'Anton Tšehov matkusti Sahaliniin 1890 ja kirjoitti saaresta kirjan, jolle on Južno-Sahalinskissa oma museonsa.',
+    },
+    Samara: {
+      lyhyt: 'Samaran alueen Toljatissa on AvtoVAZin tehdas, jonka linjoilta Lada-autoja on vierinyt vuodesta 1970.',
+    },
+    Saratov: {
+      lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+    },
+    Smolensk: {
+      lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+    },
+    "Stavropol'": {
+      lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
+    },
+    Sverdlovsk: {
+      lyhyt: 'Jekaterinburgin lähellä Uralilla voi seistä yhtä aikaa Euroopassa ja Aasiassa, rajaa merkitsevän obeliskin kummallakin puolella.',
+    },
+    Tambov: {
+      lyhyt: 'Säveltäjä Sergei Rahmaninov vietti kesiään Tambovin alueen Ivanovkassa, ja kartano on nykyään hänen museonsa.',
+    },
+    Tatarstan: {
+      lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
+    },
+    Tomsk: {
+      lyhyt: 'Tomskia kutsutaan Siperian Ateenaksi, sillä kaupungissa on Siperian vanhin yliopisto ja suuri joukko opiskelijoita.',
+    },
+    Chechnya: {
+      lyhyt: 'Tšetšenian vuoristossa lähes 1 900 metrin korkeudessa on Kezenoi-am, Kaukasuksen vuoriston pinta-alaltaan suurin järvi.',
+    },
+    'Chukchi Autonomous Okrug': {
+      lyhyt: 'Tšukotkan Dežnevinniemi on Euraasian mantereen itäisin kärki, ja Beringinsalmen toisella puolella on Alaska.',
+    },
+    Chuvash: {
+      lyhyt: 'Tšuvassin kieli on ainoa elossa oleva oguurien turkkilaiskieli, ja se eroaa paljon muista turkkilaiskielistä.',
+    },
+    Tula: {
+      lyhyt: 'Tulan prjanikit ovat hunajaisia piparkakkulevyjä, jotka painetaan kaiverrettuihin puumuotteihin ja täytetään usein hillolla.',
+    },
+    Tuva: {
+      lyhyt: 'Tuvassa lauletaan kurkkulaulua, jossa laulaja tuottaa yhtä aikaa matalan pohjasävelen ja sen yllä viheltävän yläsävelen.',
+    },
+    "Tver'": {
+      lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+    },
+    "Tyumen'": {
+      lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
+    },
+    Udmurt: {
+      lyhyt: 'Udmurtialaisen Buranovon kylän mummokuoro lauloi Euroviisuissa 2012 toiseksi, osin udmurtiksi.',
+    },
+    "Ul'yanovsk": {
+      lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+    },
+    Vladimir: {
+      lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+    },
+    Volgograd: {
+      lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
+    },
+    Vologda: {
+      lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+    },
+    Voronezh: {
+      lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
+    },
+    'Yamal-Nenets': {
+      lyhyt: 'Salehard on rakennettu aivan napapiirille, ja kaupungissa napapiirin kohtaa merkitsee oma muistomerkki.',
+    },
+    "Yaroslavl'": {
+      lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+    },
+    Yevrey: {
+      lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',
+    },
+  },
+  /*
+   * EGY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 27 aluetta.
+   * Avaimet ovat js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.EGY:n
+   * tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti (myös gravis-merkit
+   * "Al Isma`iliyah", "Bur Sa`id" ja heittomerkit "Janub Sina'",
+   * "Shamal Sina'"). Vain `lyhyt`. Fokuskohteiden aiheet (Faroksen
+   * majakka, Aleksandrian kirjasto, Gizan pyramidit, Karnak) jätettiin
+   * pois. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Al Fayyum        — Wadi Al-Hitan (Unesco, takajalalliset valaat)
+   *   Al Gharbiyah     — Ahmad al-Badawi / Tantan moulid (1–3 milj.)
+   *   Al Iskandariyah  — Catacombs of Kom El Shoqafa
+   *   Al Minya         — Amarna
+   *   Al Qahirah       — Al-Azhar Mosque (970–972) ja yliopisto
+   *   Al Bahr al Ahmar — Mons Porphyrites (ainoa keisariporfyyrin lähde)
+   *   Al Buhayrah      — Rosetta / Rosetta Stone (British Museum)
+   *   Ad Daqahliyah    — Mansoura: Dar Ibn Luqman (Ludvig IX, museo)
+   *   Al Minufiyah     — Monufia Governorate (Sadat, Mubarak)
+   *   Al Qalyubiyah    — Delta Barrage / El Qanater El Khayreya
+   *   Ash Sharqiyah    — Bubastis (Tell Basta, Zagazig)
+   *   Al Wadi at Jadid — White Desert (Farafra, liituveistokset)
+   *   Aswan            — Aswan High Dam (1970), Lake Nasser
+   *   Asyut            — Deir el-Muharraq (6 kk, kesäkuun vaellus)
+   *   Bani Suwayf      — Meidum pyramid
+   *   Dumyat           — Damietta Furniture City (SIS; ~2/3 tuotannosta)
+   *   Al Jizah         — Grand Egyptian Museum (avattu 1.11.2025)
+   *   Al Isma`iliyah   — Ismailia (Suez Canal Authority)
+   *   Janub Sina'      — Saint Catherine's Monastery
+   *   Kafr ash Shaykh  — Lake Burullus (Ramsar 1998, 112 lintulajia)
+   *   Luxor            — KV62 (muumio haudassa)
+   *   Matruh           — Siwi language
+   *   Bur Sa`id        — Port Fuad (ilmainen lautta, Aasian puoli)
+   *   Qina             — Dendera Temple complex
+   *   Shamal Sina'     — Lake Bardawil (100 m – 1 km hiekkasärkkä)
+   *   Suhaj            — Abydos King List
+   *   As Suways        — Suez Canal (saattueet)
+   */
+  EGY: {
+    'Ad Daqahliyah': {
+      lyhyt: 'Mansouran Dar Ibn Luqman -talossa pidettiin vankina Ranskan kuningasta Ludvig IX:ttä vuonna 1250, ja nyt talo on museo.',
+    },
+    'Al Bahr al Ahmar': {
+      lyhyt: 'Punaisenmeren rannikon vuorilla on Mons Porphyrites, roomalaisten louhos, joka oli keisarillisen purppuraporfyyrin ainoa tunnettu lähde.',
+    },
+    'Al Buhayrah': {
+      lyhyt: 'Rašidin eli Rosettan kaupunki antoi nimensä kivelle, jonka avulla hieroglyfit opittiin lukemaan; itse kivi on nykyään Lontoossa.',
+    },
+    'Al Fayyum': {
+      lyhyt: 'Fajumin autiomaassa Wadi al-Hitanissa lojuu fossiilisia valaanluurankoja, joilla oli vielä pienet takajalat; laakso on Unescon maailmanperintöä.',
+    },
+    'Al Gharbiyah': {
+      lyhyt: 'Tantassa vietetään joka vuosi sufipyhimys Ahmad al-Badawin moulidia, ja juhla tuo kaupunkiin yli miljoona pyhiinvaeltajaa.',
+    },
+    'Al Iskandariyah': {
+      lyhyt: 'Aleksandrian Kom el-Šoqafan katakombeissa egyptiläiset, kreikkalaiset ja roomalaiset kuva-aiheet sekoittuvat samoissa hautakammioissa.',
+    },
+    'Al Isma`iliyah': {
+      lyhyt: 'Ismailia rakennettiin Suezin kanavan työmaakaupungiksi, ja kanavaa hallinnoivan viraston päämaja on siellä yhä.',
+    },
+    'Al Jizah': {
+      lyhyt: 'Gizaan avattiin 2025 Suuri egyptiläinen museo, jossa Tutankhamonin koko hautalöytö on ensimmäistä kertaa esillä yhdessä.',
+    },
+    'Al Minufiyah': {
+      lyhyt: 'Menufian maalaiskylistä ovat kotoisin kaksi Egyptin presidenttiä, Anwar Sadat ja Hosni Mubarak.',
+    },
+    'Al Minya': {
+      lyhyt: 'Minyan maakunnassa Niilin itärannalla ovat Amarnan rauniot – farao Ekhnatonin lyhytikäisen pääkaupungin jäänteet.',
+    },
+    'Al Qahirah': {
+      lyhyt: 'Kairon al-Azhar-moskeija valmistui 970-luvulla, ja sen yhteydessä toimiva yliopisto on yksi maailman vanhimmista.',
+    },
+    'Al Qalyubiyah': {
+      lyhyt: 'Qanater al-Khairiyassa Niili jakautuu Rosettan ja Damiettan haaroiksi, ja vanhan padon puistot ovat kairolaisten suosittu retkikohde.',
+    },
+    'Al Wadi at Jadid': {
+      lyhyt: 'Farafran keitaan pohjoispuolella Valkoisessa aavikossa tuuli on veistänyt liitukivestä valkoisia sieniä ja torneja.',
+    },
+    'As Suways': {
+      lyhyt: 'Suezin kaupunki on kanavan eteläpäässä, ja sen edustalla laivat odottavat vuoroaan kulkea kanavan läpi saattueissa.',
+    },
+    'Ash Sharqiyah': {
+      lyhyt: 'Zagazigin laidalla ovat Bubastiksen rauniot, muinaisen kissajumalatar Bastetin tärkeimmän kulttikaupungin jäänteet.',
+    },
+    Aswan: {
+      lyhyt: 'Aswanin suurpato valmistui 1970, ja sen taakse padottu Nasserinjärvi on yksi maailman suurimmista tekojärvistä.',
+    },
+    Asyut: {
+      lyhyt: 'Asyutin Deir al-Muharraqin luostarissa pyhän perheen kerrotaan asuneen puoli vuotta, ja kesäisin sinne vaeltaa tuhansia koptikristittyjä.',
+    },
+    'Bani Suwayf': {
+      lyhyt: 'Beni Suefin Meidumissa seisoo osittain romahtanut pyramidi, jonka jäljelle jäänyt ydin näyttää autiomaassa tornilta.',
+    },
+    'Bur Sa`id': {
+      lyhyt: 'Port Saidista pääsee ilmaisella lautalla kanavan yli Port Fuadiin, ja kymmenen minuutin matkalla maanosa vaihtuu Afrikasta Aasiaan.',
+    },
+    Dumyat: {
+      lyhyt: 'Damiettan pienissä pajoissa valmistuu noin kaksi kolmasosaa Egyptin huonekaluista.',
+    },
+    "Janub Sina'": {
+      lyhyt: 'Siinainvuoren juurella oleva Pyhän Katariinan luostari on yksi maailman vanhimmista yhä toimivista kristillisistä luostareista.',
+    },
+    'Kafr ash Shaykh': {
+      lyhyt: 'Burullusjärvi on Niilin suiston toiseksi suurin laguuni ja suojeltu kosteikko, jossa on tavattu yli sata lintulajia.',
+    },
+    Luxor: {
+      lyhyt: 'Kuninkaiden laaksossa Tutankhamonin muumio lepää yhä omassa haudassaan, vaikka aarteet on viety museoon.',
+    },
+    Matruh: {
+      lyhyt: 'Siwan keitaalla puhutaan yhä berberikieliin kuuluvaa siwia, vaikka ympärillä on arabiankielinen Egypti.',
+    },
+    Qina: {
+      lyhyt: 'Qinan lähellä Denderan Hathorin temppeli on yksi Egyptin parhaiten säilyneistä, ja sen kattomaalaukset ovat yhä värikkäitä.',
+    },
+    "Shamal Sina'": {
+      lyhyt: 'Pohjois-Siinain rannikolla Bardawilin matalaa ja suolaista laguunia erottaa Välimerestä vain kapea hiekkasärkkä.',
+    },
+    Suhaj: {
+      lyhyt: 'Sohagin maakunnan Abydoksessa Seti I:n temppelin seinään on kaiverrettu luettelo kymmenistä häntä edeltäneistä faaraoista.',
+    },
+  },
+  /*
+   * IND (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 36 aluetta
+   * (osavaltiot ja liittoalueet). Avaimet kopioitu koneellisesti
+   * MAAKUNNAT_KAIKKI.IND:stä. Vain `lyhyt`. Jammu and Kashmir, Ladakh ja
+   * Arunachal Pradesh kuvataan neutraalisti maiseman tai paikan kautta.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Andaman and Nicobar — Barren Island (Etelä-Aasian ainoa aktiivinen)
+   *   Andhra Pradesh      — Venkateswara Temple, Tirumala (hiusuhri)
+   *   Arunachal Pradesh   — Tawang Monastery (Intian suurin, ~3 000 m)
+   *   Assam               — Kaziranga National Park (~2/3 sarvikuonoista)
+   *   Bihar               — Mahabodhi Temple
+   *   Chandigarh          — Chandigarh (Le Corbusier, sektorit)
+   *   Chhattisgarh        — Chitrakote Falls
+   *   Dadra ... Diu       — Diu Fort; Portugalin vallan loppu 1961
+   *   Delhi               — Qutb Minar (72,5 m)
+   *   Goa                 — Basilica of Bom Jesus (näytteille ~10 v välein)
+   *   Gujarat             — Gir National Park
+   *   Haryana             — Kurukshetra
+   *   Himachal Pradesh    — Kalka–Shimla Railway (102 tunnelia käytössä)
+   *   Jammu and Kashmir   — Dal Lake
+   *   Jharkhand           — Jamshedpur
+   *   Karnataka           — Hampi
+   *   Kerala              — Literacy in India (2011: ~94 %)
+   *   Ladakh              — Leh (~3 500 m)
+   *   Lakshadweep         — Lakshadweep (36 saarta, 10 asuttua, lupa)
+   *   West Bengal         — Sundarbans
+   *   Madhya Pradesh      — Khajuraho Group of Monuments
+   *   Maharashtra         — Dabbawala (nyt n. 50 000/pv, ennen 200 000)
+   *   Manipur             — Keibul Lamjao National Park
+   *   Meghalaya           — Living root bridge
+   *   Mizoram             — Cheraw dance
+   *   Nagaland            — Hornbill Festival (Kisama, 1.–10.12.)
+   *   Odisha              — Konark Sun Temple (24 pyörää)
+   *   Puducherry          — Puducherry (de facto siirto 1954)
+   *   Punjab              — Golden Temple, langar
+   *   Rajasthan           — Jaisalmer Fort
+   *   Sikkim              — Sikkim Organic Mission (18.1.2016)
+   *   Tamil Nadu          — Meenakshi Temple
+   *   Telangana           — Charminar (1591), Laad Bazaar
+   *   Tripura             — Neermahal
+   *   Uttar Pradesh       — Varanasi ghats (Manikarnika)
+   *   Uttarakhand         — Jim Corbett National Park (Hailey NP 1936)
+   */
+  IND: {
+    'Andaman and Nicobar': {
+      lyhyt: 'Andamaanien Barren Island on Etelä-Aasian ainoa vahvistetusti toimiva tulivuori, ja sitä pääsee katsomaan vain veneestä.',
+    },
+    'Andhra Pradesh': {
+      lyhyt: 'Tirumalan Venkateswaran temppeliin Tirupatissa saapuu päivittäin kymmeniä tuhansia pyhiinvaeltajia, ja moni uhraa sinne hiuksensa.',
+    },
+    'Arunachal Pradesh': {
+      lyhyt: 'Tawangin luostari noin 3 000 metrin korkeudessa Himalajan rinteillä on Intian suurin buddhalaisluostari.',
+    },
+    Assam: {
+      lyhyt: 'Kazirangan kansallispuistossa elää noin kaksi kolmasosaa kaikista maailman intiansarvikuonoista.',
+    },
+    Bihar: {
+      lyhyt: 'Bodh Gayan Mahabodhi-temppelin viikunapuun juurella Buddhan kerrotaan saavuttaneen valaistumisen, ja paikka on Unescon maailmanperintöä.',
+    },
+    Chandigarh: {
+      lyhyt: 'Chandigarhin suunnitteli sveitsiläissyntyinen arkkitehti Le Corbusier, ja kaupunki on jaettu numeroituihin sektoreihin.',
+    },
+    Chhattisgarh: {
+      lyhyt: 'Chitrakoten vesiputousta Indravati-joella kutsutaan leveytensä vuoksi Intian Niagaraksi.',
+    },
+    'Dadra and Nagar Haveli and Daman and Diu': {
+      lyhyt: 'Diun saarella seisoo portugalilaisten 1500-luvulla rakentama linnoitus, ja saari kuului Portugalille vuoteen 1961.',
+    },
+    Delhi: {
+      lyhyt: 'Delhin Qutb Minar on lähes 73 metriä korkea tiilinen minareetti, jonka rakentaminen alkoi 1100-luvun lopulla.',
+    },
+    Goa: {
+      lyhyt: 'Vanhan Goan Bom Jesusin basilikassa lepää Frans Xavierin ruumis, ja se asetetaan pyhiinvaeltajien nähtäväksi kymmenen vuoden välein.',
+    },
+    Gujarat: {
+      lyhyt: 'Girin metsissä elävät maailman ainoat luonnonvaraiset aasianleijonat.',
+    },
+    Haryana: {
+      lyhyt: 'Kurukshetra on Mahabharatan suuren taistelun näyttämö, jossa Krishnan kerrotaan puhuneen Bhagavadgitan Arjunalle.',
+    },
+    'Himachal Pradesh': {
+      lyhyt: 'Kalkasta Shimlaan kiemurteleva kapearaiteinen vuoristorata kulkee yli sadan tunnelin läpi ja on Unescon maailmanperintöä.',
+    },
+    'Jammu and Kashmir': {
+      lyhyt: 'Srinagarin Dal-järvellä kelluu satoja puisia asuntolaivoja, ja kauppiaat kiertävät niitä kapeilla shikara-veneillä.',
+    },
+    Jharkhand: {
+      lyhyt: 'Jamshedpur rakennettiin Tatan terästehtaan ympärille, ja sitä pidetään Intian ensimmäisenä suunniteltuna teollisuuskaupunkina.',
+    },
+    Karnataka: {
+      lyhyt: 'Hampissa Vijayanagaran valtakunnan pääkaupungin temppelirauniot seisovat valtavien graniittilohkareiden keskellä.',
+    },
+    Kerala: {
+      lyhyt: 'Keralan lukutaitoaste on Intian osavaltioiden korkein: yli 90 prosenttia asukkaista osaa lukea.',
+    },
+    Ladakh: {
+      lyhyt: 'Ladakhin pääkaupunki Leh on noin 3 500 metrin korkeudessa, joten tulijan kannattaa ensin totutella ohueen ilmaan.',
+    },
+    Lakshadweep: {
+      lyhyt: 'Lakshadweepin 36 korallisaaresta vain kymmenellä asuu ihmisiä, ja vierailuun tarvitaan aina erillinen lupa.',
+    },
+    'Madhya Pradesh': {
+      lyhyt: 'Khajurahon tuhatvuotiaiden temppeleiden seinät ovat täynnä veistoksia, myös eroottisia, ja temppelit ovat Unescon maailmanperintöä.',
+    },
+    Maharashtra: {
+      lyhyt: 'Mumbain dabbawalat kuljettavat yhä kymmeniä tuhansia kotona tehtyjä lounaita toimistoihin polkupyörillä ja junilla.',
+    },
+    Manipur: {
+      lyhyt: 'Loktakjärvellä kelluu kasvillisuuslauttoja, phumdeja, ja niiden varaan on perustettu maailman ainoa kelluva kansallispuisto.',
+    },
+    Meghalaya: {
+      lyhyt: 'Meghalayan khasit kasvattavat siltoja kumipuiden elävistä juurista, ja sillat vahvistuvat vuosi vuodelta puun kasvaessa.',
+    },
+    Mizoram: {
+      lyhyt: 'Mizoramin cheraw-tanssissa tanssijat hyppelevät yhteen lyötävien bambuseipäiden välissä rytmiä hukkaamatta.',
+    },
+    Nagaland: {
+      lyhyt: 'Kohiman lähellä Kisamassa järjestetään joka joulukuu Hornbill-festivaali, jossa nagaheimot esittelevät tanssejaan ja käsitöitään.',
+    },
+    Odisha: {
+      lyhyt: 'Konarkin aurinkotemppeli on rakennettu jättimäisen kivivaunun muotoon, ja sen kyljissä on 24 veistettyä pyörää.',
+    },
+    Puducherry: {
+      lyhyt: 'Puducherryn vanhassa ranskalaiskorttelissa kadunnimet ovat yhä ranskaksi, ja kaupunki kuului Ranskalle vuoteen 1954.',
+    },
+    Punjab: {
+      lyhyt: 'Amritsarin Kultaisen temppelin keittiö tarjoaa ilmaisen aterian kymmenille tuhansille ihmisille joka päivä.',
+    },
+    Rajasthan: {
+      lyhyt: 'Jaisalmerin hiekkakivilinnoitus on yksi maailman harvoista linnoista, joiden muurien sisällä asuu yhä ihmisiä.',
+    },
+    Sikkim: {
+      lyhyt: 'Sikkim julistettiin vuonna 2016 Intian ensimmäiseksi osavaltioksi, jonka koko maatalous on luonnonmukaista.',
+    },
+    'Tamil Nadu': {
+      lyhyt: 'Maduraissa Meenakshin temppeliä ympäröivät korkeat porttitornit, jotka on peitetty tuhansilla värikkäillä jumalhahmoilla.',
+    },
+    Telangana: {
+      lyhyt: 'Hyderabadin Charminar rakennettiin 1591, ja sen juurella Laad Bazaarissa myydään yhä kimaltelevia rannerenkaita.',
+    },
+    Tripura: {
+      lyhyt: 'Tripuran Neermahal on Rudrasagar-järven keskelle rakennettu kuninkaallinen kesäpalatsi, jonne mennään veneellä.',
+    },
+    'Uttar Pradesh': {
+      lyhyt: 'Varanasin ghateilla Gangesin rannalla vainajia poltetaan yötä päivää, ja aamuisin portaat täyttyvät kylpijöistä.',
+    },
+    Uttarakhand: {
+      lyhyt: 'Jim Corbettin kansallispuisto perustettiin 1936 Intian ensimmäiseksi kansallispuistoksi, ja se on nimetty kirjailija Jim Corbettin mukaan.',
+    },
+    'West Bengal': {
+      lyhyt: 'Sundarbansin mangrovemetsissä Gangesin suistossa elää bengalintiikereitä, jotka ovat tottuneet uimaan jokihaarojen yli.',
+    },
+  },
+  /*
+   * ZAF (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 9 provinssia.
+   * Avaimet kopioitu koneellisesti MAAKUNNAT_KAIKKI.ZAF:stä. Vain
+   * `lyhyt`. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Eastern Cape  — Qunu (Mandelan lapsuus, hautajaiset 15.12.2013)
+   *   Free State    — Bloemfontein, Supreme Court of Appeal
+   *   Gauteng       — Johannesburg (Witwatersrandin kultaryntäys 1886)
+   *   KwaZulu-Natal — Maloti-Drakensberg Park (san-kalliotaide)
+   *   Limpopo       — Golden Rhinoceros of Mapungubwe (löydetty 1932)
+   *   Mpumalanga    — Blyde River Canyon, Three Rondavels
+   *   North West    — Pilanesberg (rengasjuonikompleksi)
+   *   Northern Cape — Big Hole (yksi suurimmista käsin kaivetuista)
+   *   Western Cape  — Boulders Beach (afrikanpingviinit)
+   */
+  ZAF: {
+    'Eastern Cape': {
+      lyhyt: 'Nelson Mandela vietti lapsuutensa Itä-Kapin Qunun kylässä, ja sinne hänet myös haudattiin vuonna 2013.',
+    },
+    'Free State': {
+      lyhyt: 'Bloemfontein on Etelä-Afrikan oikeudellinen pääkaupunki, ja siellä toimii maan muutoksenhakutuomioistuin, Supreme Court of Appeal.',
+    },
+    Gauteng: {
+      lyhyt: 'Johannesburg syntyi 1886 kultaryntäyksessä, ja vanhojen kaivosten keltaiset jätekasat näkyvät yhä kaupungin laidoilla.',
+    },
+    'KwaZulu-Natal': {
+      lyhyt: 'Drakensbergin vuorten kallioluolissa on tuhansia san-kansan kalliomaalauksia, ja vuoristo on Unescon maailmanperintöä.',
+    },
+    Limpopo: {
+      lyhyt: 'Mapungubwen kukkulan kuninkaallisesta haudasta löytyi 1932 kultalevyin päällystetty pieni sarvikuono, noin 800 vuotta vanha.',
+    },
+    Mpumalanga: {
+      lyhyt: 'Blyde River Canyonin reunalta näkyvät Kolme rondavelia, kalliohuiput, jotka muistuttavat perinteisiä pyöreitä majoja.',
+    },
+    'North West': {
+      lyhyt: 'Pilanesbergin kansallispuisto on muinaisen tulivuoren kehämäisten harjujen sisällä, ja siellä elää sarvikuonoja ja norsuja.',
+    },
+    'Northern Cape': {
+      lyhyt: 'Kimberleyn Big Hole on yksi maailman suurimmista käsin kaivetuista kuopista, entinen timanttikaivos keskellä kaupunkia.',
+    },
+    'Western Cape': {
+      lyhyt: "Simon's Townin Boulders Beachillä pesii afrikanpingviinejä, ja niitä pääsee katsomaan aivan läheltä.",
+    },
+  },
+  /*
+   * KEN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4A), 8 aluetta.
+   * Avaimet ovat MAAKUNNAT_KAIKKI.KEN:n tunnuksia (vanhat provinssit,
+   * jotka korvattiin 47 piirikunnalla 2013). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Central       — Baden-Powell grave (Nyeri, kohti Kenianvuorta)
+   *   Coast         — Lamu Old Town (aasit, ei juuri autoja)
+   *   Eastern       — Meru National Park, Elsa the lioness
+   *   North-Eastern — North Eastern Province (somalit, kamelinkasvatus)
+   *   Nairobi       — Nairobi National Park
+   *   Nyanza        — Kisumu, Lake Victoria (tilapia, niilinahven)
+   *   Rift Valley   — Iten (2 400 m)
+   *   Western       — Kakamega Forest (Guineo-Kongon sademetsän jäänne)
+   */
+  KEN: {
+    Central: {
+      lyhyt: 'Partioliikkeen perustaja Robert Baden-Powell on haudattu Nyeriin, ja hänen hautansa katsoo kohti Kenianvuorta.',
+    },
+    Coast: {
+      lyhyt: 'Lamun vanhassa kaupungissa ei juuri ole autoja, joten kapeilla kujilla kuljetaan jalan tai aasilla.',
+    },
+    Eastern: {
+      lyhyt: 'Merun kansallispuiston seudulla George ja Joy Adamson palauttivat Elsa-leijonan luontoon; tarinasta tuli kirja ja elokuva Born Free.',
+    },
+    Nairobi: {
+      lyhyt: 'Nairobin kansallispuisto on pääkaupungin rajojen sisällä, ja kirahveja voi nähdä pilvenpiirtäjiä vasten.',
+    },
+    'North-Eastern': {
+      lyhyt: 'Koillis-Kenian kuivilla tasangoilla elää enimmäkseen somalipaimentolaisia, joille kameli on tärkein karjaeläin.',
+    },
+    Nyanza: {
+      lyhyt: 'Kisumu on Viktoriajärven rannalla, ja sen kalasatamiin tuodaan järvestä tilapiaa ja niilinahventa.',
+    },
+    'Rift Valley': {
+      lyhyt: 'Itenin pikkukaupunki noin 2 400 metrin korkeudessa on maailman kestävyysjuoksijoiden tunnetuin harjoituspaikka.',
+    },
+    Western: {
+      lyhyt: 'Kakamegan metsä on Kenian ainoa trooppinen sademetsä, viimeinen jäänne vyöhykkeestä, joka ulottui aikoinaan Kongon altaalle asti.',
+    },
+  },
+  /*
+   * JPN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.JPN:n tunnuksia
+   * TÄSMÄLLEEN (makronit mukana: "Hokkaidō", "Hyōgo", "Kyōto", "Kōchi",
+   * "Ōita", "Ōsaka"; "Tokyo" ilman makronia). Vain `lyhyt`. Vältetty
+   * maastokohteet-jpn.js:n aiheet (Fuji, Shinanojoki, Himeji, Nikkō
+   * Tōshō-gū, Shirakawa-gō, Hiroshiman rauhanmuistomerkki, Hōryū-ji,
+   * Iwami, Kumano Kodō, Dejima). Lähteet (en-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Fukui     — Sabae (noin 95 % Japanin silmälasinkehyksistä,
+   *               Fukuin prefektuurin matkailusivusto / nippon.com)
+   *   Ishikawa  — Kanazawa gold leaf (99 % Japanin kultalehdestä,
+   *               VISIT KANAZAWA / JNTO)
+   *   Tokyo     — Ogasawara Islands (noin 1 000 km, Ogasawara Maru
+   *               noin 24 h Takeshiban laiturista)
+   *   Tottori   — Tottori Sand Dunes (14 km, kamelit)
+   *   Toyama    — Tateyama Kurobe Alpine Route (lumiseinät 15–20 m)
+   *   Wakayama  — Mount Kōya (noin 120 temppeliä, moni majoittaa)
+   *   Yamagata  — kirsikat (noin 70 % Japanin sadosta, MAFF 2012)
+   *   Muut      — yleistietoa, tarkistettu vastaavista
+   *               en-Wikipedia-artikkeleista.
+   */
+  JPN: {
+    Aichi: {
+      lyhyt: 'Aichin Toyotan kaupunki vaihtoi nimensä 1959 siellä pääkonttoriaan pitävän autotehtaan mukaan.',
+    },
+    Akita: {
+      lyhyt: 'Ogan niemimaalla olkiviittaiset namahage-demonit kiertävät uudenvuodenaattona taloissa etsimässä laiskoja ja tottelemattomia.',
+    },
+    Aomori: {
+      lyhyt: 'Aomorin Nebuta-juhlassa elokuun alussa kaduilla kuljetetaan jättimäisiä, sisältä valaistuja paperisia soturihahmoja.',
+    },
+    Chiba: {
+      lyhyt: 'Tokyo Disneyland ei ole Tokiossa vaan Chiban Urayasussa, ja se avattiin 1983.',
+    },
+    Ehime: {
+      lyhyt: 'Ehimen Imabarista lähtevä Shimanami Kaidō kulkee siltoja pitkin saarelta saarelle Hiroshiman puolelle, ja sen voi ajaa polkupyörällä.',
+    },
+    Fukui: {
+      lyhyt: 'Fukuin Sabaessa valmistetaan valtaosa kaikista Japanissa tehdyistä silmälasinkehyksistä.',
+    },
+    Fukuoka: {
+      lyhyt: 'Fukuokan yatai-katukeittiöissä syödään iltaisin Hakata-ramenia, jonka samea liemi keitetään sianluista.',
+    },
+    Fukushima: {
+      lyhyt: 'Ōuchi-juku on vanha majatalokylä, jonka pääkadun varrella seisoo yhä rivi olkikattoisia taloja.',
+    },
+    Gifu: {
+      lyhyt: 'Gifun Nagarajoella kalastetaan kesäöisin yhä merimetsojen avulla veneiden keulassa palavien soihtujen valossa.',
+    },
+    Gunma: {
+      lyhyt: 'Kusatsun kylpyläkaupungin keskellä höyryää yubatake, jossa kuumaa lähdevettä jäähdytetään pitkissä puukouruissa.',
+    },
+    Hiroshima: {
+      lyhyt: 'Miyajiman Itsukushiman pyhäkön punainen torii-portti seisoo nousuveden aikaan meressä, ja laskuveden aikaan sen luo voi kävellä.',
+    },
+    Hokkaidō: {
+      lyhyt: 'Sapporon lumifestivaaleilla helmikuussa Ōdōrin puisto täyttyy talojen kokoisista lumi- ja jääveistoksista.',
+    },
+    Hyōgo: {
+      lyhyt: 'Takarazukan kaupungissa toimii 1913 perustettu Takarazuka Revue, musiikkiteatteri, jonka kaikki roolit esittävät naiset.',
+    },
+    Ibaraki: {
+      lyhyt: 'Ibarakin pääkaupunki Mito tunnetaan nattōsta, käyneistä soijapavuista, jotka venyvät syödessä tahmeiksi rihmoiksi.',
+    },
+    Ishikawa: {
+      lyhyt: 'Kanazawassa lyödään lähes kaikki Japanin kultalehti, ja sitä ripotellaan täällä jopa jäätelön päälle.',
+    },
+    Iwate: {
+      lyhyt: 'Hiraizumin Chūson-jissa on Konjikidō, vuonna 1124 valmistunut pieni temppelisali, joka on päällystetty kauttaaltaan kullalla.',
+    },
+    Kagawa: {
+      lyhyt: 'Kagawaa kutsutaan udon-maakunnaksi, sillä paksuja sanuki-vehnänuudeleita syödään täällä usein jo aamiaiseksi.',
+    },
+    Kagoshima: {
+      lyhyt: 'Sakurajima-tulivuori purkautuu lahden toisella puolella niin usein, että Kagoshiman asukkaat lakaisevat tuhkaa kaduiltaan.',
+    },
+    Kanagawa: {
+      lyhyt: 'Kamakuran suuri Buddha on noin 11-metrinen pronssipatsas, joka istuu taivasalla temppelin pihalla.',
+    },
+    Kyōto: {
+      lyhyt: 'Fushimi Inarin pyhäkön vuorenrinnettä kiertävät tuhannet oranssinpunaiset torii-portit, jotka yritykset ja yksityiset ovat lahjoittaneet.',
+    },
+    Kōchi: {
+      lyhyt: 'Kōchin tunnetuin ruoka on katsuo no tataki, boniittifilee, jonka pinta ruskistetaan nopeasti oljen liekeissä.',
+    },
+    Kumamoto: {
+      lyhyt: 'Kumamoton maskotti, punaposkinen musta karhu Kumamon, on Japanin tunnetuimpia maakuntahahmoja.',
+    },
+    Mie: {
+      lyhyt: 'Isen suuren pyhäkön päärakennukset puretaan ja rakennetaan uudelleen joka 20. vuosi; edellisen kerran se tehtiin 2013.',
+    },
+    Miyagi: {
+      lyhyt: 'Matsushiman lahdella on satoja mäntyjen peittämiä pikkusaaria, ja maisema lasketaan yhdeksi Japanin kolmesta kauneimmasta.',
+    },
+    Miyazaki: {
+      lyhyt: 'Takachihon rotkossa soudetaan pienillä veneillä basalttiseinämien välissä Manai-vesiputouksen alle.',
+    },
+    Nagano: {
+      lyhyt: 'Matsumoton linna on yksi Japanin harvoista alkuperäisinä säilyneistä linnoista, ja mustan värinsä vuoksi sitä kutsutaan Variksenlinnaksi.',
+    },
+    Nagasaki: {
+      lyhyt: 'Nagasakin edustan Hashima eli Gunkanjima on autioitunut hiilikaivossaari, jonka betonikerrostalot on jätetty rapistumaan.',
+    },
+    Nara: {
+      lyhyt: 'Naran puistossa kulkee vapaana toista tuhatta kesyä peuraa, joita on vanhastaan pidetty jumalten sanansaattajina.',
+    },
+    Niigata: {
+      lyhyt: 'Niigatan edustalla oleva Sadon saari tunnetaan kultakaivoksistaan, jotka merkittiin Unescon maailmanperintölistalle 2024.',
+    },
+    Ōita: {
+      lyhyt: 'Beppun kuumien lähteiden "helvetit" höyryävät toinen kirkkaan sinisenä, toinen verenpunaisena, eikä niissä kylvetä.',
+    },
+    Okayama: {
+      lyhyt: 'Okayaman Kōraku-en lasketaan Japanin kolmen kuuluisimman maisemapuutarhan joukkoon.',
+    },
+    Okinawa: {
+      lyhyt: 'Okinawan Churaumi-akvaarion jättialtaassa uivat valashait ja mantarauskut.',
+    },
+    Ōsaka: {
+      lyhyt: 'Ōsakan Dōtonborin kanavan varrella loistaa kädet ylhäällä juoksevan miehen Glico-valomainos, yksi kaupungin tunnusmerkeistä.',
+    },
+    Saga: {
+      lyhyt: 'Sagan Aritassa on valmistettu posliinia 1600-luvun alusta asti, ja kaupunki elää yhä savesta ja uuneista.',
+    },
+    Saitama: {
+      lyhyt: 'Kawagoeta kutsutaan Pikku-Edoksi, sillä sen vanhalla kauppakadulla seisoo yhä paksuseinäisiä savitalojen rivistöjä.',
+    },
+    Shiga: {
+      lyhyt: 'Biwajärvi on Japanin suurin järvi, ja se peittää noin kuudesosan Shigan pinta-alasta.',
+    },
+    Shimane: {
+      lyhyt: 'Japanilaisen perinteen mukaan kaikki jumalat kokoontuvat kerran vuodessa Izumo Taishan pyhäkköön Shimaneen.',
+    },
+    Shizuoka: {
+      lyhyt: 'Shizuoka on Japanin suurin vihreän teen tuottaja, ja teepensasrivit peittävät sen loivia rinteitä.',
+    },
+    Tochigi: {
+      lyhyt: 'Tochigin pääkaupunki Utsunomiya kutsuu itseään gyōza-kaupungiksi, ja nyyttiravintoloita on siellä kymmenittäin.',
+    },
+    Tokyo: {
+      lyhyt: 'Tokioon kuuluvat myös noin tuhannen kilometrin päässä etelässä olevat Ogasawarasaaret, joille laiva kulkee noin vuorokauden.',
+    },
+    Tokushima: {
+      lyhyt: 'Naruton salmen vuorovesipyörteitä voi katsoa suoraan ylhäältä Ōnaruto-sillan alla kulkevan käytävän lasilattian läpi.',
+    },
+    Tottori: {
+      lyhyt: 'Tottorin hiekkadyynit ulottuvat rannikolla noin 14 kilometrin matkalle, ja niillä voi ratsastaa kamelilla.',
+    },
+    Toyama: {
+      lyhyt: 'Tateyaman vuoristotie aukeaa keväällä lumen keskeltä, ja tien varsilla kohoaa jopa 20-metrisiä lumiseiniä.',
+    },
+    Wakayama: {
+      lyhyt: 'Kōyasanin vuorella on toista sataa buddhalaistemppeliä, ja monessa niistä matkailija voi yöpyä munkkien luona.',
+    },
+    Yamagata: {
+      lyhyt: 'Yamagatan tarhoista tulee noin 70 prosenttia Japanin kirsikoista, ja kesäkuussa niitä pääsee poimimaan itse.',
+    },
+    Yamaguchi: {
+      lyhyt: 'Iwakunin Kintai-kyō on viidestä puukaaresta koottu silta, joka rakennettiin alun perin vuonna 1673.',
+    },
+    Yamanashi: {
+      lyhyt: 'Yamanashi on Japanin tärkein viinimaakunta, ja sen oma koshu-rypäle tuottaa kevyttä valkoviiniä.',
+    },
+  },
+  /*
+   * AUS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.AUS:n tunnuksia TÄSMÄLLEEN (Natural Earthin
+   * englanninkieliset nimet; Lord Howe Island ja Macquarie Island ovat
+   * omina alueinaan, vaikka hallinnollisesti ne kuuluvat Uuteen
+   * Etelä-Walesiin ja Tasmaniaan). Vain `lyhyt`. Vältetty
+   * maastokohteet-aus.js:n aiheet (Port Arthur, Ubirr, Parkes, Broken
+   * Hill, Mungo, Snowy Mountains, Eureka, Cooktown, Mount Augustus, Iso
+   * valliriutta). Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Jervis Bay Territory — Jervis Bay Territory (1915, HMAS Creswell,
+   *                          Booderee noin 90 % alueesta)
+   *   Lord Howe Island     — Lord Howe Island (enintään 400 matkailijaa,
+   *                          Unesco 1982)
+   *   Macquarie Island     — Macquarie Island (vaipan kiviä merenpinnan
+   *                          yläpuolella, Unesco 1997)
+   *   Victoria             — Trams in Melbourne (maailman suurin
+   *                          toiminnassa oleva kaupunkiraitiotieverkko)
+   *   Muut                 — yleistietoa, tarkistettu vastaavista
+   *                          en-Wikipedia-artikkeleista.
+   */
+  AUS: {
+    'Australian Capital Territory': {
+      lyhyt: 'Canberra on suunnittelukilpailun pohjalta tyhjästä rakennettu pääkaupunki, ja sen keskellä on padottu tekojärvi, Lake Burley Griffin.',
+    },
+    'South Australia': {
+      lyhyt: 'Opaalikaupunki Coober Pedyssä moni asuu maan alle kaivetussa kodissa, jossa lämpötila pysyy tasaisena aavikon helteellä.',
+    },
+    'Jervis Bay Territory': {
+      lyhyt: 'Jervis Bay erotettiin 1915 liittovaltion alueeksi, jotta sisämaan pääkaupungilla olisi oma rannikko; nyt siellä toimii laivaston upseerikoulu.',
+    },
+    'Lord Howe Island': {
+      lyhyt: 'Lord Howen saarella saa olla kerrallaan enintään 400 matkailijaa, jotta pieni maailmanperintösaari ei kuluisi.',
+    },
+    'Western Australia': {
+      lyhyt: 'Perthin edustan Rottnestin saarella elää kvokkoja, pieniä pussieläimiä, joiden "hymyilevät" selfiet ovat kiertäneet maailmaa.',
+    },
+    'Macquarie Island': {
+      lyhyt: 'Macquariensaarella maan vaipasta peräisin olevaa kiveä nousee merenpinnan yläpuolelle, ja siksi saari on Unescon maailmanperintökohde.',
+    },
+    'Northern Territory': {
+      lyhyt: 'Uluru on anangu-kansalle pyhä, eikä kallion päälle ole saanut kiivetä lokakuun 2019 jälkeen.',
+    },
+    Queensland: {
+      lyhyt: 'Queensland ei siirrä kelloja kesäaikaan, joten kesäisin Brisbanessa kello on tunnin jäljessä Sydneystä.',
+    },
+    Tasmania: {
+      lyhyt: 'Hobartin MONA on uhkapelimiljonääri David Walshin 2011 avaama taidemuseo, jonka salit on louhittu hiekkakivikallion sisään.',
+    },
+    'New South Wales': {
+      lyhyt: 'Sydneyn oopperatalon purjeiksi kutsutut katot on päällystetty yli miljoonalla ruotsalaisvalmisteisella laatalla.',
+    },
+    Victoria: {
+      lyhyt: 'Melbournessa on maailman suurin käytössä oleva kaupunkiraitiotieverkko, ja keskustan raitiovaunuissa matkustaa ilmaiseksi.',
+    },
+  },
+  /*
+   * NZL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.NZL:n tunnuksia TÄSMÄLLEEN (Natural Earthin nimet;
+   * "Hawke's Bay" tavallisella heittomerkillä, nimiFi kaarevalla).
+   * Subantarktiset saariryhmät (Antipodes, Auckland Islands, Campbell,
+   * The Snares) ja Kermadec ovat asumattomia luonnonsuojelualueita;
+   * Tokelau on Uuden-Seelannin alaisuudessa oleva itsehallintoalue. Vain
+   * `lyhyt`. Vältetty maastokohteet-nzl.js:n aiheet (Waitangi,
+   * Ruapekapeka, Cape Reinga, Whakarewarewa, Waitomo, Napier, Arrowtown,
+   * Denniston, Ruapehu, Taupo, Waikatojoki). Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Antipodes Islands  — Antipodes Islands (nimi: lähellä Lontoon
+   *                        vastapistettä, kaksi kotoperäistä papukaijaa)
+   *   Auckland Islands   — Auckland Islands (uudenseelanninmerileijonan
+   *                        pääasiallinen lisääntymispaikka)
+   *   Campbell Islands   — Campbell Island (sitkankuusi 1901–1907,
+   *                        lähin puu yli 274 km:n päässä)
+   *   Chatham Islands    — Chatham Islands (UTC+12:45, 45 min edellä)
+   *   Hawke's Bay        — Mission Estate Winery (1851, vanhin)
+   *   Kermadec Islands   — Kermadec Islands (Raoul ja Curtis aktiivisia
+   *                        tulivuoria, 800–1 000 km)
+   *   Nelson City        — Nelson (Botanical Hillin muistomerkki =
+   *                        kolmiomittauksen nollapiste)
+   *   Taranaki           — The Last Samurai (Taranaki Fujin sijaisena,
+   *                        newzealand.com)
+   *   The Snares         — The Snares (jopa kolme miljoonaa
+   *                        harmaaliitäjää, maihinnousu vain luvalla)
+   *   Three Kings Islands — Pennantia baylisiana (yksi luonnonvarainen
+   *                        puu, löydetty 1945)
+   *   Tokelau            — 100 % aurinkosähköä lokakuusta 2012
+   *   Manawatu-Wanganui  — Te Awa Tupua Act 2017
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  NZL: {
+    'Antipodes Islands': {
+      lyhyt: 'Antipodisaaret saivat nimensä siitä, että ne ovat lähellä Lontoon vastapistettä, ja niillä elää kaksi vain täältä tavattavaa papukaijaa.',
+    },
+    Auckland: {
+      lyhyt: 'Auckland on rakennettu tulivuorikentälle, ja kaupungin keskellä kohoaa kymmeniä vanhoja tulivuorenkartioita.',
+    },
+    'Auckland Islands': {
+      lyhyt: 'Asumattomat Aucklandinsaaret ovat uudenseelanninmerileijonan tärkein lisääntymispaikka, ja sinne pääsee vain luvalla.',
+    },
+    'Bay of Plenty': {
+      lyhyt: 'Bay of Plentyn Te Puke mainostaa itseään maailman kiivipääkaupunkina, ja kaupungin laidalla on jättimäinen kiivihedelmä.',
+    },
+    'Campbell Islands': {
+      lyhyt: 'Campbellinsaarella kasvaa sitkankuusi, jota kutsutaan maailman yksinäisimmäksi puuksi: lähin toinen puu on yli 270 kilometrin päässä.',
+    },
+    Canterbury: {
+      lyhyt: 'Christchurchin maanjäristyksessä tuhoutuneen katedraalin tilalle rakennettiin 2013 väliaikainen kirkko pahviputkista.',
+    },
+    'Chatham Islands Territory': {
+      lyhyt: 'Chathamsaarilla kello käy 45 minuuttia Uuden-Seelannin mantereen edellä, ja asukkaita on vain noin 600.',
+    },
+    'Gisborne District': {
+      lyhyt: 'Gisborne mainostaa olevansa maailman ensimmäinen kaupunki, joka näkee joka aamu uuden päivän auringonnousun.',
+    },
+    "Hawke's Bay": {
+      lyhyt: 'Hawke\'s Bayssa toimii Uuden-Seelannin vanhin yhä toimiva viinitila Mission Estate, jonka lähetyssaarnaajat perustivat 1851.',
+    },
+    'Kermadec Islands': {
+      lyhyt: 'Kermadecsaaret ovat asumattomia subtrooppisia tulivuorisaaria puolimatkassa Tongaan, ja niitä ympäröi laaja merensuojelualue.',
+    },
+    'Manawatu-Wanganui': {
+      lyhyt: 'Whanganuijoki sai vuonna 2017 lain mukaan oikeushenkilön aseman, joten joella on omat oikeutensa kuin ihmisellä.',
+    },
+    'Marlborough District': {
+      lyhyt: 'Marlborough on Uuden-Seelannin suurin viinialue, ja sen sauvignon blanc on tehnyt maan viinit tunnetuiksi maailmalla.',
+    },
+    'Nelson City': {
+      lyhyt: 'Nelsonin Botanical Hillillä on "Uuden-Seelannin keskipisteen" muistomerkki, vaikka se merkitsee oikeasti maanmittauksen nollapistettä.',
+    },
+    Northland: {
+      lyhyt: 'Waipouan metsässä kasvaa Tāne Mahuta, suurin tunnettu elossa oleva kauripuu, jonka runko on yli 15 metriä ympärysmitaltaan.',
+    },
+    Otago: {
+      lyhyt: 'Dunedinin Baldwin Street on Guinnessin mukaan maailman jyrkin asuinkatu; jyrkimmässä kohdassa se nousee 35 prosenttia.',
+    },
+    Southland: {
+      lyhyt: 'Milford Soundin vuonon jyrkiltä seinämiltä syöksyy sadepäivinä satoja tilapäisiä vesiputouksia.',
+    },
+    Taranaki: {
+      lyhyt: 'Taranakin lähes symmetrinen tulivuori esitti Fuji-vuorta elokuvassa Viimeinen samurai.',
+    },
+    'Tasman District': {
+      lyhyt: 'Abel Tasmanin kansallispuisto on Uuden-Seelannin pienin, ja sen kultaisia hiekkarantoja kierretään kajakilla.',
+    },
+    'The Snares': {
+      lyhyt: 'Snaresinsaarilla pesii kesäisin jopa kolme miljoonaa harmaaliitäjää, eikä saarille saa nousta ilman tutkimuslupaa.',
+    },
+    'Three Kings Islands': {
+      lyhyt: 'Kolmen kuninkaan saarilla kasvaa ainoa luonnonvarainen Pennantia baylisiana -puu, jota on pidetty maailman harvinaisimpana.',
+    },
+    Tokelau: {
+      lyhyt: 'Tokelau alkoi 2012 tuottaa kaiken sähkönsä aurinkopaneeleilla ensimmäisenä maana maailmassa.',
+    },
+    Waikato: {
+      lyhyt: 'Matamatan maatilalla on Taru sormusten herrasta -elokuvien Hobittila, jonka kolohobittien oviin matkailijat pääsevät kurkistamaan.',
+    },
+    Wellington: {
+      lyhyt: 'Wellingtonin parlamentin pyöreää toimistorakennusta kutsutaan muotonsa vuoksi Mehiläispesäksi.',
+    },
+    'West Coast': {
+      lyhyt: 'Punakaikin Pancake Rocks ovat pannukakkupinojen näköisiä kalkkikivikallioita, joiden puhallusrei\'istä meri suihkuaa vaahtona.',
+    },
+  },
+  /*
+   * CHN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.CHN:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti (Natural Earthin nimet, esim.
+   * "Inner Mongol" = Sisä-Mongolia, "Xizang" = Tiibetin autonominen alue,
+   * "Paracel Islands" = Paracelsaaret; Hongkong, Macao ja Taiwan eivät
+   * kuulu CHN:n aluejoukkoon). Vain `lyhyt` tässä erässä. Xizang, Xinjiang
+   * ja Paracel Islands kuvaavat vain maisemaa, rakennusta tai perinnettä,
+   * ei politiikkaa. Vältetty fokuskohteet-chn.js:n ja maastokohteet-chn.js:n
+   * aiheet (Yuanmingyuan, Taishan, Etelä-Kiinan meri, Jangtse,
+   * Keltainenjoki, Mutianyu, terrakotta-armeija, Mogaon luolat,
+   * Zhangjiajie, Lijiang, Leshanin Buddha, Pingyao). Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Chongqing        — Liziba station (linja 2, 19-kerroksinen talo,
+   *                      asema kerroksissa 6–8, avattu 2005)
+   *   Guangxi          — Li River (20 juanin setelin kuva, 5. sarja)
+   *   Guizhou          — Five-hundred-meter Aperture Spherical Telescope
+   *                      (Pingtang, valmis 2016)
+   *   Hainan           — Wenchang Space Launch Site (Long March 5)
+   *   Jilin            — Jilin rime + Fengman Dam (lämmin vesi, joki ei
+   *                      jäädy, huurre rantapuissa)
+   *   Paracel Islands  — Paracel Islands + Woody Island (suurin, 2,1 km²)
+   *   Qinghai          — Qinghai Lake (Kiinan suurin järvi, suolainen;
+   *                      rapsi kukkii heinä–elokuussa)
+   *   Shanxi           — Hanging Temple (Hunyuan, Datong; 491, Pohjoinen Wei)
+   *   Tianjin          — Tianjin Eye (120 m, Yongle-silta, Haijoki, 2008)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  CHN: {
+    Anhui: {
+      lyhyt: 'Huangshanin graniittihuippujen kallionrakoihin on juurtunut kiemuraisia mäntyjä, ja aamuisin laaksot täyttyvät usein pilvimerestä.',
+    },
+    Beijing: {
+      lyhyt: 'Pekingin hutongit ovat kapeita kujia, joiden varrella monet perheet asuvat yhä perinteisissä sisäpihataloissa, siheyuaneissa.',
+    },
+    Chongqing: {
+      lyhyt: 'Chongqingin Liziban asemalla yksiraidejuna ajaa 19-kerroksisen kerrostalon läpi, ja ylemmissä kerroksissa asutaan tavalliseen tapaan.',
+    },
+    Fujian: {
+      lyhyt: 'Fujianin vuoristossa seisoo hakka-kansan tulou-taloja, pyöreitä savimuurisia rakennuksia, joissa kokonainen suku saattoi asua saman katon alla.',
+    },
+    Gansu: {
+      lyhyt: 'Zhangyen Danxia-vuorten rinteet ovat raidallisia punaisesta, keltaisesta ja vihertävästä hiekkakivestä, ja värit syvenevät ilta-auringossa.',
+    },
+    Guangdong: {
+      lyhyt: 'Guangzhoussa päivä alkaa usein yum cha -teehetkellä, jolloin pöytään kannetaan höyrykoreissa pieniä dim sum -annoksia.',
+    },
+    Guangxi: {
+      lyhyt: 'Lijoen varren kalkkikivihuiput Guilinin ja Yangshuon välillä ovat niin tunnettu maisema, että ne on painettu 20 juanin seteliin.',
+    },
+    Guizhou: {
+      lyhyt: 'Guizhoun karstivuorten luonnolliseen notkoon on rakennettu FAST, halkaisijaltaan 500-metrinen radioteleskooppi, joka valmistui 2016.',
+    },
+    Hainan: {
+      lyhyt: 'Hainanin saaren Wenchangissa on Kiinan eteläisin avaruuskeskus, josta laukaistaan maan raskaimmat kantoraketit.',
+    },
+    Hebei: {
+      lyhyt: 'Chengden vuoristolomapalatsi oli Qing-keisarien kesäasunto, ja sen laajassa puistossa on järviä, paviljonkeja ja temppeleitä.',
+    },
+    Heilongjiang: {
+      lyhyt: 'Harbinin talvisella jää- ja lumifestivaalilla jäälohkareista rakennetaan kokonaisia linnoja, joita valaisevat sisältä värilliset valot.',
+    },
+    Henan: {
+      lyhyt: 'Songshan-vuoren juurella Dengfengissä on Shaolinin luostari, jonka munkkien kungfu tunnetaan kaikkialla maailmassa.',
+    },
+    Hubei: {
+      lyhyt: 'Wudangin vuorten taolaiset temppelit ovat Unescon maailmanperintöä, ja vuori tunnetaan myös wudang-taistelulajien kotina.',
+    },
+    Hunan: {
+      lyhyt: 'Fenghuangin vanhassa kaupungissa puiset paalutalot kurottuvat Tuojiang-joen ylle, ja joen yli pääsee astinkiviä pitkin.',
+    },
+    'Inner Mongol': {
+      lyhyt: 'Sisä-Mongolian Hulunbuirin ruohoaroilla laiduntavat lammas- ja hevoslaumat, ja kesän naadam-juhlissa kisataan painissa ja ratsastuksessa.',
+    },
+    Jiangsu: {
+      lyhyt: 'Suzhoun klassiset puutarhat on sommiteltu lammista, oudonmuotoisista kivistä ja paviljongeista, ja ne kuuluvat Unescon maailmanperintöön.',
+    },
+    Jiangxi: {
+      lyhyt: 'Jingdezhenissä on poltettu posliinia yli tuhat vuotta, ja kaupunkia kutsutaan yhä Kiinan posliinipääkaupungiksi.',
+    },
+    Jilin: {
+      lyhyt: 'Jilinin kaupungissa Songhuajoki ei jäädy voimalan lämpimän veden takia, ja joesta nouseva usva huurruttaa rantapuut valkoisiksi.',
+    },
+    Liaoning: {
+      lyhyt: 'Shenyangin keisarillinen palatsi rakennettiin Qing-dynastian ensimmäisille hallitsijoille ennen kuin hovi muutti Pekingiin 1644.',
+    },
+    Ningxia: {
+      lyhyt: 'Helanvuorten itärinteillä kasvatetaan viinirypäleitä kuivassa ilmastossa, ja Ningxian viinit ovat pärjänneet kansainvälisissä kilpailuissa.',
+    },
+    'Paracel Islands': {
+      lyhyt: 'Paracelsaaret ovat matalia korallisaaria ja riuttoja avomeren keskellä, ja suurinkin niistä on vain noin kahden neliökilometrin kokoinen.',
+    },
+    Qinghai: {
+      lyhyt: 'Qinghaijärvi on Kiinan suurin järvi, ja heinäkuussa sen suolaisen veden rannoilla kukkivat keltaiset rapsipellot.',
+    },
+    Shaanxi: {
+      lyhyt: "Xi'anin Ming-aikainen kaupunginmuuri on lähes 14 kilometriä pitkä, ja sen harjalla voi pyöräillä vanhan kaupungin ympäri.",
+    },
+    Shandong: {
+      lyhyt: 'Qufussa syntyi Kungfutse, ja hänen temppelinsä, sukunsa kartano ja hautausmaa ovat Unescon maailmanperintöä.',
+    },
+    Shanghai: {
+      lyhyt: 'Shanghai Tower on 632 metriä korkea, Kiinan korkein rakennus, ja sen lasijulkisivu kiertyy ylöspäin mentäessä kuin ruuvi.',
+    },
+    Shanxi: {
+      lyhyt: 'Datongin lähellä Xuankongin riippuva temppeli on kiinnitetty jyrkänteen kylkeen puupalkein, ja sen perustaminen ajoitetaan vuoteen 491.',
+    },
+    Sichuan: {
+      lyhyt: 'Jiuzhaigoun laakson järvet hohtavat turkoosina ja smaragdinvihreinä, ja kirkkaassa vedessä näkyvät pohjaan kaatuneet puunrungot.',
+    },
+    Tianjin: {
+      lyhyt: 'Tianjin Eye on 120 metriä korkea maailmanpyörä, joka on rakennettu Haijoen ylittävän sillan päälle.',
+    },
+    Xinjiang: {
+      lyhyt: 'Turpanin painanteessa rypäleet kuivataan rusinoiksi reikäseinäisissä savimajoissa, joiden läpi aavikon kuuma tuuli puhaltaa.',
+    },
+    Xizang: {
+      lyhyt: 'Lhasan Potala-palatsi kohoaa Punaisen vuoren rinteellä noin 3 700 metrin korkeudessa, ja sen valkoiset ja punaiset seinät näkyvät kauas.',
+    },
+    Yunnan: {
+      lyhyt: 'Yuanyangin vuorenrinteille hani-kansa on rakentanut riisiterasseja yli tuhannen vuoden ajan, ja ne ovat Unescon maailmanperintöä.',
+    },
+    Zhejiang: {
+      lyhyt: 'Hangzhoun Länsijärveä ympäröivillä rinteillä kasvaa Longjing-teetä, joka on Kiinan tunnetuimpia vihreitä teitä.',
+    },
+  },
+  /*
+   * USA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.USA:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 50 osavaltiota ja "District of
+   * Columbia" (jonka nimiFi on maakunnat-nimet.js:ssä "Washington", sama
+   * kuin osavaltiolla "Washington"). Vain `lyhyt` tässä erässä; jokaisella
+   * alueella eri aihe. Vältetty maastokohteet-usa.js:n aiheet (Mount
+   * St. Helens, Crater Lake, Nantucket, Mesa Verde, Cahokia, Chacon
+   * kanjoni, Gettysburg, Kill Devil Hills, Promontory, Independence Hall,
+   * Mammothin luola). Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026),
+   * epävarmimmat erikseen:
+   *   California     — Hyperion (tree) (116,22 m, mitattu 2026)
+   *   Colorado       —Colorado State Capitol (13. askelma, mitattu 2003)
+   *   Idaho          — Idaho Potato Commission / Idaho Capital Sun
+   *                    (lähes kolmannes USA:n perunoista)
+   *   Iowa           — Butter sculptures at the Iowa State Fair (1911)
+   *   Michigan       — Mackinac Island (autokielto 6.7.1898)
+   *   Minnesota      — List of lakes of Minnesota (11 842 yli 10 eekkerin)
+   *   Nebraska       — Carhenge (39 autoa, 1987)
+   *   New Jersey     — Lucy the Elephant (1881, kuusi kerrosta, 19,7 m)
+   *   North Carolina — Biltmore Estate (250 huonetta, suurin yksityinen)
+   *   Oklahoma       — TravelOK (yli 400 mailia ajettavaa Route 66:ta)
+   *   Vermont        — Vermont Agency of Agriculture (yli 50 % siirapista)
+   *   Washington     — Hoh Rainforest (noin 140 tuumaa = 3,6 m vuodessa)
+   *   Wisconsin      — Wisconsin cheese (suurin tuottaja vuodesta 1910)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  USA: {
+    Alabama: {
+      lyhyt: 'Huntsvillessä, jota kutsutaan Rakettikaupungiksi, suunniteltiin Saturn V -kantoraketti, ja sellainen on esillä kaupungin avaruusmuseossa.',
+    },
+    Alaska: {
+      lyhyt: 'Denali on 6 190 metriä korkea, Pohjois-Amerikan korkein vuori, ja sen juurelta huipulle on korkeuseroa yli 5 000 metriä.',
+    },
+    Arizona: {
+      lyhyt: 'Grand Canyon on paikoin lähes kaksi kilometriä syvä, ja sen pohjalla virtaa Coloradojoki.',
+    },
+    Arkansas: {
+      lyhyt: 'Crater of Diamonds -puistossa kuka tahansa saa kaivaa timantteja maasta, ja löytäjä saa pitää löytämänsä kiven.',
+    },
+    California: {
+      lyhyt: 'Kalifornian rannikon punapuut ovat maailman korkeimpia puita, ja korkein niistä, Hyperion, kohoaa yli 116 metriin.',
+    },
+    Colorado: {
+      lyhyt: 'Denverin osavaltiontalon portaissa on merkitty askelma, joka on tasan mailin eli noin 1 609 metrin korkeudessa merenpinnasta.',
+    },
+    Connecticut: {
+      lyhyt: 'Mysticin merimuseossa on Charles W. Morgan, maailman viimeinen säilynyt puinen valaanpyyntialus vuodelta 1841.',
+    },
+    Delaware: {
+      lyhyt: 'Delaware ratifioi ensimmäisenä Yhdysvaltain perustuslain vuonna 1787, ja siksi sitä kutsutaan Ensimmäiseksi osavaltioksi.',
+    },
+    'District of Columbia': {
+      lyhyt: 'Tidal Basinin rannan kirsikkapuut ovat Tokion lahja vuodelta 1912, ja niiden kukintaa juhlitaan joka kevät festivaalilla.',
+    },
+    Florida: {
+      lyhyt: 'Evergladesin sahaheinäsoilla alligaattorit ja krokotiilit elävät rinnakkain, eikä sellaista paikkaa ole muualla maailmassa.',
+    },
+    Georgia: {
+      lyhyt: 'Savannahin vanha keskusta on rakennettu ruudukkoon, jonka väleissä on 22 puistoaukiota vanhojen tammien varjossa.',
+    },
+    Hawaii: {
+      lyhyt: 'Mauna Kea on merenpohjasta mitattuna yli 10 000 metriä korkea, ja sen huipulla on maailman suurimpia kaukoputkia.',
+    },
+    Idaho: {
+      lyhyt: 'Idaho kasvattaa lähes kolmanneksen Yhdysvaltain perunoista, ja osavaltion rekisterikilvissä lukee Famous Potatoes.',
+    },
+    Illinois: {
+      lyhyt: 'Chicagossa kaupungin halki virtaava joki värjätään joka pyhän Patrickin päivänä kirkkaan vihreäksi.',
+    },
+    Indiana: {
+      lyhyt: 'Indianapolis 500 -autokilpailun voittaja juo perinteisesti voittajan kehässä pullollisen maitoa.',
+    },
+    Iowa: {
+      lyhyt: 'Iowan osavaltiomessujen kuuluisin nähtävyys on voista veistetty luonnollisen kokoinen lehmä, jollainen on tehty vuodesta 1911.',
+    },
+    Kansas: {
+      lyhyt: 'Yhdysvaltain 48 yhtenäisen osavaltion maantieteellinen keskipiste on Lebanonin pikkukaupungin lähellä Kansasissa.',
+    },
+    Kentucky: {
+      lyhyt: 'Kentucky Derby ajetaan Louisvillessä toukokuun ensimmäisenä lauantaina, ja sitä kutsutaan urheilun kahdeksi hienoimmaksi minuutiksi.',
+    },
+    Louisiana: {
+      lyhyt: 'New Orleansin Mardi Gras -kulkueiden vaunuista heitetään yleisölle värikkäitä helminauhoja.',
+    },
+    Maine: {
+      lyhyt: 'Maine nostaa suurimman osan Yhdysvaltain amerikanhummereista, ja rannikon kylissä hummerirulla on kesän perusruokaa.',
+    },
+    Maryland: {
+      lyhyt: 'Chesapeakenlahden sinirapuja syödään Marylandissa kokonaisina, kuoret puunuijalla rikkoen ja Old Bay -maustetta ripotellen.',
+    },
+    Massachusetts: {
+      lyhyt: 'Bostonin maraton on juostu vuodesta 1897, ja se on maailman vanhin vuosittain järjestettävä maraton.',
+    },
+    Michigan: {
+      lyhyt: 'Mackinacin saarella autot on kielletty vuodesta 1898, ja siellä liikutaan yhä hevosilla, polkupyörillä ja jalan.',
+    },
+    Minnesota: {
+      lyhyt: 'Minnesotaa kutsutaan kymmenentuhannen järven maaksi, vaikka vähintään neljän hehtaarin järviä on todellisuudessa lähes 12 000.',
+    },
+    Mississippi: {
+      lyhyt: 'Mississippin suistoalue on bluesin syntysijoja, ja Clarksdalen kaupungissa on Delta Blues Museum.',
+    },
+    Missouri: {
+      lyhyt: 'St. Louisin Gateway Arch on 192 metriä korkea ruostumattomasta teräksestä tehty kaari, maailman korkein laatuaan.',
+    },
+    Montana: {
+      lyhyt: 'Glacierin kansallispuiston Going-to-the-Sun Road ylittää Kalliovuoret Logan Passin kohdalla, ja lumen vuoksi se on auki vain kesällä.',
+    },
+    Nebraska: {
+      lyhyt: 'Alliancen laitamilla seisoo Carhenge, Stonehengen kopio, joka on koottu 39 harmaaksi maalatusta vanhasta autosta.',
+    },
+    Nevada: {
+      lyhyt: 'Black Rock -aavikolle nousee joka vuosi elokuun lopulla Burning Man -festivaalin tilapäinen kaupunki, joka puretaan viikon päästä jäljettömiin.',
+    },
+    'New Hampshire': {
+      lyhyt: 'Mount Washingtonin huipulla mitattiin 1934 tuulenpuuska, 372 km/h, joka oli vuosikymmeniä maailman kovin mitattu tuuli.',
+    },
+    'New Jersey': {
+      lyhyt: 'Margaten rannalla seisoo Lucy, kuusikerroksinen norsun muotoinen rakennus vuodelta 1881, jonka selkään voi kiivetä sisäportaita.',
+    },
+    'New Mexico': {
+      lyhyt: 'Albuquerquen kansainvälisessä kuumailmapallofestivaalissa nousee lokakuussa ilmaan satoja palloja, ja se on maailman suurimpia.',
+    },
+    'New York': {
+      lyhyt: 'Manhattanin Central Park on 341 hehtaarin puisto, jonka järvet, niityt ja metsiköt on suurelta osin muotoiltu ihmisen käsin.',
+    },
+    'North Carolina': {
+      lyhyt: 'Ashevillen Biltmore-kartano on Yhdysvaltain suurin yksityisomistuksessa oleva talo, ja siinä on 250 huonetta.',
+    },
+    'North Dakota': {
+      lyhyt: 'Theodore Rooseveltin kansallispuiston rapautuneilla karumailla, badlandseilla, laiduntavat biisonit ja villihevoset.',
+    },
+    Ohio: {
+      lyhyt: 'Clevelandissa Erie-järven rannalla on Rock and Roll Hall of Fame, jonka lasipyramidin suunnitteli arkkitehti I. M. Pei.',
+    },
+    Oklahoma: {
+      lyhyt: 'Oklahomassa on enemmän ajettavaa vanhaa Route 66 -tietä kuin missään muussa osavaltiossa, yli 600 kilometriä.',
+    },
+    Oregon: {
+      lyhyt: 'Columbian rotkon Multnomah Falls putoaa kahdessa portaassa yhteensä 189 metriä, ja putousten välissä kulkee kapea kivisilta.',
+    },
+    Pennsylvania: {
+      lyhyt: 'Punxsutawneyssä metsämurmeli Phil ennustaa joka helmikuun toinen päivä, jatkuuko talvi vielä kuusi viikkoa.',
+    },
+    'Rhode Island': {
+      lyhyt: 'Newportin kalliorannalla seisovat miljonäärisukujen kesähuvilat, joita omistajat kutsuivat vaatimattomasti mökeiksi.',
+    },
+    'South Carolina': {
+      lyhyt: 'Charlestonin Rainbow Row on rivi pastellinvärisiä 1700-luvun kauppiastaloja satamanpuoleisen East Bay Streetin varrella.',
+    },
+    'South Dakota': {
+      lyhyt: 'Mount Rushmoren graniittiin on veistetty neljän presidentin kasvot, ja kukin pää on noin 18 metriä korkea.',
+    },
+    Tennessee: {
+      lyhyt: 'Nashvillen Grand Ole Opry on radiossa lähetettävä countrymusiikin konsertti, jota on soitettu joka viikko vuodesta 1925.',
+    },
+    Texas: {
+      lyhyt: 'Big Bendin kansallispuistossa Rio Grande kaartaa jyrkkäseinäisiin kanjoneihin, ja joen toisella rannalla on jo Meksiko.',
+    },
+    Utah: {
+      lyhyt: 'Archesin kansallispuistossa on yli 2 000 luonnon muovaamaa hiekkakivikaarta, joista tunnetuin on Delicate Arch.',
+    },
+    Vermont: {
+      lyhyt: 'Vermont tuottaa yli puolet Yhdysvaltain vaahterasiirapista, ja keväällä sokerimajoissa keitetään vaahteranmahlaa siirapiksi.',
+    },
+    Virginia: {
+      lyhyt: 'Lurayn luolassa on urut, joiden kumivasarat kopauttavat tippukiviä ja soittavat niillä musiikkia.',
+    },
+    Washington: {
+      lyhyt: 'Olympicin niemimaan Hoh-sademetsässä sataa noin 3,5 metriä vuodessa, ja vaahterat ja kuuset ovat sammalen verhoamia.',
+    },
+    'West Virginia': {
+      lyhyt: 'New River Gorgen teräskaarisilta kulkee 267 metriä joen yläpuolella, ja lokakuun Bridge Dayna siltä saa hypätä laskuvarjolla.',
+    },
+    Wisconsin: {
+      lyhyt: 'Wisconsin on Yhdysvaltain suurin juustontuottaja, ja Green Bayn jalkapallofanit pukevat päähänsä juustokolmion muotoisen hatun.',
+    },
+    Wyoming: {
+      lyhyt: 'Yellowstonen Old Faithful -geysir purkautuu noin puolentoista tunnin välein, ja suihku nousee kymmenien metrien korkeuteen.',
+    },
+  },
+  /*
    * CHE (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
    * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.CHE:n tunnuksia
    * TÄSMÄLLEEN (26 kantonia, Natural Earthin `name`, esim. "Genève",
