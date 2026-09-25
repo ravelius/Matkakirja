@@ -42,6 +42,9 @@ const ODOTETUT_MAARAT = {
   IND: 36,
   ZAF: 9,
   KEN: 8,
+  JPN: 47,
+  AUS: 11,
+  NZL: 24,
 };
 
 /*
@@ -53,7 +56,7 @@ const ODOTETUT_MAARAT = {
  * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
  * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

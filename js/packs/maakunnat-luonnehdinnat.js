@@ -5228,4 +5228,332 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Kakamegan metsä on Kenian ainoa trooppinen sademetsä, viimeinen jäänne vyöhykkeestä, joka ulottui aikoinaan Kongon altaalle asti.',
     },
   },
+  /*
+   * JPN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.JPN:n tunnuksia
+   * TÄSMÄLLEEN (makronit mukana: "Hokkaidō", "Hyōgo", "Kyōto", "Kōchi",
+   * "Ōita", "Ōsaka"; "Tokyo" ilman makronia). Vain `lyhyt`. Vältetty
+   * maastokohteet-jpn.js:n aiheet (Fuji, Shinanojoki, Himeji, Nikkō
+   * Tōshō-gū, Shirakawa-gō, Hiroshiman rauhanmuistomerkki, Hōryū-ji,
+   * Iwami, Kumano Kodō, Dejima). Lähteet (en-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Fukui     — Sabae (noin 95 % Japanin silmälasinkehyksistä,
+   *               Fukuin prefektuurin matkailusivusto / nippon.com)
+   *   Ishikawa  — Kanazawa gold leaf (99 % Japanin kultalehdestä,
+   *               VISIT KANAZAWA / JNTO)
+   *   Tokyo     — Ogasawara Islands (noin 1 000 km, Ogasawara Maru
+   *               noin 24 h Takeshiban laiturista)
+   *   Tottori   — Tottori Sand Dunes (14 km, kamelit)
+   *   Toyama    — Tateyama Kurobe Alpine Route (lumiseinät 15–20 m)
+   *   Wakayama  — Mount Kōya (noin 120 temppeliä, moni majoittaa)
+   *   Yamagata  — kirsikat (noin 70 % Japanin sadosta, MAFF 2012)
+   *   Muut      — yleistietoa, tarkistettu vastaavista
+   *               en-Wikipedia-artikkeleista.
+   */
+  JPN: {
+    Aichi: {
+      lyhyt: 'Aichin Toyotan kaupunki vaihtoi nimensä 1959 siellä pääkonttoriaan pitävän autotehtaan mukaan.',
+    },
+    Akita: {
+      lyhyt: 'Ogan niemimaalla olkiviittaiset namahage-demonit kiertävät uudenvuodenaattona taloissa etsimässä laiskoja ja tottelemattomia.',
+    },
+    Aomori: {
+      lyhyt: 'Aomorin Nebuta-juhlassa elokuun alussa kaduilla kuljetetaan jättimäisiä, sisältä valaistuja paperisia soturihahmoja.',
+    },
+    Chiba: {
+      lyhyt: 'Tokyo Disneyland ei ole Tokiossa vaan Chiban Urayasussa, ja se avattiin 1983.',
+    },
+    Ehime: {
+      lyhyt: 'Ehimen Imabarista lähtevä Shimanami Kaidō kulkee siltoja pitkin saarelta saarelle Hiroshiman puolelle, ja sen voi ajaa polkupyörällä.',
+    },
+    Fukui: {
+      lyhyt: 'Fukuin Sabaessa valmistetaan valtaosa kaikista Japanissa tehdyistä silmälasinkehyksistä.',
+    },
+    Fukuoka: {
+      lyhyt: 'Fukuokan yatai-katukeittiöissä syödään iltaisin Hakata-ramenia, jonka samea liemi keitetään sianluista.',
+    },
+    Fukushima: {
+      lyhyt: 'Ōuchi-juku on vanha majatalokylä, jonka pääkadun varrella seisoo yhä rivi olkikattoisia taloja.',
+    },
+    Gifu: {
+      lyhyt: 'Gifun Nagarajoella kalastetaan kesäöisin yhä merimetsojen avulla veneiden keulassa palavien soihtujen valossa.',
+    },
+    Gunma: {
+      lyhyt: 'Kusatsun kylpyläkaupungin keskellä höyryää yubatake, jossa kuumaa lähdevettä jäähdytetään pitkissä puukouruissa.',
+    },
+    Hiroshima: {
+      lyhyt: 'Miyajiman Itsukushiman pyhäkön punainen torii-portti seisoo nousuveden aikaan meressä, ja laskuveden aikaan sen luo voi kävellä.',
+    },
+    Hokkaidō: {
+      lyhyt: 'Sapporon lumifestivaaleilla helmikuussa Ōdōrin puisto täyttyy talojen kokoisista lumi- ja jääveistoksista.',
+    },
+    Hyōgo: {
+      lyhyt: 'Takarazukan kaupungissa toimii 1913 perustettu Takarazuka Revue, musiikkiteatteri, jonka kaikki roolit esittävät naiset.',
+    },
+    Ibaraki: {
+      lyhyt: 'Ibarakin pääkaupunki Mito tunnetaan nattōsta, käyneistä soijapavuista, jotka venyvät syödessä tahmeiksi rihmoiksi.',
+    },
+    Ishikawa: {
+      lyhyt: 'Kanazawassa lyödään lähes kaikki Japanin kultalehti, ja sitä ripotellaan täällä jopa jäätelön päälle.',
+    },
+    Iwate: {
+      lyhyt: 'Hiraizumin Chūson-jissa on Konjikidō, vuonna 1124 valmistunut pieni temppelisali, joka on päällystetty kauttaaltaan kullalla.',
+    },
+    Kagawa: {
+      lyhyt: 'Kagawaa kutsutaan udon-maakunnaksi, sillä paksuja sanuki-vehnänuudeleita syödään täällä usein jo aamiaiseksi.',
+    },
+    Kagoshima: {
+      lyhyt: 'Sakurajima-tulivuori purkautuu lahden toisella puolella niin usein, että Kagoshiman asukkaat lakaisevat tuhkaa kaduiltaan.',
+    },
+    Kanagawa: {
+      lyhyt: 'Kamakuran suuri Buddha on noin 11-metrinen pronssipatsas, joka istuu taivasalla temppelin pihalla.',
+    },
+    Kyōto: {
+      lyhyt: 'Fushimi Inarin pyhäkön vuorenrinnettä kiertävät tuhannet oranssinpunaiset torii-portit, jotka yritykset ja yksityiset ovat lahjoittaneet.',
+    },
+    Kōchi: {
+      lyhyt: 'Kōchin tunnetuin ruoka on katsuo no tataki, boniittifilee, jonka pinta ruskistetaan nopeasti oljen liekeissä.',
+    },
+    Kumamoto: {
+      lyhyt: 'Kumamoton maskotti, punaposkinen musta karhu Kumamon, on Japanin tunnetuimpia maakuntahahmoja.',
+    },
+    Mie: {
+      lyhyt: 'Isen suuren pyhäkön päärakennukset puretaan ja rakennetaan uudelleen joka 20. vuosi; edellisen kerran se tehtiin 2013.',
+    },
+    Miyagi: {
+      lyhyt: 'Matsushiman lahdella on satoja mäntyjen peittämiä pikkusaaria, ja maisema lasketaan yhdeksi Japanin kolmesta kauneimmasta.',
+    },
+    Miyazaki: {
+      lyhyt: 'Takachihon rotkossa soudetaan pienillä veneillä basalttiseinämien välissä Manai-vesiputouksen alle.',
+    },
+    Nagano: {
+      lyhyt: 'Matsumoton linna on yksi Japanin harvoista alkuperäisinä säilyneistä linnoista, ja mustan värinsä vuoksi sitä kutsutaan Variksenlinnaksi.',
+    },
+    Nagasaki: {
+      lyhyt: 'Nagasakin edustan Hashima eli Gunkanjima on autioitunut hiilikaivossaari, jonka betonikerrostalot on jätetty rapistumaan.',
+    },
+    Nara: {
+      lyhyt: 'Naran puistossa kulkee vapaana toista tuhatta kesyä peuraa, joita on vanhastaan pidetty jumalten sanansaattajina.',
+    },
+    Niigata: {
+      lyhyt: 'Niigatan edustalla oleva Sadon saari tunnetaan kultakaivoksistaan, jotka merkittiin Unescon maailmanperintölistalle 2024.',
+    },
+    Ōita: {
+      lyhyt: 'Beppun kuumien lähteiden "helvetit" höyryävät toinen kirkkaan sinisenä, toinen verenpunaisena, eikä niissä kylvetä.',
+    },
+    Okayama: {
+      lyhyt: 'Okayaman Kōraku-en lasketaan Japanin kolmen kuuluisimman maisemapuutarhan joukkoon.',
+    },
+    Okinawa: {
+      lyhyt: 'Okinawan Churaumi-akvaarion jättialtaassa uivat valashait ja mantarauskut.',
+    },
+    Ōsaka: {
+      lyhyt: 'Ōsakan Dōtonborin kanavan varrella loistaa kädet ylhäällä juoksevan miehen Glico-valomainos, yksi kaupungin tunnusmerkeistä.',
+    },
+    Saga: {
+      lyhyt: 'Sagan Aritassa on valmistettu posliinia 1600-luvun alusta asti, ja kaupunki elää yhä savesta ja uuneista.',
+    },
+    Saitama: {
+      lyhyt: 'Kawagoeta kutsutaan Pikku-Edoksi, sillä sen vanhalla kauppakadulla seisoo yhä paksuseinäisiä savitalojen rivistöjä.',
+    },
+    Shiga: {
+      lyhyt: 'Biwajärvi on Japanin suurin järvi, ja se peittää noin kuudesosan Shigan pinta-alasta.',
+    },
+    Shimane: {
+      lyhyt: 'Japanilaisen perinteen mukaan kaikki jumalat kokoontuvat kerran vuodessa Izumo Taishan pyhäkköön Shimaneen.',
+    },
+    Shizuoka: {
+      lyhyt: 'Shizuoka on Japanin suurin vihreän teen tuottaja, ja teepensasrivit peittävät sen loivia rinteitä.',
+    },
+    Tochigi: {
+      lyhyt: 'Tochigin pääkaupunki Utsunomiya kutsuu itseään gyōza-kaupungiksi, ja nyyttiravintoloita on siellä kymmenittäin.',
+    },
+    Tokyo: {
+      lyhyt: 'Tokioon kuuluvat myös noin tuhannen kilometrin päässä etelässä olevat Ogasawarasaaret, joille laiva kulkee noin vuorokauden.',
+    },
+    Tokushima: {
+      lyhyt: 'Naruton salmen vuorovesipyörteitä voi katsoa suoraan ylhäältä Ōnaruto-sillan alla kulkevan käytävän lasilattian läpi.',
+    },
+    Tottori: {
+      lyhyt: 'Tottorin hiekkadyynit ulottuvat rannikolla noin 14 kilometrin matkalle, ja niillä voi ratsastaa kamelilla.',
+    },
+    Toyama: {
+      lyhyt: 'Tateyaman vuoristotie aukeaa keväällä lumen keskeltä, ja tien varsilla kohoaa jopa 20-metrisiä lumiseiniä.',
+    },
+    Wakayama: {
+      lyhyt: 'Kōyasanin vuorella on toista sataa buddhalaistemppeliä, ja monessa niistä matkailija voi yöpyä munkkien luona.',
+    },
+    Yamagata: {
+      lyhyt: 'Yamagatan tarhoista tulee noin 70 prosenttia Japanin kirsikoista, ja kesäkuussa niitä pääsee poimimaan itse.',
+    },
+    Yamaguchi: {
+      lyhyt: 'Iwakunin Kintai-kyō on viidestä puukaaresta koottu silta, joka rakennettiin alun perin vuonna 1673.',
+    },
+    Yamanashi: {
+      lyhyt: 'Yamanashi on Japanin tärkein viinimaakunta, ja sen oma koshu-rypäle tuottaa kevyttä valkoviiniä.',
+    },
+  },
+  /*
+   * AUS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.AUS:n tunnuksia TÄSMÄLLEEN (Natural Earthin
+   * englanninkieliset nimet; Lord Howe Island ja Macquarie Island ovat
+   * omina alueinaan, vaikka hallinnollisesti ne kuuluvat Uuteen
+   * Etelä-Walesiin ja Tasmaniaan). Vain `lyhyt`. Vältetty
+   * maastokohteet-aus.js:n aiheet (Port Arthur, Ubirr, Parkes, Broken
+   * Hill, Mungo, Snowy Mountains, Eureka, Cooktown, Mount Augustus, Iso
+   * valliriutta). Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Jervis Bay Territory — Jervis Bay Territory (1915, HMAS Creswell,
+   *                          Booderee noin 90 % alueesta)
+   *   Lord Howe Island     — Lord Howe Island (enintään 400 matkailijaa,
+   *                          Unesco 1982)
+   *   Macquarie Island     — Macquarie Island (vaipan kiviä merenpinnan
+   *                          yläpuolella, Unesco 1997)
+   *   Victoria             — Trams in Melbourne (maailman suurin
+   *                          toiminnassa oleva kaupunkiraitiotieverkko)
+   *   Muut                 — yleistietoa, tarkistettu vastaavista
+   *                          en-Wikipedia-artikkeleista.
+   */
+  AUS: {
+    'Australian Capital Territory': {
+      lyhyt: 'Canberra on suunnittelukilpailun pohjalta tyhjästä rakennettu pääkaupunki, ja sen keskellä on padottu tekojärvi, Lake Burley Griffin.',
+    },
+    'South Australia': {
+      lyhyt: 'Opaalikaupunki Coober Pedyssä moni asuu maan alle kaivetussa kodissa, jossa lämpötila pysyy tasaisena aavikon helteellä.',
+    },
+    'Jervis Bay Territory': {
+      lyhyt: 'Jervis Bay erotettiin 1915 liittovaltion alueeksi, jotta sisämaan pääkaupungilla olisi oma rannikko; nyt siellä toimii laivaston upseerikoulu.',
+    },
+    'Lord Howe Island': {
+      lyhyt: 'Lord Howen saarella saa olla kerrallaan enintään 400 matkailijaa, jotta pieni maailmanperintösaari ei kuluisi.',
+    },
+    'Western Australia': {
+      lyhyt: 'Perthin edustan Rottnestin saarella elää kvokkoja, pieniä pussieläimiä, joiden "hymyilevät" selfiet ovat kiertäneet maailmaa.',
+    },
+    'Macquarie Island': {
+      lyhyt: 'Macquariensaarella maan vaipasta peräisin olevaa kiveä nousee merenpinnan yläpuolelle, ja siksi saari on Unescon maailmanperintökohde.',
+    },
+    'Northern Territory': {
+      lyhyt: 'Uluru on anangu-kansalle pyhä, eikä kallion päälle ole saanut kiivetä lokakuun 2019 jälkeen.',
+    },
+    Queensland: {
+      lyhyt: 'Queensland ei siirrä kelloja kesäaikaan, joten kesäisin Brisbanessa kello on tunnin jäljessä Sydneystä.',
+    },
+    Tasmania: {
+      lyhyt: 'Hobartin MONA on uhkapelimiljonääri David Walshin 2011 avaama taidemuseo, jonka salit on louhittu hiekkakivikallion sisään.',
+    },
+    'New South Wales': {
+      lyhyt: 'Sydneyn oopperatalon purjeiksi kutsutut katot on päällystetty yli miljoonalla ruotsalaisvalmisteisella laatalla.',
+    },
+    Victoria: {
+      lyhyt: 'Melbournessa on maailman suurin käytössä oleva kaupunkiraitiotieverkko, ja keskustan raitiovaunuissa matkustaa ilmaiseksi.',
+    },
+  },
+  /*
+   * NZL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 4B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.NZL:n tunnuksia TÄSMÄLLEEN (Natural Earthin nimet;
+   * "Hawke's Bay" tavallisella heittomerkillä, nimiFi kaarevalla).
+   * Subantarktiset saariryhmät (Antipodes, Auckland Islands, Campbell,
+   * The Snares) ja Kermadec ovat asumattomia luonnonsuojelualueita;
+   * Tokelau on Uuden-Seelannin alaisuudessa oleva itsehallintoalue. Vain
+   * `lyhyt`. Vältetty maastokohteet-nzl.js:n aiheet (Waitangi,
+   * Ruapekapeka, Cape Reinga, Whakarewarewa, Waitomo, Napier, Arrowtown,
+   * Denniston, Ruapehu, Taupo, Waikatojoki). Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Antipodes Islands  — Antipodes Islands (nimi: lähellä Lontoon
+   *                        vastapistettä, kaksi kotoperäistä papukaijaa)
+   *   Auckland Islands   — Auckland Islands (uudenseelanninmerileijonan
+   *                        pääasiallinen lisääntymispaikka)
+   *   Campbell Islands   — Campbell Island (sitkankuusi 1901–1907,
+   *                        lähin puu yli 274 km:n päässä)
+   *   Chatham Islands    — Chatham Islands (UTC+12:45, 45 min edellä)
+   *   Hawke's Bay        — Mission Estate Winery (1851, vanhin)
+   *   Kermadec Islands   — Kermadec Islands (Raoul ja Curtis aktiivisia
+   *                        tulivuoria, 800–1 000 km)
+   *   Nelson City        — Nelson (Botanical Hillin muistomerkki =
+   *                        kolmiomittauksen nollapiste)
+   *   Taranaki           — The Last Samurai (Taranaki Fujin sijaisena,
+   *                        newzealand.com)
+   *   The Snares         — The Snares (jopa kolme miljoonaa
+   *                        harmaaliitäjää, maihinnousu vain luvalla)
+   *   Three Kings Islands — Pennantia baylisiana (yksi luonnonvarainen
+   *                        puu, löydetty 1945)
+   *   Tokelau            — 100 % aurinkosähköä lokakuusta 2012
+   *   Manawatu-Wanganui  — Te Awa Tupua Act 2017
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  NZL: {
+    'Antipodes Islands': {
+      lyhyt: 'Antipodisaaret saivat nimensä siitä, että ne ovat lähellä Lontoon vastapistettä, ja niillä elää kaksi vain täältä tavattavaa papukaijaa.',
+    },
+    Auckland: {
+      lyhyt: 'Auckland on rakennettu tulivuorikentälle, ja kaupungin keskellä kohoaa kymmeniä vanhoja tulivuorenkartioita.',
+    },
+    'Auckland Islands': {
+      lyhyt: 'Asumattomat Aucklandinsaaret ovat uudenseelanninmerileijonan tärkein lisääntymispaikka, ja sinne pääsee vain luvalla.',
+    },
+    'Bay of Plenty': {
+      lyhyt: 'Bay of Plentyn Te Puke mainostaa itseään maailman kiivipääkaupunkina, ja kaupungin laidalla on jättimäinen kiivihedelmä.',
+    },
+    'Campbell Islands': {
+      lyhyt: 'Campbellinsaarella kasvaa sitkankuusi, jota kutsutaan maailman yksinäisimmäksi puuksi: lähin toinen puu on yli 270 kilometrin päässä.',
+    },
+    Canterbury: {
+      lyhyt: 'Christchurchin maanjäristyksessä tuhoutuneen katedraalin tilalle rakennettiin 2013 väliaikainen kirkko pahviputkista.',
+    },
+    'Chatham Islands Territory': {
+      lyhyt: 'Chathamsaarilla kello käy 45 minuuttia Uuden-Seelannin mantereen edellä, ja asukkaita on vain noin 600.',
+    },
+    'Gisborne District': {
+      lyhyt: 'Gisborne mainostaa olevansa maailman ensimmäinen kaupunki, joka näkee joka aamu uuden päivän auringonnousun.',
+    },
+    "Hawke's Bay": {
+      lyhyt: 'Hawke\'s Bayssa toimii Uuden-Seelannin vanhin yhä toimiva viinitila Mission Estate, jonka lähetyssaarnaajat perustivat 1851.',
+    },
+    'Kermadec Islands': {
+      lyhyt: 'Kermadecsaaret ovat asumattomia subtrooppisia tulivuorisaaria puolimatkassa Tongaan, ja niitä ympäröi laaja merensuojelualue.',
+    },
+    'Manawatu-Wanganui': {
+      lyhyt: 'Whanganuijoki sai vuonna 2017 lain mukaan oikeushenkilön aseman, joten joella on omat oikeutensa kuin ihmisellä.',
+    },
+    'Marlborough District': {
+      lyhyt: 'Marlborough on Uuden-Seelannin suurin viinialue, ja sen sauvignon blanc on tehnyt maan viinit tunnetuiksi maailmalla.',
+    },
+    'Nelson City': {
+      lyhyt: 'Nelsonin Botanical Hillillä on "Uuden-Seelannin keskipisteen" muistomerkki, vaikka se merkitsee oikeasti maanmittauksen nollapistettä.',
+    },
+    Northland: {
+      lyhyt: 'Waipouan metsässä kasvaa Tāne Mahuta, suurin tunnettu elossa oleva kauripuu, jonka runko on yli 15 metriä ympärysmitaltaan.',
+    },
+    Otago: {
+      lyhyt: 'Dunedinin Baldwin Street on Guinnessin mukaan maailman jyrkin asuinkatu; jyrkimmässä kohdassa se nousee 35 prosenttia.',
+    },
+    Southland: {
+      lyhyt: 'Milford Soundin vuonon jyrkiltä seinämiltä syöksyy sadepäivinä satoja tilapäisiä vesiputouksia.',
+    },
+    Taranaki: {
+      lyhyt: 'Taranakin lähes symmetrinen tulivuori esitti Fuji-vuorta elokuvassa Viimeinen samurai.',
+    },
+    'Tasman District': {
+      lyhyt: 'Abel Tasmanin kansallispuisto on Uuden-Seelannin pienin, ja sen kultaisia hiekkarantoja kierretään kajakilla.',
+    },
+    'The Snares': {
+      lyhyt: 'Snaresinsaarilla pesii kesäisin jopa kolme miljoonaa harmaaliitäjää, eikä saarille saa nousta ilman tutkimuslupaa.',
+    },
+    'Three Kings Islands': {
+      lyhyt: 'Kolmen kuninkaan saarilla kasvaa ainoa luonnonvarainen Pennantia baylisiana -puu, jota on pidetty maailman harvinaisimpana.',
+    },
+    Tokelau: {
+      lyhyt: 'Tokelau alkoi 2012 tuottaa kaiken sähkönsä aurinkopaneeleilla ensimmäisenä maana maailmassa.',
+    },
+    Waikato: {
+      lyhyt: 'Matamatan maatilalla on Taru sormusten herrasta -elokuvien Hobittila, jonka kolohobittien oviin matkailijat pääsevät kurkistamaan.',
+    },
+    Wellington: {
+      lyhyt: 'Wellingtonin parlamentin pyöreää toimistorakennusta kutsutaan muotonsa vuoksi Mehiläispesäksi.',
+    },
+    'West Coast': {
+      lyhyt: 'Punakaikin Pancake Rocks ovat pannukakkupinojen näköisiä kalkkikivikallioita, joiden puhallusrei\'istä meri suihkuaa vaahtona.',
+    },
+  },
 };
