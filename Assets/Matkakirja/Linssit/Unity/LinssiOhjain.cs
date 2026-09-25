@@ -361,6 +361,7 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros kerros;
             EsityksenAani aani;
             readonly LinssiTiedot tiedot;
+            IhmisenMatka2Ymparisto kaare;
             /// <summary>Ihmisen matka II: tehostekerros (IhmisenMatka2Tehosteet) näkymän päälle, esirakennus vasta avatessa.</summary>
             public readonly bool Versio2;
 
@@ -427,7 +428,9 @@ namespace Matkakirja.Natiivi
                 };
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
-                linssi.Avaa(y);
+                // II: kamera-ajot kallistetaan lähikuvissa (IhmisenMatka2Ymparisto); muu ympäristö sellaisenaan.
+                kaare = Versio2 ? new IhmisenMatka2Ymparisto(y) : null;
+                linssi.Avaa(kaare ?? y);
                 if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
             }
 
@@ -448,8 +451,10 @@ namespace Matkakirja.Natiivi
 
             public void Sulje()
             {
+                if (kaare != null) kaare.Kallista = false;   // paluu pelaajan omaan näkymään ilman kallistusta
                 linssi?.Sulje();
                 linssi = null;
+                kaare = null;
                 if (kerros != null) Destroy(kerros.gameObject);
                 kerros = null;
                 aani = null;
