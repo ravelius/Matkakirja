@@ -486,7 +486,7 @@ namespace Matkakirja.Natiivi
             eleAika = Time.unscaledTime * 1000f;
             raahaa = false;
             // Kuva edellä -kortissa (vaihe 1) ei ole yläriviä eikä otsikkoa: kahvana on kortin ylin kaista.
-            eleKahvasta = OnKahva(e.target as VisualElement) || e.position.y - kortti.worldBound.yMin < KahvanKorkeus;
+            eleKahvasta = OnKahva(e.position);
         }
 
         /// <summary>Kortin yläreunan kaista, josta raahaus alkaa myös ilman yläriviä (löydös 79).</summary>
@@ -500,14 +500,14 @@ namespace Matkakirja.Natiivi
         /// (css/fokuskohteet.css: .fokuskohde-ylarivi ja .fokuskohde-otsikko, touch-action none). Muu kortti jää
         /// vieritykselle ja napautuksille.
         /// </summary>
-        static bool OnKahva(VisualElement v)
+        bool OnKahva(Vector2 kohta)
         {
-            for (; v != null; v = v.parent)
-            {
-                if (v.ClassListContains("mk-nosto__ylarivi") || v.ClassListContains("mk-nosto__otsikko")) return true;
-                if (v.ClassListContains("mk-nosto")) return false;
-            }
-            return false;
+            // Paikan mukaan, ei kohteen: ylärivi ja otsikko ovat PickingMode.Ignore, joten osuma menee vieritykselle.
+            if (kohta.y - kortti.worldBound.yMin < KahvanKorkeus) return true;
+            bool osui = false;
+            kortti.Query(className: "mk-nosto__ylarivi").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
+            if (!osui) kortti.Query(className: "mk-nosto__otsikko").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
+            return osui;
         }
 
         /// <summary>Web raahausTaiSulku: kynnyksen ylittävä liike siirtää korttia; tekstin päällä pystyveto vierittää.</summary>
