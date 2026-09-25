@@ -19,6 +19,13 @@ namespace Matkakirja
     /// renkaissa on sama jana (renkaat on rakennettu samoista kaarista, pyöristys 1e-3°); maiden välinen raja kuuluu
     /// molemmille. Rappeutuneet saarenpalat (renkaassa alle 3 eri pistettä) jäävät kohdistamatta.
     ///
+    /// PIIRRETTÄVÄT RAJAT = VAIN ALUEIDEN VÄLISET (löydökset 113 ja 126, 26.9.2026): webin maakuntaraja on nimiötason
+    /// rasterissa "nykyisten hallintoalueiden sisäiset rajat" (tools/fokuskartta/maailmapiirto.js ALUERAJAT, Natural Earth
+    /// admin-1). Maan ulkoraja (<see cref="MaanAlueet.UlkoKaaret"/>: ranta ja valtionraja, kaaren jana vain yhdessä
+    /// alueessa) ei kuulu niihin: rannan tekee pohjan väriraja (löydös 126), valtionrajan kehä (Maaraja) ja Rajat-kerros.
+    /// Ennen ulkoraja piirtyi ohuena maakuntarajana, ja lähikuvassa (z8-leveys suurennettuna 3,4 laitepx) ranta sai
+    /// taas oman viivansa.
+    ///
     /// RAJAUS: renkaat ryhmitellään rypäiksi (laatikoiden väli enintään <see cref="RypasVali"/>°, pituus kiertää
     /// ±180°:n yli). Lähtörypäs on pelaajan pisteen rypäs (enintään <see cref="LahinRypas"/>° päässä), muuten suurin.
     /// Muut rypäät otetaan mukaan painon mukaan, jos teksel ei karkene: Ranskan emämaa + Korsika pysyy 1,2 km:n
@@ -82,6 +89,11 @@ namespace Matkakirja
             /// ovat kokoelmassa mukana. Web ei piirrä niitä (täyttö kolmioittain samalla sävyllä, ei viivoja).
             /// </summary>
             public readonly List<(double Lon, double Lat)[]> SisaisetKaaret = new List<(double Lon, double Lat)[]>();
+            /// <summary>
+            /// Maan ulkoraja (ranta ja valtionraja: kaaren jana vain yhden alueen renkaassa), ei kuulu Kaariin eikä
+            /// piirretä maakuntarajana (luokan kommentti PIIRRETTÄVÄT RAJAT).
+            /// </summary>
+            public readonly List<(double Lon, double Lat)[]> UlkoKaaret = new List<(double Lon, double Lat)[]>();
             public readonly List<Rypas> Rypaat = new List<Rypas>();
             /// <summary>Alueiden värinumerot 0…4 (indeksi = Alueet), web `vari` (ks. luokan kommentti TÄYTTÖ).</summary>
             public int[] Varit;
@@ -119,6 +131,8 @@ namespace Matkakirja
         public int VaritLaskettu;
         /// <summary>Alueiden sisäiset kaaret kaikista maista (karsittu rajaviivoista, <see cref="MaanAlueet.SisaisetKaaret"/>).</summary>
         public int SisaisetKaaret;
+        /// <summary>Maiden ulkorajan kaaret kaikista maista (karsittu rajaviivoista, <see cref="MaanAlueet.UlkoKaaret"/>).</summary>
+        public int UlkoKaaret;
         /// <summary>Suurin alueiden määrä yhdessä maassa ja sen maa (yli 255 → varoitus, katkaisu Rajaa-vaiheessa).</summary>
         public int AlueitaEnintaan;
         public string AlueitaEnintaanMaa;
@@ -219,6 +233,7 @@ namespace Matkakirja
                     {
                         var m = maaLista[mi];
                         if (SisainenKaari(taulu, omistajat[mi])) { m.SisaisetKaaret.Add(taulu); j.SisaisetKaaret++; }
+                        else if (UlkoKaari(taulu, omistajat[mi])) { m.UlkoKaaret.Add(taulu); j.UlkoKaaret++; }
                         else m.Kaaret.Add(taulu);
                     }
                     Lisaa((v & 0xffff) - 1);
@@ -552,6 +567,20 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Onko kaari maan ulkoraja: sen ensimmäinen maan jana on vain yhdessä renkaassa (ranta tai valtionraja; kaari
+        /// kulkee solmusta solmuun, joiden välillä omistajat eivät vaihdu). Löydökset 113 ja 126: ei piirretä.
+        /// </summary>
+        public static bool UlkoKaari((double Lon, double Lat)[] kaari, Dictionary<(long, long), List<int>> omistajat)
+        {
+            for (int i = 0; i + 1 < kaari.Length; i++)
+            {
+                if (!omistajat.TryGetValue(JanaAvain(kaari[i], kaari[i + 1]), out var l)) continue;
+                return l.Count < 2;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Onko kaari alueen sisällä: sen jana on vähintään kahdessa renkaassa ja kaikki ne ovat samaa aluetta. Kaari
         /// kulkee solmusta solmuun, joiden välillä omistajat eivät vaihdu (tools/vienti/maakuntarajat.mjs
         /// kaariTopologia), joten ensimmäinen maan jana ratkaisee. Alueiden väliset rajat ja maan ulkoraja (yksi rengas)
@@ -689,8 +718,8 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Maan kaarien janat rajauksen sisältä (molemmat päät sisällä), asteina. Alueiden sisäiset kaaret vain
-        /// vertailuun (<paramref name="sisaiset"/>; testit ja luvut ennen karsintaa).
+        /// Maan kaarien (alueiden väliset rajat) janat rajauksen sisältä (molemmat päät sisällä), asteina. Alueiden
+        /// sisäiset kaaret vain vertailuun (<paramref name="sisaiset"/>; testit ja luvut ennen karsintaa).
         /// </summary>
         public List<((double Lon, double Lat) A, (double Lon, double Lat) B)> Janat(Rajaus rj, bool sisaiset = false)
         {

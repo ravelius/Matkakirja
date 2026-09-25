@@ -52,7 +52,7 @@ namespace Matkakirja
             string v = Kermasarja.Nimi(nimi);
             if (v == Versio) return;
             Versio = v;
-            foreach (var t in FindObjectsByType<Varitaso>(FindObjectsSortMode.None)) t.Uudelleen();
+            foreach (var t in FindObjectsByType<Varitaso>(FindObjectsSortMode.None)) t.LataaSarja();
             Debug.Log($"MATKAKIRJA väritaso: sarja {v} (peitto {Peitto:0.00})");
         }
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
@@ -250,6 +250,17 @@ namespace Matkakirja
 
         /// <summary>Luettelo ja kerros uudelleen seuraavassa Updatessa (esim. AlinKaytetty muuttui).</summary>
         public void Uudelleen() => haluttu = null;
+
+        /// <summary>
+        /// Sarja vaihtui (AsetaVersio): sama maa haetaan heti uudesta kansiosta. Kohde ei välähdä tyhjäksi kuten
+        /// Uudelleen()-polussa, joten kehä (Maaraja) ja maakunnat eivät rakennu uudelleen.
+        /// </summary>
+        void LataaSarja()
+        {
+            if (string.IsNullOrEmpty(haluttu)) return;
+            if (haku != null) StopCoroutine(haku);
+            haku = StartCoroutine(Vaihda(haluttu));
+        }
 
         /// <summary>Linssin raster-kerros kartalla: väritaso väistyy (Cesiumissa kolme paikkaa).</summary>
         public void Linssit(bool paalla)
