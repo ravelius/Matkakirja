@@ -114956,6 +114956,250 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'João Pessoa, Paraíba',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (João Pessoa, Paraíba; Presidente Castro Pinto
+       * International Airport; Cabedelo; Carne de sol; Queijo coalho;
+       * Baião de dois; Cuscuz; Brazilian cuisine; Festa Junina; Campina
+       * Grande; Tambaba) ja Wikivoyagen sivuilta João Pessoa, Paraíba,
+       * Campina Grande ja Brazil; Jurandy do Saxin ja Jacarén tiedot sekä
+       * coalho-juuston tuotantomaakunnat portugalin Wikipediasta (Jurandy
+       * do Sax, Praia do Jacaré, Queijo coalho) — teksti omaa.
+       * Lentokentän etäisyydestä lähteet eivät ole yksimielisiä (8, 12 tai
+       * 25 km), joten lukua ei anneta. Nostojen aiheita (perustaminen
+       * 1585, nimet Filipeiasta Parahybaan, Frederikstad ja Santa
+       * Catarinan linnake, São Franciscon luostari, Ponta do Seixas ja
+       * majakka, sokeri ja Teatro Santa Roza, Cabo Brancon jyrkänne,
+       * Areia Vermelha, Mata do Buraquinho, riutat ja luonnonaltaat),
+       * gallerian aiheita (Frans Postin maalaus) eikä saapumisen ja
+       * visan aiheita (matala rantarakentaminen, itäisin kärki, postilennot,
+       * forrón soittimet, sokeriruoko) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Tambaban ranta jyrkänteen päältä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Praia de Tambaba e falésias.jpg',
+          lyhyt: 'Tambaban ranta ja kirjavat jyrkänteet João Pessoan eteläpuolella.',
+          selite: 'Tambaban ranta jyrkänteen päältä kuvattuna tammikuussa 2013: '
+            + 'punaisen, valkoisen ja okran sävyiset jyrkänteet laskeutuvat '
+            + 'vaalealle hiekalle, ja turkoosi meri murtuu rantaan.',
+          lahde: 'Raquel Saggin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'João Pessoaan tullaan lentäen tai bussilla naapurikaupungeista '
+          + 'Recifestä ja Natalista, ja keskustasta rantaan vie viiden '
+          + 'kilometrin mittainen valtakatu. Rannoilla grillataan narskuvaa '
+          + 'coalho-juustoa tikun nokassa, ja käsityöstä tuli kaupungin '
+          + 'tunnusmerkki, kun Unesco otti sen luovien kaupunkien verkostoonsa '
+          + 'vuonna 2017. Illalla kannattaa lähteä Cabedelon Jacaréen, jossa '
+          + 'saksofonisti soittaa veneestä Ravelin Boleroa auringon laskiessa '
+          + 'joen taakse, ja etelässä jyrkänteiden reunustamat rannat jatkuvat '
+          + 'Tambaban naturistirannalle asti. Kesäkuussa sisämaan Campina '
+          + 'Grande juhlii São Joãota koko kuukauden. Paras matka-aika on '
+          + 'syyskuusta maaliskuuhun, jolloin sataa vähän.',
+        artikkeli: {
+          nimi: 'Matkailijan João Pessoa',
+          teksti: 'João Pessoassa aurinko laskee jokeen saksofonin soidessa.',
+          nosto: 'Jacarén jokirannassa Jurandy do Sax on soittanut Ravelin '
+            + 'Boleroa auringonlaskulle jo tuhansia kertoja, valkoisiin '
+            + 'pukeutuneena ja pienen veneen keulassa seisten.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentokentältä rantakaduille',
+              teksti: 'Presidente Castro Pinton kansainvälinen lentokenttä on '
+                + 'kaupungin länsipuolella naapurikunnan alueella. Se avattiin '
+                + '1957, ja vuodesta 2019 sitä on hoitanut espanjalainen Aena '
+                + '30 vuoden toimiluvalla. Kansainvälisiä ja edullisempia '
+                + 'lentoja kannattaa etsiä myös Recifeen, Nataliin tai '
+                + 'Maceióhon, joista João Pessoaan pääsee kaukobussilla tai '
+                + 'kimppakyydillä. Kentältä keskustaan ajetaan tavallisesti '
+                + 'Uberilla tai 99-sovelluksen kyydillä, ja paikallisen taksin '
+                + 'hinnasta sovitaan ennen lähtöä. Kaukobussiasema on '
+                + 'keskustassa, ja kadun toiselta puolelta kaupunkibussien '
+                + 'terminaalista lähtevät Tambaún ja Cabo Brancon rannoille '
+                + 'kulkevat linjat. Keskustasta itään vie Avenida Presidente '
+                + 'Epitácio Pessoa, joka valmistui 1940 viiden kilometrin '
+                + 'mittaisena Itsenäisyydenaukiolta Tambaún rantaan, ja sen '
+                + 'varteen syntyi 1950-luvulla kokonaisia uusia kaupunginosia. '
+                + 'Rannassa sama rantakatu vaihtaa nimeään: se on vuoroin '
+                + 'Avenida Cabo Branco, Almirante Tamandaré ja João Maurício, ja '
+                + 'sen vieressä kulkevat kävelykatu ja pyörätie. Pohjoiseen '
+                + 'Cabedeloon pääsee myös lähijunalla. Dieselveturien vetämä '
+                + 'juna ajaa ainoaa, 30 kilometrin rataansa Santa Ritasta '
+                + 'Bayeuxin ja João Pessoan kautta Cabedeloon, ja vuoroja on 28 '
+                + 'päivässä.',
+              kuva: [
+                {
+                  tiedosto: 'Aeroporto Internacional Presidente Castro Pinto, João Pessoa..jpg',
+                  lyhyt: 'Lentokentän terminaalin seinässä ovat kaupungin nimi ja kenttää hoitavan Aenan merkki.',
+                  selite: 'Presidente Castro Pinton kansainvälisen lentokentän '
+                    + 'terminaali lokakuussa 2024. Valkoisessa seinässä lukee '
+                    + 'João Pessoa, ja vieressä on Aenan merkki: espanjalainen '
+                    + 'yhtiö on hoitanut kenttää vuodesta 2019.',
+                  lahde: 'Toin1620, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Avenida Presidente Epitácio Pessoa - João Pessoa (PB).jpg',
+                  lyhyt: 'Leveä Avenida Presidente Epitácio Pessoa johtaa keskustasta kohti rantaa.',
+                  selite: 'Avenida Presidente Epitácio Pessoa maaliskuussa 2023. '
+                    + 'Leveän ja suoran kadun varrella on liiketaloja, '
+                    + 'mainostauluja ja puita, ja taustalla kohoaa kerrostaloja.',
+                  lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Calçadão da praia de Tambaú, João Pessoa (PB).jpg',
+                  lyhyt: 'Tambaún rantakadun vieressä kulkevat punainen pyörätie ja laatoitettu kävelykatu.',
+                  selite: 'Tambaún rannalla maaliskuussa 2023: punaisen pyörätien '
+                    + 'toisella puolella on moottoripyöräparkki, toisella '
+                    + 'laatoitettu kävelykatu, jolla ihmiset kulkevat '
+                    + 'rantavaatteissa palmujen alla.',
+                  lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Aurinkolihaa ja narskuvaa juustoa',
+              teksti: 'Koillis-Brasilian tunnetuin liharuoka on carne de sol, '
+                + 'aurinkoliha. Naudanlihasta leikataan ohuita levyjä, jotka '
+                + 'suolataan kevyesti ja jätetään kuivumaan katettuun ja '
+                + 'tuulettuvaan paikkaan, joten nimestään huolimatta liha ei '
+                + 'kuivu auringossa. Tavan kehittivät kuivan sisämaan asukkaat, '
+                + 'joiden piti saada liha säilymään. Aurinkolihaa paistetaan '
+                + 'leivän väliin, haudutetaan uunissa kerman kanssa tai '
+                + 'survotaan jauhon kanssa paçocaksi. Koillisen rannoilla '
+                + 'edullinen välipala on coalho-juusto, kiinteä juusto, joka '
+                + 'kestää kuumuutta ja narskuu hampaissa. Se grillataan '
+                + 'hiilloksella tikun nokassa ja syödään oreganon tai '
+                + 'valkosipulikastikkeen kanssa, ja Paraíba on yksi sen '
+                + 'suurimmista tuottajista. Juustoa lisätään usein myös baião '
+                + 'de dois -ruokaan, jossa riisi ja pavut keitetään yhdessä; '
+                + 'Paraíbassa ja Pernambucossa sen muunnelma on sisämaassa '
+                + 'suosittu rubacão. Maissijauhosta tehtyä cuscuzia syödään '
+                + 'lihan kanssa kuumana tai maidon kanssa kylmänä. Lounaalla '
+                + 'moni valitsee por quilo -ravintolan, jossa lautanen täytetään '
+                + 'noutopöydästä ja punnitaan ennen syömistä, ja Manaíran '
+                + 'Mangai on tunnettu juuri koillisen ruokien noutopöydästään. '
+                + 'Laskuun lisätään yleensä kymmenen prosentin palvelumaksu, ja '
+                + 'se on Brasiliassa tavallisesti ainoa juomaraha.',
+              kuva: {
+                tiedosto: 'BRUNO LIMA GASTRONOMIA QUEIJO COALHO GRAVATÁ PE (26033995167).jpg',
+                lyhyt: 'Coalho-juustoviipaleet saavat grillipannulla ruskeat raidat mutta eivät sula.',
+                selite: 'Kolme coalho-juustoviipaletta paistuu uurretulla '
+                  + 'valurautapannulla Gravatássa naapurivaltio Pernambucossa. '
+                  + 'Juusto kestää kuumuutta ja pysyy muodossaan, ja rannoilla '
+                  + 'sitä myydään tikkuun pujotettuna.',
+                lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Käsityön kaupunki',
+              teksti: 'Vuonna 2017 Unesco otti João Pessoan luovien kaupunkien '
+                + 'verkostoonsa käsityön kaupunkina, ja käsitöitä kannattaa '
+                + 'etsiä ennen kaikkea Tambaún rannalta. Suurin myyntipaikka on '
+                + 'Mercado de Artesanato Paraibano, jossa on 128 liikettä, ja '
+                + 'pienempiä kojuja on Hotel Tambaún edustan torilla ja Rua '
+                + 'Senador Rui Carneiron varrella. Hotelli on itsekin '
+                + 'nähtävyys: arkkitehti Sérgio Bernardesin suunnittelema '
+                + 'rakennus pystytettiin suoraan rantahiekalle ja avattiin '
+                + 'maaliskuussa 1971. Sama arkkitehti suunnitteli Espaço '
+                + 'Cultural José Lins do Regon, joka avattiin 1982 entisen '
+                + 'lentokerhon kentälle. Kulttuurikeskuksessa on saman katon '
+                + 'alla taidegalleria, planetaario, kirjailija José Lins do '
+                + 'Regon museo, musiikkikoulu ja kaksi teatteria. Vanhassa '
+                + 'keskustassa kannattaa käydä Hotel Globon museossa. Entinen '
+                + 'loistohotelli on rakennettu eklektiseen tyyliin, jossa '
+                + 'näkyvät uusklassismi, jugend ja art déco, ja sen puutarhasta '
+                + 'katsotaan auringonlaskua Sanhauájoen yllä. Keskustan '
+                + 'olohuone on Parque Sólon de Lucenan laguuni. Sen ympärille '
+                + 'istutettiin keisaripalmut 1926, ja puistot suunnitteli 1940 '
+                + 'maisema-arkkitehti Roberto Burle Marx. Laguunin rannan '
+                + 'kojuista saa juomia ja pikkupurtavaa halvalla, ja '
+                + 'sunnuntaisin väkeä on kuin juhlissa.',
+              kuva: {
+                tiedosto: 'Mercado de Artesanato Paraibano, João Pessoa (PB).jpg',
+                lyhyt: 'Mercado de Artesanato Paraibanon tiilikaaret ja valkoiset parvekkeet Tambaússa.',
+                selite: 'Paraíban käsityötori Mercado de Artesanato Paraibano '
+                  + 'Tambaússa maaliskuussa 2018. Tiiliseinässä on kaaria ja '
+                  + 'yläkerroksissa valkoisia parvekkeita, ja edustan pylväässä '
+                  + 'lukee Artesanato, käsityö.',
+                lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Bolero joella ja rannat etelässä',
+              teksti: 'Pohjoisessa Cabedelon puolella Paraíbajoen suistossa on '
+                + 'Jacarén jokiranta, jonne tullaan katsomaan auringonlaskua. '
+                + 'Vuonna 1993 saksofonisti Jurandy do Sax soitti siellä '
+                + 'ensimmäisen kerran Maurice Ravelin Boleron laskevalle '
+                + 'auringolle, ja vuodesta 2000 hän on soittanut sen joka '
+                + 'päivä. Kappale kestää noin 17 minuuttia, suunnilleen yhtä '
+                + 'kauan kuin auringonlasku, ja vuodesta 2001 muusikko on '
+                + 'soittanut valkoisiin pukeutuneena pienessä veneessä '
+                + 'rantabaarien edustalla. Vuonna 2024 esityksiä oli kertynyt '
+                + '9 000, ja joulukuussa 2025 Paraíba julisti ne osavaltion '
+                + 'aineettomaksi kulttuuriperinnöksi. Uimaan Jacaréen ei '
+                + 'kannata mennä, sillä joen ja meren rajalla oleva ranta on '
+                + 'toisinaan uimakelvoton. Etelään pääsee päällystettyä '
+                + 'rantatietä PB-008 Conden kunnan jyrkänteiden reunustamille '
+                + 'rannoille. Tunnetuin niistä on noin kilometrin mittainen '
+                + 'Tambaba, Koillis-Brasilian ensimmäinen virallinen '
+                + 'naturistiranta. Sen perhealueella ollaan alasti, reunoilla '
+                + 'vaatteet saa pitää, ja vieressä on myös tavallinen ranta. '
+                + 'Kesäkuussa kannattaa lähteä sisämaahan Campina Grandeen, '
+                + 'Paraíban toiseksi suurimpaan kaupunkiin noin kahden tunnin '
+                + 'bussimatkan päähän. Siellä São Joãon juhlaa vietetään koko '
+                + 'kuukausi, ja kuukauden aikana juhliin kokoontuu noin kaksi '
+                + 'miljoonaa ihmistä. Keskuksena on Parque do Povo, jota '
+                + 'kutsutaan forrón päämajaksi.',
+              kuva: {
+                tiedosto: 'Jurandy do Sax tocando Bolero de Ravel no rio Paraíba.jpg',
+                lyhyt: 'Valkoisiin pukeutunut Jurandy do Sax soittaa Boleroa veneessä Paraíbajoella.',
+                selite: 'Jurandy do Sax seisoo valkoisissa vaatteissa pienen '
+                  + 'moottoriveneen keulassa ja soittaa Ravelin Boleroa '
+                  + 'Paraíbajoella Jacarén edustalla toukokuussa 2019. '
+                  + 'Perämies ohjaa venettä, ja vastarannan metsä piirtyy '
+                  + 'tummana viivana iltataivasta vasten.',
+                lahde: 'Rosanetur, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kuiva kausi, rantaraportit ja pienet setelit',
+              teksti: 'João Pessoassa on lämmintä ympäri vuoden, ja '
+                + 'keskilämpötilat pysyttelevät 24 ja 30 asteen välillä, koska '
+                + 'pasaatituulet ja merituuli tasaavat helteitä. Sadekausi '
+                + 'kestää yleensä maaliskuusta elokuuhun, ja eniten sataa '
+                + 'touko-, kesä- ja heinäkuussa: kuurot ovat lyhyitä mutta '
+                + 'rankkoja. Syyskuusta helmikuuhun on kuivaa, meri on '
+                + 'kirkkaimmillaan ja veneretket onnistuvat parhaiten, joten '
+                + 'paras matka-aika on syyskuusta maaliskuuhun. Kaikki '
+                + 'kaupungin rannat eivät ole joka päivä uimakelpoisia. '
+                + 'Osavaltion ympäristövirasto SUDEMA julkaisee viikoittain '
+                + 'portugalinkielisen rantaraportin, josta näkee, missä '
+                + 'kannattaa uida. Kalliita kelloja, kameroita ja puhelimia ei '
+                + 'kannata pitää esillä edes varakkaissa rantakaupunginosissa, '
+                + 'ja pimeän tultua rannalta keskustaan mennään taksilla eikä '
+                + 'kävellen. Kaupoista saa pienen capanga-vatsalaukun, johon '
+                + 'voi panna vähän rahaa ryöstön varalle, ja ryöstäjää ei pidä '
+                + 'vastustaa. Käteistä tarvitaan yhä vähemmän, koska kortit '
+                + 'käyvät lähes kaikkialla, mutta pienillä kaupoilla ja '
+                + 'katukauppiailla ei usein ole vaihtorahaa 50, 100 tai 200 '
+                + 'realin seteleille. Brasilialaisten suosimaan Pix-pikamaksuun '
+                + 'tarvitaan yleensä brasilialainen pankkitili tai CPF-numero, '
+                + 'joten matkailija maksaa kortilla tai pienillä seteleillä.',
+              kuva: {
+                tiedosto: 'Turismo na praia de Tambaú, João Pessoa (PB).jpg',
+                lyhyt: 'Tambaún rannalla aurinkovarjot reunustavat hiekkaa ja lapset kahlaavat rannassa.',
+                selite: 'Tambaún ranta maaliskuussa 2023: hiekan reunalla on '
+                  + 'rivi sinisiä ja vihreitä aurinkovarjoja, ihmiset kahlaavat '
+                  + 'matalassa vedessä, ja taustalla kohoavat palmut ja '
+                  + 'kaupungin tornitalot.',
+                lahde: 'Marcos Elias de Oliveira Júnior, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
