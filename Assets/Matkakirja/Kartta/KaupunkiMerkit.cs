@@ -108,6 +108,9 @@ namespace Matkakirja
             }
             n.ForceMeshUpdate(true);
             var koko = n.GetRenderedValues(false) * 10f;
+            m.teksti = koko;
+            m.lukittu = false; // uudet mitat: paikka lasketaan uudestaan (web: KOKO ON OSA LUKKOA)
+            m.piirrettyAsetettu = false;
             m.koko = m.valintamerkki && !l ? new Vector2(koko.x, koko.y)
                                             : new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk));
         }
@@ -402,6 +405,11 @@ namespace Matkakirja
             public bool korostettu; // Korosta: piste 1,5-kertainen
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
+            public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
+            public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu
+            public NimiLadonta.NimenPaikka lukko; // pikseleinä
+            public NimiLadonta.NimenPaikka piirretty; // nimiön nykyinen paikka pikseleinä (asetetaan vain muuttuessa)
+            public bool piirrettyAsetettu;
         }
 
         /// <summary>Osuus etäisyydestä, jonka verran merkki tuodaan pinnan eteen.</summary>
@@ -421,6 +429,9 @@ namespace Matkakirja
         readonly List<Merkki> nakyvat = new List<Merkki>();
         readonly List<NimiLadonta.KaupunkiEhdokas> ehdokkaat = new List<NimiLadonta.KaupunkiEhdokas>();
         readonly List<bool> naytetaan = new List<bool>();
+        readonly List<NimiLadonta.NimenPaikka> nimenPaikat = new List<NimiLadonta.NimenPaikka>();
+        readonly List<Ruutulaatikko> pinot = new List<Ruutulaatikko>();
+        Nappula nappula;
         Mesh nelio;
 
         public int Naytetty { get; private set; }
@@ -658,7 +669,7 @@ namespace Matkakirja
                 bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && (suodatin == null || suodatin.Contains(m.kaupunki.id))
                     && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
-                if (!edessa) continue;
+                if (!edessa) { m.lukittu = false; continue; }
 
                 // Merkki siirretään näkösädettä pitkin kameraa kohti: ruudulla se pysyy
                 // samassa kohdassa, mutta kaareva pinta ei enää leikkaa sen neliötä.
@@ -670,11 +681,13 @@ namespace Matkakirja
                 m.juuri.localScale = Vector3.one * mk;
 
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
-                var ala = NimenAla(m, ruutu, kerroin);
-                var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
+                // Lukko vapautuu vasta, kun kaupunki poistuu ruudulta (web LUKKO SÄILYY YHDEN VÄLIIN JÄÄNEEN LADONNAN YLI).
+                if (ruutu.x < 0 || ruutu.y < 0 || ruutu.x > Screen.width || ruutu.y > Screen.height) m.lukittu = false;
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
                 bool valinta = m.valintamerkki && !LinssiTila;
-                float pp = m.pisteKoko * kerroin;
+                var ala = NimenAla(m, ruutu, kerroin);
+                var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
+                float pp = m.pisteKoko * kerroin * (m.korostettu ? 1.5f : 1f);
                 nakyvat.Add(m);
                 ehdokkaat.Add(new NimiLadonta.KaupunkiEhdokas
                 {
@@ -682,18 +695,54 @@ namespace Matkakirja
                     Nimio = Laatikko(suorakulmio),
                     Pakko = valinta,
                     Sallittu = valinta || nimiotNakyvat || LinssiTila,
+                    X = ruutu.x, Y = ruutu.y,
+                    Leveys = valinta ? 0 : m.teksti.x * kerroin, Korkeus = m.teksti.y * kerroin,
+                    Kirjain = m.nimio.fontSize * kerroin,
+                    Sivu = (pp * 0.5f + valistys * kerroin),
+                    Lukittu = m.lukittu, Lukko = m.lukko,
                 });
             }
 
-            // 3) Pisteet ensin, sitten nimiöt, jotka väistävät ikonit, muiden pisteet ja aiemmat nimiöt.
-            NimiLadonta.LadoKaupungit(ehdokkaat, Varaukset, naytetaan);
+            // 3) Pelinappula (web pinot) ja pisteet ensin, sitten nimiöt, jotka väistävät ikonit, nappulan, muiden
+            //    pisteet ja aiemmat nimiöt webin ehdokaskehällä (8 suuntaa; lukittu nimi ei vaihda kylkeä).
+            pinot.Clear();
+            if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
+            if (nappula != null && !LinssiTila && nappula.Pino(kamera, kerroin, NimiLadonta.PelimerkinVara, out var pino)) pinot.Add(pino);
+            NimiLadonta.LadoKaupungit(ehdokkaat, pinot, new Ruutulaatikko(0, 0, Screen.width, Screen.height), kerroin,
+                                      Varaukset, naytetaan, nimenPaikat);
             for (int i = 0; i < nakyvat.Count; i++)
             {
+                var m = nakyvat[i];
                 bool mahtuu = naytetaan[i];
                 if (mahtuu) naytetty++;
-                if (nakyvat[i].nimio.enabled != mahtuu) nakyvat[i].nimio.enabled = mahtuu;
+                if (mahtuu && ehdokkaat[i].Leveys > 0)
+                {
+                    m.lukko = nimenPaikat[i];
+                    m.lukittu = true;
+                    AsetaNimenPaikka(m, nimenPaikat[i], kerroin);
+                }
+                if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
             }
             Naytetty = naytetty;
+        }
+
+        /// <summary>Nimiö ladottuun paikkaan (TMP:n tasaus ja pivot ankkurin mukaan; vain muuttuessa).</summary>
+        void AsetaNimenPaikka(Merkki m, NimiLadonta.NimenPaikka p, float kerroin)
+        {
+            if (m.piirrettyAsetettu && m.piirretty.Ank == p.Ank && m.piirretty.Dx == p.Dx && m.piirretty.Dy == p.Dy) return;
+            m.piirretty = p;
+            m.piirrettyAsetettu = true;
+            var n = m.nimio;
+            switch (p.Ank)
+            {
+                case NimiLadonta.NimenAnkkuri.Alku:
+                    n.alignment = TextAlignmentOptions.MidlineLeft; n.rectTransform.pivot = new Vector2(0, 0.5f); break;
+                case NimiLadonta.NimenAnkkuri.Loppu:
+                    n.alignment = TextAlignmentOptions.MidlineRight; n.rectTransform.pivot = new Vector2(1, 0.5f); break;
+                default:
+                    n.alignment = TextAlignmentOptions.Midline; n.rectTransform.pivot = new Vector2(0.5f, 0.5f); break;
+            }
+            n.transform.localPosition = new Vector3(p.Dx / kerroin, p.Dy / kerroin, 0);
         }
 
         static Ruutulaatikko Laatikko(Rect r) => new Ruutulaatikko(r.xMin, r.yMin, r.xMax, r.yMax);
@@ -704,6 +753,11 @@ namespace Matkakirja
             var koko = m.koko * kerroin;
             if (m.valintamerkki && !LinssiTila)
                 return new Rect(p.x - koko.x * 0.5f, p.y + ValintaNimenY * kerroin, koko.x, koko.y);
+            if (m.piirrettyAsetettu)
+            {
+                var l = NimiLadonta.NimenLaatikko(p.x, p.y, m.piirretty, m.teksti.x * kerroin, m.teksti.y * kerroin, kerroin);
+                return Rect.MinMaxRect(l.X0, l.Y0, l.X1, l.Y1);
+            }
             return new Rect(p.x, p.y - koko.y * 0.5f, koko.x, koko.y);
         }
 
