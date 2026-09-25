@@ -273,6 +273,27 @@ namespace Matkakirja.Natiivi
             if (Nakyy && !pieni) AsetaPieni(true);
         }
 
+        bool linssiKutisti;
+
+        /// <summary>
+        /// Web piirraLinssiSelite (linssipariteetti rivi 31): karttakerroksellisen linssin syttyminen kutistaa päiväkirjan
+        /// lapuksi (kartan pitää näkyä selitteen ja päiväkirjan välistä) ja sammuminen palauttaa sen. Vain vaihtumishetkellä;
+        /// palautus vain, jos kortti oli auki linssin syttyessä (puhelimen lappu jää lapuksi).
+        /// </summary>
+        public void Linssi(bool paalla)
+        {
+            if (paalla)
+            {
+                linssiKutisti = Nakyy && !pieni;
+                if (linssiKutisti) AsetaPieni(true);
+            }
+            else if (linssiKutisti)
+            {
+                linssiKutisti = false;
+                if (Nakyy && pieni) AsetaPieni(false);
+            }
+        }
+
         void Luentavahti()
         {
             KytkeKartta();
