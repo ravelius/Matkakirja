@@ -103,7 +103,7 @@ import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.m
 import {
   RESEPTIT, TAUSTA, VESIVIIVOITUKSET, patinoiSelaimessa,
 } from './patina.mjs';
-import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
+import { laudanProjektio, SYVYYS, asetaSyvyyskontrasti } from './fokuskartta/piirto.js';
 import { RANTATYYLI, nimiotasonLadonta } from './fokuskartta/maailmapiirto.js';
 import { NIMISTO_1873 } from '../js/packs/nimisto-1873.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
@@ -334,7 +334,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia [--polta-hahmotelmat t,t]] [--nostotasot <json>] [--nostot-ilman-nimioita]] '
     + '[--nimiotaso --nimioversio <v> [--nimiot <json>] [--nimiot-aika pysyva]] '
     + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat] [--eijoet]] '
-    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--paperirae ruutu] [--resepti-json <json>] [--joet-pohjaan] '
+    + '[--vesiviivoitus tihea|harva] [--syvyysportaat m,m,…] [--syvyyskayrat m,m,… [--syvyyskayrapeitto 0.55]] [--syvyyskohina lauta] [--paperirae ruutu] [--resepti-json <json>] [--syvyyskontrasti <k>] [--joet-pohjaan] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -1060,6 +1060,9 @@ const DEM_KAIKKI_TASOT = lippu('dem-kaikki-tasot');
 const MERI_KOHINA = valitsin('meri-kohina', null) === null ? null : Number(valitsin('meri-kohina', null));
 const VESIVIIVOITUS_VALINTA = valitsin('vesiviivoitus', null);
 const RESEPTI_JSON = valitsin('resepti-json', null);
+/** `--syvyyskontrasti 1.35` — meren syvyysrampin venytys (löydös 129; 1 = entinen, ks. piirto.js asetaSyvyyskontrasti). */
+const SYVYYSKONTRASTI = Number(valitsin('syvyyskontrasti', 1));
+asetaSyvyyskontrasti(SYVYYSKONTRASTI);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
   console.error(`--vesiviivoitus: tuntematon ${VESIVIIVOITUS_VALINTA} (tihea|harva)`);
   process.exit(1);
@@ -3834,6 +3837,17 @@ await sivu.waitForSelector('body[data-valmis="1"]', { timeout: 120000 })
  * Tässä se viedään kerran, ja lohkot kutsuvat sitä sivun sisällä
  * ilman sarjallistusta.
  */
+/*
+ * Syvyyskontrasti myös SIVULLE: pohja piirretään selaimessa, jonka
+ * piirto.js on eri moduuli-instanssi kuin Noden. Sama URL kuin
+ * maailmapiirto.js:n tuonnilla → sama instanssi ja sama SYVYYS-taulukko.
+ */
+if (SYVYYSKONTRASTI !== 1) {
+  await sivu.evaluate(async (k) => {
+    const m = await import(new URL('./piirto.js', window.location.href).href);
+    m.asetaSyvyyskontrasti(k);
+  }, SYVYYSKONTRASTI);
+}
 if (PATINA) {
   await sivu.evaluate((lahde) => {
     // eslint-disable-next-line no-eval
