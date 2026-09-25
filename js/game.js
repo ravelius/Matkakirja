@@ -493,7 +493,7 @@ export class Game {
      * Nostokortin lopun minikysymys kirjataan kuten lehden minitehtävä
      * (actionMinitehtava, avain 'pakka:nosto:tunnus'), mutta erä 7
      * tarvitsee siitä vain yhden asian: MONTAKO on ratkaistu. Aarteen
-     * vihreä piste syttyy, kun tämä on vähintään 2 — ja koska ehto
+     * vihreä piste syttyy, kun tämä on vähintään 1 (löydös 145; ennen 2) — ja koska ehto
      * lukee VAIN nostojen kysymyksiä, lehtitehtävien joukko ei kelpaa
      * laskuriksi (se täyttyisi vahingossa vanhoista vastauksista).
      *
