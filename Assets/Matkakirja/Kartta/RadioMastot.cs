@@ -249,6 +249,8 @@ namespace Matkakirja
 
         public void Hamara(float h)
         {
+            hamaraKehys = Time.frameCount;
+            hamaraAika = Time.unscaledTime;
             hamara = Mathf.Clamp01(float.IsNaN(h) ? 0 : h);
             Shader.SetGlobalFloat(HamaraId, hamara);
             Tausta();
@@ -361,8 +363,34 @@ namespace Matkakirja
 
         // ---- Piirto ----
 
+        // ---- VAHTI (omistajan löydös 77, build 12): radiolinssi päivittää hämärän joka kehys, kun se on auki
+        //      (RadioLinssi.PaivitaMastot) tai sulkeutuu (PaivitaSulku). Jos linssi suljetaan muuta tietä kuin
+        //      SuljeMastot (laukku, matka, toinen linssi), PaivitaMastot palaa heti eikä nollaa mitään, ja hämärä,
+        //      maavalo sekä kuuluvuuskalotin renkaat jäivät pallolle: Saharan eteläpuolelle musta kalotti renkaineen
+        //      ja maston hehku. Kun päivitystä ei ole tullut <see cref="VahdinRaja"/> sekuntiin, tila puretaan kuten
+        //      OnDestroyssa. Koetila (Koe) ohjaa itse.
+        int hamaraKehys = -1;
+        float hamaraAika;
+        /// <summary>Päivittämätön aika (s), jonka jälkeen radion jäänteet puretaan.</summary>
+        const float VahdinRaja = 0.3f;
+
+        void Vahti()
+        {
+            if (koe || (hamara <= 0f && renkaita == 0 && valittu < 0 && maara == 0)) return;
+            if (Time.frameCount - hamaraKehys < 3 || Time.unscaledTime - hamaraAika < VahdinRaja) return;
+            Debug.LogWarning($"MATKAKIRJA radiomastot: linssi ei päivitä ({Time.unscaledTime - hamaraAika:0.0} s), jäänteet pois " +
+                             $"(hämärä {hamara:0.00}, renkaita {renkaita}, valittu {valittu}, mastoja {maara})");
+            renkaita = 0; valittu = -1; kirkkaus = 0f;
+            YonValot(0, 0, 0);
+            Hamara(0f);
+            Mastot(null);
+            maavaloPaalla = true;
+            AsetaGlobaalit();
+        }
+
         void LateUpdate()
         {
+            Vahti();
             Valoja = 0;
             if (!valmis || (maara == 0 && renkaita == 0))
             {

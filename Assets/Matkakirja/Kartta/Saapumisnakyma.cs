@@ -454,7 +454,7 @@ namespace Matkakirja
             return yla;
         }
 
-        struct Sovitus { public double Korkeus, Lat, Lng; }
+        struct Sovitus { public double Korkeus, Lat, Lng, LngW, LngE, LatMin, LatMax; }
 
         /// <summary>
         /// Korkeuteen sovitettu näkymä (kamera.js:769 korkeuteenSovitus) tai null, jos ruutu ei ole laatikkoa
@@ -487,10 +487,85 @@ namespace Matkakirja
                 lng0 = ylaraja > alaraja ? Math.Min(ylaraja, Math.Max(alaraja, toive)) : (lngW + lngE) / 2;
             }
             if (!(etaisyys > 1)) return null;
-            return new Sovitus { Korkeus = Math.Min(KorkeusMax, etaisyys - 1), Lat = lat0, Lng = lng0 };
+            return new Sovitus { Korkeus = Math.Min(KorkeusMax, etaisyys - 1), Lat = lat0, Lng = lng0, LngW = lngW, LngE = lngE,
+                                 LatMin = latMin, LatMax = latMax };
         }
 
         static double Kiedo(double lon) => ((lon % 360.0) + 540.0) % 360.0 - 180.0;
+
+        // ------------------------------------------------------------------ maan rajat (build 13, pariteetti D7/D8)
+
+        /// <summary>Web kamera.js:223 PANOROINNIN_KERROIN.</summary>
+        public const double PanoroinninKerroin = 1.3;
+
+        /// <summary>
+        /// ULOSZOOMAUKSEN KATTO (web kamera.js:1059 uloszoomausRaja, lauta.js:1690 maanZoomiraja): sama kaava kuin
+        /// saapumisella kertoimella 1 + 2 · 0,01 (ULOSZOOMAUKSEN_KERROIN), joten uloin sallittu näkymä on
+        /// saapumisnäkymä. Ei kattoa kaupunkinäkymässä (laatikko ei mahdu, esim. RUS, USA) eikä, jos katto olisi
+        /// lattiaa lähempänä (pikkuvaltio). Palauttaa katon pallonsäteinä natiivin kameralle (<see cref="Tulos.Korkeus"/>).
+        /// </summary>
+        public static double? Uloszoomauskatto(Tulos saapuminen)
+        {
+            if (saapuminen.Tapa == Tapa.Kaupunkinakyma || !saapuminen.Laatikko.HasValue) return null;
+            if (!(saapuminen.WebKorkeus > saapuminen.KorkeusMin)) return null;
+            return saapuminen.Korkeus;
+        }
+
+        public struct Panoraja
+        {
+            public double LatMin, LatMax, LngMin, LngMax;
+            /// <summary>Pituusraja voimassa (laatikko ei käänny päivämäärärajan yli).</summary>
+            public bool Pituus;
+            /// <summary>Kapea ruutu: pituusraja riippuu korkeudesta, lasketaan joka kerta uudelleen.</summary>
+            public bool Elava;
+        }
+
+        /// <summary>
+        /// PANOROINNIN RAJA (web kamera.js:1089 panoraja, lauta.js:1778 maanPanoraja): kameran keskipiste pysyy maan
+        /// laatikossa × 1,3. Kapealla ruudulla (korkeuteen sovitus) pituusraja elää zoomin mukaan: laatikon reunat
+        /// saavat tulla ruudun laitaan asti (reunanPuoli nykyisellä korkeudella, enintään sovituksen korkeudella).
+        /// leveysPt ja korkeusPt = webin kotelo (<see cref="WebinKotelo"/>), toiveLng = pelaajan pituus,
+        /// nykyKorkeus = kameran korkeus webin pallonsäteinä (≤ 0 = sovituksen korkeus).
+        /// </summary>
+        public static Panoraja? MaanPanoraja(Laatikko l, double leveysPt, double korkeusPt, double toiveLng, double nykyKorkeus,
+                                              double kerroin = PanoroinninKerroin, double fov = PalloFov)
+        {
+            if (!(l.W > 0) || !(l.H > 0)) return null;
+            double kx = l.X + l.W / 2, ky = l.Y + l.H / 2, w = l.W * kerroin / 2, h = l.H * kerroin / 2;
+            var a = LaudaltaAsteiksi(kx - w, ky - h);
+            var b = LaudaltaAsteiksi(kx + w, ky + h);
+            var r = new Panoraja { LatMin = Math.Min(a.Lat, b.Lat), LatMax = Math.Max(a.Lat, b.Lat) };
+            if (!double.IsFinite(r.LatMin) || !double.IsFinite(r.LatMax)) return null;
+            double lngMin = Math.Min(a.Lon, b.Lon), lngMax = Math.Max(a.Lon, b.Lon);
+            r.Pituus = double.IsFinite(lngMin) && double.IsFinite(lngMax) && lngMax - lngMin < 180;
+            r.LngMin = lngMin; r.LngMax = lngMax;
+            double A = Kuvasuhde(leveysPt, korkeusPt);
+            var s = KorkeuteenSovitus(l, 1 + 2 * Marginaali, A, fov, toiveLng);
+            if (s.HasValue)
+            {
+                var v = s.Value;
+                double puoli = ReunanPuoli(v.LatMin, v.LatMax, v.Lat, 1 + (nykyKorkeus > 0 ? Math.Min(nykyKorkeus, v.Korkeus) : v.Korkeus), A, fov);
+                double alaraja = v.LngW + puoli, ylaraja = v.LngE - puoli, keski = (v.LngW + v.LngE) / 2;
+                r.LngMin = ylaraja > alaraja ? alaraja : keski;
+                r.LngMax = ylaraja > alaraja ? ylaraja : keski;
+                r.Pituus = true;
+                r.Elava = true;
+            }
+            return r;
+        }
+
+        /// <summary>Keskipiste rajaan (web kamera.js:1153 rajaaPanorointi): pituus lähimpään kiertoon rajan keskeltä.</summary>
+        public static (double Lat, double Lon) RajaaPanorointi(Panoraja r, double lat, double lon)
+        {
+            double uusiLat = Math.Min(r.LatMax, Math.Max(r.LatMin, lat)), uusiLon = lon;
+            if (r.Pituus)
+            {
+                double keski = (r.LngMin + r.LngMax) / 2;
+                uusiLon = lon - Math.Round((lon - keski) / 360.0) * 360.0;
+                uusiLon = Math.Min(r.LngMax, Math.Max(r.LngMin, uusiLon));
+            }
+            return (uusiLat, uusiLon);
+        }
 
         // ------------------------------------------------------------------ saapumisnäkymä
 

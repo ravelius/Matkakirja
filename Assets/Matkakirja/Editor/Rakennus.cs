@@ -518,6 +518,43 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.appleEnableAutomaticSigning = true;
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
             Kuvake();
+            Aloitusruutu();
+        }
+
+        /// <summary>LaunchScreenin logo: sama tiedosto, jonka Aloitusverho näyttää pelin ensimmäisissä kehyksissä.</summary>
+        public const string AloitusLogo = "Assets/Matkakirja/Kartta/Resources/" + Matkakirja.Aloitusverho.LogoPolku + ".png";
+
+        /// <summary>
+        /// ALOITUSRUUTU (omistajan löydös 75, build 13): Unityn "Made with Unity" -ruutu pois (sallittu Unity 6:ssa kaikilla
+        /// lisensseillä) ja iOS:n LaunchScreen pergamenttina logon kanssa (kuva ja tausta, logon leveys
+        /// Aloitusverho.LogonOsuus ruudusta). Aloitusverho jatkaa samaa kuvaa pelin puolella, kunnes pallo on ladattu.
+        /// Asetetaan joka viennissä (simulaattori, laite, TestFlight ja App Store), jotta batchmode-vienti ei nojaa
+        /// ProjectSettingsin tallennettuun arvoon.
+        /// </summary>
+        static void Aloitusruutu()
+        {
+            PlayerSettings.SplashScreen.show = false;
+            PlayerSettings.SplashScreen.showUnityLogo = false;
+            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(AloitusLogo);
+            if (tex == null) throw new Exception("Aloitusruudun logoa ei löydy: " + AloitusLogo);
+            PlayerSettings.iOS.SetiPhoneLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
+            PlayerSettings.iOS.SetiPadLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
+            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhonePortraitImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhoneLandscapeImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPadImage);
+            var asetukset = new SerializedObject(Unsupported.GetSerializedAssetInterfaceSingleton("PlayerSettings"));
+            float osuus = Matkakirja.Aloitusverho.LogonOsuus * 100f;
+            foreach (var nimi in new[] { "iOSLaunchScreenBackgroundColor", "iOSLaunchScreeniPadBackgroundColor" })
+            {
+                var p = asetukset.FindProperty(nimi);
+                if (p != null) p.colorValue = Matkakirja.Aloitusverho.Pergamentti;
+            }
+            foreach (var nimi in new[] { "iOSLaunchScreenFillPct", "iOSLaunchScreeniPadFillPct" })
+            {
+                var p = asetukset.FindProperty(nimi);
+                if (p != null) p.floatValue = osuus;
+            }
+            asetukset.ApplyModifiedPropertiesWithoutUndo();
         }
 
         /// <summary>Pelin kompassiruusukuvake (sama kuin iOS-kuoressa) kaikkiin iOS-kokoihin, myös App Storen 1024 px.</summary>
