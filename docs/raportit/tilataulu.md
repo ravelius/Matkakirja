@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 15:29 EEST
+**Päivitetty:** 2026-09-25 15:34 EEST
 
 ## 1) Sessiot
 
@@ -18,7 +18,7 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 | Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 46% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 16% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 23% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 64% | running | — |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | nollattu | idle, RC pois | Nollattu 15.33; ilmoitettu Fablelle |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 40% | running | — |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
@@ -59,6 +59,6 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 - **Levy:** 189 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
 - **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 0.
 - **5 h -kiintiö:** 51 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 14 %. **Viikko (Fable):** 7 %.
-- **Konteksti:** Pelikoodari 64 % (raja 70 %, seurataan), Natiiviseppä 56 %, Fable 53 %. Natiivi-UI nollattu → palasi 16 %.
-- **Juna:** yläraja laukesi 15:22, EI vielä KÄÄNNETTY klo 15:29 — 15:25 niputettiin juna/b13 + natiiviseppa/etusivulento-112 + natiiviseppa/reittiviiva-111 samaan ajoon, venynyt. Ilmoitettu Fablelle.
+- **Konteksti:** Pelikoodari nollattu 15:33 (odottaa Fablen aloitusviestiä 99d0451a0). Natiiviseppä 56 %, Fable 53 %.
+- **JUNA JUMISSA (kiireellinen, ilmoitettu Fablelle 15:34):** yläraja laukesi 15:22, EI KÄÄNNETTY 12 min sen jälkeen. 15:25 niputettu juna/b13 + natiiviseppa/etusivulento-112 + natiiviseppa/reittiviiva-111, ei uutta juna.log-riviä sen jälkeen — junavahti näyttää jumiutuneen.
 - **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 14.
