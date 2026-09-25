@@ -26,6 +26,7 @@ namespace Matkakirja.Natiivi
         void VaiennaPaikanPuhe()
         {
             LuentoOhitettu = true;
+            PeruLykkays();
             if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(0.3f); }
             try { PaikanPuheVaiennettu?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }

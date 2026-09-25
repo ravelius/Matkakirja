@@ -181,7 +181,15 @@ namespace Matkakirja.Natiivi
                     && Asetukset.Paalla(Kytkin.Kertoja);
                 kortti.Nayta(m, kirjoita: false);
                 if (!luentoTulossa) { KirjoitaIlmanLuentoa(k); return; }
-                luentoOdotus = Ajastin.Execute(() => KirjoitaIlmanLuentoa(k)).StartingIn(LuentoOdotusMs);
+                // C16: ensisaapumisen luenta odottaa pulun paljastusta (PeliOhjain.LuentaLykatty) — odotus jatkuu,
+                // kunnes lykkäys on purettu (luenta alkoi → Alkoi, tai ei alkanut → kirjoitus ilman sitä).
+                IVisualElementScheduledItem odotus = null;
+                odotus = luentoOdotus = Ajastin.Execute(() =>
+                {
+                    if (ohjain?.LuentaLykatty(k) == true) return;
+                    odotus.Pause();
+                    KirjoitaIlmanLuentoa(k);
+                }).StartingIn(LuentoOdotusMs).Every(500);
             });
         }
 
@@ -302,7 +310,14 @@ namespace Matkakirja.Natiivi
             kommentoitu.Add(k);
             vuoro = -1;
             // C12 (web SAAPUMISKUPLAN_TAUKO_MS): kommentti 900 ms luennan jälkeen, ellei paikan puhetta vaiennettu.
-            Ajastin.Execute(() => { if (kaupunki == k && vuoro == -1) Kommentti(v, 0); }).StartingIn(KommentinTaukoMs);
+            // C16 (web fokusvirtaSaapumiskupla → odotaPaljastus): Livian tuurauspaljastus ensin, kommentti sen jälkeen.
+            IVisualElementScheduledItem tauko = null;
+            tauko = Ajastin.Execute(() =>
+            {
+                if (LivianPaljastus.Kesken) return;
+                tauko.Pause();
+                if (kaupunki == k && vuoro == -1) Kommentti(v, 0);
+            }).StartingIn(KommentinTaukoMs).Every(300);
         }
 
         int vuoro = -1;
