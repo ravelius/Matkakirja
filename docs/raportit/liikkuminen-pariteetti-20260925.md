@@ -13,6 +13,8 @@ Junassa: pelikoodari/liikkuminen 03218b4 (juna/b13 cfdc127 →), natiivi-ui/saap
   koreografia (askel 860 ms, tauko 190 ms, ennakkozoomi ~850 ms), A7 vaiennus (53), D4/D5 Maailma-hyppy (58), C3/C7/C8
   ei lehteä saapuessa (59, cf195a1).
 - Korjattu todennuksen jälkeen: D17 (8e8862c), "Saavuit"-ilmoitus pois pelinäkymästä (b089ece, web ei näytä sitä).
+- Todennettu 25.9. klo 12.5x (juna/b13 d76c9669, iPad11): D17 ja löydös 61. Kortti avautuu vasta Panoroi-ajon (~0,4 s) jälkeen,
+  zoomi ei muutu ja merkki on noin w/4:ssä (proto-3d/lokit/loydos61-d17-ipad11/).
 - D12 todettu koodista SAMA-riviksi (webin saatto on lippu, paluuajo aina kaupunkiin päättyvällä maamatkalla). Pelikoodarilla
   ei ole avoimia rivejä.
 - Muille: Natiivi-UI, Maailma-hypyssä Ateenan luentokortin kuva jää Lontoon trailerin viimeiseksi kuvaksi (c535aea/j5-arkki.png).
