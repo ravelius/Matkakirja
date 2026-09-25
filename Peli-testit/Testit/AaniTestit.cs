@@ -440,6 +440,24 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null && tila.Toive(Kanava.Maisema).Url != null, "palaa samaan paikkaan");
         }
 
+        [Testi] static void LinssinTaustaaaniMaisemanPaikalla()
+        {
+            // ILinssiYmparisto.Taustaaani (Pelikoodari 26.9.): astronautin humina maiseman soittimella, ei linssiväistöä.
+            const string humina = "https://media.matkakirja.app/matkakirja/aanet/linssit/humina.mp3";
+            var tila = new AaniTila(Taulut(), new Satunnainen(1).Seuraava);
+            tila.Paikka("pariisi", "kaupunki");
+            tila.LinssiPito(true);
+            tila.LinssiTausta(humina, 0.45, 2000);
+            var m = tila.Toive(Kanava.Maisema);
+            Oleta.Sama(humina, m.Url, "humina soi maiseman paikalla");
+            tila.LinssiTausta(humina, 0.45, 2000);
+            Oleta.Sama(humina, tila.Toive(Kanava.Maisema).Url, "sama tunnus ei ala alusta");
+            tila.LinssiTausta(null, 0, 0);
+            Oleta.Sama(null, tila.Toive(Kanava.Maisema).Url, "pois linssin ollessa auki: hiljaa");
+            tila.LinssiPito(false);
+            Oleta.Tosi(tila.Toive(Kanava.Maisema).Url != null && tila.Toive(Kanava.Maisema).Url != humina, "paikan maisema palaa");
+        }
+
         [Testi] static void TaustallaUusiMaisemaOdottaaPaluuta()
         {
             var tila = new AaniTila(Taulut(), new Satunnainen(3).Seuraava);

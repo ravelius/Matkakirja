@@ -161,6 +161,18 @@ namespace Matkakirja.Linssit
         /// <summary>Raidan taso (web saadaMusiikki): 1 ajossa, AjonTaukoHimmennys tauolla ja lopussa.</summary>
         void LinssiMusiikkiHimmennys(double taso);
 
+        /// <summary>
+        /// Linssin äänitehoste (Pelikoodari 26.9.2026, Fable hyväksyi; Linssisepän toiveet
+        /// docs/raportit/linssien-aanitoiveet-20260925.md): nimi = tehosteen tunnus (esim. "keksinto", "vuosi",
+        /// "pilvisyoksy"), voima 0…1 kertoo äänenvoimakkuuden tehosteiden väylällä. Tuntematon nimi ei soi (loki).
+        /// </summary>
+        void Tehoste(string nimi, float voima = 1f);
+        /// <summary>
+        /// Linssin taustaääni silmukkana (esim. "astro-humina"); null = häivytys pois. Sama tunnus ei ala alusta.
+        /// Silmukka ristihäivytetään, ettei mp3:n sauma kuulu (Linssisepän huomio).
+        /// </summary>
+        void Taustaaani(string tunnus);
+
         /// <summary>Käyttäjä on pyytänyt vähennettyä liikettä.</summary>
         bool VahennettyLiike { get; }
 
