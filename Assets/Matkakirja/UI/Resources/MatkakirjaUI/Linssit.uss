@@ -742,15 +742,18 @@
 
 /* --- maakyltti (webin .maa-pilleri) ------------------------------------------ */
 
+/* Web .maa-pilleri: 0,8rem kirjoituskone versaalein, harvennus 0,1 em, padding 0 0,5em, kulma 6 px, tausta
+ * rgba(244,231,202,.86); korkeus matkakirjan supistetun lapun mukaan (iPhonen kaupunkipilleri 36 px). */
 .mk-maakyltti {
     position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
     min-height: 0;
-    padding: 5px 10px;
+    padding: 0 8px;
     border-width: 0;
     border-radius: 6px;
-    background-color: rgba(244, 231, 202, 0.9);
+    background-color: rgba(244, 231, 202, 0.86);
     color: rgba(70, 51, 31, 0.92);
 }
 
@@ -771,8 +774,8 @@
 }
 
 .mk-maakyltti__nimi {
-    font-size: 15px;
-    letter-spacing: 13.33px; /* web 2px */
+    font-size: 12.8px;
+    letter-spacing: 10px; /* web 0.1em */
     color: rgba(70, 51, 31, 0.92);
 }
 
