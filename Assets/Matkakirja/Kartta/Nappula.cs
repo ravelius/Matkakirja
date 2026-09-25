@@ -1058,6 +1058,10 @@ namespace Matkakirja
 
         void Pysayta()
         {
+            // Aloituslento keskeytyi jo mustan verhon aikana (Ohita tai PeliOhjaimen varareitti ennen koneen lähtöä, jolloin
+            // LennonVaihe on vielä Ei): esitys (lennon pinta, merkit, valo, pilvet, pisteiden rajaus) puretaan silti.
+            // Löydös 120 v2 kytkee esityksen päälle jo verhon alla (sama korjaus kuin BUILD 16:n pohja-buildiin).
+            bool aloitusKesken = aloitusAjossa && liike != null;
             lentoPohja = double.NaN;
             AloituslentoPerilla = false;
             aloitusAjossa = false;
@@ -1067,7 +1071,7 @@ namespace Matkakirja
             kesken = null;
             Nosta(0);
             PoistaLentokaari();
-            if (Vaihe != LennonVaihe.Ei) Paatalento();
+            if (Vaihe != LennonVaihe.Ei || aloitusKesken) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
         }
