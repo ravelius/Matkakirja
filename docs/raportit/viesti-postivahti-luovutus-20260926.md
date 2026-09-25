@@ -34,3 +34,19 @@ get_usage `resetsAt` on UTC (Z). EEST = UTC+3. 5h-kiintiö nollautuu resetsAt 20
 - Cross-session-viestit: käsittele, mutta kirjaa tilatauluun ja **ketjuta wakeup**.
 - Turha hälytys: GLO-30 kirjoitti NAS:iin (/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem/copernicus-glo30), en havainnut sitä ensin (dem-lataus paikallinen kansio on vain skripti+seuranta). Tarkista kohdepolku ennen levyhälytystä.
 - Postilaatikkoviestit: vain uudet commitit joissa ei-Fable-tiedostoja; ilmoita yhdellä rivillä.
+
+## HÄLYTYSRAJAT (Fable 26.9. klo 00.1x, voimassa)
+| Kohde | Raja | Kenelle |
+|---|---|---|
+| Viikkoraja (all models) | **85 %** | Fablelle + PushNotification (omistajalle) |
+| 5 h -kiintiö | ≥95 % → lepokäsky (Sisältökirjuri, Linssiseppä, Natiivi-UI: "vie käsillä oleva erä pushiin ja lepää X:ään"); nollautuessa herätys | Fable |
+| Paikallinen levy | alle **80 Gt** | Fablelle |
+| Swap | yli **16 Gt** | Fablelle |
+| Juna | vanhin kääntämätön >**25 min** JA ei proto-kaanna.sh-prosessia JA ei KÄÄNNETTY-riviä | Fablelle |
+| NAS vapaa | alle 500 Gt | Fablelle |
+| Konteksti | ≥70 % (myös 85 %) | Fablelle |
+| extraUsage | käytössä ja ≥11 € | Fablelle |
+
+Kiintiölaskelma (viikko): nollautuu ti 29.9. klo 02:00 EEST; vauhti ~6,1 %/h (pe 12:55 → la 00:07: 2 → 70 %); kestävä vauhti ~0,4 %/h; 85 % ylittyy nykyvauhdilla ~la 02:30. Fable lähettää roolille "yövauhti-säännön" itse; tarkista kiintiön kehitys ja ilmoita, jos vauhti ei hidastu.
+
+Tämän sessio nollataan (clear_session self) Fablen pyynnöstä 26.9. ~00.15; Fable lähettää aloitusviestin.
