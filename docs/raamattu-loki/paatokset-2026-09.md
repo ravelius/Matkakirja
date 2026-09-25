@@ -6151,3 +6151,7 @@ Julkaisija ajaa aamun junassa.
 ## POSTIVAHTI 01.07: VIIKKO 77 % (KIIHTYNYT 11 %/h, 85 % ~01.50), 5 h 92 % (LEPOKASKY 95 % ~01.15, NOLLAUTUU 03.30); JUNA KAANTAA (94836, 30212); NATIIVISEPPA 69 % → LUOVUTUS -f KASKETTY; CODEX 504 ERA 4 (33 KUVAA) → SISALTOKIRJURI, ERA 3 PR #3268 (26.9.2026 klo 01.07)
 
 5 h täyttyy ennen 03.30 — sessiot pysähtyvät siihen asti; viikko täyttyy sen jälkeen, omistaja vaihtaa tilin.
+
+## FABLEN LUOVUTUS -20260926 (dace01533) + ALOITUSVIESTI KIRJOITETTU VAKUUDEKSI ENNEN KIINTIOIDEN TAYTTYMISTA (5 h 92 %, VIIKKO 77 %); SESSIO JATKAA, EI NOLLAUSTA (26.9.2026 klo 01.09)
+
+Tilinvaihdossa uusi Fable lukee luovutuksen.
