@@ -201,6 +201,9 @@ namespace Matkakirja
                     // Web: maan kehä pois linssin ajaksi samalla portilla kuin kaupunkipisteet
                     // (js/pallolauta/lauta.js linssiPaalla; LinssiOhjain.Pelikerrokset ja maatila piilottavat kaupungit).
                     if (maaraja != null) maaraja.Linssit(!nakyy);
+                    // Maakunnat samalla portilla (web lauta.js:5098 maakunnat?.asetaMaa(linssiPaalla() ? null : …);
+                    // löydös 74 d: valitun maakunnan rajat jäivät ihmisen matkan avaruuspallon päälle).
+                    if (maakunnat != null) maakunnat.Linssit(!nakyy);
                     PaivitaLinssinimet();
                     break;
                 case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
