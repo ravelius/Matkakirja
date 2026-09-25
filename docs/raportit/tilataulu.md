@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 23:40 EEST (levyhälytys + swap alkoi)
+**Päivitetty:** 2026-09-25 23:43 EEST (levy elpynyt siivouksen jälkeen)
 
 ## 1) Sessiot
 
@@ -46,11 +46,8 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **LEVY LASKEE JYRKÄSTI (ilmoitettu Fablelle 23:40):** 135 Gt (23:27) → 110 Gt (23:38), 88 % täynnä. Syyt: wt/ 12 → 24 Gt (49 worktreetä, oli 43), /private/tmp 15 → 19 Gt, proto-3d 67 → 71 Gt, ~/Library/Developer 95 Gt. Hälytysraja 60 Gt (~20 min nykyvauhdilla). Ehdotettu: mergettyjen worktreejen poisto (tools/uusi-worktree.sh --poista) + käännöskansioiden siivous.
-- **SWAP ALKOI (ilmoitettu Fablelle 23:40):** 12,0 Gt käytössä / 13,3 Gt yhteensä (oli 0) — hälytysraja 16 Gt. Muistia vapaana 45 %; 4 Chrome-GPU-prosessia (playwright) + Unity-käännös. **Chrome-GPU-prosesseja: 4** (raja >4).
-- **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 49 kpl.
-- **Simulaattorit boottina:** 1 (iPhone 17). coreaudiod 5 %.
-- **5 h -kiintiö:** 43 % (raja 00:30 EEST, 3 h 51 min). extraUsage pois päältä. **Viikko (kaikki mallit):** 64 %. **Viikko (Fable):** 25 %.
-- **Konteksti:** Natiiviseppä 62 %, Laitetestaaja 55 %, Julkaisija 51 %, Pelikoodari 51 %, Fable 52 %, Natiivi-UI 43 %, Siirtoseppä 39 %, Karttaseppä 39 %, Linssiseppä 34 %, Sisältökirjuri 28 %. Ei ylityksiä.
-- **Juna:** yläraja laukesi 23:37 (vanhin kääntämätön 1720 s > 25 min raja), käännös käynnistymässä; viimeisin KÄÄNNETTY 21:36. Ilmoitettu Fablelle.
-- **Postilaatikko:** ei uutta (kärki 7bfab9b6e). **Avoimia PR:iä:** 14.
+- **Levy:** 140 Gt vapaana (23:41; oli 110 Gt 23:38) — siivouskäsky lähetetty kaikille rooleille 23:40 (Fablen ohje), tulos: wt/ 48 → 34 worktreetä. Fablen hälytysraja nyt 80 Gt. Vastanneet: Siirtoseppä (~4 Gt), Julkaisija (14 kansiota, ~2 Gt), Laitetestaaja (1 poistettu, 0,9 Gt), Natiiviseppä (ei poistettavaa; pyytää Fablen lupaa vapauta-levy-natiiviseppa-20260925b.sh --aja, 2,8 Gt; Build/dd-laite vasta ~03.45). Vastaamatta: Linssiseppä, Natiivi-UI, Pelikoodari, Karttaseppä, Sisältökirjuri.
+- **Swap:** 11,7 Gt käytössä / 13,3 Gt (hälytysraja 16 Gt, vakaa). Chrome-GPU on CI:n savukkeita (ei hälytystä).
+- **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 34 kpl.
+- **5 h -kiintiö:** 43 % (raja 00:30 EEST). extraUsage pois päältä.
+- **Juna:** yläraja laukesi 23:37, käännös käynnissä/käynnistymässä; viimeisin KÄÄNNETTY 21:36.
