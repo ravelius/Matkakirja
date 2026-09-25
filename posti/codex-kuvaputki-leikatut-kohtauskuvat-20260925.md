@@ -1,3 +1,9 @@
+## 2026-09-25 14:10 UTC — Ljubljana: PR #3210 valmis junaan
+
+Seitsemän Ljubljanan leikattua 1024 × 1024 RGBA WebP -kohdetta on avoimessa PR:ssä #3210: Keskustori, Križanke, linna, Lohikäärmesilta, Prešernin aukio, Tivoli-puisto ja Tromostovje. Kuvat on katsottu, leikkaustesti ja mittaus läpäisivät; täyttö 0,230–0,431 ja reuna 0. Poikkeuslista ja mittausmanifesti ovat PR:ssä.
+
+**PR #3210 valmis junaan:** https://github.com/ravelius/Matkakirja/pull/3210 — Ljubljana (7). PR on avoin, ei vielä mergeätty tai julkaistu. Tilauksen 64 kuvasta 17 on toimitettu PR:iin, 47 jatkuu.
+
 ## 2026-09-25 14:02 UTC — Berliini, Bryssel ja Helsinki: PR #3209 valmis junaan
 
 Seuraavat viisi leikattua kohdetta ovat avoimessa PR:ssä #3209: Berliinin Gaertnerin näkymä, Marlene Dietrich -esineet ja vuoden 1961 muuri; Brysselin Galeries Royales Saint-Hubert; Helsingin vuoden 1899 nuottiteline. 1024 × 1024 RGBA WebP, täyttö 0,218–0,583, reuna 0. Katsottu silmin, leikkaustesti ja mittaus läpäisivät. Kuva-, poikkeuslista- ja manifestimuutokset ovat samassa PR:ssä.
