@@ -140,6 +140,7 @@ namespace Matkakirja.Natiivi
             // Avauksessa ei omaa taustaa: koko ruudun verho (AvausTausta) kuten webin .intro-verho.
             var ylaosa = Rakenne.El("mk-aloitus__ylaosa", intro, PickingMode.Ignore);
             var juliste = Rakenne.El("mk-juliste", ylaosa, PickingMode.Ignore);
+            Kapea(juliste);
             Viiva(juliste);
             JulisteRivi(juliste, "MATKAKIRJA", "mk-juliste__nimi");
             JulisteRivi(juliste, "MAAILMAN YMPÄRI", "mk-juliste__yla");
@@ -188,6 +189,7 @@ namespace Matkakirja.Natiivi
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
             Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
+            Kapea(porttiJuliste);
             Viiva(porttiJuliste);
             JulisteRivi(porttiJuliste, "MATKAKIRJA", "mk-juliste__nimi");
             JulisteRivi(porttiJuliste, "MAAILMAN YMPÄRI", "mk-juliste__yla");
@@ -304,6 +306,17 @@ namespace Matkakirja.Natiivi
             m.AddToClassList(luokka);
             return m;
         }
+
+        /// <summary>
+        /// Web @media (max-width: 700px) .juliste-nimi/-yla/-ala: puhelimella pienempi pääotsikko ja tiiviimpi
+        /// harvennus (kirjainvälin muunnoksen jälkeen työpöydän arvot rivittivät MATKAKIRJA-sanan, b12o).
+        /// </summary>
+        static void Kapea(VisualElement juliste) =>
+            juliste.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                float w = juliste.panel?.visualTree.layout.width ?? 0f;
+                if (w > 0f) juliste.EnableInClassList("mk-juliste--kapea", w <= 700f);
+            });
 
         static void JulisteRivi(VisualElement isa, string teksti, string luokka)
         {

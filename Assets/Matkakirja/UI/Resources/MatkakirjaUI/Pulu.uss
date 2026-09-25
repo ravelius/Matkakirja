@@ -238,7 +238,7 @@
     flex-grow: 1;
     flex-shrink: 1;
     font-size: 12.5px;
-    letter-spacing: 1.2px;
+    letter-spacing: 9.6px; /* web 1.2px */
     color: var(--accent);
     white-space: normal;
 }
@@ -275,7 +275,7 @@
 .mk-matkakirja__tunnelma.mk-matkakirja__tunnelma--paikka {
     font-size: 12.8px;
     -unity-font-style: bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 3.91px; /* web 0.5px */
     margin: 0 0 4px 0;
 }
 
@@ -289,7 +289,7 @@
 
 .mk-matkakirja__lahdeotsikko {
     font-size: 10.9px;
-    letter-spacing: 1.3px;
+    letter-spacing: 11.93px; /* web 1.3px */
     color: var(--muted);
     opacity: 0.75;
     margin-right: 5px;
@@ -494,7 +494,7 @@
 
 .mk-ohita .mk-nappi__teksti {
     font-size: 13.5px;
-    letter-spacing: 1px;
+    letter-spacing: 7.41px; /* web 1px */
 }
 
 /* --- suurennos ------------------------------------------------------------ */
@@ -775,7 +775,7 @@
     margin-top: 10px;
     max-width: 92%;
     font-size: 19px;
-    letter-spacing: 1px;
+    letter-spacing: 5.26px; /* web 1px */
     color: #ffffff;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
     white-space: normal;
@@ -973,7 +973,7 @@
 .mk-poiminnat__nimio {
     margin-right: 6px;
     font-size: 11px;
-    letter-spacing: 1px;
+    letter-spacing: 9.09px; /* web 1px */
     color: rgba(70, 51, 31, 0.62);
 }
 
