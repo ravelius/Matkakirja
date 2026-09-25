@@ -216,7 +216,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             lukija.Pysayta();
-            Rakenne.Nayta(kerros, false, 200);
+            Rakenne.PiilotaHaivyttaen(kerros, 200);
             suurennos.Sulje();
             SyoteLukko.Vapauta(this);
         }
@@ -391,7 +391,9 @@ namespace Matkakirja.Natiivi
         {
             if (Auki) return;
             Auki = true;
-            Rakenne.Nayta(kerros, true, 220);
+            // Löydös 134 (omistaja, build 16): nosto näkyviin heti samassa kehyksessä, ei 220 ms:n sisäänhäivytystä
+            // (Pelikoodarin mittaus: näkyvä 267 ms, josta häivytys 220 ms). Sulku häivyttää kuten ennen.
+            Rakenne.NaytaHeti(kerros);
             SyoteLukko.Esta(this);
         }
 
