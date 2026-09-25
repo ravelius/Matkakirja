@@ -131,9 +131,60 @@ namespace Matkakirja.Natiivi
         /// <summary>Peitto 0…1 ja kierto asteina (Astronauttimatikka).</summary>
         public void Aseta(double peitto, double kiertoAsteina)
         {
-            materiaali.SetFloat("_Peitto", (float)peitto);
+            Peitto(peitto);
             transform.localRotation = Quaternion.AngleAxis((float)kiertoAsteina, akseli);
+        }
+
+        // ── Ihmisen matka II: sumu (IhmisenMatka2Sumu) ────────────────────────
+        static readonly int IdPeitto = Shader.PropertyToID("_Peitto"), IdVari = Shader.PropertyToID("_Vari"),
+            IdHamara = Shader.PropertyToID("_Hamara"), IdKeskus = Shader.PropertyToID("_Keskus"),
+            IdKeilaA = Shader.PropertyToID("_KeilaA"), IdKeilaAsisa = Shader.PropertyToID("_KeilaAsisa"),
+            IdKeilaB = Shader.PropertyToID("_KeilaB"), IdKeilaBsisa = Shader.PropertyToID("_KeilaBsisa");
+
+        /// <summary>Maapallon akseli (Aseta-kierron akseli), maailmassa.</summary>
+        public Vector3 Akseli => akseli;
+
+        /// <summary>Peitto 0…1; kuori piiloon, kun peitto on nolla (kuvaa odottaessa näkyvissä mutta läpinäkyvä).</summary>
+        public void Peitto(double peitto)
+        {
+            materiaali.SetFloat(IdPeitto, (float)peitto);
             gameObject.SetActive(peitto > 0.001 || kuva == null);
+        }
+
+        /// <summary>Kuoren kierto sellaisenaan (sumun ajelehtiminen ja aikahypyn pyörre).</summary>
+        public void Kierto(Quaternion q) => transform.localRotation = q;
+
+        /// <summary>Sävy: kertoo pilvikuvan värin ja alfan (valkoinen = ennallaan).</summary>
+        public void Savy(Color vari) => materiaali.SetColor(IdVari, vari);
+
+        /// <summary>Tasainen usva 0–1: alfan pohja myös pilvettömillä alueilla (0 = pelkät pilvet, ennallaan).</summary>
+        public void Tasainen(float pohja) => materiaali.SetFloat(IdTasainen, Mathf.Clamp01(pohja));
+        static readonly int IdTasainen = Shader.PropertyToID("_Tasainen");
+
+        /// <summary>
+        /// Valokeila pilvissä kuten pallossa: keilojen ulkopuolella kirkkaus 1 − 0,95 · hämäryys. Keila maan keskipisteestä
+        /// katsottuna: suunta georeferenssin avaruudessa (<see cref="Suunta"/>), cos ulko- ja sisäreuna, voimakkuus
+        /// (0 = ei keilaa). Varjostin vertaa maailman suuntiin, joten suunnat käännetään georeferenssin kierrolla.
+        /// </summary>
+        public void Valaistus(float hamaryys, Vector3 suuntaA, float ulkoA, float sisaA, float voimaA,
+                              Vector3 suuntaB, float ulkoB, float sisaB, float voimaB)
+        {
+            var g = transform.parent;
+            Vector3 A = g != null ? g.TransformDirection(suuntaA) : suuntaA, B = g != null ? g.TransformDirection(suuntaB) : suuntaB;
+            materiaali.SetFloat(IdHamara, Mathf.Clamp01(hamaryys));
+            materiaali.SetVector(IdKeskus, transform.position);
+            materiaali.SetVector(IdKeilaA, new Vector4(A.x, A.y, A.z, ulkoA));
+            materiaali.SetVector(IdKeilaAsisa, new Vector4(sisaA, voimaA, 0f, 0f));
+            materiaali.SetVector(IdKeilaB, new Vector4(B.x, B.y, B.z, ulkoB));
+            materiaali.SetVector(IdKeilaBsisa, new Vector4(sisaB, voimaB, 0f, 0f));
+        }
+
+        /// <summary>Suunta maan keskipisteestä paikkaan (lat, lon) georeferenssin avaruudessa (keilat, pyörteen akseli).</summary>
+        public static Vector3 Suunta(CesiumGeoreference g, double lat, double lon)
+        {
+            double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0));
+            return ((Vector3)(float3)(g.TransformEarthCenteredEarthFixedPositionToUnity(ecef) - keskus)).normalized;
         }
 
         void OnDestroy()

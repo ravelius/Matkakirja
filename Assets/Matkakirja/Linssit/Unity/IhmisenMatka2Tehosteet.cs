@@ -31,7 +31,8 @@
 //   LOPPUKUVA: loppujaksossa keilat sammuvat, koko pallo syttyy ja kaikki vanat hehkuvat omalla värillään
 //   (VanaKerros.loppuhehku, _Hehku.w); tutkimusvaiheeseen siirryttäessä hehku laskee.
 //
-// ERÄ 3 (sumu) rakentuu samoihin koukkuihin, kun Natiivisepän Sumu-rajapinta on valmis.
+// ERÄ 3 (KERROKSELLINEN SUMU; Natiiviseppä 25.9.: omana kerroksena Linssit-puolelle): IhmisenMatka2Sumu — avauksen
+//   kolme kuorta, joiden läpi kamera syöksyy, ja jakson seudun matala sumu valokeilan valossa (Pilvikuoret).
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -82,6 +83,9 @@ namespace Matkakirja.Natiivi
         KarttaKerrokset.Keila? toinen;
         (double Lat, double Lon)? edellinenKohde;
         IhmisenMatka2Maisema maisema;
+        IhmisenMatka2Sumu sumu;
+        /// <summary>Kerroksellinen sumu (komento "sumu tila"); null, jos georeferenssiä ei ole.</summary>
+        public IhmisenMatka2Sumu Sumu => sumu;
         string kuvaKohde;
         float kuvanPeitto;
         bool siirtoPaalla;
@@ -96,6 +100,7 @@ namespace Matkakirja.Natiivi
             paikat = paikkaIndeksi;
             maisema = IhmisenMatka2Maisema.Luo(transform);
             maisema.KertojaSoi = () => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Aani?.KohtaMs != null;
+            sumu = IhmisenMatka2Sumu.Luo(transform, kierto);
             LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet kytketty");
         }
 
@@ -134,6 +139,7 @@ namespace Matkakirja.Natiivi
             jakso = j;
             if (j == null) return;
             maisema?.Aseta(j.Maisema);
+            sumu?.Jakso(j);
             loppuTavoite = j.Vaihe == "loppu" ? 1f : 0f;
             if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
             if (j.Vaihe == "pimea") return;
@@ -242,6 +248,7 @@ namespace Matkakirja.Natiivi
         public void Loppu()
         {
             maisema?.Lopeta();
+            sumu?.Loppu();
             loppuTavoite = 0f;   // tutkimusvaihe: vanat takaisin tavallisiksi
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;

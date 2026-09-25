@@ -15,7 +15,8 @@
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
-// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila"; kaikille
+// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila" ja II:lle "sumu pois | paalle | tila"
+// (kehysaikojen vertailu sumun kanssa ja ilman); kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
@@ -1134,6 +1135,12 @@ namespace Matkakirja.Natiivi
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
                     Esitys(osat[1]);
+                else if (osat[0] == "sumu" && osat.Length > 1)
+                {
+                    // Ihmisen matka II:n sumu pois/päälle (kehysaikojen vertailu samasta jaksosta, Natiiviseppä 25.9.).
+                    if (osat[1] == "pois" || osat[1] == "paalle") IhmisenMatka2Sumu.Pois = osat[1] == "pois";
+                    Kirjaa(IhmisenMatkaKerros.Instanssi?.Tehosteet?.Sumu?.Kuvaus() ?? $"sumu: II ei auki (pois {IhmisenMatka2Sumu.Pois})");
+                }
                 else if (osat[0] == "ihminen" && osat.Length > 1 && osat[1] == "tutkimus")
                 {
                     // Testikomento: ihmisen matka auki ja suoraan tutkimusvaiheeseen (Laitetestaajan
