@@ -10321,4 +10321,405 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Köneürgençin 60-metrinen Kutlug Timurin minareetti rakennettiin 1011, ja kaupungin rauniot ovat Unescon maailmanperintöä.',
     },
   },
+  /*
+   * KHM (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.KHM:n tunnuksia TÄSMÄLLEEN (24 aluetta; Tbong Khmum
+   * sisältyy Kâmpóng Chamiin). Vain `lyhyt`. Maalla ei ole
+   * maastokohteet-/fokuskohteet-tiedostoa. Lähteet (en-Wikipedia ja haku,
+   * tarkistettu 25.9.2026):
+   *   Bântéay Méanchey — Banteay Chhmar (Jayavarman VII, Lokeshvara)
+   *   Batdâmbâng       — Phare Ponleu Selpak (1994)
+   *   Kâmpóng Cham     — Kizuna Bridge (2001, ensimmäinen Mekong-silta)
+   *   Kâmpóng Chhnang  — Kampong Chhnang province (nimen merkitys)
+   *   Kâmpóng Spœ      — Oudong (pääkaupunki 1618–1866)
+   *   Kâmpóng Thum     — Sambor Prei Kuk (Unesco 2017)
+   *   Kâmpôt           — Kampot pepper (GI 2010)
+   *   Kândal           — Koh Dach (silkkisaari, Mukh Kampul)
+   *   Kaôh Kong        — Koh Kong (island) (103 km²)
+   *   Kep              — Kep province (pienin, Kep-sur-Mer 1908)
+   *   Krâchéh          — Kampin delfiinisuvanto (Mongabay 2026)
+   *   Môndól Kiri      — Mondulkiri province (harvimmin asuttu)
+   *   Otdar Mean Chey  — Oddar Meanchey province (1999, nimi)
+   *   Krong Pailin     — Pailin province (jalokivet, longan)
+   *   Phnom Penh       — Silver Pagoda (yli 5 000 hopealaattaa)
+   *   Pouthisat        — Pursat province (Wat Bakan)
+   *   Preah Vihéar     — Koh Ker (36 m, Unesco 2023)
+   *   Prey Vêng        — Prey Veng province (laajin riisiala)
+   *   Rôtânôkiri       — Lake Yeak Laom (noin 800 m)
+   *   Krong Preah Sihanouk — Sihanoukville Autonomous Port
+   *   Stœng Trêng      — Stung Treng province
+   *   Svay Rieng       — Bavet (Ho Chi Minh City 70 km)
+   *   Takêv            — Angkor Borei (Funan)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  KHM: {
+    'Bântéay Méanchey': {
+      lyhyt: 'Banteay Chhmarin syrjäinen temppeli on Jayavarman VII:n rakennuttama, ja sen seinissä on harvinaisia monikätisiä Lokeshvara-reliefejä.',
+    },
+    'Batdâmbâng': {
+      lyhyt: 'Battambangissa toimii vuonna 1994 perustettu Phare Ponleu Selpak -taidekoulu, jonka nuoret sirkustaiteilijat esiintyvät ulkomaillakin.',
+    },
+    'Kâmpóng Cham': {
+      lyhyt: 'Kampong Chamin Kizuna-silta avattiin 2001, ja se oli ensimmäinen Kambodžaan Mekongin yli rakennettu silta.',
+    },
+    'Kâmpóng Chhnang': {
+      lyhyt: 'Kampong Chhnang tarkoittaa khmeriksi ruukkusatamaa, ja maakunnan kylät tunnetaan yhä savenvalannastaan.',
+    },
+    'Kâmpóng Spœ': {
+      lyhyt: 'Kampong Speun Oudong oli Kambodžan kuninkaallinen pääkaupunki vuodesta 1618 vuoteen 1866, jolloin hovi muutti Phnom Penhiin.',
+    },
+    'Kâmpóng Thum': {
+      lyhyt: 'Sambor Prei Kukin tiilitemppelit olivat 600-luvulla Chenlan pääkaupunki Isanapura, ja ne ovat nyt Unescon maailmanperintöä.',
+    },
+    'Kâmpôt': {
+      lyhyt: 'Kampotin pippuri sai vuonna 2010 ensimmäisenä kambodžalaisena tuotteena maantieteellisen alkuperäsuojan.',
+    },
+    'Kândal': {
+      lyhyt: 'Koh Dachin saarella Mekongissa, noin kymmenen kilometrin päässä Phnom Penhistä, kudotaan silkkiä paalutalojen alle pystytetyillä kangaspuilla.',
+    },
+    'Kaôh Kong': {
+      lyhyt: 'Koh Kong Krao on Kambodžan suurin saari, noin sata neliökilometriä enimmäkseen koskematonta sademetsää.',
+    },
+    Kep: {
+      lyhyt: 'Kep on Kambodžan pienin maakunta, ja ranskalaiset perustivat sen rantalomakohteeksi nimellä Kep-sur-Mer vuonna 1908.',
+    },
+    'Krâchéh': {
+      lyhyt: 'Kampin syvässä Mekongin suvannossa Kratien pohjoispuolella elää Mekongin viimeisiä irrawaddyndelfiinejä.',
+    },
+    'Môndól Kiri': {
+      lyhyt: 'Mondulkiri on Kambodžan suurin mutta harvimmin asuttu maakunta, ja suurin osa asukkaista kuuluu bunongeihin tai muihin alkuperäiskansoihin.',
+    },
+    'Otdar Mean Chey': {
+      lyhyt: 'Oddar Meanchey tarkoittaa voittoisaa pohjoista, ja maakunta perustettiin nykyisessä muodossaan vasta vuonna 1999.',
+    },
+    'Krong Pailin': {
+      lyhyt: 'Pailin tunnetaan safiireistaan ja rubiineistaan, mutta nyt sen rinteillä kasvaa yhä enemmän longan-hedelmiä vientiin.',
+    },
+    'Phnom Penh': {
+      lyhyt: 'Kuninkaanpalatsin Hopeapagodan lattia on päällystetty yli 5 000 hopealaatalla, joista kävijä näkee vain pienen osan.',
+    },
+    Pouthisat: {
+      lyhyt: 'Pursatin Wat Bakan on Kambodžan vanhimpia yhä toiminnassa olevia pagodeja.',
+    },
+    'Preah Vihéar': {
+      lyhyt: 'Koh Kerin seitsenportainen pyramiditemppeli kohoaa 36 metriin, ja muinainen pääkaupunki on Unescon maailmanperintöä vuodesta 2023.',
+    },
+    'Prey Vêng': {
+      lyhyt: 'Prey Vengissä on Kambodžan maakunnista laajin riisinviljelyyn käytetty peltoala.',
+    },
+    'Rôtânôkiri': {
+      lyhyt: 'Banlungin lähellä oleva Yeak Laom on lähes pyöreä, noin 800 metriä leveä kraatterijärvi keskellä metsää.',
+    },
+    'Siemréab': {
+      lyhyt: 'Siem Reapin lähellä kohoava Angkor Wat on kambodžalaisille niin tärkeä, että sen siluetti on maan lipussa.',
+    },
+    'Krong Preah Sihanouk': {
+      lyhyt: 'Sihanoukvillen satama on Kambodžan ainoa kansainvälinen syvänveden merisatama.',
+    },
+    'Stœng Trêng': {
+      lyhyt: 'Stung Trengissä virtaavat Mekong, Sekong ja Sesan, ja Mekongin uomaa täplittävät sadat pienet saaret.',
+    },
+    'Svay Rieng': {
+      lyhyt: 'Svay Riengin Bavet on vilkas raja-asema Vietnamiin, ja sieltä on Ho Chi Minh Cityyn vain noin 70 kilometriä.',
+    },
+    'Takêv': {
+      lyhyt: 'Takeon Angkor Boreissa oli Funanin kuningaskunnan asutus ja ehkä sen pääkaupunki vuosisatoja ennen Angkoria.',
+    },
+  },
+  /*
+   * LAO (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LAO:n tunnuksia TÄSMÄLLEEN (17 aluetta, vanha jako
+   * ilman Xaisombounia; "Vientiane [prefecture]" on pääkaupunkiprefektuuri).
+   * Vain `lyhyt`. Maalla ei ole maastokohteet-/fokuskohteet-tiedostoa.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Attapu          — Attapeu province (Xaysetha-stupa 1579)
+   *   Bokeo           — Bokeo province (nimi = jalokivikaivos)
+   *   Bolikhamxai     — Bolikhamsai province (Nam Kading)
+   *   Houaphan        — Viengxay Caves (jopa 23 000 asukasta)
+   *   Khammouan       — Tham Kong Lo (noin 7 km)
+   *   Louang Namtha   — Nam Ha NPA (ASEAN Heritage Park, Equator 2006)
+   *   Louangphrabang  — Tak bat (aamuinen almukierros)
+   *   Oudômxai        — Oudomxay province (khmut enemmistö)
+   *   Phôngsali       — Phongsali tea (Slow Food), Ban Komaen
+   *   Saravan         — Tad Lo (Xe Set)
+   *   Savannakhét     — Joshua Hoffet (löydöt 1936)
+   *   Vientiane [prefecture] — Emblem of Laos (Pha That Luang)
+   *   Xaignabouri     — Elephant Conservation Center (Nam Tien)
+   *   Xékong          — Sekong province (pienin väkiluku, 14 kansaa)
+   *   Xiangkhoang     — Plain of Jars (Unesco 2019)
+   *   Muut            — yleistietoa, tarkistettu vastaavista
+   *                     en-Wikipedia-artikkeleista.
+   */
+  LAO: {
+    Attapu: {
+      lyhyt: 'Attapeun kaupungin Xaysethan stupa on rakennettu jo vuonna 1579.',
+    },
+    Bokeo: {
+      lyhyt: 'Bokeo tarkoittaa laoksi jalokivikaivosta, ja maakunta on nimetty Houayxain seudun safiirikaivosten mukaan.',
+    },
+    Bolikhamxai: {
+      lyhyt: 'Nam Kadingin suojelualueen metsissä elävät valkoposkigibbonit ja kirjavat douc-apinat.',
+    },
+    Champasak: {
+      lyhyt: 'Vat Phoun temppelirauniot vuoren juurella ovat khmerien ajalta, ja ne ovat olleet Unescon maailmanperintöä vuodesta 2001.',
+    },
+    Houaphan: {
+      lyhyt: 'Vieng Xain kalkkikiviluolissa asui sodan vuosina jopa 23 000 ihmistä, ja luolissa toimi sairaala, koulu ja jopa teatteri.',
+    },
+    Khammouan: {
+      lyhyt: 'Nam Hinboun -joki virtaa Kong Lon luolan läpi noin seitsemän kilometriä, ja luolan voi kulkea läpi pitkähäntäveneellä.',
+    },
+    'Louang Namtha': {
+      lyhyt: 'Nam Han suojelualue on ASEAN-perintöpuisto, ja sen ekomatkailuhanke sai Equator-palkinnon vuonna 2006.',
+    },
+    Louangphrabang: {
+      lyhyt: 'Luang Prabangissa munkit kulkevat joka aamu ennen auringonnousua kaduilla, ja asukkaat antavat heille almuksi tahmeaa riisiä.',
+    },
+    'Oudômxai': {
+      lyhyt: 'Oudomxain asukkaista suurin osa on khmuja, yksi maakunnan noin neljästätoista kansanryhmästä.',
+    },
+    'Phôngsali': {
+      lyhyt: 'Phongsalyn Komaenin kylässä kasvaa satoja vuosia vanhoja, jopa kuusimetrisiä teepuita.',
+    },
+    Saravan: {
+      lyhyt: 'Salavanin Tad Lo on Xe Set -joen leveä, porrastettu vesiputous Bolavenin ylätasangon laidalla.',
+    },
+    'Savannakhét': {
+      lyhyt: 'Savannakhetin dinosaurusmuseossa on luita, joita ranskalainen geologi Josué Hoffet löysi maakunnan itäosista vuonna 1936.',
+    },
+    Vientiane: {
+      lyhyt: 'Vang Viengin jyrkät kalkkikivivuoret kohoavat Nam Song -joen rannalta ja houkuttelevat kiipeilijöitä ja melojia.',
+    },
+    'Vientiane [prefecture]': {
+      lyhyt: 'Pha That Luangin kullattu stupa on Laosin kansallinen symboli, ja se näkyy valtion vaakunassa ja seteleissä.',
+    },
+    Xaignabouri: {
+      lyhyt: 'Sainyabulin Nam Tien -järven rannalla toimii norsujen suojelukeskus, jonne on tuotu norsuja metsätöistä.',
+    },
+    'Xékong': {
+      lyhyt: 'Sekong on Laosin väkiluvultaan pienin maakunta, mutta siellä asuu 14 kansanryhmää, ja laoja on vain muutama prosentti.',
+    },
+    Xiangkhoang: {
+      lyhyt: 'Purkkien tasangolla on yli kaksituhatta rautakautista kivipurkkia, ja alue on Unescon maailmanperintöä vuodesta 2019.',
+    },
+  },
+  /*
+   * MMR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MMR:n tunnuksia TÄSMÄLLEEN (14 aluetta). Vain
+   * `lyhyt`, neutraali sävy (maisema, kulttuuri, historia). Vältetty
+   * maastokohteet-mmr.js:n aiheet (Bagan, Mrauk U, Beikthano, Kyaiktiyo,
+   * Pindaya, Pyin Oo Lwin, Mawlamyine, Shwebo, Hkakabo Razi, Inle,
+   * Chindwin). Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Ayeyarwady  — Pathein hti
+   *   Bago        — Shwethalyaung Buddha (55 m, 1881)
+   *   Chin        — Nat Ma Taung, Natmataung National Park (2010)
+   *   Kachin      — Manaw (festival), Myitkyina
+   *   Kayah       — Taung Kwe Pagoda
+   *   Kayin       — Mount Zwegabin (722 m)
+   *   Magway      — Minbu (mutatulivuoret)
+   *   Mandalay    — U Bein Bridge (1 209 m)
+   *   Mon         — Win Sein Tawya (180 m)
+   *   Rakhine     — Ngapali Beach
+   *   Sagaing     — Mingun Bell (90 t, 2000)
+   *   Shan        — Taunggyi Hot Air Balloon Festival
+   *   Tanintharyi — Mergui Archipelago (noin 800 saarta, mokenit)
+   *   Yangon      — Shwedagon Pagoda (76 karaatin timantti)
+   */
+  MMR: {
+    Ayeyarwady: {
+      lyhyt: 'Patheinissa tehdään käsin värikkäitä bambusta ja paperista tai puuvillasta valmistettuja päivänvarjoja, jotka tunnetaan koko Myanmarissa.',
+    },
+    Bago: {
+      lyhyt: 'Bagon Shwethalyaung on 55 metriä pitkä makaava Buddha, jonka brittiläiset rautatietyöläiset löysivät uudelleen vuonna 1881.',
+    },
+    Chin: {
+      lyhyt: 'Nat Ma Taung eli Victoria-vuori on Chinin osavaltion korkein huippu, ja sitä ympäröivä kansallispuisto perustettiin 2010.',
+    },
+    Kachin: {
+      lyhyt: 'Myitkyinan Manau-juhlassa tuhannet kachinit tanssivat tammikuussa korkeiden, kuvioin maalattujen manau-paalujen ympärillä.',
+    },
+    Kayah: {
+      lyhyt: 'Loikawin Taung Kwe -pagodi on rakennettu rosoisten kalkkikivihuippujen päälle, ja nimi tarkoittaa haljennutta vuorta.',
+    },
+    Kayin: {
+      lyhyt: 'Hpa-Anin lähellä kohoava Zwegabin-vuori on 722 metriä korkea, ja sen juurella istuu riveissä yli tuhat Buddha-patsasta.',
+    },
+    Magway: {
+      lyhyt: 'Minbun mutatulivuoret ovat harmaita savikumpuja, joista pulppuava muta on kylmää, koska sen nostaa pintaan maakaasu.',
+    },
+    Mandalay: {
+      lyhyt: 'Amarapuran U Bein -silta on noin 1,2 kilometriä pitkä, ja sitä pidetään maailman vanhimpana ja pisimpänä tiikkisiltana.',
+    },
+    Mon: {
+      lyhyt: 'Mudonin lähellä makaava Win Sein Taw Ya -Buddha on 180 metriä pitkä, ja sen sisällä on huoneita täynnä Buddhan opetuksia esittäviä kuvaelmia.',
+    },
+    Rakhine: {
+      lyhyt: 'Ngapalin hiekkaranta Bengalinlahden rannalla Thandwen lähellä on Myanmarin tunnetuimpia rantakohteita.',
+    },
+    Sagaing: {
+      lyhyt: 'Mingunin kello painaa noin 90 tonnia, ja se oli maailman suurin soiva kello, kunnes Kiinassa valettiin suurempi vuonna 2000.',
+    },
+    Shan: {
+      lyhyt: 'Taunggyissa lasketaan joka marraskuu kuumailmapalloja Tazaungdaing-juhlan kunniaksi, ja yöpalloja koristellaan kynttilöin.',
+    },
+    Tanintharyi: {
+      lyhyt: 'Myeikin saaristossa on noin 800 saarta, ja sen vesillä elävät mokenit, jotka viettävät kuivan kauden veneissään.',
+    },
+    Yangon: {
+      lyhyt: 'Shwedagonin pagodi on päällystetty aidoilla kultalevyillä, ja sen kärjessä on 76 karaatin timantti.',
+    },
+  },
+  /*
+   * BTN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BTN:n tunnuksia TÄSMÄLLEEN (20 aluetta, vanhat
+   * kirjoitusasut: Geylegphug = Sarpang, Samchi = Samtse, Tongsa =
+   * Trongsa jne.). Vain `lyhyt`. Maalla ei ole maastokohteet-/
+   * fokuskohteet-tiedostoa. Lähteet (en-Wikipedia ja haku, tarkistettu
+   * 25.9.2026):
+   *   Bumthang         — Jampa Lhakhang, Jambay Lhakhang Drup
+   *   Chhukha          — Chhukha Hydropower Plant (DGPC, 1986)
+   *   Daga             — Dagana District (Daga Dzong 1651)
+   *   Gasa             — Layap, Laya (noin 3 820 m)
+   *   Geylegphug       — Gelephu Mindfulness City (17.12.2023)
+   *   Ha               — Lhakhang Karpo ja Nagpo (kyyhkytaru)
+   *   Lhuntshi         — Khoma, kishuthara (Lhuentse Dzongkhag)
+   *   Mongar           — Mongar Dzong (ilman nauloja ja piirustuksia)
+   *   Pemagatsel       — Pemagatshel District (Yongla Goenpa)
+   *   Samdrup Jongkhar — Samdrup Jongkhar District
+   *   Samchi           — Samtse District (Samtse College of Education)
+   *   Thimphu          — ei liikennevaloja (BhutanWiki, Wego)
+   *   Tashigang        — Sakteng Wildlife Sanctuary (migoi)
+   *   Tashi Yangtse    — Chorten Kora (noin 1740)
+   *   Tongsa           — Penlop of Trongsa
+   *   Chirang          — Tsirang District
+   *   Wangdi Phodrang  — Phobjikha Valley (mustakaulakurjet)
+   *   Shemgang         — Gee's golden langur
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  BTN: {
+    Bumthang: {
+      lyhyt: 'Jambay Lhakhangin syysjuhlassa kävijät hyppäävät liekkien yli puhdistautuakseen, ja temppeli on Bhutanin vanhimpia.',
+    },
+    Chhukha: {
+      lyhyt: 'Chukhan vesivoimala valmistui 1986 Bhutanin ensimmäiseksi suureksi voimalaksi, ja suurin osa sen sähköstä myydään Intiaan.',
+    },
+    Daga: {
+      lyhyt: 'Daga Dzongin perusti vuonna 1651 Bhutanin yhdistäjä Zhabdrung Ngawang Namgyal, ja se on yhä piirin hallinnon keskus.',
+    },
+    Gasa: {
+      lyhyt: 'Gasan Layan kylä on noin 3 800 metrin korkeudessa, ja sen naiset käyttävät kartiomaisia bambuhattuja, joiden huipussa on piikki.',
+    },
+    Geylegphug: {
+      lyhyt: 'Gelephuun rakennetaan Mindfulness Cityä, uutta talousaluetta, jonka Bhutanin kuningas julisti vuonna 2023.',
+    },
+    Ha: {
+      lyhyt: 'Haan laaksossa on valkoinen ja musta temppeli, joiden paikat tarun mukaan valitsivat valkoinen ja musta kyyhky.',
+    },
+    Lhuntshi: {
+      lyhyt: 'Lhuentsen Khoman kylässä kudotaan kishuthara-silkkiä, ja monimutkaisimman kuvion tekeminen voi viedä vuoden.',
+    },
+    Mongar: {
+      lyhyt: 'Mongarin dzong rakennettiin 1900-luvulla vanhaan tapaan, ilman ainuttakaan naulaa ja ilman piirustuksia.',
+    },
+    Paro: {
+      lyhyt: 'Taktsang eli Tiikerinpesä on luostari, joka riippuu jyrkänteellä satoja metrejä Paron laakson yläpuolella.',
+    },
+    Pemagatsel: {
+      lyhyt: 'Pemagatshelin Yongla-luostari perustettiin 1700-luvulla vuorenhuipulle, jonka muodon sanotaan muistuttavan rituaalitikaria.',
+    },
+    Punakha: {
+      lyhyt: 'Punakhan dzong seisoo Pho Chhun ja Mo Chhun yhtymäkohdassa, ja jokien nimet tarkoittavat isä- ja äitijokea.',
+    },
+    'Samdrup Jongkhar': {
+      lyhyt: 'Samdrup Jongkharin kaupunki on Bhutanin kaakkoiskulman portti, josta tie jatkuu rajan yli Intian Assamiin.',
+    },
+    Samchi: {
+      lyhyt: 'Samtsessa toimii Bhutanin kuninkaalliseen yliopistoon kuuluva opettajakorkeakoulu, jossa koulutetaan maan opettajia.',
+    },
+    Thimphu: {
+      lyhyt: 'Thimphu on maailman ainoa pääkaupunki ilman liikennevaloja: risteyksissä liikennettä ohjaa valkohanskainen poliisi.',
+    },
+    Tashigang: {
+      lyhyt: 'Trashigangin Sakteng on maailman ainoa suojelualue, joka perustettiin osin suojelemaan lumimiehen eli migoin elinympäristöä.',
+    },
+    'Tashi Yangtse': {
+      lyhyt: 'Chorten Koran stupa rakennettiin noin 1740 Nepalin Boudhanathin mallin mukaan, jottei pyhiinvaeltajien tarvitsisi matkata Nepaliin.',
+    },
+    Tongsa: {
+      lyhyt: 'Bhutanin kruununperillinen saa perinteisesti Trongsan penlopin eli maaherran arvonimen ennen kuninkaaksi nousuaan.',
+    },
+    Chirang: {
+      lyhyt: 'Tsirang tunnetaan loivista rinteistään ja leudosta ilmastostaan, ja sen halki virtaa Punatsang Chhu, yksi Bhutanin pisimmistä joista.',
+    },
+    'Wangdi Phodrang': {
+      lyhyt: 'Phobjikhan laaksoon saapuu lokakuun lopulla talvehtimaan satoja mustakaulakurkia Tiibetin ylängöltä.',
+    },
+    Shemgang: {
+      lyhyt: 'Zhemgangin metsissä elää kultalanguri, apina jota tavataan vain Bhutanissa ja Intian Assamissa.',
+    },
+  },
+  /*
+   * TLS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.TLS:n tunnuksia TÄSMÄLLEEN (13 aluetta; Ambeno =
+   * Oecusse). Vain `lyhyt`. Vältetty maastokohteet-tls.js:n aiheet
+   * (Cristo Rei, Maubara, Balibo, Lailin luola, Baucaun kaupunki, Baguia,
+   * Viqueque-kaupunki, Nino Konis Santana, Matebian, Ataúro,
+   * Timorinmeri). Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Aileu      — Aileu Municipality (nimen merkitys)
+   *   Ainaro     — Tatamailau (Neitsyt Marian patsas 1997)
+   *   Baucau     — Venilale (Fatuk Kuak Hitu, seitsemän luolaa)
+   *   Bobonaro   — Marobo hot springs
+   *   Cova Lima  — Suai Airport (20.6.2017)
+   *   Dili       — Tais, Unesco USL 2021
+   *   Ermera     — Ermera Municipality (kahvi)
+   *   Lautém     — Lautém Municipality (fataluku)
+   *   Liquica    — Liquiçá Municipality (tokodede)
+   *   Manatuto   — Manatuto Municipality (kaksi rannikkoa)
+   *   Manufahi   — East Timorese rebellion of 1911–1912
+   *   Ambeno     — Oecusse (Lifau)
+   *   Viqueque   — Viqueque Municipality (suurin pinta-ala)
+   */
+  TLS: {
+    Aileu: {
+      lyhyt: 'Aileun nimi tarkoittaa mambain kielellä taipunutta puuta, ja tarun mukaan se viittaa oudon muotoiseen viikunapuuhun.',
+    },
+    Ainaro: {
+      lyhyt: 'Ramelau eli Tatamailau on Timorin saaren korkein vuori, ja sen huipulla seisoo vuonna 1997 pystytetty Neitsyt Marian patsas.',
+    },
+    Baucau: {
+      lyhyt: 'Venilalen rinteissä on seitsemän tunnelia, jotka Japanin armeija kaivoi toisen maailmansodan aikana.',
+    },
+    Bobonaro: {
+      lyhyt: 'Marobon kuumat lähteet täyttävät vuoristolaakson kylpyaltaita, ja niiden vieressä on vanhan kylpylän kiviraunioita.',
+    },
+    'Cova Lima': {
+      lyhyt: 'Suain lentoasema vihittiin käyttöön vuonna 2017, ja se on osa etelärannikon laajaa Tasi Mane -rakennushanketta.',
+    },
+    Dili: {
+      lyhyt: 'Dilissä myydään käsin kudottuja tais-kankaita, jotka Unesco merkitsi vuonna 2021 kiireellisesti suojeltavaksi perinnöksi.',
+    },
+    Ermera: {
+      lyhyt: 'Ermera on Itä-Timorin tärkein kahvinviljelyalue, ja korkeimmat viljelmät ovat lähes kahden kilometrin korkeudessa.',
+    },
+    'Lautém': {
+      lyhyt: 'Lautémissa puhutaan fatalukua, papualaista kieltä, jota puhuu noin 30 000 ihmistä saaren itäpäässä.',
+    },
+    Liquica: {
+      lyhyt: 'Liquiçássa lähes kaikki asukkaat puhuvat tetumin ja portugalin lisäksi omaa tokodede-kieltään.',
+    },
+    Manatuto: {
+      lyhyt: 'Manatuto on toinen Itä-Timorin kahdesta kunnasta, jotka ulottuvat saaren poikki pohjoisrannikolta etelärannikolle.',
+    },
+    Manufahi: {
+      lyhyt: 'Manufahin liurai Dom Boaventura johti 1911–1912 kapinaa, jota pidetään viimeisenä suurena kansannousuna portugalilaisia vastaan.',
+    },
+    Ambeno: {
+      lyhyt: 'Oecusse on Indonesian Länsi-Timorin ympäröimä erillisalue, ja sen Lifau oli portugalilaisten ensimmäisiä tukikohtia Timorissa.',
+    },
+    Viqueque: {
+      lyhyt: 'Viqueque on pinta-alaltaan Itä-Timorin suurin kunta, ja sen etelärannikon tasangoilla viljellään riisiä.',
+    },
+  },
 };
