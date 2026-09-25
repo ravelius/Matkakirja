@@ -203,8 +203,10 @@ namespace Matkakirja.Natiivi
         void Ankkuroi(Label kupla)
         {
             tila ??= Rakenne.El("mk-minipuluKortti__tila", null, PickingMode.Ignore);
+            // Virta kasvaa tilan myötä maksimikorkeuteensa (enintään 500 pt), joten odotuksen ajaksi tila on vähintään
+            // sen verran; VapautaTila kutistaa sen vastauksen tultua.
             float nakyva = virta.contentViewport.layout.height;
-            tila.style.height = float.IsNaN(nakyva) ? 240f : nakyva;
+            tila.style.height = Mathf.Max(float.IsNaN(nakyva) ? 0f : nakyva, 500f);
             virta.Add(tila);
             Kelaa(kupla);
         }
