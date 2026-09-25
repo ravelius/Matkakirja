@@ -1468,7 +1468,10 @@ namespace Matkakirja.Natiivi
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
             if (l != null && LykkaaLuento(kaupunki, l)) return;
-            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
+            // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
+            // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä
+            // matkakirjalta). Paikkarivi on matkakirjan merkinnässä.
+            if (l != null) SoitaLuento(l, 0.6f);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
@@ -1492,7 +1495,7 @@ namespace Matkakirja.Natiivi
             bool saapuminen = saapumisLehti != null && saapumisLehti == kaupunki;
             saapumisLehti = null;
             var l = maalehti || !saapuminen ? null : luennat.OtaLuento(kaupunki);
-            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
+            if (l != null) SoitaLuento(l, 0.6f); // löydökset 86/89: ei paikkarivin ilmoitusta (ks. SaavuLehteen)
         }
 
         /// <summary>Avaa lehden natiivin rahalla ja kauppojen kirjanpidolla (lehtikuoren #tila).</summary>
