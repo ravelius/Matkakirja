@@ -676,6 +676,8 @@ namespace Matkakirja
         public static readonly float[] KaupunginKeha = { 7f, 13f };
         /// <summary>Pelimerkin varauksen lisävara pisteinä (web js/pallolauta/nimet.js PELIMERKIN_VARA_PX).</summary>
         public const float PelimerkinVara = 4f;
+        /// <summary>Ladonnan liikevara ruudun pidemmästä sivusta (web nostot.js:103 NOSTOJEN_LIIKEVARA_OSUUS).</summary>
+        public const float LiikevaraOsuus = 0.5f;
         /// <summary>Laatikon rako tekstin ympärillä pisteinä (vaaka, pysty).</summary>
         public const float NimenRakoX = 2f, NimenRakoY = 2f;
 
@@ -753,16 +755,24 @@ namespace Matkakirja
         /// paikkaansa (se ei vaihda kylkeä: jos paikka on varattu, nimi on tämän kehyksen piilossa); muut ottavat
         /// ensimmäisen vapaan ehdokkaan (<see cref="NimenPaikat"/>), joka mahtuu ruutuun (web RUUDUN ULKOPUOLI ON
         /// ESTE; lukittu saa leikkautua). Tulos: naytetaan[i] ja paikat[i] (uusi lukko, jos näytetään ehdokkaasta).
+        ///
+        /// LIIKEVARA (web js/pallolauta/nimet.js liikevara, nostot.js NOSTOJEN_LIIKEVARA_OSUUS 0,5): ehdokkaat
+        /// kokeillaan ruudulla, jonka reunat ovat <paramref name="liikevara"/> pikseliä ulompana, jotta ruudun laidalle
+        /// juuri tullut kaupunki saa saman kyljen kuin keskellä. Jos valittu paikka vuotaa todellisen ruudun yli
+        /// (web NIMI EI SAA LEIKKAUTUA RUUDUN REUNASTA), nimi ei näy tällä kertaa eikä lukitu (paikka varataan silti,
+        /// kuten webissä ennen reunapudotusta); se ladotaan uudestaan, kun se mahtuu.
         /// </summary>
         public static void LadoKaupungit(List<KaupunkiEhdokas> ehdokkaat, IReadOnlyList<Ruutulaatikko> pinot, Ruutulaatikko ruutu,
-                                         float kerroin, Ruutuvaraukset varaukset, List<bool> naytetaan, List<NimenPaikka> paikat)
+                                         float kerroin, Ruutuvaraukset varaukset, List<bool> naytetaan, List<NimenPaikka> paikat,
+                                         float liikevara = 0f)
         {
             naytetaan.Clear();
             paikat.Clear();
             if (pinot != null) foreach (var r in pinot) varaukset.Varaa(r);
             foreach (var e in ehdokkaat) varaukset.Varaa(e.Piste);
             float sieto = kerroin;
-            var sisalla = new Ruutulaatikko(ruutu.X0 - sieto, ruutu.Y0 - sieto, ruutu.X1 + sieto, ruutu.Y1 + sieto);
+            var sisalla = ruutu.Laajenna(sieto);
+            var laaja = ruutu.Laajenna(sieto + Math.Max(0f, liikevara));
             foreach (var e in ehdokkaat)
             {
                 var paikka = e.Lukko;
@@ -787,11 +797,20 @@ namespace Matkakirja
                     foreach (var p in ehdokasPaikat)
                     {
                         var l = NimenLaatikko(e.X, e.Y, p, e.Leveys, e.Korkeus, kerroin);
-                        if (l.X0 < sisalla.X0 || l.Y0 < sisalla.Y0 || l.X1 > sisalla.X1 || l.Y1 > sisalla.Y1) continue;
+                        if (l.X0 < laaja.X0 || l.Y0 < laaja.Y0 || l.X1 > laaja.X1 || l.Y1 > laaja.Y1) continue;
                         if (varaukset.OsuuPaitsi(l, e.Piste)) continue;
                         paikka = p;
                         nakyy = true;
                         break;
+                    }
+                    if (nakyy)
+                    {
+                        var l = NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin);
+                        varaukset.Varaa(l);
+                        if (l.X0 < sisalla.X0 || l.Y0 < sisalla.Y0 || l.X1 > sisalla.X1 || l.Y1 > sisalla.Y1) nakyy = false;
+                        naytetaan.Add(nakyy);
+                        paikat.Add(paikka);
+                        continue;
                     }
                 }
                 if (nakyy)

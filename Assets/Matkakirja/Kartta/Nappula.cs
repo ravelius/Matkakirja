@@ -289,6 +289,12 @@ namespace Matkakirja
 
         static readonly Func<double, double> SaatonPehmennys = t => Siirtokoreografia.SiirtoajonPehmennys(t);
 
+        /// <summary>
+        /// Nappula osui maahan (pariteetti B21, äänet Pelikoodarilta): askel 1…n ja onko se viimeinen. Hyppyketjussa
+        /// (liftaus, laiva) jokainen välihyppy (web 'step') ja viimeinen (web 'arrive'); bussilla vain viimeinen.
+        /// </summary>
+        public event Action<int, bool> Laskeutui;
+
         IEnumerator Siirto(List<(double lat, double lon)> pisteet, Siirtokoreografia.Aikataulu a, Siirtokoreografia.Ennakko ennakko,
             bool kamera, Action valmis)
         {
@@ -324,6 +330,8 @@ namespace Matkakirja
                 if (m >= 0)
                 {
                     var (i, e, nousu) = Siirtokoreografia.NappulanVaihe(a, valeja, m);
+                    // Välihyppyjen laskeutumiset (web ui.js:23419 'step'): kaikki ohitetut, jos kehys hyppäsi yli.
+                    if (hyppii) for (int j = math.max(hyppy, 0); j < i && hyppy >= 0; j++) Laskeutui?.Invoke(j + 1, false);
                     if (hyppii && i != hyppy)
                     {
                         // Huippu hypyn pituudesta ruudulla hypyn alkaessa (web siirto.js:572 hypynHuippu(matka)).
@@ -339,6 +347,8 @@ namespace Matkakirja
             }
             Nosta(0);
             Siirra(maali.lat, maali.lon, 0);
+            // Viimeinen laskeutuminen (web 'arrive', ui.js:23387 bussi ja :23419 hyppyketju).
+            Laskeutui?.Invoke(math.max(1, valeja), true);
             // Saatto jatkuu vielä 280 ms nappulan laskeuduttua ja pysähtyy pehmeästi: valmis vasta sen jälkeen, jottei
             // Pelikoodarin saapumisajo katkaise liikkuvaa kameraa (KAMERA-AJOT: ei hyppyjä).
             while (Ms() < a.KokonaisMs) yield return null;
