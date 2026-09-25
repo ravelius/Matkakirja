@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 09:17 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 09:23 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
@@ -29,6 +29,10 @@ Ei avoimia kortteja tiedossa juuri nyt. coreaudiod ~0 % CPU, vakaa.
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
 **Postilaatikko:** uusi commit 3ee87f1d3 "Posti: tilaa Bergenin ja Sevillan julistekuvat kuvaputkelta (PR #2991)" — uusi tilaus, ei kriittinen, mutta eri sisältöinen kuin edellinen sarja (linssikatalogi → nyt julistekuvat).
+
+**UUSI SÄÄNTÖ (Fable 09:3x, sitova): muistiseuranta.** 1) `sysctl vm.swapusage` — hälytys >16 Gt käytössä. 2) Simulaattorit joissa peli ei ole pyörinyt 30 min sammutetaan kokonaan (`xcrun simctl shutdown <UDID>`), ei vain peli — SimMetalHost vie 1,6 Gt/simulaattori. 3) Yli 4 rinnakkaista "Google Chrome for Testing" GPU-prosessia → ilmoita Julkaisijalle.
+
+**HAVAINTO (09:23, ilmoitettu):** vm.swapusage used = 22,3 Gt (raja 16 Gt ylittyi) — ilmoitettu Fablelle. 6 Chrome for Testing GPU-prosessia samanaikaisesti (raja 4) — ilmoitettu Julkaisijalle. 6 simulaattoria yhä boottina, vanhin 04:36 asti (yli 5h) — ei vielä sammutettu, rooli ei ole nollattu, ei tehty itse toimenpidettä.
 
 ## 3) Avoimet PR:t
 
