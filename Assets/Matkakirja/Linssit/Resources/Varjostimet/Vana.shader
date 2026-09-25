@@ -80,6 +80,7 @@ Shader "Matkakirja/Vana"
             float4 _Syvyys;           // veto kameraa kohti (yksikköä), vahvuuden lisäveto täydellä peitolla, peiton porras
             float4 _KuvanAlue;        // ruudun uv (origo vasen ala): x0, y0, x1, y1
             float4 _KuvanHaivytys;    // peitto 0–1, reunan pehmeys (uv)
+            float4 _Hehku;            // Ihmisen matka II: rintaman hehku (voima 0–1, hehkun leveys × kaista, sykkeen nopeus)
             float _Kuljettu[VANOJA];
             float _VanaPeitto[VANOJA];
             float4 _Vanha[VIRTOJA];
@@ -233,6 +234,15 @@ Shader "Matkakirja/Vana"
                     float3 vanhaVari = lerp(_Vanha[v0].rgb, _Vanha[v1].rgb, t2);
                     float3 kirkasVari = lerp(_Kirkas[v0].rgb, _Kirkas[v1].rgb, t2);
                     vari = lerp(vanhaVari, kirkasVari, paino);
+                    // RINTAMAN HEHKU (Ihmisen matka II, vapaat kädet): etenevä kärki loistaa kirkkaana ja sen ympärille
+                    // leviää pehmeä halo, joka sykkii hitaasti — kaista maalautuu rannikolle valona. I:ssä _Hehku.x = 0.
+                    if (_Hehku.x > 0.0)
+                    {
+                        float kiilto = paino * paino * paino * _Hehku.x * (0.85 + 0.15 * sin(_Time.y * _Hehku.z));
+                        vari = lerp(vari, kirkasVari * 1.5 + 0.12, kiilto * 0.55);
+                        float halo = (1.0 - smoothstep(puoliMaa, puoliMaa * _Hehku.y, d2)) * kiilto * 0.4;
+                        alfa = max(saturate(alfa * (1.0 + kiilto * 0.7)), halo * _VanaPeitto[vana]);
+                    }
                 }
                 // Havainnekuvan alue (II): kaista häipyy kuvan alta pehmeästi.
                 if (_KuvanHaivytys.x > 0.0)

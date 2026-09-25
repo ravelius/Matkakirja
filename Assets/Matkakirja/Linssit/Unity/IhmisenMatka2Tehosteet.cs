@@ -23,7 +23,11 @@
 // ERÄ 4 (AIDOT ÄÄNIMAISEMAT): IhmisenMatka2Maisema soittaa jakson `maisema`-tyypin ämpäristä (aanihaku, Freesound
 //   CC0/CC BY) ristihäivytyksellä; kertojan puheen alla väistö. Loppu häivyttää.
 //
-// ERÄT 3 ja 5 (sumu, vapaat kädet) rakentuvat samoihin koukkuihin.
+// ERÄ 5 (VAPAAT KÄDET, omistaja: "saat lisätä niin paljon visuaalisia tehosteita kuin vain keksit"):
+//   AAMUNKOITTO: valot syttyvät ensin pienenä kirkkaana pisteenä (tarina alkaa yhdestä paikasta) ja avautuvat mantereen
+//   yli. RINTAMAN HEHKU: vanojen etenevä kärki loistaa ja sykkii (VanaKerros.hehku, Vana.shader _Hehku).
+//
+// ERÄ 3 (sumu) rakentuu samoihin koukkuihin, kun Natiivisepän Sumu-rajapinta on valmis.
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -99,10 +103,23 @@ namespace Matkakirja.Natiivi
 
         public void Valot(double feidiMs)
         {
-            // Valot syttyvät Afrikan ylle: lyhty avautuu mantereen kokoiseksi, muu maailma jää hämärään.
+            // AAMUNKOITTO: ensin pieni kuuma piste (2600 K), sitten lyhty avautuu mantereen kokoiseksi ja muu maailma jää
+            // hämärään. Vähennetyllä liikkeellä suoraan loppukuvaan.
+            float kesto = Kesto((float)(feidiMs / 1000.0));
             nykyinen = new KarttaKerrokset.Keila(2, 20, AfrikanSadeKm, 0.6f, null, 0.1f);
             toinen = null;
-            Nayta(Kesto((float)(feidiMs / 1000.0)));
+            if (kesto <= 0f) { Nayta(0f); return; }
+            StopCoroutine(nameof(Aamunkoitto));
+            StartCoroutine(nameof(Aamunkoitto), kesto);
+        }
+
+        System.Collections.IEnumerator Aamunkoitto(float kesto)
+        {
+            var piste = new KarttaKerrokset.Keila(2, 20, 420f, 0.85f, KarttaKerrokset.KelvinVari(2600f, 0.9f), 0.3f);
+            KarttaKerrokset.Valokeila(piste, null, 0.82f, kesto * 0.25f);
+            keilaPaalla = true;
+            yield return new WaitForSecondsRealtime(kesto * 0.3f);
+            if (!keilaOdottaa) Nayta(kesto * 0.9f);
         }
 
         public void Jakso(int i, KertomusJakso j)
@@ -281,6 +298,7 @@ namespace Matkakirja.Natiivi
             {
                 if (KuvanAlue.HasValue) v.kuvanAlue = KuvanAlue.Value;
                 v.kuvanPeitto = kuvanPeitto;
+                v.hehku = 1f;
             }
         }
 
