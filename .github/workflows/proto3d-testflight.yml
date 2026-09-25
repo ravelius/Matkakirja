@@ -159,6 +159,13 @@ jobs:
           set -euo pipefail
           mkdir -p "$(dirname "$YOLOKI")"
           syy=""
+          # AIKARAJA (Fable 25.9.2026): GitHubin ajastus voi viivästyä tunteja (25.9. yöajo
+          # käynnistyi vasta 11.35 ja olisi vienyt päivän keskeneräisen masterin).
+          # Ajastettu yöajo ohittaa itsensä, jos se käynnistyy klo 06.00 jälkeen Helsingin aikaa.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            tunti=$(TZ=Europe/Helsinki date +%H)
+            if [ "$((10#$tunti))" -ge 6 ]; then syy="ajastus viivästyi, käynnistyi klo $(TZ=Europe/Helsinki date +%H.%M) (raja 06.00)"; fi
+          fi
           # Vienti (~2 Gt) + arkiston DerivedData (~4 Gt) + IPA; muut sessiot
           # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
           vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
@@ -191,7 +198,19 @@ jobs:
           MATKAKIRJA_KANSIO: Build/yo
         run: |
           set -uo pipefail
-          rm -rf Build/yo
+          # Edellisen viennin siivous: rm -rf kaatui 25.9. "Directory not empty" -virheeseen
+          # (joku kirjoitti kansioon samaan aikaan). Yritetään viisi kertaa, ja jos kansio on
+          # yhä olemassa, se siirretään sivuun (mv onnistuu ei-tyhjällekin) ja poistetaan taustalla.
+          for yritys in 1 2 3 4 5; do
+            rm -rf Build/yo 2>/dev/null || true
+            [ -e Build/yo ] || break
+            sleep 3
+          done
+          if [ -e Build/yo ]; then
+            sivu="Build/yo.poisto-$(date +%s)"
+            mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
+            echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
+          fi
           MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
             zsh tyokalut/unity-vahti.sh tulokset/yo.log \
             -batchmode -nographics -quit -projectPath . -buildTarget iOS \
