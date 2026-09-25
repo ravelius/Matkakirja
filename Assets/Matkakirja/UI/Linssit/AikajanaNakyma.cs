@@ -1493,6 +1493,8 @@ namespace Matkakirja.Natiivi
                     if (t == null || tila != Tila.Ihminen || versio != kertomuskuvaVersio) return;
                     kertomuskuva.style.backgroundImage = new StyleBackground(t);
                     kertomuskuvaEsilla = true;
+                    kbAlku = LinssiUi.IhmisenMatka?.Esitys?.Kulunut ?? 0;
+                    kbJakso = jakso;
                     kertomuskuva.style.display = DisplayStyle.Flex;
                     SijoitaKertomuskuva();
                     kertomuskuva.schedule.Execute(() => { if (kertomuskuvaEsilla && versio == kertomuskuvaVersio) kertomuskuva.AddToClassList("mk-esilla"); });
@@ -1501,6 +1503,41 @@ namespace Matkakirja.Natiivi
         }
 
         int kertomuskuvaVersio;
+        /// <summary>Ken Burnsin alku esityksen kellossa (Esitys.Kulunut) ja jakso (suunta); II:n erä 5.</summary>
+        double kbAlku;
+        int kbJakso;
+        const float KbSkaala = 0.06f, KbSiirto = 0.03f, KbOletusS = 12f;
+
+        /// <summary>
+        /// Ihmisen matka II, erä 5 (Linssisepän pyyntö): hidas Ken Burns kuvan ollessa esillä, 1,00 → 1,06 ja siirto 3 %
+        /// leveydestä yhteen neljästä viistosuunnasta jakson mukaan, kestona jakson luenta (Esitys.Luenta, vara 12 s),
+        /// smootherstep ja pysähtyy lopputilaan. Aika on esityksen kello (Esitys.Kulunut), joten tauko pysäyttää liikkeen.
+        /// Tausta skaalataan ja siirretään elementin sisällä (background-size/-position), joten kuva ja sen vinjetti
+        /// pysyvät KuvanAlueen rajoissa. Vähennetty liike: ei liikettä.
+        /// </summary>
+        void KenBurns(float w, float h)
+        {
+            var es = LinssiUi.IhmisenMatka?.Esitys;
+            if (LinssiUi.VahennettyLiike() || es == null || w <= 0 || h <= 0)
+            {
+                kertomuskuva.style.backgroundSize = StyleKeyword.Null;
+                kertomuskuva.style.backgroundPositionX = StyleKeyword.Null;
+                kertomuskuva.style.backgroundPositionY = StyleKeyword.Null;
+                return;
+            }
+            double kesto = es.Luenta > 1 ? es.Luenta : KbOletusS;
+            float t = Mathf.Clamp01((float)((es.Kulunut - kbAlku) / kesto));
+            float e = t * t * t * (t * (t * 6f - 15f) + 10f); // smootherstep: pehmeä alku ja loppu
+            float k = 1f + KbSkaala * e;
+            int suunta = ((kbJakso % 4) + 4) % 4;
+            float sx = (suunta == 0 || suunta == 3 ? 1f : -1f) * KbSiirto * e, sy = (suunta < 2 ? 1f : -1f) * KbSiirto * e;
+            // Keskitetty ylivuoto (1 − k)/2 plus siirto, rajattuna niin, ettei reuna paljastu.
+            float vx = Mathf.Clamp((1f - k) / 2f * w + sx * w, (1f - k) * w, 0f);
+            float vy = Mathf.Clamp((1f - k) / 2f * h + sy * h, (1f - k) * h, 0f);
+            kertomuskuva.style.backgroundSize = new StyleBackgroundSize(new BackgroundSize(Length.Percent(k * 100f), Length.Percent(k * 100f)));
+            kertomuskuva.style.backgroundPositionX = new StyleBackgroundPosition(new BackgroundPosition(BackgroundPositionKeyword.Left, vx));
+            kertomuskuva.style.backgroundPositionY = new StyleBackgroundPosition(new BackgroundPosition(BackgroundPositionKeyword.Top, vy));
+        }
 
         void PiilotaKertomuskuva()
         {
@@ -1533,6 +1570,7 @@ namespace Matkakirja.Natiivi
                 kertomuskuva.style.height = kh;
                 kertomuskuva.style.left = Mathf.Round(a.x * jw + (aw - kw) / 2f);
                 kertomuskuva.style.top = Mathf.Round(a.y * jh + (ah - kh) / 2f);
+                KenBurns(Mathf.Round(kw), kh);
                 return;
             }
             var piste = IhmisenMatkaKerros.KuvanPiste;
