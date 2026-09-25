@@ -181,7 +181,7 @@ namespace Matkakirja.Linssit.Aikajana
             // Vähennetty liike: pallo heti Afrikassa (KaynnistaAvaruusajo).
             // Löydös 74 e (build 12): nousu mustan häivyttyä näkyi pallon kutistumisena. Web avaaKaukaisuus
             // (js/linssit/ihmisen-matka-esitys.js:1460, pointOfView(…, 0)) vie kameran avaruuteen heti mustan alla.
-            if (!y.VahennettyLiike) KaynnistaNousu(0);
+            if (!y.VahennettyLiike) KameraAvaruuteen();
             Kaynnissa = true;
             // Uusi esitys alkaa aina äänitteen alusta: edellisen esityksen kohta (tauko, "Aloita alusta") pois,
             // jotta AloitaJakso kelaa kertojan jakson alkuun (löydös 74).
@@ -351,7 +351,6 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 var ajat = AvauksenAjat();
                 if (MustaPaalla && Kulunut >= ajat.Musta) { MustaPaalla = false; nakyma.Musta(false, ajat.Feidi); }
-                if (nousuOdottaa && Kulunut >= ajat.Musta) KaynnistaNousu(ajat.ZoomAlku - Kulunut);
                 if (avausOdottaa && Kulunut >= ajat.ZoomAlku) KaynnistaAvaruusajo(ajat.ZoomLoppu - Kulunut);
             }
             if (valotOdottaa && AvaruuttaJaljella() <= 0) SytytaValot();
@@ -607,30 +606,19 @@ namespace Matkakirja.Linssit.Aikajana
             return Math.Max(0, avaruusKesto - kulunut);
         }
 
-        bool nousuOdottaa;
-
         /// <summary>
-        /// Nousun kesto (ms): enintään 2,4 s ja 60 % ajasta zoomin alkuun, jotta tähdissä ehtii viipyä. iPhone-video
-        /// 24.9. (3f70eb8): 1,1 s:n Nousu-käyrällä Eurooppa katosi pisteeksi alle 0,25 s:ssa mustan häipyessä ja
-        /// näytti hypyltä, joten nousu on pidempi ja symmetrinen (Pehmea): irtoaminen näkyy, huippu keskellä.
+        /// AVARUUS mustan alla (web avaaKaukaisuus, pointOfView(…, 0)): kamera 300 pallonsäteen päähän Afrikan yläpuolelle
+        /// heti, ilman ajoa. Näkyvä nousu (2,4 s, Pehmea) poistettiin löydöksessä 74 e: se näytti pallon kutistumiselta.
         /// </summary>
-        public const double NousuMaxMs = 2400, NousuMinMs = 500;
-
-        /// <summary>NOUSU: kaupungista 300 pallonsäteen päähän Afrikan yläpuolelle (Kayra.Nousu), liian lyhyellä ajalla heti.</summary>
-        void KaynnistaNousu(double zoomiinMs)
+        void KameraAvaruuteen()
         {
-            nousuOdottaa = false;
             if (!Esitysmatikka.Alueet.TryGetValue("afrikka", out var a) || !(a is Laatikko af)) return;
             var r = af.Rajaus();
-            double ms = Math.Min(NousuMaxMs, zoomiinMs * 0.6);
-            if (ms < NousuMinMs) { y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus); return; }
-            y.AjaKamera(new Nakyma(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade), (float)(ms / 1000),
-                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Pehmea));
+            y.KameraAvaruuteen(r.Lat, r.Lon, Esitysmatikka.AvaruudenKorkeus);
         }
 
         void KaynnistaAvaruusajo(double? kesto)
         {
-            nousuOdottaa = false;
             if (!avausOdottaa) return;
             avausOdottaa = false;
             double katto = Esitysmatikka.AvaruudenMs + Esitysmatikka.ZoominJatkoMs;   // AVARUUDEN_KATTO_MS
