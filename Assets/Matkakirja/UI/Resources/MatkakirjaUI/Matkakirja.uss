@@ -1252,9 +1252,10 @@
  * .nostosym-nimio, .pallolauta-liuska-hiusviiva; mitattu 25.9. b12, web-liuska-mitat.txt). Liberation Serif kursiivi
  * 13 px, riviväli 18,85; teksti 33,5 px pohjan reunasta, pallo ⌀ 5,7 keskellä 23,1; ylä ja ala 18,5, oikea 20,4.
  * Muste rgba(74, 52, 33, .92) paperin #efdcb4 päällä sRGB:nä = rgb(87, 65, 45) (lineaarinen väriavaruus). */
+/* Löydös 92 (omistaja build 13: minivalikko aivan liian pieni): kaikki liuskan mitat 1,4 × webin mitoista. */
 .mk-liuska {
     position: absolute;
-    padding: 18.5px 20.4px 18.5px 0;
+    padding: 25.9px 28.56px 25.9px 0;
 }
 
 /* Paperi neljänä pyöristettynä kerroksena (web fill-opacity .11 / .24 / .38 / .58, sisennys 0 / 4,5 / 8 / 10,
@@ -1269,42 +1270,42 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 23.6px;
+    border-radius: 33.04px;
     background-color: rgba(239, 220, 180, 0.11);
 }
 
 .mk-liuska__pohja--1 {
-    top: 4.5px;
-    left: 4.5px;
-    right: 4.5px;
-    bottom: 4.5px;
-    border-radius: 18.3px;
+    top: 6.3px;
+    left: 6.3px;
+    right: 6.3px;
+    bottom: 6.3px;
+    border-radius: 25.62px;
     background-color: rgba(239, 220, 180, 0.24);
 }
 
 .mk-liuska__pohja--2 {
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
-    border-radius: 14.2px;
+    top: 11.2px;
+    left: 11.2px;
+    right: 11.2px;
+    bottom: 11.2px;
+    border-radius: 19.88px;
     background-color: rgba(239, 220, 180, 0.38);
 }
 
 .mk-liuska__pohja--3 {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 11.8px;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    border-radius: 16.52px;
     background-color: rgba(239, 220, 180, 0.58);
 }
 
 /* Pieni herokuva (hyväksytty poikkeama webistä, omistaja 25.9.): tekstin levyinen, 16:9. */
 .mk-liuska__kuva {
-    height: 72px;
-    margin: 0 0 8px 33.5px;
-    border-radius: 4px;
+    height: 100.8px;
+    margin: 0 0 11.2px 46.9px;
+    border-radius: 5.6px;
     -unity-background-scale-mode: scale-and-crop;
 }
 
@@ -1320,12 +1321,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 18.85px;
-    min-height: 18.85px;
+    height: 26.39px;
+    min-height: 26.39px;
     margin: 0;
-    padding: 0 0 0 33.5px;
+    padding: 0 0 0 46.9px;
     border-width: 0;
-    border-radius: 4px;
+    border-radius: 5.6px;
     background-color: rgba(0, 0, 0, 0);
     color: rgb(87, 65, 45);
 }
@@ -1344,20 +1345,20 @@
 
 /* Haitarin kohde: sisennys LIUSKAN_SISENNYS_PX 9 × 13/11 = 10,6. */
 .mk-liuska__kohde {
-    padding-left: 44.1px;
+    padding-left: 61.74px;
 }
 
 .mk-liuska__pallo {
     position: absolute;
-    left: 20.25px;
-    top: 6.6px;
-    width: 5.7px;
-    height: 5.7px;
-    border-radius: 2.85px;
+    left: 28.35px;
+    top: 9.24px;
+    width: 7.98px;
+    height: 7.98px;
+    border-radius: 3.99px;
 }
 
 .mk-liuska__nimi {
-    font-size: 13px;
+    font-size: 18.2px;
     white-space: nowrap;
     -unity-text-align: middle-left;
     color: rgb(87, 65, 45);
@@ -1365,9 +1366,9 @@
 
 /* Hiusviiva omana rivinään: 29,2 px:stä, rgba(58, 47, 36, .35) paperin päällä = rgb(176, 160, 130). */
 .mk-liuska__viivarivi {
-    height: 18.85px;
+    height: 26.39px;
     justify-content: center;
-    padding: 0 6px 0 29.2px;
+    padding: 0 8.4px 0 40.88px;
 }
 
 .mk-liuska__hiusviiva {
@@ -1378,8 +1379,8 @@
 /* Kelausrivit (web "▲ edelliset" / "▼ lisää"). */
 .mk-liuska__kelaus {
     flex-shrink: 0;
-    height: 22px;
-    padding: 0 0 0 33.5px;
+    height: 30.8px;
+    padding: 0 0 0 46.9px;
     justify-content: flex-start;
     border-width: 0;
     background-color: rgba(0, 0, 0, 0);
@@ -1387,13 +1388,13 @@
 }
 
 .mk-liuska__kelaus > .mk-ikoni {
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
+    width: 16.8px;
+    height: 16.8px;
+    margin-right: 7px;
 }
 
 .mk-liuska__kelaus > .mk-nappi__teksti {
-    font-size: 12px;
+    font-size: 16.8px;
 }
 
 /* --- tekijätiedot ja lähteet --------------------------------------------- */
