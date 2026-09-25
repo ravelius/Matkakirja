@@ -165,7 +165,7 @@ namespace Matkakirja.Natiivi
                 bool ensiKerta = k.Tunnus == null || nahdyt.Add(k.Tunnus);
                 AsetaKiinni(!ensiKerta);
                 kelaus?.Pause();
-                if (ensiKerta) kelaus = selite.schedule.Execute(() => { if (!lisatiedotAuki) AsetaKiinni(true); }).StartingIn(1500);
+                if (ensiKerta) kelaus = selite.schedule.Execute(() => { if (!lisatiedotAuki) KelaaRiveittain(); }).StartingIn(1500);
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
             }
@@ -257,8 +257,33 @@ namespace Matkakirja.Natiivi
             AsetaKiinni(!kiinni);
         }
 
+        IVisualElementScheduledItem riveittain;
+
+        /// <summary>
+        /// Löydös 97 (SÄÄNTÖ, omistaja build 13): automaattinen kelaus madaltaa selitteen rivin (20 pt) 45 ms:n välein ja
+        /// kutistaa sen lopuksi tekstin kokoiseksi nimilaatikoksi (web .satelliitti-selite-kiinni width auto). Pieni liike
+        /// pois: suoraan.
+        /// </summary>
+        void KelaaRiveittain()
+        {
+            float h = runko.layout.height;
+            if (kiinni || LinssiUi.VahennettyLiike() || float.IsNaN(h) || h <= 20f) { AsetaKiinni(true); return; }
+            riveittain?.Pause();
+            runko.style.overflow = Overflow.Hidden;
+            riveittain = runko.schedule.Execute(() =>
+            {
+                h -= 20f;
+                if (h > 0f && !kiinni) { runko.style.maxHeight = h; return; }
+                riveittain?.Pause();
+                if (!kiinni) AsetaKiinni(true);
+            }).Every(45);
+        }
+
         void AsetaKiinni(bool k)
         {
+            riveittain?.Pause();
+            runko.style.maxHeight = StyleKeyword.Null;
+            runko.style.overflow = StyleKeyword.Null;
             kiinni = k;
             selite.EnableInClassList("mk-kiinni", k);
             runko.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;

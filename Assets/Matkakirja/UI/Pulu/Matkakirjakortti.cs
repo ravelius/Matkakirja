@@ -170,8 +170,8 @@ namespace Matkakirja.Natiivi
         }
 
         static bool Kaupunkipilleri => Ylapalkki.Kelluva;
-        /// <summary>Löydös 73: iPhonella pienennetty lappu näyttää vain kaupungin nimen ja on tekstinsä levyinen.</summary>
-        static bool VainNimi => Ylapalkki.Puhelin;
+        /// <summary>Löydös 73/87: pienennetty lappu on tekstinsä levyinen (web width: max-content) kaikilla laitteilla.</summary>
+        static bool VainNimi => true;
 
         /// <summary>
         /// Löydös 68: iPhonen vaakamuodossa pienennetty lappu häviää yläpalkin mukana ja palaa, kun palkki avataan
@@ -270,7 +270,7 @@ namespace Matkakirja.Natiivi
 
         public void KartanLiike()
         {
-            if (Nakyy && !pieni) AsetaPieni(true);
+            if (Nakyy && !pieni) Kutista();
         }
 
         bool linssiKutisti;
@@ -285,7 +285,7 @@ namespace Matkakirja.Natiivi
             if (paalla)
             {
                 linssiKutisti = Nakyy && !pieni;
-                if (linssiKutisti) AsetaPieni(true);
+                if (linssiKutisti) Kutista();
             }
             else if (linssiKutisti)
             {
@@ -304,7 +304,58 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && !pieni) AsetaPieni(true);
+            if (piiloon && Nakyy && !pieni) Kutista();
+            // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
+            if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
+        }
+
+        bool luettu;
+        IVisualElementScheduledItem lyhytAnimaatio, kutistus;
+
+        /// <summary>
+        /// Lapun teksti: luennan ajan otsikko (ja lyhyt paikkarivi), luennon jälkeen kaupungin nimi. Löydös 97 (SÄÄNTÖ):
+        /// automaattisesti lyhenevä teksti sulaa lopusta alkuun (0,6 s, smoothstep), ei kertarysäyksellä.
+        /// </summary>
+        void PaivitaLyhyt(bool animoi)
+        {
+            var m = merkinta;
+            if (m == null) return;
+            string ly = m.Lyhyt ?? m.Paikkarivi;
+            string uusi = Kaupunkipilleri || luettu ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
+            lyhytAnimaatio?.Pause();
+            string vanha = lyhyt.text ?? "";
+            if (!animoi || LinssiUi.VahennettyLiike() || !vanha.StartsWith(uusi) || vanha.Length <= uusi.Length) { lyhyt.text = uusi; return; }
+            float alku = Time.unscaledTime;
+            lyhytAnimaatio = lyhyt.schedule.Execute(() =>
+            {
+                float t = Mathf.Clamp01((Time.unscaledTime - alku) / 0.6f);
+                int n = Mathf.RoundToInt(Mathf.Lerp(vanha.Length, uusi.Length, Mathf.SmoothStep(0f, 1f, t)));
+                lyhyt.text = vanha.Substring(0, n).TrimEnd(' ', ',', '·');
+                if (t >= 1f) { lyhyt.text = uusi; lyhytAnimaatio?.Pause(); }
+            }).Every(16);
+        }
+
+        /// <summary>
+        /// Löydös 97 (SÄÄNTÖ, omistaja build 13): automaattisesti pienenevä laatikko kutistuu rivi kerrallaan eikä
+        /// kertarysäyksellä. Auki oleva kortti madaltuu rivin (20 pt) 45 ms:n välein ja muuttuu lapuksi, kun jäljellä on
+        /// enää lapun korkeus. Pieni liike pois: suoraan lapuksi.
+        /// </summary>
+        void Kutista()
+        {
+            if (pieni || !Nakyy) return;
+            float h = kortti.layout.height;
+            if (LinssiUi.VahennettyLiike() || float.IsNaN(h) || h <= 60f) { AsetaPieni(true); return; }
+            kutistus?.Pause();
+            kortti.style.overflow = Overflow.Hidden;
+            kutistus = kortti.schedule.Execute(() =>
+            {
+                h -= 20f;
+                if (h > 40f && !pieni) { kortti.style.maxHeight = h; return; }
+                kutistus?.Pause();
+                kortti.style.maxHeight = StyleKeyword.Null;
+                kortti.style.overflow = StyleKeyword.Null;
+                if (!pieni) AsetaPieni(true);
+            }).Every(45);
         }
 
         /// <summary>
@@ -321,8 +372,10 @@ namespace Matkakirja.Natiivi
             otsikko.text = m.PaikkaAika ? m.Otsikko ?? "" : (m.Otsikko ?? "Matkapäiväkirja").ToUpperInvariant();
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
             // Lappu: otsikko ja lyhyt paikkarivi (web #fact-voice + .fact-place-lyhyt).
-            string ly = m.Lyhyt ?? m.Paikkarivi;
-            lyhyt.text = Kaupunkipilleri || VainNimi ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
+            // Löydös 86/87: luennan ajan lappu on "Ateena, elokuussa 1873", luennon jälkeen pelkkä "Ateena" (merkintä ilman
+            // luentaa on heti luettu).
+            luettu = !m.Kaiutin;
+            PaivitaLyhyt(false);
             tunnelma.text = m.Paikkarivi ?? "";
             tunnelma.EnableInClassList("mk-matkakirja__tunnelma--paikka", !m.Tunnelma);
             Piiloon(tunnelma, string.IsNullOrEmpty(m.Paikkarivi));
@@ -415,6 +468,8 @@ namespace Matkakirja.Natiivi
         void Kirjoitettu()
         {
             NaytaLahteet();
+            // Löydös 87: ilman kertojan luentaa (kertoja pois) merkintä on "luettu", kun teksti on kirjoitettu loppuun.
+            if (!luentaPiilo && !Aanet.KertojaPuhuu && !luettu) { luettu = true; PaivitaLyhyt(true); }
             var k = kirjoitettu;
             kirjoitettu = null;
             try { k?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
@@ -422,6 +477,12 @@ namespace Matkakirja.Natiivi
 
         void AsetaPieni(bool p)
         {
+            if (!p && kutistus != null)
+            {
+                kutistus.Pause();
+                kortti.style.maxHeight = StyleKeyword.Null;
+                kortti.style.overflow = StyleKeyword.Null;
+            }
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
             kortti.EnableInClassList("mk-matkakirja--nimi", p && VainNimi && !Kaupunkipilleri);

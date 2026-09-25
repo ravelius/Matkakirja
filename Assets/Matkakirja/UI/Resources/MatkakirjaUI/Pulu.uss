@@ -369,9 +369,18 @@
 .mk-matkakirja--pieni .mk-matkakirja__teksti,
 .mk-matkakirja--pieni .mk-matkakirja__pikkukuvat,
 .mk-matkakirja--pieni .mk-matkakirja__lahteet,
-.mk-matkakirja--pieni .mk-matkakirja__kuva,
-.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+.mk-matkakirja--pieni .mk-matkakirja__kuva {
     display: none;
+}
+
+/* Linssipariteetti rivi 31 (iPad): webin lapussa 🔊 näkyy tekstin perässä ("Marseille, syyskuussa 1873 🔊"). Piilo
+   merkinnän mukaan (Piiloon, inline) voittaa. */
+.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    margin-left: 6px;
+    color: #211d18;
 }
 
 /* Löydös 73: iPhonella pienennetty lappu vain kaupungin nimen levyinen ("Ateena"). */
