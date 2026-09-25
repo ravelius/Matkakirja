@@ -50,6 +50,8 @@ namespace Matkakirja.Natiivi
         /// tapahtumaa (→ LiikuMuuttui), jotta Liiku harmaantuu ja palaa heti.
         /// </summary>
         public static bool KarttaEstetty => Instanssi?.rekisteri?.EstaaKartan ?? false;
+        /// <summary>Testikomento "radio esikuuntelu pois|paalle": radion esikuuntelun A/B-mittaus (oletus päällä).</summary>
+        public static bool EsikuunteluPois;
         public static event Action<bool> PorttiMuuttui;
         bool porttiOli;
         /// <summary>Linssin oma raita (Pelikoodari: Aanisoitin.LinssiMusiikki): laji tai null = pois.</summary>
@@ -798,7 +800,7 @@ namespace Matkakirja.Natiivi
                 // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
                 linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 // Esikuuntelu (Natiivisepän ehto 4): ei kuumana eikä virransäästössä (Lampo.Kuuma, sama kuin Esilataaja.Seis).
-                linssi.EsikuunteluSallittu = () => !Esilataaja.Seis;
+                linssi.EsikuunteluSallittu = () => !Esilataaja.Seis && !EsikuunteluPois;
                 linssi.TilaMuuttui += t => o.Kirjaa($"radio: {t.Vaihe}{(t.Viritys != Matkakirja.Linssit.Radio.ViritysVaihe.Ei ? "/" + t.Viritys : "")} " +
                     $"{t.AsemaId ?? "-"} {t.KaupunkiNimi ?? ""} {t.Nimi ?? ""}{(t.Viesti != null ? " (" + t.Viesti + ")" : "")}{(t.Sivu != null ? " → " + t.Sivu : "")}"); 
                 // Diagnoosi ennen kuin virta suljetaan (Laitetestaajan simulaattorilöydös 23.9.).
@@ -1185,7 +1187,9 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "taajuus" && osat.Length > 2) r.Taajuus(Luku(osat[2]));
                     else if (osat[1] == "tauko" && osat.Length > 2) r.Tauko(osat[2] == "1");
                     else if (osat[1] == "aani" && osat.Length > 2) { r.Voimakkuus = (float)Luku(osat[2]); Kirjaa($"radio: äänenvoimakkuus {Luku(osat[2]):F2}"); }
-                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
+                    // Esikuuntelun A/B-mittaus (Natiivisepän ehto 5): kytkin pois/päälle, tila lokiin.
+                    else if (osat[1] == "esikuuntelu" && osat.Length > 2) { EsikuunteluPois = osat[2] == "pois"; Kirjaa($"radio: esikuuntelu {(EsikuunteluPois ? "pois" : "päällä")}"); }
+                    else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, taajuus {r.Tila.Taajuus:F4}, esikuuntelu {r.Esikuunneltu ?? "-"}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
