@@ -1327,8 +1327,17 @@ test('skeema 1.39: karttavalojen webin ankkuri ja nimiön kylki (Natiivi-UI, lö
   }
   assert.ok(ankkureita > 400, `ankkureita ${ankkureita}`);
   // Mittauksen esimerkki: Versailles on webissä omassa paikassaan, ei Pariisin kyljessä.
-  const vers = valot.find((v) => v.maa === 'FRA' && v.nimi === 'Versaillesin peilisali');
+  const vers = valot.find((v) => v.maa === 'FRA' && v.tunnus === 'nosto-maalehti-peilisali');
   assert.ok(vers && Math.abs(vers.ankkuri.lat - 48.806) < 0.01 && Math.abs(vers.ankkuri.lon - 2.12) < 0.01, JSON.stringify(vers?.ankkuri));
   const iraklion = valot.find((v) => v.maa === 'GRC' && v.tunnus === 'iraklion');
   assert.deepEqual(iraklion.ankkuri, { lat: 35.341508, lon: 25.133 });
+});
+
+test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisältökirjuri #3162)', () => {
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  const pitkat = valot.filter((v) => v.paakartalla && v.nimio && v.nimio.length > 18);
+  assert.deepEqual(pitkat.map((v) => `${v.id}: ${v.nimio}`), []);
+  const mon = JSON.parse(tiedostot.get('kokoelmat/monumentit.json')).alkiot;
+  assert.ok(mon.some((m) => m.nimio), 'monumentit.nimio puuttuu');
+  for (const m of mon) if (m.nimio) assert.ok(m.nimio.length <= 18 && m.nimio.length < (m.nimi ?? '').length + 1, `${m.id}: ${m.nimio}`);
 });
