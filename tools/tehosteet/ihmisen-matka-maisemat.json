@@ -6,7 +6,7 @@
   "tavoiteLufs": -30,
   "haivytysS": 0.25,
   "leikkaaHiljaisuus": false,
-  "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior"],
+  "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"],
   "lahteet": ["freesound", "commons"],
   "tehosteet": [
     {
@@ -14,14 +14,13 @@
       "peliavain": "maisema.savanni",
       "kuvaus": "Savanni: heinäsirkat, kaukainen tuuli ja linnut (Afrikka, Jebel Irhoud, siirtymä Itä-Afrikkaan)",
       "hakusanat": [
-        "african savanna ambience birds insects",
-        "kenya savannah field recording",
-        "tanzania bush ambience crickets birds"
+        "savanna ambience",
+        "african bush ambience",
+        "kenya ambience birds"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"]
+      "lisenssit": ["Creative Commons 0", "Attribution"]
     },
     {
       "tunnus": "jokilaakso",
@@ -48,7 +47,7 @@
       "kestoMin": 30,
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
-      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "people", "kids", "children"]
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "people", "kids", "children", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "vuoristotuuli",
@@ -75,7 +74,8 @@
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "lahteet": ["freesound"]
     },
     {
       "tunnus": "sademetsa",
@@ -90,7 +90,7 @@
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
       "lahteet": ["freesound"],
-      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "bat", "bats"]
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "bat", "bats", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "rannikkomeri",
@@ -130,7 +130,7 @@
       "kestoMin": 30,
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
-      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "inside", "house", "window", "door"]
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "inside", "house", "window", "door", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "tundratuuli",
@@ -197,7 +197,7 @@
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
       "lahteet": ["freesound"],
-      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat"]
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "hiljainen-tuuli",
