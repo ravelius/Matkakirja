@@ -109,6 +109,40 @@ namespace Matkakirja.Natiivi
             Kosketusvieritys.Liita(kortti, () => sisus);
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
+            suurennos.AukiMuuttui += Pehmenna;
+        }
+
+        // Löydös 132 (omistaja, build 16): kuva kokoruudulle → tausta pehmenee tummennuksen lisäksi. Kartta on jo
+        // kameran kuvasumennuksessa (UiNakymat.PaivitaKuvaSumea → PalloKierto.KuvaSumea, 2,25 pt, koska nostokortti on auki),
+        // mutta kamerasumennus ei koske UI:ta (PalloSumennus). Kortti sumennetaan siksi UI Toolkitin suotimella kuten
+        // aloitusportin kone ja viiva (Etusivulento: blur-suodin, Paneeli.asset tuo Gauss-shaderin käännökseen).
+        const float PehmennysPt = 4f;
+        const int PehmennysAukiMs = 220, PehmennysKiinniMs = 180; // suurennoksen häivytys (Kuvasuurennos Avaa/Sulje)
+        float pehmennys;
+        IVisualElementScheduledItem pehmennysAjo;
+
+        void Pehmenna(bool paalle)
+        {
+            pehmennysAjo?.Pause();
+            float alku = pehmennys, loppu = paalle ? PehmennysPt : 0f;
+            float kesto = (paalle ? PehmennysAukiMs : PehmennysKiinniMs) / 1000f, t0 = Time.unscaledTime;
+            Ruudunpaivitys.Herata(kesto + 0.05f); // lämpö: häivytys täydellä taajuudella
+            pehmennysAjo = kortti.schedule.Execute(() =>
+            {
+                float k = Mathf.Clamp01((Time.unscaledTime - t0) / kesto);
+                AsetaPehmennys(Mathf.Lerp(alku, loppu, k));
+                if (k >= 1f) { pehmennysAjo?.Pause(); pehmennysAjo = null; }
+            }).Every(0);
+        }
+
+        void AsetaPehmennys(float pt)
+        {
+            pehmennys = pt;
+            // Ei StyleKeyword.Nonea: UI Toolkit 6.3 kaatuu siihen (Etusivulento, Natiiviseppä 25.9.). Null = ei suodinta.
+            if (pt <= 0.01f) { kortti.style.filter = StyleKeyword.Null; return; }
+            var f = new FilterFunction(FilterFunctionType.Blur);
+            f.AddParameter(new FilterParameter(pt));
+            kortti.style.filter = new List<FilterFunction> { f };
         }
 
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento) keskelle (löydös 135).</summary>
