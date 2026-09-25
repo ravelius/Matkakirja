@@ -310,7 +310,7 @@ namespace Matkakirja.Natiivi
             {
                 alku = Time.realtimeSinceStartup;
                 PaivitaTekstit();
-                schedule.Execute(() => { PaivitaTekstit(); MarkDirtyRepaint(); })
+                schedule.Execute(() => { Ruudunpaivitys.Herata(0.1f); PaivitaTekstit(); MarkDirtyRepaint(); })
                     .Every(16).Until(() => Kulunut() > AnimaatioMs + 50f);
             }
             MarkDirtyRepaint();
