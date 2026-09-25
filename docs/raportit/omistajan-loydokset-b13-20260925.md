@@ -123,3 +123,14 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | # | Löydös | Rooli |
 |---|---|---|
 | 146 | Kaupungin napautuksesta aukeava pieni valikko kehitetään: aukeaa VÄLITTÖMÄSTI (kuori heti, tiedot ja pieni kuva esiladattuina), sisältö tulee animoidusti esiin, kuva isompana. Fablen "postikortti"-ehdotus omistajalle: pergamenttikortti ohuella reunalla; herokuva kortin levyisenä (3:2) kellastuneella vinjetillä, paljastuu 180 ms vasemmalta; nimi + postileima (kierto −8° → 0, koko 1,2 → 1, 150 ms); rivit porrastetusti 40 ms välein (Nähtävyydet, Turistiopas, viiva, nostoluokat värillisin pistein, pisteet syttyvät yksi kerrallaan); kokonaisuus < 350 ms, ease-out, ei pomppua; ei (x):ää eikä koristeita; sulkeutuu napautuksesta karttaan 120 ms; iPadilla kaupungin vieressä, iPhonella alareunasta nouseva postikortti. Natiivi-UI tekee videomallin (iPhone + iPad) omistajan hyväksyttäväksi ennen toteutusta. | Natiivi-UI (Pelikoodari: esilataus välittömään avaukseen) |
+
+## Build 16 — omistajan löydökset klo 23.3x (Ihmisen matka II, nostokuvat)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 147 | Ihmisen matka II: CC-nappi siirretään ☰-valikkoon kytkimeksi nimellä "Tekstitys". | Natiivi-UI |
+| 148 | II: Jatka/Tauko-nappi → play/pause-symboli togglena; sen molemmin puolin "kelaa alkuun" (aloittaa tarinan alusta) ja "kelaa loppuun" (siirtyy tutkimaan karttaa itse) -symbolit. | Natiivi-UI (Linssiseppä: esityksen ohjaus) |
+| 149 | Karttanostojen kuvat eivät lataudu aina → syy (verkko, välimuisti, uusinta) ja korjaus; savukevartija "nostokuva näkyy". | Pelikoodari |
+| 150 | Nostokuva suurenee napautuksesta koko sivun kokoiseksi (yhdessä 130–132:n kanssa). | Natiivi-UI |
+| 151 | II: luenta-animaation kameraliikkeet ovat liian äkkinäisiä, kun kartta väistää tulevaa kuvaa → pehmeämmin (KAMERA-AJOT: ease in/out, yhtenäinen käyrä). | Linssiseppä (Natiiviseppä: Linssisiirto) |
+| 152 | II:n alku: kun ruudulla on vain musta ja ensimmäinen lause, tähdet ja maapallo feidautuvat rauhassa mustasta esiin, ja samalla maapallo zoomautuu jo lähemmäs pelaajaa. | Linssiseppä (Natiiviseppä) |
