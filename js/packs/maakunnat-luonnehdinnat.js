@@ -7020,4 +7020,333 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Pääsiäissaari moai-patsaineen kuuluu hallinnollisesti Valparaíson alueeseen, vaikka se on yli 3 500 km mantereelta.',
     },
   },
+  /*
+   * THA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.THA:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 77 aluetta (76 maakuntaa ja
+   * Bangkok, avaimella "Bangkok Metropolis"). Vain `lyhyt` tässä
+   * erässä; jokaisella alueella eri aihe. Vältetty maastokohteet-tha.js:n
+   * aiheet (Ayutthayan ja Sukhothain raunioalueet, Ban Chiang, Phanom
+   * Rung, Phimai, Khao Yai, Doi Inthanon, Kuoleman rautatie). Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Chachoengsao   — Wat Saman Rattanaram (Ganesha 16 m, matkailulähteet)
+   *   Chanthaburi    — Chanthaburi Gem Market (pe–su, GIA/travelfish)
+   *   Mae Hong Son   — Su Tong Pae Bridge (yli 500 m, thailand.go.th)
+   *   Nakhon Nayok   — Khun Dan Prakan Chon Dam (2 720 m, TAT-hakemisto)
+   *   Narathiwat     — Talo Mano Mosque (tiikki, ei nauloja)
+   *   Nong Bua Lam Phu — Wat Tham Erawan (600 porrasta)
+   *   Pathum Thani   — Talaad Thai (ASEANin suurin, auki 24 h)
+   *   Pattani        — Kolae boat (Sai Buri -joen laiturit)
+   *   Phatthalung    — Thale Noi (uivat vesipuhvelit, TAT)
+   *   Sakon Nakhon   — Sakon Nakhon Natural Indigo Fabric (GI 2006)
+   *   Satun          — Satun UNESCO Global Geopark (2018, ensimmäinen)
+   *   Songkhla       — Golden Mermaid, Samila (1966, pronssi)
+   *   Trang          — Emerald Cave, Ko Muk (tunneli noin 80 m)
+   *   Udon Thani     — Red Lotus Sea (kukat ovat lumpeita)
+   *   Yala           — Betongin postilaatikko (1924, noin 3,2 m)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  THA: {
+    'Amnat Charoen': {
+      lyhyt: 'Amnat Charoenissa istuu 20 metriä korkea Phra Mongkhon Ming Mueang -Buddha, jota paikalliset kutsuvat yksinkertaisesti Phra Yaiksi, Isoksi Buddhaksi.',
+    },
+    'Ang Thong': {
+      lyhyt: 'Wat Muangin kultainen Buddha on 92 metriä korkea ja 63 metriä leveä, ja se kohoaa kauas yli Ang Thongin tasaisten riisipeltojen.',
+    },
+    'Bangkok Metropolis': {
+      lyhyt: 'Bangkokin thainkielinen juhlanimi on Guinnessin ennätysten mukaan maailman pisin paikannimi, 168 kirjainta – arjessa kaupunki on vain Krung Thep.',
+    },
+    'Bueng Kan': {
+      lyhyt: 'Bueng Kan on Thaimaan nuorin maakunta vuodelta 2011, ja sen tunnuksen, Phu Tokin hiekkakivivuoren, huipulle kuljetaan puista kävelysiltaa pitkin.',
+    },
+    'Buri Ram': {
+      lyhyt: 'Buriramin kilparadalla ajetaan joka vuosi MotoGP-moottoripyöräsarjan Thaimaan osakilpailu, ja sopimus ulottuu 2030-luvulle asti.',
+    },
+    Chachoengsao: {
+      lyhyt: 'Bang Pakong -joen rannalla Wat Saman Rattanaramissa makaa 16 metriä korkea vaaleanpunainen Ganesha, norsupäinen jumala, käsi siunaukseen nostettuna.',
+    },
+    'Chai Nat': {
+      lyhyt: 'Chai Natin Chao Phraya -pato valmistui 1957, ja sen säätelemä vesi kastelee peltoja seitsemässätoista maakunnassa.',
+    },
+    Chaiyaphum: {
+      lyhyt: 'Pa Hin Ngamin kansallispuistossa kukkii sadekaudella kokonaisia niittyjä dok krachiaota, inkiväärin sukuista kasvia, jota kutsutaan Siamin tulppaaniksi.',
+    },
+    Chanthaburi: {
+      lyhyt: "Chanthaburin jalokivikorttelissa kauppiaat levittävät perjantaista sunnuntaihin pöydilleen vaa'at, laskimet, safiirit ja rubiinit.",
+    },
+    'Chiang Mai': {
+      lyhyt: 'Yi Peng -juhlan öinä Chiang Main taivaalle nousee tuhansia paperilyhtyjä, khom loita, mutta kaupungin keskustassa niiden lennättämistä nyt rajoitetaan.',
+    },
+    'Chiang Rai': {
+      lyhyt: 'Chiang Rain Valkoinen temppeli, Wat Rong Khun, on taiteilija Chalermchai Kositpipatin omin rahoin rakentama, ja sen valkoisissa seinissä kimaltaa peilinsiruja.',
+    },
+    'Chon Buri': {
+      lyhyt: 'Pattayan rannalla seisova Totuuden pyhäkkö on veistetty kokonaan puusta, ja sen rakennustyöt ovat jatkuneet vuodesta 1981.',
+    },
+    Chumphon: {
+      lyhyt: 'Chumphonin kohdalla Malakan niemimaa kapenee Kran kannakseksi: Andamaninmereltä Thaimaanlahdelle on kapeimmillaan vain 44 kilometriä.',
+    },
+    Kalasin: {
+      lyhyt: 'Phu Kum Khaon vuorelta löytyi 1994 Thaimaan suurin kasvissyöjädinosaurusten fossiilipaikka, ja sen luita esitellään nyt Sirindhornin museossa.',
+    },
+    'Kamphaeng Phet': {
+      lyhyt: 'Kamphaeng Phetin ylpeys on kluai khai, pieni, pyöreä ja makea banaani, ja sadon kiitokseksi maakunnassa vietetään joka vuosi banaanijuhlaa.',
+    },
+    Kanchanaburi: {
+      lyhyt: 'Erawanin vesiputous laskee seitsemänä porrasmaisena kerroksena, ja sen vihreänturkoosissa altaissa saa uida.',
+    },
+    'Khon Kaen': {
+      lyhyt: 'Khon Kaenin Chonnabotissa kudotaan mudmee-silkkiä: langat sidotaan ja värjätään kuvioiksi jo ennen kuin ne päätyvät kangaspuihin.',
+    },
+    Krabi: {
+      lyhyt: 'Railayn niemelle ei pääse maitse, koska kalkkikivijyrkänteet katkaisevat tien – perille tullaan pitkähäntäveneellä, ja kallioilla kiipeillään.',
+    },
+    Lampang: {
+      lyhyt: 'Lampangissa hevosvaunut ovat yhä käytössä, ja kaupunkia kutsutaankin nimellä mueang rot ma, hevosvaunujen kaupunki.',
+    },
+    Lamphun: {
+      lyhyt: 'Lamphun on longaanitarhojen maakunta, ja täältä on peräisin kuaitiao lamyai, possunuudelikeitto kuivatuilla longaaneilla.',
+    },
+    Loei: {
+      lyhyt: 'Dan Sain Phi Ta Khon -juhlassa kuljetaan aavenaamioissa, jotka tehdään palmunlehden tupeista ja tahmean riisin höyrytyskoreista.',
+    },
+    'Lop Buri': {
+      lyhyt: 'Lopburissa Phra Prang Sam Yotin temppelin makakeille katetaan joka vuosi apinabuffet, jossa hedelmiä on jäädytetty jopa jääkimpaleiden sisään.',
+    },
+    'Mae Hong Son': {
+      lyhyt: 'Mae Hong Sonin Su Tong Pae on yli 500 metriä pitkä bambusilta, joka kulkee riisipeltojen ja joen yli kylästä meditaatiokeskukseen.',
+    },
+    'Maha Sarakham': {
+      lyhyt: 'Maha Sarakham on Isanin yliopistokaupunki: pelkästään Mahasarakhamin yliopistossa opiskelee kymmeniätuhansia nuoria.',
+    },
+    Mukdahan: {
+      lyhyt: 'Mukdahanista pääsee Mekongin yli Laosin Savannakhetiin toista Thaimaan–Laosin ystävyydensiltaa pitkin.',
+    },
+    'Nakhon Pathom': {
+      lyhyt: 'Nakhon Pathomin Phra Pathommachedi on Thaimaan korkein stupa, noin 120 metriä, ja sen kellonmuotoinen kupoli näkyy kaupungissa joka suuntaan.',
+    },
+    'Nakhon Phanom': {
+      lyhyt: 'Buddhalaisen paaston päättyessä Nakhon Phanomissa lasketaan Mekongille valaistuja veneitä, lai ruea fai, jotka hehkuvat yön pimeydessä.',
+    },
+    'Nakhon Ratchasima': {
+      lyhyt: 'Dan Kwianin kylässä poltetaan keramiikkaa yhä puulla lämmitettävissä anagama-uuneissa, käyttöruukuista savimuraaleihin ja veistoksiin.',
+    },
+    'Nakhon Sawan': {
+      lyhyt: 'Nakhon Sawanissa asuu paljon kiinalaistaustaisia thaimaalaisia, ja kaupungin kiinalaisen uudenvuoden juhlaa on vietetty jo yli sata vuotta.',
+    },
+    'Nakhon Si Thammarat': {
+      lyhyt: 'Wat Phra Mahathatin chedi on Etelä-Thaimaan tärkein buddhalainen muistomerkki, ja se on kuvattu myös maakunnan sinettiin.',
+    },
+    'Nakhon Nayok': {
+      lyhyt: 'Nakhon Nayokin Khun Dan Prakan Chonin betonipato on yli kaksi ja puoli kilometriä pitkä, ja sen harjalla voi kävellä altaan ja laakson välissä.',
+    },
+    Nan: {
+      lyhyt: 'Nanin Wat Phuminin thai lue -seinämaalausten kuuluisimpia kohtauksia on mies, joka kuiskaa jotakin naisen korvaan.',
+    },
+    Narathiwat: {
+      lyhyt: 'Talo Manon moskeija on rakennettu tiikistä ilman ainuttakaan naulaa, ja se on yksi Thaimaan vanhimmista moskeijoista.',
+    },
+    'Nong Bua Lam Phu': {
+      lyhyt: 'Wat Tham Erawanin luolatemppeliin kiivetään 600 porrasta, ja luolan suulla istuva suuri Buddha näkyy kauas riisipelloille.',
+    },
+    'Nong Khai': {
+      lyhyt: 'Nong Khain Mekong-rannoilla väki odottaa lokakuussa naga-tulipalloja, punertavia valoja, joiden uskotaan nousevan joessa asuvasta käärmeestä.',
+    },
+    Nonthaburi: {
+      lyhyt: 'Chao Phraya -joen Ko Kret -saarella asuu mon-kansaa, joka elää yhä saviruukkujen valmistuksesta, ja saarelle kuljetaan lautalla.',
+    },
+    'Pathum Thani': {
+      lyhyt: 'Pathum Thanin Talaad Thai on Kaakkois-Aasian suurin maataloustuotteiden tukkutori, ja se on auki vuorokauden ympäri.',
+    },
+    Pattani: {
+      lyhyt: 'Sai Buri -joen rannoilla keinuvat kolae-kalastusveneet, joiden keula ja perä on maalattu kirjaviksi malaijilaisin, thaimaalaisin ja kiinalaisin kuvioin.',
+    },
+    Phangnga: {
+      lyhyt: 'Phang Ngan lahdella merestä nousee 20-metrinen Ko Tapu -kalliopilari, jota kutsutaan James Bond -saareksi vuoden 1974 elokuvan mukaan.',
+    },
+    Phatthalung: {
+      lyhyt: 'Thale Noin kosteikon vesipuhvelit ovat oppineet uimaan: tulvakaudella ne sukeltavat laiduntamaan veden alla kasvavaa ruohoa.',
+    },
+    Phayao: {
+      lyhyt: 'Kwan Phayao on Pohjois-Thaimaan suurin makeanveden järvi, mutta syvyyttä sillä on vain puolitoista metriä.',
+    },
+    Phetchabun: {
+      lyhyt: 'Phu Thap Boekin rinteillä hmong-viljelijät kasvattavat kaalia, sillä vuoren viileä ilmasto sopii sille paremmin kuin tasangon helle.',
+    },
+    Phetchaburi: {
+      lyhyt: 'Phetchaburi on tunnettu jälkiruoistaan, kuten khanom mo kaeng -vanukkaasta, ja Unesco nimesi sen gastronomian kaupungiksi vuonna 2021.',
+    },
+    Phichit: {
+      lyhyt: 'Bueng Si Fai on Thaimaan viidenneksi suurin makeanveden järvi, ja sen rannalla vartioi jättimäinen krokotiilipatsas Chalawan-tarinan mukaan.',
+    },
+    Phitsanulok: {
+      lyhyt: 'Phitsanulokin Wat Yaissa istuu kullattu Phra Phuttha Chinnarat, jota moni thaimaalainen pitää maan kauneimpana Buddha-kuvana.',
+    },
+    'Phra Nakhon Si Ayutthaya': {
+      lyhyt: 'Ayutthayan kaduilla myydään roti sai maita, ohuita lettuja, joiden sisään kääritään värikästä sokerihattaraa.',
+    },
+    Phrae: {
+      lyhyt: 'Phae Mueang Phi eli aavemaa on eroosion muovaamien sienikivien ja pylväiden kenttä, ja se on ollut suojeltu metsäpuisto vuodesta 1981.',
+    },
+    Phuket: {
+      lyhyt: 'Phuketin kasvisruokajuhlassa meediot lävistävät transsissa poskiaan, ja kasvisruokaa tarjoavat kojut nostavat keltapunaiset jay-liput.',
+    },
+    'Prachin Buri': {
+      lyhyt: 'Prachin Burin sinetissä on bodhipuu, sillä Wat Si Maha Photin puun kerrotaan istutetun noin kaksituhatta vuotta sitten.',
+    },
+    'Prachuap Khiri Khan': {
+      lyhyt: 'Phraya Nakhonin luolassa seisoo vuonna 1890 rakennettu kuninkaallinen paviljonki, ja tiettyinä tunteina sitä valaisee katon aukosta laskeutuva auringonvalo.',
+    },
+    Ranong: {
+      lyhyt: 'Ranong on Thaimaan sateisimpia seutuja, yli 4 500 millimetriä vuodessa, ja sitä kutsutaan kahdeksan sadekuukauden ja neljän aurinkokuukauden kaupungiksi.',
+    },
+    Ratchaburi: {
+      lyhyt: 'Ratchaburi on lohikäärmeruukkujen kaupunki: suuriin kivitavararuukkuihin maalataan kiemurtelevia lohikäärmeitä.',
+    },
+    Rayong: {
+      lyhyt: 'Rayongin rannikon edustalla on Khao Laem Ya–Mu Ko Sametin kansallispuisto, ja sen tunnetuin saari Ko Samet on kuvattu maakunnan sinettiin.',
+    },
+    'Roi Et': {
+      lyhyt: 'Roi Et tarkoittaa kirjaimellisesti sataayhtä, ja kaupungin keskustan järven rannalla nousee 101 metriä korkea näkötorni.',
+    },
+    'Sa Kaeo': {
+      lyhyt: 'Aranyaprathetin Rong Kluea on vilkas rajatori Kambodžan-rajan tuntumassa, ja sen nimi tarkoittaa suolavaraston toria.',
+    },
+    'Sakon Nakhon': {
+      lyhyt: 'Sakon Nakhonin luonnonindigolla värjätty puuvillakangas on suojattu alkuperämerkintä, ja sen sini vaihtelee vaaleasta syvään tummansiniseen.',
+    },
+    'Samut Prakan': {
+      lyhyt: 'Samut Prakanin Erawan-museon jalustalla seisoo 29 metriä korkea ja 250 tonnia painava kolmipäinen pronssinorsu, jonka vatsassa on näyttelysali.',
+    },
+    'Samut Sakhon': {
+      lyhyt: 'Maeklongin rautatie katkeaa Samut Sakhonissa Tha Chin -jokeen, ja matkustajat ylittävät joen lautalla ennen kuin jatkavat seuraavaan junaan.',
+    },
+    'Samut Songkhram': {
+      lyhyt: 'Maeklongin rautatietorilla myyjät vetävät markiisinsa ja vihannesvasunsa pois kiskoilta aina, kun juna lähestyy.',
+    },
+    Saraburi: {
+      lyhyt: 'Wat Phra Phutthabatin kultaisen kotelon alla on puolitoista metriä pitkä kivipainauma, jota pidetään Buddhan jalanjälkenä.',
+    },
+    Satun: {
+      lyhyt: 'Satunista tuli 2018 Thaimaan ensimmäinen Unescon globaali geopark, ja sen kallioista löytyy yli 500 miljoonaa vuotta vanhoja trilobiitteja.',
+    },
+    'Si Sa Ket': {
+      lyhyt: 'Khun Hanin Wat Pa Maha Chedi Kaewiin on muurattu yli puolitoista miljoonaa tyhjää olutpulloa, vihreitä ja ruskeita.',
+    },
+    'Sing Buri': {
+      lyhyt: 'Sing Burin ylpeys on pla chon mae la, käärmepääkala, joka on kotoisin maakunnan läpi virtaavasta Mae La -joesta.',
+    },
+    Songkhla: {
+      lyhyt: 'Samilan rannalla istuu vuonna 1966 valettu pronssinen merenneito kampaamassa hiuksiaan, ja sen koskettamisen sanotaan tuovan onnea.',
+    },
+    Sukhothai: {
+      lyhyt: 'Sukhothain Si Satchanalaissa valmistetaan yhä sangkhalok-keramiikkaa, jota alueen sadat polttouunit tekivät jo 1300-luvulla.',
+    },
+    'Suphan Buri': {
+      lyhyt: 'Tha Chin -joen varren Sam Chukin vanha tori sai 2009 Unescon kulttuuriperintöpalkinnon, kun asukkaat itse kunnostivat sen puiset kauppatalot.',
+    },
+    'Surat Thani': {
+      lyhyt: 'Khao Sokin sademetsässä kukkii Rafflesia kerrii, jonka kukka voi olla lähes metrin levyinen ja haisee mätänevältä lihalta.',
+    },
+    Surin: {
+      lyhyt: 'Surinissa kasvatetaan noin neljännes Thaimaan kesyistä norsuista, ja marraskuun norsujuhlassa norsut kisaavat köydenvedossa ihmisiä vastaan.',
+    },
+    Tak: {
+      lyhyt: 'Umphangin Thi Lo Su -vesiputous on noin 250 metriä korkea ja 450 metriä leveä, ja sitä pidetään Thaimaan suurimpana.',
+    },
+    Trang: {
+      lyhyt: 'Ko Mukin Smaragdiluolaan uidaan 80 metriä pilkkopimeää tunnelia pitkin, ja sen päässä odottaa kallioiden ympäröimä salainen ranta.',
+    },
+    Trat: {
+      lyhyt: 'Ko Chang eli Norsusaari on Thaimaan kolmanneksi suurin saari, ja noin 85 prosenttia siitä kuuluu kansallispuistoon.',
+    },
+    'Ubon Ratchathani': {
+      lyhyt: 'Ubonin kynttiläjuhlassa kaupungin läpi kulkee jättimäisiä vahaveistoksia, joita ei koskaan sytytetä – ne kuljetetaan temppeleihin sadekauden paaston alkaessa.',
+    },
+    'Udon Thani': {
+      lyhyt: 'Nong Han Kumphawapin järvi muuttuu talvella vaaleanpunaiseksi, kun tuhannet lumpeet kukkivat – paikalliset kutsuvat sitä punaisten lootusten mereksi.',
+    },
+    'Uthai Thani': {
+      lyhyt: 'Huai Kha Khaengin luonnonsuojelualue on Unescon maailmanperintöä, ja sen metsissä elää noin 90 luonnonvaraista indokiinantiikeriä.',
+    },
+    Uttaradit: {
+      lyhyt: 'Uttaradit tunnetaan Laplaen durianeista, joilta puuttuu hedelmän tavallinen voimakas haju, ja syyskuussa vietetään langsat-juhlaa.',
+    },
+    Yala: {
+      lyhyt: 'Betongin kellotornin risteyksessä seisoo vuonna 1924 valettu yli kolmemetrinen betoninen postilaatikko, jonka päällä oli aikoinaan radio.',
+    },
+    Yasothon: {
+      lyhyt: 'Yasothonissa ammutaan toukokuun Bun Bang Fai -juhlassa taivaalle kotitekoisia raketteja kutsumaan sadetta riisipelloille.',
+    },
+  },
+  /*
+   * PHL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PHL:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 17 hallinnollista aluetta
+   * (region). Huom. datan nimissä: "Autonomous Region in Muslim Mindanao
+   * (ARMM)" on vuodesta 2019 BARMM, ja "Dinagat Islands (Region XIII)"
+   * on koko Caragan alue (Dinagat on vain yksi sen maakunnista) —
+   * luonnehdinta kertoo siksi Caragan Siargaosta. Vältetty
+   * maastokohteet-phl.js:n aiheet (Apo, Mayon, Banaue, Vigan, Chocolate
+   * Hills, Tubbataha, maanalainen joki, Callao, Paoay, Corregidor).
+   * Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026): Lake Lanao,
+   * Donsol, Ivatan people, Taal Volcano, Giant Lantern Festival, Sinulog,
+   * Sagada/Hanging coffins, Philippine eagle, Siargao, San Juanico
+   * Bridge, Bangui Wind Farm, Coron Island, Jeepney, Cagayan de Oro,
+   * T'nalak, Boracay (sulku 26.4.2018 alkaen), Chavacano.
+   */
+  PHL: {
+    'Autonomous Region in Muslim Mindanao (ARMM)': {
+      lyhyt: 'Lanao-järvi on Filippiinien syvin ja toiseksi suurin järvi, ja sen rannoilla asuvat maranaot, joiden nimi tarkoittaa järven kansaa.',
+    },
+    'Bicol (Region V)': {
+      lyhyt: 'Sorsogonin Donsolissa voi marras–kesäkuussa uida valashaiden, paikallisittain butandingien, rinnalla valvotuilla retkillä.',
+    },
+    'Cagayan Valley (Region II)': {
+      lyhyt: 'Batanesin saarilla ivatanit asuvat kivitaloissa, joiden metrin paksuiset kalkkikiviseinät ja tiheät heinäkatot kestävät taifuunit.',
+    },
+    'CALABARZON (Region IV-A)': {
+      lyhyt: 'Taal-järven keskellä on Tulivuorisaari, ja sen kraatterijärvessä on vielä Vulcan Point – saari järvessä saaressa järvessä.',
+    },
+    'Central Luzon (Region III)': {
+      lyhyt: 'Pampangan San Fernandossa kaupunginosat kilpailevat joka joulukuu jättimäisillä parol-tähtilyhdyillä Ligligan Parul -juhlassa.',
+    },
+    'Central Visayas (Region VII)': {
+      lyhyt: 'Cebu Cityssä tanssitaan tammikuun kolmantena sunnuntaina sinulogia, rumpujen tahtiin etenevää rukoustanssia Santo Niñon kunniaksi.',
+    },
+    'Cordillera Administrative Region (CAR)': {
+      lyhyt: 'Sagadan Echo Valleyssa arkut roikkuvat kalkkikivijyrkänteillä, sillä vainajat on perinteisesti haudattu kallioille eikä maahan.',
+    },
+    'Davao (Region XI)': {
+      lyhyt: 'Davaon kotkakeskuksessa hoidetaan filippiinienkotkia, ja siellä onnistuttiin ensimmäisen kerran kasvattamaan lajin poikanen tarhassa vuonna 1992.',
+    },
+    'Dinagat Islands (Region XIII)': {
+      lyhyt: 'Caragan alueeseen kuuluvan Siargaon Cloud 9 on Filippiinien tunnetuin surffipaikka, jonka paksut aallot kaartuvat onttoiksi putkiksi.',
+    },
+    'Eastern Visayas (Region VIII)': {
+      lyhyt: 'San Juanicon silta kulkee 2,16 kilometriä salmen yli Leytestä Samariin, ja avattaessa 1973 se oli Filippiinien pisin silta.',
+    },
+    'Ilocos (Region I)': {
+      lyhyt: 'Banguin lahden rannalla seisoo yhdessä rivissä kaksikymmentä 70-metristä tuulivoimalaa, jotka kääntyvät kohti merta, josta tuuli puhaltaa.',
+    },
+    'MIMAROPA (Region IV-B)': {
+      lyhyt: 'Coronin lahden pohjassa lepää toisen maailmansodan japanilaisia laivanhylkyjä, ja niiden luo sukelletaan kuudesta yli neljäänkymmeneen metriin.',
+    },
+    'National Capital Region': {
+      lyhyt: 'Manilan kaduilla kulkevat jeepneyt, värikkäiksi maalatut pikkubussit, joiden esikuvina olivat Yhdysvaltain armeijan jättämät sotilasjeepit.',
+    },
+    'Northern Mindanao (Region X)': {
+      lyhyt: 'Cagayan de Oron kaupungin läpi virtaavalla joella lasketaan koskia kumiveneillä ja kajakeilla, ja kisoja järjestetään joka vuosi.',
+    },
+    'SOCCSKSARGEN (Region XII)': {
+      lyhyt: "Lake Sebun t'boli-naiset kutovat abakakuidusta t'nalak-kangasta kuvioihin, jotka he ovat nähneet unissaan.",
+    },
+    'Western Visayas (Region VI)': {
+      lyhyt: 'Boracayn saari suljettiin turisteilta puoleksi vuodeksi 2018, jotta sen viemäröinti ja rannat saatiin kuntoon.',
+    },
+    'Zamboanga Peninsula (Region IX)': {
+      lyhyt: 'Zamboanga Cityssä puhutaan chavacanoa, Aasian ainoaa espanjapohjaista kreolikieltä, ja se on kaupungin virallinen kieli.',
+    },
+  },
 };
