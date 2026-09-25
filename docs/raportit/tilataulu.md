@@ -30,7 +30,7 @@ Ei avoimia kortteja.
 
 **LEPOKÄSKY LÄHETETTY 20:40 (5 h -kiintiö 95 %):** Sisältökirjuri, Linssiseppä ja Natiivi-UI kaikki toimitettu ja idle 20:4x–20:48. Fable ilmoitettu. Build 16:n polku jatkaa. Kiintiö nollautuu 22:30 EEST.
 
-**AJASTETTU (Fable 20:5x): klo 22:31** lähetä Natiivisepälle (local_bf20055b-d582-4812-ba2b-b59c37a5e7b8), Laitetestaajalle (local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1) ja Julkaisijalle (local_22b29f10-7af8-43fc-a974-1d666f716c97) "kiintiö nollautui, jatka build 16 -polkua siitä mihin jäit" ja ilmoita Fablelle. Jos kiintiö täyttyy ennen build 16:n vientiä → ei toimia. GLO-30 ja käännösjuna eivät kuluta kiintiötä. (Muut lepäävät: Sisältökirjuri, Linssiseppä, Natiivi-UI — heidän herätys Fablen asia.)
+**AJASTETTU (Fable 21:2x, korvaa aiemman): klo 22:31** lähetä "kiintiö nollautui, jatka luovutuksesi jonosta" Natiivisepälle (local_bf20055b-d582-4812-ba2b-b59c37a5e7b8; profilointi + lennon esilataus), Linssisepälle (local_45a869de-4d6b-4ed6-a6c9-30fd8442587e), Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86), Natiivi-UI:lle (local_33ba1387-d688-4e44-8e05-10951e61efc0) ja Pelikoodarille (local_97810d35-a79c-484b-8573-660a4c40eaa6), ja ilmoita Fablelle. GLO-30 ja käännösjuna eivät kuluta kiintiötä.
 
 ## 3) Avoimet PR:t
 
@@ -41,8 +41,8 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 4) TestFlight
 
-- Viimeisin build: **15** (1.0.15, 202609251449, proto 4a813e60, ajo 36149871805, laskuri 15) — TestFlightissa, omistajalle ilmoitettu 17:58.
-- Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Seuraava: build 16 -juna (juna/b13 jatkuu, tapahtumaohjattu).
+- Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22, omistajalle ilmoitettu pushilla. Aiempi: build 15 (1.0.15, 202609251449, proto 4a813e60).
+- Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`.
 
 ## 5) Resurssit
 
