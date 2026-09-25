@@ -4935,3 +4935,7 @@ Kuvaparit proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b12-valikko18-no
 ## OMISTAJA klo 04.1x: KLO 08 JUNAKAANNOS AIKAISTETAAN — juna/b12 03b7ed4 KAANTYI JO 04.07 (KAANNOSPALVELU, xcodebuild-VAIHE, VALMIS ~04.25) → LAITETESTAAJAN SAVUKIERROS HETI ASENNUKSEN JALKEEN → NATIIVISEPPA BUILD → JULKAISIJA 1.0.12 ~05–05.30; MACIN KUORMA ~90 (xcodebuild + E28 AMPARIVIENTI) (25.9.2026 klo 04.10)
 
 Perustelu: juna koossa, savutesti läpi, sessiot hereillä; klo 08 oli vain 2 h ajastimen seuraava lyönti. Punainen, joka ei ole build-este, ei pysäytä BUILDia (korjaus b13:een).
+
+## FABLE: KLO 04:N TESTFLIGHT-YOAJO OHITETAAN TANA YONA (OLISI VIENYT VANHEMMAN MASTERIN 4753536 SAMALLA 1.0.12-NUMEROLLA) — VAIN JUNAN BUILD 12 = 1.0.12 ORDINAALILLA 12; YOAJO PALAA SEURAAVANA YONA (25.9.2026 klo 04.11)
+
+Julkaisijan huomio klo 04.2x: GitHubin viive, yöajo ei vielä käynnistynyt.
