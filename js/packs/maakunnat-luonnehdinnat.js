@@ -12203,4 +12203,391 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Rivasin kannaksella Nicaraguajärveä ja Tyyntämerta erottaa vain noin 20 kilometrin kaistale maata.',
     },
   },
+  /*
+   * CUB (erä 9D). Avaimet MAAKUNNAT_KAIKKI.CUB:n tunnuksia TÄSMÄLLEEN,
+   * kopioitu koneellisesti ("Ciudad de la Habana" = Havanna). Vain `lyhyt`.
+   * Maastokohteiden (Turquino, Cauto, Nuorisonsaari, Trinidad, Viñales,
+   * San Pedro de la Roca, Cienfuegosin kaupunki, Camagüeyn tinajón,
+   * Baracoa, Hersheyn rata, Bayamo) aiheita vältetty. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Artemisa — Las Terrazas; Camagüey — Playa Santa Lucía (haku);
+   *   Ciego de Ávila — Cayo Coco; Cienfuegos — Jardín Botánico de
+   *   Cienfuegos; Granma — Desembarco del Granma National Park;
+   *   Guantánamo — Alejandro de Humboldt National Park; Ciudad de la
+   *   Habana — Malecón, Havana; Holguín — El Chorro de Maita; Isla de la
+   *   Juventud — Presidio Modelo; Las Tunas — Las Tunas (city);
+   *   Matanzas — Varadero; Mayabeque — Mayabeque Province; Pinar del
+   *   Río — Vuelta Abajo; Sancti Spíritus — Zaza Reservoir; Santiago de
+   *   Cuba — El Cobre (Basílica de la Caridad del Cobre); Villa Clara —
+   *   Parrandas, Remedios
+   */
+  CUB: {
+    "Artemisa": {
+      lyhyt: "Las Terrazasin kylä on Sierra del Rosarion rinteillä, joiden paljaaksi hakatut mäet metsitettiin uudelleen erosiota estävien terassien avulla.",
+    },
+    "Camagüey": {
+      lyhyt: "Santa Lucían hiekkarantoja suojaa koralliriutta, joka kulkee lähes kahden kilometrin päässä rannasta – sinne mennään veneellä.",
+    },
+    "Ciego de Ávila": {
+      lyhyt: "Cayo Cocon saarelle ajetaan 27 kilometrin pengertietä suoraan Perros-lahden yli; tie avattiin vuonna 1988.",
+    },
+    "Cienfuegos": {
+      lyhyt: "Cienfuegosin kasvitieteellinen puutarha perustettiin 1901 sokeriruokotutkimusta varten, ja sen 97 hehtaarilla kasvaa yli 1 400 lajia.",
+    },
+    "Granma": {
+      lyhyt: "Cabo Cruzin rannikolla kalkkikiviterassit nousevat portaittain merestä vuorille, ja ne ovat Unescon maailmanperintöä.",
+    },
+    "Guantánamo": {
+      lyhyt: "Alejandro de Humboldtin kansallispuiston vuoristometsissä elää poikkeuksellisen paljon kasveja ja eläimiä, joita ei tavata muualla.",
+    },
+    "Ciudad de la Habana": {
+      lyhyt: "Havannan Malecón kiertää rantaa kahdeksan kilometriä, ja iltaisin sen muurilla istutaan katsomassa aaltojen iskuja.",
+    },
+    "Holguín": {
+      lyhyt: "Guardalavacan lähellä Chorro de Maítassa on kaivettu esiin alkuperäisasukkaiden kylä ja hautausmaa noin vuosilta 1300–1550.",
+    },
+    "Isla de la Juventud": {
+      lyhyt: "Saaren Presidio Modelo -vankila rakennettiin 1926–1931 viidestä pyöreästä sellirakennuksesta, ja nyt se on museo.",
+    },
+    "Las Tunas": {
+      lyhyt: "Las Tunasia kutsutaan veistosten kaupungiksi, sillä sen keskustan kaduilla ja aukioilla on paljon julkisia veistoksia.",
+    },
+    "Matanzas": {
+      lyhyt: "Varaderon kapea Hicacosin niemimaa työntyy yli 20 kilometriä mereen, ja sen kärki on Kuuban pohjoisin kohta.",
+    },
+    "Mayabeque": {
+      lyhyt: "Mayabeque sai nimensä joestaan, ja sen etelärannalle uskotaan perustetun vuonna 1514 ensimmäinen Havanna.",
+    },
+    "Pinar del Río": {
+      lyhyt: "Vuelta Abajon tasangoilla kasvatetaan tupakkaa, jota moni sikarinpolttaja pitää maailman parhaana.",
+    },
+    "Sancti Spíritus": {
+      lyhyt: "Zazan tekojärvi on Kuuban suurin: vuonna 1971 valmistunut pato pidättää noin 750 miljoonaa kuutiometriä vettä.",
+    },
+    "Santiago de Cuba": {
+      lyhyt: "El Cobren kylässä vanhan kuparikaivoksen vieressä on basilika, jossa on Kuuban suojeluspyhimyksen Caridad del Cobren kuva.",
+    },
+    "Villa Clara": {
+      lyhyt: "Remediosin parrandoissa jouluaattona kaupunginosat San Salvador ja El Carmen kilpailevat valaistuilla lavoilla ja ilotulituksilla.",
+    },
+  },
+  /*
+   * PAN (erä 9D). Avaimet MAAKUNNAT_KAIKKI.PAN:n tunnuksia TÄSMÄLLEEN
+   * (vanhat Natural Earth -nimet: "Kuna Yala" = Guna Yala, "Emberá" =
+   * Emberá-Wounaanin comarca, "Ngöbe Buglé" = Ngäbe-Buglé; Panamá Oeste
+   * puuttuu jaosta). Vain `lyhyt`. Maastokohteiden (Barú, Coiba, Chagres,
+   * Portobelo, rautatie, El Caño, Guna Yala, Los Santos, Bocas del Toro,
+   * Dariénin aukko, Helmisaaret) aiheita vältetty. Lähteet (en-Wikipedia
+   * ja haku 25.9.2026):
+   *   Bocas del Toro — Oophaga pumilio; Chiriquí — Geisha (coffee);
+   *   Coclé — El Valle de Antón; Colón — Colón Free Trade Zone; Darién —
+   *   Darién National Park; Emberá — Emberá-Wounaan Comarca; Kuna Yala —
+   *   Mola (art form); Herrera — Sarigua National Park; Los Santos — Las
+   *   Tablas, Los Santos; Ngöbe Buglé — Ngäbe-Buglé Comarca; Panama —
+   *   Panamá Viejo; Veraguas — Veraguas Province
+   */
+  PAN: {
+    "Bocas del Toro": {
+      lyhyt: "Saariston pienen mansikkamyrkkysammakon väritys vaihtelee saaresta toiseen, koska eristyneet kannat ovat kehittyneet kukin omaan suuntaansa.",
+    },
+    "Chiriquí": {
+      lyhyt: "Boqueten rinteiltä tuleva geisha-kahvi on myyty huutokaupoissa ennätyshintoihin, parhaimmillaan yli tuhannella dollarilla kilolta.",
+    },
+    "Coclé": {
+      lyhyt: "El Vallen kaupunki on rakennettu sammuneen tulivuoren kuuden kilometrin levyiseen kalderaan noin 600 metrin korkeudelle.",
+    },
+    "Colón": {
+      lyhyt: "Kanavan Karibian puoleiseen suuhun vuonna 1948 perustettu Colónin vapaakauppa-alue on Amerikan suurin vapaasatama.",
+    },
+    "Darién": {
+      lyhyt: "Dariénin kansallispuisto on 5 790 neliökilometrin Unescon maailmanperintökohde, jonka sisällä asuu yhä alkuperäiskansoja.",
+    },
+    "Emberá": {
+      lyhyt: "Emberá-Wounaanin comarca perustettiin 1983, ja se koostuu kahdesta erillisestä osasta Dariénin sademetsissä.",
+    },
+    "Kuna Yala": {
+      lyhyt: "Gunanaisten mola-paneelit tehdään leikkaamalla päällekkäisiä kangaskerroksia niin, että alempien kerrosten värit tulevat esiin.",
+    },
+    "Herrera": {
+      lyhyt: "Parita-lahden rannalla Sariguan kansallispuistossa on vuosisatojen metsänraivauksen autioittamaa maata, jota kutsutaan Panaman aavikoksi.",
+    },
+    "Los Santos": {
+      lyhyt: "Las Tablasin karnevaaleissa Calle Arriba ja Calle Abajo kilpailevat keskenään, ja kummallakin puolella on oma kuningattarensa.",
+    },
+    "Ngöbe Buglé": {
+      lyhyt: "Ngäbe-Buglé on Panaman kuudesta comarcasta suurin ja väkirikkain, ja sen vuoristossa asuu yli 200 000 ihmistä.",
+    },
+    "Panama": {
+      lyhyt: "Panamá Viejon rauniot ovat jäänteitä vuonna 1519 perustetusta ensimmäisestä pysyvästä eurooppalaisesta kaupungista Tyynenmeren rannalla.",
+    },
+    "Veraguas": {
+      lyhyt: "Veraguas on Panaman ainoa maakunta, jolla on rantaa sekä Karibianmerellä että Tyynellämerellä.",
+    },
+  },
+  /*
+   * HKG (erä 9D). Avaimet MAAKUNNAT_KAIKKI.HKG:n tunnuksia TÄSMÄLLEEN
+   * (Hongkongin 18 piiriä englanniksi, myös nimiFi suomentamatta). Vain
+   * `lyhyt`. Maastokohteiden (muurikaupunki, Tai O, Tung Chungin linnake,
+   * Tai Fu Tai, Tai Mo Shan, Lantau) aiheita vältetty. Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Central and Western — Central–Mid-Levels escalator; Eastern —
+   *   Monster Building; Islands — Cheung Chau Bun Festival; Kowloon City —
+   *   Kai Tak Airport; Kwai Tsing — Kwai Tsing Container Terminals; Kwun
+   *   Tong — Lei Yue Mun; North — Lung Yeuk Tau; Sai Kung — Hong Kong
+   *   UNESCO Global Geopark; Sha Tin — Ten Thousand Buddhas Monastery;
+   *   Sham Shui Po — Shek Kip Mei fire; Southern — Ocean Park Hong Kong;
+   *   Tai Po — Hong Kong Railway Museum; Tsuen Wan — Sam Tung Uk Museum;
+   *   Tuen Mun — Tsing Shan Monastery; Wan Chai — Happy Valley Racecourse;
+   *   Wong Tai Sin — Wong Tai Sin Temple; Yau Tsim Mong — Clock Tower,
+   *   Hong Kong; Yuen Long — Mai Po Marshes
+   */
+  HKG: {
+    "Central and Western": {
+      lyhyt: "Centralista Mid-Levelsiin nousee 800 metrin katettu liukuporrasreitti, joka kulkee aamulla alamäkeen ja muun päivän ylämäkeen.",
+    },
+    "Eastern": {
+      lyhyt: "Quarry Bayn viisi toisiinsa kiinni rakennettua kerrostaloa, lempinimeltään Monster Building, ovat noin 10 000 ihmisen koti.",
+    },
+    "Islands": {
+      lyhyt: "Cheung Chaun pullajuhlassa pystytetään pullilla peitettyjä torneja, ja juhlan aikana koko saari syö kolme päivää kasvisruokaa.",
+    },
+    "Kowloon City": {
+      lyhyt: "Kai Takin lentoasema suljettiin 1998, ja sen vanhan kiitotien kärjessä on nyt risteilyalusten satama.",
+    },
+    "Kwai Tsing": {
+      lyhyt: "Kwai Chungin ja Tsing Yin väliselle täytemaalle on rakennettu yhdeksän konttiterminaalia, joissa on yhteensä 27 laituripaikkaa.",
+    },
+    "Kwun Tong": {
+      lyhyt: "Lei Yue Munin kalastajakylä Victorian sataman itäsuulla on tunnettu kalatoristaan ja merenelävien ravintoloistaan.",
+    },
+    "North": {
+      lyhyt: "Fanlingin Lung Yeuk Taussa kulkee perintöpolku, joka yhdistää Tang-suvun viisi muurein ympäröityä kylää.",
+    },
+    "Sai Kung": {
+      lyhyt: "High Islandin rantakallioissa näkyy kuusikulmaisia vulkaanisia kivipylväitä, jotka kuuluvat Hongkongin Unesco-geopuistoon.",
+    },
+    "Sha Tin": {
+      lyhyt: "Kymmenentuhannen Buddhan luostariin kiivetään 431 porrasta, ja Buddha-patsaita on lopulta lähes 13 000.",
+    },
+    "Sham Shui Po": {
+      lyhyt: "Shek Kip Mein hökkelikylän tulipalo jouluna 1953 jätti yli 53 000 ihmistä kodittomiksi ja käynnisti julkisen asuntorakentamisen.",
+    },
+    "Southern": {
+      lyhyt: "Ocean Park -huvipuisto avattiin 1977, ja sen puolentoista kilometrin köysirata kulkee rannalta niemen huipulle.",
+    },
+    "Tai Po": {
+      lyhyt: "Tai Po Marketin vanha rautatieasema vuodelta 1913 on nykyään rautatiemuseo.",
+    },
+    "Tsuen Wan": {
+      lyhyt: "Sam Tung Uk on hakkalaisen Chan-suvun 1786 rakentama muurikylä, joka toimii nykyään museona.",
+    },
+    "Tuen Mun": {
+      lyhyt: "Castle Peakin juurella on Tsing Shanin luostari, jonka taru kertoo maljalla matkanneesta munkki Pui Tosta.",
+    },
+    "Wan Chai": {
+      lyhyt: "Happy Valleyn laukkaradalla kilpaillaan yleensä keskiviikkoiltaisin, ja katsomoihin mahtuu noin 55 000 ihmistä.",
+    },
+    "Wong Tai Sin": {
+      lyhyt: "Wong Tai Sinin temppelissä ravistellaan bambuputkea, kunnes yksi ennustetikku putoaa ja tulkitsija kertoo sen merkityksen.",
+    },
+    "Yau Tsim Mong": {
+      lyhyt: "Tsim Sha Tsuin rannassa seisoo 44-metrinen kellotorni vuodelta 1915, ainoa jäänne puretusta Kowloonin rautatieasemasta.",
+    },
+    "Yuen Long": {
+      lyhyt: "Mai Pon soilla talvehtii kymmeniä tuhansia muuttolintuja, ja niiden ruoaksi hoidetaan perinteisiä gei wai -katkaraputekolampia.",
+    },
+  },
+  /*
+   * TWN (erä 9D). Avaimet MAAKUNNAT_KAIKKI.TWN:n tunnuksia TÄSMÄLLEEN
+   * (piirikunnat ja kaupungit erikseen, esim. "Chiayi" ja "Chiayi City").
+   * Vain `lyhyt`. Maastokohteiden (Yu Shan, salmi, Taroko, Santo Domingo,
+   * Jiufen, Lukang, Chaotian, Fort Zeelandia, Wushantou, Sanxiantai,
+   * Penghun saaristo) aiheita vältetty. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026):
+   *   Changhua — Changhua Roundhouse; Chiayi — Alishan National Scenic
+   *   Area; Chiayi City — Hinoki Village; Hsinchu — Beipu, Hsinchu;
+   *   Hsinchu City — Hsinchu (Windy City) ja haku (riisinuudelit);
+   *   Hualien — Liushidan Mountain (haku, East Rift Valley NSA); Kaohsiung
+   *   City — Dragon and Tiger Pagodas; Keelung City — Keelung; Kinmen —
+   *   wind lion gods (haku, Kinmen Travel); Miaoli — Sanyi, Miaoli;
+   *   Nantou — Sun Moon Lake; Penghu — Twin Hearts Stone Weir (haku);
+   *   Pingtung — Kenting National Park; Taichung City — National Taichung
+   *   Theater; Tainan City — Tainan Confucian Temple; Taipei City — Taipei
+   *   101; Taitung — Orchid Island; Taoyuan — Taoyuan International
+   *   Airport; New Taipei City — Yehliu; Yilan — Guishan Island;
+   *   Yunlin — Xiluo Bridge
+   */
+  TWN: {
+    "Changhua": {
+      lyhyt: "Changhuan viuhkanmuotoinen veturitalli vuodelta 1922 on Taiwanin ainoa säilynyt, ja sen kääntöpöydän ympärillä huolletaan yhä vetureita.",
+    },
+    "Chiayi": {
+      lyhyt: "Alishanin vuorilla aamuaurinko nousee pilvimeren yläpuolelle, ja metsissä kasvaa ikivanhoja jättiläissypressejä.",
+    },
+    "Chiayi City": {
+      lyhyt: "Hinoki Villagessa on kunnostettu 28 japanilaisajan puutaloa, joissa asuivat aikoinaan Alishanin metsätalouden virkailijat.",
+    },
+    "Hsinchu": {
+      lyhyt: "Beipun pikkukaupungin asukkaista 98 prosenttia on hakkoja, ja siellä juodaan lei chaa, teestä ja pähkinöistä jauhettua juomaa.",
+    },
+    "Hsinchu City": {
+      lyhyt: "Hsinchu on tuulen kaupunki: syksyn koillismonsuuni puhaltaa niin tasaisesti, että sen riisinuudelit on perinteisesti kuivattu tuulessa.",
+    },
+    "Hualien": {
+      lyhyt: "Fulin Liushidan-vuoren ylätasanko muuttuu loppukesällä oranssiksi, kun päivänliljat kukkivat – kukista keitetään myös keittoa.",
+    },
+    "Kaohsiung City": {
+      lyhyt: "Lootusjärvellä seisovat 1976 rakennetut seitsenkerroksiset Lohikäärme- ja Tiikeripagodit, joille kuljetaan siksak-siltaa pitkin.",
+    },
+    "Keelung City": {
+      lyhyt: "Keelungia kutsutaan sadesatamaksi, sillä vettä sataa keskimäärin yli 3 700 millimetriä vuodessa.",
+    },
+    "Kinmen": {
+      lyhyt: "Kinmenin kylien laidoilla seisoo kymmeniä kivisiä tuulileijonia, joiden uskotaan suojaavan kylää tuulelta ja pahalta.",
+    },
+    "Miaoli": {
+      lyhyt: "Sanyita kutsutaan Taiwanin puunveiston kuningaskunnaksi, ja kaupungin puuveistosmuseo kertoo taidon historiasta.",
+    },
+    "Nantou": {
+      lyhyt: "Aurinko- ja kuujärvi on Taiwanin suurin vesistö, ja sen keskellä olevaa Lalun saarta thao-kansa pitää pyhänä.",
+    },
+    "Penghu": {
+      lyhyt: "Qimein saaren Kaksoissydänten kalapato on kivistä ja korallista ladottu allaspari, johon kalat jäävät laskuveden aikaan.",
+    },
+    "Pingtung": {
+      lyhyt: "Kentingin kansallispuisto perustettiin 1984 Taiwanin ensimmäiseksi, ja siellä elää 26 maarapulajia.",
+    },
+    "Taichung City": {
+      lyhyt: "Toyo Iton suunnittelema Taichungin kansallisteatteri vihittiin 2016, ja sen kaarevat seinät muodostavat luolamaisia tiloja.",
+    },
+    "Tainan City": {
+      lyhyt: "Tainanin Konfutsen temppeli rakennettiin 1665, ja se oli Taiwanin ensimmäinen konfutselainen oppilaitos.",
+    },
+    "Taipei City": {
+      lyhyt: "Taipei 101 on 508 metriä korkea, ja vuosina 2004–2010 se oli maailman korkein rakennus.",
+    },
+    "Taitung": {
+      lyhyt: "Orkideasaarella tao-kansa rakentaa yhä tatala-kanootteja, ja lentokalat ovat keskeinen osa saaren ruokaa ja perinteitä.",
+    },
+    "Taoyuan": {
+      lyhyt: "Taoyuanin kansainvälinen lentoasema avattiin 1979, ja se on Taiwanin suurin ja vilkkain lentoasema.",
+    },
+    "New Taipei City": {
+      lyhyt: "Yehliun niemellä meri on kuluttanut kivestä Kuningattaren pään, jonka kapea kaula ohenee vuosi vuodelta.",
+    },
+    "Yilan": {
+      lyhyt: "Guishanin saari Yilanin edustalla muistuttaa uivaa kilpikonnaa, ja se on Taiwanin ainoa aktiivinen tulivuori.",
+    },
+    "Yunlin": {
+      lyhyt: "Xiluon silta ylittää Zhuoshui-joen 1 939 metrin matkalta, ja se vihittiin käyttöön tammikuussa 1953.",
+    },
+  },
+  /*
+   * PRK (erä 9D). Avaimet MAAKUNNAT_KAIKKI.PRK:n tunnuksia TÄSMÄLLEEN
+   * (McCune–Reischauer-latinisointi, ŏ = U+014F, heittomerkki ASCII).
+   * Vain `lyhyt`, vain maisema, kulttuuri ja historia. Lähteet
+   * (en-Wikipedia 25.9.2026):
+   *   Chagang-do — Chagang Province; Hamgyŏng-namdo — Hamhung Royal
+   *   Villa; Hwanghae-namdo — Mount Kuwol; P'yŏngan-namdo — Songam
+   *   Cavern; Kangwŏn-do — Kumgangsan; P'yŏngyang — Pyongyang Metro;
+   *   Hamgyŏng-bukto — Chilbosan (North Hamgyong); Hwanghae-bukto —
+   *   Historic Monuments and Sites in Kaesong; P'yŏngan-bukto — Pohyonsa;
+   *   Rasŏn — North Korea–Russia border; Ryanggang — Heaven Lake
+   */
+  PRK: {
+    "Chagang-do": {
+      lyhyt: "Chagangin maakunnasta 98 prosenttia on vuoristoa, ja sen rajaa Kiinaa vasten seuraa Amnok- eli Yalujoki.",
+    },
+    "Hamgyŏng-namdo": {
+      lyhyt: "Hamhŭngin kuninkaallisessa huvilassa asui Joseon-dynastian perustaja Yi Seong-gye ennen kuin hänestä tuli kuningas.",
+    },
+    "Hwanghae-namdo": {
+      lyhyt: "Kuwolsan-vuoren nimi viittaa kuukalenterin yhdeksänteen kuukauteen, jolloin vuoren sanotaan olevan kauneimmillaan.",
+    },
+    "P'yŏngan-namdo": {
+      lyhyt: "Songamin tippukiviluola löydettiin 1964 malminetsinnässä, ja sen käytäviä on yhteensä yli viisi kilometriä.",
+    },
+    "Kangwŏn-do": {
+      lyhyt: "Kŭmgangsanin eli Timanttivuorten korkein huippu kohoaa itärannikolla 1 638 metriin, ja vanhastaan huippuja on sanottu olevan 12 000.",
+    },
+    "P'yŏngyang": {
+      lyhyt: "Pjongjangin metro kulkee yli sadan metrin syvyydessä, ja liukuportailla laiturille kestää noin kolme ja puoli minuuttia.",
+    },
+    "Hamgyŏng-bukto": {
+      lyhyt: "Ch'ilbosan eli Seitsemän aarteen vuori jakautuu sisä-, ulko- ja meri-Ch'ilboon, ja sen rinteillä on 800-luvulta periytyvä temppeli.",
+    },
+    "Hwanghae-bukto": {
+      lyhyt: "Kaesŏng oli Koryŏ-dynastian pääkaupunki 900–1300-luvuilla, ja sen palatsien ja hautojen jäänteet ovat Unescon maailmanperintöä.",
+    },
+    "P'yŏngan-bukto": {
+      lyhyt: "Myohyangsanin vuorilla on vuonna 1024 perustettu Pohyŏnin luostari, jonka yhdeksänkerroksinen pagodi on vuodelta 1044.",
+    },
+    "Rasŏn": {
+      lyhyt: "Rasŏnissa Tumenjoen suulla kulkee Pohjois-Korean ja Venäjän raja, jonka maaosuus on vain 17 kilometriä.",
+    },
+    "Ryanggang": {
+      lyhyt: "Paektusanin kraaterissa 2 189 metrin korkeudella on Taivaanjärvi, joka syntyi tulivuoren purkauksessa vuonna 946.",
+    },
+  },
+  /*
+   * TJK (erä 9D). Avaimet MAAKUNNAT_KAIKKI.TJK:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanhat nimet: "Leninabad" = Sughdin alue,
+   * "Tadzhikistan Territories" = tasavallan alaiset piirit). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Dushanbe — Dushanbe; Gorno-Badakhshan — Pamir Highway;
+   *   Tadzhikistan Territories — Hisor Fortress (haku, Hisor,
+   *   Tajikistan); Khatlon — Nurek Dam; Leninabad — Khujand
+   */
+  TJK: {
+    "Dushanbe": {
+      lyhyt: "Dušanbe tarkoittaa persiaksi maanantaita, sillä kaupunki kasvoi paikalle, jossa pidettiin joka maanantai suuret markkinat.",
+    },
+    "Gorno-Badakhshan": {
+      lyhyt: "Pamirin valtatie kiipeää Ak-Baitalin solaan 4 655 metriin, ja se on maailman toiseksi korkein kansainvälinen maantie.",
+    },
+    "Tadzhikistan Territories": {
+      lyhyt: "Hisorin laaksossa Dušanben länsipuolella seisoo linnoituksen portti kahden pyöreän tornin välissä, ja vieressä on 1500-luvun madrasa.",
+    },
+    "Khatlon": {
+      lyhyt: "Nurekissa Vahš-jokea patoaa 300 metriä korkea pato, joka tuottaa noin 70 prosenttia Tadžikistanin sähköstä.",
+    },
+    "Leninabad": {
+      lyhyt: "Hudžandin paikalle Aleksanteri Suuri perusti vuonna 329 eaa. kaupungin, jonka nimi oli Aleksandria Eshate eli Äärimmäinen Aleksandria.",
+    },
+  },
+  /*
+   * KGZ (erä 9D). Avaimet MAAKUNNAT_KAIKKI.KGZ:n tunnuksia TÄSMÄLLEEN
+   * ("Ysyk-Köl" ö = U+00F6). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026):
+   *   Batken — Aigul-Tash / Fritillaria eduardii (haku); Bishkek —
+   *   Bishkek; Chuy — Burana Tower; Naryn — Tash Rabat; Osh — Sulayman
+   *   Mountain; Talas — Manas Ordo / Gumbez of Manas (haku); Ysyk-Köl —
+   *   Issyk-Kul; Jalal-Abad — Arslanbob
+   */
+  KGZ: {
+    "Batken": {
+      lyhyt: "Aigul-Tashin rinne Batkenin lähellä muuttuu huhtikuussa parin viikon ajaksi oranssiksi, kun aigul-kukat aukeavat, ja vuori on suojeltu niiden vuoksi.",
+    },
+    "Bishkek": {
+      lyhyt: "Biškekin nimi tulee puisesta männästä, jolla käyvää tammanmaitoa kirnutaan, ja kaupungin takana kohoaa Kirgisian Ala-Toon vuorijono.",
+    },
+    "Chuy": {
+      lyhyt: "Tokmokin lähellä seisoo 1000-luvulla rakennettu Buranan minareetti, jonka korkeus on maanjäristysten jäljiltä enää 25 metriä.",
+    },
+    "Naryn": {
+      lyhyt: "Tash Rabatin kivinen karavaaniseraiji on 3 200 metrin korkeudella vuoristolaaksossa, ja sen sisällä on 31 huonetta.",
+    },
+    "Osh": {
+      lyhyt: "Sulaiman-Too-vuori keskellä Ošia on Kirgisian ainoa kokonaan maan omalla alueella oleva Unescon maailmanperintökohde.",
+    },
+    "Talas": {
+      lyhyt: "Talasin Manas-kumbez on 1300-luvun hautamuistomerkki, jonka kirjoitus omistaa sen naiselle, vaikka kansa pitää sitä Manaksen hautana.",
+    },
+    "Ysyk-Köl": {
+      lyhyt: "Ysyk-Köl on 1 607 metrin korkeudella vuorten keskellä, mutta suolaisen vetensä vuoksi se jäätyy vain harvoin.",
+    },
+    "Jalal-Abad": {
+      lyhyt: "Arslanbobin 11 000 hehtaarin saksanpähkinämetsä on maailman suurin, ja syyskuussa kylä lähtee keräämään pähkinöitä.",
+    },
+  },
 };
