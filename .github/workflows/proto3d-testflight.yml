@@ -211,12 +211,25 @@ jobs:
             mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
             echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
           fi
-          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
-            zsh tyokalut/unity-vahti.sh tulokset/yo.log \
-            -batchmode -nographics -quit -projectPath . -buildTarget iOS \
-            -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+          # Kohtaus generoidaan koodista ennen vientiä kuten käännöspalvelussa (proto-kaanna.sh):
+          # masterin Pallo.unity ei ole aina tuore (build 13: kohtausta ei committoitu mergessä),
+          # ja IosTestFlight kutsuu LuoPalloa vain, jos kohtaustiedosto puuttuu.
+          zsh tyokalut/unity-vahti.sh tulokset/yo-luo.log \
+            -batchmode -nographics -quit -projectPath . -executeMethod Matkakirja.Editori.Rakennus.LuoPallo
           tila=$?
-          git checkout -- ProjectSettings/ProjectSettings.asset Assets/Matkakirja/Materiaalit/ || echo "::warning::ProjectSettingsin tai Materiaalien palautus epäonnistui"
+          if [ $tila -eq 0 ] && grep -q "error CS\|Aborting batchmode" tulokset/yo-luo.log; then tila=15; fi
+          if [ $tila -eq 0 ]; then
+            MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
+              zsh tyokalut/unity-vahti.sh tulokset/yo.log \
+              -batchmode -nographics -quit -projectPath . -buildTarget iOS \
+              -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+            tila=$?
+          else
+            echo "LuoPallo kaatui ($tila):"; grep -E "error CS|MATKAKIRJA:" tulokset/yo-luo.log | sort -u | tail -10 || true
+          fi
+          # Vienti ja LuoPallo kirjoittavat Assets/- ja ProjectSettings-tiedostoja: käännöskopio
+          # palautetaan puhtaaksi masteriksi (kuten proto-kaanna.sh ajon alussa).
+          { git reset -q --hard && git clean -fdq Assets/ ProjectSettings/; } || echo "::warning::Käännöskopion palautus epäonnistui"
           if [ $tila -ne 0 ]; then
             echo "$(date '+%Y-%m-%d %H:%M') VIENTI KAATUI ($tila), ks. $PROJEKTI/tulokset/yo.log" | tee -a "$YOLOKI"
             grep -E "MATKAKIRJA:|error" tulokset/yo.log | tail -20 || true
