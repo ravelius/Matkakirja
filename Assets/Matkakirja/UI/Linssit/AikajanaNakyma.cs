@@ -353,8 +353,10 @@ namespace Matkakirja.Natiivi
             var p = ylarivi.panel;
             bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
             ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
-            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet })
+            var virrat = tutkimus?.Rivi;
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat })
             {
+                if (e == null) continue;
                 e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
                 e.style.left = e.style.right = e.style.top = e.style.height = StyleKeyword.Null;
             }
@@ -379,6 +381,17 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.left = r.x + reuna;
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
+            // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
+            // niille ei ole tilaa, joten ne siirtyvät toiselle riville vuosiluvun oikealle puolelle (muuten ne
+            // jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle).
+            if (virrat != null)
+            {
+                float kellonLeveys = float.IsNaN(kelloRuutu.layout.width) || kelloRuutu.layout.width <= 0 ? 90f : kelloRuutu.layout.width;
+                virrat.style.left = r.x + reuna + kellonLeveys + 8f * yksikko;
+                virrat.style.right = r.z + reuna;
+                virrat.style.top = rivi2;
+                virrat.style.height = kellonKorkeus;
+            }
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
             ylarivi.style.height = korkeus;
             palkki = korkeus - r.y;
