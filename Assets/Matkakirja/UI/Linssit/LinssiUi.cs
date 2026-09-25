@@ -185,11 +185,17 @@ namespace Matkakirja.Natiivi
             Auki = linssi;
             bool paalla = linssi != null;
             string id = linssi?.Tiedot?.Id;
-            ui.Kartuscha.NaytaSallittu(!paalla);
-            ui.Nostot.NaytaSallittu(!paalla);
+            // Pelikerrokset linssikohtaisesti webin mukaan (Linssisepän pariteettiajo b13-linssit, css/styles.css):
+            // porttilinssit (body.aikajana-paalla) piilottavat kaiken; vertailu (body.vertailu-tila) matkakirjan,
+            // toiminnot ja nostot, maapaneeli jää; radio (body.radio-tila) matkakirjan, toiminnot ja kohteet;
+            // vesistöt, maatiedot ja isoisä pitävät pelikerrokset näkyvissä.
+            bool portti = paalla && System.Linq.Enumerable.Contains(Linssirekisteri.PorttiLinssit, id);
+            bool vertailu = id == "vertailu", radio = id == "radio";
+            ui.Kartuscha.NaytaSallittu(!portti);
+            ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
             ui.OfflineTila.NaytaSallittu(!paalla);
-            ui.Matkavalinta.NaytaSallittu(!paalla);
-            ui.Matkakirja.NaytaSallittu(!paalla);
+            ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
+            ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
             bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
