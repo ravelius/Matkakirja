@@ -57865,8 +57865,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Golden Gate Bridge as seen from Marshall’s Beach, March 2018.jpg',
-          lyhyt: 'Golden Gate -silta oli lähes 40 vuotta pisin riippusilta, kunnes Verrazzano-Narrows ohitti sen 1964.',
-          selite: 'Golden Gate -silta oli lähes neljäkymmentä vuotta '
+          lyhyt: 'Golden Gate -silta oli 27 vuotta pisin riippusilta, kunnes Verrazzano-Narrows ohitti sen 1964.',
+          selite: 'Golden Gate -silta oli 27 vuotta '
             + 'maailman pisin riippusilta, kunnes New Yorkin '
             + 'Verrazzano-Narrows-silta ohitti sen 1964.',
           lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
@@ -63475,18 +63475,18 @@ export const KULTTUURI_KATEGORIAT = {
           + 'tanssiaiset juuri ennen Waterloota: neljä käännekohtaa, jotka muovasivat '
           + 'Brysselin.',
       tehtava: {
-        kysymys: 'Minkä ansiosta Brysseliin voitiin 1800-luvun lopulla rakentaa uusia '
-            + 'keskeisiä bulevardeja?',
+        kysymys: 'Kuinka monessa vuodessa Grand-Place rakennettiin uudelleen vuoden 1695 '
+            + 'pommituksen jälkeen?',
         vaihtoehdot: [
-          'Vanhojen kaupunkimuurien purkamisen',
-          'Senne-joen peittämisen kaupungin alueella',
-          'Uuden kanavan kaivamisen keskustaan',
-          'Rautatieaseman rakentamisen keskustaan',
+          'Yhdessä vuodessa',
+          'Neljässä vuodessa',
+          'Kymmenessä vuodessa',
+          'Kolmessakymmenessä vuodessa',
         ],
         oikea: 1,
-        fakta: 'Senne oli 1800-luvun jälkipuoliskolla vakava terveysriski, ja pormestari '
-            + 'Jules Anspach ryhtyi peittämään sen. Joki virtaa nykyään suurimmaksi osaksi '
-            + 'kaupungin sisärenkaan alla.',
+        fakta: 'Killat rakensivat talonsa uudelleen neljässä vuodessa, ja viranomaiset '
+            + 'tarkastivat suunnitelmat, joten Grand-Placesta tuli yllättävän yhtenäinen '
+            + 'kokonaisuus tuhon jäljiltä.',
       },
       nostot: [
         {
@@ -64785,7 +64785,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Euroopan vanhin maraton',
           tiedosto: 'Kosice (Slovakia) - Memorial of the International Peace Marathon 2.jpg',
           teksti: 'Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin '
-              + 'maraton ja maailman kolmanneksi vanhin Bostonin ja Yonkersin jälkeen. Sen '
+              + 'maraton ja yksi maailman vanhimmista, heti Bostonin maratonin jälkeen. Sen '
               + 'järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech '
               + 'Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun '
               + 'muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna '
@@ -107941,7 +107941,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Kilimanjaro',
-      johdanto: 'Kilimanjaro kohoaa Tansaniassa aivan päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi ja jää. Se on Afrikan korkein vuori ja maailman korkein yksinäinen tulivuori.',
+      johdanto: 'Kilimanjaro kohoaa Tansaniassa päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi. Se on Afrikan korkein vuori. Isoisän matkavuonna 1873 Euroopassa yhä väiteltiin, oliko lumihuippu edes totta.',
       nostot: [
         {
           otsikko: 'Vuori savannin yllä',
