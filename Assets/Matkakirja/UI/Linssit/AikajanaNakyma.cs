@@ -432,7 +432,9 @@ namespace Matkakirja.Natiivi
             float va = 0.85f, oa = 0.85f;
             kehys.schedule.Execute(() =>
             {
-                if (kehys.resolvedStyle.display == DisplayStyle.None || kehys.panel == null) return;
+                // Lämpöerä: koko vanhempiketju (suljetun linssin aikajana on piilossa vanhemman kautta, ja lepatus likasi
+                // linssikerroksen 7×/s levossa).
+                if (!Rakenne.Naytetaan(kehys)) return;
                 va = Mathf.Clamp(va + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
                 oa = Mathf.Clamp(oa + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
                 v.style.opacity = va;
@@ -1061,6 +1063,7 @@ namespace Matkakirja.Natiivi
             kuvakierto = havainne.schedule.Execute(() =>
             {
                 if (versio != havainneVersio) { kuvakierto?.Pause(); return; }
+                if (!Rakenne.Naytetaan(havainne)) return; // lämpöerä: ei kuvakiertoa piilossa
                 kohta = (kohta + 1) % sarja.Count;
                 int tama = kohta;
                 Valokeila.Hae(sarja[tama], siemen, t =>
@@ -1138,6 +1141,7 @@ namespace Matkakirja.Natiivi
             hehku = tauko.schedule.Execute(() =>
             {
                 if (versio != valinaytosVersio) { hehku?.Pause(); tauko.RemoveFromClassList("mk-hehku"); return; }
+                if (!Rakenne.Naytetaan(tauko)) return; // lämpöerä: ei hehkua piilossa
                 paalla = !paalla;
                 tauko.EnableInClassList("mk-hehku", paalla);
             }).Every(1400).StartingIn(2500);

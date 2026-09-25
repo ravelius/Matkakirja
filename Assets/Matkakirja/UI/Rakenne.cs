@@ -54,6 +54,19 @@ namespace Matkakirja.Natiivi
             k.RegisterCallback<FocusOutEvent>(_ => vahti?.Pause());
         }
 
+        /// <summary>
+        /// Näkyykö elementti (paneelissa, eikä se tai mikään sen vanhemmista ole display none). Lämpöerä 25.9.2026: jatkuvat
+        /// koristeajastimet (lepatus, syke, hehku) ohittavat askeleensa piilossa, muuten ne likaavat paneelin ja UI ei
+        /// koskaan pääse lepoon (Ruudunpaivitys PAIKALLAAN).
+        /// </summary>
+        public static bool Naytetaan(VisualElement e)
+        {
+            if (e?.panel == null) return false;
+            for (; e != null; e = e.hierarchy.parent)
+                if (e.resolvedStyle.display == DisplayStyle.None) return false;
+            return true;
+        }
+
         public static VisualElement El(string luokka, VisualElement isa = null, PickingMode poiminta = PickingMode.Position)
         {
             var e = new VisualElement { pickingMode = poiminta };
