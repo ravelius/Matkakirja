@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 15:59 EEST
+**Päivitetty:** 2026-09-25 16:10 EEST
 
 ## 1) Sessiot
 
@@ -10,15 +10,15 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 56% | running | — |
-| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 26% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 65% | idle | Lähestyy 70 %, seurataan |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 37% | idle | Nollattu 15.22, palasi 16 % 15.29 |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 35% | idle | — |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 46% | idle | PR #3154 |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 57% | running | — |
+| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 28% | running | — |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | nollattu | idle, RC pois | Nollattu 16:00; ilmoitettu Fablelle, odottaa aloitusviestiä b029ecbe0 |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 39% | idle | Nollattu 15.22, palasi 16 % 15.29 |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 39% | idle | — |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 47% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 16% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 28% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 19% | running | Nollattu ja uudelleenkäynnistetty (99d0451a0) |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 26% | running | Nollattu ja uudelleenkäynnistetty (99d0451a0) |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 45% | running | — |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
@@ -56,9 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 185 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 31 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 1 (natiiviseppa-iPhone). coreaudiod 1 %. **Chrome-GPU-prosesseja:** 0.
-- **5 h -kiintiö:** 67 % — EI vielä nollautunut, nollautuu klo 17:30 EEST (14:30 UTC; korjattu aiempi kellonaikavirhe). **Viikko (kaikki mallit):** 18 %. **Viikko (Fable):** 8 %.
-- **Konteksti:** Natiiviseppä 65 % (raja 70, seurataan, ilmoitettu Fablelle), Fable 56 %.
-- **Juna:** viimeisin KÄÄNNETTY 15:39 (43579f98); juna/b13 2a6d34f3 uusi 15:47, alle 25 min.
-- **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 11.
+- **Levy:** 186 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 1 (iPhone 17). coreaudiod 3 %. **Chrome-GPU-prosesseja:** 0.
+- **5 h -KIINTIÖ SAAVUTTI 70 %** klo 16:10 (nollautuu 17:30 EEST) — ilmoitettu Fablelle (70 %:n raja Raamatun mukaan). **Viikko (kaikki mallit):** 19 %. **Viikko (Fable):** 9 %.
+- **Konteksti:** Natiiviseppä nollattu 16:00, odottaa aloitusviestiä. Fable 57 %, Sisältökirjuri 47 %, Karttaseppä 45 %.
+- **Juna:** kunnossa — KÄÄNNETTY 16:02 (b8eb4fdb) ja 16:04 (7f68d1f7), ei jumia.
+- **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 10. Huom: Sisältökirjurin PR #3159 CLOSED (ei merge) — ei tiedossa syytä, ei hälytystä ilman lisätietoa.
