@@ -110,6 +110,7 @@ namespace Matkakirja
             }
             Valmis = true;
             Debug.Log($"MATKAKIRJA reitit: {reitit.Count} reittiä, {kaupungit.Count} kaupunkia");
+            if (odottavaPeli != null) { var ids = odottavaPeli; odottavaPeli = null; NaytaPeli(ids); }
         }
 
         void Lisaa(string kaupunki, Reitti r)
@@ -144,6 +145,8 @@ namespace Matkakirja
         /// </summary>
         public void NaytaPeli(IReadOnlyList<string> ids)
         {
+            // Kutsu tulee vain muutoksessa: ennen kuin data on ladattu, viimeisin joukko odottaa Startin loppuun.
+            if (!Valmis) { odottavaPeli = ids == null ? null : new List<string>(ids); return; }
             if (ids == null || ids.Count == 0)
             {
                 if (naytetyt.Count == 0) return;
@@ -165,6 +168,7 @@ namespace Matkakirja
         [Tooltip("Matkareittien poiston häivytys sekunteina (web pathTransitionDuration = lauta.js:682 MERKKIEN_SIIRTYMA_MS 250).")]
         public float haivytysKesto = 0.25f;
         readonly List<GameObject> haipuvat = new List<GameObject>();
+        List<string> odottavaPeli;
 
         /// <summary>Reitti tunnuksella "a|b" (kumpaan suuntaan tahansa) tai datan id:llä; kaanteinen = data on b→a.</summary>
         Reitti HaeTunnus(string tunnus, out bool kaanteinen)
