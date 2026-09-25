@@ -8776,4 +8776,392 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Khaptadin kansallispuisto on noin 3 000 metrin korkeudessa aaltoileva ylätasanko, jonka niityt kukkivat kesällä.',
     },
   },
+  /*
+   * DZA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7A), 48 aluetta.
+   * Avaimet ovat MAAKUNNAT_KAIKKI.DZA:n tunnuksia TÄSMÄLLEEN, kopioitu
+   * koneellisesti (diakriitit "Aïn Témouchent", "Béjaïa", "Naâma" jne.,
+   * heittomerkki "M'Sila"). Data on vanha 48 wilayan jako; Adrar,
+   * Ghardaïa, Illizi ja Tamanghasset kattavat myös 2019 erotetut
+   * wilayat (Timimoun, El Menia, Djanet). Vältetty maastokohteet-dza.js:n
+   * aiheet (Tahat, Chelif ja Chlefin järistykset, Timgad, Djémila,
+   * Tipasan rauniot, Tassili, Qal'at Bani Hammad, Tlemcenin yleiskuvaus,
+   * M'zabin laakso, Constantinen sillat). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Adrar          — Foggara (Touat, Gourara; tuhansia km)
+   *   Aïn Defla      — Jeune Afrique / APS: ~40 % Algerian perunasta
+   *   Aïn Témouchent — Béni Saf (vilkkain kalasatama, sardiinit)
+   *   Alger          — Djamaa el Djazaïr (minareetti 265 m)
+   *   Annaba         — Annaba: El Hadjarin terästehdas
+   *   Batna          — Medracen
+   *   Béchar         — Taghit
+   *   Béjaïa         — Béjaïa, Etymology (bougie)
+   *   Biskra         — Tolga, Algeria (yli 900 000 palmua)
+   *   Blida          — "ville des roses", Mitidjan sitrustarhat
+   *   Bordj Bou Arréridj — Condor Electronics
+   *   Bouira         — Tikjda (1 600 m)
+   *   Boumerdès      — Casbah of Dellys (~250 taloa)
+   *   Chlef          — Ténès
+   *   Constantine    — Palais Ahmed Bey (1826–1835, museo 2010)
+   *   Djelfa         — lammaskanta ~3,2 milj. (maan suurin)
+   *   El Bayadh      — Brézina, Rock art of south Oran
+   *   El Oued        — FAO GIAHS: Ghout oasis system
+   *   El Tarf        — El Kala National Park (Mellah)
+   *   Ghardaïa       — El Menia, Charles de Foucauld
+   *   Guelma         — Hammam Maskhoutine (98 °C)
+   *   Illizi         — Sebiba (Unesco 2014)
+   *   Jijel          — Grottes merveilleuses (1917)
+   *   Khenchela      — Hammam Essalihine (Aquae Flavianae)
+   *   Laghouat       — Hassi R'Mel (putkien lähtöpiste)
+   *   M'Sila         — Chott el Hodna (Ramsar 2001)
+   *   Mascara        — Coteaux de Mascara (AOG, 7 aluetta 1970)
+   *   Médéa          — Médéa (n. 950–1 000 m)
+   *   Mila           — Beni Haroun Dam (Algerian suurin)
+   *   Mostaganem     — Festival national du théâtre amateur (1967)
+   *   Naâma          — Isabelle Eberhardt (Aïn Sefra 1904)
+   *   Oran           — Raï
+   *   Ouargla        — Hassi Messaoud
+   *   Oum el Bouaghi — Garaet Guellif (Ramsar 2004, flamingot)
+   *   Relizane       — Mazouna
+   *   Saïda          — Eau minérale Saïda (1967)
+   *   Sétif          — Ain El Fouara Fountain (1898)
+   *   Sidi Bel Abbès — muukalaislegioona 1843–1962
+   *   Skikda         — Skikda (jalostamo, GL1K LNG)
+   *   Souk Ahras     — Thagaste, Augustine of Hippo
+   *   Tamanghasset   — Assekrem (2 726 m)
+   *   Tébessa        — Arch of Caracalla (Thebeste)
+   *   Tiaret         — National Stud Farm of Chaouchaoua (1877)
+   *   Tindouf        — Gara Djebilet (kaivos 2022)
+   *   Tipaza         — Royal Mausoleum of Mauretania
+   *   Tissemsilt     — Théniet El Had National Park
+   *   Tizi Ouzou     — Ath Yennin hopeakorut
+   *   Tlemcen        — Mansourah (piiritys 1299–1307)
+   */
+  DZA: {
+    Adrar: {
+      lyhyt: 'Adrarin keitaiden alla kulkee tuhansia kilometrejä foggaroita, käsin kaivettuja maanalaisia kanavia, jotka johtavat pohjavettä palmutarhoihin.',
+    },
+    'Aïn Defla': {
+      lyhyt: 'Chelifin laakson pelloilla kasvatetaan perunaa niin paljon, että Aïn Defla on Algerian suurin perunantuottaja.',
+    },
+    'Aïn Témouchent': {
+      lyhyt: 'Beni Safin satama on Algerian vilkkaimpia kalasatamia, ja se tunnetaan erityisesti sardiineistaan.',
+    },
+    Alger: {
+      lyhyt: 'Algerin suurmoskeijan Djamaa el Djazaïrin minareetti kohoaa 265 metriin, ja se on maailman korkein minareetti.',
+    },
+    Annaba: {
+      lyhyt: 'Annaban eteläpuolella El Hadjarissa toimii terästehdas, jota pidetään Afrikan suurimpana.',
+    },
+    Batna: {
+      lyhyt: 'Batnan maakunnassa on Medracen, porrastettu kivikumpu, jonka numidialaiset rakensivat kuninkaidensa haudaksi yli 2 000 vuotta sitten.',
+    },
+    'Béchar': {
+      lyhyt: 'Taghitin keidaskylä palmutarhoineen on painautunut Suuren läntisen ergin korkeiden hiekkadyynien juurelle.',
+    },
+    'Béjaïa': {
+      lyhyt: 'Béjaïasta vietiin keskiajalla Eurooppaan mehiläisvahaa, ja kaupungin nimestä tuli ranskan kynttilää tarkoittava sana bougie.',
+    },
+    Biskra: {
+      lyhyt: 'Biskran maakunnan Tolgassa kasvaa yli 900 000 taatelipalmua, ja sen deglet nour -taatelit viedään maailmalle.',
+    },
+    Blida: {
+      lyhyt: 'Blidaa kutsutaan ruusujen kaupungiksi, ja sitä ympäröivät Mitidjan tasangon appelsiinitarhat.',
+    },
+    'Bordj Bou Arréridj': {
+      lyhyt: 'Bordj Bou Arréridjissa on elektroniikkayhtiö Condorin pääkonttori, ja kaupunkia pidetään Algerian teknologiateollisuuden keskuksena.',
+    },
+    Bouira: {
+      lyhyt: 'Djurdjuran vuoristossa 1 600 metrin korkeudella on Tikjdan hiihtokeskus, josta näkee kirkkaalla säällä Välimerelle asti.',
+    },
+    'Boumerdès': {
+      lyhyt: 'Dellysin rannikkokaupungin vanhassa kasbahissa on noin 250 historiallista taloa, ja sen alapuolella on satama.',
+    },
+    Chlef: {
+      lyhyt: 'Chlefin rannikolla on Ténès, pieni satamakaupunki majakkoineen, jonka juuret ulottuvat foinikialaisiin asti.',
+    },
+    Constantine: {
+      lyhyt: 'Constantinen viimeisen beyn palatsi valmistui 1835, ja nyt sen marmoripylväiden ja kaakelien keskellä toimii perinteisten taiteiden museo.',
+    },
+    Djelfa: {
+      lyhyt: 'Djelfan aroilla laiduntaa yli kolme miljoonaa lammasta, enemmän kuin missään muussa Algerian maakunnassa.',
+    },
+    'El Bayadh': {
+      lyhyt: 'Brézinan keitaan ympäristön kallioihin on kaiverrettu neoliittisella kivikaudella eläinten kuvia.',
+    },
+    'El Oued': {
+      lyhyt: 'El Ouedin keitaissa taatelipalmut istutetaan hiekkaan kaivettuihin kuoppiin, ghouteihin, joista juuret ylettyvät pohjaveteen.',
+    },
+    'El Tarf': {
+      lyhyt: 'El Kalan kansallispuistossa on kuusi järveä, ja niistä Mellahin laguuni on Algerian ainoa, joka on yhteydessä mereen.',
+    },
+    'Ghardaïa': {
+      lyhyt: 'El Menian keitaassa on Pyhän Joosefin kirkko, jonka hautausmaalle on haudattu Saharan erakko, pyhimykseksi julistettu Charles de Foucauld.',
+    },
+    Guelma: {
+      lyhyt: 'Hammam Maskhoutinen lähteiden vesi on jopa 98-asteista, ja se valuu kalkkikerrostumien yli höyryävänä putouksena.',
+    },
+    Illizi: {
+      lyhyt: 'Djanetin keitaassa tuaregit esittävät joka vuosi sebiba-tanssia, joka on Unescon aineetonta kulttuuriperintöä.',
+    },
+    Jijel: {
+      lyhyt: 'Jijelin rannikolta löytyi 1917 tietyömaalla tippukiviluolasto, jota kutsutaan nyt Ihmeellisiksi luoliksi.',
+    },
+    Khenchela: {
+      lyhyt: 'Khenchelan lähellä on Hammam Essalihine, roomalaisten noin vuonna 70 rakentama kylpylä, jonka altaissa kylvetään yhä.',
+    },
+    Laghouat: {
+      lyhyt: 'Hassi R’Melin kaasukentältä lähtevät putket Algerian rannikolle ja Välimeren alitse Eurooppaan.',
+    },
+    "M'Sila": {
+      lyhyt: 'Chott el Hodna on matala suolajärvi M’Silan aroilla, ja sen kosteikoilla talvehtii vesilintuja.',
+    },
+    Mascara: {
+      lyhyt: 'Mascaran kukkuloilla viljellään viiniä, ja Coteaux de Mascara on yksi Algerian seitsemästä viinin alkuperäalueesta.',
+    },
+    'Médéa': {
+      lyhyt: 'Médéa on lähes kilometrin korkeudessa Tell-Atlaksella, ja sitä ympäröivät kukkuloiden hedelmä- ja viinitarhat.',
+    },
+    Mila: {
+      lyhyt: 'Milan maakunnassa on Beni Harounin pato, Algerian suurin, joka juottaa vettä useille ympäröiville maakunnille.',
+    },
+    Mostaganem: {
+      lyhyt: 'Mostaganemissa pidetään vuodesta 1967 alkanutta harrastajateatterin festivaalia, jota sanotaan arabimaailman ja Afrikan vanhimmaksi.',
+    },
+    'Naâma': {
+      lyhyt: 'Aïn Sefrassa on kirjailija Isabelle Eberhardtin hauta; hän kuoli kaupunkiin iskeneessä tulvassa 1904 vain 27-vuotiaana.',
+    },
+    Oran: {
+      lyhyt: 'Oran on raï-musiikin kotikaupunki: laji syntyi sen kabareissa, ja nimi tarkoittaa mielipidettä.',
+    },
+    Ouargla: {
+      lyhyt: 'Ouarglan maakunnassa on Hassi Messaoud, öljykaupunki, jossa on kaikkien suurten öljy-yhtiöiden toimistoja ja tukikohtia.',
+    },
+    'Oum el Bouaghi': {
+      lyhyt: 'Oum el Bouaghin suolajärvi Garaet Guellif on yksi Välimeren alueen tärkeimmistä flamingojen pesimäpaikoista.',
+    },
+    Relizane: {
+      lyhyt: 'Relizanen maakunnan Mazounaa kutsutaan oppineiden kaupungiksi, sillä sen medresa koulutti vuosisatoja uskonoppineita.',
+    },
+    'Saïda': {
+      lyhyt: 'Saïdaa kutsutaan vesien kaupungiksi, ja sen lähdevesi on niin tunnettu, että arkikielessä saïda tarkoittaa mitä tahansa pullovettä.',
+    },
+    'Sétif': {
+      lyhyt: 'Sétifin keskusaukiolla on Aïn El Fouara, vuonna 1898 pystytetty suihkulähde, jonka marmorinen naishahmo on kaupungin tunnuskuva.',
+    },
+    'Sidi Bel Abbès': {
+      lyhyt: 'Sidi Bel Abbès oli Ranskan muukalaislegioonan päämaja vuoteen 1962, jolloin legioona muutti Aubagneen Ranskaan.',
+    },
+    Skikda: {
+      lyhyt: 'Skikdan satamassa on Algerian suurin öljynjalostamo sekä maakaasua nesteyttävä laitos.',
+    },
+    'Souk Ahras': {
+      lyhyt: 'Souk Ahras on antiikin Thagaste, jossa kirkkoisä Augustinus syntyi vuonna 354.',
+    },
+    Tamanghasset: {
+      lyhyt: 'Hoggarin Assekremin ylätasanko nousee noin 2 700 metriin, ja tuaregien kielellä sen nimi tarkoittaa maailman loppua.',
+    },
+    'Tébessa': {
+      lyhyt: 'Tébessan keskustassa seisoo Caracallan kaari, noin vuonna 214 valmistunut roomalainen riemukaari, josta tuli myöhemmin kaupunginportti.',
+    },
+    Tiaret: {
+      lyhyt: 'Tiaretin Chaouchaouan valtiollisella siittolalla on kasvatettu berberi- ja arabihevosia vuodesta 1877.',
+    },
+    Tindouf: {
+      lyhyt: 'Tindoufin maakunnan Gara Djebilet on yksi maailman suurimmista rautamalmiesiintymistä, ja kaivos avattiin 2022.',
+    },
+    Tipaza: {
+      lyhyt: 'Tipazan rannikolla on Mauretanian kuninkaallinen mausoleumi, pyöreä kivirakennelma, jota ranskaksi sanotaan kristityn naisen haudaksi.',
+    },
+    Tissemsilt: {
+      lyhyt: 'Théniet El Hadin kansallispuistossa Ouarsenisin vuoristossa kasvaa yli 3 000 hehtaaria atlasinsetrimetsää.',
+    },
+    'Tizi Ouzou': {
+      lyhyt: 'Kabylian Ath Yennin kylissä tehdään hopeakoruja, joita koristavat siniset, vihreät ja keltaiset emalit sekä punaiset korallit.',
+    },
+    Tlemcen: {
+      lyhyt: 'Tlemcenin laidalla seisoo Mansouran puolittainen minareetti, jäänne leirikaupungista, jonka marinidit rakensivat piirittäessään Tlemceniä.',
+    },
+  },
+  /*
+   * MAR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7A), 16 aluetta.
+   * Avaimet ovat MAAKUNNAT_KAIKKI.MAR:n tunnuksia TÄSMÄLLEEN, kopioitu
+   * koneellisesti (välilyönti-yhdysmerkki-välilyönti, "Fès", "Laâyoune",
+   * "Draâ"). Data on vanha 16 alueen jako (ennen 2015). Länsi-Saharan
+   * alueilla (Laâyoune - Boujdour - Sakia El Hamra, Oued el Dahab ja
+   * Guelmim - Es-Semara) teksti on neutraali ja kertoo vain maisemasta.
+   * Vältetty maastokohteet-mar.js:n aiheet (Toubkal, Drâa, Volubilis,
+   * Aït Benhaddou, Essaouira, Chefchaouen, Hassan-torni, Erg Chebbi,
+   * El Jadida, Lixus). Vain `lyhyt`. Lähteet (en-Wikipedia ja haku
+   * 25.9.2026):
+   *   Chaouia - Ouardigha  — OCP Group, Khouribga
+   *   Doukkala - Abda      — Safi, Colline des potiers
+   *   Fès - Boulemane      — University of al-Qarawiyyin (859, Guinness)
+   *   Gharb - Chrarda - Béni Hssen — Stellantis Kenitra plant
+   *   Grand Casablanca     — Hassan II Mosque
+   *   Guelmim - Es-Semara  — Plage Blanche (40–50 km)
+   *   Laâyoune - Boujdour - Sakia El Hamra — Khenifiss National Park
+   *   Marrakech - Tensift - Al Haouz — Jemaa el-Fnaa
+   *   Meknès - Tafilalet   — Ifrane (−23,9 °C 11.2.1935)
+   *   Oriental             — Taforalt (helmet ~82 000 v, PNAS 2007)
+   *   Oued el Dahab        — Dakhla Bay
+   *   Rabat - Salé - Zemmour - Zaer — Kasbah of the Udayas
+   *   Souss - Massa - Draâ — Arganeraie Biosphere Reserve (1998)
+   *   Tadla - Azilal       — Ouzoud Falls (110 m)
+   *   Tanger - Tétouan     — Tanger Med
+   *   Taza - Al Hoceima - Taounate — Friouato Caves
+   */
+  MAR: {
+    'Chaouia - Ouardigha': {
+      lyhyt: 'Khouribgan kaivoksista louhitaan fosfaattia, ja Marokon fosfaattivarat ovat maailman suurimmat.',
+    },
+    'Doukkala - Abda': {
+      lyhyt: 'Safin Savenvalajien kukkulalla on yli sata työpajaa ja uunia, joissa tehdään kaupungin tunnettua keramiikkaa.',
+    },
+    'Fès - Boulemane': {
+      lyhyt: 'Fèsin al-Qarawiyyin perustettiin moskeijaksi vuonna 859, ja Guinness pitää sitä maailman vanhimpana yhä toimivana korkeakouluna.',
+    },
+    'Gharb - Chrarda - Béni Hssen': {
+      lyhyt: 'Kenitran autotehtaalla kootaan Peugeot 208 -autoja ja pieniä sähköisiä Citroën Ami -kaupunkiautoja.',
+    },
+    'Grand Casablanca': {
+      lyhyt: 'Casablancan Hassan II:n moskeijasta kolmannes on rakennettu Atlantin päälle, ja sen minareetti nousee 210 metriin.',
+    },
+    'Guelmim - Es-Semara': {
+      lyhyt: 'Guelmimin länsipuolella Atlantin rannalla on Plage Blanche, kymmeniä kilometrejä pitkä luonnontilainen hiekkaranta.',
+    },
+    'Laâyoune - Boujdour - Sakia El Hamra': {
+      lyhyt: 'Khnifissin laguunissa Saharan dyynit kohtaavat Atlantin, ja talvisin sen rannoille kerääntyy noin 20 000 lintua.',
+    },
+    'Marrakech - Tensift - Al Haouz': {
+      lyhyt: 'Marrakechin Jemaa el-Fna -aukiolla esiintyvät iltaisin tarinankertojat, soittajat ja käärmeenlumoojat.',
+    },
+    'Meknès - Tafilalet': {
+      lyhyt: 'Ifranen vuoristokaupungissa mitattiin helmikuussa 1935 −23,9 astetta, Afrikan kylmin koskaan kirjattu lukema.',
+    },
+    Oriental: {
+      lyhyt: 'Taforaltin Kyyhkysluolasta on löydetty noin 82 000 vuotta vanhoja simpukankuorihelmiä, maailman vanhimpiin kuuluvia koruja.',
+    },
+    'Oued el Dahab': {
+      lyhyt: 'Dakhlan kapea niemimaa suojaa noin 40 kilometriä pitkää laguunia, jonka tasainen vesi ja tuuli houkuttelevat leijalautailijoita.',
+    },
+    'Rabat - Salé - Zemmour - Zaer': {
+      lyhyt: 'Rabatin Oudayan kasbah seisoo Bou Regreg -joen suulla, ja sen kujien talot on kalkittu valkoisiksi ja sinisiksi.',
+    },
+    'Souss - Massa - Draâ': {
+      lyhyt: 'Sousin tasangolla kasvaa argan-puita, joiden siemenistä puristetaan arganöljyä; metsä on ollut Unescon biosfäärialue vuodesta 1998.',
+    },
+    'Tadla - Azilal': {
+      lyhyt: 'Ouzoudin putoukset syöksyvät 110 metriä El-Abid-joen rotkoon, ja rinteillä liikkuu vapaana berberimakakeja.',
+    },
+    'Tanger - Tétouan': {
+      lyhyt: 'Tangerin itäpuolella on Tanger Med, Afrikan ja koko Välimeren suurin konttisatama.',
+    },
+    'Taza - Al Hoceima - Taounate': {
+      lyhyt: 'Tazan lähellä on Friouaton luola, jonka suuaukko on sata metriä syvä kuilu ja joka on Afrikan syvimpiä luolia.',
+    },
+  },
+  /*
+   * TUN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 7A), 23 aluetta.
+   * Avaimet ovat MAAKUNNAT_KAIKKI.TUN:n tunnuksia TÄSMÄLLEEN, kopioitu
+   * koneellisesti ("Ben Arous (Tunis Sud)", "Kassérine", "Médenine").
+   * Arianan kuvernoraatti puuttuu datasta. Vältetty maastokohteet-tun.js:n
+   * ja fokuskohteet-tun.js:n aiheet (Jabal ash Shanabi, Medjerda, Dougga,
+   * El Jem, Kairouanin altaat, Kerkouane, Soussen ribat, Matmata,
+   * Sbeitla, Karthagon satama). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Béja        — Great Mosque of Testour (vastapäivään käyvä kello)
+   *   Ben Arous   — Jebel Boukornine, Boukornine National Park
+   *   Bizerte     — Ichkeul National Park (Unesco 1980)
+   *   Gabès       — Oasis de Gabès (Unescon alustava lista)
+   *   Gafsa       — Roman baths of Gafsa (5 m syvät)
+   *   Jendouba    — Bulla Regia
+   *   Kairouan    — Great Mosque of Kairouan (minareetti 836, Guinness)
+   *   Kassérine   — SNCPA (halfaheinäsellu)
+   *   Kebili      — International Festival of the Sahara (Douz)
+   *   Le Kef      — Jugurtha Tableland (1 271 m)
+   *   Mahdia      — Mahdia (fatimidien pääkaupunki 921)
+   *   Manubah     — Tunisian National Military Museum (Ruusupalatsi)
+   *   Médenine    — El Ghriba Synagogue
+   *   Monastir    — Mausoleum of Habib Bourguiba
+   *   Nabeul      — Harissa (Kap Bonin chilit)
+   *   Sfax        — Charfia fishing in the Kerkennah Islands (Unesco 2020)
+   *   Sidi Bou Zid — Mohamed Bouazizi
+   *   Siliana     — Makthar (archaeological site)
+   *   Sousse      — Catacombs of Sousse (~15 000 hautaa)
+   *   Tataouine   — Ksar Ouled Soltane
+   *   Tozeur      — Ouled el Hadef (AramcoWorld 2020)
+   *   Tunis       — Bardo National Museum
+   *   Zaghouan    — Zaghouan Aqueduct (132 km)
+   */
+  TUN: {
+    'Béja': {
+      lyhyt: 'Testourin Suuren moskeijan minareetin kello käy vastapäivään; kaupungin rakensivat Espanjasta karkotetut moriskopakolaiset.',
+    },
+    'Ben Arous (Tunis Sud)': {
+      lyhyt: 'Hammam-Lifin yllä kohoaa Boukornine-vuori, jonka nimi tarkoittaa kaksisarvista ja jonka rinteet ovat kansallispuistoa.',
+    },
+    Bizerte: {
+      lyhyt: 'Ichkeulin järvellä talvehtii satojatuhansia muuttolintuja, ja kansallispuisto on ollut maailmanperintökohde vuodesta 1980.',
+    },
+    'Gabès': {
+      lyhyt: 'Gabèsin keidas on Välimeren ainoa merenrantakeidas: palmutarhat ulottuvat aavikolta aina rantaan asti.',
+    },
+    Gafsa: {
+      lyhyt: 'Gafsan vanhassa kaupungissa on kaksi viiden metrin syvyistä roomalaista allasta, joita lähdevesi täytti vuosisatoja.',
+    },
+    Jendouba: {
+      lyhyt: 'Bulla Regian roomalaiset rakensivat talojensa alle kesähuoneet helteeltä suojaan, ja niiden lattioilla on yhä mosaiikkeja.',
+    },
+    Kairouan: {
+      lyhyt: 'Kairouanin Suuren moskeijan minareetti valmistui 800-luvulla, ja se on maailman vanhin kokonaisena säilynyt minareetti.',
+    },
+    'Kassérine': {
+      lyhyt: 'Kasserinen tehdas valmistaa sellua ja paperia halfaheinästä, jota korjataan Tunisian aroilta.',
+    },
+    Kebili: {
+      lyhyt: 'Douzissa, Saharan portilla, pidetään joka joulukuu Saharan festivaali, jossa kilpaillaan kamelijuoksussa.',
+    },
+    'Le Kef': {
+      lyhyt: 'Jugurthan pöytä on jyrkkäseinäinen pöytävuori, joka kohoaa 1 271 metriin ja jolle noustaan kallioon hakattuja portaita.',
+    },
+    Mahdia: {
+      lyhyt: 'Fatimidikalifi al-Mahdi perusti Mahdian 900-luvulla pääkaupungikseen kapealle niemelle, joka pistää Välimereen.',
+    },
+    Manubah: {
+      lyhyt: 'La Manouban Ruusupalatsi rakennettiin 1790-luvulla beyn kesäasunnoksi, ja nyt siinä toimii Tunisian sotamuseo.',
+    },
+    'Médenine': {
+      lyhyt: 'Djerban saaren El Ghriban synagogaan tehdään joka kevät pyhiinvaellus, johon juutalaisia saapuu myös ulkomailta.',
+    },
+    Monastir: {
+      lyhyt: 'Monastirissa on kultakupolinen mausoleumi, johon on haudattu kaupungissa syntynyt Tunisian ensimmäinen presidentti Habib Bourguiba.',
+    },
+    Nabeul: {
+      lyhyt: 'Nabeulin ympärillä Kap Bonin niemimaalla kasvatetaan chilejä, joista tehdään tulista harissa-tahnaa.',
+    },
+    Sfax: {
+      lyhyt: 'Sfaxin edustan Kerkennah-saarilla kalastetaan yhä charfia-pyydyksillä, merenpohjaan pystytetyillä palmunlehtiaidoilla.',
+    },
+    'Sidi Bou Zid': {
+      lyhyt: 'Sidi Bouzidissa katukauppias Mohamed Bouazizi sytytti itsensä tuleen joulukuussa 2010, ja siitä alkoi Tunisian vallankumous.',
+    },
+    Siliana: {
+      lyhyt: 'Maktharin raunioissa näkyy kerroksittain numidialaista, punilaista ja roomalaista kaupunkia.',
+    },
+    Sousse: {
+      lyhyt: 'Soussen alla on varhaiskristittyjen katakombeja, joiden käytäviin haudattiin noin 15 000 vainajaa.',
+    },
+    Tataouine: {
+      lyhyt: 'Ksar Ouled Soltanessa holvattuja viljavarastoja, ghorfia, on muurattu useaan kerrokseen päällekkäin sisäpihojen ympärille.',
+    },
+    Tozeur: {
+      lyhyt: 'Tozeurin vanhan Ouled el Hadefin korttelin muurit on ladottu vaaleista tiilistä kohokuvioiksi, jotka muistuttavat berberimattoja.',
+    },
+    Tunis: {
+      lyhyt: 'Tunisin Bardon kansallismuseossa on maailman suurin roomalaisten mosaiikkien kokoelma.',
+    },
+    Zaghouan: {
+      lyhyt: 'Zaghouanin vuoren juurella on roomalaisten vesitemppeli, josta lähti 132 kilometriä pitkä akvedukti Karthagoon.',
+    },
+  },
 };
