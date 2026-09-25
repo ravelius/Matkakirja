@@ -1041,7 +1041,7 @@ namespace Matkakirja.Natiivi
                     if (MaailmaHyppy(kaupunki)) return;
                     // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
                     if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
-                    if (kaupunkiKortti != null) { KortinKamera(kaupunki); AvaaKortti(kaupunki); return; }
+                    if (kaupunkiKortti != null) { AvaaKorttiAjonJalkeen(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
                 default:
@@ -1063,15 +1063,36 @@ namespace Matkakirja.Natiivi
         /// panoroi merkin kortin viereen, korkeus, kallistus ja suuntima pysyvät. KaupunkiMerkkien oma lento
         /// kaupunkiin (uloszoomaus, omistajan moite) korvataan samassa ruudussa (kameranOhitus).
         /// </summary>
-        void KortinKamera(string kaupunki)
+        void KortinKamera(string kaupunki, Action valmis = null)
         {
             var k = PeliApu.Koordinaatti(verkko, Sijainti.KaupungissaSijainti(kaupunki));
-            if (!k.HasValue || kierto == null) { PysaytaKamera(); return; }
+            if (!k.HasValue || kierto == null) { PysaytaKamera(); valmis?.Invoke(); return; }
             Vector2 maali = new Vector2(Screen.width / 4f, Screen.height / 2f);
             try { if (KortinRuutupiste != null) maali = KortinRuutupiste(kaupunki); }
             catch (Exception e) { Debug.LogException(e); }
             double lat = k.Value.Lat, lon = k.Value.Lon;
-            kameranOhitus = () => kierto.Panoroi(lat, lon, maali, Panorointi.LiuskanAjoS, null);
+            kameranOhitus = () => kierto.Panoroi(lat, lon, maali, Panorointi.LiuskanAjoS, valmis);
+        }
+
+        int korttiAjo;
+
+        /// <summary>
+        /// Liikkumisen pariteetti D17 (web lauta.js napautaKaupunki: await ajaKamera(LIUSKAN_AJO_MS) → ladoLevossa →
+        /// avaaLiuskaKaupungista): kortti aukeaa vasta, kun 420 ms:n ajo on perillä, jolloin Natiivi-UI ripustaa sen
+        /// merkin uuteen ruutupisteeseen. Sormen keskeyttämä ajo ei kutsu valmista, joten varakutsu ajon keston
+        /// jälkeen; kortti aukeaa kerran, ja uusi napautus ohittaa vanhan.
+        /// </summary>
+        void AvaaKorttiAjonJalkeen(string kaupunki)
+        {
+            int oma = ++korttiAjo;
+            Action avaa = () =>
+            {
+                if (oma != korttiAjo) return;
+                korttiAjo++;
+                AvaaKortti(kaupunki);
+            };
+            KortinKamera(kaupunki, avaa);
+            StartCoroutine(Viiveella(Panorointi.LiuskanAjoS + 0.15f, avaa));
         }
 
         void PysaytaKamera() => kameranOhitus = () => kierto.Aja(kierto.leveys, kierto.pituus, 0, 0.05f, null);
