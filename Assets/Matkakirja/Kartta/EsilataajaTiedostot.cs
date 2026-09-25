@@ -31,7 +31,8 @@ namespace Matkakirja
     /// <see cref="PeruRyhma"/> poistaa jonossa olevat. Jatkaminen: jokainen yritys kirjoittaa "&lt;polku&gt;.osa"-tiedostoon
     /// Range-otsakkeella nykyisen pituuden kohdalta; 206 liitetään perään, 200 korvaa, 416 = jo valmis. Edellisen istunnon
     /// keskeytynyt .osa liitetään ensimmäisellä yrityksellä (2xx-vastauksen alku); muuten keskeneräinen .osa on virhevastaus
-    /// ja poistetaan. Kaikilla verkoilla; taso Muu pysähtyy kuumana ja virransäästössä (Raamattu, LÄMPÖ kohta 2).
+    /// ja poistetaan. Kaikilla verkoilla; kohta 2 (paketin päivitys) jatkaa myös kuumana ja virransäästössä (Fable 25.9.), muut tasot 4–5
+    /// pysähtyvät (Raamattu, LÄMPÖ kohta 2).
     /// </summary>
     public sealed partial class Esilataaja
     {
@@ -115,7 +116,7 @@ namespace Matkakirja
                 catch (IOException e) { Debug.LogWarning("MATKAKIRJA esilataaja: tiedosto " + e.Message); ok = false; }
                 Debug.Log(ok ? $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} alku {alku} +{q.downloadedBytes} t ({kohta}, {ryhma})"
                              : $"MATKAKIRJA esilataaja: tiedosto {Lyhenna(osoite)} {q.responseCode} {q.error} ({kohta}, {ryhma})");
-            });
+            }, kohta);
             if (r.Peruttu) yield break;
             if (ok) { r.Valmiit++; TiedostojaValmiina++; } else r.Virheet++;
             if (--r.Jaljella > 0) yield break;
