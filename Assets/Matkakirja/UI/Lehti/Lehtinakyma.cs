@@ -345,6 +345,12 @@ namespace Matkakirja.Natiivi
             sivu.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sivu.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             sivupaikka.Add(sivu);
+            // Testikysely "ui lehti vierita ?" (löydös 64): sisällön korkeuden muutokset sivun avauksen jälkeen.
+            korkeusMuutoksia = 0;
+            sivu.contentContainer.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (!Mathf.Approximately(e.oldRect.height, e.newRect.height)) korkeusMuutoksia++;
+            });
             var s = lehti.Sivut[i];
             AsetaOtsikko(s);
             switch (s.Laji)
@@ -1690,10 +1696,14 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
-        /// <summary>Testikomento "ui lehti vierita px|loppu": auki olevan sivun vieritys ilman kosketusta.</summary>
+        /// <summary>Testikomento "ui lehti vierita px|loppu|?": auki olevan sivun vieritys ilman kosketusta; ? = tila.</summary>
+        int korkeusMuutoksia;
+
         public string Vierita(string mihin)
         {
             if (!Auki || sivu == null) return "lehti ei ole auki";
+            if (mihin == "?")
+                return $"offset {sivu.scrollOffset.y:0.#} high {sivu.verticalScroller.highValue:0.#} sisältö {sivu.contentContainer.layout.height:0.#} näkymä {sivu.contentViewport.layout.height:0.#} korkeusmuutoksia {korkeusMuutoksia}";
             ValmistaSivu();
             // Asettelu ensin: juuri avatun sivun sisältö on vielä mittaamatta.
             sivu.schedule.Execute(() =>
