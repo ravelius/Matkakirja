@@ -168,11 +168,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Luento loppui (kaupunki): soi loppuun, pysäytettiin tai toinen puhe korvasi sen.</summary>
         public event Action<string> LuentoLoppui;
 
-        /// <summary>Kortin Ohita-nappi: soiva luento häipyy nopeasti (LuentoLoppui herää).</summary>
-        public void OhitaLuento()
-        {
-            if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(0.3f); }
-        }
+        /// <summary>
+        /// Kortin Ohita-nappi (web ohitaSaapumisluenta): ohituslippu ensin, sitten kertoja ja pulu vaikenevat ja kuplat
+        /// lähtevät (VaiennaPaikanPuhe). LuentoLoppui herää, mutta LuentoOhitettu estää pulun kommentin.
+        /// </summary>
+        public void OhitaLuento() => VaiennaPaikanPuhe();
 
         /// <summary>Soiva luento, tai null.</summary>
         public Luento SoivaLuento => soivaLuento;
@@ -1035,6 +1035,8 @@ namespace Matkakirja.Natiivi
                     return;
                 case SilmukanTila.Kartta:
                     if (uiPaalla) { PysaytaKamera(); return; }
+                    // Kehittäjän maailmanäkymä: napautus on saapuminen (löydös 58).
+                    if (MaailmaHyppy(kaupunki)) return;
                     // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
                     if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
                     if (kaupunkiKortti != null) { KortinKamera(kaupunki); AvaaKortti(kaupunki); return; }
@@ -1240,6 +1242,8 @@ namespace Matkakirja.Natiivi
             dialogi.Piilota();
             dialogi.PiilotaHeitto();
             if (kohde != null) Tavoite = kohde;
+            // Lähtö vaientaa paikan puheen (web doRoll/doMove → vaiennaPaikanPuhe).
+            VaiennaPaikanPuhe();
 
             tapahtumat.Clear();
             var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null, siirto);
@@ -1348,6 +1352,8 @@ namespace Matkakirja.Natiivi
             PaataLento();
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
+            // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
+            if (kaupunki != null) LuentoOhitettu = false;
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);

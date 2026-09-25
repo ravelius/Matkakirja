@@ -155,6 +155,8 @@ namespace Matkakirja.Natiivi
             if (matka.Tila.Vaihe == Vaihe.Siirto) { if (Tila != SilmukanTila.Kartta) Kartalle(false); else PaivitaSiirtoKohteet(); return null; }
             var lahto = matka.Tila.Pelaaja.Sijainti;
             tapahtumat.Clear();
+            // Heitto vaientaa paikan puheen (web doRoll → vaiennaPaikanPuhe, löydökset 53–54).
+            VaiennaPaikanPuhe();
             var r = matka.Heita();
             if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
             dialogi.Piilota();
