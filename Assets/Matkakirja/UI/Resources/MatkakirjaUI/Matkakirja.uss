@@ -2878,6 +2878,81 @@
     display: flex;
 }
 
+/* Löydös 72 (web .lippu-versiot-otsikko + .lippu-tunnukset): otsikko 0,8rem Kone lihava 0,05 em, rivit sarakkeena
+   0,6rem välein; rivissä kuva 4,2rem vasemmalla, nimi (0,8rem Kone) ja selite (0,83rem / 1,45) oikealla. */
+.mk-lippu__tunnusotsikko {
+    margin: 9.6px 0 5.6px 0;
+    font-size: 12.8px;
+    letter-spacing: 5px; /* web 0,05 em */
+    white-space: normal;
+    color: #46331f;
+}
+
+.mk-lippu__tunnukset {
+    flex-direction: column;
+    margin-top: 6.4px;
+}
+
+.mk-lippu__tunnus {
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 0;
+    margin: 0 0 9.6px 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: scale, opacity;
+    transition-duration: 0.24s;
+    transform-origin: 50% 0;
+}
+
+.mk-lippu__tunnuskuva {
+    width: 67.2px;
+    height: 67.2px;
+    flex-shrink: 0;
+    margin-right: 10.4px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-lippu__tunnusteksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-lippu__tunnusnimi {
+    margin: 0;
+    font-size: 12.8px;
+    letter-spacing: 4px; /* web 0,04 em */
+    white-space: normal;
+    color: #46331f;
+}
+
+.mk-lippu__tunnusselite {
+    margin: 2.4px 0 0 0;
+    font-size: 13.3px;
+    white-space: normal;
+    color: rgb(57, 53, 47); /* web rgba(33, 29, 24, 0.88) paperilla; UITK:n alfa sekoittuu lineaarisesti ja vaalenee */
+}
+
+/* Web .lippu-tunnus.tarkennettu: pelkkä vaakuna isona (min(64 %, 13rem)), selite paperilla sen alla. */
+.mk-lippu__tunnus--tarkennettu {
+    flex-direction: column;
+    align-items: center;
+}
+
+.mk-lippu__tunnus--tarkennettu .mk-lippu__tunnuskuva {
+    width: 64%;
+    max-width: 208px;
+    margin-right: 0;
+}
+
+.mk-lippu__tunnus--tarkennettu .mk-lippu__tunnusteksti {
+    padding: 4px 6.4px;
+    background-color: #f5f0e2;
+    border-radius: 4px;
+}
+
 .mk-lippu__sumea {
     opacity: 0.3;
     transition-property: opacity;
