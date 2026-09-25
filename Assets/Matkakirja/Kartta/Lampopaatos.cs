@@ -86,13 +86,15 @@ namespace Matkakirja
         // halo) pysähtyvät levossa: SykeLepoS viimeisen aidon aktiivisuuden jälkeen voima liukuu SykeLiukuS:ssa nollaan
         // eli keskiasentoon, ja sykkeen oma aika pysähtyy. Aktiivisuus nostaa voiman heti takaisin, ja aika jatkaa siitä,
         // mihin se jäi (Unity-puoli: Joutosyke).
-        // TODO (Fable 25.9.2026): kun KEHYKSEN HINTA -erä on tuonut staattisen kehyksen ≤ 16 ms:iin, syke palautetaan jatkuvaksi 30 fps:llä (webin mukaan).
+        // Fablen 20.1x:n jäädytys oli väliaikainen; purettu, kun kehys ≤ 16 ms (kehyksen hinta -erä): syke on taas jatkuva
+        // 30 fps:llä webin mukaan (natiiviseppa/kehys-hinta-1: portin piilotetut suotimet ja laattojen alpha-testi pois,
+        // iPad Pro 13:n staattinen kehys 14,1 ms; docs/raportit/kehyksen-hinta-20260925.md).
 
         /// <summary>
         /// Jäädytyksen kytkin (oletus): tosi = idle-animaatiot pysähtyvät levossa keskiasentoon, epätosi = jatkuva syke
-        /// kuten ennen. Kääntö pois palauttaa jatkuvan sykkeen (ks. TODO yllä); ajossa Joutosyke.Jaatyy (komento syke).
+        /// (oletus kehyksen hinta -erästä alkaen). Ajossa Joutosyke.Jaatyy (komento syke jaatyy|jatkuva|tila).
         /// </summary>
-        public const bool SykeJaatyy = true;
+        public const bool SykeJaatyy = false;
         /// <summary>Lepo ennen jäädytystä (s viimeisestä aidosta aktiivisuudesta).</summary>
         public const float SykeLepoS = 3f;
         /// <summary>Liuku keskiasentoon ja takaisin täyteen sykkeeseen (s).</summary>
