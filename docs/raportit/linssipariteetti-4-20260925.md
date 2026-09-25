@@ -7,9 +7,9 @@ linssipariteetti-4-rivilista-20260925.md. Edellinen: linssipariteetti-3-20260925
 
 | Laite | Tulos | Avoimet |
 |---|---|---|
-| iPhone 402 × 874 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 kierroksen 3 riveistä; rivi 42 odottaa päätöstä |
-| iPhone vaaka 874 × 402 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 (turva-alue ja ×, hyväksytty); rivi 42 odottaa päätöstä |
-| iPad 11" 834 × 1210 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | yläpalkin pystysijainti (Natiivi-UI); rivi 42 odottaa päätöstä |
+| iPhone 402 × 874 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 |
+| iPhone vaaka 874 × 402 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 (turva-alue ja ×, hyväksytty) |
+| iPad 11" 834 × 1210 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | yläpalkin pystysijainti (Natiivi-UI) |
 
 Pariteettiajo on nyt yksi simulaattori kerrallaan (linssiseppa-iPhone D0D2CD1E, linssiseppa-iPad11 903C2B91). Ajo odottaa
 uuden pelin kerronnan loppua (13 s) ja linssin odotuspeitettä ennen kuvaa. Kuvat ja kontaktiarkit:
@@ -25,18 +25,11 @@ uuden pelin kerronnan loppua (13 s) ja linssin odotuspeitettä ennen kuvaa. Kuva
 - **iPad 12 selite:** mitattu ensimmäistä kertaa ilman odotuspeitettä: 33 px, josta × (löydös 32) ja yläpalkki (ks. alla).
 - **Uudet rivit 42 ja 43** (Fablen päätös: taulu kattaa molempien puolten linssit):
   - 43 isoisän linssi 1873: VAIN-NATIIVISSA (webin rekisterissä ei ole).
-  - 42 webin karttapallo verrattuna natiivin koko palloon: ERI, ks. avoin 1.
+  - 42 webin karttapallo verrattuna natiivin koko palloon: hyväksytty poikkeama (Fable).
 
 ## Avoimet
 
-1. **Rivi 42, karttapallo (päätös Fablelle):** webin Karttapallo on oma linssinsä. Se piilottaa pelin käyttöliittymän
-   (Liiku, maan nimi, pulu, merkintäkortti), näyttää julisteen pallona, sulkeutuu ✕:llä ja sukeltaa napautuksella.
-   Natiivin kartta on aina pallo, eli toiminto (pyöritä ja sukella) on kartan perustila, mutta ulkoasu eroaa, koska
-   käyttöliittymä on näkyvissä.
-   - Vaihtoehto a: poikkeama (natiivissa ei tarvita erillistä linssiä).
-   - Vaihtoehto b: natiiviin kevyt Karttapallo-tila, jossa pelikerrokset piiloon, koko pallo ruudulle ja ✕ (webin kaava,
-     ei uusi linssi).
-2. **iPadin yläpalkin pystysijainti (Natiivi-UI):** raha ja päivä -pilleri on linssistä riippuen −27…+17 px webistä
+1. **iPadin yläpalkin pystysijainti (Natiivi-UI):** raha ja päivä -pilleri on linssistä riippuen −27…+17 px webistä
    (rivi 12 −27, 39 +17, 41 +9). Rivi 39 on siksi 17,3 px, eli hiukan yli rajan.
 
 ## Hyväksytyt poikkeamat
@@ -48,3 +41,6 @@ Samat kuin kierroksella 3:
 - alareunan ja sivujen turva-alue
 - radio (rivi 37)
 - iPadin aikajanapalkki ilman karttakehystä (rivi 13, Natiivi-UI)
+- **Rivi 42 karttapallo (Fable 25.9.):** webin Karttapallo-linssi on natiivissa tarpeeton, koska natiivin kartta on aina
+  pallo. Erillistä tilaa ei tehdä.
+- **Rivi 43 isoisän linssi 1873:** vain natiivissa, ei webin rekisterissä.
