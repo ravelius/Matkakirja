@@ -1,3 +1,9 @@
+## 2026-09-25 14:43 UTC — Pariisi: PR #3220 valmis junaan
+
+Pariisin kaikki 13 leikattua 1024 × 1024 RGBA WebP -kohdetta on avoimessa PR:ssä #3220. Zarafa-kirahvi generoitiin kokonaan uudestaan, koska ensimmäisen version takki ei ollut keltainen. Lopulliset kuvat on katsottu; täyttö 0,160–0,467, reuna 0. Leikkaustesti ja mittaus läpäisivät, poikkeuslista sekä mittausmanifesti sisältyvät PR:ään.
+
+**PR #3220 valmis junaan:** https://github.com/ravelius/Matkakirja/pull/3220 — Pariisi (13). PR on avoin, ei vielä mergeätty tai julkaistu. Tilauksen 64 kuvasta 50 on toimitettu PR:iin; Pietari, Rooma, Valletta ja Wien (14) jatkuu seuraavaksi.
+
 ## 2026-09-25 14:29 UTC — Luxemburg, Madrid, New York ja Nikosia: PR #3215 valmis junaan
 
 Kymmenen seuraavaa leikattua 1024 × 1024 RGBA WebP -kohdetta on avoimessa PR:ssä #3215: Luxemburg 3, Madrid 5, New York 1 ja Nikosia 1. Kuvat on katsottu silmin; täyttö 0,305–0,586, reuna 0, leikkaustesti ja mittaus läpäisivät. Poikkeuslista ja manifesti sisältyvät PR:ään.
