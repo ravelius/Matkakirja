@@ -64,3 +64,12 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 110 | Aloituslennolle kiinteä kesto sekunteina riippumatta kohteen etäisyydestä. Aika kurotaan umpeen nopeuttamalla koneen vauhtia vain keskivaiheilla (nousu ja lasku ennallaan). Yleisemmin: kone saa lentää animaatioissa eri vauhdeilla tarpeen mukaan. Natiiviseppä ehdottaa kestoarvon videon perusteella, omistaja vahvistaa. | Natiiviseppä |
 | 111 | Siirtymäreitit (matkareitit) ovat webissä paksummat kuin natiivissa. Tarkista webistä mitattuna (viivan leveys, väri, katkoviiva) ja tee natiiviin sama. | Pelikoodari (mittaus) + Natiiviseppä (piirto) |
 | 112 | Aloitusnäytön taustapallo: webissä aloitustekstien takana pyörii pallo, jolla lentokone lentää kaupungista toiseen ja piirtää punaista viivaa perässään → sama natiivin oikealle karttapallolle. Webin isoisän valokuvat jätetään pois (eivät toimi). Web on malli, mitattuna (nopeus, viivan väri ja leveys, reitti). | Natiiviseppä (Pelikoodari: webin mittaus) |
+
+## Build 14 (1.0.14) — omistajan löydökset klo 17.0x
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 113 | Maakuntien ääriviivat ovat liian voimakkaat, ja niiden pitää näkyä vain kohdemaassa (pelaajan maa). Viivan voimakkuus webin mukaan mitattuna. | Natiiviseppä |
+| 114 | Maakunnat-listaan valinta "pois", jolla kohdemaankin maakunnat häviävät näkyvistä. | Natiivi-UI |
+| 115 | Maakunnan mini-inforuutuun pieni kuva kyseisestä maakunnasta. Data: kuvat tilataan kuvaputkelta pelin maiden maakunnille ensin. | Sisältökirjuri (data) + Natiivi-UI (ruutu) |
+| 116 | Mini-inforuudun plusmerkki pois; tilalle tekstin loppuun "Lue lisää" (Fablen valinta omistajan kahdesta vaihtoehdosta). | Natiivi-UI |
