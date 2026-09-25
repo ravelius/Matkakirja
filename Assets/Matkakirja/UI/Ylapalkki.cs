@@ -52,7 +52,11 @@ namespace Matkakirja.Natiivi
     public sealed class Ylapalkki : ITilarivi
     {
         /// <summary>Webin .topbar-korkeus: puhelimella 57, muuten 61 (mitattu 393 × 852 ja 834 × 1194).</summary>
-        public static float Korkeus => Puhelin ? 57f : 61f;
+        /// <summary>
+        /// Palkin korkeus turva-alueen alla. iPad 61 → 65 (löydös 78, omistaja 25.9. klo 09.4x: "hieman korkeampi";
+        /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
+        /// </summary>
+        public static float Korkeus => Puhelin ? 57f : 65f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 7.2f) : new Vector2(7.2f, 12.8f);
 
@@ -101,7 +105,8 @@ namespace Matkakirja.Natiivi
         static float? kelluvaVaraus;
 
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
-        const float SaariRivi = 36f, SaariReuna = 14f, SaariVali = 6f;
+        /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ hieman sisemmäs reunoista (14 → 20 pt).</summary>
+        const float SaariRivi = 36f, SaariReuna = 20f, SaariVali = 6f;
 
         /// <summary>
         /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
@@ -111,6 +116,11 @@ namespace Matkakirja.Natiivi
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
+        /// <summary>
+        /// Löydös 78 (omistaja 25.9.2026): matala palkki hieman turva-aluetta korkeampi (build 12: 62 pt = pelkkä
+        /// turva-alue iPhone 17:ssä → 70 pt), yhä webiä matalampi; pilleri ja ☰ pysyvät saaren rivillä.
+        /// </summary>
+        const float MatalaLisa = 8f;
         bool? matalaNyt;
 
         /// <summary>Testikomento (ui ylapalkki saari x,y,w,h pisteinä | pois): simulaattorissa ei ole cutouts-tietoa.</summary>
@@ -132,7 +142,17 @@ namespace Matkakirja.Natiivi
             float pp = PuhelimenSkaala;
             foreach (var c in Screen.cutouts)
                 if (c.yMax >= Screen.height - 2f * pp && c.width < Screen.width * 0.8f)
-                    return new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+                {
+                    var saari = new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+                    // Löydös 73: Unity antaa Dynamic Islandin suorakulmion ruudun yläreunasta saaren alareunaan
+                    // (iPhone 17: y 0,3, korkeus 49,7). Saari itse on 126 × 37 pt (leveyden suhteessa), alareuna pitää.
+                    if (saari.yMin < 2f && saari.height > 40f && saari.width > 90f)
+                    {
+                        float korkeus = saari.width * 37f / 126f;
+                        saari = new Rect(saari.xMin, saari.yMax - korkeus, saari.width, korkeus);
+                    }
+                    return saari;
+                }
             float yla = (Screen.height - Screen.safeArea.yMax) / pp, w = Screen.width / pp;
             if (yla >= 55f) return new Rect((w - 126f) / 2f, 11f, 126f, 37f);
             if (yla >= 40f) return new Rect((w - 162f) / 2f, 0f, 162f, 32f);
@@ -209,7 +229,7 @@ namespace Matkakirja.Natiivi
             {
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
                 if (Auki) Sulje(); else Avaa();
-            }, turva, Ikonit.Valikko);
+            }, turva, KolmeVakasta);
             vakasnappi.tooltip = "Näytä yläpalkki";
 
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
@@ -219,6 +239,9 @@ namespace Matkakirja.Natiivi
             Asettele();
         }
 
+        /// <summary>Löydös 68: piilotetun palkin nappi kolmena allekkaisena väkäsenä (⌄), ei ☰.</summary>
+        const string KolmeVakasta = "<path d=\"M7 5.5l5 3 5-3\"/><path d=\"M7 10.5l5 3 5-3\"/><path d=\"M7 15.5l5 3 5-3\"/>";
+
         // --- iPhonen automaattinen piilotus (kartan veto piilottaa, napautus tuo takaisin) ---------------------
         Vector2 vetoAlku;
         float vetoAika = -1f;
@@ -226,7 +249,10 @@ namespace Matkakirja.Natiivi
 
         void TarkistaVeto()
         {
-            if (!Puhelin || piilossa || !nakyy) { if (VetoPiilossa && (!Puhelin || piilossa)) NaytaVedonJalkeen(); return; }
+            // Löydös 73 (omistaja 25.9. klo 05.4x): iPhonen pystyasennossa yläpalkki on aina näkyvissä; automaattinen
+            // piilotus ja väkäsnappi vain vaakamuodossa (Piilossa).
+            bool pysty = Screen.height > Screen.width;
+            if (!Puhelin || piilossa || !nakyy || pysty) { if (VetoPiilossa) NaytaVedonJalkeen(); return; }
             var o = Pointer.current;
             if (o == null) return;
             var r = o.position.ReadValue();
@@ -291,6 +317,9 @@ namespace Matkakirja.Natiivi
                 palkki.EnableInClassList("mk-ylapalkki--matala", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
                 pilleri.style.fontSize = StyleKeyword.Null;
+                foreach (var e in new VisualElement[] { pilleri, Valikko }) e.style.height = e.style.minHeight = StyleKeyword.Null;
+                pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                    pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = StyleKeyword.Null;
                 var t = Tayte;
                 palkki.style.paddingTop = r.y + t.x;
                 palkki.style.paddingBottom = t.x;
@@ -299,6 +328,11 @@ namespace Matkakirja.Natiivi
                 palkki.style.height = r.y + Korkeus;
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
+            // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
+            vakasnappi.style.top = Mathf.Round((Korkeus - 36f) / 2f);
+            vakasnappi.style.right = Tayte.y;
+            vakasnappi.style.width = 44f;
+            vakasnappi.style.height = vakasnappi.style.minHeight = 36f;
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
@@ -306,6 +340,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pilleri ja napit saaren riville (ks. SAARIRIVI yllä); paneelin yksiköt muunnetaan ruudun pisteistä.</summary>
+        string viimeSaariLoki;
+
         bool AsetaSaaririvi(Vector4 r, bool matala = false)
         {
             var paneeli = palkki.panel;
@@ -318,17 +354,33 @@ namespace Matkakirja.Natiivi
             float rivi = (matala ? MatalaRivi : SaariRivi) * yksikko;
             var ylakulma = P(saari.xMin, saari.yMin);
             var alakulma = P(saari.xMax, saari.yMax);
+            // Löydös 73: matalalla palkilla pilleri ja ☰ Dynamic Islandin korkuisina ja sen korkeudella.
+            // ScreenToPanel kääntää y-akselin (pisteet annetaan yläreunasta), joten korkeus itseisarvona.
+            float saarenKorkeus = saari.height > 0 ? Mathf.Abs(alakulma.y - ylakulma.y) : 0f;
+            if (matala && saarenKorkeus > 20f * yksikko) rivi = saarenKorkeus;
+            float napinKorkeus = matala ? rivi : float.NaN;
+            string loki = $"matala {matala}, saari {saari}, saaren korkeus {saarenKorkeus:0.#}, rivi {rivi:0.#}, yksikkö {yksikko:0.###}";
+            if (loki != viimeSaariLoki) { viimeSaariLoki = loki; Debug.Log("MATKAKIRJA ylapalkki saaririvi: " + loki); }
+            foreach (var e in new VisualElement[] { pilleri, Valikko })
+            {
+                e.style.height = float.IsNaN(napinKorkeus) ? StyleKeyword.Null : new StyleLength(napinKorkeus);
+                e.style.minHeight = float.IsNaN(napinKorkeus) ? StyleKeyword.Null : new StyleLength(napinKorkeus);
+            }
+            if (matala) pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = rivi / 2f;
             float keski = saari.height > 0 ? (ylakulma.y + alakulma.y) / 2f : 0f;
             float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
             palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
             palkki.EnableInClassList("mk-ylapalkki--matala", matala);
             palkki.style.paddingTop = yla;
-            palkki.style.paddingBottom = 0;
             palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
             palkki.style.paddingRight = r.z + SaariReuna * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
-            float korkeus = matala ? Mathf.Max(r.y, yla + rivi + MatalaAla * yksikko) : yla + rivi;
+            float korkeus = matala ? Mathf.Max(r.y + MatalaLisa * yksikko, yla + rivi + MatalaAla * yksikko) : yla + rivi;
             palkki.style.height = korkeus;
+            // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
+            // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
+            palkki.style.paddingBottom = Mathf.Max(0f, korkeus - yla - rivi);
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);

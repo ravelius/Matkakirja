@@ -374,6 +374,21 @@
     display: none;
 }
 
+/* Löydös 73: iPhonella pienennetty lappu vain kaupungin nimen levyinen ("Ateena"). */
+.mk-matkakirja.mk-matkakirja--nimi {
+    width: auto;
+    max-width: 62%;
+}
+
+.mk-matkakirja--nimi .mk-matkakirja__lyhyt {
+    flex-grow: 0;
+}
+
+/* Löydös 68: vaakamuodossa lappu häviää yläpalkin mukana. */
+.mk-matkakirja.mk-matkakirja--palkinpiilo {
+    opacity: 0;
+}
+
 .mk-matkakirja--pieni .mk-matkakirja__lyhyt {
     display: flex;
     flex-grow: 1;

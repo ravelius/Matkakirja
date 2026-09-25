@@ -163,11 +163,27 @@ namespace Matkakirja.Natiivi
         public void Kiinnita(Ylapalkki y)
         {
             ylapalkki = y;
+            Ylapalkki.PalkkiPiilossaMuuttui += PaivitaPalkkipiilo;
+            Ylapalkki.AukiMuuttui += _ => PaivitaPalkkipiilo();
             y.PilleriMuuttui += Asettele;
             Asettele();
         }
 
         static bool Kaupunkipilleri => Ylapalkki.Kelluva;
+        /// <summary>Löydös 73: iPhonella pienennetty lappu näyttää vain kaupungin nimen ja on tekstinsä levyinen.</summary>
+        static bool VainNimi => Ylapalkki.Puhelin;
+
+        /// <summary>
+        /// Löydös 68: iPhonen vaakamuodossa pienennetty lappu häviää yläpalkin mukana ja palaa, kun palkki avataan
+        /// väkäsnapista.
+        /// </summary>
+        void PaivitaPalkkipiilo()
+        {
+            bool piiloon = Ylapalkki.Puhelin && pieni && Ylapalkki.PalkkiPiilossa && !Ylapalkki.Auki;
+            if (kortti.ClassListContains("mk-matkakirja--palkinpiilo") == piiloon) return;
+            kortti.EnableInClassList("mk-matkakirja--palkinpiilo", piiloon);
+            kortti.pickingMode = piiloon ? PickingMode.Ignore : PickingMode.Position;
+        }
 
         void Asettele()
         {
@@ -285,7 +301,7 @@ namespace Matkakirja.Natiivi
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
             // Lappu: otsikko ja lyhyt paikkarivi (web #fact-voice + .fact-place-lyhyt).
             string ly = m.Lyhyt ?? m.Paikkarivi;
-            lyhyt.text = Kaupunkipilleri ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
+            lyhyt.text = Kaupunkipilleri || VainNimi ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
             tunnelma.text = m.Paikkarivi ?? "";
             tunnelma.EnableInClassList("mk-matkakirja__tunnelma--paikka", !m.Tunnelma);
             Piiloon(tunnelma, string.IsNullOrEmpty(m.Paikkarivi));
@@ -387,6 +403,8 @@ namespace Matkakirja.Natiivi
         {
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
+            kortti.EnableInClassList("mk-matkakirja--nimi", p && VainNimi && !Kaupunkipilleri);
+            PaivitaPalkkipiilo();
             Asettele();
         }
 
