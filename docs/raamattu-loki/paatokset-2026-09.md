@@ -5343,3 +5343,7 @@ Luokitin (Sonnet) oli hetken rate-limitissä, ei tokenikiintiö.
 ## KARTTASEPPA 70 % → LUOVUTUS JA NOLLAUS KASKETTY PALLON AMPARIVIENNIN VALMISTUTTUA (LUOVUTUS -20260925.md, clear_session SAMASSA VUOROSSA); VIIKKOKIINTIO KAIKKI MALLIT 97 % (NOLLAUTUU 28.9.), OMISTAJA VAIHTAA TILIA TARVITTAESSA (25.9.2026 klo 12.06)
 
 Uudelleenkäynnistyksen jälkeen sessiot rekisteröityivät uudelleen (SendMessage vaatii [ref]-vahvistuksen kerran).
+
+## JULKAISIJAN TARKISTUS UUDELLEENKAYNNISTYKSEN JALKEEN: RUNNERIT ONLINE, SAVUKKEET-YOAJO UUSIKSI 11.57, JONO TYHJA, PIDOSSA VAIN #2991; TF:N klo 04 YOAJO KAYNNISTYI VASTA 11.35 (GITHUBIN VIIVE 7,5 h), KAATUI Build/yo 'Directory not empty' → EI LATAUSTA, LASKURI 12; FABLE: PR — YOAJO OHITTAA ITSENSA klo 06 JALKEEN + Build/yo-SIIVOUS ENNEN VIENTIA (25.9.2026 klo 12.07)
+
+Estää viivästyneen yöajon viemästä keskeneräistä masteria päivällä.
