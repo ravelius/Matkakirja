@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 15:10 EEST
+**Päivitetty:** 2026-09-25 15:24 EEST
 
 ## 1) Sessiot
 
@@ -10,15 +10,15 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 50% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 51% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 23% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 44% | idle | — |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 62% | running | Lähestyy 70 %, seurataan |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 53% | idle | — |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 67% | running | Luovutus + clear_session (Fablen pyyntö 15.06); ilmoita Fablelle "Natiivi-UI nollattu" kun <10 %, tai jos yhä >60 % klo 15.26 |
 | Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 32% | idle | — |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 45% | idle | PR #3154 |
-| Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 15% | idle | PR #3153 (savukierros B13) |
-| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 21% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 53% | running | — |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 46% | idle | PR #3154 |
+| Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 16% | idle | PR #3153 (savukierros B13) |
+| Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 22% | idle | PR #3155 |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 61% | running | — |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 39% | running | — |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
@@ -56,9 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 194 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 29 kpl. **Swap:** 0 Gt.
+- **Levy:** 189 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
 - **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 0.
-- **5 h -kiintiö:** 46 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 13 %. **Viikko (Fable):** 7 %.
-- **Konteksti:** Natiivi-UI 62 % (raja 70 %, seurataan), Pelikoodari 53 %, Fable 50 %.
-- **Juna:** viimeisin KÄÄNNETTY 14:51 (d42d211e); juna/b13 9f78c612 uusi 15:00, vanhin käännöksetön ~10 min, alle 25 min.
-- **Postilaatikko:** kärki 8c2944063 (mittausohje jo ilmoitettuun Ateena-leikkaustilaukseen; ei erillistä ilmoitusta). **Avoimia PR:iä:** 13.
+- **5 h -kiintiö:** 51 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 14 %. **Viikko (Fable):** 7 %.
+- **Konteksti:** Natiivi-UI 67 % klo 15.19 (nousee, luovutus kirjoitteilla), Pelikoodari 61 %, Natiiviseppä 53 %, Fable 51 %.
+- **Juna:** viimeisin KÄÄNNETTY 14:51 (d42d211e); juna/b13 809fd779 uusi 15:08, vanhin käännöksetön (~14:55) lähestyy 25 min; junavahti tarkistaa vain 10 min välein → tarkistetaan seuraavalla kierroksella, hälytys jos ei käännöstä 15.26 mennessä.
+- **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 14.
