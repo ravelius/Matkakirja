@@ -116277,6 +116277,275 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Macapá',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Macapá; Macapá International Airport; Santana, Amapá;
+       * Franco-Brazilian Binational Bridge; Açaí palm; Tucupi; Tacacá;
+       * Marabaixo; Mazagão; Central Market of Macapá; Parque Arqueológico
+       * do Solstício) ja Wikivoyagen sivuilta Macapá, Amapá ja Oiapoque;
+       * marabaixon kierron päivät, Encontro dos Tambores, Museu Sacaca,
+       * Bioparque da Amazônia, Porto de Santanan etäisyys, lentokentän
+       * tax free -myymälät ja açaín syöntitavat portugalin Wikipediasta
+       * (Marabaixo, Museu Sacaca, Macapá, Porto de Santana, Aeroporto
+       * Internacional de Macapá, Açaí) — teksti omaa. Belémin laivamatkan
+       * kestosta lähteet eivät ole yksimielisiä (24 tai 36–38 tuntia),
+       * joten se annetaan välinä. Nostojen aiheita (perustaminen 1758 ja
+       * linnoitus, vartiotornin näkymä, Marco Zero, Zerão, Orlan kävelyreitti
+       * ja ilmasto, suisto, pororoca, Curiaún suojelualue ja guará,
+       * Tumucumaque ja biodiversiteettikäytävä), ennen–nyt-kuvien aihetta
+       * (São Josén kirkko) eikä saapumisen ja visan aiheita (stadionin
+       * keskiviiva, maantien puuttuminen) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Museu Sacacan regatão-vene puiden alla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Márcia do Carmo Museu Sacaca Barco regatão Macapá AP (40824636404).jpg',
+          lyhyt: 'Museu Sacacan puistossa vanha jokikauppiaan vene lepää puiden varjostamassa uomassa.',
+          selite: 'Museu Sacacan ulkomuseo Macapássa maaliskuussa 2018: tiheiden '
+            + 'lehtipuiden alla kulkee tyyni vesiuoma, jonka päässä on valkoinen '
+            + 'kaksikerroksinen jokivene. Regatão on Amazonin jokivarsilla '
+            + 'kylästä kylään kiertävän kauppiaan vene.',
+          lahde: 'Márcia do Carmo / MTur Destinos, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Macapáan ei johda maantietä muualta Brasiliasta, joten perille '
+          + 'tullaan lentäen tai jokilaivalla naapurikaupunki Santanan satamaan. '
+          + 'Açaí syödään kylmänä maniokkijauhon kanssa, ja kuuma '
+          + 'tacacá-keitto lusikoidaan kalebassikupista. '
+          + 'Pääsiäisestä alkukesään kaupungin afrobrasilialaiset korttelit '
+          + 'juhlivat marabaixon rumpujen tahdissa, ja marraskuussa rummut '
+          + 'kokoontuvat Encontro dos Tambores -juhlaan. Päiväretket vievät '
+          + 'Bioparque da Amazônian poluille, Fazendinhan jokirannalle ja '
+          + 'heinäkuussa Mazagão Velhoon katsomaan maurien ja kristittyjen '
+          + 'taistelua. Pohjoiseen Ranskan Guayanan rajalle kulkee BR-156, '
+          + 'jonka päässä Oyapock-joen ylittää vuonna 2017 avattu rajasilta.',
+        artikkeli: {
+          nimi: 'Matkailijan Macapá',
+          teksti: 'Macapássa liikutaan jokilaivalla ja juhlitaan rumpujen tahdissa.',
+          nosto: 'Marabaixon tanssijat laahaavat jalkojaan rummun tahdissa '
+            + 'kahleissa tanssineiden esivanhempien muistoksi, mutta nykyään '
+            + 'tanssi on ylpeä ja iloinen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, jokilaivalla tai rajasillan kautta',
+              teksti: 'Macapá–Alberto Alcolumbren kansainvälinen lentokenttä on '
+                + 'vain noin kolmen kilometrin päässä keskustasta. Sen juuret '
+                + 'ovat pienessä lentotukikohdassa, jonka Yhdysvallat rakensi '
+                + 'toisen maailmansodan aikana, ja nykyinen terminaali avattiin '
+                + 'huhtikuussa 2019. Suorat lennot kulkevat ennen kaikkea '
+                + 'Belémiin ja Brasíliaan. Jokilaivat lähtevät naapurikaupunki '
+                + 'Santanan satamasta noin 18 kilometrin päästä keskustasta. '
+                + 'Belémiin laiva kiertää Marajón saaren, ja matka kestää '
+                + 'laivasta riippuen vuorokaudesta puoleentoista. Santarémiin '
+                + 'mennään puolitoista vuorokautta ja Manausiin noin viisi '
+                + 'päivää. Halvin tapa on ripustaa oma riippumatto kannelle, '
+                + 'ja hytti maksaa suunnilleen kaksinkertaisesti. Vuonna 2020 '
+                + 'Santanan ja Belémin välillä kulki Brasilian suurin lautta, '
+                + '115 metriä pitkä. Maata pitkin pääsee vain pohjoiseen: '
+                + 'BR-156 kulkee sademetsän ja Guayanan savannin halki '
+                + 'Oiapoqueen Ranskan Guayanan rajalle. Bussit lähtevät '
+                + 'kaupungin pohjoisosan linja-autoasemalta, ja matka kestää '
+                + 'tien kunnosta riippuen 7–12 tuntia. Nopeampia ovat jaetut '
+                + 'nelivetoiset Toyota Hilux -avolavat, jotka lähtevät, kun '
+                + 'ohjaamoon on saatu neljä matkustajaa. Joulukuussa 2025 '
+                + 'tiestä oli päällystetty noin kaksi kolmasosaa, ja loput '
+                + 'oli soratietä, jolla purot ylitetään yksikaistaisilla '
+                + 'puusilloilla. Oiapoquessa Oyapock-joen ylittää 378 metrin '
+                + 'vinoköysisilta, joka avattiin liikenteelle maaliskuussa 2017. '
+                + 'Rajatarkastukset ovat sillan kummassakin päässä, ja yöksi '
+                + 'silta suljetaan.',
+              kuva: [
+                {
+                  tiedosto: 'Porto de Santana Amapá BR - panoramio.jpg',
+                  lyhyt: 'Santanan satamassa jokilaivan kyltti lupaa lähdön Santarémiin joka maanantai.',
+                  selite: 'Jokilaiva João Quirino Santanan satamassa helmikuussa '
+                    + '2015 toisen laivan kannelta kuvattuna. Kaiteeseen '
+                    + 'sidotun kyltin mukaan laiva lähtee joka maanantai kello '
+                    + '14 Santarémiin ja pysähtyy matkalla Almeirimissa, '
+                    + 'Prainhassa ja Monte Alegressa. Taustalla virtaa ruskea '
+                    + 'Amazon.',
+                  lahde: 'Jose Donizetti Dias, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'BR-156 fim asfalto.jpg',
+                  lyhyt: 'BR-156:n asfaltti loppuu, ja punainen soratie jatkuu metsän halki.',
+                  selite: 'BR-156 lokakuussa 2019 kohdassa, jossa Oiapoquesta '
+                    + 'Macapán suuntaan kulkevan tien asfaltti loppuu. Leveä '
+                    + 'punainen soratie jatkuu vihreän metsän välissä, ja '
+                    + 'oikealla tien laidassa on 60 kilometrin '
+                    + 'nopeusrajoitusmerkki ja kaksi kylttiä.',
+                  lahde: 'WikiFietsjes, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Oiapoque (30690937688).jpg',
+                  lyhyt: 'Oyapockin vinoköysisilta yhdistää Brasilian Oiapoquen ja Ranskan Guayanan.',
+                  selite: 'Ranskalais-brasilialainen rajasilta Oyapock-joen yllä '
+                    + 'elokuussa 2018. Kahden betonipylonin varaan ripustettu '
+                    + 'silta ylittää joen metsäisten rantojen välillä, ja sen '
+                    + 'alla kulkee pieni vene.',
+                  lahde: 'Rômulo Ferreira, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Açaíta, tacacáa ja katkarapuja',
+              teksti: 'Amazonin suistossa açaí ei ole herkku vaan arkiruokaa, '
+                + 'ja palmun pienistä mustanvioleteista marjoista tehtyä '
+                + 'paksua sosetta on syöty täällä vuosisatoja. Perinteisesti '
+                + 'sitä syödään kylmänä maniokkijauhon eli farinhan tai '
+                + 'tapiokan kanssa. Moni tekee açaísta ja farinhasta paksun '
+                + 'pirãon grillatun kalan tai katkarapujen seuraksi, ja vain osa '
+                + 'lisää sokeria. Granolalla ja banaanilla kuorrutettu açaí na '
+                + 'tigela on myöhempi keksintö: 1980-luvulla brasilialainen '
+                + 'Gracien suku alkoi markkinoida açaíta energiaruokana. '
+                + 'Kuuma välipala on tacacá. Keltainen tucupi-liemi '
+                + 'puristetaan raastetusta maniokinjuuresta, ja sitä keitetään '
+                + 'päiväkausia, jotta myrkky häviää. Liemeen lisätään '
+                + 'tapiokatärkkelystä, kuivattuja katkarapuja ja jambu-yrttiä, '
+                + 'joka saa huulet ja kielen kihelmöimään ja puutumaan. Keitto '
+                + 'tarjoillaan kuumana cuia-kalebassikupista. Samassa '
+                + 'tucupissa haudutetaan pato no tucupi -ankkaruoka. Amapán '
+                + 'joista ja suistosta tulevat gurijuba-kala, hiillostettava '
+                + 'tucunaré ja höyrytetyt camarão no bafo -katkaravut. '
+                + 'Linnoituksen vieressä joen rannalla on lounasravintoloita ja '
+                + 'churrascarioita, joihin paikalliset kokoontuvat '
+                + 'puolenpäivän aikaan puoli kahdestatoista kahteen. Kalaan '
+                + 'erikoistuneissa ravintoloissa kannattaa tilata alueen '
+                + 'vaaleanpunaisia katkarapuja valkosipulissa ja öljyssä.',
+              kuva: {
+                tiedosto: 'MarciaDoCarmo Gastronomia acai na tigela Macapa AP (40077441955).jpg',
+                lyhyt: 'Paksu açaí-sose syödään Amazonilla usein tapiokan tai maniokkijauhon kanssa.',
+                selite: 'Valkoisessa kulhossa on tummanviolettia açaí-sosetta, ja '
+                  + 'sen takana on lasikupeissa valkoisia tapiokahelmiä ja '
+                  + 'keltaista maniokkijauhoa. Säkkikankaalla kulhon ympärillä '
+                  + 'on mustia açaí-marjoja. Kuva on otettu Macapássa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Márcia do Carmo / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Marabaixon rummut',
+              teksti: 'Macapán oma perinne on marabaixo, afrobrasilialaisten '
+                + 'yhteisöjen piiritanssi, jossa lauletaan yhdessä ja soitetaan '
+                + 'rumpuja kansankatolisten pyhimysjuhlien kunniaksi. '
+                + 'Kansallinen kulttuuriperintövirasto IPHAN merkitsi sen '
+                + 'Brasilian aineettomaksi kulttuuriperinnöksi vuonna 2018. '
+                + 'Yleensä ainoa soitin on caixa de marabaixo, kovapuinen '
+                + 'lieriörumpu, jonka molemmissa päissä on eläimennahkakalvo '
+                + 'ja jota kannetaan olalla värikkään hihnan varassa. Rumpalit '
+                + 'eivät seiso paikallaan, vaan kulkevat piirissä tanssijoiden '
+                + 'mukana ja vastaavat laulettuihin säkeisiin. Tanssijat '
+                + 'kiertävät vastapäivään laahaten jalkojaan, ja naiset '
+                + 'pyörähtelevät leveissä hameissa. Tanssi esitettiin ennen São '
+                + 'Josén kirkon edessä, mutta 1940-luvulla keskustan musta '
+                + 'väestö siirrettiin Laguinhon ja Favelan, nykyisen Santa '
+                + 'Ritan, kaupunginosiin, ja juhlat muuttivat järjestäjien '
+                + 'koteihin. Marabaixon kierto alkaa Favelassa '
+                + 'pääsiäislauantaina ja Laguinhossa pääsiäispäivänä ja päättyy '
+                + 'Kristuksen ruumiin ja veren juhlaa seuraavaan sunnuntaihin. '
+                + 'Siihen kuuluu messuja, litanioita, salkojen kaatoa ja '
+                + 'tanssiaisia, ja 16. kesäkuuta on osavaltion marabaixopäivä. '
+                + 'Marraskuussa Mustan tietoisuuden päivän aikaan Laguinhon '
+                + 'mustan kulttuurin keskuksessa järjestetään Encontro dos '
+                + 'Tambores, rumpujen kohtaaminen. Sitä on vietetty vuodesta '
+                + '1995, ja sen huipennus on Missa dos Quilombos -messu. '
+                + 'Lokakuun toisena sunnuntaina Macapán Círio de Nazaré '
+                + '-kulkue kokoaa yli 250 000 ihmistä.',
+              kuva: {
+                tiedosto: 'Marabaixo.jpg',
+                lyhyt: 'Marabaixon rummun kehykseen on kirjoitettu Amapá; taustalla laulaa tanssija.',
+                selite: 'Lähikuva caixa de marabaixo -rummusta Macapássa vuonna '
+                  + '2015: puukehykseen kiristetty nahkakalvo, köysikiristimet '
+                  + 'ja kehykseen kirjoitettu Amapá. Taustalla valkoiseen '
+                  + 'puseroon pukeutunut nainen laulaa, ja reunoilla hulmuavat '
+                  + 'kukkakuvioiset hameet.',
+                lahde: 'Lia de Paula / Ministério da Cultura, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museo, biopuisto ja jokiranta',
+              teksti: 'Museu Sacaca avattiin 1997 noin 21 000 neliömetrin '
+                + 'viheralueelle Tremin kaupunginosaan. Sen tärkein osa on '
+                + 'ulkomuseo, joka rakennettiin yhdessä alkuperäiskansojen, '
+                + 'jokivarsien asukkaiden, luonnontuotteiden kerääjien ja '
+                + 'maniokkijauhon tekijöiden kanssa. Museo on nimetty '
+                + 'parantaja Raimundo dos Santos Souzan eli Sacacan mukaan, ja '
+                + 'sen apteekissa myydään paikallisista raaka-aineista '
+                + 'tehtyjä luontaistuotteita saippuoista lihasvoiteisiin. '
+                + 'Jos ymmärtää portugalia, opastus kannattaa maksaa. Macapán ja '
+                + 'Santanan välisen AP-010-tien varrella on Bioparque da '
+                + 'Amazônia, 107 hehtaarin puisto, joka avattiin uudelleen '
+                + 'lokakuussa 2019. Sen alkuna oli Sacacan vuonna 1973 '
+                + 'perustama kaupunginmetsä, johon tuotiin Santanan tien '
+                + 'rakennustöissä loukkaantuneita villieläimiä. Nyt puistossa '
+                + 'on eri vaikeustason polkuja, orkideatarha, '
+                + 'riippumattoalue, pistimettömien mehiläisten tarha, vesipolku '
+                + 'ja vaijeriliuku. '
+                + 'Siellä voi myös kävellä vaihettumisvyöhykkeellä, jossa '
+                + 'kohtaavat kuivan maan metsä, savanni ja kosteikko. '
+                + 'Sunnuntaisin kaupunkilaiset lähtevät pienille jokirannoille, '
+                + 'ja helpoimmin pääsee Fazendinhaan, jonne kulkee suora bussi '
+                + 'keskustasta. Etelässä Mazagão Velhon kylän perustivat '
+                + 'siirtolaiset, jotka Portugali evakuoi vuonna 1769 '
+                + 'Marokon Mazagãosta, nykyisestä El Jadidasta. Heinäkuun '
+                + '16. ja 28. päivän välillä kylän São Tiagon juhlassa '
+                + 'näytellään maurien ja kristittyjen sotaa. Pidemmän retken '
+                + 'kohde on Calçoenen lähellä noin 390 kilometrin päässä '
+                + 'pohjoisessa: Amazonin Stonehengeksi kutsuttu 127 '
+                + 'graniittipaaden kehä, jonka yhden kiven varjo katoaa '
+                + 'joulukuun päivänseisauksena.',
+              kuva: {
+                tiedosto: 'Fim de tarde na Praia de Fazendinha.jpg',
+                lyhyt: 'Fazendinhan jokiranta on Macapán helpoimmin saavutettava uimapaikka.',
+                selite: 'Auringonlasku Fazendinhan jokirannalla elokuussa 2022: '
+                  + 'tummat pilvet ja oranssi taivas, jota vasten piirtyvät '
+                  + 'rantametsän ja kahden palmun siluetit. Etualalla kiiltävät '
+                  + 'märkä hiekka ja matala vesi, ja kaukana joella näkyy '
+                  + 'pieni vene.',
+                lahde: 'Marcondes Pereira de Oliveira, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vapaakauppaa ja varovaisuutta tiellä',
+              teksti: 'Macapá ja Santana ovat vuodesta 1991 olleet '
+                + 'vapaakauppa-aluetta, ja keskustan liikkeissä on laaja '
+                + 'valikoima tuontitavaraa. Lentokentän tax free '
+                + '-myymälöissä voi siksi asioida kuka tahansa, myös ilman '
+                + 'lentolippua. Käsitöitä kannattaa etsiä Casa do Artesãosta, '
+                + 'jossa myydään alkuperäiskansojen töitä, punottuja '
+                + 'huonekaluja ja balata-kumilla päällystettyä keramiikkaa. '
+                + 'Linnoituksen edessä on vuonna 1953 avattu Mercado Central. '
+                + 'Se kunnostettiin ja avattiin uudelleen tammikuussa 2020, ja '
+                + 'sen 63 kojussa myydään enimmäkseen ruokaa. Torin kyljessä '
+                + 'oleva Bar Du Pedro avattiin samana päivänä kuin tori, ja se '
+                + 'on sen vanhin yhä toimiva liike. Kaupungissa liikutaan '
+                + 'takseilla ja moottoripyörätakseilla, ja kaupunkibussit '
+                + 'kulkevat myös Santanaan ja Mazagãoon. Keskitason hotellit '
+                + 'antavat usein 20–30 prosentin alennuksen listahinnoista, '
+                + 'joten hinnasta kannattaa kysyä. Jos lähtee BR-156:lle, on '
+                + 'syytä tietää, että tie tunnetaan ryöstöistä etenkin '
+                + 'päällystämättömillä osuuksilla. Asumattomilla seuduilla '
+                + 'pysähdytään vain pakon edessä, koska ryöstäjät lavastavat '
+                + 'usein auton rikkoutumisen. Bussi- ja satamaterminaalien '
+                + 'välittäjiä kannattaa välttää ja sopia kyydistä suoraan '
+                + 'kuljettajan kanssa. Oiapoquessa Oyapock-joki ylitetään '
+                + 'sillan kautta, sillä veneellä rajan yli menemistä pidetään '
+                + 'laittomana, jos matka jatkuu pidemmälle kumpaankaan maahan. '
+                + 'Ranskan puolella maksetaan euroilla.',
+              kuva: {
+                tiedosto: 'Mercado Central de Macapá (2021).jpg',
+                lyhyt: 'Linnoituksen edessä oleva Mercado Central avattiin uudelleen vuonna 2020.',
+                selite: 'Kunnostettu Mercado Central lokakuussa 2021: valkoinen '
+                  + 'halli sinisine kaari-ikkunoineen ja ovineen, edustalla '
+                  + 'suihkulähde ja värikäs neliapilan muotoinen veistos. '
+                  + 'Oikealla Bar Du Pedron pöydissä istuu asiakkaita.',
+                lahde: 'Perci Hong, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'suisto',
