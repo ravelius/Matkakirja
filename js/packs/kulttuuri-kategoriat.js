@@ -114931,6 +114931,248 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cable Beach',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Broome, Western Australia; Broome International
+       * Airport; Sun Picture Gardens; Yawuru; Cable Beach; Cape Leveque
+       * Road; Cape Leveque; Dampier Peninsula; Beagle Bay Community,
+       * Western Australia; Horizontal Falls; Irukandji jellyfish; Time in
+       * Australia) ja Wikivoyagen Broome-sivulta — teksti omaa. Nostojen
+       * aiheita (riji, Dampier, kuvernööri ja Port of Pearls, sukeltajat ja
+       * painekammio, Women of Pearling, Chinatownin kielet, lennätinkaapeli,
+       * dinosaurusten jäljet, Pinctada maxima, Staircase to the Moon,
+       * kahlaajat, mangrovet), gallerian aiheita (Koolama, Dampier
+       * Terrace, Streeter's Jetty, japanilainen hautausmaa, kamelit) eikä
+       * saapumistekstin aiheita toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Sun Picture Gardensin katsomo hämärässä (CC0).
+       * Katuvalokuvan "matalina pidetyt" valot perustuvat Commonsin
+       * tiedostonimeen. Beagle Bayn kuvan nimessä on kaarevat lainausmerkit
+       * (U+2018/U+2019), kuten Commonsissa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'A crowd settle in at dusk to watch a film at Sun Picture Gardens, Broome, WA, Australia 03.jpg',
+          lyhyt: 'Katsojat asettuvat tuoleihin Sun Picturesin ulkoteatterissa illan hämärtyessä.',
+          selite: 'Sun Picture Gardensin katsomo lokakuussa 2024 hämärän '
+            + 'laskeutuessa. Valkokangas on taivasalla, ja katsojat istuvat '
+            + 'kangasselkäisissä tuoleissa; Broomen lentokentälle laskeutuvat '
+            + 'koneet lentävät teatterin yli.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Broomeen tullaan useimmiten lentäen, sillä Perthiin on '
+          + 'maanteitse yli kaksituhatta kilometriä, ja kone laskeutuu lähes '
+          + 'keskelle kaupunkia. Kuivana kautena toukokuusta lokakuuhun sade '
+          + 'on harvinaista ja kaupungissa on eniten matkailijoita; '
+          + 'sadekaudella ilma on kuuma ja kostea, ja moni yritys sulkee '
+          + 'ovensa. Iltaisin elokuvaa katsotaan maailman vanhimmassa yhä '
+          + 'toimivassa ulkoteatterissa, lauantaiaamuisin kierretään '
+          + 'oikeustalon markkinat, ja päiväretki pohjoiseen vie Dampierin '
+          + 'niemimaalle simpukankuorin koristeltuun kirkkoon. Meressä on '
+          + 'muistettava suistokrokotiilit ja polttavat meduusat.',
+        artikkeli: {
+          nimi: 'Matkailijan Broome',
+          teksti: 'Broomessa lentokenttä on keskellä kaupunkia, ja elokuvaa katsotaan taivasalla.',
+          nosto: 'Sun Picturesissa elokuvia on näytetty taivasalla joulukuusta '
+            + '1916, ja vielä 1970-luvulle asti nousuvesi tulvi usein '
+            + 'katsomoon kesken näytöksen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kiitotie keskellä kaupunkia',
+              teksti: 'Broome on kaukana kaikesta: Perthiin on maanteitse noin '
+                + '2 050 kilometriä sisämaan Great Northern Highwayta ja yli '
+                + '2 300 kilometriä rannikkoa pitkin, Darwiniin lähes 1 900 '
+                + 'kilometriä. Pitkän matkan bussit tulevat molemmista '
+                + 'suunnista, mutta useimmat matkailijat saapuvat lentäen. '
+                + 'Qantas ja Virgin Australia lentävät Perthistä noin kahdessa '
+                + 'ja puolessa tunnissa, ja Airnorthin kone tulee Darwinista '
+                + 'Kununurran kautta. Nimestään huolimatta Broome International '
+                + 'Airportilta ei kesäkuussa 2026 lentänyt yhtään säännöllistä '
+                + 'ulkomaan vuoroa, sillä Singaporen kausireitti oli jälleen '
+                + 'tauolla. Kenttä on alle kilometrin päässä kaupungin '
+                + 'postitoimistosta, ja kiitotie erottaa Chinatownin keskustan '
+                + 'Cable Beachin hotelleista ja rannasta. Matkaoppaat neuvovat, '
+                + 'ettei turvatarkastukseen kannata mennä liian aikaisin, koska '
+                + 'lähtöaulan puolella ei ole ilmastointia. Kaupunki on '
+                + 'hajanainen: Chinatownista Cable Beachille on seitsemän '
+                + 'kilometriä, jonka kävelee tunnissa, mutta helteessä sitä ei '
+                + 'kannata tehdä. Elokuussa 2025 aloitti julkinen TransBroome-'
+                + 'bussilinja 890 Town Beachin ja Cable Beachin välillä, kun '
+                + 'aiempi yksityinen bussiyhtiö oli lopettanut. Pääteiden '
+                + 'varsilla on pyöräteitä, mutta varjoa niillä ei juuri ole.',
+              kuva: [
+                {
+                  tiedosto: 'GLAMPeak Broome 25-280618 gnangarra-129.jpg',
+                  lyhyt: 'Airnorthin matkustajakone rullaa Broomen kentällä punaisen maan keskellä.',
+                  selite: 'Airnorthin suihkukone rullaa Broomen lentokentällä '
+                    + 'kesäkuussa 2018. Kuva on otettu toisen koneen ikkunasta, '
+                    + 'ja kiitoteiden välissä näkyy Kimberleylle tyypillistä '
+                    + 'punaista pindan-maata.',
+                  lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+                },
+                {
+                  tiedosto: 'Broome International Airport terminal, September 2025 01.jpg',
+                  lyhyt: 'Broomen lentoaseman saapuvien matkustajien halli syyskuussa 2025.',
+                  selite: 'Broome International Airportin saapumisaula '
+                    + 'syyskuussa 2025. Matala, harjakattoinen rakennus on pieni, '
+                    + 'vaikka kenttä on koko Kimberleyn alueen lentoliikenteen '
+                    + 'solmukohta.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Streetlights on the flight path to Broome airport, WA, Australia kept low 01.jpg',
+                  lyhyt: 'Jalkakäytävä Chinatowniin kulkee lentokentän laidalla matalien katuvalojen alla.',
+                  selite: 'Kyltti opastaa Short Streetille ja Chinatowniin '
+                    + 'lentokentän laidalla. Laskeutuvien koneiden reitin alla '
+                    + 'katuvalot on pidetty matalina, ja taustalla näkyvät kentän '
+                    + 'rakennukset.',
+                  lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Merestä, puroista ja markkinoilta',
+              teksti: 'Broomen keittiö nojaa mereen. Yawuru-kansan perinteinen '
+                + 'ruokavalio koostui kaloista, kilpikonnista, rauskuista, '
+                + 'dugongeista, taskuravuista ja mangrovesimpukoista, ja '
+                + 'pindan-pensaikon syötäville hedelmille ja siemenille heidän '
+                + 'kielessään on yli yhdeksänkymmentä nimeä. Yawurujen kalastus '
+                + 'seuraa vuodenaikoja: viileällä kuivakaudella saalis haetaan '
+                + 'avomeren sijaan puroista, ja kosteana kautena pyydetään '
+                + 'rannikon parvikaloja, kuten piikkimakrilleja ja keltejä. '
+                + 'Urheilukalastajille Broome on yksi maailman parhaista '
+                + 'paikoista pyydystää purjekalaa, ja kymmenkunta yritystä vie '
+                + 'veneillä kalaan tai katselemaan rannikkoa. Lauantaiaamuisin '
+                + 'kahdeksasta puoleenpäivään kaupunkilaiset kokoontuvat '
+                + 'Courthouse-markkinoille vanhan oikeustalon luo Frederick '
+                + 'Streetin ja Hamersley Streetin kulmaan. Muutaman korttelin '
+                + 'päässä Hamersley Streetillä toimii Matso\'s-panimo '
+                + 'ravintoloineen entisessä kauppa- ja kapteenintalossa lähellä '
+                + 'Roebuck Bayn rantaa. Sen erikoisuus on alkoholipitoinen '
+                + 'inkiväärijuoma, sillä panimon mukaan tavalliselle oluelle on '
+                + 'Broomessa liian kuuma. Pääasiallinen ruokakauppa on lentokentän '
+                + 'vieressä Frederick Streetillä, ja se on auki joka päivä '
+                + 'aamusta iltaan.',
+              kuva: {
+                tiedosto: 'Matso\'s Broome Brewery, 2019 (01).jpg',
+                lyhyt: 'Matso\'s-panimo toimii puutalossa Hamersley Streetillä palmujen ja säleaidan takana.',
+                selite: 'Matso\'s Broome Brewery Hamersley Streetillä '
+                  + 'tammikuussa 2019. Aaltopeltikattoinen puutalo oli aiemmin '
+                  + 'kauppa ja kapteeni Gregoryn asunto, ja puutarhan takaa '
+                  + 'pilkottaa meri.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Elokuvia tähtitaivaan alla',
+              teksti: 'Chinatownin Carnarvon Streetillä toimii Sun Pictures, '
+                + 'joka pääsi vuonna 2004 Guinnessin ennätysten kirjaan '
+                + 'maailman vanhimpana yhä toimivana ulkoelokuvateatterina. '
+                + 'Paikalla oli alun perin japanilaisen Yamasakin perheen '
+                + 'kauppa, jonka osaan perhe rakensi nō-teatterin. '
+                + 'Helmenpyyntiyrittäjä Ted Hunter osti talon 1913, ja ensimmäinen näytös pidettiin '
+                + '9. joulukuuta 1916 täydelle katsomolle. Nousuvesi tulvi '
+                + 'usein katsomoon, ja kadulla saattoi näytöksen jälkeen olla '
+                + 'vettä, kunnes vuonna 1974 rakennettiin pato. Katsomo oli myös '
+                + 'jaettu: vuoteen 1967 asti eurooppalaiset istuivat keskellä, '
+                + 'muut valkoiset ja aasialaiset vasemmalla, ja aboriginaalit '
+                + 'ohjattiin omasta ovestaan oikean laidan puupenkeille. '
+                + 'Järjestely päättyi boikottiin ja uusiin syrjinnän '
+                + 'vastaisiin lakeihin. Nykyään teatteri näyttää useita '
+                + 'elokuvia joka ilta, mikä on ulkoteatterille harvinaista, ja '
+                + 'vuonna 2009 siellä oli länsiaustralialaisen '
+                + 'musikaalielokuvan Bran Nue Daen ensi-ilta, jossa tähdet '
+                + 'kävelivät punaisella multamatolla. Elokuun lopulla kaupunki '
+                + 'viettää Shinju Matsuria, helmen juhlaa, joka juhlii '
+                + 'helmenpyynnin mukanaan tuomien kulttuurien sekoittumista. '
+                + 'Short Streetin galleria myy Kimberleyn ja Pilbaran '
+                + 'aboriginaalien nykytaidetta.',
+              kuva: {
+                tiedosto: 'Sun Picture Gardens, 2019 (02).jpg',
+                lyhyt: 'Sun Picturesin aaltopeltinen julkisivu Carnarvon Streetillä Chinatownissa.',
+                selite: 'Sun Picture Gardensin katujulkisivu Carnarvon '
+                  + 'Streetillä tammikuussa 2019. Aaltopeltiseinäisen talon '
+                  + 'päädyssä lukee Movies Nightly, ja katsomo on rakennuksen '
+                  + 'takana taivasalla.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki Dampierin niemimaalle',
+              teksti: 'Broomesta pohjoiseen avautuu Dampierin niemimaa, jonka '
+                + 'perinteisiä omistajia ovat bardit, nyulnyulit ja '
+                + 'jabirrjabirrit. Sen halki kulkee 205 kilometrin Cape Leveque '
+                + 'Road. Tien keskiosa oli pitkään hiekkatietä, joka '
+                + 'suljettiin sadekaudella usein tulvien vuoksi, mutta '
+                + 'loppuvuodesta 2020 myös se päällystettiin. Suunnilleen '
+                + 'puolivälissä on Beagle Bayn aboriginaaliyhteisö, joka sai '
+                + 'alkunsa trappistimunkkien lähetysasemana noin 1890. Sen '
+                + 'valkoisen kirkon rakensivat ensimmäisen maailmansodan '
+                + 'aikana internoidut paikalliset saksalaiset, ja sisältä se on '
+                + 'koristeltu helmiäisellä sekä kauri-, volutta- ja '
+                + 'oliivikotiloiden kuorilla. Yhteisön hautausmaalla '
+                + 'noudatetaan aboriginaalien tapaa, jonka mukaan kuolleiden '
+                + 'nimiä ei mainita. Niemimaan kärjessä Cape Levequessa on '
+                + 'vuonna 1911 käyttöön otettu majakka, rannoilla pesii '
+                + 'kilpikonnia, ja ryhävalaat tulevat suojaisten saarten '
+                + 'lomaan synnyttämään. Kauempana koillisessa, Buccaneerin '
+                + 'saaristossa, ovat vaakasuorat vesiputoukset: jopa '
+                + 'kymmenen metrin vuorovesi ryöppyää kahden kapean '
+                + 'kalliosolan läpi. Broomesta sinne tehdään lentoretkiä. '
+                + 'Vuodesta 2026 veneajelut solien läpi on lopetettu, sillä '
+                + 'ne on todettu vaarallisiksi ja dambimangarit pitävät paikkaa '
+                + 'pyhänä.',
+              kuva: {
+                tiedosto: 'Altar of Beagle Bay ‘Mother of Pearl’ church.jpg',
+                lyhyt: 'Beagle Bayn kirkon alttari on koristeltu helmiäisellä ja simpukankuorilla.',
+                selite: 'Beagle Bayn kirkon alttari syyskuussa 2024. '
+                  + 'Turkoosien seinien holvikaaret ja alttarin etuosa on '
+                  + 'peitetty helmiäisellä ja simpukankuorilla, ja alttarin '
+                  + 'vieressä seisoo Jeesus-patsas.',
+                lahde: 'Dr-ziego, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Kuivakausi, krokotiilit ja etikka',
+              teksti: 'Broomessa on kaksi vuodenaikaa. Kuivana kautena '
+                + 'toukokuusta lokakuuhun sataa tuskin lainkaan, päivät ovat '
+                + 'noin kolmenkymmenen asteen lämpöisiä, ja matkailijoita on '
+                + 'eniten. Sadekausi joulukuusta maaliskuuhun tai huhtikuuhun '
+                + 'on kuuma ja kostea: kolme neljäsosaa vuoden sateesta tulee '
+                + 'tammi–maaliskuussa, trooppiset syklonit ovat mahdollisia, ja '
+                + 'moni yritys sulkee ovensa. Yawurut erottavat vuodessa '
+                + 'kuitenkin kuusi kautta, esimerkiksi viileän ja kuivan '
+                + 'barrganan ja kostean marrulin. Meressä on varottava kahta '
+                + 'asiaa. Kuutiomeduusoja voi esiintyä marraskuusta '
+                + 'huhtikuuhun, ja lähes läpinäkyvää irukandji-meduusaa on '
+                + 'vaikea huomata. Rantojen kylteissä neuvotaan kaatamaan '
+                + 'polttoon etikkaa ja hakeutumaan hoitoon; hätänumero on 000. '
+                + 'Suistokrokotiileja on toisinaan nähty Cable Beachinkin '
+                + 'edustalla, eikä Town Beachilla saa perata kaloja, koska '
+                + 'perkeet houkuttelevat krokotiileja. Cable Beachin kallioiden '
+                + 'pohjoispuolella rannalla saa ajaa nelivetoautolla, ja '
+                + 'laskuvedellä rantaa pääsee näin tutkimaan paljon kauemmas '
+                + 'kuin jalan. Kuivassa ilmassa hiki haihtuu niin '
+                + 'nopeasti, ettei janoa huomaa, joten vettä on juotava '
+                + 'paljon. Kaupungista kannattaa lähteä vähintään puolillaan '
+                + 'olevalla tankilla, sillä seuraaviin kaupunkeihin on satoja '
+                + 'kilometrejä. Kellot käyvät Länsi-Australian ajassa, '
+                + 'kahdeksan tuntia UTC:tä edellä, eikä kesäaikaa käytetä.',
+              kuva: {
+                tiedosto: 'Town Beach and environs at high tide, Broome, WA, Australia 06.jpg',
+                lyhyt: 'Town Beachin kyltti varoittaa suistokrokotiileista ja polttavista meduusoista.',
+                selite: 'Varoituskyltti Town Beachilla lokakuussa 2024: '
+                  + 'alueella voi olla suistokrokotiileja ja polttavia meduusoja, '
+                  + 'kalojen perkaaminen on kielletty, ja polttoon neuvotaan '
+                  + 'kaatamaan etikkaa. Kyltin takana välkkyy Roebuck Bayn '
+                  + 'turkoosi vesi.',
+                lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -115175,6 +115417,249 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Santarém, Pará',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Santarém, Pará; Santarém-Maestro Wilson Fonseca
+       * Airport; Wilson Fonseca; Tacacá; Tucupi; Pato no tucupi; Maniçoba;
+       * Acmella oleracea; Amazonian cuisine; Açaí palm; Arapaima;
+       * Theobroma grandiflorum; Carimbó; Alter do Chão, Pará; Belterra,
+       * Pará; Fordlândia; Potamotrygon), Wikivoyagen sivuilta Santarém
+       * (Brazil), Alter do Chão, Belterra, Fordlândia ja Voyaging along
+       * the Amazon River sekä portugalin Wikipedian sivuilta Museu João
+       * Fona ja Teatro Municipal Victória — teksti omaa. Nostojen aiheita
+       * (lähetysasema 1661, Vesien kohtaaminen ilmiönä, Tapajós-kansan
+       * keramiikka, vila ja kaupunki, kumikuume, Wickham, katedraali,
+       * Ilha do Amor, kuivan kauden hiekkarannat, boto ja Sairé, Bates,
+       * Tapajós-kansallismetsän tulvametsä), gallerian Florencen näkymää
+       * eikä saapumistekstin tai maastotekstin aiheita (soijaterminaali,
+       * kullankaivuun samentama vesi) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Açaí-kuva on MTurin julkaisema (Public domain, pyydetty
+       * maininta Tiago Silveira). Riippumattokuvan laivaa ei ole nimetty
+       * Commonsissa, joten selite ei väitä sitä Santarémin laivaksi.
+       * Pystykuva: tacacá kalebassikulhossa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tacacá santareno o melhor.jpg',
+          lyhyt: 'Tacacá syödään kuumana kalebassikulhosta, ja jambunlehdet kihelmöivät huulilla.',
+          selite: 'Santarémilainen tacacá mustassa kalebassikulhossa: '
+            + 'keltaisessa tucupiliemessä kelluu tummanvihreitä jambunlehtiä, '
+            + 'kuivattuja katkarapuja, ja kulhoon on pistetty puutikku.',
+          lahde: 'Giancarlos Gabriel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Santarém on Amazonin varren pysähdyspaikka suunnilleen '
+          + 'Manausin ja Belémin puolivälissä, ja tänne tullaan yhä useimmiten '
+          + 'jokilaivalla, omassa riippumatossa kannella. Kaupungissa kannattaa '
+          + 'maistaa tucupilientä ja huulia puuduttavaa jambua, käydä vanhassa '
+          + 'raatihuoneessa, josta on tullut kaupungin museo, ja katsoa '
+          + 'carimbó-tanssia. Bussilla pääsee Alter do Chãon '
+          + 'rantakylään ja Henry Fordin kumiplantaasille Belterraan. Sadekausi '
+          + 'kestää marraskuusta heinäkuuhun, ja kuumimman päivän jälkeen '
+          + 'kaupunkilaiset kokoontuvat iltaisin rantakadulle.',
+        artikkeli: {
+          nimi: 'Matkailijan Santarém',
+          teksti: 'Santarémiin tullaan joelta, ja riippumatto kannattaa ostaa ennen laivaan nousua.',
+          nosto: 'Tacacá syödään kuumana kalebassikulhosta, ja jambunlehdet '
+            + 'saavat huulet kihelmöimään vielä kauan viimeisen lusikallisen '
+            + 'jälkeen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Riippumatossa tai siivin',
+              teksti: 'Teitä on vähän ja ne ovat huonoja, lentäminen on kallista, '
+                + 'ja siksi joki on yhä Santarémin päätie niin ihmisille kuin '
+                + 'rahdille. Manausista matka tavallisella matkustajalaivalla '
+                + 'kestää myötävirtaan noin puolitoista vuorokautta, Belémistä '
+                + 'vastavirtaan 60–70 tuntia, ja Manausista lähtevä pikavene '
+                + 'selviää samasta matkasta noin 13 tunnissa. Laivoilla on pieniä, usein '
+                + 'ikkunattomia hyttejä, mutta useimmat matkustajat nukkuvat '
+                + 'omassa riippumatossaan kannella. Riippumaton ja köydet voi '
+                + 'ostaa satamien kaupoista, ja kannelle kannattaa mennä heti, '
+                + 'kun laiva on saapunut: paikallisetkin valtaavat parhaat '
+                + 'kohdat saman tien. Riippumatto ripustetaan yhtä tiheään kuin '
+                + 'muut ja kauas television, baarin, vessojen ja koneen '
+                + 'melusta. Kaupungissa on kaksi satamaa. Pitkän matkan laivat '
+                + 'Manausiin ja Belémiin lähtevät Docas do Parán laiturista, '
+                + 'kun taas Tapajósin kyliin ja lähikaupunkeihin menevät veneet '
+                + 'lähtevät Praça Tiradentesin pienestä satamasta. Macapán '
+                + 'laivat päättävät matkansa todellisuudessa naapurikaupunkiin '
+                + 'Santanaan. Lentäen perille pääsee Maestro Wilson Fonsecan '
+                + 'lentoasemalle, joka avattiin vuonna 1977 noin 15 kilometrin '
+                + 'päähän keskustasta. Terminaalista näkyy kaksi tykkiä, jotka '
+                + 'on tuotu kaupungin 1690-luvulla rakennetusta linnoituksesta.',
+              kuva: [
+                {
+                  tiedosto: 'Amazon-hammocks.JPG',
+                  lyhyt: 'Amazonin jokilaivalla matkustajat nukkuvat omissa riippumatoissaan kannella.',
+                  selite: 'Kirjavat riippumatot roikkuvat vieri vieressä '
+                    + 'suuren jokilaivan katetulla kannella, laukut lattialla '
+                    + 'niiden alla, ja kaiteen takana näkyy joki ja metsäinen '
+                    + 'ranta.',
+                  lahde: 'Jan Ludewig, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Porto de Santarém.JPG',
+                  lyhyt: 'Jokiveneet odottavat Santarémin rannassa, kun aurinko laskee joen ylle.',
+                  selite: 'Monikerroksisia jokiveneitä on kiinnitetty '
+                    + 'Santarémin satamaan illalla, ja oikealla etualan '
+                    + 'veneessä liehuu Brasilian lippu.',
+                  lahde: 'Oski67, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Aeroporto de Santarém 1.jpg',
+                  lyhyt: 'Maestro Wilson Fonsecan lentoasema on noin 15 kilometrin päässä keskustasta.',
+                  selite: 'Santarémin lentoaseman matala valkoinen terminaali '
+                    + 'ja sen päädyssä oranssin ja valkoisen ruutukuvioinen '
+                    + 'torni tammikuun aamuna vuonna 2017.',
+                  lahde: 'Guilmann, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tucupia, jambua ja jokikalaa',
+              teksti: 'Santarémin ruoka on Parán osavaltion ruokaa, ja sen '
+                + 'perusta on maniokki. Keltainen tucupi puristetaan '
+                + 'raastetusta maniokinjuuresta. Raakana liemi on myrkyllistä, '
+                + 'joten sitä keitetään kolmesta viiteen päivää ennen kuin '
+                + 'siitä tulee kastiketta. Tunnetuin tucupiruoka on tacacá, '
+                + 'kuuma keitto, joka kaadetaan kalebassista tehtyyn cuia-'
+                + 'kulhoon tapiokasakeutteen, jambunlehtien ja kuivattujen '
+                + 'katkarapujen päälle. Jambu on pieni keltakukkainen kasvi, '
+                + 'jonka lehdet saavat huulet ja kielen kihelmöimään ja '
+                + 'hetkeksi puutumaan, ja happamassa tucupissa vaikutus '
+                + 'voimistuu. Parán tunnetuimpia ruokia ovat myös pato no tucupi, tucupissa '
+                + 'haudutettu ankka, ja maniçoba, jonka jauhettuja '
+                + 'maniokinlehtiä keitetään neljästä päivästä viikkoon '
+                + 'myrkyn poistamiseksi ennen kuin joukkoon lisätään suolattua '
+                + 'sianlihaa, kuivalihaa ja makkaraa. Joesta syödään '
+                + 'tambaquia, tucunaréa ja pirarucua, yhtä maailman '
+                + 'suurimmista makean veden kaloista, jonka tupinkielinen nimi '
+                + 'tarkoittaa punaista kalaa. Jälkiruoaksi tarjotaan '
+                + 'cupuaçu-hedelmän kermaa ja konvehteja; kaakaopuun sukulaisen '
+                + 'hedelmälihan tuoksua kuvataan suklaan ja ananaksen '
+                + 'sekoitukseksi. Mehubaareissa puristetaan açaín ja bacaba-'
+                + 'palmun hedelmistä juomaa. Raaka-aineita myyvät '
+                + 'keskustan Mercado Modelo ja Mercadão 2000 -tori.',
+              kuva: {
+                tiedosto: 'TiagoSilveira Acai Santarem Para (40065071065).jpg',
+                lyhyt: 'Açaípalmun marjoja korissa Santarémissa; Pará tuottaa suurimman osan Brasilian açaísta.',
+                selite: 'Punottu kori on täynnä tummanvioletteja, huurteisen '
+                  + 'näköisiä açaípalmun hedelmiä, jotka on laskettu '
+                  + 'kivetykselle Santarémissa.',
+                lahde: 'Tiago Silveira / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Museo raatihuoneessa ja carimbó',
+              teksti: 'Rantakadun itäpäässä seisoo keltainen pylväikköinen '
+                + 'rakennus, joka valmistui vuosina 1853–1868. Siinä ovat '
+                + 'toimineet kaupunginhallinto, valamiesoikeus, '
+                + 'kaupunginvaltuusto ja vankila, ja 22. kesäkuuta 1991, '
+                + 'kaupungin syntymäpäivänä, siitä tuli Centro Cultural João '
+                + 'Fona. Museoon on vapaa pääsy. Vitriineissä on '
+                + 'kivettyneitä kaloja, alkuperäiskansojen käsitöitä, vanhoja '
+                + 'kolikoita, oikeussalin ja valtuuston huonekaluja sekä '
+                + 'välineitä, joilla orjia rangaistiin, ja seinillä kaupungin '
+                + 'pormestarien muotokuvat. Keskustassa on myös '
+                + 'Theatro Victória, jonka santarémilainen draamakerho rakennutti '
+                + 'omin varoin vuosina 1895–1896. Salissa oli 500 paikkaa, ja '
+                + 'kaupunkilaiset kerskuivat, että sen voittivat vain Belémin '
+                + 'Theatro da Paz ja Manausin Teatro Amazonas. Vuonna 1965 teatteri oli vähällä '
+                + 'joutua purettavaksi, mutta se kunnostettiin 2012, ja nyt '
+                + 'siinä on pieni esityssali. Kaupungin oma säveltäjä oli '
+                + 'Wilson Fonseca (1912–2002), maestro Isoca, joka kirjoitti yli '
+                + '1 600 laulua, muun muassa Tapajós Azul -valssin ja botosta '
+                + 'kertovan Lenda do Boton. Hänen mukaansa on nimetty myös '
+                + 'lentoasema. Alter do Chãossa kannattaa katsoa carimbó-esitys. '
+                + 'Parán tanssia säestää samanniminen rumpu: ontosta '
+                + 'puunrungosta koverrettu, eläimennahalla päällystetty rumpu, '
+                + 'jonka päällä soittaja istuu. Naiset pyörähtelevät laajoissa '
+                + 'hameissa. Vuonna 2014 carimbó merkittiin Brasilian '
+                + 'aineettomaksi kulttuuriperinnöksi.',
+              kuva: {
+                tiedosto: 'Grupo Conquista de Carimbó.jpg',
+                lyhyt: 'Santarémilainen carimbó-ryhmä esiintyy laajoissa, kirkkaanvärisissä hameissa.',
+                selite: 'Grupo Conquista de Carimbó -tanssiryhmän naiset '
+                  + 'levittävät kirjavia hameitaan ja miehet pitelevät '
+                  + 'olkihattuja; takana näkyy Tapajós-joki ja hiekkasärkkä '
+                  + 'olkikattoisine katoksineen.',
+                lahde: 'Moisés Everton, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Bussilla rannalle ja Fordin kaupunkiin',
+              teksti: 'Alter do Chãon rantakylään on keskustasta 37 kilometriä '
+                + 'PA-457-tietä, ja bussit lähtevät noin puolen tunnin välein '
+                + 'aamuvarhaisesta myöhään iltaan Avenida Rui Barbosalta ja '
+                + 'Praça Tiradentesin pysäkiltä. Lentoasemalta kylään ei kulje '
+                + 'suoraa bussia, joten sinne ajetaan taksilla tai vaihdetaan '
+                + 'bussia keskustassa. Viikonloppuisin kylä täyttyy '
+                + 'kaupunkilaisista. Kylän edustan hiekkasärkälle soudattaa '
+                + 'pieni kanootti, ja kuivana aikana joen yli pääsee paikoin '
+                + 'kahlaamalla. Syrjäisemmillä rannoilla on syytä varoa '
+                + 'makean veden rauskuja, jotka makaavat hiekkaan kaivautuneina '
+                + 'ja pistävät myrkkypiikillään vain, jos niiden päälle astuu. '
+                + 'Jalkoja kannattaa siksi liu’uttaa pohjaa pitkin eikä astella. '
+                + 'Belterraan, noin 40 kilometriä etelään, lähtee bussi '
+                + 'keskustan Avenida São Sebastiãolta useita kertoja päivässä. '
+                + 'Ford Motor Company perusti kaupungin kumiplantaasiksi, kun '
+                + 'sen ensimmäinen yritys, Fordlândia ylempänä Tapajósilla, '
+                + 'oli epäonnistunut: Belterran tasaisella ylängöllä saattoi '
+                + 'käyttää koneita, ja 1930-luvun lopulla kumipuuta kasvoi noin '
+                + '50 neliökilometrillä. Pääkadulla aukiolta joelle päin seisoo '
+                + 'yhä amerikkalaistyylisiä puutaloja, ja Belterrasta pääsee '
+                + 'bussilla Tapajós-kansallismetsän kyliin, joissa voi yöpyä. '
+                + 'Itse Fordlândiaan on Santarémista noin 12 tunnin yömatka '
+                + 'jokiveneellä Praça Tiradentesin satamasta.',
+              kuva: {
+                tiedosto: 'Belterra.jpg',
+                lyhyt: 'Belterran puutalot ja punainen paloposti muistuttavat Fordin plantaasin ajoista.',
+                selite: 'Valkoinen, vihreäreunainen puutalo kuistineen ja '
+                  + 'tiilikattoineen seisoo Belterrassa kukkivan pensasaidan '
+                  + 'takana, ja jalkakäytävällä on amerikkalaismallinen '
+                  + 'punainen paloposti.',
+                lahde: 'Amit Evron, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sade, aurinko ja ilta rannalla',
+              teksti: 'Santarémissa on lämmintä ympäri vuoden: keskilämpötila '
+                + 'pysyy 25 ja 28 asteen välillä, ja ilmankosteus on '
+                + 'keskimäärin 86 prosenttia. Vuodessa sataa noin 2 150 '
+                + 'millimetriä, ja sadekausi kestää marraskuusta heinäkuuhun. '
+                + 'Kuivimmat kuukaudet ovat elokuusta lokakuuhun. Aurinko '
+                + 'polttaa joella myös pilvisenä päivänä, sillä vesi heijastaa '
+                + 'valoa ja tuulenvire saa kuumuuden tuntumaan vähäisemmältä. '
+                + 'Hattu, aurinkovoide ja hyttyskarkote kuuluvat päivän '
+                + 'varusteisiin, ja karkotetta levitetään uudelleen '
+                + 'auringonlaskun aikaan. Keltakuumerokotus kannattaa ottaa '
+                + 'ennen Amazonin-matkaa. Englantia puhutaan vähän, joten '
+                + 'puhelimeen kannattaa ladata portugalin käännösohjelma, joka '
+                + 'toimii ilman verkkoa: jokilaivoilla ja kylissä yhteyttä ei '
+                + 'aina ole. Pikkuveneissä ja pienissä kylissä maksetaan usein '
+                + 'vain käteisellä, eikä pienissä kylissä '
+                + 'välttämättä ole pankkiautomaattia. Kaupungissa liikutaan busseilla, '
+                + 'takseilla ja mototakseilla eli moottoripyörätakseilla, ja '
+                + 'monilla aukioilla on kaupungin ilmainen langaton verkko. '
+                + 'Päivän kuumuuden laannuttua kaupunkilaiset lähtevät '
+                + 'kävelylle Tapajósin rantakadulle, jonka varren baareissa '
+                + 'soitetaan iltaisin elävää musiikkia. Paikalliset juhlapäivät '
+                + 'ovat 22. kesäkuuta, kaupungin syntymäpäivä, ja 8. joulukuuta, '
+                + 'suojeluspyhimyksen päivä, jota edeltää marraskuun lopussa '
+                + 'noin kymmenen kilometrin kulkue.',
+              kuva: {
+                tiedosto: 'Orla (45958243781).jpg',
+                lyhyt: 'Auringon laskiessa santarémilaiset kävelevät Tapajósin rantakadulla.',
+                selite: 'Santarémin leveällä rantakadulla kävelee ja istuu '
+                  + 'ihmisiä oranssin iltataivaan alla, kaiteen takana '
+                  + 'kimmeltää joki ja kauempana näkyvät sataman laiturit.',
+                lahde: 'Wellington-stm, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -122814,6 +123299,248 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Puerto Montt; El Tepual International Airport;
+       * Navimag; Chacao Channel; Chacao Channel bridge; Paila marina;
+       * Milcao; Chapalele; Chilean cuisine; Puerto Varas; Frutillar;
+       * Teatro del Lago; Todos los Santos Lake; Petrohué River; Vicente
+       * Pérez Rosales National Park), espanjan Wikipediasta (Tren
+       * Llanquihue-Puerto Montt; Sentados frente al mar; Catedral de
+       * Puerto Montt; Casa del Arte Diego Rivera) ja Wikivoyagen Puerto
+       * Montt -sivulta (bussit, Naviera Austral, Chacaon lautta, ilmasto,
+       * colectivot) — teksti omaa. Nostojen ja kuvien aiheita (perustaminen,
+       * puurakentaminen, Angelmón tori ja curanto, Isla Tenglo, ankkuri,
+       * rantabulevardi ja väkiluku, tulivuoret, Reloncavín selkä, lohi,
+       * Alerce Andino, cochayuyo, choro zapato, kuchen) ei toisteta:
+       * lentokenttä ja lautat saavat oman jaksonsa, Osorno näkyy vain
+       * maisemana järven takana. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * rakastavaisten patsas alkuperäisellä penkillään 2010.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chile, Puerto Montt - Estatua de los Enamorados.jpg',
+          lyhyt: 'Rantakadun kuusimetrinen rakastavaisten patsas on Puerto Montin kuvatuimpia paikkoja.',
+          selite: 'Robinson Barrían ferrosementistä tekemä pariskunta istui '
+            + 'toukokuussa 2010 vielä alkuperäisellä penkkimäisellä '
+            + 'jalustallaan, joka muutettiin rantapuiston rakennustöissä '
+            + '2021–2022.',
+          lahde: 'stéfano pérez tonella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Puerto Montt on Pohjois-Patagonian liikenteen solmukohta: '
+          + 'tänne lennetään Santiagosta, ja täältä lähtevät bussit Chiloén '
+          + 'saarelle ja Argentiinaan sekä laivat etelän vuonoille. Vuonna '
+          + '2025 kaupunkiin palasivat myös lähijunat. Ravintoloissa syödään '
+          + 'äyriäiskeittoa savikulhosta ja Chiloén perunaleipiä. '
+          + 'Rantakadulla istuu kuusimetrinen rakastavaisten patsas, jota on '
+          + 'moitittu rumaksi ja josta on silti tullut kaupungin rakastetuin '
+          + 'maamerkki. Päiväretkellä ehtii saksalaissiirtolaisten '
+          + 'järvikaupunkeihin ja smaragdinvihreän järven vesiputouksille. '
+          + 'Sadetakki kannattaa pitää mukana, sillä sade kuuluu Puerto '
+          + 'Monttiin kaikkina vuodenaikoina.',
+        artikkeli: {
+          nimi: 'Matkailijan Puerto Montt',
+          teksti: 'Useimmat matkailijat saapuvat El Tepualin lentoasemalle kaupungin länsipuolelle.',
+          nosto: 'Kun rakastavaisten patsaan kohtalosta äänestettiin 2019, '
+            + 'lähes kaksi kolmasosaa yli 48 000 äänestäjästä halusi sen '
+            + 'jäävän paikalleen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, junalla ja laivalla',
+              teksti: 'Useimmat matkailijat saapuvat El Tepualin lentoasemalle '
+                + 'kaupungin länsipuolelle. Sen kiitotie valmistui huhtikuussa '
+                + '1960, juuri ennen toukokuun suurta maanjäristystä, ja kentästä '
+                + 'tuli heti avustuslentojen tukikohta. Nykyinen terminaali '
+                + 'avattiin 2010, ja LATAM, Sky ja JetSMART lentävät sieltä '
+                + 'Santiagoon noin kahdessa tunnissa sekä etelään Punta Arenasiin '
+                + 'ja Balmacedaan. Kaupungin linja-autoasema on sataman vieressä, '
+                + 'vartin kävelymatkan päässä keskustasta. Sieltä lähtee busseja '
+                + 'pohjoiseen, Chiloén saarelle ja Andien yli Argentiinan '
+                + 'Barilocheen, jonne ajetaan noin seitsemän tuntia. Uusin tulokas '
+                + 'on juna. Matkustajajunat lakkasivat kulkemasta Puerto Monttiin '
+                + '1997, mutta huhtikuussa 2025 alkoi lähiliikenne vuonna 1913 '
+                + 'avattua rataa pitkin: 27 kilometrin reitti yhdistää '
+                + 'Llanquihuen, Puerto Varasin ja Puerto Montin La Paloman '
+                + 'aseman. Vuoden 2025 lopulla junat kulkivat vain arkipäivisin. '
+                + 'Meritse etelään pääsee Navimagin rahti- ja '
+                + 'matkustajalautoilla. Puerto Natalesiin matka kestää neljä '
+                + 'päivää Patagonian kanavien läpi, ja matkalla poiketaan pienessä '
+                + 'Puerto Edénin kylässä. Vuonna 2020 liikenteeseen tullut '
+                + 'Esperanza ottaa ajoneuvojen lisäksi kyytiin 244 matkustajaa. '
+                + 'Chaiténiin Carretera Australin varrelle kulkee yölauttoja, ja '
+                + 'matka kestää 10–12 tuntia.',
+              kuva: [
+                {
+                  tiedosto: 'Aeropuerto El Tepual Puerto Montt (PMC), 2019 (02).jpg',
+                  lyhyt: 'Sky Airlinen matkustajakone El Tepualin lentoaseman matkustajasillalla 2019.',
+                  selite: 'Tammikuussa 2019 Sky Airlinen matkustajakone odottaa '
+                    + 'El Tepualin lentoaseman matkustajasillassa, jonka '
+                    + 'kyljessä lukee Puerto Montt; kentän takana alkaa '
+                    + 'matala metsä.',
+                  lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Tren TLD-502 en Estación La Paloma (2).jpg',
+                  lyhyt: 'Llanquihuen ja Puerto Montin välistä lähijunaa ajava TLD-502 La Paloman asemalla.',
+                  selite: 'Valtionrautatie EFE:n sinivalkoinen moottorijuna '
+                    + 'TLD-502 seisoo Puerto Montin La Paloman asemalla '
+                    + 'syyskuussa 2025, puoli vuotta lähiliikenteen alkamisen '
+                    + 'jälkeen.',
+                  lahde: 'Caineuser1431, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ferry esperanza.jpg',
+                  lyhyt: 'Navimagin punainen lautta Esperanza ankkurissa Puerto Montin edustalla 2020.',
+                  selite: 'Navimagin uusi lautta Esperanza on ankkurissa Puerto '
+                    + 'Montin edustalla syyskuussa 2020, pian liikenteeseen '
+                    + 'tulonsa jälkeen; pieni punainen vene kulkee aluksen '
+                    + 'vieressä.',
+                  lahde: 'Patricio Pillancari, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Äyriäiskeittoa ja perunaleipää',
+              teksti: 'Satamakaupungin ruokapöytä katetaan merestä. Paila marina '
+                + 'on äyriäis- ja kalakeitto, joka tarjoillaan tulikuumana '
+                + 'paksussa savikulhossa, pailassa: kalaliemessä haudutetaan '
+                + 'sipulia, porkkanaa, paprikaa ja tomaattia sekä simpukoita '
+                + 'kuorineen, ja pinnalle ripotellaan persiljaa. Chileläiset '
+                + 'syövät sitä mielellään porukalla juhlaa seuraavana aamuna, '
+                + 'koska sen uskotaan palauttavan voimat. Toinen etelän perusta '
+                + 'on peruna. Viljellyllä perunalla on kaksi alkukotia, Perun '
+                + 'Andit ja Chiloén saaristo, ja Chiloén saarelaiset ovat '
+                + 'tehneet siitä omat leipänsä. Milcao on litteä perunakakku, '
+                + 'jonka taikinaan sekoitetaan raastettua raakaa ja keitettyä '
+                + 'survottua perunaa, usein myös rapeaksi paistettuja sianlihan '
+                + 'paloja; se paistetaan uunissa tai pannulla tai höyrytetään '
+                + 'muiden ruokien päällä. Chapalele on keitetystä perunasta ja '
+                + 'vehnäjauhoista tehty mykyrä. Kun saaristolaisperheet muuttivat '
+                + '1800-luvun jälkipuoliskolla ja 1900-luvun alussa '
+                + 'Patagoniaan, milcao levisi heidän mukanaan koko Etelä-Chileen '
+                + 'ja Argentiinaan. Makeaa tuo murta, Etelä-Chilen oma '
+                + 'pensasmarja, josta keitetään hilloa ja likööriä, ja '
+                + 'Etelä-Chile tunnetaan myös oluistaan. Illansuussa chileläiset '
+                + 'kokoontuvat oncesille, teehetkelle, jolla syödään leipää. '
+                + 'Tuoreen leivän haku lähileipomosta kuuluu päivän rytmiin, ja '
+                + 'Chile on maailman suurimpia leivänsyöjämaita.',
+              kuva: {
+                tiedosto: 'PailaMarina.jpg',
+                lyhyt: 'Paila marina -keitto mustassa savikulhossa Puerto Montin Angelmón ravintolassa.',
+                selite: 'Maaliskuussa 2015 Angelmón ravintolassa tarjoiltu paila '
+                  + 'marina: mustassa savikulhossa höyryää äyriäisliemi, jossa '
+                  + 'on simpukoita kuorineen, paprikaa ja runsaasti persiljaa.',
+                lahde: 'Ultramanttiga, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Patsas, katedraali ja taidetalo',
+              teksti: 'Rantakadun kuuluisimmat asukkaat ovat pariskunta, joka '
+                + 'istuu sylikkäin ja katsoo Reloncavín selälle. Puerto Varasista '
+                + 'kotoisin olevan kuvanveistäjän Robinson Barrían kuusimetrinen '
+                + 'Sentados frente al mar, "Meren edessä istuen", sai aiheensa '
+                + 'uruguaylaisen Los Iracundos -yhtyeen laulusta Puerto Montt, '
+                + 'ja se paljastettiin ystävänpäivänä 2002. Patsas on tehty '
+                + 'ferrosementistä rautarungon ympärille, ja sen ulkonäköä on '
+                + 'arvosteltu alusta asti; tekijä itsekin myönsi, että kiire '
+                + 'ehtiä ystävänpäiväksi jätti työn keskeneräiseksi. Silti siitä '
+                + 'on tullut kaupungin kuvatuimpia kohteita. Kun asuntoministeriö '
+                + 'ehdotti 2019 sen siirtämistä, yli 48 000 ihmistä äänesti, ja '
+                + 'lähes kaksi kolmasosaa halusi patsaan pysyvän paikallaan. '
+                + 'Kaupungin omat muraalimaalarit entisöivät sen värit 2023. '
+                + 'Pääaukion laidalla seisoo puinen katedraali, jonka '
+                + 'julkisivupylväät muistuttavat Ateenan Parthenonia; sisällä '
+                + 'kattoa kannattaa kaksitoista alerce-puista pylvästä, ja '
+                + 'kirkosta tuli katedraali 1939. Vuoden 1960 maanjäristyksen '
+                + 'jälkeen Meksiko auttoi rakentamaan kaupunkiin taidetalon, joka '
+                + 'nimettiin maalari Diego Riveran mukaan ja avattiin 1964. Casa '
+                + 'del Arte Diego Riveran teatterisalissa on 429 paikkaa, '
+                + 'näyttelysalin oveen on veistetty saksalaisen Loreleyn ja '
+                + 'chiloéläisen merenneito Pincoyan tarut, ja toisen kerroksen '
+                + 'kahvilasta näkyy lahdelle. Vuodesta 1992 talo on ollut '
+                + 'kaupungin kansainvälisen teatterifestivaalin päänäyttämö.',
+              kuva: {
+                tiedosto: 'Catedral de Puerto Montt.jpg',
+                lyhyt: 'Puerto Montin puinen katedraali pylväsjulkisivuineen kaupungin pääaukion laidalla.',
+                selite: 'Tammikuussa 2015 aukiolta kuvatun katedraalin '
+                  + 'ruskeassa puujulkisivussa pylväät kannattavat kolmiopäätyä, '
+                  + 'ja katolla kohoaa lasi-ikkunainen kupoli.',
+                lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruusuja, musiikkia ja vesiputous',
+              teksti: 'Puerto Montista ehtii päivässä Llanquihuen järven '
+                + 'rannoille. Parinkymmenen kilometrin päässä on Puerto Varas, '
+                + 'jonka saksalaiset siirtolaiset perustivat samana vuonna kuin '
+                + 'Puerto Montin. Sitä kutsutaan ruusujen kaupungiksi, koska '
+                + 'pormestari Teobaldo Kuschel alkoi 1950-luvulla istuttaa '
+                + 'ruusupensaita aukioille, puistoihin ja etupihoille. Vanhojen '
+                + 'alerce-puisten talojen kortteli on suojeltu, mäellä kohoaa '
+                + 'vuonna 1918 rakennettu puukirkko, ja rannalta näkyvät '
+                + 'Osorno, Calbuco ja Tronador. Pohjoisempana järven rannalla on '
+                + 'Frutillar, josta tuli 2017 Chilen ensimmäinen Unescon '
+                + 'luovien kaupunkien verkoston musiikkikaupunki. Rantaan 2010 '
+                + 'avatussa Teatro del Lagossa on 1 178 paikan konserttisali, ja '
+                + 'tammi–helmikuun vaihteessa siellä soi maan suurin klassisen '
+                + 'musiikin festivaali, Semanas Musicales de Frutillar. Idempänä '
+                + 'Vicente Pérez Rosalesin kansallispuistossa Todos los Santos '
+                + '-järvi laskee Petrohué-jokeen, joka kuohuu pian lähtönsä '
+                + 'jälkeen tummien laavakivien lomitse Petrohuén putouksina. '
+                + 'Järven vihreä väri tulee jäätiköiden sulamisvesien '
+                + 'kivijauhosta, ja saksalaissiirtolaiset kutsuivat sitä '
+                + 'Smaragdijärveksi. Järven länsipään Petrohuésta ei ole tietä '
+                + 'itäpään Peullaan, joten Argentiinan Barilocheen jatketaan '
+                + 'bussien ja järvilaivojen yhdistelmällä metsäisten vuorten '
+                + 'halki. Joella kalastetaan lohta ja taimenta marraskuusta '
+                + 'toukokuuhun.',
+              kuva: {
+                tiedosto: 'Saltos del Petrohué y Volcán Osorno.jpg',
+                lyhyt: 'Petrohué-joki kuohuu laavakivien välissä, taustalla lumihuippuinen Osorno.',
+                selite: 'Petrohuén putouksilla turkoosi vesi kuohuu tummien '
+                  + 'laavakallioiden lomitse lokakuussa 2025, ja metsän takana '
+                  + 'kohoaa Osornon lumipeitteinen kartio.',
+                lahde: 'Alexmrz, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sadetakki ja lautta Chiloélle',
+              teksti: 'Puerto Montin ilmasto on viileä ja sateinen. Tammi- ja '
+                + 'helmikuussa päivälämpötila nousee noin 20 asteeseen, ja '
+                + 'silloin sataa vähiten; kesäkuussa sademäärä on kolminkertainen, '
+                + 'ja heinäkuun päivät jäävät noin kymmeneen asteeseen. Pakkasta '
+                + 'on harvoin. Keskusta, rantakatu ja linja-autoasema ovat '
+                + 'kävelymatkan päässä toisistaan, ja muuten liikutaan takseilla '
+                + 'tai colectivoilla, kiinteää reittiä ajavilla yhteistakseilla. '
+                + 'Maksuvälineenä on Chilen peso. Suosittu retki suuntautuu '
+                + 'Chiloén saarelle, jonka puukirkot kuuluvat Unescon '
+                + 'maailmanperintöluetteloon. Chacaon salmen yli ei vielä pääse '
+                + 'siltaa pitkin: autot ja bussit ajavat noin 50 kilometrin '
+                + 'päässä Parguassa lautalle, ja ylitys kestää puolisen tuntia. '
+                + 'Neljän kilometrin levyisessä salmessa vuorovesivirta voi '
+                + 'kulkea neljästä viiteen metriä sekunnissa. Cruz del Sur '
+                + '-yhtiön bussit ohittavat lauttajonon, koska yhtiö omistaa '
+                + 'monta salmen lauttaa, ja bussimatka kestää noin kaksi tuntia. '
+                + 'Salmen ylle rakennetaan riippusiltaa, josta tulee valmistuessaan '
+                + 'Latinalaisen Amerikan pisin, ja avajaiset on siirretty vuoden '
+                + '2028 jälkipuoliskolle. Siltaa ehdotettiin ensimmäisen kerran '
+                + 'jo 1960-luvulla, ja hanke on sen jälkeen peruttu ja herätetty '
+                + 'henkiin monta kertaa.',
+              kuva: {
+                tiedosto: 'Canal de Chacao transbordador 0241.jpg',
+                lyhyt: 'Rekkoja ja henkilöautoja lautan kannella Chacaon salmen ylityksellä 2019.',
+                selite: 'Tammikuussa 2019 Chacaon salmen lautan avokannella '
+                  + 'rekat ja autot odottavat rantautumista, ja matkustajat '
+                  + 'seisovat kaiteen vieressä komentosillan alla; taivaalla '
+                  + 'kulkee sadepilviä.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
