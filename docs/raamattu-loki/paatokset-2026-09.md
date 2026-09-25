@@ -4959,3 +4959,7 @@ Toteuttaa omistajan 04.1x-päätöksen (TYÖTAVAN NELJÄ PARANNUSTA 2).
 ## E28 VALMIS (KARTTASEPPA): PALLO Z9–Z11 AMPARISSA julisteet/pallo/laatat/2026-09-23a-pohja-20260924e28syva/ (199 708 LAATTAA, TARKISTETTU), NATIIVISEPALLE ILMOITETTU; PERUSKARTTAPOLTTO 2026-09-25 ALKAA 4 YTIMELLA HETI KUN BUILD 12:N TF-VIENTI ON VALMIS (25.9.2026 klo 04.34)
 
 Z9-alueen liittäminen Laattapalvelimeen odottaa Fablen käskyä sen jälkeen.
+
+## BUILD 12 = 1.0.12 TESTFLIGHTISSA (JULKAISIJA, PROTO b79f036, CFBundleVersion 202609250125, AJO 36081944921): KAANNOSPALVELUN LUKKO #3124 TOIMI, YOAJO EI EHTINYT JA OHITTAA b79f036:N; #3131 JONOSSA; KARTTASEPAN PERUSKARTTAPOLTTO SAA ALKAA (25.9.2026 klo 04.34)
+
+Omistajalle ilmoitettu. Sisältö: löydökset 46, 48, 49, 50, 52, radio kokonaan, eleet, Natiivi-UI:n erät; laitteella vahvistettavaa kahden sormen kallistus.
