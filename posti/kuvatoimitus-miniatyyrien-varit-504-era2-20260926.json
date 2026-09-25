@@ -1,0 +1,971 @@
+[
+  {
+    "id": "damaskos-damaskoksen-linnoitus",
+    "replacement_id": "damaskos-damaskoksen-linnoitus-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-damaskoksen-linnoitus-vari2.png",
+    "sha256": "41d91e00ed1af75171127c8f10ae8335bc1f65ecb1c92ee8e617dd741b30bfa3",
+    "bytes": 1276717,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "damaskos-umaijadien-moskeija",
+    "replacement_id": "damaskos-umaijadien-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-umaijadien-moskeija-vari2.png",
+    "sha256": "9b5008b7a6d7c7cd1d85783590f87018842cd4244be2cc5ed142bcd2a0cdebaa",
+    "bytes": 1606441,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "damaskos-hamidiyyan-suuki",
+    "replacement_id": "damaskos-hamidiyyan-suuki-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-hamidiyyan-suuki-vari2.png",
+    "sha256": "e1a6cd5d96b27d16dc0290ae3e8c5719d6737e29597c8fa0acb1b75d24daee62",
+    "bytes": 1834748,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "damaskos-khan-as-ad-pashan",
+    "replacement_id": "damaskos-khan-as-ad-pashan-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-khan-as-ad-pashan-vari2.png",
+    "sha256": "c575f3741afd0cac574177e10c61032f0a1a241dcd42ff9a0171416b89c10475",
+    "bytes": 1930308,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "damaskos-itaportti",
+    "replacement_id": "damaskos-itaportti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-itaportti-vari2.png",
+    "sha256": "34d27661b60a6c8cc9095bf3047002a926b6cd53a74360e3b3fd78f6a2767c35",
+    "bytes": 1301051,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "damaskos-kisanin-portti",
+    "replacement_id": "damaskos-kisanin-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/damaskos-kisanin-portti-vari2.png",
+    "sha256": "589f298d4fafecf7863a16088fd6a3729bd3fc680824d1d3b10837e95156eda2",
+    "bytes": 1586606,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-delhi-junction",
+    "replacement_id": "delhi-delhi-junction-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-delhi-junction-vari2.png",
+    "sha256": "874a47737c9acda810a199c57f8f4e1117746fec83731464eb7d41a7fc16d4d3",
+    "bytes": 1830515,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-delhin-kaupungintalo",
+    "replacement_id": "delhi-delhin-kaupungintalo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-delhin-kaupungintalo-vari2.png",
+    "sha256": "5e154b38c0c542c28811c7fd64d8a7a2bedaa9b2322f1ef458154bbb01286ae1",
+    "bytes": 1466804,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-fatehpuri-moskeija",
+    "replacement_id": "delhi-fatehpuri-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-fatehpuri-moskeija-vari2.png",
+    "sha256": "f776f14d2237a3dd2018dd1cf44b2200cb7906acd4281c406155533a002b9972",
+    "bytes": 1646789,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-chandni-chowk",
+    "replacement_id": "delhi-chandni-chowk-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-chandni-chowk-vari2.png",
+    "sha256": "cc2860d83d30ffd68e1fc426e3170892907abcf71d3606ad33d98766d8dcd367",
+    "bytes": 1714585,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-punainen-linnoitus",
+    "replacement_id": "delhi-punainen-linnoitus-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-punainen-linnoitus-vari2.png",
+    "sha256": "e185ea4a8961d96e6e9b207f6a0c039b985a020fb9a75041b89691b1f8ca4505",
+    "bytes": 1235866,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-gurdwara-sis-ganj-sahib",
+    "replacement_id": "delhi-gurdwara-sis-ganj-sahib-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-gurdwara-sis-ganj-sahib-vari2.png",
+    "sha256": "a93f6b57de608cbb49630a67571817e184fc4b9cc93251d4d3967318ff1eafc8",
+    "bytes": 1518637,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-jama-masjid",
+    "replacement_id": "delhi-jama-masjid-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-jama-masjid-vari2.png",
+    "sha256": "8eee697a3e07ee9b25cf9375c97a08d7025b59b727713a4671ac4d708df36205",
+    "bytes": 1706380,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "delhi-humayunin-mausoleumi",
+    "replacement_id": "delhi-humayunin-mausoleumi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/delhi-humayunin-mausoleumi-vari2.png",
+    "sha256": "35a80653740a16fe86796a25673161c804318b4f14fe2bd34c045ac921604400",
+    "bytes": 1639006,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-islamilaisen-taiteen-museo",
+    "replacement_id": "doha-islamilaisen-taiteen-museo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-islamilaisen-taiteen-museo-vari2.png",
+    "sha256": "672f75319a9dca7d41fac4bbfcf1b933ce3b1e8b6d724fab0ca5a0787a50922b",
+    "bytes": 1347280,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-corniche",
+    "replacement_id": "doha-corniche-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-corniche-vari2.png",
+    "sha256": "00ad8b7754d931d011420db8de1e3d132d35509b1175ab7ae446c8ca49faff07",
+    "bytes": 1550644,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-souq-waqif",
+    "replacement_id": "doha-souq-waqif-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-souq-waqif-vari2.png",
+    "sha256": "aee4325547884314cf909508b95267cf9e46c3486b9f88ebf324d0ea0bf14997",
+    "bytes": 1481792,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-qatarin-kansallismuseo",
+    "replacement_id": "doha-qatarin-kansallismuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-qatarin-kansallismuseo-vari2.png",
+    "sha256": "ee5b65e08605205d375a58089479e7eedf42e35ef082264e4b41c841ec73e5b2",
+    "bytes": 1292516,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-al-koot-linnake",
+    "replacement_id": "doha-al-koot-linnake-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-al-koot-linnake-vari2.png",
+    "sha256": "1d86a941b2758179e65bb929570e3948bc1bdb2fd4fb6feb944800a0233b14c3",
+    "bytes": 1391997,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "doha-msheireb",
+    "replacement_id": "doha-msheireb-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/doha-msheireb-vari2.png",
+    "sha256": "f91801b2e04e5112a5f724d49eb1c6aaef7d65eea0aa643948387887e9eef28b",
+    "bytes": 1677077,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-dubrovnikin-katedraali",
+    "replacement_id": "dubrovnik-dubrovnikin-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-dubrovnikin-katedraali-vari2.png",
+    "sha256": "fab73664bebc9fa811b162f67c577f10fdcff650665e31a35d2e693f2ef43649",
+    "bytes": 1209071,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-lovrijenacin-linnake",
+    "replacement_id": "dubrovnik-lovrijenacin-linnake-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-lovrijenacin-linnake-vari2.png",
+    "sha256": "5e5be05ba027a78479764c833167385856e8e12cb589f8bcab59b1d1e44b03f7",
+    "bytes": 1543088,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-mincetan-torni",
+    "replacement_id": "dubrovnik-mincetan-torni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-mincetan-torni-vari2.png",
+    "sha256": "35ed916bb06ce6a3689a87a44c3bf3f0a389153e0482e86b6254eb8eb569bc66",
+    "bytes": 1336010,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-pilen-portti",
+    "replacement_id": "dubrovnik-pilen-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-pilen-portti-vari2.png",
+    "sha256": "7c5567160b6f25a6d50e929c4450784e01fa0a9cbef8caa6d2a17a8e5a745dd2",
+    "bytes": 1468592,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-sponzan-palatsi",
+    "replacement_id": "dubrovnik-sponzan-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-sponzan-palatsi-vari2.png",
+    "sha256": "189872fd8225c688408d2a8e88079d03ec1c06e8efdfc527ae72f6455795e4b8",
+    "bytes": 1376198,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "dubrovnik-vanhasatama",
+    "replacement_id": "dubrovnik-vanhasatama-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dubrovnik-vanhasatama-vari2.png",
+    "sha256": "9d5d42fc65f1b306c344670157cf501a706ceff6a270213ec2b090d2616e80d9",
+    "bytes": 1634458,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-albaicinin-nakoalapaikka",
+    "replacement_id": "granada-albaicinin-nakoalapaikka-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-albaicinin-nakoalapaikka-vari2.png",
+    "sha256": "2bcde17947407288713bbd82f60ae886820bf0b66c2bc12f8bec0d51146103f8",
+    "bytes": 1470234,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-alcaiceria",
+    "replacement_id": "granada-alcaiceria-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-alcaiceria-vari2.png",
+    "sha256": "11453c7e0a581834f3e308882941b984f4db69507b0af41798b54e048912f6cf",
+    "bytes": 1359892,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-alhambra",
+    "replacement_id": "granada-alhambra-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-alhambra-vari2.png",
+    "sha256": "4ce312d05a7d55ee2701ed9149852590e75fb2d3e6fde80054ac622cba97a47a",
+    "bytes": 1427562,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-generalife",
+    "replacement_id": "granada-generalife-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-generalife-vari2.png",
+    "sha256": "7a97bc90ce3668631b744826bd031c6f0bdac996f9936a16a9ec37faf080cea1",
+    "bytes": 935135,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-granadan-katedraali",
+    "replacement_id": "granada-granadan-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-granadan-katedraali-vari2.png",
+    "sha256": "0997eac0616de97d5828eb21486d93ffd16fc67c2b3be16b1387cfd1c88870bc",
+    "bytes": 1229719,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-irvingin-huoneet",
+    "replacement_id": "granada-irvingin-huoneet-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-irvingin-huoneet-vari2.png",
+    "sha256": "dcc78f231741ccf7940fed91f6dce61eb172abe2981bb9daa1bcb647d682727e",
+    "bytes": 1298269,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-manuel-de-fallan-talo",
+    "replacement_id": "granada-manuel-de-fallan-talo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-manuel-de-fallan-talo-vari2.png",
+    "sha256": "a56ba0fa1ece49805132b53a5823742370d6a2c438ce3ea8cb30e1e523820da3",
+    "bytes": 1303431,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "granada-sacromonten-luolat",
+    "replacement_id": "granada-sacromonten-luolat-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/granada-sacromonten-luolat-vari2.png",
+    "sha256": "2d4810035f73298665dae262390cf4a0055d7f827186d42286a5a76394050e32",
+    "bytes": 1267729,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-aleppon-linnoitus",
+    "replacement_id": "halab-aleppon-linnoitus-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-aleppon-linnoitus-vari2.png",
+    "sha256": "8032a806b4d7b63a89f24d734027da0a2915bfe8666ff7b91947bb54cf730d21",
+    "bytes": 1348253,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-antiokian-portti",
+    "replacement_id": "halab-antiokian-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-antiokian-portti-vari2.png",
+    "sha256": "f91a6abb3818c96e5edf5479a3596ee007d4b1a5d8ac17888b5cfb8ee8965dba",
+    "bytes": 1094108,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-arghunin-sairaala",
+    "replacement_id": "halab-arghunin-sairaala-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-arghunin-sairaala-vari2.png",
+    "sha256": "7d45effae6933e71945b7a7a39c4620540983ce4f83316dbbedb7b55d542a8ad",
+    "bytes": 1235507,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-beit-ajiqbash",
+    "replacement_id": "halab-beit-ajiqbash-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-beit-ajiqbash-vari2.png",
+    "sha256": "6e46dfd43b02a65927b53b394af2ad15e63bbf5db1fbd90928240c3e0e07428f",
+    "bytes": 1443775,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-qinnesrinin-portti",
+    "replacement_id": "halab-qinnesrinin-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-qinnesrinin-portti-vari2.png",
+    "sha256": "e58e3300209ad539e338119b0cbf75ff5a313fc007a322e3acd0b962b0589488",
+    "bytes": 1233255,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "halab-saippuakhan",
+    "replacement_id": "halab-saippuakhan-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halab-saippuakhan-vari2.png",
+    "sha256": "3c4cd233fd9e167f4f0d948c9df34d9e68ea05c1361a895dd6a43be86649c4ca",
+    "bytes": 1195101,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-long-bienin-silta",
+    "replacement_id": "hanoi-long-bienin-silta-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-long-bienin-silta-vari2.png",
+    "sha256": "ae9844dd8be16f989950dd68c7de922e0cb20aa7cfc1f083d5a2554534844d9d",
+    "bytes": 937015,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-thang-longin-keisarilinna",
+    "replacement_id": "hanoi-thang-longin-keisarilinna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-thang-longin-keisarilinna-vari2.png",
+    "sha256": "c99f68c52d7004c03ed328c56b2e61d70272841ad6a6644da039ee8119ccc36e",
+    "bytes": 1067198,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-ong-xuanin-tori",
+    "replacement_id": "hanoi-ong-xuanin-tori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-ong-xuanin-tori-vari2.png",
+    "sha256": "f00396376d4d8fb291f0dd3bfabf0bcf3f9c93af86930655b5e6444497ccde5c",
+    "bytes": 817245,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-yhden-pilarin-pagodi",
+    "replacement_id": "hanoi-yhden-pilarin-pagodi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-yhden-pilarin-pagodi-vari2.png",
+    "sha256": "7d8baa77864b522438a04f0a0488aa09a400a0774b5d46ab796a90ecb5afcfd5",
+    "bytes": 1039631,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-hanoin-lippulinna",
+    "replacement_id": "hanoi-hanoin-lippulinna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-hanoin-lippulinna-vari2.png",
+    "sha256": "3c2076d9218fe340cdec75efe1ce5d52e46beb10f4cd2738aa7df0615541750a",
+    "bytes": 760386,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-ngoc-sonin-temppeli",
+    "replacement_id": "hanoi-ngoc-sonin-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-ngoc-sonin-temppeli-vari2.png",
+    "sha256": "d0c528335a88d554dbfba7ea67680fae220f94cea35a3f74c3ddbab2bbbe61ab",
+    "bytes": 1127967,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-pyhan-joosefin-katedraali",
+    "replacement_id": "hanoi-pyhan-joosefin-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-pyhan-joosefin-katedraali-vari2.png",
+    "sha256": "5eb64d78bf9323b215edc3decc7d9d8386f07dedecdedfd80cc523dec28dc858",
+    "bytes": 1379110,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hanoi-kirjallisuuden-temppeli",
+    "replacement_id": "hanoi-kirjallisuuden-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hanoi-kirjallisuuden-temppeli-vari2.png",
+    "sha256": "bf0467c855d36a49fe46374b398a7e2b60f28f3b1edb3a3c18a3fabc74c26347",
+    "bytes": 1210039,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-tsim-sha-tsuin-kellotorni",
+    "replacement_id": "hongkong-tsim-sha-tsuin-kellotorni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-tsim-sha-tsuin-kellotorni-vari2.png",
+    "sha256": "733534d5a1dcb39cc317db4609ad97747d748af71d981ebbad18a547085656cb",
+    "bytes": 539905,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-western-market",
+    "replacement_id": "hongkong-western-market-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-western-market-vari2.png",
+    "sha256": "8ff134c50f81e2e80c0b2e8271900ca0a8c5875cfbda8c7778bcd399e8a74ac7",
+    "bytes": 971848,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-star-ferryn-laituri",
+    "replacement_id": "hongkong-star-ferryn-laituri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-star-ferryn-laituri-vari2.png",
+    "sha256": "5b46ec44ce3d1160f155dc1fa84c7ee107098cf0f669961a150d9b790d589d10",
+    "bytes": 781076,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-man-mo-temppeli",
+    "replacement_id": "hongkong-man-mo-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-man-mo-temppeli-vari2.png",
+    "sha256": "e228b11d4dd25fddb6a0c031309b25a66e0c8078f2d3585582e0e5323a2f2039",
+    "bytes": 1170879,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-tai-kwun",
+    "replacement_id": "hongkong-tai-kwun-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-tai-kwun-vari2.png",
+    "sha256": "ced5c980e4dc5234b1e2ab16d5fc71126e9ad4fa6cb98395b4dec0c6a5226c35",
+    "bytes": 1153645,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-pyhan-johanneksen-katedraali",
+    "replacement_id": "hongkong-pyhan-johanneksen-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-pyhan-johanneksen-katedraali-vari2.png",
+    "sha256": "d7a5411d1d2709414167bb185245e69ac5ea52879373f4132dfd1a55e1727a74",
+    "bytes": 1024635,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-victoria-peak",
+    "replacement_id": "hongkong-victoria-peak-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-victoria-peak-vari2.png",
+    "sha256": "31dcf94fa8ee6c1a67a70310e2a68f41f21f772ab6e8dd78d2fc8127ff1df404",
+    "bytes": 1238789,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-sininen-talo",
+    "replacement_id": "hongkong-sininen-talo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-sininen-talo-vari2.png",
+    "sha256": "ad7d8513fec9f2e9849a3b4989a4ded18ebcf615e1263a827d7aa62ea8c92765",
+    "bytes": 779727,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "hongkong-vaunuradan-alaterminaali",
+    "replacement_id": "hongkong-vaunuradan-alaterminaali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/hongkong-vaunuradan-alaterminaali-vari2.png",
+    "sha256": "8282892adeb3763b47dbbff76417b6c0baa108710caac314068cc66ed92d58ba",
+    "bytes": 1149306,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
