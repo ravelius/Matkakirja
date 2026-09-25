@@ -52,11 +52,21 @@ namespace Matkakirja
 #endif
         }
 
+        // Lämpöerä (Fable 25.9.): kehysten jakauma Ruudunpaivityksen tiloihin ja piirretyt kehykset jaksolla.
+        int nTaysi, nLepo, nPaikallaan, nPeitto, piirretty, kehyksia;
+
         void Update()
         {
             float ms = Time.unscaledDeltaTime * 1000f;
             if (Time.frameCount > 5)
                 (pallo == null ? lepo : pallo.Peitetty ? peitto : pallo.Liikkeessa ? liike : lepo).Add(ms);
+            kehyksia++;
+            if (UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) piirretty++;
+            var r = Ruudunpaivitys.Instanssi;
+            if (pallo != null && pallo.Peitetty) nPeitto++;
+            else if (r == null || r.Nyt == Ruudunpaivitys.Tila.Taysi) nTaysi++;
+            else if (r.Nyt == Ruudunpaivitys.Tila.Lepo) nLepo++;
+            else nPaikallaan++;
             if (Time.realtimeSinceStartup - alku >= jakso)
             {
                 Kirjaa();
@@ -66,9 +76,15 @@ namespace Matkakirja
 
         void Kirjaa()
         {
+            float akku = SystemInfo.batteryLevel;
             string rivi = "{" +
                 $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(tavoite)}," +
-                $"\"liike\":{Tilasto(liike)},\"lepo\":{Tilasto(lepo)},\"peitto\":{Tilasto(peitto)}" + "}";
+                $"\"liike\":{Tilasto(liike, tavoite)},\"lepo\":{Tilasto(lepo, 1000f / Ruudunpaivitys.LepoFps)},\"peitto\":{Tilasto(peitto, 1000f / Ruudunpaivitys.LepoFps)}," +
+                $"\"kehyksia\":{kehyksia},\"piirretty\":{piirretty}," +
+                $"\"tilat\":{{\"taysi\":{nTaysi},\"lepo\":{nLepo},\"paikallaan\":{nPaikallaan},\"peitto\":{nPeitto}}}," +
+                $"\"fps\":{Application.targetFrameRate},\"thermal\":{Lampo.ThermalState},\"lampo\":\"{Lampo.Taso}\"," +
+                $"\"virransaasto\":{(Lampo.Virransaasto ? "true" : "false")},\"akku\":{(akku >= 0 ? F(akku * 100f) : "-1")}" + "}";
+            nTaysi = nLepo = nPaikallaan = nPeitto = piirretty = kehyksia = 0;
             if (polku != null) File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
             liike.Clear();
@@ -76,13 +92,13 @@ namespace Matkakirja
             peitto.Clear();
         }
 
-        string Tilasto(List<float> a)
+        string Tilasto(List<float> a, float tavoiteMs)
         {
             if (a.Count == 0) return "null";
             var j = new List<float>(a);
             j.Sort();
             float P(float q) => j[Mathf.Min(j.Count - 1, (int)(q * j.Count))];
-            int yli = j.FindAll(x => x > tavoite * 1.5f).Count;
+            int yli = j.FindAll(x => x > tavoiteMs * 1.5f).Count;
             return "{" + $"\"n\":{j.Count},\"p50\":{F(P(0.5f))},\"p95\":{F(P(0.95f))}," +
                 $"\"p99\":{F(P(0.99f))},\"max\":{F(j[j.Count - 1])},\"yli15x\":{yli}" + "}";
         }
