@@ -5079,3 +5079,7 @@ Pohjashardit ja pallosarja jäävät levylle vientiin ja NAS-siirtoon asti.
 ## LAITETESTAAJA NOLLATTU (LUOVUTUS -20260925.md, laitetestaaja-inventaario-ipad 2d6594d52; ALOITUSVIESTI LAHETETTY: LIIKKUMISEN PARITEETTIVIDEOT WEB + NATIIVI, JUMI → FABLE, KAANNOSVAHTI) (25.9.2026 klo 05.46)
 
 Nollaus kaavan mukaan (clear samassa vuorossa, list_events 0).
+
+## LEVYN 44 Gt LASKU SELVITETTY (JULKAISIJA): EI TF-VIENTI (Build/yo 1,9 Gt) VAAN KAANNOSVAHDIN KIRJOITUS 49 Gt/90 min (Build/dd-sim + Library UUSIKSI JOKA KIERROS) + CoreSimulator 43 Gt + Matkakirja-proto/Build 15 Gt + DerivedData 9 Gt + NATIIVISEPAN SCRATCHPAD 18 Gt → NATIIVISEPPA: SCRATCHPAD TYHJAKSI, simctl delete unavailable, KAANNOS INKREMENTAALISEKSI, VAIN VIIMEISIN Build; PELIKOODARI: PARITEETTISIMUJEN SIIVOUS AJOJEN VALIIN; JULKAISIJA SIIVOAA Build/yo:N SEURAAVAN TF:N ALUSSA (25.9.2026 klo 05.48)
+
+Vapaana 110 Gt klo 05.5x; raja 35 Gt.
