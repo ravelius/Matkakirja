@@ -227,3 +227,115 @@ Kaikki raakadata on kansiossa `/Users/Shared/Claude/proto-3d/lokit/kehys-hinta/`
   Sen komennot ovat `taysi`, `mittaa`, `profiili`, `gpu`, `tila`, `seuranta`, `skaala`, `hdr`, `msaa`, `jalki`,
   `bloom`, `varjot`, `srp`, `ui`, `kamera`, `pallo`, `varjostin`, `sse`, `cesium`, `kerros`, `etusivu`, `dokumentti`,
   `suotimet`, `laattavarjostin`, `laattacull`, `laattaclip`, `valinta` ja `palauta`.
+
+## Toteutus build 17: natiiviseppa/kehys-hinta-1 (26.9.2026)
+
+Korjaukset 1 ja 2 sekä Fablen lisäykset A (joutosyke jatkuvaksi) ja B (piilovartija). Haara `natiiviseppa/kehys-hinta-1`
+(proto-git), pohja juna/b13 761cc096, **kärki 3c636115**:
+
+- **04a3ff1c**
+  - Korjaus 1: Kartta/Etusivulento.cs:n `PoistaSuotimet` poistaa suotimet, kun kerros ei näy (peitto 0).
+    `asetettuSumennus = −1`, joten `AsetaSuodin` palauttaa ne samassa kehyksessä, jossa portti avautuu. Dokumenttia ja
+    elementtejä ei tuhota, joten kone ja viiva eivät voi kadota. Tämä on raportin vaihtoehdoista turvallisin.
+  - Korjaus 2: Editor/Rakennus.cs:n TilesetMateriaali ja Materiaalit/Pallo.mat saavat arvot `_AlphaClip 0`,
+    `_AlphaToMask 0`, `_BUILTIN_AlphaClip 0`, avainsanat `_ALPHATEST_ON`, `_BUILTIN_ALPHATEST_ON` ja
+    `_BUILTIN_AlphaClip` pois, renderQueue 2000 ja RenderType Opaque. Pallo.mat on muokattu käsin, joten GUID säilyy ja
+    kohtauksen viite pysyy ennallaan. LuoPallo tuottaa saman.
+  - A: Kartta/Lampopaatos.cs:n `SykeJaatyy = false`, ja kommentiksi Fablen teksti "Fablen 20.1x:n jäädytys oli
+    väliaikainen; purettu, kun kehys ≤ 16 ms (kehyksen hinta -erä)". Myös Joutosyke.cs:n ja Komennot.cs:n
+    dokumentaatio on päivitetty.
+  - B: uusi Kartta/PiiloVartija.cs ja Komennot.cs:n komento `piilo tila|pois|paalle`.
+- **bff5c031** PiiloVartija: taustakierros budjetilla, enintään 250 elementtiä kehyksessä.
+- **3c636115** PiiloVartija: laskettu suodin tarkistetaan ensin (ei inline-tyyliolioita piilotetuille elementeille),
+  kierrosväli 2 s, ja `piilo tila` kertoo huipun 20 s:n jälkeen.
+- **Tarkistukset:** `tyokalut/tarkista.sh` (Unity-tarkistus) 0 virhettä. Kartta-testit 254/254, Peli-testit 278/278 ja
+  Linssit-testit 255/255 läpi.
+- **Mittaushaarat** (eivät mene junaan):
+  - `testi/kehys-hinta` ad335603 = juna 761cc096 + TestiKehysHinta (ennen)
+  - `testi/kehys-hinta-1` f10969c7 → 1b146e8d = kehys-hinta-1 + TestiKehysHinta (jälkeen)
+
+### Laitemittaus ennen/jälkeen (iPad Pro 13, Release, thermal 0, sama menetelmä)
+
+| Mittaus | Ennen (ad335603) | Jälkeen (f10969c7) |
+|---|---|---|
+| Täysi piirto, kehysväli p50 / p95 | 50,1 / 58,4 ms (≈ 20 fps) | **12,9 / 25,0 ms** (≈ 78 fps) |
+| Metal System Trace, GPU kehyksessä (Medium) | suodinpassit 34,4 + pallo 20,4 + loppublit 1,5 ms | pallo 15,1 + loppublit 1,5 ms, suodinpassit 0 |
+| 30 fps:n katto (`lampo kuuma` + `skaala 0.8`), GPU | katto ei täyty: kehys 51,4 ms, GPU kyllästynyt | **14,1 ms** (≤ 16 ms ✔), kehys 33,35 ms |
+| Build 17:n lepo (`taysi pois`), kiinteä näkymä | PAIKALLAAN, pääsäie 2,8 ms/silmukkakehys | PAIKALLAAN, pääsäie 3,0 ms |
+| Lepo, aloitusvalinnan renkaat näkyvissä (syke) | jäätyy 3 s:n jälkeen, sitten PAIKALLAAN | LEPO 30 fps: **GPU 14,1 ms/kehys (≈ 42 %)**, pääsäie 6,2 ms |
+
+Ennen-rivin 50,1 ms on Release-käännös kylmällä laitteella. Raportin 66,7 ms mitattiin Development-käännöksellä
+lämpimällä laitteella. Molemmat ovat GPU-sidonnaisia.
+
+Jäljitykset: `kehys-hinta-1/mittaus-ennen/metal-taysi.trace` ja `mittaus-jalkeen/metal-taysi.trace`.
+Rekisterivuoto (432 t) on yhä jäljellä (korjausehdotus 3, ei tässä erässä).
+
+### A: joutosyke jatkuvaksi, ennen ja jälkeen
+
+- **iPad (mitattu):** kun sykkivä elementti näkyy (aloitusvalinnan renkaat, siirtokohteiden halo tai avoin aarrepiste),
+  pallo ei lepää (`pallo lepo`: "ei lepää (animaatio: kaupungit: huomiorenkaat)"). Ruudunpaivitys on silloin LEPO-tilassa
+  30 fps:llä, GPU tekee 14,1 ms kehyksessä (≈ 42 % ajasta) ja pääsäie 6,2 ms.
+  - Ennen korjauksia jatkuva syke olisi pitänyt GPU:n 100 %:ssa: kehys 51,4 ms eli noin 20 fps.
+  - Kiinteässä Ateenan näkymässä ilman sykkiviä elementtejä pallo lepää yhä PAIKALLAAN-tilassa.
+- **iPhone 17 Pro (ARVIO, ei mitattu):** simulaattorin GPU-aika ei kuvaa laitetta. Arvioin raportin kertoimilla:
+  pikselisuhde 0,565 ja A19 Pro ≈ 1,3 × M1.
+  - Jälkeen: staattinen kehys **≈ 6 ms GPU-aikaa** (pallo noin 4,3 ms ja muu noin 1,9 ms). Jatkuva syke 30 fps:llä
+    vie **≈ 18 %** GPU-ajasta, ja pääsäie noin 3,5–4 ms kehyksessä.
+  - Ennen: noin 35–45 ms. Jatkuva syke olisi pitänyt GPU:n 100 %:ssa.
+
+### B: piilovartija (Kartta/PiiloVartija.cs)
+
+- **Haku koodista:** UI Toolkitin suotimia (FilterFunction, `filter` USS:ssä) asettaa vain Etusivulento. UI/- ja
+  Linssit/-kansioissa suotimia ei ole. Korjauksen 1 jälkeen piilotettuja suotimia ei siis ole. Vartija on varmistus
+  tulevia tapauksia varten.
+- **Katsaus laitteella:** `piilo tila` ajettiin kartalla, lehti auki ja kiinni, radiolinssi auki ja kiinni sekä
+  portti päällä ja pois.
+  - UI-elementtejä on 2 141–2 232 ja paneeleita 15–16.
+  - Elementeistä 1 811–2 158 on display:none-alipuissa (suljetut lehti, linssipaneelit, valikot, kartussi jne.).
+  - Niissä suotimia on 0, eikä vartija poistanut yhtään suodinta.
+- **Piilossa mutta piirrettävät** (visibility hidden tai opacity 0, ei display:none): kaikki ovat pieniä, ja koko UI
+  vie GPU:lla 0,2 ms. Niitä ei muutettu. Vaihtoehtoinen siivous Natiivi-UI:lle, jos ne ovat pysyvästi piilossa:
+  - UI 10 `Matkakirja UI 10 > UI 10-container > VisualElement > PulunSiluetti`, opacity 0 (1 elementti), aina
+  - UI 45 `ScrollView > … > unity-content-container > VisualElement > Label`, visibility hidden (2 × 1 elementti),
+    kun lehti on auki
+  - UI 20 `Matkakirja UI 20 > UI 20-container > turva > VisualElement`, visibility hidden (5 elementtiä), ja UI 15
+    `Matkakirja UI 15 > UI 15-container > turva > VisualElement`, visibility hidden (1 ja 20 elementtiä), kun
+    radiolinssi on auki
+  - UI 12 `Matkakirja UI 12 > UI 12-container > VisualElement > VisualElement > Label`, opacity 0 (1 elementti),
+    linssin jälkeen
+- **Vartijan hinta (iPad, Release):**
+  - v1 04a3ff1c kulki kaikki paneelit kerralla: kulku 1,9 ms (2 142 elementtiä) ja piikit jopa 7,4 ms. Thermal 2:ssa
+    kulku kesti 6,8 ms.
+  - v2 bff5c031 (thermal 2): keskimäärin 0,07 ms kehyksessä, huippu 8,6 ms käynnistyksessä (inline-tyyliolio 1 812
+    piilotetulle elementille + GC).
+  - **v3 3c636115 (lopullinen, thermal 0): keskimäärin 0,022–0,024 ms kehyksessä, huippu 1,40 ms.** Yli 1 ms:n kehyksiä
+    oli 16–21 kappaletta 7 300–9 200:sta (0,2 %). Kierros käy 2 141–2 231 elementtiä 9 kehyksessä, yhteensä 3,9–4,4 ms,
+    ja kierroksia on noin 2,5 s:n välein. `piilo tila` -katsaus (vain komennosta) kestää 1,1–3,2 ms.
+  - Simulaattorissa (v2): keskimäärin 0,038 ms kehyksessä.
+
+### Kuvaparit (simulaattori natiiviseppa-iPhone FBBD41D7)
+
+Kuvaparit ovat kansiossa `/Users/Shared/Claude/proto-3d/lokit/kehys-hinta-1/kuvaparit/pari-*.png`. Vasemmalla on ennen,
+oikealla jälkeen. Kuvat ovat iPhonen ruutu (1206 × 2622) 1600 px:n korkuiseksi skaalattuna, vierekkäin ilman
+marginaaleja.
+
+- **Ennen** = käännöspalvelun af0f883e (master + juna/b13 761cc096). Toinen ajo (`ennen-2`) tehtiin lämpimällä
+  välimuistilla samaan tapaan kuin jälkeen-ajo.
+- **Jälkeen** = bff5c031. Se käännettiin Unity-työkopiossa, koska käännöspalvelun jono ei vapautunut tunnissa ("VIKA
+  jono: lukko ei vapautunut tunnissa (juna/b13 23:39)"). 3c636115 muuttaa vain vartijan sisäistä kulkua.
+
+| Kuva | Ero > 8/255, ennen-2 vs jälkeen | Toistovaihtelu ennen vs ennen-2 |
+|---|---|---|
+| 1 portti auki (etusivun lento pysäytetty t = 20 s): viiva sumennettuna | 0,00 % | 0,00 % |
+| 2a portista poistuminen (musta verho ja Ohita) | 3,32 % | 3,32 % |
+| 2b portista poistuminen, aloituslento alkaa ("Kone nousee…") | 88,71 % | 97,29 % |
+| 3 kartta levossa (Ateena) | 0,00 % | 0,00 % |
+| 4 portti uudelleen auki: kone ja viiva sumennettuina ennallaan | 0,51 % | 0,41 % |
+| 5 portti taas pois | 0,00 % | 0,00 % |
+
+Kuvien 2a ja 2b erot ovat ajoitusta. Simulaattorin kuvakaappaus viivästyy 1–12 s, joten verhon häivytys ja lennon
+kohta vaihtelevat ajosta toiseen. Kahden ennen-ajon välinen ero on yhtä suuri. Molemmissa versioissa portti sulkeutuu,
+verho tulee ja aloituslento alkaa samalla tavalla. Kuvat 1, 3, 4 ja 5 ovat identtiset. Kuva 4 todentaa korjauksen 1:
+portin avautuessa uudelleen kone ja viiva palaavat sumennettuina, eli suotimet palautuvat.
+
+Laitteelta on lisäksi pysäytyskuva `kehys-hinta-1/mittaus-jalkeen/documents/kehys-renkaat.png` (iPad, renkaat sykkivät).
