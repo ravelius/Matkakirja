@@ -116852,6 +116852,253 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Arctic sea ice decline',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Nome, Alaska; Nome Airport; Bering Air; Nome–Council
+       * Highway; Nome–Teller Highway; Council, Alaska; Solomon, Alaska;
+       * Council City and Solomon River Railroad; Swanberg Dredge;
+       * Pilgrim Hot Springs; Bristle-thighed curlew; Teller Reindeer
+       * Station; Seward Peninsula; Bering Land Bridge National Preserve;
+       * Alaskan ice cream; Rubus chamaemorus; Iñupiat; Iñupiaq language;
+       * King Island (Alaska); Muskox; The Nome Nugget; Eliot Staples
+       * Bering Sea Ice Golf Classic) ja Wikivoyagen Nome (Alaska) -sivulta
+       * sekä kuvien Commons-kuvauksista (Salmon Lake, Pilgrim Hot
+       * Springsin puut, Safety Soundin mökit) — teksti omaa. Nostojen
+       * aiheita (nimen kirjoitusvirhe, Sitnasuaq ennen kultaa, Alaskan
+       * osto, Beringinsalmi ja Diomedet, pakkasennätys ja lumivallit,
+       * Iditarodin maali, merijää, kultaryntäys, Wyatt Earp, Happy
+       * Jackin mursunhammas, seerumiajo) eikä saapumistekstin
+       * rantavaskausta toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * tienvarsikyltti Nomen laitamilla kesäkuussa 1998.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Road sign, Nome 01(js).jpg',
+          lyhyt: 'Kyltti Nomen laitamilla neuvoo varautumaan pakkaseen ja kertomaan, minne on menossa.',
+          selite: 'Oranssi ja keltainen tienvarsikyltti Nomen laitamilla '
+            + 'kesäkuussa 1998: matkaa eteenpäin ei suositella, ja jos tietä '
+            + 'on pakko käyttää, pitää varautua kovaan pakkaseen ja lumeen, '
+            + 'ottaa mukaan selviytymisvarusteet ja kertoa jollekulle, minne '
+            + 'on menossa.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Nomeen ei pääse autolla, sillä kaupunki on Alaskan '
+          + 'maantieverkon ulkopuolella, ja perille tullaan lentäen '
+          + 'Anchoragesta. Kaupungista lähtee silti kolme omaa soratietä '
+          + 'tundralle, ja kesällä niitä pitkin pääsee vuokra-autolla '
+          + 'katsomaan ruostuneita höyryvetureita, myskihärkiä ja kahlaajia, '
+          + 'jotka lentävät tänne pesimään Tyynenmeren saarilta asti. Noin '
+          + 'puolet asukkaista on alkuperäiskansaa, ja iñupiatien '
+          + 'ruokaperinne, kieli ja tanssi näkyvät kaupungin arjessa. '
+          + 'Pöydässä voi olla hillaa ja poroa, ja pizzan voi tilata '
+          + 'lentokoneella kylään asti. Kesä on lyhyt ja viileä, mutta '
+          + 'keskikesällä valoisaa riittää lähes vuorokauden ympäri.',
+        artikkeli: {
+          nimi: 'Matkailijan Nome',
+          teksti: 'Nomeen tullaan lentäen, mutta kesällä kolme soratietä vie tundralle.',
+          nosto: 'Airport Pizza ottaa tilauksia syrjäisistä kylistä, ja '
+            + 'Bering Air kuljettaa pizzat perille vuorolennoillaan '
+            + 'maksutta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen perille, soralla eteenpäin',
+              teksti: 'Nomesta ei ole maantietä muualle Alaskaan eikä '
+                + 'rautatietä, joten matkailija saapuu lentäen. Alaska Airlines '
+                + 'lentää kaupunkiin Anchoragesta ja Kotzebuesta, ja Nome '
+                + 'Airport on noin neljän kilometrin päässä keskustan '
+                + 'länsipuolella. Kaupungissa päämajaansa pitävä Bering Air '
+                + 'lentää pienkoneillaan reittiliikennettä lähes kolmeenkymmeneen '
+                + 'Länsi-Alaskan kylään, ja Nome on koko Beringinsalmen seudun '
+                + 'liikenteen solmukohta. Tieyhteyttä Fairbanksin suunnasta on '
+                + 'selvitetty 1950-luvulta asti, mutta vuonna 2010 noin 800 '
+                + 'kilometrin tien hinnaksi arvioitiin 2,3–2,7 miljardia '
+                + 'dollaria, eikä sitä ole rakennettu. Kaupungista lähtee sen '
+                + 'sijaan kolme omaa tietä: Council Road 116 kilometriä itään, '
+                + 'Kougarok Road 137 kilometriä pohjoiseen ja Teller Road 116 '
+                + 'kilometriä luoteeseen Tellerin iñupiat-kylään, joka on '
+                + 'kesäisen tieverkon ainoa alkuperäiskansan kylä. Tiet ovat '
+                + 'sorapintaisia ja ennen kaikkea kesäteitä: Council Road '
+                + 'muuttuu talvella autolla ajokelvottomaksi heti kaupungin '
+                + 'laitojen jälkeen, ja sen päässä Niukluk-joen yli '
+                + 'Counciliin pääsee vain maavaraltaan korkealla autolla, jos '
+                + 'olosuhteet sallivat. Auton voi vuokrata paikallisista vuokraamoista '
+                + 'ja hotellista. Keskusta on niin pieni, että sen kiertää '
+                + 'kesällä helposti jalan.',
+              kuva: [
+                {
+                  tiedosto: 'Nome Airport.jpg',
+                  lyhyt: 'Bering Airin halli toivottaa lentomatkustajat tervetulleiksi Nomeen.',
+                  selite: 'Bering Airin hallin seinässä lukee Welcome to Nome, '
+                    + 'ja sen edessä seisoo yhtiön yksimoottorinen potkurikone, '
+                    + 'jollaisilla lennetään ympäröiviin kyliin. Kuva on '
+                    + 'lokakuulta 2018.',
+                  lahde: 'Office of Don Young / U.S. House of Representatives, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Safety Sound Cabin, Nome AK (14347294043).jpg',
+                  lyhyt: 'Hirsimökki seisoo Safety Soundin laguunin rannalla Council Roadin varrella.',
+                  selite: 'Harmaa hirsimökki peltikattoineen Safety Soundin '
+                    + 'rannalla kesäkuun alussa 2014. Laguunin varrella on sekä '
+                    + 'kesämökkejä että ympärivuotisia koteja, ja Council Road '
+                    + 'kulkee aivan sen vieritse.',
+                  lahde: 'Gregory Smith, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Nome Alaska salmon lake.jpg',
+                  lyhyt: 'Salmon Lake Kougarok Roadin varrella on kesäkuun puolivälissä vielä osin jäässä.',
+                  selite: 'Salmon Lake 19. kesäkuuta 2006: järven pinnalla on '
+                    + 'yhä jäätä, rannoilla lumilaikkuja, ja taustalla kohoavat '
+                    + 'Kigluaik-vuoret. Järven rannalla, Kougarok Roadin 40. '
+                    + 'mailin kohdalla, on maksuton leirintäalue.',
+                  lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Hilla, poro ja lentävä pizza',
+              teksti: 'Moni nomelainen elää yhä osin pyyntitaloudesta: '
+                + 'kalastus, pyynti ja marjastus kuuluvat vuoden kiertoon, '
+                + 'vaikka kaupassakin käydään. Iñupiatien juhlaruoka on '
+                + 'akutaq, jota englanniksi kutsutaan eskimojäätelöksi. '
+                + 'Perinteisesti siihen vatkataan hylkeenöljyä tai mursun- tai '
+                + 'karibuntalia, kuivattua kalaa tai lihaa ja tundran marjoja. '
+                + 'Yksi rakkaimmista marjoista on hilla, jota Alaskassa '
+                + 'kutsutaan nimellä salmonberry ja iñupiaqiksi aqpik. '
+                + 'Seward-niemimaa on myös Alaskan porotalouden kehto. Vuonna '
+                + '1892 Siperiasta tuotiin 171 poroa Port Clarencen rannalle '
+                + 'perustetulle Tellerin poroasemalle, ja 1894 Finnmarkin '
+                + 'tuntureilta saapui saamelaispaimenia opettamaan '
+                + 'poronhoitoa iñupiateille. 1930-luvulla poroja oli jo noin '
+                + '600 000, ja vuoden 1937 porolaki rajasi poronomistuksen '
+                + 'alkuperäiskansalle. Nykyiset tokat ovat paljon pienempiä, '
+                + 'ja vuonna 1997 monet niemimaan kesyistä poroista lähtivät läntisen '
+                + 'arktisen karibulauman kesävaellukselle eivätkä palanneet. '
+                + 'Ravintoloita on muutama. Airport Pizza tunnetaan pizzojen '
+                + 'lisäksi hampurilaisista ja ramenista, ja se ottaa tilauksia '
+                + 'myös syrjäisistä kylistä: Bering Air kuljettaa pizzat '
+                + 'vuorolennoillaan perille maksutta.',
+              kuva: {
+                tiedosto: 'Reindeer in truck.jpg',
+                lyhyt: 'Poro seisoo lava-auton lavalla Nomen kaupan edessä lokakuussa 2009.',
+                selite: 'Harmaan Toyotan lavalla seisoo elävä poro Nome Liquor '
+                  + 'Store and Grocery -kaupan edessä lokakuussa 2009, ja '
+                  + 'ohikulkija pysähtyy katsomaan sitä lumisella kadulla.',
+                lahde: 'James Brooks, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Iñupiatien kaupunki',
+              teksti: 'Nomen noin 3 700 asukkaasta noin puolet on '
+                + 'alkuperäiskansaa, enimmäkseen iñupiateja. Kaupungissa toimii '
+                + 'liittovaltion tunnustama heimo Nome Eskimo Community, ja '
+                + 'maata ja yrityksiä hallitsevat alkuperäiskansayhtiöt: '
+                + 'kaupungin oma Sitnasuak Native Corporation sekä Bering '
+                + 'Straits Native Corporation, jonka pääkonttori on Nomessa. '
+                + 'Kaupungissa puhutaan iñupiaqin qawiaraq-murretta, ja kieltä '
+                + 'elvytetään: vuonna 2018 kielenoppijoiden kahden viikon '
+                + 'intensiivijakso Iḷisaqativut pidettiin Nomessa, jonka '
+                + 'iñupiaqinkielinen nimi on Sitŋasuaq. Nomessa asuu myös '
+                + 'King Islandin eli Ugiuvakin väkeä. Pieni jyrkkä saari '
+                + 'Beringinmerellä oli heidän talvikotinsa, jossa pimeät '
+                + 'talvipäivät vietettiin tanssien miesten yhteistalossa, ja '
+                + 'joulukuun nimi on heidän kielessään rummutuksen aika. Kun '
+                + 'viranomaiset sulkivat saaren koulun 1959, perheiden oli '
+                + 'muutettava lastensa perässä mantereelle, ja vuoteen 1966 '
+                + 'mennessä koko yhteisö oli asettunut sinne pysyvästi. King '
+                + 'Islandin väki on silti säilyttänyt oman identiteettinsä, ja '
+                + 'osa käy saarella yhä pyytämässä mursuja ja hylkeitä. '
+                + 'Seudun historiaan pääsee Carrie M. McLain Memorial '
+                + 'Museumissa ja Katirvik-kulttuurikeskuksessa, jotka toimivat '
+                + 'samassa Richard Foster Buildingissa 7th Streetillä. Front '
+                + 'Streetin Sitnasuak-talossa on Bering Land Bridge '
+                + '-suojelualueen opastuskeskus, ja sekä museoon että '
+                + 'opastuskeskukseen pääsee maksutta.',
+              kuva: {
+                tiedosto: 'Visitor Center in Nome- BELA edit (15651017164).jpg',
+                lyhyt: 'Front Streetin Sitnasuak-talossa toimii Bering Land Bridge -suojelualueen opastuskeskus.',
+                selite: 'Vaaleankeltaisen talon seinässä lukee Sitnasuak Native '
+                  + 'Corporation, parvekkeen kaiteessa on mammuttikuvioinen '
+                  + 'Bering Land Bridge National Preserven kyltti, ja '
+                  + 'julkisivulla seisoo valkoinen jääkarhupatsas. Kuva on '
+                  + 'kesäkuulta 2012.',
+                lahde: 'Bering Land Bridge National Preserve, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Council Road ja juna ei minnekään',
+              teksti: 'Nomen suosituin päiväretki on Council Road, joka alkaa '
+                + 'Front Streetin itäpäästä. Heti ensimmäisellä maililla East '
+                + 'End Parkin lammessa seisoo Swanberg Dredge, San Franciscossa '
+                + 'rakennettu kultaruoppaaja, jolla kaivettiin vain kesä 1946 '
+                + 'ennen kuin pankki otti sen haltuunsa, ja lammet ovat '
+                + 'muuttolintujen tärkeä levähdyspaikka. Cape Nomen niemen '
+                + 'jälkeen tie kulkee kapeaa hiekkasärkkää Safety Soundin '
+                + 'laguunin ja meren välissä, ja laguunilla näkee kesällä '
+                + 'muun muassa haahkoja. Noin 34 kilometrin päässä kaupungista '
+                + 'on vain kesäisin auki oleva Safety Roadhouse, jonka seinille '
+                + 'vieraat jättävät nimikirjoituksin varustettuja '
+                + 'dollarinseteleitä. Mailin 31 kohdalla, ennen Solomon-joen '
+                + 'siltaa, tundralla ruostuu kolme höyryveturia, kaksi '
+                + 'avovaunua ja höyrykattila. Ne kuuluivat Council City and '
+                + 'Solomon River Railroadille, joka liikennöi vain vuodet '
+                + '1903–1907, ja nähtävyyttä kutsutaan nimellä Last Train to '
+                + 'Nowhere. Solomonin kaivoskylän ja radan hävitti myrsky '
+                + '1913. Lintujen vuoksi kannattaa ajaa myös Kougarok Roadia: '
+                + 'Seward-niemimaa ja Jukon-joen alajuoksu ovat alaskankuovin '
+                + 'ainoat pesimäalueet. Tämä Tyynenmeren saarilla talveava '
+                + 'kahlaaja lentää syksyllä Alaskasta Laysanin saarelle 4 000 '
+                + 'kilometriä ilman välilaskua, ja sen pesimäpaikat löydettiin '
+                + 'vasta 1948. Kougarok Roadin 65. mailin kohdalta noin 13 '
+                + 'kilometriä etelään ovat Pilgrim Hot Springsin lähteet, '
+                + 'iñupiaqiksi Unaatuq eli lämpimät vedet, ja niiden '
+                + 'ympärillä kasvavat niemimaan suurimmat puut.',
+              kuva: {
+                tiedosto: 'Arct0936.jpg',
+                lyhyt: 'Vuosina 1903–1907 kulkeneen radan höyryveturit ruostuvat tundralla Solomonin luona.',
+                selite: 'Ruostuneita höyryvetureita ja lahonneita avovaunuja '
+                  + 'seisoo vihreässä heinikossa Solomonin luona Council Roadin '
+                  + 'varrella elokuussa 2013, ja taivaalla kasautuu '
+                  + 'kumpupilviä.',
+                lahde: 'John Cloud / NOAA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Myskihärät ja muut käytännön asiat',
+              teksti: 'Nomen matkailuneuvonta on Front Streetillä numerossa '
+                + '301. Kesä on lyhyt: viimeinen pakkasyö osuu keskimäärin '
+                + 'kesäkuun 9. päivään ja ensimmäinen jo syyskuun 2. päivään, '
+                + 'joten hallaton kausi kestää vain noin 78 päivää, ja '
+                + 'sateisinta on juuri kesäkuukausina. '
+                + 'Beringinmeren vesi pysyy kesälläkin 2–10 asteessa. Nome on '
+                + '64,5 leveysasteella hieman napapiirin eteläpuolella, joten '
+                + 'aurinko laskee keskikesälläkin, mutta vain hetkeksi. '
+                + 'Tundralla tärkein neuvo koskee myskihärkiä. Alaskan '
+                + 'alkuperäinen kanta hävisi 1900-luvun alkuun mennessä, mutta '
+                + 'laji on palautettu Seward-niemimaalle, ja kaupungin '
+                + 'laitamilla niitä näkee usein laiduntamassa. Rauhalliselta '
+                + 'näyttävä eläin voi olla vaarallinen: joulukuussa 2022 '
+                + 'myskihärkä tappoi Nomen lähellä miehen, joka yritti '
+                + 'hätistellä laumaa pois kotinsa koiratarhan luota. '
+                + 'Etäisyyttä kannattaa siis pitää. Paikalliset uutiset saa '
+                + 'Nome Nuggetista, joka ilmestyy torstaisin ja on Alaskan '
+                + 'vanhin yhtäjaksoisesti ilmestynyt sanomalehti. '
+                + 'Maaliskuussa tuleva voi katsoa Bering Sea Ice Golf '
+                + 'Classicia, jossa jäätyneen Norton Soundin päällä pelataan '
+                + 'kuuden reiän golfia oransseilla ja vihreillä palloilla.',
+              kuva: {
+                tiedosto: 'Musk ox near Nome, AK (8029730150).jpg',
+                lyhyt: 'Myskihärkä seisoo heinikossa Nomen lähellä, taustalla kivikkoranta ja meri.',
+                selite: 'Tuuhea myskihärkä katsoo kameraan heinikon takaa Nomen '
+                  + 'lähellä heinäkuussa 2012, ja sen takana on kivikkoinen '
+                  + 'ranta ja harmaa meri.',
+                lahde: 'Neal Herbert / NPS, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
