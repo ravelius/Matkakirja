@@ -70,7 +70,7 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti Turistioppaat: matkailijalle-osio 30 uudelle kaupungille (tilattu 25.9.2026) ✅ VALMIS PR:issä
+## Paketti Turistioppaat: matkailijalle-osio, koko 56 kohteen lista (tilattu 25.9.2026) ✅ VALMIS PR:issä
 
 **Fablen tilaus 25.9.2026** (docs/raportit/sisalto-inventaario-20260924.md,
 "Turistiopas (`matkailijalle:`)" 0/71): sama kaava kuin Lontoon/Pariisin
@@ -78,21 +78,32 @@ opas (`kuva` + `kappale` + `artikkeli.jaksot`, ensimmäisessä jaksossa
 kolmen kuvan karuselli), Commons-todennus jokaiselle kuvalle. Vain
 oikeat kaupungit/taajamat (ei alueita — sama rajaus kuin kohdekartassa,
 ks. docs/raportit/sisalto-inventaario-20260924.md kohta 3). Erät 3
-kaupunkia kerrallaan, yksi PR per erä sisältöjunaan. Sisältökirjuri
-jatkaa erää toisensa jälkeen ilman erillistä lupaa, kunnes lista on täynnä
-tai Fable/omistaja käskee toisin. Lista rajattiin 30 oikeaan kaupunkiin/taajamaan.
+kaupunkia/kohdetta kerrallaan, yksi PR per erä sisältöjunaan. Ensimmäinen
+30 kaupungin lista (erät 1–10) valmistui iltapäivällä; Fable laajensi
+tehtävän jatkuvaksi loppuun asti (päätös 25.9. klo 09.49 ja 17.3x) —
+kaikki inventaarion "Sopii konseptiin" -listan 56 kohdetta (kohta 9,
+pl. hylätyt/epävarmat konfliktialueet) tehtiin loppuun samana iltana.
 
-**Tila 25.9.2026 iltapäivä: kaikki 30 tehty ja PR:issä.**
+**Tila 25.9.2026 ilta: KOKO PAKETTI VALMIS PR:issä, 60 kaupunkia/kohdetta 20 erässä
+(mukana myös 3 alun perin mainittua riskikaupunkia Gao/Murzuk/Al Kufrah, jotka olivat
+jo alkuperäisellä 30 kaupungin työlistalla ennen turvallisuustarkistusta).**
 
 - Erä 1: Managua, San Juan, Nouméa (#3148). Erä 2: São Luís, Ouro Preto, Cayenne (#3150).
 - Erä 3: Bermuda, Sitka, Coober Pedy (#3159). Erä 4: Norfolk, Churchill, Gao (#3164).
 - Erä 5: Puerto Montt, Broome, Santarém (#3167). Erä 6: Geraldton, João Pessoa, Murzuk (#3169).
 - Erä 7: Al Kufrah, Campo Grande, Exmouth (#3172). Erä 8: Birdsville, Macapá, Kalgoorlie (#3173).
 - Erä 9: Mount Isa, Nome, Porto Velho (#3176). Erä 10: Kimberley, Falklandinsaaret, Saint Helena (#3178).
+- Erä 11: Machu Picchu, Grand Canyon, Iguazú (#3183). Erä 12: Uluru, Hawaii, Galápagos (#3186).
+- Erä 13: Kilimanjaro, Yellowstone, Milford Sound (#3187). Erä 14: Bali, Viktorian putoukset, Karthago (#3189).
+- Erä 15: Angola, Madagaskar, Mosambik (#3193). Erä 16: Robinson Crusoe -saari, Sierra Leone, Appalakit (#3199).
+- Erä 17: Kap Horn, Mount Rushmore, Namib (#3201). Erä 18: Titicaca-järvi, Nullarbor, Viktoria Nyanza (#3204).
+- Erä 19: Ilha do Bananal, Boa Vista, Kap Palmas (#3206). Erä 20: Labrador, Orjarannikko (Ouidah, Benin), Sepik (#3223).
 
 Kunkin oppaan kuvissa on jäänyt merkittyjä epävarmuuksia (kuvauspaikka Commonsissa yleinen,
 Wikivoyage-tiedot vuosilta 2015–2025): ne on kirjattu PR-kuvauksiin ja oppaiden lähdekommentteihin.
-Lisäksi Fablen rajaus 30 kaupunkiin: loput 41 inventaarion kaupunkia jäävät tekemättä, ellei toisin käsketä.
+Inventaarion hylätyt/epävarmat kohteet (Darfur, Suakin, Bahr el Ghazal, Ras Hafun, Tšadjärvi,
+Kamerunvuori, San Ambrosio, Kongo, Sahara, Tanganjikajärvi, Ahaggar) jäävät tekemättä
+turvallisuus- tai kohderajaussyistä, ellei Fable/omistaja käske toisin.
 
 ## Paketti O9: kaikki lehdet valmiiksi + uudet mantereet (tilattu 22.8.2026) — VANHENTUNUT, KS. ALLA
 

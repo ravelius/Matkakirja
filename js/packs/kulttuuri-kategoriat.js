@@ -115084,6 +115084,241 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Battle Harbour',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Labrador, Trans-Labrador Highway, MV Northern Ranger,
+       * Nain, Nunatsiavut, Hopedale, Labradorite, Innu, Sheshatshiu,
+       * Natuashish, Innu tea doll, Churchill Falls Generating Station,
+       * Akami-Uapishku-KakKasuak-Mealy Mountains National Park Reserve,
+       * Wonderstrands, Point Amour Lighthouse, L'Anse Amour, HMS Raleigh
+       * (1919)) ja Wikivoyagesta (Labrador, Mealy Mountains National Park)
+       * — teksti omaa. Nostojen aiheita (Nainin lähetysasema, Torngatin
+       * vuoret, Red Bayn baskit, jäävuorten kuja, Rigolet'n turkiskauppa,
+       * Battle Harbour) ja Grenfellin/Bradfordin gallerioita ei toisteta.
+       * Hautakummun ikä 7 500 vuotta paikan kyltin ja Wikipedian
+       * L'Anse Amour -artikkelin nähtävyysosion mukaan (artikkelin
+       * historiaosio mainitsee 8 300 vuotta ihmisen toiminnasta seudulla).
+       * Kokoussalin labradoriittilattia ja ulun muotoinen pöytä kuvaajan
+       * Commons-kuvauksesta. Voimalakierrokset Wikivoyagen mukaan
+       * ennakkovarauksella; aikoja ja hintoja ei mainita. Kuvien lisenssit
+       * ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Point Amour Lighthouse 1.jpg',
+          lyhyt: 'Point Amourin 33-metrinen majakka on Atlantin Kanadan korkein.',
+          selite: 'Vuonna 1857 valmistunut Point Amourin kalkkikivimajakka '
+            + 'vartioi Belle Islen salmea Labradorin etelärannikolla, ja sen '
+            + 'kupeessa olevassa entisessä vartijan asunnossa toimii nykyään '
+            + 'museo.',
+          lahde: 'Maciej, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Labrador on Newfoundland ja Labrador -provinssin '
+          + 'mannerosa: sen osuus provinssin pinta-alasta on 71 prosenttia, '
+          + 'asukkaista vain kuusi. Etelästä sinne tullaan lautalla Belle '
+          + 'Islen salmen yli, lännestä pitkää erämaatietä Québecista, ja '
+          + 'pohjoisrannikon inuiittikyliin pääsee vain laivalla tai '
+          + 'pienkoneella. Matkalla tapaa kaksi alkuperäiskansaa, inuiitit '
+          + 'ja innut, joiden kielet eivät ole toisilleen sukua. Itä-Kanadan '
+          + 'suurimpaan kansallispuistoon ei johda yhtään tietä, ja etelärannikolla '
+          + 'seisovat Atlantin Kanadan korkein majakka ja hautakumpu, joka on '
+          + 'tuhansia vuosia Egyptin pyramideja vanhempi. Matkakausi on '
+          + 'lyhyt: sesonki kestää kesäkuun puolivälistä elokuun loppuun, ja '
+          + 'tienvarren leirintäpaikat ovat auki vain kesän.',
+        artikkeli: {
+          nimi: 'Matkailijan Labrador',
+          teksti: 'Labradorin pohjoisrannikon kyliin ei johda yhtään tietä.',
+          nosto: 'Inuiittien kokoussalin lattia on laatoitettu '
+            + 'labradoriitilla, kivellä joka sai nimensä tästä maasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille lautalla, laivalla tai pienkoneella',
+              teksti: 'Useimmat matkailijat tulevat Labradoriin etelästä. '
+                + 'Lautta ylittää Belle Islen salmen Newfoundlandin St. '
+                + 'Barbesta Québecin puolelle Blanc-Sabloniin, josta '
+                + 'Labradorin rajalle on vain muutama kilometri. Siitä alkaa '
+                + 'Trans-Labrador Highway, joka kulkee 1 149 kilometrin '
+                + 'kaarena rannikolta Happy Valley-Goose Bayhin ja sisämaan '
+                + 'halki Labrador Cityn kautta Québecin rajalle. Tie päällystettiin koko matkaltaan '
+                + 'vasta heinäkuussa 2022, mutta palveluja on yhä harvassa: '
+                + 'Goose Bayn eteläpuolella huoltoasemien väli on noin 400 '
+                + 'kilometriä, eikä matkapuhelin kuulu kuin paikoitellen. '
+                + 'Lännestä pääsee Québecin Route 389 -tietä, joka on osin '
+                + 'yhä soraa. Pohjoisrannikon inuiittikyliin ei johda tietä '
+                + 'lainkaan. Kesäkuun puolivälistä marraskuun puoliväliin, '
+                + 'jäiden salliessa, Goose Baysta lähtee kerran viikossa '
+                + 'rannikkolaiva Kamutik W, joka pysähtyy kylissä ja kääntyy '
+                + 'Nainista takaisin noin kolmen tunnin kuluttua. Muulloin '
+                + 'kylien yhteyden ulkomaailmaan hoitavat pienet potkurikoneet. '
+                + 'Kello kannattaa tarkistaa: suurin osa Labradorista elää '
+                + 'Atlantin aikaa, mutta Newfoundlandia lähin kaakkoiskulma '
+                + 'noudattaa saaren aikaa, joka on puoli tuntia edellä.',
+              kuva: [
+                {
+                  tiedosto: 'MV Qajaq W.jpg',
+                  lyhyt: 'Qajaq W -lautta saapuu Blanc-Sabloniin Belle Islen salmen yli.',
+                  selite: 'Qajaq W on ajanut St. Barben ja Blanc-Sablonin '
+                    + 'väliä Belle Islen salmen yli vuodesta 2019; kesäkuussa '
+                    + '2026 otetun kuvan taustalla ajelehtii pieni jäävuori.',
+                  lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Kamutik W at port in Makkovik, Labrador.jpg',
+                  lyhyt: 'Rannikkolaiva Kamutik W laiturissa Makkovikissa, jonne ei johda tietä.',
+                  selite: 'Kamutik W tuo kesäisin matkustajat ja rahdin '
+                    + 'Goose Baysta Nunatsiavutin tiettömiin rannikkokyliin, '
+                    + 'kuten Makkovikiin, ja kääntyy takaisin Nainista.',
+                  lahde: 'Quincy Morgan, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: '2017-10-02 Air Borealis (PAL Airlines) DHC-6-300 Twin Otter C-GIZF plane.jpg',
+                  lyhyt: 'Air Borealiksen Twin Otter nousee Nainin lentokentältä.',
+                  selite: 'Kaksimoottorinen Twin Otter nousi Nainin kentältä '
+                    + 'lokakuussa 2017; tällaiset pienkoneet ovat '
+                    + 'pohjoisrannikon kylien ainoa säännöllinen yhteys silloin, '
+                    + 'kun satamat ovat jäässä.',
+                  lahde: 'Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Nunatsiavut, inuiittien oma maa',
+              teksti: 'Hamilton Inletin suulta pohjoiseen rannikko on '
+                + 'Nunatsiavutia, Labradorin inuiittien itsehallintoaluetta. '
+                + 'Nimi tarkoittaa inuttitutiksi "kaunista maatamme". '
+                + 'Tammikuussa 2005 allekirjoitettu maasopimus kattaa yli '
+                + '72 000 neliökilometriä maata ja lisäksi merialueita, ja '
+                + 'saman vuoden joulukuussa inuiittien oma hallitus otti '
+                + 'vastuulleen muun muassa terveydenhoidon, koulutuksen ja '
+                + 'kulttuuriasiat. Alue kuuluu yhä provinssiin, ja se on '
+                + 'Kanadan eteläisin tunnustettu inuiittialue. Hallinnon '
+                + 'keskus on Nain, mutta edustajakokous istuu Hopedalessa, '
+                + 'jossa satamaan päin avautuva kokoustalo valmistui 2012. '
+                + 'Istuntosalin lattia on laatoitettu labradoriitilla, ja '
+                + 'edustajat istuvat pöydän ääressä, joka on muotoiltu ulun, '
+                + 'inuiittinaisten puolikuun muotoisen veitsen, malliin. '
+                + 'Labradoriitti sai nimensä tästä maasta, sillä mineraalin '
+                + 'tyyppipaikka on Paul\'s Island Nainin edustalla. '
+                + 'Suomalainen tuntee kiven ennestään: Ylämaan spektroliitti '
+                + 'on labradoriitin poikkeuksellisen värikäs muunnos. '
+                + 'Nunatsiavutin viidessä kylässä on pieniä majataloja, mutta '
+                + 'huoneita on vähän, joten yösija kannattaa varata ennen '
+                + 'lähtöä.',
+              kuva: {
+                tiedosto: 'Assembly Chambers in the Nunatsiavut Assembly Building in Hopedale, Nunatsiavut.jpg',
+                lyhyt: 'Nunatsiavutin edustajat kokoontuvat Hopedalessa ulun muotoisen pöydän ääreen.',
+                selite: 'Hopedalen kokoustalon istuntosalin lattia on '
+                  + 'laatoitettu labradoriitilla, ja ulun muotoisen pöydän '
+                  + 'keskellä lattialla lepää jääkarhuntalja.',
+                lahde: 'FranceRivet, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Innujen maa ja maanalainen voimala',
+              teksti: 'Labradorin toinen alkuperäiskansa, innut, on eri kansa '
+                + 'kuin inuiitit, vaikka nimet sekoittuvat helposti. Innu '
+                + 'tarkoittaa ihmistä, ja kansan kieli innu-aimun kuuluu '
+                + 'kriin sukuiseen murrejatkumoon eikä ole sukua inuiittien '
+                + 'kielille. '
+                + 'Kotimaataan innut kutsuvat nimellä Nitassinan, "maamme". '
+                + 'Labradorin innut elivät karibua ja hirveä metsästäen '
+                + 'liikkuvaa elämää niin pitkään, että asettuivat pysyviin '
+                + 'kyliin vasta 1960-luvulla, viimeisten joukossa Kanadassa. '
+                + 'Sheshatshiuun ajetaan Goose Baysta 40 kilometriä '
+                + 'päällystettyä tietä, mutta vuonna 2002 perustettuun '
+                + 'Natuashishiin pääsee vain lentäen tai meritse, ja siellä '
+                + 'alkoholin myynti, osto ja hallussapito on kielletty '
+                + 'kyläläisten omalla päätöksellä. Innujen perinteistä '
+                + 'käsityötä ovat maalatut karibunnahkavaatteet ja teenuket: '
+                + 'tytöt kantoivat pitkillä vaelluksilla nukkeja, joiden '
+                + 'täytteenä kulki perheen teevarasto. Sisämaassa innujen '
+                + 'Mishta-shipu, "suuri joki", on valjastettu Churchill '
+                + 'Fallsin voimalaksi, jonka konesali on louhittu graniittiin '
+                + 'noin 300 metrin syvyyteen. Tekoaltaan alle 1960-luvulla '
+                + 'jääneistä metsästysmaista sovittiin korvauksista vasta '
+                + 'vuonna 2008. Voimalaan voi tutustua, kun kierroksen varaa '
+                + 'etukäteen.',
+              kuva: {
+                tiedosto: 'Caribou skin coat, Innu, Quebec-Labrador Peninsula, c. 1805 - Royal Ontario Museum - DSC00317.JPG',
+                lyhyt: 'Innujen maalattu karibunnahkatakki noin vuodelta 1805.',
+                selite: 'Labradorin niemimaan innujen karibunnahkainen takki on '
+                  + 'koristeltu maalatuin kuvioin; noin vuodelta 1805 peräisin '
+                  + 'oleva takki on Royal Ontario Museumin kokoelmissa '
+                  + 'Torontossa.',
+                lahde: 'Daderot, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Mealy Mountains ja ihmeiden ranta',
+              teksti: 'Lake Melvillen eteläpuolella kohoavat Mealy Mountains, '
+                + 'joiden jäätikön pyöristämät paljaat laet nousevat 1 180 '
+                + 'metriin. Vuonna 2015 perustettu kansallispuistovaraus on '
+                + 'noin 10 700 neliökilometrin laajuinen, Itä-Kanadan suurin '
+                + 'kansallispuisto ja koko itäisen Pohjois-Amerikan suurin '
+                + 'suojelualue. Pitkä nimi Akami-Uapishkᵘ-KakKasuak-Mealy '
+                + 'Mountains yhdistää kolme kieltä: innuksi Akami-Uapishku '
+                + 'tarkoittaa "vastarannan valkoisia vuoria", ja KakKasuak on '
+                + 'inuiittien sana vuorelle. Puisto perustettiin varaukseksi, '
+                + 'koska innujen maavaatimusneuvottelut olivat kesken, ja '
+                + 'poikkeuksellisesti paikalliset saavat yhä metsästää, pyytää '
+                + 'ansoilla, kalastaa ja kaataa polttopuuta omiin tarpeisiinsa. '
+                + 'Metsissä elää uhanalainen metsäkaribulauma, susia ja '
+                + 'mustakarhuja, ja joissa nousee atlantinlohi. Puistoon ei '
+                + 'johda tietä eikä siellä ole palveluja: sinne mennään '
+                + 'veneellä Cartwrightista tai Rigolet\'sta tai tilauskoneella '
+                + 'Goose Baysta. Palkintona on noin 50 kilometrin '
+                + 'hiekkarantojen jakso Labradorinmeren rannalla. Sen on '
+                + 'arveltu olevan Eerik Punaisen saagan Furðustrandir, '
+                + 'ihmeiden ranta, jonka viikingit nimesivät, koska sen ohi '
+                + 'purjehtiminen tuntui loputtomalta. Tutkijat eivät ole '
+                + 'yksimielisiä paikasta.',
+              kuva: {
+                tiedosto: 'Mealy Mountains Labrador 1.jpg',
+                lyhyt: 'Memekueshu-nipi-järvi Mealy Mountainsin jyrkkien kallioseinien välissä.',
+                selite: 'Lentokoneesta kuvattu Memekueshu-nipi-järvi eli Gods '
+                  + 'Pocket halkoo Mealy Mountainsin kansallispuistovarauksen '
+                  + 'jyrkkiä kallioseiniä.',
+                lahde: 'Paul Gierszewski, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Majakka, hautakumpu ja hylky',
+              teksti: 'Parinkymmenen kilometrin päässä Blanc-Sablonin '
+                + 'lauttasatamasta mahtuu muutamalle kilometrille kolme '
+                + 'aikakautta. Point Amourin majakka valmistui 1857 yhtenä '
+                + 'neljästä majakasta, joilla turvattiin höyrylaivojen '
+                + 'kasvavaa liikennettä Euroopan ja Amerikan välillä. '
+                + 'Paikallisesta kalkkikivestä muurattu, 33 metrin torni on '
+                + 'Atlantin Kanadan korkein ja koko maan toiseksi korkein '
+                + 'majakka, ja vartijan kunnostetussa asunnossa toimii museo. '
+                + 'Viereisen pikkukylän nimi L\'Anse Amour, "rakkauden '
+                + 'poukama", on kaunisteltu muoto vanhasta nimestä Anse aux '
+                + 'Morts, "kuolleiden poukama". Kylän liepeillä on noin 7 500 '
+                + 'vuotta vanha hautakumpu, johon arkaaisen merikulttuurin '
+                + 'väki hautasi pojan kasvot alaspäin ja pää länteen. Kumpu '
+                + 'nimettiin Kanadan kansalliseksi historialliseksi kohteeksi '
+                + '1978, ja kaivauslöytöjen jäljennöksiä on esillä L\'Anse au '
+                + 'Loupin museossa. Point Amourin lähellä rantapolku johtaa '
+                + 'HMS Raleighin jäänteille: brittiläinen risteilijä ajoi '
+                + 'sumussa karille elokuussa 1922, ja kaksitoista miestä '
+                + 'menehtyi. Hylky räjäytettiin 1926 syvyyspommeilla '
+                + 'tunnistamattomaksi, mutta ruostuneita kappaleita on yhä '
+                + 'rannassa.',
+              kuva: {
+                tiedosto: 'Tumulus Anse Amour Labrador.jpg',
+                lyhyt: 'L\'Anse Amourin kivillä peitetty hautakumpu on noin 7 500 vuotta vanha.',
+                selite: 'Matala, kivillä peitetty kumpu L\'Anse Amourissa on '
+                  + 'Pohjois-Amerikan vanhimpia tunnettuja hautapaikkoja, ja '
+                  + 'se nimettiin kansalliseksi historialliseksi kohteeksi '
+                  + '1978.',
+                lahde: 'Pierre Gingras, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
@@ -118033,6 +118268,221 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ouidah',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Ouidah, Benin.
+       * Taustatiedot englannin Wikipediasta (Ouidah, Cadjehoun Airport,
+       * Zemidjan, Vodun Days, Zangbeto, Beninese cuisine, Sodabi,
+       * Marie-Cécile Zinsou), ranskan Wikipediasta (Ouidah, Route des
+       * Pêches, Vodun Days, Fondation Zinsou, Musée d'art contemporain de
+       * Ouidah, Villa Ajavon, Maison du Brésil (Ouidah), Agouda, Kaléta)
+       * sekä Wikivoyagesta (Ouidah, Benin) — teksti omaa. Route des
+       * Pêchesin päällystetty Ouidah'n pää perustuu tammikuun 2026
+       * Commons-kuvaan. Aukioloajat ja hinnat jätetty pois (lähteet
+       * vanhoja). Nostojen ja orjakauppakategorian aiheita (linnake ja
+       * historiallinen museo, python-temppeli, Kpassèn metsä, ranta,
+       * basilika, Unohduksen portti, Chachan tori, agojiet, Zoungbodji,
+       * Clotilda) ei toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Vodun Days - Fort Français.jpg',
+          lyhyt: 'Olkiasuinen zangbeto-yövartija Ranskan linnakkeen aukiolla Vodun-päivillä 2025.',
+          selite: 'Punaruskeasta raffiasta punottu zangbeto-asu kuuluu '
+            + 'vodun-perinteen yövartijoille, ja sen huipulla on pieni '
+            + 'veistetty hahmo; ympärille kerääntynyt yleisö seuraa esitystä '
+            + '10. tammikuuta 2025.',
+          lahde: 'Eureka9090, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ouidah on Cotonousta vajaan tunnin ajomatkan päässä, ja '
+          + 'matkailija tulee sinne yleensä päiväretkelle tai pariksi yöksi. '
+          + 'Kaupungilla liikutaan moottoripyörätaksin kyydissä, ja '
+          + 'muistomerkkien lisäksi Ouidah’ssa on Beninin ensimmäinen '
+          + 'nykytaiteen museo, afrobrasilialaisia huviloita ja jouluisin '
+          + 'tanssivia Kaléta-naamioita. Vuoden suurin tapahtuma on '
+          + 'tammikuussa, kun vodun-uskonnon juhla täyttää aukiot tanssijoilla, '
+          + 'naamiohahmoilla ja konserttiyleisöllä. Kadunvarsilla syödään '
+          + 'maissitaikinaa, paistettua jauhobanaania ja grillattua kalaa. '
+          + 'Maahan saapuvalta vaaditaan todistus keltakuumerokotuksesta, ja '
+          + 'Afrikan ulkopuolelta tuleva hakee viisumin verkossa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Orjarannikko',
+          teksti: 'Ouidah’ssa muistomerkkien rinnalla elävät vodun-juhla, '
+            + 'nykytaide ja brasilialainen perintö.',
+          nosto: 'Zangbeton olkiasuun ei saa koskea, eikä ääneen sanota, että '
+            + 'sen sisällä on ihminen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Cotonousta rannikkoa länteen',
+              teksti: 'Kansainväliset lennot laskeutuvat Cotonoun '
+                + 'lentoasemalle, joka nimettiin vuonna 2021 beniniläisen '
+                + 'kardinaalin Bernardin Gantinin mukaan. Sieltä Ouidah’hun on '
+                + '42 kilometriä länteen, ja maantie jatkuu kaupungin ohi Togon '
+                + 'rajalle. Ajomatka kestää vajaan tunnin. Useimmat ulkomaalaiset '
+                + 'kulkevat vuokra-autolla ja kuljettajalla; halvempi yhteistaksi '
+                + 'lähtee Cotonoun asemalta, kun paikat ovat täynnä, ja sen '
+                + 'hinnasta sovitaan etukäteen. Rannikon puolelle on vuodesta 2003 '
+                + 'suunniteltu Route des Pêches -matkailutietä, ja tammikuussa '
+                + '2026 sen Ouidah’n pää rannan tuntumassa oli jo päällystetty ja '
+                + 'valaistu. Elokuun viimeisenä viikonloppuna samaa rannikkoa '
+                + 'kävellään joka vuosi 32 kilometrin matka Cotonousta '
+                + 'Ouidah’hun. Perillä kulkuneuvo on zémidjan eli '
+                + 'moottoripyörätaksi, jonka nimi tarkoittaa fonin kielellä '
+                + '”vie minut nopeasti”. Kuljettajan tunnistaa kaupungin värin '
+                + 'mukaisesta paidasta, jonka selässä on rekisterinumero. Hinta '
+                + 'sovitaan ennen kyytiä ja maksetaan perillä, ja numero kannattaa '
+                + 'painaa mieleen.',
+              kuva: [
+                {
+                  tiedosto: 'Zemidjan de cotonou Bénin.jpg',
+                  lyhyt: 'Keltapaitainen zémidjan-kuljettaja ajaa sillalla Cotonoussa.',
+                  selite: 'Cotonoun moottoripyörätaksien kuljettajat '
+                    + 'käyttävät keltaista paitaa; kuva on otettu huhtikuussa '
+                    + '2020, kun kasvomaskit olivat kaduilla yleisiä.',
+                  lahde: 'Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Arriving in Ouidah (32568152427).jpg',
+                  lyhyt: 'Ouidah’n kivetty pääkatu puiden varjossa, moottoripyöriä ja pieniä kauppoja.',
+                  selite: 'Maaliskuussa 2019 Ouidah’hun saavuttaessa kuvatulla '
+                    + 'leveällä, kivetyllä kadulla kulkee moottoripyöriä, ja '
+                    + 'reunoilla on matalia kauppoja ja keltaiseksi maalattu '
+                    + 'kioski.',
+                  lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Début de la route des pêches.jpg',
+                  lyhyt: 'Route des Pêches -tien alku Ouidah’n rannalla tammikuussa 2026.',
+                  selite: 'Uusi, aurinkokennovalaisimin reunustettu katu alkaa '
+                    + 'Ouidah’n rannalta; suunnitelmissa tie jatkuu rannikkoa '
+                    + 'pitkin Cotonouhun asti.',
+                  lahde: 'Aurelefreddy, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Vodun-päivät tammikuussa',
+              teksti: 'Benin tunnusti vodunin viralliseksi uskonnoksi vuonna '
+                + '1996, ja pian sen jälkeen Ouidah’ssa alettiin viettää '
+                + 'vodunin juhlaa joka vuosi 10. tammikuuta. Vuonna 2024 juhla '
+                + 'uudistettiin Vodun Days -tapahtumaksi, ja saman vuoden '
+                + 'heinäkuussa hyväksytyn lain mukaan perinteisten uskontojen '
+                + 'juhlaa vietetään tammikuun toisena perjantaina: perjantai ja '
+                + 'sitä edeltävä torstai ovat koko maassa vapaapäiviä. Vuonna '
+                + '2025 ohjelmaa oli ympäri kaupunkia, Maron aukiolla, Ranskan '
+                + 'linnakkeen edustalla, python-temppelissä, Kpassèn pyhässä '
+                + 'metsässä ja uudella areenalla, jolla tanssivat esi-isiä '
+                + 'edustavat egungun-naamiot. Pääseremoniassa Fâ-oraakkelin '
+                + 'papit julistavat merkin, jonka uskotaan ennustavan alkavaa '
+                + 'vuotta, ja iltaisin lavoilla esiintyy afrikkalaisia ja '
+                + 'karibialaisia tähtiä. Beninin tilastoviraston mukaan kävijöitä '
+                + 'oli vuonna 2024 noin 97 000 ja seuraavana vuonna yli 435 000, '
+                + 'joten majoitus kannattaa varata ajoissa. Kulkueissa näkyy myös '
+                + 'zangbetoja, olkiasuisia yövartijoita. Niiden asuun ei saa '
+                + 'koskea, eikä ääneen sanota, että asun sisällä on ihminen.',
+              kuva: {
+                tiedosto: 'Vodun Days - Arène de Ouidah.jpg',
+                lyhyt: 'Egungun-naamiot tanssivat Ouidah’n areenan hiekalla tammikuussa 2025.',
+                selite: 'Kirjailluista kangaspaloista ommellut egungun-asut '
+                  + 'peittävät kantajansa kokonaan; taustan katsomo on täynnä '
+                  + 'yleisöä Vodun-päivien viimeisenä päivänä 11. tammikuuta 2025.',
+                lahde: 'Eureka9090, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Nykytaidetta vuoden 1922 huvilassa',
+              teksti: 'Basilikan takana seisoo beige, kaksikerroksinen huvila, '
+                + 'jonka päätyyn on kohokirjaimin kirjoitettu Villa Ajavon 1922. '
+                + 'Sen rakennutti 1920-luvun alussa Togosta Ouidah’hun muuttanut '
+                + 'varakas kauppias, ja talo edustaa kaupungille tyypillistä '
+                + 'afrobrasilialaista rakennustapaa. Marraskuussa 2013 huvilassa '
+                + 'avattiin Beninin ensimmäinen nykytaiteen museo. Sitä ylläpitää '
+                + 'Fondation Zinsou, jonka taidehistorioitsija Marie-Cécile Zinsou '
+                + 'perusti Cotonouhun vuonna 2005 perheensä tuella. Säätiö ei myy '
+                + 'teoksia kuten galleria, vaan tuo afrikkalaista nykytaidetta '
+                + 'kotimaiselle yleisölle, ja vuonna 2015 neljä viidestä säätiön '
+                + 'kävijästä oli alle 20-vuotiaita. Avausnäyttelyssä oli '
+                + 'esillä muun muassa beniniläisen Romuald Hazoumèn, kongolaisen '
+                + 'Chéri Samban sekä malilaisten valokuvaajien Malick Sidibén ja '
+                + 'Seydou Keïtan töitä. Kokoelmassa on valokuvia, veistoksia, '
+                + 'installaatioita, videoita ja maalauksia, ja esillä on joka vuosi '
+                + 'uusi valikoima. Museossa on myös kahvila ja kauppa, joten '
+                + 'huvila sopii hengähdyspaikaksi muistomerkkien kiertämisen '
+                + 'lomassa.',
+              kuva: {
+                tiedosto: 'Zinsou Art Center in Ouidah Benin in Jan 2018.jpg',
+                lyhyt: 'Villa Ajavon, jossa Fondation Zinsoun nykytaiteen museo toimii.',
+                selite: 'Tammikuussa 2018 kuvatun huvilan päädyssä on '
+                  + 'enkelikoriste ja talon nimi, ja kulmaoven yllä punainen '
+                  + 'kyltti kertoo museosta; julkisivua koristavat parvekkeiden '
+                  + 'sorvatut kaiteet ja tummat ikkunaluukut.',
+                lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Brasilialainen Ouidah',
+              teksti: 'Ouidah’n kaduilla kuulee sukunimiä kuten de Souza, da '
+                + 'Silva ja Olympio. Ne kertovat agudoista, afrobrasilialaisesta '
+                + 'yhteisöstä, joka syntyi, kun Brasiliassa vapautuneita entisiä '
+                + 'orjia alkoi palata Guineanlahden rannikolle 1800-luvulla. '
+                + 'Paluumuutto vilkastui vuoden 1835 jälkeen, kun Salvador da '
+                + 'Bahiassa oli kukistettu orjien kapina, ja palaajat muodostivat '
+                + 'yhteisön brasilialaisten kauppiaiden jälkeläisten kanssa. '
+                + 'Ouidah’ssa agudat asuvat yhä omassa kaupunginosassaan vanhan '
+                + 'torin lähellä, ja brasilialainen perintö näkyy ruoassa, '
+                + 'rakennuksissa ja joissakin sanoissa. Useimmat agudat ovat '
+                + 'katolilaisia, mutta muslimivähemmistö perusti kaupungin '
+                + 'ensimmäisen moskeijan. Vuonna 1930 rakennettu Maison du Brésil, '
+                + 'de Souzan suvun afrobrasilialaistyylinen talo, kunnostettiin '
+                + 'vuosina 2016–2022 Maailmanpankin tuella kansallisen '
+                + 'matkailuviraston toimipisteeksi. Joulun aikaan kaupungissa '
+                + 'tanssii Kaléta, Brasiliasta 1830-luvulla tuotu naamioperinne: '
+                + 'naamioituneet lapset kiertävät talosta taloon laulamassa ja '
+                + 'saavat palkaksi kolikoita tai makeisia. Samaa perinnettä '
+                + 'vaalii Ouidah’n Kaléta-festivaali, joka vuonna 2017 '
+                + 'järjestettiin jo 14. kerran.',
+              kuva: {
+                tiedosto: 'Kaleta group.jpg',
+                lyhyt: 'Nuoret tanssijat ja keltainen Kaléta-naamio festivaalin lavalla joulukuussa 2017.',
+                selite: 'Ouidah’n Kaléta-festivaalin lavalla lapset tanssivat '
+                  + 'ison keltaisen naamion ympärillä, ja taustan maalattu kangas '
+                  + 'kertoo juhlan päivät 22.–24. joulukuuta 2017.',
+                lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kadunvarren pöydässä',
+              teksti: 'Etelä-Beninin keittiön perusta on maissi. Maissijauhosta '
+                + 'keitetty taikina syödään maapähkinä- tai tomaattikastikkeen '
+                + 'kanssa, ja sen hapatettu muoto akassa myydään lehteen '
+                + 'käärittynä. Punainen amiwo maustetaan tomaatilla, sipulilla ja '
+                + 'paprikalla. Lihaa syödään säästeliäästi, mutta kalaa ja kanaa '
+                + 'on tarjolla joka päivä, usein palmu- tai maapähkinäöljyssä '
+                + 'paistettuna. Paistetun kalan kanssa tarjotaan moyo-kastiketta '
+                + 'tomaatista, sipulista ja paprikasta, ja lisäkkeenä on aloko '
+                + 'eli paistettu jauhobanaani. Pienissä buvette-baareissa juodaan '
+                + 'paikallista olutta tai palmuviiniä. Palmuviinistä tislattu '
+                + 'sodabi on väkevä viina, jota nautitaan juhlissa ja käytetään '
+                + 'vodun-rituaaleissa, ja ensimmäinen lasi kaadetaan joskus maahan '
+                + 'siunauksen kera. Katuruoassa kannattaa valita myyjä, jonka ruoka '
+                + 'on kuumaa ja katettua. Rahana on euroon sidottu Länsi-Afrikan '
+                + 'CFA-frangi, ja osa pankkiautomaateista hyväksyy Visa- ja '
+                + 'Mastercard-kortit. Malariahyttyset liikkuvat hämärästä aamuun, '
+                + 'joten suojautumisesta kannattaa kysyä matkailuklinikalta hyvissä '
+                + 'ajoin ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Aloko and fish.jpg',
+                lyhyt: 'Grillattua kalaa, paistettua jauhobanaania ja tomaatti-sipulikastiketta.',
+                selite: 'Beniniläisessä annoksessa on hiillostettua kalaa, '
+                  + 'kullanruskeiksi paistettuja jauhobanaaninviipaleita, tuoretta '
+                  + 'tomaatti-sipulikastiketta ja pieni nokare vihreää tahnaa.',
+                lahde: 'Prillytee, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -118349,6 +118799,230 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sepik',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sepik, Wewak, Wewak Airport, Pagwi, Angoram, Chambri
+       * Lakes, Chambri people, Iatmul people, Gregory Bateson, Sex and
+       * Temperament in Three Primitive Societies, Euphoria (King novel),
+       * Cannibal Tours, Garamut, New Guinea crocodile, Hatazō Adachi,
+       * Health in Papua New Guinea) ja Wikivoyagesta (Sepik, Wewak, Papua
+       * New Guinea: Talk, Respect, Money, Stay healthy, Stay safe) — teksti
+       * omaa. Chambrin järven aallokko kuvaajan omasta kuvauksesta
+       * Commonsissa. Nostojen ja galleroiden aiheita (Miklouho-Maclay,
+       * paalukylät ja suvannot, Pagwin polttoaine, rahtialukset, saago,
+       * kielten määrä, haus tambaran, krokotiiliarvet, veistoskauppa) ei
+       * toisteta. Hintoja ja aikatauluja ei mainita, koska lähteet ovat
+       * vanhoja. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin; kanoottikuvan paikka
+       * Angoramin kohdalla on kuvan sijaintitiedosta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sepik 0269.jpg',
+          lyhyt: 'Kesy lori istuu pojan päälaella Kaminabitin kylässä Keski-Sepikillä.',
+          selite: 'Punamusta, mustapäinen lori on laskeutunut pojan päälaelle '
+            + 'Kaminabitin kylässä Keski-Sepikillä tammikuussa 2010. Joen '
+            + 'varsi tunnetaan runsaasta linnustostaan ja eläimistöstään.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sepikille ei ajeta suoraan. Ensin lennetään rannikon '
+          + 'Wewakiin, Itä-Sepikin maakunnan pääkaupunkiin, jonka kenttä oli '
+          + 'toisessa maailmansodassa Japanin suurin lentotukikohta Uuden-Guinean '
+          + 'mantereella. Sieltä maantie vie kolmeen jokikylään, ja niistä '
+          + 'eteenpäin matka jatkuu perämoottorilla varustetulla '
+          + 'kovertokanootilla. Järvet ja suvannot kätkevät kyliä, joihin '
+          + 'mikään tie ei johda, ja joella kulkee mukana paikallinen opas. '
+          + 'Kesäkuusta marraskuuhun hyttysiä on vähemmän, mikä on tärkeää, '
+          + 'sillä malaria on koko maan yleisin sairastumisen syy. Kylissä '
+          + 'kelpaa vain käteinen kina, kättelyssä ei katsota silmiin, eikä '
+          + 'ketään valokuvata kysymättä.',
+        artikkeli: {
+          nimi: 'Matkailijan Sepik',
+          teksti: 'Sepikille tullaan lentäen, sitten maantietä ja lopulta kanootilla.',
+          nosto: 'Kun Sepikin kylissä halutaan kuvata ihmisiä, ensin kätellään '
+            + 'ja kysytään lupaa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Portti rannikolla',
+              teksti: 'Matka Sepikille alkaa Wewakista, Itä-Sepikin maakunnan '
+                + 'pääkaupungista, joka on suurin kaupunki Madangin ja '
+                + 'Indonesian puolella sijaitsevan Jayapuran välillä. Air '
+                + 'Niugini lentää sinne päivittäin Port Moresbysta, Laen '
+                + 'Nadzabista ja Madangista, ja PNG Air yhdistää kaupungin '
+                + 'ylängön Mount Hageniin. Kenttää kutsutaan myös Boramiksi, ja '
+                + 'se on sama, jota japanilaiset käyttivät vuosina 1943–1945 '
+                + 'suurimpana tukikohtanaan Uuden-Guinean mantereella; '
+                + 'liittoutuneet pommittivat sitä toistuvasti, rajuimmin 17. '
+                + 'elokuuta 1943. Keskustan länsipuolella olevalla Cape Wom '
+                + '-niemellä Japanin 18. armeijan komentaja, kenraaliluutnantti '
+                + 'Hatazō Adachi, allekirjoitti 13. syyskuuta 1945 Uuden-Guinean '
+                + 'joukkojen antautumisen. Paikalla on nyt pieni muistomerkki ja '
+                + 'rauhanpuisto, ja sen takana on yhä avoimia japanilaisten '
+                + 'tunneleita. Sotahistoria tuo Wewakiin paljon vieraita '
+                + 'Japanista, ja vuonna 2014 Japanin pääministeri laski '
+                + 'kaupungissa seppeleen sodassa kuolleiden muistoksi. Rannikon '
+                + 'edustalla, alle tunnin venematkan päässä, ovat Kairirun ja '
+                + 'Mushun saaret, joilla on muutama yksinkertainen majatalo. '
+                + 'Wewakia pidetään turvallisempana kuin Port Moresbya tai '
+                + 'Laeta, mutta pimeällä liikkumista kannattaa välttää.',
+              kuva: [
+                {
+                  tiedosto: 'WewakBeach.jpg',
+                  lyhyt: 'Palmujen reunustama hiekkaranta Wewakissa, Itä-Sepikin maakunnan pääkaupungissa.',
+                  selite: 'Wewak on rakennettu kapealle tasaiselle kaistaleelle '
+                    + 'meren ja rannikkovuorten väliin, ja kaupungin kohdalla '
+                    + 'rantaa reunustavat palmut. Kuva on vuodelta 2004.',
+                  lahde: 'Toksave, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Japanese surrender (AWM 019296).jpg',
+                  lyhyt: 'Kenraali Adachi luovuttaa miekkansa Cape Womilla Wewakin lähellä 13.9.1945.',
+                  selite: 'Allekirjoitettuaan ehdottoman antautumisen Japanin 18. '
+                    + 'armeijan komentaja Hatazō Adachi luovuttaa miekkansa '
+                    + 'australialaiselle kenraalimajuri Horace Robertsonille '
+                    + 'Womin kiitoradalla. Paikalla on nykyään muistomerkki ja '
+                    + 'rauhanpuisto.',
+                  lahde: 'Australian War Memorial, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Kairiru & Muschu (Landsat).JPG',
+                  lyhyt: 'Kairirun ja Mushun saaret Wewakin edustalla Landsat 7 -satelliitin kuvassa.',
+                  selite: 'Vuonna 2001 otetussa satelliittikuvassa pohjoisempana '
+                    + 'on vuorinen Kairiru ja sen eteläpuolella Mushu. '
+                    + 'Vasemmassa alakulmassa näkyy mantereen rannikkoa, josta '
+                    + 'saarille pääsee veneellä alle tunnissa.',
+                  lahde: 'NASA, Wikimedia Commons (PD)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kovertokanootilla joelle',
+              teksti: 'Wewakista maantie vie vain kolmeen Sepikin varren '
+                + 'kylään: alajuoksun Angoramiin sekä keskijuoksun Timbunkeen '
+                + 'ja Pagwiin. Tiet eivät aina ole hyvässä kunnossa, ja Pagwiin '
+                + 'ajetaan rannikolta neljästä viiteen tuntia. Joen rannassa '
+                + 'vuokrataan puunrungosta koverrettu kanootti, perämoottori ja '
+                + 'kuljettaja, ja siitä eteenpäin kylästä toiseen edetään '
+                + 'vesitse. Vuorilta merelle on vain vähän korkeuseroa, joten '
+                + 'joki virtaa hitaasti ja kääntyy jatkuvasti takaisin itseensä '
+                + 'muodostaen suvantoja, pikkujärviä ja soita. Vedenpinta voi '
+                + 'vaihdella vuoden mittaan jopa viisi metriä. Isommat alukset '
+                + 'pääsevät yleensä liikkeelle vasta sadekaudella, kun vesi '
+                + 'nousee korkeimmilleen tavallisesti pääsiäisen tienoilla, ja '
+                + 'joelle tehdään myös risteilyjä matkailualuksilla. Rannoilla '
+                + 'kannattaa pitää silmät auki: uudenguineankrokotiili kuvattiin '
+                + 'tieteelle ensimmäisen kerran juuri Sepikin alueelta. '
+                + 'Kanoottimatkalle otetaan mukaan paikallinen opas, sillä '
+                + 'kylien ja kieliryhmien välillä on usein kiistoja. Oppaalta '
+                + 'kannattaa kysyä ajankohtaisista riidoista, hänen omasta '
+                + 'kotikylästään ja siitä, mihin kyliin hänellä on suhteita.',
+              kuva: {
+                tiedosto: 'Sepik River IMG 2097.jpg',
+                lyhyt: 'Kovertokanootteja rivissä Sepikin suvannon rannassa Angoramin kohdalla.',
+                selite: 'Puunrungoista koverretut kanootit odottavat meloineen '
+                  + 'matalan suvannon rannassa Sepikin alajuoksulla. Taustalla '
+                  + 'näkyy paalujen varaan rakennettu olkikattoinen maja, ja '
+                  + 'vasemmalla kulkee pieni vene.',
+                lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kättely ennen kameraa',
+              teksti: 'Sepikin alueella puhutaan pienellä alueella enemmän eri '
+                + 'kieliä kuin missään muualla Papua-Uudessa-Guineassa, ja '
+                + 'tok pisin on yhteinen kieli. Kaupungissa keskustelu kannattaa '
+                + 'aloittaa englanniksi, mutta jokikylissä englantia puhuu vain '
+                + 'harva, ja muutama tok pisinin sana ja fraasi avaa ovia: '
+                + 'kyläläiset opettavat niitä mielellään. Melanesialaiseen '
+                + 'tapaan ystävällinen kättely on tärkeä tervehdys, mutta '
+                + 'silmiin katsomista vältetään kunnioituksesta, ja moni puhuu '
+                + 'hiljaisella äänellä. Ihmisiä ei valokuvata ilman lupaa, '
+                + 'vaikka koristelu olisi kuinka näyttävä. Aihetta on käsitelty '
+                + 'elokuvassakin: australialaisen Dennis O\'Rourken dokumentti '
+                + 'Cannibal Tours (1988) seuraa varakkaita eurooppalaisia ja '
+                + 'amerikkalaisia matkailijoita Keski-Sepikin iatmul-kylissä. '
+                + 'Kamerat räpsyvät taukoamatta, veistoksista tingitään kovaa ja '
+                + 'kyläläisille jaetaan savukkeita, ilmapalloja ja hajuvettä, '
+                + 'kunnes katsoja alkaa kysyä, kumpi osapuoli tässä on '
+                + 'oikeastaan outo. Kylissä voi kuulla myös kaukaista jylinää: '
+                + 'se on usein garamutia, yhdestä puunrungosta koverretun '
+                + 'rakorummun rytmiä, jolla viesti kulkee kilometrien päähän.',
+              kuva: {
+                tiedosto: 'Sepik 0203.jpg',
+                lyhyt: 'Sepikin kylässä vieraat otetaan vastaan hymyillen, kuvattu tammikuussa 2010.',
+                selite: 'Nainen ojentaa kätensä vierasta kohti kylän '
+                  + 'nurmikentällä, ja lapset seuraavat tilannetta puiden '
+                  + 'katveesta. Kuvaaja antoi kuvalleen nimen, joka tarkoittaa '
+                  + 'lämmintä tervetulotoivotusta ulkomaisille vieraille.',
+                lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Chambrin järvet ja tutkijoiden jäljet',
+              teksti: 'Pagwista etelään avautuvat Chambrin järvet, matalien '
+                + 'soiden ja vesikanavien verkosto, jonka Sepikin tulvavesi '
+                + 'täyttää luoteismonsuunin aikaan syyskuusta maaliskuuhun. '
+                + 'Silloin järvi kattaa yli 200 neliökilometriä. Sen saarella '
+                + 'asuvat chambrit, jotka tunnetaan taitavina taiteilijoina. '
+                + 'Heidän luonaan työskenteli vuonna 1933 yhdysvaltalainen '
+                + 'antropologi Margaret Mead, jonka kaksi vuotta myöhemmin '
+                + 'ilmestynyt kirja Sex and Temperament in Three Primitive '
+                + 'Societies esitti chambrinaiset yhteisön todellisina '
+                + 'vallankäyttäjinä; myöhemmät tutkijat ovat pitäneet kuvaa '
+                + 'liian yksinkertaisena. Keskijuoksulla työskennellyt '
+                + 'englantilainen Gregory Bateson otti käyttöön nimen iatmul koko '
+                + 'kieliryhmälle, vaikka ihmiset itse kertovat yleensä '
+                + 'klaaninsa tai kylänsä. Hänen kirjansa Naven (1936), joka on '
+                + 'nimetty ensimmäisiä saavutuksia juhlistavan iatmul-riitin '
+                + 'mukaan, muutti tapaa, jolla antropologit ajattelivat omia '
+                + 'tulkintojaan. Meadin ja Batesonin tarinasta ammentaa myös '
+                + 'Lily Kingin romaani Euphoria (2014), sopivaa luettavaa '
+                + 'kanoottimatkan iltoihin. Järvelle lähdetään paikallisen '
+                + 'kanssa, sillä selällä aallokko voi olla vaarallinen '
+                + 'isoillekin kanooteille, joissa ei ole tukipuita.',
+              kuva: {
+                tiedosto: 'Chambri Lake.jpg',
+                lyhyt: 'Chambrin järven laaja selkä ja metsäinen kukkula Keski-Sepikillä helmikuussa 2006.',
+                selite: 'Chambrin järvi on Sepikin tulvavesien täyttämä laaja '
+                  + 'allas. Kuvaajan mukaan sen aallokko voi olla vaarallinen '
+                  + 'isoillekin kanooteille, koska niissä ei ole tukipuita.',
+                lahde: 'Weli\'mi\'nakwan, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Terveenä joella',
+              teksti: 'Malaria on Papua-Uuden-Guinean yleisin sairastumisen syy, '
+                + 'ja Sepikin soilla hyttysiä riittää. Ennaltaehkäisystä '
+                + 'sovitaan lääkärin kanssa jo ennen lähtöä, ja kaupunkien '
+                + 'apteekeista saa malarialääkkeitä. Majatalossa nukutaan '
+                + 'hyttysverkon alla, ja hämärän tunteina iho suojataan. '
+                + 'Joelle kannattaa tulla kesäkuun ja marraskuun välillä, kun '
+                + 'hyttysiä on vähemmän. Hanavesi ei ole kaikkialla '
+                + 'juomakelpoista, ja suuret tulvat, joita sattuu noin kerran '
+                + 'kymmenessä vuodessa, voivat tuoda mukanaan koleraa ja '
+                + 'punatautia. Maailman terveysjärjestön ohjeen mukaan '
+                + 'poliorokotteen tehoste on hyvä ottaa, jos edellisestä on '
+                + 'kulunut yli kymmenen vuotta, koska maassa on todettu '
+                + 'rokoteperäistä poliota. Sairaanhoitoa on tarjolla epätasaisesti: '
+                + 'Wewakissa on Boramin sairaala, mutta joen varressa apua on '
+                + 'vähän. Käteinen hoidetaan ennen joelle lähtöä, sillä '
+                + 'pankkiautomaatit ovat suurissa kaupungeissa, ja kylissä '
+                + 'ulkomainen valuutta ei kelpaa lainkaan. Toreilla myyjät '
+                + 'toivovat pientä rahaa.',
+              kuva: {
+                tiedosto: 'Sepik River IMG 2225.jpg',
+                lyhyt: 'Aurinko nousee Sepikin tulvatasangon suvantojen yllä marraskuun aamuna.',
+                selite: 'Aamuaurinko kajastaa pilviverhon takaa Sepikin '
+                  + 'suvantojen ja ruohosaarekkeiden yllä. Hämärä on hyttysten '
+                  + 'aikaa, joten verkko ja karkote pidetään käsillä aamuin '
+                  + 'illoin.',
+                lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'henkihuoneet',
