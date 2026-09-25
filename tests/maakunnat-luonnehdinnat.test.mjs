@@ -87,6 +87,11 @@ const ODOTETUT_MAARAT = {
   TZA: 30,
   ETH: 11,
   GHA: 10,
+  AFG: 32,
+  MNG: 22,
+  KAZ: 16,
+  UZB: 13,
+  TKM: 5,
 };
 
 /*
@@ -98,7 +103,7 @@ const ODOTETUT_MAARAT = {
  * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
  * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS', 'EGY', 'IND', 'ZAF', 'KEN', 'JPN', 'AUS', 'NZL', 'CHN', 'USA', 'CHE', 'PRT', 'HUN', 'SWE', 'NOR', 'IRL', 'BRA', 'MEX', 'CAN', 'CHL', 'THA', 'PHL', 'VNM', 'MYS', 'SGP', 'ARG', 'COL', 'ECU', 'BOL', 'PER', 'VEN', 'URY', 'PRY', 'IDN', 'PAK', 'BGD', 'LKA', 'NPL', 'DZA', 'MAR', 'TUN', 'IRN', 'IRQ', 'SAU', 'SYR', 'JOR', 'NGA', 'TZA', 'ETH', 'GHA', 'AFG', 'MNG', 'KAZ', 'UZB', 'TKM']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

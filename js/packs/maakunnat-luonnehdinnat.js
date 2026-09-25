@@ -9924,4 +9924,401 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Kolmen kärjen niemi on Ghanan eteläisin kohta, ja sen majakka on toiminut vuodesta 1925.',
     },
   },
+  /*
+   * AFG — nykymaakunnat (32; Natural Earthin vanha jako, Panjshir ja
+   * Daykundi puuttuvat). Faktat en-Wikipediasta 25.9.2026. Sävy
+   * neutraali: maisema, kulttuuri, historia — ei sotaa eikä politiikkaa.
+   * Bamiyanin buddhat, Band-e Amir, Noshaq, Helmand-joki, Amudarja,
+   * Jamin minareetti, Heratin linnoitus, Balkhin kaupunki, Mes Aynak,
+   * Ai-Khanoum ja Ghaznin kaupunki ovat jo maastokohteina/fokuskohteina,
+   * joten niitä ei käytetty.
+   *   Badakhshan — Sar-i Sang (lapis, Tutankhamonin hauta)
+   *   Badghis    — Badghis Province (Murghab River)
+   *   Baghlan    — Surkh Kotal (18 km Puli Khumrista pohjoiseen)
+   *   Balkh      — Mazar-i-Sharif; Mausoleum of Ali (nouruz)
+   *   Bamyan     — Shahr-e Zuhak
+   *   Farah      — Farah, Afghanistan (linnoitus, "probably" Aleksanteri)
+   *   Faryab     — Maymana (karakul-kauppa nomadien kanssa)
+   *   Ghazni     — Ab-i Istada (yli 120 lintulajia)
+   *   Ghor       — Firuzkoh (2 230 m, nimi vuoteen 2014 Chaghcharan)
+   *   Hilmand    — Lashkari Bazar (South Palace 170 x 100 m)
+   *   Hirat      — Musalla complex (viisi minareettia, 1417)
+   *   Jawzjan    — Tillya Tepe (1978, noin 20 600 esinettä)
+   *   Kabul      — Gardens of Babur
+   *   Kandahar   — Kandahar Province (granaattiomenat)
+   *   Kapisa     — Kapisa Province (pienin; Panini, Kapiśayana)
+   *   Khost      — Khost ("Khost Bowl", kesäsateet)
+   *   Kunar      — Chitral River (480 km, Chiantar-jäätikkö)
+   *   Laghman    — First Aramaic inscription of Laghman (1969)
+   *   Logar      — Logar River; Logar Province (maantiede)
+   *   Nangarhar  — Hadda, Afghanistan (noin 23 000 veistosta)
+   *   Nimroz     — Nimruz Province (nimen merkitys)
+   *   Nuristan   — Nuristan Province (nimi, vuoristometsät)
+   *   Paktika    — Paktika Province (Gomal River)
+   *   Paktya     — Paktia Province (etymologia, Herodotos)
+   *   Parwan     — Salang Tunnel (2,6 km, lähes 3 400 m)
+   *   Kunduz     — Kunduz Province (Kunduz-joen kastelu)
+   *   Samangan   — Takht-e Rostam
+   *   Sari Pul   — Sar-e-Pol, Afghanistan (nimi, Imam Yahyan pyhäkkö)
+   *   Takhar     — Taloqan (Marco Polo 1275, suola)
+   *   Uruzgan    — Tarinkot (1 317 m, tarin-päälliköt)
+   *   Wardak     — Kabul River (Sanglakh, 14 000 ft, 700 km)
+   *   Zabul      — Zabulistan (nimi; Zabol)
+   */
+  AFG: {
+    Badakhshan: {
+      lyhyt: 'Kokchan laakson Sar-e Sangin kaivoksista louhitaan yhä lapislatsulia, samaa sinistä kiveä, jota löytyi Tutankhamonin haudasta.',
+    },
+    Badghis: {
+      lyhyt: 'Badghisin kuivat kukkulat saavat vetensä Murgab-joesta, joka virtaa maakunnan halki pohjoiseen Turkmenistaniin.',
+    },
+    Baghlan: {
+      lyhyt: 'Pul-e Khumrin pohjoispuolelta Surkh Kotalin kukkulalta on kaivettu esiin kušaanien temppeli ja kuningas Kanishkan patsas.',
+    },
+    Balkh: {
+      lyhyt: 'Mazar-i-Sharifin sinikaakeloitu Sininen moskeija on Pohjois-Afganistanin nouruz-kevätjuhlan keskipiste.',
+    },
+    Bamyan: {
+      lyhyt: 'Bamyanin laakson itäpäässä, kahden joen yhtymäkohdan yllä, kohoavat Shahr-e Zuhakin eli Punaisen kaupungin linnoituksen rauniot.',
+    },
+    Farah: {
+      lyhyt: 'Farah-joen varrella seisoo kaupungin vanha linnoitus, jonka arvellaan olevan alun perin Aleksanteri Suuren rakennuttama.',
+    },
+    Faryab: {
+      lyhyt: 'Maymanan torilla Turkestanin vuorten juurella paimentolaiset käyvät yhä kauppaa karakul-lampaillaan.',
+    },
+    Ghazni: {
+      lyhyt: 'Ghaznin Ab-i Istada on matala, välillä kokonaan kuivuva suolajärvi, jolla on tavattu yli 120 lintulajia flamingoista pelikaaneihin.',
+    },
+    Ghor: {
+      lyhyt: 'Ghorin pääkaupunki Firozkoh, vuoteen 2014 Chaghcharan, on Hari-joen varrella 2 230 metrin korkeudessa.',
+    },
+    Hilmand: {
+      lyhyt: 'Lashkargahin laidalla ovat Lashkari Bazarin rauniot, ghaznavidihallitsijoiden talvipalatsit, joista suurin on 170 metriä pitkä.',
+    },
+    Hirat: {
+      lyhyt: 'Heratissa kohoaa yhä viisi Musallan minareettia, jäänteet kuningatar Gawhar Shadin vuonna 1417 aloittamasta rakennusryhmästä.',
+    },
+    Jawzjan: {
+      lyhyt: 'Sheberghanin läheltä Tillya Tepen kummuista löytyi 1978 noin 20 600 korua ja muuta esinettä, jotka tunnetaan Baktrian kultana.',
+    },
+    Kabul: {
+      lyhyt: 'Kabulin Babur-puutarhan terasseilla on Mogulivaltakunnan perustajan Baburin hauta, ja puutarhassa käy jopa miljoona vierasta vuodessa.',
+    },
+    Kandahar: {
+      lyhyt: 'Kandahar tunnetaan maailmalla granaattiomenistaan, joita kasvatetaan Arghandab-joen kastelemissa hedelmätarhoissa.',
+    },
+    Kapisa: {
+      lyhyt: 'Kapisa on Afganistanin pienin maakunta, ja jo muinaisintialaiset kirjoittajat kehuivat sen rypäleitä ja viiniä.',
+    },
+    Khost: {
+      lyhyt: 'Khost on vuorten ympäröimässä laaksossa, jonne kaakosta puhaltavat kosteat tuulet tuovat kesällä sadetta.',
+    },
+    Kunar: {
+      lyhyt: 'Kunar-joki saa alkunsa Pakistanin Chiantarin jäätiköltä ja virtaa Hindukušin sulamisvesien paisuttamana 480 kilometriä.',
+    },
+    Kunduz: {
+      lyhyt: 'Kunduz-joki ja sen kanavat kastelevat peltoja, jotka hallitsevat koko maakunnan maisemaa.',
+    },
+    Laghman: {
+      lyhyt: 'Laghmanista löytyi 1969 kallioon hakattu kirjoitus, jonka keisari Ashoka antoi kirjoittaa arameaksi noin 260 eaa.',
+    },
+    Logar: {
+      lyhyt: 'Logar on saanut nimensä joesta, joka virtaa sen tasaisen laakson halki; laaksoa kehystävät jyrkät vuoret.',
+    },
+    Nangarhar: {
+      lyhyt: 'Jalalabadin eteläpuolelta Haddasta on kaivettu esiin noin 23 000 kreikkalais-buddhalaista savi- ja kipsiveistosta.',
+    },
+    Nimroz: {
+      lyhyt: 'Nimroz tarkoittaa persiaksi puolipäivää: nimen uskotaan kertovan, että vanhan maailman keskimeridiaani kulki täältä.',
+    },
+    Nuristan: {
+      lyhyt: 'Nuristan tarkoittaa valon maata, ja suurinta osaa maakunnasta peittävät jyrkkien vuorten metsät.',
+    },
+    Paktika: {
+      lyhyt: 'Paktikan vuorilta alkava Gomal-joki kääntyy Pakistanin puolelle ja päätyy lopulta Indukseen.',
+    },
+    Paktya: {
+      lyhyt: 'Paktian nimen arvellaan juontuvan paktyes-kansasta, jonka Herodotos mainitsi jo 400-luvulla eaa.',
+    },
+    Parwan: {
+      lyhyt: 'Parwanin Salangin solassa kulkee lähes 3 400 metrin korkeudessa 2,6 kilometrin tunneli, maan tärkein pohjois–eteläyhteys.',
+    },
+    Samangan: {
+      lyhyt: 'Aibakin lähellä on kukkulan kallioon kokonaan hakattu 300–400-lukujen buddhalainen luostari ja stupa, Takht-e Rostam.',
+    },
+    "Sari Pul": {
+      lyhyt: 'Sar-e Pol tarkoittaa sillanpäätä, ja maakunnan pääkaupungin itälaidalla on vanha Imam Yahyan pyhäkkö.',
+    },
+    Takhar: {
+      lyhyt: 'Takharin pääkaupungin Taloqanin kautta kulki 1270-luvulla Marco Polo, joka kehui seudun vuorisuolaa maailman puhtaimmaksi.',
+    },
+    Uruzgan: {
+      lyhyt: 'Uruzganin pääkaupunki Tarinkot on noin 1 300 metrin korkeudessa, ja tarin-heimon päälliköt asuivat siellä jo 1100–1200-luvuilla.',
+    },
+    Wardak: {
+      lyhyt: 'Kabul-joki saa alkunsa Wardakin Sanglakhin vuorilta noin 4 300 metrin korkeudesta ja virtaa sieltä 700 kilometriä itään.',
+    },
+    Zabul: {
+      lyhyt: 'Zabul on saanut nimensä muinaisesta Zabulistanista, ja Iranin puolella samasta nimestä on peräisin Zabolin kaupunki.',
+    },
+  },
+  /*
+   * MNG — nykymaakunnat (21 aimagia + Ulaanbaatar). Faktat
+   * en-Wikipediasta 25.9.2026. Hüiten orgil, Gobi, Orhon (ja sen
+   * Selenga–Baikal-yhteys, Harhorin), Amarbayasgalant, Bayanzag,
+   * Hustain nuruu, peurakivet, Tövhön, Tsagaan agui, Tšingisin patsas
+   * ja Hövsgöl-järvi ovat jo maastokohteina, joten niitä ei käytetty.
+   *   Arhangay     — Terkhiin Tsagaan Lake (10 jokea sisään, Suman ulos)
+   *   Bayan-Ölgiy  — Golden Eagle Festival
+   *   Bayanhongor  — Bayankhongor Province (Shargaljuut, yli 300 lähdettä)
+   *   Bulgan       — Uran Togoo – Tulga Uul Natural Monument
+   *   Darhan-Uul   — Darkhan (city) (17.10.1961, Comecon)
+   *   Dornod       — Buir Lake (Hulunbuir)
+   *   Dornogovi    — Dornogovi Province (ei järviä eikä jokia)
+   *   Dundgovi     — Dundgovi Province (airag)
+   *   Govi-Altay   — Govi-Altai Province (harvimmin asuttu)
+   *   Govĭ-Sümber  — Govisümber Province (pienin väkiluku, 1994)
+   *   Hentiy       — Burkhan Khaldun; Khentii Province (Kerulen, Onon)
+   *   Hovd         — Khovd Province (yli 17 kansallisuutta)
+   *   Hövsgöl      — Dukha people (Mongolian ainoat poronhoitajat)
+   *   Orhon        — Erdenet (1974, toiseksi suurin kaupunki)
+   *   Selenge      — Sükhbaatar (city) (pohjoisin rata-asema)
+   *   Sühbaatar    — Shiliin Bogd (kraatteri 2 km, yli 300 m)
+   *   Töv          — Gorkhi-Terelj National Park (Turtle Rock)
+   *   Ulaanbaatar  — Gandantegchinlen Monastery (26,5 m, 1996)
+   *   Uvs          — Uvs Lake (3 350 km², 1,88 %)
+   *   Dzavhan      — Otgontenger (ainoa pysyvä jäätikkö Hangaissa)
+   *   Ömnögovi     — Yolyn Am (jääkenttä sulaa syyskuuhun mennessä)
+   *   Övörhangay   — Arvaikheer (1 813 m, hevosjuhla)
+   */
+  MNG: {
+    Arhangay: {
+      lyhyt: 'Terkhiin Tsagaan -järveen laskee kymmenen jokea, mutta siitä lähtee vain yksi, Suman-joki.',
+    },
+    "Bayan-Ölgiy": {
+      lyhyt: 'Ölgiin laitamilla järjestetään joka syksy Kultakotkajuhla, jossa kazakkimetsästäjät kilpailevat kotkiensa taidoilla.',
+    },
+    Bayanhongor: {
+      lyhyt: 'Shargaljuutissa, 54 kilometriä maakunnan pääkaupungista pohjoiseen, pulppuaa yli 300 kuumaa ja kylmää lähdettä.',
+    },
+    Bulgan: {
+      lyhyt: 'Bulganin sammuneet tulivuoret on nimetty tulisijan esineiden mukaan: Tulga-vuoren kolme kumpua muistuttavat padan kolmijalkaa.',
+    },
+    "Darhan-Uul": {
+      lyhyt: 'Darhan perustettiin 1961 SEV-maiden tuella, ja sen suuret neliskanttiset kerrostalot muistuttavat yhä neuvostoajasta.',
+    },
+    Dornod: {
+      lyhyt: 'Buir-järvi on jaettu Mongolian ja Kiinan kesken, ja rajan takana Hulunbuirin kaupunki on nimetty osin sen mukaan.',
+    },
+    Dornogovi: {
+      lyhyt: 'Dornogovissa ei ole ainuttakaan järveä eikä jokea, mutta aavikon alla on runsaasti pohjavettä.',
+    },
+    Dundgovi: {
+      lyhyt: 'Dundgovin kuivalla arolla tehdään airagia eli käynyttä tamman maitoa, jota mongolit pitävät erityisen hyvänä.',
+    },
+    Dzavhan: {
+      lyhyt: 'Otgontenger on Hangain vuoriston ainoa huippu, jolla on pysyvä jäätikkö, ja valtio pitää sillä rituaalin joka neljäs vuosi.',
+    },
+    "Govi-Altay": {
+      lyhyt: 'Govi-Altai on Mongolian harvimmin asuttu aimag: aavikkoa ja vuoria riittää, ihmisiä on vähän.',
+    },
+    "Govĭ-Sümber": {
+      lyhyt: 'Govisümber on Mongolian väkiluvultaan pienin aimag, ja se erotettiin omaksi maakunnakseen Choirin ympärille vasta 1994.',
+    },
+    Hentiy: {
+      lyhyt: 'Burkhan Khaldunia pidetään Mongolian pyhimpänä vuorena, ja sen rinteiltä saavat alkunsa Kerulen- ja Onon-joet.',
+    },
+    Hovd: {
+      lyhyt: 'Hovdin maakunnassa asuu yli 17 kansallisuutta, joilla kullakin on omat asumuksensa, pukunsa ja laulunsa.',
+    },
+    "Hövsgöl": {
+      lyhyt: 'Hövsgölin taigalla elävät dukhat, Mongolian ainoat porojen paimentajat.',
+    },
+    "Ömnögovi": {
+      lyhyt: 'Yolyn Amin kapeassa rotkossa talven jää kasvaa metrien paksuiseksi ja sulaa yleensä vasta syyskuuhun mennessä.',
+    },
+    Orhon: {
+      lyhyt: 'Erdenet perustettiin 1974 kuparikaivoksen ympärille, ja nyt se on Mongolian toiseksi suurin kaupunki.',
+    },
+    "Övörhangay": {
+      lyhyt: 'Arvaikheerissa, 1 813 metrin korkeudessa Hangain juurella, järjestetään joka vuosi suuri alueellinen hevosjuhla.',
+    },
+    Selenge: {
+      lyhyt: 'Maakunnan pääkaupunki Sühbaatar on Trans-Mongolian radan pohjoisin asema ennen Venäjän rajaa.',
+    },
+    "Sühbaatar": {
+      lyhyt: 'Dariganga-alueen Shiliin Bogd on sammunut tulivuori, jonka kraatteri on kaksi kilometriä leveä ja yli 300 metriä syvä.',
+    },
+    "Töv": {
+      lyhyt: 'Gorkhi-Tereljin kansallispuistossa, noin 60 kilometrin päässä Ulaanbaatarista, seisoo kallio, joka muistuttaa kilpikonnaa.',
+    },
+    Ulaanbaatar: {
+      lyhyt: 'Gandanin luostarissa seisoo 26,5 metriä korkea kullattu Avalokiteshvara-patsas, joka vihittiin 1996.',
+    },
+    Uvs: {
+      lyhyt: 'Uvs on pinta-alaltaan Mongolian suurin järvi, ja sen suolapitoisuus on noin puolet valtamerten suolapitoisuudesta.',
+    },
+  },
+  /*
+   * KAZ — nykymaakunnat (Natural Earthin vanha 14 alueen + 2 kaupungin
+   * jako; vuoden 2018 ja 2022 uudet alueet puuttuvat). Faktat
+   * en-Wikipediasta 25.9.2026. Khan Tengri, Araljärvi, Irtyš, Yasawin
+   * mausoleumi, Tamgaly, Baikonur, Charynin kanjoni, Altyn-Emel,
+   * Issykin kurgaani, Aisha Bibi ja Saryarka ovat jo maastokohteina,
+   * joten niitä ei käytetty.
+   *   Almaty           — Lake Kaindy (1911 maanjäristys)
+   *   Almaty City      — Medeu (1 691 m)
+   *   Aqmola           — Burabay National Park (tarina)
+   *   Aqtöbe           — Aktobe Region; Khromtau (kromiitti)
+   *   Astana           — Baiterek (monument) (97 m ~ 1997)
+   *   Atyrau           — Atyrau (Ural-joki, Eurooppa–Aasia)
+   *   East Kazakhstan  — Belukha Mountain
+   *   Qyzylorda        — Kyzylorda (pääkaupunki 1925–1927)
+   *   Mangghystau      — Mangystau Region (Karagiye −132 m)
+   *   North Kazakhstan — Botai culture
+   *   Pavlodar         — Bayanaul National Park (1985, ensimmäinen)
+   *   Qaraghandy       — Lake Balkhash
+   *   Qostanay         — Steppe Geoglyphs (Dey 2007)
+   *   South Kazakhstan — Aksu-Zhabagly Nature Reserve
+   *   West Kazakhstan  — Oral, Kazakhstan (1613, Puškin 1833)
+   *   Zhambyl          — Akyrtas (45 km Tarazista itään)
+   */
+  KAZ: {
+    Almaty: {
+      lyhyt: 'Kaindy-järvi syntyi vuoden 1911 maanjäristyksen jälkeen, ja sen pinnasta nousee yhä upoksiin jääneiden kuusten rankoja.',
+    },
+    "Almaty City": {
+      lyhyt: 'Almatyn yläpuolella 1 691 metrin korkeudessa on Medeun luistinrata, maailman suurin vuoristoon rakennettu kenttä.',
+    },
+    Aqmola: {
+      lyhyt: 'Kazakkitarun mukaan jumala heitti Burabayn vuoret, metsät ja järvet keskelle aroa – nyt ne ovat kansallispuisto.',
+    },
+    "Aqtöbe": {
+      lyhyt: 'Aqtöben alueen Khromtaussa louhitaan kromimalmia, ja alueen kromiittiesiintymät ovat IVY-maiden suurimmat.',
+    },
+    Astana: {
+      lyhyt: 'Bayterek-tornin näköalatasanne on 97 metrin korkeudessa: luku viittaa vuoteen 1997, jolloin Astanasta tuli pääkaupunki.',
+    },
+    Atyrau: {
+      lyhyt: 'Atyraun halki virtaa Ural-joki, jota pidetään Euroopan ja Aasian rajana, joten kaupunki on kahdessa maanosassa.',
+    },
+    "East Kazakhstan": {
+      lyhyt: 'Belukha, Altain vuoriston korkein vuori, kohoaa Itä-Kazakstanin ja Venäjän rajalla yli 4 500 metriin.',
+    },
+    Mangghystau: {
+      lyhyt: 'Mangghystaun Karagiye-painanne on 132 metriä merenpinnan alapuolella, Kazakstanin matalin kohta.',
+    },
+    "North Kazakhstan": {
+      lyhyt: 'Botain kylästä on kaivettu esiin yli 150 kuoppatalon asuinpaikka, jonka luulöydöt ovat varhaisimpia merkkejä hevosten pidosta.',
+    },
+    Pavlodar: {
+      lyhyt: 'Bayanaul perustettiin 1985 Kazakstanin ensimmäiseksi kansallispuistoksi, ja sen suurin järvi Sabyndykol tarkoittaa saippuajärveä.',
+    },
+    Qaraghandy: {
+      lyhyt: 'Balkhaš-järven länsiosa on makeaa ja itäosa suolaista vettä, ja pohjoisrannalla on Balkhašin kaupunki.',
+    },
+    Qostanay: {
+      lyhyt: 'Qostanayn aroilta löysi Dmitri Dey 2007 Google Earthin satelliittikuvista valtavia maahan kaivettuja kuvioita.',
+    },
+    Qyzylorda: {
+      lyhyt: 'Qyzylorda oli Kazakstanin neuvostotasavallan pääkaupunki 1925–1927, ennen kuin hallinto siirtyi Almatyyn.',
+    },
+    "South Kazakhstan": {
+      lyhyt: 'Aksu-Zhabaglyn luonnonsuojelualue Tian Shanin juurella on Keski-Aasian vanhin.',
+    },
+    "West Kazakhstan": {
+      lyhyt: 'Oralin perustivat kasakat 1613, ja Aleksandr Puškin kävi kaupungissa 1833 keräämässä aineistoa Pugatšovin kapinasta.',
+    },
+    Zhambyl: {
+      lyhyt: 'Tarazista 45 kilometriä itään ovat Akyrtasin rauniot, tummanpunaisesta hiekkakivestä rakennettu 700-luvun palatsi.',
+    },
+  },
+  /*
+   * UZB — nykymaakunnat (12 aluetta + Karakalpakstan; Taškentin
+   * kaupunki ei ole omana alueenaan). Faktat en-Wikipediasta 25.9.2026.
+   * Amudarja, Araljärvi, Itchan Kala, Shahrisabz, Moynaq, Nukusin
+   * museo, Kampir Tepe, Ayaz-Kala, Kokand, Aydarjärvi ja Khazret Sultan
+   * ovat jo maastokohteina, joten niitä ei käytetty.
+   *   Andijon        — UzAuto Motors (Asaka, 1996, Chevrolet)
+   *   Bukhoro        — Lab-i Hauz
+   *   Ferghana       — Margilan (silkki)
+   *   Jizzakh        — Zaamin National Park
+   *   Karakalpakstan — Karakalpakstan (autonominen tasavalta)
+   *   Namangan       — Namangan Region (puutarhat, Chustin veitset)
+   *   Navoi          — Sarmishsay (noin 10 000 kalliopiirrosta)
+   *   Kashkadarya    — Qarshi (nimi, kudotut matot)
+   *   Samarkand      — Registan
+   *   Sirdaryo       — Sirdaryo Region (Mirzachul, puuvilla)
+   *   Surkhandarya   — Termez (Xuanzang, 600-luku)
+   *   Tashkent       — Chimgan (85 km, laskettelukausi)
+   *   Khorezm        — Urgench; al-Khwarizmin patsas
+   */
+  UZB: {
+    Andijon: {
+      lyhyt: 'Andijanin alueen Asakan tehtaalla on koottu autoja vuodesta 1996, ja nykyään niissä on Chevrolet-merkki.',
+    },
+    Bukhoro: {
+      lyhyt: 'Buharan Lab-i Hauz on yksi kaupungin harvoista säilyneistä altaista, ja sen ympärillä ovat 1500–1600-lukujen madrasat.',
+    },
+    Ferghana: {
+      lyhyt: 'Margilanissa on kudottu silkkiä antiikin ajoista asti, ja kaupungin verstaissa valmistetaan yhä silkkikankaita.',
+    },
+    Jizzakh: {
+      lyhyt: 'Zaaminin kansallispuistossa Turkestanin vuorten pohjoisrinteellä katajametsät vaihtuvat ylempänä alppiniityiksi.',
+    },
+    Karakalpakstan: {
+      lyhyt: 'Karakalpakstan on Uzbekistanin itsehallinnollinen tasavalta, jonka kieli ja kulttuuri ovat lähempänä kazakkeja kuin uzbekkeja.',
+    },
+    Kashkadarya: {
+      lyhyt: 'Qarshin nimi tarkoittaa linnoitusta, ja kaupunki tunnetaan kudotuista nukattomista matoistaan.',
+    },
+    Khorezm: {
+      lyhyt: 'Urgenchissa seisoo suuri patsas al-Khwarizmille, Khorezmista kotoisin olleelle matemaatikolle, jonka nimestä tulee sana algoritmi.',
+    },
+    Namangan: {
+      lyhyt: 'Namanganin alue tunnetaan puutarhoistaan ja Chustin kaupungissa taotuista veitsistä.',
+    },
+    Navoi: {
+      lyhyt: 'Sarmishsayn rotkossa Nuratan piirissä on noin 10 000 kalliopiirrosta, joista vanhimmat ovat kivikaudelta.',
+    },
+    Samarkand: {
+      lyhyt: 'Samarkandin Registan-aukiota reunustaa kolme madrasaa, joista vanhin on Ulugh Begin 1417–1420 rakennuttama.',
+    },
+    Sirdaryo: {
+      lyhyt: 'Suuri osa Sirdaryon alueesta on Mirzachulia eli Nälkäaroa, jonka kastelluilla pelloilla kasvaa puuvillaa ja viljaa.',
+    },
+    Surkhandarya: {
+      lyhyt: 'Termezissä vieraili 600-luvulla kiinalainen munkki Xuanzang, joka kertoi kaupungissa olleen kymmenkunta luostaria ja tuhat munkkia.',
+    },
+    Tashkent: {
+      lyhyt: 'Tashkentista 85 kilometriä itään Chimganin rinteillä lasketellaan joulukuusta maaliskuun puoliväliin.',
+    },
+  },
+  /*
+   * TKM — nykymaakunnat (5 welaýatia; Ashgabat ei omana alueenaan).
+   * Faktat en-Wikipediasta 25.9.2026. Amudarja on jo maastokohteena.
+   *   Ahal      — Darvaza gas crater (1971, 60–70 m)
+   *   Balkan    — Garabogazköl (suolapitoisuus noin 35 %)
+   *   Tashauz   — Kutlug Timur Minaret (60 m, 1011; Unesco 2005)
+   *   Chardzhou — Lebap Region; Köýtendag (Aýrybaba 3 138 m)
+   *   Mary      — Merv
+   */
+  TKM: {
+    Ahal: {
+      lyhyt: 'Karakumin aavikolla Darvazan kaasukraatteri on palanut vuodesta 1971, ja sen halkaisija on 60–70 metriä.',
+    },
+    Balkan: {
+      lyhyt: 'Garabogazköl-laguunin veden suolapitoisuus on keskimäärin noin 35 prosenttia, noin kymmenkertainen valtameriin verrattuna.',
+    },
+    Chardzhou: {
+      lyhyt: 'Köýtendagin vuorilla kohoaa Turkmenistanin korkein huippu Aýrybaba, 3 138 metriä.',
+    },
+    Mary: {
+      lyhyt: 'Maryn lähellä ovat Mervin rauniot; 1100-luvulla Merv saattoi olla maailman suurin kaupunki.',
+    },
+    Tashauz: {
+      lyhyt: 'Köneürgençin 60-metrinen Kutlug Timurin minareetti rakennettiin 1011, ja kaupungin rauniot ovat Unescon maailmanperintöä.',
+    },
+  },
 };
