@@ -112031,6 +112031,197 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cayenne',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026, Lontoon mallista). Nykypäivän
+       * matkailija: saapuminen, tori ja keittiö, karnevaali, rannat ja
+       * sademetsäpolku sekä Kouroun päiväretki. Linnake, katedraali,
+       * palmuaukio, mausteen nimi ja Bagnen historia ovat nostoissa, joten
+       * niitä ei toisteta. Taustatiedot Wikipediasta (en/fr), Wikivoyagesta
+       * ja Kwata-yhdistyksen tiedoista — teksti omaa. Kuvien lisenssit
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin
+       * 25.9.2026; yksikään tiedosto ei ole käytössä muissa paketeissa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Touloulou devant son université.jpg',
+          lyhyt: 'Karnevaalin touloulou peittää itsensä päästä varpaisiin, jottei kukaan tunnistaisi häntä.',
+          selite: 'Touloulou seisoo lauantai-iltana Cayennen vanhan tanssisalin '
+            + 'edessä vuoden 2017 karnevaalissa kultainen naamio ja '
+            + 'paljettihuntu kasvoillaan, sillä naamiaistanssien ydin on se, '
+            + 'ettei naista tunnisteta.',
+          lahde: 'AmazoneAourou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Cayenne on Ranskaa päiväntasaajan tuntumassa: kaupoissa '
+          + 'maksetaan euroilla ja aamun patonki haetaan leipomosta, mutta '
+          + 'ilma on kuin kasvihuoneessa ja sademetsä alkaa kaupungin '
+          + 'rajalta. Keskusta on pieni ja kierrettävissä jalan, ja kolmena '
+          + 'aamuna viikossa sen sydän on tori, jossa kreolikeittiön chilit ja '
+          + 'hmong-viljelijöiden vihannekset myydään vierekkäin. Loppiaisesta '
+          + 'tuhkakeskiviikkoon kaupunki juhlii karnevaalia, jonka naamioidut '
+          + 'touloulout valitsevat itse tanssiparinsa. Päiväretken päässä ovat '
+          + 'Euroopan avaruussatama Kourou ja entiset vankisaaret, joilla '
+          + 'vierailijaa vastassa ovat nyt apinat. Sunnuntaina kannattaa '
+          + 'levätä, sillä silloin lähes kaikki on kiinni.',
+        artikkeli: {
+          nimi: 'Matkailijan Cayenne',
+          teksti: 'Cayenne on Ranskaa euroineen ja patonkeineen, mutta sademetsä '
+            + 'alkaa kaupungin laidalta.',
+          nosto: 'Karnevaalin tanssiaisissa nainen hakee miehen tanssimaan, eikä '
+            + 'mies saa kieltäytyä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Pariisista on Cayenneen 7 100 kilometriä, mutta perillä '
+                + 'ollaan yhä Ranskassa: Ranskan Guayana on merentakainen '
+                + 'departementti, joten rahana on euro. Yksi vaatimus erottaa '
+                + 'matkan silti Euroopasta, sillä maahan tulevalta vaaditaan '
+                + 'todistus keltakuumerokotuksesta. Lentoasema on Matouryssa 13 '
+                + 'kilometrin päässä keskustasta, ja se nimettiin vuonna 2012 '
+                + 'Cayennessa syntyneen Félix Ébouén mukaan — hänet haudattiin '
+                + '1949 Pariisin Panthéoniin ensimmäisenä mustana ranskalaisena. '
+                + 'Keskustaan pääsee helpoimmin taksilla tai vuokra-autolla. '
+                + 'Kaupungissa on vain noin 63 000 asukasta, ja vanhan keskustan '
+                + 'kiertää jalan: puisten kreolitalojen parvekkeet ja säleluukut '
+                + 'antavat kävelijälle varjoa. Kaupunkibussit liikennöivät '
+                + 'keskustasta naapurikuntiin. Sunnuntaina kannattaa varautua '
+                + 'hiljaisuuteen, sillä silloin lähes kaikki on kiinni.',
+              kuva: [
+                {
+                  tiedosto: 'Cayenne airport (8332248070).jpg',
+                  lyhyt: 'Lentoaseman hallin banderolli muistuttaa, kenen mukaan kenttä nimettiin 2012.',
+                  selite: 'Cayennen lentoaseman terminaalihallin lasiseinää '
+                    + 'peittää Félix Ébouén muotokuva ja Gaston Monnervillen '
+                    + 'sitaatti, jossa tämä kutsuu Ébouéta valtiomieheksi.',
+                  lahde: 'Spotting973, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Cayenne maison créole 2013.jpg',
+                  lyhyt: 'Kreolitalon säleluukut päästävät tuulen sisään mutta pitävät auringon ulkona.',
+                  selite: 'Kaksikerroksinen puinen kreolitalo Cayennen '
+                    + 'keskustassa: punaiset säleluukut, parveke ja '
+                    + 'ruosteinen peltikatto ovat kaupungin vanhan '
+                    + 'rakennustavan tuntomerkkejä.',
+                  lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Agglo\'bus cayenne n°3 de la RCT.jpg',
+                  lyhyt: 'Agglo\'bus-kaupunkibussi linjalla 3 matkalla Mont Lucasiin Cayennessa.',
+                  selite: 'Cayennen seudun kaupunkibusseja ajaa Centre '
+                    + 'Littoral -kuntayhtymän Agglo\'bus, ja kuvan linjan 3 '
+                    + 'bussi on matkalla Mont Lucasiin toukokuussa 2016.',
+                  lahde: 'Tonnegrande, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tori ja kreolikeittiö',
+              teksti: 'Cayennen tori herää keskiviikkona, perjantaina ja '
+                + 'lauantaina jo neljältä aamulla, ja iltapäivällä se on ohi. '
+                + 'Pöydillä on papaijaa, passionhedelmää, jamssia ja chiliä, ja '
+                + 'moni myyjä on hmong-viljelijä Cacaon seudulta — Laosista '
+                + 'paenneet hmongit asettuivat sinne vuonna 1977. Heidän '
+                + 'ansiostaan torin katetussa osassa syödään aamiaiseksi '
+                + 'höyryävää nuudelikeittoa, ja lauantaina puolenpäivän aikaan '
+                + 'istumapaikasta saa kilpailla. Kreolikeittiön makuja kannattaa '
+                + 'etsiä kojuista: accras ovat suolaturskasta paistettuja '
+                + 'rapeita pyöryköitä, blaff on limetillä ja chilillä '
+                + 'maustettu kalaliemi, ja monen ruoan kanssa tarjotaan '
+                + 'couacia, paahdettua maniokkirouhetta. Pääsiäisenä pöytään '
+                + 'kannetaan bouillon d\'awaraa, palmun hedelmästä keitettyä '
+                + 'pataa. Ranskalaisuus ei silti katoa mihinkään: aamun patonki '
+                + 'ostetaan leipomosta kuten Pariisissa.',
+              kuva: {
+                tiedosto: 'Marchecayenne.JPG',
+                lyhyt: 'Cayennen torilla myydään vihreiden varjojen alla kolmena aamuna viikossa.',
+                selite: 'Torikojujen vihreät aurinkovarjot täyttävät Cayennen '
+                  + 'torikadun, jonka taustalla kohoavat punaiset ja vihreät '
+                  + 'puutalot peltikattoineen.',
+                lahde: 'Didwin973, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Karnevaali, jossa nainen valitsee',
+              teksti: 'Loppiaisesta tuhkakeskiviikkoon Cayenne elää '
+                + 'karnevaalia, joka kestää viikkokausia eikä vain muutamaa '
+                + 'päivää. Sunnuntai-iltapäivisin noin kolmelta ryhmät '
+                + 'kulkevat keskustan kaduilla samoihin asuihin puettuina, '
+                + 'mutta karnevaalin sydän sykkii yöllä. Perjantai- ja '
+                + 'lauantai-iltaisin tanssisaleissa pidetään '
+                + 'naamiaistanssiaiset, joiden kuningatar on touloulou: nainen, '
+                + 'joka on kätkeytynyt päästä varpaisiin naamion, peruukin, '
+                + 'hanskojen ja pitkän hameen alle ja muuttaa äänensäkin, '
+                + 'jottei kukaan tunnistaisi häntä. Touloulou hakee miehen '
+                + 'tanssimaan, eikä mies saa kieltäytyä. Asu jäljittelee '
+                + '1700- ja 1800-lukujen porvarisnaisten juhlavaatteita, ja '
+                + 'alun perin sillä pilkattiin heitä. Laskiaistiistaina kadut '
+                + 'täyttyvät punamustiin pukeutuneista paholaisista, ja '
+                + 'tuhkakeskiviikkona karnevaalin kuningas Vaval poltetaan.',
+              kuva: {
+                tiedosto: 'Carnaval Cayenne 2024 touloulou.jpg',
+                lyhyt: 'Samoin puetut touloulout kulkevat Cayennen karnevaalikulkueessa tammikuussa 2024.',
+                selite: 'Touloulou-ryhmä kulkee Cayennen karnevaalikulkueessa '
+                  + '28. tammikuuta 2024 samanlaisissa vaaleanpunaisissa '
+                  + 'asuissa, kasvoillaan kullatut naamiot ja käsissään '
+                  + 'vihreät hanskat.',
+                lahde: 'G.Mannaerts, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kilpikonnat ja sademetsäpolku',
+              teksti: 'Cayennen rannoilla meri on ruskeaa, koska Amazonin '
+                + 'kuljettama liete värjää rannikon veden, mutta rannoilla käy '
+                + 'harvinainen vieras. Huhtikuusta heinäkuuhun '
+                + 'merinahkakilpikonnat nousevat öisin Cayennen ja naapurikunta '
+                + 'Rémire-Montjolyn hiekkarannoille munimaan. Maailman suurin '
+                + 'kilpikonna voi painaa yli 500 kiloa, ja poikaset kuoriutuvat '
+                + 'noin kahden kuukauden päästä. Kwata-yhdistyksen '
+                + 'vapaaehtoiset partioivat rannoilla ja opastavat katsojia, '
+                + 'ja yllättävin uhka on kotikoira: koirat ovat tappaneet '
+                + 'rannoilla kymmeniä munivia naaraita. Päivällä kannattaa '
+                + 'lähteä Rorotan polulle Mahuryn kukkulalle. Noin kuuden '
+                + 'kilometrin reitti kiertää sademetsässä kolmen tekojärven '
+                + 'ohi, ja rinteiltä näkyy merelle ja Rémiren luodoille. '
+                + 'Sademetsä alkaa siis kirjaimellisesti kaupungin rajalta.',
+              kuva: {
+                tiedosto: 'Ponteluth.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Merinahkakilpikonna munii yöllä Montjolyn rannalla Cayennen kupeessa.',
+                selite: 'Merinahkakilpikonnan takaräpylät kaartuvat '
+                  + 'hiekkakuopan ylle, ja sen pohjalle kasautuu valkoisia '
+                  + 'munia Montjolyn rannalla kesäkuussa 2003.',
+                lahde: 'Raybx973, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki: raketit ja saaret',
+              teksti: 'Kourou on 60 kilometriä Cayennesta luoteeseen, ja siellä '
+                + 'on Euroopan avaruussatama. Guayanan avaruuskeskukseen pääsee '
+                + 'maksuttomalle opastetulle kierrokselle, kun sen varaa '
+                + 'etukäteen ja ottaa henkilöllisyystodistuksen mukaan. '
+                + 'Kierroksella nähdään laukaisualueita, kuten Ariane 6:n '
+                + 'alusta, jolta raketti nousi ensimmäisen kerran 9. heinäkuuta '
+                + '2024. Kouroun satamasta lähtee myös katamaraani noin tunnin '
+                + 'matkalle Pelastuksen saarille 14 kilometrin päähän. Île '
+                + 'Royalella entisessä siirtomaajoukkojen kasarmissa toimii nyt '
+                + 'majatalo ja ravintola, johtajan talossa on museo, ja '
+                + 'polkujen varsilla vierailijoita tarkkailevat '
+                + 'kapusiiniapinat ja agoutit. Paholaissaarelle ei nousta '
+                + 'lainkaan voimakkaiden virtausten takia. Saaret omistaa '
+                + 'Ranskan avaruusjärjestö, koska ne ovat rakettien lentoradan '
+                + 'alla, ja laukaisupäivinä ne tyhjennetään ihmisistä.',
+              kuva: {
+                tiedosto: 'Ile Royale Cebus apella.jpg',
+                lyhyt: 'Île Royalella vierailijaa ovat nykyään vastassa apinat, kuten tämä kapusiiniapina.',
+                selite: 'Ruskea kapusiiniapina (Cebus apella) seisoo Île '
+                  + 'Royalen polun kivireunuksella Pelastuksen saarilla '
+                  + 'huhtikuussa 2013.',
+                lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
