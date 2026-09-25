@@ -3,6 +3,10 @@
 *Linssiseppä 26.9.2026 klo 00.3x Fablen käskystä. Pohja: docs/raportit/elava-kartta-suunnitelma-20260926.md (8b67da3a6) ja
 Raamattu ELÄVÄ KARTTA. Video kuvataan natiivista (iPhone pystyssä, rajattuna ruutuun ilman reunoja).*
 
+*Fable hyväksyi 26.9. klo 00.4x yhdellä korjauksella: maakunnat syttyvät etäisyysjärjestyksessä saapumiskaupungista, ei
+reitin mukaan (korjattu riville 4,0–5,5 s). Omistajan soitin näyttää pystyvideot pieninä, joten videon rinnalle tehdään
+neljä pysäytyskuvaa, ja ne ovat ensisijaisia.*
+
 **Rakenne:** kolme näytöstä ja loppukuva. Liike on tapahtumaohjattua, ja jokaisen vaiheen ajoitus tulee yhdeltä
 aikajanalta (esitysmoottori: Kamerakoreografia, Kayra-käyrät, KAMERA-AJOT: ease in/out, ei lineaarisia pätkiä).
 
@@ -11,7 +15,7 @@ aikajanalta (esitysmoottori: Kamerakoreografia, Kayra-käyrät, KAMERA-AJOT: eas
 | 0,0–1,0 | Lento laskeutuu Ateenaan. Kreikka on kermahunnun alla, vain Ateena näkyy. | lennon loppu, 1 200 km, kallistus 15° | koneen ääni hiipuu | nykyinen saapuminen |
 | 1,0–3,5 | **Huntu kuivuu**: paljastus Ateenasta ulospäin, reunassa musteen kuivumisen kohina | pysähtyy, Jarruttava | paperin kahina | Natiiviseppä: Paljastus(keskus, säde, t) |
 | 2,0–4,5 | **Joet piirtyvät** viivoina (0,6–1,2 s/joki, porrastus 0,15 s). **Maakuntarajat** vedetään kynällä yksi kerrallaan (0,35 s/raja). | kevyt lähestyminen 1 200 → 1 000 km | kynän rahina, hiljaa | Natiiviseppä: Viivapiirto(kerros, osuus) |
-| 4,0–5,5 | **Maakunnat syttyvät** 1873-reitin järjestyksessä (0,12 s väli, 5 sävyn täyttö 0,4 s) | – | – | Natiiviseppä: Maakuntaväri(id, t); Karttaseppä: reitin järjestys |
+| 4,0–5,5 | **Maakunnat syttyvät** etäisyysjärjestyksessä Ateenasta ulospäin, koska kaanonissa ei ole kiinteää 1873-reittiä (porrastus 1,1 s jaettuna maakuntien määrällä, enintään 0,12 s; 5 sävyn täyttö 0,4 s) | – | – | Natiiviseppä: Maakuntaväri(id, t); järjestys lasketaan maakuntien keskipisteiden etäisyydestä saapumiskaupunkiin (Linssiseppä, ei reittidataa) |
 | 5,0–6,5 | **Nostot putoavat** musteläikkinä: ensin pääkohteet (0,25 s läikkä), sitten kohteet ja pienet (porrastus 60 ms) | – | pieni naksahdus/läikkä | Pelikoodari: kokoluokat ja himmeät jäljet; Sisältökirjuri: GRC-luokitus |
 | 5,5–8,0 | **Aamuaurinko** pyyhkäisee reliefin yli (matala itä → etelä, pitkät varjot liikkuvat) | kallistettu kierto 20° Attikan ympäri, Pehmea | aamun tuuli | Natiiviseppä: Aurinko(atsimuutti, korkeus) |
 | 8,0–11,5 | **Maakunta herää**: napautus Attikan nostoon → väri valuu maakuntaan (0,8 s), nimi kirjoittuu käsialalla (1,2 s), pikkukuva leimautuu kartussiin (0,3 s), merkit 1/7 | pieni kuminauha-ajo Attikaan, 700 km | kynä + leimasin | Natiivi-UI: kartussi ja merkit; Natiiviseppä: Maakuntaväri(paikallinen) |
