@@ -17,6 +17,14 @@ namespace Matkakirja
     ///   kaupunki id               lento kaupunkiin ja nimikortti (kuin napautus)
     ///   aja lat lon kaari [s]     kamera-ajo; kaari = kapeamman suunnan asteet
     ///   pallo                     koko pallo kuvaan
+    ///   pallo rajat paalle|pois [m]   laattojen renderöijien rajat laajennettuina (k − 1) × m kaikkiin suuntiin
+    ///                             (PalloReiat, löydös 119; oletus päällä, m = 9 000; päivittyy komennolla "korkeus n")
+    ///   pallo tausta magenta|pois kameran tausta magentaksi piirron ajaksi (reiät kuviin; lennon skybox, tähtitaivas ja
+    ///                             astronautin ilmakehä pois samalla)
+    ///   pallo pohja auto|paalle|pois|tila   pergamenttinen pohjapallo 3 km ellipsoidin alla (Pohjapallo, löydös 119):
+    ///                             auto (oletus) = päällä paitsi magentataustan ajan, paalle = myös magentan kanssa
+    ///                             (jäljelle jäävät reiät mitattavissa), pois = ei koskaan; tila = lokiin
+    ///   pallo pohja paljas paalle|pois   testitila: maastolaatat piiloon, pohjapallo näkyy kokonaan
     ///   panoroi lat lon x y [s]   piste (lat, lon) ruudun kohtaan (x, y) (osuudet 0–1, origo vasen alakulma);
     ///                             korkeus, kallistus ja suuntima pysyvät (PalloKierto.Panoroi, oletus 0,42 s)
     ///   odota s                   seuraava rivi vasta s sekunnin päästä
@@ -33,7 +41,12 @@ namespace Matkakirja
     ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
-    ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
+    ///   palvelin                  laattapalvelimen osumat lokiin (paketti / offline / välimuisti / verkko) ja maastoluokan
+    ///                             laskurit
+    ///   palvelin loki paalle|pois epäonnistuneet haut lokiin: "MATKAKIRJA palvelin virhe luokka polku koodi yritykset ms
+    ///                             seuraus" (löydös 119)
+    ///   palvelin maastouusinta paalle|pois   maastolaattaa ei palauteta Cesiumille virheenä verkkovirheen takia, vaan
+    ///                             uusitaan 0,5–8 s:n välein niin kauan kuin Cesium odottaa (oletus päällä; löydös 119)
     ///   valmius seuraa [s]        pallon valmiusasteen seuranta lokiin 0,5 s välein (oletus 30 s; Valmius.cs, löydös 80):
     ///                             ComputeLoadProgress, Cesiumin valintatilasto, raster-kerrokset, palvelimen jonot, kameran liike
     ///   valmius auto paalle [s] | valmius auto pois   sama seuranta aloitusverhon ja mustan verhon alussa (PlayerPrefs
@@ -439,6 +452,26 @@ namespace Matkakirja
                     });
                     break;
                 }
+                case "pallo" when o.Length > 2 && o[1] == "rajat":
+                    // pallo rajat paalle|pois [m]: laattojen rajat korkeuskertoimen mukaan (löydös 119, PalloReiat)
+                    PalloReiat.Rajat(o[2] == "paalle", o.Length > 3 ? (float)D(3) : float.NaN);
+                    Debug.Log(PalloReiat.Kuvaus());
+                    break;
+                case "pallo" when o.Length > 2 && o[1] == "tausta":
+                    // pallo tausta magenta|pois: reiät erottuvat kuvissa (löydös 119, PalloReiat)
+                    PalloReiat.Magenta = o[2] == "magenta";
+                    Debug.Log(PalloReiat.Kuvaus());
+                    break;
+                case "pallo" when o.Length > 2 && o[1] == "pohja":
+                    // pallo pohja auto|paalle|pois|tila | pallo pohja paljas paalle|pois: pergamenttinen pohjapallo
+                    // (löydös 119, Pohjapallo); paljas = testitila, maastolaatat piiloon
+                    if (o[2] == "paljas") Pohjapallo.Paljas = o.Length > 3 && o[3] == "paalle";
+                    else if (o[2] == "auto") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Auto;
+                    else if (o[2] == "paalle") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Paalle;
+                    else if (o[2] == "pois") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Pois;
+                    Pohjapallo.Instanssi?.Paivita();
+                    Debug.Log(Pohjapallo.Kuvaus());
+                    break;
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.MaxKorkeus(), 1.4f, null);
                     break;
@@ -737,9 +770,13 @@ namespace Matkakirja
                     break;
                 }
                 case "palvelin":
+                    // palvelin | palvelin loki paalle|pois | palvelin maastouusinta paalle|pois (löydös 119)
+                    if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
                               $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
+                    Debug.Log(Laattapalvelin.MaastoKuvaus());
                     break;
                 case "valmius":
                 {
@@ -882,6 +919,8 @@ namespace Matkakirja
                 case "kamerareitti":
                     return false;
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
+                    return false;
+                case "pallo" when o.Length > 2 && o[1] == "pohja" && o[2] == "tila":
                     return false;
                 default:
                     return !(o.Length > 1 && o[1] == "tila");

@@ -6,6 +6,7 @@
 #
 #   Peli-testit/verkko-savuke.sh <Matkakirja3D.app> <UDID> <tuloskansio>
 #   LAMMIN=1 Peli-testit/verkko-savuke.sh …   lämmin käynnistys (välimuistit edellisestä ajosta)
+#   ENNAKOINTI=1 …   lisäksi Esilataaja erä 3: joutilas kaupungissa (kohta 4) ja liftauksen siirtokohteet (kohta 5)
 #
 # Tulos: <tuloskansio>/{verkko-odotus.jsonl, verkko-yhteenveto.json, konsoli.log, RAPORTTI.txt}. Vain omiin
 # simulaattoreihin (Raamattu, SIMULAATTORIEN OMISTUS); simulaattori sammutetaan lopuksi, jos se ei ollut päällä.
@@ -50,6 +51,20 @@ ui "ui nosto kohde:thessaloniki" 6;  ui "ui sulje" 2
 ui "ui nosto kohde:olympos" 4;       ui "ui sulje" 2      # toinen avaus: välimuistista
 linssi "linssi radio" 10;            linssi "linssi pois" 3
 linssi "linssi satelliitti" 12;      linssi "linssi pois" 3
+if [[ -n $ENNAKOINTI ]]; then
+  sleep 4                                  # kohta 4: 2 s ilman liikettä, jonoa ja laattahakuja
+  odota_loki "esilataaja: joutilas" 40
+  sleep 25                                 # joutilaan esilataukset (puheet, nostojen kuvat, nopan päässä olevat)
+  # Kohta 5: siirtokohteet kartalle → kohdekaupungit heti. Noppa voi antaa vain reitin varren pisteitä:
+  # silloin siirrytään ensimmäiseen ja heitetään uudelleen (enintään 4 kertaa).
+  for yritys in 1 2 3 4; do
+    peli "kulkutapa liftaus" 8
+    odota_loki "ennakointi (siirtokohteet)" 20
+    grep "ennakointi (siirtokohteet)" $OUT/konsoli.log | grep -qv "ei kaupunkeja" && break
+    peli "rivi 0" 14
+  done
+  sleep 15
+fi
 peli "verkko" 3
 cp $DOC/verkko-odotus.jsonl $DOC/verkko-yhteenveto.json $DOC/peli-loki.txt $DOC/ui-loki.txt $DOC/linssi-loki.txt $OUT/ 2>/dev/null
 kill $LPID 2>/dev/null
@@ -74,4 +89,15 @@ if os.path.exists(p):
         print("\nOSUMA-% (välimuistista / pyynnöt) VAIHEITTAIN JA LÄHTEITTÄIN")
         for k, o in y["osumat"].items(): print(f"  {k:<22} {o['osumia']:>5}/{o['n']:<5} {o['pros']:>3} %")
     if "esilataaja" in y: print("\nESILATAAJA", y["esilataaja"])
+# RAJA (Raamattu ESILATAUSPOLITIIKKA kohta 3, Fable 25.9.): saapumisessa nolla verkko-odotusta, kylmänä ja lämpimänä.
+# Odotus lasketaan verkko-odotukseksi, kun sen aikana valmistui verkkohaku (haut > 0) tai se on puheen lataus.
+saap = [r for r in rivit if r['vaihe'] == 'saapuminen' and (r.get('haut', 0) > 0 or r['mita'].startswith('puhe:'))]
+ms = sum(r['ms'] for r in saap)
+if os.environ.get("ENNAKOINTI"):
+    loki = open(os.path.join(out, "konsoli.log"), errors="replace").read().splitlines()
+    print("\nENNAKOINTI (erä 3)")
+    for avain in ("esilataaja: joutilas", "peli: joutilas", "ennakointi (siirtokohteet)", "ui nostot: kuvat esiladataan", "ui: saapumisen esilataus"):
+        rivit_ = [l for l in loki if avain in l]
+        print(f"  {avain:<32} {len(rivit_):>3}  " + (rivit_[-1].split("MATKAKIRJA ", 1)[-1][:150] if rivit_ else ""))
+print(f"\nRAJA saapuminen 0 ms verkko-odotusta: {'PASS' if ms == 0 else 'FAIL'} ({ms} ms: " + ", ".join(f"{r['mita']} {r['ms']}" for r in saap) + ")")
 EOF

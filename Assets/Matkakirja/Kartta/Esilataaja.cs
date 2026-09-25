@@ -53,6 +53,27 @@ namespace Matkakirja
         public static int Jonossa => jono.Count;
         public static int Uusintoja { get; private set; }
 
+        /// <summary>Joutilaana odotettava aika ennen <see cref="Joutilas"/>-tapahtumaa (suunnitelma: 2 s).</summary>
+        public const float JoutilasS = 2f;
+
+        /// <summary>
+        /// JOUTILAS (ESILATAUSPOLITIIKKA kohta 4, erä 3): pelaaja ei liikuta mitään (Ruudunpaivitys ei TÄYSI), jono ja
+        /// käynnissä olevat haut tyhjiä eikä näkyviä laattoja haussa <see cref="JoutilasS"/> sekunnin ajan. Herää kerran
+        /// jokaista toimintajaksoa kohden (uudelleen vasta, kun jokin on taas liikkunut), joten epäonnistuneet esilataukset
+        /// yritetään uudelleen seuraavana joutilaana hetkenä. Ei virransäästössä eikä kuumana (kohdat 4–5 seis).
+        /// </summary>
+        public static event Action Joutilas;
+
+        /// <summary>Virransäästö tai kuumuus: kohdat 4–5 (joutilas ja ennakointi) seis (Raamattu, LÄMPÖ kohta 2).</summary>
+        public static bool Seis => Lampo.Kuuma;
+
+        static float joutilasAlku = -1f;
+        static bool joutilasViritetty = true;
+        public static int JoutilaitaHetkia { get; private set; }
+        /// <summary>Kohtien 4–5 ennakoidut kaupungit (kirjaa PeliOhjain; mittariin).</summary>
+        public static int Ennakoituja { get; private set; }
+        public static void KirjaaEnnakointi() => Ennakoituja++;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
@@ -62,7 +83,15 @@ namespace Matkakirja
             kaynnissa = 0;
             nro = 0;
             Uusintoja = 0;
+            Joutilas = null;
+            joutilasAlku = -1f;
+            joutilasViritetty = true;
+            JoutilaitaHetkia = 0;
+            Ennakoituja = 0;
         }
+
+        /// <summary>Käynnistää palvelun (joutilas-tarkkailu) ennen ensimmäistä hakua.</summary>
+        public static void Kaynnista() => Varmista();
 
         static void Varmista()
         {
@@ -148,6 +177,26 @@ namespace Matkakirja
             }
         }
 
+        static void TarkkaileJoutilasta()
+        {
+            var r = Ruudunpaivitys.Instanssi;
+            bool liikkuu = r == null || r.Nyt == Ruudunpaivitys.Tila.Taysi;
+            if (liikkuu) { joutilasViritetty = true; joutilasAlku = -1f; return; }
+            if (!joutilasViritetty) return;
+            if (jono.Count > 0 || kaynnissa > 0 || Laattapalvelin.Kiireinen || Seis || Joutilas == null) { joutilasAlku = -1f; return; }
+            float nyt = Time.realtimeSinceStartup;
+            if (joutilasAlku < 0f) { joutilasAlku = nyt; return; }
+            if (nyt - joutilasAlku < JoutilasS) return;
+            joutilasViritetty = false;
+            joutilasAlku = -1f;
+            JoutilaitaHetkia++;
+            Debug.Log($"MATKAKIRJA esilataaja: joutilas ({JoutilaitaHetkia}.)");
+            foreach (Action kutsu in Joutilas.GetInvocationList())
+            {
+                try { kutsu(); } catch (Exception e) { Debug.LogException(e); }
+            }
+        }
+
         static bool Uusittava(UnityWebRequest r) =>
             r.responseCode == 429 || r.responseCode >= 500 || r.result == UnityWebRequest.Result.ConnectionError;
 
@@ -171,6 +220,7 @@ namespace Matkakirja
         {
             VerkkoOdotus.PaivitaVaihe();
             if (aktiiviset.Count > 0) Siivoa();
+            TarkkaileJoutilasta();
             if (jono.Count == 0) return;
             bool laatatKiireessa = Laattapalvelin.Kiireinen;
             // Lämpö (Raamattu LÄMPÖ JA VIRRANKULUTUS kohta 2): kuumana tai virransäästössä tasot 4–5 seis.

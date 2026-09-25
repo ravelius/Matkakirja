@@ -90,6 +90,7 @@ namespace Matkakirja.Natiivi
             AloituslentoKaynnissa = true;
             saapumiskorttiTunnus++;
             try { AloituslentoAlkoi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
+            EsilataaSaapuminen(kohde);
             Debug.Log($"MATKAKIRJA peli: aloituslento Lontoo → {kohde}, {kesto:0.0} s");
 
             int tunnus = ++ajoTunnus;

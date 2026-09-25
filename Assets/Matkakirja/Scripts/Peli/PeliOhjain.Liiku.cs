@@ -260,6 +260,8 @@ namespace Matkakirja.Natiivi
             if (nayta) Debug.Log($"MATKAKIRJA peli: siirtokohteet {string.Join(", ", siirtoKohteet.Select(k => k.Avain))}");
             try { SiirtoKohteetMuuttui?.Invoke(siirtoKohteet); } catch (Exception e) { Debug.LogException(e); }
             NaytaSiirtokohdemerkit();
+            // ESILATAUSPOLITIIKKA kohta 5: kohteet näkyvät → kohdekaupunkien saapumistarpeet heti.
+            EnnakoiSiirtoKohteet(siirtoKohteet);
         }
 
         /// <summary>Natiivisepän renkaat (Siirtokohdemerkit, Kartta-kokoonpano ei näe peliä): kytketty instanssi.</summary>
