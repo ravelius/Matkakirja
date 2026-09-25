@@ -24,23 +24,9 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia kortteja tiedossa juuri nyt.
+Ei avoimia kortteja.
 
-**HYVÄ UUTINEN — sivutus RATKENNUT kokonaan:** vm.swapusage on nyt 0 Gt (oli huipussaan 22,8 Gt). Todennäköisesti koneen uudelleenkäynnistyksen myötä (huomattu myös oma sessio ja muut roolit nollautuneina/uudelleenkäynnistyneinä n. klo 11-12 välillä). Ilmoitettu Fablelle tuntiraporttina — ei enää seurattavaa.
-
-**Viikkokiintiö (kaikki mallit) 97%** — hyvin lähellä 100 %. Ilmoitettu Fablelle, ei vielä sovittua hälytysrajaa tälle.
-
-**Karttaseppä ylitti 70%** — ilmoitettu Fablelle.
-
-**Varmuuskopio-tarkistus:** varmuuskopio-VIKA.txt tyhjä. Käännösjuna kunnossa (viimeisin onnistunut asennus 11:23, alle 2h).
-
-**Junasääntö (Fable 04:1x):** ei havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
-
-**Postilaatikko:** viimeisin commit 7755d9c5a "Posti: kuittaa kahden kaupungin galleriakytkentä PR:ssä" — muuttumaton.
-
-**REBOOT-TARKISTUS (Fable-pyyntö, kone käynnistyi uudelleen ~11:3x):** launchd-agentit fi.matkakirja.juna, juna-vahti, siivous, app.matkakirja.natiivi-bundle kaikki ladattu ja toiminnassa (state "not running" normaalia StartInterval-ajolle, juna.log vahvistaa aktiivisuuden 12:00 asti). varmuuskopio-VIKA.txt tyhjä. Simulaattorit laskeneet takaisin 4→2 (natiiviseppa-iPhone, iPhone 17) — hyvin alle 4:n rajan.
-
-**TILINVAIHTO (omistaja 12:1x):** kaikki sessiot pysäytetään. Luovutus kirjoitettu docs/raportit/viesti-postivahti-luovutus-20260925.md, aloitusviesti päivitetty viesti-postivahti-aloitus.md. Ei clear_session-kutsua.
+**LÄMPÖERÄ build 16:een (omistajan päätös 18.2x):** Pelikoodari — dynaaminen ruudunpäivitys + lepopiirto + thermalState; Natiiviseppä — HDR/varjot/anturi; Laitetestaaja — 10 min lämpö- ja akkumittaus laitteella ennen/jälkeen.
 
 ## 3) Avoimet PR:t
 
