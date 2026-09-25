@@ -125508,6 +125508,253 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on kansallispuisto,
+       * ei kaupunki, joten opas käsittelee portit, tiestön, geysirialueiden
+       * turvallisuuden, eläinten välimatkat, sään ja käytännön asiat.
+       * Taustatiedot englannin Wikipediasta (Yellowstone National Park:
+       * osiot Recreation ja Climate and weather sekä vuoden 2022 tulva;
+       * Grand Loop Road Historic District, Roosevelt Arch, Beartooth
+       * Highway, Old Faithful Inn, Norris Geyser Basin, Death of Colin
+       * Scott, Lamar Valley, Hayden Valley, West Yellowstone, Gardiner,
+       * Snowcoach, Bison) ja Wikivoyagesta (Yellowstone National Park:
+       * Get in, Get around, Stay safe, Sleep) — teksti omaa. Hintoja ja
+       * aukioloaikoja ei kirjata, koska Wikivoyagen majoitus- ja
+       * leirintätiedot ovat vuosilta 2012–2020; tieolot ja talvikauden
+       * palvelut neuvotaan tarkistamaan puiston sivuilta. Boiling Riverin
+       * kylpypaikka jätetään pois, koska Wikivoyagen tieto on vuoden
+       * 2022 tulvaa vanhempi. Nostojen ja ennen–nyt-kuvien aiheita
+       * (puiston perustaminen, Colter, Washburnin ja Haydenin
+       * retkikunnat, Jackson, Moran, Old Faithful -geysiri, Grand
+       * Prismatic, Castle Geyser, kaldera, biisonien ja susien paluu) ei
+       * toisteta. Kaikki kuvat ovat Yellowstonen kansallispuiston (NPS)
+       * julkaisemia public domain -kuvia paitsi Beartooth Highway
+       * (tekijän PD-julistus); lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Roosevelt Arch sateenkaaren kera.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Rainbow through Roosevelt Arch (48266871937).jpg',
+          lyhyt: 'Pohjoisportin Roosevelt Arch on toivottanut matkailijat tervetulleiksi vuodesta 1903.',
+          selite: 'Gardinerin pohjoisportin 16-metrinen holvi on muurattu '
+            + 'pylväsbasaltista, ja sen laatassa lukee "For the Benefit and '
+            + 'Enjoyment of the People", kansan hyödyksi ja iloksi. Portti '
+            + 'on puiston viidestä ainoa, joka on auki ympäri vuoden.',
+          lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Yellowstone ei ole kaupunki vaan kokonainen ylänkö: lähes '
+          + '9 000 neliökilometriä geysirialueita, laaksoja ja metsää '
+          + 'keskimäärin 2 400 metrin korkeudessa, ja sen halki kiertää '
+          + 'kahdeksikon muotoinen maantie. Vuonna 2023 puistossa kävi 4,5 '
+          + 'miljoonaa ihmistä, eniten heinäkuussa. Matkailija tulee '
+          + 'autolla jostakin viidestä portista, kulkee geysirialueilla '
+          + 'vain laudoituksia pitkin ja katselee biisoneita ja karhuja '
+          + 'kiikarilla kaukaa. Kesälläkin sää voi kääntyä lumisateeksi, ja '
+          + 'talvella lähes kaikki tiet ovat kiinni autoilta. Puiston '
+          + 'majapaikat varataan hyvissä ajoin, eikä kännykkä toimi '
+          + 'suuressa osassa puistoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Yellowstone',
+          teksti: 'Yellowstone kierretään autolla, mutta parhaat hetket '
+            + 'koetaan laudoituksilla ja kiikarin takana.',
+          nosto: 'Puiston vaarallisin paikka ei ole kuuma lähde eikä karhu '
+            + 'vaan maantie.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Viisi porttia ja kahdeksikko',
+              teksti: 'Yellowstonen kansallispuisto on lähes 9 000 '
+                + 'neliökilometrin kokoinen, ja suurin osa siitä on Wyomingin '
+                + 'luoteiskulmassa; reunat ulottuvat Montanan ja Idahon '
+                + 'puolelle. Julkista liikennettä puiston sisällä ei ole, '
+                + 'joten useimmat tulevat omalla tai vuokra-autolla. Lähimmät '
+                + 'isot lentokentät ovat Bozemanissa Montanassa ja Jackson '
+                + 'Holessa Grand Tetonin kansallispuistossa, ja pienempiä '
+                + 'kenttiä on Codyssa, Idaho Fallsissa sekä kesäisin West '
+                + 'Yellowstonessa. Portteja on viisi: länsiportti avautuu West '
+                + 'Yellowstonen pikkukaupungista, eteläportti Grand Tetonin '
+                + 'suunnasta, itäportti Codyn tieltä ja koillisportti Cooke '
+                + 'Cityn kautta, jonne idästä kiipeää 3 337 metrin solaan '
+                + 'nouseva Beartooth Highway. Vain Gardinerin pohjoisportti on '
+                + 'auki ympäri vuoden. Sisällä tärkeimmät kohteet yhdistää '
+                + 'noin 230 kilometrin Grand Loop Road, joka piirtyy kartalle '
+                + 'kahdeksikkona: eteläinen lenkki on noin 140 ja pohjoinen '
+                + 'noin 110 kilometriä. Matkat kannattaa laskea tunteina eikä '
+                + 'kilometreinä, sillä tie kiemurtelee solien yli ja liikenne '
+                + 'pysähtyy usein tienvarren eläinten takia. Kesäkuussa 2022 '
+                + 'ennätystulva vei pohjoisportin tien paikoin kokonaan, ja '
+                + 'portti avattiin uudelleen vasta lokakuun lopussa. Tieolot '
+                + 'kannattaa siksi tarkistaa puiston sivuilta juuri ennen '
+                + 'lähtöä.',
+              kuva: [
+                {
+                  tiedosto: 'Traffic at West Entrance backing up into West Yellowstone, Montana (54642717364).jpg',
+                  lyhyt: 'Kesän autojono ulottuu länsiportin kopeilta West Yellowstonen kaupunkiin asti.',
+                  selite: 'Heinäkuussa 2025 kuvatussa ilmakuvassa autot '
+                    + 'jonottavat Yellowstonen länsiportille metsän halki '
+                    + 'West Yellowstonen kaupungista asti. Heinäkuu on '
+                    + 'puiston vilkkain kuukausi.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Grand Loop Road through Golden Gate (35375950120).jpg',
+                  lyhyt: 'Grand Loop Road kiertää Golden Gaten jyrkänteen kylkeen rakennettua siltaa pitkin.',
+                  selite: 'Mammoth Hot Springsin eteläpuolella Grand Loop '
+                    + 'Road kulkee Golden Gaten rotkon kallion kylkeen '
+                    + 'rakennetulla sillalla. Suuri osa puiston tiestöstä '
+                    + 'suunniteltiin armeijan insinöörin Hiram Chittendenin '
+                    + 'johdolla puiston alkuvuosina.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Beartooth Highway Showing Switchbacks.jpg',
+                  lyhyt: 'Beartooth Highway mutkittelee järvien täplittämällä ylätasangolla lähellä solaa.',
+                  selite: 'Näkymä Beartooth Passin läheltä lounaaseen: '
+                    + 'koillisportille vievä tie kiemurtelee ylätasangon '
+                    + 'järvien lomassa. Sola on runsaan lumen takia yleensä '
+                    + 'auki vain toukokuun puolivälistä lokakuun puoliväliin.',
+                  lahde: 'WizardFusion, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laudoitus on raja',
+              teksti: 'Geysirialueilla kuljetaan puisia laudoituksia ja '
+                + 'merkittyjä polkuja pitkin, eikä niiltä saa astua sivuun. '
+                + 'Vaalea, kova näköinen maa voi olla vain ohut kuori kiehuvan '
+                + 'veden päällä, ja monen lähteen vesi on kuuman lisäksi '
+                + 'hapanta. Kuumat lähteet ovat puiston luonnonvaaroista '
+                + 'vakavimpia: niihin on vuodesta 1890 kuollut ainakin 22 '
+                + 'ihmistä. Kesäkuussa 2016 nuori mies poistui sisarensa kanssa '
+                + 'laudoitukselta Norrisin geysirialueella, liukastui kuumaan '
+                + 'lähteeseen eikä pelastunut; kännykkäyhteyttä ei ollut, ja '
+                + 'apua piti lähteä hakemaan jalan. Norris on puiston kuumin '
+                + 'geysirialue, ja toisin kuin useimmissa muissa altaissa, sen '
+                + 'vedet ovat happamia. Uiminen ja kylpeminen kuumissa '
+                + 'lähteissä on kiellettyä, samoin kaiken heittäminen niihin: '
+                + 'Morning Glory Poolin värit ovat muuttuneet, kun turistien '
+                + 'sinne heittämät esineet ovat tukkineet lähteen. Geysirien hienoa '
+                + 'sumua ei tarvitse pelätä, sillä se ehtii jäähtyä ilmassa, '
+                + 'mutta sen mineraalit voivat naarmuttaa silmälaseja ja '
+                + 'kameran linssejä, jotka kannattaa huuhdella puhtaalla '
+                + 'vedellä ennen pyyhkimistä. Syrjäisillä geysirialueilla '
+                + 'laudoituksia ei ole lainkaan, ja niille lähdetään vain '
+                + 'kokeneen oppaan kanssa.',
+              kuva: {
+                tiedosto: 'Taking photos from the boardwalks at Porcelain Basin (50134535048).jpg',
+                lyhyt: 'Kävijät kuvaavat Norrisin Porcelain Basinia höyryävän maan yli kulkevalta laudoitukselta.',
+                selite: 'Porcelain Basin kuuluu Norrisin geysirialueeseen, '
+                  + 'puiston kuumimpaan. Laudoitus kantaa kulkijan maan yli, '
+                  + 'jonka ohuen kuoren alla voi olla kiehuvaa ja hapanta '
+                  + 'vettä.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Sata jaardia karhuun',
+              teksti: 'Yellowstonessa elää Yhdysvaltain 48 yhtenäisen '
+                + 'osavaltion tihein nisäkäskeskittymä, ja moni eläin on '
+                + 'tottunut autoihin ja ihmisiin — mutta kesy se ei ole. '
+                + 'Puiston sääntö on selvä: karhuihin ja susiin pidetään '
+                + 'vähintään sadan jaardin eli 91 metrin ja kaikkiin muihin '
+                + 'eläimiin 25 jaardin eli 23 metrin välimatka. Jos eläin '
+                + 'siirtyy sinun takiasi, olet liian lähellä. Biisonit, '
+                + 'karhut ja wapitit ovat loukanneet ja tappaneet ihmisiä, ja '
+                + 'esimerkiksi vuonna 2015 biisonit vahingoittivat viittä '
+                + 'kävijää, jotka olivat menneet liian lähelle kuvaamaan. '
+                + 'Parhaat katseluajat ovat aamu- ja iltahämärä ja parhaat '
+                + 'paikat laajat laaksot: Hayden Valley kanjonin ja järven '
+                + 'välissä sekä koillisen Lamar Valley, joka on maailman '
+                + 'luotettavimpia paikkoja nähdä susia luonnossa. Kiikari tai '
+                + 'kaukoputki on tärkein varuste. Kun tienvarressa näkyy '
+                + 'karhu, liikenne voi seisoa pitkään, ja tällaisella '
+                + 'ruuhkalla on puistossa oma nimensä, bear jam. Auto ajetaan '
+                + 'levennykselle eikä jätetä keskelle tietä, eikä eläimiä '
+                + 'ruokita koskaan: ihmisten ruokaan tottunut eläin muuttuu '
+                + 'usein aggressiiviseksi. Leirissä ruoka, roskat ja '
+                + 'hajustetut tavarat säilytetään niin, etteivät karhut pääse '
+                + 'niihin käsiksi.',
+              kuva: {
+                tiedosto: 'Bear jam near Roaring Mountain (54641642107).jpg',
+                lyhyt: 'Karhua katsomaan pysähtyneet autot ruuhkauttivat tien Roaring Mountainin lähellä.',
+                selite: 'Heinäkuussa 2025 Grand Loop Roadille syntyi '
+                  + 'Roaring Mountainin lähellä ruuhka, kun autoilijat '
+                  + 'pysähtyivät katsomaan karhua. Puisto neuvoo ajamaan '
+                  + 'levennykselle ja katsomaan eläimiä kaukaa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Lunta mihin aikaan vuodesta tahansa',
+              teksti: 'Yellowstonen ylänkö on keskimäärin 2 400 metrin '
+                + 'korkeudessa, ja sää vaihtuu nopeasti. Kesäpäivinä lämpöä '
+                + 'on usein noin 25 astetta, mutta korkeimmilla paikoilla yöt '
+                + 'voivat olla pakkasella, ja iltapäivisin jyrisee ukkonen; '
+                + 'salama on puistossa tappanut ihmisiä. Lunta voi sataa '
+                + 'minä kuukautena tahansa, joten lämmin takki ja sadevaatteet '
+                + 'kuuluvat mukaan heinäkuussakin. Talvella päivälämpötila on '
+                + 'tyypillisesti 20 ja 5 pakkasasteen välillä, ja kylmin '
+                + 'puistossa mitattu lukema on −54 astetta. Marraskuun alusta '
+                + 'huhtikuun puoliväliin, osin toukokuulle asti, tiet ovat '
+                + 'kiinni pyörillä kulkevilta ajoneuvoilta; vain Gardinerista '
+                + 'Cooke Cityyn vievä tie pidetään auki. Muualle pääsee '
+                + 'joulukuun puolivälistä maaliskuun puoliväliin vain '
+                + 'opastetulla moottorikelkkaretkellä tai lumibussilla '
+                + '(snowcoach), jonka jättirenkaat tai telat kulkevat lumen '
+                + 'päällä, ja retkien päivittäinen määrä on rajoitettu. '
+                + 'Yellowstonejärvi on jäässä lähes puolet vuodesta, '
+                + 'tavallisesti vuodenvaihteesta touko–kesäkuun vaihteeseen. Keväällä '
+                + 'teitä on avattu ennen autokauden alkua ensin pyöräilijöille, '
+                + 'ja syyskuussa wapitiurosten kiimahuuto kaikuu niityillä. '
+                + 'Rauhallisinta on talvella, vilkkainta heinäkuussa.',
+              kuva: {
+                tiedosto: 'Snowcoach in front of Snow Lodge (49265891453).jpg',
+                lyhyt: 'Isorenkainen lumibussi odottaa matkustajia Old Faithful Snow Lodgen edessä.',
+                selite: 'Joulukuussa 2019 kuvattu lumibussi Old Faithful '
+                  + 'Snow Lodgen edessä. Talvella Old Faithfulin alueelle '
+                  + 'pääsee vain opastetulla lumibussilla tai '
+                  + 'moottorikelkalla, sillä tiet ovat lumen peitossa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Yösija, polut ja katvealueet',
+              teksti: 'Puiston sisällä on yhdeksän hotellia ja lomakylää, '
+                + 'yhteensä noin 2 200 huonetta ja mökkiä, sekä '
+                + 'toistakymmentä leirintäaluetta, joilla on yli 2 000 '
+                + 'paikkaa. Kesällä ne täyttyvät, joten majoitus varataan '
+                + 'hyvissä ajoin; peruutuksia tulee usein, ja täyteen '
+                + 'varattua paikkaa kannattaa kysellä uudelleen. Kuuluisin '
+                + 'majapaikka on 1903–1904 rakennettu Old Faithful Inn, '
+                + 'maailman suurin hirsihotelli, jonka noin 20 metriä '
+                + 'korkeaa aulaa hallitsee 450-tonninen kivitakka. Jos '
+                + 'puistosta ei löydy tilaa, apuun tulevat porttikaupungit: '
+                + 'West Yellowstone on lähellä geysirialueita ja Gardiner '
+                + 'Mammothia. Kännykkä ei toimi suuressa osassa puistoa, '
+                + 'joten kartat kannattaa ladata puhelimeen etukäteen, eikä '
+                + 'hätätilanteessa voi luottaa verkkoon. Retkeilypolkuja on '
+                + 'noin 1 800 kilometriä, ja purovesi keitetään tai '
+                + 'suodatetaan ennen juomista, vaikka se näyttäisi kirkkaalta. '
+                + 'Moni yllättyy siitä, että puiston vaarallisin paikka on '
+                + 'maantie: vuosina 2007–2023 puistossa kuoli 74 ihmistä, ja '
+                + 'liikenne oli yleisin syy, yli 45 prosenttia kuolemista. '
+                + 'Huoltoasemat, kaupat ja ravintolat sulkeutuvat talveksi, '
+                + 'ja niiden kaudet vaihtelevat vuosittain, joten ajantasaiset '
+                + 'tiedot kannattaa katsoa puiston omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Old Faithful Inn, lobby (9411170948).jpg',
+                lyhyt: 'Old Faithful Innin hirsiaulaa hallitsee katonrajaan asti nouseva kivitakka.',
+                selite: 'Old Faithful Inn valmistui 1904 ja on maailman '
+                  + 'suurin hirsihotelli. Arkkitehti Robert Reamer suunnitteli '
+                  + 'aulan, jonka parvia kiertävät kiemuraiset '
+                  + 'kontortamännyn oksat.',
+                lahde: 'NPS / Jim Peaco, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
