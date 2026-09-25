@@ -5199,3 +5199,7 @@ Löydös 70 on nyt webissä tuotannossa.
 ## OMISTAJA klo 08.4x (SITOVA, RAAMATTUUN): HUOLTOKOMENNOT ILMAN OMISTAJAA — sudo NOPASSWD KOODAUS-KAYTTAJALLE NELJALLE KOMENNOLLE (/etc/sudoers.d/matkakirja-huolto, visudo parsed OK): killall coreaudiod, killall -9 CoreSimulatorService, killall mDNSResponder, purge; SALLINNAT .claude/settings.json:SSA (OMISTAJA LISASI, 4 RIVIA, COMMIT OMISTAJALTA); POSTIVAHTI AJAA coreaudiod-KOMENNON KIERROKSELLAAN (>200 % YLI 2 min); LAAJEMPAA SUDOA EI ANNETA (25.9.2026 klo 08.46)
 
 Puhelimen pääte liitti heredocin yhdelle riville — yksiriviset printf-komennot toimivat; oppi: omistajalle annettavat komennot aina yksirivisinä. Fablen luokitin esti settings.json:n lisäämisen committiin (self-modification), joten omistaja committoi sen itse.
+
+## SISALTOKIRJURI 71 % → LUOVUTUS JA NOLLAUS KASKETTY (LUOVUTUS -20260925.md, clear_session SAMASSA VUOROSSA, LEPOILMOITUS TILATTU) (25.9.2026 klo 08.55)
+
+Postivahdin ilmoitus klo 08.5x.
