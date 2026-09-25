@@ -18,7 +18,7 @@ kirjataan lahteet.js:iin samassa muutoksessa kuin aineisto.
 | 5a | 0ccd41da + 768783c0 (rintaman hehku näkyväksi) | junassa; aamunkoitto todennettu; hehku silti hillitty |
 | 5b v2 | 65456d2f: kohteen jaksossa laskeutuminen 0,45 × saapumiskorkeus (2 200–4 000 km) ja 28°, kääre Ydin/Aikajana/IhmisenMatka2Ymparisto | junassa, 16/16 kohdetta 28° (iPhone) |
 | loppukuva | ed684ce7: kaikki vanat hehkuvat (_Hehku.w) | junassa |
-| 3 sumu | 8c3befc8 + 005ba109 (tasainen usvapohja, ei seutusumua avauksessa) | merge-pyynnössä Natiivisepällä (23.1x), todennettu 5b92be07 |
+| 3 sumu | 8c3befc8 + 005ba109 (tasainen usvapohja, ei seutusumua avauksessa) | JUNASSA 49945738 (build 17), todennettu 5b92be07 |
 
 **Erä 3, sumu** (Natiiviseppä hyväksyi Linssit-puolelle ehdoin: ei KarttaKerroksia eikä laattavarjostinta, vain II:n aikana,
 kevyt, merge-pyyntöön A/B-kehysajat ja video). IhmisenMatka2Sumu + Pilvikuori + Pilvet.shader (_Hamara, _Keila*, _Tasainen,
@@ -43,13 +43,13 @@ Proto-haara linssiseppa/esilataus adca3817 (worktree /Users/Shared/Claude/wt/pro
 yhdistyy II-haaran kanssa ilman konflikteja. LinssienEsilataus (Ydin, 4 testiä): Ihmisen matka I/II, keksinnöt ja astronautti.
 LinssienEsilataaja: rekisterin Vaihtui → Kuvat.Esilataa koko kaarelle (SeuraavaRuutu), Kuvat.Hae kahdelle 1,5 s jälkeen;
 Esilataaja.Joutilas → Ihmisen matkan kaari (TamaKaupunki). Todennettu 5b92be07: II kaari 20/täysinä 2, keksinnöt 26/2,
-satelliitti 64/2, joutilaana kaari 20; kuvavälimuisti 263 → 346. Merge-pyynnössä Natiivisepällä (23.1x), kopio Pelikoodarille.
+satelliitti 64/2, joutilaana kaari 20; kuvavälimuisti 263 → 346. JUNASSA 49945738 (build 17), kopio Pelikoodarille.
 Jäljellä: radion nykyinen ja seuraava asema puskuroituna, avaruuslinssin topografia ±1 (Laattapalvelin.Esilataa), radiomastot
 ja yövalot joutilaana. Merge-pyyntö Natiivisepälle, kopio Pelikoodarille.
 
 ## Seuraavaksi
 
-1. Sumu (005ba109) ja esilataus (adca3817) junaan: seuraa Natiivisepän mergeä, ilmoita Fablelle build-merkintää varten.
+1. Sumu (005ba109) ja esilataus (adca3817) ovat junassa 49945738 (build 17, Natiiviseppä 23.2x; Fablelle ilmoitettu).
 2. Esilatauksen loput (radion puskurointi, topografia ±1, mastot ja yövalot) Pelikoodarin rajapinnalla.
 3. Erän 5 loput (yllä) ja iPad-video II:sta (linssiseppa-iPad11 903C2B91).
 
