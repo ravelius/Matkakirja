@@ -155,3 +155,28 @@ Yhteensä tässä tilauksessa: 97 kuvaa.
 - Lisää samassa PR:ssä `js/packs/maakunnat-luonnehdinnat.js`:ään kunkin alueen olioon kenttä `pikkukuva: 'assets/kartat/maakunnat/<tiedosto>.webp'` (rakenne kuten `kuva`-kenttä samassa tiedostossa, mutta merkkijono ei taulukko — vain tämä yksi pieni leikattu kuva).
 - Kirjoita tähän postilaatikkoon rivi "PR #n valmis junaan" (mainitse maa/maat ja aluemäärä).
 - Sisältökirjuri kirjoittaa vartijatestin ensimmäisen erän saavuttua ja ilmoittaa, jos jokin kuva ei läpäise sitä.
+
+### Lisäys 25.9. ilta: GRC mukaan heti 7 maan perään
+
+Fable vahvisti: GRC:n maakuntarajat ovat Karttasepän 2026-09-25a-vektoreissa ja sisältöpaketti 1.42:ssa (tuotantoon build 15:n jälkeen) — pelkkä tools/vienti/maakuntarajat.json on vanha webin 128 alueen tiedosto eikä sitä tarvitse odottaa. GRC:n 14 maakunnan luonnehdinnat ovat nyt tekstinä (PR #3219, js/packs/maakunnat-luonnehdinnat.js). Sama tyylisääntö ja polkukaava kuin yllä (assets/kartat/maakunnat/grc-<slug>.webp). Järjestys: GRC heti FRA→ESP→ITA→GBR-erän jälkeen, ennen DEU→POL→AUT.
+
+
+### GRC (14)
+
+| Tunnus | Nimi | Lyhyt (konteksti) |
+| --- | --- | --- |
+| Attiki | Attiki | Ateenan Akropolis kohoaa yhä keskustan yllä, mutta rannikolla Ateenan Riviera houkuttelee uimaan aivan kaupungin kupeessa. |
+| Kentriki Makedonia | Keski-Makedonia | Thessaloniki on Kreikan toiseksi suurin kaupunki, ja sen rantabulevardilla Valkoinen torni katsoo yhä Thermaisenlahdelle. |
+| Kriti | Kreeta | Kreeta on Kreikan suurin saari, ja sen vuoristoisella Samarian rotkolla vaeltaa tuhansia retkeilijöitä joka kesä. |
+| Peloponnisos | Peloponnesos | Korinton kanava halkaisee Peloponnesoksen niemimaan kapeasta kannaksesta, ja sillalta autoilijat katsovat yli 70 metriä alas. |
+| Thessalia | Thessalia | Thessalian pystyjen kalliopylväiden laella kohoavat Meteoran luostarit, joihin munkit kiipesivät ennen tikapuilla ja köysillä. |
+| Ipeiros | Epeiros | Epeiroksen Vikosin rotko on maailman syvimpiä suhteessa leveyteensä, ja sen reunoilla vanhat kivikylät ovat yhä asuttuja. |
+| Dytiki Makedonia | Länsi-Makedonia | Kastorian kaupunki kiertää turkiskaupasta vaurastuneen järven ympäri, ja talvisin sen kapea niemi peittyy usein usvaan. |
+| Dytiki Ellada | Länsi-Kreikka | Rio–Antirrion silta yhdistää Peloponnesoksen manner-Kreikkaan, ja Patran karnevaali on koko maan suurin katujuhla. |
+| Stereá Elláda | Keski-Kreikka | Delfoin oraakkelin rauniot kohoavat Parnassosvuoren rinteellä – antiikin kreikkalaiset pitivät paikkaa maailman napana. |
+| Anatoliki Makedonia kai Thraki | Itä-Makedonia ja Traakia | Traakiassa asuu Kreikan suurin muslimivähemmistö, ja rajajoki Evros erottaa alueen naapurimaasta Turkista. |
+| Ionioi Nisoi | Jooniansaaret | Korfun venetsialaistyylinen vanhakaupunki on Unescon listalla, ja Joonianmeren saaristo makaa Kreikan läntisimpänä. |
+| Notio Aigaio | Etelä-Egean saaret | Etelä-Egean saariin kuuluvat sekä Santorinin tulivuorikaldera että Rodoksen keskiaikainen ritarilinnoitus. |
+| Voreio Aigaio | Pohjois-Egean saaret | Lesboksen saaren kivettynyt metsä on yli 20 miljoonaa vuotta vanha, ja saari tunnetaan yhä anisviina ouzon tislauksesta. |
+| Ayion Oros | Athos | Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan. |
+
