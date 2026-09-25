@@ -117717,6 +117717,338 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Piikkipiru',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Kalgoorlie; Prospector (Western Australian train);
+       * Kalgoorlie railway station; Kalgoorlie–Boulder Airport; Goldfields
+       * Water Supply Scheme; Golden Pipeline Heritage Trail; Palace Hotel,
+       * Kalgoorlie; Exchange Hotel, Kalgoorlie; York Hotel, Kalgoorlie;
+       * Diggers & Dealers; Boulder, Western Australia; Andrew Wilson
+       * (architect); Western Australian Museum; Kanowna, Western Australia;
+       * Coolgardie, Western Australia; Coolgardie safe; Lake Ballard; Lake
+       * Lefroy; Menzies, Western Australia) ja Wikivoyagen Kalgoorlie-,
+       * Coolgardie- ja Menzies-sivuilta — teksti omaa. Wikivoyagen tiedot
+       * (Midlandin pysäkki, kaupunkibussien vuorovälit, museon holvi ja
+       * ammattiyhdistysliput, Super Pitin näköalapaikan tie, Karlkurlan
+       * 4 km:n kierros, Pyhän Barbaran kulkue, Race Round syyskuussa, Menzies
+       * Classic, Lake Ballardin 51 km:n soratie ja leiripaikka) on
+       * päivitetty eri vuosina 2015–2024, joten tekstissä ei ole
+       * aukioloaikoja eikä hintoja. Lentokentän etäisyys vaihtelee
+       * lähteissä (Wikipedia 5,6 km, Wikivoyage 7 km), samoin Kanownan
+       * (Wikipedia noin 20 km, Wikivoyage 29 km tietä pitkin). Boulderin
+       * kaupungintalon esirippu, peltikatot ja Nellie Melba ovat kuvan
+       * "Boulder Town Hall, Western Australia.jpg" Commons-kuvauksesta;
+       * vuosi 1908 ja arkkitehti Wikipedian Andrew Wilson -artikkelista.
+       * Salin nykyistä aukioloa ei väitetä, koska Commons-kuvaus kertoo
+       * maanjäristyksen jälkeisestä sulusta. Kaksiraha-pelin (two-up)
+       * nykytilaa ei voitu tarkistaa, joten se jätettiin pois.
+       * Nostojen aiheita (nimen alkuperä ja wongatha-kansat, Paddy Hannanin
+       * löytö ja patsas, afgaanikamelit, Boulderin eroaminen ja
+       * kehärata, Hannans Northin kaivosmuseo, piikkipiru, Superpitin koko,
+       * yhdistäminen 1989, kalaveriitti, jättirekat, Hannan Streetin
+       * rakennukset, louhinnan jatko 2035) sekä Oseanian valokuvien
+       * (Palace Hotelin julkisivu, Komatsu-kaivinkone) ja saapumistekstin
+       * aiheita ei toisteta. Galleriaa lohkossa ei ole. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta, ja kuvat katsottu
+       * silmin. Pystykuva: Exchange Hotel Palace Hotelin verannalta
+       * (Bahnfrend, CC BY-SA 4.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Exchange Hotel, Kalgoorlie, 2018 (01).jpg',
+          lyhyt: 'Exchange Hotelin kulmatorni Hannan Streetillä Palace Hotelin verannan alta nähtynä.',
+          selite: 'Heinäkuussa 2018 kuvattu Exchange Hotel seisoo Hannan- ja '
+            + 'Maritana Streetin kulmassa, ja sen kulmatornin huipulla '
+            + 'liehuu hotellin lippu. Kuva on otettu kadun toiselta puolelta '
+            + 'Palace Hotelin verannan alta. Etualan kyltti mainostaa '
+            + 'Hooverin kahvilaa, joka on nimetty hotellin kuuluisimman '
+            + 'kanta-asiakkaan mukaan.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kalgoorlie–Boulder on Länsi-Australian kultakenttien '
+          + 'pääkaupunki, noin 600 kilometriä Perthistä itään Great Eastern '
+          + 'Highwayn päässä. Kaupunkialueella asui vuonna 2021 noin 29 000 '
+          + 'ihmistä, ja kaivostoiminta työllistää yhä noin neljänneksen '
+          + 'työvoimasta. Matkailijalle Kalgoorlie on harvinainen yhdistelmä '
+          + 'toimivaa kaivoskaupunkia ja hyvin säilynyttä kultakauden '
+          + 'katukuvaa. Tämä opas kertoo, miten aavikon yli pääsee junalla, '
+          + 'missä historiallisissa pubeissa istutaan, mitä museoissa ja '
+          + 'juhlissa nähdään, minne päiväretket suuntautuvat ja miten '
+          + 'kuumassa kaivoskaupungissa pärjää.',
+        artikkeli: {
+          nimi: 'Matkailijan Kalgoorlie',
+          teksti: 'Perthistä pääsee junalla perille päivässä, mutta hotellihuone kannattaa varata ennen junalippua.',
+          nosto: 'Boulder Block -pubiin oli oma kaivoskuilu, jota pitkin '
+            + 'maanalaiset työmiehet pääsivät oluelle, kunnes Superpit nieli '
+            + 'sen vuonna 1991.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Prospector ylittää aavikon',
+              teksti: 'Mukavin tapa tulla Kalgoorlieen on juna. Transwan '
+                + 'Prospector ajaa East Perthin asemalta Kalgoorlieen joka '
+                + 'päivä, maanantaisin ja perjantaisin kahdesti, ja kyytiin '
+                + 'pääsee myös Midlandista Perthin itälaidalta. Rataa on 653 '
+                + 'kilometriä, ja matka kestää noin kuusi ja kolme neljännestä '
+                + 'tuntia. Kaksi junaa lähtee suunnilleen yhtä aikaa '
+                + 'vastakkaisiin suuntiin, ja miehistöt vaihtavat junaa '
+                + 'puolivälissä Merredinissä. Kaikki paikat ovat samaa '
+                + 'luokkaa. Istuimissa on kosketusnäyttö elokuville ja '
+                + 'musiikille sekä pistorasia, ja vuodesta 2022 junassa on '
+                + 'ollut langaton verkko. Ruoka ei sisälly lippuun, mutta '
+                + 'buffetista saa kinkkujuustosarvia, piirakoita, muffinsseja, '
+                + 'virvokkeita ja alkoholia. Nykyiset junat tulivat '
+                + 'liikenteeseen 2004. Ne kulkisivat 200 kilometriä tunnissa, '
+                + 'mutta rata sallii enintään 160. Prospector aloitti 29. '
+                + 'marraskuuta 1971 ja korvasi yöjunan, jolla matka oli '
+                + 'kestänyt neljätoista tuntia. Uusi päiväjuna selvisi '
+                + 'matkasta kahdeksassa tunnissa ja oli silloin Australian '
+                + 'nopein. Kesäkuuhun 2025 päättyneenä vuonna sillä matkusti '
+                + 'noin 82 600 ihmistä. Kalgoorlien asema avattiin syyskuussa '
+                + '1896, ja sen päälaituri oli aikanaan Länsi-Australian '
+                + 'pisin, 527 metriä. Asemalta kävelee keskustaan ja '
+                + 'hotelleille. Idästä saapuu kerran viikossa Sydneyn ja '
+                + 'Perthin väliä ajava Indian Pacific, joka pysähtyy '
+                + 'Kalgoorliessa. Perthistä lennetään Kalgoorlie–Boulderin '
+                + 'kentälle useita kertoja päivässä, ja reittiä lentävät '
+                + 'Qantas, Virgin Australia ja Alliance Airlines. Autolla '
+                + 'Great Eastern Highway vie Perthistä perille kuudessa tai '
+                + 'seitsemässä tunnissa. Tie seuraa suurimman osan matkasta '
+                + 'vesiputkea, joka on tuonut kaupunkiin juomavettä vuodesta '
+                + '1903. Esperancesta etelärannikolta ajaa Transwan bussi '
+                + 'kolmesti viikossa, ja matka kestää noin viisi tuntia.',
+              kuva: [
+                {
+                  tiedosto: 'Prospector Salt Flats.jpg',
+                  lyhyt: 'Prospector ylittää valkoisen suolatasangon Cunderdinin länsipuolella matkalla Kalgoorlieen.',
+                  selite: 'Tammikuussa 2026 kuvattu kaksivaunuinen '
+                    + 'Prospector kulkee penkereellä, jonka juurella '
+                    + 'kimaltaa valkoinen suolatasanko matalien pensaiden '
+                    + 'keskellä. Kuvaajan mukaan juna on matkalla '
+                    + 'Kalgoorlieen hieman Cunderdinin länsipuolella.',
+                  lahde: 'Riley the dude, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Prospector, Kalgoorlie, 2016 (01).jpg',
+                  lyhyt: 'Keltakeulainen Prospector odottaa lähtöä Kalgoorlien aseman katetulla laiturilla.',
+                  selite: 'Toukokuussa 2016 kuvattu Prospector on lähdössä '
+                    + 'sunnuntai-iltapäivänä takaisin East Perthiin. '
+                    + 'Laituria varjostaa puinen katos, ja matkustajat '
+                    + 'nousevat kyytiin rautaisen aidan rajaamalta '
+                    + 'laiturilta.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kalgoorlie railway station, 2016 (01).jpg',
+                  lyhyt: 'Kalgoorlien matala tiiliasema Forrest Streetiltä, edessä sotilaan patsas.',
+                  selite: 'Kalgoorlien rautatieaseman pitkä tiilirakennus '
+                    + 'aaltopeltikattoineen toukokuussa 2016 Forrest '
+                    + 'Streetiltä nähtynä. Etualan liikenneympyrässä seisoo '
+                    + 'muistomerkki, jonka huipulla on kivääriä kantavan '
+                    + 'sotilaan patsas.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Pubeja kultakauden parvekkeilla',
+              teksti: 'Wikivoyagen mukaan Kalgoorliessa on toiminnassa '
+                + 'parikymmentäviisi pubia, ja monet niistä ovat kultakauden '
+                + 'komeita kulmahotelleja, joissa olut tilataan paikallisten '
+                + 'tapaan middy-lasista. Hannan- ja Maritana Streetin '
+                + 'risteyksessä seisoo kaksi kilpailijaa vastakkain. Palace '
+                + 'Hotel avattiin joulukuussa 1897. Siinä oli 44 huonetta, ja '
+                + 'se oli kaupungin ensimmäinen hotelli, jossa oli sähkövalo '
+                + 'oman generaattorin ansiosta. Aulassa on peili, jonka nuori '
+                + 'kaivosinsinööri Herbert Hoover jätti hotellille ennen '
+                + 'lähtöään Kiinaan, ja sen vieressä ote runosta, jonka hän '
+                + 'kertoman mukaan kirjoitti ihastumalleen baarineidolle. '
+                + 'Hooverista tuli myöhemmin Yhdysvaltain presidentti. '
+                + 'Hotellin parvekeravintolasta näkee pääkadulle. Kadun '
+                + 'toisella puolella on vuonna 1900 rakennettu Exchange Hotel '
+                + 'kulmatorneineen. Vuoden 1934 rotumellakoiden aikana Bill '
+                + 'Trythall osti sen edelliseltä omistajalta, jonka nimi '
+                + 'kuulosti vieraalta, ja rakennus säästyi vaurioilta. '
+                + 'Kauempana Hannan Streetillä on York Hotel vuosilta '
+                + '1900–1901, kaksikerroksinen kupolitalo, joka pääsi '
+                + 'postimerkkiin 1992. Boulderissa vanhoja hotelleja on '
+                + 'Burt Streetin varrella. Kaikki pubit eivät ole säilyneet: '
+                + 'Boulder Block purettiin 1991 Superpitin tieltä. Joidenkin '
+                + 'pubien etubaarissa tarjoilevat niukasti pukeutuneet '
+                + 'skimpy-baarimikot, joten perheen kanssa kannattaa valita '
+                + 'ravintolasali tai olutpuutarha. Hannan Streetin varrelta '
+                + 'löytyy keittiöitä intialaisesta thaimaalaiseen, ja '
+                + 'pikaruokaketjut ovat Boulder Roadin varrella. Retkelle '
+                + 'lähtevän kannattaa täydentää ruokavarastot Kalgoorliessa, '
+                + 'sillä seuraavat kunnon kaupat ovat vasta Esperancessa tai '
+                + 'Perthissä. Boulderin Burt Streetillä ja Loopline Parkissa '
+                + 'pidetään kuukauden kolmantena sunnuntaina markkinat, '
+                + 'joilla myydään käsitöitä sekä vähän hedelmiä ja '
+                + 'vihanneksia.',
+              kuva: {
+                tiedosto: 'York Hotel, Kalgoorlie, WA, 2023.jpg',
+                lyhyt: 'York Hotelin kupolit hehkuvat laskevan auringon valossa Hannan Streetillä.',
+                selite: 'Elokuussa 2023 kuvatun York Hotelin punatiilinen '
+                  + 'julkisivu ja kaksi kupolia hohtavat illan oranssissa '
+                  + 'valossa. Parvekkeella on terassipöytiä aurinkovarjojen '
+                  + 'alla, ja katoksen kyltti mainostaa ravintolaa, '
+                  + 'urheilubaaria ja majoitusta.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Nostotorni museon portilla',
+              teksti: 'Kultakenttien historiaan pääsee parhaiten Museum of '
+                + 'the Goldfieldsissä Hannan Streetillä. Se on yksi '
+                + 'Länsi-Australian museon kuudesta toimipisteestä, ja sen '
+                + 'sisäänkäynnin merkkinä kohoaa punainen kaivoksen '
+                + 'nostotorni, jonka näköalatasanteelta näkee kaupungin yli. '
+                + 'Wikivoyagen mukaan kultakimpaleet ja muut kiiltävät '
+                + 'esineet ovat maanalaisessa holvissa, yläkerrassa on '
+                + 'alkuperäiskansojen esineistöä ja kaivoskauden arkea, ja '
+                + 'viereisen British Arms -hotellin tiloissa on vanhoja '
+                + 'ammattiyhdistysten lippuja. Hannan- ja Wilson Streetin '
+                + 'kulmassa ovat Kalgoorlien kaupungintalo ja '
+                + 'matkailuneuvonta. Boulderin kaupungintalo valmistui 1908 '
+                + 'arkkitehti A. Oswald Wilsonin suunnitelmista. Salissa on '
+                + 'prässätyt peltikatot, takorautaiset kaiteet ja Philip '
+                + 'Goatcherin maalaama näyttämöesirippu, ja näyttämöllä on '
+                + 'esiintynyt muun muassa oopperalaulaja Nellie Melba. '
+                + 'Huhtikuussa 2010 voimakkuudeltaan 5,0 maanjäristys '
+                + 'vaurioitti Burt Streetin vanhoja rakennuksia, ja koko '
+                + 'kortteli evakuoitiin muutamaksi päiväksi. Tapahtumat '
+                + 'seuraavat kaivosten rytmiä. Joka elokuu pidettävä Diggers '
+                + '& Dealers on Australian merkittävin kaivoskonferenssi. '
+                + 'Sen käynnisti 1992 Palace Hotelin omistaja Geoffrey '
+                + 'Stokes kymmenen osallistujan voimin, ja nykyään '
+                + 'osallistujia on yli 2 500. Syyskuussa laukkakausi '
+                + 'huipentuu Race Roundiin, ja naapurin Coolgardie viettää '
+                + 'samaan aikaan omaa päiväänsä. Joulukuun alussa juhlitaan '
+                + 'kaivosmiesten suojeluspyhimystä Pyhää Barbaraa, ja '
+                + 'pääkulkueessa kaivosmiehet ajavat jättimäisillä '
+                + 'kuorma-autoillaan Hannan Streetiä pitkin. Kesäkuun '
+                + 'ensimmäisenä viikonloppuna Kalgoorliesta lähtee Menzies '
+                + 'Classic -pyöräkilpailu, jota on ajettu vuodesta 1928. '
+                + 'Hay Street oli vuosikymmeniä kaupungin punaisten lyhtyjen '
+                + 'katu. Siellä toimii yhä Questa Casa, joka kertoo '
+                + 'aloittaneensa 1904 ja järjestää aikuisille historiaan '
+                + 'keskittyviä kierroksia.',
+              kuva: {
+                tiedosto: 'Boulder Town Hall, Western Australia.jpg',
+                lyhyt: 'Boulderin kaupungintalo vuodelta 1908 kellotorneineen, edessä korkea palmu.',
+                selite: 'Toukokuussa 2007 kuvattu Boulderin kaupungintalo '
+                  + 'on punatiilinen, valkoisin koristein reunustettu '
+                  + 'rakennus, jonka kulmassa kohoaa kellotorni '
+                  + 'harmaanvihreine kupoleineen. Edustan liikenneympyrässä '
+                  + 'kasvaa korkea palmu. Salin aarre on Philip Goatcherin '
+                  + 'maalaama näyttämöesirippu.',
+                lahde: 'Michael Gorey, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Räjäytys kello yksi, patsaat suolajärvellä',
+              teksti: 'Superpitin avolouhos toimii ympäri vuorokauden, ja '
+                + 'sen reunalle Boulderin laidalle on rakennettu yleisön '
+                + 'näköalapaikka, jonne ajetaan Mount Monger Roadilta. '
+                + 'Paikalla on opastetauluja ja vanhoja kaivoskoneita. '
+                + 'Louhoksessa räjäytetään kerran päivässä kello 13, ellei '
+                + 'tuuli uhkaa kantaa pölyä kaupungin ylle, joten '
+                + 'näköalapaikalle kannattaa ehtiä vähän ennen. Kaivoksen '
+                + 'työntekijöiden on asuttava Kalgoorliessa, vaikka '
+                + 'kaupungin lentokenttä on muuten seudun kaivoksille '
+                + 'lentävien työntekijöiden solmukohta. Parhaan näköalan '
+                + 'kaupungin yli saa Mount Charlotten mäeltä pohjoislaidalla, '
+                + 'jossa on Perthistä tulevan vesiputken pääteallas. '
+                + 'Karlkurla Bushland Parkissa kaupungin laidalla neljän '
+                + 'kilometrin kierros nousee eukalyptusmetsän läpi '
+                + 'näköalatasanteelle. Kultaryntäyksen varjopuolen näkee '
+                + 'Kanownassa, parikymmentä kilometriä itään. Siellä asui '
+                + '1899 yli 12 000 ihmistä, mutta pintakulta loppui nopeasti, '
+                + 'ja vuonna 1953 kaupunki oli autio. Jäljellä ovat '
+                + 'asemalaituri, kaksi hautausmaata ja kyltit, jotka '
+                + 'kertovat, missä kaupat ja hotellit ennen seisoivat. '
+                + 'Coolgardie 38 kilometriä lounaaseen oli 1898 siirtokunnan '
+                + 'kolmanneksi suurin kaupunki noin 15 000 asukkaallaan. '
+                + 'Pääkatu sai sähkövalot 1896, mutta 1924 sitä valaisi '
+                + 'neljä myrskylyhtyä. Coolgardiessa keksittiin 1890-luvun '
+                + 'lopulla haihtuvalla vedellä viilentävä ruokakaappi, '
+                + 'Coolgardie safe, ja hautausmaalla lepää tutkimusmatkailija '
+                + 'Ernest Giles. Pidemmän päiväretken arvoinen on Lake '
+                + 'Ballard. Menziesin pikkukaupunkiin on Kalgoorliesta 132 '
+                + 'kilometriä pohjoiseen, ja sieltä tasainen soratie vie noin '
+                + '50 kilometriä järvelle ilman nelivetoakin. Tavallisesti '
+                + 'kuivan suolajärven pinnalle brittiläinen kuvanveistäjä '
+                + 'Antony Gormley pystytti 2003 Perthin taidefestivaalin '
+                + '50-vuotisjuhlaan 51 metallihahmoa, jotka on muotoiltu '
+                + 'Menziesin asukkaiden laserkeilauksista. Veistosten piti '
+                + 'olla väliaikaisia, mutta ne jäivät järvelle. Parhaimmillaan '
+                + 'ne ovat aamulla ja myöhään iltapäivällä, kun '
+                + 'keskipäivän kuumuus ei polta suolapintaa. Kambaldan '
+                + 'kupeessa noin 55 kilometriä Boulderista etelään on Lake '
+                + 'Lefroy, jonka laajaa suolakuorta pidetään yhtenä '
+                + 'parhaista paikoista maapurjehdukseen.',
+              kuva: {
+                tiedosto: 'Lake Ballard - Inside Australia (2009).jpg',
+                lyhyt: 'Gormleyn hoikka metallihahmo peilautuu veden peittämän Lake Ballardin pintaan.',
+                selite: 'Maaliskuussa 2009 kuvattu Lake Ballard on '
+                  + 'poikkeuksellisesti veden peitossa, ja Antony Gormleyn '
+                  + 'veistos heijastuu tyyneen pintaan kuin peiliin. '
+                  + 'Horisontissa erottuu kaksi muuta hahmoa, ja oikealla '
+                  + 'järveen työntyy matala niemi.',
+                lahde: 'Tamsin Slater, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Varaa huone ennen kaivosmiehiä',
+              teksti: 'Kalgoorliessa on kuuma, puolikuiva ilmasto. '
+                + 'Tammikuun keskimääräinen ylin lämpötila on noin 34 astetta, '
+                + 'ja kuumien pohjoistuulten aikaan yli 40 astetta mitataan '
+                + 'lähes kerran viikossa. Heinäkuussa päivälämpö jää noin 17 '
+                + 'asteeseen, ja tavallisena talvena yölämpötila putoaa '
+                + 'pakkasen puolelle noin neljä kertaa. Sadetta tulee '
+                + 'vuodessa keskimäärin 260 millimetriä, mutta vuosien '
+                + 'vaihtelu on suurta. Lämpiminä iltapäivinä kärpäsiä on '
+                + 'paljon, ja Lake Ballardille kannattaa ottaa hyönteisverkko '
+                + 'tai karkotetta. Majoitus on varattava hyvissä ajoin, sillä '
+                + 'motellit täyttyvät kaivoksille lentävistä työntekijöistä. '
+                + 'Elokuun kaivoskonferenssin aikaan huoneet on varattu jopa '
+                + 'kaksi vuotta etukäteen, yöhinnat voivat nousta 150 '
+                + 'prosenttia, ja paikallisia kehotetaan vuokraamaan kotinsa '
+                + 'ja lähtemään kaupungista. Lentokenttä on kuuden–seitsemän '
+                + 'kilometrin päässä keskustasta etelään. Sen pysäköintialue '
+                + 'on usein täynnä kaivostyöläisten autoja, eikä kentältä '
+                + 'kulje bussia, mutta taksit odottavat jokaista saapuvaa '
+                + 'lentoa. Suurilla vuokra-autoyhtiöillä on toimipiste '
+                + 'kentällä, mutta kaivosyhtiöt vuokraavat paljon autoja '
+                + 'etenkin messujen aikaan, joten auto on varattava ajoissa. '
+                + 'Tarjolla on tavallisesti isoja sedaneja ja nelivetoja. '
+                + 'Keskustan nähtävyydet ovat kävelymatkan päässä toisistaan. '
+                + 'Kaupunkibussit kiertävät kolmella linjalla, ja '
+                + 'matkailijalle hyödyllisin on Kalgoorlien ja Boulderin '
+                + 'välinen linja. Wikivoyagen mukaan bussit kulkevat päivisin '
+                + 'noin kerran tunnissa ja viikonloppuisin vain aamupäivisin, '
+                + 'ja päätepysäkki on Hannan- ja Maritana Streetin kulmassa. '
+                + 'Pohjoiseen Goldfields Highwaylla Menzies on ainoa kaupunki '
+                + 'ennen Leonoraa, eikä sieltä aina saa polttoainetta, joten '
+                + 'tankki täytetään Kalgoorliessa. Menziesissä ei ole '
+                + 'supermarkettia, ja puhelin toimii vain kaupungissa ja vain '
+                + 'Telstran verkossa. Lake Ballardin ilmaisella leiripaikalla '
+                + 'on vain kuivakäymälä ja tulipaikat, joten vesi ja ruoka '
+                + 'otetaan mukaan.',
+              kuva: {
+                tiedosto: 'Kalgoorlie-Boulder Airport terminal, 2018 (01).jpg',
+                lyhyt: 'Kalgoorlie–Boulderin lentoaseman matala terminaali keltaisine teräsristikoineen.',
+                selite: 'Heinäkuussa 2018 kuvatun terminaalin katoksia '
+                  + 'kannattelevat keltaiset teräsristikot, ja '
+                  + 'jalkakäytävän varressa on yleisilmailun opaste. '
+                  + 'Taustalla kohoaa valkoinen torni kirkkaan sinistä '
+                  + 'taivasta vasten.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'superpit',
