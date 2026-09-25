@@ -3311,4 +3311,134 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Rökin kirkon vieressä seisoo Rökin riimukivi, jossa on noin 760 riimua – se on pisin tunnettu kiveen hakattu riimukirjoitus.',
     },
   },
+  /*
+   * NOR (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.NOR:n tunnuksia:
+   * Natural Earthin 19 vanhaa (ennen 2020 uudistusta) fylkeä sekä
+   * Svalbard (Huippuvuoret) ja Bouvet Island. Jan Mayen ei ole omana
+   * avaimenaan. Luonnehdinta kertoo paikan, joka kuului juuri siihen
+   * vanhaan fylkeen. Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Akershus          — Eidsvollsbygningen (perustuslaki 17.5.1814,
+   *                       kansallismonumentti ja museo, Akershus)
+   *   Aust-Agder        — Grimstad Municipality (Ibsen apteekin
+   *                       oppipoikana 1844–1847, Catilina 1848/49,
+   *                       nuoruusvuosien museo) + Aust-Agder (Grimstad)
+   *   Bouvet Island     — Bouvet Island (maailman syrjäisin saari,
+   *                       93 % jäätikköä, 1 700 km Kuningatar Maudin maahan)
+   *   Buskerud          — Kongsberg Silver Mines (1623–1958, yli 4 000
+   *                       työntekijää 1770-luvulla, Norjan suurin
+   *                       esiteollinen työpaikka) + Buskerud (Kongsberg)
+   *   Finnmark          — Rock carvings at Alta (yli 6 000 piirrosta,
+   *                       vanhimmat n. 4200 eaa., Unesco 1985, n. 3 km
+   *                       puisia kulkuteitä Jiepmaluoktassa)
+   *   Hedmark           — Trysil Municipality (Trysilfjellet Norjan
+   *                       suurin talviurheilukeskus, 65 rinnettä;
+   *                       kuului historiallisesti Hedmarkiin)
+   *   Hordaland         — Bryggen (hansakontori n. 1350, Unesco 1979)
+   *                       + Hordaland (Bergen osa läänistä 1972 alkaen)
+   *   Svalbard          — Svalbard (jääkarhut suojeltuja, asutuksen
+   *                       ulkopuolella karkotusvälineet pakollisia,
+   *                       aseen kantamista suositellaan)
+   *   Møre og Romsdal   — Atlantic Ocean Road (8,3 km, kahdeksan
+   *                       siltaa, "world's best road trip")
+   *   Nord-Trøndelag    — Battle of Stiklestad (1030, Olavi II kaatui)
+   *                       + Nord-Trøndelag (Saint Olav Drama 1954 alkaen)
+   *   Nordland          — Saltstraumen (jopa 400 milj. m³ kuuden tunnin
+   *                       välein, pyörteet, Bodø)
+   *   Oppland           — Galdhøpiggen (2 469 m, Pohjois-Euroopan
+   *                       korkein, Galdhøpiggen Summer Ski Centre
+   *                       jäätiköllä) + Oppland (Galdhøpiggen läänissä)
+   *   Oslo              — Nobel Peace Prize (ainoa Nobel, jota ei
+   *                       ojenneta Tukholmassa, 10.12., Oslon
+   *                       kaupungintalo 1990 alkaen, kuninkaan läsnä ollessa)
+   *   Rogaland          — Preikestolen (604 m Lysevuonon yllä,
+   *                       300 000 kävijää 2024)
+   *   Sogn og Fjordane  — Sognefjord (205 km, syvin 1 308 m, "King of
+   *                       the Fjords")
+   *   Sør-Trøndelag     — Nidaros Cathedral (Olavi II:n hautapaikan
+   *                       päällä, maailman pohjoisin keskiaikainen
+   *                       katedraali) + Sør-Trøndelag (Trondheim)
+   *   Telemark          — Rjukan (ei suoraa auringonvaloa syys–
+   *                       maaliskuussa, peilit 2013 heijastavat torille)
+   *   Troms             — Tromsø (keskiyön aurinko 19.5.–27.7. eli 71 vrk, kaamos
+   *                       28.11.–14.1., 48 vrk)
+   *   Vest-Agder        — Lindesnes Lighthouse (majakka paikalla vuodesta
+   *                       1656) + Vest-Agder (Lindesnes manner-Norjan
+   *                       eteläisin kohta)
+   *   Vestfold          — Oseberg ship (hautakumpu Tønsbergin lähellä,
+   *                       kaivaus 1904–1905, kaksi naista, hautaus
+   *                       syksyllä 834)
+   *   Østfold           — Østfold (Glomma Norjan pisin joki, laskee
+   *                       mereen Fredrikstadissa) + Fredrikstad
+   *                       (Pohjois-Euroopan parhaiten säilynyt
+   *                       linnoitettu kaupunki itärannalla)
+   */
+  NOR: {
+    Akershus: {
+      lyhyt: 'Eidsvollin kartanossa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nyt museo ja kansallismonumentti.',
+    },
+    'Aust-Agder': {
+      lyhyt: 'Grimstadissa nuori Henrik Ibsen oli apteekin oppipoikana ja kirjoitti ensimmäisen näytelmänsä – kaupungissa on nyt hänen nuoruutensa museo.',
+    },
+    'Bouvet Island': {
+      lyhyt: 'Bouvet’nsaari on maailman syrjäisin saari: jäätikkö peittää 93 prosenttia siitä, ja Etelämantereen rannikolle on 1 700 kilometriä.',
+    },
+    Buskerud: {
+      lyhyt: 'Kongsbergin hopeakaivokset toimivat 1623–1958, ja 1770-luvulla ne olivat yli 4 000 työntekijällään Norjan suurin työpaikka ennen teollista aikaa.',
+    },
+    Finnmark: {
+      lyhyt: 'Altan kallioihin on hakattu yli 6 000 kuvaa, vanhimmat ainakin vuodelta 4200 eaa., ja ulkoilmamuseossa niiden lomassa kulkee puisia polkuja.',
+    },
+    Hedmark: {
+      lyhyt: 'Trysilfjellet on Norjan suurin talviurheilukeskus, ja tunturin rinteillä on 65 hoidettua laskettelurinnettä.',
+    },
+    Hordaland: {
+      lyhyt: 'Bergenin Bryggenin puiset kauppatalot reunustavat satamaa, jossa hansakauppiailla oli konttori jo noin 1350 – nyt ne ovat Unescon listalla.',
+    },
+    Svalbard: {
+      lyhyt: 'Huippuvuorten jääkarhut ovat suojeltuja, ja asutuksen ulkopuolelle lähtevillä on oltava karkotusvälineet – mukaan neuvotaan ottamaan myös ase.',
+    },
+    'Møre og Romsdal': {
+      lyhyt: 'Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta toiselle kahdeksaa siltaa pitkin, ja sitä on kutsuttu maailman parhaaksi automatkaksi.',
+    },
+    'Nord-Trøndelag': {
+      lyhyt: 'Stiklestadissa kuningas Olavi II kaatui taistelussa 1030, ja vuodesta 1954 paikalla on esitetty taistelusta kertovaa Pyhän Olavin näytelmää.',
+    },
+    Nordland: {
+      lyhyt: 'Bodøn lähellä Saltstraumenin kapeasta salmesta ryöppyää kuuden tunnin välein jopa 400 miljoonaa kuutiota merivettä, ja virtaan syntyy pyörteitä.',
+    },
+    Oppland: {
+      lyhyt: 'Galdhøpiggen on 2 469 metrillään Pohjois-Euroopan korkein vuori, ja sen kupeen jäätiköllä lasketellaan vielä kesälläkin.',
+    },
+    Oslo: {
+      lyhyt: 'Nobelin rauhanpalkinto on ainoa Nobel, jota ei jaeta Tukholmassa: se ojennetaan 10. joulukuuta Oslon kaupungintalolla kuninkaan läsnä ollessa.',
+    },
+    Rogaland: {
+      lyhyt: 'Preikestolen eli Saarnatuoli kohoaa 604 metriä Lysevuonon yläpuolelle, ja sen tasaiselle laelle kiipesi vuonna 2024 noin 300 000 kävijää.',
+    },
+    'Sogn og Fjordane': {
+      lyhyt: 'Vuonojen kuninkaaksi kutsuttu Sognefjord työntyy 205 kilometriä sisämaahan, ja syvimmillään se ulottuu 1 308 metriä merenpinnan alle.',
+    },
+    'Sør-Trøndelag': {
+      lyhyt: 'Trondheimin Nidarosin tuomiokirkko on rakennettu Pyhän Olavin haudan päälle, ja se on maailman pohjoisin keskiaikainen katedraali.',
+    },
+    Telemark: {
+      lyhyt: 'Rjukanin laaksoon ei paista aurinko syyskuusta maaliskuuhun, joten rinteelle rakennettiin 2013 peilejä, jotka heijastavat valoa torille.',
+    },
+    Troms: {
+      lyhyt: 'Tromsøssa keskiyön aurinko pysyy kesällä taivaalla 71 vuorokautta yhtä mittaa, ja talvella kaamos kestää lähes seitsemän viikkoa.',
+    },
+    'Vest-Agder': {
+      lyhyt: 'Lindesnesin majakka seisoo manner-Norjan eteläkärjessä, ja niemellä on näytetty valoa merenkulkijoille jo vuodesta 1656.',
+    },
+    Vestfold: {
+      lyhyt: 'Tønsbergin lähellä hautakummusta kaivettiin 1904 Osebergin viikinkilaiva, johon kaksi naista oli haudattu syksyllä 834.',
+    },
+    'Østfold': {
+      lyhyt: 'Norjan pisin joki Glomma laskee mereen Fredrikstadissa, jonka itärannalla on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki.',
+    },
+  },
 };
