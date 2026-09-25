@@ -7349,4 +7349,334 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Zamboanga Cityssä puhutaan chavacanoa, Aasian ainoaa espanjapohjaista kreolikieltä, ja se on kaupungin virallinen kieli.',
     },
   },
+  /*
+   * VNM (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.VNM:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti (Natural Earthin nimet, osa ilman
+   * diakriittejä: "Ha Noi", "Can Tho", "Ha Tinh", "Hau Giang", "Lai Chau",
+   * "Son La"; "Ðong Tháp" alkaa islannin eth-kirjaimella U+00D0, ja
+   * "Quàng Nam" on väärällä sävymerkillä). KOLME NATURAL EARTHIN VIRHETTÄ:
+   * kolmella maakunnalla on tunnuksena suuralueen nimi, ja luonnehdinta
+   * kuvaa polygonin todellista maakuntaa (tunnistettu keskipisteestä,
+   * julisteet/pallo/maakunnat/2026-09-25a/VNM.json):
+   *   "Đông Bắc"            (105,85 E 22,24 N) = Bắc Kạn
+   *   "Đồng Bằng Sông Hồng" (106,06 E 20,83 N) = Hưng Yên
+   *   "Đông Nam Bộ"         (107,20 E 11,06 N) = Đồng Nai
+   * Jako on vuoden 2025 uudistusta edeltävä 63 maakuntaa (1.7.2025 alkaen
+   * 34), joten tekstit kuvaavat seutua eivätkä hallintoyksikköä. Vältetty
+   * maastokohteet-vnm.js:n aiheet (Hội An, Huến linnoitus, Mỹ Sơn, Phong
+   * Nha ja Sơn Đoòng, Điện Biên Phủn taistelu, Hồ-linnoitus, Hoa Lư, Po
+   * Nagar, Fansipan, Punainenjoki, Hạ Long, Mekong). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat:
+   *   Bà Rịa - Vũng Tàu — Côn Đảon kansallispuisto (n. 90 % Vietnamin
+   *                        vihermerikilpikonnien pesinnästä; hautomot)
+   *   Bạc Liêu           — Bac Lieu near-shore wind farm (vuorovesimuta)
+   *   Bình Dương         — huonekaluteollisuuden keskittymä (Nam Tân Uyên)
+   *   Bình Phước         — Vietnam News: puolet maan cashew-alasta
+   *   Bình Thuận         — n. 55 % pitayasadosta 2019; yövalaistus
+   *   Cà Mau             — kerrostuminen 25–100 m/v niemen kärjessä
+   *   Đắk Nông           — Unesco-geopuisto 2020, n. 50 laavaluolaa, 10 km
+   *   Hà Nam             — Tam Chúc, YK:n vesak-päivä 12.–14.5.2019
+   *   Hau Giang          — Ngã Bảy, seitsemän kanavan risteys (1915)
+   *   Hồ Chí Minh city   — Metro Line 1, avattu 22.12.2024
+   *   Kon Tum            — puukirkko 1913–1918, bahnarien paalutalotyyli
+   *   Lai Chau           — Lai Châun vesivoimala, vihitty 20.12.2016
+   *   Long An            — Nhà trăm cột, 120 pylvästä, 1901–1903
+   *   Ninh Thuận         — maan kuivin seutu, suurin rypäleiden tuottaja
+   *   Quảng Bình         — Võ Nguyên Giápin hauta, Vũng Chùa (2013)
+   *   Thái Bình          — Keon pagodi, kolmikerroksinen kellotorni
+   *   Thừa Thiên - Huế   — Tam Giang–Cầu Hai, lähes 70 km
+   *   Tuyên Quang        — Thành Tuyên -festivaali (jättilyhdyt)
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  VNM: {
+    'An Giang': {
+      lyhyt: 'Trà Sưn kajaputmetsässä liikutaan tulvakaudella veneillä, ja vettä peittää niin tiheä vihreä kasvimatto, että kanava näyttää niityltä.',
+    },
+    'Bà Rịa - Vũng Tàu': {
+      lyhyt: 'Côn Đảon saarilla munii noin 90 prosenttia Vietnamin vihermerikilpikonnista, ja vartijat siirtävät munat suojaan hautomoihin.',
+    },
+    'Bắc Giang': {
+      lyhyt: 'Lục Ngạnin litsipuutarhoissa kesäkuu on sadonkorjuun aikaa, ja teiden varret täyttyvät punaisista hedelmäkasoista.',
+    },
+    'Bạc Liêu': {
+      lyhyt: 'Bạc Liêun tuulivoimalat seisovat rannikon vuorovesimudassa, ja nousuveden aikaan ne näyttävät kasvavan suoraan merestä.',
+    },
+    'Bắc Ninh': {
+      lyhyt: 'Bắc Ninhin kylissä lauletaan quan họ -vuorolauluja, joissa miesten ja naisten ryhmät vastaavat toisilleen; perinne on Unescon listalla.',
+    },
+    'Bến Tre': {
+      lyhyt: 'Bến Tre on kookospalmujen seutua, ja pienissä perhepajoissa kookosmaidosta keitetään sitkeitä kookoskaramelleja.',
+    },
+    'Bình Định': {
+      lyhyt: 'Bình Định tunnetaan vietnamilaisten perinteisten kamppailulajien kotiseutuna, ja niitä harjoitellaan monessa kylässä yhä.',
+    },
+    'Bình Dương': {
+      lyhyt: 'Bình Dươngin teollisuusalueet Hồ Chí Minhin kaupungin pohjoispuolella ovat Vietnamin huonekaluteollisuuden ydintä.',
+    },
+    'Bình Phước': {
+      lyhyt: 'Bình Phước on Vietnamin suurin cashewpähkinän viljelyseutu, ja sen punamullassa kasvaa noin puolet maan cashewpuista.',
+    },
+    'Bình Thuận': {
+      lyhyt: 'Bình Thuận kasvattaa yli puolet Vietnamin pitayoista, ja viljelmillä palaa öisin lamppuja, jotka saavat kaktukset kukkimaan.',
+    },
+    'Cà Mau': {
+      lyhyt: 'Cà Maun niemen kärjessä mangrovemetsä kasvattaa maata mereen päin kymmeniä metrejä vuodessa, kun juuret pidättävät lietettä.',
+    },
+    'Can Tho': {
+      lyhyt: 'Cần Thơn Cái Răngin kelluvalla torilla kauppa käydään veneistä aamuhämärissä, ja myyjät ripustavat tuotteensa pitkän salon nokkaan.',
+    },
+    'Cao Bằng': {
+      lyhyt: 'Bản Giốcin vesiputous valuu monena portaana Kiinan rajalla, ja bambulautat vievät vierailijoita aivan kuohujen eteen.',
+    },
+    'Đà Nẵng': {
+      lyhyt: 'Đà Nẵngin Lohikäärmesilta syöksee viikonloppuiltaisin suustaan tulta ja vettä, ja katsojat kerääntyvät Hàn-joen rannoille.',
+    },
+    'Đắk Lắk': {
+      lyhyt: 'Buôn Ma Thuộtia kutsutaan Vietnamin kahvipääkaupungiksi, ja ympäröivän ylängön punamullassa kasvaa robustakahvia.',
+    },
+    'Đắk Nông': {
+      lyhyt: 'Đắk Nôngin Unescon geopuistossa on noin 50 laavaluolan järjestelmä, jonka käytäviä on yhteensä yli kymmenen kilometriä.',
+    },
+    'Điện Biên': {
+      lyhyt: 'Maaliskuussa Điện Biênin vuorenrinteet valkenevat ban-puiden kukista, ja kukinnan kunniaksi vietetään omaa juhlaa.',
+    },
+    'Đông Bắc': {
+      lyhyt: 'Ba Bể on Vietnamin suurin luonnollinen makean veden järvi, ja sen rannoilla tày-kansan paalutalot katsovat kalkkivuorten ympäröimälle vedelle.',
+    },
+    'Đồng Bằng Sông Hồng': {
+      lyhyt: 'Hưng Yênin longaneja vietiin aikoinaan lahjaksi keisarin hoviin, ja kesällä puutarhojen puut notkuvat yhä hedelmistä.',
+    },
+    'Đông Nam Bộ': {
+      lyhyt: 'Đồng Nain Cát Tiênin kansallispuiston alankosademetsässä elää keltaposkigibboneja, joiden laulu kaikuu aamuisin latvoista.',
+    },
+    'Ðong Tháp': {
+      lyhyt: 'Đồng Thápin tulvatasangolla lootuslammet kukkivat kesällä vaaleanpunaisina, ja lootuksesta tehdään makeisia ja teetä.',
+    },
+    'Gia Lai': {
+      lyhyt: 'Pleikun laidalla on Biển Hồ, sammuneen tulivuoren kraateriin syntynyt järvi, josta kaupunki saa juomavetensä.',
+    },
+    'Hà Giang': {
+      lyhyt: 'Mã Pí Lèngin sola kiemurtelee jyrkänteen reunalla satoja metrejä Nho Quế -joen yläpuolella, ja tie on Vietnamin huimaavimpia.',
+    },
+    'Hà Nam': {
+      lyhyt: 'Tam Chúcin laaja buddhalainen temppelialue rakennettiin järven ja kalkkivuorten väliin, ja 2019 siellä vietettiin YK:n vesak-päivää.',
+    },
+    'Ha Tinh': {
+      lyhyt: 'Tiên Điền on runoilija Nguyễn Dun suvun kotikylä, ja hänen Kiềun tarinaansa pidetään vietnamilaisen kirjallisuuden kulmakivenä.',
+    },
+    'Hải Dương': {
+      lyhyt: 'Hải Dương tunnetaan mungpapukakuistaan, pienistä makeista paloista, joita syödään vihreän teen kanssa ja viedään tuliaisiksi.',
+    },
+    'Hải Phòng': {
+      lyhyt: 'Cát Bàn saaren kalkkikivikallioilla elää Cát Bàn languri, maailman uhanalaisimpia apinoita, jota ei tavata missään muualla.',
+    },
+    'Ha Noi': {
+      lyhyt: 'Hanoin Hoàn Kiếm -järven ympäristö suljetaan viikonloppuisin autoilta, ja kadut täyttyvät kävelijöistä ja katusoittajista.',
+    },
+    'Hau Giang': {
+      lyhyt: 'Ngã Bảyn kaupungissa seitsemän kanavaa kohtaa samassa risteyksessä, ja nimikin tarkoittaa seitsemän tien risteystä.',
+    },
+    'Hồ Chí Minh city': {
+      lyhyt: 'Hồ Chí Minhin kaupungin ensimmäinen metrolinja avattiin joulukuussa 2024, ja se kulkee Bến Thànhin torilta Suối Tiêniin.',
+    },
+    'Hòa Bình': {
+      lyhyt: 'Mai Châun laaksossa valkoiset thait asuvat paalutaloissa riisipeltojen keskellä, ja moni talo majoittaa matkalaisia.',
+    },
+    'Thừa Thiên - Huế': {
+      lyhyt: 'Tam Giang–Cầu Hain laguuniketju ulottuu lähes 70 kilometriä rannikon suuntaisesti, ja matalassa vedessä seisoo kalastajien bambuaitoja.',
+    },
+    'Khánh Hòa': {
+      lyhyt: 'Khánh Hòan rannikon saarten luolista kerätään salangaanien pesiä, ja niistä keitetty keitto on Vietnamissa arvostettu herkku.',
+    },
+    'Kiên Giang': {
+      lyhyt: 'Phú Quốcin saarella kalakastiketta kypsytetään kuukausia suurissa puutynnyreissä sardelleista ja suolasta.',
+    },
+    'Kon Tum': {
+      lyhyt: 'Kon Tumin puukirkko valmistui 1918, ja siinä eurooppalainen kirkkomalli yhdistyy bahnarien paalutalojen tyyliin.',
+    },
+    'Lai Chau': {
+      lyhyt: 'Lai Châun vesivoimalan pato Đà-joella valmistui 2016, ja se on samalla joella olevien Sơn Lan ja Hòa Bìnhin voimaloiden ketjun ylin.',
+    },
+    'Lâm Đồng': {
+      lyhyt: 'Đà Lạt on noin 1 500 metrin korkeudessa, ja sen viileässä ilmastossa kasvatetaan kasvihuoneissa kukkia koko maan tarpeisiin.',
+    },
+    'Lạng Sơn': {
+      lyhyt: 'Hữu Nghịn raja-asema on yksi Vietnamin ja Kiinan vilkkaimmista, ja rekkajonot sen edessä voivat venyä kilometrien mittaisiksi.',
+    },
+    'Lào Cai': {
+      lyhyt: 'Bắc Hàn sunnuntaitorille tulee vuoristokylistä kirjavasti pukeutuneita kukka-hmongeja, ja torin laidalla käydään kauppaa puhveleista.',
+    },
+    'Long An': {
+      lyhyt: 'Cần Đướcin satapylväinen talo rakennettiin 1900-luvun alussa Huếsta tulleiden puuseppien voimin, ja sen kattoa kannattelee 120 pylvästä.',
+    },
+    'Nam Định': {
+      lyhyt: 'Trầnin temppelissä avataan joka vuosi ensimmäisen kuukauden täydenkuun yönä sinetti, ja siunattuja leimoja tavoittelee valtava väkijoukko.',
+    },
+    'Nghệ An': {
+      lyhyt: 'Kim Liênin kylässä on Hồ Chí Minhin lapsuudenkoti, olkikattoinen puutalo, jota käy katsomassa vierailijoita ympäri maata.',
+    },
+    'Ninh Bình': {
+      lyhyt: 'Tam Cốcin joella soutajat vievät veneitä riisipeltojen ja kalkkivuorten välissä, ja moni heistä soutaa jaloillaan.',
+    },
+    'Ninh Thuận': {
+      lyhyt: 'Ninh Thuận on Vietnamin kuivinta seutua, ja sen paahteessa kypsyy suurin osa maan viinirypäleistä.',
+    },
+    'Phú Thọ': {
+      lyhyt: 'Nghĩa Lĩnh -vuorella ovat Hùng-kuninkaiden temppelit, ja kolmannen kuukauden kymmenentenä päivänä heitä muistetaan koko maassa vapaapäivällä.',
+    },
+    'Phú Yên': {
+      lyhyt: 'Gành Đá Đĩan rannalla musta basaltti on jähmettynyt kuusikulmaisiksi pylväiksi, jotka näyttävät pinotuilta lautasilta.',
+    },
+    'Quảng Bình': {
+      lyhyt: 'Vũng Chùan rannikolla Thọ-vuoren rinteellä on kenraali Võ Nguyên Giápin hauta, jolta avautuu näkymä Etelä-Kiinan merelle.',
+    },
+    'Quàng Nam': {
+      lyhyt: 'Quảng Namin nimi on jokaiselle vietnamilaiselle tuttu mì Quảng -nuudeleista, joiden kulhon pohjalla on vain loraus lientä.',
+    },
+    'Quảng Ngãi': {
+      lyhyt: 'Lý Sơnin tuliperäisellä saarella kasvatetaan valkosipulia, josta saari tunnetaan kaikkialla Vietnamissa.',
+    },
+    'Quảng Ninh': {
+      lyhyt: 'Yên Tửn vuorelle nousee pyhiinvaeltajia, sillä siellä kuningas Trần Nhân Tông perusti vietnamilaisen zenin Trúc Lâm -koulun.',
+    },
+    'Quảng Trị': {
+      lyhyt: 'Hiền Lươngin silta Bến Hải -joen yli merkitsi kahden vuosikymmenen ajan Pohjois- ja Etelä-Vietnamin rajaa, ja nyt se on muistomerkki.',
+    },
+    'Sóc Trăng': {
+      lyhyt: 'Sóc Trăngin khmerit kilpailevat Ok Om Bok -juhlassa pitkillä ghe ngo -veneillä, joissa kymmenet soutajat melovat samaan tahtiin.',
+    },
+    'Son La': {
+      lyhyt: 'Mộc Châun ylätasanko on Vietnamin maidontuotannon keskuksia, ja sen viileillä laitumilla laiduntaa lypsykarjaa.',
+    },
+    'Tây Ninh': {
+      lyhyt: 'Tây Ninhissä on caodaismin pyhä istuin, värikäs temppeli, jossa rukoushetkiä pidetään neljästi vuorokaudessa.',
+    },
+    'Thái Bình': {
+      lyhyt: 'Keon pagodin kolmikerroksinen puinen kellotorni on 1600-luvulta, ja sen jokaisessa kerroksessa riippuu oma pronssikellonsa.',
+    },
+    'Thái Nguyên': {
+      lyhyt: 'Tân Cươngin teeviljelmiltä tulee Vietnamin tunnetuinta vihreää teetä, ja lehdet paahdetaan usein käsin pannuissa.',
+    },
+    'Thanh Hóa': {
+      lyhyt: 'Sầm Sơnin hiekkaranta on Pohjois-Vietnamin suosituimpia, ja kesäviikonloppuisin sinne ajetaan joukolla Hanoista asti.',
+    },
+    'Tiền Giang': {
+      lyhyt: 'Mỹ Thon mukaan nimetty hủ tiếu -keitto on kirkasta lientä ja ohuita riisinuudeleita, ja sitä syödään mielellään aamiaiseksi.',
+    },
+    'Trà Vinh': {
+      lyhyt: 'Ao Bà Omin nelikulmaista lampea reunustavat vanhat puut, joiden juuret kiemurtelevat maan pinnalla kuin veistokset.',
+    },
+    'Tuyên Quang': {
+      lyhyt: 'Tuyên Quangissa keskisyksyn juhlaa vietetään jättimäisten lyhtyjen kulkueella, ja lyhdyt rakennetaan korttelien omin voimin.',
+    },
+    'Vĩnh Long': {
+      lyhyt: 'Mang Thítin joenvarsilla savuavat kupolinmuotoiset tiili- ja keramiikkauunit, ja seutua kutsutaan punaisen saven valtakunnaksi.',
+    },
+    'Vĩnh Phúc': {
+      lyhyt: 'Tam Đảon vuoristokylä noin 900 metrin korkeudessa on hanoilaisten kesäpakopaikka, jossa ilma on laaksoa viileämpää.',
+    },
+    'Yên Bái': {
+      lyhyt: 'Mù Cang Chảin vuorenrinteille hmongit ovat rakentaneet porrasmaisia riisipeltoja, jotka kellastuvat syyskuussa ennen sadonkorjuuta.',
+    },
+  },
+  /*
+   * MYS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.MYS:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti ("Melaka" = Malakka, "Pulau
+   * Pinang" = Penang; Kuala Lumpur, Labuan ja Putrajaya ovat
+   * liittovaltion alueita). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Johor        — Tanjung Piai (Manner-Aasian eteläisin kohta, Ramsar)
+   *   Kuala Lumpur — Petronas Towers (silta 41.–42. kerros, 170 m)
+   *   Pahang       — BOH Plantations (1929, Malesian vanhin teetuottaja)
+   *   Selangor     — Batu Caves Murugan Statue (42,7 m, 272 porrasta)
+   *   Terengganu   — Crystal Mosque (Wan Man, avattu 8.2.2008)
+   *   Muut         — yleistietoa, tarkistettu vastaavista
+   *                  en-Wikipedia-artikkeleista.
+   */
+  MYS: {
+    Johor: {
+      lyhyt: 'Johorin Tanjung Piai on Aasian mantereen eteläisin kohta, ja niemen kärkeen kävellään mangrovemetsän halki pitkospuita pitkin.',
+    },
+    Kedah: {
+      lyhyt: 'Kedahia kutsutaan Malesian riisiaitaksi, ja sen tasaiset riisipellot ulottuvat Gunung Jerain juurelta merenrantaan asti.',
+    },
+    Kelantan: {
+      lyhyt: 'Kelantanissa rakennetaan wau bulan -leijoja, joiden alaosa on kuunsirpin muotoinen, ja niitä lennätetään sadonkorjuun jälkeen pelloilla.',
+    },
+    'Kuala Lumpur': {
+      lyhyt: 'Petronasin kaksoistornien välillä kulkee 170 metrin korkeudessa kaksikerroksinen silta, jolle pääsee lipulla kävelemään.',
+    },
+    Labuan: {
+      lyhyt: 'Labuanin saari on liittovaltion alue ja tullivapaa satama, jonne Borneon puolelta tullaan lautalla ostoksille.',
+    },
+    Melaka: {
+      lyhyt: 'Malakan Stadthuys rakennettiin 1650 hollantilaisten kuvernöörin virkataloksi, ja nykyään sen punaisissa saleissa on museo.',
+    },
+    'Negeri Sembilan': {
+      lyhyt: 'Negeri Sembilanin minangkabau-talojen katot kaartuvat kuin puhvelin sarvet, ja perinteessä maa periytyy äidiltä tyttärelle.',
+    },
+    Pahang: {
+      lyhyt: 'Cameron Highlandsin rinteille perustettiin 1929 BOH-teetila, Malesian vanhin teentuottaja, ja sen pensasrivit peittävät kokonaisia kukkuloita.',
+    },
+    'Pulau Pinang': {
+      lyhyt: 'George Townin seinämaalaukset, kuten polkupyörällä ajavat lapset, houkuttelevat kuvaajia vanhan kaupungin kujille.',
+    },
+    Perak: {
+      lyhyt: 'Ipohin vanhan kaupungin kahviloissa juodaan valkoista kahvia, jonka pavut paahdetaan margariinissa ja joka makeutetaan kondensoidulla maidolla.',
+    },
+    Perlis: {
+      lyhyt: 'Perlis on Malesian pienin osavaltio, ja sen rajakaupungista Padang Besarista kulkevat junat Thaimaan puolelle.',
+    },
+    Putrajaya: {
+      lyhyt: 'Putrajaya on Malesian hallinnollinen pääkaupunki, ja sen tekojärven rannalla seisoo vaaleanpunaisesta graniitista rakennettu Putra-moskeija.',
+    },
+    Sabah: {
+      lyhyt: 'Kinabalu kohoaa Sabahissa 4 095 metriin, ja huipulle kiivetään tavallisesti kahdessa päivässä yöpyen vuoren rinteellä.',
+    },
+    Sarawak: {
+      lyhyt: 'Mulun kansallispuistossa on Sarawakin kammio, yksi maailman suurimmista tunnetuista luolasaleista.',
+    },
+    Selangor: {
+      lyhyt: 'Batu Caves -luolatemppeliin noustaan 272 värikästä porrasta, ja niiden juurella seisoo 42,7-metrinen kullattu Murugan-patsas.',
+    },
+    Terengganu: {
+      lyhyt: 'Kuala Terengganun Wan Manin saarella on vuonna 2008 avattu Kristallimoskeija, joka on rakennettu teräksestä ja lasista.',
+    },
+  },
+  /*
+   * SGP (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SGP:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: viisi CDC-piiriä (Community
+   * Development Council). Kohteet on sijoitettu piireihin polygonien
+   * laatikoiden mukaan (julisteet/pallo/maakunnat/2026-09-25a/SGP.json):
+   * Changin lentoasema South Eastissa, Mandai North Westissä. Vältetty
+   * maastokohteet-sgp.js:n aiheet (Kasvitieteellinen puutarha, Pulau Ubin,
+   * Kranji, Rafflesin majakka, Haw Par Villa, Bukit Timah, Sungei Buloh).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Central Singapore — Gardens by the Bay (Supertree Grove)
+   *   North East        — Sengkang LRT / Punggol LRT (kuljettajaton)
+   *   North West        — Night Safari (avattu 1994, ensimmäinen yöeläintarha)
+   *   South East        — Jewel Changi Airport (Rain Vortex, 40 m)
+   *   South West        — Jurong Lake Gardens (kolmas kansallispuutarha, 2019)
+   */
+  SGP: {
+    'Central Singapore': {
+      lyhyt: 'Marina Bayn Gardens by the Bay -puistossa kohoaa kasvien peittämiä teräksisiä superpuita, jotka syttyvät iltaisin valoesitykseen.',
+    },
+    'North East': {
+      lyhyt: 'Sengkangin ja Punggolin uusissa lähiöissä kulkee kuljettajaton kevytmetro, joka pujottelee korkeiden asuintalojen välissä.',
+    },
+    'North West': {
+      lyhyt: 'Mandain Night Safari avattiin 1994 maailman ensimmäisenä yöeläintarhana, ja eläimiä katsellaan hämärässä pienen junan kyydistä.',
+    },
+    'South East': {
+      lyhyt: 'Changin lentoaseman Jewel-rakennuksen lasikupolista syöksyy 40 metriä alas Rain Vortex, maailman korkein sisävesiputous.',
+    },
+    'South West': {
+      lyhyt: 'Jurong Lake Gardens on Singaporen kolmas kansallispuutarha, ja sen järvenrannalle on ennallistettu makean veden suometsää.',
+    },
+  },
 };
