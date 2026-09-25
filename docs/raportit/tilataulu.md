@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 07:17 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 07:31 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
@@ -10,25 +10,25 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 |---|---|---|---|---|---|---|
 | Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 43% | idle | — | — |
 | Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 22% | idle | — | — |
-| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 60% | idle | — | — |
-| **Natiivi-UI** | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | **81%** ⚠️ | idle | — | 70% ilmoitettu 07:05, nousee kohti 85%, seurataan tarkasti |
+| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 61% | idle | — | — |
+| **Natiivi-UI** | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | **83%** ⚠️ | idle | — | 70% ilmoitettu 07:05, lähestyy 85%, tarkka seuranta |
 | Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 44% | idle | — | Radiouudistus build 12 |
 | Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 58% | idle | — | — |
-| Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 36% | idle | — | — |
+| Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 38% | idle | — | — |
 | Siirtoseppä | local_7a1255c5-d525-4323-9438-70e7379ad2fe | Opus | 33% | idle | — | — |
-| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 41% | idle | — | — |
+| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 43% | idle | — | — |
 | Karttaseppä | local_445a5c7b-4317-4989-b65d-4cb81bd10056 | Opus | 60% | idle | — | Täysi peruskarttapoltto käynnissä (04:47–~08:45) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 34% | busy | (tämä taulu) | — |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 36% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle (yön kooste)
 
 Ei avoimia kortteja tiedossa juuri nyt.
 
-Karttasepän poltto käynnissä (04:47–~08:45, alle 1,5h jäljellä). Levy 122 Gt (vakaa).
+Karttasepän poltto käynnissä (04:47–~08:45, n. 1h 15min jäljellä). Levy 121 Gt (vakaa).
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
-**Postilaatikko:** viimeisin commit 3bffaa8c6 "Reconcile all 155 lens IDs and source availability" — muuttumaton yhdeksällä kierroksella.
+**Postilaatikko:** viimeisin commit 3bffaa8c6 "Reconcile all 155 lens IDs and source availability" — muuttumaton kymmenellä kierroksella.
 
 ## 3) Avoimet PR:t
 
@@ -44,11 +44,11 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 122 Gt vapaana. Raja 35 Gt.
-- **wt/-worktreet:** 34 kpl.
-- **5 h -kiintiö:** 19%, nollautunut 05:20. Raja 95%/98%.
-- **Viikkokiintiö (kaikki mallit):** 86%. **Viikkokiintiö (Fable):** 48%. Nollautuu 2026-09-28 klo 01:00.
+- **Levy** (/System/Volumes/Data): 121 Gt vapaana. Raja 35 Gt.
+- **wt/-worktreet:** 35 kpl.
+- **5 h -kiintiö:** 20%, nollautunut 05:20. Raja 95%/98%.
+- **Viikkokiintiö (kaikki mallit):** 87%. **Viikkokiintiö (Fable):** 48%. Nollautuu 2026-09-28 klo 01:00.
 
 ## 6) Kellonaika
 
-2026-09-25 07:17 EEST. Yön merkkipaalut: Natiivi-UI 81% (nousee, 70% ilmoitettu, seurataan 85%), Karttasepän poltto käynnissä (alle 1,5h jäljellä).
+2026-09-25 07:31 EEST. Yön merkkipaalut: Natiivi-UI 83% (lähestyy 85%, tarkka seuranta), Karttasepän poltto käynnissä (n. 1h 15min jäljellä).
