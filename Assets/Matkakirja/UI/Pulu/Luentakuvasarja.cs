@@ -61,6 +61,7 @@ namespace Matkakirja.Natiivi
                 kuva.style.backgroundImage = new StyleBackground(t);
                 float suhde = t.height > 0 ? (float)t.width / t.height : 1.5f;
                 kuva.style.aspectRatio = suhde;
+                kortti.style.width = Leveys(suhde);
                 if (!string.IsNullOrEmpty(k.Lyhyt))
                 {
                     var teksti = Rakenne.Teksti(k.Lyhyt, "mk-kuvakortti__teksti", kortti);
@@ -75,6 +76,23 @@ namespace Matkakirja.Natiivi
                 Rakenne.Nayta(kortti, true, 400);
                 while (kortit.Count > Katto) { kortit[0].RemoveFromHierarchy(); kortit.RemoveAt(0); }
             });
+        }
+
+        /// <summary>
+        /// Löydös 90 (omistaja, build 13: isoisän kuvat isommiksi iPadilla): web css/fokusvirta.css .fokusvirta-luentakuva
+        /// --luentakuva-leveys min(80vw, 22rem) ja --luentakuva-korkeus min(34vh, 15rem), tablettikaistalla (700–1400 px)
+        /// molemmat × 1,5. iPad 834: 528 pt (ennen 420), iPhone 393: 314 pt. Pystykuva kapenee korkeuskattoon.
+        /// </summary>
+        float Leveys(float suhde)
+        {
+            var r = pakka.layout;
+            float w = float.IsNaN(r.width) || r.width <= 0f ? Screen.width : r.width;
+            float h = float.IsNaN(r.height) || r.height <= 0f ? Screen.height : r.height;
+            float kerroin = w >= 700f && w <= 1400f ? 1.5f : 1f;
+            float leveys = Mathf.Min(0.8f * w, 352f) * kerroin;
+            float katto = Mathf.Min(0.34f * h, 240f) * kerroin;
+            if (suhde > 0f && leveys / suhde > katto) leveys = katto * suhde;
+            return Mathf.Round(leveys);
         }
 
         /// <summary>Luento tai kommentti loppui: kuvat häipyvät 6 s hiljaisuuden jälkeen.</summary>
