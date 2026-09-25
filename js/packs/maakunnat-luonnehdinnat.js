@@ -9924,4 +9924,1199 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Kolmen kärjen niemi on Ghanan eteläisin kohta, ja sen majakka on toiminut vuodesta 1925.',
     },
   },
+  /*
+   * AFG — nykymaakunnat (32; Natural Earthin vanha jako, Panjshir ja
+   * Daykundi puuttuvat). Faktat en-Wikipediasta 25.9.2026. Sävy
+   * neutraali: maisema, kulttuuri, historia — ei sotaa eikä politiikkaa.
+   * Bamiyanin buddhat, Band-e Amir, Noshaq, Helmand-joki, Amudarja,
+   * Jamin minareetti, Heratin linnoitus, Balkhin kaupunki, Mes Aynak,
+   * Ai-Khanoum ja Ghaznin kaupunki ovat jo maastokohteina/fokuskohteina,
+   * joten niitä ei käytetty.
+   *   Badakhshan — Sar-i Sang (lapis, Tutankhamonin hauta)
+   *   Badghis    — Badghis Province (Murghab River)
+   *   Baghlan    — Surkh Kotal (18 km Puli Khumrista pohjoiseen)
+   *   Balkh      — Mazar-i-Sharif; Mausoleum of Ali (nouruz)
+   *   Bamyan     — Shahr-e Zuhak
+   *   Farah      — Farah, Afghanistan (linnoitus, "probably" Aleksanteri)
+   *   Faryab     — Maymana (karakul-kauppa nomadien kanssa)
+   *   Ghazni     — Ab-i Istada (yli 120 lintulajia)
+   *   Ghor       — Firuzkoh (2 230 m, nimi vuoteen 2014 Chaghcharan)
+   *   Hilmand    — Lashkari Bazar (South Palace 170 x 100 m)
+   *   Hirat      — Musalla complex (viisi minareettia, 1417)
+   *   Jawzjan    — Tillya Tepe (1978, noin 20 600 esinettä)
+   *   Kabul      — Gardens of Babur
+   *   Kandahar   — Kandahar Province (granaattiomenat)
+   *   Kapisa     — Kapisa Province (pienin; Panini, Kapiśayana)
+   *   Khost      — Khost ("Khost Bowl", kesäsateet)
+   *   Kunar      — Chitral River (480 km, Chiantar-jäätikkö)
+   *   Laghman    — First Aramaic inscription of Laghman (1969)
+   *   Logar      — Logar River; Logar Province (maantiede)
+   *   Nangarhar  — Hadda, Afghanistan (noin 23 000 veistosta)
+   *   Nimroz     — Nimruz Province (nimen merkitys)
+   *   Nuristan   — Nuristan Province (nimi, vuoristometsät)
+   *   Paktika    — Paktika Province (Gomal River)
+   *   Paktya     — Paktia Province (etymologia, Herodotos)
+   *   Parwan     — Salang Tunnel (2,6 km, lähes 3 400 m)
+   *   Kunduz     — Kunduz Province (Kunduz-joen kastelu)
+   *   Samangan   — Takht-e Rostam
+   *   Sari Pul   — Sar-e-Pol, Afghanistan (nimi, Imam Yahyan pyhäkkö)
+   *   Takhar     — Taloqan (Marco Polo 1275, suola)
+   *   Uruzgan    — Tarinkot (1 317 m, tarin-päälliköt)
+   *   Wardak     — Kabul River (Sanglakh, 14 000 ft, 700 km)
+   *   Zabul      — Zabulistan (nimi; Zabol)
+   */
+  AFG: {
+    Badakhshan: {
+      lyhyt: 'Kokchan laakson Sar-e Sangin kaivoksista louhitaan yhä lapislatsulia, samaa sinistä kiveä, jota löytyi Tutankhamonin haudasta.',
+    },
+    Badghis: {
+      lyhyt: 'Badghisin kuivat kukkulat saavat vetensä Murgab-joesta, joka virtaa maakunnan halki pohjoiseen Turkmenistaniin.',
+    },
+    Baghlan: {
+      lyhyt: 'Pul-e Khumrin pohjoispuolelta Surkh Kotalin kukkulalta on kaivettu esiin kušaanien temppeli ja kuningas Kanishkan patsas.',
+    },
+    Balkh: {
+      lyhyt: 'Mazar-i-Sharifin sinikaakeloitu Sininen moskeija on Pohjois-Afganistanin nouruz-kevätjuhlan keskipiste.',
+    },
+    Bamyan: {
+      lyhyt: 'Bamyanin laakson itäpäässä, kahden joen yhtymäkohdan yllä, kohoavat Shahr-e Zuhakin eli Punaisen kaupungin linnoituksen rauniot.',
+    },
+    Farah: {
+      lyhyt: 'Farah-joen varrella seisoo kaupungin vanha linnoitus, jonka arvellaan olevan alun perin Aleksanteri Suuren rakennuttama.',
+    },
+    Faryab: {
+      lyhyt: 'Maymanan torilla Turkestanin vuorten juurella paimentolaiset käyvät yhä kauppaa karakul-lampaillaan.',
+    },
+    Ghazni: {
+      lyhyt: 'Ghaznin Ab-i Istada on matala, välillä kokonaan kuivuva suolajärvi, jolla on tavattu yli 120 lintulajia flamingoista pelikaaneihin.',
+    },
+    Ghor: {
+      lyhyt: 'Ghorin pääkaupunki Firozkoh, vuoteen 2014 Chaghcharan, on Hari-joen varrella 2 230 metrin korkeudessa.',
+    },
+    Hilmand: {
+      lyhyt: 'Lashkargahin laidalla ovat Lashkari Bazarin rauniot, ghaznavidihallitsijoiden talvipalatsit, joista suurin on 170 metriä pitkä.',
+    },
+    Hirat: {
+      lyhyt: 'Heratissa kohoaa yhä viisi Musallan minareettia, jäänteet kuningatar Gawhar Shadin vuonna 1417 aloittamasta rakennusryhmästä.',
+    },
+    Jawzjan: {
+      lyhyt: 'Sheberghanin läheltä Tillya Tepen kummuista löytyi 1978 noin 20 600 korua ja muuta esinettä, jotka tunnetaan Baktrian kultana.',
+    },
+    Kabul: {
+      lyhyt: 'Kabulin Babur-puutarhan terasseilla on Mogulivaltakunnan perustajan Baburin hauta, ja puutarhassa käy jopa miljoona vierasta vuodessa.',
+    },
+    Kandahar: {
+      lyhyt: 'Kandahar tunnetaan maailmalla granaattiomenistaan, joita kasvatetaan Arghandab-joen kastelemissa hedelmätarhoissa.',
+    },
+    Kapisa: {
+      lyhyt: 'Kapisa on Afganistanin pienin maakunta, ja jo muinaisintialaiset kirjoittajat kehuivat sen rypäleitä ja viiniä.',
+    },
+    Khost: {
+      lyhyt: 'Khost on vuorten ympäröimässä laaksossa, jonne kaakosta puhaltavat kosteat tuulet tuovat kesällä sadetta.',
+    },
+    Kunar: {
+      lyhyt: 'Kunar-joki saa alkunsa Pakistanin Chiantarin jäätiköltä ja virtaa Hindukušin sulamisvesien paisuttamana 480 kilometriä.',
+    },
+    Kunduz: {
+      lyhyt: 'Kunduz-joki ja sen kanavat kastelevat peltoja, jotka hallitsevat koko maakunnan maisemaa.',
+    },
+    Laghman: {
+      lyhyt: 'Laghmanista löytyi 1969 kallioon hakattu kirjoitus, jonka keisari Ashoka antoi kirjoittaa arameaksi noin 260 eaa.',
+    },
+    Logar: {
+      lyhyt: 'Logar on saanut nimensä joesta, joka virtaa sen tasaisen laakson halki; laaksoa kehystävät jyrkät vuoret.',
+    },
+    Nangarhar: {
+      lyhyt: 'Jalalabadin eteläpuolelta Haddasta on kaivettu esiin noin 23 000 kreikkalais-buddhalaista savi- ja kipsiveistosta.',
+    },
+    Nimroz: {
+      lyhyt: 'Nimroz tarkoittaa persiaksi puolipäivää: nimen uskotaan kertovan, että vanhan maailman keskimeridiaani kulki täältä.',
+    },
+    Nuristan: {
+      lyhyt: 'Nuristan tarkoittaa valon maata, ja suurinta osaa maakunnasta peittävät jyrkkien vuorten metsät.',
+    },
+    Paktika: {
+      lyhyt: 'Paktikan vuorilta alkava Gomal-joki kääntyy Pakistanin puolelle ja päätyy lopulta Indukseen.',
+    },
+    Paktya: {
+      lyhyt: 'Paktian nimen arvellaan juontuvan paktyes-kansasta, jonka Herodotos mainitsi jo 400-luvulla eaa.',
+    },
+    Parwan: {
+      lyhyt: 'Parwanin Salangin solassa kulkee lähes 3 400 metrin korkeudessa 2,6 kilometrin tunneli, maan tärkein pohjois–eteläyhteys.',
+    },
+    Samangan: {
+      lyhyt: 'Aibakin lähellä on kukkulan kallioon kokonaan hakattu 300–400-lukujen buddhalainen luostari ja stupa, Takht-e Rostam.',
+    },
+    "Sari Pul": {
+      lyhyt: 'Sar-e Pol tarkoittaa sillanpäätä, ja maakunnan pääkaupungin itälaidalla on vanha Imam Yahyan pyhäkkö.',
+    },
+    Takhar: {
+      lyhyt: 'Takharin pääkaupungin Taloqanin kautta kulki 1270-luvulla Marco Polo, joka kehui seudun vuorisuolaa maailman puhtaimmaksi.',
+    },
+    Uruzgan: {
+      lyhyt: 'Uruzganin pääkaupunki Tarinkot on noin 1 300 metrin korkeudessa, ja tarin-heimon päälliköt asuivat siellä jo 1100–1200-luvuilla.',
+    },
+    Wardak: {
+      lyhyt: 'Kabul-joki saa alkunsa Wardakin Sanglakhin vuorilta noin 4 300 metrin korkeudesta ja virtaa sieltä 700 kilometriä itään.',
+    },
+    Zabul: {
+      lyhyt: 'Zabul on saanut nimensä muinaisesta Zabulistanista, ja Iranin puolella samasta nimestä on peräisin Zabolin kaupunki.',
+    },
+  },
+  /*
+   * MNG — nykymaakunnat (21 aimagia + Ulaanbaatar). Faktat
+   * en-Wikipediasta 25.9.2026. Hüiten orgil, Gobi, Orhon (ja sen
+   * Selenga–Baikal-yhteys, Harhorin), Amarbayasgalant, Bayanzag,
+   * Hustain nuruu, peurakivet, Tövhön, Tsagaan agui, Tšingisin patsas
+   * ja Hövsgöl-järvi ovat jo maastokohteina, joten niitä ei käytetty.
+   *   Arhangay     — Terkhiin Tsagaan Lake (10 jokea sisään, Suman ulos)
+   *   Bayan-Ölgiy  — Golden Eagle Festival
+   *   Bayanhongor  — Bayankhongor Province (Shargaljuut, yli 300 lähdettä)
+   *   Bulgan       — Uran Togoo – Tulga Uul Natural Monument
+   *   Darhan-Uul   — Darkhan (city) (17.10.1961, Comecon)
+   *   Dornod       — Buir Lake (Hulunbuir)
+   *   Dornogovi    — Dornogovi Province (ei järviä eikä jokia)
+   *   Dundgovi     — Dundgovi Province (airag)
+   *   Govi-Altay   — Govi-Altai Province (harvimmin asuttu)
+   *   Govĭ-Sümber  — Govisümber Province (pienin väkiluku, 1994)
+   *   Hentiy       — Burkhan Khaldun; Khentii Province (Kerulen, Onon)
+   *   Hovd         — Khovd Province (yli 17 kansallisuutta)
+   *   Hövsgöl      — Dukha people (Mongolian ainoat poronhoitajat)
+   *   Orhon        — Erdenet (1974, toiseksi suurin kaupunki)
+   *   Selenge      — Sükhbaatar (city) (pohjoisin rata-asema)
+   *   Sühbaatar    — Shiliin Bogd (kraatteri 2 km, yli 300 m)
+   *   Töv          — Gorkhi-Terelj National Park (Turtle Rock)
+   *   Ulaanbaatar  — Gandantegchinlen Monastery (26,5 m, 1996)
+   *   Uvs          — Uvs Lake (3 350 km², 1,88 %)
+   *   Dzavhan      — Otgontenger (ainoa pysyvä jäätikkö Hangaissa)
+   *   Ömnögovi     — Yolyn Am (jääkenttä sulaa syyskuuhun mennessä)
+   *   Övörhangay   — Arvaikheer (1 813 m, hevosjuhla)
+   */
+  MNG: {
+    Arhangay: {
+      lyhyt: 'Terkhiin Tsagaan -järveen laskee kymmenen jokea, mutta siitä lähtee vain yksi, Suman-joki.',
+    },
+    "Bayan-Ölgiy": {
+      lyhyt: 'Ölgiin laitamilla järjestetään joka syksy Kultakotkajuhla, jossa kazakkimetsästäjät kilpailevat kotkiensa taidoilla.',
+    },
+    Bayanhongor: {
+      lyhyt: 'Shargaljuutissa, 54 kilometriä maakunnan pääkaupungista pohjoiseen, pulppuaa yli 300 kuumaa ja kylmää lähdettä.',
+    },
+    Bulgan: {
+      lyhyt: 'Bulganin sammuneet tulivuoret on nimetty tulisijan esineiden mukaan: Tulga-vuoren kolme kumpua muistuttavat padan kolmijalkaa.',
+    },
+    "Darhan-Uul": {
+      lyhyt: 'Darhan perustettiin 1961 SEV-maiden tuella, ja sen suuret neliskanttiset kerrostalot muistuttavat yhä neuvostoajasta.',
+    },
+    Dornod: {
+      lyhyt: 'Buir-järvi on jaettu Mongolian ja Kiinan kesken, ja rajan takana Hulunbuirin kaupunki on nimetty osin sen mukaan.',
+    },
+    Dornogovi: {
+      lyhyt: 'Dornogovissa ei ole ainuttakaan järveä eikä jokea, mutta aavikon alla on runsaasti pohjavettä.',
+    },
+    Dundgovi: {
+      lyhyt: 'Dundgovin kuivalla arolla tehdään airagia eli käynyttä tamman maitoa, jota mongolit pitävät erityisen hyvänä.',
+    },
+    Dzavhan: {
+      lyhyt: 'Otgontenger on Hangain vuoriston ainoa huippu, jolla on pysyvä jäätikkö, ja valtio pitää sillä rituaalin joka neljäs vuosi.',
+    },
+    "Govi-Altay": {
+      lyhyt: 'Govi-Altai on Mongolian harvimmin asuttu aimag: aavikkoa ja vuoria riittää, ihmisiä on vähän.',
+    },
+    "Govĭ-Sümber": {
+      lyhyt: 'Govisümber on Mongolian väkiluvultaan pienin aimag, ja se erotettiin omaksi maakunnakseen Choirin ympärille vasta 1994.',
+    },
+    Hentiy: {
+      lyhyt: 'Burkhan Khaldunia pidetään Mongolian pyhimpänä vuorena, ja sen rinteiltä saavat alkunsa Kerulen- ja Onon-joet.',
+    },
+    Hovd: {
+      lyhyt: 'Hovdin maakunnassa asuu yli 17 kansallisuutta, joilla kullakin on omat asumuksensa, pukunsa ja laulunsa.',
+    },
+    "Hövsgöl": {
+      lyhyt: 'Hövsgölin taigalla elävät dukhat, Mongolian ainoat porojen paimentajat.',
+    },
+    "Ömnögovi": {
+      lyhyt: 'Yolyn Amin kapeassa rotkossa talven jää kasvaa metrien paksuiseksi ja sulaa yleensä vasta syyskuuhun mennessä.',
+    },
+    Orhon: {
+      lyhyt: 'Erdenet perustettiin 1974 kuparikaivoksen ympärille, ja nyt se on Mongolian toiseksi suurin kaupunki.',
+    },
+    "Övörhangay": {
+      lyhyt: 'Arvaikheerissa, 1 813 metrin korkeudessa Hangain juurella, järjestetään joka vuosi suuri alueellinen hevosjuhla.',
+    },
+    Selenge: {
+      lyhyt: 'Maakunnan pääkaupunki Sühbaatar on Trans-Mongolian radan pohjoisin asema ennen Venäjän rajaa.',
+    },
+    "Sühbaatar": {
+      lyhyt: 'Dariganga-alueen Shiliin Bogd on sammunut tulivuori, jonka kraatteri on kaksi kilometriä leveä ja yli 300 metriä syvä.',
+    },
+    "Töv": {
+      lyhyt: 'Gorkhi-Tereljin kansallispuistossa, noin 60 kilometrin päässä Ulaanbaatarista, seisoo kallio, joka muistuttaa kilpikonnaa.',
+    },
+    Ulaanbaatar: {
+      lyhyt: 'Gandanin luostarissa seisoo 26,5 metriä korkea kullattu Avalokiteshvara-patsas, joka vihittiin 1996.',
+    },
+    Uvs: {
+      lyhyt: 'Uvs on pinta-alaltaan Mongolian suurin järvi, ja sen suolapitoisuus on noin puolet valtamerten suolapitoisuudesta.',
+    },
+  },
+  /*
+   * KAZ — nykymaakunnat (Natural Earthin vanha 14 alueen + 2 kaupungin
+   * jako; vuoden 2018 ja 2022 uudet alueet puuttuvat). Faktat
+   * en-Wikipediasta 25.9.2026. Khan Tengri, Araljärvi, Irtyš, Yasawin
+   * mausoleumi, Tamgaly, Baikonur, Charynin kanjoni, Altyn-Emel,
+   * Issykin kurgaani, Aisha Bibi ja Saryarka ovat jo maastokohteina,
+   * joten niitä ei käytetty.
+   *   Almaty           — Lake Kaindy (1911 maanjäristys)
+   *   Almaty City      — Medeu (1 691 m)
+   *   Aqmola           — Burabay National Park (tarina)
+   *   Aqtöbe           — Aktobe Region; Khromtau (kromiitti)
+   *   Astana           — Baiterek (monument) (97 m ~ 1997)
+   *   Atyrau           — Atyrau (Ural-joki, Eurooppa–Aasia)
+   *   East Kazakhstan  — Belukha Mountain
+   *   Qyzylorda        — Kyzylorda (pääkaupunki 1925–1927)
+   *   Mangghystau      — Mangystau Region (Karagiye −132 m)
+   *   North Kazakhstan — Botai culture
+   *   Pavlodar         — Bayanaul National Park (1985, ensimmäinen)
+   *   Qaraghandy       — Lake Balkhash
+   *   Qostanay         — Steppe Geoglyphs (Dey 2007)
+   *   South Kazakhstan — Aksu-Zhabagly Nature Reserve
+   *   West Kazakhstan  — Oral, Kazakhstan (1613, Puškin 1833)
+   *   Zhambyl          — Akyrtas (45 km Tarazista itään)
+   */
+  KAZ: {
+    Almaty: {
+      lyhyt: 'Kaindy-järvi syntyi vuoden 1911 maanjäristyksen jälkeen, ja sen pinnasta nousee yhä upoksiin jääneiden kuusten rankoja.',
+    },
+    "Almaty City": {
+      lyhyt: 'Almatyn yläpuolella 1 691 metrin korkeudessa on Medeun luistinrata, maailman suurin vuoristoon rakennettu kenttä.',
+    },
+    Aqmola: {
+      lyhyt: 'Kazakkitarun mukaan jumala heitti Burabayn vuoret, metsät ja järvet keskelle aroa – nyt ne ovat kansallispuisto.',
+    },
+    "Aqtöbe": {
+      lyhyt: 'Aqtöben alueen Khromtaussa louhitaan kromimalmia, ja alueen kromiittiesiintymät ovat IVY-maiden suurimmat.',
+    },
+    Astana: {
+      lyhyt: 'Bayterek-tornin näköalatasanne on 97 metrin korkeudessa: luku viittaa vuoteen 1997, jolloin Astanasta tuli pääkaupunki.',
+    },
+    Atyrau: {
+      lyhyt: 'Atyraun halki virtaa Ural-joki, jota pidetään Euroopan ja Aasian rajana, joten kaupunki on kahdessa maanosassa.',
+    },
+    "East Kazakhstan": {
+      lyhyt: 'Belukha, Altain vuoriston korkein vuori, kohoaa Itä-Kazakstanin ja Venäjän rajalla yli 4 500 metriin.',
+    },
+    Mangghystau: {
+      lyhyt: 'Mangghystaun Karagiye-painanne on 132 metriä merenpinnan alapuolella, Kazakstanin matalin kohta.',
+    },
+    "North Kazakhstan": {
+      lyhyt: 'Botain kylästä on kaivettu esiin yli 150 kuoppatalon asuinpaikka, jonka luulöydöt ovat varhaisimpia merkkejä hevosten pidosta.',
+    },
+    Pavlodar: {
+      lyhyt: 'Bayanaul perustettiin 1985 Kazakstanin ensimmäiseksi kansallispuistoksi, ja sen suurin järvi Sabyndykol tarkoittaa saippuajärveä.',
+    },
+    Qaraghandy: {
+      lyhyt: 'Balkhaš-järven länsiosa on makeaa ja itäosa suolaista vettä, ja pohjoisrannalla on Balkhašin kaupunki.',
+    },
+    Qostanay: {
+      lyhyt: 'Qostanayn aroilta löysi Dmitri Dey 2007 Google Earthin satelliittikuvista valtavia maahan kaivettuja kuvioita.',
+    },
+    Qyzylorda: {
+      lyhyt: 'Qyzylorda oli Kazakstanin neuvostotasavallan pääkaupunki 1925–1927, ennen kuin hallinto siirtyi Almatyyn.',
+    },
+    "South Kazakhstan": {
+      lyhyt: 'Aksu-Zhabaglyn luonnonsuojelualue Tian Shanin juurella on Keski-Aasian vanhin.',
+    },
+    "West Kazakhstan": {
+      lyhyt: 'Oralin perustivat kasakat 1613, ja Aleksandr Puškin kävi kaupungissa 1833 keräämässä aineistoa Pugatšovin kapinasta.',
+    },
+    Zhambyl: {
+      lyhyt: 'Tarazista 45 kilometriä itään ovat Akyrtasin rauniot, tummanpunaisesta hiekkakivestä rakennettu 700-luvun palatsi.',
+    },
+  },
+  /*
+   * UZB — nykymaakunnat (12 aluetta + Karakalpakstan; Taškentin
+   * kaupunki ei ole omana alueenaan). Faktat en-Wikipediasta 25.9.2026.
+   * Amudarja, Araljärvi, Itchan Kala, Shahrisabz, Moynaq, Nukusin
+   * museo, Kampir Tepe, Ayaz-Kala, Kokand, Aydarjärvi ja Khazret Sultan
+   * ovat jo maastokohteina, joten niitä ei käytetty.
+   *   Andijon        — UzAuto Motors (Asaka, 1996, Chevrolet)
+   *   Bukhoro        — Lab-i Hauz
+   *   Ferghana       — Margilan (silkki)
+   *   Jizzakh        — Zaamin National Park
+   *   Karakalpakstan — Karakalpakstan (autonominen tasavalta)
+   *   Namangan       — Namangan Region (puutarhat, Chustin veitset)
+   *   Navoi          — Sarmishsay (noin 10 000 kalliopiirrosta)
+   *   Kashkadarya    — Qarshi (nimi, kudotut matot)
+   *   Samarkand      — Registan
+   *   Sirdaryo       — Sirdaryo Region (Mirzachul, puuvilla)
+   *   Surkhandarya   — Termez (Xuanzang, 600-luku)
+   *   Tashkent       — Chimgan (85 km, laskettelukausi)
+   *   Khorezm        — Urgench; al-Khwarizmin patsas
+   */
+  UZB: {
+    Andijon: {
+      lyhyt: 'Andijanin alueen Asakan tehtaalla on koottu autoja vuodesta 1996, ja nykyään niissä on Chevrolet-merkki.',
+    },
+    Bukhoro: {
+      lyhyt: 'Buharan Lab-i Hauz on yksi kaupungin harvoista säilyneistä altaista, ja sen ympärillä ovat 1500–1600-lukujen madrasat.',
+    },
+    Ferghana: {
+      lyhyt: 'Margilanissa on kudottu silkkiä antiikin ajoista asti, ja kaupungin verstaissa valmistetaan yhä silkkikankaita.',
+    },
+    Jizzakh: {
+      lyhyt: 'Zaaminin kansallispuistossa Turkestanin vuorten pohjoisrinteellä katajametsät vaihtuvat ylempänä alppiniityiksi.',
+    },
+    Karakalpakstan: {
+      lyhyt: 'Karakalpakstan on Uzbekistanin itsehallinnollinen tasavalta, jonka kieli ja kulttuuri ovat lähempänä kazakkeja kuin uzbekkeja.',
+    },
+    Kashkadarya: {
+      lyhyt: 'Qarshin nimi tarkoittaa linnoitusta, ja kaupunki tunnetaan kudotuista nukattomista matoistaan.',
+    },
+    Khorezm: {
+      lyhyt: 'Urgenchissa seisoo suuri patsas al-Khwarizmille, Khorezmista kotoisin olleelle matemaatikolle, jonka nimestä tulee sana algoritmi.',
+    },
+    Namangan: {
+      lyhyt: 'Namanganin alue tunnetaan puutarhoistaan ja Chustin kaupungissa taotuista veitsistä.',
+    },
+    Navoi: {
+      lyhyt: 'Sarmishsayn rotkossa Nuratan piirissä on noin 10 000 kalliopiirrosta, joista vanhimmat ovat kivikaudelta.',
+    },
+    Samarkand: {
+      lyhyt: 'Samarkandin Registan-aukiota reunustaa kolme madrasaa, joista vanhin on Ulugh Begin 1417–1420 rakennuttama.',
+    },
+    Sirdaryo: {
+      lyhyt: 'Suuri osa Sirdaryon alueesta on Mirzachulia eli Nälkäaroa, jonka kastelluilla pelloilla kasvaa puuvillaa ja viljaa.',
+    },
+    Surkhandarya: {
+      lyhyt: 'Termezissä vieraili 600-luvulla kiinalainen munkki Xuanzang, joka kertoi kaupungissa olleen kymmenkunta luostaria ja tuhat munkkia.',
+    },
+    Tashkent: {
+      lyhyt: 'Tashkentista 85 kilometriä itään Chimganin rinteillä lasketellaan joulukuusta maaliskuun puoliväliin.',
+    },
+  },
+  /*
+   * TKM — nykymaakunnat (5 welaýatia; Ashgabat ei omana alueenaan).
+   * Faktat en-Wikipediasta 25.9.2026. Amudarja on jo maastokohteena.
+   *   Ahal      — Darvaza gas crater (1971, 60–70 m)
+   *   Balkan    — Garabogazköl (suolapitoisuus noin 35 %)
+   *   Tashauz   — Kutlug Timur Minaret (60 m, 1011; Unesco 2005)
+   *   Chardzhou — Lebap Region; Köýtendag (Aýrybaba 3 138 m)
+   *   Mary      — Merv
+   */
+  TKM: {
+    Ahal: {
+      lyhyt: 'Karakumin aavikolla Darvazan kaasukraatteri on palanut vuodesta 1971, ja sen halkaisija on 60–70 metriä.',
+    },
+    Balkan: {
+      lyhyt: 'Garabogazköl-laguunin veden suolapitoisuus on keskimäärin noin 35 prosenttia, noin kymmenkertainen valtameriin verrattuna.',
+    },
+    Chardzhou: {
+      lyhyt: 'Köýtendagin vuorilla kohoaa Turkmenistanin korkein huippu Aýrybaba, 3 138 metriä.',
+    },
+    Mary: {
+      lyhyt: 'Maryn lähellä ovat Mervin rauniot; 1100-luvulla Merv saattoi olla maailman suurin kaupunki.',
+    },
+    Tashauz: {
+      lyhyt: 'Köneürgençin 60-metrinen Kutlug Timurin minareetti rakennettiin 1011, ja kaupungin rauniot ovat Unescon maailmanperintöä.',
+    },
+  },
+  /*
+   * KHM (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.KHM:n tunnuksia TÄSMÄLLEEN (24 aluetta; Tbong Khmum
+   * sisältyy Kâmpóng Chamiin). Vain `lyhyt`. Maalla ei ole
+   * maastokohteet-/fokuskohteet-tiedostoa. Lähteet (en-Wikipedia ja haku,
+   * tarkistettu 25.9.2026):
+   *   Bântéay Méanchey — Banteay Chhmar (Jayavarman VII, Lokeshvara)
+   *   Batdâmbâng       — Phare Ponleu Selpak (1994)
+   *   Kâmpóng Cham     — Kizuna Bridge (2001, ensimmäinen Mekong-silta)
+   *   Kâmpóng Chhnang  — Kampong Chhnang province (nimen merkitys)
+   *   Kâmpóng Spœ      — Oudong (pääkaupunki 1618–1866)
+   *   Kâmpóng Thum     — Sambor Prei Kuk (Unesco 2017)
+   *   Kâmpôt           — Kampot pepper (GI 2010)
+   *   Kândal           — Koh Dach (silkkisaari, Mukh Kampul)
+   *   Kaôh Kong        — Koh Kong (island) (103 km²)
+   *   Kep              — Kep province (pienin, Kep-sur-Mer 1908)
+   *   Krâchéh          — Kampin delfiinisuvanto (Mongabay 2026)
+   *   Môndól Kiri      — Mondulkiri province (harvimmin asuttu)
+   *   Otdar Mean Chey  — Oddar Meanchey province (1999, nimi)
+   *   Krong Pailin     — Pailin province (jalokivet, longan)
+   *   Phnom Penh       — Silver Pagoda (yli 5 000 hopealaattaa)
+   *   Pouthisat        — Pursat province (Wat Bakan)
+   *   Preah Vihéar     — Koh Ker (36 m, Unesco 2023)
+   *   Prey Vêng        — Prey Veng province (laajin riisiala)
+   *   Rôtânôkiri       — Lake Yeak Laom (noin 800 m)
+   *   Krong Preah Sihanouk — Sihanoukville Autonomous Port
+   *   Stœng Trêng      — Stung Treng province
+   *   Svay Rieng       — Bavet (Ho Chi Minh City 70 km)
+   *   Takêv            — Angkor Borei (Funan)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  KHM: {
+    'Bântéay Méanchey': {
+      lyhyt: 'Banteay Chhmarin syrjäinen temppeli on Jayavarman VII:n rakennuttama, ja sen seinissä on harvinaisia monikätisiä Lokeshvara-reliefejä.',
+    },
+    'Batdâmbâng': {
+      lyhyt: 'Battambangissa toimii vuonna 1994 perustettu Phare Ponleu Selpak -taidekoulu, jonka nuoret sirkustaiteilijat esiintyvät ulkomaillakin.',
+    },
+    'Kâmpóng Cham': {
+      lyhyt: 'Kampong Chamin Kizuna-silta avattiin 2001, ja se oli ensimmäinen Kambodžaan Mekongin yli rakennettu silta.',
+    },
+    'Kâmpóng Chhnang': {
+      lyhyt: 'Kampong Chhnang tarkoittaa khmeriksi ruukkusatamaa, ja maakunnan kylät tunnetaan yhä savenvalannastaan.',
+    },
+    'Kâmpóng Spœ': {
+      lyhyt: 'Kampong Speun Oudong oli Kambodžan kuninkaallinen pääkaupunki vuodesta 1618 vuoteen 1866, jolloin hovi muutti Phnom Penhiin.',
+    },
+    'Kâmpóng Thum': {
+      lyhyt: 'Sambor Prei Kukin tiilitemppelit olivat 600-luvulla Chenlan pääkaupunki Isanapura, ja ne ovat nyt Unescon maailmanperintöä.',
+    },
+    'Kâmpôt': {
+      lyhyt: 'Kampotin pippuri sai vuonna 2010 ensimmäisenä kambodžalaisena tuotteena maantieteellisen alkuperäsuojan.',
+    },
+    'Kândal': {
+      lyhyt: 'Koh Dachin saarella Mekongissa, noin kymmenen kilometrin päässä Phnom Penhistä, kudotaan silkkiä paalutalojen alle pystytetyillä kangaspuilla.',
+    },
+    'Kaôh Kong': {
+      lyhyt: 'Koh Kong Krao on Kambodžan suurin saari, noin sata neliökilometriä enimmäkseen koskematonta sademetsää.',
+    },
+    Kep: {
+      lyhyt: 'Kep on Kambodžan pienin maakunta, ja ranskalaiset perustivat sen rantalomakohteeksi nimellä Kep-sur-Mer vuonna 1908.',
+    },
+    'Krâchéh': {
+      lyhyt: 'Kampin syvässä Mekongin suvannossa Kratien pohjoispuolella elää Mekongin viimeisiä irrawaddyndelfiinejä.',
+    },
+    'Môndól Kiri': {
+      lyhyt: 'Mondulkiri on Kambodžan suurin mutta harvimmin asuttu maakunta, ja suurin osa asukkaista kuuluu bunongeihin tai muihin alkuperäiskansoihin.',
+    },
+    'Otdar Mean Chey': {
+      lyhyt: 'Oddar Meanchey tarkoittaa voittoisaa pohjoista, ja maakunta perustettiin nykyisessä muodossaan vasta vuonna 1999.',
+    },
+    'Krong Pailin': {
+      lyhyt: 'Pailin tunnetaan safiireistaan ja rubiineistaan, mutta nyt sen rinteillä kasvaa yhä enemmän longan-hedelmiä vientiin.',
+    },
+    'Phnom Penh': {
+      lyhyt: 'Kuninkaanpalatsin Hopeapagodan lattia on päällystetty yli 5 000 hopealaatalla, joista kävijä näkee vain pienen osan.',
+    },
+    Pouthisat: {
+      lyhyt: 'Pursatin Wat Bakan on Kambodžan vanhimpia yhä toiminnassa olevia pagodeja.',
+    },
+    'Preah Vihéar': {
+      lyhyt: 'Koh Kerin seitsenportainen pyramiditemppeli kohoaa 36 metriin, ja muinainen pääkaupunki on Unescon maailmanperintöä vuodesta 2023.',
+    },
+    'Prey Vêng': {
+      lyhyt: 'Prey Vengissä on Kambodžan maakunnista laajin riisinviljelyyn käytetty peltoala.',
+    },
+    'Rôtânôkiri': {
+      lyhyt: 'Banlungin lähellä oleva Yeak Laom on lähes pyöreä, noin 800 metriä leveä kraatterijärvi keskellä metsää.',
+    },
+    'Siemréab': {
+      lyhyt: 'Siem Reapin lähellä kohoava Angkor Wat on kambodžalaisille niin tärkeä, että sen siluetti on maan lipussa.',
+    },
+    'Krong Preah Sihanouk': {
+      lyhyt: 'Sihanoukvillen satama on Kambodžan ainoa kansainvälinen syvänveden merisatama.',
+    },
+    'Stœng Trêng': {
+      lyhyt: 'Stung Trengissä virtaavat Mekong, Sekong ja Sesan, ja Mekongin uomaa täplittävät sadat pienet saaret.',
+    },
+    'Svay Rieng': {
+      lyhyt: 'Svay Riengin Bavet on vilkas raja-asema Vietnamiin, ja sieltä on Ho Chi Minh Cityyn vain noin 70 kilometriä.',
+    },
+    'Takêv': {
+      lyhyt: 'Takeon Angkor Boreissa oli Funanin kuningaskunnan asutus ja ehkä sen pääkaupunki vuosisatoja ennen Angkoria.',
+    },
+  },
+  /*
+   * LAO (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LAO:n tunnuksia TÄSMÄLLEEN (17 aluetta, vanha jako
+   * ilman Xaisombounia; "Vientiane [prefecture]" on pääkaupunkiprefektuuri).
+   * Vain `lyhyt`. Maalla ei ole maastokohteet-/fokuskohteet-tiedostoa.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Attapu          — Attapeu province (Xaysetha-stupa 1579)
+   *   Bokeo           — Bokeo province (nimi = jalokivikaivos)
+   *   Bolikhamxai     — Bolikhamsai province (Nam Kading)
+   *   Houaphan        — Viengxay Caves (jopa 23 000 asukasta)
+   *   Khammouan       — Tham Kong Lo (noin 7 km)
+   *   Louang Namtha   — Nam Ha NPA (ASEAN Heritage Park, Equator 2006)
+   *   Louangphrabang  — Tak bat (aamuinen almukierros)
+   *   Oudômxai        — Oudomxay province (khmut enemmistö)
+   *   Phôngsali       — Phongsali tea (Slow Food), Ban Komaen
+   *   Saravan         — Tad Lo (Xe Set)
+   *   Savannakhét     — Joshua Hoffet (löydöt 1936)
+   *   Vientiane [prefecture] — Emblem of Laos (Pha That Luang)
+   *   Xaignabouri     — Elephant Conservation Center (Nam Tien)
+   *   Xékong          — Sekong province (pienin väkiluku, 14 kansaa)
+   *   Xiangkhoang     — Plain of Jars (Unesco 2019)
+   *   Muut            — yleistietoa, tarkistettu vastaavista
+   *                     en-Wikipedia-artikkeleista.
+   */
+  LAO: {
+    Attapu: {
+      lyhyt: 'Attapeun kaupungin Xaysethan stupa on rakennettu jo vuonna 1579.',
+    },
+    Bokeo: {
+      lyhyt: 'Bokeo tarkoittaa laoksi jalokivikaivosta, ja maakunta on nimetty Houayxain seudun safiirikaivosten mukaan.',
+    },
+    Bolikhamxai: {
+      lyhyt: 'Nam Kadingin suojelualueen metsissä elävät valkoposkigibbonit ja kirjavat douc-apinat.',
+    },
+    Champasak: {
+      lyhyt: 'Vat Phoun temppelirauniot vuoren juurella ovat khmerien ajalta, ja ne ovat olleet Unescon maailmanperintöä vuodesta 2001.',
+    },
+    Houaphan: {
+      lyhyt: 'Vieng Xain kalkkikiviluolissa asui sodan vuosina jopa 23 000 ihmistä, ja luolissa toimi sairaala, koulu ja jopa teatteri.',
+    },
+    Khammouan: {
+      lyhyt: 'Nam Hinboun -joki virtaa Kong Lon luolan läpi noin seitsemän kilometriä, ja luolan voi kulkea läpi pitkähäntäveneellä.',
+    },
+    'Louang Namtha': {
+      lyhyt: 'Nam Han suojelualue on ASEAN-perintöpuisto, ja sen ekomatkailuhanke sai Equator-palkinnon vuonna 2006.',
+    },
+    Louangphrabang: {
+      lyhyt: 'Luang Prabangissa munkit kulkevat joka aamu ennen auringonnousua kaduilla, ja asukkaat antavat heille almuksi tahmeaa riisiä.',
+    },
+    'Oudômxai': {
+      lyhyt: 'Oudomxain asukkaista suurin osa on khmuja, yksi maakunnan noin neljästätoista kansanryhmästä.',
+    },
+    'Phôngsali': {
+      lyhyt: 'Phongsalyn Komaenin kylässä kasvaa satoja vuosia vanhoja, jopa kuusimetrisiä teepuita.',
+    },
+    Saravan: {
+      lyhyt: 'Salavanin Tad Lo on Xe Set -joen leveä, porrastettu vesiputous Bolavenin ylätasangon laidalla.',
+    },
+    'Savannakhét': {
+      lyhyt: 'Savannakhetin dinosaurusmuseossa on luita, joita ranskalainen geologi Josué Hoffet löysi maakunnan itäosista vuonna 1936.',
+    },
+    Vientiane: {
+      lyhyt: 'Vang Viengin jyrkät kalkkikivivuoret kohoavat Nam Song -joen rannalta ja houkuttelevat kiipeilijöitä ja melojia.',
+    },
+    'Vientiane [prefecture]': {
+      lyhyt: 'Pha That Luangin kullattu stupa on Laosin kansallinen symboli, ja se näkyy valtion vaakunassa ja seteleissä.',
+    },
+    Xaignabouri: {
+      lyhyt: 'Sainyabulin Nam Tien -järven rannalla toimii norsujen suojelukeskus, jonne on tuotu norsuja metsätöistä.',
+    },
+    'Xékong': {
+      lyhyt: 'Sekong on Laosin väkiluvultaan pienin maakunta, mutta siellä asuu 14 kansanryhmää, ja laoja on vain muutama prosentti.',
+    },
+    Xiangkhoang: {
+      lyhyt: 'Purkkien tasangolla on yli kaksituhatta rautakautista kivipurkkia, ja alue on Unescon maailmanperintöä vuodesta 2019.',
+    },
+  },
+  /*
+   * MMR (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MMR:n tunnuksia TÄSMÄLLEEN (14 aluetta). Vain
+   * `lyhyt`, neutraali sävy (maisema, kulttuuri, historia). Vältetty
+   * maastokohteet-mmr.js:n aiheet (Bagan, Mrauk U, Beikthano, Kyaiktiyo,
+   * Pindaya, Pyin Oo Lwin, Mawlamyine, Shwebo, Hkakabo Razi, Inle,
+   * Chindwin). Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Ayeyarwady  — Pathein hti
+   *   Bago        — Shwethalyaung Buddha (55 m, 1881)
+   *   Chin        — Nat Ma Taung, Natmataung National Park (2010)
+   *   Kachin      — Manaw (festival), Myitkyina
+   *   Kayah       — Taung Kwe Pagoda
+   *   Kayin       — Mount Zwegabin (722 m)
+   *   Magway      — Minbu (mutatulivuoret)
+   *   Mandalay    — U Bein Bridge (1 209 m)
+   *   Mon         — Win Sein Tawya (180 m)
+   *   Rakhine     — Ngapali Beach
+   *   Sagaing     — Mingun Bell (90 t, 2000)
+   *   Shan        — Taunggyi Hot Air Balloon Festival
+   *   Tanintharyi — Mergui Archipelago (noin 800 saarta, mokenit)
+   *   Yangon      — Shwedagon Pagoda (76 karaatin timantti)
+   */
+  MMR: {
+    Ayeyarwady: {
+      lyhyt: 'Patheinissa tehdään käsin värikkäitä bambusta ja paperista tai puuvillasta valmistettuja päivänvarjoja, jotka tunnetaan koko Myanmarissa.',
+    },
+    Bago: {
+      lyhyt: 'Bagon Shwethalyaung on 55 metriä pitkä makaava Buddha, jonka brittiläiset rautatietyöläiset löysivät uudelleen vuonna 1881.',
+    },
+    Chin: {
+      lyhyt: 'Nat Ma Taung eli Victoria-vuori on Chinin osavaltion korkein huippu, ja sitä ympäröivä kansallispuisto perustettiin 2010.',
+    },
+    Kachin: {
+      lyhyt: 'Myitkyinan Manau-juhlassa tuhannet kachinit tanssivat tammikuussa korkeiden, kuvioin maalattujen manau-paalujen ympärillä.',
+    },
+    Kayah: {
+      lyhyt: 'Loikawin Taung Kwe -pagodi on rakennettu rosoisten kalkkikivihuippujen päälle, ja nimi tarkoittaa haljennutta vuorta.',
+    },
+    Kayin: {
+      lyhyt: 'Hpa-Anin lähellä kohoava Zwegabin-vuori on 722 metriä korkea, ja sen juurella istuu riveissä yli tuhat Buddha-patsasta.',
+    },
+    Magway: {
+      lyhyt: 'Minbun mutatulivuoret ovat harmaita savikumpuja, joista pulppuava muta on kylmää, koska sen nostaa pintaan maakaasu.',
+    },
+    Mandalay: {
+      lyhyt: 'Amarapuran U Bein -silta on noin 1,2 kilometriä pitkä, ja sitä pidetään maailman vanhimpana ja pisimpänä tiikkisiltana.',
+    },
+    Mon: {
+      lyhyt: 'Mudonin lähellä makaava Win Sein Taw Ya -Buddha on 180 metriä pitkä, ja sen sisällä on huoneita täynnä Buddhan opetuksia esittäviä kuvaelmia.',
+    },
+    Rakhine: {
+      lyhyt: 'Ngapalin hiekkaranta Bengalinlahden rannalla Thandwen lähellä on Myanmarin tunnetuimpia rantakohteita.',
+    },
+    Sagaing: {
+      lyhyt: 'Mingunin kello painaa noin 90 tonnia, ja se oli maailman suurin soiva kello, kunnes Kiinassa valettiin suurempi vuonna 2000.',
+    },
+    Shan: {
+      lyhyt: 'Taunggyissa lasketaan joka marraskuu kuumailmapalloja Tazaungdaing-juhlan kunniaksi, ja yöpalloja koristellaan kynttilöin.',
+    },
+    Tanintharyi: {
+      lyhyt: 'Myeikin saaristossa on noin 800 saarta, ja sen vesillä elävät mokenit, jotka viettävät kuivan kauden veneissään.',
+    },
+    Yangon: {
+      lyhyt: 'Shwedagonin pagodi on päällystetty aidoilla kultalevyillä, ja sen kärjessä on 76 karaatin timantti.',
+    },
+  },
+  /*
+   * BTN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BTN:n tunnuksia TÄSMÄLLEEN (20 aluetta, vanhat
+   * kirjoitusasut: Geylegphug = Sarpang, Samchi = Samtse, Tongsa =
+   * Trongsa jne.). Vain `lyhyt`. Maalla ei ole maastokohteet-/
+   * fokuskohteet-tiedostoa. Lähteet (en-Wikipedia ja haku, tarkistettu
+   * 25.9.2026):
+   *   Bumthang         — Jampa Lhakhang, Jambay Lhakhang Drup
+   *   Chhukha          — Chhukha Hydropower Plant (DGPC, 1986)
+   *   Daga             — Dagana District (Daga Dzong 1651)
+   *   Gasa             — Layap, Laya (noin 3 820 m)
+   *   Geylegphug       — Gelephu Mindfulness City (17.12.2023)
+   *   Ha               — Lhakhang Karpo ja Nagpo (kyyhkytaru)
+   *   Lhuntshi         — Khoma, kishuthara (Lhuentse Dzongkhag)
+   *   Mongar           — Mongar Dzong (ilman nauloja ja piirustuksia)
+   *   Pemagatsel       — Pemagatshel District (Yongla Goenpa)
+   *   Samdrup Jongkhar — Samdrup Jongkhar District
+   *   Samchi           — Samtse District (Samtse College of Education)
+   *   Thimphu          — ei liikennevaloja (BhutanWiki, Wego)
+   *   Tashigang        — Sakteng Wildlife Sanctuary (migoi)
+   *   Tashi Yangtse    — Chorten Kora (noin 1740)
+   *   Tongsa           — Penlop of Trongsa
+   *   Chirang          — Tsirang District
+   *   Wangdi Phodrang  — Phobjikha Valley (mustakaulakurjet)
+   *   Shemgang         — Gee's golden langur
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  BTN: {
+    Bumthang: {
+      lyhyt: 'Jambay Lhakhangin syysjuhlassa kävijät hyppäävät liekkien yli puhdistautuakseen, ja temppeli on Bhutanin vanhimpia.',
+    },
+    Chhukha: {
+      lyhyt: 'Chukhan vesivoimala valmistui 1986 Bhutanin ensimmäiseksi suureksi voimalaksi, ja suurin osa sen sähköstä myydään Intiaan.',
+    },
+    Daga: {
+      lyhyt: 'Daga Dzongin perusti vuonna 1651 Bhutanin yhdistäjä Zhabdrung Ngawang Namgyal, ja se on yhä piirin hallinnon keskus.',
+    },
+    Gasa: {
+      lyhyt: 'Gasan Layan kylä on noin 3 800 metrin korkeudessa, ja sen naiset käyttävät kartiomaisia bambuhattuja, joiden huipussa on piikki.',
+    },
+    Geylegphug: {
+      lyhyt: 'Gelephuun rakennetaan Mindfulness Cityä, uutta talousaluetta, jonka Bhutanin kuningas julisti vuonna 2023.',
+    },
+    Ha: {
+      lyhyt: 'Haan laaksossa on valkoinen ja musta temppeli, joiden paikat tarun mukaan valitsivat valkoinen ja musta kyyhky.',
+    },
+    Lhuntshi: {
+      lyhyt: 'Lhuentsen Khoman kylässä kudotaan kishuthara-silkkiä, ja monimutkaisimman kuvion tekeminen voi viedä vuoden.',
+    },
+    Mongar: {
+      lyhyt: 'Mongarin dzong rakennettiin 1900-luvulla vanhaan tapaan, ilman ainuttakaan naulaa ja ilman piirustuksia.',
+    },
+    Paro: {
+      lyhyt: 'Taktsang eli Tiikerinpesä on luostari, joka riippuu jyrkänteellä satoja metrejä Paron laakson yläpuolella.',
+    },
+    Pemagatsel: {
+      lyhyt: 'Pemagatshelin Yongla-luostari perustettiin 1700-luvulla vuorenhuipulle, jonka muodon sanotaan muistuttavan rituaalitikaria.',
+    },
+    Punakha: {
+      lyhyt: 'Punakhan dzong seisoo Pho Chhun ja Mo Chhun yhtymäkohdassa, ja jokien nimet tarkoittavat isä- ja äitijokea.',
+    },
+    'Samdrup Jongkhar': {
+      lyhyt: 'Samdrup Jongkharin kaupunki on Bhutanin kaakkoiskulman portti, josta tie jatkuu rajan yli Intian Assamiin.',
+    },
+    Samchi: {
+      lyhyt: 'Samtsessa toimii Bhutanin kuninkaalliseen yliopistoon kuuluva opettajakorkeakoulu, jossa koulutetaan maan opettajia.',
+    },
+    Thimphu: {
+      lyhyt: 'Thimphu on maailman ainoa pääkaupunki ilman liikennevaloja: risteyksissä liikennettä ohjaa valkohanskainen poliisi.',
+    },
+    Tashigang: {
+      lyhyt: 'Trashigangin Sakteng on maailman ainoa suojelualue, joka perustettiin osin suojelemaan lumimiehen eli migoin elinympäristöä.',
+    },
+    'Tashi Yangtse': {
+      lyhyt: 'Chorten Koran stupa rakennettiin noin 1740 Nepalin Boudhanathin mallin mukaan, jottei pyhiinvaeltajien tarvitsisi matkata Nepaliin.',
+    },
+    Tongsa: {
+      lyhyt: 'Bhutanin kruununperillinen saa perinteisesti Trongsan penlopin eli maaherran arvonimen ennen kuninkaaksi nousuaan.',
+    },
+    Chirang: {
+      lyhyt: 'Tsirang tunnetaan loivista rinteistään ja leudosta ilmastostaan, ja sen halki virtaa Punatsang Chhu, yksi Bhutanin pisimmistä joista.',
+    },
+    'Wangdi Phodrang': {
+      lyhyt: 'Phobjikhan laaksoon saapuu lokakuun lopulla talvehtimaan satoja mustakaulakurkia Tiibetin ylängöltä.',
+    },
+    Shemgang: {
+      lyhyt: 'Zhemgangin metsissä elää kultalanguri, apina jota tavataan vain Bhutanissa ja Intian Assamissa.',
+    },
+  },
+  /*
+   * TLS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.TLS:n tunnuksia TÄSMÄLLEEN (13 aluetta; Ambeno =
+   * Oecusse). Vain `lyhyt`. Vältetty maastokohteet-tls.js:n aiheet
+   * (Cristo Rei, Maubara, Balibo, Lailin luola, Baucaun kaupunki, Baguia,
+   * Viqueque-kaupunki, Nino Konis Santana, Matebian, Ataúro,
+   * Timorinmeri). Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Aileu      — Aileu Municipality (nimen merkitys)
+   *   Ainaro     — Tatamailau (Neitsyt Marian patsas 1997)
+   *   Baucau     — Venilale (Fatuk Kuak Hitu, seitsemän luolaa)
+   *   Bobonaro   — Marobo hot springs
+   *   Cova Lima  — Suai Airport (20.6.2017)
+   *   Dili       — Tais, Unesco USL 2021
+   *   Ermera     — Ermera Municipality (kahvi)
+   *   Lautém     — Lautém Municipality (fataluku)
+   *   Liquica    — Liquiçá Municipality (tokodede)
+   *   Manatuto   — Manatuto Municipality (kaksi rannikkoa)
+   *   Manufahi   — East Timorese rebellion of 1911–1912
+   *   Ambeno     — Oecusse (Lifau)
+   *   Viqueque   — Viqueque Municipality (suurin pinta-ala)
+   */
+  TLS: {
+    Aileu: {
+      lyhyt: 'Aileun nimi tarkoittaa mambain kielellä taipunutta puuta, ja tarun mukaan se viittaa oudon muotoiseen viikunapuuhun.',
+    },
+    Ainaro: {
+      lyhyt: 'Ramelau eli Tatamailau on Timorin saaren korkein vuori, ja sen huipulla seisoo vuonna 1997 pystytetty Neitsyt Marian patsas.',
+    },
+    Baucau: {
+      lyhyt: 'Venilalen rinteissä on seitsemän tunnelia, jotka Japanin armeija kaivoi toisen maailmansodan aikana.',
+    },
+    Bobonaro: {
+      lyhyt: 'Marobon kuumat lähteet täyttävät vuoristolaakson kylpyaltaita, ja niiden vieressä on vanhan kylpylän kiviraunioita.',
+    },
+    'Cova Lima': {
+      lyhyt: 'Suain lentoasema vihittiin käyttöön vuonna 2017, ja se on osa etelärannikon laajaa Tasi Mane -rakennushanketta.',
+    },
+    Dili: {
+      lyhyt: 'Dilissä myydään käsin kudottuja tais-kankaita, jotka Unesco merkitsi vuonna 2021 kiireellisesti suojeltavaksi perinnöksi.',
+    },
+    Ermera: {
+      lyhyt: 'Ermera on Itä-Timorin tärkein kahvinviljelyalue, ja korkeimmat viljelmät ovat lähes kahden kilometrin korkeudessa.',
+    },
+    'Lautém': {
+      lyhyt: 'Lautémissa puhutaan fatalukua, papualaista kieltä, jota puhuu noin 30 000 ihmistä saaren itäpäässä.',
+    },
+    Liquica: {
+      lyhyt: 'Liquiçássa lähes kaikki asukkaat puhuvat tetumin ja portugalin lisäksi omaa tokodede-kieltään.',
+    },
+    Manatuto: {
+      lyhyt: 'Manatuto on toinen Itä-Timorin kahdesta kunnasta, jotka ulottuvat saaren poikki pohjoisrannikolta etelärannikolle.',
+    },
+    Manufahi: {
+      lyhyt: 'Manufahin liurai Dom Boaventura johti 1911–1912 kapinaa, jota pidetään viimeisenä suurena kansannousuna portugalilaisia vastaan.',
+    },
+    Ambeno: {
+      lyhyt: 'Oecusse on Indonesian Länsi-Timorin ympäröimä erillisalue, ja sen Lifau oli portugalilaisten ensimmäisiä tukikohtia Timorissa.',
+    },
+    Viqueque: {
+      lyhyt: 'Viqueque on pinta-alaltaan Itä-Timorin suurin kunta, ja sen etelärannikon tasangoilla viljellään riisiä.',
+    },
+  },
+  /*
+   * GEO (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8C). Avaimet
+   * MAAKUNNAT_KAIKKI.GEO:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Abhasiasta ja Šida Kartlista vain maisema ja
+   * kulttuuri. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Abkhazia        — Veryovkina Cave (Arabika)
+   *   Ajaria          — Ali and Nino (Batumi, Kvesitadze)
+   *   Guria           — Georgian polyphony (krimanchuli)
+   *   Imereti         — Gelati Monastery (David IV)
+   *   Kakheti         — Qvevri (Unesco 2013)
+   *   Kvemo Kartli    — Dmanisi hominins
+   *   Mtskheta-Mt.    — Gergeti Trinity Church
+   *   Racha-Lechkhumi — Khvanchkara (wine)
+   *   Samegrelo-ZS    — Upper Svaneti (Unesco 1996)
+   *   Samtskhe-Jav.   — Vardzia
+   *   Shida Kartli    — Uplistsikhe
+   *   Tbilisi         — Abanotubani
+   */
+  GEO: {
+    Abkhazia: {
+      lyhyt: 'Arabikan kalkkikivivuoristossa on Verjovkinan luola, maailman syvin tunnettu luola, joka ulottuu yli 2 200 metrin syvyyteen.',
+    },
+    Ajaria: {
+      lyhyt: 'Batumin rantabulevardilla kaksi kahdeksanmetristä teräsveistosta, Ali ja Nino, liukuvat iltaisin hitaasti toistensa läpi.',
+    },
+    Guria: {
+      lyhyt: 'Gurian moniäänisessä laulussa ylin ääni, krimantšuli, jodlaa kiemurrellen muiden äänten yläpuolella.',
+    },
+    Imereti: {
+      lyhyt: 'Gelatin luostarin perusti kuningas Daavid Rakentaja 1106, ja hänet haudattiin portin alle, jotta kävijät astuisivat hänen ylitseen.',
+    },
+    Kakheti: {
+      lyhyt: 'Kakhetissa viini käytetään yhä maahan upotetuissa saviruukuissa, kvevreissä, ja menetelmä on Unescon aineetonta kulttuuriperintöä.',
+    },
+    "Kvemo Kartli": {
+      lyhyt: 'Dmanisista on kaivettu noin 1,8 miljoonaa vuotta vanhoja ihmisen sukulaisten kalloja, vanhimpia Afrikan ulkopuolelta löydettyjä.',
+    },
+    "Mtskheta-Mtianeti": {
+      lyhyt: 'Stepantsmindan yllä 2 170 metrin korkeudessa seisoo Gergetin kolminaisuuskirkko, ja sen takana kohoaa lumihuippuinen Kazbek.',
+    },
+    "Racha-Lechkhumi-Kvemo Svaneti": {
+      lyhyt: 'Ratšan Khvantškarassa tehdään luonnostaan puolimakeaa punaviiniä aleksandrouli- ja mudžuretuli-rypäleistä.',
+    },
+    "Samegrelo-Zemo Svaneti": {
+      lyhyt: 'Ylä-Svanetin vuoristokylissä kohoaa keskiaikaisia kivisiä puolustustorneja, ja laakso on Unescon maailmanperintöä.',
+    },
+    "Samtskhe-Javakheti": {
+      lyhyt: 'Vardzian luostarikaupunki hakattiin 1100-luvun lopulla kuningatar Tamaran aikana Erušetivuoren jyrkkään kallioseinään.',
+    },
+    "Shida Kartli": {
+      lyhyt: 'Uplistsikhe on Mtkvari-joen yllä kallioon hakattu muinainen kaupunki, jonka vanhimmat osat ovat varhaiselta rautakaudelta.',
+    },
+    Tbilisi: {
+      lyhyt: 'Tbilisin nimi juontuu sanasta tbili, lämmin, ja Abanotubanin kupolikylpylöissä kylvetään yhä kuumassa rikkivedessä.',
+    },
+  },
+  /*
+   * ARM (erä 8C). Avaimet MAAKUNNAT_KAIKKI.ARM:n tunnuksia TÄSMÄLLEEN
+   * ("Erevan"). Vain `lyhyt`. Araratin vuori on jo TUR/Iğdır-rivillä,
+   * joten Ararat-maakunnassa Khor Virap. Lähteet (en-Wikipedia):
+   *   Aragatsotn — Mount Aragats; Ararat — Khor Virap; Armavir —
+   *   Etchmiadzin Cathedral; Gegharkunik — Sevanavank; Erevan —
+   *   Erebuni Fortress; Kotayk — Garni Temple; Lori — Haghpat/Sanahin;
+   *   Shirak — Gyumri (huumori); Syunik — Wings of Tatev; Tavush —
+   *   Dilijan/Haghartsin; Vayots Dzor — Areni-1 shoe
+   */
+  ARM: {
+    Aragatsotn: {
+      lyhyt: 'Nelihuippuinen Aragats nousee 4 090 metriin, ja se on Armenian nykyisten rajojen sisällä korkein vuori.',
+    },
+    Ararat: {
+      lyhyt: 'Khor Virapin luostarin maanalaisessa kuopassa Gregorius Valaistaja oli perimätiedon mukaan vankina 13 vuotta.',
+    },
+    Armavir: {
+      lyhyt: 'Vagharšapatin Etšmiadzinin katedraali rakennettiin 300-luvun alussa, ja se on Armenian apostolisen kirkon äitikirkko.',
+    },
+    Gegharkunik: {
+      lyhyt: 'Sevanjärvi on noin 1 900 metrin korkeudessa, ja sen niemellä seisoo vuonna 874 perustettu Sevanavankin luostari.',
+    },
+    Erevan: {
+      lyhyt: 'Jerevan laskee syntynsä vuoteen 782 eaa., jolloin urartulaiset rakensivat Erebunin linnoituksen nykyisen kaupungin laidalle.',
+    },
+    Kotayk: {
+      lyhyt: 'Garnin pylväiden kehystämä temppeli ensimmäiseltä vuosisadalta on ainoa kreikkalais-roomalainen temppeli entisen Neuvostoliiton alueella.',
+    },
+    Lori: {
+      lyhyt: 'Debed-joen rotkon yllä seisovat Haghpatin ja Sanahinin keskiaikaiset luostarit, jotka ovat Unescon maailmanperintöä.',
+    },
+    Shirak: {
+      lyhyt: 'Gjumria kutsutaan Armenian huumorin pääkaupungiksi, ja sen asukkaiden sutkaukset kiertävät koko maassa.',
+    },
+    Syunik: {
+      lyhyt: 'Tatevin köysirata kulkee 5 752 metriä Vorotan-joen rotkon yli, ja se on yksi maailman pisimmistä yhtäjaksoisista köysiradoista.',
+    },
+    Tavush: {
+      lyhyt: 'Dilijanin metsäisiä vuoria kutsutaan Armenian Sveitsiksi, ja läheinen Haghartsinin luostari kätkeytyy metsän keskelle.',
+    },
+    "Vayots Dzor": {
+      lyhyt: 'Arenin luolasta löytyi 2008 noin 5 500 vuotta vanha nahkakenkä, vanhin tunnettu lähes ehjänä säilynyt kenkä.',
+    },
+  },
+  /*
+   * AZE (erä 8C). Avaimet ovat Natural Earthin vanhoja (ennen 2021)
+   * talousalueita TÄSMÄLLEEN. Vain `lyhyt`. Kalbajar-Lachinista,
+   * Yukhari Garabakhista ja Naxçıvanista vain maisema ja kulttuuri.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Absheron — Yanar Dag; Aran — Shirvan National Park (2003);
+   *   Daghlig Shirvan — Lahij; Ganja-Gazakh — Nizami Mausoleum;
+   *   Guba-Khachmaz — Khinalug; Kalbajar-Lachin — Istisu resort;
+   *   Lankaran — Hyrcanian Forests (Unesco 2023); Naxçıvan — Momine
+   *   Khatun Mausoleum (1186); Shaki-Zaqatala — Palace of Shaki Khans;
+   *   Yukhari Garabakh — Karabakh horse
+   */
+  AZE: {
+    "Absheron Economic Region": {
+      lyhyt: 'Abšeronin niemimaalla Yanar Dagin rinteessä palaa maasta purkautuva maakaasu liekkeinä yötä päivää.',
+    },
+    "Aran Economic Region": {
+      lyhyt: 'Kura-joen alavalla tasangolla Širvanin kansallispuistossa elää tuhansia struumagaselleja, Kaukasian suurin kanta.',
+    },
+    "Daghlig Shirvan Economic Region": {
+      lyhyt: 'Lahıcin vuoristokylässä kupariseppien verstaat takovat yhä kattiloita ja kannuja kivetyn pääkadun varrella.',
+    },
+    "Ganja-Gazakh Economic Region": {
+      lyhyt: 'Gandžassa on 1100-luvun runoilijan Nizami Gandžavin mausoleumi; hän kirjoitti persiaksi runoelman Leila ja Madžnun.',
+    },
+    "Guba-Khachmaz Economic Region": {
+      lyhyt: 'Xınalıqin kylässä yli 2 300 metrin korkeudessa puhutaan omaa kieltä, jota ei puhuta missään muualla.',
+    },
+    "Kalbajar-Lachin Economic Region": {
+      lyhyt: 'Kəlbəcərin vuorilla yli 2 000 metrin korkeudessa pulppuavat Istisun lähes 60-asteiset mineraalilähteet.',
+    },
+    "Lankaran Economic Region": {
+      lyhyt: 'Talyšvuorten Hyrkanian metsät ovat jäänne esihistoriallisesta lehtimetsästä, ja ne ovat Unescon maailmanperintöä.',
+    },
+    "Naxçıvan Autonomous Republic": {
+      lyhyt: 'Naxçıvanin Möminə Xatunin mausoleumi valmistui 1186, ja sen kymmenkulmaista tiilitornia koristavat turkoosit kuviot.',
+    },
+    "Shaki-Zaqatala Economic Region": {
+      lyhyt: 'Šekin kaanien palatsin ikkunoiden šebeke-lasimosaiikki on koottu puusta ja lasista ilman ainuttakaan naulaa tai liimaa.',
+    },
+    "Yukhari Garabakh Economic Region": {
+      lyhyt: 'Karabahin hevonen on sitkeä ja nopea vuoristorotu, ja se on Azerbaidžanin kansalliseläin.',
+    },
+  },
+  /*
+   * YEM (erä 8C). Avaimet MAAKUNNAT_KAIKKI.YEM:n tunnuksia TÄSMÄLLEEN
+   * (myös "`Adan", "Sa`dah", "Ta`izz"). Vain `lyhyt`, ei sotaa eikä
+   * politiikkaa. Vältetty maastokohteet-yem.js:n aiheet (Nabi Shu'ayb,
+   * Sokotra, Shibam, Zabid, Maribin pato, Tarim, Jibla, Baraqish, Thula,
+   * al-Hajjarah). Lähteet (en-Wikipedia, Archnet, haku 25.9.2026):
+   *   Abyan — Wadi Bana; Adan — Crater; Al Bayda' — Amiriya Madrasa;
+   *   Al Dali' — Jabal Jahaf; Al Jawf — Qarnawu; Al Mahwit — Shibam
+   *   Kawkaban; Amran — Shaharah Bridge; Dhamar — Hammam Ali;
+   *   Hadramawt — Wadi Do'an sidr; Hajjah — Kuhlan Affar; Hudaydah —
+   *   Bayt al-Faqih; Ibb — Ibb Governorate; Lahij — Ahmed Fadhl
+   *   al-Qumindan; Mahrah — Mehri; Ma'rib — Temple of Awwam; Raymah —
+   *   Raymah Governorate; Sa'dah — Al-Hadi Mosque; Shabwah — Bir Ali /
+   *   Qana; Sana'a — Dar al-Hajar; Amanat Al Asimah — Old City of
+   *   Sana'a; Ta'izz — Ashrafiya Mosque
+   */
+  YEM: {
+    Abyan: {
+      lyhyt: 'Abyanin suistossa Wadi Banan tulvavedet johdetaan pelloille, ja ennen itsenäisyyttä seutu oli tunnettu puuvillastaan.',
+    },
+    "`Adan": {
+      lyhyt: 'Adenin vanhin kaupunginosa, Crater, on rakennettu sammuneen tulivuoren kraatteriin meren rannalle.',
+    },
+    "Al Bayda'": {
+      lyhyt: "Rada'n valkoinen al-Amirijan madrasa valmistui 1504, ja sen kunnostus kesti yli kaksikymmentä vuotta.",
+    },
+    "Al Dali'": {
+      lyhyt: 'Jahaf-vuoren ylätasangolla on yli 360 lähdettä ja kaivoa, ja vuoren korkein huippu kohoaa 2 401 metriin.',
+    },
+    "Al Jawf": {
+      lyhyt: 'Al-Jawfin laaksossa ovat Qarnawun rauniot; kaupunki oli muinaisen minealaisten kuningaskunnan pääkaupunki.',
+    },
+    "Al Mahwit": {
+      lyhyt: 'Kawkabanin linnoituskylä on jyrkänteen päällä lähes 3 000 metrin korkeudessa, ja sen alla laaksossa on Šibamin kaksoiskaupunki.',
+    },
+    Amran: {
+      lyhyt: 'Šaharan 1600-luvulla rakennettu kivisilta ylittää syvän rotkon noin 2 600 metrin korkeudessa ja yhdistää kaksi vuorikylää.',
+    },
+    Dhamar: {
+      lyhyt: 'Hammam Alin kylpyläkylä on syntynyt Dhawran-vuoren rinteen lukuisten kuumien rikkilähteiden ympärille.',
+    },
+    Hadramawt: {
+      lyhyt: "Wadi Do'anin vuorilla mehiläiset keräävät sidr-puiden kukista hunajaa, jota pidetään yhtenä maailman kalleimmista.",
+    },
+    Hajjah: {
+      lyhyt: 'Kuhlanin linnoitus kyyhöttää kuin kotkanpesä noin 2 400 metrin huipulla Hajjahin vuorten keskellä.',
+    },
+    "Al Hudaydah": {
+      lyhyt: 'Bayt al-Faqih oli pitkään Jemenin kahvikaupan keskus, ja sen perjantaimarkkinat kokoavat väkeä koko Tihaman tasangolta.',
+    },
+    Ibb: {
+      lyhyt: 'Ibbin vuoristo saa Jemenin runsaimmat sateet, ja siksi sitä kutsutaan vihreäksi maakunnaksi.',
+    },
+    Lahij: {
+      lyhyt: 'Lahijin runoilija ja säveltäjä Ahmad Fadl al-Qumandan loi nykyaikaisen lahjilaisen musiikin, yhden Jemenin päätyyleistä.',
+    },
+    "Al Mahrah": {
+      lyhyt: 'Mahrassa puhutaan mehriä, muinaista eteläarabialaista kieltä, joka ei ole arabian murre vaan oma kielensä.',
+    },
+    "Ma'rib": {
+      lyhyt: 'Maribin Awwamin temppeli tunnetaan myös Saban kuningattaren nimellä Mahram Bilqis, ja se on Unescon maailmanperintöä.',
+    },
+    Raymah: {
+      lyhyt: 'Raiman vuoret nousevat lähes 3 000 metriin, ja niiden pengerrinteillä viljellään sadeveden varassa kahvia.',
+    },
+    "Sa`dah": {
+      lyhyt: "Sa'dan al-Hadin moskeija on 800-luvulta, ja sen viereisen haudan kupoli on Jemenin vanhin tunnettu hautakupoli.",
+    },
+    Shabwah: {
+      lyhyt: 'Bir Alin rannalla mustan laavakallion Husn al-Ghurabin juurella oli muinainen Qana, Arabian tärkein suitsukesatama.',
+    },
+    "Sana'a": {
+      lyhyt: 'Wadi Dharin kallion päälle rakennettu Dar al-Hajar oli imaami Yahyan kesäpalatsi.',
+    },
+    "Amanat Al Asimah": {
+      lyhyt: 'Sanaan vanhan kaupungin tornitalojen ikkunoiden yllä on qamarija-kaari-ikkunoita, joissa valo siivilöityy alabasterin tai värilasin läpi.',
+    },
+    "Ta`izz": {
+      lyhyt: 'Taizzin Ashrafijan moskeija ja madrasa rakennettiin rasulidisulttaanien aikana, ja sen kaksoisminareetit näkyvät yli vanhan kaupungin.',
+    },
+  },
+  /*
+   * OMN (erä 8C). Avaimet MAAKUNNAT_KAIKKI.OMN:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Vältetty maastokohteet-omn.js:n aiheet (Jabal Shams,
+   * Masirah, Bahla, Nizwan linnoitus, Bat, Sur, Sumhuram, Sharqiyan
+   * hiekat, Nakhal, Musandam). Lähteet (en-Wikipedia ja haku):
+   *   Al Batnah North — Sohar (Sindbad); Al Batnah South — Rustaq Fort;
+   *   Al Buraymi — Al Khandaq Fort; Ad Dakhliyah — Nizwan karjatori;
+   *   Al Wusta — Arabian oryx reintroduction (1982); Al Dhahira — As
+   *   Sulaif; Ash Sharqiyah North — Ibra Women's Souq; Ash Sharqiyah
+   *   South — Ras al Jinz; Dhofar — Khareef; Musandam — Kumzari;
+   *   Muscat — Royal Opera House Muscat (2011)
+   */
+  OMN: {
+    "Al Batnah North": {
+      lyhyt: 'Soharia pidetään perimätiedon mukaan Tuhannen ja yhden yön merenkulkijan Sindbadin kotikaupunkina.',
+    },
+    "Al Batnah South": {
+      lyhyt: 'Rustaqin linnoituksen vanhimmat osat ovat ajalta ennen islamia, ja 1600-luvulla sitä laajensivat Yaruba-imaamit.',
+    },
+    "Al Buraymi": {
+      lyhyt: 'Buraimin keidas jatkuu rajan yli Arabiemiraattien Al Ainiin, ja vanhaa Khandaqin linnaa kiertää yhä kuiva vallihauta.',
+    },
+    "Ad Dakhliyah": {
+      lyhyt: 'Nizwan perjantaiaamun karjamarkkinoilla vuohia ja lehmiä talutetaan ringissä ostajien edessä.',
+    },
+    "Al Wusta": {
+      lyhyt: 'Jiddat al-Harasisin kivitasangolle vapautettiin 1982 arabianbeisoja, kun laji oli kuollut luonnosta sukupuuttoon.',
+    },
+    "Al Dhahira": {
+      lyhyt: 'Ibrin laidalla on as-Sulaif, muurien ja vartiotornien ympäröimä savitiilikylä, jonka alitse kulkee falaj-kastelukanava.',
+    },
+    "Ash Sharqiyah North": {
+      lyhyt: 'Ibran keskiviikkomarkkinoilla myyjät ja ostajat ovat naisia, ja kojuissa on hajuvesiä, kankaita ja hopeakoruja.',
+    },
+    "Ash Sharqiyah South": {
+      lyhyt: 'Ras al-Jinzin rannoille nousee öisin vihreitä merikilpikonnia kaivamaan pesiään hiekkaan.',
+    },
+    Dhofar: {
+      lyhyt: 'Kesäkuusta syyskuuhun khareef-monsuuni tuo Salalahin vuorille sumua ja tihkua, ja rinteet vihertyvät keskellä aavikkoa.',
+    },
+    Musandam: {
+      lyhyt: 'Kumzarin kylässä puhutaan kumzaria, iranilaista kieltä, ja kylään pääsee lähinnä veneellä jyrkkien vuorten välistä.',
+    },
+    Muscat: {
+      lyhyt: 'Muscatin kuninkaallinen oopperatalo avattiin 2011, ja se oli Persianlahden alueen ensimmäinen oopperatalo.',
+    },
+  },
+  /*
+   * ARE (erä 8C). Avaimet MAAKUNNAT_KAIKKI.ARE:n tunnuksia TÄSMÄLLEEN
+   * ("Dubay", "Fujayrah", "Neutral Zone"). "Neutral Zone" on Natural
+   * Earthin kaksi yhteishallintoaluetta Hattan lähellä (Fujairah–Sharjah
+   * ja Ajman–Oman, NE:n note-kenttä). Vain `lyhyt`. Vältetty
+   * maastokohteet-are.js:n aiheet. Lähteet (en-Wikipedia ja haku):
+   *   Abu Dhabi — Louvre Abu Dhabi; Ajman — Emirate of Ajman; Dubay —
+   *   Abra (boat); Fujayrah — Emirate of Fujairah; Ras Al Khaymah —
+   *   Dhayah Fort; Sharjah — World Book Capital 2019; Umm Al Qaywayn —
+   *   Siniyah Island
+   */
+  ARE: {
+    "Abu Dhabi": {
+      lyhyt: 'Louvre Abu Dhabin 180-metrinen kupoli on koottu 7 850 tähdestä, ja niiden läpi siivilöityvää valoa kutsutaan valosateeksi.',
+    },
+    Ajman: {
+      lyhyt: 'Ajman on seitsemästä emiraatista pinta-alaltaan pienin, vain noin 260 neliökilometriä.',
+    },
+    Dubay: {
+      lyhyt: 'Dubai Creekin yli pääsee yhä puisella abra-veneellä, ja matka Bur Dubaista Deiraan maksaa yhden dirhamin.',
+    },
+    Fujayrah: {
+      lyhyt: 'Fujairah on ainoa emiraatti, jonka koko rannikko on Omaninlahdella eikä lainkaan Persianlahdella.',
+    },
+    "Neutral Zone": {
+      lyhyt: 'Hajarvuorten karuissa laaksoissa Hattan lähellä on kaksi pientä aluetta, joita naapurit hallitsevat yhdessä.',
+    },
+    "Ras Al Khaymah": {
+      lyhyt: 'Dhayahin linnake on emiraattien ainoa säilynyt kukkulalinnake, ja sen juurella viheriöi taatelipalmujen keidas.',
+    },
+    Sharjah: {
+      lyhyt: 'Sharjah oli Unescon kirjapääkaupunki 2019, ja sen kansainvälisille kirjamessuille saapuu yli 1 500 kustantajaa.',
+    },
+    "Umm Al Qaywayn": {
+      lyhyt: 'Siniyahin saarella pesii noin 15 000 sokotranmerimetsoparia, emiraattien suurin yhdyskunta.',
+    },
+  },
+  /*
+   * QAT (erä 8C). Avaimet MAAKUNNAT_KAIKKI.QAT:n tunnuksia TÄSMÄLLEEN
+   * ("Ar Rayyān"). Vain `lyhyt`. Vältetty maastokohteet-qat.js:n
+   * aiheet. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Al Daayen — Lusail Stadium; Al Khawr — Al Khor Island; Ar Rayyān —
+   *   Education City; Madinat ach Shamal — Ar-Ru'ays; Al Wakrah — Al
+   *   Janoub Stadium; Ad Dawhah — National Museum of Qatar; Umm Salal —
+   *   Barzan Towers
+   */
+  QAT: {
+    "Al Daayen": {
+      lyhyt: 'Lusail on 2000-luvulla tyhjästä rakennettu kaupunki, ja sen stadionilla pelattiin jalkapallon MM-finaali 2022.',
+    },
+    "Al Khawr": {
+      lyhyt: 'Al Khorin Purppurasaarella murskattiin yli 3 500 vuotta sitten miljoonia kotiloita purppuraväriksi.',
+    },
+    "Ar Rayyān": {
+      lyhyt: 'Ar-Rayyanin Education Cityssä on kahdeksan ulkomaisen yliopiston kampus ja Qatarin kansalliskirjasto.',
+    },
+    "Madinat ach Shamal": {
+      lyhyt: "Pohjoiskärjen Ar-Ru'ays oli ennen öljykautta yksi Qatarin tärkeimmistä kalastuskylistä.",
+    },
+    "Al Wakrah": {
+      lyhyt: 'Al Wakrahin Al Janoub -stadionin katto muistuttaa dhow-veneiden purjeita, ja sen suunnitteli Zaha Hadidin toimisto.',
+    },
+    "Ad Dawhah": {
+      lyhyt: 'Qatarin kansallismuseo avattiin Dohassa 2019, ja sen toisiinsa kiilautuvat kiekot jäljittelevät aavikkoruusun kidettä.',
+    },
+    "Umm Salal": {
+      lyhyt: 'Umm Salal Mohammedin 16-metrisistä Barzan-torneista tähyiltiin laivoja ja ramadanin uutta kuuta.',
+    },
+  },
+  /*
+   * KWT (erä 8C). Avaimet MAAKUNNAT_KAIKKI.KWT:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Vältetty maastokohteet-kwt.js:n aiheet (Mutla,
+   * Failaka, Bubiyan, Burgan ym.). Lähteet (en-Wikipedia ja haku):
+   *   Al Ahmadi — Al Ahmadi, Kuwait; Al Asimah — Kuwait Towers;
+   *   Al Farwaniyah — Farwaniya Governorate; Al Jahrah — Kuwait Red
+   *   Fort; Hawalli — Kuwait Scientific Center; Mubarak Al-Kabeer —
+   *   Mubarak Al-Kabeer (governorate)
+   */
+  KWT: {
+    "Al Ahmadi": {
+      lyhyt: 'Ahmadin kaupunki perustettiin öljylöytöjen myötä 1946, ja se on yhä Kuwait Oil Companyn kotipaikka.',
+    },
+    "Al Asimah": {
+      lyhyt: 'Kuwait Towersin kolme tornia valmistuivat 1979, ja kahden tornin palloissa on vesisäiliöt.',
+    },
+    "Al Farwaniyah": {
+      lyhyt: 'Farwaniya on Kuwaitin väkirikkain kuvernoraatti, ja sen alueella on maan kansainvälinen lentokenttä.',
+    },
+    "Al Jahrah": {
+      lyhyt: 'Jahran Punaisen linnakkeen punertavia savitiiliseiniä alettiin rakentaa 1897 suojaamaan keitaan viljelmiä.',
+    },
+    Hawalli: {
+      lyhyt: 'Salmiyan rannalla Scientific Centerin akvaariossa on 1,5 miljoonan litran allas haille ja rauskuille.',
+    },
+    "Mubarak Al-Kabeer": {
+      lyhyt: 'Mubarak al-Kabirin kuvernoraatti erotettiin Hawallista 1999, ja se on nimetty Kuwaitin seitsemännen hallitsijan Mubarak Suuren mukaan.',
+    },
+  },
+  /*
+   * BHR (erä 8C). Avaimet MAAKUNNAT_KAIKKI.BHR:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanha viiden kuvernoraatin jako diakriitteineen,
+   * "Al Wusţá" = vuonna 2014 lakkautettu Keskinen kuvernoraatti).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Al Janūbīyah — Tree of Life (Bahrain); Al Manāmah — Bab al-Bahrain;
+   *   Al Wusţá — A'ali (keskinen kuvernoraatti 2001–2014); Ash
+   *   Shamālīyah — Barbar Temple; Al Muḩarraq — Bahrain Pearling Trail
+   */
+  BHR: {
+    "Al Janūbīyah": {
+      lyhyt: 'Aavikolla Jebel Dukhanin lähellä kasvaa Elämän puu, yli 400-vuotias yksinäinen puu, jonka vedensaanti on yhä arvoitus.',
+    },
+    "Al Manāmah": {
+      lyhyt: 'Bab al-Bahrain -portti rakennettiin 1949 rantaan, mutta maantäyttöjen jälkeen se seisoo nyt kaukana merestä.',
+    },
+    "Al Wusţá": {
+      lyhyt: "A'alin savenvalajat ovat rakentaneet verstaansa muinaisten hautakumpujen keskelle, ja osa polttaa astioita vanhoissa hautakammioissa.",
+    },
+    "Ash Shamālīyah": {
+      lyhyt: 'Barbarin temppelit on rakennettu päällekkäin makean veden lähteen ympärille, ja vanhin niistä on noin 5 000 vuotta vanha.',
+    },
+    "Al Muḩarraq": {
+      lyhyt: 'Muharraqin helmipolku kulkee 3,5 kilometriä helmikauppiaiden talojen ohi, ja se on Unescon maailmanperintöä.',
+    },
+  },
 };
