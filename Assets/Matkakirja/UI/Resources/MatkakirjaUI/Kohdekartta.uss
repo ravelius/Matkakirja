@@ -233,3 +233,39 @@
 .mk-kohdekartta__nimi--ympyra {
     top: 15px;
 }
+
+/* Löydös 63 (web .kartta-mittajana): ohut vaakaviiva, päissä pystyviivat, vaalea kaista alaosassa; teksti 0,58rem
+   Kone keskellä janan yllä vaalealla pohjalla. Paikka ja leveys C#:ssa (KohdekarttaNakyma). */
+.mk-kohdekartta__mittajana {
+    position: absolute;
+    height: 6px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-color: rgb(55, 46, 35);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-kohdekartta__mittajanakaista {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    background-color: rgba(247, 240, 222, 0.55);
+}
+
+.mk-kohdekartta__mittajanateksti {
+    position: absolute;
+    left: 50%;
+    bottom: 7px;
+    translate: -50% 0;
+    padding: 0 3px;
+    margin: 0;
+    font-size: 9.3px;
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+    color: rgb(47, 38, 27);
+    background-color: rgba(247, 240, 222, 0.72);
+    border-radius: 2px;
+}

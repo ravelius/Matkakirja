@@ -119,6 +119,18 @@ namespace Matkakirja.Natiivi
             lava = Rakenne.El("mk-kohdekartta__lava", kehys, PickingMode.Ignore);
             lava.style.transformOrigin = new TransformOrigin(0, 0);
             kuva = Rakenne.El("mk-kohdekartta__kuva", lava, PickingMode.Ignore);
+            // Löydös 63 (web .kartta-mittajana): mittakaavajana ydinalueen vasempaan alakulmaan (3,2 % / 5 %),
+            // leveys prosentteina kuvasta; lavan lapsena se skaalautuu kartan mukana kuten webissä.
+            if (kartta.JanaOsuus > 0f)
+            {
+                var ydin = kartta.Ydin;
+                var jana = Rakenne.El("mk-kohdekartta__mittajana", lava, PickingMode.Ignore);
+                jana.style.width = Length.Percent(kartta.JanaOsuus * 100f);
+                jana.style.left = Length.Percent((ydin.x + 0.032f * ydin.width) * 100f);
+                jana.style.bottom = Length.Percent((1f - ydin.y - 0.95f * ydin.height) * 100f);
+                Rakenne.El("mk-kohdekartta__mittajanakaista", jana, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti(kartta.JanaTeksti, "mk-kohdekartta__mittajanateksti", jana), Kirjasin.Kone);
+            }
             if (!string.IsNullOrEmpty(kartta.KuvaUrl))
                 Kuvat.Hae(kartta.KuvaUrl, t =>
                 {
