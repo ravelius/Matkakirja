@@ -1,0 +1,720 @@
+{
+  "erä": "linssikatalogi-era2-08-20260925",
+  "tila": "40 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 10,
+    "cc_not_found": 0,
+    "objects": 40
+  },
+  "entries": [
+    {
+      "id": "P4",
+      "nimi": "Rautatieverkon kasvu",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan rautatieverkko tiheni 1800-luvulla Britanniasta mantereelle ja pohjoiseen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a 16:9 antique cartographic concept image for Matkakirja lens P4, historical growth of Europe's railway network 1825–1900. A geographically recognizable north-up relief map of Europe from Britain to western Russia and Finland, Mediterranean to Scandinavia, parchment paper, muted seas. Fine sepia rail lines expand in several translucent historical layers from Britain across Belgium, France, German regions, west Russia and finally toward southern Finland. A few understated pinprick lights on Britain, Brussels, central Germany, Paris and the Helsinki–Hämeenlinna corridor; visible rails and tiny early steam locomotive silhouette should remain subordinate to the map. The layering evokes growth through time without asserting exact period-by-period route precision. Strong readable composition, ink engraving and soft watercolor, restrained indigo-blue water and warm brass rail accents. No text, station names, date numerals, modern national borders, high-speed trains, airplane, people, logos, legends, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/P4-havainne.jpg",
+            "objectKey": "linssikatalogi/P4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 230513,
+            "sha256": "b981a48fd0ae4f58979fa7afa5ba2ad68808454f9519c820dd5c44f63256a6c1"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/P4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/P4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 44969,
+            "sha256": "14050118b364fc84b9ef99bd5f7f8903ebb32bce9c03edcdc08838767da8abe1"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Bradshaw’n 1800-luvun Euroopan rautatiekartta näyttää verkon laajenemisen aikakauden.",
+        "creator": "Kartantekijä tuntematon; Bradshaw-julkaisu",
+        "title": "Bradshaw’s Map of Europe Showing the Railways Opened and in Progress",
+        "year": "1800-luku",
+        "collection": "Bibliothèque nationale de France",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bradshaw%27s_Map_of_Europe_Showing_the_railways_opened_and_in_progress_-_btv1b8439003x.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Bradshaw%27s_Map_of_Europe_Showing_the_railways_opened_and_in_progress_-_btv1b8439003x.jpg/3840px-Bradshaw%27s_Map_of_Europe_Showing_the_railways_opened_and_in_progress_-_btv1b8439003x.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen Euroopan rautatiekartta, ei nykyinen verkkokartta.",
+        "attribution_note": "Kartantekijä tuntematon; Bradshaw-julkaisu, Bradshaw’s Map of Europe Showing the Railways Opened and in Progress (1800-luku), Bibliothèque nationale de France; Public domain; https://commons.wikimedia.org/wiki/File:Bradshaw%27s_Map_of_Europe_Showing_the_railways_opened_and_in_progress_-_btv1b8439003x.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/P4.jpg",
+            "objectKey": "linssikatalogi/P4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296366,
+            "sha256": "cb9c4986c7e47eb60decea17e995626da26ef03c3e78bca9b447581e86a22d3f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/P4-thumb.jpg",
+            "objectKey": "linssikatalogi/P4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44132,
+            "sha256": "01f4f65c1969f7b63b67be8b7cb3290311d17c6582e30a4fdb9a66b983424965"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P5",
+      "nimi": "Kirjapainon leviäminen",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kirjapainot levisivät Mainzista 1400-luvun lopulla Euroopan suuriin kaupunkeihin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "A 16:9 stylized historical atlas concept image for Matkakirja lens P5, spread of printing presses through Europe 1450–1500. Geographically recognizable parchment relief map of western and central Europe from Mainz/Rhine to Venice, Paris, London and Stockholm, with accurate coastlines of North Sea, Channel, Adriatic, Baltic. Five tiny illuminated workshop pinpoints connected by fine warm-ink diffusion paths, opening like expanding rings of knowledge rather than military arrows. At the map's lower corner, a small engraved hand-operated 15th-century wooden screw press and a few movable type blocks as quiet decorative marginalia, not modern newspaper or machine. Beautiful ivory paper, sepia engraving, subtle indigo water, dignified and intellectually lively, clear hierarchy, spacious margins. Historically plausible: printing spreads from Mainz across Europe. No people, no readable pages, text, letters, dates, modern borders, logos, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/P5-havainne.jpg",
+            "objectKey": "linssikatalogi/P5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249081,
+            "sha256": "cbf0cad5cd04daa25b62ba268195641f49d524fc3544388bcba08a1a9d44a7d4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/P5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/P5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 49977,
+            "sha256": "0cd99fd71e12be4eadd26c7714daa81a193ea713cc6c5211815950bf652cc3f7"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Gutenbergin 42-rivisen Raamatun painojälki tekee varhaisen kirjapainon näkyväksi.",
+        "creator": "Johannes Gutenberg (painaja); Jossi (skannaus/rajaus lähdetiedon mukaan)",
+        "title": "Gutenberg Bible, 42-line Genesis text",
+        "year": "noin 1455",
+        "collection": "Staatsbibliothek zu Berlin (alkuperäinen käsikirjoitus)",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_B42_Genesis_cropped.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Gutenberg_Bible_B42_Genesis_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "source_context": "Varsinainen painettu Genesis-sivu, ei tyhjä loppulehti; valittu hylätyn lähteen tilalle.",
+        "attribution_note": "Johannes Gutenberg (painaja); Jossi (skannaus/rajaus lähdetiedon mukaan), Gutenberg Bible, 42-line Genesis text (noin 1455), Staatsbibliothek zu Berlin (alkuperäinen käsikirjoitus); Public domain; https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_B42_Genesis_cropped.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/P5.jpg",
+            "objectKey": "linssikatalogi/P5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 295680,
+            "sha256": "7253d0f94807aab64d7e61aba2a4b57b19ef575603e85be59f00c3632111a987"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/P5-thumb.jpg",
+            "objectKey": "linssikatalogi/P5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 55968,
+            "sha256": "f84be800a8a409da386a38580de816db972e46414ef53011252005273b38cbd2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S3",
+      "nimi": "Maustereitit ja teekauppa",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mauste- ja teereitit yhdistivät Intian valtameren satamat Eurooppaan eri aikakausina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "16:9 antique maritime atlas concept for Matkakirja flow lens S3: spice routes and tea trade between the Indian Ocean and Europe, 1500–1900. Geographically recognizable coastlines of western Europe, eastern Africa, Arabia, India, Strait of Malacca, South China Sea and the Moluccan islands. Make the ocean the visual protagonist, deep ink blue with delicate engraved swells. Several historically plausible curved SEA route threads travel from the Moluccas/Malacca and Canton past India, around Cape of Good Hope toward Europe; a later faint alternative passes through Suez after 1869. Tiny unobtrusive wooden sailing clippers, spice leaves and tea leaf sketches at the edge, no large people or heroic imperial imagery. The routes are illustrative flows rather than exact tracks or volumes; distinguish them with muted gold and rust. Beautiful weathered cream paper, clear land/water separation, elegant sparse cartography. No readable words, letters, labels, numbers, fake data legend, modern nation borders, container ships, aircraft, logos, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S3-havainne.jpg",
+            "objectKey": "linssikatalogi/S3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 234886,
+            "sha256": "944367698aac693d0d1f53299d342bc51a274c827823171ada7b1386d970eec2"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 48686,
+            "sha256": "2bcb5b182bb1a982dec9bb6e609c5101e7069acca003573d84c479d257baa76d"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Teeleikkuri Thermopylae kuvaa 1800-luvun merellistä teekauppaa.",
+        "creator": "F. I. Sørensen",
+        "title": "The tea clipper Thermopylae",
+        "year": "1800-luku",
+        "collection": "Royal Museums Greenwich",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:F._I._Sorensen_-_The_tea_clipper_Thermopylae.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/F._I._Sorensen_-_The_tea_clipper_Thermopylae.jpg/3840px-F._I._Sorensen_-_The_tea_clipper_Thermopylae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen teeleikkurimaalaus, ilman modernia kuvastoa.",
+        "attribution_note": "F. I. Sørensen, The tea clipper Thermopylae (1800-luku), Royal Museums Greenwich; Public domain; https://commons.wikimedia.org/wiki/File:F._I._Sorensen_-_The_tea_clipper_Thermopylae.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S3.jpg",
+            "objectKey": "linssikatalogi/S3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289991,
+            "sha256": "42e23f7d7594ec41cf3f921879bda0adc45841836d4a50aa6704fb3c71412ec3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S3-thumb.jpg",
+            "objectKey": "linssikatalogi/S3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 29543,
+            "sha256": "8b730f29967023fb3893bbb3bd3b8211fd43213e10343008d36c698666c18c6a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S4",
+      "nimi": "Hopea ja kulta",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Hopean ja kullan virrat yhdistivät kaivokset, satamat ja mantereet vuosisatojen aikana.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "16:9 scholarly antique world map concept for Matkakirja historical flow lens S4, silver and gold movements 1545–1900. Geographically recognizable Americas, Atlantic Europe, Pacific Philippines and east Asia on a wide historical atlas projection. A few delicate silver-toned maritime threads indicate Potosí/Andean highlands to Pacific Manila, and Atlantic threads to Sevilla; later small restrained gold glints on California, southeastern Australia and southern Africa hint nineteenth-century gold rushes. Do not imply exact measured quantities or one continuous route. A tiny engraved ore fragment and old balance scale at an empty lower margin, subordinate to geography. Sober, neutral toward extractive history rather than triumphant, no mines with laborers, no violence. Ink linework and translucent watercolor on weathered ivory paper, muted dark blue seas, bronze and silver accents, elegant open composition. No readable labels, letters, numbers, data legend, modern political borders, people, logos, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S4-havainne.jpg",
+            "objectKey": "linssikatalogi/S4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 231279,
+            "sha256": "de1d9538e83a1656367339630397091bd00a8d9a14ee6c7e7a0e59930313ec68"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 42369,
+            "sha256": "19f743f4d01f85ee0660941687a35439e4f12e1facfb07c6a4ca331e8f864204"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Potosín hopeakaivoksen historiallinen leikkauskuva kertoo hopeavirran lähtöpisteestä.",
+        "creator": "Tekijä tuntematon",
+        "title": "A silver mine: cross-section and miners digging",
+        "year": "noin 1750 (Potosín kaivoksen kuvauksen ajoitus; Wellcome-tietueessa myös 1800-luvun julkaisutieto)",
+        "collection": "Wellcome Collection, Iconographic Collections, V0023530",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:A_silver_mine%3B_cross-section_and_miners_digging._Wellcome_V0023530.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/A_silver_mine%3B_cross-section_and_miners_digging._Wellcome_V0023530.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "source_context": "Potosín kaivosta esittävä kaiverrus; ihmistyö on kuvattu historiallisesti ilman graafista väkivaltaa.",
+        "attribution_note": "Tekijä tuntematon, A silver mine: cross-section and miners digging (noin 1750 (Potosín kaivoksen kuvauksen ajoitus; Wellcome-tietueessa myös 1800-luvun julkaisutieto)), Wellcome Collection, Iconographic Collections, V0023530; CC BY 4.0; https://commons.wikimedia.org/wiki/File:A_silver_mine%3B_cross-section_and_miners_digging._Wellcome_V0023530.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S4.jpg",
+            "objectKey": "linssikatalogi/S4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285070,
+            "sha256": "5819badd1c38c5c7e0b76acbedd5097adfcc12d70837b005d86f15f8bd683c43"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S4-thumb.jpg",
+            "objectKey": "linssikatalogi/S4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 55519,
+            "sha256": "d5a5c273ee957b7ad3f20a31b27778f6fffdb313ea5bab98539ce2a4da912bb5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S5",
+      "nimi": "Turkikset ja valaat",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Pohjoisen turkis- ja valaanpyyntireitit kulkivat mantereiden reunoilla ja jäämerillä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Make a 16:9 antique atlas map concept for Matkakirja flow lens S5, historical fur and whale trade in the northern world, 1600–1900. A geographically recognizable NORTH-POLAR view with the Arctic Ocean centered, northern North America and Hudson Bay at left, Greenland and Svalbard near center, northern Europe and Siberia at right, Bering Sea at far edge. Draw a few fine contrasting route arcs for fur networks over northern land and whaling voyages over adjacent northern seas; routes are interpretive, not measured traffic. Restrained marginal engraving of a small 18th-century sailing whaler, a whale's tail breaking the sea, and a bundle of fur pelts, each tiny and documentary rather than celebratory. Cold blue-grey water, cream parchment land, bronze ink lines, delicate polar ice, precise recognizable geography, strong legibility. Keep sober ecological tone, no killing, blood, hunters, modern ships, text, labels, numbers, legends, flags, logos, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S5-havainne.jpg",
+            "objectKey": "linssikatalogi/S5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 224543,
+            "sha256": "0cafd3b0c111d0eaad989490b335fb8d770985b74779109c660638735f778084"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/S5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 50528,
+            "sha256": "e8dadf8cf813225a0de6940a2b9f43cff62a5709c7671510b7f29d4e70b5dab8"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Storckin maalaus sijoittaa pohjoisen valaanpyynnin Huippuvuorten vesille.",
+        "creator": "Abraham Storck",
+        "title": "Dutch Whalers near Spitsbergen",
+        "year": "1690",
+        "collection": "Stichting Rijksmuseum het Zuiderzeemuseum, 022296",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Walvisvangst_bij_de_kust_van_Spitsbergen_-_Dutch_whalers_near_Spitsbergen_(Abraham_Storck%2C_1690).jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Walvisvangst_bij_de_kust_van_Spitsbergen_-_Dutch_whalers_near_Spitsbergen_%28Abraham_Storck%2C_1690%29.jpg/3840px-Walvisvangst_bij_de_kust_van_Spitsbergen_-_Dutch_whalers_near_Spitsbergen_%28Abraham_Storck%2C_1690%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen arktinen merimaalaus; pyynnin toimintaa näkyy, ei graafisia yksityiskohtia.",
+        "attribution_note": "Abraham Storck, Dutch Whalers near Spitsbergen (1690), Stichting Rijksmuseum het Zuiderzeemuseum, 022296; Public domain; https://commons.wikimedia.org/wiki/File:Walvisvangst_bij_de_kust_van_Spitsbergen_-_Dutch_whalers_near_Spitsbergen_(Abraham_Storck%2C_1690).jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S5.jpg",
+            "objectKey": "linssikatalogi/S5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292475,
+            "sha256": "1227ad0eab49236c151c2792eb368ffdeaab577ac5bf9dbc9365d30387475921"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/S5-thumb.jpg",
+            "objectKey": "linssikatalogi/S5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 36772,
+            "sha256": "85a230261ef40cd17700024282199c8d342f7c6bb96a9b102531d2578bada2a2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "T3",
+      "nimi": "Siperian karkotukset ja asutus",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Karkotus- ja asutusreitit ulottuivat Siperiassa lännestä aina Tyynellemerelle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "A sober 16:9 historical atlas concept for Matkakirja flow lens T3, Siberian exiles and settlement 1590–1917. Show a geographically recognizable broad map of Russia across Eurasia, west at left and Pacific/Sakhalin at far right, north-up, Ural Mountains, vast Siberian rivers, Lake Baikal and Kamchatka identifiable. Two distinct thin pathways stretch eastward: an older muted charcoal overland exile/settlement trail via Tobolsk and Irkutsk, and a later restrained dark red rail corridor suggesting the Trans-Siberian railway begun 1891. Far right an understated island dot for Sakhalin. No exact volume claim or individual itinerary. Sparse engraved timber outpost and small early locomotive marginalia, but no prisoners, chains, suffering spectacle, propaganda or triumphant conquest. Cold sepia and blue-gray watercolor on weathered cream paper, visual gravitas and legible geography. No text, lettering, dates, numeric legend, current borders, flags, UI, logo, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/T3-havainne.jpg",
+            "objectKey": "linssikatalogi/T3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 241079,
+            "sha256": "5f73e332abc699ec2cf4df336006ef0860328118758b50bcf43ea5d46ee6a142"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/T3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/T3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45573,
+            "sha256": "7a2ed73e3b97ecb70477210d74bf45c2b2bc058ea887fb1242e2e048b149feaa"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1913 Siperian rautatiekartta näyttää karkotus- ja asutusreitin myöhäisen liikennekäytävän.",
+        "creator": "Tuntematon kartantekijä",
+        "title": "Karte Sibirische Eisenbahn, Der Weltverkehr und seine Mittel, Abb. 019",
+        "year": "1913 (kirjan 10. painos; kartan rakenne noin 1898–1912)",
+        "collection": "Internet Archive / Der Weltverkehr und seine Mittel",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Der_Weltverkehr_und_seine_Mittel._10._Aufl._1913_-_Abb._019_Karte_Sibirische_Eisenbahn_(14760004912).jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Der_Weltverkehr_und_seine_Mittel._10._Aufl._1913_-_Abb._019_Karte_Sibirische_Eisenbahn_%2814760004912%29.jpg",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen Siperian kartta; rajaus ei väitä kartan kuvaavan itse karkotuksia.",
+        "attribution_note": "Tuntematon kartantekijä, Karte Sibirische Eisenbahn, Der Weltverkehr und seine Mittel, Abb. 019 (1913 (kirjan 10. painos; kartan rakenne noin 1898–1912)), Internet Archive / Der Weltverkehr und seine Mittel; Public domain; https://commons.wikimedia.org/wiki/File:Der_Weltverkehr_und_seine_Mittel._10._Aufl._1913_-_Abb._019_Karte_Sibirische_Eisenbahn_(14760004912).jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/T3.jpg",
+            "objectKey": "linssikatalogi/T3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299948,
+            "sha256": "101ca2d751ba8992a475ac1c169ac58467c82a9be128b9705f3ffb37f2c6f887"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/T3-thumb.jpg",
+            "objectKey": "linssikatalogi/T3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 50301,
+            "sha256": "6bb8f6a72e89f7336ff870bdff4115a3ddcf90ac8526a85d42dc463a226fec49"
+          }
+        ]
+      }
+    },
+    {
+      "id": "U2",
+      "nimi": "Postireitit ja höyrylinjat",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Posti- ja höyrylaivareitit yhdistivät maailman satamat 1800-luvun lopulla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "16:9 historical world atlas concept for Matkakirja flow lens U2, global post routes and steamship lines 1840–1914. Recognizable world coastlines with muted deep blue oceans and parchment continents, centered on the Atlantic-Indian Ocean connection. A few delicate dashed postal-route arcs connect Britain, Atlantic crossings, Cape of Good Hope, Suez, Bombay, Singapore and Australia; thin river-like warm brass paths follow sea lanes, different routes vary in tone and era without claiming exact schedules or traffic volumes. A tiny Victorian envelope with red wax seal and a small 19th-century paddle steamship vignette at open map margins, not covering geography. Historical atmosphere, tasteful engraving, softly weathered paper, clear legibility. No real data values, text, stamps with writing, letters, labels, numbers, modern borders, airplanes, container ships, people, logos, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/U2-havainne.jpg",
+            "objectKey": "linssikatalogi/U2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245865,
+            "sha256": "6d90b9d13915198bb79c79e08c9da55780cb99ccf3ee1b840f79c2a380f52e3b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/U2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/U2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 42099,
+            "sha256": "96bb73f28a61a162795a13fb49ba34e14530cd295f36403bfeec13e89a343eb9"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Cunardin postihöyrylaiva Britannia lähtee Bostonista Liverpooliin vuonna 1844.",
+        "creator": "Ferd. Mayer & Co.",
+        "title": "Cunard Royal Mail steamship Britannia leaving East Boston for Liverpool",
+        "year": "alkuperäinen tapahtuma ja vedos 1844; Boston Public Libraryn tiedostossa myös 1876-ajoitus",
+        "collection": "Boston Public Library / Digital Public Library of America",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Cunard_Royal_Mail_steamship_%22Britannia%22_(John_Hewitt%2C_commander)_as_she_appeared_leaving_her_dock_at_East_Boston_February_3d%2C_1844_bound_from_Boston_to_Liverpool._original_print_-_DPLA_-_6bed3b22c48556313a337edcbf4d029b.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/The_Cunard_Royal_Mail_steamship_%22Britannia%22_%28John_Hewitt%2C_commander%29_as_she_appeared_leaving_her_dock_at_East_Boston_February_3d%2C_1844_bound_from_Boston_to_Liverpool._original_print_-_DPLA_-_6bed3b22c48556313a337edcbf4d029b.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "Aito höyrypostilaivan historiallinen litografia, matkareitti vastaa linssiä.",
+        "attribution_note": "Ferd. Mayer & Co., Cunard Royal Mail steamship Britannia leaving East Boston for Liverpool (alkuperäinen tapahtuma ja vedos 1844; Boston Public Libraryn tiedostossa myös 1876-ajoitus), Boston Public Library / Digital Public Library of America; Public domain; https://commons.wikimedia.org/wiki/File:The_Cunard_Royal_Mail_steamship_%22Britannia%22_(John_Hewitt%2C_commander)_as_she_appeared_leaving_her_dock_at_East_Boston_February_3d%2C_1844_bound_from_Boston_to_Liverpool._original_print_-_DPLA_-_6bed3b22c48556313a337edcbf4d029b.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/U2.jpg",
+            "objectKey": "linssikatalogi/U2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285574,
+            "sha256": "76c4f881e96033afad5cb66755419f2a18d96dbe5aa70b2be27458dd3d9491e5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/U2-thumb.jpg",
+            "objectKey": "linssikatalogi/U2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 27817,
+            "sha256": "47050ea184ec49617a7019609c40db963c084b958971e3e4ffcbfdbcb753c667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R6",
+      "nimi": "Purjelaivojen tuulet",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Purjelaivojen aikakauden tuulia kuvaava havainnekuva; tuuliviivat eivät esitä CLIWOC-mittaustietoja.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens R6, 16:9 landscape map illustration for Purjelaivojen tuulet, evoking the 18th–19th century CLIWOC logbooks without pretending to plot real observations. A beautiful aged nautical world chart with recognizable Atlantic, Indian Ocean and Cape of Good Hope coastlines; soft parchment land, deep desaturated teal sea, copper-ink compass rose and a small wooden sailing ship near an unobstructed margin. Several broad, delicate curving wind-stream ribbons and sparse hand-engraved arrows suggest trade winds and westerlies. The ribbons should feel plausible and useful to a mariner, but deliberately schematic and non-numeric. Clear focal area, elegant restraint, slight paper wear, strong legibility at thumbnail size. No labels, words, numbers, graphs, modern boundaries, modern ships, weather satellite, logos, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R6-havainne.jpg",
+            "objectKey": "linssikatalogi/R6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249979,
+            "sha256": "56c3fc346b4dd9543d55b0b34f0a2a45d35d88aef80bb378956d26956cf77295"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 47865,
+            "sha256": "718e544381e2986ebef5aeb9e023b1701c842c5efebd9c99e30e32a354a7643b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n ilmamallinnus visualisoi maapallon tuulivyöhykkeitä purjehdusreittien taustaksi.",
+        "creator": "William Putman / NASA Goddard Space Flight Center",
+        "title": "A Portrait of Global Winds",
+        "year": "2013",
+        "collection": "NASA Goddard Space Flight Center",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:A_Portrait_of_Global_Winds.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/A_Portrait_of_Global_Winds.png/3840px-A_Portrait_of_Global_Winds.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "NASA:n GEOS-5-mallin tuulikuva; ei väitetä CLIWOC-havaintoaineistoksi.",
+        "attribution_note": "William Putman / NASA Goddard Space Flight Center, A Portrait of Global Winds (2013), NASA Goddard Space Flight Center; Public domain; https://commons.wikimedia.org/wiki/File:A_Portrait_of_Global_Winds.png",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R6.jpg",
+            "objectKey": "linssikatalogi/R6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 282308,
+            "sha256": "1d1652ba170d016eaf4f1b36e555800aa487236c6f81f8ed9a9088f4c44b624a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R6-thumb.jpg",
+            "objectKey": "linssikatalogi/R6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 31760,
+            "sha256": "5e7f4a51b19dcc2129445e71ec209af270cea4a34b83351e2d5730bf55560605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R8",
+      "nimi": "Näetkö Linnunradan?",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Pimeän taivaan ja kaupungin valon ero näkyy Linnunradan äärellä; kuva ei esitä mitattua valosaastekarttaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens R8, 16:9 landscape illustration for 'Näetkö Linnunradan?' exploring where the Milky Way can be seen. One wide poetic-but-legible night-sky atlas scene: a low, recognizable horizon of Earth with a few distant city clusters glowing gently at the far edges, and a broad natural Milky Way arch visibly bright above a remote dark landscape. A small silhouetted observer stands near the bottom, safely away from the center. Subtle antique astronomy engraving and worn blue-black paper texture, restrained amber city glow, real photographic logic in the star field rather than fantasy swirls. Communicate contrast between light-polluted and dark skies without maps purporting to show measured brightness, exact stars, boundaries or coordinates. No labels, words, numbers, numerical scale, graph, modern UI, telescope satellites, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R8-havainne.jpg",
+            "objectKey": "linssikatalogi/R8-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R8-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 216289,
+            "sha256": "21a341f716b9dfa6956ad67d9b5ba2feb1d08b556882c8a913c61e632a942454"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R8-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R8-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R8-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 30988,
+            "sha256": "3860b3dea9969aa78dfe2c63cab26ae7a3b0ef8275cc57fa165451fb5b1a48fc"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n yövalokartta näyttää valosaasteen tärkeän taustatekijän Linnunradan näkyvyydelle.",
+        "creator": "Joshua Stevens / NASA Earth Observatory; Suomi NPP VIIRS -data Miguel Románin ryhmältä",
+        "title": "Black Marble 2016",
+        "year": "2016 (havainnot), 2017 (kuva)",
+        "collection": "NASA Earth Observatory",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:BlackMarble20161km.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/BlackMarble20161km.jpg/3840px-BlackMarble20161km.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "crop/downsample",
+        "source_context": "Aito yövalodatan kartta; ei esitä tähtitaivaan näkyvyyttä suorana mittauksena.",
+        "attribution_note": "Joshua Stevens / NASA Earth Observatory; Suomi NPP VIIRS -data Miguel Románin ryhmältä, Black Marble 2016 (2016 (havainnot), 2017 (kuva)), NASA Earth Observatory; Public domain; https://commons.wikimedia.org/wiki/File:BlackMarble20161km.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R8.jpg",
+            "objectKey": "linssikatalogi/R8-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R8-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 139189,
+            "sha256": "99084203245f0f887a7d9bb580b5dccd6a150f6ed0b88f359d5662cbe2293f3f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R8-thumb.jpg",
+            "objectKey": "linssikatalogi/R8-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R8-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 12718,
+            "sha256": "7e41922101ee7761cdb8fb6dcda8e51ae07170853f07eeadbb690dbd6bbd927f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R10",
+      "nimi": "Revontulet nyt",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Revontulten havainnekuva pohjoiselta taivaalta; kuva ei ole reaaliaikainen ennuste.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens R10, 16:9 landscape illustration for 'Revontulet nyt' (aurora now), a conceptual visual companion to a future NOAA OVATION live-data layer. A believable broad view over northern Scandinavia at winter night from a low hill: dark spruce silhouette, cold blue snowy horizon, calm green auroral curtain with a faint violet edge, stars, a tiny distant warm cabin. A subtle antique atlas paper border and fine longitude-like engraving only at the very outer edges, leaving the sky clear; understated, beautiful, legible at small size. This is an illustrative scene, not a live forecast, map of observed auroral probability, or exact current location. No charts, labeled data, coordinates, numbers, words, legend, modern buildings, logos, UI, watermark or fantasy lighting.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R10-havainne.jpg",
+            "objectKey": "linssikatalogi/R10-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R10-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 223241,
+            "sha256": "9ad6ad4d0c4b382f033b2812fee4c831add52c4aff74e7c13f86fb11efafeb38"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-08/R10-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R10-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R10-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 31180,
+            "sha256": "fc9909ef1fef19a2c1470ec475dac0035acab63a252e972d4146913fe90b0efa"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NOAA:n OVATION-esimerkkikehys näyttää revontuliennusteen rengasmaisen alueen pohjoisella pallonpuoliskolla.",
+        "creator": "NOAA Space Weather Prediction Center",
+        "title": "OVATION North aurora forecast, 2026-01-21 21:30",
+        "year": "2026-01-21 21:30 UTC (kuvan aikaleima)",
+        "collection": "NOAA Space Weather Prediction Center",
+        "license": "Public domain",
+        "license_url": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ovation-north-aurora_N_2026-01-21_2130.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ovation-north-aurora_N_2026-01-21_2130.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "transform_note": "crop/downsample",
+        "source_context": "Aito NOAA:n OVATION-kuva; arkistoitu esimerkki, ei reaaliaikainen ennuste.",
+        "attribution_note": "NOAA Space Weather Prediction Center, OVATION North aurora forecast, 2026-01-21 21:30 (2026-01-21 21:30 UTC (kuvan aikaleima)), NOAA Space Weather Prediction Center; Public domain; https://commons.wikimedia.org/wiki/File:Ovation-north-aurora_N_2026-01-21_2130.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R10.jpg",
+            "objectKey": "linssikatalogi/R10-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R10-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 191056,
+            "sha256": "5cbcb0f85c2b030f146f71c81835297a5725cb08bb27f179e97f436537929b6d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-08/R10-thumb.jpg",
+            "objectKey": "linssikatalogi/R10-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R10-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 21168,
+            "sha256": "5f61ed8f77811187a38db3a51edbdf8753e6a990cff8ddbc86d520cdf41661e9"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 40,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-08-20260925/r2-receipt.json"
+  },
+  "data_lens_note": "R6, R8, R10:n havainnekuvat ja CC-lähdekuvat ovat aiheen esimerkkejä; eivät CLIWOC-, HYG/EOG- tai NOAA OVATION -datan reaaliaikaisia visualisointeja."
+}
