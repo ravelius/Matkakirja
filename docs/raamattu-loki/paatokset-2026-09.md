@@ -5435,3 +5435,7 @@ Omistajan build 13 -löydökset 80+ ohjataan ensisijaisesti Natiivi-UI:lle; erä
 ## PELIKOODARI: radio-tila JUNASSA (c10ef603), pulu-puhe JUNASSA (1c54ecb4); linssi pois -KAMERA EI VIKA (WEB EI MYOSKAAN SIIRRA KAMERAA, lokit/linssi-pois-kamera/TULOS.md); FABLE: SEURAAVA ERA — LIIKKUMISLISTAN ERI-RIVIT PIENISSA ERISSA VIDEOPARILLA (PARITEETIN PORTTI), LINSSISEPAN TYOKALUKORJAUKSET (12/12b, 13, 30, £300/PAIVA 1), SELVITYS SIMULAATTORIN AANIVIRRASTA (coreaudiod-JUMI) (25.9.2026 klo 13.41)
 
 Selvitys ilman toteutusta: pitääkö AudioListener linjan auki joutilaana ja voiko sen sulkea.
+
+## NATIIVI-UI BUILD 14: 63 MITTAKAAVAJANA TEHTY (natiivi-ui/mittajana-63 04d684b9, BUKAREST 500 m), 79/73/78/74 d2 OLIVAT JO MASTERISSA; FABLE: RIVI 31 (iPHONEN LAPPU VAIN KAUPUNGIN NIMI) = HYVAKSYTTY POIKKEAMA, LOYDOS 73 PYSYY; iPADILLA LAPPU WEBIN MUKAINEN (25.9.2026 klo 13.43)
+
+Natiivi-UI:n jono tyhjä; seuraavat omistajan build 13 -löydöksistä (80+).
