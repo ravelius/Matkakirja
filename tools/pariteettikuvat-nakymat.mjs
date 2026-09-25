@@ -440,14 +440,16 @@ export const NAKYMAT = [
   },
   {
     nimi: 'liiku', kuvaus: 'Kulkutapaliuska auki (ui.liukuAuki = true; savuke-liiku.mjs)',
-    avaa: () => { const ui = window.matkakirja.ui; ui.liukuAuki = true; ui.render(); },
+    // ui.vaihdaLiuku() eikä liukuAuki suoraan: vain se aloittaa matkasession (ui.matkaSessio), ilman sitä
+    // matkareittienValinta palauttaa tyhjän eikä reittejä piirry (löydös 111:n mittaus 25.9.).
+    avaa: () => { const ui = window.matkakirja.ui; if (!ui.liukuAuki) ui.vaihdaLiuku(); ui.render(); },
     odota: '.toimintorivi-liuku > button',
   },
   {
     nimi: 'noppa', kuvaus: 'Liiku → Liftaus: noppa heitetty (.board-die/.die-layer)',
     avaa: () => {
       const ui = window.matkakirja.ui;
-      ui.liukuAuki = true; ui.render();
+      if (!ui.liukuAuki) ui.vaihdaLiuku(); ui.render();
       const nappi = [...document.querySelectorAll('.toimintorivi button')].find((b) => /^liftaus/i.test(b.textContent.trim()));
       if (!nappi) return { virhe: 'ei Liftaus-nappia' };
       nappi.click();
@@ -459,7 +461,7 @@ export const NAKYMAT = [
     nimi: 'noppa-siirtolista', kuvaus: 'Liftaus heitetty, siirtovaihe: kohteet pallolla (game.phase === "move")',
     avaa: async () => {
       const { ui, game } = window.matkakirja;
-      ui.liukuAuki = true; ui.render();
+      if (!ui.liukuAuki) ui.vaihdaLiuku(); ui.render();
       const nappi = [...document.querySelectorAll('.toimintorivi button')].find((b) => /^liftaus/i.test(b.textContent.trim()));
       if (!nappi) return { virhe: 'ei Liftaus-nappia' };
       nappi.click();
@@ -478,7 +480,7 @@ export const NAKYMAT = [
     avaa: async () => {
       const { ui, game } = window.matkakirja;
       ui.valintavihjeViive = 300;
-      ui.liukuAuki = true; ui.render();
+      if (!ui.liukuAuki) ui.vaihdaLiuku(); ui.render();
       const nappi = [...document.querySelectorAll('.toimintorivi button')].find((b) => /^liftaus/i.test(b.textContent.trim()));
       if (!nappi) return { virhe: 'ei Liftaus-nappia' };
       nappi.click();
