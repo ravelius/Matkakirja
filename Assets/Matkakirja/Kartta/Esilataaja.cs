@@ -20,10 +20,11 @@ namespace Matkakirja
     ///   - Uusinta: 429, 5xx ja yhteysvirheet (myös aikakatkaisu) uusitaan 1, 2, 4 ja 8 s:n viiveellä; Retry-After voittaa.
     ///     404 ja 403 eivät uusi.
     ///   - Jokainen yritys kirjataan VerkkoOdotus.Haku-summiin (lähde, ms, tavut).
-    /// Kutsuja luo pyynnön (luo) jokaiselle yritykselle erikseen ja lukee tuloksen valmis-kutsussa ennen vapautusta.
+    /// Kutsuja luo pyynnön (luo) jokaiselle yritykselle erikseen ja lukee tuloksen valmis-kutsussa ennen vapautusta
+    /// (luo → null peruu; valmis saa silloin null). Tiedostot ja ryhmät: EsilataajaTiedostot.cs (erä 4).
     /// Erä 1 ei lisää uutta esilatausta: se on mittauspohja (osuma-% VerkkoOdotus.Osuma).
     /// </summary>
-    public sealed class Esilataaja : MonoBehaviour
+    public sealed partial class Esilataaja : MonoBehaviour
     {
         public const int Rinnakkain = 6;
         static readonly float[] Viiveet = { 1f, 2f, 4f, 8f };
@@ -120,7 +121,10 @@ namespace Matkakirja
                 for (int yritys = 0; ; yritys++)
                 {
                     float viive;
-                    using (var r = luo())
+                    // luo voi palauttaa null (esim. peruttu ryhmä): valmis(null) ja paikka vapaaksi.
+                    var uusi = luo();
+                    if (uusi == null) { valmis?.Invoke(null); yield break; }
+                    using (var r = uusi)
                     {
                         o.Pyynto = r;
                         float alku = Time.realtimeSinceStartup;

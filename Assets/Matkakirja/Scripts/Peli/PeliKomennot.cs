@@ -39,6 +39,8 @@
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
 //   levy [Mt]                 levyvälimuistien koko ja siivous vanhimmasta (oletus 2048 Mt; pienempi raja testiin) sekä
 //                             purettujen kuvien muisti (LRU tavuina, iPhone 200 / iPad 300 Mt); tulos lokiin "levy:"
+//   tiedosto osoite polku     Esilataaja.Pyyda(Kohde.Tiedosto) ryhmään "testi" (polku suhteessa Documents/sisalto;
+//                             Range-jatko jos polku on jo osin ladattu); lokiin "ryhmä testi valmis (v valmista, e virhettä)"
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen] [kaupunki]  uusi peli (oletus Lontoo; siemen = toistettava noppa); sulkee aloitusnäkymän
@@ -289,6 +291,14 @@ namespace Matkakirja.Natiivi
                     Levysiivous.Siivoa(raja);
                     return $"kuvat muistissa {Kuvat.MuistissaKpl} kpl, {Kuvat.MuistissaTavuja / 1048576} / {Kuvat.MuistiRaja / 1048576} Mt; "
                          + $"levy (edellinen) {Levysiivous.Viimeisin}";
+                }
+                case "tiedosto":
+                {
+                    // Esilataaja erä 4: Siirtosepän paketin taustapäivityksen latausväylä (EsilataajaTiedostot.cs).
+                    if (A(1) == null || A(2) == null) return "tiedosto osoite polku";
+                    Esilataaja.Pyyda(Kohde.Tiedosto(A(1), null, 0, A(2)), Taso.Muu, Kohta.Kaynnistys, "testi");
+                    Esilataaja.RyhmaValmis("testi", (v, e) => Debug.Log($"MATKAKIRJA peli: tiedosto-testi {v} valmista, {e} virhettä"));
+                    return null;
                 }
                 case "verkko":
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.

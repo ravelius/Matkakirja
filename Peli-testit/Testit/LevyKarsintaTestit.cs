@@ -65,9 +65,11 @@ namespace Matkakirja.Peli.Testit
             var j = Juuri();
             var kesken = Tee(j, "aani/x.mp3.esilataus", 4000, 500);
             var versio = Tee(j, "sisalto/viimeisin.txt", 10, 500);
+            var paketti = Tee(j, "sisalto/tiedostot/ab12", 100, 600);
             var muu = Tee(j, "kuvat/b.jpg", 4000, 400);
             LevyKarsinta.Aja(j, Kansiot, Path.Combine(j, "laatat"), 5000);
             Oleta.Tosi(File.Exists(kesken) && File.Exists(versio), "kesken oleva lataus ja viimeisin.txt jäävät");
+            Oleta.Tosi(File.Exists(paketti), "paketin varasto sisalto/tiedostot jää (Siirtoseppä siivoaa)");
             Oleta.Tosi(!File.Exists(muu), "muu vanha pois");
             Directory.Delete(j, true);
         }

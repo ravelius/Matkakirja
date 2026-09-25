@@ -35,12 +35,26 @@ namespace Matkakirja
             {
                 if (yhteensa <= tavoite) break;
                 // Kesken olevat lataukset (.esi, .esilataus, .lataus) ja sisällön versiotiedosto jäävät.
-                if (f.Name == "viimeisin.txt" || f.Extension == ".esi" || f.Extension == ".esilataus" || f.Extension == ".lataus") continue;
+                if (Suojattu(f)) continue;
                 try { long n = f.Length; f.Delete(); yhteensa -= n; vapautettu += n; poistettu++; }
                 catch (IOException) { }
                 catch (UnauthorizedAccessException) { }
             }
             return $"siivottu {poistettu} tiedostoa ({Mt(vapautettu)} Mt), nyt {Mt(yhteensa)} Mt / {Mt(raja)} Mt ({koot}, laatat {Mt(laatat)})";
+        }
+
+        /// <summary>
+        /// Ei poisteta: kesken olevat lataukset (.esi, .esilataus, .lataus), sisällön versiotiedostot ja paketin
+        /// taustapäivityksen varasto (sisalto/tiedostot/, hakemisto.json, valmis.json, kaytossa.txt; Siirtosepän
+        /// PakettiPaivitys siivoaa ne itse, vaihe 3).
+        /// </summary>
+        static bool Suojattu(FileInfo f)
+        {
+            if (f.Extension == ".esi" || f.Extension == ".esilataus" || f.Extension == ".lataus") return true;
+            if (f.Name == "viimeisin.txt" || f.Name == "kaytossa.txt" || f.Name == "hakemisto.json" || f.Name == "valmis.json") return true;
+            for (var d = f.Directory; d != null; d = d.Parent)
+                if (d.Name == "tiedostot" && d.Parent?.Name == "sisalto") return true;
+            return false;
         }
 
         static DateTime Kaytetty(FileInfo f) => f.LastAccessTimeUtc > f.LastWriteTimeUtc ? f.LastAccessTimeUtc : f.LastWriteTimeUtc;
