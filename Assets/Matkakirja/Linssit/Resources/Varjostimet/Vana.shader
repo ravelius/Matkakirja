@@ -236,11 +236,14 @@ Shader "Matkakirja/Vana"
                     vari = lerp(vanhaVari, kirkasVari, paino);
                     // RINTAMAN HEHKU (Ihmisen matka II, vapaat kädet): etenevä kärki loistaa kirkkaana ja sen ympärille
                     // leviää pehmeä halo, joka sykkii hitaasti — kaista maalautuu rannikolle valona. I:ssä _Hehku.x = 0.
+                    // Simulaattori 25.9. (kuutio, 0,55 / 0,4): kärki ei erottunut pergamentilta, joten paino toiseen,
+                    // kärki kohti lämmintä valkoista ja halo vahvemmaksi (leveys ennallaan, mahtuu nelikulmioon).
                     if (_Hehku.x > 0.0)
                     {
-                        float kiilto = paino * paino * paino * _Hehku.x * (0.85 + 0.15 * sin(_Time.y * _Hehku.z));
-                        vari = lerp(vari, kirkasVari * 1.5 + 0.12, kiilto * 0.55);
-                        float halo = (1.0 - smoothstep(puoliMaa, puoliMaa * _Hehku.y, d2)) * kiilto * 0.4;
+                        float kiilto = paino * paino * _Hehku.x * (0.8 + 0.2 * sin(_Time.y * _Hehku.z));
+                        float3 valo = lerp(kirkasVari, float3(1.0, 0.95, 0.82), 0.55) * 1.2;
+                        vari = lerp(vari, valo, kiilto * 0.7);
+                        float halo = (1.0 - smoothstep(puoliMaa, puoliMaa * _Hehku.y, d2)) * kiilto * 0.55;
                         alfa = max(saturate(alfa * (1.0 + kiilto * 0.7)), halo * _VanaPeitto[vana]);
                     }
                 }
