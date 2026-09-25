@@ -148,6 +148,15 @@ namespace Matkakirja.Natiivi
         /// Heitto ilman tavoitetta (web doWalk/doRoll ja vaihe 'move'): noppa ensin (PeliNakymat.Noppa),
         /// sitten nopan siirrot kartalle (SiirtoKohteet). Ilman siirtoja vuoro päättyy (web 'stuck').
         /// </summary>
+        /// <summary>Web wait(260) nopan kallahduksen ja siirtokohteiden välissä.</summary>
+        const float KohteidenTaukoS = 0.26f;
+
+        static System.Collections.IEnumerator Viiveella(float s, Action a)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            a();
+        }
+
         string HeitaJaValitse()
         {
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -180,7 +189,9 @@ namespace Matkakirja.Natiivi
                 Tila = SilmukanTila.Matkalla;
                 matkaKohde = a.Value;
                 int tunnus = ++noppaTunnus;
-                noppaLiike = jatko;
+                // Web ui.js ~23580: nopan kallahduksen jälkeen wait(260) ennen kohdemerkkejä ja sovitusta
+                // (liikkumisen pariteetti A10): silmäluku ehtii näkyä ennen kuin kartta liikkuu.
+                noppaLiike = () => StartCoroutine(Viiveella(KohteidenTaukoS, () => { if (tunnus == noppaTunnus) jatko(); }));
                 noppaLoppuu = Time.unscaledTime + NopanVaraS;
                 try { PeliNakymat.Noppa(noppa, a.Value.Lat, a.Value.Lon, () => { if (tunnus == noppaTunnus) NoppaValmis(); }); }
                 catch (Exception e) { Debug.LogException(e); NoppaValmis(); }
