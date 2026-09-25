@@ -64,6 +64,52 @@ export const MAASTOKOHTEET_LBY = [
   },
   {
     id: 'valimeri',
+    kuva: {
+      tiedosto: 'Mediterranean Sea 16.61811E 38.99124N.jpg',
+      lyhyt: 'Koko Välimeri satelliittikuvassa Gibraltarista Levantin rannikolle.',
+      selite: 'Välimeri avaruudesta: vasemmalla Iberia ja Gibraltarinsalmi, keskellä Italia ja '
+        + 'Sisilia, oikealla Kreikka, Turkki ja Niilin suisto; ylhäällä oikealla Mustameri.',
+      lahde: 'Satelliittikuva: NASA World Wind, muokannut Eric Gaba, Wikimedia Commons (public domain).',
+      tekija: 'NASA World Wind, muokannut Eric Gaba',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        tiedosto: 'Strait of Gibraltar perspective.jpg',
+        lyhyt: 'Gibraltarinsalmi itään katsottuna: Espanja vasemmalla, Marokko oikealla.',
+        selite: 'Satelliittiaineistosta koottu viistonäkymä Gibraltarinsalmesta Välimeren suuntaan; '
+          + 'vasemmalla takana Gibraltarin kallio, oikealla Ceuta. Korkeuserot on kolminkertaistettu.',
+        lahde: 'Kuva: NASA / JPL / NIMA, Wikimedia Commons (public domain).',
+        tekija: 'NASA / JPL / NIMA',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Strait_of_Gibraltar_perspective.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        tiedosto: 'Opening of the Suez Canal, Port Said, 1869.jpg',
+        lyhyt: 'Liputettuja laivoja Port Saidissa Suezin kanavan avajaisissa 1869.',
+        selite: 'Höyry- ja purjelaivat ovat koristautuneet viirein ja lipuin Port Saidin satamassa '
+          + 'Suezin kanavan avajaisissa marraskuussa 1869.',
+        lahde: 'Valokuva vuodelta 1869, tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Opening_of_the_Suez_Canal,_Port_Said,_1869.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        tiedosto: 'Mediterranean Sea (MODIS 2020-08-20).jpg',
+        lyhyt: 'Itäinen Välimeri, Kreeta, Kypros ja Niilin suisto satelliitista.',
+        selite: 'NASAn MODIS-satelliittikuva itäiseltä Välimereltä elokuussa 2020: ylhäällä Kreikka '
+          + 'ja Turkki, keskellä Kreeta ja Kypros, alhaalla Egyptin autiomaa ja vihreä Niilin suisto.',
+        lahde: 'Satelliittikuva: MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+        tekija: 'MODIS Land Rapid Response Team, NASA GSFC',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_(MODIS_2020-08-20).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Välimeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -77,12 +123,18 @@ export const MAASTOKOHTEET_LBY = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Välimeri on Euroopan, Aasian ja Afrikan välissä lepäävä meri, jonka rantaa koko Libyan '
-      + 'pitkä rannikko on. Meri on lähes kokonaan maan ympäröimä ja peittää noin 2,5 miljoonaa '
-      + 'neliökilometriä. Antiikissa se oli kauppiaiden, matkalaisten ja siirtolaisten '
-      + 'valtatie, jonka ääreltä nousivat Egyptin, Kreikan ja hedelmällisen puolikuun varhaiset '
-      + 'korkeakulttuurit — siksi sitä on kutsuttu lännen sivilisaation hautomoksi.',
-    lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Välimeri on lähes umpinainen meri Euroopan, Aasian ja Afrikan välissä. Sen '
+      + 'keskisyvyys on 1 500 metriä, ja Joonianmeren Calypsonsyvänne painuu 5 109 metriin. '
+      + 'Atlanttiin sen avaa vain 14 kilometriä leveä Gibraltarinsalmi, ja rannoille ketjuuntuu '
+      + 'viisitoista reunamerta Adrianmerestä Egeanmereen. Vettä haihtuu enemmän kuin joet ja '
+      + 'sateet tuovat, joten meri on Atlanttia suolaisempi: raskas suolavesi valuu '
+      + 'Gibraltarissa pohjaa pitkin ulos, kun kevyempi valtamerivesi virtaa pinnalla sisään. '
+      + 'Antiikissa meri oli kauppiaiden valtatie, jonka ääreltä nousivat Egyptin, Kreikan ja '
+      + 'hedelmällisen puolikuun korkeakulttuurit — siksi sitä kutsutaan lännen sivilisaation '
+      + 'hautomoksi. Vuonna 1869 avattu Suezin kanava liitti sen Punaiseen mereen, ja nopein '
+      + 'reitti Euroopasta Aasiaan kulki taas Välimeren kautta.',
+    lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa sekä osiot "History", "Geography" ja '
+      + '"Geology" (tarkistettu 25.9.2026).',
   },
   {
     id: 'isosyrtti',
