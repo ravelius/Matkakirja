@@ -651,7 +651,8 @@ namespace Matkakirja
                     {
                         // Löydös 74 d: vektorirajat vasta tiheydestä rajatMinTiheys, ja pois linssin ajan.
                         Debug.Log($"MATKAKIRJA maakunnat: päällä {mk.Paalla}, maa {mk.NykyinenMaa ?? "-"} (pakotettu {mk.Pakotettu ?? "-"}), " +
-                                  $"rajojen häive {mk.RajaHaive:0.00}, tiheys {mk.RajaTiheys:0.0} px/° (rajat tiheydestä {mk.rajatMinTiheys:0})");
+                                  $"rajojen häive {mk.RajaHaive:0.00}, tiheys {mk.RajaTiheys:0.0} px/° (rajat tiheydestä {System.Math.Max(mk.rajatMinTiheys, Viivaleveys.AluerajaMinTiheys):0}), " +
+                                  $"leveys {mk.RajaLaitePx:0.00} laitepx (web taso z{Viivaleveys.AluerajaTaso(mk.RajaTiheys)})");
                         break;
                     }
                     if (o[1] == "maa")
