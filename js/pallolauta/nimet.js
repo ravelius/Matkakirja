@@ -321,6 +321,64 @@ export function nimenKarttakerroin(skaala, vertailu = NIMEN_VERTAILUSKAALA) {
   return NIMEN_KERTOIMEN_PORRAS
     ** Math.round(Math.log(raaka) / Math.log(NIMEN_KERTOIMEN_PORRAS));
 }
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LATTIAKERTOIMELLA LADOTTUA NIMEÄ EI LUKITA EIKÄ NÄYTETÄ (Fablen
+ * päätös 25.9.2026; löydös Natiivi-UI:n webmittauksesta, Ranska
+ * iPhone 402 × 874: PARIISI 185 px:n päässä pisteestään)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU (Playwright, tuotanto 25.9.2026, `?lauta=pallo&dev=marseille`,
+ * ladonnan syötteet kirjattuna): kolme ensimmäistä ladontaa ajetaan
+ * maailmanäkymässä (kamera 0°, 0°, korkeus 2,5), ennen kuin maan
+ * zoomiraja ja siis vertailuskaala ovat olemassa. Kerroin on silloin
+ * lattiassa (0,18 / 1,837 → 0,2), kyltti 2,70 px. Kolmessa ajossa
+ * yhdestätoista Pariisi mahtui siihen ladontaan, ja lukko syntyi:
+ * dx 37,03, dy 1,09 — kiinteät esteet (pisteen säde, nostojen ikonit)
+ * ovat 2,7 px:n kirjasimeen nähden isoja, joten nimi liukui kauas.
+ * Perillä ZOOMI SKAALAA LUKON (yllä) kertoi sen 13,5 / 2,696 =
+ * 5,008-kertaiseksi → dx 185,42, dy 5,43, ja lukko ei enää purkautunut.
+ *
+ * SÄÄNTÖ: lukko syntyy vasta, kun kamera on perillä ja nimi on ladottu
+ * lopullisella kertoimella. Omistajan sääntö (näkyvä nimiö ei vaihda
+ * kylkeä, vain koko muuttuu; PAATOKSET 34 kohta 13 b) koskee levossa
+ * olevaa nimiötä, ei matkalla olevaa. Jo olemassa oleva lukko ei
+ * katoa lattiaan: lattian ladonta vain ei kirjoita lukkoja.
+ *
+ * KAHDESTA VAIHTOEHDOSTA VALITTU: NIMI HÄIVYTETÄÄN SISÄÄN VASTA
+ * PERILLÄ. Toinen vaihtoehto, ladonta saapumisen aikana jo
+ * kohdekertoimen geometrialla, ei ole laskettavissa: maailmanäkymän
+ * ladonnoissa vertailuskaala on 0, eli kohdetta ei vielä tiedetä.
+ * Pelkkä lukon poisto ei riitä, vaan maailmanäkymän datumi on myös
+ * pidettävä poissa ruudulta. Mitattu paikallisesti (Macin Chromium,
+ * 402 × 874 dpr 3, ämpärin vastauksiin 0–1,5 s viive), kehys
+ * kehykseltä GL-datumi × kotelon --nimiokerroin eli sama luku, jolla
+ * runko piirtää:
+ *
+ *   versio                         Marseille yli 16 px   suurin koko
+ *   main                           4/4 ajoa, 118–170 ms  402 px
+ *   vain lukko pois                3/4 ajoa, 115–137 ms  402 px
+ *   lukko pois + näkyviin perillä  0/4 ajoa              13,5 px
+ *
+ * Syy: saapumisen kamerahypyn ja ensimmäisen perillä-ladonnan välissä
+ * (noin 110–170 ms) ruudulla on yhä maailmanäkymän datumi, ja kuoren
+ * kerroin (KOKO LIUKUU JOKA KEHYKSESSÄ) kasvattaa sen 2,7 px:n
+ * kyltin noin 150-kertaiseksi. Kun lattian ladonta ei tuo nimiä
+ * merkkirekisteriin, ensimmäinen näkyvä nimi on jo perillä ladottu ja
+ * ilmestyy samaa tietä kuin mikä tahansa uusi nimi (CSS2D-polulla
+ * rekisterin sisäänhäivytys, js/pallolauta/merkit.js ILMESTYMINEN JA
+ * POISTUMINEN ANIMOIDAAN). 2,7 px:n kyltti ei ollut luettava, joten
+ * maailmanäkymästä ei katoa mitään luettavaa.
+ *
+ * `nimetyt` EI TYHJENE lattiassa (sama sääntö kuin NIMI PIILOON
+ * LIUSKAN AJAKSI): kaupungin piste näkyy nimen kanssa, ja
+ * maailmanäkymässä pisteet jäävät paikalleen.
+ */
+/** Onko kerroin lattiassa (kamera matkalla), ks. LATTIAKERTOIMELLA EI LUKITA. */
+export function nimenKerroinLattialla(skaala, vertailu = NIMEN_VERTAILUSKAALA) {
+  const perus = vertailu > 0 ? vertailu : NIMEN_VERTAILUSKAALA;
+  return skaala > 0 && skaala / perus <= NIMEN_KARTTAKERROIN_MIN;
+}
 
 /*
  * ══════════════════════════════════════════════════════════════════
@@ -577,6 +635,7 @@ export function luoNimet({
     // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
     const kokoKerroin = kaupunginKerroin
       * nimenKarttakerroin(karttaskaala, vertailuskaala || NIMEN_VERTAILUSKAALA);
+    const lattialla = nimenKerroinLattialla(karttaskaala, vertailuskaala || NIMEN_VERTAILUSKAALA);
     const w = kotelo.clientWidth;
     const h = kotelo.clientHeight;
     if (!(w > 0) || !(h > 0) || ui.dead) return tulos;
@@ -880,16 +939,19 @@ export function luoNimet({
       if (!sovitettu) continue;
       lukot.set(id, sovitettu);
     }
-    lukitut = lukot;
+    // Lattiassa ei lukita (ks. LATTIAKERTOIMELLA LADOTTUA NIMEÄ EI LUKITA).
+    if (!lattialla) lukitut = lukot;
     nimetyt = new Set(datumit.map((d) => d.id));
     // Piilotettu nimi jää pois musteesta, esteistä ja osumista — ks.
     // NIMI PIILOON LIUSKAN AJAKSI.
     const piilossa = piilota
       ? new Set(Array.isArray(piilota) ? piilota : [piilota])
       : null;
-    const nakyvatNimet = piilossa?.size
+    // Lattiassa ei näytetä: nimi tulee näkyviin vasta perillä ladottuna.
+    let nakyvatNimet = piilossa?.size
       ? datumit.filter((d) => !piilossa.has(d.id))
       : datumit;
+    if (lattialla) nakyvatNimet = [];
     // Laatikko kantaa tunnuksensa, jotta lukija (kaupunkiliuskan
     // ladonta) voi jättää oman kaupunkinsa nimen huomiotta.
     laatikot = nakyvatNimet
