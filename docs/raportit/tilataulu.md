@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 15:34 EEST
+**Päivitetty:** 2026-09-25 15:39 EEST
 
 ## 1) Sessiot
 
@@ -59,6 +59,6 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 - **Levy:** 189 Gt vapaana (raja 35 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
 - **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 0.
 - **5 h -kiintiö:** 51 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 14 %. **Viikko (Fable):** 7 %.
-- **Konteksti:** Pelikoodari nollattu 15:33 (odottaa Fablen aloitusviestiä 99d0451a0). Natiiviseppä 56 %, Fable 53 %.
-- **Juna:** ei jumissa (Fable 15:36) — kolmen haaran niputus (juna/b13 + 2 Natiiviseppä-haaraa) etenee sim kerrallaan: natiiviseppa-iPhone (FBBD41D7) KÄÄNNETTY 555d4d69 klo 15:34, muut 3 simua vielä kesken. pgrep proto-kaanna.sh/xcodebuild tyhjä juuri nyt (sim-välinen tauko), ei hälytystä ellei prosessia JA ei KÄÄNNETTY-riviä 25 min ylärajan (15:22) jälkeen eli klo 15:47 mennessä.
+- **Konteksti:** Pelikoodari sai aloitusviestin (aktiivinen 15:36), Natiivi-UI 16 % ja käynnissä. Ei ylityksiä.
+- **Juna:** ei jumissa, proto-kaanna.sh (pid 82701) käynnissä juna/b13-haaralle klo 15:39. Yläraja laukesi uudelleen 15:35 (jatkuva ajo, sama niputus). Ei hälytystä ennen klo 15:47 (25 min raja) jos ei prosessia + ei KÄÄNNETTY-riviä.
 - **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 14.
