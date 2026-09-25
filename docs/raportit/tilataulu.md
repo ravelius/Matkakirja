@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 16:37 EEST (KIIREELLINEN levyhälytys)
+**Päivitetty:** 2026-09-25 16:40 EEST
 
 ## 1) Sessiot
 
@@ -56,5 +56,5 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **LEVYHÄLYTYS (kiireellinen, ilmoitettu Fablelle 16:37):** Karttasepän GLO-30-nouto (glo30-maailma.sh, alkoi 16:34, tavoite 589 GB, arvio 5,5–8 h) kirjoittaa /Users/Shared/Claude/dem-lataus/, joka on PAIKALLISELLA levyllä (/System/Volumes/Data), EI NAS:issa (NAS-liitos on /Volumes/NAS-Homes, dem-lataus ei ole sen alla). Levyllä vapaana 183 Gt — 589 GB lataus rikkoo 35 Gt -turvarajan kesken kaiken. Seuranta: /Users/Shared/Claude/dem-lataus/glo30-maailma.seuranta (Karttasepän mukaan päivittyy 30 min välein; loppurivi "VALMIS, eheys OK" tai "KESKEN … aja uudelleen"; jos ei riviä >1h, prosessi kuollut, jatko: bash glo30-maailma.sh).
-- **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
+- **GLO-30-nouto (korjattu tieto, Fable 16:39):** kirjoittaa oikein NAS:iin (/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem/copernicus-glo30, jo 42 Gt/1734 tiedostoa), paikallinen dem-lataus-kansio vain skripti+seuranta (11 Mt). Väärä hälytykseni 16:37 peruttu — paikallinen levy pysyi ennallaan koko ajan. Valvonta jatkossa: NAS vapaa 5,6 Ti (raja 500 Gt), paikallinen levy 182 Gt (raja 35 Gt), tarkistus 30 min välein.
+\1
