@@ -37,6 +37,14 @@
 //   y = (M(lat) − M(76)) · 12000 / 2π,  M(φ) = −1,25 · ln tan(π/4 + 0,4 φ)
 // ASTEET → METRIT: webin korkeus on pallonsäteinä (Globe.gl altitude); natiivin korkeus metreinä
 // = säteet × 6 378 137 (CesiumWgs84Ellipsoid.GetMaximumRadius, sama kuin PalloKierto.KorkeusKaarelle).
+//
+// KOTELO → KOKO RUUTU (löydös 50, 25.9.2026): webin pallo piirtyy karttaruutuun (.map-pane / .pallo-kotelo), joka
+// alkaa yläpalkin alta ja jättää reunavaran (iPhone 402 × 874: kotelo 8,19 / 64,78 / 385,6 × 801,0 pt), ja FOV 50°
+// koskee KOTELON korkeutta. Natiivin kamera kattaa koko ruudun (874 pt) samalla FOV:lla, joten sama korkeus
+// pallonsäteinä antoi 874 / 801 = 1,09 × webin mittakaavan (Ranska iPhone 79 vs 72,8 px/°lat, iPad 834 × 1210
+// 1,07 ×) ja keskipiste oli 28 pt (iPad 31 pt) liian ylhäällä. LaskeRuudulle laskee webin näkymän kotelolle
+// (WebinKotelo, mitattu) ja siirtää sen natiivin kameraan: sama pistettä/radiaani-mittakaava
+// (korkeus × s_ruutu / s_kotelo) ja webin keskipiste kotelon keskelle ruudulla.
 using System;
 using System.Collections.Generic;
 
@@ -113,7 +121,44 @@ namespace Matkakirja
             public Tapa Tapa;
             /// <summary>Sovitettu laatikko (väljennetty), tai null kaupunkinäkymässä.</summary>
             public Laatikko? Laatikko;
+            /// <summary>
+            /// Webin oma näkymä kotelossa (<see cref="LaskeRuudulle"/>: pov lat/lng ja altitude, joita webin mittaukset
+            /// raportoivat); <see cref="Laske"/> antaa samat kuin Lat, Lon ja Korkeus.
+            /// </summary>
+            public double WebLat, WebLon, WebKorkeus;
             public double KorkeusMetreina => Korkeus * Sade;
+        }
+
+        /// <summary>Webin kotelo (karttaruutu) pisteinä ruudun vasemmasta yläkulmasta (y alas).</summary>
+        public readonly struct Kotelo
+        {
+            public readonly double X, Y, W, H;
+            public Kotelo(double x, double y, double w, double h) { X = x; Y = y; W = w; H = h; }
+            public override string ToString() => $"{{x {X:0.##}, y {Y:0.##}, w {W:0.##}, h {H:0.##}}}";
+        }
+
+        // ---- Webin kotelo (mitattu 25.9.2026 matkakirja.app, Chromium ilman turva-alueita; lokit/pariteetti-b12/
+        //      web-nostot-kartalla-mitat.txt raakamitat "kotelo"): reuna = .app-täyte + .map-pane-reunus,
+        //      palkki = .topbar pystyssä. Vaakatilassa palkki on piilossa (web @media landscape + coarse pointer,
+        //      natiivissa Ylapalkki.Piilossa), joten kotelo alkaa reunavaran alta. ----
+        /// <summary>Kotelon reunavara puhelimella (lyhyt sivu ≤ 480 pt) ja muuten.</summary>
+        public const double KoteloReunaPuhelin = 8.1875, KoteloReunaTabletti = 10.59375;
+        /// <summary>Yläpalkki kotelon yllä pystyssä: puhelin 64,78 − 8,19, tabletti 71,97 − 10,59.</summary>
+        public const double PalkkiPuhelin = 56.59375, PalkkiTabletti = 61.375;
+
+        /// <summary>
+        /// Webin kotelo tälle ruudulle pisteinä: iPhone 402 × 874 → (8,19; 64,78; 385,63 × 801,03), iPad 834 × 1210 →
+        /// (10,59; 71,97; 812,81 × 1127,44), iPad vaaka 1194 × 834 → (10,59; 10,59; 1172,81 × 812,81).
+        /// </summary>
+        public static Kotelo WebinKotelo(double leveysPt, double korkeusPt)
+        {
+            if (!(leveysPt > 0) || !(korkeusPt > 0)) return new Kotelo(0, 0, Math.Max(0, leveysPt), Math.Max(0, korkeusPt));
+            bool puhelin = Math.Min(leveysPt, korkeusPt) <= PuhelimenRuutu;
+            double reuna = puhelin ? KoteloReunaPuhelin : KoteloReunaTabletti;
+            double yla = reuna + (korkeusPt > leveysPt ? (puhelin ? PalkkiPuhelin : PalkkiTabletti) : 0);
+            double w = leveysPt - 2 * reuna, h = korkeusPt - yla - reuna;
+            if (!(w > 0) || !(h > 0)) return new Kotelo(0, 0, leveysPt, korkeusPt);
+            return new Kotelo(reuna, yla, w, h);
         }
 
         // ------------------------------------------------------------------ projektio
@@ -487,6 +532,7 @@ namespace Matkakirja
                 tulos.Lon = lon;
                 tulos.Laatikko = l;
                 tulos.NakyvaLeveys = LeveysKorkeudesta(tulos.Korkeus, A, fov);
+                tulos.WebLat = tulos.Lat; tulos.WebLon = tulos.Lon; tulos.WebKorkeus = tulos.Korkeus;
                 return tulos;
             }
 
@@ -502,7 +548,69 @@ namespace Matkakirja
             tulos.Korkeus = h;
             tulos.NakyvaLeveys = nakyva;
             tulos.Tapa = Tapa.Kaupunkinakyma;
+            tulos.WebLat = tulos.Lat; tulos.WebLon = tulos.Lon; tulos.WebKorkeus = tulos.Korkeus;
             return tulos;
+        }
+
+        // ------------------------------------------------------------------ kotelosta natiivin ruudulle
+
+        /// <summary>
+        /// SAAPUMISNÄKYMÄ NATIIVIN KOKO RUUDUN KAMERALLE (löydös 50): webin näkymä lasketaan kotelolle
+        /// (<paramref name="kotelo"/>, oletus <see cref="WebinKotelo"/>) webin FOV:lla <see cref="PalloFov"/>, ja
+        /// <see cref="Ruudulle"/> siirtää sen kameraan, joka kattaa koko ruudun (leveysPt × korkeusPt, pystykulma
+        /// <paramref name="fov"/>). Tulos: Lat/Lon/Korkeus natiivin kameralle, WebLat/WebLon/WebKorkeus webin pov.
+        /// </summary>
+        public static Tulos LaskeRuudulle(Laatikko? laatikko, double kaupunkiLat, double kaupunkiLon,
+            double leveysPt, double korkeusPt, double fov = PalloFov, double dpr = 1, Kotelo? kotelo = null)
+        {
+            var k = kotelo ?? WebinKotelo(leveysPt, korkeusPt);
+            var web = Laske(laatikko, kaupunkiLat, kaupunkiLon, k.W, k.H, PalloFov, dpr);
+            return Ruudulle(web, k, leveysPt, korkeusPt, fov);
+        }
+
+        /// <summary>
+        /// Webin kotelonäkymä (Laske kotelon mitoilla, FOV <see cref="PalloFov"/>) natiivin koko ruudun kameraan:
+        /// 1. MITTAKAAVA: pisteitä radiaania kohden s = (korkeus pt / 2) / tan(fov / 2); maa näkyy samankokoisena, kun
+        ///    s / etäisyys on sama, joten korkeus × s_ruutu / s_kotelo (sama FOV: × ruudun korkeus / kotelon korkeus).
+        ///    Tasolla tarkka, pallolla Ranskan laidoilla alle 0,3 %.
+        /// 2. KESKIPISTE: webin pov on kotelon keskellä, joka on ruudun keskeltä (dx, dy) pt; kameran katselupiste
+        ///    siirretään isoympyrää pitkin kulman γ = asin((1 + h) sin θ) − θ (tan θ = |d| / s_ruutu) niin, että pov
+        ///    päätyy kotelon keskelle (pohjoinen ylös, kallistus 0).
+        /// </summary>
+        public static Tulos Ruudulle(Tulos web, Kotelo kotelo, double leveysPt, double korkeusPt, double fov = PalloFov)
+        {
+            if (!(kotelo.H > 0) || !(korkeusPt > 0) || !(leveysPt > 0)) return web;
+            double sKotelo = kotelo.H / 2.0 / Math.Tan(PalloFov / 2.0 * Rad);
+            double sRuutu = korkeusPt / 2.0 / Math.Tan(fov / 2.0 * Rad);
+            double kerroin = sRuutu / sKotelo;
+            var t = web;
+            t.WebLat = web.Lat; t.WebLon = web.Lon; t.WebKorkeus = web.Korkeus;
+            t.Korkeus = web.Korkeus * kerroin;
+            t.KorkeusMin = web.KorkeusMin * kerroin;
+            t.NakyvaLeveys = LeveysKorkeudesta(t.Korkeus, Kuvasuhde(leveysPt, korkeusPt), fov);
+            double dx = kotelo.X + kotelo.W / 2.0 - leveysPt / 2.0, dy = kotelo.Y + kotelo.H / 2.0 - korkeusPt / 2.0;
+            double r = Math.Sqrt(dx * dx + dy * dy);
+            if (r > 1e-9)
+            {
+                double theta = Math.Atan(r / sRuutu), s = (1.0 + t.Korkeus) * Math.Sin(theta);
+                if (s < 1.0)
+                {
+                    // Pov näkyy keskeltä (dx oikealle, dy alas), joten katselupiste on siitä suuntaan (itä −dx, pohjoinen dy).
+                    var (lat, lon) = Siirra(web.Lat, web.Lon, Math.Asin(s) - theta, Math.Atan2(-dx, dy));
+                    t.Lat = Math.Max(-89.5, Math.Min(89.5, lat));
+                    t.Lon = Kiedo(lon);
+                }
+            }
+            return t;
+        }
+
+        /// <summary>Isoympyrän määränpää: kulma (rad) ja suuntima (rad, 0 = pohjoinen, itään +).</summary>
+        static (double Lat, double Lon) Siirra(double lat, double lon, double kulma, double suunta)
+        {
+            double f1 = lat * Rad, l1 = lon * Rad;
+            double f2 = Math.Asin(Math.Sin(f1) * Math.Cos(kulma) + Math.Cos(f1) * Math.Sin(kulma) * Math.Cos(suunta));
+            double l2 = l1 + Math.Atan2(Math.Sin(suunta) * Math.Sin(kulma) * Math.Cos(f1), Math.Cos(kulma) - Math.Sin(f1) * Math.Sin(f2));
+            return (f2 / Rad, l2 / Rad);
         }
     }
 }

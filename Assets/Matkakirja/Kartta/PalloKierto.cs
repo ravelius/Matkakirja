@@ -436,9 +436,27 @@ namespace Matkakirja
         /// <summary>
         /// Laitepikseliä yhdellä pisteellä (CSS px / iOS pt), kuten UI ja linssit: Round(dpi / 163).
         /// Pyöristämätön dpi/163 antoi 264 dpi:n iPadille 1,62 (iPadin 1x on 132 dpi), joten
-        /// merkit ja viivat olivat 0,81× webin koosta.
+        /// merkit ja viivat olivat 0,81× webin koosta. iPhonella dpi ei kelpaa: simulaattori antaa iPadin dpi:n
+        /// (iPhone 17 Pro ×2 tai ×1, ruutu 603 × 1311 pt), joten iPhone luetaan lyhyestä sivusta kuten UI:n
+        /// UiKerros.PikseliaPisteessa (85539c2): ≥ 1000 px on @3x (1080–1320), muuten @2x (SE 750, 11/XR 828).
+        /// Oikeilla laitteilla tulos on sama kuin dpi-kaavalla (iPhone 17 Pro 460 dpi → 3, iPhone 11 326 dpi → 2).
         /// </summary>
-        public static float Pistekerroin => Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+        public static float Pistekerroin
+        {
+            get
+            {
+                if (Puhelin()) return Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
+                return Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
+            }
+        }
+
+        /// <summary>iPhone (UiKerros.Tabletti käänteisenä): mobiili, ei iPad-mallinimeä eikä iPadin kuvasuhdetta (&lt; 1,6).</summary>
+        static bool Puhelin()
+        {
+            if (!Application.isMobilePlatform || SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal)) return false;
+            float pitka = Mathf.Max(Screen.width, Screen.height), lyhyt = Mathf.Max(1, Mathf.Min(Screen.width, Screen.height));
+            return pitka / lyhyt >= 1.6f;
+        }
 
         float Kerroin => Pistekerroin;
 
@@ -876,7 +894,10 @@ namespace Matkakirja
         /// kun maa on tuntematon, rajat eivät ole vielä latautuneet tai <paramref name="maaRajaus"/> on false
         /// (web siirto.js laske: avauslento ajaa kotiin ilman laatikkoa). maa = pelaajan kaupungin ISO3
         /// (reitin varrella null, kuten webin cityOf); lat/lon = pelaajan paikka. Ruutu on kameran kuva
-        /// pisteinä (webin kotelo css-pikseleinä), FOV kameran pystykulma ja dpr <see cref="Pistekerroin"/>.
+        /// pisteinä, FOV kameran pystykulma ja dpr <see cref="Pistekerroin"/>. Webin näkymä lasketaan webin
+        /// kotelolle (karttaruutu yläpalkin alla, <see cref="Saapumisnakyma.WebinKotelo"/>) ja siirretään koko ruudun
+        /// kameraan (<see cref="Saapumisnakyma.LaskeRuudulle"/>, löydös 50): sama mittakaava pisteinä ja webin
+        /// keskipiste kotelon keskellä.
         /// </summary>
         public Saapumisnakyma.Tulos SaapumisNakyma(string maa, double lat, double lon, bool maaRajaus = true)
         {
@@ -886,7 +907,7 @@ namespace Matkakirja
             double korkeusPt = (kamera != null ? kamera.pixelHeight : Screen.height) / kerroin;
             double fov = kamera != null ? kamera.fieldOfView : Saapumisnakyma.PalloFov;
             var laatikko = maaRajaus ? Saapumisrajaus.Laatikko(maa, lat, lon) : null;
-            return Saapumisnakyma.Laske(laatikko, lat, lon, leveysPt, korkeusPt, fov, kerroin);
+            return Saapumisnakyma.LaskeRuudulle(laatikko, lat, lon, leveysPt, korkeusPt, fov, kerroin);
         }
 
         /// <summary>
@@ -909,7 +930,8 @@ namespace Matkakirja
             // se samassa ajassa takaisin.
             PalautaPohjoinen(kestoS);
             Debug.Log($"MATKAKIRJA saapuminen: {maa ?? "-"} {t.Tapa} → ({t.Lat:0.###}, {t.Lon:0.###}) " +
-                      $"korkeus {t.Korkeus:0.####} R, näkyvä leveys {t.NakyvaLeveys:0} yks" +
+                      $"korkeus {t.Korkeus:0.####} R, näkyvä leveys {t.NakyvaLeveys:0} yks; web kotelossa ({t.WebLat:0.###}, " +
+                      $"{t.WebLon:0.###}) {t.WebKorkeus:0.####} R" +
                       (t.Laatikko.HasValue ? $", laatikko {t.Laatikko.Value}" : "") +
                       (Saapumisrajaus.Valmis ? "" : " (rajat lataamatta)"));
             return t;

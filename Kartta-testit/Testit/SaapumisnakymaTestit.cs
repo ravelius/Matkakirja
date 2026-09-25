@@ -114,6 +114,130 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(r.Korkeus >= r.KorkeusMin && r.Korkeus <= Saapumisnakyma.KorkeusMax, "rajoissa");
         }
 
+        // ------------------------------------------------------------------ kotelo → koko ruutu (löydös 50)
+
+        [Testi] static void WebinKoteloKuinMitattu()
+        {
+            // web-nostot-kartalla-mitat.txt raakamitat "kotelo" (Chromium, 25.9.2026).
+            foreach (var (w, h, x, y, kw, kh) in new[] {
+                (402.0, 874.0, 8.1875, 64.78125, 385.625, 801.03125),
+                (834.0, 1210.0, 10.59375, 71.96875, 812.8125, 1127.4375),
+                (1194.0, 834.0, 10.59375, 10.59375, 1172.8125, 812.8125) })
+            {
+                var k = Saapumisnakyma.WebinKotelo(w, h);
+                string n = $"{w}x{h}";
+                Sama(x, k.X, 1e-9, n + " x"); Sama(y, k.Y, 1e-9, n + " y");
+                Sama(kw, k.W, 1e-9, n + " w"); Sama(kh, k.H, 1e-9, n + " h");
+            }
+        }
+
+        /// <summary>
+        /// Pallon piste ruudulle (pt, y alas): kamera katselupisteen (lat, lon) yllä korkeudella h pallonsäteinä,
+        /// pohjoinen ylös, kallistus 0, pystykulma fov ruudun korkeudella h_pt (Globe.gl / natiivin PalloKierto).
+        /// </summary>
+        static (double X, double Y) Projisoi(double camLat, double camLon, double h, double wPt, double hPt, double fov, double lat, double lon)
+        {
+            double r = Math.PI / 180.0;
+            (double, double, double) Ykkonen(double la, double lo) => (Math.Cos(la * r) * Math.Cos(lo * r), Math.Cos(la * r) * Math.Sin(lo * r), Math.Sin(la * r));
+            var n = Ykkonen(camLat, camLon);
+            var ita = (-Math.Sin(camLon * r), Math.Cos(camLon * r), 0.0);
+            var poh = (-Math.Sin(camLat * r) * Math.Cos(camLon * r), -Math.Sin(camLat * r) * Math.Sin(camLon * r), Math.Cos(camLat * r));
+            var p = Ykkonen(lat, lon);
+            var v = (p.Item1 - (1 + h) * n.Item1, p.Item2 - (1 + h) * n.Item2, p.Item3 - (1 + h) * n.Item3);
+            double Piste((double, double, double) a, (double, double, double) b) => a.Item1 * b.Item1 + a.Item2 * b.Item2 + a.Item3 * b.Item3;
+            double z = -Piste(v, n), s = hPt / 2 / Math.Tan(fov / 2 * r);
+            return (wPt / 2 + s * Piste(v, ita) / z, hPt / 2 - s * Piste(v, poh) / z);
+        }
+
+        /// <summary>Pistettä leveysastetta kohden ruudulla: ±2° webin pov:n ympäriltä sen pituudella.</summary>
+        static double PxAsteelle(Func<double, double, (double X, double Y)> proj, double lat, double lon) =>
+            (proj(lat - 2, lon).Y - proj(lat + 2, lon).Y) / 4.0;
+
+        /// <summary>
+        /// LÖYDÖS 50 (Natiivi-UI 25.9.): saapumisnäkymä natiivin koko ruudun kameralla vastaa webin mittauksia
+        /// (lokit/pariteetti-b12/web-nostot-kartalla-mitat.txt kohta 1 ja I): webin pov kotelossa sama kuin mitattu,
+        /// ja natiivin kuvassa sama mittakaava (px/°lat) ja pov kotelon keskellä kuin webissä. Ennen korjausta
+        /// (Laske koko ruudulle) mittakaava oli ruudun / kotelon korkeus = 1,03–1,09 × webin.
+        /// </summary>
+        [Testi] static void SaapumisnakymaRuudullaKuinWebissa()
+        {
+            var fra = Tapaukset().First(t => t.Maa == "FRA" && t.Laatikko.HasValue).Laatikko;
+            var grc = Tapaukset().First(t => t.Maa == "GRC" && t.Laatikko.HasValue).Laatikko;
+            // maa, laatikko, kaupunki, ruutu (pt), dpr, webin pov lat/lng/alt ja mitattu px/°lat.
+            var mitat = new (string Nimi, Saapumisnakyma.Laatikko? L, double Lat, double Lon, double W, double H, double Dpr,
+                double WebLat, double WebLng, double WebAlt, double WebPx)[]
+            {
+                ("ranska-iphone", fra, 43.297, 5.381, 402, 874, 3, 46.3481, 5.2490, 0.20491, 72.1),
+                ("ranska-ipad", fra, 43.297, 5.381, 834, 1210, 2, 46.3481, 3.7146, 0.20493, 101.6),
+                ("ranska-ipad-vaaka", fra, 43.297, 5.381, 1194, 834, 2, 46.3481, 2.2100, 0.20494, 73.1),
+                ("kreikka-iphone", grc, 37.9699, 23.741, 402, 874, 3, 38.3253, 23.7410, 0.14577, 102.1),
+                ("kreikka-ipad", grc, 37.9699, 23.741, 834, 1210, 2, 38.3253, 23.7410, 0.14577, 143.7),
+                ("kreikka-ipad-vaaka", grc, 37.9699, 23.741, 1194, 834, 2, 38.3253, 23.9375, 0.14578, 103.5),
+            };
+            bool tulosta = Environment.GetEnvironmentVariable("SAAPUMINEN_RUUTU") != null;
+            foreach (var m in mitat)
+            {
+                var k = Saapumisnakyma.WebinKotelo(m.W, m.H);
+                var r = Saapumisnakyma.LaskeRuudulle(m.L, m.Lat, m.Lon, m.W, m.H, Saapumisnakyma.PalloFov, m.Dpr);
+                string n = m.Nimi;
+                Sama(m.WebLat, r.WebLat, 1e-3, n + " web lat");
+                // Ranska iPhone: web mittasi 5,249, kaava antaa Marseillen oman 5,381 (kaistan yläraja 5,925 kotelon
+                // kuvasuhteella 0,481; 5,249 vastaisi kuvasuhdetta 0,556 eli saapuessa ~690 pt korkeaa koteloa).
+                // Ero 0,13° ≈ 7 pt vaakaan; muut ≤ 0,005°.
+                Sama(m.WebLng, r.WebLon, n == "ranska-iphone" ? 0.15 : 0.01, n + " web lng");
+                Sama(m.WebAlt, r.WebKorkeus, 1e-4, n + " web alt");
+                Func<double, double, (double X, double Y)> web = (la, lo) =>
+                {
+                    var q = Projisoi(r.WebLat, r.WebLon, r.WebKorkeus, k.W, k.H, Saapumisnakyma.PalloFov, la, lo);
+                    return (q.X + k.X, q.Y + k.Y);
+                };
+                Func<double, double, (double X, double Y)> natiivi = (la, lo) =>
+                    Projisoi(r.Lat, r.Lon, r.Korkeus, m.W, m.H, Saapumisnakyma.PalloFov, la, lo);
+                double pxWeb = PxAsteelle(web, r.WebLat, r.WebLon), pxNat = PxAsteelle(natiivi, r.WebLat, r.WebLon);
+                var pov = natiivi(r.WebLat, r.WebLon);
+                Sama(k.X + k.W / 2, pov.X, 0.5, n + " pov x kotelon keskellä");
+                Sama(k.Y + k.H / 2, pov.Y, 0.5, n + " pov y kotelon keskellä");
+                Sama(1, pxNat / pxWeb, 0.003, n + $" px/°lat natiivi {pxNat:0.0} vs web-malli {pxWeb:0.0}");
+                // Webin mitattu px/° on merkkien lineaarinen sovitus koko kuvan yli (pallo kaartuu): 3 %.
+                Sama(1, pxNat / m.WebPx, 0.03, n + $" px/°lat natiivi {pxNat:0.0} vs mitattu {m.WebPx}");
+                // Webin reunat (kotelon kulmat) samoissa pisteissä: Strasbourg ja Nizza / Korfu ja Rodos.
+                foreach (var (la, lo) in m.Nimi.StartsWith("ranska") ? new[] { (48.573, 7.752), (43.703, 7.266) } : new[] { (39.62, 19.92), (36.43, 28.22) })
+                {
+                    var a = web(la, lo); var b = natiivi(la, lo);
+                    Sama(a.X, b.X, 1.5, $"{n} ({la}, {lo}) x"); Sama(a.Y, b.Y, 1.5, $"{n} ({la}, {lo}) y");
+                }
+                var ennen = Saapumisnakyma.Laske(m.L, m.Lat, m.Lon, m.W, m.H, Saapumisnakyma.PalloFov, m.Dpr);
+                double pxEnnen = PxAsteelle((la, lo) => Projisoi(ennen.Lat, ennen.Lon, ennen.Korkeus, m.W, m.H, Saapumisnakyma.PalloFov, la, lo), r.WebLat, r.WebLon);
+                // Juurisyy: ennen korjausta mittakaava oli ruudun / kotelon korkeus × webin (iPhone 1,091, iPad 1,073, vaaka 1,026).
+                Sama(m.H / k.H, pxEnnen / pxWeb, 0.01, $"{n}: ennen korjausta {pxEnnen:0.0} px/° (web {pxWeb:0.0})");
+                if (tulosta)
+                    Console.WriteLine($"  {n}: kotelo {k}; web pov ({r.WebLat:0.####}, {r.WebLon:0.####}) {r.WebKorkeus:0.#####} R, " +
+                        $"{pxWeb:0.0} px/°lat (mitattu {m.WebPx}); ennen ({ennen.Lat:0.###}, {ennen.Lon:0.###}) {ennen.Korkeus:0.#####} R " +
+                        $"{pxEnnen:0.0} px/°lat; nyt ({r.Lat:0.###}, {r.Lon:0.###}) {r.Korkeus:0.#####} R {pxNat:0.0} px/°lat");
+            }
+            if (tulosta)
+                foreach (var (nimi, l, la, lo) in new[] { ("ranska", fra, 43.297, 5.381), ("kreikka", grc, 37.9699, 23.741) })
+                {
+                    var r = Saapumisnakyma.LaskeRuudulle(l, la, lo, 1024, 1366, Saapumisnakyma.PalloFov, 2);
+                    var ennen = Saapumisnakyma.Laske(l, la, lo, 1024, 1366, Saapumisnakyma.PalloFov, 2);
+                    Console.WriteLine($"  {nimi}-ipad13 1024x1366: kotelo {Saapumisnakyma.WebinKotelo(1024, 1366)}; web ({r.WebLat:0.####}, {r.WebLon:0.####}) " +
+                        $"{r.WebKorkeus:0.#####} R {r.Tapa}; ennen {ennen.Korkeus:0.#####} R ({ennen.Tapa}); nyt ({r.Lat:0.###}, {r.Lon:0.###}) {r.Korkeus:0.#####} R");
+                }
+        }
+
+        /// <summary>Kotelo = koko ruutu: LaskeRuudulle on sama kuin Laske (kultaiset arvot pätevät sellaisinaan).</summary>
+        [Testi] static void KoteloKokoRuutuOnWebinLaske()
+        {
+            foreach (var t in Tapaukset())
+            {
+                var a = Laske(t, t.Laatikko);
+                var b = Saapumisnakyma.LaskeRuudulle(t.Laatikko, t.Lat, t.Lon, t.W, t.H, Saapumisnakyma.PalloFov, t.Dpr,
+                    new Saapumisnakyma.Kotelo(0, 0, t.W, t.H));
+                string n = $"{t.Kaupunki} {t.Ruutu}";
+                Sama(a.Lat, b.Lat, 1e-12, n + " lat"); Sama(a.Lon, b.Lon, 1e-12, n + " lon"); Sama(a.Korkeus, b.Korkeus, 1e-12, n + " korkeus");
+            }
+        }
+
         static Dictionary<string, List<(double Lon, double Lat)[]>> rajat;
         /// <summary>Maarajat: SAAPUMINEN_MAARAJAT=polku (esim. tuore vienti), muuten linssien kultainen paketti.</summary>
         static Dictionary<string, List<(double Lon, double Lat)[]>> Rajat() => rajat ??= Saapumisnakyma.LueMaarajat(MiniJson.Jasenna(File.ReadAllText(
