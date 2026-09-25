@@ -4,7 +4,8 @@
 // Kuva (_MainTex) on ESIKERROTTU ja sRGB-tavuina LINEAARISESSA tekstuurissa (NapaKannet
 // purkaa sen niin, ks. Plugins/iOS/MatkakirjaKuvat.mm): suodatus ja mipit ovat silloin oikein
 // myös läpinäkyväksi häivytetyllä reunalla. Varjostin jakaa alfan pois ja muuntaa sRGB:n
-// lineaariseksi itse. Kannella kuva on valkoinen (oletus) ja väri tulee _BaseColorista.
+// lineaariseksi itse. Kannella kuva on valkoinen (oletus) ja väri tulee _BaseColorista; reliefikannella
+// väri on kärkipisteissä (lineaarisena) ja _BaseColor on laattojen valaistuskerroin.
 //
 // Maasto ei saa puhkaista kalottia (Etelämantereen jää ja vuoret 4,9 km:iin), mutta kalotti
 // piirretään pinnan korkeudelle, ettei se liu'u laattojen suhteen kallistetussa kuvassa.
@@ -86,7 +87,8 @@ Shader "Matkakirja/Napakansi"
             #endif
                 half a = kuva.a * _BaseColor.a * i.vari.a;
                 // Väritason kerma kuten laatoissa (Cesiumin raster-kerros sekoittuu ennen valaistusta).
-                half3 vari = lerp(savy * _BaseColor.rgb, _Kerma.rgb, _Kerma.a * maa);
+                // Kärkipisteen rgb: reliefikannen väri (NapaKannet ReliefinPohjoisreuna, lineaarisena); muilla valkoinen.
+                half3 vari = lerp(savy * _BaseColor.rgb * i.vari.rgb, _Kerma.rgb, _Kerma.a * maa);
                 vari = lerp(vari, vari * half3(0.18, 0.17, 0.24) + half3(0.006, 0.006, 0.016), (half)saturate(_radioHamara));
                 return half4(vari * valaistus * a, a);
             }

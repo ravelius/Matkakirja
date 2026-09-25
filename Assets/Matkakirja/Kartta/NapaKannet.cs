@@ -24,8 +24,9 @@ namespace Matkakirja
     ///
     /// KANSI on varakappale: yksivärinen 83,7°:sta napaan ja 0,4°:n häive peitolla 0,4. Se näkyy,
     /// kunnes kalotti on ladattu (verkko poikki tai 404: pallo piirtyy kuten ennen kalotteja).
-    /// Reliefilinssin ajan kalotti on piilossa ja kansi reliefin sävyssä (web NAPAKANSI_RELIEFI_*), etelässä
-    /// reliefisarjan reunaan asti (<see cref="ReliefinJaaraja"/>, löydös 99); KarttaKerrokset kertoo tilan (<see cref="Reliefi"/>).
+    /// Reliefilinssin ajan kalotti ja kansi ovat piilossa ja niiden tilalla reliefikansi reliefin sävyissä
+    /// (web NAPAKANSI_RELIEFI_*; natiivissa reliefisarjan reunaan asti, <see cref="ReliefinJaaraja"/>, löydös 99);
+    /// KarttaKerrokset kertoo tilan (<see cref="Reliefi"/>).
     ///
     /// Kappaleet ovat pinnan korkeudella (ei liukumista laattojen suhteen), ja maaston yli ne nostaa
     /// varjostimen syvyysnosto (Napakansi.shader). Värit sovitetaan laattoihin
@@ -43,20 +44,43 @@ namespace Matkakirja
         /// <summary>Kannen sävyt: Jäämeren merisävy ja napajää laatoissa (web NAPAKANSI_POHJOINEN/ETELA).</summary>
         public static readonly Color32 KansiPohjoinen = new Color32(0xc9, 0xc2, 0xaf, 0xff);
         public static readonly Color32 KansiEtela = new Color32(0xdc, 0xd6, 0xc6, 0xff);
-        /// <summary>Reliefilinssin sävyt: avomeri ja mannerjää (web MERIVARI, JAAVARI).</summary>
+        /// <summary>Reliefilinssin sävyt: avomeri ja mannerjää (web MERIVARI, JAAVARI). Pohjoinen reliefikansi käyttää
+        /// mitattua reunaa (<see cref="ReliefinPohjoisreuna"/>), eteläinen jään sävyä.</summary>
         public static readonly Color32 ReliefiPohjoinen = new Color32(38, 78, 145, 0xff);
         public static readonly Color32 ReliefiEtela = new Color32(236, 240, 244, 0xff);
         /// <summary>
-        /// Reliefilinssin eteläkannen reuna (omistajan löydös 99, build 13: topografian navat pyöreinä reikinä).
-        /// Reliefisarja (Topografia.ReliefiSarja) on poltettu vain −65,4°:een asti (mitattu 25.9. z5-laatoista
-        /// kolmella pituusasteella: viimeinen reliefirivi −65,40…−65,44°), ja sen eteläpuolen poltto maalasi
-        /// avomeren sinisellä (MERIVARI). Etelämanner oli siis valtamerta, ja keskellä 83,7°:sta alkava jäänvalkea
-        /// kansi näkyi pyöreänä reikänä. Web maalaa saman aukon jään sävyllä (js/reliefipyramidi.js JAARAJA_LAT −65 ja
-        /// reliefinTaustavari, käyttö js/pallolaatat.js puuttuvan reliefilaatan taustassa), joten linssin ajaksi
-        /// eteläkansi ulottuu reliefin reunaan asti. Pohjoisessa reliefi ulottuu 84,0°:een ja yläpuoli on MERIVARIa
-        /// kuten kansikin, joten pohjoinen kansi pysyy 83,7°:ssa.
+        /// RELIEFIKANSI (omistajan löydös 99, build 13: topografian navat pyöreinä reikinä). Reliefisarja
+        /// (Topografia.ReliefiSarja 20260924) on poltettu 84,0° N:n ja 65,4° S:n väliin (mitattu 25.9. z5-laatoista:
+        /// viimeinen reliefirivi 84,0° kaikilla 32 sarakkeella ja −65,40…−65,44° kolmella), ja ulkopuoli on maalattu
+        /// avomeren sinisellä (MERIVARI 37,78,144). Reliefin ajaksi kummallakin navalla on oma kansi kannen tilalla:
+        ///  • ETELÄ: Etelämanner oli valtamerta, ja 83,7°:sta alkava jäänvalkea kansi näkyi pyöreänä reikänä. Web maalaa
+        ///    saman aukon jään sävyllä (js/reliefipyramidi.js JAARAJA_LAT −65 ja reliefinTaustavari, käyttö
+        ///    js/pallolaatat.js puuttuvan reliefilaatan taustassa), joten kansi ulottuu reliefin reunaan
+        ///    <see cref="ReliefinJaaraja"/> ja häivyttyy sen sisäpuolella <see cref="ReliefinEtelaHaive"/> asteen matkalla
+        ///    (alla on sarjan tasainen merensininen, joten häive on meren ja jään liuku eikä vaalea vyö).
+        ///  • POHJOINEN: MERIVARI-kansi erottui tummana kiekkona (Natiivisepän kuva 25.9.), koska reliefi 84°:ssa on
+        ///    matalan meren ja jään vaaleampaa sinistä ja vaihtelee pituusasteen mukaan (38,78,143 … 150,196,231).
+        ///    Kannen reunan väri on siksi mitattu laatoista pituusasteittain (<see cref="ReliefinPohjoisreuna"/>) ja
+        ///    liukuu navalle keskiarvoon; kansi on täysi 84,0°:een ja häivyttyy ulos 83,0°:een.
         /// </summary>
         public const double ReliefinJaaraja = 65.4;
+        public const double ReliefinEtelaHaive = 3.0;
+        public const double ReliefinPohjoisraja = 84.0;
+        public const double ReliefinPohjoisHaive = 1.0;
+        /// <summary>
+        /// Reliefin väri 83,75–83,95° N (z5-laattojen rivit 6–48, tasoaltaan puoliskon keskiarvo), 64 näytettä
+        /// 5,625°:n välein pituusasteelta −180 alkaen (näyte i kohdassa −180 + (i + 0,5)·5,625). Sidottu
+        /// Topografia.ReliefiSarjan versioon 20260924: uusi poltto = uusi mittaus.
+        /// </summary>
+        public const string ReliefinPohjoisreuna =
+            "4273ae 4575ae 3c689e 4374b0 4070ab 3c6daa 3e6faa 3e6eaa " +
+            "325f9d 3561a1 3a69a8 3b6ba7 4071ad 4b7eb9 4e80b6 4d80b8 " +
+            "5589c2 6196ca 7bafdb 8cbde4 83b5e0 7fb3de 88bae2 89bae2 " +
+            "89bbe2 96c4e7 94c3e6 6697c4 3f6da6 2b5594 325c9b 345d96 " +
+            "2f5790 2b538f 264e8e 264e8f 264e8f 275091 295294 295294 " +
+            "295294 2b5496 2e599a 325f9f 3360a1 3360a1 335fa0 2f5a9a " +
+            "2c5798 2d5698 2c5594 2d5796 284f8e 29508c 244b8e 254c8d " +
+            "2b5393 5183b8 4978ad 4372ab 315c99 3360a0 3562a3 3a69a7";
 
         /// <summary>Kalottikuvien versio ämpärissä (web NAPAKALOTTI_VERSIO).</summary>
         public const string KalottiVersio = "2026-09-11b";
@@ -87,7 +111,7 @@ namespace Matkakirja
         public int kalotinSektoreita = 128;
         [Tooltip("Kappaleiden korkeus ellipsoidista metreinä. Maaston yli ne nostaa syvyysnosto.")]
         public double pinnanKorkeus = 0.0;
-        [Tooltip("Syvyyden nosto metreinä: Etelämantereen korkein huippu 4 892 m, Pohjoisen kalotin alue alle 3 000 m.")]
+        [Tooltip("Syvyyden nosto metreinä ilman liioittelua: Etelämantereen korkein huippu 4 892 m, Pohjoisen kalotin alue alle 3 000 m. Kerrotaan KorkeusKertoimella.")]
         public float syvyysnosto = 6000f;
         [Tooltip("Kerroin (lineaarisena), jolla Lambert-kansi ja -kalotti vastaavat Cesiumin laattojen valaistusta.")]
         public Color laattojenSavy = new Color32(236, 240, 242, 255);
@@ -101,20 +125,21 @@ namespace Matkakirja
             public int Merkki;
             public double Reuna;
             public Color32 Savy, ReliefiSavy;
-            /// <summary>Reliefilinssin kansi, jos sen reuna on eri kuin kannen (etelä, <see cref="ReliefinJaaraja"/>); muuten null.</summary>
+            /// <summary>Reliefilinssin kansi kannen tilalla (ks. <see cref="ReliefinJaaraja"/>); värit kärkipisteissä.</summary>
             public GameObject Kansi, ReliefiKansi, Kalotti;
-            public Material KansiMateriaali, KalotinMateriaali;
+            public Material KansiMateriaali, KalotinMateriaali, ReliefiMateriaali;
             public Texture2D Kuva;
         }
 
         readonly List<Napa> navat = new List<Napa>();
         readonly List<Mesh> verkot = new List<Mesh>();
         bool nakyvat = true, reliefi, purettu;
+        float nostoKerroin = float.NaN;
 
         /// <summary>KarttaKerrokset "napakannet": kannet ja kalotit.</summary>
         public void Nakyvat(bool nakyy) { nakyvat = nakyy; Paivita(); }
 
-        /// <summary>Reliefi on pohjan tilalla (KarttaKerrokset): kalotti piiloon, kansi reliefin sävyyn.</summary>
+        /// <summary>Reliefi on pohjan tilalla (KarttaKerrokset): kalotti ja kansi piiloon, reliefikansi esiin.</summary>
         public void Reliefi(bool paalla)
         {
             if (reliefi == paalla) return;
@@ -133,6 +158,7 @@ namespace Matkakirja
             {
                 if (n.KansiMateriaali != null) n.KansiMateriaali.SetColor("_Kerma", c);
                 if (n.KalotinMateriaali != null) n.KalotinMateriaali.SetColor("_Kerma", c);
+                if (n.ReliefiMateriaali != null) n.ReliefiMateriaali.SetColor("_Kerma", c);
             }
         }
 
@@ -148,6 +174,24 @@ namespace Matkakirja
             StartCoroutine(LataaKalotit());
         }
 
+        /// <summary>
+        /// Syvyysnosto seuraa korkeuskerrointa (löydös 99): liioiteltu maasto (KorkeusKerroin 2, löydös 29) nousi
+        /// Etelämantereella 6 000 m:n noston yli, ja sinisiksi maalatut reliefilaatat puskivat kannen läpi kaarina.
+        /// </summary>
+        void Update()
+        {
+            float k = KorkeusKerroin.Arvo;
+            if (k == nostoKerroin) return;
+            nostoKerroin = k;
+            float nosto = syvyysnosto * Mathf.Max(1f, k);
+            foreach (var n in navat)
+            {
+                if (n.KansiMateriaali != null) n.KansiMateriaali.SetFloat("_Nosto", nosto);
+                if (n.KalotinMateriaali != null) n.KalotinMateriaali.SetFloat("_Nosto", nosto);
+                if (n.ReliefiMateriaali != null) n.ReliefiMateriaali.SetFloat("_Nosto", nosto);
+            }
+        }
+
         void OnDestroy()
         {
             purettu = true;
@@ -155,6 +199,7 @@ namespace Matkakirja
             {
                 if (n.KansiMateriaali != null) Destroy(n.KansiMateriaali);
                 if (n.KalotinMateriaali != null) Destroy(n.KalotinMateriaali);
+                if (n.ReliefiMateriaali != null) Destroy(n.ReliefiMateriaali);
                 if (n.Kuva != null) Destroy(n.Kuva);
             }
             foreach (var v in verkot) if (v != null) Destroy(v);
@@ -177,20 +222,52 @@ namespace Matkakirja
             leveydet.Add(KannenLeveys); alfat.Add(KannenHaivePeitto);
             leveydet.Add(KannenLeveys - KannenHaive); alfat.Add(KannenHaivePeitto);
             n.Kansi = Kappale("Napakansi " + puoli, Verkko(merkki, leveydet, alfat, sektoreita, 0.0), n.KansiMateriaali);
-            // Reliefin kansi etelässä reliefisarjan reunaan asti, täysi peitto ilman häivettä: reuna osuu sarjan
-            // poltetun alueen reunaan, ja häive näkyisi reliefimeren päällä vaaleana vyönä (webissäkin raja on
-            // laatan reuna). Tiheys kuten kalotilla, jonka ala on samaa kokoluokkaa (60°–90°).
+            // Reliefikansi (ks. ReliefinJaaraja): väri kärkipisteissä (Napakansi.shader kertoo sillä), materiaalin
+            // _BaseColor on laattojen valaistuskerroin kuten kalotilla.
+            n.ReliefiMateriaali = new Material(n.KansiMateriaali) { name = "Napakansi reliefi " + puoli };
+            n.ReliefiMateriaali.SetColor("_BaseColor", laattojenSavy);
+            var rl = new List<double>();
+            var ra = new List<float>();
+            Func<double, double, Color> rv;
             if (merkki < 0)
             {
-                var rl = new List<double>();
-                var ra = new List<float>();
+                // Täysi jää navalta häiveen sisäreunaan, siitä lineaarisesti läpinäkyväksi reliefin reunaan.
+                double sisa = ReliefinJaaraja + ReliefinEtelaHaive;
                 for (int k = 0; k <= kalotinKehia; k++)
                 {
-                    rl.Add(90.0 - (90.0 - ReliefinJaaraja) * k / kalotinKehia);
-                    ra.Add(1f);
+                    double lat = 90.0 - (90.0 - ReliefinJaaraja) * k / kalotinKehia;
+                    rl.Add(lat);
+                    ra.Add(lat >= sisa ? 1f : (float)((lat - ReliefinJaaraja) / ReliefinEtelaHaive));
                 }
-                n.ReliefiKansi = Kappale("Napakansi reliefi " + puoli, Verkko(merkki, rl, ra, kalotinSektoreita, 0.0), n.KansiMateriaali);
+                Color jaa = Lineaarinen(reliefiSavy);
+                rv = (lat, lon) => jaa;
             }
+            else
+            {
+                // Täysi 84,0°:een (sarjan tasainen MERIVARI-kaista peittyy), häive ulos 83,0°:een reliefin päälle.
+                for (int k = 0; k <= kehia; k++) { rl.Add(90.0 - (90.0 - ReliefinPohjoisraja) * k / kehia); ra.Add(1f); }
+                for (int k = 1; k <= 4; k++)
+                {
+                    rl.Add(ReliefinPohjoisraja - ReliefinPohjoisHaive * k / 4);
+                    ra.Add(1f - k / 4f);
+                }
+                var reunat = Pohjoisreuna();
+                var keski = new Color(0f, 0f, 0f, 0f);
+                foreach (var c in reunat) keski += c / reunat.Length;
+                rv = (lat, lon) =>
+                {
+                    // Reunaväri pituusasteen mukaan (näytteiden välissä lineaarisesti), navalle päin keskiarvoon.
+                    double x = (lon + 180.0) / 360.0 * reunat.Length - 0.5;
+                    int i0 = (int)Math.Floor(x);
+                    float t = (float)(x - i0);
+                    int n0 = (i0 % reunat.Length + reunat.Length) % reunat.Length, n1 = (n0 + 1) % reunat.Length;
+                    Color r = Color.Lerp(reunat[n0], reunat[n1], t);
+                    float napa = (float)Math.Max(0.0, Math.Min(1.0, (lat - ReliefinPohjoisraja) / (90.0 - ReliefinPohjoisraja)));
+                    return Color.Lerp(r, keski, napa);
+                };
+            }
+            n.ReliefiKansi = Kappale("Napakansi reliefi " + puoli,
+                Verkko(merkki, rl, ra, kalotinSektoreita, 0.0, rv), n.ReliefiMateriaali);
             return n;
         }
 
@@ -199,12 +276,11 @@ namespace Matkakirja
             foreach (var n in navat)
             {
                 bool kuva = n.Kalotti != null;
-                n.KansiMateriaali.SetColor("_BaseColor", Savytetty(reliefi ? n.ReliefiSavy : n.Savy));
+                n.KansiMateriaali.SetColor("_BaseColor", Savytetty(n.Savy));
                 // Kansi pois, kun kartta on paikallaan (web 11.9.: kansi piirtyi muuten kalotin päälle).
-                // Reliefin ajan etelässä leveämpi reliefikansi kannen tilalla (sama materiaali, ks. ReliefinJaaraja).
-                bool reliefikansi = reliefi && n.ReliefiKansi != null;
-                n.Kansi.SetActive(nakyvat && !reliefikansi && (reliefi || !kuva));
-                if (n.ReliefiKansi != null) n.ReliefiKansi.SetActive(nakyvat && reliefikansi);
+                // Reliefin ajan reliefikansi kannen tilalla (ks. ReliefinJaaraja).
+                n.Kansi.SetActive(nakyvat && !reliefi && !kuva);
+                n.ReliefiKansi.SetActive(nakyvat && reliefi);
                 if (kuva) n.Kalotti.SetActive(nakyvat && !reliefi);
             }
         }
@@ -214,6 +290,23 @@ namespace Matkakirja
         {
             Color l = ((Color)vari).linear, s = laattojenSavy.linear;
             return new Color(l.r * s.r, l.g * s.g, l.b * s.b, 1f).gamma;
+        }
+
+        /// <summary>Kärkipisteen väri varjostimelle: Unity ei muunna kärkipistevärejä, joten sRGB → lineaarinen itse.</summary>
+        static Color Lineaarinen(Color32 vari) =>
+            QualitySettings.activeColorSpace == ColorSpace.Linear ? ((Color)vari).linear : (Color)vari;
+
+        /// <summary><see cref="ReliefinPohjoisreuna"/> väreinä (lineaarisina kärkipisteille).</summary>
+        static Color[] Pohjoisreuna()
+        {
+            var osat = ReliefinPohjoisreuna.Split(' ');
+            var v = new Color[osat.Length];
+            for (int i = 0; i < osat.Length; i++)
+            {
+                int h = Convert.ToInt32(osat[i], 16);
+                v[i] = Lineaarinen(new Color32((byte)(h >> 16), (byte)(h >> 8), (byte)h, 255));
+            }
+            return v;
         }
 
         GameObject Kappale(string nimi, Mesh verkko, Material materiaali)
@@ -228,8 +321,10 @@ namespace Matkakirja
         /// <summary>
         /// Kalotti tai kansi: renkaat navalta ulospäin (leveydet itseisarvoina; kaksi samaa leveyttä
         /// peräkkäin = kova alfan porras ilman kolmioita väliin). kuvanReuna &gt; 0: UV kalotin kuvasta.
+        /// vari(leveys, pituus): kärkipisteen rgb (reliefikansi); null = valkoinen.
         /// </summary>
-        Mesh Verkko(int merkki, List<double> leveydet, List<float> alfat, int sektorit, double kuvanReuna)
+        Mesh Verkko(int merkki, List<double> leveydet, List<float> alfat, int sektorit, double kuvanReuna,
+                    Func<double, double, Color> vari = null)
         {
             int renkaat = leveydet.Count;
             int n = renkaat * (sektorit + 1);
@@ -252,7 +347,8 @@ namespace Matkakirja
                     double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
                     paikat[i] = (float3)u;
                     normaalit[i] = (float3)math.normalize(u - keskus);
-                    varit[i] = new Color(1, 1, 1, alfat[k]);
+                    Color rgb = vari != null ? vari(leveydet[k], lon) : Color.white;
+                    varit[i] = new Color(rgb.r, rgb.g, rgb.b, alfat[k]);
                     if (uvt != null)
                     {
                         // Web kalotinKuvapiste: nollameridiaani kuvassa ylöspäin; pohjoisnavan päältä
