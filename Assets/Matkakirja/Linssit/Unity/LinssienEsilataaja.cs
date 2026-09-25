@@ -69,7 +69,9 @@ namespace Matkakirja.Natiivi
             {
                 if (!(l is LinssiOhjain.IhmisenMatkaSovitin s)) continue;
                 // I ja II jakavat saman aineiston: yksi lista riittää.
-                foreach (var kuva in LinssienEsilataus.IhmisenMatka(s.Aineisto).Kaari) Kuvat.Esilataa(kuva, Taso.TamaKaupunki);
+                var kaari = LinssienEsilataus.IhmisenMatka(s.Aineisto).Kaari;
+                foreach (var kuva in kaari) Kuvat.Esilataa(kuva, Taso.TamaKaupunki);
+                ohjain?.Kirjaa($"esilataus: joutilaana ihmisen matkan kaari {kaari.Count}");
                 return;
             }
         }
