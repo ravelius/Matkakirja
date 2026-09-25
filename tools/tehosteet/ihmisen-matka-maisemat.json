@@ -7,16 +7,16 @@
   "haivytysS": 0.25,
   "leikkaaHiljaisuus": false,
   "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"],
-  "lahteet": ["freesound", "commons"],
+  "lahteet": ["freesound"],
   "tehosteet": [
     {
       "tunnus": "savanni",
       "peliavain": "maisema.savanni",
       "kuvaus": "Savanni: heinäsirkat, kaukainen tuuli ja linnut (Afrikka, Jebel Irhoud, siirtymä Itä-Afrikkaan)",
       "hakusanat": [
-        "savanna ambience",
-        "african bush ambience",
-        "kenya ambience birds"
+        "savanna",
+        "savannah ambience",
+        "africa ambience birds"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
@@ -60,22 +60,20 @@
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"]
+      "lisenssit": ["Creative Commons 0", "Attribution"]
     },
     {
       "tunnus": "ruohikko-jarvi",
       "peliavain": "maisema.ruohikko-jarvi",
       "kuvaus": "Kevyt tuuli ruohikossa ja järven liplatus (vihertynyt Arabia, Al Wusta)",
       "hakusanat": [
-        "lake shore reeds wind birds field recording",
-        "marsh reeds wind ambience birds",
-        "lakeside grass wind water lapping"
+        "lake ambience birds",
+        "reeds wind",
+        "lake shore ambience"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"]
+      "lisenssit": ["Creative Commons 0", "Attribution"]
     },
     {
       "tunnus": "sademetsa",
@@ -89,7 +87,6 @@
       "kestoMin": 30,
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"],
       "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "bat", "bats", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
@@ -123,9 +120,9 @@
       "peliavain": "maisema.arktinen-tuuli",
       "kuvaus": "Arktinen tuuli lumen yllä (Jana, napapiirin takana)",
       "hakusanat": [
-        "arctic wind field recording outdoor",
-        "blizzard wind snow outdoor recording",
-        "polar wind snow ambience"
+        "blizzard",
+        "arctic wind",
+        "snow storm wind"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
@@ -196,7 +193,6 @@
       "kestoMin": 30,
       "kestoMax": 120,
       "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"],
       "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
@@ -210,8 +206,7 @@
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"],
-      "lahteet": ["freesound"]
+      "lisenssit": ["Creative Commons 0", "Attribution"]
     }
   ]
 }
