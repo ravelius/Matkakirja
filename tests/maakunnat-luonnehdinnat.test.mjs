@@ -13,16 +13,19 @@ const ODOTETUT_MAARAT = {
   GRC: 14,
   NLD: 15,
   BEL: 11,
+  DNK: 5,
+  SVK: 8,
 };
 
 /*
  * GRC lisättiin 25.9.2026 (Sisältökirjuri, löydös 115:n yhteydessä) ja
  * on vielä erässä 1 — vain `lyhyt`. `97 maakuntaa`-testi jäljempänä
  * koskee siis yhä vain alkuperäisiä 97 aluetta (7 maata), kunnes
- * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD ja BEL
- * lisättiin samana päivänä samalla tavalla (erä 1, vain `lyhyt`).
+ * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD, BEL,
+ * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
+ * `lyhyt`).
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

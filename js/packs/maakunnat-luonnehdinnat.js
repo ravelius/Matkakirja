@@ -2375,4 +2375,75 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Waterloon taistelu käytiin täällä kesäkuussa 1815, ja nykyään Vallonian Brabant on Belgian vaurain provinssi.',
     },
   },
+  /*
+   * DNK (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.DNK:n tunnuksia
+   * TÄSMÄLLEEN (myös kirjoitusasu "Sjaælland"). Vain `lyhyt` tässä
+   * erässä. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Nordjylland  — Grenen; North Jutland Region (Frederikshavnin kunta)
+   *   Midtjylland  — ARoS Aarhus Kunstmuseum (Your rainbow panorama 2011)
+   *   Hovedstaden  — Øresund Bridge (Amager–Peberholm-tunneli + silta)
+   *   Sjaælland    — Møns Klint (120 m, Unesco 13.7.2025); Region Zealand
+   *   Syddanmark   — Billund, Denmark; Billund (Billundin kunta, Syddanmark)
+   */
+  DNK: {
+    Nordjylland: {
+      lyhyt: 'Skagenin Grenenillä voi seistä hiekkasärkän kärjessä, jossa Skagerrakin ja Kattegatin aallot törmäävät – uiminen siellä on kielletty.',
+    },
+    Midtjylland: {
+      lyhyt: 'Aarhusin ARoS-taidemuseon katolla kiertää sateenkaaren värinen lasikäytävä, josta kaupunki näkyy joka askeleella eri sävyssä.',
+    },
+    Hovedstaden: {
+      lyhyt: 'Kööpenhaminasta Malmöhön ajetaan ensin tunnelissa, noustaan Peberholmin tekosaarelle ja jatketaan lähes kahdeksan kilometrin siltaa.',
+    },
+    'Sjaælland': {
+      lyhyt: 'Mønin saaren liitukalliot putoavat paikoin 120 metriä suoraan mereen, ja vuonna 2025 Møns Klint pääsi Unescon maailmanperintölistalle.',
+    },
+    Syddanmark: {
+      lyhyt: 'Pienessä Billundissa on Legon pääkonttori ja maailman ensimmäinen Legoland, joka avasi porttinsa jo vuonna 1968.',
+    },
+  },
+  /*
+   * SVK (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SVK:n tunnuksia
+   * TÄSMÄLLEEN (myös "Prešov" ja "Trenciansky" ilman háčekia). Vain
+   * `lyhyt` tässä erässä. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Banskobystrický — Banská Štiavnica (kaldera, Unesco 1993)
+   *   Bratislavský    — Bratislava ("only national capital that borders
+   *                     two countries")
+   *   Košický         — Cathedral of St. Elizabeth (Košice)
+   *   Nitriansky      — Nitra Region (lämpimin alue; 2021 väestöstä
+   *                     160 584 / 677 900 unkarilaisia)
+   *   Prešov          — Gerlachovský štít (2 654 m); Prešov Region
+   *   Trenciansky     — Trenčín; Trenčín Castle (Laugaricio, 179 jKr.)
+   *   Trnavský        — Trnava ("Little Rome", Malý Rím)
+   *   Žilinský        — Orava Castle (Nosferatu 1922); Oravský Podzámok
+   *                     (Dolný Kubínin piiri, Žilinan alue)
+   */
+  SVK: {
+    'Banskobystrický': {
+      lyhyt: 'Banská Štiavnican kaivoskaupunki on rakennettu muinaisen, romahtaneen tulivuoren kalderan keskelle, ja se on Unescon maailmanperintöä.',
+    },
+    'Bratislavský': {
+      lyhyt: 'Bratislava on maailman ainoa pääkaupunki, joka rajautuu kahteen valtioon: Itävalta ja Unkari alkavat aivan kaupungin laidalta.',
+    },
+    'Košický': {
+      lyhyt: 'Košicen Pyhän Elisabetin katedraali on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista.',
+    },
+    Nitriansky: {
+      lyhyt: 'Nitran seutu on Slovakian lämpimin kolkka, jonka pelloilla kasvaa vehnää, ja lähes joka neljäs asukas on kansallisuudeltaan unkarilainen.',
+    },
+    'Prešov': {
+      lyhyt: 'Korkeiden Tatrain Gerlachovský štít kohoaa 2 654 metriin – se on koko Karpaattien korkein huippu, ja sen laki katoaa usein pilviin.',
+    },
+    Trenciansky: {
+      lyhyt: 'Trenčínin linnan alla kalliossa on roomalaisten sotilaiden vuonna 179 kaivertama kirjoitus, joka kutsuu paikkaa nimellä Laugaricio.',
+    },
+    'Trnavský': {
+      lyhyt: 'Trnavaa kutsutaan Pikku-Roomaksi, koska vanhankaupungin muurien sisälle on mahtunut niin monta kirkkoa.',
+    },
+    'Žilinský': {
+      lyhyt: 'Oravan linna kohoaa korkealla kalliolla joen yllä, ja moni vuoden 1922 kauhuklassikon Nosferatun kohtaus kuvattiin sen muureilla.',
+    },
+  },
 };
