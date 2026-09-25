@@ -5843,3 +5843,7 @@ Nimidatan virheet (SRB/BIH/HRV/MNE) chipeissä.
 ## KARTTASEPPA NOLLATTU → ALOITUSVIESTI LAHETETTY (karttaseppa-tyo-20260922, LUOVUTUS -d), RC TAKAISIN; TANAAN NOLLATTU 6 SESSIOTA (25.9.2026 klo 19.45)
 
 Nollaamatta: Julkaisija, Siirtoseppä, Laitetestaaja, Postivahti, Fable.
+
+## OSOITINVAIHTO PYSYY: #3235 RANSKAN NOSTOANKKURIT MAINISSA v2234 (ranskan-nostot-lukossa 27/27), laivamatka-tanger 14/14 PAIKALLISESTI TUOTANTOA VASTEN (PUNAINEN OLI KUORMAA), astro-pallo 43/47b VANHA; #3231 JA #3232 (LINSSISEPPA) MAINISSA; KUORMAPUNAISTEN UUSINTA MAINISSA AJO 36160332234 (25.9.2026 klo 19.49)
+
+Web: peruskartta 2026-09-25 tuotannossa ilman avoimia regressioita.
