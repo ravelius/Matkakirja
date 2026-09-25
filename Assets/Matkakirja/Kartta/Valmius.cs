@@ -394,6 +394,9 @@ namespace Matkakirja
                 if (kesken == 0 && valmiit == e.valmiit) continue;
                 sb.Append(' ').Append(p.Key).Append(" k").Append(kesken).Append(" v").Append(valmiit - e.valmiit)
                   .Append('/').Append(verkosta - e.verkosta);
+                // Laattapaketista tarjotut (kaikkiaan, ei välin erotus): p<n>.
+                int paketista = a.Length > 3 ? System.Threading.Volatile.Read(ref a[3]) : 0;
+                if (paketista > 0) sb.Append(" p").Append(paketista);
             }
             sb.Append(" | ").Append(Kamera(nyt));
             sb.Append(" | portti ").Append(PalloKierto.PorttiSumea ? 1 : 0).Append(PalloKierto.PorttiAikaSeis ? " seis" : "")

@@ -583,6 +583,9 @@ namespace Matkakirja.Editori
         static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
         {
             if (!File.Exists(PalloKohtaus)) LuoPallo();
+            // Laattapaketti (pallon kaukonäkymä, löydös 80): ladataan ämpäristä, jos puuttuu tai sarjat vaihtuivat;
+            // KopioiLaattapaketti vie sen Xcode-projektin Data/Raw/:iin. Ei gitissä (ei LFS:ää).
+            LaattapakettiRakennus.Varmista();
             var asetukset = new BuildPlayerOptions
             {
                 scenes = new[] { PalloKohtaus },
@@ -684,6 +687,17 @@ namespace Matkakirja.Editori
             string kansio = Path.Combine(polku, "Data", "Raw");
             Directory.CreateDirectory(kansio);
             File.WriteAllText(Path.Combine(kansio, "rakennus.txt"), PlayerSettings.iOS.buildNumber ?? "");
+        }
+
+        /// <summary>
+        /// Laattapaketti (LaattapakettiRakennus, Build/laattapaketti/laattapaketti.bin) Xcode-projektin StreamingAssetsiin
+        /// (Data/Raw/): Laattapalvelin tarjoaa pallon kaukonäkymän laatat siitä ennen levyä ja verkkoa.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(185)]
+        static void KopioiLaattapaketti(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            LaattapakettiRakennus.KopioiBuildiin(polku);
         }
 
         /// <summary>Laattapalvelin (127.0.0.1) vaatii ATS-poikkeuksen paikalliselle verkolle.</summary>

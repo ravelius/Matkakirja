@@ -629,7 +629,8 @@ namespace Matkakirja
                     break;
                 }
                 case "palvelin":
-                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
+                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
+                              $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
                     break;
                 case "valmius":

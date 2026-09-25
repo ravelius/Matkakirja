@@ -9,6 +9,7 @@
 # Rajakorkeussarja: VEKTORIT_KOE=<kansio> ./kaanna.sh Vektorisolut (esim. /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus)
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
 # Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
+# Oikea laattapaketti (tyokalut/laattapaketti.mjs): LAATTAPAKETTI=<paketti.bin> ./kaanna.sh Laattapaketti
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
@@ -26,6 +27,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
+../Assets/Matkakirja/Kartta/Laattapaketti.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs

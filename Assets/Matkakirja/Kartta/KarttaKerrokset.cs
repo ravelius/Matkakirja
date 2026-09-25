@@ -504,7 +504,8 @@ namespace Matkakirja
             Debug.Log("MATKAKIRJA lennon pinta: varakartta Z2 valmis (" + avain + ")");
             PaivitaLennonVarjostin();
         }
-        const string SatelliittiJuuri = "https://media.matkakirja.app/julisteet/pallo/satelliitti/";
+        /// <summary>Satelliittisarjojen juuri (Laattapalvelin: laattapaketin sarjojen tarkistus).</summary>
+        public const string SatelliittiJuuri = "https://media.matkakirja.app/julisteet/pallo/satelliitti/";
         static HashSet<long> sentinelZ8;
         bool sentinelHaettu;
 
@@ -1048,7 +1049,10 @@ namespace Matkakirja
         void Update()
         {
             // Aloitusnäyttö (portti) näkyy: aloituslennon lähtöpään laatat levylle matalalla prioriteetilla (BUILD 16).
-            if (!aloitusEsiladattu && PalloKierto.PorttiSumea && pallo != null && pohja != null)
+            // Vasta aloitusverhon lähdettyä (löydös 80, kylmä alku): verhon aikana esilataus ei saa edes jonottaa, vaan
+            // näkyvä pallo saa kaikki paikat ja säikeet. Laattapalvelimen kevennys tauottaa esiJonon verhon ajan, mutta
+            // Esilataa käynnistää silti satoja levyhakuja taustasäikeisiin, ja kevennyksen voi kytkeä pois (A/B-lippu).
+            if (!aloitusEsiladattu && PalloKierto.PorttiSumea && !Aloitusverho.Nakyvissa && pallo != null && pohja != null)
             {
                 aloitusEsiladattu = true;
                 EsilataaAloituslahto();
