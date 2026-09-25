@@ -9,13 +9,13 @@ using UnityEngine;
 namespace Matkakirja
 {
     /// <summary>
-    /// Pelinappula kartalla ja sen liike (Fablen tarkastus B16; web js/pallolauta/siirto.js
-    /// ja js/siirtokoreografia.js):
-    ///   AUTOKYYTI (liftaus, laiva, bussi): koko matka yhdellä käyrällä, joka kiihdyttää
-    ///   lähtiessä ja jarruttaa perillä (autokydinVaihe), ja jokaisella matkapisteellä vauhti
-    ///   notkahtaa osuuteen 0,4 (matkanVaihe) — nappula kulkee pisteiden läpi eikä hypi.
-    ///   LENTO: isoympyräkaari ylös ja alas samalla käyrällä.
-    /// Kamera seuraa nappulaa, kun seuraaKamera on päällä (Pelikoodari: Matkalla-tila).
+    /// Pelinappula kartalla ja sen liike (Fablen tarkastus B16; pariteettiraportti 25.9. A20, A21, B12–B16, B24;
+    /// web js/pallolauta/siirto.js, js/siirtokoreografia.js ja js/ui.js animatePawnSisalla):
+    ///   MAA JA MERI (Aja, luvut Siirtokoreografia.cs:ssä): ennakkozoomi, hengähdys, yksi saattava kamera-ajo
+    ///   kohti määränpäätä ja nappula 300 ms kameran perässä. Liftaus ja laiva hyppyketjuna (paraabelihyppy,
+    ///   tauko 190 ms), bussi autokyytinä (matkanVaihe: vauhti notkahtaa matkapisteissä osuuteen 0,4).
+    ///   LENTO: isoympyräkaari ylös ja alas, valitun lennon kaari katkoviivana.
+    /// Kamera-ajot tehdään, kun seuraaKamera on päällä; kamera ei ole lukittu nappulaan.
     /// Hahmo on webin pawnShape (sotilasnappula) koodista piirrettynä, jalka pisteessä.
     /// </summary>
     // LennonVaihe (Ei, Nousu, Matka, Lasku) on LennonAikajana.cs:ssä (puhdas, Kartta-testit).
@@ -168,27 +168,211 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Autokyyti matkapisteiden läpi (ensimmäinen = lähtö). valmis kutsutaan perillä;
-        /// uusi Aja/Lenna/Aseta keskeyttää ilman valmis-kutsua.
+        /// Maa- ja merimatka (liftaus, bussi, laiva) webin koreografialla (pariteetti A20, A21, B12–B16).
+        /// Pisteet: ensimmäinen = lähtö, loput = askelpisteet (PeliApu.Matkapisteet). Tapa: Maa = liftaus,
+        /// Bussi, Meri = laiva (muut kuten liftaus). Askelia: nopan/polun askelmäärä (web path.length), 0 = pisteitä − 1.
         /// </summary>
-        public void Aja(IList<(double lat, double lon)> matkapisteet, float kestoS, Action valmis)
+        public struct Matkaliike
         {
-            if (matkapisteet == null || matkapisteet.Count == 0) { valmis?.Invoke(); return; }
+            public IList<(double lat, double lon)> Pisteet;
+            public global::Matkakirja.Peli.Kulkutapa Tapa;
+            public int Askelia;
+        }
+
+        /// <summary>
+        /// SIIRTO WEBIN KOREOGRAFIALLA (Siirtokoreografia.cs; web ui.js animatePawnSisalla):
+        ///   1. ennakkozoomi (kamera lähtöpisteen ja 2. askeleen puoliväliin askelmittakaavaan, laivalla koko matka
+        ///      laatikkona) 760–1800 ms + hengähdys 120 ms;
+        ///   2. YKSI saattava kamera-ajo kohti määränpäätä, kesto clamp(300 + nappula + 280, 1200, 6200) ms,
+        ///      trapetsipehmennys ramppi 0,3 (ei tehdä, jos matka ruudulla &lt; max(24 pt, 6 % leveydestä));
+        ///   3. nappula lähtee 300 ms saaton alun jälkeen: liftaus hyppyketjuna (860/708/640 ms, tauko 190 ms, huippu
+        ///      0,34 × hypyn pituus ruudulla 9–30 pt), bussi autokyytinä (n × round(askel × 0,6)), laiva hyppyketjuna
+        ///      (190 + 190 ms).
+        /// valmis kutsutaan perillä: kun nappula on laskeutunut ja saatto päättynyt (nappula on perillä 280 ms ennen
+        /// kameraa). Palauttaa koko liikkeen keston sekunteina (= <see cref="MatkanKesto"/>): Pelikoodari antaa sen
+        /// NappulaAjon varakellolle. Sormi keskeyttää kamera-ajot (ele voittaa), nappula jatkaa silti.
+        /// Uusi Aja/Lenna/Aseta keskeyttää ilman valmis-kutsua. Ilman kameraa (seuraaKamera false) vain nappula liikkuu.
+        /// </summary>
+        public float Aja(Matkaliike liike, Action valmis) =>
+            AloitaSiirto(liike.Pisteet, Tavaksi(liike.Tapa), liike.Askelia, 0f, valmis);
+
+        /// <summary>
+        /// Liikkeen kesto sekunteina (ennakkozoomi + hengähdys + saatto, tai nappulan matka) nykyisestä kamerasta,
+        /// käynnistämättä mitään. Laske juuri ennen Ajaa (ennakkozoomin kesto riippuu kameran paikasta).
+        /// </summary>
+        public float MatkanKesto(Matkaliike liike)
+        {
+            if (liike.Pisteet == null || liike.Pisteet.Count < 2) return 0f;
+            var pisteet = new List<(double lat, double lon)>(liike.Pisteet);
+            return (float)(Suunnittele(pisteet, Tavaksi(liike.Tapa), liike.Askelia, 0f, out _, out _).KokonaisMs / 1000.0);
+        }
+
+        /// <summary>
+        /// VANHA RAJAPINTA (Pelikoodarin PeliOhjain kutsuu tätä, kunnes siirtyy <see cref="Aja(Matkaliike, Action)"/>:iin):
+        /// sama koreografia oletuskulkutavalla (liftaus, askelia = pisteitä − 1), mutta koko aikataulu kutistetaan
+        /// mahtumaan <paramref name="kestoS"/>:iin, jottei PeliOhjaimen varakello (kesto + 0,75 s) laukea kesken matkan.
+        /// </summary>
+        public void Aja(IList<(double lat, double lon)> matkapisteet, float kestoS, Action valmis) =>
+            AloitaSiirto(matkapisteet, Siirtokoreografia.Tapa.Liftaus, 0, math.max(0.05f, kestoS), valmis);
+
+        static Siirtokoreografia.Tapa Tavaksi(global::Matkakirja.Peli.Kulkutapa k) => k switch
+        {
+            global::Matkakirja.Peli.Kulkutapa.Bussi => Siirtokoreografia.Tapa.Bussi,
+            global::Matkakirja.Peli.Kulkutapa.Meri => Siirtokoreografia.Tapa.Laiva,
+            _ => Siirtokoreografia.Tapa.Liftaus,
+        };
+
+        float AloitaSiirto(IList<(double lat, double lon)> matkapisteet, Siirtokoreografia.Tapa tapa, int askelia, float mahduS, Action valmis)
+        {
+            if (matkapisteet == null || matkapisteet.Count == 0) { valmis?.Invoke(); return 0f; }
             Pysayta();
             Tee();
             olio.SetActive(true);
             var pisteet = new List<(double lat, double lon)>(matkapisteet);
-            if (pisteet.Count == 1) { Siirra(pisteet[0].lat, pisteet[0].lon, 0); valmis?.Invoke(); return; }
-            liike = StartCoroutine(Kulje(kestoS, valmis, t =>
+            if (pisteet.Count == 1) { Siirra(pisteet[0].lat, pisteet[0].lon, 0); valmis?.Invoke(); return 0f; }
+            Siirra(pisteet[0].lat, pisteet[0].lon, 0);
+            var a = Suunnittele(pisteet, tapa, askelia, mahduS, out var ennakko, out bool kamera);
+            Debug.Log($"MATKAKIRJA siirto: {tapa} {a.Askelia} askelta, ennakko {a.EnnakkoMs:0} ms → leveys {ennakko.Leveys:0} yks, " +
+                      $"saatto {a.SaattoMs:0} ms, nappula {a.NappulaMs:0} ms (askel {a.AskelMs:0}, tauko {a.TaukoMs:0}), " +
+                      $"yhteensä {a.KokonaisMs:0} ms" + (mahduS > 0 ? $" (vanha Aja, mahdutettu {mahduS:0.00} s:iin)" : ""));
+            liike = StartCoroutine(Siirto(pisteet, a, ennakko, kamera, valmis));
+            return (float)(a.KokonaisMs / 1000.0);
+        }
+
+        /// <summary>Ruudun mitat pisteinä, kuvakulma, kuvasuhde ja kameran nykyinen näkyvä leveys lautayksikköinä.</summary>
+        bool Mitat(out double leveysPt, out double korkeusPt, out double fov, out double kuvasuhde)
+        {
+            leveysPt = korkeusPt = fov = kuvasuhde = 0;
+            var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (kam == null || kam.pixelWidth <= 0 || kam.pixelHeight <= 0) return false;
+            double kerroin = PalloKierto.Pistekerroin;
+            leveysPt = kam.pixelWidth / kerroin;
+            korkeusPt = kam.pixelHeight / kerroin;
+            fov = kam.fieldOfView;
+            kuvasuhde = kam.aspect;
+            return true;
+        }
+
+        double LeveysKorkeudesta(double korkeusM)
+        {
+            Mitat(out _, out _, out double fov, out double kuvasuhde);
+            return Siirtokoreografia.LeveysKorkeudesta(korkeusM, fov, kuvasuhde, CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
+
+        double KorkeusLeveydesta(double leveysYks)
+        {
+            Mitat(out _, out _, out double fov, out double kuvasuhde);
+            return Siirtokoreografia.KorkeusLeveydesta(leveysYks, fov, kuvasuhde, CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
+
+        double KameranKorkeus => kierto.korkeus > 0 ? kierto.korkeus : kierto.MaxKorkeus();
+
+        Siirtokoreografia.Aikataulu Suunnittele(List<(double lat, double lon)> pisteet, Siirtokoreografia.Tapa tapa, int askelia,
+            float mahduS, out Siirtokoreografia.Ennakko ennakko, out bool kamera)
+        {
+            int valeja = pisteet.Count - 1;
+            int n = askelia > 0 ? askelia : valeja;
+            ennakko = default;
+            kamera = seuraaKamera && kierto != null && Mitat(out double lPt, out double kPt, out _, out _);
+            if (kamera)
             {
-                double p = MatkanVaihe(t, pisteet.Count - 1);
-                double raaka = p * (pisteet.Count - 1);
-                int i = math.min(pisteet.Count - 2, (int)math.floor(raaka));
-                var a = pisteet[i];
-                var b = pisteet[i + 1];
-                var q = ReittiGeometria.Isoympyra(a.lat, a.lon, b.lat, b.lon, raaka - i);
-                return (q.x, q.y, 0.0);
-            }));
+                Mitat(out lPt, out kPt, out _, out _);
+                ennakko = Siirtokoreografia.Ennakkozoomi(pisteet, tapa, kierto.leveys, kierto.pituus,
+                    LeveysKorkeudesta(KameranKorkeus), lPt, kPt, LeveysKorkeudesta(kierto.MinKorkeus()));
+            }
+            var a = Siirtokoreografia.Laske(tapa, n, ennakko.KestoMs, kamera);
+            // Hyppyjen määrä tulee pisteistä (normaalisti sama kuin askelia).
+            a.NappulaMs = Siirtokoreografia.HyppyketjunMs(a, valeja);
+            if (mahduS > 0 && a.KokonaisMs > mahduS * 1000.0) a = a.Skaalattu(mahduS * 1000.0 / a.KokonaisMs);
+            return a;
+        }
+
+        static readonly Func<double, double> SaatonPehmennys = t => Siirtokoreografia.SiirtoajonPehmennys(t);
+
+        /// <summary>
+        /// Nappula osui maahan (pariteetti B21, äänet Pelikoodarilta): askel 1…n ja onko se viimeinen. Hyppyketjussa
+        /// (liftaus, laiva) jokainen välihyppy (web 'step') ja viimeinen (web 'arrive'); bussilla vain viimeinen.
+        /// </summary>
+        public event Action<int, bool> Laskeutui;
+
+        IEnumerator Siirto(List<(double lat, double lon)> pisteet, Siirtokoreografia.Aikataulu a, Siirtokoreografia.Ennakko ennakko,
+            bool kamera, Action valmis)
+        {
+            kesken = valmis;
+            float alku = Time.unscaledTime;
+            double Ms() => (Time.unscaledTime - alku) * 1000.0;
+            int valeja = pisteet.Count - 1;
+            var lahto = pisteet[0];
+            var maali = pisteet[valeja];
+
+            // 1. ENNAKKOZOOMI (ui.js:23259): nappula seisoo lähtöpisteessä, kamera ajaa lähemmäs.
+            if (kamera && a.EnnakkoMs > 0)
+                kierto.Aja(ennakko.Lat, ennakko.Lon, KorkeusLeveydesta(ennakko.Leveys), (float)(a.EnnakkoMs / 1000.0), null, SaatonPehmennys);
+            while (Ms() < a.SaattoAlkaaMs) yield return null;
+
+            // 2. SAATTO (ui.js:23312): yksi ajo kohti määränpäätä nykyisestä näkymästä (sormi on voinut siirtää sitä).
+            if (kamera && a.SaattoMs > 0 && Mitat(out double lPt, out _, out _, out _))
+            {
+                var s = Siirtokoreografia.Saattoajo(lahto, maali, ennakko, kierto.leveys, kierto.pituus, LeveysKorkeudesta(KameranKorkeus), lPt);
+                if (s.Ajetaan)
+                    kierto.Aja(s.Lat, s.Lon, double.IsNaN(s.Leveys) ? 0 : KorkeusLeveydesta(s.Leveys), (float)(a.SaattoMs / 1000.0), null, SaatonPehmennys);
+                else
+                    Debug.Log($"MATKAKIRJA siirto: saatto jää ajamatta, matka ruudulla {s.MatkaPt:0.0} pt ≤ {s.KynnysPt:0.0} pt");
+            }
+
+            // 3. NAPPULA lähtee viiveellä (ui.js:23345) ja hyppii tai ajaa perille.
+            bool hyppii = Siirtokoreografia.Hyppii(a.Tapa);
+            int hyppy = -1;
+            double huippu = Siirtokoreografia.HypynKorkeusMin;
+            while (true)
+            {
+                double m = Ms() - a.NappulaLahteeMs;
+                if (m >= 0)
+                {
+                    var (i, e, nousu) = Siirtokoreografia.NappulanVaihe(a, valeja, m);
+                    // Välihyppyjen laskeutumiset (web ui.js:23419 'step'): kaikki ohitetut, jos kehys hyppäsi yli.
+                    if (hyppii) for (int j = math.max(hyppy, 0); j < i && hyppy >= 0; j++) Laskeutui?.Invoke(j + 1, false);
+                    if (hyppii && i != hyppy)
+                    {
+                        // Huippu hypyn pituudesta ruudulla hypyn alkaessa (web siirto.js:572 hypynHuippu(matka)).
+                        hyppy = i;
+                        huippu = Siirtokoreografia.HypynHuippu(RuutuMatkaPt(pisteet[i], pisteet[i + 1]));
+                    }
+                    var q = ReittiGeometria.Isoympyra(pisteet[i].lat, pisteet[i].lon, pisteet[i + 1].lat, pisteet[i + 1].lon, e);
+                    Siirra(q.x, q.y, 0);
+                    Nosta(huippu * nousu);
+                    if (m >= a.NappulaMs) break;
+                }
+                yield return null;
+            }
+            Nosta(0);
+            Siirra(maali.lat, maali.lon, 0);
+            // Viimeinen laskeutuminen (web 'arrive', ui.js:23387 bussi ja :23419 hyppyketju).
+            Laskeutui?.Invoke(math.max(1, valeja), true);
+            // Saatto jatkuu vielä 280 ms nappulan laskeuduttua ja pysähtyy pehmeästi: valmis vasta sen jälkeen, jottei
+            // Pelikoodarin saapumisajo katkaise liikkuvaa kameraa (KAMERA-AJOT: ei hyppyjä).
+            while (Ms() < a.KokonaisMs) yield return null;
+            liike = null;
+            kesken = null;
+            valmis?.Invoke();
+        }
+
+        /// <summary>Kahden maan pisteen etäisyys ruudulla pisteinä (nappulan korkeudella); 0, jos jompikumpi ei näy.</summary>
+        double RuutuMatkaPt((double lat, double lon) a, (double lat, double lon) b)
+        {
+            if (kierto == null) return 0;
+            if (!kierto.RuutuPiste(a.lat, a.lon, out var ra, Pohja) || !kierto.RuutuPiste(b.lat, b.lon, out var rb, Pohja)) return 0;
+            return Vector2.Distance(ra, rb) / PalloKierto.Pistekerroin;
+        }
+
+        /// <summary>
+        /// Hypyn kaari: nappulan kuva nousee ruudulla <paramref name="nostoPt"/> pistettä (web siirto.js piirraNappula:
+        /// hahmo translate(0, −korkeus)). Varjostimen ankkuri _Keskitys on nappulan korkeuksina, joten −nosto / koko.
+        /// </summary>
+        void Nosta(double nostoPt)
+        {
+            if (oma == null || kone) return;
+            oma.SetFloat("_Keskitys", -(float)(nostoPt / math.max(1f, koko)));
         }
 
         /// <summary>
@@ -202,7 +386,7 @@ namespace Matkakirja
             Tee();
             Kone(true);
             Siirra(lat0, lon0, 0);
-            liike = StartCoroutine(Lento(lat0, lon0, lat1, lon1, math.max(0.5f, kestoS), 0f, null, valmis));
+            liike = StartCoroutine(Lento(lat0, lon0, lat1, lon1, math.max(0.5f, kestoS), 0f, null, valmis, naytaLentokaari));
         }
 
         /// <summary>
@@ -226,7 +410,7 @@ namespace Matkakirja
             // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
             if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
-            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis));
+            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis, false));
         }
 
         /// <summary>Lennon vaihe (LENNON ESITYS): Pelikoodari ajoittaa äänet ja luennan, UI tekstit.</summary>
@@ -240,7 +424,7 @@ namespace Matkakirja
             VaiheVaihtui?.Invoke(v);
         }
 
-        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis)
+        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis, bool kaari)
         {
             kesken = valmis;
             // Lähtözoomin korkeus (Lontoo ennen koneen lähtöä).
@@ -317,6 +501,10 @@ namespace Matkakirja
             var kerrokset = KarttaKerrokset.Instanssi;
             reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
             kerrokset?.Nakyvyys("reitit", false);
+            // VALITUN LENNON KAARI (pariteetti B24, web ui.js:20691 ja 11424 lentoKaari, nollaus perillä 20755/11433):
+            // liikkuva katkoviiva lähdöstä laskeutumiseen koneen omaa reittiä pitkin. Ei aloituslennolla (webissä sillä
+            // ei ole lentoKaarta). Lähikuvissa kaari häivytetään (yllä oleva omistajan havainto: juova kameraa kohti).
+            if (kaari) TeeLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
             lentoMerkit = merkit;
             lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
             // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
@@ -416,6 +604,7 @@ namespace Matkakirja
                     else pilvet.Korkeus(math.max(2000.0, (lentoPohja + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
+                if (lentokaari != null) PaivitaLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
                 // LENNON PINTA: vaihto usvan peitossa, usva hälvenee irtautumisessa; laskussa usva kohteen ylle,
                 // pergamentti palaa sen alla ja usva hälvenee perillä (jatkuu Paatalennon jälkeen).
                 // Vasta lähikuvassa (t ≥ 0,08), kun usva täyttää kuvan: Lontoon zoomissa kamera on niin korkealla, että
@@ -480,8 +669,68 @@ namespace Matkakirja
         string[] lentoIdt;
         bool reititEnnen = true;
 
+        // Oletus pois (Fable 25.9. klo 05.3x, B25: LENNON ESITYS kaikille lennoille, hyväksytty poikkeama webistä;
+        // savujana korvaa punaisen viivan, kaari näkyy ennen lähtöä listassa). Kytkin kokeiluun.
+        [Tooltip("Valitun lennon kaari liikkuvana katkoviivana lennon ajan (pariteetti B24); ei aloituslennolla.")]
+        public bool naytaLentokaari = false;
+        [Tooltip("Kaari häipyy, kun kone täyttää tätä suuremman osan ruudun leveydestä (lähikuvat).")]
+        public float lentokaarenLahikuva = 0.08f;
+
+        GameObject lentokaari;
+        Material lentokaarenMateriaali;
+        double lentokaarenPohja;
+        float lentokaarenAlfa = -1f;
+
+        /// <summary>
+        /// Koneen reitti viivaksi: aikajanan näytteet t = 0…1, koneen osuus KoneenOsuus(t) ja korkeus
+        /// lentoPohja + max(huippu · sin πp, KoneenMinimi(t)), eli täsmälleen koneen kulkema kaari.
+        /// </summary>
+        void TeeLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
+        {
+            PoistaLentokaari();
+            var reitit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.reitit : null;
+            if (reitit == null || reitit.korostus == null) return;
+            if (lentokaarenMateriaali == null) lentokaarenMateriaali = new Material(reitit.korostus) { name = "Valitun lennon kaari" };
+            const int N = 256;
+            var pisteet = new List<double3>(N + 1);
+            double pohja = double.IsNaN(lentoPohja) ? Pohja : lentoPohja;
+            for (int i = 0; i <= N; i++)
+            {
+                double t = (double)i / N;
+                double p = LennonAikajana.KoneenOsuus(t, jako);
+                var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
+                pisteet.Add(new double3(q.x, q.y, pohja + math.max(huippu * math.sin(math.PI * p), LennonAikajana.KoneenMinimi(t, jako))));
+            }
+            lentokaari = reitit.PiirraKaari("valittu-lento", pisteet, lentokaarenMateriaali);
+            lentokaarenPohja = pohja;
+            lentokaarenAlfa = -1f;
+        }
+
+        /// <summary>Kaari lennon pohjan mukana (maastokysely voi nostaa pohjaa) ja häivytys lähikuvissa.</summary>
+        void PaivitaLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
+        {
+            if (!double.IsNaN(lentoPohja) && math.abs(lentoPohja - lentokaarenPohja) > 300.0)
+                TeeLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
+            if (lentokaari == null || lentokaarenMateriaali == null) return;
+            float alfa = 1f - Mathf.SmoothStep(0f, 1f, koneRuudusta / Mathf.Max(0.001f, lentokaarenLahikuva));
+            if (Mathf.Abs(alfa - lentokaarenAlfa) < 0.004f) return;
+            lentokaarenAlfa = alfa;
+            var c = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.reitit != null
+                ? KarttaKerrokset.Instanssi.reitit.korostus.GetColor("_BaseColor") : Color.white;
+            lentokaarenMateriaali.SetColor("_BaseColor", new Color(c.r, c.g, c.b, c.a * alfa));
+            lentokaarenMateriaali.SetFloat("_Kerroin", PalloKierto.Pistekerroin);
+            lentokaari.SetActive(alfa > 0.004f);
+        }
+
+        void PoistaLentokaari()
+        {
+            if (lentokaari != null) Destroy(lentokaari);
+            lentokaari = null;
+        }
+
         void Paatalento()
         {
+            PoistaLentokaari();
             var kerrokset = KarttaKerrokset.Instanssi;
             if (kerrokset != null)
             {
@@ -627,7 +876,7 @@ namespace Matkakirja
             olio.SetActive(true);
         }
 
-        // ---- Käyrät (web js/siirtokoreografia.js) ----
+        // ---- Käyrät (vanha autokyyti smootherstepillä; siirto käyttää nyt Siirtokoreografia.MatkanVaihe) ----
 
         public static double AutokyydinVaihe(double t)
         {
@@ -649,32 +898,14 @@ namespace Matkakirja
 
         // ---- Toteutus ----
 
-        IEnumerator Kulje(float kestoS, Action valmis, Func<double, (double lat, double lon, double h)> paikka)
-        {
-            kesken = valmis;
-            float alku = Time.unscaledTime;
-            float kesto = math.max(0.05f, kestoS);
-            while (true)
-            {
-                double t = math.saturate((Time.unscaledTime - alku) / kesto);
-                var (lat, lon, h) = paikka(t);
-                Siirra(lat, lon, h);
-                if (seuraaKamera && kierto != null) kierto.Seuraa(lat, lon);
-                if (t >= 1) break;
-                yield return null;
-            }
-            liike = null;
-            kesken = null;
-            if (kierto != null) kierto.SeurantaLoppui();
-            valmis?.Invoke();
-        }
-
         void Pysayta()
         {
             lentoPohja = double.NaN;
             if (liike != null) StopCoroutine(liike);
             liike = null;
             kesken = null;
+            Nosta(0);
+            PoistaLentokaari();
             if (Vaihe != LennonVaihe.Ei) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
