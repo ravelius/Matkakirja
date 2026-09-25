@@ -470,8 +470,7 @@
 
 .mk-kuvakortti {
     position: absolute;
-    width: 78%;
-    max-width: 420px;
+    width: 78%; /* koodi asettaa webin mitan (Luentakuvasarja.Leveys, löydös 90) */
     padding: 7px 7px 0 7px;
     background-color: #f7f1e2;
     border-width: 1px;
