@@ -126564,6 +126564,275 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Daniel K. Inouye International Airport, Skyline
+       * (Honolulu), Hawaiian Airlines, Hawaii Superferry, 2023 Hawaii
+       * wildfires, Lahaina, Haleakalā National Park, Hāʻena State Park,
+       * Plate lunch, Poke, Loco moco, Spam musubi, Shave ice, Hawaiian
+       * language, ʻOkina, Lei, Merrie Monarch Festival, Kīlauea, Mauna
+       * Kea, Hanauma Bay, Sunscreen, Hawaiian monk seal, Green sea turtle)
+       * ja Wikivoyagesta (Hawaii, Maui, Kauai, Haleakala National Park,
+       * Hawaii Volcanoes National Park) — teksti omaa.
+       * Nostojen ja ennen-nyt-kuvien aiheita (Cook, Kamehameha I,
+       * Lunalilo, sokeriplantaasit, kuningaskunnan kaataminen ja
+       * liittäminen, alaia-surffaus, Leilani Estatesin laava, Mauna Loa,
+       * kuuma piste, Kilauean purkaukset, Pele, Mark Twain, Diamond Head)
+       * ei toisteta. Hinnat ja aukioloajat on jätetty pois, koska ne
+       * muuttuvat nopeasti. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kalalau-polku Kauailla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kalalau Trail 2004-08-22.JPG',
+          lyhyt: 'Kalalau-polku kiemurtelee Kauain Nā Pali -rannikon jyrkänteillä meren yllä.',
+          selite: 'Kalalau-polun alkupään kapea, punamultainen polku '
+            + 'kulkee hala-puiden ja heinikon läpi Kauain pohjoisrannikolla, '
+            + 'ja taustalla Nā Pali -rannikon vihreät jyrkänteet laskeutuvat '
+            + 'suoraan mereen.',
+          lahde: 'Matt Wright, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Havaiji on Yhdysvaltain 50. osavaltio keskellä '
+          + 'Tyyntämerta. Useimmat matkailijat lentävät ensin Honoluluun ja '
+          + 'jatkavat sieltä pienemmillä koneilla naapurisaarille. Kuudella '
+          + 'matkailijoille avoimella saarella on kullakin oma luonteensa: '
+          + 'Oahulla on kaupunki ja Waikikin ranta, Mauilla Haleakalān huippu, '
+          + 'Kauailla jyrkät rannikot ja Isolla saarella toimivat tulivuoret. '
+          + 'Paikallinen ruoka yhdistää havaijilaista, aasialaista, '
+          + 'portugalilaista ja amerikkalaista keittiötä. Lämmintä on ympäri '
+          + 'vuoden, mutta tuulen puoleisilla pohjois- ja itärannikoilla '
+          + 'sataa selvästi enemmän kuin suojan puolella, ja korkeimmilla '
+          + 'huipuilla voi olla pakkasta. Paikalliset arvostavat vierailijaa, '
+          + 'joka kunnioittaa havaijilaista kulttuuria ja luontoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Hawaii',
+          teksti: 'Havaijin kuusi matkailijoille avointa saarta kuuluvat '
+            + 'samaan osavaltioon, mutta jokaisella on oma luonteensa.',
+          nosto: 'Saarten välillä ei ole kulkenut autolauttaa vuoden 2009 '
+            + 'jälkeen, joten saarelta toiselle lennetään.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen perille ja saarelta toiselle',
+              teksti: 'Useimmat lennot Yhdysvaltain mantereelta ja lähes '
+                + 'kaikki kansainväliset lennot laskeutuvat Honoluluun Daniel '
+                + 'K. Inouyen lentoasemalle, joka sai nimensä 2017 Honolulussa '
+                + 'syntyneen pitkäaikaisen senaattorin mukaan. Suoria lentoja '
+                + 'mantereelta on myös Mauin Kahuluihin, Ison saaren Konaan ja '
+                + 'Hiloon sekä Kauain Lihueen, ja Los Angelesista tai San '
+                + 'Franciscosta lento kestää noin viisi tuntia. Saarten välillä '
+                + 'liikutaan käytännössä lentäen, ja lennot kestävät 20 '
+                + 'minuutista tuntiin. Autolautta Hawaii Superferry lopetti jo '
+                + '2009, kun Havaijin korkein oikeus totesi sen toimintaluvan '
+                + 'perustuslain vastaiseksi puuttuvan ympäristöarvioinnin '
+                + 'vuoksi. Suurin saarten välinen lentoyhtiö Hawaiian Airlines '
+                + 'kuuluu nykyään Alaska Airlinesin emoyhtiöön, mutta nimi on '
+                + 'säilynyt Havaijin-lennoilla. Kun saapuu yhdelle saarelle ja '
+                + 'lähtee kotiin toiselta, säästää yhden saarten välisen '
+                + 'paluulennon. Lokakuusta 2025 lähtien kuljettajaton '
+                + 'Skyline-metro on pysähtynyt lentoasemalla, mutta keskustaan '
+                + 'rata on määrä jatkaa vasta noin 2031, eikä se ulotu '
+                + 'Waikikiin. Lentoasemalta Waikikiin pääsee TheBusin W-linjalla. '
+                + 'Naapurisaarilla bussiyhteydet ovat vähäisiä, joten auto '
+                + 'kannattaa vuokrata ajoissa. Maatalouskaranteeni koskee '
+                + 'matkailijaa molempiin suuntiin: saapuessa täytetään '
+                + 'ilmoitus kasveista ja eläimistä, ja mantereelle lähtiessä '
+                + 'kaikki matkatavarat tarkastetaan. Tuoreita hedelmiä ei saa '
+                + 'viedä, lukuun ottamatta ananasta ja käsiteltyä papaijaa. '
+                + 'Havaijilla ei siirrytä kesäaikaan, joten aikaero mantereelle '
+                + 'vaihtelee vuodenajan mukaan.',
+              kuva: [
+                {
+                  tiedosto: 'Skyline Lelepaua Station with eastbound train 2025-11-24.jpg',
+                  lyhyt: 'Kuljettajaton Skyline-juna Honolulun lentoaseman Lelepaua-asemalla 2025.',
+                  selite: 'Valkoinen, sateenkaariraidallinen Skyline-juna '
+                    + 'seisoo korotetulla laiturilla lentoaseman asemalla; kuva '
+                    + 'on otettu marraskuussa 2025 kansainvälisen '
+                    + 'pysäköintitalon kuudennesta kerroksesta.',
+                  lahde: 'Musashi1600, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Hawaiian Airlines Boeing 717 at Hilo International Airport.jpg',
+                  lyhyt: 'Hawaiian Airlinesin saarten välinen Boeing 717 Hilon lentoasemalla Isolla saarella.',
+                  selite: 'Hawaiian Airlinesin Boeing 717 odottaa '
+                    + 'matkustajasillan vieressä Hilon lentoasemalla elokuussa '
+                    + '2013. Peräsimessä on yhtiön tunnus Pualani, "taivaan '
+                    + 'kukka"; yhtiö on lentänyt tällä konetyypillä saarten '
+                    + 'välisiä lentoja vuodesta 2001.',
+                  lahde: 'Macpro3000, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kahului Airport Terminal Entrance 2021.jpg',
+                  lyhyt: 'Mauin Kahuluin lentoasema on osavaltion toiseksi suurin kaupallinen lentokenttä.',
+                  selite: 'Matkustajia matkalaukkuineen ja autoja Kahuluin '
+                    + 'lentoaseman terminaalin edessä heinäkuussa 2021. '
+                    + 'Kentälle lennetään suoraan useista Yhdysvaltain '
+                    + 'mantereen ja Kanadan kaupungeista.',
+                  lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kuusi saarta, kuusi luonnetta',
+              teksti: 'Havaijin kahdeksasta pääsaaresta kuusi on avoinna '
+                + 'matkailijoille. Oahu on väkirikkain: siellä ovat Honolulu ja '
+                + 'Waikikin ranta, ja sademetsäpolut alkavat vain minuuttien '
+                + 'päässä hotelleista. Talvella saaren pohjoisrannikolle '
+                + 'vyöryvät jättiaallot tekevät muuten uneliaasta seudusta '
+                + 'surffauksen maailmankeskuksen. Mauilla ajetaan Hanan tietä, '
+                + 'joka on vain noin 90 kilometriä pitkä mutta niin mutkainen '
+                + 'ja paikoin yksikaistainen, että matka voi kestää kolme '
+                + 'tuntia suuntaansa. Haleakalān yli 3 000 metrin huipulle '
+                + 'nousee auringonnousua katsomaan niin paljon väkeä, että '
+                + 'aamun käyntiin tarvitaan ennakkovaraus, ja huipulla voi olla '
+                + 'lähes pakkasta. Mauin länsirannikon Lahaina paloi elokuussa '
+                + '2023: maastopalossa kuoli ainakin 102 ihmistä ja yli 2 200 '
+                + 'rakennusta tuhoutui. Jälleenrakennus kestää vuosia, eikä '
+                + 'suljetuille palaneille alueille ole asiaa, mutta muualle '
+                + 'saarelle matkailijat ovat tervetulleita. Kauai on pääsaarista '
+                + 'vanhin ja eroosion eniten muovaama. Nā Pali -rannikon ja '
+                + 'noin kilometrin syvyisen Waimean kanjonin vuoksi mikään tie '
+                + 'ei kierrä saarta. Pohjoisrannikon tien päässä Hāʻenan '
+                + 'osavaltiopuistoon tarvitaan ennakkovaraus, ja sieltä alkaa '
+                + '18 kilometrin Kalalau-polku, jonka pidempi osuus vaatii '
+                + 'yöpymisluvan. Molokailla ja Lanailla ei ole säännöllisiä '
+                + 'bussivuoroja. Sadekausi on suunnilleen loka–maaliskuussa ja '
+                + 'hurrikaanikausi kesä–marraskuussa. Wikivoyagen mukaan sää on '
+                + 'miellyttävimmillään huhti–toukokuussa ja syys–lokakuussa, '
+                + 'jolloin matkat ovat usein myös edullisempia kuin joulun '
+                + 'sesonkina.',
+              kuva: {
+                tiedosto: 'Haleakala sunrise.jpg',
+                lyhyt: 'Aurinko nousee pilvimeren yltä Haleakalān huipulla Mauilla.',
+                selite: 'Kansallispuistopalvelun kuvassa aurinko nousee '
+                  + 'raidallisten pilvien takaa, ja sen alla lepää tumma '
+                  + 'pilvimeri, josta vain vuoren reunan siluetti kohoaa esiin.',
+                lahde: 'National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Plate lunch, poke ja shave ice',
+              teksti: 'Havaijin arkiruoka syntyi plantaaseilla, joille '
+                + 'tuotiin työläisiä muun muassa Kiinasta, Japanista, '
+                + 'Portugalista ja Filippiineiltä. Heidän eväistään kehittyi '
+                + 'plate lunch: kaksi kauhallista valkoista riisiä, '
+                + 'makaronisalaattia ja pääruoka, esimerkiksi teriyakilihaa, '
+                + 'kanakatsua tai korealaista kalbia. Sitä myyvät ketjut, '
+                + 'ostoskeskusten ruokapaikat ja parkkipaikoille pysäköidyt '
+                + 'lounasautot, joita paikalliset suosivat. Hilossa keksittiin '
+                + '1949 loco moco, jossa riisin päällä on jauhelihapihvi, '
+                + 'paistettu kananmuna ja ruskea kastike. Poke tarkoittaa '
+                + 'havaijiksi paloittelua: kuutioitu raaka kala, usein '
+                + 'keltaevätonnikala ʻahi, maustetaan nykyään tavallisesti '
+                + 'soijakastikkeella ja seesamiöljyllä, sipulilla ja '
+                + 'merilevällä. Spam musubi, säilykelihaviipale riisipalan '
+                + 'päällä merilevään käärittynä, odottaa lähikauppojen '
+                + 'kassoilla. Portugalilaiset malasada-munkit ja kiinalaista '
+                + 'perua olevat suolatut ja kuivatut hedelmät, kuten li hing '
+                + 'mui -luumut, ovat tyypillisiä välipaloja. Helteellä syödään '
+                + 'shave icea, japanilaisesta kakigōrista periytyvää hienoksi '
+                + 'höylättyä jäätä, joka imee itseensä guava-, passionhedelmä- '
+                + 'tai kookossiirapin; päälle voi pyytää azukipapuja tai '
+                + 'jäätelöä. Perinteisiä havaijilaisia ruokia tarjoillaan '
+                + 'lūʻau-juhlissa, joita järjestävät monet lomakeskukset: '
+                + 'maakuopassa haudutettua kālua-possua, taaron juuresta '
+                + 'survottua poita, taaron lehtiin käärittyä laulauta ja '
+                + 'kookoshyytelö haupiaa. Hinnat ovat saarilla yleensä '
+                + 'korkeammat kuin mantereella, koska lähes kaikki tuodaan '
+                + 'laivalla.',
+              kuva: {
+                tiedosto: 'Wardsplatelunch.jpg',
+                lyhyt: 'Havaijilainen lounasrasia: ahi-pokea, lomi-lohta, kālua-possua ja laulau riisin kera.',
+                selite: 'Styroksirasiassa on kaksi kauhallista riisiä, '
+                  + 'soijaan marinoitua ahi-pokea, tomaatin kanssa sekoitettua '
+                  + 'lomi lomi -lohta, kālua-possua, taaron lehtiin haudutettu '
+                  + 'laulau ja pala kookoshyytelö haupiaa; annos on ostettu '
+                  + 'Honolulun Wardin torilta vuonna 2007.',
+                lahde: 'christian razukas, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Aloha käytännössä: kieli, lei ja hula',
+              teksti: 'Havaijin kieli, ʻōlelo Hawaiʻi, on englannin ohella '
+                + 'osavaltion virallinen kieli, vaikka arjessa puhutaan '
+                + 'lähinnä englantia ja paikallista pidginiä. Vuonna 1896 '
+                + 'Havaijin tasavalta kielsi havaijin opetuskielenä, ja kieli '
+                + 'palasi julkisiin kouluihin vasta 1987; kielipesät ovat '
+                + 'opettaneet lapsille havaijia vuodesta 1984. Kirjoituksessa '
+                + 'näkyvä ʻokina on oma kirjaimensa, joka merkitsee '
+                + 'kurkkuäänteen katkoa. Muutama sana ilahduttaa: mahalo on '
+                + 'kiitos, pau tarkoittaa valmista, ja reittiohjeissa mauka '
+                + 'viittaa vuorille päin ja makai merelle päin. Mantereen '
+                + 'Yhdysvalloista puhutaan Mainlandina, sillä "the States" '
+                + 'kuulostaa paikallisten korvissa siltä kuin Havaiji ei '
+                + 'kuuluisi niihin. Havaijilainen tarkoittaa saarilla '
+                + 'alkuperäiskansan jälkeläistä, ei jokaista asukasta, ja '
+                + 'kotiin kutsuttuna kengät jätetään oven ulkopuolelle. Lei eli '
+                + 'kukkaseppele otetaan vastaan kiitollisena. Sitä ei heitetä '
+                + 'roskiin, ja jos sitä ei voi pitää kaulassa, se asetetaan '
+                + 'kunniapaikalle. Perinteen mukaan raskaana olevalle annetaan '
+                + 'vain avoin lei. Toukokuun ensimmäisenä päivänä vietetään '
+                + 'vuodesta 1927 lähtien Lei Dayta. Hulan tärkein näyttämö on '
+                + 'Hilon Merrie Monarch -festivaali, joka alkaa joka vuosi '
+                + 'pääsiäissunnuntaina ja huipentuu kolmen illan kilpailuun. '
+                + 'Se on nimetty kuningas Kalākauan mukaan, joka elvytti hulaa '
+                + 'hallituskaudellaan 1874–1891, ja kilpailuillat lähetetään '
+                + 'televisiossa ja verkossa maksutta.',
+              kuva: {
+                tiedosto: 'Hula Hālau O Kamuela under the direction of Kumu Hula Kauʻi Kamanaʻo and Kunewa Mook - 2019 Overall Winners of the Merrie Monarch Festival - Hilo HI - Lokalia Montgomery Perpetual Trophy.jpg',
+                lyhyt: 'Hula Hālau O Kamuela voitti Merrie Monarch -festivaalin kokonaiskilpailun 2019.',
+                selite: 'Kukkaseppeleisiin ja vihreisiin lehtihameisiin '
+                  + 'pukeutuneet tanssijat seisovat rivissä Hilon '
+                  + 'festivaalilavalla huhtikuussa 2019; heidän edessään ovat '
+                  + 'puinen kiertopalkinto, rumpu ja kalebassista tehdyt '
+                  + 'soittimet.',
+                lahde: 'Allanbcool, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tulivuoripuisto ja luonnon kunnioitus',
+              teksti: 'Ison saaren Hawaiʻi Volcanoes -kansallispuiston ydin '
+                + 'on Kīlauean huippu noin 1 200 metrin korkeudessa, missä voi '
+                + 'sataa ja olla koleaa mihin vuodenaikaan tahansa. Crater Rim '
+                + 'Drive kiersi ennen koko kalderan, mutta osa tiestä sortui '
+                + 'kraatteriin vuoden 2018 purkauksessa ja on suljettu '
+                + 'pysyvästi. Lyhyt polku vie sademetsän läpi Nāhukuun, noin '
+                + '120 metrin mittaiseen valaistuun laavatunneliin. Chain of '
+                + 'Craters Road laskeutuu 32 kilometrin matkalla runsaan '
+                + 'kilometrin rannikolle Hōlein merikaarelle, eikä matkalla ole '
+                + 'ruokaa, vettä eikä polttoainetta. Tien varren Puʻuloan '
+                + 'laavakentällä on yli 23 000 kallioon hakattua kuvaa. '
+                + 'Joulukuussa 2024 alkanut purkaus Halemaʻumaʻun kraatterissa '
+                + 'on jatkunut jaksoittaisina laavasuihkuina, joten nähtävä '
+                + 'vaihtelee päivästä toiseen; ajantasainen tilanne kannattaa '
+                + 'tarkistaa puiston ja USGS:n sivuilta. Tulivuoren rikkipitoinen '
+                + 'savusumu, vog, voi haitata hengityssairaita. Mauna Kean '
+                + 'vierailukeskus on noin 2 800 metrin korkeudessa, ja '
+                + 'kolmannes kävijöistä on saanut vuoristotaudin oireita; '
+                + 'huipulle suositellaan nelivetoa. Luonnossa pätee sääntö: '
+                + 'ota vain valokuvia. Kiviä, hiekkaa tai heiau-temppelien '
+                + 'esineitä ei viedä mukaan. Havaijilla on kielletty '
+                + 'oksibentsonia ja oktinoksaattia sisältävien aurinkovoiteiden '
+                + 'myynti, koska ne vahingoittavat koralleja. Oahun suosittuun '
+                + 'Hanauman lahteen muualla asuvat pääsevät vain verkossa '
+                + 'varatulla ajalla, ja ensikertalaiset katsovat ensin videon '
+                + 'riutan suojelusta. Rannalla lepääviä kilpikonnia ja '
+                + 'munkkihylkeitä ei saa häiritä, ja delfiinejä jahtaavia '
+                + 'retkiveneitä on sakotettu.',
+              kuva: {
+                tiedosto: 'Nāhuku.jpg',
+                lyhyt: 'Kävijöitä Nāhukun valaistussa laavatunnelissa Hawaiʻi Volcanoes -kansallispuistossa.',
+                selite: 'Ryhmä kävelee märkää polkua pitkin Nāhukun eli '
+                  + 'Thurstonin laavatunnelin holvimaisessa käytävässä, jonka '
+                  + 'seinät valaisimet värjäävät kullanruskeiksi; tunneli syntyi '
+                  + 'satoja vuosia sitten, kun sula laava valui sen läpi pois.',
+                lahde: 'Michael Szoenyi / National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
