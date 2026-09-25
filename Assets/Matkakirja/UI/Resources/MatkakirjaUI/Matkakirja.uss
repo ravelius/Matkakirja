@@ -171,6 +171,17 @@
     --mk-ikoni-viiva: 1.6;
 }
 
+/* Löydös 76: logo avatun laukun oikeassa yläkulmassa (iPhone), webin puhelinlogon koko 92 × 22. */
+.mk-laukku__logo {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 92px;
+    height: 22px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-position-x: right;
+}
+
 .mk-logo {
     width: 96px;
     height: 24px;
