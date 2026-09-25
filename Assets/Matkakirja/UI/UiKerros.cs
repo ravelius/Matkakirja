@@ -371,10 +371,10 @@ namespace Matkakirja.Natiivi
                 {
                     var e = pino.Pop();
                     var r = e.resolvedStyle;
-                    if (r.display == DisplayStyle.None) continue;
+                    // Myös piilotetut (display none): niiden muutokset likaavat paneelin yhtä lailla.
                     var wb = e.worldBound;
                     string t = e is TextElement te ? te.text : null;
-                    kuva[e] = $"k{pari.Key} {wb.x:0.0},{wb.y:0.0} {wb.width:0.0}x{wb.height:0.0} o{r.opacity:0.000} v{r.visibility} "
+                    kuva[e] = $"k{pari.Key} {wb.x:0.0},{wb.y:0.0} {wb.width:0.0}x{wb.height:0.0} o{r.opacity:0.000} v{r.visibility} d{r.display} "
                         + $"t{r.translate.x}/{r.translate.y} r{r.rotate.angle.value:0.00} s{r.scale.value.x:0.000} "
                         + $"bg{r.backgroundColor} c{r.color} bc{r.borderTopColor} {t}";
                     foreach (var lapsi in e.hierarchy.Children()) pino.Push(lapsi);
