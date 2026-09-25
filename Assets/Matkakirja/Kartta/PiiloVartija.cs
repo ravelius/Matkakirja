@@ -32,7 +32,9 @@ namespace Matkakirja
     public sealed class PiiloVartija : MonoBehaviour
     {
         /// <summary>Tauko kierrosten välillä (s).</summary>
-        public const float KierrosVali = 1f;
+        public const float KierrosVali = 2f;
+        /// <summary>Hinnan huippu lasketaan vasta näin monen sekunnin jälkeen (käynnistyksen UI-rakennus ja GC eivät sotke).</summary>
+        const float LammitysS = 20f;
         /// <summary>Elementtejä enintään kehyksessä.</summary>
         public const int Budjetti = 250;
 
@@ -55,8 +57,8 @@ namespace Matkakirja
         float seuraavaKierros;
         bool kierrosKaynnissa;
         int kierrosElementit, kierrosKehykset, viimeElementit, viimeKehykset, kierroksia, poistojaKaikkiaan, palautuksiaKaikkiaan;
-        double kierrosMs, viimeMs, kehysMsYht, kehysMsMax;
-        long kehyksia;
+        double kierrosMs, viimeMs, kehysMsYht, kehysMsMax, kehysMsMaxLammin;
+        long kehyksia, yli1ms;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() { Instanssi = null; Paalla = true; }
@@ -132,6 +134,11 @@ namespace Matkakirja
             kehyksia++;
             kehysMsYht += k;
             if (k > kehysMsMax) kehysMsMax = k;
+            if (Time.realtimeSinceStartup > LammitysS)
+            {
+                if (k > kehysMsMaxLammin) kehysMsMaxLammin = k;
+                if (k > 1.0) yli1ms++;
+            }
         }
 
         void AloitaKierros()
@@ -151,7 +158,9 @@ namespace Matkakirja
         /// <summary>Piilotettu elementti: koodin asettama suodin pois, USS-suodin lokiin.</summary>
         void Tarkista(VisualElement e, string paneeli)
         {
-            if (OnPoistettu(e)) return;
+            // Ensin laskettu tyyli (ei allokointia): vain suodatetut elementit ovat kalliita. e.style luo inline-tyyliolion
+            // ensimmäisellä kutsulla, joten sitä ei kosketa muihin (ensimmäinen versio: 1 812 piilotettua elementtiä).
+            if (!LaskettuSuodin(e) || OnPoistettu(e)) return;
             var suodin = e.style.filter;
             if (suodin.keyword == StyleKeyword.Undefined && suodin.value != null && suodin.value.Count > 0)
             {
@@ -163,7 +172,7 @@ namespace Matkakirja
                 poistojaKaikkiaan++;
                 Debug.Log($"MATKAKIRJA piilovartija: suodin pois piilotetusta elementistä {p.kuvaus} ({suodin.value.Count} suodinta)");
             }
-            else if (UssSuodin(e) && kirjatutUss.Add(e))
+            else if (kirjatutUss.Add(e))
                 Debug.LogWarning($"MATKAKIRJA piilovartija: USS-suodin piilotetussa elementissä {paneeli}/{Polku(e)} (vartija ei poista; korjaa tyyli)");
         }
 
@@ -182,13 +191,12 @@ namespace Matkakirja
             return false;
         }
 
-        static bool UssSuodin(VisualElement e)
+        static bool LaskettuSuodin(VisualElement e)
         {
-            try
-            {
-                foreach (var _ in e.resolvedStyle.filter) return true;
-            }
-            catch (Exception) { }
+            var f = e.resolvedStyle.filter;
+            if (f == null) return false;
+            if (f is ICollection<FilterFunction> c) return c.Count > 0;
+            foreach (var _ in f) return true;
             return false;
         }
 
@@ -239,7 +247,9 @@ namespace Matkakirja
               .Append(kierroksia).Append(", viimeisin ").Append(viimeElementit).Append(" elementtiä ").Append(viimeKehykset)
               .Append(" kehyksessä, ").Append(viimeMs.ToString("0.000", ic)).Append(" ms yhteensä; hinta ka ")
               .Append((kehyksia > 0 ? kehysMsYht / kehyksia : 0).ToString("0.0000", ic)).Append(" ms/kehys, max ")
-              .Append(kehysMsMax.ToString("0.000", ic)).Append(" ms (").Append(kehyksia).Append(" kehystä)");
+              .Append(kehysMsMax.ToString("0.000", ic)).Append(" ms, max ").Append(LammitysS.ToString("0", ic)).Append(" s jälkeen ")
+              .Append(kehysMsMaxLammin.ToString("0.000", ic)).Append(" ms, yli 1 ms ").Append(yli1ms).Append(" kehystä (")
+              .Append(kehyksia).Append(" kehystä)");
             foreach (var p in poistot) sb.Append("\n  poistettu: ").Append(p.kuvaus);
 
             var katsaus = Stopwatch.StartNew();
@@ -268,8 +278,7 @@ namespace Matkakirja
             if (p)
             {
                 piilossaN++;
-                var f = e.style.filter;
-                if ((f.keyword == StyleKeyword.Undefined && f.value != null && f.value.Count > 0) || UssSuodin(e)) suotimia++;
+                if (LaskettuSuodin(e)) suotimia++;
             }
             else if (t.visibility == Visibility.Hidden || t.opacity <= 0.001f)
             {
