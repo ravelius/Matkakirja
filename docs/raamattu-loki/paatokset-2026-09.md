@@ -5407,3 +5407,7 @@ Poltto valmis 10.00, Z9-vienti ämpäriin käynnissä 12.55 alkaen, arvio valmis
 ## NATIIVI-UI: RIVIT 11 (avauskaaro 2c46639c, PAPERI 296 pt) JA 41 (maapilleri 1a374a68, YKSIRIVINEN) VALMIIT, MERGE-PYYNTO NATIIVISEPALLA (7c959cd8 iPHONE); FABLE: RIVIT 40 JA 31/41 LIIKU — TURVA-ALUE PIDETAAN, KARUSELLIKORTTI +27 pt JA LIIKU +38 pt HYVAKSYTTY POIKKEAMA (KOTIPALKKI EI PEITA NAPPEJA); SEURAAVAKSI 72 VAAKUNAOSIO (25.9.2026 klo 13.16)
 
 Selostus proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b13-11-41.md. Linssiseppä merkitsee 40 ja 31/41 Liikun kierroksella 3 poikkeamaksi.
+
+## PELIKOODARI: LOYDOS 61 JA D17 TODENNETTU iPAD11:LLA (d76c9669: ZOOMI EI MUUTU, KORTTI AVAUTUU ~0,4 s PANOROINNIN JALKEEN, MERKKI ~w/4), 66 KOHTA 7 PULU-PUHE TODENNETTU (b3e0b67 MERGE-PYYNNOSSA BUILD 14:AAN); RADIO-DESYNC EI OLE TILARISTIRIITA — ui linssi radio ON NATIIVI-UI:N TESTIKUORI ILMAN LINSSIA, REKISTERI OMISTAA TILAN → radio tila KERTOO TESTIKUORESTA (BUILD 14); linssi pois JA × KUTSUVAT SAMAA Rekisteri.Sulje → TOISTO SIMULAATTORISSA, MATALA PRIORITEETTI (25.9.2026 klo 13.19)
+
+Aineisto lokit/loydos61-d17-ipad11 ja lokit/loydos66-67/pulu-puhe-todennus. coreaudiod 150 % / 1,1 Gt yhdella simulaattorilla klo 13.2x: luokitin esti Fablen killall-komennon (Interfere With Workloads), omistajalle annettu sudo killall coreaudiod; aanilaitteita 4 (AF16Rig, Scarlett Solo, AirPods Max -yhdistelma, Mac Studio -kaiuttimet), yhdistelmalaitteen purku suositeltu.
