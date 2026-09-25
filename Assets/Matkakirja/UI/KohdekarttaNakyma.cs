@@ -767,6 +767,11 @@ namespace Matkakirja.Natiivi
                 r.Selitteet.verticalScrollerVisibility = ScrollerVisibility.Hidden;
                 r.Selitteet.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
                 r.Kortti.Add(r.Selitteet);
+                // Web .kartta-selitteet: rivitetty keskitetty luettelo (ScrollViewin sisältö on muuten sarake).
+                var sisalto = r.Selitteet.contentContainer;
+                sisalto.style.flexDirection = FlexDirection.Row;
+                sisalto.style.flexWrap = Wrap.Wrap;
+                sisalto.style.justifyContent = Justify.Center;
                 foreach (var kohde in k.Kohteet)
                 {
                     VisualElement rivi;

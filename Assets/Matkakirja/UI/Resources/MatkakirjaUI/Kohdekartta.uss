@@ -345,12 +345,6 @@
     padding: 0 8px;
 }
 
-.mk-kohdekartta-kokoruutu__selitteet .unity-scroll-view__content-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Web .dialog .kartta-suurennos .kartta-selitteet .kartta-selite: Kone 0.78rem, harvennus 0.03em, vaalea. */
 .mk-kohdekartta-kokoruutu__selite {
     min-height: 0;
