@@ -4,6 +4,9 @@ using System.Globalization;
 using System.Text;
 using CesiumForUnity;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 namespace Matkakirja
 {
@@ -23,7 +26,11 @@ namespace Matkakirja
     /// ANIMAATIOT: kaikki, mikä muuttaa kartan kuvaa ilman kameran liikettä (sykkivät merkit, häivytykset, varjostimen
     /// _Time-animaatiot, valon siirtymät), kytketään joko ehtona <see cref="Animoi"/>(ehto, nimi) (OnEnable, ja
     /// <see cref="Poista"/> OnDisable) tai herätyksenä <see cref="Herata"/>(kesto, kuka). Yksittäinen tilamuutos (kerros
-    /// päälle, korostus, valmistunut verkko) = <see cref="Muuttui"/>(kuka): muutama piirretty kehys.
+    /// päälle, korostus, uusi valinta) = <see cref="Muuttui"/>(kuka): muutama piirretty kehys. Valmistunut lataus tai verkko
+    /// (laatat, solut, kalotit) = <see cref="Valmistui"/>(kuka): sama herätys, mutta ei aitoa aktiivisuutta.
+    ///
+    /// JOUTOSYKE (Fable 25.9. klo 20.1x): tämä laskee myös aidon aktiivisuuden (kosketus, kameran liike, nappulan liike,
+    /// Herata ja Muuttui) Joutosykkeelle, joka jäädyttää jatkuvat idle-animaatiot keskiasentoon 3 s levon jälkeen.
     ///
     /// Tila lasketaan kerran kehyksessä (välimuisti Time.frameCountilla): oma LateUpdate (DefaultExecutionOrder 9990)
     /// ennen Ruudunpaivitystä (10000), joten kameran liike on jo tapahtunut, ja laattanäytteet ja kameran vertailu ovat
@@ -59,6 +66,7 @@ namespace Matkakirja
         static readonly HashSet<string> kaatuneet = new HashSet<string>();
         static PalloKierto kierto;
         static Camera kamera;
+        static Nappula nappula;
         static int laskettu = -1, haettu = -1000, kameraHaettu = -1, syyAste = int.MinValue;
         static string syyKuka;
         static bool lepaa = true, kameraOli, kameraLiikkeessa, nakymaMuuttui, laatatVakaat = true, palvelinKiireinen;
@@ -78,6 +86,7 @@ namespace Matkakirja
             kaatuneet.Clear();
             kierto = null;
             kamera = null;
+            nappula = null;
             laskettu = -1;
             haettu = -1000;
             kameraHaettu = -1;
@@ -124,9 +133,25 @@ namespace Matkakirja
 
         /// <summary>
         /// Pitää pallon hereillä vähintään <paramref name="sekuntia"/> (animaatio, jolla on kesto). Lyhyt herätys ei lyhennä
-        /// pidempää (Lampopaatos.Heratys); <paramref name="kuka"/> näkyy syynä. Vaikuttaa jo tähän kehykseen.
+        /// pidempää (Lampopaatos.Heratys); <paramref name="kuka"/> näkyy syynä. Vaikuttaa jo tähän kehykseen. Aito
+        /// aktiivisuus: jäätynyt joutosyke jatkuu heti.
         /// </summary>
         public static void Herata(float sekuntia, string kuka)
+        {
+            Joutosyke.Merkitse();
+            Heratys(sekuntia, kuka);
+        }
+
+        /// <summary>Yksittäinen tilamuutos kartalla (kerros päälle tai pois, korostus, uusi valinta): <see cref="MuutosS"/>.</summary>
+        public static void Muuttui(string kuka) => Herata(MuutosS, kuka);
+
+        /// <summary>
+        /// Valmistunut lataus tai verkko (solut, kalotit, merkit, taustalla rakennettu kerros): muutama piirretty kehys
+        /// (<see cref="MuutosS"/>), mutta ei aitoa aktiivisuutta, joten joutosyke ei herää (laattojen lataus ei nollaa kelloa).
+        /// </summary>
+        public static void Valmistui(string kuka) => Heratys(MuutosS, kuka);
+
+        static void Heratys(float sekuntia, string kuka)
         {
             float uusi = Lampopaatos.Heratys(hereillaAsti, Time.unscaledTime, sekuntia);
             if (uusi <= hereillaAsti) return;
@@ -136,9 +161,6 @@ namespace Matkakirja
             // mutta ilman uutta laattanäytettä (kolme näytettä = kolme eri kehystä).
             if (laskettu == Time.frameCount && lepaa) Aseta(Lampopaatos.Este.Heratys, herattaja);
         }
-
-        /// <summary>Yksittäinen tilamuutos kartalla (kerros päälle tai pois, korostus, valmistunut verkko): <see cref="MuutosS"/>.</summary>
-        public static void Muuttui(string kuka) => Herata(MuutosS, kuka);
 
         /// <summary>
         /// Rekisteröi kartan animaation: <paramref name="kaynnissa"/> palauttaa tosi, kun kuva muuttuu ilman kameran liikettä
@@ -210,6 +232,7 @@ namespace Matkakirja
             sb.Append("; palvelin ").Append(palvelinKiireinen ? "kiireinen" : "vapaa");
             float jaljella = hereillaAsti - Time.unscaledTime;
             sb.Append("; herätys ").Append(jaljella > 0f ? jaljella.ToString("0.00", ic) + " s (" + herattaja + ")" : "ohi");
+            sb.Append("; ").Append(Joutosyke.Kuvaus());
             sb.Append("; animaatiot ").Append(animaatiot.Count).Append(" rekisteröity, käynnissä:");
             int kaynnissa = 0;
             foreach (var (ehto, nimi) in animaatiot)
@@ -226,7 +249,9 @@ namespace Matkakirja
             if (laskettu == kehys) return;
             laskettu = kehys;
             if (kehys - haettu >= HakuVali) Etsi(kehys);
-            float nyt = Time.unscaledTime;
+            float nyt = Time.unscaledTime, dt = Time.unscaledDeltaTime;
+            // Joutosykkeen aito aktiivisuus: kosketus (myös UI:n päällä) ja nappulan liike; kamera alempana.
+            bool aktiivisuus = Kosketetaan() || (nappula != null && nappula.Liikkeessa);
 
             bool paalla = kamera != null && kamera.isActiveAndEnabled;
             if (!paalla)
@@ -236,6 +261,7 @@ namespace Matkakirja
                 if (kameraOli) foreach (var n in naytteet) n.Nollaa();
                 kameraOli = kameraLiikkeessa = nakymaMuuttui = false;
                 palvelinKiireinen = Laattapalvelin.Kiireinen;
+                Joutosyke.Paivita(nyt, dt, aktiivisuus);
                 Aseta(Lampopaatos.Este.Ei, null);
                 return;
             }
@@ -247,13 +273,16 @@ namespace Matkakirja
             Vector3 paikka = t.position;
             Quaternion asento = t.rotation;
             Matrix4x4 projektio = kamera.projectionMatrix;
-            nakymaMuuttui = !kameraOli || !paikka.Equals(edellinenPaikka) || !asento.Equals(edellinenAsento)
-                            || !projektio.Equals(edellinenProjektio);
+            bool asentoMuuttui = !paikka.Equals(edellinenPaikka) || !asento.Equals(edellinenAsento);
+            nakymaMuuttui = !kameraOli || asentoMuuttui || !projektio.Equals(edellinenProjektio);
             edellinenPaikka = paikka;
             edellinenAsento = asento;
             edellinenProjektio = projektio;
             kameraOli = true;
             kameraLiikkeessa = kierto != null && kierto.Liikkeessa;
+            // Joutosyke ennen animaatioehtoja (ne lukevat Joutosyke.Elaa). Aktiivisuutta on kameran liike, ei pelkkä
+            // projektio (maastonäytteen lähitaso muuttuu laattojen latautuessa), eivätkä idle-animaatiot itse.
+            Joutosyke.Paivita(nyt, dt, aktiivisuus || kameraLiikkeessa || asentoMuuttui);
 
             // 2) Laatat: kaikki käytössä olevat tilesetit, kolme näytettä kutakin.
             float aste = 100f;
@@ -323,6 +352,14 @@ namespace Matkakirja
             }
         }
 
+        /// <summary>Sormi ruudulla (myös UI:n päällä) tai hiiren painike (editori): aitoa aktiivisuutta joutosykkeelle.</summary>
+        static bool Kosketetaan()
+        {
+            if (EnhancedTouchSupport.enabled && Kosketus.activeTouches.Count > 0) return true;
+            var hiiri = Mouse.current;
+            return hiiri != null && hiiri.leftButton.isPressed;
+        }
+
         /// <summary>Pallon kamera (PalloKierto), enintään kerran kehyksessä.</summary>
         static void EtsiKamera()
         {
@@ -336,6 +373,7 @@ namespace Matkakirja
         {
             haettu = kehys;
             if (kierto == null || kamera == null) EtsiKamera();
+            if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
             var kaikki = FindObjectsByType<Cesium3DTileset>(FindObjectsSortMode.None);
             for (int i = naytteet.Count - 1; i >= 0; i--)
                 if (naytteet[i].tileset == null || Array.IndexOf(kaikki, naytteet[i].tileset) < 0) naytteet.RemoveAt(i);

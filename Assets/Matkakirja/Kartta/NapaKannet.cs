@@ -284,7 +284,7 @@ namespace Matkakirja
                 if (kuva) n.Kalotti.SetActive(nakyvat && !reliefi);
             }
             // Lämpöerä (PallonLepo): kansien ja kalottien vaihto on yksittäinen muutos.
-            PallonLepo.Muuttui("napakannet");
+            PallonLepo.Valmistui("napakannet");
         }
 
         /// <summary>Webin sävy laattojen valaistukseen: kerroin lineaarisena, tulos sRGB-värinä materiaaliin.</summary>

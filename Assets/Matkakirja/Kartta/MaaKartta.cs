@@ -146,6 +146,8 @@ namespace Matkakirja
 
         public void MaaTila(bool paalla)
         {
+            // Tilan muutos (PallonLepo, joutosyke jatkuu); kuoren ja paletin valmistuminen on Valmistui.
+            if (paalla != Paalla) PallonLepo.Muuttui(kokoelma);
             Paalla = paalla;
             if (kerrokset != null && piilotaKaupungit)
             {
@@ -177,7 +179,7 @@ namespace Matkakirja
         {
             bool nakyy = NakyyNyt;
             if (maakohtainen && nakyy && !nakyi) AloitaHaive();
-            if (nakyy != nakyi) PallonLepo.Muuttui(kokoelma);
+            if (nakyy != nakyi) PallonLepo.Valmistui(kokoelma);
             nakyi = nakyy;
             if (kuori != null) kuori.enabled = NakyyNyt;
             if (rajat != null && !NakyyNyt) { rajaHaive = 0f; rajat.enabled = false; }
@@ -571,7 +573,7 @@ namespace Matkakirja
             AsetaRajanVari();
             paletti.SetPixels32(px);
             paletti.Apply(false);
-            PallonLepo.Muuttui(kokoelma);
+            PallonLepo.Valmistui(kokoelma);
         }
 
         void TeeKuori()

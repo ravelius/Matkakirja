@@ -97,6 +97,8 @@ namespace Matkakirja
     ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
     ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
     ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
+    ///   syke jaatyy|jatkuva|oletus|tila  jatkuvien idle-animaatioiden jäädytys levossa (Joutosyke; oletus jäätyy
+    ///                             3 s levon jälkeen keskiasentoon, jatkuva = kuten ennen lämpöerää); tila lokiin
     /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
     /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
@@ -394,6 +396,17 @@ namespace Matkakirja
                     else if (m == "oletus") LampoSaadot.Varjot = LampoSaadot.VarjoOletus;
                     else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: varjot pois|auto|paalle|oletus|tila, ei " + m); return; }
                     Debug.Log("MATKAKIRJA lämpösäädöt: " + LampoSaadot.Kuvaus());
+                    break;
+                }
+                case "syke":
+                {
+                    // syke jaatyy|jatkuva|oletus|tila (Joutosyke, Fable 25.9. klo 20.1x): idle-animaatioiden jäädytys levossa.
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "jaatyy" || m == "jäätyy") Joutosyke.Jaatyy = true;
+                    else if (m == "jatkuva") Joutosyke.Jaatyy = false;
+                    else if (m == "oletus") Joutosyke.Jaatyy = Lampopaatos.SykeJaatyy;
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: syke jaatyy|jatkuva|oletus|tila, ei " + m); return; }
+                    Debug.Log("MATKAKIRJA joutosyke: " + Joutosyke.Kuvaus());
                     break;
                 }
                 case "kaupunki":

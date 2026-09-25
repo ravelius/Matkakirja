@@ -170,8 +170,12 @@ namespace Matkakirja
         /// Lämpöerä (25.9.): myös kameran omat liikkeet, joita ennen ei laskettu: lennon suuntiman ja katseen palautus
         /// (Palauta) ja pallon oma pyöritys ennen ensimmäistä kosketusta. Muuten ne olisivat vain PallonLepon kameraehdon
         /// varassa (LEPO 30 fps), eikä liikkeen sulavuus saa huonontua (Raamattu).
+        /// ALOITUSPORTTI EI OLE LIIKETTÄ (Fable 25.9. klo 20.1x): portin hidas pyöritys (PorttiKierto) piirretään LEPO-tilassa
+        /// 30 fps:llä. Pallo ei silti lepää portissa: kameraehto (PallonLepo) näkee pyörityksen joka kehys, ja portin
+        /// sumennuksen liuku ja etusivulento ovat PallonLepon animaatioita, joten piirto ei harvene (ei PAIKALLAAN).
+        /// Kosketus ja kamera-ajot pysyvät täydellä taajuudella.
         /// </summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || pohjoiseen
                                   || LinssisiirtoLiukuu || Palautuu || PyoriiItse;
 
         /// <summary>Lennon suuntima tai katseen korkeus palautuu (Update → Palauta).</summary>

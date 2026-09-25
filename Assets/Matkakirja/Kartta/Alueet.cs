@@ -46,7 +46,8 @@ namespace Matkakirja
         public int rinnakkainKiireessa = 2;
         public PalloKierto kierto;
 
-        int Raja => Laattapalvelin.Kiireinen || (kierto != null && kierto.Liikkeessa) ? rinnakkainKiireessa : rinnakkain;
+        // Aloitusportin pyöritys ei ole enää PalloKierto.Liikkeessa (lämpöerä, Fable 25.9. klo 20.1x), mutta näkymä liikkuu.
+        int Raja => Laattapalvelin.Kiireinen || (kierto != null && (kierto.Liikkeessa || kierto.Portissa)) ? rinnakkainKiireessa : rinnakkain;
 
         public IReadOnlyList<Alue> Luettelo => alueet;
         /// <summary>Lista tai tila muuttui (edistyminen enintään 4 kertaa sekunnissa).</summary>

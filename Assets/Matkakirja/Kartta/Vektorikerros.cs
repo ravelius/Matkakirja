@@ -271,7 +271,7 @@ namespace Matkakirja
             if (Luettelo == null && !luetteloHaussa) StartCoroutine(LataaLuettelo());
             bool nakyy = Syy() == null;
             if (juuri == null) Luo();
-            if (juuri.activeSelf != nakyy) { juuri.SetActive(nakyy); PallonLepo.Muuttui(Laji); }
+            if (juuri.activeSelf != nakyy) { juuri.SetActive(nakyy); PallonLepo.Valmistui(Laji); }
             // Uudelleen näkyviin: näkyvät solut häivytetään sisään kuten webissä (solu tulee näkyviin → haivyta).
             if (nakyy && !nakyiEdella) foreach (var s in naytetyt) s.HaiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
@@ -428,7 +428,7 @@ namespace Matkakirja
                 foreach (var s in naytetyt)
                     if (!s.Nakyy && s.Piirto != null)
                     {
-                        if (s.Piirto.enabled) PallonLepo.Muuttui(Laji);
+                        if (s.Piirto.enabled) PallonLepo.Valmistui(Laji);
                         s.Piirto.enabled = false; s.HaiveAlku = -1f; s.Piirto.SetPropertyBlock(null);
                     }
                 naytetyt.Clear();

@@ -3,6 +3,9 @@
 // piste 2,2 pt, 4/3, levy 0,55) ja hengittävä halo (--accent #d9a13b, 2,4 s: säde ×1,14 ↔ ×1,42,
 // peitto 0,85 ↔ 0,4). Halon viiva 3,4 pt (reitin varren piste 2,4): pallolaudan merkki on .target-halo.fokus
 // (css/styles.css:8293, js/pallolauta/merkit.js ympyra('target-halo fokus')), ei laudan 5 yksikön .target-halo. Neliö KaupunkiMerkit-juuressa, yksi yksikkö = yksi näytön piste; _Koko = sivu pisteinä.
+// JOUTOSYKE (Fable 25.9.2026 klo 20.1x, Kartta/Joutosyke.cs): halo ei lue Unityn _Time.y:tä vaan globaalit _SykeAika
+// (sykkeen oma aika, pysähtyy levossa) ja _SykeVoima (0 = keskiasento: säde ×1,28, peitto 0,625; 1 = täysi syke), jotta
+// jäädytys keskiasentoon ja jatko ovat saumattomia.
 Shader "Matkakirja/Kohdemerkki"
 {
     Properties
@@ -38,6 +41,8 @@ Shader "Matkakirja/Kohdemerkki"
                 float _Sade, _Viiva, _Koko, _HaloViiva, _Alfa;
                 float4 _Katko;
             CBUFFER_END
+            // Joutosykkeen globaalit (Shader.SetGlobalFloat, Kartta/Joutosyke.cs), ei materiaalin ominaisuuksia.
+            float _SykeAika, _SykeVoima;
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
             struct Vali { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
@@ -57,10 +62,11 @@ Shader "Matkakirja/Kohdemerkki"
             {
                 float r = length(i.uv);
                 float w = max(fwidth(r), 1e-4);
-                // Halo: kohde-halo 2,4 s ease-in-out, 0 % ja 100 % kapea.
-                float t = frac(_Time.y / 2.4);
+                // Halo: kohde-halo 2,4 s ease-in-out, 0 % ja 100 % kapea; joutosykkeen voima painaa keskiasentoon (e = 0,5).
+                float t = frac(_SykeAika / 2.4);
                 float s = t < 0.5 ? t * 2.0 : (1.0 - t) * 2.0;
                 float e = s * s * (3.0 - 2.0 * s);
+                e = 0.5 + _SykeVoima * (e - 0.5);
                 float haloR = _Sade * lerp(1.14, 1.42, e);
                 float haloA = lerp(0.85, 0.40, e) * (1.0 - smoothstep(_HaloViiva * 0.5 - 0.5 * w, _HaloViiva * 0.5 + 0.5 * w, abs(r - haloR)));
                 half4 c = half4(_Halovari.rgb, haloA * _Halovari.a);
