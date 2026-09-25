@@ -12,7 +12,15 @@
 //   VANAT EIVÄT NÄY KUVAN ALTA: VanaKerros häivyttää kaistan kuvan alueelta (Vana.shader _KuvanAlue), sisään ja ulos
 //   kuvan tahdissa (KuvanHaivytysS).
 //
-// ERÄT 2–5 (valokeila, sumu, äänimaisemat, vapaat kädet) rakentuvat samoihin koukkuihin.
+// ERÄ 2 (KOHDENNETTU VALO, Raamattu 23.9. "aurinko/kohdevalo vain siihen osaan karttaa, missä tarina on käynnissä,
+//   muu pallo hämärämpi"): Natiivisepän KarttaKerrokset.Valokeila (tileset-varjostin: vain pohja ja laatat hämärtyvät,
+//   vanat, lamput ja UI pysyvät kirkkaina). Valot-vaiheessa keila syttyy Afrikan ylle; jakson kohteeseen keila liukuu
+//   isoympyrää pitkin kameran ajon tahdissa (Esitys.ViimeisinAjo), edellinen kohde jää heikoksi toiseksi keilaksi
+//   (lähtö ja määränpää), alueen jaksoissa keila kattaa rajauksen. Seudun sävy: luolissa soihtu (1900 K), kylmissä
+//   jaksoissa sininen päivänvalo, merellä kuunvalo, muuten lyhty (3200 K). Kuvan aikana hämärä syvenee (kuva nousee
+//   valosta), aikahypyssä valo sammuu hetkeksi, lopussa keilat sammuvat ja koko pallo syttyy.
+//
+// ERÄT 3–5 (sumu, äänimaisemat, vapaat kädet) rakentuvat samoihin koukkuihin.
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -34,8 +42,31 @@ namespace Matkakirja.Natiivi
         /// <summary>Havainnekuvien kuvasuhde (ämpärin kuvat 1536 × 1024).</summary>
         public const float Kuvasuhde = 1.5f;
 
+        /// <summary>Hämärä kertomuksen aikana (0 = ei, 1 = lähes musta) ja kuvan aikana.</summary>
+        public const float HamaraPerus = 0.55f, HamaraKuva = 0.72f;
+        /// <summary>Valojen syttyminen: keila Afrikan ylle (säde km).</summary>
+        public const float AfrikanSadeKm = 3800f;
+        /// <summary>Kohdekeilan säde rajauksen leveydestä (osuus) ja rajat (km).</summary>
+        public const float KohteenOsuus = 0.2f, KohdeMinKm = 380f, KohdeMaxKm = 1500f;
+        /// <summary>Aluekeilan säde rajauksen leveydestä (osuus) ja rajat (km).</summary>
+        public const float AlueenOsuus = 0.42f, AlueMinKm = 900f, AlueMaxKm = 4800f;
+        /// <summary>Toisen keilan (edellinen kohde) voimakkuus ja vähimmäisetäisyys (km).</summary>
+        public const float ToisenVoima = 0.45f, ToisenMinKm = 600f;
+        /// <summary>Lopun sammutus (s): keilat pois, koko pallo syttyy.</summary>
+        public const float LopunSammutusS = 3.2f;
+
+        /// <summary>Seudun valo jakson tunnuksesta (Raamattu IHMISEN MATKA II, vapaat kädet): luolat, kylmä, meri.</summary>
+        static readonly HashSet<string> Luolat = new HashSet<string> { "denisova", "chauvet" };
+        static readonly HashSet<string> Kylmat = new HashSet<string> { "napapiiri", "beringia", "white-sands", "eurooppa" };
+        static readonly HashSet<string> Meret = new HashSet<string> { "meri", "uusi-seelanti" };
+
         IhmisenMatkaKerros kerros;
         Dictionary<string, (double Lat, double Lon)> paikat;
+        KertomusJakso jakso;
+        bool keilaOdottaa, keilaPaalla, kuvaPaalla;
+        KarttaKerrokset.Keila nykyinen;
+        KarttaKerrokset.Keila? toinen;
+        (double Lat, double Lon)? edellinenKohde;
         string kuvaKohde;
         float kuvanPeitto;
         bool siirtoPaalla;
@@ -51,11 +82,107 @@ namespace Matkakirja.Natiivi
             LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet kytketty");
         }
 
-        public void Musta(bool paalla, double feidiMs) { }
+        public void Musta(bool paalla, double feidiMs)
+        {
+            if (!paalla) return;
+            // Pimeä alku: ei keilaa (tähdet ja musta ruutu kertovat avauksen).
+            KarttaKerrokset.ValokeilaPois(0f);
+            keilaPaalla = false;
+            edellinenKohde = null;
+        }
 
-        public void Valot(double feidiMs) { }
+        public void Valot(double feidiMs)
+        {
+            // Valot syttyvät Afrikan ylle: lyhty avautuu mantereen kokoiseksi, muu maailma jää hämärään.
+            nykyinen = new KarttaKerrokset.Keila(2, 20, AfrikanSadeKm, 0.6f, null, 0.1f);
+            toinen = null;
+            Nayta(Kesto((float)(feidiMs / 1000.0)));
+        }
 
-        public void Jakso(int i, KertomusJakso jakso) { }
+        public void Jakso(int i, KertomusJakso j)
+        {
+            jakso = j;
+            if (j == null) return;
+            if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
+            if (j.Vaihe == "pimea") return;
+            if (j.Vaihe == "hyppy")
+            {
+                // Aikahyppy: valo sammuu hetkeksi (kello kelautuu), keila syttyy uuteen paikkaan kameran perässä.
+                KarttaKerrokset.ValokeilaPois(Kesto(0.6f));
+                keilaPaalla = false;
+                edellinenKohde = null;
+            }
+            // Esitys ajaa kameran samassa kutsussa Jakson jälkeen: keila asetetaan seuraavassa kehyksessä rajauksesta.
+            keilaOdottaa = true;
+        }
+
+        /// <summary>Esityksen viimeisin kamerarajaus (keskus, leveys asteina, kesto ms) tai null.</summary>
+        static ((double Lat, double Lon) keskus, double leveysAst, double kestoMs)? Rajaus()
+        {
+            var e = (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi?.Esitys;
+            if (e?.ViimeisinAjo is not { } a) return null;
+            return ((a.keskus.Lat, a.keskus.Lon), a.leveysAst, a.kestoMs);
+        }
+
+        /// <summary>Jakson keila rajauksesta: kohde (ja edellinen kohde toiseksi) tai alue.</summary>
+        void AsetaJaksonKeila()
+        {
+            keilaOdottaa = false;
+            var j = jakso;
+            var r = Rajaus();
+            if (j == null || r == null) return;
+            double km = r.Value.leveysAst * 111.2;
+            float kesto = Kesto(Mathf.Clamp((float)(r.Value.kestoMs / 1000.0), 1.2f, 4.5f));
+            var (vari, kirkkaus) = Seudun(j.Id);
+            (double Lat, double Lon)? kohde = j.Kohde != null && paikat != null && paikat.TryGetValue(j.Kohde, out var p) ? p : null;
+            if (kohde is { } k)
+            {
+                float sade = Mathf.Clamp((float)(km * KohteenOsuus), KohdeMinKm, KohdeMaxKm);
+                if (Luolat.Contains(j.Id)) sade *= 0.6f;   // soihtu: kapea valo
+                nykyinen = new KarttaKerrokset.Keila(k.Lat, k.Lon, sade, 0.55f, vari, kirkkaus);
+                // Lähtö heikkona toisena keilana, jos se on kaukana (ylitykset: Levantti, Sahul, Beringia …).
+                toinen = edellinenKohde is { } e && Valokeilalaskenta_Km(e, k) > ToisenMinKm
+                    ? new KarttaKerrokset.Keila(e.Lat, e.Lon, sade * 0.75f, 0.6f, vari, 0f, ToisenVoima)
+                    : (KarttaKerrokset.Keila?)null;
+                edellinenKohde = k;
+            }
+            else
+            {
+                float sade = Mathf.Clamp((float)(km * AlueenOsuus), AlueMinKm, AlueMaxKm);
+                nykyinen = new KarttaKerrokset.Keila(r.Value.keskus.Lat, r.Value.keskus.Lon, sade, 0.6f, vari, kirkkaus * 0.6f);
+                toinen = null;
+            }
+            Nayta(kesto);
+        }
+
+        static double Valokeilalaskenta_Km((double Lat, double Lon) a, (double Lat, double Lon) b)
+        {
+            double la1 = a.Lat * Mathf.Deg2Rad, la2 = b.Lat * Mathf.Deg2Rad, dl = (b.Lon - a.Lon) * Mathf.Deg2Rad;
+            double c = System.Math.Sin(la1) * System.Math.Sin(la2) + System.Math.Cos(la1) * System.Math.Cos(la2) * System.Math.Cos(dl);
+            return System.Math.Acos(System.Math.Max(-1.0, System.Math.Min(1.0, c))) * 6371.0;
+        }
+
+        /// <summary>Seudun valon sävy ja keskustan hehku jakson tunnuksesta (null = lyhty).</summary>
+        static (Color? vari, float kirkkaus) Seudun(string id)
+        {
+            if (id != null && Luolat.Contains(id)) return (KarttaKerrokset.KelvinVari(1900f, 0.8f), 0.22f);
+            if (id != null && Kylmat.Contains(id)) return (KarttaKerrokset.KelvinVari(9500f, 0.6f), 0.08f);
+            if (id != null && Meret.Contains(id)) return (KarttaKerrokset.KelvinVari(12000f, 0.55f), 0.06f);
+            return (null, 0.12f);
+        }
+
+        void Nayta(float kesto)
+        {
+            KarttaKerrokset.Valokeila(nykyinen, toinen, kuvaPaalla ? HamaraKuva : HamaraPerus, kesto);
+            keilaPaalla = true;
+        }
+
+        void Sammuta(float kesto)
+        {
+            KarttaKerrokset.ValokeilaPois(kesto);
+            keilaPaalla = false;
+            keilaOdottaa = false;
+        }
 
         public void SytytaKohde(string kohde) { }
 
@@ -63,6 +190,10 @@ namespace Matkakirja.Natiivi
         public void Kuva(string kohde)
         {
             kuvaKohde = kohde;
+            bool oli = kuvaPaalla;
+            kuvaPaalla = kohde != null;
+            // Kuva nousee valosta: hämärä syvenee kuvan ajaksi (sama keila).
+            if (keilaPaalla && oli != kuvaPaalla && !keilaOdottaa) Nayta(Kesto(0.8f));
             if (kohde == null)
             {
                 KuvanAlue = null;
@@ -75,6 +206,7 @@ namespace Matkakirja.Natiivi
 
         public void Loppu()
         {
+            Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;
             if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
             siirtoPaalla = false;
@@ -130,6 +262,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            if (keilaOdottaa) AsetaJaksonKeila();
             // Ruudun kierto kesken kuvan: alue ja väistö uudelleen.
             if (kuvaKohde != null && (Screen.width != ruutuW || Screen.height != ruutuH)) Asettele();
             float tavoite = KuvanAlue.HasValue ? 1f : 0f;
@@ -149,6 +282,8 @@ namespace Matkakirja.Natiivi
             if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(0f);
             siirtoPaalla = false;
             KuvanAlue = null;
+            // Keila ja hämärä pois heti: muu peli ei saa jäädä hämärään.
+            KarttaKerrokset.ValokeilaPois(0f);
         }
     }
 }
