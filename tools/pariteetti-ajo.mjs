@@ -411,7 +411,11 @@ async function vertaa() {
       if (webOk) { rivi.webKuva = `kuvat/${r.rivi}-${l.nimi}-web.jpg`; await esikatselu(webPng, join(ULOS, rivi.webKuva), l.w, l.h); } // eslint-disable-line no-await-in-loop
       if (natOk) { rivi.natiiviKuva = `kuvat/${r.rivi}-${l.nimi}-natiivi.jpg`; await esikatselu(natPng, join(ULOS, rivi.natiiviKuva), l.w, l.h); } // eslint-disable-line no-await-in-loop
       const natTila = natTulokset[l.nimi]?.[r.rivi];
-      if (!webOk) {
+      if (r.vainNatiivi) {
+        // Vain natiivissa (Fable 25.9.): ei vertailua eikä ERI:ä, mutta rivi näkyy taulussa kuvan kanssa.
+        rivi.tila = natOk && natTila?.tila !== 'VIRHE' ? 'VAIN-NATIIVISSA' : 'VIRHE';
+        if (natTila?.tila === 'VIRHE') rivi.syyt.push(`natiivi: ${natTila.virhe}`);
+      } else if (!webOk) {
         // Webin todennus (pariteettikuvat) ei hyväksynyt näkymää: tila ei täsmännyt, ei ero.
         rivi.tila = 'VIRHE';
         rivi.syyt.push('web-näkymä ei avautunut (pariteettikuvat-todennus, ks. web/loki-*.txt)');
@@ -444,11 +448,11 @@ async function vertaa() {
   writeFileSync(join(ULOS, 'kontaktiarkki.html'), kontaktiarkki(tulos, otsikko));
   const laske = (t) => tulos.filter((x) => x.tila === t).length;
   const md = `# ${otsikko}\n\nWeb ${URL_ARG}, natiivi ${BUILD}; tila siemen ${SIEMEN} ${KAUPUNKI}. `
-    + `SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VIRHE ${laske('VIRHE')} (tila ei täsmännyt) / ${tulos.length}.\n`
+    + `SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VAIN NATIIVISSA ${laske('VAIN-NATIIVISSA')}, VIRHE ${laske('VIRHE')} (tila ei täsmännyt) / ${tulos.length}.\n`
     + `Kuvat ja kontaktiarkki: ${join(ULOS, 'kontaktiarkki.html')}\n\n${markdownTaulu(tulos)}\n`;
   writeFileSync(join(ULOS, 'raportti.md'), md);
   writeFileSync(join(ULOS, 'tulos.json'), JSON.stringify(tulos, null, 2));
-  console.log(`vertailu: SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VIRHE ${laske('VIRHE')} / ${tulos.length}`);
+  console.log(`vertailu: SAMA ${laske('SAMA')}, ERI ${laske('ERI')}, PUUTTUU ${laske('PUUTTUU')}, VAIN NATIIVISSA ${laske('VAIN-NATIIVISSA')}, VIRHE ${laske('VIRHE')} / ${tulos.length}`);
 }
 
 // ── Ajo ───────────────────────────────────────────────────────────────

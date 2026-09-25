@@ -81,4 +81,9 @@ export const RIVIT = [
   { rivi: '39', nimi: 'Linssi: vertailu', web: 'linssi-vertailu', peli: true, natiivi: ['linssi:linssi vertailu', 'odota:2', 'linssi:kamera 60 15 5000', 'odota:3'] },
   { rivi: '40', nimi: 'Linssi: karuselli', web: 'linssi-karuselli', peli: true, natiivi: ['linssi:linssi keksinnot', 'odota:3', 'linssi:keksinnot kaynnista', 'odota:3'] },
   { rivi: '41', nimi: 'Linssi: maatiedot', web: 'linssi-maatiedot', peli: true, natiivi: ['linssi:linssi maatiedot', 'odota:2', 'linssi:kamera 36 138 4000', 'odota:2', 'linssi:maa JPN', 'odota:2'] },
+  // Taulu kattaa molempien puolten kaikki linssit (Fable 25.9.2026): webin karttapallo (toiminto, js/linssit/pallo.js)
+  // vastaa natiivin maailmanäkymää (pallo kokonaan ruudulla); natiivin isoisa-1873 on vain natiivissa (webin
+  // rekisterissä ei ole), joten se näkyy taulussa omana tilanaan eikä ERI:nä.
+  { rivi: '42', nimi: 'Linssi: karttapallo (web) / maailma (natiivi)', web: 'linssi-pallo', peli: true, natiivi: ['linssi:kamera 30 10 20000', 'odota:4'], tunniste: 'Liiku', huom: 'natiivi on aina pallo: vastine on koko pallo ruudulla' },
+  { rivi: '43', nimi: 'Linssi: isoisän linssi 1873', web: null, vainNatiivi: true, peli: true, natiivi: ['linssi:linssi isoisa-1873', 'odota:2', 'linssi:kamera 48 10 5000', 'odota:4'], huom: 'vain natiivissa, ei webin rekisterissä' },
 ];
