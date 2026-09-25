@@ -361,7 +361,7 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros kerros;
             EsityksenAani aani;
             readonly LinssiTiedot tiedot;
-            IhmisenMatka2Ymparisto kaare;
+            Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto kaare;
             /// <summary>Ihmisen matka II: tehostekerros (IhmisenMatka2Tehosteet) näkymän päälle, esirakennus vasta avatessa.</summary>
             public readonly bool Versio2;
 
@@ -381,6 +381,8 @@ namespace Matkakirja.Natiivi
             public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
             /// <summary>Kertojan ääni (linssi-loki), null ennen avausta.</summary>
             public EsityksenAani Aani => aani;
+            /// <summary>II:n kameran kääre (lähikuvan laskeutuminen, IhmisenMatka2Tehosteet.Kuva), null I:ssä ja suljettuna.</summary>
+            public Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto Kaare => kaare;
 
             public void VanatValmiit(Matkakirja.Linssit.Virrat.VanatTulos tulos)
             {
@@ -428,8 +430,8 @@ namespace Matkakirja.Natiivi
                 };
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
-                // II: kamera-ajot kallistetaan lähikuvissa (IhmisenMatka2Ymparisto); muu ympäristö sellaisenaan.
-                kaare = Versio2 ? new IhmisenMatka2Ymparisto(y) : null;
+                // II: kohteiden jaksoissa laskeutuminen kallistettuna (IhmisenMatka2Ymparisto); muu ympäristö sellaisenaan.
+                kaare = Versio2 ? new Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto(y) : null;
                 linssi.Avaa(kaare ?? y);
                 if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
             }
@@ -447,7 +449,11 @@ namespace Matkakirja.Natiivi
                 using (Merkki(tiedot.Id, "Avaa.Vanat").Auto()) VanatValmiit(vanat);
             }
 
-            public void Paivita() => linssi?.Paivita();
+            public void Paivita()
+            {
+                kaare?.Paivita();
+                linssi?.Paivita();
+            }
 
             public void Sulje()
             {

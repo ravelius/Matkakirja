@@ -26,6 +26,8 @@
 // ERÄ 5 (VAPAAT KÄDET, omistaja: "saat lisätä niin paljon visuaalisia tehosteita kuin vain keksit"):
 //   AAMUNKOITTO: valot syttyvät ensin pienenä kirkkaana pisteenä (tarina alkaa yhdestä paikasta) ja avautuvat mantereen
 //   yli. RINTAMAN HEHKU: vanojen etenevä kärki loistaa ja sykkii (VanaKerros.hehku, Vana.shader _Hehku).
+//   LÄHIKUVAN LASKEUTUMINEN (Fable 25.9.: kallistettu lento maaston yllä): Kuva(kohde) antaa kohteen paikan kameran
+//   kääreelle (IhmisenMatka2Ymparisto), joka laskeutuu jakson ajon jälkeen kohteen ylle kallistettuna.
 //
 // ERÄ 3 (sumu) rakentuu samoihin koukkuihin, kun Natiivisepän Sumu-rajapinta on valmis.
 using System.Collections.Generic;
@@ -213,6 +215,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Esitys näyttää löytöpaikan kuvan (tai null = kuva pois): kuvan alue ja kartan väistö.</summary>
         public void Kuva(string kohde)
         {
+            // Lähikuvan laskeutuminen: Esitys ajaa kohteen jaksoon heti tämän jälkeen, kääre laskeutuu ajon päätyttyä.
+            (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Kaare?.Lahikuva(
+                kohde != null && paikat != null && paikat.TryGetValue(kohde, out var kp) ? kp : ((double Lat, double Lon)?)null);
             kuvaKohde = kohde;
             bool oli = kuvaPaalla;
             kuvaPaalla = kohde != null;
