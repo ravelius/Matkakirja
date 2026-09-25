@@ -926,9 +926,19 @@ namespace Matkakirja.Natiivi
                 linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
                 kerros.Linssi = linssi;
                 linssi.Avaa(y);
+                mustaAlku = Time.realtimeSinceStartup;
             }
-            public void Paivita() => linssi?.Paivita();
-            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; }
+            float mustaAlku = -1f;
+            public void Paivita()
+            {
+                linssi?.Paivita();
+                // Musta ruutu odottaa reliefiä (AvauksenVaihe.Musta): mittari "linssi satelliitti:musta" (esiladattu
+                // avausnäkymä lyhentää sitä minimiaikaan PaljastuksenMinimiMs asti).
+                if (mustaAlku < 0 || linssi == null || linssi.Vaihe == Matkakirja.Linssit.Astronautti.AvauksenVaihe.Musta) return;
+                VerkkoOdotus.Kirjaa("linssi", Tiedot.Id + ":musta", (Time.realtimeSinceStartup - mustaAlku) * 1000.0);
+                mustaAlku = -1f;
+            }
+            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f; }
         }
 
         // ── Profilointimerkit (`ui piikit`, KehysPiikit.cs) ────────────────
@@ -1100,10 +1110,19 @@ namespace Matkakirja.Natiivi
 
         NimiKortti nimiKortti;
 
+        float peiteAlku = -1f;
+
         public void Peite(bool paalla)
         {
             Kirjaa("peite " + (paalla ? "päälle" : "pois"));
             PeiteKasittelija?.Invoke(paalla);
+            // Pelaaja odottaa linssin kerrosta peitteen takana (topografia, vesistöt): mittari "linssi <id>:peite"
+            // (ESILATAUSPOLITIIKKA: laatat ±1 esiladataan, joten odotuksen pitäisi lyhentyä).
+            if (paalla) { peiteAlku = Time.realtimeSinceStartup; return; }
+            if (peiteAlku < 0) return;
+            VerkkoOdotus.Kirjaa("linssi", (rekisteri?.Auki?.Tiedot.Id ?? "?") + ":peite",
+                (Time.realtimeSinceStartup - peiteAlku) * 1000.0);
+            peiteAlku = -1f;
         }
 
         static readonly Unity.Profiling.ProfilerMarker MusiikkiMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Ymparisto.Musiikki");
