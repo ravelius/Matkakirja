@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 21:24 EEST (5h-kiintiö 100 %, extraUsage käytössä)
+**Päivitetty:** 2026-09-25 22:33 EEST (kiintiö nollautunut, herätykset lähetetty)
 
 ## 1) Sessiot
 
@@ -30,7 +30,7 @@ Ei avoimia kortteja.
 
 **LEPOKÄSKY LÄHETETTY 20:40 (5 h -kiintiö 95 %):** Sisältökirjuri, Linssiseppä ja Natiivi-UI kaikki toimitettu ja idle 20:4x–20:48. Fable ilmoitettu. Build 16:n polku jatkaa. Kiintiö nollautuu 22:30 EEST.
 
-**AJASTETTU (Fable 21:2x, korvaa aiemman): klo 22:31** lähetä "kiintiö nollautui, jatka luovutuksesi jonosta" Natiivisepälle (local_bf20055b-d582-4812-ba2b-b59c37a5e7b8; profilointi + lennon esilataus), Linssisepälle (local_45a869de-4d6b-4ed6-a6c9-30fd8442587e), Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86), Natiivi-UI:lle (local_33ba1387-d688-4e44-8e05-10951e61efc0) ja Pelikoodarille (local_97810d35-a79c-484b-8573-660a4c40eaa6), ja ilmoita Fablelle. GLO-30 ja käännösjuna eivät kuluta kiintiötä.
+**HERÄTYKSET LÄHETETTY 22:32:** "kiintiö nollautui, jatka luovutuksesi jonosta" → Natiiviseppä, Sisältökirjuri, Natiivi-UI, Pelikoodari (toimitettu), Linssiseppä (jonossa). Fable ilmoitettu. **GLO-30 VALMIS 22:10, eheys OK** (Karttaseppä tarkistaa). Fable hoitaa extraUsagen (7,74 €/13 €) omistajalle; extraUsage nyt pois päältä. Hälytä Fablelle jos extraUsage uudelleen käytössä ja ≥11 €.
 
 ## 3) Avoimet PR:t
 
@@ -46,10 +46,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -KIINTIÖ 100 % + EXTRAUSAGE KÄYTÖSSÄ (ilmoitettu Fablelle 21:25):** extraUsage.enabled = true, kulunut 7,74 € / 13 € kuukausiraja (59 %). Aiemmin pois päältä. Nollautuu 22:30 EEST (1 h 4 min). **Viikko (kaikki mallit):** 53 %. **Viikko (Fable):** 21 %.
-- **Paikallinen levy:** 144 Gt vapaana (hälytysraja 60 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 37 kpl. **Swap:** 0 Gt.
-- **GLO-30-nouto:** aws-virtoja 24, en0 sisään 33 Mt/s, seurantarivi 20:58 (26 min, ok), NAS-kansio 466 Gt. Ei hälytystä. Arvio valmis ~22.
-- **Simulaattorit boottina:** 0. coreaudiod 2 %. **Chrome-GPU-prosesseja:** 0.
-- **Konteksti:** Laitetestaaja 53 %, Natiiviseppä 51 %, Julkaisija 49 %, Fable 41 %, Pelikoodari 34 %. Ei ylityksiä.
-- **Juna:** viimeisin KÄÄNNETTY 20:58 (7f3979b0), ei odottavaa.
+- **5 h -kiintiö NOLLAUTUNUT 22:30:** 4 % (uusi raja 00:30 EEST). extraUsage pois päältä. **Viikko (kaikki mallit):** 53 %. **Viikko (Fable):** 22 %.
+- **Paikallinen levy:** 151 Gt vapaana (hälytysraja 60 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **Swap:** 0 Gt.
+- **GLO-30-nouto: VALMIS 22:10** (26450/26450 ruutua, 589,1 GB, eheys OK) — aws-virtoja 0 (odotettu). Ei enää seurattavaa.
+- **Juna:** KÄÄNNETTY 21:36 (7290562b); juna/b13 ac0aaadc ennallaan 22:00.
 - **Postilaatikko:** ei uutta (kärki 82c5c1d7f). **Avoimia PR:iä:** 9.
+- **Huom:** kierto oli tauolla 21:24–22:32 (~1 h; ajastus ei ketjuuntunut) — GLO-30 valmistumisen ja kiintiön nollautumisen Fable ehti hoitaa itse. Jatketaan 10 min tahdilla.
