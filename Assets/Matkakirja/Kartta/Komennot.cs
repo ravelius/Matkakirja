@@ -878,6 +878,8 @@ namespace Matkakirja
                 case "mittaus":
                 case "palvelin":
                 case "suodatus":
+                case "valmius":
+                case "kamerareitti":
                     return false;
                 case "pallo" when o.Length > 1 && o[1] == "lepo":
                     return false;
