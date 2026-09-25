@@ -73,3 +73,4 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 114 | Maakunnat-listaan valinta "pois", jolla kohdemaankin maakunnat häviävät näkyvistä. | Natiivi-UI |
 | 115 | Maakunnan mini-inforuutuun pieni kuva kyseisestä maakunnasta. Data: kuvat tilataan kuvaputkelta pelin maiden maakunnille ensin. | Sisältökirjuri (data) + Natiivi-UI (ruutu) |
 | 116 | Mini-inforuudun plusmerkki pois; tilalle tekstin loppuun "Lue lisää" (Fablen valinta omistajan kahdesta vaihtoehdosta). | Natiivi-UI |
+| 117 | Nostot (väripallojen kytkimet päälle/pois) saavat näkyä vain kohdemaassa (pelaajan maa), kuten maakunnat. | Pelikoodari (nostojen rajaus) + Natiivi-UI (kytkimet) |
