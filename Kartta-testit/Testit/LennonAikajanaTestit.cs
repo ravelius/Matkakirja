@@ -79,6 +79,29 @@ namespace Matkakirja.Kartta.Testit
             new[] { j.Syoksy, j.Sivu, j.Loitto, j.Liuku, j.Kierto, j.Tasainen, 1.0 };
 
         [Testi]
+        static void AloituslentoDynaaminen()
+        {
+            // Löydös 110: kiinteä 10 s, kaksi lähikäyntiä. Avaimet kasvavassa järjestyksessä, kone monotoninen 0 → 1,
+            // lähikäynneillä kone lähes paikallaan ja kaukana nopea.
+            var j = LennonAikajana.JaaAloitus(LennonAikajana.AloituslennonKestoS);
+            Oleta.Tosi(j.Aloitus && Math.Abs(j.KestoS - 10) < 1e-9, "kesto 10 s");
+            var a = LennonAikajana.Laske(2_392_000, 400_000, LennonAikajana.EiMaisemaa, j, t => 120);
+            for (int i = 1; i < a.Length; i++) Oleta.Tosi(a[i].Osuus >= a[i - 1].Osuus, $"avain {i}: {a[i].Osuus} < {a[i - 1].Osuus}");
+            Oleta.Tosi(a[1].Kone >= 1.9 && a[1].Etaisyys <= 15_000, "lähikäynti 1: puolet koneesta");
+            double edellinen = 0;
+            for (int i = 1; i <= 200; i++)
+            {
+                double p = LennonAikajana.KoneenOsuus(i / 200.0, j);
+                Oleta.Tosi(p >= edellinen - 1e-12, $"kone taaksepäin t={i / 200.0}");
+                edellinen = p;
+            }
+            Oleta.Tosi(Math.Abs(edellinen - 1) < 1e-9, "kone perillä");
+            double V(double t) => LennonAikajana.KoneenOsuus(t + 0.01, j) - LennonAikajana.KoneenOsuus(t, j);
+            Oleta.Tosi(V(0.17) * 5 < V(0.38), $"lähi 1 hitaampi kuin kauko: {V(0.17):0.0000} / {V(0.38):0.0000}");
+            Oleta.Tosi(V(0.55) * 5 < V(0.66), $"lähi 2 hitaampi kuin pako 2: {V(0.55):0.0000} / {V(0.66):0.0000}");
+        }
+
+        [Testi]
         static void VaiheetReferenssissa()
         {
             var j = LennonAikajana.Jaa(20);

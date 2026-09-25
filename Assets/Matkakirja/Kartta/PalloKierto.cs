@@ -132,9 +132,16 @@ namespace Matkakirja
         /// </summary>
         public static bool KuvaSumea { get; set; }
 
+        /// <summary>
+        /// Linssi auki (LinssiOhjain.Pelikerrokset): kuvasumennus ei koske linssiä. Kerronnan kuvat (KuvaSumea) jäivät
+        /// sumentamaan koko linssin, jos se avattiin kesken kerronnan (Linssisepän pariteettiajo 25.9., rivi 39:
+        /// renderScale 0,44, nimet ja kehä katosivat).
+        /// </summary>
+        public static bool LinssiAuki { get; set; }
+
         /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; PorttiAikaSeis = false; }
+        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false; }
 
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
@@ -524,7 +531,7 @@ namespace Matkakirja
             // Sumennuksen tavoite: portti 6 pt, kuvat mieto (löydös 19), muuten pois.
             // Lennon kuvauksessa (vapaaKuvaus, Nappula.Lento) ei kuvasumennusta: sumennus on koko ruudun jälkikäsittely ja
             // sumensi myös koneen, kun lento-alun luenta näytti isoisän kuvan (Laitetestaaja 24.9., iPhone, f6de924).
-            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus ? kuvaSumennusPt : 0f;
+            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus && !LinssiAuki ? kuvaSumennusPt : 0f;
             if (tavoite > 0f)
             {
                 sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);

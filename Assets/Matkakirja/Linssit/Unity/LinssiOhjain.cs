@@ -1037,6 +1037,7 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             k.Nakyvyys("kaupungit", nakyvissa);
             k.Nakyvyys("nimiot", nakyvissa);
+            PalloKierto.LinssiAuki = !nakyvissa;
             // Web body.aikajana-paalla piilottaa myös nappulan ja nostot (RAJAPINTA 4, Natiiviseppä c6c83c9).
             k.Nakyvyys("nappula", nakyvissa);
             k.Nakyvyys("pisteet", nakyvissa);
@@ -1044,6 +1045,9 @@ namespace Matkakirja.Natiivi
             // kaikki maat ilman huntua). Vertailu ja maatiedot pitävät sen kuten webissä (mitattu 24.9.,
             // lokit/linssit-loydos43-20260924/web). Rasterilinssit väistävät sen jo (KarttaKerrokset.LisaaRasteri).
             if (k.varitaso != null && (nakyvissa || !(rekisteri?.Auki is MaatSovitin))) k.varitaso.Pelikerrokset(nakyvissa);
+            // Kotimaan kehä samoin: webissä vain aikajana piilottaa sen (lauta.js:5089), ja vertailu- ja maatietolinssissä
+            // kotimaa näkyy kehällä (Linssisepän kierros 3 rivi 39). "kaupungit"-portti yllä piilotti sen kaikilta linsseiltä.
+            if (k.maaraja != null) k.maaraja.SallittuLinssissa(!nakyvissa && rekisteri?.Auki is MaatSovitin);
             // Kaupungin nimikortti pois linssin tieltä (web body.aikajana-paalla .fact-card;
             // iPad-kuvassa Pariisin kortti jäi ihmisen matkan päälle). Kortti palaa
             // seuraavasta kaupungin napautuksesta, joten palautusta ei tarvita.

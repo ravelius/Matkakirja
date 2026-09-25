@@ -413,7 +413,8 @@ namespace Matkakirja
             // Löydös 84 (omistaja 25.9. build 13): ei erillistä Lontoon zoomia. Kuva häivytetään mustaan, lennon pinta
             // latautuu verhon takana, ja verhon jälkeen kamera lähtee valintanäkymästä kohti konetta, joka on jo
             // nousussa (zoomin aika lisätään lentoon, jotta syöksy ei nopeudu).
-            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS) + lahtoZoomS, 0f, lahti, valmis, false, aloitus: true));
+            // Löydös 110: kesto on PeliOhjaimen kiinteä AloituslennonKestoS (ei enää lisätä zoomin aikaa).
+            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), 0f, lahti, valmis, false, aloitus: true));
         }
 
         /// <summary>
@@ -458,7 +459,8 @@ namespace Matkakirja
             // Lähtözoomin korkeus (Lontoo ennen koneen lähtöä).
             double lahtoKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
             // KAMERAREITTI (build 11): vaihejako lennon keston mukaan (sivukylki ≥ 1,4 s, orbit ≥ 4 s).
-            var jako = LennonAikajana.Jaa(kesto);
+            // Löydös 110: aloituslennolla oma dynaaminen aikajana (kaksi lähikäyntiä, kiinteä kesto).
+            var jako = aloitus ? LennonAikajana.JaaAloitus(kesto) : LennonAikajana.Jaa(kesto);
             koneMinimi = 0;
             // KORKEUSKERROIN (löydös 29): lennon pohja nousee liioitellun maaston yli (reitin näytteet, LennonPohja).
             double reittiM0 = math.radians(ReittiGeometria.Kulma(lat0, lon0, lat1, lon1)) * 6371000.0;
