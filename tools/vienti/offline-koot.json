@@ -13,7 +13,7 @@
    "6": 10240,
    "7": 10203,
    "8": 9459,
-   "9": 6884
+   "9": 9321
   }
  },
  "maasto": {
@@ -150,12 +150,12 @@
   "asset-miniatyyrit": 137090,
   "asset-nostot": 202831,
   "hetkikuva": 606451,
-  "juliste": 2918028,
+  "juliste": 3086581,
   "kohtaamiskuva": 588138,
-  "kuva-commons": 330462,
+  "kuva-commons": 362531,
   "kuva-flickr": 162755,
   "lippu-commons": 2729,
   "repo": 369767,
-  "muu": 642489
+  "muu": 655864
  }
 }
