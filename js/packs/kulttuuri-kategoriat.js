@@ -112524,6 +112524,271 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Great Smoky Mountains National Park',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on vuoristo, ei
+       * kaupunki: opas keskittyy eteläisiin Appalakkeihin (Great Smoky
+       * Mountains, Blue Ridge Parkway, Shenandoah) ja niitä yhdistävään
+       * Appalachian Trailiin. Taustatiedot englannin Wikipediasta
+       * (Appalachian Trail, Great Smoky Mountains National Park, Blue
+       * Ridge Parkway, Linn Cove Viaduct, Skyline Drive, Kuwohi, Mount
+       * Le Conte, Photinus carolinus, Hot Springs (North Carolina),
+       * Crooked Road (Virginia), Floyd (Virginia), Galax (Virginia),
+       * Bristol sessions, Birthplace of Country Music Museum, Qualla
+       * Boundary, Museum of the Cherokee People, Unto These Hills,
+       * Pigeon Forge, Asheville) ja Wikivoyagesta (Appalachian Trail,
+       * Great Smoky Mountains National Park, Blue Ridge Parkway,
+       * Shenandoah National Park) — teksti omaa. Wikivoyagen hinnat ovat
+       * vuosilta 2020–2024, joten hinnat ja aukioloajat on jätetty pois;
+       * Helene-myrskyn tiesulkujen tila on Wikipedian mukaan kevään 2025
+       * tieto, ja se kerrotaan vanhenevana. Nostojen ja gallerian aiheita
+       * (vuorten geologia ja sininen usva, Mount Mitchell, puulajien
+       * runsaus, New River Gorge, karhut kirsikkapuussa, puiston
+       * kävijäennätys, Cumberlandin sola, Daniel Boone, Erämaantie,
+       * hirsimökit, hiilikaivokset) ei toisteta: karhuista kerrotaan vain
+       * retkeilijän turvaohjeet. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Appalachian Trailin kyltti ja valkoinen merkki (Pennsylvania).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Flickr - Nicholas T - White Blaze.jpg',
+          lyhyt: 'Appalachian Trailin kyltti ja valkoinen reittimerkki tolpassa Delaware Water Gapissa.',
+          selite: 'Ruskea Appalachian Trail -kyltti Delaware Water Gapin '
+            + 'suojelualueella Pennsylvaniassa kertoo vaeltajien '
+            + 'leiriytymissäännöt, ja sen alla puutolpassa on reitin '
+            + 'valkoinen maalimerkki; kuva syyskuulta 2010.',
+          lahde: 'Nicholas A. Tonelli, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Appalakit eivät ole yksi nähtävyys vaan tuhansien '
+          + 'kilometrien vuorijono, joten matkailija valitsee yleensä yhden '
+          + 'alueen. Tämä opas keskittyy eteläisiin Appalakkeihin: Great '
+          + 'Smoky Mountainsin kansallispuistoon Tennesseen ja '
+          + 'Pohjois-Carolinan rajalla, sieltä pohjoiseen kiemurtelevaan '
+          + 'Blue Ridge Parkwayhin ja Virginian Shenandoahiin sekä niitä '
+          + 'kaikkia yhdistävään Appalachian Trailiin. Vuorille tarvitaan '
+          + 'auto, sillä julkista liikennettä ei juuri ole. Huipuilla on '
+          + 'selvästi viileämpää kuin laaksoissa, ja sää vaihtuu nopeasti. '
+          + 'Tiet, luvat ja säännöt muuttuvat usein — ja syyskuun 2024 '
+          + 'Helene-myrsky sulki osan teistä pitkäksi aikaa — joten tilanne '
+          + 'kannattaa tarkistaa kansallispuistojen sivuilta juuri ennen '
+          + 'matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Appalakit',
+          teksti: 'Vuorille ajetaan autolla, ja niiden halki kävellään valkoisten merkkien perässä.',
+          nosto: 'Mount LeConten majataloon ei vie yhtään tietä: tarvikkeet '
+            + 'kantavat ylös laamat ja helikopteri.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Great Smoky Mountainsia lähimmät lentoasemat ovat '
+                + 'Knoxvillessä noin 70 kilometriä lännessä ja Ashevillessä '
+                + 'noin 100 kilometriä idässä. Käytännössä vuorille '
+                + 'tarvitaan auto: esimerkiksi '
+                + 'Shenandoahiin ei kulje lainkaan julkista liikennettä. '
+                + 'Smokyjen läpi pohjoisesta etelään vie Newfound Gap Road, '
+                + 'joka yhdistää Tennesseen Gatlinburgin Pohjois-Carolinan '
+                + 'Cherokeehin. Puistoon ei peritä pääsymaksua, mutta yli '
+                + 'vartin pysäköintiin tarvitaan nykyään pysäköintilupa, ja '
+                + 'bensaa puiston sisältä ei saa. '
+                + 'Smokyjen itälaidalta alkaa Blue Ridge Parkway, 755 '
+                + 'kilometriä pitkä maisematie, joka seuraa Blue Ridgen '
+                + 'harjannetta Virginiaan asti. Tie on maksuton, kaupallinen '
+                + 'liikenne on siellä kielletty ilman erillistä lupaa, eikä '
+                + 'nopeusrajoitus ole missään yli 72 '
+                + 'km/h. Matkan varrella on 26 tunnelia, joista lähes kaikki '
+                + 'ovat Pohjois-Carolinan puolella, ja paikat merkitään '
+                + 'pohjoisesta alkavilla mailitolpilla. Tien viimeinen pala, '
+                + 'Grandfather Mountainin kylkeä kiertävä Linn Cove '
+                + 'Viaduct, valmistui vasta 1980-luvulla. Talvella tietä ei '
+                + 'aurata, ja korkeat osuudet ovat kiinni myöhäissyksystä '
+                + 'kevääseen. Helene-myrsky sulki syyskuussa 2024 koko '
+                + 'tien, ja osa siitä oli yhä suljettuna keväällä 2025, joten '
+                + 'reitti on tarkistettava ennen lähtöä. Parkwayn '
+                + 'pohjoispäästä matka jatkuu Skyline Drivena Shenandoahin '
+                + 'kansallispuiston läpi, ja siellä peritään pääsymaksu.',
+              kuva: [
+                {
+                  tiedosto: 'Linn Cove Viaduct in the Autumn.jpg',
+                  lyhyt: 'Linn Cove Viaduct kiertää Grandfather Mountainin kylkeä ruskan keskellä.',
+                  selite: 'Betoninen siltatie kaartuu S-mutkana oranssien '
+                    + 'ja punaisten lehtipuiden sekä tummien kuusten '
+                    + 'keskellä, ja taustalla siintää sinisiä '
+                    + 'vuorenhuippuja.',
+                  lahde: 'Goins, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Blue Ridge Parkway NC.jpg',
+                  lyhyt: 'Kivimuurattu tunneli Blue Ridge Parkwaylla Yanceyn piirikunnassa.',
+                  selite: 'Kaksikaistainen tie keltaisine keskiviivoineen '
+                    + 'katoaa kivimuuratun kaariportin kautta vuoren sisään '
+                    + 'tiheän lehtimetsän alla Pohjois-Carolinassa; kuva '
+                    + 'syyskuulta 2021.',
+                  lahde: 'Maria newengland, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Skyline Drive overlook view.jpg',
+                  lyhyt: 'Näköalapaikka Skyline Drivella Shenandoahin kansallispuistossa Virginiassa.',
+                  selite: 'Kivimuurin reunustamalta levennykseltä avautuu '
+                    + 'kesäinen näkymä metsäisten harjanteiden yli '
+                    + 'peltojen kirjomaan laaksoon; kuva heinäkuulta 2020.',
+                  lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Valkoisten merkkien polku',
+              teksti: 'Appalachian Trail kulkee noin 3 500 kilometriä '
+                + 'Georgian Springer Mountainilta Mainen Katahdinille ja '
+                + '14 osavaltion halki. Metsänhoitaja Benton MacKaye '
+                + 'ehdotti reittiä 1921, ja vapaaehtoiset saivat sen '
+                + 'yhtenäiseksi 1937. Polku on merkitty puihin ja kiviin '
+                + 'maalatuin valkoisin suorakaiteen muotoisin merkein; '
+                + 'siniset merkit vievät sivupoluille, laavuille ja '
+                + 'näköalapaikoille. '
+                + 'Koko matkan yrittää vuosittain yli 3 000 ihmistä, mutta '
+                + 'perille pääsee Appalachian Trail Conservancyn arvion '
+                + 'mukaan vain noin neljännes. Useimmat lähtevät Georgiasta '
+                + 'keväällä ja kulkevat lämmön mukana pohjoiseen viidestä '
+                + 'seitsemään kuukautta. Matkalla on yli 250 laavua ja '
+                + 'leiripaikkaa, ja laavujen vihkoihin kirjoitetaan '
+                + 'viestejä omalla retkinimellä. '
+                + 'Useimmat reitin käyttäjät kävelevät kuitenkin vain '
+                + 'päivän tai muutaman: osuuksia kulkee vuosittain yli '
+                + 'kolme miljoonaa ihmistä, eikä suurimmalle osalle '
+                + 'reitistä tarvita lupaa. Poikkeuksia ovat Smokyt, '
+                + 'Shenandoah ja Mainen Baxterin osavaltiopuisto. Monessa '
+                + 'pikkukaupungissa polku kulkee suoraan keskustan läpi, '
+                + 'kuten Pohjois-Carolinan Hot Springsissä. Länsi-Virginian '
+                + 'Harpers Ferryssä, reitin "henkisellä puolivälillä", '
+                + 'toimii ATC:n päämaja, jossa pitkän matkan vaeltajat '
+                + 'kuvataan vuoden vaeltaja-albumiin.',
+              kuva: {
+                tiedosto: 'Hiker being photographed at ATC for the thru-hiker album.jpg',
+                lyhyt: 'Vaeltaja poseeraa Harpers Ferryssä ATC:n talon edessä vuosialbumin kuvaa varten.',
+                selite: 'Punapaitainen vaeltaja nostaa kädet ilmaan '
+                  + 'Appalachian Trail Conservancyn kivitalon edessä, kun '
+                  + 'mies kuvaa häntä; seinustalla lepäävät rinkat ja '
+                  + 'vaellussauvat. Kuva heinäkuulta 2018.',
+                lahde: 'HLKirk, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö metsässä ja karhujen naapurina',
+              teksti: 'Great Smoky Mountainsin takamailla saa yöpyä vain '
+                + 'merkityillä leiripaikoilla ja laavuissa, ja jokaiseen '
+                + 'yöhön tarvitaan lupa ja varaus. Laavussa saa olla yhden '
+                + 'yön ja leiripaikalla enintään kolme. Autolla '
+                + 'saavutettavia leirintäalueita puistossa on kymmenen. '
+                + 'Mustakarhuja puistossa arvioidaan olevan noin 1 900, '
+                + 'vaikka luku vaihtelee, joten '
+                + 'ruokaa ei jätetä vartioimatta eikä koskaan viedä '
+                + 'telttaan: leirintäalueella se kuuluu suljettuun autoon '
+                + 'ja takamailla karhuvaijeriin ripustettuna tai '
+                + 'karhunkestävään rasiaan. Karhua ei lähestytä eikä '
+                + 'ruokita — jos eläimen käytös muuttuu, olet jo liian '
+                + 'lähellä. Puiston 23 käärmelajista vain kaksi on '
+                + 'myrkyllisiä, eikä kumpikaan ole hyökkäävä. '
+                + 'Vesiputouksille ei pidä kiivetä, sillä niillä on '
+                + 'sattunut kuolemantapauksia, ja puroveden saa juoda vain '
+                + 'keitettynä tai suodatettuna. Pohjoisempana '
+                + 'Appalachian Traililla vaivana ovat punkit ja niiden '
+                + 'levittämä borrelioosi. Kännykkäyhteys katkeaa usein, '
+                + 'joten reitti kannattaa kertoa jollekulle etukäteen. '
+                + 'Huipulla voi olla 5–10 astetta kylmempää kuin laaksossa. '
+                + 'Puiston ainoa majatalo, Mount LeConten huipun '
+                + 'hirsimökkimajatalo, on noin 50 vieraan kokoinen ja '
+                + 'tavoitettavissa vain kävellen, vähintään kahdeksan '
+                + 'kilometrin nousulla. Sen tarvikkeet kantavat ylös '
+                + 'laamakaravaanit ja helikopteri, ja paikat varataan '
+                + 'usein yli vuotta etukäteen.',
+              kuva: {
+                tiedosto: 'LeConte Lodge Llamas.jpg',
+                lyhyt: 'Laamat Trillium Gap Traililla, jota pitkin LeConten majatalon tarvikkeet kannetaan.',
+                selite: 'Sinitakkinen nainen taluttaa kahta laamaa, '
+                  + 'valkoista ja mustaa, joiden selässä on kantolaukut, '
+                  + 'kapealla metsäpolulla korkeiden puiden ja '
+                  + 'rododendronien keskellä; kuva toukokuulta 2018.',
+                lahde: 'ZachN 0421, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruska, kukat ja tulikärpäset',
+              teksti: 'Appalakkien tunnetuin sesonki on ruska. Blue Ridge '
+                + 'Parkwaylla lehdet alkavat värittyä huipuilla syyskuun '
+                + 'lopulla, ja väri valuu laaksoihin lokakuun loppuun '
+                + 'mennessä. Lokakuun alkupuolella voi nähdä kolme '
+                + 'vuodenaikaa yhtä aikaa: kylmällä harjanteella puut ovat '
+                + 'jo paljaita, rinteet hehkuvat punaisina ja keltaisina, ja '
+                + 'laaksot ovat vielä vihreitä. Smokyissa syksy on myös vuoden kuivinta '
+                + 'aikaa, mutta suosio näkyy ruuhkina: Shenandoahin Skyline '
+                + 'Drivella ajaa lokakuun puolivälin jälkeen satojatuhansia '
+                + 'autoilijoita, joten näköalapaikoille kannattaa lähteä '
+                + 'aamulla ja arkena. Värien ajankohta vaihtelee vuosittain '
+                + 'sään mukaan. '
+                + 'Keväällä vuoret ovat rauhallisempia. Kesäkuussa '
+                + 'kukkivat violetit alppiruusut ensin Virginian Peaks of '
+                + 'Otterilla ja kesäkuun kolmannella viikolla Pohjois-'
+                + 'Carolinan Craggy Gardensissa. '
+                + 'Erikoisin näytös nähdään touko–kesäkuun vaihteessa '
+                + 'Smokyjen Elkmontissa, kun Photinus carolinus '
+                + '-tulikärpäset välkkyvät tahdissa: koiraat välähtävät '
+                + 'muutaman sekunnin ajan yhtä aikaa ja pimenevät sitten '
+                + 'noin kymmeneksi sekunniksi. Näytös kestää vain parisen '
+                + 'viikkoa, ja katsojamäärää säännöstellään. Kävijät on '
+                + 'viety alueelle kuljetuksella Sugarlandsin '
+                + 'vierailukeskukselta, ja järjestelyt kannattaa tarkistaa '
+                + 'puiston sivuilta hyvissä ajoin keväällä.',
+              kuva: {
+                tiedosto: 'Photinus carolinus Great Smoky Mountains.jpg',
+                lyhyt: 'Tahdissa välkkyvät tulikärpäset valaisevat metsänpohjan Great Smoky Mountainsissa.',
+                selite: 'Pitkä valotus tallentaa pimeään lehtimetsään '
+                  + 'satoja keltaisia valopisteitä ja -viiruja, kun '
+                  + 'Photinus carolinus -tulikärpäset välkkyvät; kuva '
+                  + 'toukokuulta 2017.',
+                lahde: 'Niemand für Polyphemus, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Porttikaupungit ja vuorten musiikki',
+              teksti: 'Smokyjen pohjoisportilla Tennesseessä Gatlinburg ja '
+                + 'Pigeon Forge ovat täynnä motelleja, ravintoloita ja '
+                + 'huvipuistoja, kuten läheisestä Seviervillestä '
+                + 'kotoisin olevan Dolly Partonin Dollywood. Pohjois-'
+                + 'Carolinan puolella majoitusta löytyy usein '
+                + 'helpommin ja edullisemmin, esimerkiksi Cherokeesta ja '
+                + 'Bryson Citystä. Cherokee on Itäisen tšerokiheimon '
+                + 'pääkaupunki Qualla Boundaryn alueella, jonka heimo osti '
+                + 'itselleen 1870-luvulla. Kaupungin museo uudistettiin ja '
+                + 'nimettiin 2023 Museum of the Cherokee Peopleksi, ja '
+                + 'kesäisin ulkoilmateatterissa esitetään vuodesta 1950 '
+                + 'pyörinyttä näytelmää Unto These Hills. Heimon '
+                + 'aloitteesta Smokyjen korkein huippu Clingmans Dome sai '
+                + 'syyskuussa 2024 virallisesti tšerokinkielisen nimen '
+                + 'Kuwohi. Idempänä Asheville tunnetaan taiteilijakortteleistaan '
+                + 'ja Biltmoren kartanostaan, mutta Helene-myrskyn tulvat '
+                + 'runtelivat kaupunkia pahoin syksyllä 2024. '
+                + 'Virginian lounaiskulmassa kiemurtelee noin 480 kilometrin '
+                + 'Crooked Road, vuoriston perinnemusiikin reitti. Floydin '
+                + 'kyläkaupassa paikalliset yhtyeet soittavat '
+                + 'perjantai-iltaisin, ja Galaxissa on pidetty old-time- ja '
+                + 'bluegrass-soittajien kokoontumista vuodesta 1935. '
+                + 'Bristolia kutsutaan kantrimusiikin syntysijaksi: '
+                + 'kaupungin museo kertoo vuoden 1927 äänityksistä, joilla '
+                + 'Carter Family ja Jimmie Rodgers tekivät '
+                + 'ensilevytyksensä.',
+              kuva: {
+                tiedosto: 'Kate and the Bubbatones Friday Night Jamboree Floyd Country Store Floyd VA October 2010.jpg',
+                lyhyt: 'Bluegrass-yhtye soittaa Floyd Country Storen perjantai-illan jamboreessa.',
+                selite: 'Kitaristi, viulisti ja banjonsoittaja soittavat '
+                  + 'mikrofonien edessä puupaneloidun salin lavalla '
+                  + 'Floydissa Virginiassa; kuva lokakuulta 2010.',
+                lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
