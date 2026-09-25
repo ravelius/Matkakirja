@@ -52,6 +52,10 @@ namespace Matkakirja.Natiivi
 
         // Nykyinen ele ja lepo.
         string ele, omistaja, jatko, lepoEle;
+        /// <summary>Lepoasennon vaihe lepoEle-eleessä (chatDashOut 1 = piilossa, web lepoTila).</summary>
+        float lepoP;
+        /// <summary>Löydös 66: chatin odotus käynnissä (web chatOdotus).</summary>
+        bool chatOdotus;
         Action eleValmis;
         float eleAlkoi, eleKesto;
         bool nukkuu, ensisaapunut, nakyvissa = true;
@@ -159,7 +163,7 @@ namespace Matkakirja.Natiivi
             if (ele == null)
             {
                 tila.Ele = nukkuu ? "sleep" : (lepoEle ?? "blink");
-                tila.P = nukkuu ? 0.5f : 0f;
+                tila.P = nukkuu ? 0.5f : lepoEle != null ? lepoP : 0f;
             }
             // Nokka liikkuu puheen ajan (ei liike-eleissä).
             bool puhuu = Aanet.PuluPuhuu && (ele == null || LiviaEleet.Ryhma(ele) != "Liike");
@@ -173,7 +177,8 @@ namespace Matkakirja.Natiivi
             // Paikka ja koko (kortti auki → yläpuolelle, modaali → 0,72).
             var reunat = kerros.Reunat(Kerros);
             alue.style.bottom = Alareuna(reunat.w);
-            bool modaali = SyoteLukko.Estetty;
+            // Löydös 66: chatissa täysi kokopulu (web livia-chat-tila: pieni vain lehdessä, passissa ja visassa).
+            bool modaali = SyoteLukko.Estetty && !(UiNakymat.Olemassa && UiNakymat.Hae().Chat?.Auki == true);
             alue.style.right = Oikea(reunat.z);
             alue.EnableInClassList("mk-pulu--pieni", modaali);
         }
@@ -288,8 +293,43 @@ namespace Matkakirja.Natiivi
                 _ => null,
             };
             if (valmis == "sleep") nukkuu = true;
+            // Chatin odotus: salamana ulos lähtenyt pulu pysyy piilossa vastaukseen asti (web lepoTila chatDashOut p = 1).
+            if (valmis == "chatDashOut" && chatOdotus) { lepoEle = "chatDashOut"; lepoP = 1f; }
             string seuraavaksi = seuraava ?? paluu;
             if (seuraavaksi != null) alue.schedule.Execute(() => { if (ele == null) Toista(seuraavaksi); }).StartingIn(paluu != null ? 1500 : 800);
+        }
+
+        // --- chatin odotus (löydös 66, web livia-eleet.js chatOdotus, pinkaiseChatista, 176–198) ----------
+
+        /// <summary>Kysymys lähti: pulu salamana ulos (chatDashOut 300 ms) ja piiloon vastaukseen asti.</summary>
+        public void ChatOdotusAlkoi()
+        {
+            if (!nakyvissa) return;
+            chatOdotus = true;
+            Toista("chatDashOut", "chatWaiting");
+        }
+
+        /// <summary>Ensimmäinen pala: takaisin (chatDashBack 100 ms), pölyt pois (1400 ms) ja kirjan selaus (4400 ms).</summary>
+        public void ChatVastausAlkoi()
+        {
+            if (!chatOdotus) return;
+            chatOdotus = false;
+            bool poissa = lepoEle == "chatDashOut" || ele == "chatDashOut";
+            lepoEle = null;
+            if (!poissa) { Toista("bookStudy", "chatAnswer"); return; }
+            Toista("chatDashBack", "chatAnswer", null, () =>
+                Toista("chatDustOff", "chatAnswer", null, () => Toista("bookStudy", "chatAnswer")));
+        }
+
+        /// <summary>Odotus päättyi ilman vastausta (virhe, katkos) tai chat suljettiin: pulu takaisin näkyviin.</summary>
+        public void ChatOdotusLoppui()
+        {
+            bool poissa = lepoEle == "chatDashOut" || ele == "chatDashOut";
+            chatOdotus = false;
+            if (!poissa) return;
+            lepoEle = null;
+            Katkaise();
+            Toista("chatDashBack", "chatAnswer");
         }
 
         // --- tilanteet (webin ilmoitaLivianTilanne) ---------------------------------
@@ -303,10 +343,21 @@ namespace Matkakirja.Natiivi
         {
             float nyt = Aika;
             if (!nakyvissa) return false;
+            // Chat kiinni kesken odotuksen tai vastausketjun: pulu takaisin ja wink (web chatClose katkaisee dash/dustOff).
+            if (laji == "chatClose")
+            {
+                if (chatOdotus || lepoEle == "chatDashOut") ChatOdotusLoppui();
+                if (omistaja == "chatAnswer" || omistaja == "chatWaiting") Katkaise();
+            }
             if (ele != null && LiviaEleet.Ryhma(ele) == "Liike") return false;
+            // Web livia-eleet.js:508: isoisän luenta estää chatin answer-eleen.
+            if (laji == "answer" && Aanet.KertojaPuhuu) return false;
+            // Web 505: welcome ei soi, jos odotus on jo auki.
+            if (laji == "chatOpen" && chatOdotus) return false;
             if (laji == "bunGranted") { Aanet.PulunTehoste("pulu.pulla-riemu"); return Toista("bunFeast", laji); }
             if (laji == "narrationEnd") { if (omistaja == "narration" || omistaja == "reaction") Katkaise(); return false; }
-            bool vapaa = laji == "card" || laji == "narration" || laji == "answer" || laji == "reaction" || laji == "microphone" || laji == "error";
+            bool vapaa = laji == "card" || laji == "narration" || laji == "answer" || laji == "reaction" || laji == "microphone" || laji == "error"
+                || laji == "chatOpen" || laji == "chatClose";
             if (!vapaa && nyt - viimeTilanne < VahimmaisVali) return false;
             if (Aanet.PuluPuhuu && laji != "photo") return false;
             string id = laji switch
@@ -316,6 +367,8 @@ namespace Matkakirja.Natiivi
                 "emotion" => TunteenEle(tunne),
                 "error" => TunteenEle(tunne), // web virhereaktio: tunnetagin ele (sanelu: hämmentynyt)
                 "microphone" => "listen",     // web livia-eleet: mikrofoni auki → kuuntelee
+                "chatOpen" => "welcome",      // löydös 66, web livia-eleet.js:524
+                "chatClose" => "wink",
                 "answer" => RepliikinEle(teksti) is var r && r != "blink" ? r : "smile",
                 "card" => AiheenEle(symboli, teksti),
                 "photo" => kaupunki == "venetsia" ? "love" : "present",
