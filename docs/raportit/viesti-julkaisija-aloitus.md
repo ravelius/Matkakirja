@@ -18,8 +18,8 @@ pyydä Karttaseppää pysäyttämään käynnissä oleva poltto. Ajastettu yöaj
 (#3152). Sudo-huoltokomennot ovat mainissa (#3142). Tiimi RCD77XPB7M. Julkiseen TestFlight-ryhmään EI mitään
 ilman omistajaa.
 
-Ensimmäisenä: (1) tarkista #3133 (sisältöpaketti 1.39): jos MERGED, ilmoita versio Natiivisepälle ja
-Natiivi-UI:lle, kun "Vie sisältöpaketti ämpäriin" on vihreä; jos OPEN, `zsh jono.sh 3133`. (2) Aja sisältöjuna
+Ensimmäisenä: (1) #3133 (sisältöpaketti 1.39) on mainissa v2218: kun "Vie sisältöpaketti ämpäriin" on
+vihreä, ilmoita versio 1.39 Natiivisepälle ja Natiivi-UI:lle. (2) Aja sisältöjuna
 #3147 #3148 #3150 #2991, kun kuorma (vm.loadavg) on alle ~150. (3) Luo tuntihaku :17 (Codex-posti
 claude/postilaatikko, checkpoint 7755d9c5a; junan tarve). Levy: yksi PR-worktree kerrallaan, Unity-vienti
 vain ≥ 30 Gt.

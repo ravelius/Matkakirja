@@ -29,10 +29,9 @@ viesti-julkaisija-luovutus-20260924-yo.md.
 
 ## Kesken
 
-- **#3133 (sisältöpaketti 1.39, karttavalot.ankkuri/.puoli):** Fable hyväksyi, ja jono.sh ajoi sitä
-  luovutushetkellä. Tarkista `gh pr view 3133`. Jos se on MERGED, tarkista "Vie sisältöpaketti ämpäriin"
-  -ajo mainilla ja ilmoita versio (1.39) Natiivisepälle ja Natiivi-UI:lle (Fablen käsky). Jos se on OPEN, aja
-  `zsh jono.sh 3133`.
+- **#3133 (sisältöpaketti 1.39, karttavalot.ankkuri/.puoli) MERGED v2218** klo 12.3x (Fablen lupa). Tarkista
+  "Vie sisältöpaketti ämpäriin" -ajo mainilla. Kun se on vihreä, ilmoita versio 1.39 Natiivisepälle ja
+  Natiivi-UI:lle (Fablen käsky) — EI vielä ilmoitettu.
 - **Sisältöjuna valmiina lähtöön (4 vihreää, Sisältökirjuri):** #3147 (galleria59-integraatio), #3148 ja
   #3150 (turistiopas erät 1–2) sekä #2991 (Bergenin ja Sevillan julisteet; vihreä klo 12.2x commitilla
   0ac29c755, juurisyy puuttuva kuva.leveys, pito purettu). Aja ensimmäisenä, kun kuorma on alle ~150:
