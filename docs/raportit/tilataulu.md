@@ -32,7 +32,9 @@ Ei avoimia kortteja tiedossa juuri nyt. coreaudiod ~0 % CPU, vakaa.
 
 **UUSI SÄÄNTÖ (Fable 09:3x, sitova): muistiseuranta.** 1) `sysctl vm.swapusage` — hälytys >16 Gt käytössä. 2) Simulaattorit joissa peli ei ole pyörinyt 30 min sammutetaan kokonaan (`xcrun simctl shutdown <UDID>`), ei vain peli — SimMetalHost vie 1,6 Gt/simulaattori. 3) Yli 4 rinnakkaista "Google Chrome for Testing" GPU-prosessia → ilmoita Julkaisijalle.
 
-**HAVAINTO (09:23, ilmoitettu):** vm.swapusage used = 22,3 Gt (raja 16 Gt ylittyi) — ilmoitettu Fablelle. 6 Chrome for Testing GPU-prosessia samanaikaisesti (raja 4) — ilmoitettu Julkaisijalle. 6 simulaattoria yhä boottina, vanhin 04:36 asti (yli 5h) — ei vielä sammutettu, rooli ei ole nollattu, ei tehty itse toimenpidettä.
+**HAVAINTO (09:23, ilmoitettu):** vm.swapusage used = 22,3 Gt (raja 16 Gt ylittyi) — ilmoitettu Fablelle. 6 Chrome for Testing GPU-prosessia samanaikaisesti (raja 4) — ilmoitettu Julkaisijalle.
+
+**Simulaattorien sammutuskierros (Fable, jälkiviesti):** Fable sammuttaa itse iPad Pro 13:n (3B4CDACB). Postivahti välitti pyynnöt: Natiiviseppä → natiiviseppa-iPhone (FBBD41D7), Linssiseppä → linssiseppa-iPhone (D0D2CD1E), Laitetestaaja → iPhone 18 Pro (1572C658) + koordinoi iPad Pro 11:n (503000D1) kanssa Natiivi-UI:n, Natiivi-UI → iPad Pro 11 (503000D1, peli pyörii, koordinoi Laitetestaajan kanssa), iPhone 17 (FB234D08) jää Natiivi-UI:lle todennuksiin. Sivutus ei laske ennen kuin prosessit vapauttavat muistin — **Postivahti raportoi tilanteen Fablelle n. klo 10:23** (tunnin päästä).
 
 ## 3) Avoimet PR:t
 
