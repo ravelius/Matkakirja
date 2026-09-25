@@ -25,6 +25,12 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 /** Oletusrajat. Kaikki voi ohittaa tuomio(…, rajat)- ja parita(…, rajat)-kutsuissa. */
+/** Yläpalkin alaraja web-px:nä (keskipiste): ks. OLETUSRAJAT.ylapalkkiPx. */
+export const YLAPALKKI_PX = 72;
+const palkissa = (e, raja = YLAPALKKI_PX) => e && e.y + e.h / 2 <= raja;
+/** Pari on palkissa, kun se on yläpalkin korkeudella molemmissa (koko näkymän siirto vie parin pois palkista). */
+const pariPalkissa = (p, raja = YLAPALKKI_PX) => palkissa(p.web, raja) && palkissa(p.natiivi, raja);
+
 export const OLETUSRAJAT = Object.freeze({
   sijaintiPx: 8, // keskipisteiden ero web-px (|dx| ja |dy|)
   kokoOsuus: 0.15, // leveys- ja korkeusero suhteessa web-kokoon
@@ -42,6 +48,10 @@ export const OLETUSRAJAT = Object.freeze({
   sanaOsuus: 0.6, // … kun lyhyemmän sanoista vähintään tämä osuus on toisessa (sisältymiskerroin)
   kokoamisSade: 48, // katkelmat kootaan yhdeksi tekstiksi tämän säteen sisältä (web-px siirron jälkeen)
   siirtoOsuus: 0.4, // koko näkymän yhteinen siirto (turva-alue) on huomautus, kun ≤ tämä osuus paneelista
+  // Yläpalkki (web-px, keskipiste): palkin tekstit (logo, raha ja päivä -pilleri) ovat ankkuroituja yläreunaan, joten
+  // niistä ei vähennetä näkymän siirtoa eikä niitä käytetä sen laskemiseen (Natiivi-UI 25.9.: iPadin pilleri näytti
+  // −27…+17 px:n erolta, kun siirto laskettiin linssin omista liikkuvista teksteistä; raakaero oli 1–2 px).
+  ylapalkkiPx: YLAPALKKI_PX,
   kuvaSiirto: 0.15, // kuvavertailu hakee parhaan pystysiirron ± tämä osuus korkeudesta
   // Webin karttanimet (maa-, vesi- ja kaupunkinimet pallolla) ovat natiivissa 3D-kerrosta eivätkä näy UI-puussa:
   // tekstivertailu ohittaa ne, ja kartan vertaa kuvaero (b12-2-ajo: linssirivien PUUTTUU tuli pelkistä karttanimistä).
@@ -359,7 +369,7 @@ export function parita(web, natiivi, rajat = {}) {
    * turva-alue (Dynamic Island, kotipalkki) siirtää koko sisällön, eikä se ole
    * jokaisen tekstin virhe. tuomio vertaa pareja siirron jälkeen.
    */
-  const perus = parit.filter((p) => p.laatu === 'tarkka' && !p.pitka);
+  const perus = parit.filter((p) => p.laatu === 'tarkka' && !p.pitka && !pariPalkissa(p));
   const siirto = perus.length >= 3 ? { dx: mediaani(perus.map((p) => p.dx)), dy: mediaani(perus.map((p) => p.dy)) } : { dx: 0, dy: 0 };
 
   parit.sort((p, q) => p.web.y - q.web.y || p.web.x - q.web.x);
@@ -507,7 +517,7 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
   const pan = paritus?.paneeli;
   const siirtoOk = !pan || (Math.abs(siirto.dx) <= pan.w * r.siirtoOsuus && Math.abs(siirto.dy) <= pan.h * r.siirtoOsuus);
   const sx = siirtoOk ? siirto.dx : 0, sy = siirtoOk ? siirto.dy : 0;
-  const ero = (p) => ({ dx: p.dx - sx, dy: p.dy - sy });
+  const ero = (p) => (pariPalkissa(p, r.ylapalkkiPx) ? { dx: p.dx, dy: p.dy } : { dx: p.dx - sx, dy: p.dy - sy });
   const poikkeama = (p) => (r.sallitutPoikkeamat ?? []).find((s) => s.teksti.test(p.web.avain ?? normalisoi(p.web.teksti))
     && (s.yEnintaan == null || p.web.y + p.web.h / 2 <= s.yEnintaan));
   const sallitut = parit.filter(poikkeama);
