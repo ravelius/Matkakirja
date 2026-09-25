@@ -1312,3 +1312,23 @@ test('skeema 1.38: kaupunkien asukasluku Wikidatasta (Linssiseppä)', () => {
   assert.ok(lontoo.asukkaat > 3e6 && !lontoo.asukkaatAlue);
   assert.equal(k.find((c) => c.id === 'sumatra').asukkaatAlue, true);
 });
+
+test('skeema 1.39: karttavalojen webin ankkuri ja nimiön kylki (Natiivi-UI, löydös 50 C)', async () => {
+  const { lukittuAnkkuri } = await import('../js/pallolauta/nostoankkurit.js');
+  const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
+  let ankkureita = 0;
+  for (const v of valot) {
+    assert.ok('ankkuri' in v && 'puoli' in v, v.id);
+    assert.ok(v.puoli === null || ['oikea', 'vasen', 'yla', 'ala'].includes(v.puoli), `${v.id}: ${v.puoli}`);
+    if (v.lahde !== 'fokuskohde' && v.lahde !== 'takynosto' && v.lahde !== 'maalehtinosto') continue;
+    const l = lukittuAnkkuri(`nosto:${v.tunnus}`, v.maa);
+    assert.deepEqual(v.ankkuri, l ? { lat: l.lat, lon: l.lng } : null, v.id);
+    if (v.ankkuri) ankkureita += 1;
+  }
+  assert.ok(ankkureita > 400, `ankkureita ${ankkureita}`);
+  // Mittauksen esimerkki: Versailles on webissä omassa paikassaan, ei Pariisin kyljessä.
+  const vers = valot.find((v) => v.maa === 'FRA' && v.nimi === 'Versaillesin peilisali');
+  assert.ok(vers && Math.abs(vers.ankkuri.lat - 48.806) < 0.01 && Math.abs(vers.ankkuri.lon - 2.12) < 0.01, JSON.stringify(vers?.ankkuri));
+  const iraklion = valot.find((v) => v.maa === 'GRC' && v.tunnus === 'iraklion');
+  assert.deepEqual(iraklion.ankkuri, { lat: 35.341508, lon: 25.133 });
+});

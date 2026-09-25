@@ -179,8 +179,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.38 kaupungit.asukkaat (Linssiseppä, radiouudistus): Wikidata P1082 (CC0),
  *        asukkaatVuosi, asukkaatAlue (luku koskee saarta/valtiota), asukkaatLahde
  *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
+ *   1.39 karttavalot.ankkuri (webin lukittu ankkuri, js/packs/nostoankkurit-<iso>.js) ja
+ *        karttavalot.puoli (nimiön poltettu kylki) — Natiivi-UI, löydös 50 C.
  */
-export const SKEEMAVERSIO_TARKKA = '1.38';
+export const SKEEMAVERSIO_TARKKA = '1.39';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 

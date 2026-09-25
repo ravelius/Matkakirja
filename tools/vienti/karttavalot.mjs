@@ -39,6 +39,7 @@ import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
 import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
 import { elaintakyKarttarivit } from '../../js/elaintaky-rivit.js';
 import { napanostonRivi } from '../../js/pallolauta/nostot.js';
+import { lukittuAnkkuri } from '../../js/pallolauta/nostoankkurit.js';
 import { MAASTOKOHTEET_ATA } from '../../js/packs/maastokohteet-ata.js';
 import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
@@ -134,7 +135,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const [paikka, paikkaLahde] = rivi.paikka ? [rivi.paikka, rivi.lahde === 'napakohde' ? 'alue' : 'data']
       : kaupunkiNimet.has(rivi.kaupunkiAvain) ? [kaupunkiNimet.get(rivi.kaupunkiAvain), 'kaupunki']
         : maaNimi(rivi.maa) ? [maaNimi(rivi.maa), 'maa'] : [null, null];
-    rivit.push({ ...rivi, id, paikka, paikkaLahde });
+    rivit.push({ ankkuri: null, puoli: null, ...rivi, id, paikka, paikkaLahde });
   };
   const kaupunkiKohteelle = (k) => (tarkeydet.has(k?.kaupunki) ? k.kaupunki : (tarkeydet.has(k?.id) ? k.id : null));
   /*
@@ -162,9 +163,19 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       if (!oma) continue;
       const kaupunki = lahde === 'fokuskohde' ? kaupunkiKohteelle(kohde) : null;
       pallolla.add(m.id);
+      /*
+       * Skeema 1.39 (Natiivi-UI, löydös 50 C): webin merkin paikka ja kylki.
+       * Web piirtää noston maan lukittuun ankkuriin (js/pallolauta/nostot.js:
+       * lukittuAnkkuri(`nosto:<id>`, iso), js/packs/nostoankkurit-<iso>.js),
+       * jos sellainen on; muuten se levittää merkit ruudulla `ladottu`-
+       * pisteestä. Nimiön kylki on väistön poltettu päätös (maanKohdemerkit
+       * `puoli`: oikea/vasen/yla/ala) tai null = web kokeilee oikea ensin.
+       */
+      const lukko = lukittuAnkkuri(`nosto:${m.id}`, iso);
       lisaa({
         id, tunnus: m.id, aihe, kategoria: m.kategoria, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
         ladottu: asteiksi(P.id, m.x, m.y), maa: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
+        ankkuri: lukko ? { lat: lukko.lat, lon: lukko.lng } : null, puoli: m.puoli ?? null,
         tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (kohde.taso ?? 1),
         taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
         lahizoom: Boolean(kohde.lahi), paakartalla: true, kohdekartta: kk?.kaupunki ?? null,
@@ -223,7 +234,10 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       + 'KARTTAVALO_AIHEET) = nostosymPaakategoria(kategoria), kategoria = merkin symbolikategoria, nimi = kohteen nimi, '
       + 'nimio = kartan nimiö (null = web ei näytä nimeä), paikka = paikan nimi, aina täytetty (paikkaLahde: data = noston tai kortin oma paikka, alue = napa-alue, kaupunki = kaupunkijäsenyyden kaupunki, maa = maan nimi), '
       + 'lat/lon = noston oma paikka (kohdekartan piste, jos nosto on kohdekartalla, muuten laudan datapiste asteina), ladottu = '
-      + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu), maa (ISO3), tunnus = pelin '
+      + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu), '
+      + 'ankkuri = { lat, lon } webin lukittu ankkuri (skeema 1.39; js/packs/nostoankkurit-<iso>.js, web piirtää merkin '
+      + 'tähän; null = maalla ei lukittua ankkuria ja web levittää merkit ruudulla ladotusta pisteestä), puoli = nimiön '
+      + 'kylki poltetusta väistöstä (oikea, vasen, yla, ala; null = web kokeilee oikea ensin), maa (ISO3), tunnus = pelin '
       + 'noston tunnus. lahde: fokuskohde, skandaalit, historianHetket, syvennys, takynosto, maalehtinosto, elaintaky, napakohde. '
       + 'paakartalla = piirtyykö pallon pääkartalle; false = nosto on vain kaupunkilehden kohdekartalla (kohdekartta = kaupunki; '
       + 'web karsii sen pääkartalta, js/fokuskohteet.js karsiKaupunkikartanNostot). lahizoom = näkyy vasta lähizoomissa (Ranskan '

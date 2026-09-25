@@ -16,10 +16,11 @@
   "1.35": "7a7178d9759be893",
   "1.36": "da7f54e6ae671424",
   "1.37": "1f3dae321dc1fa92",
-  "1.38": "8ecfeec7eec821e1"
+  "1.38": "8ecfeec7eec821e1",
+  "1.39": "3c9e4ae05bfc9dcb"
  },
  "uusin": {
-  "skeemaversio": "1.38",
+  "skeemaversio": "1.39",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -150,6 +151,7 @@
    ],
    "karttavalot": [
     "aihe",
+    "ankkuri",
     "id",
     "kategoria",
     "kaupunki",
@@ -167,6 +169,7 @@
     "paakartalla",
     "paikka",
     "paikkaLahde",
+    "puoli",
     "takynosto",
     "tarkeys",
     "taso",
