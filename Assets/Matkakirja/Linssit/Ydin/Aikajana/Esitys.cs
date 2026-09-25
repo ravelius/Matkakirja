@@ -175,10 +175,12 @@ namespace Matkakirja.Linssit.Aikajana
             if (Kaynnissa || Paattynyt) return;
             nakyma.Musta(true, 0);
             // Avaruus (web avaaKaukaisuus) ajetaan tempon dramaturgialla (Raamattu KAMERA-AJOT 24.9.):
-            // ensimmäinen virke mustalla kaupungin yllä, NOUSU tähtiin mustan häivyttyä (Nousu), HETKI
+            // ensimmäinen virke mustalla (kamera jo avaruudessa, ks. alla), HETKI
             // TÄHDISSÄ (pito zoomin alkuun), SYÖKSY Afrikkaan KUMINAUHAJARRUTUKSELLA (SyoksyKuminauha).
             // Vähennetty liike: pallo heti Afrikassa (KaynnistaAvaruusajo).
-            nousuOdottaa = !y.VahennettyLiike;
+            // Löydös 74 e (build 12): nousu mustan häivyttyä näkyi pallon kutistumisena. Web avaaKaukaisuus
+            // (js/linssit/ihmisen-matka-esitys.js:1460, pointOfView(…, 0)) vie kameran avaruuteen heti mustan alla.
+            if (!y.VahennettyLiike) KaynnistaNousu(0);
             Kaynnissa = true;
             AloitaJakso(0);
         }
