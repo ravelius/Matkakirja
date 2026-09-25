@@ -136,7 +136,9 @@ namespace Matkakirja.Natiivi
 
         static void AsetaTurva(VisualElement turva, UiKerros kerros)
         {
-            var r = kerros.Reunat(LinssiUi.Ylakerros);
+            // Ylakerroksella ei ole omaa turva-aluetta (Reunat = 0, jolloin otsikkopilleri jäi iPhonella Dynamic Islandin
+            // alle, löydös 96); sama ruutu, joten linssikerroksen reunat (web --satelliitti-yla: 10 px + safe-area-inset-top).
+            var r = kerros.Reunat(LinssiUi.Kerros);
             turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
         }
 
