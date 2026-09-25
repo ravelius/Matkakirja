@@ -125604,6 +125604,238 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Uluru, Uluṟu-Kata Tjuṯa National Park, Kata Tjuta,
+       * Ayers Rock Airport, Yulara, Bruce Munro) ja Wikivoyagesta
+       * (Uluṟu-Kata Tjuṯa National Park, Yulara) — teksti omaa. Nostojen
+       * aiheita (Gosse ja retkikunta, Gossen nousu 1873, Ayersin nimi,
+       * anangujen asuinhistoria ja vesikuopat, kallion koko, geologia ja
+       * värin syy) ei toisteta. Hintoja, aukioloja ja lentoreittejä ei
+       * mainita, koska lähteiden tiedot vanhenevat; tekstissä kehotetaan
+       * tarkistamaan ajantasaiset ohjeet. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Rabichin kuivunut puu Kuniya-polun varrelta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3630.jpg',
+          lyhyt: 'Kuivunut puu seisoo Ulurun juurella kirkkaassa iltapäivän auringossa.',
+          selite: 'Lokakuussa 2019 Kuniya-polun varrelta kuvattu kuivunut '
+            + 'puu kallion eteläpuolella; kallion juuren poluilla varjoa on '
+            + 'vähän, joten vesi ja hattu kulkevat aina mukana.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Uluru ei ole kaupunki: kallio ja 36 kupolin Kata Tjuta '
+          + 'ovat kansallispuistossa, joka suljetaan yöksi ja jossa ei saa '
+          + 'yöpyä. Matkailija nukkuu lähes 20 kilometrin päässä Yularan '
+          + 'lomakylässä, jonne lennetään Ayers Rockin lentokentälle tai '
+          + 'ajetaan Alice Springsistä noin 450 kilometriä. Kalliolle ei enää '
+          + 'kiivetä, vaan sen kiertää kävellen, ja anangut pyytävät, ettei '
+          + 'tiettyjä kohtia kuvata. Päivän kohokohdat ovat aamu ja ilta, '
+          + 'jolloin katselupaikoilla odotetaan valon muuttumista, ja kesällä '
+          + 'juuri silloin kuumuus sallii liikkumisen. Leudointa on '
+          + 'huhtikuusta syyskuuhun, Australian syksynä, talvena ja '
+          + 'varhaiskeväänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Uluru',
+          teksti: 'Ulurulla matkailijan päivä alkaa ennen auringonnousua ja '
+            + 'päättyy tähtitaivaan alla.',
+          nosto: 'Kiipeämiskielto astui voimaan 26. lokakuuta 2019, '
+            + 'täsmälleen 34 vuotta sen jälkeen, kun kallio palautettiin '
+            + 'anangujen omistukseen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kenttä, kylä ja puisto',
+              teksti: 'Ulurulle saapuvan kannattaa hahmottaa kolme erillistä '
+                + 'paikkaa. Ayers Rockin lentokenttä, jota kutsutaan myös '
+                + 'Connellanin kentäksi, on noin kuusi kilometriä Yularan '
+                + 'pohjoispuolella ja parinkymmenen minuutin ajomatkan päässä '
+                + 'kalliosta. Sinne lennetään suoraan muun muassa Sydneystä, '
+                + 'Melbournesta, Brisbanesta ja Cairnsista, mutta reitit ja '
+                + 'yhtiöt vaihtuvat, joten ne kannattaa tarkistaa ennen matkaa. '
+                + 'Yulara on 1980-luvulla rakennettu lomakylä aivan puiston '
+                + 'rajan ulkopuolella: hotellit, leirintäalue, kauppa ja '
+                + 'ravintolat ovat kaikki siellä, sillä kansallispuistossa ei '
+                + 'ole majoitusta eikä siellä saa leiriytyä. Kylän hotelleja '
+                + 'kiertää ilmainen bussi, ja kentältä pääsee kylään lentojen '
+                + 'mukaan ajoitetulla kuljetuksella. Kolmas paikka on itse '
+                + 'puisto, jonne tarvitaan henkilökohtainen, omalla nimellä '
+                + 'varustettu pääsylippu; sen voi ostaa verkosta tai puiston '
+                + 'portilta, ja vartijat voivat pyytää nähdä '
+                + 'henkilöllisyystodistuksen. Alice Springsistä ajetaan ensin '
+                + 'noin 200 kilometriä etelään Stuart Highwayta ja sitten 245 '
+                + 'kilometriä länteen Lasseter Highwayta; matkaan menee neljästä '
+                + 'viiteen tuntia. Pimeällä ajamista kannattaa välttää, sillä '
+                + 'tietä ei ole aidattu koko matkalta ja sille vaeltaa '
+                + 'kenguruja ja karjaa, ja moni vuokra-autoyhtiö kieltää yöajon '
+                + 'sopimuksessaan.',
+              kuva: [
+                {
+                  tiedosto: 'Ayers Rock Airport, October 2025 02.jpg',
+                  lyhyt: 'Ayers Rockin lentokentän matala terminaali on noin kuuden kilometrin päässä Yularasta.',
+                  selite: 'Lokakuussa 2025 kuvatun terminaalin edessä kyltti '
+                    + 'varaa kaistan lomakylän kuljetusbussille; kentälle '
+                    + 'lennetään suoraan Australian suurista kaupungeista.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: '2010-03 Lasseter Highway.jpg',
+                  lyhyt: 'Lasseter Highway vie Stuart Highwaylta Ulurulle punaisen aavikon halki.',
+                  selite: 'Lasseter Highway Mount Connerin näköalapaikan '
+                    + 'kohdalla maaliskuussa 2010; tie on päällystetty, mutta '
+                    + 'sitä ei ole aidattu koko matkalta.',
+                  lahde: 'Pulv, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Climb to Imalung Lookout, Yulara.jpg',
+                  lyhyt: 'Hiekkapolku nousee Yularan keskellä Imalungin näköalapaikalle dyynin laelle.',
+                  selite: 'Yularan keskustan Imalungin näköalapaikka on '
+                    + 'hiekkadyynin laella; sieltä näkyvät Uluru ja osittain '
+                    + 'Kata Tjuta, ja iltaisin sinne noustaan katsomaan '
+                    + 'auringonlaskua.',
+                  lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kallion kierto ja kulttuurikeskus',
+              teksti: 'Koska kalliolle ei enää kiivetä, Ulurun kokee '
+                + 'parhaiten sen juurella. Koko kallion kiertävä perusreitti '
+                + 'on noin kymmenen kilometriä pitkä ja tasainen, ja siihen '
+                + 'kannattaa varata kolmesta neljään tuntia. Useimmat kulkevat '
+                + 'myötäpäivään, ja muutaman kilometrin jälkeen muut kävelijät '
+                + 'harvenevat. Lyhyemmistä poluista Mala-reitti vie pohjoisen '
+                + 'pysäköintipaikalta Kantjun rotkoon, ja kallion '
+                + 'eteläpuolella noin kilometrin mittaisen Kuniya-polun '
+                + 'varrella on kalliosuojan maalauksia. Anangut vetävät myös '
+                + 'opastettuja kävelyjä, joilla kerrotaan pensasruoasta, '
+                + 'kasveista ja tjukurpan kertomuksista. Ennen kiertoa '
+                + 'kannattaa poiketa kulttuurikeskuksessa, joka avattiin 1995 '
+                + 'maanpalautuksen kymmenvuotispäivän kunniaksi. Arkkitehti '
+                + 'Gregory Burgessin suunnittelemassa rakennuksessa kerrotaan '
+                + 'tjukurpasta, anangujen elämästä ja puiston '
+                + 'yhteishallinnosta, ja näyttelyn tekstejä on pitjantjatjaran '
+                + 'ja englannin lisäksi saksaksi, ranskaksi, italiaksi ja '
+                + 'japaniksi. Sisäänpääsy on ilmainen. Keskuksessa toimivat '
+                + 'anangujen omistama Maruku Arts ja Mutitjulun taiteilijoiden '
+                + 'Walkatjara-taidekeskus, joten sieltä ostettu teos tukee '
+                + 'suoraan tekijöitään. Keskukselta kallion juurelle johtaa '
+                + 'Liru-polku.',
+              kuva: {
+                tiedosto: 'Outback Trip - Uluru Base Walk 2 (4157509210).jpg',
+                lyhyt: 'Hiekkapolku kulkee harvan puuston läpi Ulurun jyrkän seinämän juurelle.',
+                selite: 'Ulurun perusreitti kiertää koko kallion, ja '
+                  + 'marraskuussa 2009 kuvattu osuus kulkee puiden välistä '
+                  + 'aivan seinämän juurelle; kaukana polulla näkyy '
+                  + 'kävelijäryhmä.',
+                lahde: 'eyeintim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kiipeämisen loppu ja kuvaamisen rajat',
+              teksti: 'Vielä 2010-luvun alussa noin joka kuudes puiston '
+                + 'kävijä kiipesi Ulurun laelle vuonna 1964 asennettua ja 1976 '
+                + 'jatkettua ketjukaidetta pitkin. Reitti seuraa polkua, jota '
+                + 'esi-isien mala-miehet kulkivat saapuessaan kalliolle '
+                + 'seremoniaan, eivätkä anangut itse kiipeä sille. He '
+                + 'pyysivät vuosikymmenten ajan vieraita jättämään nousun '
+                + 'väliin, myös turvallisuuden vuoksi: heinäkuuhun 2018 '
+                + 'mennessä kiipeilyyn liittyviä kuolemia oli kirjattu 37. '
+                + 'Pääministeri Bob Hawke oli jo 1983 luvannut kiellon osana '
+                + 'maanpalautusta, mutta lupausta ei pidetty. Puiston hallitus '
+                + 'päätti yksimielisesti marraskuussa 2017 kieltää '
+                + 'kiipeämisen, ja kielto astui voimaan 26. lokakuuta 2019; '
+                + 'ketjut purettiin. Ennen kiellon alkua kalliolle ehti '
+                + 'rynnätä poikkeuksellisen paljon kiipeilijöitä. '
+                + 'Kuvaamisellakin on rajansa: osa kallion kohdista liittyy '
+                + 'vain miesten tai vain naisten seremonioihin, ja anangut '
+                + 'pyytävät, ettei niitä kuvata, jotta kukaan väärää sukupuolta '
+                + 'oleva ei näkisi kuvaa vahingossa. Kohdat on merkitty '
+                + 'perusreitin varrelle kyltein. Droonilla kuvaaminen on '
+                + 'kielletty, ja kaupallinen kuvaaminen vaatii luvan. '
+                + 'Mutitjulun yhteisöön ei mennä ilman lupaa, eikä ihmisiä '
+                + 'kuvata kysymättä.',
+              kuva: {
+                tiedosto: 'Uluru climb permanently closed sign.jpg',
+                lyhyt: 'Ulurun juurella oleva kyltti kertoo nousureitin pysyvästä sulkemisesta.',
+                selite: 'Kyltissä lukee englanniksi, että reitti suljettiin '
+                  + 'pysyvästi 26. lokakuuta 2019; kuva on otettu kallion '
+                  + 'juurella huhtikuussa 2022.',
+                lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Aamun ja illan katselupaikat',
+              teksti: 'Ulurun päivä rytmittyy auringon mukaan. Kallion '
+                + 'itäpuolella on auringonnousun katselualue Talinguru '
+                + 'Nyakuntjaku, jonka nimi tarkoittaa suunnilleen paikkaa, '
+                + 'josta katsotaan hiekkadyyniltä. Korotetulta paikalta '
+                + 'näkyvät sekä Uluru että kaukana Kata Tjuta, ja alueella on '
+                + 'noin puolentoista kilometrin kävelypolut, varjokatoksia ja '
+                + 'käymälät. Aiempi aamun katselupaikka suljettiin, koska '
+                + 'sieltä näkyi pyhä kohde. Iltaa varten on omat '
+                + 'auringonlaskualueet Kata Tjutan tienhaaran ja '
+                + 'kulttuurikeskuksen välillä, ja Kata Tjutalla on '
+                + 'katselupaikat sekä aamulle että illalle. Pimeän tultua '
+                + 'Yularan liepeillä syttyy Field of Light, brittitaiteilija '
+                + 'Bruce Munron valoteos. Munro sai idean leiriytyessään '
+                + 'Ulurulla 1992: hän kuvitteli teoksen, joka puhkeaisi yöllä '
+                + 'kukkaan kuin aavikon siemenet sateen jälkeen. Teos avattiin '
+                + '2016, ja 2019 se päätettiin jättää paikalleen toistaiseksi. '
+                + 'Pitjantjatjaraksi sen nimi on Tili Wiru Tjuta Nyakutjaku, '
+                + '”katsotaan monia kauniita valoja”, ja noin seitsemän '
+                + 'jalkapallokentän kokoisella alueella kävellään pimeässä '
+                + 'tuhansien hehkuvien varsien keskellä; alueelle mennään '
+                + 'lomakylän bussilla. Kun kaupunkien valoja ei ole satojen '
+                + 'kilometrien säteellä, myös Linnunrata näkyy harvinaisen '
+                + 'kirkkaana.',
+              kuva: {
+                tiedosto: 'Field of Light Uluru, October 2025 01.jpg',
+                lyhyt: 'Field of Light -teoksen tuhannet valot hehkuvat aavikolla Ulurun lähellä.',
+                selite: 'Lokakuussa 2025 hämärässä kuvatut valovarret '
+                  + 'hehkuvat pensaiden lomassa; Bruce Munron teoksen '
+                  + 'alueella kuljetaan pimeän tultua polkuja pitkin.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kata Tjuta ja aavikon kuumuus',
+              teksti: 'Noin 25 kilometriä Ulurusta länteen kohoaa Kata Tjuta, '
+                + '36 punaisen kupolin ryhmä, jonka nimi tarkoittaa '
+                + 'pitjantjatjaraksi ”monta päätä”. Korkein kupu, Mount Olga, '
+                + 'nousee noin 546 metriä tasangon yläpuolelle, lähes 200 '
+                + 'metriä Ulurua korkeammalle; eurooppalaisen nimensä se sai '
+                + '1872 tutkimusmatkailija Ernest Gilesiltä Württembergin '
+                + 'kuningatar Olgan mukaan. Suuri osa kupolien välisistä '
+                + 'laaksoista on suljettu, mutta kaksi reittiä vie niiden '
+                + 'sisään: helppo, noin 2,6 kilometrin Walpan rotko ja 7,4 '
+                + 'kilometrin Tuulten laakso, jonka kivikkoinen ja paikoin '
+                + 'jyrkkä polku vaatii kunnon kengät. Kuumuus ohjaa kaikkea '
+                + 'liikkumista. Joulu- ja tammikuussa päivän ylin lämpötila '
+                + 'on keskimäärin lähes 38 astetta ja ennätys 46, kun taas '
+                + 'talviöinä lämpötila voi laskea pakkasen puolelle. '
+                + 'UV-säteily on lokakuusta maaliskuuhun äärimmäistä. Tuulten '
+                + 'laakso suljetaan kuumina päivinä ensimmäisen näköalapaikan '
+                + 'jälkeen jo aamupäivällä, joten kävelyt kannattaa aloittaa '
+                + 'heti aamulla. Vettä juodaan janosta riippumatta, ja '
+                + 'lämpiminä kuukausina kasvoille hakeutuvilta kärpäsiltä '
+                + 'suojaa parhaiten hattuun kiinnitettävä verkko. '
+                + 'Sulkemiskäytännöt voivat muuttua, joten puiston '
+                + 'ajankohtaiset ohjeet kannattaa tarkistaa paikan päällä.',
+              kuva: {
+                tiedosto: 'KataTjuta ValleyOfTheWinds.jpg',
+                lyhyt: 'Tuulten laakso kulkee kivikkoisena Kata Tjutan jyrkkien kupolien välissä.',
+                selite: 'Heinäkuussa 2009 kuvatussa Tuulten laaksossa '
+                  + 'kupolien sileät, punaiset seinämät kohoavat louhikkoisen '
+                  + 'laakson molemmin puolin.',
+                lahde: 'Toby Hudson, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
