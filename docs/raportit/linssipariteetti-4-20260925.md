@@ -9,7 +9,7 @@ linssipariteetti-4-rivilista-20260925.md. Edellinen: linssipariteetti-3-20260925
 |---|---|---|
 | iPhone 402 × 874 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 |
 | iPhone vaaka 874 × 402 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 (turva-alue ja ×, hyväksytty) |
-| iPad 11" 834 × 1210 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | yläpalkin pystysijainti (Natiivi-UI) |
+| iPad 11" 834 × 1210 | SAMA 1, ERI 10, VAIN NATIIVISSA 1 | 0 (pillerin ero oli mittausvirhe, ks. alla) |
 
 Pariteettiajo on nyt yksi simulaattori kerrallaan (linssiseppa-iPhone D0D2CD1E, linssiseppa-iPad11 903C2B91). Ajo odottaa
 uuden pelin kerronnan loppua (13 s) ja linssin odotuspeitettä ennen kuvaa. Kuvat ja kontaktiarkit:
@@ -29,8 +29,13 @@ uuden pelin kerronnan loppua (13 s) ja linssin odotuspeitettä ennen kuvaa. Kuva
 
 ## Avoimet
 
-1. **iPadin yläpalkin pystysijainti (Natiivi-UI):** raha ja päivä -pilleri on linssistä riippuen −27…+17 px webistä
-   (rivi 12 −27, 39 +17, 41 +9). Rivi 39 on siksi 17,3 px, eli hiukan yli rajan.
+Ei avoimia. Kierroksen jälkeen korjattu mittausvirhe:
+- **iPadin yläpalkin pilleri** (−27…+17 px) oli työkalun virhe (Natiivi-UI:n havainto). Palkin teksteistä vähennettiin
+  koko näkymän siirto, joka laskettiin linssin omista, liikkuvista teksteistä. Raakaero on 1–2 px.
+- Työkalu ei nyt vähennä siirtoa yläpalkin pareista eikä käytä niitä siirron laskuun
+  (tools/pariteetti-vertailu.mjs `ylapalkkiPx`).
+- Uusintavertailu samoista kuvista (`b15-linssit-4-uusivertailu/ipad11`): rivi 39 8,4 px, rivi 12 32,8 px (✕) ja
+  rivi 41 22,8 px (Liiku ja maan nimi turva-alueen yllä). Kaikki ovat hyväksyttyjä.
 
 ## Hyväksytyt poikkeamat
 
