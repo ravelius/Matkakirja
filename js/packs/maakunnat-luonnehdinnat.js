@@ -2562,4 +2562,185 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Saaristomerellä on joidenkin laskutapojen mukaan maailman eniten saaria, noin 50 000, ja moni niistä on vain pieni luoto.',
     },
   },
+  /*
+   * EST (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.EST:n tunnuksia
+   * TÄSMÄLLEEN (Natural Earthin nimi ilman "maa"-päätettä, esim.
+   * "Lääne-Viru", "Hiiu"). Vain `lyhyt` tässä erässä. Lähteet
+   * (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Harju      — Harju County (Tallinn); Tallinn Old Town (1200-luvun
+   *                kaupunkirakenne ehjä, Unesco 1997)
+   *   Hiiu       — Kõpu Lighthouse (yhtäjaksoisesti käytössä vuodesta
+   *                1531, maailman vanhimpia)
+   *   Ida-Viru   — Narva; Hermann Castle (Ivangorod vastarannalla 1492,
+   *                Narvajoki Viron ja Venäjän raja)
+   *   Jõgeva     — Jõgeva (Viron kylmin paikka, −43,5 °C 1940,
+   *                Külmasammas-muistomerkki)
+   *   Järva      — Paide (Vallitorn: kuusi kerrosta, räjäytettiin 1941,
+   *                korjattiin 1990–1993)
+   *   Lääne-Viru — Rakvere (Tarvas-alkuhärkä 2002, 7 m pitkä, Baltian
+   *                suurin eläinpatsas)
+   *   Lääne      — Haapsalu Castle (Valkoinen neito elokuun täydenkuun
+   *                öinä, White Lady Days -festivaali)
+   *   Põlva      — Taevaskoja (devonikauden hiekkakivipaljastumat
+   *                Ahjajoen varrella, Põlvan kunta)
+   *   Pärnu      — Pärnu ("Estonia's Summer Capital" vuodesta 1996,
+   *                kylpyläperinne 1800-luvun puolivälistä)
+   *   Rapla      — Rapla (kirkko romaanista tyyliä, "one of the purest
+   *                examples of this style in all of Estonia"); Rapla
+   *                County (kirkko rakennettu 1901)
+   *   Saare      — Kaali crater (yhdeksän kraatteria, suurin 110 m,
+   *                pohjalla Kaalijärvi)
+   *   Tartu      — Tartu; University of Tartu (perustettu 1632, maan
+   *                vanhin yliopisto)
+   *   Valga      — Valga, Estonia (Valga ja Valka yksi kaupunki vuoteen
+   *                1920, rajatarkastukset poistuivat 21.12.2007)
+   *   Viljandi   — Viljandi (kansanmusiikkifestivaali heinäkuun lopussa,
+   *                Viron suurin vuotuinen musiikkifestivaali)
+   *   Võru       — Suur Munamägi (318 m, Viron ja Baltian korkein,
+   *                näkötorni huipulla, Haanja)
+   */
+  EST: {
+    Harju: {
+      lyhyt: 'Tallinnan vanhankaupungin 1200-luvun katuverkko on säilynyt lähes ehjänä muurien sisällä, ja se on ollut Unescon listalla vuodesta 1997.',
+    },
+    Hiiu: {
+      lyhyt: 'Hiidenmaan Kõpun majakka on ollut käytössä yhtäjaksoisesti vuodesta 1531 – se on yksi maailman vanhimmista yhä toimivista majakoista.',
+    },
+    'Ida-Viru': {
+      lyhyt: 'Narvan Hermannin linna ja Ivangorodin linnoitus katsovat toisiaan joen yli, ja Narvajoki on nyt Viron ja Venäjän välinen raja.',
+    },
+    'Jõgeva': {
+      lyhyt: 'Jõgeva on Viron kylmin paikka: siellä mitattiin 1940 maan pakkasennätys, −43,5 astetta, ja kylmyydelle on pystytetty oma muistomerkki.',
+    },
+    'Järva': {
+      lyhyt: 'Paiden linnan kuusikerroksinen Vallitorni räjäytettiin 1941, ja se rakennettiin uudelleen vasta vuosina 1990–1993.',
+    },
+    'Lääne-Viru': {
+      lyhyt: 'Rakveren linnavuoren laidalla seisoo pronssinen alkuhärkä Tarvas, seitsemän metriä pitkä ja Baltian suurimmaksi eläinpatsaaksi sanottu.',
+    },
+    'Lääne': {
+      lyhyt: 'Haapsalun piispanlinnan kappelin seinälle ilmestyy tarun mukaan elokuun täydenkuun öinä Valkoinen neito, ja silloin kaupunki juhlii.',
+    },
+    'Põlva': {
+      lyhyt: 'Taevaskojan kylässä Ahjajoen rannoilla paljastuu devonikauden hiekkakiveä, joka kerrostui satoja miljoonia vuosia sitten.',
+    },
+    'Pärnu': {
+      lyhyt: 'Pärnua kutsutaan Viron kesäpääkaupungiksi, ja sen pitkillä hiekkarannoilla ja kylpylöissä on käyty lomailemassa jo 1800-luvulta asti.',
+    },
+    Rapla: {
+      lyhyt: 'Raplan kirkko valmistui 1901 romaaniseen tyyliin, ja sitä pidetään yhtenä tyylin puhtaimmista esimerkeistä koko Virossa.',
+    },
+    Saare: {
+      lyhyt: 'Saarenmaan Kaalissa on yhdeksän meteoriittikraatteria, ja suurimman, 110 metriä leveän kraatterin pohjalla lepää pyöreä järvi.',
+    },
+    Tartu: {
+      lyhyt: 'Tartun yliopisto perustettiin 1632, ja maan vanhimpana yliopistona se tekee Tartusta Viron henkisen pääkaupungin.',
+    },
+    Valga: {
+      lyhyt: 'Valga ja Latvian Valka olivat yksi kaupunki vuoteen 1920, ja nyt niiden välinen raja ylitetään ilman aitoja ja tarkastuksia.',
+    },
+    Viljandi: {
+      lyhyt: 'Viljandin kansanmusiikkifestivaali on Viron suurin vuotuinen musiikkijuhla, ja heinäkuun lopussa linnanraunioiden kaupunki täyttyy soitosta.',
+    },
+    'Võru': {
+      lyhyt: 'Suur Munamägi eli Iso Munamäki kohoaa 318 metriin, Baltian maiden korkeimmaksi huipuksi, ja sen laella seisoo näkötorni.',
+    },
+  },
+  /*
+   * LVA (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.LVA:n tunnuksia
+   * TÄSMÄLLEEN (viisi aluetta: neljä historiallista maakuntaa + Riika).
+   * Vain `lyhyt` tässä erässä. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Kurzeme — Venta Rapid (Kuldīga, Euroopan levein vesiputous
+   *             249 m, kevättulvilla 275 m); Courland (Kuldīga)
+   *   Latgale — Latgale (Aglona: 15.8. pyhiinvaeltajat, paavit 1993
+   *             ja 2018); Aglona
+   *   Riga    — Art Nouveau architecture in Riga (noin kolmasosa
+   *             keskustan rakennuksista, maailman tihein keskittymä
+   *             Krastiņšin mukaan)
+   *   Vidzeme — Gaiziņkalns (312 m, Latvian korkein; Suur Munamägeä
+   *             korkeampi torni jäi kesken ja purettiin 12/2012)
+   *   Zemgale — Rundāle Palace (Rastrelli, Kuurinmaan herttua Biron,
+   *             Semigallia; entisöinti 1972–2015)
+   */
+  LVA: {
+    Kurzeme: {
+      lyhyt: 'Kuldīgan Ventas rumba on Euroopan levein vesiputous: vain parin metrin korkuinen mutta 249 metriä leveä, keväällä vielä leveämpi.',
+    },
+    Latgale: {
+      lyhyt: 'Katolisen Latgalen Aglonan basilikaan saapuu joka 15. elokuuta tuhansia pyhiinvaeltajia, ja kaksi paavia on vieraillut siellä.',
+    },
+    Riga: {
+      lyhyt: 'Noin kolmasosa Riian keskustan taloista on jugendia – kaupungissa on kenties maailman tihein jugendrakennusten keskittymä.',
+    },
+    Vidzeme: {
+      lyhyt: 'Latvian korkein kohta Gaiziņkalns jää 312 metriin, ja Viron huipun päihittämään rakennettu torni purettiin keskeneräisenä 2012.',
+    },
+    Zemgale: {
+      lyhyt: 'Rundālen barokkipalatsin suunnitteli Bartolomeo Rastrelli Kuurinmaan herttualle, ja sen entisöinti kesti vuodesta 1972 vuoteen 2015.',
+    },
+  },
+  /*
+   * LTU (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.LTU:n tunnuksia
+   * TÄSMÄLLEEN (liettuan genetiivimuoto ilman diakriitteja, esim.
+   * "Kauno", "Klaipedos", mutta "Šiauliai" ja "Telšiai" háčekilla).
+   * Vain `lyhyt` tässä erässä. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Alytaus      — Grūtas Park (Druskininkain lähellä, Ig Nobelin
+   *                  rauhanpalkinto 2001); Alytus County
+   *   Kauno        — Kaunas (väliaikainen pääkaupunki 1920–1939,
+   *                  Unescon maailmanperintö 2023)
+   *   Klaipedos    — Curonian Spit (98 km, dyynit hautasivat kyliä);
+   *                  Klaipėda County
+   *   Marijampoles — Marijampolė (yksi Euroopan suurimmista
+   *                  käytettyjen autojen toreista)
+   *   Panevezio    — Biržai (noin 9 000 kipsin liukenemisesta syntynyttä
+   *                  vajoamakuoppaa, uusia joka vuosi; Panevėžys County)
+   *   Šiauliai     — Hill of Crosses (arviolta 100 000 ristiä 2006,
+   *                  ensimmäiset vuoden 1831 kansannousun jälkeen)
+   *   Taurages     — Tauragė (Tauroggenin sopimus 30.12.1812, Yorck);
+   *                  Tauragė County
+   *   Telšiai      — Plokštinė missile base (neuvostoliiton ensimmäinen
+   *                  maanalainen ydinohjustukikohta, kylmän sodan museo
+   *                  2012); Plungė District Municipality (Telšiai County)
+   *   Utenos       — Utena County (1 002 järveä); Aukštaitija National
+   *                  Park (Tauragnas, Liettuan syvin järvi 60,5 m)
+   *   Vilniaus     — Užupis (itsenäiseksi tasavallaksi 1.4.1997, lipun
+   *                  kämmen vaihtaa väriä vuodenajan mukaan)
+   */
+  LTU: {
+    Alytaus: {
+      lyhyt: 'Druskininkain lähellä Grūtasin puistoon on koottu kaadettuja neuvostopatsaita, ja puiston perustaja sai 2001 Ig Nobelin rauhanpalkinnon.',
+    },
+    Kauno: {
+      lyhyt: 'Kaunas oli sotien välillä Liettuan väliaikainen pääkaupunki, ja sen modernistinen arkkitehtuuri pääsi Unescon listalle 2023.',
+    },
+    Klaipedos: {
+      lyhyt: 'Kapea, 98 kilometrin Kuurinkynnäs erottaa Kuurin lahden Itämerestä, ja sen vaeltavat dyynit hautasivat aikanaan alleen kokonaisia kyliä.',
+    },
+    Marijampoles: {
+      lyhyt: 'Marijampolė on kaupan ja kevyen teollisuuden keskus, ja siellä toimii yksi Euroopan suurimmista käytettyjen autojen toreista.',
+    },
+    Panevezio: {
+      lyhyt: 'Biržain seudulla on noin 9 000 vajoamakuoppaa, jotka syntyvät kun pohjavesi liuottaa kipsiä maan alta – uusia ilmestyy joka vuosi.',
+    },
+    'Šiauliai': {
+      lyhyt: 'Šiauliain pohjoispuolella Ristien mäellä seisoo arviolta 100 000 ristiä, joita pyhiinvaeltajat ovat tuoneet sinne 1800-luvulta asti.',
+    },
+    Taurages: {
+      lyhyt: 'Tauragėssa preussilainen kenraali Yorck julisti 1812 joukkonsa puolueettomiksi, mikä mursi Preussin ja Napoleonin liiton.',
+    },
+    'Telšiai': {
+      lyhyt: 'Plateliaijärven lähellä metsässä piilee Neuvostoliiton ensimmäinen maanalainen ydinohjustukikohta – nyt kylmän sodan museo, jonka siiloon pääsee.',
+    },
+    Utenos: {
+      lyhyt: 'Utenan seudulla on yli tuhat järveä, ja Aukštaitijan kansallispuistossa lepää Liettuan syvin järvi Tauragnas, 60,5 metriä syvä.',
+    },
+    Vilniaus: {
+      lyhyt: 'Vilnan Užupis julistautui 1. huhtikuuta 1997 omaksi tasavallakseen, ja sen lipun kämmen vaihtaa väriä vuodenajan mukaan.',
+    },
+  },
 };
