@@ -117367,6 +117367,224 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Eyre Highway',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Eyre Highway, Indian Pacific, Cook South Australia,
+       * Rawlinna, Nullarbor Links, Head of Bight, Southern right whale,
+       * Yalata, Border Village, Time in Australia) ja Wikivoyagesta
+       * (Eyre Highway, Indian Pacific, Eucla, Western Australia) — teksti
+       * omaa. Nostojen aiheita (Eyren retki, Baxter, Wylie, Euclan
+       * lennätinasema, nimi ja pisimmät suorat, geologia, Bunda Cliffs,
+       * luolat, wombatti) ei toisteta. Hinnat ja aikataulut jätetty pois.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Balladonian eläinvaroituskyltti.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Beware sign, Balladonia, 2017 (01).jpg',
+          lyhyt: 'Kyltti varoittaa aitaamattomalla tiellä kulkevista kameleista, emuista ja kenguruista.',
+          selite: 'Balladonian tienvarsiaseman itäpuolella Eyre Highwayn '
+            + 'kyltti varoittaa, että seuraavat 150 kilometriä tielle voi '
+            + 'astella kameleita, emuja ja kenguruita.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Nullarborin poikki pääsee nykyään kahta reittiä: autolla '
+          + 'rannikkoa seurailevaa Eyre Highwayta tai junalla sisämaan halki '
+          + 'kulkevaa rataa. Autoilija ajaa Norsemanista Cedunaan noin 1 200 '
+          + 'kilometriä, ja välillä ainoat asutut paikat ovat tienvarsiasemia, '
+          + 'joilla tankataan, syödään ja nukutaan. Indian Pacific -juna '
+          + 'ylittää tasangon kerran viikossa kumpaankin suuntaan ja pysähtyy '
+          + 'tankkaamaan aavekaupunkiin, jossa asuu enää neljä ihmistä. Pitkää '
+          + 'ajoa voi rytmittää maailman pisimmällä golfkentällä, ja kesäkuusta '
+          + 'lokakuuhun tasangon eteläreunan jyrkänteeltä näkee poikivia '
+          + 'valaita. Valtioiden rajalla odottavat hedelmätarkastus ja kello, '
+          + 'joka siirtyy 45 minuuttia.',
+        artikkeli: {
+          nimi: 'Matkailijan Nullarbor',
+          teksti: 'Nullarborin poikki ajetaan tienvarsiasemalta toiselle.',
+          nosto: 'Maantie on paikoin myös lentokenttä: asfalttiin on maalattu '
+            + 'kiitotien merkinnät lentävien lääkärien koneille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Tienvarsiasemalta toiselle',
+              teksti: 'Eyre Highway on ainoa päällystetty tie Etelä- ja '
+                + 'Länsi-Australian välillä. Sen 1 664 kilometriä alkavat '
+                + 'Länsi-Australian Norsemanista ja päättyvät Port Augustaan, '
+                + 'ja itse tasanko ylitetään Norsemanin ja Cedunan välisellä '
+                + 'noin 1 200 kilometrin osuudella. Länsi-Australian puolella '
+                + 'tien varrella on 720 kilometrin matkalla vain yksi kylä, '
+                + 'Eucla, ja muuten pelkkiä tienvarsiasemia: Balladonia, '
+                + 'Caiguna, Cocklebiddy, Madura ja Mundrabilla, 65–180 '
+                + 'kilometrin välein. Ne ovat yhtä aikaa huoltoasemia, '
+                + 'kahviloita, motelleja ja leirintäalueita. Tavallisella '
+                + 'henkilöautolla pärjää, eikä ylimääräistä polttoainetta '
+                + 'tarvitse kuljettaa mukana, mutta kaikki asemat eivät ole '
+                + 'auki ympäri vuorokauden, joten yöajo kannattaa suunnitella. '
+                + 'Pisin väli on noin 190 kilometriä Balladonian ja Norsemanin '
+                + 'välillä. Nopeusrajoitus on enimmäkseen 110 km/h, ja vastaan '
+                + 'tulee jopa 42,5-metrisiä rekkajunia. Tie on aitaamaton, ja '
+                + 'kyltit varoittavat kameleista, wombateista ja kenguruista. '
+                + 'Syrjäisyyden takia muutama levennetty tieosuus on lentävien '
+                + 'lääkärien, Royal Flying Doctor Servicen, varakiitorata: '
+                + 'asfalttiin on maalattu kiitotien merkinnät, ja pienkoneille '
+                + 'on tehty kääntöpaikat.',
+              kuva: [
+                {
+                  tiedosto: 'Highway sign, Norseman, 2017 (04).jpg',
+                  lyhyt: 'Norsemanista on Balladoniaan 189, Euclaan 710 ja Adelaideen 1 986 kilometriä.',
+                  selite: 'Eyre Highwayn länsipäässä Norsemanin itäpuolella '
+                    + 'seisova opaste kertoo matkan mittakaavan: ensimmäiselle '
+                    + 'tienvarsiasemalle on 189 kilometriä ja Adelaideen lähes '
+                    + 'kaksituhatta.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Eyre Highway, Western Australia (near Balladonia) with RFDS landing sign.jpg',
+                  lyhyt: 'Kyltti merkitsee tieosuuden, jolle lentävien lääkärien kone voi laskeutua.',
+                  selite: 'Balladonian itäpuolella Eyre Highwayn varressa '
+                    + 'oleva keltainen kyltti kertoo, että edessä oleva '
+                    + 'levennetty tieosuus on Royal Flying Doctor Servicen '
+                    + 'hätälaskupaikka.',
+                  lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Caiguna Roadhouse, 2017 (02).jpg',
+                  lyhyt: 'Caigunan tienvarsiasema on huoltoasema, kahvila ja motelli keskellä tasankoa.',
+                  selite: 'Caigunan tienvarsiasema Länsi-Australiassa on '
+                    + 'yksi niistä harvoista paikoista, joissa Eyre Highwayn '
+                    + 'kulkija voi tankata, syödä ja yöpyä satojen kilometrien '
+                    + 'matkalla.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Indian Pacific ja aavekaupunki Cook',
+              teksti: 'Juna ylittää Nullarborin sisämaassa, kaukana '
+                + 'maantiestä. Indian Pacific kulkee Tyynenmeren rannalta '
+                + 'Sydneystä Intian valtameren rannalle Perthiin 4 352 '
+                + 'kilometriä, ja matka kestää noin kolme vuorokautta. '
+                + 'Ensimmäinen juna lähti Sydneystä 23. helmikuuta 1970, ja '
+                + 'nykyään vuoroja on kerran viikossa kumpaankin suuntaan. '
+                + 'Juna on elämysmatka: halvin istumaluokka lakkautettiin 2016, '
+                + 'ja matkustajat nukkuvat makuuvaunuosastoissa ja syövät '
+                + 'ravintolavaunussa. Autoja junaan ei enää oteta. Tasangon '
+                + 'keskellä juna pysähtyy Cookiin, joka perustettiin 1917 '
+                + 'radan huoltokyläksi ja jossa asui parhaimmillaan 200 '
+                + 'ihmistä; vuonna 2025 asukkaita oli neljä. Veturit tankataan '
+                + 'ja vesi täydennetään noin kahden tunnin pysähdyksellä, ja '
+                + 'sillä välin matkustajat saavat kävellä autioituneessa '
+                + 'kylässä. Entisen sairaalan kylteissä kehotetaan yhä '
+                + 'tulemaan Cookiin sairastamaan, ja kylässä on säilynyt '
+                + 'vanhat vankisellit. Perthiin päin matkaavat pysähtyvät myös '
+                + 'Rawlinnassa, Australian suurimman toimivan lammastilan '
+                + 'kupeessa, jossa kesäisin illallinen tarjoillaan '
+                + 'asemalaiturilla elävän musiikin soidessa.',
+              kuva: {
+                tiedosto: 'Cook (AU), Indian Pacific, NR Class Locomotive -- 2019 -- 0636.jpg',
+                lyhyt: 'Indian Pacificin veturi tankataan Cookissa keskellä Nullarboria.',
+                selite: 'Keltainen NR-sarjan veturi Indian Pacificin väreissä '
+                  + 'seisoo Cookin tankkauspaikalla: juna pysähtyy '
+                  + 'aavekaupunkiin täydentämään polttoainetta ja vettä.',
+                lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Maailman pisin golfkenttä',
+              teksti: 'Nullarbor Links on 18-reikäinen par 72 -golfkenttä, '
+                + 'joka on levitetty 1 365 kilometrin matkalle Eyre Highwayn '
+                + 'varteen Länsi-Australian Kalgoorliesta Etelä-Australian '
+                + 'Cedunaan. Ajatus syntyi punaviinipullon ääressä Balladonian '
+                + 'tienvarsiasemalla: kahden paikallisen yrittäjän mielestä '
+                + 'golf katkaisisi pitkän ajon, vähentäisi väsymyksen '
+                + 'aiheuttamia vaaratilanteita ja toisi asemille asiakkaita. '
+                + 'Kenttä avattiin virallisesti 22. lokakuuta 2009. Seitsemän '
+                + 'reikää on olemassa olevilla golfkentillä, ja loput '
+                + 'yksitoista on rakennettu tienvarsiasemien ja '
+                + 'levähdyspaikkojen viereen: aloitusalueet ja viheriöt ovat '
+                + 'tekonurmea, väylät paljasta aavikkoa. Reikien väli on '
+                + 'keskimäärin 66 kilometriä ja pisimmillään lähes 200. '
+                + 'Pelaaja ostaa tuloskortin Cedunasta tai Kalgoorliesta, '
+                + 'leimauttaa sen matkan varrella ja saa perillä todistuksen '
+                + 'maailman pisimmän golfkentän kiertämisestä. Esteinä ovat '
+                + 'varikset, emut, kengurut, myrkkykäärmeet ja wombattien '
+                + 'kolot, ja kesällä lämpötila voi nousta yli 50 asteen. '
+                + 'Vuoteen 2022 mennessä kentän oli virallisesti pelannut yli '
+                + '20 000 matkailijaa.',
+              kuva: {
+                tiedosto: 'Wombat Hole, Nundroo, 2017 (01).jpg',
+                lyhyt: 'Nullarbor Linksin neljäs reikä, Wombat Hole, sijaitsee Nundroossa.',
+                selite: 'Nundroossa Etelä-Australiassa olevan neljännen reiän '
+                  + 'alussa on katos ja opastaulu, ja väylä kulkee punaisen, '
+                  + 'matalan pensaikon peittämän maan halki.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Valaat jyrkänteen juurella',
+              teksti: 'Siellä missä Suuri Australianlahti ulottuu '
+                + 'pohjoisimmilleen, Head of Bightissa, tasangon reuna laskee '
+                + 'jyrkänteenä mereen, ja joka vuosi sen alle uivat eteläiset '
+                + 'sileävalaat. Paikka on toinen niistä kahdesta Australian '
+                + 'etelärannikon kohdasta, joihin valaat tulevat poikimaan, ja '
+                + 'kesäkuusta lokakuuhun, eteläisen pallonpuoliskon talvella, '
+                + 'siellä nähdään vuosittain yli sata valasta. Jyrkänteen '
+                + 'päälle on rakennettu lankkupolkuja ja näköalatasanteita, '
+                + 'joilta valaita katsotaan lähes suoraan alapuolelta; '
+                + 'merialuetta voi katsella myös näköalalennolta. Tutkijoiden '
+                + 'mukaan valaat suosivat juuri tällaista rajun aallokon '
+                + 'rannikkoa, koska murtuvien aaltojen kohina peittää emon ja '
+                + 'vasan äänet miekkavalailta. Naaras palaa samaan '
+                + 'poikimispaikkaan tavallisesti kolmen vuoden välein. Maa '
+                + 'jyrkänteen päällä kuuluu Yalatan alkuperäiskansojen '
+                + 'suojelualueeseen, jonka keskellä on noin 300 asukkaan '
+                + 'aboriginaaliyhteisö, ja rannikon vedet ovat osa '
+                + 'merensuojelualuetta.',
+              kuva: {
+                tiedosto: 'Head of the Bight, Yalata, South Australia, July 2026 13.jpg',
+                lyhyt: 'Head of Bightin lankkupolut kulkevat jyrkänteen reunalla valaiden poikimisalueen yllä.',
+                selite: 'Heinäkuussa 2026 otetussa kuvassa Head of Bightin '
+                  + 'puiset lankkupolut kiertävät pensaikkoisen jyrkänteen '
+                  + 'reunaa, ja taustalla erottuvat rannikon vaaleat '
+                  + 'hiekkadyynit.',
+                lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rajalla hedelmät jäävät ja kello siirtyy',
+              teksti: 'Etelä- ja Länsi-Australian raja kulkee Border '
+                + 'Villagen kohdalla, 12 kilometriä Euclasta itään. Kylä on '
+                + 'pelkkä tienvarsiasema motelleineen ja leirintäalueineen, ja '
+                + 'sen tunnistaa jättimäisestä kenguruveistoksesta, joka '
+                + 'pitelee Vegemite-purkkia. Länteen ajavalle raja on myös '
+                + 'tarkastuspiste: Länsi-Australiaan ei saa tuoda tuoreita '
+                + 'hedelmiä, vihanneksia, siemeniä eikä hunajaa, ja kaikki '
+                + 'kasvit ja kasvikset on ilmoitettava tarkastajille. Sääntöjä '
+                + 'valvotaan tiukasti, ja tarkastajat nousevat myös juniin. '
+                + 'Itään ajavan seuraava karanteenipysähdys on vasta Cedunassa. '
+                + 'Rajalla muuttuu myös aika. Border Village ja Länsi-Australian '
+                + 'puolen kylät Caigunasta itään noudattavat epävirallista '
+                + 'keskistä läntistä aikaa, joka on 8 tuntia 45 minuuttia '
+                + 'UTC:tä edellä, puolivälissä Länsi- ja Etelä-Australian '
+                + 'aikojen välissä. Aikavyöhykkeellä ei ole laillista asemaa, '
+                + 'ja sitä noudattaa arviolta 200 ihmistä. Lännestä tuleva '
+                + 'siirtää kelloa 45 minuuttia eteenpäin Caigunassa ja toiset '
+                + '45 minuuttia rajalla; Etelä-Australian kesäaikana ero '
+                + 'rajalla on vielä tunnin suurempi.',
+              kuva: {
+                tiedosto: 'Checkpoint, Border Village, 2017 (01).jpg',
+                lyhyt: 'Länsi-Australian karanteenitarkastuspiste Border Villagessa valtioiden rajalla.',
+                selite: 'Kuva on otettu Länsi-Australian puolelta itään: '
+                  + 'oikealla on tarkastusaseman katos, jonka kyltti kertoo '
+                  + 'seuraavan karanteenipysähdyksen olevan Cedunassa, ja '
+                  + 'vasemmalla toivotetaan tervetulleeksi Etelä-Australiaan.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'geologia',
