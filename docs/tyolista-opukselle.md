@@ -70,7 +70,7 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti Turistioppaat: matkailijalle-osio 71 uudelle kaupungille (tilattu 25.9.2026) 🟡 KESKEN
+## Paketti Turistioppaat: matkailijalle-osio 30 uudelle kaupungille (tilattu 25.9.2026) ✅ VALMIS PR:issä
 
 **Fablen tilaus 25.9.2026** (docs/raportit/sisalto-inventaario-20260924.md,
 "Turistiopas (`matkailijalle:`)" 0/71): sama kaava kuin Lontoon/Pariisin
@@ -79,10 +79,20 @@ kolmen kuvan karuselli), Commons-todennus jokaiselle kuvalle. Vain
 oikeat kaupungit/taajamat (ei alueita — sama rajaus kuin kohdekartassa,
 ks. docs/raportit/sisalto-inventaario-20260924.md kohta 3). Erät 3
 kaupunkia kerrallaan, yksi PR per erä sisältöjunaan. Sisältökirjuri
-jatkaa erää toisensa jälkeen ilman erillistä lupaa, kunnes 71 kaupungin
-lista on täynnä tai Fable/omistaja käskee toisin.
+jatkaa erää toisensa jälkeen ilman erillistä lupaa, kunnes lista on täynnä
+tai Fable/omistaja käskee toisin. Lista rajattiin 30 oikeaan kaupunkiin/taajamaan.
 
-- **Erä 1 (PR seuraa):** Managua, San Juan, Nouméa.
+**Tila 25.9.2026 iltapäivä: kaikki 30 tehty ja PR:issä.**
+
+- Erä 1: Managua, San Juan, Nouméa (#3148). Erä 2: São Luís, Ouro Preto, Cayenne (#3150).
+- Erä 3: Bermuda, Sitka, Coober Pedy (#3159). Erä 4: Norfolk, Churchill, Gao (#3164).
+- Erä 5: Puerto Montt, Broome, Santarém (#3167). Erä 6: Geraldton, João Pessoa, Murzuk (#3169).
+- Erä 7: Al Kufrah, Campo Grande, Exmouth (#3172). Erä 8: Birdsville, Macapá, Kalgoorlie (#3173).
+- Erä 9: Mount Isa, Nome, Porto Velho (#3176). Erä 10: Kimberley, Falklandinsaaret, Saint Helena (#3178).
+
+Kunkin oppaan kuvissa on jäänyt merkittyjä epävarmuuksia (kuvauspaikka Commonsissa yleinen,
+Wikivoyage-tiedot vuosilta 2015–2025): ne on kirjattu PR-kuvauksiin ja oppaiden lähdekommentteihin.
+Lisäksi Fablen rajaus 30 kaupunkiin: loput 41 inventaarion kaupunkia jäävät tekemättä, ellei toisin käsketä.
 
 ## Paketti O9: kaikki lehdet valmiiksi + uudet mantereet (tilattu 22.8.2026) — VANHENTUNUT, KS. ALLA
 
