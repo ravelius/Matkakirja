@@ -2238,4 +2238,75 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan.',
     },
   },
+  /*
+   * NLD (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.NLD:n tunnuksia
+   * (12 maakuntaa + Karibian erityiskunnat Bonaire, Saba ja
+   * St. Eustatius). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Bonaire          — Bonaire (Pekelmeer, flamingojen pesimäalue 1969, ei pääsyä)
+   *   Drenthe          — Drenthe (53/54 dolmenia, n. 3500 eaa.)
+   *   Zuid-Holland     — South Holland (Port of Rotterdam, Haag hallituksen kotipaikka)
+   *   Flevoland        — Flevoland (uusin maakunta 1986, kuivatus 1950–60-luvuilla)
+   *   Friesland        — Elfstedentocht (lähes 200 km, luonnonjää, viimeksi 1997)
+   *   Gelderland       — De Hoge Veluwe National Park (ilmaiset pyörät, Kröller-Müller)
+   *   Groningen        — Groningen gas field (järistykset, tuotanto loppui 1.10.2023)
+   *   Limburg          — Limburg (Netherlands) (Vaalserberg 322,4 m, kolmen maan piste)
+   *   Overijssel       — Giethoorn (ei teitä vanhassa kylässä, 176 siltaa)
+   *   Noord-Brabant    — Efteling (avattu 1952, suurin NL:ssä), Kaatsheuvel (N-Brabant)
+   *   Noord-Holland    — North Holland (Amsterdam, Schiphol Euroopan 3. vilkkain)
+   *   Saba             — Juancho E. Yrausquin Airport (400 m, lyhyin reittikiitorata)
+   *   St. Eustatius    — Sint Eustatius (First Salute 16.11.1776, Fort Oranje)
+   *   Utrecht          — Dom Tower of Utrecht (112 m, 465 askelmaa, korkein kirkontorni)
+   *   Zeeland          — Zeeland ("Sealand", tulva 1953, Deltatyöt)
+   */
+  NLD: {
+    Bonaire: {
+      lyhyt: 'Bonairen Pekelmeerin suolajärvellä on flamingojen pesimärauhoitusalue, jonne ihmiset eivät saa astua lainkaan.',
+    },
+    Drenthe: {
+      lyhyt: 'Drenthessä seisoo 53 Alankomaiden 54 dolmenista – kivipaadet kasattiin haudoiksi jo noin 3500 vuotta ennen ajanlaskun alkua.',
+    },
+    'Zuid-Holland': {
+      lyhyt: 'Rotterdamin satama on Euroopan vilkkain, ja maakunnan pääkaupunki Haag on koko Alankomaiden hallituksen kotipaikka.',
+    },
+    Flevoland: {
+      lyhyt: 'Flevoland on Alankomaiden nuorin maakunta, perustettu 1986, ja lähes koko sen maa kuivattiin entisestä merenpohjasta.',
+    },
+    Friesland: {
+      lyhyt: 'Lähes 200 kilometrin Elfstedentocht-luistelu ajetaan vain, kun luonnonjää kestää koko reitillä – viimeksi niin kävi 1997.',
+    },
+    Gelderland: {
+      lyhyt: 'Hoge Veluwen kansallispuistossa ajellaan ilmaisilla puistopyörillä, ja metsän keskellä odottaa Kröller-Müller-museon Van Gogh -kokoelma.',
+    },
+    Groningen: {
+      lyhyt: 'Groningenin kaasukenttä oli maailman suurimpia, mutta sen aiheuttamat maanjäristykset saivat valtion lopettamaan tuotannon 2023.',
+    },
+    Limburg: {
+      lyhyt: 'Vaalserberg kohoaa 322 metriin, Manner-Alankomaiden korkeimmaksi kohdaksi, ja sen laella kohtaavat Alankomaat, Belgia ja Saksa.',
+    },
+    Overijssel: {
+      lyhyt: 'Giethoornin vanhassa kylässä ei ollut teitä lainkaan, vaan kaikki kulki veneillä kanavia pitkin – siltoja on 176.',
+    },
+    'Noord-Brabant': {
+      lyhyt: 'Kaatsheuvelin Efteling avattiin 1952 satumetsänä, ja nyt se on Alankomaiden suurin huvipuisto ja yksi maailman vanhimmista.',
+    },
+    'Noord-Holland': {
+      lyhyt: 'Amsterdam on Alankomaiden pääkaupunki ja suurin kaupunki, ja sen kupeessa Schiphol on Euroopan kolmanneksi vilkkain lentoasema.',
+    },
+    Saba: {
+      lyhyt: 'Saban lentokentän kiitorata on vain 400 metriä, maailman lyhyin reittiliikenteessä, ja sen molemmissa päissä jyrkänne putoaa mereen.',
+    },
+    'St. Eustatius': {
+      lyhyt: 'Fort Oranjen tykit vastasivat 1776 amerikkalaisprikin tervehdykseen – varhainen kansainvälinen tunnustus kapinallisten lipulle.',
+    },
+    Utrecht: {
+      lyhyt: 'Utrechtin Dom-tornin 465 askelmaa vievät 112 metrin korkeuteen – se on Alankomaiden korkein kirkontorni.',
+    },
+    Zeeland: {
+      lyhyt: 'Zeelandin nimi tarkoittaa merimaata, ja vuoden 1953 tuhotulvan jälkeen sen saaria suojaavat Deltatyöt, jättimäiset padot ja sulut.',
+    },
+  },
 };
