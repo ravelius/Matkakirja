@@ -108624,6 +108624,232 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sitka, Alaska',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sitka, Alaska; John O'Connell Bridge; Sitka Rocky
+       * Gutierrez Airport; Peril Strait; MV Chenega eli nykyinen Som
+       * Menorca; Alaska Raptor Center; Fortress of the Bear; Mount
+       * Edgecumbe (Alaska); Saint Lazaria Island; Sitka Summer Music
+       * Festival; Sheet'ká Ḵwáan Naa Kahídi; Alaska Day) ja Wikivoyagen
+       * Sitka-sivulta — teksti omaa. Nostojen aiheita (lipunvaihto,
+       * katedraali, Piispantalo, tulivuori maisemana, hallintokaupungin
+       * menetys, vuoden 1804 taistelu, puisto, totemipylväät, kieli) ei
+       * toisteta: Mount Edgecumbesta kerrotaan vain retkipolku ja vuoden
+       * 1974 aprillipila, ja Alaskan päivästä nykyinen juhlaviikko.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: valkopäämerikotka Volta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Raptor center (js) 4.jpg',
+          lyhyt: 'Sähkölinjoihin 1992 törmännyt merikotka Volta oli Sitkan petolintukeskuksen tunnetuin asukas.',
+          selite: 'Valkopäämerikotka Volta loukkasi olkapäänsä pysyvästi '
+            + 'törmättyään sähkölinjoihin 1992 ja eli sen jälkeen Alaska '
+            + 'Raptor Centerissä, kunnes se kuoli tammikuussa 2024 ainakin '
+            + '37-vuotiaana.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sitkaan ei pääse autolla: kaupunki on Baranofinsaarella '
+          + 'Tyynenmeren rannalla, ja perille tullaan lautalla, lentäen tai '
+          + 'risteilyaluksella. Risteilijöitä käy kesäisin niin paljon, että '
+          + 'vilkkaimpina päivinä kaupungissa on enemmän vieraita kuin '
+          + 'asukkaita. Eläimet on helppo nähdä: petolintukeskuksessa '
+          + 'hoidetaan loukkaantuneita merikotkia, ja vanhan sellutehtaan '
+          + 'altaissa asuu orvoiksi jääneitä karhuja. Salmen takana '
+          + 'kohoavalle tulivuorelle voi kiivetä, ja meren puolella on saari, '
+          + 'jolla pesii satoja tuhansia merilintuja. Kesäkuussa kaupungissa '
+          + 'soitetaan kamarimusiikkia ja lokakuussa juhlitaan Alaskan '
+          + 'päivää. Sadetakki kannattaa pakata mukaan joka vuodenaikana, '
+          + 'sillä sade kuuluu Sitkan arkeen.',
+        artikkeli: {
+          nimi: 'Matkailijan Sitka',
+          teksti: 'Sitkaan ei johda yhtään tietä, joten perille tullaan meritse tai ilmasta.',
+          nosto: 'Aprillipäivänä 1974 Mount Edgecumbe näytti purkautuvan: '
+            + 'kraatterissa paloi 70 helikopterilla tuotua vanhaa rengasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille meritse tai ilmasta',
+              teksti: 'Sitkaan ei johda yhtään tietä, sillä kaupunki on saarella '
+                + 'Kaakkois-Alaskan ulkorannikolla. Autolla tuleva nousee Alaskan '
+                + 'valtion lautoille, jotka kaikki on nimetty jäätiköiden mukaan '
+                + 'ja jotka kulkevat Juneausta, Ketchikanista ja muista '
+                + 'rannikon kaupungeista. Sitka jää pääreitin sivuun, '
+                + 'ja isot lautat pääsevät kapean Peril Straitin salmen läpi vain '
+                + 'vuoroveden seisauksen aikaan, joten aikataulut elävät '
+                + 'vuoroveden mukaan. Lauttaterminaali on 11 kilometriä '
+                + 'keskustasta pohjoiseen. Vuonna 2005 Alaskaan tuotu pikalautta '
+                + 'Chenega ajoi välillä Sitkaan asti, mutta sen polttoaine kävi '
+                + 'liian kalliiksi: alus myytiin 2021 Espanjaan. Useimmat tulevat '
+                + 'nykyään lentäen. Alaska Airlinesin suihkukoneet laskeutuvat '
+                + 'Japonskin saarelta mereen pistävälle pengerkiitotielle, jonka '
+                + 'yli myrskyaallot toisinaan lyövät, ja syksyn ja talven sää '
+                + 'viivästyttää lentoja usein. Kentältä keskustaan ajetaan '
+                + 'O\'Connellin siltaa, joka oli Yhdysvaltain ensimmäinen autoille '
+                + 'rakennettu vinoköysisilta. Sillan vieressä kanavassa '
+                + 'laskeutuvat vesitasot, joilla lähdetään näköalalennoille. '
+                + 'Perillä autoa ei juuri tarvita: tietä on koko saarella vain '
+                + 'noin 22 kilometriä, ja keskustassa kaikki on kävelymatkan '
+                + 'päässä.',
+              kuva: [
+                {
+                  tiedosto: 'Fast Ferry Chenega at Sitka.jpg',
+                  lyhyt: 'Alaskan valtion pikalautta Chenega Sitkan lauttalaiturissa maaliskuussa 2009.',
+                  selite: 'Alaskan lauttalaitoksen pikalautta Chenega oli '
+                    + 'kiinnittynyt Sitkan laituriin maaliskuussa 2009; '
+                    + 'käytöltään kalliiksi käynyt alus myytiin 2021 '
+                    + 'Espanjaan.',
+                  lahde: 'BackwaterSurfer, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Sitka, AK - John O\'Connell Bridge from Castle Hill 01.jpg',
+                  lyhyt: 'O\'Connellin silta yhdistää Sitkan keskustan lentokentän Japonskin saareen.',
+                  selite: 'Linnamäeltä kuvattu O\'Connellin silta oli '
+                    + 'Yhdysvaltain ensimmäinen autoille rakennettu '
+                    + 'vinoköysisilta, ja ennen sen valmistumista '
+                    + 'lentokentälle päästiin vain veneellä.',
+                  lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'What Floats?.jpg',
+                  lyhyt: 'Vesitaso odottaa laiturissa kalastusalusten vieressä Sitkan satamassa.',
+                  selite: 'Heinäkuun illan valossa 2023 kuvatussa Sitkan '
+                    + 'satamassa vesitaso odottaa laiturissa kalastusalusten '
+                    + 'ja satamarakennusten vieressä; vesitasoilla lennetään '
+                    + 'näköalalennoille saaren vuorten ylle.',
+                  lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kun risteilijät tulevat',
+              teksti: 'Sitka on ollut matkailukohde lähes siitä asti, kun Alaska '
+                + 'vaihtoi omistajaa: Pacific Coast Steamship Company aloitti '
+                + 'huvimatkat kaupunkiin 1884, ja jo 1890 matkailijoita tuli '
+                + 'viisituhatta vuodessa. Nykyään risteilykausi kestää '
+                + 'toukokuusta syyskuuhun. Useimmat alukset kiinnittyvät Old '
+                + 'Sitka Dockiin, noin kymmenen kilometriä keskustasta '
+                + 'pohjoiseen rakennettuun yksityiseen syväsatamaan, jonka '
+                + '143-metrinen kelluva laituri otettiin käyttöön 2013 ja johon '
+                + 'mahtuu jopa 335-metrinen laiva. Laiturilta pääsee ilmaisella '
+                + 'bussilla vartissa keskustaan Harrigan Centennial Halliin. Kun '
+                + 'laituri on varattu, laiva ankkuroi lahdelle ja matkustajat '
+                + 'tuodaan maihin aluksen omilla veneillä. Vuonna 2017 '
+                + 'risteilyaluksia kävi 136 ja matkustajia yli 150 000, ja '
+                + 'vuosina 2022–2023 heidän määränsä yli kaksinkertaistui. '
+                + 'Vilkkaimpina päivinä kaupungissa on noin 13 000 vierasta, '
+                + 'vaikka vuoden 2020 väestönlaskennassa asukkaita oli 8 458. '
+                + 'Laivojen satamamaksuilla on kustannettu keskustan ilmainen '
+                + 'langaton verkko.',
+              kuva: {
+                tiedosto: 'RegattaSitka.jpg',
+                lyhyt: 'Risteilyalus Regatta laiturissa Sitkassa heinäkuussa 2022, takanaan suurempi Norwegian Bliss.',
+                selite: 'Heinäkuussa 2022 Sitkan laiturissa oli kaksi '
+                  + 'risteilyalusta peräkkäin: edessä Regatta ja sen takana '
+                  + 'huomattavasti suurempi Norwegian Bliss.',
+                lahde: 'Jackhayes1, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kotkia ja karhuja',
+              teksti: 'Sitkan tunnetuimmat eläimet asuvat kahdessa '
+                + 'hoitolaitoksessa. Vuonna 1980 perustettu Alaska Raptor Center, '
+                + 'petolintujen hoitokeskus Tongassin kansallismetsän laidalla, '
+                + 'ottaa vuosittain vastaan 100–200 lintua, jotka ovat '
+                + 'törmänneet sähkölinjoihin, saaneet lyijymyrkytyksen tai '
+                + 'jääneet ansaan. Moni potilas lennätetään muualta Alaskasta '
+                + 'peitetyssä koirankuljetushäkissä, jonka pimeys rauhoittaa '
+                + 'linnun. Toipuvat merikotkat harjoittelevat lentämistä suuressa '
+                + 'sisähallissa ennen vapauttamista, ja ne, jotka eivät enää '
+                + 'pärjäisi luonnossa, jäävät keskukseen esittelemään lajiaan '
+                + 'yli 100 000 kävijälle vuodessa. Kymmenen kilometriä '
+                + 'keskustasta, vuonna 1993 suljetun sellutehtaan tontilla, '
+                + 'toimii Fortress of the Bear, turvakoti orvoiksi jääneille '
+                + 'karhuille, joita ei voi palauttaa luontoon. Karhuja '
+                + 'katsellaan näköalatasanteelta tehtaan entisiin '
+                + 'jätevesialtaisiin, joihin on tuotu vettä, puita, tynnyreitä '
+                + 'ja keinuja. Perustajat Les ja Evy Kinnear joutuivat ennen '
+                + 'lupaa todistamaan viranomaisille vuoden ajan sikoja '
+                + 'kasvattamalla, että osaavat hoitaa isoja eläimiä, ja '
+                + 'ensimmäinen karhunpentu saapui 2007. Talvella turvakoti on '
+                + 'kiinni, koska karhut nukkuvat talviunta.',
+              kuva: {
+                tiedosto: 'Fortress of the Bear two brown bears 2022.jpg',
+                lyhyt: 'Kaksi ruskeakarhua kahlaa Fortress of the Bear -turvakodin altaassa Sitkassa.',
+                selite: 'Fortress of the Bear -turvakodin ruskeakarhut '
+                  + 'kahlaavat matalassa altaassa huhtikuussa 2022, ja '
+                  + 'kävijät katsovat niitä ylhäältä näköalatasanteelta.',
+                lahde: 'Larry Lamsa, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tulivuorelle ja lintusaarelle',
+              teksti: 'Salmen takana kohoava Mount Edgecumbe on myös retkikohde. '
+                + 'Tulivuori on Kruzofin saarella, jonne mennään veneellä, ja '
+                + 'huipulle nousee noin 11 kilometrin polku, jonka rakensi '
+                + '1930-luvulla lamakauden työllisyysohjelma Civilian '
+                + 'Conservation Corps. Polku kulkee havumetsän ja rämeen halki, '
+                + 'ja noin kuuden kilometrin kohdalla on samojen rakentajien '
+                + 'kolmiseinäinen suojakota. Viimeiset viitisen kilometriä ovat '
+                + 'jyrkkää nousua, ja puurajan yläpuolella maa muuttuu '
+                + 'punaiseksi tulivuoren tuhkaksi, jonka poikki kyltit ohjaavat '
+                + 'kraatterin reunalle; karhujakin voi tulla vastaan. Kraatteri '
+                + 'tuli kuuluisaksi aprillipäivänä 1974, kun paikallinen '
+                + 'kepposenlaskija Oliver "Porky" Bickar lennätti sinne '
+                + 'helikopterilla 70 vanhaa rengasta ja sytytti ne. '
+                + 'Kaupunkilaiset luulivat tulivuoren heränneen, kunnes '
+                + 'kraatterin reunalta paljastui 15-metrisin kirjaimin maalattu '
+                + '"April Fool". Poliisille ja ilmailuviranomaiselle Bickar oli '
+                + 'kertonut aikeistaan, mutta rannikkovartiosto oli unohtunut. '
+                + 'Noin 32 kilometriä Sitkasta länteen on St. Lazarian saari, '
+                + 'jolla pesii noin 250 000 paria myrskykeijuja ja pari tuhatta '
+                + 'paria töyhtölunneja. Maihin saavat nousta vain luvan saaneet '
+                + 'tutkijat, koska maa on täynnä pesäkoloja, mutta saaren ympäri '
+                + 'kiertää veneellä yli 2 000 retkeläistä vuodessa.',
+              kuva: {
+                tiedosto: 'Saint Lazaria Island (50483693513).jpg',
+                lyhyt: 'St. Lazarian saaren jyrkillä rannoilla pesii satoja tuhansia merilintuja.',
+                selite: 'Kesäkuussa 2019 kuvatun St. Lazarian saaren '
+                  + 'nurmipeitteiset kalliot ja rantakallioiden vesilammikot '
+                  + 'kuuluvat merilintujen pesimäalueeseen, jolle saavat '
+                  + 'nousta vain luvan saaneet tutkijat.',
+                lahde: 'Brie Drummond / USFWS, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Kamarimusiikkia ja Alaskan päivä',
+              teksti: 'Kesäkuussa Sitkassa soi kamarimusiikki. Sitka Summer Music '
+                + 'Festival sai alkunsa 1972, kun viulisti Paul Rosenthal kokosi '
+                + 'kaupunkiin Jascha Heifetzin ja Gregor Piatigorskyn entisiä '
+                + 'oppilaita, ja tapaamisesta kasvoi vuosittainen kuukauden '
+                + 'mittainen festivaali. Iltakonsertit soitetaan Harrigan '
+                + 'Centennial Hallissa, jonka lasiseinän takana näkyvät Crescent '
+                + 'Harborin satama, metsäiset luodot ja lumihuippuiset vuoret, '
+                + 'ja joskus ikkunan ohi syöksyy merikotka. Risteilykesänä '
+                + 'kaupungin kaksi perinnettä esiintyvät vuorotellen: New '
+                + 'Archangel Dancers tanssii venäläisiä kansantansseja, ja '
+                + 'Naa Kahídi -tanssijat laulavat ja rummuttavat tlingitien '
+                + 'tarinoita klaanitalon mallisessa talossa, jonka Sitkan '
+                + 'heimo rakennutti 1997 ja jossa on Kaakkois-Alaskan suurin '
+                + 'käsin veistetty seinäpaneeli. Syksyn kohokohta on Alaskan '
+                + 'päivä 18. lokakuuta. Sitkassa sitä juhlitaan viikon '
+                + 'festivaalina, joka on kirjattu järjestetyksi ensimmäisen '
+                + 'kerran 1949: pääkadulla marssii paraati, koulut päästävät '
+                + 'oppilaat aikaisin ja moni liike sulkee ovensa. Kaikille päivä '
+                + 'ei ole pelkkä juhla, sillä osa alkuperäisasukkaista '
+                + 'muistuttaa, että maa myytiin kysymättä heiltä.',
+              kuva: {
+                tiedosto: 'Coast Guard renews Coast Guard City designation for Sitka, Alaska, during Alaska Day festivities, 2017.jpg',
+                lyhyt: 'Rannikkovartioston helikopterit lentävät Alaskan päivän paraatin yllä Sitkassa 2017.',
+                selite: 'Rannikkovartioston Sitkan lentoaseman väki marssii '
+                  + 'Alaskan päivän paraatissa lokakuussa 2017, ja aseman '
+                  + 'kaksi pelastushelikopteria lentää kadun yllä.',
+                lahde: 'Shawn Eggert / U.S. Coast Guard, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tlingit',
