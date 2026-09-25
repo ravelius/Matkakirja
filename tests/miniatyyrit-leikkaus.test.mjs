@@ -36,11 +36,6 @@ const TAYTTO_RAJA = 0.6;
 const REUNA_RAJA = 0.35;
 
 const TUNNETUT_KOHTAUSKUVAT = new Set([
-  'amsterdam-herengracht-537.webp',
-  'amsterdam-kapein-talo.webp',
-  'amsterdam-kissalaiva.webp',
-  'amsterdam-maitotytto.webp',
-  'amsterdam-yovartio.webp',
   'ateena-akropolis-museo.webp',
   'ateena-diogeneen-astia.webp',
   'ateena-elginin-marmorit.webp',
