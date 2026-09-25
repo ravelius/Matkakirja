@@ -688,7 +688,8 @@ namespace Matkakirja.Natiivi
             kysyy = true;
             var odotus = Viesti("mk-chat__odottaa", Mietinta(true));
             var pitka = odotus.schedule.Execute(() => odotus.text = Pitkat[arpa.Next(Pitkat.Length)]).StartingIn(6000);
-            pulu.Tilanne("answer", "hetkinen");
+            // Löydös 66: pulu salamana ulos odottamaan (web aloitaLivianOdotus → chatDashOut), ei "hetkinen"-hymyä.
+            pulu.ChatOdotusAlkoi();
 
             Tulos t = null;
             Label osittainen = null;
@@ -698,6 +699,7 @@ namespace Matkakirja.Natiivi
                 if (string.IsNullOrEmpty(teksti)) return;
                 if (osittainen == null)
                 {
+                    pulu.ChatVastausAlkoi(); // web ilmoitaVastaus → waitingAnswer: dashBack → dustOff → bookStudy
                     pitka.Pause();
                     odotus.style.display = DisplayStyle.None;
                     osittainen = Viesti("mk-chat__livia", teksti);
@@ -709,6 +711,9 @@ namespace Matkakirja.Natiivi
             odotus.RemoveFromHierarchy();
             osittainen?.RemoveFromHierarchy();
             kysyy = false;
+            // Virhe tai katkos: pulu vain takaisin; muuten (ei striimiä, koko vastaus kerralla) sama paluuketju.
+            if (t.Katkesi || t.Virhe != null) pulu.ChatOdotusLoppui();
+            else pulu.ChatVastausAlkoi();
 
             if (t.Katkesi)
             {
