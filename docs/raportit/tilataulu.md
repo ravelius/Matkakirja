@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 12:06 EEST
+**Päivitetty:** 2026-09-25 12:18 EEST (VIIMEINEN PÄIVITYS ENNEN TILINVAIHTOA — omistaja pysäyttää sessiot, ks. luovutus)
 
 ## 1) Sessiot
 
@@ -36,7 +36,9 @@ Ei avoimia kortteja tiedossa juuri nyt.
 
 **Postilaatikko:** viimeisin commit 7755d9c5a "Posti: kuittaa kahden kaupungin galleriakytkentä PR:ssä" — muuttumaton.
 
-**REBOOT-TARKISTUS (Fable-pyyntö, kone käynnistyi uudelleen ~11:3x):** launchd-agentit fi.matkakirja.juna, juna-vahti, siivous, app.matkakirja.natiivi-bundle kaikki ladattu ja toiminnassa (state "not running" normaalia StartInterval-ajolle, juna.log vahvistaa aktiivisuuden 12:00 asti). varmuuskopio-VIKA.txt tyhjä. **POIKKEAMA ilmoitettu Fablelle:** simulaattoreita jo 4 boottina (odotettiin 0), luultavasti roolisessiot käynnistyneet jo itse.
+**REBOOT-TARKISTUS (Fable-pyyntö, kone käynnistyi uudelleen ~11:3x):** launchd-agentit fi.matkakirja.juna, juna-vahti, siivous, app.matkakirja.natiivi-bundle kaikki ladattu ja toiminnassa (state "not running" normaalia StartInterval-ajolle, juna.log vahvistaa aktiivisuuden 12:00 asti). varmuuskopio-VIKA.txt tyhjä. Simulaattorit laskeneet takaisin 4→2 (natiiviseppa-iPhone, iPhone 17) — hyvin alle 4:n rajan.
+
+**TILINVAIHTO (omistaja 12:1x):** kaikki sessiot pysäytetään. Luovutus kirjoitettu docs/raportit/viesti-postivahti-luovutus-20260925.md, aloitusviesti päivitetty viesti-postivahti-aloitus.md. Ei clear_session-kutsua.
 
 ## 3) Avoimet PR:t
 
