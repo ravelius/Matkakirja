@@ -111824,6 +111824,245 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'De Beers',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Kimberley, Northern Cape; Kimberley Airport; McGregor
+       * Museum; Duggan-Cronin Gallery; John Blades Currey; William Humphreys
+       * Art Gallery; Sol Plaatje; Wildebeest Kuil Rock Art Centre; Mokala
+       * National Park; Battle of Magersfontein; Kamfers Dam) sekä
+       * Wikivoyagen Kimberley (Northern Cape)- ja South Africa -sivuilta
+       * (Eat, Drink) — teksti omaa. Wikivoyagen tiedot (etäisyydet, Star of
+       * the Westin anniskelulupa 1873 ja raitiovaunun pyyntöpysäkki, The
+       * Halfin kaksi tarinaa, talomuseoiden ajanvaraus, Harry Oppenheimer
+       * Housen eteläikkunat, Kimberley Club hotellina, Magersfonteinin
+       * etäisyys ja varusteet) on päivitetty 2021–2025, joten tekstissä ei
+       * ole hintoja eikä aukioloaikoja. Junaliikenteestä lähteet eroavat:
+       * Wikipedian mukaan Shosholoza Meyl liikennöi, Wikivoyagen (2025)
+       * mukaan kaikki kaukojunat on keskeytetty; teksti seuraa uudempaa.
+       * Johannesburgin etäisyys on Wikivoyagessa 480 km (taulukko) ja
+       * "noin 500 km" (N12-kohta). Kamfers Damin flamingojen lähtö on
+       * Wikipedian Kamfers Dam -artikkelin vuoden 2025 raportista.
+       * Skandinaavisen osaston vahvuus (52 miestä, joista 7 suomalaista) on
+       * Wikipedian Magersfontein-artikkelin Uddgrenin luvuista.
+       * Nostojen aiheita (löytö 1871, nimi 1873, Big Hole, De Beers ja
+       * Rhodes, lajittelupöydät, kimberliitti, maanalainen louhinta,
+       * työläisleirit ja taudit) sekä Afrikan kulttuurikorttien,
+       * artikkelin ja kysymysten aiheita (katuvalot 1882, Big Holen
+       * ulkomuseo) ei toisteta. Galleria on nostotasolla, siihen ei
+       * kosketa. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta, ja kuvat katsottu silmin. Skandinaavien
+       * muistomerkin kuvan tekijä on Commonsissa "RAM (assumed)", mutta
+       * sivu on lataajan oma {{self}}-lisensointi. Pystykuva:
+       * kaupungintalon julkisivu (Suzi-k, CC BY-SA 3.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kimberley city hall, front facade.JPG',
+          lyhyt: 'Kimberleyn kaupungintalon korinttilaiset pylväät Market Squaren laidalla.',
+          selite: 'Kimberleyn kaupungintalo valmistui 1899, vähän ennen '
+            + 'buurisodan alkua. F. C. Rogersin suunnittelemaa uusklassista '
+            + 'julkisivua kannattelevat korinttilaiset pylväät, ja '
+            + 'päätykolmion yllä seisoo veistosryhmä.',
+          lahde: 'Suzi-k, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Kimberley on Pohjois-Kapin maakunnan pääkaupunki keskellä '
+          + 'tasaista savannia, ja moni pysähtyy siellä vain katsomaan Big '
+          + 'Holea. Kaupunki palkitsee pidemmänkin käynnin. Museoraitiovaunu '
+          + 'lähtee kaupungintalon edestä, ja yhdessä maan vanhimmista '
+          + 'pubeista on anniskeltu olutta vuodesta 1873. Museoissa on '
+          + 'flaamilaisia mestareita ja kirjailija Sol Plaatjen koti, '
+          + 'lähiseudulla yli tuhatvuotisia kalliopiirroksia ja sarvikuonoja. '
+          + 'Kolmisenkymmentä kilometriä etelässä on taistelukenttä, jolla '
+          + 'taisteli joulukuussa 1899 myös seitsemän suomalaista '
+          + 'vapaaehtoista. Talvella päivät ovat leutoja ja yöt voivat painua '
+          + 'pakkaselle, kesällä helle katkeaa ukkoskuuroihin.',
+        artikkeli: {
+          nimi: 'Matkailijan Kimberley',
+          teksti: 'Timanttikaupungissa on kuopan lisäksi museoita, vanhoja pubeja ja savanni.',
+          nosto: 'Yhden maan vanhimmista pubeista ovella museoraitiovaunu '
+            + 'pysähtyy, kun matkustaja sitä pyytää.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Risteyskaupunki savannilla',
+              teksti: 'Kimberley on kahden valtatien risteyksessä. N12 tulee '
+                + 'Johannesburgista noin 480 kilometrin päästä ja jatkaa kohti '
+                + 'Kapkaupunkia, jonne on vajaat tuhat kilometriä, ja N8 vie '
+                + 'itään 160 kilometrin päähän Bloemfonteiniin ja länteen '
+                + 'Upingtoniin. Lentokenttä on kuuden ja puolen kilometrin päässä '
+                + 'keskustasta, ja sinne lennetään säännöllisesti Johannesburgista '
+                + 'ja Kapkaupungista. Kenttä perustettiin 1912, ja seuraavana '
+                + 'vuonna Kimberleyssä aloitti Etelä-Afrikan ensimmäinen '
+                + 'lentokoulu. Sen paikalla lentokentän lähellä on nyt '
+                + 'lentämisen pioneerien museo ja jäljennös koulun kaksitasosta. '
+                + 'Samassa koulussa oppi lentämään Ann Maria Bocciarelli, joka '
+                + 'sai ensimmäisenä naisena Afrikan mantereella lentäjän '
+                + 'lupakirjan. Junalla perille ei ole viime aikoina päässyt: vuonna 2025 '
+                + 'kaikki kaukojunat oli keskeytetty, vaikka Kapkaupungin rata '
+                + 'valmistui tänne jo 1885. Kaupungin sisällä vanhan ajan '
+                + 'kulkuneuvo on vuonna 1985 kiskoille palautettu '
+                + 'raitiovaunu, joka lähtee kaupungintalon edestä Market '
+                + 'Squarelta.',
+              kuva: [
+                {
+                  tiedosto: 'Wikimania by Rehman - 2018-07-17 - A005 - Precon.jpg',
+                  lyhyt: 'Kimberleyn lentokentän kaksi kiitotietä risteävät savannilla kuin suuri X.',
+                  selite: 'Lentokoneesta heinäkuussa 2018 kuvattu Kimberleyn '
+                    + 'lentokenttä: kolmen ja lähes kahden ja puolen kilometrin '
+                    + 'kiitotiet risteävät pensaikkoisella tasangolla, ja '
+                    + 'kentän rakennukset ovat kuvan oikeassa laidassa.',
+                  lahde: 'Rehman Abubakr, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Historical tramway at Market Square Kimberley.jpeg',
+                  lyhyt: 'Oranssi museoraitiovaunu Market Squarella, taustalla kaupungintalo.',
+                  selite: 'Kimberleyn historiallinen raitiovaunu odottaa '
+                    + 'matkustajia Market Squarella elokuussa 2007. Avovaunussa '
+                    + 'on poikittaiset puupenkit, ja vasemmalla taustalla '
+                    + 'näkyy kaupungintalo.',
+                  lahde: 'Hansm, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Station Kimberley.JPG',
+                  lyhyt: 'Kimberleyn aseman pitkä laiturikatos; Kapkaupungin rata valmistui tänne 1885.',
+                  selite: 'Kimberleyn rautatieaseman ykköslaituri syyskuussa '
+                    + '2006. Pitkä teräsrakenteinen katos suojaa laituria '
+                    + 'paahteelta, ja laiturin kylteissä lukee '
+                    + 'koristekirjaimin Kimberley.',
+                  lahde: 'Col André Kritzinger, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Braai, biltong ja drive-in-pubi',
+              teksti: 'Kimberleyn ruokapöytä on eteläafrikkalainen. '
+                + 'Viikonloppuisin grillataan eli braaitaan puuhiilillä, ja '
+                + 'ritilällä kiemurtelee mausteinen boerewors-makkara. '
+                + 'Automatkalle ostetaan biltongia, kuivattua ja maustettua '
+                + 'lihaa, ja jälkiruoaksi syödään maitotorttua tai '
+                + 'rasvassa paistettuja, siirappisia koeksistereita. Tuoretta '
+                + 'kalaa on sisämaassa vähän, mutta Pohjois-Kapin viinit '
+                + 'tehdään Oranjejoen varren rypäleistä. Oluelle mennään Star of the '
+                + 'Westiin, yhteen maan vanhimmista pubeista: puusta ja pellistä '
+                + '1870-luvun alussa koottu talo sai ensimmäisen '
+                + 'anniskelulupansa 1873, ja museoraitiovaunu pysähtyy '
+                + 'pyydettäessä sen ovella. Keskustan ja Beaconsfieldin '
+                + 'puolivälissä on Halfway House eli The Half, jota pidetään '
+                + 'maailman viimeisenä drive-in-pubina. Tarinan mukaan '
+                + 'ensimmäinen asiakas, joka tilasi juomansa satulasta, oli '
+                + 'kaivosten välillä ratsastanut Cecil Rhodes. Toinen tarina '
+                + 'kertoo, että kun kaupunki määräsi rakentamaan pihan eteen '
+                + '1,8-metrisen muurin, omistajat kaivoivat ensin yhtä syvän '
+                + 'ojan ja muurasivat seinän sen pohjalle. Kumpaakaan ei ole '
+                + 'todistettu, mutta molemmat kerrotaan jokaiselle vieraalle.',
+              kuva: {
+                tiedosto: 'Halfway House Hotel, Northern Cape, South Africa (20353472919).jpg',
+                lyhyt: 'The Halfin kyltissä perustamisvuosi on 1872, ja lava-auto on ajettu oven eteen.',
+                selite: 'Kesäkuun iltana 2015 kuvattu Halfway House Hotel eli '
+                  + 'The Half: raidalliset markiisit, julkisivun kultaiset '
+                  + 'kirjaimet ja perustamisvuosi 1872. Lava-auto on '
+                  + 'pysäköity suoraan oven eteen.',
+                lahde: 'South African Tourism, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museot timanttien varjosta',
+              teksti: 'Big Holen jälkeen kannattaa varata päivä McGregor-museolle. '
+                + 'Se perustettiin 24. syyskuuta 1907, ja sattumalta samasta '
+                + 'päivästä tuli vuoden 1994 jälkeen Etelä-Afrikan '
+                + 'perintöpäivä ja yleinen vapaapäivä. Päärakennus on vuonna '
+                + '1897 rakennettu parantola, joka ehti olla myös hotelli ja '
+                + 'luostarikoulu, ja buurisodan piirityksen ajan siellä asui '
+                + 'Cecil Rhodes. Museon sivupisteistä Duggan-Croninin '
+                + 'galleriassa on noin 8 000 valokuvaa, joilla irlantilainen '
+                + 'A. M. Duggan-Cronin tallensi eteläisen Afrikan kansojen '
+                + 'elämää vuosina 1919–1939. Galleria toimii talossa, jossa '
+                + 'asui J. B. Currey, sama mies, joka antoi kaupungille sen '
+                + 'nimen. William Humphreysin taidemuseossa, joka avattiin 1952, '
+                + 'on vanhemman Jan Brueghelin maisemia ja muita flaamilaisia '
+                + 'ja hollantilaisia mestareita sekä Etelä-Afrikan taidetta '
+                + 'Irma Sternistä Alexis Prelleriin. Angel Streetin numerossa 32 '
+                + 'on Sol Plaatjen koti. Toimittaja Plaatje puhui ainakin '
+                + 'seitsemää kieltä, käänsi Shakespearea setswanaksi ja '
+                + 'kirjoitti ensimmäisenä mustana eteläafrikkalaisena romaanin '
+                + 'englanniksi: Mhudi valmistui 1919, mutta painosta se tuli '
+                + 'vasta 1930.',
+              kuva: {
+                tiedosto: 'Sol Plaatje Museum.jpg',
+                lyhyt: 'Sol Plaatjen museo ja kirjasto hänen kodissaan Angel Streetin numerossa 32.',
+                selite: 'Tammikuussa 2013 kuvatun talon seinäkyltissä on Sol '
+                  + 'Plaatjen muotokuva. Kirjailija vietti talossa viimeiset '
+                  + 'vuotensa, ja se julistettiin kansallismonumentiksi 1992.',
+                lahde: 'TwinMosia, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kalliokuvia, sarvikuonoja ja taistelukenttä',
+              teksti: 'Kuusitoista kilometriä kaupungista Barkly Westin tien '
+                + 'varrella on Wildebeest Kuil, kivikkoinen kumpu, jonka '
+                + 'kallioihin on naputeltu kovalla kivellä satoja eläinkuvia: '
+                + 'norsuja, sarvikuonoja, virtahepoja ja elanteja. Osa kuvista '
+                + 'on tehty 1 200–1 800 vuotta sitten. Maan omistavat vuodesta '
+                + '1996 sanikansoihin kuuluvat !xun ja khwe, ja paikan vartijat '
+                + 'opastavat kävijät kuvien luo. Etelään N12-tietä ajetaan '
+                + 'Mokalan kansallispuistoon, jonka nimi on setswanaa ja '
+                + 'tarkoittaa seudulle tyypillistä akaasiaa. Vuonna 2007 '
+                + 'perustetussa, yli 26 000 hehtaarin puistossa elää mustia '
+                + 'sarvikuonoja, kafferipuhveleita ja hevosantilooppeja; '
+                + 'ajomatka kestää noin puolitoista tuntia, eikä seudulla ole '
+                + 'malariaa. Kolmisenkymmentä kilometriä etelään on '
+                + 'Magersfonteinin taistelukenttä, jolla buurit pysäyttivät '
+                + '11. joulukuuta 1899 piiritettyä Kimberleytä vapauttamaan '
+                + 'marssineet brittijoukot. Buurien puolella taisteli '
+                + 'skandinaavinen vapaaehtoisosasto, jossa oli 26 ruotsalaista, '
+                + '11 tanskalaista, 7 suomalaista ja 4 norjalaista, ja lähes '
+                + 'kaikki heistä kaatuivat, haavoittuivat tai jäivät vangiksi. '
+                + 'Kentälle tarvitaan oma auto, aurinkovoidetta ja paljon vettä.',
+              kuva: {
+                tiedosto: 'Skandinawiese monument magersfontein.JPG',
+                lyhyt: 'Magersfonteinin skandinaavien muistoristi 11. joulukuuta 1899 kaatuneille.',
+                selite: 'Ruotsinkielinen teksti kertoo, etteivät vapaaehtoiset '
+                  + 'voineet perääntyä vaan saattoivat vain kaatua. Joulukuussa '
+                  + '2005 kuvatun kiviristin juurelle on kasattu punaisia '
+                  + 'kiviä, ja taustalla näkyy toinen muistoristi.',
+                lahde: 'RAM, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, kielet ja yösija',
+              teksti: 'Kimberleyn lentokenttä on 1 204 metrin korkeudessa, ja '
+                + 'ylänkö näkyy säässä. Joulu–helmikuussa päivät ovat kuumia ja '
+                + 'sateet tulevat rajuina ukkoskuuroina, kesä–elokuussa päivät '
+                + 'ovat leutoja mutta yöt voivat painua pakkaselle, joten '
+                + 'lämmin takki kuuluu talvimatkan laukkuun. Yleisin kotikieli '
+                + 'on afrikaans ja toiseksi yleisin setswana; englantia puhuu '
+                + 'äidinkielenään vajaa kymmenesosa, mutta sillä pärjää '
+                + 'kaikkialla. Liikenne kulkee vasemmalla. McGregor-museon '
+                + 'kahteen talomuseoon, Rudd Houseen ja Dunluceen, pääsee vain '
+                + 'sopimalla käynnin etukäteen, ja keskustan Harry Oppenheimer '
+                + 'House, jossa lajitellaan päivittäin timantteja koko maasta, '
+                + 'ei ota vierailijoita lainkaan. Talossa on ikkunoita vain '
+                + 'etelän puolella, sillä eteläisellä pallonpuoliskolla '
+                + 'etelään ei paista suora aurinko ja timantit lajitellaan '
+                + 'tasaisessa luonnonvalossa. Kaikki esitteiden kohteet eivät '
+                + 'ole ennallaan: vuoden 2025 raportin mukaan Kamfers Damin '
+                + 'kymmenettuhannet pikkuflamingot ovat jättäneet jätevesien '
+                + 'pilaaman järven. Yösijaksi sopii vuonna 1881 perustettu '
+                + 'Kimberley Club, jonka jäseniin kuuluivat Rhodes ja Barnato '
+                + 'ja joka toimii nykyään myös boutique-hotellina.',
+              kuva: {
+                tiedosto: 'Kimberley Club, 70 Dutoitspan Road, Kimberley.jpg',
+                lyhyt: 'Vuonna 1881 perustetun Kimberley Clubin kaarikäytävä ja veranta Dutoitspan Roadilla.',
+                selite: 'Maaliskuussa 2007 kuvatun Kimberley Clubin punaisen '
+                  + 'katon alla kiertävät kaarikäytävä ja yläkerran veranta. '
+                  + 'Kaivosmagnaattien klubi on ollut kansallismonumentti '
+                  + 'vuodesta 1984 ja toimii nykyään myös hotellina.',
+                lahde: 'Andrew, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'timantit',
