@@ -101,6 +101,12 @@ namespace Matkakirja.Natiivi
             // Kehittäjärivit vain Kehittäjä-osassa kehittäjätilassa (Fablen tarkastus C4, löydös 65: ei pelaajalle).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KEHITTÄJÄ", "mk-pudotus__otsikko", kokeet);
+            // Löydös 103 (omistaja build 13): Maailma-tilan pois kytkeminen löytyy myös Kehittäjä-osasta (sama kytkin kuin
+            // KARTTA-ryhmässä, löydös 65).
+            maailma2 = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
+            maailma2.tooltip = maailma.tooltip;
+            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma2);
+            maailmaTila2 = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma2);
             reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, kokeet, Ikonit.Viiva["satelliitti"]);
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
@@ -184,8 +190,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Webin maailmanapin viivaikoni (index.html #kehittaja-maailma-btn).</summary>
         const string Maapallo = "<circle cx=\"12\" cy=\"12\" r=\"7.5\"/><path d=\"M4.5 12h15\"/><path d=\"M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z\"/>";
         const string MaailmaAvain = "matkakirja-kehittaja-maailma";
-        Button maailma;
-        Label maailmaTila;
+        Button maailma, maailma2;
+        Label maailmaTila, maailmaTila2;
 
         /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
         public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
@@ -240,6 +246,8 @@ namespace Matkakirja.Natiivi
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
             maailma.EnableInClassList("mk-valittu", Maailma);
             maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
+            maailma2.EnableInClassList("mk-valittu", Maailma);
+            maailmaTila2.text = maailmaTila.text;
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
             bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
