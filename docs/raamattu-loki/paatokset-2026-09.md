@@ -4915,3 +4915,7 @@ Radio-sulku ja kirjainvali odottavat yhä Natiivisepän mergeä (pistekerroin en
 ## OMISTAJA klo 03.2x: CODEXIN NAS-SIIRTO VALMIS, KUVAPUTKI JATKAA → JULKAISIJA ILMOITTAA CODEXILLE: LINSSIKATALOGIN TILAUS (3576ee735, 155 RIVIA) AJETTAVISSA, ERA 1b JATKUU, TUNTIHAKU PAALLE (25.9.2026 klo 03.45)
 
 Levy 167 Gt vapaana (Postivahti 01.3x).
+
+## OMISTAJA klo 03.4x (KORTTI, SITOVA): PERUSKARTAN RESEPTI 2026-09-25 HYVAKSYTTY KUVAPARISTA → KOKO MAAILMAN POLTTO Z0–Z9 TANAAN (POHJA + VIIVAT PAIVALLA 4 YTIMELLA, PALLO YOLLA klo 22, 16 YDINTA), SITTEN AMPARIIN JA Z9 LAATTAPALVELIMEEN; LOYDOS 46 RANTAVIIVA = VAIHTOEHTO 3 (RANNAT 0,25, RAJAT TAYDELLA) OLETUKSEKSI BUILD 12:EEN (25.9.2026 klo 03.50)
+
+Kortti Fablen sessiossa, kuvat 3-peloponnesos-z9.jpg, 3-kreikka-z6.jpg (main, #3130) ja proto-3d/lokit/loydos46-b12r2/kallistus-4.jpg, ylhaalta-4.jpg. Karttaseppä aloittaa pohjan kun E28:n ämpärivienti on valmis; Natiiviseppä mergeää löydös 46:n junaan lopullisella oletuksella.
