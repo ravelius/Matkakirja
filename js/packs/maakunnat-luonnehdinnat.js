@@ -11119,4 +11119,369 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Muharraqin helmipolku kulkee 3,5 kilometriä helmikauppiaiden talojen ohi, ja se on Unescon maailmanperintöä.',
     },
   },
+  /*
+   * AGO (erä 9A). Avaimet MAAKUNNAT_KAIKKI.AGO:n tunnuksia TÄSMÄLLEEN
+   * ("Bié", "Huíla", "Uíge" diakriitteineen). Vain `lyhyt`. Vältetty
+   * maastokohteet-ago.js:n aiheet (Morro de Moco, Cuanza, M'banza-Kongo,
+   * São Miguel, Kalandula, Quiçama, Iona, Moçâmedes, Benguelan rata,
+   * Cuito Cuanavale). Lähteet (en-/pt-Wikipedia ja haku 25.9.2026):
+   *   Bengo — Bengo Province (Angolatitan); Benguela — Lobito; Bié —
+   *   Kuito; Cabinda — Cabinda Province; Cuando Cubango — Okavango River;
+   *   Cuanza Norte — Church of Nossa Senhora da Victoria (Massangano);
+   *   Cuanza Sul — Cachoeiras do Binga (verangola.net); Cunene — Cunene
+   *   Province; Huambo — Huambo; Huíla — Tundavala Gap; Luanda — Ilha de
+   *   Luanda; Lunda Norte — Dundo Museum; Lunda Sul — Catoca diamond mine;
+   *   Malanje — Cangandala National Park; Moxico — Zambezi; Namibe —
+   *   Welwitschia; Uíge — Uíge; Zaire — Soyo
+   */
+  AGO: {
+    Bengo: {
+      lyhyt: 'Bengosta kaivettiin Angolatitan adamastor, ensimmäinen Angolasta löydetty dinosauruksen luuranko.',
+    },
+    Benguela: {
+      lyhyt: 'Lobiton satama on Afrikan parhaita luonnonsatamia, ja sitä suojaa noin viiden kilometrin mittainen hiekkasärkkä.',
+    },
+    "Bié": {
+      lyhyt: 'Kuito on Bién ylängöllä lähes 1 700 metrin korkeudessa, ja siksi kaupungin vuoden keskilämpö on vain noin 18 astetta.',
+    },
+    Cabinda: {
+      lyhyt: 'Cabinda on Angolan erillisalue: Kongon demokraattisen tasavallan kapea rannikkokaistale erottaa sen muusta maasta.',
+    },
+    "Cuando Cubango": {
+      lyhyt: 'Cubango-joki virtaa täältä kohti Botswanaa, jossa se Okavangona levittäytyy Kalaharin suistoksi eikä koskaan saavu mereen.',
+    },
+    "Cuanza Norte": {
+      lyhyt: 'Massanganon Nossa Senhora da Vitória -kirkko rakennettiin 1580-luvulla, ja se on Unescon maailmanperinnön alustavalla listalla.',
+    },
+    "Cuanza Sul": {
+      lyhyt: 'Keve-joen Bingan putoukset Sumben lähellä ovat maakunnan suosituimpia retkikohteita, ja rannalla on piknikpaikkoja.',
+    },
+    Cunene: {
+      lyhyt: 'Cunenen asukkaat ovat enimmäkseen ovambopaimentolaisia, jotka siirtävät karjalaumojaan laitumelta toiselle vuodenaikojen mukaan.',
+    },
+    Huambo: {
+      lyhyt: 'Huambo perustettiin 1912 yli 1 700 metrin korkeuteen, ja siirtomaa-aikana kaupunki tunnettiin nimellä Nova Lisboa.',
+    },
+    "Huíla": {
+      lyhyt: 'Lubangon lähellä Tundavalan rotkon reunalta putoaa noin tuhannen metrin jyrkänne alas tasangolle.',
+    },
+    Luanda: {
+      lyhyt: 'Luandan Ilhalla on rantaravintoloita ja yökerhoja, ja sen Nossa Senhora do Cabo -kirkko oli portugalilaisten ensimmäinen Angolassa.',
+    },
+    "Lunda Norte": {
+      lyhyt: 'Dundon museo avattiin 1936 Angolan ensimmäisenä museona, ja sen kokoelmissa on tuhansia tšokwe-kansan esineitä.',
+    },
+    "Lunda Sul": {
+      lyhyt: 'Saurimon lähellä on Catocan timanttikaivos, maailman neljänneksi suurin, ja siellä louhitaan kimberliittipiippua.',
+    },
+    Malanje: {
+      lyhyt: 'Cangandalan kansallispuisto perustettiin 1970 suojelemaan mustahevosantiloopin jättiläisalalajia, Angolan kansallista tunnusta.',
+    },
+    Moxico: {
+      lyhyt: 'Sambesi syntyy Sambiassa, mutta ennen paluutaan se mutkittelee Moxicon kautta noin 240 kilometriä Angolan puolella.',
+    },
+    Namibe: {
+      lyhyt: 'Namiben aavikolla kasvaa welwitschia, jolla on koko elämänsä ajan vain kaksi lehteä; vanhimmat yksilöt voivat olla 2 000-vuotiaita.',
+    },
+    "Uíge": {
+      lyhyt: 'Noin 860 metrin korkeudella sijaitseva Uíge kasvoi 1950-luvulla Angolan kahvinviljelyn keskukseksi.',
+    },
+    Zaire: {
+      lyhyt: 'Kongojoen suulla sijaitseva Soyo on nykyään Angolan suurinta öljyntuotantoaluetta.',
+    },
+  },
+  /*
+   * COD (erä 9A). Avaimet MAAKUNNAT_KAIKKI.COD:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanha 11 provinssin jako: "Bandundu", "Bas-Congo",
+   * "Kinshasa City", "Orientale" ym.). Vain `lyhyt`. Vältetty
+   * maastokohteet-cod.js:n aiheet (Stanley, Tanganjika, Kongo, Inga,
+   * Boyoma, Virunga, Kahuzi-Biéga, Salonga, Garamba, Upemba, Lubumbashin
+   * kaivokset). Lähteet (en-Wikipedia 25.9.2026):
+   *   Bandundu — Lake Mai-Ndombe; Équateur — Mbandaka; Sud-Kivu — Idjwi;
+   *   Kasaï-Occidental — Kuba textiles; Kasaï-Oriental — Mbuji-Mayi;
+   *   Katanga — Katanga Cross; Bas-Congo — Matadi; Kinshasa City —
+   *   Congolese rumba; Maniema — Kindu; Orientale — Okapi Wildlife
+   *   Reserve; Nord-Kivu — Lake Kivu
+   */
+  COD: {
+    Bandundu: {
+      lyhyt: 'Mai-Ndombe-järven nimi tarkoittaa mustaa vettä, ja sadekaudella järvi voi paisua kaksin- tai kolminkertaiseksi.',
+    },
+    "Équateur": {
+      lyhyt: 'Mbandakan kaupungintalolta on vain noin neljä kilometriä päiväntasaajalle, ja Stanley antoi paikalle 1883 nimen Équateurville.',
+    },
+    "Sud-Kivu": {
+      lyhyt: 'Kivujärven Idjwi on Afrikan toiseksi suurin järvisaari, ja sinne pääsee veneellä Bukavusta.',
+    },
+    "Kasaï-Occidental": {
+      lyhyt: 'Kuba-kansan miehet kutovat raffiakankaan, ja naiset kirjovat siihen samettimaisia geometrisia kuvioita.',
+    },
+    "Kasaï-Oriental": {
+      lyhyt: 'Mbuji-Mayin nimi tarkoittaa tshilubaksi vuohivettä, ja kaupunki on rakentunut maailman suurimpiin kuuluvan timanttiesiintymän päälle.',
+    },
+    Katanga: {
+      lyhyt: 'Katangan ristit, noin kilon painoiset ristinmuotoiset kupariharkot, kelpasivat maksuvälineinä vielä 1900-luvun alussa.',
+    },
+    "Bas-Congo": {
+      lyhyt: 'Matadi tarkoittaa kikongoksi kiveä: kaupunki on rakennettu jyrkille rinteille, ja sinne asti valtamerilaivat pääsevät jokea ylös.',
+    },
+    "Kinshasa City": {
+      lyhyt: 'Kongolainen rumba, Kinshasan tunnetuin musiikkityyli, lisättiin 2021 Unescon aineettoman kulttuuriperinnön luetteloon.',
+    },
+    Maniema: {
+      lyhyt: 'Kindussa Lubumbashista tuleva rautatie päättyy Lualaba-joen rantaan, ja tavarat siirretään junasta jokiveneisiin.',
+    },
+    Orientale: {
+      lyhyt: 'Iturin sademetsän okapireservaatissa elää tuhansia okapeja, kirahvin sukulaisia; se on Unescon maailmanperintöä vuodesta 1996.',
+    },
+    "Nord-Kivu": {
+      lyhyt: 'Gomaan rajautuvan Kivujärven syvänteisiin on liuennut valtavasti metaania, jota voidaan pumpata ylös sähköntuotantoon.',
+    },
+  },
+  /*
+   * CMR (erä 9A). Avaimet MAAKUNNAT_KAIKKI.CMR:n tunnuksia TÄSMÄLLEEN
+   * (ranskankieliset "Extrême-Nord", "Nord-Ouest" ym.). Vain `lyhyt`.
+   * Vältetty maastokohteet-cmr.js:n aiheet (Kamerunvuori, Sanaga,
+   * Foumban, Dja, Bimbia, Rhumsiki, Waza, Kribi, Korup, Ngaoundéré).
+   * Lähteet (en-/fr-Wikipedia ja haku 25.9.2026):
+   *   Adamaoua — Adamawa Plateau; Centre — Yaoundé; Est — Lobéké
+   *   National Park; Extrême-Nord — Musgum mud huts; Littoral — La
+   *   Nouvelle Liberté; Nord-Ouest — Fon of Bafut; Nord — Bénoué National
+   *   Park; Sud — Campo Ma'an National Park; Sud-Ouest — Limbe Botanic
+   *   Garden; Ouest — Bandjoun
+   */
+  CMR: {
+    Adamaoua: {
+      lyhyt: 'Adamawan ylänkö kohoaa keskimäärin tuhanteen metriin, ja sen ruohoisilla laitumilla karjankasvatus on pääelinkeino.',
+    },
+    Centre: {
+      lyhyt: 'Yaoundéta kutsutaan seitsemän kukkulan kaupungiksi, ja noin 730 metrin korkeudessa se on rannikkoa viileämpi.',
+    },
+    Est: {
+      lyhyt: 'Lobéken sademetsän aukeille, baihin, kerääntyy eläimiä kivennäispitoisen maan ja veden äärelle.',
+    },
+    "Extrême-Nord": {
+      lyhyt: 'Musgum-kansan savimajat kohoavat jopa yhdeksään metriin, ja niiden kylkien kohokuviot toimivat rakentajien askelmina.',
+    },
+    Littoral: {
+      lyhyt: 'Doualan Deïdon liikenneympyrässä seisoo La Nouvelle Liberté, 12-metrinen romumetallista koottu veistos vuodelta 1996.',
+    },
+    "Nord-Ouest": {
+      lyhyt: 'Bafutin fonin palatsissa on Achum, pyramidimaisen olkikaton pyhäkkö, jonne saavat astua vain fon ja kylän arvohenkilöt.',
+    },
+    Nord: {
+      lyhyt: 'Bénouén kansallispuisto on harvoja paikkoja, joissa voi nähdä jättiläisilandin, Afrikan suurimman antiloopin.',
+    },
+    Sud: {
+      lyhyt: "Campo Ma'anin kansallispuistossa sademetsä ulottuu Atlantin rantaan asti Päiväntasaajan Guinean rajalla.",
+    },
+    "Sud-Ouest": {
+      lyhyt: 'Limben kasvitieteellinen puutarha perustettiin 1892, ja sitä pidettiin aikanaan yhtenä maailman tärkeimmistä trooppisista puutarhoista.',
+    },
+    Ouest: {
+      lyhyt: 'Bandjounin päällikkökunta on bamilekejen suurimpia, ja sen suuren majan olkikattoa kannattelevat veistetyt puupylväät.',
+    },
+  },
+  /*
+   * TCD (erä 9A). Avaimet MAAKUNNAT_KAIKKI.TCD:n tunnuksia TÄSMÄLLEEN
+   * ("Ville de N'Djamena" suoralla heittomerkillä, "Guéra", "Ouaddaï",
+   * "Tandjilé"). Vain `lyhyt`. Vältetty maastokohteet-tcd.js:n aiheet
+   * (Emi Koussi, Tšadjärvi, Chari, Guelta d'Archei ja kalliomaalaukset,
+   * Aloba, Ounianga, Zakouma, Fitri, Manda, Abéché ja Ouara, Iro).
+   * Lähteet (en-/fr-Wikipedia ja haku 25.9.2026):
+   *   Barh El Gazel — Bahr el-Ghazal (wadi in Chad); Batha — Ouadi
+   *   Rimé-Ouadi Achim Faunal Reserve; Borkou — Bodélé Depression;
+   *   Chari-Baguirmi — Massenya; Ennedi — Ennedi Plateau; Guéra —
+   *   Hadjarai; Hadjer-Lamis — Hadjer-Lamis (fr) ja Hadjer el Hamis
+   *   (haku); Kanem — dihé (Slow Food, UNESCO); Lac — Kuri cattle; Logone
+   *   Occidental — Moundou; Logone Oriental — Chad–Cameroon pipeline;
+   *   Mandoul — Mandoul Region; Mayo-Kebbi Est — Bongor (fr); Mayo-Kebbi
+   *   Ouest — Gauthiot Falls; Moyen-Chari — Sarh; N'Djamena —
+   *   N'Djamena; Ouaddaï — Wadai Sultanate; Salamat — Am Timan; Sila —
+   *   Goz Beïda; Tandjilé — Laï (fr); Tibesti — Trou au Natron; Wadi
+   *   Fira — Wadi Fira Region, Iriba
+   */
+  TCD: {
+    "Barh El Gazel": {
+      lyhyt: 'Bahr el Ghazal on kuiva uoma, jossa vesi virtaa vain harvoin rankkasateiden jälkeen, Tšadjärveltä poispäin kohti koillista.',
+    },
+    Batha: {
+      lyhyt: 'Ouadi Rimé–Ouadi Achimin valtavalle suojelualueelle on vuodesta 2016 palautettu luonnosta hävinneitä sapelibeisoja.',
+    },
+    Borkou: {
+      lyhyt: 'Bodélén painanne on maapallon pölyisimpiä paikkoja, ja sen tuulten nostama pöly lannoittaa Amazonin sademetsää Atlantin takana.',
+    },
+    "Chari-Baguirmi": {
+      lyhyt: 'Massenya oli Baguirmin kuningaskunnan pääkaupunki, ja sen perinteinen hallitsija kantaa yhä mbang-arvonimeä.',
+    },
+    Ennedi: {
+      lyhyt: 'Ennedin hiekkakivimassiivi merkittiin 2016 Unescon maailmanperintöluetteloon sekä luonnon- että kulttuurikohteena.',
+    },
+    "Guéra": {
+      lyhyt: 'Guéran vuoristossa asuvia kansoja kutsutaan hadjaraiksi, kivien kansaksi, ja moni uskoo yhä margai-henkiin.',
+    },
+    "Hadjer-Lamis": {
+      lyhyt: 'Alue on nimetty Hadjer el Hamisin kalliopilareista, jotka kohoavat noin sata metriä tasangolta Tšadjärven eteläpuolella.',
+    },
+    Kanem: {
+      lyhyt: 'Kanemin lammista kanembunaiset kuorivat spirulinalevää ja kuivaavat sen dihé-kakuiksi; miehiä ei päästetä veteen.',
+    },
+    Lac: {
+      lyhyt: 'Tšadjärven saarilla laiduntaa kuri-karjaa, jonka paksut, pullistuneet sarvet auttavat sitä uimaan saarelta toiselle.',
+    },
+    "Logone Occidental": {
+      lyhyt: 'Moundou on Tšadin toiseksi suurin kaupunki, ja siellä pannaan Gala-olutta, maan suosituinta.',
+    },
+    "Logone Oriental": {
+      lyhyt: 'Doban öljykentiltä lähtee 1 070 kilometriä pitkä putki, joka kuljettaa öljyn Kamerunin rannikolle.',
+    },
+    Mandoul: {
+      lyhyt: 'Mandoulin savanneilla viljellään omavaraisviljelyn ohella puuvillaa, ja maakunnassa asuu useita sara-kansoja.',
+    },
+    "Mayo-Kebbi Est": {
+      lyhyt: "Bongorista näkee joen yli Kamerunin puolelle Yagouaan, ja kaupunki on puolivälissä N'Djamenan ja Moundoun välillä.",
+    },
+    "Mayo-Kebbi Ouest": {
+      lyhyt: "Mayo Kébbi -joen Gauthiot'n putoukset ovat Tšadin luonnonihme, vaikka ne laskevat yhteensä vain noin 17 metriä.",
+    },
+    "Moyen-Chari": {
+      lyhyt: 'Sarh on Tšadin kolmanneksi suurin kaupunki, ja siirtomaa-aikana sen nimi oli Fort-Archambault.',
+    },
+    "Ville de N'Djamena": {
+      lyhyt: "N'Djamenan nimi tarkoittaa arabiaksi lepopaikkaa, ja joen toisella puolella on kamerunilainen Kousséri.",
+    },
+    "Ouaddaï": {
+      lyhyt: 'Ouaddain sulttaanikunnan perusti 1635 maba-kansan Abd al-Karim, ja sen sulttaania kutsutaan yhä kolakiksi.',
+    },
+    Salamat: {
+      lyhyt: 'Bahr Salamat virtaa vain sadekaudella, ja kuivana aikana vettä kaivetaan uoman pohjaan tehdyistä kaivoista.',
+    },
+    Sila: {
+      lyhyt: 'Sila-maakunnan pääkaupungin Goz Beïdan nimi tarkoittaa tšadinarabiaksi valkoista hiekkaa.',
+    },
+    "Tandjilé": {
+      lyhyt: 'Maakunnan pääkaupunki Laï levittäytyy Logone-joen vartta, ja rantatasangoilla viljellään riisiä.',
+    },
+    Tibesti: {
+      lyhyt: 'Trou au Natronin kalderan pohja on valkoisen natronikuoren peitossa, ja kuoppa on paikoin tuhat metriä syvä.',
+    },
+    "Wadi Fira": {
+      lyhyt: 'Wadi Firassa savanni vaihtuu pohjoista kohti Saharan hiekaksi, ja Iriban asukkaat puhuvat zaghawan kieltä.',
+    },
+  },
+  /*
+   * SDS (erä 9A). Avaimet MAAKUNNAT_KAIKKI.SDS:n tunnuksia TÄSMÄLLEEN
+   * (vanha kymmenen osavaltion jako). Vain `lyhyt`, ei konflikteja.
+   * Vältetty maastokohteet-sds.js:n aiheet (Kinyeti, Valkoinen Niili,
+   * Sudd, Gondokoro, Lado, Jonglein kanava, Boma ja kob-vaellus,
+   * Bandingilo, Wau, Nzara ja zandet, Nimule). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Eastern Equatoria — Kapoeta; Jonglei — Jonglei State; Central
+   *   Equatoria — Jebel Kujur (haku, 684 m); Lakes — Lake Yirol; Western
+   *   Equatoria — Maridi County (CSRF); Western Bahr el Ghazal — Raja
+   *   County (CSRF), Dar Fertit; Northern Bahr el Ghazal — Lol River;
+   *   Unity — Bentiu; Warrap — Manute Bol; Upper Nile — Shilluk Kingdom
+   */
+  SDS: {
+    "Eastern Equatoria": {
+      lyhyt: 'Kapoetan tasangoilla toposat paimentavat karjaa, kun taas didingat viljelevät kosteampia kukkuloita.',
+    },
+    Jonglei: {
+      lyhyt: 'Jonglei oli Etelä-Sudanin kymmenen osavaltion jaossa pinta-alaltaan suurin, noin 122 600 neliökilometriä.',
+    },
+    "Central Equatoria": {
+      lyhyt: 'Jubaa katsoo Jebel Kujur, lähes 700-metrinen kalliovuori, jonka huipulle kiivetään jyrkkiä polkuja pitkin.',
+    },
+    Lakes: {
+      lyhyt: 'Osavaltio on nimetty järviensä mukaan, ja Yirolin järven rannoilla on riisipeltoja ja soita.',
+    },
+    "Western Equatoria": {
+      lyhyt: 'Länsi-Ekvatorian metsissä mehiläistenhoito ja hunajankeruu ovat monelle perheelle tärkeä elinkeino.',
+    },
+    "Western Bahr el Ghazal": {
+      lyhyt: 'Ragan seudulla asuu kymmeniä pieniä kansoja, joista monet kutsuvat itseään yhteisnimellä fertit.',
+    },
+    "Northern Bahr el Ghazal": {
+      lyhyt: 'Lol-joki syntyy Nyamlellin länsipuolella kahden joen yhtymäkohdassa ja virtaa Aweilin ohi sen eteläpuolelta.',
+    },
+    Unity: {
+      lyhyt: 'Bentiu on Bahr el Ghazal -joen etelärannalla, ja El Salaam -silta yhdistää sen vastarannan Rubkonaan.',
+    },
+    Warrap: {
+      lyhyt: 'Warrapin Turaleista oli kotoisin Manute Bol, yksi NBA:n kahdesta kaikkien aikojen pisimmästä pelaajasta.',
+    },
+    "Upper Nile": {
+      lyhyt: 'Shillukien kuninkaalla, rethillä, on yhä perinteinen asema, ja kuninkaiden asuinpaikka on ollut Fashodassa 1700-luvulta asti.',
+    },
+  },
+  /*
+   * SDN (erä 9A). Avaimet MAAKUNNAT_KAIKKI.SDN:n tunnuksia TÄSMÄLLEEN
+   * (englanninkieliset "Gezira", "Red Sea", "Northern" ym.). Vain
+   * `lyhyt`, ei konflikteja. Vältetty maastokohteet-sdn.js:n aiheet
+   * (Jebel Marra, Punainenmeri, Niili, Meroë, Jebel Barkal, Kerma, Vanha
+   * Dongola, Soleb, Naqa, Dinder, Sennarin kaupunki) ja pelikaupunki
+   * Suakin. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Gezira — Gezira Scheme; Gedarif — Al Qadarif State (haku); Red
+   *   Sea — Sanganeb and Dungonab Bay (UNESCO 2016); White Nile — Kenana
+   *   Sugar Company; Blue Nile — Roseires Dam; Northern — Merowe Dam;
+   *   Southern Darfur — Radom National Park; South Kordufan — Nuba
+   *   wrestling; Eastern Darfur — Ed Daein; Kassala — Taka Mountains;
+   *   Central Darfur — Zalingei (haku); Khartoum — Hamed al-Nil (haku);
+   *   Western Darfur — Geneina; River Nile — Atbara (haku); North
+   *   Darfur — Meidob volcanic field, Malha; North Kordufan — El-Obeid;
+   *   Sennar — Gezira Scheme (Sennar Dam 1925)
+   */
+  SDN: {
+    Gezira: {
+      lyhyt: 'Gezira-hanke on maailman suurimpia kastelujärjestelmiä, ja se kattaa noin puolet Sudanin kastellusta maasta.',
+    },
+    Gedarif: {
+      lyhyt: 'Gedarifin savitasangoilla viljellään koneellisesti durraa ja seesamia, ja seutua kutsutaan Sudanin leipäkoriksi.',
+    },
+    "Red Sea": {
+      lyhyt: 'Dungonabin lahdella elää yksi maailman merkittävimmistä dugongikannoista, ja lahti on Unescon maailmanperintöä.',
+    },
+    "White Nile": {
+      lyhyt: 'Kenanan sokeriplantaasi Kostin kaakkoispuolella on maailman suurimpia valkoisen sokerin tuottajia.',
+    },
+    "Blue Nile": {
+      lyhyt: 'Roseiresin pato Ed Damazinissa valmistui 1966, ja 2013 sitä korotettiin 68 metristä 78 metriin.',
+    },
+    Northern: {
+      lyhyt: 'Neljännen kaihin kohdalle valmistui 2009 Meroween pato, jonka voimalan teho on 1 250 megawattia.',
+    },
+    "Southern Darfur": {
+      lyhyt: 'Radomin kansallispuisto Sudanin lounaiskulmassa on ollut Unescon biosfäärialue vuodesta 1979.',
+    },
+    "South Kordufan": {
+      lyhyt: 'Nubavuorten kylät kilpailevat painiturnauksissa, jotka liittyvät kylvö- ja sadonkorjuujuhliin.',
+    },
+    "Eastern Darfur": {
+      lyhyt: 'Itä-Darfurin pääkaupungin Ed Daeinin toreilla käydään kauppaa maapähkinöillä, vehnällä ja karjalla.',
+    },
+    Kassala: {
+      lyhyt: 'Kassalan yllä kohoavat Takan graniittivuoret, joiden juurella kahvilat ja kojut odottavat retkeilijöitä.',
+    },
+    "Central Darfur": {
+      lyhyt: 'Zalingei on Wadi Azumin laaksossa, ja sadekaudella kuiva uoma muuttuu vihreäksi käytäväksi.',
+    },
+    Khartoum: {
+      lyhyt: 'Omdurmanissa Hamed al-Nilin haudalla sufeilla on tapana kokoontua perjantaisin ennen auringonlaskua zikr-rituaaliin.',
+    },
+    "Western Darfur": {
+      lyhyt: 'Geneinan nimi tarkoittaa arabiaksi puutarhaa, ja sadekaudella seudulle syntyy lampia ja järviä.',
+    },
+    "River Nile": {
+      lyhyt: 'Atbara-joen ja Niilin yhtymäkohdassa oleva Atbara on Sudanin rautateiden päämaja, ja sitä kutsutaan rautatiekaupungiksi.',
+    },
+    "North Darfur": {
+      lyhyt: 'Meidobin kukkuloilla Malhan kraatterin pohjalla on suolainen järvi, ja nimi Malha tarkoittaa suolaista.',
+    },
+    "North Kordufan": {
+      lyhyt: 'El Obeid on Sudanin arabikumikaupan tärkeitä keskuksia; kumi on akaasiapuiden kovettunutta mahlaa.',
+    },
+    Sennar: {
+      lyhyt: 'Sennarin pato valmistui Siniselle Niilille 1925, ja sen altaasta johdetaan vettä Gezira-tasangon kanaviin.',
+    },
+  },
 };
