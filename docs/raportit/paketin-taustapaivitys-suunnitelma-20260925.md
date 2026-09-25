@@ -50,8 +50,9 @@ Pelikoodarin Esilataaja (`docs/raportit/esilataaja-suunnitelma-20260925.md`, haa
 2. **Delta:** haetaan `hakemisto.json` ja tarkistetaan sen sha256 osoittimesta. Puuttuvat sha256:t
    (ne, joita ei ole `tiedostot/`-kansiossa) muuttuvat tehtäviksi:
    `Esilataaja.Pyyda(Kohde.Tiedosto(osoite, sha256, siirto, "tiedostot/<sha>.lataus"), Taso.Muu, Kohta.Kaynnistys, ryhma "paketti:<pää>:v<N>")`.
-3. **Verkko:** ryhmä ladataan millä tahansa verkolla heti. `siirto` on vain edistymisen näyttöä ja
-   lokia varten.
+3. **Verkko:** ryhmä ladataan millä tahansa verkolla heti, olipa kyse deltasta tai koko paketista.
+   `siirto` on vain edistymisen näyttöä ja lokia varten. Verkkotyypin tunnistus jää valmiuteen ilman
+   rajoitusta. Erottelu tehdään vasta, jos peli julkaistaan Yhdysvalloissa (Fable 25.9.).
 4. **`RyhmaValmis`:** jokaisen tiedoston sha256 tarkistetaan, ja tiedosto siirretään nimelle
    `tiedostot/<sha>`. Jos tiiviste ei täsmää, tiedosto poistetaan ja ryhmä yritetään uudelleen
    seuraavalla kierroksella. Kun kaikki täsmää, kirjoitetaan `valmis.json` atomisesti.
