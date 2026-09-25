@@ -232,11 +232,12 @@ namespace Matkakirja.Natiivi
         {
             tavat = o?.Kulkutavat() ?? Array.Empty<KulkutapaNappi>();
             liikuEstetty = o == null || o.LiikuEstetty;
-            bool nakyy = tavat.Count > 0;
+            // A6: heittovaiheessa Liiku näkyy ja liuku on auki nopalle, vaikka kulkutapoja ei ole.
+            bool nakyy = tavat.Count > 0 || noppaLiussa;
             if (!nakyy) SuljeLiuku();
-            liikuNappi.SetEnabled(!liikuEstetty);
-            if (liikuEstetty) SuljeLiuku();
-            if (liukuAuki) RakennaLiuku();
+            liikuNappi.SetEnabled(!liikuEstetty || noppaLiussa);
+            if (liikuEstetty && !noppaLiussa) SuljeLiuku();
+            if (liukuAuki) { if (noppaLiussa) RakennaNoppaliuku(); else RakennaLiuku(); }
             if (nakyy != liikuNakyy)
             {
                 liikuNakyy = nakyy;
@@ -255,7 +256,7 @@ namespace Matkakirja.Natiivi
         void AsetteleLiiku()
         {
             float ala;
-            if (HeittoNakyy) ala = HeittoAlhaalta + 62f;
+            if (HeittoNakyy && !noppaLiussa) ala = HeittoAlhaalta + 62f;
             else
             {
                 var pohja = liiku.panel?.visualTree.layout ?? default;
@@ -277,6 +278,8 @@ namespace Matkakirja.Natiivi
 
         void VaihdaLiuku()
         {
+            // A6: nopan liuku on auki vaiheen ajan (web render: liukuAuki = true joka roll-vaiheessa).
+            if (noppaLiussa) return;
             if (liikuEstetty || !sallittu) return;
             if (liukuAuki) { SuljeLiuku(); return; }
             liukuAuki = true;
@@ -291,7 +294,7 @@ namespace Matkakirja.Natiivi
 
         void SuljeLiuku()
         {
-            if (!liukuAuki) return;
+            if (!liukuAuki || noppaLiussa) return;
             liukuAuki = false;
             if (PeliOhjain.Instanssi != null) PeliOhjain.Instanssi.LiukuAuki = false;
             liikuNappi.RemoveFromClassList("mk-valittu");
@@ -345,13 +348,14 @@ namespace Matkakirja.Natiivi
         {
             heittoTeksti.text = teksti;
             heita = painettu;
+            bool noppa = (teksti ?? "").StartsWith("Heitä");
             // Noppa vain nopan heittoon; muut toiminnot (Tutki kaupunkia) kompassilla.
-            heittoIkoni.Polku = Ikonit.Viiva[(teksti ?? "").StartsWith("Heitä") ? "noppa" : "kompassi"];
-            if (!HeittoNakyy)
-            {
-                HeittoNakyy = true;
-                Rakenne.Nayta(heitto, true, 200);
-            }
+            heittoIkoni.Polku = Ikonit.Viiva[noppa ? "noppa" : "kompassi"];
+            bool nappiNakyi = HeittoNakyy && !noppaLiussa;
+            HeittoNakyy = true;
+            if (noppa) NaytaNoppaLiussa();
+            else if (noppaLiussa) PoistaNoppaLiusta();
+            if (nappiNakyi != !noppa) Rakenne.Nayta(heitto, !noppa, 200);
             AsetteleLiiku();
         }
 
@@ -360,9 +364,53 @@ namespace Matkakirja.Natiivi
             heita = null;
             vaihda = null;
             if (!HeittoNakyy) return;
+            bool nappiNakyi = !noppaLiussa;
             HeittoNakyy = false;
-            Rakenne.Nayta(heitto, false, 200);
+            if (noppaLiussa) PoistaNoppaLiusta();
+            if (nappiNakyi) Rakenne.Nayta(heitto, false, 200);
             AsetteleLiiku();
+        }
+
+        // --- A6: nopanheitto Liiku-liu'ussa (web ui.js render, vaihe 'roll') -----------------------------------------
+
+        /// <summary>
+        /// Web: vaiheessa 'roll' noppa (iconButton 'noppa', "Heitä noppa", primary) ja "Vaihda matkustustapa" (nuoli,
+        /// vain kun tapa ei ole esivalittu tai muita on tarjolla) ovat monitoiminapin liu'ussa, joka on auki; Liiku jää
+        /// paikalleen. Liuku on auki nopalle eikä pelaajan avaamana, joten PeliOhjain.LiukuAuki ei muutu (web
+        /// liukuNopalle: automaattiheitto jatkuu).
+        /// </summary>
+        bool noppaLiussa;
+
+        void NaytaNoppaLiussa()
+        {
+            noppaLiussa = true;
+            liukuAuki = true;
+            RakennaNoppaliuku();
+            liikuNappi.AddToClassList("mk-valittu");
+            liikuNappi.SetEnabled(true);
+            if (!liikuNakyy) { liikuNakyy = true; Rakenne.Nayta(liiku, true, 200); }
+            Rakenne.Nayta(liuku, true, 180);
+        }
+
+        void RakennaNoppaliuku()
+        {
+            liuku.Clear();
+            var n = Rakenne.Nappi(null, "mk-liiku__tapa mk-liiku__tapa--korostettu mk-liiku__noppa", () => heita?.Invoke(), liuku, Ikonit.Viiva["noppa"]);
+            n.tooltip = "Heitä noppa";
+            if (vaihda != null)
+            {
+                var v = Rakenne.Nappi(null, "mk-liiku__tapa", () => { var f = vaihda; f?.Invoke(); }, liuku, Ikonit.Viiva["nuoli"]);
+                v.tooltip = PeliApu.VaihdaTeksti;
+            }
+        }
+
+        void PoistaNoppaLiusta()
+        {
+            noppaLiussa = false;
+            liukuAuki = false;
+            liikuNappi.RemoveFromClassList("mk-valittu");
+            Rakenne.Nayta(liuku, false, 150);
+            PaivitaLiiku(PeliOhjain.Instanssi);
         }
 
         public bool PeittaaPisteen(Vector2 ruutu)
