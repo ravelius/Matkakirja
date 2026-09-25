@@ -16,7 +16,8 @@ namespace Matkakirja
     ///
     /// Maanpinnan korkeudelle sijoitetut oliot (kaupunkimerkit, maamerkit) nostetaan samalla kaavalla
     /// <see cref="Lisays"/>-apurilla. Cesiumin laattojen rajaustilavuudet (culling, LOD) eivät tiedä liioittelusta:
-    /// kerroin rajataan siksi välille [<see cref="Pienin"/>, <see cref="Suurin"/>].
+    /// kerroin rajataan siksi välille [<see cref="Pienin"/>, <see cref="Suurin"/>]. Unityn oma karsinta käyttää laattojen
+    /// renderöijien rajoja, jotka PalloReiat laajentaa kertoimen mukaan (löydös 119, <see cref="Muuttui"/>).
     ///
     /// Komento (Komennot.cs, Documents/komento.txt): <c>korkeus 2.5</c>. Ei pysyvää tallennusta.
     ///
@@ -39,6 +40,12 @@ namespace Matkakirja
 
         /// <summary>Voimassa oleva kerroin (1 = ennallaan).</summary>
         public static float Arvo { get; private set; } = Oletus;
+
+        /// <summary>
+        /// Kerroin muuttui (<see cref="Aseta"/>, komento "korkeus n"): PalloReiat laajentaa ladattujen laattojen
+        /// rajat uudelleen (löydös 119).
+        /// </summary>
+        public static event System.Action Muuttui;
 
         /// <summary>Rinnevalon tasauksen paino 0–1 (_maaKeski.w).</summary>
         public static float TasausArvo { get; private set; }
@@ -64,6 +71,7 @@ namespace Matkakirja
         /// </summary>
         public static float Aseta(float kerroin, CesiumGeoreference georeferenssi = null)
         {
+            float vanha = Arvo;
             Arvo = Mathf.Clamp(float.IsNaN(kerroin) ? 1f : kerroin, Pienin, Suurin);
             if (georeferenssi == null) georeferenssi = Object.FindAnyObjectByType<CesiumGeoreference>();
             if (georeferenssi != null)
@@ -86,6 +94,7 @@ namespace Matkakirja
                 Shader.SetGlobalVector(ItaId, new Vector4(ita.x, ita.y, ita.z, 0));
             }
             Shader.SetGlobalFloat(KerroinId, Arvo);
+            if (vanha != Arvo) Muuttui?.Invoke();
             return Arvo;
         }
 
