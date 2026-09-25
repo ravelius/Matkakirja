@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 17:13 EEST
+**Päivitetty:** 2026-09-25 17:24 EEST
 
 ## 1) Sessiot
 
@@ -10,7 +10,7 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 65% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 70% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 31% | running | — |
 | Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 28% | running | Sai aloitusviestin, aktiivinen 16:21 |
 | Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 52% | idle | Nollattu 15.22, palasi 16 % 15.29 |
@@ -56,8 +56,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Paikallinen levy:** 184 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 30 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 0. coreaudiod 2 %. **Chrome-GPU-prosesseja:** 0.
-- **5 h -kiintiö:** 92 % (nollautuu 17:29 EEST, ~16 min), ei vielä 96 %. **Viikko (kaikki mallit):** 25 %. **Viikko (Fable):** 12 %.
-- **Juna:** viimeisin KÄÄNNETTY 16:57; juna/b13 c7091b7c uusi 17:04, alle 25 min.
-- **Postilaatikko:** kaksi uutta commitia (22fac1074, f1efd5e50) — Codex → Kuvaputki, leikatut kohtauskuvat Berliini/Bryssel/Helsinki + Ljubljana (PR #3210), ilmoitettu Fablelle. **Avoimia PR:iä:** 10.
+- **Paikallinen levy:** 183 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 31 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 0. coreaudiod 3 %. **Chrome-GPU-prosesseja:** 2.
+- **5 h -kiintiö:** 94 % (nollautuu 17:29 EEST, ~5 min), ei vielä 96 %. **Viikko (kaikki mallit):** 25 %. **Viikko (Fable):** 13 %.
+- **Konteksti:** Fable 70 % — ilmoitettu (raja).
+- **Juna:** viimeisin KÄÄNNETTY 16:57; jono varattu 17:17 (juna/b13 + natiiviseppa/verho-valmius).
+- **Postilaatikko:** uusi commit 0302fbdf4 (Codex → Kuvaputki: Lontoon leikatut kuvat, PR #3213), ilmoitettu Fablelle. **Avoimia PR:iä:** 13.
