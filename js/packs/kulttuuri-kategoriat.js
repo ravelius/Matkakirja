@@ -116163,6 +116163,216 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (Turistioppaat-paketti, erä 1, 25.9.2026). Lontoon
+       * mallin mukaan: pystykuva, etusivun kappale ja viiden jakson opas,
+       * jonka ensimmäisessä jaksossa on kolmen kuvan karuselli. Taustatiedot
+       * englannin- ja espanjankielisestä Wikipediasta, Wikivoyagesta ja
+       * ulkoministeriön matkustustiedotteesta — teksti omaa. Jaksot eivät
+       * toista nostojen faktoja (kalastajakylä, järistyksen luvut,
+       * osoitteet, vanha katedraali, palatsi, pesäpallo) eivätkä Nicaraguan
+       * maalehden ruokanostoja. Kuvien lisenssit, tekijät ja sisältö
+       * tarkistettu Commonsin tiedostosivuilta 25.9.2026, ja kaikki
+       * kuvat ovat tuoreita (Raamattu: MATKAOPAS ON NYKYTIETOA).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Silhouette SANDINO à Managua.JPG',
+          lyhyt: 'Augusto C. Sandinon teräksinen siluetti vartioi Managuaa Tiscapan mäen laelta.',
+          selite: 'Sandinon siluetti seisoo Tiscapan mäellä entisen '
+            + 'presidentinpalatsin paikalla, jonka portilla Sandino '
+            + 'pysäytettiin helmikuussa 1934 hänen lähtiessään '
+            + 'neuvotteluista presidentin luota.',
+          lahde: 'Chrisletram, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Managualla ei ole keskustaa siinä mielessä kuin '
+          + 'eurooppalainen sen käsittää. Vuoden 1972 järistyksen jälkeen '
+          + 'kaupunki kasvoi raunioiden ympärille kaupunginosiksi, '
+          + 'ostoskeskuksiksi ja liikenneympyröiksi, joiden väliä kuljetaan '
+          + 'taksilla, ja suunta otetaan maamerkeistä. Parhaan yleiskuvan '
+          + 'saa Tiscapan mäeltä, josta näkyvät sekä vanha keskusta että '
+          + 'Xolotlán-järvi. Lämmintä on ympäri vuoden, päivisin yleensä '
+          + 'yli kolmekymmentä astetta; kuiva kausi kestää marraskuusta '
+          + 'toukokuuhun, ja sadekaudella kuivat viemärikanavat muuttuvat '
+          + 'hetkessä kuohuviksi puroiksi. Moni matkailija kiiruhtaa '
+          + 'suoraan Granadaan tai Leóniin, mutta teattereille, '
+          + 'rantakadulle ja elokuun pyhimysjuhlalle kannattaa varata '
+          + 'päivä tai kaksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Managua',
+          teksti: 'Kaupunki, jonka keskusta sortui 1972 ja kasvoi takaisin '
+            + 'liikenneympyröiksi.',
+          nosto: 'Taksin hinnasta sovitaan ennen lähtöä, ei perillä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Augusto C. Sandinon lentoasema on Nicaraguan '
+                + 'päälentoasema, ja se on vaihtanut nimeään '
+                + 'tiuhaan: vuonna 1968 se oli Las Mercedes, 1980-luvulla '
+                + 'Sandino, vuonna 2001 Managuan kansainvälinen lentoasema '
+                + 'ja helmikuusta 2007 taas Sandino. Keskustaan on '
+                + 'yksitoista kilometriä. Kaupunkibussin kyyti maksoi '
+                + 'vuonna 2024 kaksi ja puoli córdobaa, mutta bussin '
+                + 'kyltissä lukee vain linjan numero eikä päätepysäkkiä, '
+                + 'eikä öisin ajeta lainkaan. Siksi matkailija liikkuu '
+                + 'yleensä taksilla, ja kuljettajalle kerrotaan lähin '
+                + 'maamerkki eikä katuosoitetta. Suomen ulkoministeriö '
+                + 'kehottaa Nicaraguassa erityiseen varovaisuuteen, sillä '
+                + 'taksiryöstöjä ja taskuvarkauksia sattuu, Managuassa '
+                + 'etenkin busseissa ja vilkkailla toreilla. '
+                + 'Naapurikaupunkeihin pääsee pikkubusseilla, jotka '
+                + 'lähtevät Keski-Amerikan yliopiston UCA:n kupeesta '
+                + 'Masayaan, Granadaan ja Leóniin, ja kaukobussit ajavat '
+                + 'maan pohjoisosiin ja Karibian puolelle asti.',
+              kuva: [
+                {
+                  tiedosto: 'Security entrance managua airport.jpg',
+                  lyhyt: 'Lentoaseman aulassa matkailijaa tervehtii Augusto C. Sandinon muotokuva.',
+                  selite: 'Managuan lentoasema on kantanut helmikuusta 2007 '
+                    + 'Augusto C. Sandinon nimeä, ja sen aulan seinää '
+                    + 'hallitsee sissijohtajan muotokuva.',
+                  lahde: 'Stefan Krasowski, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'La Uca Terminal (Managua, Nicaragua) (29127892735).jpg',
+                  lyhyt: 'UCA:n terminaalista lähtevät pikkubussit Masayaan, Granadaan ja Leóniin.',
+                  selite: 'Keski-Amerikan yliopiston UCA:n kupeessa oleva '
+                    + 'terminaali on Managuan pikkubussien lähtöpaikka '
+                    + 'naapurikaupunkeihin, kuten Masayaan, Granadaan ja '
+                    + 'Leóniin.',
+                  lahde: 'Sasha India, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Bus station in Managua, Nicaragua 2023.jpg',
+                  lyhyt: 'Siunaan ja Waspamiin lähtevien bussien katolle lastataan kaikki, mikä ei mahdu sisään.',
+                  selite: 'Managuasta lähtee kaukobusseja maan pohjoisosiin '
+                    + 'ja Karibian puoleiselle alueelle asti, esimerkiksi '
+                    + 'Siunaan ja Coco-joen varrelle Waspamiin.',
+                  lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Järven rannalla',
+              teksti: 'Vanhasta keskustasta jäi järistyksen jälkeen jäljelle '
+                + 'harva joukko rakennuksia Vallankumouksen aukion '
+                + 'ympärille Xolotlán-järven rantaan. Rubén Daríon '
+                + 'kansallisteatteri rakennettiin runoilijan syntymän '
+                + 'satavuotismuistoksi ja avattiin 1969, ja se selvisi '
+                + 'vuoden 1972 järistyksestä vähin vaurioin. Päänäyttämön '
+                + 'saliin mahtuu 1 200 katsojaa, ja järvelle antavan '
+                + 'kristallisalin kolme kattokruunua ovat Espanjan lahja. '
+                + 'Teatterin edustalla seisoo Carraran marmorista tehty '
+                + 'Daríon muistomerkki, jossa runoilija on puettu '
+                + 'roomalaiseen togaan. Aivan vieressä alkaa rantakatu: '
+                + 'Puerto Salvador Allenden laiturilla on ravintoloita ja '
+                + 'järvinäkymä, ja Paseo Xolotlánin varrelle on rakennettu '
+                + 'jäljennöksiä järistystä edeltäneen Managuan '
+                + 'rakennuksista. Auringonlaskua katsotaan rannalta, mutta '
+                + 'uimaan ei mennä, sillä järveen on laskettu kaupungin '
+                + 'jätevesiä vuosikymmenten ajan.',
+              kuva: {
+                tiedosto: 'Puerto slvdor allende.jpg',
+                lyhyt: 'Puerto Salvador Allenden rannalla managualaiset kokoontuvat katsomaan järveä.',
+                selite: 'Puerto Salvador Allende on Managuan järvenrannan '
+                  + 'laituri- ja puistoalue, jossa on ravintoloita ja '
+                  + 'näköala Xolotlán-järven yli.',
+                lahde: 'Odsv9804, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tiscapan mäki ja metallipuut',
+              teksti: 'Tiscapan mäki oli vuosikymmeniä Nicaraguan vallan '
+                + 'keskus. Laella seisoi presidentinpalatsi, ja '
+                + 'helmikuussa 1934 kansalliskaarti pysäytti Augusto C. '
+                + 'Sandinon palatsin portilla, kun hän oli lähdössä '
+                + 'neuvotteluista presidentin luota; hänet ammuttiin '
+                + 'samana yönä. Palatsin raunioille on pystytetty '
+                + 'Sandinon teräksinen siluetti lierihattuineen, ja se '
+                + 'näkyy kauas kaupungin yli. Nykyään laki on '
+                + 'historiallinen puisto, josta avautuvat Managuan '
+                + 'parhaat näkymät pohjoiseen vanhaan keskustaan ja '
+                + 'järvelle. Siluetin rinnalle on noussut uudempi tunnus: '
+                + 'vuodesta 2013 liikenneympyröihin ja katujen varsille '
+                + 'on pystytetty toista sataa yli kymmenmetristä '
+                + 'metallista elämänpuuta, joiden kiemuroissa palaa '
+                + 'iltaisin yhteensä miljoonia pieniä lamppuja. Puut '
+                + 'olivat presidentin puolison Rosario Murillon hanke, ja '
+                + 'vuoden 2018 mielenosoituksissa osa niistä kaadettiin. '
+                + 'Poliittisia kokoontumisia matkailijan kannattaa välttää.',
+              kuva: {
+                tiedosto: 'Loma de Tiscapa.JPG',
+                lyhyt: 'Tiscapan mäen laella Sandinon siluetti ja keltainen elämänpuu seisovat rinnakkain.',
+                selite: 'Tiscapan mäki oli pitkään Nicaraguan vallan '
+                  + 'keskus, ja sen laella on nykyään historiallinen '
+                  + 'puisto, jonka Sandinon siluetti ja metallinen '
+                  + 'elämänpuu näkyvät kauas kaupungille.',
+                lahde: 'Kollemy, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Uusi keskusta ja torit',
+              teksti: 'Järistyksen jälkeen Managua ei rakentanut vanhaa '
+                + 'keskustaansa uudelleen vaan levisi etelään Masayan tien '
+                + 'varteen. Siellä ovat Metrocentron ostoskeskus, '
+                + 'suurhotellit ja Rubén Daríon liikenneympyrä, jonka '
+                + 'suihkulähde valaistaan iltaisin. Samassa kulmassa '
+                + 'seisoo uusi katedraali, jonka suunnitteli meksikolainen '
+                + 'Ricardo Legorreta ja joka vihittiin 4. syyskuuta 1993. '
+                + 'Betonisen rakennuksen katolla on 63 pientä kupolia, '
+                + 'yhtä monta kuin arkkihiippakunnassa oli seurakuntia '
+                + 'rakennusaikana, ja osan 4,5 miljoonan '
+                + 'dollarin kustannuksista maksoi Domino\'s Pizzan '
+                + 'omistaja Tom Monaghan. Käsitöitä, riippumattoja ja '
+                + 'maalauksia ostetaan Roberto Huembesin torilta. Mercado '
+                + 'Oriental taas on maan tärkein kansantori ja yksi '
+                + 'Keski-Amerikan laajimmista: yli sata hehtaaria kojuja, '
+                + 'joissa myydään kaikkea kengistä varaosiin. Sen '
+                + 'sokkeloihin mennään vain paikallisen tuttavan kanssa ja '
+                + 'arvoesineet kotiin jättäen.',
+              kuva: {
+                tiedosto: 'CATEDRAL DE LA INMACULADA CONCEPCION, MANAGUA - panoramio.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Uuden katedraalin 63 kupolia vastasivat seurakuntien määrää rakennusaikana.',
+                selite: 'Ricardo Legorretan suunnittelema uusi katedraali '
+                  + 'vihittiin 4. syyskuuta 1993 korvaamaan vuoden 1972 '
+                  + 'järistyksessä vaurioitunutta vanhaa katedraalia.',
+                lahde: 'feinteriano, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Minguiton elokuu',
+              teksti: 'Managuan suurin juhla alkaa 1. elokuuta, kun Santo '
+                + 'Domingo de Guzmánin pieni pyhimyspatsas kannetaan '
+                + 'kulkueessa Las Sierritasin kirkosta kaupungin '
+                + 'eteläosasta pohjoiseen, vanhan keskustan Santo '
+                + 'Domingon kirkkoon. Siellä pyhimys viipyy elokuun '
+                + 'kymmenenteen päivään, jolloin se kannetaan takaisin. '
+                + 'Kansa kutsuu patsasta hellästi Minguitoksi, ja '
+                + 'kulkueessa tanssitaan, soitetaan ja syödään: '
+                + 'osallistujat pukeutuvat perinneasuihin ja naamioihin '
+                + 'tai maalaavat ruumiinsa, ja ratsastajia saapuu '
+                + 'hevosineen muualta Nicaraguasta ja naapurimaista. Moni '
+                + 'kulkee täyttääkseen lupauksen tai kiittääkseen '
+                + 'saamastaan avusta. Juhlaan kätkeytyy veikeä '
+                + 'ristiriita: virallisesti Managuan suojeluspyhimys on '
+                + 'yhä apostoli Jaakob eli Santiago, jonka päivä on 25. '
+                + 'heinäkuuta, eikä kirkko ole vaihtanut sitä koskaan. '
+                + 'Santo Domingo on kaupungin pyhimys vain siksi, että '
+                + 'managualaiset ovat niin päättäneet.',
+              kuva: {
+                tiedosto: 'Sddjm.JPG',
+                lyhyt: 'Santo Domingon pieni patsas kulkee lasikuvun alla kukkakaaressa kantajien harteilla.',
+                selite: 'Santo Domingo de Guzmánin juhlassa Managuan '
+                  + 'pyhimyspatsas kannetaan 1. elokuuta Las Sierritasista '
+                  + 'vanhaan keskustaan ja 10. elokuuta takaisin.',
+                lahde: 'MarioFernandoAburto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
