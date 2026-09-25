@@ -33,8 +33,9 @@
 // "KUVA EDELLÄ -KORTTI EI SEURAA MERKKIÄÄN"); kuvaton kortti ja lisäkaupunki napautuspisteen viereen ilman
 // himmennystä (web asetaKohteenPaikka / asemoiKaupunkipopup): leveys min(384, 86 % ruudusta), rako 12 px merkin
 // oikealle (ei mahdu → vasemmalle), keskitettynä pystyyn, reunavara 8 px ja pystyssä 10 % ruudusta (≤ 96 px),
-// turva-alueen sisällä, katto ≥ 140 px. Kortti on raahattava (web raahausTaiSulku: 8 px:n kynnys; tekstin päällä
-// pystyveto vierittää) ja raahattu paikka pysyy. Napautus kortin tekstiin tai pohjaan sulkee (web: pop-upin
+// turva-alueen sisällä, katto ≥ 140 px. Löydös 137 (omistaja, build 16): korttia ei raahata (paikkaa ei tarvitse
+// siirtää, ja otsikosta alkanut veto siirsi korttia vierityksen sijaan); pystyvieritys on Kosketusvieritys (löydös 51).
+// Napautus kortin tekstiin tai pohjaan sulkee (web: pop-upin
 // päällä napautus on sulku, painikkeen päällä valinta; matka < 6 px ja kesto < 700 ms). Testikomennot painavat kortin
 // nappeja nimellä (Testaa: lisaa, ihme, leikekirja, kartalla, liite, valokuva, vastaa<n>, juliste).
 // LISÄKAUPUNKI (web kaupunkinosto.js avaaLisakaupunginKortti, kohde.kaupunkikortti ohittaa kohdekortin):
@@ -68,13 +69,13 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
-        // Paikka ja raahaus (E3): ankkuri kerroksen koordinaateissa, null = keskellä.
+        // Paikka (E3): ankkuri kerroksen koordinaateissa, null = keskellä.
         const float Marginaali = 8f, Rako = 12f, LaitavaraOsuus = 0.1f, LaitavaraEnintaan = 96f, Leveys = 384f,
-            LeveysOsuus = 0.86f, Katto = 140f, Raahauskynnys = 8f, Napautuskynnys = 6f, NapautusMs = 700f;
+            LeveysOsuus = 0.86f, Katto = 140f, Napautuskynnys = 6f, NapautusMs = 700f;
         Vector2? ankkuri;
-        bool ankkuroitu, raahattu, raahaa, lisakaupunkiPaikka;
-        int eleId = -1;
-        Vector2 eleAlku, lahto;
+        bool ankkuroitu, lisakaupunkiPaikka;
+        // Napautuksen alku (sulku napautuksesta, NapautusKorttiin).
+        Vector2 eleAlku;
         float eleAika;
 
         /// <summary>Auki olevan kortin tiivistelmä testilokiin: laji · luokka · otsikko [· leikekirja].</summary>
@@ -98,15 +99,16 @@ namespace Matkakirja.Natiivi
             sulje.tooltip = "Sulje";
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
-            kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu && !raahattu) Asemoi(); });
+            kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu) Asemoi(); });
             // Kierto tai ikkunan koko: kuva edellä -kortin leveys uudelleen (web asemoi resize-kuuntelijassa).
             kerros.RegisterCallback<GeometryChangedEvent>(e => { if (Auki && !Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaKuvaEdella(); });
             kortti.RegisterCallback<GeometryChangedEvent>(_ => EsittelynYlin());
             kortti.RegisterCallback<PointerDownEvent>(EleAlkoi, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerMoveEvent>(EleLiikkui, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerUpEvent>(EleLoppui, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerCaptureOutEvent>(_ => { raahaa = false; eleId = -1; kortti.RemoveFromClassList("mk-nosto--raahauksessa"); });
             kortti.RegisterCallback<ClickEvent>(NapautusKorttiin);
+            // Löydös 137: UI Toolkitin ScrollView tökki kosketuksella (sama mittaus kuin lehdessä, löydös 51: heitto
+            // liukui kolmanneksen Safarin matkasta); sama oma pystyvieritys kuin lehdellä. Kortin isä kuuntelee
+            // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
+            Kosketusvieritys.Liita(kortti, () => sisus);
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
         }
@@ -230,11 +232,10 @@ namespace Matkakirja.Natiivi
 
         // --- paikka ja raahaus (E3) ------------------------------------------------------------
 
-        /// <summary>Ankkuroitu (kuvaton kortti, lisäkaupunki) vai keskellä (kuva edellä); nollaa raahauksen.</summary>
+        /// <summary>Ankkuroitu (kuvaton kortti, lisäkaupunki) vai keskellä (kuva edellä).</summary>
         void AsetaPaikka(bool ankkuriin)
         {
             ankkuroitu = ankkuriin && ankkuri.HasValue;
-            raahattu = false;
             kerros.EnableInClassList("mk-nosto__kerros--ankkuroitu", ankkuroitu);
             kerros.EnableInClassList("mk-nosto__kerros--vapaa", ankkuroitu);
             if (!ankkuroitu)
@@ -486,79 +487,8 @@ namespace Matkakirja.Natiivi
 
         void EleAlkoi(PointerDownEvent e)
         {
-            eleId = e.pointerId;
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
-            raahaa = false;
-            // Kuva edellä -kortissa (vaihe 1) ei ole yläriviä eikä otsikkoa: kahvana on kortin ylin kaista.
-            eleKahvasta = OnKahva(e.position);
-        }
-
-        /// <summary>Kortin yläreunan kaista, josta raahaus alkaa myös ilman yläriviä (löydös 79).</summary>
-        const float KahvanKorkeus = 28f;
-
-        /// <summary>Ele alkoi raahauskahvasta (ylärivi tai otsikko).</summary>
-        bool eleKahvasta;
-
-        /// <summary>
-        /// Löydös 79 (omistaja 25.9.2026, sitova): korttia liikutetaan vain yläreunasta eli webin raahauskahvasta
-        /// (css/fokuskohteet.css: .fokuskohde-ylarivi ja .fokuskohde-otsikko, touch-action none). Muu kortti jää
-        /// vieritykselle ja napautuksille.
-        /// </summary>
-        bool OnKahva(Vector2 kohta)
-        {
-            // Paikan mukaan, ei kohteen: ylärivi ja otsikko ovat PickingMode.Ignore, joten osuma menee vieritykselle.
-            if (kohta.y - kortti.worldBound.yMin < KahvanKorkeus) return true;
-            bool osui = false;
-            kortti.Query(className: "mk-nosto__ylarivi").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
-            if (!osui) kortti.Query(className: "mk-nosto__otsikko").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
-            return osui;
-        }
-
-        /// <summary>Web raahausTaiSulku: kynnyksen ylittävä liike siirtää korttia; tekstin päällä pystyveto vierittää.</summary>
-        void EleLiikkui(PointerMoveEvent e)
-        {
-            if (e.pointerId != eleId) return;
-            Vector2 d = (Vector2)e.position - eleAlku;
-            if (!raahaa)
-            {
-                if (d.magnitude < Raahauskynnys) return;
-                // Löydös 79: vain kahvasta alkanut ele raahaa; muualla ele jää vieritykselle (ei napautus).
-                if (!eleKahvasta) { eleId = -1; return; }
-                raahaa = true;
-                Irrota();
-                lahto = new Vector2(kortti.resolvedStyle.left, kortti.resolvedStyle.top);
-                kortti.AddToClassList("mk-nosto--raahauksessa");
-                kortti.CapturePointer(e.pointerId);
-            }
-            float maxX = Mathf.Max(0f, kerros.layout.width - kortti.layout.width);
-            float maxY = Mathf.Max(0f, kerros.layout.height - kortti.layout.height);
-            AsetaKohta(Mathf.Round(Mathf.Clamp(lahto.x + d.x, 0f, maxX)), Mathf.Round(Mathf.Clamp(lahto.y + d.y, 0f, maxY)));
-            e.StopPropagation();
-        }
-
-        void EleLoppui(PointerUpEvent e)
-        {
-            if (e.pointerId != eleId || !raahaa) return;
-            raahaa = false;
-            eleId = -1;
-            raahattu = true;
-            kortti.RemoveFromClassList("mk-nosto--raahauksessa");
-            if (kortti.HasPointerCapture(e.pointerId)) kortti.ReleasePointer(e.pointerId);
-            e.StopPropagation();
-        }
-
-        /// <summary>Keskitetty kortti vapaaksi ennen raahausta: nykyinen paikka ja leveys kiinni, kerros ilman täytettä.</summary>
-        void Irrota()
-        {
-            if (kortti.resolvedStyle.position == Position.Absolute) return;
-            var paikka = kortti.worldBound.position - kerros.worldBound.position;
-            float leveys = kortti.layout.width;
-            kerros.AddToClassList("mk-nosto__kerros--vapaa");
-            kortti.style.position = Position.Absolute;
-            kortti.style.width = leveys;
-            kortti.style.left = Mathf.Round(paikka.x);
-            kortti.style.top = Mathf.Round(paikka.y);
         }
 
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
