@@ -256,6 +256,9 @@ test('resepti 2026-09-25: D2 + C-reliefi, ei rantamustetta eikä meren käyriä'
   for (const sana of r.pohjaliput) assert.doesNotMatch(sana, /\s/);
   assert.deepEqual(r.palloliput, ['--suodatin', 'laatikko', '--jpeg-laatu', '90', '--jpeg-444']);
   assert.equal(r.palloTasot, '0-9');
+  // Nostotaso ilman nimiöitä kuten tuotannossa (omistajan löydös 25.9.2026:
+  // ilman lippua koepyramidin nostoja ei voinut napauttaa).
+  assert.deepEqual(r.nostoliput, ['--nostot-ilman-nimioita']);
   assert.ok(Object.isFrozen(RESEPTIT));
 });
 
