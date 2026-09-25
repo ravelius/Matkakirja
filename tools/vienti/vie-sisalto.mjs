@@ -181,8 +181,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (tools/vienti/hae-asukkaat.mjs → kaupunkien-asukkaat.json).
  *   1.39 karttavalot.ankkuri (webin lukittu ankkuri, js/packs/nostoankkurit-<iso>.js) ja
  *        karttavalot.puoli (nimiön poltettu kylki) — Natiivi-UI, löydös 50 C.
+ *   1.40 offline.json: rasteripohja sarjaan 2026-09-25 (Z0–Z9), maittain z6–z8 kuten ennen ja
+ *        z9 vain kaupunkien ympärillä listana välejä (lahteet.rasteri.kaupunkitaso: säde 60 km,
+ *        kaupungit tyyppi 'kaupunki', sama rajaus kuin satelliittipinnalla) — Natiiviseppä, build 13.
  */
-export const SKEEMAVERSIO_TARKKA = '1.39';
+export const SKEEMAVERSIO_TARKKA = '1.40';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
