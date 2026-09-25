@@ -109419,6 +109419,38 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuvassa erottuu Antonine-kylpylöiden yksinäinen korinttilaispylväs ja rauniomuureja, taustalla Tunisinlahden sininen vesi – isoisän aikaan suurin osa rakennuksesta oli vielä hiekan peitossa.',
           lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Baths of Antoninus',
+          galleria: [
+            {
+              otsikko: 'Marius raunioiden keskellä',
+              tiedosto: 'John Vanderlyn - Caius Marius Amid the Ruins of Carthage - Google Art Project.jpg',
+              lyhyt: 'John Vanderlynin maalaus (1807) roomalaiskenraali Mariuksesta karkotettuna Karthagon raunioille.',
+              selite: 'John Vanderlynin maalaus (1807, Pariisin Salon): '
+                + 'roomalaiskenraali Gaius Marius istuu karkotettuna '
+                + 'Karthagon raunioilla — suosittu neoklassistinen aihe, '
+                + 'jonka moni taidemaalari käsitteli 1800-luvun alussa.',
+              lahde: 'John Vanderlyn, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Ranskalainen tulkinta samasta aiheesta',
+              tiedosto: "'Marius Meditating on the Ruins of Carthage' by Pierre-Nolasque Bergeret, Dayton Art Institute.JPG",
+              lyhyt: 'Pierre-Nolasque Bergeretin versio (1807) Mariuksesta Karthagon raunioilla.',
+              selite: 'Pierre-Nolasque Bergeretin maalaus (1807): samaa '
+                + 'Marius-aihetta käsiteltiin samana vuonna useiden '
+                + 'ranskalaisten ja amerikkalaisten taidemaalarien '
+                + 'töissä — aihe oli koko sukupolven suosikki.',
+              lahde: 'Pierre-Nolasque Bergeret, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Rauniot ennen kaivauksia',
+              tiedosto: 'Ruins at Carthage, with salt marshes in the distance, Tunisi Wellcome V0050117.jpg',
+              lyhyt: 'Charles Gülinin vesiväri (1778) Karthagon raunioista ennen järjestelmällisiä kaivauksia.',
+              selite: 'Charles Gülinin vesiväri (1778): Karthagon rauniot '
+                + 'ja suolamarskit taustalla, samankaltaisina kuin isoisä '
+                + 'näki ne sata vuotta myöhemmin 1873 — ennen kuin '
+                + 'järjestelmälliset kaivaukset alkoivat 1875.',
+              lahde: 'Charles Gülin, Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+            },
+          ],
         },
         {
           otsikko: 'Puunilaisten kaupunkikortteli',
