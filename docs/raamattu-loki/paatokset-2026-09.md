@@ -4943,3 +4943,7 @@ Julkaisijan huomio klo 04.2x: GitHubin viive, yöajo ei vielä käynnistynyt.
 ## JULKAISIJA JUMI: YOAJON OHITUS ESTYI LUOKITTIMESSA (KORTTI AUKI) — FABLE: VARAKAAVA: JOS YOAJO EHTII, SE VIE 4753536:N 1.0.12:NA JA JUNAN BUILD AJETAAN ORDINAALILLA 13 (1.0.13); JOS OMISTAJA PERUU YOAJON, BUILD ON 1.0.12 (25.9.2026 klo 04.12)
 
 Ei lisäyrityksiä ohitukseen; omistaja hereillä ja tietää.
+
+## OMISTAJA klo 04.1x (KORTTI, SITOVA): JUNAT TAPAHTUMAOHJATUIKSI — TESTIKAANNOS LAHTEE HETI KUN INTEGRAATIOHAARAAN TULEE UUSI COMMIT EIKA KAANNOS OLE KESKEN (10 min NIPUTUS, 2 h AJASTIN VARMISTUKSENA); SISALTOJUNA KUN JONOSSA >= 4 VIHREAA SISALTO-PR:AA TAI VANHIN YLI 4 h (KORVAA klo 10.03/20.03); TESTFLIGHT ENNALLAAN (BUILD-SANA HETI, klo 04 VARMISTUS) — RAAMATTU PAIVITETTY (TYOTAVAN NELJA PARANNUSTA 2 JA 4) (25.9.2026 klo 04.18)
+
+Perustelu: käännösjono oli aito pullonkaula (Natiivi-UI odotti kolmesti yöllä, juna seisoi valmiina 04.07 asti). Toteutus: Natiiviseppä + Julkaisija lisäävät käännöspalveluun vahdin (10 min kierros: uusi commit juna-haarassa ja ei kesken → kaanna.sh), Julkaisija ajaa sisältöjunan jonon ehdolla; Postivahti seuraa.
