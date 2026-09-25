@@ -2,7 +2,7 @@
 
 Omistajan löydös 95 (build 13) ja Fablen päätös 25.9.: karttanostojen ja nähtävyyksien kuvat ovat **leikattuja kohteita, eivät kohtauksia** — yksittäinen kohde läpinäkyvällä pohjalla, sama tyyli kuin vanhat 1024 px nähtävyydet (esim. assets/kartat/miniatyyrit/ateena-akropolis.webp).
 
-**Mittaus:** assets/kartat/miniatyyrit/*.webp (423 kpl), läpinäkymättömien pikselien osuus (alfa > 200) kuvasta 256×256:ksi skaalattuna. Leikatuilla kohteilla täyttö on yleensä 0,1–0,5, kohtauskuvilla 0,6–0,9. **70 kuvaa ylittää rajan 0,6** — kaikki 512 px:n kuvia paitsi newyork-metropolitan-museo (1024 px). Rajan tuntumassa (0,55–0,60) on muutama epäselvä, niitä ei ole listalla.
+**Mittaus (tools/mittaa-miniatyyrit.mjs → tools/miniatyyri-mitat.json; aja aina kun kuva vaihtuu):** assets/kartat/miniatyyrit/*.webp (423 kpl), läpinäkymättömien pikselien osuus (alfa > 200) kuvasta 256×256:ksi skaalattuna. Leikatuilla kohteilla täyttö on yleensä 0,1–0,5, kohtauskuvilla 0,6–0,9. **70 kuvaa ylittää rajan 0,6** — kaikki 512 px:n kuvia paitsi newyork-metropolitan-museo (1024 px). Rajan tuntumassa (0,55–0,60) on muutama epäselvä, niitä ei ole listalla.
 
 Ämpärin puolella (kohtaamiset/miniatyyrit/*.png, 626 kuvaa, kaikki 1024 px) ei ole ongelmaa: täyttö ≤ 0,6 lähes kaikilla, reunapikselit läpinäkyviä. Ämpärissä puuttuu 27 kuvaa (404, ks. lopussa) — nämä näkyvät pelissä täplänä.
 

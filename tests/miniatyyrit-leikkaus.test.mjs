@@ -8,7 +8,9 @@
  * Leikattu miniatyyri on läpinäkyvä webp: yksittäinen kohde, jonka
  * ympärillä on läpinäkyvää pohjaa (esim. ateena-akropolis.webp).
  * Kohtauskuva on koko maalattu näkymä taustoineen. Kaksi mittaa
- * (256×256:ksi skaalatusta alfasta, alfa > 200 = läpinäkymätön):
+ * (256×256:ksi skaalatusta alfasta, alfa > 200 = läpinäkymätön; mittaa
+ * tools/mittaa-miniatyyrit.mjs → tools/miniatyyri-mitat.json, koska CI:ssä
+ * ei ole sharpia — testi tarkistaa manifestin kuvan sha256:llä):
  *   - TÄYTTÖ: läpinäkymättömien pikselien osuus koko kuvasta.
  *     Leikatuilla yleensä 0,1–0,5; kohtauskuvilla 0,6–0,9.
  *   - REUNA: läpinäkymättömien pikselien osuus kuvan kehästä.
@@ -25,9 +27,9 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import sharp from 'sharp';
 
 const KANSIO = new URL('../assets/kartat/miniatyyrit/', import.meta.url);
 const TAYTTO_RAJA = 0.6;
@@ -106,40 +108,36 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
   'wien-yhdeksas-1824.webp',
 ]);
 
-/** {taytto, reuna}: läpinäkymättömien pikselien osuus kuvasta ja sen kehästä (0–1). */
-async function mittaa(nimi) {
-  const { data, info } = await sharp(fileURLToPath(new URL(nimi, KANSIO))).ensureAlpha()
-    .resize(256, 256, { fit: 'fill' }).raw().toBuffer({ resolveWithObject: true });
-  const { width: w, height: h, channels: c } = info;
-  const alfa = (x, y) => data[(y * w + x) * c + (c - 1)];
-  let taytto = 0;
-  for (let y = 0; y < h; y += 1) for (let x = 0; x < w; x += 1) if (alfa(x, y) > 200) taytto += 1;
-  let reunaYlla = 0; let reunaYht = 0;
-  const lue = (x, y) => { reunaYht += 1; if (alfa(x, y) > 200) reunaYlla += 1; };
-  for (let x = 0; x < w; x += 1) { lue(x, 0); lue(x, h - 1); }
-  for (let y = 0; y < h; y += 1) { lue(0, y); lue(w - 1, y); }
-  return { taytto: taytto / (w * h), reuna: reunaYlla / reunaYht };
+const MITAT = JSON.parse(readFileSync(new URL('../tools/miniatyyri-mitat.json', import.meta.url), 'utf8'));
+
+/** {taytto, reuna} manifestista; kaatuu, jos kuva on vaihtunut mittauksen jälkeen. */
+function mittaa(nimi) {
+  const m = MITAT[nimi];
+  assert.ok(m, `${nimi}: ei mittausta — aja node tools/mittaa-miniatyyrit.mjs`);
+  const sha = createHash('sha256').update(readFileSync(fileURLToPath(new URL(nimi, KANSIO)))).digest('hex').slice(0, 16);
+  assert.equal(sha, m.sha, `${nimi}: kuva on vaihtunut mittauksen jälkeen — aja node tools/mittaa-miniatyyrit.mjs`);
+  return m;
 }
 
 const onKohtaus = (m) => m.taytto >= TAYTTO_RAJA || m.reuna > REUNA_RAJA;
 const KUVAT = readdirSync(KANSIO).filter((n) => n.endsWith('.webp'));
 
-test('miniatyyrit ovat leikattuja kohteita: ei maalattua taustaa', async () => {
+test('miniatyyrit ovat leikattuja kohteita: ei maalattua taustaa', () => {
   assert.ok(KUVAT.length > 100, 'miniatyyrejä pitäisi olla satoja');
   const huonot = [];
   for (const nimi of KUVAT) {
     if (TUNNETUT_KOHTAUSKUVAT.has(nimi)) continue;
-    const m = await mittaa(nimi);
+    const m = mittaa(nimi);
     if (onKohtaus(m)) huonot.push(`${nimi}: täyttö ${m.taytto.toFixed(2)}, reuna ${m.reuna.toFixed(2)}`);
   }
   assert.deepEqual(huonot, [], 'kuva on kohtaus — tilaa leikattu versio kuvaputkelta');
 });
 
-test('tunnettujen kohtauskuvien lista ei sisällä jo korjattuja kuvia', async () => {
+test('tunnettujen kohtauskuvien lista ei sisällä jo korjattuja kuvia', () => {
   const vanhentuneet = [];
   for (const nimi of TUNNETUT_KOHTAUSKUVAT) {
     assert.ok(KUVAT.includes(nimi), `${nimi}: tiedostoa ei ole — poista listalta`);
-    if (!onKohtaus(await mittaa(nimi))) vanhentuneet.push(nimi);
+    if (!onKohtaus(mittaa(nimi))) vanhentuneet.push(nimi);
   }
   assert.deepEqual(vanhentuneet, [], 'kuva on jo leikattu — poista se TUNNETUT_KOHTAUSKUVAT-listalta');
 });
