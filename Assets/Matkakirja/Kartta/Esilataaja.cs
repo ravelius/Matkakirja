@@ -20,10 +20,11 @@ namespace Matkakirja
     ///   - Uusinta: 429, 5xx ja yhteysvirheet (myös aikakatkaisu) uusitaan 1, 2, 4 ja 8 s:n viiveellä; Retry-After voittaa.
     ///     404 ja 403 eivät uusi.
     ///   - Jokainen yritys kirjataan VerkkoOdotus.Haku-summiin (lähde, ms, tavut).
-    /// Kutsuja luo pyynnön (luo) jokaiselle yritykselle erikseen ja lukee tuloksen valmis-kutsussa ennen vapautusta.
+    /// Kutsuja luo pyynnön (luo) jokaiselle yritykselle erikseen ja lukee tuloksen valmis-kutsussa ennen vapautusta
+    /// (luo → null peruu; valmis saa silloin null). Tiedostot ja ryhmät: EsilataajaTiedostot.cs (erä 4).
     /// Erä 1 ei lisää uutta esilatausta: se on mittauspohja (osuma-% VerkkoOdotus.Osuma).
     /// </summary>
-    public sealed class Esilataaja : MonoBehaviour
+    public sealed partial class Esilataaja : MonoBehaviour
     {
         public const int Rinnakkain = 6;
         static readonly float[] Viiveet = { 1f, 2f, 4f, 8f };
@@ -31,6 +32,8 @@ namespace Matkakirja
         sealed class Odottaja
         {
             public Taso Taso; public long Nro; public bool Saa, Vapautettu;
+            /// <summary>Paketin päivitys (kohta 2) jatkaa kuumana ja virransäästössä (Fable 25.9.).</summary>
+            public bool Paketti;
             /// <summary>Käynnissä oleva yritys, tai null tauolla / ennen ensimmäistä yritystä.</summary>
             public UnityWebRequest Pyynto;
             /// <summary>Ilman pyyntöä paikka on laillisesti varattu tähän hetkeen asti (tauko, vuoron alku).</summary>
@@ -105,10 +108,10 @@ namespace Matkakirja
         /// Hakee (luo) jonon kautta; valmis(r) saa viimeisen yrityksen pyynnön ennen sen vapautusta (r.result kertoo,
         /// onnistuiko). Pääsäikeestä coroutinena: <c>yield return Esilataaja.Hae(...)</c>.
         /// </summary>
-        public static IEnumerator Hae(Func<UnityWebRequest> luo, Taso taso, string lahde, Action<UnityWebRequest> valmis)
+        public static IEnumerator Hae(Func<UnityWebRequest> luo, Taso taso, string lahde, Action<UnityWebRequest> valmis, Kohta? kohta = null)
         {
             Varmista();
-            var o = new Odottaja { Taso = taso, Nro = nro++ };
+            var o = new Odottaja { Taso = taso, Nro = nro++, Paketti = kohta == Kohta.Kaynnistys };
             if (taso != Taso.Nakyva)
             {
                 jono.Add(o);
@@ -120,7 +123,10 @@ namespace Matkakirja
                 for (int yritys = 0; ; yritys++)
                 {
                     float viive;
-                    using (var r = luo())
+                    // luo voi palauttaa null (esim. peruttu ryhmä): valmis(null) ja paikka vapaaksi.
+                    var uusi = luo();
+                    if (uusi == null) { valmis?.Invoke(null); yield break; }
+                    using (var r = uusi)
                     {
                         o.Pyynto = r;
                         float alku = Time.realtimeSinceStartup;
@@ -223,7 +229,8 @@ namespace Matkakirja
             TarkkaileJoutilasta();
             if (jono.Count == 0) return;
             bool laatatKiireessa = Laattapalvelin.Kiireinen;
-            // Lämpö (Raamattu LÄMPÖ JA VIRRANKULUTUS kohta 2): kuumana tai virransäästössä tasot 4–5 seis.
+            // Lämpö (Raamattu LÄMPÖ JA VIRRANKULUTUS kohta 2): kuumana tai virransäästössä tasot 4–5 seis. Paketin
+            // päivitys (ESILATAUSPOLITIIKKA kohta 2, taso Muu) ei esty koskaan (Fablen päätös 25.9.2026 klo 20.5x).
             bool kuuma = Lampo.Kuuma;
             // Yksi paikka jää aina näkyvälle (Rinnakkain - 1 taustalle).
             while (kaynnissa < Rinnakkain - 1)
@@ -233,7 +240,7 @@ namespace Matkakirja
                 {
                     var o = jono[i];
                     if (laatatKiireessa && o.Taso >= Taso.TamaKaupunki) continue;
-                    if (kuuma && o.Taso >= Taso.Kohdekaupungit) continue;
+                    if (kuuma && o.Taso >= Taso.Kohdekaupungit && !o.Paketti) continue;
                     if (paras < 0 || o.Taso < jono[paras].Taso || (o.Taso == jono[paras].Taso && o.Nro < jono[paras].Nro)) paras = i;
                 }
                 if (paras < 0) break;

@@ -37,6 +37,10 @@
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
+//   levy [Mt]                 levyvälimuistien koko ja siivous vanhimmasta (oletus 2048 Mt; pienempi raja testiin) sekä
+//                             purettujen kuvien muisti (LRU tavuina, iPhone 200 / iPad 300 Mt); tulos lokiin "levy:"
+//   tiedosto osoite polku     Esilataaja.Pyyda(Kohde.Tiedosto) ryhmään "testi" (polku suhteessa Documents/sisalto;
+//                             Range-jatko jos polku on jo osin ladattu); lokiin "ryhmä testi valmis (v valmista, e virhettä)"
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen] [kaupunki]  uusi peli (oletus Lontoo; siemen = toistettava noppa); sulkee aloitusnäkymän
@@ -115,7 +119,8 @@ namespace Matkakirja.Natiivi
             string virhe;
             try { virhe = Suorita(o); }
             catch (Exception e) { virhe = "poikkeus: " + e.Message; }
-            Kirjaa(rivi, virhe == null ? "ok" : "VIRHE " + virhe);
+            // "="-alkuinen tulos on tietoa (ruutu, verkko, levy), ei virhe (Laitetestaajan havainto 25.9.).
+            Kirjaa(rivi, virhe == null ? "ok" : virhe.StartsWith("=") ? "ok " + virhe.Substring(1) : "VIRHE " + virhe);
         }
 
         string Suorita(string[] o)
@@ -265,7 +270,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
-                    return Ruudunpaivitys.Instanssi != null ? Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
+                    return Ruudunpaivitys.Instanssi != null ? "=" + Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
                 case "lampo":
                 {
                     // lampo normaali|kuuma|kriittinen|auto: pakottaa lämpötason (simulaattorissa thermalState on aina 0).
@@ -278,12 +283,28 @@ namespace Matkakirja.Natiivi
                         default: return "käyttö: lampo normaali|kuuma|kriittinen|auto";
                     }
                     Lampo.Paivita(true);
-                    return "lämpö " + Lampo.Taso;
+                    return "=lämpö " + Lampo.Taso;
+                }
+                case "levy":
+                {
+                    // Esilataaja erä 4: Kartta/Levysiivous.cs (taustasäie, tulos lokiin) ja UI/Kuvat.cs:n LRU.
+                    int raja = int.TryParse(A(1), out var r) && r > 0 ? r : Levysiivous.RajaMt;
+                    Levysiivous.Siivoa(raja);
+                    return $"=kuvat muistissa {Kuvat.MuistissaKpl} kpl, {Kuvat.MuistissaTavuja / 1048576} / {Kuvat.MuistiRaja / 1048576} Mt; "
+                         + $"levy (edellinen) {Levysiivous.Viimeisin}";
+                }
+                case "tiedosto":
+                {
+                    // Esilataaja erä 4: Siirtosepän paketin taustapäivityksen latausväylä (EsilataajaTiedostot.cs).
+                    if (A(1) == null || A(2) == null) return "tiedosto osoite polku";
+                    Esilataaja.Pyyda(Kohde.Tiedosto(A(1), null, 0, A(2)), Taso.Muu, Kohta.Kaynnistys, "testi");
+                    Esilataaja.RyhmaValmis("testi", (v, e) => Debug.Log($"MATKAKIRJA peli: tiedosto-testi {v} valmista, {e} virhettä"));
+                    return null;
                 }
                 case "verkko":
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
                     if (A(1) == "nollaa") { VerkkoOdotus.NollaaSummat(); return null; }
-                    return VerkkoOdotus.Yhteenveto();
+                    return "=" + VerkkoOdotus.Yhteenveto();
                 case "odota-tila":
                 {
                     // Useampi tila pystyviivalla: odota-tila kartta|aloitus 40 (aloitusnäkymä käytössä tai ei).
