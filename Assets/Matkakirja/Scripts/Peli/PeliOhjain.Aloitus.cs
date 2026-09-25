@@ -111,6 +111,21 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// Löydös 83 (Natiivi-UI:n Ohita-nappi): aloituslento ohitetaan kokonaan. Kesken olevan zoomin ja lennon
+        /// callbackit mitätöidään (ajoTunnus), lentorepliikki vaiennetaan, ja saapumiskortti (paperi) tulee heti;
+        /// Nappula.PaataAloituslento purkaa lennon esityksen paperin alla kuten normaalisti (löydös 85). Ei tee mitään,
+        /// jos aloituslento ei ole käynnissä tai lento on jo perillä (välikortti auki).
+        /// </summary>
+        public void OhitaAloituslento()
+        {
+            if (!AloituslentoKaynnissa || ajoValmis == null) return;
+            ++ajoTunnus;
+            OhitaLuento();
+            Debug.Log("MATKAKIRJA peli: aloituslento ohitettu");
+            AjoValmis();
+        }
+
         void AloituslentoPerilla(string kohde)
         {
             var kortti = PeliNakymat.Saapumiskortti;
