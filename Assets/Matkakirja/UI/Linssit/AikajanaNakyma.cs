@@ -357,7 +357,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Otsikko ja anfangillinen teksti laatikkoon (web .aikajana-avaus-otsikko ja -teksti::first-letter).</summary>
         void AsetaLaatikko(string otsikko, string teksti, bool musta)
         {
-            eOtsikko.text = Kapiteelit(otsikko);
+            // Otsikon riviväli webin kuvasta: 33 px 23,4 px:n fontilla (UITK:n oletus antoi 29,5).
+            eOtsikko.text = "<line-height=1.41em>" + Kapiteelit(otsikko);
             eTeksti.Clear();
             if (!string.IsNullOrEmpty(teksti))
                 Lehtinakyma.AnfangiKappale(eTeksti, teksti, "mk-aikajana-avaus__kappale", 1.58f, Kirjasin.Luku, false,
