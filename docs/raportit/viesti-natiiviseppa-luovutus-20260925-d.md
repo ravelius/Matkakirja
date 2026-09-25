@@ -46,6 +46,10 @@ Linssiseppä astro-tumma (98).
 
 ## Avoimet löydökset
 
+- Kotimaan korostus + kuvasumennuskorjaus TODENNETTU (Linssiseppä rivit 39/41, iPhone + iPad, juna 6ea5cdc2; kuvapari
+  lokit/pariteetti-ajo/kotimaan-korostus-kuvapari-3-20260925.jpg). Pieni ero: natiivin meri vaaleampi ja vähemmän
+  harmaansininen kuin webissä (tarkista kerma-25:n ja pohja-25:n kanssa).
+
 - **80** avauskuvan musta neliö: ei toistu simulaattorissa (lokit/avaus-80) → tarkista laitteella (iso iPad 00008103 vapaa;
   laitekäännös lokit/natiiviseppa-skriptit/laite.sh ajaa nyt LuoPallon ensin).
 - **106** junassa (Natiivi-UI nimiolukko-106, mittari "kylkivaihdot vedossa 0"); omistajan todennus build 14:ssä.
