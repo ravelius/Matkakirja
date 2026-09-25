@@ -122,6 +122,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(kartta.KuvaUrl))
                 Kuvat.Hae(kartta.KuvaUrl, t =>
                 {
+                    Debug.Log($"MATKAKIRJA kohdekartta {kartta.Kaupunki}: kuva {(t == null ? "puuttuu" : t.width + " × " + t.height)} ({kartta.KuvaUrl})");
                     if (t == null) return;
                     kuva.style.backgroundImage = new StyleBackground(t);
                     if (kuvaSuhde <= 0f && t.width > 0) { kuvaSuhde = (float)t.height / t.width; Asettele(); }

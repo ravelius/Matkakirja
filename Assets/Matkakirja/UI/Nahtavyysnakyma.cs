@@ -65,14 +65,12 @@ namespace Matkakirja.Natiivi
         void Rakenna(Kohdekartta k)
         {
             sisus.Clear();
-            var nappirivi = Rakenne.El("mk-nahtavyydet__nappirivi", sisus, PickingMode.Ignore);
-            var koko = Rakenne.Nappi("⤢ Kokoruutu", "mk-nahtavyydet__kokoruutu", () => Kokoruutu(k), nappirivi);
-            Kirjasimet.Aseta(koko, Kirjasin.Kone);
+            // Löydös 63: kokoruutunappi ja lähderivi ovat KohdekarttaNakyman omia (web piirraKaupunkiKartta
+            // kokoruutuNappi: true); täällä ne piirtyivät toiseen kertaan.
             var kartta = new KohdekarttaNakyma(k);
             kartta.KohdeAvattu += kohde => UiNakymat.Hae()?.Nahtavyydet.AvaaKohde(k, kohde);
             kartta.KokoruutuPyydetty += () => Kokoruutu(k);
             sisus.Add(kartta);
-            if (!string.IsNullOrEmpty(k.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(k.Lahde, "mk-lehti__lahde", sisus), Kirjasin.Kone);
             Esittely(k.Esittely);
         }
 
