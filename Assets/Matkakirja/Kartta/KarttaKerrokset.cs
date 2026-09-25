@@ -255,6 +255,12 @@ namespace Matkakirja
         public string LisaaRasteri(string avain, string url, CesiumUrlTemplateRasterOverlayProjection projektio,
                                    int min, int max, float alfa, bool vaistyva = false)
         {
+            // Valmiiksi luotu lennon pinta (LentoPohjaValmiiksi, ei vielä lennolla) väistyy linssin tieltä.
+            if (pintaValmiiksi)
+            {
+                Debug.Log("MATKAKIRJA lennon pinta: valmis pinta vapautettu (linssin kerros " + avain + ")");
+                VapautaLentopinta();
+            }
             PoistaRasteri(avain);
             // Väritaso vapauttaa paikan 2 linssin ajaksi (Cesiumissa kolme raster-paikkaa).
             if (varitaso != null) varitaso.Linssit(true);
@@ -291,13 +297,19 @@ namespace Matkakirja
             return avain;
         }
 
-        /// <summary>Linssien ja lennon pinnan käyttämät raster-paikat (materialKey; väritaso väistyy linssin ajaksi).</summary>
+        /// <summary>
+        /// Linssien ja lennon pinnan käyttämät raster-paikat (materialKey; väritaso väistyy linssin ajaksi). Valmiiksi luotu
+        /// lennon pinta ei varaa paikkaa: se väistyy linssin tieltä (LisaaRasteri).
+        /// </summary>
         HashSet<string> KaytetytPaikat()
         {
             var kaytetyt = new HashSet<string>();
             foreach (var r in rasterit.Values) kaytetyt.Add(r.kerros.materialKey);
-            if (silea != null) kaytetyt.Add(silea.materialKey);
-            if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
+            if (!pintaValmiiksi)
+            {
+                if (silea != null) kaytetyt.Add(silea.materialKey);
+                if (sentinel != null) kaytetyt.Add(sentinel.materialKey);
+            }
             return kaytetyt;
         }
 
@@ -627,18 +639,20 @@ namespace Matkakirja
                 // Perillä: lennon jono pois (näkyvä kartta saa paikat takaisin).
                 LennonEsilataus?.Peru();
                 LennonEsilataus = null;
-                if (silea != null) { VapautaKerros(silea); silea = null; }
-                if (sentinel != null)
-                {
-                    VapautaKerros(sentinel);
-                    sentinel = null;
-                    if (varitaso != null && rasterit.Count == 0) varitaso.Linssit(false);
-                }
-                satelliittiLento = false;
-                PaivitaLennonVarjostin();
+                if (pintaValmiiksi) Debug.Log("MATKAKIRJA lennon pinta: valmis pinta vapautettu (lento päättyi ennen käyttöönottoa)");
+                VapautaLentopinta();
                 return;
             }
-            if (silea != null || rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
+            pintaVapautus = false;
+            // Valmiiksi luotu pinta (LentoPohjaValmiiksi): vain näkyviin.
+            if (pintaValmiiksi && OtaValmisPinta()) return;
+            if (silea != null) return;
+            if (rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled)
+            {
+                PintaTila = "pinta ohitettu (linssi tai pohja pois)";
+                return;
+            }
+            PintaTila = "pinta luotu nyt";
             string versio = SatelliittiVersio;
             if (string.IsNullOrEmpty(versio))
             {
@@ -647,12 +661,158 @@ namespace Matkakirja
             }
             // Satelliitti: Blue Marble paikkaan 1 (Z0–Z7; Cesium venyttää Z7:n syvemmälle), Sentinel paikkaan 2
             // (väritaso väistyy lennon ajaksi kuten linssille). Cesium Unityssä {reverseY} = XYZ-rivi kuten pohjassa.
-            silea = Kerros(pallo.gameObject, "1", SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg", 7);
+            silea = Kerros(pallo.gameObject, "1", BmngUrl(versio), 7);
             string s2 = SentinelKaytto(versio);
-            if (varitaso != null) varitaso.Linssit(true);
+            VaistaVaritaso();
             sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
             satelliittiLento = true;
             VarmistaVarakartta();
+            PaivitaLennonVarjostin();
+        }
+
+        /// <summary>Blue Marblen osoitemalli (lennon pinta, paikka 1).</summary>
+        static string BmngUrl(string versio) => SatelliittiJuuri + versio + "/" + SatelliittiMeri + "/{z}/{x}/{reverseY}.jpg";
+
+        // ---- Lennon pinta valmiiksi (löydös 80/84, BUILD 16) ----
+
+        /// <summary>silea (ja ehkä sentinel) on luotu valmiiksi näkymättömänä (LentoPohjaValmiiksi), ei vielä lennon käytössä.</summary>
+        bool pintaValmiiksi;
+        /// <summary>Valinta sulkeutui: valmis pinta vapautetaan Updatessa, ellei aloituslento ota sitä käyttöön.</summary>
+        bool pintaVapautus;
+        float pintaValmiiksiAika;
+        /// <summary>Valmiin pinnan sarja (SatelliittiAvain, "" = sileä): sarjan vaihduttua pinta luodaan uudelleen.</summary>
+        string pintaSarja;
+        /// <summary>Lennon pinta (valmis tai käytössä) on väistänyt väritason: vapautus palauttaa sen (myös Sentinelin lähdettyä).</summary>
+        bool varitasoVaistetty;
+
+        /// <summary>
+        /// Viimeisimmän LentoPohja(true)-kutsun tila diagnostiikkaan (Nappula: rivit "valmius: verho musta-…"): "pinta valmiina
+        /// &lt;s&gt; s (bmng; s2 luotu nyt)" = valmiiksi luotu pinta kytkettiin näkyviin (s = kauanko se ehti latautua),
+        /// "pinta luotu nyt" = kerrokset luotiin vasta verhon takana, tai "pinta ohitettu (…)".
+        /// </summary>
+        public string PintaTila { get; private set; }
+
+        /// <summary>
+        /// LENNON PINTA VALMIIKSI NÄKYMÄTTÖMÄNÄ (löydös 80/84, Natiiviseppä BUILD 16). Aloituslennon musta verho odotti uusien
+        /// raster-kerrosten (Blue Marble, Sentinel) latautumista valintanäkymän ~200 maastolaattaan (musta-valinta 1,3–2,0 s,
+        /// lokit/verho-jalkeen). Nyt kerrokset luodaan jo valintanäkymässä (UI: Aloitusnakyma.AloitaPallovalinta, jossa
+        /// valintanäkymän kamera asetetaan) ja piirretään läpinäkyvinä: tileset-varjostimen paikkakohtainen globaali alfa
+        /// (_overlayAlfa_1/2 = 0; sekoitus lerp(pohja, näyte, näyte.a · alfa), sama kuin linssien RasterinAlfa), joten Cesium
+        /// lataa niiden rasterit valintanäkymän laattoihin ennen lentoa. Mustan verhon takana LentoPohja(true) vain kytkee ne
+        /// näkyviin (alfa 1) ja väistää väritason kuten ennen.
+        ///
+        /// PAIKKA 2 JA KERMA: valintanäkymässä nappula on Lontoossa, joten väritaso näyttää Ison-Britannian kerman paikassa 2
+        /// (GBR-sarja Z3–Z8, AlinKaytetty 3; valintanäkymän kaukaisin taso ~4,8 → huntu täysin näkyvissä). Kerma näkyy, joten
+        /// sitä ei poisteta: Sentinel luodaan valmiiksi vain, kun väritaso ei voi käyttää paikkaa 2 (ei väritasoa tai huntu
+        /// pois), ja muuten verhon takana kuten ennen (sen laatat alle Z8 ovat Laattapalvelimen läpinäkyviä ilman verkkoa).
+        /// Paikka 1 on valinnassa vapaa (linssinappi on piilossa aloitusnäytöllä); linssi (LisaaRasteri) vapauttaa valmiin pinnan.
+        ///
+        /// valmiiksi = false (valinta sulkeutui): pinta vapautetaan seuraavissa Updateissa heti, kun aloituslentoa ei ole
+        /// käynnissä (Nappula.AloitusAjossa; käynnistynyt lento ottaa sen käyttöön mustan verhon takana tai vapauttaa sen
+        /// keskeytyessään). Ohitetaan, jos linssin kerros on kartalla tai pohja pois (kuten LentoPohja). Idempotentti.
+        /// </summary>
+        public void LentoPohjaValmiiksi(bool valmiiksi = true)
+        {
+            if (!valmiiksi)
+            {
+                if (pintaValmiiksi) pintaVapautus = true;
+                return;
+            }
+            pintaVapautus = false;
+            if (pintaValmiiksi || silea != null || sentinel != null) return;
+            if (rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled) return;
+            string versio = SatelliittiVersio;
+            // Alfa 0 ennen kerroksen kytkentää, ettei yhtään kehystä piirry näkyvänä.
+            Shader.SetGlobalFloat(PaikanAlfaId[1], 0f);
+            if (string.IsNullOrEmpty(versio))
+            {
+                pintaSarja = "";
+                silea = Kerros(pallo.gameObject, "1", SileaUrl, SileaMaxTaso);
+            }
+            else
+            {
+                pintaSarja = SatelliittiAvain();
+                silea = Kerros(pallo.gameObject, "1", BmngUrl(versio), 7);
+                string s2 = SentinelKaytto(versio);   // kattavuus Laattapalvelimelle (ja sen haku) jo nyt
+                if (varitaso == null || !varitaso.huntu)
+                {
+                    // Väritaso väistyy ensin: sen Poista palauttaa paikan 2 alfan 1:een, joten 0 vasta sen jälkeen.
+                    VaistaVaritaso();
+                    Shader.SetGlobalFloat(PaikanAlfaId[2], 0f);
+                    sentinel = Kerros(pallo.gameObject, "2", s2 + "{z}/{x}/{reverseY}.jpg", 11);
+                }
+                VarmistaVarakartta();
+            }
+            pintaValmiiksi = true;
+            pintaValmiiksiAika = Time.unscaledTime;
+            PaivitaLennonVarjostin();
+            Debug.Log("MATKAKIRJA lennon pinta: valmiiksi näkymättömänä (alfa 0), paikka 1 " + (pintaSarja.Length > 0 ? "bmng" : "sileä") +
+                      (sentinel != null ? ", paikka 2 s2" : pintaSarja.Length > 0 ? "; s2 verhon takana (paikka 2 on väritason)" : ""));
+        }
+
+        /// <summary>Valmiiksi luotu pinta näkyviin (LentoPohja(true)); false = ei kelpaa (vapautettu, luodaan tavalliseen tapaan).</summary>
+        bool OtaValmisPinta()
+        {
+            float ika = Time.unscaledTime - pintaValmiiksiAika;
+            string versio = SatelliittiVersio;
+            string sarja = string.IsNullOrEmpty(versio) ? "" : SatelliittiAvain();
+            if (rasterit.Count > 0 || pallo == null || pohja == null || !pohja.enabled || silea == null || sarja != pintaSarja)
+            {
+                Debug.Log("MATKAKIRJA lennon pinta: valmis pinta ei kelpaa (linssi, pohja pois tai sarja vaihtui), luodaan uudelleen");
+                VapautaLentopinta();
+                return false;
+            }
+            pintaValmiiksi = false;
+            bool s2Valmiina = sentinel != null;
+            if (sarja.Length > 0)
+            {
+                // Väritaso väistyy vasta nyt (kerma näkyi valintanäkymässä), Sentinel paikkaan 2, jos se ei ollut valmiina.
+                VaistaVaritaso();
+                if (sentinel == null) sentinel = Kerros(pallo.gameObject, "2", SentinelKaytto(versio) + "{z}/{x}/{reverseY}.jpg", 11);
+                Shader.SetGlobalFloat(PaikanAlfaId[2], 1f);
+                satelliittiLento = true;
+                VarmistaVarakartta();
+            }
+            Shader.SetGlobalFloat(PaikanAlfaId[1], 1f);
+            PaivitaLennonVarjostin();
+            PintaTila = $"pinta valmiina {ika:0.0} s ({(sarja.Length == 0 ? "sileä" : s2Valmiina ? "bmng+s2" : "bmng; s2 luotu nyt")})";
+            Debug.Log("MATKAKIRJA lennon pinta: valmis pinta näkyviin, " + PintaTila);
+            return true;
+        }
+
+        /// <summary>Väritaso väistyy lennon pinnan tieltä (paikka 2), kerran; VapautaLentopinta palauttaa.</summary>
+        void VaistaVaritaso()
+        {
+            if (varitaso == null || varitasoVaistetty) return;
+            varitaso.Linssit(true);
+            varitasoVaistetty = true;
+        }
+
+        /// <summary>
+        /// Lennon pinnan kerrokset pois (valmiit tai käytössä olevat): kierrätykseen, valmiin pinnan alfat takaisin 1:een ja
+        /// väritaso takaisin, jos lennon pinta väistätti sen. Ennen väritaso palasi vain, jos Sentinel oli yhä kartalla, joten
+        /// aloituslennon jälkeen (LentoSentinelPois liu'ussa) kerma jäi pois kunnes linssi avattiin ja suljettiin.
+        /// </summary>
+        void VapautaLentopinta()
+        {
+            bool valmiina = pintaValmiiksi;
+            pintaValmiiksi = false;
+            pintaVapautus = false;
+            if (silea != null) { VapautaKerros(silea); silea = null; }
+            if (sentinel != null) { VapautaKerros(sentinel); sentinel = null; }
+            if (valmiina)
+            {
+                // Valmiin pinnan paikat olivat alfalla 0. Paikan 2 alfa on muuten väritason (älä koske), mutta jos pinta oli
+                // siinä, väritaso oli väistynyt eikä sen alfaa ole asetettu.
+                Shader.SetGlobalFloat(PaikanAlfaId[1], 1f);
+                if (varitasoVaistetty) Shader.SetGlobalFloat(PaikanAlfaId[2], 1f);
+            }
+            if (varitasoVaistetty)
+            {
+                varitasoVaistetty = false;
+                if (varitaso != null && rasterit.Count == 0) varitaso.Linssit(false);
+            }
+            satelliittiLento = false;
             PaivitaLennonVarjostin();
         }
 
@@ -846,11 +1006,15 @@ namespace Matkakirja
         /// lennon pinnan laatat. Ne haetaan levylle jo portin aikana tavallisena esilatauksena (esiJono: vain kun näkyvän
         /// kartan jono on tyhjä, kaksi paikkaa jää näkyvälle), jolloin musta verho lukee ne välimuistista.
         ///   lähikuva: lennon pinta lähtöpäästä samalla kaavalla kuin <see cref="EsilataaLento"/> (Z2–Z6 säde 1, Z7 säde 2,
-        ///             Sentinel Z8–Z9 säde 1 ja Z10–Z11 säde 2, vain katetut) sekä pohja Z5–Z6 säde 1 ja Z7–Z9 säde 2
-        ///             (pohja latautuu lennon pinnan alla, KarttaKerrokset.LentoPohja);
+        ///             Sentinel Z8–Z9 säde 1 ja Z10–Z11 säde 3, vain katetut) sekä pohja Z5–Z6 säde 1 ja Z7–Z9 säde 2
+        ///             (pohja latautuu lennon pinnan alla, KarttaKerrokset.LentoPohja) ja maasto <see cref="AloitusMaasto"/>;
         ///   valinta:  lennon pinta Z2–Z4 laatoista, joiden keskipiste on enintään 80° valintanäkymän keskuksesta
         ///             (Sentinel alle Z8 on kattamaton eikä hae verkkoa, pohja on jo näkyvissä).
-        /// Kohde ei ole vielä tiedossa, joten reitin käytävä ja kohde jäävät lennon omaan esilataukseen.
+        /// Kohde ei ole vielä tiedossa, joten reitin käytävä ja kohde jäävät lennon omaan esilataukseen, ja lähikuvan suunta
+        /// (lentosuunta + 90–100°) on auki: laatat Lontoon ympäriltä kaikkiin suuntiin. Lähikuvan asento (kone Lontoon yllä,
+        /// kamera 12–30 km, kallistus 82–84°): lähin maa 40–45 km kamerasta, horisontti ~520 km; rasterien taso seuraa
+        /// maastolaatan tasoa (pohja katto Z9, Blue Marble Z7, Sentinel Z11), joten Sentinel Z11 tarvitaan noin 20–80 km
+        /// Lontoon takana (säde 3 = ±37 km) ja pohja/Blue Marble Z7–Z9 kattavat lähialueen säteillä 2.
         /// </summary>
         public Laattapalvelin.Esilataus EsilataaAloituslahto()
         {
@@ -919,7 +1083,57 @@ namespace Matkakirja
                 StartCoroutine(EsilataaAloitusSentinel(versio, e));
                 VarmistaVarakartta();
             }
+            StartCoroutine(EsilataaAloitusMaasto(e));
             return e;
+        }
+
+        /// <summary>
+        /// Aloitusnäytön maaston tasot ja säteet (laattoina) Lontoon ympäriltä: noin ±40 km (Z10) … ±145 km (Z7) itä–länsi
+        /// ja puolitoista kertaa pohjois–etelä (laatta 0,18° … 1,4°; MaastoLaatat). Cesiumin maastotaso: geometrinen virhe
+        /// 77 067 m / 2^z ≤ 2 px (SSE 16 / 8), eli 2 400 px:n ruudulla (fov 50°) Z12 riittää ≥ 24 km:n, Z11 ≥ 49 km:n ja
+        /// Z10 ≥ 98 km:n päässä. Lähikuvan lähialueen Z11–Z12 riippuu suunnasta (kohde), joten esiladataan niiden
+        /// esivanhemmat, joiden läpi Cesium laskeutuu taso kerrallaan (lapsi vasta vanhemman latauduttua). Nykyisessä
+        /// maastossa (2026-09-24-maailma) nämä ovat kaikki saatavilla (Z7 säde 2 osuisi Pohjanmereen, 7/128/103 ei ole).
+        /// </summary>
+        static readonly (int z, int sade)[] AloitusMaasto = { (6, 1), (7, 1), (8, 2), (9, 2), (10, 3) };
+
+        /// <summary>
+        /// Aloitusnäytön esilatauksen maasto (löydös 80): Lontoon lähikuvan maastolaatat samaan esilataukseen. Mittauksessa
+        /// (lokit/verho-jalkeen) mustan verhon lähikuvan maasto tuli verkosta kylmänä (maasto v11/10) ja toisellakin
+        /// käynnistyksellä (v23/15), koska listassa oli vain rasterit. layer.json (tiles-pohja ja available) Laattapalvelimen
+        /// kautta; luku taustasäikeessä (~220 kt), ettei portin kiertävä pallo nyi. Vain saatavilla olevat (Cesium ei pyydä muita).
+        /// </summary>
+        System.Collections.IEnumerator EsilataaAloitusMaasto(Laattapalvelin.Esilataus e)
+        {
+            string kansio = Laattapalvelin.MaastoPolku;
+            if (pallo == null || pallo.tilesetSource != CesiumDataSource.FromUrl || string.IsNullOrEmpty(kansio)
+                || string.IsNullOrEmpty(pallo.url)) yield break;
+            string json = null;
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(pallo.url))
+            {
+                r.timeout = 20;
+                yield return r.SendWebRequest();
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) json = r.downloadHandler.text;
+            }
+            if (e.Peruttu) yield break;
+            if (string.IsNullOrEmpty(json))
+            {
+                Debug.LogWarning("MATKAKIRJA aloitusnäyttö: maaston layer.json ei latautunut, maasto ei esilataudu");
+                yield break;
+            }
+            int maxTaso = 0;
+            foreach (var (z, _) in AloitusMaasto) maxTaso = Math.Max(maxTaso, z);
+            var tehtava = System.Threading.Tasks.Task.Run(() => MaastoLaatat.Ymparilta(kansio, MaastoLaatat.TilesPohja(json),
+                MaastoLaatat.Saatavuus(json, maxTaso), AloitusLahtoLat, AloitusLahtoLon, AloitusMaasto));
+            while (!tehtava.IsCompleted) yield return null;
+            if (tehtava.IsFaulted || e.Peruttu)
+            {
+                if (tehtava.IsFaulted) Debug.LogWarning("MATKAKIRJA aloitusnäyttö: maaston layer.json ei ole luettavissa: " + tehtava.Exception?.GetBaseException().Message);
+                yield break;
+            }
+            var polut = tehtava.Result;
+            if (polut.Count > 0) Laattapalvelin.Esilataa(polut, e);
+            Debug.Log($"MATKAKIRJA aloitusnäyttö: esilataus + maasto {polut.Count} laattaa (yhteensä {e.Yhteensa})");
         }
 
         System.Collections.IEnumerator EsilataaAloitusSentinel(string versio, Laattapalvelin.Esilataus e)
@@ -929,10 +1143,11 @@ namespace Matkakirja
             while (sentinelZ8 == null && Time.unscaledTime < raja && !e.Peruttu) yield return null;
             if (sentinelZ8 == null || e.Peruttu) yield break;
             var polut = new List<string>();
-            // Sama säde kuin EsilataaSentinel: Z8–Z9 säde 1, Z10–Z11 säde 2, vain katetut; tarkimmat ensin.
+            // Z8–Z9 säde 1, Z10–Z11 säde 3 (lennon EsilataaSentinel: 2), vain katetut; tarkimmat ensin. Lähikuvan Sentinel Z11
+            // ulottuu lähimmästä maasta (~20 km Lontoon takana) noin 80 km:iin suunnan mukaan; säde 3 = ±37 km (Z11) / ±73 km (Z10).
             for (int z = 11; z >= 8; z--)
             {
-                int n = 1 << z, sade = z < 10 ? 1 : 2;
+                int n = 1 << z, sade = z < 10 ? 1 : 3;
                 var (x, y) = LaattaXY(z, AloitusLahtoLat, AloitusLahtoLon);
                 for (int dx = -sade; dx <= sade; dx++)
                     for (int dy = -sade; dy <= sade; dy++)
@@ -1056,6 +1271,18 @@ namespace Matkakirja
             {
                 aloitusEsiladattu = true;
                 EsilataaAloituslahto();
+            }
+            // Valinta sulkeutui (LentoPohjaValmiiksi(false)): valmis pinta pois, kun aloituslentoa ei ole käynnissä. Valinnan
+            // Valitse käynnistää lennon samassa kutsussa, jolloin pinta odottaa lentoa (LentoPohja(true) tai keskeytys).
+            if (pintaVapautus && (nappula == null || !nappula.AloitusAjossa))
+            {
+                bool oli = pintaValmiiksi;
+                pintaVapautus = false;
+                if (oli)
+                {
+                    VapautaLentopinta();
+                    Debug.Log("MATKAKIRJA lennon pinta: valmis pinta vapautettu (valinta sulkeutui ilman aloituslentoa)");
+                }
             }
             if (pallo == null || rasterit.Count == 0) { linssiEhto.Nollaa(); linssiKesken = 0; return; }
             // Latausta ei arvioida heti lisäyksen jälkeen: Cesium rekisteröi uudet laatat vasta

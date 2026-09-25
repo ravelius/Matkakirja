@@ -30,6 +30,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Laattapaketti.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
+../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs

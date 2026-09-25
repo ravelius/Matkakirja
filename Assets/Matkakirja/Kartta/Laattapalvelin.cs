@@ -76,7 +76,8 @@ namespace Matkakirja
             verhot = Math.Max(0, verhot + (alku ? 1 : -1));
             var p = Instanssi;
             if (verhot > 0 || p == null || p.tauolla.Count == 0) return;
-            foreach (var h in p.tauolla) p.esiJono.Enqueue(h);
+            // Kohdealueen (Etusija) tauolla olleet tulivat kiirejonosta (Sentinel, Update); muut esilatausjonosta.
+            foreach (var h in p.tauolla) (h.Esi != null && h.Esi.Etusija ? p.kiireJono : p.esiJono).Enqueue(h);
             p.tauolla.Clear();
         }
         const int KohdePaikat = 4;
@@ -650,7 +651,14 @@ namespace Matkakirja
             }
             if (esi && esilataus.Peruttu) return (499, null);
             var h = new Haku { Polku = polku, Esi = esilataus };
-            (varitasoa ? kiireJono : !esi ? jono : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
+            // Kiirejono on Cesiumin omille huntu- ja Sentinel-pyynnöille (varitasoa: myös harvat sarjat, KattavuusOhjaus).
+            // Harvan sarjan esilataus kulki ennen aina kiirejonoon, joten mustan verhon lähikuvan aikana näkyvän kartan
+            // haut jonottivat lennon kohteen Sentinel-esilatauksen takana (lokit/verho-jalkeen: kiire 171 → 47, näkyvä jono 6,
+            // käynnissä 28 = kiireen paikat). Nyt vain verhon odottama reitti (Verholle) ja kohdealue (Etusija, verhon ajan
+            // tauolla: Update) käyttävät kiirejonoa; aloitusnäytön Sentinel-esilataus kulkee esilatausjonossa muun listan tavoin.
+            (!esi ? (varitasoa ? kiireJono : jono)
+                : varitasoa && (esilataus.Verholle || esilataus.Etusija) ? kiireJono
+                : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             lahde.Nimi = "verkko";
             if (tila == 200 && !KuvaEhja(polku, data))
@@ -701,7 +709,14 @@ namespace Matkakirja
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
             // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
             int raja = verhot > 0 ? Math.Max(rinnakkain, VerhoRinnakkain) : rinnakkain;
-            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
+            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireJono.TryDequeue(out var k))
+            {
+                if (k.Esi != null && k.Esi.Peruttu) { k.Valmis.TrySetResult((499, null)); continue; }
+                // Verhon aikana kiirejonon esilatauksista vain verhon odottama (Verholle); kohdealueen Sentinel odottaa verhon
+                // lähtöä kuten kohdealueen muutkin laatat (kohdeJono) ja palaa sitten kiirejonoon (VerhoKevennys).
+                if (verhot > 0 && k.Esi != null && !k.Esi.Verholle) { tauolla.Add(k); continue; }
+                StartCoroutine(Lataa(k));
+            }
             while (kaynnissa - kohdeKaynnissa < raja && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
             while (verhot == 0 && kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
             {

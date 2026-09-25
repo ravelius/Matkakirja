@@ -137,12 +137,13 @@ namespace Matkakirja
 
         /// <summary>
         /// Verho lähtee: rivi "valmius: verho &lt;nimi&gt; lähti &lt;syy&gt; &lt;ms&gt; ms aste &lt;x&gt; %" aina (syy = valmis tai katto:…),
-        /// ja käynnissä olevan seurannan loppuun merkitään lähtöhetki.
+        /// ja käynnissä olevan seurannan loppuun merkitään lähtöhetki. lisa (valinnainen) rivin loppuun " | lisa": aloituslennon
+        /// mustalla verholla lennon pinnan tila (KarttaKerrokset.PintaTila: "pinta valmiina …" tai "pinta luotu nyt").
         /// </summary>
-        public static void VerhoLoppu(string nimi, string syy, double ms, float aste)
+        public static void VerhoLoppu(string nimi, string syy, double ms, float aste, string lisa = null)
         {
             Debug.Log($"MATKAKIRJA valmius: verho {nimi} lähti {syy} {ms:0} ms aste {(aste < 0 ? "-" : aste.ToString("0.0"))} % " +
-                      $"kevennys {KevennysTila()}");
+                      $"kevennys {KevennysTila()}" + (string.IsNullOrEmpty(lisa) ? "" : " | " + lisa));
             if (instanssi == null) return;
             foreach (var x in instanssi.seurannat)
                 if (x.Nimi == nimi) x.VerhoLahti = Time.realtimeSinceStartup - x.Alku;

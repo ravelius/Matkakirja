@@ -859,6 +859,9 @@ namespace Matkakirja.Natiivi
             valintaPisteet.Napautettu += PisteValittu;
             // Suoraan valintanäkymään (web lauta.aloitusnakyma); Lontoo-zoomi poistui 24.9. klo 16.1x.
             valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // Aloituslennon pinta valmiiksi näkymättömänä (Natiiviseppä, löydös 80/84): Cesium lataa sen valintanäkymän
+            // laattoihin nyt, joten musta verho vain kytkee sen näkyviin. Vapautus LopetaPallovalinnassa.
+            kk.LentoPohjaValmiiksi();
             // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella).
             LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
             return true;
@@ -882,6 +885,9 @@ namespace Matkakirja.Natiivi
         {
             if (!ValitseePallolla) return;
             ValitseePallolla = false;
+            // Valmis lennon pinta pois, ellei aloituslento ala (Valitse käynnistää sen heti tämän jälkeen; KarttaKerrokset
+            // odottaa lennon alkua ennen vapautusta, Natiiviseppä löydös 80/84).
+            KarttaKerrokset.Instanssi?.LentoPohjaValmiiksi(false);
             if (!valittiin && valintaNappula != null && !valintaNappula.Liikkeessa) valintaNappula.Piilota();
             valintaNappula = null;
             if (valintaKierto != null) valintaKierto.KaupunkiNapautettu -= KaupunkiValittu;
