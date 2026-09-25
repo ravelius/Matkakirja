@@ -491,8 +491,9 @@ namespace Matkakirja
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
             bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
-            // LÖYDÖS 120: aloituslennon kamera yhtenä C1-jatkuvana reittinä (LennonAikajana.AloitusReitti) jo ennen mustaa
-            // verhoa, jotta verhon alla esiladataan juuri ensimmäisen lähikuvan laatat.
+            // LÖYDÖS 120: aloituslennon kamera yhtenä C2-jatkuvana reittinä (LennonAikajana.AloitusReitti) jo ennen mustaa
+            // verhoa, jotta verhon alla esiladataan lähikuvan ja avauksen laatat. V2: kone etenee reitin omalla profiililla
+            // (AloitusReitti.KoneenOsuus), ja suunnat lasketaan koneen reittiosuudesta.
             LennonAikajana.AloitusReitti aloitusReitti = null;
             if (aloitus)
             {
@@ -500,7 +501,7 @@ namespace Matkakirja
                 string aloitusKohde = am != null ? am.LahinId(lat1, lon1) : null;
                 var maisema = aloitusKohde != null && LennonAikajana.Kaupungit.TryGetValue(aloitusKohde, out var km) ? km : LennonAikajana.EiMaisemaa;
                 aloitusReitti = LennonAikajana.LaskeAloitus(reittiM0, saapumisKorkeus, maisema, jako,
-                    tt => Suuntima(lat0, lon0, lat1, lon1, LennonAikajana.KoneenOsuus(tt, jako)));
+                    pp => Suuntima(lat0, lon0, lat1, lon1, pp));
             }
             if (aloitus)
             {
@@ -513,9 +514,10 @@ namespace Matkakirja
                 var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
                 float odotus = Time.unscaledTime;
                 // Ennen lähtösumu peitti koneen lähikuvan maan; nyt lähikuvan laatat ladataan mustan alla: kamera ensin
-                // ensimmäiseen lähikuvaan (löydös 120: Lontoo, 13 km, 82°, etuviisto kylki P(100) = AloitusReitti.Lahikuva),
-                // sitten takaisin valintanäkymään, ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat
-                // välimuistissa).
+                // lähikuvaan (löydös 120: koneen paikka 3,4 s:ssa, 13 km, 82°, etuviisto kylki P(100) = AloitusReitti.Lahikuva),
+                // sitten AVAUKSEEN (löydös 120 v2, omistaja 25.9. klo 19.0x: "lennon alku näkyy, vaikka kaukaa"; ennen takaisin
+                // valintanäkymään), ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat välimuistissa).
+                // Verho paljastaa siis suoraan Lontoon ja nousevan koneen kaukaa (AloitusReitti.Avaus: 450 km, 45°).
                 IEnumerator Lataa(float katto)
                 {
                     float alku = Time.unscaledTime;
@@ -531,16 +533,22 @@ namespace Matkakirja
                 }
                 if (kierto != null)
                 {
-                    var (vLat, vLon, vKork, vKall, vSuunta, vKatse) =
-                        (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus, kierto.suuntima, kierto.katseKorkeus);
                     double pohja0 = double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
                     var lahikuva = aloitusReitti.Lahikuva;
-                    kierto.Kuvaa(lat0, lon0, lahikuva.etaisyys, lahikuva.kallistus, lahikuva.suunta, pohja0 + LennonAikajana.MinKoneKorkeusM);
+                    var ql = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, aloitusReitti.KoneenOsuus(aloitusReitti.LahikuvaOsuus));
+                    kierto.Kuvaa(ql.x, ql.y, lahikuva.etaisyys, lahikuva.kallistus, lahikuva.suunta, pohja0 + LennonAikajana.MinKoneKorkeusM);
                     yield return Lataa(MustanKatto * 0.6f);
                     float lahi = Time.unscaledTime - odotus;
-                    kierto.Kuvaa(vLat, vLon, vKork, vKall, vSuunta, vKatse);
+                    var avaus = aloitusReitti.Avaus;
+                    kierto.Kuvaa(lat0, lon0, avaus.etaisyys, avaus.kallistus, avaus.suunta, pohja0);
+                    // Kone avauksen paikkaan ja kokoon jo verhon alla: verho paljastaa koneen Lontoossa eikä se ilmesty vasta
+                    // lennon ensimmäisessä kehyksessä.
+                    koneRuudusta = (float)aloitusReitti.Arvo(0).kone;
+                    koneMinimi = LennonAikajana.KoneenMinimi(0, jako, LennonAikajana.AloituksenNousu);
+                    Siirra(lat0, lon0, KoneenKorkeus(0, huippu0));
+                    PaivitaKone(kierto.GetComponent<Camera>(), lat0, lon0, lat1, lon1, 0, huippu0, savuun: false);
                     yield return Lataa(MustanKatto - (Time.unscaledTime - odotus));
-                    Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s");
+                    Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s, avaus {avaus.etaisyys / 1000:0} km {avaus.kallistus:0}° {avaus.suunta:0}°");
                 }
                 else yield return Lataa(MustanKatto);
                 Debug.Log($"MATKAKIRJA aloituslento: musta {Time.unscaledTime - odotus:0.0} s, esilataus "
@@ -635,8 +643,9 @@ namespace Matkakirja
             {
                 float kulunut = Time.unscaledTime - alku;
                 double t = math.saturate(kulunut / kesto);
-                // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin.
-                double p = LennonAikajana.KoneenOsuus(t, jako);
+                // Koneen tempo: lähikuvassa lähes paikallaan, kiihdytys, tasainen matka, hidastus kaupunkiin. Aloituslennolla
+                // reitin oma eteneminen (löydös 120 v2: lähtö levosta Lontoosta, laskeutuminen kameran mukana).
+                double p = aloitusReitti != null ? aloitusReitti.KoneenOsuus(t) : LennonAikajana.KoneenOsuus(t, jako);
                 pohjaKysely.Paivita();
                 var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
                 // Kone vähintään 10 km lennon pohjan yllä lähikuvista kiertoon (skaalattu kone ei leikkaa maastoa,
@@ -909,12 +918,12 @@ namespace Matkakirja
         }
 
         /// <summary>3D-kone (DC-3) paikalleen, nokka lentosuuntaan ja koko ruudulla vakio; ilman mallia kuvan kierto.</summary>
-        void PaivitaKone(Camera kamera, double lat0, double lon0, double lat1, double lon1, double p, double huippu)
+        void PaivitaKone(Camera kamera, double lat0, double lon0, double lat1, double lon1, double p, double huippu, bool savuun = true)
         {
             if (kamera == null) return;
             double p2 = math.min(1.0, p + 0.004), p1 = p2 - 0.004;
             Vector3 a = Maailmaan(lat0, lon0, lat1, lon1, p1, huippu), b = Maailmaan(lat0, lon0, lat1, lon1, p2, huippu);
-            if (savu != null)
+            if (savu != null && savuun)
             {
                 var qs = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
                 savu.Lisaa(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(qs.y, qs.x, lentoPohja + KoneenKorkeus(p, huippu))));
@@ -928,8 +937,10 @@ namespace Matkakirja
             float etaisyys = Vector3.Distance(kamera.transform.position, paikka);
             float kerroin = PalloKierto.Pistekerroin;
             float pikseli = 2f * etaisyys * Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) / Mathf.Max(1, Screen.height);
-            // Lähikuvassa kone täyttää osan ruudun leveydestä (aikajana), muuten vakiokokoinen merkki.
-            float koko = Mathf.Max(malliPx * kerroin, koneRuudusta * Screen.width);
+            // Lähikuvassa kone täyttää osan ruudusta (aikajana), muuten vakiokokoinen merkki. Löydös 120 v2: osuus ruudun
+            // lyhyemmästä sivusta (vaakamuodossa 1,9 × leveys teki koneesta nelinkertaisen ruudun korkeuteen) ja pehmeä
+            // maksimi, joten kone kasvaa lähestymisessä merkkikoosta ilman taitetta (LennonAikajana.KoneenKokoPx).
+            float koko = (float)LennonAikajana.KoneenKokoPx(malliPx * kerroin, koneRuudusta, Screen.width, Screen.height);
             malli.transform.localScale = Vector3.one * (pikseli * koko / malliKoko);
             // Filmiefektipino (erä 3): lähikuvan osuus syväterävyyteen (täysi lähikuva = sivukylki 0,9, build 10:ssä 0,74),
             // luotain koneen mukana.

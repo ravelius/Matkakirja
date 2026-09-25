@@ -147,18 +147,24 @@ namespace Matkakirja
             public bool Aloitus;
             public Alku Alku;
 
-            public double P(double t) => LennonAikajana.KoneenOsuus(t, Jako);
+            /// <summary>Koneen reittiosuus: aloituslennolla reitin oma eteneminen (löydös 120 v2), muuten KoneenOsuus.</summary>
+            public double P(double t) => Reitti != null ? Reitti.KoneenOsuus(t) : LennonAikajana.KoneenOsuus(t, Jako);
             public double Suunta(double t) => Suuntima(Lat0, Lon0, Lat1, Lon1, P(t));
             public (double e, double k, double s, double kohde, double kone) Arvo(double t) =>
                 Reitti != null ? Reitti.Arvo(t) : LennonAikajana.Arvo(Avaimet, t, Suunta(t));
         }
 
-        /// <summary>Lennon rakennus: aloitus = aloituslennon dynaaminen aikajana (JaaAloitus), muuten Jaa(kesto).</summary>
-        public static Lento Tee(double lat0, double lon0, double lat1, double lon1, string kohdeId, bool aloitus, Alku alku,
-            double? kestoS = null, double saapumisKorkeus = 1_200_000.0)
+        /// <summary>
+        /// Lennon rakennus: aloitus = aloituslennon kamerareitti (JaaAloitus, LaskeAloitus), muuten Jaa(kesto). Aloituslennon
+        /// lähtö on avaus (katse Lontoossa, AloitusReitti.Avaus), kuten Nappula asettaa sen mustan verhon alla; annettu alku
+        /// korvaa sen (AsetaAlku). Saapumisnäkymän keskipiste oletuksena kohdekaupunki (Saapumisnakyma.LaskeRuudulle antaa
+        /// oikean ruudun mukaan).
+        /// </summary>
+        public static Lento Tee(double lat0, double lon0, double lat1, double lon1, string kohdeId, bool aloitus, Alku? alku = null,
+            double? kestoS = null, double saapumisKorkeus = 1_200_000.0, double? saapumisLat = null, double? saapumisLon = null)
         {
-            var l = new Lento { Lat0 = lat0, Lon0 = lon0, Lat1 = lat1, Lon1 = lon1, Aloitus = aloitus, Alku = alku,
-                SaapumisKorkeus = saapumisKorkeus, SaapumisLat = lat1, SaapumisLon = lon1 };
+            var l = new Lento { Lat0 = lat0, Lon0 = lon0, Lat1 = lat1, Lon1 = lon1, Aloitus = aloitus, Alku = alku ?? Valintanakyma,
+                SaapumisKorkeus = saapumisKorkeus, SaapumisLat = saapumisLat ?? lat1, SaapumisLon = saapumisLon ?? lon1 };
             l.ReittiM = LennonAikajana.ReittiM(lat0, lon0, lat1, lon1);
             l.Huippu = Math.Min(900000.0, l.ReittiM * 0.12);
             l.Jako = aloitus ? LennonAikajana.JaaAloitus(kestoS ?? LennonAikajana.AloituslennonKestoS)
@@ -166,20 +172,29 @@ namespace Matkakirja
             var maisema = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var k) ? k : LennonAikajana.EiMaisemaa;
             if (aloitus)
             {
-                l.Reitti = LennonAikajana.LaskeAloitus(l.ReittiM, saapumisKorkeus, maisema, l.Jako, l.Suunta);
-                l.Reitti.AsetaAlku(alku.Korkeus, alku.Kallistus, alku.Suunta);
+                l.Reitti = LennonAikajana.LaskeAloitus(l.ReittiM, saapumisKorkeus, maisema, l.Jako, p => Suuntima(lat0, lon0, lat1, lon1, p));
+                var av = l.Reitti.Avaus;
+                l.Alku = alku ?? new Alku(lat0, lon0, av.etaisyys, av.kallistus, av.suunta);
+                l.Reitti.AsetaAlku(l.Alku.Korkeus, l.Alku.Kallistus, l.Alku.Suunta);
                 return l;
             }
             l.Avaimet = LennonAikajana.Laske(l.ReittiM, saapumisKorkeus, maisema, l.Jako, l.Suunta);
             l.Avaimet[0] = new LennonAikajana.Avain
             {
-                Osuus = 0, Kohde = -1, SuuntaAbs = true, Etaisyys = alku.Korkeus, Kallistus = alku.Kallistus, Suunta = alku.Suunta,
+                Osuus = 0, Kohde = -1, SuuntaAbs = true, Etaisyys = l.Alku.Korkeus, Kallistus = l.Alku.Kallistus, Suunta = l.Alku.Suunta,
             };
             return l;
         }
 
         /// <summary>Kameran silmä, katsepiste (ECEF-pallo, m) ja koneen paikka ja korkeus hetkellä t (0–1).</summary>
         public static (double[] silma, double[] kohde, double[] kone, double koneKorkeus) Kuva(Lento l, double t)
+        {
+            var k = Kamera(l, t);
+            return (k.silma, k.kohde, k.kone, k.koneKorkeus);
+        }
+
+        /// <summary>Kuten <see cref="Kuva"/> ja lisäksi kameran yläsuunta (PalloKierto.LaskeAsento: eteen·cos k + ylös·sin k).</summary>
+        public static (double[] silma, double[] kohde, double[] ylos, double[] kone, double koneKorkeus) Kamera(Lento l, double t)
         {
             var j = l.Jako;
             double p = l.P(t);
@@ -218,7 +233,38 @@ namespace Matkakirja
             var suunta = Miinus(Kerro(ylos, Math.Cos(k)), Kerro(eteen, Math.Sin(k)));
             var silma = Plus(kohde, Kerro(suunta, Math.Max(100.0, a.e)));
             var kone = Kerro(Yks(q.lat, q.lon), R + h);
-            return (silma, kohde, kone, h);
+            var kameranYlos = Plus(Kerro(eteen, Math.Cos(k)), Kerro(ylos, Math.Sin(k)));
+            return (silma, kohde, kameranYlos, kone, h);
+        }
+
+        /// <summary>Pinnan piste (lat, lon, korkeus m) ECEF-pallona (m).</summary>
+        public static double[] Piste(double lat, double lon, double korkeus = 0) => Kerro(Yks(lat, lon), R + korkeus);
+
+        /// <summary>
+        /// Pisteen paikka ruudulla hetkellä t (PalloKierto.Projisoi pallomallilla): x oikealle ja y ylös, −1…1 = ruudun
+        /// reunat. fov = pystykuvakulma (°, Camera.fieldOfView), kuvasuhde = leveys / korkeus. false = kameran takana.
+        /// </summary>
+        public static bool Ruudulla(Lento l, double t, double[] piste, double fov, double kuvasuhde, out double x, out double y)
+        {
+            var (silma, kohde, yl, _, _) = Kamera(l, t);
+            return Projisoi(silma, kohde, yl, piste, fov, kuvasuhde, out x, out y);
+        }
+
+        /// <summary>Projektio kameralle (silmä, katsepiste, yläsuunta): x, y −1…1 ruudun reunoilla.</summary>
+        public static bool Projisoi(double[] silma, double[] kohde, double[] yl, double[] piste, double fov, double kuvasuhde,
+            out double x, out double y)
+        {
+            x = y = 0;
+            var eteen = Yksikko(Miinus(kohde, silma));
+            var ylos = Yksikko(Miinus(yl, Kerro(eteen, Piste(yl, eteen))));
+            var oikea = Risti(eteen, ylos);
+            var d = Miinus(piste, silma);
+            double z = Piste(d, eteen);
+            if (!(z > 1e-6 * Math.Sqrt(Piste(d, d)))) return false;
+            double tanY = Math.Tan(fov * Math.PI / 360.0);
+            x = Piste(d, oikea) / (z * tanY * kuvasuhde);
+            y = Piste(d, ylos) / (z * tanY);
+            return true;
         }
 
         /// <summary>Kamerareitti näytteinä dt sekunnin välein (t = 0 … kesto).</summary>

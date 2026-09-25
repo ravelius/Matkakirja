@@ -109,8 +109,9 @@ namespace Matkakirja
         /// (Jaa) on silloin sama kaikille kohteille: nousu (syöksy, sivukylki) ja lasku (kierto, orbit) kestävät
         /// saman ajan, ja ero kurotaan koneen nopeudella matkavaiheessa (KoneenOsuus on normitettu koko reitille).
         /// Omistajan päätös 25.9.: 10 s ("video saa olla vauhdikas"), dynaaminen aikajana JaaAloitus. Muut lennot: Kesto.
+        /// Omistaja 25.9. klo 19.0x (löydös 120 v2): 12 s, jotta lennon alku (nousu Lontoosta) näkyy kaukaa ennen lähestymistä.
         /// </summary>
-        public static double AloituslennonKestoS = 10.0;
+        public static double AloituslennonKestoS = 12.0;
         /// <summary>Sekuntia reitin pituuden e-kertaistumista kohden: 16 s ≈ 630 km, 26 s ≈ 17 700 km (Sydney 17 000 km → 25,9 s).</summary>
         public const double KestonKerroin = 3.0;
 
@@ -164,51 +165,80 @@ namespace Matkakirja
             return new Jako(k, t1 / k, t2 / k, (t2 + LoittoSaumaOsuus * (t3 - t2)) / k, t3 / k, t4 / k, t5 / k, t6 / k);
         }
 
-        // ---- Aloituslennon kamerareitti (löydös 120, Fablen suunnitelma 25.9.; korvaa löydöksen 110 aikajanan) ----
+        // ---- Aloituslennon kamerareitti (löydös 120 v2, omistaja 25.9. klo 19.0x; korvaa löydöksen 110 aikajanan) ----
         //
         // Löydös 120 (omistaja build 14): "kamera pomppii liian villisti eri paikkoihin". Löydöksen 110 aikajana teki kaksi
-        // erillistä syöksyä 1200 km ↔ 12 km (noin sekunnissa kumpikin) ja vaihtoi kylkeä (80 → 115 → 150 → 165 → 250 →
-        // 230 → 120), ja Arvo() interpoloi segmenteittäin omalla käyrällä: Jarruttava alkoi levosta suoraan huippunopeuteen
-        // ja Pehmeä pysähtyi jokaiseen avaimeen. Nyt aloituslento on YKSI kamerareitti (AloitusReitti): jokainen kanava
-        // (log-etäisyys, kallistus, absoluuttinen suunta, kohde, koneen ruutuosuus) on kvinttinen Hermite-spline aikaa
-        // vasten (Kanava: nopeus ja kiihtyvyys jatkuvia, lepoavaimissa molemmat 0), joten sijainti ja katse ovat C2-jatkuvia.
-        // Sekunnit 10 s:n lennolla (skaalautuu AloituslennonKestoS:n mukaan), P(x) = suunta koneen suhteen puolen mukaan:
-        //   0,0–1,3  SYÖKSY          vahva ease-in, kuminauha: 11 km (1,15 s, ylitys) → 13 km (1,5 s), P(100), 82°, kone 1,8
-        //   1,3–2,2  LÄHI 1          lähes paikallaan, hidas panorointi P(100) → P(125), 13 → 12 km
-        //   2,2–3,6  KAARTO NOKAN EDESTÄ  P(125) → P(180) → P(235) samaan suuntaan, huippu ~110°/s nokan kohdalla,
-        //                            etäisyys hengittää 12 → 24 → 12 km, kallistus 82 → 78 → 82
-        //   3,6–4,3  LÄHI 2          hidas ajelehdinta P(235) → P(245)
-        //   4,3–6,0  IRTAUTUMINEN    kiihtyvä loittonus kaukonäkymään, laskeutuminen jakautuu 5,3–6,5 s:lle (huippu 6,5 s),
-        //                            kallistus → 40°, kone → merkkikoko (fyysinen koko)
-        //   6,0–7,0  MATKA           hidas ajelehdinta (huippu → 0,92 × kauko), kone kiitää, suunta liukuu kierron alkuun
-        //   7,0–8,6  KIERTO          kohde kone → kaupunki (valmis 8,2 s), → 250 km, 55°, kulmanopeus kasvaa levosta
-        //   8,6–10,0 ORBIT + LASKU   vakiokulmanopeus, jarrutus lepoon viimeisen 1,2 s:n aikana saapumisnäkymään
-        // Koneen nopeus (Nopeus, Aloitus): lähes paikallaan lähikuvissa (0–4,3 s), nopein matkassa, hidastus kierrosta.
+        // erillistä syöksyä 1200 km ↔ 12 km ja vaihtoi kylkeä, ja Arvo() interpoloi segmenteittäin omalla käyrällä. Siitä
+        // lähtien aloituslento on YKSI kamerareitti (AloitusReitti): jokainen kanava (log-etäisyys, kallistus, absoluuttinen
+        // suunta, kohde, koneen ruutuosuus) on kvinttinen Hermite-spline aikaa vasten (Kanava: nopeus ja kiihtyvyys jatkuvia,
+        // lepoavaimissa molemmat 0), joten sijainti ja katse ovat C2-jatkuvia.
+        // V1 (f9d785c9, omistaja hylkäsi v1-videoparista): syöksy valintanäkymästä etuviistoon ja kaarto nokan edestä
+        // kadottivat koneen kuvasta, loppukierrossa katse siirtyi kaupunkiin koneen ollessa vielä satoja km:n päässä, eikä
+        // nousu näkynyt. Omistajan tarkennus: "LENTOKONE ON KOKO AJAN NÄKYVISSÄ … ja LENNON ALKU NÄKYY, vaikka kaukaa: nousu
+        // lähtökaupungista on kuvassa ennen kuin kamera lähestyy konetta"; lento saa kestää 12 s. V2: katse on koko ajan
+        // koneessa tai pisteessä, josta kone näkyy (Kartta-testit: koneen projektio ruudun sisällä pysty- ja vaakamuodossa).
+        // Sekunnit 12 s:n lennolla (skaalautuu AloituslennonKestoS:n mukaan), P(x) = suunta koneen suhteen puolen mukaan:
+        //   0,0–1,8  (a) AVAUS         kaukaa (450 km, 45°, P(100)): Lontoo ja nouseva kone kuvassa. Musta verho paljastaa
+        //                              tämän kuvan (Nappula asettaa kameran avaukseen verhon alla); kone lähtee levosta ja
+        //                              nousee, kamera lähes paikallaan, katse liukuu Lontoosta koneeseen (valmis 2,1 s)
+        //   1,8–3,4  (b) LÄHESTYMINEN  vahva ease-in → nopea lähestyminen → kuminauha: ylitys 11 km (3,0 s, lepo), paluu
+        //                              13 km:iin (3,4 s); suunta pysyy P(100):ssa, kallistus 45° → 82°, kone kasvaa
+        //                              fyysisenä kokona lähikuvan 1,9:ään (ylityksessä 2,2)
+        //   3,4–5,8  (c) LÄHIKUVA      lähes paikallaan, hidas panorointi koneen ympäri P(100) → P(135), 13 → 12,5 km;
+        //                              kone kuvan keskellä (katse koneessa)
+        //   5,8–7,6  (d) IRTAUTUMINEN  kiihtyvä loittonus kaukonäkymään (huippu 8,0 s), kallistus → 40°, kone → merkkikoko
+        //   7,6–8,8  (e) MATKA         hidas ajelehdinta (huippu → 0,92 × kauko), kone kiitää kuvan keskellä, suunta liukuu
+        //                              kierron alkuun
+        //   8,8–10,4 (f) KIERTO        laskeutuminen kohteen ylle 250 km:iin, 55°, kulmanopeus kasvaa levosta; katse koneessa,
+        //                              kone hidastaa kameran mukana (kaupunki lähestyy kuvan keskustaa)
+        //  10,4–12,0     ORBIT + LASKU vakiokulmanopeus; kone laskeutuu kaupunkiin (11,0 s), katse kone → kaupunki →
+        //                              saapumisnäkymä, jarrutus lepoon viimeisen 1,2 s:n aikana
+        // Koneen eteneminen on reitin oma (AloitusReitti.KoneenOsuus): lähtö levosta, lähikuvissa 20 km/s (kaikilla
+        // reiteillä sama), matka kattaa loput, ja laskeutumisessa nopeus seuraa kameran etäisyyttä (kulmanopeus kamerasta
+        // enintään matkan kulmanopeus), joten kone on perillä ennen kuin katse lähtee siitä.
+
+        /// <summary>Aloituslennon referenssikesto (s): vaiheiden sekunnit on annettu tälle, osuus = s / 12.</summary>
+        public const double AloitusRefS = 12.0;
 
         /// <summary>
-        /// Aloituslennon vaihejako (osuudet 0–1, löydös 120): Syoksy = syöksyn loppu (1,3 s), Sivu = lähikuvien loppu
-        /// (4,3 s), Loitto = Liuku = irtautumisen loppu eli matkan alku (6,0 s: pilvet ja Sentinel pois kamera kaukana),
-        /// Kierto = orbitin alku (8,6 s), Tasainen = orbitin jarrutuksen alku (8,8 s). Kesto <see cref="AloituslennonKestoS"/>.
+        /// Aloituslennon vaihejako (osuudet 0–1, löydös 120 v2): Syoksy = lähestymisen loppu (3,4 s; koneen nousu päättyy
+        /// <see cref="AloituksenNousu"/> × tämä), Sivu = lähikuvan loppu (5,8 s), Loitto = Liuku = irtautumisen loppu eli
+        /// matkan alku (7,6 s: pilvet ja Sentinel pois kamera kaukana), Kierto = orbitin alku (10,4 s), Tasainen = orbitin
+        /// jarrutuksen alku (10,8 s). Kesto <see cref="AloituslennonKestoS"/>.
         /// </summary>
         public static Jako JaaAloitus(double kestoS) =>
-            new Jako(kestoS > 0 ? kestoS : AloituslennonKestoS, 0.13, 0.43, 0.515, 0.60, 0.60, 0.86, AloitusJarrutus, aloitus: true);
+            new Jako(kestoS > 0 ? kestoS : AloituslennonKestoS, 3.4 / AloitusRefS, 5.8 / AloitusRefS, 6.5 / AloitusRefS,
+                7.6 / AloitusRefS, 7.6 / AloitusRefS, 10.4 / AloitusRefS, AloitusJarrutus, aloitus: true);
 
-        /// <summary>Aloituslennon lopun jarrutuksen alku (osuus, 8,8 s): jarrutus lepoon viimeisen 1,2 s:n aikana.</summary>
-        public const double AloitusJarrutus = 0.88;
+        /// <summary>Aloituslennon lopun jarrutuksen alku (osuus, 10,8 s): jarrutus lepoon viimeisen 1,2 s:n aikana.</summary>
+        public const double AloitusJarrutus = 10.8 / AloitusRefS;
 
-        /// <summary>Aloituslennon matkan loppu = kierron alku (osuus, 7,0 s): Vaihe Matka → Lasku.</summary>
-        public const double AloitusMatkaLoppu = 0.70;
+        /// <summary>Aloituslennon matkan loppu = kierron alku (osuus, 8,8 s): Vaihe Matka → Lasku.</summary>
+        public const double AloitusMatkaLoppu = 8.8 / AloitusRefS;
 
-        /// <summary>Aloituslennon ensimmäinen lähikuva (löydös 120): etäisyys (m), kallistus (°), suunta koneen suhteen (P).</summary>
-        public const double AloitusLahiM = 13_000.0, AloitusLahiKallistus = 82.0, AloitusLahiSuunta = 100.0;
-        /// <summary>Koneen leveys ruudusta lähikuvissa (puolet koneesta näkyy, löydös 110) ja kaarron nokan edessä.</summary>
-        public const double AloitusLahiKone = 1.9, AloitusKaartoKone = 1.0;
-        /// <summary>Kaarron huippukulmanopeus nokan kohdalla (°/s 10 s:n lennolla).</summary>
-        public const double AloitusKaartoHuippu = 110.0;
-        /// <summary>Irtautumisen loppukallistus (°).</summary>
-        public const double AloitusKaukoKallistus = 40.0;
-        /// <summary>Irtautumisen lähtöetäisyys (m, lähi 2:n loppu 4,3 s) ja kaukonäkymän huippu (osuus, 6,5 s).</summary>
-        public const double AloitusIrtautuminenM = 11_500.0, AloitusHuippu = 0.65;
+        /// <summary>Kone laskeutuu kaupunkiin (osuus, 11,0 s): reittiosuus 1, nopeus ja kiihtyvyys 0.</summary>
+        public const double AloitusLaskeutuminen = 11.0 / AloitusRefS;
+
+        /// <summary>Avauksen kameran asento (löydös 120 v2): etäisyys Lontoosta (m), kallistus (°), suunta koneen suhteen (P).</summary>
+        public const double AloitusAvausM = 450_000.0, AloitusAvausKallistus = 45.0;
+        /// <summary>Katse Lontoosta koneeseen valmis (osuus, 2,1 s).</summary>
+        public const double AloitusKatseKoneessa = 2.1 / AloitusRefS;
+        /// <summary>Kuminauhan ylitys (lepo, lähimmillään) ja lähikuvan alku (osuudet, 3,0 ja 3,4 s).</summary>
+        public const double AloitusYlitys = 3.0 / AloitusRefS, AloitusLahikuva = 3.4 / AloitusRefS;
+        /// <summary>Kuminauhan ylityksen etäisyys (m).</summary>
+        public const double AloitusYlitysM = 11_000.0;
+        /// <summary>Lähikuva (löydös 120): etäisyys (m), kallistus (°), suunta koneen suhteen lähikuvan alussa ja lopussa (P).</summary>
+        public const double AloitusLahiM = 13_000.0, AloitusLahiKallistus = 82.0, AloitusLahiSuunta = 100.0, AloitusPanorointiSuunta = 135.0;
+        /// <summary>Koneen leveys ruudusta lähikuvassa (puolet koneesta näkyy, löydös 110; omistaja: pidä ennallaan).</summary>
+        public const double AloitusLahiKone = 1.9;
+        /// <summary>Irtautumisen loppukallistus (°) ja loppusuunta koneen suhteen (P).</summary>
+        public const double AloitusKaukoKallistus = 40.0, AloitusKaukoSuunta = 140.0;
+        /// <summary>Irtautumisen lähtöetäisyys (m, lähikuvan loppu 5,8 s) ja kaukonäkymän huippu (osuus, 8,0 s).</summary>
+        public const double AloitusIrtautuminenM = 12_500.0, AloitusHuippu = 8.0 / AloitusRefS;
+        /// <summary>Koneen nopeus lähikuvissa (m/s, kaikilla reiteillä sama): maa virtaa lähikuvan takana.</summary>
+        public const double AloitusLahiNopeus = 20_000.0;
+        /// <summary>Laskeutumisen kulmanopeus kamerasta enintään (rad/s) ja osuus matkan kulmanopeudesta.</summary>
+        public const double AloitusLaskuKulmaMax = 0.3, AloitusLaskuKulmaOsuus = 0.6;
 
         // ---- Kameran arvot ----
 
@@ -221,10 +251,11 @@ namespace Matkakirja
         /// <summary>Koneen vähimmäiskorkeus lähikuvista kiertoon (m lennon pohjasta): skaalattu kone ei leikkaa maastoa.</summary>
         public const double MinKoneKorkeusM = 10_000.0;
         /// <summary>
-        /// Löydös 84 (omistaja 25.9.): aloituslennolla kone on jo nousussa, kun kamera lähtee valintanäkymästä, ja kamera
-        /// löytää sen vasta täydessä korkeudessa: nousu päättyy tällä osuudella syöksystä (muilla lennoilla 1,0).
+        /// Aloituslennon nousu päättyy tällä osuudella lähestymisestä (Jako.Syoksy; muilla lennoilla 1,0). Löydös 120 v2:
+        /// kone nousee Lontoosta avauksen ja lähestymisen aikana ja on 10 km:ssä 2,9 s:ssa ennen kuminauhan ylitystä.
+        /// (Löydös 84: kone oli jo nousussa, kun kamera lähti valintanäkymästä; 0,6 syöksystä.)
         /// </summary>
-        public const double AloituksenNousu = 0.6;
+        public const double AloituksenNousu = 0.85;
 
         /// <summary>
         /// Avaimet lennolle. reittiM = isoympyrän pituus, saapumisKorkeus = saapumisnäkymän korkeus (m, webin
@@ -531,99 +562,190 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// ALOITUSLENNON KAMERAREITTI (löydös 120): viisi kvinttistä Hermite-kanavaa samalle aikajanalle (ks. JaaAloitus).
-        /// Etäisyys on kanavassa logaritmina ja suunta absoluuttisena (koneen suhteen annetut avaimet muunnettu avaimen
-        /// hetken lentosuunnalla ja kierretty yhtenäiseksi). Kanavien avain 0 on kameran lähtöasento (<see cref="AsetaAlku"/>,
-        /// Nappula: kameran nykyinen asento); suunnan avain 1 on syöksyn välipiste lähdön ja lähikuvan välissä.
+        /// ALOITUSLENNON KAMERAREITTI (löydös 120 v2): viisi kvinttistä Hermite-kanavaa samalle aikajanalle (ks. JaaAloitus)
+        /// ja koneen oma eteneminen (<see cref="KoneenOsuus"/>). Etäisyys on kanavassa logaritmina ja suunta absoluuttisena
+        /// (koneen suhteen annetut avaimet muunnettu avaimen hetken lentosuunnalla ja kierretty yhtenäiseksi). Kanavien
+        /// avain 0 on avauksen asento (<see cref="Avaus"/>): Nappula asettaa kameran siihen mustan verhon alla, ja
+        /// <see cref="AsetaAlku"/> ottaa talteen kameran todellisen asennon.
         /// </summary>
         public sealed class AloitusReitti
         {
             public readonly Kanava LogEtaisyys = new Kanava(), Kallistus = new Kanava(), Suunta = new Kanava(),
                 Kohde = new Kanava(), Kone = new Kanava();
             public readonly Jako Jako;
-            /// <summary>Ensimmäisen lähikuvan kylki: +1 = P(x) = x (kaarto nokan edestä kasvattaa suuntaa), −1 peilattuna.</summary>
+            /// <summary>Lähikuvan kylki: +1 = P(x) = x (panorointi kasvattaa suuntaa, myötäpäivään), −1 peilattuna.</summary>
             public int Puoli { get; internal set; }
-            /// <summary>Kierron ja orbitin kokonaiskulma (°, + = suunta kasvaa) 7,0 s:sta perille.</summary>
+            /// <summary>Kierron ja orbitin kokonaiskulma (°, + = suunta kasvaa) 8,8 s:sta perille.</summary>
             public double Kaari { get; internal set; }
             /// <summary>Suunnan siirtymä matkan aikana (°) irtautumisen lopusta kierron alkuun.</summary>
             public double Ajelehdinta { get; internal set; }
-
-            /// <summary>
-            /// Syöksy: etäisyys (log) ja kallistus ajalla u^k (vahva ease-in ilman väliavainta, joka taittaisi kiihtyvyyden),
-            /// suunta väliavaimella 0,75 s:ssa (osuus lähdöstä lähikuvaan), jotta kamera kääntyy pois koneen takaa kaukana.
-            /// </summary>
-            public const double SyoksyEtaisyys = 1.8, SyoksyKallistus = 1.6, SyoksySuunta = 0.65;
-
-            /// <summary>Syöksyn suunnan kierto enintään tämän (°) verran, jotta kamera ei kulje koneen takaa.</summary>
-            public const double SyoksyKiertoMax = 240.0;
-
-            /// <summary>Lentosuunta lähdössä ja lähikuvassa sekä lähikuvan suunta koneen suhteen (AsetaAlku).</summary>
-            internal double lentosuunta0, lentosuuntaLahi, lahiRel;
+            /// <summary>Koneen matkanopeus (m/s) ja laskeutumisen kulmanopeus kamerasta (rad/s).</summary>
+            public double MatkaNopeus { get; internal set; }
+            public double LaskuKulma { get; internal set; }
 
             internal AloitusReitti(Jako j) { Jako = j; }
 
             /// <summary>
-            /// Kameran lähtöasento (avain 0) ja syöksyn välipiste. Suunta lähikuvan suuntaan sitä tietä, joka ei kulje
-            /// koneen takaa (suhteellinen suunta ei ylitä 0°:ta), jos kierto on enintään 240°; muuten lyhintä tietä
-            /// (kamera lähtee lähes suoraan takaa ja ohittaa takasuunnan heti alussa, kaukana).
+            /// Kameran todellinen lähtöasento (avain 0; Nappula: kameran asento verhon jälkeen, normaalisti täsmälleen
+            /// <see cref="Avaus"/>). Suunta lähimpään avauksen suunnan vastineeseen, joten kamera ei kierrä turhaan.
             /// </summary>
             public void AsetaAlku(double etaisyys, double kallistus, double suunta)
             {
                 LogEtaisyys[0] = Math.Log(Math.Max(1.0, etaisyys));
                 Kallistus[0] = kallistus;
-                double rel0 = Kiedo(suunta - lentosuunta0);
-                double eiTakaa = Suunta[2] - (lahiRel - rel0) - Kiedo180(lentosuuntaLahi - lentosuunta0);
-                double s0 = Math.Abs(Suunta[2] - eiTakaa) <= SyoksyKiertoMax ? eiTakaa : Suunta[2] + Kiedo180(suunta - Suunta[2]);
-                Suunta[0] = s0;
-                Suunta[1] = s0 + SyoksySuunta * (Suunta[2] - s0);
+                Suunta[0] = Suunta[0] + Kiedo180(suunta - Suunta[0]);
             }
 
             /// <summary>Kameran asento kohdassa t (0–1): etäisyys (m), kallistus, suunta (°, absoluuttinen), kohde, kone.</summary>
             public (double etaisyys, double kallistus, double suunta, double kohde, double kone) Arvo(double t) =>
                 (Math.Exp(LogEtaisyys.Arvo(t)), Kallistus.Arvo(t), Suunta.Arvo(t), Rajaa(Kohde.Arvo(t), -1, 2), Math.Max(0, Kone.Arvo(t)));
 
-            /// <summary>Ensimmäinen lähikuva (1,5 s): Nappula esilataa sen laatat mustan verhon alla.</summary>
+            /// <summary>
+            /// Avauksen asento (t = 0): katse Lontoossa (lennon pohjan tasolla), etäisyys, kallistus ja suunta. Nappula asettaa
+            /// kameran tähän mustan verhon alla, joten verho paljastaa suoraan Lontoon ja nousevan koneen.
+            /// </summary>
+            public (double etaisyys, double kallistus, double suunta) Avaus
+            {
+                get { var a = Arvo(0); return (a.etaisyys, a.kallistus, a.suunta); }
+            }
+
+            /// <summary>Lähikuvan alku (osuus): Nappula esilataa sen laatat mustan verhon alla koneen sen hetken paikassa.</summary>
+            public double LahikuvaOsuus => AloitusLahikuva;
+
+            /// <summary>Lähikuvan alku (3,4 s): etäisyys, kallistus ja suunta (katse koneessa).</summary>
             public (double etaisyys, double kallistus, double suunta) Lahikuva
             {
-                get { var a = Arvo(0.15); return (a.etaisyys, a.kallistus, a.suunta); }
+                get { var a = Arvo(LahikuvaOsuus); return (a.etaisyys, a.kallistus, a.suunta); }
+            }
+
+            // ---- Koneen eteneminen (reittiosuus 0–1) ----
+
+            internal const int KoneNaytteita = 2048;
+            internal double[] koneP, koneV, koneA;
+
+            /// <summary>
+            /// Koneen reittiosuus 0–1 lennon aikaosuudesta t: monotoninen, paikka, nopeus ja kiihtyvyys jatkuvia (kvinttinen
+            /// Hermite taulukosta), 1 laskeutumisesta (<see cref="AloitusLaskeutuminen"/>) perille.
+            /// </summary>
+            public double KoneenOsuus(double t)
+            {
+                double x = Rajaa(t, 0, 1) * KoneNaytteita;
+                int j = Math.Min(KoneNaytteita - 1, (int)x);
+                const double h = 1.0 / KoneNaytteita;
+                return Rajaa(Kvintti(koneP[j], koneV[j] * h, koneA[j] * h * h, koneP[j + 1], koneV[j + 1] * h, koneA[j + 1] * h * h, x - j), 0, 1);
             }
         }
 
         /// <summary>Kierron vähimmäiskulma (°): lyhyempi kaari venytetään tähän matkan aikaisella ajelehdinnalla.</summary>
         public const double AloitusKaariMin = 30.0;
-        /// <summary>Hinta (° ajelehdintaa), jos loppuorbit kiertää eri suuntaan kuin kaarto nokan edestä.</summary>
+        /// <summary>Hinta (° ajelehdintaa), jos loppuorbit kiertää eri suuntaan kuin lähikuvan panorointi.</summary>
         public const double AloitusVastasuuntaHinta = 60.0;
 
         /// <summary>
-        /// Aloituslennon kamerareitti (löydös 120, Fablen suunnitelma 25.9.). reittiM, saapumisKorkeus, k ja lentosuunta
-        /// kuten <see cref="Laske"/>; j = <see cref="JaaAloitus"/>. Lähtöasento on valintanäkymän pallo, kunnes
-        /// <see cref="AloitusReitti.AsetaAlku"/> asettaa kameran nykyisen asennon.
-        /// KIERTOSUUNTA: kylki (Puoli) ja loppuorbitin suunta valitaan yhdessä: orbit kiertää samaan suuntaan kuin kaarto
-        /// nokan edestä, ja kierron alkusuunta on irtautumisen loppusuunta, jos kaari pohjoiseen on siitä 30–180°;
-        /// muuten suunta ajelehtii matkan aikana (kamera kaukana) lähimpään kelvolliseen alkuun. Vastasuuntainen orbit
-        /// vain, jos se säästää yli 60° ajelehdintaa. Hinta = |ajelehdinta| + 0,3 · |kaari − tavoite (35°/s)|; maisema
-        /// ratkaisee tasatilanteen (kaari, joka pyyhkäisee maiseman katsesuunnan yli).
+        /// Aloituslennon kamerareitti (löydös 120 v2). reittiM, saapumisKorkeus ja k kuten <see cref="Laske"/>;
+        /// j = <see cref="JaaAloitus"/>; suuntimaReitilla(p) = koneen suuntima asteina reittiosuudella p (koneen eteneminen on
+        /// reitin oma, <see cref="AloitusReitti.KoneenOsuus"/>). Lähtöasento on avaus (<see cref="AloitusReitti.Avaus"/>).
+        /// KIERTOSUUNTA: kylki (Puoli) ja loppuorbitin suunta valitaan yhdessä: orbit kiertää samaan suuntaan kuin lähikuvan
+        /// panorointi, ja kierron alkusuunta on irtautumisen loppusuunta, jos kaari pohjoiseen on siitä 30–180°; muuten
+        /// suunta ajelehtii matkan aikana (kamera kaukana) lähimpään kelvolliseen alkuun. Vastasuuntainen orbit vain, jos se
+        /// säästää yli 60° ajelehdintaa. Hinta = |ajelehdinta| + 0,3 · |kaari − tavoite (35°/s)|; maisema ratkaisee
+        /// tasatilanteen (kaari, joka pyyhkäisee maiseman katsesuunnan yli).
         /// </summary>
-        public static AloitusReitti LaskeAloitus(double reittiM, double saapumisKorkeus, Kierto k, Jako j, Func<double, double> lentosuunta)
+        public static AloitusReitti LaskeAloitus(double reittiM, double saapumisKorkeus, Kierto k, Jako j, Func<double, double> suuntimaReitilla)
         {
             var r = new AloitusReitti(j);
             double T = j.KestoS;
+            double Os(double s) => s / AloitusRefS;
             double kauko = Rajaa(reittiM * 1.2, 3_000_000.0, 9_000_000.0);
-            const double tK = AloitusMatkaLoppu;      // kierron alku 7,0 s
-            double tO = j.Kierto, tJ = j.Tasainen;    // orbit 8,6 s, jarrutus
+            const double tK = AloitusMatkaLoppu;      // kierron alku 8,8 s
+            double tO = j.Kierto, tJ = j.Tasainen;    // orbit 10,4 s, jarrutus 10,8 s
+            double Ln(double x) => Math.Log(Math.Max(1.0, x));
+
+            // ETÄISYYS (log): (a)+(b) yhtenä profiilina avauksesta kuminauhan ylitykseen (lepo 11 km, 3,0 s): etäisyys^0,5-
+            // avaruudessa nopeudella ∝ u⁵(1 − u)², joten avaus on lähes paikallaan (1,2 s:ssa 8 % lähempänä) ja lähestyminen
+            // nopea (huippu ~2,1 s) ja jarruttaa ylitykseen; paluu 13 km:iin (3,4 s, ääriarvo), lähikuvassa hidas ajelehdinta
+            // 12,5 km:iin (lepo 5,8 s). IRTAUTUMINEN kaukonäkymään 5,8–8,0 s (etäisyys^0,35, ∝ u²(1 − u)³: koettu zoomaus
+            // kiihtyy 0,2 s:ssa 2,6 e/s:iin, v1:n etäisyys^0,5 nytkäytti 4,2 e/s:iin; huippu ~6 e/s), matkassa hidas
+            // ajelehdinta sisäänpäin (0,92 × kauko 8,8 s, liike jatkuu kiertoon), kierto 250 km:iin (lepo 10,4 s) ja LASKU
+            // saapumisnäkymään 10,4–12 s (metreinä, ∝ u²(1 − u)⁴, lepo tasan perillä).
+            r.LogEtaisyys.Lepo(0.0, Ln(AloitusAvausM))
+                .Profiili(AloitusYlitys, Ln(AloitusYlitysM), 0.5, 5, 2)
+                .Lisaa(AloitusLahikuva, Ln(AloitusLahiM))
+                .Lepo(j.Sivu, Ln(AloitusIrtautuminenM))
+                .Profiili(AloitusHuippu, Ln(kauko), 0.35, 2, 3)
+                .Lisaa(tK, Ln(kauko * 0.92)).Lepo(tO, Ln(KiertoM))
+                .Profiili(1.0, Ln(saapumisKorkeus), 1.0, 2, 4);
+
+            // KONEEN ETENEMINEN (m/s): lähtö levosta (1,4 s) lähikuvan nopeuteen, kiihdytys irtautumisessa (5,8–7,3 s),
+            // matkanopeus, siirtymä laskeutumiseen (8,2–9,2 s), jossa nopeus = kulmanopeus × kameran etäisyys (kone
+            // hidastaa kameran laskeutuessa, joten kaupunki lähestyy kuvan keskustaa tasaisesti), ja jarrutus lepoon
+            // laskeutumiseen (10,2–11,0 s). Matkanopeus kattaa loput reitistä; laskeutumisen kulmanopeus on 0,6 × matkan
+            // kulmanopeus, enintään 0,3 rad/s.
+            Func<double, double> e = t => Math.Exp(r.LogEtaisyys.Arvo(t));
+            double S1(double t) => Kamerakayrat.Pehmea(t * T / 1.4);
+            double S2(double t) => Kamerakayrat.Pehmea((t * T - 5.8) / 1.5);
+            double S3(double t) => Kamerakayrat.Pehmea((t * T - 8.2) / 1.0);
+            double S4(double t) => Kamerakayrat.Pehmea((t * T - 10.2) / ((AloitusLaskeutuminen * T) - 10.2));
+            double Lahi(double t) => S1(t) * (1 - S2(t));
+            double Matka(double t) => S2(t) * (1 - S3(t));
+            double Lasku(double t) => e(t) * S3(t) * (1 - S4(t));
+            // Integraalit sekunteina (Simpson): lähikuva, matka ja laskeutuminen.
+            const int N = AloitusReitti.KoneNaytteita;
+            double I(Func<double, double> f)
+            {
+                double s = 0;
+                for (int i = 0; i < N; i++)
+                {
+                    double a = i / (double)N, b = (i + 1) / (double)N;
+                    s += (f(a) + 4 * f(0.5 * (a + b)) + f(b)) / 6.0 * (b - a);
+                }
+                return s * T;
+            }
+            double iLahi = I(Lahi), iMatka = I(Matka), iLasku = I(Lasku);
+            double eMatka = kauko * 0.92;
+            double loput = Math.Max(0.0, reittiM - AloitusLahiNopeus * iLahi);
+            double vMatka = loput / (iMatka + AloitusLaskuKulmaOsuus * iLasku / eMatka);
+            double wLasku = AloitusLaskuKulmaOsuus * vMatka / eMatka;
+            if (wLasku > AloitusLaskuKulmaMax)
+            {
+                wLasku = AloitusLaskuKulmaMax;
+                vMatka = Math.Max(0.0, loput - wLasku * iLasku) / iMatka;
+            }
+            r.MatkaNopeus = vMatka; r.LaskuKulma = wLasku;
+            double Nopeus(double t) => AloitusLahiNopeus * Lahi(t) + vMatka * Matka(t) + wLasku * Lasku(t);
+            {
+                var p = new double[N + 1];
+                var v = new double[N + 1];
+                var a = new double[N + 1];
+                const double dt = 1e-5;
+                double summa = 0;
+                for (int i = 0; i <= N; i++)
+                {
+                    double ti = i / (double)N;
+                    v[i] = Nopeus(ti) * T;
+                    a[i] = (Nopeus(Math.Min(1, ti + dt)) - Nopeus(Math.Max(0, ti - dt))) * T / (Math.Min(1, ti + dt) - Math.Max(0, ti - dt));
+                    if (i > 0) summa += (v[i - 1] + 4 * Nopeus((i - 0.5) / N) * T + v[i]) / (6.0 * N);
+                    p[i] = summa;
+                }
+                // Normitus: laskeutumisesta alkaen tasan 1 (Simpsonin pieni virhe jaetaan koko matkalle).
+                for (int i = 0; i <= N; i++) { p[i] /= summa; v[i] /= summa; a[i] /= summa; }
+                r.koneP = p; r.koneV = v; r.koneA = a;
+            }
+            double L(double o) => suuntimaReitilla(r.KoneenOsuus(o));
+
             // Kierto kiihtyy levosta vakionopeuteen ja jarruttaa lepoon smootherstep-nopeusprofiililla (kvinttinen Hermite,
             // kiihtyvyys 0 päissä): kiihdytys- ja jarrutusvaihe kattavat puolet kulmastaan vakionopeudella.
             double tehollinen = (tO - tK) / 2.0 + (tJ - tO) + (1.0 - tJ) / 2.0;
             double tavoite = TavoiteNopeus * tehollinen * T;
 
-            // Kylki ja kierto: irtautumisen loppusuunta A = lentosuunta(6,0 s) + P(240).
-            double L6 = lentosuunta(j.Liuku);
+            // Kylki ja kierto: irtautumisen loppusuunta A = lentosuunta(7,6 s) + P(140).
+            double L76 = L(j.Liuku);
             double parasHinta = double.MaxValue;
             int puoli = 1; double kaari = 0, ajelehdinta = 0;
             foreach (int pu in new[] { 1, -1 })
             foreach (int su in new[] { 1, -1 })
             {
-                double A = L6 + (pu > 0 ? 240.0 : 120.0);
+                double A = L76 + (pu > 0 ? AloitusKaukoSuunta : 360.0 - AloitusKaukoSuunta);
                 double m0 = Kiedo(su > 0 ? -A : A);
                 double m = Rajaa(m0, AloitusKaariMin, 180.0);
                 double drift = Kiedo180(-su * m - A);
@@ -634,77 +756,66 @@ namespace Matkakirja
             r.Puoli = puoli; r.Kaari = kaari; r.Ajelehdinta = ajelehdinta;
             double P(double x) => puoli > 0 ? x : 360.0 - x;
 
-            // SUUNTA: koneen suhteen annetut avaimet absoluuttisiksi yhtenäisenä ketjuna.
-            double edO = 0.13, edRel = P(AloitusLahiSuunta), ed = lentosuunta(edO) + edRel;
+            // SUUNTA: koneen suhteen annetut avaimet absoluuttisiksi yhtenäisenä ketjuna. Avauksesta lähikuvaan suunta pysyy
+            // P(100):ssa (vain lentosuunnan muutos), lähikuvassa hidas panorointi levosta P(135):een ja irtautumisessa P(140).
+            double edO = 0.0, edRel = P(AloitusLahiSuunta), ed = L(0) + edRel;
             double Abs(double o, double rel)
             {
-                ed += (rel - edRel) + Kiedo180(lentosuunta(o) - lentosuunta(edO));
+                ed += (rel - edRel) + Kiedo180(L(o) - L(edO));
                 edO = o; edRel = rel;
                 return ed;
             }
-            double s13 = ed;
-            r.lentosuunta0 = lentosuunta(0);
-            r.lentosuuntaLahi = lentosuunta(0.13);
-            r.lahiRel = P(AloitusLahiSuunta);
-            r.Suunta.Lepo(0.0, s13).Lisaa(0.075, s13).Lisaa(0.13, s13);
-            r.Suunta.Lisaa(0.22, Abs(0.22, P(125)));
-            r.Suunta.Lisaa(0.29, Abs(0.29, P(180)), puoli * AloitusKaartoHuippu * T, 0);
-            r.Suunta.Lisaa(0.36, Abs(0.36, P(235)));
-            r.Suunta.Lisaa(0.43, Abs(0.43, P(245)));
-            double s60 = Abs(0.60, P(240));
-            r.Suunta.Lisaa(0.60, s60);
-            // KIERTO + ORBIT yhtenä kulmaraitana: levosta (7,0 s) kiihtyen vakionopeuteen ω (8,6 s), vakio jarrutuksen
-            // alkuun (Tasainen 8,8 s) ja jarrutus lepoon pohjoiseen tasan perillä (viimeiset 1,2 s).
-            double w = kaari / tehollinen, hk = s60 + ajelehdinta;
+            r.Suunta.Lepo(0.0, ed);
+            r.Suunta.Lepo(AloitusLahikuva, Abs(AloitusLahikuva, P(AloitusLahiSuunta)));
+            r.Suunta.Lisaa(j.Sivu, Abs(j.Sivu, P(AloitusPanorointiSuunta)));
+            double s76 = Abs(j.Liuku, P(AloitusKaukoSuunta));
+            r.Suunta.Lisaa(j.Liuku, s76);
+            // KIERTO + ORBIT yhtenä kulmaraitana: levosta (8,8 s) kiihtyen vakionopeuteen ω (10,4 s), vakio jarrutuksen
+            // alkuun (Tasainen 10,8 s) ja jarrutus lepoon pohjoiseen tasan perillä (viimeiset 1,2 s).
+            double w = kaari / tehollinen, hk = s76 + ajelehdinta;
             r.Suunta.Lepo(tK, hk);
             r.Suunta.Lisaa(tO, hk + w * (tO - tK) / 2.0, w, 0);
             r.Suunta.Lisaa(tJ, hk + w * (tO - tK) / 2.0 + w * (tJ - tO), w, 0);
             r.Suunta.Lepo(1.0, hk + kaari);
 
-            // ETÄISYYS (log): syöksy lepoon kuminauhan ylitykseen (11 km, 1,15 s), paluu 13 km:iin, lähi 1, kaarto
-            // hengittää, lähi 2 lepoon (4,3 s), IRTAUTUMINEN kaukonäkymään 4,3–6,5 s (profiili alla, huippu 6,5 s),
-            // matkassa hidas ajelehdinta sisäänpäin (0,92 × kauko 7,0 s, liike jatkuu kiertoon), kierto 250 km:iin (lepo
-            // 8,6 s) ja LASKU saapumisnäkymään 8,6–10 s (profiili, lepo tasan perillä).
-            // Profiilit (Fable 25.9.: ei jyrkkää nopeuden pudotusta kaukana): irtautuminen etäisyys^0,5-avaruudessa
-            // nopeudella ∝ u²(1 − u)³ (metrinopeuden huippu ~5,4 s, laskeutuminen 5,4–6,4 s, koettu zoomaus ≤ ~7 e/s);
-            // lasku metreinä nopeudella ∝ u²(1 − u)⁴ (huippu ~9,1 s, pitkä jarrutus lepoon 9,1–10 s).
-            double Ln(double x) => Math.Log(Math.Max(1.0, x));
-            r.LogEtaisyys.Lepo(0.0, Ln(12_000_000)).Lepo(0.115, Ln(11_000), AloitusReitti.SyoksyEtaisyys)
-                .Lisaa(0.15, Ln(AloitusLahiM)).Lisaa(0.22, Ln(12_000)).Lisaa(0.29, Ln(24_000)).Lisaa(0.36, Ln(12_000))
-                .Lepo(0.43, Ln(AloitusIrtautuminenM))
-                .Profiili(AloitusHuippu, Ln(kauko), 0.5, 2, 3)
-                .Lisaa(tK, Ln(kauko * 0.92)).Lepo(tO, Ln(KiertoM))
-                .Profiili(1.0, Ln(saapumisKorkeus), 1.0, 2, 4);
+            // KALLISTUS: avauksen 45°:sta lähikuvan 82°:een samalla profiililla kuin etäisyys mutta myöhemmin (∝ u⁶(1 − u)²
+            // lähes lineaarisena, 3,1 s), lähikuvassa 82°, irtautumisessa 40°, kierrossa 55° ja perillä 0.
+            r.Kallistus.Lepo(0.0, AloitusAvausKallistus).Profiili(Os(3.1), AloitusLahiKallistus, 0.001, 6, 2)
+                .Lepo(j.Sivu, AloitusLahiKallistus)
+                .Lisaa(Os(7.8), AloitusKaukoKallistus).Lisaa(tO, KiertoKallistus).Lepo(1.0, 0);
 
-            r.Kallistus.Lepo(0.0, 0).Lepo(0.13, AloitusLahiKallistus, AloitusReitti.SyoksyKallistus).Lisaa(0.22, AloitusLahiKallistus)
-                .Lisaa(0.29, AloitusLahiKallistus - 4).Lisaa(0.36, AloitusLahiKallistus).Lisaa(0.43, AloitusLahiKallistus)
-                .Lisaa(0.62, AloitusKaukoKallistus).Lisaa(tO, KiertoKallistus).Lepo(1.0, 0);
+            // KOHDE: Lontoo → kone (2,1 s) → (kone perillä 11,0 s) kaupunki → saapumisnäkymän keskipiste, kaikki lepoavaimia:
+            // Nappula vaihtaa kohdissa 0 ja 1 katsepisteen kaavaa (lähtö–kone, kone–kaupunki, kaupunki–saapumisnäkymä), ja
+            // läpi kulkeva kohde taittaisi katsepisteen radan (nopeus 0) tai sen kiihtyvyyden (kiihtyvyys 0). Katse lähtee
+            // koneesta vasta, kun kone on lähes perillä (koneen projektio pysyy ruudulla, Kartta-testit).
+            r.Kohde.Lepo(0.0, -1).Lepo(AloitusKatseKoneessa, 0).Lepo(Os(10.5), 0).Lepo(Os(11.2), 1).Lepo(1.0, 2);
 
-            // KOHDE: lähtö → kone (1,0 s) → kaupunki (8,2 s) → saapumisnäkymän keskipiste, kaikki lepoavaimia: Nappula
-            // vaihtaa kohdissa 0 ja 1 katsepisteen kaavaa (lähtö–kone, kone–kaupunki, kaupunki–saapumisnäkymä), ja läpi
-            // kulkeva kohde taittaisi katsepisteen radan (nopeus 0) tai sen kiihtyvyyden (kiihtyvyys 0).
-            r.Kohde.Lepo(0.0, -1).Lepo(0.10, 0).Lepo(tK, 0).Lepo(0.82, 1).Lepo(1.0, 2);
-
-            // KONE (ruutuosuus): syöksyssä ylitys 2,1 (lähimmillään), lähikuvat 1,8–1,9, nokan edessä 1,0; irtautumisessa
-            // fyysinen koko (1,9 × 11,5 km / etäisyys, ei kasva loitotessa), merkkikokoon 5,6 s:ssa.
-            r.Kone.Lepo(0.0, 0).Lisaa(0.075, 0.02).Lisaa(0.115, 2.1).Lisaa(0.15, 1.8).Lisaa(0.22, AloitusLahiKone)
-                .Lisaa(0.29, AloitusKaartoKone).Lisaa(0.36, AloitusLahiKone).Lisaa(0.43, AloitusLahiKone);
-            double e43 = r.LogEtaisyys.Arvo(0.43), ed2 = AloitusLahiKone;
-            foreach (double o in new[] { 0.45, 0.47, 0.50, 0.53 })
+            // KONE (ruutuosuus): avauksessa merkkikoko, lähestymisessä fyysinen koko 1,9 × 13 km / etäisyys (kone kasvaa
+            // kameran lähestyessä, ylityksessä ~2,2), lähikuvassa 1,9; irtautumisessa fyysinen koko 1,9 × 12,5 km / etäisyys,
+            // merkkikokoon ~6,5 s:ssa.
+            // Avauksesta kuminauhaan avain 0,1 s:n välein fyysisestä koosta (harvemmat avaimet taittoivat nopeuden ylityksen
+            // jarrutuksessa); ennen ~2,2 s:a arvo on merkkikoon alla (avauksessa 0,05), jolloin Nappulan pehmeä maksimi pitää
+            // merkin.
+            // Avaimiin fyysisen koon nopeus ja kiihtyvyys (keskeisdifferenssit), joten kanava seuraa sitä C2-jatkuvasti.
+            void Fyysinen(double o, double m)
             {
-                double fyys = Math.Min(ed2 * 0.95, AloitusLahiKone * Math.Exp(e43 - r.LogEtaisyys.Arvo(o)));
-                r.Kone.Lisaa(o, fyys);
-                ed2 = fyys;
+                const double d = 1e-4;
+                double f(double x) => AloitusLahiKone * m / e(Rajaa(x, 0, 1));
+                r.Kone.Lisaa(o, f(o), (f(o + d) - f(o - d)) / (2 * d), (f(o + d) - 2 * f(o) + f(o - d)) / (d * d));
             }
-            r.Kone.Lepo(0.56, 0).Lepo(1.0, 0);
-
-            r.AsetaAlku(12_000_000, 0, s13);
+            r.Kone.Lepo(0.0, AloitusLahiKone * AloitusLahiM / e(0));
+            for (int i = 1; i <= 33; i++) Fyysinen(Os(i / 10.0), AloitusLahiM);
+            r.Kone.Lisaa(AloitusLahikuva, AloitusLahiKone).Lisaa(Os(4.6), AloitusLahiKone).Lisaa(j.Sivu, AloitusLahiKone);
+            double eS = e(j.Sivu);
+            for (int i = 59; i <= 70; i++) Fyysinen(Os(i / 10.0), eS);
+            r.Kone.Lepo(Os(7.2), 0).Lepo(1.0, 0);
             return r;
         }
 
         /// <summary>
         /// Lennon vaihe: nousu syöksystä loittonuksen loppuun, matka liu'un ajan, lasku kierrosta perille. Aloituslennolla
-        /// (löydös 120) matka on irtautumisen lopusta (Loitto = Liuku) kierron alkuun (<see cref="AloitusMatkaLoppu"/>).
+        /// (löydös 120) matka on irtautumisen lopusta (Loitto = Liuku, 7,6 s) kierron alkuun (<see cref="AloitusMatkaLoppu"/>,
+        /// 8,8 s).
         /// </summary>
         public static LennonVaihe Vaihe(double t, Jako j) =>
             t < j.Loitto ? LennonVaihe.Nousu : t < (j.Aloitus ? Math.Max(j.Liuku, AloitusMatkaLoppu) : j.Liuku) ? LennonVaihe.Matka : LennonVaihe.Lasku;
@@ -712,10 +823,33 @@ namespace Matkakirja
         /// <summary>
         /// Koneen vähimmäiskorkeus (m lennon pohjasta) hetkellä t: nousee syöksyn aikana 10 km:iin (sivukyljessä
         /// kamera on koneen tasolla 30 km:n päässä ja kone skaalattu 0,9 ruudun levyiseksi) ja laskee orbitin aikana
-        /// nollaan, jotta kone laskeutuu kaupunkiin. Nappula: korkeus = max(huippu · sin πp, tämä).
+        /// nollaan, jotta kone laskeutuu kaupunkiin. Nappula: korkeus = max(huippu · sin πp, tämä). Aloituslennolla
+        /// (löydös 120 v2) lasku on <see cref="AloitusLaskuAlku"/> → laskeutuminen (9,4–11,0 s), jolloin kone on perillä.
         /// </summary>
-        public static double KoneenMinimi(double t, Jako j, double nousu = 1.0) =>
-            MinKoneKorkeusM * Kamerakayrat.Pehmea(t / Math.Max(1e-6, nousu * j.Syoksy)) * (1.0 - Kamerakayrat.Pehmea((t - j.Kierto) / Math.Max(1e-6, 1.0 - j.Kierto)));
+        public static double KoneenMinimi(double t, Jako j, double nousu = 1.0)
+        {
+            double laskuAlku = j.Aloitus ? AloitusLaskuAlku : j.Kierto, laskuLoppu = j.Aloitus ? AloitusLaskeutuminen : 1.0;
+            return MinKoneKorkeusM * Kamerakayrat.Pehmea(t / Math.Max(1e-6, nousu * j.Syoksy))
+                   * (1.0 - Kamerakayrat.Pehmea((t - laskuAlku) / Math.Max(1e-6, laskuLoppu - laskuAlku)));
+        }
+
+        /// <summary>Aloituslennon koneen vähimmäiskorkeuden laskun alku (osuus, 9,4 s).</summary>
+        public const double AloitusLaskuAlku = 9.4 / AloitusRefS;
+
+        /// <summary>
+        /// Koneen koko ruudulla (px) lennon aikana (Nappula.PaivitaKone, löydös 120 v2): pehmeä maksimi merkkikoosta ja
+        /// aikajanan ruutuosuudesta ruudun LYHYEMMÄN sivun mukaan (vaakamuodossa lähikuvan 1,9 ei enää tarkoita 1,9 × leveyttä,
+        /// jolloin kone oli nelinkertainen ruudun korkeuteen ja siivet kameran takana). ⁴√(a⁴ + b⁴) ≥ max(a, b) ja on sileä,
+        /// joten kone kasvaa lähestymisessä ilman taitetta, kun fyysinen koko ohittaa merkkikoon (lähikuvassa ero ~0,01 %).
+        /// </summary>
+        public static double KoneenKokoPx(double merkkiPx, double koneRuudusta, double leveysPx, double korkeusPx)
+        {
+            double a = Math.Max(0, merkkiPx), b = Math.Max(0, koneRuudusta) * Math.Min(leveysPx, korkeusPx);
+            double m = Math.Max(a, b);
+            if (!(m > 0)) return 0;
+            double x = a / m, y = b / m;
+            return m * Math.Pow(x * x * x * x + y * y * y * y, 0.25);
+        }
 
         /// <summary>Pehmeän maksimin leveys (m): kaaren ja vähimmäiskorkeuden vaihtokohta ilman nopeuden porrasta.</summary>
         public const double KorkeusPehmennysM = 2_000.0;
@@ -737,17 +871,13 @@ namespace Matkakirja
         static double[] kertyma, kertymanNopeus, kertymanKiihtyvyys;
         static Jako kertymanJako;
 
-        /// <summary>Koneen nopeus (suhteellinen) hetkellä t: syöksyssä ja sivukyljessä lähes paikallaan, kiihdytys loittonuksessa, tasainen, hidastus kierrosta perille.</summary>
+        /// <summary>
+        /// Koneen nopeus (suhteellinen) hetkellä t: syöksyssä ja sivukyljessä lähes paikallaan, kiihdytys loittonuksessa,
+        /// tasainen, hidastus kierrosta perille. Aloituslennon kone etenee reitin omalla profiililla
+        /// (<see cref="AloitusReitti.KoneenOsuus"/>, löydös 120 v2), ei tällä.
+        /// </summary>
         static double Nopeus(double t, Jako j)
         {
-            if (j.Aloitus)
-            {
-                // Löydös 120: kone lähes paikallaan (0,06) koko lähijakson (syöksy, lähi 1, kaarto, lähi 2 → 4,3 s), kiihtyy
-                // irtautumisessa (4,3–5,5 s), nopein matkassa ja hidastuu kierrosta (7,0 s) perille. Siirtymät pehmeinä.
-                double lahi = 1.0 - Kamerakayrat.Pehmea((t - j.Sivu) / 0.12);
-                double hid = Kamerakayrat.Pehmea((t - AloitusMatkaLoppu) / Math.Max(1e-6, 1.0 - AloitusMatkaLoppu));
-                return (Lerp(1.0, 0.06, lahi) * (1.0 - hid) + 0.02 * hid * (1 - t)) * Kamerakayrat.Pehmea(t / 0.08 + 0.15);
-            }
             double kiihdytys = Kamerakayrat.Pehmea((t - j.Sivu) / Math.Max(1e-6, 0.45 * (j.Loitto - j.Sivu)));
             double hidastus = Kamerakayrat.Pehmea((t - j.Liuku) / Math.Max(1e-6, 1.0 - j.Liuku));
             return Lerp(0.035, 1.0, kiihdytys) * (1.0 - hidastus) + 0.02 * hidastus * (1 - t);
