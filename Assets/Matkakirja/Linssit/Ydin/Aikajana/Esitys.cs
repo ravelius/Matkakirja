@@ -70,6 +70,7 @@ namespace Matkakirja.Linssit.Aikajana
         void Soita(double kohtaMs);
         void Tauko();
         void Jatka();
+        /// <summary>Ääni seis ja kohta pois (myös tauko): Lopeta-kutsun jälkeen KohtaMs on null.</summary>
         void Lopeta();
         /// <summary>Äänitteen kohta (ms), tai null, jos ääni ei soi (mykistys, virhe, ei vielä alkanut).</summary>
         double? KohtaMs { get; }
@@ -182,6 +183,9 @@ namespace Matkakirja.Linssit.Aikajana
             // (js/linssit/ihmisen-matka-esitys.js:1460, pointOfView(…, 0)) vie kameran avaruuteen heti mustan alla.
             if (!y.VahennettyLiike) KaynnistaNousu(0);
             Kaynnissa = true;
+            // Uusi esitys alkaa aina äänitteen alusta: edellisen esityksen kohta (tauko, "Aloita alusta") pois,
+            // jotta AloitaJakso kelaa kertojan jakson alkuun (löydös 74).
+            aani?.Lopeta();
             AloitaJakso(0);
         }
 

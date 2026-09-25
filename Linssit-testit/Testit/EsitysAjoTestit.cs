@@ -32,7 +32,7 @@ namespace Matkakirja.Linssit.Testit
             }
             public void Tauko() { if (alku != null) tauolla = KohtaMs; }
             public void Jatka() { if (tauolla is double k) { alku = y.Kello * 1000 - k; tauolla = null; } }
-            public void Lopeta() { alku = null; }
+            public void Lopeta() { alku = null; tauolla = null; }
             public double? KohtaMs => tauolla ?? (alku is double a ? Math.Min(Pituus, y.Kello * 1000 - a) : (double?)null);
         }
 
@@ -102,6 +102,20 @@ namespace Matkakirja.Linssit.Testit
         {
             double loppu = y.Kello + sekunnit;
             while (y.Kello < loppu && !e.Paattynyt) { y.Kello += dt; e.Paivita(); }
+        }
+
+        [Testi] static void UusiEsitysKelaaKertojanAlkuun()
+        {
+            // Löydös 74 (build 12, iPhone): "Aloita alusta" tauon jälkeen, ja kertoja jatkoi vanhasta kohdasta.
+            // Sama äänite jää edellisen esityksen tauon kohtaan (80 s); uuden esityksen pitää kelata jakson 0 alkuun.
+            var (e, y, _, a, l, k) = Luo();
+            a.Soita(80000);
+            a.Tauko();
+            e.Aloita();
+            Lahella(l[k[0].Id].Alku, a.Siirrot.Last(), "kertoja kelattu jakson 0 alkuun", 1e-9);
+            Aja(e, y, 0.5);
+            Oleta.Tosi(a.KohtaMs is double kohta && kohta < 1000, "kertoja alusta: " + a.KohtaMs);
+            Oleta.Sama(0, e.I, "jakso 0");
         }
 
         [Testi] static void AvausLasketaanManifestista()
