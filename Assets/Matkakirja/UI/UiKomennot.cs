@@ -690,6 +690,12 @@ namespace Matkakirja.Natiivi
                     if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"
                         || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                    if (osat[1] == "lehti" && l[0] == "vieritys")
+                    {
+                        // Löydös 51 -vertailu: oma (Kosketusvieritys) tai unity (ScrollViewin oma kosketusvieritys).
+                        if (l.Length > 1) Kosketusvieritys.Kaytossa = l[1] != "unity";
+                        return "vieritys " + (Kosketusvieritys.Kaytossa ? "oma" : "unity");
+                    }
                     if (osat[1] == "lehti" && l[0] == "vierita")
                         return ui.Lehti.Vierita(l.Length > 1 ? l[1] : "loppu");
                     if (osat[1] == "lehti" && l[0] == "fokus")
