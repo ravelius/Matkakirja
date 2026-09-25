@@ -612,6 +612,212 @@ namespace Matkakirja
         public static void PallonSavy(float? kerroin) =>
             Shader.SetGlobalFloat(PallonTummuusId, kerroin.HasValue ? 1f - Mathf.Clamp01(kerroin.Value) : 0f);
 
+        // ---- Valokeila (Ihmisen matka II, Linssisepän tilaus 25.9.2026) ----
+
+        /// <summary>
+        /// Yksi valokeila: keskipiste (geodeettinen lat/lon), säde pinnalla (km), reunan pehmeys säteen osuutena (0–1),
+        /// valon väri (sRGB; null = lyhty, <see cref="Lyhty"/>; valkoinen = ei sävyä), keskustan lisäkirkkaus
+        /// 0–0,3 (emissiona: kohta hehkuu eikä vain säästy hämärältä) ja voimakkuus 0–1 (toinen keila heikompana).
+        /// </summary>
+        public struct Keila
+        {
+            public double lat, lon;
+            public float sadeKm, pehmeys, kirkkaus, voimakkuus;
+            public Color? vari;
+
+            public Keila(double lat, double lon, float sadeKm, float pehmeys = 0.35f, Color? vari = null, float kirkkaus = 0.12f,
+                         float voimakkuus = 1f)
+            {
+                this.lat = lat; this.lon = lon; this.sadeKm = sadeKm; this.pehmeys = pehmeys;
+                this.vari = vari; this.kirkkaus = kirkkaus; this.voimakkuus = voimakkuus;
+            }
+        }
+
+        /// <summary>Lyhdyn sävyn osuus: 3200 K sekoitetaan puoliksi valkoiseen, jotta paperi pysyy luettavana (ei oranssi).</summary>
+        public const float LyhdynSavy = 0.5f;
+
+        /// <summary>Lyhdyn valo: 3200 K (Valokeilalaskenta.Kelvin) osuudella <see cref="LyhdynSavy"/> valkoisen päällä, sRGB.</summary>
+        public static Color Lyhty => KelvinVari(3200f, LyhdynSavy);
+
+        /// <summary>Värilämpötila (K) sRGB-värinä; osuus 1 = täysi mustan kappaleen sävy, 0 = valkoinen.</summary>
+        public static Color KelvinVari(float kelvin, float osuus = 1f)
+        {
+            var (r, g, b) = Valokeilalaskenta.Kelvin(kelvin);
+            return Color.Lerp(Color.white, new Color((float)r, (float)g, (float)b, 1f), Mathf.Clamp01(osuus));
+        }
+
+        /// <summary>Viimeksi pyydetty pääkeila (null = pois tai sammumassa).</summary>
+        public static Keila? PaaKeila { get; private set; }
+        /// <summary>Viimeksi pyydetty toinen keila (null = ei).</summary>
+        public static Keila? ToinenKeila { get; private set; }
+        /// <summary>Viimeksi pyydetty hämäryys 0–1.</summary>
+        public static float KeilanHamaryys { get; private set; }
+
+        /// <summary>
+        /// VALOKEILA: pallo hämärtyy (perusväri × (1 − 0,95 · hamaryys01)) paitsi keilan kohdalla (lat, lon, säde sadeKm,
+        /// reunan liukuma pehmeys01 säteen osuutena). Siirtymä kestoS sekunnissa smootherstepillä; jos keila on jo päällä,
+        /// keskipiste liukuu isoympyrää pitkin ja säde ja hämärä muuttuvat pehmeästi. Toinen keila sammuu.
+        /// Koskee vain pohjaa ja laattoja (tileset-varjostin: pohja ja sen rasterikerrokset, napakannet); linssien omat
+        /// geometriat, mastot, merkit ja UI eivät lue keilan globaaleja. Emissio (yövalot, radion maavalo) ei tummu.
+        /// </summary>
+        public static void Valokeila(double lat, double lon, float sadeKm, float pehmeys01, float hamaryys01, float kestoS) =>
+            Valokeila(new Keila(lat, lon, sadeKm, pehmeys01), null, hamaryys01, kestoS);
+
+        /// <summary>
+        /// Kaksi keilaa (esim. lähtö ja määränpää): pikseli saa niistä valoisamman. toinen = null sammuttaa toisen.
+        /// Värit ja kirkkaudet ovat keilakohtaisia; hämäryys on yhteinen.
+        /// </summary>
+        public static void Valokeila(Keila paa, Keila? toinen, float hamaryys01, float kestoS)
+        {
+            PaaKeila = paa; ToinenKeila = toinen; KeilanHamaryys = Mathf.Clamp01(hamaryys01);
+            bool ok0 = KeilaTavoite(ref keilat[0], paa), ok1 = KeilaTavoite(ref keilat[1], toinen);
+            if (!ok0 || !ok1) return;
+            KeilaSiirtyma(KeilanHamaryys, kestoS);
+        }
+
+        /// <summary>Keilat ja hämärä pois kestoS sekunnissa (ease in/out); lopuksi globaalit nollaan (varjostin ennallaan).</summary>
+        public static void ValokeilaPois(float kestoS)
+        {
+            PaaKeila = null; ToinenKeila = null; KeilanHamaryys = 0f;
+            KeilaTavoite(ref keilat[0], null);
+            KeilaTavoite(ref keilat[1], null);
+            KeilaSiirtyma(0f, kestoS);
+        }
+
+        /// <summary>
+        /// LINSSISIIRTO (Ihmisen matka II, "kartta väistää"): katsekohde siirtyy ruudulla dx (oikealle) ja dy (ylös) ruudun
+        /// osuuksina, esim. (0, −0,25) = kohde alaspäin havainnekuvan tieltä. Kamera kääntyy paikallaan
+        /// (<see cref="PalloKierto.Linssisiirto"/>); kallistus, etäisyys ja eleet pysyvät. Liuku kestoS sekunnissa ease in/out.
+        /// </summary>
+        public static void Linssisiirto(float dx, float dy, float kestoS) => PalloKierto.Linssisiirto(dx, dy, kestoS);
+
+        /// <summary>Linssisiirto pois (kohde takaisin ruudun keskelle) kestoS sekunnissa.</summary>
+        public static void LinssisiirtoPois(float kestoS) => PalloKierto.Linssisiirto(0f, 0f, kestoS);
+
+        /// <summary>Keilan tila lokiin (komento "valokeila tila").</summary>
+        public static string ValokeilaKuvaus()
+        {
+            string K(Keila? k) => k.HasValue ? $"{k.Value.lat:0.###},{k.Value.lon:0.###} {k.Value.sadeKm:0} km p {k.Value.pehmeys:0.##} " +
+                                               $"kirkkaus {k.Value.kirkkaus:0.##} voimakkuus {k.Value.voimakkuus:0.##}" : "-";
+            return $"pää {K(PaaKeila)}; toinen {K(ToinenKeila)}; hämäryys {KeilanHamaryys:0.##} (nyt {keilaHamaryys.nyt:0.##}, " +
+                   $"voimakkuudet {keilat[0].nyt.voimakkuus:0.##}/{keilat[1].nyt.voimakkuus:0.##}, {(keilaKaynnissa ? "liukuu" : "levossa")})";
+        }
+
+        /// <summary>Keilan varjostinarvot: suunta Unityn maailmassa (geosentrinen yksikkö), kulma (rad), pehmeys, lineaarinen väri + kirkkaus.
+        /// Varjostimelle rajat jänteinä (Valokeilalaskenta.Rajat): _keilaN.w = sisäjänne, _keilaRajat.x/z = ulkojänne.</summary>
+        struct KeilaArvot
+        {
+            public (double x, double y, double z) suunta;
+            public double kulma, pehmeys;
+            public Vector4 vari; // rgb lineaarinen, a = kirkkaus
+            public float voimakkuus;
+        }
+
+        struct KeilaSiirto { public KeilaArvot alku, kohde, nyt; }
+        struct Liuku { public float alku, kohde, nyt; }
+
+        static readonly KeilaSiirto[] keilat = new KeilaSiirto[2];
+        static Liuku keilaHamaryys;
+        static float keilaT0, keilaKesto;
+        static bool keilaKaynnissa, keilaGlobaalitAsetettu;
+
+        // Varjostimen globaalit (tileset: tee_tileset.py RadioHamara; Napakansi.shader). Asettamattomina 0 = ennallaan.
+        static readonly int Keila0Id = Shader.PropertyToID("_keila0");
+        static readonly int Keila1Id = Shader.PropertyToID("_keila1");
+        static readonly int KeilaRajatId = Shader.PropertyToID("_keilaRajat");
+        static readonly int Keila0VariId = Shader.PropertyToID("_keila0Vari");
+        static readonly int Keila1VariId = Shader.PropertyToID("_keila1Vari");
+        static readonly int KeilaHamaryysId = Shader.PropertyToID("_keilaHamaryys");
+
+        /// <summary>
+        /// Asettaa keilan siirtymän kohteen. Sammuneesta keilasta (voimakkuus 0) syttyvä hyppää kohteeseen ja vain
+        /// voimakkuus nousee; palava liukuu. null = voimakkuus → 0 paikallaan. false, jos georeferenssiä ei löydy.
+        /// </summary>
+        static bool KeilaTavoite(ref KeilaSiirto s, Keila? k)
+        {
+            s.alku = s.nyt;
+            if (!k.HasValue)
+            {
+                s.kohde = s.nyt;
+                s.kohde.voimakkuus = 0f;
+                return true;
+            }
+            var geo = Instanssi != null ? Instanssi.GetComponent<CesiumGeoreference>() : FindAnyObjectByType<CesiumGeoreference>();
+            if (geo == null) { Debug.LogWarning("MATKAKIRJA valokeila: georeferenssi puuttuu"); return false; }
+            var e = Valokeilalaskenta.SuuntaEcef(k.Value.lat, k.Value.lon);
+            // ECEF-suunta → Unityn maailma kuten KorkeusKerroin.Aseta (_maaNolla/_maaIta/_maaAkseli): pallo ei liiku, kamera liikkuu.
+            Vector3 u = geo.transform.TransformDirection((Unity.Mathematics.float3)geo.TransformEarthCenteredEarthFixedDirectionToUnity(
+                new Unity.Mathematics.double3(e.x, e.y, e.z))).normalized;
+            Color vari = (k.Value.vari ?? Lyhty).linear;
+            s.kohde = new KeilaArvot
+            {
+                suunta = (u.x, u.y, u.z),
+                kulma = Valokeilalaskenta.Kulma(k.Value.sadeKm),
+                pehmeys = Mathf.Clamp01(k.Value.pehmeys),
+                vari = new Vector4(vari.r, vari.g, vari.b, Mathf.Clamp(k.Value.kirkkaus, 0f, 0.3f)),
+                voimakkuus = Mathf.Clamp01(k.Value.voimakkuus),
+            };
+            if (s.nyt.voimakkuus <= 0f)
+            {
+                // Sammunut keila: ei liukumaa tyhjästä, vain voimakkuus nousee.
+                s.alku = s.kohde;
+                s.alku.voimakkuus = 0f;
+            }
+            return true;
+        }
+
+        static void KeilaSiirtyma(float hamaryys, float kestoS)
+        {
+            keilaHamaryys.alku = keilaHamaryys.nyt;
+            keilaHamaryys.kohde = hamaryys;
+            keilaT0 = Time.unscaledTime;
+            keilaKesto = Mathf.Max(0f, float.IsNaN(kestoS) ? 0f : kestoS);
+            keilaKaynnissa = true;
+            // Ilman KarttaKerroksia (ei Updatea) tai kestolla 0 kohde voimaan heti.
+            if (Instanssi == null || keilaKesto <= 0f) PaivitaKeila(true);
+        }
+
+        /// <summary>Siirtymän askel (Update). Kirjoittaa globaalit vain liukuman aikana ja kerran lopuksi.</summary>
+        static void PaivitaKeila(bool heti = false)
+        {
+            if (!keilaKaynnissa) return;
+            float t = heti || keilaKesto <= 0f ? 1f : (Time.unscaledTime - keilaT0) / keilaKesto;
+            double e = Valokeilalaskenta.Pehmennys(t);
+            for (int i = 0; i < 2; i++)
+            {
+                ref var s = ref keilat[i];
+                s.nyt = new KeilaArvot
+                {
+                    suunta = Valokeilalaskenta.Isoympyra(s.alku.suunta, s.kohde.suunta, e),
+                    kulma = s.alku.kulma + (s.kohde.kulma - s.alku.kulma) * e,
+                    pehmeys = s.alku.pehmeys + (s.kohde.pehmeys - s.alku.pehmeys) * e,
+                    vari = Vector4.Lerp(s.alku.vari, s.kohde.vari, (float)e),
+                    voimakkuus = Mathf.Lerp(s.alku.voimakkuus, s.kohde.voimakkuus, (float)e),
+                };
+            }
+            keilaHamaryys.nyt = Mathf.Lerp(keilaHamaryys.alku, keilaHamaryys.kohde, (float)e);
+            if (t >= 1f) keilaKaynnissa = false;
+            if (keilaHamaryys.nyt <= 0f && keilat[0].nyt.voimakkuus <= 0f && keilat[1].nyt.voimakkuus <= 0f)
+            {
+                // Kaikki nollassa: varjostin ohittaa keilan kokonaan (sama kuin asettamaton globaali).
+                if (!keilaGlobaalitAsetettu) return;
+                Shader.SetGlobalFloat(KeilaHamaryysId, 0f);
+                Shader.SetGlobalVector(KeilaRajatId, Vector4.zero);
+                keilaGlobaalitAsetettu = false;
+                return;
+            }
+            var r0 = Valokeilalaskenta.Rajat(keilat[0].nyt.kulma, keilat[0].nyt.pehmeys);
+            var r1 = Valokeilalaskenta.Rajat(keilat[1].nyt.kulma, keilat[1].nyt.pehmeys);
+            var d0 = keilat[0].nyt.suunta; var d1 = keilat[1].nyt.suunta;
+            Shader.SetGlobalVector(Keila0Id, new Vector4((float)d0.x, (float)d0.y, (float)d0.z, (float)r0.sisa));
+            Shader.SetGlobalVector(Keila1Id, new Vector4((float)d1.x, (float)d1.y, (float)d1.z, (float)r1.sisa));
+            Shader.SetGlobalVector(KeilaRajatId, new Vector4((float)r0.ulko, keilat[0].nyt.voimakkuus, (float)r1.ulko, keilat[1].nyt.voimakkuus));
+            Shader.SetGlobalVector(Keila0VariId, keilat[0].nyt.vari);
+            Shader.SetGlobalVector(Keila1VariId, keilat[1].nyt.vari);
+            Shader.SetGlobalFloat(KeilaHamaryysId, keilaHamaryys.nyt);
+            keilaGlobaalitAsetettu = true;
+        }
+
         /// <summary>
         /// LENNON KARTTA (omistaja 24.9.2026 klo 13.4x, Fablen päätös): lennon ajaksi sileä sarja pohjan päälle
         /// Cesiumin raster-paikkaan 1. Pohja latautuu sen alla, joten paluu perillä on välitön (tiet ja rajat
@@ -929,6 +1135,7 @@ namespace Matkakirja
 
         void Update()
         {
+            PaivitaKeila();
             if (pallo == null || rasterit.Count == 0) return;
             // Latausta ei arvioida heti lisäyksen jälkeen: Cesium rekisteröi uudet laatat vasta
             // seuraavilla kehyksillä, ja edistyminen näyttäisi valmiilta liian aikaisin.
