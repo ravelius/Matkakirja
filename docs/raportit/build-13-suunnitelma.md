@@ -21,7 +21,7 @@ mitattuna (video tai kuvapari) ennen korjausta (WEB ON MALLI).
 | 53 | Ohita-nappi ei lopeta pulun puhetta | Pelikoodari | odottaa webin mittausta |
 | 54 | Pululla puhekupla uuteen kaupunkiin saavuttaessa, vaikka ei pitäisi | Pelikoodari | odottaa webin mittausta |
 | 55 | Nopan heitto ei jatku automaattisesti liftatessa | Pelikoodari | odottaa webin mittausta |
-| 56 | Kartta ei zoomaa nopan heiton jälkeen, joten valittavat kohteet jäävät piiloon | Natiiviseppä (kamera) | odottaa Pelikoodarin webin mittoja (web ui.js sovitaKohteetNakyviin: rajaus, marginaali, kesto); ajo ease in/out |
+| 56 | Kartta ei zoomaa nopan heiton jälkeen, joten valittavat kohteet jäävät piiloon | Natiiviseppä (kamera) | natiiviseppa/kohdesovitus 8961981 (webin kaava) |
 | 57 | Reitti ei aina piirry | Pelikoodari | odottaa webin mittausta |
 | 58 | Maailma-tilassa pelaaja ei pääse vaihtamaan kaupunkiin | Pelikoodari | odottaa webin mittausta |
 | 59 | Kaupunkilehti avautuu saavuttaessa, vaikka ei pitäisi | Pelikoodari (logiikka) + Natiivi-UI (lehden avaus) | odottaa webin mittausta |
@@ -31,18 +31,30 @@ mitattuna (video tai kuvapari) ennen korjausta (WEB ON MALLI).
 | 63 | Nähtävyydet eivät toimi | Natiivi-UI + Pelikoodari | |
 | 64 | Kaupunkilehti tökkii vierittäessä (vrt. löydös 51) | Natiivi-UI | |
 | 65 | ☰-valikko ja linssit yhdistetään kaikilla laitteilla, Kokeet pois pelaajalta | Natiivi-UI | Raamattu päivitetty 05.0x |
+| 74 | Ihmisen matka: rajaviivat mustana läiskänä, teksti pallon päällä, pallo vilahtaa isona (d–e) | Natiiviseppä (f Linssiseppä) | agentti |
+| 75 | Unityn logoruutu pois, oma LaunchScreen ja saumaton avaus | Natiiviseppä | natiiviseppa/aloitusruutu |
 
-## Natiivisepän erät
+## Natiivisepän erät (päivitetty 25.9. klo 05.5x)
 
-| # | Haara | Kärki | Tila |
-|---|---|---|---|
-| 1 | natiiviseppa/nimiasennot | 50ca8e2 | Kaupunkinimet webin ehdokaskehällä (laudan oma asettelu nimionAnkkuri, pinon kehä, 4 tavanomaista, 8 suuntaa × 2), nappula varauksiin, lukko. Testit 30/30. Testikäännös ja kuvapari (web kartta-393x852 Marseille) tekeillä |
-| 2 | natiiviseppa/rasteriavain | cbf7f0f | Cesiumin "same material key" -varoitus pois: raster-kerrosten kierrätys (radio, linssit, väritaso) |
-| 3 | löydös 56 kamera | – | Pelikoodarin mittojen jälkeen |
-| 4 | löydös 61 kamera | – | Pelikoodarin kanssa |
-| 5 | natiiviseppa/lento-pinta | 6a57441 | Kylmän alun sumeus: taustapallo + D:n uusintamittaus (b12o jäi latausnäkymään, ei kaatunut). Raskas ajo polton jälkeen (~08.45) |
-| 6 | Black Marble -yövalot | – | Karttasepän poltto (~klo 9), uniformit valmiina (RadioMastot.YonValot) |
-| 7 | E28 syvät tasot Z9–Z11 | – | Fablen ilmoitus uuden reseptin (2026-09-25) sarjasta |
+| # | Haara | Kärki | Sisältö | Tila |
+|---|---|---|---|---|
+| 1 | natiiviseppa/nimiasennot | 8705474 | Kaupunkinimet webin ehdokaskehällä: laudan oma asettelu (paketin nimionAnkkuri, skeema 1.31), pinon kehä, 4 tavanomaista, 8 suuntaa × 2, lukko, liikevara 0,5; nappula varauksiin | kuvat b13a (vanha versio: reunalla väärä kylki → liikevara korjattu) |
+| 2 | natiiviseppa/rasteriavain | cbf7f0f | Cesiumin "same material key" pois (raster-kerrosten kierrätys) | tekninen |
+| 3 | natiiviseppa/kohdesovitus | 8961981 | Löydös 56 / A16 / A17 / B18 / B22: nappula + kohteet ruutuun, 0,14, 720 ms, vain loitonnus | maarajat sisältää |
+| 4 | natiiviseppa/maarajat | 8c8ea63 | D7/D8/D11: loitonnuksen katto = saapumisnäkymä, panorointi maan laatikko × 1,3; MaailmaTila-API | Pelikoodari kytkee |
+| 5 | natiiviseppa/reitit-b13 | nimiasennot mergetty | B4 varjo, B5 helmet, B10/D18/A3/A15/C18 PeliOhjaaReitit, B23 lentokaaret, A14 osumasäde 44, D15 PeliSuodatin, NaytaPeli, ReittiPiste | Pelikoodari kytketty (pelikoodari/liikkuminen) |
+| 6 | natiiviseppa/saattokamera | 1cc64cd | A20/B15 ennakkozoomi, B16 saatto, A21/B12–B14 hyppyketju/bussi/laiva, Matkaliike-API, Laskeutui (B21); B24 kaari lennolla oletuksena pois (B25) | Pelikoodari kytketty |
+| 7 | natiiviseppa/aloitusruutu | f82f6f4 | Löydös 75: Unityn logoruutu pois, LaunchScreen pergamentti + logo, Aloitusverho samalla kuvalla kunnes pallo ladattu | laitevideo kylmästä käynnistyksestä tekemättä |
+| 8 | natiiviseppa/loydos74 | – | Löydös 74 d–e: avaruuspallon rajaviivat, teksti pallon päällä, alkuzoomi verhon taakse | agentti työssä |
+| 9 | natiiviseppa/lento-pinta | 6a57441 | Kylmän alun sumeus: taustapallo + D:n uusintamittaus | polton jälkeen (~08.45); Aloitusverho peittää osan |
+| 10 | Black Marble -yövalot | – | Karttasepän poltto (~klo 9) | odottaa |
+| 11 | E28 syvät tasot Z9–Z11 | – | Fablen ilmoitus | odottaa |
+
+Yhteinen testikäännös FBBD41D7:ään: reitit-b13 + rasteriavain + maarajat + saattokamera + aloitusruutu (jonossa 05.5x).
+Kuvaus: lokit/natiiviseppa-skriptit/nimikuvat.sh (Marseille, Ranska, nipistys ulos, veto itään, noppa).
+
+Hyväksytyt poikkeamat (Fable 05.3x): B25 ja D14 — LENNON ESITYS kaikille lennoille, kesto TEMPO-linjauksen mukaan
+(ei kiinnitetä 2,8 s:iin), ennen lähtöä ja laskun jälkeen webin tila.
 
 ## Muut sessiot
 
