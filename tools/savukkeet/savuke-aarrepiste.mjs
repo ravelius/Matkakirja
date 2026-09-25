@@ -23,9 +23,9 @@
  *      lukosta.
  *   2. LUKITUN PISTEEN NAPAUTUS EI AVAA KOHTAAMISTA vaan näyttää
  *      pulun kuplan.
- *   3. YKSI TEHTÄVÄ EI RIITÄ (VASTAKOE). Sama ajo yhdellä ratkaistulla
- *      tehtävällä: piste on yhä lukossa.
- *   4. KAKSI TEHTÄVÄÄ SYTYTTÄÄ PISTEEN. Lukkoluokka poistuu, lappu
+ *   3. KYNNYSTÄ YKSI VÄHEMMÄN EI RIITÄ (VASTAKOE). Löydöksen 145 jälkeen
+ *      kynnys on 1, joten vastakoe on 0 tehtävää: piste on yhä lukossa.
+ *   4. KYNNYS (YKSI TEHTÄVÄ, löydös 145) SYTYTTÄÄ PISTEEN. Lukkoluokka poistuu, lappu
  *      lupaa kohtaamisen ja napautus avaa kohtaamiskortin.
  *   5. VANHA TALLENNUS EI JUMITU. Laskuri 0, mutta aarre on avattu
  *      lehden kysymyksellä (minitehtavatOikein) → piste on auki. Uusi
@@ -61,7 +61,7 @@ const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 /** Kynnys on koodin vakio (js/fokusvirta.js NOSTOTEHTAVIA_AARREPISTEESEEN). */
-const KYNNYS = 2;
+const KYNNYS = 1;
 /** Näkymä: Pariisi lähikuvassa, jotta kohtaamispiste on ladonnassa. */
 const PARIISI = { lat: 48.8566, lng: 2.3522, alt: 0.09 };
 /** Lehden aarteen avaava tehtävä (palkinto ei ole juliste). */
@@ -336,28 +336,28 @@ if (a.auki) {
   const ohje = await odotaOhje(a.sivu);
   tieto('pulun ohje (lippu tallennuksessa oli false)', `"${ohje.teksti}" — lippu ${ohje.lippu}`);
   vaadi('6a. pulu kertoo ohjeen kerran ja lippu kääntyy',
-    ohje.teksti.includes('Löytämällä kartalta kaksi kysymystä') && ohje.lippu === true,
+    ohje.teksti.includes('Löytämällä kartalta kysymyksen') && ohje.lippu === true,
     JSON.stringify(ohje));
 
   const napautus = await napauta(a.sivu);
   tieto('lukitun pisteen napautus', `avasi ${napautus.avasi}, kortti ${napautus.kortti}, `
     + `kupla "${napautus.kupla}"`);
   vaadi('2. lukitun pisteen napautus ei avaa kohtaamista vaan kertoo lukosta',
-    napautus.avasi === false && !napautus.kortti && napautus.kupla.includes('kaksi kysymystä'),
+    napautus.avasi === false && !napautus.kortti && napautus.kupla.includes('Ratkaise kysymys kartalta'),
     JSON.stringify(napautus));
   await a.ctx.close();
 } else {
   await a.ctx.close();
 }
 
-/* ---------- AJO B (VASTAKOE): YKSI RATKAISTU TEHTÄVÄ ---------- */
-const b = await avaaPeli(tallenne({ ratkaistu: 1 }));
-vaadi('pallolauta aukesi (1 tehtävä)', b.auki, b.virheet.join(' | '));
+/* ---------- AJO B (VASTAKOE): KYNNYSTÄ YKSI VÄHEMMÄN ---------- */
+const b = await avaaPeli(tallenne({ ratkaistu: KYNNYS - 1 }));
+vaadi(`pallolauta aukesi (${KYNNYS - 1} tehtävää)`, b.auki, b.virheet.join(' | '));
 if (b.auki) {
   await asetaNakyma(b.sivu);
   const tila = await pisteenTila(b.sivu);
-  tieto('1 tehtävä', `laskuri ${tila.laskuri}, lukittu ${tila.lukittu}, auki ${tila.auki}`);
-  vaadi('3. yksi tehtävä ei sytytä pistettä (VASTAKOE)',
+  tieto(`${KYNNYS - 1} tehtävää`, `laskuri ${tila.laskuri}, lukittu ${tila.lukittu}, auki ${tila.auki}`);
+  vaadi('3. kynnystä vähemmän ei sytytä pistettä (VASTAKOE)',
     tila.onPiste && tila.lukittu === true && tila.auki === false && tila.palloLukossa,
     JSON.stringify(tila));
   await b.ctx.close();
@@ -365,13 +365,13 @@ if (b.auki) {
   await b.ctx.close();
 }
 
-/* ---------- AJO C: KAKSI RATKAISTUA TEHTÄVÄÄ ---------- */
+/* ---------- AJO C: KYNNYS (löydös 145: yksi ratkaistu tehtävä) ---------- */
 const c = await avaaPeli(tallenne({ ratkaistu: KYNNYS }));
-vaadi('pallolauta aukesi (2 tehtävää)', c.auki, c.virheet.join(' | '));
+vaadi(`pallolauta aukesi (${KYNNYS} tehtävä)`, c.auki, c.virheet.join(' | '));
 if (c.auki) {
   await asetaNakyma(c.sivu);
   const tila = await pisteenTila(c.sivu);
-  tieto('2 tehtävää', `laskuri ${tila.laskuri}, lukittu ${tila.lukittu}, auki ${tila.auki}, `
+  tieto(`${KYNNYS} tehtävä`, `laskuri ${tila.laskuri}, lukittu ${tila.lukittu}, auki ${tila.auki}, `
     + `pallolla ${tila.pallolla} (lukko ${tila.palloLukossa})`);
   tieto('auenneen pisteen lappu', `"${tila.palloLappu}"`);
   if (KUVAKANSIO) {
@@ -384,7 +384,7 @@ if (c.auki) {
   }
   const napautus = await napauta(c.sivu);
   tieto('auenneen pisteen napautus', `avasi ${napautus.avasi}, kortti ${napautus.kortti}`);
-  vaadi('4. kaksi tehtävää sytyttää pisteen ja napautus avaa kohtaamisen',
+  vaadi('4. kynnys (yksi tehtävä) sytyttää pisteen ja napautus avaa kohtaamisen',
     tila.onPiste && tila.lukittu === false && tila.auki === true
       && tila.pallolla && !tila.palloLukossa && !tila.palloKuvioLukossa
       && napautus.avasi === true && napautus.kortti,
