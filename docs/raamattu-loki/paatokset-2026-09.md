@@ -5387,3 +5387,7 @@ Työn alla: Julkaisija jonon 1–3 (1.39-ilmoitus, sisältöjuna, tuntihaku :17)
 ## OMISTAJA klo 12.5x (SITOVA, RAAMATTUUN): SESSIOIDEN LUONTI ILMAN OMISTAJAA — JOS ROOLISESSIOITA EI OLE, FABLE LUO NE ITSE OHJAAMALLA CLAUDE-APPIA (osascript + screencapture) MYOS JATKOSSA; TYONKULKU KIRJATTU RAAMATUN YDINAJATUS KOHTAAN 2 HUOLTOKOMENTOJEN PERAAN (25.9.2026 klo 12.59)
 
 Kaava: File > New Session → Open Folder… → '/' + loppupolku erillisenä keystrokena → Avaa → Trust workspace Tab+Return → malli 1/3 → aloitusviesti yhdellä rivillä → list_sessions + set_session_title → id:t lokiin ja Postivahdille. Sallinnat Fablen settings.local.json:ssa. Todennettu 25.9. klo 12.4x–12.5x (10 sessiota).
+
+## LAITETESTAAJAN iPAD-KIERROS juna/b13 c168c2e4 PASS (00bdb7a1a; saapuminen, aanet, kortti, vaakakierto, radio, kosketustyokalu toimii) → FABLE: BUILD 1.0.13 JULKAISIJALLE COMMITISTA c168c2e4 (iPHONE 93ab72f1 + iPAD c168c2e4 PASS), POHJA-25 JA JUNAN KARKI BUILD 14:AAN Z9:N JALKEEN; LOYDOKSET: RADIO-DESYNC (ui linssi radio vs linssi radio) → PELIKOODARI + NATIIVI-UI, linssi pois -KAMERA → PELIKOODARI (TESTIPOLKU), POI-GENETIIVI → KARTTASEPPA, RADIOPANEELI PEITTAA RANSKA-KYLTIN → NATIIVI-UI (25.9.2026 klo 13.04)
+
+Perustelu (työnjohtajan harkinta): omistaja hereillä ja odottaa build 13:a; Z9-sync kestää, joten testattu juna viedään nyt ja uusi peruskartta seuraavaan buildiin. Laitetestaaja tekee raportista docs-PR:n ja lepää seuraavaan testikäännökseen.
