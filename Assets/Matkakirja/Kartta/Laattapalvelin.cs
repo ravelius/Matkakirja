@@ -98,6 +98,55 @@ namespace Matkakirja
         public static string MaastoPolku;
 
         /// <summary>
+        /// Löydös 119 (komento "palvelin loki paalle|pois", oletus pois): jokainen epäonnistunut verkkoyritys ja jokainen
+        /// haku, joka ei palauta 200 tai joka palautetaan Cesiumille virheenä, lokiin rivillä
+        /// "MATKAKIRJA palvelin virhe &lt;luokka&gt; &lt;polku&gt; &lt;koodi&gt; &lt;yritykset&gt; &lt;ms&gt; &lt;seuraus&gt;"
+        /// (ms haun alusta; seuraus: uusinta, loppu, pito N s, luovutus, cesiumille, varalaatta, tyhja, peruttu, esilataus).
+        /// </summary>
+        public static bool Loki;
+        /// <summary>
+        /// Löydös 119 korjaus 1 (komento "palvelin maastouusinta paalle|pois", oletus päällä): Cesiumin maastolaattaa
+        /// (.terrain) ei palauteta virheenä verkkovirheen, aikakatkaisun tai 5xx:n takia (cesium-native piirtää
+        /// epäonnistuneen laatan tyhjänä eikä yritä uudelleen = reikä), vaan sitä yritetään uudelleen porrastetulla
+        /// viiveellä (Reikakorjaus.UusintaViive: 0,5, 1, 2, 4, 8 s, sitten 8 s:n välein) niin kauan kuin Cesium odottaa
+        /// (yhteys auki). Aito 404/403 menee heti. Cesium for Unity ei aseta pyynnölle aikakatkaisua, joten pyyntö pysyy
+        /// auki (Reikakorjaus.cs). Laite ilman verkkoa yli 10 s → virhe kuten ennen.
+        /// </summary>
+        public static bool MaastoUusinta = true;
+        /// <summary>
+        /// Maastoluokan (.terrain, layer.json) laskurit komennon "palvelin" tulosteeseen (<see cref="MaastoKuvaus"/>):
+        /// Cesiumin pyynnöt, verkosta haetut, epäonnistuneet verkkoyritykset, uusinnalla pelastetut, Cesiumille virheenä
+        /// palautetut (joista 404/403), peruttu (Cesium sulki yhteyden pidon aikana) ja pidossa nyt.
+        /// </summary>
+        public static int MaastoPyyntoja, MaastoVerkosta, MaastoYritysVirheita, MaastoPelastettu, MaastoCesiumVirheita,
+            Maasto404, MaastoPeruttu, MaastoPidossa;
+
+        /// <summary>Editorin pelitila ilman domain reloadia: kokeilut ja laskurit eivät jää edellisestä ajosta.</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaKokeilut()
+        {
+            Loki = false;
+            MaastoUusinta = true;
+            MaastoPyyntoja = MaastoVerkosta = MaastoYritysVirheita = MaastoPelastettu = MaastoCesiumVirheita = 0;
+            Maasto404 = MaastoPeruttu = MaastoPidossa = 0;
+        }
+
+        /// <summary>Maastoluokan laskurit ja kytkimet yhdellä rivillä (komento "palvelin").</summary>
+        public static string MaastoKuvaus() =>
+            $"MATKAKIRJA laattapalvelin maasto: pyyntöjä {MaastoPyyntoja}, verkosta {MaastoVerkosta}, " +
+            $"epäonnistuneita yrityksiä {MaastoYritysVirheita}, uusinnalla pelastettu {MaastoPelastettu}, " +
+            $"Cesiumille virheenä {MaastoCesiumVirheita} (404/403 {Maasto404}), peruttu {MaastoPeruttu}, pidossa nyt {MaastoPidossa}; " +
+            $"maastouusinta {(MaastoUusinta ? "päällä" : "pois")}, loki {(Loki ? "päällä" : "pois")}";
+
+        /// <summary>Lokirivi (löydös 119), kun <see cref="Loki"/> on päällä. Kutsutaan myös palvelimen säikeistä.</summary>
+        static void KirjaaVirhe(string luokka, string polku, int koodi, int yrityksia, long alku, string seuraus)
+        {
+            if (!Loki) return;
+            long ms = (long)((System.Diagnostics.Stopwatch.GetTimestamp() - alku) * 1000.0 / System.Diagnostics.Stopwatch.Frequency);
+            Debug.Log($"MATKAKIRJA palvelin virhe {luokka} {polku} {koodi} {yrityksia} {ms} {seuraus}");
+        }
+
+        /// <summary>
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
         /// jotta näkyvä näkymä latautuu ensin (omistajan build 5 -löydös 13).
         /// </summary>
@@ -226,6 +275,22 @@ namespace Matkakirja
             public Esilataus Esi;
             public TaskCompletionSource<(int tila, byte[] data)> Valmis =
                 new TaskCompletionSource<(int, byte[])>(TaskCreationOptions.RunContinuationsAsynchronously);
+            /// <summary>Lokirivin luokka (Reikakorjaus.Luokka, väritaso "vari").</summary>
+            public string Luokka = "muu";
+            /// <summary>Maastoluokka (.terrain, layer.json) Cesiumilta: laskurit.</summary>
+            public bool Maasto;
+            /// <summary>
+            /// Löydös 119: Cesiumin maastolaatta, jota ei palauteta virheenä verkkovirheen takia. Palauttaa, odottaako
+            /// Cesium yhä (yhteys auki); null = tavallinen haku (kolme yritystä).
+            /// </summary>
+            public Func<bool> Pyydetty;
+            /// <summary>Verkkoyritykset tähän mennessä (kaikki vuorot yhteensä).</summary>
+            public int Yrityksia;
+            /// <summary>Haun alku (Stopwatch-tikit): lokin ms ja offline-raja.</summary>
+            public long Alku = System.Diagnostics.Stopwatch.GetTimestamp();
+            /// <summary>Laskettu <see cref="MaastoPidossa"/>-laskuriin (pääsäie).</summary>
+            public bool Pidossa;
+            public double KuluS => (System.Diagnostics.Stopwatch.GetTimestamp() - Alku) / (double)System.Diagnostics.Stopwatch.Frequency;
         }
 
         /// <summary>Muuntaa ämpärin osoitteen paikalliseksi (muut osoitteet sellaisenaan).</summary>
@@ -448,13 +513,30 @@ namespace Matkakirja
                         string kohde = otsake.Substring(eka + 1, toka - eka - 1);
                         bool sulje = otsake.IndexOf("Connection: close", StringComparison.OrdinalIgnoreCase) >= 0;
                         (int tila, byte[] data) vastaus = (404, null);
-                        if (kohde.StartsWith("/r/")) vastaus = await Hae(kohde.Substring(3));
+                        // Löydös 119: pidossa oleva maastolaatta tarkistaa ennen uusintaa, odottaako Cesium yhä.
+                        if (kohde.StartsWith("/r/")) vastaus = await Hae(kohde.Substring(3), null, () => AsiakasAuki(asiakas));
                         await Vastaa(virta, vastaus.tila, vastaus.data, kohde, metodi == "HEAD");
                         if (sulje) return;
                     }
                 }
                 catch (Exception) { /* asiakas sulki */ }
             }
+        }
+
+        /// <summary>
+        /// Asiakas (Cesium) odottaa yhä vastausta eli yhteys on auki. Poll(0, SelectRead) on tosi, kun luettavaa on tai
+        /// yhteys on suljettu; Available 0 = suljettu (NSURLSession ei putkita, joten odottava pyyntö ei lähetä mitään).
+        /// Kutsutaan pääsäikeestä, kun palvelimen säie odottaa hakua (ei samanaikaista lukua).
+        /// </summary>
+        static bool AsiakasAuki(TcpClient asiakas)
+        {
+            try
+            {
+                var s = asiakas.Client;
+                if (s == null || !s.Connected) return false;
+                return !(s.Poll(0, SelectMode.SelectRead) && s.Available == 0);
+            }
+            catch (Exception) { return false; }
         }
 
         static async Task<string> LueOtsake(NetworkStream virta)
@@ -520,7 +602,7 @@ namespace Matkakirja
         /// Hakee ämpärin polun: paketti → offline → välimuisti → verkko (tallentaa välimuistiin). Satelliittikansion vastaukset
         /// kirjataan (SatelliittiLoki) harmaiden suorakulmioiden selvitystä varten (build 11).
         /// </summary>
-        async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
+        async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null, Func<bool> pyydetty = null)
         {
             var lahde = new Lahde();
             // Valmiusdiagnostiikka: HTTP-pyynnöt (Cesium ja omat haut, ei esilatausta) luokittain kesken / valmiit / verkosta.
@@ -528,7 +610,7 @@ namespace Matkakirja
             if (luokka != null) Interlocked.Increment(ref luokka[0]);
             try
             {
-                var tulos = await HaeSisalto(polku, esilataus, lahde);
+                var tulos = await HaeSisalto(polku, esilataus, lahde, pyydetty);
                 if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
                     SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
                 return tulos;
@@ -593,11 +675,18 @@ namespace Matkakirja
             return false;
         }
 
-        async Task<(int, byte[])> HaeSisalto(string polku, Esilataus esilataus, Lahde lahde)
+        async Task<(int, byte[])> HaeSisalto(string polku, Esilataus esilataus, Lahde lahde, Func<bool> pyydetty)
         {
             bool esi = esilataus != null;
+            long alku = System.Diagnostics.Stopwatch.GetTimestamp();
             polku = Uri.UnescapeDataString(polku);
-            if (polku.Contains("..")) return (404, null);
+            bool maasto = !esi && Reikakorjaus.OnMaasto(polku);
+            if (maasto) Interlocked.Increment(ref MaastoPyyntoja);
+            if (polku.Contains(".."))
+            {
+                KirjaaVirhe(Reikakorjaus.Luokka(polku, PohjaPolku), polku, 404, 0, alku, "cesiumille");
+                return (404, null);
+            }
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
             if (tyhja && tyhjakuva != null) { lahde.Nimi = "tyhja"; return (200, tyhjakuva); }
             if (KattavuusOhjaus(polku, out bool kattavuusTyhja))
@@ -653,7 +742,13 @@ namespace Matkakirja
             if (esi && esilataus.Peruttu) return (499, null);
             // Osuma-% (Esilataaja erä 1): näkyvän kartan laatta verkosta = huti (esilataus ei ole pyyntö).
             if (!esi) VerkkoOdotus.Osuma("laatta", false);
-            var h = new Haku { Polku = polku, Esi = esilataus };
+            var h = new Haku
+            {
+                Polku = polku, Esi = esilataus, Alku = alku, Maasto = maasto,
+                Luokka = varitasoa ? "vari" : Reikakorjaus.Luokka(polku, PohjaPolku),
+                // Löydös 119: Cesiumin maastolaattaa ei palauteta virheenä verkkovirheen takia, kun Cesium yhä odottaa.
+                Pyydetty = !esi && pyydetty != null && Reikakorjaus.OnMaastolaatta(polku) ? pyydetty : null,
+            };
             // Kiirejono on Cesiumin omille huntu- ja Sentinel-pyynnöille (varitasoa: myös harvat sarjat, KattavuusOhjaus).
             // Harvan sarjan esilataus kulki ennen aina kiirejonoon, joten mustan verhon lähikuvan aikana näkyvän kartan
             // haut jonottivat lennon kohteen Sentinel-esilatauksen takana (lokit/verho-jalkeen: kiire 171 → 47, näkyvä jono 6,
@@ -675,13 +770,23 @@ namespace Matkakirja
             {
                 Interlocked.Increment(ref Varakuvia);
                 varalla.TryAdd(polku, 0);
+                KirjaaVirhe(h.Luokka, polku, tila, h.Yrityksia, alku, "varalaatta");
                 return (200, varakuva);
             }
             // Väritason puuttuva laatta: läpinäkyvä (Cesium piirtäisi epäonnistuneen mustana).
-            if (tila != 200 && varitasoa && tyhjakuva != null) return (200, tyhjakuva);
+            if (tila != 200 && varitasoa && tyhjakuva != null)
+            {
+                KirjaaVirhe(h.Luokka, polku, tila, h.Yrityksia, alku, "tyhja");
+                return (200, tyhjakuva);
+            }
             if (tila == 200 && data != null)
             {
                 Interlocked.Increment(ref Verkosta);
+                if (maasto)
+                {
+                    Interlocked.Increment(ref MaastoVerkosta);
+                    if (h.Yrityksia > 1) Interlocked.Increment(ref MaastoPelastettu);
+                }
                 try
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(f));
@@ -691,7 +796,28 @@ namespace Matkakirja
                 }
                 catch (Exception) { /* välimuisti on valinnainen */ }
             }
-            else Interlocked.Increment(ref Virheita);
+            else
+            {
+                Interlocked.Increment(ref Virheita);
+                if (tila == 499)
+                {
+                    // Peruttu: esilataus, tai Cesium sulki yhteyden maastolaatan pidon aikana (vastausta ei lue kukaan).
+                    if (maasto)
+                    {
+                        Interlocked.Increment(ref MaastoPeruttu);
+                        KirjaaVirhe(h.Luokka, polku, tila, h.Yrityksia, alku, "peruttu");
+                    }
+                }
+                else
+                {
+                    if (maasto)
+                    {
+                        Interlocked.Increment(ref MaastoCesiumVirheita);
+                        if (tila == 404 || tila == 403) Interlocked.Increment(ref Maasto404);
+                    }
+                    KirjaaVirhe(h.Luokka, polku, tila, h.Yrityksia, alku, esi ? "esilataus" : "cesiumille");
+                }
+            }
             return (tila, data);
         }
 
@@ -746,7 +872,7 @@ namespace Matkakirja
             int onnistui = 0;
             foreach (var polku in new System.Collections.Generic.List<string>(varalla.Keys))
             {
-                var h = new Haku { Polku = polku };
+                var h = new Haku { Polku = polku, Luokka = "pohja" };
                 yield return Lataa(h);
                 var (tila, data) = h.Valmis.Task.Result;
                 if (tila != 200 || data == null) continue;
@@ -781,8 +907,12 @@ namespace Matkakirja
             kaynnissa++;
             int tila = 502;
             byte[] data = null;
-            // Tilapäinen virhe (aikakatkaisu, verkko, 5xx) yritetään uudelleen: Cesium ei itse yritä.
-            for (int yritys = 0; yritys < 3; yritys++)
+            // Tilapäinen virhe (aikakatkaisu, verkko, 5xx) yritetään uudelleen: Cesium ei itse yritä. Tavallinen haku:
+            // kolme yritystä (0,6 s ja 2,4 s välein). Pidossa oleva Cesiumin maastolaatta (löydös 119): yksi yritys
+            // per vuoro, ja uusi vuoro porrastetun viiveen jälkeen jonon kautta (Uusi), jottei odotus varaa verkkopaikkaa.
+            bool pito = MaastoUusinta && h.Pyydetty != null;
+            int kerralla = pito ? 1 : 3;
+            for (int yritys = 0; yritys < kerralla; yritys++)
             {
                 if (yritys > 0) yield return new WaitForSecondsRealtime(0.6f * yritys * yritys);
                 using var r = UnityWebRequest.Get(Ampari + h.Polku);
@@ -790,12 +920,59 @@ namespace Matkakirja
                 float hakuAlku = Time.realtimeSinceStartup;
                 yield return r.SendWebRequest();
                 VerkkoOdotus.Haku("laatta", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
+                h.Yrityksia++;
                 if (r.result == UnityWebRequest.Result.Success) { tila = 200; data = r.downloadHandler.data; break; }
-                tila = (int)(r.responseCode > 0 ? r.responseCode : 502);
-                if (tila == 404 || tila == 403) break;
+                // Katkennut siirto antaa responseCode 200 ilman dataa: 502 eikä tyhjä 200 (Reikakorjaus.Koodi).
+                tila = Reikakorjaus.Koodi(r.result == UnityWebRequest.Result.ProtocolError, r.responseCode);
+                if (h.Maasto) Interlocked.Increment(ref MaastoYritysVirheita);
+                bool uusittava = Reikakorjaus.Uusittava(tila);
+                if (!pito) KirjaaVirhe(h.Luokka, h.Polku, tila, h.Yrityksia, h.Alku, uusittava && yritys + 1 < kerralla ? "uusinta" : "loppu");
+                if (!uusittava) break;
             }
             kaynnissa--;
+            if (pito && tila != 200 && Reikakorjaus.Uusittava(tila))
+            {
+                bool pyydetty = Pyytaa(h);
+                bool offline = Application.internetReachability == NetworkReachability.NotReachable;
+                if (Reikakorjaus.Pidetaanko(pyydetty, offline, h.KuluS))
+                {
+                    double viive = Reikakorjaus.UusintaViive(h.Yrityksia);
+                    KirjaaVirhe(h.Luokka, h.Polku, tila, h.Yrityksia, h.Alku,
+                        "pito " + viive.ToString("0.#", System.Globalization.CultureInfo.InvariantCulture) + " s");
+                    if (!h.Pidossa) { h.Pidossa = true; MaastoPidossa++; }
+                    StartCoroutine(Uusi(h, (float)viive));
+                    yield break;
+                }
+                // Cesium sulki yhteyden (vastausta ei lueta) tai laite on ollut ilman verkkoa yli rajan (virhe kuten ennen).
+                if (!pyydetty) tila = 499;
+                else KirjaaVirhe(h.Luokka, h.Polku, tila, h.Yrityksia, h.Alku, "luovutus offline");
+            }
+            else if (pito && tila != 200) KirjaaVirhe(h.Luokka, h.Polku, tila, h.Yrityksia, h.Alku, "loppu");
+            Valmis(h, tila, data);
+        }
+
+        /// <summary>
+        /// Pidossa olevan maastolaatan uusi vuoro viiveen jälkeen (löydös 119): takaisin näkyvän kartan jonoon, jos Cesium
+        /// yhä odottaa ja uusinta on päällä; muuten valmis (499 = Cesium sulki yhteyden, 502 = uusinta kytketty pois).
+        /// </summary>
+        IEnumerator Uusi(Haku h, float viive)
+        {
+            yield return new WaitForSecondsRealtime(viive);
+            bool pyydetty = Pyytaa(h);
+            if (!pyydetty || !MaastoUusinta) { Valmis(h, pyydetty ? 502 : 499, null); yield break; }
+            jono.Enqueue(h);
+        }
+
+        void Valmis(Haku h, int tila, byte[] data)
+        {
+            if (h.Pidossa) { h.Pidossa = false; MaastoPidossa--; }
             h.Valmis.TrySetResult((tila, data));
+        }
+
+        static bool Pyytaa(Haku h)
+        {
+            try { return h.Pyydetty == null || h.Pyydetty(); }
+            catch (Exception) { return false; }
         }
 
         /// <summary>
