@@ -3188,4 +3188,127 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Hévízin järvi on Euroopan suurin lämmin järvi, jossa voi uida – talvellakin vesi pysyy noin 22-asteisena, ja pinnalla leijuu usva.',
     },
   },
+  /*
+   * SWE (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SWE:n tunnuksia
+   * (21 lääniä, Natural Earthin `name`; Örebro on avaimena "Orebro"
+   * ilman ääkköstä). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   * Stockholm: Tukholman kaupunki on pelissä jo laajasti (Nobel,
+   * saaret, Vasa, Gamla stan, saaristo, metrotaide), joten läänin
+   * nosto on kaupungin ulkopuolelta (Birka, Ekerö).
+   *
+   * LÄHTEET (en-Wikipedia, tarkistettu 25.9.2026; sv-Wikipedia
+   * mainittu erikseen):
+   *   Blekinge        — Naval Port of Karlskrona (Unesco 1998, köysipunomo
+   *                     maan pisin puurakennus, tukikohta yhä käytössä)
+   *   Dalarna         — Vasaloppet (90 km Berga/Sälen–Mora, 1922 alkaen,
+   *                     maailman vanhin ja osallistujamäärältään suurin)
+   *   Gotland         — Visby City Wall (n. 3,44 km pystyssä, 27 suurta
+   *                     ja 9 pientä tornia jäljellä)
+   *   Gävleborg       — Gävle goat (1966 alkaen, 43/60 pukkia tuhottu tai
+   *                     vahingoitettu joulukuuhun 2025 mennessä)
+   *   Halland         — Bocksten Man (1300-luvun puoliväli, murhattu ja
+   *                     paaluttu suohon, vaatteet säilyneet, Hallandin
+   *                     kulttuurihistoriallinen museo Varbergissa)
+   *   Jämtland        — Storsjöodjuret (maininta 1635, lääni rauhoitti
+   *                     uhanalaisena lajina 1986, kumottiin 2005)
+   *   Jönköping       — Jönköping (tulitikkuteollisuus 1845–1970,
+   *                     Match Museum ensimmäisessä tehtaassa, Vättern)
+   *   Kalmar          — Öland Bridge (6 072 m, avattu 30.9.1972, Euroopan
+   *                     pisin silta 1972–1998)
+   *   Kronoberg       — Älmhult (ensimmäinen IKEA-tavaratalo, IKEA Museum
+   *                     avattu 30.6.2016, Kronobergin lääni)
+   *   Norrbotten      — Icehotel (Jukkasjärvi) (1990, Torniojoen jää,
+   *                     rakennetaan joka talvi ja sulaa keväällä jokeen)
+   *   Skåne           — Ale's Stones (59 kiveä, 67 m, laivan muoto,
+   *                     Kåseberga n. 10 km Ystadista kaakkoon)
+   *   Stockholm       — Birka (Björkö Mälarissa, Ekerön kunta, n. 750–975,
+   *                     Unesco 1993, "Sweden's oldest town")
+   *   Södermanland    — Nyköping Banquet (10.–11.12.1317, Birger vangitsi
+   *                     veljensä Erikin ja Valdemarin, kuolivat tyrmässä)
+   *   Uppsala         — Gamla Uppsala (kolme kuningaskumpua, n. 550–625,
+   *                     perimätieto Odin, Freyr ja Thor)
+   *   Värmland        — Klarälven (uitto päättyi 1991 viimeisenä
+   *                     Ruotsissa) + Visit Värmland / Vildmark i Värmland
+   *                     (matkailijat rakentavat oman tukkilautan)
+   *   Västerbotten    — Västerbottensost (vain Burträskin meijerissä,
+   *                     perimätieto karjapiika Ulrika Eleonora Lindström
+   *                     1870-luvulla)
+   *   Västernorrland  — High Coast (Unesco 2000, maa kohoaa n. 8 mm
+   *                     vuodessa, korkein rantaviiva n. 285 m)
+   *   Västmanland     — Sala Silver Mine (maanalainen yöpymissviitti) +
+   *                     sv: Sala silvergruva (Kaarle IX: "Riksens
+   *                     förnämsta Clenodium")
+   *   Västra Götaland — Rock Carvings in Tanum (pronssikausi, tuhansia
+   *                     kuvia, Vitlyckehällissä lähes 300)
+   *   Orebro          — Svampen (sienenmuotoinen vesitorni 1958, 58 m,
+   *                     hissi yläkertaan, kahvila terassilla)
+   *   Östergötland    — Rök runestone (n. 760 merkkiä, pisin tunnettu
+   *                     kiveen hakattu riimukirjoitus, Rökin kirkko)
+   */
+  SWE: {
+    Blekinge: {
+      lyhyt: 'Karlskronan laivastotukikohta on Unescon maailmanperintöä ja yhä käytössä, ja sen köysipunomo on Ruotsin pisin puurakennus.',
+    },
+    Dalarna: {
+      lyhyt: 'Maaliskuun ensimmäisenä sunnuntaina tuhannet hiihtävät Sälenistä Moraan: 90 kilometrin Vasaloppet on maailman vanhin hiihtokilpailu.',
+    },
+    Gotland: {
+      lyhyt: 'Visbyn keskiaikaista kaupunginmuuria on yhä pystyssä yli kolme kilometriä, ja sen torneista 36 vartioi edelleen vanhaa kaupunkia.',
+    },
+    'Gävleborg': {
+      lyhyt: 'Gävlen keskustaan pystytetään joka joulu jättimäinen olkipukki, ja vuodesta 1966 lähtien se on poltettu tai rikottu yli 40 kertaa.',
+    },
+    Halland: {
+      lyhyt: 'Varbergin museossa on Bockstenin mies, 1300-luvulla murhattu ja suohon paalutettu, jonka keskiaikaiset vaatteet säilyivät lähes kokonaan.',
+    },
+    'Jämtland': {
+      lyhyt: 'Storsjön-järven hirviöstä on kerrottu jo 1600-luvulta, ja 1986 lääni rauhoitti sen uhanalaisena lajina – päätös kumottiin vasta 2005.',
+    },
+    'Jönköping': {
+      lyhyt: 'Vätternin rannalla Jönköpingin ensimmäisessä tulitikkutehtaassa on nyt tulitikkumuseo – täällä tehtiin turvatikkuja yli sata vuotta.',
+    },
+    Kalmar: {
+      lyhyt: 'Ölannin silta kurottaa Kalmarista saarelle yli kuusi kilometriä, ja valmistuessaan 1972 se oli Euroopan pisin silta.',
+    },
+    Kronoberg: {
+      lyhyt: 'Älmhultiin rakennettiin maailman ensimmäinen Ikea-tavaratalo, ja sen paikalla toimii nyt vuonna 2016 avattu Ikea-museo.',
+    },
+    Norrbotten: {
+      lyhyt: 'Jukkasjärven jäähotelli rakennetaan joka talvi uudelleen Torniojoen jäästä, ja keväällä se sulaa takaisin jokeen.',
+    },
+    'Skåne': {
+      lyhyt: 'Kåsebergan rannikolla Ystadin lähellä seisoo Ales stenar: 59 suurta kiveä, jotka muodostavat 67 metriä pitkän laivan muodon.',
+    },
+    Stockholm: {
+      lyhyt: 'Mälarin Björkön saarella oli viikinkiajan kauppakaupunki Birka, jota pidetään Ruotsin vanhimpana kaupunkina ja joka on nyt Unescon listalla.',
+    },
+    'Södermanland': {
+      lyhyt: 'Nyköpingin linnassa kuningas Birger kutsui veljensä joulupitoihin 1317 ja heitti heidät tyrmään – kumpikaan ei päässyt sieltä elävänä.',
+    },
+    Uppsala: {
+      lyhyt: 'Gamla Uppsalan kolme kuningaskumpua kasattiin yli 1 400 vuotta sitten, ja perimätieto liitti ne aikoinaan Odiniin, Freyriin ja Thoriin.',
+    },
+    'Värmland': {
+      lyhyt: 'Klarälvenin uitto loppui 1991 viimeisenä Ruotsissa, mutta nyt matkailijat rakentavat itse tukkilautan ja lipuvat sillä jokea alas.',
+    },
+    'Västerbotten': {
+      lyhyt: 'Västerbottensjuustoa tehdään vain Burträskin meijerissä, ja tarun mukaan sen keksi siellä 1870-luvulla karjapiika Ulrika Eleonora Lindström.',
+    },
+    'Västernorrland': {
+      lyhyt: 'Korkearannikon maa kohoaa yhä lähes sentin vuodessa jääkauden jäljiltä, ja vanha rantaviiva on nyt noin 285 metrin korkeudessa.',
+    },
+    'Västmanland': {
+      lyhyt: 'Kuningas Kaarle IX kutsui Salan hopeakaivosta valtakunnan kalleimmaksi aarteeksi – nyt sen syvyyksissä voi yöpyä maanalaisessa sviitissä.',
+    },
+    'Västra Götaland': {
+      lyhyt: 'Tanumin kallioihin hakattiin pronssikaudella tuhansia kuvia laivoista, vaunuista ja ihmisistä – Vitlyckessä lähes 300 samaan kallioon.',
+    },
+    Orebro: {
+      lyhyt: 'Örebron sienenmuotoinen vesitorni Svampen valmistui 1958, ja 58 metrin korkeuteen hissi vie kahvilaan ja näköalaterassille.',
+    },
+    'Östergötland': {
+      lyhyt: 'Rökin kirkon vieressä seisoo Rökin riimukivi, jossa on noin 760 riimua – se on pisin tunnettu kiveen hakattu riimukirjoitus.',
+    },
+  },
 };
