@@ -123746,6 +123746,249 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Iguazu Falls, Iguazú National Park, Iguaçu National
+       * Park, Puerto Iguazú, Tancredo Neves Bridge, Rainforest Ecological
+       * Train, Cataratas del Iguazú International Airport, Foz do Iguaçu
+       * International Airport, Itaipu Dam, Guaíra Falls, Parque das Aves),
+       * portugalinkielisestä Wikipediasta (Parque Nacional do Iguaçu:
+       * Santos-Dumont ja maiden lunastus 1916), Wikivoyagesta (Iguaçu
+       * Falls, Puerto Iguazú, Foz do Iguaçu) sekä La Nacionin jutuista
+       * 8.7. ja 12.7.2024 (Garganta del Diablon kävelysiltojen tuho
+       * lokakuun 2023 tulvassa ja uudelleenavaus 13.7.2024) ja Turismo
+       * Misionesin uutisesta 12.12.2024 (varotoimisulku tulvan aikaan)
+       * — teksti omaa.
+       * Nostojen, gallerian ja ennen-nyt-kuvien aiheita (Cabeza de Vaca,
+       * legenda, putousten määrä ja kurkku, rajakiista ja kolmen maan
+       * raja, jesuiittalähetys, puistojen perustaminen, sademetsä,
+       * tukaani, nenäkarhu, perhoset, basaltti) ei toisteta. Hinnat ja
+       * aukioloajat on jätetty pois, koska ne muuttuvat nopeasti. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Brasilian puolen näköalatasanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Nacional do Iguaçú - Iguaçu National Park (14116493062).jpg',
+          lyhyt: 'Brasilian puolen näköalatasanteelta näkyvät Argentiinan puolen kaksiportaiset putoukset.',
+          selite: 'Brasilian puolen rantapolun näköalatasanteelta avautuu '
+            + 'näkymä joen yli Argentiinan puolelle, jossa vesi putoaa '
+            + 'kahtena portaana sademetsän reunalta.',
+          lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Iguazún putouksille ei tulla yhteen kaupunkiin vaan '
+          + 'kahteen maahan. Argentiinan puolella porttina on pieni Puerto '
+          + 'Iguazú, Brasilian puolella suurempi Foz do Iguaçu, ja '
+          + 'kummallakin on oma lentokenttänsä. Putoukset kannattaa katsoa '
+          + 'molemmilta puolilta: Argentiinassa kuljetaan kapearaiteisella '
+          + 'junalla ja kävelysiltoja pitkin aivan putousten päälle ja alle, '
+          + 'Brasiliassa yksi rantapolku näyttää koko putousrintaman kerralla. '
+          + 'Vesi kastelee joka tapauksessa, ja kumiveneet ajavat '
+          + 'matkustajansa tahallaan putousten alle. Sataa ympäri vuoden, ja '
+          + 'vettä virtaa yleensä eniten joulu–helmikuussa. Rajan ylitys käy '
+          + 'vaivattomasti, mutta passi on pidettävä mukana.',
+        artikkeli: {
+          nimi: 'Matkailijan Iguazú',
+          teksti: 'Iguazún putoukset katsotaan kahdesta maasta, ja '
+            + 'kummaltakin puolelta ne näyttävät erilaisilta.',
+          nosto: 'Lokakuun 2023 tulva vei valtaosan Paholaisen kurkun '
+            + 'kävelysilloista, ja reitti oli suljettuna yhdeksän kuukautta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi porttikaupunkia ja Veljeyden silta',
+              teksti: 'Argentiinan puolen lentokenttä on metsän keskellä '
+                + 'noin 16 kilometriä Puerto Iguazústa kaakkoon ja vain '
+                + 'kuutisen kilometriä putouksista etelään, ja sinne '
+                + 'lennetään enimmäkseen Buenos Airesista. Brasilian kenttä '
+                + 'avattiin 1974 Foz do Iguaçun ja kansallispuiston väliin, ja '
+                + 'sinne tulee vuoroja Brasilian suurista kaupungeista; '
+                + 'Wikivoyagen vinkin mukaan koneen vasemmasta ikkunasta voi '
+                + 'laskeuduttaessa nähdä putoukset. Kaupunkeja yhdistää '
+                + 'Iguazú-joen ylittävä Tancredo Nevesin silta, paremmin '
+                + 'tunnettu Veljeyden siltana, joka avattiin marraskuussa '
+                + '1985. Rajan ylitys on arkinen asia, sillä viranomaiset '
+                + 'olettavat useimpien tekevän vain päiväretken, mutta '
+                + 'passileimat on hoidettava. Bussinkuljettaja ei aina pysähdy '
+                + 'raja-asemalle itsestään, joten hänelle kannattaa kertoa '
+                + 'asiasta etukäteen: ilman leimaa palaaminen voi tulla '
+                + 'kalliiksi. Argentiinan puolella poliisi voi tarkistaa '
+                + 'henkilöpaperit kotimaan matkallakin. Vuokra-autolla rajan '
+                + 'yli ajaminen vaatii vuokraamon luvan ja erillisen '
+                + 'vakuutuksen, joka on voimassa Argentiinassa. Fozista '
+                + 'puiston portille pääsee paikallisbussilla, joka kulkee '
+                + 'lentokentän ohi, ja Puerto Iguazún linja-autoasemalta '
+                + 'lähtee vuoroja Argentiinan puolen portille.',
+              kuva: [
+                {
+                  tiedosto: 'Ponte da Fraternidade.jpg',
+                  lyhyt: 'Veljeyden silta yhdistää Foz do Iguaçun ja Puerto Iguazún Iguazú-joen yli.',
+                  selite: 'Vuonna 1985 avattu Tancredo Nevesin silta eli '
+                    + 'Veljeyden silta ylittää Iguazú-joen Brasiliasta '
+                    + 'Argentiinaan; kuva on otettu joen pinnan tasolta '
+                    + 'sillan alta.',
+                  lahde: 'Garon Piceli, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Ingreso a la Aduana de Argentina (Puerto Iguazú) por el Puente Internacional "Tancredo Neves" desde Foz do Iguaçu, Brasil.jpg',
+                  lyhyt: 'Autot jonottavat Argentiinan raja-asemalle sillan päässä Puerto Iguazússa.',
+                  selite: 'Syyskuussa 2025 otetussa kuvassa Brasiliasta '
+                    + 'Veljeyden sillan yli tulleet autot jonottavat '
+                    + 'Argentiinan raja- ja tulliasemalle Puerto Iguazússa.',
+                  lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'IGR03.jpg',
+                  lyhyt: 'Cataratas del Iguazún lentoasema on metsän keskellä lähellä putouksia.',
+                  selite: 'Argentiinan puolen lentoaseman terminaali '
+                    + 'syyskuussa 2022; kenttä on noin 16 kilometriä Puerto '
+                    + 'Iguazústa kaakkoon ja vain kuutisen kilometriä '
+                    + 'putouksista etelään.',
+                  lahde: 'Vmzp85, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Argentiinan puoli: juna ja kävelysillat',
+              teksti: 'Lähes neljä viidestä putouksesta on Argentiinan '
+                + 'puolella, ja siellä kulkija pääsee niiden päälle ja alle. '
+                + 'Portilta lähtee kapearaiteinen Tren Ecológico de la Selva, '
+                + 'jonka vihreä, propaanilla kulkeva veturi vetää avonaisia '
+                + 'puupenkkivaunuja seitsemän kilometrin rataa pitkin '
+                + 'enintään 20 kilometrin tuntinopeutta. Juna pysähtyy, jos '
+                + 'eläin ylittää radan. Cataratas-asemalta alkavat ylempi '
+                + 'polku, joka kulkee putousten yläreunaa pitkin, ja pidempi '
+                + 'alempi polku, joka tuo kävijän putousten juurelle. '
+                + 'Päätepysäkiltä kävellään kilometrin mittaista siltaa '
+                + 'pitkin joen yli Paholaisen kurkun partaalle. Lokakuussa '
+                + '2023 yksi joen historian suurimmista tulvista vei '
+                + 'valtaosan kurkun kävelysilloista sekä 400 metriä '
+                + 'junarataa. Reitti avattiin uudelleen heinäkuussa 2024, ja '
+                + 'se suljetaan yhä varmuuden vuoksi, kun joki nousee. '
+                + 'Väkijoukkoja pääsee pakoon Sendero Macucolle, noin '
+                + 'seitsemän kilometrin edestakaiselle päällystämättömälle '
+                + 'metsäpolulle, joka päättyy pieneen Arrechean putoukseen; '
+                + 'sille kannattaa lähteä hyvissä ajoin päivällä. Polkujen ja '
+                + 'San Martínin saarelle vievän veneen tilanne vaihtelee '
+                + 'vedenkorkeuden mukaan, joten se kannattaa tarkistaa '
+                + 'puiston sivuilta juuri ennen käyntiä.',
+              kuva: {
+                tiedosto: 'Tren Ecológico de la Selva • Iguazú, Argentina (55805).jpg',
+                lyhyt: 'Tren Ecológico de la Selva kuljettaa kävijät avovaunuissa sademetsän halki.',
+                selite: 'Kapearaiteisen junan avovaunut täynnä matkustajia '
+                  + 'kulkevat vehreän metsän reunustamaa rataa pitkin '
+                  + 'Argentiinan kansallispuistossa syyskuussa 2025.',
+                lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Brasilian puoli: koko rintama kerralla',
+              teksti: 'Brasiliaan kuuluu vain runsas viidennes putouksista, '
+                + 'mutta sieltä kokonaisuuden näkee parhaiten. Puiston '
+                + 'sisällä kävijöitä kuljettavat kaksikerroksiset '
+                + 'panoraamabussit, joihin mahtuu 72 matkustajaa: kun '
+                + 'jokaisessa autossa on paljon väkeä, puiston luonto kärsii '
+                + 'vähemmän. Bussit pysähtyvät jokaisen polun alkupäässä. '
+                + 'Päänähtävyys on noin kahden kilometrin rantapolku, jonka '
+                + 'näköalapaikoilta putousrintama avautuu joen toiselle '
+                + 'puolelle. Lopuksi kävelysilta vie veden päälle Paholaisen '
+                + 'kurkun juurelle, Argentiinan tasannetta alemmas, missä '
+                + 'sumu kastelee ja aurinkoisena päivänä sateenkaaria syntyy '
+                + 'jatkuvasti. Polku päättyy Porto Canoasin asemalle, jonka '
+                + 'kohdalla joki virtaa vielä tyynenä putousten yläpuolella. '
+                + 'Wikivoyagen mukaan Brasilian puolelle riittää muutama '
+                + 'tunti, mutta metsään johtaa myös hiljaisempia reittejä, '
+                + 'kuten suoalueen halki kulkeva Bananeiras-polku, jonka '
+                + 'varrella voi nähdä kapusiiniapinoita ja agouteja. Puiston '
+                + 'syntyyn liittyy ilmailun uranuurtaja Alberto '
+                + 'Santos-Dumont: hän näki putoukset 1916 ja käytti '
+                + 'arvovaltaansa, jotta Paranán osavaltio lunasti maat '
+                + 'yleiseen käyttöön. Hänen patsaansa, lentoyhtiö VASP:n '
+                + 'lahja, seisoo puistossa. Brasiliasta voi myös lentää '
+                + 'helikopterilla putousten yllä, mutta Argentiina on '
+                + 'kieltänyt helikopteriajelut luonnolle koituvan haitan '
+                + 'vuoksi.',
+              kuva: {
+                tiedosto: 'Statue of Santos Dumont, Iguaçu National Park, 30-07-2025.jpg',
+                lyhyt: 'Santos-Dumontin patsas muistuttaa lentäjästä, joka ajoi putousten suojelua 1916.',
+                selite: 'Ilmailun uranuurtajan Alberto Santos-Dumontin '
+                  + 'pronssipatsas lierihattuineen seisoo trooppisten '
+                  + 'kasvien keskellä Brasilian kansallispuistossa; kuva on '
+                  + 'heinäkuulta 2025.',
+                lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kastumaan: veneet, sade ja sumu',
+              teksti: 'Iguazúlla kastuu, vaikka ei haluaisi, joten '
+                + 'sadetakki ja kameran suojapussi kuuluvat varustukseen; '
+                + 'kesällä osa kävijöistä kulkee näköalapaikoilla suoraan '
+                + 'uimapuvussa. Argentiinan puolella Iguazu Jungle Explorer '
+                + 'ajaa kumiveneillä putousten juurelle, ja kameralle '
+                + 'annetaan kuivapussi, koska matkustajat kastuvat '
+                + 'läpimäriksi. Brasilian puolella Macuco Safari aloittaa '
+                + 'avoautolla viidakon halki, ja lopuksi kävellään laiturille, '
+                + 'jolta noin 20 hengen kumiveneet nousevat kahden ison '
+                + 'moottorin voimin koskia ylös. Aivan Paholaisen kurkun alle '
+                + 'ei kivikon takia päästä, mutta kapteenit ohjaavat veneen '
+                + 'muiden putousten alle aina kun voivat, ja kuivat vaatteet '
+                + 'kannattaa jättää lähtöpaikan säilytyslokeroon. Ilmasto on '
+                + 'kostea ja subtrooppinen: sataa ympäri vuoden, enimmäkseen '
+                + 'ukkoskuuroina, ja päivän keskilämpötila vaihtelee kesän '
+                + 'noin 25 asteesta talven noin 15 asteeseen. Vettä on '
+                + 'yleensä eniten joulu–helmikuussa, mutta kuivuus voi '
+                + 'yllättää: vuonna 2006 virtaama pysyi poikkeuksellisen '
+                + 'kauan murto-osana tavallisesta. Talvella Puerto Iguazússa '
+                + 'voi olla koleaa, harvoin jopa pakkasta. Seudulla esiintyy '
+                + 'keltakuumetta ja muita hyttysten levittämiä tauteja, joten '
+                + 'rokotussuositukset kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Iguassu Falls, Brazil-Argentina - by boat to the foot of the falls on the Argentine side - prepare to get soaked!! - (24215190874).jpg',
+                lyhyt: 'Kumivene täynnä matkustajia kurvaa Argentiinan puolen putousten juurelle.',
+                selite: 'Punainen kumivene kuljettaa pelastusliiveihin '
+                  + 'pukeutuneita matkustajia ruskeaa, kuohuvaa jokea pitkin '
+                  + 'kohti Argentiinan puolen putouksia, joiden sumu peittää '
+                  + 'kallioseinämän.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Pato, joka hukutti toiset putoukset',
+              teksti: 'Foz do Iguaçun pohjoispuolella Paraná-joen patoava '
+                + 'Itaipun voimala on putousten ohella seudun suurin '
+                + 'nähtävyys. Brasilian ja Paraguayn yhteinen pato valmistui '
+                + '1984, ja sen 20 generaattoria tuottavat kukin noin 700 '
+                + 'megawattia. Mittasuhteet selviävät Iguazún kautta: '
+                + 'putousten keskimääräinen vesimäärä riittäisi pyörittämään '
+                + 'vain kahta generaattoria, ja täysin auki olevat tulvaportit '
+                + 'päästävät läpi 40 kertaa putousten keskivirtaaman. Patoa '
+                + 'kierretään opastetuilla kierroksilla sekä Brasilian että '
+                + 'Paraguayn puolelta. Padon hinta näkyy ylävirrassa: kun '
+                + 'tekojärvi täyttyi lokakuussa 1982, sen alle jäivät '
+                + 'Guaíran putoukset, joiden virtaamaa pidettiin yhtenä '
+                + 'maailman suurimmista. Viimeisinä kuukausina tuhannet '
+                + 'tulivat katsomaan niitä vielä kerran, ja tammikuussa 1982 '
+                + 'ylikuormitettu riippusilta romahti ja vei kymmeniä '
+                + 'ihmishenkiä. Eläimiä pääsee katsomaan lähempää kahdessa '
+                + 'pienemmässä kohteessa. Kansallispuiston porttia vastapäätä '
+                + 'on vuonna 1994 avattu Parque das Aves, jossa kävelypolku '
+                + 'kulkee 16 hehtaarin metsään rakennettujen suurten '
+                + 'lintuhäkkien läpi. Puerto Iguazússa Güirá Oga hoitaa '
+                + 'pelastettuja lintuja ja muita eläimiä ja yrittää palauttaa '
+                + 'ne luontoon.',
+              kuva: {
+                tiedosto: 'Usina Hidroelétrica Itaipu Binacional - Itaipu Dam (17174823579).jpg',
+                lyhyt: 'Itaipun padon tulvauomat laskeutuvat jyrkkinä kohti Paraná-jokea.',
+                selite: 'Itaipun padon harjalta näkyvät hyppyrimäen '
+                  + 'muotoiset tulvauomat, jotka ovat kuvassa lähes kuivina; '
+                  + 'niiden alapuolella Paraná-joki virtaa metsäisten '
+                  + 'rantojen välissä.',
+                lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
