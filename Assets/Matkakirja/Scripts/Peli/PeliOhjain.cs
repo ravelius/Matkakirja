@@ -999,6 +999,7 @@ namespace Matkakirja.Natiivi
                 // vaihe 'move', PaivitaSiirtoKohteet; Laitetestaajan pariteettiero 24.9.2026).
                 dialogi.PiilotaHeitto();
             PaivitaSiirtoKohteet();
+            PaivitaMatkareitit();
             LiikuMuuttui?.Invoke();
             AjastaAutomaattinenHeitto();
         }
@@ -1283,6 +1284,9 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = t.Saapui;
             matkaKohde = b.Value;
             Tila = SilmukanTila.Matkalla;
+            // Reitit piirretään lähtöpaikasta koko siirron ajan (web siirtoKaynnissa, B8).
+            siirtoLahto = t.Lahto;
+            PaivitaMatkareitit();
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
             // Lennon alun repliikki kerran istunnossa; muuten saapumispuhe kohteeseen.
             var lentoRepliikki = t.Tapa == Kulkutapa.Lento ? luennat.OtaLentoAlku() : null;
@@ -1354,6 +1358,9 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = null;
             // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
             if (kaupunki != null) LuentoOhitettu = false;
+            // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
+            siirtoLahto = null;
+            PaivitaMatkareitit();
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
