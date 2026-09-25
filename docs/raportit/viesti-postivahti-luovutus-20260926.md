@@ -50,3 +50,6 @@ get_usage `resetsAt` on UTC (Z). EEST = UTC+3. 5h-kiintiö nollautuu resetsAt 20
 Kiintiölaskelma (viikko): nollautuu ti 29.9. klo 02:00 EEST; vauhti ~6,1 %/h (pe 12:55 → la 00:07: 2 → 70 %); kestävä vauhti ~0,4 %/h; 85 % ylittyy nykyvauhdilla ~la 02:30. Fable lähettää roolille "yövauhti-säännön" itse; tarkista kiintiön kehitys ja ilmoita, jos vauhti ei hidastu.
 
 Tämän sessio nollataan (clear_session self) Fablen pyynnöstä 26.9. ~00.15; Fable lähettää aloitusviestin.
+
+## Päivitys 26.9. klo 00.2x (Fable)
+YÖVAUHTI PURETTU (purkuviesti lähetetty kaikille 9 roolille 00.2x). Normaali vauhti, max 3 agenttia/rooli. Uusi tilinvaihtosääntö: viikko ≥ 90 % → lähetä kaikille rooleille "kirjoita luovutus + aloitusviesti nyt ja pushaa (tilinvaihto lähestyy), jatka sitten työtä" ja ilmoita Fablelle; viikko ≥ 97 % → PushNotification omistajalle "Viikkokiintiö täynnä — vaihda tili". 85 % hälytys Fablelle + Push säilyy.
