@@ -1,3 +1,9 @@
+## 2026-09-25 14:20 UTC — Lontoo: PR #3213 valmis junaan
+
+Kaikki kymmenen Lontoon leikattua kohdetta on avoimessa PR:ssä #3213. Ensimmäinen Globe-versio ylitti niukasti täyttörajan (0,604); tein sen kokonaan uudestaan, lopullinen täyttö 0,186. Muutkin lopulliset kuvat ovat alle 0,6:n täyttörajan, reunat 0. Jokainen on katsottu, leikkaustesti ja mittaus läpäisivät. Poikkeuslista ja manifesti sisältyvät PR:ään.
+
+**PR #3213 valmis junaan:** https://github.com/ravelius/Matkakirja/pull/3213 — Lontoo (10). PR on avoin, ei vielä mergeätty tai julkaistu. Tilauksen 64 kuvasta 27 on toimitettu PR:iin, 37 jatkuu.
+
 ## 2026-09-25 14:10 UTC — Ljubljana: PR #3210 valmis junaan
 
 Seitsemän Ljubljanan leikattua 1024 × 1024 RGBA WebP -kohdetta on avoimessa PR:ssä #3210: Keskustori, Križanke, linna, Lohikäärmesilta, Prešernin aukio, Tivoli-puisto ja Tromostovje. Kuvat on katsottu, leikkaustesti ja mittaus läpäisivät; täyttö 0,230–0,431 ja reuna 0. Poikkeuslista ja mittausmanifesti ovat PR:ssä.
