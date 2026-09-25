@@ -5175,3 +5175,7 @@ Todennäköinen syy coreaudiodille: simulaattorien ääni AudioListener-korjauks
 ## KUORMA 500–1000 MYOS 8 YTIMELLA (simctl JUMITTAA >2 min, coreaudiod 290 %, 6 SIMULAATTORIA PELEINEEN) → FABLE: POLTTO TAUOLLE JATKOKOHTAAN, JATKO klo 22 TAYSILLA 16 YTIMELLA (KARTTASEPAN ALKUPERAINEN SUUNNITELMA); PAIVAN TODENNUKSET BUILD 13:EEN ETUSIJALLE; FABLE SAMMUTTI JOUTILAAN PELIN iPAD PRO 13:STA (KAYNNISSA 04.36 ALKAEN), LINSSISEPALLE JA MUILLE SAMMUTUSSAANTO (25.9.2026 klo 08.05)
 
 Työnjohtajan harkinta: aamun 4 ytimen sääntö olisi ollut oikea päivällä — poltto ei sovi päiväkäyttöön tällä koneella, kun simulaattorit ja käännökset pyörivät.
+
+## POLTTO PYSAYTETTY JATKOKOHTAAN klo 08.06 (KARTTASEPPA): PYRAMIDI VALMIS 378/378 (POHJA, VIIVAT, NOSTOT, RANTA), PALLOSTA 8/24 OSAA; JATKO AJASTETTU klo 22.00 16 YTIMELLA (VAHTI 02.45, LEVY < 25 Gt), VALMIS ~23.30 (25.9.2026 klo 08.06)
+
+Julkaisija saa ajaa savukkeet ja sisältöjunan nyt.
