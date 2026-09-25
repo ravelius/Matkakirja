@@ -1974,6 +1974,9 @@ namespace Matkakirja.Natiivi
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();
+            // Maan rajat pois maailmatilassa (Natiivisepän PalloKierto.MaailmaTila, pariteetti D7/D8/D11; setteri ei tee
+            // mitään samalla arvolla, sammutus puristaa kameran heti maan rajaan).
+            if (kierto != null) kierto.MaailmaTila = Paavalikko.Maailma;
             PaivitaAutomaattiheitto();
             if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
