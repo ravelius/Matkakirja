@@ -5395,3 +5395,7 @@ Perustelu (työnjohtajan harkinta): omistaja hereillä ja odottaa build 13:a; Z9
 ## BUILD 13 = PROTO-MASTER ddb3cfb6 (MERGE juna/b13 75cd4c89, PUU c168c2e4), SHA JULKAISIJALLA, UNITY KIINNI VIENNIN AJAN; BUILD 14: POHJA-25 (RasterinLaatikko 7e895c11, TODENNETTU 3272e371) Z9:N JALKEEN, AVAUSKAARO-11 JA MAAPILLERI-41 MERGE-PYYNNON JALKEEN; Z9 klo 12.59 x ≈ 190/512 (25.9.2026 klo 13.05)
 
 Laitetestaajan iPad-raportti on PR #3153:ssa (mergettävissä) → Julkaisijan docs-junaan; Laitetestaaja lepää seuraavaan testikäännökseen.
+
+## POI-GENETIIVIVIKA (Rouenin., Le Mansin 24.) EI OLE ALUENIMISSA VAAN LYHENNYSSAANNOSSA (18 MERKKIA + PISTE, SAMA WEBISSA): 244 PAAKARTAN NOSTOLTA PUUTTUU nimio (FRA 14) → FABLE: LINJA A — NIMIO DATAAN KOHTEITTAIN, SAANTOA EI MUUTETA; KARTTASEPPA TEKEE EHDOTUSLISTAN, SISALTOKIRJURI TARKISTAA JA VIE DATAAN, SIIRTOSEPPA PAKETTIVERSIO (25.9.2026 klo 13.07)
+
+Lista PR:nä docs/raportit/nimiot-ehdotus-20260925.md (tunniste, nimi, nykyinen lyhennys, ehdotus ≤ 18 merkkiä, ei genetiiviä eikä pistettä). Karttasepän Z9-sync ajaa setsid-irrotettuna klo 12.55 alkaen (LaunchAgentin esti luokitin). Vaihtoehdot B (… pisteen sijaan) ja C (raja 24) hylätty: web on malli, ratkaisu on datassa.
