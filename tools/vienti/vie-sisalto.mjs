@@ -187,7 +187,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.41 offline.json: rasteripohja sarjaan 2026-09-25 (Z0–Z9), maittain z6–z8 kuten ennen ja
  *        z9 vain kaupunkien ympärillä listana välejä (lahteet.rasteri.kaupunkitaso: säde 60 km,
  *        kaupungit tyyppi 'kaupunki', sama rajaus kuin satelliittipinnalla) — Natiiviseppä, build 13.
- *   1.42 maakuntarajat kaikista webin maakuntamaista (141, oli 8) ja juuren maat [{ iso3, nimi }];
+ *   1.42 maakuntarajat kaikista webin maakuntamaista (138, oli 8; webin maakuntienMaa) ja juuren maat [{ iso3, nimi }];
  *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
  */
 export const SKEEMAVERSIO_TARKKA = '1.42';

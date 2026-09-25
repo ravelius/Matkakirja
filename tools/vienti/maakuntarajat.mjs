@@ -32,7 +32,7 @@ import { harvenna } from './maarajat.mjs';
 const TAMA = dirname(fileURLToPath(import.meta.url));
 /*
  * SKEEMA 1.42 (Fable 25.9.2026, Karttasepän löydökset 105/107): kaikki webin
- * maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT), nimet webin
+ * maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, joilla maakuntienMaa), nimet webin
  * maakunnanNimi-funktiolla. Tiedosto on gzipattu (8 Mt → 2,4 Mt), jotta
  * repon historia ei kasva joka aineistoversiolla raakana JSONina.
  */
@@ -149,10 +149,12 @@ export function kaariTopologia(alueet, tol = MAAKUNTARAJOJEN_TOLERANSSI, pyor = 
 
 async function paivita() {
   const { PALLOMAAKUNNAT_JUURI, PALLOMAAKUNNAT_VERSIO, puraMaa } = await import('../../js/pallomaakunnat.js');
-  const { MAAKUNTIEN_MAAT, maakunnanNimi } = await import('../../js/karttatyokalu-maakunnat.js');
+  const { MAAKUNTIEN_MAAT, maakunnanNimi, maakuntienMaa } = await import('../../js/karttatyokalu-maakunnat.js');
+  // Web näyttää maakunnat vain maille, joilla on nimiä (maakuntienMaa; GUF, PRI, NFK ja FLK ovat tyhjiä).
+  const listalla = MAAKUNTIEN_MAAT.filter(({ iso }) => maakuntienMaa(iso));
   const raaka = [];
   const ilman = [];
-  for (const { iso } of MAAKUNTIEN_MAAT) {
+  for (const { iso } of listalla) {
     const [binV, jsonV] = await Promise.all([fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.bin`), fetch(`${PALLOMAAKUNNAT_JUURI}${iso}.json`)]);
     // Maa listalla ilman omaa aineistoa (esim. GUF on FRA:n sisällä): web ei piirrä sille maakuntia.
     if (binV.status === 404 || jsonV.status === 404) { ilman.push(iso); continue; }
@@ -180,12 +182,12 @@ async function paivita() {
   });
   alueet.sort((a, b) => (a.id < b.id ? -1 : 1));
   const omat = new Set(alueet.map((a) => a.iso3));
-  const maat = MAAKUNTIEN_MAAT.filter(({ iso }) => omat.has(iso)).map(({ iso, nimi }) => ({ iso3: iso, nimi }));
+  const maat = listalla.filter(({ iso }) => omat.has(iso)).map(({ iso, nimi }) => ({ iso3: iso, nimi }));
   writeFileSync(MAAKUNTATIEDOSTO, gzipSync(`${JSON.stringify({
     lahde: 'Natural Earth 10m admin_1_states_provinces (public domain), webin maakunta-aineisto ämpärissä',
     versio: PALLOMAAKUNNAT_VERSIO, toleranssi: MAAKUNTARAJOJEN_TOLERANSSI, maat, alueet, kaaret: topo.kaaret,
   })}\n`, { level: 9 }));
-  return { alueita: alueet.length, puuttuu: raaka.length - alueet.length, kaaria: topo.kaaret.length, maita: maat.length, listalla: MAAKUNTIEN_MAAT.length, ilmanAineistoa: ilman };
+  return { alueita: alueet.length, puuttuu: raaka.length - alueet.length, kaaria: topo.kaaret.length, maita: maat.length, listalla: listalla.length, ilmanAineistoa: ilman };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

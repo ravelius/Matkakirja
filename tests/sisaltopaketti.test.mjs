@@ -1368,10 +1368,11 @@ test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympä
 });
 
 test('skeema 1.42: maakuntarajat kaikista webin maakuntamaista, juuren maat', async () => {
-  const { MAAKUNTIEN_MAAT, maakunnanNimi } = await import('../js/karttatyokalu-maakunnat.js');
+  const { MAAKUNTIEN_MAAT, maakunnanNimi, maakuntienMaa } = await import('../js/karttatyokalu-maakunnat.js');
   const k = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json'));
   assert.ok(k.maat.length >= 130, `maita ${k.maat.length}`);
-  const listalla = new Set(MAAKUNTIEN_MAAT.map((m) => m.iso));
+  const listalla = new Set(MAAKUNTIEN_MAAT.filter((m) => maakuntienMaa(m.iso)).map((m) => m.iso));
+  assert.deepEqual([...listalla].sort(), k.maat.map((m) => m.iso3).sort(), 'maat = webin maakuntienMaa-maat');
   const omat = new Set(k.alkiot.map((a) => a.iso3));
   assert.deepEqual(k.maat.map((m) => m.iso3).sort(), [...omat].sort());
   for (const m of k.maat) assert.ok(listalla.has(m.iso3) && m.nimi, m.iso3);
