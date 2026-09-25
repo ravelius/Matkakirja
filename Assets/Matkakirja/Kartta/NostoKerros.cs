@@ -28,6 +28,7 @@ namespace Matkakirja
     /// Aineisto: kokoelmat/karttavalot.json (sama joukko kuin webin pallon nostokerros, skeema 1.24)
     /// ja maarajat.json:n bbox (maan leveys).
     /// </summary>
+    [DefaultExecutionOrder(-10)] // ennen KaupunkiMerkitiä: kaupunkien nimet väistävät tämän kehyksen ikoneita (VaraaIkonit)
     public class NostoKerros : MonoBehaviour
     {
         public static NostoKerros Instanssi { get; private set; }
@@ -374,6 +375,19 @@ namespace Matkakirja
         }
 
         bool LahiAuki => UloinOsuus > 0 && UloinOsuus <= lahizoomOsuus;
+
+        /// <summary>
+        /// Varaa näytettävien nostojen IKONIT ilman nimiöitä (löydös 50 vaihe 2, web nostot.js KIINTEÄ MUSTE ON
+        /// NIMILADONNAN VARAUS, LIIKKUVA EI): NimiLadonta.NostonIkonilaatikko, kerroin = pikseliä pisteelle.
+        /// Palauttaa varattujen määrän (0, kun kerros ei ole näkyvissä).
+        /// </summary>
+        public int VaraaIkonit(Ruutuvaraukset v, float kerroin)
+        {
+            if (!Nakyvissa) return 0;
+            foreach (var s in naytettavat)
+                v.Varaa(NimiLadonta.NostonIkonilaatikko(s.Ruutu.x, s.Ruutu.y, s.Taso, s.Aihe, ZoomKerroin, kerroin));
+            return naytettavat.Count;
+        }
 
         void Paivita(List<Nosto> nostot)
         {

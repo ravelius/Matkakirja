@@ -23,9 +23,9 @@ namespace Matkakirja
     ///   Teksti on pinnan tangenttitasossa: koko korkeus_m × leveys_m, kulma rivin kulma. Näkyy vain omilla
     ///   pallotasoillaan (taso kamerakorkeudesta), häivytetään kallistuksessa yli noin 70°:n ja käännetään
     ///   180°, jos se olisi ruudulla ylösalaisin. Merien alla webin aaltomerkki (Rajaviiva-nauha).
-    /// - Väistö: yhteinen ruututörmäys <see cref="KaupunkiMerkit.Varaukset"/>: kaupungit varaavat ensin, sitten
-    ///   tämä kerros lisää nostojen IKONIT ilman nimiöitä (löydös 50 vaihe 2, web nostot.js:3835–3880: nimiöllisen
-    ///   noston lappu ei ole varaus vaan väistää nimiä sovittelussa) ja omat nimet järjestyksessä
+    /// - Väistö: yhteinen ruututörmäys <see cref="KaupunkiMerkit.Varaukset"/>: KaupunkiMerkit varaa ensin nostojen
+    ///   IKONIT ilman nimiöitä (löydös 50 vaihe 2, web nostot.js:3835–3880: nimiöllisen noston lappu ei ole varaus
+    ///   vaan väistää nimiä sovittelussa), sitten kaupunkien pisteet ja nimiöt; tämä kerros lisää omat nimet järjestyksessä
     ///   maakunta/nykyalue > meri > valtameri. Kaupunkien ja nostojen nimet pysyvät omissa piirtäjissään.
     /// - <see cref="Laatikot"/> (webin nimet.laatikot()): ladottujen nimien laatikot, joita Natiivi-UI:n nostojen
     ///   sovittelu väistää; <see cref="LaatikotMuuttuivat"/> herää, kun ne muuttuvat.
@@ -33,7 +33,7 @@ namespace Matkakirja
     /// - Napautus ei osu nimiin (ei törmäyslaatikoita).
     /// Testikomennot (Komennot.cs): nimet paalle|pois|laske|valtameret paalle|pois|siirto &lt;x&gt;.
     /// </summary>
-    [DefaultExecutionOrder(50)] // KaupunkiMerkitin ja NostoKerroksen LateUpdaten jälkeen (ne varaavat ensin)
+    [DefaultExecutionOrder(50)] // NostoKerroksen (−10) ja KaupunkiMerkitin LateUpdaten jälkeen (ne varaavat ensin)
     public class Nimikerros : MonoBehaviour
     {
         public static Nimikerros Instanssi { get; private set; }
@@ -86,8 +86,9 @@ namespace Matkakirja
         /// <summary>
         /// LADOTTUJEN NIMIEN LAATIKOT (löydös 50 vaihe 2, webin nimet.laatikot() → nostot.sovittele({ nimet })):
         /// viimeisimmän ladonnan näkyvät nimet esteinä nostojen nimiöiden sovittelulle. Ensin
-        /// <see cref="KaupunkiLaatikoita"/> kaupunkien laatikkoa (KaupunkiMerkit: nimiö 4 × 2 pt:n varalla ja oma
-        /// piste, pareittain), sitten näytettäviksi ladotut alue-, meri- ja valtamerinimet (ilman väistön varaa).
+        /// <see cref="KaupunkiLaatikoita"/> kaupunkien laatikkoa (KaupunkiMerkit: kaikkien näkyvien kaupunkien
+        /// pisteet, sitten näkyvät nimiöt 4 × 2 pt:n varalla), sitten näytettäviksi ladotut alue-, meri- ja
+        /// valtamerinimet (ilman väistön varaa).
         /// Nostojen ikonit eivät ole listassa.
         /// KOORDINAATISTO: ruudun PIKSELIT, origo vasen ALAKULMA, y ylös (kuten Input ja NostoKerros.Nosto.Ruutu);
         /// Rect.xMin/yMin = vasen alakulma. UI Toolkitin paneeliin: kulmat (x, Screen.height − y) →
@@ -344,23 +345,23 @@ namespace Matkakirja
         {
             var kello = Stopwatch.StartNew();
             var varaukset = merkit != null ? merkit.Varaukset : omat;
+            bool aloitettu = varaukset.Kehys == Time.frameCount;
             varaukset.Varmista(Time.frameCount);
+            // Nostot: vain IKONIT (löydös 50 vaihe 2, web nostot.js KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI).
+            // KaupunkiMerkit varaa ne ennen kaupunkeja (web nostot.paivita → nimet.lado); jos kaupunkikerros ei
+            // aloittanut kehystä, ikonit varataan tässä. Nimiö ei varaa: Natiivi-UI:n sovittelu väistää Laatikot.
+            // Nimibudjettia ei vähennetä nimiöllisillä nostoilla kuten webissä (HTML_MERKKIEN_KATTO − pelia −
+            // nimiollisia), koska natiivissa ei ole yhteistä merkkikattoa: aluenimiä rajaa vain pooli (enintaan).
+            // Poltettuja nostoja ei natiivissa ole (web varaa niiden koko musteen).
+            int ikoneita;
+            if (merkit != null && aloitettu) ikoneita = merkit.NostoIkoneita;
+            else ikoneita = NostoKerros.Instanssi != null ? NostoKerros.Instanssi.VaraaIkonit(varaukset, kerroin) : 0;
             int kaupunkeja = varaukset.Maara;
             ehdokkaat.Clear();
             var gt = georeferenssi.transform;
             Vector3 kameraPaikka = kamera.transform.position;
             if (nakyva)
             {
-                // Nostot (porras 1): vain IKONIT (löydös 50 vaihe 2, web nostot.js KIINTEÄ MUSTE ON NIMILADONNAN
-                // VARAUS, LIIKKUVA EI). Nimiö ei varaa: Natiivi-UI:n sovittelu (NostotKartalla) väistää Laatikot.
-                // Nimibudjettia ei vähennetä nimiöllisillä nostoilla kuten webissä (HTML_MERKKIEN_KATTO − pelia −
-                // nimiollisia), koska natiivissa ei ole yhteistä merkkikattoa: aluenimiä rajaa vain pooli (enintaan).
-                // Poltettuja nostoja ei natiivissa ole (web varaa niiden koko musteen).
-                var nk = NostoKerros.Instanssi;
-                if (nk != null && nk.Nakyvissa)
-                    foreach (var s in nk.Naytettavat)
-                        varaukset.Varaa(NimiLadonta.NostonIkonilaatikko(s.Ruutu.x, s.Ruutu.y, s.Taso, s.Aihe, nk.ZoomKerroin, kerroin));
-
                 for (int i = 0; i < rivit.Count; i++)
                 {
                     var r = rivit[i];
@@ -415,15 +416,15 @@ namespace Matkakirja
             foreach (var r in rivit) r.nakyy = false;
             foreach (int i in ladotut) rivit[i].nakyy = true;
             Naytetty = ladotut.Count;
-            PaivitaLaatikot(varaukset, kaupunkeja);
+            PaivitaLaatikot(varaukset, ikoneita, kaupunkeja);
             LadontaMs = (float)kello.Elapsed.TotalMilliseconds;
         }
 
         /// <summary>Laatikot tästä ladonnasta; tapahtuma vain, jos sisältö muuttui.</summary>
-        void PaivitaLaatikot(Ruutuvaraukset varaukset, int kaupunkeja)
+        void PaivitaLaatikot(Ruutuvaraukset varaukset, int ikoneita, int kaupunkeja)
         {
-            NimiLadonta.NimienLaatikot(varaukset.Laatikot, kaupunkeja, ehdokkaat, ladotut, nimiLaatikot);
-            int kk = Mathf.Min(kaupunkeja, nimiLaatikot.Count);
+            NimiLadonta.NimienLaatikot(varaukset.Laatikot, ikoneita, kaupunkeja, ehdokkaat, ladotut, nimiLaatikot);
+            int kk = Mathf.Clamp(kaupunkeja - ikoneita, 0, nimiLaatikot.Count);
             bool muuttui = kk != KaupunkiLaatikoita || !NimiLadonta.Samat(nimiLaatikot, edellisetLaatikot);
             if (!muuttui) return;
             KaupunkiLaatikoita = kk;
