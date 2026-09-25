@@ -150,6 +150,12 @@ namespace Matkakirja.Natiivi
         {
             jakso = j;
             if (j == null) return;
+            // Saattolento (Amerikat): kääre ajaa kameraa rintaman edellä; tämän kutsun on tultava ennen Esityksen ajoa.
+            if (Kaare() is { } kaare)
+            {
+                kaare.Rintama ??= RintamaNyt;
+                kaare.Jakso(j.Id);
+            }
             maisema?.Aseta(j.Maisema);
             sumu?.Jakso(j);
             hiukkaset?.Jakso(j);
@@ -227,6 +233,48 @@ namespace Matkakirja.Natiivi
             KarttaKerrokset.Valokeila(nykyinen, toinen, kuvaPaalla ? HamaraKuva : HamaraPerus, kesto);
             keilaPaalla = true;
             lepoAlkaa = Time.unscaledTime + kesto;
+        }
+
+        static IhmisenMatka2Ymparisto Kaare() => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Kaare;
+
+        /// <summary>Vanojen selkärangan kärki kellon mukaan (saattolento); null ennen vanoja.</summary>
+        (double Lat, double Lon)? RintamaNyt()
+        {
+            var e = (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Linssi?.Esitys;
+            var v = kerros != null ? kerros.Vanat : null;
+            if (e == null || v == null) return null;
+            return v.Karki(e.Vuosia) is { } k ? (k.Lat, k.Lon) : ((double Lat, double Lon)?)null;
+        }
+
+        /// <summary>
+        /// SAATTOLENNON KEILA (suunnitelma: "keila seuraa rintamaa etelään"): pääkeila kulkee rintaman mukana ja määränpää
+        /// palaa heikkona toisena keilana. Saattolennon päätyttyä jakson oma keila palaa (Nayta).
+        /// </summary>
+        public const float SaattoKeilaKm = 800f, SaattoKeilaAskelS = 0.5f;
+        float seuraavaSaattoKeila;
+        bool saattoKeila;
+
+        void SaataKeila()
+        {
+            bool saattaa = Kaare()?.Saattaa ?? false;
+            if (!saattaa)
+            {
+                // Saattolento korvasi lähtökeilan: perillä vain kohteen keila.
+                if (saattoKeila) { saattoKeila = false; toinen = null; if (keilaPaalla) Nayta(Kesto(1.2f)); }
+                return;
+            }
+            float nyt = Time.unscaledTime;
+            if (nyt < seuraavaSaattoKeila || RintamaNyt() is not { } r) return;
+            seuraavaSaattoKeila = nyt + SaattoKeilaAskelS;
+            var paa = new KarttaKerrokset.Keila(r.Lat, r.Lon, SaattoKeilaKm, 0.55f, null, 0.14f);
+            var maaranpaa = nykyinen;
+            maaranpaa.voimakkuus = ToisenVoima;
+            maaranpaa.kirkkaus = 0f;
+            KarttaKerrokset.Valokeila(paa, maaranpaa, kuvaPaalla ? HamaraKuva : HamaraPerus,
+                Kesto(saattoKeila ? SaattoKeilaAskelS * 1.1f : 1.2f));
+            saattoKeila = true;
+            keilaPaalla = true;
+            lepoAlkaa = -1f;   // ei lepatusta saattolennon aikana
         }
 
         /// <summary>Soihdun lepatus levossa olevaan luolakeilaan (ks. LepatusHz).</summary>
@@ -336,6 +384,7 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             if (keilaOdottaa) AsetaJaksonKeila();
+            SaataKeila();
             Lepata();
             // Ruudun kierto kesken kuvan: alue ja väistö uudelleen.
             if (kuvaKohde != null && (Screen.width != ruutuW || Screen.height != ruutuH)) Asettele();

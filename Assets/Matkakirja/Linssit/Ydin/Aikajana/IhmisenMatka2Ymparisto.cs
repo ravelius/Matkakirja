@@ -11,6 +11,13 @@
 //
 // Pelaajan siirtämää kameraa ei lasketa (ajon kohteesta poikkeava asento). Sulkiessa paluuajo palauttaa linssin
 // avaushetken kallistuksen (IhmisenMatkaLinssi talteen), jos kääre muutti sitä. Vähennetty liike: ei laskeutumista.
+//
+// SAATTOLENTO (erä 5, Amerikat; suunnitelma "pitkä saattolento rintaman takana"): jaksossa SaattoJakso kamera ei lennä
+// suoraan jakson rajaukseen, vaan kulkee etenevän rintaman (vanojen selkärangan kärki, Rintama) edellä. PalloKierto pitää
+// pohjoisen ylhäällä ja kallistaa pohjoiseen, joten "takaa" kuvaaminen ei onnistu: kamera on SaattoEtaisyysKm rintaman
+// eteläpuolella ja katsoo sitä kohti, jolloin hehkuva rintama tulee kohti ja vana jatkuu sen takana horisonttiin.
+// Ensimmäinen osa-ajo on pehmeä (SaattoAlkuS), sen jälkeen lyhyet lineaariset osa-ajot (SaattoAskelS) seuraavat rintamaa sen
+// omalla nopeudella. Kun rintama on kohteessa (SaattoPerillaKm), kamera laskeutuu tavalliseen lähikuvaan.
 using System;
 
 namespace Matkakirja.Linssit.Aikajana
@@ -26,6 +33,23 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Laskeutuminen alkaa näin kauan ajon lopun jälkeen (s), ettei se katkaise saapumisen jarrutusta.</summary>
         public const double LaskunViive = 0.3;
 
+        /// <summary>Saattolennon jakso (Amerikat: White Sands → Monte Verde).</summary>
+        public const string SaattoJakso = "chile";
+        /// <summary>Saattolennon korkeus (km), etäisyys rintaman eteläpuolella (km) ja kallistus (°).</summary>
+        public const double SaattoKorkeusKm = 2200.0, SaattoEtaisyysKm = 1300.0, SaattoKallistus = 35.0;
+        /// <summary>Ensimmäinen osa-ajo (pehmeä, s) ja seuraavat lineaariset osa-ajot (s).</summary>
+        public const float SaattoAlkuS = 1.6f, SaattoAskelS = 0.5f;
+        /// <summary>Rintama on kohteessa, kun se on tätä lähempänä (km): saattolento päättyy laskeutumiseen.</summary>
+        public const double SaattoPerillaKm = 500.0;
+
+        /// <summary>Etenevän rintaman kärki kellon mukaan (Unity: VanaKerros.Karki(Esitys.Vuosia)); null = ei tiedossa.</summary>
+        public Func<(double Lat, double Lon)?> Rintama;
+        /// <summary>Saattolento käynnissä.</summary>
+        public bool Saattaa { get; private set; }
+        bool saattoAlkoi;
+        double seuraavaAskel;
+        static readonly Func<double, double> Lineaarinen = x => x;
+
         readonly ILinssiYmparisto y;
         (double Lat, double Lon)? lahikuva;
         Nakyma? ajonKohde;
@@ -40,6 +64,14 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Jakson havainnekuvan kohde (laskeutuminen, kun jakson ajo on perillä) tai null (alue, loppu: ei laskua).</summary>
         public void Lahikuva((double Lat, double Lon)? paikka) => lahikuva = Kallista && !y.VahennettyLiike ? paikka : null;
 
+        /// <summary>Jakso alkaa (IhmisenMatka2Tehosteet): saattolento SaattoJaksossa, muuten pois.</summary>
+        public void Jakso(string id)
+        {
+            Saattaa = id == SaattoJakso && Kallista && !y.VahennettyLiike && Rintama != null;
+            saattoAlkoi = false;
+            seuraavaAskel = y.Aika;
+        }
+
         /// <summary>Laskeutumisen korkeus (m) saapumiskorkeudesta: ei koskaan ylöspäin.</summary>
         public static double LaskunKorkeus(double saapuminen) =>
             Math.Min(saapuminen, Math.Clamp(saapuminen * LaskunOsuus, LaskuMinKm * 1000.0, LaskuMaxKm * 1000.0));
@@ -49,6 +81,13 @@ namespace Matkakirja.Linssit.Aikajana
 
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null)
         {
+            if (Saattaa)
+            {
+                // Saattolento ajaa kameraa itse: Esityksen jakson ajo vain talteen (sen kohde ei ole enää kameran asento).
+                ajonKohde = kohde;
+                ajoPerilla = y.Aika + Math.Max(0f, kestoS);
+                return;
+            }
             if (kallistukseen == null)
             {
                 // Esitys ajaa suoraan kääreen oman kallistuksen jälkeen; paluuajo palauttaa avaushetken kallistuksen.
@@ -65,6 +104,7 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Joka kehys (sovittimen Paivita): laskeutuminen, kun jakson ajo on perillä ja kamera on yhä sen kohteessa.</summary>
         public void Paivita()
         {
+            if (Saattaa) { PaivitaSaatto(); return; }
             if (lahikuva is not { } p || y.Aika < ajoPerilla + LaskunViive) return;
             lahikuva = null;
             var nyt = y.Kamera;
@@ -72,6 +112,37 @@ namespace Matkakirja.Linssit.Aikajana
             y.AjaKamera(new Nakyma(p.Lat, p.Lon, LaskunKorkeus(nyt.Korkeus)), LaskuS, null, Kallistus);
             omaKallistus = true;
             muutettu = true;
+        }
+
+        /// <summary>Saattolennon osa-ajo rintaman eteläpuolelle, tai laskeutuminen, kun rintama on kohteessa.</summary>
+        void PaivitaSaatto()
+        {
+            double nyt = y.Aika;
+            if (nyt < seuraavaAskel || Rintama?.Invoke() is not { } r) return;
+            if (lahikuva is { } p && Km(r, p) < SaattoPerillaKm)
+            {
+                Saattaa = false;
+                lahikuva = null;
+                y.AjaKamera(new Nakyma(p.Lat, p.Lon, LaskunKorkeus(y.Kamera.Korkeus)), LaskuS, null, Kallistus);
+                omaKallistus = true;
+                muutettu = true;
+                return;
+            }
+            var kohde = new Nakyma(Math.Max(-85.0, r.Lat - SaattoEtaisyysKm / 111.2), r.Lon, SaattoKorkeusKm * 1000.0);
+            float kesto = saattoAlkoi ? SaattoAskelS * 1.1f : SaattoAlkuS;
+            y.AjaKamera(kohde, kesto, saattoAlkoi ? Lineaarinen : null, SaattoKallistus);
+            seuraavaAskel = nyt + (saattoAlkoi ? SaattoAskelS : SaattoAlkuS * 0.8);
+            saattoAlkoi = true;
+            omaKallistus = true;
+            muutettu = true;
+        }
+
+        /// <summary>Isoympyräetäisyys (km).</summary>
+        public static double Km((double Lat, double Lon) a, (double Lat, double Lon) b)
+        {
+            double r = Math.PI / 180.0;
+            double c = Math.Sin(a.Lat * r) * Math.Sin(b.Lat * r) + Math.Cos(a.Lat * r) * Math.Cos(b.Lat * r) * Math.Cos((b.Lon - a.Lon) * r);
+            return Math.Acos(Math.Clamp(c, -1.0, 1.0)) * 6371.0;
         }
 
         /// <summary>Kamera ajon kohteessa: sama paikka (1°) ja korkeus (10 %).</summary>

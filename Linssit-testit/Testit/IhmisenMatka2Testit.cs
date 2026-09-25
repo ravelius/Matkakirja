@@ -1,3 +1,4 @@
+using System;
 using Matkakirja.Linssit.Aikajana;
 
 namespace Matkakirja.Linssit.Testit
@@ -229,6 +230,73 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0f, IhmisenMatka2Sumukuva.Seutu(null).Peitto);
             Oleta.Tosi(IhmisenMatka2Sumukuva.AvausJaksossa("afrikka") && IhmisenMatka2Sumukuva.AvausJaksossa("jebel-irhoud"), "avaus");
             Oleta.Tosi(!IhmisenMatka2Sumukuva.AvausJaksossa("omo"), "avaus päättyy ensimmäisen kohteen jälkeen");
+        }
+
+        // ── Saattolento (erä 5, Amerikat): kamera rintaman edellä, sitten laskeutuminen kohteeseen ──
+
+        static readonly (double Lat, double Lon) MonteVerde = (-41.5, -73.2);
+
+        [Testi] static void SaattolentoSeuraaRintamaaJaLaskeutuuPerilla()
+        {
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v);
+            (double Lat, double Lon)? rintama = (33.0, -106.0);   // White Sands
+            k.Rintama = () => rintama;
+            k.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            Oleta.Tosi(k.Saattaa, "saattolento päällä");
+            k.Lahikuva(MonteVerde);
+            k.AjaKamera(new Nakyma(-20, -65, 9_000_000), 9f);
+            Oleta.Sama(0, v.Loki.FindAll(r => r == "ajo").Count, "Esityksen jakson ajo ei mene kameraan");
+            k.Paivita();
+            Oleta.Sama(1, v.Loki.FindAll(r => r == "ajo").Count, "ensimmäinen osa-ajo");
+            Oleta.Tosi(Math.Abs(v.Ajo.Value.Lat - (33.0 - IhmisenMatka2Ymparisto.SaattoEtaisyysKm / 111.2)) < 1e-9, "rintaman eteläpuolella");
+            Oleta.Sama(-106.0, v.Ajo.Value.Lon);
+            Oleta.Sama(IhmisenMatka2Ymparisto.SaattoKorkeusKm * 1000, v.Ajo.Value.Korkeus);
+            Oleta.Sama<double?>(IhmisenMatka2Ymparisto.SaattoKallistus, v.AjonKallistus);
+            Oleta.Sama(IhmisenMatka2Ymparisto.SaattoAlkuS, v.AjonKesto, "pehmeä alku");
+            Oleta.Tosi(v.AjonPehmennys == null, "oletuspehmennys alussa");
+            v.Kello = 0.5;
+            k.Paivita();
+            Oleta.Sama(1, v.Loki.FindAll(r => r == "ajo").Count, "alku ajetaan melkein loppuun ennen seuraavaa");
+            rintama = (10.0, -84.0);
+            v.Kello = 1.3;
+            k.Paivita();
+            Oleta.Sama(2, v.Loki.FindAll(r => r == "ajo").Count, "osa-ajo");
+            Oleta.Tosi(v.AjonPehmennys != null && Math.Abs(v.AjonPehmennys(0.3) - 0.3) < 1e-12, "lineaarinen osa-ajo");
+            Oleta.Sama(-84.0, v.Ajo.Value.Lon);
+            rintama = (-38.0, -72.5);   // alle 500 km Monte Verdestä
+            v.Kello = 1.9;
+            v.Asento = new Nakyma(-50, -72, 2_200_000);
+            k.Paivita();
+            Oleta.Tosi(!k.Saattaa, "perillä: saattolento päättyy");
+            Oleta.Sama(MonteVerde.Lat, v.Ajo.Value.Lat, "laskeutuminen kohteen ylle");
+            Oleta.Sama<double?>(IhmisenMatka2Ymparisto.Kallistus, v.AjonKallistus);
+            Oleta.Sama(IhmisenMatka2Ymparisto.LaskuS, v.AjonKesto);
+            int ajoja = v.Loki.FindAll(r => r == "ajo").Count;
+            v.Kello = 20;
+            k.Paivita();
+            Oleta.Sama(ajoja, v.Loki.FindAll(r => r == "ajo").Count, "ei toista laskeutumista");
+        }
+
+        [Testi] static void SaattolentoVainAmerikoissaEikaVahennetyllaLiikkeella()
+        {
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v) { Rintama = () => (33.0, -106.0) };
+            k.Jakso("beringia");
+            Oleta.Tosi(!k.Saattaa, "muu jakso");
+            k.AjaKamera(new Nakyma(60, -170, 5_000_000), 9f);
+            Oleta.Sama(1, v.Loki.FindAll(r => r == "ajo").Count, "Esityksen ajo sellaisenaan");
+            v.Vahennetty = true;
+            k.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            Oleta.Tosi(!k.Saattaa, "vähennetty liike: ei saattolentoa");
+            v.Vahennetty = false;
+            k.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            Oleta.Tosi(k.Saattaa, "Amerikat");
+            k.Jakso("aikahyppy");
+            Oleta.Tosi(!k.Saattaa, "seuraava jakso lopettaa kesken");
+            var ilman = new IhmisenMatka2Ymparisto(new ValeYmparisto());
+            ilman.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            Oleta.Tosi(!ilman.Saattaa, "ilman rintamaa ei saattolentoa");
         }
     }
 }
