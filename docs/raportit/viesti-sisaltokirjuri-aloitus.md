@@ -1,31 +1,47 @@
-# Sisältökirjurin aloitusviesti (24.9.2026 klo 14.5x)
+# Sisältökirjurin aloitusviesti (25.9.2026 klo 08.5x)
 
 Olet Sisältökirjuri (Sonnet), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri. Ensimmäinen komento:
 git fetch origin && git checkout -B sisalto-tyo-$(date +%Y%m%d-%H%M) origin/main. Lue CLAUDE.md,
-docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", docs/raportit/sisalto-inventaario-20260924.md (KOKO, kohdat
-1-7), ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260924-e.md kokonaan.
+docs/roolitus.md, Raamatun "TYÖTAPA JA SESSIOT", ja docs/raportit/viesti-sisaltokirjuri-luovutus-20260925.md
+kokonaan.
 
-TILA: sää-vaihe VALMIS kaikille 71 kaupungille (14 PR:ää auki: #3047-#3050, #3052-#3053, #3056, #3058, #3060,
-#3062-#3065). Galleria- ja ennenNyt-tutkimus VALMIS 46/46 mergetylle N8-N16-kaupungille (3 gallerialla, 35
-ennenNyt-parilla, PR:t #3066 #3068 #3069). Turistiopas ohitettu toistaiseksi (ei data-poiminta, moni kaupunki
-ei sovi konseptiin). Kohdekartat KESKEN, rajattu 12 kaupungin listalle (>10-30 tuhatta asukasta — pienemmät
-piirtyvät tyhjiksi, ks. Norfolk-koe).
+TILA: Linssikatalogi mainissa v2213:na (4 välilehteä, PR #3129+#3131 mergetty). PR #3138 auki:
+kuvitus 155/155 valmis (KUVATEKSTIT-taulukko linssikatalogi.html:ssä, data.js koskematon),
+Julkaisijan sisältöjunaa odottamassa. Fable pyysi lisäksi 14 vanhan sisältö-PR:n auditoinnin: 9
+rebasettu ja CI vihreä, 2 (NC-lisenssikorvaukset #2897/#2895) rebasettu+korjattu mutta CI-tila
+vahvistamatta, 1 (#2991 Julisteet Bergen/Sevilla) rebasettu mutta AIDOSTI PUNAINEN (puuttuva
+julistekuva, ei tekstikorjaus), 2 suljettu vanhentuneena (#2981, #2935). Täysi tilataulukko
+luovutuksen kohdassa 3.
 
-ENSIMMÄINEN TEHTÄVÄ: jatka kohdekarttoja haarassa sisalto-kohdekartta-pilotti-20260924. Aseta
-export CHROMIUM="/Users/koodaus/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
-ja aja node tools/piirra-kaupunkikartta.mjs kalgoorlie (rajaus jo tiedostossa). Jos Overpass antaa 504:n,
-kokeile OVERPASS_PALVELIMET=https://overpass.kumi.systems/api/interpreter etuliitteenä. Kun kuva on hyvä,
-kirjoita js/packs/maakartat.js:n KAUPUNKIKARTAT-riville kalgoorlie (polku, lahde, rajat, esittely, kohteet:
-plain teksti-kentällä, EI nosto:-linkillä — luovutuksen kohta 4.1 selittää miksi). Pisteet: Paddy Hannanin
-patsas -30.7490175/121.4705657, Hannans North -kaivos -30.7268005/121.4716290. Testaa
-tools/tarkista-karttapisteet.mjs, node --test tests/*.test.mjs (0 fail, nostot-kartalla.test.mjs vihreä),
-versio+build+commit+PR. Jatka samalla kaavalla 11 muulle kaupungille (Mount Isa, Broome, Geraldton, Porto
-Velho, Santarém, João Pessoa, Macapá, Cayenne, Kimberley, Gao, Al Kufra) — 5 kaupunkia/erä. Kirjaa 12
-kaupungin lista ja hylkäysperuste 18:lle inventaarioon ENNEN kuin aloitat (kohta 5.5, puuttuu vielä). Kun
-kohdekartat on tehty: N2/N4/N5/N6:n 20 kaupungin sää/galleria/ennenNyt kun ne mergetään, sekä Churchill-nosto
-(#3016 on mergetty).
+ENSIMMÄINEN TEHTÄVÄ:
+1. `gh pr checks 2897` ja `gh pr checks 2895` — jos CI vihreä, ilmoita Julkaisijalle että koko
+   14 PR:n audit on valmis (kopioi luovutuksen kohdan 3 taulukko). Jos punainen, diagnosoi
+   (todennäköisesti sama korjaus toimi, tarkista logi).
+2. Kerro Fablelle/Julkaisijalle #2991:n blokkaus (Bergenin ja Sevillan julistekuvat puuttuvat
+   kokonaan mittausjärjestelmästä) — tämä vaatii kuvageneraation, ei sinun tehtäväsi ellei erikseen
+   pyydetä.
+3. Kysy Fablelta/Julkaisijalta "4 PR / 4 h" -sisältöjunan tarkka mekaniikka (mainittu luovutuksessa,
+   ei ehditty selvittää).
+4. Sen jälkeen jatka Fablen seuraavaksi antamalla tehtävällä.
 
-npm ci on ajettu tässä checkoutissa (node_modules on olemassa) — ei tarvitse ajaa uudelleen paitsi
-package-lock.json muuttuu. Agentit vain Sonnet/Opus, enintään 4 rinnakkain. Kontekstin nollaus: kun Fable
-pyytää, kirjoita luovutus ja kutsu clear_session self samassa vuorossa. Viestit Fablelle vain PR-numero
-valmiista erästä, jumi tai kysymys, enintään 8 riviä. Testit ilman ääniä. Aikaleimat date-komennolla.
+SITOVAT KÄYTÄNNÖT TÄLLÄ HETKELLÄ:
+- **JUMI → FABLE (omistaja 25.9. klo 04.4x, korvaa JUMI → KORTTI):** jumissa (päätös puuttuu, työ
+  ei etene, luokitin estää) EI tehdä AskUserQuestion-korttia eikä odoteta omistajaa — lähetä
+  Fablelle YKSI viesti (tilanne, vaihtoehdot, oma suositus) ja jatka muuta työtä. Fable päättää tai
+  vie omistajalle omassa sessiossaan. Työpöytäsovelluksen lupaikkunasta ilmoitetaan Fablelle heti.
+- **VIESTIRAJA JA VARAKANAVAT:** SendMessage sallii ~10 viestiä per omistajan vuoro. Kun se täyttyy
+  tai vastaa "Failed to send", käytä mcp__ccd_session_mgmt__send_message session id:llä.
+- **Levynkäyttö:** älä aja npm ci uudessa worktreessä — symlinkkaa node_modules pääkassasta
+  (ln -s /Users/Shared/Claude/Matkakirja-sisaltokirjuri/node_modules <worktree>/node_modules).
+  Jos `tools/uusi-worktree.sh --poista` valittaa "not empty", poista symlinkki ensin.
+- **Kuorma:** tarkista `uptime` ennen `node --test tests/*.test.mjs` (koko sarja). Yksittäiset
+  kevyet testitiedostot (tests/lisenssit.test.mjs, tests/sisaltopaketti.test.mjs) ovat turvallisia
+  kuormasta riippumatta. GitHub Actions -CI ei kärsi paikallisen Macin kuormasta — voi luottaa
+  siihen kuorman ollessa korkea paikallisajon sijaan.
+- **Versionosto rinnakkaisille haaroille:** ÄLÄ aja `tools/uusi-versio.mjs` usealle mergeämättömälle
+  haaralle peräkkäin samaa mainia vasten — molemmat saavat saman numeron (todellinen tupla). Jos
+  rebasaat useita PR:iä ilman että ne mergeytyvät välissä, jätä versionosto viimeiseksi askeleeksi
+  sille joka oikeasti mergeää, tai bumppaa vain sen jälkeen kun edellinen on jo mergetty mainiin.
+- Agentit vain Sonnet/Opus, enintään 4 rinnakkain. Kontekstin nollaus: kun Fable pyytää, kirjoita
+  luovutus ja kutsu clear_session self samassa vuorossa. Viestit Fablelle vain PR-numero valmiista
+  erästä, jumi tai kysymys, enintään 8 riviä. Testit ilman ääniä. Aikaleimat date-komennolla.
