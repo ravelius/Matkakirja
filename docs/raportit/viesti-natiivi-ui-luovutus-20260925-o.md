@@ -15,7 +15,7 @@ Merkitse valmis rivi sinne ("→ KORJATTU <sha>"), jos Fable ei tee sitä. Tät�
 - avaruus-96 (astronautin chatin portti, minipulun sarake/koko/leijunta, näppäimistö, ↑ pois käytöstä, otsikkopilleri
   turva-alueen alle)
 
-## Merge-pyynnössä Natiivisepällä (todennettu iPhonella, merge-tree ok)
+## Mergetty junaan klo 15.2x (Natiiviseppä; aloituslento-84 on myös junassa f457e0cd)
 - natiivi-ui/nimiolukko-106 4f79430d: Natiivisepän patch ja mittari "MATKAKIRJA nostot: kylkivaihdot vedossa N" (5 vetoa, 0).
   Sisältää pelikoodari/nosto-nimio (93), koska samaa tiedostoa muutetaan. Video b13o/video-b13-nimiolukko106-iphone-pieni.mp4.
 - natiivi-ui/matkakirja-86 c931ab2b: 86 (tunnelmarivi pois), 87 (lappu "Ateena, elokuussa 1873 🔊" → "Ateena 🔊",
@@ -45,6 +45,11 @@ Merkitse valmis rivi sinne ("→ KORJATTU <sha>"), jos Fable ei tee sitä. Tät�
 - Sisältökirjuri 95: miniatyyrit ovat alfallisia. Uudet 6 kohtauskuvaa sisältävät tarkoituksella taustan. Jos vanhat
   rakennusleikkaukset (esim. ateena-akropolis.webp) näyttävät natiivissa taustallisilta, vika on ImageIO-purussa
   (Kuvat.cs). Tarkista.
+
+- Maakunnat kaikille maille (105-data): Siirtosepän skeema 1.42 tuo maakuntarajojen kokoelmaan juuriavaimen
+  `maat` = [{ iso3, nimi }] (PR #3185). Jos maa ei ole listalla, sille ei näytetä maakuntia (listassa vain maan nimi
+  tai ei mitään). Karttasepän web-data on PR #3182 (MAAKUNNAT_KAIKKI; "ei maakuntia" = tyhjä olio). Tarkista
+  UI/Maakunnat.cs:n maalista (nyt 8 kuratoitua), kun 1.42 on tuotannossa.
 
 ## Hyväksytyt poikkeamat (Fable)
 Rivit 40 ja 31/41 Liiku (turva-alue), 31 iPhonella (löydös 73: lappu pelkkä nimi), 13 ja 40 (löydös 74: palkki), 13 iPad
