@@ -5203,3 +5203,7 @@ Puhelimen pääte liitti heredocin yhdelle riville — yksiriviset printf-komenn
 ## SISALTOKIRJURI 71 % → LUOVUTUS JA NOLLAUS KASKETTY (LUOVUTUS -20260925.md, clear_session SAMASSA VUOROSSA, LEPOILMOITUS TILATTU) (25.9.2026 klo 08.55)
 
 Postivahdin ilmoitus klo 08.5x.
+
+## SUDO-LUVAT PR #3142 (JULKAISIJA, VAIN NELJA sudo-RIVIA settings.json:IIN, OMISTAJAN COMMIT 569b087a7) — MERGE OMISTAJALLE GITHUBISSA, PIDOSSA JONOSTA; HUOLTOKOMENNOT-RAAMATTU MAINISSA #3141 (25.9.2026 klo 08.58)
+
+Muut Fablen haaran lupaerot (gh/aws/security/xcodebuild) eivät ole mukana; kysytään omistajalta erikseen.
