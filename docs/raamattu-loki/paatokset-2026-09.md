@@ -5271,3 +5271,7 @@ Merge-pyyntö proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b13-70-c16-d
 ## IHMISEN MATKAN MUSTA RUUTU EI OLLUT BUGI (LINSSISEPPA): NATIIVI-UI AVASI LINSSIN UI-ESIMERKKIKOMENNOLLA (ui linssi matka) ILMAN YTIMEN ESITYSTA; OIKEA KAAVA (linssi ihmisen-matka → esitys alusta → esitys kaynnista) ANNETTU, 74 d2 (f7918f7) TODENNETTAVISSA, EI VIELA JUNASSA (25.9.2026 klo 09.56)
 
 Todistus proto-3d/lokit/musta-20260925/ (kertoja 0,1 → 23 s, jaksot 0 → 2).
+
+## LOYDOS 78 MITATTU (NATIIVI-UI): iPHONE b12-PALKKI 62 pt (PELKKA TURVA-ALUE) → 70 pt (ylapalkki-73 92444e1f); iPAD NATIIVI JO 60 pt = WEB → FABLE: +4 pt = 64 pt HYVAKSYTTYNA POIKKEAMANA OMISTAJAN PYYNNOSTA, OMISTAJA VAHVISTAA BUILD 13:STA; KUVAPARI WEB + b12 + b13 MERGE-PYYNTOON (25.9.2026 klo 10.04)
+
+Raamatun 78-kohta: 'iPadilla webin mitta' tarkentuu: web 60 pt, natiivi 64 pt.
