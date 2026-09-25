@@ -5451,3 +5451,7 @@ Mahdollinen kevyt keino myöhemmin: ohittaa suodattimien laskenta hiljaisuudessa
 ## SISALTOPAKETTI 1.40 TUOTANNOSSA (SIIRTOSEPPA): 1.x v102 SKEEMA 1.40, 2.0 v48, AMPARI 498/498, YLI 18 MERKIN NIMIOITA 0; NATIIVISEPPA JA NATIIVI-UI ILMOITETTU; #3155 (1.41 OFFLINE Z9) ODOTTAA Z9:AA (25.9.2026 klo 13.48)
 
 POI-nimivika (Rouenin.) korjaantuu natiivissa, kun peli lataa paketin 1.40; ei build-riippuvuutta.
+
+## OMISTAJA: EI TEHNYT #3163:N MERGEA → CODEX MERGESI ITSE JUNAN OHI; SAANTO CODEXILLE POSTILAATIKKOON (posti/fable-codex-ei-mergea-mainiin-20260925.md): CODEX EI MERGEA PR:IAAN MAINIIN, PR JAA AUKI JULKAISIJAN SISALTOJUNAAN, RIVI POSTILAATIKKOON 'PR #n VALMIS JUNAAN'; EI SUORIA PUSHEJA MAINIIN EIKA .claude/-MUUTOKSIA (25.9.2026 klo 13.49)
+
+Vahinkoa ei syntynyt (#3166 yhdistyi puhtaasti). Julkaisija voi tarvittaessa rajoittaa ravelius-tilin suoran mergen haarasuojauksella — omistajan päätös.
