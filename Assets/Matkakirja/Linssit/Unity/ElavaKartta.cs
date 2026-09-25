@@ -46,6 +46,18 @@ namespace Matkakirja.Natiivi
 
         enum Vaihe { Lataa, Soi, Kuva, Loppu }
 
+        /// <summary>
+        /// Säädöt ilman käännöstä (komento "elava saato [nimi arvo]"; kertoimet, 1 = oletus): läikkien, viivojen, nimen,
+        /// laivan ja valojen koko, hunnun ja täytön peitto, hämärän voima sekä aurinko (aamu- ja päiväkulmat).
+        /// </summary>
+        public static readonly Dictionary<string, float> Saadot = new Dictionary<string, float>
+        {
+            ["laikka"] = 1, ["viiva"] = 1, ["nimi"] = 1, ["laiva"] = 1, ["valo"] = 1,
+            ["huntu"] = 0.8f, ["taytto"] = 1, ["hamara"] = 0.62f,
+        };
+
+        static float Saato(string n) => Saadot.TryGetValue(n, out var v) ? v : 1;
+
         LinssiOhjain ohjain;
         PalloKierto kierto;
         CesiumGeoreference georeferenssi;
@@ -104,6 +116,22 @@ namespace Matkakirja.Natiivi
                     break;
                 case "jatka":
                     if (e != null && e.kohtaus != null) { e.vaihe = Vaihe.Soi; e.Kirjaa($"jatkuu {e.t:F2} s"); }
+                    break;
+                case "saato":
+                    if (osat.Length > 3)
+                    {
+                        float arvo = (float)Luku(3, 1);
+                        switch (osat[2])
+                        {
+                            case "aamuatsimuutti": ElavaKohtaus.AamuAtsimuutti = arvo; break;
+                            case "aamukorkeus": ElavaKohtaus.AamuKorkeus = arvo; break;
+                            case "paivaatsimuutti": ElavaKohtaus.PaivaAtsimuutti = arvo; break;
+                            case "paivakorkeus": ElavaKohtaus.PaivaKorkeus = arvo; break;
+                            default: Saadot[osat[2]] = arvo; break;
+                        }
+                    }
+                    ohjain.Kirjaa("elävä: säädöt " + string.Join(", ", Saadot.Select(kv => $"{kv.Key} {kv.Value:0.###}")) +
+                        $", aurinko aamu {ElavaKohtaus.AamuAtsimuutti:0}°/{ElavaKohtaus.AamuKorkeus:0}° päivä {ElavaKohtaus.PaivaAtsimuutti:0}°/{ElavaKohtaus.PaivaKorkeus:0}°");
                     break;
                 case "ui":
                     UiPiiloon = !(osat.Length > 2 && osat[2] == "1");
@@ -296,9 +324,9 @@ namespace Matkakirja.Natiivi
             }
 
             // Kynäviivat: rajat (ruskea muste), joet (sininen muste), reitti (punainen muste).
-            rajat = Viivat("Maakuntarajat", kohtaus.Rajat, new Color(0.25f, 0.18f, 0.11f, 0.9f), 1.5f);
-            joet = Viivat("Joet", kohtaus.Joet, new Color(0.17f, 0.35f, 0.55f, 0.95f), 1.9f);
-            reitti = Viivat("Kuljettu reitti", new List<Piirtoviiva> { kohtaus.Reitti }, new Color(0.70f, 0.16f, 0.12f, 0.95f), 2.6f);
+            rajat = Viivat("Maakuntarajat", kohtaus.Rajat, new Color(0.25f, 0.18f, 0.11f, 0.9f), 1.5f * Saato("viiva"));
+            joet = Viivat("Joet", kohtaus.Joet, new Color(0.17f, 0.35f, 0.55f, 0.95f), 1.9f * Saato("viiva"));
+            reitti = Viivat("Kuljettu reitti", new List<Piirtoviiva> { kohtaus.Reitti }, new Color(0.70f, 0.16f, 0.12f, 0.95f), 2.6f * Saato("viiva"));
 
             // Musteläikät: nostot + heräävän maakunnan löydösmerkit (4 pientä läikkää nimen alle).
             laikat = Materiaali("Laikka");
@@ -402,7 +430,7 @@ namespace Matkakirja.Natiivi
                 }
                 kolmiot.AddRange(new[] { pohja, pohja + 1, pohja + 2, pohja, pohja + 2, pohja + 3 });
             }
-            foreach (var n in kohtaus.Nostot) Lisaa(n.Nosto.Paikka, LaikanSade[(int)n.Nosto.Luokka], (float)n.Nosto.Luokka);
+            foreach (var n in kohtaus.Nostot) Lisaa(n.Nosto.Paikka, LaikanSade[(int)n.Nosto.Luokka] * Saato("laikka"), (float)n.Nosto.Luokka);
             // Löydösmerkit: rivi pieniä läikkiä nimen eteläpuolelle (luokka 2 = ei hehkua).
             int merkit = Math.Max(1, kohtaus.HeraavanNostoja);
             for (int i = 0; i < merkit; i++)
@@ -461,7 +489,7 @@ namespace Matkakirja.Natiivi
             // Nimi makaa kartalla pohjoinen ylös: paikallinen +X itään, +Y pohjoiseen, katse ylhäältä (−ylös).
             go.transform.localRotation = Quaternion.LookRotation(-ylos, pohj);
             // TMP:n 3D-tekstissä fonttikoko 10 = 1 yksikkö: koko 36 → rivi ~3,6 yksikköä → noin 14 km kartalla.
-            go.transform.localScale = Vector3.one * 3900f;
+            go.transform.localScale = Vector3.one * 3900f * Saato("nimi");
             nimi.ForceMeshUpdate();
             var info = nimi.textInfo;
             nimenMinX = float.MaxValue; nimenMaxX = float.MinValue;
@@ -595,17 +623,18 @@ namespace Matkakirja.Natiivi
             Aurinko.Atsimuutti = kohtaus.Aurinko(aika, out double korkeus);
             Aurinko.KorkeusAst = korkeus;
             double hamara = kohtaus.Hamara(aika);
-            KarttaKerrokset.PallonSavy(hamara > 0 ? (float)(1 - 0.62 * hamara) : (float?)null);
+            KarttaKerrokset.PallonSavy(hamara > 0 ? (float)(1 - Saato("hamara") * hamara) : (float?)null);
 
             if (huntu != null)
             {
                 huntu.SetFloat("_Sade", (float)(kohtaus.HuntuSadeKm(aika) / 6371.0));
                 huntu.SetFloat("_Vesiraja", (float)kohtaus.Vesiraja(aika));
-                huntu.SetFloat("_Peitto", kohtaus.HuntuNakyy(aika) ? 0.8f : 0f);
+                huntu.SetFloat("_Peitto", kohtaus.HuntuNakyy(aika) ? Saato("huntu") : 0f);
             }
             if (taytto != null)
             {
                 taytto.SetFloat("_Aika", ta);
+                taytto.SetFloat("_Peitto", Saato("taytto"));
                 taytto.SetFloat("_Asettuminen", (float)kohtaus.Asettuminen(aika));
                 var (sade, valmis) = kohtaus.Tulva(aika);
                 taytto.SetFloat("_TulvaSade", (float)(sade / 6371.0));
@@ -671,7 +700,7 @@ namespace Matkakirja.Natiivi
                 float s = (float)(tila.Suunta * Math.PI / 180);
                 Vector3 kulku = ita * Mathf.Sin(s) + pohj * Mathf.Cos(s);
                 float suunta = Vector3.Dot(kulku, oikea) >= 0 ? 1 : -1;
-                float puoli = (float)(LaivanPituus / 2), korkeus = (float)(LaivanPituus / 2);
+                float puoli = (float)(LaivanPituus * Saato("laiva") / 2), korkeus = puoli;
                 laivaMesh.SetVertices(new[] { c - oikea * puoli, c + oikea * puoli, c + oikea * puoli + ylos * korkeus, c - oikea * puoli + ylos * korkeus });
                 laivaMesh.RecalculateBounds();
                 laiva.SetFloat("_Suunta", suunta);
@@ -730,7 +759,7 @@ namespace Matkakirja.Natiivi
                 Vector3 kohti = kameraL - c;
                 float etaisyys = kohti.magnitude;
                 // Koko ruutupisteinä (sama kaikilla korkeuksilla), pieni värinä kuin kaupungin valot.
-                float koko = ValonKokoPx * LinssiOhjain.Pistekerroin * 2f * etaisyys * tanPuoli / Mathf.Max(1, Screen.height) * 0.5f;
+                float koko = ValonKokoPx * Saato("valo") * LinssiOhjain.Pistekerroin * 2f * etaisyys * tanPuoli / Mathf.Max(1, Screen.height) * 0.5f;
                 koko *= (float)(0.8 + 0.4 * voima);
                 var (_, _, ylos) = Kanta(kohtaus.Valot[i].Paikka);
                 Vector3 k = kohti / Mathf.Max(etaisyys, 1);

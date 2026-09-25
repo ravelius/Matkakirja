@@ -51,8 +51,11 @@ namespace Matkakirja.Linssit.Elava
         public const double ReittiAlku = 14.8, ReitinKesto = 2.2, ValonHaive = 0.6;
         public const double Kesto = MaailmaLoppu + Pito;
 
-        /// <summary>Aamuaurinko: matala itä → etelä (atsimuutti pohjoisesta myötäpäivään, korkeus asteina).</summary>
-        public const double AamuAtsimuutti = 80, AamuKorkeus = 12, PaivaAtsimuutti = 160, PaivaKorkeus = 30;
+        /// <summary>
+        /// Aamuaurinko: matala itä → etelä (atsimuutti pohjoisesta myötäpäivään, korkeus asteina). Muutettavissa ajossa
+        /// (komento "elava saato aamukorkeus 10"), jotta valo viritetään ilman käännöstä.
+        /// </summary>
+        public static double AamuAtsimuutti = 80, AamuKorkeus = 12, PaivaAtsimuutti = 160, PaivaKorkeus = 30;
         /// <summary>Hunnun alkusäde (vain Ateena näkyy) ja reunan leveys kilometreinä.</summary>
         public const double HuntuAlkuKm = 25, HuntuReunaKm = 60;
         public const double KmAsteella = 111.195;
