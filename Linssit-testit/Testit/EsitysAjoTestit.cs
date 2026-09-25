@@ -366,6 +366,21 @@ namespace Matkakirja.Linssit.Testit
 
     public static class EsitysAjoTestitApu
     {
+        /// <summary>Kultainen aineisto (kertomus, kohteet, kertomusmanifestin leimat) esitykselle muussa ympäristössä (II:n kääre).</summary>
+        public static (List<KertomusJakso> kertomus, Dictionary<string, LatLon> kohteet, Dictionary<string, JaksonLeimat> leimat) Aineisto()
+        {
+            var d = JsonDocument.Parse(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "ihmisen-matka.json"))).RootElement;
+            var kohteet = d.GetProperty("kohteet").EnumerateObject()
+                .ToDictionary(p => p.Name, p => new LatLon(p.Value[0].GetDouble(), p.Value[1].GetDouble()));
+            var rivit = d.GetProperty("leimat").EnumerateObject().Select(p => p.Value).OrderBy(v => v.GetProperty("alku").GetDouble())
+                .Select(v => (v.GetProperty("tunnus").GetString(), v.GetProperty("alku").GetDouble(), v.GetProperty("loppu").GetDouble(),
+                    (IReadOnlyList<double>)v.GetProperty("lauseet").EnumerateArray().Select(x => x.GetDouble()).ToList(),
+                    (IReadOnlyList<(string, double)>)v.GetProperty("sanat").EnumerateArray()
+                        .Select(s => (s.GetProperty("sana").GetString(), s.GetProperty("alku").GetDouble())).ToList()))
+                .ToList();
+            return (WebinKertomus(), kohteet, JaksonLeimat.Manifestista(rivit));
+        }
+
         public static System.Collections.Generic.List<KertomusJakso> WebinKertomus()
         {
             var d = System.Text.Json.JsonDocument.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(

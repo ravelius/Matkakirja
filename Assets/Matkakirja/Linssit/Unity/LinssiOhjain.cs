@@ -436,7 +436,8 @@ namespace Matkakirja.Natiivi
                 // Esittelylaatikko (Natiivi-UI) käynnistää esityksen Kaynnista-kutsulla.
                 linssi.Itsestaan = !IhmisenMatkaKerros.EsittelyUIssa;
                 // II: kohteiden jaksoissa laskeutuminen kallistettuna (IhmisenMatka2Ymparisto); muu ympäristö sellaisenaan.
-                kaare = Versio2 ? new Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto(y) : null;
+                // Kääre kirjaa ajonsa numeroineen lokiin (kuvan väistö kulkee niiden käyrällä, löydös 151).
+                kaare = Versio2 ? new Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto(y) { Kirjaa = o.Kirjaa } : null;
                 linssi.Avaa(kaare ?? y);
                 if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
             }
