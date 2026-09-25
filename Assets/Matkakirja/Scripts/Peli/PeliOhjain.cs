@@ -1283,7 +1283,9 @@ namespace Matkakirja.Natiivi
             // Näkyvä noppa kertoo silmäluvun itse (web: ei tekstiä); ilman sitä tilariville.
             if (t.Noppa.HasValue && (PeliNakymat.Noppa == null || !Kaytossa)) osat.Add("Noppa " + t.Noppa.Value);
             osat.AddRange(tapahtumat);
-            if (t.Saapui != null) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
+            // Webissä ei ole saapumisilmoitusta (saapumisen kertovat nimikortti ja traileri), ja siirron alussa
+            // näytettynä se ennätti nappulan ohi (liikkumisen pariteetti, c535aea-video). Vain ilman pelinäkymää.
+            if (t.Saapui != null && !Kaytossa) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
             Viesti(string.Join(" · ", osat));
             Debug.Log($"MATKAKIRJA peli: {PeliApu.TavanNimi(t.Tapa)} {t.Lahto} → {t.Kohde}" + (t.Noppa.HasValue ? $" (noppa {t.Noppa})" : "")
                       + (t.Saapui != null ? ", saapui " + t.Saapui : ""));
