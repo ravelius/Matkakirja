@@ -952,7 +952,7 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const maakunnat = lueMaakuntarajat();
   kokoelmat.maakuntarajat = taulukko(`js/pallomaakunnat.js ämpäriaineisto ${maakunnat.versio ?? ''} (Natural Earth 10m admin-1)`.trim(),
     'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
-      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
+      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), vari (skeema 1.43: webin väri-indeksi, naapureilla eri), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
       + 'Skeema 1.42: kaikki webin maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, joilla '
       + 'webin maakuntienMaa); juuren maat [{ iso3, nimi }] = maat, joilla on maakunnat. Maa, jota ei ole listalla, ei näytä '

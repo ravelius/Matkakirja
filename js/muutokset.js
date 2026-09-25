@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2242, teksti: 'Miniatyyrien värikorjaus erä 2: 50 kuvaa (#3255)' },
+  { v: 2241, teksti: 'Sisältöjuna: miniatyyrien värit 1, maakunnat erä 7' },
+  { v: 2240, teksti: 'Sisältöpaketti 1.43: maakuntarajat.vari (#3237)' },
   { v: 2239, teksti: 'Maakunnat erä 6: ARG COL ECU BOL PER VEN URY PR… (#3245)' },
   { v: 2238, teksti: 'Maakunnat erä 5: BRA MEX CAN CHL THA PHL VNM MY… (#3242)' },
   { v: 2237, teksti: 'Maakunnat erät 2–4: 27 maata, 693 aluetta lyhyt (#3241)' },

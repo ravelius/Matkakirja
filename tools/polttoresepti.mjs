@@ -46,7 +46,7 @@
 export const Z8_SARAKKEITA = 338;
 export const LOHKO = 4;
 
-export const RESEPTIT = Object.freeze({
+const RESEPTITAULU = {
   '2026-09-25': Object.freeze({
     kuvaus: 'D2 + C-reliefi + natiivin vektorirannat (omistaja 25.9.2026)',
     /* Kaikille shardeille ja luettelolle (23a:n mukaan). */
@@ -96,7 +96,23 @@ export const RESEPTIT = Object.freeze({
     /* Kaukotasot 3′-varalla kuten ennen, z7–z8 polttoskriptin --korkeus (1′). */
     karkeatTasotEnintaan: 6,
   }),
+};
+
+/*
+ * 2026-09-26 (omistaja 25.9.2026 klo 23, löydös 129, valinta "vahvempi"
+ * kuvakolmikosta docs/raportit/kuvapari-loydos129-meri-20260925.jpg):
+ * sama kuin 2026-09-25, mutta meren syvyysliuku voimakkaampi — litistys
+ * pois (1) ja syvyysrampin kirkkauskontrasti 1,35 (piirto.js
+ * asetaSyvyyskontrasti). Kaikki muu tavulleen sama resepti.
+ */
+const R25 = RESEPTITAULU['2026-09-25'];
+const POHJA26 = R25.pohjaliput.map((l) => (l === '{"syvyys":{"litistys":0.8}}' ? '{"syvyys":{"litistys":1}}' : l === '2026-09-25' ? '2026-09-26' : l));
+RESEPTITAULU['2026-09-26'] = Object.freeze({
+  ...R25,
+  kuvaus: 'D2 + C-reliefi + natiivin vektorirannat + voimakkaampi meren syvyysliuku (omistaja 25.9.2026 klo 23, löydös 129)',
+  pohjaliput: [...POHJA26, '--syvyyskontrasti', '1.35'],
 });
+export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
 export function resepti(nimi) {
   const r = RESEPTIT[nimi];

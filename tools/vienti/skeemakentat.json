@@ -20,10 +20,11 @@
   "1.39": "3c9e4ae05bfc9dcb",
   "1.40": "a6303d9592c8e80b",
   "1.41": "a6303d9592c8e80b",
-  "1.42": "450976039e4a59be"
+  "1.42": "450976039e4a59be",
+  "1.43": "07faa994d7f35bb1"
  },
  "uusin": {
-  "skeemaversio": "1.42",
+  "skeemaversio": "1.43",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -420,7 +421,8 @@
     "id",
     "iso3",
     "nimi",
-    "renkaat"
+    "renkaat",
+    "vari"
    ],
    "maalehdet": [
     "aiheet",
