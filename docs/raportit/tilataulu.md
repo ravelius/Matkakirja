@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 09:36 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 09:49 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
@@ -24,9 +24,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Ei avoimia kortteja tiedossa juuri nyt.
 
-**Simulaattorien sammutus edistynyt:** boottina 6→3 (jäljellä: linssiseppa-iPhone, iPhone 17, iPad Pro 11). Fable sammutti iPad Pro 13:n itse, Natiiviseppä ja Laitetestaaja sammuttivat omansa (pyynnön mukaisesti). Linssiseppä ei ole vielä sammuttanut omaansa. Sivutus ei ole vielä laskenut merkittävästi (22,3→20,5 Gt) — muistin vapautuminen kestää, raportoidaan Fablelle n. klo 10:23.
+**Simulaattorien sammutus:** boottina yhä 3 (linssiseppa-iPhone, iPhone 17, iPad Pro 11) — Linssiseppä ei ole vielä sammuttanut omaansa. Sivutus 22,3→20,5→20,3 Gt — laskee hyvin hitaasti, raportoidaan Fablelle n. klo 10:23.
 
-**Chrome for Testing GPU -prosessit:** 8 kpl (raja 4) — yhä yli rajan, jo ilmoitettu Julkaisijalle 09:23, ei uutta ilmoitusta ellei tilanne pahene merkittävästi.
+**Chrome for Testing GPU -prosessit — SELVITETTY (Julkaisija 09:5x):** luku heilahtelee (6→8→14) koska kyse on lyhytikäisistä savukeajon Chromium-prosesseista jotka syntyvät/kuolevat nopeasti, ei pysyvä kasvu. Yksi 11h orpo (pid 94690, 46 Mt) jätetty rauhaan. PR #3146 laskee rinnakkaisuuden 3:een simulaattoriajojen ajaksi, mergetään junan jälkeen. Ei enää seurattava akuuttina.
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
