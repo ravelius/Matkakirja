@@ -556,6 +556,8 @@ namespace Matkakirja.Natiivi
             KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
+            EsilataaIntro();
+            TilaVaihtui += (_, uusi) => { if (uusi == SilmukanTila.Aloitus) EsilataaIntro(); };
         }
 
         /// <summary>
