@@ -56,3 +56,10 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 ## Lisäksi Linssisepän kierrokselta 3 (ei omistajan numero)
 
 - Kotimaan korostus: web korostaa kotimaan kultareunalla ja reliefillä, natiivissa reliefi kaikkialla eikä korostusta → Natiiviseppä.
+
+## Lisäys klo 14.5x
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 110 | Aloituslennolle kiinteä kesto sekunteina riippumatta kohteen etäisyydestä. Aika kurotaan umpeen nopeuttamalla koneen vauhtia vain keskivaiheilla (nousu ja lasku ennallaan). Yleisemmin: kone saa lentää animaatioissa eri vauhdeilla tarpeen mukaan. Natiiviseppä ehdottaa kestoarvon videon perusteella, omistaja vahvistaa. | Natiiviseppä |
+| 111 | Siirtymäreitit (matkareitit) ovat webissä paksummat kuin natiivissa. Tarkista webistä mitattuna (viivan leveys, väri, katkoviiva) ja tee natiiviin sama. | Pelikoodari (mittaus) + Natiiviseppä (piirto) |
