@@ -78,6 +78,17 @@ löydös 100 jäivät avoimeksi ajanpuutteen ja UI-elementtien löytymättömyyd
 vuoksi — ei havaittu selvää regressiota, mutta ei myöskään vahvistettu
 korjatuksi.
 
+## OPPI (Fable, jälkikäteen 25.9. klo 17.5x)
+
+Löydökset 94/102/96b todennettiin Natiivi-UI:n videolla — napit OVAT olemassa
+ja toimivat, mutta ovat UI Toolkit -elementtejä jotka eivät näy iOS Simulator
+-työkalun `inspect`/`ui puu` -dumpissa. **Jatkossa: UITK-napit todennetaan
+kuvakaappauksesta tai videosta koskettamalla ruudun oikeaa kohtaa (arvioi
+sijainti kuvasta, ei ui-puu-JSON:sta), ei koskaan pelkän UI-puu-haun
+puuttumisella "ei löydy" -päätelmänä.** Yllä kohdissa 2 ja 4 tekemäni päätelmä
+"en löytänyt UI-puusta" oli siis vain työkalun rajoitus, ei osoitus napin
+puuttumisesta tai rikkinäisyydestä.
+
 ## Kuvat
 
 `docs/raportit/kaappaukset/savukierros-b15-20260925/`
