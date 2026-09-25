@@ -4,7 +4,7 @@
 // Aloituslennon päätyttyä tyhjä pergamenttiarkki nousee koko näkymän päälle (420 ms, ALOITUSVERHO_SISAAN_MS),
 // ja 280 ms tauon (SAAPUMISKORTTI_TAUKO_MS) jälkeen sen keskelle kirjoittuu konekirjoituksella
 // "<KAUPUNKI> · PÄIVÄ <n>/80" (typeText 'saapuminen': 190 ms/sana huojuen, kynän naputus sanoittain). Valmis rivi
-// jää 1000 ms:ksi, häipyy 320 ms, ja paperi jää hetkeksi tyhjäksi. Sen jälkeen peli jatkaa saapumista, ja arkki
+// jää 1000 ms:ksi (natiivissa 2000 ms, löydös 124), häipyy 320 ms, ja paperi jää hetkeksi tyhjäksi. Sen jälkeen peli jatkaa saapumista, ja arkki
 // häipyy 700 ms:ssä (ALOITUSVERHO_ULOS_MS) valmiin kartan päältä. Kartan kamera siirtyy arkin alla (arkki täynnä),
 // joten kartta paljastuu suoraan oikeassa näkymässä ilman zoomausanimaatiota.
 //
@@ -23,7 +23,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Saapumiskortti
     {
-        public const int SisaanMs = 420, TaukoMs = 280, SanaMs = 190, LukuaikaMs = 1000, TekstiUlosMs = 320, UlosMs = 700;
+        /// <summary>LukuaikaMs: web 1000; löydös 124 (build 17): valmis rivi näkyy sekunnin pidempään (2000).</summary>
+        public const int SisaanMs = 420, TaukoMs = 280, SanaMs = 190, LukuaikaMs = 2000, TekstiUlosMs = 320, UlosMs = 700;
         const float FonttiMin = 16.8f, FonttiMax = 25.6f, FonttiVw = 0.044f, Harvennus = 0.13f;
 
         /// <summary>Web KIRJOITUSTAUOT ja KIRJOITUS_MIETE (sama rytmi kuin avaustekstissä, Aloitusnakyma).</summary>
