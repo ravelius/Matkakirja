@@ -117122,6 +117122,214 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Nouméa Cathedral',
         },
       ],
+      /*
+       * Matkailijalle (Turistiopas 25.9.2026, Lontoon mallin mukaan).
+       * Taustatiedot: Wikipedia (fi/en/fr: Nouméa, Centre culturel
+       * Tjibaou, Jean-Marie Tjibaou, Place des Cocotiers, Îlot Canard,
+       * Aquarium des lagons, Bougna, Île des Pins, Néobus, Naval Base
+       * Noumea), Wikivoyage (Nouméa, Île des Pins) ja Nouméan
+       * kaupungin torisivu — teksti omaa. Nostojen perustamis-, vanki-
+       * ja kommunardihistoriaa ei toisteta. Kuvien lisenssit ja kuvaukset
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kanak house-2.jpg',
+          lyhyt: 'Kanakien suuren majan katolla seisoo harjakoriste, joka kuvaa klaanin kantaisää.',
+          selite: 'Perinteinen kanakien suuri maja Tjibaoun kulttuurikeskuksessa: '
+            + 'olkikaton huipun harjakoriste, flèche faîtière, kuvaa klaanin '
+            + 'kantaisää, ja sama kuvio on kanakien lipussa.',
+          lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Nouméa on ranskalainen kaupunki keskellä melanesialaista '
+          + 'Tyyntämerta: aamulla ostetaan croissant torin kojusta, '
+          + 'iltapäivällä snorklataan korallien yllä muutaman metrin päässä '
+          + 'rantaviivasta. Kaupunki täyttää kapean niemen Grande Terren '
+          + 'eteläkärjessä, ja sen arki kulkee keskustan Place des '
+          + 'Cocotiersin ja niemen kärjen kahden uimarannan, Anse Vatan ja '
+          + 'Baie des Citronsin, välillä. Tärkein nähtävyys on silti '
+          + 'kaupungin laidalla: Renzo Pianon suunnittelema Tjibaoun '
+          + 'kulttuurikeskus, jossa kanakien rakennusperinne ja '
+          + 'nykyarkkitehtuuri puhuvat samaa kieltä. Rahana on Tyynenmeren '
+          + 'frangi, joka on sidottu kiinteästi euroon, ja kielenä ranska — '
+          + 'englannilla pärjää hotelleissa, mutta torilla bonjour avaa '
+          + 'enemmän ovia.',
+        artikkeli: {
+          nimi: 'Matkailijan Nouméa',
+          teksti: 'Ranskalainen leipomo, kanakien suuri maja ja laguuni '
+            + 'mahtuvat saman niemen päähän.',
+          nosto: 'Place des Cocotiersin suihkulähde on koko Uuden-Kaledonian '
+            + 'tieverkon nollakilometri.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainväliset lennot laskeutuvat La Tontoutan '
+                + 'kentälle noin 50 kilometrin päähän kaupungista, joten '
+                + 'matka alkaa bussilla, kuljetuspalvelulla tai taksilla. '
+                + 'Saarten välisiä vuoroja lentävä Magentan kenttä on sen '
+                + 'sijaan kaupungin sisällä. Keskustan sydän on Place des '
+                + 'Cocotiers, 400 metriä pitkä kävelypuisto palmuineen ja '
+                + 'soittolavoineen. Sen suihkulähde Fontaine Céleste '
+                + 'pystytettiin syyskuussa 1893, ja siitä lasketaan yhä koko '
+                + 'Uuden-Kaledonian tieverkon kilometrit. Keskustasta rannoille '
+                + 'kulkevat Tanéo-verkon bussit, ja lokakuussa 2019 avattu '
+                + 'Néobus-pikalinja vie Moselle-aukiolta 13,3 kilometrin '
+                + 'matkan pohjoisen lähiöihin. Niemen eteläkärjessä odottavat '
+                + 'Anse Vatan tuulinen ranta, purje- ja leijalautailijoiden '
+                + 'suosikki, sekä suojaisampi Baie des Citrons. Kartasta '
+                + 'kuulee vielä toisen maailmansodan: 12. maaliskuuta 1942 '
+                + 'niemelle nousi 17 500 amerikkalaissotilasta, ja Nouméasta '
+                + 'tuli Yhdysvaltain Etelä-Tyynenmeren päämaja. Muistoksi '
+                + 'jäivät kaupunginosat, joiden nimet ovat yhä englantia: '
+                + 'Motor Pool, Receiving ja Robinson.',
+              kuva: [
+                {
+                  tiedosto: 'Costa de Numea.jpg',
+                  lyhyt: 'Lentokoneen ikkunasta laguuni näkyy kuin kartta: luodot sisällä, riutta ulompana.',
+                  selite: 'Nouméan seudun rannikko lentokoneesta: laguunin '
+                    + 'sisällä on matalia luotoja, ja ulompana suojariutta '
+                    + 'erottuu vaaleana reunana syvän meren laidalla.',
+                  lahde: 'Brewbooks, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'NouméaPlace.jpg',
+                  lyhyt: 'Place des Cocotiersin suihkulähde on Uuden-Kaledonian teiden nollakilometri.',
+                  selite: 'Place des Cocotiers on 400 metriä pitkä '
+                    + 'kävelypuisto Nouméan keskustassa, ja taustalla näkyvä '
+                    + 'Fontaine Céleste pystytettiin syyskuussa 1893.',
+                  lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Va\'a outrigger canoeing at Anse Vata Beach for the 2011 Pacific Games.jpg',
+                  lyhyt: 'Anse Vatan rannalla soudettiin Tyynenmeren kisojen va\'a-kanoottikilpailut 2011.',
+                  selite: 'Nouméa isännöi Tyynenmeren kisoja elo–syyskuussa 2011, '
+                    + 'ja niemen eteläkärjen Anse Vatan ranta oli '
+                    + 'va\'a-ulokekanoottien kilpailujen näyttämö.',
+                  lahde: 'gérard, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laguuni rannan edessä',
+              teksti: 'Nouméassa koralleja ei tarvitse lähteä katsomaan '
+                + 'veneellä: Baie des Citronsin rannalla ensimmäiset '
+                + 'korallit ovat vain muutaman metrin päässä vesirajasta. '
+                + 'Anse Vatalta taas lähtee vesitaksi tiheään tahtiin Île aux '
+                + 'Canardsille, kahden hehtaarin luodolle, jonka ympäristö on '
+                + 'ollut suojelualuetta vuodesta 1989. Luodon pohjoiskärjestä '
+                + 'alkaa 400 metrin vedenalainen luontopolku, jota seurataan '
+                + 'snorkkeli suussa kahdesta seitsemään metrin syvyisessä '
+                + 'vedessä. Kauempana laguunissa odottavat Îlot Maître ja '
+                + 'Amédéen majakkasaari. Sadepäivänä kannattaa mennä Anse '
+                + 'Vatan ja Baie des Citronsin väliin, Aquarium des '
+                + 'Lagonsiin: biologi René Catala ja hänen vaimonsa Ida '
+                + 'Stucki perustivat sen jo 1956, ja elokuussa 2007 avatun '
+                + 'uuden talon 33 altaaseen pumpataan vettä suoraan '
+                + 'viereisestä lahdesta. Akvaarion ylpeys ovat hohtavat '
+                + 'korallit ja nautilukset, simpukkakuoriset pääjalkaiset, '
+                + 'joiden kaltaisia on uinut meressä satoja miljoonia vuosia.',
+              kuva: {
+                tiedosto: 'Ile aux canards, Nouméa, Nouvelle-Calédonie.JPG',
+                lyhyt: 'Île aux Canards on kahden hehtaarin suojeltu luoto lyhyen venematkan päässä rannasta.',
+                selite: 'Île aux Canards ylhäältä: luotoa kiertää matala '
+                  + 'koralliriutta, taustalla on Nouméan rannikko, ja luoto '
+                  + 'ympäristöineen on ollut suojelualuetta vuodesta 1989.',
+                lahde: 'ToucanWings, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Tjibaoun kulttuurikeskus',
+              teksti: 'Nouméan tärkein nähtävyys seisoo kaupungin laidalla '
+                + 'niemellä Tinan ja Magentan lahtien välissä. Kymmenen '
+                + 'kaarevaa, säleistä koottua kuorta nousee kolmena ryhmänä '
+                + 'harjanteelle, korkeimmat 28 metriin. Italialainen '
+                + 'arkkitehti Renzo Piano voitti suunnittelukilpailun 1991 ja '
+                + 'otti mallin kanakien suuresta majasta. Rungot ovat '
+                + 'Afrikasta tuotua iroko-puuta, joka kestää hyönteisiä ja '
+                + 'hometta, ja ulkoseinän säleiköt, jotka avautuvat ja '
+                + 'sulkeutuvat tuulen mukaan, ohjaavat merituulen '
+                + 'rakennusten läpi. Keskus '
+                + 'kantaa kanakien itsenäisyysliikkeen johtajan Jean-Marie '
+                + 'Tjibaoun nimeä. Hän oli allekirjoittanut 1988 Matignonin '
+                + 'sopimukset, jotka päättivät vuosia kestäneet levottomuudet, '
+                + 'ja hänet surmattiin Ouvéan saarella 4. toukokuuta 1989. '
+                + 'Keskus vihittiin tasan yhdeksän vuotta myöhemmin, samoina '
+                + 'päivinä kun Nouméan sopimus allekirjoitettiin. Rakennusten '
+                + 'ympärillä kiertää kanakien polku, jonka kasvit kertovat '
+                + 'ensimmäisen ihmisen, Téâ Kanakén, myytin viitenä '
+                + 'vaiheena. Keskus on suljettu maanantaisin.',
+              kuva: {
+                tiedosto: 'Nuit des musées - Flickr - uphillblok.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'Tjibaoun kulttuurikeskuksen kymmenestä kuoresta korkeimmat nousevat 28 metriin.',
+                selite: 'Renzo Pianon iroko-puinen kuori valaistuna '
+                  + 'Nouméan museoyönä toukokuussa 2015: pystysuorat kaaret '
+                  + 'ja vaakasäleet mukailevat kanakimajan runkoa.',
+                lahde: 'gérard from Nouméa, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tori ja keittiö',
+              teksti: 'Aamu alkaa Moselle-lahden rannan torilta, jonka viisi '
+                + 'kuusikulmaista paviljonkia on katettu sinisin tiilin. '
+                + 'Nykyinen tori avattiin huhtikuussa 1991, ja se on auki '
+                + 'tiistaista sunnuntaihin kello kuudesta puoli kahteentoista '
+                + '— puolenpäivän jälkeen tulija löytää vain tyhjät pöydät. '
+                + 'Kalapaviljongissa on yli kaksikymmentä myyntipöytää, ja '
+                + 'muualla vierekkäin ovat tarot, jamssit, patongit, '
+                + 'croissantit ja aasialaiset herkut: Nouméa on ranskalainen '
+                + 'kaupunki, mutta sen keittiöön ovat tuoneet makunsa myös '
+                + 'melanesialaiset, polynesialaiset ja aasialaiset '
+                + 'asukkaat. Kanakien juhlaruoka on bougna, jossa jamssia, '
+                + 'taroa, bataattia ja kanaa tai kalaa kääritään '
+                + 'banaaninlehtiin, kastellaan kookosmaidolla ja haudutetaan '
+                + 'kuumilla kivillä maauunissa. Sen valmistaminen kokoaa '
+                + 'suvun ja ystävät yhteen; arkisempi versio, bougna '
+                + 'marmite, haudutetaan kattilassa. Hinnat ovat Tyynenmeren '
+                + 'frangeja, ja koska kurssi on kiinteä, laskutoimitus pysyy '
+                + 'samana vuodesta toiseen: tuhat frangia on noin 8,40 euroa.',
+              kuva: {
+                tiedosto: 'NC-noumea-markt.jpg',
+                lyhyt: 'Nouméan torin paviljongit on katettu sinisin tiilin, käsityöt myydään kankaiden alla.',
+                selite: 'Yksi Moselle-lahden torin viidestä kuusikulmaisesta, '
+                  + 'sinitiilikattoisesta paviljongista; oikealla on '
+                  + 'purjekankain varjostettu alue, jolla päivämyyjät '
+                  + 'kauppaavat käsitöitä.',
+                lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki Île des Pinsille',
+              teksti: 'Kun Nouméan rannat on nähty, katse kääntyy kaakkoon. '
+                + 'Noin sadan kilometrin päässä on Île des Pins, kanakiksi '
+                + 'Kunyié, jonne pääsee Magentan kentältä puolessa tunnissa '
+                + 'tai Betico-pikalautalla noin kahdessa ja puolessa '
+                + 'tunnissa. Saari on vain 15 kilometriä pitkä ja 13 leveä, '
+                + 'ja sen noin 2000 asukkaasta lähes kaikki ovat kanakeja; '
+                + 'saaren päällikkösuku on johtanut sitä 1700-luvulta asti. '
+                + 'Nimensä saari sai James Cookilta 1774, kun kapteeni näki '
+                + 'laivastaan rannoilla seisovat pylväsmäiset käpymännyt. '
+                + 'Tunnetuin kohde on Oron lahden luonnonallas: koralliriutta '
+                + 'erottaa turkoosin laguunin merestä niin, että vesi pysyy '
+                + 'tyynenä kuin uima-altaassa. Upin lahdella taas '
+                + 'purjehditaan perinteisillä ulokeveneillä jyrkkäreunaisten '
+                + 'kalliosaarekkeiden lomassa, ja saaren korkein kohta on '
+                + '262-metrinen Pic N\'ga. '
+                + 'Eväät kannattaa ottaa mukaan: ravintoloita on vähän, eikä '
+                + 'lautta kulje joka päivä.',
+              kuva: {
+                tiedosto: 'Ile des Pins - Piscine naturelle d\'Oro 1.jpg',
+                lyhyt: 'Oron luonnonallas on riutan merestä erottama laguuni käpymäntyjen katveessa.',
+                selite: 'Oron lahden luonnonallas Île des Pinsillä: keskellä '
+                  + 'on kapea aukko, josta aallot tuovat altaaseen merivettä, '
+                  + 'ja rannalla kohoavat pylväsmäiset käpymännyt.',
+                lahde: 'Teuxe, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
       ennenNyt: [
         {
           tiedosto: 'Nouméa - Hauts fourneaux Ballande - Ch. B. Nething - btv1b10121338v.jpg',
