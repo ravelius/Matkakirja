@@ -34,6 +34,11 @@ namespace Matkakirja
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
+    ///   valmius seuraa [s]        pallon valmiusasteen seuranta lokiin 0,5 s välein (oletus 30 s; Valmius.cs, löydös 80):
+    ///                             ComputeLoadProgress, Cesiumin valintatilasto, raster-kerrokset, palvelimen jonot, kameran liike
+    ///   valmius auto paalle [s] | valmius auto pois   sama seuranta aloitusverhon ja mustan verhon alussa (PlayerPrefs
+    ///                             matkakirja-valmius-auto, oletus 12 s; voimaan seuraavista verhoista, myös käynnistyksessä)
+    ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maakunta <ISO3:tunnus>|pois|tila | maakunta maa ISO3|pois   maakunnan värjäys (B17); maa = pakotettu kerroksen maa
@@ -623,6 +628,20 @@ namespace Matkakirja
                     Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
                     break;
+                case "valmius":
+                {
+                    // valmius seuraa [s] | valmius auto paalle [s] | valmius auto pois | valmius tila | valmius pois (Valmius.cs)
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "seuraa") Valmius.Seuraa("komento", o.Length > 2 ? (float)D(2) : 30f);
+                    else if (m == "auto" && o.Length > 2)
+                    {
+                        Valmius.AutoS = o[2] == "paalle" ? (o.Length > 3 ? (float)D(3) : Valmius.AutoOletusS) : 0f;
+                        Debug.Log($"MATKAKIRJA valmius: auto {(Valmius.AutoS > 0f ? Valmius.AutoS.ToString("0.#") + " s" : "pois")} (seuraavista verhoista)");
+                    }
+                    else if (m == "pois") Valmius.Lopeta();
+                    else Valmius.Tila();
+                    break;
+                }
                 case "valot":
                 {
                     // valot <aihe> | valot kaikki | valot ei | valot tila (laskurit lokiin)

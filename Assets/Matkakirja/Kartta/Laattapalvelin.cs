@@ -412,10 +412,56 @@ namespace Matkakirja
         async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
         {
             var lahde = new Lahde();
-            var tulos = await HaeSisalto(polku, esilataus, lahde);
-            if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
-                SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
-            return tulos;
+            // Valmiusdiagnostiikka: HTTP-pyynnöt (Cesium ja omat haut, ei esilatausta) luokittain kesken / valmiit / verkosta.
+            var luokka = esilataus == null ? Luokat.GetOrAdd(Luokka(polku), _ => new int[3]) : null;
+            if (luokka != null) Interlocked.Increment(ref luokka[0]);
+            try
+            {
+                var tulos = await HaeSisalto(polku, esilataus, lahde);
+                if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
+                    SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
+                return tulos;
+            }
+            finally
+            {
+                if (luokka != null)
+                {
+                    Interlocked.Decrement(ref luokka[0]);
+                    Interlocked.Increment(ref luokka[1]);
+                    if (lahde.Nimi == "verkko") Interlocked.Increment(ref luokka[2]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// VALMIUSDIAGNOSTIIKKA (Valmius.cs, löydös 80): palvelimen HTTP-pyynnöt luokittain (<see cref="Luokka"/>):
+        /// [0] kesken (Cesium odottaa vastausta), [1] valmistuneet, [2] niistä verkosta. Esilataus ei kuulu tähän.
+        /// </summary>
+        public static readonly ConcurrentDictionary<string, int[]> Luokat = new ConcurrentDictionary<string, int[]>();
+
+        /// <summary>
+        /// Ämpärin polun luokka diagnostiikkaan: pohja (pallo/laatat), maasto, kerma (väritaso), sat/&lt;sarja&gt;
+        /// (lennon pinta: bmng-bathy, s2-alkup …), muuten ensimmäinen kansio julisteet/-etuliitteen jälkeen.
+        /// </summary>
+        public static string Luokka(string polku)
+        {
+            if (string.IsNullOrEmpty(polku)) return "?";
+            int q = polku.IndexOf('?');
+            if (q >= 0) polku = polku.Substring(0, q);
+            if (polku.StartsWith("julisteet/", StringComparison.Ordinal)) polku = polku.Substring("julisteet/".Length);
+            var o = polku.Split('/');
+            if (o.Length >= 4 && o[0] == "pallo" && o[1] == "satelliitti") return "sat/" + o[3];
+            if (o.Length >= 2 && o[0] == "pallo") return o[1] == "laatat" ? "pohja" : o[1];
+            return o[0];
+        }
+
+        /// <summary>Verkkojonojen tila diagnostiikkaan (Valmius): käynnissä olevat haut ja jonojen pituudet.</summary>
+        public static string JonoTila()
+        {
+            var p = Instanssi;
+            if (p == null) return "-";
+            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
+                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
