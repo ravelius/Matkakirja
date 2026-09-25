@@ -6,7 +6,7 @@
 // Kuva edellä kahdessa vaiheessa (js/nostokuva.js): 1) pelkkä kuva, lyhyt kuvateksti ja
 // LISÄÄ; 2) koko kortti (kuvasarja ‹ › ja laskuri, teksti kappaleittain, lajin lohkot).
 // Kuvaton kortti aukeaa suoraan vaiheeseen 2. Kuvan napautus vaiheessa 2 avaa suurennoksen
-// (pitkä selite ja lähderivi). Sulkeminen: × tai napautus kortin ohi.
+// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi tai kortin tekstiin/pohjaan (löydös 133: ei ✕-nappia).
 //
 //   skandaali  nimiö LISÄLEHTI, "paikka · vuosi" kaksoisviivojen välissä, otsikko, ingressi,
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
@@ -28,17 +28,18 @@
 // Pelin tila muuttuu vain PeliOhjain.KauppaTeko-kutsuilla (Pelikoodari). Kerros 40, pallo lukittu.
 // Kohdekortin korostetut sanat (web fokuskohteet piirraKorostettuSana): kunkin korostuksen
 // ensimmäinen esiintymä tekstissä on alleviivattu linkki, napautus → pulu "Kerro lisää: X (kohteessa Y)".
-// Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 sulkuruksin vieressä.
-// PAIKKA (E3, Fable 24.9.): kuvallinen kortti aukeaa keskelle kuten webin kuva edellä -kortti (js/nostokuva.js
-// "KUVA EDELLÄ -KORTTI EI SEURAA MERKKIÄÄN"); kuvaton kortti ja lisäkaupunki napautuspisteen viereen ilman
-// himmennystä (web asetaKohteenPaikka / asemoiKaupunkipopup): leveys min(384, 86 % ruudusta), rako 12 px merkin
-// oikealle (ei mahdu → vasemmalle), keskitettynä pystyyn, reunavara 8 px ja pystyssä 10 % ruudusta (≤ 96 px),
-// turva-alueen sisällä, katto ≥ 140 px. Kortti on raahattava (web raahausTaiSulku: 8 px:n kynnys; tekstin päällä
-// pystyveto vierittää) ja raahattu paikka pysyy. Napautus kortin tekstiin tai pohjaan sulkee (web: pop-upin
+// Kaiutin (web js/lukija.js lisaaLukijanappi, KortinLukija) vaiheessa 2 ylärivin oikeassa päässä (löydös 133).
+// PAIKKA JA KOKO (löydökset 130, 131 ja 135, omistaja build 16; korvaa E3:n ankkuroinnin): jokainen kortti aukeaa
+// keskelle himmennyksen päälle samalla leveydellä (Mitoita) — kuvallinen, kuvaton, kohde, lisäkaupunki ja
+// skandaali (vain tyyli eri). Kuvallinen kortti aukeaa webin kuva edellä -tapaan (js/nostokuva.js), kuva omassa
+// muodossaan korkeuskattoon asti; vaiheessa 2 kuva pysyy täsmälleen paikallaan (Korjaa). Löydös 137: korttia ei
+// raahata (paikkaa ei tarvitse siirtää, ja otsikosta alkanut veto siirsi korttia vierityksen sijaan); pystyvieritys
+// on Kosketusvieritys (löydös 51).
+// Napautus kortin tekstiin tai pohjaan sulkee (web: pop-upin
 // päällä napautus on sulku, painikkeen päällä valinta; matka < 6 px ja kesto < 700 ms). Testikomennot painavat kortin
 // nappeja nimellä (Testaa: lisaa, ihme, leikekirja, kartalla, liite, valokuva, vastaa<n>, juliste).
 // LISÄKAUPUNKI (web kaupunkinosto.js avaaLisakaupunginKortti, kohde.kaupunkikortti ohittaa kohdekortin):
-// ✕, otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
+// otsikkona kaupungin nimi, herokuva (kuvateksti ja lähderivi; ilman kuvaa paikkamerkki nimellä),
 // esittely kappaleittain ja yksi kaupunkiin ankkuroitu nosto (otsikko + teksti). Ei visaa eikä kaiutinta.
 using System;
 using System.Collections.Generic;
@@ -55,26 +56,18 @@ namespace Matkakirja.Natiivi
         // Suurennos selattavana sarjana (web fokuskohteet.js avaaKohdeSuurennos ‹ ›).
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
-        readonly Button sulje;
         readonly KortinLukija lukija;
 
         Nosto nosto;
         int kuvaIndeksi, versio;
-        // Kaksipalstataitto ≥ 1100 pt (web nostoPalstoiksi): rivi = kuvapalsta (kuvasarja) + tekstipalsta (loput).
-        VisualElement rivi, kuvapalsta, tekstipalsta;
-        float korttiPohja, kuvaKorkeusKatto, kuvaSuhde = 2f / 3f;
         /// <summary>Kortin napit nimellä testikomentoja varten (ui nosto … &lt;nappi&gt;, ui ihme, ui leikekirja).</summary>
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
 
-        // Paikka ja raahaus (E3): ankkuri kerroksen koordinaateissa, null = keskellä.
-        const float Marginaali = 8f, Rako = 12f, LaitavaraOsuus = 0.1f, LaitavaraEnintaan = 96f, Leveys = 384f,
-            LeveysOsuus = 0.86f, Katto = 140f, Raahauskynnys = 8f, Napautuskynnys = 6f, NapautusMs = 700f;
-        Vector2? ankkuri;
-        bool ankkuroitu, raahattu, raahaa, lisakaupunkiPaikka;
-        int eleId = -1;
-        Vector2 eleAlku, lahto;
+        const float Napautuskynnys = 6f, NapautusMs = 700f;
+        // Napautuksen alku (sulku napautuksesta, NapautusKorttiin).
+        Vector2 eleAlku;
         float eleAika;
 
         /// <summary>Auki olevan kortin tiivistelmä testilokiin: laji · luokka · otsikko [· leikekirja].</summary>
@@ -94,45 +87,66 @@ namespace Matkakirja.Natiivi
             sisus.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
-            sulje = Rakenne.Nappi(null, "mk-nosto__sulje", Sulje, kortti, Ikonit.Viiva["rasti"]); // E4: web ✕
-            sulje.tooltip = "Sulje";
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija");
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
-            kortti.RegisterCallback<GeometryChangedEvent>(_ => { if (ankkuroitu && !raahattu) Asemoi(); });
-            // Kierto tai ikkunan koko: kuva edellä -kortin leveys uudelleen (web asemoi resize-kuuntelijassa).
-            kerros.RegisterCallback<GeometryChangedEvent>(e => { if (Auki && !Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaKuvaEdella(); });
-            kortti.RegisterCallback<GeometryChangedEvent>(_ => EsittelynYlin());
+            // Kierto tai ikkunan koko: leveys uudelleen (web asemoi resize-kuuntelijassa), vaiheen 2 kortti keskelle.
+            kerros.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (!Auki || Mathf.Approximately(e.oldRect.width, e.newRect.width)) return;
+                VapautaPaikka();
+                Mitoita();
+            });
+            kortti.RegisterCallback<GeometryChangedEvent>(_ => Pystypaikka());
+            // Löydös 131: korjauksen vieritys, kun ScrollView on päivittänyt vieritysalueensa (sen omat kuuntelijat
+            // rekisteröitiin rakentajassa ennen näitä, joten ne ajetaan ensin).
+            sisus.contentContainer.RegisterCallback<GeometryChangedEvent>(_ => Vierita());
+            sisus.contentViewport.RegisterCallback<GeometryChangedEvent>(_ => Vierita());
             kortti.RegisterCallback<PointerDownEvent>(EleAlkoi, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerMoveEvent>(EleLiikkui, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerUpEvent>(EleLoppui, TrickleDown.TrickleDown);
-            kortti.RegisterCallback<PointerCaptureOutEvent>(_ => { raahaa = false; eleId = -1; kortti.RemoveFromClassList("mk-nosto--raahauksessa"); });
             kortti.RegisterCallback<ClickEvent>(NapautusKorttiin);
+            // Löydös 137: UI Toolkitin ScrollView tökki kosketuksella (sama mittaus kuin lehdessä, löydös 51: heitto
+            // liukui kolmanneksen Safarin matkasta); sama oma pystyvieritys kuin lehdellä. Kortin isä kuuntelee
+            // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
+            Kosketusvieritys.Liita(kortti, () => sisus);
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
+            suurennos.AukiMuuttui += Pehmenna;
         }
 
-        /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento) napautuspisteen viereen.</summary>
-        public void Avaa(string valoId)
+        // Löydös 132 (omistaja, build 16): kuva kokoruudulle → tausta pehmenee tummennuksen lisäksi. Kartta on jo
+        // kameran kuvasumennuksessa (UiNakymat.PaivitaKuvaSumea → PalloKierto.KuvaSumea, 2,25 pt, koska nostokortti on auki),
+        // mutta kamerasumennus ei koske UI:ta (PalloSumennus). Kortti sumennetaan siksi UI Toolkitin suotimella kuten
+        // aloitusportin kone ja viiva (Etusivulento: blur-suodin, Paneeli.asset tuo Gauss-shaderin käännökseen).
+        const float PehmennysPt = 4f;
+        const int PehmennysAukiMs = 220, PehmennysKiinniMs = 180; // suurennoksen häivytys (Kuvasuurennos Avaa/Sulje)
+        float pehmennys;
+        IVisualElementScheduledItem pehmennysAjo;
+
+        void Pehmenna(bool paalle)
         {
-            ankkuri = Napautuspiste();
-            Avaa(valoId, null);
+            pehmennysAjo?.Pause();
+            float alku = pehmennys, loppu = paalle ? PehmennysPt : 0f;
+            float kesto = (paalle ? PehmennysAukiMs : PehmennysKiinniMs) / 1000f, t0 = Time.unscaledTime;
+            Ruudunpaivitys.Herata(kesto + 0.05f); // lämpö: häivytys täydellä taajuudella
+            pehmennysAjo = kortti.schedule.Execute(() =>
+            {
+                float k = Mathf.Clamp01((Time.unscaledTime - t0) / kesto);
+                AsetaPehmennys(Mathf.Lerp(alku, loppu, k));
+                if (k >= 1f) { pehmennysAjo?.Pause(); pehmennysAjo = null; }
+            }).Every(0);
         }
 
-        /// <summary>Testikomento: kortti annetun paneelipisteen viereen (ui nosto &lt;valo&gt; @x,y).</summary>
-        public void AvaaKohdasta(string valoId, Vector2 piste)
+        void AsetaPehmennys(float pt)
         {
-            ankkuri = kerros.WorldToLocal(piste);
-            Avaa(valoId, null);
+            pehmennys = pt;
+            // Ei StyleKeyword.Nonea: UI Toolkit 6.3 kaatuu siihen (Etusivulento, Natiiviseppä 25.9.). Null = ei suodinta.
+            if (pt <= 0.01f) { kortti.style.filter = StyleKeyword.Null; return; }
+            var f = new FilterFunction(FilterFunctionType.Blur);
+            f.AddParameter(new FilterParameter(pt));
+            kortti.style.filter = new List<FilterFunction> { f };
         }
 
-        /// <summary>Viimeisin osoittimen paikka kerroksen koordinaateissa (kartan tai merkin napautus).</summary>
-        Vector2? Napautuspiste()
-        {
-            var o = UnityEngine.InputSystem.Pointer.current;
-            if (o == null || kerros.panel == null) return null;
-            var r = o.position.ReadValue();
-            return kerros.WorldToLocal(RuntimePanelUtils.ScreenToPanel(kerros.panel, new Vector2(r.x, Screen.height - r.y)));
-        }
+        /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento) keskelle (löydös 135).</summary>
+        public void Avaa(string valoId) => Avaa(valoId, null);
 
         // Löydös 134 (Pelikoodari): avauksen vaiheet lokiin — data (ms, kehyksiä), ensimmäinen näkyvä kehys, valmis.
         float avausAlku;
@@ -195,15 +209,8 @@ namespace Matkakirja.Natiivi
                 Paina();
                 return;
             }
-            ankkuri = null;
-            if (nappi != null && nappi.StartsWith("@"))
-            {
-                var xy = nappi.Substring(1).Split(',');
-                if (xy.Length == 2 && float.TryParse(xy[0], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var ax)
-                    && float.TryParse(xy[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var ay))
-                    ankkuri = kerros.WorldToLocal(new Vector2(ax, ay));
-                nappi = null;
-            }
+            // Vanha ankkurimuoto "@x,y" (E3) ei enää vaikuta: kortti aukeaa aina keskelle (löydös 135).
+            if (nappi != null && nappi.StartsWith("@")) nappi = null;
             Avaa(valoId, loytyi =>
             {
                 if (!loytyi) { tulos?.Invoke("ei sisältöä valolle " + valoId); return; }
@@ -236,7 +243,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             lukija.Pysayta();
-            Rakenne.Nayta(kerros, false, 200);
+            Rakenne.PiilotaHaivyttaen(kerros, 200);
             suurennos.Sulje();
             SyoteLukko.Vapauta(this);
         }
@@ -245,347 +252,150 @@ namespace Matkakirja.Natiivi
         {
             nosto = n;
             kuvaIndeksi = 0;
-            kuvaSuhde = 2f / 3f;
             kortti.EnableInClassList("mk-nosto--looppi", n.Looppi);
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
-            lisakaupunkiPaikka = false;
-            AsetaPaikka(n.Kuvat.Count == 0);
+            VapautaPaikka();
+            Mitoita();
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
-            MitoitaKuvaEdella();
             AvaaKerros();
         }
 
-        // --- paikka ja raahaus (E3) ------------------------------------------------------------
+        // --- koko ja paikka (löydökset 130, 131, 135) --------------------------------------------
 
-        /// <summary>Ankkuroitu (kuvaton kortti, lisäkaupunki) vai keskellä (kuva edellä); nollaa raahauksen.</summary>
-        void AsetaPaikka(bool ankkuriin)
-        {
-            ankkuroitu = ankkuriin && ankkuri.HasValue;
-            raahattu = false;
-            kerros.EnableInClassList("mk-nosto__kerros--ankkuroitu", ankkuroitu);
-            kerros.EnableInClassList("mk-nosto__kerros--vapaa", ankkuroitu);
-            if (!ankkuroitu)
-            {
-                kortti.style.position = StyleKeyword.Null;
-                kortti.style.left = kortti.style.top = StyleKeyword.Null;
-                kortti.style.width = kortti.style.maxHeight = StyleKeyword.Null;
-                return;
-            }
-            // Paneelin leveys (pisteinä): kerros voi olla vielä piilossa, jolloin sen oma layout on 0.
-            float w = kerros.panel != null ? kerros.panel.visualTree.layout.width : 0f;
-            kortti.style.position = Position.Absolute;
-            if (w > 0f) kortti.style.width = HaluttuLeveys(w);
-            kortti.style.left = Mathf.Round(ankkuri.Value.x + Rako);
-            kortti.style.top = Mathf.Round(ankkuri.Value.y);
-            Asemoi();
-        }
+        // Löydös 130 (omistaja, build 16): kuva aukeaa isompana ja kortti saa olla leveämpi (iPad ja iPhone). Kuvan
+        // korkeuskatto on turva-alue − 150 pt (kuvateksti, LISÄÄ, kortin täyte ja reunavara; ennen web 0,94 × − 150) ja
+        // vähintään 28 %; vakioleveys on 3:2-kuva tällä katolla. Kortti enintään turva-alue − 2 × 8 pt (ennen 2 × 12 ja
+        // kapealla katto 760 pt: iPad pystyssä 744 → 818 pt). Leveällä (≥ 1100 pt) ei enää kattoa 1100 eikä palstoja.
+        const float KuvaMarginaali = 12f, KuvaPystyvara = 150f, KuvaVahinOsuus = 0.28f, Sivuvara = 8f;
 
-        /// <summary>Web asetaKohteenPaikka: merkin oikealle (tai vasemmalle), pystyssä keskelle, rajojen sisään.</summary>
-        void Asemoi()
-        {
-            float w = kerros.layout.width, h = kerros.layout.height;
-            if (w <= 0 || h <= 0 || !ankkuri.HasValue) return;
-            float haluttu = HaluttuLeveys(w);
-            if (kortti.resolvedStyle.width != haluttu) kortti.style.width = haluttu;
-            var t = UiKerros.Hae().Reunat(UiKerros.Valikot); // vasen, ylä, oikea, ala
-            // Lisäkaupunki (web asemoiKaupunkipopup): reuna 10, ei pystyn laitavaraa, katto ≥ 160 ja enintään 74 %.
-            float reuna = lisakaupunkiPaikka ? 10f : Marginaali;
-            float laitavara = lisakaupunkiPaikka ? reuna : Mathf.Min(LaitavaraEnintaan, Mathf.Max(Marginaali, Mathf.Round(h * LaitavaraOsuus)));
-            float ala = h - Mathf.Max(laitavara, t.w + reuna), yla = Mathf.Max(laitavara, t.y + reuna);
-            float oikea = w - reuna - t.z, vasen = reuna + t.x;
-            float katto = Mathf.Max(lisakaupunkiPaikka ? 160f : Katto, Mathf.Round(ala - yla));
-            if (lisakaupunkiPaikka) katto = Mathf.Min(katto, Mathf.Round(h * 0.74f));
-            if (kortti.resolvedStyle.maxHeight.value != katto) kortti.style.maxHeight = katto;
-            float leveys = kortti.layout.width, korkeus = Mathf.Min(kortti.layout.height, katto);
-            if (leveys <= 0 || float.IsNaN(korkeus)) return;
-            var m = ankkuri.Value;
-            float rako = lisakaupunkiPaikka ? 14f : Rako;
-            float x = m.x + rako;
-            if (x + leveys > oikea) x = m.x - rako - leveys;
-            x = Mathf.Max(vasen, Mathf.Min(x, oikea - leveys));
-            float y = Mathf.Max(yla, Mathf.Min(m.y - korkeus / 2f, ala - korkeus));
-            AsetaKohta(Mathf.Round(x), Mathf.Round(y));
-        }
+        /// <summary>Kortin reunus 1 + täyte 15,2 kummallakin puolella (web .fokuskohde-popup, mitattu 24.9. b11).</summary>
+        const float KortinVara = 2f * (1f + 15.2f);
 
-        // Web js/nostokuva.js (kuva edellä): NOSTOKUVA_MARGINAALI 12, VAAKAVARA 44, PYSTYVARA 150, KAPEA_KATTO 760,
-        // VARA_ARVIO 48, LEVEA_RAJA 1100; suurennoksenMitat (js/ui-apurit.js) kertoimet 0,99 / 0,82 / 0,94 ja vähin 0,28.
-        const float KuvaMarginaali = 12f, KuvaVaakavara = 44f, KuvaPystyvara = 150f, KuvaKapeaKatto = 760f, KuvaVaraArvio = 48f,
-            KuvaLeveaRaja = 1100f;
-
-        // Web NOSTOKUVA_LEVEA_KATTO 1100, KUVAPALSTA_OSUUS 0,5 ja PYSTY_OSUUS 0,32; css/fokusnosto.css osio 13:
-        // palstaväli 1,5 rem (24 px), kuvapalsta enintään 50 % (pystykuvalla 34 %) rivistä.
-        const float KuvaLeveaKatto = 1100f, KuvapalstaOsuus = 0.5f, KuvapalstaPystyOsuus = 0.32f, KutistusMs = 260f;
+        /// <summary>Kuvan korkeuskatto pisteinä (Mitoita); kuvakehys saa kuvan oman muodon enintään tähän.</summary>
+        float kuvaKatto;
 
         /// <summary>
-        /// Web nostokuvanVakioleveys: vaakakuvan (3:2) leveys ruudulla. Alle 1100 pt:n katettuna KAPEA_KATTO −
-        /// VARA_ARVIO (712); leveällä (kapea = false) ilman kattoa (web enintaanLeveys Infinity).
+        /// Löydös 135 (omistaja, build 16): kaikki kortit samaan kokoon ja tyyliin — kuvallinen, kuvaton, kohde, lisäkaupunki
+        /// (esim. Lyon aukesi 544 pt:n ankkuroituna ja kuvaton kohde 384 pt:n) ja skandaali (vain tyyli eri, koko sama).
+        /// Leveys ei riipu vaiheesta, joten kuva ei muuta kokoaan LISÄÄ-napautuksessa (löydös 131).
         /// </summary>
-        static float KuvaVakioleveys(float rl, float rk, bool kapea = true)
+        void Mitoita()
         {
-            const float suhde = 1.5f;
-            bool pysty = rk >= rl; // vaakakuva pystyruudulla = vastakkainen
-            float leveys = (pysty ? rl * 0.99f : rl * 0.82f) - KuvaVaakavara;
-            if (kapea) leveys = Mathf.Min(leveys, KuvaKapeaKatto - KuvaVaraArvio);
-            float korkeus = KuvaKorkeusKatto(rk);
-            if (leveys / suhde > korkeus) leveys = korkeus * suhde;
-            return Mathf.Round(leveys);
+            var pohja = kerros.panel?.visualTree.layout ?? default;
+            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
+            if (float.IsNaN(rl) || float.IsNaN(rk) || rl <= 0 || rk <= 0)
+            {
+                kortti.style.width = StyleKeyword.Null;
+                kortti.style.maxWidth = StyleKeyword.Null;
+                return;
+            }
+            kuvaKatto = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
+            float leveys = Mathf.Round(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara));
+            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
         }
-
-        /// <summary>Web suurennoksenMitat: kuvan korkeuskatto max(0,94 × ruutu − 150, 0,28 × ruutu).</summary>
-        static float KuvaKorkeusKatto(float rk) => Mathf.Max(rk * 0.94f - KuvaPystyvara, rk * 0.28f);
 
         // Web NOSTOKUVA_YLAVARA 88 (omistaja 12.9.): vaiheen 1 kortti ei jää keskitettynä tätä alemmas, jotta vaiheen 2
         // kortti alkaa yläpalkin kohdalta eikä kartalta.
         const float KuvaYlavara = 88f;
 
         /// <summary>
-        /// Web nostokuvanYlin: vaiheen 1 kortti pystysuunnassa keskelle turva-aluetta, mutta enintään
-        /// NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA (100 pt) yläreunasta. Muulloin kerros keskittää (.mk-himmennys).
+        /// Löydös 131: vaiheen 2 kortin yläreuna (kerroksen täyte), jolla kuva jää täsmälleen vaiheen 1 paikalleen
+        /// (Korjaa). null = kortti keskellä (kuvaton kortti, lisäkaupunki, kierron jälkeen).
         /// </summary>
-        void EsittelynYlin()
-        {
-            bool esittely = Auki && !ankkuroitu && kortti.ClassListContains("mk-nosto--esittely");
-            if (!esittely)
-            {
-                if (kerros.style.justifyContent.keyword != StyleKeyword.Null) { kerros.style.justifyContent = StyleKeyword.Null; kerros.style.paddingTop = StyleKeyword.Null; }
-                return;
-            }
-            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
-            // iPhonella ei ole yläpalkkia (NATIIVIN iPHONE-ASETTELU): pilleri ja saapumispalkki ovat samoilla y-arvoilla kuin
-            // webin yläpalkki ja palkki Safarin näkymässä, joten ruutu alkaa näytön yläreunasta (b12l: turva-alueesta
-            // mitattuna kortti jäi 62 pt webiä alemmas). iPadilla turva-alueen alta kuten ennen.
-            float yla = UiKerros.Tabletti ? t.y : 0f;
-            float rk = kerros.layout.height - yla - t.w, h = kortti.layout.height;
-            if (rk <= 0 || h <= 0 || float.IsNaN(h)) return;
-            float ylin = Mathf.Max(KuvaMarginaali, Mathf.Min(Mathf.Round((rk - h) / 2f), KuvaMarginaali + KuvaYlavara));
-            kerros.style.justifyContent = Justify.FlexStart;
-            float p = Mathf.Round(Mathf.Max(yla + ylin, t.y + KuvaMarginaali));
-            if (kerros.resolvedStyle.paddingTop != p) kerros.style.paddingTop = p;
-        }
+        float? kiinteaYla;
+        /// <summary>Vaiheen 1 kuvan paikka ruudulla (Vaihe2 → Korjaa); voimassa KorjausMs tai ensimmäiseen kosketukseen.</summary>
+        Rect? kuvaEnnen;
+        const long KorjausMs = 600;
+        /// <summary>Korjauksen vieritys, joka odottaa ScrollViewin vieritysalueen päivitystä (&lt; 0 = ei odota).</summary>
+        float odottavaVieritys = -1f;
 
         /// <summary>
-        /// Web jaadytaLeveys: kuva edellä -kortin leveys, vakioleveys + kortin reunus ja täyte, enintään ruutu − 2 × 12.
-        /// Alle 1100 pt:n leveys on sama molemmissa vaiheissa (kuva ei liiku) ja enintään KAPEA_KATTO 760.
-        /// ≥ 1100 pt (web NOSTOKUVA_LEVEA_RAJA, iPad vaakana): vaiheessa 1 iso kuva ilman kattoa; vaiheessa 2 pohja
-        /// min(vakioleveys, 1100 − 48), kortti enintään 1100, kuva vasemmalle palstaansa ja teksti oikealle.
+        /// Web nostokuvanYlin: vaiheen 1 kortti pystysuunnassa keskelle turva-aluetta, mutta enintään
+        /// NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA (100 pt) yläreunasta; vaiheessa 2 (löydös 131) Korjaan yläreuna.
+        /// Muulloin kerros keskittää (.mk-himmennys). Kortin korkeus enintään turva-alueen alareunaan.
         /// </summary>
-        void MitoitaKuvaEdella()
+        void Pystypaikka()
         {
-            bool kuvaEdella = !ankkuroitu && nosto != null && nosto.Kuvat.Count > 0;
-            var pohja = kerros.panel?.visualTree.layout ?? default;
-            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
-            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
-            if (!kuvaEdella || rl <= 0 || rk <= 0)
+            bool esittely = Auki && kortti.ClassListContains("mk-nosto--esittely");
+            if (!esittely && !kiinteaYla.HasValue)
             {
-                Pinoksi();
-                if (!ankkuroitu) { kortti.style.width = StyleKeyword.Null; kortti.style.maxWidth = StyleKeyword.Null; }
+                if (kerros.style.justifyContent.keyword != StyleKeyword.Null)
+                {
+                    kerros.style.justifyContent = StyleKeyword.Null;
+                    kerros.style.paddingTop = StyleKeyword.Null;
+                    kortti.style.maxHeight = StyleKeyword.Null;
+                }
                 return;
             }
-            // Reunus 1 + täyte 15,2 kummallakin puolella (web .fokuskohde-popup, mitattu 24.9. b11).
-            const float vara = 2f * (1f + 15.2f);
-            float enintaan = rl - 2f * KuvaMarginaali, leveys;
-            if (rl < KuvaLeveaRaja)
-            {
-                Pinoksi();
-                leveys = Mathf.Min(KuvaVakioleveys(rl, rk) + vara, Mathf.Min(enintaan, KuvaKapeaKatto));
-            }
-            else if (kortti.ClassListContains("mk-nosto--esittely"))
-                leveys = Mathf.Min(KuvaVakioleveys(rl, rk, kapea: false) + vara, enintaan);
+            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            float kh = kerros.layout.height;
+            if (float.IsNaN(kh) || kh <= 0) return;
+            float p;
+            if (kiinteaYla.HasValue) p = kiinteaYla.Value;
             else
             {
-                korttiPohja = Mathf.Min(KuvaVakioleveys(rl, rk, kapea: false), KuvaLeveaKatto - KuvaVaraArvio);
-                kuvaKorkeusKatto = KuvaKorkeusKatto(rk);
-                leveys = Mathf.Min(korttiPohja + vara, Mathf.Min(enintaan, KuvaLeveaKatto));
-                Palstoiksi();
-                MitoitaKuvapalsta();
+                // iPhonella ei ole yläpalkkia (NATIIVIN iPHONE-ASETTELU): pilleri ja saapumispalkki ovat samoilla y-arvoilla kuin
+                // webin yläpalkki ja palkki Safarin näkymässä, joten ruutu alkaa näytön yläreunasta (b12l: turva-alueesta
+                // mitattuna kortti jäi 62 pt webiä alemmas). iPadilla turva-alueen alta kuten ennen.
+                float yla = UiKerros.Tabletti ? t.y : 0f;
+                float rk = kh - yla - t.w, h = kortti.layout.height;
+                if (rk <= 0 || h <= 0 || float.IsNaN(h)) return;
+                float ylin = Mathf.Max(KuvaMarginaali, Mathf.Min(Mathf.Round((rk - h) / 2f), KuvaMarginaali + KuvaYlavara));
+                p = Mathf.Round(Mathf.Max(yla + ylin, t.y + KuvaMarginaali));
             }
-            leveys = Mathf.Round(leveys);
-            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+            kerros.style.justifyContent = Justify.FlexStart;
+            if (kerros.resolvedStyle.paddingTop != p) kerros.style.paddingTop = p;
+            float mh = Mathf.Round(kh - p - Mathf.Max(16f, t.w + KuvaMarginaali));
+            if (kortti.resolvedStyle.maxHeight.value != mh) kortti.style.maxHeight = mh;
         }
 
         /// <summary>
-        /// Web nostoPalstoiksi: kuvasarja (kuva, laskuri ja kuvateksti) vasempaan palstaan, kaikki sen jälkeen
-        /// oikeaan; sitä edeltävät (luokka, otsikko, ingressi, äänet) jäävät koko leveydelle.
+        /// Löydös 131 (omistaja, build 16; web nostokuvanKorjaus kapealla ruudulla): LISÄÄ tai kuvan napautus ei liikuta
+        /// kuvaa. Vaiheen 2 ylärivi, otsikko ja ingressi tulevat kuvan yläpuolelle ja teksti alle: kortin yläreuna nousee
+        /// niiden verran, ja minkä turva-alue estää, sen verran sisältöä vieritetään. Leveys on sama (Mitoita), joten
+        /// kuva ei myöskään pienene (webin työpöydän palstataitto kutisti sen, natiivissa ei).
         /// </summary>
-        void Palstoiksi()
+        void Korjaa(VisualElement kehys)
         {
-            if (rivi != null) return;
-            var c = sisus.contentContainer;
-            var lohko = c.Children().FirstOrDefault(x => x.ClassListContains("mk-nosto__kuvasarja"));
-            if (lohko == null) return;
-            int i = c.IndexOf(lohko);
-            var jalkeen = c.Children().Skip(i + 1).ToList();
-            rivi = Rakenne.El("mk-nosto__rivi", null, PickingMode.Ignore);
-            kuvapalsta = Rakenne.El("mk-nosto__kuvapalsta", rivi, PickingMode.Ignore);
-            tekstipalsta = Rakenne.El("mk-nosto__tekstipalsta", rivi, PickingMode.Ignore);
-            c.Insert(i, rivi);
-            kuvapalsta.Add(lohko);
-            foreach (var x in jalkeen) tekstipalsta.Add(x);
-            AsetaKehyksenSuhde(kuvaSuhde);
+            if (!kuvaEnnen.HasValue || kehys?.panel == null || !Auki) return;
+            var nyt = kehys.worldBound;
+            float sisalto = sisus.contentContainer.worldBound.y, nakyma = sisus.contentViewport.worldBound.y;
+            if (nyt.width <= 0 || float.IsNaN(nyt.y) || float.IsNaN(sisalto) || float.IsNaN(nakyma)) return;
+            // Kuvan paikka ruudulla = kerros + yläreuna + (näkymä − kortti) + (kuva − sisältö) − vieritys.
+            float kohta = nyt.y - sisalto, kortistaNakymaan = nakyma - kortti.worldBound.y;
+            float tavoite = kuvaEnnen.Value.y - kerros.worldBound.y - kortistaNakymaan - kohta; // = yläreuna − vieritys
+            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            float p = Mathf.Round(Mathf.Max(t.y + KuvaMarginaali, tavoite));
+            kiinteaYla = p;
+            odottavaVieritys = Mathf.Max(0f, p - tavoite);
+            Pystypaikka();
+            Vierita();
         }
 
-        /// <summary>Palstat takaisin pinoksi (kierto alle 1100 pt:n): kuva ylös 3:2-kehykseen, teksti alle.</summary>
-        void Pinoksi()
+        /// <summary>Korjauksen vieritys; ScrollView rajaa arvon vieritysalueeseen, joten yritys toistuu sen päivittyessä.</summary>
+        void Vierita()
         {
-            if (rivi == null) return;
-            var c = sisus.contentContainer;
-            int i = c.IndexOf(rivi);
-            var lapset = kuvapalsta.Children().Concat(tekstipalsta.Children()).ToList();
-            rivi.RemoveFromHierarchy();
-            foreach (var x in lapset) c.Insert(i++, x);
-            rivi = kuvapalsta = tekstipalsta = null;
-            AsetaKehyksenSuhde(null);
+            if (odottavaVieritys < 0f) return;
+            if (Mathf.Abs(sisus.scrollOffset.y - odottavaVieritys) > 0.25f) sisus.scrollOffset = new Vector2(0f, odottavaVieritys);
+            if (Mathf.Abs(sisus.scrollOffset.y - odottavaVieritys) <= 0.25f) odottavaVieritys = -1f;
         }
 
-        /// <summary>
-        /// Web: kuva kapenee palstaansa, pohja × 0,5 (pystykuva × 0,32), ja saa oman muotonsa korkeuden enintään
-        /// kuvan korkeuskattoon (nostokuvanSovitus).
-        /// </summary>
-        void MitoitaKuvapalsta()
+        /// <summary>Kortti keskelle ilman vaiheen 2 korjausta (uusi kortti, kierto).</summary>
+        void VapautaPaikka()
         {
-            if (kuvapalsta == null) return;
-            float w = korttiPohja * (kuvaSuhde > 1f ? KuvapalstaPystyOsuus : KuvapalstaOsuus);
-            if (kuvaKorkeusKatto > 0f && w * kuvaSuhde > kuvaKorkeusKatto) w = kuvaKorkeusKatto / kuvaSuhde;
-            w = Mathf.Round(w);
-            if (kuvapalsta.style.width.value.value != w) kuvapalsta.style.width = w;
-        }
-
-        /// <summary>Kuvasarjan kehyksen korkeus/leveys-suhde: palstassa kuvan oma muoto, pinossa (null) 3:2.</summary>
-        void AsetaKehyksenSuhde(float? suhde)
-        {
-            var kehys = sisus.contentContainer.Q(className: "mk-nosto__kuvapaikka")?.Q(className: "mk-nosto__kuvakehys");
-            if (kehys == null) return;
-            kehys.userData = suhde;
-            float w = kehys.layout.width;
-            if (w > 0 && !float.IsNaN(w)) kehys.style.height = Mathf.Round(w * (suhde ?? 2f / 3f));
-        }
-
-        /// <summary>Kuvasarjan kuva latautui: muoto talteen, palstassa kehys ja palstan leveys sen mukaan.</summary>
-        void SarjanKuvaLadattu(Texture2D t)
-        {
-            if (t == null || t.width <= 0 || t.height <= 0) return;
-            kuvaSuhde = t.height / (float)t.width;
-            if (rivi == null) return;
-            AsetaKehyksenSuhde(kuvaSuhde);
-            MitoitaKuvapalsta();
-        }
-
-        /// <summary>
-        /// Web kutistaNakyvasti (FLIP, NOSTOKUVA_KUTISTUS_MS 260): kuva piirretään ensin vaiheen 1 paikkaansa ja
-        /// liukuu ja pienenee palstaansa. Teksti on heti paikallaan.
-        /// </summary>
-        void Kutista(Rect ennen)
-        {
-            var kehys = kuvapalsta?.Q(className: "mk-nosto__kuvakehys");
-            if (kehys == null) return;
-            int v = versio;
-            void Alusta(GeometryChangedEvent g)
-            {
-                var nyt = kehys.worldBound;
-                if (nyt.width <= 0 || float.IsNaN(nyt.width)) return;
-                kehys.UnregisterCallback<GeometryChangedEvent>(Alusta);
-                if (v != versio) return;
-                float s = ennen.width / nyt.width;
-                var d = ennen.position - nyt.position;
-                kehys.style.transformOrigin = new TransformOrigin(0, 0);
-                void Aseta(float k)
-                {
-                    float e = 1f - (1f - k) * (1f - k) * (1f - k); // ease-out
-                    kehys.style.scale = new Scale(Vector2.one * Mathf.Lerp(s, 1f, e));
-                    kehys.style.translate = new Translate(Mathf.Lerp(d.x, 0f, e), Mathf.Lerp(d.y, 0f, e));
-                }
-                Aseta(0f);
-                Ruudunpaivitys.Herata(KutistusMs / 1000f + 0.05f); // lämpö: kutistus täydellä taajuudella
-                kehys.experimental.animation.Start(0f, 1f, (int)KutistusMs, (_, k) => Aseta(k))
-                    .OnCompleted(() => { kehys.style.scale = StyleKeyword.Null; kehys.style.translate = StyleKeyword.Null; });
-            }
-            kehys.RegisterCallback<GeometryChangedEvent>(Alusta);
-        }
-
-        /// <summary>Kohdekortti min(24rem, 86vw) (web .fokuskohde-popup), lisäkaupunki min(34rem, 92vw) (.kaupunkipopup).</summary>
-        float HaluttuLeveys(float w) => Mathf.Round(lisakaupunkiPaikka ? Mathf.Min(544f, w * 0.92f) : Mathf.Min(Leveys, w * LeveysOsuus));
-
-        void AsetaKohta(float x, float y)
-        {
-            if (kortti.resolvedStyle.left != x) kortti.style.left = x;
-            if (kortti.resolvedStyle.top != y) kortti.style.top = y;
+            kiinteaYla = null;
+            kuvaEnnen = null;
+            odottavaVieritys = -1f;
         }
 
         void EleAlkoi(PointerDownEvent e)
         {
-            eleId = e.pointerId;
+            // Sormi kortilla: vieritys on pelaajan, eikä myöhempi asettelu (kuvasarjan selaus) enää siirrä korttia.
+            odottavaVieritys = -1f;
+            kuvaEnnen = null;
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
-            raahaa = false;
-            // Kuva edellä -kortissa (vaihe 1) ei ole yläriviä eikä otsikkoa: kahvana on kortin ylin kaista.
-            eleKahvasta = OnKahva(e.position);
-        }
-
-        /// <summary>Kortin yläreunan kaista, josta raahaus alkaa myös ilman yläriviä (löydös 79).</summary>
-        const float KahvanKorkeus = 28f;
-
-        /// <summary>Ele alkoi raahauskahvasta (ylärivi tai otsikko).</summary>
-        bool eleKahvasta;
-
-        /// <summary>
-        /// Löydös 79 (omistaja 25.9.2026, sitova): korttia liikutetaan vain yläreunasta eli webin raahauskahvasta
-        /// (css/fokuskohteet.css: .fokuskohde-ylarivi ja .fokuskohde-otsikko, touch-action none). Muu kortti jää
-        /// vieritykselle ja napautuksille.
-        /// </summary>
-        bool OnKahva(Vector2 kohta)
-        {
-            // Paikan mukaan, ei kohteen: ylärivi ja otsikko ovat PickingMode.Ignore, joten osuma menee vieritykselle.
-            if (kohta.y - kortti.worldBound.yMin < KahvanKorkeus) return true;
-            bool osui = false;
-            kortti.Query(className: "mk-nosto__ylarivi").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
-            if (!osui) kortti.Query(className: "mk-nosto__otsikko").ForEach(v => osui |= v.resolvedStyle.display != DisplayStyle.None && v.worldBound.Contains(kohta));
-            return osui;
-        }
-
-        /// <summary>Web raahausTaiSulku: kynnyksen ylittävä liike siirtää korttia; tekstin päällä pystyveto vierittää.</summary>
-        void EleLiikkui(PointerMoveEvent e)
-        {
-            if (e.pointerId != eleId) return;
-            Vector2 d = (Vector2)e.position - eleAlku;
-            if (!raahaa)
-            {
-                if (d.magnitude < Raahauskynnys) return;
-                // Löydös 79: vain kahvasta alkanut ele raahaa; muualla ele jää vieritykselle (ei napautus).
-                if (!eleKahvasta) { eleId = -1; return; }
-                raahaa = true;
-                Irrota();
-                lahto = new Vector2(kortti.resolvedStyle.left, kortti.resolvedStyle.top);
-                kortti.AddToClassList("mk-nosto--raahauksessa");
-                kortti.CapturePointer(e.pointerId);
-            }
-            float maxX = Mathf.Max(0f, kerros.layout.width - kortti.layout.width);
-            float maxY = Mathf.Max(0f, kerros.layout.height - kortti.layout.height);
-            AsetaKohta(Mathf.Round(Mathf.Clamp(lahto.x + d.x, 0f, maxX)), Mathf.Round(Mathf.Clamp(lahto.y + d.y, 0f, maxY)));
-            e.StopPropagation();
-        }
-
-        void EleLoppui(PointerUpEvent e)
-        {
-            if (e.pointerId != eleId || !raahaa) return;
-            raahaa = false;
-            eleId = -1;
-            raahattu = true;
-            kortti.RemoveFromClassList("mk-nosto--raahauksessa");
-            if (kortti.HasPointerCapture(e.pointerId)) kortti.ReleasePointer(e.pointerId);
-            e.StopPropagation();
-        }
-
-        /// <summary>Keskitetty kortti vapaaksi ennen raahausta: nykyinen paikka ja leveys kiinni, kerros ilman täytettä.</summary>
-        void Irrota()
-        {
-            if (kortti.resolvedStyle.position == Position.Absolute) return;
-            var paikka = kortti.worldBound.position - kerros.worldBound.position;
-            float leveys = kortti.layout.width;
-            kerros.AddToClassList("mk-nosto__kerros--vapaa");
-            kortti.style.position = Position.Absolute;
-            kortti.style.width = leveys;
-            kortti.style.left = Mathf.Round(paikka.x);
-            kortti.style.top = Mathf.Round(paikka.y);
         }
 
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
@@ -608,7 +418,9 @@ namespace Matkakirja.Natiivi
         {
             if (Auki) return;
             Auki = true;
-            Rakenne.Nayta(kerros, true, 220);
+            // Löydös 134 (omistaja, build 16): nosto näkyviin heti samassa kehyksessä, ei 220 ms:n sisäänhäivytystä
+            // (Pelikoodarin mittaus: näkyvä 267 ms, josta häivytys 220 ms). Sulku häivyttää kuten ennen.
+            Rakenne.NaytaHeti(kerros);
             SyoteLukko.Esta(this);
         }
 
@@ -622,11 +434,10 @@ namespace Matkakirja.Natiivi
             kortti.RemoveFromClassList("mk-nosto--looppi");
             kortti.RemoveFromClassList("mk-nosto--kohde");
             kortti.RemoveFromClassList("mk-nosto--esittely");
-            lisakaupunkiPaikka = true;
-            AsetaPaikka(true);
+            VapautaPaikka();
+            Mitoita();
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.Flex;
             lukija.Aseta(null);
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
@@ -667,36 +478,38 @@ namespace Matkakirja.Natiivi
         void Vaihe1()
         {
             sisus.Clear();
-            rivi = kuvapalsta = tekstipalsta = null;
             napit.Clear();
             napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.None;
             lukija.Aseta(null);
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
-            var kuva = Kuvakehys(sisus, k, Vaihe2, SarjanKuvaLadattu);
+            var kuva = Kuvakehys(sisus, k, Vaihe2);
             var alarivi = Rakenne.El("mk-nosto__esittelyrivi", sisus, PickingMode.Ignore);
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
             // Web nostokuvaAloita: kuvatekstiLyhyt(kuva), eläintäyn vakioselite vasta karusellissa (pariteetti b12-2 #27).
             Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
             var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
-            MitoitaKuvaEdella();
         }
 
         // --- vaihe 2: koko kortti ----------------------------------------------------------
 
         void Vaihe2()
         {
-            // Vaiheen 1 kuvan paikka ruudulla: leveällä kuva kutistuu siitä palstaansa (web kutistaNakyvasti).
-            Rect? ennen = kortti.ClassListContains("mk-nosto--esittely")
-                ? sisus.contentContainer.Q(className: "mk-nosto__kuvakehys")?.worldBound : null;
+            // Löydös 131: vaiheen 1 kuvan paikka ruudulla; vaiheen 2 kuva asettuu täsmälleen siihen (Korjaa).
+            bool esittelysta = kortti.ClassListContains("mk-nosto--esittely");
+            Rect? ennen = esittelysta ? sisus.contentContainer.Q(className: "mk-nosto__kuvakehys")?.worldBound : null;
+            VapautaPaikka();
+            if (ennen.HasValue && ennen.Value.width > 0 && !float.IsNaN(ennen.Value.y))
+            {
+                kuvaEnnen = ennen;
+                // Kortti pysyy vaiheen 1 yläreunassa, kunnes Korjaa on mitannut uuden asettelun (ei keskitystä välissä).
+                kiinteaYla = kerros.resolvedStyle.paddingTop;
+            }
             sisus.Clear();
-            rivi = kuvapalsta = tekstipalsta = null;
             napit.Clear();
             sisus.scrollOffset = Vector2.zero;
-            sulje.style.display = DisplayStyle.Flex;
             kortti.RemoveFromClassList("mk-nosto--esittely");
             var n = nosto;
             // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
@@ -708,7 +521,8 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina" : "Kuuntele hetki");
 
-            Ylarivi(sisus, n);
+            // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
+            Ylarivi(sisus, n).Add(lukija.Nappi);
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -744,7 +558,8 @@ namespace Matkakirja.Natiivi
                 l.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
                 {
                     if (string.IsNullOrEmpty(e.linkID)) return;
-                    Sulje();
+                    // Löydös 136: nosto jää taustalle, chat aukeaa sen päälle (UiNakymat.ChatinKerros).
+                    lukija.Pysayta();
                     UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})");
                 });
             }
@@ -778,8 +593,15 @@ namespace Matkakirja.Natiivi
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
                 Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
-            MitoitaKuvaEdella();
-            if (rivi != null && ennen.HasValue && ennen.Value.width > 0) Kutista(ennen.Value);
+            if (kuvaEnnen.HasValue)
+            {
+                // Kuvasarjan lohko muuttaa paikkaansa sisällössä, kun sen yläpuolinen teksti asettuu; kehys itse ei.
+                var lohko = sisus.contentContainer.Q(className: "mk-nosto__kuvasarja");
+                lohko?.RegisterCallback<GeometryChangedEvent>(_ => Korjaa(lohko.Q(className: "mk-nosto__kuvakehys")));
+                // Korjaus koskee vain avautumisen asettelua: myöhempi muutos (toinen kuva sarjassa) ei siirrä korttia.
+                int v = versio;
+                kerros.schedule.Execute(() => { if (v == versio) kuvaEnnen = null; }).StartingIn(KorjausMs);
+            }
         }
 
         /// <summary>
@@ -788,7 +610,7 @@ namespace Matkakirja.Natiivi
         /// Generoitu kuva UI/Resources/Symbolit/sym-*.png (web assets/kartat/symbolit/sym-*.webp); hetki ja ihme ovat
         /// webissä koodipiirtäjiä, joten niille ei ole kuvaa (rivi ilman symbolia).
         /// </summary>
-        static void Ylarivi(VisualElement isa, Nosto n)
+        static VisualElement Ylarivi(VisualElement isa, Nosto n)
         {
             var rivi = Rakenne.El("mk-nosto__ylarivi mk-nosto__ylarivi--rivi", isa, PickingMode.Ignore);
             Kirjasimet.Aseta(rivi, Kirjasin.Kone);
@@ -799,11 +621,15 @@ namespace Matkakirja.Natiivi
                 symboli.style.backgroundImage = new StyleBackground(kuva);
             }
             Rakenne.Teksti(n.Luokka ?? "", "mk-nosto__ylarivi-teksti", rivi);
+            return rivi;
         }
 
         // --- lajien lohkot ------------------------------------------------------------------
 
-        /// <summary>Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus sulkee kortin ja kysyy pululta.</summary>
+        /// <summary>
+        /// Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus kysyy pululta. Löydös 136 (omistaja, build 16):
+        /// kortti jää taustalle auki ja chat aukeaa sen päälle (UiNakymat.ChatinKerros); kortin luenta pysähtyy.
+        /// </summary>
         void KysyPululta(VisualElement isa, Nosto n)
         {
             if (n.Kysymykset.Count == 0) return;
@@ -813,7 +639,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n.Kysymykset.Count; i++)
             {
                 string kk = n.Kysymykset[i];
-                Action kysy = () => { Sulje(); UiNakymat.Hae()?.Chat.Kysy(kk); };
+                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk); };
                 var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 napit["kysy" + i] = kysy;
@@ -991,16 +817,26 @@ namespace Matkakirja.Natiivi
 
         // --- kuvat ------------------------------------------------------------------------
 
+        /// <summary>
+        /// Kuvakehys koko leveydellä. Löydös 130: korkeus kuvan omasta muodosta (web nostokuvanSovitus), enintään
+        /// kuvaKatto; ennen latausta 3:2 (web oletussuhde). Pysty- ja neliökuva eivät enää kutistu 3:2-kehykseen
+        /// (iPhonella pystykuva 225 pt korkea → enintään turva-alue − 150 pt). Katetun kuvan sivuille jää kortin paperi.
+        /// </summary>
         VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null)
         {
             var kehys = Rakenne.El("mk-nosto__kuvakehys", isa);
             var kuva = Rakenne.El("mk-nosto__kuva", kehys, PickingMode.Ignore);
             kehys.RegisterCallback<ClickEvent>(_ => napautus?.Invoke());
-            // 3:2-kehys leveyden mukaan (web oletussuhde); kaksipalstataiton kuvapalstassa kuvan oma muoto (userData).
-            kehys.RegisterCallback<GeometryChangedEvent>(e =>
+            kehys.userData = 2f / 3f;
+            void Korkeus(float w)
             {
-                if (e.newRect.width > 0) kehys.style.height = Mathf.Round(e.newRect.width * (kehys.userData is float s ? s : 2f / 3f));
-            });
+                if (float.IsNaN(w) || w <= 0) return;
+                float h = w * (kehys.userData is float s ? s : 2f / 3f);
+                if (kuvaKatto > 0f) h = Mathf.Min(h, kuvaKatto);
+                h = Mathf.Round(h);
+                if (kehys.style.height.value.value != h) kehys.style.height = h;
+            }
+            kehys.RegisterCallback<GeometryChangedEvent>(e => Korkeus(e.newRect.width));
             var nauha = k.Nauha != null ? Ihmenauha(kuva, k.Nauha) : null;
             if (nauha != null) nauha.style.display = DisplayStyle.None; // näkyviin, kun kuvan kulma tiedetään
             Texture2D ladattu = null;
@@ -1011,6 +847,12 @@ namespace Matkakirja.Natiivi
                 if (t == null || v != versio) return;
                 ladattu = t;
                 kuva.style.backgroundImage = new StyleBackground(t);
+                if (t.width > 0 && t.height > 0)
+                {
+                    kehys.userData = t.height / (float)t.width;
+                    kehys.AddToClassList("mk-nosto__kuvakehys--ladattu");
+                    Korkeus(kehys.layout.width);
+                }
                 ladattuna?.Invoke(t);
                 if (nauha == null) return;
                 nauha.style.display = DisplayStyle.Flex;
@@ -1032,8 +874,7 @@ namespace Matkakirja.Natiivi
                 kehysPaikka.Clear();
                 var k = kuvat[kuvaIndeksi];
                 int kohta = kuvaIndeksi;
-                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), SarjanKuvaLadattu);
-                if (rivi != null) { kehys.userData = kuvaSuhde; MitoitaKuvapalsta(); }
+                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta));
                 AsetaKuvateksti(teksti, k.Lyhyt, k);
                 if (kuvat.Count > 1)
                 {

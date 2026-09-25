@@ -284,6 +284,7 @@ namespace Matkakirja.Natiivi
             // Pulun puhekanavan reunat soittimelle (soitin suodattaa toistot).
             kerros.JokaRuutu += () => Aanisoitin.PuluPuhuu(Aanet.PuluPuhuu);
             kerros.JokaRuutu += PaivitaKuvaSumea;
+            kerros.JokaRuutu += ChatinKerros;
             // Löydös 19: kameran puolen mieto sumennus (Natiiviseppä, 2,25 pt, 0,3 s; portti voittaa).
             KuvaSumeaMuuttui += a => PalloKierto.KuvaSumea = a;
             Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); Julistegalleria.Sulje(); Minipopup.SuljeAuki(); };
@@ -504,10 +505,24 @@ namespace Matkakirja.Natiivi
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
-        bool lehtiAuki, arkkiAuki;
+        bool lehtiAuki, arkkiAuki, chatNostonPaalla;
 
         void PulunKerros() =>
-            Kerros.AsetaJarjestys(Pulu.Kerros, lehtiAuki && !arkkiAuki ? UiKerros.Traileri + 2 : Pulu.Kerros);
+            Kerros.AsetaJarjestys(Pulu.Kerros, lehtiAuki && !arkkiAuki ? UiKerros.Traileri + 2
+                : chatNostonPaalla ? UiKerros.Valikot + 2 : Pulu.Kerros);
+
+        /// <summary>
+        /// Löydös 136 (omistaja, build 16): nostokortin valmis kysymys tai korostettu sana avaa chatin nosto taustalla
+        /// auki; pulu ja chat (kerros 35) nousevat nostokortin (Valikot 40) päälle chatin ajaksi. Ohi napautus sulkee
+        /// vain chatin (sen sulkija on ylempänä), ja nosto jää näkyviin.
+        /// </summary>
+        void ChatinKerros()
+        {
+            bool p = Chat.Auki && Nostokortti.Auki;
+            if (p == chatNostonPaalla) return;
+            chatNostonPaalla = p;
+            PulunKerros();
+        }
 
         void UusiMatka(PeliOhjain o)
         {
