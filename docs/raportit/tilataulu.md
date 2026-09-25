@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 20:30 EEST
+**Päivitetty:** 2026-09-25 20:41 EEST (lepokäsky lähetetty)
 
 ## 1) Sessiot
 
@@ -28,7 +28,7 @@ Ei avoimia kortteja.
 
 **LÄMPÖERÄ build 16:een (omistajan päätös 18.2x):** Pelikoodari — dynaaminen ruudunpäivitys + lepopiirto + thermalState; Natiiviseppä — HDR/varjot/anturi; Laitetestaaja — 10 min lämpö- ja akkumittaus laitteella ennen/jälkeen.
 
-**Pysyvä ohje (Fable 20:2x): 5 h -kiintiö >95 % ennen 22:30** → lähetä lepokäsky ("vie käsillä oleva erä pushiin ja lepää 22.30:een") Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86), Linssisepälle (local_45a869de-4d6b-4ed6-a6c9-30fd8442587e) ja Natiivi-UI:lle (local_33ba1387-d688-4e44-8e05-10951e61efc0), ja ilmoita Fablelle. Build 16:n polku (Pelikoodari, Laitetestaaja, Julkaisija, Natiiviseppä) jatkaa. Alle 95 % ei toimia.
+**LEPOKÄSKY LÄHETETTY 20:40 (5 h -kiintiö saavutti 95 %):** "vie käsillä oleva erä pushiin ja lepää 22.30:een" → Sisältökirjuri (toimitettu), Natiivi-UI (toimitettu), Linssiseppä (jonossa, sessio kiireinen). Fable ilmoitettu. Build 16:n polku (Pelikoodari, Laitetestaaja, Julkaisija, Natiiviseppä) jatkaa. Kiintiö nollautuu 22:30 EEST — sen jälkeen ilmoita Fablelle ja siirry normaaliin.
 
 ## 3) Avoimet PR:t
 
@@ -47,7 +47,7 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 - **Paikallinen levy:** 145 Gt vapaana (hälytysraja 60 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 36 kpl. **Swap:** 0 Gt.
 - **GLO-30-nouto:** aws-virtoja 24, en0 sisään 31 Mt/s (raja 15), seurantarivi 20:27: 13118/26450 ruutua, 384,5/589,1 GB, NAS-kansio 363 Gt (~2,0 Gt/min) → valmis ~22. Ei hälytystä.
 - **Simulaattorit boottina:** 1 (pariteetti-iPhone). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 2.
-- **5 h -kiintiö:** 91 % klo 20:29 (nousee ~0,33 %/min; 95 % ~20:41; nollautuu 22:30 EEST). Lepokäskyohje voimassa >95 %:lla (ks. yllä). **Viikko (kaikki mallit):** 50 %. **Viikko (Fable):** 20 %.
+- **5 h -kiintiö:** 95 % klo 20:40 (nollautuu 22:30 EEST, 1 h 49 min). Lepokäsky lähetetty. **Viikko (kaikki mallit):** 51 %. **Viikko (Fable):** 20 %.
 - **Konteksti:** Julkaisija 47 %, Natiiviseppä 45 %, Laitetestaaja 43 %, Fable 37 %, Pelikoodari 24 %, Karttaseppä 16 %. Ei ylityksiä.
 - **Juna:** KÄÄNNETTY 20:26 (10d3eccd), ei odottavaa.
 - **Postilaatikko:** ei uutta (kärki 82c5c1d7f). **Avoimia PR:iä:** 9.
