@@ -610,13 +610,89 @@ namespace Matkakirja
         /// <summary>
         /// Noston merkki ja nimiö ruudulla (Natiivi-UI:n NostotKartalla.Laatikko samoin mitoin): symboli 20 × 20 pt
         /// pisteen ympärillä, nimiö oikealla 0,55 em/merkki (11 pt, tärkeillä 13,5 pt). x, y pikseleinä, kerroin
-        /// = pikseliä pisteelle.
+        /// = pikseliä pisteelle. EI OLE NIMIEN VARAUS (löydös 50 vaihe 2): nimet väistävät vain noston ikonia
+        /// (<see cref="NostonIkonilaatikko"/>); lappu väistää nimiä jälkeenpäin sovittelussa.
         /// </summary>
         public static Ruutulaatikko NostonLaatikko(float x, float y, string nimio, int tarkeys, float kerroin)
         {
             float koko = tarkeys >= 2 ? 13.5f : 11f;
             float leveys = 12f + (string.IsNullOrEmpty(nimio) ? 0f : 2f + nimio.Length * koko * 0.55f);
             return new Ruutulaatikko(x - 10f * kerroin, y - 10f * kerroin, x + leveys * kerroin, y + 10f * kerroin);
+        }
+
+        // ---- NOSTON IKONI (löydös 50 vaihe 2) ----------------------------------------------------------------
+        //
+        // WEB (js/pallolauta/nostot.js:3835–3880, KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI): nimiladonta
+        // väistää elävästä nostosta vain IKONIN (nostonLaatikko / aihemerkinLaatikko nimio:false), koska ikoni on
+        // kiinni karttapisteessään. Nimiöllisen noston LAPPU ei ole varaus: se väistää nimiä jälkeenpäin
+        // (nostot.sovittele levossa, natiivissa Natiivi-UI:n NostotKartalla.Sovita). Poltettujen nostojen koko
+        // muste on webissä varaus, mutta natiivissa nostoja ei polteta laattoihin, joten vastinetta ei ole.
+        // Mitoitus on sama kuin Natiivi-UI:n NostotKartalla.Hae (web nostot.js:633 ja fokusnosto-symbolit.js):
+        //   mitta = min(katto(k) / 11, 8,5/11 × k × oma), oma 11,5/8,5 kaupungeilla, 1,3 tasolla 1, muuten 1;
+        //   katto(k) = 16 px kertoimeen 2, log2-lineaarisesti 22 px:iin kertoimessa 4 (k = NostoKerros.ZoomKerroin);
+        //   ikoniruudun puolikas = 7,4 × mitta, tason 1 kuvamerkillä × 1,6.
+
+        /// <summary>Aiheet, joilla on kuvamerkki (webin KARTTASELITE_MERKIT, Natiivi-UI NostoMerkit.Jarjestys Kuvat).</summary>
+        public static readonly HashSet<string> KuvamerkinAiheet = new HashSet<string> { "historia", "luonto", "kulttuuri", "kauppa" };
+
+        /// <summary>
+        /// Noston ikoniruudun puolikas ruutupisteinä (ilman nimiötä): Natiivi-UI:n Merkki.Ruutu × Merkki.Mitta.
+        /// zoomKerroin = NostoKerros.ZoomKerroin. Ryhmämerkit (koelippu Aihemerkit) mitoitetaan kuin yksittäiset.
+        /// </summary>
+        public static float NostonIkoninPuolikas(int taso, string aihe, float zoomKerroin)
+        {
+            bool kaupunki = aihe == "kaupungit", taso1 = taso == 1;
+            float oma = kaupunki ? 11.5f / 8.5f : taso1 ? 1.3f : 1f;
+            float k = zoomKerroin;
+            float katto = k <= 2f ? 16f : k >= 4f ? 22f : 16f + 6f * (float)Math.Log(k / 2.0, 2.0);
+            float mitta = Math.Min(katto / 11f, 8.5f / 11f * k * oma);
+            bool kuvamerkki = taso1 && aihe != null && KuvamerkinAiheet.Contains(aihe);
+            return 7.4f * (kuvamerkki ? 1.6f : 1f) * mitta;
+        }
+
+        /// <summary>
+        /// Noston IKONI ruudulla ilman nimiötä (webin nostonLaatikko nimio:false): neliö pisteen ympärillä. x, y
+        /// pikseleinä (origo vasen alakulma, kuten NostoKerros.Nosto.Ruutu), kerroin = pikseliä pisteelle.
+        /// </summary>
+        public static Ruutulaatikko NostonIkonilaatikko(float x, float y, int taso, string aihe, float zoomKerroin, float kerroin)
+        {
+            float p = NostonIkoninPuolikas(taso, aihe, zoomKerroin) * kerroin;
+            return new Ruutulaatikko(x - p, y - p, x + p, y + p);
+        }
+
+        /// <summary>
+        /// LADOTTUJEN NIMIEN LAATIKOT (webin nimet.laatikot() -vastine): yhteisen varauslistan <paramref name="kaupunkeja"/>
+        /// ensimmäistä laatikkoa (KaupunkiMerkit: nimiö ja piste) ja näytettäväksi ladottujen aluenimien laatikot ilman
+        /// väistön varaa. <paramref name="ladotut"/> on <see cref="Lado"/>n tulos samasta (jo järjestetystä)
+        /// ehdokaslistasta, joten se on ehdokkaiden järjestyksessä.
+        /// </summary>
+        public static void NimienLaatikot(IReadOnlyList<Ruutulaatikko> varaukset, int kaupunkeja, List<Ehdokas> ehdokkaat,
+            List<int> ladotut, List<Ruutulaatikko> ulos)
+        {
+            ulos.Clear();
+            int n = Math.Min(kaupunkeja, varaukset.Count);
+            for (int i = 0; i < n; i++) ulos.Add(varaukset[i]);
+            int j = 0;
+            foreach (var e in ehdokkaat)
+            {
+                if (j >= ladotut.Count) break;
+                if (e.Indeksi != ladotut[j]) continue;
+                ulos.Add(e.Laatikko);
+                j++;
+            }
+        }
+
+        /// <summary>Ovatko laatikkolistat samat (järjestys mukaan, tarkka vertailu).</summary>
+        public static bool Samat(IReadOnlyList<Ruutulaatikko> a, IReadOnlyList<Ruutulaatikko> b)
+        {
+            if (a.Count != b.Count) return false;
+            for (int i = 0; i < a.Count; i++)
+            {
+                var x = a[i];
+                var y = b[i];
+                if (x.X0 != y.X0 || x.Y0 != y.Y0 || x.X1 != y.X1 || x.Y1 != y.Y1) return false;
+            }
+            return true;
         }
 
         // ---- TYYLI -------------------------------------------------------------------------------------------

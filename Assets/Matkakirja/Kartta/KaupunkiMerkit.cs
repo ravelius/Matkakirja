@@ -406,7 +406,7 @@ namespace Matkakirja
 
         /// <summary>
         /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut nimiöalueet pikseleinä. Kaupungit varaavat
-        /// ensin (LateUpdate), ja Nimikerros lisää samaan nostojen laatikot ja alue-, meri- ja valtamerinimet
+        /// ensin (LateUpdate), ja Nimikerros lisää samaan nostojen ikonit (ei nimiöitä, löydös 50 vaihe 2) ja alue-, meri- ja valtamerinimet
         /// (prioriteetti kaupunki > nosto > maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado).
         /// </summary>
         public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
