@@ -1,0 +1,342 @@
+[
+  {
+    "id": "kioto-kinkaku-ji",
+    "replacement_id": "kioto-kinkaku-ji-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-kinkaku-ji-vari2.png",
+    "sha256": "e18c7066f5e1a4fd56384def89b35cbb617e921d2e1812d19d58556a24f17441",
+    "bytes": 1189228,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-ginkaku-ji",
+    "replacement_id": "kioto-ginkaku-ji-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-ginkaku-ji-vari2.png",
+    "sha256": "8480bf3a5d2320084e78277e533291d894f054f83d5992a4d7ea1ddecfbaa418",
+    "bytes": 1212142,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-keisarillinen-palatsi",
+    "replacement_id": "kioto-keisarillinen-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-keisarillinen-palatsi-vari2.png",
+    "sha256": "47ad74a847e97bb90e7c46aff91d57bfce1e83fc4ae52cb35b919bb85140e71e",
+    "bytes": 1315386,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-nijo-linna",
+    "replacement_id": "kioto-nijo-linna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-nijo-linna-vari2.png",
+    "sha256": "ea56c77d833cad49d084729b9c223297da2ae040619550458779d62eb7e34d5f",
+    "bytes": 1167580,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-nishiki-tori",
+    "replacement_id": "kioto-nishiki-tori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-nishiki-tori-vari2.png",
+    "sha256": "06ebebbe15adc88c15db43bed07ee60703ac2e81faa71d57b635e2e0401c07b6",
+    "bytes": 1202702,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-gion",
+    "replacement_id": "kioto-gion-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-gion-vari2.png",
+    "sha256": "12e6fecd225ebf1603966e82cb5806c25df5df140960745cc1f5c3bf62a54d65",
+    "bytes": 1260471,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-kiyomizu-dera",
+    "replacement_id": "kioto-kiyomizu-dera-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-kiyomizu-dera-vari2.png",
+    "sha256": "52e042dc979597eb6be09dc383795bcdcd742ef8779e4d86b5527775cbddd529",
+    "bytes": 1523382,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-sanjusangen-do",
+    "replacement_id": "kioto-sanjusangen-do-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-sanjusangen-do-vari2.png",
+    "sha256": "bc1aa328780e815ce26c7d62ef461b70fdb622cc621b829a3a56bcd4ca7fd237",
+    "bytes": 707748,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-to-ji",
+    "replacement_id": "kioto-to-ji-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-to-ji-vari2.png",
+    "sha256": "fce591b62eb5c7ec9b66fd7cc6e7e67b11bee3a1c462ca74993a26b1645ef404",
+    "bytes": 789910,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kioto-fushimi-inari-taisha",
+    "replacement_id": "kioto-fushimi-inari-taisha-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kioto-fushimi-inari-taisha-vari2.png",
+    "sha256": "926af0cc53d83c986738f9cb54dd4e1b896eaa37e611e8ab5b7d1705bde0ef0e",
+    "bytes": 1170957,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-howrah-silta",
+    "replacement_id": "kolkata-howrah-silta-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-howrah-silta-vari2.png",
+    "sha256": "a1111bc0a912bcb37a49b5ad837044081a9809a9bd1793ddbb3f4220a4866fa9",
+    "bytes": 600657,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-howrahin-rautatieasema",
+    "replacement_id": "kolkata-howrahin-rautatieasema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-howrahin-rautatieasema-vari2.png",
+    "sha256": "a2195bffde4b6da21b3c1bea84e04daeda7d1d2b8b471b1328c3814e27746c8f",
+    "bytes": 1034826,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-marble-palace",
+    "replacement_id": "kolkata-marble-palace-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-marble-palace-vari2.png",
+    "sha256": "a8cffef9f8aff570bd60167b3153944f8b0abd58810d8ccdf2d612a2a8d9acc6",
+    "bytes": 1113310,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-nakhodan-moskeija",
+    "replacement_id": "kolkata-nakhodan-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-nakhodan-moskeija-vari2.png",
+    "sha256": "8b2af9146bb5866b5206189886a6707db3f6f99bc27d4aa37847f572e0fffc5c",
+    "bytes": 937215,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-college-street",
+    "replacement_id": "kolkata-college-street-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-college-street-vari2.png",
+    "sha256": "d3b98aff5004d7dd8e3511caca94c0a069445f6696c41efd69e937a36db6b969",
+    "bytes": 1405234,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-writers-building",
+    "replacement_id": "kolkata-writers-building-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-writers-building-vari2.png",
+    "sha256": "b9763f1d0ae1d4f23e49e623657edc5d59c0e107ee2d76056a1e73e5063641ab",
+    "bytes": 387885,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-st-john-sin-kirkko",
+    "replacement_id": "kolkata-st-john-sin-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-st-john-sin-kirkko-vari2.png",
+    "sha256": "38c8c91b4128e6b66459763ae9a24172dae3085028407cce131801ef53cdf53c",
+    "bytes": 608430,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-shaheed-minar",
+    "replacement_id": "kolkata-shaheed-minar-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-shaheed-minar-vari2.png",
+    "sha256": "7c0a7304da5a1d3323e7ec7b95e9a3ed172cd1aacfdd98370db81bedbc851ab8",
+    "bytes": 367098,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-intian-museo",
+    "replacement_id": "kolkata-intian-museo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-intian-museo-vari2.png",
+    "sha256": "f202e64b649fa19b3afc87f16e1eee83e730ba70adc829c2c470bb30351edd65",
+    "bytes": 839176,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kolkata-victoria-memorial",
+    "replacement_id": "kolkata-victoria-memorial-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kolkata-victoria-memorial-vari2.png",
+    "sha256": "efc811f6eeef5aa86cb043218b1ca4f1c32d176f257056c8d8218ec568b1a164",
+    "bytes": 1042480,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
