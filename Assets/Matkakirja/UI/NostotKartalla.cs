@@ -196,7 +196,7 @@ namespace Matkakirja.Natiivi
             if (linssinimet != vainNimet)
             {
                 vainNimet = linssinimet;
-                foreach (var mk in merkit) mk.El.pickingMode = vainNimet ? PickingMode.Ignore : PickingMode.Position;
+                foreach (var mk in merkit) { mk.El.pickingMode = vainNimet ? PickingMode.Ignore : PickingMode.Position; AsetaNimionOsuma(mk); }
                 if (vainNimet) SuljeViuhka();
             }
             if (!nakyy) return;
@@ -344,6 +344,7 @@ namespace Matkakirja.Natiivi
                     AsetaNimio(m);
                 }
                 m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
+                AsetaNimionOsuma(m);
             }
         }
 
@@ -477,9 +478,19 @@ namespace Matkakirja.Natiivi
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             if (viuhka.worldBound.Contains(p)) return;
-            foreach (var m in merkit) if (m.El.resolvedStyle.display == DisplayStyle.Flex && m.El.worldBound.Contains(p)) return;
+            foreach (var m in merkit)
+                if (m.El.resolvedStyle.display == DisplayStyle.Flex
+                    && (m.El.worldBound.Contains(p) || m.Nimio.pickingMode == PickingMode.Position && m.Nimio.worldBound.Contains(p))) return;
             SuljeViuhka();
         }
+
+        /// <summary>
+        /// LÖYDÖS 93 (omistaja build 13): nosto aukeaa myös nimiöstä, ei vain 11 px:n symbolista. Näkyvä nimiö ottaa
+        /// osuman ja ClickEvent kuplii merkkiin (Napautus); piilotettu (kylki ei mahtunut, opasiteetti 0) ja linssinimet
+        /// eivät ota, jotta näkymätön teksti ei varasta kartan napautuksia.
+        /// </summary>
+        void AsetaNimionOsuma(Merkki m) =>
+            m.Nimio.pickingMode = !vainNimet && m.NimioNakyy ? PickingMode.Position : PickingMode.Ignore;
 
         /// <summary>Uusiokäyttö: i:s merkki tälle nostolle (symboli ja nimiö vaihdetaan vain tarvittaessa).</summary>
         Merkki Hae(int i, NostoKerros.Nosto s, string nimio = null, bool ryhma = false, float kerroin = 1f)
