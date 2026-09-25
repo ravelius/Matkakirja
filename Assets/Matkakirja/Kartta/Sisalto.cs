@@ -53,11 +53,19 @@ namespace Matkakirja
             /// <summary>Skeema 1.10: pintakorkeus metreinä merenpinnasta (null paketissa = 0).</summary>
             public double korkeus;
             /// <summary>
-            /// Laudan oma nimen asettelu (web js/packs/*.js la/lx/ly, js/karttanimet.js sijoitaKaupunginNimi ehdokas 0):
-            /// ankkuri "start"/"end"/"middle" ja perusviivan siirtymä laudan yksiköinä (y alas). Tyhjä la = ei asettelua.
+            /// Skeema 1.31: laudan oma nimen asettelu = webin maailmankartan la/lx/ly (js/karttanimet.js
+            /// sijoitaKaupunginNimi ehdokas 0). null paketissa = tyhjä tasaus (JsonUtility) = ei asettelua.
             /// </summary>
-            public string la;
-            public float lx, ly;
+            public NimionAnkkuri nimionAnkkuri;
+        }
+
+        [Serializable]
+        public class NimionAnkkuri
+        {
+            /// <summary>"start"/"end"/"middle" (web la).</summary>
+            public string tasaus;
+            /// <summary>Perusviivan siirtymä pisteestä laudan yksiköinä, y alas (web lx, ly).</summary>
+            public float dx, dy;
         }
 
         [Serializable]

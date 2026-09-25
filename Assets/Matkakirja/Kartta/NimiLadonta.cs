@@ -638,13 +638,13 @@ namespace Matkakirja
             /// <summary>Lukittu paikka (web js/pallolauta/nimet.js LUKKO): kylki ei vaihdu vedossa eikä zoomissa.</summary>
             public bool Lukittu;
             public NimenPaikka Lukko;
-            /// <summary>Laudan oma asettelu (Sisalto.Kaupunki la/lx/ly), jos <see cref="OnOma"/>; ks. <see cref="OmaPaikka"/>.</summary>
+            /// <summary>Laudan oma asettelu (Sisalto.Kaupunki.nimionAnkkuri), jos <see cref="OnOma"/>; ks. <see cref="OmaPaikka"/>.</summary>
             public bool OnOma;
             public NimenPaikka Oma;
         }
 
         /// <summary>
-        /// Laudan oma asettelu ehdokkaaksi (web: dx = lx · 11/13 · k, perusviiva dy = ly · 11/13 · k, ank = la).
+        /// Laudan oma asettelu (Sisalto.Kaupunki.nimionAnkkuri, skeema 1.31) ehdokkaaksi (web: dx = lx · 11/13 · k, perusviiva dy = ly · 11/13 · k, ank = la).
         /// Muunnos tekstin keskipisteeksi y ylös kuten muissa ehdokkaissa: Dy = 0,35 · kork − ly · 11/13.
         /// false, jos la puuttuu.
         /// </summary>

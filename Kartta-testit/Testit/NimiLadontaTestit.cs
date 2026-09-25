@@ -460,10 +460,10 @@ namespace Matkakirja.Kartta.Testit
 
         [Testi] static void LaudanOmaAsetteluEnsin()
         {
-            // Web europe.js marseille: la end, lx −16, ly 14 → vasemmalle ja hieman alas.
+            // Paketin nimionAnkkuri (webin maailmankartan la/lx/ly), esimerkkinä end −16/14 → vasemmalle ja hieman alas.
             Oleta.Tosi(NimiLadonta.OmaPaikka("end", -16, 14, 13, 1f, out var p), "la annettu");
             Oleta.Tosi(p.Ank == NimiLadonta.NimenAnkkuri.Loppu && Lahella(p.Dx, -16 * 11f / 13f) && p.Dy < 0, p.ToString());
-            Oleta.Tosi(!NimiLadonta.OmaPaikka(null, 0, 0, 13, 1f, out _), "ei la → ei ehdokasta");
+            Oleta.Tosi(!NimiLadonta.OmaPaikka(null, 0, 0, 13, 1f, out _) && !NimiLadonta.OmaPaikka("", 0, 0, 13, 1f, out _), "ei la → ei ehdokasta");
             var e = KE(500, 400); e.OnOma = true; e.Oma = p;
             var v = new Ruutuvaraukset(); v.Aloita(1);
             var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
