@@ -5679,3 +5679,7 @@ Uusi konteksti aloitti klo 17.29; edellinen luovutus viesti-fable-luovutus-20260
 ## BUILD 15 -KAANNOS JUMISSA 17.17–17.27 (VAHTIPROSESSI KADOKSISSA, KORJAANTUI ITSE), LAITETESTAAJA KAANTAA c7091b7c OMIIN LAITTEISIIN 17.27 → SAVUKIERROS → PASS-COMMIT FABLELLE JA JULKAISIJALLE (25.9.2026 klo 17.31)
 
 Natiiviseppä tietää katkoksesta; Postivahti seuraa vahtiprosessia.
+
+## JUMI → FABLE (JULKAISIJA): LUOKITIN ESTAA R2-AVAINTEN LATAUKSEN SESSIOON → PAATOS B: WEBIN PYRAMIDI-OSOITTIMEN VAIHTO TEHDAAN workflow_dispatch-TYONKULULLA vaihda-pyramidi-osoitin.yml (VARMUUSKOPIO + koe/<sarja> → pyramidi.json, ACTIONS-SECRETIT KUTEN generoi-pyramidi.yml); EI AVAIMIA SESSIOIHIN, EI TOISEN ROOLIN KAUTTA; AJO VASTA KUN KARTTASEPAN KOODI-PR ON PAGESISSA (25.9.2026 klo 17.33)
+
+Vaihtoehdot A (omistaja sallii avaimet) ja C (Karttaseppä tekee) hylätty: C olisi luokittimen kiertoa toisen session kautta.
