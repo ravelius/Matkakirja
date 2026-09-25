@@ -123177,6 +123177,230 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Michael Quinn, National Park Service (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Grand Canyon National Park, Grand Canyon Railway,
+       * Bright Angel Trail, South Kaibab Trail, Phantom Ranch, Grand
+       * Canyon Lodge, Dragon Bravo Fire, 2026 Grand Canyon flood,
+       * Transcanyon Waterline, Desert View Watchtower, Grand Canyon
+       * Skywalk) ja Wikivoyagesta (Grand Canyon National Park, tila
+       * 13.9.2026) — teksti omaa. Hinnat ja aukioloajat jätetty pois;
+       * vuoden 2026 tulvan jälkeiset sulut ja pohjoisreunan palvelut
+       * muuttuvat nopeasti, ja teksti sanoo sen. Nostojen, gallerian ja
+       * ennen–nyt-kuvien aiheita (geologia, Cárdenas, viljavarastot,
+       * havasupait, Powell, eläimet, muulimatkat, Hopi House, koskilautat)
+       * ei toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: Desert View'n
+       * vartiotorni.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Desert View Watchtower, Grand Canyon.jpg',
+          lyhyt: 'Desert View’n vartiotorni kohoaa eteläreunan itäpäässä, kaukana kylän tungoksesta.',
+          selite: 'Mary Colterin suunnittelema, vuonna 1932 valmistunut '
+            + '21-metrinen kivitorni jäljittelee muinaisten puebloasukkaiden '
+            + 'vartiotorneja mutta on niitä paljon suurempi, ja sen huippu '
+            + 'on koko eteläreunan korkein kohta.',
+          lahde: 'Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Grand Canyonille tullaan tavallisesti etelästä: yhdeksän '
+          + 'kävijää kymmenestä näkee kanjonin eteläreunalta, jonne pääsee '
+          + 'autolla, vanhalla rautatiellä ja puiston ilmaisilla busseilla. '
+          + 'Pohjoisreunalle on linnuntietä vain 16 kilometriä, mutta autolla '
+          + 'matkaa kertyy noin 350 kilometriä, ja talvisin sinne johtava tie '
+          + 'on kiinni. Kanjoniin laskeutuvilla poluilla raskain osuus tulee '
+          + 'aina viimeisenä, ja heinäkuussa pohjalla on keskimäärin yli '
+          + 'kymmenen astetta kuumempaa kuin reunalla. Kesän ukkoskuurot '
+          + 'tuovat salamoita ja tulvia, talvi lunta ja jäisiä polkuja. '
+          + 'Vuoden 2025 metsäpalo ja vuoden 2026 tulva muuttivat puistoa '
+          + 'paljon, joten ajantasainen tilanne kannattaa aina tarkistaa '
+          + 'kansallispuiston omilta sivuilta ennen lähtöä.',
+        artikkeli: {
+          nimi: 'Matkailijan Grand Canyon',
+          teksti: 'Grand Canyonissa matka alas on helppo, ja vaikein osa odottaa paluumatkalla.',
+          nosto: 'Kanjonissa vaellus kulkee väärinpäin: alas mennään '
+            + 'levänneenä, ja raskain nousu odottaa aivan lopussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla, autolla ja bussilla',
+              teksti: 'Eteläreunalle ajetaan useimmiten Flagstaffista, josta '
+                + 'matkaa kertyy noin 130 kilometriä. Lähimmät suuret '
+                + 'lentokentät ovat Phoenixissa noin 370 ja Las Vegasissa '
+                + 'noin 440 kilometrin päässä. Tunnelmallisempi tapa tulla on '
+                + 'Williamsin kaupungista lähtevä Grand Canyon Railway: Santa '
+                + 'Fe -rautatieyhtiön vuonna 1901 valmistunut 103 kilometrin '
+                + 'rata päättyy Grand Canyon Villageen aivan kanjonin reunan '
+                + 'tuntumaan. Henkilöliikenne loppui autoistumisen takia 1968, '
+                + 'mutta yksityiset omistajat kunnostivat radan, ja junat '
+                + 'alkoivat kulkea uudelleen syyskuussa 1989. Matka kestää '
+                + 'suuntaansa parisen tuntia, eikä itse kanjonia näe junan '
+                + 'ikkunasta. Tavallisesti junaa vetävät dieselveturit, mutta '
+                + 'erikoisvuoroilla ajetaan höyryvetureilla, jotka on muutettu '
+                + 'polttamaan ravintoloista kerättyä käytettyä kasviöljyä. '
+                + 'Rata päättyy vuonna 1910 valmistuneelle hirsiasemalle. '
+                + 'Kylässä auto kannattaa jättää parkkiin: puisto ajaa '
+                + 'eteläreunalla ilmaisia bussilinjoja, ja länteen Hermit’s '
+                + 'Restiin vievä näköalatie on suurimman osan vuotta suljettu '
+                + 'yksityisautoilta.',
+              kuva: [
+                {
+                  tiedosto: 'Grand Canyon Railway No. 239 and 4124 pulling a passenger train - May 2018 - 02.jpg',
+                  lyhyt: 'Grand Canyon Railwayn juna kulkee mäntymetsän halki Williamsista kohti eteläreunaa.',
+                  selite: 'Dieselveturien vetämä matkustajajuna Williamsin ja '
+                    + 'Grand Canyon Villagen välisellä radalla toukokuussa '
+                    + '2018; rata valmistui 1901 ja otettiin uudelleen '
+                    + 'käyttöön 1989.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon Depot - May 2018.jpg',
+                  lyhyt: 'Grand Canyon Villagen hirsinen rautatieasema valmistui vuonna 1910.',
+                  selite: 'Radan pohjoinen pääteasema on puiston historioitsijan '
+                    + 'mukaan yksi Yhdysvaltain kolmesta yhä pystyssä olevasta '
+                    + 'hirsirakenteisesta rautatieasemasta.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon NP Boarding Hermit Road Shuttle Bus 0214 (5446223423).jpg',
+                  lyhyt: 'Retkeilijät nousevat puiston ilmaiseen bussiin Hermit Roadin pysäkillä.',
+                  selite: 'Hermit Roadin näköalatie on suurimman osan vuotta '
+                    + 'suljettu yksityisautoilta, joten sen varren '
+                    + 'näköalapaikoille kuljetaan puiston ilmaisilla '
+                    + 'busseilla.',
+                  lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi reunaa ja palanut majatalo',
+              teksti: 'Pohjois- ja eteläreunan välillä on linnuntietä '
+                + 'keskimäärin vain 16 kilometriä, mutta siltoja ei ole, joten '
+                + 'autolla kanjonin ympäri ajetaan noin 350 kilometriä ja '
+                + 'neljästä viiteen tuntia. Eteläreunalle pääsee helpommin, ja '
+                + 'sinne tulee noin 90 prosenttia puiston kävijöistä. Sen '
+                + 'itäpäässä, 43 kilometrin päässä kylästä, seisoo Desert '
+                + 'View’n vartiotorni, jonka huipulta näkyy Coloradojoki. '
+                + 'Pohjoisreuna on noin 2 400 metrin korkeudessa, noin 300 '
+                + 'metriä vastarantaa ylempänä, ja lumen takia sinne johtava '
+                + 'tie on suljettu joulukuun alusta toukokuun puoliväliin. '
+                + 'Heinäkuussa 2025 salaman sytyttämä Dragon Bravo -palo '
+                + 'levisi kuivuudesta kärsineillä ylängöillä lähes 59 000 '
+                + 'hehtaarin alueelle ja tuhosi 113 rakennusta. Niiden '
+                + 'joukossa oli vuonna 1928 rakennettu Grand Canyon Lodge, '
+                + 'pohjoisreunan historiallinen majatalo, joka oli palanut '
+                + 'kerran aiemminkin, vuonna 1932. Pohjoisreunan palvelujen '
+                + 'tilanne on siksi syytä tarkistaa ennen matkaa. Kanjonin '
+                + 'lännessä oleva lasilattiainen Skywalk-näköalasilta ei taas '
+                + 'kuulu kansallispuistoon lainkaan: sen omistaa hualapai-kansa, '
+                + 'ja sinne ajetaan Las Vegasista lähes 210 kilometriä.',
+              kuva: {
+                tiedosto: 'Grand Canyon - North Rim Lodge 03.jpg',
+                lyhyt: 'Pohjoisreunan Grand Canyon Lodge vuonna 2013, ennen kuin metsäpalo tuhosi sen.',
+                selite: 'Kalkkikivestä ja männyntukeista rakennettu Grand '
+                  + 'Canyon Lodge tuhoutui heinäkuussa 2025 Dragon Bravo '
+                  + '-metsäpalossa; majatalon päärakennus oli palanut kerran '
+                  + 'aiemminkin, syyskuussa 1932.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Polut alas kanjoniin',
+              teksti: 'Helpoin tapa kokea kanjoni on kävellä reunaa pitkin: '
+                + 'Rim Trail kulkee eteläreunaa yli 20 kilometriä, enimmäkseen '
+                + 'päällystettynä ja tasaisena, ja bussipysäkkien ansiosta '
+                + 'siitä voi kävellä vain palan. Kanjoniin eteläreunalta vievät '
+                + 'kaksi hoidettua pääpolkua. Bright Angel Trail alkaa kylästä '
+                + 'ja laskeutuu mutka mutkalta Havasupai Gardensin keitaalle, '
+                + 'jonka nimi vaihdettiin vuonna 2022 havasupai-kansan '
+                + 'pyynnöstä. Kesällä polun varrella on juomavesipisteitä. '
+                + 'Jyrkempi South Kaibab Trail seuraa harjannetta Yaki '
+                + 'Pointista, jonne pääsee vain bussilla tai kävellen. Näkymät '
+                + 'avautuvat heti, ja ensimmäinen näköalapaikka on nimetty Ooh '
+                + 'Aah Pointiksi kävijöiden huudahdusten mukaan, mutta varjoa '
+                + 'ja vettä polulla ei ole. Pohjalla, Coloradojoen '
+                + 'pohjoisrannalla, odottaa vuonna 1922 avattu Phantom Ranch, '
+                + 'jonne pääsee vain jalan, muulilla tai jokea pitkin. Sen '
+                + 'paikat on viime vuosina arvottu 15 kuukautta etukäteen, ja '
+                + 'muu yöpyminen reunan alapuolella vaatii leiriytymisluvan, '
+                + 'jota haetaan neljä kuukautta ennen. Kapealla polulla '
+                + 'muulijonolle väistetään aina.',
+              kuva: {
+                tiedosto: 'Grand Canyon Nat. Park S Kaibab Trail - Red & White Switchbacks 2354 (6752118021).jpg',
+                lyhyt: 'South Kaibab Trail laskeutuu serpentiineinä jyrkänteen läpi kohti kanjonin pohjaa.',
+                selite: 'Sateisena tammikuun päivänä 2012 kuvattu näkymä '
+                  + 'South Kaibab Trailin mutkiin, jotka kiemurtelevat alas '
+                  + 'Redwall-kalkkikiven jyrkänteen halki.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Vesi ja kuumuus',
+              teksti: 'Grand Canyonissa vuori on ylösalaisin: toisin kuin '
+                + 'tunturissa, alas mennään levänneenä ja raskain nousu jää '
+                + 'päivän loppuun. Reunalta joelle on pystysuunnassa noin '
+                + 'puolitoista kilometriä, ja alaspäin mentäessä lämpenee. '
+                + 'Heinäkuussa päivän ylin lämpötila on eteläreunalla '
+                + 'keskimäärin 29 astetta, pohjan Phantom Ranchilla 41. Siksi '
+                + 'puisto ei suosittele kävelemään joelle ja takaisin yhden '
+                + 'päivän aikana, ja reunan alapuolelta pelastetaan silti '
+                + 'vuosittain satoja uupuneita ja nestehukasta kärsiviä '
+                + 'retkeilijöitä. Kesällä kävellään aamulla ja illalla, sillä '
+                + 'keskipäivä on kanjonin alaosissa vaarallisin. Vettä kuluu '
+                + 'enemmän kuin luulisi, mutta pelkkä vesi ei riitä: myös '
+                + 'suolaa pitää saada, koska runsas juominen ilman ruokaa voi '
+                + 'laimentaa veren suolapitoisuuden vaarallisen alas. Polkujen '
+                + 'juomapisteet saavat vetensä yhdestä ainoasta putkesta: '
+                + 'vuonna 1970 valmistunut Transcanyon-vesijohto tuo '
+                + 'pohjoisreunan Roaring Springsin lähdevettä kanjonin poikki '
+                + 'koko eteläreunalle, ja vanha putki rikkoutuu usein. Hanat '
+                + 'voivat siis olla kiinni, ja luonnon vesilähteiden vesi on '
+                + 'aina puhdistettava ennen juomista.',
+              kuva: {
+                tiedosto: "'Victor Vomit' sign on the Upper Bright Angel Trail (51295697782).jpg",
+                lyhyt: 'Bright Angel Trailin kyltti varoittaa kävelemästä joelle ja takaisin yhdessä päivässä.',
+                selite: 'Bright Angel Trailin yläosan kyltti muistuttaa usealla '
+                  + 'kielellä, että joelle ja takaisin on pitkä matka, kova '
+                  + 'kuumuus ja lähes 1 500 metrin korkeusero; piirroksessa '
+                  + 'kuumuudesta sairastunut retkeilijä oksentaa polun varrella.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Ukkonen, tulvat ja lumi',
+              teksti: 'Heinä- ja elokuu ovat Arizonassa monsuuniaikaa: '
+                + 'iltapäivisin kerääntyvät ukkoskuurot tuovat rankkasateita '
+                + 'ja salamoita, ja korkeilla reunoilla salama iskee ihmisiin '
+                + 'varsin säännöllisesti. Ukkosella mennään sisätiloihin. '
+                + 'Kapeissa kanjoneissa tulva voi yllättää, vaikka omalla '
+                + 'kohdalla ei sataisi lainkaan, koska vesi syöksyy alas '
+                + 'ylempää. Näin kävi 29. elokuuta 2026, kun pohjoisreunan '
+                + 'rankkasade valui Bright Angel Creekiin: edellisvuonna '
+                + 'palaneet rinteet eivät imeneet vettä, ja puron pinta nousi '
+                + 'yli puolitoista metriä kymmenessä minuutissa. Tulva oli '
+                + 'puiston suurin sitten vuoden 1966. Kolme retkeilijää kuoli, '
+                + 'ja yli 80 ihmistä pelastettiin, useimmat helikopterilla. '
+                + 'Tulva rikkoi myös eteläreunan vesijohtoa, joten puisto '
+                + 'rajoitti veden käyttöä ja perui hotelliyöpymisiä. Syyskuun '
+                + 'puolivälissä sisäkanjonissa oli yhä laajoja sulkuja, ja '
+                + 'tilanne muuttuu nopeasti. Talvella sää kääntyy toisin päin: '
+                + 'eteläreunalle sataa vuodessa keskimäärin puolitoista metriä '
+                + 'lunta, polkujen yläosat jäätyvät ja kenkiin kannattaa ottaa '
+                + 'liukuesteet. Puhelin ei kuulu kanjonissa varmasti missään, '
+                + 'joten paperikartta kulkee mukana joka säällä.',
+              kuva: {
+                tiedosto: 'Monsoon Rain and a Partial Rainbow as seen from the Village Historic District (53949587432).jpg',
+                lyhyt: 'Monsuunikuuro ja sateenkaari kanjonin yllä elokuun 2024 auringonlaskussa.',
+                selite: 'Heinä–elokuun monsuuniukkoset tuovat kanjoniin '
+                  + 'kaivattua sadetta mutta myös hengenvaarallisia salamoita; '
+                  + 'kuva on otettu Grand Canyon Villagen historiallisesta '
+                  + 'kylänosasta.',
+                lahde: 'Grand Canyon NPS, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
