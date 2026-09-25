@@ -108624,6 +108624,232 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sitka, Alaska',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sitka, Alaska; John O'Connell Bridge; Sitka Rocky
+       * Gutierrez Airport; Peril Strait; MV Chenega eli nykyinen Som
+       * Menorca; Alaska Raptor Center; Fortress of the Bear; Mount
+       * Edgecumbe (Alaska); Saint Lazaria Island; Sitka Summer Music
+       * Festival; Sheet'ká Ḵwáan Naa Kahídi; Alaska Day) ja Wikivoyagen
+       * Sitka-sivulta — teksti omaa. Nostojen aiheita (lipunvaihto,
+       * katedraali, Piispantalo, tulivuori maisemana, hallintokaupungin
+       * menetys, vuoden 1804 taistelu, puisto, totemipylväät, kieli) ei
+       * toisteta: Mount Edgecumbesta kerrotaan vain retkipolku ja vuoden
+       * 1974 aprillipila, ja Alaskan päivästä nykyinen juhlaviikko.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: valkopäämerikotka Volta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Raptor center (js) 4.jpg',
+          lyhyt: 'Sähkölinjoihin 1992 törmännyt merikotka Volta oli Sitkan petolintukeskuksen tunnetuin asukas.',
+          selite: 'Valkopäämerikotka Volta loukkasi olkapäänsä pysyvästi '
+            + 'törmättyään sähkölinjoihin 1992 ja eli sen jälkeen Alaska '
+            + 'Raptor Centerissä, kunnes se kuoli tammikuussa 2024 ainakin '
+            + '37-vuotiaana.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sitkaan ei pääse autolla: kaupunki on Baranofinsaarella '
+          + 'Tyynenmeren rannalla, ja perille tullaan lautalla, lentäen tai '
+          + 'risteilyaluksella. Risteilijöitä käy kesäisin niin paljon, että '
+          + 'vilkkaimpina päivinä kaupungissa on enemmän vieraita kuin '
+          + 'asukkaita. Eläimet on helppo nähdä: petolintukeskuksessa '
+          + 'hoidetaan loukkaantuneita merikotkia, ja vanhan sellutehtaan '
+          + 'altaissa asuu orvoiksi jääneitä karhuja. Salmen takana '
+          + 'kohoavalle tulivuorelle voi kiivetä, ja meren puolella on saari, '
+          + 'jolla pesii satoja tuhansia merilintuja. Kesäkuussa kaupungissa '
+          + 'soitetaan kamarimusiikkia ja lokakuussa juhlitaan Alaskan '
+          + 'päivää. Sadetakki kannattaa pakata mukaan joka vuodenaikana, '
+          + 'sillä sade kuuluu Sitkan arkeen.',
+        artikkeli: {
+          nimi: 'Matkailijan Sitka',
+          teksti: 'Sitkaan ei johda yhtään tietä, joten perille tullaan meritse tai ilmasta.',
+          nosto: 'Aprillipäivänä 1974 Mount Edgecumbe näytti purkautuvan: '
+            + 'kraatterissa paloi 70 helikopterilla tuotua vanhaa rengasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille meritse tai ilmasta',
+              teksti: 'Sitkaan ei johda yhtään tietä, sillä kaupunki on saarella '
+                + 'Kaakkois-Alaskan ulkorannikolla. Autolla tuleva nousee Alaskan '
+                + 'valtion lautoille, jotka kaikki on nimetty jäätiköiden mukaan '
+                + 'ja jotka kulkevat Juneausta, Ketchikanista ja muista '
+                + 'rannikon kaupungeista. Sitka jää pääreitin sivuun, '
+                + 'ja isot lautat pääsevät kapean Peril Straitin salmen läpi vain '
+                + 'vuoroveden seisauksen aikaan, joten aikataulut elävät '
+                + 'vuoroveden mukaan. Lauttaterminaali on 11 kilometriä '
+                + 'keskustasta pohjoiseen. Vuonna 2005 Alaskaan tuotu pikalautta '
+                + 'Chenega ajoi välillä Sitkaan asti, mutta sen polttoaine kävi '
+                + 'liian kalliiksi: alus myytiin 2021 Espanjaan. Useimmat tulevat '
+                + 'nykyään lentäen. Alaska Airlinesin suihkukoneet laskeutuvat '
+                + 'Japonskin saarelta mereen pistävälle pengerkiitotielle, jonka '
+                + 'yli myrskyaallot toisinaan lyövät, ja syksyn ja talven sää '
+                + 'viivästyttää lentoja usein. Kentältä keskustaan ajetaan '
+                + 'O\'Connellin siltaa, joka oli Yhdysvaltain ensimmäinen autoille '
+                + 'rakennettu vinoköysisilta. Sillan vieressä kanavassa '
+                + 'laskeutuvat vesitasot, joilla lähdetään näköalalennoille. '
+                + 'Perillä autoa ei juuri tarvita: tietä on koko saarella vain '
+                + 'noin 22 kilometriä, ja keskustassa kaikki on kävelymatkan '
+                + 'päässä.',
+              kuva: [
+                {
+                  tiedosto: 'Fast Ferry Chenega at Sitka.jpg',
+                  lyhyt: 'Alaskan valtion pikalautta Chenega Sitkan lauttalaiturissa maaliskuussa 2009.',
+                  selite: 'Alaskan lauttalaitoksen pikalautta Chenega oli '
+                    + 'kiinnittynyt Sitkan laituriin maaliskuussa 2009; '
+                    + 'käytöltään kalliiksi käynyt alus myytiin 2021 '
+                    + 'Espanjaan.',
+                  lahde: 'BackwaterSurfer, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Sitka, AK - John O\'Connell Bridge from Castle Hill 01.jpg',
+                  lyhyt: 'O\'Connellin silta yhdistää Sitkan keskustan lentokentän Japonskin saareen.',
+                  selite: 'Linnamäeltä kuvattu O\'Connellin silta oli '
+                    + 'Yhdysvaltain ensimmäinen autoille rakennettu '
+                    + 'vinoköysisilta, ja ennen sen valmistumista '
+                    + 'lentokentälle päästiin vain veneellä.',
+                  lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'What Floats?.jpg',
+                  lyhyt: 'Vesitaso odottaa laiturissa kalastusalusten vieressä Sitkan satamassa.',
+                  selite: 'Heinäkuun illan valossa 2023 kuvatussa Sitkan '
+                    + 'satamassa vesitaso odottaa laiturissa kalastusalusten '
+                    + 'ja satamarakennusten vieressä; vesitasoilla lennetään '
+                    + 'näköalalennoille saaren vuorten ylle.',
+                  lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kun risteilijät tulevat',
+              teksti: 'Sitka on ollut matkailukohde lähes siitä asti, kun Alaska '
+                + 'vaihtoi omistajaa: Pacific Coast Steamship Company aloitti '
+                + 'huvimatkat kaupunkiin 1884, ja jo 1890 matkailijoita tuli '
+                + 'viisituhatta vuodessa. Nykyään risteilykausi kestää '
+                + 'toukokuusta syyskuuhun. Useimmat alukset kiinnittyvät Old '
+                + 'Sitka Dockiin, noin kymmenen kilometriä keskustasta '
+                + 'pohjoiseen rakennettuun yksityiseen syväsatamaan, jonka '
+                + '143-metrinen kelluva laituri otettiin käyttöön 2013 ja johon '
+                + 'mahtuu jopa 335-metrinen laiva. Laiturilta pääsee ilmaisella '
+                + 'bussilla vartissa keskustaan Harrigan Centennial Halliin. Kun '
+                + 'laituri on varattu, laiva ankkuroi lahdelle ja matkustajat '
+                + 'tuodaan maihin aluksen omilla veneillä. Vuonna 2017 '
+                + 'risteilyaluksia kävi 136 ja matkustajia yli 150 000, ja '
+                + 'vuosina 2022–2023 heidän määränsä yli kaksinkertaistui. '
+                + 'Vilkkaimpina päivinä kaupungissa on noin 13 000 vierasta, '
+                + 'vaikka vuoden 2020 väestönlaskennassa asukkaita oli 8 458. '
+                + 'Laivojen satamamaksuilla on kustannettu keskustan ilmainen '
+                + 'langaton verkko.',
+              kuva: {
+                tiedosto: 'RegattaSitka.jpg',
+                lyhyt: 'Risteilyalus Regatta laiturissa Sitkassa heinäkuussa 2022, takanaan suurempi Norwegian Bliss.',
+                selite: 'Heinäkuussa 2022 Sitkan laiturissa oli kaksi '
+                  + 'risteilyalusta peräkkäin: edessä Regatta ja sen takana '
+                  + 'huomattavasti suurempi Norwegian Bliss.',
+                lahde: 'Jackhayes1, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kotkia ja karhuja',
+              teksti: 'Sitkan tunnetuimmat eläimet asuvat kahdessa '
+                + 'hoitolaitoksessa. Vuonna 1980 perustettu Alaska Raptor Center, '
+                + 'petolintujen hoitokeskus Tongassin kansallismetsän laidalla, '
+                + 'ottaa vuosittain vastaan 100–200 lintua, jotka ovat '
+                + 'törmänneet sähkölinjoihin, saaneet lyijymyrkytyksen tai '
+                + 'jääneet ansaan. Moni potilas lennätetään muualta Alaskasta '
+                + 'peitetyssä koirankuljetushäkissä, jonka pimeys rauhoittaa '
+                + 'linnun. Toipuvat merikotkat harjoittelevat lentämistä suuressa '
+                + 'sisähallissa ennen vapauttamista, ja ne, jotka eivät enää '
+                + 'pärjäisi luonnossa, jäävät keskukseen esittelemään lajiaan '
+                + 'yli 100 000 kävijälle vuodessa. Kymmenen kilometriä '
+                + 'keskustasta, vuonna 1993 suljetun sellutehtaan tontilla, '
+                + 'toimii Fortress of the Bear, turvakoti orvoiksi jääneille '
+                + 'karhuille, joita ei voi palauttaa luontoon. Karhuja '
+                + 'katsellaan näköalatasanteelta tehtaan entisiin '
+                + 'jätevesialtaisiin, joihin on tuotu vettä, puita, tynnyreitä '
+                + 'ja keinuja. Perustajat Les ja Evy Kinnear joutuivat ennen '
+                + 'lupaa todistamaan viranomaisille vuoden ajan sikoja '
+                + 'kasvattamalla, että osaavat hoitaa isoja eläimiä, ja '
+                + 'ensimmäinen karhunpentu saapui 2007. Talvella turvakoti on '
+                + 'kiinni, koska karhut nukkuvat talviunta.',
+              kuva: {
+                tiedosto: 'Fortress of the Bear two brown bears 2022.jpg',
+                lyhyt: 'Kaksi ruskeakarhua kahlaa Fortress of the Bear -turvakodin altaassa Sitkassa.',
+                selite: 'Fortress of the Bear -turvakodin ruskeakarhut '
+                  + 'kahlaavat matalassa altaassa huhtikuussa 2022, ja '
+                  + 'kävijät katsovat niitä ylhäältä näköalatasanteelta.',
+                lahde: 'Larry Lamsa, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tulivuorelle ja lintusaarelle',
+              teksti: 'Salmen takana kohoava Mount Edgecumbe on myös retkikohde. '
+                + 'Tulivuori on Kruzofin saarella, jonne mennään veneellä, ja '
+                + 'huipulle nousee noin 11 kilometrin polku, jonka rakensi '
+                + '1930-luvulla lamakauden työllisyysohjelma Civilian '
+                + 'Conservation Corps. Polku kulkee havumetsän ja rämeen halki, '
+                + 'ja noin kuuden kilometrin kohdalla on samojen rakentajien '
+                + 'kolmiseinäinen suojakota. Viimeiset viitisen kilometriä ovat '
+                + 'jyrkkää nousua, ja puurajan yläpuolella maa muuttuu '
+                + 'punaiseksi tulivuoren tuhkaksi, jonka poikki kyltit ohjaavat '
+                + 'kraatterin reunalle; karhujakin voi tulla vastaan. Kraatteri '
+                + 'tuli kuuluisaksi aprillipäivänä 1974, kun paikallinen '
+                + 'kepposenlaskija Oliver "Porky" Bickar lennätti sinne '
+                + 'helikopterilla 70 vanhaa rengasta ja sytytti ne. '
+                + 'Kaupunkilaiset luulivat tulivuoren heränneen, kunnes '
+                + 'kraatterin reunalta paljastui 15-metrisin kirjaimin maalattu '
+                + '"April Fool". Poliisille ja ilmailuviranomaiselle Bickar oli '
+                + 'kertonut aikeistaan, mutta rannikkovartiosto oli unohtunut. '
+                + 'Noin 32 kilometriä Sitkasta länteen on St. Lazarian saari, '
+                + 'jolla pesii noin 250 000 paria myrskykeijuja ja pari tuhatta '
+                + 'paria töyhtölunneja. Maihin saavat nousta vain luvan saaneet '
+                + 'tutkijat, koska maa on täynnä pesäkoloja, mutta saaren ympäri '
+                + 'kiertää veneellä yli 2 000 retkeläistä vuodessa.',
+              kuva: {
+                tiedosto: 'Saint Lazaria Island (50483693513).jpg',
+                lyhyt: 'St. Lazarian saaren jyrkillä rannoilla pesii satoja tuhansia merilintuja.',
+                selite: 'Kesäkuussa 2019 kuvatun St. Lazarian saaren '
+                  + 'nurmipeitteiset kalliot ja rantakallioiden vesilammikot '
+                  + 'kuuluvat merilintujen pesimäalueeseen, jolle saavat '
+                  + 'nousta vain luvan saaneet tutkijat.',
+                lahde: 'Brie Drummond / USFWS, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Kamarimusiikkia ja Alaskan päivä',
+              teksti: 'Kesäkuussa Sitkassa soi kamarimusiikki. Sitka Summer Music '
+                + 'Festival sai alkunsa 1972, kun viulisti Paul Rosenthal kokosi '
+                + 'kaupunkiin Jascha Heifetzin ja Gregor Piatigorskyn entisiä '
+                + 'oppilaita, ja tapaamisesta kasvoi vuosittainen kuukauden '
+                + 'mittainen festivaali. Iltakonsertit soitetaan Harrigan '
+                + 'Centennial Hallissa, jonka lasiseinän takana näkyvät Crescent '
+                + 'Harborin satama, metsäiset luodot ja lumihuippuiset vuoret, '
+                + 'ja joskus ikkunan ohi syöksyy merikotka. Risteilykesänä '
+                + 'kaupungin kaksi perinnettä esiintyvät vuorotellen: New '
+                + 'Archangel Dancers tanssii venäläisiä kansantansseja, ja '
+                + 'Naa Kahídi -tanssijat laulavat ja rummuttavat tlingitien '
+                + 'tarinoita klaanitalon mallisessa talossa, jonka Sitkan '
+                + 'heimo rakennutti 1997 ja jossa on Kaakkois-Alaskan suurin '
+                + 'käsin veistetty seinäpaneeli. Syksyn kohokohta on Alaskan '
+                + 'päivä 18. lokakuuta. Sitkassa sitä juhlitaan viikon '
+                + 'festivaalina, joka on kirjattu järjestetyksi ensimmäisen '
+                + 'kerran 1949: pääkadulla marssii paraati, koulut päästävät '
+                + 'oppilaat aikaisin ja moni liike sulkee ovensa. Kaikille päivä '
+                + 'ei ole pelkkä juhla, sillä osa alkuperäisasukkaista '
+                + 'muistuttaa, että maa myytiin kysymättä heiltä.',
+              kuva: {
+                tiedosto: 'Coast Guard renews Coast Guard City designation for Sitka, Alaska, during Alaska Day festivities, 2017.jpg',
+                lyhyt: 'Rannikkovartioston helikopterit lentävät Alaskan päivän paraatin yllä Sitkassa 2017.',
+                selite: 'Rannikkovartioston Sitkan lentoaseman väki marssii '
+                  + 'Alaskan päivän paraatissa lokakuussa 2017, ja aseman '
+                  + 'kaksi pelastushelikopteria lentää kadun yllä.',
+                lahde: 'Shawn Eggert / U.S. Coast Guard, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tlingit',
@@ -108759,6 +108985,231 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Elbow Beach, Bermuda',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Transport in Bermuda, Bermuda Railway, Bermuda kite,
+       * Bermudian cuisine, Sports and recreation in Bermuda, Public
+       * holidays in Bermuda, Johnny Barnes, Culture of Bermuda, Bermuda
+       * Day, Horseshoe Bay (Bermuda), L.F. Wade International Airport)
+       * ja Wikivoyagen Bermuda-sivulta — teksti omaa. Nostojen aiheita
+       * (Sea Venture, riutat ja Gibbs Hill, St. George's, sluupit,
+       * sipulit, vaaleanpunainen hiekka, cahow, pikkuriutat, luolat),
+       * gallerian aiheita (Gombey, Dockyardin varasto, Front Street,
+       * sadevesikatot) eikä maalehden aiheita (shortsit, yksi auto
+       * taloutta kohden, kuunportti, kalakeitto, Dark 'n' Stormy,
+       * hummeri) toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pysäkkikuva
+       * on CC0 (tekijän luovutus vapaaseen käyttöön). Pystykuva:
+       * ratapohja kallioleikkauksessa Somerset Bridgen lähellä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bermuda Railway near Somerset Bridge.jpg',
+          lyhyt: 'Vanha ratapohja kulkee Somerset Bridgen lähellä kallioleikkauksessa lehvästön alla.',
+          selite: 'Bermudan rautatien ratapohja Somerset Bridgen lähellä '
+            + 'kulkee kalkkikiveen louhitussa leikkauksessa, ja nykyään sitä '
+            + 'pitkin kävellään ja pyöräillään.',
+          lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bermudalla matkailija ei voi vuokrata tavallista autoa, '
+          + 'vain kaksipaikkaisen sähköpikkuauton tai skootterin, ja koko '
+          + 'saarella suurin sallittu nopeus on 35 kilometriä tunnissa. '
+          + 'Liikkeelle lähdetään siksi vaaleanpunaisilla busseilla ja '
+          + 'lautoilla, jotka lähtevät Hamiltonista joka suuntaan, tai '
+          + 'jalan vanhaa ratapohjaa, josta on tullut saaren halki kulkeva '
+          + 'polku. Kaupassa ja kadulla aloitetaan aina hyvän huomenen '
+          + 'toivotuksella, ja pitkäperjantaina taivas täyttyy '
+          + 'kuusikulmaisista leijoista. Uimakausi alkaa toukokuun lopun '
+          + 'Bermuda Daynä, ja elokuun alussa koko saari pysähtyy kahdeksi '
+          + 'päiväksi seuraamaan yhtä krikettiottelua.',
+        artikkeli: {
+          nimi: 'Matkailijan Bermuda',
+          teksti: 'Bermudalla toivotetaan hyvää huomenta ennen kuin kysytään tietä.',
+          nosto: 'Pitkäperjantaina taivaalle nousee kuusikulmaisia '
+            + 'silkkipaperileijoja, ja pöytään katetaan turskapihviä '
+            + 'pääsiäispullan välissä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Bussilla ja lautalla',
+              teksti: 'Vuokra-autoa Bermudalta ei saa: matkailija voi vuokrata '
+                + 'vain kaksipaikkaisen sähköpikkuauton tai kevyen skootterin, '
+                + 'ja vasemmanpuoleisessa liikenteessä ajetaan enintään 35 '
+                + 'kilometriä tunnissa. Useimmat liikkuvatkin julkisilla. '
+                + 'Hamiltonin keskusterminaalista lähtee yksitoista bussilinjaa '
+                + 'joka puolelle saarta, ja vaaleanpunaisen ja sinisen kirjavat '
+                + 'bussit tunnistaa kaukaa. Pysäkit on merkitty samoilla '
+                + 'väreillä: vaaleanpunainen tolppa tarkoittaa, että bussi on '
+                + 'menossa Hamiltoniin, sininen, että se on tulossa sieltä. '
+                + 'Isojen matkalaukkujen kanssa bussiin ei pääse, joten '
+                + 'lentokentältä hotellille ajetaan yleensä taksilla. Vesillä '
+                + 'kulkevat valtion SeaExpress-lautat, joiden neljä reittiä '
+                + 'lähtevät Hamiltonista: sininen vie saaren länsipäähän ja '
+                + "Dockyardiin, oranssi Dockyardiin ja St. George'siin, vihreä "
+                + 'Southamptonin Rockawayhin ja vaaleanpunainen Pagetin ja '
+                + 'Warwickin laitureille. Samalla usean päivän matkakortilla '
+                + 'pääsee sekä busseihin että lauttoihin, ja Dockyardin '
+                + 'risteilysatamasta lautta on edullisin tapa päästä '
+                + 'pääkaupunkiin.',
+              kuva: [
+                {
+                  tiedosto: 'Bermudabusterminal.JPG',
+                  lyhyt: 'Hamiltonin keskusterminaalista bussit lähtevät joka puolelle Bermudaa.',
+                  selite: 'Vaaleanpunaisen ja sinisen kirjavat bussit odottavat '
+                    + 'matkustajia Hamiltonin keskusterminaalissa, josta saaren '
+                    + 'bussilinjat lähtevät joka suuntaan.',
+                  lahde: 'Ekem, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Bermuda image number 238 bus stop with pink pole.jpg',
+                  lyhyt: 'Vaaleanpunainen tolppa pysäkillä kertoo, että bussi on menossa Hamiltoniin.',
+                  selite: 'Kivisen bussikatoksen kulmassa seisoo vaaleanpunainen '
+                    + 'tolppa: tästä pääsee kohti Hamiltonia, sinisen tolpan '
+                    + 'kohdalta taas pääkaupungista poispäin.',
+                  lahde: 'Tomwsulcer, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Bermuda Ferry Boat.JPG',
+                  lyhyt: 'Matkustajalautta lähtee Dockyardin laiturista Bermudan länsipäässä.',
+                  selite: 'Bermudan valtion matkustajalautta lähtee Royal Naval '
+                    + 'Dockyardista saaren länsipäästä, ja kannella matkustajat '
+                    + 'istuvat Bermudan, Britannian, Yhdysvaltain ja Kanadan '
+                    + 'lippujen alla.',
+                  lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Rautatiestä tuli polku',
+              teksti: 'Bermudalla kulki 1930- ja 1940-luvuilla oma rautatie, '
+                + "joka yhdisti itäpään St. George'sin Hamiltonin kautta "
+                + 'läntiseen Somersetiin. Rakentaminen alkoi 1926, ja '
+                + 'ensimmäiset junat lähtivät Hamiltonista Somersetiin '
+                + 'lokakuussa 1931. Rata vedettiin rantoja myöten, jotta maata '
+                + 'tarvitsi lunastaa vähän, mutta siksi yli kymmenesosa sen 35 '
+                + 'kilometristä kulki 33 puisella tai teräksisellä sillalla '
+                + 'meren yllä, ja rataa sanottiin kilometrihinnaltaan yhdeksi '
+                + 'maailman kalleimmista. Autot sallittiin saarella vasta 1946, '
+                + 'ja siihen asti koululaiset, työmatkalaiset ja matkailijat '
+                + 'ajoivat junalla, jota alettiin kutsua nimellä Rattle and '
+                + 'Shake, suunnilleen kolise ja heilu. Sodan jälkeen puusillat '
+                + 'olivat lahonneet ja matkustajat siirtyivät autoihin. '
+                + 'Viimeinen juna kulki toukokuussa 1948, ja vaunut myytiin '
+                + 'Brittiläiseen Guayanaan, nykyiseen Guyanaan. Vuonna 1984 '
+                + 'radasta 29 kilometriä avattiin Railway Trail -reitiksi '
+                + 'kävelyyn ja päällystetyillä osuuksilla pyöräilyyn. Polku '
+                + 'kulkee kallioleikkauksissa ja rantojen tuntumassa, ja '
+                + 'matkan varrella näkyy yhä asemarakennuksia ja meressä '
+                + 'seisovia siltojen pilareita. Paikoin reitti yhtyy '
+                + 'tavalliseen tiehen, jolla ei ole jalkakäytävää.',
+              kuva: {
+                tiedosto: 'BERMUDA RAILROAD, BERMUDA.jpg',
+                lyhyt: 'Bermudan rautatien sillan pilarit seisovat yhä turkoosissa lahdessa.',
+                selite: 'Vuosina 1931–1948 liikennöineen Bermudan rautatien '
+                  + 'sillasta ovat jäljellä vain pilarit, joiden välistä '
+                  + 'moottorivene ajaa lahden poikki.',
+                lahde: 'Jerrye and Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Leijat ja kriketti',
+              teksti: 'Pitkäperjantaina bermudalaiset lähtevät ulos leijojen '
+                + 'kanssa. Perinteinen bermudalainen leija on kuusikulmainen, '
+                + 'isommat usein kahdeksankulmaisia: litteät rimat asetetaan '
+                + 'pyörän puolien tapaan naulan ympärille, reunat ja sisäkehät '
+                + 'pingotetaan narusta, ja väliin liimataan värikästä '
+                + 'silkkipaperia kuvioiksi. Ilman pitkää kangashäntää leija ei '
+                + 'nouse lainkaan. Leijojen sanotaan kuvaavan Kristuksen '
+                + 'ylösnousemusta, ja vaikka kaupan muovileijat ovat '
+                + 'yleistyneet, taivaalla näkyy yhä enimmäkseen perinteisiä '
+                + 'bermudalaisleijoja. Leijajuhla pidetään Horseshoe Bayn '
+                + 'rannalla, ja päivän ruoka on turskapihvi pääsiäispullan '
+                + 'välissä. Kesällä juhlitaan krikettiä. Elokuun ensimmäistä '
+                + 'maanantaita edeltävät torstai ja perjantai ovat Cup Match '
+                + '-pyhät: orjuuden lakkauttamista muistava Emancipation Day '
+                + 'ja vuodesta 2020 Mary Prince Day, joka on nimetty '
+                + 'orjakertomuksellaan orjuuden lopettamista edistäneen '
+                + "bermudalaisnaisen mukaan. Silloin itäpään St. George's "
+                + 'Cricket Club ja länsipään Somerset Cricket Club pelaavat '
+                + 'keskenään kaksipäiväisen ottelun, kuten ne ovat tehneet '
+                + 'vuodesta 1902. Monet kaupat ja nähtävyydet sulkeutuvat, '
+                + 'rannoille ja teiden varsille nousee telttoja, ja kannattajat '
+                + 'pukeutuvat joukkueensa väreihin.',
+              kuva: {
+                tiedosto: 'Bermuda Kite 01.jpg',
+                lyhyt: 'Kahdeksankulmainen bermudalainen leija on koottu sateenkaaren värisestä paperista.',
+                selite: 'Pääsiäisenä 1999 Hamiltonissa kuvatun leijan kehät '
+                  + 'ovat sateenkaaren väreissä, ja sen reunan yli nousee vino '
+                  + 'rima, joka muodostaa bermudalaisleijan pään.',
+                lahde: 'Aodhdubh, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ensin hyvää huomenta',
+              teksti: 'Bermudalla kysymystä ei esitetä kylmiltään. Kun astuu '
+                + 'kauppaan, nousee bussiin tai pysäyttää ohikulkijan '
+                + 'kysyäkseen tietä, sanotaan ensin good morning, good '
+                + 'afternoon tai good evening, ja lähtiessä sama uudelleen. '
+                + 'Suoraan asiaan meneminen tuntuu saarelaisista tylyltä, ja '
+                + 'moni amerikkalainen tai brittiläinen vieras loukkaa '
+                + 'tahtomattaan. Tervehtimisen mestari oli Johnny Barnes, '
+                + 'entinen rautatien sähkömies ja bussinkuljettaja, joka noin '
+                + 'vuodesta 1986 seisoi arkiaamuisin Hamiltonin Crow Lanen '
+                + 'liikenneympyrässä vähän ennen neljää ja vilkutti töihin '
+                + 'ajaville kymmeneen asti. Hän toivotti ohiajaville "I love '
+                + 'you", ja koska lähes kaikki saaren lännestä ja etelästä '
+                + 'tulevat kulkivat ympyrän kautta, hänet tunsi lähes jokainen '
+                + 'työmatkalainen. Vuonna 1998 hänestä pystytettiin '
+                + 'elämänkokoinen pronssipatsas lähelle paikkaa, jossa hän '
+                + 'jatkoi vilkuttamista vuoden 2015 loppuun. Käytännön asiat '
+                + 'ovat yksinkertaisia: Bermudan dollari on sidottu Yhdysvaltain '
+                + 'dollariin yksi yhteen, ja dollareita otetaan vastaan '
+                + 'kaikkialla. Bermudan omat setelit eivät kuitenkaan kelpaa '
+                + 'muualla maailmassa, joten ne kannattaa käyttää ennen '
+                + 'kotimatkaa. Yhdysvaltoihin lentävät käyvät maan tulli- ja '
+                + 'maahantulotarkastuksen jo Bermudan lentokentällä.',
+              kuva: {
+                tiedosto: 'Johnny Barnes Oct 2007.jpg',
+                lyhyt: 'Johnny Barnes toivotti hyvää huomenta Hamiltoniin ajaville lähes 30 vuotta.',
+                selite: 'Johnny Barnes pitelee lokakuussa 2007 ennen '
+                  + 'auringonnousua kylttiä, joka esittelee hänet kuljettajaksi; '
+                  + 'kyltti on peräisin 1950-luvun bussista.',
+                lahde: 'Loanstarinc, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Uimakausi alkaa Bermuda Daynä',
+              teksti: 'Bermuda ei ole Karibiaa: talvet ovat viileämpiä ja '
+                + 'tuulisia, ja saarelaisten uimakausi alkaa perinteisesti '
+                + 'vasta Bermuda Daynä, toukokuun neljäntenä perjantaina. '
+                + 'Silloin moni menee vuoden ensimmäisen kerran mereen, veneet '
+                + 'lasketaan vesille, Hamiltonissa kulkee paraati ja '
+                + 'pääkaupunkiin juostaan maantiekilpailu, jonka katselupaikat '
+                + 'vallataan jalkakäytäviltä jo edellisenä iltana. Tunnetuin '
+                + 'uimaranta on Horseshoe Bay Southamptonin etelärannalla. '
+                + 'Kesällä siellä on hengenpelastaja kymmenestä kuuteen, '
+                + 'kahvila, suihkut ja jalkojenpesupaikka, ja rinteen yläpuolen '
+                + 'bussipysäkiltä pääsee rantaan kuljetuksella. Ranta kuuluu '
+                + 'Warwick Campin sotilasalueeseen: sen takana oli aikanaan '
+                + 'kiväärirata, ja länsipään hiekasta löytyy yhä vanhojen '
+                + 'Enfield- ja Martini-Henry-kiväärien luoteja. Vedessä '
+                + 'kannattaa varoa portugalinsotalaivoja. Violetit, '
+                + 'kaasurakkonsa varassa pinnalla kelluvat eläimet muistuttavat '
+                + 'meduusoja, vaikka eivät sitä ole, ja niiden polte on kova. '
+                + 'Aurinkorasvaa kuluu enemmän kuin arvaisi, sillä saaren '
+                + 'aurinko on kirkas ja pilviä on vähän.',
+              kuva: {
+                tiedosto: 'Horseshoebay.Bermuda.JPG',
+                lyhyt: 'Horseshoe Bayn vaalea hiekkaranta kaartuu Southamptonin etelärannikolla.',
+                selite: 'Horseshoe Bayn ranta Southamptonin etelärannikolla '
+                  + 'lokakuussa 2009: kaukana hiekalla on aurinkovarjoja, ja '
+                  + 'lahden päässä kohoavat tummat kalliot.',
+                lahde: 'Ekem, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -117247,6 +117698,206 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Opal mining in Australia',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Coober Pedy, Stuart Highway, Pitch Black, Mad Max
+       * Beyond Thunderdome, Kanku-Breakaways Conservation Park, Dingo
+       * Fence, World Solar Challenge), Wikivoyagesta, Parks SA:n
+       * puistosivulta ja ABC Newsin drive-in-jutusta 7.4.2019 — teksti
+       * omaa. Nostojen aiheita (Stuart, nimi, opaalin löytö, kirkko,
+       * kuilut, opaalin geologia) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Koira-aita, ainoa laadukas pystykuva seudulta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Dingo fence Coober pedy.jpg',
+          lyhyt: 'Yli 5 600 kilometrin pituinen Koira-aita kulkee Coober Pedyn pohjoispuolitse.',
+          selite: 'Koira-aita pitää dingot poissa kaakkoisen Australian '
+            + 'lammaslaitumilta, ja yli 5 600 kilometrin pituisena se '
+            + 'kuuluu maailman pisimpiin rakennelmiin.',
+          lahde: 'Foramparikh21, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Coober Pedyn tunnistaa kukkuloista pistävistä '
+          + 'tuuletusputkista: niiden alla asutaan. Adelaidesta ajetaan 846 '
+          + 'kilometriä Stuart Highwayta pitkin, ja perillä matkailijakin '
+          + 'pääsee nukkumaan kallion sisään, maanalaiseen hotelliin tai '
+          + 'retkeilymajaan, jossa ei tarvita ilmastointia eikä '
+          + 'pimennysverhoja. Ympäröivä aavikko on niin vieras, että '
+          + 'elokuvantekijät ovat kuvanneet siellä muita planeettoja, ja '
+          + 'pohjoisessa sen halki kulkee maailman pisimpiin rakennelmiin '
+          + 'kuuluva Koira-aita. Iltaisin pelataan golfia hohtavilla '
+          + 'palloilla kentällä, jolla ei kasva ruohoa. Parhaiten kaupunkiin '
+          + 'sopii tulla talvella: kesäkuussa päivän ylin lämpötila on '
+          + 'keskimäärin 18 astetta, tammikuussa lähes 37.',
+        artikkeli: {
+          nimi: 'Matkailijan Coober Pedy',
+          teksti: 'Coober Pedyssä matkailijakin nukkuu kallion sisällä.',
+          nosto: 'Golfkentällä ei kasva ruohon kortta, joten jokainen pelaaja '
+            + 'kantaa mukanaan omaa nurmipalaansa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille aavikon halki',
+              teksti: 'Coober Pedy on lähes puolivälissä Adelaiden ja Alice '
+                + 'Springsin välillä: etelästä ajetaan 846 ja pohjoisesta 685 '
+                + 'kilometriä Stuart Highwayta pitkin. Tie päällystettiin koko '
+                + 'matkaltaan vasta helmikuussa 1987, ja vasta sen jälkeen '
+                + 'kaivoskaupungista tuli matkailijoiden pysähdyspaikka. '
+                + 'Huoltoasemia on parin sadan kilometrin välein, ja '
+                + 'varoituskyltit tiellä kulkevasta karjasta on kirjoitettu '
+                + 'englanniksi, japaniksi ja saksaksi. Joka toinen vuosi samaa '
+                + 'tietä tulevat Darwinista aurinkoautot, joiden 3 022 '
+                + 'kilometrin kilpailussa Coober Pedy on tarkastuspysähdys. '
+                + 'Kiireisempi lentää Adelaidesta potkuriturbiinikoneella, '
+                + 'jolla vuoroja on kolmesti viikossa. The Ghan -juna '
+                + 'pysähtyy Manguri-nimisellä sivuraiteella yli 40 kilometrin '
+                + 'päässä, eikä junasta yleensä päästetä pois ilman '
+                + 'etukäteen sovittua kyytiä, sillä aavikon yöt ovat kylmiä. '
+                + 'Perillä kaupungin tunnistaa portista: nimikyltin päälle on '
+                + 'nostettu opaalikaivosten imuauto.',
+              kuva: [
+                {
+                  tiedosto: 'Coober Pedy Australia.jpg',
+                  lyhyt: 'Coober Pedyn nimikyltin päällä seisoo opaalikaivosten imuauto.',
+                  selite: 'Coober Pedyn nimikyltin päälle on nostettu '
+                    + 'imuauto, jollaisella opaalipitoinen maa imetään '
+                    + 'ylös kaivoskuilusta.',
+                  lahde: 'Thomas Schoch, Wikimedia Commons (CC BY-SA 2.5)',
+                },
+                {
+                  tiedosto: 'Trilingual warning sign along Stuart Highway.jpg',
+                  lyhyt: 'Stuart Highwayn karjavaroitus on englanniksi, japaniksi ja saksaksi.',
+                  selite: 'Etelä-Australian Stuart Highwayn kyltti varoittaa '
+                    + 'tiellä kulkevasta karjasta englanniksi, japaniksi ja '
+                    + 'saksaksi, aavikkotiellä ajavien matkailijoiden kielillä.',
+                  lahde: 'Marian Deschain, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Stella-era-bwsc-19-coober-pedy.jpg',
+                  lyhyt: 'Aurinkoauto Stella Era ohitti Coober Pedyn kaivoskasat kilpailussa 2019.',
+                  selite: 'Eindhovenin teknillisen yliopiston aurinkoauto '
+                    + 'Stella Era ohitti Coober Pedyn kaivoskasat Darwinista '
+                    + 'Adelaideen ajetussa kilpailussa 2019 ja voitti '
+                    + 'perheautojen sarjan.',
+                  lahde: 'Staartvin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Yö kallion sisällä',
+              teksti: 'Coober Pedyssä vieraskin nukkuu maan alla. Ensimmäinen '
+                + 'maanalainen hotelli, Desert Cave, avattiin vuonna 1988: '
+                + 'sen rakentaminen alkoi 1984 ja venyi helteiden ja '
+                + 'pölymyrskyjen takia. Nyt kaupungissa on maanalaisia '
+                + 'motelleja, retkeilymajoja ja vuokrattavia luolakoteja, '
+                + 'joiden huoneet on kaivettu rinteeseen ja joiden katossa '
+                + 'näkyvät louhintakoneen jäljet. Ikkunoita ei ole, joten aamu '
+                + 'alkaa vasta kun valot sytytetään, ja paksu kivi vaimentaa '
+                + 'äänet niin, että yö on hiljaisempi kuin yhdessäkään '
+                + 'kaupunkihotellissa. Ilmastointia ei tarvita: kun pinnalla '
+                + 'on neljäkymmentä astetta, huoneessa on yhä tavallinen '
+                + 'huoneenlämpö. Maan päällä kaupunki näyttää siksi '
+                + 'vähäiseltä, sillä asuinkukkuloiden ainoat merkit ovat '
+                + 'rinteestä törröttävät tuuletusputket ja ovet. Useaan '
+                + 'luolakotiin pääsee pientä maksua vastaan kurkistamaan, ja '
+                + 'kallion sisällä toimivat myös monet kaupat, baarit ja '
+                + 'kirkot.',
+              kuva: {
+                tiedosto: 'Outback Trip - Coober Pedy Cave Hostel Room (4156913699).jpg',
+                lyhyt: 'Maanalaisen retkeilymajan makuusalin katto on paljasta, louhittua hiekkakiveä.',
+                selite: 'Coober Pedyn maanalaisen retkeilymajan kerrossängyt '
+                  + 'seisovat louhitun hiekkakivikaton alla, eikä ikkunatonta '
+                  + 'huonetta tarvitse jäähdyttää kesähelteelläkään.',
+                lahde: 'eyeintim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Toisten planeettojen kuvauspaikka',
+              teksti: 'Coober Pedyn ympäristö näyttää niin vieraalta, että '
+                + 'elokuvantekijät ovat tuoneet sinne muita maailmoja. '
+                + 'Elokuvan Mad Max – ukkosmyrsky (1985) '
+                + 'ulkokuvat filmattiin pääosin kaupungissa ja sen liepeillä, '
+                + 'ja vuonna 2000 valmistuneen Pitch Blackin kaikki '
+                + 'ulkokohtaukset kuvattiin Coober Pedyssä ja sen '
+                + 'ympäristössä: Vin Dieselin esittämä Riddick harhaili '
+                + 'aavikolla, jota elokuvassa valaisi kolme aurinkoa. Samalla '
+                + 'seudulla on kuvattu myös Priscilla, aavikon '
+                + 'kuningatar (1994) ja Red Planet (2000). Pitch Blackista jäi '
+                + 'kaupunkiin konkreettinen muisto: maahan syöksynyt '
+                + 'avaruusalus, jonka paikalliset yrittäjät ostivat kuvausten '
+                + 'jälkeen. Alus lepää yhä pääkadun, Hutchison Streetin, '
+                + 'varrella: lentämään siitä ei enää ole, mutta kaupungin '
+                + 'kuvatuimpia kohteita se on.',
+              kuva: {
+                tiedosto: 'Coober Pedy, South Australia - Spaceship from Pitch Black.jpg',
+                lyhyt: 'Pitch Black -elokuvan avaruusalus jäi kuvausten jälkeen Coober Pedyn pääkadulle.',
+                selite: 'Vuoden 2000 Pitch Black -elokuvan ulkokohtaukset '
+                  + 'kuvattiin Coober Pedyssä, ja elokuvan maahan syöksynyt '
+                  + 'avaruusalus lepää yhä Hutchison Streetin varrella.',
+                lahde: 'Rob Chandler, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Breakaways ja Koira-aita',
+              teksti: 'Parikymmentäviisi kilometriä kaupungista pohjoiseen '
+                + 'aavikkotasanko katkeaa jyrkänteeseen, jonka alle on jäänyt '
+                + 'irrallisia pöytävuoria ja raidallisia kumpuja. Paikka '
+                + 'tunnettiin pitkään nimellä The Breakaways, ja marraskuussa '
+                + '2015 suojelualue sai nimen Kanku-Breakaways. Lähes 15 000 '
+                + 'hehtaarin alueen omistaa Antakirinja Matu-Yankunytjatjara '
+                + '-kansan yhteisö, ja koko puisto on rekisteröity '
+                + 'alkuperäiskansan perintökohteeksi. Matkailijoiden Salt and '
+                + 'Pepperiksi kutsuma valkoisen ja ruskean kummun pari on '
+                + 'alkuperäisasukkaille Papa Kutjara, kaksi makaavaa koiraa, '
+                + 'joiden isäntä on viereinen huippu; koko tarinaa ei '
+                + 'kerrota ulkopuolisille. Näköalapaikalle ajetaan omalla '
+                + 'autolla, ja maksullinen ajolupa hankitaan etukäteen. '
+                + 'Paluumatkan voi ajaa Koira-aidan viertä: yli 5 600 '
+                + 'kilometriä pitkä, enimmäkseen 180-senttinen verkkoaita '
+                + 'pitää dingot poissa lammaslaitumilta, ja Breakawaysin, '
+                + 'aidan ja Oodnadatta Trackin kautta kaupunkiin palaava '
+                + 'lenkki on 66 kilometriä.',
+              kuva: {
+                tiedosto: 'Sunset at Breakaways.jpg',
+                lyhyt: 'Kanku-Breakawaysin pöytävuoret hehkuvat punaisina matalan illan auringon valossa.',
+                selite: 'Kanku-Breakawaysin suojelualueen pöytävuoret Coober '
+                  + 'Pedyn pohjoispuolella ovat Antakirinja '
+                  + 'Matu-Yankunytjatjara -kansan maata ja kauneimmillaan '
+                  + 'auringonlaskun aikaan.',
+                lahde: 'Sliverinverted, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Iltagolf ja aavikon elokuvateatteri',
+              teksti: 'Päivällä on liian kuuma, joten Coober Pedy elää '
+                + 'iltaisin. Paikallisella golfkentällä ei kasva ruohoa '
+                + 'lainkaan, ja pelaaja kantaa mukanaan pientä nurmipalaa, '
+                + 'jolta avauslyönti tehdään; enimmäkseen pelataan pimeällä '
+                + 'hohtavilla palloilla. Kirjeenvaihdon tuloksena kaupungin '
+                + 'golfklubi on maailman ainoa, jonka jäsenillä on '
+                + 'vastavuoroiset pelioikeudet skotlantilaiseen St '
+                + 'Andrewsiin, golfin kotiin. Toinen iltahuvi on vuonna 1965 '
+                + 'avattu ulkoilmaelokuvateatteri, nykyään Etelä-Australian '
+                + 'viimeinen: vapaaehtoisten pyörittämässä teatterissa '
+                + 'muistutetaan ennen näytöstä yhä, ettei räjähteitä saa '
+                + 'tuoda sisään. Kaivosmiehet tulivat aikoinaan suoraan '
+                + 'töistä räjähteet lava-auton kyydissä, ja tylsistynyt '
+                + 'yleisö saattoi sytyttää panoksen valkokankaan alla. Kun '
+                + 'valot sammuvat, kaupungin yllä näkyy aavikon tähtitaivas, '
+                + 'jota ei himmennä yksikään suurkaupunki.',
+              kuva: {
+                tiedosto: 'Coober Pedy at night (5431459386).jpg',
+                lyhyt: 'Coober Pedyn vähäisten valojen yllä kaartuu aavikon tähtitaivas.',
+                selite: 'Toukokuun yönä 2010 kuvatussa näkymässä Coober Pedyn '
+                  + 'valojen yllä erottuvat Pohjan kruunun kaari, Herkuleen '
+                  + 'tähdistö ja kirkas Vega.',
+                lahde: 'Larry W. Lo, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'opaali',
