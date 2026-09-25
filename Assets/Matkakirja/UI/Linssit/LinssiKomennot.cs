@@ -20,7 +20,8 @@
 //   ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]
 //   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
 //   ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]  maailmanradion kotelo keksityllä
-//                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan)
+//                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan).
+//                                         TESTIKUORI: ei avaa linssiä rekisteriin (oikea radio: linssi radio)
 //   ui linssi tiedeliite [i]                 keksintölinssin tiedeliite (ensimmäinen sivullinen pysäkki)
 //   ui linssi valikko [keksinnot|matka] [kiinni|alusta]
 //                                         aikajanan ylärivi esimerkillä ja sen hampurilaisvalikko
@@ -109,7 +110,11 @@ namespace Matkakirja.Natiivi
                 case "matka":
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));
                 case "radio":
-                    return l.Radio.Testaa(a1);
+                {
+                    // Kuori ilman linssiä: kerrotaan lokiin, ettei radio tila -komento näe sitä (iPad-kierros 25.9.).
+                    var tulos = l.Radio.Testaa(a1);
+                    return tulos ?? (RadioNakyma.Testikuori ? "testikuori, ei avaa linssiä (oikea radio: linssi radio)" : null);
+                }
                 case "tiedeliite":
                 {
                     // Keksintölinssi auki (ui linssi keksinnot tai valitsimesta): tiedeliitteen sivu pysäkille i.
