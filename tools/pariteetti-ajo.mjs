@@ -16,7 +16,7 @@
  * Vaiheet voi ajaa erikseen (--vain web, --vain natiivi, --vain vertaa samaan --ulos-kansioon).
  * Simulaattorit ovat Laitetestaajan: sovi vuoro ennen natiivivaihetta. Asennuksen hoitaa Natiiviseppä.
  */
-import { spawn, execFile } from 'node:child_process';
+import { spawn, execFile, execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, copyFileSync, rmSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -33,7 +33,8 @@ const odota = (ms) => new Promise((ok) => { setTimeout(ok, ms); });
  * proto-3d/tyokalut/proto-kaanna.sh:lla ja ajetaan vain omissa simulaattoreissa): pariteetti-iPhone ja
  * pariteetti-iPhone-vaaka (iPhone 18 Pro 402 × 874; vaaka komennolla ui kierto vaaka, Natiivi-UI 43b70aa),
  * pariteetti-iPad11-834 (iPad Pro 11" M5 834 × 1210; 834 × 1194 -mallia ei ole iOS 27:ssä) ja
- * pariteetti-iPad13 (iPad Pro 13" M5 1032 × 1376). Omina ne ajetaan kaikki rinnakkain.
+ * pariteetti-iPad13 (iPad Pro 13" M5 1032 × 1376). Rinnakkain enintään 2 (PARITEETTI_SIMULAATTOREITA; muistisääntö
+ * Fable 25.9.: päivällä ei samaan aikaan Julkaisijan savukkeiden kanssa), ajon lopuksi siivous ja sammutus.
  * Käännös kaikkiin: proto-kaanna.sh <haara> <UDID…> (ks. KAANNOS alla).
  */
 /*
@@ -320,15 +321,39 @@ async function ajaLaite(l) {
   return tulos;
 }
 
+const SIMULAATTOREITA_KERRALLA = Math.max(1, Number(process.env.PARITEETTI_SIMULAATTOREITA) || 2);
+
+/** Ryhmän jälkeen simulaattori kiinni, jotta seuraava mahtuu muistiin (muistisääntö 25.9.). */
+function sammutaSimulaattori(udid) {
+  try { execFileSync('xcrun', ['simctl', 'shutdown', udid], { stdio: 'ignore' }); } catch { /* jo kiinni */ }
+}
+
+/** Koko ajon lopuksi sovellus ja data pois kaikista pariteettisimulaattoreista (Fable 25.9.). */
+function siivoaPariteettisimut() {
+  const siivoa = '/Users/Shared/Claude/proto-3d/tyokalut/siivoa-pariteettisimut.sh';
+  try { if (existsSync(siivoa)) execFileSync(siivoa, ['--aja'], { stdio: 'inherit', timeout: 1200000 }); } catch { /* lukko tai jo siivottu */ }
+  for (const l of laitteet) sammutaSimulaattori(l.udid);
+}
+
 async function ajaNatiivi() {
   // Sama simulaattori (iphone, iphone-vaaka) peräkkäin, eri simulaattorit rinnakkain.
   const ryhmat = new Map();
   for (const l of laitteet) ryhmat.set(l.udid, [...(ryhmat.get(l.udid) ?? []), l]);
   const tulokset = {};
-  await Promise.all([...ryhmat.values()].map(async (ryhma) => {
-    for (const l of ryhma) tulokset[l.nimi] = await ajaLaite(l); // eslint-disable-line no-await-in-loop
-  }));
+  /*
+   * MUISTISÄÄNTÖ (Fable 25.9.2026: 64 Gt täynnä, sivutus 22,8 Gt): enintään SIMULAATTOREITA_KERRALLA
+   * simulaattoria (oletus 2) yhtä aikaa, ei samaan aikaan Julkaisijan savukkeiden kanssa (vuoro sovitaan).
+   */
+  const jono = [...ryhmat.values()];
+  const tyontekijat = Array.from({ length: Math.min(SIMULAATTOREITA_KERRALLA, jono.length) }, async () => {
+    for (let ryhma = jono.shift(); ryhma; ryhma = jono.shift()) {
+      for (const l of ryhma) tulokset[l.nimi] = await ajaLaite(l); // eslint-disable-line no-await-in-loop
+      sammutaSimulaattori(ryhma[0].udid);
+    }
+  });
+  await Promise.all(tyontekijat);
   writeFileSync(join(NATIIVI, 'tulokset.json'), JSON.stringify(tulokset, null, 2));
+  siivoaPariteettisimut();
 }
 
 // ── 3. Vertailu ───────────────────────────────────────────────────────
