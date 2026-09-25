@@ -14,8 +14,9 @@ Unity-viennin tai käännöksen aikana (tarkista /tmp/matkakirja-kaannospalvelu.
 proto-kaanna.sh:lla FB234D08:aan.
 
 Ensimmäisenä:
-1. Tarkista Natiivisepän merget (106, matkakirja-86, ylapalkki-88, chat-91, avaruus-96b) ja onko hän tehnyt
-   PeliOhjain.OhitaAloituslento()-API:n (haara natiiviseppa/aloituslento-84).
+1. Tarkista Natiivisepän merget (106, matkakirja-86, ylapalkki-88, chat-91, avaruus-96b, liuska-92, kehittaja-103,
+   maakunnat-105). PeliOhjain.OhitaAloituslento() on valmis (natiiviseppa/aloituslento-84 4eed9c8f), joten rakenna
+   81/83 sen päälle.
 2. Sitten 81/83 (yläpalkki ja pulu pois aloitusnäytöltä ja lennolta, Ohita-nappi) Natiivisepän 84–85:n kanssa, ja
    sen jälkeen 82, 89, 90, 92, 94, 102 ja 103 pieninä erinä.
 Viestit Fablelle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.

@@ -30,8 +30,9 @@ Merkitse valmis rivi sinne ("→ KORJATTU <sha>"), jos Fable ei tee sitä. Tät�
 ## Seuraavaksi (omistajan löydökset, Fablen jako)
 - 81/83 (aloitusnäytöllä ei yläpalkkia/logoa/☰; lennolla yläpalkki ja pulu pois + Ohita-nappi alareunassa) yhdessä
   Natiivisepän 84–85:n kanssa (haara natiiviseppa/aloituslento-84). Olen pyytänyt häneltä API:n
-  `PeliOhjain.OhitaAloituslento()`: ++ajoTunnus, Lentoaani(false) ja sitten AloituslentoPerilla(saapumisKaupunki). Odota
-  sha:ta. Kuuntele AloituslentoAlkoi/AloituslentoPaattyi (PeliOhjain.Aloitus.cs). 85: paperikortti ja teksti "Ateena,
+  `PeliOhjain.OhitaAloituslento()`, ja se on VALMIS haarassa natiiviseppa/aloituslento-84 4eed9c8f (vaientaa
+  lentorepliikin, kortti tulee heti, välikortin aikana ei tee mitään). Rakenna natiivi-ui/aloitus-81-83 tämän päälle.
+  Natiiviseppä mergeää ne yhdessä videon kanssa. Kuuntele AloituslentoAlkoi/AloituslentoPaattyi (PeliOhjain.Aloitus.cs). 85: paperikortti ja teksti "Ateena,
   päivä 1" ovat Saapumiskortti (ui saapumiskortti).
 - 82 (valinnassa yläpalkki pois), 89 (matkakirjan väri oikea alusta asti), 90 (isoisän kuvat isommiksi iPadilla,
   kaiutin näkyy), 94 (koko ruutu -nappi toimimaan, ulkoasu webistä; todennäköisesti kohdekartan KOKORUUTU), 102 (noston
