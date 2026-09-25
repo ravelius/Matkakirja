@@ -759,6 +759,7 @@ namespace Matkakirja.Natiivi
 
             var sulku = Rakenne.Nappi("×", "mk-kohdekartta-kokoruutu__sulku", Sulje, r.Kortti);
             sulku.tooltip = "Sulje suurennettu kartta";
+            Kirjasimet.Aseta(sulku, Kirjasin.KoneLihava);
 
             if (k.Kohteet.Count > 0)
             {
@@ -781,7 +782,8 @@ namespace Matkakirja.Natiivi
                         rivi = Rakenne.Nappi(kohde.Nimi, "mk-kohdekartta-kokoruutu__selite mk-kohdekartta-kokoruutu__selite--nappi", () => Avaa(kk), r.Selitteet.contentContainer);
                     }
                     else rivi = Rakenne.Teksti(kohde.Nimi, "mk-kohdekartta-kokoruutu__selite", r.Selitteet.contentContainer);
-                    Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+                    // Web-kuva (b13o/web/94b): kohdenimet lihavina (.dialog button).
+                    Kirjasimet.Aseta(rivi, Kirjasin.KoneLihava);
                 }
             }
             if (!string.IsNullOrEmpty(k.Lahde))
