@@ -278,6 +278,7 @@ export const HAHMOTELMA_RUS = [
   },
   {
     id: 'hahmotelma-nizni-novgorod',
+    nimio: 'Nižni Novgorod',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/rus-nosto-nizni-novgorod-7b0cc70c.jpg',
       lyhyt: 'Vanha postikortti Nižni Novgorodin messujen päärakennuksesta noin 1903.',
@@ -379,6 +380,7 @@ export const HAHMOTELMA_RUS = [
   },
   {
     id: 'hahmotelma-tsiolkovski',
+    nimio: 'Tsiolkovski',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/rus-nosto-tsiolkovski-8690839d.jpg',
       lyhyt: 'Konstantin Tsiolkovskin muotokuva Kalugassa noin 1908.',

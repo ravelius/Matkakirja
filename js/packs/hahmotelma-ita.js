@@ -501,6 +501,7 @@ export const HAHMOTELMA_ITA = [
   },
   {
     id: 'hahmotelma-agrigento',
+    nimio: 'Agrigento',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-agrigento-88e3396b.jpg',
       lyhyt: 'Concordian temppeli valaistuna iltahämärässä Agrigentossa.',
@@ -1174,6 +1175,7 @@ export const HAHMOTELMA_ITA = [
   },
   {
     id: 'hahmotelma-carrara',
+    nimio: 'Carrara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-carrara-55725472.jpg',
       lyhyt: 'Carraran marmorilouhosten rinteet ja serpentiinitie ylhäältä nähtynä.',

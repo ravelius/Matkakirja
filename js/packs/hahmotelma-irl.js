@@ -403,6 +403,7 @@ export const HAHMOTELMA_IRL = [
   },
   {
     id: 'hahmotelma-powerscourt',
+    nimio: 'Powerscourt',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-powerscourt-6f523c29.jpg',
       lyhyt: 'Powerscourtin vesiputous valuu kallioista rinnettä alas metsäisessä laaksossa.',
@@ -1449,6 +1450,7 @@ export const HAHMOTELMA_IRL = [
   },
   {
     id: 'hahmotelma-mellifont',
+    nimio: 'Mellifont',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/irl-nosto-mellifont-4f056d51.jpg',
       lyhyt: 'Mellifontin luostarin kahdeksankulmainen lavabo ja kaariholvien rauniot.',

@@ -227,6 +227,7 @@ export const MAASTOKOHTEET_SLB = [
   {
     id: 'uuden-georgian-salmi',
     nimi: 'Uuden-Georgian salmi',
+    nimio: 'Uusi-Georgia',
     tyyppi: 'meri',
     kysymykset: [
       'Millä lempinimellä liittoutuneet kutsuivat salmea?',

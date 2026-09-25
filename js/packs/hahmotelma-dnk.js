@@ -285,6 +285,7 @@ export const HAHMOTELMA_DNK = [
   },
   {
     id: 'hahmotelma-thy',
+    nimio: 'Thy',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-thy-cae4a3f5.jpg',
       lyhyt: 'Pohjanmeren aallot ja ruohoiset dyynit Nørre Vorupørin rannikolla.',
@@ -823,6 +824,7 @@ export const HAHMOTELMA_DNK = [
   },
   {
     id: 'hahmotelma-viborg',
+    nimio: 'Viborg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-viborg-1582cc85.jpg',
       lyhyt: 'Viborgin tuomiokirkon kaksi tornia ja katto puiden takaa.',

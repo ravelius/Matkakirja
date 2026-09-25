@@ -35,6 +35,7 @@ export const MAASTOKOHTEET_COL = [
   {
     id: 'cristobalcolon',
     nimi: 'Pico Cristóbal Colón',
+    nimio: 'Cristóbal Colón',
     tyyppi: 'vuori',
     kysymykset: [
       'Miksi huipun korkeudesta ei olla varmoja?',
@@ -203,6 +204,7 @@ export const MAASTOKOHTEET_COL = [
   {
     id: 'cartagenacol',
     nimi: 'Cartagena de Indias',
+    nimio: 'Cartagena',
     tyyppi: 'kaupunki',
     kysymykset: [
       'Miksi Cartagena piti linnoittaa?',
@@ -287,6 +289,7 @@ export const MAASTOKOHTEET_COL = [
   {
     id: 'barranquillankarnevaali',
     nimi: 'Barranquillan karnevaali',
+    nimio: 'Barranquilla',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Millä karnevaali alkaa ja millä se päättyy?',

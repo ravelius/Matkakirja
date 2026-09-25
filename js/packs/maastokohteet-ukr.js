@@ -304,6 +304,7 @@ export const MAASTOKOHTEET_UKR = [
    * ============================================================== */
   {
     id: 'kamjanets-podilskyin-linna',
+    nimio: 'Kamjanets',
     kuva: {
       "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-kamjanets-podilskyin-linna-42a38ea06850.jpg",
       "lyhyt": "Kamjanets-Podilskyin linna nykyisessä asussaan Smotrytš-joen kiertämällä kallioniemellä Podoliassa.",
@@ -349,6 +350,7 @@ export const MAASTOKOHTEET_UKR = [
   },
   {
     id: 'tsernobylin-ydinvoimala',
+    nimio: 'Tšernobyl',
     kuva: {
       "osoite": "https://media.matkakirja.app/karttanostot/20260912/ukr-kohde-tsernobylin-ydinvoimala-0e9773afbd39.jpg",
       "lyhyt": "Tšernobylin nelosreaktorin vanha suojarakennus vuonna 2013.",

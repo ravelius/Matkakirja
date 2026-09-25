@@ -448,6 +448,7 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'palangan-meripihkamuseo',
+    nimio: 'Palanga',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-palangan-meripihkamuseo-3efe2f35.jpg',
       lyhyt: 'Tiškevičiaiden palatsi, jossa Palangan meripihkamuseo toimii, illan valossa.',
@@ -790,6 +791,7 @@ export const MAASTOKOHTEET_LTU = [
   },
   {
     id: 'aukstaitija',
+    nimio: 'Aukštaitija',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-aukstaitija-f533ff9a.jpg',
       lyhyt: 'Sininen järvi ja metsäiset saarekkeet Aukštaitijan kukkuloiden keskellä.',

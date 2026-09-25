@@ -604,7 +604,7 @@ export const FOKUSVIRTA_BERLIINI = {
        * takynostot-saksa.md, ehdokas 1 (VARMA). Henkilö kuollut 1922.
        */
       id: 'kopenickin-kapteeni',
-      nimio: 'Köpenickin kapteeni',
+      nimio: 'Köpenick',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * Köpenick on Berliinin kaakkoislaidalla eikä osu kaupunkilehden
