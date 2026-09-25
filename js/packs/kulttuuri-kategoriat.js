@@ -108498,6 +108498,235 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: "Devil's Pool (Victoria Falls)",
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Victoria Falls, Victoria Falls Zimbabwe, Livingstone
+       * Zambia, Victoria Falls Airport, Harry Mwaanga Nkumbula
+       * International Airport, Kazungula Bridge, Kasane, Victoria Falls
+       * Bridge, Visa policy of Zambia / of Zimbabwe (KAZA-viisumi),
+       * Mosi-oa-Tunya National Park, Zambezi National Park, Chobe National
+       * Park, Batoka Gorge Hydroelectric Power Station) ja Wikivoyagesta
+       * (Victoria Falls,
+       * Livingstone) — teksti omaa. Nostojen aiheita (Livingstonen löytö,
+       * putousten koko, vuosi 1873, patsas, sillan rakentaminen, sademetsä,
+       * kuunkaari, Veitsenterä-silta, Mosi-oa-Tunya-nimi) ei toisteta;
+       * Devil's Pool mainitaan vain kausi- ja lupatietona. Hinnat,
+       * viisumimaksut ja aikataulut jätetty pois, koska Wikivoyagen tiedot
+       * ovat vuosilta 2019–2026 ja muuttuvat. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: bungeehyppy sillalta (public domain).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'H15bungee.jpg',
+          lyhyt: 'Bungeehyppääjä syöksyy Victoria Falls -sillalta kohti Zambezin rotkoa.',
+          selite: 'Hyppääjä on juuri lähtenyt Victoria Falls -sillan '
+            + 'hyppylavalta, ja lavalla seisovat työntekijät seuraavat, kun '
+            + 'köysi kiristyy rotkon yllä. Sambian ja Zimbabwen rajasillalta '
+            + 'tehtävä bungeehyppy on 111 metriä korkea.',
+          lahde: 'John Walker, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Viktorian putouksille tullaan kahden maan kautta. '
+          + 'Zimbabwen puolella Victoria Fallsin pikkukaupunki on aivan '
+          + 'putousten vieressä, Sambian puolella Livingstone kymmenen '
+          + 'kilometrin päässä joesta, ja niiden välissä kulkee silta, jonka '
+          + 'yli rajan voi ylittää kävellen. Kummallakin rannalla on oma '
+          + 'kansallispuistonsa ja omat näköalapolkunsa, ja kokonaiskuvan saa, '
+          + 'kun käy molemmilla. Vesimäärä vaihtelee vuoden mittaan enemmän '
+          + 'kuin muissa suurissa putouksissa: huhtikuun tulvan aikaan sumu '
+          + 'peittää näkymän, marraskuussa osa kallioseinästä on kuivana. '
+          + 'Putousten alla lasketaan koskia, yläpuolella risteillään '
+          + 'virtahepojen keskellä, ja Botswanan norsulaumat ovat päiväretken '
+          + 'päässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktorian putoukset',
+          teksti: 'Viktorian putouksia katsotaan kahdesta maasta, ja rajan voi '
+            + 'ylittää kävellen.',
+          nosto: 'Marraskuussa putouksen yli virtaa vain noin kymmenesosa '
+            + 'huhtikuun vesimäärästä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi kaupunkia, kaksi lentoasemaa',
+              teksti: 'Putouksilla on kaksi porttikaupunkia. Zimbabwen '
+                + 'Victoria Falls on noin 35 000 asukkaan matkailukaupunki '
+                + 'putousten länsipäässä, ja useimmat hotellit ovat muutaman '
+                + 'kilometrin päässä putouksista. Sen lentoasema on 18 '
+                + 'kilometriä kaupungista etelään, ja terminaali ja kiitotie '
+                + 'uusittiin 2010-luvulla kiinalaisen pankin lainalla. Sambian '
+                + 'Livingstone on selvästi suurempi, lähes 180 000 asukkaan '
+                + 'kaupunki, ja se oli Pohjois-Rhodesian pääkaupunki vuosina '
+                + '1911–1935. Sen lentoasema, joka on nimetty '
+                + 'itsenäisyysliikkeen johtajan Harry Mwaanga Nkumbulan mukaan, '
+                + 'on kaupungin pohjoislaidalla noin 15 kilometrin päässä '
+                + 'putouksista. Suoria lentoja tulee kummallekin puolelle '
+                + 'ainakin Johannesburgista, Kapkaupungista ja Nairobista, mutta '
+                + 'reitit ja lentoyhtiöt vaihtuvat usein. Maata pitkin '
+                + 'Livingstoneen pääsee linja-autolla Lusakasta 470 kilometrin '
+                + 'päästä, ja Victoria Fallsiin kulkee Bulawayosta harvakseltaan '
+                + 'yöjuna. Botswanasta tullaan Kasanen kautta: Kazungulassa '
+                + 'Sambian ja Botswanan yhteistä rajaa on joella vain noin 135 '
+                + 'metriä, ja vanhan lautan korvasi toukokuussa 2021 avattu '
+                + 'silta, joka kaartuu kiertääkseen Zimbabwen ja Namibian rajat.',
+              kuva: [
+                {
+                  tiedosto: 'Victoria Falls International Airport 001.jpeg',
+                  lyhyt: 'Victoria Fallsin lentoasema on 18 kilometrin päässä kaupungista etelään.',
+                  selite: 'Victoria Fallsin kansainvälisen lentoaseman '
+                    + 'terminaalin kaarevaa kattoa kannattelevat vaaleat '
+                    + 'teräsristikot; kuva on otettu marraskuussa 2023.',
+                  lahde: 'Geraldshields11, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Livingstone, Zambia - panoramio (1).jpg',
+                  lyhyt: 'Livingstonen linja-autoasemalla myydään lippuja muun muassa Lusakaan ja Kazungulaan.',
+                  selite: 'Livingstonen linja-autoaseman lippukojun seinään '
+                    + 'on vuonna 2015 maalattu päivittäiset reitit muun muassa '
+                    + 'Lusakaan, Kazungulaan ja Sesheken kautta Monguun sekä '
+                    + 'Lusakasta Johannesburgiin.',
+                  lahde: 'cowbridgeguide.co.uk, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Kazungula-Brücke mit Kapspurgleis in der Fahrbahnmitte.jpg',
+                  lyhyt: 'Kazungulan kaareva silta yhdistää Sambian ja Botswanan vuodesta 2021.',
+                  selite: 'Kazungulan sillan jalkakäytävältä näkyvät sillan '
+                    + 'kaari ja vinoköysipylonit. Ajoratojen väliin on '
+                    + 'rakennettu raide, jota ei vielä ole liitetty kummankaan '
+                    + 'maan rataverkkoon.',
+                  lahde: 'Matthias Hille, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi rantaa ja raja sillan keskellä',
+              teksti: 'Putoukset näkyvät eri tavoin kummaltakin rannalta. '
+                + 'Zimbabwen puolella polku kulkee rotkon vastareunaa pitkin, '
+                + 'ja putouksen läntiset haarat, Paholaisen kaihi ja '
+                + 'Pääputous, näkyvät suoraan edestä. Sambian puolella pääsee '
+                + 'koskettamaan jokea muutaman metrin päässä putouksen '
+                + 'reunasta, ja jyrkkä polku laskeutuu rotkon pohjalle '
+                + 'Kiehuvaksi padaksi kutsutulle pyörteelle, josta '
+                + 'rautatiesilta näkyy alhaalta päin. Sambian puiston portilla '
+                + 'vuokrataan sadevarusteita, ja kamera kannattaa suojata '
+                + 'vesipölyltä. Rajan voi ylittää kävellen sillan yli: '
+                + 'kummassakin päässä on rajatarkastus, ja sillan keskeltä '
+                + 'näkyvät putoukset. Sambia ja Zimbabwe ottivat marraskuussa '
+                + '2014 käyttöön yhteisen KAZA-viisumin, joka kattaa molemmat '
+                + 'maat ja päiväretket Botswanan Choben puistoon. Järjestely '
+                + 'on kuitenkin välillä ollut tauolla, ja kelpoiset maat ja '
+                + 'maksut muuttuvat, joten viisumitilanne kannattaa tarkistaa '
+                + 'juuri ennen matkaa. Käteistä tarvitaan: Zimbabwessa '
+                + 'maksetaan yleensä Yhdysvaltain dollareilla ja Sambiassa '
+                + 'kwachoilla, eikä kwachoja voi vaihtaa Zimbabwen puolella.',
+              kuva: {
+                tiedosto: 'Livingstone, Zambia (48597799226).jpg',
+                lyhyt: 'Kävelijät ylittävät rajan Victoria Falls -sillalla Zimbabwesta Sambiaan.',
+                selite: 'Keltainen kyltti Victoria Falls -sillalla ilmoittaa, '
+                  + 'että kävelijät ovat saapumassa Sambiaan. Vasemmalla '
+                  + 'avautuu jyrkkä rotko, ja oikealla kulkee rautatie.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tulvan jylinä vai kuivan kauden kalliot',
+              teksti: 'Zambezin yläjuoksulla sataa marraskuun lopulta '
+                + 'huhtikuun alkuun, mutta vesi saapuu putouksille viiveellä: '
+                + 'tulva-aika kestää helmikuusta toukokuuhun, ja virtaama on '
+                + 'suurimmillaan huhtikuussa. Silloin putous on '
+                + 'voimakkaimmillaan, mutta sumu peittää sen juuren ja '
+                + 'seinämän, ja polulla kastuu läpimäräksi. Kuivan kauden '
+                + 'edetessä saaret putouksen reunalla levenevät, ja syyskuusta '
+                + 'tammikuuhun jopa puolet kallioseinästä voi olla kuivana. '
+                + 'Pienin virtaama osuu marraskuulle, ja se on vain noin '
+                + 'kymmenesosa huhtikuun huipusta, mikä on suurempi vaihtelu '
+                + 'kuin muissa suurissa putouksissa. Vähäisen veden aikaan näkee '
+                + 'tumman basalttiseinämän ja rotkon pohjan, ja Zimbabwen '
+                + 'puolella pääsee laskeutumaan ensimmäisen rotkon pohjalle. '
+                + 'Vain matalan veden aikaan veneet vievät myös '
+                + 'Livingstone-saarelle ja Devil\'s Poolille, ja sinne pääsee '
+                + 'ainoastaan luvallisten järjestäjien retkillä. Vuodet eivät '
+                + 'ole samanlaisia: vuonna 2019 vähäiset sateet painoivat '
+                + 'virtaaman pienimmäksi sataan vuoteen, ja kuivuusvuodet ovat '
+                + 'yleistyneet, joten kuukausien vesimäärät kannattaa tarkistaa '
+                + 'matkaa suunnitellessa.',
+              kuva: {
+                tiedosto: 'Victoria falls during dry season 2011.jpg',
+                lyhyt: 'Marraskuussa 2011 putouksen kallioseinä oli paikoin lähes kuiva.',
+                selite: 'Marraskuussa 2011 kuvatussa näkymässä putouksen tumma '
+                  + 'basalttiseinä on suurelta osin kuiva, ja vain muutama ohut '
+                  + 'vesinauha putoaa rotkoon; vasemmalla joki kuohuu rotkon '
+                  + 'pohjalla.',
+                lahde: 'BetterWORLDphoto, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Koskien rotko putousten alla',
+              teksti: 'Putouksen alapuolella koko Zambezi puristuu kapeisiin, '
+                + 'siksakkina kulkeviin rotkoihin, joiden kosket ovat '
+                + 'koskenlaskijoiden maailmassa kuuluisia. Laji yleistyi täällä '
+                + '1980-luvulla, kun Zimbabwen itsenäistyminen toi rauhan ja '
+                + 'matkailijat takaisin, ja nykyään päiväretkiä lähtee sekä '
+                + 'Sambian että Zimbabwen puolelta viidennen vaikeusluokan '
+                + 'koskiin. Rotkoissa joen pinta nousee ja laskee kausien '
+                + 'välillä jopa 20 metriä, joten sama koski on eri '
+                + 'vuodenaikoina hyvin erilainen. Laskut ovat fyysisesti '
+                + 'raskaita ja vaarallisia, ja järjestäjä kannattaa valita '
+                + 'huolella. Kosket ovat myös uhattuina: noin 54 kilometriä '
+                + 'putouksista alavirtaan on suunniteltu 181 metriä korkeaa '
+                + 'patoa ja vesivoimalaa, ja arvostelijoiden mukaan sen allas '
+                + 'voisi ulottua lähes putousten juurelle ja hukuttaa kosket. '
+                + 'Hanketta on vastustettu, ja sen sopimukset ovat kaatuneet '
+                + 'useaan kertaan, joten sen tulevaisuus on auki. Putousten '
+                + 'yläpuolella joki on tyyni: iltaisin risteilyveneet lähtevät '
+                + 'auringonlaskuun virtahepojen ja krokotiilien keskelle, ja '
+                + 'helikopterilennolla näkee koko rotkojen ketjun ylhäältä.',
+              kuva: {
+                tiedosto: 'Grade 5 Rafting op de Zambezi Rivier! (6573889969).jpg',
+                lyhyt: 'Kumivene syöksyy viidennen vaikeusluokan koskeen putousten alapuolisessa rotkossa.',
+                selite: 'Kypäräpäiset melojat pelastusliiveissä pitävät kiinni '
+                  + 'kumiveneestä, kun se syöksyy vaahtoavaan koskeen Zambezin '
+                  + 'rotkossa Viktorian putousten alapuolella.',
+                lahde: 'Martijn Munneke, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sarvikuonoja ja norsuja päiväretkellä',
+              teksti: 'Putousten molemmin puolin on eläinpuistoja, joihin '
+                + 'pääsee puolen päivän retkellä. Sambian Mosi-oa-Tunyan '
+                + 'kansallispuiston luoteispäässä elää kirahveja, seeproja, '
+                + 'puhveleita ja antilooppeja sekä Etelä-Afrikasta tuotuja '
+                + 'valkosarvikuonoja. Kaksi ensimmäistä joutui salametsästäjien '
+                + 'ampumiksi kesäkuussa 2007: toinen kuoli, toinen selvisi '
+                + 'vakavasti haavoittuneena. Vuonna 2022 puistossa oli kymmenen '
+                + 'sarvikuonoa, ja niitä vartioidaan ympäri vuorokauden. '
+                + 'Zimbabwen puolella joen yläjuoksulla on Zambezin '
+                + 'kansallispuisto, jossa näkee norsuja, puhveleita ja '
+                + 'soopeliantilooppeja aivan Victoria Fallsin kaupungin '
+                + 'kupeessa. Pidemmälle ehtivä tekee päiväretken Botswanan '
+                + 'Choben kansallispuistoon, jonka noin 50 000 norsua '
+                + 'kerääntyvät kuivalla kaudella toukokuusta lokakuuhun Choben '
+                + 'joen rannoille. Villieläimet '
+                + 'liikkuvat myös kaupunkien laidoilla, joten kaupungin ja '
+                + 'putousten väliä ei suositella kävelemään pimeällä, ja apinat '
+                + 'vievät eväät valvomattomalta pöydältä. Mosi-oa-Tunyan '
+                + 'puistossa on myös Old Driftin hautausmaa, jonne haudattiin '
+                + 'seudun ensimmäisiä eurooppalaisia asukkaita: he kuolivat '
+                + 'malariaan ja luulivat kuumetautia puiden aiheuttamaksi. '
+                + 'Malarian ehkäisystä kannattaa yhä kysyä lääkäriltä ennen '
+                + 'matkaa.',
+              kuva: {
+                tiedosto: 'Rhinos, Mosi-oa-Tunya National Park, Zambia (48597918381) (cropped).jpg',
+                lyhyt: 'Mosi-oa-Tunyan kansallispuiston valkosarvikuonoja vartioidaan ympäri vuorokauden.',
+                selite: 'Valkosarvikuono seisoo puun varjossa Mosi-oa-Tunyan '
+                  + 'kansallispuistossa Livingstonen laidalla, ja sen takana '
+                  + 'lepää toinen sarvikuono. Puiston sarvikuonot on tuotu '
+                  + 'Etelä-Afrikasta.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
