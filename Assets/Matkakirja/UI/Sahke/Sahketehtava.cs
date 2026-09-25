@@ -978,7 +978,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Web livianTiiviste: FNV-1a 32 koodipisteittäin trimmatusta tekstistä, 8 heksamerkkiä.</summary>
-        static string Tiiviste(string teksti)
+        internal static string Tiiviste(string teksti)
         {
             uint h = 0x811c9dc5;
             var s = (teksti ?? "").Trim();
