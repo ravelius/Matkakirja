@@ -116633,6 +116633,259 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'New Coimbra Fort',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Campo Grande, Campo Grande International Airport,
+       * Mato Grosso do Sul, Bonito (Mato Grosso do Sul), Buraco das Araras
+       * (Mato Grosso do Sul), Tereré, Arroz carreteiro, Sopa paraguaya, Time
+       * in Brazil) ja Wikivoyagen Campo Grande-, Bonito- ja Pantanal-sivuilta;
+       * Bioparque Pantanalin, Parque das Nações Indígenasin, Museu das
+       * Culturas Dom Boscon ja Gruta do Lago Azulin yksityiskohdat
+       * portugalinkielisestä Wikipediasta, koska englanninkielistä artikkelia
+       * ei ole — teksti omaa. Wikivoyagen hinnat ja aikataulut ovat eri
+       * vuosilta (2018 ja marraskuu 2025), joten ainoa hinta on marraskuun
+       * 2025 Pantanal-retkihinta, ja vanhemmat tiedot (paraguaylaisten
+       * sunnuntaitanssit, bussien matkakortti, Boniton bussivuorot) on kerrottu
+       * Wikivoyagen tietoina tai ilman kellonaikoja. Buraco das Ararasin
+       * mitoista lähteet eroavat (halkaisija vai ympärys 500 m), siksi
+       * tekstissä on vain "satoja metrejä leveä". Nostojen aiheita (cerrado,
+       * terenat, guatót, Maracajun vuoret, Coimbran linnake; Pantanalin tulva,
+       * kapybara, jaguaari, hyasinttiaara, kaimaani), saapumistekstin aroja
+       * kaupungin puistoissa ja Etelä-Amerikan valokuvapaketin kuvien aiheita
+       * (lentotukikohdan vihkiäiset 1945, Feira Central, sobá, rautatieasema,
+       * Avenida Afonso Pena) ei toisteta. Galleriaa lohkossa ei ole. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * tiedostosivuilta, ja kuvat katsottu silmin; MTur Destinosin kuvista
+       * valittiin vain Flickrin PD-merkinnällä julkaistut (ei Attribution-
+       * mallineella julkaistuja). Pystykuva: Abismo Anhumasin luola Bonitossa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Abismo Anhumas.jpg',
+          lyhyt: 'Auringonsäde lankeaa Abismo Anhumasin luolaan ja sen maanalaiseen järveen Bonitossa.',
+          selite: 'Kapeasta kattoaukosta lankeava valokeila valaisee tippukivien '
+            + 'peittämää luolaseinää ja kirkasta, vihreänsinistä järveä luolan '
+            + 'pohjalla. Järven rantaan laskeudutaan köysien varassa 72 metriä. '
+            + 'Kuva on otettu joulukuussa 2014.',
+          lahde: 'Marcel Favery, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Campo Grande on Mato Grosso do Sulin pääkaupunki ja suurin '
+          + 'kaupunki, väljäksi suunniteltu tasangon kaupunki, jonka leveitä '
+          + 'katuja varjostavat puurivit. Matkailijalle se on ennen kaikkea '
+          + 'portti: länteen lähtevät tiet vievät eteläiseen Pantanaliin, ja '
+          + 'noin 300 kilometrin päässä lounaassa odottaa Bonito kirkkaine '
+          + 'jokineen ja luolineen. Kaupunkiinkin kannattaa jäädä päiväksi tai '
+          + 'pariksi, sillä täällä on akvaario, jota kutsutaan maailman '
+          + 'suurimmaksi makean veden akvaarioksi, museo täynnä '
+          + 'alkuperäiskansojen esineitä, Paraguayn makuja ja kylmää tereréä '
+          + 'kuumaan iltapäivään.',
+        artikkeli: {
+          nimi: 'Matkailijan Campo Grande',
+          teksti: 'Campo Grande on portti Bonitoon ja eteläiseen Pantanaliin, mutta kaupunki itsekin palkitsee pysähtyjän.',
+          nosto: 'Campo Grandessa kello on tunnin jäljessä Riosta ja São Paulosta, '
+            + 'sillä Mato Grosso do Sul elää Amazonin aikaa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja eteenpäin',
+              teksti: 'Useimmat matkailijat saapuvat lentäen. Kansainvälinen lentoasema '
+                + '(CGR) on noin seitsemän kilometrin päässä keskustasta, ja se '
+                + 'jakaa osan tiloistaan Brasilian ilmavoimien tukikohdan kanssa. '
+                + 'Kenttää on vuodesta 2022 hoitanut espanjalainen lentoasemayhtiö '
+                + 'Aena, ja lokakuusta 2021 se on kantanut paikallisen yrittäjän '
+                + 'Ueze Elias Zahranin nimeä. Lennot ovat enimmäkseen kotimaisia, '
+                + 'mutta muutama yhteys kulkee myös Boliviaan ja Paraguayhin. '
+                + 'Kaupunkiin pääsee linja-autoilla 409 ja 414 tai taksilla, jossa '
+                + 'on taksamittari. Kaukoliikenteen bussit lähtevät keskustan '
+                + 'eteläpuolella olevalta linja-autoasemalta. Corumbáan Bolivian '
+                + 'rajalle ajetaan viidestä kuuteen tuntia, São Pauloon 13–15 tuntia '
+                + 'ja Rio de Janeiroon noin 20 tuntia. Bonitoon lähtee Wikivoyagen '
+                + 'mukaan neljä vuoroa päivässä, ja matka kestää noin viisi tuntia. '
+                + 'Rataa pitkin kulkee enää vain tavarajunia. Kaupungin oma '
+                + 'bussiverkko rakentuu vaihtoterminaalien varaan: niissä voi '
+                + 'vaihtaa bussia maksutta, mutta useimmissa autoissa maksu käy vain '
+                + 'kaupungin matkakortilla. Pantanaliin ajetaan BR-262-tietä '
+                + 'länteen. Buraco das Piranhasin risteyksestä erkanee Estrada '
+                + 'Parque, joka kiertää Passo do Lontran ja Curva do Lequen kautta '
+                + 'Corumbáan. Omalla autolla tieltä näkee helposti suuria lintuja ja '
+                + 'kaimaaneja, ja ilman autoa matkaan pääsee yhteiskuljetuksilla, '
+                + 'joita Campo Grandesta lähtee päivittäin Bonitoon, Corumbáan ja '
+                + 'Buraco das Piranhasiin.',
+              kuva: [
+                {
+                  tiedosto: 'Aeroporto Internacional de Campo Grande MS, 20-07-2025.jpg',
+                  lyhyt: 'Campo Granden kansainvälisen lentoaseman terminaali heinäkuussa 2025.',
+                  selite: 'Matalan, valkoisen terminaalirakennuksen julkisivussa lukee '
+                    + 'vihreillä kirjaimilla Aeroporto Internacional de Campo Grande. '
+                    + 'Edessä kulkee saattoliikenteen kaista pysäköityine autoineen, ja '
+                    + 'kuivan kauden taivas on kirkkaan sininen.',
+                  lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ônibus no Terminal Rodoviário de Campo Grande, dezembro de 2022 (1).jpg',
+                  lyhyt: 'Kaukoliikenteen busseja Campo Granden linja-autoasemalla joulukuussa 2022.',
+                  selite: 'Sadekauden pilvinen taivas kaartuu linja-autoaseman yllä. Märällä '
+                    + 'ajoradalla kulkee valko-oranssi kaukoliikenteen bussi, ja toinen '
+                    + 'seisoo laiturissa katoksen reunalla.',
+                  lahde: 'Fronteira, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ponte Passo Lontra MS 184 Corumba MS.jpg',
+                  lyhyt: 'Estrada Parquen silta ylittää Miranda-joen Passo do Lontrassa.',
+                  selite: 'Tammikuussa 2018 otetussa ilmakuvassa betonisilta ylittää leveän, '
+                    + 'tumman Miranda-joen. Sillan juurelle on kiinnittynyt '
+                    + 'kaksikerroksinen jokilaiva ja pieniä veneitä, ja rannoilla on '
+                    + 'rakennuksia vihreän kasvillisuuden keskellä.',
+                  lahde: 'Luiz Ricardo Bernhard, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tereréä ja chipaa',
+              teksti: 'Campo Granden ruokapöytä on koottu monesta suunnasta: '
+                + 'Paraguaysta, alkuperäiskansoilta, siirtolaisilta ja '
+                + 'karjatiloilta. Seudun tyypillisin ruoka on Wikivoyagen mukaan '
+                + 'arroz carreteiro, riisiä naudanlihakuutioiden ja yrttien kanssa. '
+                + 'Se syntyi Rio Grande do Sulin härkävankkurien ajajien eväänä ja '
+                + 'on levinnyt koko Brasiliaan. Paraguaysta ovat peräisin chipa, '
+                + 'maniokkitärkkelyksestä ja juustosta leivottu rengas, jonka '
+                + 'paikalliset valitsevat mieluummin kuin Minas Geraisin pão de '
+                + 'queijon, sekä sopa paraguaia. Nimestään huolimatta se ei ole '
+                + 'keitto vaan maissijauhosta, juustosta, sipulista ja maidosta '
+                + 'paistettu suolainen kakku. Joen kaloista syödään esimerkiksi '
+                + 'paistettua pacua ja piraijakeittoa. Kaimaanin lihaakin saa, mutta '
+                + 'Wikivoyage neuvoo varmistamaan, että liha on peräisin '
+                + 'kasvattamosta eikä salametsästäjiltä. Cerradon hedelmät, kuten '
+                + 'pequi, buriti, bocaiúva ja guavira, maustavat jäätelöitä ja jopa '
+                + 'paikallisia oluita. Tärkein juoma on tereré, kylmänä nautittava '
+                + 'mate: kuppi täytetään karkeaksi jauhetulla mateyrtillä, päälle '
+                + 'kaadetaan jäävettä, ja juoma imetään metallisen suodatinpillin '
+                + 'läpi. Lounais-Brasiliassa veteen sekoitetaan usein hedelmämehua. '
+                + 'Tereré on alun perin guaranien juoma, ja Unesco merkitsi '
+                + 'Paraguayn tereré-perinteen aineettomaksi kulttuuriperinnöksi '
+                + 'joulukuussa 2020. Mateyrtit, rapadura-sokerikakut, paikalliset '
+                + 'juustot ja tuoreet chilit ostetaan Mercadão Municipalista, '
+                + 'kaupungin kauppahallista.',
+              kuva: {
+                tiedosto: 'Sopa Paraguaia e Chipa.jpg',
+                lyhyt: 'Sopa paraguaia -kakkua ja rengasmaisia chipoja kukkakuvioisilla lautasilla.',
+                selite: 'Etualalla on kukkakuvioisella lautasella pala kullanruskeaksi '
+                  + 'paistettua sopa paraguaiaa, ja taaempana toisella lautasella on '
+                  + 'kaksi rengasmaista chipaa. Kuva on otettu Mato Grosso do Sulissa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Akvaario, museo ja polkka',
+              teksti: 'Kaupungin näyttävin uusi rakennus on Bioparque Pantanal Avenida '
+                + 'Afonso Penan varrella Parque das Nações Indígenasin kupeessa. '
+                + 'Arkkitehti Ruy Ohtaken suunnittelema akvaario avattiin '
+                + 'maaliskuussa 2022, ja sitä kutsutaan maailman suurimmaksi makean '
+                + 'veden akvaarioksi. Rakentaminen alkoi jo 2011, ja 900 päiväksi '
+                + 'suunniteltu työmaa venyi yli kymmeneen vuoteen. Viereinen puisto '
+                + 'on yli sadan hehtaarin viheralue Prosa-puron muodostaman järven '
+                + 'ympärillä. Sen kuusi sisäänkäyntiä on nimetty Mato Grosso do '
+                + 'Sulin alkuperäiskansojen mukaan, ja järven saarella on Anor '
+                + 'Mendesin seitsemän metriä pitkä veistos guaicurú-ratsastajasta. '
+                + 'Puistossa ovat myös nykytaiteen museo MARCO sekä Museu das '
+                + 'Culturas Dom Bosco, jonka salesiaanipapit avasivat 1951. Museon '
+                + 'noin 40 000 esineen kokoelmissa on yli 5 000 alkuperäiskansojen '
+                + 'esinettä muun muassa bororo-, karajá- ja xavante-kansoilta sekä '
+                + 'laaja hyönteiskokoelma. Käsitöitä kannattaa etsiä Casa do '
+                + 'Artesãosta, jossa myydään muun muassa kadiwéu-kansan töitä. '
+                + 'Iltaisin kaupunki tanssii: seuratanssien suosikkeja ovat chamamé, '
+                + 'vaneira, sertanejo ja paraguaylainen polkka, ja paraguaylaisten '
+                + 'siirtolaisten yhdistys on Wikivoyagen mukaan järjestänyt '
+                + 'sunnuntaisin lounaan ja tanssit elävän musiikin tahdissa. Moni '
+                + 'pukeutuu niihin saappaisiin, leveään vyöhön ja hattuun. '
+                + 'Tammi–helmikuussa pidetään vuodesta 2004 järjestetty '
+                + 'elokuvajuhla, joka keskittyy itsenäiseen elokuvaan.',
+              kuva: {
+                tiedosto: 'Bioparque Pantanal 36.jpg',
+                lyhyt: 'Punaiset kaaret kiertävät Bioparque Pantanalin kaarevaa akvaariorakennusta.',
+                selite: 'Joulukuussa 2024 kuvatun akvaarion pitkänomaista, harmaata runkoa '
+                  + 'kiertävät punaiset kaaret, ja sisäänkäynnin yllä lukee Bioparque '
+                  + 'Pantanal. Laajalla betoniaukiolla kävijät kuvaavat toisiaan.',
+                lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Bonito ja Pantanal',
+              teksti: 'Bonito on noin 300 kilometrin päässä Campo Grandesta. '
+                + 'Pikkukaupunki itse on vaatimaton, mutta sen ympärillä virtaavat '
+                + 'Brasilian kuuluisimmat kirkasvetiset joet: vedessä runsaana oleva '
+                + 'kalsiumkarbonaatti tarttuu leijuviin hiukkasiin ja painaa ne '
+                + 'pohjaan, joten vesi on lasinkirkasta. Suosituin tapa kokea joet '
+                + 'on flutuação, jossa ajelehditaan virran mukana snorklaten '
+                + 'kalaparvien yllä, esimerkiksi Rio da Pratalla tai Sucuri-joella. '
+                + 'Gruta do Lago Azul on luola, jonka pohjalla on kirkkaansininen '
+                + 'järvi. Paikallinen alkuperäisasukas löysi sen 1924, ja se on '
+                + 'ollut suojeltu vuodesta 1978. Abismo Anhumasiin laskeudutaan '
+                + 'köysillä 72 metriä maanalaisen järven rantaan, ja naapurikunta '
+                + 'Jardimissa Buraco das Ararasin satoja metrejä leveässä vajoamassa '
+                + 'pesii kymmeniä pareja punavihreitä aroja. Lähes kaikki kohteet '
+                + 'ovat yksityismailla, niiden päivittäiset kävijämäärät on rajattu, '
+                + 'ja liput myydään vain valtuutettujen matkatoimistojen kautta. '
+                + 'Kannattaa aina kysyä, sisältyykö kuljetus hintaan. Pantanaliin '
+                + 'mennään yleensä karjatiloille eli fazendoille, jotka majoittavat '
+                + 'vieraita ja järjestävät vene-, maastoauto- ja ratsastusretkiä. '
+                + 'Eteläisen Pantanalin majapaikkoja on Mirandan, Aquidauanan ja '
+                + 'Passo do Lontran seuduilla. Wikivoyagen mukaan majapaikkojen '
+                + 'retkipaketit alkoivat marraskuussa 2025 noin sadasta dollarista '
+                + 'hengeltä vuorokaudessa, tavallisesti vähintään neljän päivän '
+                + 'varauksella. Kalastamiseen tarvitaan lupa.',
+              kuva: {
+                tiedosto: 'Flavioandre Rio da Prata Jardim MS (41505787072).jpg',
+                lyhyt: 'Kalaparvi ui Rio da Pratan kirkkaassa vedessä aivan pinnan alla.',
+                selite: 'Veden alta kuvattuna hopeanhohtoiset, mustajuovaiset ja '
+                  + 'oranssieväiset kalat uivat pinnan tuntumassa, ja niiden alla '
+                  + 'erottuu vaalea pohja uppopuun oksineen. Kuva on otettu Jardimissa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Kello, kuivuus ja kausi',
+              teksti: 'Mato Grosso do Sul noudattaa Amazonin aikaa (UTC−4), joten kello '
+                + 'on tunnin jäljessä Riosta, São Paulosta ja Brasíliasta. Se '
+                + 'kannattaa muistaa, kun vertaa bussien ja lentojen aikatauluja. '
+                + 'Tammikuu on kuumin ja sateisin kuukausi. Kesäkuusta syyskuuhun '
+                + 'kestävä kuiva kausi tuo aurinkoiset päivät ja viileämmät yöt: '
+                + 'heinäkuussa keskimääräinen alin lämpötila on noin 14 astetta, ja '
+                + 'kylmimpinä öinä lämpötila voi laskea lähelle nollaa. Kuivalla '
+                + 'kaudella ilman suhteellinen kosteus laskee helposti alle 30 '
+                + 'prosentin, jolloin kannattaa juoda tavallista enemmän ja välttää '
+                + 'rasitusta keskipäivän auringossa. Aamuisin ja iltaisin voi '
+                + 'kävellä Parque das Nações Indígenasin neljän kilometrin lenkin '
+                + 'järven ympäri, sillä puisto on auki joka päivä kuudesta '
+                + 'yhdeksään. Elo- ja syyskuussa keltaisena kukkivat ipê-puut '
+                + 'värittävät kaupunkia. Bonitossa vuodenaika ratkaisee paljon: '
+                + 'toukokuusta elokuuhun joet ovat kirkkaimmillaan, kun taas '
+                + 'joulu–maaliskuun sateet samentavat veden mutta antavat '
+                + 'vesiputouksille voimaa. Brasilian lomakaudet eli joulu–tammikuu, '
+                + 'karnevaali, pääsiäisviikko ja heinäkuu täyttävät majapaikat, '
+                + 'joten ne kannattaa varata ajoissa. Pantanaliin lähtevälle '
+                + 'suositellaan keltakuumerokotusta, ja se on otettava noin kymmenen '
+                + 'päivää ennen matkaa, jotta se ehtii tehota. Sadekaudella '
+                + 'hyttysiltä kannattaa suojautua denguen takia. Sunnuntaisin lähes '
+                + 'kaikki kaupat ja kahvilat ovat kiinni. Kieli on portugali. '
+                + 'Kouluissa opetetaan englantia ja espanjaa, mutta Bonitossa kaikki '
+                + 'oppaat eivät puhu kumpaakaan, joten opastetun retken kieli '
+                + 'kannattaa varmistaa etukäteen.',
+              kuva: {
+                tiedosto: 'Parque das Nações Indígenas - visão aérea.jpg',
+                lyhyt: 'Parque das Nações Indígenasin järvi ja valaistut kävelytiet yöllä ylhäältä.',
+                selite: 'Marraskuussa 2013 korkealta kuvatussa yönäkymässä puiston järvi '
+                  + 'heijastaa lamppujen valoa, ja sen ympärillä kiertävät valaistut '
+                  + 'kävelytiet. Taustalla levittäytyvät kaupungin valot ja muutama '
+                  + 'tornitalo.',
+                lahde: 'Giovanni Gabas Coelho, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
