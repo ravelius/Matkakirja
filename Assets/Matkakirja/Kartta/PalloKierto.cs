@@ -371,12 +371,10 @@ namespace Matkakirja
         bool eleUilla;
 
         /// <summary>
-        /// Koko näytön peittokysely (Pelikoodari: WKWebView-lehti auki). Kun tosi, pallo
-        /// piirretään harvemmin (<see cref="PeitettyVali"/>) eikä kehysmittari laske kehyksiä
-        /// lepoon: lehden sivulataus ja asettelu ajavat samassa pääsäikeessä kuin Unity.
+        /// Koko näytön peittokysely (Pelikoodari, SyoteLukko). Kun tosi, Ruudunpaivitys sammuttaa pallon kameran
+        /// (lämpöerä 25.9.2026), eikä kehysmittari laske kehyksiä lepoon.
         /// </summary>
         public Func<bool> NakymaPeitetty;
-        public static int PeitettyVali = 4;
 
         /// <summary>
         /// Kaukoleikkauksen alaraja metreinä (0 = pelkkä pallo). Linssit, jotka piirtävät
@@ -392,7 +390,8 @@ namespace Matkakirja
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA pallo: peittokysely kaatui: " + e.Message); }
             if (p == Peitetty) return;
             Peitetty = p;
-            UnityEngine.Rendering.OnDemandRendering.renderFrameInterval = p ? PeitettyVali : 1;
+            // Piirtotahti ja pallon kamera peitossa: Ruudunpaivitys (lämpöerä 25.9.; ennen renderFrameInterval 4, joka
+            // hidasti myös UI:n, löydös 101).
         }
 
         /// <summary>Kameratila muuttui tässä kehyksessä (pituus, leveys, korkeus tai kallistus).</summary>

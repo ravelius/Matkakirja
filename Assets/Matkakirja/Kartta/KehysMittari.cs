@@ -29,13 +29,27 @@ namespace Matkakirja
 
         void Awake()
         {
+            // Tavoitetaajuus: Ruudunpaivitys (lämpöerä 25.9.2026) — täysi näytön taajuus liikkeessä, levossa 30 fps.
             var taajuus = Screen.currentResolution.refreshRateRatio.value;
-            Application.targetFrameRate = taajuus > 1 ? (int)System.Math.Round(taajuus) : 60;
-            tavoite = 1000f / Application.targetFrameRate;
-            polku = Path.Combine(Application.persistentDataPath, "kehysajat.jsonl");
-            File.WriteAllText(polku, "");
+            tavoite = 1000f / (taajuus > 1 ? (float)System.Math.Round(taajuus) : 60f);
+            // Tiedostokirjaus vain kehittäjätilassa (Raamattu LÄMPÖ JA VIRRANKULUTUS kohta 3); loki aina.
+            if (Kehittajatila())
+            {
+                polku = Path.Combine(Application.persistentDataPath, "kehysajat.jsonl");
+                File.WriteAllText(polku, "");
+            }
             alku = Time.realtimeSinceStartup;
-            Debug.Log($"MATKAKIRJA kehysmittari: tavoite {Application.targetFrameRate} Hz, {polku}");
+            Debug.Log($"MATKAKIRJA kehysmittari: tavoite {1000f / tavoite:0} Hz (liikkeessä), tiedosto {polku ?? "ei (ei kehittäjätilaa)"}");
+        }
+
+        /// <summary>Sama ehto kuin Natiivi.Asetukset.Kehittaja (Assembly-CSharp; Kartta ei näe sitä).</summary>
+        static bool Kehittajatila()
+        {
+#if MATKAKIRJA_APPSTORE
+            return false;
+#else
+            return Debug.isDebugBuild || PlayerPrefs.GetString("matkakirja-kehittaja", "") == "1";
+#endif
         }
 
         void Update()
@@ -55,7 +69,7 @@ namespace Matkakirja
             string rivi = "{" +
                 $"\"t\":{F(Time.realtimeSinceStartup)},\"tavoiteMs\":{F(tavoite)}," +
                 $"\"liike\":{Tilasto(liike)},\"lepo\":{Tilasto(lepo)},\"peitto\":{Tilasto(peitto)}" + "}";
-            File.AppendAllText(polku, rivi + "\n");
+            if (polku != null) File.AppendAllText(polku, rivi + "\n");
             Debug.Log("MATKAKIRJA kehysajat " + rivi);
             liike.Clear();
             lepo.Clear();

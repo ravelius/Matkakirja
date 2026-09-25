@@ -508,6 +508,8 @@ namespace Matkakirja.Natiivi
             Tila = SilmukanTila.Lataa;
             tilarivi.Aseta("Haetaan matkakirjaa…");
             VerkkoOdotus.PeliVaihe = VerkkoVaihe;
+            // Ruudunpaivitys: linssin ollessa auki täysi taajuus (aikajanat, radion mittarit, kamera-ajot; lämpöerä 25.9.).
+            Ruudunpaivitys.Aktiivinen.Add(() => LinssiOhjain.Rekisteri?.Auki != null);
             AloituslentoPaattyi += _ => verkkoSaapui = Time.realtimeSinceStartup;
             MatkaPerilla += k => { if (k != null) verkkoSaapui = Time.realtimeSinceStartup; };
             // Verkko-odotus: pelin sisältö (kaupungit, reitit) ennen aloitusta; aloitusnäkymä odottaa tätä.
