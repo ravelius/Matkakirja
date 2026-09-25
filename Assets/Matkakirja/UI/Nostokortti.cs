@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
             kortti.RegisterCallback<PointerCaptureOutEvent>(_ => { raahaa = false; eleId = -1; kortti.RemoveFromClassList("mk-nosto--raahauksessa"); });
             kortti.RegisterCallback<ClickEvent>(NapautusKorttiin);
 
-            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot));
+            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
         }
 
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento) napautuspisteen viereen.</summary>
