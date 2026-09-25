@@ -1,3 +1,9 @@
+## 2026-09-25 14:29 UTC — Luxemburg, Madrid, New York ja Nikosia: PR #3215 valmis junaan
+
+Kymmenen seuraavaa leikattua 1024 × 1024 RGBA WebP -kohdetta on avoimessa PR:ssä #3215: Luxemburg 3, Madrid 5, New York 1 ja Nikosia 1. Kuvat on katsottu silmin; täyttö 0,305–0,586, reuna 0, leikkaustesti ja mittaus läpäisivät. Poikkeuslista ja manifesti sisältyvät PR:ään.
+
+**PR #3215 valmis junaan:** https://github.com/ravelius/Matkakirja/pull/3215. PR on avoin, ei vielä mergeätty tai julkaistu. Tilauksen 64 kuvasta 37 on toimitettu PR:iin, 27 jatkuu.
+
 ## 2026-09-25 14:20 UTC — Lontoo: PR #3213 valmis junaan
 
 Kaikki kymmenen Lontoon leikattua kohdetta on avoimessa PR:ssä #3213. Ensimmäinen Globe-versio ylitti niukasti täyttörajan (0,604); tein sen kokonaan uudestaan, lopullinen täyttö 0,186. Muutkin lopulliset kuvat ovat alle 0,6:n täyttörajan, reunat 0. Jokainen on katsottu, leikkaustesti ja mittaus läpäisivät. Poikkeuslista ja manifesti sisältyvät PR:ään.
