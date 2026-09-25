@@ -101,7 +101,8 @@ namespace Matkakirja.Natiivi
         static float? kelluvaVaraus;
 
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
-        const float SaariRivi = 36f, SaariReuna = 14f, SaariVali = 6f;
+        /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ hieman sisemmäs reunoista (14 → 20 pt).</summary>
+        const float SaariRivi = 36f, SaariReuna = 20f, SaariVali = 6f;
 
         /// <summary>
         /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
@@ -209,7 +210,7 @@ namespace Matkakirja.Natiivi
             {
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
                 if (Auki) Sulje(); else Avaa();
-            }, turva, Ikonit.Valikko);
+            }, turva, KolmeVakasta);
             vakasnappi.tooltip = "Näytä yläpalkki";
 
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
@@ -219,6 +220,9 @@ namespace Matkakirja.Natiivi
             Asettele();
         }
 
+        /// <summary>Löydös 68: piilotetun palkin nappi kolmena allekkaisena väkäsenä (⌄), ei ☰.</summary>
+        const string KolmeVakasta = "<path d=\"M7 5.5l5 3 5-3\"/><path d=\"M7 10.5l5 3 5-3\"/><path d=\"M7 15.5l5 3 5-3\"/>";
+
         // --- iPhonen automaattinen piilotus (kartan veto piilottaa, napautus tuo takaisin) ---------------------
         Vector2 vetoAlku;
         float vetoAika = -1f;
@@ -226,7 +230,10 @@ namespace Matkakirja.Natiivi
 
         void TarkistaVeto()
         {
-            if (!Puhelin || piilossa || !nakyy) { if (VetoPiilossa && (!Puhelin || piilossa)) NaytaVedonJalkeen(); return; }
+            // Löydös 73 (omistaja 25.9. klo 05.4x): iPhonen pystyasennossa yläpalkki on aina näkyvissä; automaattinen
+            // piilotus ja väkäsnappi vain vaakamuodossa (Piilossa).
+            bool pysty = Screen.height > Screen.width;
+            if (!Puhelin || piilossa || !nakyy || pysty) { if (VetoPiilossa) NaytaVedonJalkeen(); return; }
             var o = Pointer.current;
             if (o == null) return;
             var r = o.position.ReadValue();
@@ -291,6 +298,9 @@ namespace Matkakirja.Natiivi
                 palkki.EnableInClassList("mk-ylapalkki--matala", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
                 pilleri.style.fontSize = StyleKeyword.Null;
+                foreach (var e in new VisualElement[] { pilleri, Valikko }) e.style.height = e.style.minHeight = StyleKeyword.Null;
+                pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                    pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = StyleKeyword.Null;
                 var t = Tayte;
                 palkki.style.paddingTop = r.y + t.x;
                 palkki.style.paddingBottom = t.x;
@@ -299,6 +309,11 @@ namespace Matkakirja.Natiivi
                 palkki.style.height = r.y + Korkeus;
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
+            // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
+            vakasnappi.style.top = Mathf.Round((Korkeus - 36f) / 2f);
+            vakasnappi.style.right = Tayte.y;
+            vakasnappi.style.width = 44f;
+            vakasnappi.style.height = vakasnappi.style.minHeight = 36f;
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
@@ -318,6 +333,17 @@ namespace Matkakirja.Natiivi
             float rivi = (matala ? MatalaRivi : SaariRivi) * yksikko;
             var ylakulma = P(saari.xMin, saari.yMin);
             var alakulma = P(saari.xMax, saari.yMax);
+            // Löydös 73: matalalla palkilla pilleri ja ☰ Dynamic Islandin korkuisina ja sen korkeudella.
+            float saarenKorkeus = saari.height > 0 ? alakulma.y - ylakulma.y : 0f;
+            if (matala && saarenKorkeus > 20f * yksikko) rivi = saarenKorkeus;
+            float napinKorkeus = matala ? rivi : float.NaN;
+            foreach (var e in new VisualElement[] { pilleri, Valikko })
+            {
+                e.style.height = float.IsNaN(napinKorkeus) ? StyleKeyword.Null : new StyleLength(napinKorkeus);
+                e.style.minHeight = float.IsNaN(napinKorkeus) ? StyleKeyword.Null : new StyleLength(napinKorkeus);
+            }
+            if (matala) pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = rivi / 2f;
             float keski = saari.height > 0 ? (ylakulma.y + alakulma.y) / 2f : 0f;
             float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
             palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
