@@ -8034,4 +8034,394 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Tarijan laakson viinitarhat ovat lähes 2 000 metrissä maailman korkeimpien joukossa, ja rypäleistä tislataan myös singani-viinaa.',
     },
   },
+  /*
+   * PER (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PER:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: "Lima" = Liman alue (Natural
+   * Earthin PER-591, Department, metropolialueen ulkopuoli), "Lima
+   * Province" = Liman metropolialue (PER-587, Captial District). Vain
+   * `lyhyt`. Vältetty maastokohteet-per.js:n aiheet (Huascarán,
+   * Apurímac-joki, Ballestas/Paracas, Nazcan viivat, Chan Chan, Caral,
+   * Kuélap, Sipán, Chavín de Huántar, Arequipan kaupunki, Colcan kanjoni)
+   * sekä pelikaupunkien Titicaca (Uros) ja Iquitos ydinaiheet. Lähteet
+   * (en-/es-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Amazonas      — Gocta Cataracts (771 m, retkikunta 2002, julki 2006)
+   *   Apurímac      — Sayhuite (Curahuasi, yli 200 hahmoa)
+   *   Arequipa      — Toro Muerto (noin 2 600 kaiverrettua lohkaretta, wari)
+   *   Callao        — Jorge Chávez International Airport (terminaali 1.6.2025)
+   *   Huancavelica  — Huancayo–Huancavelica Railway (128,7 km, 5–7 h)
+   *   Junín         — Junin grebe (endeeminen Junínjärvelle, EN)
+   *   La Libertad   — Huanchaco (World Surfing Reserve 2012)
+   *   Lambayeque    — Túcume (26 pyramidia, "Purgatorio")
+   *   Lima Province — Huaca Pucllana (200–700 jaa.)
+   *   Loreto        — Pacaya-Samiria (SERNANP; 80 % tulvii sadekaudella)
+   *   Madre de Dios — Tambopata National Reserve (Chunchon savitörmä)
+   *   Moquegua      — Cerro Baúl (noin 2 000 jalkaa ympäristön yläpuolella)
+   *   Pasco         — Cerro de Pasco (4 330 m)
+   *   Puno          — Candelaria (Unesco 2014, yli 40 000 tanssijaa)
+   *   Tacna         — Tacna (tullivapaa vyöhyke, ostajat Aricasta/Iquiquesta)
+   *   Ucayali       — kené (Patrimonio Cultural de la Nación, huhtikuu 2008)
+   *   Muut          — yleistietoa, tarkistettu vastaavista
+   *                   en-Wikipedia-artikkeleista.
+   */
+  PER: {
+    Amazonas: {
+      lyhyt: 'Goctan vesiputous syöksyy Bongarán vuorilta kahtena pudotuksena yhteensä 771 metriä, ja laajempi maailma kuuli siitä vasta 2000-luvulla.',
+    },
+    'Áncash': {
+      lyhyt: 'Huarazista kävellään päivässä Laguna 69:lle, turkoosille vuoristojärvelle noin 4 600 metrin korkeudessa, jota Chacrarajun sulamisvesi ruokkii.',
+    },
+    'Apurímac': {
+      lyhyt: 'Curahuasin lähellä Saywitessa on inkojen veistämä lohkare, jonka pintaan on kaiverrettu yli 200 hahmoa, pengerryksiä ja vesikanavia.',
+    },
+    Arequipa: {
+      lyhyt: 'Majesjoen laakson laidalla Toro Muertossa on tuhansia vulkaanisia lohkareita, joihin hakattiin kalliopiirroksia yli tuhat vuotta sitten.',
+    },
+    Ayacucho: {
+      lyhyt: 'Ayacuchon käsityöläiset rakentavat retabloja, puisia lippaita, joiden ovien takana kokonainen kyläjuhla on kuvattu pienin maalatuin hahmoin.',
+    },
+    Cajamarca: {
+      lyhyt: 'Cajamarcan laaksossa Baños del Incan kuumiin lähteisiin tullaan kylpemään, ja höyryävät altaat ovat aivan kaupungin kupeessa.',
+    },
+    Callao: {
+      lyhyt: 'Perun vilkkain lentoasema Jorge Chávez on Callaossa, ja sen uusi matkustajaterminaali avattiin kesäkuussa 2025.',
+    },
+    Cusco: {
+      lyhyt: 'Joka kesäkuun 24. päivä Sacsayhuamánin muurien edustalla esitetään Inti Raymi, inkojen auringonjuhla, tuhansien katsojien edessä.',
+    },
+    Huancavelica: {
+      lyhyt: 'Huancayosta Huancavelicaan ajaa Tren Macho -juna, jonka 129 kilometrin matka vuoristolaaksoissa kestää viidestä seitsemään tuntia.',
+    },
+    'Huánuco': {
+      lyhyt: 'Tingo Maríasta näkyy Bella Durmiente, vuorijono, jonka ääriviiva muistuttaa selällään nukkuvaa naista.',
+    },
+    Ica: {
+      lyhyt: 'Ican kaupungin laidalla Huacachinan keidas on pieni laguuni korkeiden hiekkadyynien keskellä, ja dyyneillä ajetaan hiekkavaunuilla.',
+    },
+    'Junín': {
+      lyhyt: 'Junínjärvellä elää lentokyvytön junínuikku, uhanalainen lintu, jota ei tavata missään muualla maailmassa.',
+    },
+    'La Libertad': {
+      lyhyt: 'Huanchacon kalastajat meloivat yhä caballitos de totora -ruokoveneillään aaltojen yli, ja kylä on ollut surffausreservaatti vuodesta 2012.',
+    },
+    Lambayeque: {
+      lyhyt: 'Túcumen tasangolla kohoaa 26 suurta savitiilipyramidia ja kumparetta, ja paikalliset kutsuvat aluetta nimellä Purgatorio.',
+    },
+    Lima: {
+      lyhyt: 'Cañetejoen laaksossa Lunahuanássa lasketaan koskia kumiveneillä, ja rinteillä viljellään viinirypäleitä piscoa varten.',
+    },
+    'Lima Province': {
+      lyhyt: 'Miraflorisin kerrostalojen keskellä kohoaa Huaca Pucllana, limakulttuurin savitiilipyramidi noin vuosilta 200–700.',
+    },
+    Loreto: {
+      lyhyt: 'Pacaya-Samirian suojelualueella metsä on sadekaudella suurimmaksi osaksi veden alla, ja sen joissa uivat vaaleanpunaiset jokidelfiinit.',
+    },
+    'Madre de Dios': {
+      lyhyt: 'Tambopatan suojelualueen Chunchon savitörmälle kokoontuu aamuisin arapapukaijojen parvia syömään kivennäispitoista savea.',
+    },
+    Moquegua: {
+      lyhyt: 'Moqueguan laaksossa kohoaa pöytävuori Cerro Baúl, jonka laelle wari-kulttuuri rakensi asutuksen noin 600 metriä ympäristöään korkeammalle.',
+    },
+    Pasco: {
+      lyhyt: 'Cerro de Pasco on noin 4 330 metrin korkeudessa yksi maailman korkeimmista kaupungeista, ja se elää kaivoksistaan.',
+    },
+    Piura: {
+      lyhyt: 'Máncoran kalastajakylästä on tullut Perun pohjoisrannikon surffikohde, jonka lämpimillä rannoilla surffataan ympäri vuoden.',
+    },
+    Puno: {
+      lyhyt: 'Punon Candelarian juhlassa helmikuussa tanssii yli 40 000 puvustettua tanssijaa, ja juhla on Unescon aineetonta kulttuuriperintöä.',
+    },
+    'San Martín': {
+      lyhyt: 'Moyobambaa kutsutaan orkideoiden kaupungiksi, sillä sen ympäristön kosteissa vuoristometsissä kasvaa lukuisia orkidealajeja.',
+    },
+    Tacna: {
+      lyhyt: 'Tacna on tullivapaa kauppakaupunki, jonne tullaan rajan yli ostoksille Chilen Aricasta ja Iquiquesta.',
+    },
+    Tumbes: {
+      lyhyt: 'Tumbesin rannikolla on Perun laajin mangrovemetsä, ja sen kanavissa pyydetään mustia simpukoita, conchas negras.',
+    },
+    Ucayali: {
+      lyhyt: 'Ucayalin shipibo-konibo-naiset kirjovat ja maalaavat kankaisiin kené-kuvioita, jotka Peru julisti kansalliseksi kulttuuriperinnöksi 2008.',
+    },
+  },
+  /*
+   * VEN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.VEN:n tunnuksia TÄSMÄLLEEN: "Vargas" = La Guairan
+   * osavaltio (nimi vaihtui 2019), "VEN+99?" = Natural Earthin nimetön
+   * saari (iso_3166_2 VE-X01~, 15,7° N 63,6° W) = Isla de Aves;
+   * "Dependencias Federales" kattaa muut liittovaltion saaret. Vain
+   * `lyhyt`, neutraali sävy (ei politiikkaa). Vältetty
+   * maastokohteet-ven.js:n aiheet (Roraima, Maracaibojärvi ja Catatumbo,
+   * Los Roques, Salto Ángel, Coro, Ciudad Bolívar, Guácharon luola,
+   * Méridan köysirata, Colonia Tovar, Morrocoy, Ciudad Guayana). Lähteet
+   * (en-/es-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Amazonas       — Casiquiare canal (bifurkaatio Orinoco–Rio Negro)
+   *   Anzoátegui     — Mochima National Park (32 saarta, Chimana Grande)
+   *   Aragua         — Henri Pittier National Park (13.2.1937, vanhin)
+   *   Barinas        — Barinas (state): "capital of the rivers"
+   *   Bolívar        — Unesco ICH: Carnival of El Callao (2016)
+   *   Carabobo       — Puerto Cabello (maan suurin satama)
+   *   Cojedes        — Unesco ICH: Venezuela's Dancing Devils (2012,
+   *                    Tinaquillo yksi 11 veljeskunnasta)
+   *   Dependencias   — La Tortuga Island (156,6 km², asumaton)
+   *   Falcón         — Paraguaná Refinery Complex (läntisen pallonpuoliskon
+   *                    suurin)
+   *   Lara           — Divina Pastora (14.1., Santa Rosa–Barquisimeto)
+   *   Mérida         — Humboldtin jäätikkö jääkentäksi 5/2024 (BBC, UPI)
+   *   Portuguesa     — Basílica Santuario Nacional de Coromoto (1996)
+   *   Distrito Cap.  — Ciudad Universitaria de Caracas (Unesco 2000)
+   *   Trujillo       — Monumento a la Virgen de la Paz (46,72 m)
+   *   VEN+99?        — Isla de Aves (375 m, tukikohta paaluilla 1978)
+   *   Yaracuy        — Cerro María Lionza (Sorte), 12.10.
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  VEN: {
+    Amazonas: {
+      lyhyt: 'Casiquiare-joki haarautuu Orinocosta ja virtaa Rio Negroon, joten se yhdistää luonnostaan Orinocon ja Amazonin vesistöt.',
+    },
+    'Anzoátegui': {
+      lyhyt: 'Puerto La Cruzin edustalta alkaa Mochiman kansallispuisto, jonka 32 saaresta suurin on Chimana Grande.',
+    },
+    Apure: {
+      lyhyt: 'Apuren tulvasavanneilla laiduntavat kapybarat, maailman suurimmat jyrsijät, joita venezuelalaiset kutsuvat chigüireiksi.',
+    },
+    Aragua: {
+      lyhyt: 'Henri Pittierin kansallispuisto on Venezuelan vanhin, perustettu 1937, ja sen Portachuelon solan kautta muuttaa kymmeniä lintulajeja.',
+    },
+    Barinas: {
+      lyhyt: 'Barinasia kutsutaan Venezuelan jokien pääkaupungiksi, sillä Andeilta laskevat joet halkovat osavaltion tasankoja.',
+    },
+    'Bolívar': {
+      lyhyt: 'El Callaon kaivoskaupungin karnevaalissa soi calypso, ja juhla merkittiin Unescon aineettoman kulttuuriperinnön luetteloon 2016.',
+    },
+    Carabobo: {
+      lyhyt: 'Puerto Cabello on Venezuelan suurin ja vilkkain satama Karibianmeren rannalla.',
+    },
+    Cojedes: {
+      lyhyt: 'Tinaquillon naamioidut paholaiset tanssivat Corpus Christinä, ja perinne kuuluu Unescon 2012 tunnustamaan Venezuelan paholaistanssiin.',
+    },
+    'Delta Amacuro': {
+      lyhyt: 'Orinocon suistossa asuvat warao-intiaanit, "kanoottien kansa", jotka liikkuvat suiston lukemattomissa haaroissa kanooteilla.',
+    },
+    'Dependencias Federales': {
+      lyhyt: 'La Tortuga on liittovaltion saarista suurin, noin 157 neliökilometriä, mutta asumaton: sen rannoilla käyvät vain kalastajat ja veneilijät.',
+    },
+    'Falcón': {
+      lyhyt: 'Paraguanán niemimaalla ovat Amuayn ja Cardónin öljynjalostamot, osa läntisen pallonpuoliskon suurinta jalostamokompleksia.',
+    },
+    'Guárico': {
+      lyhyt: 'San Juan de los Morrosin yllä kohoavat jyrkät Los Morros -kalliot, ja kaupungissa on rikkipitoisia kuumia lähteitä.',
+    },
+    Vargas: {
+      lyhyt: 'Venezuelan päälentoasema on Maiquetíassa La Guairan rannikolla, noin 20 kilometrin päässä Caracasista vuorten takana.',
+    },
+    Lara: {
+      lyhyt: 'Joka tammikuun 14. päivä Divina Pastoran kuvaa kannetaan Santa Rosasta Barquisimetoon kulkueessa, joka on Venezuelan suurin.',
+    },
+    'Mérida': {
+      lyhyt: 'Pico Humboldtin viimeinen jäätikkö kutistui 2024 jääkentäksi, ja Venezuelasta tuli ensimmäinen maa nykyaikana, joka on menettänyt jäätikkönsä.',
+    },
+    Miranda: {
+      lyhyt: 'Barloventon rannikkoseudulla kasvatetaan kaakaota, ja kesäkuun San Juan -juhlissa soivat afrovenezuelalaiset rummut.',
+    },
+    Monagas: {
+      lyhyt: 'Monagasin Morichal Largo -joen rantoja reunustavat tiheät morichepalmujen galleriametsät.',
+    },
+    'Nueva Esparta': {
+      lyhyt: 'Margaritan saaren La Restingan laguunissa ajetaan pienillä moottoriveneillä mangrovekanavien läpi hiekkasärkän rannalle.',
+    },
+    Portuguesa: {
+      lyhyt: 'Guanaren lähellä on Coromoton kansallinen pyhäkkö, Venezuelan suojeluspyhimyksen basilika, jonka avajaismessua johti paavi 1996.',
+    },
+    'Distrito Capital': {
+      lyhyt: 'Caracasin yliopistokaupunki on Unescon maailmanperintökohde, ja sen Aula Magnan katossa leijuvat Alexander Calderin akustiset pilvet.',
+    },
+    Sucre: {
+      lyhyt: 'Arayan niemimaalla suolaa kerätään yhä laguuneista, ja rannalla seisovat 1600-luvulla rakennetun Santiagon linnoituksen rauniot.',
+    },
+    'Táchira': {
+      lyhyt: 'San Cristóbalissa vietetään tammikuussa San Sebastiánin messuja, joiden ohjelmassa on maatalousnäyttelyitä ja konsertteja.',
+    },
+    Trujillo: {
+      lyhyt: 'Trujillon lähellä vuorella seisoo 46,7-metrinen Virgen de la Paz -patsas, jonka silmien korkeudelta avautuu näköala laaksoon.',
+    },
+    'VEN+99?': {
+      lyhyt: 'Isla de Aves on vain noin 375 metriä pitkä hiekkasärkkä Karibianmerellä, ja sen kupeeseen on rakennettu paaluille venezuelalainen tukikohta.',
+    },
+    Yaracuy: {
+      lyhyt: 'Chivacoan lähellä Sorten vuorella kokoontuvat María Lionzan palvojat, ja lokakuun 12. päivänä vuori täyttyy alttareista ja kynttilöistä.',
+    },
+    Zulia: {
+      lyhyt: 'Zulian gaita on joulun ajan kansanmusiikkia, jossa soivat furro-rumpu, cuatro-kitara ja maracas.',
+    },
+  },
+  /*
+   * URY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.URY:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Vältetty maastokohteet-ury.js:n aiheet (Cerro Catedral,
+   * Merínin laguuni, Colonia del Sacramento, Punta del Este, Cabo
+   * Polonio, Salto Granden pato, Santa Teresan linnoitus, Quebrada de los
+   * Cuervos, Tacuarembón kaupunki ja Patria Gaucha, Riveran
+   * kaksoiskaupunki). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Artigas        — Los Catalanes (IUGS:n 100 geologista kohdetta 2023)
+   *   Canelones      — noin 60 % Uruguayn viinistä (Wine-Searcher, Guru'Guay)
+   *   Cerro Largo    — Puente Barón de Mauá (1930)
+   *   Durazno        — Festival Nacional de Folklore (tammikuu)
+   *   Flores         — Grutas del Palacio (Unesco-geopuisto 2013)
+   *   Paysandú       — Semana de la Cerveza (vuodesta 1966)
+   *   Río Negro      — Fray Bentos Industrial Landscape (Unesco 2015)
+   *   Rocha          — Monte de Ombúes (noin 3 000 puuta)
+   *   Salto          — Termas del Daymán (2 000 m, 46 °C)
+   *   San José       — Teatro Macció (5.6.1912)
+   *   Soriano        — Villa Soriano (1624, vuosiluku kiistelty -> "1600-luku")
+   *   Tacuarembó     — Museo Carlos Gardel (Valle Edén)
+   *   Treinta y Tres — lähes neljännes Uruguayn riisistä (es-Wikipedia)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  URY: {
+    Artigas: {
+      lyhyt: 'Artigasin Los Catalanesin ametistiesiintymä tunnetaan jättigeodeistaan, joita louhitaan avolouhoksista ja hiotaan pienissä pajoissa.',
+    },
+    Canelones: {
+      lyhyt: 'Canelonesissa tuotetaan noin 60 prosenttia Uruguayn viinistä, ja sen viinitiloille on Montevideosta vain lyhyt ajomatka.',
+    },
+    'Cerro Largo': {
+      lyhyt: 'Río Brancon ja brasilialaisen Jaguarãon välillä kulkee vuonna 1930 avattu Mauán silta, jonka kaaret ylittävät Yaguarón-joen.',
+    },
+    Colonia: {
+      lyhyt: 'Nueva Helvecian perustivat sveitsiläiset siirtolaiset 1862, ja seutu on yhä yksi Uruguayn tärkeimmistä juustoalueista.',
+    },
+    Durazno: {
+      lyhyt: 'Duraznossa pidetään joka tammikuu Yí-joen rannalla kansallinen folkloremusiikin festivaali, yksi Uruguayn suurimmista.',
+    },
+    Flores: {
+      lyhyt: 'Grutas del Palacion luolien kattoa kannattelevat luonnon muovaamat pylväät, ja alue on Uruguayn ensimmäinen Unescon geopuisto.',
+    },
+    Florida: {
+      lyhyt: 'Floridan kaupungin laidalla on Piedra Alta, jonka luona julistettiin 25. elokuuta 1825 irtautuminen Brasilian keisarikunnasta.',
+    },
+    Lavalleja: {
+      lyhyt: 'Minasin lähteistä pullotetaan Salus-kivennäisvettä, ja merkin tunnuksena on legendan puuma, joka joi lähteestä.',
+    },
+    Maldonado: {
+      lyhyt: 'Punta Ballenan kallioilla seisoo Carlos Páez Vilarón valkoinen Casapueblo, jossa auringonlaskua saattelee joka ilta taiteilijan runo.',
+    },
+    Montevideo: {
+      lyhyt: 'Montevideon karnevaali kestää yli 40 päivää, ja sen murga-kuorot ja candombe-rummut soivat tammikuusta maaliskuuhun.',
+    },
+    'Paysandú': {
+      lyhyt: 'Paysandússa vietetään pääsiäisviikolla Semana de la Cervezaa, olutjuhlaa, jota on järjestetty Uruguayjoen rannalla vuodesta 1966.',
+    },
+    'Río Negro': {
+      lyhyt: 'Fray Bentosin entinen lihatehdas, josta lähti lihauutetta ja säilykelihaa Eurooppaan, on Unescon maailmanperintökohde.',
+    },
+    Rivera: {
+      lyhyt: 'Valle del Lunarejon suojellussa laaksossa basalttirinteet, rotkot ja vesiputoukset rikkovat Pohjois-Uruguayn loivan ruohotasangon.',
+    },
+    Rocha: {
+      lyhyt: 'Castillosin laguunin rannalla kasvaa noin 3 000 ombú-puun metsä, jonne mennään veneellä Valizas-puroa pitkin.',
+    },
+    Salto: {
+      lyhyt: 'Daymánin kylpylässä Salton lähellä kuuma vesi kumpuaa Guaraní-akviferista kahden kilometrin syvyydestä.',
+    },
+    'San José': {
+      lyhyt: 'San José de Mayon Teatro Macció avattiin 1912, ja se on kaupungin arkkitehtonisesti merkittävin rakennus.',
+    },
+    Soriano: {
+      lyhyt: 'Villa Soriano Río Negron suulla on Uruguayn vanhin taajama, jonka fransiskaanit perustivat intiaanireduktioksi 1600-luvulla.',
+    },
+    'Tacuarembó': {
+      lyhyt: 'Valle Edénin vanhassa kauppapuodissa on museo, joka esittelee todisteita siitä, että tangolaulaja Carlos Gardel syntyi Tacuarembóssa.',
+    },
+    'Treinta y Tres': {
+      lyhyt: 'Treinta y Tresissa viljellään lähes neljännes Uruguayn riisistä, ja pellot saavat vetensä Olimar-joen valuma-alueelta.',
+    },
+  },
+  /*
+   * PRY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.PRY:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Vältetty maastokohteet-pry.js:n aiheet (Cerro Tres
+   * Kandú, Apa, Tebicuary, Trinidad ja Jesús, San Cosme y Damián, Cerro
+   * Corá, Ybycuí, Filadelfia, Yaguarón, Concepciónin kaupunki, Guairán
+   * putoukset). Lähteet (en-/es-Wikipedia, visitparaguay.travel ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Alto Paraná      — Saltos del Monday (40–45 m)
+   *   Amambay          — Ojo de Mar (Bella Vista Norte, ABC Color 2025)
+   *   Asunción         — Loma San Jerónimo (matkailukaupunginosa 2013)
+   *   Boquerón         — Museo Histórico del Fortín Boquerón
+   *   Caaguazú         — "Capital de la Madera"
+   *   Caazapá          — Parque Nacional Caazapá (16 000 ha)
+   *   Canindeyú        — Mbaracayú (64 406 ha, laki 112/91)
+   *   Central          — ñandutí (Itauguá)
+   *   Concepción       — arroyo Tagatiyá (San Alfredo)
+   *   Cordillera       — Caacupé (yli 1,5 milj. pyhiinvaeltajaa)
+   *   Guairá           — Colonia Independencia (1919, viinit)
+   *   Itapúa           — Encarnación (sambadromi 2012)
+   *   Misiones         — Yacyretá (pato noin 65 km)
+   *   Ñeembucú         — ruinas de Humaitá (San Carlos Borromeo)
+   *   Paraguarí        — Museo Histórico del Ferrocarril de Sapucai (1894)
+   *   Presidente Hayes — Laudo Hayes (12.11.1878)
+   *   San Pedro        — seesami (ABC Color 2026), pinta-ala 20 002 km²
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  PRY: {
+    'Alto Paraguay': {
+      lyhyt: 'Bahía Negra on Paraguayn pohjoisin satama, ja sen ympärillä levittäytyy Paraguayn osuus Pantanalin kosteikosta.',
+    },
+    'Alto Paraná': {
+      lyhyt: 'Mondayjoki syöksyy Ciudad del Esten lähellä noin 40 metriä alas Saltos del Mondayn putouksina juuri ennen Paranájokea.',
+    },
+    Amambay: {
+      lyhyt: 'Bella Vista Norten maaseudulla on Ojo de Mar, smaragdinvihreä kalkkikivijärvi, jonka syvyyttä ei tiedetä.',
+    },
+    'Asunción': {
+      lyhyt: 'Loma San Jerónimo julistettiin 2013 Asunciónin ensimmäiseksi matkailukaupunginosaksi, ja sen mosaiikkiportaat nousevat näköalapaikalle.',
+    },
+    'Boquerón': {
+      lyhyt: 'Fortín Boquerónissa voi kulkea Chacon sodan 1932 taistelun juoksuhaudoissa, ja paikalla on museo ja molempien armeijoiden hautausmaat.',
+    },
+    'Caaguazú': {
+      lyhyt: 'Caaguazúta kutsutaan puun pääkaupungiksi, sillä sen lukuisissa puusepänverstaissa tehdään huonekaluja ja puukäsitöitä.',
+    },
+    'Caazapá': {
+      lyhyt: 'Caazapán kansallispuisto suojelee noin 16 000 hehtaaria subtrooppista metsää, ja sen poluilla tarkkaillaan lintuja.',
+    },
+    'Canindeyú': {
+      lyhyt: 'Mbaracayún metsäsuojelualue suojelee 64 000 hehtaaria Atlantin sademetsää, ja se oli 1991 Paraguayn ensimmäinen yksityinen suojelualue.',
+    },
+    Central: {
+      lyhyt: 'Itauguán naiset ompelevat ñandutí-pitsiä, jonka ympyräkuviot muistuttavat hämähäkinseittiä – nimikin tarkoittaa guaraniksi seittiä.',
+    },
+    'Concepción': {
+      lyhyt: 'Tagatiyá-puron vesi on kalkkikivipohjan ansiosta niin kirkasta, että siinä snorklataan kalaparvien seassa.',
+    },
+    Cordillera: {
+      lyhyt: 'Caacupén basilikaan vaeltaa joulukuun 7. ja 8. päivänä yli miljoona pyhiinvaeltajaa Paraguayn suojeluspyhimyksen juhlaan.',
+    },
+    'Guairá': {
+      lyhyt: 'Colonia Independencian perustivat saksalaiset siirtolaiset 1919, ja kylä tunnetaan yhä pientuottajien viineistään.',
+    },
+    'Itapúa': {
+      lyhyt: 'Encarnaciónia kutsutaan Paraguayn karnevaalipääkaupungiksi, ja kulkueita varten sen rantakadun varteen valmistui oma sambadromi 2012.',
+    },
+    Misiones: {
+      lyhyt: 'Ayolasin kohdalla Paranájoen patoaa Yacyretán vesivoimala, jonka maapato on yli 60 kilometriä pitkä.',
+    },
+    'Ñeembucú': {
+      lyhyt: 'Humaitássa seisoo tykkitulessa tuhoutuneen San Carlos Borromeon kirkon tornin jäänne, Kolmoisliiton sodan muistomerkki.',
+    },
+    'Paraguarí': {
+      lyhyt: 'Sapucain vanhoissa rautatiekorjaamoissa, jotka englantilaiset rakensivat 1894, on nyt museo höyrykäyttöisine koneineen.',
+    },
+    'Presidente Hayes': {
+      lyhyt: 'Presidente Hayes on nimetty Yhdysvaltain presidentin mukaan, jonka välitystuomio 1878 antoi alueen Paraguaylle.',
+    },
+    'San Pedro': {
+      lyhyt: 'San Pedro on Itä-Paraguayn laajin departementti, ja sen pienviljelijöille seesami on tärkeä vientikasvi.',
+    },
+  },
 };
