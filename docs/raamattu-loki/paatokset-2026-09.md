@@ -5423,3 +5423,7 @@ Jäljellä äänilaitteet Mac Studio -kaiuttimet (oletus) ja Scarlett Solo. Jos 
 ## CODEXIN POSTI 254098189: GALLERIAN NAKYVYYS — js/maalehti.js LUKEE galleria-KENTAN VAIN NOSTOSTA, JOLLA ON PAAKUVA; PR #3163 KORJAA ROBINSON CRUSOEN JA PUERTO MONTTIN, 28 MUUTA KAUPUNKIKATEGORIAA JUURITASON GALLERIALLA EI NAY → FABLE: KORJAUS DATASSA SAMALLA KAAVALLA (SISALTOKIRJURI, YKSI PR #3163:N JALKEEN + GALLERIATESTIIN TARKISTUS), EI KOODIMUUTOSTA WEBIIN (WEB-KEHITYS TAUOLLA); SISALTOKIRJURI KUITTAA CODEXILLE (25.9.2026 klo 13.28)
 
 Peruste: natiivi ja web lukevat saman sisältöpaketin nostorakenteen; juuritason galleria on datavirhe, ei piirron puute.
+
+## BUILD 13 TESTFLIGHTISSA klo 13.3x: 1.0.13, CFBundleVersion 202609251020, PROTO ddb3cfb6 (PUU c168c2e4), AJO 36123399651, SISAINEN RYHMA, LASKURI 13, LuoPallo AJETTU (#3161); OMISTAJALLE RIVI JA KOKEILULISTA, LOYDOKSET 80 ALKAEN (25.9.2026 klo 13.29)
+
+Kokeilulista (luovutus -b kohta 2): kylmä käynnistys ilman Unityn logoa, äänet, kartta (vanha pohja — uusi peruskartta vasta build 14), kaupunkikortti ja kamera, liikkuminen (noppa → kohteet → matka → saapuminen), radio (veto, sulku, yövalot), ☰ iPadilla, yläpalkki 70/64 pt, Ihmisen matka, kahden sormen kallistus.
